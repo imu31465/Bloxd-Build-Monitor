@@ -1,29 +1,29 @@
 export const id = 354;
 export const ids = [354];
 export const modules = {
-  60972: (dd, Jd, kd) => {
-    function pd(dd, Jd) {
-      for (const kd of dd._frameGraph._tasks)
-        if (kd?._config && kd._colorAttachment && (kd._config.rt === Jd.scRT || kd._config.rst === Jd.scRT)) return kd
+  60738: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ) {
+      for (const wQ of QQ._frameGraph._tasks)
+        if (wQ?._config && wQ._colorAttachment && (wQ._config.rt === FQ.scRT || wQ._config.rst === FQ.scRT)) return wQ
     }
 
-    function Nd(dd, Jd) {
-      const kd = dd._renderingContexts[dd._renderingContexts.length - 1];
-      if (!kd?._frameGraph) return;
-      const Nd = pd(Jd, dd);
-      if (!Nd) return;
-      if (1 === dd.msaaSamples) return void(Nd._config.clr = !1);
-      const Wd = Nd.enabled;
-      Nd._config.clr = !0, Nd.enabled = !1, Jd._beforeRender.unshift((() => {
-        const Jd = pd(kd, dd),
-          Pd = Jd?._config.rst === dd.scRT && Jd._config.rt._colorView;
-        Nd.enabled = !!Pd && Wd, Nd._config.clr = !Pd, Pd && (Nd._colorAttachment.view = Pd)
+    function qQ(QQ, FQ) {
+      const wQ = QQ._renderingContexts[QQ._renderingContexts.length - 1];
+      if (!wQ?._frameGraph) return;
+      const qQ = LQ(FQ, QQ);
+      if (!qQ) return;
+      if (1 === QQ.msaaSamples) return void(qQ._config.clr = !1);
+      const oQ = qQ.enabled;
+      qQ._config.clr = !0, qQ.enabled = !1, FQ._beforeRender.unshift((() => {
+        const FQ = LQ(wQ, QQ),
+          DQ = FQ?._config.rst === QQ.scRT && FQ._config.rt._colorView;
+        qQ.enabled = !!DQ && oQ, qQ._config.clr = !DQ, DQ && (qQ._colorAttachment.view = DQ)
       }))
     }
-    kd.r(Jd), kd.d(Jd, {
-      configureSwapchainOverlayScene: () => Nd
+    wQ.r(FQ), wQ.d(FQ, {
+      configureSwapchainOverlayScene: () => qQ
     })
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

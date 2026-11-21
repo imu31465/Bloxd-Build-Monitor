@@ -1,285 +1,285 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var dd = __webpack_require__.u,
-        Jd = __webpack_require__.e,
-        kd = {},
-        pd = {};
-      __webpack_require__.u = function(Jd) {
-        return dd(Jd) + (kd.hasOwnProperty(Jd) ? "?" + kd[Jd] : "")
-      }, __webpack_require__.e = function(Nd) {
-        return Jd(Nd).catch((function(Jd) {
-          var Wd = pd.hasOwnProperty(Nd) ? pd[Nd] : 4;
-          if (Wd < 1) {
-            var Pd = dd(Nd);
-            throw Jd.message = "Loading chunk " + Nd + " failed after 4 retries.\n(" + Pd + ")", Jd.request = Pd, kd[Nd] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete pd[Nd]
-            }), 0), Jd
+      var QQ = __webpack_require__.u,
+        FQ = __webpack_require__.e,
+        wQ = {},
+        LQ = {};
+      __webpack_require__.u = function(FQ) {
+        return QQ(FQ) + (wQ.hasOwnProperty(FQ) ? "?" + wQ[FQ] : "")
+      }, __webpack_require__.e = function(qQ) {
+        return FQ(qQ).catch((function(FQ) {
+          var oQ = LQ.hasOwnProperty(qQ) ? LQ[qQ] : 4;
+          if (oQ < 1) {
+            var DQ = QQ(qQ);
+            throw FQ.message = "Loading chunk " + qQ + " failed after 4 retries.\n(" + DQ + ")", FQ.request = DQ, wQ[qQ] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete LQ[qQ]
+            }), 0), FQ
           }
-          return new Promise((function(dd) {
-            var Jd = 4 - Wd + 1;
+          return new Promise((function(QQ) {
+            var FQ = 4 - oQ + 1;
             setTimeout((function() {
-              var Jd = "cache-bust=" + Date.now();
-              kd[Nd] = Jd, pd[Nd] = Wd - 1, dd(__webpack_require__.e(Nd))
-            }), function(dd) {
-              return 500 * Math.pow(2, dd)
-            }(Jd))
+              var FQ = "cache-bust=" + Date.now();
+              wQ[qQ] = FQ, LQ[qQ] = oQ - 1, QQ(__webpack_require__.e(qQ))
+            }), function(QQ) {
+              return 500 * Math.pow(2, QQ)
+            }(FQ))
           }))
         }))
       }
     }
   })();
-  const dd = [15, 15, 15],
-    Jd = {
+  const QQ = [15, 15, 15],
+    FQ = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function kd(Jd, kd, pd) {
-    let Nd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dd => 0 !== Jd[4 * dd + 3];
-    const Wd = (dd, Jd) => dd < 0 || Jd < 0 || dd >= kd || Jd >= kd || !Nd(Jd * kd + dd),
-      Pd = [];
-    for (let dd = 0; dd < kd; dd++)
-      for (let Jd = 0; Jd < kd; Jd++)
-        if (!Wd(Jd, dd)) dd: for (let Nd = -pd; Nd <= pd; Nd++) {
-          const Zd = pd - Math.abs(Nd);
-          for (let pd = -Zd; pd <= Zd; pd++)
-            if (Wd(Jd + pd, dd + Nd)) {
-              Pd.push(dd * kd + Jd);
-              break dd
+  function wQ(FQ, wQ, LQ) {
+    let qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : QQ => 0 !== FQ[4 * QQ + 3];
+    const oQ = (QQ, FQ) => QQ < 0 || FQ < 0 || QQ >= wQ || FQ >= wQ || !qQ(FQ * wQ + QQ),
+      DQ = [];
+    for (let QQ = 0; QQ < wQ; QQ++)
+      for (let FQ = 0; FQ < wQ; FQ++)
+        if (!oQ(FQ, QQ)) QQ: for (let qQ = -LQ; qQ <= LQ; qQ++) {
+          const kQ = LQ - Math.abs(qQ);
+          for (let LQ = -kQ; LQ <= kQ; LQ++)
+            if (oQ(FQ + LQ, QQ + qQ)) {
+              DQ.push(QQ * wQ + FQ);
+              break QQ
             }
         }
-    for (const Zd of Pd) Jd.set(dd, 4 * Zd), Jd[4 * Zd + 3] = 255
+    for (const kQ of DQ) FQ.set(QQ, 4 * kQ), FQ[4 * kQ + 3] = 255
   }
-  const pd = Math.SQRT1_2,
-    Nd = Math.sqrt(3) / 2,
-    Wd = {
+  const LQ = Math.SQRT1_2,
+    qQ = Math.sqrt(3) / 2,
+    oQ = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    Pd = {
+    DQ = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    Zd = {
+    kQ = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const gd = 1e-6;
+  const vQ = 1e-6;
 
-  function Cd(dd, Jd, kd, pd) {
+  function mQ(QQ, FQ, wQ, LQ) {
     let {
-      origin: Nd,
-      across: Wd,
-      down: Pd,
-      texture: Zd,
-      rect: [Cd, Kd, od, ld],
-      shade: Qd
-    } = pd;
-    const Ld = Wd.x * Pd.y - Wd.y * Pd.x;
-    if (Math.abs(Ld) < 1e-9) return;
-    const Od = [Nd.x, Nd.x + Wd.x, Nd.x + Pd.x, Nd.x + Wd.x + Pd.x],
-      ed = [Nd.y, Nd.y + Wd.y, Nd.y + Pd.y, Nd.y + Wd.y + Pd.y],
-      Rd = Math.max(0, Math.floor(Math.min(...Od))),
-      Id = Math.min(kd - 1, Math.ceil(Math.max(...Od))),
-      Gd = Math.max(0, Math.floor(Math.min(...ed))),
-      vd = Math.min(kd - 1, Math.ceil(Math.max(...ed)));
-    for (let xd = Gd; xd <= vd; xd++)
-      for (let pd = Rd; pd <= Id; pd++) {
-        const Od = pd + .5 - Nd.x,
-          ed = xd + .5 - Nd.y,
-          Rd = (Od * Pd.y - ed * Pd.x) / Ld,
-          Id = (Wd.x * ed - Wd.y * Od) / Ld;
-        if (Rd < -gd || Rd > 1 + gd || Id < -gd || Id > 1 + gd) continue;
-        const Gd = xd * kd + pd;
-        Jd[Gd] = 1;
-        const vd = Cd + Math.min(Math.max(Rd, 0), 1) * (od - Cd),
-          qd = Kd + Math.min(Math.max(Id, 0), 1) * (ld - Kd),
-          Bd = Math.min(Zd.width - 1, Math.floor(vd * Zd.width)),
-          sd = 4 * (Math.min(Zd.height - 1, Math.floor(qd * Zd.height)) * Zd.width + Bd),
-          id = Zd.pixels[sd + 3] / 255;
-        if (0 === id) continue;
-        const ad = 4 * Gd,
-          Md = dd[ad + 3] / 255 * (1 - id),
-          Fd = id + Md;
-        for (let Jd = 0; Jd < 3; Jd++) dd[ad + Jd] = (Zd.pixels[sd + Jd] * Qd * id + dd[ad + Jd] * Md) / Fd;
-        dd[ad + 3] = 255 * Fd
+      origin: qQ,
+      across: oQ,
+      down: DQ,
+      texture: kQ,
+      rect: [mQ, uQ, HQ, bQ],
+      shade: YQ
+    } = LQ;
+    const xQ = oQ.x * DQ.y - oQ.y * DQ.x;
+    if (Math.abs(xQ) < 1e-9) return;
+    const AQ = [qQ.x, qQ.x + oQ.x, qQ.x + DQ.x, qQ.x + oQ.x + DQ.x],
+      tQ = [qQ.y, qQ.y + oQ.y, qQ.y + DQ.y, qQ.y + oQ.y + DQ.y],
+      eQ = Math.max(0, Math.floor(Math.min(...AQ))),
+      MQ = Math.min(wQ - 1, Math.ceil(Math.max(...AQ))),
+      GQ = Math.max(0, Math.floor(Math.min(...tQ))),
+      pQ = Math.min(wQ - 1, Math.ceil(Math.max(...tQ)));
+    for (let cQ = GQ; cQ <= pQ; cQ++)
+      for (let LQ = eQ; LQ <= MQ; LQ++) {
+        const AQ = LQ + .5 - qQ.x,
+          tQ = cQ + .5 - qQ.y,
+          eQ = (AQ * DQ.y - tQ * DQ.x) / xQ,
+          MQ = (oQ.x * tQ - oQ.y * AQ) / xQ;
+        if (eQ < -vQ || eQ > 1 + vQ || MQ < -vQ || MQ > 1 + vQ) continue;
+        const GQ = cQ * wQ + LQ;
+        FQ[GQ] = 1;
+        const pQ = mQ + Math.min(Math.max(eQ, 0), 1) * (HQ - mQ),
+          CQ = uQ + Math.min(Math.max(MQ, 0), 1) * (bQ - uQ),
+          SQ = Math.min(kQ.width - 1, Math.floor(pQ * kQ.width)),
+          iQ = 4 * (Math.min(kQ.height - 1, Math.floor(CQ * kQ.height)) * kQ.width + SQ),
+          WQ = kQ.pixels[iQ + 3] / 255;
+        if (0 === WQ) continue;
+        const RQ = 4 * GQ,
+          OQ = QQ[RQ + 3] / 255 * (1 - WQ),
+          sQ = WQ + OQ;
+        for (let FQ = 0; FQ < 3; FQ++) QQ[RQ + FQ] = (kQ.pixels[iQ + FQ] * YQ * WQ + QQ[RQ + FQ] * OQ) / sQ;
+        QQ[RQ + 3] = 255 * sQ
       }
   }
 
-  function Kd(dd, Jd, kd) {
-    const pd = dd.get(Jd);
-    if (void 0 === pd) throw new Error(`no ${kd} was sent for ${Jd.slice(0,100)}`);
-    return pd
+  function uQ(QQ, FQ, wQ) {
+    const LQ = QQ.get(FQ);
+    if (void 0 === LQ) throw new Error(`no ${wQ} was sent for ${FQ.slice(0,100)}`);
+    return LQ
   }
-  const od = {
-      pixelsOf(dd) {
-        const Jd = new OffscreenCanvas(dd.width, dd.height),
-          kd = Jd.getContext("2d");
-        if (!kd) throw new Error("no 2D context");
-        return kd.drawImage(dd, 0, 0), dd.close(), {
-          width: Jd.width,
-          height: Jd.height,
-          pixels: kd.getImageData(0, 0, Jd.width, Jd.height).data
+  const HQ = {
+      pixelsOf(QQ) {
+        const FQ = new OffscreenCanvas(QQ.width, QQ.height),
+          wQ = FQ.getContext("2d");
+        if (!wQ) throw new Error("no 2D context");
+        return wQ.drawImage(QQ, 0, 0), QQ.close(), {
+          width: FQ.width,
+          height: FQ.height,
+          pixels: wQ.getImageData(0, 0, FQ.width, FQ.height).data
         }
       },
-      async encode(dd, Jd) {
-        const kd = new OffscreenCanvas(Jd, Jd),
-          pd = kd.getContext("2d");
-        if (!pd) throw new Error("no 2D context");
-        pd.putImageData(new ImageData(dd, Jd, Jd), 0, 0);
-        const Nd = await kd.convertToBlob();
-        return new Promise(((dd, Jd) => {
-          const kd = new FileReader;
-          kd.onload = () => {
-            dd(kd.result)
-          }, kd.onerror = () => {
-            var dd;
-            Jd(null !== (dd = kd.error) && void 0 !== dd ? dd : new Error("the icon did not encode"))
-          }, kd.readAsDataURL(Nd)
+      async encode(QQ, FQ) {
+        const wQ = new OffscreenCanvas(FQ, FQ),
+          LQ = wQ.getContext("2d");
+        if (!LQ) throw new Error("no 2D context");
+        LQ.putImageData(new ImageData(QQ, FQ, FQ), 0, 0);
+        const qQ = await wQ.convertToBlob();
+        return new Promise(((QQ, FQ) => {
+          const wQ = new FileReader;
+          wQ.onload = () => {
+            QQ(wQ.result)
+          }, wQ.onerror = () => {
+            var QQ;
+            FQ(null !== (QQ = wQ.error) && void 0 !== QQ ? QQ : new Error("the icon did not encode"))
+          }, wQ.readAsDataURL(qQ)
         }))
       }
     },
-    ld = globalThis.WorkerGlobalScope;
-  void 0 !== ld && globalThis instanceof ld && function(dd, gd) {
-    const od = new Map,
-      ld = new Map,
-      Qd = (Jd, kd, pd) => {
+    bQ = globalThis.WorkerGlobalScope;
+  void 0 !== bQ && globalThis instanceof bQ && function(QQ, vQ) {
+    const HQ = new Map,
+      bQ = new Map,
+      YQ = (FQ, wQ, LQ) => {
         (async () => {
           try {
-            dd.postMessage({
+            QQ.postMessage({
               type: "drawn",
-              id: Jd,
-              url: await gd.encode(pd(), kd)
+              id: FQ,
+              url: await vQ.encode(LQ(), wQ)
             })
-          } catch (Nd) {
-            dd.postMessage({
+          } catch (qQ) {
+            QQ.postMessage({
               type: "failed",
-              message: String(Nd)
+              message: String(qQ)
             })
           }
         })()
       };
-    dd.onmessage = dd => {
+    QQ.onmessage = QQ => {
       let {
-        data: Ld
-      } = dd;
-      if ("texture" === Ld.type) od.set(Ld.url, gd.pixelsOf(Ld.bitmap));
-      else if ("model" === Ld.type) ld.set(Ld.name, {
-        geometry: Ld.geometry,
-        texture: gd.pixelsOf(Ld.bitmap)
+        data: xQ
+      } = QQ;
+      if ("texture" === xQ.type) HQ.set(xQ.url, vQ.pixelsOf(xQ.bitmap));
+      else if ("model" === xQ.type) bQ.set(xQ.name, {
+        geometry: xQ.geometry,
+        texture: vQ.pixelsOf(xQ.bitmap)
       });
-      else if ("draw" === Ld.type) {
+      else if ("draw" === xQ.type) {
         const {
-          id: dd,
-          top: gd,
-          left: ld,
-          right: Od,
-          itemType: ed,
-          size: Rd,
-          outlineWidth: Id
-        } = Ld;
-        Qd(dd, Rd, (() => function(dd, Wd, Pd, Zd) {
-          const gd = .6 * Pd,
-            Kd = gd * pd,
-            od = gd * pd * .5,
-            ld = gd * Nd,
-            Qd = Math.max(...Wd.boxes.map((dd => dd[4]))),
-            Ld = Kd / 2 + (Pd - Kd) / 2,
-            Od = od + (Pd - od - od - Qd * ld) / 2,
-            ed = (dd, Jd, kd) => ({
-              x: Ld + (dd - kd) * Kd,
-              y: Od - od + (dd + kd) * od + (Qd - Jd) * ld
+          id: QQ,
+          top: vQ,
+          left: bQ,
+          right: AQ,
+          itemType: tQ,
+          size: eQ,
+          outlineWidth: MQ
+        } = xQ;
+        YQ(QQ, eQ, (() => function(QQ, oQ, DQ, kQ) {
+          const vQ = .6 * DQ,
+            uQ = vQ * LQ,
+            HQ = vQ * LQ * .5,
+            bQ = vQ * qQ,
+            YQ = Math.max(...oQ.boxes.map((QQ => QQ[4]))),
+            xQ = uQ / 2 + (DQ - uQ) / 2,
+            AQ = HQ + (DQ - HQ - HQ - YQ * bQ) / 2,
+            tQ = (QQ, FQ, wQ) => ({
+              x: xQ + (QQ - wQ) * uQ,
+              y: AQ - HQ + (QQ + wQ) * HQ + (YQ - FQ) * bQ
             }),
-            Rd = (dd, Jd, kd, pd, Nd, Pd) => ({
-              origin: dd,
+            eQ = (QQ, FQ, wQ, LQ, qQ, DQ) => ({
+              origin: QQ,
               across: {
-                x: Jd.x - dd.x,
-                y: Jd.y - dd.y
+                x: FQ.x - QQ.x,
+                y: FQ.y - QQ.y
               },
               down: {
-                x: kd.x - dd.x,
-                y: kd.y - dd.y
+                x: wQ.x - QQ.x,
+                y: wQ.y - QQ.y
               },
-              texture: pd,
-              rect: Wd.cropFaces ? Nd : [0, 0, 1, 1],
-              shade: Pd
+              texture: LQ,
+              rect: oQ.cropFaces ? qQ : [0, 0, 1, 1],
+              shade: DQ
             }),
-            Id = new Uint8ClampedArray(Pd * Pd * 4),
-            Gd = new Uint8Array(Pd * Pd),
-            vd = Jd;
-          for (const [Jd, kd, pd, Nd, xd, qd] of Wd.boxes) {
-            const Wd = Rd(ed(Nd, xd, qd), ed(Nd, xd, pd), ed(Nd, kd, qd), dd.right, [1 - qd, 1 - xd, 1 - pd, 1 - kd], vd.right),
-              Zd = Rd(ed(Jd, xd, qd), ed(Nd, xd, qd), ed(Jd, kd, qd), dd.left, [Jd, 1 - xd, Nd, 1 - kd], vd.left),
-              gd = Rd(ed(Jd, xd, pd), ed(Nd, xd, pd), ed(Jd, xd, qd), dd.top, [Jd, pd, Nd, qd], vd.top);
-            for (const dd of [Wd, Zd, gd]) Cd(Id, Gd, Pd, dd)
+            MQ = new Uint8ClampedArray(DQ * DQ * 4),
+            GQ = new Uint8Array(DQ * DQ),
+            pQ = FQ;
+          for (const [FQ, wQ, LQ, qQ, cQ, CQ] of oQ.boxes) {
+            const oQ = eQ(tQ(qQ, cQ, CQ), tQ(qQ, cQ, LQ), tQ(qQ, wQ, CQ), QQ.right, [1 - CQ, 1 - cQ, 1 - LQ, 1 - wQ], pQ.right),
+              kQ = eQ(tQ(FQ, cQ, CQ), tQ(qQ, cQ, CQ), tQ(FQ, wQ, CQ), QQ.left, [FQ, 1 - cQ, qQ, 1 - wQ], pQ.left),
+              vQ = eQ(tQ(FQ, cQ, LQ), tQ(qQ, cQ, LQ), tQ(FQ, cQ, CQ), QQ.top, [FQ, LQ, qQ, CQ], pQ.top);
+            for (const QQ of [oQ, kQ, vQ]) mQ(MQ, GQ, DQ, QQ)
           }
-          return kd(Id, Pd, Zd, (dd => 1 === Gd[dd])), Id
+          return wQ(MQ, DQ, kQ, (QQ => 1 === GQ[QQ])), MQ
         }({
-          top: Kd(od, gd, "texture"),
-          left: Kd(od, ld, "texture"),
-          right: Kd(od, Od, "texture")
-        }, function(dd) {
-          return "SlabBlock" === dd ? Pd : "StairsBlock" === dd ? Zd : Wd
-        }(ed), Rd, Id)))
+          top: uQ(HQ, vQ, "texture"),
+          left: uQ(HQ, bQ, "texture"),
+          right: uQ(HQ, AQ, "texture")
+        }, function(QQ) {
+          return "SlabBlock" === QQ ? DQ : "StairsBlock" === QQ ? kQ : oQ
+        }(tQ), eQ, MQ)))
       } else {
         const {
-          id: dd,
-          name: Jd,
-          size: pd,
-          outlineWidth: Nd
-        } = Ld;
-        Qd(dd, pd, (() => {
+          id: QQ,
+          name: FQ,
+          size: LQ,
+          outlineWidth: qQ
+        } = xQ;
+        YQ(QQ, LQ, (() => {
           const {
-            geometry: dd,
-            texture: Wd
-          } = Kd(ld, Jd, "model");
-          return function(dd, Jd, pd, Nd) {
+            geometry: QQ,
+            texture: oQ
+          } = uQ(bQ, FQ, "model");
+          return function(QQ, FQ, LQ, qQ) {
             const {
-              vertices: Wd,
-              uvs: Pd,
-              indices: Zd,
-              shades: gd
-            } = dd, Cd = .03125 * pd, Kd = pd - 2 * Cd, od = new Float32Array(Wd.length);
-            for (let kd = 0; kd < Wd.length; kd += 3) od[kd] = Cd + Wd[kd] * Kd, od[kd + 1] = Cd + Wd[kd + 1] * Kd, od[kd + 2] = Wd[kd + 2];
-            const ld = new Float32Array(pd * pd).fill(-1 / 0),
-              Qd = new Uint8ClampedArray(pd * pd * 4),
-              Ld = 255 * dd.alphaCutoff;
-            for (let kd = 0; kd < Zd.length; kd += 3) {
-              const [dd, Nd, Wd] = [Zd[kd], Zd[kd + 1], Zd[kd + 2]], [Cd, Kd, Od] = [3 * dd, 3 * Nd, 3 * Wd], [ed, Rd, Id, Gd, vd, xd] = [od[Cd], od[Cd + 1], od[Kd], od[Kd + 1], od[Od], od[Od + 1]], qd = (Id - ed) * (xd - Rd) - (vd - ed) * (Gd - Rd);
-              if (Math.abs(qd) < 1e-9) continue;
-              const Bd = gd[kd / 3],
-                [sd, id, ad, Md, Fd, Yd] = [Pd[2 * dd], Pd[2 * dd + 1], Pd[2 * Nd], Pd[2 * Nd + 1], Pd[2 * Wd], Pd[2 * Wd + 1]],
-                md = Math.max(0, Math.floor(Math.min(ed, Id, vd))),
-                bd = Math.min(pd - 1, Math.ceil(Math.max(ed, Id, vd))),
-                Sd = Math.max(0, Math.floor(Math.min(Rd, Gd, xd))),
-                jd = Math.min(pd - 1, Math.ceil(Math.max(Rd, Gd, xd)));
-              for (let kd = Sd; kd <= jd; kd++)
-                for (let dd = md; dd <= bd; dd++) {
-                  const [Nd, Wd] = [dd + .5, kd + .5], Pd = ((Nd - ed) * (xd - Rd) - (vd - ed) * (Wd - Rd)) / qd, Zd = ((Id - ed) * (Wd - Rd) - (Nd - ed) * (Gd - Rd)) / qd, gd = 1 - Pd - Zd;
-                  if (gd < 0 || Pd < 0 || Zd < 0) continue;
-                  const md = gd * od[Cd + 2] + Pd * od[Kd + 2] + Zd * od[Od + 2],
-                    bd = kd * pd + dd;
-                  if (md <= ld[bd]) continue;
-                  const Sd = Math.max(0, Math.min(Jd.width - 1, Math.floor((gd * sd + Pd * ad + Zd * Fd) * Jd.width))),
-                    jd = 4 * (Math.max(0, Math.min(Jd.height - 1, Math.floor((gd * id + Pd * Md + Zd * Yd) * Jd.height))) * Jd.width + Sd);
-                  Jd.pixels[jd + 3] < Ld || (ld[bd] = md, Qd[4 * bd] = Jd.pixels[jd] * Bd, Qd[4 * bd + 1] = Jd.pixels[jd + 1] * Bd, Qd[4 * bd + 2] = Jd.pixels[jd + 2] * Bd, Qd[4 * bd + 3] = 255)
+              vertices: oQ,
+              uvs: DQ,
+              indices: kQ,
+              shades: vQ
+            } = QQ, mQ = .03125 * LQ, uQ = LQ - 2 * mQ, HQ = new Float32Array(oQ.length);
+            for (let wQ = 0; wQ < oQ.length; wQ += 3) HQ[wQ] = mQ + oQ[wQ] * uQ, HQ[wQ + 1] = mQ + oQ[wQ + 1] * uQ, HQ[wQ + 2] = oQ[wQ + 2];
+            const bQ = new Float32Array(LQ * LQ).fill(-1 / 0),
+              YQ = new Uint8ClampedArray(LQ * LQ * 4),
+              xQ = 255 * QQ.alphaCutoff;
+            for (let wQ = 0; wQ < kQ.length; wQ += 3) {
+              const [QQ, qQ, oQ] = [kQ[wQ], kQ[wQ + 1], kQ[wQ + 2]], [mQ, uQ, AQ] = [3 * QQ, 3 * qQ, 3 * oQ], [tQ, eQ, MQ, GQ, pQ, cQ] = [HQ[mQ], HQ[mQ + 1], HQ[uQ], HQ[uQ + 1], HQ[AQ], HQ[AQ + 1]], CQ = (MQ - tQ) * (cQ - eQ) - (pQ - tQ) * (GQ - eQ);
+              if (Math.abs(CQ) < 1e-9) continue;
+              const SQ = vQ[wQ / 3],
+                [iQ, WQ, RQ, OQ, sQ, rQ] = [DQ[2 * QQ], DQ[2 * QQ + 1], DQ[2 * qQ], DQ[2 * qQ + 1], DQ[2 * oQ], DQ[2 * oQ + 1]],
+                IQ = Math.max(0, Math.floor(Math.min(tQ, MQ, pQ))),
+                UQ = Math.min(LQ - 1, Math.ceil(Math.max(tQ, MQ, pQ))),
+                NQ = Math.max(0, Math.floor(Math.min(eQ, GQ, cQ))),
+                TQ = Math.min(LQ - 1, Math.ceil(Math.max(eQ, GQ, cQ)));
+              for (let wQ = NQ; wQ <= TQ; wQ++)
+                for (let QQ = IQ; QQ <= UQ; QQ++) {
+                  const [qQ, oQ] = [QQ + .5, wQ + .5], DQ = ((qQ - tQ) * (cQ - eQ) - (pQ - tQ) * (oQ - eQ)) / CQ, kQ = ((MQ - tQ) * (oQ - eQ) - (qQ - tQ) * (GQ - eQ)) / CQ, vQ = 1 - DQ - kQ;
+                  if (vQ < 0 || DQ < 0 || kQ < 0) continue;
+                  const IQ = vQ * HQ[mQ + 2] + DQ * HQ[uQ + 2] + kQ * HQ[AQ + 2],
+                    UQ = wQ * LQ + QQ;
+                  if (IQ <= bQ[UQ]) continue;
+                  const NQ = Math.max(0, Math.min(FQ.width - 1, Math.floor((vQ * iQ + DQ * RQ + kQ * sQ) * FQ.width))),
+                    TQ = 4 * (Math.max(0, Math.min(FQ.height - 1, Math.floor((vQ * WQ + DQ * OQ + kQ * rQ) * FQ.height))) * FQ.width + NQ);
+                  FQ.pixels[TQ + 3] < xQ || (bQ[UQ] = IQ, YQ[4 * UQ] = FQ.pixels[TQ] * SQ, YQ[4 * UQ + 1] = FQ.pixels[TQ + 1] * SQ, YQ[4 * UQ + 2] = FQ.pixels[TQ + 2] * SQ, YQ[4 * UQ + 3] = 255)
                 }
             }
-            return kd(Qd, pd, Nd), Qd
-          }(dd, Wd, pd, Nd)
+            return wQ(YQ, LQ, qQ), YQ
+          }(QQ, oQ, LQ, qQ)
         }))
       }
-    }, dd.postMessage({
+    }, QQ.postMessage({
       type: "started"
     })
-  }(globalThis, od)
+  }(globalThis, HQ)
 })();

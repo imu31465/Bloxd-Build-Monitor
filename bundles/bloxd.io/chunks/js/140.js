@@ -1,17 +1,17 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  7945: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      BloxdFirebaseSdk: () => Kd
+  7889: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      BloxdFirebaseSdk: () => uQ
     });
-    var pd = kd(1849),
-      Nd = kd(2793),
-      Wd = kd(103),
-      Pd = kd(95),
-      Zd = kd(1726),
-      gd = kd(2019);
-    const Cd = {
+    var LQ = wQ(1821),
+      qQ = wQ(2845),
+      oQ = wQ(106),
+      DQ = wQ(96),
+      kQ = wQ(1694),
+      vQ = wQ(2004);
+    const mQ = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
@@ -19,145 +19,145 @@ export const modules = {
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97"
     };
-    class Kd {
+    class uQ {
       constructor() {}
       static async setup() {
         try {
-          return await Kd.setupInternal()
-        } catch (dd) {
-          return console.error("Failed to setup Firebase SDK:", dd), null
+          return await uQ.setupInternal()
+        } catch (QQ) {
+          return console.error("Failed to setup Firebase SDK:", QQ), null
         }
       }
       static async setupInternal() {
-        const dd = await Promise.all([kd.e(258), kd.e(257)]).then((() => kd(40493))),
-          Jd = await Promise.all([kd.e(258), kd.e(259)]).then((() => kd(40521))),
-          od = await Promise.all([kd.e(258), kd.e(260)]).then((() => kd(40527))),
-          ld = dd.initializeApp({
-            ...Cd,
-            measurementId: Nd.c
+        const QQ = await Promise.all([wQ.e(258), wQ.e(257)]).then((() => wQ(39927))),
+          FQ = await Promise.all([wQ.e(258), wQ.e(259)]).then((() => wQ(39963))),
+          HQ = await Promise.all([wQ.e(258), wQ.e(260)]).then((() => wQ(39965))),
+          bQ = QQ.initializeApp({
+            ...mQ,
+            measurementId: qQ.d
           });
-        (0, Nd.E)(), window.gtag("config", Nd.c), (0, Nd.y)(), window.gtag("config", "AW-16469618203");
-        const Qd = Jd.getAnalytics(ld),
-          Ld = {
-            portal: Wd.currentUrl.getSearchParam("portal") || "root",
+        (0, qQ.F)(), window.gtag("config", qQ.d), (0, qQ.B)(), window.gtag("config", "AW-16469618203");
+        const YQ = FQ.getAnalytics(bQ),
+          xQ = {
+            portal: oQ.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        Jd.setUserProperties(Qd, Ld);
-        const Od = od.initializeAuth(ld, {
-          persistence: [od.indexedDBLocalPersistence, od.browserLocalPersistence, od.browserSessionPersistence],
-          popupRedirectResolver: (0, Pd.isMobileApp)() ? void 0 : od.browserPopupRedirectResolver
+        FQ.setUserProperties(YQ, xQ);
+        const AQ = HQ.initializeAuth(bQ, {
+          persistence: [HQ.indexedDBLocalPersistence, HQ.browserLocalPersistence, HQ.browserSessionPersistence],
+          popupRedirectResolver: (0, DQ.isMobileApp)() ? void 0 : HQ.browserPopupRedirectResolver
         });
-        od.useDeviceLanguage(Od);
-        const ed = new od.GoogleAuthProvider;
-        ed.setCustomParameters({
+        HQ.useDeviceLanguage(AQ);
+        const tQ = new HQ.GoogleAuthProvider;
+        tQ.setCustomParameters({
           prompt: "select_account"
         });
-        const Rd = new od.OAuthProvider(pd.g[pd.e.APPLE]),
-          Id = new od.OAuthProvider(pd.g[pd.e.MICROSOFT]);
-        Id.setCustomParameters({
+        const eQ = new HQ.OAuthProvider(LQ.i[LQ.d.APPLE]),
+          MQ = new HQ.OAuthProvider(LQ.i[LQ.d.MICROSOFT]);
+        MQ.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const Gd = {
-          [pd.e.GOOGLE]: ed,
-          [pd.e.APPLE]: Rd,
-          [pd.e.MICROSOFT]: Id
+        const GQ = {
+          [LQ.d.GOOGLE]: tQ,
+          [LQ.d.APPLE]: eQ,
+          [LQ.d.MICROSOFT]: MQ
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((dd => {
-          const Jd = od.onIdTokenChanged(Od, (kd => {
-            Jd(), dd()
+        }), await new Promise((QQ => {
+          const FQ = HQ.onIdTokenChanged(AQ, (wQ => {
+            FQ(), QQ()
           }))
         }));
-        class vd extends Kd {
-          setUserProperties(dd) {
-            Jd.setUserProperties(Qd, dd)
+        class pQ extends uQ {
+          setUserProperties(QQ) {
+            FQ.setUserProperties(YQ, QQ)
           }
-          onIdTokenChanged(dd) {
-            od.onIdTokenChanged(Od, dd)
+          onIdTokenChanged(QQ) {
+            HQ.onIdTokenChanged(AQ, QQ)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(dd) {
-            var Jd;
-            const kd = await od.signInWithPopup(Od, Gd[dd]);
-            return null !== (Jd = null === kd || void 0 === kd ? void 0 : kd.user) && void 0 !== Jd ? Jd : null
+          async signInWithPopup(QQ) {
+            var FQ;
+            const wQ = await HQ.signInWithPopup(AQ, GQ[QQ]);
+            return null !== (FQ = null === wQ || void 0 === wQ ? void 0 : wQ.user) && void 0 !== FQ ? FQ : null
           }
-          async getCurrentUser(dd) {
-            const Jd = Od.currentUser;
-            if (!Jd) return null;
+          async getCurrentUser(QQ) {
+            const FQ = AQ.currentUser;
+            if (!FQ) return null;
             const {
-              signInProvider: kd
-            } = await Jd.getIdTokenResult(!1);
-            return kd === pd.g[dd] ? Jd : null
+              signInProvider: wQ
+            } = await FQ.getIdTokenResult(!1);
+            return wQ === LQ.i[QQ] ? FQ : null
           }
-          async signOut(dd) {
-            null !== await this.getCurrentUser(dd) && await od.signOut(Od)
+          async signOut(QQ) {
+            null !== await this.getCurrentUser(QQ) && await HQ.signOut(AQ)
           }
         }
-        async function xd(dd, Jd) {
-          const kd = await Zd.e.request(`${dd}.${Jd}`, {});
-          if (null === kd) return null;
-          const pd = "google" === dd ? od.GoogleAuthProvider.credential(kd.idToken) : Rd.credential({
-            idToken: kd.idToken
+        async function cQ(QQ, FQ) {
+          const wQ = await kQ.d.request(`${QQ}.${FQ}`, {});
+          if (null === wQ) return null;
+          const LQ = "google" === QQ ? HQ.GoogleAuthProvider.credential(wQ.idToken) : eQ.credential({
+            idToken: wQ.idToken
           });
-          return (await od.signInWithCredential(Od, pd)).user
+          return (await HQ.signInWithCredential(AQ, LQ)).user
         }
-        class qd extends Kd {
-          setUserProperties(dd) {
-            Jd.setUserProperties(Qd, dd)
+        class CQ extends uQ {
+          setUserProperties(QQ) {
+            FQ.setUserProperties(YQ, QQ)
           }
-          onIdTokenChanged(dd) {
-            od.onIdTokenChanged(Od, dd)
+          onIdTokenChanged(QQ) {
+            HQ.onIdTokenChanged(AQ, QQ)
           }
-          canSignIn(dd) {
-            return null !== (0, gd.e)(dd)
+          canSignIn(QQ) {
+            return null !== (0, vQ.b)(QQ)
           }
-          async signInWithPopup(dd) {
-            const Jd = (0, gd.e)(dd);
-            if (null === Jd) return console.warn(`The app can't sign in with ${dd}; check canSignIn first`), null;
+          async signInWithPopup(QQ) {
+            const FQ = (0, vQ.b)(QQ);
+            if (null === FQ) return console.warn(`The app can't sign in with ${QQ}; check canSignIn first`), null;
             try {
-              return await xd(Jd, "signIn")
-            } catch (kd) {
-              return console.error(`Failed to sign in with ${dd} in the app:`, kd), null
+              return await cQ(FQ, "signIn")
+            } catch (wQ) {
+              return console.error(`Failed to sign in with ${QQ} in the app:`, wQ), null
             }
           }
-          async getCurrentUser(dd) {
-            const Jd = Od.currentUser;
-            if (Jd) {
+          async getCurrentUser(QQ) {
+            const FQ = AQ.currentUser;
+            if (FQ) {
               const {
-                signInProvider: kd
-              } = await Jd.getIdTokenResult(!1);
-              if (kd === pd.g[dd]) return Jd
+                signInProvider: wQ
+              } = await FQ.getIdTokenResult(!1);
+              if (wQ === LQ.i[QQ]) return FQ
             }
-            const kd = (0, gd.e)(dd);
-            if (null === kd) return null;
+            const wQ = (0, vQ.b)(QQ);
+            if (null === wQ) return null;
             try {
-              return await xd(kd, "getCurrentUser")
-            } catch (Nd) {
-              return console.error(`Failed to get the current ${dd} user from the app:`, Nd), null
+              return await cQ(wQ, "getCurrentUser")
+            } catch (qQ) {
+              return console.error(`Failed to get the current ${QQ} user from the app:`, qQ), null
             }
           }
-          async signOut(dd) {
-            const Jd = (0, gd.e)(dd);
-            null !== Jd && Zd.e.request(`${Jd}.signOut`, {}).catch((Jd => {
-              console.error(`Failed to sign out of ${dd} in the app:`, Jd)
+          async signOut(QQ) {
+            const FQ = (0, vQ.b)(QQ);
+            null !== FQ && kQ.d.request(`${FQ}.signOut`, {}).catch((FQ => {
+              console.error(`Failed to sign out of ${QQ} in the app:`, FQ)
             }));
-            const kd = Od.currentUser;
-            if (kd) {
+            const wQ = AQ.currentUser;
+            if (wQ) {
               const {
-                signInProvider: Jd
-              } = await kd.getIdTokenResult(!1);
-              Jd === pd.g[dd] && await od.signOut(Od)
+                signInProvider: FQ
+              } = await wQ.getIdTokenResult(!1);
+              FQ === LQ.i[QQ] && await HQ.signOut(AQ)
             }
           }
         }
-        return (0, Pd.isMobileApp)() ? (await Zd.e.ready, new qd) : new vd
+        return (0, DQ.isMobileApp)() ? (await kQ.d.ready, new CQ) : new pQ
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

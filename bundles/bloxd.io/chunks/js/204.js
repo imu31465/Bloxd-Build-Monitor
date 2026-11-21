@@ -1,144 +1,144 @@
 export const id = 204;
 export const ids = [204];
 export const modules = {
-  41460: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      loadGlbAsset: () => vJ,
-      loadGlbTree: () => GJ
+  40890: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      loadGlbAsset: () => GF,
+      loadGlbTree: () => MF
     });
-    var pd = kd(38105),
-      Nd = kd(41462),
-      Wd = kd(36432),
-      Pd = kd.n(Wd);
+    var LQ = wQ(37452),
+      qQ = wQ(40897),
+      oQ = wQ(35914),
+      DQ = wQ.n(oQ);
 
-    function Zd() {
-      return Pd()('(()=>{class dd extends Error{}function Jd(Jd,kd){const pd=Jd._malloc(kd);if(0===pd)throw new dd(`Draco: the decoder\'s heap refused ${kd} bytes`);return pd}function kd(dd){return{[dd.DT_FLOAT32]:[Float32Array,5126],[dd.DT_INT8]:[Int8Array,5120],[dd.DT_INT16]:[Int16Array,5122],[dd.DT_INT32]:[Int32Array,5124],[dd.DT_UINT8]:[Uint8Array,5121],[dd.DT_UINT16]:[Uint16Array,5123],[dd.DT_UINT32]:[Uint32Array,5125]}}function pd(Jd,pd,Nd,Wd,Pd){let Zd=null,gd=null,Cd=null;try{Zd=new Jd.Decoder,gd=new Jd.DecoderBuffer,gd.Init(pd,pd.byteLength);let Kd=0;const od=Zd.GetEncodedGeometryType(gd);if(od===Jd.TRIANGULAR_MESH){const kd=new Jd.Mesh;Cd=kd;const pd=Zd.DecodeBufferToMesh(gd,kd);if(!pd.ok()||0===kd.ptr)throw new dd(pd.error_msg());Kd=3*kd.num_faces()}else{if(od!==Jd.POINT_CLOUD)throw new dd(`Draco: Cannot decode invalid geometry type ${od}`);{const kd=new Jd.PointCloud;Cd=kd;const pd=Zd.DecodeBufferToPointCloud(gd,kd);if(!pd.ok()||!kd.ptr)throw new dd(pd.error_msg())}}const ld=Cd.num_points();if(ld!==Wd.vertices||Kd!==Wd.indices)throw new dd(`Draco: decoded ${ld} vertices and ${Kd} indices, the accessors declare ${Wd.vertices} and ${Wd.indices}`);const Qd=kd(Jd),Ld=[];for(const{kind:Jd,id:kd,components:pd}of Nd){const Nd=Zd.GetAttributeByUniqueId(Cd,kd);if(!Nd||0===Nd.ptr)throw new dd(`Draco: no attribute with id ${kd} (${Jd})`);const Wd=Nd.data_type();if(!Qd[Wd])throw new dd(`Draco: Cannot decode invalid data type ${Wd}`);if(Nd.num_components()!==pd)throw new dd(`Draco: ${Jd} decodes to ${Nd.num_components()} components, its accessor declares ${pd}`);Ld.push([Jd,Nd,Wd])}return Pd({dracoDecoder:Zd,geometry:Cd,triangles:od===Jd.TRIANGULAR_MESH,numPoints:ld,numIndices:Kd,attributes:Ld})}finally{Cd&&Jd.destroy(Cd),gd&&Jd.destroy(gd),Zd&&Jd.destroy(Zd)}}const Nd=self;let Wd=null;self.onmessage=dd=>{let{data:Pd}=dd;if("init"===Pd.id){try{importScripts(Pd.url),Wd=DracoDecoderModule({wasmBinary:Pd.wasmBinary}),Nd.postMessage({id:"initDone"})}catch(od){Nd.postMessage({id:"initError",message:od instanceof Error?od.message:String(od)})}return}const{seq:Zd,data:gd,attributeIds:Cd,expected:Kd}=Pd;Wd?Wd.then((dd=>{try{const Wd=function(dd,Nd,Wd,Pd){const Zd=Object.keys(Wd).map((dd=>({kind:dd,id:Wd[dd],components:Pd.components[dd]})));return pd(dd,Nd,Zd,Pd,(pd=>{let{dracoDecoder:Nd,geometry:Wd,triangles:Pd,numPoints:Zd,numIndices:gd,attributes:Cd}=pd;const Kd=kd(dd);let od=null;if(Pd){const kd=4*gd,pd=Jd(dd,kd);try{Nd.GetTrianglesUInt32Array(Wd,kd,pd),od=new Uint32Array(gd),od.set(new Uint32Array(dd.HEAPF32.buffer,pd,gd))}finally{dd._free(pd)}}const ld=[];for(const[kd,Qd,Ld]of Cd){const[pd]=Kd[Ld],Pd=Qd.num_components(),gd=Zd*Pd,Cd=gd*pd.BYTES_PER_ELEMENT,od=Jd(dd,Cd);try{Nd.GetAttributeDataArrayForAllPoints(Wd,Qd,Ld,Cd,od),ld.push({kind:kd,data:new pd(dd.HEAPF32.buffer,od,gd).slice(),size:Pd,byteOffset:Qd.byte_offset(),byteStride:Qd.byte_stride(),normalized:Qd.normalized()})}finally{dd._free(od)}}return{indices:od,attributes:ld,totalVertices:Zd}}))}(dd,gd,Cd,Kd),Pd=Wd.attributes.map((dd=>dd.data.buffer));Wd.indices&&Pd.push(Wd.indices.buffer),Nd.postMessage({id:"decoded",seq:Zd,...Wd},Pd)}catch(od){Nd.postMessage({id:"decodeError",seq:Zd,message:od instanceof Error?od.message:String(od)})}}),(dd=>{Nd.postMessage({id:"decodeError",seq:Zd,message:dd instanceof Error?dd.message:String(dd)})})):Nd.postMessage({id:"decodeError",seq:Zd,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, kd.p + "dracoDecode.worker.d121dc65.worker.js")
+    function kQ() {
+      return DQ()('(()=>{class QQ extends Error{}function FQ(FQ,wQ){const LQ=FQ._malloc(wQ);if(0===LQ)throw new QQ(`Draco: the decoder\'s heap refused ${wQ} bytes`);return LQ}function wQ(QQ){return{[QQ.DT_FLOAT32]:[Float32Array,5126],[QQ.DT_INT8]:[Int8Array,5120],[QQ.DT_INT16]:[Int16Array,5122],[QQ.DT_INT32]:[Int32Array,5124],[QQ.DT_UINT8]:[Uint8Array,5121],[QQ.DT_UINT16]:[Uint16Array,5123],[QQ.DT_UINT32]:[Uint32Array,5125]}}function LQ(FQ,LQ,qQ,oQ,DQ){let kQ=null,vQ=null,mQ=null;try{kQ=new FQ.Decoder,vQ=new FQ.DecoderBuffer,vQ.Init(LQ,LQ.byteLength);let uQ=0;const HQ=kQ.GetEncodedGeometryType(vQ);if(HQ===FQ.TRIANGULAR_MESH){const wQ=new FQ.Mesh;mQ=wQ;const LQ=kQ.DecodeBufferToMesh(vQ,wQ);if(!LQ.ok()||0===wQ.ptr)throw new QQ(LQ.error_msg());uQ=3*wQ.num_faces()}else{if(HQ!==FQ.POINT_CLOUD)throw new QQ(`Draco: Cannot decode invalid geometry type ${HQ}`);{const wQ=new FQ.PointCloud;mQ=wQ;const LQ=kQ.DecodeBufferToPointCloud(vQ,wQ);if(!LQ.ok()||!wQ.ptr)throw new QQ(LQ.error_msg())}}const bQ=mQ.num_points();if(bQ!==oQ.vertices||uQ!==oQ.indices)throw new QQ(`Draco: decoded ${bQ} vertices and ${uQ} indices, the accessors declare ${oQ.vertices} and ${oQ.indices}`);const YQ=wQ(FQ),xQ=[];for(const{kind:FQ,id:wQ,components:LQ}of qQ){const qQ=kQ.GetAttributeByUniqueId(mQ,wQ);if(!qQ||0===qQ.ptr)throw new QQ(`Draco: no attribute with id ${wQ} (${FQ})`);const oQ=qQ.data_type();if(!YQ[oQ])throw new QQ(`Draco: Cannot decode invalid data type ${oQ}`);if(qQ.num_components()!==LQ)throw new QQ(`Draco: ${FQ} decodes to ${qQ.num_components()} components, its accessor declares ${LQ}`);xQ.push([FQ,qQ,oQ])}return DQ({dracoDecoder:kQ,geometry:mQ,triangles:HQ===FQ.TRIANGULAR_MESH,numPoints:bQ,numIndices:uQ,attributes:xQ})}finally{mQ&&FQ.destroy(mQ),vQ&&FQ.destroy(vQ),kQ&&FQ.destroy(kQ)}}const qQ=self;let oQ=null;self.onmessage=QQ=>{let{data:DQ}=QQ;if("init"===DQ.id){try{importScripts(DQ.url),oQ=DracoDecoderModule({wasmBinary:DQ.wasmBinary}),qQ.postMessage({id:"initDone"})}catch(HQ){qQ.postMessage({id:"initError",message:HQ instanceof Error?HQ.message:String(HQ)})}return}const{seq:kQ,data:vQ,attributeIds:mQ,expected:uQ}=DQ;oQ?oQ.then((QQ=>{try{const oQ=function(QQ,qQ,oQ,DQ){const kQ=Object.keys(oQ).map((QQ=>({kind:QQ,id:oQ[QQ],components:DQ.components[QQ]})));return LQ(QQ,qQ,kQ,DQ,(LQ=>{let{dracoDecoder:qQ,geometry:oQ,triangles:DQ,numPoints:kQ,numIndices:vQ,attributes:mQ}=LQ;const uQ=wQ(QQ);let HQ=null;if(DQ){const wQ=4*vQ,LQ=FQ(QQ,wQ);try{qQ.GetTrianglesUInt32Array(oQ,wQ,LQ),HQ=new Uint32Array(vQ),HQ.set(new Uint32Array(QQ.HEAPF32.buffer,LQ,vQ))}finally{QQ._free(LQ)}}const bQ=[];for(const[wQ,YQ,xQ]of mQ){const[LQ]=uQ[xQ],DQ=YQ.num_components(),vQ=kQ*DQ,mQ=vQ*LQ.BYTES_PER_ELEMENT,HQ=FQ(QQ,mQ);try{qQ.GetAttributeDataArrayForAllPoints(oQ,YQ,xQ,mQ,HQ),bQ.push({kind:wQ,data:new LQ(QQ.HEAPF32.buffer,HQ,vQ).slice(),size:DQ,byteOffset:YQ.byte_offset(),byteStride:YQ.byte_stride(),normalized:YQ.normalized()})}finally{QQ._free(HQ)}}return{indices:HQ,attributes:bQ,totalVertices:kQ}}))}(QQ,vQ,mQ,uQ),DQ=oQ.attributes.map((QQ=>QQ.data.buffer));oQ.indices&&DQ.push(oQ.indices.buffer),qQ.postMessage({id:"decoded",seq:kQ,...oQ},DQ)}catch(HQ){qQ.postMessage({id:"decodeError",seq:kQ,message:HQ instanceof Error?HQ.message:String(HQ)})}}),(QQ=>{qQ.postMessage({id:"decodeError",seq:kQ,message:QQ instanceof Error?QQ.message:String(QQ)})})):qQ.postMessage({id:"decodeError",seq:kQ,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, wQ.p + "dracoDecode.worker.731c66d4.worker.js")
     }
-    var gd = kd(95);
-    const Cd = 1e3;
-    let Kd = null,
-      od = null;
-    const ld = [],
-      Qd = [];
-    let Ld = 0;
-    const Od = {
+    var vQ = wQ(96);
+    const mQ = 1e3;
+    let uQ = null,
+      HQ = null;
+    const bQ = [],
+      YQ = [];
+    let xQ = 0;
+    const AQ = {
         decodes: 0,
         workersStarted: 0,
         mostWorkers: 0
       },
-      ed = function(dd, Jd) {
-        const kd = dd ? Math.max(1, Math.min(Math.floor(.5 * dd), 4)) : 1;
-        return Jd ? Math.min(kd, 2) : kd
-      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, gd.isMobile)());
+      tQ = function(QQ, FQ) {
+        const wQ = QQ ? Math.max(1, Math.min(Math.floor(.5 * QQ), 4)) : 1;
+        return FQ ? Math.min(wQ, 2) : wQ
+      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, vQ.isMobile)());
 
-    function Rd() {
-      if (!Kd) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function eQ() {
+      if (!uQ) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
-        scriptUrl: dd,
-        wasmBinaryUrl: Jd
-      } = Kd;
-      return od ??= fetch(Jd).then((dd => {
-        if (!dd.ok) throw new Error(`Draco: fetching ${Jd} failed: ${dd.status}`);
-        return dd.arrayBuffer()
-      })), od.catch((() => {
-        od = null
-      })), Od.workersStarted++, od.then((Jd => new Promise(((kd, pd) => {
-        const Nd = new Zd;
-        Nd.onerror = dd => {
-          Nd.onmessage = null, Nd.onerror = null, Nd.terminate(), pd(new Error("Draco: the decode worker failed to start" + (dd.message ? `: ${dd.message}` : " (its script did not load)")))
-        }, Nd.onmessage = dd => {
+        scriptUrl: QQ,
+        wasmBinaryUrl: FQ
+      } = uQ;
+      return HQ ??= fetch(FQ).then((QQ => {
+        if (!QQ.ok) throw new Error(`Draco: fetching ${FQ} failed: ${QQ.status}`);
+        return QQ.arrayBuffer()
+      })), HQ.catch((() => {
+        HQ = null
+      })), AQ.workersStarted++, HQ.then((FQ => new Promise(((wQ, LQ) => {
+        const qQ = new kQ;
+        qQ.onerror = QQ => {
+          qQ.onmessage = null, qQ.onerror = null, qQ.terminate(), LQ(new Error("Draco: the decode worker failed to start" + (QQ.message ? `: ${QQ.message}` : " (its script did not load)")))
+        }, qQ.onmessage = QQ => {
           let {
-            data: Jd
-          } = dd;
-          Nd.onmessage = null, Nd.onerror = null, "initDone" === Jd.id ? kd(Nd) : (Nd.terminate(), pd(new Error(`Draco: ${"initError"===Jd.id?Jd.message:"the worker did not start"}`)))
+            data: FQ
+          } = QQ;
+          qQ.onmessage = null, qQ.onerror = null, "initDone" === FQ.id ? wQ(qQ) : (qQ.terminate(), LQ(new Error(`Draco: ${"initError"===FQ.id?FQ.message:"the worker did not start"}`)))
         };
-        const Wd = Jd.slice(0),
-          Pd = {
+        const oQ = FQ.slice(0),
+          DQ = {
             id: "init",
-            url: dd,
-            wasmBinary: Wd
+            url: QQ,
+            wasmBinary: oQ
           };
-        Nd.postMessage(Pd, [Wd])
+        qQ.postMessage(DQ, [oQ])
       }))))
     }
 
-    function Id(dd) {
-      const Jd = ld.indexOf(dd); - 1 !== Jd && ld.splice(Jd, 1);
-      const kd = Qd.shift();
-      kd && vd(kd)
+    function MQ(QQ) {
+      const FQ = bQ.indexOf(QQ); - 1 !== FQ && bQ.splice(FQ, 1);
+      const wQ = YQ.shift();
+      wQ && pQ(wQ)
     }
 
-    function Gd(dd, Jd) {
-      dd.busy = !0, dd.releaseTimer && (clearTimeout(dd.releaseTimer), dd.releaseTimer = null);
-      dd.worker.then((kd => {
-        const pd = Ld++;
-        kd.onmessage = Nd => {
+    function GQ(QQ, FQ) {
+      QQ.busy = !0, QQ.releaseTimer && (clearTimeout(QQ.releaseTimer), QQ.releaseTimer = null);
+      QQ.worker.then((wQ => {
+        const LQ = xQ++;
+        wQ.onmessage = qQ => {
           let {
-            data: Wd
-          } = Nd;
-          if (("decoded" === Wd.id || "decodeError" === Wd.id) && Wd.seq === pd) {
-            if (kd.onmessage = null, kd.onerror = null, "decoded" === Wd.id) return Od.decodes++, Jd.resolve({
-              indices: Wd.indices,
-              attributes: Wd.attributes,
-              totalVertices: Wd.totalVertices
+            data: oQ
+          } = qQ;
+          if (("decoded" === oQ.id || "decodeError" === oQ.id) && oQ.seq === LQ) {
+            if (wQ.onmessage = null, wQ.onerror = null, "decoded" === oQ.id) return AQ.decodes++, FQ.resolve({
+              indices: oQ.indices,
+              attributes: oQ.attributes,
+              totalVertices: oQ.totalVertices
             }), void(() => {
-              const Jd = Qd.shift();
-              Jd ? Gd(dd, Jd) : (dd.busy = !1, dd.releaseTimer = setTimeout((() => {
-                const Jd = ld.indexOf(dd); - 1 !== Jd && ld.splice(Jd, 1), dd.worker.then((dd => {
-                  dd.terminate()
+              const FQ = YQ.shift();
+              FQ ? GQ(QQ, FQ) : (QQ.busy = !1, QQ.releaseTimer = setTimeout((() => {
+                const FQ = bQ.indexOf(QQ); - 1 !== FQ && bQ.splice(FQ, 1), QQ.worker.then((QQ => {
+                  QQ.terminate()
                 }))
-              }), Cd))
+              }), mQ))
             })();
-            kd.terminate(), Jd.reject(new Error(Wd.message)), Id(dd)
+            wQ.terminate(), FQ.reject(new Error(oQ.message)), MQ(QQ)
           }
-        }, kd.onerror = pd => {
-          kd.onmessage = null, kd.onerror = null, kd.terminate(), Jd.reject(new Error(`Draco: the decode worker failed: ${pd.message}`)), Id(dd)
+        }, wQ.onerror = LQ => {
+          wQ.onmessage = null, wQ.onerror = null, wQ.terminate(), FQ.reject(new Error(`Draco: the decode worker failed: ${LQ.message}`)), MQ(QQ)
         };
-        const Nd = {
+        const qQ = {
           id: "decode",
-          seq: pd,
-          data: Jd.data,
-          attributeIds: Jd.attributeIds,
-          expected: Jd.expected
+          seq: LQ,
+          data: FQ.data,
+          attributeIds: FQ.attributeIds,
+          expected: FQ.expected
         };
-        kd.postMessage(Nd, [Jd.data.buffer])
-      }), (kd => {
-        Jd.reject(kd instanceof Error ? kd : new Error(String(kd))), Id(dd)
+        wQ.postMessage(qQ, [FQ.data.buffer])
+      }), (wQ => {
+        FQ.reject(wQ instanceof Error ? wQ : new Error(String(wQ))), MQ(QQ)
       }))
     }
 
-    function vd(dd) {
-      const Jd = ld.find((dd => !dd.busy));
-      if (Jd) Gd(Jd, dd);
+    function pQ(QQ) {
+      const FQ = bQ.find((QQ => !QQ.busy));
+      if (FQ) GQ(FQ, QQ);
       else {
-        if (ld.length < ed) {
-          const Jd = {
-            worker: Rd(),
+        if (bQ.length < tQ) {
+          const FQ = {
+            worker: eQ(),
             busy: !0,
             releaseTimer: null
           };
-          return ld.push(Jd), Od.mostWorkers = Math.max(Od.mostWorkers, ld.length), void Gd(Jd, dd)
+          return bQ.push(FQ), AQ.mostWorkers = Math.max(AQ.mostWorkers, bQ.length), void GQ(FQ, QQ)
         }
-        Qd.push(dd)
+        YQ.push(QQ)
       }
     }
 
-    function xd(dd, Jd, kd) {
-      return new Promise(((pd, Nd) => {
-        vd({
-          data: new Int8Array(dd.buffer, dd.byteOffset, dd.byteLength).slice(),
-          attributeIds: Jd,
-          expected: kd,
-          resolve: pd,
-          reject: Nd
+    function cQ(QQ, FQ, wQ) {
+      return new Promise(((LQ, qQ) => {
+        pQ({
+          data: new Int8Array(QQ.buffer, QQ.byteOffset, QQ.byteLength).slice(),
+          attributeIds: FQ,
+          expected: wQ,
+          resolve: LQ,
+          reject: qQ
         })
       }))
     }
-    var qd = kd(37669),
-      Bd = kd(37682),
-      sd = kd(9315),
-      ad = kd(9310);
-    const Md = {
+    var CQ = wQ(37052),
+      SQ = wQ(37065),
+      iQ = wQ(9184),
+      WQ = wQ(9181);
+    const RQ = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -146,323 +146,323 @@ export const modules = {
       wrapT: void 0
     };
 
-    function Fd(dd) {
-      const Jd = (0, ad.d)(dd.byteLength);
-      if (Jd) throw new sd.m(Jd);
+    function OQ(QQ) {
+      const FQ = (0, WQ.h)(QQ.byteLength);
+      if (FQ) throw new iQ.j(FQ);
       const {
-        json: kd,
-        bin: pd
-      } = (0, sd.w)(dd), Nd = (0, ad.c)(kd, pd);
-      if (Nd) throw new sd.m(Nd);
+        json: wQ,
+        bin: LQ
+      } = (0, iQ.q)(QQ), qQ = (0, WQ.e)(wQ, LQ);
+      if (qQ) throw new iQ.j(qQ);
       try {
-        return function(dd, Jd) {
-          var kd, pd, Nd, Wd, Pd, Zd, gd, Cd, Kd, od, ld, Qd, Ld, Od, ed;
-          const Rd = new Map,
-            Id = kd => {
-              let pd = Rd.get(kd);
-              if (!pd) {
-                var Nd;
-                const Wd = dd.bufferViews[kd],
-                  Pd = null !== (Nd = Wd.byteOffset) && void 0 !== Nd ? Nd : 0;
-                pd = {
-                  index: kd,
-                  bytes: Jd.subarray(Pd, Pd + Wd.byteLength),
-                  byteStride: Wd.byteStride
-                }, Rd.set(kd, pd)
+        return function(QQ, FQ) {
+          var wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ, uQ, HQ, bQ, YQ, xQ, AQ, tQ;
+          const eQ = new Map,
+            MQ = wQ => {
+              let LQ = eQ.get(wQ);
+              if (!LQ) {
+                var qQ;
+                const oQ = QQ.bufferViews[wQ],
+                  DQ = null !== (qQ = oQ.byteOffset) && void 0 !== qQ ? qQ : 0;
+                LQ = {
+                  index: wQ,
+                  bytes: FQ.subarray(DQ, DQ + oQ.byteLength),
+                  byteStride: oQ.byteStride
+                }, eQ.set(wQ, LQ)
               }
-              return pd
+              return LQ
             },
-            Gd = new Map,
-            vd = Jd => {
-              let kd = Gd.get(Jd);
-              if (!kd) {
-                var pd;
-                const Nd = dd.accessors[Jd];
-                kd = {
-                  index: Jd,
-                  count: Nd.count,
-                  type: Nd.type,
-                  numComponents: sd.n[Nd.type],
-                  componentType: Nd.componentType,
-                  normalized: null !== (pd = Nd.normalized) && void 0 !== pd && pd,
-                  byteOffset: Nd.byteOffset,
-                  bufferView: void 0 === Nd.bufferView ? null : Id(Nd.bufferView),
-                  min: Nd.min,
-                  max: Nd.max
-                }, Gd.set(Jd, kd)
+            GQ = new Map,
+            pQ = FQ => {
+              let wQ = GQ.get(FQ);
+              if (!wQ) {
+                var LQ;
+                const qQ = QQ.accessors[FQ];
+                wQ = {
+                  index: FQ,
+                  count: qQ.count,
+                  type: qQ.type,
+                  numComponents: iQ.l[qQ.type],
+                  componentType: qQ.componentType,
+                  normalized: null !== (LQ = qQ.normalized) && void 0 !== LQ && LQ,
+                  byteOffset: qQ.byteOffset,
+                  bufferView: void 0 === qQ.bufferView ? null : MQ(qQ.bufferView),
+                  min: qQ.min,
+                  max: qQ.max
+                }, GQ.set(FQ, wQ)
               }
-              return kd
+              return wQ
             },
-            xd = null !== (kd = null === (pd = dd.extensionsUsed) || void 0 === pd ? void 0 : pd.includes("KHR_draco_mesh_compression")) && void 0 !== kd && kd,
-            qd = (null !== (Nd = dd.meshes) && void 0 !== Nd ? Nd : []).map(((Jd, kd) => {
-              const pd = Jd.primitives.map(((Jd, kd) => {
-                var pd, Nd, Wd;
-                const Pd = xd ? null === (pd = Jd.extensions) || void 0 === pd ? void 0 : pd.KHR_draco_mesh_compression : void 0;
-                let Zd = null;
-                const gd = [];
-                if (Pd) {
-                  const kd = {
-                    vertices: dd.accessors[Jd.attributes.POSITION].count,
-                    indices: void 0 === Jd.indices ? 0 : dd.accessors[Jd.indices].count,
+            cQ = null !== (wQ = null === (LQ = QQ.extensionsUsed) || void 0 === LQ ? void 0 : LQ.includes("KHR_draco_mesh_compression")) && void 0 !== wQ && wQ,
+            CQ = (null !== (qQ = QQ.meshes) && void 0 !== qQ ? qQ : []).map(((FQ, wQ) => {
+              const LQ = FQ.primitives.map(((FQ, wQ) => {
+                var LQ, qQ, oQ;
+                const DQ = cQ ? null === (LQ = FQ.extensions) || void 0 === LQ ? void 0 : LQ.KHR_draco_mesh_compression : void 0;
+                let kQ = null;
+                const vQ = [];
+                if (DQ) {
+                  const wQ = {
+                    vertices: QQ.accessors[FQ.attributes.POSITION].count,
+                    indices: void 0 === FQ.indices ? 0 : QQ.accessors[FQ.indices].count,
                     components: {}
                   };
-                  Zd = {
-                    bufferView: Id(Pd.bufferView),
+                  kQ = {
+                    bufferView: MQ(DQ.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: kd
+                    expected: wQ
                   };
-                  for (const [pd, Nd] of sd.i) {
-                    const Wd = Pd.attributes[pd];
-                    if (void 0 === Wd) continue;
-                    Zd.attributeIds[Nd] = Wd;
-                    const gd = Jd.attributes[pd];
-                    var Cd;
-                    if (void 0 !== gd) Zd.normalized[Nd] = null !== (Cd = dd.accessors[gd].normalized) && void 0 !== Cd && Cd, kd.components[Nd] = sd.n[dd.accessors[gd].type]
+                  for (const [LQ, qQ] of iQ.f) {
+                    const oQ = DQ.attributes[LQ];
+                    if (void 0 === oQ) continue;
+                    kQ.attributeIds[qQ] = oQ;
+                    const vQ = FQ.attributes[LQ];
+                    var mQ;
+                    if (void 0 !== vQ) kQ.normalized[qQ] = null !== (mQ = QQ.accessors[vQ].normalized) && void 0 !== mQ && mQ, wQ.components[qQ] = iQ.l[QQ.accessors[vQ].type]
                   }
                 } else
-                  for (const [dd, Kd] of sd.i) {
-                    const kd = Jd.attributes[dd];
-                    void 0 !== kd && gd.push({
-                      semantic: dd,
-                      kind: Kd,
-                      accessor: vd(kd)
+                  for (const [QQ, uQ] of iQ.f) {
+                    const wQ = FQ.attributes[QQ];
+                    void 0 !== wQ && vQ.push({
+                      semantic: QQ,
+                      kind: uQ,
+                      accessor: pQ(wQ)
                     })
                   }
                 return {
-                  index: kd,
-                  mode: null !== (Nd = Jd.mode) && void 0 !== Nd ? Nd : 4,
-                  attributes: gd,
-                  indices: Pd || void 0 === Jd.indices ? null : vd(Jd.indices),
-                  position: void 0 === Jd.attributes.POSITION ? null : vd(Jd.attributes.POSITION),
-                  material: null !== (Wd = Jd.material) && void 0 !== Wd ? Wd : null,
-                  draco: Zd
+                  index: wQ,
+                  mode: null !== (qQ = FQ.mode) && void 0 !== qQ ? qQ : 4,
+                  attributes: vQ,
+                  indices: DQ || void 0 === FQ.indices ? null : pQ(FQ.indices),
+                  position: void 0 === FQ.attributes.POSITION ? null : pQ(FQ.attributes.POSITION),
+                  material: null !== (oQ = FQ.material) && void 0 !== oQ ? oQ : null,
+                  draco: kQ
                 }
               }));
               return {
-                index: kd,
-                name: Jd.name,
-                primitives: pd,
-                extras: Jd.extras
+                index: wQ,
+                name: FQ.name,
+                primitives: LQ,
+                extras: FQ.extras
               }
             })),
-            Bd = (null !== (Wd = dd.nodes) && void 0 !== Wd ? Wd : []).map(((dd, Jd) => {
-              var kd, pd;
+            SQ = (null !== (oQ = QQ.nodes) && void 0 !== oQ ? oQ : []).map(((QQ, FQ) => {
+              var wQ, LQ;
               return {
-                index: Jd,
-                name: dd.name,
-                children: null !== (kd = dd.children) && void 0 !== kd ? kd : [],
-                mesh: null !== (pd = dd.mesh) && void 0 !== pd ? pd : null,
-                translation: dd.translation,
-                rotation: dd.rotation,
-                scale: dd.scale,
-                hasCamera: void 0 !== dd.camera,
-                extras: dd.extras
+                index: FQ,
+                name: QQ.name,
+                children: null !== (wQ = QQ.children) && void 0 !== wQ ? wQ : [],
+                mesh: null !== (LQ = QQ.mesh) && void 0 !== LQ ? LQ : null,
+                translation: QQ.translation,
+                rotation: QQ.rotation,
+                scale: QQ.scale,
+                hasCamera: void 0 !== QQ.camera,
+                extras: QQ.extras
               }
             })),
-            ad = null !== (Pd = null === (Zd = dd.extensionsUsed) || void 0 === Zd ? void 0 : Zd.includes("KHR_materials_unlit")) && void 0 !== Pd && Pd,
-            Fd = null !== (gd = null === (Cd = dd.extensionsUsed) || void 0 === Cd ? void 0 : Cd.includes("KHR_texture_transform")) && void 0 !== gd && gd,
-            Yd = (null !== (Kd = dd.materials) && void 0 !== Kd ? Kd : []).map(((dd, Jd) => {
-              var kd, pd, Nd, Wd;
-              const Pd = dd.pbrMetallicRoughness,
-                Zd = null === Pd || void 0 === Pd ? void 0 : Pd.baseColorTexture;
+            WQ = null !== (DQ = null === (kQ = QQ.extensionsUsed) || void 0 === kQ ? void 0 : kQ.includes("KHR_materials_unlit")) && void 0 !== DQ && DQ,
+            OQ = null !== (vQ = null === (mQ = QQ.extensionsUsed) || void 0 === mQ ? void 0 : mQ.includes("KHR_texture_transform")) && void 0 !== vQ && vQ,
+            sQ = (null !== (uQ = QQ.materials) && void 0 !== uQ ? uQ : []).map(((QQ, FQ) => {
+              var wQ, LQ, qQ, oQ;
+              const DQ = QQ.pbrMetallicRoughness,
+                kQ = null === DQ || void 0 === DQ ? void 0 : DQ.baseColorTexture;
               return {
-                index: Jd,
-                name: dd.name,
-                extras: dd.extras,
-                unlit: ad && void 0 !== (null === (kd = dd.extensions) || void 0 === kd ? void 0 : kd.KHR_materials_unlit),
-                pbr: Pd ? {
-                  baseColorFactor: Pd.baseColorFactor,
-                  metallicFactor: Pd.metallicFactor,
-                  roughnessFactor: Pd.roughnessFactor
+                index: FQ,
+                name: QQ.name,
+                extras: QQ.extras,
+                unlit: WQ && void 0 !== (null === (wQ = QQ.extensions) || void 0 === wQ ? void 0 : wQ.KHR_materials_unlit),
+                pbr: DQ ? {
+                  baseColorFactor: DQ.baseColorFactor,
+                  metallicFactor: DQ.metallicFactor,
+                  roughnessFactor: DQ.roughnessFactor
                 } : null,
-                baseColorTexture: Zd ? {
-                  texture: Zd.index,
-                  transform: Fd && (null === (pd = Zd.extensions) || void 0 === pd ? void 0 : pd.KHR_texture_transform) || null
+                baseColorTexture: kQ ? {
+                  texture: kQ.index,
+                  transform: OQ && (null === (LQ = kQ.extensions) || void 0 === LQ ? void 0 : LQ.KHR_texture_transform) || null
                 } : null,
-                emissiveFactor: dd.emissiveFactor,
-                alphaMode: null !== (Nd = dd.alphaMode) && void 0 !== Nd ? Nd : "OPAQUE",
-                alphaCutoff: dd.alphaCutoff,
-                doubleSided: null !== (Wd = dd.doubleSided) && void 0 !== Wd && Wd
+                emissiveFactor: QQ.emissiveFactor,
+                alphaMode: null !== (qQ = QQ.alphaMode) && void 0 !== qQ ? qQ : "OPAQUE",
+                alphaCutoff: QQ.alphaCutoff,
+                doubleSided: null !== (oQ = QQ.doubleSided) && void 0 !== oQ && oQ
               }
             })),
-            md = (null !== (od = dd.textures) && void 0 !== od ? od : []).map(((Jd, kd) => {
-              var pd, Nd;
-              const Wd = void 0 === Jd.sampler ? Md : {
-                index: Jd.sampler,
-                ...null === (pd = dd.samplers) || void 0 === pd ? void 0 : pd[Jd.sampler]
+            rQ = (null !== (HQ = QQ.textures) && void 0 !== HQ ? HQ : []).map(((FQ, wQ) => {
+              var LQ, qQ;
+              const oQ = void 0 === FQ.sampler ? RQ : {
+                index: FQ.sampler,
+                ...null === (LQ = QQ.samplers) || void 0 === LQ ? void 0 : LQ[FQ.sampler]
               };
               return {
-                index: kd,
+                index: wQ,
                 sampler: {
-                  index: Wd.index,
-                  magFilter: Wd.magFilter,
-                  minFilter: Wd.minFilter,
-                  wrapS: Wd.wrapS,
-                  wrapT: Wd.wrapT
+                  index: oQ.index,
+                  magFilter: oQ.magFilter,
+                  minFilter: oQ.minFilter,
+                  wrapS: oQ.wrapS,
+                  wrapT: oQ.wrapT
                 },
-                image: null !== (Nd = Jd.source) && void 0 !== Nd ? Nd : -1
+                image: null !== (qQ = FQ.source) && void 0 !== qQ ? qQ : -1
               }
             })),
-            bd = (null !== (ld = dd.images) && void 0 !== ld ? ld : []).map(((dd, Jd) => ({
-              index: Jd,
-              name: dd.name,
-              mimeType: dd.mimeType,
-              bufferView: Id(dd.bufferView)
+            IQ = (null !== (bQ = QQ.images) && void 0 !== bQ ? bQ : []).map(((QQ, FQ) => ({
+              index: FQ,
+              name: QQ.name,
+              mimeType: QQ.mimeType,
+              bufferView: MQ(QQ.bufferView)
             }))),
-            Sd = null !== (Qd = (0, sd.v)(dd)) && void 0 !== Qd ? Qd : 0;
+            UQ = null !== (YQ = (0, iQ.p)(QQ)) && void 0 !== YQ ? YQ : 0;
           return {
-            json: dd,
-            rootNodes: null !== (Ld = null === (Od = dd.scenes) || void 0 === Od || null === (ed = Od[Sd]) || void 0 === ed ? void 0 : ed.nodes) && void 0 !== Ld ? Ld : [],
-            nodes: Bd,
-            meshes: qd,
-            materials: Yd,
-            textures: md,
-            images: bd
+            json: QQ,
+            rootNodes: null !== (xQ = null === (AQ = QQ.scenes) || void 0 === AQ || null === (tQ = AQ[UQ]) || void 0 === tQ ? void 0 : tQ.nodes) && void 0 !== xQ ? xQ : [],
+            nodes: SQ,
+            meshes: CQ,
+            materials: sQ,
+            textures: rQ,
+            images: IQ
           }
-        }(kd, pd)
-      } catch (Wd) {
-        throw Wd instanceof sd.k ? Wd : new sd.k(`reading the GLB failed: ${Wd instanceof Error?Wd.message:String(Wd)}`)
+        }(wQ, LQ)
+      } catch (oQ) {
+        throw oQ instanceof iQ.g ? oQ : new iQ.g(`reading the GLB failed: ${oQ instanceof Error?oQ.message:String(oQ)}`)
       }
     }
-    async function Yd(dd, Jd) {
-      var kd, pd;
-      const Nd = dd.draco;
-      if (!Nd) throw new sd.k("not a Draco primitive");
-      let Wd;
+    async function sQ(QQ, FQ) {
+      var wQ, LQ;
+      const qQ = QQ.draco;
+      if (!qQ) throw new iQ.g("not a Draco primitive");
+      let oQ;
       try {
-        Wd = await Jd(Nd.bufferView.bytes, Nd.attributeIds, Nd.expected)
-      } catch (Cd) {
-        throw new sd.k(`Draco decoding failed: ${Cd instanceof Error?Cd.message:String(Cd)}`)
+        oQ = await FQ(qQ.bufferView.bytes, qQ.attributeIds, qQ.expected)
+      } catch (mQ) {
+        throw new iQ.g(`Draco decoding failed: ${mQ instanceof Error?mQ.message:String(mQ)}`)
       }
       const {
-        vertices: Pd,
-        indices: Zd,
-        components: gd
-      } = Nd.expected;
-      if (Wd.totalVertices !== Pd || (null !== (kd = null === (pd = Wd.indices) || void 0 === pd ? void 0 : pd.length) && void 0 !== kd ? kd : 0) !== Zd || Wd.attributes.some((dd => dd.size !== gd[dd.kind] || dd.data.length !== Pd * dd.size))) throw new sd.k("Draco decoding gave other counts than the accessors declare");
-      for (const Kd of Wd.attributes) {
-        const dd = Nd.normalized[Kd.kind];
-        void 0 !== dd && (Kd.normalized = dd)
+        vertices: DQ,
+        indices: kQ,
+        components: vQ
+      } = qQ.expected;
+      if (oQ.totalVertices !== DQ || (null !== (wQ = null === (LQ = oQ.indices) || void 0 === LQ ? void 0 : LQ.length) && void 0 !== wQ ? wQ : 0) !== kQ || oQ.attributes.some((QQ => QQ.size !== vQ[QQ.kind] || QQ.data.length !== DQ * QQ.size))) throw new iQ.g("Draco decoding gave other counts than the accessors declare");
+      for (const uQ of oQ.attributes) {
+        const QQ = qQ.normalized[uQ.kind];
+        void 0 !== QQ && (uQ.normalized = QQ)
       }
-      return Wd
+      return oQ
     }
-    const md = new WeakMap;
+    const rQ = new WeakMap;
 
-    function bd(dd, Jd) {
-      var kd;
-      const pd = null !== (kd = md.get(dd)) && void 0 !== kd ? kd : Jd(dd);
-      return md.set(dd, pd), pd
-    }
-
-    function Sd(dd) {
-      const Jd = dd.bufferView,
-        kd = 5125 === dd.componentType ? Uint32Array : Uint16Array,
-        pd = Jd.bytes.buffer,
-        Nd = Jd.bytes.byteOffset + (dd.byteOffset || 0);
-      return Nd % kd.BYTES_PER_ELEMENT !== 0 ? new kd(pd.slice(Nd, Nd + dd.count * kd.BYTES_PER_ELEMENT), 0) : new kd(pd, Nd, dd.count)
+    function IQ(QQ, FQ) {
+      var wQ;
+      const LQ = null !== (wQ = rQ.get(QQ)) && void 0 !== wQ ? wQ : FQ(QQ);
+      return rQ.set(QQ, LQ), LQ
     }
 
-    function jd(dd, Jd) {
-      if (dd.min && dd.max) return [new Float64Array(dd.min), new Float64Array(dd.max)];
-      const kd = Jd.find((dd => {
+    function UQ(QQ) {
+      const FQ = QQ.bufferView,
+        wQ = 5125 === QQ.componentType ? Uint32Array : Uint16Array,
+        LQ = FQ.bytes.buffer,
+        qQ = FQ.bytes.byteOffset + (QQ.byteOffset || 0);
+      return qQ % wQ.BYTES_PER_ELEMENT !== 0 ? new wQ(LQ.slice(qQ, qQ + QQ.count * wQ.BYTES_PER_ELEMENT), 0) : new wQ(LQ, qQ, QQ.count)
+    }
+
+    function NQ(QQ, FQ) {
+      if (QQ.min && QQ.max) return [new Float64Array(QQ.min), new Float64Array(QQ.max)];
+      const wQ = FQ.find((QQ => {
           let {
-            kind: Jd
-          } = dd;
-          return "position" === Jd
+            kind: FQ
+          } = QQ;
+          return "position" === FQ
         })),
-        pd = kd ? (0, Bd.d)(kd, dd.count) : new Float32Array(0);
-      return (0, Bd.p)(pd.length / 3, ((dd, Jd) => pd[3 * dd + Jd]))
+        LQ = wQ ? (0, SQ.l)(wQ, QQ.count) : new Float32Array(0);
+      return (0, SQ.x)(LQ.length / 3, ((QQ, FQ) => LQ[3 * QQ + FQ]))
     }
 
-    function Xd(dd) {
-      const Jd = dd.attributes.map((dd => {
-          var Jd, kd;
+    function TQ(QQ) {
+      const FQ = QQ.attributes.map((QQ => {
+          var FQ, wQ;
           let {
-            kind: pd,
-            accessor: Nd
-          } = dd;
+            kind: LQ,
+            accessor: qQ
+          } = QQ;
           const {
-            bufferView: Wd,
-            numComponents: Pd
-          } = Nd;
-          if (!Wd) {
+            bufferView: oQ,
+            numComponents: DQ
+          } = qQ;
+          if (!oQ) {
             return {
-              kind: pd,
-              data: bd(Nd, (() => new Float32Array(Pd * Nd.count))),
+              kind: LQ,
+              data: IQ(qQ, (() => new Float32Array(DQ * qQ.count))),
               offset: 0,
-              stride: 4 * Pd,
-              components: Pd,
+              stride: 4 * DQ,
+              components: DQ,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const Zd = null !== (Jd = Wd.byteStride) && void 0 !== Jd ? Jd : Pd * sd.e[Nd.componentType];
+          const kQ = null !== (FQ = oQ.byteStride) && void 0 !== FQ ? FQ : DQ * iQ.b[qQ.componentType];
           return {
-            kind: pd,
-            data: Wd.bytes,
-            offset: null !== (kd = Nd.byteOffset) && void 0 !== kd ? kd : 0,
-            stride: Zd,
-            components: Pd,
-            glType: Nd.componentType,
-            isNormalized: Nd.normalized
+            kind: LQ,
+            data: oQ.bytes,
+            offset: null !== (wQ = qQ.byteOffset) && void 0 !== wQ ? wQ : 0,
+            stride: kQ,
+            components: DQ,
+            glType: qQ.componentType,
+            isNormalized: qQ.normalized
           }
         })),
-        kd = dd.indices,
-        pd = kd && bd(kd, Sd),
-        Nd = dd.position;
-      return new Bd.c(Jd, pd, Nd.count, ...jd(Nd, Jd))
+        wQ = QQ.indices,
+        LQ = wQ && IQ(wQ, UQ),
+        qQ = QQ.position;
+      return new SQ.h(FQ, LQ, qQ.count, ...NQ(qQ, FQ))
     }
-    const fd = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const KQ = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function nd(dd, Jd) {
-      const kd = Jd.attributes.map((dd => {
+    function zQ(QQ, FQ) {
+      const wQ = FQ.attributes.map((QQ => {
         let {
-          kind: Jd,
-          data: kd,
-          size: pd,
-          byteOffset: Nd,
-          byteStride: Wd,
-          normalized: Pd
-        } = dd;
+          kind: FQ,
+          data: wQ,
+          size: LQ,
+          byteOffset: qQ,
+          byteStride: oQ,
+          normalized: DQ
+        } = QQ;
         return {
-          kind: Jd,
-          data: kd,
-          offset: Nd,
-          stride: Wd,
-          components: pd,
-          glType: 5120 + fd.indexOf(kd.constructor),
-          isNormalized: Pd
+          kind: FQ,
+          data: wQ,
+          offset: qQ,
+          stride: oQ,
+          components: LQ,
+          glType: 5120 + KQ.indexOf(wQ.constructor),
+          isNormalized: DQ
         }
       }));
-      return new Bd.c(kd, Jd.indices, Jd.totalVertices, ...jd(dd.position, kd))
+      return new SQ.h(wQ, FQ.indices, FQ.totalVertices, ...NQ(QQ.position, wQ))
     }
 
-    function Ud(dd) {
-      const Jd = dd.lastIndexOf("/");
-      return Jd < 0 ? dd : dd.substring(Jd + 1)
+    function lQ(QQ) {
+      const FQ = QQ.lastIndexOf("/");
+      return FQ < 0 ? QQ : QQ.substring(FQ + 1)
     }
 
-    function yd(dd) {
-      const Jd = dd.lastIndexOf("/");
-      return Jd < 0 ? "" : dd.substring(0, Jd + 1)
+    function jQ(QQ) {
+      const FQ = QQ.lastIndexOf("/");
+      return FQ < 0 ? "" : QQ.substring(0, FQ + 1)
     }
 
-    function Dd(dd) {
-      return dd.name || `node${dd.index}`
+    function aQ(QQ) {
+      return QQ.name || `node${QQ.index}`
     }
-    const Td = {
+    const XQ = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      Ed = {
+      fQ = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      cd = {
+      VQ = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -471,353 +471,353 @@ export const modules = {
         9987: 6
       };
 
-    function hd(dd) {
-      var Jd, kd, pd, Nd;
-      const Wd = null !== (Jd = dd.minFilter) && void 0 !== Jd ? Jd : 9987;
-      return 9729 === (null !== (kd = dd.magFilter) && void 0 !== kd ? kd : 9729) ? null !== (pd = Ed[Wd]) && void 0 !== pd ? pd : 3 : null !== (Nd = cd[Wd]) && void 0 !== Nd ? Nd : 4
+    function hQ(QQ) {
+      var FQ, wQ, LQ, qQ;
+      const oQ = null !== (FQ = QQ.minFilter) && void 0 !== FQ ? FQ : 9987;
+      return 9729 === (null !== (wQ = QQ.magFilter) && void 0 !== wQ ? wQ : 9729) ? null !== (LQ = fQ[oQ]) && void 0 !== LQ ? LQ : 3 : null !== (qQ = VQ[oQ]) && void 0 !== qQ ? qQ : 4
     }
-    const rd = {
+    const JQ = {
       33071: 0,
       33648: 2
     };
 
-    function ud(dd) {
-      var Jd;
-      return null !== (Jd = rd[null !== dd && void 0 !== dd ? dd : 10497]) && void 0 !== Jd ? Jd : 1
+    function EQ(QQ) {
+      var FQ;
+      return null !== (FQ = JQ[null !== QQ && void 0 !== QQ ? QQ : 10497]) && void 0 !== FQ ? FQ : 1
     }
 
-    function td(dd) {
-      return 9728 === dd.minFilter || 9729 === dd.minFilter
+    function nQ(QQ) {
+      return 9728 === QQ.minFilter || 9729 === QQ.minFilter
     }
 
-    function Vd(dd) {
-      var Jd, kd, pd;
-      const Nd = Float64Array.from(null !== (Jd = dd.scale) && void 0 !== Jd ? Jd : [1, 1, 1]);
-      return dd.hasCamera && (Nd[0] = -1), {
-        translation: Float64Array.from(null !== (kd = dd.translation) && void 0 !== kd ? kd : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (pd = dd.rotation) && void 0 !== pd ? pd : [0, 0, 0, 1]),
-        scale: Nd
+    function gQ(QQ) {
+      var FQ, wQ, LQ;
+      const qQ = Float64Array.from(null !== (FQ = QQ.scale) && void 0 !== FQ ? FQ : [1, 1, 1]);
+      return QQ.hasCamera && (qQ[0] = -1), {
+        translation: Float64Array.from(null !== (wQ = QQ.translation) && void 0 !== wQ ? wQ : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (LQ = QQ.rotation) && void 0 !== LQ ? LQ : [0, 0, 0, 1]),
+        scale: qQ
       }
     }
 
-    function zd(dd, Jd) {
+    function PQ(QQ, FQ) {
       let {
-        translation: kd,
-        rotation: pd,
-        scale: Nd
-      } = dd;
-      const Wd = new Float32Array(16);
-      return (0, qd.d)(Nd, 0, pd, 0, kd, 0, Wd), Jd && (0, qd.l)(Wd, Jd, 0, Wd), Wd
+        translation: wQ,
+        rotation: LQ,
+        scale: qQ
+      } = QQ;
+      const oQ = new Float32Array(16);
+      return (0, CQ.d)(qQ, 0, LQ, 0, wQ, 0, oQ), FQ && (0, CQ.p)(oQ, FQ, 0, oQ), oQ
     }
-    class Hd {
-      constructor(dd, Jd, kd, pd) {
-        this.model = dd, this.decode = Jd, this.fileInfo = kd, this.uniqueRootUrl = pd, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const Nd = new Set,
-          Wd = (Jd, kd) => {
-            const pd = dd.nodes[Jd];
-            if (this.parents.has(pd)) throw new sd.k(`/nodes/${Jd}: Invalid recursive node hierarchy`);
-            this.parents.set(pd, kd);
-            const Pd = null === pd.mesh ? [] : dd.meshes[pd.mesh].primitives,
-              Zd = Pd.map((dd => {
-                const Jd = Pd.length > 1;
+    class ZQ {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.model = QQ, this.decode = FQ, this.fileInfo = wQ, this.uniqueRootUrl = LQ, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const qQ = new Set,
+          oQ = (FQ, wQ) => {
+            const LQ = QQ.nodes[FQ];
+            if (this.parents.has(LQ)) throw new iQ.g(`/nodes/${FQ}: Invalid recursive node hierarchy`);
+            this.parents.set(LQ, wQ);
+            const DQ = null === LQ.mesh ? [] : QQ.meshes[LQ.mesh].primitives,
+              kQ = DQ.map((QQ => {
+                const FQ = DQ.length > 1;
                 return {
-                  name: Jd ? `${Dd(pd)}_primitive${dd.index}` : Dd(pd),
-                  node: pd,
-                  primitive: dd,
-                  part: Jd,
+                  name: FQ ? `${aQ(LQ)}_primitive${QQ.index}` : aQ(LQ),
+                  node: LQ,
+                  primitive: QQ,
+                  part: FQ,
                   geometry: null
                 }
               }));
-            this.uses.set(pd, Zd);
-            const gd = null !== pd.mesh && Nd.has(pd.mesh);
-            Nd.add(pd.mesh), this.own.set(pd, gd ? [] : Zd);
-            for (const dd of pd.children) Wd(dd, pd)
+            this.uses.set(LQ, kQ);
+            const vQ = null !== LQ.mesh && qQ.has(LQ.mesh);
+            qQ.add(LQ.mesh), this.own.set(LQ, vQ ? [] : kQ);
+            for (const QQ of LQ.children) oQ(QQ, LQ)
           };
-        for (const Pd of dd.rootNodes) Wd(Pd, null);
-        this.primitives = dd.nodes.flatMap((dd => {
-          var Jd;
-          return null !== (Jd = this.own.get(dd)) && void 0 !== Jd ? Jd : []
+        for (const DQ of QQ.rootNodes) oQ(DQ, null);
+        this.primitives = QQ.nodes.flatMap((QQ => {
+          var FQ;
+          return null !== (FQ = this.own.get(QQ)) && void 0 !== FQ ? FQ : []
         }))
       }
       decodeGeometries() {
-        const dd = new Map;
-        return Promise.all(this.primitives.map((async Jd => {
+        const QQ = new Map;
+        return Promise.all(this.primitives.map((async FQ => {
           const {
-            primitive: kd
-          } = Jd, pd = kd.draco;
-          let Nd = pd ? dd.get(pd.bufferView.index) : Promise.resolve(Xd(kd));
-          Nd || (Nd = Yd(kd, this.decode).then((dd => nd(kd, dd))), dd.set(pd.bufferView.index, Nd)), Jd.geometry = await Nd
+            primitive: wQ
+          } = FQ, LQ = wQ.draco;
+          let qQ = LQ ? QQ.get(LQ.bufferView.index) : Promise.resolve(TQ(wQ));
+          qQ || (qQ = sQ(wQ, this.decode).then((QQ => zQ(wQ, QQ))), QQ.set(LQ.bufferView.index, qQ)), FQ.geometry = await qQ
         })))
       }
-      parentOf(dd) {
-        var Jd;
-        return null !== (Jd = this.parents.get(dd)) && void 0 !== Jd ? Jd : null
+      parentOf(QQ) {
+        var FQ;
+        return null !== (FQ = this.parents.get(QQ)) && void 0 !== FQ ? FQ : null
       }
-      meshesUnder(dd) {
-        const Jd = this.model.nodes.filter((dd => this.uses.has(dd)));
-        for (const pd of Jd) {
-          const Jd = this.uses.get(pd),
-            kd = Jd.find((Jd => Jd.name === dd));
-          if (kd) return 1 === Jd.length ? this.subtree(pd) : this.own.get(pd).includes(kd) ? [kd] : []
+      meshesUnder(QQ) {
+        const FQ = this.model.nodes.filter((QQ => this.uses.has(QQ)));
+        for (const LQ of FQ) {
+          const FQ = this.uses.get(LQ),
+            wQ = FQ.find((FQ => FQ.name === QQ));
+          if (wQ) return 1 === FQ.length ? this.subtree(LQ) : this.own.get(LQ).includes(wQ) ? [wQ] : []
         }
-        const kd = Jd.find((Jd => 1 !== this.uses.get(Jd).length && Dd(Jd) === dd));
-        return kd ? this.subtree(kd) : null
+        const wQ = FQ.find((FQ => 1 !== this.uses.get(FQ).length && aQ(FQ) === QQ));
+        return wQ ? this.subtree(wQ) : null
       }
-      subtree(dd) {
-        return [...this.own.get(dd), ...dd.children.flatMap((dd => this.subtree(this.model.nodes[dd])))]
+      subtree(QQ) {
+        return [...this.own.get(QQ), ...QQ.children.flatMap((QQ => this.subtree(this.model.nodes[QQ])))]
       }
-      worldMatrix(dd, Jd, kd) {
-        let pd = zd(Vd(Jd ? Td : {}), null);
-        const Nd = [];
-        for (let Pd = dd.part ? dd.node : this.parentOf(dd.node); Pd; Pd = this.parentOf(Pd)) Nd.unshift(Pd);
-        for (const Pd of Nd) pd = zd(Vd(Pd), pd);
-        const Wd = Vd(dd.part ? {} : dd.node);
-        return void 0 !== kd && Wd.scale.fill(kd), zd(Wd, pd)
+      worldMatrix(QQ, FQ, wQ) {
+        let LQ = PQ(gQ(FQ ? XQ : {}), null);
+        const qQ = [];
+        for (let DQ = QQ.part ? QQ.node : this.parentOf(QQ.node); DQ; DQ = this.parentOf(DQ)) qQ.unshift(DQ);
+        for (const DQ of qQ) LQ = PQ(gQ(DQ), LQ);
+        const oQ = gQ(QQ.part ? {} : QQ.node);
+        return void 0 !== wQ && oQ.scale.fill(wQ), PQ(oQ, LQ)
       }
-      floats(dd) {
+      floats(QQ) {
         const {
-          vertexAttributes: Jd,
-          vertexCount: kd
-        } = dd.geometry;
-        return new Map(Jd.map((dd => [dd.kind, (0, Bd.d)(dd, kd)])))
+          vertexAttributes: FQ,
+          vertexCount: wQ
+        } = QQ.geometry;
+        return new Map(FQ.map((QQ => [QQ.kind, (0, SQ.l)(QQ, wQ)])))
       }
-      imageUrl(dd) {
-        return function(dd, Jd, kd) {
+      imageUrl(QQ) {
+        return function(QQ, FQ, wQ) {
           let {
-            name: pd
-          } = Jd;
-          return `data:${dd}${pd}#image${kd}`
-        }(this.uniqueRootUrl, this.fileInfo, dd)
+            name: LQ
+          } = FQ;
+          return `data:${QQ}${LQ}#image${wQ}`
+        }(this.uniqueRootUrl, this.fileInfo, QQ)
       }
-      textureDesc(dd, Jd) {
-        var kd;
+      textureDesc(QQ, FQ) {
+        var wQ;
         let {
-          texture: pd,
-          transform: Nd
-        } = dd;
+          texture: LQ,
+          transform: qQ
+        } = QQ;
         const {
-          sampler: Wd,
-          image: Pd
-        } = this.model.textures[pd], {
-          bufferView: Zd,
-          mimeType: gd,
-          name: Cd
-        } = this.model.images[Pd], Kd = Nd && {
-          ...Nd.offset ? {
-            uOffset: Nd.offset[0],
-            vOffset: Nd.offset[1]
+          sampler: oQ,
+          image: DQ
+        } = this.model.textures[LQ], {
+          bufferView: kQ,
+          mimeType: vQ,
+          name: mQ
+        } = this.model.images[DQ], uQ = qQ && {
+          ...qQ.offset ? {
+            uOffset: qQ.offset[0],
+            vOffset: qQ.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...Nd.rotation ? {
-            wAng: -Nd.rotation
+          ...qQ.rotation ? {
+            wAng: -qQ.rotation
           } : {},
-          ...Nd.scale ? {
-            uScale: Nd.scale[0],
-            vScale: Nd.scale[1]
+          ...qQ.scale ? {
+            uScale: qQ.scale[0],
+            vScale: qQ.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(Pd),
-          noMipmap: td(Wd),
+          url: this.imageUrl(DQ),
+          noMipmap: nQ(oQ),
           invertY: !1,
-          samplingMode: hd(Wd),
+          samplingMode: hQ(oQ),
           data: {
-            bytes: Zd.bytes,
-            mimeType: gd,
-            label: Cd,
-            context: `/textures/${pd}`
+            bytes: kQ.bytes,
+            mimeType: vQ,
+            label: mQ,
+            context: `/textures/${LQ}`
           },
           sets: {
-            wrapU: ud(Wd.wrapS),
-            wrapV: ud(Wd.wrapT),
-            ...Kd,
-            coordinatesIndex: null !== (kd = null === Nd || void 0 === Nd ? void 0 : Nd.texCoord) && void 0 !== kd ? kd : 0,
-            hasAlpha: Jd
+            wrapU: EQ(oQ.wrapS),
+            wrapV: EQ(oQ.wrapT),
+            ...uQ,
+            coordinatesIndex: null !== (wQ = null === qQ || void 0 === qQ ? void 0 : qQ.texCoord) && void 0 !== wQ ? wQ : 0,
+            hasAlpha: FQ
           }
         }
       }
     }
-    async function wd(dd, Jd, kd, pd, Nd, Wd) {
-      let Pd = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const Zd = function(dd, Jd, kd) {
-          return "string" !== typeof Jd ? {
+    async function yQ(QQ, FQ, wQ, LQ, qQ, oQ) {
+      let DQ = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const kQ = function(QQ, FQ, wQ) {
+          return "string" !== typeof FQ ? {
             url: "",
-            rootUrl: dd,
-            name: kd()
-          } : Jd ? Jd.startsWith("data:") ? {
-            url: Jd,
-            rootUrl: dd,
+            rootUrl: QQ,
+            name: wQ()
+          } : FQ ? FQ.startsWith("data:") ? {
+            url: FQ,
+            rootUrl: QQ,
             name: ""
-          } : dd ? {
-            url: dd + Jd,
-            rootUrl: dd,
-            name: Jd
+          } : QQ ? {
+            url: QQ + FQ,
+            rootUrl: QQ,
+            name: FQ
           } : {
-            url: Jd,
-            rootUrl: yd(Jd),
-            name: Ud(Jd)
+            url: FQ,
+            rootUrl: jQ(FQ),
+            name: lQ(FQ)
           } : {
-            url: dd,
-            rootUrl: yd(dd),
-            name: Ud(dd)
+            url: QQ,
+            rootUrl: jQ(QQ),
+            name: lQ(QQ)
           }
-        }(kd, dd, Nd),
-        gd = {};
-      Jd.addPendingData(gd);
+        }(wQ, QQ, qQ),
+        vQ = {};
+      FQ.addPendingData(vQ);
       try {
-        const kd = Fd(await async function(dd, Jd) {
-            return "string" !== typeof Jd ? Jd : dd.url.startsWith("data:") ? (0, sd.q)(dd.url) : await (0, sd.t)(dd.url)
-          }(Zd, dd)),
-          gd = new Hd(kd, pd, Zd, function(dd, Jd) {
+        const wQ = OQ(await async function(QQ, FQ) {
+            return "string" !== typeof FQ ? FQ : QQ.url.startsWith("data:") ? (0, iQ.m)(QQ.url) : await (0, iQ.o)(QQ.url)
+          }(kQ, QQ)),
+          vQ = new ZQ(wQ, LQ, kQ, function(QQ, FQ) {
             let {
-              rootUrl: kd,
-              name: pd
-            } = dd;
-            return !kd.startsWith("file:") && pd ? kd : `${kd}${Jd()}/`
-          }(Zd, Nd));
-        return await Wd(gd), Jd.importedMeshesFiles && (Jd.loadingPluginName = "hY", Pd && Jd.importedMeshesFiles.push(Zd.url)), gd
+              rootUrl: wQ,
+              name: LQ
+            } = QQ;
+            return !wQ.startsWith("file:") && LQ ? wQ : `${wQ}${FQ()}/`
+          }(kQ, qQ));
+        return await oQ(vQ), FQ.importedMeshesFiles && (FQ.loadingPluginName = "oN", DQ && FQ.importedMeshesFiles.push(kQ.url)), vQ
       } finally {
-        Jd.removePendingData(gd)
+        FQ.removePendingData(vQ)
       }
     }
-    var Ad = kd(37797),
-      dJ = kd(37640),
-      JJ = kd(38083);
+    var BQ = wQ(37152),
+      dQ = wQ(37036),
+      QF = wQ(37437);
 
-    function kJ(dd) {
-      if (null === dd || void 0 === dd || !dd.min || !dd.max) return null;
-      const [Jd, kd, pd] = dd.min, [Nd, Wd, Pd] = dd.max, {
-        BoundingInfo: Zd,
-        IL: gd
-      } = (0, Ad.e)();
-      return new Zd(new gd(Jd, kd, pd), new gd(Nd, Wd, Pd))
+    function FF(QQ) {
+      if (null === QQ || void 0 === QQ || !QQ.min || !QQ.max) return null;
+      const [FQ, wQ, LQ] = QQ.min, [qQ, oQ, DQ] = QQ.max, {
+        BoundingInfo: kQ,
+        Ox: vQ
+      } = (0, BQ.c)();
+      return new kQ(new vQ(FQ, wQ, LQ), new vQ(qQ, oQ, DQ))
     }
 
-    function pJ(dd) {
-      (0, dJ.h)(dd) || (dd.geometry && dd.geometry.useBoundingInfoFromGeometry ? dd._updateBoundingInfo() : dd.refreshBoundingInfo(!0, !0))
+    function wF(QQ) {
+      (0, dQ.g)(QQ) || (QQ.geometry && QQ.geometry.useBoundingInfoFromGeometry ? QQ._updateBoundingInfo() : QQ.refreshBoundingInfo(!0, !0))
     }
-    class NJ {
-      constructor(dd, Jd) {
-        this.BO = dd, this.decode = Jd, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class LF {
+      constructor(QQ, FQ) {
+        this.lA = QQ, this.decode = FQ, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
-      viewBytes(dd) {
-        let Jd = this.viewData.get(dd.index);
-        return Jd || (Jd = this.bufferData.then((() => dd.bytes)), this.viewData.set(dd.index, Jd)), Jd
+      viewBytes(QQ) {
+        let FQ = this.viewData.get(QQ.index);
+        return FQ || (FQ = this.bufferData.then((() => QQ.bytes)), this.viewData.set(QQ.index, FQ)), FQ
       }
-      viewBuffer(dd) {
-        let Jd = this.viewBuffers.get(dd.index);
-        return Jd || (Jd = this.viewBytes(dd).then((dd => new((0, Ad.e)().kL)(this.BO.eL(), dd, !1))), this.viewBuffers.set(dd.index, Jd)), Jd
+      viewBuffer(QQ) {
+        let FQ = this.viewBuffers.get(QQ.index);
+        return FQ || (FQ = this.viewBytes(QQ).then((QQ => new((0, BQ.c)().Dx)(this.lA.Wx(), QQ, !1))), this.viewBuffers.set(QQ.index, FQ)), FQ
       }
-      vertexBuffer(dd, Jd) {
+      vertexBuffer(QQ, FQ) {
         const {
-          kind: kd,
-          data: pd
-        } = Jd, Nd = `${dd.index}:${kd}`;
-        let Wd = this.vertexBuffers.get(Nd);
-        if (!Wd) {
-          const Pd = dd.bufferView;
-          Wd = Pd ? this.viewBuffer(Pd).then((dd => this.layoutVertexBuffer(dd, Jd))) : Promise.resolve(pd).then((dd => new((0, Ad.e)().VertexBuffer)(this.BO.eL(), dd, kd, !1))), this.vertexBuffers.set(Nd, Wd)
+          kind: wQ,
+          data: LQ
+        } = FQ, qQ = `${QQ.index}:${wQ}`;
+        let oQ = this.vertexBuffers.get(qQ);
+        if (!oQ) {
+          const DQ = QQ.bufferView;
+          oQ = DQ ? this.viewBuffer(DQ).then((QQ => this.layoutVertexBuffer(QQ, FQ))) : Promise.resolve(LQ).then((QQ => new((0, BQ.c)().VertexBuffer)(this.lA.Wx(), QQ, wQ, !1))), this.vertexBuffers.set(qQ, oQ)
         }
-        return Wd
+        return oQ
       }
-      layoutVertexBuffer(dd, Jd) {
+      layoutVertexBuffer(QQ, FQ) {
         let {
-          kind: kd,
-          offset: pd,
-          stride: Nd,
-          components: Wd,
-          glType: Pd,
-          isNormalized: Zd
-        } = Jd;
-        const gd = this.BO.eL();
-        return new((0, Ad.e)().VertexBuffer)(gd, dd, kd, !1, void 0, Nd, void 0, pd, Wd, Pd, Zd, !0, void 0, !0)
+          kind: wQ,
+          offset: LQ,
+          stride: qQ,
+          components: oQ,
+          glType: DQ,
+          isNormalized: kQ
+        } = FQ;
+        const vQ = this.lA.Wx();
+        return new((0, BQ.c)().VertexBuffer)(vQ, QQ, wQ, !1, void 0, qQ, void 0, LQ, oQ, DQ, kQ, !0, void 0, !0)
       }
-      load(dd, Jd, kd) {
-        const pd = (0, dJ.h)(kd),
-          Nd = dd => {
-            pd || (kd._delayInfo = kd._delayInfo || [], -1 === kd._delayInfo.indexOf(dd) && kd._delayInfo.push(dd))
+      load(QQ, FQ, wQ) {
+        const LQ = (0, dQ.g)(wQ),
+          qQ = QQ => {
+            LQ || (wQ._delayInfo = wQ._delayInfo || [], -1 === wQ._delayInfo.indexOf(QQ) && wQ._delayInfo.push(QQ))
           },
-          Wd = Jd.draco;
-        if (Wd) {
-          for (const dd in Wd.attributeIds) Nd(dd);
-          let Pd = this.dracoGeometry.get(Wd.bufferView.index);
-          return Pd || (Pd = this.viewBytes(Wd.bufferView).then((async () => {
-            let Nd;
+          oQ = FQ.draco;
+        if (oQ) {
+          for (const QQ in oQ.attributeIds) qQ(QQ);
+          let DQ = this.dracoGeometry.get(oQ.bufferView.index);
+          return DQ || (DQ = this.viewBytes(oQ.bufferView).then((async () => {
+            let qQ;
             try {
-              Nd = await Yd(Jd, this.decode)
-            } catch (gd) {
-              throw new sd.k(`${dd}: ${gd instanceof Error?gd.message:String(gd)}`)
+              qQ = await sQ(FQ, this.decode)
+            } catch (vQ) {
+              throw new iQ.g(`${QQ}: ${vQ instanceof Error?vQ.message:String(vQ)}`)
             }
-            const Wd = nd(Jd, Nd);
-            if (pd) return Wd;
-            const Pd = kJ(Jd.position),
-              Zd = new((0, Ad.e)().MirroredGeometry)(kd.name, this.BO);
-            Pd && (Zd._boundingInfo = Pd, Zd.useBoundingInfoFromGeometry = !0), Wd.indexData && Zd.setIndices(Wd.indexData);
-            for (const dd of Wd.vertexAttributes) Zd.setVerticesBuffer(this.layoutVertexBuffer(dd.data, dd), Wd.vertexCount);
-            return Zd.link(Wd), Zd
-          })), this.dracoGeometry.set(Wd.bufferView.index, Pd)), Pd
+            const oQ = zQ(FQ, qQ);
+            if (LQ) return oQ;
+            const DQ = FF(FQ.position),
+              kQ = new((0, BQ.c)().MirroredGeometry)(wQ.name, this.lA);
+            DQ && (kQ._boundingInfo = DQ, kQ.useBoundingInfoFromGeometry = !0), oQ.indexData && kQ.setIndices(oQ.indexData);
+            for (const QQ of oQ.vertexAttributes) kQ.setVerticesBuffer(this.layoutVertexBuffer(QQ.data, QQ), oQ.vertexCount);
+            return kQ.link(oQ), kQ
+          })), this.dracoGeometry.set(oQ.bufferView.index, DQ)), DQ
         }
-        const Pd = [],
-          Zd = Xd(Jd);
-        if (pd) return kd.isUnIndexed = !Zd.indexData, kd.hasVertexAlpha = (0, JJ.f)(Jd), Promise.resolve(Zd);
-        const gd = new((0, Ad.e)().MirroredGeometry)(kd.name, this.BO),
+        const DQ = [],
+          kQ = TQ(FQ);
+        if (LQ) return wQ.isUnIndexed = !kQ.indexData, wQ.hasVertexAlpha = (0, QF.h)(FQ), Promise.resolve(kQ);
+        const vQ = new((0, BQ.c)().MirroredGeometry)(wQ.name, this.lA),
           {
-            indexData: Cd
-          } = Zd;
-        Cd ? Pd.push(this.viewBytes(Jd.indices.bufferView).then((() => {
-          gd.setIndices(Cd)
-        }))) : kd.isUnIndexed = !0;
-        for (const [Kd, {
-            kind: od,
-            accessor: ld
-          }] of Jd.attributes.entries()) Nd(od), Pd.push(this.vertexBuffer(ld, Zd.vertexAttributes[Kd]).then((dd => {
-          if ("position" === dd.getKind()) {
-            const dd = kJ(ld);
-            dd && (gd._boundingInfo = dd, gd.useBoundingInfoFromGeometry = !0)
+            indexData: mQ
+          } = kQ;
+        mQ ? DQ.push(this.viewBytes(FQ.indices.bufferView).then((() => {
+          vQ.setIndices(mQ)
+        }))) : wQ.isUnIndexed = !0;
+        for (const [uQ, {
+            kind: HQ,
+            accessor: bQ
+          }] of FQ.attributes.entries()) qQ(HQ), DQ.push(this.vertexBuffer(bQ, kQ.vertexAttributes[uQ]).then((QQ => {
+          if ("position" === QQ.getKind()) {
+            const QQ = FF(bQ);
+            QQ && (vQ._boundingInfo = QQ, vQ.useBoundingInfoFromGeometry = !0)
           }
-          gd.setVerticesBuffer(dd, Zd.vertexCount)
+          vQ.setVerticesBuffer(QQ, kQ.vertexCount)
         })));
-        return (0, JJ.f)(Jd) && (kd.hasVertexAlpha = !0), Promise.all(Pd).then((() => (gd.link(Zd), gd)))
+        return (0, QF.h)(FQ) && (wQ.hasVertexAlpha = !0), Promise.all(DQ).then((() => (vQ.link(kQ), vQ)))
       }
     }
-    var WJ, PJ = kd(37492),
-      ZJ = kd(37245),
-      gJ = kd(38097),
-      CJ = kd(37431),
-      KJ = kd(37473),
-      oJ = kd(2634),
-      lJ = kd(37456);
+    var qF, oF = wQ(36918),
+      DF = wQ(36688),
+      kF = wQ(37448),
+      vF = wQ(36864),
+      mF = wQ(36897),
+      uF = wQ(2676),
+      HF = wQ(36890);
 
-    function QJ(dd, Jd) {
-      dd.metadata = dd.metadata || {};
-      const kd = dd._internalMetadata = dd._internalMetadata || {},
-        pd = kd.hY = kd.hY || {};
-      (pd.pointers = pd.pointers || []).push(Jd)
+    function bF(QQ, FQ) {
+      QQ.metadata = QQ.metadata || {};
+      const wQ = QQ._internalMetadata = QQ._internalMetadata || {},
+        LQ = wQ.oN = wQ.oN || {};
+      (LQ.pointers = LQ.pointers || []).push(FQ)
     }
 
-    function LJ(dd, Jd) {
-      if (Jd && Object.keys(Jd).length > 0) {
-        const kd = dd.metadata = dd.metadata || {};
-        (kd.hY = kd.hY || {}).extras = Jd
+    function YF(QQ, FQ) {
+      if (FQ && Object.keys(FQ).length > 0) {
+        const wQ = QQ.metadata = QQ.metadata || {};
+        (wQ.oN = wQ.oN || {}).extras = FQ
       }
     }
 
-    function OJ(dd, Jd) {
-      Jd.position = dd.translation ? ZJ.IL.FromArray(dd.translation) : ZJ.IL.Zero(), Jd.rotationQuaternion = dd.rotation ? ZJ.Quaternion.FromArray(dd.rotation) : ZJ.Quaternion.Identity(), Jd.fp = dd.scale ? ZJ.IL.FromArray(dd.scale) : ZJ.IL.One()
+    function xF(QQ, FQ) {
+      FQ.position = QQ.translation ? DF.Ox.FromArray(QQ.translation) : DF.Ox.Zero(), FQ.rotationQuaternion = QQ.rotation ? DF.Quaternion.FromArray(QQ.rotation) : DF.Quaternion.Identity(), FQ.ck = QQ.scale ? DF.Ox.FromArray(QQ.scale) : DF.Ox.One()
     }
-    class eJ {
-      constructor(dd, Jd) {
-        if (this.BO = dd, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, Jd) {
-          const Jd = dd.eL(),
-            kd = dd.Zm.add((() => {
+    class AF {
+      constructor(QQ, FQ) {
+        if (this.lA = QQ, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, FQ) {
+          const FQ = QQ.Wx(),
+            wQ = QQ.zN.add((() => {
               this.dispose()
             })),
-            pd = Jd.onContextRestoredObservable.add((() => {
-              for (const dd of [...this.geometries, ...this.meshes, ...this.textures]) dd._rebuild()
+            LQ = FQ.onContextRestoredObservable.add((() => {
+              for (const QQ of [...this.geometries, ...this.meshes, ...this.textures]) QQ._rebuild()
             }));
           this.release = () => {
-            dd.Zm.remove(kd), Jd.onContextRestoredObservable.remove(pd)
+            QQ.zN.remove(wQ), FQ.onContextRestoredObservable.remove(LQ)
           }
         }
       }
@@ -827,267 +827,267 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const dd of this.meshes) this.BO.apd(dd);
-          for (const dd of this.materials) this.BO.addMaterial(dd);
-          for (const dd of this.geometries) this.BO.addGeometry(dd);
-          for (const dd of this.transformNodes) this.BO.addTransformNode(dd);
-          for (const dd of this.textures) this.BO.addTexture(dd)
+          for (const QQ of this.meshes) this.lA.sLQ(QQ);
+          for (const QQ of this.materials) this.lA.addMaterial(QQ);
+          for (const QQ of this.geometries) this.lA.addGeometry(QQ);
+          for (const QQ of this.transformNodes) this.lA.addTransformNode(QQ);
+          for (const QQ of this.textures) this.lA.addTexture(QQ)
         }
       }
       dispose() {
-        var dd;
-        for (const Jd of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const dd of Jd.slice()) dd.dispose();
-          Jd.length = 0
+        var QQ;
+        for (const FQ of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const QQ of FQ.slice()) QQ.dispose();
+          FQ.length = 0
         }
-        null === (dd = this.release) || void 0 === dd || dd.call(this), this.release = null
+        null === (QQ = this.release) || void 0 === QQ || QQ.call(this), this.release = null
       }
     }
-    class RJ {
-      constructor(dd, Jd, kd, pd, Nd, Wd, Pd) {
-        this.asset = dd, this.BO = Jd, this.tree = kd, this.geometryData = Nd, this.materials = Wd, this.lite = Pd, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = pd ? kd : null
+    class tF {
+      constructor(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
+        this.asset = QQ, this.lA = FQ, this.tree = wQ, this.geometryData = qQ, this.materials = oQ, this.lite = DQ, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = LQ ? wQ : null
       }
-      create(dd) {
-        if (this.lite) return dd();
-        const Jd = this.BO;
-        Jd._blockEntityCollection = !!this.container;
+      create(QQ) {
+        if (this.lite) return QQ();
+        const FQ = this.lA;
+        FQ._blockEntityCollection = !!this.container;
         try {
-          const Jd = dd();
-          return this.container && (Jd._parentContainer = this.container), Jd
+          const FQ = QQ();
+          return this.container && (FQ._parentContainer = this.container), FQ
         } finally {
-          Jd._blockEntityCollection = !1
+          FQ._blockEntityCollection = !1
         }
       }
-      node(dd, Jd) {
-        return this.create((() => this.lite ? Jd ? (0, gJ.i)(this.lite, dd) : (0, gJ.t)(this.lite, dd) : Jd ? new((0, Ad.e)().Mesh)(dd, this.BO) : new((0, Ad.e)().TransformNode)(dd, this.BO)))
+      node(QQ, FQ) {
+        return this.create((() => this.lite ? FQ ? (0, kF.f)(this.lite, QQ) : (0, kF.m)(this.lite, QQ) : FQ ? new((0, BQ.c)().Mesh)(QQ, this.lA) : new((0, BQ.c)().TransformNode)(QQ, this.lA)))
       }
       async load() {
-        var dd;
+        var QQ;
         this.asset.model.json.nodes && this.createRoot();
-        const Jd = this.lite ? null : this.BO,
-          kd = null !== (dd = null === Jd || void 0 === Jd ? void 0 : Jd.blockMaterialDirtyMechanism) && void 0 !== dd && dd;
-        let pd;
-        Jd && (Jd.blockMaterialDirtyMechanism = !0);
+        const FQ = this.lite ? null : this.lA,
+          wQ = null !== (QQ = null === FQ || void 0 === FQ ? void 0 : FQ.blockMaterialDirtyMechanism) && void 0 !== QQ && QQ;
+        let LQ;
+        FQ && (FQ.blockMaterialDirtyMechanism = !0);
         try {
-          pd = this.loadScene()
+          LQ = this.loadScene()
         } finally {
-          null === Jd || void 0 === Jd || Jd._forceBlockMaterialDirtyMechanism(kd)
+          null === FQ || void 0 === FQ || FQ._forceBlockMaterialDirtyMechanism(wQ)
         }
-        await pd;
+        await LQ;
         const {
-          root: Nd,
-          tree: Wd
+          root: qQ,
+          tree: oQ
         } = this;
-        Nd && (Nd.XM(!0), Wd.meshes.push(Nd), Wd.rootNodes.push(Nd));
-        for (const Zd of this.asset.model.nodes) {
-          const dd = this.nodeObjects.get(Zd.index);
-          dd && ["TransformNode", "LiteNode"].includes(dd.getClassName()) && Wd.transformNodes.push(dd);
-          for (const Jd of null !== (Pd = this.nodePrimitives.get(Zd.index)) && void 0 !== Pd ? Pd : []) {
-            var Pd;
-            Wd.meshes.push(Jd);
-            const dd = Jd.geometry;
-            dd && !Wd.geometries.includes(dd) && Wd.geometries.push(dd)
+        qQ && (qQ.Qr(!0), oQ.meshes.push(qQ), oQ.rootNodes.push(qQ));
+        for (const kQ of this.asset.model.nodes) {
+          const QQ = this.nodeObjects.get(kQ.index);
+          QQ && ["TransformNode", "LiteNode"].includes(QQ.getClassName()) && oQ.transformNodes.push(QQ);
+          for (const FQ of null !== (DQ = this.nodePrimitives.get(kQ.index)) && void 0 !== DQ ? DQ : []) {
+            var DQ;
+            oQ.meshes.push(FQ);
+            const QQ = FQ.geometry;
+            QQ && !oQ.geometries.includes(QQ) && oQ.geometries.push(QQ)
           }
         }
       }
       createRoot() {
-        const dd = this.node("__root__", !0);
-        this.root = dd, dd.XM(!1), this.BO.useRightHandedSystem || OJ(Td, dd)
+        const QQ = this.node("__root__", !0);
+        this.root = QQ, QQ.Qr(!1), this.lA.useRightHandedSystem || xF(XQ, QQ)
       }
       loadScene() {
-        const dd = [];
-        for (const Jd of this.asset.model.rootNodes) dd.push(this.loadNode(this.asset.model.nodes[Jd], (dd => {
-          dd.parent = this.root
+        const QQ = [];
+        for (const FQ of this.asset.model.rootNodes) QQ.push(this.loadNode(this.asset.model.nodes[FQ], (QQ => {
+          QQ.parent = this.root
         })));
-        return dd.push(Promise.resolve()), Promise.all(dd).then((() => {}))
+        return QQ.push(Promise.resolve()), Promise.all(QQ).then((() => {}))
       }
-      loadNode(dd, Jd) {
-        const kd = `/nodes/${dd.index}`,
-          pd = [],
-          Nd = Nd => {
-            if (QJ(Nd, kd), OJ(dd, Nd), dd.hasCamera && !this.BO.useRightHandedSystem) {
+      loadNode(QQ, FQ) {
+        const wQ = `/nodes/${QQ.index}`,
+          LQ = [],
+          qQ = qQ => {
+            if (bF(qQ, wQ), xF(QQ, qQ), QQ.hasCamera && !this.lA.useRightHandedSystem) {
               const {
-                fp: dd
-              } = Nd;
-              dd.set(-1, dd.y, dd.z)
+                ck: QQ
+              } = qQ;
+              QQ.set(-1, QQ.y, QQ.z)
             }
-            for (const Jd of dd.children) pd.push(this.loadNode(this.asset.model.nodes[Jd], (dd => {
-              dd.parent = Nd
+            for (const FQ of QQ.children) LQ.push(this.loadNode(this.asset.model.nodes[FQ], (QQ => {
+              QQ.parent = qQ
             })));
-            (kd => {
-              LJ(kd, dd.extras), Jd(kd)
-            })(Nd)
+            (wQ => {
+              YF(wQ, QQ.extras), FQ(wQ)
+            })(qQ)
           };
-        if (null === dd.mesh) {
-          const Jd = this.node(Dd(dd), !1);
-          this.nodeObjects.set(dd.index, Jd), Nd(Jd)
+        if (null === QQ.mesh) {
+          const FQ = this.node(aQ(QQ), !1);
+          this.nodeObjects.set(QQ.index, FQ), qQ(FQ)
         } else {
-          const Jd = this.asset.model.meshes[dd.mesh];
-          pd.push(this.loadMesh(`/meshes/${Jd.index}`, dd, Jd, Nd))
+          const FQ = this.asset.model.meshes[QQ.mesh];
+          LQ.push(this.loadMesh(`/meshes/${FQ.index}`, QQ, FQ, qQ))
         }
-        return Promise.all(pd).then((() => {
-          for (const kd of null !== (Jd = this.nodePrimitives.get(dd.index)) && void 0 !== Jd ? Jd : []) {
-            var Jd;
-            pJ(kd)
+        return Promise.all(LQ).then((() => {
+          for (const wQ of null !== (FQ = this.nodePrimitives.get(QQ.index)) && void 0 !== FQ ? FQ : []) {
+            var FQ;
+            wF(wQ)
           }
-          return this.nodeObjects.get(dd.index)
+          return this.nodeObjects.get(QQ.index)
         }))
       }
-      loadMesh(dd, Jd, kd, pd) {
-        const Nd = [],
-          Wd = Dd(Jd);
-        if (1 === kd.primitives.length) {
-          const pd = kd.primitives[0];
-          Nd.push(this.loadPrimitive(`${dd}/primitives/${pd.index}`, Wd, pd, (dd => {
-            this.nodeObjects.set(Jd.index, dd), this.nodePrimitives.set(Jd.index, [dd])
+      loadMesh(QQ, FQ, wQ, LQ) {
+        const qQ = [],
+          oQ = aQ(FQ);
+        if (1 === wQ.primitives.length) {
+          const LQ = wQ.primitives[0];
+          qQ.push(this.loadPrimitive(`${QQ}/primitives/${LQ.index}`, oQ, LQ, (QQ => {
+            this.nodeObjects.set(FQ.index, QQ), this.nodePrimitives.set(FQ.index, [QQ])
           })))
         } else {
-          const pd = this.node(Wd, !1);
-          this.nodeObjects.set(Jd.index, pd);
-          const Pd = [];
-          this.nodePrimitives.set(Jd.index, Pd);
-          for (const Jd of kd.primitives) Nd.push(this.loadPrimitive(`${dd}/primitives/${Jd.index}`, `${Wd}_primitive${Jd.index}`, Jd, (dd => {
-            dd.parent = pd, Pd.push(dd)
+          const LQ = this.node(oQ, !1);
+          this.nodeObjects.set(FQ.index, LQ);
+          const DQ = [];
+          this.nodePrimitives.set(FQ.index, DQ);
+          for (const FQ of wQ.primitives) qQ.push(this.loadPrimitive(`${QQ}/primitives/${FQ.index}`, `${oQ}_primitive${FQ.index}`, FQ, (QQ => {
+            QQ.parent = LQ, DQ.push(QQ)
           })))
         }
-        const Pd = this.nodeObjects.get(Jd.index);
-        return pd(Pd), Promise.all(Nd).then((() => Pd))
+        const DQ = this.nodeObjects.get(FQ.index);
+        return LQ(DQ), Promise.all(qQ).then((() => DQ))
       }
-      loadPrimitive(dd, Jd, kd, pd) {
-        const Nd = [],
-          Wd = this.node(Jd, !0);
-        if (Wd.sideOrientation = this.BO.useRightHandedSystem ? CJ.c.CounterClockWiseSideOrientation : CJ.c.ClockWiseSideOrientation, Nd.push(this.geometryData.load(dd, kd, Wd).then((dd => {
-            if ((0, dJ.h)(Wd)) {
-              var Jd, kd;
-              const pd = dd;
-              Wd.replaceModel(pd, Int32Array.of(0, null !== (Jd = null === (kd = pd.indexData) || void 0 === kd ? void 0 : kd.length) && void 0 !== Jd ? Jd : pd.vertexCount, 0, pd.vertexCount))
-            } else this.create((() => (dd.applyToMesh(Wd), dd)))
+      loadPrimitive(QQ, FQ, wQ, LQ) {
+        const qQ = [],
+          oQ = this.node(FQ, !0);
+        if (oQ.sideOrientation = this.lA.useRightHandedSystem ? vF.c.CounterClockWiseSideOrientation : vF.c.ClockWiseSideOrientation, qQ.push(this.geometryData.load(QQ, wQ, oQ).then((QQ => {
+            if ((0, dQ.g)(oQ)) {
+              var FQ, wQ;
+              const LQ = QQ;
+              oQ.replaceModel(LQ, Int32Array.of(0, null !== (FQ = null === (wQ = LQ.indexData) || void 0 === wQ ? void 0 : wQ.length) && void 0 !== FQ ? FQ : LQ.vertexCount, 0, LQ.vertexCount))
+            } else this.create((() => (QQ.applyToMesh(oQ), QQ)))
           }))), this.materials) {
-          const dd = 0 === kd.mode ? CJ.c.PointListDrawMode : CJ.c.TriangleFillMode,
-            Jd = null === kd.material ? null : this.asset.model.materials[kd.material];
-          Nd.push(this.loadMaterial(Jd, dd, (dd => {
-            Wd.material = dd
+          const QQ = 0 === wQ.mode ? vF.c.PointListDrawMode : vF.c.TriangleFillMode,
+            FQ = null === wQ.material ? null : this.asset.model.materials[wQ.material];
+          qQ.push(this.loadMaterial(FQ, QQ, (QQ => {
+            oQ.material = QQ
           })))
         }
-        return QJ(Wd, dd), pd(Wd), Promise.all(Nd).then((() => Wd))
+        return bF(oQ, QQ), LQ(oQ), Promise.all(qQ).then((() => oQ))
       }
-      loadMaterial(dd, Jd, kd) {
-        var pd;
-        const Nd = `${null!==(pd=null===dd||void 0===dd?void 0:dd.index)&&void 0!==pd?pd:"default"}:${Jd}`;
-        let Wd = this.materialData.get(Nd);
-        return Wd || (Wd = this.createMaterial(dd, Jd), this.materialData.set(Nd, Wd)), kd(Wd.material), Wd.promise
+      loadMaterial(QQ, FQ, wQ) {
+        var LQ;
+        const qQ = `${null!==(LQ=null===QQ||void 0===QQ?void 0:QQ.index)&&void 0!==LQ?LQ:"default"}:${FQ}`;
+        let oQ = this.materialData.get(qQ);
+        return oQ || (oQ = this.createMaterial(QQ, FQ), this.materialData.set(qQ, oQ)), wQ(oQ.material), oQ.promise
       }
-      createMaterial(dd, Jd) {
-        const kd = dd ? dd.name || `material${dd.index}` : "__GLTFLoader._default",
+      createMaterial(QQ, FQ) {
+        const wQ = QQ ? QQ.name || `material${QQ.index}` : "__GLTFLoader._default",
           {
-            style: pd,
-            unlit: Nd
+            style: LQ,
+            unlit: qQ
           } = this.materials;
-        let Wd;
-        const Pd = this.create((() => {
-          const Pd = (0, lJ.e)({
-            name: kd,
-            BO: this.BO,
+        let oQ;
+        const DQ = this.create((() => {
+          const DQ = (0, HF.e)({
+            name: wQ,
+            lA: this.lA,
             sets: {
-              ...(0, JJ.b)(this.asset, dd, pd, Nd),
-              fillMode: Jd
+              ...(0, QF.e)(this.asset, QQ, LQ, qQ),
+              fillMode: FQ
             },
             unrendered: !0
           });
-          return Wd = Pd.model, Pd.mirror
+          return oQ = DQ.model, DQ.mirror
         }));
-        let Zd = Promise.resolve();
-        if (dd) {
-          const Jd = `/materials/${dd.index}`,
-            pd = Wd.diffuseTexture;
-          if (pd && !pd.mirror) Zd = new Promise((dd => setTimeout(dd)));
-          else if (pd) {
-            const Nd = pd.mirror;
-            Nd._parentContainer = this.container, Nd.name = `${kd} (Base Color)`, QJ(Nd, `${Jd}${dd.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(Nd), Zd = (0, KJ.u)(pd)
+        let kQ = Promise.resolve();
+        if (QQ) {
+          const FQ = `/materials/${QQ.index}`,
+            LQ = oQ.diffuseTexture;
+          if (LQ && !LQ.mirror) kQ = new Promise((QQ => setTimeout(QQ)));
+          else if (LQ) {
+            const qQ = LQ.mirror;
+            qQ._parentContainer = this.container, qQ.name = `${wQ} (Base Color)`, bF(qQ, `${FQ}${QQ.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(qQ), kQ = (0, mF.v)(LQ)
           }
-          LJ(Pd, dd.extras), QJ(Pd, Jd)
+          YF(DQ, QQ.extras), bF(DQ, FQ)
         }
-        return this.tree.materials.push(Pd), {
-          material: Pd,
-          promise: Zd
+        return this.tree.materials.push(DQ), {
+          material: DQ,
+          promise: kQ
         }
       }
     }
 
-    function IJ() {
-      PJ.f.dracoDecodes = Od.decodes, PJ.f.dracoWorkersStarted = Od.workersStarted, PJ.f.dracoMostWorkers = Od.mostWorkers
+    function eF() {
+      oF.e.dracoDecodes = AQ.decodes, oF.e.dracoWorkersStarted = AQ.workersStarted, oF.e.dracoMostWorkers = AQ.mostWorkers
     }
-    async function GJ(dd, Jd, kd, Nd, Wd) {
+    async function MF(QQ, FQ, wQ, qQ, oQ) {
       try {
-        return await async function(dd, Jd, kd, Nd, Wd, Pd) {
-          var Zd;
-          let gd;
-          const Cd = null === (Zd = (0, oJ.e)()) || void 0 === Zd ? void 0 : Zd.UL,
-            Kd = null !== Cd && void 0 !== Cd && Cd.yL && Jd === Cd.Wm() ? Cd : null,
-            od = Wd && !Kd;
-          return await wd(dd, Jd, kd, Nd, pd.c, (dd => (gd = new eJ(Jd, od), new RJ(dd, Jd, gd, od, new NJ(Jd, Nd), Pd, Kd).load())), !Wd), gd
-        }(dd, Jd, kd, xd, Nd, Wd)
+        return await async function(QQ, FQ, wQ, qQ, oQ, DQ) {
+          var kQ;
+          let vQ;
+          const mQ = null === (kQ = (0, uF.d)()) || void 0 === kQ ? void 0 : kQ.Zx,
+            uQ = null !== mQ && void 0 !== mQ && mQ.yx && FQ === mQ.iN() ? mQ : null,
+            HQ = oQ && !uQ;
+          return await yQ(QQ, FQ, wQ, qQ, LQ.d, (QQ => (vQ = new AF(FQ, HQ), new tF(QQ, FQ, vQ, HQ, new LF(FQ, qQ), DQ, uQ).load())), !oQ), vQ
+        }(QQ, FQ, wQ, cQ, qQ, oQ)
       } finally {
-        IJ()
+        eF()
       }
     }
-    async function vJ(dd, Jd, kd, Nd) {
+    async function GF(QQ, FQ, wQ, qQ) {
       try {
-        return await wd(dd, Jd, kd, xd, pd.c, (dd => Nd(dd, new NJ(Jd, xd))))
+        return await yQ(QQ, FQ, wQ, cQ, LQ.d, (QQ => qQ(QQ, new LF(FQ, cQ))))
       } finally {
-        IJ()
+        eF()
       }
     }
-    WJ = Nd.b, Kd || (Kd = {
-      scriptUrl: new URL(WJ.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(WJ.wasmBinaryUrl, location.href).href
+    qF = qQ.d, uQ || (uQ = {
+      scriptUrl: new URL(qF.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(qF.wasmBinaryUrl, location.href).href
     })
   },
-  41462: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Pd
+  40897: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => DQ
     });
-    var pd = kd(126),
-      Nd = kd(1227);
+    var LQ = wQ(134),
+      qQ = wQ(1221);
 
-    function Wd(dd) {
-      return (0, pd.e)() ? `https://${Nd.b.discordDomain}/${dd.href}` : dd.href
+    function oQ(QQ) {
+      return (0, LQ.d)() ? `https://${qQ.d.discordDomain}/${QQ.href}` : QQ.href
     }
-    const Pd = {
-      scriptUrl: Wd(new kd.U(kd(41467))),
-      wasmBinaryUrl: Wd(new kd.U(kd(41475)))
+    const DQ = {
+      scriptUrl: oQ(new wQ.U(wQ(40901))),
+      wasmBinaryUrl: oQ(new wQ.U(wQ(40910)))
     }
   },
-  36432: dd => {
-    dd.exports = function(dd, Jd, kd, pd) {
-      var Nd = self || window;
+  35914: QQ => {
+    QQ.exports = function(QQ, FQ, wQ, LQ) {
+      var qQ = self || window;
       try {
         try {
-          var Wd;
+          var oQ;
           try {
-            Wd = new Nd.Blob([dd])
-          } catch (Cd) {
-            (Wd = new(Nd.BlobBuilder || Nd.WebKitBlobBuilder || Nd.MozBlobBuilder || Nd.MSBlobBuilder)).append(dd), Wd = Wd.getBlob()
+            oQ = new qQ.Blob([QQ])
+          } catch (mQ) {
+            (oQ = new(qQ.BlobBuilder || qQ.WebKitBlobBuilder || qQ.MozBlobBuilder || qQ.MSBlobBuilder)).append(QQ), oQ = oQ.getBlob()
           }
-          var Pd = Nd.URL || Nd.webkitURL,
-            Zd = Pd.createObjectURL(Wd),
-            gd = new Nd[Jd](Zd, kd);
-          return Pd.revokeObjectURL(Zd), gd
-        } catch (Cd) {
-          return new Nd[Jd]("data:application/javascript,".concat(encodeURIComponent(dd)), kd)
+          var DQ = qQ.URL || qQ.webkitURL,
+            kQ = DQ.createObjectURL(oQ),
+            vQ = new qQ[FQ](kQ, wQ);
+          return DQ.revokeObjectURL(kQ), vQ
+        } catch (mQ) {
+          return new qQ[FQ]("data:application/javascript,".concat(encodeURIComponent(QQ)), wQ)
         }
-      } catch (Cd) {
-        if (!pd) throw Error("Inline worker is not supported");
-        return new Nd[Jd](pd, kd)
+      } catch (mQ) {
+        if (!LQ) throw Error("Inline worker is not supported");
+        return new qQ[FQ](LQ, wQ)
       }
     }
   },
-  41467: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  40901: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  41475: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  40910: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

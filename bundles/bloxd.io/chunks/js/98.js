@@ -1,414 +1,414 @@
 export const id = 98;
 export const ids = [98, 186];
 export const modules = {
-  9112: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      EverythingMenu: () => CZ
+  8973: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      EverythingMenu: () => uk
     });
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(1211),
-      Zd = kd(1059),
-      gd = kd(2041),
-      Cd = kd(1461),
-      Kd = kd(1124),
-      od = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(1207),
+      kQ = wQ(1079),
+      vQ = wQ(2028),
+      mQ = wQ(1451),
+      uQ = wQ(1130),
+      HQ = wQ(1107);
 
-    function ld(dd) {
+    function bQ(QQ) {
       let {
-        items: Jd,
-        link: kd,
-        onClick: pd,
-        selectedItemId: Nd,
-        className: ld,
-        padStartsOnTab: Qd = !0
-      } = dd;
+        items: FQ,
+        link: wQ,
+        onClick: LQ,
+        selectedItemId: qQ,
+        className: bQ,
+        padStartsOnTab: YQ = !0
+      } = QQ;
       const {
-        t: Ld
-      } = (0, Pd.B)(), Od = (0, Kd.g)(), ed = [];
-      for (const Wd of Jd) {
-        var Rd;
-        const dd = ed[ed.length - 1];
-        var Id;
-        if (dd && dd.title === (null !== (Rd = Wd.section) && void 0 !== Rd ? Rd : null)) dd.items.push(Wd);
-        else ed.push({
-          title: null !== (Id = Wd.section) && void 0 !== Id ? Id : null,
-          items: [Wd]
+        t: xQ
+      } = (0, DQ.y)(), AQ = (0, uQ.i)(), tQ = [];
+      for (const oQ of FQ) {
+        var eQ;
+        const QQ = tQ[tQ.length - 1];
+        var MQ;
+        if (QQ && QQ.title === (null !== (eQ = oQ.section) && void 0 !== eQ ? eQ : null)) QQ.items.push(oQ);
+        else tQ.push({
+          title: null !== (MQ = oQ.section) && void 0 !== MQ ? MQ : null,
+          items: [oQ]
         })
       }
-      return (0, od.jsxs)("div", {
-        className: Wd()("MenuSideBarBody", ld),
+      return (0, HQ.jsxs)("div", {
+        className: oQ()("MenuSideBarBody", bQ),
         "data-pad-tabs": "2",
-        children: [ed.map(((dd, Jd) => {
-          var kd;
-          return (0, od.jsxs)("div", {
+        children: [tQ.map(((QQ, FQ) => {
+          var wQ;
+          return (0, HQ.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [dd.title && (0, od.jsx)("div", {
+            children: [QQ.title && (0, HQ.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: Ld(dd.title)
-            }), dd.items.map((dd => {
-              var Jd;
-              const kd = !!dd.iconElement || !!dd.faIcon;
-              return (0, od.jsxs)("div", {
+              children: xQ(QQ.title)
+            }), QQ.items.map((QQ => {
+              var FQ;
+              const wQ = !!QQ.iconElement || !!QQ.faIcon;
+              return (0, HQ.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": Nd === dd.id ? "true" : void 0,
-                "data-pad-default-focus": Qd && Nd === dd.id || void 0,
-                className: Wd()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: Nd === dd.id
+                "data-pad-selected": qQ === QQ.id ? "true" : void 0,
+                "data-pad-default-focus": YQ && qQ === QQ.id || void 0,
+                className: oQ()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: qQ === QQ.id
                 }),
                 onClick: () => {
-                  pd(dd.id)
+                  LQ(QQ.id)
                 },
-                children: [kd && (0, od.jsx)("div", {
+                children: [wQ && (0, HQ.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (Jd = dd.iconElement) && void 0 !== Jd ? Jd : (0, od.jsx)(Zd.e, {
-                    name: dd.faIcon
+                  children: null !== (FQ = QQ.iconElement) && void 0 !== FQ ? FQ : (0, HQ.jsx)(kQ.c, {
+                    name: QQ.faIcon
                   })
-                }), (!Od || !kd) && (0, od.jsx)("div", {
-                  children: Ld(dd.title)
-                }), dd.redDot && (0, od.jsx)(gd.e, {
+                }), (!AQ || !wQ) && (0, HQ.jsx)("div", {
+                  children: xQ(QQ.title)
+                }), QQ.redDot && (0, HQ.jsx)(vQ.b, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, dd.id)
+              }, QQ.id)
             }))]
-          }, null !== (kd = dd.title) && void 0 !== kd ? kd : Jd)
-        })), kd && (0, od.jsxs)("div", {
-          ...(0, Cd.P)(),
+          }, null !== (wQ = QQ.title) && void 0 !== wQ ? wQ : FQ)
+        })), wQ && (0, HQ.jsxs)("div", {
+          ...(0, mQ.S)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: kd.onClick,
-          children: [(0, od.jsx)("div", {
+          onClick: wQ.onClick,
+          children: [(0, HQ.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, od.jsx)(Zd.e, {
-              name: kd.faIcon
+            children: (0, HQ.jsx)(kQ.c, {
+              name: wQ.faIcon
             })
-          }), (0, od.jsx)("div", {
-            children: Ld(kd.title)
-          }), (0, od.jsx)(Zd.e, {
+          }), (0, HQ.jsx)("div", {
+            children: xQ(wQ.title)
+          }), (0, HQ.jsx)(kQ.c, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var Qd = kd(2851),
-      Ld = kd(1140),
-      Od = kd(2357),
-      ed = kd(2974),
-      Rd = kd(95),
-      Id = kd(1932),
-      Gd = kd(2221),
-      vd = kd(2229),
-      xd = kd(1714),
-      qd = kd(1359),
-      Bd = kd(4877),
-      sd = kd(22),
-      ad = kd(9117);
+    var YQ = wQ(2910),
+      xQ = wQ(1140),
+      AQ = wQ(2345),
+      tQ = wQ(3002),
+      eQ = wQ(96),
+      MQ = wQ(1897),
+      GQ = wQ(2175),
+      pQ = wQ(2184),
+      cQ = wQ(1682),
+      CQ = wQ(1348),
+      SQ = wQ(4837),
+      iQ = wQ(17),
+      WQ = wQ(8978);
 
-    function Md(dd) {
+    function RQ(QQ) {
       let {
-        setApplySettingsCallback: Jd
-      } = dd;
+        setApplySettingsCallback: FQ
+      } = QQ;
       const {
-        clientEscMenuOptions: kd
-      } = (0, sd.j)(["clientEscMenuOptions"]), [Nd, Wd] = (0, pd.useState)(!1), [Pd, Zd] = (0, pd.useState)(!1), [gd, Kd] = (0, pd.useState)(6400), [ld, Qd] = (0, pd.useState)(3600), [Ld, Od] = (0, pd.useState)(!1), [ed, Rd] = (0, pd.useState)(!1);
+        clientEscMenuOptions: wQ
+      } = (0, iQ.l)(["clientEscMenuOptions"]), [qQ, oQ] = (0, LQ.useState)(!1), [DQ, kQ] = (0, LQ.useState)(!1), [vQ, uQ] = (0, LQ.useState)(6400), [bQ, YQ] = (0, LQ.useState)(3600), [xQ, AQ] = (0, LQ.useState)(!1), [tQ, eQ] = (0, LQ.useState)(!1);
 
-      function Id(dd) {
-        const Jd = "screenshot" === dd ? Zd : Wd;
-        Jd(!0);
-        const kd = Ld ? "normals" : ed ? "depth" : null;
-        ad.devTools.downloadScene(dd, {
-          width: gd,
-          height: ld,
-          colouring: kd
-        }).catch((dd => {
-          console.error("Couldn't download the scene", dd)
+      function MQ(QQ) {
+        const FQ = "screenshot" === QQ ? kQ : oQ;
+        FQ(!0);
+        const wQ = xQ ? "normals" : tQ ? "depth" : null;
+        WQ.devTools.downloadScene(QQ, {
+          width: vQ,
+          height: bQ,
+          colouring: wQ
+        }).catch((QQ => {
+          console.error("Couldn't download the scene", QQ)
         })).finally((() => {
-          Jd(!1)
+          FQ(!1)
         }))
       }
-      return (0, od.jsxs)("div", {
+      return (0, HQ.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, od.jsx)(Bd.d, {
+        children: [(0, HQ.jsx)(SQ.e, {
           label: "Disable Ambient Occlusion",
-          checked: kd.disableAmbientOcclusion,
-          onClick: dd => {
-            sd.d.setClientEscMenuOptions({
-              disableAmbientOcclusion: dd
-            }), Jd((() => Bd.l))
+          checked: wQ.disableAmbientOcclusion,
+          onClick: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              disableAmbientOcclusion: QQ
+            }), FQ((() => SQ.h))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), ad.devTools.supports("ambientLight") && (0, od.jsx)(Bd.h, {
+        }), WQ.devTools.supports("ambientLight") && (0, HQ.jsx)(SQ.g, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: kd.ambientLightIntensity,
-          onChange: dd => {
-            ad.devTools.setAmbientLightIntensity(dd).then((() => {
-              sd.d.setClientEscMenuOptions({
-                ambientLightIntensity: dd
+          initValue: wQ.ambientLightIntensity,
+          onChange: QQ => {
+            WQ.devTools.setAmbientLightIntensity(QQ).then((() => {
+              iQ.c.setClientEscMenuOptions({
+                ambientLightIntensity: QQ
               })
-            })).catch((dd => {
-              console.error("Couldn't set the ambient light", dd)
+            })).catch((QQ => {
+              console.error("Couldn't set the ambient light", QQ)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), ad.devTools.supports("weaponRaycasts") && (0, od.jsx)(Bd.d, {
+        }), WQ.devTools.supports("weaponRaycasts") && (0, HQ.jsx)(SQ.e, {
           label: "Show Weapon Raycasts",
-          checked: kd.showWeaponRaycasts,
-          onClick: dd => {
-            sd.d.setClientEscMenuOptions({
-              showWeaponRaycasts: dd
+          checked: wQ.showWeaponRaycasts,
+          onClick: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              showWeaponRaycasts: QQ
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), ad.devTools.supports("sceneDownload") && (0, od.jsxs)("div", {
+        }), WQ.devTools.supports("sceneDownload") && (0, HQ.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, od.jsx)(Bd.d, {
+            children: [(0, HQ.jsx)(SQ.e, {
               label: "Apply normal-based coloring",
-              checked: Ld,
-              onClick: dd => {
-                Od(dd), dd && Rd(!1)
+              checked: xQ,
+              onClick: QQ => {
+                AQ(QQ), QQ && eQ(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, od.jsx)(Bd.d, {
+            }), (0, HQ.jsx)(SQ.e, {
               label: "Apply depth-based coloring",
-              checked: ed,
-              onClick: dd => {
-                Rd(dd), dd && Od(!1)
+              checked: tQ,
+              onClick: QQ => {
+                eQ(QQ), QQ && AQ(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, od.jsxs)("div", {
+            }), (0, HQ.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, od.jsx)("div", {
+              children: [(0, HQ.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, od.jsx)(xd.e, {
+              }), (0, HQ.jsx)(cQ.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (dd, Jd) => {
-                  const kd = parseInt(dd) || 6400;
-                  Kd(kd)
+                onValueChange: (QQ, FQ) => {
+                  const wQ = parseInt(QQ) || 6400;
+                  uQ(wQ)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: gd.toString()
-              }), (0, od.jsx)("span", {
+                defaultValue: vQ.toString()
+              }), (0, HQ.jsx)("span", {
                 children: "X"
-              }), (0, od.jsx)(xd.e, {
+              }), (0, HQ.jsx)(cQ.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (dd, Jd) => {
-                  const kd = parseInt(dd) || 3600;
-                  Qd(kd)
+                onValueChange: (QQ, FQ) => {
+                  const wQ = parseInt(QQ) || 3600;
+                  YQ(wQ)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: ld.toString()
+                defaultValue: bQ.toString()
               })]
-            }), (0, od.jsxs)("div", {
+            }), (0, HQ.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, od.jsxs)(Cd.d, {
+              children: [(0, HQ.jsxs)(mQ.f, {
                 onClick: () => {
-                  Id("screenshot")
+                  MQ("screenshot")
                 },
-                disabled: Pd,
-                children: [Pd && (0, od.jsx)(qd.b, {}), "Download Screenshot"]
-              }), (0, od.jsxs)(Cd.d, {
+                disabled: DQ,
+                children: [DQ && (0, HQ.jsx)(CQ.c, {}), "Download Screenshot"]
+              }), (0, HQ.jsxs)(mQ.f, {
                 onClick: () => {
-                  Id("glb")
+                  MQ("glb")
                 },
-                disabled: Nd,
-                children: [Nd && (0, od.jsx)(qd.b, {}), "Download GLB"]
+                disabled: qQ,
+                children: [qQ && (0, HQ.jsx)(CQ.c, {}), "Download GLB"]
               })]
             })]
-          }), (0, od.jsx)("div", {
+          }), (0, HQ.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var Fd = kd(126),
-      Yd = kd(1147),
-      md = kd(1220),
-      bd = kd(2856),
-      Sd = kd(1543),
-      jd = kd(1288),
-      Xd = kd(1253),
-      fd = kd(2937),
-      nd = kd(2016),
-      Ud = kd(1520),
-      yd = kd(313),
-      Dd = kd(2231),
-      Td = kd(2243),
-      Ed = kd(2570),
-      cd = kd(1675),
-      hd = kd(2914),
-      rd = kd(2882),
-      ud = kd(2945),
-      td = kd(201);
+    var OQ = wQ(134),
+      sQ = wQ(1147),
+      rQ = wQ(1213),
+      IQ = wQ(2913),
+      UQ = wQ(1503),
+      NQ = wQ(1282),
+      TQ = wQ(1246),
+      KQ = wQ(2974),
+      zQ = wQ(2001),
+      lQ = wQ(1489),
+      jQ = wQ(317),
+      aQ = wQ(2188),
+      XQ = wQ(2197),
+      fQ = wQ(2598),
+      VQ = wQ(1645),
+      hQ = wQ(2955),
+      JQ = wQ(2931),
+      EQ = wQ(2978),
+      nQ = wQ(217);
 
-    function Vd(dd) {
+    function gQ(QQ) {
       const {
-        t: Jd,
-        selectedLanguage: kd
-      } = (0, Pd.B)(), {
-        userContext: Nd
-      } = (0, Ld.c)(), {
-        superRankInfo: Wd
-      } = Nd, Zd = dd && ((0, yd.Gc)(Wd) || Nd.ranksMayChange) && (0, Td.purchasesAllowed)(), {
-        accountId: gd,
-        data: Cd
-      } = (0, Ed.h)(hd.d, Zd);
-      if ((0, pd.useEffect)((() => {
-          if (Zd) return hd.d.watchAccount(), cd.c.addRefetchListener("billing", (dd => {
-            "reconnected" === dd ? hd.d.refreshAfterReconnect() : hd.d.refresh()
+        t: FQ,
+        selectedLanguage: wQ
+      } = (0, DQ.y)(), {
+        userContext: qQ
+      } = (0, xQ.e)(), {
+        superRankInfo: oQ
+      } = qQ, kQ = QQ && ((0, jQ.Bc)(oQ) || qQ.ranksMayChange) && (0, XQ.purchasesAllowed)(), {
+        accountId: vQ,
+        data: mQ
+      } = (0, fQ.h)(hQ.c, kQ);
+      if ((0, LQ.useEffect)((() => {
+          if (kQ) return hQ.c.watchAccount(), VQ.e.addRefetchListener("billing", (QQ => {
+            "reconnected" === QQ ? hQ.c.refreshAfterReconnect() : hQ.c.refresh()
           }))
-        }), [Zd]), !Zd || !(0, yd.Gc)(Wd) || null === Cd || gd !== Nd.whamm) return null;
-      const Kd = function(dd, Jd, kd) {
-        const pd = ud.m[(0, ud.e)(ud.m, Jd)],
-          Nd = void 0 === pd ? void 0 : (0, td.d)(dd.entitlements, pd.entitlementId);
-        return void 0 === Nd || null === Nd.expiresAt || (0, rd.h)(Nd) <= kd ? null : Nd.willRenew && null === Nd.billingIssueDetectedAt ? {
+        }), [kQ]), !kQ || !(0, jQ.Bc)(oQ) || null === mQ || vQ !== qQ.whamm) return null;
+      const uQ = function(QQ, FQ, wQ) {
+        const LQ = EQ.h[(0, EQ.c)(EQ.h, FQ)],
+          qQ = void 0 === LQ ? void 0 : (0, nQ.b)(QQ.entitlements, LQ.entitlementId);
+        return void 0 === qQ || null === qQ.expiresAt || (0, JQ.d)(qQ) <= wQ ? null : qQ.willRenew && null === qQ.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(Nd.expiresAt, kd)
+          at: Math.max(qQ.expiresAt, wQ)
         } : {
           renews: !1,
-          at: (0, rd.h)(Nd)
+          at: (0, JQ.d)(qQ)
         }
-      }(Cd, Wd.tier, Date.now());
-      if (null === Kd) return null;
-      const od = Kd.renews ? "store:renewsOn" : "store:endsOn";
-      return Jd(od, {
-        date: new Date(Kd.at).toLocaleDateString((0, Pd.n)(kd.code, od), {
+      }(mQ, oQ.tier, Date.now());
+      if (null === uQ) return null;
+      const HQ = uQ.renews ? "store:renewsOn" : "store:endsOn";
+      return FQ(HQ, {
+        date: new Date(uQ.at).toLocaleDateString((0, DQ.k)(wQ.code, HQ), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var zd = kd(1384),
-      Hd = kd(1230),
-      wd = kd(4770),
-      Ad = kd(1492),
-      dJ = kd(3543),
-      JJ = kd(2214);
+    var PQ = wQ(1367),
+      ZQ = wQ(1225),
+      yQ = wQ(4721),
+      BQ = wQ(1471),
+      dQ = wQ(3535),
+      QF = wQ(2166);
 
-    function kJ(dd) {
+    function FF(QQ) {
       let {
-        showing: Jd
-      } = dd;
+        showing: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, Pd.B)(), {
-        data: pd,
-        failed: Nd
-      } = (0, Ed.h)(dJ.f, Jd);
-      return 0 === (null === pd || void 0 === pd ? void 0 : pd.length) || null === pd && !Nd ? null : (0, od.jsxs)("div", {
+        t: wQ
+      } = (0, DQ.y)(), {
+        data: LQ,
+        failed: qQ
+      } = (0, fQ.h)(dQ.f, FQ);
+      return 0 === (null === LQ || void 0 === LQ ? void 0 : LQ.length) || null === LQ && !qQ ? null : (0, HQ.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: kd("paymentHistory:title")
-        }), null === pd && Nd && (0, od.jsx)("div", {
+          children: wQ("paymentHistory:title")
+        }), null === LQ && qQ && (0, HQ.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: kd("paymentHistory:loadFailed")
-        }), null !== pd && (0, od.jsx)("ul", {
+          children: wQ("paymentHistory:loadFailed")
+        }), null !== LQ && (0, HQ.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: pd.map((dd => (0, od.jsxs)("li", {
+          children: LQ.map((QQ => (0, HQ.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, od.jsx)(JJ.d, {
-              entry: dd
-            }), (0, od.jsxs)("div", {
+            children: [(0, HQ.jsx)(QF.c, {
+              entry: QQ
+            }), (0, HQ.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, od.jsx)("div", {
-                children: (0, JJ.j)(kd, dd)
-              }), (0, od.jsxs)("div", {
+              children: [(0, HQ.jsx)("div", {
+                children: (0, QF.e)(wQ, QQ)
+              }), (0, HQ.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(dd.at).toLocaleDateString(), "number" === typeof dd.orderId && ` \xb7 ${kd("paymentHistory:order",{orderId:dd.orderId})}`]
+                children: [new Date(QQ.at).toLocaleDateString(), "number" === typeof QQ.orderId && ` \xb7 ${wQ("paymentHistory:order",{orderId:QQ.orderId})}`]
               })]
             })]
-          }, (0, dJ.d)(dd))))
+          }, (0, dQ.d)(QQ))))
         })]
       })
     }
-    var pJ = kd(1892),
-      NJ = kd(1266),
-      WJ = kd(1371),
-      PJ = kd(1332),
-      ZJ = kd(1797),
-      gJ = kd(2872);
-    async function CJ() {
+    var wF = wQ(1863),
+      LF = wQ(1257),
+      qF = wQ(1362),
+      oF = wQ(1326),
+      DF = wQ(1772),
+      kF = wQ(2926);
+    async function vF() {
       try {
-        return function(dd) {
-          const Jd = new Map;
+        return function(QQ) {
+          const FQ = new Map;
           for (const {
-              store: kd,
-              status: pd,
-              autoRenewStatus: Nd,
-              managementUrl: Wd
+              store: wQ,
+              status: LQ,
+              autoRenewStatus: qQ,
+              managementUrl: oQ
             }
-            of Object.values(dd.subscriptions)) !(0, rd.j)(kd) || (0, rd.m)(pd) || "willNotRenew" === Nd || Jd.has(kd) || Jd.set(kd, null !== Wd && void 0 !== Wd ? Wd : rd.n[kd]);
-          return Array.from(Jd, (dd => {
-            let [Jd, kd] = dd;
+            of Object.values(QQ.subscriptions)) !(0, JQ.e)(wQ) || (0, JQ.g)(LQ) || "willNotRenew" === qQ || FQ.has(wQ) || FQ.set(wQ, null !== oQ && void 0 !== oQ ? oQ : JQ.j[wQ]);
+          return Array.from(FQ, (QQ => {
+            let [FQ, wQ] = QQ;
             return {
-              store: Jd,
-              managementUrl: kd
+              store: FQ,
+              managementUrl: wQ
             }
           }))
-        }(await (0, ZJ.m)((0, gJ.f)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (dd) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", dd), null
+        }(await (0, DF.l)((0, kF.e)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (QQ) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", QQ), null
       }
     }
-    var KJ = kd(300),
-      oJ = kd(2416);
-    const lJ = {
+    var mF = wQ(307),
+      uF = wQ(2424);
+    const HF = {
       appStore: {
         name: "App Store",
-        ...KJ.Mb.appStore
+        ...mF.Ub.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...KJ.Mb.googlePlay
+        ...mF.Ub.googlePlay
       },
       discord: {
         name: "Discord",
-        ...KJ.Mb.discord
+        ...mF.Ub.discord
       }
     };
 
-    function QJ(dd) {
+    function bF(QQ) {
       let {
-        warning: Jd,
-        subscriptions: kd
-      } = dd;
+        warning: FQ,
+        subscriptions: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, Pd.B)();
-      return null !== kd && 0 === kd.length ? (0, od.jsx)(od.Fragment, {
-        children: pd(Jd)
-      }) : (0, od.jsxs)("div", {
+        t: LQ
+      } = (0, DQ.y)();
+      return null !== wQ && 0 === wQ.length ? (0, HQ.jsx)(HQ.Fragment, {
+        children: LQ(FQ)
+      }) : (0, HQ.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [pd(Jd), null === kd && (0, od.jsx)("div", {
+        children: [LQ(FQ), null === wQ && (0, HQ.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: pd("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== kd && (0, od.jsxs)(od.Fragment, {
-          children: [(0, od.jsx)("div", {
+          children: LQ("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== wQ && (0, HQ.jsxs)(HQ.Fragment, {
+          children: [(0, HQ.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: pd("auth:deleteAccountStoreSubscriptions")
-          }), (0, od.jsx)(oJ.d, {
+            children: LQ("auth:deleteAccountStoreSubscriptions")
+          }), (0, HQ.jsx)(uF.d, {
             className: "DeleteAccountSubtitleLinks",
-            links: kd.map((dd => {
+            links: wQ.map((QQ => {
               let {
-                store: Jd,
-                managementUrl: kd
-              } = dd;
+                store: FQ,
+                managementUrl: wQ
+              } = QQ;
               return {
-                ...lJ[Jd],
-                url: kd
+                ...HF[FQ],
+                url: wQ
               }
             }))
           })]
@@ -416,703 +416,703 @@ export const modules = {
       })
     }
 
-    function LJ(dd) {
+    function YF(QQ) {
       let {
-        showing: Jd
-      } = dd;
+        showing: FQ
+      } = QQ;
       const {
-        userContext: kd,
-        isUserContextUpdating: Nd
-      } = (0, Ld.c)(), {
-        t: Wd
-      } = (0, Pd.B)(), [Zd, gd] = (0, pd.useState)(!1), [Kd, ld] = (0, pd.useState)(null), Qd = (0, pd.useRef)(Jd);
-      (0, pd.useEffect)((() => (Qd.current = Jd, () => {
-        Qd.current = !1
-      })), [Jd]);
-      const Od = Nd || Zd;
-      async function ed() {
-        const dd = function(dd) {
-            if ((0, Fd.e)()) return "auth:discordActivityDeleteAccountLossWarning";
-            return dd ? "auth:deleteAccountLossWarning" : "auth:deleteGuestAccountWarning"
-          }(kd.isLoggedIn()),
-          Jd = (0, pJ.b)(kd.availableUserContextTypes) ? await CJ() : [];
-        if (!Qd.current) return NJ.b.ok();
-        if (!0 !== await WJ.NotificationProvider.showPromptPopup({
+        userContext: wQ,
+        isUserContextUpdating: qQ
+      } = (0, xQ.e)(), {
+        t: oQ
+      } = (0, DQ.y)(), [kQ, vQ] = (0, LQ.useState)(!1), [uQ, bQ] = (0, LQ.useState)(null), YQ = (0, LQ.useRef)(FQ);
+      (0, LQ.useEffect)((() => (YQ.current = FQ, () => {
+        YQ.current = !1
+      })), [FQ]);
+      const AQ = qQ || kQ;
+      async function tQ() {
+        const QQ = function(QQ) {
+            if ((0, OQ.d)()) return "auth:discordActivityDeleteAccountLossWarning";
+            return QQ ? "auth:deleteAccountLossWarning" : "auth:deleteGuestAccountWarning"
+          }(wQ.isLoggedIn()),
+          FQ = (0, wF.b)(wQ.availableUserContextTypes) ? await vF() : [];
+        if (!YQ.current) return LF.d.ok();
+        if (!0 !== await qF.NotificationProvider.showPromptPopup({
             title: "auth:deleteAccountPopupTitleNamed",
             textOpts: {
               title: {
-                playerName: (0, jd.d)(kd.getPlayerName(), !Rd.featureFlags.canSeeRealPlayerNames)
+                playerName: (0, NQ.e)(wQ.getPlayerName(), !eQ.featureFlags.canSeeRealPlayerNames)
               }
             },
-            subtitle: (0, od.jsx)(QJ, {
-              warning: dd,
-              subscriptions: Jd
+            subtitle: (0, HQ.jsx)(bF, {
+              warning: QQ,
+              subscriptions: FQ
             }),
             confirmText: "auth:deleteAccount",
             destructive: !0,
             confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
             cancelText: "general:cancel",
             cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-          }).getResult()) return NJ.b.ok();
-        const pd = await (0, Yd.postJsonWithMetricsCookiesAndJsonResponse)(`${md.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-          gameState: sd.d.get("gameState")
+          }).getResult()) return LF.d.ok();
+        const LQ = await (0, sQ.postJsonWithMetricsCookiesAndJsonResponse)(`${rQ.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+          gameState: iQ.c.get("gameState")
         }, {
           retries: 3
-        }, kd.getMetricsCookies());
-        if (pd.error) return NJ.b.error(pd.error);
-        if ((0, Fd.e)()) {
-          (await PJ.i.discordActivity()).exit("User deleted their account")
+        }, wQ.getMetricsCookies());
+        if (LQ.error) return LF.d.error(LQ.error);
+        if ((0, OQ.d)()) {
+          (await oF.k.discordActivity()).exit("User deleted their account")
         }
-        return (0, Yd.forgetStoredGuestAccount)(kd.whamm), (0, Yd.forceGlobalSignOut)(!0), NJ.b.ok()
+        return (0, sQ.forgetStoredGuestAccount)(wQ.whamm), (0, sQ.forceGlobalSignOut)(!0), LF.d.ok()
       }
-      return (0, od.jsxs)("div", {
+      return (0, HQ.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, od.jsxs)(Cd.B, {
+        children: [(0, HQ.jsxs)(mQ.F, {
           onClick: async function() {
-            if (!Zd) {
-              gd(!0);
+            if (!kQ) {
+              vQ(!0);
               try {
-                const dd = await ed(),
-                  Jd = dd.isError() ? dd.asError().message : null;
-                ld(Jd)
-              } catch (dd) {
-                console.error("Failed to delete account:", dd), ld(Wd("auth:genericDeleteAccountError"))
+                const QQ = await tQ(),
+                  FQ = QQ.isError() ? QQ.asError().message : null;
+                bQ(FQ)
+              } catch (QQ) {
+                console.error("Failed to delete account:", QQ), bQ(oQ("auth:genericDeleteAccountError"))
               }
-              gd(!1)
+              vQ(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: Od,
-          children: [Od && (0, od.jsx)("div", {
+          disabled: AQ,
+          children: [AQ && (0, HQ.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, od.jsx)(qd.b, {})
-          }), Wd("auth:deleteAccount")]
-        }), Kd && (0, od.jsx)("div", {
+            children: (0, HQ.jsx)(CQ.c, {})
+          }), oQ("auth:deleteAccount")]
+        }), uQ && (0, HQ.jsx)("div", {
           className: "DeleteAccountError",
-          children: Kd
+          children: uQ
         })]
       })
     }
-    var OJ = kd(3462),
-      eJ = kd(3478),
-      RJ = kd(3473);
+    var xF = wQ(3462),
+      AF = wQ(3479),
+      tF = wQ(3470);
 
-    function IJ(dd) {
+    function eF(QQ) {
       let {
-        showing: Jd
-      } = dd;
+        showing: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, Pd.B)(), {
-        data: pd,
-        failed: Nd
-      } = (0, Ed.h)(OJ.d, Jd), Wd = null === pd ? null : (0, OJ.g)(pd);
-      return (0, od.jsxs)("div", {
+        t: wQ
+      } = (0, DQ.y)(), {
+        data: LQ,
+        failed: qQ
+      } = (0, fQ.h)(xF.c, FQ), oQ = null === LQ ? null : (0, xF.d)(LQ);
+      return (0, HQ.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: kd("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === Wd && !Nd && (0, od.jsx)(qd.b, {}), null === Wd && Nd && (0, od.jsxs)("div", {
+          children: wQ("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === oQ && !qQ && (0, HQ.jsx)(CQ.c, {}), null === oQ && qQ && (0, HQ.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [kd("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, od.jsx)(Cd.d, {
+          children: [wQ("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, HQ.jsx)(mQ.f, {
             className: "SmallTextLight",
             onClick: () => {
-              OJ.d.refresh()
+              xF.c.refresh()
             },
-            children: kd("general:tryAgain")
+            children: wQ("general:tryAgain")
           })]
-        }), 0 === (null === Wd || void 0 === Wd ? void 0 : Wd.length) && (0, od.jsx)("div", {
+        }), 0 === (null === oQ || void 0 === oQ ? void 0 : oQ.length) && (0, HQ.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: kd("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== Wd && Wd.length > 0 && (0, od.jsx)("ul", {
+          children: wQ("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== oQ && oQ.length > 0 && (0, HQ.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: Wd.map((dd => {
+          children: oQ.map((QQ => {
             let {
-              name: Jd,
-              exclusion: pd
-            } = dd;
-            const Nd = RJ.g[pd];
-            return (0, od.jsxs)("li", {
+              name: FQ,
+              exclusion: LQ
+            } = QQ;
+            const qQ = tF.e[LQ];
+            return (0, HQ.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, od.jsx)("div", {
+              children: [(0, HQ.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: Jd
-              }), (0, od.jsx)(Cd.f, {
+                children: FQ
+              }), (0, HQ.jsx)(mQ.i, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, eJ.e)(Nd, Jd, {
+                  (0, AF.f)(qQ, FQ, {
                     chatMessage: null
                   })
                 },
-                children: kd(RJ.j[Nd].text)
+                children: wQ(tF.f[qQ].text)
               })]
-            }, Jd)
+            }, FQ)
           }))
         })]
       })
     }
-    const GJ = (0, pd.memo)((function(dd) {
-      var Jd;
+    const MF = (0, LQ.memo)((function(QQ) {
+      var FQ;
       let {
-        showing: kd,
-        inGame: Nd
-      } = dd;
+        showing: wQ,
+        inGame: qQ
+      } = QQ;
       const {
-        t: gd,
-        selectedLanguage: Kd
-      } = (0, Pd.B)(), {
-        hideSocialLocationFrom: ld
-      } = (0, sd.j)(["hideSocialLocationFrom"]), Od = (0, Qd.b)(), {
-        userContext: ed,
-        isUserContextUpdating: Id
-      } = (0, Ld.c)(), [Gd, vd] = (0, pd.useState)(null !== (Jd = ed.getPlayerName()) && void 0 !== Jd ? Jd : ""), [ad, Md] = (0, pd.useState)(null), {
-        purchasing: Ed,
-        outcome: cd,
-        purchase: hd
-      } = (0, bd.c)("/super-rank-welcome"), rd = (0, yd.mc)((0, Pd.n)(Kd.code, "general:timeLeft"), ed.superRankInfo), ud = Vd(kd), td = rd ? gd("general:timeLeft", {
-        time: rd
-      }) : ud, [dJ, JJ] = (0, pd.useState)(!1), [pJ, NJ] = (0, pd.useState)(!1), WJ = (0, pd.useRef)(null), PJ = (0, pd.useRef)(null), ZJ = (0, nd.d)({
+        t: vQ,
+        selectedLanguage: uQ
+      } = (0, DQ.y)(), {
+        hideSocialLocationFrom: bQ
+      } = (0, iQ.l)(["hideSocialLocationFrom"]), AQ = (0, YQ.b)(), {
+        userContext: tQ,
+        isUserContextUpdating: MQ
+      } = (0, xQ.e)(), [GQ, pQ] = (0, LQ.useState)(null !== (FQ = tQ.getPlayerName()) && void 0 !== FQ ? FQ : ""), [WQ, RQ] = (0, LQ.useState)(null), {
+        purchasing: fQ,
+        outcome: VQ,
+        purchase: hQ
+      } = (0, IQ.d)("/super-rank-welcome"), JQ = (0, jQ.kc)((0, DQ.k)(uQ.code, "general:timeLeft"), tQ.superRankInfo), EQ = gQ(wQ), nQ = JQ ? vQ("general:timeLeft", {
+        time: JQ
+      }) : EQ, [dQ, QF] = (0, LQ.useState)(!1), [wF, LF] = (0, LQ.useState)(!1), qF = (0, LQ.useRef)(null), oF = (0, LQ.useRef)(null), DF = (0, zQ.h)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), gJ = null === ZJ, CJ = null !== ZJ && void 0 !== ZJ ? ZJ : [], KJ = ed !== Yd.NULL_USER_CONTEXT && !ed.isLoggedIn(), oJ = KJ && 0 !== (null === ZJ || void 0 === ZJ ? void 0 : ZJ.length), [lJ, QJ] = (0, pd.useState)([]), [OJ, eJ] = (0, pd.useState)(!1), RJ = ed.playerHasRank("youtuber"), GJ = (0, pd.useCallback)((() => Ud.d.getPlayerProfile(ed, {
-        lowerCaseName: ed.getPlayerName().toLowerCase()
-      }).then((dd => {
-        QJ(dd.socialLinks)
-      })).catch((dd => {
-        console.error("Failed to refresh social links", dd)
-      }))), [ed]);
+      }), kF = null === DF, vF = null !== DF && void 0 !== DF ? DF : [], mF = tQ !== sQ.NULL_USER_CONTEXT && !tQ.isLoggedIn(), uF = mF && 0 !== (null === DF || void 0 === DF ? void 0 : DF.length), [HF, bF] = (0, LQ.useState)([]), [xF, AF] = (0, LQ.useState)(!1), tF = tQ.playerHasRank("youtuber"), MF = (0, LQ.useCallback)((() => lQ.b.getPlayerProfile(tQ, {
+        lowerCaseName: tQ.getPlayerName().toLowerCase()
+      }).then((QQ => {
+        bF(QQ.socialLinks)
+      })).catch((QQ => {
+        console.error("Failed to refresh social links", QQ)
+      }))), [tQ]);
 
-      function xJ(dd) {
-        dd !== Gd && ((0, jd.p)(dd) ? (dd = (0, jd.t)(dd), Md("Only letters, numbers, and _")) : Md(null), WJ.current && (WJ.current.value = dd), vd(dd))
+      function pF(QQ) {
+        QQ !== GQ && ((0, NQ.r)(QQ) ? (QQ = (0, NQ.s)(QQ), RQ("Only letters, numbers, and _")) : RQ(null), qF.current && (qF.current.value = QQ), pQ(QQ))
       }
-      return (0, pd.useEffect)((() => (!0 === kd ? (clearInterval(PJ.current), PJ.current = setInterval(Od, 1e3)) : clearInterval(PJ.current), () => {
-        clearInterval(PJ.current)
-      })), [kd, Od]), (0, pd.useEffect)((() => {
-        var dd;
-        vd(null !== (dd = ed.getPlayerName()) && void 0 !== dd ? dd : "")
-      }), [ed]), (0, pd.useEffect)((() => {
-        if (!kd || !RJ || Id) return;
-        let dd = !1;
-        return eJ(!0), QJ([]), Ud.d.getPlayerProfile(ed, {
-          lowerCaseName: ed.getPlayerName().toLowerCase()
-        }).then((Jd => {
-          dd || QJ(Jd.socialLinks)
-        })).catch((dd => {
-          console.error("Failed to load social links", dd)
+      return (0, LQ.useEffect)((() => (!0 === wQ ? (clearInterval(oF.current), oF.current = setInterval(AQ, 1e3)) : clearInterval(oF.current), () => {
+        clearInterval(oF.current)
+      })), [wQ, AQ]), (0, LQ.useEffect)((() => {
+        var QQ;
+        pQ(null !== (QQ = tQ.getPlayerName()) && void 0 !== QQ ? QQ : "")
+      }), [tQ]), (0, LQ.useEffect)((() => {
+        if (!wQ || !tF || MQ) return;
+        let QQ = !1;
+        return AF(!0), bF([]), lQ.b.getPlayerProfile(tQ, {
+          lowerCaseName: tQ.getPlayerName().toLowerCase()
+        }).then((FQ => {
+          QQ || bF(FQ.socialLinks)
+        })).catch((QQ => {
+          console.error("Failed to load social links", QQ)
         })).finally((() => {
-          dd || eJ(!1)
+          QQ || AF(!1)
         })), () => {
-          dd = !0
+          QQ = !0
         }
-      }), [kd, RJ, Id, ed]), (0, od.jsxs)("div", {
-        className: Wd()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: Nd
+      }), [wQ, tF, MQ, tQ]), (0, HQ.jsxs)("div", {
+        className: oQ()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: qQ
         }),
-        children: [Nd && (0, od.jsx)("div", {
+        children: [qQ && (0, HQ.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: gd("settingsMenu:accountSettingsInGameWarning")
-        }), (0, od.jsxs)("div", {
+          children: vQ("settingsMenu:accountSettingsInGameWarning")
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [gd("homePage:discordNamePopupTitle"), (0, od.jsxs)(Sd.LinkPreserveSearch, {
+            children: [vQ("homePage:discordNamePopupTitle"), (0, HQ.jsxs)(UQ.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, Xd.h)({
-                name: ed.getPlayerName()
+              to: (0, TQ.e)({
+                name: tQ.getPlayerName()
               }),
               onClick: () => {
-                sd.d.set({
+                iQ.c.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, od.jsx)(Zd.e, {
+              children: [(0, HQ.jsx)(kQ.c, {
                 name: "arrow-up-right-from-square"
-              }), " ", gd("profileCard:viewProfile")]
+              }), " ", vQ("profileCard:viewProfile")]
             })]
-          }), (0, od.jsxs)("div", {
+          }), (0, HQ.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, od.jsxs)("div", {
+            children: [(0, HQ.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [Rd.featureFlags.canChangeName && (0, od.jsx)(xd.e, {
+              children: [eQ.featureFlags.canChangeName && (0, HQ.jsx)(cQ.b, {
                 className: "EnterName",
-                placeholderText: gd("homePage:enterName"),
-                maxLength: jd.h,
-                defaultValue: Gd,
-                onValueChange: dd => {
-                  xJ(dd)
+                placeholderText: vQ("homePage:enterName"),
+                maxLength: NQ.k,
+                defaultValue: GQ,
+                onValueChange: QQ => {
+                  pF(QQ)
                 },
-                forcedText: dJ || !Rd.featureFlags.canChangeName ? Gd : null,
+                forcedText: dQ || !eQ.featureFlags.canChangeName ? GQ : null,
                 blurOnEnter: !0,
-                domRef: WJ
-              }), (0, od.jsx)(Cd.d, {
+                domRef: qF
+              }), (0, HQ.jsx)(mQ.f, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  xJ((0, jd.e)())
+                  pF((0, NQ.h)())
                 },
-                children: (0, od.jsx)(Zd.e, {
+                children: (0, HQ.jsx)(kQ.c, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !Rd.featureFlags.canChangeName && (0, od.jsx)("div", {
+              }), !eQ.featureFlags.canChangeName && (0, HQ.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, jd.d)(Gd, !Rd.featureFlags.canSeeRealPlayerNames)
+                children: (0, NQ.e)(GQ, !eQ.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, od.jsx)(Cd.d, {
+            }), (0, HQ.jsx)(mQ.f, {
               className: "ChooseNameButton",
-              disabled: dJ || Gd === ed.getPlayerName(),
+              disabled: dQ || GQ === tQ.getPlayerName(),
               onClick: () => {
-                Gd.length < jd.l ? Md(gd("homePage:changeNameMinLengthError", {
-                  length: jd.l
-                })) : Gd.length > jd.h ? Md(gd("homePage:changeNameMaxLengthError", {
-                  length: jd.h
-                })) : (JJ(!0), Md(null), async function(dd, Jd, kd, pd) {
-                  const Nd = await (0, Yd.postJsonWithMetricsCookiesAndJsonResponse)(`${md.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: dd
+                GQ.length < NQ.n ? RQ(vQ("homePage:changeNameMinLengthError", {
+                  length: NQ.n
+                })) : GQ.length > NQ.k ? RQ(vQ("homePage:changeNameMaxLengthError", {
+                  length: NQ.k
+                })) : (QF(!0), RQ(null), async function(QQ, FQ, wQ, LQ) {
+                  const qQ = await (0, sQ.postJsonWithMetricsCookiesAndJsonResponse)(`${rQ.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: QQ
                   }, {
                     retries: 3
-                  }, Jd.getMetricsCookies()).catch((dd => (console.error("Bad response from the server when trying to update name:", dd), {
+                  }, FQ.getMetricsCookies()).catch((QQ => (console.error("Bad response from the server when trying to update name:", QQ), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  Nd.err ? (console.error("Error when trying to get with new name from DB", Nd.err), pd(Nd.err)) : !0 === Nd.nameExists ? pd("Name is already taken") : kd(dd)
-                }(Gd, ed, (dd => {
-                  ed.setPlayerName(dd), JJ(!1)
-                }), (dd => {
-                  Md(dd), JJ(!1)
+                  qQ.err ? (console.error("Error when trying to get with new name from DB", qQ.err), LQ(qQ.err)) : !0 === qQ.nameExists ? LQ("Name is already taken") : wQ(QQ)
+                }(GQ, tQ, (QQ => {
+                  tQ.setPlayerName(QQ), QF(!1)
+                }), (QQ => {
+                  RQ(QQ), QF(!1)
                 })))
               },
-              children: gd("general:choose")
+              children: vQ("general:choose")
             })]
-          }), ad && (0, od.jsx)("div", {
+          }), WQ && (0, HQ.jsx)("div", {
             className: "ChooseAccNameError",
-            children: ad
+            children: WQ
           })]
-        }), (0, od.jsx)(Bd.d, {
+        }), (0, HQ.jsx)(SQ.e, {
           label: (() => {
-            if ((0, Hd.j)(ld)) {
-              const dd = (0, Pd.n)(Kd.code, "general:timeLeft"),
-                Jd = (0, yd.ib)(dd, Date.now(), ld + Hd.h);
-              return `${gd("settingsMenu:hideSocialLocation")} (${gd("general:timeLeft",{time:Jd})})`
+            if ((0, ZQ.m)(bQ)) {
+              const QQ = (0, DQ.k)(uQ.code, "general:timeLeft"),
+                FQ = (0, jQ.db)(QQ, Date.now(), bQ + ZQ.l);
+              return `${vQ("settingsMenu:hideSocialLocation")} (${vQ("general:timeLeft",{time:FQ})})`
             }
-            return gd("settingsMenu:hideSocialLocation")
+            return vQ("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const dd = !(0, Hd.j)(ld);
-            (0, Ad.reportAnalyticsClick)({
+            const QQ = !(0, ZQ.m)(bQ);
+            (0, BQ.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: dd ? "on" : "off"
-            }), NJ(!0), Ud.d.setHideSocialLocation(ed, dd).then((() => {
-              sd.d.set({
-                hideSocialLocationFrom: dd ? Date.now() : null
+              value: QQ ? "on" : "off"
+            }), LF(!0), lQ.b.setHideSocialLocation(tQ, QQ).then((() => {
+              iQ.c.set({
+                hideSocialLocationFrom: QQ ? Date.now() : null
               })
             })).finally((() => {
-              NJ(!1)
+              LF(!1)
             }))
           },
-          checked: (0, Hd.j)(ld),
-          disabled: pJ
-        }), RJ && (0, od.jsxs)("div", {
+          checked: (0, ZQ.m)(bQ),
+          disabled: wF
+        }), tF && (0, HQ.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, od.jsx)("div", {
+          children: [(0, HQ.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: gd("settingsMenu:socialLinks")
-          }), OJ && (0, od.jsx)(qd.b, {}), !OJ && (0, od.jsx)(wd.b, {
-            socialLinks: lJ,
+            children: vQ("settingsMenu:socialLinks")
+          }), xF && (0, HQ.jsx)(CQ.c, {}), !xF && (0, HQ.jsx)(yQ.b, {
+            socialLinks: HF,
             editable: !0,
-            userContext: ed,
-            onLinksUpdated: GJ
+            userContext: tQ,
+            onLinksUpdated: MF
           })]
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, od.jsx)("div", {
+          children: [(0, HQ.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: gd(oJ ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), gJ && (0, od.jsx)(qd.b, {}), !gJ && 0 === CJ.length && (0, od.jsx)("div", {
+            children: vQ(uF ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), kF && (0, HQ.jsx)(CQ.c, {}), !kF && 0 === vF.length && (0, HQ.jsx)("div", {
             className: "NoLoginOptions",
-            children: gd("auth:noLoginOptions")
-          }), !gJ && CJ.length > 0 && "crazygames" !== Fd.t && (0, od.jsx)("div", {
+            children: vQ("auth:noLoginOptions")
+          }), !kF && vF.length > 0 && "crazygames" !== OQ.r && (0, HQ.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: CJ
-          }), !gJ && CJ.length > 0 && "crazygames" === Fd.t && (0, od.jsxs)("div", {
+            children: vF
+          }), !kF && vF.length > 0 && "crazygames" === OQ.r && (0, HQ.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [CJ[0], CJ.length > 1 && (0, od.jsxs)(od.Fragment, {
-              children: [(0, od.jsxs)("div", {
+            children: [vF[0], vF.length > 1 && (0, HQ.jsxs)(HQ.Fragment, {
+              children: [(0, HQ.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, od.jsx)("span", {
+                children: [(0, HQ.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: gd("auth:legacyLoginOptions")
-                }), (0, od.jsx)(zd.e, {
+                  children: vQ("auth:legacyLoginOptions")
+                }), (0, HQ.jsx)(PQ.b, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: gd("auth:legacyLoginOptionsInfo")
+                  hoverInfo: vQ("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, od.jsx)("div", {
+              }), (0, HQ.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: CJ.slice(1)
+                children: vF.slice(1)
               })]
             })]
-          }), Rd.featureFlags.useLogin && (null !== ed.loggedInInfo || ed.isLoggedIn()) && (0, od.jsxs)(od.Fragment, {
-            children: [(0, od.jsx)("div", {
+          }), eQ.featureFlags.useLogin && (null !== tQ.loggedInInfo || tQ.isLoggedIn()) && (0, HQ.jsxs)(HQ.Fragment, {
+            children: [(0, HQ.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, od.jsxs)(Cd.B, {
+            }), (0, HQ.jsxs)(mQ.F, {
               onClick: () => {
-                (0, Yd.forceGlobalSignOut)()
+                (0, sQ.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, od.jsx)(Zd.e, {
+              children: [(0, HQ.jsx)(kQ.c, {
                 name: "right-from-bracket"
-              }), gd("auth:signOut")]
+              }), vQ("auth:signOut")]
             })]
           })]
-        }), !ed.playerHasRank("super") && (0, Td.purchasesAllowed)() && (0, od.jsxs)("div", {
+        }), !tQ.playerHasRank("super") && (0, XQ.purchasesAllowed)() && (0, HQ.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, od.jsx)(Zd.e, {
+            children: [(0, HQ.jsx)(kQ.c, {
               name: "bolt"
-            }), gd("homePage:superRank")]
-          }), (0, od.jsxs)("div", {
+            }), vQ("homePage:superRank")]
+          }), (0, HQ.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, od.jsxs)(Cd.j, {
+            children: [(0, HQ.jsxs)(mQ.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Dd.q)({
+                (0, aQ.o)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, od.jsx)(Zd.e, {
+              children: [(0, HQ.jsx)(kQ.c, {
                 name: "bolt"
-              }), gd("homePage:getSuperRank")]
-            }), (0, od.jsxs)(Cd.j, {
+              }), vQ("homePage:getSuperRank")]
+            }), (0, HQ.jsxs)(mQ.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Dd.q)({
+                (0, aQ.o)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, od.jsx)(Zd.e, {
+              children: [(0, HQ.jsx)(kQ.c, {
                 name: "bolt"
-              }), gd("homePage:giftSuperRank")]
+              }), vQ("homePage:giftSuperRank")]
             })]
           })]
-        }), ed.playerHasRank("super") && (0, od.jsxs)("div", {
+        }), tQ.playerHasRank("super") && (0, HQ.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, od.jsx)(Zd.e, {
+            children: [(0, HQ.jsx)(kQ.c, {
               name: "bolt"
-            }), gd("homePage:superRank"), td && (0, od.jsxs)("div", {
+            }), vQ("homePage:superRank"), nQ && (0, HQ.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", td, ")"]
+              children: ["(", nQ, ")"]
             })]
-          }), (0, Td.purchasesAllowed)() && (0, od.jsxs)("div", {
+          }), (0, XQ.purchasesAllowed)() && (0, HQ.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, yd.Gc)(ed.superRankInfo) && (0, od.jsxs)(Cd.j, {
+            children: [!(0, jQ.Bc)(tQ.superRankInfo) && (0, HQ.jsxs)(mQ.m, {
               className: "AccountSettingsSuperRankProlong",
-              loading: Ed,
+              loading: fQ,
               onClick: () => {
-                hd(fd.k.id, null)
+                hQ(KQ.l.id, null)
               },
-              children: [(0, od.jsx)(Zd.e, {
+              children: [(0, HQ.jsx)(kQ.c, {
                 name: "bolt"
-              }), gd("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: fd.k.product.days,
-                price: fd.k.price
+              }), vQ("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: KQ.l.product.days,
+                price: KQ.l.price
               })]
-            }), (0, od.jsxs)(Cd.j, {
+            }), (0, HQ.jsxs)(mQ.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, Dd.q)({
+                (0, aQ.o)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, od.jsx)(Zd.e, {
+              children: [(0, HQ.jsx)(kQ.c, {
                 name: "bolt"
-              }), gd("homePage:giftSuperRank")]
+              }), vQ("homePage:giftSuperRank")]
             })]
-          }), cd && (0, od.jsx)("div", {
+          }), VQ && (0, HQ.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: gd(cd.translationKey)
+            children: vQ(VQ.translationKey)
           })]
-        }), (0, od.jsx)(kJ, {
-          showing: kd
-        }), Rd.featureFlags.useSocialFeatures && (0, od.jsx)(IJ, {
-          showing: kd
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsx)(FF, {
+          showing: wQ
+        }), eQ.featureFlags.useSocialFeatures && (0, HQ.jsx)(eF, {
+          showing: wQ
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, od.jsx)("div", {
+            children: [(0, HQ.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: gd(vJ(KJ, oJ))
-            }), (0, Fd.e)() && (0, od.jsx)("div", {
+              children: vQ(GF(mF, uF))
+            }), (0, OQ.d)() && (0, HQ.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: gd("auth:discordActivityKickWarning")
-            }), (0, od.jsx)(LJ, {
-              showing: kd
+              children: vQ("auth:discordActivityKickWarning")
+            }), (0, HQ.jsx)(YF, {
+              showing: wQ
             })]
-          }), (0, od.jsx)("div", {
+          }), (0, HQ.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: gd("auth:deleteAccountWarning")
+            children: vQ("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
 
-    function vJ(dd, Jd) {
-      return dd ? Jd ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function GF(QQ, FQ) {
+      return QQ ? FQ ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var xJ = kd(9134),
-      qJ = kd(2999),
-      BJ = kd(1273),
-      sJ = kd(1453);
-    const iJ = (0, pd.memo)((function(dd) {
+    var pF = wQ(8995),
+      cF = wQ(3029),
+      CF = wQ(1265),
+      SF = wQ(1440);
+    const iF = (0, LQ.memo)((function(QQ) {
         let {
-          inGame: Jd
-        } = dd;
+          inGame: FQ
+        } = QQ;
         const {
-          t: kd,
-          selectedLanguage: pd
-        } = (0, Pd.B)(), {
-          clientEscMenuOptions: Nd,
-          showDebugOverlay: Wd
-        } = (0, sd.j)(["clientEscMenuOptions", "showDebugOverlay"]), Zd = (0, Od.j)("hideCoordinates");
-        let gd = "settingsMenu:showCoordinates",
-          Cd = "settingsMenu:showChunkCoordinates";
+          t: wQ,
+          selectedLanguage: LQ
+        } = (0, DQ.y)(), {
+          clientEscMenuOptions: qQ,
+          showDebugOverlay: oQ
+        } = (0, iQ.l)(["clientEscMenuOptions", "showDebugOverlay"]), kQ = (0, AQ.l)("hideCoordinates");
+        let vQ = "settingsMenu:showCoordinates",
+          mQ = "settingsMenu:showChunkCoordinates";
 
-        function Kd(dd) {
-          const Jd = new Intl.DisplayNames([dd], {
+        function uQ(QQ) {
+          const FQ = new Intl.DisplayNames([QQ], {
             type: "language"
-          }).of(dd);
-          return Jd.charAt(0).toUpperCase() + Jd.slice(1)
+          }).of(QQ);
+          return FQ.charAt(0).toUpperCase() + FQ.slice(1)
         }
-        return Zd && (gd = "settingsMenu:showCoordinatesHidden", Cd = "settingsMenu:showChunkCoordinatesHidden"), (0, od.jsxs)("div", {
+        return kQ && (vQ = "settingsMenu:showCoordinatesHidden", mQ = "settingsMenu:showChunkCoordinatesHidden"), (0, HQ.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [Jd && Rd.featureFlags.canUseInviteLinks && (0, od.jsxs)("div", {
+          children: [FQ && eQ.featureFlags.canUseInviteLinks && (0, HQ.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, od.jsx)("div", {
+            children: [(0, HQ.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: kd("settingsMenu:inviteLink")
-            }), (0, od.jsx)(xJ.f, {})]
-          }), (0, od.jsxs)("div", {
+              children: wQ("settingsMenu:inviteLink")
+            }), (0, HQ.jsx)(pF.d, {})]
+          }), (0, HQ.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, od.jsx)("div", {
+            children: [(0, HQ.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: kd("settingsMenu:language")
-            }), (0, od.jsx)(qJ.c, {
-              options: Object.entries(Pd.f).map((dd => {
-                let [Jd, kd] = dd;
+              children: wQ("settingsMenu:language")
+            }), (0, HQ.jsx)(cF.d, {
+              options: Object.entries(DQ.i).map((QQ => {
+                let [FQ, wQ] = QQ;
                 return {
-                  label: (0, od.jsxs)("div", {
+                  label: (0, HQ.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, od.jsx)("img", {
-                      src: kd.flagImg,
+                    children: [(0, HQ.jsx)("img", {
+                      src: wQ.flagImg,
                       alt: "flag"
-                    }), (0, od.jsxs)("span", {
-                      children: [Kd(Jd), " ", (0, od.jsxs)("span", {
+                    }), (0, HQ.jsxs)("span", {
+                      children: [uQ(FQ), " ", (0, HQ.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", Jd, ")"]
+                        children: ["(", FQ, ")"]
                       })]
                     })]
                   }),
-                  value: Jd
+                  value: FQ
                 }
               })),
-              value: pd.code,
-              onChange: dd => {
-                BJ.c.get().setCurrentLanguage(dd.value)
+              value: LQ.code,
+              onChange: QQ => {
+                CF.e.get().setCurrentLanguage(QQ.value)
               }
             })]
-          }), !(0, Rd.isMobileApp)() && (0, sJ.i)() && Rd.featureFlags.useForceRotateForceFullscreenOverlay && (0, od.jsx)(Bd.d, {
-            label: kd("settingsMenu:disableFullscreenMode"),
-            checked: Nd.disableFullscreen,
-            onClick: dd => {
-              sd.d.setClientEscMenuOptions({
-                disableFullscreen: dd
+          }), !(0, eQ.isMobileApp)() && (0, SF.j)() && eQ.featureFlags.useForceRotateForceFullscreenOverlay && (0, HQ.jsx)(SQ.e, {
+            label: wQ("settingsMenu:disableFullscreenMode"),
+            checked: qQ.disableFullscreen,
+            onClick: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                disableFullscreen: QQ
               })
             }
-          }), (0, od.jsx)(Bd.d, {
-            label: kd(gd),
-            checked: Nd.showCoordinates,
-            onClick: dd => {
-              sd.d.setClientEscMenuOptions({
-                showCoordinates: dd
+          }), (0, HQ.jsx)(SQ.e, {
+            label: wQ(vQ),
+            checked: qQ.showCoordinates,
+            onClick: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                showCoordinates: QQ
               })
             },
-            disabled: Zd
-          }), (0, od.jsx)(Bd.d, {
-            label: kd(Cd),
-            checked: Nd.showChunkCoordinates,
-            onClick: dd => {
-              sd.d.setClientEscMenuOptions({
-                showChunkCoordinates: dd
+            disabled: kQ
+          }), (0, HQ.jsx)(SQ.e, {
+            label: wQ(mQ),
+            checked: qQ.showChunkCoordinates,
+            onClick: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                showChunkCoordinates: QQ
               })
             },
-            disabled: Zd
-          }), (0, od.jsx)(Bd.d, {
-            label: kd("settingsMenu:showFps"),
-            checked: Nd.showFPS,
-            onClick: dd => {
-              sd.d.setClientEscMenuOptions({
-                showFPS: dd
+            disabled: kQ
+          }), (0, HQ.jsx)(SQ.e, {
+            label: wQ("settingsMenu:showFps"),
+            checked: qQ.showFPS,
+            onClick: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                showFPS: QQ
               })
             }
-          }), (0, od.jsx)(Bd.d, {
-            label: kd("settingsMenu:disableBunnyHopping"),
-            checked: Nd.disableBunnyHopping,
-            onClick: dd => {
-              sd.d.setClientEscMenuOptions({
-                disableBunnyHopping: dd
+          }), (0, HQ.jsx)(SQ.e, {
+            label: wQ("settingsMenu:disableBunnyHopping"),
+            checked: qQ.disableBunnyHopping,
+            onClick: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                disableBunnyHopping: QQ
               })
             }
-          }), (0, PJ.t)() && (0, od.jsx)(Bd.d, {
-            label: kd("settingsMenu:showChat"),
-            checked: Nd.showChat,
-            onClick: dd => {
-              sd.d.setClientEscMenuOptions({
-                showChat: dd
+          }), (0, oF.C)() && (0, HQ.jsx)(SQ.e, {
+            label: wQ("settingsMenu:showChat"),
+            checked: qQ.showChat,
+            onClick: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                showChat: QQ
               })
             }
-          }), (0, od.jsx)(Bd.d, {
-            label: kd("settingsMenu:showDebugOverlay"),
-            checked: Wd,
-            onClick: dd => {
-              sd.d.set({
-                showDebugOverlay: dd
+          }), (0, HQ.jsx)(SQ.e, {
+            label: wQ("settingsMenu:showDebugOverlay"),
+            checked: oQ,
+            onClick: QQ => {
+              iQ.c.set({
+                showDebugOverlay: QQ
               })
             }
-          }), Rd.featureFlags.useSocialFeatures && (0, od.jsx)(Bd.d, {
-            label: kd("settingsMenu:showFriendOnlineToasts"),
-            checked: Nd.showFriendOnlineToasts,
-            onClick: dd => {
-              sd.d.setClientEscMenuOptions({
-                showFriendOnlineToasts: dd
+          }), eQ.featureFlags.useSocialFeatures && (0, HQ.jsx)(SQ.e, {
+            label: wQ("settingsMenu:showFriendOnlineToasts"),
+            checked: qQ.showFriendOnlineToasts,
+            onClick: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                showFriendOnlineToasts: QQ
               })
             }
-          }), (0, od.jsx)(Bd.d, {
-            label: kd("settingsMenu:showNewItemIndicator"),
-            checked: Nd.showNewItemIndicator,
-            onClick: dd => {
-              sd.d.setClientEscMenuOptions({
-                showNewItemIndicator: dd
+          }), (0, HQ.jsx)(SQ.e, {
+            label: wQ("settingsMenu:showNewItemIndicator"),
+            checked: qQ.showNewItemIndicator,
+            onClick: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                showNewItemIndicator: QQ
               })
             }
           })]
         })
       })),
-      aJ = (0, pd.memo)((function() {
+      WF = (0, LQ.memo)((function() {
         const {
-          t: dd
-        } = (0, Pd.B)(), {
-          soundVolume: Jd,
-          musicVolume: kd
-        } = (0, sd.j)(["soundVolume", "musicVolume"]);
-        return (0, od.jsxs)("div", {
+          t: QQ
+        } = (0, DQ.y)(), {
+          soundVolume: FQ,
+          musicVolume: wQ
+        } = (0, iQ.l)(["soundVolume", "musicVolume"]);
+        return (0, HQ.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, od.jsx)(Bd.h, {
-            name: dd("settingsMenu:musicVolume"),
+          children: [(0, HQ.jsx)(SQ.g, {
+            name: QQ("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: kd,
-            onChange: dd => {
-              sd.d.set({
-                musicVolume: Math.round(100 * dd) / 100
+            initValue: wQ,
+            onChange: QQ => {
+              iQ.c.set({
+                musicVolume: Math.round(100 * QQ) / 100
               })
             },
-            format: dd => dd.toFixed(2)
-          }), (0, od.jsx)(Bd.h, {
-            name: dd("settingsMenu:soundEffectsVolume"),
+            format: QQ => QQ.toFixed(2)
+          }), (0, HQ.jsx)(SQ.g, {
+            name: QQ("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: Jd,
-            onChange: dd => {
-              sd.d.set({
-                soundVolume: Math.round(100 * dd) / 100
+            initValue: FQ,
+            onChange: QQ => {
+              iQ.c.set({
+                soundVolume: Math.round(100 * QQ) / 100
               })
             },
-            format: dd => dd.toFixed(2)
+            format: QQ => QQ.toFixed(2)
           })]
         })
       }));
-    var MJ = kd(699),
-      FJ = kd(1459),
-      YJ = kd(3555),
-      mJ = kd(9142),
-      bJ = kd(3342);
-    const SJ = {
+    var RF = wQ(702),
+      OF = wQ(1447),
+      sF = wQ(3544),
+      rF = wQ(8997),
+      IF = wQ(3363);
+    const UF = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function jJ() {
+    function NF() {
       const {
-        t: dd
-      } = (0, Pd.B)(), Jd = (0, bJ.d)(), {
-        mobilePushNotificationsCanAsk: kd
-      } = (0, sd.j)(["mobilePushNotificationsCanAsk"]), [Nd, Wd] = (0, pd.useState)(null), [Zd, gd] = (0, pd.useState)(!1), [Kd, ld] = (0, pd.useState)(null), [Qd, Ld] = (0, pd.useState)(!1), Od = (0, pd.useCallback)((() => {
-        (0, YJ.e)().then((dd => {
-          Jd.current && (Wd(dd), gd(!1))
-        })).catch((dd => {
-          console.error("Failed to load push notification targets:", dd), Jd.current && gd(!0)
+        t: QQ
+      } = (0, DQ.y)(), FQ = (0, IF.c)(), {
+        mobilePushNotificationsCanAsk: wQ
+      } = (0, iQ.l)(["mobilePushNotificationsCanAsk"]), [qQ, oQ] = (0, LQ.useState)(null), [kQ, vQ] = (0, LQ.useState)(!1), [uQ, bQ] = (0, LQ.useState)(null), [YQ, xQ] = (0, LQ.useState)(!1), AQ = (0, LQ.useCallback)((() => {
+        (0, sF.c)().then((QQ => {
+          FQ.current && (oQ(QQ), vQ(!1))
+        })).catch((QQ => {
+          console.error("Failed to load push notification targets:", QQ), FQ.current && vQ(!0)
         }))
-      }), [Jd]), ed = (0, pd.useCallback)((() => {
-        (0, mJ.d)().then((dd => {
-          Jd.current && ld((() => dd))
+      }), [FQ]), tQ = (0, LQ.useCallback)((() => {
+        (0, rF.b)().then((QQ => {
+          FQ.current && bQ((() => QQ))
         }))
-      }), [Jd]);
-      (0, pd.useEffect)((() => {
-        Od()
-      }), [Od]), (0, pd.useEffect)((() => {
-        ed()
-      }), [ed, kd]), (0, FJ.h)(YJ.k, Od);
-      const Rd = null === Nd ? [] : Object.keys(SJ).filter((dd => Nd[dd] > 0));
-      return (0, od.jsxs)("div", {
+      }), [FQ]);
+      (0, LQ.useEffect)((() => {
+        AQ()
+      }), [AQ]), (0, LQ.useEffect)((() => {
+        tQ()
+      }), [tQ, wQ]), (0, OF.g)(sF.i, AQ);
+      const eQ = null === qQ ? [] : Object.keys(UF).filter((QQ => qQ[QQ] > 0));
+      return (0, HQ.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "SliderText",
-          children: dd("notificationSettings:pushNotifications")
-        }), null === Nd && Zd && (0, od.jsx)("div", {
+          children: QQ("notificationSettings:pushNotifications")
+        }), null === qQ && kQ && (0, HQ.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: dd("notificationSettings:pushTargetsLoadFailed")
-        }), null !== Nd && 0 === Rd.length && (0, od.jsx)("div", {
+          children: QQ("notificationSettings:pushTargetsLoadFailed")
+        }), null !== qQ && 0 === eQ.length && (0, HQ.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: dd("notificationSettings:pushTargetsNone")
-        }), Rd.length > 0 && (0, od.jsx)("ul", {
+          children: QQ("notificationSettings:pushTargetsNone")
+        }), eQ.length > 0 && (0, HQ.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: Rd.map((Jd => {
-            var kd;
-            return (0, od.jsx)("li", {
-              children: dd(SJ[Jd], {
-                count: null !== (kd = null === Nd || void 0 === Nd ? void 0 : Nd[Jd]) && void 0 !== kd ? kd : 0
+          children: eQ.map((FQ => {
+            var wQ;
+            return (0, HQ.jsx)("li", {
+              children: QQ(UF[FQ], {
+                count: null !== (wQ = null === qQ || void 0 === qQ ? void 0 : qQ[FQ]) && void 0 !== wQ ? wQ : 0
               })
-            }, Jd)
+            }, FQ)
           }))
-        }), null !== Kd && (0, od.jsx)(Cd.d, {
+        }), null !== uQ && (0, HQ.jsx)(mQ.f, {
           className: "PushNotificationSettingsButton",
-          loading: Qd,
+          loading: YQ,
           onClick: () => {
-            Ld(!0), Kd().catch((dd => {
-              console.error("Failed to turn on push notifications:", dd)
+            xQ(!0), uQ().catch((QQ => {
+              console.error("Failed to turn on push notifications:", QQ)
             })).finally((() => {
-              Jd.current && (Ld(!1), ed())
+              FQ.current && (xQ(!1), tQ())
             }))
           },
-          children: dd("notificationSettings:pushTurnOn")
+          children: QQ("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const XJ = {
+    const TF = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1126,337 +1126,337 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      fJ = (0, pd.memo)((function() {
+      KF = (0, LQ.memo)((function() {
         const {
-          t: dd
-        } = (0, Pd.B)(), {
-          clientEscMenuOptions: Jd
-        } = (0, sd.j)(["clientEscMenuOptions"]);
-        return (0, od.jsxs)("div", {
+          t: QQ
+        } = (0, DQ.y)(), {
+          clientEscMenuOptions: FQ
+        } = (0, iQ.l)(["clientEscMenuOptions"]);
+        return (0, HQ.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, od.jsx)(Bd.g, {
-            label: dd("notificationSettings:friendRequests"),
-            options: MJ.e.map((Jd => ({
-              value: Jd,
-              label: dd(XJ[Jd].label)
+          children: [(0, HQ.jsx)(SQ.f, {
+            label: QQ("notificationSettings:friendRequests"),
+            options: RF.d.map((FQ => ({
+              value: FQ,
+              label: QQ(TF[FQ].label)
             }))),
-            value: Jd.friendRequestNotifications,
-            onChange: dd => {
-              sd.d.setClientEscMenuOptions({
-                friendRequestNotifications: dd
+            value: FQ.friendRequestNotifications,
+            onChange: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                friendRequestNotifications: QQ
               })
             },
-            circleInfoText: (0, od.jsx)("div", {
+            circleInfoText: (0, HQ.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: MJ.e.map((Jd => (0, od.jsxs)("div", {
-                children: [(0, od.jsx)("b", {
-                  children: dd(XJ[Jd].label)
-                }), ": ", dd(XJ[Jd].info)]
-              }, Jd)))
+              children: RF.d.map((FQ => (0, HQ.jsxs)("div", {
+                children: [(0, HQ.jsx)("b", {
+                  children: QQ(TF[FQ].label)
+                }), ": ", QQ(TF[FQ].info)]
+              }, FQ)))
             })
-          }), (0, od.jsx)(jJ, {})]
+          }), (0, HQ.jsx)(NF, {})]
         })
       }));
-    var nJ = kd(4360),
-      UJ = kd(193),
-      yJ = kd(282),
-      DJ = kd(6534),
-      TJ = kd(3282),
-      EJ = kd(9151),
-      cJ = kd(610),
-      hJ = kd(29);
-    var rJ = kd(626),
-      uJ = kd(33),
-      tJ = kd(4212);
-    const VJ = new Map([
+    var zF = wQ(4350),
+      lF = wQ(201),
+      jF = wQ(282),
+      aF = wQ(6485),
+      XF = wQ(3318),
+      fF = wQ(9001),
+      VF = wQ(619),
+      hF = wQ(22);
+    var JF = wQ(634),
+      EF = wQ(27),
+      nF = wQ(4238);
+    const gF = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function zJ(dd) {
-      return VJ.has(dd) ? Id.gameBridge.lookup("WG", null) : null
+    function PF(QQ) {
+      return gF.has(QQ) ? MQ.gameBridge.lookup("Xp", null) : null
     }
 
-    function HJ(dd) {
-      if (!(0, cJ.I)(sd.d.get("clientEscMenuOptions")[dd])) return sd.d.get("clientEscMenuOptions")[dd];
-      const Jd = zJ(dd);
-      return null !== Jd ? Jd[VJ.get(dd)] : uJ.i.getItem(dd)
+    function ZF(QQ) {
+      if (!(0, VF.F)(iQ.c.get("clientEscMenuOptions")[QQ])) return iQ.c.get("clientEscMenuOptions")[QQ];
+      const FQ = PF(QQ);
+      return null !== FQ ? FQ[gF.get(QQ)] : EF.i.getItem(QQ)
     }
 
-    function wJ(dd, Jd) {
-      if ("useTouchControls" === dd) return void(0, tJ.d)(Jd);
-      dd in sd.d.get("clientEscMenuOptions") && sd.d.setClientEscMenuOptions({
-        [dd]: Jd
+    function yF(QQ, FQ) {
+      if ("useTouchControls" === QQ) return void(0, nF.c)(FQ);
+      QQ in iQ.c.get("clientEscMenuOptions") && iQ.c.setClientEscMenuOptions({
+        [QQ]: FQ
       });
-      const kd = zJ(dd);
-      null !== kd && Id.gameBridge.send("setChunkAddDistance", {
-        ...kd,
-        [VJ.get(dd)]: Jd
-      }), uJ.i.setItem(dd, Jd)
+      const wQ = PF(QQ);
+      null !== wQ && MQ.gameBridge.send("setChunkAddDistance", {
+        ...wQ,
+        [gF.get(QQ)]: FQ
+      }), EF.i.setItem(QQ, FQ)
     }
-    var AJ = kd(4269),
-      dk = kd(9153),
-      Jk = kd(9162),
-      kk = kd(4351);
+    var BF = wQ(4273),
+      dF = wQ(9004),
+      Qw = wQ(9013),
+      Fw = wQ(4348);
 
-    function pk(dd) {
-      var Jd, Nd, Zd, gd;
+    function ww(QQ) {
+      var FQ, qQ, kQ, vQ;
       let {
-        minChunkAddDist: Cd,
-        getValue: Kd,
-        onChange: ld,
-        setApplySettingsCallback: Qd
-      } = dd;
+        minChunkAddDist: mQ,
+        getValue: uQ,
+        onChange: bQ,
+        setApplySettingsCallback: YQ
+      } = QQ;
       const {
-        t: Ld
-      } = (0, Pd.B)(), {
-        clientEscMenuOptions: ed
-      } = (0, sd.j)(["clientEscMenuOptions", "showDistantNametags"]), Id = (0, pd.useRef)(Kd("showFog")), Gd = (0, pd.useRef)(ed.antiAliasing), vd = (0, pd.useRef)(ed.useWebGpu), [xd, qd] = (0, pd.useState)(null), [Md, Fd] = (0, pd.useState)((() => (0, TJ.d)(Rd.featureFlags.settings.canUseShaderPacks))), [Yd] = (0, pd.useState)((() => sd.d.isWebGpuDefaultOff())), [md] = (0, pd.useState)(yJ.i);
-      (0, pd.useEffect)((() => {
-        let dd = !1;
-        return (0, Rd.hasUsableWebGpuAdapter)().then((Jd => {
-          dd || qd(Jd)
-        })), (0, TJ.g)(Rd.featureFlags.settings.canUseShaderPacks) && (0, DJ.g)().then((async Jd => {
-          const pd = null !== Jd && await async function(dd) {
+        t: xQ
+      } = (0, DQ.y)(), {
+        clientEscMenuOptions: tQ
+      } = (0, iQ.l)(["clientEscMenuOptions", "showDistantNametags"]), MQ = (0, LQ.useRef)(uQ("showFog")), GQ = (0, LQ.useRef)(tQ.antiAliasing), pQ = (0, LQ.useRef)(tQ.useWebGpu), [cQ, CQ] = (0, LQ.useState)(null), [RQ, OQ] = (0, LQ.useState)((() => (0, XF.f)(eQ.featureFlags.settings.canUseShaderPacks))), [sQ] = (0, LQ.useState)((() => iQ.c.isWebGpuDefaultOff())), [rQ] = (0, LQ.useState)(jF.g);
+      (0, LQ.useEffect)((() => {
+        let QQ = !1;
+        return (0, eQ.hasUsableWebGpuAdapter)().then((FQ => {
+          QQ || CQ(FQ)
+        })), (0, XF.l)(eQ.featureFlags.settings.canUseShaderPacks) && (0, aF.f)().then((async FQ => {
+          const LQ = null !== FQ && await async function(QQ) {
             const [{
-              isShaderPackActive: Jd
+              isShaderPackActive: FQ
             }, {
-              loadPageShaderPackCompiler: pd
-            }] = await Promise.all([kd.e(128).then((() => kd(6526))), Promise.all([kd.e(75), kd.e(132), kd.e(131)]).then((() => kd(6478)))]);
-            return Jd(dd, await pd())
-          }(Jd);
-          dd || Fd(pd)
+              loadPageShaderPackCompiler: LQ
+            }] = await Promise.all([wQ.e(128).then((() => wQ(6481))), Promise.all([wQ.e(75), wQ.e(132), wQ.e(131)]).then((() => wQ(6438)))]);
+            return FQ(QQ, await LQ())
+          }(FQ);
+          QQ || OQ(LQ)
         })), () => {
-          dd = !0
+          QQ = !0
         }
       }), []);
-      const bd = function(dd, Jd, kd, pd, Nd) {
-          return (0, EJ.d)(kd, pd) && !0 === Jd ? {
+      const IQ = function(QQ, FQ, wQ, LQ, qQ) {
+          return (0, fF.e)(wQ, LQ) && !0 === FQ ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== Jd ? "settingsMenu:newWebGpu" : Nd ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: dd && !1 !== Jd,
-            disabled: !0 !== Jd
+            translationKey: !1 !== FQ ? "settingsMenu:newWebGpu" : qQ ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: QQ && !1 !== FQ,
+            disabled: !0 !== FQ
           }
-        }(ed.useWebGpu, xd, Md, Yd, md),
-        Sd = (ed.useWebGpu || (0, EJ.d)(Md, Yd)) && Md && !0 === xd,
-        jd = (0, Od.j)("lightingOverride"),
-        Xd = !(0, cJ.I)(jd);
-      let fd = "settingsMenu:enableLighting";
-      Xd && (fd = jd ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const nd = dd => {
-          var Jd, kd, pd;
-          const Nd = null !== (Jd = dd.showFog) && void 0 !== Jd ? Jd : Kd("showFog"),
-            Wd = null !== (kd = dd.antiAliasing) && void 0 !== kd ? kd : ed.antiAliasing,
-            Pd = null !== (pd = dd.useWebGpu) && void 0 !== pd ? pd : ed.useWebGpu,
-            Zd = !rJ.x && Nd !== Id.current || Wd !== Gd.current || Pd !== vd.current;
-          Qd(Zd ? () => Bd.l : null)
+        }(tQ.useWebGpu, cQ, RQ, sQ, rQ),
+        UQ = (tQ.useWebGpu || (0, fF.e)(RQ, sQ)) && RQ && !0 === cQ,
+        NQ = (0, AQ.l)("lightingOverride"),
+        TQ = !(0, VF.F)(NQ);
+      let KQ = "settingsMenu:enableLighting";
+      TQ && (KQ = NQ ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const zQ = QQ => {
+          var FQ, wQ, LQ;
+          const qQ = null !== (FQ = QQ.showFog) && void 0 !== FQ ? FQ : uQ("showFog"),
+            oQ = null !== (wQ = QQ.antiAliasing) && void 0 !== wQ ? wQ : tQ.antiAliasing,
+            DQ = null !== (LQ = QQ.useWebGpu) && void 0 !== LQ ? LQ : tQ.useWebGpu,
+            kQ = !JF.s && qQ !== MQ.current || oQ !== GQ.current || DQ !== pQ.current;
+          YQ(kQ ? () => SQ.h : null)
         },
-        Ud = (0, Od.j)("fogChunkDistanceOverride"),
-        yd = (0, Od.j)("fogBlockDistanceOverride"),
-        Dd = !(0, cJ.I)(Ud) || !(0, cJ.I)(yd),
-        Td = Dd ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [Ed, cd] = (0, nJ.g)(Cd),
-        [hd, rd] = (0, kk.k)(Cd),
-        ud = Ld("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        td = hd < Ed,
-        Vd = Math.min(null !== (Jd = Kd("chunkHorizAddDist")) && void 0 !== Jd ? Jd : Cd[0], hd),
-        zd = !Dd && function(dd, Jd) {
-          return !0 === dd.showFog && dd.fogChunkDistance > Jd
-        }(ed, Vd);
-      return (0, od.jsxs)("div", {
+        lQ = (0, AQ.l)("fogChunkDistanceOverride"),
+        jQ = (0, AQ.l)("fogBlockDistanceOverride"),
+        aQ = !(0, VF.F)(lQ) || !(0, VF.F)(jQ),
+        XQ = aQ ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [fQ, VQ] = (0, zF.f)(mQ),
+        [hQ, JQ] = (0, Fw.g)(mQ),
+        EQ = xQ("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        nQ = hQ < fQ,
+        gQ = Math.min(null !== (FQ = uQ("chunkHorizAddDist")) && void 0 !== FQ ? FQ : mQ[0], hQ),
+        PQ = !aQ && function(QQ, FQ) {
+          return !0 === QQ.showFog && QQ.fogChunkDistance > FQ
+        }(tQ, gQ);
+      return (0, HQ.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, od.jsx)(Bd.h, {
-          name: Ld("settingsMenu:horizontalChunkLoadDistance"),
-          min: Cd[0],
-          max: Ed,
-          selectableMax: hd,
-          cappedNote: ud,
+        children: [(0, HQ.jsx)(SQ.g, {
+          name: xQ("settingsMenu:horizontalChunkLoadDistance"),
+          min: mQ[0],
+          max: fQ,
+          selectableMax: hQ,
+          cappedNote: EQ,
           step: 1,
-          initValue: Vd,
-          onChange: dd => {
-            !0 === Kd("showFog") && dd < Kd("fogChunkDistance") && ld("fogChunkDistance", dd), ld("chunkHorizAddDist", dd), hJ.j.nO("updatedChunkLoadDist")
+          initValue: gQ,
+          onChange: QQ => {
+            !0 === uQ("showFog") && QQ < uQ("fogChunkDistance") && bQ("fogChunkDistance", QQ), bQ("chunkHorizAddDist", QQ), hF.l.GA("updatedChunkLoadDist")
           },
-          circleInfoText: Ld("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, od.jsx)(Bd.h, {
-          name: Ld("settingsMenu:verticalChunkLoadDistance"),
-          min: Cd[1],
-          max: cd,
-          selectableMax: rd,
-          cappedNote: td ? void 0 : ud,
+          circleInfoText: xQ("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, HQ.jsx)(SQ.g, {
+          name: xQ("settingsMenu:verticalChunkLoadDistance"),
+          min: mQ[1],
+          max: VQ,
+          selectableMax: JQ,
+          cappedNote: nQ ? void 0 : EQ,
           step: 1,
-          initValue: Math.min(null !== (Nd = Kd("chunkVertAddDist")) && void 0 !== Nd ? Nd : Cd[1], rd),
-          onChange: dd => {
-            ld("chunkVertAddDist", dd), hJ.j.nO("updatedChunkLoadDist")
+          initValue: Math.min(null !== (qQ = uQ("chunkVertAddDist")) && void 0 !== qQ ? qQ : mQ[1], JQ),
+          onChange: QQ => {
+            bQ("chunkVertAddDist", QQ), hF.l.GA("updatedChunkLoadDist")
           },
-          circleInfoText: Ld("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: xQ("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, od.jsx)(Bd.d, {
-          label: Ld("settingsMenu:chunkFadeIn"),
-          checked: ed.chunkFadeIn,
-          onClick: dd => {
-            sd.d.setClientEscMenuOptions({
-              chunkFadeIn: dd
+        }), (0, HQ.jsx)(SQ.e, {
+          label: xQ("settingsMenu:chunkFadeIn"),
+          checked: tQ.chunkFadeIn,
+          onClick: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              chunkFadeIn: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:chunkFadeInInfo")
-        }), ad.devTools.supports("chunkBorders") && (0, od.jsx)(Bd.d, {
-          label: Ld("settingsMenu:showChunkBorders"),
-          checked: ed.showChunkBorders,
-          onClick: dd => {
-            sd.d.setClientEscMenuOptions({
-              showChunkBorders: dd
+          circleInfoText: xQ("settingsMenu:chunkFadeInInfo")
+        }), WQ.devTools.supports("chunkBorders") && (0, HQ.jsx)(SQ.e, {
+          label: xQ("settingsMenu:showChunkBorders"),
+          checked: tQ.showChunkBorders,
+          onClick: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              showChunkBorders: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:showChunkBordersInfo")
-        }), (0, od.jsx)(Bd.d, {
-          label: Ld(fd),
-          checked: ed.enableLighting,
-          onClick: dd => {
-            sd.d.setClientEscMenuOptions({
-              enableLighting: dd
+          circleInfoText: xQ("settingsMenu:showChunkBordersInfo")
+        }), (0, HQ.jsx)(SQ.e, {
+          label: xQ(KQ),
+          checked: tQ.enableLighting,
+          onClick: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              enableLighting: QQ
             })
           },
-          disabled: Xd
-        }), (0, od.jsxs)("div", {
+          disabled: TQ
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, od.jsx)(Bd.d, {
-            label: Ld(Td),
-            checked: ed.showFog,
-            onClick: dd => {
-              nd({
-                showFog: dd
-              }), sd.d.setClientEscMenuOptions({
-                showFog: dd
+          children: [(0, HQ.jsx)(SQ.e, {
+            label: xQ(XQ),
+            checked: tQ.showFog,
+            onClick: QQ => {
+              zQ({
+                showFog: QQ
+              }), iQ.c.setClientEscMenuOptions({
+                showFog: QQ
               })
             },
-            disabled: Dd,
-            className: Wd()({
-              SettingBoxWarning: zd
+            disabled: aQ,
+            className: oQ()({
+              SettingBoxWarning: PQ
             })
-          }), (0, od.jsx)(Bd.h, {
-            name: Ld("settingsMenu:fogChunkDistance"),
-            min: Cd[0],
-            max: UJ.g.maxChunkHorizAddDistance,
+          }), (0, HQ.jsx)(SQ.g, {
+            name: xQ("settingsMenu:fogChunkDistance"),
+            min: mQ[0],
+            max: lF.e.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (Zd = ed.fogChunkDistance) && void 0 !== Zd ? Zd : Cd[0],
-            onChange: dd => {
-              sd.d.setClientEscMenuOptions({
-                fogChunkDistance: dd
-              }), hJ.j.nO("fogChunkDistanceChanged", dd)
+            initValue: null !== (kQ = tQ.fogChunkDistance) && void 0 !== kQ ? kQ : mQ[0],
+            onChange: QQ => {
+              iQ.c.setClientEscMenuOptions({
+                fogChunkDistance: QQ
+              }), hF.l.GA("fogChunkDistanceChanged", QQ)
             },
-            circleInfoText: Ld("settingsMenu:fogChunkDistanceInfo"),
-            disabled: Dd || !1 === Kd("showFog"),
-            className: Wd()({
-              SettingBoxWarning: zd
+            circleInfoText: xQ("settingsMenu:fogChunkDistanceInfo"),
+            disabled: aQ || !1 === uQ("showFog"),
+            className: oQ()({
+              SettingBoxWarning: PQ
             })
-          }), zd && (0, od.jsx)("div", {
+          }), PQ && (0, HQ.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: Ld("settingsMenu:fogChunkDistanceInfo")
+            children: xQ("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !rJ.x && (0, od.jsx)(Bd.d, {
-          label: Ld(Sd ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !Sd && ed.disableTexAtlas,
-          onClick: dd => {
-            sd.d.setClientEscMenuOptions({
-              disableTexAtlas: dd
+        }), !JF.s && (0, HQ.jsx)(SQ.e, {
+          label: xQ(UQ ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !UQ && tQ.disableTexAtlas,
+          onClick: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              disableTexAtlas: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: Sd
-        }), (0, od.jsx)(Bd.h, {
-          name: Ld("settingsMenu:fieldOfView"),
+          circleInfoText: xQ("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: UQ
+        }), (0, HQ.jsx)(SQ.g, {
+          name: xQ("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: ed.cameraFOV,
-          onChange: dd => {
-            sd.d.setClientEscMenuOptions({
-              cameraFOV: dd
+          initValue: tQ.cameraFOV,
+          onChange: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              cameraFOV: QQ
             })
           }
-        }), (0, od.jsx)(Bd.d, {
-          label: Ld("settingsMenu:disableViewBobbing"),
-          checked: ed.disableBobbing,
-          onClick: dd => {
-            sd.d.setClientEscMenuOptions({
-              disableBobbing: dd
+        }), (0, HQ.jsx)(SQ.e, {
+          label: xQ("settingsMenu:disableViewBobbing"),
+          checked: tQ.disableBobbing,
+          onClick: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              disableBobbing: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:disableViewBobbingInfo")
-        }), (0, od.jsx)(Bd.d, {
-          label: Ld("settingsMenu:antiAliasing"),
-          checked: ed.antiAliasing,
-          onClick: dd => {
-            nd({
-              antiAliasing: dd
-            }), (0, AJ.g)("antiAliasing"), sd.d.setClientEscMenuOptions({
-              antiAliasing: dd
+          circleInfoText: xQ("settingsMenu:disableViewBobbingInfo")
+        }), (0, HQ.jsx)(SQ.e, {
+          label: xQ("settingsMenu:antiAliasing"),
+          checked: tQ.antiAliasing,
+          onClick: QQ => {
+            zQ({
+              antiAliasing: QQ
+            }), (0, BF.h)("antiAliasing"), iQ.c.setClientEscMenuOptions({
+              antiAliasing: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:antiAliasingInfo")
-        }), (0, od.jsx)(Bd.h, {
-          name: Ld("settingsMenu:pixelScale"),
+          circleInfoText: xQ("settingsMenu:antiAliasingInfo")
+        }), (0, HQ.jsx)(SQ.g, {
+          name: xQ("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (gd = ed.pixelScale) && void 0 !== gd ? gd : 1,
-          onChange: dd => {
-            (dd !== sd.d.get("clientEscMenuOptions").pixelScale || (0, Jk.p)()) && (0, AJ.g)("pixelScale"), sd.d.setClientEscMenuOptions({
-              pixelScale: dd
+          initValue: null !== (vQ = tQ.pixelScale) && void 0 !== vQ ? vQ : 1,
+          onChange: QQ => {
+            (QQ !== iQ.c.get("clientEscMenuOptions").pixelScale || (0, Qw.j)()) && (0, BF.h)("pixelScale"), iQ.c.setClientEscMenuOptions({
+              pixelScale: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:pixelScaleInfo"),
-          format: dd => `${dd}x`
-        }), (0, od.jsx)(Bd.d, {
-          label: Ld("settingsMenu:pixelSmoothing"),
-          checked: ed.pixelSmoothing,
-          onClick: dd => {
-            sd.d.setClientEscMenuOptions({
-              pixelSmoothing: dd
+          circleInfoText: xQ("settingsMenu:pixelScaleInfo"),
+          format: QQ => `${QQ}x`
+        }), (0, HQ.jsx)(SQ.e, {
+          label: xQ("settingsMenu:pixelSmoothing"),
+          checked: tQ.pixelSmoothing,
+          onClick: QQ => {
+            iQ.c.setClientEscMenuOptions({
+              pixelSmoothing: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:pixelSmoothingInfo")
-        }), rJ.x && (0, od.jsx)(Bd.d, {
-          label: Ld("settingsMenu:distantNametags"),
-          checked: (0, dk.b)(),
-          onClick: dd => {
-            sd.d.set({
-              showDistantNametags: dd
+          circleInfoText: xQ("settingsMenu:pixelSmoothingInfo")
+        }), JF.s && (0, HQ.jsx)(SQ.e, {
+          label: xQ("settingsMenu:distantNametags"),
+          checked: (0, dF.c)(),
+          onClick: QQ => {
+            iQ.c.set({
+              showDistantNametags: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:distantNametagsInfo")
-        }), (0, od.jsx)(Bd.d, {
-          label: Ld(bd.translationKey),
-          checked: bd.checked,
-          onClick: dd => {
-            nd({
-              useWebGpu: dd
-            }), sd.d.setClientEscMenuOptions({
-              useWebGpu: dd
+          circleInfoText: xQ("settingsMenu:distantNametagsInfo")
+        }), (0, HQ.jsx)(SQ.e, {
+          label: xQ(IQ.translationKey),
+          checked: IQ.checked,
+          onClick: QQ => {
+            zQ({
+              useWebGpu: QQ
+            }), iQ.c.setClientEscMenuOptions({
+              useWebGpu: QQ
             })
           },
-          circleInfoText: Ld("settingsMenu:newWebGpuInfo"),
-          disabled: bd.disabled
+          circleInfoText: xQ("settingsMenu:newWebGpuInfo"),
+          disabled: IQ.disabled
         })]
       })
     }
-    var Nk = kd(4261),
-      Wk = kd(8787),
-      Pk = kd(9176),
-      Zk = kd(8804),
-      gk = kd(9179);
-    const Ck = {
+    var Lw = wQ(4268),
+      qw = wQ(8625),
+      ow = wQ(9030),
+      Dw = wQ(8638),
+      kw = wQ(9037);
+    const vw = {
         color: 16777215,
         name: "white"
       },
-      Kk = {
+      mw = {
         color: 0,
         name: "black"
       },
-      lk = [Ck, {
+      uw = [vw, {
         color: 5046092,
         name: "green"
       }, {
@@ -1471,73 +1471,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, Kk],
-      Qk = [Kk, Ck];
+      }, mw],
+      Hw = [mw, vw];
 
-    function Lk(dd) {
-      return `${dd} px`
+    function bw(QQ) {
+      return `${QQ} px`
     }
 
-    function Ok(dd) {
-      return `${dd}%`
+    function Yw(QQ) {
+      return `${QQ}%`
     }
 
-    function ek(dd) {
+    function xw(QQ) {
       let {
-        label: Jd,
-        value: kd,
-        swatches: pd,
-        onChange: Nd
-      } = dd;
+        label: FQ,
+        value: wQ,
+        swatches: LQ,
+        onChange: qQ
+      } = QQ;
       const {
-        t: Zd
-      } = (0, Pd.B)(), gd = !pd.some((dd => dd.color === kd));
-      return (0, od.jsxs)("div", {
+        t: kQ
+      } = (0, DQ.y)(), vQ = !LQ.some((QQ => QQ.color === wQ));
+      return (0, HQ.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "SliderText",
-          children: Jd
-        }), (0, od.jsxs)("div", {
+          children: FQ
+        }), (0, HQ.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": Jd,
-          children: [pd.map((dd => {
+          "aria-label": FQ,
+          children: [LQ.map((QQ => {
             let {
-              color: Jd,
-              name: pd
-            } = dd;
-            return (0, od.jsx)("button", {
+              color: FQ,
+              name: LQ
+            } = QQ;
+            return (0, HQ.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": Jd === kd,
-              "aria-label": Zd(`crosshairSettings:color_${pd}`),
+              "aria-checked": FQ === wQ,
+              "aria-label": kQ(`crosshairSettings:color_${LQ}`),
               "data-pad-focusable": !0,
-              className: Wd()("CrosshairSwatch", {
-                Selected: Jd === kd
+              className: oQ()("CrosshairSwatch", {
+                Selected: FQ === wQ
               }),
               style: {
-                background: (0, gk.j)(Jd)
+                background: (0, kw.k)(FQ)
               },
               onClick: () => {
-                Nd(Jd)
+                qQ(FQ)
               }
-            }, Jd)
-          })), (0, od.jsx)("label", {
-            className: Wd()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: gd
+            }, FQ)
+          })), (0, HQ.jsx)("label", {
+            className: oQ()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: vQ
             }),
-            style: gd ? {
-              background: (0, gk.j)(kd)
+            style: vQ ? {
+              background: (0, kw.k)(wQ)
             } : void 0,
-            title: Zd("crosshairSettings:customColor"),
+            title: kQ("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, od.jsx)("input", {
+            children: (0, HQ.jsx)("input", {
               type: "color",
-              "aria-label": Zd("crosshairSettings:customColor"),
-              value: (0, gk.j)(kd),
-              onChange: dd => {
-                const Jd = (0, gk.m)(dd.target.value);
-                null !== Jd && Nd(Jd)
+              "aria-label": kQ("crosshairSettings:customColor"),
+              value: (0, kw.k)(wQ),
+              onChange: QQ => {
+                const FQ = (0, kw.m)(QQ.target.value);
+                null !== FQ && qQ(FQ)
               }
             })
           })]
@@ -1545,119 +1545,119 @@ export const modules = {
       })
     }
 
-    function Rk(dd) {
+    function Aw(QQ) {
       let {
-        settings: Jd,
-        onChange: kd
-      } = dd;
+        settings: FQ,
+        onChange: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, Pd.B)(), Nd = (dd, pd) => {
-        kd((0, gk.o)(Jd, dd, pd))
-      }, Wd = function(dd, kd) {
-        let pd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Lk;
+        t: LQ
+      } = (0, DQ.y)(), qQ = (QQ, LQ) => {
+        wQ((0, kw.p)(FQ, QQ, LQ))
+      }, oQ = function(QQ, wQ) {
+        let LQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bw;
         const {
-          min: Wd,
-          max: Pd,
-          step: Zd
-        } = gk.e[dd];
-        return (0, od.jsx)(Bd.h, {
-          name: kd,
-          min: Wd,
-          max: Pd,
-          step: Zd,
-          initValue: Jd[dd],
-          format: pd,
-          onChange: Jd => {
-            Nd(dd, Jd)
+          min: oQ,
+          max: DQ,
+          step: kQ
+        } = kw.b[QQ];
+        return (0, HQ.jsx)(SQ.g, {
+          name: wQ,
+          min: oQ,
+          max: DQ,
+          step: kQ,
+          initValue: FQ[QQ],
+          format: LQ,
+          onChange: FQ => {
+            qQ(QQ, FQ)
           }
-        }, dd)
-      }, Zd = ["lines", "dot", "circle"].filter((dd => Jd[dd])), gd = (dd, kd, pd) => (0, od.jsx)(Bd.d, {
-        label: kd,
-        checked: Jd[dd],
-        disabled: 1 === Zd.length && Zd[0] === dd,
-        circleInfoText: pd,
-        onClick: Jd => {
-          Nd(dd, Jd)
+        }, QQ)
+      }, kQ = ["lines", "dot", "circle"].filter((QQ => FQ[QQ])), vQ = (QQ, wQ, LQ) => (0, HQ.jsx)(SQ.e, {
+        label: wQ,
+        checked: FQ[QQ],
+        disabled: 1 === kQ.length && kQ[0] === QQ,
+        circleInfoText: LQ,
+        onClick: FQ => {
+          qQ(QQ, FQ)
         }
-      }, dd), Cd = "shapes" === Jd.style;
-      return (0, od.jsxs)(od.Fragment, {
-        children: [(0, od.jsx)(Bd.g, {
-          label: pd("crosshairSettings:style"),
+      }, QQ), mQ = "shapes" === FQ.style;
+      return (0, HQ.jsxs)(HQ.Fragment, {
+        children: [(0, HQ.jsx)(SQ.f, {
+          label: LQ("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: pd("crosshairSettings:styleClassic")
+            label: LQ("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: pd("crosshairSettings:styleShapes")
+            label: LQ("crosshairSettings:styleShapes")
           }],
-          value: Jd.style,
-          onChange: dd => {
-            Nd("style", dd)
+          value: FQ.style,
+          onChange: QQ => {
+            qQ("style", QQ)
           }
-        }), (0, od.jsx)(ek, {
-          label: pd("crosshairSettings:color"),
-          value: Jd.color,
-          swatches: lk,
-          onChange: dd => {
-            Nd("color", dd)
+        }), (0, HQ.jsx)(xw, {
+          label: LQ("crosshairSettings:color"),
+          value: FQ.color,
+          swatches: uw,
+          onChange: QQ => {
+            qQ("color", QQ)
           }
-        }), Wd("opacity", pd("crosshairSettings:opacity"), Ok), !Cd && Wd("size", pd("crosshairSettings:size"), Ok), Cd && (0, od.jsxs)("div", {
+        }), oQ("opacity", LQ("crosshairSettings:opacity"), Yw), !mQ && oQ("size", LQ("crosshairSettings:size"), Yw), mQ && (0, HQ.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [gd("lines", pd("crosshairSettings:lines")), Jd.lines && Wd("lineLength", pd("crosshairSettings:lineLength")), Jd.lines && Wd("lineThickness", pd("crosshairSettings:lineThickness")), Jd.lines && Wd("gap", pd("crosshairSettings:gap")), Jd.lines && gd("tStyle", pd("crosshairSettings:tStyle"))]
-        }), Cd && (0, od.jsxs)("div", {
+          children: [vQ("lines", LQ("crosshairSettings:lines")), FQ.lines && oQ("lineLength", LQ("crosshairSettings:lineLength")), FQ.lines && oQ("lineThickness", LQ("crosshairSettings:lineThickness")), FQ.lines && oQ("gap", LQ("crosshairSettings:gap")), FQ.lines && vQ("tStyle", LQ("crosshairSettings:tStyle"))]
+        }), mQ && (0, HQ.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [gd("dot", pd("crosshairSettings:dot")), Jd.dot && Wd("dotSize", pd("crosshairSettings:dotSize"))]
-        }), Cd && (0, od.jsxs)("div", {
+          children: [vQ("dot", LQ("crosshairSettings:dot")), FQ.dot && oQ("dotSize", LQ("crosshairSettings:dotSize"))]
+        }), mQ && (0, HQ.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [gd("circle", pd("crosshairSettings:circle")), Jd.circle && Wd("circleRadius", pd("crosshairSettings:circleRadius")), Jd.circle && Wd("circleThickness", pd("crosshairSettings:circleThickness"))]
-        }), (0, od.jsxs)("div", {
+          children: [vQ("circle", LQ("crosshairSettings:circle")), FQ.circle && oQ("circleRadius", LQ("crosshairSettings:circleRadius")), FQ.circle && oQ("circleThickness", LQ("crosshairSettings:circleThickness"))]
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Wd("outline", pd("crosshairSettings:outline"), (dd => dd > 0 ? Lk(dd) : pd("crosshairSettings:off"))), Jd.outline > 0 && (0, od.jsx)(ek, {
-            label: pd("crosshairSettings:outlineColor"),
-            value: Jd.outlineColor,
-            swatches: Qk,
-            onChange: dd => {
-              Nd("outlineColor", dd)
+          children: [oQ("outline", LQ("crosshairSettings:outline"), (QQ => QQ > 0 ? bw(QQ) : LQ("crosshairSettings:off"))), FQ.outline > 0 && (0, HQ.jsx)(xw, {
+            label: LQ("crosshairSettings:outlineColor"),
+            value: FQ.outlineColor,
+            swatches: Hw,
+            onChange: QQ => {
+              qQ("outlineColor", QQ)
             }
           })]
-        }), gd("growOnClick", pd("crosshairSettings:growOnClick")), Cd && gd("forGuns", pd("crosshairSettings:forGuns"), pd("crosshairSettings:forGunsInfo"))]
+        }), vQ("growOnClick", LQ("crosshairSettings:growOnClick")), mQ && vQ("forGuns", LQ("crosshairSettings:forGuns"), LQ("crosshairSettings:forGunsInfo"))]
       })
     }
-    var Ik = kd(72),
-      Gk = kd(1302),
-      vk = kd(9184),
-      xk = kd(9193),
-      qk = kd(9201),
-      Bk = kd(9203);
-    const sk = ["sky", "grass", "stone", "sand", "snow", "night"],
-      ik = "4rem";
+    var tw = wQ(71),
+      ew = wQ(1295),
+      Mw = wQ(9046),
+      Gw = wQ(9048),
+      pw = wQ(9053),
+      Cw = wQ(9058);
+    const Sw = ["sky", "grass", "stone", "sand", "snow", "night"],
+      iw = "4rem";
 
-    function ak(dd) {
+    function Ww(QQ) {
       return {
-        backgroundImage: `url(${dd})`,
-        backgroundSize: `${ik} ${ik}`,
+        backgroundImage: `url(${QQ})`,
+        backgroundSize: `${iw} ${iw}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function Mk(dd) {
+    function Rw(QQ) {
       return {
         ...(() => {
-          switch (dd) {
+          switch (QQ) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return ak(vk);
+              return Ww(Mw);
             case "stone":
-              return ak(xk);
+              return Ww(Gw);
             case "sand":
-              return ak(qk);
+              return Ww(pw);
             case "snow":
-              return ak(Bk);
+              return Ww(Cw);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1668,21 +1668,21 @@ export const modules = {
       }
     }
 
-    function Fk(dd) {
+    function Ow(QQ) {
       return Object.freeze({
-        ...gk.g,
+        ...kw.e,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...dd
+        ...QQ
       })
     }
-    const Yk = [{
+    const sw = [{
         id: "default",
-        settings: gk.g
+        settings: kw.e
       }, {
         id: "cross",
-        settings: Fk({
+        settings: Ow({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1691,7 +1691,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: Fk({
+        settings: Ow({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1702,13 +1702,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: Fk({
+        settings: Ow({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: Fk({
+        settings: Ow({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1717,7 +1717,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: Fk({
+        settings: Ow({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1727,7 +1727,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: Fk({
+        settings: Ow({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1736,7 +1736,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: Fk({
+        settings: Ow({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1744,571 +1744,571 @@ export const modules = {
           outline: 1.5
         })
       }],
-      mk = ["growOnClick", "forGuns"];
-    var bk = kd(9210);
+      rw = ["growOnClick", "forGuns"];
+    var Iw = wQ(9067);
 
-    function Sk(dd) {
+    function Uw(QQ) {
       let {
-        label: Jd,
-        selected: kd,
-        onClick: pd,
-        className: Nd,
-        style: Pd,
-        children: Zd
-      } = dd;
-      return (0, od.jsx)("button", {
+        label: FQ,
+        selected: wQ,
+        onClick: LQ,
+        className: qQ,
+        style: DQ,
+        children: kQ
+      } = QQ;
+      return (0, HQ.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": kd,
-        title: Jd,
-        "aria-label": Jd,
+        "aria-checked": wQ,
+        title: FQ,
+        "aria-label": FQ,
         "data-pad-focusable": !0,
-        className: Wd()("CrosshairBackdropSwatch", Nd, {
-          Selected: kd
+        className: oQ()("CrosshairBackdropSwatch", qQ, {
+          Selected: wQ
         }),
-        style: Pd,
-        onClick: pd,
-        children: Zd
+        style: DQ,
+        onClick: LQ,
+        children: kQ
       })
     }
 
-    function jk(dd) {
+    function Nw(QQ) {
       let {
-        backdrop: Jd,
-        onChange: kd,
-        game: pd
-      } = dd;
+        backdrop: FQ,
+        onChange: wQ,
+        game: LQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, Pd.B)();
-      return (0, od.jsxs)("div", {
+        t: qQ
+      } = (0, DQ.y)();
+      return (0, HQ.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": Nd("crosshairSettings:background"),
-        children: [pd && (0, od.jsx)(Sk, {
-          label: Nd("crosshairSettings:bg_game"),
-          selected: pd.selected,
-          onClick: pd.onSelect,
+        "aria-label": qQ("crosshairSettings:background"),
+        children: [LQ && (0, HQ.jsx)(Uw, {
+          label: qQ("crosshairSettings:bg_game"),
+          selected: LQ.selected,
+          onClick: LQ.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, od.jsx)(Zd.e, {
+          children: (0, HQ.jsx)(kQ.c, {
             name: "cube"
           })
-        }), sk.map((dd => (0, od.jsx)(Sk, {
-          label: Nd(`crosshairSettings:bg_${dd}`),
-          selected: !(null !== pd && void 0 !== pd && pd.selected) && dd === Jd,
-          style: Mk(dd),
+        }), Sw.map((QQ => (0, HQ.jsx)(Uw, {
+          label: qQ(`crosshairSettings:bg_${QQ}`),
+          selected: !(null !== LQ && void 0 !== LQ && LQ.selected) && QQ === FQ,
+          style: Rw(QQ),
           onClick: () => {
-            kd(dd)
+            wQ(QQ)
           }
-        }, dd)))]
+        }, QQ)))]
       })
     }
 
-    function Xk(dd) {
+    function Tw(QQ) {
       let {
-        settings: Jd,
-        touch: kd,
-        backdrop: pd,
-        onChange: Nd
-      } = dd;
+        settings: FQ,
+        touch: wQ,
+        backdrop: LQ,
+        onChange: qQ
+      } = QQ;
       const {
-        t: Zd
-      } = (0, Pd.B)(), gd = function(dd) {
-        var Jd;
-        return null !== (Jd = Yk.find((Jd => (0, gk.n)(Jd.settings, dd, mk)))) && void 0 !== Jd ? Jd : null
-      }(Jd);
-      return (0, od.jsx)("div", {
+        t: kQ
+      } = (0, DQ.y)(), vQ = function(QQ) {
+        var FQ;
+        return null !== (FQ = sw.find((FQ => (0, kw.n)(FQ.settings, QQ, rw)))) && void 0 !== FQ ? FQ : null
+      }(FQ);
+      return (0, HQ.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": Zd("crosshairSettings:presets"),
-        children: Yk.map((dd => {
-          const Pd = (null === gd || void 0 === gd ? void 0 : gd.id) === dd.id;
-          return (0, od.jsxs)("button", {
+        "aria-label": kQ("crosshairSettings:presets"),
+        children: sw.map((QQ => {
+          const DQ = (null === vQ || void 0 === vQ ? void 0 : vQ.id) === QQ.id;
+          return (0, HQ.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": Pd,
+            "aria-checked": DQ,
             "data-pad-focusable": !0,
-            className: Wd()("CrosshairPreset", {
-              Selected: Pd
+            className: oQ()("CrosshairPreset", {
+              Selected: DQ
             }),
             onClick: () => {
-              Nd(function(dd, Jd) {
+              qQ(function(QQ, FQ) {
                 return {
-                  ...Jd.settings,
-                  growOnClick: dd.growOnClick,
-                  forGuns: dd.forGuns
+                  ...FQ.settings,
+                  growOnClick: QQ.growOnClick,
+                  forGuns: QQ.forGuns
                 }
-              }(Jd, dd))
+              }(FQ, QQ))
             },
-            children: [(0, od.jsx)("div", {
+            children: [(0, HQ.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: Mk(pd),
-              children: (0, od.jsx)(bk.e, {
-                settings: dd.settings,
-                touch: kd,
+              style: Rw(LQ),
+              children: (0, HQ.jsx)(Iw.b, {
+                settings: QQ.settings,
+                touch: wQ,
                 inPreview: !0
               })
-            }), (0, od.jsx)("div", {
+            }), (0, HQ.jsx)("div", {
               className: "CrosshairPresetName",
-              children: Zd(`crosshairSettings:preset_${dd.id}`)
+              children: kQ(`crosshairSettings:preset_${QQ.id}`)
             })]
-          }, dd.id)
+          }, QQ.id)
         }))
       })
     }
-    var fk = kd(1707);
+    var Kw = wQ(1677);
 
-    function nk(dd, Jd) {
-      const [kd, Nd] = (0, pd.useState)(!1), Wd = () => {
-        Nd(!1)
-      }, [Pd, Zd] = (0, pd.useState)(!1), gd = (0, pd.useRef)({
-        growOnClick: dd.growOnClick,
-        forGuns: dd.forGuns
+    function zw(QQ, FQ) {
+      const [wQ, qQ] = (0, LQ.useState)(!1), oQ = () => {
+        qQ(!1)
+      }, [DQ, kQ] = (0, LQ.useState)(!1), vQ = (0, LQ.useRef)({
+        growOnClick: QQ.growOnClick,
+        forGuns: QQ.forGuns
       });
-      (0, pd.useEffect)((() => {
-        const Jd = gd.current;
-        gd.current = {
-          growOnClick: dd.growOnClick,
-          forGuns: dd.forGuns
-        }, (dd.growOnClick && !Jd.growOnClick || dd.forGuns && !Jd.forGuns) && Zd(!0)
-      }), [dd.growOnClick, dd.forGuns]), (0, pd.useEffect)((() => {
-        if (!Pd) return;
-        const dd = setTimeout((() => {
-          Zd(!1)
+      (0, LQ.useEffect)((() => {
+        const FQ = vQ.current;
+        vQ.current = {
+          growOnClick: QQ.growOnClick,
+          forGuns: QQ.forGuns
+        }, (QQ.growOnClick && !FQ.growOnClick || QQ.forGuns && !FQ.forGuns) && kQ(!0)
+      }), [QQ.growOnClick, QQ.forGuns]), (0, LQ.useEffect)((() => {
+        if (!DQ) return;
+        const QQ = setTimeout((() => {
+          kQ(!1)
         }), 600);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(QQ)
         }
-      }), [Pd]);
-      const Cd = kd || Pd;
+      }), [DQ]);
+      const mQ = wQ || DQ;
       return {
         view: {
-          pressed: Cd,
-          spread: Cd && dd.forGuns && !dd.growOnClick ? 6 : 0
+          pressed: mQ,
+          spread: mQ && QQ.forGuns && !QQ.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: dd => {
-            !dd.target.closest(Jd) && (0, fk.d)(dd.currentTarget, dd.pointerId) && Nd(!0)
+          onPointerDown: QQ => {
+            !QQ.target.closest(FQ) && (0, Kw.d)(QQ.currentTarget, QQ.pointerId) && qQ(!0)
           },
-          onPointerUp: Wd,
-          onPointerCancel: Wd,
-          onLostPointerCapture: Wd
+          onPointerUp: oQ,
+          onPointerCancel: oQ,
+          onLostPointerCapture: oQ
         }
       }
     }
 
-    function Uk(dd) {
+    function lw(QQ) {
       let {
-        settings: Jd,
-        touch: kd,
-        backdrop: pd,
-        className: Nd,
-        children: Pd,
-        label: Zd
-      } = dd;
-      const gd = nk(Jd, ".CrosshairStageControls");
-      return (0, od.jsxs)("div", {
-        className: Wd()("CrosshairStage", Nd),
-        style: Mk(pd),
-        ...gd.handlers,
-        children: [(0, od.jsx)("div", {
+        settings: FQ,
+        touch: wQ,
+        backdrop: LQ,
+        className: qQ,
+        children: DQ,
+        label: kQ
+      } = QQ;
+      const vQ = zw(FQ, ".CrosshairStageControls");
+      return (0, HQ.jsxs)("div", {
+        className: oQ()("CrosshairStage", qQ),
+        style: Rw(LQ),
+        ...vQ.handlers,
+        children: [(0, HQ.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": Zd,
-          children: (0, od.jsx)(bk.e, {
-            settings: Jd,
-            touch: kd,
+          "aria-label": kQ,
+          children: (0, HQ.jsx)(Iw.b, {
+            settings: FQ,
+            touch: wQ,
             inPreview: !0,
-            ...gd.view
+            ...vQ.view
           })
-        }), Pd]
+        }), DQ]
       })
     }
-    const yk = "crosshairFullScreen";
+    const jw = "crosshairFullScreen";
 
-    function Dk(dd) {
+    function aw(QQ) {
       let {
-        settings: Jd,
-        touch: kd,
-        backdrop: Nd,
-        onBackdrop: gd,
-        inGame: Kd,
-        onChange: ld,
-        onClose: Qd
-      } = dd;
+        settings: FQ,
+        touch: wQ,
+        backdrop: qQ,
+        onBackdrop: vQ,
+        inGame: uQ,
+        onChange: bQ,
+        onClose: YQ
+      } = QQ;
       const {
-        t: Ld
-      } = (0, Pd.B)(), Od = (0, pd.useRef)(null);
-      (0, Gk.s)("popup", Od, Qd),
-      function(dd) {
-        const Jd = (0, pd.useRef)(dd);
-        Jd.current = dd, (0, pd.useEffect)((() => {
+        t: xQ
+      } = (0, DQ.y)(), AQ = (0, LQ.useRef)(null);
+      (0, ew.m)("popup", AQ, YQ),
+      function(QQ) {
+        const FQ = (0, LQ.useRef)(QQ);
+        FQ.current = QQ, (0, LQ.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [yk]: !0
+            [jw]: !0
           }, "");
-          let dd = !1;
-          const kd = () => {
-            dd = !0, Jd.current()
+          let QQ = !1;
+          const wQ = () => {
+            QQ = !0, FQ.current()
           };
-          return window.addEventListener("popstate", kd), () => {
-            var Jd;
-            window.removeEventListener("popstate", kd), !dd && null !== (Jd = window.history.state) && void 0 !== Jd && Jd[yk] && window.history.back()
+          return window.addEventListener("popstate", wQ), () => {
+            var FQ;
+            window.removeEventListener("popstate", wQ), !QQ && null !== (FQ = window.history.state) && void 0 !== FQ && FQ[jw] && window.history.back()
           }
         }), [])
-      }(Qd);
-      const ed = (0, pd.useRef)(Qd);
-      ed.current = Qd, (0, pd.useEffect)((() => {
-        function dd(dd) {
-          "Escape" === dd.key && (dd.stopPropagation(), ed.current())
+      }(YQ);
+      const tQ = (0, LQ.useRef)(YQ);
+      tQ.current = YQ, (0, LQ.useEffect)((() => {
+        function QQ(QQ) {
+          "Escape" === QQ.key && (QQ.stopPropagation(), tQ.current())
         }
-        return window.addEventListener("keydown", dd, !0), () => {
-          window.removeEventListener("keydown", dd, !0)
+        return window.addEventListener("keydown", QQ, !0), () => {
+          window.removeEventListener("keydown", QQ, !0)
         }
       }), []);
-      const Rd = nk(Jd, ".CrosshairFullScreenPanel"),
-        [Id, Gd] = (0, pd.useState)(!0),
-        vd = Id && Kd;
-      (0, pd.useEffect)((() => {
-        if (vd) return sd.d.set({
+      const eQ = zw(FQ, ".CrosshairFullScreenPanel"),
+        [MQ, GQ] = (0, LQ.useState)(!0),
+        pQ = MQ && uQ;
+      (0, LQ.useEffect)((() => {
+        if (pQ) return iQ.c.set({
           crosshairGameView: !0
         }), () => {
-          sd.d.set({
+          iQ.c.set({
             crosshairGameView: !1
           })
         }
-      }), [vd]);
-      const [xd, qd] = (0, pd.useState)(!0);
-      return (0, Ik.createPortal)((0, od.jsxs)("div", {
-        ref: Od,
+      }), [pQ]);
+      const [cQ, CQ] = (0, LQ.useState)(!0);
+      return (0, tw.createPortal)((0, HQ.jsxs)("div", {
+        ref: AQ,
         className: "CrosshairFullScreen",
-        style: vd ? void 0 : Mk(Nd),
-        ...Rd.handlers,
-        children: [(0, od.jsx)(bk.e, {
-          settings: Jd,
-          touch: kd,
+        style: pQ ? void 0 : Rw(qQ),
+        ...eQ.handlers,
+        children: [(0, HQ.jsx)(Iw.b, {
+          settings: FQ,
+          touch: wQ,
           inEditor: !0,
-          ...Rd.view
-        }), (0, od.jsxs)("div", {
-          className: Wd()("CrosshairFullScreenPanel", {
-            Collapsed: !xd
+          ...eQ.view
+        }), (0, HQ.jsxs)("div", {
+          className: oQ()("CrosshairFullScreenPanel", {
+            Collapsed: !cQ
           }),
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, od.jsx)(jk, {
-              backdrop: Nd,
-              onChange: dd => {
-                Gd(!1), gd(dd)
+            children: [(0, HQ.jsx)(Nw, {
+              backdrop: qQ,
+              onChange: QQ => {
+                GQ(!1), vQ(QQ)
               },
-              game: Kd ? {
-                selected: vd,
+              game: uQ ? {
+                selected: pQ,
                 onSelect: () => {
-                  Gd(!0)
+                  GQ(!0)
                 }
               } : void 0
-            }), (0, od.jsx)(Cd.G, {
+            }), (0, HQ.jsx)(mQ.L, {
               className: "CrosshairPanelToggle",
-              ariaLabel: Ld(xd ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: xQ(cQ ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                qd(!xd)
+                CQ(!cQ)
               },
-              children: (0, od.jsx)(Zd.e, {
-                name: xd ? "caret-up" : "pen"
+              children: (0, HQ.jsx)(kQ.c, {
+                name: cQ ? "caret-up" : "pen"
               })
-            }), (0, od.jsx)(Cd.d, {
+            }), (0, HQ.jsx)(mQ.f, {
               className: "CrosshairFullScreenDone",
-              onClick: Qd,
+              onClick: YQ,
               padDefaultFocus: !0,
-              children: Ld("crosshairSettings:done")
+              children: xQ("crosshairSettings:done")
             })]
-          }), xd && (0, od.jsxs)("div", {
+          }), cQ && (0, HQ.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, od.jsx)(Xk, {
-              settings: Jd,
-              touch: kd,
-              backdrop: Nd,
-              onChange: ld
-            }), (0, od.jsx)(Rk, {
-              settings: Jd,
-              onChange: ld
+            children: [(0, HQ.jsx)(Tw, {
+              settings: FQ,
+              touch: wQ,
+              backdrop: qQ,
+              onChange: bQ
+            }), (0, HQ.jsx)(Aw, {
+              settings: FQ,
+              onChange: bQ
             })]
           })]
         })]
       }), document.body)
     }
-    var Tk = kd(2552),
-      Ek = kd(9220);
+    var Xw = wQ(2580),
+      fw = wQ(9078);
 
-    function ck(dd) {
+    function Vw(QQ) {
       let {
-        settings: Jd,
-        onChange: kd
-      } = dd;
+        settings: FQ,
+        onChange: wQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, Pd.B)(), gd = (0, Ek.j)(Jd), [Kd, ld] = (0, Tk.h)(), [Qd, Ld] = (0, pd.useState)(!1), Od = (0, pd.useRef)(null), [ed, Rd] = (0, Tk.h)(), [Id, Gd] = (0, pd.useState)(!1);
-      return (0, od.jsxs)("div", {
+        t: qQ
+      } = (0, DQ.y)(), vQ = (0, fw.k)(FQ), [uQ, bQ] = (0, Xw.g)(), [YQ, xQ] = (0, LQ.useState)(!1), AQ = (0, LQ.useRef)(null), [tQ, eQ] = (0, Xw.g)(), [MQ, GQ] = (0, LQ.useState)(!1);
+      return (0, HQ.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, od.jsxs)("div", {
+        children: [(0, HQ.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, od.jsxs)(Cd.G, {
-            className: Wd()("CrosshairCopy", {
-              ActiveSecondaryButton: Kd
+          children: [(0, HQ.jsxs)(mQ.L, {
+            className: oQ()("CrosshairCopy", {
+              ActiveSecondaryButton: uQ
             }),
             onClick: () => {
-              (0, Tk.e)(gd, {
+              (0, Xw.e)(vQ, {
                 useShareSheet: !1,
-                onOutcome: dd => {
-                  Ld("failed" === dd), "copied" === dd && ld()
+                onOutcome: QQ => {
+                  xQ("failed" === QQ), "copied" === QQ && bQ()
                 }
               })
             },
-            children: [(0, od.jsx)(Zd.e, {
-              name: Kd ? "check" : "copy"
-            }), " ", Nd(Kd ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, od.jsx)(xd.e, {
+            children: [(0, HQ.jsx)(kQ.c, {
+              name: uQ ? "check" : "copy"
+            }), " ", qQ(uQ ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, HQ.jsx)(cQ.b, {
             className: "CrosshairPaste",
-            domRef: Od,
-            ariaLabel: Nd("crosshairSettings:paste"),
-            placeholderText: Nd("crosshairSettings:paste"),
-            onValueChange: dd => {
-              const Jd = (0, Ek.f)(dd);
-              Gd(!Jd && dd.trim().length >= Ek.c), Jd && (kd(Jd), Od.current.value = "", Rd())
+            domRef: AQ,
+            ariaLabel: qQ("crosshairSettings:paste"),
+            placeholderText: qQ("crosshairSettings:paste"),
+            onValueChange: QQ => {
+              const FQ = (0, fw.h)(QQ);
+              GQ(!FQ && QQ.trim().length >= fw.d), FQ && (wQ(FQ), AQ.current.value = "", eQ())
             }
           })]
-        }), Qd && (0, od.jsx)("input", {
+        }), YQ && (0, HQ.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: gd,
-          "aria-label": Nd("crosshairSettings:copy"),
-          onFocus: dd => {
-            dd.currentTarget.select()
+          value: vQ,
+          "aria-label": qQ("crosshairSettings:copy"),
+          onFocus: QQ => {
+            QQ.currentTarget.select()
           }
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           "aria-live": "polite",
-          children: [Id && (0, od.jsx)("div", {
+          children: [MQ && (0, HQ.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: Nd("crosshairSettings:pasteInvalid")
-          }), ed && !Id && (0, od.jsx)("div", {
+            children: qQ("crosshairSettings:pasteInvalid")
+          }), tQ && !MQ && (0, HQ.jsx)("div", {
             className: "CrosshairShareNote",
-            children: Nd("crosshairSettings:applied")
+            children: qQ("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var hk = kd(9222);
-    let rk = "sky";
+    var hw = wQ(9082);
+    let Jw = "sky";
 
-    function uk(dd) {
+    function Ew(QQ) {
       let {
-        showing: Jd
-      } = dd;
+        showing: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, Pd.B)(), {
-        isTouchScreen: Nd,
-        gameState: Wd,
-        clientEscMenuOptions: gd
-      } = (0, sd.j)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Kd = (0, hk.h)(), [ld, Qd] = (0, pd.useState)(rk), Ld = dd => {
-        rk = dd, Qd(dd)
-      }, [Od, ed] = (0, pd.useState)(!1);
-      return (0, pd.useEffect)((() => {
-        Jd || ed(!1)
-      }), [Jd]), (0, od.jsxs)("div", {
+        t: wQ
+      } = (0, DQ.y)(), {
+        isTouchScreen: qQ,
+        gameState: oQ,
+        clientEscMenuOptions: vQ
+      } = (0, iQ.l)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), uQ = (0, hw.d)(), [bQ, YQ] = (0, LQ.useState)(Jw), xQ = QQ => {
+        Jw = QQ, YQ(QQ)
+      }, [AQ, tQ] = (0, LQ.useState)(!1);
+      return (0, LQ.useEffect)((() => {
+        FQ || tQ(!1)
+      }), [FQ]), (0, HQ.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, od.jsx)(Uk, {
+          children: (0, HQ.jsx)(lw, {
             className: "CrosshairPreviewStage",
-            settings: Kd,
-            touch: Nd,
-            backdrop: ld,
-            label: kd("crosshairSettings:preview"),
-            children: (0, od.jsxs)("div", {
+            settings: uQ,
+            touch: qQ,
+            backdrop: bQ,
+            label: wQ("crosshairSettings:preview"),
+            children: (0, HQ.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, od.jsx)(jk, {
-                backdrop: ld,
-                onChange: Ld
-              }), (0, od.jsxs)(Cd.G, {
+              children: [(0, HQ.jsx)(Nw, {
+                backdrop: bQ,
+                onChange: xQ
+              }), (0, HQ.jsxs)(mQ.L, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  ed(!0)
+                  tQ(!0)
                 },
-                children: [(0, od.jsx)(Zd.e, {
+                children: [(0, HQ.jsx)(kQ.c, {
                   name: "expand"
-                }), " ", kd("crosshairSettings:fullScreen")]
+                }), " ", wQ("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, od.jsx)("div", {
+        }), (0, HQ.jsx)("div", {
           className: "SettingBox",
-          children: (0, od.jsx)(Xk, {
-            settings: Kd,
-            touch: Nd,
-            backdrop: ld,
-            onChange: hk.d
+          children: (0, HQ.jsx)(Tw, {
+            settings: uQ,
+            touch: qQ,
+            backdrop: bQ,
+            onChange: hw.c
           })
-        }), (0, od.jsx)(ck, {
-          settings: Kd,
-          onChange: hk.d
-        }), Nd && (0, od.jsx)(Zk.c, {
-          note: (0, Pk.i)(Nd, gd.touchActionButtons) ? kd("crosshairSettings:touchNote") : void 0
-        }), (0, od.jsx)(Rk, {
-          settings: Kd,
-          onChange: hk.d
-        }), Od && (0, od.jsx)(Dk, {
-          settings: Kd,
-          touch: Nd,
-          backdrop: ld,
-          onBackdrop: Ld,
-          inGame: "inGame" === Wd,
-          onChange: hk.d,
+        }), (0, HQ.jsx)(Vw, {
+          settings: uQ,
+          onChange: hw.c
+        }), qQ && (0, HQ.jsx)(Dw.d, {
+          note: (0, ow.d)(qQ, vQ.touchActionButtons) ? wQ("crosshairSettings:touchNote") : void 0
+        }), (0, HQ.jsx)(Aw, {
+          settings: uQ,
+          onChange: hw.c
+        }), AQ && (0, HQ.jsx)(aw, {
+          settings: uQ,
+          touch: qQ,
+          backdrop: bQ,
+          onBackdrop: xQ,
+          inGame: "inGame" === oQ,
+          onChange: hw.c,
           onClose: () => {
-            ed(!1)
+            tQ(!1)
           }
         })]
       })
     }
-    var tk = kd(8796),
-      Vk = kd(1410),
-      zk = kd(4869),
-      Hk = kd(9226),
-      wk = kd(1968),
-      Ak = kd(4131),
-      dp = kd(1971),
-      Jp = kd(708);
-    const kp = (0, pd.memo)((function() {
+    var nw = wQ(8631),
+      gw = wQ(1404),
+      Pw = wQ(4834),
+      Zw = wQ(9091),
+      yw = wQ(1927),
+      Bw = wQ(4159),
+      dw = wQ(1933),
+      QL = wQ(705);
+    const FL = (0, LQ.memo)((function() {
       const {
-        clientEscMenuOptions: dd
-      } = (0, sd.j)(["clientEscMenuOptions"]), {
-        recording: Jd,
-        clipping: kd,
-        hasClipBuffer: Nd
-      } = (0, wk.k)("replayRecorder"), Pd = (0, wk.g)("connectedGame", (dd => dd.replay)), Zd = (0, Ak.m)(), gd = !1 === (0, Od.j)("canRecordReplays");
-      (0, pd.useEffect)((() => {
-        Id.gameBridge.send("setRecorderPrefs", {
-          clipping: dd.enableClipping,
-          clipSeconds: dd.clipDurationSeconds
+        clientEscMenuOptions: QQ
+      } = (0, iQ.l)(["clientEscMenuOptions"]), {
+        recording: FQ,
+        clipping: wQ,
+        hasClipBuffer: qQ
+      } = (0, yw.k)("replayRecorder"), DQ = (0, yw.g)("connectedGame", (QQ => QQ.replay)), kQ = (0, Bw.l)(), vQ = !1 === (0, AQ.l)("canRecordReplays");
+      (0, LQ.useEffect)((() => {
+        MQ.gameBridge.send("setRecorderPrefs", {
+          clipping: QQ.enableClipping,
+          clipSeconds: QQ.clipDurationSeconds
         })
-      }), [dd.enableClipping, dd.clipDurationSeconds]);
-      const Kd = Zd || Pd,
-        ld = !Kd && !gd,
-        Qd = Jd || ld,
-        Ld = ld,
-        ed = Ld && kd && !Jd;
+      }), [QQ.enableClipping, QQ.clipDurationSeconds]);
+      const uQ = kQ || DQ,
+        bQ = !uQ && !vQ,
+        YQ = FQ || bQ,
+        xQ = bQ,
+        tQ = xQ && wQ && !FQ;
 
-      function Rd() {
-        Qd && Id.gameBridge.send("toggleRecording", null)
+      function eQ() {
+        YQ && MQ.gameBridge.send("toggleRecording", null)
       }
-      return (0, od.jsxs)("div", {
+      return (0, HQ.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, od.jsxs)("div", {
+        children: [(0, HQ.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, od.jsx)("div", {
+          children: [(0, HQ.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: Jd ? (0, od.jsxs)(od.Fragment, {
-              children: [(0, od.jsxs)(Cd.B, {
+            children: FQ ? (0, HQ.jsxs)(HQ.Fragment, {
+              children: [(0, HQ.jsxs)(mQ.F, {
                 className: "ReplayViewerCategoryButton",
-                onClick: Rd,
-                disabled: !Qd,
-                children: [(0, od.jsx)("span", {
+                onClick: eQ,
+                disabled: !YQ,
+                children: [(0, HQ.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, od.jsx)(dp.c, {
+                }), (0, HQ.jsx)(dw.e, {
                   noaAction: "recordGame"
                 })]
-              }), (0, od.jsx)(Hk.b, {
+              }), (0, HQ.jsx)(Zw.c, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, od.jsxs)(Cd.d, {
+            }) : (0, HQ.jsxs)(mQ.f, {
               className: "ReplayViewerCategoryButton",
-              onClick: Rd,
-              disabled: !Qd,
-              children: [(0, od.jsx)("span", {
+              onClick: eQ,
+              disabled: !YQ,
+              children: [(0, HQ.jsx)("span", {
                 children: "Start Recording"
-              }), (0, od.jsx)(dp.c, {
+              }), (0, HQ.jsx)(dw.e, {
                 noaAction: "recordGame"
               })]
             })
-          }), gd && (0, od.jsx)("div", {
+          }), vQ && (0, HQ.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), Kd && !Jd && (0, od.jsx)("div", {
+          }), uQ && !FQ && (0, HQ.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, od.jsx)(Bd.d, {
+          children: [(0, HQ.jsx)(SQ.e, {
             label: "Enable clipping",
-            checked: dd.enableClipping,
-            disabled: !Ld,
-            onClick: function(dd) {
-              Ld && sd.d.setClientEscMenuOptions({
-                enableClipping: dd
+            checked: QQ.enableClipping,
+            disabled: !xQ,
+            onClick: function(QQ) {
+              xQ && iQ.c.setClientEscMenuOptions({
+                enableClipping: QQ
               })
             },
-            className: Wd()({
-              SettingBoxDisabled: !Ld
+            className: oQ()({
+              SettingBoxDisabled: !xQ
             })
-          }), (0, od.jsx)(Bd.h, {
+          }), (0, HQ.jsx)(SQ.g, {
             name: "Clip duration (seconds)",
-            min: Jp.n,
-            max: Jp.j,
-            step: Jp.e,
-            initValue: dd.clipDurationSeconds,
-            onChange: function(dd) {
-              sd.d.setClientEscMenuOptions({
-                clipDurationSeconds: dd
+            min: QL.j,
+            max: QL.h,
+            step: QL.b,
+            initValue: QQ.clipDurationSeconds,
+            onChange: function(QQ) {
+              iQ.c.setClientEscMenuOptions({
+                clipDurationSeconds: QQ
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !Ld || !dd.enableClipping
+            disabled: !xQ || !QQ.enableClipping
           })]
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, od.jsxs)(Cd.d, {
+          children: [(0, HQ.jsxs)(mQ.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              ed && Id.gameBridge.send("saveClip", null)
+              tQ && MQ.gameBridge.send("saveClip", null)
             },
-            disabled: !ed,
-            children: [(0, od.jsx)("span", {
+            disabled: !tQ,
+            children: [(0, HQ.jsx)("span", {
               children: "Record clip"
-            }), (0, od.jsx)(dp.c, {
+            }), (0, HQ.jsx)(dw.e, {
               noaAction: "recordClip"
             })]
-          }), dd.enableClipping && !Nd && Ld && !Jd && (0, od.jsx)("div", {
+          }), QQ.enableClipping && !qQ && xQ && !FQ && (0, HQ.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), Jd && (0, od.jsx)("div", {
+          }), FQ && (0, HQ.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, od.jsxs)(Cd.d, {
+          children: [(0, HQ.jsxs)(mQ.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, Ak.i)(!0), sd.d.set({
+              (0, Bw.j)(!0), iQ.c.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: Zd,
-            children: [(0, od.jsx)("span", {
+            disabled: kQ,
+            children: [(0, HQ.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, od.jsx)(dp.c, {
+            }), (0, HQ.jsx)(dw.e, {
               noaAction: "replayViewerOpen"
             })]
-          }), Zd && (0, od.jsx)("div", {
+          }), kQ && (0, HQ.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, od.jsx)("div", {
+          children: [(0, HQ.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, od.jsx)("iframe", {
+          }), (0, HQ.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2319,8 +2319,8 @@ export const modules = {
         })]
       })
     }));
-    var pp = kd(1901);
-    const Np = {
+    var wL = wQ(1870);
+    const LL = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2342,11 +2342,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, od.jsx)("svg", {
+        icon: () => (0, HQ.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, od.jsx)("path", {
+          children: (0, HQ.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2365,7 +2365,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      EQ: {
+      JY: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2391,283 +2391,283 @@ export const modules = {
       }
     };
 
-    function Wp() {
-      return Promise.all([kd.e(75), kd.e(132), kd.e(126), kd.e(123)]).then((() => kd(41065))).then((dd => ({
-        default: dd.ShaderPackCategory
-      })), (dd => (console.error("Failed to load the shader pack settings", dd), {
-        default: Pp
+    function qL() {
+      return Promise.all([wQ.e(75), wQ.e(132), wQ.e(126), wQ.e(123)]).then((() => wQ(40482))).then((QQ => ({
+        default: QQ.ShaderPackCategory
+      })), (QQ => (console.error("Failed to load the shader pack settings", QQ), {
+        default: oL
       })))
     }
 
-    function Pp() {
+    function oL() {
       const {
-        t: dd
-      } = (0, Pd.B)();
-      return (0, od.jsx)("div", {
+        t: QQ
+      } = (0, DQ.y)();
+      return (0, HQ.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: dd("shaderPack:tabLoadFailed")
+        children: QQ("shaderPack:tabLoadFailed")
       })
     }
-    var Zp = kd(1404);
-    const gp = (0, pd.lazy)((() => kd.e(264).then((() => kd(41054))).then((dd => ({
-        default: dd.BloxdInformation
+    var DL = wQ(1395);
+    const kL = (0, LQ.lazy)((() => wQ.e(264).then((() => wQ(40469))).then((QQ => ({
+        default: QQ.BloxdInformation
       }))))),
-      Cp = (0, pd.lazy)(Wp);
+      vL = (0, LQ.lazy)(qL);
 
-    function Kp(dd) {
-      return dd ? "general" : "account"
+    function mL(QQ) {
+      return QQ ? "general" : "account"
     }
-    const op = new Map,
-      lp = (0, pd.memo)((function(dd) {
+    const uL = new Map,
+      HL = (0, LQ.memo)((function(QQ) {
         let {
-          show: Jd,
-          setBeforeResumeCallback: kd
-        } = dd;
-        (0, ed.b)();
+          show: FQ,
+          setBeforeResumeCallback: wQ
+        } = QQ;
+        (0, tQ.b)();
         const {
-          gameState: Nd,
-          openSettingsCategory: Wd
-        } = (0, sd.j)(["gameState", "openSettingsCategory"]), {
-          userContext: gd
-        } = (0, Ld.c)(), {
-          t: Kd
-        } = (0, Pd.B)(), xd = (0, Qd.b)(), qd = (0, Od.j)("minChunkAddDist"), Bd = "inGame" === Nd, [ad, Yd] = (0, pd.useState)(Kp(Bd)), [md, bd] = (0, pd.useState)(null), [Sd, jd] = (0, pd.useState)([]), Xd = (0, pd.useRef)(function() {
-          const dd = new Date,
-            Jd = 6 * (dd.getMonth() + dd.getDate()) % KJ.A.length;
-          return [...KJ.A, ...KJ.A].slice(Jd, Jd + 6)
-        }()), fd = (0, pd.useRef)(null), nd = (0, FJ.i)(Vk.j, (0, Vk.c)()), Ud = Object.keys(Np).filter((dd => {
-          switch (dd) {
+          gameState: qQ,
+          openSettingsCategory: oQ
+        } = (0, iQ.l)(["gameState", "openSettingsCategory"]), {
+          userContext: vQ
+        } = (0, xQ.e)(), {
+          t: uQ
+        } = (0, DQ.y)(), cQ = (0, YQ.b)(), CQ = (0, AQ.l)("minChunkAddDist"), SQ = "inGame" === qQ, [WQ, sQ] = (0, LQ.useState)(mL(SQ)), [rQ, IQ] = (0, LQ.useState)(null), [UQ, NQ] = (0, LQ.useState)([]), TQ = (0, LQ.useRef)(function() {
+          const QQ = new Date,
+            FQ = 6 * (QQ.getMonth() + QQ.getDate()) % mF.u.length;
+          return [...mF.u, ...mF.u].slice(FQ, FQ + 6)
+        }()), KQ = (0, LQ.useRef)(null), zQ = (0, OF.i)(gw.h, (0, gw.e)()), lQ = Object.keys(LL).filter((QQ => {
+          switch (QQ) {
             case "replayViewer":
-              return Bd;
+              return SQ;
             case "developerTools":
-              return gd.playerHasRank("developer") || !1;
+              return vQ.playerHasRank("developer") || !1;
             case "texturePack":
-              return Rd.featureFlags.settings.canChangeTexturePack;
-            case "EQ":
-              return Rd.featureFlags.settings.canUseShaderPacks;
+              return eQ.featureFlags.settings.canChangeTexturePack;
+            case "JY":
+              return eQ.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return Rd.featureFlags.useSocialFeatures;
+              return eQ.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== Fd.t;
+              return "crazygames" !== OQ.r;
             case "controller":
-              return Rd.featureFlags.useControllerSupport && (nd || "controller" === ad);
+              return eQ.featureFlags.useControllerSupport && (zQ || "controller" === WQ);
             default:
               return !0
           }
         }));
-        (0, FJ.h)("toggleFullCoordinateOverlay", (() => {
-          const dd = HJ("showCoordinates") && HJ("showChunkCoordinates") && HJ("showFPS");
-          wJ("showCoordinates", !dd), wJ("showChunkCoordinates", !dd), wJ("showFPS", !dd), xd()
-        })), (0, FJ.h)("updatedChunkLoadDist", (() => {
-          xd()
-        })), (0, pd.useEffect)((() => {
-          if (bd(null), null === sd.d.get("openSettingsCategory")) {
-            const dd = (0, Zp.d)() ? op.get(Bd) : void 0;
-            Yd(dd && Ud.includes(dd) ? dd : Kp(Bd))
+        (0, OF.g)("toggleFullCoordinateOverlay", (() => {
+          const QQ = ZF("showCoordinates") && ZF("showChunkCoordinates") && ZF("showFPS");
+          yF("showCoordinates", !QQ), yF("showChunkCoordinates", !QQ), yF("showFPS", !QQ), cQ()
+        })), (0, OF.g)("updatedChunkLoadDist", (() => {
+          cQ()
+        })), (0, LQ.useEffect)((() => {
+          if (IQ(null), null === iQ.c.get("openSettingsCategory")) {
+            const QQ = (0, DL.d)() ? uL.get(SQ) : void 0;
+            sQ(QQ && lQ.includes(QQ) ? QQ : mL(SQ))
           }
-        }), [Jd]), (0, pd.useEffect)((() => {
-          null !== Wd && (Yd(Wd), op.set(Bd, Wd), sd.d.set({
+        }), [FQ]), (0, LQ.useEffect)((() => {
+          null !== oQ && (sQ(oQ), uL.set(SQ, oQ), iQ.c.set({
             openSettingsCategory: null
           }))
-        }), [Wd, Bd]), (0, pd.useLayoutEffect)((() => {
-          fd.current && (fd.current.scrollTop = 0)
-        }), [ad, Jd]), (0, pd.useEffect)((() => {
-          "updateLog" === ad && (0, vd.b)().then(jd)
-        }), [ad]), (0, pd.useEffect)((() => {
-          if ((0, cJ.I)(qd)) return;
-          const [dd, Jd] = (0, Nk.g)(), [kd, pd] = (0, nJ.g)(qd), Nd = (0, pp.h)(qd[0], dd, kd), Wd = (0, pp.h)(qd[1], Jd, pd);
-          Id.gameBridge.send("setChunkAddDistance", {
-            horizontal: Nd,
-            vertical: Wd
+        }), [oQ, SQ]), (0, LQ.useLayoutEffect)((() => {
+          KQ.current && (KQ.current.scrollTop = 0)
+        }), [WQ, FQ]), (0, LQ.useEffect)((() => {
+          "updateLog" === WQ && (0, pQ.c)().then(NQ)
+        }), [WQ]), (0, LQ.useEffect)((() => {
+          if ((0, VF.F)(CQ)) return;
+          const [QQ, FQ] = (0, Lw.g)(), [wQ, LQ] = (0, zF.f)(CQ), qQ = (0, wL.h)(CQ[0], QQ, wQ), oQ = (0, wL.h)(CQ[1], FQ, LQ);
+          MQ.gameBridge.send("setChunkAddDistance", {
+            horizontal: qQ,
+            vertical: oQ
           })
-        }), [qd]);
-        const yd = (0, pd.useCallback)((async () => {
-          md && (await md(), bd(null))
-        }), [md]);
+        }), [CQ]);
+        const jQ = (0, LQ.useCallback)((async () => {
+          rQ && (await rQ(), IQ(null))
+        }), [rQ]);
 
-        function Dd() {
-          sd.d.set({
+        function aQ() {
+          iQ.c.set({
             openEverythingMenuName: null
           })
         }
-        return (0, pd.useEffect)((() => {
-          kd((() => yd))
-        }), [yd, kd]), (0, od.jsxs)("div", {
+        return (0, LQ.useEffect)((() => {
+          wQ((() => jQ))
+        }), [jQ, wQ]), (0, HQ.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: Jd ? {} : {
+          style: FQ ? {} : {
             display: "none"
           },
-          children: [(0, od.jsx)("div", {
+          children: [(0, HQ.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, od.jsx)("div", {
+            children: (0, HQ.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, od.jsx)(ld, {
-                items: Ud.map((dd => {
-                  const Jd = Np[dd].icon;
+              children: (0, HQ.jsx)(bQ, {
+                items: lQ.map((QQ => {
+                  const FQ = LL[QQ].icon;
                   return {
-                    id: dd,
-                    faIcon: "string" === typeof Jd ? Jd : void 0,
-                    iconElement: "string" === typeof Jd ? void 0 : (0, od.jsx)(Jd, {}),
-                    title: Kd(Np[dd].displayName),
+                    id: QQ,
+                    faIcon: "string" === typeof FQ ? FQ : void 0,
+                    iconElement: "string" === typeof FQ ? void 0 : (0, HQ.jsx)(FQ, {}),
+                    title: uQ(LL[QQ].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: ad,
-                onClick: dd => {
-                  !async function(dd) {
-                    await yd(), Yd(dd), op.set(Bd, dd)
-                  }(dd)
+                selectedItemId: WQ,
+                onClick: QQ => {
+                  !async function(QQ) {
+                    await jQ(), sQ(QQ), uL.set(SQ, QQ)
+                  }(QQ)
                 }
               })
             })
-          }), (0, od.jsxs)("div", {
-            ref: fd,
+          }), (0, HQ.jsxs)("div", {
+            ref: KQ,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === ad && (0, od.jsx)(GJ, {
-              showing: Jd,
-              inGame: Bd
-            }), "general" === ad && (0, od.jsx)(iJ, {
-              inGame: Bd
-            }), "audio" === ad && (0, od.jsx)(aJ, {}), "notifications" === ad && (0, od.jsx)(fJ, {}), "graphics" === ad && (0, od.jsx)(pk, {
-              minChunkAddDist: null !== qd && void 0 !== qd ? qd : [2, 2],
-              getValue: HJ,
-              onChange: wJ,
-              setApplySettingsCallback: bd
-            }), "controls" === ad && (0, od.jsx)(Wk.g, {}), "crosshair" === ad && (0, od.jsx)(uk, {
-              showing: Jd
-            }), "controller" === ad && Rd.featureFlags.useControllerSupport && (0, od.jsx)(tk.e, {}), Rd.featureFlags.settings.canChangeTexturePack && "texturePack" === ad && (0, od.jsx)(zk.e, {
-              setApplySettingsCallback: bd
-            }), Rd.featureFlags.settings.canUseShaderPacks && "EQ" === ad && (0, od.jsx)(pd.Suspense, {
+            children: ["account" === WQ && (0, HQ.jsx)(MF, {
+              showing: FQ,
+              inGame: SQ
+            }), "general" === WQ && (0, HQ.jsx)(iF, {
+              inGame: SQ
+            }), "audio" === WQ && (0, HQ.jsx)(WF, {}), "notifications" === WQ && (0, HQ.jsx)(KF, {}), "graphics" === WQ && (0, HQ.jsx)(ww, {
+              minChunkAddDist: null !== CQ && void 0 !== CQ ? CQ : [2, 2],
+              getValue: ZF,
+              onChange: yF,
+              setApplySettingsCallback: IQ
+            }), "controls" === WQ && (0, HQ.jsx)(qw.f, {}), "crosshair" === WQ && (0, HQ.jsx)(Ew, {
+              showing: FQ
+            }), "controller" === WQ && eQ.featureFlags.useControllerSupport && (0, HQ.jsx)(nw.b, {}), eQ.featureFlags.settings.canChangeTexturePack && "texturePack" === WQ && (0, HQ.jsx)(Pw.e, {
+              setApplySettingsCallback: IQ
+            }), eQ.featureFlags.settings.canUseShaderPacks && "JY" === WQ && (0, HQ.jsx)(LQ.Suspense, {
               fallback: null,
-              children: (0, od.jsx)(Cp, {
-                setApplySettingsCallback: bd
+              children: (0, HQ.jsx)(vL, {
+                setApplySettingsCallback: IQ
               })
-            }), "updateLog" === ad && (0, od.jsx)("div", {
+            }), "updateLog" === WQ && (0, HQ.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, od.jsx)("div", {
+              children: (0, HQ.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: Sd.map(((dd, Jd) => (0, od.jsx)(Gd.c, {
-                  updateLog: dd,
-                  index: Jd,
-                  close: Dd
-                }, Jd)))
+                children: UQ.map(((QQ, FQ) => (0, HQ.jsx)(GQ.c, {
+                  updateLog: QQ,
+                  index: FQ,
+                  close: aQ
+                }, FQ)))
               })
-            }), "information" === ad && (0, od.jsx)("div", {
+            }), "information" === WQ && (0, HQ.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, od.jsx)(pd.Suspense, {
+              children: (0, HQ.jsx)(LQ.Suspense, {
                 fallback: null,
-                children: (0, od.jsx)(gp, {})
+                children: (0, HQ.jsx)(kL, {})
               })
-            }), "alternativeDomains" === ad && (0, od.jsxs)("div", {
+            }), "alternativeDomains" === WQ && (0, HQ.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, od.jsx)("div", {
+              children: [(0, HQ.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: Kd("settingsMenu:unblockedDomainsDescription")
-              }), (0, od.jsx)("div", {
+                children: uQ("settingsMenu:unblockedDomainsDescription")
+              }), (0, HQ.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: Xd.current.map((dd => (0, od.jsxs)(Cd.d, {
+                children: TQ.current.map((QQ => (0, HQ.jsxs)(mQ.f, {
                   onClick: () => {
-                    window.open(`https://${dd}`)
+                    window.open(`https://${QQ}`)
                   },
-                  children: [(0, od.jsx)(Zd.e, {
+                  children: [(0, HQ.jsx)(kQ.c, {
                     name: "arrow-up-right-from-square"
-                  }), " ", dd]
-                }, dd)))
+                  }), " ", QQ]
+                }, QQ)))
               })]
-            }), "replayViewer" === ad && (0, od.jsx)(kp, {}), "developerTools" === ad && (0, od.jsx)("div", {
+            }), "replayViewer" === WQ && (0, HQ.jsx)(FL, {}), "developerTools" === WQ && (0, HQ.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, od.jsx)(Md, {
-                setApplySettingsCallback: bd
+              children: (0, HQ.jsx)(RQ, {
+                setApplySettingsCallback: IQ
               })
-            }), null !== md && (0, od.jsx)("div", {
+            }), null !== rQ && (0, HQ.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, od.jsx)(Cd.d, {
+              children: (0, HQ.jsx)(mQ.f, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: yd,
-                children: Kd("general:apply")
+                onClick: jQ,
+                children: uQ("general:apply")
               })
             })]
           })]
         })
       }));
-    var Qp = kd(2502);
-    const Lp = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      Op = (0, pd.lazy)((() => Promise.resolve().then((() => kd(4520))).then((dd => {
-        dd.needGameClientAfterPaint();
-        const Jd = dd.matchmakingLibrariesPromise.then((dd => (0, Qp.d)(dd.loadCharacterCustomisationUI(), (dd => dd.CharacterCustomisationUI))));
-        return Promise.all([dd.ensureGameSetup(), Jd]).then((dd => {
-          let [, Jd] = dd;
-          return Jd
+    var bL = wQ(2511);
+    const YL = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      xL = (0, LQ.lazy)((() => Promise.resolve().then((() => wQ(4501))).then((QQ => {
+        QQ.needGameClientAfterPaint();
+        const FQ = QQ.matchmakingLibrariesPromise.then((QQ => (0, bL.b)(QQ.loadCharacterCustomisationUI(), (QQ => QQ.CharacterCustomisationUI))));
+        return Promise.all([QQ.ensureGameSetup(), FQ]).then((QQ => {
+          let [, FQ] = QQ;
+          return FQ
         }))
       }))));
 
-    function ep(dd) {
+    function AL(QQ) {
       let {
-        show: Jd
-      } = dd;
+        show: FQ
+      } = QQ;
       const {
-        userContext: kd
-      } = (0, Ld.c)(), [Nd, Wd] = (0, pd.useState)("characters");
-      if (!Jd) return null;
-      const Pd = Lp.filter((dd => "cape" !== dd && "nameColour" !== dd || kd.getPlayerRanks().includes("super") || (0, Td.purchasesAllowed)())).map((dd => ({
-        id: dd,
-        faIcon: KJ.I[dd],
-        title: KJ.K[dd],
+        userContext: wQ
+      } = (0, xQ.e)(), [qQ, oQ] = (0, LQ.useState)("characters");
+      if (!FQ) return null;
+      const DQ = YL.filter((QQ => "cape" !== QQ && "nameColour" !== QQ || wQ.getPlayerRanks().includes("super") || (0, XQ.purchasesAllowed)())).map((QQ => ({
+        id: QQ,
+        faIcon: mF.C[QQ],
+        title: mF.E[QQ],
         redDot: !1
       })));
-      return (0, od.jsxs)("div", {
+      return (0, HQ.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, od.jsx)(ld, {
-            items: Pd,
-            selectedItemId: Nd,
-            onClick: dd => {
-              Wd(dd)
+          children: (0, HQ.jsx)(bQ, {
+            items: DQ,
+            selectedItemId: qQ,
+            onClick: QQ => {
+              oQ(QQ)
             }
           })
-        }), (0, od.jsx)("div", {
+        }), (0, HQ.jsx)("div", {
           className: "MenuBody",
-          children: (0, od.jsx)(pd.Suspense, {
-            fallback: (0, od.jsx)("div", {
+          children: (0, HQ.jsx)(LQ.Suspense, {
+            fallback: (0, HQ.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, od.jsx)(qd.b, {})
+              children: (0, HQ.jsx)(CQ.c, {})
             }),
-            children: (0, od.jsx)(Op, {
-              selectedTab: Nd
+            children: (0, HQ.jsx)(xL, {
+              selectedTab: qQ
             })
           })
         })]
       })
     }
-    var Rp = kd(1482),
-      Ip = kd(1488),
-      Gp = kd(9234),
-      vp = kd(4389),
-      xp = kd(3253),
-      qp = kd(3300),
-      Bp = kd(9257),
-      sp = kd(8681),
-      ip = kd(9242),
-      ap = kd(9250),
-      Mp = kd(1924),
-      Fp = kd(1904),
-      Yp = kd(4794),
-      mp = kd(1279),
-      bp = kd(1245),
-      Sp = kd(1699),
-      jp = kd(8762),
-      Xp = kd(2369),
-      fp = kd(2372);
+    var tL = wQ(1464),
+      eL = wQ(1467),
+      ML = wQ(9094),
+      GL = wQ(4376),
+      pL = wQ(3282),
+      cL = wQ(3331),
+      CL = wQ(9127),
+      SL = wQ(8523),
+      iL = wQ(9103),
+      WL = wQ(9116),
+      RL = wQ(1887),
+      OL = wQ(1873),
+      sL = wQ(4737),
+      rL = wQ(1276),
+      IL = wQ(1237),
+      UL = wQ(1668),
+      NL = wQ(8611),
+      TL = wQ(2353),
+      KL = wQ(2359);
 
-    function np(dd) {
-      return dd ? Object.keys(dd).sort(((Jd, kd) => {
-        var pd, Nd, Wd, Pd;
-        const Zd = (null !== (pd = null === (Nd = dd[kd]) || void 0 === Nd ? void 0 : Nd.sortPriority) && void 0 !== pd ? pd : 0) - (null !== (Wd = null === (Pd = dd[Jd]) || void 0 === Pd ? void 0 : Pd.sortPriority) && void 0 !== Wd ? Wd : 0);
-        return 0 !== Zd ? Zd : Jd.localeCompare(kd)
+    function zL(QQ) {
+      return QQ ? Object.keys(QQ).sort(((FQ, wQ) => {
+        var LQ, qQ, oQ, DQ;
+        const kQ = (null !== (LQ = null === (qQ = QQ[wQ]) || void 0 === qQ ? void 0 : qQ.sortPriority) && void 0 !== LQ ? LQ : 0) - (null !== (oQ = null === (DQ = QQ[FQ]) || void 0 === DQ ? void 0 : DQ.sortPriority) && void 0 !== oQ ? oQ : 0);
+        return 0 !== kQ ? kQ : FQ.localeCompare(wQ)
       })) : []
     }
-    const Up = [{
+    const lL = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2681,241 +2681,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function yp(dd) {
+    function jL(QQ) {
       for (const {
-          threshold: Jd,
-          suffix: kd
+          threshold: FQ,
+          suffix: wQ
         }
-        of Up)
-        if (dd >= Jd) {
-          const pd = dd / Jd;
-          return pd >= 100 ? `${Math.floor(pd)}${kd}` : pd >= 10 ? `${pd.toFixed(1).replace(/\.0$/,"")}${kd}` : `${pd.toFixed(2).replace(/\.?0+$/,"")}${kd}`
-        } return String(dd)
+        of lL)
+        if (QQ >= FQ) {
+          const LQ = QQ / FQ;
+          return LQ >= 100 ? `${Math.floor(LQ)}${wQ}` : LQ >= 10 ? `${LQ.toFixed(1).replace(/\.0$/,"")}${wQ}` : `${LQ.toFixed(2).replace(/\.?0+$/,"")}${wQ}`
+        } return String(QQ)
     }
-    var Dp = kd(4904);
-    const Tp = {
+    var aL = wQ(4867);
+    const XL = {
         normal: "0.8em",
         big: "1em"
       },
-      Ep = (0, pd.memo)((function(dd) {
+      fL = (0, LQ.memo)((function(QQ) {
         let {
-          item: Jd,
-          amount: kd = 0,
-          size: pd = "normal",
-          tier: Nd = null
-        } = dd;
-        return (0, od.jsx)("div", {
-          className: Wd()("SmpSlot", `SmpSlot-${pd}`),
-          children: Jd && (0, od.jsx)(Mp.d, {
-            itemName: Jd,
-            amount: kd > 1 ? kd : 0,
-            amountFontSize: Tp[pd],
-            enchantmentTier: Nd
+          item: FQ,
+          amount: wQ = 0,
+          size: LQ = "normal",
+          tier: qQ = null
+        } = QQ;
+        return (0, HQ.jsx)("div", {
+          className: oQ()("SmpSlot", `SmpSlot-${LQ}`),
+          children: FQ && (0, HQ.jsx)(RL.e, {
+            itemName: FQ,
+            amount: wQ > 1 ? wQ : 0,
+            amountFontSize: XL[LQ],
+            enchantmentTier: qQ
           })
         })
       }));
 
-    function cp(dd) {
+    function VL(QQ) {
       let {
-        amount: Jd,
-        exact: kd = !1,
-        className: pd
-      } = dd;
-      return (0, od.jsxs)("span", {
-        className: Wd()("SmpGold", pd),
-        children: [(0, od.jsx)("span", {
+        amount: FQ,
+        exact: wQ = !1,
+        className: LQ
+      } = QQ;
+      return (0, HQ.jsxs)("span", {
+        className: oQ()("SmpGold", LQ),
+        children: [(0, HQ.jsx)("span", {
           className: "SmpCoin",
-          children: (0, od.jsx)(Mp.d, {
+          children: (0, HQ.jsx)(RL.e, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), kd ? Jd.toLocaleString("en-US") : yp(Jd)]
+        }), wQ ? FQ.toLocaleString("en-US") : jL(FQ)]
       })
     }
 
-    function hp(dd) {
+    function hL(QQ) {
       let {
-        count: Jd = 5,
-        grid: kd = !1
-      } = dd;
-      return (0, od.jsx)("div", {
-        className: kd ? "SmpCardGrid" : "SmpList",
+        count: FQ = 5,
+        grid: wQ = !1
+      } = QQ;
+      return (0, HQ.jsx)("div", {
+        className: wQ ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: Jd
-        }, ((dd, Jd) => (0, od.jsxs)("div", {
-          className: Wd()(kd ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, od.jsx)("div", {
-            className: Wd()("SmpSlot", kd ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, od.jsxs)("div", {
+          length: FQ
+        }, ((QQ, FQ) => (0, HQ.jsxs)("div", {
+          className: oQ()(wQ ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, HQ.jsx)("div", {
+            className: oQ()("SmpSlot", wQ ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, HQ.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, od.jsx)("b", {}), (0, od.jsx)("small", {})]
-          }), (0, od.jsx)("div", {
+            children: [(0, HQ.jsx)("b", {}), (0, HQ.jsx)("small", {})]
+          }), (0, HQ.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, Jd)))
+        }, FQ)))
       })
     }
 
-    function rp(dd) {
+    function JL(QQ) {
       let {
-        title: Jd,
-        children: kd
-      } = dd;
-      return (0, od.jsxs)("div", {
+        title: FQ,
+        children: wQ
+      } = QQ;
+      return (0, HQ.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, od.jsx)("b", {
-          children: Jd
-        }), kd && (0, od.jsx)("small", {
-          children: kd
+        children: [(0, HQ.jsx)("b", {
+          children: FQ
+        }), wQ && (0, HQ.jsx)("small", {
+          children: wQ
         })]
       })
     }
 
-    function tp(dd) {
+    function EL(QQ) {
       let {
-        entry: Jd
-      } = dd;
-      return (0, od.jsx)(rp, {
-        title: (0, od.jsx)(Fp.c, {
-          text: Jd.item.customTitle
+        entry: FQ
+      } = QQ;
+      return (0, HQ.jsx)(JL, {
+        title: (0, HQ.jsx)(OL.e, {
+          text: FQ.item.customTitle
         }),
-        children: (0, od.jsx)(Fp.c, {
-          text: Jd.item.description
+        children: (0, HQ.jsx)(OL.e, {
+          text: FQ.item.description
         })
       })
     }
 
-    function Vp(dd) {
-      return (0, od.jsx)(Dp.c, {
-        ...dd,
-        className: Wd()("SmpChoice", dd.className),
+    function nL(QQ) {
+      return (0, HQ.jsx)(aL.c, {
+        ...QQ,
+        className: oQ()("SmpChoice", QQ.className),
         reselectable: !0
       })
     }
 
-    function zp() {
-      return (0, od.jsx)("span", {
+    function gL() {
+      return (0, HQ.jsx)("span", {
         className: "SmpLoader",
-        children: (0, od.jsx)(qd.b, {})
+        children: (0, HQ.jsx)(CQ.c, {})
       })
     }
 
-    function Hp(dd) {
+    function PL(QQ) {
       let {
-        value: Jd,
-        onChange: kd,
-        min: Nd = 1,
-        max: Wd,
-        step: Pd = 1,
-        label: Zd
-      } = dd;
-      const gd = (0, pd.useRef)(null),
-        Cd = (0, pd.useRef)(Jd);
-      Cd.current = Jd;
-      const [Kd, ld] = (0, pd.useState)(null), Qd = dd => Math.max(Nd, Math.min(Wd, Math.floor(dd))), Ld = dd => {
-        const Jd = Cd.current,
-          pd = "function" === typeof Pd ? Pd(Jd, dd) : Pd,
-          Nd = Qd(Jd + pd * dd);
-        Cd.current = Nd, kd(Nd)
+        value: FQ,
+        onChange: wQ,
+        min: qQ = 1,
+        max: oQ,
+        step: DQ = 1,
+        label: kQ
+      } = QQ;
+      const vQ = (0, LQ.useRef)(null),
+        mQ = (0, LQ.useRef)(FQ);
+      mQ.current = FQ;
+      const [uQ, bQ] = (0, LQ.useState)(null), YQ = QQ => Math.max(qQ, Math.min(oQ, Math.floor(QQ))), xQ = QQ => {
+        const FQ = mQ.current,
+          LQ = "function" === typeof DQ ? DQ(FQ, QQ) : DQ,
+          qQ = YQ(FQ + LQ * QQ);
+        mQ.current = qQ, wQ(qQ)
       };
-      (0, pd.useEffect)((() => {
-        if (null === Kd) return;
-        let dd;
-        const Jd = () => {
-            ld(null)
+      (0, LQ.useEffect)((() => {
+        if (null === uQ) return;
+        let QQ;
+        const FQ = () => {
+            bQ(null)
           },
-          kd = setTimeout((() => {
-            dd = setInterval((() => {
-              Ld(Kd);
-              const dd = Cd.current;
-              (Kd > 0 ? dd >= Wd : dd <= Nd) && Jd()
+          wQ = setTimeout((() => {
+            QQ = setInterval((() => {
+              xQ(uQ);
+              const QQ = mQ.current;
+              (uQ > 0 ? QQ >= oQ : QQ <= qQ) && FQ()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", Jd), window.addEventListener("pointercancel", Jd), window.addEventListener("blur", Jd), () => {
-          clearTimeout(kd), clearInterval(dd), window.removeEventListener("pointerup", Jd), window.removeEventListener("pointercancel", Jd), window.removeEventListener("blur", Jd)
+        return window.addEventListener("pointerup", FQ), window.addEventListener("pointercancel", FQ), window.addEventListener("blur", FQ), () => {
+          clearTimeout(wQ), clearInterval(QQ), window.removeEventListener("pointerup", FQ), window.removeEventListener("pointercancel", FQ), window.removeEventListener("blur", FQ)
         }
-      }), [Kd]), (0, pd.useEffect)((() => {
-        const dd = gd.current;
-        dd && document.activeElement !== dd && dd.value !== String(Jd) && (dd.value = String(Jd))
-      }), [Jd]), (0, pd.useEffect)((() => {
-        const dd = gd.current;
-        if (!dd) return;
-        const Jd = () => {
-          dd.value = String(Cd.current)
+      }), [uQ]), (0, LQ.useEffect)((() => {
+        const QQ = vQ.current;
+        QQ && document.activeElement !== QQ && QQ.value !== String(FQ) && (QQ.value = String(FQ))
+      }), [FQ]), (0, LQ.useEffect)((() => {
+        const QQ = vQ.current;
+        if (!QQ) return;
+        const FQ = () => {
+          QQ.value = String(mQ.current)
         };
-        return dd.addEventListener("blur", Jd), () => {
-          dd.removeEventListener("blur", Jd)
+        return QQ.addEventListener("blur", FQ), () => {
+          QQ.removeEventListener("blur", FQ)
         }
       }), []);
-      const Od = dd => (0, od.jsx)("button", {
+      const AQ = QQ => (0, HQ.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${dd>0?"More":"Less"} ${Zd}`,
-        disabled: dd > 0 ? Jd >= Wd : Jd <= Nd,
-        onPointerDown: Jd => {
-          0 === Jd.button && (Ld(dd), ld(dd))
+        "aria-label": `${QQ>0?"More":"Less"} ${kQ}`,
+        disabled: QQ > 0 ? FQ >= oQ : FQ <= qQ,
+        onPointerDown: FQ => {
+          0 === FQ.button && (xQ(QQ), bQ(QQ))
         },
-        onKeyDown: Jd => {
-          "Enter" !== Jd.key && " " !== Jd.key || Ld(dd)
+        onKeyDown: FQ => {
+          "Enter" !== FQ.key && " " !== FQ.key || xQ(QQ)
         },
-        onContextMenu: dd => {
-          dd.preventDefault()
+        onContextMenu: QQ => {
+          QQ.preventDefault()
         },
-        children: dd > 0 ? "+" : "\u2212"
+        children: QQ > 0 ? "+" : "\u2212"
       });
-      return (0, od.jsxs)("div", {
+      return (0, HQ.jsxs)("div", {
         className: "SmpStepper",
-        children: [Od(-1), (0, od.jsx)(xd.e, {
+        children: [AQ(-1), (0, HQ.jsx)(cQ.b, {
           className: "SmpStepperInput",
-          domRef: gd,
-          defaultValue: String(Jd),
-          ariaLabel: Zd,
+          domRef: vQ,
+          defaultValue: String(FQ),
+          ariaLabel: kQ,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: dd => {
-            const Jd = dd.replace(/[^\d]/g, "");
-            gd.current && Jd !== dd && (gd.current.value = Jd), "" !== Jd && kd(Qd(Number(Jd)))
+          onValueChange: QQ => {
+            const FQ = QQ.replace(/[^\d]/g, "");
+            vQ.current && FQ !== QQ && (vQ.current.value = FQ), "" !== FQ && wQ(YQ(Number(FQ)))
           }
-        }), Od(1)]
+        }), AQ(1)]
       })
     }
 
-    function wp(dd) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, dd))) - 1))
+    function ZL(QQ) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, QQ))) - 1))
     }
-    var Ap = kd(9252),
-      dN = kd(1260);
-    const JN = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    dN.y, yd.Oc.length;
+    var yL = wQ(9125),
+      BL = wQ(1254);
+    const dL = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    BL.A, jQ.Kc.length;
     new Map;
-    var kN = kd(3130);
+    var Qq = wQ(3149);
 
-    function pN(dd, Jd) {
-      var kd;
-      return Jd && (null === (kd = dd[Jd]) || void 0 === kd ? void 0 : kd.smp) || null
+    function Fq(QQ, FQ) {
+      var wQ;
+      return FQ && (null === (wQ = QQ[FQ]) || void 0 === wQ ? void 0 : wQ.smp) || null
     }
 
-    function NN(dd, Jd) {
-      const kd = [];
-      for (const Nd of np(dd)) {
-        var pd;
-        const Wd = dd[Nd];
-        (null === (pd = Wd.smp) || void 0 === pd ? void 0 : pd.kind) === Jd && kd.push({
-          key: Nd,
-          item: Wd,
-          meta: Wd.smp
+    function wq(QQ, FQ) {
+      const wQ = [];
+      for (const qQ of zL(QQ)) {
+        var LQ;
+        const oQ = QQ[qQ];
+        (null === (LQ = oQ.smp) || void 0 === LQ ? void 0 : LQ.kind) === FQ && wQ.push({
+          key: qQ,
+          item: oQ,
+          meta: oQ.smp
         })
       }
-      return kd
+      return wQ
     }
 
-    function WN(dd, Jd) {
-      var kd;
-      return null !== (kd = NN(dd, Jd)[0]) && void 0 !== kd ? kd : null
+    function Lq(QQ, FQ) {
+      var wQ;
+      return null !== (wQ = wq(QQ, FQ)[0]) && void 0 !== wQ ? wQ : null
     }
-    const PN = "50% 0% 50% 0%",
-      ZN = [{
+    const qq = "50% 0% 50% 0%",
+      oq = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -2929,746 +2929,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function gN(dd) {
-      const Jd = dd - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function Dq(QQ) {
+      const FQ = QQ - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: kd,
-          suffix: pd
+          divisor: wQ,
+          suffix: LQ
         }
-        of ZN)
-        if (Jd >= kd) return `${Math.floor(Jd/kd)}${pd}`;
+        of oq)
+        if (FQ >= wQ) return `${Math.floor(FQ/wQ)}${LQ}`;
       return "<1s"
     }
 
-    function CN(dd) {
-      const Jd = dd.map(sp.h),
-        kd = [];
-      return Jd.forEach(((dd, pd) => {
-        const Nd = function(dd) {
-            const Jd = dd.match(/\d+/);
-            return Jd ? Number(Jd[0]) : 0
-          }(dd),
-          Wd = pd === Jd.length - 1;
-        (Wd || 1 === Nd || 10 === Nd || 100 === Nd) && kd.push({
-          label: dd,
-          quantity: Nd,
-          isAll: Wd
+    function kq(QQ) {
+      const FQ = QQ.map(SL.f),
+        wQ = [];
+      return FQ.forEach(((QQ, LQ) => {
+        const qQ = function(QQ) {
+            const FQ = QQ.match(/\d+/);
+            return FQ ? Number(FQ[0]) : 0
+          }(QQ),
+          oQ = LQ === FQ.length - 1;
+        (oQ || 1 === qQ || 10 === qQ || 100 === qQ) && wQ.push({
+          label: QQ,
+          quantity: qQ,
+          isAll: oQ
         })
-      })), kd
+      })), wQ
     }
-    let KN = null;
+    let vq = null;
 
-    function oN(dd, Jd) {
-      const kd = Jd.trim().toLowerCase();
-      if (!kd) return [];
-      const pd = dd => {
-          if (dd === kd) return 0;
-          if (dd.startsWith(kd)) return 1;
-          const Jd = dd.indexOf(kd);
-          return -1 === Jd ? -1 : 2 + Jd
+    function mq(QQ, FQ) {
+      const wQ = FQ.trim().toLowerCase();
+      if (!wQ) return [];
+      const LQ = QQ => {
+          if (QQ === wQ) return 0;
+          if (QQ.startsWith(wQ)) return 1;
+          const FQ = QQ.indexOf(wQ);
+          return -1 === FQ ? -1 : 2 + FQ
         },
-        Nd = [];
-      for (const Zd of dd) {
-        const dd = [pd(Zd.lowerLabel), pd(Zd.lowerName)].filter((dd => -1 !== dd));
-        dd.length && Nd.push({
-          item: Zd,
-          rank: Math.min(...dd)
+        qQ = [];
+      for (const kQ of QQ) {
+        const QQ = [LQ(kQ.lowerLabel), LQ(kQ.lowerName)].filter((QQ => -1 !== QQ));
+        QQ.length && qQ.push({
+          item: kQ,
+          rank: Math.min(...QQ)
         })
       }
-      if (Nd.length > 0) return Nd.sort(((dd, Jd) => dd.rank - Jd.rank)).map((dd => dd.item));
-      const Wd = [...kd],
-        Pd = dd => {
-          let Jd = 0;
-          for (const kd of Wd) {
-            if (Jd = dd.indexOf(kd, Jd), -1 === Jd) return !1;
-            Jd++
+      if (qQ.length > 0) return qQ.sort(((QQ, FQ) => QQ.rank - FQ.rank)).map((QQ => QQ.item));
+      const oQ = [...wQ],
+        DQ = QQ => {
+          let FQ = 0;
+          for (const wQ of oQ) {
+            if (FQ = QQ.indexOf(wQ, FQ), -1 === FQ) return !1;
+            FQ++
           }
           return !0
         };
-      return dd.filter((dd => Pd(dd.lowerLabel) || Pd(dd.lowerName)))
+      return QQ.filter((QQ => DQ(QQ.lowerLabel) || DQ(QQ.lowerName)))
     }
 
-    function lN(dd, Jd) {
-      var kd;
-      return null !== (kd = null === dd || void 0 === dd ? void 0 : dd[Jd]) && void 0 !== kd ? kd : Jd
+    function uq(QQ, FQ) {
+      var wQ;
+      return null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ[FQ]) && void 0 !== wQ ? wQ : FQ
     }
 
-    function QN(dd, Jd) {
-      const kd = dd.userInput;
-      return void 0 !== Jd && "dropdown" === (null === kd || void 0 === kd ? void 0 : kd.type) && kd.dropdownOptions.map(sp.h).includes(Jd) ? Jd : function(dd) {
-        const Jd = dd.userInput;
-        if ("dropdown" !== (null === Jd || void 0 === Jd ? void 0 : Jd.type) || 0 === Jd.dropdownOptions.length) return null;
-        const kd = Jd.dropdownOptions.map(sp.h);
-        return Jd.initialValue && kd.includes(Jd.initialValue) ? Jd.initialValue : kd[kd.length - 1]
-      }(dd)
+    function Hq(QQ, FQ) {
+      const wQ = QQ.userInput;
+      return void 0 !== FQ && "dropdown" === (null === wQ || void 0 === wQ ? void 0 : wQ.type) && wQ.dropdownOptions.map(SL.f).includes(FQ) ? FQ : function(QQ) {
+        const FQ = QQ.userInput;
+        if ("dropdown" !== (null === FQ || void 0 === FQ ? void 0 : FQ.type) || 0 === FQ.dropdownOptions.length) return null;
+        const wQ = FQ.dropdownOptions.map(SL.f);
+        return FQ.initialValue && wQ.includes(FQ.initialValue) ? FQ.initialValue : wQ[wQ.length - 1]
+      }(QQ)
     }
 
-    function LN(dd) {
-      return void 0 === dd ? "" : JSON.stringify(dd)
+    function bq(QQ) {
+      return void 0 === QQ ? "" : JSON.stringify(QQ)
     }
-    const ON = (0, pd.createContext)(null);
+    const Yq = (0, LQ.createContext)(null);
 
-    function eN() {
-      return (0, pd.useContext)(ON)
+    function xq() {
+      return (0, LQ.useContext)(Yq)
     }
-    var RN = kd(2581);
-    const IN = (0, pd.memo)((function(dd) {
+    var Aq = wQ(2609);
+    const tq = (0, LQ.memo)((function(QQ) {
         let {
-          name: Jd,
-          label: kd,
-          onPick: pd
-        } = dd;
-        return (0, od.jsxs)("button", {
+          name: FQ,
+          label: wQ,
+          onPick: LQ
+        } = QQ;
+        return (0, HQ.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: kd,
+          title: wQ,
           onClick: () => {
-            pd(Jd)
+            LQ(FQ)
           },
-          children: [(0, od.jsx)(Ep, {
-            item: Jd,
+          children: [(0, HQ.jsx)(fL, {
+            item: FQ,
             size: "big"
-          }), (0, od.jsx)("span", {
-            children: kd
+          }), (0, HQ.jsx)("span", {
+            children: wQ
           })]
         })
       })),
-      GN = (0, pd.memo)((function(dd) {
+      eq = (0, LQ.memo)((function(QQ) {
         let {
-          items: Jd,
-          query: kd,
-          onPick: Nd
-        } = dd;
+          items: FQ,
+          query: wQ,
+          onPick: qQ
+        } = QQ;
         const {
-          t: Wd
-        } = (0, Pd.B)(), [Zd, gd] = (0, pd.useState)(new Set), Cd = (0, pd.useMemo)((() => function(dd) {
-          const Jd = new Map;
-          for (const kd of dd) {
-            let dd = Jd.get(kd.category);
-            dd || (dd = [], Jd.set(kd.category, dd)), dd.push(kd)
+          t: oQ
+        } = (0, DQ.y)(), [kQ, vQ] = (0, LQ.useState)(new Set), mQ = (0, LQ.useMemo)((() => function(QQ) {
+          const FQ = new Map;
+          for (const wQ of QQ) {
+            let QQ = FQ.get(wQ.category);
+            QQ || (QQ = [], FQ.set(wQ.category, QQ)), QQ.push(wQ)
           }
-          return [...JN, "other"].filter((dd => Jd.has(dd))).map((dd => ({
-            category: dd,
-            items: Jd.get(dd)
+          return [...dL, "other"].filter((QQ => FQ.has(QQ))).map((QQ => ({
+            category: QQ,
+            items: FQ.get(QQ)
           })))
-        }(Jd)), [Jd]), Kd = (0, pd.useMemo)((() => oN(Jd, kd).slice(0, 60)), [Jd, kd]);
-        return kd.trim() ? 0 === Kd.length ? (0, od.jsx)(rp, {
-          title: Wd("smpShop:noItemsFound", {
-            query: kd.trim()
+        }(FQ)), [FQ]), uQ = (0, LQ.useMemo)((() => mq(FQ, wQ).slice(0, 60)), [FQ, wQ]);
+        return wQ.trim() ? 0 === uQ.length ? (0, HQ.jsx)(JL, {
+          title: oQ("smpShop:noItemsFound", {
+            query: wQ.trim()
           }),
-          children: Wd("smpShop:tryShorterName")
-        }) : (0, od.jsx)(RN.b, {
+          children: oQ("smpShop:tryShorterName")
+        }) : (0, HQ.jsx)(Aq.e, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: PN,
-          observerUpdateDeps: [kd],
-          children: Kd.map((dd => (0, od.jsx)(IN, {
-            name: dd.name,
-            label: dd.label,
-            onPick: Nd
-          }, dd.name)))
-        }) : (0, od.jsx)(od.Fragment, {
-          children: Cd.map((dd => {
+          rootMargin: qq,
+          observerUpdateDeps: [wQ],
+          children: uQ.map((QQ => (0, HQ.jsx)(tq, {
+            name: QQ.name,
+            label: QQ.label,
+            onPick: qQ
+          }, QQ.name)))
+        }) : (0, HQ.jsx)(HQ.Fragment, {
+          children: mQ.map((QQ => {
             let {
-              category: Jd,
-              items: kd
-            } = dd;
-            const pd = Zd.has(Jd) || kd.length <= 48,
-              Pd = pd ? kd : kd.slice(0, 48);
-            return (0, od.jsxs)("section", {
+              category: FQ,
+              items: wQ
+            } = QQ;
+            const LQ = kQ.has(FQ) || wQ.length <= 48,
+              DQ = LQ ? wQ : wQ.slice(0, 48);
+            return (0, HQ.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, od.jsxs)("h4", {
-                children: [Wd("other" === Jd ? "smpShop:otherItems" : `creativeInventory:${Jd}`), !pd && (0, od.jsx)("button", {
+              children: [(0, HQ.jsxs)("h4", {
+                children: [oQ("other" === FQ ? "smpShop:otherItems" : `creativeInventory:${FQ}`), !LQ && (0, HQ.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    gd(new Set([...Zd, Jd]))
+                    vQ(new Set([...kQ, FQ]))
                   },
-                  children: Wd("smpShop:showAll", {
-                    count: kd.length
+                  children: oQ("smpShop:showAll", {
+                    count: wQ.length
                   })
                 })]
-              }), (0, od.jsx)(RN.b, {
+              }), (0, HQ.jsx)(Aq.e, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: PN,
-                observerUpdateDeps: [pd],
-                children: Pd.map((dd => (0, od.jsx)(IN, {
-                  name: dd.name,
-                  label: dd.label,
-                  onPick: Nd
-                }, dd.name)))
+                rootMargin: qq,
+                observerUpdateDeps: [LQ],
+                children: DQ.map((QQ => (0, HQ.jsx)(tq, {
+                  name: QQ.name,
+                  label: QQ.label,
+                  onPick: qQ
+                }, QQ.name)))
               })]
-            }, Jd)
+            }, FQ)
           }))
         })
       }));
 
-    function vN(dd, Jd) {
+    function Mq(QQ, FQ) {
       const {
-        searched: kd,
-        shown: Nd,
-        searchFor: Wd,
-        loading: Pd
-      } = function(dd, Jd) {
-        var kd;
-        const Nd = eN(),
-          [Wd, Pd] = (0, pd.useState)(void 0),
-          Zd = (0, pd.useRef)(void 0),
-          gd = (0, pd.useRef)(0),
-          Cd = (0, pd.useRef)(void 0),
-          Kd = null !== (kd = null === dd || void 0 === dd ? void 0 : dd.meta.item) && void 0 !== kd ? kd : null,
-          od = !!dd && Nd.isPending(dd.key);
-        (0, pd.useEffect)((() => {
-          if (!dd || od || !Jd || void 0 === Wd || Wd === Kd) return;
-          const kd = Wd === Zd.current && Nd.gaveUpAt(dd.key) > gd.current && Cd.current !== Wd;
-          (Wd !== Zd.current || kd) && Nd.act(dd.key, null !== Wd && void 0 !== Wd ? Wd : "*", kd) && (kd && (Cd.current = Wd), Zd.current = Wd, gd.current = Date.now())
-        }), [dd, od, Jd, Wd, Kd, Nd]);
-        const ld = (0, pd.useCallback)((dd => {
-            Zd.current = void 0, Cd.current = void 0, Pd(dd)
+        searched: wQ,
+        shown: qQ,
+        searchFor: oQ,
+        loading: DQ
+      } = function(QQ, FQ) {
+        var wQ;
+        const qQ = xq(),
+          [oQ, DQ] = (0, LQ.useState)(void 0),
+          kQ = (0, LQ.useRef)(void 0),
+          vQ = (0, LQ.useRef)(0),
+          mQ = (0, LQ.useRef)(void 0),
+          uQ = null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ.meta.item) && void 0 !== wQ ? wQ : null,
+          HQ = !!QQ && qQ.isPending(QQ.key);
+        (0, LQ.useEffect)((() => {
+          if (!QQ || HQ || !FQ || void 0 === oQ || oQ === uQ) return;
+          const wQ = oQ === kQ.current && qQ.gaveUpAt(QQ.key) > vQ.current && mQ.current !== oQ;
+          (oQ !== kQ.current || wQ) && qQ.act(QQ.key, null !== oQ && void 0 !== oQ ? oQ : "*", wQ) && (wQ && (mQ.current = oQ), kQ.current = oQ, vQ.current = Date.now())
+        }), [QQ, HQ, FQ, oQ, uQ, qQ]);
+        const bQ = (0, LQ.useCallback)((QQ => {
+            kQ.current = void 0, mQ.current = void 0, DQ(QQ)
           }), []),
-          Qd = void 0 !== Wd && Wd !== Kd && (od || Zd.current !== Wd);
+          YQ = void 0 !== oQ && oQ !== uQ && (HQ || kQ.current !== oQ);
         return {
-          searched: Kd,
-          shown: Qd ? Wd : Kd,
-          searchFor: ld,
-          loading: Qd || od || null !== Kd && !Jd
+          searched: uQ,
+          shown: YQ ? oQ : uQ,
+          searchFor: bQ,
+          loading: YQ || HQ || null !== uQ && !FQ
         }
-      }(dd, Jd), Zd = (0, pd.useMemo)((() => function() {
-        var dd;
-        let Jd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          pd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Nd = `${(0,kN.e)()}\x1f${Jd.join("\x1e")}\x1f${kd.join("\x1e")}\x1f${JSON.stringify(pd)}`;
-        if ((null === (dd = KN) || void 0 === dd ? void 0 : dd.key) === Nd) return KN.items;
-        const Wd = new Set(kd),
-          Pd = new Set,
-          Zd = [],
-          gd = (dd, Jd) => {
-            var kd;
-            if (!dd || Pd.has(dd) || Wd.has(dd)) return;
-            Pd.add(dd);
-            const Nd = null !== (kd = pd[dd]) && void 0 !== kd ? kd : dd;
-            Zd.push({
-              name: dd,
-              label: Nd,
-              lowerLabel: Nd.toLowerCase(),
-              lowerName: dd.toLowerCase(),
-              category: Jd
+      }(QQ, FQ), kQ = (0, LQ.useMemo)((() => function() {
+        var QQ;
+        let FQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          LQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const qQ = `${(0,Qq.f)()}\x1f${FQ.join("\x1e")}\x1f${wQ.join("\x1e")}\x1f${JSON.stringify(LQ)}`;
+        if ((null === (QQ = vq) || void 0 === QQ ? void 0 : QQ.key) === qQ) return vq.items;
+        const oQ = new Set(wQ),
+          DQ = new Set,
+          kQ = [],
+          vQ = (QQ, FQ) => {
+            var wQ;
+            if (!QQ || DQ.has(QQ) || oQ.has(QQ)) return;
+            DQ.add(QQ);
+            const qQ = null !== (wQ = LQ[QQ]) && void 0 !== wQ ? wQ : QQ;
+            kQ.push({
+              name: QQ,
+              label: qQ,
+              lowerLabel: qQ.toLowerCase(),
+              lowerName: QQ.toLowerCase(),
+              category: FQ
             })
           };
-        for (const Kd of (0, Ap.creativeItemIds)()) {
-          var Cd;
-          (0, Ap.itemIsDisabled)(Kd, !0, !0, !1) || (0, Ap.showOnlyInCreativeSearch)(Kd) || gd((0, kN.d)(Kd), null !== (Cd = (0, Ap.creativeCategoryOf)(Kd)) && void 0 !== Cd ? Cd : "other")
+        for (const uQ of (0, yL.creativeItemIds)()) {
+          var mQ;
+          (0, yL.itemIsDisabled)(uQ, !0, !0, !1) || (0, yL.showOnlyInCreativeSearch)(uQ) || vQ((0, Qq.e)(uQ), null !== (mQ = (0, yL.creativeCategoryOf)(uQ)) && void 0 !== mQ ? mQ : "other")
         }
-        for (const Kd of Jd) gd(Kd, "other");
-        return KN = {
-          key: Nd,
-          items: Zd
-        }, Zd
-      }(null === dd || void 0 === dd ? void 0 : dd.meta.extra, null === dd || void 0 === dd ? void 0 : dd.meta.excluded, null === dd || void 0 === dd ? void 0 : dd.meta.names)), [null === dd || void 0 === dd ? void 0 : dd.meta.extra, null === dd || void 0 === dd ? void 0 : dd.meta.excluded, null === dd || void 0 === dd ? void 0 : dd.meta.names]), [gd, Cd] = (0, pd.useState)(""), [Kd, od] = (0, pd.useState)(0), [ld, Qd] = (0, pd.useState)("recent"), Ld = (0, pd.useCallback)((dd => {
-        Cd(""), od((dd => dd + 1)), Wd(dd)
-      }), [Wd]), Od = "browse" === ld || "" !== gd.trim();
+        for (const uQ of FQ) vQ(uQ, "other");
+        return vq = {
+          key: qQ,
+          items: kQ
+        }, kQ
+      }(null === QQ || void 0 === QQ ? void 0 : QQ.meta.extra, null === QQ || void 0 === QQ ? void 0 : QQ.meta.excluded, null === QQ || void 0 === QQ ? void 0 : QQ.meta.names)), [null === QQ || void 0 === QQ ? void 0 : QQ.meta.extra, null === QQ || void 0 === QQ ? void 0 : QQ.meta.excluded, null === QQ || void 0 === QQ ? void 0 : QQ.meta.names]), [vQ, mQ] = (0, LQ.useState)(""), [uQ, HQ] = (0, LQ.useState)(0), [bQ, YQ] = (0, LQ.useState)("recent"), xQ = (0, LQ.useCallback)((QQ => {
+        mQ(""), HQ((QQ => QQ + 1)), oQ(QQ)
+      }), [oQ]), AQ = "browse" === bQ || "" !== vQ.trim();
       return {
-        searched: kd,
-        shown: Nd,
-        searchFor: Wd,
-        loading: Pd,
-        catalogue: Zd,
-        names: null === dd || void 0 === dd ? void 0 : dd.meta.names,
-        query: gd,
-        setQuery: Cd,
-        searchBoxKey: Kd,
-        pickItem: Ld,
-        setView: Qd,
-        browsing: Od
+        searched: wQ,
+        shown: qQ,
+        searchFor: oQ,
+        loading: DQ,
+        catalogue: kQ,
+        names: null === QQ || void 0 === QQ ? void 0 : QQ.meta.names,
+        query: vQ,
+        setQuery: mQ,
+        searchBoxKey: uQ,
+        pickItem: xQ,
+        setView: YQ,
+        browsing: AQ
       }
     }
 
-    function xN(dd) {
+    function Gq(QQ) {
       let {
-        browser: Jd,
-        children: kd
-      } = dd;
+        browser: FQ,
+        children: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, Pd.B)(), Nd = eN();
-      return (0, od.jsxs)("div", {
+        t: LQ
+      } = (0, DQ.y)(), qQ = xq();
+      return (0, HQ.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "SmpSearch",
-          children: (0, od.jsx)(xd.e, {
+          children: (0, HQ.jsx)(cQ.b, {
             className: "SmpSearchInput",
-            placeholderText: pd("smpShop:searchPlaceholder"),
-            defaultValue: Jd.query,
-            onValueChange: dd => {
-              Jd.setQuery(dd), Jd.searched && dd.trim() && Jd.searchFor(null)
+            placeholderText: LQ("smpShop:searchPlaceholder"),
+            defaultValue: FQ.query,
+            onValueChange: QQ => {
+              FQ.setQuery(QQ), FQ.searched && QQ.trim() && FQ.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const dd = oN(Jd.catalogue, Jd.query)[0];
-              dd ? Jd.pickItem(dd.name) : Jd.query.trim() && Nd.notify(pd("smpShop:noItemsFound", {
-                query: Jd.query.trim()
+              const QQ = mq(FQ.catalogue, FQ.query)[0];
+              QQ ? FQ.pickItem(QQ.name) : FQ.query.trim() && qQ.notify(LQ("smpShop:noItemsFound", {
+                query: FQ.query.trim()
               }))
             }
-          }, Jd.searchBoxKey)
-        }), kd]
+          }, FQ.searchBoxKey)
+        }), wQ]
       })
     }
 
-    function qN(dd) {
+    function pq(QQ) {
       let {
-        browser: Jd,
-        recentLabel: kd,
-        children: pd
-      } = dd;
+        browser: FQ,
+        recentLabel: wQ,
+        children: LQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, Pd.B)();
-      return (0, od.jsxs)("div", {
+        t: qQ
+      } = (0, DQ.y)();
+      return (0, HQ.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, od.jsx)(Vp, {
+        children: [(0, HQ.jsx)(nL, {
           options: [{
             value: "recent",
-            label: kd
+            label: wQ
           }, {
             value: "browse",
-            label: Nd("smpShop:browseItems")
+            label: qQ("smpShop:browseItems")
           }],
-          value: Jd.browsing ? "browse" : "recent",
-          onChange: Jd.setView,
-          ariaLabel: Nd("smpShop:show")
-        }), !Jd.browsing && pd]
+          value: FQ.browsing ? "browse" : "recent",
+          onChange: FQ.setView,
+          ariaLabel: qQ("smpShop:show")
+        }), !FQ.browsing && LQ]
       })
     }
 
-    function BN(dd) {
+    function cq(QQ) {
       let {
-        item: Jd,
-        names: kd,
-        summary: pd,
-        onBack: Nd,
-        children: Wd
-      } = dd;
+        item: FQ,
+        names: wQ,
+        summary: LQ,
+        onBack: qQ,
+        children: oQ
+      } = QQ;
       const {
-        t: Zd
-      } = (0, Pd.B)();
-      return (0, od.jsxs)("div", {
+        t: kQ
+      } = (0, DQ.y)();
+      return (0, HQ.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, od.jsx)(Cd.b, {
+        children: [(0, HQ.jsx)(mQ.b, {
           className: "SmpBackButton",
-          onClick: Nd,
-          children: Zd("general:back")
-        }), (0, od.jsx)(Ep, {
-          item: Jd,
+          onClick: qQ,
+          children: kQ("general:back")
+        }), (0, HQ.jsx)(fL, {
+          item: FQ,
           size: "big"
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, od.jsx)("b", {
-            children: lN(kd, Jd)
-          }), pd && (0, od.jsx)("small", {
-            children: pd
+          children: [(0, HQ.jsx)("b", {
+            children: uq(wQ, FQ)
+          }), LQ && (0, HQ.jsx)("small", {
+            children: LQ
           })]
-        }), Wd]
+        }), oQ]
       })
     }
 
-    function sN(dd) {
+    function Cq(QQ) {
       let {
-        browser: Jd,
-        className: kd,
-        action: pd,
-        above: Nd,
-        list: Pd,
-        summary: Zd,
-        recentLabel: gd,
-        listControls: Cd,
-        onBack: Kd
-      } = dd;
-      return (0, od.jsxs)("div", {
-        className: Wd()("SmpScreen", kd),
-        children: [(0, od.jsx)(xN, {
-          browser: Jd,
-          children: pd
-        }), Jd.shown && (0, od.jsx)(BN, {
-          item: Jd.shown,
-          names: Jd.names,
-          summary: !Jd.loading && Zd,
+        browser: FQ,
+        className: wQ,
+        action: LQ,
+        above: qQ,
+        list: DQ,
+        summary: kQ,
+        recentLabel: vQ,
+        listControls: mQ,
+        onBack: uQ
+      } = QQ;
+      return (0, HQ.jsxs)("div", {
+        className: oQ()("SmpScreen", wQ),
+        children: [(0, HQ.jsx)(Gq, {
+          browser: FQ,
+          children: LQ
+        }), FQ.shown && (0, HQ.jsx)(cq, {
+          item: FQ.shown,
+          names: FQ.names,
+          summary: !FQ.loading && kQ,
           onBack: () => {
-            null === Kd || void 0 === Kd || Kd(), Jd.searchFor(null)
+            null === uQ || void 0 === uQ || uQ(), FQ.searchFor(null)
           },
-          children: Cd
-        }), Nd, Jd.shown ? Pd : (0, od.jsxs)(od.Fragment, {
-          children: [(0, od.jsx)(qN, {
-            browser: Jd,
-            recentLabel: gd,
-            children: Cd
-          }), Jd.browsing ? (0, od.jsx)(GN, {
-            items: Jd.catalogue,
-            query: Jd.query,
-            onPick: Jd.pickItem
-          }) : Pd]
+          children: mQ
+        }), qQ, FQ.shown ? DQ : (0, HQ.jsxs)(HQ.Fragment, {
+          children: [(0, HQ.jsx)(pq, {
+            browser: FQ,
+            recentLabel: vQ,
+            children: mQ
+          }), FQ.browsing ? (0, HQ.jsx)(eq, {
+            items: FQ.catalogue,
+            query: FQ.query,
+            onPick: FQ.pickItem
+          }) : DQ]
         })]
       })
     }
 
-    function iN(dd, Jd) {
-      const kd = dd.map((dd => {
+    function Sq(QQ, FQ) {
+      const wQ = QQ.map((QQ => {
         let {
-          meta: Jd
-        } = dd;
-        return Jd.pricePerItem
+          meta: FQ
+        } = QQ;
+        return FQ.pricePerItem
       }));
-      return "min" === Jd ? Math.min(...kd) : Math.max(...kd)
+      return "min" === FQ ? Math.min(...wQ) : Math.max(...wQ)
     }
-    var aN = kd(6435);
-    const MN = (0, pd.memo)((function(dd) {
-      var Jd;
+    var iq = wQ(6386);
+    const Wq = (0, LQ.memo)((function(QQ) {
+      var FQ;
       const {
-        t: kd
-      } = (0, Pd.B)(), pd = null === dd.seller, Nd = dd.quantity * dd.pricePerItem;
-      return (0, od.jsxs)("div", {
-        className: dd.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, od.jsx)(Ep, {
-          item: dd.item,
-          amount: dd.quantity,
-          size: dd.grid ? "big" : "normal",
-          tier: dd.tier
-        }), (0, od.jsxs)("div", {
+        t: wQ
+      } = (0, DQ.y)(), LQ = null === QQ.seller, qQ = QQ.quantity * QQ.pricePerItem;
+      return (0, HQ.jsxs)("div", {
+        className: QQ.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, HQ.jsx)(fL, {
+          item: QQ.item,
+          amount: QQ.quantity,
+          size: QQ.grid ? "big" : "normal",
+          tier: QQ.tier
+        }), (0, HQ.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, od.jsx)("b", {
-            children: (0, od.jsx)(Fp.c, {
-              text: null !== (Jd = dd.title) && void 0 !== Jd ? Jd : `${dd.quantity}x ${dd.item}`
+          children: [(0, HQ.jsx)("b", {
+            children: (0, HQ.jsx)(OL.e, {
+              text: null !== (FQ = QQ.title) && void 0 !== FQ ? FQ : `${QQ.quantity}x ${QQ.item}`
             })
-          }), (0, od.jsxs)("small", {
+          }), (0, HQ.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, od.jsx)("span", {
-              children: pd ? kd("smpShop:you") : (0, od.jsx)(Fp.c, {
+            children: [(0, HQ.jsx)("span", {
+              children: LQ ? wQ("smpShop:you") : (0, HQ.jsx)(OL.e, {
                 text: [{
-                  entityName: dd.seller
+                  entityName: QQ.seller
                 }]
               })
-            }), (0, od.jsx)("span", {
-              children: kd("smpShop:timeLeft", {
-                time: gN(dd.expiresAt)
+            }), (0, HQ.jsx)("span", {
+              children: wQ("smpShop:timeLeft", {
+                time: Dq(QQ.expiresAt)
               })
             })]
           })]
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, od.jsx)(cp, {
-            amount: dd.pricePerItem
-          }), (0, od.jsx)("small", {
-            children: kd("smpShop:each")
+          children: [(0, HQ.jsx)(VL, {
+            amount: QQ.pricePerItem
+          }), (0, HQ.jsx)("small", {
+            children: wQ("smpShop:each")
           })]
-        }), (0, od.jsx)(Cd.d, {
+        }), (0, HQ.jsx)(mQ.f, {
           className: "SmpBuyButton",
-          disabled: pd || !dd.canAfford && !dd.busy,
-          loading: dd.busy,
+          disabled: LQ || !QQ.canAfford && !QQ.busy,
+          loading: QQ.busy,
           onClick: () => {
-            dd.onBuy(dd.itemKey)
+            QQ.onBuy(QQ.itemKey)
           },
-          children: pd ? kd("smpShop:yours") : (0, od.jsx)(cp, {
-            amount: Nd
+          children: LQ ? wQ("smpShop:yours") : (0, HQ.jsx)(VL, {
+            amount: qQ
           })
         })]
       })
     }));
 
-    function FN(dd) {
+    function Rq(QQ) {
       let {
-        view: Jd,
-        onChange: kd
-      } = dd;
+        view: FQ,
+        onChange: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, Pd.B)();
-      return (0, od.jsx)(Dp.c, {
+        t: LQ
+      } = (0, DQ.y)();
+      return (0, HQ.jsx)(aL.c, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: pd("smpShop:layout"),
+        ariaLabel: LQ("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, od.jsx)(Zd.e, {
+          label: (0, HQ.jsx)(kQ.c, {
             name: "list"
           }),
-          ariaLabel: pd("smpShop:listView")
+          ariaLabel: LQ("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, od.jsx)(Zd.e, {
+          label: (0, HQ.jsx)(kQ.c, {
             name: "grid-2"
           }),
-          ariaLabel: pd("smpShop:gridView")
+          ariaLabel: LQ("smpShop:gridView")
         }],
-        value: Jd,
-        onChange: kd
+        value: FQ,
+        onChange: wQ
       })
     }
 
-    function YN(dd) {
+    function Oq(QQ) {
       let {
-        entries: Jd,
-        view: kd
-      } = dd;
+        entries: FQ,
+        view: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, Pd.B)(), Nd = eN(), Wd = "grid" === kd;
-      return (0, od.jsxs)(od.Fragment, {
-        children: [!Wd && (0, od.jsxs)("div", {
+        t: LQ
+      } = (0, DQ.y)(), qQ = xq(), oQ = "grid" === wQ;
+      return (0, HQ.jsxs)(HQ.Fragment, {
+        children: [!oQ && (0, HQ.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, od.jsx)("span", {}), (0, od.jsx)("span", {
-            children: pd("smpShop:columnItem")
-          }), (0, od.jsx)("span", {
-            children: pd("smpShop:columnPriceEach")
-          }), (0, od.jsx)("span", {
-            children: pd("smpShop:columnTotal")
+          children: [(0, HQ.jsx)("span", {}), (0, HQ.jsx)("span", {
+            children: LQ("smpShop:columnItem")
+          }), (0, HQ.jsx)("span", {
+            children: LQ("smpShop:columnPriceEach")
+          }), (0, HQ.jsx)("span", {
+            children: LQ("smpShop:columnTotal")
           })]
-        }), (0, od.jsx)(RN.b, {
-          lazyLoadedClassName: Wd ? "SmpCardGrid" : "SmpList",
+        }), (0, HQ.jsx)(Aq.e, {
+          lazyLoadedClassName: oQ ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: PN,
-          observerUpdateDeps: [Jd.length],
-          children: Jd.map((dd => {
-            var Jd, kd;
+          rootMargin: qq,
+          observerUpdateDeps: [FQ.length],
+          children: FQ.map((QQ => {
+            var FQ, wQ;
             let {
-              key: pd,
-              item: Pd,
-              meta: Zd
-            } = dd;
-            const gd = Zd.quantity * Zd.pricePerItem;
-            return (0, od.jsx)(MN, {
-              itemKey: pd,
-              item: Zd.item,
-              title: Pd.customTitle,
-              quantity: Zd.quantity,
-              pricePerItem: Zd.pricePerItem,
-              seller: Zd.seller,
-              expiresAt: Zd.expiresAt,
-              tier: null !== (Jd = null === (kd = Pd.enchant) || void 0 === kd ? void 0 : kd.tier) && void 0 !== Jd ? Jd : null,
-              busy: Nd.isPending(pd) || null !== Zd.seller && !1 === Pd.canBuy,
-              canAfford: Nd.canAfford(Pd, gd),
-              grid: Wd,
-              onBuy: Nd.act
-            }, pd)
+              key: LQ,
+              item: DQ,
+              meta: kQ
+            } = QQ;
+            const vQ = kQ.quantity * kQ.pricePerItem;
+            return (0, HQ.jsx)(Wq, {
+              itemKey: LQ,
+              item: kQ.item,
+              title: DQ.customTitle,
+              quantity: kQ.quantity,
+              pricePerItem: kQ.pricePerItem,
+              seller: kQ.seller,
+              expiresAt: kQ.expiresAt,
+              tier: null !== (FQ = null === (wQ = DQ.enchant) || void 0 === wQ ? void 0 : wQ.tier) && void 0 !== FQ ? FQ : null,
+              busy: qQ.isPending(LQ) || null !== kQ.seller && !1 === DQ.canBuy,
+              canAfford: qQ.canAfford(DQ, vQ),
+              grid: oQ,
+              onBuy: qQ.act
+            }, LQ)
           }))
-        }, kd)]
+        }, wQ)]
       })
     }
-    const mN = [1, 10, 100],
-      bN = [1, 10, 100, 999];
+    const sq = [1, 10, 100],
+      rq = [1, 10, 100, 999];
 
-    function SN(dd) {
-      var Jd, kd, Nd, gd, Kd, ld, Qd, Ld, Od, ed;
+    function Iq(QQ) {
+      var FQ, wQ, qQ, vQ, uQ, bQ, YQ, xQ, AQ, tQ;
       const {
-        t: Rd
-      } = (0, Pd.B)(), Id = eN(), {
-        creator: Gd,
-        mode: vd
-      } = dd, [qd, Bd] = (0, pd.useState)(null !== (Jd = null === Gd || void 0 === Gd ? void 0 : Gd.meta.item) && void 0 !== Jd ? Jd : null), [sd, ad] = (0, pd.useState)(1), [Md, Fd] = (0, pd.useState)(0), [Yd, md] = (0, pd.useState)(""), [bd, Sd] = (0, pd.useState)(0), jd = (0, pd.useRef)(qd), Xd = (0, pd.useRef)(!1), [fd, nd] = (0, pd.useState)(!1), Ud = null !== (kd = null === Gd || void 0 === Gd ? void 0 : Gd.meta.item) && void 0 !== kd ? kd : null, yd = null !== (Nd = null === Gd || void 0 === Gd ? void 0 : Gd.meta.owned) && void 0 !== Nd ? Nd : 0;
-      (0, pd.useEffect)((() => {
-        dd.searching || null === Ud || Ud === jd.current || (jd.current = Ud, Xd.current = !1, Bd(Ud), Fd(0), ad("list" === vd ? Math.max(1, yd) : 1))
-      }), [Ud, dd.searching]);
-      const Dd = !!Gd && !!qd && Gd.meta.item === qd,
-        Td = Dd ? Gd.meta.owned : null !== (gd = null === (Kd = dd.inventory) || void 0 === Kd || null === (ld = Kd.find((dd => dd.item === qd))) || void 0 === ld ? void 0 : ld.quantity) && void 0 !== gd ? gd : 0,
-        Ed = "list" === vd ? Math.max(1, Td) : 45954,
-        cd = null !== (Qd = dd.prices[0]) && void 0 !== Qd ? Qd : null,
-        hd = dd.prices.length ? Math.round(dd.prices.reduce(((dd, Jd) => dd + Jd), 0) / dd.prices.length) : null,
-        rd = null === (Ld = dd.inventory) || void 0 === Ld || null === (Od = Ld.find((dd => dd.item === qd))) || void 0 === Od ? void 0 : Od.sellPrice;
-      (0, pd.useEffect)((() => {
-        var dd;
-        Dd && (ad((dd => "list" === vd ? Math.min(Math.max(1, dd), Math.max(1, Td)) : dd)), Xd.current || Fd(null !== (dd = null !== cd && void 0 !== cd ? cd : hd) && void 0 !== dd ? dd : Math.max(1, null !== rd && void 0 !== rd ? rd : 1)))
-      }), [Dd, Td, qd, cd, hd]);
-      const ud = dd => {
-          Xd.current = !0, Fd(dd)
+        t: eQ
+      } = (0, DQ.y)(), MQ = xq(), {
+        creator: GQ,
+        mode: pQ
+      } = QQ, [CQ, SQ] = (0, LQ.useState)(null !== (FQ = null === GQ || void 0 === GQ ? void 0 : GQ.meta.item) && void 0 !== FQ ? FQ : null), [iQ, WQ] = (0, LQ.useState)(1), [RQ, OQ] = (0, LQ.useState)(0), [sQ, rQ] = (0, LQ.useState)(""), [IQ, UQ] = (0, LQ.useState)(0), NQ = (0, LQ.useRef)(CQ), TQ = (0, LQ.useRef)(!1), [KQ, zQ] = (0, LQ.useState)(!1), lQ = null !== (wQ = null === GQ || void 0 === GQ ? void 0 : GQ.meta.item) && void 0 !== wQ ? wQ : null, jQ = null !== (qQ = null === GQ || void 0 === GQ ? void 0 : GQ.meta.owned) && void 0 !== qQ ? qQ : 0;
+      (0, LQ.useEffect)((() => {
+        QQ.searching || null === lQ || lQ === NQ.current || (NQ.current = lQ, TQ.current = !1, SQ(lQ), OQ(0), WQ("list" === pQ ? Math.max(1, jQ) : 1))
+      }), [lQ, QQ.searching]);
+      const aQ = !!GQ && !!CQ && GQ.meta.item === CQ,
+        XQ = aQ ? GQ.meta.owned : null !== (vQ = null === (uQ = QQ.inventory) || void 0 === uQ || null === (bQ = uQ.find((QQ => QQ.item === CQ))) || void 0 === bQ ? void 0 : bQ.quantity) && void 0 !== vQ ? vQ : 0,
+        fQ = "list" === pQ ? Math.max(1, XQ) : 45954,
+        VQ = null !== (YQ = QQ.prices[0]) && void 0 !== YQ ? YQ : null,
+        hQ = QQ.prices.length ? Math.round(QQ.prices.reduce(((QQ, FQ) => QQ + FQ), 0) / QQ.prices.length) : null,
+        JQ = null === (xQ = QQ.inventory) || void 0 === xQ || null === (AQ = xQ.find((QQ => QQ.item === CQ))) || void 0 === AQ ? void 0 : AQ.sellPrice;
+      (0, LQ.useEffect)((() => {
+        var QQ;
+        aQ && (WQ((QQ => "list" === pQ ? Math.min(Math.max(1, QQ), Math.max(1, XQ)) : QQ)), TQ.current || OQ(null !== (QQ = null !== VQ && void 0 !== VQ ? VQ : hQ) && void 0 !== QQ ? QQ : Math.max(1, null !== JQ && void 0 !== JQ ? JQ : 1)))
+      }), [aQ, XQ, CQ, VQ, hQ]);
+      const EQ = QQ => {
+          TQ.current = !0, OQ(QQ)
         },
-        td = Jd => {
-          var kd, pd, Nd;
-          jd.current = Jd, Xd.current = !1, nd(!1), md(""), Sd((dd => dd + 1)), Bd(Jd), Fd(0), ad("list" === vd && null !== (kd = null === (pd = dd.inventory) || void 0 === pd || null === (Nd = pd.find((dd => dd.item === Jd))) || void 0 === Nd ? void 0 : Nd.quantity) && void 0 !== kd ? kd : 1), (null === Gd || void 0 === Gd ? void 0 : Gd.meta.item) !== Jd && dd.onPickItem(Jd)
+        nQ = FQ => {
+          var wQ, LQ, qQ;
+          NQ.current = FQ, TQ.current = !1, zQ(!1), rQ(""), UQ((QQ => QQ + 1)), SQ(FQ), OQ(0), WQ("list" === pQ && null !== (wQ = null === (LQ = QQ.inventory) || void 0 === LQ || null === (qQ = LQ.find((QQ => QQ.item === FQ))) || void 0 === qQ ? void 0 : qQ.quantity) && void 0 !== wQ ? wQ : 1), (null === GQ || void 0 === GQ ? void 0 : GQ.meta.item) !== FQ && QQ.onPickItem(FQ)
         },
-        Vd = sd * Md,
-        zd = "list" === vd && null !== Gd && void 0 !== Gd && Gd.meta.fee ? function(dd, Jd) {
-          const kd = Math.max(0, Jd - dd.taxFreeAllowance);
-          return Math.ceil(Math.round(kd * dd.rate * 1e6) / 1e6)
-        }(Gd.meta.fee, Vd) : 0,
-        Hd = !!Gd && Id.isPending(Gd.key),
-        wd = Dd && !dd.searching && sd >= 1 && Md >= 1 && ("order" === vd || Td >= sd) && !Hd,
-        Ad = !!qd && !Dd && !dd.searching && sd >= 1 && Md >= 1,
-        dJ = () => {
-          wd ? Id.act(Gd.key, `${sd}|${Md}`) : Ad && (dd.onPickItem(qd), nd(!0))
+        gQ = iQ * RQ,
+        PQ = "list" === pQ && null !== GQ && void 0 !== GQ && GQ.meta.fee ? function(QQ, FQ) {
+          const wQ = Math.max(0, FQ - QQ.taxFreeAllowance);
+          return Math.ceil(Math.round(wQ * QQ.rate * 1e6) / 1e6)
+        }(GQ.meta.fee, gQ) : 0,
+        ZQ = !!GQ && MQ.isPending(GQ.key),
+        yQ = aQ && !QQ.searching && iQ >= 1 && RQ >= 1 && ("order" === pQ || XQ >= iQ) && !ZQ,
+        BQ = !!CQ && !aQ && !QQ.searching && iQ >= 1 && RQ >= 1,
+        dQ = () => {
+          yQ ? MQ.act(GQ.key, `${iQ}|${RQ}`) : BQ && (QQ.onPickItem(CQ), zQ(!0))
         };
-      (0, pd.useEffect)((() => {
-        fd && Dd && !dd.searching && (nd(!1), dJ())
-      }), [fd, Dd, dd.searching]);
-      const JJ = !!qd && !Dd && (dd.searching || fd),
-        kJ = qd ? lN(dd.names, qd) : "",
-        pJ = (0, pd.useMemo)((() => oN(dd.catalogue, Yd).slice(0, 8)), [dd.catalogue, Yd]),
-        NJ = ("list" === vd ? mN.filter((dd => dd < Td)) : bN).map((dd => ({
-          value: dd,
-          label: String(dd)
+      (0, LQ.useEffect)((() => {
+        KQ && aQ && !QQ.searching && (zQ(!1), dQ())
+      }), [KQ, aQ, QQ.searching]);
+      const QF = !!CQ && !aQ && (QQ.searching || KQ),
+        FF = CQ ? uq(QQ.names, CQ) : "",
+        wF = (0, LQ.useMemo)((() => mq(QQ.catalogue, sQ).slice(0, 8)), [QQ.catalogue, sQ]),
+        LF = ("list" === pQ ? sq.filter((QQ => QQ < XQ)) : rq).map((QQ => ({
+          value: QQ,
+          label: String(QQ)
         })));
-      "list" === vd && Td > 0 && NJ.push({
-        value: Td,
-        label: Rd("smpShop:all", {
-          count: Td
+      "list" === pQ && XQ > 0 && LF.push({
+        value: XQ,
+        label: eQ("smpShop:all", {
+          count: XQ
         })
       });
-      const WJ = [];
-      return null !== cd && (cd > 1 && WJ.push({
-        value: cd - 1,
-        label: Rd("smpShop:undercut", {
-          price: yp(cd - 1)
+      const qF = [];
+      return null !== VQ && (VQ > 1 && qF.push({
+        value: VQ - 1,
+        label: eQ("smpShop:undercut", {
+          price: jL(VQ - 1)
         })
-      }), WJ.push({
-        value: cd,
-        label: Rd("smpShop:lowest", {
-          price: yp(cd)
+      }), qF.push({
+        value: VQ,
+        label: eQ("smpShop:lowest", {
+          price: jL(VQ)
         })
-      })), null !== hd && hd !== cd && WJ.push({
-        value: hd,
-        label: Rd("smpShop:average", {
-          price: yp(hd)
+      })), null !== hQ && hQ !== VQ && qF.push({
+        value: hQ,
+        label: eQ("smpShop:average", {
+          price: jL(hQ)
         })
-      }), (0, od.jsxs)("div", {
+      }), (0, HQ.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, od.jsxs)("div", {
+        children: [(0, HQ.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, od.jsx)("b", {
-            children: Rd("list" === vd ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, od.jsx)("button", {
+          children: [(0, HQ.jsx)("b", {
+            children: eQ("list" === pQ ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, HQ.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": Rd("smpShop:close"),
-            onClick: dd.onClose,
-            children: (0, od.jsx)(Zd.e, {
+            "aria-label": eQ("smpShop:close"),
+            onClick: QQ.onClose,
+            children: (0, HQ.jsx)(kQ.c, {
               name: "xmark"
             })
           })]
-        }), "list" === vd && (0, od.jsx)("div", {
+        }), "list" === pQ && (0, HQ.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (ed = dd.inventory) && void 0 !== ed && ed.length ? dd.inventory.map((dd => {
+          children: null !== (tQ = QQ.inventory) && void 0 !== tQ && tQ.length ? QQ.inventory.map((QQ => {
             let {
-              item: Jd,
-              quantity: kd
-            } = dd;
-            return (0, od.jsx)("button", {
+              item: FQ,
+              quantity: wQ
+            } = QQ;
+            return (0, HQ.jsx)("button", {
               type: "button",
-              title: Jd,
-              className: Wd()("SmpPickerSlot", {
-                SmpPickerSlotOn: Jd === qd
+              title: FQ,
+              className: oQ()("SmpPickerSlot", {
+                SmpPickerSlotOn: FQ === CQ
               }),
               onClick: () => {
-                td(Jd)
+                nQ(FQ)
               },
-              children: (0, od.jsx)(Ep, {
-                item: Jd,
-                amount: kd
+              children: (0, HQ.jsx)(fL, {
+                item: FQ,
+                amount: wQ
               })
-            }, Jd)
-          })) : (0, od.jsx)("span", {
+            }, FQ)
+          })) : (0, HQ.jsx)("span", {
             className: "SmpMuted",
-            children: Rd("smpShop:nothingToList")
+            children: eQ("smpShop:nothingToList")
           })
-        }), ("list" === vd || !qd) && (0, od.jsxs)("div", {
+        }), ("list" === pQ || !CQ) && (0, HQ.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, od.jsx)(xd.e, {
+          children: [(0, HQ.jsx)(cQ.b, {
             className: "SmpSearchInput",
-            placeholderText: Rd("list" === vd ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: Yd,
-            onValueChange: md,
+            placeholderText: eQ("list" === pQ ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: sQ,
+            onValueChange: rQ,
             blurOnEnter: !0,
             onEnter: () => {
-              pJ[0] && td(pJ[0].name)
+              wF[0] && nQ(wF[0].name)
             }
-          }, bd), pJ.length > 0 && (0, od.jsx)("div", {
+          }, IQ), wF.length > 0 && (0, HQ.jsx)("div", {
             className: "SmpPicker",
-            children: pJ.map((dd => {
+            children: wF.map((QQ => {
               let {
-                name: Jd
-              } = dd;
-              return (0, od.jsx)("button", {
+                name: FQ
+              } = QQ;
+              return (0, HQ.jsx)("button", {
                 type: "button",
-                title: Jd,
-                className: Wd()("SmpPickerSlot", {
-                  SmpPickerSlotOn: Jd === qd
+                title: FQ,
+                className: oQ()("SmpPickerSlot", {
+                  SmpPickerSlotOn: FQ === CQ
                 }),
                 onClick: () => {
-                  td(Jd)
+                  nQ(FQ)
                 },
-                children: (0, od.jsx)(Ep, {
-                  item: Jd
+                children: (0, HQ.jsx)(fL, {
+                  item: FQ
                 })
-              }, Jd)
+              }, FQ)
             }))
           })]
-        }), qd && (0, od.jsxs)(od.Fragment, {
-          children: [(0, od.jsxs)("div", {
+        }), CQ && (0, HQ.jsxs)(HQ.Fragment, {
+          children: [(0, HQ.jsxs)("div", {
             className: "SmpPickedName",
-            children: [kJ, JJ && (0, od.jsx)(zp, {})]
-          }), (0, od.jsxs)("div", {
+            children: [FF, QF && (0, HQ.jsx)(gL, {})]
+          }), (0, HQ.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, od.jsxs)("div", {
+            children: [(0, HQ.jsxs)("div", {
               className: "SmpField",
-              children: [(0, od.jsxs)("span", {
-                children: [Rd("smpShop:quantity"), "list" === vd && Dd && (0, od.jsx)("small", {
-                  children: Rd("smpShop:youHave", {
-                    count: Td
+              children: [(0, HQ.jsxs)("span", {
+                children: [eQ("smpShop:quantity"), "list" === pQ && aQ && (0, HQ.jsx)("small", {
+                  children: eQ("smpShop:youHave", {
+                    count: XQ
                   })
                 })]
-              }), (0, od.jsx)(Hp, {
-                value: sd,
-                onChange: ad,
-                max: Ed,
-                label: Rd("smpShop:quantity")
-              }), (0, od.jsx)(Vp, {
-                options: NJ,
-                value: sd,
-                onChange: ad,
-                ariaLabel: Rd("smpShop:quantity")
+              }), (0, HQ.jsx)(PL, {
+                value: iQ,
+                onChange: WQ,
+                max: fQ,
+                label: eQ("smpShop:quantity")
+              }), (0, HQ.jsx)(nL, {
+                options: LF,
+                value: iQ,
+                onChange: WQ,
+                ariaLabel: eQ("smpShop:quantity")
               })]
-            }), (0, od.jsxs)("div", {
+            }), (0, HQ.jsxs)("div", {
               className: "SmpField",
-              children: [(0, od.jsx)("span", {
-                children: Rd("smpShop:pricePerItem")
-              }), (0, od.jsx)(Hp, {
-                value: Math.max(1, Md),
-                onChange: ud,
+              children: [(0, HQ.jsx)("span", {
+                children: eQ("smpShop:pricePerItem")
+              }), (0, HQ.jsx)(PL, {
+                value: Math.max(1, RQ),
+                onChange: EQ,
                 max: 9999999,
-                step: wp,
-                label: Rd("smpShop:pricePerItem")
-              }), (0, od.jsx)(Vp, {
-                options: WJ,
-                value: Md,
-                onChange: ud,
-                ariaLabel: Rd("smpShop:pricePerItem")
+                step: ZL,
+                label: eQ("smpShop:pricePerItem")
+              }), (0, HQ.jsx)(nL, {
+                options: qF,
+                value: RQ,
+                onChange: EQ,
+                ariaLabel: eQ("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === vd && (0, od.jsxs)("div", {
+          }), "list" === pQ && (0, HQ.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, od.jsxs)("span", {
-              children: [Rd("smpShop:youGet"), " ", (0, od.jsx)(cp, {
-                amount: Math.max(0, Vd - zd),
+            children: [(0, HQ.jsxs)("span", {
+              children: [eQ("smpShop:youGet"), " ", (0, HQ.jsx)(VL, {
+                amount: Math.max(0, gQ - PQ),
                 exact: !0
               })]
-            }), (0, od.jsx)("small", {
-              children: zd > 0 ? Rd("smpShop:listingFee", {
-                fee: zd.toLocaleString("en-US")
-              }) : Rd("smpShop:listingRules")
+            }), (0, HQ.jsx)("small", {
+              children: PQ > 0 ? eQ("smpShop:listingFee", {
+                fee: PQ.toLocaleString("en-US")
+              }) : eQ("smpShop:listingRules")
             })]
-          }), (0, od.jsx)(Cd.n, {
+          }), (0, HQ.jsx)(mQ.s, {
             className: "SmpSubmit",
-            disabled: !wd && !Ad && !Hd,
-            loading: Hd || JJ || Dd && dd.searching,
-            onClick: dJ,
-            children: "list" === vd ? Rd("smpShop:listButton", {
-              count: sd,
-              item: kJ
-            }) : (0, od.jsxs)(od.Fragment, {
-              children: [Rd("smpShop:orderButton", {
-                count: sd,
-                item: kJ
-              }), " ", Md >= 1 && (0, od.jsx)(cp, {
-                amount: Vd
+            disabled: !yQ && !BQ && !ZQ,
+            loading: ZQ || QF || aQ && QQ.searching,
+            onClick: dQ,
+            children: "list" === pQ ? eQ("smpShop:listButton", {
+              count: iQ,
+              item: FF
+            }) : (0, HQ.jsxs)(HQ.Fragment, {
+              children: [eQ("smpShop:orderButton", {
+                count: iQ,
+                item: FF
+              }), " ", RQ >= 1 && (0, HQ.jsx)(VL, {
+                amount: gQ
               })]
             })
           })]
@@ -3676,627 +3676,627 @@ export const modules = {
       })
     }
 
-    function jN() {
-      var dd;
+    function Uq() {
+      var QQ;
       const {
-        t: Jd
-      } = (0, Pd.B)(), kd = eN(), Nd = null === (dd = kd.shopInfo[kd.categoryKey]) || void 0 === dd ? void 0 : dd.items, Wd = WN(Nd, "search"), Zd = WN(Nd, "creator"), gd = NN(Nd, "enchantedCreator"), Kd = NN(Nd, "listing"), ld = WN(Nd, "empty"), Qd = vN(Wd, Kd.length > 0 || null !== ld), {
-        searched: Ld,
-        shown: Od,
-        loading: ed
-      } = Qd, [Rd, Id] = (0, pd.useState)(!1), [Gd, vd] = function() {
-        const [dd, Jd] = (0, aN.d)("smpMarketView", "list");
-        return ["grid" === dd ? "grid" : "list", Jd]
-      }(), xd = "grid" === Gd, qd = (0, pd.useMemo)((() => Kd.filter((dd => {
+        t: FQ
+      } = (0, DQ.y)(), wQ = xq(), qQ = null === (QQ = wQ.shopInfo[wQ.categoryKey]) || void 0 === QQ ? void 0 : QQ.items, oQ = Lq(qQ, "search"), kQ = Lq(qQ, "creator"), vQ = wq(qQ, "enchantedCreator"), uQ = wq(qQ, "listing"), bQ = Lq(qQ, "empty"), YQ = Mq(oQ, uQ.length > 0 || null !== bQ), {
+        searched: xQ,
+        shown: AQ,
+        loading: tQ
+      } = YQ, [eQ, MQ] = (0, LQ.useState)(!1), [GQ, pQ] = function() {
+        const [QQ, FQ] = (0, iq.b)("smpMarketView", "list");
+        return ["grid" === QQ ? "grid" : "list", FQ]
+      }(), cQ = "grid" === GQ, CQ = (0, LQ.useMemo)((() => uQ.filter((QQ => {
         let {
-          meta: Jd
-        } = dd;
-        return null !== Jd.seller && Jd.item === Ld
-      })).map((dd => {
+          meta: FQ
+        } = QQ;
+        return null !== FQ.seller && FQ.item === xQ
+      })).map((QQ => {
         let {
-          meta: Jd
-        } = dd;
-        return Jd.pricePerItem
-      })).sort(((dd, Jd) => dd - Jd))), [Kd, Ld]), Bd = (0, pd.useMemo)((() => {
-        const dd = new Set(Qd.catalogue.map((dd => {
+          meta: FQ
+        } = QQ;
+        return FQ.pricePerItem
+      })).sort(((QQ, FQ) => QQ - FQ))), [uQ, xQ]), SQ = (0, LQ.useMemo)((() => {
+        const QQ = new Set(YQ.catalogue.map((QQ => {
           let {
-            name: Jd
-          } = dd;
-          return Jd
+            name: FQ
+          } = QQ;
+          return FQ
         })));
-        return function(dd) {
-          for (const Jd in dd)
-            if ("sell" === dd[Jd].smp) return NN(dd[Jd].items, "sell").filter((dd => {
+        return function(QQ) {
+          for (const FQ in QQ)
+            if ("sell" === QQ[FQ].smp) return wq(QQ[FQ].items, "sell").filter((QQ => {
               let {
-                item: Jd
-              } = dd;
-              return !Jd.enchant
-            })).map((dd => {
+                item: FQ
+              } = QQ;
+              return !FQ.enchant
+            })).map((QQ => {
               let {
-                meta: Jd
-              } = dd;
+                meta: FQ
+              } = QQ;
               return {
-                item: Jd.item,
-                quantity: Jd.quantity,
-                sellPrice: Jd.pricePerItem
+                item: FQ.item,
+                quantity: FQ.quantity,
+                sellPrice: FQ.pricePerItem
               }
             }));
           return []
-        }(kd.shopInfo).filter((Jd => {
+        }(wQ.shopInfo).filter((FQ => {
           let {
-            item: kd
-          } = Jd;
-          return dd.has(kd)
+            item: wQ
+          } = FQ;
+          return QQ.has(wQ)
         }))
-      }), [kd.shopInfo, Qd.catalogue]);
-      return (0, od.jsx)(sN, {
-        browser: Qd,
+      }), [wQ.shopInfo, YQ.catalogue]);
+      return (0, HQ.jsx)(Cq, {
+        browser: YQ,
         className: "SmpMarketTab",
-        recentLabel: Jd("smpShop:recentlyListed"),
-        action: (0, od.jsx)(Cd.n, {
+        recentLabel: FQ("smpShop:recentlyListed"),
+        action: (0, HQ.jsx)(mQ.s, {
           className: "SmpSellButton",
           onClick: () => {
-            Id((dd => !dd))
+            MQ((QQ => !QQ))
           },
-          children: Jd("smpShop:sell")
+          children: FQ("smpShop:sell")
         }),
-        above: Rd && (0, od.jsxs)(od.Fragment, {
-          children: [(0, od.jsx)(SN, {
+        above: eQ && (0, HQ.jsxs)(HQ.Fragment, {
+          children: [(0, HQ.jsx)(Iq, {
             mode: "list",
-            creator: Zd,
-            inventory: Bd,
-            catalogue: Qd.catalogue,
-            names: Qd.names,
-            searching: ed,
-            prices: qd,
-            onPickItem: Qd.searchFor,
+            creator: kQ,
+            inventory: SQ,
+            catalogue: YQ.catalogue,
+            names: YQ.names,
+            searching: tQ,
+            prices: CQ,
+            onPickItem: YQ.searchFor,
             onClose: () => {
-              Id(!1)
+              MQ(!1)
             }
-          }), gd.length > 0 && (0, od.jsx)(XN, {
-            entries: gd
+          }), vQ.length > 0 && (0, HQ.jsx)(Nq, {
+            entries: vQ
           })]
         }),
-        listControls: (0, od.jsx)(FN, {
-          view: Gd,
-          onChange: vd
+        listControls: (0, HQ.jsx)(Rq, {
+          view: GQ,
+          onChange: pQ
         }),
-        summary: Od && (Kd.length > 0 ? Jd(1 === Kd.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: Kd.length,
-          price: yp(iN(Kd, "min"))
-        }) : Jd("smpShop:noOneSelling", {
-          item: lN(Qd.names, Od)
+        summary: AQ && (uQ.length > 0 ? FQ(1 === uQ.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: uQ.length,
+          price: jL(Sq(uQ, "min"))
+        }) : FQ("smpShop:noOneSelling", {
+          item: uq(YQ.names, AQ)
         })),
-        list: ed ? (0, od.jsx)(hp, {
-          grid: xd
-        }) : Kd.length > 0 ? (0, od.jsx)(YN, {
-          entries: Kd,
-          view: Gd
-        }) : ld ? (0, od.jsx)(tp, {
-          entry: ld
-        }) : (0, od.jsx)(hp, {
+        list: tQ ? (0, HQ.jsx)(hL, {
+          grid: cQ
+        }) : uQ.length > 0 ? (0, HQ.jsx)(Oq, {
+          entries: uQ,
+          view: GQ
+        }) : bQ ? (0, HQ.jsx)(EL, {
+          entry: bQ
+        }) : (0, HQ.jsx)(hL, {
           count: 3,
-          grid: xd
+          grid: cQ
         })
       })
     }
 
-    function XN(dd) {
+    function Nq(QQ) {
       let {
-        entries: Jd
-      } = dd;
+        entries: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, Pd.B)(), Nd = eN(), [Wd, Zd] = (0, pd.useState)({});
-      return (0, od.jsx)("div", {
+        t: wQ
+      } = (0, DQ.y)(), qQ = xq(), [oQ, kQ] = (0, LQ.useState)({});
+      return (0, HQ.jsx)("div", {
         className: "SmpList",
-        children: Jd.map((dd => {
-          var Jd, pd, Pd;
+        children: FQ.map((QQ => {
+          var FQ, LQ, DQ;
           let {
-            key: gd,
-            item: Kd,
-            meta: ld
-          } = dd;
-          const Qd = null !== (Jd = Wd[gd]) && void 0 !== Jd ? Jd : 1;
-          return (0, od.jsxs)("div", {
+            key: vQ,
+            item: uQ,
+            meta: bQ
+          } = QQ;
+          const YQ = null !== (FQ = oQ[vQ]) && void 0 !== FQ ? FQ : 1;
+          return (0, HQ.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, od.jsx)(Ep, {
-              item: ld.item,
-              amount: ld.quantity,
-              tier: null !== (pd = null === (Pd = Kd.enchant) || void 0 === Pd ? void 0 : Pd.tier) && void 0 !== pd ? pd : null
-            }), (0, od.jsxs)("div", {
+            children: [(0, HQ.jsx)(fL, {
+              item: bQ.item,
+              amount: bQ.quantity,
+              tier: null !== (LQ = null === (DQ = uQ.enchant) || void 0 === DQ ? void 0 : DQ.tier) && void 0 !== LQ ? LQ : null
+            }), (0, HQ.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, od.jsx)("b", {
-                children: (0, od.jsx)(Fp.c, {
-                  text: Kd.customTitle
+              children: [(0, HQ.jsx)("b", {
+                children: (0, HQ.jsx)(OL.e, {
+                  text: uQ.customTitle
                 })
-              }), (0, od.jsx)("small", {
-                children: kd("smpShop:enchantedListing")
+              }), (0, HQ.jsx)("small", {
+                children: wQ("smpShop:enchantedListing")
               })]
-            }), (0, od.jsx)(Hp, {
-              value: Qd,
-              onChange: dd => {
-                Zd({
-                  ...Wd,
-                  [gd]: dd
+            }), (0, HQ.jsx)(PL, {
+              value: YQ,
+              onChange: QQ => {
+                kQ({
+                  ...oQ,
+                  [vQ]: QQ
                 })
               },
               max: 9999999,
-              step: wp,
-              label: kd("smpShop:pricePerItem")
-            }), (0, od.jsxs)(Cd.n, {
-              loading: Nd.isPending(gd),
+              step: ZL,
+              label: wQ("smpShop:pricePerItem")
+            }), (0, HQ.jsxs)(mQ.s, {
+              loading: qQ.isPending(vQ),
               onClick: () => {
-                Nd.act(gd, String(Qd))
+                qQ.act(vQ, String(YQ))
               },
-              children: [kd("smpShop:list"), " ", (0, od.jsx)(cp, {
-                amount: Qd
+              children: [wQ("smpShop:list"), " ", (0, HQ.jsx)(VL, {
+                amount: YQ
               })]
             })]
-          }, gd)
+          }, vQ)
         }))
       })
     }
-    const fN = (0, pd.memo)((function(dd) {
+    const Tq = (0, LQ.memo)((function(QQ) {
       let {
-        itemKey: Jd,
-        item: kd,
-        quantity: pd,
-        pricePerItem: Nd,
-        tier: Pd,
-        selected: Zd,
-        onSelect: gd
-      } = dd;
-      return (0, od.jsxs)("button", {
+        itemKey: FQ,
+        item: wQ,
+        quantity: LQ,
+        pricePerItem: qQ,
+        tier: DQ,
+        selected: kQ,
+        onSelect: vQ
+      } = QQ;
+      return (0, HQ.jsxs)("button", {
         type: "button",
-        className: Wd()("SmpInventorySlot", {
-          SmpInventorySlotOn: Zd
+        className: oQ()("SmpInventorySlot", {
+          SmpInventorySlotOn: kQ
         }),
-        title: kd,
+        title: wQ,
         onClick: () => {
-          gd(Jd)
+          vQ(FQ)
         },
-        children: [(0, od.jsx)(Ep, {
-          item: kd,
-          amount: pd,
-          tier: Pd
-        }), (0, od.jsx)(cp, {
-          amount: Nd
+        children: [(0, HQ.jsx)(fL, {
+          item: wQ,
+          amount: LQ,
+          tier: DQ
+        }), (0, HQ.jsx)(VL, {
+          amount: qQ
         })]
       })
     }));
 
-    function nN() {
-      var dd;
+    function Kq() {
+      var QQ;
       const {
-        t: Jd
-      } = (0, Pd.B)(), kd = eN(), Nd = null === (dd = kd.shopInfo[kd.categoryKey]) || void 0 === dd ? void 0 : dd.items, Zd = NN(Nd, "sell"), gd = WN(Nd, "empty"), [Cd, Kd] = (0, pd.useState)(null), [ld, Qd] = (0, pd.useState)({}), Ld = Zd.find((dd => {
+        t: FQ
+      } = (0, DQ.y)(), wQ = xq(), qQ = null === (QQ = wQ.shopInfo[wQ.categoryKey]) || void 0 === QQ ? void 0 : QQ.items, kQ = wq(qQ, "sell"), vQ = Lq(qQ, "empty"), [mQ, uQ] = (0, LQ.useState)(null), [bQ, YQ] = (0, LQ.useState)({}), xQ = kQ.find((QQ => {
         let {
-          key: Jd
-        } = dd;
-        return Jd === Cd
+          key: FQ
+        } = QQ;
+        return FQ === mQ
       }));
-      return 0 === Zd.length ? (0, od.jsx)("div", {
+      return 0 === kQ.length ? (0, HQ.jsx)("div", {
         className: "SmpScreen",
-        children: (0, od.jsx)(rp, {
-          title: gd ? (0, od.jsx)(Fp.c, {
-            text: gd.item.customTitle
-          }) : Jd("smpShop:nothingToSell"),
-          children: gd && (0, od.jsx)(Fp.c, {
-            text: gd.item.description
+        children: (0, HQ.jsx)(JL, {
+          title: vQ ? (0, HQ.jsx)(OL.e, {
+            text: vQ.item.customTitle
+          }) : FQ("smpShop:nothingToSell"),
+          children: vQ && (0, HQ.jsx)(OL.e, {
+            text: vQ.item.description
           })
         })
-      }) : (0, od.jsxs)("div", {
+      }) : (0, HQ.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: Zd.map((dd => {
-            var Jd, kd;
+          children: kQ.map((QQ => {
+            var FQ, wQ;
             let {
-              key: pd,
-              item: Nd,
-              meta: Wd
-            } = dd;
-            return (0, od.jsx)(fN, {
-              itemKey: pd,
-              item: Wd.item,
-              quantity: Wd.quantity,
-              pricePerItem: Wd.pricePerItem,
-              tier: null !== (Jd = null === (kd = Nd.enchant) || void 0 === kd ? void 0 : kd.tier) && void 0 !== Jd ? Jd : null,
-              selected: pd === Cd,
-              onSelect: Kd
-            }, pd)
+              key: LQ,
+              item: qQ,
+              meta: oQ
+            } = QQ;
+            return (0, HQ.jsx)(Tq, {
+              itemKey: LQ,
+              item: oQ.item,
+              quantity: oQ.quantity,
+              pricePerItem: oQ.pricePerItem,
+              tier: null !== (FQ = null === (wQ = qQ.enchant) || void 0 === wQ ? void 0 : wQ.tier) && void 0 !== FQ ? FQ : null,
+              selected: LQ === mQ,
+              onSelect: uQ
+            }, LQ)
           }))
-        }), (0, od.jsx)("div", {
-          className: Wd()("SmpSellBar", {
-            SmpSellBarIdle: !Ld
+        }), (0, HQ.jsx)("div", {
+          className: oQ()("SmpSellBar", {
+            SmpSellBarIdle: !xQ
           }),
-          children: Ld ? (0, od.jsx)(UN, {
-            entry: Ld,
-            choice: QN(Ld.item, ld[Ld.key]),
-            onChoose: dd => {
-              Qd({
-                ...ld,
-                [Ld.key]: dd
+          children: xQ ? (0, HQ.jsx)(zq, {
+            entry: xQ,
+            choice: Hq(xQ.item, bQ[xQ.key]),
+            onChoose: QQ => {
+              YQ({
+                ...bQ,
+                [xQ.key]: QQ
               })
             }
-          }) : (0, od.jsx)("span", {
+          }) : (0, HQ.jsx)("span", {
             className: "SmpMuted",
-            children: Jd("smpShop:tapToSell")
+            children: FQ("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function UN(dd) {
-      var Jd, kd, pd, Nd;
+    function zq(QQ) {
+      var FQ, wQ, LQ, qQ;
       let {
-        entry: Wd,
-        choice: Zd,
-        onChoose: gd
-      } = dd;
+        entry: oQ,
+        choice: kQ,
+        onChoose: vQ
+      } = QQ;
       const {
-        t: Kd
-      } = (0, Pd.B)(), ld = eN(), {
-        key: Qd,
-        item: Ld,
-        meta: Od
-      } = Wd, ed = CN("dropdown" === (null === (Jd = Ld.userInput) || void 0 === Jd ? void 0 : Jd.type) ? Ld.userInput.dropdownOptions : []), Rd = null === Zd ? 0 : -(0, sp.d)(Ld, Zd);
-      return (0, od.jsxs)(od.Fragment, {
-        children: [(0, od.jsx)(Ep, {
-          item: Od.item,
-          amount: Od.quantity,
-          tier: null !== (kd = null === (pd = Ld.enchant) || void 0 === pd ? void 0 : pd.tier) && void 0 !== kd ? kd : null
-        }), (0, od.jsxs)("div", {
+        t: uQ
+      } = (0, DQ.y)(), bQ = xq(), {
+        key: YQ,
+        item: xQ,
+        meta: AQ
+      } = oQ, tQ = kq("dropdown" === (null === (FQ = xQ.userInput) || void 0 === FQ ? void 0 : FQ.type) ? xQ.userInput.dropdownOptions : []), eQ = null === kQ ? 0 : -(0, SL.c)(xQ, kQ);
+      return (0, HQ.jsxs)(HQ.Fragment, {
+        children: [(0, HQ.jsx)(fL, {
+          item: AQ.item,
+          amount: AQ.quantity,
+          tier: null !== (wQ = null === (LQ = xQ.enchant) || void 0 === LQ ? void 0 : LQ.tier) && void 0 !== wQ ? wQ : null
+        }), (0, HQ.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, od.jsx)("b", {
-            children: (0, od.jsx)(Fp.c, {
-              text: null !== (Nd = Ld.customTitle) && void 0 !== Nd ? Nd : Od.item
+          children: [(0, HQ.jsx)("b", {
+            children: (0, HQ.jsx)(OL.e, {
+              text: null !== (qQ = xQ.customTitle) && void 0 !== qQ ? qQ : AQ.item
             })
-          }), (0, od.jsx)("small", {
-            children: Kd("smpShop:sellEach", {
-              count: Od.quantity
+          }), (0, HQ.jsx)("small", {
+            children: uQ("smpShop:sellEach", {
+              count: AQ.quantity
             })
           })]
-        }), (0, od.jsx)(Vp, {
-          options: ed.map((dd => {
+        }), (0, HQ.jsx)(nL, {
+          options: tQ.map((QQ => {
             let {
-              label: Jd,
-              quantity: kd,
-              isAll: pd
-            } = dd;
+              label: FQ,
+              quantity: wQ,
+              isAll: LQ
+            } = QQ;
             return {
-              value: Jd,
-              label: pd ? Kd("smpShop:all", {
-                count: kd
-              }) : String(kd)
+              value: FQ,
+              label: LQ ? uQ("smpShop:all", {
+                count: wQ
+              }) : String(wQ)
             }
           })),
-          value: Zd,
-          onChange: gd,
-          ariaLabel: Kd("smpShop:quantity")
-        }), (0, od.jsxs)(Cd.n, {
-          loading: ld.isPending(Qd),
-          disabled: null === Zd,
+          value: kQ,
+          onChange: vQ,
+          ariaLabel: uQ("smpShop:quantity")
+        }), (0, HQ.jsxs)(mQ.s, {
+          loading: bQ.isPending(YQ),
+          disabled: null === kQ,
           onClick: () => {
-            ld.act(Qd, Zd)
+            bQ.act(YQ, kQ)
           },
-          children: [Kd("smpShop:sellButton"), " ", (0, od.jsx)(cp, {
-            amount: Rd
+          children: [uQ("smpShop:sellButton"), " ", (0, HQ.jsx)(VL, {
+            amount: eQ
           })]
         })]
       })
     }
 
-    function yN() {
-      var dd;
+    function lq() {
+      var QQ;
       const {
-        t: Jd
-      } = (0, Pd.B)(), kd = eN(), pd = null === (dd = kd.shopInfo[kd.categoryKey]) || void 0 === dd ? void 0 : dd.items, Nd = NN(pd, "collect"), Wd = NN(pd, "myListing"), Zd = (dd, Jd) => kd.isPending(dd) || !1 === Jd.canBuy;
-      return (0, od.jsxs)("div", {
+        t: FQ
+      } = (0, DQ.y)(), wQ = xq(), LQ = null === (QQ = wQ.shopInfo[wQ.categoryKey]) || void 0 === QQ ? void 0 : QQ.items, qQ = wq(LQ, "collect"), oQ = wq(LQ, "myListing"), kQ = (QQ, FQ) => wQ.isPending(QQ) || !1 === FQ.canBuy;
+      return (0, HQ.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, od.jsx)("h3", {
+        children: [(0, HQ.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Jd("smpShop:readyToCollect")
-        }), Nd.length > 0 ? (0, od.jsx)("div", {
+          children: FQ("smpShop:readyToCollect")
+        }), qQ.length > 0 ? (0, HQ.jsx)("div", {
           className: "SmpList",
-          children: Nd.map((dd => {
-            var pd, Nd;
+          children: qQ.map((QQ => {
+            var LQ, qQ;
             let {
-              key: Wd,
-              item: Pd,
-              meta: gd
-            } = dd;
-            return (0, od.jsxs)("div", {
+              key: oQ,
+              item: DQ,
+              meta: vQ
+            } = QQ;
+            return (0, HQ.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, od.jsx)(Ep, {
-                item: "sold" === gd.type ? "Gold Coin" : gd.item,
-                amount: "sold" === gd.type ? 0 : gd.quantity,
-                tier: null !== (pd = null === (Nd = Pd.enchant) || void 0 === Nd ? void 0 : Nd.tier) && void 0 !== pd ? pd : null
-              }), (0, od.jsxs)("div", {
+              children: [(0, HQ.jsx)(fL, {
+                item: "sold" === vQ.type ? "Gold Coin" : vQ.item,
+                amount: "sold" === vQ.type ? 0 : vQ.quantity,
+                tier: null !== (LQ = null === (qQ = DQ.enchant) || void 0 === qQ ? void 0 : qQ.tier) && void 0 !== LQ ? LQ : null
+              }), (0, HQ.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, od.jsx)("b", {
-                  children: (0, od.jsx)(Fp.c, {
-                    text: Pd.customTitle
+                children: [(0, HQ.jsx)("b", {
+                  children: (0, HQ.jsx)(OL.e, {
+                    text: DQ.customTitle
                   })
-                }), (0, od.jsx)("small", {
-                  children: (0, od.jsx)(Fp.c, {
-                    text: Pd.description
+                }), (0, HQ.jsx)("small", {
+                  children: (0, HQ.jsx)(OL.e, {
+                    text: DQ.description
                   })
                 })]
-              }), (0, od.jsx)(Cd.j, {
-                loading: Zd(Wd, Pd),
+              }), (0, HQ.jsx)(mQ.m, {
+                loading: kQ(oQ, DQ),
                 onClick: () => {
-                  kd.act(Wd)
+                  wQ.act(oQ)
                 },
-                children: Jd("smpShop:collect")
+                children: FQ("smpShop:collect")
               })]
-            }, Wd)
+            }, oQ)
           }))
-        }) : (0, od.jsx)(rp, {
-          title: Jd("smpShop:nothingToCollect"),
-          children: Jd("smpShop:nothingToCollectHint")
-        }), (0, od.jsx)("h3", {
+        }) : (0, HQ.jsx)(JL, {
+          title: FQ("smpShop:nothingToCollect"),
+          children: FQ("smpShop:nothingToCollectHint")
+        }), (0, HQ.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Jd("smpShop:activeListings", {
-            count: Wd.length
+          children: FQ("smpShop:activeListings", {
+            count: oQ.length
           })
-        }), Wd.length > 0 ? (0, od.jsx)("div", {
+        }), oQ.length > 0 ? (0, HQ.jsx)("div", {
           className: "SmpList",
-          children: Wd.map((dd => {
-            var pd, Nd;
+          children: oQ.map((QQ => {
+            var LQ, qQ;
             let {
-              key: Wd,
-              item: Pd,
-              meta: gd
-            } = dd;
-            return (0, od.jsxs)("div", {
+              key: oQ,
+              item: DQ,
+              meta: vQ
+            } = QQ;
+            return (0, HQ.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, od.jsx)(Ep, {
-                item: gd.item,
-                amount: gd.quantity,
-                tier: null !== (pd = null === (Nd = Pd.enchant) || void 0 === Nd ? void 0 : Nd.tier) && void 0 !== pd ? pd : null
-              }), (0, od.jsxs)("div", {
+              children: [(0, HQ.jsx)(fL, {
+                item: vQ.item,
+                amount: vQ.quantity,
+                tier: null !== (LQ = null === (qQ = DQ.enchant) || void 0 === qQ ? void 0 : qQ.tier) && void 0 !== LQ ? LQ : null
+              }), (0, HQ.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, od.jsx)("b", {
-                  children: (0, od.jsx)(Fp.c, {
-                    text: Pd.customTitle
+                children: [(0, HQ.jsx)("b", {
+                  children: (0, HQ.jsx)(OL.e, {
+                    text: DQ.customTitle
                   })
-                }), (0, od.jsx)("small", {
-                  children: Jd("smpShop:timeLeft", {
-                    time: gN(gd.expiresAt)
+                }), (0, HQ.jsx)("small", {
+                  children: FQ("smpShop:timeLeft", {
+                    time: Dq(vQ.expiresAt)
                   })
                 })]
-              }), (0, od.jsxs)("div", {
+              }), (0, HQ.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, od.jsx)(cp, {
-                  amount: gd.pricePerItem
-                }), (0, od.jsx)("small", {
-                  children: Jd("smpShop:each")
+                children: [(0, HQ.jsx)(VL, {
+                  amount: vQ.pricePerItem
+                }), (0, HQ.jsx)("small", {
+                  children: FQ("smpShop:each")
                 })]
-              }), (0, od.jsx)(Cd.B, {
-                loading: Zd(Wd, Pd),
+              }), (0, HQ.jsx)(mQ.F, {
+                loading: kQ(oQ, DQ),
                 onClick: () => {
-                  kd.act(Wd)
+                  wQ.act(oQ)
                 },
-                children: Jd("smpShop:cancel")
+                children: FQ("smpShop:cancel")
               })]
-            }, Wd)
+            }, oQ)
           }))
-        }) : (0, od.jsx)(rp, {
-          title: Jd("smpShop:noActiveListings"),
-          children: Jd("smpShop:noActiveListingsHint")
+        }) : (0, HQ.jsx)(JL, {
+          title: FQ("smpShop:noActiveListings"),
+          children: FQ("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function DN(dd) {
+    function jq(QQ) {
       let {
-        done: Jd,
-        of: kd
-      } = dd;
-      return (0, od.jsx)("span", {
+        done: FQ,
+        of: wQ
+      } = QQ;
+      return (0, HQ.jsx)("span", {
         className: "SmpProgress",
-        children: (0, od.jsx)("i", {
+        children: (0, HQ.jsx)("i", {
           style: {
-            width: `${Math.min(100,Jd/Math.max(1,kd)*100)}%`
+            width: `${Math.min(100,FQ/Math.max(1,wQ)*100)}%`
           }
         })
       })
     }
 
-    function TN(dd) {
-      var Jd, kd, pd;
+    function aq(QQ) {
+      var FQ, wQ, LQ;
       let {
-        entry: Nd,
-        choice: Wd,
-        onChoose: Zd
-      } = dd;
+        entry: qQ,
+        choice: oQ,
+        onChoose: kQ
+      } = QQ;
       const {
-        t: gd
-      } = (0, Pd.B)(), Kd = eN(), {
-        key: ld,
-        item: Qd,
-        meta: Ld
-      } = Nd, Od = "dropdown" === (null === (Jd = Qd.userInput) || void 0 === Jd ? void 0 : Jd.type) ? Qd.userInput.dropdownOptions : [], ed = !0 === Ld.processing, Rd = null !== Ld.creator && (Ld.owned > 0 || ed), Id = Rd && Ld.owned > 0 ? CN(Od) : [], Gd = null === Wd ? 0 : null !== (kd = null === (pd = Id.find((dd => dd.label === Wd))) || void 0 === pd ? void 0 : pd.quantity) && void 0 !== kd ? kd : 0;
-      return (0, od.jsxs)("div", {
+        t: vQ
+      } = (0, DQ.y)(), uQ = xq(), {
+        key: bQ,
+        item: YQ,
+        meta: xQ
+      } = qQ, AQ = "dropdown" === (null === (FQ = YQ.userInput) || void 0 === FQ ? void 0 : FQ.type) ? YQ.userInput.dropdownOptions : [], tQ = !0 === xQ.processing, eQ = null !== xQ.creator && (xQ.owned > 0 || tQ), MQ = eQ && xQ.owned > 0 ? kq(AQ) : [], GQ = null === oQ ? 0 : null !== (wQ = null === (LQ = MQ.find((QQ => QQ.label === oQ))) || void 0 === LQ ? void 0 : LQ.quantity) && void 0 !== wQ ? wQ : 0;
+      return (0, HQ.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, od.jsx)(Ep, {
-          item: Ld.item
-        }), (0, od.jsxs)("div", {
+        children: [(0, HQ.jsx)(fL, {
+          item: xQ.item
+        }), (0, HQ.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, od.jsx)("b", {
-            children: (0, od.jsx)(Fp.c, {
-              text: Qd.customTitle
+          children: [(0, HQ.jsx)("b", {
+            children: (0, HQ.jsx)(OL.e, {
+              text: YQ.customTitle
             })
-          }), (0, od.jsxs)("small", {
-            children: [(0, od.jsx)(cp, {
-              amount: Ld.pricePerItem
-            }), " ", gd("smpShop:each"), " \xb7", " ", null === Ld.creator ? gd("smpShop:you") : (0, od.jsx)(Fp.c, {
+          }), (0, HQ.jsxs)("small", {
+            children: [(0, HQ.jsx)(VL, {
+              amount: xQ.pricePerItem
+            }), " ", vQ("smpShop:each"), " \xb7", " ", null === xQ.creator ? vQ("smpShop:you") : (0, HQ.jsx)(OL.e, {
               text: [{
-                entityName: Ld.creator
+                entityName: xQ.creator
               }]
             })]
-          }), (0, od.jsx)(DN, {
-            done: Ld.delivered,
-            of: Ld.wanted
+          }), (0, HQ.jsx)(jq, {
+            done: xQ.delivered,
+            of: xQ.wanted
           })]
-        }), Rd ? (0, od.jsxs)(od.Fragment, {
-          children: [(0, od.jsx)(Vp, {
-            options: Id.map((dd => {
+        }), eQ ? (0, HQ.jsxs)(HQ.Fragment, {
+          children: [(0, HQ.jsx)(nL, {
+            options: MQ.map((QQ => {
               let {
-                label: Jd,
-                quantity: kd,
-                isAll: pd
-              } = dd;
+                label: FQ,
+                quantity: wQ,
+                isAll: LQ
+              } = QQ;
               return {
-                value: Jd,
-                label: pd ? gd("smpShop:max", {
-                  count: kd
-                }) : String(kd)
+                value: FQ,
+                label: LQ ? vQ("smpShop:max", {
+                  count: wQ
+                }) : String(wQ)
               }
             })),
-            value: Wd,
-            onChange: Zd,
-            ariaLabel: gd("smpShop:quantity")
-          }), (0, od.jsxs)(Cd.n, {
-            loading: Kd.isPending(ld) || ed,
-            disabled: null === Wd,
+            value: oQ,
+            onChange: kQ,
+            ariaLabel: vQ("smpShop:quantity")
+          }), (0, HQ.jsxs)(mQ.s, {
+            loading: uQ.isPending(bQ) || tQ,
+            disabled: null === oQ,
             onClick: () => {
-              Kd.act(ld, Wd)
+              uQ.act(bQ, oQ)
             },
-            children: [gd("smpShop:deliver"), " ", (0, od.jsx)(cp, {
-              amount: Gd * Ld.pricePerItem
+            children: [vQ("smpShop:deliver"), " ", (0, HQ.jsx)(VL, {
+              amount: GQ * xQ.pricePerItem
             })]
           })]
-        }) : (0, od.jsx)("span", {
+        }) : (0, HQ.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === Ld.creator ? gd("smpShop:yourOrder") : gd("smpShop:youHave", {
+          children: null === xQ.creator ? vQ("smpShop:yourOrder") : vQ("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function EN() {
-      var dd;
+    function Xq() {
+      var QQ;
       const {
-        t: Jd
-      } = (0, Pd.B)(), kd = eN(), Nd = null === (dd = kd.shopInfo[kd.categoryKey]) || void 0 === dd ? void 0 : dd.items, Wd = WN(Nd, "search"), Zd = WN(Nd, "creator"), gd = NN(Nd, "order"), Kd = WN(Nd, "empty"), ld = vN(Wd, gd.length > 0 || null !== Kd), [Qd, Ld] = (0, pd.useState)(!1), [Od, ed] = (0, pd.useState)({});
-      return (0, od.jsx)(sN, {
-        browser: ld,
-        recentLabel: Jd("smpShop:recentOrders"),
-        action: (0, od.jsx)(Cd.n, {
+        t: FQ
+      } = (0, DQ.y)(), wQ = xq(), qQ = null === (QQ = wQ.shopInfo[wQ.categoryKey]) || void 0 === QQ ? void 0 : QQ.items, oQ = Lq(qQ, "search"), kQ = Lq(qQ, "creator"), vQ = wq(qQ, "order"), uQ = Lq(qQ, "empty"), bQ = Mq(oQ, vQ.length > 0 || null !== uQ), [YQ, xQ] = (0, LQ.useState)(!1), [AQ, tQ] = (0, LQ.useState)({});
+      return (0, HQ.jsx)(Cq, {
+        browser: bQ,
+        recentLabel: FQ("smpShop:recentOrders"),
+        action: (0, HQ.jsx)(mQ.s, {
           onClick: () => {
-            Ld((dd => !dd))
+            xQ((QQ => !QQ))
           },
-          children: Jd("smpShop:createOrder")
+          children: FQ("smpShop:createOrder")
         }),
-        above: Qd && (0, od.jsx)(SN, {
+        above: YQ && (0, HQ.jsx)(Iq, {
           mode: "order",
-          creator: Zd,
-          catalogue: ld.catalogue,
-          names: ld.names,
-          searching: ld.loading,
+          creator: kQ,
+          catalogue: bQ.catalogue,
+          names: bQ.names,
+          searching: bQ.loading,
           prices: [],
-          onPickItem: ld.searchFor,
+          onPickItem: bQ.searchFor,
           onClose: () => {
-            Ld(!1)
+            xQ(!1)
           }
         }),
         onBack: () => {
-          Ld(!1)
+          xQ(!1)
         },
-        summary: gd.length > 0 && Jd(1 === gd.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: gd.length,
-          price: yp(iN(gd, "max"))
+        summary: vQ.length > 0 && FQ(1 === vQ.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: vQ.length,
+          price: jL(Sq(vQ, "max"))
         }),
-        list: ld.loading ? (0, od.jsx)(hp, {}) : gd.length > 0 ? (0, od.jsx)(RN.b, {
+        list: bQ.loading ? (0, HQ.jsx)(hL, {}) : vQ.length > 0 ? (0, HQ.jsx)(Aq.e, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: PN,
-          observerUpdateDeps: [gd.length],
-          children: gd.map((dd => (0, od.jsx)(TN, {
-            entry: dd,
-            choice: QN(dd.item, Od[dd.key]),
-            onChoose: Jd => {
-              ed({
-                ...Od,
-                [dd.key]: Jd
+          rootMargin: qq,
+          observerUpdateDeps: [vQ.length],
+          children: vQ.map((QQ => (0, HQ.jsx)(aq, {
+            entry: QQ,
+            choice: Hq(QQ.item, AQ[QQ.key]),
+            onChoose: FQ => {
+              tQ({
+                ...AQ,
+                [QQ.key]: FQ
               })
             }
-          }, dd.key)))
-        }) : Kd ? (0, od.jsx)(tp, {
-          entry: Kd
-        }) : (0, od.jsx)(hp, {
+          }, QQ.key)))
+        }) : uQ ? (0, HQ.jsx)(EL, {
+          entry: uQ
+        }) : (0, HQ.jsx)(hL, {
           count: 3
         })
       })
     }
 
-    function cN() {
-      var dd;
+    function fq() {
+      var QQ;
       const {
-        t: Jd
-      } = (0, Pd.B)(), kd = eN(), pd = NN(null === (dd = kd.shopInfo[kd.categoryKey]) || void 0 === dd ? void 0 : dd.items, "myOrder");
-      return 0 === pd.length ? (0, od.jsx)("div", {
+        t: FQ
+      } = (0, DQ.y)(), wQ = xq(), LQ = wq(null === (QQ = wQ.shopInfo[wQ.categoryKey]) || void 0 === QQ ? void 0 : QQ.items, "myOrder");
+      return 0 === LQ.length ? (0, HQ.jsx)("div", {
         className: "SmpScreen",
-        children: (0, od.jsx)(rp, {
-          title: Jd("smpShop:noOrders"),
-          children: Jd("smpShop:noOrdersHint")
+        children: (0, HQ.jsx)(JL, {
+          title: FQ("smpShop:noOrders"),
+          children: FQ("smpShop:noOrdersHint")
         })
-      }) : (0, od.jsx)("div", {
+      }) : (0, HQ.jsx)("div", {
         className: "SmpScreen",
-        children: (0, od.jsx)("div", {
+        children: (0, HQ.jsx)("div", {
           className: "SmpList",
-          children: pd.map((dd => {
+          children: LQ.map((QQ => {
             let {
-              key: pd,
-              item: Nd,
-              meta: Wd
-            } = dd;
-            const Pd = kd.isPending(pd) || !1 === Nd.canBuy;
-            return (0, od.jsxs)("div", {
+              key: LQ,
+              item: qQ,
+              meta: oQ
+            } = QQ;
+            const DQ = wQ.isPending(LQ) || !1 === qQ.canBuy;
+            return (0, HQ.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, od.jsx)(Ep, {
-                item: Wd.item,
-                amount: Wd.collectable
-              }), (0, od.jsxs)("div", {
+              children: [(0, HQ.jsx)(fL, {
+                item: oQ.item,
+                amount: oQ.collectable
+              }), (0, HQ.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, od.jsx)("b", {
-                  children: (0, od.jsx)(Fp.c, {
-                    text: Nd.customTitle
+                children: [(0, HQ.jsx)("b", {
+                  children: (0, HQ.jsx)(OL.e, {
+                    text: qQ.customTitle
                   })
-                }), (0, od.jsxs)("small", {
-                  children: [(0, od.jsx)(cp, {
-                    amount: Wd.pricePerItem
-                  }), " ", Jd("smpShop:each"), Wd.collectable > 0 && ` \xb7 ${Jd("smpShop:readyCount",{count:Wd.collectable})}`]
-                }), (0, od.jsx)(DN, {
-                  done: Wd.delivered,
-                  of: Wd.wanted
+                }), (0, HQ.jsxs)("small", {
+                  children: [(0, HQ.jsx)(VL, {
+                    amount: oQ.pricePerItem
+                  }), " ", FQ("smpShop:each"), oQ.collectable > 0 && ` \xb7 ${FQ("smpShop:readyCount",{count:oQ.collectable})}`]
+                }), (0, HQ.jsx)(jq, {
+                  done: oQ.delivered,
+                  of: oQ.wanted
                 })]
-              }), Wd.collectable > 0 ? (0, od.jsx)(Cd.j, {
-                loading: Pd,
+              }), oQ.collectable > 0 ? (0, HQ.jsx)(mQ.m, {
+                loading: DQ,
                 onClick: () => {
-                  kd.act(pd)
+                  wQ.act(LQ)
                 },
-                children: Jd("smpShop:collectCount", {
-                  count: Wd.collectable
+                children: FQ("smpShop:collectCount", {
+                  count: oQ.collectable
                 })
-              }) : (0, od.jsx)(Cd.B, {
-                loading: Pd,
+              }) : (0, HQ.jsx)(mQ.F, {
+                loading: DQ,
                 onClick: () => {
-                  kd.act(pd)
+                  wQ.act(LQ)
                 },
-                children: Jd("smpShop:cancel")
+                children: FQ("smpShop:cancel")
               })]
-            }, pd)
+            }, LQ)
           }))
         })
       })
     }
-    const hN = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      rN = {
+    const Vq = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      hq = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4304,775 +4304,775 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function uN(dd, Jd) {
-      let kd = !1;
-      const pd = {};
-      for (const Nd in dd) Jd(Nd, dd[Nd]) ? pd[Nd] = dd[Nd] : kd = !0;
-      return kd ? pd : dd
+    function Jq(QQ, FQ) {
+      let wQ = !1;
+      const LQ = {};
+      for (const qQ in QQ) FQ(qQ, QQ[qQ]) ? LQ[qQ] = QQ[qQ] : wQ = !0;
+      return wQ ? LQ : QQ
     }
 
-    function tN(dd) {
-      var Jd, kd, Nd, gd;
+    function Eq(QQ) {
+      var FQ, wQ, qQ, vQ;
       const {
-        show: Cd,
-        shopInfo: Kd,
-        selectedCategoryKey: ld
-      } = dd, {
-        t: Qd
-      } = (0, Pd.B)(), Ld = null !== ld && void 0 !== ld ? ld : "", Od = pN(Kd, Ld), ed = null === (Jd = Kd[Ld]) || void 0 === Jd ? void 0 : Jd.items, Rd = null !== Od, [Id, Gd] = (0, pd.useState)({}), [vd, xd] = (0, pd.useState)([]), [qd, Bd] = (0, pd.useState)(!1), [sd, ad] = (0, pd.useState)(null), [, Md] = (0, pd.useState)(0), Fd = (0, pd.useRef)(0), Yd = (0, pd.useRef)({}), md = (0, pd.useRef)({
-        items: ed,
-        pending: Id,
-        shopInfo: Kd,
-        active: Rd,
-        canAfford: dd.canAfford,
-        buy: dd.buy
+        show: mQ,
+        shopInfo: uQ,
+        selectedCategoryKey: bQ
+      } = QQ, {
+        t: YQ
+      } = (0, DQ.y)(), xQ = null !== bQ && void 0 !== bQ ? bQ : "", AQ = Fq(uQ, xQ), tQ = null === (FQ = uQ[xQ]) || void 0 === FQ ? void 0 : FQ.items, eQ = null !== AQ, [MQ, GQ] = (0, LQ.useState)({}), [pQ, cQ] = (0, LQ.useState)([]), [CQ, SQ] = (0, LQ.useState)(!1), [iQ, WQ] = (0, LQ.useState)(null), [, RQ] = (0, LQ.useState)(0), OQ = (0, LQ.useRef)(0), sQ = (0, LQ.useRef)({}), rQ = (0, LQ.useRef)({
+        items: tQ,
+        pending: MQ,
+        shopInfo: uQ,
+        active: eQ,
+        canAfford: QQ.canAfford,
+        buy: QQ.buy
       });
-      md.current = {
-        items: ed,
-        pending: Id,
-        shopInfo: Kd,
-        active: Rd,
-        canAfford: dd.canAfford,
-        buy: dd.buy
+      rQ.current = {
+        items: tQ,
+        pending: MQ,
+        shopInfo: uQ,
+        active: eQ,
+        canAfford: QQ.canAfford,
+        buy: QQ.buy
       };
-      const bd = (0, pd.useCallback)((dd => {
-        Fd.current++;
-        const Jd = Fd.current;
-        xd((kd => [{
-          id: Jd,
-          text: dd
-        }, ...kd].slice(0, 8))), ad(Jd)
+      const IQ = (0, LQ.useCallback)((QQ => {
+        OQ.current++;
+        const FQ = OQ.current;
+        cQ((wQ => [{
+          id: FQ,
+          text: QQ
+        }, ...wQ].slice(0, 8))), WQ(FQ)
       }), []);
-      (0, pd.useEffect)((() => {
-        if (null === sd) return;
-        const dd = setTimeout((() => {
-          ad(null)
+      (0, LQ.useEffect)((() => {
+        if (null === iQ) return;
+        const QQ = setTimeout((() => {
+          WQ(null)
         }), 3e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(QQ)
         }
-      }), [sd]), (0, pd.useEffect)((() => {
-        const Jd = dd.message;
-        if (!Jd) return;
+      }), [iQ]), (0, LQ.useEffect)((() => {
+        const FQ = QQ.message;
+        if (!FQ) return;
         const {
-          shopInfo: kd,
-          active: pd,
-          items: Nd
-        } = md.current, Wd = null !== Jd.categoryKey ? null !== pN(kd, Jd.categoryKey) : pd;
-        (Wd || pd) && bd(Jd.text), Wd && Gd((dd => uN(dd, (dd => {
-          var Jd, kd;
-          return !hN.has(null === Nd || void 0 === Nd || null === (Jd = Nd[dd]) || void 0 === Jd || null === (kd = Jd.smp) || void 0 === kd ? void 0 : kd.kind)
+          shopInfo: wQ,
+          active: LQ,
+          items: qQ
+        } = rQ.current, oQ = null !== FQ.categoryKey ? null !== Fq(wQ, FQ.categoryKey) : LQ;
+        (oQ || LQ) && IQ(FQ.text), oQ && GQ((QQ => Jq(QQ, (QQ => {
+          var FQ, wQ;
+          return !Vq.has(null === qQ || void 0 === qQ || null === (FQ = qQ[QQ]) || void 0 === FQ || null === (wQ = FQ.smp) || void 0 === wQ ? void 0 : wQ.kind)
         }))))
-      }), [dd.message, bd]), (0, pd.useEffect)((() => {
-        Gd((dd => uN(dd, ((dd, Jd) => LN(null === ed || void 0 === ed ? void 0 : ed[dd]) === Jd.snapshot))))
-      }), [Kd, ed]);
-      const Sd = Object.keys(Id).length > 0;
-      (0, pd.useEffect)((() => {
-        if (!Sd) return;
-        const dd = setInterval((() => {
-          Md((dd => dd + 1));
-          const dd = Date.now(),
+      }), [QQ.message, IQ]), (0, LQ.useEffect)((() => {
+        GQ((QQ => Jq(QQ, ((QQ, FQ) => bq(null === tQ || void 0 === tQ ? void 0 : tQ[QQ]) === FQ.snapshot))))
+      }), [uQ, tQ]);
+      const UQ = Object.keys(MQ).length > 0;
+      (0, LQ.useEffect)((() => {
+        if (!UQ) return;
+        const QQ = setInterval((() => {
+          RQ((QQ => QQ + 1));
+          const QQ = Date.now(),
             {
-              pending: Jd,
-              items: kd
-            } = md.current,
-            pd = Object.keys(Jd).filter((kd => dd - Jd[kd].at >= 12e3));
-          if (0 === pd.length) return;
-          const Nd = pd.some((dd => {
-            var pd, Nd;
-            return "search" !== (null === kd || void 0 === kd || null === (pd = kd[dd]) || void 0 === pd || null === (Nd = pd.smp) || void 0 === Nd ? void 0 : Nd.kind) || Jd[dd].resend
+              pending: FQ,
+              items: wQ
+            } = rQ.current,
+            LQ = Object.keys(FQ).filter((wQ => QQ - FQ[wQ].at >= 12e3));
+          if (0 === LQ.length) return;
+          const qQ = LQ.some((QQ => {
+            var LQ, qQ;
+            return "search" !== (null === wQ || void 0 === wQ || null === (LQ = wQ[QQ]) || void 0 === LQ || null === (qQ = LQ.smp) || void 0 === qQ ? void 0 : qQ.kind) || FQ[QQ].resend
           }));
-          for (const Wd of pd) Yd.current[Wd] = dd;
-          Gd((dd => uN(dd, (dd => !pd.includes(dd))))), Nd && bd(Qd("smpShop:noAnswer"))
+          for (const oQ of LQ) sQ.current[oQ] = QQ;
+          GQ((QQ => Jq(QQ, (QQ => !LQ.includes(QQ))))), qQ && IQ(YQ("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(dd)
+          clearInterval(QQ)
         }
-      }), [Sd]), (0, pd.useEffect)((() => {
-        Gd({})
-      }), [Ld]), (0, pd.useEffect)((() => {
-        Cd || Bd(!1)
-      }), [Cd]);
-      const jd = (0, pd.useCallback)((function(dd, Jd) {
-          let kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [UQ]), (0, LQ.useEffect)((() => {
+        GQ({})
+      }), [xQ]), (0, LQ.useEffect)((() => {
+        mQ || SQ(!1)
+      }), [mQ]);
+      const NQ = (0, LQ.useCallback)((function(QQ, FQ) {
+          let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: pd,
-            pending: Nd,
-            canAfford: Wd,
-            buy: Pd
-          } = md.current, Zd = null === pd || void 0 === pd ? void 0 : pd[dd];
-          if (!Zd || dd in Nd || !1 === Zd.canBuy) return !1;
-          if (!Wd(Zd, (0, sp.d)(Zd, Jd))) return !1;
-          Pd(dd, Zd, Jd);
-          const gd = {
-            snapshot: LN(Zd),
+            items: LQ,
+            pending: qQ,
+            canAfford: oQ,
+            buy: DQ
+          } = rQ.current, kQ = null === LQ || void 0 === LQ ? void 0 : LQ[QQ];
+          if (!kQ || QQ in qQ || !1 === kQ.canBuy) return !1;
+          if (!oQ(kQ, (0, SL.c)(kQ, FQ))) return !1;
+          DQ(QQ, kQ, FQ);
+          const vQ = {
+            snapshot: bq(kQ),
             at: Date.now(),
-            resend: kd
+            resend: wQ
           };
-          return md.current.pending = {
-            ...md.current.pending,
-            [dd]: gd
-          }, Gd((Jd => ({
-            ...Jd,
-            [dd]: gd
+          return rQ.current.pending = {
+            ...rQ.current.pending,
+            [QQ]: vQ
+          }, GQ((FQ => ({
+            ...FQ,
+            [QQ]: vQ
           }))), !0
         }), []),
-        Xd = (0, pd.useMemo)((() => ({
-          shopInfo: Kd,
-          categoryKey: Ld,
-          canAfford: dd.canAfford,
-          isPending: dd => dd in Id,
-          gaveUpAt: dd => {
-            var Jd;
-            return null !== (Jd = Yd.current[dd]) && void 0 !== Jd ? Jd : 0
+        TQ = (0, LQ.useMemo)((() => ({
+          shopInfo: uQ,
+          categoryKey: xQ,
+          canAfford: QQ.canAfford,
+          isPending: QQ => QQ in MQ,
+          gaveUpAt: QQ => {
+            var FQ;
+            return null !== (FQ = sQ.current[QQ]) && void 0 !== FQ ? FQ : 0
           },
-          act: jd,
-          notify: bd
-        })), [Kd, Ld, dd.canAfford, Id, jd, bd]),
-        fd = Math.min(...Object.values(Id).map((dd => dd.at))),
-        nd = Sd && Date.now() - fd > 1500,
-        Ud = vd.length > 1,
-        yd = null !== (kd = null === (Nd = Kd[Ld]) || void 0 === Nd ? void 0 : Nd.customTitle) && void 0 !== kd ? kd : Ld,
-        Dd = null === (gd = Kd[Ld]) || void 0 === gd ? void 0 : gd.description;
-      let Td = null;
-      return "market" === Od ? Td = (0, od.jsx)(jN, {}) : "sell" === Od ? Td = (0, od.jsx)(nN, {}) : "collect" === Od ? Td = (0, od.jsx)(yN, {}) : "orders" === Od ? Td = (0, od.jsx)(EN, {}) : "myOrders" === Od && (Td = (0, od.jsx)(cN, {})), (0, od.jsx)(ON.Provider, {
-        value: Xd,
-        children: (0, od.jsx)("div", {
+          act: NQ,
+          notify: IQ
+        })), [uQ, xQ, QQ.canAfford, MQ, NQ, IQ]),
+        KQ = Math.min(...Object.values(MQ).map((QQ => QQ.at))),
+        zQ = UQ && Date.now() - KQ > 1500,
+        lQ = pQ.length > 1,
+        jQ = null !== (wQ = null === (qQ = uQ[xQ]) || void 0 === qQ ? void 0 : qQ.customTitle) && void 0 !== wQ ? wQ : xQ,
+        aQ = null === (vQ = uQ[xQ]) || void 0 === vQ ? void 0 : vQ.description;
+      let XQ = null;
+      return "market" === AQ ? XQ = (0, HQ.jsx)(Uq, {}) : "sell" === AQ ? XQ = (0, HQ.jsx)(Kq, {}) : "collect" === AQ ? XQ = (0, HQ.jsx)(lq, {}) : "orders" === AQ ? XQ = (0, HQ.jsx)(Xq, {}) : "myOrders" === AQ && (XQ = (0, HQ.jsx)(fq, {})), (0, HQ.jsx)(Yq.Provider, {
+        value: TQ,
+        children: (0, HQ.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !Rd,
-          children: (0, od.jsxs)("div", {
+          hidden: !eQ,
+          children: (0, HQ.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, od.jsx)("header", {
+            children: [(0, HQ.jsx)("header", {
               className: "SmpHeader",
-              children: (0, od.jsxs)("div", {
+              children: (0, HQ.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, od.jsxs)("h2", {
-                  children: [Od && (0, od.jsx)(Zd.e, {
-                    name: rN[Od]
-                  }), Qd(yd)]
-                }), Dd && (0, od.jsx)("p", {
-                  children: (0, od.jsx)(Fp.c, {
-                    text: Dd
+                children: [(0, HQ.jsxs)("h2", {
+                  children: [AQ && (0, HQ.jsx)(kQ.c, {
+                    name: hq[AQ]
+                  }), YQ(jQ)]
+                }), aQ && (0, HQ.jsx)("p", {
+                  children: (0, HQ.jsx)(OL.e, {
+                    text: aQ
                   })
                 })]
               })
-            }), (0, od.jsx)("main", {
+            }), (0, HQ.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: Cd && Td
-            }), (0, od.jsxs)("button", {
+              children: mQ && XQ
+            }), (0, HQ.jsxs)("button", {
               type: "button",
-              className: Wd()("SmpStatus", {
-                SmpStatusWaiting: Sd,
-                SmpStatusFresh: !Sd && null !== sd,
-                SmpStatusHasHistory: Ud
+              className: oQ()("SmpStatus", {
+                SmpStatusWaiting: UQ,
+                SmpStatusFresh: !UQ && null !== iQ,
+                SmpStatusHasHistory: lQ
               }),
               "aria-live": "polite",
-              "aria-expanded": Ud ? qd : void 0,
+              "aria-expanded": lQ ? CQ : void 0,
               onClick: () => {
-                Ud && Bd((dd => !dd))
+                lQ && SQ((QQ => !QQ))
               },
-              children: [Sd ? (0, od.jsxs)("span", {
+              children: [UQ ? (0, HQ.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, od.jsx)(zp, {}), Qd(nd ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : vd[0] ? (0, od.jsx)("span", {
+                children: [(0, HQ.jsx)(gL, {}), YQ(zQ ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : pQ[0] ? (0, HQ.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, od.jsx)(Fp.c, {
-                  text: vd[0].text
+                children: (0, HQ.jsx)(OL.e, {
+                  text: pQ[0].text
                 })
-              }, vd[0].id) : (0, od.jsx)("span", {
+              }, pQ[0].id) : (0, HQ.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: Qd("smpShop:ready")
-              }), Ud && (0, od.jsx)("small", {
-                children: Qd("smpShop:recentMessages", {
-                  count: vd.length
+                children: YQ("smpShop:ready")
+              }), lQ && (0, HQ.jsx)("small", {
+                children: YQ("smpShop:recentMessages", {
+                  count: pQ.length
                 })
               })]
-            }), qd && Ud && (0, od.jsx)("div", {
+            }), CQ && lQ && (0, HQ.jsx)("div", {
               className: "SmpStatusHistory",
-              children: vd.map((dd => (0, od.jsx)("div", {
-                children: (0, od.jsx)(Fp.c, {
-                  text: dd.text
+              children: pQ.map((QQ => (0, HQ.jsx)("div", {
+                children: (0, HQ.jsx)(OL.e, {
+                  text: QQ.text
                 })
-              }, dd.id)))
+              }, QQ.id)))
             })]
           })
         })
       })
     }
-    class VN {
-      constructor(dd) {
-        this.info = dd
+    class nq {
+      constructor(QQ) {
+        this.info = QQ
       }
-      static fromShopInfo(dd) {
-        const Jd = {};
-        for (const kd in dd) {
-          const pd = !0 === dd[kd].redDot && !0 !== dd[kd].forceRemoveRedDot;
-          Jd[kd] = {
-            redDot: pd,
+      static fromShopInfo(QQ) {
+        const FQ = {};
+        for (const wQ in QQ) {
+          const LQ = !0 === QQ[wQ].redDot && !0 !== QQ[wQ].forceRemoveRedDot;
+          FQ[wQ] = {
+            redDot: LQ,
             items: {}
           };
-          for (const Nd in dd[kd].items) {
-            const pd = dd[kd].items[Nd],
-              Wd = !0 === pd.redDot && !0 !== pd.forceRemoveRedDot;
-            Jd[kd].items[Nd] = {
-              redDot: Wd
+          for (const qQ in QQ[wQ].items) {
+            const LQ = QQ[wQ].items[qQ],
+              oQ = !0 === LQ.redDot && !0 !== LQ.forceRemoveRedDot;
+            FQ[wQ].items[qQ] = {
+              redDot: oQ
             }
           }
         }
-        return new VN(Jd)
+        return new nq(FQ)
       }
       anyCategoryHasRedDots() {
-        for (const dd in this.info)
-          if (this.categoryHasRedDot(dd)) return !0;
+        for (const QQ in this.info)
+          if (this.categoryHasRedDot(QQ)) return !0;
         return !1
       }
-      doesCategoryExist(dd) {
-        return !(0, cJ.I)(this.info[dd])
+      doesCategoryExist(QQ) {
+        return !(0, VF.F)(this.info[QQ])
       }
-      categoryHasRedDot(dd) {
-        return !0 === this.info[dd].redDot
+      categoryHasRedDot(QQ) {
+        return !0 === this.info[QQ].redDot
       }
-      updateCategoryRedDot(dd, Jd) {
-        this.info[dd].redDot = Jd
+      updateCategoryRedDot(QQ, FQ) {
+        this.info[QQ].redDot = FQ
       }
-      doesItemExist(dd, Jd) {
-        return this.doesCategoryExist(dd) && !(0, cJ.I)(this.info[dd].items[Jd])
+      doesItemExist(QQ, FQ) {
+        return this.doesCategoryExist(QQ) && !(0, VF.F)(this.info[QQ].items[FQ])
       }
-      itemHasRedDot(dd, Jd) {
-        return !0 === this.info[dd].items[Jd].redDot
+      itemHasRedDot(QQ, FQ) {
+        return !0 === this.info[QQ].items[FQ].redDot
       }
-      updateItemRedDot(dd, Jd, kd) {
-        this.info[dd].items[Jd].redDot = kd
+      updateItemRedDot(QQ, FQ, wQ) {
+        this.info[QQ].items[FQ].redDot = wQ
       }
       shallowCopy() {
-        return new VN(this.info)
+        return new nq(this.info)
       }
     }
 
-    function zN(dd, Jd) {
-      return `${dd}\x1f${Jd}`
+    function gq(QQ, FQ) {
+      return `${QQ}\x1f${FQ}`
     }
 
-    function HN(dd, Jd) {
-      return !(0, cJ.I)(Jd) && !(0, cJ.I)(dd) && Jd in dd
+    function Pq(QQ, FQ) {
+      return !(0, VF.F)(FQ) && !(0, VF.F)(QQ) && FQ in QQ
     }
-    const wN = (0, pd.memo)((function(dd) {
-      var Jd, kd;
+    const Zq = (0, LQ.memo)((function(QQ) {
+      var FQ, wQ;
       let {
-        show: Nd
-      } = dd;
-      const Pd = (0, wk.g)("players", NW),
-        Zd = (0, wk.g)("players", WW),
-        Kd = (0, Xp.d)(),
-        [Qd, Ld] = (0, pd.useState)({
+        show: qQ
+      } = QQ;
+      const DQ = (0, yw.g)("players", wo),
+        kQ = (0, yw.g)("players", Lo),
+        uQ = (0, TL.b)(),
+        [YQ, xQ] = (0, LQ.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: VN.fromShopInfo({}),
+          redDotInfo: nq.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        ed = (0, pd.useRef)(""),
-        Rd = (0, pd.useRef)(null),
-        Gd = (0, pd.useRef)(null),
-        vd = (0, pd.useRef)(0),
-        xd = (0, pd.useRef)(void 0),
-        qd = (0, pd.useRef)(null),
-        Bd = (0, pd.useRef)(Qd),
-        ad = Qd.redDotInfo.anyCategoryHasRedDots(),
-        [Md, Yd] = (0, pd.useState)(null),
-        md = (0, pd.useRef)(!1);
-      let bd = !1,
-        Sd = 0,
-        jd = 0;
-      if (Qd.currencyAmounts) {
-        for (const dd in Qd.currencyAmounts) {
-          var Xd;
-          const Jd = Qd.currencyAmounts[dd];
-          Jd.hidden || (Sd++, (null === (Xd = Jd.subtext) || void 0 === Xd ? void 0 : Xd.length) > 0 && jd++)
+        tQ = (0, LQ.useRef)(""),
+        eQ = (0, LQ.useRef)(null),
+        GQ = (0, LQ.useRef)(null),
+        pQ = (0, LQ.useRef)(0),
+        cQ = (0, LQ.useRef)(void 0),
+        CQ = (0, LQ.useRef)(null),
+        SQ = (0, LQ.useRef)(YQ),
+        WQ = YQ.redDotInfo.anyCategoryHasRedDots(),
+        [RQ, sQ] = (0, LQ.useState)(null),
+        rQ = (0, LQ.useRef)(!1);
+      let IQ = !1,
+        UQ = 0,
+        NQ = 0;
+      if (YQ.currencyAmounts) {
+        for (const QQ in YQ.currencyAmounts) {
+          var TQ;
+          const FQ = YQ.currencyAmounts[QQ];
+          FQ.hidden || (UQ++, (null === (TQ = FQ.subtext) || void 0 === TQ ? void 0 : TQ.length) > 0 && NQ++)
         }
-        bd = Sd + jd > 4
-      }(0, pd.useEffect)((() => {
-        hJ.j.nO("showShopIconRedDot", ad, !0)
-      }), [ad]), (0, pd.useEffect)((() => {
-        Id.gameBridge.send("setShopOpen", Nd), Nd || (clearTimeout(xd.current), Ld((dd => dd.awaitingPurchase ? {
-          ...dd,
+        IQ = UQ + NQ > 4
+      }(0, LQ.useEffect)((() => {
+        hF.l.GA("showShopIconRedDot", WQ, !0)
+      }), [WQ]), (0, LQ.useEffect)((() => {
+        MQ.gameBridge.send("setShopOpen", qQ), qQ || (clearTimeout(cQ.current), xQ((QQ => QQ.awaitingPurchase ? {
+          ...QQ,
           awaitingPurchase: !1
-        } : dd)))
-      }), [Nd]), (0, pd.useEffect)((() => () => {
-        Id.gameBridge.send("setShopOpen", !1), clearTimeout(xd.current)
-      }), []), (0, pd.useEffect)((() => {
-        Bd.current = Qd
-      }), [Qd]), (0, pd.useEffect)((() => {
-        if (null === Md) return;
-        return (0, Sp.d)("pointerdown", (dd => {
-          const Jd = dd.target;
-          null !== Jd && void 0 !== Jd && Jd.closest(".ShopItem") || Yd(null)
+        } : QQ)))
+      }), [qQ]), (0, LQ.useEffect)((() => () => {
+        MQ.gameBridge.send("setShopOpen", !1), clearTimeout(cQ.current)
+      }), []), (0, LQ.useEffect)((() => {
+        SQ.current = YQ
+      }), [YQ]), (0, LQ.useEffect)((() => {
+        if (null === RQ) return;
+        return (0, UL.c)("pointerdown", (QQ => {
+          const FQ = QQ.target;
+          null !== FQ && void 0 !== FQ && FQ.closest(".ShopItem") || sQ(null)
         }))
-      }), [Md]);
-      const fd = dd => {
-          Ld((Jd => ({
-            ...Jd,
-            ...dd
+      }), [RQ]);
+      const KQ = QQ => {
+          xQ((FQ => ({
+            ...FQ,
+            ...QQ
           })))
         },
-        nd = dd => {
-          var Jd;
-          clearTimeout(null === (Jd = Qd.onBoughtInfo) || void 0 === Jd ? void 0 : Jd.timeout);
-          const kd = setTimeout((() => {
-            fd({
+        zQ = QQ => {
+          var FQ;
+          clearTimeout(null === (FQ = YQ.onBoughtInfo) || void 0 === FQ ? void 0 : FQ.timeout);
+          const wQ = setTimeout((() => {
+            KQ({
               onBoughtInfo: null
             })
           }), 3e3);
-          ed.current = dd, fd({
+          tQ.current = QQ, KQ({
             onBoughtInfo: {
-              text: dd,
-              timeout: kd,
-              categoryKey: Rd.current
+              text: QQ,
+              timeout: wQ,
+              categoryKey: eQ.current
             }
           })
         },
-        Ud = dd => {
+        lQ = QQ => {
           const {
-            shopInfo: Jd,
-            userInputsPerItem: kd,
-            redDotInfo: pd,
-            autoSelectCategory: Wd
-          } = function(dd, Jd, kd, pd, Nd, Wd) {
-            if ((0, cJ.I)(dd) || 0 === Object.keys(dd).length) return {
+            shopInfo: FQ,
+            userInputsPerItem: wQ,
+            redDotInfo: LQ,
+            autoSelectCategory: oQ
+          } = function(QQ, FQ, wQ, LQ, qQ, oQ) {
+            if ((0, VF.F)(QQ) || 0 === Object.keys(QQ).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: VN.fromShopInfo({}),
+              redDotInfo: nq.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const Pd = Fd.q[Fd.t].adConfig.showRewardedAds,
-              Zd = {};
-            let gd = null;
-            for (const ed in dd) {
-              const Jd = dd[ed],
-                kd = {};
-              let pd = !1;
-              for (const dd in Jd.items) {
-                const Nd = Jd.items[dd];
-                (0, sp.k)(Nd, Pd) && (kd[dd] = Nd, pd = !0)
+            const DQ = OQ.n[OQ.r].adConfig.showRewardedAds,
+              kQ = {};
+            let vQ = null;
+            for (const tQ in QQ) {
+              const FQ = QQ[tQ],
+                wQ = {};
+              let LQ = !1;
+              for (const QQ in FQ.items) {
+                const qQ = FQ.items[QQ];
+                (0, SL.l)(qQ, DQ) && (wQ[QQ] = qQ, LQ = !0)
               }
-              pd && (Zd[ed] = {
-                ...Jd,
-                items: kd
-              }, !0 === Jd.autoSelectCategory && (gd = ed))
+              LQ && (kQ[tQ] = {
+                ...FQ,
+                items: wQ
+              }, !0 === FQ.autoSelectCategory && (vQ = tQ))
             }
-            const Cd = {},
-              Kd = (dd, Jd, pd, Pd) => {
-                var Zd, gd;
-                const Kd = zN(dd, Jd),
-                  od = null !== (Zd = kd[Kd]) && void 0 !== Zd ? Zd : kd[Jd];
-                if (null !== (gd = Pd.userInput) && void 0 !== gd && gd.type) switch (Pd.userInput.type) {
+            const mQ = {},
+              uQ = (QQ, FQ, LQ, DQ) => {
+                var kQ, vQ;
+                const uQ = gq(QQ, FQ),
+                  HQ = null !== (kQ = wQ[uQ]) && void 0 !== kQ ? kQ : wQ[FQ];
+                if (null !== (vQ = DQ.userInput) && void 0 !== vQ && vQ.type) switch (DQ.userInput.type) {
                   case "dropdown": {
-                    var ld;
-                    const dd = !od || !Pd.userInput.dropdownOptions.some((dd => (0, sp.h)(dd) === od)),
-                      Jd = Pd.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === pd || void 0 === pd || null === (ld = pd.userInput) || void 0 === ld ? void 0 : ld.type) || JSON.stringify(pd.userInput.dropdownOptions) !== JSON.stringify(Pd.userInput.dropdownOptions)),
-                      kd = Pd.userInput,
-                      Nd = !(0, cJ.I)(kd.initialValue) && kd.dropdownOptions.some((dd => (0, sp.h)(dd) === kd.initialValue));
-                    var Qd;
-                    return void(dd || Jd ? Nd ? Cd[Kd] = null !== (Qd = Pd.userInput.initialValue) && void 0 !== Qd ? Qd : null : Pd.userInput.dropdownOptions.length > 0 ? Cd[Kd] = (0, sp.h)(Pd.userInput.dropdownOptions[0]) : Cd[Kd] = null : Cd[Kd] = od)
+                    var bQ;
+                    const QQ = !HQ || !DQ.userInput.dropdownOptions.some((QQ => (0, SL.f)(QQ) === HQ)),
+                      FQ = DQ.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === LQ || void 0 === LQ || null === (bQ = LQ.userInput) || void 0 === bQ ? void 0 : bQ.type) || JSON.stringify(LQ.userInput.dropdownOptions) !== JSON.stringify(DQ.userInput.dropdownOptions)),
+                      wQ = DQ.userInput,
+                      qQ = !(0, VF.F)(wQ.initialValue) && wQ.dropdownOptions.some((QQ => (0, SL.f)(QQ) === wQ.initialValue));
+                    var YQ;
+                    return void(QQ || FQ ? qQ ? mQ[uQ] = null !== (YQ = DQ.userInput.initialValue) && void 0 !== YQ ? YQ : null : DQ.userInput.dropdownOptions.length > 0 ? mQ[uQ] = (0, SL.f)(DQ.userInput.dropdownOptions[0]) : mQ[uQ] = null : mQ[uQ] = HQ)
                   }
                   case "text":
                   case "number":
-                    var Ld, Od, ed;
-                    return void((null === pd || void 0 === pd ? void 0 : pd.userInput) !== Pd.userInput ? Cd[Kd] = null !== (Ld = null !== (Od = Pd.userInput.initialValue) && void 0 !== Od ? Od : od) && void 0 !== Ld ? Ld : "" : Cd[Kd] = null !== (ed = null !== od && void 0 !== od ? od : Pd.userInput.initialValue) && void 0 !== ed ? ed : "");
+                    var xQ, AQ, tQ;
+                    return void((null === LQ || void 0 === LQ ? void 0 : LQ.userInput) !== DQ.userInput ? mQ[uQ] = null !== (xQ = null !== (AQ = DQ.userInput.initialValue) && void 0 !== AQ ? AQ : HQ) && void 0 !== xQ ? xQ : "" : mQ[uQ] = null !== (tQ = null !== HQ && void 0 !== HQ ? HQ : DQ.userInput.initialValue) && void 0 !== tQ ? tQ : "");
                   case "color":
-                    var Rd, Id, Gd;
-                    return void((null === pd || void 0 === pd ? void 0 : pd.userInput) !== Pd.userInput ? Cd[Kd] = null !== (Rd = null !== (Id = Pd.userInput.initialValue) && void 0 !== Id ? Id : od) && void 0 !== Rd ? Rd : "#000000" : Cd[Kd] = null !== (Gd = null !== od && void 0 !== od ? od : Pd.userInput.initialValue) && void 0 !== Gd ? Gd : "#000000");
+                    var eQ, MQ, GQ;
+                    return void((null === LQ || void 0 === LQ ? void 0 : LQ.userInput) !== DQ.userInput ? mQ[uQ] = null !== (eQ = null !== (MQ = DQ.userInput.initialValue) && void 0 !== MQ ? MQ : HQ) && void 0 !== eQ ? eQ : "#000000" : mQ[uQ] = null !== (GQ = null !== HQ && void 0 !== HQ ? HQ : DQ.userInput.initialValue) && void 0 !== GQ ? GQ : "#000000");
                   case "player": {
-                    const dd = (0, sp.i)(Nd, Wd, Pd.userInput);
-                    return void(od && dd.includes(od) ? Cd[Kd] = od : Cd[Kd] = dd.length > 0 ? dd[0] : null)
+                    const QQ = (0, SL.j)(qQ, oQ, DQ.userInput);
+                    return void(HQ && QQ.includes(HQ) ? mQ[uQ] = HQ : mQ[uQ] = QQ.length > 0 ? QQ[0] : null)
                   }
                 }
               };
-            for (const ed in Zd)
-              for (const dd in Zd[ed].items) {
-                var od;
-                const kd = Zd[ed].items[dd];
-                Kd(ed, dd, null === (od = Jd[ed]) || void 0 === od ? void 0 : od.items[dd], kd)
+            for (const tQ in kQ)
+              for (const QQ in kQ[tQ].items) {
+                var HQ;
+                const wQ = kQ[tQ].items[QQ];
+                uQ(tQ, QQ, null === (HQ = FQ[tQ]) || void 0 === HQ ? void 0 : HQ.items[QQ], wQ)
               }
-            const ld = VN.fromShopInfo(Zd);
-            for (const ed in Zd) {
-              var Qd;
-              if (pd.doesCategoryExist(ed)) {
-                (null === (Qd = Jd[ed]) || void 0 === Qd ? void 0 : Qd.redDot) === Zd[ed].redDot && ld.updateCategoryRedDot(ed, pd.categoryHasRedDot(ed));
-                for (const dd in Zd[ed].items) {
-                  var Ld, Od;
-                  pd.doesItemExist(ed, dd) && (null === (Ld = Jd[ed]) || void 0 === Ld || null === (Od = Ld.items[dd]) || void 0 === Od ? void 0 : Od.redDot) === Zd[ed].items[dd].redDot && ld.updateItemRedDot(ed, dd, pd.itemHasRedDot(ed, dd))
+            const bQ = nq.fromShopInfo(kQ);
+            for (const tQ in kQ) {
+              var YQ;
+              if (LQ.doesCategoryExist(tQ)) {
+                (null === (YQ = FQ[tQ]) || void 0 === YQ ? void 0 : YQ.redDot) === kQ[tQ].redDot && bQ.updateCategoryRedDot(tQ, LQ.categoryHasRedDot(tQ));
+                for (const QQ in kQ[tQ].items) {
+                  var xQ, AQ;
+                  LQ.doesItemExist(tQ, QQ) && (null === (xQ = FQ[tQ]) || void 0 === xQ || null === (AQ = xQ.items[QQ]) || void 0 === AQ ? void 0 : AQ.redDot) === kQ[tQ].items[QQ].redDot && bQ.updateItemRedDot(tQ, QQ, LQ.itemHasRedDot(tQ, QQ))
                 }
               }
             }
             return {
-              shopInfo: Zd,
-              userInputsPerItem: Cd,
-              redDotInfo: ld,
-              autoSelectCategory: gd
+              shopInfo: kQ,
+              userInputsPerItem: mQ,
+              redDotInfo: bQ,
+              autoSelectCategory: vQ
             }
-          }(dd, Qd.shopInfo, Qd.userInputsPerItem, Qd.redDotInfo, Pd, Zd), gd = {
-            shopInfo: Jd,
-            userInputsPerItem: kd,
-            redDotInfo: pd
+          }(QQ, YQ.shopInfo, YQ.userInputsPerItem, YQ.redDotInfo, DQ, kQ), vQ = {
+            shopInfo: FQ,
+            userInputsPerItem: wQ,
+            redDotInfo: LQ
           };
-          if (null === Wd || Nd)
-            if (Jd[Qd.selectedCategoryKey]) gd.selectedCategoryKey = Qd.selectedCategoryKey;
+          if (null === oQ || qQ)
+            if (FQ[YQ.selectedCategoryKey]) vQ.selectedCategoryKey = YQ.selectedCategoryKey;
             else {
-              const dd = np(Jd);
-              gd.selectedCategoryKey = dd.length > 0 ? dd[0] : null
+              const QQ = zL(FQ);
+              vQ.selectedCategoryKey = QQ.length > 0 ? QQ[0] : null
             }
-          else gd.selectedCategoryKey = Wd;
-          return 0 === Object.keys(Jd).length && Nd && sd.d.set({
+          else vQ.selectedCategoryKey = oQ;
+          return 0 === Object.keys(FQ).length && qQ && iQ.c.set({
             openEverythingMenuName: null
-          }), gd
+          }), vQ
         },
-        Dd = (dd, Jd, kd) => {
-          const pd = Qd.selectedCategoryKey,
-            Nd = zN(pd, dd),
-            Wd = null !== kd && void 0 !== kd ? kd : Qd.userInputsPerItem[Nd],
-            Pd = {
-              categoryKey: pd,
-              itemKey: dd,
-              userInput: Wd
+        aQ = (QQ, FQ, wQ) => {
+          const LQ = YQ.selectedCategoryKey,
+            qQ = gq(LQ, QQ),
+            oQ = null !== wQ && void 0 !== wQ ? wQ : YQ.userInputsPerItem[qQ],
+            DQ = {
+              categoryKey: LQ,
+              itemKey: QQ,
+              userInput: oQ
             };
-          if (Rd.current = pd, Jd.isRewardedAd) {
-            if (Date.now() - vd.current < 5e3) return;
-            (0, PJ.R)((() => {
-              var kd, pd, Wd;
+          if (eQ.current = LQ, FQ.isRewardedAd) {
+            if (Date.now() - pQ.current < 5e3) return;
+            (0, oF.db)((() => {
+              var wQ, LQ, oQ;
               console.log("bought rewarded ad");
-              const Zd = Pd.categoryKey ? null === (kd = Bd.current.shopInfo[Pd.categoryKey]) || void 0 === kd ? void 0 : kd.items[dd] : null;
-              if (!Zd || !Zd.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (pd = Jd.userInput) || void 0 === pd ? void 0 : pd.type) === (null === Zd || void 0 === Zd || null === (Wd = Zd.userInput) || void 0 === Wd ? void 0 : Wd.type) ? (Pd.userInput = Bd.current.userInputsPerItem[Nd], Id.gameBridge.send("buyShopItem", Pd), Jd.onBoughtMessage && nd(Jd.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), vd.current = Date.now()
+              const kQ = DQ.categoryKey ? null === (wQ = SQ.current.shopInfo[DQ.categoryKey]) || void 0 === wQ ? void 0 : wQ.items[QQ] : null;
+              if (!kQ || !kQ.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (LQ = FQ.userInput) || void 0 === LQ ? void 0 : LQ.type) === (null === kQ || void 0 === kQ || null === (oQ = kQ.userInput) || void 0 === oQ ? void 0 : oQ.type) ? (DQ.userInput = SQ.current.userInputsPerItem[qQ], MQ.gameBridge.send("buyShopItem", DQ), FQ.onBoughtMessage && zQ(FQ.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), pQ.current = Date.now()
           } else {
-            Id.gameBridge.send("buyShopItem", Pd), fd({
+            MQ.gameBridge.send("buyShopItem", DQ), KQ({
               awaitingPurchase: !0
-            }), clearTimeout(xd.current), xd.current = setTimeout((() => {
-              qd.current = null, fd({
+            }), clearTimeout(cQ.current), cQ.current = setTimeout((() => {
+              CQ.current = null, KQ({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const dd = (0, sp.d)(Jd, Wd);
-            if (qd.current = null, !isNaN(dd) && HN(Qd.currencyAmounts, Jd.currency)) {
-              0 !== dd && (qd.current = {
-                currency: Jd.currency,
-                amountBefore: Qd.currencyAmounts[Jd.currency].amount
+            const QQ = (0, SL.c)(FQ, oQ);
+            if (CQ.current = null, !isNaN(QQ) && Pq(YQ.currencyAmounts, FQ.currency)) {
+              0 !== QQ && (CQ.current = {
+                currency: FQ.currency,
+                amountBefore: YQ.currencyAmounts[FQ.currency].amount
               });
-              const kd = {
-                ...Qd.currencyAmounts
+              const wQ = {
+                ...YQ.currencyAmounts
               };
-              kd[Jd.currency].amount -= dd, fd({
-                currencyAmounts: kd
+              wQ[FQ.currency].amount -= QQ, KQ({
+                currencyAmounts: wQ
               })
             }
-            Jd.onBoughtMessage && nd(Jd.onBoughtMessage)
+            FQ.onBoughtMessage && zQ(FQ.onBoughtMessage)
           }
         },
-        Td = (dd, Jd) => {
-          if (null === Jd || !dd.shopInfo[Jd]) return dd;
-          let kd = dd.redDotInfo;
-          return kd.categoryHasRedDot(Jd) && (kd.updateCategoryRedDot(Jd, !1), kd = kd.shallowCopy()), {
-            ...dd,
-            selectedCategoryKey: Jd,
-            redDotInfo: kd
+        XQ = (QQ, FQ) => {
+          if (null === FQ || !QQ.shopInfo[FQ]) return QQ;
+          let wQ = QQ.redDotInfo;
+          return wQ.categoryHasRedDot(FQ) && (wQ.updateCategoryRedDot(FQ, !1), wQ = wQ.shallowCopy()), {
+            ...QQ,
+            selectedCategoryKey: FQ,
+            redDotInfo: wQ
           }
         },
-        Ed = dd => {
-          Ld((Jd => Td(Jd, dd)))
+        fQ = QQ => {
+          xQ((FQ => XQ(FQ, QQ)))
         };
-      (0, FJ.h)(jp.i, (() => {
-        Ld((dd => {
-          const Jd = (0, jp.l)(np(dd.shopInfo), dd.selectedCategoryKey, (Jd => (0, jp.h)(dd.shopInfo[Jd].items)));
-          return Jd === dd.selectedCategoryKey ? dd : Td(dd, Jd)
+      (0, OF.g)(NL.k, (() => {
+        xQ((QQ => {
+          const FQ = (0, NL.o)(zL(QQ.shopInfo), QQ.selectedCategoryKey, (FQ => (0, NL.h)(QQ.shopInfo[FQ].items)));
+          return FQ === QQ.selectedCategoryKey ? QQ : XQ(QQ, FQ)
         }))
-      })), (0, FJ.h)("showShopFromServer", (dd => {
+      })), (0, OF.g)("showShopFromServer", (QQ => {
         let {
-          toggle: Jd,
-          zk: kd
-        } = dd;
-        kd && Ed(kd), 0 === Object.keys(Qd.shopInfo).length || Jd && Nd ? sd.d.set({
+          toggle: FQ,
+          Xw: wQ
+        } = QQ;
+        wQ && fQ(wQ), 0 === Object.keys(YQ.shopInfo).length || FQ && qQ ? iQ.c.set({
           openEverythingMenuName: null
-        }) : sd.d.set({
-          openEverythingMenuName: KJ.s.SHOP
+        }) : iQ.c.set({
+          openEverythingMenuName: mF.n.SHOP
         })
-      })), (0, FJ.h)("closeShopOnDamaged", (() => {
-        Nd && sd.d.set({
+      })), (0, OF.g)("closeShopOnDamaged", (() => {
+        qQ && iQ.c.set({
           openEverythingMenuName: null
         })
-      })), (0, FJ.h)("overShopInfo", (dd => {
-        nd(dd)
-      })), (0, Od.g)("currencyAmounts", (dd => {
-        var Jd;
-        const kd = qd.current;
-        kd && (null === dd || void 0 === dd || null === (Jd = dd[kd.currency]) || void 0 === Jd ? void 0 : Jd.amount) === kd.amountBefore ? fd({
-          currencyAmounts: dd
-        }) : (qd.current = null, fd({
-          currencyAmounts: dd,
+      })), (0, OF.g)("overShopInfo", (QQ => {
+        zQ(QQ)
+      })), (0, AQ.h)("currencyAmounts", (QQ => {
+        var FQ;
+        const wQ = CQ.current;
+        wQ && (null === QQ || void 0 === QQ || null === (FQ = QQ[wQ.currency]) || void 0 === FQ ? void 0 : FQ.amount) === wQ.amountBefore ? KQ({
+          currencyAmounts: QQ
+        }) : (CQ.current = null, KQ({
+          currencyAmounts: QQ,
           awaitingPurchase: !1
         }))
-      })), (0, Od.g)("shopInfo", (dd => {
-        fd({
-          ...Ud(dd),
+      })), (0, AQ.h)("shopInfo", (QQ => {
+        KQ({
+          ...lQ(QQ),
           awaitingPurchase: !1
         })
       }));
-      const cd = (0, pd.useRef)({
-        playerIds: Pd,
-        localPlayerId: Zd
+      const VQ = (0, LQ.useRef)({
+        playerIds: DQ,
+        localPlayerId: kQ
       });
-      (0, pd.useEffect)((() => {
-        cd.current.playerIds === Pd && cd.current.localPlayerId === Zd || (cd.current = {
-          playerIds: Pd,
-          localPlayerId: Zd
-        }, Ld((dd => {
-          const Jd = Ud(dd.shopInfo);
+      (0, LQ.useEffect)((() => {
+        VQ.current.playerIds === DQ && VQ.current.localPlayerId === kQ || (VQ.current = {
+          playerIds: DQ,
+          localPlayerId: kQ
+        }, xQ((QQ => {
+          const FQ = lQ(QQ.shopInfo);
           return {
-            ...dd,
-            ...Jd
+            ...QQ,
+            ...FQ
           }
         })))
-      }), [Pd, Zd]);
-      const hd = Qd.selectedCategoryKey,
-        rd = (dd, Jd) => {
-          var kd, pd;
-          return (isNaN(Jd) || (0, cJ.I)(dd.currency) || HN(Qd.currencyAmounts, dd.currency) && Jd <= Qd.currencyAmounts[dd.currency].amount) && (null === (kd = dd.canBuy) || void 0 === kd || kd) && !(null !== (pd = dd.hidden) && void 0 !== pd && pd)
+      }), [DQ, kQ]);
+      const hQ = YQ.selectedCategoryKey,
+        JQ = (QQ, FQ) => {
+          var wQ, LQ;
+          return (isNaN(FQ) || (0, VF.F)(QQ.currency) || Pq(YQ.currencyAmounts, QQ.currency) && FQ <= YQ.currencyAmounts[QQ.currency].amount) && (null === (wQ = QQ.canBuy) || void 0 === wQ || wQ) && !(null !== (LQ = QQ.hidden) && void 0 !== LQ && LQ)
         },
-        ud = (dd, Jd) => {
-          var kd, pd, Nd;
-          const Pd = zN(hd, dd),
-            Zd = Qd.shopInfo[hd].items[dd],
-            Kd = Qd.userInputsPerItem[Pd],
-            ld = (0, sp.d)(Zd, Kd),
-            Ld = rd(Zd, ld),
-            Od = Zd.enchant,
-            ed = Od ? (0, yd.yb)(null !== (kd = Zd.customTitle) && void 0 !== kd ? kd : dd, {
-              colour: yd.tb[Od.tier]
-            }) : null !== (pd = Zd.customTitle) && void 0 !== pd ? pd : dd,
-            Rd = Jd => {
-              const kd = null !== Jd && void 0 !== Jd ? Jd : Kd,
-                pd = void 0 !== Jd ? (0, sp.d)(Zd, Jd) : ld;
-              rd(Zd, pd) && null !== kd && Dd(dd, Zd, Jd);
-              let Nd = Qd.redDotInfo;
-              Nd.itemHasRedDot(hd, dd) && (Nd.updateItemRedDot(hd, dd, !1), Nd = Nd.shallowCopy()), fd({
-                redDotInfo: Nd
+        EQ = (QQ, FQ) => {
+          var wQ, LQ, qQ;
+          const DQ = gq(hQ, QQ),
+            kQ = YQ.shopInfo[hQ].items[QQ],
+            uQ = YQ.userInputsPerItem[DQ],
+            bQ = (0, SL.c)(kQ, uQ),
+            xQ = JQ(kQ, bQ),
+            AQ = kQ.enchant,
+            tQ = AQ ? (0, jQ.ub)(null !== (wQ = kQ.customTitle) && void 0 !== wQ ? wQ : QQ, {
+              colour: jQ.pb[AQ.tier]
+            }) : null !== (LQ = kQ.customTitle) && void 0 !== LQ ? LQ : QQ,
+            eQ = FQ => {
+              const wQ = null !== FQ && void 0 !== FQ ? FQ : uQ,
+                LQ = void 0 !== FQ ? (0, SL.c)(kQ, FQ) : bQ;
+              JQ(kQ, LQ) && null !== wQ && aQ(QQ, kQ, FQ);
+              let qQ = YQ.redDotInfo;
+              qQ.itemHasRedDot(hQ, QQ) && (qQ.updateItemRedDot(hQ, QQ, !1), qQ = qQ.shallowCopy()), KQ({
+                redDotInfo: qQ
               })
             };
-          return (0, od.jsxs)("div", {
-            className: Wd()("ShopItem", {
-              ShopItemNoInput: !Zd.userInput,
-              ShopItemNoInputCanBuy: !Zd.userInput && Ld,
-              ShopItemNoInputSelected: Zd.isSelected,
-              ShopItemEnchant: !!Od
+          return (0, HQ.jsxs)("div", {
+            className: oQ()("ShopItem", {
+              ShopItemNoInput: !kQ.userInput,
+              ShopItemNoInputCanBuy: !kQ.userInput && xQ,
+              ShopItemNoInputSelected: kQ.isSelected,
+              ShopItemEnchant: !!AQ
             }),
-            "data-pad-focusable": !Zd.userInput || void 0,
-            "data-pad-unavailable": !Zd.userInput && !Ld || void 0,
-            "data-pad-repeat": null !== (Nd = (0, jp.d)(Zd)) && void 0 !== Nd ? Nd : void 0,
-            "data-pad-repeat-wait": Qd.awaitingPurchase || void 0,
+            "data-pad-focusable": !kQ.userInput || void 0,
+            "data-pad-unavailable": !kQ.userInput && !xQ || void 0,
+            "data-pad-repeat": null !== (qQ = (0, NL.b)(kQ)) && void 0 !== qQ ? qQ : void 0,
+            "data-pad-repeat-wait": YQ.awaitingPurchase || void 0,
             onClick: () => {
-              if (Od && md.current) {
-                if (Md !== Pd) return void Yd(Pd);
-                Yd(null)
+              if (AQ && rQ.current) {
+                if (RQ !== DQ) return void sQ(DQ);
+                sQ(null)
               }
-              Zd.userInput || Rd()
+              kQ.userInput || eQ()
             },
-            onPointerDown: dd => {
-              Od && (md.current = (0, ap.l)(dd))
+            onPointerDown: QQ => {
+              AQ && (rQ.current = (0, WL.p)(QQ))
             },
-            onPointerEnter: dd => {
-              Od && !(0, ap.l)(dd) && Yd(Pd)
+            onPointerEnter: QQ => {
+              AQ && !(0, WL.p)(QQ) && sQ(DQ)
             },
-            onPointerLeave: dd => {
-              Od && !(0, ap.l)(dd) && Yd((dd => dd === Pd ? null : dd))
+            onPointerLeave: QQ => {
+              AQ && !(0, WL.p)(QQ) && sQ((QQ => QQ === DQ ? null : QQ))
             },
             style: {
-              zIndex: Object.keys(Qd.shopInfo[hd].items).length - Jd
+              zIndex: Object.keys(YQ.shopInfo[hQ].items).length - FQ
             },
-            children: [Qd.redDotInfo.itemHasRedDot(hd, dd) && (0, od.jsx)(gd.e, {
+            children: [YQ.redDotInfo.itemHasRedDot(hQ, QQ) && (0, HQ.jsx)(vQ.b, {
               top: "-6px",
               right: "-6px"
-            }), Zd.badge && (0, od.jsx)("div", {
+            }), kQ.badge && (0, HQ.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, od.jsx)("div", {
-                className: Wd()("ShopBadgeMain", Zd.badge.type),
-                children: (0, od.jsx)(Fp.c, {
-                  text: Zd.badge.text
+              children: (0, HQ.jsx)("div", {
+                className: oQ()("ShopBadgeMain", kQ.badge.type),
+                children: (0, HQ.jsx)(OL.e, {
+                  text: kQ.badge.text
                 })
               })
-            }), (0, od.jsx)("div", {
+            }), (0, HQ.jsx)("div", {
               className: "ShopItemLeft",
-              children: Zd.image && (0, od.jsx)(AN, {
-                item: Zd,
+              children: kQ.image && (0, HQ.jsx)(yq, {
+                item: kQ,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, od.jsxs)("div", {
+            }), (0, HQ.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, od.jsxs)("div", {
+              children: [(0, HQ.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, od.jsx)("div", {
+                children: [(0, HQ.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, od.jsx)(Fp.c, {
-                    text: ed
+                  children: (0, HQ.jsx)(OL.e, {
+                    text: tQ
                   })
-                }), (0, od.jsx)("div", {
+                }), (0, HQ.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, od.jsx)(Fp.c, {
-                    text: Zd.description
+                  children: (0, HQ.jsx)(OL.e, {
+                    text: kQ.description
                   })
                 })]
-              }), Zd.userInput && (0, od.jsxs)("div", {
+              }), kQ.userInput && (0, HQ.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: dd => {
-                  dd.stopPropagation()
+                onClick: QQ => {
+                  QQ.stopPropagation()
                 },
-                children: [(0, od.jsx)(kW, {
-                  item: Zd,
-                  currInput: Kd,
-                  updateInput: Jd => {
-                    ((dd, Jd, kd) => {
-                      const pd = zN(dd, Jd),
-                        Nd = {
-                          ...Qd.userInputsPerItem
+                children: [(0, HQ.jsx)(Qo, {
+                  item: kQ,
+                  currInput: uQ,
+                  updateInput: FQ => {
+                    ((QQ, FQ, wQ) => {
+                      const LQ = gq(QQ, FQ),
+                        qQ = {
+                          ...YQ.userInputsPerItem
                         };
-                      Nd[pd] = kd, fd({
-                        userInputsPerItem: Nd
+                      qQ[LQ] = wQ, KQ({
+                        userInputsPerItem: qQ
                       })
-                    })(hd, dd, Jd)
+                    })(hQ, QQ, FQ)
                   },
-                  onSubmit: dd => {
-                    Rd(dd)
+                  onSubmit: QQ => {
+                    eQ(QQ)
                   }
-                }), ("dropdown" !== Zd.userInput.type || !Zd.userInput.autoSubmit) && (0, od.jsx)(Cd.d, {
+                }), ("dropdown" !== kQ.userInput.type || !kQ.userInput.autoSubmit) && (0, HQ.jsx)(mQ.f, {
                   className: "ItemCostButton",
-                  disabled: !Ld && null !== Kd,
+                  disabled: !xQ && null !== uQ,
                   onClick: () => {
-                    Rd()
+                    eQ()
                   },
-                  children: (0, od.jsx)(JW, {
-                    item: Zd,
-                    cost: ld,
-                    currencyAmounts: Qd.currencyAmounts
+                  children: (0, HQ.jsx)(dq, {
+                    item: kQ,
+                    cost: bQ,
+                    currencyAmounts: YQ.currencyAmounts
                   })
                 })]
               })]
-            }), !Zd.userInput && (0, od.jsx)("div", {
+            }), !kQ.userInput && (0, HQ.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, od.jsx)(JW, {
-                item: Zd,
-                cost: ld,
-                currencyAmounts: Qd.currencyAmounts
+              children: (0, HQ.jsx)(dq, {
+                item: kQ,
+                cost: bQ,
+                currencyAmounts: YQ.currencyAmounts
               })
-            }), Od && Md === Pd && (0, od.jsxs)("div", {
+            }), AQ && RQ === DQ && (0, HQ.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, od.jsx)(Fp.c, {
-                text: ed
-              }), (0, od.jsx)("div", {
+              children: [(0, HQ.jsx)(OL.e, {
+                text: tQ
+              }), (0, HQ.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, od.jsx)(Fp.c, {
-                  text: (0, ip.d)("", Od.enchantments, Od.enchantmentData)
+                children: (0, HQ.jsx)(OL.e, {
+                  text: (0, iL.b)("", AQ.enchantments, AQ.enchantmentData)
                 })
               })]
             })]
-          }, Pd)
+          }, DQ)
         },
-        td = function(dd) {
-          for (const Jd in dd)
-            if (dd[Jd].smp) return !0;
+        nQ = function(QQ) {
+          for (const FQ in QQ)
+            if (QQ[FQ].smp) return !0;
           return !1
-        }(Qd.shopInfo),
-        Vd = pN(Qd.shopInfo, hd);
-      return (0, od.jsx)(xp.b, {
+        }(YQ.shopInfo),
+        gQ = Fq(YQ.shopInfo, hQ);
+      return (0, HQ.jsx)(pL.b, {
         className: "Menu ShopBody",
-        show: Nd,
-        children: 0 !== Object.keys(Qd.shopInfo).length && (0, od.jsxs)(od.Fragment, {
-          children: [(0, od.jsxs)("div", {
+        show: qQ,
+        children: 0 !== Object.keys(YQ.shopInfo).length && (0, HQ.jsxs)(HQ.Fragment, {
+          children: [(0, HQ.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, od.jsx)(ld, {
-              items: np(Qd.shopInfo).map((dd => {
-                var Jd;
+            children: [(0, HQ.jsx)(bQ, {
+              items: zL(YQ.shopInfo).map((QQ => {
+                var FQ;
                 return {
-                  id: dd,
-                  title: null !== (Jd = Qd.shopInfo[dd].customTitle) && void 0 !== Jd ? Jd : dd,
-                  redDot: Qd.redDotInfo.categoryHasRedDot(dd)
+                  id: QQ,
+                  title: null !== (FQ = YQ.shopInfo[QQ].customTitle) && void 0 !== FQ ? FQ : QQ,
+                  redDot: YQ.redDotInfo.categoryHasRedDot(QQ)
                 }
               })),
-              link: Kd ? {
+              link: uQ ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, fp.f)({
-                    page: (0, fp.e)(),
+                  (0, KL.e)({
+                    page: (0, KL.b)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: hd,
-              onClick: Ed,
-              padStartsOnTab: (0, jp.f)(hd)
-            }), (0, od.jsx)("div", {
+              selectedItemId: hQ,
+              onClick: fQ,
+              padStartsOnTab: (0, NL.f)(hQ)
+            }), (0, HQ.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: Qd.currencyAmounts && Object.keys(Qd.currencyAmounts).map((dd => {
-                var Jd;
-                const kd = Qd.currencyAmounts[dd];
-                return kd.hidden ? null : (0, od.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (bd ? "SmallText" : ""),
-                  children: [(0, od.jsxs)("div", {
+              children: YQ.currencyAmounts && Object.keys(YQ.currencyAmounts).map((QQ => {
+                var FQ;
+                const wQ = YQ.currencyAmounts[QQ];
+                return wQ.hidden ? null : (0, HQ.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (IQ ? "SmallText" : ""),
+                  children: [(0, HQ.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, od.jsx)("div", {
+                    children: [(0, HQ.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: kd.iconColour
+                        color: wQ.iconColour
                       },
-                      children: (0, od.jsx)(PW, {
-                        iconName: kd.icon
+                      children: (0, HQ.jsx)(qo, {
+                        iconName: wQ.icon
                       })
-                    }), "\xa0", (0, Bp.e)(kd.amount, 6)]
-                  }), (null === (Jd = kd.subtext) || void 0 === Jd ? void 0 : Jd.length) > 0 && (0, od.jsx)("div", {
+                    }), "\xa0", (0, CL.b)(wQ.amount, 6)]
+                  }), (null === (FQ = wQ.subtext) || void 0 === FQ ? void 0 : FQ.length) > 0 && (0, HQ.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, od.jsx)(Fp.c, {
-                      text: kd.subtext
+                    children: (0, HQ.jsx)(OL.e, {
+                      text: wQ.subtext
                     })
                   })]
-                }, dd)
+                }, QQ)
               }))
             })]
-          }), (0, od.jsxs)("div", {
+          }), (0, HQ.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [td && (0, od.jsx)(tN, {
-              show: Nd,
-              shopInfo: Qd.shopInfo,
-              selectedCategoryKey: hd,
-              buy: (dd, Jd, kd) => {
-                Dd(dd, Jd, kd)
+            children: [nQ && (0, HQ.jsx)(Eq, {
+              show: qQ,
+              shopInfo: YQ.shopInfo,
+              selectedCategoryKey: hQ,
+              buy: (QQ, FQ, wQ) => {
+                aQ(QQ, FQ, wQ)
               },
-              canAfford: rd,
-              message: Qd.onBoughtInfo
-            }), null === Vd && (0, od.jsxs)(od.Fragment, {
-              children: [(0, od.jsx)("div", {
-                className: Wd()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== Qd.onBoughtInfo
+              canAfford: JQ,
+              message: YQ.onBoughtInfo
+            }), null === gQ && (0, HQ.jsxs)(HQ.Fragment, {
+              children: [(0, HQ.jsx)("div", {
+                className: oQ()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== YQ.onBoughtInfo
                 }),
-                children: (0, od.jsx)(Fp.c, {
-                  text: ed.current
+                children: (0, HQ.jsx)(OL.e, {
+                  text: tQ.current
                 })
-              }), (0, od.jsx)("div", {
+              }), (0, HQ.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, od.jsxs)("div", {
+                children: (0, HQ.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (Jd = Qd.shopInfo[hd]) || void 0 === Jd ? void 0 : Jd.description) && (0, od.jsx)("div", {
+                  children: [(null === (FQ = YQ.shopInfo[hQ]) || void 0 === FQ ? void 0 : FQ.description) && (0, HQ.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, od.jsx)(Fp.c, {
-                      text: Qd.shopInfo[hd].description
+                    children: (0, HQ.jsx)(OL.e, {
+                      text: YQ.shopInfo[hQ].description
                     })
-                  }), Nd && (0, od.jsx)("div", {
+                  }), qQ && (0, HQ.jsx)("div", {
                     className: "ShopItems",
-                    ref: Gd,
+                    ref: GQ,
                     "data-pad-initial-area": !0,
-                    children: np(null === (kd = Qd.shopInfo[hd]) || void 0 === kd ? void 0 : kd.items).map(((dd, Jd) => ud(dd, Jd)))
+                    children: zL(null === (wQ = YQ.shopInfo[hQ]) || void 0 === wQ ? void 0 : wQ.items).map(((QQ, FQ) => EQ(QQ, FQ)))
                   })]
                 })
               })]
@@ -5082,784 +5082,784 @@ export const modules = {
       })
     }));
 
-    function AN(dd) {
+    function yq(QQ) {
       let {
-        item: Jd,
-        minWidth: kd,
-        minHeight: pd
-      } = dd;
+        item: FQ,
+        minWidth: wQ,
+        minHeight: LQ
+      } = QQ;
       const {
-        image: Nd,
-        schematicId: Wd,
-        imageColour: Pd
-      } = Jd;
-      if (Wd) return (0, od.jsx)("div", {
+        image: qQ,
+        schematicId: oQ,
+        imageColour: DQ
+      } = FQ;
+      if (oQ) return (0, HQ.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${kd}rem`,
-          height: `${pd}rem`
+          width: `${wQ}rem`,
+          height: `${LQ}rem`
         },
-        children: (0, od.jsx)(Yp.c, {
+        children: (0, HQ.jsx)(sL.d, {
           game: {
-            schematicId: Wd
+            schematicId: oQ
           }
         })
       });
-      var gd, Cd;
-      if ((0, Mp.f)(Nd)) return (0, od.jsx)("div", {
+      var vQ, mQ;
+      if ((0, RL.g)(qQ)) return (0, HQ.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${kd}rem`,
+          minWidth: `${wQ}rem`,
           height: "0",
-          minHeight: `${pd}rem`
+          minHeight: `${LQ}rem`
         },
-        children: (0, od.jsx)(Mp.d, {
-          itemName: Nd,
-          amount: null !== (gd = Jd.amount) && void 0 !== gd ? gd : 0,
-          amountFontSize: pd / 4 + "rem",
-          enchantmentTier: null === (Cd = Jd.enchant) || void 0 === Cd ? void 0 : Cd.tier
+        children: (0, HQ.jsx)(RL.e, {
+          itemName: qQ,
+          amount: null !== (vQ = FQ.amount) && void 0 !== vQ ? vQ : 0,
+          amountFontSize: LQ / 4 + "rem",
+          enchantmentTier: null === (mQ = FQ.enchant) || void 0 === mQ ? void 0 : mQ.tier
         })
       });
-      const Kd = Nd.slice(-4);
-      return ".jpg" === Kd || ".png" === Kd ? (0, od.jsx)(dW, {
-        image: Nd,
-        minWidth: kd
-      }) : (0, od.jsx)(Zd.e, {
-        name: Nd,
+      const uQ = qQ.slice(-4);
+      return ".jpg" === uQ || ".png" === uQ ? (0, HQ.jsx)(Bq, {
+        image: qQ,
+        minWidth: wQ
+      }) : (0, HQ.jsx)(kQ.c, {
+        name: qQ,
         className: "SelectedItemImage",
         style: {
-          color: Pd
+          color: DQ
         }
       })
     }
 
-    function dW(dd) {
+    function Bq(QQ) {
       let {
-        image: Jd,
-        minWidth: kd
-      } = dd;
+        image: FQ,
+        minWidth: wQ
+      } = QQ;
       const {
-        gameNameWithVariation: pd
-      } = (0, wk.k)("connectedGame"), Nd = Jd.endsWith(".jpg");
-      return (0, od.jsx)("img", {
-        className: Wd()({
-          ShopPixelImage: !Nd
+        gameNameWithVariation: LQ
+      } = (0, yw.k)("connectedGame"), qQ = FQ.endsWith(".jpg");
+      return (0, HQ.jsx)("img", {
+        className: oQ()({
+          ShopPixelImage: !qQ
         }),
         style: {
-          width: `${Nd?1.6*kd:kd}rem`,
+          width: `${qQ?1.6*wQ:wQ}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,yd._b)(pd)}/${Jd}`,
-        alt: Jd,
+        src: `/textures/games/${(0,jQ.Wb)(LQ)}/${FQ}`,
+        alt: FQ,
         draggable: !1
       })
     }
 
-    function JW(dd) {
+    function dq(QQ) {
       let {
-        item: Jd,
-        cost: kd,
-        currencyAmounts: pd
-      } = dd;
-      const Nd = !isNaN(kd) && 0 !== kd && HN(pd, Jd.currency);
-      let Wd = null;
-      return Jd.buyButtonText ? Wd = Jd.buyButtonText : Nd ? (Wd = kd, Jd.sell && (Wd = -1 * kd), Wd = Wd.toString()) : 0 === kd ? Wd = "Free" : Jd.isRewardedAd && (Wd = "Watch ad"), (0, cJ.I)(Wd) || " " === Wd ? null : (0, od.jsxs)("div", {
+        item: FQ,
+        cost: wQ,
+        currencyAmounts: LQ
+      } = QQ;
+      const qQ = !isNaN(wQ) && 0 !== wQ && Pq(LQ, FQ.currency);
+      let oQ = null;
+      return FQ.buyButtonText ? oQ = FQ.buyButtonText : qQ ? (oQ = wQ, FQ.sell && (oQ = -1 * wQ), oQ = oQ.toString()) : 0 === wQ ? oQ = "Free" : FQ.isRewardedAd && (oQ = "Watch ad"), (0, VF.F)(oQ) || " " === oQ ? null : (0, HQ.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [Nd && (0, od.jsx)("div", {
+        children: [qQ && (0, HQ.jsx)("div", {
           style: {
-            color: pd[Jd.currency].iconColour
+            color: LQ[FQ.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, od.jsx)(PW, {
-            iconName: pd[Jd.currency].icon
+          children: (0, HQ.jsx)(qo, {
+            iconName: LQ[FQ.currency].icon
           })
-        }), (0, od.jsx)("div", {
+        }), (0, HQ.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, od.jsx)(Fp.c, {
-            text: Wd
+          children: (0, HQ.jsx)(OL.e, {
+            text: oQ
           })
         })]
       })
     }
 
-    function kW(dd) {
+    function Qo(QQ) {
       let {
-        item: Jd,
-        currInput: kd,
-        updateInput: Nd,
-        onSubmit: Wd
-      } = dd;
+        item: FQ,
+        currInput: wQ,
+        updateInput: qQ,
+        onSubmit: oQ
+      } = QQ;
       const {
-        t: Zd
-      } = (0, Pd.B)(), gd = (0, pd.useRef)(null);
-      if ((0, pd.useEffect)((() => {
-          const dd = gd.current;
-          dd && dd.value !== kd && document.activeElement !== dd && (dd.value = null !== kd && void 0 !== kd ? kd : "")
-        }), [kd]), !Jd.userInput) return null;
-      let Cd = Jd.userInput;
-      if (Rd.featureFlags.sanitizeShopInput && "text" === Jd.userInput.type && (Cd = {
+        t: kQ
+      } = (0, DQ.y)(), vQ = (0, LQ.useRef)(null);
+      if ((0, LQ.useEffect)((() => {
+          const QQ = vQ.current;
+          QQ && QQ.value !== wQ && document.activeElement !== QQ && (QQ.value = null !== wQ && void 0 !== wQ ? wQ : "")
+        }), [wQ]), !FQ.userInput) return null;
+      let mQ = FQ.userInput;
+      if (eQ.featureFlags.sanitizeShopInput && "text" === FQ.userInput.type && (mQ = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === Cd.type || "number" === Cd.type) {
-        var Kd, ld;
-        console.assert(void 0 !== kd, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Jd)}`);
-        const dd = "text" === Cd.type && Cd.wordCharsOnly;
-        return (0, od.jsx)("div", {
+        }), "text" === mQ.type || "number" === mQ.type) {
+        var uQ, bQ;
+        console.assert(void 0 !== wQ, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(FQ)}`);
+        const QQ = "text" === mQ.type && mQ.wordCharsOnly;
+        return (0, HQ.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, od.jsx)(xd.e, {
+          children: (0, HQ.jsx)(cQ.b, {
             className: "ShopItemUserInputText",
-            placeholderText: Zd(Cd.placeholderText),
-            defaultValue: kd,
-            domRef: gd,
-            onValueChange: (Jd, kd) => {
-              !0 === dd && (Jd = (0, bp.fb)(Jd)), gd.current.value = Jd, Nd(Jd)
+            placeholderText: kQ(mQ.placeholderText),
+            defaultValue: wQ,
+            domRef: vQ,
+            onValueChange: (FQ, wQ) => {
+              !0 === QQ && (FQ = (0, IL.pb)(FQ)), vQ.current.value = FQ, qQ(FQ)
             },
-            onEnter: Wd,
-            type: Cd.type
-          }, (null !== (Kd = Cd.initialValue) && void 0 !== Kd ? Kd : "") + (null !== (ld = Cd.placeholderText) && void 0 !== ld ? ld : ""))
+            onEnter: oQ,
+            type: mQ.type
+          }, (null !== (uQ = mQ.initialValue) && void 0 !== uQ ? uQ : "") + (null !== (bQ = mQ.placeholderText) && void 0 !== bQ ? bQ : ""))
         })
       }
-      if ("dropdown" === Cd.type) {
-        console.assert(void 0 !== kd, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Jd)}`);
-        const dd = Cd.autoSubmit;
-        return (0, od.jsx)("div", {
+      if ("dropdown" === mQ.type) {
+        console.assert(void 0 !== wQ, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(FQ)}`);
+        const QQ = mQ.autoSubmit;
+        return (0, HQ.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, od.jsx)(qJ.c, {
-            options: Cd.dropdownOptions.map((dd => (0, sp.h)(dd))),
-            value: kd,
-            onChange: Jd => {
+          children: (0, HQ.jsx)(cF.d, {
+            options: mQ.dropdownOptions.map((QQ => (0, SL.f)(QQ))),
+            value: wQ,
+            onChange: FQ => {
               let {
-                value: kd
-              } = Jd;
-              Nd(kd), dd && Wd(kd)
+                value: wQ
+              } = FQ;
+              qQ(wQ), QQ && oQ(wQ)
             }
           })
         })
       }
-      return "player" === Cd.type ? (0, od.jsx)(pW, {
-        userInput: Cd,
-        currInput: kd,
-        updateInput: Nd
-      }) : "color" === Cd.type ? (0, od.jsx)("div", {
+      return "player" === mQ.type ? (0, HQ.jsx)(Fo, {
+        userInput: mQ,
+        currInput: wQ,
+        updateInput: qQ
+      }) : "color" === mQ.type ? (0, HQ.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, od.jsx)("input", {
+        children: (0, HQ.jsx)("input", {
           type: "color",
-          value: kd,
-          onChange: dd => {
-            Nd(dd.target.value)
+          value: wQ,
+          onChange: QQ => {
+            qQ(QQ.target.value)
           }
         })
       }) : null
     }
 
-    function pW(dd) {
+    function Fo(QQ) {
       let {
-        userInput: Jd,
-        currInput: kd,
-        updateInput: pd
-      } = dd;
-      const Nd = (0, wk.k)("players"),
-        Wd = (0, wk.k)("hiddenPlayerNames"),
-        Pd = (0, sp.i)(Nd.ids, Nd.localId, Jd);
-      return (0, od.jsx)("div", {
+        userInput: FQ,
+        currInput: wQ,
+        updateInput: LQ
+      } = QQ;
+      const qQ = (0, yw.k)("players"),
+        oQ = (0, yw.k)("hiddenPlayerNames"),
+        DQ = (0, SL.j)(qQ.ids, qQ.localId, FQ);
+      return (0, HQ.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, od.jsx)(qJ.c, {
-          options: Pd.map((dd => {
+        children: (0, HQ.jsx)(cF.d, {
+          options: DQ.map((QQ => {
             const {
-              name: Jd
-            } = Nd.byId[dd];
+              name: FQ
+            } = qQ.byId[QQ];
             return {
-              value: dd,
-              label: null === Jd ? "" : (0, mp.e)(Jd, Wd)
+              value: QQ,
+              label: null === FQ ? "" : (0, rL.f)(FQ, oQ)
             }
           })),
-          value: kd,
-          onChange: dd => {
+          value: wQ,
+          onChange: QQ => {
             let {
-              value: Jd
-            } = dd;
-            pd(Jd)
+              value: FQ
+            } = QQ;
+            LQ(FQ)
           }
         })
       })
     }
 
-    function NW(dd) {
+    function wo(QQ) {
       let {
-        ids: Jd
-      } = dd;
-      return Jd
+        ids: FQ
+      } = QQ;
+      return FQ
     }
 
-    function WW(dd) {
+    function Lo(QQ) {
       let {
-        localId: Jd
-      } = dd;
-      return Jd
+        localId: FQ
+      } = QQ;
+      return FQ
     }
 
-    function PW(dd) {
+    function qo(QQ) {
       let {
-        iconName: Jd
-      } = dd;
-      return Id.gameBridge.lookup("isItemName", Jd) ? (0, od.jsx)(Mp.d, {
-        itemName: Jd,
+        iconName: FQ
+      } = QQ;
+      return MQ.gameBridge.lookup("isItemName", FQ) ? (0, HQ.jsx)(RL.e, {
+        itemName: FQ,
         amount: 1
-      }) : (0, od.jsx)(Zd.e, {
-        name: Jd,
+      }) : (0, HQ.jsx)(kQ.c, {
+        name: FQ,
         className: "2x"
       })
     }
-    var ZW = kd(1670);
-    const gW = (0, kd(1417).k)((dd => dd.PadLobbyShortcuts)),
-      CW = (0, pd.lazy)((() => Promise.resolve().then((() => kd(4520))).then((dd => ({
-        default: dd.Lobbyleaderboard
+    var oo = wQ(1641);
+    const Do = (0, wQ(1407).e)((QQ => QQ.PadLobbyShortcuts)),
+      ko = (0, LQ.lazy)((() => Promise.resolve().then((() => wQ(4501))).then((QQ => ({
+        default: QQ.Lobbyleaderboard
       }))))),
-      KW = (0, pd.lazy)((() => kd.e(215).then((() => kd(41067))).then((dd => ({
-        default: dd.LobbyManageView
+      vo = (0, LQ.lazy)((() => wQ.e(215).then((() => wQ(40485))).then((QQ => ({
+        default: QQ.LobbyManageView
       })))));
 
-    function oW(dd) {
+    function mo(QQ) {
       let {
-        show: Jd
-      } = dd;
-      return Jd ? (0, od.jsx)(lW, {}) : null
+        show: FQ
+      } = QQ;
+      return FQ ? (0, HQ.jsx)(uo, {}) : null
     }
 
-    function lW() {
-      const dd = (0, Xp.d)();
-      return (0, od.jsxs)(od.Fragment, {
-        children: [(0, od.jsx)(gW, {}), (0, od.jsxs)(pd.Suspense, {
-          fallback: (0, od.jsx)("div", {
+    function uo() {
+      const QQ = (0, TL.b)();
+      return (0, HQ.jsxs)(HQ.Fragment, {
+        children: [(0, HQ.jsx)(Do, {}), (0, HQ.jsxs)(LQ.Suspense, {
+          fallback: (0, HQ.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, od.jsx)(qd.b, {})
+            children: (0, HQ.jsx)(CQ.c, {})
           }),
-          children: [dd && (0, od.jsx)(KW, {
-            leaderboard: (0, od.jsx)(CW, {})
-          }), !dd && (0, od.jsx)(CW, {})]
+          children: [QQ && (0, HQ.jsx)(vo, {
+            leaderboard: (0, HQ.jsx)(ko, {})
+          }), !QQ && (0, HQ.jsx)(ko, {})]
         })]
       })
     }
-    var QW = kd(1594),
-      LW = kd(2867),
-      OW = kd(1753),
-      eW = kd(2918),
-      RW = kd(2566),
-      IW = kd(1515),
-      GW = kd(1469),
-      vW = kd(2845),
-      xW = kd(2859),
-      qW = kd(2293);
-    const BW = "storeRecentGiftRecipients",
-      sW = new Map;
+    var Ho = wQ(1551),
+      bo = wQ(2923),
+      Yo = wQ(1725),
+      xo = wQ(2964),
+      Ao = wQ(2594),
+      to = wQ(1485),
+      eo = wQ(1458),
+      Mo = wQ(2903),
+      Go = wQ(2921),
+      po = wQ(2249);
+    const co = "storeRecentGiftRecipients",
+      Co = new Map;
 
-    function iW() {
+    function So() {
       try {
-        const dd = uJ.i.getItem(BW);
-        return Array.isArray(dd) ? dd.filter((dd => "string" === typeof(null === dd || void 0 === dd ? void 0 : dd.name) && dd.name.length > 0)).map((dd => ({
-          name: dd.name,
-          cosmetics: dd.cosmetics && "object" === typeof dd.cosmetics ? dd.cosmetics : null
+        const QQ = EF.i.getItem(co);
+        return Array.isArray(QQ) ? QQ.filter((QQ => "string" === typeof(null === QQ || void 0 === QQ ? void 0 : QQ.name) && QQ.name.length > 0)).map((QQ => ({
+          name: QQ.name,
+          cosmetics: QQ.cosmetics && "object" === typeof QQ.cosmetics ? QQ.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function aW(dd) {
-      var Jd;
-      const [kd, Nd] = (0, pd.useState)(""), [Wd, Pd] = (0, pd.useState)("search"), [Zd, gd] = (0, pd.useState)(null), [Cd, Kd] = (0, pd.useState)(null), od = (0, pd.useRef)(null), ld = (0, pd.useRef)(null);
-      (0, pd.useEffect)((() => () => {
-        od.current && clearTimeout(od.current)
+    function io(QQ) {
+      var FQ;
+      const [wQ, qQ] = (0, LQ.useState)(""), [oQ, DQ] = (0, LQ.useState)("search"), [kQ, vQ] = (0, LQ.useState)(null), [mQ, uQ] = (0, LQ.useState)(null), HQ = (0, LQ.useRef)(null), bQ = (0, LQ.useRef)(null);
+      (0, LQ.useEffect)((() => () => {
+        HQ.current && clearTimeout(HQ.current)
       }), []);
-      const Qd = null !== (Jd = null === Zd || void 0 === Zd ? void 0 : Zd.name) && void 0 !== Jd ? Jd : null;
+      const YQ = null !== (FQ = null === kQ || void 0 === kQ ? void 0 : kQ.name) && void 0 !== FQ ? FQ : null;
 
-      function Ld() {
-        od.current && (clearTimeout(od.current), od.current = null)
-      }(0, pd.useEffect)((() => {
-        if (null === Qd || dd === Yd.NULL_USER_CONTEXT) return;
-        const Jd = Qd.toLowerCase();
-        if (Jd === dd.getPlayerName().toLowerCase()) return void Kd({
-          name: Qd,
+      function xQ() {
+        HQ.current && (clearTimeout(HQ.current), HQ.current = null)
+      }(0, LQ.useEffect)((() => {
+        if (null === YQ || QQ === sQ.NULL_USER_CONTEXT) return;
+        const FQ = YQ.toLowerCase();
+        if (FQ === QQ.getPlayerName().toLowerCase()) return void uQ({
+          name: YQ,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const kd = sW.get(Jd);
-        if (kd) return void Kd({
-          name: Qd,
-          result: kd
+        const wQ = Co.get(FQ);
+        if (wQ) return void uQ({
+          name: YQ,
+          result: wQ
         });
-        let pd = !1;
-        return async function(dd, Jd) {
+        let LQ = !1;
+        return async function(QQ, FQ) {
           try {
-            const kd = await (0, Yd.postJsonWithMetricsCookiesAndJsonResponse)(`${md.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: Jd
+            const wQ = await (0, sQ.postJsonWithMetricsCookiesAndJsonResponse)(`${rQ.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: FQ
             }, {
               retries: 1
-            }, dd.getMetricsCookies());
-            if ("boolean" !== typeof(null === kd || void 0 === kd ? void 0 : kd.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(kd)}`);
-            return kd
-          } catch (kd) {
-            return console.error("Failed to look up gift recipient:", kd), {
+            }, QQ.getMetricsCookies());
+            if ("boolean" !== typeof(null === wQ || void 0 === wQ ? void 0 : wQ.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(wQ)}`);
+            return wQ
+          } catch (wQ) {
+            return console.error("Failed to look up gift recipient:", wQ), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(dd, Qd).catch((dd => (console.error("Gift recipient lookup failed:", dd), {
+        }(QQ, YQ).catch((QQ => (console.error("Gift recipient lookup failed:", QQ), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((dd => {
-          !0 !== dd.giftRecipientFound && "store:giftRecipientLookupFailed" === dd.giftRecipientError || sW.set(Jd, dd), pd || Kd({
-            name: Qd,
-            result: dd
+        }))).then((QQ => {
+          !0 !== QQ.giftRecipientFound && "store:giftRecipientLookupFailed" === QQ.giftRecipientError || Co.set(FQ, QQ), LQ || uQ({
+            name: YQ,
+            result: QQ
           })
         })), () => {
-          pd = !0
+          LQ = !0
         }
-      }), [Qd, dd]);
-      const Od = (0, pd.useMemo)((() => {
-        const dd = kd.trim();
-        if (!dd) return {
+      }), [YQ, QQ]);
+      const AQ = (0, LQ.useMemo)((() => {
+        const QQ = wQ.trim();
+        if (!QQ) return {
           status: "none"
         };
-        if (!Zd || Zd.name !== dd || (null === Cd || void 0 === Cd ? void 0 : Cd.name) !== Zd.name) return {
+        if (!kQ || kQ.name !== QQ || (null === mQ || void 0 === mQ ? void 0 : mQ.name) !== kQ.name) return {
           status: "pending",
-          name: dd
+          name: QQ
         };
-        const Jd = Cd.result;
-        return !1 === Jd.giftRecipientFound ? {
+        const FQ = mQ.result;
+        return !1 === FQ.giftRecipientFound ? {
           status: "error",
-          name: Zd.name,
-          error: Jd.giftRecipientError
+          name: kQ.name,
+          error: FQ.giftRecipientError
         } : {
           status: "found",
-          name: Jd.giftRecipientName,
-          ownedPacks: Jd.giftRecipientOwnedPacks,
-          hasSuperRank: Jd.giftRecipientHasSuperRank,
-          isSubscriber: Jd.giftRecipientIsSubscriber
+          name: FQ.giftRecipientName,
+          ownedPacks: FQ.giftRecipientOwnedPacks,
+          hasSuperRank: FQ.giftRecipientHasSuperRank,
+          isSubscriber: FQ.giftRecipientIsSubscriber
         }
-      }), [kd, Zd, Cd]);
-      (0, pd.useEffect)((() => {
-        "found" === Od.status && "typed" === (null === Zd || void 0 === Zd ? void 0 : Zd.source) && ld.current !== Od.name && (ld.current = Od.name, (0, Ad.reportAnalyticsClick)({
+      }), [wQ, kQ, mQ]);
+      (0, LQ.useEffect)((() => {
+        "found" === AQ.status && "typed" === (null === kQ || void 0 === kQ ? void 0 : kQ.source) && bQ.current !== AQ.name && (bQ.current = AQ.name, (0, BQ.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [Od, Zd]);
-      const ed = (null === Cd || void 0 === Cd ? void 0 : Cd.name) === (null === Zd || void 0 === Zd ? void 0 : Zd.name) ? null === Cd || void 0 === Cd ? void 0 : Cd.result : null,
-        Rd = !0 === (null === ed || void 0 === ed ? void 0 : ed.giftRecipientFound) ? ed.giftRecipientCosmetics : null;
+      }), [AQ, kQ]);
+      const tQ = (null === mQ || void 0 === mQ ? void 0 : mQ.name) === (null === kQ || void 0 === kQ ? void 0 : kQ.name) ? null === mQ || void 0 === mQ ? void 0 : mQ.result : null,
+        eQ = !0 === (null === tQ || void 0 === tQ ? void 0 : tQ.giftRecipientFound) ? tQ.giftRecipientCosmetics : null;
       return {
-        query: kd,
-        via: Wd,
-        recipient: Od,
-        recipientCosmetics: Rd,
-        type: function(dd) {
-          Nd(dd), Pd("search"), Ld();
-          const Jd = dd.trim();
-          Jd ? od.current = setTimeout((() => {
-            gd({
-              name: Jd,
+        query: wQ,
+        via: oQ,
+        recipient: AQ,
+        recipientCosmetics: eQ,
+        type: function(QQ) {
+          qQ(QQ), DQ("search"), xQ();
+          const FQ = QQ.trim();
+          FQ ? HQ.current = setTimeout((() => {
+            vQ({
+              name: FQ,
               source: "typed"
             })
-          }), 400) : gd(null)
+          }), 400) : vQ(null)
         },
-        choose: function(dd, Jd) {
-          Ld(), Nd(dd), Pd("typed" === Jd ? "search" : "prefilled" === Jd ? "prefilled" : "suggestion"), gd({
-            name: dd,
-            source: Jd
-          }), "typed" !== Jd && "prefilled" !== Jd && (0, Ad.reportAnalyticsClick)({
+        choose: function(QQ, FQ) {
+          xQ(), qQ(QQ), DQ("typed" === FQ ? "search" : "prefilled" === FQ ? "prefilled" : "suggestion"), vQ({
+            name: QQ,
+            source: FQ
+          }), "typed" !== FQ && "prefilled" !== FQ && (0, BQ.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: Jd
+            value: FQ
           })
         },
         clear: function() {
-          Ld(), Nd(""), Pd("search"), gd(null)
+          xQ(), qQ(""), DQ("search"), vQ(null)
         },
-        recordGift: function(dd, Jd) {
-          ! function(dd) {
-            sW.delete(dd.toLowerCase())
-          }(dd), Kd((kd => {
-            if (!kd || kd.name.toLowerCase() !== dd.toLowerCase() || !0 !== kd.result.giftRecipientFound || "superRank" === Jd) return kd;
-            const pd = kd.result.giftRecipientOwnedPacks;
+        recordGift: function(QQ, FQ) {
+          ! function(QQ) {
+            Co.delete(QQ.toLowerCase())
+          }(QQ), uQ((wQ => {
+            if (!wQ || wQ.name.toLowerCase() !== QQ.toLowerCase() || !0 !== wQ.result.giftRecipientFound || "superRank" === FQ) return wQ;
+            const LQ = wQ.result.giftRecipientOwnedPacks;
             return {
-              ...kd,
+              ...wQ,
               result: {
-                ...kd.result,
-                giftRecipientOwnedPacks: pd.includes(Jd) ? pd : [...pd, Jd]
+                ...wQ.result,
+                giftRecipientOwnedPacks: LQ.includes(FQ) ? LQ : [...LQ, FQ]
               }
             }
           }))
         }
       }
     }
-    var MW = kd(2284),
-      FW = kd(4528),
-      YW = kd(256),
-      mW = kd(2980);
-    const bW = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var SW = kd(2238),
-      jW = kd(593),
-      XW = kd(2316),
-      fW = kd(2479);
+    var Wo = wQ(2243),
+      Ro = wQ(4504),
+      Oo = wQ(259),
+      so = wQ(3009);
+    const ro = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var Io = wQ(2194),
+      Uo = wQ(600),
+      No = wQ(2283),
+      To = wQ(2489);
 
-    function nW(dd) {
+    function Ko(QQ) {
       let {
-        cosmetics: Jd
-      } = dd;
-      return (0, od.jsx)("span", {
+        cosmetics: FQ
+      } = QQ;
+      return (0, HQ.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, od.jsx)(XW.e, {
-          cosmetics: Jd
+        children: (0, HQ.jsx)(No.c, {
+          cosmetics: FQ
         })
       })
     }
 
-    function UW(dd, Jd) {
-      var kd, pd;
-      const Nd = null !== (kd = dd.friend) && void 0 !== kd ? kd : {
+    function zo(QQ, FQ) {
+      var wQ, LQ;
+      const qQ = null !== (wQ = QQ.friend) && void 0 !== wQ ? wQ : {
         isError: !1,
-        name: dd.name,
+        name: QQ.name,
         ranks: [],
-        cosmetics: null !== (pd = dd.cosmetics) && void 0 !== pd ? pd : {},
-        nameColour: jW.c,
+        cosmetics: null !== (LQ = QQ.cosmetics) && void 0 !== LQ ? LQ : {},
+        nameColour: Uo.d,
         location: {
           status: "noGamePlayed"
         }
       };
-      return Jd ? {
-        ...Nd,
-        cosmetics: Jd
-      } : Nd
+      return FQ ? {
+        ...qQ,
+        cosmetics: FQ
+      } : qQ
     }
 
-    function yW(dd) {
+    function jo(QQ) {
       let {
-        pending: Jd
-      } = dd;
-      return (0, od.jsx)("span", {
+        pending: FQ
+      } = QQ;
+      return (0, HQ.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: Jd && (0, od.jsx)(qd.b, {})
+        children: FQ && (0, HQ.jsx)(CQ.c, {})
       })
     }
 
-    function DW(dd) {
-      var Jd;
+    function ao(QQ) {
+      var FQ;
       let {
-        selfName: kd,
-        giftRecipient: Nd,
-        suggestionsVersion: gd,
-        pulseSignal: Kd,
-        disabled: ld
-      } = dd;
+        selfName: wQ,
+        giftRecipient: qQ,
+        suggestionsVersion: vQ,
+        pulseSignal: uQ,
+        disabled: bQ
+      } = QQ;
       const {
-        t: Qd
-      } = (0, Pd.B)(), Ld = (0, cd.j)(), Od = (0, pd.useRef)(null), ed = (0, pd.useRef)(null), {
-        query: Id,
-        via: Gd,
-        recipient: vd,
-        recipientCosmetics: qd
-      } = Nd, Bd = (0, qW.l)(Id), sd = (0, pd.useMemo)((() => {
-        const dd = Rd.featureFlags.useSocialFeatures ? Ld.friends.filter((dd => !dd.isError)) : [];
-        return (0, qW.h)({
-          onlineFriends: (0, cd.e)(dd),
-          recentRecipients: iW(),
-          friends: dd,
-          selfName: kd,
+        t: YQ
+      } = (0, DQ.y)(), xQ = (0, VQ.m)(), AQ = (0, LQ.useRef)(null), tQ = (0, LQ.useRef)(null), {
+        query: MQ,
+        via: GQ,
+        recipient: pQ,
+        recipientCosmetics: CQ
+      } = qQ, SQ = (0, po.r)(MQ), iQ = (0, LQ.useMemo)((() => {
+        const QQ = eQ.featureFlags.useSocialFeatures ? xQ.friends.filter((QQ => !QQ.isError)) : [];
+        return (0, po.k)({
+          onlineFriends: (0, VQ.h)(QQ),
+          recentRecipients: So(),
+          friends: QQ,
+          selfName: wQ,
           max: 8
         })
-      }), [Ld.friends, kd, gd]), ad = Id.trim().toLowerCase(), Md = "search" !== Gd && ad ? sd.find((dd => dd.name.toLowerCase() === ad)) : void 0, Fd = Md && "prefilled" === Gd ? [Md, ...sd.filter((dd => dd !== Md))] : sd, Yd = "" !== ad && !Md, md = Yd ? Id : "", bd = Fd.length > 0;
-      (0, pd.useEffect)((() => {
-        Od.current && Od.current.value !== md && (Od.current.value = md)
-      }), [md]), (0, pd.useEffect)((() => {
-        Od.current && (Od.current.disabled = ld)
-      }), [ld, Kd]);
-      const Sd = (0, pd.useRef)(0);
+      }), [xQ.friends, wQ, vQ]), WQ = MQ.trim().toLowerCase(), RQ = "search" !== GQ && WQ ? iQ.find((QQ => QQ.name.toLowerCase() === WQ)) : void 0, OQ = RQ && "prefilled" === GQ ? [RQ, ...iQ.filter((QQ => QQ !== RQ))] : iQ, sQ = "" !== WQ && !RQ, rQ = sQ ? MQ : "", IQ = OQ.length > 0;
+      (0, LQ.useEffect)((() => {
+        AQ.current && AQ.current.value !== rQ && (AQ.current.value = rQ)
+      }), [rQ]), (0, LQ.useEffect)((() => {
+        AQ.current && (AQ.current.disabled = bQ)
+      }), [bQ, uQ]);
+      const UQ = (0, LQ.useRef)(0);
 
-      function Xd() {
-        "self" !== Bd && (0, Ad.reportAnalyticsClick)({
+      function TQ() {
+        "self" !== SQ && (0, BQ.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), Nd.clear()
+        }), qQ.clear()
       }
 
-      function fd(dd) {
-        var Jd, kd;
-        if (ld) return;
-        if (" " === dd.key || "Enter" === dd.key) return dd.preventDefault(), void dd.currentTarget.click();
-        const pd = Array.from(null !== (Jd = null === (kd = ed.current) || void 0 === kd ? void 0 : kd.querySelectorAll("[role=radio]")) && void 0 !== Jd ? Jd : []),
-          Nd = pd.indexOf(dd.currentTarget);
-        let Wd;
-        "ArrowRight" === dd.key || "ArrowDown" === dd.key ? Wd = pd[(Nd + 1) % pd.length] : "ArrowLeft" === dd.key || "ArrowUp" === dd.key ? Wd = pd[(Nd - 1 + pd.length) % pd.length] : "Home" === dd.key ? Wd = pd[0] : "End" === dd.key && (Wd = pd[pd.length - 1]), Wd && (dd.preventDefault(), Wd.focus(), Wd.click())
-      }(0, pd.useEffect)((() => {
-        var dd;
-        Kd > Sd.current && !ld && (Sd.current = Kd, null === (dd = Od.current) || void 0 === dd || dd.focus())
-      }), [Kd, ld]);
-      const nd = "self" === Bd,
-        Ud = null !== (Jd = null === Md || void 0 === Md ? void 0 : Md.name) && void 0 !== Jd ? Jd : null,
-        yd = "error" === vd.status ? vd.error : null,
-        Dd = "store:giftRecipientLookupFailed" === yd;
-      return (0, od.jsxs)("div", {
-        className: Wd()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: ld,
-          StoreRecipientStripNoChips: !bd
+      function KQ(QQ) {
+        var FQ, wQ;
+        if (bQ) return;
+        if (" " === QQ.key || "Enter" === QQ.key) return QQ.preventDefault(), void QQ.currentTarget.click();
+        const LQ = Array.from(null !== (FQ = null === (wQ = tQ.current) || void 0 === wQ ? void 0 : wQ.querySelectorAll("[role=radio]")) && void 0 !== FQ ? FQ : []),
+          qQ = LQ.indexOf(QQ.currentTarget);
+        let oQ;
+        "ArrowRight" === QQ.key || "ArrowDown" === QQ.key ? oQ = LQ[(qQ + 1) % LQ.length] : "ArrowLeft" === QQ.key || "ArrowUp" === QQ.key ? oQ = LQ[(qQ - 1 + LQ.length) % LQ.length] : "Home" === QQ.key ? oQ = LQ[0] : "End" === QQ.key && (oQ = LQ[LQ.length - 1]), oQ && (QQ.preventDefault(), oQ.focus(), oQ.click())
+      }(0, LQ.useEffect)((() => {
+        var QQ;
+        uQ > UQ.current && !bQ && (UQ.current = uQ, null === (QQ = AQ.current) || void 0 === QQ || QQ.focus())
+      }), [uQ, bQ]);
+      const zQ = "self" === SQ,
+        lQ = null !== (FQ = null === RQ || void 0 === RQ ? void 0 : RQ.name) && void 0 !== FQ ? FQ : null,
+        jQ = "error" === pQ.status ? pQ.error : null,
+        aQ = "store:giftRecipientLookupFailed" === jQ;
+      return (0, HQ.jsxs)("div", {
+        className: oQ()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: bQ,
+          StoreRecipientStripNoChips: !IQ
         }),
-        children: [(0, od.jsx)("span", {
+        children: [(0, HQ.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: Qd("store:buyingFor")
-        }), (0, od.jsxs)("div", {
-          ref: ed,
+          children: YQ("store:buyingFor")
+        }), (0, HQ.jsxs)("div", {
+          ref: tQ,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": Qd("store:whoIsItFor"),
-          children: [(0, od.jsxs)("div", {
+          "aria-label": YQ("store:whoIsItFor"),
+          children: [(0, HQ.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": nd,
-            tabIndex: ld || !nd && null !== Ud ? -1 : 0,
-            className: Wd()("StoreRecipientMe", {
-              StoreRecipientChecked: nd
+            "aria-checked": zQ,
+            tabIndex: bQ || !zQ && null !== lQ ? -1 : 0,
+            className: oQ()("StoreRecipientMe", {
+              StoreRecipientChecked: zQ
             }),
             onClick: () => {
-              ld || Xd()
+              bQ || TQ()
             },
-            onKeyDown: fd,
-            children: [(0, od.jsx)(Zd.e, {
+            onKeyDown: KQ,
+            children: [(0, HQ.jsx)(kQ.c, {
               name: "user"
-            }), " ", Qd("store:me")]
-          }), bd && (0, od.jsx)("div", {
+            }), " ", YQ("store:me")]
+          }), IQ && (0, HQ.jsx)("div", {
             className: "StoreRecipientChips",
-            children: Fd.map((dd => {
-              const Jd = dd === Md;
-              return (0, od.jsx)("div", {
+            children: OQ.map((QQ => {
+              const FQ = QQ === RQ;
+              return (0, HQ.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": Jd,
-                tabIndex: !ld && Jd ? 0 : -1,
-                title: dd.name,
-                className: Wd()("StoreRecipientChip", {
-                  StoreRecipientChecked: Jd
+                "aria-checked": FQ,
+                tabIndex: !bQ && FQ ? 0 : -1,
+                title: QQ.name,
+                className: oQ()("StoreRecipientChip", {
+                  StoreRecipientChecked: FQ
                 }),
                 onClick: () => {
-                  ld || function(dd) {
-                    "gift" !== Bd && (0, Ad.reportAnalyticsClick)({
+                  bQ || function(QQ) {
+                    "gift" !== SQ && (0, BQ.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), Nd.choose(dd.name, dd.kind)
-                  }(dd)
+                    }), qQ.choose(QQ.name, QQ.kind)
+                  }(QQ)
                 },
-                onKeyDown: fd,
-                children: (0, od.jsx)(fW.f, {
-                  playerSocialPreview: UW(dd, Jd ? qd : null),
+                onKeyDown: KQ,
+                children: (0, HQ.jsx)(To.e, {
+                  playerSocialPreview: zo(QQ, FQ ? CQ : null),
                   opensProfileCard: !1,
-                  isFriend: null !== dd.friend,
+                  isFriend: null !== QQ.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== dd.friend,
-                  status: null === dd.friend ? null : void 0,
-                  trailing: Jd ? (0, od.jsx)(yW, {
-                    pending: "pending" === vd.status
+                  showLocation: null !== QQ.friend,
+                  status: null === QQ.friend ? null : void 0,
+                  trailing: FQ ? (0, HQ.jsx)(jo, {
+                    pending: "pending" === pQ.status
                   }) : void 0
                 })
-              }, dd.name)
+              }, QQ.name)
             }))
           })]
-        }), (0, od.jsxs)("div", {
-          className: Wd()("StoreRecipientSearch", {
-            StoreRecipientChecked: Yd,
-            StoreRecipientSearchPulse: Kd > 0 && !Yd,
-            StoreRecipientSearchError: null !== yd && !Dd
+        }), (0, HQ.jsxs)("div", {
+          className: oQ()("StoreRecipientSearch", {
+            StoreRecipientChecked: sQ,
+            StoreRecipientSearchPulse: uQ > 0 && !sQ,
+            StoreRecipientSearchError: null !== jQ && !aQ
           }),
           onClick: () => {
-            var dd;
-            null === (dd = Od.current) || void 0 === dd || dd.focus()
+            var QQ;
+            null === (QQ = AQ.current) || void 0 === QQ || QQ.focus()
           },
-          children: [Yd && "found" === vd.status && qd && (0, od.jsx)(nW, {
-            cosmetics: qd
-          }), !(Yd && "found" === vd.status && qd) && (0, od.jsx)(Zd.e, {
+          children: [sQ && "found" === pQ.status && CQ && (0, HQ.jsx)(Ko, {
+            cosmetics: CQ
+          }), !(sQ && "found" === pQ.status && CQ) && (0, HQ.jsx)(kQ.c, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, od.jsx)(xd.e, {
+          }), (0, HQ.jsx)(cQ.b, {
             className: "StoreRecipientSearchInput",
-            domRef: Od,
-            placeholderText: Qd("store:searchName"),
-            defaultValue: md,
-            maxLength: jd.h,
-            onValueChange: function(dd) {
-              "gift" !== Bd && dd.trim() && (0, Ad.reportAnalyticsClick)({
+            domRef: AQ,
+            placeholderText: YQ("store:searchName"),
+            defaultValue: rQ,
+            maxLength: NQ.k,
+            onValueChange: function(QQ) {
+              "gift" !== SQ && QQ.trim() && (0, BQ.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), Nd.type(dd)
+              }), qQ.type(QQ)
             },
             onEnter: () => {
-              var dd;
-              const Jd = null === (dd = Od.current) || void 0 === dd ? void 0 : dd.value.trim();
-              Jd && Nd.choose(Jd, "typed")
+              var QQ;
+              const FQ = null === (QQ = AQ.current) || void 0 === QQ ? void 0 : QQ.value.trim();
+              FQ && qQ.choose(FQ, "typed")
             },
             blurOnEnter: !0
-          }), Yd && (0, od.jsx)(yW, {
-            pending: "pending" === vd.status
-          }), Yd && (0, od.jsx)("div", {
-            ...(0, Cd.P)({
-              disabled: ld
+          }), sQ && (0, HQ.jsx)(jo, {
+            pending: "pending" === pQ.status
+          }), sQ && (0, HQ.jsx)("div", {
+            ...(0, mQ.S)({
+              disabled: bQ
             }),
-            "aria-label": Qd("store:clearRecipient"),
-            title: Qd("store:clearRecipient"),
+            "aria-label": YQ("store:clearRecipient"),
+            title: YQ("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: dd => {
-              dd.stopPropagation(), ld || Xd()
+            onClick: QQ => {
+              QQ.stopPropagation(), bQ || TQ()
             },
-            children: (0, od.jsx)(Zd.e, {
+            children: (0, HQ.jsx)(kQ.c, {
               name: "xmark"
             })
           })]
-        }, Kd), yd && (0, od.jsx)("div", {
-          className: Wd()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: Dd
+        }, uQ), jQ && (0, HQ.jsx)("div", {
+          className: oQ()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: aQ
           }),
           role: "status",
-          children: Qd(yd)
+          children: YQ(jQ)
         })]
       })
     }
-    var TW = kd(2280),
-      EW = kd(2216),
-      cW = kd(3458),
-      hW = kd(2985),
-      rW = kd(2245);
-    const uW = kd.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var Xo = wQ(2240),
+      fo = wQ(2169),
+      Vo = wQ(3454),
+      ho = wQ(3018),
+      Jo = wQ(2206);
+    const Eo = wQ.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function tW() {
-      (0, rW.i)(uW, {
+    function no() {
+      (0, Jo.k)(Eo, {
         lowPriority: !1
       })
     }
 
-    function VW(dd) {
+    function go(QQ) {
       let {
-        onBack: Jd,
-        cta: kd,
-        recipient: Nd,
-        afterCta: Wd
-      } = dd;
+        onBack: FQ,
+        cta: wQ,
+        recipient: qQ,
+        afterCta: oQ
+      } = QQ;
       const {
-        t: gd
-      } = (0, Pd.B)(), [Kd, ld] = (0, pd.useState)("starting"), Qd = (0, pd.useRef)(null), Ld = (0, bJ.d)(), Od = (0, pd.useRef)(null), ed = (0, pd.useCallback)((() => {
-        const dd = Qd.current;
-        null !== dd.error && dd.load();
-        const Jd = dd.play();
-        Od.current = Jd, Jd.catch((dd => {
-          (0, cW.e)("Failed to play Super Rank video", dd), Ld.current && Od.current === Jd && ld("failed")
+        t: vQ
+      } = (0, DQ.y)(), [uQ, bQ] = (0, LQ.useState)("starting"), YQ = (0, LQ.useRef)(null), xQ = (0, IF.c)(), AQ = (0, LQ.useRef)(null), tQ = (0, LQ.useCallback)((() => {
+        const QQ = YQ.current;
+        null !== QQ.error && QQ.load();
+        const FQ = QQ.play();
+        AQ.current = FQ, FQ.catch((QQ => {
+          (0, Vo.c)("Failed to play Super Rank video", QQ), xQ.current && AQ.current === FQ && bQ("failed")
         }))
-      }), [Ld]);
-      return (0, pd.useEffect)((() => {
-        const dd = Qd.current;
-        let Jd;
+      }), [xQ]);
+      return (0, LQ.useEffect)((() => {
+        const QQ = YQ.current;
+        let FQ;
 
-        function kd() {
-          clearTimeout(Jd), Jd = setTimeout(ed, 3e3)
+        function wQ() {
+          clearTimeout(FQ), FQ = setTimeout(tQ, 3e3)
         }
-        return ed(), dd.addEventListener("ended", kd), () => {
-          clearTimeout(Jd), dd.removeEventListener("ended", kd)
+        return tQ(), QQ.addEventListener("ended", wQ), () => {
+          clearTimeout(FQ), QQ.removeEventListener("ended", wQ)
         }
-      }), [ed]), (0, od.jsxs)("div", {
+      }), [tQ]), (0, HQ.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, od.jsxs)("div", {
+        children: [(0, HQ.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, od.jsx)(Cd.b, {
+          children: [(0, HQ.jsx)(mQ.b, {
             className: "StoreDetailBackButton",
-            onClick: Jd,
+            onClick: FQ,
             padBack: !0,
-            children: gd("general:back")
-          }), (0, od.jsxs)("div", {
+            children: vQ("general:back")
+          }), (0, HQ.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, od.jsx)(Zd.e, {
+            children: [(0, HQ.jsx)(kQ.c, {
               name: "bolt"
-            }), " ", gd("homePage:superRank")]
-          }), Nd]
-        }), (0, od.jsxs)("div", {
+            }), " ", vQ("homePage:superRank")]
+          }), qQ]
+        }), (0, HQ.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, od.jsx)("video", {
-              ref: Qd,
-              src: `${md.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: uW,
+            children: [(0, HQ.jsx)("video", {
+              ref: YQ,
+              src: `${rQ.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: Eo,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === Kd,
+              controls: "playing" === uQ,
               onPlaying: () => {
-                ld("playing")
+                bQ("playing")
               },
               onError: () => {
-                ld("failed")
+                bQ("failed")
               }
-            }), ("failed" === Kd || "loading" === Kd) && (0, od.jsx)("div", {
+            }), ("failed" === uQ || "loading" === uQ) && (0, HQ.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, od.jsx)(Cd.d, {
-                ariaLabel: gd("general:play"),
-                loading: "loading" === Kd,
+              children: (0, HQ.jsx)(mQ.f, {
+                ariaLabel: vQ("general:play"),
+                loading: "loading" === uQ,
                 onClick: () => {
-                  ld("loading"), ed()
+                  bQ("loading"), tQ()
                 },
                 touchPressOn: "pointerup",
-                children: (0, od.jsx)(Zd.e, {
+                children: (0, HQ.jsx)(kQ.c, {
                   name: "play"
                 })
               })
             })]
-          }), (0, od.jsxs)("div", {
+          }), (0, HQ.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, od.jsx)("div", {
+            children: [(0, HQ.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, od.jsx)(hW.e, {})
-            }), (0, od.jsxs)("div", {
+              children: (0, HQ.jsx)(ho.d, {})
+            }), (0, HQ.jsxs)("div", {
               className: "StoreTileActions",
-              children: [kd, Wd]
+              children: [wQ, oQ]
             })]
           })]
         })]
       })
     }
-    var zW = kd(2500),
-      HW = kd(3404),
-      wW = kd(2962),
-      AW = kd(2968);
-    const dP = [jW.m.yellow, jW.m.green, jW.m.aqua, jW.m.blue, jW.m.purple, jW.m.red];
+    var Po = wQ(2507),
+      Zo = wQ(3408),
+      yo = wQ(2990),
+      Bo = wQ(2999);
+    const QD = [Uo.s.yellow, Uo.s.green, Uo.s.aqua, Uo.s.blue, Uo.s.purple, Uo.s.red];
 
-    function JP(dd) {
-      return "needsRecipient" === dd || "lookingUp" === dd || "gift" === dd || "recipientOwns" === dd || "recipientSharesOwned" === dd || "recipientSubscribed" === dd
+    function FD(QQ) {
+      return "needsRecipient" === QQ || "lookingUp" === QQ || "gift" === QQ || "recipientOwns" === QQ || "recipientSharesOwned" === QQ || "recipientSubscribed" === QQ
     }
 
-    function kP(dd) {
+    function wD(QQ) {
       const {
-        onKeyDown: Jd,
-        ...kd
-      } = (0, Cd.P)();
+        onKeyDown: FQ,
+        ...wQ
+      } = (0, mQ.S)();
       return {
-        ...kd,
-        "aria-label": dd,
-        onKeyDown: dd => {
-          dd.target === dd.currentTarget && (null === Jd || void 0 === Jd || Jd(dd))
+        ...wQ,
+        "aria-label": QQ,
+        onKeyDown: QQ => {
+          QQ.target === QQ.currentTarget && (null === FQ || void 0 === FQ || FQ(QQ))
         }
       }
     }
 
-    function pP(dd) {
+    function LD(QQ) {
       let {
-        text: Jd
-      } = dd;
-      return (0, od.jsx)("span", {
+        text: FQ
+      } = QQ;
+      return (0, HQ.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(Jd).map(((dd, Jd) => (0, od.jsx)("span", {
+        children: Array.from(FQ).map(((QQ, FQ) => (0, HQ.jsx)("span", {
           style: {
-            color: dP[Jd % dP.length]
+            color: QD[FQ % QD.length]
           },
-          children: dd
-        }, Jd)))
+          children: QQ
+        }, FQ)))
       })
     }
-    const NP = {
+    const qD = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5867,82 +5867,82 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function WP(dd) {
+    function oD(QQ) {
       let {
-        state: Jd,
-        item: kd,
-        price: pd,
-        busy: Nd,
-        highlight: gd = !1,
-        onAct: Kd,
-        onNeedRecipient: ld,
-        onLogin: Qd
-      } = dd;
+        state: FQ,
+        item: wQ,
+        price: LQ,
+        busy: qQ,
+        highlight: vQ = !1,
+        onAct: uQ,
+        onNeedRecipient: bQ,
+        onLogin: YQ
+      } = QQ;
       const {
-        t: Ld
-      } = (0, Pd.B)(), Od = "superRank" === kd ? fd.k.product.days : null, ed = dd => null === Od ? Ld(dd ? "general:gift" : "general:buy") : Ld(dd ? "store:giftDays" : "store:buyDays", {
-        days: Od
-      }), Rd = (dd, Jd) => {
-        const kd = (0, od.jsxs)(od.Fragment, {
-          children: [null === dd && (0, od.jsx)("span", {
+        t: xQ
+      } = (0, DQ.y)(), AQ = "superRank" === wQ ? KQ.l.product.days : null, tQ = QQ => null === AQ ? xQ(QQ ? "general:gift" : "general:buy") : xQ(QQ ? "store:giftDays" : "store:buyDays", {
+        days: AQ
+      }), eQ = (QQ, FQ) => {
+        const wQ = (0, HQ.jsxs)(HQ.Fragment, {
+          children: [null === QQ && (0, HQ.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== dd && (0, od.jsx)("span", {
+          }), null !== QQ && (0, HQ.jsx)("span", {
             className: "StoreCtaLabel",
-            title: dd,
-            children: dd
+            title: QQ,
+            children: QQ
           })]
         });
-        return null !== Od ? (0, od.jsxs)(od.Fragment, {
-          children: [Jd && (0, od.jsx)("span", {
+        return null !== AQ ? (0, HQ.jsxs)(HQ.Fragment, {
+          children: [FQ && (0, HQ.jsx)("span", {
             className: "StoreCtaIcon",
-            children: Jd
-          }), kd, (0, od.jsxs)("span", {
+            children: FQ
+          }), wQ, (0, HQ.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, od.jsx)(EW.e, {
-              amount: pd
+            children: ["\xb7", (0, HQ.jsx)(fo.b, {
+              amount: LQ
             })]
           })]
-        }) : (0, od.jsxs)(od.Fragment, {
-          children: [(0, od.jsxs)("span", {
+        }) : (0, HQ.jsxs)(HQ.Fragment, {
+          children: [(0, HQ.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [kd, "\xb7"]
-          }), (0, od.jsxs)("span", {
+            children: [wQ, "\xb7"]
+          }), (0, HQ.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [Jd, (0, od.jsx)(EW.e, {
-              amount: pd
+            children: [FQ, (0, HQ.jsx)(fo.b, {
+              amount: LQ
             })]
           })]
         })
       };
-      let Id;
-      switch (Jd) {
+      let MQ;
+      switch (FQ) {
         case "pending":
-          Id = (0, od.jsx)(Cd.j, {
+          MQ = (0, HQ.jsx)(mQ.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: Rd(null)
+            children: eQ(null)
           });
           break;
         case "login":
-          Id = (0, od.jsx)(Cd.j, {
+          MQ = (0, HQ.jsx)(mQ.m, {
             className: "StoreCtaButton",
-            onClick: Qd,
-            children: Rd(ed(!1))
+            onClick: YQ,
+            children: eQ(tQ(!1))
           });
           break;
         case "owned":
-          Id = (0, od.jsx)(Cd.f, {
+          MQ = (0, HQ.jsx)(mQ.i, {
             className: "StoreCtaButton",
             onClick: () => {
-              sd.d.set({
-                openEverythingMenuName: KJ.s.CUSTOMISATION
+              iQ.c.set({
+                openEverythingMenuName: mF.n.CUSTOMISATION
               })
             },
-            children: (0, od.jsxs)("span", {
+            children: (0, HQ.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, od.jsx)(Zd.e, {
+              children: [(0, HQ.jsx)(kQ.c, {
                 name: "shirt"
-              }), " ", Ld("store:equip")]
+              }), " ", xQ("store:equip")]
             })
           });
           break;
@@ -5951,206 +5951,206 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          Id = (0, od.jsx)(Cd.j, {
+          MQ = (0, HQ.jsx)(mQ.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, od.jsx)("span", {
+            children: (0, HQ.jsx)("span", {
               className: "StoreCtaLabel",
-              children: Ld(NP[Jd])
+              children: xQ(qD[FQ])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          Id = (0, od.jsx)(Cd.j, {
+          MQ = (0, HQ.jsx)(mQ.m, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === Jd || null === pd,
-            loading: "lookingUp" === Jd || Nd,
-            onClick: Kd,
+            disabled: "needsRecipient" === FQ || null === LQ,
+            loading: "lookingUp" === FQ || qQ,
+            onClick: uQ,
             analyticsClick: {
               id: "store.gift",
-              value: kd
+              value: wQ
             },
-            children: Rd(ed(!0), qW.e)
+            children: eQ(tQ(!0), po.d)
           });
           break;
         case "buy":
         case "recharge":
-          Id = (0, od.jsx)(Cd.j, {
+          MQ = (0, HQ.jsx)(mQ.m, {
             className: "StoreCtaButton",
-            loading: Nd,
-            disabled: null === pd,
-            onClick: Kd,
+            loading: qQ,
+            disabled: null === LQ,
+            onClick: uQ,
             analyticsClick: {
               id: "store.buy",
-              value: kd
+              value: wQ
             },
-            children: Rd(ed(!1))
+            children: eQ(tQ(!1))
           })
       }
-      return (0, od.jsx)("div", {
-        className: Wd()("StoreCta", {
-          StoreCtaHighlight: gd,
-          StoreCtaLabelFirst: null !== Od
+      return (0, HQ.jsx)("div", {
+        className: oQ()("StoreCta", {
+          StoreCtaHighlight: vQ,
+          StoreCtaLabelFirst: null !== AQ
         }),
-        onClick: dd => {
-          dd.stopPropagation(), "needsRecipient" === Jd && ld()
+        onClick: QQ => {
+          QQ.stopPropagation(), "needsRecipient" === FQ && bQ()
         },
-        children: Id
+        children: MQ
       })
     }
 
-    function PP() {
+    function DD() {
       const {
-        t: dd
-      } = (0, Pd.B)();
-      return (0, od.jsxs)("ul", {
+        t: QQ
+      } = (0, DQ.y)();
+      return (0, HQ.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, od.jsxs)("li", {
-          children: [(0, od.jsx)(Zd.e, {
+        children: [(0, HQ.jsxs)("li", {
+          children: [(0, HQ.jsx)(kQ.c, {
             name: "check"
-          }), (0, od.jsx)(pP, {
-            text: dd("store:colourfulNames")
+          }), (0, HQ.jsx)(LD, {
+            text: QQ("store:colourfulNames")
           })]
-        }), (0, od.jsxs)("li", {
-          children: [(0, od.jsx)(Zd.e, {
+        }), (0, HQ.jsxs)("li", {
+          children: [(0, HQ.jsx)(kQ.c, {
             name: "check"
-          }), dd("store:perkCapes")]
-        }), (0, od.jsxs)("li", {
-          children: [(0, od.jsx)(Zd.e, {
+          }), QQ("store:perkCapes")]
+        }), (0, HQ.jsxs)("li", {
+          children: [(0, HQ.jsx)(kQ.c, {
             name: "check"
-          }), dd("store:perkNoAdverts")]
-        }), (0, od.jsxs)("li", {
-          children: [(0, od.jsx)(Zd.e, {
+          }), QQ("store:perkNoAdverts")]
+        }), (0, HQ.jsxs)("li", {
+          children: [(0, HQ.jsx)(kQ.c, {
             name: "check"
-          }), dd("store:perkFriends", {
-            count: (0, Hd.c)(["super"])
+          }), QQ("store:perkFriends", {
+            count: (0, ZQ.e)(["super"])
           })]
         })]
       })
     }
 
-    function ZP(dd) {
+    function kD(QQ) {
       let {
-        daysLeft: Jd,
-        totalDays: kd,
-        urgent: pd
-      } = dd;
+        daysLeft: FQ,
+        totalDays: wQ,
+        urgent: LQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, Pd.B)(), Zd = kd > 0 ? Math.min(1, Math.max(.03, Jd / kd)) : 1;
-      return (0, od.jsxs)("div", {
-        className: Wd()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: pd
+        t: qQ
+      } = (0, DQ.y)(), kQ = wQ > 0 ? Math.min(1, Math.max(.03, FQ / wQ)) : 1;
+      return (0, HQ.jsxs)("div", {
+        className: oQ()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: LQ
         }),
-        children: [(0, od.jsx)("span", {
+        children: [(0, HQ.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === Jd ? Nd("store:oneDayLeft") : Nd("store:daysLeft", {
-            days: Jd
+          children: 1 === FQ ? qQ("store:oneDayLeft") : qQ("store:daysLeft", {
+            days: FQ
           })
-        }), (0, od.jsx)("div", {
+        }), (0, HQ.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, od.jsx)("i", {
+          children: (0, HQ.jsx)("i", {
             style: {
-              width: 100 * Zd + "%"
+              width: 100 * kQ + "%"
             }
           })
         })]
       })
     }
 
-    function gP(dd) {
+    function vD(QQ) {
       let {
-        state: Jd,
-        urgent: kd,
-        daysLeft: pd,
-        totalDays: Nd,
-        recipientHasSuperRank: gd,
-        busy: Cd,
-        highlight: Kd,
-        onOpen: ld,
-        onAct: Qd,
-        onNeedRecipient: Ld,
-        onLogin: Od
-      } = dd;
+        state: FQ,
+        urgent: wQ,
+        daysLeft: LQ,
+        totalDays: qQ,
+        recipientHasSuperRank: vQ,
+        busy: mQ,
+        highlight: uQ,
+        onOpen: bQ,
+        onAct: YQ,
+        onNeedRecipient: xQ,
+        onLogin: AQ
+      } = QQ;
       const {
-        t: ed
-      } = (0, Pd.B)(), Rd = JP(Jd), {
-        days: Id
-      } = fd.k.product, Gd = ed("store:recipientHasSuperRank", {
-        giftDays: Id
-      }), vd = Vd("subscribed" === Jd);
-      return (0, od.jsxs)("div", {
-        className: Wd()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: Rd,
-          StoreSuperRankTileUrgent: "recharge" === Jd && kd,
-          StoreSuperRankTileWithChip: gd,
-          StoreSuperRankTileGiftReady: "gift" === Jd
+        t: tQ
+      } = (0, DQ.y)(), eQ = FD(FQ), {
+        days: MQ
+      } = KQ.l.product, GQ = tQ("store:recipientHasSuperRank", {
+        giftDays: MQ
+      }), pQ = gQ("subscribed" === FQ);
+      return (0, HQ.jsxs)("div", {
+        className: oQ()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: eQ,
+          StoreSuperRankTileUrgent: "recharge" === FQ && wQ,
+          StoreSuperRankTileWithChip: vQ,
+          StoreSuperRankTileGiftReady: "gift" === FQ
         }),
-        ...kP(ed("homePage:superRank")),
+        ...wD(tQ("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: tW,
-        onFocus: tW,
-        onClick: ld,
-        children: [(0, od.jsx)("div", {
+        onPointerEnter: no,
+        onFocus: no,
+        onClick: bQ,
+        children: [(0, HQ.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${SW.i})`
+            backgroundImage: `url(${Io.h})`
           }
-        }), Rd && (0, od.jsx)("div", {
+        }), eQ && (0, HQ.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "StoreTileContent",
-          children: [gd && (0, od.jsx)("span", {
+          children: [vQ && (0, HQ.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: Gd,
-            children: Gd
-          }), (0, od.jsxs)("div", {
+            title: GQ,
+            children: GQ
+          }), (0, HQ.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, od.jsx)(Zd.e, {
+            children: [(0, HQ.jsx)(kQ.c, {
               name: "bolt"
-            }), " ", ed("homePage:superRank")]
-          }), Rd && (0, od.jsx)("div", {
+            }), " ", tQ("homePage:superRank")]
+          }), eQ && (0, HQ.jsx)("div", {
             className: "StoreTilePitch",
-            children: ed("store:giftPitch", {
-              days: Id
+            children: tQ("store:giftPitch", {
+              days: MQ
             })
-          }), "recharge" === Jd && (0, od.jsx)(ZP, {
-            daysLeft: pd,
-            totalDays: Nd,
-            urgent: kd
-          }), vd && (0, od.jsx)("div", {
+          }), "recharge" === FQ && (0, HQ.jsx)(kD, {
+            daysLeft: LQ,
+            totalDays: qQ,
+            urgent: wQ
+          }), pQ && (0, HQ.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, od.jsx)("span", {
+            children: (0, HQ.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: vd
+              children: pQ
             })
-          }), (0, od.jsx)(PP, {}), (0, od.jsxs)("div", {
+          }), (0, HQ.jsx)(DD, {}), (0, HQ.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, od.jsx)(WP, {
-              state: Jd,
+            children: [(0, HQ.jsx)(oD, {
+              state: FQ,
               item: "superRank",
-              price: fd.k.price,
-              busy: Cd,
-              highlight: Kd,
-              onAct: Qd,
-              onNeedRecipient: Ld,
-              onLogin: Od
-            }), "needsRecipient" === Jd && (0, od.jsx)("span", {
+              price: KQ.l.price,
+              busy: mQ,
+              highlight: uQ,
+              onAct: YQ,
+              onNeedRecipient: xQ,
+              onLogin: AQ
+            }), "needsRecipient" === FQ && (0, HQ.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: ed("store:pickRecipientFirst")
-            }), "recharge" === Jd && kd && (0, od.jsx)("span", {
+              children: tQ("store:pickRecipientFirst")
+            }), "recharge" === FQ && wQ && (0, HQ.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === pd ? ed("store:endsInOneDay") : ed("store:endsInDays", {
-                days: pd
+              children: 1 === LQ ? tQ("store:endsInOneDay") : tQ("store:endsInDays", {
+                days: LQ
               })
             })]
           })]
         })]
       })
     }
-    const CP = {
+    const mD = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6158,403 +6158,403 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function KP(dd) {
-      var Jd;
+    function uD(QQ) {
+      var FQ;
       let {
-        pack: kd,
-        state: Nd,
-        busy: gd,
-        onOpen: Cd,
-        onAct: Kd,
-        onNeedRecipient: ld,
-        onLogin: Qd
-      } = dd;
+        pack: wQ,
+        state: qQ,
+        busy: vQ,
+        onOpen: mQ,
+        onAct: uQ,
+        onNeedRecipient: bQ,
+        onLogin: YQ
+      } = QQ;
       const {
-        t: Ld
-      } = (0, Pd.B)(), Od = QW.d[kd], ed = vW.k[kd], Rd = (0, SW.r)(kd), Id = (0, pd.useRef)(null);
-      (0, wW.j)(kd, Id);
-      const Gd = JP(Nd),
-        vd = null !== (Jd = Od.displayName) && void 0 !== Jd ? Jd : kd,
-        xd = (0, HW.c)((() => {
-          (0, zW.i)();
-          const dd = (0, wW.g)(kd);
-          void 0 !== dd && (0, rW.i)((0, wW.e)(dd))
+        t: xQ
+      } = (0, DQ.y)(), AQ = Ho.e[wQ], tQ = Mo.l[wQ], eQ = (0, Io.r)(wQ), MQ = (0, LQ.useRef)(null);
+      (0, yo.k)(wQ, MQ);
+      const GQ = FD(qQ),
+        pQ = null !== (FQ = AQ.displayName) && void 0 !== FQ ? FQ : wQ,
+        cQ = (0, Zo.e)((() => {
+          (0, Po.e)();
+          const QQ = (0, yo.g)(wQ);
+          void 0 !== QQ && (0, Jo.k)((0, yo.d)(QQ))
         })),
-        [qd] = (0, pd.useState)(mW.g);
-      return (0, od.jsxs)("div", {
-        className: Wd()("StoreTile StorePackTile", CP[Od.tier], {
-          StorePackTileOwned: "owned" === Nd,
-          StorePackTileRecipientOwns: "recipientOwns" === Nd,
-          StoreTileGift: Gd
+        [CQ] = (0, LQ.useState)(so.h);
+      return (0, HQ.jsxs)("div", {
+        className: oQ()("StoreTile StorePackTile", mD[AQ.tier], {
+          StorePackTileOwned: "owned" === qQ,
+          StorePackTileRecipientOwns: "recipientOwns" === qQ,
+          StoreTileGift: GQ
         }),
-        ...kP(vd),
-        ref: Id,
-        "data-store-item": kd,
-        onClick: Cd,
-        onPointerMove: dd => {
-          "mouse" !== dd.pointerType || 0 === dd.movementX && 0 === dd.movementY || qd || xd.start()
+        ...wD(pQ),
+        ref: MQ,
+        "data-store-item": wQ,
+        onClick: mQ,
+        onPointerMove: QQ => {
+          "mouse" !== QQ.pointerType || 0 === QQ.movementX && 0 === QQ.movementY || CQ || cQ.start()
         },
-        onPointerLeave: xd.cancel,
-        children: [ed && (0, od.jsx)(ed, {}), (0, od.jsx)("div", {
+        onPointerLeave: cQ.cancel,
+        children: [tQ && (0, HQ.jsx)(tQ, {}), (0, HQ.jsx)("div", {
           className: "StorePackCharacters",
-          children: Rd.map((dd => (0, od.jsx)("div", {
+          children: eQ.map((QQ => (0, HQ.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,SW.m)(dd)})`
+              backgroundImage: `url(${(0,Io.k)(QQ)})`
             }
-          }, dd)))
-        }), (0, od.jsx)("div", {
+          }, QQ)))
+        }), (0, HQ.jsx)("div", {
           className: "StoreTileScrim"
-        }), Gd && (0, od.jsx)("div", {
+        }), GQ && (0, HQ.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, od.jsxs)("div", {
+        }), (0, HQ.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, od.jsx)("div", {
+          children: [(0, HQ.jsx)("div", {
             className: "StoreTileTitle",
-            children: vd
-          }), (0, od.jsxs)("div", {
+            children: pQ
+          }), (0, HQ.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, od.jsx)(AW.b, {
-              tier: Od.tier
-            }), " \xb7 ", Ld("store:itemCount", {
-              count: (0, TW.g)(kd)
-            }), "owned" === Nd && (0, od.jsxs)("span", {
+            children: [(0, HQ.jsx)(Bo.b, {
+              tier: AQ.tier
+            }), " \xb7 ", xQ("store:itemCount", {
+              count: (0, Xo.f)(wQ)
+            }), "owned" === qQ && (0, HQ.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, od.jsx)(Zd.e, {
+              children: [" \xb7 ", (0, HQ.jsx)(kQ.c, {
                 name: "check"
-              }), " ", Ld("general:owned")]
+              }), " ", xQ("general:owned")]
             })]
-          }), (0, od.jsx)(WP, {
-            state: Nd,
-            item: kd,
-            price: (0, fd.h)(kd),
-            busy: gd,
-            onAct: Kd,
-            onNeedRecipient: ld,
-            onLogin: Qd
+          }), (0, HQ.jsx)(oD, {
+            state: qQ,
+            item: wQ,
+            price: (0, KQ.g)(wQ),
+            busy: vQ,
+            onAct: uQ,
+            onNeedRecipient: bQ,
+            onLogin: YQ
           })]
         })]
       })
     }
-    var oP = kd(2927),
-      lP = kd(1586),
-      QP = kd(1478),
-      LP = kd(3437);
+    var HD = wQ(2966),
+      bD = wQ(1543),
+      YD = wQ(1461),
+      xD = wQ(3438);
 
-    function OP() {
-      return (0, od.jsx)("span", {
+    function AD() {
+      return (0, HQ.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var eP = kd(1364),
-      RP = kd(1598),
-      IP = kd(9272);
+    var tD = wQ(1353),
+      eD = wQ(1560),
+      MD = wQ(9137);
 
-    function GP(dd) {
+    function GD(QQ) {
       let {
-        character: Jd,
-        drawn: kd,
-        onDrawn: Nd
-      } = dd;
-      const Pd = (0, pd.useRef)(null),
-        Zd = (0, IP.f)(Jd);
-      return (0, od.jsx)("div", {
-        className: Wd()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: kd
+        character: FQ,
+        drawn: wQ,
+        onDrawn: qQ
+      } = QQ;
+      const DQ = (0, LQ.useRef)(null),
+        kQ = (0, MD.c)(FQ);
+      return (0, HQ.jsx)("div", {
+        className: oQ()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: wQ
         }),
-        children: (0, od.jsx)(pd.Suspense, {
+        children: (0, HQ.jsx)(LQ.Suspense, {
           fallback: null,
-          children: (0, od.jsx)(zW.e, {
-            ref: Pd,
+          children: (0, HQ.jsx)(Po.d, {
+            ref: DQ,
             framing: "store",
-            turntableFromYaw: kd ? Zd.yaw : null,
+            turntableFromYaw: wQ ? kQ.yaw : null,
             onReady: () => {
-              var dd, kd;
-              null === (dd = Pd.current) || void 0 === dd || dd.setOrbit(Zd), null === (kd = Pd.current) || void 0 === kd || kd.setAllCosmetics(RP.c[Jd].cosmetics)
+              var QQ, wQ;
+              null === (QQ = DQ.current) || void 0 === QQ || QQ.setOrbit(kQ), null === (wQ = DQ.current) || void 0 === wQ || wQ.setAllCosmetics(eD.e[FQ].cosmetics)
             },
-            onDrawn: Nd
+            onDrawn: qQ
           })
         })
       })
     }
-    const vP = {
+    const pD = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      xP = new Set(["wildSpirits"]);
+      cD = new Set(["wildSpirits"]);
 
-    function qP(dd) {
-      var Jd;
+    function CD(QQ) {
+      var FQ;
       let {
-        tile: kd,
-        design: Nd,
-        canGoLive: gd,
-        live: Cd,
-        busy: Kd,
-        highlight: ld,
-        onLiveStart: Qd,
-        onLiveEnd: Ld,
-        onOpen: Od,
-        onAct: ed,
-        onNeedRecipient: Rd,
-        onLogin: Id
-      } = dd;
+        tile: wQ,
+        design: qQ,
+        canGoLive: vQ,
+        live: mQ,
+        busy: uQ,
+        highlight: bQ,
+        onLiveStart: YQ,
+        onLiveEnd: xQ,
+        onOpen: AQ,
+        onAct: tQ,
+        onNeedRecipient: eQ,
+        onLogin: MQ
+      } = QQ;
       const {
-        t: Gd
-      } = (0, Pd.B)(), {
-        pack: vd,
-        state: xd
-      } = kd, qd = QW.d[vd], Bd = (0, QW.f)(vd), sd = (0, SW.o)(vd), ad = vW.k[sd], Md = xP.has(sd), {
-        tier: Fd
-      } = qd, Yd = "legendary" === Fd || "mythic" === Fd, md = (0, pd.useRef)(null);
-      (0, eP.c)(md, "epic" === Fd || Yd || Md);
-      const [bd, jd] = (0, pd.useState)(!1);
-      return !Cd && bd && jd(!1), (0, od.jsxs)("div", {
-        ref: md,
-        className: Wd()("StoreCharacterCard", `StoreCharacterCard${Nd}`, vP[Fd], {
-          StoreCharacterCardOwned: "owned" === xd || "recipientOwns" === xd,
-          StoreCharacterCardGift: JP(xd),
-          StoreCharacterCardItem: void 0 === Bd
+        t: GQ
+      } = (0, DQ.y)(), {
+        pack: pQ,
+        state: cQ
+      } = wQ, CQ = Ho.e[pQ], SQ = (0, Ho.i)(pQ), iQ = (0, Io.o)(pQ), WQ = Mo.l[iQ], RQ = cD.has(iQ), {
+        tier: OQ
+      } = CQ, sQ = "legendary" === OQ || "mythic" === OQ, rQ = (0, LQ.useRef)(null);
+      (0, tD.d)(rQ, "epic" === OQ || sQ || RQ);
+      const [IQ, NQ] = (0, LQ.useState)(!1);
+      return !mQ && IQ && NQ(!1), (0, HQ.jsxs)("div", {
+        ref: rQ,
+        className: oQ()("StoreCharacterCard", `StoreCharacterCard${qQ}`, pD[OQ], {
+          StoreCharacterCardOwned: "owned" === cQ || "recipientOwns" === cQ,
+          StoreCharacterCardGift: FD(cQ),
+          StoreCharacterCardItem: void 0 === SQ
         }),
-        onPointerMove: dd => {
-          "mouse" !== dd.pointerType || 0 === dd.movementX && 0 === dd.movementY || !gd || Cd || void 0 === Bd || Qd()
+        onPointerMove: QQ => {
+          "mouse" !== QQ.pointerType || 0 === QQ.movementX && 0 === QQ.movementY || !vQ || mQ || void 0 === SQ || YQ()
         },
-        onPointerLeave: Ld,
-        children: [(0, od.jsx)("div", {
+        onPointerLeave: xQ,
+        children: [(0, HQ.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: ad && (0, od.jsx)(ad, {
+          children: WQ && (0, HQ.jsx)(WQ, {
             simple: !0
           })
-        }), Yd && (0, od.jsx)("div", {
+        }), sQ && (0, HQ.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, od.jsxs)(Sd.LinkPreserveSearch, {
+        }), (0, HQ.jsxs)(UQ.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, lP.c)({
+          to: (0, bD.f)({
             kind: "pack",
-            pack: vd
+            pack: pQ
           }),
-          "data-store-item": vd,
-          onClick: dd => {
-            (0, QP.d)(dd) && (dd.preventDefault(), Od())
+          "data-store-item": pQ,
+          onClick: QQ => {
+            (0, YD.c)(QQ) && (QQ.preventDefault(), AQ())
           },
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, od.jsx)("div", {
+            children: [(0, HQ.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, od.jsx)("div", {
-              className: Wd()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: bd
+            }), (0, HQ.jsx)("div", {
+              className: oQ()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: IQ
               }),
               style: {
-                backgroundImage: `url(${(0,SW.v)(vd)})`
+                backgroundImage: `url(${(0,Io.x)(pQ)})`
               }
-            }), Cd && void 0 !== Bd && (0, od.jsx)(GP, {
-              character: Bd,
-              drawn: bd,
+            }), mQ && void 0 !== SQ && (0, HQ.jsx)(GD, {
+              character: SQ,
+              drawn: IQ,
               onDrawn: () => {
-                jd(!0)
+                NQ(!0)
               }
             })]
-          }), (0, od.jsx)("div", {
+          }), (0, HQ.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (Jd = qd.displayName) && void 0 !== Jd ? Jd : vd
-          }), (0, od.jsx)(AW.b, {
-            tier: Fd,
+            children: null !== (FQ = CQ.displayName) && void 0 !== FQ ? FQ : pQ
+          }), (0, HQ.jsx)(Bo.b, {
+            tier: OQ,
             className: "StoreCharacterTier"
           })]
-        }), (0, od.jsx)("div", {
+        }), (0, HQ.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), Md && (0, od.jsx)("span", {
+        }), RQ && (0, HQ.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, od.jsx)(OP, {})
-        }), "owned" === xd && (0, od.jsx)("span", {
+          children: (0, HQ.jsx)(AD, {})
+        }), "owned" === cQ && (0, HQ.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: Gd("general:owned"),
-          "aria-label": Gd("general:owned"),
-          children: (0, od.jsx)(Zd.e, {
+          title: GQ("general:owned"),
+          "aria-label": GQ("general:owned"),
+          children: (0, HQ.jsx)(kQ.c, {
             name: "check"
           })
-        }), (0, od.jsx)("div", {
+        }), (0, HQ.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, od.jsx)(WP, {
-            state: xd,
-            item: vd,
-            price: (0, fd.h)(vd),
-            busy: Kd,
-            highlight: ld,
-            onAct: ed,
-            onNeedRecipient: Rd,
-            onLogin: Id
+          children: (0, HQ.jsx)(oD, {
+            state: cQ,
+            item: pQ,
+            price: (0, KQ.g)(pQ),
+            busy: uQ,
+            highlight: bQ,
+            onAct: tQ,
+            onNeedRecipient: eQ,
+            onLogin: MQ
           })
         })]
       })
     }
 
-    function BP(dd) {
+    function SD(QQ) {
       let {
-        tiles: Jd,
-        busy: kd,
-        highlightItem: Nd,
-        onOpen: Wd,
-        onAct: Pd,
-        onNeedRecipient: Zd,
-        onLogin: gd
-      } = dd;
-      const Cd = (0, LP.m)("storeCharacterCardFoil"),
-        Kd = (0, LP.m)("storeCharacterCardSpotlight"),
-        ld = Cd ? "Foil" : Kd ? "Spotlight" : "Showcase",
-        [Qd] = (0, pd.useState)(mW.g),
-        [Ld, Od] = (0, pd.useState)(null);
-      return (0, od.jsx)("div", {
+        tiles: FQ,
+        busy: wQ,
+        highlightItem: qQ,
+        onOpen: oQ,
+        onAct: DQ,
+        onNeedRecipient: kQ,
+        onLogin: vQ
+      } = QQ;
+      const mQ = (0, xD.j)("storeCharacterCardFoil"),
+        uQ = (0, xD.j)("storeCharacterCardSpotlight"),
+        bQ = mQ ? "Foil" : uQ ? "Spotlight" : "Showcase",
+        [YQ] = (0, LQ.useState)(so.h),
+        [xQ, AQ] = (0, LQ.useState)(null);
+      return (0, HQ.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: Jd.map((dd => (0, od.jsx)(qP, {
-          tile: dd,
-          design: ld,
-          canGoLive: !Qd,
-          live: Ld === dd.pack,
-          busy: kd,
-          highlight: Nd === dd.pack,
+        children: FQ.map((QQ => (0, HQ.jsx)(CD, {
+          tile: QQ,
+          design: bQ,
+          canGoLive: !YQ,
+          live: xQ === QQ.pack,
+          busy: wQ,
+          highlight: qQ === QQ.pack,
           onLiveStart: () => {
-            Od(dd.pack)
+            AQ(QQ.pack)
           },
           onLiveEnd: () => {
-            Od((Jd => Jd === dd.pack ? null : Jd))
+            AQ((FQ => FQ === QQ.pack ? null : FQ))
           },
           onOpen: () => {
-            Wd(dd.pack)
+            oQ(QQ.pack)
           },
           onAct: () => {
-            Pd(dd.pack)
+            DQ(QQ.pack)
           },
-          onNeedRecipient: Zd,
+          onNeedRecipient: kQ,
           onLogin: () => {
-            gd(dd.pack)
+            vQ(QQ.pack)
           }
-        }, dd.pack)))
+        }, QQ.pack)))
       })
     }
-    var sP = kd(9276);
+    var iD = wQ(9149);
 
-    function iP(dd) {
+    function WD(QQ) {
       let {
-        title: Jd
-      } = dd;
-      return (0, od.jsx)("h2", {
+        title: FQ
+      } = QQ;
+      return (0, HQ.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, od.jsx)("span", {
+        children: (0, HQ.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: Jd
+          children: FQ
         })
       })
     }
 
-    function aP(dd) {
+    function RD(QQ) {
       let {
-        mountAtOnce: Jd,
-        children: kd
-      } = dd;
-      const Nd = (0, pd.useRef)(null),
-        [Wd, Pd] = (0, pd.useState)(Jd),
-        Zd = (0, sP.b)();
-      return (0, pd.useLayoutEffect)((() => {
-        const dd = Nd.current;
-        dd && dd.getBoundingClientRect().top < dd.parentElement.getBoundingClientRect().bottom && Pd(!0)
-      }), []), Wd || Zd ? (0, od.jsx)(od.Fragment, {
-        children: kd
-      }) : (0, od.jsx)("div", {
-        ref: Nd
+        mountAtOnce: FQ,
+        children: wQ
+      } = QQ;
+      const qQ = (0, LQ.useRef)(null),
+        [oQ, DQ] = (0, LQ.useState)(FQ),
+        kQ = (0, iD.b)();
+      return (0, LQ.useLayoutEffect)((() => {
+        const QQ = qQ.current;
+        QQ && QQ.getBoundingClientRect().top < QQ.parentElement.getBoundingClientRect().bottom && DQ(!0)
+      }), []), oQ || kQ ? (0, HQ.jsx)(HQ.Fragment, {
+        children: wQ
+      }) : (0, HQ.jsx)("div", {
+        ref: qQ
       })
     }
 
-    function MP(dd) {
+    function OD(QQ) {
       let {
-        layout: Jd,
-        mountAtOnce: kd,
-        bundleGift: pd,
-        superRankTotalDays: Nd,
-        busy: Wd,
-        highlightItem: Zd,
-        onOpen: gd,
-        onAct: Cd,
-        onNeedRecipient: Kd,
-        onLogin: ld
-      } = dd;
+        layout: FQ,
+        mountAtOnce: wQ,
+        bundleGift: LQ,
+        superRankTotalDays: qQ,
+        busy: oQ,
+        highlightItem: kQ,
+        onOpen: vQ,
+        onAct: mQ,
+        onNeedRecipient: uQ,
+        onLogin: bQ
+      } = QQ;
       const {
-        t: Qd
-      } = (0, Pd.B)(), Ld = Jd.packs.filter((dd => void 0 === (0, QW.f)(dd.pack) && !(0, QW.m)(dd.pack))), Od = Jd.packs.filter((dd => void 0 !== (0, QW.f)(dd.pack))), ed = Jd.packs.filter((dd => (0, QW.m)(dd.pack)));
-      return (0, od.jsxs)(od.Fragment, {
-        children: [(0, od.jsx)(oP.d, {
+        t: YQ
+      } = (0, DQ.y)(), xQ = FQ.packs.filter((QQ => void 0 === (0, Ho.i)(QQ.pack) && !(0, Ho.m)(QQ.pack))), AQ = FQ.packs.filter((QQ => void 0 !== (0, Ho.i)(QQ.pack))), tQ = FQ.packs.filter((QQ => (0, Ho.m)(QQ.pack)));
+      return (0, HQ.jsxs)(HQ.Fragment, {
+        children: [(0, HQ.jsx)(HD.c, {
           className: "StoreSuperGems",
-          gift: pd,
-          highlightSku: Zd
-        }), (0, od.jsx)(iP, {
-          title: Qd("store:rank")
-        }), (0, od.jsx)(gP, {
-          state: Jd.superRank.state,
-          urgent: Jd.superRank.urgent,
-          daysLeft: Jd.superRankDaysLeft,
-          totalDays: Nd,
-          recipientHasSuperRank: Jd.recipientHasSuperRank,
-          busy: Wd,
-          highlight: "superRank" === Zd,
+          gift: LQ,
+          highlightSku: kQ
+        }), (0, HQ.jsx)(WD, {
+          title: YQ("store:rank")
+        }), (0, HQ.jsx)(vD, {
+          state: FQ.superRank.state,
+          urgent: FQ.superRank.urgent,
+          daysLeft: FQ.superRankDaysLeft,
+          totalDays: qQ,
+          recipientHasSuperRank: FQ.recipientHasSuperRank,
+          busy: oQ,
+          highlight: "superRank" === kQ,
           onOpen: () => {
-            gd("superRank")
+            vQ("superRank")
           },
           onAct: () => {
-            Cd("superRank")
+            mQ("superRank")
           },
-          onNeedRecipient: Kd,
+          onNeedRecipient: uQ,
           onLogin: () => {
-            ld("superRank")
+            bQ("superRank")
           }
-        }), (0, od.jsxs)(aP, {
-          mountAtOnce: kd,
-          children: [(0, od.jsx)(iP, {
-            title: Qd("store:bundles")
-          }), (0, od.jsx)("div", {
+        }), (0, HQ.jsxs)(RD, {
+          mountAtOnce: wQ,
+          children: [(0, HQ.jsx)(WD, {
+            title: YQ("store:bundles")
+          }), (0, HQ.jsx)("div", {
             className: "StorePackGrid",
-            children: Ld.map((dd => (0, od.jsx)(KP, {
-              pack: dd.pack,
-              state: dd.state,
-              busy: Wd,
+            children: xQ.map((QQ => (0, HQ.jsx)(uD, {
+              pack: QQ.pack,
+              state: QQ.state,
+              busy: oQ,
               onOpen: () => {
-                gd(dd.pack)
+                vQ(QQ.pack)
               },
               onAct: () => {
-                Cd(dd.pack)
+                mQ(QQ.pack)
               },
-              onNeedRecipient: Kd,
+              onNeedRecipient: uQ,
               onLogin: () => {
-                ld(dd.pack)
+                bQ(QQ.pack)
               }
-            }, dd.pack)))
-          }), (0, od.jsxs)(aP, {
-            mountAtOnce: kd,
-            children: [(0, od.jsx)(iP, {
-              title: Qd("store:characters")
-            }), (0, od.jsx)(BP, {
-              tiles: Od,
-              busy: Wd,
-              highlightItem: Zd,
-              onOpen: gd,
-              onAct: Cd,
-              onNeedRecipient: Kd,
-              onLogin: ld
-            }), ed.length > 0 && (0, od.jsxs)(od.Fragment, {
-              children: [(0, od.jsx)(iP, {
-                title: Qd("store:premiumItems")
-              }), (0, od.jsx)(BP, {
-                tiles: ed,
-                busy: Wd,
-                highlightItem: Zd,
-                onOpen: gd,
-                onAct: Cd,
-                onNeedRecipient: Kd,
-                onLogin: ld
+            }, QQ.pack)))
+          }), (0, HQ.jsxs)(RD, {
+            mountAtOnce: wQ,
+            children: [(0, HQ.jsx)(WD, {
+              title: YQ("store:characters")
+            }), (0, HQ.jsx)(SD, {
+              tiles: AQ,
+              busy: oQ,
+              highlightItem: kQ,
+              onOpen: vQ,
+              onAct: mQ,
+              onNeedRecipient: uQ,
+              onLogin: bQ
+            }), tQ.length > 0 && (0, HQ.jsxs)(HQ.Fragment, {
+              children: [(0, HQ.jsx)(WD, {
+                title: YQ("store:premiumItems")
+              }), (0, HQ.jsx)(SD, {
+                tiles: tQ,
+                busy: oQ,
+                highlightItem: kQ,
+                onOpen: vQ,
+                onAct: mQ,
+                onNeedRecipient: uQ,
+                onLogin: bQ
               })]
             })]
           })]
@@ -6562,792 +6562,792 @@ export const modules = {
       })
     }
 
-    function FP(dd) {
+    function sD(QQ) {
       let {
-        state: Jd,
-        mode: kd,
-        giftName: pd,
-        busy: Nd,
-        highlight: Wd,
-        purchaseError: Zd,
-        onBack: gd,
-        onChooseRecipient: Kd,
-        onAct: ld,
-        onLogin: Qd
-      } = dd;
+        state: FQ,
+        mode: wQ,
+        giftName: LQ,
+        busy: qQ,
+        highlight: oQ,
+        purchaseError: kQ,
+        onBack: vQ,
+        onChooseRecipient: uQ,
+        onAct: bQ,
+        onLogin: YQ
+      } = QQ;
       const {
-        t: Ld
-      } = (0, Pd.B)(), Od = Vd("gift" !== kd);
-      return (0, od.jsx)(VW, {
-        onBack: gd,
-        recipient: "gift" === kd && (0, od.jsxs)(od.Fragment, {
-          children: [pd && (0, od.jsxs)("span", {
+        t: xQ
+      } = (0, DQ.y)(), AQ = gQ("gift" !== wQ);
+      return (0, HQ.jsx)(go, {
+        onBack: vQ,
+        recipient: "gift" === wQ && (0, HQ.jsxs)(HQ.Fragment, {
+          children: [LQ && (0, HQ.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: Ld("store:giftFor", {
-              name: pd
+            title: xQ("store:giftFor", {
+              name: LQ
             }),
-            children: [qW.e, " ", Ld("store:giftFor", {
-              name: pd
+            children: [po.d, " ", xQ("store:giftFor", {
+              name: LQ
             })]
-          }), !pd && (0, od.jsxs)("div", {
-            ...(0, Cd.P)(),
+          }), !LQ && (0, HQ.jsxs)("div", {
+            ...(0, mQ.S)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: Kd,
-            children: [qW.e, " ", Ld("store:chooseRecipient")]
+            onClick: uQ,
+            children: [po.d, " ", xQ("store:chooseRecipient")]
           })]
         }),
-        cta: (0, od.jsx)(WP, {
-          state: Jd,
+        cta: (0, HQ.jsx)(oD, {
+          state: FQ,
           item: "superRank",
-          price: fd.k.price,
-          busy: Nd,
-          highlight: Wd,
-          onAct: ld,
-          onNeedRecipient: Kd,
-          onLogin: Qd
+          price: KQ.l.price,
+          busy: qQ,
+          highlight: oQ,
+          onAct: bQ,
+          onNeedRecipient: uQ,
+          onLogin: YQ
         }),
-        afterCta: (0, od.jsxs)(od.Fragment, {
-          children: [Od && (0, od.jsx)("span", {
+        afterCta: (0, HQ.jsxs)(HQ.Fragment, {
+          children: [AQ && (0, HQ.jsx)("span", {
             className: "StoreTileNote",
-            children: Od
-          }), Zd && (0, od.jsx)("span", {
+            children: AQ
+          }), kQ && (0, HQ.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: Ld(Zd)
+            children: xQ(kQ)
           })]
         })
       })
     }
-    var YP = kd(141);
-    const mP = YP.k("kind", [YP.A({
-      kind: YP.u("refused"),
-      heldTierId: YP.R(),
-      until: YP.y()
-    }), YP.A({
-      kind: YP.u("refund"),
-      tierId: YP.R(),
-      refundedMs: YP.y(),
-      forfeitedMs: YP.y(),
-      premiumCurrency: YP.y()
-    }), YP.A({
-      kind: YP.u("none")
+    var rD = wQ(146);
+    const ID = rD.m("kind", [rD.A({
+      kind: rD.t("refused"),
+      heldTierId: rD.N(),
+      until: rD.y()
+    }), rD.A({
+      kind: rD.t("refund"),
+      tierId: rD.N(),
+      refundedMs: rD.y(),
+      forfeitedMs: rD.y(),
+      premiumCurrency: rD.y()
+    }), rD.A({
+      kind: rD.t("none")
     })]);
-    async function bP(dd) {
-      const Jd = await (0, Yd.postJsonWithMetricsCookiesAndJsonResponse)(`${md.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: dd
+    async function UD(QQ) {
+      const FQ = await (0, sQ.postJsonWithMetricsCookiesAndJsonResponse)(`${rQ.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: QQ
       }, {
         retries: 1
       });
-      return mP.parse(Jd)
+      return ID.parse(FQ)
     }
-    var SP = kd(2897),
-      jP = kd(2935);
+    var ND = wQ(2943),
+      TD = wQ(2972);
 
-    function XP(dd, Jd) {
-      const kd = Math.max(1, Math.round(Jd / yd.i));
-      return [1 === kd ? `${dd}OneDay` : dd, {
-        days: kd.toLocaleString()
+    function KD(QQ, FQ) {
+      const wQ = Math.max(1, Math.round(FQ / jQ.j));
+      return [1 === wQ ? `${QQ}OneDay` : QQ, {
+        days: wQ.toLocaleString()
       }]
     }
 
-    function fP() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, Td.purchasesAllowed)() ? (0, od.jsx)(nP, {}) : null
+    function zD() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, XQ.purchasesAllowed)() ? (0, HQ.jsx)(lD, {}) : null
     }
 
-    function nP() {
+    function lD() {
       const {
-        t: dd
-      } = (0, Pd.B)(), {
-        userContext: Jd
-      } = (0, Ld.c)(), {
-        purchaseUnderWay: kd,
-        notice: Nd,
-        subscribe: Wd
-      } = (0, SP.c)(), [Zd, gd] = (0, pd.useState)(null), [Kd, ld] = (0, pd.useState)(0), [Qd, Od] = (0, pd.useState)(!1), ed = (0, pd.useRef)(!0), Rd = Jd !== Yd.NULL_USER_CONTEXT, Id = null !== Zd && Zd.loadedFor === Jd ? Zd.offer : null, Gd = null === Nd || void 0 === Nd ? void 0 : Nd.pendingIntentId, vd = (0, pd.useRef)(Gd);
+        t: QQ
+      } = (0, DQ.y)(), {
+        userContext: FQ
+      } = (0, xQ.e)(), {
+        purchaseUnderWay: wQ,
+        notice: qQ,
+        subscribe: oQ
+      } = (0, ND.d)(), [kQ, vQ] = (0, LQ.useState)(null), [uQ, bQ] = (0, LQ.useState)(0), [YQ, AQ] = (0, LQ.useState)(!1), tQ = (0, LQ.useRef)(!0), eQ = FQ !== sQ.NULL_USER_CONTEXT, MQ = null !== kQ && kQ.loadedFor === FQ ? kQ.offer : null, GQ = null === qQ || void 0 === qQ ? void 0 : qQ.pendingIntentId, pQ = (0, LQ.useRef)(GQ);
 
-      function xd() {
-        ld((dd => dd + 1))
+      function cQ() {
+        bQ((QQ => QQ + 1))
       }
-      async function qd(dd) {
-        Od(!1), await Wd(dd), ed.current && xd()
+      async function CQ(QQ) {
+        AQ(!1), await oQ(QQ), tQ.current && cQ()
       }
-      if ((0, pd.useEffect)((() => (ed.current = !0, () => {
-          ed.current = !1
-        })), []), (0, pd.useEffect)((() => {
-          void 0 !== vd.current && void 0 === Gd && xd(), vd.current = Gd
-        }), [Gd]), (0, pd.useEffect)((() => {
-          if (!Rd) return;
-          let dd = !1;
-          return Od(!1), async function() {
+      if ((0, LQ.useEffect)((() => (tQ.current = !0, () => {
+          tQ.current = !1
+        })), []), (0, LQ.useEffect)((() => {
+          void 0 !== pQ.current && void 0 === GQ && cQ(), pQ.current = GQ
+        }), [GQ]), (0, LQ.useEffect)((() => {
+          if (!eQ) return;
+          let QQ = !1;
+          return AQ(!1), async function() {
             const {
-              offering: dd
-            } = await (0, gJ.f)().getOfferings("superRankPage"), Jd = null === dd || void 0 === dd ? void 0 : dd.packages.find((dd => null !== dd.price));
-            return void 0 === Jd ? {
+              offering: QQ
+            } = await (0, kF.e)().getOfferings("superRankPage"), FQ = null === QQ || void 0 === QQ ? void 0 : QQ.packages.find((QQ => null !== QQ.price));
+            return void 0 === FQ ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: Jd,
-              preview: await bP(Jd.productId)
+              pkg: FQ,
+              preview: await UD(FQ.productId)
             }
-          }().catch((dd => (console.error("Billing: loading the Super Rank subscription or its preview failed:", dd), {
+          }().catch((QQ => (console.error("Billing: loading the Super Rank subscription or its preview failed:", QQ), {
             kind: "loadFailed"
-          }))).then((kd => {
-            dd || gd((dd => "loadFailed" === kd.kind && (null === dd || void 0 === dd ? void 0 : dd.loadedFor) === Jd ? dd : {
-              loadedFor: Jd,
-              offer: kd
+          }))).then((wQ => {
+            QQ || vQ((QQ => "loadFailed" === wQ.kind && (null === QQ || void 0 === QQ ? void 0 : QQ.loadedFor) === FQ ? QQ : {
+              loadedFor: FQ,
+              offer: wQ
             }))
           })), () => {
-            dd = !0
+            QQ = !0
           }
-        }), [Jd, Rd, Kd]), null === Id) return null;
-      if ("loaded" !== Id.kind) return (0, od.jsx)(jP.j, {
+        }), [FQ, eQ, uQ]), null === MQ) return null;
+      if ("loaded" !== MQ.kind) return (0, HQ.jsx)(TD.f, {
         notice: {
           kind: "error",
-          key: "unavailable" === Id.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === MQ.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: Bd,
-        preview: sd
-      } = Id;
-      if ("refused" === sd.kind) return (0, od.jsx)(jP.j, {
+        pkg: SQ,
+        preview: iQ
+      } = MQ;
+      if ("refused" === iQ.kind) return (0, HQ.jsx)(TD.f, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(sd.until).toLocaleDateString()
+            date: new Date(iQ.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const ad = (0, oP.h)(Bd.price);
-      if (Qd && "refund" === sd.kind) {
+      const WQ = (0, HD.e)(SQ.price);
+      if (YQ && "refund" === iQ.kind) {
         const {
-          refundedMs: Jd,
-          forfeitedMs: pd,
-          premiumCurrency: Nd
-        } = sd, Wd = pd + (0 === Nd ? Jd : 0), [Pd, Zd] = XP("payments:subscribeRefundsGemRank", Jd), [gd, Kd] = XP("payments:subscribeForfeitsGemRank", Wd);
-        return (0, od.jsxs)("div", {
+          refundedMs: FQ,
+          forfeitedMs: LQ,
+          premiumCurrency: qQ
+        } = iQ, oQ = LQ + (0 === qQ ? FQ : 0), [DQ, kQ] = KD("payments:subscribeRefundsGemRank", FQ), [vQ, uQ] = KD("payments:subscribeForfeitsGemRank", oQ);
+        return (0, HQ.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, od.jsx)("div", {
-            children: dd("payments:subscribeEndsGemRank")
-          }), Nd > 0 && (0, od.jsx)("div", {
-            children: dd(Pd, {
-              ...Zd,
-              amount: Nd.toLocaleString()
+          children: [(0, HQ.jsx)("div", {
+            children: QQ("payments:subscribeEndsGemRank")
+          }), qQ > 0 && (0, HQ.jsx)("div", {
+            children: QQ(DQ, {
+              ...kQ,
+              amount: qQ.toLocaleString()
             })
-          }), Wd > 0 && (0, od.jsx)("div", {
-            children: dd(gd, Kd)
-          }), (0, od.jsxs)("div", {
+          }), oQ > 0 && (0, HQ.jsx)("div", {
+            children: QQ(vQ, uQ)
+          }), (0, HQ.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, od.jsx)(Cd.f, {
+            children: [(0, HQ.jsx)(mQ.i, {
               onClick: () => {
-                Od(!1)
+                AQ(!1)
               },
-              children: dd("general:cancel")
-            }), (0, od.jsx)(Cd.j, {
+              children: QQ("general:cancel")
+            }), (0, HQ.jsx)(mQ.m, {
               onClick: () => {
-                qd(Bd)
+                CQ(SQ)
               },
-              loading: kd,
-              children: dd("payments:subscribeContinue", {
-                price: ad
+              loading: wQ,
+              children: QQ("payments:subscribeContinue", {
+                price: WQ
               })
             })]
           })]
         })
       }
-      return (0, od.jsxs)("div", {
+      return (0, HQ.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, od.jsx)(jP.j, {
-          notice: Nd,
+        children: [(0, HQ.jsx)(TD.f, {
+          notice: qQ,
           className: "SmallTextBold"
-        }), (0, od.jsx)(jP.e, {
+        }), (0, HQ.jsx)(TD.b, {
           className: "SmallTextBold"
-        }), (0, od.jsx)(Cd.j, {
+        }), (0, HQ.jsx)(mQ.m, {
           onClick: () => {
-            "refund" === sd.kind ? Od(!0) : qd(Bd)
+            "refund" === iQ.kind ? AQ(!0) : CQ(SQ)
           },
-          disabled: void 0 !== Gd,
-          loading: kd,
-          children: dd("payments:subscribeToSuperRank", {
-            price: ad
+          disabled: void 0 !== GQ,
+          loading: wQ,
+          children: QQ("payments:subscribeToSuperRank", {
+            price: WQ
           })
         })]
       })
     }
-    const UP = {
+    const jD = {
       kind: "board"
     };
-    let yP = !1;
+    let aD = !1;
 
-    function DP(dd) {
-      return "found" === dd.status || "error" === dd.status && "store:giftRecipientLookupFailed" === dd.error ? dd.name : null
-    }(0, Dd.y)(LW.prefetchBillingOfferings);
-    const TP = (0, pd.memo)((function(dd) {
-      var Jd;
+    function XD(QQ) {
+      return "found" === QQ.status || "error" === QQ.status && "store:giftRecipientLookupFailed" === QQ.error ? QQ.name : null
+    }(0, aQ.y)(bo.prefetchBillingOfferings);
+    const fD = (0, LQ.memo)((function(QQ) {
+      var FQ;
       let {
-        show: Nd
-      } = dd;
+        show: qQ
+      } = QQ;
       const {
-        t: Zd
-      } = (0, Pd.B)(), {
-        userContext: gd
-      } = (0, Ld.c)(), Cd = gd !== Yd.NULL_USER_CONTEXT, Kd = aW(gd), [ld, Qd] = (0, ed.b)(), {
-        page: Od,
-        urlMode: Rd,
-        goTo: Id
-      } = (0, MW.g)(), Gd = function(dd) {
-        return "superRank" === dd.kind ? "superRank" : "pack" === dd.kind ? dd.pack : null
-      }(Od), {
-        openEverythingMenuName: vd,
-        gameState: xd
-      } = (0, sd.j)(["openEverythingMenuName", "gameState"]), qd = null !== vd;
-      ! function(dd, Jd) {
-        const [Nd] = (0, pd.useState)(mW.g), [Wd, Pd] = (0, pd.useState)(!1);
-        Nd && Jd && !Wd && Pd(!0);
-        const Zd = (0, Zp.m)(),
-          gd = Nd && Wd && dd && !Zd;
-        (0, pd.useEffect)((() => {
-          if (!gd) return;
-          let dd = null,
-            Jd = null,
-            pd = null;
-          const Nd = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, gJ.f)().purchaseUnderWay,
-            Wd = () => {
-              var kd;
-              null === (kd = pd) || void 0 === kd || kd(), pd = null, null !== dd && (clearTimeout(dd), dd = null), null !== Jd && (clearTimeout(Jd), Jd = null)
+        t: kQ
+      } = (0, DQ.y)(), {
+        userContext: vQ
+      } = (0, xQ.e)(), mQ = vQ !== sQ.NULL_USER_CONTEXT, uQ = io(vQ), [bQ, YQ] = (0, tQ.b)(), {
+        page: AQ,
+        urlMode: eQ,
+        goTo: MQ
+      } = (0, Wo.i)(), GQ = function(QQ) {
+        return "superRank" === QQ.kind ? "superRank" : "pack" === QQ.kind ? QQ.pack : null
+      }(AQ), {
+        openEverythingMenuName: pQ,
+        gameState: cQ
+      } = (0, iQ.l)(["openEverythingMenuName", "gameState"]), CQ = null !== pQ;
+      ! function(QQ, FQ) {
+        const [qQ] = (0, LQ.useState)(so.h), [oQ, DQ] = (0, LQ.useState)(!1);
+        qQ && FQ && !oQ && DQ(!0);
+        const kQ = (0, DL.n)(),
+          vQ = qQ && oQ && QQ && !kQ;
+        (0, LQ.useEffect)((() => {
+          if (!vQ) return;
+          let QQ = null,
+            FQ = null,
+            LQ = null;
+          const qQ = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, kF.e)().purchaseUnderWay,
+            oQ = () => {
+              var wQ;
+              null === (wQ = LQ) || void 0 === wQ || wQ(), LQ = null, null !== QQ && (clearTimeout(QQ), QQ = null), null !== FQ && (clearTimeout(FQ), FQ = null)
             },
-            Pd = () => {
-              (0, FW.o)(!1), (0, FW.m)(!1), Wd(), dd = setTimeout((() => {
-                dd = null, pd = (0, YW.c)((() => {
-                  pd = null, Nd() ? Pd() : ((0, FW.o)(!0), Jd = setTimeout((() => {
-                    Jd = null, pd = (0, YW.c)((() => {
-                      pd = null, Nd() ? Pd() : (0, FW.m)(!0)
+            DQ = () => {
+              (0, Ro.j)(!1), (0, Ro.i)(!1), oQ(), QQ = setTimeout((() => {
+                QQ = null, LQ = (0, Oo.d)((() => {
+                  LQ = null, qQ() ? DQ() : ((0, Ro.j)(!0), FQ = setTimeout((() => {
+                    FQ = null, LQ = (0, Oo.d)((() => {
+                      LQ = null, qQ() ? DQ() : (0, Ro.i)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => kd(4520))).then((dd => {
-                    dd.startBackgroundGameSetup()
-                  }), (dd => {
-                    console.warn("Background game setup: its chunk failed to load", dd)
+                  }), 3e3), Promise.resolve().then((() => wQ(4501))).then((QQ => {
+                    QQ.startBackgroundGameSetup()
+                  }), (QQ => {
+                    console.warn("Background game setup: its chunk failed to load", QQ)
                   })))
                 }))
               }), 2e3)
             };
-          for (const kd of bW) window.addEventListener(kd, Pd, {
+          for (const wQ of ro) window.addEventListener(wQ, DQ, {
             capture: !0,
             passive: !0
           });
-          return Pd(), () => {
-            for (const dd of bW) window.removeEventListener(dd, Pd, {
+          return DQ(), () => {
+            for (const QQ of ro) window.removeEventListener(QQ, DQ, {
               capture: !0
             });
-            Wd(), (0, FW.o)(!1), (0, FW.m)(!1)
+            oQ(), (0, Ro.j)(!1), (0, Ro.i)(!1)
           }
-        }), [gd])
-      }(Nd && qd, "pack" === Od.kind);
-      const Bd = "landingPage" === xd;
-      (0, pd.useEffect)((() => {
-        qd && (0, LW.prefetchBillingOfferings)()
-      }), [qd]), (0, pd.useEffect)((() => {
-        qd && !Nd && Bd && (0, SW.w)()
-      }), [qd, Nd, Bd]);
-      const [ad, Md] = (0, pd.useState)(0), [Fd, md] = (0, pd.useState)(null), [bd, Sd] = (0, pd.useState)(null), [jd, Xd] = (0, pd.useState)(null), [nd, Ud] = (0, pd.useState)(null), yd = (0, pd.useRef)(null), Ed = (0, pd.useRef)(null), cd = (0, pd.useRef)(null), hd = (0, pd.useRef)(!1), rd = (0, Dd.F)(), ud = (0, pd.useRef)(0), td = (0, pd.useRef)(!1);
+        }), [vQ])
+      }(qQ && CQ, "pack" === AQ.kind);
+      const SQ = "landingPage" === cQ;
+      (0, LQ.useEffect)((() => {
+        CQ && (0, bo.prefetchBillingOfferings)()
+      }), [CQ]), (0, LQ.useEffect)((() => {
+        CQ && !qQ && SQ && (0, Io.B)()
+      }), [CQ, qQ, SQ]);
+      const [WQ, RQ] = (0, LQ.useState)(0), [OQ, rQ] = (0, LQ.useState)(null), [IQ, UQ] = (0, LQ.useState)(null), [NQ, TQ] = (0, LQ.useState)(null), [zQ, lQ] = (0, LQ.useState)(null), jQ = (0, LQ.useRef)(null), fQ = (0, LQ.useRef)(null), VQ = (0, LQ.useRef)(null), hQ = (0, LQ.useRef)(!1), JQ = (0, aQ.G)(), EQ = (0, LQ.useRef)(0), nQ = (0, LQ.useRef)(!1);
 
-      function Vd() {
-        Md((dd => dd + 1))
-      }(0, pd.useEffect)((() => {
-        if (Nd) {
-          if (yP = !0, (0, Dd.n)(), rd && rd.seq !== ud.current) {
-            var dd;
-            ud.current = rd.seq, "loginResume" !== rd.source && (0, Dd.C)();
-            const Jd = (0, Dd.d)(rd);
-            Rd || Id(Jd), Ud(null !== (dd = rd.highlight) && void 0 !== dd ? dd : null), Sd(null), "gift" === rd.mode && rd.giftRecipientName ? Kd.choose(rd.giftRecipientName, "prefilled") : "current" !== rd.mode && Kd.clear(), "gift" !== rd.mode || rd.giftRecipientName || Vd(), (0, Ad.reportAnalyticsClick)({
+      function gQ() {
+        RQ((QQ => QQ + 1))
+      }(0, LQ.useEffect)((() => {
+        if (qQ) {
+          if (aD = !0, (0, aQ.n)(), JQ && JQ.seq !== EQ.current) {
+            var QQ;
+            EQ.current = JQ.seq, "loginResume" !== JQ.source && (0, aQ.F)();
+            const FQ = (0, aQ.d)(JQ);
+            eQ || MQ(FQ), lQ(null !== (QQ = JQ.highlight) && void 0 !== QQ ? QQ : null), UQ(null), "gift" === JQ.mode && JQ.giftRecipientName ? uQ.choose(JQ.giftRecipientName, "prefilled") : "current" !== JQ.mode && uQ.clear(), "gift" !== JQ.mode || JQ.giftRecipientName || gQ(), (0, BQ.reportAnalyticsClick)({
               id: "store.open",
-              value: rd.source
+              value: JQ.source
             })
-          } else td.current || (0, Ad.reportAnalyticsClick)({
+          } else nQ.current || (0, BQ.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          td.current = !0
-        } else td.current = !1
-      }), [Nd, rd]), (0, pd.useEffect)((() => {
-        if (!nd) return;
-        const dd = setTimeout((() => {
-          Ud(null)
+          nQ.current = !0
+        } else nQ.current = !1
+      }), [qQ, JQ]), (0, LQ.useEffect)((() => {
+        if (!zQ) return;
+        const QQ = setTimeout((() => {
+          lQ(null)
         }), 4e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(QQ)
         }
-      }), [nd]), (0, pd.useLayoutEffect)((() => {
-        const dd = yd.current;
-        if (!Nd || !dd) return Ed.current = null, void(cd.current = null);
-        var Jd;
-        if (Gd) Ed.current = Gd, null === (Jd = dd.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Jd || Jd.focus();
-        else if (Ed.current) {
-          const Jd = cd.current;
-          null !== Jd && (dd.scrollTop = Jd);
-          const kd = dd.querySelector(`[data-store-item="${Ed.current}"]`);
-          if (kd) {
-            const pd = kd.getBoundingClientRect(),
-              Nd = dd.getBoundingClientRect();
-            kd.focus({
-              preventScroll: null !== Jd && pd.bottom > Nd.top && pd.top < Nd.bottom
+      }), [zQ]), (0, LQ.useLayoutEffect)((() => {
+        const QQ = jQ.current;
+        if (!qQ || !QQ) return fQ.current = null, void(VQ.current = null);
+        var FQ;
+        if (GQ) fQ.current = GQ, null === (FQ = QQ.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === FQ || FQ.focus();
+        else if (fQ.current) {
+          const FQ = VQ.current;
+          null !== FQ && (QQ.scrollTop = FQ);
+          const wQ = QQ.querySelector(`[data-store-item="${fQ.current}"]`);
+          if (wQ) {
+            const LQ = wQ.getBoundingClientRect(),
+              qQ = QQ.getBoundingClientRect();
+            wQ.focus({
+              preventScroll: null !== FQ && LQ.bottom > qQ.top && LQ.top < qQ.bottom
             })
           }
-          Ed.current = null
+          fQ.current = null
         }
-      }), [Gd, Nd]), (0, pd.useEffect)((() => {
-        Sd(null)
-      }), [Kd.query]), (0, pd.useEffect)((() => {
-        if (!jd) return;
-        const dd = setTimeout((() => {
-          Xd(null)
+      }), [GQ, qQ]), (0, LQ.useEffect)((() => {
+        UQ(null)
+      }), [uQ.query]), (0, LQ.useEffect)((() => {
+        if (!NQ) return;
+        const QQ = setTimeout((() => {
+          TQ(null)
         }), 8e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(QQ)
         }
-      }), [jd]);
-      const zd = gd.superRankInfo,
-        Hd = gd.isLoggedIn() || (0, Td.guestsMayBuy)(),
-        wd = gd.getOwnedCosmeticPacks(),
-        dJ = (0, qW.l)(Kd.query),
-        JJ = (0, qW.g)({
-          mode: dJ,
-          loggedIn: Cd ? Hd : null,
-          superRankInfo: zd,
+      }), [NQ]);
+      const PQ = vQ.superRankInfo,
+        ZQ = vQ.isLoggedIn() || (0, XQ.guestsMayBuy)(),
+        yQ = vQ.getOwnedCosmeticPacks(),
+        dQ = (0, po.r)(uQ.query),
+        QF = (0, po.g)({
+          mode: dQ,
+          loggedIn: mQ ? ZQ : null,
+          superRankInfo: PQ,
           now: Date.now(),
-          ownedPacks: wd,
-          packs: QW.r,
-          recipient: Kd.recipient
+          ownedPacks: yQ,
+          packs: Ho.u,
+          recipient: uQ.recipient
         });
-      (0, pd.useEffect)((() => {
-        if (!Hd || !Nd) return;
-        const dd = (0, Dd.C)(),
-          Jd = dd && (0, qW.k)(dd, QW.r);
-        dd && Jd && ((0, Ad.reportAnalyticsClick)({
+      (0, LQ.useEffect)((() => {
+        if (!ZQ || !qQ) return;
+        const QQ = (0, aQ.F)(),
+          FQ = QQ && (0, po.o)(QQ, Ho.u);
+        QQ && FQ && ((0, BQ.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: dd.item
-        }), (0, Dd.q)(Jd))
-      }), [Hd, Nd]);
-      const kJ = (0, qW.o)({
-        superRankDaysLeft: JJ.superRankDaysLeft,
-        openedThisSession: yP || Nd,
-        seenNewItems: (0, Dd.j)()
+          value: QQ.item
+        }), (0, aQ.o)(FQ))
+      }), [ZQ, qQ]);
+      const FF = (0, po.t)({
+        superRankDaysLeft: QF.superRankDaysLeft,
+        openedThisSession: aD || qQ,
+        seenNewItems: (0, aQ.j)()
       });
-      if ((0, pd.useEffect)((() => {
-          (0, Dd.B)(kJ)
-        }), [kJ]), !Nd || !(0, Td.purchasesAllowed)()) return null;
-      const pJ = Qd > ld && ld <= 700,
-        NJ = !pJ && Qd <= 420,
-        WJ = "gift" === dJ ? DP(Kd.recipient) : null,
-        PJ = null !== Fd;
+      if ((0, LQ.useEffect)((() => {
+          (0, aQ.C)(FF)
+        }), [FF]), !qQ || !(0, XQ.purchasesAllowed)()) return null;
+      const wF = YQ > bQ && bQ <= 700,
+        LF = !wF && YQ <= 420,
+        qF = "gift" === dQ ? XD(uQ.recipient) : null,
+        oF = null !== OQ;
 
-      function ZJ(dd) {
-        (0, eW.d)(dd, "gift" === dJ ? Kd.query.trim() : null)
+      function DF(QQ) {
+        (0, xo.e)(QQ, "gift" === dQ ? uQ.query.trim() : null)
       }
 
-      function CJ(dd, Jd) {
-        (0, Ad.reportAnalyticsClick)({
+      function vF(QQ, FQ) {
+        (0, BQ.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${Jd?"gift":"self"}:${dd}`
-        }), Jd && (Kd.recordGift(Jd.name, dd), KJ(Jd))
+          value: `${FQ?"gift":"self"}:${QQ}`
+        }), FQ && (uQ.recordGift(FQ.name, QQ), mF(FQ))
       }
 
-      function KJ(dd) {
-        ! function(dd) {
+      function mF(QQ) {
+        ! function(QQ) {
           try {
-            uJ.i.setItem(BW, (0, qW.t)(iW(), dd))
+            EF.i.setItem(co, (0, po.z)(So(), QQ))
           } catch {}
         }({
-          name: dd.name,
-          cosmetics: dd.cosmetics
-        }), Id(UP), Xd((Jd => {
-          var kd;
+          name: QQ.name,
+          cosmetics: QQ.cosmetics
+        }), MQ(jD), TQ((FQ => {
+          var wQ;
           return {
-            name: dd.name,
-            seq: (null !== (kd = null === Jd || void 0 === Jd ? void 0 : Jd.seq) && void 0 !== kd ? kd : 0) + 1
+            name: QQ.name,
+            seq: (null !== (wQ = null === FQ || void 0 === FQ ? void 0 : FQ.seq) && void 0 !== wQ ? wQ : 0) + 1
           }
         }))
       }
-      async function oJ(dd) {
-        var Jd, kd;
-        if (hd.current) return;
-        if (!Hd) return void ZJ(dd);
-        Sd(null), Ud(null);
-        const pd = "gift" === dJ ? {
-          name: DP(Kd.recipient),
-          cosmetics: Kd.recipientCosmetics
+      async function uF(QQ) {
+        var FQ, wQ;
+        if (hQ.current) return;
+        if (!ZQ) return void DF(QQ);
+        UQ(null), lQ(null);
+        const LQ = "gift" === dQ ? {
+          name: XD(uQ.recipient),
+          cosmetics: uQ.recipientCosmetics
         } : null;
-        if (pd && !pd.name) return void Vd();
-        const Nd = "superRank" === dd ? fd.k.id : (0, fd.e)(dd);
-        hd.current = !0;
-        const Wd = await (0, xW.c)(Nd, null !== (Jd = null === pd || void 0 === pd ? void 0 : pd.name) && void 0 !== Jd ? Jd : null);
-        if (hd.current = !1, !Wd) return;
-        md(dd);
-        const Pd = await RW.d.purchase(Nd, null !== (kd = null === pd || void 0 === pd ? void 0 : pd.name) && void 0 !== kd ? kd : null);
-        md(null), Pd ? Sd(Pd) : (CJ(dd, pd), pd || (await (0, IW.flushClientAnalyticsEvents)(), (0, OW.refreshWithoutConfirmation)("superRank" === dd ? "/super-rank-welcome" : `/pack-welcome/${dd}`)))
+        if (LQ && !LQ.name) return void gQ();
+        const qQ = "superRank" === QQ ? KQ.l.id : (0, KQ.d)(QQ);
+        hQ.current = !0;
+        const oQ = await (0, Go.b)(qQ, null !== (FQ = null === LQ || void 0 === LQ ? void 0 : LQ.name) && void 0 !== FQ ? FQ : null);
+        if (hQ.current = !1, !oQ) return;
+        rQ(QQ);
+        const DQ = await Ao.c.purchase(qQ, null !== (wQ = null === LQ || void 0 === LQ ? void 0 : LQ.name) && void 0 !== wQ ? wQ : null);
+        rQ(null), DQ ? UQ(DQ) : (vF(QQ, LQ), LQ || (await (0, to.flushClientAnalyticsEvents)(), (0, Yo.refreshWithoutConfirmation)("superRank" === QQ ? "/super-rank-welcome" : `/pack-welcome/${QQ}`)))
       }
-      const lJ = Wd()("Store", {
-        StoreGift: "gift" === dJ,
-        StorePortrait: pJ,
-        StoreCompact: NJ
+      const HF = oQ()("Store", {
+        StoreGift: "gift" === dQ,
+        StorePortrait: wF,
+        StoreCompact: LF
       });
-      if ("pack" === Od.kind) {
-        const dd = Od.pack,
-          Jd = JJ.packs.find((Jd => Jd.pack === dd));
-        return (0, od.jsx)("div", {
-          ref: yd,
+      if ("pack" === AQ.kind) {
+        const QQ = AQ.pack,
+          FQ = QF.packs.find((FQ => FQ.pack === QQ));
+        return (0, HQ.jsx)("div", {
+          ref: jQ,
           className: "CosmeticShopContainer",
-          children: (0, od.jsx)(vW.h, {
-            pack: dd,
+          children: (0, HQ.jsx)(Mo.e, {
+            pack: QQ,
             onBack: () => {
-              Id(UP)
+              MQ(jD)
             },
-            onPurchased: Jd => {
-              CJ(dd, Jd ? {
-                name: Jd,
+            onPurchased: FQ => {
+              vF(QQ, FQ ? {
+                name: FQ,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === dJ && WJ && Jd && (0, od.jsxs)(od.Fragment, {
-              children: [(0, od.jsx)(WP, {
-                state: Jd.state,
-                item: dd,
-                price: (QJ = dd, "superRank" === QJ ? fd.k.price : (0, fd.h)(QJ)),
-                busy: PJ,
+            giftCta: "gift" === dQ && qF && FQ && (0, HQ.jsxs)(HQ.Fragment, {
+              children: [(0, HQ.jsx)(oD, {
+                state: FQ.state,
+                item: QQ,
+                price: (bF = QQ, "superRank" === bF ? KQ.l.price : (0, KQ.g)(bF)),
+                busy: oF,
                 onAct: () => {
-                  oJ(dd)
+                  uF(QQ)
                 },
                 onNeedRecipient: () => {
-                  Id(UP), Vd()
+                  MQ(jD), gQ()
                 },
                 onLogin: () => {
-                  ZJ(dd)
+                  DF(QQ)
                 },
-                highlight: nd === dd
-              }), bd && (0, od.jsx)("span", {
+                highlight: zQ === QQ
+              }), IQ && (0, HQ.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: Zd(bd)
+                children: kQ(IQ)
               })]
             }),
-            ownedPacks: wd,
-            startAsGift: "gift" === dJ,
-            initialGiftRecipient: "gift" === dJ ? null !== WJ && void 0 !== WJ ? WJ : Kd.query.trim() : "",
-            highlightCta: nd === dd
-          }, dd)
+            ownedPacks: yQ,
+            startAsGift: "gift" === dQ,
+            initialGiftRecipient: "gift" === dQ ? null !== qF && void 0 !== qF ? qF : uQ.query.trim() : "",
+            highlightCta: zQ === QQ
+          }, QQ)
         })
       }
-      var QJ;
-      return "superRank" === Od.kind ? (0, od.jsx)("div", {
-        ref: yd,
-        className: Wd()(lJ, "StoreDetailView"),
-        children: (0, od.jsx)(FP, {
-          state: JJ.superRank.state,
-          mode: dJ,
-          giftName: WJ,
-          busy: PJ,
-          highlight: "superRank" === nd,
-          purchaseError: bd,
+      var bF;
+      return "superRank" === AQ.kind ? (0, HQ.jsx)("div", {
+        ref: jQ,
+        className: oQ()(HF, "StoreDetailView"),
+        children: (0, HQ.jsx)(sD, {
+          state: QF.superRank.state,
+          mode: dQ,
+          giftName: qF,
+          busy: oF,
+          highlight: "superRank" === zQ,
+          purchaseError: IQ,
           onBack: () => {
-            Id(UP)
+            MQ(jD)
           },
           onChooseRecipient: () => {
-            Id(UP), Vd()
+            MQ(jD), gQ()
           },
           onAct: () => {
-            oJ("superRank")
+            uF("superRank")
           },
           onLogin: () => {
-            ZJ("superRank")
+            DF("superRank")
           }
         })
-      }) : (0, od.jsxs)("div", {
-        ref: yd,
-        className: lJ,
-        onScroll: dd => {
-          cd.current = dd.currentTarget.scrollTop
+      }) : (0, HQ.jsxs)("div", {
+        ref: jQ,
+        className: HF,
+        onScroll: QQ => {
+          VQ.current = QQ.currentTarget.scrollTop
         },
-        children: [(0, od.jsx)("div", {
+        children: [(0, HQ.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, od.jsx)(DW, {
-            selfName: Cd ? gd.getPlayerName() : "",
-            giftRecipient: Kd,
-            suggestionsVersion: null !== (Jd = null === jd || void 0 === jd ? void 0 : jd.seq) && void 0 !== Jd ? Jd : 0,
-            pulseSignal: ad,
-            disabled: PJ || !Cd
+          children: (0, HQ.jsx)(ao, {
+            selfName: mQ ? vQ.getPlayerName() : "",
+            giftRecipient: uQ,
+            suggestionsVersion: null !== (FQ = null === NQ || void 0 === NQ ? void 0 : NQ.seq) && void 0 !== FQ ? FQ : 0,
+            pulseSignal: WQ,
+            disabled: oF || !mQ
           })
-        }), jd && (0, od.jsxs)("div", {
+        }), NQ && (0, HQ.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            Xd(null)
+            TQ(null)
           },
-          children: [(0, od.jsx)(GW.e, {
-            showSignal: jd.seq
-          }), qW.e, " ", Zd("store:giftSent", {
-            name: jd.name
+          children: [(0, HQ.jsx)(eo.d, {
+            showSignal: NQ.seq
+          }), po.d, " ", kQ("store:giftSent", {
+            name: NQ.name
           })]
-        }, jd.seq), !jd && bd && (0, od.jsx)("div", {
+        }, NQ.seq), !NQ && IQ && (0, HQ.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: Zd(bd)
-        }), (0, od.jsx)(MP, {
-          layout: JJ,
-          mountAtOnce: null !== Ed.current,
-          bundleGift: "gift" === dJ ? {
-            recipientName: WJ,
-            lookingUp: "pending" === Kd.recipient.status,
-            busy: PJ,
-            onNeedRecipient: Vd,
-            onSent: dd => {
-              (0, Ad.reportAnalyticsClick)({
+          children: kQ(IQ)
+        }), (0, HQ.jsx)(OD, {
+          layout: QF,
+          mountAtOnce: null !== fQ.current,
+          bundleGift: "gift" === dQ ? {
+            recipientName: qF,
+            lookingUp: "pending" === uQ.recipient.status,
+            busy: oF,
+            onNeedRecipient: gQ,
+            onSent: QQ => {
+              (0, BQ.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), KJ({
-                name: dd,
-                cosmetics: Kd.recipientCosmetics
+              }), mF({
+                name: QQ,
+                cosmetics: uQ.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, qW.p)(zd),
-          busy: PJ,
-          highlightItem: nd,
-          onOpen: function(dd) {
-            (0, Ad.reportAnalyticsClick)({
+          superRankTotalDays: (0, po.v)(PQ),
+          busy: oF,
+          highlightItem: zQ,
+          onOpen: function(QQ) {
+            (0, BQ.reportAnalyticsClick)({
               id: "store.item_open",
-              value: dd
-            }), Id((0, Dd.h)(dd))
+              value: QQ
+            }), MQ((0, aQ.f)(QQ))
           },
-          onAct: oJ,
-          onNeedRecipient: Vd,
-          onLogin: ZJ
-        }), "gift" !== dJ && (0, od.jsx)(fP, {})]
+          onAct: uF,
+          onNeedRecipient: gQ,
+          onLogin: DF
+        }), "gift" !== dQ && (0, HQ.jsx)(zD, {})]
       })
     }));
-    var EP = kd(2558),
-      cP = kd(8754),
-      hP = kd(8563),
-      rP = kd(2610),
-      uP = kd(2468),
-      tP = kd(2516),
-      VP = kd(2525),
-      zP = kd(2530),
-      HP = kd(2604),
-      wP = kd(2589),
-      AP = kd(2306),
-      dZ = kd(2324),
-      JZ = kd(2319),
-      kZ = kd(2013),
-      pZ = kd(2538),
-      NZ = kd(2328);
+    var VD = wQ(2585),
+      hD = wQ(8604),
+      JD = wQ(8408),
+      ED = wQ(2649),
+      nD = wQ(2475),
+      gD = wQ(2531),
+      PD = wQ(2545),
+      ZD = wQ(2552),
+      yD = wQ(2633),
+      BD = wQ(2621),
+      dD = wQ(2267),
+      Qk = wQ(2304),
+      Fk = wQ(2290),
+      wk = wQ(1998),
+      Lk = wQ(2561),
+      qk = wQ(2311);
 
-    function WZ(dd) {
+    function Dk(QQ) {
       let {
-        show: Jd
-      } = dd;
-      return Jd ? (0, od.jsx)(PZ, {}) : null
+        show: FQ
+      } = QQ;
+      return FQ ? (0, HQ.jsx)(kk, {}) : null
     }
 
-    function PZ() {
+    function kk() {
       const {
-        t: dd
-      } = (0, Pd.B)(), {
-        followsLeader: Jd
-      } = (0, uP.d)(), {
-        loading: kd,
-        friends: Nd,
-        requests: gd,
-        invites: Kd
-      } = (0, cd.j)(), {
-        userContext: ld
-      } = (0, Ld.c)(), [Qd, Od] = (0, pd.useState)(NZ.k);
-      (0, pd.useEffect)((() => {
-        (0, NZ.d)()
+        t: QQ
+      } = (0, DQ.y)(), {
+        followsLeader: FQ
+      } = (0, nD.d)(), {
+        loading: wQ,
+        friends: qQ,
+        requests: vQ,
+        invites: uQ
+      } = (0, VQ.m)(), {
+        userContext: bQ
+      } = (0, xQ.e)(), [YQ, AQ] = (0, LQ.useState)(qk.k);
+      (0, LQ.useEffect)((() => {
+        (0, qk.b)()
       }), []);
-      const ed = gd.map((dd => dd.name)),
+      const tQ = vQ.map((QQ => QQ.name)),
         {
-          state: Rd,
-          recentRequesters: Id
-        } = (0, wP.o)(),
-        Gd = new Map([...("loaded" === Rd.status ? Rd.recentPlayers : []).map((dd => [dd.preview.name, dd])), ...Id.map((dd => [dd.name, dd]))]),
-        vd = (0, pd.useRef)(null),
-        [Bd, sd] = (0, pd.useState)(""),
-        [ad, Md] = (0, pd.useState)("Enter"),
-        [Fd, Yd] = (0, pd.useState)(null);
+          state: eQ,
+          recentRequesters: MQ
+        } = (0, BD.r)(),
+        GQ = new Map([...("loaded" === eQ.status ? eQ.recentPlayers : []).map((QQ => [QQ.preview.name, QQ])), ...MQ.map((QQ => [QQ.name, QQ]))]),
+        pQ = (0, LQ.useRef)(null),
+        [SQ, iQ] = (0, LQ.useState)(""),
+        [WQ, RQ] = (0, LQ.useState)("Enter"),
+        [OQ, sQ] = (0, LQ.useState)(null);
 
-      function md() {
-        Bd && (Md("Loading"), (0, JZ.i)(Bd, "social_menu").then((dd => {
-          if (vd.current) switch (dd.kind) {
+      function rQ() {
+        SQ && (RQ("Loading"), (0, Fk.j)(SQ, "social_menu").then((QQ => {
+          if (pQ.current) switch (QQ.kind) {
             case "sent":
-              Md("Success");
+              RQ("Success");
               break;
             case "becameFriends":
-              Md("BecameFriends");
+              RQ("BecameFriends");
               break;
             case "failed":
-              Yd(dd.message), Md("Error")
+              sQ(QQ.message), RQ("Error")
           }
         })))
       }
-      return (0, pd.useEffect)((() => {
-        if ("Enter" === ad || "Loading" === ad) return;
-        const dd = setTimeout((() => {
-          vd.current.value = "", sd(""), Md("Enter")
-        }), "Success" === ad ? 1e3 : 4e3);
+      return (0, LQ.useEffect)((() => {
+        if ("Enter" === WQ || "Loading" === WQ) return;
+        const QQ = setTimeout((() => {
+          pQ.current.value = "", iQ(""), RQ("Enter")
+        }), "Success" === WQ ? 1e3 : 4e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(QQ)
         }
-      }), [ad]), (0, od.jsx)("div", {
+      }), [WQ]), (0, HQ.jsx)("div", {
         className: "SocialMenu",
-        children: (0, od.jsxs)("div", {
+        children: (0, HQ.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, HQ.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, od.jsxs)("div", {
+            children: [(0, HQ.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, od.jsx)(zP.c, {
-                label: dd("socialBar:addFriend")
-              }), (0, od.jsxs)("div", {
+              children: [(0, HQ.jsx)(ZD.b, {
+                label: QQ("socialBar:addFriend")
+              }), (0, HQ.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, od.jsxs)("div", {
-                  className: Wd()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${ad}`]: !0
+                children: [(0, HQ.jsxs)("div", {
+                  className: oQ()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${WQ}`]: !0
                   }),
-                  children: ["Loading" === ad && (0, od.jsx)(qd.b, {}), "Success" === ad && (0, od.jsx)(Zd.e, {
+                  children: ["Loading" === WQ && (0, HQ.jsx)(CQ.c, {}), "Success" === WQ && (0, HQ.jsx)(kQ.c, {
                     name: "check"
-                  }), "BecameFriends" === ad && (0, od.jsx)(od.Fragment, {
-                    children: dd("socialBar:nowFriends", {
-                      playerName: Bd
+                  }), "BecameFriends" === WQ && (0, HQ.jsx)(HQ.Fragment, {
+                    children: QQ("socialBar:nowFriends", {
+                      playerName: SQ
                     })
-                  }), "Error" === ad && Fd && (0, od.jsx)(od.Fragment, {
-                    children: dd(Fd.translationKey, Fd.params)
+                  }), "Error" === WQ && OQ && (0, HQ.jsx)(HQ.Fragment, {
+                    children: QQ(OQ.translationKey, OQ.params)
                   })]
-                }), (0, od.jsxs)("div", {
+                }), (0, HQ.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, od.jsx)(xd.e, {
+                  children: [(0, HQ.jsx)(cQ.b, {
                     className: "PlayerSearchInput",
-                    placeholderText: dd("socialBar:enterPlayerName"),
-                    domRef: vd,
-                    onValueChange: dd => {
-                      sd((0, jd.t)(dd)), vd.current.value = (0, jd.t)(dd)
+                    placeholderText: QQ("socialBar:enterPlayerName"),
+                    domRef: pQ,
+                    onValueChange: QQ => {
+                      iQ((0, NQ.s)(QQ)), pQ.current.value = (0, NQ.s)(QQ)
                     },
                     onEnter: () => {
-                      Bd && (0, Ad.reportAnalyticsClick)({
+                      SQ && (0, BQ.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), md()
+                      }), rQ()
                     }
-                  }), (0, od.jsxs)(Cd.d, {
+                  }), (0, HQ.jsxs)(mQ.f, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      md()
+                      rQ()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, od.jsx)(Zd.e, {
+                    children: [(0, HQ.jsx)(kQ.c, {
                       name: "user-plus"
-                    }), " ", dd("socialBar:sendRequest")]
+                    }), " ", QQ("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, od.jsx)(pZ.c, {
+              }), (0, HQ.jsx)(Lk.c, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), Kd.length > 0 && (0, od.jsxs)("div", {
+            }), uQ.length > 0 && (0, HQ.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, od.jsx)(zP.c, {
-                label: dd("socialBar:invites"),
-                meta: Kd.length
-              }), Kd.map((Jd => (0, od.jsxs)("div", {
+              children: [(0, HQ.jsx)(ZD.b, {
+                label: QQ("socialBar:invites"),
+                meta: uQ.length
+              }), uQ.map((FQ => (0, HQ.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, od.jsx)("div", {
+                children: [(0, HQ.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, od.jsx)(AP.b, {
-                    invite: Jd
+                  children: (0, HQ.jsx)(dD.b, {
+                    invite: FQ
                   })
-                }), (0, od.jsx)("div", {
+                }), (0, HQ.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, od.jsx)(AP.c, {
-                    invite: Jd
+                  children: (0, HQ.jsx)(dD.c, {
+                    invite: FQ
                   })
-                }), (0, od.jsx)(Cd.j, {
+                }), (0, HQ.jsx)(mQ.m, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, dZ.f)(Jd)
+                    (0, Qk.e)(FQ)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${Jd.destination.kind}`
+                    value: `social_menu:${FQ.destination.kind}`
                   },
-                  children: dd("general:join")
-                }), (0, od.jsx)(zd.f, {
-                  tooltipInner: (0, od.jsx)(od.Fragment, {
-                    children: dd("general:decline")
+                  children: QQ("general:join")
+                }), (0, HQ.jsx)(PQ.f, {
+                  tooltipInner: (0, HQ.jsx)(HQ.Fragment, {
+                    children: QQ("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, od.jsx)(Cd.f, {
+                  children: (0, HQ.jsx)(mQ.i, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === Qd || void 0 === Qd ? void 0 : Qd.kind) && Qd.inviteId === Jd.id,
+                    padDefaultFocus: "invite" === (null === YQ || void 0 === YQ ? void 0 : YQ.kind) && YQ.inviteId === FQ.id,
                     onClick: () => {
-                      cd.c.declineInvite(Jd.id)
+                      VQ.e.declineInvite(FQ.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${Jd.destination.kind}`
+                      value: `social_menu:${FQ.destination.kind}`
                     },
-                    children: (0, od.jsx)(Zd.e, {
+                    children: (0, HQ.jsx)(kQ.c, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, Jd.id)))]
-            }), (0, od.jsxs)("div", {
-              className: Wd()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !kd && 0 === gd.length
+              }, FQ.id)))]
+            }), (0, HQ.jsxs)("div", {
+              className: oQ()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !wQ && 0 === vQ.length
               }),
-              children: [(0, od.jsx)(zP.c, {
-                label: (0, od.jsxs)(od.Fragment, {
-                  children: [(0, od.jsx)(Zd.e, {
-                    name: kZ.f
-                  }), " ", dd("socialBar:requests")]
+              children: [(0, HQ.jsx)(ZD.b, {
+                label: (0, HQ.jsxs)(HQ.Fragment, {
+                  children: [(0, HQ.jsx)(kQ.c, {
+                    name: wk.i
+                  }), " ", QQ("socialBar:requests")]
                 }),
-                meta: (0, od.jsxs)(od.Fragment, {
-                  children: [gd.length, gd.length === Hd.l && (0, od.jsx)("span", {
+                meta: (0, HQ.jsxs)(HQ.Fragment, {
+                  children: [vQ.length, vQ.length === ZQ.p && (0, HQ.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: dd("socialBar:limitReached")
+                    children: QQ("socialBar:limitReached")
                   })]
                 })
-              }), kd && (0, od.jsx)("div", {
+              }), wQ && (0, HQ.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, od.jsx)(qd.b, {})
-              }), !kd && 0 === gd.length && (0, od.jsx)("div", {
+                children: (0, HQ.jsx)(CQ.c, {})
+              }), !wQ && 0 === vQ.length && (0, HQ.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: dd("socialBar:noFriendRequests")
-              }), !kd && gd.length > 0 && (0, od.jsx)("div", {
+                children: QQ("socialBar:noFriendRequests")
+              }), !wQ && vQ.length > 0 && (0, HQ.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, od.jsx)(RN.b, {
+                children: (0, HQ.jsx)(Aq.e, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [gd],
-                  children: gd.map(((Jd, kd) => {
-                    const pd = Gd.get(Jd.name);
-                    return (0, od.jsxs)(VP.d, {
-                      playerSocialPreview: Jd,
-                      zIndex: gd.length - kd,
-                      padDefaultFocus: (0, NZ.h)(Qd, Jd.name, kd),
-                      status: pd && (0, od.jsx)(HP.d, {
-                        gameNameWithVariation: pd.gameNameWithVariation,
-                        isPrivateLobby: pd.isPrivateLobby
+                  observerUpdateDeps: [vQ],
+                  children: vQ.map(((FQ, wQ) => {
+                    const LQ = GQ.get(FQ.name);
+                    return (0, HQ.jsxs)(PD.f, {
+                      playerSocialPreview: FQ,
+                      zIndex: vQ.length - wQ,
+                      padDefaultFocus: (0, qk.j)(YQ, FQ.name, wQ),
+                      status: LQ && (0, HQ.jsx)(yD.e, {
+                        gameNameWithVariation: LQ.gameNameWithVariation,
+                        isPrivateLobby: LQ.isPrivateLobby
                       }),
-                      children: [(0, od.jsx)(zd.f, {
-                        tooltipInner: (0, od.jsx)(od.Fragment, {
-                          children: dd("general:accept")
+                      children: [(0, HQ.jsx)(PQ.f, {
+                        tooltipInner: (0, HQ.jsx)(HQ.Fragment, {
+                          children: QQ("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, od.jsx)(Cd.d, {
+                        children: (0, HQ.jsx)(mQ.f, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Od((0, NZ.e)(ed, kd)), (0, JZ.f)(Jd.name, !0, {
+                            AQ((0, qk.f)(tQ, wQ)), (0, Fk.i)(FQ.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7356,19 +7356,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, od.jsx)(Zd.e, {
+                          children: (0, HQ.jsx)(kQ.c, {
                             name: "check"
                           })
                         })
-                      }), (0, od.jsx)(zd.f, {
-                        tooltipInner: (0, od.jsx)(od.Fragment, {
-                          children: dd("general:decline")
+                      }), (0, HQ.jsx)(PQ.f, {
+                        tooltipInner: (0, HQ.jsx)(HQ.Fragment, {
+                          children: QQ("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, od.jsx)(Cd.f, {
+                        children: (0, HQ.jsx)(mQ.i, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Od((0, NZ.e)(ed, kd)), (0, JZ.f)(Jd.name, !1, {
+                            AQ((0, qk.f)(tQ, wQ)), (0, Fk.i)(FQ.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7376,62 +7376,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, od.jsx)(Zd.e, {
+                          children: (0, HQ.jsx)(kQ.c, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${Jd.name}_${Jd.isError}`)
+                    }, `${FQ.name}_${FQ.isError}`)
                   }))
                 })
               })]
-            }), (0, od.jsx)(HP.h, {})]
-          }), (0, od.jsxs)("div", {
+            }), (0, HQ.jsx)(yD.k, {})]
+          }), (0, HQ.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, od.jsxs)("div", {
+            children: [(0, HQ.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, od.jsx)(zP.c, {
-                label: dd("socialBar:party")
-              }), (0, od.jsx)(tP.e, {})]
-            }), (0, od.jsxs)("div", {
+              children: [(0, HQ.jsx)(ZD.b, {
+                label: QQ("socialBar:party")
+              }), (0, HQ.jsx)(gD.e, {})]
+            }), (0, HQ.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, od.jsx)(zP.c, {
-                label: (0, od.jsxs)(od.Fragment, {
-                  children: [(0, od.jsx)(Zd.e, {
-                    name: kZ.c
-                  }), " ", dd("socialBar:friends")]
+              children: [(0, HQ.jsx)(ZD.b, {
+                label: (0, HQ.jsxs)(HQ.Fragment, {
+                  children: [(0, HQ.jsx)(kQ.c, {
+                    name: wk.e
+                  }), " ", QQ("socialBar:friends")]
                 }),
-                meta: (0, od.jsxs)(od.Fragment, {
-                  children: [Nd.length, Nd.length >= (0, Hd.c)(ld.getPlayerRanks()) && (0, od.jsx)("span", {
+                meta: (0, HQ.jsxs)(HQ.Fragment, {
+                  children: [qQ.length, qQ.length >= (0, ZQ.e)(bQ.getPlayerRanks()) && (0, HQ.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: dd("socialBar:limitReached")
+                    children: QQ("socialBar:limitReached")
                   })]
                 })
-              }), kd && (0, od.jsx)("div", {
+              }), wQ && (0, HQ.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, od.jsx)(qd.b, {})
-              }), !kd && 0 === Nd.length && (0, od.jsx)("div", {
+                children: (0, HQ.jsx)(CQ.c, {})
+              }), !wQ && 0 === qQ.length && (0, HQ.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: dd("socialBar:noFriends")
-              }), !kd && Nd.length > 0 && (0, od.jsx)("div", {
+                children: QQ("socialBar:noFriends")
+              }), !wQ && qQ.length > 0 && (0, HQ.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, od.jsx)(RN.b, {
+                children: (0, HQ.jsx)(Aq.e, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [Nd],
-                  children: Nd.map(((dd, kd) => (0, od.jsx)(VP.d, {
-                    playerSocialPreview: dd,
+                  observerUpdateDeps: [qQ],
+                  children: qQ.map(((QQ, wQ) => (0, HQ.jsx)(PD.f, {
+                    playerSocialPreview: QQ,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: dd => {
-                      cd.c.removeFriendFromState(dd)
+                    onFriendRemoved: QQ => {
+                      VQ.e.removeFriendFromState(QQ)
                     },
-                    zIndex: Nd.length - kd,
-                    children: (0, od.jsx)(VP.b, {
-                      friend: dd,
-                      followsLeader: Jd,
+                    zIndex: qQ.length - wQ,
+                    children: (0, HQ.jsx)(PD.c, {
+                      friend: QQ,
+                      followsLeader: FQ,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${dd.name}_${dd.isError}`)))
+                  }, `${QQ.name}_${QQ.isError}`)))
                 })
               })]
             })]
@@ -7439,225 +7439,225 @@ export const modules = {
         })
       })
     }
-    var ZZ = kd(2451);
-    const gZ = dd => {
+    var vk = wQ(2464);
+    const mk = QQ => {
         let {
-          action: Jd,
-          padAction: kd
-        } = dd;
+          action: FQ,
+          padAction: wQ
+        } = QQ;
         const {
-          isTouchScreen: pd
-        } = (0, sd.j)(["isTouchScreen"]), Nd = (0, Zp.m)();
-        return pd && !Nd ? null : (0, od.jsx)(dp.c, {
+          isTouchScreen: LQ
+        } = (0, iQ.l)(["isTouchScreen"]), qQ = (0, DL.n)();
+        return LQ && !qQ ? null : (0, HQ.jsx)(dw.e, {
           className: "EverythingMenuTabKey",
-          noaAction: Jd,
+          noaAction: FQ,
           padHidesKey: !0,
-          padMenuShortcut: kd
+          padMenuShortcut: wQ
         })
       },
-      CZ = (0, pd.memo)((function() {
+      uk = (0, LQ.memo)((function() {
         const {
-          t: dd
-        } = (0, Pd.B)(), {
-          gameState: Jd,
-          openEverythingMenuName: kd,
-          initSdkSelectorFinished: Nd,
-          crosshairGameView: Zd
-        } = (0, sd.j)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: gd
-        } = (0, Ld.c)(), Kd = (0, Td.purchasesAllowed)(), ld = (0, Dd.J)(), Qd = (dd, Jd) => (0, od.jsx)(gZ, {
-          action: dd,
-          padAction: Jd
-        }), [Od, ed] = (0, pd.useState)(null), Id = (0, pd.useRef)(null), Gd = {
-          ..."inGame" === Jd ? {} : (0, Cd.P)({
+          t: QQ
+        } = (0, DQ.y)(), {
+          gameState: FQ,
+          openEverythingMenuName: wQ,
+          initSdkSelectorFinished: qQ,
+          crosshairGameView: kQ
+        } = (0, iQ.l)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: vQ
+        } = (0, xQ.e)(), uQ = (0, XQ.purchasesAllowed)(), bQ = (0, aQ.I)(), YQ = (QQ, FQ) => (0, HQ.jsx)(mk, {
+          action: QQ,
+          padAction: FQ
+        }), [AQ, tQ] = (0, LQ.useState)(null), MQ = (0, LQ.useRef)(null), GQ = {
+          ..."inGame" === FQ ? {} : (0, mQ.S)({
             focusOnClick: !1
           }),
-          ...Rp.f
-        }, vd = dd => {
-          const Jd = (0, Ip.c)((Jd => {
-            (0, Cd.M)(Jd.currentTarget), sd.d.set({
-              openEverythingMenuName: dd
+          ...tL.h
+        }, pQ = QQ => {
+          const FQ = (0, eL.i)((FQ => {
+            (0, mQ.O)(FQ.currentTarget), iQ.c.set({
+              openEverythingMenuName: QQ
             })
           }), "pointerup");
           return {
-            ...Gd,
-            onPointerDown: dd => {
-              Gd.onPointerDown(dd), Jd.onPointerDown(dd)
+            ...GQ,
+            onPointerDown: QQ => {
+              GQ.onPointerDown(QQ), FQ.onPointerDown(QQ)
             },
-            onPointerUp: dd => {
-              Gd.onPointerUp(dd), Jd.onPointerUp(dd)
+            onPointerUp: QQ => {
+              GQ.onPointerUp(QQ), FQ.onPointerUp(QQ)
             },
-            onClick: Jd.onClick
+            onClick: FQ.onClick
           }
-        }, xd = null !== kd, qd = kd !== KJ.s.COSMETIC_SHOP && !Zd;
-        async function Bd() {
+        }, cQ = null !== wQ, CQ = wQ !== mF.n.COSMETIC_SHOP && !kQ;
+        async function SQ() {
           await async function() {
-            if (!Od) return;
-            await Od(), ed(null)
-          }(), sd.d.set({
+            if (!AQ) return;
+            await AQ(), tQ(null)
+          }(), iQ.c.set({
             openEverythingMenuName: null
           })
         }
-        const ad = (0, pd.useRef)(null),
-          Md = (0, pd.useCallback)((() => null !== ad.current && (0, hP.g)(ad.current)), []);
+        const WQ = (0, LQ.useRef)(null),
+          RQ = (0, LQ.useCallback)((() => null !== WQ.current && (0, JD.f)(WQ.current)), []);
 
-        function Yd() {
-          Md() || Bd()
-        }(0, pd.useEffect)((() => (0, ZW.r)(Md)), [Md]);
-        const md = (0, pd.useMemo)((() => "inGame" === Jd ? {
-          text: dd("settingsMenu:exitGame"),
+        function sQ() {
+          RQ() || SQ()
+        }(0, LQ.useEffect)((() => (0, oo.q)(RQ)), [RQ]);
+        const rQ = (0, LQ.useMemo)((() => "inGame" === FQ ? {
+          text: QQ("settingsMenu:exitGame"),
           onClick: () => {
-            (0, cP.d)()
+            (0, hD.b)()
           }
-        } : (0, Fd.e)() ? {
-          text: dd("settingsMenu:exitGame"),
+        } : (0, OQ.d)() ? {
+          text: QQ("settingsMenu:exitGame"),
           onClick: () => {
-            PJ.i.discordActivity().then((dd => {
-              dd.exit("User exited the game")
+            oF.k.discordActivity().then((QQ => {
+              QQ.exit("User exited the game")
             }))
           }
-        } : null), [Jd, dd]);
-        const bd = (0, od.jsx)("div", {
+        } : null), [FQ, QQ]);
+        const IQ = (0, HQ.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: Yd,
-          children: (0, od.jsx)(Cd.i, {
+          onClick: sQ,
+          children: (0, HQ.jsx)(mQ.j, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, od.jsx)(Gp.b, {
-          showing: xd,
+        return (0, HQ.jsx)(ML.c, {
+          showing: cQ,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: kd === KJ.s.SHOP,
-          doGameplayStartStopOnShow: "inGame" === Jd,
-          children: (0, od.jsx)(xp.b, {
+          keepsMovement: wQ === mF.n.SHOP,
+          doGameplayStartStopOnShow: "inGame" === FQ,
+          children: (0, HQ.jsx)(pL.b, {
             className: "EverythingMenuContainer",
-            show: xd && !Zd,
-            children: (0, od.jsx)(vp.e, {
-              close: Yd,
+            show: cQ && !kQ,
+            children: (0, HQ.jsx)(GL.d, {
+              close: sQ,
               togglePointerLock: !1,
-              children: (0, od.jsxs)("div", {
+              children: (0, HQ.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, ZW.k)(kd) && (0, od.jsxs)("div", {
+                children: [!(0, oo.i)(wQ) && (0, HQ.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, od.jsxs)("div", {
+                  children: [(0, HQ.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [md && (0, od.jsx)(Cd.b, {
+                    children: [rQ && (0, HQ.jsx)(mQ.b, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        md.onClick()
+                        rQ.onClick()
                       },
-                      children: md.text
-                    }), xd && Kd && (0, od.jsx)("div", {
-                      ...Gd,
+                      children: rQ.text
+                    }), cQ && uQ && (0, HQ.jsx)("div", {
+                      ...GQ,
                       className: "EverythingMenuWallet",
-                      title: dd("homePage:getPremiumCurrency"),
+                      title: QQ("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, Dd.q)({
+                        (0, aQ.o)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, od.jsx)(EP.f, {})
+                      children: (0, HQ.jsx)(VD.c, {})
                     })]
-                  }), (0, od.jsxs)("div", {
+                  }), (0, HQ.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, od.jsxs)("div", {
-                      ...vd(KJ.s.SETTINGS),
+                    children: [(0, HQ.jsxs)("div", {
+                      ...pQ(mF.n.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": kd === KJ.s.SETTINGS ? "true" : void 0,
-                      className: Wd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: kd === KJ.s.SETTINGS
+                      "data-pad-selected": wQ === mF.n.SETTINGS ? "true" : void 0,
+                      className: oQ()("EverythingMenuTab", {
+                        EverythingMenuTabActive: wQ === mF.n.SETTINGS
                       }),
-                      children: [dd("general:settings"), Qd("OpenSettings", "pause")]
-                    }), (0, od.jsxs)("div", {
-                      ...vd(KJ.s.CUSTOMISATION),
+                      children: [QQ("general:settings"), YQ("OpenSettings", "pause")]
+                    }), (0, HQ.jsxs)("div", {
+                      ...pQ(mF.n.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": kd === KJ.s.CUSTOMISATION ? "true" : void 0,
-                      className: Wd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: kd === KJ.s.CUSTOMISATION
+                      "data-pad-selected": wQ === mF.n.CUSTOMISATION ? "true" : void 0,
+                      className: oQ()("EverythingMenuTab", {
+                        EverythingMenuTabActive: wQ === mF.n.CUSTOMISATION
                       }),
-                      children: [dd("general:player"), Qd("OpenCharacterCustomization")]
-                    }), Rd.featureFlags.useSocialFeatures && (0, od.jsxs)("div", {
-                      ...vd(KJ.s.SOCIAL),
+                      children: [QQ("general:player"), YQ("OpenCharacterCustomization")]
+                    }), eQ.featureFlags.useSocialFeatures && (0, HQ.jsxs)("div", {
+                      ...pQ(mF.n.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": kd === KJ.s.SOCIAL ? "true" : void 0,
-                      className: Wd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: kd === KJ.s.SOCIAL
+                      "data-pad-selected": wQ === mF.n.SOCIAL ? "true" : void 0,
+                      className: oQ()("EverythingMenuTab", {
+                        EverythingMenuTabActive: wQ === mF.n.SOCIAL
                       }),
-                      ...(0, Ad.b)({
+                      ...(0, BQ.e)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, kd === KJ.s.SOCIAL),
-                      children: [dd("socialBar:social"), (0, od.jsx)(ZZ.b, {})]
-                    }), Kd && (0, od.jsxs)("div", {
-                      ...vd(KJ.s.COSMETIC_SHOP),
+                      }, wQ === mF.n.SOCIAL),
+                      children: [QQ("socialBar:social"), (0, HQ.jsx)(vk.b, {})]
+                    }), uQ && (0, HQ.jsxs)("div", {
+                      ...pQ(mF.n.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": kd === KJ.s.COSMETIC_SHOP ? "true" : void 0,
-                      className: Wd()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: kd === KJ.s.COSMETIC_SHOP
+                      "data-pad-selected": wQ === mF.n.COSMETIC_SHOP ? "true" : void 0,
+                      className: oQ()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: wQ === mF.n.COSMETIC_SHOP
                       }),
-                      children: [(0, od.jsx)("span", {
+                      children: [(0, HQ.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: dd("store:title")
-                      }), "new" === ld && (0, od.jsx)(OP, {}), "dot" === ld && (0, od.jsx)("span", {
+                        children: QQ("store:title")
+                      }), "new" === bQ && (0, HQ.jsx)(AD, {}), "dot" === bQ && (0, HQ.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === Jd && (0, od.jsxs)("div", {
-                      ...vd(KJ.s.LOBBY_LEADERBOARD),
+                    }), "inGame" === FQ && (0, HQ.jsxs)("div", {
+                      ...pQ(mF.n.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": kd === KJ.s.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: Wd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: kd === KJ.s.LOBBY_LEADERBOARD
+                      "data-pad-selected": wQ === mF.n.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: oQ()("EverythingMenuTab", {
+                        EverythingMenuTabActive: wQ === mF.n.LOBBY_LEADERBOARD
                       }),
-                      children: [dd("general:lobby"), Qd("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [QQ("general:lobby"), YQ("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, od.jsx)("div", {
+                  }), (0, HQ.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: bd
+                    children: IQ
                   })]
-                }), (0, ZW.k)(kd) && bd, (0, od.jsxs)("div", {
-                  ref: ad,
+                }), (0, oo.i)(wQ) && IQ, (0, HQ.jsxs)("div", {
+                  ref: WQ,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === Jd ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === FQ ? "0.85" : "1"
                   },
-                  children: [(0, od.jsx)(lp, {
-                    show: kd === KJ.s.SETTINGS,
-                    setBeforeResumeCallback: ed
-                  }), (0, od.jsx)(ep, {
-                    show: kd === KJ.s.CUSTOMISATION
-                  }), (0, od.jsx)(pd.Suspense, {
+                  children: [(0, HQ.jsx)(HL, {
+                    show: wQ === mF.n.SETTINGS,
+                    setBeforeResumeCallback: tQ
+                  }), (0, HQ.jsx)(AL, {
+                    show: wQ === mF.n.CUSTOMISATION
+                  }), (0, HQ.jsx)(LQ.Suspense, {
                     fallback: null,
-                    children: (0, od.jsx)(wN, {
-                      show: kd === KJ.s.SHOP
+                    children: (0, HQ.jsx)(Zq, {
+                      show: wQ === mF.n.SHOP
                     })
-                  }), (0, od.jsx)(oW, {
-                    show: kd === KJ.s.LOBBY_LEADERBOARD
-                  }), (0, od.jsx)(TP, {
-                    show: kd === KJ.s.COSMETIC_SHOP
-                  }), (0, od.jsx)(WZ, {
-                    show: kd === KJ.s.SOCIAL
+                  }), (0, HQ.jsx)(mo, {
+                    show: wQ === mF.n.LOBBY_LEADERBOARD
+                  }), (0, HQ.jsx)(fD, {
+                    show: wQ === mF.n.COSMETIC_SHOP
+                  }), (0, HQ.jsx)(Dk, {
+                    show: wQ === mF.n.SOCIAL
                   })]
-                }), !(0, Rd.isMobileApp)() && (0, qp.d)(gd.getPlayerRanks()) && (0, od.jsx)(xp.b, {
-                  ref: Id,
+                }), !(0, eQ.isMobileApp)() && (0, cL.e)(vQ.getPlayerRanks()) && (0, HQ.jsx)(pL.b, {
+                  ref: MQ,
                   className: "EverythingMenuBannerDiv",
-                  show: qd,
+                  show: CQ,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, od.jsx)(rP.b, {
+                  children: (0, HQ.jsx)(ED.c, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: Id
+                      parentRef: MQ
                     },
-                    showing: xd && qd,
+                    showing: cQ && CQ,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -7669,135 +7669,135 @@ export const modules = {
         })
       }))
   },
-  9242: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Wd
+  9103: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => oQ
     });
-    var pd = kd(313),
-      Nd = kd(9247);
+    var LQ = wQ(317),
+      qQ = wQ(9110);
 
-    function Wd(dd, Jd, kd) {
-      const Wd = Object.entries(Jd).sort(((dd, Jd) => Jd[1] - dd[1])),
-        Pd = (0, pd.yb)(dd);
-      Pd.push(dd ? "\n\n" : "\n");
-      for (const [Nd, Ld] of Wd) {
-        var Zd, gd, Cd;
-        const dd = null !== (Zd = null === kd || void 0 === kd || null === (gd = kd[Nd]) || void 0 === gd ? void 0 : gd.icon) && void 0 !== Zd ? Zd : `${Nd} Enchantment`;
-        Pd.push({
-          icon: dd,
+    function oQ(QQ, FQ, wQ) {
+      const oQ = Object.entries(FQ).sort(((QQ, FQ) => FQ[1] - QQ[1])),
+        DQ = (0, LQ.ub)(QQ);
+      DQ.push(QQ ? "\n\n" : "\n");
+      for (const [qQ, xQ] of oQ) {
+        var kQ, vQ, mQ;
+        const QQ = null !== (kQ = null === wQ || void 0 === wQ || null === (vQ = wQ[qQ]) || void 0 === vQ ? void 0 : vQ.icon) && void 0 !== kQ ? kQ : `${qQ} Enchantment`;
+        DQ.push({
+          icon: QQ,
           style: {
             fontSize: "1.5rem"
           }
-        }), Pd.push({
-          str: `${Nd} ${null!==(Cd=(0,pd.V)(Ld))&&void 0!==Cd?Cd:Ld}\n`
+        }), DQ.push({
+          str: `${qQ} ${null!==(mQ=(0,LQ.S)(xQ))&&void 0!==mQ?mQ:xQ}\n`
         })
       }
-      Pd.push({
+      DQ.push({
         str: "\n"
       });
-      for (const [pd, Ld] of Wd) {
-        var Kd, od, ld, Qd;
-        const dd = null !== (Kd = null === kd || void 0 === kd || null === (od = kd[pd]) || void 0 === od ? void 0 : od.icon) && void 0 !== Kd ? Kd : `${pd} Enchantment`,
-          Jd = null !== (ld = null === kd || void 0 === kd || null === (Qd = kd[pd]) || void 0 === Qd ? void 0 : Qd.description) && void 0 !== ld ? ld : (0, Nd.k)(pd);
-        Pd.push({
-          icon: dd,
+      for (const [LQ, xQ] of oQ) {
+        var uQ, HQ, bQ, YQ;
+        const QQ = null !== (uQ = null === wQ || void 0 === wQ || null === (HQ = wQ[LQ]) || void 0 === HQ ? void 0 : HQ.icon) && void 0 !== uQ ? uQ : `${LQ} Enchantment`,
+          FQ = null !== (bQ = null === wQ || void 0 === wQ || null === (YQ = wQ[LQ]) || void 0 === YQ ? void 0 : YQ.description) && void 0 !== bQ ? bQ : (0, qQ.g)(LQ);
+        DQ.push({
+          icon: QQ,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), Pd.push({
-          str: Jd,
+        }), DQ.push({
+          str: FQ,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), Pd.push({
+        }), DQ.push({
           str: "\n"
         })
       }
-      return Pd
+      return DQ
     }
   },
-  9250: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Cd,
-      c: () => Id,
-      e: () => ed,
-      f: () => gd,
-      g: () => Rd,
-      i: () => Kd,
-      l: () => ld,
-      o: () => Od,
-      s: () => od
+  9116: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => mQ,
+      f: () => MQ,
+      j: () => tQ,
+      m: () => vQ,
+      n: () => eQ,
+      o: () => uQ,
+      p: () => bQ,
+      q: () => AQ,
+      s: () => HQ
     });
-    var pd = kd(300),
-      Nd = kd(610),
-      Wd = kd(313),
-      Pd = kd(4085),
-      Zd = kd(9242);
+    var LQ = wQ(307),
+      qQ = wQ(619),
+      oQ = wQ(317),
+      DQ = wQ(4112),
+      kQ = wQ(9103);
 
-    function gd(dd, Jd) {
-      var kd;
+    function vQ(QQ, FQ) {
+      var wQ;
       let {
-        player: pd,
-        chestOrCreative: Nd
-      } = dd;
-      var Wd;
-      return Jd < pd.length ? null !== (Wd = pd[Jd]) && void 0 !== Wd ? Wd : null : null !== (kd = Nd[Jd - pd.length]) && void 0 !== kd ? kd : null
+        player: LQ,
+        chestOrCreative: qQ
+      } = QQ;
+      var oQ;
+      return FQ < LQ.length ? null !== (oQ = LQ[FQ]) && void 0 !== oQ ? oQ : null : null !== (wQ = qQ[FQ - LQ.length]) && void 0 !== wQ ? wQ : null
     }
 
-    function Cd(dd) {
-      var Jd;
-      return null !== (Jd = dd.amount) && void 0 !== Jd ? Jd : 0
+    function mQ(QQ) {
+      var FQ;
+      return null !== (FQ = QQ.amount) && void 0 !== FQ ? FQ : 0
     }
 
-    function Kd(dd) {
-      return 0 === dd.button || void 0 === dd.button
+    function uQ(QQ) {
+      return 0 === QQ.button || void 0 === QQ.button
     }
 
-    function od(dd) {
-      return !!dd.shiftKey
+    function HQ(QQ) {
+      return !!QQ.shiftKey
     }
 
-    function ld(dd) {
-      return "touches" in dd || "touch" === dd.pointerType || "pen" === dd.pointerType
+    function bQ(QQ) {
+      return "touches" in QQ || "touch" === QQ.pointerType || "pen" === QQ.pointerType
     }
-    const Qd = new Set,
-      Ld = 50;
+    const YQ = new Set,
+      xQ = 50;
 
-    function Od(dd, Jd) {
-      var kd;
-      const pd = null === (kd = dd[Jd]) || void 0 === kd ? void 0 : kd.displayName;
-      return (0, Nd.I)(pd) ? "string" !== typeof Jd ? "" : (!Qd.has(Jd) && Qd.size < Ld && (Qd.add(Jd), console.warn(`No item called "${Jd}", so its hover shows the name as given`)), Jd) : pd
+    function AQ(QQ, FQ) {
+      var wQ;
+      const LQ = null === (wQ = QQ[FQ]) || void 0 === wQ ? void 0 : wQ.displayName;
+      return (0, qQ.F)(LQ) ? "string" !== typeof FQ ? "" : (!YQ.has(FQ) && YQ.size < xQ && (YQ.add(FQ), console.warn(`No item called "${FQ}", so its hover shows the name as given`)), FQ) : LQ
     }
 
-    function ed(dd, Jd, kd) {
-      var gd, Cd, Kd, od, ld, Qd, Ld, ed, Rd, Id, Gd, vd, xd, qd;
-      const Bd = dd.attributes,
-        sd = null !== (gd = null === (Cd = Jd[dd.name]) || void 0 === Cd ? void 0 : Cd.rootName) && void 0 !== gd ? gd : dd.name,
-        ad = null !== (Kd = null !== (od = Bd.customDisplayName) && void 0 !== od ? od : null === (ld = Jd[dd.name]) || void 0 === ld ? void 0 : ld.displayName) && void 0 !== Kd ? Kd : Od(Jd, sd);
-      let Md = ad;
-      const Fd = null === (Qd = Bd.customAttributes) || void 0 === Qd ? void 0 : Qd.enchantmentTier;
-      Fd && (Md = (0, Wd.yb)(ad, {
-        colour: Wd.tb[Fd]
+    function tQ(QQ, FQ, wQ) {
+      var vQ, mQ, uQ, HQ, bQ, YQ, xQ, tQ, eQ, MQ, GQ, pQ, cQ, CQ;
+      const SQ = QQ.attributes,
+        iQ = null !== (vQ = null === (mQ = FQ[QQ.name]) || void 0 === mQ ? void 0 : mQ.rootName) && void 0 !== vQ ? vQ : QQ.name,
+        WQ = null !== (uQ = null !== (HQ = SQ.customDisplayName) && void 0 !== HQ ? HQ : null === (bQ = FQ[QQ.name]) || void 0 === bQ ? void 0 : bQ.displayName) && void 0 !== uQ ? uQ : AQ(FQ, iQ);
+      let RQ = WQ;
+      const OQ = null === (YQ = SQ.customAttributes) || void 0 === YQ ? void 0 : YQ.enchantmentTier;
+      OQ && (RQ = (0, oQ.ub)(WQ, {
+        colour: oQ.pb[OQ]
       }));
-      const Yd = null !== (Ld = null !== (ed = null !== (Rd = function(dd, Jd) {
-        var kd;
-        if (void 0 === dd || null !== (kd = Jd.customAttributes) && void 0 !== kd && kd.author) return dd;
-        const Nd = (0, pd.Wb)(dd);
-        return Nd.every((dd => "string" === typeof dd)) ? dd : Nd.map((dd => "string" === typeof dd ? dd : {
-          icon: dd.icon,
+      const sQ = null !== (xQ = null !== (tQ = null !== (eQ = function(QQ, FQ) {
+        var wQ;
+        if (void 0 === QQ || null !== (wQ = FQ.customAttributes) && void 0 !== wQ && wQ.author) return QQ;
+        const qQ = (0, LQ.ec)(QQ);
+        return qQ.every((QQ => "string" === typeof QQ)) ? QQ : qQ.map((QQ => "string" === typeof QQ ? QQ : {
+          icon: QQ.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(Bd.customDescription, Bd)) && void 0 !== Rd ? Rd : null === (Id = Jd[dd.name]) || void 0 === Id ? void 0 : Id.description) && void 0 !== ed ? ed : null === (Gd = Jd[sd]) || void 0 === Gd ? void 0 : Gd.description) && void 0 !== Ld ? Ld : "";
-      let md = Yd;
-      if (null !== (vd = Bd.customAttributes) && void 0 !== vd && vd.enchantments) md = (0, Zd.d)(Yd, Bd.customAttributes.enchantments, Bd.customAttributes.enchantmentData);
-      else if (kd[sd]) md = (0, Wd.yb)(Yd), md.push({
+      }(SQ.customDescription, SQ)) && void 0 !== eQ ? eQ : null === (MQ = FQ[QQ.name]) || void 0 === MQ ? void 0 : MQ.description) && void 0 !== tQ ? tQ : null === (GQ = FQ[iQ]) || void 0 === GQ ? void 0 : GQ.description) && void 0 !== xQ ? xQ : "";
+      let rQ = sQ;
+      if (null !== (pQ = SQ.customAttributes) && void 0 !== pQ && pQ.enchantments) rQ = (0, kQ.b)(sQ, SQ.customAttributes.enchantments, SQ.customAttributes.enchantmentData);
+      else if (wQ[iQ]) rQ = (0, oQ.ub)(sQ), rQ.push({
         str: "\n"
-      }), md.push({
+      }), rQ.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -7805,373 +7805,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (xd = Bd.customAttributes) && void 0 !== xd && xd.mobSettings) {
-        var bd, Sd;
-        const dd = Bd.customAttributes.mobSettings;
-        var jd, Xd;
-        if (md = [], (0, Nd.I)(Bd.customAttributes.health) || (md.push({
+      else if (null !== (cQ = SQ.customAttributes) && void 0 !== cQ && cQ.mobSettings) {
+        var IQ, UQ;
+        const QQ = SQ.customAttributes.mobSettings;
+        var NQ, TQ;
+        if (rQ = [], (0, qQ.F)(SQ.customAttributes.health) || (rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), md.push({
+          }), rQ.push({
             str: " "
-          }), md.push({
-            str: Bd.customAttributes.health.toString()
-          }), (0, Nd.I)(dd.maxHealth) || (md.push({
+          }), rQ.push({
+            str: SQ.customAttributes.health.toString()
+          }), (0, qQ.F)(QQ.maxHealth) || (rQ.push({
             str: "/"
-          }), md.push({
-            str: dd.maxHealth.toString()
-          }))), !(0, Nd.I)(dd.attackDamage) && dd.attackDamage > 0 && (md.push({
+          }), rQ.push({
+            str: QQ.maxHealth.toString()
+          }))), !(0, qQ.F)(QQ.attackDamage) && QQ.attackDamage > 0 && (rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), md.push({
+          }), rQ.push({
             str: " "
-          }), md.push({
-            str: dd.attackDamage.toString()
-          })), !(0, Nd.I)(dd.secondaryAttackDamage) && dd.secondaryAttackDamage > 0 && (md.push({
+          }), rQ.push({
+            str: QQ.attackDamage.toString()
+          })), !(0, qQ.F)(QQ.secondaryAttackDamage) && QQ.secondaryAttackDamage > 0 && (rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), md.push({
+          }), rQ.push({
             str: " "
-          }), md.push({
-            str: dd.secondaryAttackDamage.toString()
-          })), (0, Nd.I)(dd.baseRunningSpeed) || (md.push({
+          }), rQ.push({
+            str: QQ.secondaryAttackDamage.toString()
+          })), (0, qQ.F)(QQ.baseRunningSpeed) || (rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), md.push({
+          }), rQ.push({
             str: " "
-          }), md.push({
-            str: dd.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === dd.metaInfo) md.push({
+          }), rQ.push({
+            str: QQ.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === QQ.metaInfo) rQ.push({
           str: "\n"
-        }), md.push({
+        }), rQ.push({
           str: {
             translationKey: "general:has"
           }
-        }), md.push({
+        }), rQ.push({
           str: " "
-        }), md.push({
-          icon: null !== (jd = null === (Xd = dd.tameInfo) || void 0 === Xd ? void 0 : Xd.saddleItemName) && void 0 !== jd ? jd : "Saddle",
+        }), rQ.push({
+          icon: null !== (NQ = null === (TQ = QQ.tameInfo) || void 0 === TQ ? void 0 : TQ.saddleItemName) && void 0 !== NQ ? NQ : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (md.push({
+        if (rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             str: "\n"
-          }), dd.petInfo && null !== (bd = dd.tameInfo) && void 0 !== bd && bd.supportsFriendship) {
-          const Jd = Pd.b.getIconsFromFriendshipPoints(dd.petInfo.friendshipPoints);
-          for (const dd of Jd) md.push({
-            icon: dd,
+          }), QQ.petInfo && null !== (IQ = QQ.tameInfo) && void 0 !== IQ && IQ.supportsFriendship) {
+          const FQ = DQ.b.getIconsFromFriendshipPoints(QQ.petInfo.friendshipPoints);
+          for (const QQ of FQ) rQ.push({
+            icon: QQ,
             style: {
               fontSize: "1.5em"
             }
           });
-          md.push({
+          rQ.push({
             str: "\n"
           });
-          const kd = Pd.b.getMobHungerLevel(dd.petInfo.lastFedAt);
-          for (const dd of Pd.b.hungerLevelIcons[kd]) md.push({
-            icon: dd,
+          const wQ = DQ.b.getMobHungerLevel(QQ.petInfo.lastFedAt);
+          for (const QQ of DQ.b.hungerLevelIcons[wQ]) rQ.push({
+            icon: QQ,
             style: {
               fontSize: "1.5em"
             }
           });
-          md.push({
+          rQ.push({
             str: " "
-          }), md.push({
-            str: Pd.b.hungerLevelTranslations[kd],
+          }), rQ.push({
+            str: DQ.b.hungerLevelTranslations[wQ],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (dd.tameInfo && null !== (Sd = dd.tameInfo) && void 0 !== Sd && Sd.supportsFriendship) {
-          var fd, nd;
-          let Jd = null !== (fd = dd.tameInfo.likedFoods) && void 0 !== fd ? fd : [];
-          md.push({
+        if (QQ.tameInfo && null !== (UQ = QQ.tameInfo) && void 0 !== UQ && UQ.supportsFriendship) {
+          var KQ, zQ;
+          let FQ = null !== (KQ = QQ.tameInfo.likedFoods) && void 0 !== KQ ? KQ : [];
+          rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Pd.b.feedTextColours[Pd.b.MobFoodType.Superliked]
+              color: DQ.b.feedTextColours[DQ.b.MobFoodType.Superliked]
             }
-          }), md.push({
+          }), rQ.push({
             str: " "
-          }), null !== (nd = dd.petInfo) && void 0 !== nd && nd.superlikedFoodKnown ? (md.push({
-            icon: dd.petInfo.superlikedFood,
+          }), null !== (zQ = QQ.petInfo) && void 0 !== zQ && zQ.superlikedFoodKnown ? (rQ.push({
+            icon: QQ.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), Jd = Jd.filter((Jd => Jd !== dd.petInfo.superlikedFood))) : md.push({
+          }), FQ = FQ.filter((FQ => FQ !== QQ.petInfo.superlikedFood))) : rQ.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), md.push({
+          }), rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Pd.b.feedTextColours[Pd.b.MobFoodType.Liked]
+              color: DQ.b.feedTextColours[DQ.b.MobFoodType.Liked]
             }
-          }), md.push({
+          }), rQ.push({
             str: " "
           });
-          for (const dd of Jd) md.push({
-            icon: dd,
+          for (const QQ of FQ) rQ.push({
+            icon: QQ,
             style: {
               fontSize: "1.5em"
             }
           });
-          md.push({
+          rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Pd.b.feedTextColours[Pd.b.MobFoodType.Neutral]
+              color: DQ.b.feedTextColours[DQ.b.MobFoodType.Neutral]
             }
-          }), md.push({
+          }), rQ.push({
             str: " "
           });
-          for (const kd of null !== (Ud = dd.tameInfo.neutralFoods) && void 0 !== Ud ? Ud : []) {
-            var Ud;
-            md.push({
-              icon: kd,
+          for (const wQ of null !== (lQ = QQ.tameInfo.neutralFoods) && void 0 !== lQ ? lQ : []) {
+            var lQ;
+            rQ.push({
+              icon: wQ,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          md.push({
+          rQ.push({
             str: "\n"
-          }), md.push({
+          }), rQ.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Pd.b.feedTextColours[Pd.b.MobFoodType.Disliked]
+              color: DQ.b.feedTextColours[DQ.b.MobFoodType.Disliked]
             }
-          }), md.push({
+          }), rQ.push({
             str: " "
           });
-          for (const kd of null !== (yd = dd.tameInfo.dislikedFoods) && void 0 !== yd ? yd : []) {
-            var yd;
-            md.push({
-              icon: kd,
+          for (const wQ of null !== (jQ = QQ.tameInfo.dislikedFoods) && void 0 !== jQ ? jQ : []) {
+            var jQ;
+            rQ.push({
+              icon: wQ,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        md.length > 0 ? (md.shift(), md.unshift(...(0, Wd.yb)(Yd))) : md = (0, Wd.yb)(Yd)
+        rQ.length > 0 ? (rQ.shift(), rQ.unshift(...(0, oQ.ub)(sQ))) : rQ = (0, oQ.ub)(sQ)
       }
       return {
-        name: Md,
-        desc: md,
-        fontStyle: null !== (qd = Bd.customAttributes) && void 0 !== qd && qd.author ? "italic" : "normal"
+        name: RQ,
+        desc: rQ,
+        fontStyle: null !== (CQ = SQ.customAttributes) && void 0 !== CQ && CQ.author ? "italic" : "normal"
       }
     }
 
-    function Rd(dd, Jd, kd, pd) {
-      const Nd = gd(dd, kd),
-        Wd = gd(dd, pd);
-      if (!Nd) return !1;
-      const Pd = Jd[Nd.name].armourReduction,
-        Zd = Jd[Wd.name].armourReduction;
-      if (Zd === Pd) {
-        var Cd, Kd, od, ld;
-        const dd = null !== (Cd = null === (Kd = Nd.attributes.customAttributes) || void 0 === Kd ? void 0 : Kd.enchantmentTier) && void 0 !== Cd ? Cd : "Tier 0",
-          Jd = null !== (od = null === (ld = Wd.attributes.customAttributes) || void 0 === ld ? void 0 : ld.enchantmentTier) && void 0 !== od ? od : "Tier 0";
-        return parseInt(dd.replace("Tier ", "")) >= parseInt(Jd.replace("Tier ", ""))
+    function eQ(QQ, FQ, wQ, LQ) {
+      const qQ = vQ(QQ, wQ),
+        oQ = vQ(QQ, LQ);
+      if (!qQ) return !1;
+      const DQ = FQ[qQ.name].armourReduction,
+        kQ = FQ[oQ.name].armourReduction;
+      if (kQ === DQ) {
+        var mQ, uQ, HQ, bQ;
+        const QQ = null !== (mQ = null === (uQ = qQ.attributes.customAttributes) || void 0 === uQ ? void 0 : uQ.enchantmentTier) && void 0 !== mQ ? mQ : "Tier 0",
+          FQ = null !== (HQ = null === (bQ = oQ.attributes.customAttributes) || void 0 === bQ ? void 0 : bQ.enchantmentTier) && void 0 !== HQ ? HQ : "Tier 0";
+        return parseInt(QQ.replace("Tier ", "")) >= parseInt(FQ.replace("Tier ", ""))
       }
-      return Pd > Zd
+      return DQ > kQ
     }
 
-    function Id(dd) {
-      let Jd;
-      if ("number" === typeof dd) {
-        const kd = document.querySelector(`[data-inven-idx="${dd}"]`);
-        if (!kd) return null;
-        Jd = kd.getBoundingClientRect()
-      } else Jd = dd.getBoundingClientRect();
+    function MQ(QQ) {
+      let FQ;
+      if ("number" === typeof QQ) {
+        const wQ = document.querySelector(`[data-inven-idx="${QQ}"]`);
+        if (!wQ) return null;
+        FQ = wQ.getBoundingClientRect()
+      } else FQ = QQ.getBoundingClientRect();
       return {
-        x: Jd.left + Jd.width / 2,
-        y: Jd.top + Jd.height / 2
+        x: FQ.left + FQ.width / 2,
+        y: FQ.top + FQ.height / 2
       }
     }
   },
-  9134: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Qd,
-      f: () => Ld,
-      j: () => Od
+  8995: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => YQ,
+      d: () => xQ,
+      g: () => AQ
     });
-    var pd = kd(1461),
-      Nd = kd(56),
-      Wd = kd(1332),
-      Pd = kd(4389),
-      Zd = kd(2308),
-      gd = kd(1211),
-      Cd = kd(95),
-      Kd = kd(1968),
-      od = kd(1359),
-      ld = kd(1103);
+    var LQ = wQ(1451),
+      qQ = wQ(53),
+      oQ = wQ(1326),
+      DQ = wQ(4376),
+      kQ = wQ(2276),
+      vQ = wQ(1207),
+      mQ = wQ(96),
+      uQ = wQ(1927),
+      HQ = wQ(1348),
+      bQ = wQ(1107);
 
-    function Qd(dd) {
+    function YQ(QQ) {
       let {
-        show: Jd,
-        onClose: kd
-      } = dd;
+        show: FQ,
+        onClose: wQ
+      } = QQ;
       const {
-        requestedGameNameWithVariation: pd,
-        lobbyName: Nd,
-        shownLobbyName: Wd
-      } = (0, Kd.k)("connectedGame"), gd = (0, Zd.c)(pd, Nd, !1);
-      return Cd.featureFlags.canUseInviteLinks && (0, ld.jsx)(Pd.e, {
-        show: Jd,
-        close: kd,
+        requestedGameNameWithVariation: LQ,
+        lobbyName: qQ,
+        shownLobbyName: oQ
+      } = (0, uQ.k)("connectedGame"), vQ = (0, kQ.c)(LQ, qQ, !1);
+      return mQ.featureFlags.canUseInviteLinks && (0, bQ.jsx)(DQ.d, {
+        show: FQ,
+        close: wQ,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, ld.jsxs)("div", {
+        children: (0, bQ.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, ld.jsx)("div", {
+          children: [(0, bQ.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, ld.jsxs)("div", {
+          }), (0, bQ.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, ld.jsx)("div", {
+            children: [(0, bQ.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === gd ? (0, ld.jsx)(od.b, {}) : gd, (0, ld.jsx)("br", {}), "Lobby Name: ", Wd, (0, ld.jsx)("br", {}), (0, ld.jsx)("br", {}), (0, ld.jsx)("br", {}), (0, ld.jsx)("div", {
+            }), "Game: ", null === vQ ? (0, bQ.jsx)(HQ.c, {}) : vQ, (0, bQ.jsx)("br", {}), "Lobby Name: ", oQ, (0, bQ.jsx)("br", {}), (0, bQ.jsx)("br", {}), (0, bQ.jsx)("br", {}), (0, bQ.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, ld.jsx)(Ld, {})]
+          }), (0, bQ.jsx)(xQ, {})]
         })
       })
     }
 
-    function Ld() {
-      var dd;
+    function xQ() {
+      var QQ;
       const {
-        t: Jd
-      } = (0, gd.B)(), kd = null !== (dd = Od(Cd.featureFlags.canUseInviteLinks)) && void 0 !== dd ? dd : "Loading Link...", [Wd, Pd] = (0, Nd.useState)(0), [Zd, Kd] = (0, Nd.useReducer)((dd => dd + 1), 0);
-      return (0, Nd.useEffect)((() => {
-        const dd = setTimeout((() => {
-          Kd()
+        t: FQ
+      } = (0, vQ.y)(), wQ = null !== (QQ = AQ(mQ.featureFlags.canUseInviteLinks)) && void 0 !== QQ ? QQ : "Loading Link...", [oQ, DQ] = (0, qQ.useState)(0), [kQ, uQ] = (0, qQ.useReducer)((QQ => QQ + 1), 0);
+      return (0, qQ.useEffect)((() => {
+        const QQ = setTimeout((() => {
+          uQ()
         }), 1100);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(QQ)
         }
-      }), [Wd]), Cd.featureFlags.canUseInviteLinks && (0, ld.jsxs)("div", {
+      }), [oQ]), mQ.featureFlags.canUseInviteLinks && (0, bQ.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, ld.jsx)("div", {
+        children: [(0, bQ.jsx)("div", {
           className: "InviteLinkInner",
-          children: kd
-        }), (0, ld.jsx)(pd.d, {
+          children: wQ
+        }), (0, bQ.jsx)(LQ.f, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(kd).catch((dd => {
-              console.error("Failed to copy invite link:", dd)
-            })), Pd(Date.now())
+            navigator.clipboard.writeText(wQ).catch((QQ => {
+              console.error("Failed to copy invite link:", QQ)
+            })), DQ(Date.now())
           },
-          disabled: Date.now() - Wd < 1e3,
-          children: Date.now() - Wd < 1e3 ? Jd("general:copied") : Jd("general:copy")
+          disabled: Date.now() - oQ < 1e3,
+          children: Date.now() - oQ < 1e3 ? FQ("general:copied") : FQ("general:copy")
         })]
       })
     }
 
-    function Od(dd) {
-      const [Jd, kd] = (0, Nd.useState)(null);
-      return (0, Nd.useEffect)((() => {
-        if (!dd) return;
-        let Jd = !0;
-        return (0, Wd.v)().then((dd => {
-          Jd && kd(dd)
-        })).catch((dd => {
-          console.error("Failed to get invite link:", dd)
+    function AQ(QQ) {
+      const [FQ, wQ] = (0, qQ.useState)(null);
+      return (0, qQ.useEffect)((() => {
+        if (!QQ) return;
+        let FQ = !0;
+        return (0, oQ.E)().then((QQ => {
+          FQ && wQ(QQ)
+        })).catch((QQ => {
+          console.error("Failed to get invite link:", QQ)
         })), () => {
-          Jd = !1
+          FQ = !1
         }
-      }), [dd]), Jd
+      }), [QQ]), FQ
     }
   },
-  9226: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Cd
+  9091: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => mQ
     });
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(1968),
-      Zd = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(1927),
+      kQ = wQ(1107);
 
-    function gd(dd) {
-      const Jd = Math.floor(dd / 3600),
-        kd = Math.floor(dd % 3600 / 60),
-        pd = Math.floor(dd % 60),
-        Nd = `${kd.toString().padStart(2,"0")}:${pd.toString().padStart(2,"0")}`;
-      return Jd > 0 ? `${Jd}:${Nd}` : Nd
+    function vQ(QQ) {
+      const FQ = Math.floor(QQ / 3600),
+        wQ = Math.floor(QQ % 3600 / 60),
+        LQ = Math.floor(QQ % 60),
+        qQ = `${wQ.toString().padStart(2,"0")}:${LQ.toString().padStart(2,"0")}`;
+      return FQ > 0 ? `${FQ}:${qQ}` : qQ
     }
-    const Cd = (0, pd.memo)((function(dd) {
+    const mQ = (0, LQ.memo)((function(QQ) {
       let {
-        className: Jd
-      } = dd;
+        className: FQ
+      } = QQ;
       const {
-        recording: kd,
-        seconds: pd
-      } = (0, Pd.k)("replayRecorder");
-      return kd ? (0, Zd.jsxs)("div", {
-        className: Wd()("RecordingIndicator", Jd),
-        children: [(0, Zd.jsx)("span", {
+        recording: wQ,
+        seconds: LQ
+      } = (0, DQ.k)("replayRecorder");
+      return wQ ? (0, kQ.jsxs)("div", {
+        className: oQ()("RecordingIndicator", FQ),
+        children: [(0, kQ.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, Zd.jsx)("span", {
+        }), (0, kQ.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, Zd.jsx)("span", {
+        }), (0, kQ.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: gd(pd)
+          children: vQ(LQ)
         })]
       }) : null
     }))
   },
-  4770: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => ed
+  4721: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => tQ
     });
-    var pd = kd(1044),
-      Nd = kd.n(pd),
-      Wd = kd(4498),
-      Pd = kd(1211),
-      Zd = kd(1059),
-      gd = kd(1461),
-      Cd = kd(1520),
-      Kd = kd(1371),
-      od = kd(2418),
-      ld = kd(1103);
-    const Qd = {
+    var LQ = wQ(1070),
+      qQ = wQ.n(LQ),
+      oQ = wQ(4486),
+      DQ = wQ(1207),
+      kQ = wQ(1079),
+      vQ = wQ(1451),
+      mQ = wQ(1489),
+      uQ = wQ(1362),
+      HQ = wQ(2433),
+      bQ = wQ(1107);
+    const YQ = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8199,440 +8199,440 @@ export const modules = {
       }
     };
 
-    function Ld(dd) {
+    function xQ(QQ) {
       let {
-        platform: Jd
-      } = dd;
-      const kd = "youtube" === Jd;
-      return (0, ld.jsxs)("span", {
-        className: Nd()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: kd
+        platform: FQ
+      } = QQ;
+      const wQ = "youtube" === FQ;
+      return (0, bQ.jsxs)("span", {
+        className: qQ()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: wQ
         }),
-        children: [kd && (0, ld.jsx)(od.d, {
+        children: [wQ && (0, bQ.jsx)(HQ.e, {
           variant: "white"
-        }), !kd && (0, ld.jsx)(Zd.e, {
-          name: Qd[Jd].icon,
+        }), !wQ && (0, bQ.jsx)(kQ.c, {
+          name: YQ[FQ].icon,
           kit: "brands"
         })]
       })
     }
 
-    function Od(dd) {
+    function AQ(QQ) {
       let {
-        platform: Jd,
-        link: kd,
-        editable: pd,
-        userContext: Nd,
-        onLinksUpdated: od
-      } = dd;
+        platform: FQ,
+        link: wQ,
+        editable: LQ,
+        userContext: qQ,
+        onLinksUpdated: HQ
+      } = QQ;
       const {
-        t: Od
-      } = (0, Pd.B)(), ed = Qd[Jd];
-      if (!kd && !pd) return null;
+        t: AQ
+      } = (0, DQ.y)(), tQ = YQ[FQ];
+      if (!wQ && !LQ) return null;
 
-      function Rd() {
-        var dd;
-        if (!Nd || !od) return;
-        Kd.NotificationProvider.showInputPopup({
+      function eQ() {
+        var QQ;
+        if (!qQ || !HQ) return;
+        uQ.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: ed.name
+              platform: tQ.name
             }
           },
-          prefixText: Wd.z[Jd],
+          prefixText: oQ.v[FQ],
           placeholderText: "playBloxd",
-          initialValue: null !== (dd = null === kd || void 0 === kd ? void 0 : kd.handle) && void 0 !== dd ? dd : "",
+          initialValue: null !== (QQ = null === wQ || void 0 === wQ ? void 0 : wQ.handle) && void 0 !== QQ ? QQ : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: kd ? "general:remove" : void 0
-        }).getResult().then((async dd => {
-          if ("notificationTornDown" !== dd && null !== dd) try {
-            "submit" === dd.type ? await Cd.d.setSocialLink(Nd, Jd, dd.value) : await Cd.d.clearSocialLink(Nd, Jd), od()
-          } catch (kd) {
-            console.error("Failed to update social link", kd), Kd.NotificationProvider.showAlertPopup({
-              title: kd.errorMessageForUser,
+          secondaryButtonText: wQ ? "general:remove" : void 0
+        }).getResult().then((async QQ => {
+          if ("notificationTornDown" !== QQ && null !== QQ) try {
+            "submit" === QQ.type ? await mQ.b.setSocialLink(qQ, FQ, QQ.value) : await mQ.b.clearSocialLink(qQ, FQ), HQ()
+          } catch (wQ) {
+            console.error("Failed to update social link", wQ), uQ.NotificationProvider.showAlertPopup({
+              title: wQ.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (kd) {
-        const dd = `@${kd.handle}`;
-        return (0, ld.jsxs)("a", {
+      if (wQ) {
+        const QQ = `@${wQ.handle}`;
+        return (0, bQ.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: ed.color
+            background: tQ.color
           },
-          href: kd.profileUrl,
+          href: wQ.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, ld.jsxs)("div", {
+          children: [(0, bQ.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, ld.jsx)(Ld, {
-              platform: Jd
-            }), (0, ld.jsx)("span", {
+            children: [(0, bQ.jsx)(xQ, {
+              platform: FQ
+            }), (0, bQ.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, ld.jsx)("span", {
+              children: (0, bQ.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: dd
+                children: QQ
               })
             })]
-          }), pd && (0, ld.jsx)("button", {
+          }), LQ && (0, bQ.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, gd.P)({
+            ...(0, vQ.S)({
               stopPropagation: !0
             }),
-            onClick: dd => {
-              dd.stopPropagation(), dd.preventDefault(), Rd()
+            onClick: QQ => {
+              QQ.stopPropagation(), QQ.preventDefault(), eQ()
             },
-            children: (0, ld.jsx)(Zd.e, {
+            children: (0, bQ.jsx)(kQ.c, {
               name: "pen-to-square"
             })
-          }), !pd && (0, ld.jsx)("span", {
+          }), !LQ && (0, bQ.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, ld.jsx)(Zd.e, {
+            children: (0, bQ.jsx)(kQ.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, ld.jsxs)("button", {
+      return (0, bQ.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: ed.color
+          background: tQ.color
         },
-        ...(0, gd.P)(),
+        ...(0, vQ.S)(),
         onClick: () => {
-          Rd()
+          eQ()
         },
-        children: [(0, ld.jsx)(Ld, {
-          platform: Jd
-        }), (0, ld.jsxs)("span", {
+        children: [(0, bQ.jsx)(xQ, {
+          platform: FQ
+        }), (0, bQ.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, ld.jsx)("span", {
+          children: [(0, bQ.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: ed.name
-          }), (0, ld.jsx)("span", {
+            children: tQ.name
+          }), (0, bQ.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: Od("homePage:profileSocialLinkAdd")
+            children: AQ("homePage:profileSocialLinkAdd")
           })]
-        }), (0, ld.jsx)("span", {
+        }), (0, bQ.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, ld.jsx)(Zd.e, {
+          children: (0, bQ.jsx)(kQ.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function ed(dd) {
+    function tQ(QQ) {
       let {
-        socialLinks: Jd,
-        editable: kd = !1,
-        userContext: pd,
-        onLinksUpdated: Nd
-      } = dd;
-      if (!kd && 0 === Jd.length) return null;
-      const Pd = new Map(Jd.map((dd => [dd.platform, dd]))),
-        Zd = kd ? Wd.v : Jd.map((dd => dd.platform));
-      return (0, ld.jsx)("div", {
+        socialLinks: FQ,
+        editable: wQ = !1,
+        userContext: LQ,
+        onLinksUpdated: qQ
+      } = QQ;
+      if (!wQ && 0 === FQ.length) return null;
+      const DQ = new Map(FQ.map((QQ => [QQ.platform, QQ]))),
+        kQ = wQ ? oQ.t : FQ.map((QQ => QQ.platform));
+      return (0, bQ.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, ld.jsx)("div", {
+        children: (0, bQ.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: Zd.map((dd => (0, ld.jsx)(Od, {
-            platform: dd,
-            link: Pd.get(dd),
-            editable: kd,
-            userContext: pd,
-            onLinksUpdated: Nd
-          }, dd)))
+          children: kQ.map((QQ => (0, bQ.jsx)(AQ, {
+            platform: QQ,
+            link: DQ.get(QQ),
+            editable: wQ,
+            userContext: LQ,
+            onLinksUpdated: qQ
+          }, QQ)))
         })
       })
     }
   },
-  9234: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Wd
+  9094: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => oQ
     });
-    var pd = kd(4393),
-      Nd = kd(4397);
+    var LQ = wQ(4380),
+      qQ = wQ(4388);
 
-    function Wd(dd) {
+    function oQ(QQ) {
       let {
-        children: Jd,
-        showing: kd,
-        globallyUniqueKey: Wd,
-        alwaysMountChildren: Pd = !1,
-        doGameplayStartStopOnShow: Zd = !0,
-        keepsMovement: gd = !1
-      } = dd;
-      return (0, Nd.d)(!0, kd, Wd, gd), (0, pd.c)(Zd, kd), kd || Pd ? Jd : null
+        children: FQ,
+        showing: wQ,
+        globallyUniqueKey: oQ,
+        alwaysMountChildren: DQ = !1,
+        doGameplayStartStopOnShow: kQ = !0,
+        keepsMovement: vQ = !1
+      } = QQ;
+      return (0, qQ.d)(!0, wQ, oQ, vQ), (0, LQ.b)(kQ, wQ), wQ || DQ ? FQ : null
     }
   },
-  9276: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Wd
+  9149: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => oQ
     });
-    var pd = kd(56),
-      Nd = kd(3451);
+    var LQ = wQ(53),
+      qQ = wQ(3451);
 
-    function Wd() {
-      const [dd, Jd] = (0, pd.useState)(!1);
-      return (0, pd.useLayoutEffect)((() => {
-        let dd = !0;
-        return (0, Nd.d)().then((() => {
-          dd && Jd(!0)
+    function oQ() {
+      const [QQ, FQ] = (0, LQ.useState)(!1);
+      return (0, LQ.useLayoutEffect)((() => {
+        let QQ = !0;
+        return (0, qQ.d)().then((() => {
+          QQ && FQ(!0)
         })), () => {
-          dd = !1
+          QQ = !1
         }
-      }), []), dd
+      }), []), QQ
     }
   },
-  6435: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Wd
+  6386: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => oQ
     });
-    var pd = kd(56),
-      Nd = kd(33);
+    var LQ = wQ(53),
+      qQ = wQ(27);
 
-    function Wd(dd, Jd) {
-      var kd;
-      const [Wd, Pd] = (0, pd.useState)(null !== (kd = Nd.i.getItem(dd)) && void 0 !== kd ? kd : Jd);
-      return [Wd, Jd => {
-        Nd.i.setItem(dd, Jd), Pd(Jd)
+    function oQ(QQ, FQ) {
+      var wQ;
+      const [oQ, DQ] = (0, LQ.useState)(null !== (wQ = qQ.i.getItem(QQ)) && void 0 !== wQ ? wQ : FQ);
+      return [oQ, FQ => {
+        qQ.i.setItem(QQ, FQ), DQ(FQ)
       }]
     }
   },
-  9210: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Od,
-      i: () => Ld
+  9067: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => AQ,
+      c: () => xQ
     });
-    kd(9212);
-    var pd = kd(1044),
-      Nd = kd.n(pd),
-      Wd = kd(56),
-      Pd = kd(9179);
+    wQ(9074);
+    var LQ = wQ(1070),
+      qQ = wQ.n(LQ),
+      oQ = wQ(53),
+      DQ = wQ(9037);
 
-    function Zd(dd, Jd) {
-      return Math.max(1, Math.round(dd * Jd))
+    function kQ(QQ, FQ) {
+      return Math.max(1, Math.round(QQ * FQ))
     }
 
-    function gd(dd, Jd) {
-      const kd = Jd * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        pd = function(dd, Jd) {
-          if (dd.lines) return Zd(dd.lineThickness, Jd) % 2;
-          if (dd.dot) return Zd(dd.dotSize, Jd) % 2;
-          return Cd(dd, Jd) % 2
-        }(dd, Jd),
-        Nd = Kd(dd.lineThickness * kd, pd),
-        Wd = Zd(dd.lineLength, kd),
-        Pd = Math.round(dd.gap * kd),
-        gd = dd.outline > 0 ? Zd(dd.outline, kd) : 0,
-        ld = [];
-      if (dd.lines && (ld.push({
-          x: Nd + Pd,
+    function vQ(QQ, FQ) {
+      const wQ = FQ * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        LQ = function(QQ, FQ) {
+          if (QQ.lines) return kQ(QQ.lineThickness, FQ) % 2;
+          if (QQ.dot) return kQ(QQ.dotSize, FQ) % 2;
+          return mQ(QQ, FQ) % 2
+        }(QQ, FQ),
+        qQ = uQ(QQ.lineThickness * wQ, LQ),
+        oQ = kQ(QQ.lineLength, wQ),
+        DQ = Math.round(QQ.gap * wQ),
+        vQ = QQ.outline > 0 ? kQ(QQ.outline, wQ) : 0,
+        bQ = [];
+      if (QQ.lines && (bQ.push({
+          x: qQ + DQ,
           y: 0,
-          w: Wd,
-          h: Nd,
+          w: oQ,
+          h: qQ,
           arm: "right"
-        }), ld.push({
-          x: -Pd - Wd,
+        }), bQ.push({
+          x: -DQ - oQ,
           y: 0,
-          w: Wd,
-          h: Nd,
+          w: oQ,
+          h: qQ,
           arm: "left"
-        }), ld.push({
+        }), bQ.push({
           x: 0,
-          y: Nd + Pd,
-          w: Nd,
-          h: Wd,
+          y: qQ + DQ,
+          w: qQ,
+          h: oQ,
           arm: "down"
-        }), dd.tStyle || ld.push({
+        }), QQ.tStyle || bQ.push({
           x: 0,
-          y: -Pd - Wd,
-          w: Nd,
-          h: Wd,
+          y: -DQ - oQ,
+          w: qQ,
+          h: oQ,
           arm: "up"
-        }), 0 === Pd && ld.push({
+        }), 0 === DQ && bQ.push({
           x: 0,
           y: 0,
-          w: Nd,
-          h: Nd
-        })), dd.dot) {
-        const Jd = Kd(dd.dotSize * kd, pd),
-          Wd = dd.lines && 0 === Pd && dd.dotSize > dd.lineThickness ? Math.max(Jd, Nd + 2) : Jd,
-          Zd = (Nd - Wd) / 2;
-        ld.push({
-          x: Zd,
-          y: Zd,
-          w: Wd,
-          h: Wd
+          w: qQ,
+          h: qQ
+        })), QQ.dot) {
+        const FQ = uQ(QQ.dotSize * wQ, LQ),
+          oQ = QQ.lines && 0 === DQ && QQ.dotSize > QQ.lineThickness ? Math.max(FQ, qQ + 2) : FQ,
+          kQ = (qQ - oQ) / 2;
+        bQ.push({
+          x: kQ,
+          y: kQ,
+          w: oQ,
+          h: oQ
         })
       }
-      const Qd = ld.map((dd => ({
-        ...dd,
-        x: dd.x - gd,
-        y: dd.y - gd,
-        w: dd.w + 2 * gd,
-        h: dd.h + 2 * gd
+      const YQ = bQ.map((QQ => ({
+        ...QQ,
+        x: QQ.x - vQ,
+        y: QQ.y - vQ,
+        w: QQ.w + 2 * vQ,
+        h: QQ.h + 2 * vQ
       })));
-      let Ld = null,
-        Od = null;
-      if (dd.circle) {
-        const Jd = Zd(dd.circleThickness, kd),
-          Wd = function(dd, Jd) {
-            return dd + (dd % 2 === Jd ? 0 : 1)
-          }(Cd(dd, kd), pd),
-          Pd = (Nd - Wd) / 2;
-        Ld = od(Pd, Wd, Jd), gd > 0 && (Od = od(Pd - gd, Wd + 2 * gd, Jd + 2 * gd))
+      let xQ = null,
+        AQ = null;
+      if (QQ.circle) {
+        const FQ = kQ(QQ.circleThickness, wQ),
+          oQ = function(QQ, FQ) {
+            return QQ + (QQ % 2 === FQ ? 0 : 1)
+          }(mQ(QQ, wQ), LQ),
+          DQ = (qQ - oQ) / 2;
+        xQ = HQ(DQ, oQ, FQ), vQ > 0 && (AQ = HQ(DQ - vQ, oQ + 2 * vQ, FQ + 2 * vQ))
       }
       return {
-        cell: Nd,
-        fills: ld,
-        outlines: gd > 0 ? Qd : [],
-        ring: Ld,
-        ringOutline: Od
+        cell: qQ,
+        fills: bQ,
+        outlines: vQ > 0 ? YQ : [],
+        ring: xQ,
+        ringOutline: AQ
       }
     }
 
-    function Cd(dd, Jd) {
-      return Math.round(dd.circleRadius * Jd * 2 + Zd(dd.circleThickness, Jd))
+    function mQ(QQ, FQ) {
+      return Math.round(QQ.circleRadius * FQ * 2 + kQ(QQ.circleThickness, FQ))
     }
 
-    function Kd(dd, Jd) {
-      return Math.max(2 - Jd, 2 * Math.round((dd - Jd) / 2) + Jd)
+    function uQ(QQ, FQ) {
+      return Math.max(2 - FQ, 2 * Math.round((QQ - FQ) / 2) + FQ)
     }
 
-    function od(dd, Jd, kd) {
-      const pd = 2 * kd >= Jd - 1;
+    function HQ(QQ, FQ, wQ) {
+      const LQ = 2 * wQ >= FQ - 1;
       return {
-        x: dd,
-        y: dd,
-        size: Jd,
-        border: Math.min(kd, Math.floor(Jd / 2)),
-        filled: pd
+        x: QQ,
+        y: QQ,
+        size: FQ,
+        border: Math.min(wQ, Math.floor(FQ / 2)),
+        filled: LQ
       }
     }
-    var ld = kd(1103);
-    const Qd = 1.4;
+    var bQ = wQ(1107);
+    const YQ = 1.4;
 
-    function Ld(dd, Jd) {
-      return dd && Jd ? `scale(${Qd})` : "scale(1)"
+    function xQ(QQ, FQ) {
+      return QQ && FQ ? `scale(${YQ})` : "scale(1)"
     }
 
-    function Od(dd) {
-      return "classic" === dd.settings.style ? (0, ld.jsx)(Id, {
-        ...dd
-      }) : (0, ld.jsx)(ad, {
-        ...dd
+    function AQ(QQ) {
+      return "classic" === QQ.settings.style ? (0, bQ.jsx)(MQ, {
+        ...QQ
+      }) : (0, bQ.jsx)(WQ, {
+        ...QQ
       })
     }
-    const ed = .125;
+    const tQ = .125;
 
-    function Rd(dd, Jd) {
-      const kd = {};
-      if (dd.color !== Pd.g.color && (kd.color = (0, Pd.j)(dd.color)), dd.opacity !== Pd.g.opacity && (kd.opacity = dd.opacity / 100), dd.outline !== Pd.g.outline || dd.outlineColor !== Pd.g.outlineColor) {
-        const Jd = dd.outline,
-          pd = (0, Pd.j)(dd.outlineColor);
-        kd.textShadow = Jd > 0 ? `-${Jd}px 0 ${pd}, 0 ${Jd}px ${pd}, ${Jd}px 0 ${pd}, 0 -${Jd}px ${pd}` : "none"
+    function eQ(QQ, FQ) {
+      const wQ = {};
+      if (QQ.color !== DQ.e.color && (wQ.color = (0, DQ.k)(QQ.color)), QQ.opacity !== DQ.e.opacity && (wQ.opacity = QQ.opacity / 100), QQ.outline !== DQ.e.outline || QQ.outlineColor !== DQ.e.outlineColor) {
+        const FQ = QQ.outline,
+          LQ = (0, DQ.k)(QQ.outlineColor);
+        wQ.textShadow = FQ > 0 ? `-${FQ}px 0 ${LQ}, 0 ${FQ}px ${LQ}, ${FQ}px 0 ${LQ}, 0 -${FQ}px ${LQ}` : "none"
       }
-      if (dd.size !== Pd.g.size) {
-        const pd = dd.size / 100;
-        kd.fontSize = Jd ? `calc(max(1.3rem, 18px) * ${pd})` : `calc(1.3rem * ${pd})`, kd.marginTop = `-${ed}em`, kd.transformOrigin = `50% calc(50% + ${ed}em)`
+      if (QQ.size !== DQ.e.size) {
+        const LQ = QQ.size / 100;
+        wQ.fontSize = FQ ? `calc(max(1.3rem, 18px) * ${LQ})` : `calc(1.3rem * ${LQ})`, wQ.marginTop = `-${tQ}em`, wQ.transformOrigin = `50% calc(50% + ${tQ}em)`
       }
-      return kd
+      return wQ
     }
 
-    function Id(dd) {
+    function MQ(QQ) {
       let {
-        settings: Jd,
-        touch: kd,
-        inPreview: pd,
-        inEditor: Wd,
-        pressed: Pd = !1,
-        pressRef: Zd
-      } = dd;
-      return (0, ld.jsx)("div", {
-        className: Nd()("Crosshair", {
-          Touch: kd,
-          CrosshairInPreview: pd,
-          CrosshairInEditor: Wd || pd
+        settings: FQ,
+        touch: wQ,
+        inPreview: LQ,
+        inEditor: oQ,
+        pressed: DQ = !1,
+        pressRef: kQ
+      } = QQ;
+      return (0, bQ.jsx)("div", {
+        className: qQ()("Crosshair", {
+          Touch: wQ,
+          CrosshairInPreview: LQ,
+          CrosshairInEditor: oQ || LQ
         }),
-        ref: Zd,
+        ref: kQ,
         style: {
-          transform: Ld(Pd, Jd.growOnClick),
-          ...Rd(Jd, kd)
+          transform: xQ(DQ, FQ.growOnClick),
+          ...eQ(FQ, wQ)
         },
         children: "+"
       })
     }
 
-    function Gd(dd, Jd) {
-      return dd / Jd + "px"
+    function GQ(QQ, FQ) {
+      return QQ / FQ + "px"
     }
 
-    function vd(dd, Jd, kd, pd) {
+    function pQ(QQ, FQ, wQ, LQ) {
       return {
-        ...Bd(dd, Jd, kd),
-        width: Gd(dd.w, kd),
-        height: Gd(dd.h, kd),
-        background: pd
+        ...SQ(QQ, FQ, wQ),
+        width: GQ(QQ.w, wQ),
+        height: GQ(QQ.h, wQ),
+        background: LQ
       }
     }
 
-    function xd(dd, Jd, kd) {
+    function cQ(QQ, FQ, wQ) {
       return {
-        left: Gd(dd.x, Jd),
-        top: Gd(dd.y, Jd),
-        width: Gd(dd.size, Jd),
-        height: Gd(dd.size, Jd),
-        borderWidth: Gd(dd.border, Jd),
-        borderColor: kd,
-        background: dd.filled ? kd : void 0
+        left: GQ(QQ.x, FQ),
+        top: GQ(QQ.y, FQ),
+        width: GQ(QQ.size, FQ),
+        height: GQ(QQ.size, FQ),
+        borderWidth: GQ(QQ.border, FQ),
+        borderColor: wQ,
+        background: QQ.filled ? wQ : void 0
       }
     }
-    const qd = {
+    const CQ = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function Bd(dd, Jd, kd) {
-      const [pd, Nd] = dd.arm ? qd[dd.arm] : [0, 0], Wd = Math.round(Jd * kd);
+    function SQ(QQ, FQ, wQ) {
+      const [LQ, qQ] = QQ.arm ? CQ[QQ.arm] : [0, 0], oQ = Math.round(FQ * wQ);
       return {
-        left: Gd(dd.x + pd * Wd, kd),
-        top: Gd(dd.y + Nd * Wd, kd)
+        left: GQ(QQ.x + LQ * oQ, wQ),
+        top: GQ(QQ.y + qQ * oQ, wQ)
       }
     }
 
-    function sd(dd) {
-      return dd.arm ? {
-        "data-arm": dd.arm,
-        "data-x": dd.x,
-        "data-y": dd.y
+    function iQ(QQ) {
+      return QQ.arm ? {
+        "data-arm": QQ.arm,
+        "data-x": QQ.x,
+        "data-y": QQ.y
       } : {}
     }
 
-    function ad(dd) {
+    function WQ(QQ) {
       let {
-        settings: Jd,
-        inPreview: kd,
-        inEditor: pd,
-        pressed: Zd = !1,
-        spread: Cd,
-        spreadRef: Kd
-      } = dd;
-      const od = (0, Wd.useRef)(null),
+        settings: FQ,
+        inPreview: wQ,
+        inEditor: LQ,
+        pressed: kQ = !1,
+        spread: mQ,
+        spreadRef: uQ
+      } = QQ;
+      const HQ = (0, oQ.useRef)(null),
         {
-          box: Ld,
-          dpr: Od
-        } = function(dd) {
-          const [Jd, kd] = (0, Wd.useState)({
+          box: xQ,
+          dpr: AQ
+        } = function(QQ) {
+          const [FQ, wQ] = (0, oQ.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8641,200 +8641,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, Wd.useLayoutEffect)((() => {
-            const Jd = dd.current;
-            if (!Jd) return;
-            const pd = () => {
-              const dd = Jd.getBoundingClientRect(),
-                pd = window.devicePixelRatio || 1;
-              kd((Jd => Jd.dpr === pd && Jd.box.left === dd.left && Jd.box.top === dd.top && Jd.box.width === dd.width && Jd.box.height === dd.height ? Jd : {
+          return (0, oQ.useLayoutEffect)((() => {
+            const FQ = QQ.current;
+            if (!FQ) return;
+            const LQ = () => {
+              const QQ = FQ.getBoundingClientRect(),
+                LQ = window.devicePixelRatio || 1;
+              wQ((FQ => FQ.dpr === LQ && FQ.box.left === QQ.left && FQ.box.top === QQ.top && FQ.box.width === QQ.width && FQ.box.height === QQ.height ? FQ : {
                 box: {
-                  left: dd.left,
-                  top: dd.top,
-                  width: dd.width,
-                  height: dd.height
+                  left: QQ.left,
+                  top: QQ.top,
+                  width: QQ.width,
+                  height: QQ.height
                 },
-                dpr: pd
+                dpr: LQ
               }))
             };
-            pd();
-            const Nd = new ResizeObserver(pd);
-            return Nd.observe(Jd), window.addEventListener("resize", pd), window.addEventListener("scroll", pd, !0), () => {
-              Nd.disconnect(), window.removeEventListener("resize", pd), window.removeEventListener("scroll", pd, !0)
+            LQ();
+            const qQ = new ResizeObserver(LQ);
+            return qQ.observe(FQ), window.addEventListener("resize", LQ), window.addEventListener("scroll", LQ, !0), () => {
+              qQ.disconnect(), window.removeEventListener("resize", LQ), window.removeEventListener("scroll", LQ, !0)
             }
-          }), [dd]), Jd
-        }(od),
-        ed = (0, Wd.useRef)(Od);
-      ed.current = Od;
-      const Rd = gd(Jd, Od, Zd && Jd.growOnClick ? Qd : 1),
-        Id = function(dd, Jd, kd) {
-          const pd = Math.round((dd.left + dd.width / 2) * kd - Jd / 2),
-            Nd = Math.round((dd.top + dd.height / 2) * kd - Jd / 2);
+          }), [QQ]), FQ
+        }(HQ),
+        tQ = (0, oQ.useRef)(AQ);
+      tQ.current = AQ;
+      const eQ = vQ(FQ, AQ, kQ && FQ.growOnClick ? YQ : 1),
+        MQ = function(QQ, FQ, wQ) {
+          const LQ = Math.round((QQ.left + QQ.width / 2) * wQ - FQ / 2),
+            qQ = Math.round((QQ.top + QQ.height / 2) * wQ - FQ / 2);
           return {
-            x: pd / kd - dd.left,
-            y: Nd / kd - dd.top
+            x: LQ / wQ - QQ.left,
+            y: qQ / wQ - QQ.top
           }
-        }(Ld, Rd.cell, Od),
-        Gd = (0, Pd.j)(Jd.color),
-        qd = (0, Pd.j)(Jd.outlineColor),
-        ad = (0, Wd.useRef)(0);
-      (0, Wd.useLayoutEffect)((() => {
-        if (Kd) return Kd.current = dd => {
-          var Jd;
-          ad.current = dd, null === (Jd = od.current) || void 0 === Jd || Jd.querySelectorAll("[data-arm]").forEach((Jd => {
-            Object.assign(Jd.style, Bd(function(dd) {
+        }(xQ, eQ.cell, AQ),
+        GQ = (0, DQ.k)(FQ.color),
+        CQ = (0, DQ.k)(FQ.outlineColor),
+        WQ = (0, oQ.useRef)(0);
+      (0, oQ.useLayoutEffect)((() => {
+        if (uQ) return uQ.current = QQ => {
+          var FQ;
+          WQ.current = QQ, null === (FQ = HQ.current) || void 0 === FQ || FQ.querySelectorAll("[data-arm]").forEach((FQ => {
+            Object.assign(FQ.style, SQ(function(QQ) {
               return {
-                x: Number(dd.dataset.x),
-                y: Number(dd.dataset.y),
-                arm: dd.dataset.arm
+                x: Number(QQ.dataset.x),
+                y: Number(QQ.dataset.y),
+                arm: QQ.dataset.arm
               }
-            }(Jd), dd, ed.current))
+            }(FQ), QQ, tQ.current))
           }))
         }, () => {
-          Kd.current = null
+          uQ.current = null
         }
-      }), [Kd]);
-      const Md = null !== Cd && void 0 !== Cd ? Cd : ad.current;
-      return (0, ld.jsx)("div", {
-        ref: od,
-        className: Nd()("CrosshairShapes", {
-          CrosshairInPreview: kd,
-          CrosshairInEditor: pd || kd,
-          CrosshairSpreads: void 0 !== Kd
+      }), [uQ]);
+      const RQ = null !== mQ && void 0 !== mQ ? mQ : WQ.current;
+      return (0, bQ.jsx)("div", {
+        ref: HQ,
+        className: qQ()("CrosshairShapes", {
+          CrosshairInPreview: wQ,
+          CrosshairInEditor: LQ || wQ,
+          CrosshairSpreads: void 0 !== uQ
         }),
-        children: (0, ld.jsx)("div", {
+        children: (0, bQ.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: Id.x,
-            top: Id.y,
-            opacity: Jd.opacity / 100
+            left: MQ.x,
+            top: MQ.y,
+            opacity: FQ.opacity / 100
           },
-          children: (0, ld.jsxs)("div", {
+          children: (0, bQ.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [Rd.ringOutline && (0, ld.jsx)("div", {
+            children: [eQ.ringOutline && (0, bQ.jsx)("div", {
               className: "CrosshairRing",
-              style: xd(Rd.ringOutline, Od, qd)
-            }), Rd.outlines.map(((dd, Jd) => (0, ld.jsx)("div", {
+              style: cQ(eQ.ringOutline, AQ, CQ)
+            }), eQ.outlines.map(((QQ, FQ) => (0, bQ.jsx)("div", {
               className: "CrosshairPart",
-              ...sd(dd),
-              style: vd(dd, Md, Od, qd)
-            }, `o${Jd}`))), Rd.ring && (0, ld.jsx)("div", {
+              ...iQ(QQ),
+              style: pQ(QQ, RQ, AQ, CQ)
+            }, `o${FQ}`))), eQ.ring && (0, bQ.jsx)("div", {
               className: "CrosshairRing",
-              style: xd(Rd.ring, Od, Gd)
-            }), Rd.fills.map(((dd, Jd) => (0, ld.jsx)("div", {
+              style: cQ(eQ.ring, AQ, GQ)
+            }), eQ.fills.map(((QQ, FQ) => (0, bQ.jsx)("div", {
               className: "CrosshairPart",
-              ...sd(dd),
-              style: vd(dd, Md, Od, Gd)
-            }, `f${Jd}`)))]
+              ...iQ(QQ),
+              style: pQ(QQ, RQ, AQ, GQ)
+            }, `f${FQ}`)))]
           })
         })
       })
     }
   },
-  9220: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Kd,
-      f: () => ed,
-      j: () => Od
+  9078: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => uQ,
+      h: () => tQ,
+      k: () => AQ
     });
-    var pd = kd(9179);
-    const Nd = "XH1-",
-      Wd = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      Pd = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      Zd = ["color", "outlineColor"],
-      gd = 1 + 3 * Zd.length + Pd.length + 1,
-      Cd = Math.ceil(8 * gd / Math.log2(62)),
-      Kd = Nd.length + Cd;
+    var LQ = wQ(9037);
+    const qQ = "XH1-",
+      oQ = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      DQ = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      kQ = ["color", "outlineColor"],
+      vQ = 1 + 3 * kQ.length + DQ.length + 1,
+      mQ = Math.ceil(8 * vQ / Math.log2(62)),
+      uQ = qQ.length + mQ;
 
-    function od(dd) {
-      let Jd = 90;
-      for (const kd of dd) Jd = 31 * Jd + kd & 255;
-      return Jd
+    function HQ(QQ) {
+      let FQ = 90;
+      for (const wQ of QQ) FQ = 31 * FQ + wQ & 255;
+      return FQ
     }
-    const ld = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Qd = BigInt(ld.length);
+    const bQ = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      YQ = BigInt(bQ.length);
 
-    function Ld(dd, Jd) {
-      let kd = 0n;
-      for (const Nd of dd) {
-        const dd = ld.indexOf(Nd);
-        if (dd < 0) return null;
-        kd = kd * Qd + BigInt(dd)
+    function xQ(QQ, FQ) {
+      let wQ = 0n;
+      for (const qQ of QQ) {
+        const QQ = bQ.indexOf(qQ);
+        if (QQ < 0) return null;
+        wQ = wQ * YQ + BigInt(QQ)
       }
-      if (kd >> BigInt(8 * Jd) !== 0n) return null;
-      const pd = [];
-      for (let Nd = 0; Nd < Jd; Nd++) pd.unshift(Number(0xffn & kd)), kd >>= 8n;
-      return pd
+      if (wQ >> BigInt(8 * FQ) !== 0n) return null;
+      const LQ = [];
+      for (let qQ = 0; qQ < FQ; qQ++) LQ.unshift(Number(0xffn & wQ)), wQ >>= 8n;
+      return LQ
     }
 
-    function Od(dd) {
-      let Jd = "shapes" === dd.style ? 1 : 0;
-      Wd.forEach(((kd, pd) => {
-        dd[kd] && (Jd |= 1 << pd + 1)
+    function AQ(QQ) {
+      let FQ = "shapes" === QQ.style ? 1 : 0;
+      oQ.forEach(((wQ, LQ) => {
+        QQ[wQ] && (FQ |= 1 << LQ + 1)
       }));
-      const kd = [Jd];
-      for (const Nd of Zd) {
-        const Jd = (0, pd.i)(Nd, dd[Nd]);
-        kd.push(Jd >> 16 & 255, Jd >> 8 & 255, 255 & Jd)
+      const wQ = [FQ];
+      for (const qQ of kQ) {
+        const FQ = (0, LQ.g)(qQ, QQ[qQ]);
+        wQ.push(FQ >> 16 & 255, FQ >> 8 & 255, 255 & FQ)
       }
-      for (const Nd of Pd) {
+      for (const qQ of DQ) {
         const {
-          min: Jd,
-          step: Wd
-        } = pd.e[Nd];
-        kd.push(Math.round(((0, pd.i)(Nd, dd[Nd]) - Jd) / Wd))
+          min: FQ,
+          step: oQ
+        } = LQ.b[qQ];
+        wQ.push(Math.round(((0, LQ.g)(qQ, QQ[qQ]) - FQ) / oQ))
       }
-      return kd.push(od(kd)), Nd + function(dd, Jd) {
-        let kd = 0n;
-        for (const Nd of dd) kd = kd << 8n | BigInt(Nd);
-        let pd = "";
-        for (let Nd = 0; Nd < Jd; Nd++) pd = ld[Number(kd % Qd)] + pd, kd /= Qd;
-        return pd
-      }(kd, Cd)
+      return wQ.push(HQ(wQ)), qQ + function(QQ, FQ) {
+        let wQ = 0n;
+        for (const qQ of QQ) wQ = wQ << 8n | BigInt(qQ);
+        let LQ = "";
+        for (let qQ = 0; qQ < FQ; qQ++) LQ = bQ[Number(wQ % YQ)] + LQ, wQ /= YQ;
+        return LQ
+      }(wQ, mQ)
     }
 
-    function ed(dd) {
-      for (const Jd of dd.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Cd}})`, "gi"))) {
-        const dd = Rd(Ld(Jd[1], gd));
-        if (dd) return dd
+    function tQ(QQ) {
+      for (const FQ of QQ.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${mQ}})`, "gi"))) {
+        const QQ = eQ(xQ(FQ[1], vQ));
+        if (QQ) return QQ
       }
       return null
     }
 
-    function Rd(dd) {
-      if (!dd || dd.length !== gd || od(dd.slice(0, -1)) !== dd[dd.length - 1]) return null;
-      const Jd = dd[0],
-        kd = {
-          ...pd.g,
-          style: 1 & Jd ? "shapes" : "classic"
+    function eQ(QQ) {
+      if (!QQ || QQ.length !== vQ || HQ(QQ.slice(0, -1)) !== QQ[QQ.length - 1]) return null;
+      const FQ = QQ[0],
+        wQ = {
+          ...LQ.e,
+          style: 1 & FQ ? "shapes" : "classic"
         };
-      Wd.forEach(((dd, pd) => {
-        kd[dd] = 0 !== (Jd & 1 << pd + 1)
+      oQ.forEach(((QQ, LQ) => {
+        wQ[QQ] = 0 !== (FQ & 1 << LQ + 1)
       }));
-      let Nd = 1;
-      for (const pd of Zd) kd[pd] = dd[Nd] << 16 | dd[Nd + 1] << 8 | dd[Nd + 2], Nd += 3;
-      for (const Wd of Pd) {
+      let qQ = 1;
+      for (const LQ of kQ) wQ[LQ] = QQ[qQ] << 16 | QQ[qQ + 1] << 8 | QQ[qQ + 2], qQ += 3;
+      for (const oQ of DQ) {
         const {
-          min: Jd,
-          step: Pd
-        } = pd.e[Wd];
-        kd[Wd] = (0, pd.i)(Wd, Jd + dd[Nd] * Pd), Nd++
+          min: FQ,
+          step: DQ
+        } = LQ.b[oQ];
+        wQ[oQ] = (0, LQ.g)(oQ, FQ + QQ[qQ] * DQ), qQ++
       }
-      return kd
+      return wQ
     }
   },
-  9179: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => pd,
-      g: () => Nd,
-      i: () => Wd,
-      j: () => Cd,
-      k: () => gd,
-      m: () => Kd,
-      n: () => Zd,
-      o: () => Pd
+  9037: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ,
+      e: () => qQ,
+      g: () => oQ,
+      k: () => mQ,
+      l: () => vQ,
+      m: () => uQ,
+      n: () => kQ,
+      p: () => DQ
     });
-    const pd = {
+    const LQ = {
         opacity: {
           min: 5,
           max: 100,
@@ -8891,7 +8891,7 @@ export const modules = {
           step: 1
         }
       },
-      Nd = Object.freeze({
+      qQ = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -8912,279 +8912,279 @@ export const modules = {
         forGuns: !1
       });
 
-    function Wd(dd, Jd) {
-      var kd;
+    function oQ(QQ, FQ) {
+      var wQ;
       const {
-        min: Wd,
-        max: Pd,
-        step: Zd
-      } = pd[dd];
-      if (!Number.isFinite(Jd)) return Nd[dd];
-      const gd = (null !== (kd = String(Zd).split(".")[1]) && void 0 !== kd ? kd : "").length,
-        Cd = Number((Math.round(Jd / Zd) * Zd).toFixed(gd));
-      return Math.min(Pd, Math.max(Wd, Cd))
+        min: oQ,
+        max: DQ,
+        step: kQ
+      } = LQ[QQ];
+      if (!Number.isFinite(FQ)) return qQ[QQ];
+      const vQ = (null !== (wQ = String(kQ).split(".")[1]) && void 0 !== wQ ? wQ : "").length,
+        mQ = Number((Math.round(FQ / kQ) * kQ).toFixed(vQ));
+      return Math.min(DQ, Math.max(oQ, mQ))
     }
 
-    function Pd(dd, Jd, kd) {
-      const pd = "number" === typeof kd ? Wd(Jd, kd) : kd;
+    function DQ(QQ, FQ, wQ) {
+      const LQ = "number" === typeof wQ ? oQ(FQ, wQ) : wQ;
       return {
-        ...dd,
-        [Jd]: pd
+        ...QQ,
+        [FQ]: LQ
       }
     }
 
-    function Zd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(Nd).every((pd => kd.includes(pd) || dd[pd] === Jd[pd]))
+    function kQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(qQ).every((LQ => wQ.includes(LQ) || QQ[LQ] === FQ[LQ]))
     }
 
-    function gd(dd) {
-      return Zd(dd, Nd)
+    function vQ(QQ) {
+      return kQ(QQ, qQ)
     }
 
-    function Cd(dd) {
-      return `#${dd.toString(16).padStart(6,"0")}`
+    function mQ(QQ) {
+      return `#${QQ.toString(16).padStart(6,"0")}`
     }
 
-    function Kd(dd) {
-      const Jd = /^#?([0-9a-f]{6})$/i.exec(dd.trim());
-      return Jd ? parseInt(Jd[1], 16) : null
+    function uQ(QQ) {
+      const FQ = /^#?([0-9a-f]{6})$/i.exec(QQ.trim());
+      return FQ ? parseInt(FQ[1], 16) : null
     }
   },
-  9222: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => od,
-      h: () => ld
+  9082: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => HQ,
+      d: () => bQ
     });
-    var pd = kd(56),
-      Nd = kd(33),
-      Wd = kd(9220),
-      Pd = kd(9179);
-    const Zd = "crosshairCode";
-    let gd = null;
-    const Cd = new Set;
+    var LQ = wQ(53),
+      qQ = wQ(27),
+      oQ = wQ(9078),
+      DQ = wQ(9037);
+    const kQ = "crosshairCode";
+    let vQ = null;
+    const mQ = new Set;
 
-    function Kd() {
-      if (null === gd) {
-        var dd;
-        const Jd = Nd.i.getItem(Zd);
-        gd = null !== (dd = "string" === typeof Jd ? (0, Wd.f)(Jd) : null) && void 0 !== dd ? dd : Pd.g
+    function uQ() {
+      if (null === vQ) {
+        var QQ;
+        const FQ = qQ.i.getItem(kQ);
+        vQ = null !== (QQ = "string" === typeof FQ ? (0, oQ.h)(FQ) : null) && void 0 !== QQ ? QQ : DQ.e
       }
-      return gd
+      return vQ
     }
 
-    function od(dd) {
-      gd = dd, (0, Pd.k)(dd) ? Nd.i.removeItem(Zd) : Nd.i.setItem(Zd, (0, Wd.j)(dd));
-      for (const Jd of Cd) Jd()
+    function HQ(QQ) {
+      vQ = QQ, (0, DQ.l)(QQ) ? qQ.i.removeItem(kQ) : qQ.i.setItem(kQ, (0, oQ.k)(QQ));
+      for (const FQ of mQ) FQ()
     }
 
-    function ld() {
-      const [dd, Jd] = (0, pd.useState)(Kd);
-      return (0, pd.useEffect)((() => {
-        const dd = () => {
-          Jd(Kd())
+    function bQ() {
+      const [QQ, FQ] = (0, LQ.useState)(uQ);
+      return (0, LQ.useEffect)((() => {
+        const QQ = () => {
+          FQ(uQ())
         };
-        return dd(), kd = dd, Cd.add(kd), () => {
-          Cd.delete(kd)
+        return QQ(), wQ = QQ, mQ.add(wQ), () => {
+          mQ.delete(wQ)
         };
-        var kd
-      }), []), dd
+        var wQ
+      }), []), QQ
     }
   },
-  8815: (dd, Jd, kd) => {
-    function pd(dd) {
+  8651: (QQ, FQ, wQ) => {
+    function LQ(QQ) {
       return {
-        x: (dd.left + dd.right) / 2,
-        y: (dd.top + dd.bottom) / 2
+        x: (QQ.left + QQ.right) / 2,
+        y: (QQ.top + QQ.bottom) / 2
       }
     }
 
-    function Nd(dd) {
-      return 0 === dd.length ? null : dd.reduce(((dd, Jd) => ({
-        left: Math.min(dd.left, Jd.left),
-        top: Math.min(dd.top, Jd.top),
-        right: Math.max(dd.right, Jd.right),
-        bottom: Math.max(dd.bottom, Jd.bottom)
+    function qQ(QQ) {
+      return 0 === QQ.length ? null : QQ.reduce(((QQ, FQ) => ({
+        left: Math.min(QQ.left, FQ.left),
+        top: Math.min(QQ.top, FQ.top),
+        right: Math.max(QQ.right, FQ.right),
+        bottom: Math.max(QQ.bottom, FQ.bottom)
       })))
     }
 
-    function Wd(dd, Jd) {
-      const kd = Math.max(0, (Jd - (dd.right - dd.left)) / 2),
-        pd = Math.max(0, (Jd - (dd.bottom - dd.top)) / 2);
+    function oQ(QQ, FQ) {
+      const wQ = Math.max(0, (FQ - (QQ.right - QQ.left)) / 2),
+        LQ = Math.max(0, (FQ - (QQ.bottom - QQ.top)) / 2);
       return {
-        left: dd.left - kd,
-        top: dd.top - pd,
-        right: dd.right + kd,
-        bottom: dd.bottom + pd
+        left: QQ.left - wQ,
+        top: QQ.top - LQ,
+        right: QQ.right + wQ,
+        bottom: QQ.bottom + LQ
       }
     }
 
-    function Pd(dd, Jd) {
-      return Jd.x >= dd.left && Jd.x <= dd.right && Jd.y >= dd.top && Jd.y <= dd.bottom
+    function DQ(QQ, FQ) {
+      return FQ.x >= QQ.left && FQ.x <= QQ.right && FQ.y >= QQ.top && FQ.y <= QQ.bottom
     }
 
-    function Zd(dd, Jd, kd) {
-      let Nd = null,
-        Zd = 1 / 0;
+    function kQ(QQ, FQ, wQ) {
+      let qQ = null,
+        kQ = 1 / 0;
       for (const {
-          id: pd,
-          box: Wd
+          id: LQ,
+          box: oQ
         }
-        of Jd) {
-        const Jd = (Wd.right - Wd.left) * (Wd.bottom - Wd.top);
-        Pd(Wd, dd) && Jd < Zd && (Zd = Jd, Nd = pd)
+        of FQ) {
+        const FQ = (oQ.right - oQ.left) * (oQ.bottom - oQ.top);
+        DQ(oQ, QQ) && FQ < kQ && (kQ = FQ, qQ = LQ)
       }
-      if (null !== Nd) return Nd;
-      let gd = 1 / 0;
+      if (null !== qQ) return qQ;
+      let vQ = 1 / 0;
       for (const {
-          id: Cd,
-          box: Kd
+          id: mQ,
+          box: uQ
         }
-        of Jd) {
-        if (!Pd(Wd(Kd, kd), dd)) continue;
-        const Jd = pd(Kd),
-          Zd = Math.hypot(dd.x - Jd.x, dd.y - Jd.y);
-        Zd < gd && (gd = Zd, Nd = Cd)
+        of FQ) {
+        if (!DQ(oQ(uQ, wQ), QQ)) continue;
+        const FQ = LQ(uQ),
+          kQ = Math.hypot(QQ.x - FQ.x, QQ.y - FQ.y);
+        kQ < vQ && (vQ = kQ, qQ = mQ)
       }
-      return Nd
+      return qQ
     }
 
-    function gd(dd, Jd, kd) {
+    function vQ(QQ, FQ, wQ) {
       return {
-        left: kd.left,
-        top: kd.top,
-        right: dd - kd.right,
-        bottom: Jd - kd.bottom
+        left: wQ.left,
+        top: wQ.top,
+        right: QQ - wQ.right,
+        bottom: FQ - wQ.bottom
       }
     }
 
-    function Cd(dd, Jd, kd, pd) {
-      const Nd = (dd, Jd, kd) => Math.max(Math.min(Jd, 0), Math.min(Math.max(kd, 0), dd));
+    function mQ(QQ, FQ, wQ, LQ) {
+      const qQ = (QQ, FQ, wQ) => Math.max(Math.min(FQ, 0), Math.min(Math.max(wQ, 0), QQ));
       return {
-        x: Nd(Jd, pd.left - dd.left, pd.right - dd.right),
-        y: Nd(kd, pd.top - dd.top, pd.bottom - dd.bottom)
+        x: qQ(FQ, LQ.left - QQ.left, LQ.right - QQ.right),
+        y: qQ(wQ, LQ.top - QQ.top, LQ.bottom - QQ.bottom)
       }
     }
 
-    function Kd(dd, Jd, kd, pd, Nd) {
-      const Wd = dd.dx * pd + Jd,
-        Pd = dd.dy * Nd + kd,
-        Zd = dd => Math.max(-1, Math.min(1, dd));
+    function uQ(QQ, FQ, wQ, LQ, qQ) {
+      const oQ = QQ.dx * LQ + FQ,
+        DQ = QQ.dy * qQ + wQ,
+        kQ = QQ => Math.max(-1, Math.min(1, QQ));
       return {
-        dx: Zd(Wd / pd),
-        dy: Zd(Pd / Nd)
+        dx: kQ(oQ / LQ),
+        dy: kQ(DQ / qQ)
       }
     }
 
-    function od(dd, Jd, kd, pd) {
-      return Jd <= 0 || kd <= 0 ? 1 : Math.max(.05, Math.min(1, dd / Jd, pd / kd))
+    function HQ(QQ, FQ, wQ, LQ) {
+      return FQ <= 0 || wQ <= 0 ? 1 : Math.max(.05, Math.min(1, QQ / FQ, LQ / wQ))
     }
 
-    function ld(dd, Jd, kd) {
-      return Math.min(dd.right, Jd.right) - Math.max(dd.left, Jd.left) > kd && Math.min(dd.bottom, Jd.bottom) - Math.max(dd.top, Jd.top) > kd
+    function bQ(QQ, FQ, wQ) {
+      return Math.min(QQ.right, FQ.right) - Math.max(QQ.left, FQ.left) > wQ && Math.min(QQ.bottom, FQ.bottom) - Math.max(QQ.top, FQ.top) > wQ
     }
 
-    function Qd(dd, Jd) {
-      const kd = (dd, Jd, kd, pd) => Jd - dd > pd - kd ? kd - dd > Jd - pd ? pd - Jd : kd - dd : dd < kd ? kd - dd : Jd > pd ? pd - Jd : 0;
+    function YQ(QQ, FQ) {
+      const wQ = (QQ, FQ, wQ, LQ) => FQ - QQ > LQ - wQ ? wQ - QQ > FQ - LQ ? LQ - FQ : wQ - QQ : QQ < wQ ? wQ - QQ : FQ > LQ ? LQ - FQ : 0;
       return {
-        x: kd(dd.left, dd.right, Jd.left, Jd.right),
-        y: kd(dd.top, dd.bottom, Jd.top, Jd.bottom)
+        x: wQ(QQ.left, QQ.right, FQ.left, FQ.right),
+        y: wQ(QQ.top, QQ.bottom, FQ.top, FQ.bottom)
       }
     }
 
-    function Ld(dd, Jd) {
+    function xQ(QQ, FQ) {
       let {
-        avoid: kd = null,
-        bounds: pd = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, Nd = 0, Wd = 1 / 0;
-      return dd.forEach(((dd, Pd) => {
-        const Zd = Jd.filter((Jd => ld(dd, Jd, 0))).length,
-          gd = null !== pd && (dd.left < pd.left || dd.top < pd.top || dd.right > pd.right || dd.bottom > pd.bottom),
-          Cd = Zd + (kd && ld(dd, kd, 0) ? 1e3 : 0) + (gd ? 1e6 : 0);
-        Cd < Wd && (Nd = Pd, Wd = Cd)
-      })), Nd
+        avoid: wQ = null,
+        bounds: LQ = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, qQ = 0, oQ = 1 / 0;
+      return QQ.forEach(((QQ, DQ) => {
+        const kQ = FQ.filter((FQ => bQ(QQ, FQ, 0))).length,
+          vQ = null !== LQ && (QQ.left < LQ.left || QQ.top < LQ.top || QQ.right > LQ.right || QQ.bottom > LQ.bottom),
+          mQ = kQ + (wQ && bQ(QQ, wQ, 0) ? 1e3 : 0) + (vQ ? 1e6 : 0);
+        mQ < oQ && (qQ = DQ, oQ = mQ)
+      })), qQ
     }
-    kd.d(Jd, {
-      A: () => Qd,
-      B: () => Nd,
-      c: () => pd,
-      g: () => Pd,
-      i: () => ld,
-      k: () => Cd,
-      o: () => Wd,
-      p: () => Ld,
-      s: () => Kd,
-      u: () => Zd,
-      v: () => od,
-      w: () => gd
+    wQ.d(FQ, {
+      A: () => vQ,
+      C: () => YQ,
+      E: () => qQ,
+      e: () => LQ,
+      i: () => DQ,
+      l: () => bQ,
+      o: () => mQ,
+      r: () => oQ,
+      s: () => xQ,
+      u: () => uQ,
+      x: () => kQ,
+      z: () => HQ
     })
   },
-  9176: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Wd,
-      i: () => Nd
+  9030: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => oQ,
+      d: () => qQ
     });
-    var pd = kd(22);
+    var LQ = wQ(17);
 
-    function Nd(dd, Jd) {
-      return dd && !Jd
+    function qQ(QQ, FQ) {
+      return QQ && !FQ
     }
 
-    function Wd() {
-      return Nd(pd.d.get("isTouchScreen"), pd.d.get("clientEscMenuOptions").touchActionButtons)
+    function oQ() {
+      return qQ(LQ.c.get("isTouchScreen"), LQ.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  8565: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Nd,
-      d: () => pd
+  8414: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => qQ,
+      f: () => LQ
     });
-    const pd = "controllerOpenKeyboard",
-      Nd = "controllerKeyboardVisible"
+    const LQ = "controllerOpenKeyboard",
+      qQ = "controllerKeyboardVisible"
   },
-  9125: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => pd
+  8986: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => LQ
     });
-    const pd = new Set(["chunkBorders"])
+    const LQ = new Set(["chunkBorders"])
   },
-  9117: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      ALL_DEV_TOOLS: () => Pd,
-      coreDevTools: () => Cd,
-      devTools: () => gd
+  8978: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      ALL_DEV_TOOLS: () => DQ,
+      coreDevTools: () => mQ,
+      devTools: () => vQ
     });
-    var pd = kd(626),
-      Nd = kd(1320),
-      Wd = kd(9125);
-    const Pd = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Zd() {
+    var LQ = wQ(634),
+      qQ = wQ(1314),
+      oQ = wQ(8986);
+    const DQ = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function kQ() {
       const {
-        noaDevTools: dd
-      } = await kd.e(231).then((() => kd(41062)));
-      return dd
+        noaDevTools: QQ
+      } = await wQ.e(231).then((() => wQ(40475)));
+      return QQ
     }
-    const gd = new class {
+    const vQ = new class {
         constructor() {
-          this.loadHost = Zd, this.tools = Pd
+          this.loadHost = kQ, this.tools = DQ
         }
-        setHost(dd) {
-          this.tools = null === dd ? Pd : dd.tools, this.loadHost = null === dd ? Zd : async () => dd
+        setHost(QQ) {
+          this.tools = null === QQ ? DQ : QQ.tools, this.loadHost = null === QQ ? kQ : async () => QQ
         }
-        supports(dd) {
-          return this.tools.has(dd)
+        supports(QQ) {
+          return this.tools.has(QQ)
         }
-        async downloadScene(dd, Jd) {
-          const kd = await this.loadHost();
-          await kd.downloadScene(dd, Jd)
+        async downloadScene(QQ, FQ) {
+          const wQ = await this.loadHost();
+          await wQ.downloadScene(QQ, FQ)
         }
-        async setAmbientLightIntensity(dd) {
-          const Jd = await this.loadHost();
-          await Jd.setAmbientLightIntensity(dd)
+        async setAmbientLightIntensity(QQ) {
+          const FQ = await this.loadHost();
+          await FQ.setAmbientLightIntensity(QQ)
         }
       },
-      Cd = {
-        tools: Wd.b,
+      mQ = {
+        tools: oQ.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9192,121 +9192,121 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    pd.x && gd.setHost(Cd), (0, Nd.r)((() => {
-      gd.setHost(Cd)
+    LQ.s && vQ.setHost(mQ), (0, qQ.x)((() => {
+      vQ.setHost(mQ)
     }))
   },
-  9274: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Pd,
-      d: () => Nd,
-      e: () => Kd
+  9142: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => DQ,
+      d: () => qQ,
+      g: () => uQ
     });
-    var pd = kd(1598);
+    var LQ = wQ(1560);
 
-    function Nd(dd) {
-      var Jd;
+    function qQ(QQ) {
+      var FQ;
       return {
-        ...Pd.store,
-        yaw: Pd.store.yaw + (null !== (Jd = pd.c[dd].previewYaw) && void 0 !== Jd ? Jd : 0)
+        ...DQ.store,
+        yaw: DQ.store.yaw + (null !== (FQ = LQ.e[QQ].previewYaw) && void 0 !== FQ ? FQ : 0)
       }
     }
-    const Wd = {
+    const oQ = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Pd = {
-        player: Wd,
+      DQ = {
+        player: oQ,
         store: {
-          ...Wd,
+          ...oQ,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function Zd(dd, Jd) {
-      dd instanceof Promise ? dd.then(Jd).catch((dd => {
-        console.error("Couldn't open the preview", dd)
-      })) : Jd(dd)
+    function kQ(QQ, FQ) {
+      QQ instanceof Promise ? QQ.then(FQ).catch((QQ => {
+        console.error("Couldn't open the preview", QQ)
+      })) : FQ(QQ)
     }
-    class gd {
-      constructor(dd) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, Zd(dd, (dd => {
-          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height), null !== this.view && dd.show(this.view))
+    class vQ {
+      constructor(QQ) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, kQ(QQ, (QQ => {
+          this.closed ? QQ.close() : (this.opened = QQ, null !== this.size && QQ.resize(this.size.width, this.size.height), null !== this.view && QQ.show(this.view))
         }))
       }
-      show(dd) {
-        var Jd;
-        this.view = dd, null === (Jd = this.opened) || void 0 === Jd || Jd.show(dd)
+      show(QQ) {
+        var FQ;
+        this.view = QQ, null === (FQ = this.opened) || void 0 === FQ || FQ.show(QQ)
       }
-      resize(dd, Jd) {
-        var kd;
+      resize(QQ, FQ) {
+        var wQ;
         this.size = {
-          width: dd,
-          height: Jd
-        }, null === (kd = this.opened) || void 0 === kd || kd.resize(dd, Jd)
+          width: QQ,
+          height: FQ
+        }, null === (wQ = this.opened) || void 0 === wQ || wQ.resize(QQ, FQ)
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
+        var QQ;
+        this.closed = !0, null === (QQ = this.opened) || void 0 === QQ || QQ.close(), this.opened = null
       }
     }
-    class Cd {
-      constructor(dd) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(dd).then((dd => dd.ready)), Zd(dd, (dd => {
-          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height))
+    class mQ {
+      constructor(QQ) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(QQ).then((QQ => QQ.ready)), kQ(QQ, (QQ => {
+          this.closed ? QQ.close() : (this.opened = QQ, null !== this.size && QQ.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var dd, Jd;
-        return null !== (dd = null === (Jd = this.opened) || void 0 === Jd ? void 0 : Jd.isReady()) && void 0 !== dd && dd
+        var QQ, FQ;
+        return null !== (QQ = null === (FQ = this.opened) || void 0 === FQ ? void 0 : FQ.isReady()) && void 0 !== QQ && QQ
       }
-      setCosmetic(dd, Jd) {
-        var kd;
-        null === (kd = this.opened) || void 0 === kd || kd.setCosmetic(dd, Jd)
+      setCosmetic(QQ, FQ) {
+        var wQ;
+        null === (wQ = this.opened) || void 0 === wQ || wQ.setCosmetic(QQ, FQ)
       }
-      playEmote(dd) {
-        var Jd;
-        null === (Jd = this.opened) || void 0 === Jd || Jd.playEmote(dd)
+      playEmote(QQ) {
+        var FQ;
+        null === (FQ = this.opened) || void 0 === FQ || FQ.playEmote(QQ)
       }
-      setOrbit(dd) {
-        var Jd;
-        null === (Jd = this.opened) || void 0 === Jd || Jd.setOrbit(dd)
+      setOrbit(QQ) {
+        var FQ;
+        null === (FQ = this.opened) || void 0 === FQ || FQ.setOrbit(QQ)
       }
       resetCamera() {
-        var dd;
-        null === (dd = this.opened) || void 0 === dd || dd.resetCamera()
+        var QQ;
+        null === (QQ = this.opened) || void 0 === QQ || QQ.resetCamera()
       }
-      async untilDrawn(dd) {
-        var Jd;
-        await this.ready, await (null === (Jd = this.opened) || void 0 === Jd ? void 0 : Jd.untilDrawn(dd))
+      async untilDrawn(QQ) {
+        var FQ;
+        await this.ready, await (null === (FQ = this.opened) || void 0 === FQ ? void 0 : FQ.untilDrawn(QQ))
       }
-      resize(dd, Jd) {
-        var kd;
+      resize(QQ, FQ) {
+        var wQ;
         this.size = {
-          width: dd,
-          height: Jd
-        }, null === (kd = this.opened) || void 0 === kd || kd.resize(dd, Jd)
+          width: QQ,
+          height: FQ
+        }, null === (wQ = this.opened) || void 0 === wQ || wQ.resize(QQ, FQ)
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
+        var QQ;
+        this.closed = !0, null === (QQ = this.opened) || void 0 === QQ || QQ.close(), this.opened = null
       }
     }
-    const Kd = new class {
+    const uQ = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(dd) {
-        this.host = dd
+      setHost(QQ) {
+        this.host = QQ
       }
-      setDefaultHost(dd) {
-        this.makeDefault = dd
+      setDefaultHost(QQ) {
+        this.makeDefault = QQ
       }
       current() {
         if (null === this.host) {
@@ -9315,99 +9315,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(dd) {
-        return new gd(this.current().openMob(dd))
+      openMob(QQ) {
+        return new vQ(this.current().openMob(QQ))
       }
-      openPet(dd) {
-        return new gd(this.current().openPet(dd))
+      openPet(QQ) {
+        return new vQ(this.current().openPet(QQ))
       }
-      openMobLineup(dd) {
-        return new gd(this.current().openMobLineup(dd))
+      openMobLineup(QQ) {
+        return new vQ(this.current().openMobLineup(QQ))
       }
-      openCharacter(dd, Jd) {
-        return new Cd(this.current().openCharacter(dd, Jd))
+      openCharacter(QQ, FQ) {
+        return new mQ(this.current().openCharacter(QQ, FQ))
       }
     }
   },
-  9272: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => pd.c,
-      f: () => pd.d,
-      j: () => pd.e
+  9137: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ.b,
+      c: () => LQ.d,
+      d: () => LQ.g
     });
-    var pd = kd(9274);
-    class Nd {
-      constructor(dd) {
-        this.load = dd, this.loaded = null, this.loading = null
+    var LQ = wQ(9142);
+    class qQ {
+      constructor(QQ) {
+        this.load = QQ, this.loaded = null, this.loading = null
       }
-      run(dd) {
-        return null !== this.loaded ? dd(this.loaded) : (this.loading ??= this.load().then((dd => (this.loaded = dd, dd)), (dd => {
-          throw this.loading = null, dd
-        })), this.loading.then(dd))
+      run(QQ) {
+        return null !== this.loaded ? QQ(this.loaded) : (this.loading ??= this.load().then((QQ => (this.loaded = QQ, QQ)), (QQ => {
+          throw this.loading = null, QQ
+        })), this.loading.then(QQ))
       }
     }
-    class Wd {
+    class oQ {
       constructor() {
-        this.mobScene = new Nd((() => Promise.all([kd.e(70), kd.e(227), kd.e(226), kd.e(246), kd.e(95), kd.e(247), kd.e(73), kd.e(72), kd.e(244), kd.e(71), kd.e(254), kd.e(248), kd.e(253), kd.e(251), kd.e(243), kd.e(265), kd.e(223), kd.e(238), kd.e(249), kd.e(252), kd.e(75), kd.e(197), kd.e(217), kd.e(94), kd.e(220), kd.e(235), kd.e(114), kd.e(236), kd.e(74), kd.e(113), kd.e(155)]).then((() => kd(41071))))), this.characterScene = new Nd((() => Promise.all([kd.e(70), kd.e(227), kd.e(226), kd.e(246), kd.e(95), kd.e(247), kd.e(73), kd.e(72), kd.e(244), kd.e(71), kd.e(254), kd.e(248), kd.e(253), kd.e(251), kd.e(243), kd.e(265), kd.e(223), kd.e(238), kd.e(249), kd.e(252), kd.e(75), kd.e(197), kd.e(217), kd.e(94), kd.e(220), kd.e(235), kd.e(114), kd.e(236), kd.e(74), kd.e(113), kd.e(154)]).then((() => kd(41150)))))
+        this.mobScene = new qQ((() => Promise.all([wQ.e(70), wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(95), wQ.e(247), wQ.e(73), wQ.e(72), wQ.e(244), wQ.e(71), wQ.e(254), wQ.e(248), wQ.e(253), wQ.e(251), wQ.e(243), wQ.e(265), wQ.e(223), wQ.e(238), wQ.e(249), wQ.e(252), wQ.e(75), wQ.e(197), wQ.e(217), wQ.e(94), wQ.e(220), wQ.e(235), wQ.e(114), wQ.e(236), wQ.e(74), wQ.e(113), wQ.e(155)]).then((() => wQ(40492))))), this.characterScene = new qQ((() => Promise.all([wQ.e(70), wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(95), wQ.e(247), wQ.e(73), wQ.e(72), wQ.e(244), wQ.e(71), wQ.e(254), wQ.e(248), wQ.e(253), wQ.e(251), wQ.e(243), wQ.e(265), wQ.e(223), wQ.e(238), wQ.e(249), wQ.e(252), wQ.e(75), wQ.e(197), wQ.e(217), wQ.e(94), wQ.e(220), wQ.e(235), wQ.e(114), wQ.e(236), wQ.e(74), wQ.e(113), wQ.e(154)]).then((() => wQ(40583)))))
       }
-      openMob(dd) {
-        return this.mobScene.run((Jd => Jd.openMobPreview(dd)))
+      openMob(QQ) {
+        return this.mobScene.run((FQ => FQ.openMobPreview(QQ)))
       }
-      openPet(dd) {
-        return this.mobScene.run((Jd => Jd.openPetPreview(dd)))
+      openPet(QQ) {
+        return this.mobScene.run((FQ => FQ.openPetPreview(QQ)))
       }
-      openMobLineup(dd) {
-        return this.mobScene.run((Jd => Jd.openMobLineupPreview(dd)))
+      openMobLineup(QQ) {
+        return this.mobScene.run((FQ => FQ.openMobLineupPreview(QQ)))
       }
-      openCharacter(dd, Jd) {
-        return this.characterScene.run((kd => kd.openCharacterPreview(dd, Jd)))
+      openCharacter(QQ, FQ) {
+        return this.characterScene.run((wQ => wQ.openCharacterPreview(QQ, FQ)))
       }
     }
-    pd.e.setDefaultHost((() => new Wd))
+    LQ.g.setDefaultHost((() => new oQ))
   },
-  6534: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Nd,
-      g: () => Wd
+  6485: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => qQ,
+      f: () => oQ
     });
-    var pd = kd(33);
-    const Nd = "shaderPack";
-    async function Wd() {
-      var dd;
-      let Jd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (dd = await pd.f.getItem(Nd, Jd)) && void 0 !== dd ? dd : null
+    var LQ = wQ(27);
+    const qQ = "shaderPack";
+    async function oQ() {
+      var QQ;
+      let FQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (QQ = await LQ.h.getItem(qQ, FQ)) && void 0 !== QQ ? QQ : null
     }
   },
-  9151: (dd, Jd, kd) => {
-    function pd(dd, Jd) {
-      return dd && !Jd
+  9001: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ) {
+      return QQ && !FQ
     }
-    kd.d(Jd, {
-      d: () => pd
+    wQ.d(FQ, {
+      e: () => LQ
     })
   },
-  9169: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Wd
+  9022: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => oQ
     });
-    var pd = kd(1078);
+    var LQ = wQ(1087);
 
-    function Nd() {
-      var dd, Jd;
-      return null !== (dd = null === (Jd = screen.orientation) || void 0 === Jd ? void 0 : Jd.type) && void 0 !== dd ? dd : innerWidth > innerHeight ? "landscape" : "portrait"
+    function qQ() {
+      var QQ, FQ;
+      return null !== (QQ = null === (FQ = screen.orientation) || void 0 === FQ ? void 0 : FQ.type) && void 0 !== QQ ? QQ : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const Wd = new class {
+    const oQ = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && Nd() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && qQ() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = Nd(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, pd.ZO)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = qQ(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, LQ.pA)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9415,34 +9415,34 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const dd of this.resizers) dd()
+            for (const QQ of this.resizers) QQ()
           }
         }), 1e3)
       }
-      heldSizer(dd) {
-        let Jd = !1;
+      heldSizer(QQ) {
+        let FQ = !1;
         return () => {
-          if (Jd && this.isHeld()) return null;
-          const kd = dd();
-          return Jd ||= null !== kd, kd
+          if (FQ && this.isHeld()) return null;
+          const wQ = QQ();
+          return FQ ||= null !== wQ, wQ
         }
       }
-      onRelease(dd) {
-        return this.resizers.add(dd), () => {
-          this.resizers.delete(dd)
+      onRelease(QQ) {
+        return this.resizers.add(QQ), () => {
+          this.resizers.delete(QQ)
         }
       }
     }
   },
-  8809: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Zd,
-      d: () => gd
+  8644: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => kQ,
+      f: () => vQ
     });
-    var pd = kd(22),
-      Nd = kd(1348),
-      Wd = kd(95);
-    const Pd = {
+    var LQ = wQ(17),
+      qQ = wQ(1339),
+      oQ = wQ(96);
+    const DQ = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -9485,111 +9485,111 @@ export const modules = {
       }
     };
 
-    function Zd() {
-      return (0, Wd.isMobile)() && "function" === typeof navigator.vibrate
+    function kQ() {
+      return (0, oQ.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const gd = new class {
-      constructor(dd) {
-        this.deps = dd, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const vQ = new class {
+      constructor(QQ) {
+        this.deps = QQ, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(dd, Jd) {
-        var kd;
+      play(QQ, FQ) {
+        var wQ;
         if (!this.deps.enabled()) return;
-        const pd = Pd[dd],
-          Nd = null !== Jd && void 0 !== Jd ? Jd : pd.pattern;
-        if (null === Nd) return void console.warn("No vibration pattern for", dd);
-        const Wd = this.deps.now();
-        Wd - this.lastAnyAt < 40 && pd.priority < this.playingPriority || Wd - (null !== (kd = this.lastAt.get(dd)) && void 0 !== kd ? kd : -1 / 0) < pd.minGapMs || Wd < this.playingUntil && pd.priority < this.playingPriority || (this.lastAt.set(dd, Wd), this.lastAnyAt = Wd, this.playingUntil = Wd + Nd.reduce(((dd, Jd) => dd + Jd), 0), this.playingPriority = pd.priority, this.deps.vibrate(Nd))
+        const LQ = DQ[QQ],
+          qQ = null !== FQ && void 0 !== FQ ? FQ : LQ.pattern;
+        if (null === qQ) return void console.warn("No vibration pattern for", QQ);
+        const oQ = this.deps.now();
+        oQ - this.lastAnyAt < 40 && LQ.priority < this.playingPriority || oQ - (null !== (wQ = this.lastAt.get(QQ)) && void 0 !== wQ ? wQ : -1 / 0) < LQ.minGapMs || oQ < this.playingUntil && LQ.priority < this.playingPriority || (this.lastAt.set(QQ, oQ), this.lastAnyAt = oQ, this.playingUntil = oQ + qQ.reduce(((QQ, FQ) => QQ + FQ), 0), this.playingPriority = LQ.priority, this.deps.vibrate(qQ))
       }
     }({
-      vibrate: dd => {
-        navigator.vibrate([...dd])
+      vibrate: QQ => {
+        navigator.vibrate([...QQ])
       },
       now: () => performance.now(),
-      enabled: () => Zd() && pd.d.get("isTouchScreen") && pd.d.get("clientEscMenuOptions").vibration && !(0, Nd.g)()
+      enabled: () => kQ() && LQ.c.get("isTouchScreen") && LQ.c.get("clientEscMenuOptions").vibration && !(0, qQ.e)()
     })
   },
-  9142: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Qd,
-      e: () => ld
+  8997: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => YQ,
+      d: () => bQ
     });
-    var pd = kd(22),
-      Nd = kd(1726),
-      Wd = kd(33),
-      Pd = kd(1371),
-      Zd = kd(3546),
-      gd = kd(1492),
-      Cd = kd(1404);
-    const Kd = 2592e5,
-      od = "notificationOptInLastPromptedAt";
-    async function ld() {
-      var dd;
-      const Jd = await Qd();
-      if (null === Jd) return;
-      const kd = null !== (dd = Wd.i.getItem(od)) && void 0 !== dd ? dd : 0;
-      if (Date.now() - kd < Kd) return;
-      if ((0, Cd.d)()) return;
-      const pd = await Pd.NotificationProvider.showPromptPopup({
+    var LQ = wQ(17),
+      qQ = wQ(1694),
+      oQ = wQ(27),
+      DQ = wQ(1362),
+      kQ = wQ(3542),
+      vQ = wQ(1471),
+      mQ = wQ(1395);
+    const uQ = 2592e5,
+      HQ = "notificationOptInLastPromptedAt";
+    async function bQ() {
+      var QQ;
+      const FQ = await YQ();
+      if (null === FQ) return;
+      const wQ = null !== (QQ = oQ.i.getItem(HQ)) && void 0 !== QQ ? QQ : 0;
+      if (Date.now() - wQ < uQ) return;
+      if ((0, mQ.d)()) return;
+      const LQ = await DQ.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: Nd.e.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: qQ.d.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOn: "cancel"
       }).getResult();
-      "notificationTornDown" !== pd && (Wd.i.setItem(od, Date.now()), (0, gd.reportAnalyticsClick)({
-        id: !0 === pd ? "push.allow" : "push.deny",
-        value: Nd.e.supports("notifications") ? "app" : "browser"
-      }), !0 === pd && Jd().catch((dd => {
-        console.error("Failed to ask for push notifications:", dd)
+      "notificationTornDown" !== LQ && (oQ.i.setItem(HQ, Date.now()), (0, vQ.reportAnalyticsClick)({
+        id: !0 === LQ ? "push.allow" : "push.deny",
+        value: qQ.d.supports("notifications") ? "app" : "browser"
+      }), !0 === LQ && FQ().catch((QQ => {
+        console.error("Failed to ask for push notifications:", QQ)
       })))
     }
-    async function Qd() {
-      return await Nd.e.ready, Nd.e.supports("notifications") ? pd.d.get("mobilePushNotificationsCanAsk") ? async () => {
-        Nd.e.request("notifications.requestPermission", {}).then((dd => {
+    async function YQ() {
+      return await qQ.d.ready, qQ.d.supports("notifications") ? LQ.c.get("mobilePushNotificationsCanAsk") ? async () => {
+        qQ.d.request("notifications.requestPermission", {}).then((QQ => {
           let {
-            canAsk: Jd
-          } = dd;
-          pd.d.set({
-            mobilePushNotificationsCanAsk: Jd
+            canAsk: FQ
+          } = QQ;
+          LQ.c.set({
+            mobilePushNotificationsCanAsk: FQ
           })
-        }), (dd => {
-          console.error("The app couldn't ask for push notifications:", dd)
+        }), (QQ => {
+          console.error("The app couldn't ask for push notifications:", QQ)
         }))
-      }: null: await Zd.b.canAsk() ? () => Zd.b.requestPermission() : null
+      }: null: await kQ.c.canAsk() ? () => kQ.c.requestPermission() : null
     }
   },
-  9153: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Zd,
-      e: () => gd
+  9004: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => kQ,
+      g: () => vQ
     });
-    var pd = kd(22);
-    const Nd = 24,
-      Wd = "farNametags",
-      Pd = 1e5;
+    var LQ = wQ(17);
+    const qQ = 24,
+      oQ = "farNametags",
+      DQ = 1e5;
 
-    function Zd() {
-      var dd;
-      return null === (dd = pd.d.get("showDistantNametags")) || void 0 === dd || dd
+    function kQ() {
+      var QQ;
+      return null === (QQ = LQ.c.get("showDistantNametags")) || void 0 === QQ || QQ
     }
 
-    function gd() {
-      var dd;
-      return null !== (dd = function() {
-        const dd = new URLSearchParams(window.location.search).get(Wd),
-          Jd = null === dd || "" === dd ? NaN : Number(dd);
-        return Number.isFinite(Jd) && Jd >= 0 ? Math.min(Jd, Pd) : null
-      }()) && void 0 !== dd ? dd : Zd() ? 0 : Nd
+    function vQ() {
+      var QQ;
+      return null !== (QQ = function() {
+        const QQ = new URLSearchParams(window.location.search).get(oQ),
+          FQ = null === QQ || "" === QQ ? NaN : Number(QQ);
+        return Number.isFinite(FQ) && FQ >= 0 ? Math.min(FQ, DQ) : null
+      }()) && void 0 !== QQ ? QQ : kQ() ? 0 : qQ
     }
   },
-  9257: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Nd,
-      h: () => Pd
+  9127: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => qQ,
+      d: () => DQ
     });
-    const pd = [{
+    const LQ = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -9771,79 +9771,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Nd(dd) {
-      let Jd, kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof dd) {
-        if (!Number.isFinite(dd)) return "0";
-        if (Math.abs(dd) < 100) {
-          const Jd = dd < 0 ? "-" : "",
-            kd = Math.abs(dd);
-          return kd >= 10 ? `${Jd}${kd.toFixed(1).replace(/\.0$/,"")}` : `${Jd}${kd.toFixed(2).replace(/\.?0+$/,"")}`
+    function qQ(QQ) {
+      let FQ, wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof QQ) {
+        if (!Number.isFinite(QQ)) return "0";
+        if (Math.abs(QQ) < 100) {
+          const FQ = QQ < 0 ? "-" : "",
+            wQ = Math.abs(QQ);
+          return wQ >= 10 ? `${FQ}${wQ.toFixed(1).replace(/\.0$/,"")}` : `${FQ}${wQ.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Jd = BigInt(Math.floor(dd))
-      } else Jd = dd;
-      const Nd = Jd < 0n ? -Jd : Jd,
-        Wd = Jd < 0n ? "-" : "",
-        Pd = Nd.toString();
-      if (Pd.length <= kd) return `${Wd}${Pd}`;
-      const Zd = 3 * Math.floor((Pd.length - 1) / 3);
-      if (Zd < 3) return `${Wd}${Pd}`;
-      if (Zd > 3 * pd.length) {
-        const dd = Pd[0],
-          Jd = Pd.slice(1, 3).replace(/0+$/, "");
-        return `${Wd}${Jd?`${dd}.${Jd}`:dd}e${Pd.length-1}`
+        FQ = BigInt(Math.floor(QQ))
+      } else FQ = QQ;
+      const qQ = FQ < 0n ? -FQ : FQ,
+        oQ = FQ < 0n ? "-" : "",
+        DQ = qQ.toString();
+      if (DQ.length <= wQ) return `${oQ}${DQ}`;
+      const kQ = 3 * Math.floor((DQ.length - 1) / 3);
+      if (kQ < 3) return `${oQ}${DQ}`;
+      if (kQ > 3 * LQ.length) {
+        const QQ = DQ[0],
+          FQ = DQ.slice(1, 3).replace(/0+$/, "");
+        return `${oQ}${FQ?`${QQ}.${FQ}`:QQ}e${DQ.length-1}`
       }
       const {
-        threshold: gd,
-        suffix: Cd
-      } = pd[pd.length - Zd / 3], Kd = Nd / gd, od = Number(1000n * (Nd % gd) / gd), ld = Number(Kd) + od / 1e3;
-      let Qd;
-      return Qd = ld >= 100 ? Math.floor(ld).toString() : ld >= 10 ? ld.toFixed(1).replace(/\.0$/, "") : ld.toFixed(2).replace(/\.?0+$/, ""), `${Wd}${Qd}${Cd}`
+        threshold: vQ,
+        suffix: mQ
+      } = LQ[LQ.length - kQ / 3], uQ = qQ / vQ, HQ = Number(1000n * (qQ % vQ) / vQ), bQ = Number(uQ) + HQ / 1e3;
+      let YQ;
+      return YQ = bQ >= 100 ? Math.floor(bQ).toString() : bQ >= 10 ? bQ.toFixed(1).replace(/\.0$/, "") : bQ.toFixed(2).replace(/\.?0+$/, ""), `${oQ}${YQ}${mQ}`
     }
-    const Wd = pd.map((dd => {
+    const oQ = LQ.map((QQ => {
       let {
-        threshold: Jd,
-        suffix: kd
-      } = dd;
+        threshold: FQ,
+        suffix: wQ
+      } = QQ;
       return {
-        threshold: Number(Jd),
-        suffix: kd
+        threshold: Number(FQ),
+        suffix: wQ
       }
-    })).filter((dd => {
+    })).filter((QQ => {
       let {
-        threshold: Jd
-      } = dd;
-      return Number.isFinite(Jd)
+        threshold: FQ
+      } = QQ;
+      return Number.isFinite(FQ)
     }));
 
-    function Pd(dd) {
-      const Jd = Math.abs(dd),
-        kd = dd < 0 ? "-" : "";
+    function DQ(QQ) {
+      const FQ = Math.abs(QQ),
+        wQ = QQ < 0 ? "-" : "";
       for (const {
-          threshold: pd,
-          suffix: Nd
+          threshold: LQ,
+          suffix: qQ
         }
-        of Wd)
-        if (Jd >= pd) {
-          const dd = Jd / pd;
-          if (dd >= 1e3) return `${kd}${Jd.toExponential(2).replace("e+","e")}`;
-          let Wd;
-          return Wd = dd >= 100 ? Math.floor(dd).toString() : dd >= 10 ? dd.toFixed(1).replace(/\.0$/, "") : dd.toFixed(2).replace(/\.?0+$/, ""), `${kd}${Wd}${Nd}`
-        } return `${kd}${Jd}`
+        of oQ)
+        if (FQ >= LQ) {
+          const QQ = FQ / LQ;
+          if (QQ >= 1e3) return `${wQ}${FQ.toExponential(2).replace("e+","e")}`;
+          let oQ;
+          return oQ = QQ >= 100 ? Math.floor(QQ).toString() : QQ >= 10 ? QQ.toFixed(1).replace(/\.0$/, "") : QQ.toFixed(2).replace(/\.?0+$/, ""), `${wQ}${oQ}${qQ}`
+        } return `${wQ}${FQ}`
     }
   },
-  9247: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Kd,
-      f: () => ld,
-      i: () => od,
-      k: () => Pd,
-      m: () => Cd,
-      p: () => gd
+  9110: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => uQ,
+      d: () => bQ,
+      e: () => HQ,
+      g: () => DQ,
+      k: () => mQ,
+      l: () => vQ
     });
-    var pd = kd(313);
-    const Nd = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      Wd = {
+    var LQ = wQ(317);
+    const qQ = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      oQ = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9918,13 +9918,13 @@ export const modules = {
         }
       };
 
-    function Pd(dd) {
-      var Jd;
-      return null !== (Jd = Wd[dd]) && void 0 !== Jd ? Jd : {
+    function DQ(QQ) {
+      var FQ;
+      return null !== (FQ = oQ[QQ]) && void 0 !== FQ ? FQ : {
         translationKey: ""
       }
     }
-    const Zd = {
+    const kQ = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9977,107 +9977,107 @@ export const modules = {
       }]
     };
 
-    function gd(dd) {
-      return Nd.includes(dd)
+    function vQ(QQ) {
+      return qQ.includes(QQ)
     }
 
-    function Cd(dd) {
-      var Jd;
-      return !0 === (null === dd || void 0 === dd || null === (Jd = dd.customAttributes) || void 0 === Jd ? void 0 : Jd.cannotEnchant)
+    function mQ(QQ) {
+      var FQ;
+      return !0 === (null === QQ || void 0 === QQ || null === (FQ = QQ.customAttributes) || void 0 === FQ ? void 0 : FQ.cannotEnchant)
     }
 
-    function Kd(dd, Jd) {
+    function uQ(QQ, FQ) {
       const {
-        max: kd
-      } = Zd[dd].at(-1);
-      return Jd <= kd
+        max: wQ
+      } = kQ[QQ].at(-1);
+      return FQ <= wQ
     }
 
-    function od(dd) {
-      const Jd = Math.sin(dd / 80),
-        kd = dd => {
-          if (dd <= 0) return 0;
-          if (dd > 1) return 1;
-          let Jd = 0;
-          const kd = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let pd = 0; pd < kd.length; pd++) {
-            Jd += (pd % 2 === 0 ? 1 : -1) * kd[pd] * Math.pow(dd, 2 + pd) / (2 + pd)
+    function HQ(QQ) {
+      const FQ = Math.sin(QQ / 80),
+        wQ = QQ => {
+          if (QQ <= 0) return 0;
+          if (QQ > 1) return 1;
+          let FQ = 0;
+          const wQ = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let LQ = 0; LQ < wQ.length; LQ++) {
+            FQ += (LQ % 2 === 0 ? 1 : -1) * wQ[LQ] * Math.pow(QQ, 2 + LQ) / (2 + LQ)
           }
-          return 72 * Jd
+          return 72 * FQ
         },
-        pd = .3 - .78 * Jd,
-        Nd = .5 - .78 * Jd,
-        Wd = .6 - .7 * Jd,
-        Pd = .8 - .6 * Jd;
-      let Zd = kd(pd),
-        gd = kd(Nd) - Zd,
-        Cd = kd(Wd) - gd - Zd,
-        Kd = kd(Pd) - Cd - gd - Zd;
-      pd < .041 && (gd /= 1 - Zd, Cd /= 1 - Zd, Kd /= 1 - Zd, Zd = 0), Nd < .041 && (Zd /= 1 - gd, Cd /= 1 - gd, Kd /= 1 - gd, gd = 0), Wd < .041 && (Zd /= 1 - Cd, gd /= 1 - Cd, Kd /= 1 - Cd, Cd = 0), Pd < .041 && (Zd /= 1 - Kd, gd /= 1 - Kd, Cd /= 1 - Kd, Kd = 0);
+        LQ = .3 - .78 * FQ,
+        qQ = .5 - .78 * FQ,
+        oQ = .6 - .7 * FQ,
+        DQ = .8 - .6 * FQ;
+      let kQ = wQ(LQ),
+        vQ = wQ(qQ) - kQ,
+        mQ = wQ(oQ) - vQ - kQ,
+        uQ = wQ(DQ) - mQ - vQ - kQ;
+      LQ < .041 && (vQ /= 1 - kQ, mQ /= 1 - kQ, uQ /= 1 - kQ, kQ = 0), qQ < .041 && (kQ /= 1 - vQ, mQ /= 1 - vQ, uQ /= 1 - vQ, vQ = 0), oQ < .041 && (kQ /= 1 - mQ, vQ /= 1 - mQ, uQ /= 1 - mQ, mQ = 0), DQ < .041 && (kQ /= 1 - uQ, vQ /= 1 - uQ, mQ /= 1 - uQ, uQ = 0);
       return {
-        commonProb: Zd,
-        uncommonProb: gd,
-        rareProb: Cd,
-        epicProb: Kd,
-        legendaryProb: 1 - (Kd + Cd + gd + Zd)
+        commonProb: kQ,
+        uncommonProb: vQ,
+        rareProb: mQ,
+        epicProb: uQ,
+        legendaryProb: 1 - (uQ + mQ + vQ + kQ)
       }
     }
 
-    function ld(dd, Jd) {
+    function bQ(QQ, FQ) {
       const {
-        min: kd,
-        max: Nd
-      } = Zd[dd][Jd], Wd = pd.b.sampleUniformIntDistribution(kd, Nd, "includeMax");
+        min: wQ,
+        max: qQ
+      } = kQ[QQ][FQ], oQ = LQ.e.sampleUniformIntDistribution(wQ, qQ, "includeMax");
       return {
-        ...od(Wd),
-        level: Wd
+        ...HQ(oQ),
+        level: oQ
       }
     }
   },
-  8681: (dd, Jd, kd) => {
-    function pd(dd, Jd) {
-      return !dd.hidden && (Jd || !dd.isRewardedAd)
+  8523: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ) {
+      return !QQ.hidden && (FQ || !QQ.isRewardedAd)
     }
 
-    function Nd(dd) {
-      return "object" === typeof dd ? dd.option : dd
+    function qQ(QQ) {
+      return "object" === typeof QQ ? QQ.option : QQ
     }
 
-    function Wd(dd, Jd) {
-      var kd;
-      if ("dropdown" === (null === (kd = dd.userInput) || void 0 === kd ? void 0 : kd.type) && "object" === typeof dd.userInput.dropdownOptions[0]) {
-        for (const kd of dd.userInput.dropdownOptions)
-          if (Nd(kd) === Jd) return "object" === typeof kd ? kd.cost : dd.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", dd, "input:", Jd)
+    function oQ(QQ, FQ) {
+      var wQ;
+      if ("dropdown" === (null === (wQ = QQ.userInput) || void 0 === wQ ? void 0 : wQ.type) && "object" === typeof QQ.userInput.dropdownOptions[0]) {
+        for (const wQ of QQ.userInput.dropdownOptions)
+          if (qQ(wQ) === FQ) return "object" === typeof wQ ? wQ.cost : QQ.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", QQ, "input:", FQ)
       }
-      return dd.cost
+      return QQ.cost
     }
 
-    function Pd(dd, Jd, kd) {
-      var pd;
-      const Nd = null !== (pd = kd.excludedPlayers) && void 0 !== pd ? pd : [Jd];
-      return dd.filter((dd => !Nd.includes(dd)))
+    function DQ(QQ, FQ, wQ) {
+      var LQ;
+      const qQ = null !== (LQ = wQ.excludedPlayers) && void 0 !== LQ ? LQ : [FQ];
+      return QQ.filter((QQ => !qQ.includes(QQ)))
     }
-    kd.d(Jd, {
-      d: () => Wd,
-      h: () => Nd,
-      i: () => Pd,
-      k: () => pd
+    wQ.d(FQ, {
+      c: () => oQ,
+      f: () => qQ,
+      j: () => DQ,
+      l: () => LQ
     })
   },
-  9212: () => {},
-  9184: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  9074: () => {},
+  9046: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  9193: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  9048: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  9201: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  9053: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  9203: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  9058: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

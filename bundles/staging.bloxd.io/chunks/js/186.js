@@ -1,43 +1,43 @@
 export const id = 186;
 export const ids = [186];
 export const modules = {
-  9117: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      ALL_DEV_TOOLS: () => Pd,
-      coreDevTools: () => Cd,
-      devTools: () => gd
+  8978: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      ALL_DEV_TOOLS: () => DQ,
+      coreDevTools: () => mQ,
+      devTools: () => vQ
     });
-    var pd = kd(626),
-      Nd = kd(1320),
-      Wd = kd(9125);
-    const Pd = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Zd() {
+    var LQ = wQ(634),
+      qQ = wQ(1314),
+      oQ = wQ(8986);
+    const DQ = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function kQ() {
       const {
-        noaDevTools: dd
-      } = await kd.e(231).then((() => kd(41062)));
-      return dd
+        noaDevTools: QQ
+      } = await wQ.e(231).then((() => wQ(40475)));
+      return QQ
     }
-    const gd = new class {
+    const vQ = new class {
         constructor() {
-          this.loadHost = Zd, this.tools = Pd
+          this.loadHost = kQ, this.tools = DQ
         }
-        setHost(dd) {
-          this.tools = null === dd ? Pd : dd.tools, this.loadHost = null === dd ? Zd : async () => dd
+        setHost(QQ) {
+          this.tools = null === QQ ? DQ : QQ.tools, this.loadHost = null === QQ ? kQ : async () => QQ
         }
-        supports(dd) {
-          return this.tools.has(dd)
+        supports(QQ) {
+          return this.tools.has(QQ)
         }
-        async downloadScene(dd, Jd) {
-          const kd = await this.loadHost();
-          await kd.downloadScene(dd, Jd)
+        async downloadScene(QQ, FQ) {
+          const wQ = await this.loadHost();
+          await wQ.downloadScene(QQ, FQ)
         }
-        async setAmbientLightIntensity(dd) {
-          const Jd = await this.loadHost();
-          await Jd.setAmbientLightIntensity(dd)
+        async setAmbientLightIntensity(QQ) {
+          const FQ = await this.loadHost();
+          await FQ.setAmbientLightIntensity(QQ)
         }
       },
-      Cd = {
-        tools: Wd.b,
+      mQ = {
+        tools: oQ.e,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -45,10 +45,10 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    pd.x && gd.setHost(Cd), (0, Nd.r)((() => {
-      gd.setHost(Cd)
+    LQ.s && vQ.setHost(mQ), (0, qQ.x)((() => {
+      vQ.setHost(mQ)
     }))
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

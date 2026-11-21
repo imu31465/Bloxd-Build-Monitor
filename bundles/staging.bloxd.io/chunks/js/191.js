@@ -1,62 +1,62 @@
 export const id = 191;
 export const ids = [50, 191];
 export const modules = {
-  38776: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Nd,
-      c: () => Wd
+  38164: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => qQ,
+      f: () => oQ
     });
-    const pd = new WeakMap;
+    const LQ = new WeakMap;
 
-    function Nd(dd, Jd) {
-      return pd.set(dd, Jd), dd
+    function qQ(QQ, FQ) {
+      return LQ.set(QQ, FQ), QQ
     }
 
-    function Wd(dd) {
-      var Jd;
-      return null !== (Jd = pd.get(dd)) && void 0 !== Jd ? Jd : null
+    function oQ(QQ) {
+      var FQ;
+      return null !== (FQ = LQ.get(QQ)) && void 0 !== FQ ? FQ : null
     }
   },
-  38674: (dd, Jd, kd) => {
-    function pd(dd, Jd, kd) {
-      var pd;
+  38066: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ, wQ) {
+      var LQ;
       const {
-        width: Nd,
-        height: Wd
-      } = kd, Pd = null !== (pd = dd.text) && void 0 !== pd ? pd : dd, Zd = (Pd.x / 100 - .5) * Nd, gd = (Pd.y / 100 - .5) * Wd, Cd = Nd / 2 - Jd.x;
-      if (null !== dd.text && Math.abs(Zd) <= Cd && gd >= Jd.top - Wd / 2 && gd <= Wd / 2 - Jd.bottom) return {
-        x: Pd.x,
-        y: Pd.y
+        width: qQ,
+        height: oQ
+      } = wQ, DQ = null !== (LQ = QQ.text) && void 0 !== LQ ? LQ : QQ, kQ = (DQ.x / 100 - .5) * qQ, vQ = (DQ.y / 100 - .5) * oQ, mQ = qQ / 2 - FQ.x;
+      if (null !== QQ.text && Math.abs(kQ) <= mQ && vQ >= FQ.top - oQ / 2 && vQ <= oQ / 2 - FQ.bottom) return {
+        x: DQ.x,
+        y: DQ.y
       };
-      const Kd = Math.min(0 === Zd ? 1 / 0 : Cd / Math.abs(Zd), gd > 0 ? (Wd / 2 - Jd.bottom) / gd : gd < 0 ? (Jd.top - Wd / 2) / gd : 1 / 0);
-      return !Number.isFinite(Kd) || Kd < 0 ? {
+      const uQ = Math.min(0 === kQ ? 1 / 0 : mQ / Math.abs(kQ), vQ > 0 ? (oQ / 2 - FQ.bottom) / vQ : vQ < 0 ? (FQ.top - oQ / 2) / vQ : 1 / 0);
+      return !Number.isFinite(uQ) || uQ < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + Zd * Kd / Nd * 100,
-        y: 50 + gd * Kd / Wd * 100
+        x: 50 + kQ * uQ / qQ * 100,
+        y: 50 + vQ * uQ / oQ * 100
       }
     }
-    kd.d(Jd, {
-      e: () => pd
+    wQ.d(FQ, {
+      c: () => LQ
     })
   },
-  38690: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Pd
+  38077: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => DQ
     });
-    const pd = 4,
-      Nd = 12e3,
-      Wd = 1e3;
-    class Pd {
+    const LQ = 4,
+      qQ = 12e3,
+      oQ = 1e3;
+    class DQ {
       constructor() {
         let {
-          limit: dd = pd,
-          windowMs: Jd = Nd,
-          spacingMs: kd = Wd,
-          now: Pd = Date.now
+          limit: QQ = LQ,
+          windowMs: FQ = qQ,
+          spacingMs: wQ = oQ,
+          now: DQ = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = dd, this.windowMs = Jd, this.spacingMs = kd, this.now = Pd
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = QQ, this.windowMs = FQ, this.spacingMs = wQ, this.now = DQ
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -65,61 +65,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const dd of this.priority) dd.flush();
+        for (const QQ of this.priority) QQ.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const dd = this.now();
-        this.sent.push(dd), this.lastSentAt = dd, this.schedule(), this.notify()
+        const QQ = this.now();
+        this.sent.push(QQ), this.lastSentAt = QQ, this.schedule(), this.notify()
       }
-      addPriority(dd) {
-        return this.priority.add(dd), () => {
-          this.priority.delete(dd)
+      addPriority(QQ) {
+        return this.priority.add(QQ), () => {
+          this.priority.delete(QQ)
         }
       }
-      subscribe(dd) {
-        return this.listeners.add(dd), () => {
-          this.listeners.delete(dd)
+      subscribe(QQ) {
+        return this.listeners.add(QQ), () => {
+          this.listeners.delete(QQ)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const dd of this.priority)
-          if (dd.waiting()) return !0;
+        for (const QQ of this.priority)
+          if (QQ.waiting()) return !0;
         return !1
       }
       prune() {
-        const dd = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= dd;) this.sent.shift()
+        const QQ = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= QQ;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const dd = this.now(),
-          Jd = this.lastSentAt + this.spacingMs,
-          kd = Math.min(Jd > dd ? Jd : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        kd !== 1 / 0 && (this.timer = setTimeout((() => {
+        const QQ = this.now(),
+          FQ = this.lastSentAt + this.spacingMs,
+          wQ = Math.min(FQ > QQ ? FQ : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        wQ !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, kd - dd)))
+        }), Math.max(0, wQ - QQ)))
       }
       notify() {
-        for (const dd of this.listeners) dd()
+        for (const QQ of this.listeners) QQ()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  38670: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd
+  38060: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => LQ
     });
-    class pd {
-      constructor(dd, Jd, kd) {
-        this.nO = dd, this.beforeOpen = Jd, this.afterClose = kd, this.open = !1, this.pL = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.pL && (this.open = !0, this.beforeOpen(this), this.emit())
+    class LQ {
+      constructor(QQ, FQ, wQ) {
+        this.GA = QQ, this.beforeOpen = FQ, this.afterClose = wQ, this.open = !1, this.kx = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.kx && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -132,197 +132,197 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(dd) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(dd)
+      closePanel(QQ) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(QQ)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.pL = !0
+        this.open = !1, this.emit(), this.kx = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.pL || (this.snapshot = this.buildSnapshot(), this.nO(this.snapshot))
+        this.kx || (this.snapshot = this.buildSnapshot(), this.GA(this.snapshot))
       }
     }
   },
-  38780: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      SkyblockEntityFacing: () => Zd,
-      needsSkyblockEntityFacing: () => Pd
+  38166: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      SkyblockEntityFacing: () => kQ,
+      needsSkyblockEntityFacing: () => DQ
     });
-    var pd = kd(605),
-      Nd = kd(4090),
-      Wd = kd(38785);
+    var LQ = wQ(617),
+      qQ = wQ(4119),
+      oQ = wQ(38174);
 
-    function Pd(dd, Jd) {
-      if (dd.metaInfo === pd.c || "Iron Guardian" === dd.type || "Gold Guardian" === dd.type) return !0;
-      if ("Pig" === dd.type) return "sitting" === dd.pose;
-      if ("Person" !== dd.meshKind || void 0 === dd.meshOpts) return !1;
-      let kd = null === Jd || void 0 === Jd ? void 0 : Jd.get(dd.meshOpts);
-      if (void 0 === kd) {
-        var Wd, Pd;
-        const pd = (0, Nd.h)(dd);
-        kd = !1, "pig_napoleon" === (null === pd || void 0 === pd || null === (Wd = pd.opts.textures) || void 0 === Wd ? void 0 : Wd.head) ? kd = !0 : "npc_pig_head" === (null === pd || void 0 === pd || null === (Pd = pd.opts.textures) || void 0 === Pd ? void 0 : Pd.head) && (kd = "sitting" === pd.opts.pose || "sitting"), Jd && (Jd.size >= 256 && Jd.clear(), Jd.set(dd.meshOpts, kd))
+    function DQ(QQ, FQ) {
+      if (QQ.metaInfo === LQ.c || "Iron Guardian" === QQ.type || "Gold Guardian" === QQ.type) return !0;
+      if ("Pig" === QQ.type) return "sitting" === QQ.pose;
+      if ("Person" !== QQ.meshKind || void 0 === QQ.meshOpts) return !1;
+      let wQ = null === FQ || void 0 === FQ ? void 0 : FQ.get(QQ.meshOpts);
+      if (void 0 === wQ) {
+        var oQ, DQ;
+        const LQ = (0, qQ.i)(QQ);
+        wQ = !1, "pig_napoleon" === (null === LQ || void 0 === LQ || null === (oQ = LQ.opts.textures) || void 0 === oQ ? void 0 : oQ.head) ? wQ = !0 : "npc_pig_head" === (null === LQ || void 0 === LQ || null === (DQ = LQ.opts.textures) || void 0 === DQ ? void 0 : DQ.head) && (wQ = "sitting" === LQ.opts.pose || "sitting"), FQ && (FQ.size >= 256 && FQ.clear(), FQ.set(QQ.meshOpts, wQ))
       }
-      return "sitting" === kd ? "sitting" === dd.pose : kd
-    }(0, Wd.i)("skyblock", ((dd, Jd) => {
-      Jd.setFacingTolerance(Pd(dd) ? 0 : null)
+      return "sitting" === wQ ? "sitting" === QQ.pose : wQ
+    }(0, oQ.f)("skyblock", ((QQ, FQ) => {
+      FQ.setFacingTolerance(DQ(QQ) ? 0 : null)
     }));
-    class Zd {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        this.api = dd, this.alsoVisit = Jd, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = dd => {
-          var Jd;
-          const kd = this.api.getEntityInfo(dd);
-          kd && (Pd(kd, this.meshFacingCache) && (this.api.setFacingTolerance(dd, 0), this.nextFacing.add(dd)), null === (Jd = this.alsoVisit) || void 0 === Jd || Jd.call(this, dd, kd))
+    class kQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        this.api = QQ, this.alsoVisit = FQ, this.facing = new Set, this.nextFacing = new Set, this.meshFacingCache = new Map, this.visit = QQ => {
+          var FQ;
+          const wQ = this.api.getEntityInfo(QQ);
+          wQ && (DQ(wQ, this.meshFacingCache) && (this.api.setFacingTolerance(QQ, 0), this.nextFacing.add(QQ)), null === (FQ = this.alsoVisit) || void 0 === FQ || FQ.call(this, QQ, wQ))
         }
       }
-      Do() {
+      fH() {
         const {
-          api: dd
-        } = this, Jd = this.nextFacing;
-        dd.forEachEntity(this.visit);
-        for (const kd of this.facing) Jd.has(kd) || dd.setFacingTolerance(kd, null);
-        this.facing.clear(), this.nextFacing = this.facing, this.facing = Jd
+          api: QQ
+        } = this, FQ = this.nextFacing;
+        QQ.forEachEntity(this.visit);
+        for (const wQ of this.facing) FQ.has(wQ) || QQ.setFacingTolerance(wQ, null);
+        this.facing.clear(), this.nextFacing = this.facing, this.facing = FQ
       }
       dispose() {
-        for (const dd of this.facing) this.api.setFacingTolerance(dd, null);
+        for (const QQ of this.facing) this.api.setFacingTolerance(QQ, null);
         this.facing.clear(), this.meshFacingCache.clear()
       }
     }
   },
-  38668: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      default: () => Cg
+  38053: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      default: () => uv
     });
-    const pd = "island";
-    var Nd = kd(313);
-    const Wd = (0, Nd.Hb)([0, 0, -1]),
-      Pd = [{
+    const LQ = "island";
+    var qQ = wQ(317);
+    const oQ = (0, qQ.Eb)([0, 0, -1]),
+      DQ = [{
         name: "S",
-        bearing: (0, Nd.Hb)([0, 0, 1])
+        bearing: (0, qQ.Eb)([0, 0, 1])
       }, {
         name: "E",
-        bearing: (0, Nd.Hb)([-1, 0, 0])
+        bearing: (0, qQ.Eb)([-1, 0, 0])
       }, {
         name: "N",
-        bearing: Wd
+        bearing: oQ
       }, {
         name: "W",
-        bearing: (0, Nd.Hb)([1, 0, 0])
+        bearing: (0, qQ.Eb)([1, 0, 0])
       }];
 
-    function Zd(dd, Jd, kd) {
-      return [100 * (kd.mapMaxX - dd) / (kd.mapMaxX - kd.mapMinX), 100 * (Jd - kd.mapMinZ) / (kd.mapMaxZ - kd.mapMinZ)]
+    function kQ(QQ, FQ, wQ) {
+      return [100 * (wQ.mapMaxX - QQ) / (wQ.mapMaxX - wQ.mapMinX), 100 * (FQ - wQ.mapMinZ) / (wQ.mapMaxZ - wQ.mapMinZ)]
     }
 
-    function gd(dd, Jd, kd) {
-      const Nd = "local" === Jd,
-        Wd = dd.background,
-        Pd = Jd => Wd ? Zd(Jd[0] - dd.mapOrigin[0], Jd[2] - dd.mapOrigin[2], Wd.bounds) : [50, 50],
-        gd = (dd.insideDungeon ? [] : dd.landmarks).map((dd => {
-          var Jd, pd;
+    function vQ(QQ, FQ, wQ) {
+      const qQ = "local" === FQ,
+        oQ = QQ.background,
+        DQ = FQ => oQ ? kQ(FQ[0] - QQ.mapOrigin[0], FQ[2] - QQ.mapOrigin[2], oQ.bounds) : [50, 50],
+        vQ = (QQ.insideDungeon ? [] : QQ.landmarks).map((QQ => {
+          var FQ, LQ;
           return {
-            id: dd.id,
-            name: kd(dd.visited && dd.nameKey ? null !== (Jd = dd.mapLabelKey) && void 0 !== Jd ? Jd : dd.nameKey : "skyblockGame:mapUnknown"),
-            icon: dd.visited && null !== (pd = dd.icon) && void 0 !== pd ? pd : "unknown",
-            visited: dd.visited,
+            id: QQ.id,
+            name: wQ(QQ.visited && QQ.nameKey ? null !== (FQ = QQ.mapLabelKey) && void 0 !== FQ ? FQ : QQ.nameKey : "skyblockGame:mapUnknown"),
+            icon: QQ.visited && null !== (LQ = QQ.icon) && void 0 !== LQ ? LQ : "unknown",
+            visited: QQ.visited,
             current: !1,
-            position: Pd(dd.position),
+            position: DQ(QQ.position),
             travelKind: "landmark",
-            travelId: dd.id
+            travelId: QQ.id
           }
         })),
-        Kd = dd.zones.map((Jd => {
-          var pd;
+        uQ = QQ.zones.map((FQ => {
+          var LQ;
           return {
-            id: Jd.id,
-            name: kd(Jd.visited && Jd.nameKey ? Jd.nameKey : "skyblockGame:mapUnknown"),
-            icon: Jd.visited && null !== (pd = Jd.icon) && void 0 !== pd ? pd : "unknown",
-            visited: Jd.visited,
-            current: Jd.id === dd.zoneId,
-            position: Jd.position,
-            thumbnail: Jd.visited ? Jd.id : void 0,
+            id: FQ.id,
+            name: wQ(FQ.visited && FQ.nameKey ? FQ.nameKey : "skyblockGame:mapUnknown"),
+            icon: FQ.visited && null !== (LQ = FQ.icon) && void 0 !== LQ ? LQ : "unknown",
+            visited: FQ.visited,
+            current: FQ.id === QQ.zoneId,
+            position: FQ.position,
+            thumbnail: FQ.visited ? FQ.id : void 0,
             travelKind: "zone",
-            travelId: Jd.id
+            travelId: FQ.id
           }
         })),
-        od = dd.insideDungeon || !Wd ? [] : dd.portals.map((dd => {
-          var Jd;
+        HQ = QQ.insideDungeon || !oQ ? [] : QQ.portals.map((QQ => {
+          var FQ;
           return {
-            id: dd.id,
-            name: kd(null !== (Jd = dd.nameKey) && void 0 !== Jd ? Jd : "skyblockGame:mapUnknown"),
-            icon: dd.visited ? "dungeons" === dd.destination ? "portal_orange" : "portal" : "unknown",
-            visited: dd.visited,
+            id: QQ.id,
+            name: wQ(null !== (FQ = QQ.nameKey) && void 0 !== FQ ? FQ : "skyblockGame:mapUnknown"),
+            icon: QQ.visited ? "dungeons" === QQ.destination ? "portal_orange" : "portal" : "unknown",
+            visited: QQ.visited,
             current: !1,
-            position: Pd(dd.position),
-            colour: dd.colour,
+            position: DQ(QQ.position),
+            colour: QQ.colour,
             travelKind: "zone",
-            travelId: dd.destination
+            travelId: QQ.destination
           }
         })),
-        ld = Nd ? gd : Kd,
-        Qd = ld.filter((dd => dd.visited)).length,
-        Ld = Wd ? (Wd.bounds.mapMaxX - Wd.bounds.mapMinX) / (Wd.bounds.mapMaxZ - Wd.bounds.mapMinZ) : 2,
-        Od = Wd ? JSON.stringify([Wd.bounds, dd.mapOrigin]) : "";
+        bQ = qQ ? vQ : uQ,
+        YQ = bQ.filter((QQ => QQ.visited)).length,
+        xQ = oQ ? (oQ.bounds.mapMaxX - oQ.bounds.mapMinX) / (oQ.bounds.mapMaxZ - oQ.bounds.mapMinZ) : 2,
+        AQ = oQ ? JSON.stringify([oQ.bounds, QQ.mapOrigin]) : "";
       return {
-        local: Nd,
-        points: ld,
-        portals: Nd ? od : [],
-        progress: ld.length ? kd("skyblockGame:mapDiscovered", {
-          current: String(Qd),
-          total: String(ld.length)
+        local: qQ,
+        points: bQ,
+        portals: qQ ? HQ : [],
+        progress: bQ.length ? wQ("skyblockGame:mapDiscovered", {
+          current: String(YQ),
+          total: String(bQ.length)
         }) : null,
-        percent: ld.length ? 100 * Qd / ld.length : 0,
-        canTravel: [...ld, ...Nd ? od : []].some((dd => dd.visited && !dd.current)),
-        noLandmarks: Nd && !dd.insideDungeon && 0 === gd.length,
-        background: Wd ? {
-          imageKey: Wd.imageKey,
-          fallbackImageKey: dd.zoneId,
-          geometryKey: Od,
-          label: kd(Wd.labelKey),
-          colour: Wd.backgroundColour,
-          ratio: Ld
+        percent: bQ.length ? 100 * YQ / bQ.length : 0,
+        canTravel: [...bQ, ...qQ ? HQ : []].some((QQ => QQ.visited && !QQ.current)),
+        noLandmarks: qQ && !QQ.insideDungeon && 0 === vQ.length,
+        background: oQ ? {
+          imageKey: oQ.imageKey,
+          fallbackImageKey: QQ.zoneId,
+          geometryKey: AQ,
+          label: wQ(oQ.labelKey),
+          colour: oQ.backgroundColour,
+          ratio: xQ
         } : null,
-        connections: Cd(dd.zones),
-        minimap: Wd ? {
-          imageKey: Wd.imageKey,
-          fallbackImageKey: dd.zoneId,
-          geometryKey: Od,
-          label: kd(Wd.labelKey),
-          colour: Wd.backgroundColour,
-          caption: kd(dd.zoneId === pd ? "skyblockGame:zoneIsland" : Wd.labelKey),
-          width: (Wd.bounds.mapMaxX - Wd.bounds.mapMinX) / Wd.minimapSpan * 100 + "%",
-          height: (Wd.bounds.mapMaxZ - Wd.bounds.mapMinZ) / Wd.minimapSpan * 100 + "%",
-          markers: [...gd, ...od]
+        connections: mQ(QQ.zones),
+        minimap: oQ ? {
+          imageKey: oQ.imageKey,
+          fallbackImageKey: QQ.zoneId,
+          geometryKey: AQ,
+          label: wQ(oQ.labelKey),
+          colour: oQ.backgroundColour,
+          caption: wQ(QQ.zoneId === LQ ? "skyblockGame:zoneIsland" : oQ.labelKey),
+          width: (oQ.bounds.mapMaxX - oQ.bounds.mapMinX) / oQ.minimapSpan * 100 + "%",
+          height: (oQ.bounds.mapMaxZ - oQ.bounds.mapMinZ) / oQ.minimapSpan * 100 + "%",
+          markers: [...vQ, ...HQ]
         } : null
       }
     }
 
-    function Cd(dd) {
-      const Jd = new Set;
-      return dd.flatMap((kd => kd.connections.flatMap((pd => {
-        const Nd = dd.find((dd => dd.id === pd)),
-          Wd = [kd.id, pd].sort().join("|");
-        return !Nd || Jd.has(Wd) ? [] : (Jd.add(Wd), [{
-          id: `${kd.id}-${pd}`,
-          start: kd.position,
-          end: Nd.position,
-          explored: kd.visited && Nd.visited
+    function mQ(QQ) {
+      const FQ = new Set;
+      return QQ.flatMap((wQ => wQ.connections.flatMap((LQ => {
+        const qQ = QQ.find((QQ => QQ.id === LQ)),
+          oQ = [wQ.id, LQ].sort().join("|");
+        return !qQ || FQ.has(oQ) ? [] : (FQ.add(oQ), [{
+          id: `${wQ.id}-${LQ}`,
+          start: wQ.position,
+          end: qQ.position,
+          explored: wQ.visited && qQ.visited
         }])
       }))))
     }
-    var Kd = kd(38670);
-    class od extends Kd.c {}
-    const ld = "skyblockMapView";
-    class Qd extends od {
-      constructor(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(dd, pd, Nd), this.requestTravel = Jd, this.translate = kd, this.now = Wd, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
+    var uQ = wQ(38060);
+    class HQ extends uQ.c {}
+    const bQ = "skyblockMapView";
+    class YQ extends HQ {
+      constructor(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(QQ, LQ, qQ), this.requestTravel = FQ, this.translate = wQ, this.now = oQ, this.entities = [], this.map = null, this.tab = "local", this.pending = null, this.nextRequestId = 0, this.feedbackKey = "", this.snapshot = {
           presentation: null,
           enabled: !1,
           open: !1,
@@ -332,25 +332,25 @@ export const modules = {
           feedback: ""
         }, this.showLocal = () => {
           this.selectTab("local"), this.show()
-        }, this.selectTab = dd => {
-          this.tab = dd, this.feedbackKey = "", this.emit()
-        }, this.travel = (dd, Jd) => {
-          if (!this.map || this.pending || this.pL) return;
-          const kd = ("zone" === dd ? this.map.zones : this.map.landmarks).find((dd => dd.id === Jd));
-          if (kd) {
+        }, this.selectTab = QQ => {
+          this.tab = QQ, this.feedbackKey = "", this.emit()
+        }, this.travel = (QQ, FQ) => {
+          if (!this.map || this.pending || this.kx) return;
+          const wQ = ("zone" === QQ ? this.map.zones : this.map.landmarks).find((QQ => QQ.id === FQ));
+          if (wQ) {
             if (this.map.insideDungeon) this.feedbackKey = "skyblockGame:mapDungeonTravelDisabled";
-            else if ("fastTravelEnabled" in kd && !kd.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
-            else if (kd.visited)
-              if ("zone" === dd && Jd === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
+            else if ("fastTravelEnabled" in wQ && !wQ.fastTravelEnabled) this.feedbackKey = "skyblockGame:mapLandmarkTravelDisabled";
+            else if (wQ.visited)
+              if ("zone" === QQ && FQ === this.map.zoneId) this.feedbackKey = "skyblockGame:mapAlreadyHere";
               else {
-                const kd = ++this.nextRequestId;
+                const wQ = ++this.nextRequestId;
                 this.pending = {
-                  requestId: kd,
+                  requestId: wQ,
                   expiresAt: this.now() + 1e4
                 }, this.feedbackKey = "skyblockGame:mapTravelling", this.requestTravel({
-                  kind: dd,
-                  id: Jd,
-                  requestId: kd
+                  kind: QQ,
+                  id: FQ,
+                  requestId: wQ
                 })
               }
             else this.feedbackKey = "skyblockGame:mapVisitFirst";
@@ -361,28 +361,28 @@ export const modules = {
       getEntities() {
         return this.entities
       }
-      setTranslator(dd) {
-        this.translate = dd, this.emit()
+      setTranslator(QQ) {
+        this.translate = QQ, this.emit()
       }
-      ZL(dd) {
-        var Jd;
-        if (!this.pL)
-          if ("entities" !== dd.kind)
-            if ("open" !== dd.kind) {
-              var kd, pd;
-              if ("snapshot" === dd.kind)(null === (kd = dd.snapshot) || void 0 === kd ? void 0 : kd.zoneId) !== (null === (pd = this.map) || void 0 === pd ? void 0 : pd.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = dd.snapshot, !this.map && this.open && this.close();
-              else if ("travelQueued" === dd.kind) {
-                var Nd;
-                dd.requestId === (null === (Nd = this.pending) || void 0 === Nd ? void 0 : Nd.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
-              } else if (dd.requestId === (null === (Jd = this.pending) || void 0 === Jd ? void 0 : Jd.requestId)) {
-                var Wd;
-                this.pending = null, this.feedbackKey = null !== (Wd = dd.errorKey) && void 0 !== Wd ? Wd : "", null === dd.errorKey && this.close()
+      bx(QQ) {
+        var FQ;
+        if (!this.kx)
+          if ("entities" !== QQ.kind)
+            if ("open" !== QQ.kind) {
+              var wQ, LQ;
+              if ("snapshot" === QQ.kind)(null === (wQ = QQ.snapshot) || void 0 === wQ ? void 0 : wQ.zoneId) !== (null === (LQ = this.map) || void 0 === LQ ? void 0 : LQ.zoneId) && (this.pending = null, this.feedbackKey = ""), this.map = QQ.snapshot, !this.map && this.open && this.close();
+              else if ("travelQueued" === QQ.kind) {
+                var qQ;
+                QQ.requestId === (null === (qQ = this.pending) || void 0 === qQ ? void 0 : qQ.requestId) && (this.pending.expiresAt = 1 / 0, this.close())
+              } else if (QQ.requestId === (null === (FQ = this.pending) || void 0 === FQ ? void 0 : FQ.requestId)) {
+                var oQ;
+                this.pending = null, this.feedbackKey = null !== (oQ = QQ.errorKey) && void 0 !== oQ ? oQ : "", null === QQ.errorKey && this.close()
               }
               this.emit()
             } else this.show();
-        else this.entities = dd.entities
+        else this.entities = QQ.entities
       }
-      Do() {
+      fH() {
         this.pending && this.now() >= this.pending.expiresAt && (this.pending = null, this.feedbackKey = "skyblockGame:mapTravelTimeout", this.emit())
       }
       dispose() {
@@ -393,7 +393,7 @@ export const modules = {
       }
       buildSnapshot() {
         return {
-          presentation: this.map ? gd(this.map, this.tab, this.translate) : null,
+          presentation: this.map ? vQ(this.map, this.tab, this.translate) : null,
           enabled: this.isEnabled(),
           open: this.open,
           tab: this.tab,
@@ -403,183 +403,183 @@ export const modules = {
         }
       }
     }
-    const Ld = 67.5 * Math.PI / 180;
+    const xQ = 67.5 * Math.PI / 180;
 
-    function Od(dd, Jd) {
-      const kd = Math.abs(dd);
-      if (kd > Ld || Jd.trackHalfWidth <= 0) return null;
-      const pd = Jd.trackHalfWidth,
-        Nd = Jd.screenHalfWidth / (Jd.tanHalfFovX * Math.max(.5, Math.cos(Jd.pitch))),
-        Wd = Math.min(Math.atan(.6 * pd / Nd), .75 * Ld),
-        Pd = Nd * Math.tan(Wd);
-      let Zd;
-      if (kd <= Wd) Zd = Nd * Math.tan(kd);
+    function AQ(QQ, FQ) {
+      const wQ = Math.abs(QQ);
+      if (wQ > xQ || FQ.trackHalfWidth <= 0) return null;
+      const LQ = FQ.trackHalfWidth,
+        qQ = FQ.screenHalfWidth / (FQ.tanHalfFovX * Math.max(.5, Math.cos(FQ.pitch))),
+        oQ = Math.min(Math.atan(.6 * LQ / qQ), .75 * xQ),
+        DQ = qQ * Math.tan(oQ);
+      let kQ;
+      if (wQ <= oQ) kQ = qQ * Math.tan(wQ);
       else {
-        const dd = Ld - Wd,
-          Jd = Math.max(0, Nd * dd / (Math.cos(Wd) ** 2 * (pd - Pd)) - 1),
-          gd = (kd - Wd) / dd;
-        Zd = Pd + (pd - Pd) * (1 + Jd) * gd / (1 + Jd * gd)
+        const QQ = xQ - oQ,
+          FQ = Math.max(0, qQ * QQ / (Math.cos(oQ) ** 2 * (LQ - DQ)) - 1),
+          vQ = (wQ - oQ) / QQ;
+        kQ = DQ + (LQ - DQ) * (1 + FQ) * vQ / (1 + FQ * vQ)
       }
-      return 50 + Math.sign(dd) * Zd * 50 / pd
+      return 50 + Math.sign(QQ) * kQ * 50 / LQ
     }
-    class ed {
-      constructor(dd, Jd) {
-        this.map = dd, this.visited = Jd, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = Jd ? "landmarks" : "unknownLandmarks"
+    class tQ {
+      constructor(QQ, FQ) {
+        this.map = QQ, this.visited = FQ, this.id = void 0, this.enabled = !0, this.range = 96, this.limit = 40, this.id = FQ ? "landmarks" : "unknownLandmarks"
       }
       getPoints() {
-        const dd = this.map.getSnapshot().map;
-        return !dd || dd.insideDungeon ? [] : dd.landmarks.filter((dd => dd.visited === this.visited)).map((dd => {
-          var Jd, kd;
+        const QQ = this.map.getSnapshot().map;
+        return !QQ || QQ.insideDungeon ? [] : QQ.landmarks.filter((QQ => QQ.visited === this.visited)).map((QQ => {
+          var FQ, wQ;
           return {
-            id: `landmark:${dd.id}`,
-            position: dd.position,
-            icon: null !== (Jd = dd.icon) && void 0 !== Jd ? Jd : "unknown",
-            nameKey: null !== (kd = dd.nameKey) && void 0 !== kd ? kd : "skyblockGame:compassUnknown",
+            id: `landmark:${QQ.id}`,
+            position: QQ.position,
+            icon: null !== (FQ = QQ.icon) && void 0 !== FQ ? FQ : "unknown",
+            nameKey: null !== (wQ = QQ.nameKey) && void 0 !== wQ ? wQ : "skyblockGame:compassUnknown",
             kind: this.visited ? "landmark" : "unknown"
           }
         }))
       }
     }
-    class Rd {
-      constructor(dd, Jd, kd, pd) {
-        this.map = dd, this.kind = Jd, this.position = kd, this.alive = pd, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = Jd, this.range = "enemy" === Jd ? 48 : 64, this.limit = 12
+    class eQ {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.map = QQ, this.kind = FQ, this.position = wQ, this.alive = LQ, this.id = void 0, this.enabled = !0, this.range = void 0, this.limit = void 0, this.id = FQ, this.range = "enemy" === FQ ? 48 : 64, this.limit = 12
       }
-      yI(dd) {
-        if ("enemy" !== this.kind || this.alive(dd.Pd)) return this.position(dd.Pd)
+      Qp(QQ) {
+        if ("enemy" !== this.kind || this.alive(QQ.DQ)) return this.position(QQ.DQ)
       }
       getPoints() {
-        const dd = [];
-        for (const pd of this.map.getEntities()) {
-          if (pd.kind !== this.kind || "enemy" === this.kind && !this.alive(pd.compassEntityId)) continue;
-          const Nd = this.position(pd.compassEntityId);
-          var Jd, kd;
-          if (Nd) dd.push({
-            id: `${this.kind}:${pd.compassEntityId}`,
-            Pd: pd.compassEntityId,
+        const QQ = [];
+        for (const LQ of this.map.getEntities()) {
+          if (LQ.kind !== this.kind || "enemy" === this.kind && !this.alive(LQ.compassEntityId)) continue;
+          const qQ = this.position(LQ.compassEntityId);
+          var FQ, wQ;
+          if (qQ) QQ.push({
+            id: `${this.kind}:${LQ.compassEntityId}`,
+            DQ: LQ.compassEntityId,
             kind: this.kind,
-            icon: null !== (Jd = pd.icon) && void 0 !== Jd ? Jd : pd.npcSkin ? `npc_${pd.npcSkin}` : this.kind,
-            displayName: pd.displayName,
-            position: Nd,
-            nameKey: null !== (kd = pd.nameKey) && void 0 !== kd ? kd : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
+            icon: null !== (FQ = LQ.icon) && void 0 !== FQ ? FQ : LQ.npcSkin ? `npc_${LQ.npcSkin}` : this.kind,
+            displayName: LQ.displayName,
+            position: qQ,
+            nameKey: null !== (wQ = LQ.nameKey) && void 0 !== wQ ? wQ : "enemy" === this.kind ? "skyblockGame:compassEnemy" : "skyblockGame:compassNpc"
           })
         }
-        return dd
+        return QQ
       }
     }
-    class Id {
-      constructor(dd) {
-        this.map = dd, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
+    class MQ {
+      constructor(QQ) {
+        this.map = QQ, this.id = "portals", this.enabled = !0, this.range = 96, this.limit = 12
       }
       getPoints() {
-        const dd = this.map.getSnapshot().map;
-        return !dd || dd.insideDungeon ? [] : dd.portals.map((dd => {
-          var Jd;
+        const QQ = this.map.getSnapshot().map;
+        return !QQ || QQ.insideDungeon ? [] : QQ.portals.map((QQ => {
+          var FQ;
           return {
-            id: "portal:" + dd.id,
+            id: "portal:" + QQ.id,
             kind: "portal",
-            position: dd.position,
-            nameKey: null !== (Jd = dd.nameKey) && void 0 !== Jd ? Jd : "skyblockGame:compassUnvisitedZone",
-            icon: dd.visited ? "dungeons" === dd.destination ? "portal_orange" : "portal" : "unknown",
-            colour: dd.colour
+            position: QQ.position,
+            nameKey: null !== (FQ = QQ.nameKey) && void 0 !== FQ ? FQ : "skyblockGame:compassUnvisitedZone",
+            icon: QQ.visited ? "dungeons" === QQ.destination ? "portal_orange" : "portal" : "unknown",
+            colour: QQ.colour
           }
         }))
       }
     }
-    class Gd {
-      constructor(dd) {
-        this.target = dd, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
+    class GQ {
+      constructor(QQ) {
+        this.target = QQ, this.id = "quest", this.enabled = !0, this.range = 1 / 0, this.limit = 1
       }
       getPoints() {
-        const dd = this.target();
-        return dd ? [{
+        const QQ = this.target();
+        return QQ ? [{
           id: "quest",
           kind: "quest",
           icon: "quest",
-          position: dd.position,
-          nameKey: dd.nameKey
+          position: QQ.position,
+          nameKey: QQ.nameKey
         }] : []
       }
     }
 
-    function vd(dd, Jd, kd) {
-      let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dd.position;
-      const Wd = pd[0] - Jd[0],
-        Pd = pd[2] - Jd[2];
+    function pQ(QQ, FQ, wQ) {
+      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : QQ.position;
+      const oQ = LQ[0] - FQ[0],
+        DQ = LQ[2] - FQ[2];
       return {
-        ...dd,
-        position: pd,
-        offset: Nd.b.computeShortestRotation(kd, (0, Nd.Hb)([Wd, 0, Pd])),
-        distance: Math.hypot(Wd, pd[1] - Jd[1], Pd)
+        ...QQ,
+        position: LQ,
+        offset: qQ.e.computeShortestRotation(wQ, (0, qQ.Eb)([oQ, 0, DQ])),
+        distance: Math.hypot(oQ, LQ[1] - FQ[1], DQ)
       }
     }
-    let xd;
+    let cQ;
 
-    function qd(dd, Jd) {
-      var kd;
-      return (null === (kd = xd) || void 0 === kd ? void 0 : kd.locale) !== Jd && (xd = {
-        locale: Jd,
-        near: new Intl.NumberFormat(Jd, {
+    function CQ(QQ, FQ) {
+      var wQ;
+      return (null === (wQ = cQ) || void 0 === wQ ? void 0 : wQ.locale) !== FQ && (cQ = {
+        locale: FQ,
+        near: new Intl.NumberFormat(FQ, {
           minimumFractionDigits: 1,
           maximumFractionDigits: 1
         }),
-        far: new Intl.NumberFormat(Jd, {
+        far: new Intl.NumberFormat(FQ, {
           minimumFractionDigits: 0,
           maximumFractionDigits: 0
         })
-      }), (dd < 10 ? xd.near : xd.far).format(dd)
+      }), (QQ < 10 ? cQ.near : cQ.far).format(QQ)
     }
-    class Bd {
+    class SQ {
       constructor() {
         this.providers = new Map, this.candidates = [], this.refreshAt = 0
       }
-      register(dd) {
-        return this.providers.set(dd.id, dd), this.refreshAt = 0, () => {
-          this.providers.get(dd.id) === dd && (this.providers.delete(dd.id), this.refreshAt = 0)
+      register(QQ) {
+        return this.providers.set(QQ.id, QQ), this.refreshAt = 0, () => {
+          this.providers.get(QQ.id) === QQ && (this.providers.delete(QQ.id), this.refreshAt = 0)
         }
       }
-      frame(dd, Jd, kd) {
-        if (kd >= this.refreshAt) {
-          this.refreshAt = kd + 200, this.candidates = [];
-          for (const Jd of this.providers.values()) {
-            if (!Jd.enabled) continue;
-            const kd = Jd.getPoints().map((Jd => {
-              const kd = Jd.position;
+      frame(QQ, FQ, wQ) {
+        if (wQ >= this.refreshAt) {
+          this.refreshAt = wQ + 200, this.candidates = [];
+          for (const FQ of this.providers.values()) {
+            if (!FQ.enabled) continue;
+            const wQ = FQ.getPoints().map((FQ => {
+              const wQ = FQ.position;
               return {
-                point: Jd,
-                distance: Math.hypot(kd[0] - dd[0], kd[1] - dd[1], kd[2] - dd[2])
+                point: FQ,
+                distance: Math.hypot(wQ[0] - QQ[0], wQ[1] - QQ[1], wQ[2] - QQ[2])
               }
-            })).filter((dd => dd.distance <= Jd.range)).sort(((dd, Jd) => dd.distance - Jd.distance)).slice(0, Jd.limit);
+            })).filter((QQ => QQ.distance <= FQ.range)).sort(((QQ, FQ) => QQ.distance - FQ.distance)).slice(0, FQ.limit);
             for (const {
-                point: dd
+                point: QQ
               }
-              of kd) this.candidates.push({
-              provider: Jd,
-              point: dd
+              of wQ) this.candidates.push({
+              provider: FQ,
+              point: QQ
             })
           }
         }
-        const pd = [];
+        const LQ = [];
         for (const {
-            point: Nd,
-            provider: Wd
+            point: qQ,
+            provider: oQ
           }
           of this.candidates) {
-          if (!Wd.enabled) continue;
-          const kd = Wd.yI ? Wd.yI(Nd) : Nd.position;
-          if (kd) {
-            const Wd = vd(Nd, dd, Jd, kd);
-            Math.abs(Wd.offset) <= Ld && pd.push(Wd)
+          if (!oQ.enabled) continue;
+          const wQ = oQ.Qp ? oQ.Qp(qQ) : qQ.position;
+          if (wQ) {
+            const oQ = pQ(qQ, QQ, FQ, wQ);
+            Math.abs(oQ.offset) <= xQ && LQ.push(oQ)
           }
         }
-        return pd
+        return LQ
       }
       dispose() {
         this.providers.clear(), this.candidates = []
       }
     }
-    var sd = kd(36783),
-      ad = kd(56);
-    const Md = [{
+    var iQ = wQ(36238),
+      WQ = wQ(53);
+    const RQ = [{
         dailyRewardCoins: 1e3,
         dailyRewardItems: []
       }, {
@@ -610,41 +610,41 @@ export const modules = {
           dailyRewardItemAmount: 1
         }]
       }],
-      Fd = Md.length;
+      OQ = RQ.length;
 
-    function Yd(dd) {
-      return dd >= Fd ? 1 : dd + 1
+    function sQ(QQ) {
+      return QQ >= OQ ? 1 : QQ + 1
     }
-    const md = "skyblockQuests",
-      bd = Object.freeze({
+    const rQ = "skyblockQuests",
+      IQ = Object.freeze({
         easy: "skyblockGame:difficultyEasy",
         medium: "skyblockGame:difficultyMedium",
         hard: "skyblockGame:difficultyHard",
         insane: "skyblockGame:difficultyInsane"
       }),
-      Sd = Object.freeze({
+      UQ = Object.freeze({
         easy: "#77b326",
         medium: "#eac03d",
         hard: "#df7622",
         insane: "#e74d4d"
       });
 
-    function jd(dd) {
-      let Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      const kd = Math.max(0, Math.floor(dd)),
-        pd = Math.floor(kd % 1e3 / 100),
-        Nd = Math.floor(kd / 1e3),
-        Wd = Nd % 60,
-        Pd = Math.floor(Nd / 60),
-        Zd = Pd % 60,
-        gd = Math.floor(Pd / 60),
-        Cd = dd => dd < 10 ? `0${dd}` : String(dd),
-        Kd = Jd ? `.${pd}` : "";
-      return gd > 0 ? `${gd}:${Cd(Zd)}:${Cd(Wd)}${Kd}` : `${Zd}:${Cd(Wd)}${Kd}`
+    function NQ(QQ) {
+      let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      const wQ = Math.max(0, Math.floor(QQ)),
+        LQ = Math.floor(wQ % 1e3 / 100),
+        qQ = Math.floor(wQ / 1e3),
+        oQ = qQ % 60,
+        DQ = Math.floor(qQ / 60),
+        kQ = DQ % 60,
+        vQ = Math.floor(DQ / 60),
+        mQ = QQ => QQ < 10 ? `0${QQ}` : String(QQ),
+        uQ = FQ ? `.${LQ}` : "";
+      return vQ > 0 ? `${vQ}:${mQ(kQ)}:${mQ(oQ)}${uQ}` : `${kQ}:${mQ(oQ)}${uQ}`
     }
-    const Xd = "devquests",
-      fd = "none",
-      nd = {
+    const TQ = "devquests",
+      KQ = "none",
+      zQ = {
         hub: {
           farming_1: {
             min: [4, 16, 90],
@@ -682,8 +682,8 @@ export const modules = {
           }
         }
       },
-      Ud = "Compressed Messy Stone",
-      yd = {
+      lQ = "Compressed Messy Stone",
+      jQ = {
         "Grass Block": "Useless Soil",
         "Pine Grass Block": "Useless Soil",
         "Jungle Grass Block": "Useless Soil",
@@ -696,120 +696,120 @@ export const modules = {
         Sand: "Sandstone",
         Gravel: "Smooth Andesite"
       },
-      Dd = ["Stone", "Diorite", "Andesite", "Granite"],
-      Td = new Set(Dd),
-      Ed = (Object.keys(yd), {
+      aQ = ["Stone", "Diorite", "Andesite", "Granite"],
+      XQ = new Set(aQ),
+      fQ = (Object.keys(jQ), {
         "Pure Coal Ore": "Coal Ore",
         "Pure Iron Ore": "Iron Ore",
         "Pure Gold Ore": "Gold Ore",
         "Pure Diamond Ore": "Diamond Ore",
         "Pure Moonstone Ore": "Moonstone Ore"
       });
-    const cd = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
+    const VQ = ["Magmasteel Helmet", "Magmasteel Chestplate", "Magmasteel Gauntlets", "Magmasteel Leggings", "Magmasteel Boots"];
 
-    function hd(dd, Jd) {
-      const kd = Math.floor(5 * dd / (2 * Jd + 1));
-      return Math.min(4, Math.max(0, kd))
+    function hQ(QQ, FQ) {
+      const wQ = Math.floor(5 * QQ / (2 * FQ + 1));
+      return Math.min(4, Math.max(0, wQ))
     }
-    var rd = kd(1260);
-    var ud = kd(36534);
-    var td = kd(36779),
-      Vd = kd(29),
-      zd = kd(8809);
-    const Hd = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
-      wd = 1e3;
+    var JQ = wQ(1254);
+    var EQ = wQ(36021);
+    var nQ = wQ(36235),
+      gQ = wQ(22),
+      PQ = wQ(8644);
+    const ZQ = ["foraging", "combat", "mining", "farming", "fishing", "exploration"],
+      yQ = 1e3;
 
-    function Ad(dd) {
-      return Math.max(0, dd)
-    }
-
-    function dJ(dd) {
-      return 1 + .01 * Ad(dd)
+    function BQ(QQ) {
+      return Math.max(0, QQ)
     }
 
-    function JJ(dd) {
-      return 1 + .005 * Ad(dd)
+    function dQ(QQ) {
+      return 1 + .01 * BQ(QQ)
     }
 
-    function kJ(dd) {
-      return 1 + .005 * Ad(dd)
+    function QF(QQ) {
+      return 1 + .005 * BQ(QQ)
     }
 
-    function pJ(dd) {
-      return .01 * Ad(dd)
+    function FF(QQ) {
+      return 1 + .005 * BQ(QQ)
     }
 
-    function NJ(dd) {
-      return 150 / (150 + Ad(dd))
+    function wF(QQ) {
+      return .01 * BQ(QQ)
     }
 
-    function WJ(dd) {
-      return 1 + .002 * Ad(dd)
+    function LF(QQ) {
+      return 150 / (150 + BQ(QQ))
     }
 
-    function PJ(dd) {
-      return Math.round(10 * dd) / 10
+    function qF(QQ) {
+      return 1 + .002 * BQ(QQ)
     }
 
-    function ZJ(dd, Jd) {
-      switch (dd) {
+    function oF(QQ) {
+      return Math.round(10 * QQ) / 10
+    }
+
+    function DF(QQ, FQ) {
+      switch (QQ) {
         case "foraging":
           return {
-            translationKey: "skyblockGame:foragingBenefit", percent: PJ(100 * (JJ(Jd) - 1))
+            translationKey: "skyblockGame:foragingBenefit", percent: oF(100 * (QF(FQ) - 1))
           };
         case "combat":
           return {
-            translationKey: "skyblockGame:combatBenefit", percent: PJ(100 * (dJ(Jd) - 1))
+            translationKey: "skyblockGame:combatBenefit", percent: oF(100 * (dQ(FQ) - 1))
           };
         case "mining":
           return {
-            translationKey: "skyblockGame:miningBenefit", percent: PJ(100 * (kJ(Jd) - 1))
+            translationKey: "skyblockGame:miningBenefit", percent: oF(100 * (FF(FQ) - 1))
           };
         case "farming":
           return {
-            translationKey: "skyblockGame:farmingBenefit", percent: PJ(100 * pJ(Jd))
+            translationKey: "skyblockGame:farmingBenefit", percent: oF(100 * wF(FQ))
           };
         case "fishing":
           return {
-            translationKey: "skyblockGame:fishingBenefit", percent: PJ(100 * (1 - NJ(Jd)))
+            translationKey: "skyblockGame:fishingBenefit", percent: oF(100 * (1 - LF(FQ)))
           };
         case "exploration":
           return {
-            translationKey: "skyblockGame:explorationBenefit", percent: PJ(100 * (WJ(Jd) - 1))
+            translationKey: "skyblockGame:explorationBenefit", percent: oF(100 * (qF(FQ) - 1))
           }
       }
     }
 
-    function gJ(dd) {
-      return "farming" === dd ? 200 : 100
+    function kF(QQ) {
+      return "farming" === QQ ? 200 : 100
     }
 
-    function CJ(dd, Jd) {
-      if (!Number.isSafeInteger(dd) || dd < 0) throw new Error("Skill XP must be a non-negative safe integer");
-      const kd = gJ(Jd),
-        pd = dd => function(dd, Jd) {
-          return gJ(dd) * Jd * (Jd + 1) / 2
-        }(Jd, dd);
-      let Nd = Math.min(wd, Math.floor((Math.sqrt(8 * dd / kd + 1) - 1) / 2));
-      return Nd < wd && pd(Nd + 1) <= dd ? Nd++ : pd(Nd) > dd && Nd--, {
-        totalXp: dd,
-        level: Nd,
-        xpIntoLevel: dd - pd(Nd),
-        xpForNextLevel: Nd === wd ? null : kd * (Nd + 1)
+    function vF(QQ, FQ) {
+      if (!Number.isSafeInteger(QQ) || QQ < 0) throw new Error("Skill XP must be a non-negative safe integer");
+      const wQ = kF(FQ),
+        LQ = QQ => function(QQ, FQ) {
+          return kF(QQ) * FQ * (FQ + 1) / 2
+        }(FQ, QQ);
+      let qQ = Math.min(yQ, Math.floor((Math.sqrt(8 * QQ / wQ + 1) - 1) / 2));
+      return qQ < yQ && LQ(qQ + 1) <= QQ ? qQ++ : LQ(qQ) > QQ && qQ--, {
+        totalXp: QQ,
+        level: qQ,
+        xpIntoLevel: QQ - LQ(qQ),
+        xpForNextLevel: qQ === yQ ? null : wQ * (qQ + 1)
       }
     }
-    const KJ = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
+    const mF = new Set(["Apple Block", "Plum Block", "Coconut Block", "Pear Block", "Cherry Block", "Mango Block", "Banana Block"]);
 
-    function oJ(dd) {
-      return KJ.has(dd)
+    function uF(QQ) {
+      return mF.has(QQ)
     }
-    const lJ = new Set(Nd.wb);
+    const HF = new Set(qQ.qb);
 
-    function QJ(dd) {
-      return lJ.has(dd)
+    function bF(QQ) {
+      return HF.has(QQ)
     }
     new Set(["Watermelon", "Melon", "Wheat|FreshlyGrown", "Rice|FreshlyGrown", "Corn Plant|FreshlyGrown", "Chili Pepper Plant|FreshlyGrown", "Chili Pepper Plant|Lava|FreshlyGrown", "Tomato Plant|FreshlyGrown", "Tomato Plant|Top|FreshlyGrown", "Carrot Plant|FreshlyGrown", "Potato Plant|FreshlyGrown", "Sugar Cane Plant|FreshlyGrown", "Sugar Cane Plant|Top|FreshlyGrown", "Coffee Plant|FreshlyGrown", "Lettuce Plant|FreshlyGrown", "Cauliflower Plant|FreshlyGrown", "Parsnip Plant|FreshlyGrown", "Red Cabbage Plant|FreshlyGrown", "Beetroot Plant|FreshlyGrown"]);
-    const LJ = {
+    const YF = {
         "Maple Log": 10,
         "Pine Log": 10,
         "Plum Log": 10,
@@ -822,7 +822,7 @@ export const modules = {
         "Spectral Log": 10,
         "Mango Log": 10
       },
-      OJ = {
+      xF = {
         Stone: 2,
         Diorite: 18,
         Granite: 18,
@@ -835,14 +835,14 @@ export const modules = {
         "Block of Coal": 15,
         "Block of Gold": 30
       },
-      eJ = {
-        ...OJ,
-        ...Object.fromEntries(Object.entries(Ed).map((dd => {
-          let [Jd, kd] = dd;
-          return [Jd, 9 * OJ[kd]]
+      AF = {
+        ...xF,
+        ...Object.fromEntries(Object.entries(fQ).map((QQ => {
+          let [FQ, wQ] = QQ;
+          return [FQ, 9 * xF[wQ]]
         })))
       },
-      RJ = {
+      tF = {
         Watermelon: 10,
         Melon: 10,
         "Wheat|FreshlyGrown": 10,
@@ -863,7 +863,7 @@ export const modules = {
         "Red Cabbage Plant|FreshlyGrown": 10,
         "Beetroot Plant|FreshlyGrown": 10
       },
-      IJ = {
+      eF = {
         Wheatfish: 25,
         Darter: 25,
         "Sunset Minnow": 25,
@@ -927,7 +927,7 @@ export const modules = {
         "Pearlescent Moonfish": 300,
         "Game Dev Fish": 50
       };
-    const GJ = {
+    const MF = {
         foraging: "Iron Axe",
         combat: "Iron Sword",
         mining: "Iron Pickaxe",
@@ -935,7 +935,7 @@ export const modules = {
         fishing: "Rusty Rod",
         exploration: "Compass"
       },
-      vJ = {
+      GF = {
         foraging: [80, 220, 100],
         combat: [240, 70, 70],
         mining: [60, 220, 240],
@@ -944,112 +944,112 @@ export const modules = {
         exploration: [255, 180, 70]
       };
 
-    function xJ(dd) {
-      return `rgb(${vJ[dd].join(", ")})`
+    function pF(QQ) {
+      return `rgb(${GF[QQ].join(", ")})`
     }
 
-    function qJ(dd, Jd, kd) {
-      if (!kd) return dd(Jd);
-      const pd = {};
-      for (const [Nd, Wd] of Object.entries(kd)) pd[Nd] = "string" === typeof Wd ? Wd : dd(Wd.translationKey);
-      return dd(Jd, pd)
+    function cF(QQ, FQ, wQ) {
+      if (!wQ) return QQ(FQ);
+      const LQ = {};
+      for (const [qQ, oQ] of Object.entries(wQ)) LQ[qQ] = "string" === typeof oQ ? oQ : QQ(oQ.translationKey);
+      return QQ(FQ, LQ)
     }
-    class BJ {
-      constructor(dd, Jd) {
-        this.now = dd, this.getJournal = Jd, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.EC = !1, this.onShown = () => {}
+    class CF {
+      constructor(QQ, FQ) {
+        this.now = QQ, this.getJournal = FQ, this.pending = [], this.current = null, this.followUp = null, this.shownAt = 0, this.expiresAt = 0, this.token = 0, this.ym = !1, this.onShown = () => {}
       }
-      enqueue(dd) {
-        const Jd = sJ(dd);
-        if (Jd) this.pending.push(dd);
+      enqueue(QQ) {
+        const FQ = SF(QQ);
+        if (FQ) this.pending.push(QQ);
         else {
-          const Jd = this.pending.findIndex(sJ);
-          this.pending.splice(-1 === Jd ? this.pending.length : Jd, 0, dd)
+          const FQ = this.pending.findIndex(SF);
+          this.pending.splice(-1 === FQ ? this.pending.length : FQ, 0, QQ)
         }
-        return (null === this.current || null !== this.followUp && !Jd) && (this.advance(), !0)
+        return (null === this.current || null !== this.followUp && !FQ) && (this.advance(), !0)
       }
-      setHeld(dd) {
-        return this.EC = dd, !dd && null === this.current && this.pending.length > 0 && (this.advance(), !0)
+      setHeld(QQ) {
+        return this.ym = QQ, !QQ && null === this.current && this.pending.length > 0 && (this.advance(), !0)
       }
-      Do() {
-        const dd = this.getJournal(),
-          Jd = this.followUp;
-        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === Jd ? this.findFollowUp(this.current) : null), !0;
-        if ("explore" === (null === Jd || void 0 === Jd ? void 0 : Jd.kind) && dd && dd.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
-        if ("step" === (null === Jd || void 0 === Jd ? void 0 : Jd.kind)) {
-          const dd = this.findFollowUp(this.current);
-          if ("step" !== (null === dd || void 0 === dd ? void 0 : dd.kind) || dd.questId !== Jd.questId || dd.step.id !== Jd.step.id) return this.showFollowUp(dd, this.expiresAt), !0
+      fH() {
+        const QQ = this.getJournal(),
+          FQ = this.followUp;
+        if (null !== this.current && this.now() >= this.expiresAt) return this.showFollowUp(null === FQ ? this.findFollowUp(this.current) : null), !0;
+        if ("explore" === (null === FQ || void 0 === FQ ? void 0 : FQ.kind) && QQ && QQ.active.length > 0) return this.showFollowUp(this.findFollowUp(this.current)), !0;
+        if ("step" === (null === FQ || void 0 === FQ ? void 0 : FQ.kind)) {
+          const QQ = this.findFollowUp(this.current);
+          if ("step" !== (null === QQ || void 0 === QQ ? void 0 : QQ.kind) || QQ.questId !== FQ.questId || QQ.step.id !== FQ.step.id) return this.showFollowUp(QQ, this.expiresAt), !0
         }
         return !1
       }
       clear() {
         this.pending = [], this.current = null, this.followUp = null, this.expiresAt = 0
       }
-      getView(dd, Jd, kd) {
-        var pd, Nd, Wd, Pd;
+      getView(QQ, FQ, wQ) {
+        var LQ, qQ, oQ, DQ;
         if (null === this.current) return null;
-        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, dd, kd);
-        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, dd);
-        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, dd, Jd);
+        if ("skillLevel" === this.current.questCompletionKind) return this.getSkillLevelView(this.current, QQ, wQ);
+        if ("landmark" === this.current.questCompletionKind) return this.getLandmarkView(this.current, QQ);
+        if ("npcNote" === this.current.questCompletionKind) return this.getNpcNoteView(this.current, QQ, FQ);
         const {
-          questCompletionKind: Zd,
-          questCompletionNameKey: gd
-        } = this.current, Cd = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, Kd = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, od = "step" === (null === (pd = this.followUp) || void 0 === pd ? void 0 : pd.kind) ? this.followUp : null, ld = "explore" === (null === (Nd = this.followUp) || void 0 === Nd ? void 0 : Nd.kind);
-        let Qd;
-        return Qd = ld ? dd("skyblockGame:questExploreTitle") : null !== od ? "quest" === Zd ? dd("skyblockGame:questNextQuestTitle", {
-          quest: dd(od.questNameKey)
-        }) : dd("skyblockGame:questNextStepTitle") : dd("started" === Zd ? "skyblockGame:questStartedTitle" : "quest" === Zd ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
+          questCompletionKind: kQ,
+          questCompletionNameKey: vQ
+        } = this.current, mQ = "step" === this.current.questCompletionKind ? this.current.questCompletionNameParams : void 0, uQ = "quest" === this.current.questCompletionKind ? this.current.questCompletionCoins : 0, HQ = "step" === (null === (LQ = this.followUp) || void 0 === LQ ? void 0 : LQ.kind) ? this.followUp : null, bQ = "explore" === (null === (qQ = this.followUp) || void 0 === qQ ? void 0 : qQ.kind);
+        let YQ;
+        return YQ = bQ ? QQ("skyblockGame:questExploreTitle") : null !== HQ ? "quest" === kQ ? QQ("skyblockGame:questNextQuestTitle", {
+          quest: QQ(HQ.questNameKey)
+        }) : QQ("skyblockGame:questNextStepTitle") : QQ("started" === kQ ? "skyblockGame:questStartedTitle" : "quest" === kQ ? "skyblockGame:questCompletedTitle" : "skyblockGame:subquestCompletedTitle"), {
           token: this.token,
-          kind: null === this.followUp ? Zd : "step",
+          kind: null === this.followUp ? kQ : "step",
           phase: null === this.followUp ? "completion" : "next",
-          title: Qd,
-          name: ld ? Jd("skyblockGame:questExploreName") : null !== od ? qJ(Jd, od.step.nameKey, od.step.nameParams) : qJ(Jd, gd, Cd),
-          description: ld ? Jd("skyblockGame:questExploreDescription") : null === od ? null : qJ(Jd, od.step.descriptionKey, od.step.descriptionParams),
-          reward: null === this.followUp && Kd > 0 ? Jd("skyblockGame:questCoinRewardSuffix", {
-            amount: Kd.toLocaleString(kd)
+          title: YQ,
+          name: bQ ? FQ("skyblockGame:questExploreName") : null !== HQ ? cF(FQ, HQ.step.nameKey, HQ.step.nameParams) : cF(FQ, vQ, mQ),
+          description: bQ ? FQ("skyblockGame:questExploreDescription") : null === HQ ? null : cF(FQ, HQ.step.descriptionKey, HQ.step.descriptionParams),
+          reward: null === this.followUp && uQ > 0 ? FQ("skyblockGame:questCoinRewardSuffix", {
+            amount: uQ.toLocaleString(wQ)
           }) : null,
-          iconItem: null !== (Wd = null === od || void 0 === od ? void 0 : od.step.questIconItem) && void 0 !== Wd ? Wd : null,
+          iconItem: null !== (oQ = null === HQ || void 0 === HQ ? void 0 : HQ.step.questIconItem) && void 0 !== oQ ? oQ : null,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
-          waypointNameKey: null !== od && (null === (Pd = this.getJournal()) || void 0 === Pd ? void 0 : Pd.trackedQuestId) === od.questId ? od.step.nameKey : null
+          waypointNameKey: null !== HQ && (null === (DQ = this.getJournal()) || void 0 === DQ ? void 0 : DQ.trackedQuestId) === HQ.questId ? HQ.step.nameKey : null
         }
       }
-      getSkillLevelView(dd, Jd, kd) {
+      getSkillLevelView(QQ, FQ, wQ) {
         let {
-          skill: pd,
-          beforeLevel: Nd,
-          level: Wd
-        } = dd;
-        const Pd = ZJ(pd, Nd),
-          Zd = ZJ(pd, Wd);
+          skill: LQ,
+          beforeLevel: qQ,
+          level: oQ
+        } = QQ;
+        const DQ = DF(LQ, qQ),
+          kQ = DF(LQ, oQ);
         return {
           token: this.token,
           kind: "skillLevel",
           phase: "completion",
-          title: Jd(`skyblockGame:${pd}`),
-          name: Jd("skyblockGame:skillLevelUp", {
-            to: Wd.toLocaleString(kd)
+          title: FQ(`skyblockGame:${LQ}`),
+          name: FQ("skyblockGame:skillLevelUp", {
+            to: oQ.toLocaleString(wQ)
           }),
-          description: Pd.percent === Zd.percent ? null : Jd(`${Zd.translationKey}Change`, {
-            before: Pd.percent.toLocaleString(kd),
-            after: Zd.percent.toLocaleString(kd)
+          description: DQ.percent === kQ.percent ? null : FQ(`${kQ.translationKey}Change`, {
+            before: DQ.percent.toLocaleString(wQ),
+            after: kQ.percent.toLocaleString(wQ)
           }),
           reward: null,
-          iconItem: GJ[pd],
-          accent: xJ(pd),
+          iconItem: MF[LQ],
+          accent: pF(LQ),
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
-      getLandmarkView(dd, Jd) {
+      getLandmarkView(QQ, FQ) {
         let {
-          landmarkNameKey: kd
-        } = dd;
+          landmarkNameKey: wQ
+        } = QQ;
         return {
           token: this.token,
           kind: "landmark",
           phase: "completion",
-          title: Jd("skyblockGame:landmarkDiscovered"),
-          name: Jd(kd),
+          title: FQ("skyblockGame:landmarkDiscovered"),
+          name: FQ(wQ),
           description: null,
           reward: null,
           iconItem: null,
@@ -1058,36 +1058,36 @@ export const modules = {
           waypointNameKey: null
         }
       }
-      getNpcNoteView(dd, Jd, kd) {
+      getNpcNoteView(QQ, FQ, wQ) {
         let {
-          titleKey: pd,
-          textKey: Nd,
-          params: Wd = {},
-          nameKeys: Pd = {},
-          iconItem: Zd = null
-        } = dd;
-        const gd = {
-          ...Wd
+          titleKey: LQ,
+          textKey: qQ,
+          params: oQ = {},
+          nameKeys: DQ = {},
+          iconItem: kQ = null
+        } = QQ;
+        const vQ = {
+          ...oQ
         };
-        for (const [Cd, Kd] of Object.entries(Pd)) gd[Cd] = Jd(Kd);
+        for (const [mQ, uQ] of Object.entries(DQ)) vQ[mQ] = FQ(uQ);
         return {
           token: this.token,
           kind: "npcNote",
           phase: "completion",
-          title: Jd(pd),
-          name: kd(Nd, gd),
+          title: FQ(LQ),
+          name: wQ(qQ, vQ),
           description: null,
           reward: null,
-          iconItem: Zd,
+          iconItem: kQ,
           accent: null,
           durationMs: this.expiresAt - this.shownAt,
           waypointNameKey: null
         }
       }
       durationMs() {
-        var dd;
+        var QQ;
         if (null !== this.followUp) return 5600;
-        switch (null === (dd = this.current) || void 0 === dd ? void 0 : dd.questCompletionKind) {
+        switch (null === (QQ = this.current) || void 0 === QQ ? void 0 : QQ.questCompletionKind) {
           case "quest":
             return 4800;
           case "started":
@@ -1102,89 +1102,89 @@ export const modules = {
             return 2400
         }
       }
-      showFollowUp(dd, Jd) {
-        null === dd || this.EC ? this.advance() : (this.followUp = dd, this.token++, this.shownAt = this.now(), this.expiresAt = null !== Jd && void 0 !== Jd ? Jd : this.shownAt + this.durationMs())
+      showFollowUp(QQ, FQ) {
+        null === QQ || this.ym ? this.advance() : (this.followUp = QQ, this.token++, this.shownAt = this.now(), this.expiresAt = null !== FQ && void 0 !== FQ ? FQ : this.shownAt + this.durationMs())
       }
-      findFollowUp(dd) {
-        var Jd;
-        const kd = this.getJournal();
-        if (!kd || this.hasPendingQuestPopup() || sJ(dd)) return null;
-        const pd = "started" === dd.questCompletionKind ? kd.active.some((Jd => Jd.id === dd.questCompletionQuestId)) : "quest" === dd.questCompletionKind ? kd.completed.some((Jd => Jd.id === dd.questCompletionQuestId)) : [...kd.active, ...kd.completed].some((Jd => Jd.id === dd.questCompletionQuestId && Jd.subquests.some((Jd => Jd.id === dd.questCompletionStepId && "completed" === Jd.status))));
-        if (!pd) return null;
-        if ("quest" === dd.questCompletionKind && 0 === kd.active.length && !this.hasPendingQuestPopup()) return {
+      findFollowUp(QQ) {
+        var FQ;
+        const wQ = this.getJournal();
+        if (!wQ || this.hasPendingQuestPopup() || SF(QQ)) return null;
+        const LQ = "started" === QQ.questCompletionKind ? wQ.active.some((FQ => FQ.id === QQ.questCompletionQuestId)) : "quest" === QQ.questCompletionKind ? wQ.completed.some((FQ => FQ.id === QQ.questCompletionQuestId)) : [...wQ.active, ...wQ.completed].some((FQ => FQ.id === QQ.questCompletionQuestId && FQ.subquests.some((FQ => FQ.id === QQ.questCompletionStepId && "completed" === FQ.status))));
+        if (!LQ) return null;
+        if ("quest" === QQ.questCompletionKind && 0 === wQ.active.length && !this.hasPendingQuestPopup()) return {
           kind: "explore"
         };
-        const Nd = kd.active.find((dd => dd.id === kd.trackedQuestId)),
-          Wd = null !== (Jd = null === Nd || void 0 === Nd ? void 0 : Nd.subquests.find((dd => "ready" === dd.status))) && void 0 !== Jd ? Jd : null === Nd || void 0 === Nd ? void 0 : Nd.subquests.find((dd => "active" === dd.status));
-        return Wd ? {
+        const qQ = wQ.active.find((QQ => QQ.id === wQ.trackedQuestId)),
+          oQ = null !== (FQ = null === qQ || void 0 === qQ ? void 0 : qQ.subquests.find((QQ => "ready" === QQ.status))) && void 0 !== FQ ? FQ : null === qQ || void 0 === qQ ? void 0 : qQ.subquests.find((QQ => "active" === QQ.status));
+        return oQ ? {
           kind: "step",
-          questId: Nd.id,
-          questNameKey: Nd.nameKey,
-          step: Wd
+          questId: qQ.id,
+          questNameKey: qQ.nameKey,
+          step: oQ
         } : null
       }
       hasPendingQuestPopup() {
-        return this.pending.some((dd => !sJ(dd)))
+        return this.pending.some((QQ => !SF(QQ)))
       }
       advance() {
-        var dd;
-        this.current = this.EC ? null : null !== (dd = this.pending.shift()) && void 0 !== dd ? dd : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
+        var QQ;
+        this.current = this.ym ? null : null !== (QQ = this.pending.shift()) && void 0 !== QQ ? QQ : null, this.followUp = null, null !== this.current && (this.token++, this.shownAt = this.now(), this.expiresAt = this.shownAt + this.durationMs(), this.onShown(this.current.questCompletionKind))
       }
     }
 
-    function sJ(dd) {
-      return iJ(dd.questCompletionKind)
+    function SF(QQ) {
+      return iF(QQ.questCompletionKind)
     }
 
-    function iJ(dd) {
-      return "skillLevel" === dd || "landmark" === dd || "npcNote" === dd
+    function iF(QQ) {
+      return "skillLevel" === QQ || "landmark" === QQ || "npcNote" === QQ
     }
-    var aJ = kd(38674);
-    const MJ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
-      FJ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
-      YJ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC",
-      mJ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC",
-      bJ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
-    var SJ = kd(38683);
-    const jJ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg==",
-      XJ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
-    const fJ = kd.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
-    const nJ = kd.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
-      UJ = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
-    var yJ = kd(18700),
-      DJ = kd(20930),
-      TJ = kd(23256),
-      EJ = kd(24763),
-      cJ = kd(26456);
-    const hJ = {
+    var WF = wQ(38066);
+    const RF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoAD8h2L8Cqz6T4IxLsVwyZwTb+CYAZ9imCI5Gx+cisEK73/7jYLRFcKtxqcIwzPE+BymgXwAABikVOyJwpyoAAAAAElFTkSuQmCC",
+      OF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIAP8x4FRwH8w+OqOim+LYyiGSLzQR8G/DipgKgy2Vvqfc+INmEZm4zQRphCniTA3wRXeFseuECQIwlfbmMEYxsfqc2KChyAAANDbei83hMJpAAAAAElFTkSuQmCC",
+      sF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIAP8x4FRwH8QePfuFQq+dO44hmKwxOMHN1Hw4b3bMRW6unv/zznxBkwjs3GaCFOI00SYm2AKQWysCkGCILxm6TwwhvGx+pyY4CEIAG45h2BiJfmeAAAAAElFTkSuQmCC",
+      rF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIAP8x4FRwP9sF+X/XVEGKDjbRRlDMVjww44uFHyyKw5TIUjC2n4BXBGIjVMh0SaSpHBBkC0Y41IIVkxM8BAEAGLKe3rsiWx2AAAAAElFTkSuQmCC",
+      IF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIAP8J0bs//M750GCKPg5Qgyh8OT2Vf870vxR8MntqzAVysnL/wcBmCIQAIlhVQjCMIUwPobCjAC7/+XZSSgYJIZVoZGWKlwRiI1NISwosGHSAAAPvV+9cOwRMQAAAABJRU5ErkJggg==";
+    var UF = wQ(38072);
+    const NF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAT0lEQVR4nGNgIAP8h2JcfDD4X2lg/D9RRhQmCWbnq6piKAYrRMf52BSCTHAU54QrArGRbEA18ev3X3CFIDZOq2GmwkzDqxAdY/U5DkwaAACgalVtqFSm5wAAAABJRU5ErkJggg==",
+      TF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAf0lEQVR4nO3VsQkEIRCG0ek/MbwWbMXk4u1kOBi4bWANhA0U3oM/9zOZCAAAAAAm8lf/Nza+1+NiNym4BKfgEjxOCR6Th7ZPX9rsI2I3Q/AluAnugvOU4Fw8M6vnKnaTgkvwEFyC8/TgtniWZovdpOAS3AR3we2UYAAAAIDYxQ2IeNNWBgNQ/AAAAABJRU5ErkJggg==";
+    const KF = wQ.p + "static/media/quest_search.b4f00072d5f134fdf189ecb8a48edc99.svg";
+    const zF = wQ.p + "static/media/quest_talk.7d2326c7bdb6bc060cc0cde294f4fa89.svg",
+      lF = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANklEQVR4nGNgIBP8R8NYwX8QuH7nGRwzYFEMVwQzDcSetXgHdsXEKIIrJkYRusn4FVHdRJwAALfWRnO5uwepAAAAAElFTkSuQmCC";
+    var jF = wQ(18442),
+      aF = wQ(20487),
+      XF = wQ(22892),
+      fF = wQ(24459),
+      VF = wQ(26092);
+    const hF = {
       ashen_fort: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIAP8R6PR2RCBzRu2/kemQbirvQ/GRlUIwyAFIJyUkIFbobyUHhjjVAiSgCmM1p9HWCFI0YKYD/gVgjDMapAibAphQYENkwYAeH1pEdiBhHAAAAAASUVORK5CYII=",
       auction: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+kApf/vw4qEFT8H6SoJsr8/5quIMKKg62VwIrxmfx/apEbWBKkCOQMbArhimB8YhThBUQpIggAQqYxE90Y9BMAAAAASUVORK5CYII=",
       bank: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgIBP8R8NYwX8w+OoOwbfFcSr+/+ugAhi/X8zz/0gVD1aFCNNui6Ow0RWDBWGmIbPJVwhzFwgjs7G6EwcmDQAAuONyKxIgH/AAAAAASUVORK5CYII=",
-      carrot: yJ,
+      carrot: jF,
       castle: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgoAD8R8I4wf+pRW7/n2nrgzEDDsX/YQrxmfr/yIHdYAkQDWNP6uvDUAxXAMIgBSCcm5mJqRAkAVIUbK0ExgQV1kSZgzEuhXDPYMGkAQC0sV3YpEV43gAAAABJRU5ErkJggg==",
       cinderfall: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATUlEQVR4nGNgoAD8h2K84P//N/5gjE/x/78dLHCFIDYuxWDJxqys/362tjgVwhXBFOJS/P+yCROKImNNbbAYhkJ000AKQRir9TgwaQAA9pxTDDdv+r4AAAAASUVORK5CYII=",
-      combat_1: DJ,
-      cow: bJ,
+      combat_1: aF,
+      cow: IF,
       craft: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPklEQVR4nGNgIAH8JxIz/L+2JA2Mp6VZYGUzwBSCBPFhBphCYq0GKy7w0kARwCGGIgjHhBTiNxHdLTjECAMAZEReU1MzQpcAAAAASUVORK5CYII=",
       dungeons: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQUlEQVR4nGNgIBP8R8NYwf++KbPhOKewHKtiuAJ5KT0wBinEphis6L+1AVwhiA0Sw6oQpgiGKVdIjBvBinFg0gAAOOVdfOFyr7kAAAAASUVORK5CYII=",
       emberwatch: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgoAD8h2L8Cv6/8f//t4PlPy4N/48c2A2WACm6bMIEZk/q68NQDFYIwyAFIJybmYnbVJCJ+BTBFRIyjSSFcJ8TE0Q4AQDqiVfWwMcDkgAAAABJRU5ErkJggg==",
       enemy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIBP8R8NYwf///W3/n3r4wjEDFsUYikB4s4o2hmKwhDY3L1wRiI1ToQgLK1whiI1TIQjnCYqBMUgRNoVgxSAJmCIQjdfnxAQPXgAAraZYPXKBMfkAAAAASUVORK5CYII=",
-      farm: kd(26472),
+      farm: wQ(26105),
       farming_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAR0lEQVR4nGNgoAD8h2K84P+nbP//87SU8Cr+D1J0w1H///9LXjgV/4cpQsbYFIMlPjw+hILxKqyJMv8fbK1EuUKwYhyYNAAAbaVgzAUMTa8AAAAASUVORK5CYII=",
-      fishing: MJ,
-      fishing_1: MJ,
+      fishing: RF,
+      fishing_1: RF,
       forest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwf+c/TZgbN+jA8YMWBRjKAJhg3JlDMUoikAKQFgxWgi7qcQogiuuiTL/H2ythFcRSQrBiolRhBMAAJ9tQRoOB1rEAAAAAElFTkSuQmCC",
-      guardian_gold: FJ,
-      guardian_iron: YJ,
+      guardian_gold: OF,
+      guardian_iron: sF,
       hub: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgoAL4T5SirGUf/uNTDJa0r78GxjpRK7Aq/v8p2x8s8eHxIThGVwhWdMNR//88LSWwgv+XvLArhJlwcnMXfhNBgjVR5nCFIDY2hXCPYMGkAQDGNGSEX91FFwAAAABJRU5ErkJggg==",
       island: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgoAD8h2K84L//OlcwxqcYrECvyQKOGXAohkn870pxgLMxFC17FgfGOfut4Ni7Xwe74u60ADDO8rIC03jdCVIEwkT5nBhFOAEAI1k9HXZqyYAAAAAASUVORK5CYII=",
-      melon: TJ,
-      mines: EJ,
-      mining_1: EJ,
-      npc: mJ,
+      melon: XF,
+      mines: fF,
+      mining_1: fF,
+      npc: rF,
       npc_beaver_lumberjack: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASUlEQVR4nGNgIAP8h2JcfDD4XxQVCMYwBSB2nJsbhmKwhJKyMlwDiI1TYUVyMFgBCIPYeBX+/3zt/6vbJ6moEBljUwhWjAOTBgAZSmJ9XCb2zAAAAABJRU5ErkJggg==",
       npc_chef: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8R8NYwf+v33/B8f1nH7AqRlEEU3gfi+L/RVGB/y/feQlXAGKDxLAqlJDX//9pfycYg9g4FYIUxLm5gfHJvgz8Cl9vaQFjkEIQxuohHJg0AACncHuimGgHPgAAAABJRU5ErkJggg==",
-      npc_cow: bJ,
+      npc_cow: IF,
       npc_draugr_warper: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAb0lEQVR4nGNgIBIwIrH/41PDCFPU+/IzVlXF4rxgdSwwgUV33oFpXh42MP35yy+sVv///x9is8GxR2D6gpUcRAEjxGYmZF2nvv/BygYBuNUwk0BASoKHIe38M+wKQZLIAMa/iOZGsDuxehtVDWEAAHwCHXf9ctZjAAAAAElFTkSuQmCC",
       npc_dwarf_blue_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUElEQVR4nGNgIBP8R8NYwf//51lRMAMWxf/TM0r+/z/AjoLTM0owFENMeSCBirGY+l+r/SpY8OGmBjBGFkNR6DD9FVwRDIPEyFYIVowDkwYAEBZzAwnUgyIAAAAASUVORK5CYII=",
       npc_dwarf_braided_hair: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8R8NYwX9deRUUzIBFMYYiXIr/h5rqYMUYCr9+/wUWjLE2AGNkMRSF6Q6mcEUwDBLDUIiuCNlkDA/hwKQBAPnYUUW1+JaKAAAAAElFTkSuQmCC",
@@ -1201,13 +1201,13 @@ export const modules = {
       npc_forge_mother: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAXklEQVR4nGNgIAP8x4FRwP+vzy+AJSKd7MEYWQxF4avbJ8EYphDGx1D49fsvTBOhYigKfS0s/l9dPAsFg8SwKpyYkAVXBGLjVPj/POv//x+0Ifg8K1aFYMXEBA9BAACWKnGnkFHGrQAAAABJRU5ErkJggg==",
       npc_goblin_goggles: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNkQAX/0fiMGAyQIhMPGxRVZ3YcgathwqUIBKBi/2Gq//tMzWDw4HBkwAZ2/NjPsCV7Btzq/1+//2LQ1dFkSMgoBQssmNHNcPnKdQZuTjawgXCFTd0zsJpYV5oBVsgCEzj+7wRWhTAA8wwcPNt2A4zRAUrw4DAMWQ1hAADlHCXxWLGl2AAAAABJRU5ErkJggg==",
       npc_goblin_mad_scientist: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAV0lEQVR4nGNgIBP8R8NYwX/PzoT/qpZGYAxiY1P8//8DCayYAU3x/7OXboEFkRXAxFAUfv3+67+SsvL//+dZwRjEBolhKIQpQMcYCkGOx4axeggHJg0AAFKzbFf/ov6kAAAAAElFTkSuQmCC",
-      npc_gold_guardian: FJ,
+      npc_gold_guardian: OF,
       npc_gold_watermelon_stag: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAWElEQVR4nGNgIAP8R6KR2Sjg/5sH4f9hNDKbAZ9ifIoYQIKfV6nAFSKxURVt8jH7f1+R9//ZVH8wBrFBYuiKwZIgiS27w8AYxAaJ4TQVWSEuN4IVo2HSAQCFHFiN1+WGFAAAAABJRU5ErkJggg==",
       npc_head_8_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdElEQVR4nGNgIBIwIrH/41PDCFO06sIzMMNbQ5Jh643ncFVhBlJgdXCFSnJqDBJiMgwvXj1BMe7eo1tghSzIgrPqMlAU+eXUwNlMyBINs7gYZJTkwBjERgYoCud0iGBlYygEgStrdoAxVq/DPIQhi6mGMAAAMzccpadovTMAAAAASUVORK5CYII=",
       npc_human_archer: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAc0lEQVR4nGNkQID/DNgBI5wAKTqwtAOrKofoCrA6FmTBvinLUBQV5UTB2SgKf//5i8N2BoTVX7//YuC2VmfwZOYCC2z/+43h69GbDNycbGB1cIWHXBywmmS35wBYIRNOu9AA3I1ffnzFqxBmNdh6ItQQBgAsaRzpv2C9aQAAAABJRU5ErkJggg==",
       npc_human_desert_guard: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAfklEQVR4nGNkQID/DNgBI5wAKfpxdztWVRzKnmB1LDCBdReZGUSEhVAUvXn7Ds6GKwSB23MnoigUDIiFs5lgDH9PB4Zll+7DJUBskBiKQ0FunBoXy/D9xw8UEzk5OBiyFy1GdSPHpTMM+rw8KApvfv6CaTUhALMabD0RaggDACCpH2oXfV//AAAAAElFTkSuQmCC",
       npc_human_sentry: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYUlEQVR4nGNgIBIwIrH/41PDCFOkqamJVdX169fB6liQBXNMTVAUTTl9BkPj/6/ff4Gs/j81LhaMkcVQrO4JC2Xg5OBA0f39xw+GklWrUa2edvYcTh+DABNeWSRAdPAQDQAzViKkGPwLjwAAAABJRU5ErkJggg==",
-      npc_iron_guardian: YJ,
+      npc_iron_guardian: sF,
       npc_jackal_priest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAdklEQVR4nGNgQID/UIyVzwQT1NTUZBAWFoYrALFBYjDFjDCF/zdyMGADjP4/wBQLTODVVXkGh8UwCyDgQOw/BgaGmyhWg8GZcxexsjEUmhjpM3z79g2MQWxkALcaBP79/cvAwc4OZyO8gGYiPoDQghqGuNQQBgAoCCX1U3QMRQAAAABJRU5ErkJggg==",
       npc_minotaur: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAaklEQVR4nGNgIAP8R6KR2Sjg/9fnF8AKMgJ8wBhZDEXhq9snwRimEMbHUPj1+6//DBYBCBMtAiBi6ApBkhMTsv5fXTwLjEHsODc37Ar/n2eFKwSxcSp8sGHO//8ftMEYxMamEKwYByYNAABmXHNFjN9ucgAAAABJRU5ErkJggg==",
       npc_minotaur_elder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAg0lEQVR4nGNgIBIwIrH/41PDBFP09fkFMKMuJxWMQQAq9h9ZIcPXLz8ZXt0+CTcGxAaJwQBcIbeMIYOYqjlcAsQGiaG78X9ZajxDvJ01iuMWHjrK0DV7IVgd3EQQ2LMX4k50NgiwIHPy8mczMCiqgdlaOrcYyqdFYVgN9x0WgKyGMAAArq0oYNR0jFIAAAAASUVORK5CYII=",
@@ -1224,43 +1224,43 @@ export const modules = {
       npc_smuglyn: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAASklEQVR42mNgIAP8x4FRFWlqamLF6IrBgj1hoSgYq8Kv33/9txBi/z81LhaMQWyQGIbC5VmZcEUwDBLDUIiuCIRB1pOtkOjgIQgAhutlSTAZTWcAAAAASUVORK5CYII=",
       npc_tentacle_boy: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAiElEQVR4nGNkQID/DNgBI5wAKXJw8Wb48vkjhqozJ4+A1bHABKI0arEad+akBdzY/ybmNgw/f/3CqpCdjQ1sKthEM4scHM5DsZ7hf23T3v9fv//6z8srAmaj80FqmGC6JMSkUExB54Ot1ubgYSgoXQkWuHXrKpiG8UFyMAA3HkbjEIMoRqMxxABOskezGUlSqQAAAABJRU5ErkJggg==",
       npc_tentacle_girl: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAgklEQVR4nGNgwA3+QzEYMOGQ/H9viS7Dp4N+MDEGFmRFO8PqGYTFRBjevnrDwMCwjuHN4/twSRZsikD07U1BUKnLKArBQExYAIxh7OvX78DlUNzoMbEWKxtDYb11MFY2htXPPr5nOH7mApiW4hdECxAkX/fbJIGDYqV3MYwND0eiAQAf4TQGGrZ+tQAAAABJRU5ErkJggg==",
-      npc_tentacle_guy: SJ,
+      npc_tentacle_guy: UF,
       npc_tentacle_guy_fisherman: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVElEQVR4nGNgIBP8R8NYwX9XD7//JuY2cMyARTFcUtfQDIxxKf4fHFaFgRPjWzAVVpXP/K+krAymYWycCrMzeuEKQWycCmE0jI1NIVgxEo3MJg0AAIJsWIj/ilEbAAAAAElFTkSuQmCC",
       npc_wolf_in_suit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8h2JcfDD47+0X/N/a1gEmCWY7u3piKAYrRMfOuBQqKSvDFYHYOBV+/f4LbCUIg9g4FYIUgEwCYbxu/P/5GtxEEBubQrBiHJg0AAB07Vx5G7sqWQAAAABJRU5ErkJggg==",
-      npc_wolf_security: jJ,
+      npc_wolf_security: NF,
       player: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQElEQVR4nGNgoAD8h2K84D8M4FP8/9HLz3CFIDYuxUQpBEugK8SmGCy4cttpmASYjVUhkiJ8YhAJbO7GGT64AACb2mXTEt92cwAAAABJRU5ErkJggg==",
       portal: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAU0lEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOL7zz9wfPLcDdwKQZL901eAMUixrowDpkKQbphJMFPxKoSZCMI4FYIkQBiZjdXnxAQPQQAAOtFywhRvXJwAAAAASUVORK5CYII=",
       portal_orange: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAVUlEQVR4nGNgIAP8x4FRwP9YmzYwtlOJAWMYG10xWOLzJAs4/tSkglshSPJjldT/D4UCYMW6Mg6YCkG6YSbBTMWrEGQiDONUCJIAYWQ2Vp8TEzwEAQAA6GVEbqZ9DwAAAABJRU5ErkJggg==",
       quest: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAMElEQVR4nGNgoAD8h2K84P//Xwf+/35tSFDxf+or/P3a8P/nVSrEuZMoRVQ3EScAAIINMAfVJxmxAAAAAElFTkSuQmCC",
-      quest_search: fJ,
-      quest_talk: nJ,
+      quest_search: KF,
+      quest_talk: zF,
       scorched_flats: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAUUlEQVR4nGNgIBP8R8NYwf8HT+6jYAYsisES/vIicEUg9t4TuzAUY5gGUoRNIVwxSBJGY1W0wF0LjKuMFcAYxsewGiYJchtMAzaFYMU4MGkAADMzb36mUd86AAAAAElFTkSuQmCC",
       scorp_pit: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgoAD8R8I4wf//l6rA+MUCG5yK/z/T1kc27T8uxeiCWBXCrUQ2cUOCHHYTQRIgU2BuxKYQxUSYApwmIgmi08QDAPP+Ttl2n8EbAAAAAElFTkSuQmCC",
       shooting_gallery: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAASElEQVR4nGNgIBP8x4IxwP9n2vpw/P+SFxijK4ZIIoGaKHP8CkE0WNH///83q2jjVwhj41WIDLAphCsGScIwLl+DFRMKGoIAAPFdcuGHeG5wAAAAAElFTkSuQmCC",
       smelt: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgIBH8J4DB4P+8efPwYgaoYjCnoKAAK56HTSG6lXgV/n5t+P9zhQphhSBFeBUS4xmwYmKChygAADFjjqm4UTd5AAAAAElFTkSuQmCC",
       talk: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAANElEQVR4nGNgIBH8x4Ph4D8+wICkGC6Ai2Yg2cRdx67hxBjuhGnA5xkUk3FJYphKSBFBAACXuoGa4rCq3AAAAABJRU5ErkJggg==",
       tower_of_doom: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgIAP8J0bsf1VBG0gQBduaucHYmAr/X/L6/9/aAKdCBpjiqKAkMMaliPoKwYrQFeJUjAOTBgBhWEzjnMiaVwAAAABJRU5ErkJggg==",
-      unknown: UJ,
-      watermelon: cJ
+      unknown: lF,
+      watermelon: VF
     };
 
-    function rJ(dd, Jd) {
-      const kd = document.createElement("img");
-      return kd.className = Jd, kd.src = dd, kd.alt = "", kd.draggable = !1, kd
+    function JF(QQ, FQ) {
+      const wQ = document.createElement("img");
+      return wQ.className = FQ, wQ.src = QQ, wQ.alt = "", wQ.draggable = !1, wQ
     }
 
-    function uJ(dd) {
-      var Jd;
-      const kd = null !== (Jd = hJ[dd]) && void 0 !== Jd ? Jd : dd.startsWith("npc_") ? mJ : UJ;
-      if ("portal" !== dd) return rJ(kd, "SkyblockMapIcon");
-      const pd = document.createElement("span");
-      pd.className = "SkyblockMapIcon Portal";
-      const Nd = document.createElement("span");
-      return Nd.className = "SkyblockMapIconTint", Nd.style.maskImage = Nd.style.webkitMaskImage = `url("${XJ}")`, pd.append(rJ(kd, "SkyblockMapIconLayer"), Nd, rJ(XJ, "SkyblockMapIconLayer SkyblockMapIconShade")), pd
+    function EF(QQ) {
+      var FQ;
+      const wQ = null !== (FQ = hF[QQ]) && void 0 !== FQ ? FQ : QQ.startsWith("npc_") ? rF : lF;
+      if ("portal" !== QQ) return JF(wQ, "SkyblockMapIcon");
+      const LQ = document.createElement("span");
+      LQ.className = "SkyblockMapIcon Portal";
+      const qQ = document.createElement("span");
+      return qQ.className = "SkyblockMapIconTint", qQ.style.maskImage = qQ.style.webkitMaskImage = `url("${TF}")`, LQ.append(JF(wQ, "SkyblockMapIconLayer"), qQ, JF(TF, "SkyblockMapIconLayer SkyblockMapIconShade")), LQ
     }
-    var tJ = kd(38651),
-      VJ = kd(4099);
-    const zJ = [{
+    var nF = wQ(38044),
+      gF = wQ(4136);
+    const PF = [{
       lobes: [3, 4],
       amount: [.04, .055]
     }, {
@@ -1268,52 +1268,52 @@ export const modules = {
       amount: [.025, .035]
     }];
 
-    function HJ(dd) {
-      const Jd = new VJ.j(dd);
+    function ZF(QQ) {
+      const FQ = new gF.e(QQ);
       return {
         radius: 45,
         squareness: 3,
-        wobbles: zJ.map((dd => {
+        wobbles: PF.map((QQ => {
           let {
-            lobes: kd,
-            amount: pd
-          } = dd;
+            lobes: wQ,
+            amount: LQ
+          } = QQ;
           return {
-            lobes: kd[Math.floor(Jd.next() * kd.length)],
-            amount: pd[0] + Jd.next() * (pd[1] - pd[0]),
-            phase: 2 * Jd.next() * Math.PI
+            lobes: wQ[Math.floor(FQ.next() * wQ.length)],
+            amount: LQ[0] + FQ.next() * (LQ[1] - LQ[0]),
+            phase: 2 * FQ.next() * Math.PI
           }
         })),
         samples: 160
       }
     }
 
-    function wJ(dd) {
+    function yF(QQ) {
       let {
-        radius: Jd,
-        squareness: kd,
-        wobbles: pd,
-        samples: Nd
-      } = dd;
-      const Wd = [];
-      for (let Pd = 0; Pd < Nd; Pd++) {
-        const dd = 2 * Math.PI * Pd / Nd,
-          Zd = Math.cos(dd),
-          gd = Math.sin(dd),
-          Cd = Jd * (Math.abs(Zd) ** kd + Math.abs(gd) ** kd) ** (-1 / kd) * pd.reduce(((Jd, kd) => {
+        radius: FQ,
+        squareness: wQ,
+        wobbles: LQ,
+        samples: qQ
+      } = QQ;
+      const oQ = [];
+      for (let DQ = 0; DQ < qQ; DQ++) {
+        const QQ = 2 * Math.PI * DQ / qQ,
+          kQ = Math.cos(QQ),
+          vQ = Math.sin(QQ),
+          mQ = FQ * (Math.abs(kQ) ** wQ + Math.abs(vQ) ** wQ) ** (-1 / wQ) * LQ.reduce(((FQ, wQ) => {
             let {
-              lobes: pd,
-              amount: Nd,
-              phase: Wd
-            } = kd;
-            return Jd + Nd * Math.sin(pd * dd + Wd)
+              lobes: LQ,
+              amount: qQ,
+              phase: oQ
+            } = wQ;
+            return FQ + qQ * Math.sin(LQ * QQ + oQ)
           }), 1);
-        Wd.push(`${(50+Cd*Zd).toFixed(2)} ${(50+Cd*gd).toFixed(2)}`)
+        oQ.push(`${(50+mQ*kQ).toFixed(2)} ${(50+mQ*vQ).toFixed(2)}`)
       }
-      return `M${Wd.join("L")}Z`
+      return `M${oQ.join("L")}Z`
     }
-    const AJ = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
-    class dk {
+    const BF = ".InGameHeaderContainer, .TopRightElementsLeft > *, .TopRightElementsRight > *, .MiddleTextTopContainer";
+    class dF {
       constructor() {
         this.compassSpacing = 1, this.compassSize = {
           trackHalfWidth: 0,
@@ -1334,598 +1334,598 @@ export const modules = {
         }, this.viewport = {
           width: 0,
           height: 0
-        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.pL = !1, this.mountCompass = dd => {
-          var Jd;
-          if (null === (Jd = this.stopLayout) || void 0 === Jd || Jd.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !dd || this.pL) return;
-          const kd = dd.querySelector(".SkyblockCompassTrack");
+        }, this.stopLayout = null, this.stopWaypoint = null, this.stopWaypointOrigin = null, this.waypointOriginToken = null, this.waypointLaunch = null, this.markers = new Map, this.cardinals = [], this.frame = null, this.kx = !1, this.mountCompass = QQ => {
+          var FQ;
+          if (null === (FQ = this.stopLayout) || void 0 === FQ || FQ.call(this), this.stopLayout = null, this.markers.clear(), this.cardinals = [], this.compass = null, !QQ || this.kx) return;
+          const wQ = QQ.querySelector(".SkyblockCompassTrack");
           this.compass = {
-            root: dd,
-            track: kd,
-            label: dd.querySelector(".SkyblockCompassLabel")
-          }, kd.replaceChildren();
-          for (let Nd = 0; Nd < 4; Nd++) {
-            const dd = document.createElement("span");
-            dd.className = "SkyblockCompassCardinal", kd.appendChild(dd), this.cardinals.push(dd)
+            root: QQ,
+            track: wQ,
+            label: QQ.querySelector(".SkyblockCompassLabel")
+          }, wQ.replaceChildren();
+          for (let qQ = 0; qQ < 4; qQ++) {
+            const QQ = document.createElement("span");
+            QQ.className = "SkyblockCompassCardinal", wQ.appendChild(QQ), this.cardinals.push(QQ)
           }
-          const pd = (0, tJ.e)(AJ, [dd], this.layout);
+          const LQ = (0, nF.e)(BF, [QQ], this.layout);
           this.stopLayout = () => {
-            pd(), kd.replaceChildren()
+            LQ(), wQ.replaceChildren()
           }, this.render(this.frame)
-        }, this.mountTerrain = dd => {
-          this.terrain = this.pL ? null : dd, this.render(this.frame)
-        }, this.mountMinimapSearchArea = dd => {
-          this.mountSearchArea("minimap", dd)
-        }, this.mountMapSearchArea = dd => {
-          this.mountSearchArea("map", dd)
-        }, this.mountPlayer = dd => {
-          this.player = this.pL ? null : dd, this.render(this.frame)
-        }, this.mountWaypoint = dd => {
-          var Jd, kd;
-          if (null === (Jd = this.stopWaypoint) || void 0 === Jd || Jd.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !dd || this.pL) return;
-          const pd = dd.querySelector(".SkyblockQuestWaypointMarker");
-          pd.replaceChildren(uJ("quest")), this.markerIcon = "quest", this.waypoint = {
-            root: dd,
-            marker: pd,
-            clip: dd.querySelector(".SkyblockQuestWaypointTextClip"),
-            text: dd.querySelector(".SkyblockQuestWaypointText"),
-            label: dd.querySelector(".SkyblockQuestWaypointLabel"),
-            distance: dd.querySelector(".SkyblockQuestWaypointDistance"),
-            hint: dd.querySelector(".SkyblockQuestWaypointHint")
+        }, this.mountTerrain = QQ => {
+          this.terrain = this.kx ? null : QQ, this.render(this.frame)
+        }, this.mountMinimapSearchArea = QQ => {
+          this.mountSearchArea("minimap", QQ)
+        }, this.mountMapSearchArea = QQ => {
+          this.mountSearchArea("map", QQ)
+        }, this.mountPlayer = QQ => {
+          this.player = this.kx ? null : QQ, this.render(this.frame)
+        }, this.mountWaypoint = QQ => {
+          var FQ, wQ;
+          if (null === (FQ = this.stopWaypoint) || void 0 === FQ || FQ.call(this), this.stopWaypoint = null, this.waypoint = null, this.markerIcon = null, !QQ || this.kx) return;
+          const LQ = QQ.querySelector(".SkyblockQuestWaypointMarker");
+          LQ.replaceChildren(EF("quest")), this.markerIcon = "quest", this.waypoint = {
+            root: QQ,
+            marker: LQ,
+            clip: QQ.querySelector(".SkyblockQuestWaypointTextClip"),
+            text: QQ.querySelector(".SkyblockQuestWaypointText"),
+            label: QQ.querySelector(".SkyblockQuestWaypointLabel"),
+            distance: QQ.querySelector(".SkyblockQuestWaypointDistance"),
+            hint: QQ.querySelector(".SkyblockQuestWaypointHint")
           };
-          const Nd = () => {
+          const qQ = () => {
               this.waypointMarkerSize = {
-                width: pd.offsetWidth,
-                height: pd.offsetHeight
+                width: LQ.offsetWidth,
+                height: LQ.offsetHeight
               }, this.waypointInset = {
-                x: pd.offsetWidth / 2 + 8,
-                top: pd.offsetHeight + 8,
+                x: LQ.offsetWidth / 2 + 8,
+                top: LQ.offsetHeight + 8,
                 bottom: 8
               }
             },
-            Wd = new ResizeObserver((() => {
-              Nd(), this.render(this.frame)
+            oQ = new ResizeObserver((() => {
+              qQ(), this.render(this.frame)
             }));
-          Wd.observe(pd, {
+          oQ.observe(LQ, {
             box: "border-box"
           });
-          const Pd = () => {
+          const DQ = () => {
             this.viewport = {
               width: window.innerWidth,
               height: window.innerHeight
             }
           };
-          window.addEventListener("resize", Pd), null === (kd = window.visualViewport) || void 0 === kd || kd.addEventListener("resize", Pd), this.stopWaypoint = () => {
-            var dd;
-            Wd.disconnect(), window.removeEventListener("resize", Pd), null === (dd = window.visualViewport) || void 0 === dd || dd.removeEventListener("resize", Pd)
-          }, Pd(), Nd(), this.render(this.frame)
-        }, this.mountWaypointOrigin = dd => {
-          var Jd;
-          if (null === (Jd = this.stopWaypointOrigin) || void 0 === Jd || Jd.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = dd && !this.pL ? Number(dd.dataset.notificationToken) : null, dd && !this.pL && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            const Jd = {
-              nameKey: dd.dataset.waypointNameKey,
+          window.addEventListener("resize", DQ), null === (wQ = window.visualViewport) || void 0 === wQ || wQ.addEventListener("resize", DQ), this.stopWaypoint = () => {
+            var QQ;
+            oQ.disconnect(), window.removeEventListener("resize", DQ), null === (QQ = window.visualViewport) || void 0 === QQ || QQ.removeEventListener("resize", DQ)
+          }, DQ(), qQ(), this.render(this.frame)
+        }, this.mountWaypointOrigin = QQ => {
+          var FQ;
+          if (null === (FQ = this.stopWaypointOrigin) || void 0 === FQ || FQ.call(this), this.stopWaypointOrigin = null, this.waypointLaunch = null, this.waypointOriginToken = QQ && !this.kx ? Number(QQ.dataset.notificationToken) : null, QQ && !this.kx && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            const FQ = {
+              nameKey: QQ.dataset.waypointNameKey,
               x: 0,
               y: 0,
               startedAt: null
             };
-            this.waypointLaunch = Jd;
-            const kd = () => {
-                const kd = dd.getBoundingClientRect();
-                Jd.x = (kd.left + kd.width / 2) / window.innerWidth * 100, Jd.y = (kd.top + kd.height / 2) / window.innerHeight * 100
+            this.waypointLaunch = FQ;
+            const wQ = () => {
+                const wQ = QQ.getBoundingClientRect();
+                FQ.x = (wQ.left + wQ.width / 2) / window.innerWidth * 100, FQ.y = (wQ.top + wQ.height / 2) / window.innerHeight * 100
               },
-              pd = new ResizeObserver(kd);
-            pd.observe(dd.parentElement), pd.observe(dd), window.addEventListener("resize", kd), this.stopWaypointOrigin = () => {
-              pd.disconnect(), window.removeEventListener("resize", kd)
-            }, kd()
+              LQ = new ResizeObserver(wQ);
+            LQ.observe(QQ.parentElement), LQ.observe(QQ), window.addEventListener("resize", wQ), this.stopWaypointOrigin = () => {
+              LQ.disconnect(), window.removeEventListener("resize", wQ)
+            }, wQ()
           }
           this.render(this.frame)
         }, this.layout = () => {
           if (!this.compass) return;
-          const dd = this.compass.root,
-            Jd = getComputedStyle(dd),
-            kd = getComputedStyle(document.documentElement),
-            pd = parseFloat(kd.fontSize),
-            Nd = parseFloat(Jd.getPropertyValue("--compass-icon-size")) * pd,
-            Wd = "1" === Jd.getPropertyValue("--compass-fit-top").trim(),
-            Pd = Wd ? 1 : 8,
-            Zd = Array.from(document.querySelectorAll(AJ), (dd => {
-              var Jd;
-              return (null !== (Jd = dd.querySelector(".MiddleTextTop")) && void 0 !== Jd ? Jd : dd).getBoundingClientRect()
-            })).filter((dd => dd.width > 0 && dd.height > 0));
-          let gd = (parseFloat(kd.getPropertyValue("--notchTop")) || 0) + Pd,
-            Cd = "";
-          if (Wd) {
-            const Jd = window.innerWidth / 2,
-              kd = dd.getBoundingClientRect().height,
-              Wd = [gd, ...Zd.map((dd => Math.max(gd, dd.bottom + Pd)))].sort(((dd, Jd) => dd - Jd));
-            for (const dd of Wd) {
-              let Wd = Jd - 8;
-              for (const pd of Zd) pd.bottom + Pd <= dd || pd.top >= dd + kd + Pd || (Wd = Math.min(Wd, pd.right <= Jd ? Jd - pd.right - 8 : pd.left - Jd - 8));
-              const Kd = 2 * Wd - Nd;
-              if (Kd >= 16 * pd) {
-                Cd = `${Kd}px`, gd = dd;
+          const QQ = this.compass.root,
+            FQ = getComputedStyle(QQ),
+            wQ = getComputedStyle(document.documentElement),
+            LQ = parseFloat(wQ.fontSize),
+            qQ = parseFloat(FQ.getPropertyValue("--compass-icon-size")) * LQ,
+            oQ = "1" === FQ.getPropertyValue("--compass-fit-top").trim(),
+            DQ = oQ ? 1 : 8,
+            kQ = Array.from(document.querySelectorAll(BF), (QQ => {
+              var FQ;
+              return (null !== (FQ = QQ.querySelector(".MiddleTextTop")) && void 0 !== FQ ? FQ : QQ).getBoundingClientRect()
+            })).filter((QQ => QQ.width > 0 && QQ.height > 0));
+          let vQ = (parseFloat(wQ.getPropertyValue("--notchTop")) || 0) + DQ,
+            mQ = "";
+          if (oQ) {
+            const FQ = window.innerWidth / 2,
+              wQ = QQ.getBoundingClientRect().height,
+              oQ = [vQ, ...kQ.map((QQ => Math.max(vQ, QQ.bottom + DQ)))].sort(((QQ, FQ) => QQ - FQ));
+            for (const QQ of oQ) {
+              let oQ = FQ - 8;
+              for (const LQ of kQ) LQ.bottom + DQ <= QQ || LQ.top >= QQ + wQ + DQ || (oQ = Math.min(oQ, LQ.right <= FQ ? FQ - LQ.right - 8 : LQ.left - FQ - 8));
+              const uQ = 2 * oQ - qQ;
+              if (uQ >= 16 * LQ) {
+                mQ = `${uQ}px`, vQ = QQ;
                 break
               }
             }
           }
-          dd.style.maxWidth !== Cd && (dd.style.maxWidth = Cd);
-          const Kd = dd.getBoundingClientRect(),
-            od = this.compassSize.trackHalfWidth;
-          if (Kd.width > 0) {
-            const dd = this.compass.track.getBoundingClientRect();
+          QQ.style.maxWidth !== mQ && (QQ.style.maxWidth = mQ);
+          const uQ = QQ.getBoundingClientRect(),
+            HQ = this.compassSize.trackHalfWidth;
+          if (uQ.width > 0) {
+            const QQ = this.compass.track.getBoundingClientRect();
             this.compassSize = {
-              trackHalfWidth: dd.width / 2,
+              trackHalfWidth: QQ.width / 2,
               screenHalfWidth: window.innerWidth / 2
-            }, this.compassSpacing = 4 * Nd / dd.width
+            }, this.compassSpacing = 4 * qQ / QQ.width
           }
-          if (!Cd)
-            for (const ld of Zd) ld.right > Kd.left - 8 && ld.left < Kd.right + 8 && (gd = Math.max(gd, ld.bottom + Pd));
-          dd.style.top = `${gd}px`, this.compassSize.trackHalfWidth !== od && this.render(this.frame)
+          if (!mQ)
+            for (const bQ of kQ) bQ.right > uQ.left - 8 && bQ.left < uQ.right + 8 && (vQ = Math.max(vQ, bQ.bottom + DQ));
+          QQ.style.top = `${vQ}px`, this.compassSize.trackHalfWidth !== HQ && this.render(this.frame)
         }
       }
-      mountSearchArea(dd, Jd) {
-        this.searchAreas[dd] = this.pL ? null : Jd, this.render(this.frame)
+      mountSearchArea(QQ, FQ) {
+        this.searchAreas[QQ] = this.kx ? null : FQ, this.render(this.frame)
       }
-      render(dd) {
-        if (this.pL) return;
-        if (this.frame = dd, this.compass && (Jk(this.compass.root, !dd), dd)) {
-          const Jd = this.compassSize.trackHalfWidth / 50;
-          dd.compass.cardinals.forEach(((dd, kd) => {
-            const pd = this.cardinals[kd];
-            pd.textContent !== dd.name && (pd.textContent = dd.name), Jk(pd, dd.hidden), pd.style.translate = dd.left * Jd + "px"
+      render(QQ) {
+        if (this.kx) return;
+        if (this.frame = QQ, this.compass && (Qw(this.compass.root, !QQ), QQ)) {
+          const FQ = this.compassSize.trackHalfWidth / 50;
+          QQ.compass.cardinals.forEach(((QQ, wQ) => {
+            const LQ = this.cardinals[wQ];
+            LQ.textContent !== QQ.name && (LQ.textContent = QQ.name), Qw(LQ, QQ.hidden), LQ.style.translate = QQ.left * FQ + "px"
           }));
-          const kd = new Set;
-          dd.compass.markers.forEach(((pd, Nd) => {
-            var Wd;
-            kd.add(pd.id);
-            let Pd = this.markers.get(pd.id);
-            Pd || (Pd = document.createElement("span"), Pd.className = "SkyblockCompassMarker", this.markers.set(pd.id, Pd), this.compass.track.appendChild(Pd)), Pd.dataset.icon !== pd.icon && (Pd.dataset.icon = pd.icon, Pd.replaceChildren(uJ(pd.icon))), Pd.style.color = null !== (Wd = pd.colour) && void 0 !== Wd ? Wd : "", Pd.style.translate = pd.left * Jd + "px", Pd.style.zIndex = String(dd.compass.markers.length - Nd), Pd.title !== pd.name && (Pd.title = pd.name)
+          const wQ = new Set;
+          QQ.compass.markers.forEach(((LQ, qQ) => {
+            var oQ;
+            wQ.add(LQ.id);
+            let DQ = this.markers.get(LQ.id);
+            DQ || (DQ = document.createElement("span"), DQ.className = "SkyblockCompassMarker", this.markers.set(LQ.id, DQ), this.compass.track.appendChild(DQ)), DQ.dataset.icon !== LQ.icon && (DQ.dataset.icon = LQ.icon, DQ.replaceChildren(EF(LQ.icon))), DQ.style.color = null !== (oQ = LQ.colour) && void 0 !== oQ ? oQ : "", DQ.style.translate = LQ.left * FQ + "px", DQ.style.zIndex = String(QQ.compass.markers.length - qQ), DQ.title !== LQ.name && (DQ.title = LQ.name)
           }));
-          for (const [dd, pd] of this.markers) kd.has(dd) || (pd.remove(), this.markers.delete(dd));
-          this.compass.label.textContent !== dd.compass.label && (this.compass.label.textContent = dd.compass.label)
+          for (const [QQ, LQ] of this.markers) wQ.has(QQ) || (LQ.remove(), this.markers.delete(QQ));
+          this.compass.label.textContent !== QQ.compass.label && (this.compass.label.textContent = QQ.compass.label)
         }
-        this.terrain && (Jk(this.terrain, !(null !== dd && void 0 !== dd && dd.minimap)), null !== dd && void 0 !== dd && dd.minimap && (this.terrain.style.transform = dd.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", dd.minimap.iconRotation)));
-        const Jd = null === dd || void 0 === dd ? void 0 : dd.searchArea;
-        for (const kd of [this.searchAreas.minimap, this.searchAreas.map])
-          if (kd && (Jk(kd, !Jd), Jd)) {
-            if (this.searchAreaPath.seed !== Jd.shapeSeed && (this.searchAreaPath = {
-                seed: Jd.shapeSeed,
-                d: wJ(HJ(Jd.shapeSeed))
-              }), kd.dataset.shapeSeed !== Jd.shapeSeed) {
-              kd.dataset.shapeSeed = Jd.shapeSeed;
-              for (const dd of kd.querySelectorAll("path")) dd.setAttribute("d", this.searchAreaPath.d)
+        this.terrain && (Qw(this.terrain, !(null !== QQ && void 0 !== QQ && QQ.minimap)), null !== QQ && void 0 !== QQ && QQ.minimap && (this.terrain.style.transform = QQ.minimap.transform, this.terrain.style.setProperty("--minimap-icon-rotation", QQ.minimap.iconRotation)));
+        const FQ = null === QQ || void 0 === QQ ? void 0 : QQ.searchArea;
+        for (const wQ of [this.searchAreas.minimap, this.searchAreas.map])
+          if (wQ && (Qw(wQ, !FQ), FQ)) {
+            if (this.searchAreaPath.seed !== FQ.shapeSeed && (this.searchAreaPath = {
+                seed: FQ.shapeSeed,
+                d: yF(ZF(FQ.shapeSeed))
+              }), wQ.dataset.shapeSeed !== FQ.shapeSeed) {
+              wQ.dataset.shapeSeed = FQ.shapeSeed;
+              for (const QQ of wQ.querySelectorAll("path")) QQ.setAttribute("d", this.searchAreaPath.d)
             }
-            kd.style.left = `${Jd.left}%`, kd.style.top = `${Jd.top}%`, kd.style.width = `${Jd.width}%`, kd.style.height = `${Jd.height}%`
-          } if (this.player && (Jk(this.player, !(null !== dd && void 0 !== dd && dd.player) || dd.player.hidden), null !== dd && void 0 !== dd && dd.player && (this.player.style.left = `${dd.player.left}%`, this.player.style.top = `${dd.player.top}%`, this.player.style.setProperty("--map-player-rotation", dd.player.rotation))), this.waypoint) {
+            wQ.style.left = `${FQ.left}%`, wQ.style.top = `${FQ.top}%`, wQ.style.width = `${FQ.width}%`, wQ.style.height = `${FQ.height}%`
+          } if (this.player && (Qw(this.player, !(null !== QQ && void 0 !== QQ && QQ.player) || QQ.player.hidden), null !== QQ && void 0 !== QQ && QQ.player && (this.player.style.left = `${QQ.player.left}%`, this.player.style.top = `${QQ.player.top}%`, this.player.style.setProperty("--map-player-rotation", QQ.player.rotation))), this.waypoint) {
           const {
-            root: Jd,
-            marker: kd,
-            clip: pd,
-            text: Nd,
-            label: Wd,
-            distance: Pd,
-            hint: Zd
-          } = this.waypoint, gd = !(null !== dd && void 0 !== dd && dd.waypoint) || null !== dd.waypoint.popupToken && dd.waypoint.popupToken !== this.waypointOriginToken;
-          Jk(Jd, gd);
-          let Cd = 1;
-          const Kd = this.waypointLaunch;
-          if (!gd && Kd && dd.waypoint.nameKey === Kd.nameKey) {
-            const dd = performance.now();
-            Kd.startedAt ??= dd, Cd = Math.min(1, Math.max(0, (dd - Kd.startedAt - 450) / 1e3)), kd.style.opacity = String(Math.min(1, (dd - Kd.startedAt) / 150)), 1 === Cd && (this.waypointLaunch = null)
-          } else kd.style.opacity = "", Kd && null !== Kd.startedAt && (this.waypointLaunch = null);
-          if (Jd.classList.toggle("Launching", Cd < 1), null !== dd && void 0 !== dd && dd.waypoint) {
-            const Jd = this.waypointInset,
-              gd = "quest_talk" === dd.waypoint.markerIcon ? function(dd, Jd, kd) {
-                if (!dd.text || null === dd.blockHeight || 0 === dd.nearness) return dd;
-                const pd = dd.blockHeight / 100 * kd.height,
-                  Nd = -dd.nearness * (kk * pd + Jd.width / 2),
-                  Wd = dd.nearness * (pk * pd + Jd.height / 2);
+            root: FQ,
+            marker: wQ,
+            clip: LQ,
+            text: qQ,
+            label: oQ,
+            distance: DQ,
+            hint: kQ
+          } = this.waypoint, vQ = !(null !== QQ && void 0 !== QQ && QQ.waypoint) || null !== QQ.waypoint.popupToken && QQ.waypoint.popupToken !== this.waypointOriginToken;
+          Qw(FQ, vQ);
+          let mQ = 1;
+          const uQ = this.waypointLaunch;
+          if (!vQ && uQ && QQ.waypoint.nameKey === uQ.nameKey) {
+            const QQ = performance.now();
+            uQ.startedAt ??= QQ, mQ = Math.min(1, Math.max(0, (QQ - uQ.startedAt - 450) / 1e3)), wQ.style.opacity = String(Math.min(1, (QQ - uQ.startedAt) / 150)), 1 === mQ && (this.waypointLaunch = null)
+          } else wQ.style.opacity = "", uQ && null !== uQ.startedAt && (this.waypointLaunch = null);
+          if (FQ.classList.toggle("Launching", mQ < 1), null !== QQ && void 0 !== QQ && QQ.waypoint) {
+            const FQ = this.waypointInset,
+              vQ = "quest_talk" === QQ.waypoint.markerIcon ? function(QQ, FQ, wQ) {
+                if (!QQ.text || null === QQ.blockHeight || 0 === QQ.nearness) return QQ;
+                const LQ = QQ.blockHeight / 100 * wQ.height,
+                  qQ = -QQ.nearness * (Fw * LQ + FQ.width / 2),
+                  oQ = QQ.nearness * (ww * LQ + FQ.height / 2);
                 return {
-                  ...dd,
+                  ...QQ,
                   text: {
-                    x: dd.text.x + Nd / kd.width * 100,
-                    y: dd.text.y + Wd / kd.height * 100
+                    x: QQ.text.x + qQ / wQ.width * 100,
+                    y: QQ.text.y + oQ / wQ.height * 100
                   }
                 }
-              }(dd.waypoint, this.waypointMarkerSize, this.viewport) : dd.waypoint,
-              od = (0, aJ.e)(gd, Jd, this.viewport),
-              ld = Cd * Cd * (3 - 2 * Cd),
-              Qd = Cd < 1 ? Kd.x + (od.x - Kd.x) * ld : od.x,
-              Ld = Cd < 1 ? Kd.y + (od.y - Kd.y) * ld : od.y;
-            kd.style.translate = `${Qd}vw ${Ld}vh`, pd.style.clipPath = `inset(${Jd.top}px ${Jd.x}px ${Jd.bottom}px)`, Jk(Nd, Cd < 1 || !dd.waypoint.text), Nd.style.opacity = String(1 - dd.waypoint.nearness), dd.waypoint.text && (Nd.style.translate = `${dd.waypoint.text.x}vw ${dd.waypoint.text.y}vh`), Wd.textContent !== dd.waypoint.name && (Wd.textContent = dd.waypoint.name), this.markerIcon !== dd.waypoint.markerIcon && (this.markerIcon = dd.waypoint.markerIcon, kd.replaceChildren(uJ(this.markerIcon))), Pd.textContent !== dd.waypoint.distance && (Pd.textContent = dd.waypoint.distance), Jk(Zd, null === dd.waypoint.hint), null !== dd.waypoint.hint && Zd.textContent !== dd.waypoint.hint && (Zd.textContent = dd.waypoint.hint)
+              }(QQ.waypoint, this.waypointMarkerSize, this.viewport) : QQ.waypoint,
+              HQ = (0, WF.c)(vQ, FQ, this.viewport),
+              bQ = mQ * mQ * (3 - 2 * mQ),
+              YQ = mQ < 1 ? uQ.x + (HQ.x - uQ.x) * bQ : HQ.x,
+              xQ = mQ < 1 ? uQ.y + (HQ.y - uQ.y) * bQ : HQ.y;
+            wQ.style.translate = `${YQ}vw ${xQ}vh`, LQ.style.clipPath = `inset(${FQ.top}px ${FQ.x}px ${FQ.bottom}px)`, Qw(qQ, mQ < 1 || !QQ.waypoint.text), qQ.style.opacity = String(1 - QQ.waypoint.nearness), QQ.waypoint.text && (qQ.style.translate = `${QQ.waypoint.text.x}vw ${QQ.waypoint.text.y}vh`), oQ.textContent !== QQ.waypoint.name && (oQ.textContent = QQ.waypoint.name), this.markerIcon !== QQ.waypoint.markerIcon && (this.markerIcon = QQ.waypoint.markerIcon, wQ.replaceChildren(EF(this.markerIcon))), DQ.textContent !== QQ.waypoint.distance && (DQ.textContent = QQ.waypoint.distance), Qw(kQ, null === QQ.waypoint.hint), null !== QQ.waypoint.hint && kQ.textContent !== QQ.waypoint.hint && (kQ.textContent = QQ.waypoint.hint)
           }
         }
       }
       dispose() {
-        var dd, Jd;
-        this.mountWaypointOrigin(null), this.render(null), null === (dd = this.stopLayout) || void 0 === dd || dd.call(this), this.stopLayout = null, null === (Jd = this.stopWaypoint) || void 0 === Jd || Jd.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
+        var QQ, FQ;
+        this.mountWaypointOrigin(null), this.render(null), null === (QQ = this.stopLayout) || void 0 === QQ || QQ.call(this), this.stopLayout = null, null === (FQ = this.stopWaypoint) || void 0 === FQ || FQ.call(this), this.stopWaypoint = null, this.compass = null, this.terrain = null, this.searchAreas = {
           minimap: null,
           map: null
-        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.pL = !0
+        }, this.player = null, this.waypoint = null, this.markers.clear(), this.cardinals = [], this.kx = !0
       }
     }
 
-    function Jk(dd, Jd) {
-      dd.hidden !== Jd && (dd.hidden = Jd)
+    function Qw(QQ, FQ) {
+      QQ.hidden !== FQ && (QQ.hidden = FQ)
     }
-    const kk = .55,
-      pk = .6;
-    const Nk = {
+    const Fw = .55,
+      ww = .6;
+    const Lw = {
       talk: "quest_talk",
       search: "quest_search"
     };
-    class Wk {
-      constructor(dd, Jd, kd, pd) {
-        this.map = dd, this.quests = Jd, this.compass = kd, this.display = new dk, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.pL = !1, this.snapshot = null, this.texts = new Map, this.translate = pd
+    class qw {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.map = QQ, this.quests = FQ, this.compass = wQ, this.display = new dF, this.translate = void 0, this.locale = "en-GB", this.metresFormat = new Intl.NumberFormat(this.locale), this.kx = !1, this.snapshot = null, this.texts = new Map, this.translate = LQ
       }
-      setTranslator(dd, Jd) {
-        this.translate = dd, this.locale = Jd, this.metresFormat = new Intl.NumberFormat(Jd), this.texts.clear()
+      setTranslator(QQ, FQ) {
+        this.translate = QQ, this.locale = FQ, this.metresFormat = new Intl.NumberFormat(FQ), this.texts.clear()
       }
-      translateCached(dd, Jd) {
-        const kd = void 0 === Jd ? dd : `${dd} ${Jd}`;
-        let pd = this.texts.get(kd);
-        return void 0 === pd && (this.texts.size >= 500 && this.texts.clear(), pd = this.translate(dd, void 0 === Jd ? void 0 : {
-          distance: Jd
-        }), this.texts.set(kd, pd)), pd
+      translateCached(QQ, FQ) {
+        const wQ = void 0 === FQ ? QQ : `${QQ} ${FQ}`;
+        let LQ = this.texts.get(wQ);
+        return void 0 === LQ && (this.texts.size >= 500 && this.texts.clear(), LQ = this.translate(QQ, void 0 === FQ ? void 0 : {
+          distance: FQ
+        }), this.texts.set(wQ, LQ)), LQ
       }
       getSnapshot() {
         return this.snapshot
       }
-      afterRender(dd, Jd, kd) {
-        if (this.pL) return;
-        if (!dd) return this.snapshot = null, void this.display.render(null);
-        const pd = this.map.getSnapshot().map,
-          gd = kd.cameraHeading,
-          Cd = {
+      afterRender(QQ, FQ, wQ) {
+        if (this.kx) return;
+        if (!QQ) return this.snapshot = null, void this.display.render(null);
+        const LQ = this.map.getSnapshot().map,
+          vQ = wQ.cameraHeading,
+          mQ = {
             ...this.display.compassSize,
-            tanHalfFovX: kd.tanHalfFovX,
-            pitch: kd.cameraPitch
+            tanHalfFovX: wQ.tanHalfFovX,
+            pitch: wQ.cameraPitch
           },
-          Kd = [];
-        if (pd)
-          for (const Nd of this.compass.frame(dd, gd, Jd)) {
-            const dd = Od(Nd.offset, Cd);
-            null !== dd && Kd.push({
-              ...Nd,
-              left: dd
+          uQ = [];
+        if (LQ)
+          for (const qQ of this.compass.frame(QQ, vQ, FQ)) {
+            const QQ = AQ(qQ.offset, mQ);
+            null !== QQ && uQ.push({
+              ...qQ,
+              left: QQ
             })
           }
-        const od = function(dd, Jd) {
-            const kd = [],
-              pd = dd => "quest" === dd.kind ? dd.distance - 1 : dd.distance,
-              Nd = [...dd].sort(((dd, Jd) => pd(dd) - pd(Jd) || dd.id.localeCompare(Jd.id)));
-            for (const Wd of Nd) {
-              let dd = !1;
-              if ("quest" !== Wd.kind)
-                for (const pd of kd)
-                  if (Math.abs(pd.left - Wd.left) < Jd) {
-                    dd = !0;
+        const HQ = function(QQ, FQ) {
+            const wQ = [],
+              LQ = QQ => "quest" === QQ.kind ? QQ.distance - 1 : QQ.distance,
+              qQ = [...QQ].sort(((QQ, FQ) => LQ(QQ) - LQ(FQ) || QQ.id.localeCompare(FQ.id)));
+            for (const oQ of qQ) {
+              let QQ = !1;
+              if ("quest" !== oQ.kind)
+                for (const LQ of wQ)
+                  if (Math.abs(LQ.left - oQ.left) < FQ) {
+                    QQ = !0;
                     break
-                  } dd || kd.push(Wd)
+                  } QQ || wQ.push(oQ)
             }
-            return kd
-          }(Kd, this.display.compassSpacing),
-          ld = function(dd) {
-            let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
-              kd = null;
-            for (const pd of dd) Math.abs(pd.offset) <= Jd && (!kd || pd.distance < kd.distance || pd.distance === kd.distance && Math.abs(pd.offset) < Math.abs(kd.offset)) && (kd = pd);
-            return kd
-          }(od),
-          Qd = dd => {
-            var Jd;
-            return null !== (Jd = dd.displayName) && void 0 !== Jd ? Jd : this.translateCached(dd.nameKey)
+            return wQ
+          }(uQ, this.display.compassSpacing),
+          bQ = function(QQ) {
+            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 36,
+              wQ = null;
+            for (const LQ of QQ) Math.abs(LQ.offset) <= FQ && (!wQ || LQ.distance < wQ.distance || LQ.distance === wQ.distance && Math.abs(LQ.offset) < Math.abs(wQ.offset)) && (wQ = LQ);
+            return wQ
+          }(HQ),
+          YQ = QQ => {
+            var FQ;
+            return null !== (FQ = QQ.displayName) && void 0 !== FQ ? FQ : this.translateCached(QQ.nameKey)
           },
-          Ld = {
+          xQ = {
             compass: {
-              markers: od.map((dd => ({
-                id: dd.id,
-                icon: dd.icon,
-                colour: dd.colour,
-                name: Qd(dd),
-                left: dd.left
+              markers: HQ.map((QQ => ({
+                id: QQ.id,
+                icon: QQ.icon,
+                colour: QQ.colour,
+                name: YQ(QQ),
+                left: QQ.left
               }))),
-              cardinals: Pd.map((dd => {
+              cardinals: DQ.map((QQ => {
                 let {
-                  name: Jd,
-                  bearing: kd
-                } = dd;
-                const pd = Od(Nd.b.computeShortestRotation(gd, kd), Cd);
+                  name: FQ,
+                  bearing: wQ
+                } = QQ;
+                const LQ = AQ(qQ.e.computeShortestRotation(vQ, wQ), mQ);
                 return {
-                  name: Jd,
-                  left: null !== pd && void 0 !== pd ? pd : 0,
-                  hidden: null === pd
+                  name: FQ,
+                  left: null !== LQ && void 0 !== LQ ? LQ : 0,
+                  hidden: null === LQ
                 }
               })),
-              label: ld ? `${Qd(ld)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",qd(ld.distance,this.locale))}` : ""
+              label: bQ ? `${YQ(bQ)} \xb7 ${this.translateCached("skyblockGame:waypointDistance",CQ(bQ.distance,this.locale))}` : ""
             },
             minimap: null,
             searchArea: null,
             player: null,
             waypoint: null
           };
-        if (null !== pd && void 0 !== pd && pd.background) {
-          const Jd = dd[0] - pd.mapOrigin[0],
-            kd = dd[2] - pd.mapOrigin[2],
+        if (null !== LQ && void 0 !== LQ && LQ.background) {
+          const FQ = QQ[0] - LQ.mapOrigin[0],
+            wQ = QQ[2] - LQ.mapOrigin[2],
             {
-              rotation: Nd,
-              transform: Pd
-            } = function(dd, Jd, kd, pd) {
-              const [Nd, Pd] = Zd(dd, Jd, pd), gd = Wd - kd;
+              rotation: qQ,
+              transform: DQ
+            } = function(QQ, FQ, wQ, LQ) {
+              const [qQ, DQ] = kQ(QQ, FQ, LQ), vQ = oQ - wQ;
               return {
-                rotation: gd,
-                transform: `rotate(${gd}rad) translate(-${Nd}%, -${Pd}%)`
+                rotation: vQ,
+                transform: `rotate(${vQ}rad) translate(-${qQ}%, -${DQ}%)`
               }
-            }(Jd, kd, gd, pd.background.bounds);
-          Ld.minimap = {
-            transform: Pd,
-            iconRotation: -Nd + "rad"
+            }(FQ, wQ, vQ, LQ.background.bounds);
+          xQ.minimap = {
+            transform: DQ,
+            iconRotation: -qQ + "rad"
           };
-          const [Cd, Kd] = Zd(Jd, kd, pd.background.bounds);
-          Ld.player = {
-            left: Cd,
-            top: Kd,
-            hidden: Cd < 0 || Kd < 0 || Cd > 100 || Kd > 100,
-            rotation: -Nd + "rad"
+          const [mQ, uQ] = kQ(FQ, wQ, LQ.background.bounds);
+          xQ.player = {
+            left: mQ,
+            top: uQ,
+            hidden: mQ < 0 || uQ < 0 || mQ > 100 || uQ > 100,
+            rotation: -qQ + "rad"
           }
         }
         const {
-          waypoint: ed
+          waypoint: tQ
         } = this.quests.getSnapshot();
-        if ("search" === (null === ed || void 0 === ed ? void 0 : ed.questMarkerIcon) && null !== pd && void 0 !== pd && pd.background) {
+        if ("search" === (null === tQ || void 0 === tQ ? void 0 : tQ.questMarkerIcon) && null !== LQ && void 0 !== LQ && LQ.background) {
           const {
-            bounds: dd
-          } = pd.background, [Jd, kd] = Zd(ed.position[0] - pd.mapOrigin[0], ed.position[2] - pd.mapOrigin[2], dd);
-          Ld.searchArea = {
-            left: Jd,
-            top: kd,
-            width: 6400 / (dd.mapMaxX - dd.mapMinX),
-            height: 6400 / (dd.mapMaxZ - dd.mapMinZ),
-            shapeSeed: ed.nameKey
+            bounds: QQ
+          } = LQ.background, [FQ, wQ] = kQ(tQ.position[0] - LQ.mapOrigin[0], tQ.position[2] - LQ.mapOrigin[2], QQ);
+          xQ.searchArea = {
+            left: FQ,
+            top: wQ,
+            width: 6400 / (QQ.mapMaxX - QQ.mapMinX),
+            height: 6400 / (QQ.mapMaxZ - QQ.mapMinZ),
+            shapeSeed: tQ.nameKey
           }
         }
-        const Rd = this.quests.getNotificationSnapshot(),
-          Id = "completion" === (null === Rd || void 0 === Rd ? void 0 : Rd.phase) && !iJ(Rd.kind);
-        if (ed && !Id) {
-          const Jd = Math.hypot(...ed.position.map(((Jd, kd) => Jd - dd[kd]))),
-            pd = Math.round(Jd),
-            Nd = "talk" === ed.questMarkerIcon ? Math.min(1, Math.max(0, (10 - Jd) / 5)) : 0,
-            Wd = kd.projectWorldPosToViewport(ed.position),
-            Pd = Wd && kd.projectWorldPosToViewport([ed.position[0], ed.position[1] - 1, ed.position[2]]);
-          Ld.waypoint = {
-            ...kd.projectWorldPosToScreenPos(ed.position),
-            text: Wd,
-            nearness: Nd * Nd * (3 - 2 * Nd),
-            blockHeight: Wd && Pd ? Pd.y - Wd.y : null,
-            name: this.translateCached(ed.nameKey),
-            nameKey: ed.nameKey,
-            markerIcon: ed.questMarkerIcon ? Nk[ed.questMarkerIcon] : "quest",
-            popupToken: (null === Rd || void 0 === Rd ? void 0 : Rd.waypointNameKey) === ed.nameKey ? Rd.token : null,
-            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(pd)),
-            hint: "search" === ed.questMarkerIcon && Math.hypot(ed.position[0] - dd[0], ed.position[2] - dd[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
+        const eQ = this.quests.getNotificationSnapshot(),
+          MQ = "completion" === (null === eQ || void 0 === eQ ? void 0 : eQ.phase) && !iF(eQ.kind);
+        if (tQ && !MQ) {
+          const FQ = Math.hypot(...tQ.position.map(((FQ, wQ) => FQ - QQ[wQ]))),
+            LQ = Math.round(FQ),
+            qQ = "talk" === tQ.questMarkerIcon ? Math.min(1, Math.max(0, (10 - FQ) / 5)) : 0,
+            oQ = wQ.projectWorldPosToViewport(tQ.position),
+            DQ = oQ && wQ.projectWorldPosToViewport([tQ.position[0], tQ.position[1] - 1, tQ.position[2]]);
+          xQ.waypoint = {
+            ...wQ.projectWorldPosToScreenPos(tQ.position),
+            text: oQ,
+            nearness: qQ * qQ * (3 - 2 * qQ),
+            blockHeight: oQ && DQ ? DQ.y - oQ.y : null,
+            name: this.translateCached(tQ.nameKey),
+            nameKey: tQ.nameKey,
+            markerIcon: tQ.questMarkerIcon ? Lw[tQ.questMarkerIcon] : "quest",
+            popupToken: (null === eQ || void 0 === eQ ? void 0 : eQ.waypointNameKey) === tQ.nameKey ? eQ.token : null,
+            distance: this.translateCached("skyblockGame:waypointDistance", this.metresFormat.format(LQ)),
+            hint: "search" === tQ.questMarkerIcon && Math.hypot(tQ.position[0] - QQ[0], tQ.position[2] - QQ[2]) <= 32 ? this.translateCached("skyblockGame:waypointSearchHint") : null
           }
         }
-        this.snapshot = Ld, this.display.render(Ld)
+        this.snapshot = xQ, this.display.render(xQ)
       }
       dispose() {
-        this.pL = !0, this.snapshot = null, this.display.dispose()
+        this.kx = !0, this.snapshot = null, this.display.dispose()
       }
     }
-    const Pk = "skyblockSkillsView";
-    class Zk extends od {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
-          kd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dd => dd,
-          pd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          Nd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : dd => dd;
-        super(dd, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = Jd, this.translate = kd, this.locale = pd, this.itemName = Nd, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
+    const ow = "skyblockSkillsView";
+    class Dw extends HQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : QQ => QQ,
+          LQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          qQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : QQ => QQ;
+        super(QQ, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.now = FQ, this.translate = wQ, this.locale = LQ, this.itemName = qQ, this.progress = null, this.selected = "foraging", this.pending = new Map, this.recent = null, this.nextLevelUpToken = 0, this.onLevelUp = () => {}, this.skillText = new Map, this.sourceText = new Map, this.snapshot = {
           enabled: !1,
           open: !1,
           skills: [],
           detail: null,
           overallLevel: null,
           hud: null
-        }, this.select = dd => {
-          this.selected = dd, this.emit()
+        }, this.select = QQ => {
+          this.selected = QQ, this.emit()
         }
       }
-      setTranslator(dd, Jd, kd) {
-        this.translate = dd, this.locale = Jd, this.itemName = kd, this.skillText.clear(), this.sourceText.clear(), this.emit()
+      setTranslator(QQ, FQ, wQ) {
+        this.translate = QQ, this.locale = FQ, this.itemName = wQ, this.skillText.clear(), this.sourceText.clear(), this.emit()
       }
-      text(dd) {
-        let Jd = this.skillText.get(dd);
-        return Jd || (Jd = {
-          label: this.translate(`skyblockGame:${dd}`),
-          description: this.translate(`skyblockGame:${dd}Description`)
-        }, this.skillText.set(dd, Jd)), Jd
+      text(QQ) {
+        let FQ = this.skillText.get(QQ);
+        return FQ || (FQ = {
+          label: this.translate(`skyblockGame:${QQ}`),
+          description: this.translate(`skyblockGame:${QQ}Description`)
+        }, this.skillText.set(QQ, FQ)), FQ
       }
-      sources(dd) {
-        if ("mining" === dd || "fishing" === dd) return this.buildSources(dd);
-        let Jd = this.sourceText.get(dd);
-        return Jd || (Jd = this.buildSources(dd), this.sourceText.set(dd, Jd)), Jd
+      sources(QQ) {
+        if ("mining" === QQ || "fishing" === QQ) return this.buildSources(QQ);
+        let FQ = this.sourceText.get(QQ);
+        return FQ || (FQ = this.buildSources(QQ), this.sourceText.set(QQ, FQ)), FQ
       }
-      buildSources(dd) {
-        const Jd = this.translate;
-        return "exploration" === dd ? [Jd("skyblockGame:explorationZoneSource", {
+      buildSources(QQ) {
+        const FQ = this.translate;
+        return "exploration" === QQ ? [FQ("skyblockGame:explorationZoneSource", {
           xp: this.number(100)
-        }), Jd("skyblockGame:explorationLandmarkSource", {
+        }), FQ("skyblockGame:explorationLandmarkSource", {
           xp: this.number(50)
-        })] : "foraging" === dd ? [Jd("skyblockGame:logSource", {
-          xp: this.number(LJ["Maple Log"])
-        })] : "combat" === dd ? [Jd("skyblockGame:creatureKillSource"), Jd("skyblockGame:noEnvironmentalXp")] : "farming" === dd ? [Jd("skyblockGame:cropSource", {
-          xp: this.number(RJ["Wheat|FreshlyGrown"])
-        }), Jd("skyblockGame:terrainFarmingSource", {
+        })] : "foraging" === QQ ? [FQ("skyblockGame:logSource", {
+          xp: this.number(YF["Maple Log"])
+        })] : "combat" === QQ ? [FQ("skyblockGame:creatureKillSource"), FQ("skyblockGame:noEnvironmentalXp")] : "farming" === QQ ? [FQ("skyblockGame:cropSource", {
+          xp: this.number(tF["Wheat|FreshlyGrown"])
+        }), FQ("skyblockGame:terrainFarmingSource", {
           xp: this.number(2)
-        }), Jd("skyblockGame:noYoungCropXp")] : Object.entries("mining" === dd ? eJ : IJ).map((dd => {
-          let [kd, pd] = dd;
-          return Jd("skyblockGame:itemXpSource", {
-            item: this.itemName(kd),
-            xp: this.number(pd)
+        }), FQ("skyblockGame:noYoungCropXp")] : Object.entries("mining" === QQ ? AF : eF).map((QQ => {
+          let [wQ, LQ] = QQ;
+          return FQ("skyblockGame:itemXpSource", {
+            item: this.itemName(wQ),
+            xp: this.number(LQ)
           })
         }))
       }
-      number(dd) {
-        return dd.toLocaleString(this.locale)
+      number(QQ) {
+        return QQ.toLocaleString(this.locale)
       }
-      benefit(dd, Jd) {
-        const kd = ZJ(dd, Jd);
-        return this.translate(kd.translationKey, {
-          bonus: this.number(kd.percent)
+      benefit(QQ, FQ) {
+        const wQ = DF(QQ, FQ);
+        return this.translate(wQ.translationKey, {
+          bonus: this.number(wQ.percent)
         })
       }
-      ZL(dd) {
-        if (!this.pL) {
-          if ("snapshot" === dd.kind) this.progress = dd.progress, this.pending.clear(), this.recent = null;
-          else if ("award" === dd.kind && this.progress) {
+      bx(QQ) {
+        if (!this.kx) {
+          if ("snapshot" === QQ.kind) this.progress = QQ.progress, this.pending.clear(), this.recent = null;
+          else if ("award" === QQ.kind && this.progress) {
             const {
-              award: Jd
-            } = dd;
+              award: FQ
+            } = QQ;
             this.progress = {
               ...this.progress,
-              [Jd.skill]: Jd.after
+              [FQ.skill]: FQ.after
             };
-            for (const [dd, pd] of this.pending) pd.skill === Jd.skill && this.pending.delete(dd);
-            const kd = Jd.after.level > Jd.before.level;
-            this.recordGain(Jd.skill, Jd.amount, kd ? ++this.nextLevelUpToken : null), kd && this.onLevelUp({
+            for (const [QQ, LQ] of this.pending) LQ.skill === FQ.skill && this.pending.delete(QQ);
+            const wQ = FQ.after.level > FQ.before.level;
+            this.recordGain(FQ.skill, FQ.amount, wQ ? ++this.nextLevelUpToken : null), wQ && this.onLevelUp({
               questCompletionKind: "skillLevel",
-              skill: Jd.skill,
-              beforeLevel: Jd.before.level,
-              level: Jd.after.level
+              skill: FQ.skill,
+              beforeLevel: FQ.before.level,
+              level: FQ.after.level
             })
           } else {
-            if ("rejectBlock" === dd.kind) return void this.rejectBlock(dd.position);
-            if ("open" === dd.kind) return void this.show()
+            if ("rejectBlock" === QQ.kind) return void this.rejectBlock(QQ.position);
+            if ("open" === QQ.kind) return void this.show()
           }
           this.emit()
         }
       }
-      predictBlock(dd, Jd, kd) {
-        if (!this.progress || this.pL || kd) return;
-        const pd = function(dd, Jd) {
-          const kd = dd.split("|")[0];
-          return "Air" === Jd || Jd === `Barkless ${dd}` ? Object.hasOwn(LJ, kd) ? {
+      predictBlock(QQ, FQ, wQ) {
+        if (!this.progress || this.kx || wQ) return;
+        const LQ = function(QQ, FQ) {
+          const wQ = QQ.split("|")[0];
+          return "Air" === FQ || FQ === `Barkless ${QQ}` ? Object.hasOwn(YF, wQ) ? {
             skill: "foraging",
-            amount: LJ[kd]
-          } : "Air" !== Jd ? null : Object.hasOwn(eJ, dd) ? {
+            amount: YF[wQ]
+          } : "Air" !== FQ ? null : Object.hasOwn(AF, QQ) ? {
             skill: "mining",
-            amount: eJ[dd]
-          } : oJ(dd) ? {
+            amount: AF[QQ]
+          } : uF(QQ) ? {
             skill: "farming",
             amount: 10
-          } : QJ(dd) ? {
+          } : bF(QQ) ? {
             skill: "foraging",
             amount: 2
-          } : Object.hasOwn(RJ, dd) ? {
+          } : Object.hasOwn(tF, QQ) ? {
             skill: "farming",
-            amount: RJ[dd]
-          } : Object.hasOwn(yd, dd) ? {
+            amount: tF[QQ]
+          } : Object.hasOwn(jQ, QQ) ? {
             skill: "farming",
             amount: 2
           } : null : null
-        }(Jd, "Air");
-        if (!pd) return;
-        const Nd = dd.join(",");
-        if (this.pending.has(Nd)) return;
-        const Wd = this.predictedProgress(pd.skill).totalXp + pd.amount;
-        Number.isSafeInteger(Wd) && (this.pending.set(Nd, {
-          ...pd,
+        }(FQ, "Air");
+        if (!LQ) return;
+        const qQ = QQ.join(",");
+        if (this.pending.has(qQ)) return;
+        const oQ = this.predictedProgress(LQ.skill).totalXp + LQ.amount;
+        Number.isSafeInteger(oQ) && (this.pending.set(qQ, {
+          ...LQ,
           expires: this.now() + 2e3
-        }), this.recordGain(pd.skill, 0), this.emit())
+        }), this.recordGain(LQ.skill, 0), this.emit())
       }
-      rejectBlock(dd) {
-        this.pending.delete(dd.join(",")) && this.emit()
+      rejectBlock(QQ) {
+        this.pending.delete(QQ.join(",")) && this.emit()
       }
-      Do() {
-        if (this.pL) return;
-        let dd = !1;
-        for (const [Jd, kd] of this.pending) kd.expires <= this.now() && (this.pending.delete(Jd), dd = !0);
-        this.recent && this.recent.expires <= this.now() && (this.recent = null, dd = !0), dd && this.emit()
+      fH() {
+        if (this.kx) return;
+        let QQ = !1;
+        for (const [FQ, wQ] of this.pending) wQ.expires <= this.now() && (this.pending.delete(FQ), QQ = !0);
+        this.recent && this.recent.expires <= this.now() && (this.recent = null, QQ = !0), QQ && this.emit()
       }
       dispose() {
         this.progress = null, this.pending.clear(), this.recent = null, super.dispose()
       }
-      recordGain(dd, Jd) {
-        var kd, pd;
-        let Nd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const Wd = (null === (kd = this.recent) || void 0 === kd ? void 0 : kd.skill) === dd && this.recent.expires > this.now() ? this.recent.confirmed : 0,
-          Pd = (null === (pd = this.recent) || void 0 === pd ? void 0 : pd.skill) === dd && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
+      recordGain(QQ, FQ) {
+        var wQ, LQ;
+        let qQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const oQ = (null === (wQ = this.recent) || void 0 === wQ ? void 0 : wQ.skill) === QQ && this.recent.expires > this.now() ? this.recent.confirmed : 0,
+          DQ = (null === (LQ = this.recent) || void 0 === LQ ? void 0 : LQ.skill) === QQ && this.recent.expires > this.now() ? this.recent.levelUpToken : null;
         this.recent = {
-          skill: dd,
-          confirmed: Wd + Jd,
+          skill: QQ,
+          confirmed: oQ + FQ,
           expires: this.now() + 3e3,
-          levelUpToken: null !== Nd && void 0 !== Nd ? Nd : Pd
+          levelUpToken: null !== qQ && void 0 !== qQ ? qQ : DQ
         }
       }
-      pendingXp(dd) {
-        let Jd = 0;
-        for (const kd of this.pending.values()) kd.skill === dd && (Jd += kd.amount);
-        return Jd
+      pendingXp(QQ) {
+        let FQ = 0;
+        for (const wQ of this.pending.values()) wQ.skill === QQ && (FQ += wQ.amount);
+        return FQ
       }
-      predictedProgress(dd) {
-        const Jd = this.progress[dd],
-          kd = this.pendingXp(dd);
-        return kd ? CJ(Jd.totalXp + kd, dd) : Jd
+      predictedProgress(QQ) {
+        const FQ = this.progress[QQ],
+          wQ = this.pendingXp(QQ);
+        return wQ ? vF(FQ.totalXp + wQ, QQ) : FQ
       }
       isEnabled() {
         return null !== this.progress
       }
       buildSnapshot() {
-        var dd, Jd, kd;
-        const pd = this.progress ? Hd.map((dd => {
-            const Jd = this.predictedProgress(dd);
+        var QQ, FQ, wQ;
+        const LQ = this.progress ? ZQ.map((QQ => {
+            const FQ = this.predictedProgress(QQ);
             return {
-              ...this.text(dd),
-              icon: GJ[dd],
-              benefit: this.benefit(dd, Jd.level),
-              sources: this.sources(dd),
-              id: dd,
-              selected: dd === this.selected,
+              ...this.text(QQ),
+              icon: MF[QQ],
+              benefit: this.benefit(QQ, FQ.level),
+              sources: this.sources(QQ),
+              id: QQ,
+              selected: QQ === this.selected,
               level: this.translate("skyblockGame:level", {
-                level: this.number(Jd.level)
+                level: this.number(FQ.level)
               }),
-              xp: null === Jd.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
-                current: this.number(Jd.xpIntoLevel),
-                target: this.number(Jd.xpForNextLevel)
+              xp: null === FQ.xpForNextLevel ? this.translate("skyblockGame:max") : this.translate("skyblockGame:xpProgress", {
+                current: this.number(FQ.xpIntoLevel),
+                target: this.number(FQ.xpForNextLevel)
               }),
-              percent: null === Jd.xpForNextLevel ? 100 : Math.min(100, Jd.xpIntoLevel / Jd.xpForNextLevel * 100)
+              percent: null === FQ.xpForNextLevel ? 100 : Math.min(100, FQ.xpIntoLevel / FQ.xpForNextLevel * 100)
             }
           })) : [],
-          Nd = pd.find((dd => {
-            var Jd;
-            return dd.id === (null === (Jd = this.recent) || void 0 === Jd ? void 0 : Jd.skill)
+          qQ = LQ.find((QQ => {
+            var FQ;
+            return QQ.id === (null === (FQ = this.recent) || void 0 === FQ ? void 0 : FQ.skill)
           })),
-          Wd = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
+          oQ = this.recent ? this.recent.confirmed + this.pendingXp(this.recent.skill) : 0;
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          skills: pd,
-          detail: null !== (dd = pd.find((dd => dd.selected))) && void 0 !== dd ? dd : null,
-          overallLevel: this.progress ? Hd.reduce(((dd, Jd) => dd + this.predictedProgress(Jd).level), 0) : null,
-          hud: Nd && Wd > 0 ? {
-            skill: Nd,
+          skills: LQ,
+          detail: null !== (QQ = LQ.find((QQ => QQ.selected))) && void 0 !== QQ ? QQ : null,
+          overallLevel: this.progress ? ZQ.reduce(((QQ, FQ) => QQ + this.predictedProgress(FQ).level), 0) : null,
+          hud: qQ && oQ > 0 ? {
+            skill: qQ,
             gain: this.translate("skyblockGame:xpGain", {
-              xp: this.number(Wd)
+              xp: this.number(oQ)
             }),
-            levelUpToken: null !== (Jd = null === (kd = this.recent) || void 0 === kd ? void 0 : kd.levelUpToken) && void 0 !== Jd ? Jd : null,
-            colour: xJ(Nd.id)
+            levelUpToken: null !== (FQ = null === (wQ = this.recent) || void 0 === wQ ? void 0 : wQ.levelUpToken) && void 0 !== FQ ? FQ : null,
+            colour: pF(qQ.id)
           } : null
         }
       }
     }
-    const gk = Math.max(1600, 600, 950) + 400,
-      Ck = {
+    const kw = Math.max(1600, 600, 950) + 400,
+      vw = {
         "--quest-step-flash": "1600ms",
         "--quest-step-pop": "600ms",
         "--quest-step-unlock": "500ms",
         "--quest-step-unlock-delay": "450ms"
       },
-      Kk = "skyblockQuestsView",
-      lk = "skyblockQuestNotificationView";
-    class Qk extends od {
-      constructor(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
-          Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
-          Pd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
-        super(dd, pd, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = Jd, this.translate = kd, this.now = Nd, this.locale = Wd, this.publishNotification = Pd, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
+      mw = "skyblockQuestsView",
+      uw = "skyblockQuestNotificationView";
+    class Hw extends HQ {
+      constructor(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now,
+          oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "en-GB",
+          DQ = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {};
+        super(QQ, LQ, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {}), this.requestTracking = FQ, this.translate = wQ, this.now = qQ, this.locale = oQ, this.publishNotification = DQ, this.notifications = void 0, this.notificationSnapshot = null, this.authoritative = null, this.receivedAt = 0, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.compassTarget = null, this.waypoint = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, this.onTrackedStepFinished = () => {}, this.onViewDialogue = null, this.translateWithIcons = null, this.snapshot = {
           enabled: !1,
           open: !1,
           active: [],
@@ -1937,189 +1937,189 @@ export const modules = {
           waypoint: null,
           compassTarget: null
         }, this.getNotificationSnapshot = () => this.notificationSnapshot, this.showTracked = () => {
-          var dd, Jd;
-          this.selected = null !== (dd = null === (Jd = this.authoritative) || void 0 === Jd ? void 0 : Jd.trackedQuestId) && void 0 !== dd ? dd : null, this.show()
-        }, this.select = dd => {
-          this.selected = dd, this.emit()
+          var QQ, FQ;
+          this.selected = null !== (QQ = null === (FQ = this.authoritative) || void 0 === FQ ? void 0 : FQ.trackedQuestId) && void 0 !== QQ ? QQ : null, this.show()
+        }, this.select = QQ => {
+          this.selected = QQ, this.emit()
         }, this.toggleCompleted = () => {
           this.completedExpanded = !this.completedExpanded, this.emit()
         }, this.trackSelected = () => {
-          const dd = this.snapshot.detail;
-          !this.pL && null !== dd && void 0 !== dd && dd.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(dd.id), this.emit())
+          const QQ = this.snapshot.detail;
+          !this.kx && null !== QQ && void 0 !== QQ && QQ.canTrack && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = this.now() + 2500, this.waitingForTrack = !0, this.requestTracking(QQ.id), this.emit())
         }, this.viewDialogue = () => {
-          const dd = this.snapshot.detail;
-          var Jd;
-          dd && (null === (Jd = this.onViewDialogue) || void 0 === Jd || Jd.call(this, dd.id))
-        }, this.notifications = new BJ(Nd, (() => this.authoritative))
+          const QQ = this.snapshot.detail;
+          var FQ;
+          QQ && (null === (FQ = this.onViewDialogue) || void 0 === FQ || FQ.call(this, QQ.id))
+        }, this.notifications = new CF(qQ, (() => this.authoritative))
       }
       getTrackedQuestId() {
-        var dd, Jd;
-        return null !== (dd = null === (Jd = this.authoritative) || void 0 === Jd ? void 0 : Jd.trackedQuestId) && void 0 !== dd ? dd : null
+        var QQ, FQ;
+        return null !== (QQ = null === (FQ = this.authoritative) || void 0 === FQ ? void 0 : FQ.trackedQuestId) && void 0 !== QQ ? QQ : null
       }
-      notify(dd) {
-        !this.pL && this.notifications.enqueue(dd) && this.emitNotification()
+      notify(QQ) {
+        !this.kx && this.notifications.enqueue(QQ) && this.emitNotification()
       }
-      setNotificationsHeld(dd) {
-        (this.notifications.setHeld(dd) || dd) && this.emitNotification()
+      setNotificationsHeld(QQ) {
+        (this.notifications.setHeld(QQ) || QQ) && this.emitNotification()
       }
-      Do() {
-        var dd, Jd;
-        if (this.pL) return;
-        this.notifications.Do() && this.emitNotification();
-        let kd = !1;
-        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, kd = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, kd = !0);
-        const pd = Lk(this.authoritative);
-        null !== pd && void 0 !== pd && null !== (dd = pd.questClock) && void 0 !== dd && dd.running && this.clockText(pd) !== (null === (Jd = this.snapshot.tracked) || void 0 === Jd ? void 0 : Jd.clock) && (kd = !0), kd && this.emit()
+      fH() {
+        var QQ, FQ;
+        if (this.kx) return;
+        this.notifications.fH() && this.emitNotification();
+        let wQ = !1;
+        this.trackAvailableAt && this.now() >= this.trackAvailableAt && (this.trackAvailableAt = 0, this.waitingForTrack = !1, wQ = !0), this.trackedChange && this.now() >= this.trackedChange.expiresAt && (this.trackedChange = null, wQ = !0);
+        const LQ = bw(this.authoritative);
+        null !== LQ && void 0 !== LQ && null !== (QQ = LQ.questClock) && void 0 !== QQ && QQ.running && this.clockText(LQ) !== (null === (FQ = this.snapshot.tracked) || void 0 === FQ ? void 0 : FQ.clock) && (wQ = !0), wQ && this.emit()
       }
-      setTranslator(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = dd, this.locale = Jd, this.emitNotification(), this.emit()
+      setTranslator(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = QQ, this.locale = FQ, this.emitNotification(), this.emit()
       }
-      ZL(dd) {
-        if (!this.pL)
-          if ("completion" === dd.kind) this.notify(dd.questCompletion);
-          else if ("landmark" === dd.kind) this.notify({
+      bx(QQ) {
+        if (!this.kx)
+          if ("completion" === QQ.kind) this.notify(QQ.questCompletion);
+          else if ("landmark" === QQ.kind) this.notify({
           questCompletionKind: "landmark",
-          landmarkNameKey: dd.landmarkDiscoveredNameKey
+          landmarkNameKey: QQ.landmarkDiscoveredNameKey
         });
-        else if ("npcNote" === dd.kind) {
-          var Jd, kd, pd;
+        else if ("npcNote" === QQ.kind) {
+          var FQ, wQ, LQ;
           this.notify({
             questCompletionKind: "npcNote",
-            titleKey: dd.npcNoteTitleKey,
-            textKey: dd.npcNoteTextKey,
-            params: null !== (Jd = dd.npcNoteParams) && void 0 !== Jd ? Jd : {},
-            nameKeys: null !== (kd = dd.npcNoteNameKeys) && void 0 !== kd ? kd : {},
-            iconItem: null !== (pd = dd.npcNoteIconItem) && void 0 !== pd ? pd : null
+            titleKey: QQ.npcNoteTitleKey,
+            textKey: QQ.npcNoteTextKey,
+            params: null !== (FQ = QQ.npcNoteParams) && void 0 !== FQ ? FQ : {},
+            nameKeys: null !== (wQ = QQ.npcNoteNameKeys) && void 0 !== wQ ? wQ : {},
+            iconItem: null !== (LQ = QQ.npcNoteIconItem) && void 0 !== LQ ? LQ : null
           })
-        } else if ("open" === dd.kind) this.show();
-        else if ("guidance" === dd.kind) this.waypoint = dd.waypoint, this.compassTarget = dd.compassTarget, this.snapshot = {
+        } else if ("open" === QQ.kind) this.show();
+        else if ("guidance" === QQ.kind) this.waypoint = QQ.waypoint, this.compassTarget = QQ.compassTarget, this.snapshot = {
           ...this.snapshot,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
         };
-        else if ("snapshot" === dd.kind) {
-          this.authoritative = dd.snapshot, this.notifications.Do() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
-          const Jd = this.trackedStepPulse;
-          this.updateTrackedStepPulse(dd.snapshot), this.emit(), this.trackedStepPulse > Jd && this.onTrackedStepFinished()
+        else if ("snapshot" === QQ.kind) {
+          this.authoritative = QQ.snapshot, this.notifications.fH() && this.emitNotification(), this.receivedAt = this.now(), this.waitingForTrack = !1;
+          const FQ = this.trackedStepPulse;
+          this.updateTrackedStepPulse(QQ.snapshot), this.emit(), this.trackedStepPulse > FQ && this.onTrackedStepFinished()
         }
       }
       dispose() {
         this.notifications.clear(), this.emitNotification(), this.authoritative = null, this.selected = null, this.completedExpanded = !1, this.trackAvailableAt = 0, this.waitingForTrack = !1, this.waypoint = null, this.compassTarget = null, this.trackedSteps = null, this.trackedStepPulse = 0, this.trackedChange = null, super.dispose()
       }
       emitNotification() {
-        this.pL || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
+        this.kx || (this.notificationSnapshot = this.notifications.getView(this.translate, this.questTextTranslator(), this.locale), this.publishNotification(this.notificationSnapshot))
       }
       questTextTranslator() {
-        var dd;
-        return null !== (dd = this.translateWithIcons) && void 0 !== dd ? dd : this.translate
+        var QQ;
+        return null !== (QQ = this.translateWithIcons) && void 0 !== QQ ? QQ : this.translate
       }
-      clockText(dd) {
-        const Jd = dd.questClock;
-        if (!Jd) return null;
-        const kd = Jd.elapsedMs + (Jd.running ? this.now() - this.receivedAt : 0);
-        return void 0 === Jd.countdownFromMs ? jd(kd, !1) : jd(1e3 * Math.ceil(Math.max(0, Jd.countdownFromMs - kd) / 1e3), !1)
+      clockText(QQ) {
+        const FQ = QQ.questClock;
+        if (!FQ) return null;
+        const wQ = FQ.elapsedMs + (FQ.running ? this.now() - this.receivedAt : 0);
+        return void 0 === FQ.countdownFromMs ? NQ(wQ, !1) : NQ(1e3 * Math.ceil(Math.max(0, FQ.countdownFromMs - wQ) / 1e3), !1)
       }
-      updateTrackedStepPulse(dd) {
-        var Jd, kd, pd;
-        const Nd = Lk(dd);
-        if (!Nd) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
-        const Wd = dd => Nd.subquests.filter((Jd => dd(Jd.status))).map((dd => dd.id)),
-          Pd = Wd((dd => "completed" === dd || "skipped" === dd)),
-          Zd = Wd((dd => "locked" !== dd)),
-          gd = (null === (Jd = this.trackedSteps) || void 0 === Jd ? void 0 : Jd.questId) === Nd.id && Nd.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
-        if (gd) {
-          const dd = Pd.filter((dd => !gd.finished.has(dd))),
-            Jd = Wd((dd => "active" === dd || "ready" === dd)).filter((dd => !gd.unlocked.has(dd)));
-          dd.length > 0 && this.trackedStepPulse++, (dd.length > 0 || Jd.length > 0) && (this.trackedChange = {
-            finished: new Set(dd),
-            unlocked: new Set(Jd),
-            expiresAt: this.now() + gk
+      updateTrackedStepPulse(QQ) {
+        var FQ, wQ, LQ;
+        const qQ = bw(QQ);
+        if (!qQ) return this.trackedSteps = null, this.trackedStepPulse = 0, void(this.trackedChange = null);
+        const oQ = QQ => qQ.subquests.filter((FQ => QQ(FQ.status))).map((QQ => QQ.id)),
+          DQ = oQ((QQ => "completed" === QQ || "skipped" === QQ)),
+          kQ = oQ((QQ => "locked" !== QQ)),
+          vQ = (null === (FQ = this.trackedSteps) || void 0 === FQ ? void 0 : FQ.questId) === qQ.id && qQ.progress >= this.trackedSteps.progress ? this.trackedSteps : null;
+        if (vQ) {
+          const QQ = DQ.filter((QQ => !vQ.finished.has(QQ))),
+            FQ = oQ((QQ => "active" === QQ || "ready" === QQ)).filter((QQ => !vQ.unlocked.has(QQ)));
+          QQ.length > 0 && this.trackedStepPulse++, (QQ.length > 0 || FQ.length > 0) && (this.trackedChange = {
+            finished: new Set(QQ),
+            unlocked: new Set(FQ),
+            expiresAt: this.now() + kw
           })
         } else {
-          var Cd;
-          this.trackedStepPulse = (null === (Cd = this.trackedSteps) || void 0 === Cd ? void 0 : Cd.questId) === Nd.id ? this.trackedStepPulse : 0, this.trackedChange = null
+          var mQ;
+          this.trackedStepPulse = (null === (mQ = this.trackedSteps) || void 0 === mQ ? void 0 : mQ.questId) === qQ.id ? this.trackedStepPulse : 0, this.trackedChange = null
         }
         this.trackedSteps = {
-          questId: Nd.id,
-          progress: Nd.progress,
-          finished: new Set([...null !== (kd = null === gd || void 0 === gd ? void 0 : gd.finished) && void 0 !== kd ? kd : [], ...Pd]),
-          unlocked: new Set([...null !== (pd = null === gd || void 0 === gd ? void 0 : gd.unlocked) && void 0 !== pd ? pd : [], ...Zd])
+          questId: qQ.id,
+          progress: qQ.progress,
+          finished: new Set([...null !== (wQ = null === vQ || void 0 === vQ ? void 0 : vQ.finished) && void 0 !== wQ ? wQ : [], ...DQ]),
+          unlocked: new Set([...null !== (LQ = null === vQ || void 0 === vQ ? void 0 : vQ.unlocked) && void 0 !== LQ ? LQ : [], ...kQ])
         }
       }
-      entry(dd, Jd) {
-        var kd, pd;
-        const Nd = dd.id === (null === (kd = this.authoritative) || void 0 === kd ? void 0 : kd.trackedQuestId),
-          Wd = this.now() < this.trackAvailableAt,
-          Pd = this.questTextTranslator(),
-          Zd = dd.subquests.map((Jd => {
-            var kd, pd, Wd, Zd, gd, Cd;
-            const Kd = null !== (kd = Jd.handInNpcName) && void 0 !== kd ? kd : dd.giverName,
-              od = this.translate("skyblockGame:progress", {
-                current: Jd.progress.toLocaleString(this.locale),
-                target: Jd.target.toLocaleString(this.locale)
+      entry(QQ, FQ) {
+        var wQ, LQ;
+        const qQ = QQ.id === (null === (wQ = this.authoritative) || void 0 === wQ ? void 0 : wQ.trackedQuestId),
+          oQ = this.now() < this.trackAvailableAt,
+          DQ = this.questTextTranslator(),
+          kQ = QQ.subquests.map((FQ => {
+            var wQ, LQ, oQ, kQ, vQ, mQ;
+            const uQ = null !== (wQ = FQ.handInNpcName) && void 0 !== wQ ? wQ : QQ.giverName,
+              HQ = this.translate("skyblockGame:progress", {
+                current: FQ.progress.toLocaleString(this.locale),
+                target: FQ.target.toLocaleString(this.locale)
               }),
-              ld = {
+              bQ = {
                 active: null,
                 locked: "skyblockGame:subquestLocked",
-                ready: Kd ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
+                ready: uQ ? "skyblockGame:subquestReady" : "skyblockGame:subquestReadyNoNpc",
                 completed: "skyblockGame:completed",
                 skipped: "skyblockGame:subquestSkipped"
-              } [Jd.status],
-              Qd = "active" === Jd.status || "ready" === Jd.status;
+              } [FQ.status],
+              YQ = "active" === FQ.status || "ready" === FQ.status;
             return {
-              id: Jd.id,
-              name: qJ(Pd, Jd.nameKey, Jd.nameParams),
-              description: qJ(Pd, Jd.descriptionKey, Jd.descriptionParams),
-              progress: od,
-              status: Jd.status,
-              statusLabel: ld ? this.translate(ld, {
-                npc: Kd
-              }) : od,
-              iconItem: Qd && null !== (pd = Jd.questIconItem) && void 0 !== pd ? pd : null,
-              barPercent: "active" === Jd.status && Jd.showsProgressBar ? Math.min(100, 100 * Jd.progress / Jd.target) : null,
-              justFinished: Nd && null !== (Wd = null === (Zd = this.trackedChange) || void 0 === Zd ? void 0 : Zd.finished.has(Jd.id)) && void 0 !== Wd && Wd,
-              justUnlocked: Nd && null !== (gd = null === (Cd = this.trackedChange) || void 0 === Cd ? void 0 : Cd.unlocked.has(Jd.id)) && void 0 !== gd && gd
+              id: FQ.id,
+              name: cF(DQ, FQ.nameKey, FQ.nameParams),
+              description: cF(DQ, FQ.descriptionKey, FQ.descriptionParams),
+              progress: HQ,
+              status: FQ.status,
+              statusLabel: bQ ? this.translate(bQ, {
+                npc: uQ
+              }) : HQ,
+              iconItem: YQ && null !== (LQ = FQ.questIconItem) && void 0 !== LQ ? LQ : null,
+              barPercent: "active" === FQ.status && FQ.showsProgressBar ? Math.min(100, 100 * FQ.progress / FQ.target) : null,
+              justFinished: qQ && null !== (oQ = null === (kQ = this.trackedChange) || void 0 === kQ ? void 0 : kQ.finished.has(FQ.id)) && void 0 !== oQ && oQ,
+              justUnlocked: qQ && null !== (vQ = null === (mQ = this.trackedChange) || void 0 === mQ ? void 0 : mQ.unlocked.has(FQ.id)) && void 0 !== vQ && vQ
             }
           }));
         return {
-          id: dd.id,
-          name: qJ(Pd, dd.nameKey, dd.nameParams),
-          description: qJ(Pd, dd.descriptionKey, dd.descriptionParams),
-          progress: Jd ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
-            current: dd.progress.toLocaleString(this.locale),
-            target: dd.target.toLocaleString(this.locale)
+          id: QQ.id,
+          name: cF(DQ, QQ.nameKey, QQ.nameParams),
+          description: cF(DQ, QQ.descriptionKey, QQ.descriptionParams),
+          progress: FQ ? this.translate("skyblockGame:completed") : this.translate("skyblockGame:stepsProgress", {
+            current: QQ.progress.toLocaleString(this.locale),
+            target: QQ.target.toLocaleString(this.locale)
           }),
-          completed: Jd,
-          tracked: Nd,
-          selected: dd.id === this.selected,
-          canTrack: !Jd && !Nd && !Wd,
-          trackLabel: this.translate(Nd ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : Wd ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
-          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== dd.id,
-          subquests: Zd,
-          focusStep: null !== (pd = Zd.find((dd => null !== dd.barPercent))) && void 0 !== pd ? pd : null,
-          clock: this.clockText(dd)
+          completed: FQ,
+          tracked: qQ,
+          selected: QQ.id === this.selected,
+          canTrack: !FQ && !qQ && !oQ,
+          trackLabel: this.translate(qQ ? "skyblockGame:trackingQuest" : this.waitingForTrack ? "skyblockGame:updating" : oQ ? "skyblockGame:pleaseWait" : "skyblockGame:trackQuest"),
+          canViewDialogue: null !== this.onViewDialogue && "dungeon_run" !== QQ.id,
+          subquests: kQ,
+          focusStep: null !== (LQ = kQ.find((QQ => null !== QQ.barPercent))) && void 0 !== LQ ? LQ : null,
+          clock: this.clockText(QQ)
         }
       }
       isEnabled() {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd;
-        const Kd = [...null !== (dd = null === (Jd = this.authoritative) || void 0 === Jd ? void 0 : Jd.active) && void 0 !== dd ? dd : [], ...null !== (kd = null === (pd = this.authoritative) || void 0 === pd ? void 0 : pd.completed) && void 0 !== kd ? kd : []];
-        var od, ld, Qd, Ld;
-        Kd.some((dd => dd.id === this.selected)) || (this.selected = null !== (od = null !== (ld = null === (Qd = this.authoritative) || void 0 === Qd ? void 0 : Qd.trackedQuestId) && void 0 !== ld ? ld : null === (Ld = Kd[0]) || void 0 === Ld ? void 0 : Ld.id) && void 0 !== od ? od : null);
-        const Od = null !== (Nd = null === (Wd = this.authoritative) || void 0 === Wd ? void 0 : Wd.active.map((dd => this.entry(dd, !1)))) && void 0 !== Nd ? Nd : [];
-        Od.sort(((dd, Jd) => Number(Jd.tracked) - Number(dd.tracked)));
-        const ed = null !== (Pd = null === (Zd = this.authoritative) || void 0 === Zd ? void 0 : Zd.completed.map((dd => this.entry(dd, !0)))) && void 0 !== Pd ? Pd : [];
+        var QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ;
+        const uQ = [...null !== (QQ = null === (FQ = this.authoritative) || void 0 === FQ ? void 0 : FQ.active) && void 0 !== QQ ? QQ : [], ...null !== (wQ = null === (LQ = this.authoritative) || void 0 === LQ ? void 0 : LQ.completed) && void 0 !== wQ ? wQ : []];
+        var HQ, bQ, YQ, xQ;
+        uQ.some((QQ => QQ.id === this.selected)) || (this.selected = null !== (HQ = null !== (bQ = null === (YQ = this.authoritative) || void 0 === YQ ? void 0 : YQ.trackedQuestId) && void 0 !== bQ ? bQ : null === (xQ = uQ[0]) || void 0 === xQ ? void 0 : xQ.id) && void 0 !== HQ ? HQ : null);
+        const AQ = null !== (qQ = null === (oQ = this.authoritative) || void 0 === oQ ? void 0 : oQ.active.map((QQ => this.entry(QQ, !1)))) && void 0 !== qQ ? qQ : [];
+        AQ.sort(((QQ, FQ) => Number(FQ.tracked) - Number(QQ.tracked)));
+        const tQ = null !== (DQ = null === (kQ = this.authoritative) || void 0 === kQ ? void 0 : kQ.completed.map((QQ => this.entry(QQ, !0)))) && void 0 !== DQ ? DQ : [];
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          active: Od,
-          completed: ed,
+          active: AQ,
+          completed: tQ,
           completedExpanded: this.completedExpanded,
-          detail: null !== (gd = [...Od, ...ed].find((dd => dd.selected))) && void 0 !== gd ? gd : null,
-          tracked: null !== (Cd = Od.find((dd => dd.tracked))) && void 0 !== Cd ? Cd : null,
+          detail: null !== (vQ = [...AQ, ...tQ].find((QQ => QQ.selected))) && void 0 !== vQ ? vQ : null,
+          tracked: null !== (mQ = AQ.find((QQ => QQ.tracked))) && void 0 !== mQ ? mQ : null,
           trackedStepPulse: this.trackedStepPulse,
           waypoint: this.waypoint,
           compassTarget: this.compassTarget
@@ -2127,40 +2127,40 @@ export const modules = {
       }
     }
 
-    function Lk(dd) {
-      var Jd;
-      return null !== (Jd = null === dd || void 0 === dd ? void 0 : dd.active.find((Jd => Jd.id === dd.trackedQuestId))) && void 0 !== Jd ? Jd : null
+    function bw(QQ) {
+      var FQ;
+      return null !== (FQ = null === QQ || void 0 === QQ ? void 0 : QQ.active.find((FQ => FQ.id === QQ.trackedQuestId))) && void 0 !== FQ ? FQ : null
     }
-    const Ok = "skyblockDungeonsView";
-    class ek extends od {
-      constructor(dd, Jd) {
-        let kd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
-          pd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
-        super(dd, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = Jd, this.locale = kd, this.requestEnter = pd, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
+    const Yw = "skyblockDungeonsView";
+    class xw extends HQ {
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB",
+          LQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {};
+        super(QQ, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {}), this.translate = FQ, this.locale = wQ, this.requestEnter = LQ, this.authoritative = null, this.selected = null, this.pickerDungeonId = null, this.pageIndex = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           dungeons: [],
           detail: null,
           picker: null
-        }, this.select = dd => {
-          this.selected = dd, this.emit()
+        }, this.select = QQ => {
+          this.selected = QQ, this.emit()
         }, this.previous = () => {
           this.turnTo(this.pageIndex - 1)
         }, this.next = () => {
           this.turnTo(this.pageIndex + 1)
         }, this.enter = () => {
-          const dd = this.pickerEntry(),
-            Jd = null === dd || void 0 === dd ? void 0 : dd.difficulties[this.pageIndex];
-          void 0 !== Jd && null !== Jd.unlockedBoss && (this.close(), this.requestEnter(dd.id, Jd.difficulty))
+          const QQ = this.pickerEntry(),
+            FQ = null === QQ || void 0 === QQ ? void 0 : QQ.difficulties[this.pageIndex];
+          void 0 !== FQ && null !== FQ.unlockedBoss && (this.close(), this.requestEnter(QQ.id, FQ.difficulty))
         }
       }
-      setTranslator(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.translate = dd, this.locale = Jd, this.emit()
+      setTranslator(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.translate = QQ, this.locale = FQ, this.emit()
       }
-      ZL(dd) {
-        var Jd, kd;
-        if (!this.pL) return "open" === dd.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== dd.kind ? "snapshot" === dd.kind && (this.authoritative = dd.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (Jd = null === (kd = this.pickerEntry()) || void 0 === kd ? void 0 : kd.difficulties.length) && void 0 !== Jd ? Jd : 1) - 1)), null === dd.snapshot && this.open ? this.close() : this.emit()) : this.choose(dd.chooseDungeonId))
+      bx(QQ) {
+        var FQ, wQ;
+        if (!this.kx) return "open" === QQ.kind ? (this.pickerDungeonId = null, void this.show()) : void("choose" !== QQ.kind ? "snapshot" === QQ.kind && (this.authoritative = QQ.snapshot, this.pageIndex = Math.min(this.pageIndex, Math.max(0, (null !== (FQ = null === (wQ = this.pickerEntry()) || void 0 === wQ ? void 0 : wQ.difficulties.length) && void 0 !== FQ ? FQ : 1) - 1)), null === QQ.snapshot && this.open ? this.close() : this.emit()) : this.choose(QQ.chooseDungeonId))
       }
       dispose() {
         this.authoritative = null, this.selected = null, this.pickerDungeonId = null, super.dispose()
@@ -2168,133 +2168,133 @@ export const modules = {
       onClosed() {
         this.pickerDungeonId = null
       }
-      choose(dd) {
-        var Jd;
-        const kd = null === (Jd = this.authoritative) || void 0 === Jd ? void 0 : Jd.dungeons.find((Jd => Jd.id === dd));
-        void 0 !== kd ? this.open && this.pickerDungeonId === dd || (this.pickerDungeonId = dd, this.pageIndex = Math.max(0, kd.difficulties.findLastIndex((dd => null !== dd.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${dd}`)
+      choose(QQ) {
+        var FQ;
+        const wQ = null === (FQ = this.authoritative) || void 0 === FQ ? void 0 : FQ.dungeons.find((FQ => FQ.id === QQ));
+        void 0 !== wQ ? this.open && this.pickerDungeonId === QQ || (this.pickerDungeonId = QQ, this.pageIndex = Math.max(0, wQ.difficulties.findLastIndex((QQ => null !== QQ.unlockedBoss))), this.showOrRefresh()) : console.warn(`Skyblock dungeons: asked to choose a boss in unknown dungeon ${QQ}`)
       }
-      turnTo(dd) {
-        var Jd, kd;
-        const pd = null !== (Jd = null === (kd = this.pickerEntry()) || void 0 === kd ? void 0 : kd.difficulties.length) && void 0 !== Jd ? Jd : 0;
-        dd < 0 || dd >= pd || dd === this.pageIndex || (this.pageIndex = dd, this.emit())
+      turnTo(QQ) {
+        var FQ, wQ;
+        const LQ = null !== (FQ = null === (wQ = this.pickerEntry()) || void 0 === wQ ? void 0 : wQ.difficulties.length) && void 0 !== FQ ? FQ : 0;
+        QQ < 0 || QQ >= LQ || QQ === this.pageIndex || (this.pageIndex = QQ, this.emit())
       }
       pickerEntry() {
-        var dd, Jd;
-        return null !== (dd = null === (Jd = this.authoritative) || void 0 === Jd ? void 0 : Jd.dungeons.find((dd => dd.id === this.pickerDungeonId))) && void 0 !== dd ? dd : null
+        var QQ, FQ;
+        return null !== (QQ = null === (FQ = this.authoritative) || void 0 === FQ ? void 0 : FQ.dungeons.find((QQ => QQ.id === this.pickerDungeonId))) && void 0 !== QQ ? QQ : null
       }
-      difficulty(dd) {
-        const Jd = dd.completions > 0,
-          kd = null === dd.bestMs ? null : jd(dd.bestMs);
+      difficulty(QQ) {
+        const FQ = QQ.completions > 0,
+          wQ = null === QQ.bestMs ? null : NQ(QQ.bestMs);
         return {
-          difficulty: dd.difficulty,
-          label: this.translate(bd[dd.difficulty]),
-          colour: Sd[dd.difficulty],
-          beaten: Jd,
-          bestTime: kd,
-          completions: dd.completions,
-          summary: Jd ? [null === kd ? null : this.translate("skyblockGame:dungeonBestTime", {
-            time: kd
+          difficulty: QQ.difficulty,
+          label: this.translate(IQ[QQ.difficulty]),
+          colour: UQ[QQ.difficulty],
+          beaten: FQ,
+          bestTime: wQ,
+          completions: QQ.completions,
+          summary: FQ ? [null === wQ ? null : this.translate("skyblockGame:dungeonBestTime", {
+            time: wQ
           }), this.translate("skyblockGame:dungeonCompletions", {
-            completions: dd.completions.toLocaleString(this.locale)
-          })].filter((dd => null !== dd)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
+            completions: QQ.completions.toLocaleString(this.locale)
+          })].filter((QQ => null !== QQ)).join(" \xb7 ") : this.translate("skyblockGame:dungeonNotCompleted")
         }
       }
-      entry(dd) {
-        const Jd = dd.difficulties.map((dd => this.difficulty(dd))),
-          kd = Jd.filter((dd => dd.beaten)).length;
+      entry(QQ) {
+        const FQ = QQ.difficulties.map((QQ => this.difficulty(QQ))),
+          wQ = FQ.filter((QQ => QQ.beaten)).length;
         return {
-          id: dd.id,
-          name: this.translate(dd.nameKey),
-          selected: dd.id === this.selected,
-          beatenSummary: `${kd} / ${Jd.length}`,
-          difficulties: Jd
+          id: QQ.id,
+          name: this.translate(QQ.nameKey),
+          selected: QQ.id === this.selected,
+          beatenSummary: `${wQ} / ${FQ.length}`,
+          difficulties: FQ
         }
       }
       picker() {
-        const dd = this.pickerEntry();
-        if (null === dd || 0 === dd.difficulties.length) return null;
-        const Jd = dd.difficulties.map(((Jd, kd) => {
-          var pd, Nd, Wd, Pd;
-          const Zd = Jd.unlockedBoss,
-            gd = null === Zd ? this.lockedHint(dd, kd) : null;
+        const QQ = this.pickerEntry();
+        if (null === QQ || 0 === QQ.difficulties.length) return null;
+        const FQ = QQ.difficulties.map(((FQ, wQ) => {
+          var LQ, qQ, oQ, DQ;
+          const kQ = FQ.unlockedBoss,
+            vQ = null === kQ ? this.lockedHint(QQ, wQ) : null;
           return {
-            ...this.difficulty(Jd),
-            unlocked: null !== Zd,
-            bossName: null === Zd ? null : this.translate(Zd.bossNameKey),
-            bossMobType: null !== (pd = null === Zd || void 0 === Zd ? void 0 : Zd.bossMobType) && void 0 !== pd ? pd : null,
-            bossMobVariation: null !== (Nd = null === Zd || void 0 === Zd ? void 0 : Zd.bossMobVariation) && void 0 !== Nd ? Nd : null,
-            lockedHint: null !== (Wd = null === gd || void 0 === gd ? void 0 : gd.text) && void 0 !== Wd ? Wd : null,
-            lockedHintHighlight: null !== (Pd = null === gd || void 0 === gd ? void 0 : gd.highlight) && void 0 !== Pd ? Pd : null,
-            current: kd === this.pageIndex
+            ...this.difficulty(FQ),
+            unlocked: null !== kQ,
+            bossName: null === kQ ? null : this.translate(kQ.bossNameKey),
+            bossMobType: null !== (LQ = null === kQ || void 0 === kQ ? void 0 : kQ.bossMobType) && void 0 !== LQ ? LQ : null,
+            bossMobVariation: null !== (qQ = null === kQ || void 0 === kQ ? void 0 : kQ.bossMobVariation) && void 0 !== qQ ? qQ : null,
+            lockedHint: null !== (oQ = null === vQ || void 0 === vQ ? void 0 : vQ.text) && void 0 !== oQ ? oQ : null,
+            lockedHintHighlight: null !== (DQ = null === vQ || void 0 === vQ ? void 0 : vQ.highlight) && void 0 !== DQ ? DQ : null,
+            current: wQ === this.pageIndex
           }
         }));
         return {
-          dungeonName: this.translate(dd.nameKey),
-          pages: Jd,
-          page: Jd[this.pageIndex],
+          dungeonName: this.translate(QQ.nameKey),
+          pages: FQ,
+          page: FQ[this.pageIndex],
           canPrevious: this.pageIndex > 0,
-          canNext: this.pageIndex < Jd.length - 1
+          canNext: this.pageIndex < FQ.length - 1
         }
       }
-      lockedHint(dd, Jd) {
-        var kd, pd, Nd;
-        if (0 === Jd && "number" === typeof dd.combatLevelLock) {
-          const Jd = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
-            level: dd.combatLevelLock
+      lockedHint(QQ, FQ) {
+        var wQ, LQ, qQ;
+        if (0 === FQ && "number" === typeof QQ.combatLevelLock) {
+          const FQ = this.translate("skyblockGame:dungeonBossLockedCombatLevel", {
+            level: QQ.combatLevelLock
           });
           return this.hintHighlighting("skyblockGame:dungeonBossLockedCombat", {}, "skill", {
-            name: Jd,
-            colour: xJ("combat"),
-            icon: GJ.combat
+            name: FQ,
+            colour: pF("combat"),
+            icon: MF.combat
           })
         }
-        const Wd = null !== (kd = null === (pd = this.authoritative) || void 0 === pd ? void 0 : pd.dungeons) && void 0 !== kd ? kd : [],
-          Pd = Jd > 0 ? dd : null !== (Nd = Wd[Wd.indexOf(dd) - 1]) && void 0 !== Nd ? Nd : null,
-          Zd = Jd > 0 ? dd.difficulties[Jd - 1] : null === Pd || void 0 === Pd ? void 0 : Pd.difficulties[0];
-        if (null === Pd || void 0 === Zd) return null;
-        const gd = this.translate(Pd.nameKey);
-        if (null === Zd.unlockedBoss) return Pd === dd ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, Zd.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
-          dungeon: gd
-        }, Zd.difficulty);
-        const Cd = this.translate(Zd.unlockedBoss.bossNameKey);
-        return Pd === dd ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
-          boss: Cd
-        }, Zd.difficulty) : {
+        const oQ = null !== (wQ = null === (LQ = this.authoritative) || void 0 === LQ ? void 0 : LQ.dungeons) && void 0 !== wQ ? wQ : [],
+          DQ = FQ > 0 ? QQ : null !== (qQ = oQ[oQ.indexOf(QQ) - 1]) && void 0 !== qQ ? qQ : null,
+          kQ = FQ > 0 ? QQ.difficulties[FQ - 1] : null === DQ || void 0 === DQ ? void 0 : DQ.difficulties[0];
+        if (null === DQ || void 0 === kQ) return null;
+        const vQ = this.translate(DQ.nameKey);
+        if (null === kQ.unlockedBoss) return DQ === QQ ? this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseen", {}, kQ.difficulty) : this.hintNamingDifficulty("skyblockGame:dungeonBossLockedUnseenElsewhere", {
+          dungeon: vQ
+        }, kQ.difficulty);
+        const mQ = this.translate(kQ.unlockedBoss.bossNameKey);
+        return DQ === QQ ? this.hintNamingDifficulty("skyblockGame:dungeonBossLocked", {
+          boss: mQ
+        }, kQ.difficulty) : {
           text: this.translate("skyblockGame:dungeonBossLockedElsewhere", {
-            boss: Cd,
-            dungeon: gd
+            boss: mQ,
+            dungeon: vQ
           }),
           highlight: null
         }
       }
-      hintNamingDifficulty(dd, Jd, kd) {
-        return this.hintHighlighting(dd, Jd, "difficulty", {
-          name: this.translate(bd[kd]),
-          colour: Sd[kd],
+      hintNamingDifficulty(QQ, FQ, wQ) {
+        return this.hintHighlighting(QQ, FQ, "difficulty", {
+          name: this.translate(IQ[wQ]),
+          colour: UQ[wQ],
           icon: null
         })
       }
-      hintHighlighting(dd, Jd, kd, pd) {
+      hintHighlighting(QQ, FQ, wQ, LQ) {
         let {
-          name: Nd,
-          colour: Wd,
-          icon: Pd
-        } = pd;
-        const Zd = this.translate(dd, {
-          ...Jd,
-          [kd]: "\x01"
+          name: qQ,
+          colour: oQ,
+          icon: DQ
+        } = LQ;
+        const kQ = this.translate(QQ, {
+          ...FQ,
+          [wQ]: "\x01"
         }).split("\x01");
         return {
-          text: this.translate(dd, {
-            ...Jd,
-            [kd]: Nd
+          text: this.translate(QQ, {
+            ...FQ,
+            [wQ]: qQ
           }),
-          highlight: 2 === Zd.length ? {
-            before: Zd[0],
-            name: Nd,
-            after: Zd[1],
-            colour: Wd,
-            icon: Pd
+          highlight: 2 === kQ.length ? {
+            before: kQ[0],
+            name: qQ,
+            after: kQ[1],
+            colour: oQ,
+            icon: DQ
           } : null
         }
       }
@@ -2302,49 +2302,49 @@ export const modules = {
         return null !== this.authoritative
       }
       buildSnapshot() {
-        var dd, Jd, kd;
-        const pd = null !== (dd = null === (Jd = this.authoritative) || void 0 === Jd ? void 0 : Jd.dungeons) && void 0 !== dd ? dd : [];
-        var Nd, Wd;
-        pd.some((dd => dd.id === this.selected)) || (this.selected = null !== (Nd = null === (Wd = pd[0]) || void 0 === Wd ? void 0 : Wd.id) && void 0 !== Nd ? Nd : null);
-        const Pd = pd.map((dd => this.entry(dd)));
+        var QQ, FQ, wQ;
+        const LQ = null !== (QQ = null === (FQ = this.authoritative) || void 0 === FQ ? void 0 : FQ.dungeons) && void 0 !== QQ ? QQ : [];
+        var qQ, oQ;
+        LQ.some((QQ => QQ.id === this.selected)) || (this.selected = null !== (qQ = null === (oQ = LQ[0]) || void 0 === oQ ? void 0 : oQ.id) && void 0 !== qQ ? qQ : null);
+        const DQ = LQ.map((QQ => this.entry(QQ)));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          dungeons: Pd,
-          detail: null !== (kd = Pd.find((dd => dd.selected))) && void 0 !== kd ? kd : null,
+          dungeons: DQ,
+          detail: null !== (wQ = DQ.find((QQ => QQ.selected))) && void 0 !== wQ ? wQ : null,
           picker: null === this.pickerDungeonId ? null : this.picker()
         }
       }
     }
-    const Rk = ["mining", "farming", "foraging", "fishing", "combat"],
-      Ik = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
-      Gk = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
+    const Aw = ["mining", "farming", "foraging", "fishing", "combat"],
+      tw = [25, 50, 100, 200, 400, 750, 1250, 2e3, 3e3],
+      ew = [20, 40, 80, 150, 300, 500, 800, 1200, 2e3];
 
-    function vk() {
-      for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
-      return Jd.map(((dd, Jd) => ({
-        amount: dd,
-        coins: Ik[Jd],
-        xp: Gk[Jd]
+    function Mw() {
+      for (var QQ = arguments.length, FQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) FQ[wQ] = arguments[wQ];
+      return FQ.map(((QQ, FQ) => ({
+        amount: QQ,
+        coins: tw[FQ],
+        xp: ew[FQ]
       })))
     }
-    const xk = vk(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
-      qk = vk(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
-      Bk = vk(50, 100, 250, 500, 1e3, 2500, 5e3),
-      sk = vk(25, 50, 100, 250, 500, 1e3),
-      ik = vk(10, 25, 50, 100, 250, 500, 1e3),
-      ak = vk(1, 5, 10, 25, 50);
+    const Gw = Mw(100, 250, 500, 1e3, 2500, 5e3, 1e4, 25e3, 5e4),
+      pw = Mw(50, 100, 250, 1e3, 2500, 5e3, 1e4, 25e3),
+      Cw = Mw(50, 100, 250, 500, 1e3, 2500, 5e3),
+      Sw = Mw(25, 50, 100, 250, 500, 1e3),
+      iw = Mw(10, 25, 50, 100, 250, 500, 1e3),
+      Ww = Mw(1, 5, 10, 25, 50);
 
-    function Mk(dd, Jd) {
+    function Rw(QQ, FQ) {
       return {
-        id: dd,
+        id: QQ,
         category: "fishing",
-        item: Jd,
-        drops: [Jd],
-        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ik
+        item: FQ,
+        drops: [FQ],
+        tiers: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : iw
       }
     }
-    const Fk = [{
+    const Ow = [{
         id: "coal",
         category: "mining",
         item: "Coal",
@@ -2353,7 +2353,7 @@ export const modules = {
           "Pure Coal Ore": 9,
           "Block of Coal": 3
         },
-        tiers: qk
+        tiers: pw
       }, {
         id: "iron",
         category: "mining",
@@ -2362,7 +2362,7 @@ export const modules = {
           "Iron Ore": 1,
           "Pure Iron Ore": 9
         },
-        tiers: Bk
+        tiers: Cw
       }, {
         id: "gold",
         category: "mining",
@@ -2371,7 +2371,7 @@ export const modules = {
           "Gold Ore": 1,
           "Pure Gold Ore": 9
         },
-        tiers: Bk
+        tiers: Cw
       }, {
         id: "diamond",
         category: "mining",
@@ -2380,7 +2380,7 @@ export const modules = {
           "Diamond Ore": 1,
           "Pure Diamond Ore": 9
         },
-        tiers: sk
+        tiers: Sw
       }, {
         id: "moonstone",
         category: "mining",
@@ -2389,7 +2389,7 @@ export const modules = {
           "Moonstone Ore": 1,
           "Pure Moonstone Ore": 9
         },
-        tiers: sk
+        tiers: Sw
       }, {
         id: "stone",
         category: "mining",
@@ -2397,7 +2397,7 @@ export const modules = {
         blocks: {
           Stone: 1
         },
-        tiers: qk
+        tiers: pw
       }, {
         id: "wheat",
         category: "farming",
@@ -2405,7 +2405,7 @@ export const modules = {
         blocks: {
           "Wheat|FreshlyGrown": 1
         },
-        tiers: xk
+        tiers: Gw
       }, {
         id: "carrot",
         category: "farming",
@@ -2413,7 +2413,7 @@ export const modules = {
         blocks: {
           "Carrot Plant|FreshlyGrown": 1
         },
-        tiers: xk
+        tiers: Gw
       }, {
         id: "potato",
         category: "farming",
@@ -2421,7 +2421,7 @@ export const modules = {
         blocks: {
           "Potato Plant|FreshlyGrown": 1
         },
-        tiers: xk
+        tiers: Gw
       }, {
         id: "beetroot",
         category: "farming",
@@ -2429,7 +2429,7 @@ export const modules = {
         blocks: {
           "Beetroot Plant|FreshlyGrown": 1
         },
-        tiers: Bk
+        tiers: Cw
       }, {
         id: "melon",
         category: "farming",
@@ -2437,7 +2437,7 @@ export const modules = {
         blocks: {
           Melon: 1
         },
-        tiers: qk
+        tiers: pw
       }, {
         id: "watermelon",
         category: "farming",
@@ -2445,7 +2445,7 @@ export const modules = {
         blocks: {
           Watermelon: 1
         },
-        tiers: qk
+        tiers: pw
       }, {
         id: "maple_log",
         category: "foraging",
@@ -2453,7 +2453,7 @@ export const modules = {
         blocks: {
           "Maple Log": 1
         },
-        tiers: qk
+        tiers: pw
       }, {
         id: "pear_log",
         category: "foraging",
@@ -2461,7 +2461,7 @@ export const modules = {
         blocks: {
           "Pear Log": 1
         },
-        tiers: Bk
+        tiers: Cw
       }, {
         id: "palm_log",
         category: "foraging",
@@ -2469,78 +2469,78 @@ export const modules = {
         blocks: {
           "Palm Log": 1
         },
-        tiers: Bk
-      }, Mk("wheatfish", "Wheatfish"), Mk("darter", "Darter"), Mk("sunset_minnow", "Sunset Minnow"), Mk("root_flounder", "Root Flounder"), Mk("greenfin_loach", "Greenfin Loach"), Mk("red_strongfish", "Red Strongfish"), Mk("green_strongfish", "Green Strongfish"), Mk("boomerang_fish", "Boomerang Fish"), Mk("seahorse", "Seahorse"), Mk("spined_stickleback", "Spined Stickleback"), Mk("moon_strongfish", "Moon Strongfish"), Mk("boulder_bass", "Boulder Bass"), Mk("grass_snapper", "Grass Snapper"), Mk("crystal_wheatfish", "Crystalized Wheatfish", ak), Mk("moonstone_pupfish", "Moonstone Pupfish", ak), Mk("reedglass_minnow", "Reedglass Minnow"), Mk("mangrove_herring", "Mangrove Herring"), Mk("mudline_perch", "Mudline Perch"), Mk("coastal_mullet", "Coastal Mullet"), Mk("reef_sardine", "Reef Sardine"), Mk("root_perch", "Root Perch"), Mk("driftwood_catfish", "Driftwood Catfish"), Mk("aether_minnow", "Aether Minnow"), Mk("needlefish", "Tri-Pointed Needlefish"), Mk("threadfin_bream", "Threadfin Bream"), Mk("mudbelly_tilapia", "Mudbelly Tilapia"), Mk("rotslab_eel", "Rotslab Eel"), Mk("polarflash_electron", "Polarflash Electron"), Mk("mireback_carp", "Mireback Carp"), Mk("blackwater_bream", "Blackwater Bream"), Mk("stone_grouper", "Stone Grouper"), Mk("shadeback_ray", "Shadeback Ray"), Mk("glacial_silverfish", "Glacial Silverfish"), Mk("hatchetfish", "Hatchetfish"), Mk("moonlit_boomerang", "Moonlit Boomerang Fish"), Mk("murkborne_ray", "Murkborne Ray"), Mk("bamboo_catfish", "Bamboo Catfish"), Mk("mossback_arapaima", "Mossback Arapaima"), Mk("murk_stingray", "Murk Stingray"), Mk("channel_sawfish", "Channel Sawfish"), Mk("boned_sturgeon", "Boned Sturgeon"), Mk("oarfish", "Oarfish"), Mk("snakehead", "Snakehead", ak), Mk("eldertide_leviathan", "Eldertide Leviathan", ak), Mk("pithead", "Pithead"), Mk("electric_eel", "Electric Eel"), Mk("shadow_darter", "Shadow Darter"), Mk("abyss_carp", "Abyss Carp"), Mk("nomai_moray", "Nomai Moray"), Mk("silver_dragonfish", "Silver Dragonfish"), Mk("giant_moray", "Giant Moray"), Mk("coelacanth", "Coelacanth", ak), Mk("frost_herring", "Frost Herring"), Mk("permafrost_halibut", "Permafrost Halibut"), Mk("glacial_lanternfish", "Glacial Lanternfish"), Mk("frozen_grenadier", "Frozen Grenadier"), Mk("blackfin_icefish", "Blackfin Icefish"), Mk("moonfish", "Moonfish"), Mk("alpha_strongfish", "Alpha Moon Strongfish"), Mk("deep_lanternfish", "Deepwater Lanternfish", ak), Mk("pearlescent_moonfish", "Pearlescent Moonfish", ak), {
+        tiers: Cw
+      }, Rw("wheatfish", "Wheatfish"), Rw("darter", "Darter"), Rw("sunset_minnow", "Sunset Minnow"), Rw("root_flounder", "Root Flounder"), Rw("greenfin_loach", "Greenfin Loach"), Rw("red_strongfish", "Red Strongfish"), Rw("green_strongfish", "Green Strongfish"), Rw("boomerang_fish", "Boomerang Fish"), Rw("seahorse", "Seahorse"), Rw("spined_stickleback", "Spined Stickleback"), Rw("moon_strongfish", "Moon Strongfish"), Rw("boulder_bass", "Boulder Bass"), Rw("grass_snapper", "Grass Snapper"), Rw("crystal_wheatfish", "Crystalized Wheatfish", Ww), Rw("moonstone_pupfish", "Moonstone Pupfish", Ww), Rw("reedglass_minnow", "Reedglass Minnow"), Rw("mangrove_herring", "Mangrove Herring"), Rw("mudline_perch", "Mudline Perch"), Rw("coastal_mullet", "Coastal Mullet"), Rw("reef_sardine", "Reef Sardine"), Rw("root_perch", "Root Perch"), Rw("driftwood_catfish", "Driftwood Catfish"), Rw("aether_minnow", "Aether Minnow"), Rw("needlefish", "Tri-Pointed Needlefish"), Rw("threadfin_bream", "Threadfin Bream"), Rw("mudbelly_tilapia", "Mudbelly Tilapia"), Rw("rotslab_eel", "Rotslab Eel"), Rw("polarflash_electron", "Polarflash Electron"), Rw("mireback_carp", "Mireback Carp"), Rw("blackwater_bream", "Blackwater Bream"), Rw("stone_grouper", "Stone Grouper"), Rw("shadeback_ray", "Shadeback Ray"), Rw("glacial_silverfish", "Glacial Silverfish"), Rw("hatchetfish", "Hatchetfish"), Rw("moonlit_boomerang", "Moonlit Boomerang Fish"), Rw("murkborne_ray", "Murkborne Ray"), Rw("bamboo_catfish", "Bamboo Catfish"), Rw("mossback_arapaima", "Mossback Arapaima"), Rw("murk_stingray", "Murk Stingray"), Rw("channel_sawfish", "Channel Sawfish"), Rw("boned_sturgeon", "Boned Sturgeon"), Rw("oarfish", "Oarfish"), Rw("snakehead", "Snakehead", Ww), Rw("eldertide_leviathan", "Eldertide Leviathan", Ww), Rw("pithead", "Pithead"), Rw("electric_eel", "Electric Eel"), Rw("shadow_darter", "Shadow Darter"), Rw("abyss_carp", "Abyss Carp"), Rw("nomai_moray", "Nomai Moray"), Rw("silver_dragonfish", "Silver Dragonfish"), Rw("giant_moray", "Giant Moray"), Rw("coelacanth", "Coelacanth", Ww), Rw("frost_herring", "Frost Herring"), Rw("permafrost_halibut", "Permafrost Halibut"), Rw("glacial_lanternfish", "Glacial Lanternfish"), Rw("frozen_grenadier", "Frozen Grenadier"), Rw("blackfin_icefish", "Blackfin Icefish"), Rw("moonfish", "Moonfish"), Rw("alpha_strongfish", "Alpha Moon Strongfish"), Rw("deep_lanternfish", "Deepwater Lanternfish", Ww), Rw("pearlescent_moonfish", "Pearlescent Moonfish", Ww), {
         id: "rotten_flesh",
         category: "combat",
         item: "Rotten Flesh",
         drops: ["Rotten Flesh"],
-        tiers: qk
+        tiers: pw
       }, {
         id: "rotten_brain",
         category: "combat",
         item: "Rotten Brain",
         drops: ["Rotten Brain"],
-        tiers: sk
+        tiers: Sw
       }, {
         id: "iron_fragment",
         category: "combat",
         item: "Iron Fragment",
         drops: ["Iron Fragment"],
-        tiers: sk
+        tiers: Sw
       }],
-      Yk = (new Map(Fk.map((dd => [dd.id, dd]))), new Map),
-      mk = new Map;
-    for (const Kg of Fk) {
-      for (const [dd, Jd] of Object.entries(null !== (bk = Kg.blocks) && void 0 !== bk ? bk : {})) {
-        var bk;
-        Yk.set(dd, {
-          collection: Kg,
-          amount: Jd
+      sw = (new Map(Ow.map((QQ => [QQ.id, QQ]))), new Map),
+      rw = new Map;
+    for (const Hv of Ow) {
+      for (const [QQ, FQ] of Object.entries(null !== (Iw = Hv.blocks) && void 0 !== Iw ? Iw : {})) {
+        var Iw;
+        sw.set(QQ, {
+          collection: Hv,
+          amount: FQ
         })
       }
-      for (const dd of null !== (Sk = Kg.drops) && void 0 !== Sk ? Sk : []) {
-        var Sk;
-        mk.set(dd, Kg)
+      for (const QQ of null !== (Uw = Hv.drops) && void 0 !== Uw ? Uw : []) {
+        var Uw;
+        rw.set(QQ, Hv)
       }
     }
 
-    function jk(dd, Jd) {
-      let kd = 0;
-      for (; kd < dd.tiers.length && Jd >= dd.tiers[kd].amount;) kd++;
-      return kd
+    function Nw(QQ, FQ) {
+      let wQ = 0;
+      for (; wQ < QQ.tiers.length && FQ >= QQ.tiers[wQ].amount;) wQ++;
+      return wQ
     }
-    const Xk = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    const Tw = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
 
-    function fk(dd) {
-      return Xk[dd - 1]
+    function Kw(QQ) {
+      return Tw[QQ - 1]
     }
-    const nk = "skyblockCollectionsView";
-    class Uk extends od {
-      constructor(dd, Jd) {
-        let kd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
-          pd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : dd => dd;
-        super(dd, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = Jd, this.locale = kd, this.itemName = pd, this.counts = null, this.category = "mining", this.selected = Fk[0].id, this.snapshot = {
+    const zw = "skyblockCollectionsView";
+    class lw extends HQ {
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "en-GB",
+          LQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : QQ => QQ;
+        super(QQ, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {}), this.translate = FQ, this.locale = wQ, this.itemName = LQ, this.counts = null, this.category = "mining", this.selected = Ow[0].id, this.snapshot = {
           enabled: !1,
           open: !1,
           categories: [],
           collections: [],
           detail: null,
           tiersUnlocked: ""
-        }, this.selectCategory = dd => {
-          this.category = dd, this.selected = this.inCategory(dd)[0].id, this.emit()
-        }, this.select = dd => {
-          this.selected = dd, this.emit()
+        }, this.selectCategory = QQ => {
+          this.category = QQ, this.selected = this.inCategory(QQ)[0].id, this.emit()
+        }, this.select = QQ => {
+          this.selected = QQ, this.emit()
         }
       }
-      setTranslator(dd, Jd, kd) {
-        this.translate = dd, this.locale = Jd, this.itemName = kd, this.emit()
+      setTranslator(QQ, FQ, wQ) {
+        this.translate = QQ, this.locale = FQ, this.itemName = wQ, this.emit()
       }
-      ZL(dd) {
-        if (!this.pL)
-          if ("collOpen" !== dd.kind) {
-            (dd.collFull || null === this.counts) && (this.counts = new Map);
-            for (const [Jd, kd] of dd.collCounts) this.counts.set(Jd, kd);
+      bx(QQ) {
+        if (!this.kx)
+          if ("collOpen" !== QQ.kind) {
+            (QQ.collFull || null === this.counts) && (this.counts = new Map);
+            for (const [FQ, wQ] of QQ.collCounts) this.counts.set(FQ, wQ);
             this.emit()
           } else this.show()
       }
@@ -2551,7 +2551,7 @@ export const modules = {
         return null !== this.counts
       }
       buildSnapshot() {
-        var dd;
+        var QQ;
         if (null === this.counts) return {
           enabled: !1,
           open: this.open,
@@ -2560,297 +2560,297 @@ export const modules = {
           detail: null,
           tiersUnlocked: ""
         };
-        const Jd = this.inCategory(this.category).map((dd => this.collectionView(dd))),
-          kd = Fk.reduce(((dd, Jd) => dd + this.tierOf(Jd)), 0);
+        const FQ = this.inCategory(this.category).map((QQ => this.collectionView(QQ))),
+          wQ = Ow.reduce(((QQ, FQ) => QQ + this.tierOf(FQ)), 0);
         return {
           enabled: !0,
           open: this.open,
-          categories: Rk.map((dd => this.categoryView(dd))),
-          collections: Jd,
-          detail: null !== (dd = Jd.find((dd => dd.selected))) && void 0 !== dd ? dd : null,
+          categories: Aw.map((QQ => this.categoryView(QQ))),
+          collections: FQ,
+          detail: null !== (QQ = FQ.find((QQ => QQ.selected))) && void 0 !== QQ ? QQ : null,
           tiersUnlocked: this.translate("skyblockGame:collectionTiersUnlocked", {
-            count: this.number(kd)
+            count: this.number(wQ)
           })
         }
       }
-      categoryView(dd) {
-        const Jd = this.inCategory(dd),
-          kd = Jd.reduce(((dd, Jd) => dd + this.tierOf(Jd)), 0),
-          pd = Jd.reduce(((dd, Jd) => dd + Jd.tiers.length), 0);
+      categoryView(QQ) {
+        const FQ = this.inCategory(QQ),
+          wQ = FQ.reduce(((QQ, FQ) => QQ + this.tierOf(FQ)), 0),
+          LQ = FQ.reduce(((QQ, FQ) => QQ + FQ.tiers.length), 0);
         return {
-          id: dd,
-          label: this.translate(`skyblockGame:${dd}`),
-          icon: GJ[dd],
+          id: QQ,
+          label: this.translate(`skyblockGame:${QQ}`),
+          icon: MF[QQ],
           tiers: this.translate("skyblockGame:collectionProgress", {
-            current: this.number(kd),
-            target: this.number(pd)
+            current: this.number(wQ),
+            target: this.number(LQ)
           }),
-          selected: dd === this.category
+          selected: QQ === this.category
         }
       }
-      collectionView(dd) {
-        var Jd, kd;
-        const pd = null !== (Jd = this.counts.get(dd.id)) && void 0 !== Jd ? Jd : 0,
-          Nd = jk(dd, pd),
-          Wd = null !== (kd = dd.tiers[Nd]) && void 0 !== kd ? kd : null,
-          Pd = 0 === Nd ? 0 : dd.tiers[Nd - 1].amount;
+      collectionView(QQ) {
+        var FQ, wQ;
+        const LQ = null !== (FQ = this.counts.get(QQ.id)) && void 0 !== FQ ? FQ : 0,
+          qQ = Nw(QQ, LQ),
+          oQ = null !== (wQ = QQ.tiers[qQ]) && void 0 !== wQ ? wQ : null,
+          DQ = 0 === qQ ? 0 : QQ.tiers[qQ - 1].amount;
         return {
-          id: dd.id,
-          name: this.itemName(dd.item),
-          icon: dd.item,
-          selected: dd.id === this.selected,
-          locked: 0 === pd,
+          id: QQ.id,
+          name: this.itemName(QQ.item),
+          icon: QQ.item,
+          selected: QQ.id === this.selected,
+          locked: 0 === LQ,
           count: this.translate("skyblockGame:collectionCount", {
-            count: this.number(pd)
+            count: this.number(LQ)
           }),
-          tier: 0 === Nd ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(Nd),
-          percent: null === Wd ? 100 : Math.min(100, (pd - Pd) / (Wd.amount - Pd) * 100),
-          progress: null === Wd ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
-            current: this.number(pd),
-            target: this.number(Wd.amount)
+          tier: 0 === qQ ? this.translate("skyblockGame:collectionNoTier") : this.tierLabel(qQ),
+          percent: null === oQ ? 100 : Math.min(100, (LQ - DQ) / (oQ.amount - DQ) * 100),
+          progress: null === oQ ? this.translate("skyblockGame:max") : this.translate("skyblockGame:collectionProgress", {
+            current: this.number(LQ),
+            target: this.number(oQ.amount)
           }),
-          nextReward: null === Wd ? null : this.reward(dd, Wd.coins, Wd.xp)
+          nextReward: null === oQ ? null : this.reward(QQ, oQ.coins, oQ.xp)
         }
       }
-      reward(dd, Jd, kd) {
+      reward(QQ, FQ, wQ) {
         return this.translate("skyblockGame:collectionReward", {
-          coins: this.number(Jd),
-          xp: this.number(kd),
-          skill: this.translate(`skyblockGame:${dd.category}`)
+          coins: this.number(FQ),
+          xp: this.number(wQ),
+          skill: this.translate(`skyblockGame:${QQ.category}`)
         })
       }
-      tierLabel(dd) {
+      tierLabel(QQ) {
         return this.translate("skyblockGame:collectionTier", {
-          tier: fk(dd)
+          tier: Kw(QQ)
         })
       }
-      tierOf(dd) {
-        var Jd;
-        return jk(dd, null !== (Jd = this.counts.get(dd.id)) && void 0 !== Jd ? Jd : 0)
+      tierOf(QQ) {
+        var FQ;
+        return Nw(QQ, null !== (FQ = this.counts.get(QQ.id)) && void 0 !== FQ ? FQ : 0)
       }
-      inCategory(dd) {
-        return Fk.filter((Jd => Jd.category === dd))
+      inCategory(QQ) {
+        return Ow.filter((FQ => FQ.category === QQ))
       }
-      number(dd) {
-        return dd.toLocaleString(this.locale)
+      number(QQ) {
+        return QQ.toLocaleString(this.locale)
       }
     }
-    const yk = "skyblockPortalTransitView",
-      Dk = "skyblockPortalArrival";
-    class Tk {
-      constructor(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
-        this.nO = dd, this.storage = Jd, this.now = kd, this.view = null, this.token = 0, this.hideTimer = null
+    const jw = "skyblockPortalTransitView",
+      aw = "skyblockPortalArrival";
+    class Xw {
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.GA = QQ, this.storage = FQ, this.now = wQ, this.view = null, this.token = 0, this.hideTimer = null
       }
       getSnapshot() {
         return this.view
       }
-      ZL(dd) {
-        const Jd = {
-          zoneNameKey: dd.transitZoneNameKey,
-          variation: dd.transitZoneVariation,
-          colour: dd.transitColour,
+      bx(QQ) {
+        const FQ = {
+          zoneNameKey: QQ.transitZoneNameKey,
+          variation: QQ.transitZoneVariation,
+          colour: QQ.transitColour,
           departedAt: this.now()
         };
-        this.storage.setItem(Dk, Jd), this.show("departure", Jd.zoneNameKey, Jd.colour, dd.transitDurationMs, dd.transitDurationMs + 1500, (() => {
-          this.storage.removeItem(Dk)
+        this.storage.setItem(aw, FQ), this.show("departure", FQ.zoneNameKey, FQ.colour, QQ.transitDurationMs, QQ.transitDurationMs + 1500, (() => {
+          this.storage.removeItem(aw)
         }))
       }
-      resumeArrival(dd) {
-        const Jd = this.storage.getItem(Dk);
-        this.storage.removeItem(Dk), null === Jd || Jd.variation !== dd || this.now() - Jd.departedAt > 3e4 || this.show("arrival", Jd.zoneNameKey, Jd.colour, 3200, 2e4)
+      resumeArrival(QQ) {
+        const FQ = this.storage.getItem(aw);
+        this.storage.removeItem(aw), null === FQ || FQ.variation !== QQ || this.now() - FQ.departedAt > 3e4 || this.show("arrival", FQ.zoneNameKey, FQ.colour, 3200, 2e4)
       }
-      finishArrival(dd) {
-        var Jd;
-        "arrival" === (null === (Jd = this.view) || void 0 === Jd ? void 0 : Jd.phase) && this.view.token === dd && (this.clearTimer(), this.view = null, this.nO(null))
+      finishArrival(QQ) {
+        var FQ;
+        "arrival" === (null === (FQ = this.view) || void 0 === FQ ? void 0 : FQ.phase) && this.view.token === QQ && (this.clearTimer(), this.view = null, this.GA(null))
       }
       dispose() {
         this.clearTimer()
       }
-      show(dd, Jd, kd, pd, Nd, Wd) {
+      show(QQ, FQ, wQ, LQ, qQ, oQ) {
         this.clearTimer(), this.view = {
           token: ++this.token,
-          phase: dd,
-          zoneNameKey: Jd,
-          colour: kd,
-          durationMs: pd
-        }, this.nO(this.view), this.hideTimer = setTimeout((() => {
-          this.hideTimer = null, this.view = null, this.nO(null), null === Wd || void 0 === Wd || Wd()
-        }), Nd)
+          phase: QQ,
+          zoneNameKey: FQ,
+          colour: wQ,
+          durationMs: LQ
+        }, this.GA(this.view), this.hideTimer = setTimeout((() => {
+          this.hideTimer = null, this.view = null, this.GA(null), null === oQ || void 0 === oQ || oQ()
+        }), qQ)
       }
       clearTimer() {
         null !== this.hideTimer && (clearTimeout(this.hideTimer), this.hideTimer = null)
       }
     }
-    const Ek = "skyblockDailyRewardView",
-      ck = "skyblockDailyRewardCoin";
-    class hk {
-      constructor(dd, Jd, kd, pd) {
-        let Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          Pd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
-          Zd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
-          gd = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
-        this.nO = dd, this.isBusy = Jd, this.holdQuestPopups = kd, this.onHeldCoinsChanged = pd, this.onCoinLanded = Nd, this.onStarted = Wd, this.onFinished = Pd, this.onItemLanded = Zd, this.now = gd, this.EC = [], this.queue = [], this.playing = null, this.token = 0
+    const fw = "skyblockDailyRewardView",
+      Vw = "skyblockDailyRewardCoin";
+    class hw {
+      constructor(QQ, FQ, wQ, LQ) {
+        let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          DQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : () => {},
+          kQ = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : () => {},
+          vQ = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : performance.now.bind(performance);
+        this.GA = QQ, this.isBusy = FQ, this.holdQuestPopups = wQ, this.onHeldCoinsChanged = LQ, this.onCoinLanded = qQ, this.onStarted = oQ, this.onFinished = DQ, this.onItemLanded = kQ, this.now = vQ, this.ym = [], this.queue = [], this.playing = null, this.token = 0
       }
       getSnapshot() {
-        var dd, Jd;
-        return null !== (dd = null === (Jd = this.playing) || void 0 === Jd ? void 0 : Jd.view) && void 0 !== dd ? dd : null
+        var QQ, FQ;
+        return null !== (QQ = null === (FQ = this.playing) || void 0 === FQ ? void 0 : FQ.view) && void 0 !== QQ ? QQ : null
       }
       getHeldCoins() {
-        var dd, Jd;
-        let kd = 0;
-        for (const pd of this.EC) kd += pd.coins;
-        return kd - (null !== (dd = null === (Jd = this.playing) || void 0 === Jd ? void 0 : Jd.released) && void 0 !== dd ? dd : 0)
+        var QQ, FQ;
+        let wQ = 0;
+        for (const LQ of this.ym) wQ += LQ.coins;
+        return wQ - (null !== (QQ = null === (FQ = this.playing) || void 0 === FQ ? void 0 : FQ.released) && void 0 !== QQ ? QQ : 0)
       }
-      ZL(dd) {
-        "dailyRewardClaimed" !== dd.kind ? (this.queue.push(dd), this.Do()) : this.EC.push({
-          coins: dd.dailyRewardCoins,
+      bx(QQ) {
+        "dailyRewardClaimed" !== QQ.kind ? (this.queue.push(QQ), this.fH()) : this.ym.push({
+          coins: QQ.dailyRewardCoins,
           receivedAt: this.now()
         })
       }
-      Do() {
-        const dd = this.now();
-        if (null === this.playing) return this.releaseUnshown(dd), void this.startNext(dd);
-        const Jd = this.playing,
-          kd = dd - Jd.startedAt,
-          pd = Jd.view.flyingCoins,
-          Nd = function(dd, Jd) {
-            let kd = 0;
-            for (; kd < Jd && uk(kd, Jd) <= dd;) kd++;
-            return kd
-          }(kd, pd);
-        if (Nd !== Jd.landed) {
-          for (let dd = Nd - Jd.landed > 2 ? Nd - 1 : Jd.landed; dd < Nd; dd++) this.onCoinLanded(dd, pd);
-          Jd.landed = Nd, Jd.released = Math.round(Jd.view.coins * Nd / pd), this.onHeldCoinsChanged()
+      fH() {
+        const QQ = this.now();
+        if (null === this.playing) return this.releaseUnshown(QQ), void this.startNext(QQ);
+        const FQ = this.playing,
+          wQ = QQ - FQ.startedAt,
+          LQ = FQ.view.flyingCoins,
+          qQ = function(QQ, FQ) {
+            let wQ = 0;
+            for (; wQ < FQ && Ew(wQ, FQ) <= QQ;) wQ++;
+            return wQ
+          }(wQ, LQ);
+        if (qQ !== FQ.landed) {
+          for (let QQ = qQ - FQ.landed > 2 ? qQ - 1 : FQ.landed; QQ < qQ; QQ++) this.onCoinLanded(QQ, LQ);
+          FQ.landed = qQ, FQ.released = Math.round(FQ.view.coins * qQ / LQ), this.onHeldCoinsChanged()
         }
-        for (; Jd.itemsLanded < Jd.view.items.length && 2e3 + 160 * Jd.itemsLanded + 630 <= kd;) this.onItemLanded(Jd.itemsLanded), Jd.itemsLanded++;
-        kd >= Jd.view.durationMs && (this.finish(), this.startNext(dd))
+        for (; FQ.itemsLanded < FQ.view.items.length && 2e3 + 160 * FQ.itemsLanded + 630 <= wQ;) this.onItemLanded(FQ.itemsLanded), FQ.itemsLanded++;
+        wQ >= FQ.view.durationMs && (this.finish(), this.startNext(QQ))
       }
       dispose() {
-        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.EC = [], this.nO(null)
+        null !== this.playing && this.holdQuestPopups(!1), this.playing = null, this.queue = [], this.ym = [], this.GA(null)
       }
-      startNext(dd) {
+      startNext(QQ) {
         if (0 === this.queue.length || this.isBusy()) return;
-        const Jd = this.queue.shift();
+        const FQ = this.queue.shift();
         this.token++;
-        const kd = {
+        const wQ = {
           token: this.token,
-          day: Jd.dailyRewardDay,
-          coins: Jd.dailyRewardCoins,
-          items: Jd.dailyRewardItems,
+          day: FQ.dailyRewardDay,
+          coins: FQ.dailyRewardCoins,
+          items: FQ.dailyRewardItems,
           durationMs: 5e3,
-          flyingCoins: Jd.dailyRewardDay === Fd ? 24 : 14
+          flyingCoins: FQ.dailyRewardDay === OQ ? 24 : 14
         };
         this.playing = {
-          view: kd,
-          startedAt: dd,
+          view: wQ,
+          startedAt: QQ,
           landed: 0,
           released: 0,
           itemsLanded: 0
-        }, this.holdQuestPopups(!0), this.nO(kd), this.onStarted(kd)
+        }, this.holdQuestPopups(!0), this.GA(wQ), this.onStarted(wQ)
       }
       finish() {
-        this.EC.shift(), this.playing = null, this.holdQuestPopups(!1), this.nO(null), this.onHeldCoinsChanged(), this.onFinished()
+        this.ym.shift(), this.playing = null, this.holdQuestPopups(!1), this.GA(null), this.onHeldCoinsChanged(), this.onFinished()
       }
-      releaseUnshown(dd) {
-        if (this.queue.length > 0 || 0 === this.EC.length) return;
-        const Jd = this.EC.length;
-        this.EC = this.EC.filter((Jd => dd - Jd.receivedAt < 6e4)), this.EC.length !== Jd && this.onHeldCoinsChanged()
+      releaseUnshown(QQ) {
+        if (this.queue.length > 0 || 0 === this.ym.length) return;
+        const FQ = this.ym.length;
+        this.ym = this.ym.filter((FQ => QQ - FQ.receivedAt < 6e4)), this.ym.length !== FQ && this.onHeldCoinsChanged()
       }
     }
 
-    function rk(dd, Jd) {
-      return 450 + 715 * dd / (Jd - 1)
+    function Jw(QQ, FQ) {
+      return 450 + 715 * QQ / (FQ - 1)
     }
 
-    function uk(dd, Jd) {
-      return rk(dd, Jd) + 650
+    function Ew(QQ, FQ) {
+      return Jw(QQ, FQ) + 650
     }
-    const tk = "skyblockMailboxView";
-    class Vk {
-      constructor(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
-        this.nO = dd, this.isBusy = Jd, this.onStarted = kd, this.now = pd, this.waiting = [], this.playing = null, this.token = 0, this.itemName = dd => dd
+    const nw = "skyblockMailboxView";
+    class gw {
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : performance.now.bind(performance);
+        this.GA = QQ, this.isBusy = FQ, this.onStarted = wQ, this.now = LQ, this.waiting = [], this.playing = null, this.token = 0, this.itemName = QQ => QQ
       }
       getSnapshot() {
-        var dd, Jd;
-        return null !== (dd = null === (Jd = this.playing) || void 0 === Jd ? void 0 : Jd.view) && void 0 !== dd ? dd : null
+        var QQ, FQ;
+        return null !== (QQ = null === (FQ = this.playing) || void 0 === FQ ? void 0 : FQ.view) && void 0 !== QQ ? QQ : null
       }
-      setItemName(dd) {
-        this.itemName = dd
+      setItemName(QQ) {
+        this.itemName = QQ
       }
-      ZL(dd) {
-        this.waiting.push(...dd.mailLetters), this.Do()
+      bx(QQ) {
+        this.waiting.push(...QQ.mailLetters), this.fH()
       }
-      Do() {
-        const dd = this.now();
-        null !== this.playing && dd - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.nO(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(dd)
+      fH() {
+        const QQ = this.now();
+        null !== this.playing && QQ - this.playing.startedAt >= this.playing.view.durationMs && (this.playing = null, this.GA(null)), null === this.playing && this.waiting.length > 0 && !this.isBusy() && this.start(QQ)
       }
       dispose() {
-        this.playing = null, this.waiting = [], this.nO(null)
+        this.playing = null, this.waiting = [], this.GA(null)
       }
-      start(dd) {
-        const Jd = this.waiting.slice(0, 3);
+      start(QQ) {
+        const FQ = this.waiting.slice(0, 3);
         this.token++;
-        const kd = {
+        const wQ = {
           token: this.token,
-          letters: Jd.map((dd => this.toView(dd))),
-          more: this.waiting.length - Jd.length,
-          durationMs: 4500 + 700 * Jd.length
+          letters: FQ.map((QQ => this.toView(QQ))),
+          more: this.waiting.length - FQ.length,
+          durationMs: 4500 + 700 * FQ.length
         };
         this.waiting = [], this.playing = {
-          view: kd,
-          startedAt: dd
-        }, this.nO(kd), this.onStarted(kd)
+          view: wQ,
+          startedAt: QQ
+        }, this.GA(wQ), this.onStarted(wQ)
       }
-      toView(dd) {
+      toView(QQ) {
         return {
-          coins: dd.mailCoins,
-          items: dd.mailItems.map((dd => {
-            var Jd;
+          coins: QQ.mailCoins,
+          items: QQ.mailItems.map((QQ => {
+            var FQ;
             return {
-              itemName: dd.mailItemName,
-              amount: dd.mailItemAmount,
-              label: null !== (Jd = dd.mailItemLabel) && void 0 !== Jd ? Jd : this.itemName(dd.mailItemName)
+              itemName: QQ.mailItemName,
+              amount: QQ.mailItemAmount,
+              label: null !== (FQ = QQ.mailItemLabel) && void 0 !== FQ ? FQ : this.itemName(QQ.mailItemName)
             }
           })),
-          reasonKey: dd.mailReasonKey,
-          reasonParams: dd.mailReasonParams
+          reasonKey: QQ.mailReasonKey,
+          reasonParams: QQ.mailReasonParams
         }
       }
     }
-    const zk = "skyblockQuestGraphView",
-      Hk = "skyblockDevQuestJump";
+    const Pw = "skyblockQuestGraphView",
+      Zw = "skyblockDevQuestJump";
 
-    function wk(dd) {
-      if (0 === dd.length) return "";
-      const Jd = [`M ${dd[0].x} ${dd[0].y}`];
-      for (let pd = 1; pd < dd.length - 1; pd++) {
-        const kd = dd[pd + 1];
-        Jd.push(`Q ${dd[pd].x} ${dd[pd].y} ${(dd[pd].x+kd.x)/2} ${(dd[pd].y+kd.y)/2}`)
+    function yw(QQ) {
+      if (0 === QQ.length) return "";
+      const FQ = [`M ${QQ[0].x} ${QQ[0].y}`];
+      for (let LQ = 1; LQ < QQ.length - 1; LQ++) {
+        const wQ = QQ[LQ + 1];
+        FQ.push(`Q ${QQ[LQ].x} ${QQ[LQ].y} ${(QQ[LQ].x+wQ.x)/2} ${(QQ[LQ].y+wQ.y)/2}`)
       }
-      const kd = dd[dd.length - 1];
-      return Jd.push(`L ${kd.x} ${kd.y}`), Jd.join(" ")
+      const wQ = QQ[QQ.length - 1];
+      return FQ.push(`L ${wQ.x} ${wQ.y}`), FQ.join(" ")
     }
 
-    function Ak(dd, Jd) {
-      return dd < Jd ? `${dd}|${Jd}` : `${Jd}|${dd}`
+    function Bw(QQ, FQ) {
+      return QQ < FQ ? `${QQ}|${FQ}` : `${FQ}|${QQ}`
     }
-    class dp extends od {
-      constructor(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
-          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
-          Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
-          Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
-          Pd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
+    class dw extends HQ {
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {},
+          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => {},
+          qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => {},
+          oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : () => {},
+          DQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : {
             getItem: () => null,
             setItem: () => {},
             removeItem: () => {}
           },
-          Zd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
-        super(dd, kd, pd), this.translate = Jd, this.requestJump = Nd, this.requestArrive = Wd, this.storage = Pd, this.now = Zd, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
+          kQ = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Date.now;
+        super(QQ, wQ, LQ), this.translate = FQ, this.requestJump = qQ, this.requestArrive = oQ, this.storage = DQ, this.now = kQ, this.layout = null, this.hoveredId = null, this.graphCount = 0, this.snapshot = {
           enabled: !1,
           open: !1,
           width: 0,
@@ -2858,89 +2858,89 @@ export const modules = {
           nodes: [],
           edges: [],
           planning: !1
-        }, this.hover = dd => {
-          dd !== this.hoveredId && (this.hoveredId = dd, this.emit())
-        }, this.jump = dd => {
-          this.close(), this.requestJump(dd)
+        }, this.hover = QQ => {
+          QQ !== this.hoveredId && (this.hoveredId = QQ, this.emit())
+        }, this.jump = QQ => {
+          this.close(), this.requestJump(QQ)
         }
       }
-      ZL(dd) {
-        if (!this.pL)
-          if ("graph" !== dd.kind) {
-            if ("jumping" === dd.kind) {
-              const Jd = {
-                questId: dd.graphQuestId,
-                variation: dd.graphVariation,
-                completes: dd.graphCompletesOnArrival,
+      bx(QQ) {
+        if (!this.kx)
+          if ("graph" !== QQ.kind) {
+            if ("jumping" === QQ.kind) {
+              const FQ = {
+                questId: QQ.graphQuestId,
+                variation: QQ.graphVariation,
+                completes: QQ.graphCompletesOnArrival,
                 departedAt: this.now()
               };
-              this.storage.setItem(Hk, Jd)
+              this.storage.setItem(Zw, FQ)
             }
           } else {
-            const Jd = ++this.graphCount;
-            kd.e(112).then((() => kd(6303))).then((kd => {
+            const FQ = ++this.graphCount;
+            wQ.e(112).then((() => wQ(6280))).then((wQ => {
               let {
-                default: pd
-              } = kd;
-              this.pL || Jd !== this.graphCount || (this.layout = function(dd, Jd, kd) {
-                var pd, Nd;
-                const Wd = new dd.graphlib.Graph;
-                Wd.setGraph({
+                default: LQ
+              } = wQ;
+              this.kx || FQ !== this.graphCount || (this.layout = function(QQ, FQ, wQ) {
+                var LQ, qQ;
+                const oQ = new QQ.graphlib.Graph;
+                oQ.setGraph({
                   rankdir: "LR",
                   ranksep: 70,
                   nodesep: 14,
                   marginx: 24,
                   marginy: 24
-                }), Wd.setDefaultEdgeLabel((() => ({})));
-                const Pd = new Set;
-                for (const Kd of Jd) Pd.add(Kd.graphQuestId), Wd.setNode(Kd.graphQuestId, {
+                }), oQ.setDefaultEdgeLabel((() => ({})));
+                const DQ = new Set;
+                for (const uQ of FQ) DQ.add(uQ.graphQuestId), oQ.setNode(uQ.graphQuestId, {
                   width: 190,
                   height: 52
                 });
-                const Zd = kd.filter((dd => Pd.has(dd.graphFromId) && Pd.has(dd.graphToId) && dd.graphFromId !== dd.graphToId)),
-                  gd = new Map;
-                for (const Kd of [...Zd].sort(((dd, Jd) => Number("awaits" === dd.graphEdgeKind) - Number("awaits" === Jd.graphEdgeKind)))) {
-                  const dd = Ak(Kd.graphFromId, Kd.graphToId);
-                  gd.has(dd) || (gd.set(dd, Kd), Wd.setEdge(Kd.graphFromId, Kd.graphToId))
+                const kQ = wQ.filter((QQ => DQ.has(QQ.graphFromId) && DQ.has(QQ.graphToId) && QQ.graphFromId !== QQ.graphToId)),
+                  vQ = new Map;
+                for (const uQ of [...kQ].sort(((QQ, FQ) => Number("awaits" === QQ.graphEdgeKind) - Number("awaits" === FQ.graphEdgeKind)))) {
+                  const QQ = Bw(uQ.graphFromId, uQ.graphToId);
+                  vQ.has(QQ) || (vQ.set(QQ, uQ), oQ.setEdge(uQ.graphFromId, uQ.graphToId))
                 }
-                dd.layout(Wd);
-                const Cd = Wd.graph();
+                QQ.layout(oQ);
+                const mQ = oQ.graph();
                 return {
-                  width: Math.ceil(null !== (pd = Cd.width) && void 0 !== pd ? pd : 0),
-                  height: Math.ceil(null !== (Nd = Cd.height) && void 0 !== Nd ? Nd : 0),
-                  nodes: Jd.map((dd => {
-                    var Jd, kd;
-                    const pd = Wd.node(dd.graphQuestId);
+                  width: Math.ceil(null !== (LQ = mQ.width) && void 0 !== LQ ? LQ : 0),
+                  height: Math.ceil(null !== (qQ = mQ.height) && void 0 !== qQ ? qQ : 0),
+                  nodes: FQ.map((QQ => {
+                    var FQ, wQ;
+                    const LQ = oQ.node(QQ.graphQuestId);
                     return {
-                      node: dd,
-                      left: (null !== (Jd = pd.x) && void 0 !== Jd ? Jd : 0) - 95,
-                      top: (null !== (kd = pd.y) && void 0 !== kd ? kd : 0) - 26
+                      node: QQ,
+                      left: (null !== (FQ = LQ.x) && void 0 !== FQ ? FQ : 0) - 95,
+                      top: (null !== (wQ = LQ.y) && void 0 !== wQ ? wQ : 0) - 26
                     }
                   })),
-                  edges: Zd.map((dd => {
-                    var Jd;
-                    const kd = gd.get(Ak(dd.graphFromId, dd.graphToId)),
-                      pd = null !== (Jd = Wd.edge(kd.graphFromId, kd.graphToId).points) && void 0 !== Jd ? Jd : [];
+                  edges: kQ.map((QQ => {
+                    var FQ;
+                    const wQ = vQ.get(Bw(QQ.graphFromId, QQ.graphToId)),
+                      LQ = null !== (FQ = oQ.edge(wQ.graphFromId, wQ.graphToId).points) && void 0 !== FQ ? FQ : [];
                     return {
-                      edge: dd,
-                      key: `${dd.graphFromId}|${dd.graphToId}|${dd.graphEdgeKind}`,
-                      path: wk(kd.graphFromId === dd.graphFromId ? pd : [...pd].reverse())
+                      edge: QQ,
+                      key: `${QQ.graphFromId}|${QQ.graphToId}|${QQ.graphEdgeKind}`,
+                      path: yw(wQ.graphFromId === QQ.graphFromId ? LQ : [...LQ].reverse())
                     }
                   })),
-                  plans: new Map(Jd.map((dd => [dd.graphQuestId, new Set([dd.graphQuestId, ...dd.graphPlanIds])])))
+                  plans: new Map(FQ.map((QQ => [QQ.graphQuestId, new Set([QQ.graphQuestId, ...QQ.graphPlanIds])])))
                 }
-              }(pd, dd.graphNodes, dd.graphEdges), this.show())
-            })).catch((dd => {
-              console.error("The quest graph could not be laid out", dd)
+              }(LQ, QQ.graphNodes, QQ.graphEdges), this.show())
+            })).catch((QQ => {
+              console.error("The quest graph could not be laid out", QQ)
             }))
           }
       }
-      resumeJump(dd) {
-        const Jd = this.storage.getItem(Hk);
-        this.storage.removeItem(Hk), null === Jd || Jd.variation !== dd || this.now() - Jd.departedAt > 6e4 || this.requestArrive(Jd.questId, Jd.completes)
+      resumeJump(QQ) {
+        const FQ = this.storage.getItem(Zw);
+        this.storage.removeItem(Zw), null === FQ || FQ.variation !== QQ || this.now() - FQ.departedAt > 6e4 || this.requestArrive(FQ.questId, FQ.completes)
       }
-      setTranslator(dd) {
-        this.translate = dd, this.emit()
+      setTranslator(QQ) {
+        this.translate = QQ, this.emit()
       }
       dispose() {
         this.layout = null, this.hoveredId = null, super.dispose()
@@ -2952,12 +2952,12 @@ export const modules = {
         return null !== this.layout
       }
       getPlan() {
-        var dd, Jd;
-        return null !== (dd = null === this.hoveredId || null === (Jd = this.layout) || void 0 === Jd ? void 0 : Jd.plans.get(this.hoveredId)) && void 0 !== dd ? dd : new Set
+        var QQ, FQ;
+        return null !== (QQ = null === this.hoveredId || null === (FQ = this.layout) || void 0 === FQ ? void 0 : FQ.plans.get(this.hoveredId)) && void 0 !== QQ ? QQ : new Set
       }
       buildSnapshot() {
-        const dd = this.layout;
-        if (null === dd) return {
+        const QQ = this.layout;
+        if (null === QQ) return {
           enabled: !1,
           open: this.open,
           width: 0,
@@ -2966,230 +2966,230 @@ export const modules = {
           edges: [],
           planning: !1
         };
-        const Jd = this.getPlan();
+        const FQ = this.getPlan();
         return {
           enabled: !0,
           open: this.open,
-          width: dd.width,
-          height: dd.height,
-          nodes: dd.nodes.map((dd => {
+          width: QQ.width,
+          height: QQ.height,
+          nodes: QQ.nodes.map((QQ => {
             let {
-              node: kd,
-              left: pd,
-              top: Nd
-            } = dd;
+              node: wQ,
+              left: LQ,
+              top: qQ
+            } = QQ;
             return {
-              id: kd.graphQuestId,
-              name: this.translate(kd.graphNameKey),
-              detail: null === kd.graphGiverName ? kd.graphZoneId : `${kd.graphGiverName} \xb7 ${kd.graphZoneId}`,
-              state: kd.graphState,
-              left: pd,
-              top: Nd,
-              inPlan: Jd.has(kd.graphQuestId),
-              hovered: kd.graphQuestId === this.hoveredId
+              id: wQ.graphQuestId,
+              name: this.translate(wQ.graphNameKey),
+              detail: null === wQ.graphGiverName ? wQ.graphZoneId : `${wQ.graphGiverName} \xb7 ${wQ.graphZoneId}`,
+              state: wQ.graphState,
+              left: LQ,
+              top: qQ,
+              inPlan: FQ.has(wQ.graphQuestId),
+              hovered: wQ.graphQuestId === this.hoveredId
             }
           })),
-          edges: dd.edges.map((dd => {
+          edges: QQ.edges.map((QQ => {
             let {
-              edge: kd,
-              key: pd,
-              path: Nd
-            } = dd;
+              edge: wQ,
+              key: LQ,
+              path: qQ
+            } = QQ;
             return {
-              key: pd,
-              kind: kd.graphEdgeKind,
-              path: Nd,
-              inPlan: Jd.has(kd.graphFromId) && Jd.has(kd.graphToId)
+              key: LQ,
+              kind: wQ.graphEdgeKind,
+              path: qQ,
+              inPlan: FQ.has(wQ.graphFromId) && FQ.has(wQ.graphToId)
             }
           })),
-          planning: Jd.size > 0
+          planning: FQ.size > 0
         }
       }
     }
-    var Jp = kd(37210);
-    const kp = 250,
-      pp = 2150,
-      Np = -2.8,
-      Wp = 2.2,
-      Pp = -27,
-      Zp = {
+    var QL = wQ(36665);
+    const FL = 250,
+      wL = 2150,
+      LL = -2.8,
+      qL = 2.2,
+      oL = -27,
+      DL = {
         zeta: .34,
         period: .7,
         lead: .1,
         rush: .04
       },
-      gp = {
+      kL = {
         zeta: .45,
         period: .55,
         delay: .12,
         to: 1.25
       },
-      Cp = Math.round(50 + 1e3 * (gp.delay + gp.period / 2)),
-      Kp = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
-      op = Array.from({
+      vL = Math.round(50 + 1e3 * (kL.delay + kL.period / 2)),
+      mL = "\u16a0\u16a2\u16a6\u16a8\u16b1\u16b2\u16b7\u16b9\u16ba\u16be\u16c1\u16c3\u16c7\u16c8\u16c9\u16ca\u16cf\u16d2\u16d6\u16d7\u16da\u16dc\u16de\u16df",
+      uL = Array.from({
         length: 26
-      }, ((dd, Jd) => {
-        const kd = 2.39996 * Jd,
-          pd = .5 + .618034 * Jd % 1 * .23,
-          Nd = Jd % 3 !== 2;
+      }, ((QQ, FQ) => {
+        const wQ = 2.39996 * FQ,
+          LQ = .5 + .618034 * FQ % 1 * .23,
+          qQ = FQ % 3 !== 2;
         return {
-          rune: Nd ? Kp[7 * Jd % 24] : "",
+          rune: qQ ? mL[7 * FQ % 24] : "",
           style: {
-            "--from-x": `calc(var(--sword-size) * ${(Math.cos(kd)*pd).toFixed(3)})`,
-            "--from-y": `calc(var(--sword-size) * ${(Math.sin(kd)*pd).toFixed(3)})`,
-            "--spin": 40 * (Jd % 5 - 2) + "deg",
-            "--size": (Nd ? 1 + Jd % 4 * .2 : .3 + Jd % 2 * .15) + "rem",
-            "--duration": `${(1.8+7*Jd%5*.35).toFixed(2)}s`,
-            "--delay": `${(-.83*Jd%3).toFixed(2)}s`
+            "--from-x": `calc(var(--sword-size) * ${(Math.cos(wQ)*LQ).toFixed(3)})`,
+            "--from-y": `calc(var(--sword-size) * ${(Math.sin(wQ)*LQ).toFixed(3)})`,
+            "--spin": 40 * (FQ % 5 - 2) + "deg",
+            "--size": (qQ ? 1 + FQ % 4 * .2 : .3 + FQ % 2 * .15) + "rem",
+            "--duration": `${(1.8+7*FQ%5*.35).toFixed(2)}s`,
+            "--delay": `${(-.83*FQ%3).toFixed(2)}s`
           }
         }
       }));
 
-    function lp(dd, Jd) {
+    function HL(QQ, FQ) {
       return Array.from({
-        length: 30 + 3 * dd + (Jd ? 10 : 0)
-      }, ((dd, Jd) => {
-        const kd = Jd < 4,
-          pd = kd ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
-          Nd = kd ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
-          Wd = kd ? 2.2 : .6 + Math.random(),
-          Pd = kd ? .3 : Math.random() < .5 ? .16 : .24,
-          Zd = kd ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
+        length: 30 + 3 * QQ + (FQ ? 10 : 0)
+      }, ((QQ, FQ) => {
+        const wQ = FQ < 4,
+          LQ = wQ ? "#fff" : Math.random() < .25 ? "#ff922b" : "#ffe08a",
+          qQ = wQ ? 7 + 3 * Math.random() : 3.5 + 5 * Math.random(),
+          oQ = wQ ? 2.2 : .6 + Math.random(),
+          DQ = wQ ? .3 : Math.random() < .5 ? .16 : .24,
+          kQ = wQ ? 600 + 100 * Math.random() : 280 + 280 * Math.random();
         return {
-          "--c": pd,
+          "--c": LQ,
           "--angle": `${Math.round(220*(Math.random()-.5)+15)}deg`,
-          "--distance": `${Nd.toFixed(2)}rem`,
-          "--length": `${Wd.toFixed(2)}rem`,
-          "--width": `${Pd}rem`,
-          "--duration": `${Math.round(Zd)}ms`,
+          "--distance": `${qQ.toFixed(2)}rem`,
+          "--length": `${oQ.toFixed(2)}rem`,
+          "--width": `${DQ}rem`,
+          "--duration": `${Math.round(kQ)}ms`,
           "--delay": `${Math.round(40*Math.random())}ms`,
           "--fall": `${(1+Math.random()).toFixed(2)}rem`
         }
       }))
     }
 
-    function Qp(dd) {
+    function bL(QQ) {
       let {
-        zeta: Jd,
-        period: kd
-      } = dd;
-      const pd = 2 * Math.PI / kd;
+        zeta: FQ,
+        period: wQ
+      } = QQ;
+      const LQ = 2 * Math.PI / wQ;
       return {
-        w: pd,
-        decay: Jd * pd / Math.sqrt(1 - Jd * Jd)
+        w: LQ,
+        decay: FQ * LQ / Math.sqrt(1 - FQ * FQ)
       }
     }
-    let Lp = !1;
+    let YL = !1;
 
-    function Op() {
-      if (Lp) return;
-      Lp = !0;
-      const dd = document.createElement("style");
-      dd.textContent = function() {
-        const dd = Qp(Zp),
-          Jd = Qp(gp),
-          kd = Jd => Math.exp(-dd.decay * Jd) * Math.sin(dd.w * Jd),
-          pd = kd(Math.atan(dd.w / dd.decay) / dd.w),
-          Nd = .25,
-          Wd = 2.15,
-          Pd = Math.round(215),
-          Zd = [];
-        for (let gd = 0; gd <= Pd; gd++) {
-          const dd = gd / Pd * Wd;
-          let Cd = Math.sin(Math.min(dd, Nd) / Nd * Math.PI / 2) ** 2,
-            Kd = 0,
-            od = 1,
-            ld = 1 - .2 * Cd,
-            Qd = 1;
-          if (dd >= Nd) {
-            const Pd = dd - Nd,
-              Zd = Math.max(0, Pd - .05);
-            Cd = Math.exp(-Zd / .05), Kd = kd(Zd + Zp.lead * (1 - Math.exp(-Zd / Zp.rush))) / pd;
-            const gd = Zd - gp.delay,
-              Ld = gd <= 0 ? 0 : 1 - Math.exp(-Jd.decay * gd) * (Math.cos(Jd.w * gd) + Jd.decay / Jd.w * Math.sin(Jd.w * gd)),
-              Od = Math.max(0, (dd - 1.77) / (Wd - 1.77));
-            od = (1 + (gp.to - 1) * Ld) * (1 + .08 * Od), ld = 1.1 + 1.5 * Math.exp(-Pd / .07) + .3 * Math.exp(-(((1e3 * Pd - Cp) / 100) ** 2)) + .8 * Od, Qd = 1 - Od ** 1.5
+    function xL() {
+      if (YL) return;
+      YL = !0;
+      const QQ = document.createElement("style");
+      QQ.textContent = function() {
+        const QQ = bL(DL),
+          FQ = bL(kL),
+          wQ = FQ => Math.exp(-QQ.decay * FQ) * Math.sin(QQ.w * FQ),
+          LQ = wQ(Math.atan(QQ.w / QQ.decay) / QQ.w),
+          qQ = .25,
+          oQ = 2.15,
+          DQ = Math.round(215),
+          kQ = [];
+        for (let vQ = 0; vQ <= DQ; vQ++) {
+          const QQ = vQ / DQ * oQ;
+          let mQ = Math.sin(Math.min(QQ, qQ) / qQ * Math.PI / 2) ** 2,
+            uQ = 0,
+            HQ = 1,
+            bQ = 1 - .2 * mQ,
+            YQ = 1;
+          if (QQ >= qQ) {
+            const DQ = QQ - qQ,
+              kQ = Math.max(0, DQ - .05);
+            mQ = Math.exp(-kQ / .05), uQ = wQ(kQ + DL.lead * (1 - Math.exp(-kQ / DL.rush))) / LQ;
+            const vQ = kQ - kL.delay,
+              xQ = vQ <= 0 ? 0 : 1 - Math.exp(-FQ.decay * vQ) * (Math.cos(FQ.w * vQ) + FQ.decay / FQ.w * Math.sin(FQ.w * vQ)),
+              AQ = Math.max(0, (QQ - 1.77) / (oQ - 1.77));
+            HQ = (1 + (kL.to - 1) * xQ) * (1 + .08 * AQ), bQ = 1.1 + 1.5 * Math.exp(-DQ / .07) + .3 * Math.exp(-(((1e3 * DQ - vL) / 100) ** 2)) + .8 * AQ, YQ = 1 - AQ ** 1.5
           }
-          const Ld = .15 * Cd + Np * Kd,
-            Od = -.1 * Cd + Wp * Kd,
-            ed = 3 * Cd + Pp * Kd;
-          Zd.push(`${(gd/Pd*100).toFixed(3)}% { opacity: ${Qd.toFixed(3)}; transform: translate(${Ld.toFixed(3)}rem, ${Od.toFixed(3)}rem) rotate(${ed.toFixed(2)}deg) scale(${od.toFixed(3)}); filter: brightness(${ld.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
+          const xQ = .15 * mQ + LL * uQ,
+            AQ = -.1 * mQ + qL * uQ,
+            tQ = 3 * mQ + oL * uQ;
+          kQ.push(`${(vQ/DQ*100).toFixed(3)}% { opacity: ${YQ.toFixed(3)}; transform: translate(${xQ.toFixed(3)}rem, ${AQ.toFixed(3)}rem) rotate(${tQ.toFixed(2)}deg) scale(${HQ.toFixed(3)}); filter: brightness(${bQ.toFixed(2)}) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--tier) 55%, transparent)); }`)
         }
-        return `@keyframes SkyblockForgeSwordBurst { ${Zd.join(" ")} }`
-      }(), document.head.append(dd)
+        return `@keyframes SkyblockForgeSwordBurst { ${kQ.join(" ")} }`
+      }(), document.head.append(QQ)
     }
-    const ep = "skyblockForgeView",
-      Rp = {
+    const AL = "skyblockForgeView",
+      tL = {
         Blade: "skyblockGame:forgeSlotBlade",
         Guard: "skyblockGame:forgeSlotGuard",
         Handle: "skyblockGame:forgeSlotHandle"
       };
-    class Ip extends od {
-      constructor(dd, Jd, kd, pd, Nd) {
-        super(dd, kd, pd), this.translate = Jd, this.requestForge = Nd, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
+    class eL extends HQ {
+      constructor(QQ, FQ, wQ, LQ, qQ) {
+        super(QQ, wQ, LQ), this.translate = FQ, this.requestForge = qQ, this.snapshot = void 0, this.owned = {}, this.coal = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.status = null, this.forging = null, this.forgeId = 0, this.arriving = null, this.selected = {
           Blade: null,
           Guard: null,
           Handle: null
-        }, this.onForgeStarted = null, this.onPartSelected = null, this.onOpened = null, this.select = (dd, Jd) => {
-          var kd, pd;
-          null !== this.forging || (null !== (kd = this.owned[(0, Jp.p)(Jd, dd)]) && void 0 !== kd ? kd : 0) <= 0 || (this.selected[dd] = this.selected[dd] === Jd ? null : Jd, this.status = null, null === (pd = this.onPartSelected) || void 0 === pd || pd.call(this), this.emit())
-        }, this.forge = dd => {
-          var Jd, kd;
-          const pd = this.selectedParts();
-          if (null === pd || this.isPending() || !this.open) return;
-          const Nd = (0, Jp.n)(pd);
-          if (null === Nd || Nd.coalCost > this.coal) return;
-          const Wd = this.preview(Nd),
-            Pd = null !== (Jd = null === (kd = this.onForgeStarted) || void 0 === kd ? void 0 : kd.call(this, Wd.tier, Wd.named, dd)) && void 0 !== Jd ? Jd : () => {};
-          if (this.dropArrival(), dd) {
-            const dd = {
+        }, this.onForgeStarted = null, this.onPartSelected = null, this.onOpened = null, this.select = (QQ, FQ) => {
+          var wQ, LQ;
+          null !== this.forging || (null !== (wQ = this.owned[(0, QL.t)(FQ, QQ)]) && void 0 !== wQ ? wQ : 0) <= 0 || (this.selected[QQ] = this.selected[QQ] === FQ ? null : FQ, this.status = null, null === (LQ = this.onPartSelected) || void 0 === LQ || LQ.call(this), this.emit())
+        }, this.forge = QQ => {
+          var FQ, wQ;
+          const LQ = this.selectedParts();
+          if (null === LQ || this.isPending() || !this.open) return;
+          const qQ = (0, QL.q)(LQ);
+          if (null === qQ || qQ.coalCost > this.coal) return;
+          const oQ = this.preview(qQ),
+            DQ = null !== (FQ = null === (wQ = this.onForgeStarted) || void 0 === wQ ? void 0 : wQ.call(this, oQ.tier, oQ.named, QQ)) && void 0 !== FQ ? FQ : () => {};
+          if (this.dropArrival(), QQ) {
+            const QQ = {
               id: ++this.forgeId,
-              preview: Wd,
+              preview: oQ,
               timers: [],
-              stopSounds: Pd,
+              stopSounds: DQ,
               landed: !1,
               reply: null
             };
-            dd.timers.push(setTimeout((() => {
-              dd.landed = !0, null !== dd.reply && (this.apply(dd.reply), dd.reply = null, this.emit())
-            }), kp), setTimeout((() => {
-              this.finishForge(dd)
-            }), pp)), this.forging = dd
+            QQ.timers.push(setTimeout((() => {
+              QQ.landed = !0, null !== QQ.reply && (this.apply(QQ.reply), QQ.reply = null, this.emit())
+            }), FL), setTimeout((() => {
+              this.finishForge(QQ)
+            }), wL)), this.forging = QQ
           }
           this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestForge(pd)
+          }), 8e3), this.emit(), this.requestForge(LQ)
         }, this.snapshot = this.buildSnapshot()
       }
-      ZL(dd) {
-        var Jd;
-        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === dd.forgeMessageKind) return this.dropForge(), this.apply(dd), this.status = null, this.show(), void(null === (Jd = this.onOpened) || void 0 === Jd || Jd.call(this));
-        const kd = this.forging;
-        if (null !== kd && null !== dd.forgeRefusalKey) this.dropForge();
-        else if (null !== kd && !kd.landed) return void(kd.reply = dd);
-        this.apply(dd), this.emit()
+      bx(QQ) {
+        var FQ;
+        if (this.received = !0, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === QQ.forgeMessageKind) return this.dropForge(), this.apply(QQ), this.status = null, this.show(), void(null === (FQ = this.onOpened) || void 0 === FQ || FQ.call(this));
+        const wQ = this.forging;
+        if (null !== wQ && null !== QQ.forgeRefusalKey) this.dropForge();
+        else if (null !== wQ && !wQ.landed) return void(wQ.reply = QQ);
+        this.apply(QQ), this.emit()
       }
-      apply(dd) {
-        if (this.owned = dd.forgeOwnedParts, this.coal = dd.forgeCoalOwned, this.keepSelectionOwned("open" === dd.forgeMessageKind), null !== dd.forgeForgedSwordId) {
-          var Jd;
-          const kd = (0, Jp.n)(dd.forgeForgedSwordId);
+      apply(QQ) {
+        if (this.owned = QQ.forgeOwnedParts, this.coal = QQ.forgeCoalOwned, this.keepSelectionOwned("open" === QQ.forgeMessageKind), null !== QQ.forgeForgedSwordId) {
+          var FQ;
+          const wQ = (0, QL.q)(QQ.forgeForgedSwordId);
           this.status = {
             tone: "forged",
             key: "skyblockGame:forgeForged",
             params: {
-              sword: null !== (Jd = null === kd || void 0 === kd ? void 0 : kd.displayName) && void 0 !== Jd ? Jd : ""
+              sword: null !== (FQ = null === wQ || void 0 === wQ ? void 0 : wQ.displayName) && void 0 !== FQ ? FQ : ""
             }
           }
-        } else null !== dd.forgeRefusalKey && (this.status = {
+        } else null !== QQ.forgeRefusalKey && (this.status = {
           tone: "refused",
-          key: dd.forgeRefusalKey,
+          key: QQ.forgeRefusalKey,
           params: {}
         })
       }
-      setTranslator(dd) {
-        this.translate = dd, this.emit()
+      setTranslator(QQ) {
+        this.translate = QQ, this.emit()
       }
       isEnabled() {
         return this.received
@@ -3197,25 +3197,25 @@ export const modules = {
       onClosed() {
         this.dropForge(), this.dropArrival(), this.status = null, this.awaitingReply = !1, this.clearReplyTimeout()
       }
-      finishForge(dd) {
-        var Jd;
+      finishForge(QQ) {
+        var FQ;
         this.forging = null;
-        const kd = this.selectedParts(),
-          pd = setTimeout((() => {
+        const wQ = this.selectedParts(),
+          LQ = setTimeout((() => {
             this.arriving = null, this.emit()
           }), 400);
         this.arriving = {
-          id: dd.id,
-          sameSword: null !== kd && (null === (Jd = (0, Jp.n)(kd)) || void 0 === Jd ? void 0 : Jd.displayName) === dd.preview.name,
-          timer: pd
+          id: QQ.id,
+          sameSword: null !== wQ && (null === (FQ = (0, QL.q)(wQ)) || void 0 === FQ ? void 0 : FQ.displayName) === QQ.preview.name,
+          timer: LQ
         }, this.emit()
       }
       dropForge() {
-        const dd = this.forging;
-        if (null !== dd) {
+        const QQ = this.forging;
+        if (null !== QQ) {
           this.forging = null;
-          for (const Jd of dd.timers) clearTimeout(Jd);
-          dd.stopSounds(), null !== dd.reply && this.apply(dd.reply)
+          for (const FQ of QQ.timers) clearTimeout(FQ);
+          QQ.stopSounds(), null !== QQ.reply && this.apply(QQ.reply)
         }
       }
       dropArrival() {
@@ -3228,23 +3228,23 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       buildSnapshot() {
-        var dd, Jd, kd;
-        const pd = this.selectedParts(),
-          Nd = null === pd ? null : (0, Jp.n)(pd),
-          Wd = null !== (dd = null === (Jd = this.forging) || void 0 === Jd ? void 0 : Jd.preview) && void 0 !== dd ? dd : null === Nd ? null : this.preview(Nd);
+        var QQ, FQ, wQ;
+        const LQ = this.selectedParts(),
+          qQ = null === LQ ? null : (0, QL.q)(LQ),
+          oQ = null !== (QQ = null === (FQ = this.forging) || void 0 === FQ ? void 0 : FQ.preview) && void 0 !== QQ ? QQ : null === qQ ? null : this.preview(qQ);
         return {
           enabled: this.received,
           open: this.open,
-          slots: Jp.j.map((dd => ({
-            kind: dd,
-            label: this.translate(Rp[dd]),
-            parts: this.partsFor(dd)
+          slots: QL.n.map((QQ => ({
+            kind: QQ,
+            label: this.translate(tL[QQ]),
+            parts: this.partsFor(QQ)
           }))),
           coalOwned: this.coal,
-          preview: Wd,
-          unformedSword: Jp.g[null !== (kd = this.selected.Blade) && void 0 !== kd ? kd : "Iron"].baseSword,
-          anyParts: Object.values(this.owned).some((dd => dd > 0)),
-          canForge: null !== Wd && !Wd.coalShort && !this.isPending(),
+          preview: oQ,
+          unformedSword: QL.l[null !== (wQ = this.selected.Blade) && void 0 !== wQ ? wQ : "Iron"].baseSword,
+          anyParts: Object.values(this.owned).some((QQ => QQ > 0)),
+          canForge: null !== oQ && !oQ.coalShort && !this.isPending(),
           status: null === this.status ? null : {
             tone: this.status.tone,
             text: this.translate(this.status.key, this.status.params)
@@ -3259,145 +3259,145 @@ export const modules = {
           }
         }
       }
-      preview(dd) {
+      preview(QQ) {
         return {
-          name: dd.displayName,
-          lore: dd.lore,
-          baseSword: dd.baseSword,
-          enchantmentTier: dd.enchantmentTier,
-          tier: Number(dd.enchantmentTier.slice(-1)),
-          named: dd.named,
-          stats: this.stats(dd),
-          effects: dd.effects,
-          coalCost: dd.coalCost,
-          coalShort: null === this.forging && dd.coalCost > this.coal
+          name: QQ.displayName,
+          lore: QQ.lore,
+          baseSword: QQ.baseSword,
+          enchantmentTier: QQ.enchantmentTier,
+          tier: Number(QQ.enchantmentTier.slice(-1)),
+          named: QQ.named,
+          stats: this.stats(QQ),
+          effects: QQ.effects,
+          coalCost: QQ.coalCost,
+          coalShort: null === this.forging && QQ.coalCost > this.coal
         }
       }
-      partsFor(dd) {
-        const Jd = [];
-        for (const pd of Jp.c) {
-          var kd;
-          const Nd = (0, Jp.p)(pd, dd),
-            Wd = null !== (kd = this.owned[Nd]) && void 0 !== kd ? kd : 0;
-          Wd > 0 && Jd.push({
-            material: pd,
-            itemName: Nd,
-            owned: Wd,
-            selected: this.selected[dd] === pd,
+      partsFor(QQ) {
+        const FQ = [];
+        for (const LQ of QL.i) {
+          var wQ;
+          const qQ = (0, QL.t)(LQ, QQ),
+            oQ = null !== (wQ = this.owned[qQ]) && void 0 !== wQ ? wQ : 0;
+          oQ > 0 && FQ.push({
+            material: LQ,
+            itemName: qQ,
+            owned: oQ,
+            selected: this.selected[QQ] === LQ,
             placeholder: !1
           })
         }
-        if (0 === Jd.length) {
-          const kd = Jp.c[0];
-          Jd.push({
-            material: kd,
-            itemName: (0, Jp.p)(kd, dd),
+        if (0 === FQ.length) {
+          const wQ = QL.i[0];
+          FQ.push({
+            material: wQ,
+            itemName: (0, QL.t)(wQ, QQ),
             owned: 0,
             selected: !1,
             placeholder: !0
           })
         }
-        return Jd
+        return FQ
       }
-      stats(dd) {
-        const Jd = [{
+      stats(QQ) {
+        const FQ = [{
           label: this.translate("skyblockGame:forgeStatPower"),
-          value: `\xd7${dd.powerMultiplier.toFixed(2)}`,
-          better: dd.powerMultiplier > 1
+          value: `\xd7${QQ.powerMultiplier.toFixed(2)}`,
+          better: QQ.powerMultiplier > 1
         }, {
           label: this.translate("skyblockGame:forgeStatDamage"),
-          value: `\xd7${dd.damageMultiplier.toFixed(2)}`,
-          better: dd.damageMultiplier > 1
+          value: `\xd7${QQ.damageMultiplier.toFixed(2)}`,
+          better: QQ.damageMultiplier > 1
         }, {
           label: this.translate("skyblockGame:forgeStatSpeed"),
-          value: `\xd7${(1/dd.cooldownMultiplier).toFixed(2)}`,
-          better: dd.cooldownMultiplier < 1
+          value: `\xd7${(1/QQ.cooldownMultiplier).toFixed(2)}`,
+          better: QQ.cooldownMultiplier < 1
         }, {
           label: this.translate("skyblockGame:forgeStatKnockback"),
-          value: `\xd7${dd.knockbackMultiplier.toFixed(2)}`,
-          better: dd.knockbackMultiplier > 1
+          value: `\xd7${QQ.knockbackMultiplier.toFixed(2)}`,
+          better: QQ.knockbackMultiplier > 1
         }];
-        return dd.reachBonus > 0 && Jd.push({
+        return QQ.reachBonus > 0 && FQ.push({
           label: this.translate("skyblockGame:forgeStatReach"),
-          value: `+${dd.reachBonus.toFixed(1)}`,
+          value: `+${QQ.reachBonus.toFixed(1)}`,
           better: !0
-        }), dd.damageReduction > 0 && Jd.push({
+        }), QQ.damageReduction > 0 && FQ.push({
           label: this.translate("skyblockGame:forgeStatDefence"),
-          value: `${Math.round(100*dd.damageReduction)}%`,
+          value: `${Math.round(100*QQ.damageReduction)}%`,
           better: !0
-        }), Jd
+        }), FQ
       }
       selectedParts() {
         const {
-          Blade: dd,
-          Guard: Jd,
-          Handle: kd
+          Blade: QQ,
+          Guard: FQ,
+          Handle: wQ
         } = this.selected;
-        return null === dd || null === Jd || null === kd ? null : {
-          blade: dd,
-          guard: Jd,
-          handle: kd
+        return null === QQ || null === FQ || null === wQ ? null : {
+          blade: QQ,
+          guard: FQ,
+          handle: wQ
         }
       }
-      keepSelectionOwned(dd) {
-        for (const kd of Jp.j) {
-          var Jd;
-          const pd = this.selected[kd];
-          if (null !== pd && (null !== (Jd = this.owned[(0, Jp.p)(pd, kd)]) && void 0 !== Jd ? Jd : 0) > 0) continue;
-          if (!dd) {
-            this.selected[kd] = null;
+      keepSelectionOwned(QQ) {
+        for (const wQ of QL.n) {
+          var FQ;
+          const LQ = this.selected[wQ];
+          if (null !== LQ && (null !== (FQ = this.owned[(0, QL.t)(LQ, wQ)]) && void 0 !== FQ ? FQ : 0) > 0) continue;
+          if (!QQ) {
+            this.selected[wQ] = null;
             continue
           }
-          const Nd = [...Jp.c].reverse().find((dd => {
-            var Jd;
-            return (null !== (Jd = this.owned[(0, Jp.p)(dd, kd)]) && void 0 !== Jd ? Jd : 0) > 0
+          const qQ = [...QL.i].reverse().find((QQ => {
+            var FQ;
+            return (null !== (FQ = this.owned[(0, QL.t)(QQ, wQ)]) && void 0 !== FQ ? FQ : 0) > 0
           }));
-          this.selected[kd] = null !== Nd && void 0 !== Nd ? Nd : null
+          this.selected[wQ] = null !== qQ && void 0 !== qQ ? qQ : null
         }
       }
       dispose() {
         this.received = !1, this.dropForge(), this.dropArrival(), this.clearReplyTimeout(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const Gp = "skyblockSmugglerView",
-      vp = {
+    const ML = "skyblockSmugglerView",
+      GL = {
         "Red Firecracker Pebble": "skyblockGame:mortarStrike",
         "Purple Firecracker Pebble": "skyblockGame:interdimensionalStrike"
       };
-    class xp extends od {
-      constructor(dd, Jd, kd, pd, Nd) {
-        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(dd, kd, pd), this.translate = Jd, this.requestBuy = Nd, this.now = Wd, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = dd => dd, this.onBought = null, this.buy = dd => {
-          const Jd = this.deals[dd];
-          void 0 !== Jd && !this.isPending() && this.open && !this.soldOut.has(dd) && this.canAfford(Jd) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
+    class pL extends HQ {
+      constructor(QQ, FQ, wQ, LQ, qQ) {
+        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(QQ, wQ, LQ), this.translate = FQ, this.requestBuy = qQ, this.now = oQ, this.snapshot = void 0, this.day = 0, this.deals = [], this.rivets = 0, this.crests = 0, this.soldOut = new Set, this.rotatesAtMs = 0, this.received = !1, this.awaitingReply = !1, this.pacing = null, this.replyTimeout = null, this.countdown = null, this.status = null, this.boughtSlot = null, this.boughtCount = 0, this.itemName = QQ => QQ, this.onBought = null, this.buy = QQ => {
+          const FQ = this.deals[QQ];
+          void 0 !== FQ && !this.isPending() && this.open && !this.soldOut.has(QQ) && this.canAfford(FQ) && (this.awaitingReply = !0, this.pacing = setTimeout((() => {
             this.pacing = null, this.emit()
           }), 2500), this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestBuy(this.day, dd))
+          }), 8e3), this.emit(), this.requestBuy(this.day, QQ))
         }, this.snapshot = this.buildSnapshot()
       }
-      ZL(dd) {
-        if (this.received = !0, this.day = dd.smugglerDay, this.deals = dd.smugglerDeals, this.rivets = dd.smugglerRivetsOwned, this.crests = dd.smugglerCrestsOwned, this.soldOut = new Set(dd.smugglerSoldOutSlots), this.rotatesAtMs = this.now() + dd.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === dd.smugglerMessageKind) return this.status = null, this.boughtSlot = null, this.show(), void this.startCountdown();
-        if (this.boughtSlot = dd.smugglerBoughtSlot, null !== dd.smugglerBoughtSlot) {
-          var Jd, kd;
-          const pd = this.deals[dd.smugglerBoughtSlot];
+      bx(QQ) {
+        if (this.received = !0, this.day = QQ.smugglerDay, this.deals = QQ.smugglerDeals, this.rivets = QQ.smugglerRivetsOwned, this.crests = QQ.smugglerCrestsOwned, this.soldOut = new Set(QQ.smugglerSoldOutSlots), this.rotatesAtMs = this.now() + QQ.smugglerRotatesInMs, this.awaitingReply = !1, this.clearReplyTimeout(), "open" === QQ.smugglerMessageKind) return this.status = null, this.boughtSlot = null, this.show(), void this.startCountdown();
+        if (this.boughtSlot = QQ.smugglerBoughtSlot, null !== QQ.smugglerBoughtSlot) {
+          var FQ, wQ;
+          const LQ = this.deals[QQ.smugglerBoughtSlot];
           this.status = {
             tone: "bought",
             key: "skyblockGame:smugglerBought",
             params: {
-              item: void 0 === pd ? "" : this.dealName(pd),
-              amount: String(null !== (Jd = null === pd || void 0 === pd ? void 0 : pd.smugglerDealAmount) && void 0 !== Jd ? Jd : 0)
+              item: void 0 === LQ ? "" : this.dealName(LQ),
+              amount: String(null !== (FQ = null === LQ || void 0 === LQ ? void 0 : LQ.smugglerDealAmount) && void 0 !== FQ ? FQ : 0)
             }
-          }, this.boughtCount++, null === (kd = this.onBought) || void 0 === kd || kd.call(this)
-        } else null !== dd.smugglerRefusalKey && (this.status = {
+          }, this.boughtCount++, null === (wQ = this.onBought) || void 0 === wQ || wQ.call(this)
+        } else null !== QQ.smugglerRefusalKey && (this.status = {
           tone: "refused",
-          key: dd.smugglerRefusalKey,
+          key: QQ.smugglerRefusalKey,
           params: {}
         });
         this.emit()
       }
-      setTranslator(dd, Jd, kd) {
-        this.translate = dd, void 0 !== kd && (this.itemName = kd), this.emit()
+      setTranslator(QQ, FQ, wQ) {
+        this.translate = QQ, void 0 !== wQ && (this.itemName = wQ), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3405,13 +3405,13 @@ export const modules = {
       onClosed() {
         this.status = null, this.boughtSlot = null, this.awaitingReply = !1, this.clearReplyTimeout(), this.stopCountdown(), this.boughtCount = 0
       }
-      dealName(dd) {
-        if (null !== dd.smugglerDealUniqueName) return dd.smugglerDealUniqueName;
-        const Jd = vp[dd.smugglerDealItem];
-        return void 0 === Jd ? this.itemName(dd.smugglerDealItem) : this.translate(Jd)
+      dealName(QQ) {
+        if (null !== QQ.smugglerDealUniqueName) return QQ.smugglerDealUniqueName;
+        const FQ = GL[QQ.smugglerDealItem];
+        return void 0 === FQ ? this.itemName(QQ.smugglerDealItem) : this.translate(FQ)
       }
-      canAfford(dd) {
-        return dd.smugglerDealRivets <= this.rivets && dd.smugglerDealCrests <= this.crests
+      canAfford(QQ) {
+        return QQ.smugglerDealRivets <= this.rivets && QQ.smugglerDealCrests <= this.crests
       }
       isPending() {
         return this.awaitingReply || null !== this.pacing
@@ -3428,29 +3428,29 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       rotatesText() {
-        const dd = Math.ceil((this.rotatesAtMs - this.now()) / 6e4);
-        return dd <= 0 ? this.translate("skyblockGame:smugglerRotatesSoon") : dd < 60 ? this.translate("skyblockGame:smugglerRotatesMinutes", {
-          minutes: String(dd)
+        const QQ = Math.ceil((this.rotatesAtMs - this.now()) / 6e4);
+        return QQ <= 0 ? this.translate("skyblockGame:smugglerRotatesSoon") : QQ < 60 ? this.translate("skyblockGame:smugglerRotatesMinutes", {
+          minutes: String(QQ)
         }) : this.translate("skyblockGame:smugglerRotatesHours", {
-          hours: String(Math.floor(dd / 60)),
-          minutes: String(dd % 60)
+          hours: String(Math.floor(QQ / 60)),
+          minutes: String(QQ % 60)
         })
       }
       buildSnapshot() {
         return {
           enabled: this.received,
           open: this.open,
-          deals: this.deals.map(((dd, Jd) => ({
-            slot: Jd,
-            itemName: dd.smugglerDealItem,
-            displayName: this.dealName(dd),
-            enchantmentTier: dd.smugglerDealEnchantmentTier,
-            amount: dd.smugglerDealAmount,
-            rivets: dd.smugglerDealRivets,
-            crests: dd.smugglerDealCrests,
-            affordable: this.canAfford(dd),
-            soldOut: this.soldOut.has(Jd),
-            justBought: this.boughtSlot === Jd
+          deals: this.deals.map(((QQ, FQ) => ({
+            slot: FQ,
+            itemName: QQ.smugglerDealItem,
+            displayName: this.dealName(QQ),
+            enchantmentTier: QQ.smugglerDealEnchantmentTier,
+            amount: QQ.smugglerDealAmount,
+            rivets: QQ.smugglerDealRivets,
+            crests: QQ.smugglerDealCrests,
+            affordable: this.canAfford(QQ),
+            soldOut: this.soldOut.has(FQ),
+            justBought: this.boughtSlot === FQ
           }))),
           rivetsOwned: this.rivets,
           crestsOwned: this.crests,
@@ -3467,56 +3467,56 @@ export const modules = {
         this.received = !1, this.clearReplyTimeout(), this.stopCountdown(), null !== this.pacing && (clearTimeout(this.pacing), this.pacing = null), super.dispose()
       }
     }
-    const qp = "skyblockPassageView",
-      Bp = {
+    const cL = "skyblockPassageView",
+      CL = {
         new: "skyblockGame:passagePhaseNew",
         waxing: "skyblockGame:passagePhaseWaxing",
         full: "skyblockGame:passagePhaseFull",
         waning: "skyblockGame:passagePhaseWaning"
       };
 
-    function sp(dd, Jd) {
-      return dd(Bp[Jd])
+    function SL(QQ, FQ) {
+      return QQ(CL[FQ])
     }
 
-    function ip(dd, Jd, kd, pd) {
-      const Nd = Math.ceil((kd - pd) / 864e5),
-        Wd = sp(dd, Jd);
-      return Nd > 1 ? dd("skyblockGame:passageNextDays", {
-        phase: Wd,
-        days: String(Nd)
-      }) : dd("skyblockGame:passageNextSoon", {
-        phase: Wd
+    function iL(QQ, FQ, wQ, LQ) {
+      const qQ = Math.ceil((wQ - LQ) / 864e5),
+        oQ = SL(QQ, FQ);
+      return qQ > 1 ? QQ("skyblockGame:passageNextDays", {
+        phase: oQ,
+        days: String(qQ)
+      }) : QQ("skyblockGame:passageNextSoon", {
+        phase: oQ
       })
     }
-    class ap extends od {
-      constructor(dd, Jd, kd, pd) {
-        let Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(dd, kd, pd), this.translate = Jd, this.now = Nd, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = dd => dd, this.toggle = () => {
+    class WL extends HQ {
+      constructor(QQ, FQ, wQ, LQ) {
+        let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(QQ, wQ, LQ), this.translate = FQ, this.now = qQ, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.itemName = QQ => QQ, this.toggle = () => {
           this.open ? this.dismiss() : this.show()
         }, this.snapshot = this.buildSnapshot()
       }
-      ZL(dd) {
-        this.message = dd, this.receivedAtMs = this.now(), this.emit()
+      bx(QQ) {
+        this.message = QQ, this.receivedAtMs = this.now(), this.emit()
       }
-      setTranslator(dd, Jd, kd) {
-        this.translate = dd, void 0 !== kd && (this.itemName = kd), this.emit()
+      setTranslator(QQ, FQ, wQ) {
+        this.translate = QQ, void 0 !== wQ && (this.itemName = wQ), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describe(dd) {
+      describe(QQ) {
         return {
-          itemName: dd.passageFish,
-          displayName: this.itemName(dd.passageFish),
+          itemName: QQ.passageFish,
+          displayName: this.itemName(QQ.passageFish),
           where: this.translate("skyblockGame:passageInWater", {
-            water: this.translate(dd.passageFishWaterKey)
+            water: this.translate(QQ.passageFishWaterKey)
           })
         }
       }
       buildSnapshot() {
-        const dd = this.message;
-        return null === dd ? {
+        const QQ = this.message;
+        return null === QQ ? {
           enabled: !1,
           open: !1,
           phase: "new",
@@ -3528,43 +3528,43 @@ export const modules = {
         } : {
           enabled: !0,
           open: this.open,
-          phase: dd.passagePhase,
-          phaseName: sp(this.translate, dd.passagePhase),
-          visitors: dd.passageVisitors.map((dd => this.describe(dd))),
-          resting: this.describe(dd.passageResting),
-          nextPhase: dd.passageNextPhase,
-          next: ip(this.translate, dd.passageNextPhase, dd.passageTurnsInMs, this.now() - this.receivedAtMs)
+          phase: QQ.passagePhase,
+          phaseName: SL(this.translate, QQ.passagePhase),
+          visitors: QQ.passageVisitors.map((QQ => this.describe(QQ))),
+          resting: this.describe(QQ.passageResting),
+          nextPhase: QQ.passageNextPhase,
+          next: iL(this.translate, QQ.passageNextPhase, QQ.passageTurnsInMs, this.now() - this.receivedAtMs)
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    var Mp = kd(38690);
-    const Fp = "skyblockKeepersChairView";
-    class Yp extends od {
-      constructor(dd, Jd, kd, pd, Nd) {
-        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
-          Pd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new Mp.b;
-        super(dd, kd, pd), this.translate = Jd, this.requestAim = Nd, this.now = Wd, this.pacer = Pd, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = dd => dd, this.aim = dd => {
-          !this.awaitingReply && this.open && this.atChair && dd !== this.favoured && (null === dd || this.islands.some((Jd => Jd.keepersChairIslandId === dd && Jd.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
+    var RL = wQ(38077);
+    const OL = "skyblockKeepersChairView";
+    class sL extends HQ {
+      constructor(QQ, FQ, wQ, LQ, qQ) {
+        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          DQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : new RL.b;
+        super(QQ, wQ, LQ), this.translate = FQ, this.requestAim = qQ, this.now = oQ, this.pacer = DQ, this.snapshot = void 0, this.islands = [], this.favoured = null, this.received = !1, this.awaitingReply = !1, this.unsubscribePacer = void 0, this.replyTimeout = null, this.status = null, this.aimedCount = 0, this.passage = null, this.passageReceivedAtMs = 0, this.atChair = !0, this.itemName = QQ => QQ, this.aim = QQ => {
+          !this.awaitingReply && this.open && this.atChair && QQ !== this.favoured && (null === QQ || this.islands.some((FQ => FQ.keepersChairIslandId === QQ && FQ.keepersChairIslandRelit))) && this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
-          }), 8e3), this.emit(), this.requestAim(null !== dd && void 0 !== dd ? dd : "none"))
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = Pd.subscribe((() => {
+          }), 8e3), this.emit(), this.requestAim(null !== QQ && void 0 !== QQ ? QQ : "none"))
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = DQ.subscribe((() => {
           this.emit()
         }))
       }
-      ZL(dd) {
-        var Jd, kd;
+      bx(QQ) {
+        var FQ, wQ;
         this.received = !0;
-        const pd = this.favoured,
-          Nd = this.atChair;
-        var Wd;
-        return this.islands = dd.keepersChairIslands, this.favoured = dd.keepersChairFavoured, this.passage = null !== (Jd = dd.keepersChairPassage) && void 0 !== Jd ? Jd : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (kd = dd.keepersChairAtChair) || void 0 === kd || kd, "place" === dd.keepersChairMessageKind ? (!Nd && this.atChair && "refused" === (null === (Wd = this.status) || void 0 === Wd ? void 0 : Wd.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === dd.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== dd.keepersChairRefusalKey ? this.status = {
+        const LQ = this.favoured,
+          qQ = this.atChair;
+        var oQ;
+        return this.islands = QQ.keepersChairIslands, this.favoured = QQ.keepersChairFavoured, this.passage = null !== (FQ = QQ.keepersChairPassage) && void 0 !== FQ ? FQ : null, this.passageReceivedAtMs = this.now(), this.atChair = null === (wQ = QQ.keepersChairAtChair) || void 0 === wQ || wQ, "place" === QQ.keepersChairMessageKind ? (!qQ && this.atChair && "refused" === (null === (oQ = this.status) || void 0 === oQ ? void 0 : oQ.tone) && (this.status = null), void this.emit()) : (this.awaitingReply = !1, this.clearReplyTimeout(), "open" === QQ.keepersChairMessageKind ? (this.status = null, void this.show()) : void(this.open ? (null !== QQ.keepersChairRefusalKey ? this.status = {
           tone: "refused",
-          key: dd.keepersChairRefusalKey,
+          key: QQ.keepersChairRefusalKey,
           island: null
-        } : this.favoured !== pd && (this.status = null === this.favoured ? {
+        } : this.favoured !== LQ && (this.status = null === this.favoured ? {
           tone: "aimed",
           key: "skyblockGame:keepersChairRestedStatus",
           island: null
@@ -3577,11 +3577,11 @@ export const modules = {
       isAtChair() {
         return this.atChair
       }
-      receivePassage(dd) {
-        this.received && (this.passage = dd, this.passageReceivedAtMs = this.now(), this.emit())
+      receivePassage(QQ) {
+        this.received && (this.passage = QQ, this.passageReceivedAtMs = this.now(), this.emit())
       }
-      setTranslator(dd, Jd, kd) {
-        this.translate = dd, void 0 !== kd && (this.itemName = kd), this.emit()
+      setTranslator(QQ, FQ, wQ) {
+        this.translate = QQ, void 0 !== wQ && (this.itemName = wQ), this.emit()
       }
       isEnabled() {
         return this.received
@@ -3595,47 +3595,47 @@ export const modules = {
       clearReplyTimeout() {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
-      islandName(dd) {
-        const Jd = this.islands.find((Jd => Jd.keepersChairIslandId === dd));
-        return void 0 === Jd ? dd : this.translate(Jd.keepersChairIslandNameKey)
+      islandName(QQ) {
+        const FQ = this.islands.find((FQ => FQ.keepersChairIslandId === QQ));
+        return void 0 === FQ ? QQ : this.translate(FQ.keepersChairIslandNameKey)
       }
       buildSnapshot() {
-        const dd = this.atChair ? this.status : {
+        const QQ = this.atChair ? this.status : {
             tone: "refused",
             key: "skyblockGame:keepersChairTooFar",
             island: null
           },
-          Jd = this.passage;
+          FQ = this.passage;
         return {
           enabled: this.received,
           open: this.open,
-          islands: this.islands.map((dd => {
-            const Jd = dd.keepersChairFeaturedFish;
+          islands: this.islands.map((QQ => {
+            const FQ = QQ.keepersChairFeaturedFish;
             return {
-              id: dd.keepersChairIslandId,
-              name: this.translate(dd.keepersChairIslandNameKey),
-              relit: dd.keepersChairIslandRelit,
-              featuredFish: null === Jd ? null : {
-                itemName: Jd,
-                displayName: this.itemName(Jd)
+              id: QQ.keepersChairIslandId,
+              name: this.translate(QQ.keepersChairIslandNameKey),
+              relit: QQ.keepersChairIslandRelit,
+              featuredFish: null === FQ ? null : {
+                itemName: FQ,
+                displayName: this.itemName(FQ)
               },
-              favoured: dd.keepersChairIslandId === this.favoured
+              favoured: QQ.keepersChairIslandId === this.favoured
             }
           })),
           aimed: null !== this.favoured,
           canAim: this.atChair && !this.isPending(),
-          status: null === dd ? null : {
-            tone: dd.tone,
-            text: this.translate(dd.key, null === dd.island ? void 0 : {
-              island: this.islandName(dd.island)
+          status: null === QQ ? null : {
+            tone: QQ.tone,
+            text: this.translate(QQ.key, null === QQ.island ? void 0 : {
+              island: this.islandName(QQ.island)
             })
           },
           aimedCount: this.aimedCount,
-          almanac: null === Jd ? null : {
-            phase: Jd.keepersChairPassagePhase,
-            phaseName: sp(this.translate, Jd.keepersChairPassagePhase),
-            nextPhase: Jd.keepersChairPassageNextPhase,
-            next: ip(this.translate, Jd.keepersChairPassageNextPhase, Jd.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
+          almanac: null === FQ ? null : {
+            phase: FQ.keepersChairPassagePhase,
+            phaseName: SL(this.translate, FQ.keepersChairPassagePhase),
+            nextPhase: FQ.keepersChairPassageNextPhase,
+            next: iL(this.translate, FQ.keepersChairPassageNextPhase, FQ.keepersChairPassageTurnsInMs, this.now() - this.passageReceivedAtMs)
           }
         }
       }
@@ -3643,63 +3643,63 @@ export const modules = {
         this.received = !1, this.passage = null, this.atChair = !0, this.clearReplyTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const mp = "skyblockReachLogView",
-      bp = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
-      Sp = "Caught Fish",
-      jp = [1, 2, 4];
+    const rL = "skyblockReachLogView",
+      IL = ["skyblockGame:reachLogBronze", "skyblockGame:reachLogSilver", "skyblockGame:reachLogGold"],
+      UL = "Caught Fish",
+      NL = [1, 2, 4];
 
-    function Xp(dd, Jd) {
-      return dd.map((dd => ({
-        ...dd,
-        reachLogPageFish: dd.reachLogPageFish.map((dd => ({
-          ...dd,
-          reachLogFishFresh: Jd(dd)
+    function TL(QQ, FQ) {
+      return QQ.map((QQ => ({
+        ...QQ,
+        reachLogPageFish: QQ.reachLogPageFish.map((QQ => ({
+          ...QQ,
+          reachLogFishFresh: FQ(QQ)
         })))
       })))
     }
-    class fp extends od {
-      constructor(dd, Jd, kd, pd, Nd) {
-        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new Mp.b;
-        super(dd, kd, pd), this.translate = Jd, this.requestOpen = Nd, this.pacer = Wd, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = dd => dd, this.ask = () => {
+    class KL extends HQ {
+      constructor(QQ, FQ, wQ, LQ, qQ) {
+        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : new RL.b;
+        super(QQ, wQ, LQ), this.translate = FQ, this.requestOpen = qQ, this.pacer = oQ, this.snapshot = void 0, this.pages = [], this.pagesCurrent = !1, this.serverFresh = 0, this.passagePhase = null, this.heldFresh = new Set, this.shown = !1, this.received = !1, this.selected = null, this.letGoShown = !1, this.awaitingReply = !1, this.replyTimeout = null, this.newsToken = 0, this.news = !1, this.pageViews = null, this.newsTimeout = null, this.unsubscribePacer = void 0, this.itemName = QQ => QQ, this.ask = () => {
           !this.received || this.open || this.awaitingReply || (this.pagesCurrent && 0 === this.serverFresh ? this.showPages() : this.pacer.tryStart() && (this.awaitingReply = !0, this.replyTimeout = setTimeout((() => {
             this.replyTimeout = null, this.awaitingReply = !1, this.emit()
           }), 8e3), this.emit(), this.requestOpen()))
-        }, this.selectPage = dd => {
-          this.pages.some((Jd => Jd.reachLogIslandId === dd)) && (this.selected = dd, this.emit())
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = Wd.subscribe((() => {
+        }, this.selectPage = QQ => {
+          this.pages.some((FQ => FQ.reachLogIslandId === QQ)) && (this.selected = QQ, this.emit())
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = oQ.subscribe((() => {
           this.emit()
         }))
       }
-      ZL(dd) {
-        if (this.received = !0, "status" === dd.reachLogMessageKind) return !0 === dd.reachLogNews && this.markNews(), this.serverFresh = dd.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
-        const Jd = this.awaitingReply;
-        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== dd.reachLogMessageKind)
-          if (this.pageViews = null, this.pages = Xp(dd.reachLogPages, (dd => dd.reachLogFishFresh || this.heldFresh.has(dd.reachLogFishItem))), this.letGoShown = dd.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, Jd) this.showPages();
+      bx(QQ) {
+        if (this.received = !0, "status" === QQ.reachLogMessageKind) return !0 === QQ.reachLogNews && this.markNews(), this.serverFresh = QQ.reachLogFreshCount, this.pagesCurrent = !1, void this.emit();
+        const FQ = this.awaitingReply;
+        if (this.awaitingReply = !1, this.clearReplyTimeout(), "unavailable" !== QQ.reachLogMessageKind)
+          if (this.pageViews = null, this.pages = TL(QQ.reachLogPages, (QQ => QQ.reachLogFishFresh || this.heldFresh.has(QQ.reachLogFishItem))), this.letGoShown = QQ.reachLogLetGoRibbonShown, this.pagesCurrent = !0, this.serverFresh = 0, FQ) this.showPages();
           else {
-            for (const dd of this.pages)
-              for (const Jd of dd.reachLogPageFish) Jd.reachLogFishFresh && this.heldFresh.add(Jd.reachLogFishItem);
+            for (const QQ of this.pages)
+              for (const FQ of QQ.reachLogPageFish) FQ.reachLogFishFresh && this.heldFresh.add(FQ.reachLogFishItem);
             this.emit()
           }
         else this.emit()
       }
-      setTranslator(dd, Jd, kd) {
-        this.translate = dd, this.pageViews = null, void 0 !== kd && (this.itemName = kd), this.emit()
+      setTranslator(QQ, FQ, wQ) {
+        this.translate = QQ, this.pageViews = null, void 0 !== wQ && (this.itemName = wQ), this.emit()
       }
       isEnabled() {
         return this.received
       }
       onClosed() {
-        this.shown && (this.shown = !1, this.pageViews = null, this.pages = Xp(this.pages, (() => !1)))
+        this.shown && (this.shown = !1, this.pageViews = null, this.pages = TL(this.pages, (() => !1)))
       }
       showPages() {
         this.heldFresh.clear(), this.selected = this.pickPage(), this.show(), this.shown = this.isOpen()
       }
       pickPage() {
-        var dd, Jd, kd, pd;
-        const Nd = this.pages.find((dd => dd.reachLogPageFish.some((dd => dd.reachLogFishFresh))));
-        if (void 0 !== Nd) return Nd.reachLogIslandId;
-        if (null !== this.selected && this.pages.some((dd => dd.reachLogIslandId === this.selected))) return this.selected;
-        return null !== (dd = null !== (Jd = null === (kd = this.pages.filter((dd => dd.reachLogIslandAwake)).at(-1)) || void 0 === kd ? void 0 : kd.reachLogIslandId) && void 0 !== Jd ? Jd : null === (pd = this.pages[0]) || void 0 === pd ? void 0 : pd.reachLogIslandId) && void 0 !== dd ? dd : null
+        var QQ, FQ, wQ, LQ;
+        const qQ = this.pages.find((QQ => QQ.reachLogPageFish.some((QQ => QQ.reachLogFishFresh))));
+        if (void 0 !== qQ) return qQ.reachLogIslandId;
+        if (null !== this.selected && this.pages.some((QQ => QQ.reachLogIslandId === this.selected))) return this.selected;
+        return null !== (QQ = null !== (FQ = null === (wQ = this.pages.filter((QQ => QQ.reachLogIslandAwake)).at(-1)) || void 0 === wQ ? void 0 : wQ.reachLogIslandId) && void 0 !== FQ ? FQ : null === (LQ = this.pages[0]) || void 0 === LQ ? void 0 : LQ.reachLogIslandId) && void 0 !== QQ ? QQ : null
       }
       markNews() {
         this.newsToken++, this.news = !0, this.clearNewsTimeout(), this.newsTimeout = setTimeout((() => {
@@ -3726,119 +3726,119 @@ export const modules = {
         }
       }
       buildPages() {
-        return this.pages.map((dd => {
-          var Jd;
+        return this.pages.map((QQ => {
+          var FQ;
           return {
-            id: dd.reachLogIslandId,
-            name: this.translate(dd.reachLogIslandNameKey),
-            awake: dd.reachLogIslandAwake,
-            gold: dd.reachLogPageGold,
-            caught: dd.reachLogPageFish.filter((dd => dd.reachLogFishCaught && !dd.reachLogFishVisitor)).length,
-            total: dd.reachLogPageFish.filter((dd => !dd.reachLogFishVisitor)).length,
-            fish: dd.reachLogPageFish.map((dd => {
-              const Jd = dd.reachLogFishBestKg;
+            id: QQ.reachLogIslandId,
+            name: this.translate(QQ.reachLogIslandNameKey),
+            awake: QQ.reachLogIslandAwake,
+            gold: QQ.reachLogPageGold,
+            caught: QQ.reachLogPageFish.filter((QQ => QQ.reachLogFishCaught && !QQ.reachLogFishVisitor)).length,
+            total: QQ.reachLogPageFish.filter((QQ => !QQ.reachLogFishVisitor)).length,
+            fish: QQ.reachLogPageFish.map((QQ => {
+              const FQ = QQ.reachLogFishBestKg;
               return {
-                itemName: dd.reachLogFishItem,
-                name: dd.reachLogFishCaught ? this.itemName(dd.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
-                caught: dd.reachLogFishCaught,
+                itemName: QQ.reachLogFishItem,
+                name: QQ.reachLogFishCaught ? this.itemName(QQ.reachLogFishItem) : this.translate("skyblockGame:reachLogUnknownFish"),
+                caught: QQ.reachLogFishCaught,
                 chance: this.translate("skyblockGame:reachLogChance", {
-                  count: Math.max(1, Math.round(1 / dd.reachLogFishChance))
+                  count: Math.max(1, Math.round(1 / QQ.reachLogFishChance))
                 }),
-                best: dd.reachLogFishCaught ? null === Jd ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
-                  kg: Jd.toFixed(1)
+                best: QQ.reachLogFishCaught ? null === FQ ? this.translate("skyblockGame:reachLogNoSize") : this.translate("skyblockGame:reachLogBest", {
+                  kg: FQ.toFixed(1)
                 }) : this.translate("skyblockGame:reachLogNotCaught"),
-                marks: dd.reachLogFishMarks,
-                ribbons: jp.map((Jd => 0 !== (dd.reachLogFishRibbons & Jd))),
-                glimmer: 0 !== (8 & dd.reachLogFishRibbons),
-                halo: 0 !== (32 & dd.reachLogFishRibbons),
-                fresh: dd.reachLogFishFresh,
-                visitor: dd.reachLogFishVisitor
+                marks: QQ.reachLogFishMarks,
+                ribbons: NL.map((FQ => 0 !== (QQ.reachLogFishRibbons & FQ))),
+                glimmer: 0 !== (8 & QQ.reachLogFishRibbons),
+                halo: 0 !== (32 & QQ.reachLogFishRibbons),
+                fresh: QQ.reachLogFishFresh,
+                visitor: QQ.reachLogFishVisitor
               }
             })),
-            returner: this.buildReturner(null !== (Jd = dd.reachLogPageReturner) && void 0 !== Jd ? Jd : null)
+            returner: this.buildReturner(null !== (FQ = QQ.reachLogPageReturner) && void 0 !== FQ ? FQ : null)
           }
         }))
       }
-      buildReturner(dd) {
-        return null === dd ? null : {
-          itemName: dd.reachLogReturnerFishItem,
-          line: this.translate(dd.reachLogReturnerLineKey, {
-            name: this.translate(dd.reachLogReturnerNameKey),
-            trinket: this.translate(dd.reachLogReturnerTrinketKey)
+      buildReturner(QQ) {
+        return null === QQ ? null : {
+          itemName: QQ.reachLogReturnerFishItem,
+          line: this.translate(QQ.reachLogReturnerLineKey, {
+            name: this.translate(QQ.reachLogReturnerNameKey),
+            trinket: this.translate(QQ.reachLogReturnerTrinketKey)
           }),
-          back: dd.reachLogReturnerBack
+          back: QQ.reachLogReturnerBack
         }
       }
-      receivePassagePhase(dd) {
-        null !== this.passagePhase && this.passagePhase !== dd && (this.pagesCurrent = !1), this.passagePhase = dd
+      receivePassagePhase(QQ) {
+        null !== this.passagePhase && this.passagePhase !== QQ && (this.pagesCurrent = !1), this.passagePhase = QQ
       }
       dispose() {
         this.received = !1, this.pagesCurrent = !1, this.passagePhase = null, this.heldFresh.clear(), this.clearReplyTimeout(), this.clearNewsTimeout(), this.unsubscribePacer(), super.dispose()
       }
     }
-    const np = "skyblockLampLightView";
-    class Up {
-      constructor(dd, Jd, kd, pd) {
-        this.nO = dd, this.translate = Jd, this.requestCommand = kd, this.pacer = pd, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.pL = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = dd => {
-          dd ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
-        }, this.buy = dd => {
-          this.send(`buy ${dd}`)
-        }, this.socket = dd => {
-          this.send(`socket ${null!==dd&&void 0!==dd?dd:fd}`)
-        }, this.wearTint = dd => {
-          this.send(`tint ${null!==dd&&void 0!==dd?dd:fd}`)
-        }, this.setSituation = dd => {
-          this.situation = dd, this.emit()
-        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = pd.subscribe((() => {
+    const zL = "skyblockLampLightView";
+    class lL {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.GA = QQ, this.translate = FQ, this.requestCommand = wQ, this.pacer = LQ, this.snapshot = void 0, this.message = null, this.shop = null, this.situation = "open", this.awaitingTag = null, this.awaitingOff = !1, this.offQueued = !1, this.offTag = null, this.lastTag = 0, this.replyTimeout = null, this.offTimeout = null, this.refusalKey = null, this.gainedCount = 0, this.lastGained = 0, this.atChair = !0, this.sparkle = null, this.locale = "en", this.kx = !1, this.unsubscribePacer = void 0, this.removePriority = void 0, this.getSnapshot = () => this.snapshot, this.setRelease = QQ => {
+          QQ ? this.send("release on") : this.awaitingOff || (this.awaitingOff = !0, this.offQueued = !0, this.sendQueuedOff(), this.emit())
+        }, this.buy = QQ => {
+          this.send(`buy ${QQ}`)
+        }, this.socket = QQ => {
+          this.send(`socket ${null!==QQ&&void 0!==QQ?QQ:KQ}`)
+        }, this.wearTint = QQ => {
+          this.send(`tint ${null!==QQ&&void 0!==QQ?QQ:KQ}`)
+        }, this.setSituation = QQ => {
+          this.situation = QQ, this.emit()
+        }, this.snapshot = this.buildSnapshot(), this.unsubscribePacer = LQ.subscribe((() => {
           this.sendQueuedOff(), this.emit()
-        })), this.removePriority = pd.addPriority({
+        })), this.removePriority = LQ.addPriority({
           waiting: () => this.offQueued,
           flush: () => {
             this.sendQueuedOff()
           }
         })
       }
-      ZL(dd) {
-        if (this.message = dd, null !== dd.lampLightShop && (this.shop = dd.lampLightShop), "open" === dd.lampLightKind && (this.refusalKey = null), "reply" === dd.lampLightKind) {
-          var Jd;
-          const Nd = null !== (Jd = dd.lampLightReplyTag) && void 0 !== Jd ? Jd : null,
-            Wd = null !== Nd && Nd === this.offTag;
-          var kd, pd;
-          if (Wd ? this.settleOff() : null !== Nd && Nd !== this.awaitingTag || this.settleReply(), this.refusalKey = dd.lampLightRefusalKey, null !== dd.lampLightBought && !Wd) this.sparkle = {
-            id: dd.lampLightBought,
-            count: (null !== (kd = null === (pd = this.sparkle) || void 0 === pd ? void 0 : pd.count) && void 0 !== kd ? kd : 0) + 1
+      bx(QQ) {
+        if (this.message = QQ, null !== QQ.lampLightShop && (this.shop = QQ.lampLightShop), "open" === QQ.lampLightKind && (this.refusalKey = null), "reply" === QQ.lampLightKind) {
+          var FQ;
+          const qQ = null !== (FQ = QQ.lampLightReplyTag) && void 0 !== FQ ? FQ : null,
+            oQ = null !== qQ && qQ === this.offTag;
+          var wQ, LQ;
+          if (oQ ? this.settleOff() : null !== qQ && qQ !== this.awaitingTag || this.settleReply(), this.refusalKey = QQ.lampLightRefusalKey, null !== QQ.lampLightBought && !oQ) this.sparkle = {
+            id: QQ.lampLightBought,
+            count: (null !== (wQ = null === (LQ = this.sparkle) || void 0 === LQ ? void 0 : LQ.count) && void 0 !== wQ ? wQ : 0) + 1
           }
         }
-        dd.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === dd.lampLightKind && (this.lastGained = dd.lampLightGained, this.gainedCount++), this.emit()
+        QQ.lampLightReleasing || (this.settleOff(), this.gainedCount = 0), "released" === QQ.lampLightKind && (this.lastGained = QQ.lampLightGained, this.gainedCount++), this.emit()
       }
-      setAtChair(dd) {
-        dd !== this.atChair && (this.atChair = dd, dd && (this.refusalKey = null), this.emit())
+      setAtChair(QQ) {
+        QQ !== this.atChair && (this.atChair = QQ, QQ && (this.refusalKey = null), this.emit())
       }
-      setTranslator(dd, Jd) {
-        this.translate = dd, this.locale = null !== Jd && void 0 !== Jd ? Jd : this.locale, this.emit()
+      setTranslator(QQ, FQ) {
+        this.translate = QQ, this.locale = null !== FQ && void 0 !== FQ ? FQ : this.locale, this.emit()
       }
       onChairClosed() {
         this.refusalKey = null, this.emit()
       }
       dispose() {
-        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.pL = !0
+        this.clearReplyTimeout(), this.settleOff(), this.unsubscribePacer(), this.removePriority(), this.message = null, this.shop = null, this.emit(), this.kx = !0
       }
-      send(dd) {
-        var Jd;
-        if (null !== this.awaitingTag || "ready" !== (null === (Jd = this.message) || void 0 === Jd ? void 0 : Jd.lampLightStatus) || !this.atChair) return;
+      send(QQ) {
+        var FQ;
+        if (null !== this.awaitingTag || "ready" !== (null === (FQ = this.message) || void 0 === FQ ? void 0 : FQ.lampLightStatus) || !this.atChair) return;
         if (this.sendQueuedOff(), this.offQueued || !this.pacer.tryStart()) return;
-        const kd = this.nextTag();
-        this.awaitingTag = kd, this.replyTimeout = setTimeout((() => {
+        const wQ = this.nextTag();
+        this.awaitingTag = wQ, this.replyTimeout = setTimeout((() => {
           this.replyTimeout = null, this.awaitingTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-${dd} ${kd}`), this.emit()
+        }), 8e3), this.requestCommand(`lamplight-${QQ} ${wQ}`), this.emit()
       }
       sendQueuedOff() {
         if (!this.offQueued || !this.pacer.canSendPriority()) return;
         this.offQueued = !1;
-        const dd = this.nextTag();
-        this.offTag = dd, this.pacer.start(), this.offTimeout = setTimeout((() => {
+        const QQ = this.nextTag();
+        this.offTag = QQ, this.pacer.start(), this.offTimeout = setTimeout((() => {
           this.offTimeout = null, this.awaitingOff = !1, this.offTag = null, this.emit()
-        }), 8e3), this.requestCommand(`lamplight-release off ${dd}`)
+        }), 8e3), this.requestCommand(`lamplight-release off ${QQ}`)
       }
       nextTag() {
         return this.lastTag = this.lastTag % 999999 + 1, this.lastTag
@@ -3856,427 +3856,427 @@ export const modules = {
         null !== this.replyTimeout && (clearTimeout(this.replyTimeout), this.replyTimeout = null)
       }
       emit() {
-        this.pL || (this.snapshot = this.buildSnapshot(), this.nO(this.snapshot))
+        this.kx || (this.snapshot = this.buildSnapshot(), this.GA(this.snapshot))
       }
-      formatLight(dd) {
-        return Math.floor(dd).toLocaleString(this.locale)
+      formatLight(QQ) {
+        return Math.floor(QQ).toLocaleString(this.locale)
       }
-      formatPercent(dd) {
-        const Jd = 100 * dd;
-        return Jd >= 10 ? Math.round(Jd).toLocaleString(this.locale) : Jd.toLocaleString(this.locale, {
+      formatPercent(QQ) {
+        const FQ = 100 * QQ;
+        return FQ >= 10 ? Math.round(FQ).toLocaleString(this.locale) : FQ.toLocaleString(this.locale, {
           maximumFractionDigits: 1
         })
       }
-      formatOdds(dd, Jd) {
-        if ("bite" === dd) return this.translate("skyblockGame:lampLightBite", {
-          seconds: (Jd.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
+      formatOdds(QQ, FQ) {
+        if ("bite" === QQ) return this.translate("skyblockGame:lampLightBite", {
+          seconds: (FQ.lampLightBiteMs / 1e3).toLocaleString(this.locale, {
             maximumFractionDigits: 1
           })
         });
-        if ("rare" === dd) return this.translate("skyblockGame:lampLightRare", {
-          percent: this.formatPercent(Jd.lampLightRareChance)
+        if ("rare" === QQ) return this.translate("skyblockGame:lampLightRare", {
+          percent: this.formatPercent(FQ.lampLightRareChance)
         });
-        if ("notice" === dd) return null === Jd.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
-          percent: this.formatPercent(Jd.lampLightNoticeChance)
+        if ("notice" === QQ) return null === FQ.lampLightNoticeChance ? null : this.translate("skyblockGame:lampLightNotice", {
+          percent: this.formatPercent(FQ.lampLightNoticeChance)
         });
-        const kd = "meter" === dd ? Jd.lampLightMeterCatches : Jd.lampLightBloomCatches;
-        return null === kd ? null : this.translate("meter" === dd ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
-          catches: String(Math.round(kd))
+        const wQ = "meter" === QQ ? FQ.lampLightMeterCatches : FQ.lampLightBloomCatches;
+        return null === wQ ? null : this.translate("meter" === QQ ? "skyblockGame:lampLightMeter" : "skyblockGame:lampLightBloomLasts", {
+          catches: String(Math.round(wQ))
         })
       }
-      oddsLines(dd, Jd) {
-        const kd = (dd, Jd) => {
-            var kd;
-            return null !== (kd = {
-              bite: Jd.lampLightBiteMs,
-              rare: Jd.lampLightRareChance,
-              meter: Jd.lampLightMeterCatches,
-              bloom: Jd.lampLightBloomCatches,
-              notice: Jd.lampLightNoticeChance
-            } [dd]) && void 0 !== kd ? kd : 0
+      oddsLines(QQ, FQ) {
+        const wQ = (QQ, FQ) => {
+            var wQ;
+            return null !== (wQ = {
+              bite: FQ.lampLightBiteMs,
+              rare: FQ.lampLightRareChance,
+              meter: FQ.lampLightMeterCatches,
+              bloom: FQ.lampLightBloomCatches,
+              notice: FQ.lampLightNoticeChance
+            } [QQ]) && void 0 !== wQ ? wQ : 0
           },
-          pd = {
+          LQ = {
             bite: !0,
             rare: !1,
             meter: !0,
             bloom: !1,
             notice: !1
           },
-          Nd = [];
-        for (const Wd of ["bite", "rare", "meter", "bloom", "notice"]) {
-          const Pd = this.formatOdds(Wd, dd),
-            Zd = this.formatOdds(Wd, Jd);
-          if (null === Pd || null === Zd || "bite" !== Wd && "rare" !== Wd && Pd === Zd) continue;
-          const gd = kd(Wd, Jd) - kd(Wd, dd),
-            Cd = pd[Wd] ? gd < 0 : gd > 0;
-          Nd.push({
-            label: Wd,
-            before: Pd,
-            after: Zd,
-            tone: Pd === Zd ? "same" : Cd ? "better" : "worse"
+          qQ = [];
+        for (const oQ of ["bite", "rare", "meter", "bloom", "notice"]) {
+          const DQ = this.formatOdds(oQ, QQ),
+            kQ = this.formatOdds(oQ, FQ);
+          if (null === DQ || null === kQ || "bite" !== oQ && "rare" !== oQ && DQ === kQ) continue;
+          const vQ = wQ(oQ, FQ) - wQ(oQ, QQ),
+            mQ = LQ[oQ] ? vQ < 0 : vQ > 0;
+          qQ.push({
+            label: oQ,
+            before: DQ,
+            after: kQ,
+            tone: DQ === kQ ? "same" : mQ ? "better" : "worse"
           })
         }
-        return Nd
+        return qQ
       }
-      charmView(dd, Jd, kd) {
-        const pd = dd.lampLightCharmId.charAt(0).toUpperCase() + dd.lampLightCharmId.slice(1),
-          Nd = "bloom" === this.situation;
+      charmView(QQ, FQ, wQ) {
+        const LQ = QQ.lampLightCharmId.charAt(0).toUpperCase() + QQ.lampLightCharmId.slice(1),
+          qQ = "bloom" === this.situation;
         return {
-          id: dd.lampLightCharmId,
-          name: this.translate(`skyblockGame:lampLightCharm${pd}`),
-          effect: this.translate(`skyblockGame:lampLightCharm${pd}Effect`),
+          id: QQ.lampLightCharmId,
+          name: this.translate(`skyblockGame:lampLightCharm${LQ}`),
+          effect: this.translate(`skyblockGame:lampLightCharm${LQ}Effect`),
           cost: this.translate("skyblockGame:lampLightCost", {
-            light: this.formatLight(dd.lampLightCharmCost)
+            light: this.formatLight(QQ.lampLightCharmCost)
           }),
-          owned: dd.lampLightCharmOwned,
-          affordable: kd >= dd.lampLightCharmCost,
-          socketed: Jd.lampLightSocketed === dd.lampLightCharmId,
-          lines: this.oddsLines(Nd ? Jd.lampLightBareBloom : Jd.lampLightBareOpen, Nd ? dd.lampLightCharmBloom : dd.lampLightCharmOpen)
+          owned: QQ.lampLightCharmOwned,
+          affordable: wQ >= QQ.lampLightCharmCost,
+          socketed: FQ.lampLightSocketed === QQ.lampLightCharmId,
+          lines: this.oddsLines(qQ ? FQ.lampLightBareBloom : FQ.lampLightBareOpen, qQ ? QQ.lampLightCharmBloom : QQ.lampLightCharmOpen)
         }
       }
       buildSnapshot() {
-        var dd, Jd, kd, pd;
-        const Nd = this.message,
-          Wd = "ready" === (null === Nd || void 0 === Nd ? void 0 : Nd.lampLightStatus) ? this.shop : null,
-          Pd = null !== (dd = null === Nd || void 0 === Nd ? void 0 : Nd.lampLightBalance) && void 0 !== dd ? dd : 0,
-          Zd = this.atChair,
-          gd = "loading" === (null === Nd || void 0 === Nd ? void 0 : Nd.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === Nd || void 0 === Nd ? void 0 : Nd.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
-          Cd = "ready" !== (null === Nd || void 0 === Nd ? void 0 : Nd.lampLightStatus) || Zd ? null !== (Jd = this.refusalKey) && void 0 !== Jd ? Jd : gd : "skyblockGame:lampLightTooFar";
+        var QQ, FQ, wQ, LQ;
+        const qQ = this.message,
+          oQ = "ready" === (null === qQ || void 0 === qQ ? void 0 : qQ.lampLightStatus) ? this.shop : null,
+          DQ = null !== (QQ = null === qQ || void 0 === qQ ? void 0 : qQ.lampLightBalance) && void 0 !== QQ ? QQ : 0,
+          kQ = this.atChair,
+          vQ = "loading" === (null === qQ || void 0 === qQ ? void 0 : qQ.lampLightStatus) ? "skyblockGame:lampLightLoading" : "unreadable" === (null === qQ || void 0 === qQ ? void 0 : qQ.lampLightStatus) ? "skyblockGame:lampLightUnreadable" : null,
+          mQ = "ready" !== (null === qQ || void 0 === qQ ? void 0 : qQ.lampLightStatus) || kQ ? null !== (FQ = this.refusalKey) && void 0 !== FQ ? FQ : vQ : "skyblockGame:lampLightTooFar";
         return {
-          enabled: null !== Nd && "locked" !== Nd.lampLightStatus,
-          status: null !== (kd = null === Nd || void 0 === Nd ? void 0 : Nd.lampLightStatus) && void 0 !== kd ? kd : "loading",
+          enabled: null !== qQ && "locked" !== qQ.lampLightStatus,
+          status: null !== (wQ = null === qQ || void 0 === qQ ? void 0 : qQ.lampLightStatus) && void 0 !== wQ ? wQ : "loading",
           balance: this.translate("skyblockGame:lampLightBalance", {
-            light: this.formatLight(Pd)
+            light: this.formatLight(DQ)
           }),
-          releasing: null !== (pd = null === Nd || void 0 === Nd ? void 0 : Nd.lampLightReleasing) && void 0 !== pd && pd,
-          gained: null === Nd || 0 === this.gainedCount ? null : {
+          releasing: null !== (LQ = null === qQ || void 0 === qQ ? void 0 : qQ.lampLightReleasing) && void 0 !== LQ && LQ,
+          gained: null === qQ || 0 === this.gainedCount ? null : {
             text: this.translate("skyblockGame:lampLightGained", {
               light: this.formatLight(this.lastGained)
             }),
             count: this.gainedCount
           },
-          canCommand: "ready" === (null === Nd || void 0 === Nd ? void 0 : Nd.lampLightStatus) && Zd && !this.isPending(),
+          canCommand: "ready" === (null === qQ || void 0 === qQ ? void 0 : qQ.lampLightStatus) && kQ && !this.isPending(),
           situation: this.situation,
-          shop: null === Wd ? null : {
+          shop: null === oQ ? null : {
             oddsFor: this.translate("skyblockGame:lampLightOddsFor", {
-              rod: Wd.lampLightOddsRod,
-              island: this.translate(Wd.lampLightIslandNameKey)
+              rod: oQ.lampLightOddsRod,
+              island: this.translate(oQ.lampLightIslandNameKey)
             }),
-            heldRod: null !== Wd.lampLightHeldRod,
-            charms: Wd.lampLightCharms.map((dd => this.charmView(dd, Wd, Pd))),
-            tints: Wd.lampLightTints.map((dd => {
-              const Jd = dd.lampLightTintId,
-                [kd, pd, Nd] = dd.lampLightTintColour;
+            heldRod: null !== oQ.lampLightHeldRod,
+            charms: oQ.lampLightCharms.map((QQ => this.charmView(QQ, oQ, DQ))),
+            tints: oQ.lampLightTints.map((QQ => {
+              const FQ = QQ.lampLightTintId,
+                [wQ, LQ, qQ] = QQ.lampLightTintColour;
               return {
-                id: Jd,
-                name: this.translate(`skyblockGame:lampLightTint${Jd.charAt(0).toUpperCase()}${Jd.slice(1)}`),
+                id: FQ,
+                name: this.translate(`skyblockGame:lampLightTint${FQ.charAt(0).toUpperCase()}${FQ.slice(1)}`),
                 cost: this.translate("skyblockGame:lampLightCost", {
-                  light: this.formatLight(dd.lampLightTintCost)
+                  light: this.formatLight(QQ.lampLightTintCost)
                 }),
-                owned: dd.lampLightTintOwned,
-                affordable: Pd >= dd.lampLightTintCost,
-                wearing: Wd.lampLightTint === Jd,
-                colour: `rgb(${kd}, ${pd}, ${Nd})`
+                owned: QQ.lampLightTintOwned,
+                affordable: DQ >= QQ.lampLightTintCost,
+                wearing: oQ.lampLightTint === FQ,
+                colour: `rgb(${wQ}, ${LQ}, ${qQ})`
               }
             })),
-            wearingIslandColours: null === Wd.lampLightTint
+            wearingIslandColours: null === oQ.lampLightTint
           },
-          notice: null === Cd ? null : this.translate(Cd),
+          notice: null === mQ ? null : this.translate(mQ),
           sparkle: this.sparkle
         }
       }
     }
-    const yp = "skyblockMagmawardView";
-    class Dp {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.nO = dd, this.now = Jd, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = cd.map((() => 0)), this.wornAt = cd.map((() => -1 / 0))
+    const jL = "skyblockMagmawardView";
+    class aL {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.GA = QQ, this.now = FQ, this.snapshot = null, this.pulseToken = 0, this.pulseAt = -1 / 0, this.flareToken = 0, this.flareAt = -1 / 0, this.setLitToken = 0, this.setLitAt = -1 / 0, this.wornTokens = VQ.map((() => 0)), this.wornAt = VQ.map((() => -1 / 0))
       }
       getSnapshot() {
         return this.snapshot
       }
-      ZL(dd) {
-        var Jd, kd;
-        const pd = cd.map(((Jd, kd) => !0 === dd.magmawardPiecesWorn[kd]));
-        if (!pd.includes(!0)) return this.snapshot = null, void this.nO(null);
-        const Nd = this.now(),
-          Wd = this.snapshot;
-        null === Wd && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
-        const Pd = dd.magmawardFuelCarried,
-          Zd = !pd.includes(!1);
-        let gd = null !== (Jd = null === Wd || void 0 === Wd ? void 0 : Wd.pulse) && void 0 !== Jd ? Jd : null,
-          Cd = null !== (kd = null === Wd || void 0 === Wd ? void 0 : Wd.flare) && void 0 !== kd ? kd : null;
-        dd.magmawardFuelBurned ? (gd = "burn", Cd = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = Nd, this.flareAt = Nd) : null !== Wd && Pd > Wd.fuel && (gd = "gain", this.pulseToken++, this.pulseAt = Nd), Zd && null !== Wd && !Wd.fullSet && (Cd = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = Nd, this.setLitAt = Nd);
-        const Kd = cd.map(((dd, Jd) => (pd[Jd] && null !== Wd && !Wd.pieces[Jd].worn && (this.wornTokens[Jd]++, this.wornAt[Jd] = Nd), {
-          itemName: dd,
-          worn: pd[Jd],
-          wornToken: this.wornTokens[Jd],
-          justWorn: pd[Jd] && this.isPlaying(this.wornAt[Jd], Nd)
+      bx(QQ) {
+        var FQ, wQ;
+        const LQ = VQ.map(((FQ, wQ) => !0 === QQ.magmawardPiecesWorn[wQ]));
+        if (!LQ.includes(!0)) return this.snapshot = null, void this.GA(null);
+        const qQ = this.now(),
+          oQ = this.snapshot;
+        null === oQ && (this.wornTokens.fill(0), this.wornAt.fill(-1 / 0), this.setLitAt = -1 / 0);
+        const DQ = QQ.magmawardFuelCarried,
+          kQ = !LQ.includes(!1);
+        let vQ = null !== (FQ = null === oQ || void 0 === oQ ? void 0 : oQ.pulse) && void 0 !== FQ ? FQ : null,
+          mQ = null !== (wQ = null === oQ || void 0 === oQ ? void 0 : oQ.flare) && void 0 !== wQ ? wQ : null;
+        QQ.magmawardFuelBurned ? (vQ = "burn", mQ = "burn", this.pulseToken++, this.flareToken++, this.pulseAt = qQ, this.flareAt = qQ) : null !== oQ && DQ > oQ.fuel && (vQ = "gain", this.pulseToken++, this.pulseAt = qQ), kQ && null !== oQ && !oQ.fullSet && (mQ = "fullSet", this.flareToken++, this.setLitToken++, this.flareAt = qQ, this.setLitAt = qQ);
+        const uQ = VQ.map(((QQ, FQ) => (LQ[FQ] && null !== oQ && !oQ.pieces[FQ].worn && (this.wornTokens[FQ]++, this.wornAt[FQ] = qQ), {
+          itemName: QQ,
+          worn: LQ[FQ],
+          wornToken: this.wornTokens[FQ],
+          justWorn: LQ[FQ] && this.isPlaying(this.wornAt[FQ], qQ)
         })));
         this.snapshot = {
-          pieces: Kd,
-          wornCount: pd.filter(Boolean).length,
-          fullSet: Zd,
-          fuel: Pd,
-          fuelState: Pd <= 0 ? "empty" : Pd <= 3 ? "low" : "ok",
-          pulse: this.isPlaying(this.pulseAt, Nd) ? gd : null,
+          pieces: uQ,
+          wornCount: LQ.filter(Boolean).length,
+          fullSet: kQ,
+          fuel: DQ,
+          fuelState: DQ <= 0 ? "empty" : DQ <= 3 ? "low" : "ok",
+          pulse: this.isPlaying(this.pulseAt, qQ) ? vQ : null,
           pulseToken: this.pulseToken,
-          flare: this.isPlaying(this.flareAt, Nd) ? Cd : null,
+          flare: this.isPlaying(this.flareAt, qQ) ? mQ : null,
           flareToken: this.flareToken,
-          setLit: Zd && this.isPlaying(this.setLitAt, Nd),
+          setLit: kQ && this.isPlaying(this.setLitAt, qQ),
           setLitToken: this.setLitToken
-        }, this.nO(this.snapshot)
+        }, this.GA(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.nO(null)
+        this.snapshot = null, this.GA(null)
       }
-      isPlaying(dd, Jd) {
-        return Jd - dd < 1200
+      isPlaying(QQ, FQ) {
+        return FQ - QQ < 1200
       }
     }
-    const Tp = "skyblockGlowtideView";
-    class Ep {
-      constructor(dd) {
-        this.nO = dd, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = dd => {
-          this.arrow = dd, this.arrowTurn = NaN
+    const XL = "skyblockGlowtideView";
+    class fL {
+      constructor(QQ) {
+        this.GA = QQ, this.bloom = null, this.snapshot = null, this.inRangeToken = 0, this.arrow = null, this.arrowTurn = NaN, this.mountArrow = QQ => {
+          this.arrow = QQ, this.arrowTurn = NaN
         }
       }
       getSnapshot() {
         return this.snapshot
       }
-      ZL(dd) {
-        this.bloom = dd.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.nO(null))
+      bx(QQ) {
+        this.bloom = QQ.glowtideBloom, null === this.bloom && null !== this.snapshot && (this.snapshot = null, this.GA(null))
       }
-      afterRender(dd, Jd) {
-        const kd = this.bloom;
-        if (null === kd || null === dd) return;
-        const pd = kd.glowtideBloomX - dd[0],
-          Wd = kd.glowtideBloomZ - dd[2],
-          Pd = Math.hypot(pd, Wd),
-          Zd = this.snapshot,
-          gd = null !== Zd && void 0 !== Zd && Zd.inRange ? 1 : 0,
-          Cd = Pd <= 12.5 + gd && dd[1] - kd.glowtideBloomY <= 10 + gd;
-        !Cd || null !== Zd && void 0 !== Zd && Zd.inRange || this.inRangeToken++;
-        const Kd = {
-          colour: kd.glowtideBloomColour,
-          inRange: Cd,
-          distance: Math.round(Pd),
+      afterRender(QQ, FQ) {
+        const wQ = this.bloom;
+        if (null === wQ || null === QQ) return;
+        const LQ = wQ.glowtideBloomX - QQ[0],
+          oQ = wQ.glowtideBloomZ - QQ[2],
+          DQ = Math.hypot(LQ, oQ),
+          kQ = this.snapshot,
+          vQ = null !== kQ && void 0 !== kQ && kQ.inRange ? 1 : 0,
+          mQ = DQ <= 12.5 + vQ && QQ[1] - wQ.glowtideBloomY <= 10 + vQ;
+        !mQ || null !== kQ && void 0 !== kQ && kQ.inRange || this.inRangeToken++;
+        const uQ = {
+          colour: wQ.glowtideBloomColour,
+          inRange: mQ,
+          distance: Math.round(DQ),
           inRangeToken: this.inRangeToken
         };
-        (null === Zd || Kd.colour !== Zd.colour || Kd.inRange !== Zd.inRange || !Cd && Kd.distance !== Zd.distance) && (this.snapshot = Kd, this.nO(Kd));
-        const od = Nd.b.computeShortestRotation(Jd, (0, Nd.Hb)([pd, 0, Wd]));
-        null === this.arrow || Math.abs(od - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${od}rad)`, this.arrowTurn = od)
+        (null === kQ || uQ.colour !== kQ.colour || uQ.inRange !== kQ.inRange || !mQ && uQ.distance !== kQ.distance) && (this.snapshot = uQ, this.GA(uQ));
+        const HQ = qQ.e.computeShortestRotation(FQ, (0, qQ.Eb)([LQ, 0, oQ]));
+        null === this.arrow || Math.abs(HQ - this.arrowTurn) < .01 || (this.arrow.style.transform = `rotate(${HQ}rad)`, this.arrowTurn = HQ)
       }
       dispose() {
-        this.bloom = null, this.arrow = null, this.snapshot = null, this.nO(null)
+        this.bloom = null, this.arrow = null, this.snapshot = null, this.GA(null)
       }
     }
-    const cp = "skyblockGlowMeterView";
-    class hp {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.nO = dd, this.now = Jd, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
+    const VL = "skyblockGlowMeterView";
+    class hL {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.GA = QQ, this.now = FQ, this.snapshot = null, this.fullToken = 0, this.fullAt = -1 / 0, this.burstToken = 0, this.burstAt = -1 / 0, this.gainToken = 0, this.gainAt = -1 / 0
       }
       getSnapshot() {
         return this.snapshot
       }
-      ZL(dd) {
-        const Jd = this.now(),
+      bx(QQ) {
+        const FQ = this.now(),
           {
-            glowMeterFill: kd,
-            glowMeterCapacity: pd
-          } = dd,
-          Nd = kd >= pd,
-          Wd = this.snapshot;
-        null !== Wd && (Nd && !Wd.full && (this.fullToken++, this.fullAt = Jd), Wd.full && !Nd ? (this.burstToken++, this.burstAt = Jd) : kd > Wd.fill && (this.gainToken++, this.gainAt = Jd)), this.snapshot = {
-          fill: kd,
-          oo: pd,
-          ratio: Math.min(1, Math.max(0, kd / pd)),
-          full: Nd,
-          rares: dd.glowMeterRares,
-          ready: Nd && this.isPlaying(this.fullAt, Jd),
+            glowMeterFill: wQ,
+            glowMeterCapacity: LQ
+          } = QQ,
+          qQ = wQ >= LQ,
+          oQ = this.snapshot;
+        null !== oQ && (qQ && !oQ.full && (this.fullToken++, this.fullAt = FQ), oQ.full && !qQ ? (this.burstToken++, this.burstAt = FQ) : wQ > oQ.fill && (this.gainToken++, this.gainAt = FQ)), this.snapshot = {
+          fill: wQ,
+          MH: LQ,
+          ratio: Math.min(1, Math.max(0, wQ / LQ)),
+          full: qQ,
+          rares: QQ.glowMeterRares,
+          ready: qQ && this.isPlaying(this.fullAt, FQ),
           fullToken: this.fullToken,
-          burst: this.isPlaying(this.burstAt, Jd),
+          burst: this.isPlaying(this.burstAt, FQ),
           burstToken: this.burstToken,
-          gained: this.isPlaying(this.gainAt, Jd),
+          gained: this.isPlaying(this.gainAt, FQ),
           gainToken: this.gainToken
-        }, this.nO(this.snapshot)
+        }, this.GA(this.snapshot)
       }
       dispose() {
-        this.snapshot = null, this.nO(null)
+        this.snapshot = null, this.GA(null)
       }
-      isPlaying(dd, Jd) {
-        return Jd - dd < 2e3
+      isPlaying(QQ, FQ) {
+        return FQ - QQ < 2e3
       }
     }
-    const rp = "skyblockHushWaitView";
-    class tp {
-      constructor(dd) {
-        this.nO = dd, this.snapshot = null, this.token = 0, this.timers = []
+    const JL = "skyblockHushWaitView";
+    class EL {
+      constructor(QQ) {
+        this.GA = QQ, this.snapshot = null, this.token = 0, this.timers = []
       }
       getSnapshot() {
         return this.snapshot
       }
-      ZL(dd) {
+      bx(QQ) {
         let {
-          hushWaitMs: Jd,
-          hushWaitTotalMs: kd,
-          hushWaitLines: pd
-        } = dd;
-        if (this.clearTimers(), this.token++, 0 === pd.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
-        if (Jd <= 0) return this.show({
+          hushWaitMs: FQ,
+          hushWaitTotalMs: wQ,
+          hushWaitLines: LQ
+        } = QQ;
+        if (this.clearTimers(), this.token++, 0 === LQ.length) return console.warn("Skyblock: a Hush wait message came without a line"), void this.show(null);
+        if (FQ <= 0) return this.show({
           token: this.token,
           phase: "abandoned",
           waitMs: 3500,
           elapsedMs: 0,
-          line: pd[0],
+          line: LQ[0],
           lineIndex: 0
         }), void this.later(3500, (() => {
           this.show(null)
         }));
-        const Nd = Math.max(null !== kd && void 0 !== kd ? kd : Jd, Jd),
-          Wd = Nd - Jd,
-          Pd = dd => Nd * dd / pd.length,
-          Zd = dd => {
+        const qQ = Math.max(null !== wQ && void 0 !== wQ ? wQ : FQ, FQ),
+          oQ = qQ - FQ,
+          DQ = QQ => qQ * QQ / LQ.length,
+          kQ = QQ => {
             this.show({
               token: this.token,
               phase: "waiting",
-              waitMs: Nd,
-              elapsedMs: Wd,
-              line: pd[dd],
-              lineIndex: dd
+              waitMs: qQ,
+              elapsedMs: oQ,
+              line: LQ[QQ],
+              lineIndex: QQ
             })
           };
-        let gd = 0;
-        for (; gd + 1 < pd.length && Pd(gd + 1) <= Wd;) gd++;
-        Zd(gd);
-        for (let Cd = gd + 1; Cd < pd.length; Cd++) this.later(Pd(Cd) - Wd, (() => {
-          Zd(Cd)
+        let vQ = 0;
+        for (; vQ + 1 < LQ.length && DQ(vQ + 1) <= oQ;) vQ++;
+        kQ(vQ);
+        for (let mQ = vQ + 1; mQ < LQ.length; mQ++) this.later(DQ(mQ) - oQ, (() => {
+          kQ(mQ)
         }));
-        this.later(Jd, (() => {
+        this.later(FQ, (() => {
           this.show(null)
         }))
       }
       dispose() {
         this.clearTimers(), this.show(null)
       }
-      show(dd) {
-        this.snapshot = dd, this.nO(dd)
+      show(QQ) {
+        this.snapshot = QQ, this.GA(QQ)
       }
-      later(dd, Jd) {
-        this.timers.push(setTimeout(Jd, dd))
+      later(QQ, FQ) {
+        this.timers.push(setTimeout(FQ, QQ))
       }
       clearTimers() {
-        for (const dd of this.timers) clearTimeout(dd);
+        for (const QQ of this.timers) clearTimeout(QQ);
         this.timers = []
       }
     }
-    const Vp = "skyblockTideChartsView",
-      zp = 36e5,
-      Hp = 864e5;
+    const nL = "skyblockTideChartsView",
+      gL = 36e5,
+      PL = 864e5;
 
-    function wp(dd, Jd, kd) {
-      const [pd, Nd, Wd, Pd] = dd.tideChartArea, Zd = Math.floor(Jd), gd = Math.floor(kd);
-      return Zd >= pd && Zd <= Wd && gd >= Nd && gd <= Pd
+    function ZL(QQ, FQ, wQ) {
+      const [LQ, qQ, oQ, DQ] = QQ.tideChartArea, kQ = Math.floor(FQ), vQ = Math.floor(wQ);
+      return kQ >= LQ && kQ <= oQ && vQ >= qQ && vQ <= DQ
     }
 
-    function Ap(dd, Jd, kd) {
-      const [pd, Nd, Wd, Pd] = dd.tideChartWater;
-      return function(dd, Jd, kd, pd, Nd, Wd) {
-        const Pd = 4 - hd(Math.floor(Nd) - (dd - kd), kd);
-        return 5 * hd(Math.floor(Wd) - (Jd - pd), pd) + Pd
-      }(pd, Nd, Wd, Pd, Jd, kd)
+    function yL(QQ, FQ, wQ) {
+      const [LQ, qQ, oQ, DQ] = QQ.tideChartWater;
+      return function(QQ, FQ, wQ, LQ, qQ, oQ) {
+        const DQ = 4 - hQ(Math.floor(qQ) - (QQ - wQ), wQ);
+        return 5 * hQ(Math.floor(oQ) - (FQ - LQ), LQ) + DQ
+      }(LQ, qQ, oQ, DQ, FQ, wQ)
     }
 
-    function dN(dd, Jd, kd) {
-      const pd = dd.tideCharts;
-      for (let Nd = 0; Nd < pd.length; Nd++)
-        if (wp(pd[Nd], Jd, kd)) return pd[Nd];
+    function BL(QQ, FQ, wQ) {
+      const LQ = QQ.tideCharts;
+      for (let qQ = 0; qQ < LQ.length; qQ++)
+        if (ZL(LQ[qQ], FQ, wQ)) return LQ[qQ];
       return null
     }
 
-    function JN(dd, Jd, kd) {
-      const pd = Math.max(0, Jd - kd);
-      return pd > Hp ? dd("skyblockGame:tideChartsTurnDays", {
-        days: String(Math.ceil(pd / Hp))
-      }) : pd > zp ? dd("skyblockGame:tideChartsTurnHours", {
-        hours: String(Math.ceil(pd / zp))
-      }) : dd("skyblockGame:tideChartsTurnSoon")
+    function dL(QQ, FQ, wQ) {
+      const LQ = Math.max(0, FQ - wQ);
+      return LQ > PL ? QQ("skyblockGame:tideChartsTurnDays", {
+        days: String(Math.ceil(LQ / PL))
+      }) : LQ > gL ? QQ("skyblockGame:tideChartsTurnHours", {
+        hours: String(Math.ceil(LQ / gL))
+      }) : QQ("skyblockGame:tideChartsTurnSoon")
     }
-    class kN extends od {
-      constructor(dd, Jd, kd, pd) {
-        let Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
-        super(dd, kd, pd), this.translate = Jd, this.now = Nd, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
+    class Qq extends HQ {
+      constructor(QQ, FQ, wQ, LQ) {
+        let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Date.now;
+        super(QQ, wQ, LQ), this.translate = FQ, this.now = qQ, this.snapshot = void 0, this.message = null, this.receivedAtMs = 0, this.hereIsland = null, this.hereCell = -1, this.lastX = Number.NaN, this.lastZ = Number.NaN, this.picked = null, this.lastIsland = null, this.pulse = {
           island: "",
           cells: 0,
           token: 0,
           atMs: 0
         }, this.cast = null, this.castToken = 0, this.turnsCheckedAtMs = 0, this.toggle = () => {
           this.open ? this.dismiss() : (this.picked = null, this.show())
-        }, this.Tl = dd => {
-          this.picked = dd, this.emit()
+        }, this.Vb = QQ => {
+          this.picked = QQ, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      ZL(dd) {
-        const Jd = this.message;
-        if (null !== Jd)
-          for (const pd of dd.tideCharts) {
-            var kd;
-            const dd = Jd.tideCharts.find((dd => dd.tideChartIsland === pd.tideChartIsland)),
-              Nd = pd.tideChartLit & ~(null !== (kd = null === dd || void 0 === dd ? void 0 : dd.tideChartLit) && void 0 !== kd ? kd : 0);
-            void 0 !== dd && 0 !== Nd && (this.pulse = {
-              island: pd.tideChartIsland,
-              cells: Nd,
+      bx(QQ) {
+        const FQ = this.message;
+        if (null !== FQ)
+          for (const LQ of QQ.tideCharts) {
+            var wQ;
+            const QQ = FQ.tideCharts.find((QQ => QQ.tideChartIsland === LQ.tideChartIsland)),
+              qQ = LQ.tideChartLit & ~(null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ.tideChartLit) && void 0 !== wQ ? wQ : 0);
+            void 0 !== QQ && 0 !== qQ && (this.pulse = {
+              island: LQ.tideChartIsland,
+              cells: qQ,
               token: this.pulse.token + 1,
               atMs: this.now()
             })
           }
-        this.message = dd, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
+        this.message = QQ, this.receivedAtMs = this.now(), this.locate(this.lastX, this.lastZ), this.emit()
       }
-      locate(dd, Jd) {
-        var kd;
-        const pd = null === this.message || Number.isNaN(dd) ? null : dN(this.message, dd, Jd),
-          Nd = null !== (kd = null === pd || void 0 === pd ? void 0 : pd.tideChartIsland) && void 0 !== kd ? kd : null,
-          Wd = null === pd ? -1 : function(dd, Jd, kd) {
-            const [pd, Nd, Wd, Pd] = dd.tideChartWater;
-            return function(dd, Jd, kd, pd, Nd, Wd, Pd) {
-              return ((Nd - dd) / (kd + Pd)) ** 2 + ((Wd - Jd) / (pd + Pd)) ** 2 <= 1
-            }(pd, Nd, Wd, Pd, Jd, kd, 2) ? Ap(dd, Jd, kd) : -1
-          }(pd, dd, Jd);
-        return (Nd !== this.hereIsland || Wd !== this.hereCell) && (this.hereIsland = Nd, this.hereCell = Wd, null !== Nd && (this.lastIsland = Nd), !0)
+      locate(QQ, FQ) {
+        var wQ;
+        const LQ = null === this.message || Number.isNaN(QQ) ? null : BL(this.message, QQ, FQ),
+          qQ = null !== (wQ = null === LQ || void 0 === LQ ? void 0 : LQ.tideChartIsland) && void 0 !== wQ ? wQ : null,
+          oQ = null === LQ ? -1 : function(QQ, FQ, wQ) {
+            const [LQ, qQ, oQ, DQ] = QQ.tideChartWater;
+            return function(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
+              return ((qQ - QQ) / (wQ + DQ)) ** 2 + ((oQ - FQ) / (LQ + DQ)) ** 2 <= 1
+            }(LQ, qQ, oQ, DQ, FQ, wQ, 2) ? yL(QQ, FQ, wQ) : -1
+          }(LQ, QQ, FQ);
+        return (qQ !== this.hereIsland || oQ !== this.hereCell) && (this.hereIsland = qQ, this.hereCell = oQ, null !== qQ && (this.lastIsland = qQ), !0)
       }
-      afterRender(dd) {
+      afterRender(QQ) {
         if (null === this.message) return;
-        this.lastX = null === dd ? Number.NaN : dd[0], this.lastZ = null === dd ? Number.NaN : dd[2];
-        const Jd = this.locate(this.lastX, this.lastZ),
-          kd = this.expirePulses();
-        (Jd || kd || this.turnsChanged()) && this.emit()
+        this.lastX = null === QQ ? Number.NaN : QQ[0], this.lastZ = null === QQ ? Number.NaN : QQ[2];
+        const FQ = this.locate(this.lastX, this.lastZ),
+          wQ = this.expirePulses();
+        (FQ || wQ || this.turnsChanged()) && this.emit()
       }
       turnsChanged() {
-        const dd = this.now();
-        return !(!this.open || dd - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = dd, JN(this.translate, this.message.tideChartTurnsInMs, dd - this.receivedAtMs) !== this.snapshot.turnsText)
+        const QQ = this.now();
+        return !(!this.open || QQ - this.turnsCheckedAtMs < 3e4 || null === this.message) && (this.turnsCheckedAtMs = QQ, dL(this.translate, this.message.tideChartTurnsInMs, QQ - this.receivedAtMs) !== this.snapshot.turnsText)
       }
-      castLanded(dd, Jd) {
-        const kd = null === this.message ? null : dN(this.message, dd, Jd);
-        if (null === kd) return;
-        const pd = Ap(kd, dd, Jd);
-        0 === (kd.tideChartPreBlank & 1 << pd) && (this.cast = {
-          island: kd.tideChartIsland,
-          cell: pd,
+      castLanded(QQ, FQ) {
+        const wQ = null === this.message ? null : BL(this.message, QQ, FQ);
+        if (null === wQ) return;
+        const LQ = yL(wQ, QQ, FQ);
+        0 === (wQ.tideChartPreBlank & 1 << LQ) && (this.cast = {
+          island: wQ.tideChartIsland,
+          cell: LQ,
           token: ++this.castToken,
           atMs: this.now()
         }, this.emit())
       }
       expirePulses() {
-        const dd = this.now();
-        let Jd = !1;
-        return 0 !== this.pulse.cells && dd - this.pulse.atMs >= 1500 && (this.pulse = {
+        const QQ = this.now();
+        let FQ = !1;
+        return 0 !== this.pulse.cells && QQ - this.pulse.atMs >= 1500 && (this.pulse = {
           ...this.pulse,
           cells: 0
-        }, Jd = !0), null !== this.cast && dd - this.cast.atMs >= 1500 && (this.cast = null, Jd = !0), Jd
+        }, FQ = !0), null !== this.cast && QQ - this.cast.atMs >= 1500 && (this.cast = null, FQ = !0), FQ
       }
-      setTranslator(dd) {
-        this.translate = dd, this.emit()
+      setTranslator(QQ) {
+        this.translate = QQ, this.emit()
       }
       isEnabled() {
         return null !== this.message && this.message.tideCharts.length > 0
@@ -4284,62 +4284,62 @@ export const modules = {
       onClosed() {
         this.picked = null
       }
-      findChart(dd, Jd) {
-        var kd;
-        return null !== (kd = dd.tideCharts.find((dd => dd.tideChartIsland === Jd))) && void 0 !== kd ? kd : null
+      findChart(QQ, FQ) {
+        var wQ;
+        return null !== (wQ = QQ.tideCharts.find((QQ => QQ.tideChartIsland === FQ))) && void 0 !== wQ ? wQ : null
       }
-      describe(dd) {
-        var Jd, kd, pd;
-        const Nd = dd.tideChartIsland,
-          Wd = [];
-        for (let Qd = 0; Qd < 25; Qd++) {
-          const Jd = 1 << Qd;
-          0 !== (dd.tideChartLit & Jd) ? Wd.push("lit") : 0 !== (dd.tideChartClear & Jd) ? Wd.push("clear") : 0 !== (dd.tideChartPreBlank & Jd) ? Wd.push("shore") : Wd.push("water")
+      describe(QQ) {
+        var FQ, wQ, LQ;
+        const qQ = QQ.tideChartIsland,
+          oQ = [];
+        for (let YQ = 0; YQ < 25; YQ++) {
+          const FQ = 1 << YQ;
+          0 !== (QQ.tideChartLit & FQ) ? oQ.push("lit") : 0 !== (QQ.tideChartClear & FQ) ? oQ.push("clear") : 0 !== (QQ.tideChartPreBlank & FQ) ? oQ.push("shore") : oQ.push("water")
         }
-        const Pd = function(dd) {
-            let Jd = 0;
-            for (let kd = dd >>> 0; 0 !== kd; kd &= kd - 1) Jd++;
-            return Jd
-          }(dd.tideChartLit),
-          Zd = dd.tideChartInkCount,
-          gd = this.translate(dd.tideChartIslandNameKey),
-          Cd = this.translate("skyblockGame:tideChartsLit", {
-            lit: String(Pd),
-            ink: String(Zd)
+        const DQ = function(QQ) {
+            let FQ = 0;
+            for (let wQ = QQ >>> 0; 0 !== wQ; wQ &= wQ - 1) FQ++;
+            return FQ
+          }(QQ.tideChartLit),
+          kQ = QQ.tideChartInkCount,
+          vQ = this.translate(QQ.tideChartIslandNameKey),
+          mQ = this.translate("skyblockGame:tideChartsLit", {
+            lit: String(DQ),
+            ink: String(kQ)
           }),
-          Kd = null === dd.tideChartPictureNameKey ? null : this.translate(dd.tideChartPictureNameKey),
-          od = this.hereIsland === Nd && -1 !== this.hereCell ? this.hereCell : null,
-          ld = [`${gd}: ${Cd}.`];
-        if (null !== Kd && ld.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
-            picture: Kd
-          })), null !== od) {
-          const dd = Math.floor(od / 5) + 1,
-            Jd = od % 5 + 1;
-          ld.push(this.translate("skyblockGame:tideChartsHereCell", {
-            row: String(dd),
-            column: String(Jd)
+          uQ = null === QQ.tideChartPictureNameKey ? null : this.translate(QQ.tideChartPictureNameKey),
+          HQ = this.hereIsland === qQ && -1 !== this.hereCell ? this.hereCell : null,
+          bQ = [`${vQ}: ${mQ}.`];
+        if (null !== uQ && bQ.push(this.translate("skyblockGame:tideChartsPictureRevealed", {
+            picture: uQ
+          })), null !== HQ) {
+          const QQ = Math.floor(HQ / 5) + 1,
+            FQ = HQ % 5 + 1;
+          bQ.push(this.translate("skyblockGame:tideChartsHereCell", {
+            row: String(QQ),
+            column: String(FQ)
           }))
         }
         return {
-          island: Nd,
-          islandName: gd,
-          cells: Wd,
-          hereCell: od,
-          lit: Pd,
-          ink: Zd,
-          litText: Cd,
-          pictureName: Kd,
-          gridLabel: ld.join(" "),
-          pulseCells: this.pulse.island === Nd ? this.pulse.cells : 0,
+          island: qQ,
+          islandName: vQ,
+          cells: oQ,
+          hereCell: HQ,
+          lit: DQ,
+          ink: kQ,
+          litText: mQ,
+          pictureName: uQ,
+          gridLabel: bQ.join(" "),
+          pulseCells: this.pulse.island === qQ ? this.pulse.cells : 0,
           pulseToken: this.pulse.token,
-          castCell: (null === (Jd = this.cast) || void 0 === Jd ? void 0 : Jd.island) === Nd ? this.cast.cell : null,
-          castToken: null !== (kd = null === (pd = this.cast) || void 0 === pd ? void 0 : pd.token) && void 0 !== kd ? kd : 0
+          castCell: (null === (FQ = this.cast) || void 0 === FQ ? void 0 : FQ.island) === qQ ? this.cast.cell : null,
+          castToken: null !== (wQ = null === (LQ = this.cast) || void 0 === LQ ? void 0 : LQ.token) && void 0 !== wQ ? wQ : 0
         }
       }
       buildSnapshot() {
-        var dd, Jd, kd;
-        const pd = this.message;
-        if (null === pd || 0 === pd.tideCharts.length) return {
+        var QQ, FQ, wQ;
+        const LQ = this.message;
+        if (null === LQ || 0 === LQ.tideCharts.length) return {
           enabled: !1,
           open: !1,
           chip: null,
@@ -4348,22 +4348,22 @@ export const modules = {
           bookText: "",
           tabs: []
         };
-        const Nd = this.findChart(pd, this.hereIsland),
-          Wd = null !== (dd = null !== (Jd = null !== (kd = this.findChart(pd, this.open ? this.picked : null)) && void 0 !== kd ? kd : Nd) && void 0 !== Jd ? Jd : this.findChart(pd, this.lastIsland)) && void 0 !== dd ? dd : pd.tideCharts[0],
-          Pd = null === Nd ? null : this.describe(Nd);
+        const qQ = this.findChart(LQ, this.hereIsland),
+          oQ = null !== (QQ = null !== (FQ = null !== (wQ = this.findChart(LQ, this.open ? this.picked : null)) && void 0 !== wQ ? wQ : qQ) && void 0 !== FQ ? FQ : this.findChart(LQ, this.lastIsland)) && void 0 !== QQ ? QQ : LQ.tideCharts[0],
+          DQ = null === qQ ? null : this.describe(qQ);
         return this.turnsCheckedAtMs = this.now(), {
           enabled: !0,
           open: this.open,
-          chip: Pd,
-          card: Wd === Nd ? Pd : this.describe(Wd),
-          turnsText: JN(this.translate, pd.tideChartTurnsInMs, this.now() - this.receivedAtMs),
+          chip: DQ,
+          card: oQ === qQ ? DQ : this.describe(oQ),
+          turnsText: dL(this.translate, LQ.tideChartTurnsInMs, this.now() - this.receivedAtMs),
           bookText: this.translate("skyblockGame:tideChartsBook", {
-            count: String(pd.tideChartBookCount)
+            count: String(LQ.tideChartBookCount)
           }),
-          tabs: pd.tideCharts.map((dd => ({
-            island: dd.tideChartIsland,
-            name: this.translate(dd.tideChartIslandNameKey),
-            selected: dd.tideChartIsland === Wd.tideChartIsland
+          tabs: LQ.tideCharts.map((QQ => ({
+            island: QQ.tideChartIsland,
+            name: this.translate(QQ.tideChartIslandNameKey),
+            selected: QQ.tideChartIsland === oQ.tideChartIsland
           })))
         }
       }
@@ -4371,173 +4371,173 @@ export const modules = {
         this.message = null, this.hereIsland = null, this.hereCell = -1, this.cast = null, super.dispose()
       }
     }
-    const pN = "skyblockRegularsView",
-      NN = {
+    const Fq = "skyblockRegularsView",
+      wq = {
         goal: "skyblockGame:regularsGiftTint",
         given: "skyblockGame:regularsGiftTint",
         owed: "skyblockGame:regularsGiftTintOwed"
       },
-      WN = {
+      Lq = {
         goal: "skyblockGame:regularsCharmGoal",
         given: "skyblockGame:regularsCharmGiven",
         owed: "skyblockGame:regularsCharmOwed"
       };
 
-    function PN(dd, Jd) {
-      return "given" === dd ? Jd.given : "owed" === dd ? Jd.owed : Jd.goal
+    function qq(QQ, FQ) {
+      return "given" === QQ ? FQ.given : "owed" === QQ ? FQ.owed : FQ.goal
     }
-    class ZN extends od {
-      constructor(dd, Jd, kd, pd) {
-        super(dd, kd, pd), this.translate = Jd, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = dd => dd, this.openIsland = dd => {
-          this.selected = dd, this.openedFromReachLog = !0, this.show()
-        }, this.selectIsland = dd => {
-          this.selected = dd, this.emit()
+    class oq extends HQ {
+      constructor(QQ, FQ, wQ, LQ) {
+        super(QQ, wQ, LQ), this.translate = FQ, this.snapshot = void 0, this.message = null, this.selected = "", this.openedFromReachLog = !1, this.itemName = QQ => QQ, this.openIsland = QQ => {
+          this.selected = QQ, this.openedFromReachLog = !0, this.show()
+        }, this.selectIsland = QQ => {
+          this.selected = QQ, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      ZL(dd) {
-        this.message = dd, this.emit()
+      bx(QQ) {
+        this.message = QQ, this.emit()
       }
       isOverReachLog() {
         return this.open && this.openedFromReachLog
       }
       takeReturnToReachLog() {
-        const dd = this.openedFromReachLog;
-        return this.openedFromReachLog = !1, dd
+        const QQ = this.openedFromReachLog;
+        return this.openedFromReachLog = !1, QQ
       }
-      setTranslator(dd, Jd, kd) {
-        this.translate = dd, void 0 !== kd && (this.itemName = kd), this.emit()
+      setTranslator(QQ, FQ, wQ) {
+        this.translate = QQ, void 0 !== wQ && (this.itemName = wQ), this.emit()
       }
       isEnabled() {
         return null !== this.message
       }
-      describeGift(dd, Jd, kd) {
+      describeGift(QQ, FQ, wQ) {
         return {
-          text: this.translate(PN(dd, Jd), kd),
-          given: "given" === dd
+          text: this.translate(qq(QQ, FQ), wQ),
+          given: "given" === QQ
         }
       }
-      describeRegular(dd, Jd) {
-        const kd = this.translate,
-          pd = null !== dd.regularKg,
-          Nd = dd.regularMeetings,
-          Wd = pd ? 0 === Nd ? kd("skyblockGame:regularsNotMet") : 1 === Nd ? kd("skyblockGame:regularsMeetingsOne") : kd("skyblockGame:regularsMeetings", {
-            count: Nd
+      describeRegular(QQ, FQ) {
+        const wQ = this.translate,
+          LQ = null !== QQ.regularKg,
+          qQ = QQ.regularMeetings,
+          oQ = LQ ? 0 === qQ ? wQ("skyblockGame:regularsNotMet") : 1 === qQ ? wQ("skyblockGame:regularsMeetingsOne") : wQ("skyblockGame:regularsMeetings", {
+            count: qQ
           }) : "";
         return {
-          id: dd.regularId,
-          name: kd(dd.regularNameKey),
-          line: kd(dd.regularLineKey),
-          itemName: dd.regularFishItem,
-          fishName: this.itemName(dd.regularFishItem),
-          tagged: pd,
-          size: null === dd.regularKg ? kd("skyblockGame:regularsNotTagged") : kd("skyblockGame:regularsSize", {
-            kg: dd.regularKg.toFixed(1)
+          id: QQ.regularId,
+          name: wQ(QQ.regularNameKey),
+          line: wQ(QQ.regularLineKey),
+          itemName: QQ.regularFishItem,
+          fishName: this.itemName(QQ.regularFishItem),
+          tagged: LQ,
+          size: null === QQ.regularKg ? wQ("skyblockGame:regularsNotTagged") : wQ("skyblockGame:regularsSize", {
+            kg: QQ.regularKg.toFixed(1)
           }),
-          meetings: Wd,
-          chance: kd("skyblockGame:regularsChance", {
-            count: dd.regularOneInCasts
+          meetings: oQ,
+          chance: wQ("skyblockGame:regularsChance", {
+            count: QQ.regularOneInCasts
           }),
-          resting: dd.regularRestingToday,
+          resting: QQ.regularRestingToday,
           gifts: [{
-            text: kd("skyblockGame:regularsGiftFlare"),
-            given: Nd >= 3
-          }, this.describeGift(dd.regularTintGift, NN, {
-            tint: kd(dd.regularTintNameKey)
+            text: wQ("skyblockGame:regularsGiftFlare"),
+            given: qQ >= 3
+          }, this.describeGift(QQ.regularTintGift, wq, {
+            tint: wQ(QQ.regularTintNameKey)
           })],
-          history: [...dd.regularHistory].reverse().map((dd => {
-            const pd = dd.regularMeetingKg.toFixed(1),
-              Nd = Jd - dd.regularMeetingDay;
-            return Nd <= 0 ? kd("skyblockGame:regularsToday", {
-              kg: pd
-            }) : kd("skyblockGame:regularsDaysAgo", {
-              days: Nd,
-              kg: pd
+          history: [...QQ.regularHistory].reverse().map((QQ => {
+            const LQ = QQ.regularMeetingKg.toFixed(1),
+              qQ = FQ - QQ.regularMeetingDay;
+            return qQ <= 0 ? wQ("skyblockGame:regularsToday", {
+              kg: LQ
+            }) : wQ("skyblockGame:regularsDaysAgo", {
+              days: qQ,
+              kg: LQ
             })
           }))
         }
       }
-      describeIsland(dd, Jd) {
+      describeIsland(QQ, FQ) {
         return {
-          id: dd.regularsIslandId,
-          name: this.translate(dd.regularsIslandNameKey),
-          charm: this.describeGift(dd.regularsCharmGift, WN, {
-            charm: this.translate(dd.regularsCharmNameKey)
+          id: QQ.regularsIslandId,
+          name: this.translate(QQ.regularsIslandNameKey),
+          charm: this.describeGift(QQ.regularsCharmGift, Lq, {
+            charm: this.translate(QQ.regularsCharmNameKey)
           }),
-          regulars: dd.regularsList.map((dd => this.describeRegular(dd, Jd)))
+          regulars: QQ.regularsList.map((QQ => this.describeRegular(QQ, FQ)))
         }
       }
       buildSnapshot() {
-        var dd, Jd, kd, pd;
-        const Nd = this.message;
-        if (null === Nd) return {
+        var QQ, FQ, wQ, LQ;
+        const qQ = this.message;
+        if (null === qQ) return {
           enabled: !1,
           open: !1,
           selected: "",
           islands: []
         };
-        const Wd = Nd.regularsIslands.map((dd => this.describeIsland(dd, Nd.regularsToday))),
-          Pd = null !== (dd = null !== (Jd = null === (kd = Wd.find((dd => dd.id === this.selected))) || void 0 === kd ? void 0 : kd.id) && void 0 !== Jd ? Jd : null === (pd = Wd[0]) || void 0 === pd ? void 0 : pd.id) && void 0 !== dd ? dd : "";
+        const oQ = qQ.regularsIslands.map((QQ => this.describeIsland(QQ, qQ.regularsToday))),
+          DQ = null !== (QQ = null !== (FQ = null === (wQ = oQ.find((QQ => QQ.id === this.selected))) || void 0 === wQ ? void 0 : wQ.id) && void 0 !== FQ ? FQ : null === (LQ = oQ[0]) || void 0 === LQ ? void 0 : LQ.id) && void 0 !== QQ ? QQ : "";
         return {
           enabled: !0,
           open: this.open,
-          selected: Pd,
-          islands: Wd
+          selected: DQ,
+          islands: oQ
         }
       }
       dispose() {
         this.message = null, super.dispose()
       }
     }
-    const gN = "skyblockHiddenWatersView";
-    class CN {
-      constructor(dd) {
-        this.nO = dd, this.snapshot = null
+    const Dq = "skyblockHiddenWatersView";
+    class kq {
+      constructor(QQ) {
+        this.GA = QQ, this.snapshot = null
       }
       getSnapshot() {
         return this.snapshot
       }
-      ZL(dd) {
-        this.snapshot = function(dd) {
-          const [Jd, kd] = dd.hiddenWatersMapSize, pd = (dd, pd) => ({
-            left: 1 - dd / Jd,
-            top: pd / kd
-          }), Nd = new Map;
-          for (const [Pd, Zd] of dd.hiddenWatersGlimpses) {
-            var Wd;
-            const dd = null !== (Wd = Nd.get(Pd)) && void 0 !== Wd ? Wd : [];
-            dd.push(Zd), Nd.set(Pd, dd)
+      bx(QQ) {
+        this.snapshot = function(QQ) {
+          const [FQ, wQ] = QQ.hiddenWatersMapSize, LQ = (QQ, LQ) => ({
+            left: 1 - QQ / FQ,
+            top: LQ / wQ
+          }), qQ = new Map;
+          for (const [DQ, kQ] of QQ.hiddenWatersGlimpses) {
+            var oQ;
+            const QQ = null !== (oQ = qQ.get(DQ)) && void 0 !== oQ ? oQ : [];
+            QQ.push(kQ), qQ.set(DQ, QQ)
           }
           return {
-            found: dd.hiddenWatersFound,
-            total: dd.hiddenWatersTotal,
-            aspect: kd / Jd,
-            pins: dd.hiddenWatersPins.map((dd => {
-              let [Jd, kd] = dd;
-              return pd(Jd, kd)
+            found: QQ.hiddenWatersFound,
+            total: QQ.hiddenWatersTotal,
+            aspect: wQ / FQ,
+            pins: QQ.hiddenWatersPins.map((QQ => {
+              let [FQ, wQ] = QQ;
+              return LQ(FQ, wQ)
             })),
-            islands: dd.hiddenWatersIslands.map((dd => {
-              let [Nd, Wd, Pd, Zd] = dd;
+            islands: QQ.hiddenWatersIslands.map((QQ => {
+              let [qQ, oQ, DQ, kQ] = QQ;
               const {
-                left: gd,
-                top: Cd
-              } = pd(Pd + 1, Wd);
+                left: vQ,
+                top: mQ
+              } = LQ(DQ + 1, oQ);
               return {
-                left: gd,
-                top: Cd,
-                width: (Pd + 1 - Nd) / Jd,
-                height: (Zd + 1 - Wd) / kd
+                left: vQ,
+                top: mQ,
+                width: (DQ + 1 - qQ) / FQ,
+                height: (kQ + 1 - oQ) / wQ
               }
             })),
-            glimpses: Nd
+            glimpses: qQ
           }
-        }(dd), this.nO(this.snapshot)
+        }(QQ), this.GA(this.snapshot)
       }
     }
-    const KN = "skyblockDialogueView";
-    class oN extends od {
-      constructor(dd, Jd, kd, pd, Nd) {
-        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
-        super(dd, kd, pd), this.translate = Jd, this.requestDialogue = Nd, this.now = Wd, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
+    const vq = "skyblockDialogueView";
+    class mq extends HQ {
+      constructor(QQ, FQ, wQ, LQ, qQ) {
+        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now;
+        super(QQ, wQ, LQ), this.translate = FQ, this.requestDialogue = qQ, this.now = oQ, this.snapshot = void 0, this.enabled = !1, this.scripts = [], this.speakers = new Map, this.received = !1, this.selection = {
           kind: "character",
           npcId: null
         }, this.requestAvailableAt = 0, this.showCharacters = () => {
@@ -4545,122 +4545,122 @@ export const modules = {
             kind: "character",
             npcId: "character" === this.selection.kind ? this.selection.npcId : null
           }, this.request(), this.show()
-        }, this.showQuest = dd => {
+        }, this.showQuest = QQ => {
           this.selection = {
             kind: "quest",
-            questId: dd
+            questId: QQ
           }, this.request(), this.show()
-        }, this.selectCharacter = dd => {
+        }, this.selectCharacter = QQ => {
           this.selection = {
             kind: "character",
-            npcId: dd
+            npcId: QQ
           }, this.emit()
         }, this.snapshot = this.buildSnapshot()
       }
-      ZL(dd) {
-        this.received = !0, this.scripts = dd.questDialogueScripts, this.speakers = new Map(dd.questDialogueSpeakers.map((dd => [dd.dialogueSpeakerId, dd]))), this.emit()
+      bx(QQ) {
+        this.received = !0, this.scripts = QQ.questDialogueScripts, this.speakers = new Map(QQ.questDialogueSpeakers.map((QQ => [QQ.dialogueSpeakerId, QQ]))), this.emit()
       }
-      setTranslator(dd) {
-        this.translate = dd, this.emit()
+      setTranslator(QQ) {
+        this.translate = QQ, this.emit()
       }
       isEnabled() {
         return this.enabled
       }
       request() {
-        const dd = this.now();
-        dd >= this.requestAvailableAt && (this.requestAvailableAt = dd + 3e3, this.requestDialogue())
+        const QQ = this.now();
+        QQ >= this.requestAvailableAt && (this.requestAvailableAt = QQ + 3e3, this.requestDialogue())
       }
       buildSnapshot() {
-        var dd;
-        const Jd = {
+        var QQ;
+        const FQ = {
           enabled: this.enabled,
           open: this.open,
           loading: !this.received,
           completedLabel: this.translate("skyblockDialogue:completed")
         };
         if (!this.open) return {
-          ...Jd,
+          ...FQ,
           characters: [],
           questFocus: null,
           conversations: []
         };
-        const kd = this.selection;
-        if ("quest" === kd.kind) {
-          const dd = this.scripts.find((dd => dd.dialogueQuestId === kd.questId));
+        const wQ = this.selection;
+        if ("quest" === wQ.kind) {
+          const QQ = this.scripts.find((QQ => QQ.dialogueQuestId === wQ.questId));
           return {
-            ...Jd,
+            ...FQ,
             characters: [],
-            questFocus: kd.questId,
-            conversations: dd ? [this.conversation(dd)] : []
+            questFocus: wQ.questId,
+            conversations: QQ ? [this.conversation(QQ)] : []
           }
         }
-        const pd = [];
-        for (let Wd = this.scripts.length - 1; Wd >= 0; Wd--) {
-          const dd = this.scripts[Wd].dialogueLines;
-          for (let Jd = dd.length - 1; Jd >= 0; Jd--) pd.includes(dd[Jd].dialogueSpeakerId) || pd.push(dd[Jd].dialogueSpeakerId)
+        const LQ = [];
+        for (let oQ = this.scripts.length - 1; oQ >= 0; oQ--) {
+          const QQ = this.scripts[oQ].dialogueLines;
+          for (let FQ = QQ.length - 1; FQ >= 0; FQ--) LQ.includes(QQ[FQ].dialogueSpeakerId) || LQ.push(QQ[FQ].dialogueSpeakerId)
         }
-        const Nd = null !== kd.npcId && pd.includes(kd.npcId) ? kd.npcId : null !== (dd = pd[0]) && void 0 !== dd ? dd : null;
+        const qQ = null !== wQ.npcId && LQ.includes(wQ.npcId) ? wQ.npcId : null !== (QQ = LQ[0]) && void 0 !== QQ ? QQ : null;
         return {
-          ...Jd,
-          characters: pd.map((dd => {
-            var Jd, kd;
+          ...FQ,
+          characters: LQ.map((QQ => {
+            var FQ, wQ;
             return {
-              id: dd,
-              styling: null !== (Jd = null === (kd = this.speakers.get(dd)) || void 0 === kd ? void 0 : kd.dialogueSpeakerStyling) && void 0 !== Jd ? Jd : dd,
-              selected: dd === Nd
+              id: QQ,
+              styling: null !== (FQ = null === (wQ = this.speakers.get(QQ)) || void 0 === wQ ? void 0 : wQ.dialogueSpeakerStyling) && void 0 !== FQ ? FQ : QQ,
+              selected: QQ === qQ
             }
           })),
           questFocus: null,
-          conversations: this.scripts.filter((dd => dd.dialogueLines.some((dd => dd.dialogueSpeakerId === Nd)))).map((dd => this.conversation(dd))).reverse()
+          conversations: this.scripts.filter((QQ => QQ.dialogueLines.some((QQ => QQ.dialogueSpeakerId === qQ)))).map((QQ => this.conversation(QQ))).reverse()
         }
       }
-      conversation(dd) {
-        let Jd = null;
+      conversation(QQ) {
+        let FQ = null;
         return {
-          questId: dd.dialogueQuestId,
-          questName: this.translate(dd.dialogueQuestNameKey),
-          completed: dd.dialogueQuestCompleted,
-          lines: dd.dialogueLines.map(((dd, kd) => {
-            var pd;
-            const Nd = dd.dialogueSpeakerId === Jd || null === (pd = this.speakers.get(dd.dialogueSpeakerId)) || void 0 === pd ? void 0 : pd.dialogueSpeakerStyling;
-            return Jd = dd.dialogueSpeakerId, {
-              key: kd,
+          questId: QQ.dialogueQuestId,
+          questName: this.translate(QQ.dialogueQuestNameKey),
+          completed: QQ.dialogueQuestCompleted,
+          lines: QQ.dialogueLines.map(((QQ, wQ) => {
+            var LQ;
+            const qQ = QQ.dialogueSpeakerId === FQ || null === (LQ = this.speakers.get(QQ.dialogueSpeakerId)) || void 0 === LQ ? void 0 : LQ.dialogueSpeakerStyling;
+            return FQ = QQ.dialogueSpeakerId, {
+              key: wQ,
               display: {
                 line: {
-                  translationKey: dd.dialogueLineKey,
-                  params: this.params(dd.dialogueLineParams)
+                  translationKey: QQ.dialogueLineKey,
+                  params: this.params(QQ.dialogueLineParams)
                 },
-                speakerName: Nd,
+                speakerName: qQ,
                 animateIn: !1
               }
             }
           }))
         }
       }
-      params(dd) {
-        if (void 0 !== dd) return Object.fromEntries(Object.entries(dd).map((dd => {
-          let [Jd, kd] = dd;
-          return [Jd, "string" === typeof kd ? kd : this.translate(kd.translationKey)]
+      params(QQ) {
+        if (void 0 !== QQ) return Object.fromEntries(Object.entries(QQ).map((QQ => {
+          let [FQ, wQ] = QQ;
+          return [FQ, "string" === typeof wQ ? wQ : this.translate(wQ.translationKey)]
         })))
       }
     }
-    var lN = kd(593),
-      QN = kd(1288),
-      LN = kd(95);
-    const ON = "skyblockAutographsView";
+    var uq = wQ(600),
+      Hq = wQ(1282),
+      bq = wQ(96);
+    const Yq = "skyblockAutographsView";
 
-    function eN(dd) {
-      const Jd = lN.i[dd];
+    function xq(QQ) {
+      const FQ = uq.m[QQ];
       return {
-        label: Jd.chatTag.map((dd => dd.str)).join(""),
-        icon: Jd.icon,
-        colour: Jd.mainRGB
+        label: FQ.chatTag.map((QQ => QQ.str)).join(""),
+        icon: FQ.icon,
+        colour: FQ.mainRGB
       }
     }
-    class RN extends od {
-      constructor(dd) {
-        let Jd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
-        super(dd, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = Jd, this.signatures = null, this.snapshot = {
+    class Aq extends HQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "en-GB";
+        super(QQ, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {}, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {}), this.locale = FQ, this.signatures = null, this.snapshot = {
           enabled: !1,
           open: !1,
           entries: [],
@@ -4668,12 +4668,12 @@ export const modules = {
           rankTotal: 0
         }
       }
-      ZL(dd) {
-        this.signatures = dd.autographSignatures, dd.autographOpen ? this.show() : this.emit()
+      bx(QQ) {
+        this.signatures = QQ.autographSignatures, QQ.autographOpen ? this.show() : this.emit()
       }
-      setTranslator(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
-        this.locale = Jd, this.emit()
+      setTranslator(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.locale;
+        this.locale = FQ, this.emit()
       }
       dispose() {
         this.signatures = null, super.dispose()
@@ -4682,256 +4682,256 @@ export const modules = {
         return null !== this.signatures
       }
       buildSnapshot() {
-        var dd;
-        const Jd = null !== (dd = this.signatures) && void 0 !== dd ? dd : [],
-          kd = new Intl.DateTimeFormat(this.locale, {
+        var QQ;
+        const FQ = null !== (QQ = this.signatures) && void 0 !== QQ ? QQ : [],
+          wQ = new Intl.DateTimeFormat(this.locale, {
             dateStyle: "medium"
           }),
-          pd = [...Jd].sort(((dd, Jd) => Number(null !== Jd.autographRank) - Number(null !== dd.autographRank) || Jd.autographSignedAtMs - dd.autographSignedAtMs)).map((dd => ({
-            key: `${dd.autographSignedAtMs}|${dd.autographSignerName}`,
-            name: (0, QN.d)(dd.autographSignerName, !LN.featureFlags.canSeeRealPlayerNames),
-            rank: null === dd.autographRank ? null : eN(dd.autographRank),
-            signedOn: kd.format(dd.autographSignedAtMs)
+          LQ = [...FQ].sort(((QQ, FQ) => Number(null !== FQ.autographRank) - Number(null !== QQ.autographRank) || FQ.autographSignedAtMs - QQ.autographSignedAtMs)).map((QQ => ({
+            key: `${QQ.autographSignedAtMs}|${QQ.autographSignerName}`,
+            name: (0, Hq.e)(QQ.autographSignerName, !bq.featureFlags.canSeeRealPlayerNames),
+            rank: null === QQ.autographRank ? null : xq(QQ.autographRank),
+            signedOn: wQ.format(QQ.autographSignedAtMs)
           })));
         return {
           enabled: this.isEnabled(),
           open: this.open,
-          entries: pd,
-          total: pd.length,
-          rankTotal: pd.filter((dd => null !== dd.rank)).length
+          entries: LQ,
+          total: LQ.length,
+          rankTotal: LQ.filter((QQ => null !== QQ.rank)).length
         }
       }
     }
-    const IN = "skyblockHudView",
-      GN = () => {},
-      vN = {
+    const tq = "skyblockHudView",
+      eq = () => {},
+      Mq = {
         getItem: () => null,
-        setItem: GN,
-        removeItem: GN
+        setItem: eq,
+        removeItem: eq
       };
-    class xN {
-      constructor(dd) {
+    class Gq {
+      constructor(QQ) {
         let {
-          translate: Jd,
-          translateWithIcons: kd,
-          setMenuOpen: pd = GN,
-          dismissMenu: Nd = () => {
-            pd(!1)
+          translate: FQ,
+          translateWithIcons: wQ,
+          setMenuOpen: LQ = eq,
+          dismissMenu: qQ = () => {
+            LQ(!1)
           },
-          publishSkills: Wd = GN,
-          publishQuests: Pd = GN,
-          publishQuestNotification: Zd = GN,
-          publishDungeons: gd = GN,
-          publishCollections: Cd = GN,
-          publishMap: Kd = GN,
-          publishHud: od = GN,
-          publishPortalTransit: ld = GN,
-          publishDailyReward: Ld = GN,
-          publishMailbox: Od = GN,
-          publishQuestGraph: ed = GN,
-          publishForge: Rd = GN,
-          publishSmuggler: Id = GN,
-          publishKeepersChair: Gd = GN,
-          publishReachLog: vd = GN,
-          publishLampLight: xd = GN,
-          publishMagmaward: qd = GN,
-          publishGlowtide: sd = GN,
-          publishGlowMeter: ad = GN,
-          publishHushWait: Md = GN,
-          publishPassage: Fd = GN,
-          publishTideCharts: Yd = GN,
-          publishRegulars: md = GN,
-          publishHiddenWaters: bd = GN,
-          publishDialogue: Sd = GN,
-          publishAutographs: jd = GN,
-          isLoadingScreenUp: Xd = () => !1,
-          onDailyRewardCoinLanded: fd = GN,
-          onDailyRewardStarted: nd = GN,
-          onDailyRewardFinished: Ud = GN,
-          onDailyRewardItemLanded: yd = GN,
-          onMailboxStarted: Dd = GN,
-          journeyStorage: Td = vN,
-          requestTracking: Ed = GN,
-          requestTravel: cd = GN,
-          requestDungeonEnter: hd = GN,
-          requestQuestJump: rd = GN,
-          requestQuestArrive: ud = GN,
-          requestForge: td = GN,
-          requestSmuggle: Vd = GN,
-          requestKeepersChairAim: zd = GN,
-          requestReachLogOpen: Hd = GN,
-          requestLampLight: wd = GN,
-          requestDialogue: Ad = GN
-        } = dd;
-        this.navigation = void 0, this.map = void 0, this.compass = new Bd, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new Mp.b, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = dd => dd, this.close = () => {
-          for (const dd of this.panels) dd.close()
-        }, this.setMenuOpen = pd, this.publishHud = od, this.portalTransit = new Tk(ld, Td), this.magmaward = new Dp(qd), this.glowtide = new Ep(sd), this.glowMeter = new hp(ad), this.hushWait = new tp(Md), this.dailyReward = new hk(Ld, (() => Xd() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (dd => {
-          this.quests.setNotificationsHeld(dd)
+          publishSkills: oQ = eq,
+          publishQuests: DQ = eq,
+          publishQuestNotification: kQ = eq,
+          publishDungeons: vQ = eq,
+          publishCollections: mQ = eq,
+          publishMap: uQ = eq,
+          publishHud: HQ = eq,
+          publishPortalTransit: bQ = eq,
+          publishDailyReward: xQ = eq,
+          publishMailbox: AQ = eq,
+          publishQuestGraph: tQ = eq,
+          publishForge: eQ = eq,
+          publishSmuggler: MQ = eq,
+          publishKeepersChair: GQ = eq,
+          publishReachLog: pQ = eq,
+          publishLampLight: cQ = eq,
+          publishMagmaward: CQ = eq,
+          publishGlowtide: iQ = eq,
+          publishGlowMeter: WQ = eq,
+          publishHushWait: RQ = eq,
+          publishPassage: OQ = eq,
+          publishTideCharts: sQ = eq,
+          publishRegulars: rQ = eq,
+          publishHiddenWaters: IQ = eq,
+          publishDialogue: UQ = eq,
+          publishAutographs: NQ = eq,
+          isLoadingScreenUp: TQ = () => !1,
+          onDailyRewardCoinLanded: KQ = eq,
+          onDailyRewardStarted: zQ = eq,
+          onDailyRewardFinished: lQ = eq,
+          onDailyRewardItemLanded: jQ = eq,
+          onMailboxStarted: aQ = eq,
+          journeyStorage: XQ = Mq,
+          requestTracking: fQ = eq,
+          requestTravel: VQ = eq,
+          requestDungeonEnter: hQ = eq,
+          requestQuestJump: JQ = eq,
+          requestQuestArrive: EQ = eq,
+          requestForge: nQ = eq,
+          requestSmuggle: gQ = eq,
+          requestKeepersChairAim: PQ = eq,
+          requestReachLogOpen: ZQ = eq,
+          requestLampLight: yQ = eq,
+          requestDialogue: BQ = eq
+        } = QQ;
+        this.navigation = void 0, this.map = void 0, this.compass = new SQ, this.skills = void 0, this.quests = void 0, this.dungeons = void 0, this.collections = void 0, this.questGraph = void 0, this.forge = void 0, this.smuggler = void 0, this.keepersChair = void 0, this.reachLog = void 0, this.lampLight = void 0, this.commandPacer = new RL.b, this.passage = void 0, this.tideCharts = void 0, this.regulars = void 0, this.hiddenWaters = void 0, this.autographs = void 0, this.portalTransit = void 0, this.dailyReward = void 0, this.mailbox = void 0, this.magmaward = void 0, this.glowtide = void 0, this.glowMeter = void 0, this.hushWait = void 0, this.dialogue = void 0, this.panels = void 0, this.setMenuOpen = void 0, this.hudSnapshot = null, this.openingPanel = null, this.publishHud = void 0, this.resolveItemName = QQ => QQ, this.close = () => {
+          for (const QQ of this.panels) QQ.close()
+        }, this.setMenuOpen = LQ, this.publishHud = HQ, this.portalTransit = new Xw(bQ, XQ), this.magmaward = new aL(CQ), this.glowtide = new fL(iQ), this.glowMeter = new hL(WQ), this.hushWait = new EL(RQ), this.dailyReward = new hw(xQ, (() => TQ() || null !== this.portalTransit.getSnapshot() || null !== this.quests.getNotificationSnapshot() || null !== this.mailbox.getSnapshot()), (QQ => {
+          this.quests.setNotificationsHeld(QQ)
         }), (() => {
           null !== this.hudSnapshot && this.publishHud(this.getHudSnapshot())
-        }), fd, nd, Ud, yd);
-        const dJ = dd => {
-          this.panels.some((dd => dd.isOpen())) || (dd ? Nd() : this.setMenuOpen(!1))
+        }), KQ, zQ, lQ, jQ);
+        const dQ = QQ => {
+          this.panels.some((QQ => QQ.isOpen())) || (QQ ? qQ() : this.setMenuOpen(!1))
         };
-        this.skills = new Zk(Wd, Date.now, (() => {
+        this.skills = new Dw(oQ, Date.now, (() => {
           this.beforePanelOpen(this.skills)
-        }), Jd, void 0, void 0, dJ), this.quests = new Qk(Pd, Ed, Jd, (() => {
+        }), FQ, void 0, void 0, dQ), this.quests = new Hw(DQ, fQ, FQ, (() => {
           this.beforePanelOpen(this.quests)
-        }), void 0, void 0, dJ, Zd), this.dungeons = new ek(gd, Jd, (() => {
+        }), void 0, void 0, dQ, kQ), this.dungeons = new xw(vQ, FQ, (() => {
           this.beforePanelOpen(this.dungeons)
-        }), void 0, dJ, hd), this.collections = new Uk(Cd, Jd, (() => {
+        }), void 0, dQ, hQ), this.collections = new lw(mQ, FQ, (() => {
           this.beforePanelOpen(this.collections)
-        }), dJ), this.map = new Qd(Kd, cd, Jd, (() => {
+        }), dQ), this.map = new YQ(uQ, VQ, FQ, (() => {
           this.beforePanelOpen(this.map)
-        }), dJ), this.questGraph = new dp(ed, Jd, (() => {
+        }), dQ), this.questGraph = new dw(tQ, FQ, (() => {
           this.beforePanelOpen(this.questGraph)
-        }), dJ, rd, ud, Td), this.forge = new Ip(Rd, Jd, (() => {
+        }), dQ, JQ, EQ, XQ), this.forge = new eL(eQ, FQ, (() => {
           this.beforePanelOpen(this.forge)
-        }), dJ, td), this.smuggler = new xp(Id, Jd, (() => {
+        }), dQ, nQ), this.smuggler = new pL(MQ, FQ, (() => {
           this.beforePanelOpen(this.smuggler)
-        }), dJ, Vd), this.lampLight = new Up(xd, Jd, wd, this.commandPacer), this.keepersChair = new Yp(Gd, Jd, (() => {
+        }), dQ, gQ), this.lampLight = new lL(cQ, FQ, yQ, this.commandPacer), this.keepersChair = new sL(GQ, FQ, (() => {
           this.beforePanelOpen(this.keepersChair)
-        }), (dd => {
-          this.lampLight.onChairClosed(), dJ(dd)
-        }), zd, Date.now, this.commandPacer), this.reachLog = new fp(vd, Jd, (() => {
+        }), (QQ => {
+          this.lampLight.onChairClosed(), dQ(QQ)
+        }), PQ, Date.now, this.commandPacer), this.reachLog = new KL(pQ, FQ, (() => {
           this.beforePanelOpen(this.reachLog)
-        }), dJ, Hd, this.commandPacer), this.passage = new ap(Fd, Jd, (() => {
+        }), dQ, ZQ, this.commandPacer), this.passage = new WL(OQ, FQ, (() => {
           this.beforePanelOpen(this.passage)
-        }), dJ), this.tideCharts = new kN(Yd, Jd, (() => {
+        }), dQ), this.tideCharts = new Qq(sQ, FQ, (() => {
           this.beforePanelOpen(this.tideCharts)
-        }), dJ), this.regulars = new ZN(md, Jd, (() => {
+        }), dQ), this.regulars = new oq(rQ, FQ, (() => {
           this.beforePanelOpen(this.regulars)
-        }), (dd => {
-          this.regulars.takeReturnToReachLog() && !dd && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), dJ(dd)
-        })), this.hiddenWaters = new CN(bd), this.dialogue = new oN(Sd, Jd, (() => {
+        }), (QQ => {
+          this.regulars.takeReturnToReachLog() && !QQ && null === this.openingPanel && this.reachLog.isOpen() && this.reachLog.close(), dQ(QQ)
+        })), this.hiddenWaters = new kq(IQ), this.dialogue = new mq(UQ, FQ, (() => {
           this.beforePanelOpen(this.dialogue)
-        }), dJ, Ad), this.autographs = new RN(jd, (() => {
+        }), dQ, BQ), this.autographs = new Aq(NQ, (() => {
           this.beforePanelOpen(this.autographs)
-        }), dJ), this.mailbox = new Vk(Od, (() => Xd() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), Dd), this.quests.translateWithIcons = null !== kd && void 0 !== kd ? kd : null, this.skills.onLevelUp = dd => {
-          this.quests.notify(dd)
-        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new Wk(this.map, this.quests, this.compass, Jd)
+        }), dQ), this.mailbox = new gw(AQ, (() => TQ() || null !== this.portalTransit.getSnapshot() || null !== this.dailyReward.getSnapshot()), aQ), this.quests.translateWithIcons = null !== wQ && void 0 !== wQ ? wQ : null, this.skills.onLevelUp = QQ => {
+          this.quests.notify(QQ)
+        }, this.panels = [this.map, this.skills, this.quests, this.dungeons, this.collections, this.questGraph, this.forge, this.smuggler, this.keepersChair, this.reachLog, this.passage, this.tideCharts, this.regulars, this.dialogue, this.autographs], this.navigation = new qw(this.map, this.quests, this.compass, FQ)
       }
       getHudSnapshot() {
-        const dd = this.hudSnapshot,
-          Jd = this.dailyReward.getHeldCoins();
-        return null === dd || Jd <= 0 || !("hudPurseCoins" in dd) ? dd : {
-          ...dd,
-          hudPurseCoins: Math.max(0, dd.hudPurseCoins - Jd)
+        const QQ = this.hudSnapshot,
+          FQ = this.dailyReward.getHeldCoins();
+        return null === QQ || FQ <= 0 || !("hudPurseCoins" in QQ) ? QQ : {
+          ...QQ,
+          hudPurseCoins: Math.max(0, QQ.hudPurseCoins - FQ)
         }
       }
-      receiveHud(dd) {
-        this.hudSnapshot = dd, this.publishHud(this.getHudSnapshot())
+      receiveHud(QQ) {
+        this.hudSnapshot = QQ, this.publishHud(this.getHudSnapshot())
       }
-      beforePanelOpen(dd) {
+      beforePanelOpen(QQ) {
         this.setMenuOpen(!0);
-        const Jd = dd === this.regulars && this.regulars.isOverReachLog();
-        this.openingPanel = dd;
-        for (const kd of this.panels) kd === dd || Jd && kd === this.reachLog || kd.close();
+        const FQ = QQ === this.regulars && this.regulars.isOverReachLog();
+        this.openingPanel = QQ;
+        for (const wQ of this.panels) wQ === QQ || FQ && wQ === this.reachLog || wQ.close();
         this.openingPanel = null
       }
-      setTranslator(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Jd => this.resolveItemName(Jd, dd);
-        this.quests.translateWithIcons = null !== kd && void 0 !== kd ? kd : null, this.navigation.setTranslator(dd, Jd), this.lampLight.setTranslator(dd, Jd), this.mailbox.setItemName(pd);
-        for (const Nd of this.panels) Nd.setTranslator(dd, Jd, pd)
+      setTranslator(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : FQ => this.resolveItemName(FQ, QQ);
+        this.quests.translateWithIcons = null !== wQ && void 0 !== wQ ? wQ : null, this.navigation.setTranslator(QQ, FQ), this.lampLight.setTranslator(QQ, FQ), this.mailbox.setItemName(LQ);
+        for (const qQ of this.panels) qQ.setTranslator(QQ, FQ, LQ)
       }
       dispose() {
         this.navigation.dispose(), this.compass.dispose(), this.portalTransit.dispose(), this.dailyReward.dispose(), this.mailbox.dispose(), this.magmaward.dispose(), this.glowtide.dispose(), this.glowMeter.dispose(), this.hushWait.dispose(), this.lampLight.dispose(), this.commandPacer.dispose();
-        for (const dd of this.panels) dd.dispose()
+        for (const QQ of this.panels) QQ.dispose()
       }
     }
-    var qN = kd(1044),
-      BN = kd.n(qN),
-      sN = kd(22),
-      iN = kd(36772),
-      aN = kd(3247),
-      MN = kd(1924),
-      FN = kd(1904),
-      YN = kd(9257),
-      mN = kd(1211),
-      bN = kd(1459),
-      SN = kd(1103);
+    var pq = wQ(1070),
+      cq = wQ.n(pq),
+      Cq = wQ(17),
+      Sq = wQ(36228),
+      iq = wQ(3268),
+      Wq = wQ(1887),
+      Rq = wQ(1873),
+      Oq = wQ(9127),
+      sq = wQ(1207),
+      rq = wQ(1447),
+      Iq = wQ(1107);
 
-    function jN(dd) {
+    function Uq(QQ) {
       let {
-        controller: Jd,
-        minimap: kd,
-        children: pd
-      } = dd;
-      const Wd = (0, bN.i)(IN, Jd.getHudSnapshot()),
-        [Pd, Zd] = (0, ad.useState)(Jd.skills.getSnapshot().overallLevel);
-      (0, bN.h)(Pk, (dd => {
-        Zd(dd.overallLevel)
+        controller: FQ,
+        minimap: wQ,
+        children: LQ
+      } = QQ;
+      const oQ = (0, rq.i)(tq, FQ.getHudSnapshot()),
+        [DQ, kQ] = (0, WQ.useState)(FQ.skills.getSnapshot().overallLevel);
+      (0, rq.g)(ow, (QQ => {
+        kQ(QQ.overallLevel)
       }));
-      const gd = (0, ad.useRef)(null);
-      (0, bN.h)(ck, (dd => {
-        ! function(dd, Jd) {
-          if (null === dd || "function" !== typeof dd.animate) return;
-          const kd = Jd ? 1.35 : 1.15;
-          dd.animate([{
+      const vQ = (0, WQ.useRef)(null);
+      (0, rq.g)(Vw, (QQ => {
+        ! function(QQ, FQ) {
+          if (null === QQ || "function" !== typeof QQ.animate) return;
+          const wQ = FQ ? 1.35 : 1.15;
+          QQ.animate([{
             transform: "scale(1)"
           }, {
-            transform: `scale(${kd})`
+            transform: `scale(${wQ})`
           }, {
             transform: "scale(1)"
           }], {
-            duration: Jd ? 320 : 160,
+            duration: FQ ? 320 : 160,
             easing: "ease-out"
-          }), dd.classList.toggle("Receiving", !Jd), Jd && (dd.classList.remove("Shine"), dd.offsetWidth, dd.classList.add("Shine"))
-        }(gd.current, dd)
+          }), QQ.classList.toggle("Receiving", !FQ), FQ && (QQ.classList.remove("Shine"), QQ.offsetWidth, QQ.classList.add("Shine"))
+        }(vQ.current, QQ)
       }));
       const {
-        t: Cd
-      } = (0, mN.B)(), {
-        isTouchScreen: Kd
-      } = (0, sN.j)(["isTouchScreen"]), [od, ld] = (0, ad.useState)(null);
-      return (0, aN.i)(od, ".SkyblockRightHud"), null !== Wd || kd ? (0, SN.jsx)(iN.g, {
+        t: mQ
+      } = (0, sq.y)(), {
+        isTouchScreen: uQ
+      } = (0, Cq.l)(["isTouchScreen"]), [HQ, bQ] = (0, WQ.useState)(null);
+      return (0, iq.j)(HQ, ".SkyblockRightHud"), null !== oQ || wQ ? (0, Iq.jsx)(Sq.d, {
         placement: "topRight",
-        children: (0, SN.jsxs)("div", {
-          className: BN()("SkyblockRightHud", {
-            TouchScreen: Kd
+        children: (0, Iq.jsxs)("div", {
+          className: cq()("SkyblockRightHud", {
+            TouchScreen: uQ
           }),
-          children: [kd, null !== Wd && (0, SN.jsxs)("div", {
-            ref: ld,
+          children: [wQ, null !== oQ && (0, Iq.jsxs)("div", {
+            ref: bQ,
             className: "SkyblockRightHudCard",
-            children: ["hudHelpText" in Wd ? (0, SN.jsx)("div", {
+            children: ["hudHelpText" in oQ ? (0, Iq.jsx)("div", {
               className: "SkyblockHudHelp",
-              children: Wd.hudHelpText
-            }) : (0, SN.jsxs)(SN.Fragment, {
-              children: [(0, SN.jsxs)("div", {
+              children: oQ.hudHelpText
+            }) : (0, Iq.jsxs)(Iq.Fragment, {
+              children: [(0, Iq.jsxs)("div", {
                 className: "SkyblockHudStatus",
-                children: [(0, SN.jsxs)("span", {
+                children: [(0, Iq.jsxs)("span", {
                   className: "SkyblockHudIdentity",
-                  children: [(0, SN.jsx)("strong", {
+                  children: [(0, Iq.jsx)("strong", {
                     style: {
-                      color: Nd.M.cyanUiText
+                      color: qQ.K.cyanUiText
                     },
-                    children: Cd(Wd.hudZoneNameKey)
-                  }), null !== Pd && (0, SN.jsx)("span", {
+                    children: mQ(oQ.hudZoneNameKey)
+                  }), null !== DQ && (0, Iq.jsx)("span", {
                     style: {
-                      color: Nd.M.goldUiText
+                      color: qQ.K.goldUiText
                     },
-                    children: Cd("skyblockGame:level", {
-                      level: (0, YN.h)(Pd)
+                    children: mQ("skyblockGame:level", {
+                      level: (0, Oq.d)(DQ)
                     })
                   })]
-                }), (0, SN.jsxs)("span", {
+                }), (0, Iq.jsxs)("span", {
                   className: "SkyblockHudCoins",
-                  ref: gd,
-                  children: [(0, SN.jsx)("span", {
+                  ref: vQ,
+                  children: [(0, Iq.jsx)("span", {
                     "aria-hidden": "true",
-                    children: (0, SN.jsx)(MN.d, {
+                    children: (0, Iq.jsx)(Wq.e, {
                       itemName: "Gold Coin",
                       amount: 0
                     })
-                  }), (0, YN.h)(Wd.hudPurseCoins)]
+                  }), (0, Oq.d)(oQ.hudPurseCoins)]
                 })]
-              }), Wd.hudClockText.length > 0 && (0, SN.jsx)("div", {
+              }), oQ.hudClockText.length > 0 && (0, Iq.jsx)("div", {
                 className: "SkyblockHudClock",
-                children: (0, SN.jsx)(FN.c, {
-                  text: Wd.hudClockText
+                children: (0, Iq.jsx)(Rq.e, {
+                  text: oQ.hudClockText
                 })
               })]
-            }), pd, "hudZoneNameKey" in Wd && (0, SN.jsx)("div", {
+            }), LQ, "hudZoneNameKey" in oQ && (0, Iq.jsx)("div", {
               className: "SkyblockHudAddress",
               children: "www.bloxd.io"
             })]
@@ -4940,817 +4940,817 @@ export const modules = {
       }) : null
     }
 
-    function XN(dd) {
+    function Nq(QQ) {
       let {
-        icon: Jd
-      } = dd;
-      const kd = (0, ad.useCallback)((dd => {
-        null === dd || void 0 === dd || dd.replaceChildren(uJ(Jd))
-      }), [Jd]);
-      return (0, SN.jsx)("span", {
+        icon: FQ
+      } = QQ;
+      const wQ = (0, WQ.useCallback)((QQ => {
+        null === QQ || void 0 === QQ || QQ.replaceChildren(EF(FQ))
+      }), [FQ]);
+      return (0, Iq.jsx)("span", {
         className: "SkyblockMapIconSlot",
-        ref: kd
+        ref: wQ
       })
     }
 
-    function fN(dd) {
+    function Tq(QQ) {
       let {
-        controller: Jd
-      } = dd;
+        controller: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)();
-      return (0, SN.jsx)("div", {
+        t: wQ
+      } = (0, sq.y)();
+      return (0, Iq.jsx)("div", {
         className: "SkyblockMapPlayer",
-        ref: Jd.display.mountPlayer,
-        title: kd("skyblockGame:mapYouAreHere"),
-        children: (0, SN.jsx)(XN, {
+        ref: FQ.display.mountPlayer,
+        title: wQ("skyblockGame:mapYouAreHere"),
+        children: (0, Iq.jsx)(Nq, {
           icon: "player"
         })
       })
     }
-    const nN = kd(38694),
-      UN = Object.fromEntries(nN.keys().map((dd => [dd.replace(/^\.\/(.*)\.png$/, "$1"), nN(dd)])));
+    const Kq = wQ(38085),
+      zq = Object.fromEntries(Kq.keys().map((QQ => [QQ.replace(/^\.\/(.*)\.png$/, "$1"), Kq(QQ)])));
 
-    function yN(dd, Jd) {
-      var kd;
-      return null !== (kd = UN[dd]) && void 0 !== kd ? kd : UN[Jd]
+    function lq(QQ, FQ) {
+      var wQ;
+      return null !== (wQ = zq[QQ]) && void 0 !== wQ ? wQ : zq[FQ]
     }
 
-    function DN(dd) {
+    function jq(QQ) {
       let {
-        imageKey: Jd,
-        fallbackImageKey: kd,
-        geometryKey: pd,
-        alt: Nd,
-        className: Wd
-      } = dd;
-      const [Pd, Zd] = (0, ad.useState)((() => function(dd, Jd) {
+        imageKey: FQ,
+        fallbackImageKey: wQ,
+        geometryKey: LQ,
+        alt: qQ,
+        className: oQ
+      } = QQ;
+      const [DQ, kQ] = (0, WQ.useState)((() => function(QQ, FQ) {
         return [{
           id: 0,
-          imageKey: dd,
-          geometryKey: Jd,
+          imageKey: QQ,
+          geometryKey: FQ,
           phase: "shown"
         }]
-      }(Jd, pd))), gd = function(dd, Jd, kd) {
-        const pd = dd[dd.length - 1];
-        if (pd.imageKey === Jd && pd.geometryKey === kd) return dd;
-        const Nd = {
-          id: pd.id + 1,
-          imageKey: Jd,
-          geometryKey: kd,
+      }(FQ, LQ))), vQ = function(QQ, FQ, wQ) {
+        const LQ = QQ[QQ.length - 1];
+        if (LQ.imageKey === FQ && LQ.geometryKey === wQ) return QQ;
+        const qQ = {
+          id: LQ.id + 1,
+          imageKey: FQ,
+          geometryKey: wQ,
           phase: "entering"
         };
-        return pd.geometryKey === kd ? [{
-          ...pd,
+        return LQ.geometryKey === wQ ? [{
+          ...LQ,
           phase: "leaving"
-        }, Nd] : [Nd]
-      }(Pd, Jd, pd);
-      return gd !== Pd && Zd(gd), (0, SN.jsx)(SN.Fragment, {
-        children: gd.map((dd => (0, SN.jsx)("img", {
-          className: BN()("SkyblockMapTerrainImage", Wd, {
-            Entering: "entering" === dd.phase,
-            Leaving: "leaving" === dd.phase
+        }, qQ] : [qQ]
+      }(DQ, FQ, LQ);
+      return vQ !== DQ && kQ(vQ), (0, Iq.jsx)(Iq.Fragment, {
+        children: vQ.map((QQ => (0, Iq.jsx)("img", {
+          className: cq()("SkyblockMapTerrainImage", oQ, {
+            Entering: "entering" === QQ.phase,
+            Leaving: "leaving" === QQ.phase
           }),
-          src: yN(dd.imageKey, kd),
-          alt: "leaving" === dd.phase ? "" : Nd,
+          src: lq(QQ.imageKey, wQ),
+          alt: "leaving" === QQ.phase ? "" : qQ,
           onAnimationEnd: () => {
-            Zd((Jd => function(dd, Jd) {
-              return dd.flatMap((dd => dd.id !== Jd ? [dd] : "leaving" === dd.phase ? [] : [{
-                ...dd,
+            kQ((FQ => function(QQ, FQ) {
+              return QQ.flatMap((QQ => QQ.id !== FQ ? [QQ] : "leaving" === QQ.phase ? [] : [{
+                ...QQ,
                 phase: "shown"
               }]))
-            }(Jd, dd.id)))
+            }(FQ, QQ.id)))
           }
-        }, dd.id)))
+        }, QQ.id)))
       })
     }
-    var TN = kd(4389),
-      EN = kd(1461);
+    var aq = wQ(4376),
+      Xq = wQ(1451);
 
-    function cN(dd) {
-      if ("Tab" !== dd.key) return;
-      const Jd = Array.from(dd.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
-        kd = Jd.indexOf(document.activeElement);
-      var pd;
-      if (dd.shiftKey && kd <= 0) dd.preventDefault(), null === (pd = Jd.at(-1)) || void 0 === pd || pd.focus();
-      else if (!dd.shiftKey && (-1 === kd || kd === Jd.length - 1)) {
-        var Nd;
-        dd.preventDefault(), null === (Nd = Jd[0]) || void 0 === Nd || Nd.focus()
+    function fq(QQ) {
+      if ("Tab" !== QQ.key) return;
+      const FQ = Array.from(QQ.currentTarget.querySelectorAll('[role="button"][tabindex="0"], button:not(:disabled)')),
+        wQ = FQ.indexOf(document.activeElement);
+      var LQ;
+      if (QQ.shiftKey && wQ <= 0) QQ.preventDefault(), null === (LQ = FQ.at(-1)) || void 0 === LQ || LQ.focus();
+      else if (!QQ.shiftKey && (-1 === wQ || wQ === FQ.length - 1)) {
+        var qQ;
+        QQ.preventDefault(), null === (qQ = FQ[0]) || void 0 === qQ || qQ.focus()
       }
     }
 
-    function hN() {
-      const dd = (0, ad.useRef)(null);
-      return (0, ad.useCallback)((Jd => {
-        var kd;
-        Jd ? (dd.current = document.activeElement, Jd.focus()) : null === (kd = dd.current) || void 0 === kd || kd.focus()
+    function Vq() {
+      const QQ = (0, WQ.useRef)(null);
+      return (0, WQ.useCallback)((FQ => {
+        var wQ;
+        FQ ? (QQ.current = document.activeElement, FQ.focus()) : null === (wQ = QQ.current) || void 0 === wQ || wQ.focus()
       }), [])
     }
 
-    function rN(dd) {
+    function hq(QQ) {
       let {
-        percent: Jd,
-        label: kd,
-        levelUpToken: pd,
-        colour: Nd
-      } = dd;
-      return (0, SN.jsxs)("div", {
+        percent: FQ,
+        label: wQ,
+        levelUpToken: LQ,
+        colour: qQ
+      } = QQ;
+      return (0, Iq.jsxs)("div", {
         className: "SkillProgressBar",
         role: "progressbar",
-        "aria-label": kd,
+        "aria-label": wQ,
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Jd,
-        "aria-valuetext": kd,
-        children: [(0, SN.jsx)("div", {
+        "aria-valuenow": FQ,
+        "aria-valuetext": wQ,
+        children: [(0, Iq.jsx)("div", {
           className: "SkillProgressBarFill",
           style: {
-            transform: `scaleX(${Jd/100})`
+            transform: `scaleX(${FQ/100})`
           }
-        }), null !== pd && void 0 !== pd && (0, SN.jsx)("div", {
+        }), null !== LQ && void 0 !== LQ && (0, Iq.jsx)("div", {
           className: "SkillProgressBarLevelUp",
           style: {
-            "--skill-colour": Nd
+            "--skill-colour": qQ
           }
-        }, pd)]
+        }, LQ)]
       })
     }
 
-    function uN(dd) {
+    function Jq(QQ) {
       let {
-        mount: Jd
-      } = dd;
-      return (0, SN.jsx)("div", {
+        mount: FQ
+      } = QQ;
+      return (0, Iq.jsx)("div", {
         className: "SkyblockSearchArea",
-        ref: Jd,
+        ref: FQ,
         hidden: !0,
-        children: (0, SN.jsxs)("svg", {
+        children: (0, Iq.jsxs)("svg", {
           viewBox: "0 0 100 100",
           preserveAspectRatio: "none",
-          children: [(0, SN.jsx)("path", {
+          children: [(0, Iq.jsx)("path", {
             className: "SkyblockSearchAreaShadow"
-          }), (0, SN.jsx)("path", {
+          }), (0, Iq.jsx)("path", {
             className: "SkyblockSearchAreaDashes"
           })]
         })
       })
     }
 
-    function tN(dd, Jd, kd, pd) {
-      (0, ad.useLayoutEffect)((() => {
-        const Nd = dd.current;
-        if (!kd || null === Jd || void 0 === Jd || !Jd.local || !Nd) return;
-        const Wd = Array.from(Nd.querySelectorAll(".SkyblockMapNode")),
-          Pd = [...Jd.points, ...Jd.portals],
-          Zd = () => {
-            const dd = Nd.clientWidth,
-              kd = Nd.clientHeight,
-              Zd = Wd.map(((Nd, Wd) => {
-                const Zd = Pd[Wd];
+    function Eq(QQ, FQ, wQ, LQ) {
+      (0, WQ.useLayoutEffect)((() => {
+        const qQ = QQ.current;
+        if (!wQ || null === FQ || void 0 === FQ || !FQ.local || !qQ) return;
+        const oQ = Array.from(qQ.querySelectorAll(".SkyblockMapNode")),
+          DQ = [...FQ.points, ...FQ.portals],
+          kQ = () => {
+            const QQ = qQ.clientWidth,
+              wQ = qQ.clientHeight,
+              kQ = oQ.map(((qQ, oQ) => {
+                const kQ = DQ[oQ];
                 return {
-                  id: Zd.id,
-                  portal: Wd >= Jd.points.length,
-                  x: Zd.position[0] * dd / 100,
-                  y: Zd.position[1] * kd / 100,
-                  width: Nd.offsetWidth / pd,
-                  height: Nd.offsetHeight / pd
+                  id: kQ.id,
+                  portal: oQ >= FQ.points.length,
+                  x: kQ.position[0] * QQ / 100,
+                  y: kQ.position[1] * wQ / 100,
+                  width: qQ.offsetWidth / LQ,
+                  height: qQ.offsetHeight / LQ
                 }
               })),
-              gd = new Map(Pd.map(((dd, Jd) => [dd.id, Wd[Jd]])));
-            for (const Jd of function(dd, Jd, kd) {
-                const pd = [],
-                  Nd = [...dd].sort(((dd, Jd) => Number(Jd.portal) - Number(dd.portal) || dd.id.localeCompare(Jd.id)));
-                for (const Wd of Nd) {
-                  const dd = dd => Math.max(Wd.width / 2, Math.min(Jd - Wd.width / 2, dd)),
-                    Nd = dd => Math.max(Wd.height / 2, Math.min(kd - Wd.height / 2, dd)),
-                    Pd = [dd(Wd.x)],
-                    Zd = [Nd(Wd.y)];
-                  for (const Jd of pd) Pd.push(dd(Jd.x - (Jd.width + Wd.width) / 2 - 4), dd(Jd.x + (Jd.width + Wd.width) / 2 + 4)), Zd.push(Nd(Jd.y - (Jd.height + Wd.height) / 2 - 4), Nd(Jd.y + (Jd.height + Wd.height) / 2 + 4));
-                  let gd = {
-                      ...Wd,
-                      x: Pd[0],
-                      y: Zd[0]
+              vQ = new Map(DQ.map(((QQ, FQ) => [QQ.id, oQ[FQ]])));
+            for (const FQ of function(QQ, FQ, wQ) {
+                const LQ = [],
+                  qQ = [...QQ].sort(((QQ, FQ) => Number(FQ.portal) - Number(QQ.portal) || QQ.id.localeCompare(FQ.id)));
+                for (const oQ of qQ) {
+                  const QQ = QQ => Math.max(oQ.width / 2, Math.min(FQ - oQ.width / 2, QQ)),
+                    qQ = QQ => Math.max(oQ.height / 2, Math.min(wQ - oQ.height / 2, QQ)),
+                    DQ = [QQ(oQ.x)],
+                    kQ = [qQ(oQ.y)];
+                  for (const FQ of LQ) DQ.push(QQ(FQ.x - (FQ.width + oQ.width) / 2 - 4), QQ(FQ.x + (FQ.width + oQ.width) / 2 + 4)), kQ.push(qQ(FQ.y - (FQ.height + oQ.height) / 2 - 4), qQ(FQ.y + (FQ.height + oQ.height) / 2 + 4));
+                  let vQ = {
+                      ...oQ,
+                      x: DQ[0],
+                      y: kQ[0]
                     },
-                    Cd = 1 / 0,
-                    Kd = 1 / 0;
-                  for (const Jd of new Set(Pd))
-                    for (const dd of new Set(Zd)) {
-                      let kd = 0;
-                      for (const Pd of pd) kd += Math.max(0, (Wd.width + Pd.width) / 2 + 4 - Math.abs(Jd - Pd.x)) * Math.max(0, (Wd.height + Pd.height) / 2 + 4 - Math.abs(dd - Pd.y));
-                      const Nd = (Jd - Wd.x) ** 2 + (dd - Wd.y) ** 2;
-                      (kd < Cd || kd === Cd && Nd < Kd) && (gd = {
-                        ...Wd,
-                        x: Jd,
-                        y: dd
-                      }, Cd = kd, Kd = Nd)
+                    mQ = 1 / 0,
+                    uQ = 1 / 0;
+                  for (const FQ of new Set(DQ))
+                    for (const QQ of new Set(kQ)) {
+                      let wQ = 0;
+                      for (const DQ of LQ) wQ += Math.max(0, (oQ.width + DQ.width) / 2 + 4 - Math.abs(FQ - DQ.x)) * Math.max(0, (oQ.height + DQ.height) / 2 + 4 - Math.abs(QQ - DQ.y));
+                      const qQ = (FQ - oQ.x) ** 2 + (QQ - oQ.y) ** 2;
+                      (wQ < mQ || wQ === mQ && qQ < uQ) && (vQ = {
+                        ...oQ,
+                        x: FQ,
+                        y: QQ
+                      }, mQ = wQ, uQ = qQ)
                     }
-                  pd.push(gd)
+                  LQ.push(vQ)
                 }
-                return pd
-              }(Zd, dd, kd)) {
-              const dd = gd.get(Jd.id);
-              dd.style.left = `${Jd.x}px`, dd.style.top = `${Jd.y}px`
+                return LQ
+              }(kQ, QQ, wQ)) {
+              const QQ = vQ.get(FQ.id);
+              QQ.style.left = `${FQ.x}px`, QQ.style.top = `${FQ.y}px`
             }
           };
-        Zd();
-        const gd = new ResizeObserver(Zd);
-        gd.observe(Nd);
-        for (const dd of Wd) gd.observe(dd);
+        kQ();
+        const vQ = new ResizeObserver(kQ);
+        vQ.observe(qQ);
+        for (const QQ of oQ) vQ.observe(QQ);
         return () => {
-          gd.disconnect()
+          vQ.disconnect()
         }
-      }), [dd, Jd, kd, pd])
+      }), [QQ, FQ, wQ, LQ])
     }
-    const VN = {
+    const nq = {
         zoom: 1,
         x: 0,
         y: 0
       },
-      zN = {
+      gq = {
         x0: 0,
         y0: 0,
         x1: 1,
         y1: 1
       };
 
-    function HN(dd, Jd, kd) {
-      return Math.min(kd, Math.max(Jd, dd))
+    function Pq(QQ, FQ, wQ) {
+      return Math.min(wQ, Math.max(FQ, QQ))
     }
 
-    function wN(dd, Jd, kd) {
-      const pd = Math.min(1, kd * Jd / dd),
-        Nd = Math.min(1, dd / (kd * Jd));
+    function Zq(QQ, FQ, wQ) {
+      const LQ = Math.min(1, wQ * FQ / QQ),
+        qQ = Math.min(1, QQ / (wQ * FQ));
       return {
-        x0: (1 - pd) / 2,
-        y0: (1 - Nd) / 2,
-        x1: (1 + pd) / 2,
-        y1: (1 + Nd) / 2
+        x0: (1 - LQ) / 2,
+        y0: (1 - qQ) / 2,
+        x1: (1 + LQ) / 2,
+        y1: (1 + qQ) / 2
       }
     }
 
-    function AN(dd, Jd, kd, pd) {
-      const Nd = Jd * (pd - kd);
-      if (Nd <= 1) return .5 - Jd * (kd + pd) / 2;
-      const Wd = .45 * Math.min(1, Nd - 1);
-      return HN(dd, 1 - Jd * pd - Wd, Wd - Jd * kd)
+    function yq(QQ, FQ, wQ, LQ) {
+      const qQ = FQ * (LQ - wQ);
+      if (qQ <= 1) return .5 - FQ * (wQ + LQ) / 2;
+      const oQ = .45 * Math.min(1, qQ - 1);
+      return Pq(QQ, 1 - FQ * LQ - oQ, oQ - FQ * wQ)
     }
 
-    function dW(dd, Jd) {
-      const kd = HN(dd.zoom, 1, 12);
+    function Bq(QQ, FQ) {
+      const wQ = Pq(QQ.zoom, 1, 12);
       return {
-        zoom: kd,
-        x: AN(dd.x, kd, Jd.x0, Jd.x1),
-        y: AN(dd.y, kd, Jd.y0, Jd.y1)
+        zoom: wQ,
+        x: yq(QQ.x, wQ, FQ.x0, FQ.x1),
+        y: yq(QQ.y, wQ, FQ.y0, FQ.y1)
       }
     }
 
-    function JW(dd, Jd, kd, pd) {
-      let Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : zN;
-      const Wd = HN(dd.zoom * Jd, 1, 12),
-        Pd = Wd / dd.zoom;
-      return dW({
-        zoom: Wd,
-        x: kd - (kd - dd.x) * Pd,
-        y: pd - (pd - dd.y) * Pd
-      }, Nd)
+    function dq(QQ, FQ, wQ, LQ) {
+      let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : gq;
+      const oQ = Pq(QQ.zoom * FQ, 1, 12),
+        DQ = oQ / QQ.zoom;
+      return Bq({
+        zoom: oQ,
+        x: wQ - (wQ - QQ.x) * DQ,
+        y: LQ - (LQ - QQ.y) * DQ
+      }, qQ)
     }
 
-    function kW(dd, Jd, kd, pd) {
-      const [Nd, Wd] = (0, ad.useState)(VN);
-      (0, ad.useEffect)((() => {
-        Wd(VN)
-      }), [kd]), (0, ad.useEffect)((() => {
-        const kd = dd.current;
-        if (!Jd || !kd) return;
-        const Nd = () => wN(kd.clientWidth, kd.clientHeight, pd),
-          Pd = dd => {
-            const Jd = kd.getBoundingClientRect();
+    function Qo(QQ, FQ, wQ, LQ) {
+      const [qQ, oQ] = (0, WQ.useState)(nq);
+      (0, WQ.useEffect)((() => {
+        oQ(nq)
+      }), [wQ]), (0, WQ.useEffect)((() => {
+        const wQ = QQ.current;
+        if (!FQ || !wQ) return;
+        const qQ = () => Zq(wQ.clientWidth, wQ.clientHeight, LQ),
+          DQ = QQ => {
+            const FQ = wQ.getBoundingClientRect();
             return {
-              x: (dd.clientX - Jd.left) / Jd.width,
-              y: (dd.clientY - Jd.top) / Jd.height
+              x: (QQ.clientX - FQ.left) / FQ.width,
+              y: (QQ.clientY - FQ.top) / FQ.height
             }
           },
-          Zd = new Map;
-        let gd = {
+          kQ = new Map;
+        let vQ = {
             x: 0,
             y: 0
           },
-          Cd = !1,
-          Kd = 0;
-        const od = dd => {
-            dd.preventDefault();
-            const Jd = dd.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * dd.deltaY : dd.deltaY,
-              kd = Pd(dd);
-            Wd((dd => JW(dd, Math.exp(.0015 * -Jd), kd.x, kd.y, Nd())))
+          mQ = !1,
+          uQ = 0;
+        const HQ = QQ => {
+            QQ.preventDefault();
+            const FQ = QQ.deltaMode === WheelEvent.DOM_DELTA_LINE ? 16 * QQ.deltaY : QQ.deltaY,
+              wQ = DQ(QQ);
+            oQ((QQ => dq(QQ, Math.exp(.0015 * -FQ), wQ.x, wQ.y, qQ())))
           },
-          ld = dd => {
-            "mouse" === dd.pointerType && 0 !== dd.button || (Zd.set(dd.pointerId, Pd(dd)), 1 === Zd.size && (gd = {
-              x: dd.clientX,
-              y: dd.clientY
-            }, Cd = !1), Kd = 0)
+          bQ = QQ => {
+            "mouse" === QQ.pointerType && 0 !== QQ.button || (kQ.set(QQ.pointerId, DQ(QQ)), 1 === kQ.size && (vQ = {
+              x: QQ.clientX,
+              y: QQ.clientY
+            }, mQ = !1), uQ = 0)
           },
-          Qd = dd => {
-            const Jd = Zd.get(dd.pointerId);
-            if (!Jd) return;
-            const pd = Pd(dd);
-            if (Zd.set(dd.pointerId, pd), 2 === Zd.size) {
-              const [dd, Jd] = [...Zd.values()], kd = Math.hypot(dd.x - Jd.x, dd.y - Jd.y);
-              if (Kd > 0) {
-                const pd = kd / Kd;
-                Wd((kd => JW(kd, pd, (dd.x + Jd.x) / 2, (dd.y + Jd.y) / 2, Nd())))
+          YQ = QQ => {
+            const FQ = kQ.get(QQ.pointerId);
+            if (!FQ) return;
+            const LQ = DQ(QQ);
+            if (kQ.set(QQ.pointerId, LQ), 2 === kQ.size) {
+              const [QQ, FQ] = [...kQ.values()], wQ = Math.hypot(QQ.x - FQ.x, QQ.y - FQ.y);
+              if (uQ > 0) {
+                const LQ = wQ / uQ;
+                oQ((wQ => dq(wQ, LQ, (QQ.x + FQ.x) / 2, (QQ.y + FQ.y) / 2, qQ())))
               }
-              return Kd = kd, void(Cd = !0)
-            }!Cd && Math.hypot(dd.clientX - gd.x, dd.clientY - gd.y) < 4 || (Cd || (Cd = !0, kd.setPointerCapture(dd.pointerId)), Wd((dd => function(dd, Jd, kd) {
-              let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zN;
-              return dW({
-                zoom: dd.zoom,
-                x: dd.x + Jd,
-                y: dd.y + kd
-              }, pd)
-            }(dd, pd.x - Jd.x, pd.y - Jd.y, Nd()))))
+              return uQ = wQ, void(mQ = !0)
+            }!mQ && Math.hypot(QQ.clientX - vQ.x, QQ.clientY - vQ.y) < 4 || (mQ || (mQ = !0, wQ.setPointerCapture(QQ.pointerId)), oQ((QQ => function(QQ, FQ, wQ) {
+              let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : gq;
+              return Bq({
+                zoom: QQ.zoom,
+                x: QQ.x + FQ,
+                y: QQ.y + wQ
+              }, LQ)
+            }(QQ, LQ.x - FQ.x, LQ.y - FQ.y, qQ()))))
           },
-          Ld = dd => {
-            Zd.delete(dd.pointerId), Kd = 0
+          xQ = QQ => {
+            kQ.delete(QQ.pointerId), uQ = 0
           },
-          Od = dd => {
-            Cd && (dd.stopPropagation(), dd.preventDefault(), Cd = !1)
+          AQ = QQ => {
+            mQ && (QQ.stopPropagation(), QQ.preventDefault(), mQ = !1)
           },
-          ed = new ResizeObserver((() => {
-            Wd((dd => dW(dd, Nd())))
+          tQ = new ResizeObserver((() => {
+            oQ((QQ => Bq(QQ, qQ())))
           }));
-        return ed.observe(kd), kd.addEventListener("wheel", od, {
+        return tQ.observe(wQ), wQ.addEventListener("wheel", HQ, {
           passive: !1
-        }), kd.addEventListener("pointerdown", ld), kd.addEventListener("pointermove", Qd), kd.addEventListener("pointerup", Ld), kd.addEventListener("pointercancel", Ld), kd.addEventListener("click", Od, !0), () => {
-          ed.disconnect(), kd.removeEventListener("wheel", od), kd.removeEventListener("pointerdown", ld), kd.removeEventListener("pointermove", Qd), kd.removeEventListener("pointerup", Ld), kd.removeEventListener("pointercancel", Ld), kd.removeEventListener("click", Od, !0)
+        }), wQ.addEventListener("pointerdown", bQ), wQ.addEventListener("pointermove", YQ), wQ.addEventListener("pointerup", xQ), wQ.addEventListener("pointercancel", xQ), wQ.addEventListener("click", AQ, !0), () => {
+          tQ.disconnect(), wQ.removeEventListener("wheel", HQ), wQ.removeEventListener("pointerdown", bQ), wQ.removeEventListener("pointermove", YQ), wQ.removeEventListener("pointerup", xQ), wQ.removeEventListener("pointercancel", xQ), wQ.removeEventListener("click", AQ, !0)
         }
-      }), [dd, Jd, kd, pd]);
+      }), [QQ, FQ, wQ, LQ]);
       return {
-        view: Nd,
-        zoomBy: Jd => {
-          const kd = dd.current;
-          kd && Wd((dd => JW(dd, Jd, .5, .5, wN(kd.clientWidth, kd.clientHeight, pd))))
+        view: qQ,
+        zoomBy: FQ => {
+          const wQ = QQ.current;
+          wQ && oQ((QQ => dq(QQ, FQ, .5, .5, Zq(wQ.clientWidth, wQ.clientHeight, LQ))))
         }
       }
     }
 
-    function pW(dd) {
-      var Jd, kd, pd, Nd;
+    function Fo(QQ) {
+      var FQ, wQ, LQ, qQ;
       let {
-        controller: Wd,
-        navigation: Pd
-      } = dd;
-      const Zd = (0, bN.i)(ld, Wd.getSnapshot()),
+        controller: oQ,
+        navigation: DQ
+      } = QQ;
+      const kQ = (0, rq.i)(bQ, oQ.getSnapshot()),
         {
-          t: gd
-        } = (0, mN.B)(),
-        Cd = hN(),
-        Kd = Zd.presentation,
-        od = (0, ad.useRef)(null),
-        Qd = (0, ad.useRef)(null),
-        Ld = Boolean(Zd.open && (null === Kd || void 0 === Kd ? void 0 : Kd.local) && Kd.background),
-        Od = kW(od, Ld, `${Zd.open}|${Zd.tab}|${null===Kd||void 0===Kd||null===(Jd=Kd.background)||void 0===Jd?void 0:Jd.geometryKey}`, null !== (kd = null === Kd || void 0 === Kd || null === (pd = Kd.background) || void 0 === pd ? void 0 : pd.ratio) && void 0 !== kd ? kd : 2);
-      if (tN(Qd, Kd, Zd.open, Od.view.zoom), !Kd || !Zd.open) return null;
-      const ed = Kd.local ? Kd.background : null,
-        Rd = {
-          "--map-ratio": String(null !== (Nd = null === ed || void 0 === ed ? void 0 : ed.ratio) && void 0 !== Nd ? Nd : 2),
-          backgroundColor: null === ed || void 0 === ed ? void 0 : ed.colour
+          t: vQ
+        } = (0, sq.y)(),
+        mQ = Vq(),
+        uQ = kQ.presentation,
+        HQ = (0, WQ.useRef)(null),
+        YQ = (0, WQ.useRef)(null),
+        xQ = Boolean(kQ.open && (null === uQ || void 0 === uQ ? void 0 : uQ.local) && uQ.background),
+        AQ = Qo(HQ, xQ, `${kQ.open}|${kQ.tab}|${null===uQ||void 0===uQ||null===(FQ=uQ.background)||void 0===FQ?void 0:FQ.geometryKey}`, null !== (wQ = null === uQ || void 0 === uQ || null === (LQ = uQ.background) || void 0 === LQ ? void 0 : LQ.ratio) && void 0 !== wQ ? wQ : 2);
+      if (Eq(YQ, uQ, kQ.open, AQ.view.zoom), !uQ || !kQ.open) return null;
+      const tQ = uQ.local ? uQ.background : null,
+        eQ = {
+          "--map-ratio": String(null !== (qQ = null === tQ || void 0 === tQ ? void 0 : tQ.ratio) && void 0 !== qQ ? qQ : 2),
+          backgroundColor: null === tQ || void 0 === tQ ? void 0 : tQ.colour
         },
-        Id = {
-          "--map-zoom": String(Od.view.zoom),
-          transform: `translate(${100*Od.view.x}%, ${100*Od.view.y}%) scale(${Od.view.zoom})`
+        MQ = {
+          "--map-zoom": String(AQ.view.zoom),
+          transform: `translate(${100*AQ.view.x}%, ${100*AQ.view.y}%) scale(${AQ.view.zoom})`
         };
-      return (0, SN.jsx)(TN.e, {
-        show: Zd.open,
-        close: Wd.dismiss,
+      return (0, Iq.jsx)(aq.d, {
+        show: kQ.open,
+        close: oQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockMapPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockMapTitle",
           tabIndex: -1,
-          ref: Cd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: mQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, SN.jsxs)("div", {
+            children: [(0, Iq.jsxs)("div", {
               className: "SkyblockMapTitle",
-              children: [(0, SN.jsx)("h2", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockMapTitle",
-                children: gd("skyblockGame:map")
-              }), Kd.minimap && (0, SN.jsx)("p", {
-                children: Kd.minimap.caption
+                children: vQ("skyblockGame:map")
+              }), uQ.minimap && (0, Iq.jsx)("p", {
+                children: uQ.minimap.caption
               })]
-            }), (0, SN.jsx)("div", {
+            }), (0, Iq.jsx)("div", {
               className: "SkyblockMapTabs",
               "data-pad-tabs": "1",
-              children: ["local", "world"].map((dd => (0, SN.jsx)("button", {
+              children: ["local", "world"].map((QQ => (0, Iq.jsx)("button", {
                 type: "button",
                 "data-pad-tab": !0,
-                "data-pad-selected": dd === Zd.tab ? "true" : void 0,
-                className: BN()({
-                  Selected: dd === Zd.tab
+                "data-pad-selected": QQ === kQ.tab ? "true" : void 0,
+                className: cq()({
+                  Selected: QQ === kQ.tab
                 }),
-                "aria-pressed": dd === Zd.tab,
+                "aria-pressed": QQ === kQ.tab,
                 onClick: () => {
-                  Wd.selectTab(dd)
+                  oQ.selectTab(QQ)
                 },
-                children: gd("local" === dd ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
-              }, dd)))
-            }), (0, SN.jsx)(EN.i, {
+                children: vQ("local" === QQ ? "skyblockGame:mapLocal" : "skyblockGame:mapWorld")
+              }, QQ)))
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              onClick: Wd.dismiss
+              onClick: oQ.dismiss
             })]
-          }), (0, SN.jsx)("div", {
+          }), (0, Iq.jsx)("div", {
             className: "SkyblockMapBody",
-            children: (0, SN.jsxs)("div", {
-              ref: od,
-              className: BN()("SkyblockMapCanvas", {
-                Local: Kd.local,
-                Overview: !Kd.local,
-                Zoomed: Od.view.zoom > 1
+            children: (0, Iq.jsxs)("div", {
+              ref: HQ,
+              className: cq()("SkyblockMapCanvas", {
+                Local: uQ.local,
+                Overview: !uQ.local,
+                Zoomed: AQ.view.zoom > 1
               }),
-              style: Rd,
-              children: [(0, SN.jsx)("div", {
+              style: eQ,
+              children: [(0, Iq.jsx)("div", {
                 className: "SkyblockMapZoomLayer",
-                style: Ld ? Id : void 0,
-                children: (0, SN.jsxs)("div", {
+                style: xQ ? MQ : void 0,
+                children: (0, Iq.jsxs)("div", {
                   className: "SkyblockMapArea",
-                  ref: Qd,
-                  children: [ed && (0, SN.jsx)(DN, {
+                  ref: YQ,
+                  children: [tQ && (0, Iq.jsx)(jq, {
                     className: "SkyblockMapTerrain",
-                    imageKey: ed.imageKey,
-                    fallbackImageKey: ed.fallbackImageKey,
-                    geometryKey: ed.geometryKey,
-                    alt: ed.label
-                  }), Kd.local && (0, SN.jsx)(uN, {
-                    mount: Pd.display.mountMapSearchArea
-                  }), !Kd.local && (0, SN.jsx)("svg", {
+                    imageKey: tQ.imageKey,
+                    fallbackImageKey: tQ.fallbackImageKey,
+                    geometryKey: tQ.geometryKey,
+                    alt: tQ.label
+                  }), uQ.local && (0, Iq.jsx)(Jq, {
+                    mount: DQ.display.mountMapSearchArea
+                  }), !uQ.local && (0, Iq.jsx)("svg", {
                     className: "SkyblockMapConnections",
                     viewBox: "0 0 100 100",
                     preserveAspectRatio: "none",
                     "aria-hidden": "true",
-                    children: Kd.connections.map((dd => (0, SN.jsx)("line", {
-                      className: BN()({
-                        Explored: dd.explored
+                    children: uQ.connections.map((QQ => (0, Iq.jsx)("line", {
+                      className: cq()({
+                        Explored: QQ.explored
                       }),
-                      x1: dd.start[0],
-                      y1: dd.start[1],
-                      x2: dd.end[0],
-                      y2: dd.end[1]
-                    }, dd.id)))
-                  }), Kd.points.map((dd => {
-                    const Jd = !Kd.local && dd.thumbnail ? UN[dd.thumbnail] : void 0;
-                    return (0, SN.jsxs)("div", {
-                      className: BN()("SkyblockMapNode", {
-                        Current: dd.current
+                      x1: QQ.start[0],
+                      y1: QQ.start[1],
+                      x2: QQ.end[0],
+                      y2: QQ.end[1]
+                    }, QQ.id)))
+                  }), uQ.points.map((QQ => {
+                    const FQ = !uQ.local && QQ.thumbnail ? zq[QQ.thumbnail] : void 0;
+                    return (0, Iq.jsxs)("div", {
+                      className: cq()("SkyblockMapNode", {
+                        Current: QQ.current
                       }),
                       style: {
-                        left: `${dd.position[0]}%`,
-                        top: `${dd.position[1]}%`
+                        left: `${QQ.position[0]}%`,
+                        top: `${QQ.position[1]}%`
                       },
-                      children: [(0, SN.jsxs)(EN.d, {
-                        className: BN()("SkyblockMapPin", {
-                          Unknown: !dd.visited,
-                          Current: dd.current
+                      children: [(0, Iq.jsxs)(Xq.f, {
+                        className: cq()("SkyblockMapPin", {
+                          Unknown: !QQ.visited,
+                          Current: QQ.current
                         }),
-                        disabled: Zd.pending,
+                        disabled: kQ.pending,
                         onClick: () => {
-                          Wd.travel(dd.travelKind, dd.travelId)
+                          oQ.travel(QQ.travelKind, QQ.travelId)
                         },
-                        children: [Jd && (0, SN.jsx)("img", {
+                        children: [FQ && (0, Iq.jsx)("img", {
                           className: "SkyblockMapZoneThumbnail",
-                          src: Jd,
+                          src: FQ,
                           alt: ""
-                        }), !Jd && (0, SN.jsx)("span", {
+                        }), !FQ && (0, Iq.jsx)("span", {
                           className: "SkyblockMapPinSymbol",
                           "aria-hidden": "true",
-                          children: (0, SN.jsx)(XN, {
-                            icon: dd.icon
+                          children: (0, Iq.jsx)(Nq, {
+                            icon: QQ.icon
                           })
-                        }), (0, SN.jsx)("span", {
+                        }), (0, Iq.jsx)("span", {
                           className: "SkyblockMapPinName",
-                          children: dd.name
+                          children: QQ.name
                         })]
-                      }), dd.current && (0, SN.jsx)("span", {
-                        className: BN()("SkyblockMapHereBadge", {
-                          Above: dd.position[1] > 50
+                      }), QQ.current && (0, Iq.jsx)("span", {
+                        className: cq()("SkyblockMapHereBadge", {
+                          Above: QQ.position[1] > 50
                         }),
-                        children: gd("skyblockGame:mapYouAreHere")
+                        children: vQ("skyblockGame:mapYouAreHere")
                       })]
-                    }, dd.id)
-                  })), Kd.portals.map((dd => (0, SN.jsx)("div", {
+                    }, QQ.id)
+                  })), uQ.portals.map((QQ => (0, Iq.jsx)("div", {
                     className: "SkyblockMapNode",
                     style: {
-                      left: `clamp(3rem, ${dd.position[0]}%, calc(100% - 3rem))`,
-                      top: `clamp(2rem, ${dd.position[1]}%, calc(100% - 2rem))`
+                      left: `clamp(3rem, ${QQ.position[0]}%, calc(100% - 3rem))`,
+                      top: `clamp(2rem, ${QQ.position[1]}%, calc(100% - 2rem))`
                     },
-                    children: (0, SN.jsxs)(EN.d, {
+                    children: (0, Iq.jsxs)(Xq.f, {
                       className: "SkyblockMapPin",
-                      disabled: Zd.pending,
+                      disabled: kQ.pending,
                       onClick: () => {
-                        Wd.travel(dd.travelKind, dd.travelId)
+                        oQ.travel(QQ.travelKind, QQ.travelId)
                       },
-                      children: [(0, SN.jsx)("span", {
+                      children: [(0, Iq.jsx)("span", {
                         className: "SkyblockMapPinSymbol",
                         style: {
-                          color: dd.colour
+                          color: QQ.colour
                         },
                         "aria-hidden": "true",
-                        children: (0, SN.jsx)(XN, {
-                          icon: dd.icon
+                        children: (0, Iq.jsx)(Nq, {
+                          icon: QQ.icon
                         })
-                      }), (0, SN.jsx)("span", {
+                      }), (0, Iq.jsx)("span", {
                         className: "SkyblockMapPinName",
-                        children: dd.name
+                        children: QQ.name
                       })]
                     })
-                  }, dd.id))), Kd.local && (0, SN.jsx)(fN, {
-                    controller: Pd
+                  }, QQ.id))), uQ.local && (0, Iq.jsx)(Tq, {
+                    controller: DQ
                   })]
                 })
-              }), Ld && (0, SN.jsxs)("div", {
+              }), xQ && (0, Iq.jsxs)("div", {
                 className: "SkyblockMapZoomControls",
-                children: [(0, SN.jsx)("button", {
+                children: [(0, Iq.jsx)("button", {
                   type: "button",
-                  "aria-label": gd("skyblockGame:mapZoomIn"),
-                  disabled: Od.view.zoom >= 12,
+                  "aria-label": vQ("skyblockGame:mapZoomIn"),
+                  disabled: AQ.view.zoom >= 12,
                   onClick: () => {
-                    Od.zoomBy(1.5)
+                    AQ.zoomBy(1.5)
                   },
                   children: "+"
-                }), (0, SN.jsx)("button", {
+                }), (0, Iq.jsx)("button", {
                   type: "button",
-                  "aria-label": gd("skyblockGame:mapZoomOut"),
-                  disabled: Od.view.zoom <= 1,
+                  "aria-label": vQ("skyblockGame:mapZoomOut"),
+                  disabled: AQ.view.zoom <= 1,
                   onClick: () => {
-                    Od.zoomBy(1 / 1.5)
+                    AQ.zoomBy(1 / 1.5)
                   },
                   children: "\u2212"
                 })]
-              }), (0, SN.jsx)("div", {
+              }), (0, Iq.jsx)("div", {
                 className: "SkyblockMapFeedback",
                 role: "status",
                 "aria-live": "polite",
-                children: Zd.feedback
+                children: kQ.feedback
               })]
             })
-          }), (0, SN.jsxs)("footer", {
+          }), (0, Iq.jsxs)("footer", {
             className: "SkyblockMapFooter",
-            children: [Kd.progress && (0, SN.jsxs)("div", {
+            children: [uQ.progress && (0, Iq.jsxs)("div", {
               className: "SkyblockMapProgress",
-              children: [(0, SN.jsx)("span", {
-                children: Kd.progress
-              }), (0, SN.jsx)(rN, {
-                percent: Kd.percent,
-                label: Kd.progress
+              children: [(0, Iq.jsx)("span", {
+                children: uQ.progress
+              }), (0, Iq.jsx)(hq, {
+                percent: uQ.percent,
+                label: uQ.progress
               })]
-            }), Kd.noLandmarks && (0, SN.jsx)("span", {
-              children: gd("skyblockGame:mapNoLandmarks")
-            }), Kd.canTravel && (0, SN.jsx)("span", {
+            }), uQ.noLandmarks && (0, Iq.jsx)("span", {
+              children: vQ("skyblockGame:mapNoLandmarks")
+            }), uQ.canTravel && (0, Iq.jsx)("span", {
               className: "SkyblockMapHint",
-              children: gd("skyblockGame:mapTravelHint")
+              children: vQ("skyblockGame:mapTravelHint")
             })]
           })]
         })
       })
     }
 
-    function NW(dd) {
+    function wo(QQ) {
       let {
-        view: Jd,
-        controller: kd,
-        navigation: pd
-      } = dd;
+        view: FQ,
+        controller: wQ,
+        navigation: LQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, mN.B)(), {
-        isTouchScreen: Wd
-      } = (0, sN.j)(["isTouchScreen"]);
-      return (0, SN.jsxs)("aside", {
+        t: qQ
+      } = (0, sq.y)(), {
+        isTouchScreen: oQ
+      } = (0, Cq.l)(["isTouchScreen"]);
+      return (0, Iq.jsxs)("aside", {
         className: "SkyblockMinimap",
-        "aria-label": Nd("skyblockGame:mapLocal"),
-        children: [Wd && (0, SN.jsx)(EN.d, {
+        "aria-label": qQ("skyblockGame:mapLocal"),
+        children: [oQ && (0, Iq.jsx)(Xq.f, {
           className: "SkyblockMinimapOpen",
-          onClick: kd.showLocal,
-          children: Nd("skyblockGame:map")
-        }), (0, SN.jsxs)("div", {
+          onClick: wQ.showLocal,
+          children: qQ("skyblockGame:map")
+        }), (0, Iq.jsxs)("div", {
           className: "SkyblockMinimapFrame",
           style: {
-            backgroundColor: Jd.colour
+            backgroundColor: FQ.colour
           },
-          children: [(0, SN.jsxs)("div", {
+          children: [(0, Iq.jsxs)("div", {
             className: "SkyblockMinimapTerrain",
-            ref: pd.display.mountTerrain,
+            ref: LQ.display.mountTerrain,
             style: {
-              width: Jd.width,
-              height: Jd.height
+              width: FQ.width,
+              height: FQ.height
             },
-            children: [(0, SN.jsx)(DN, {
-              imageKey: Jd.imageKey,
-              fallbackImageKey: Jd.fallbackImageKey,
-              geometryKey: Jd.geometryKey,
-              alt: Jd.label
-            }), (0, SN.jsx)(uN, {
-              mount: pd.display.mountMinimapSearchArea
-            }), Jd.markers.map((dd => (0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)(jq, {
+              imageKey: FQ.imageKey,
+              fallbackImageKey: FQ.fallbackImageKey,
+              geometryKey: FQ.geometryKey,
+              alt: FQ.label
+            }), (0, Iq.jsx)(Jq, {
+              mount: LQ.display.mountMinimapSearchArea
+            }), FQ.markers.map((QQ => (0, Iq.jsx)("span", {
               className: "SkyblockMinimapLandmark",
               style: {
-                left: `${dd.position[0]}%`,
-                top: `${dd.position[1]}%`,
-                color: dd.colour
+                left: `${QQ.position[0]}%`,
+                top: `${QQ.position[1]}%`,
+                color: QQ.colour
               },
-              title: dd.name,
-              children: (0, SN.jsx)(XN, {
-                icon: dd.icon
+              title: QQ.name,
+              children: (0, Iq.jsx)(Nq, {
+                icon: QQ.icon
               })
-            }, dd.id)))]
-          }), (0, SN.jsx)("div", {
+            }, QQ.id)))]
+          }), (0, Iq.jsx)("div", {
             className: "SkyblockMinimapPlayer",
-            title: Nd("skyblockGame:mapYouAreHere"),
-            children: (0, SN.jsx)(XN, {
+            title: qQ("skyblockGame:mapYouAreHere"),
+            children: (0, Iq.jsx)(Nq, {
               icon: "player"
             })
           })]
-        }), (0, SN.jsx)("div", {
+        }), (0, Iq.jsx)("div", {
           className: "SkyblockMinimapCaption",
-          children: Jd.caption
+          children: FQ.caption
         })]
       })
     }
 
-    function WW(dd) {
+    function Lo(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      return (0, SN.jsxs)("div", {
+        controller: FQ
+      } = QQ;
+      return (0, Iq.jsxs)("div", {
         className: "SkyblockCompass",
-        ref: Jd.display.mountCompass,
-        children: [(0, SN.jsx)("span", {
+        ref: FQ.display.mountCompass,
+        children: [(0, Iq.jsx)("span", {
           className: "SkyblockCompassArrow",
           "aria-hidden": "true",
           children: "\u25bc"
-        }), (0, SN.jsx)("div", {
+        }), (0, Iq.jsx)("div", {
           className: "SkyblockCompassTrack",
           "aria-hidden": "true"
-        }), (0, SN.jsx)("div", {
+        }), (0, Iq.jsx)("div", {
           className: "SkyblockCompassLabel"
         })]
       })
     }
 
-    function PW(dd) {
+    function qo(QQ) {
       let {
-        controller: Jd,
-        surface: kd
-      } = dd;
+        controller: FQ,
+        surface: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, mN.B)(), Nd = (0, bN.i)(Pk, Jd.getSnapshot()), Wd = hN();
-      return Nd.enabled ? (0, SN.jsxs)(SN.Fragment, {
-        children: ["hud" === kd && (0, SN.jsx)(iN.g, {
+        t: LQ
+      } = (0, sq.y)(), qQ = (0, rq.i)(ow, FQ.getSnapshot()), oQ = Vq();
+      return qQ.enabled ? (0, Iq.jsxs)(Iq.Fragment, {
+        children: ["hud" === wQ && (0, Iq.jsx)(Sq.d, {
           placement: "statBars",
-          children: Nd.hud && (0, SN.jsxs)("div", {
+          children: qQ.hud && (0, Iq.jsxs)("div", {
             className: "SkyblockSkillsHudCompact",
             style: {
-              "--skill-colour": Nd.hud.colour
+              "--skill-colour": qQ.hud.colour
             },
-            children: [(0, SN.jsx)(rN, {
-              percent: Nd.hud.skill.percent,
-              label: Nd.hud.skill.xp,
-              levelUpToken: Nd.hud.levelUpToken,
-              colour: Nd.hud.colour
-            }), (0, SN.jsxs)("div", {
+            children: [(0, Iq.jsx)(hq, {
+              percent: qQ.hud.skill.percent,
+              label: qQ.hud.skill.xp,
+              levelUpToken: qQ.hud.levelUpToken,
+              colour: qQ.hud.colour
+            }), (0, Iq.jsxs)("div", {
               className: "SkyblockSkillsHudCompactText SmallTextBold",
-              children: [(0, SN.jsxs)("span", {
-                children: [Nd.hud.skill.label, " \xb7 ", Nd.hud.skill.level]
-              }), (0, SN.jsx)("span", {
-                children: Nd.hud.gain
+              children: [(0, Iq.jsxs)("span", {
+                children: [qQ.hud.skill.label, " \xb7 ", qQ.hud.skill.level]
+              }), (0, Iq.jsx)("span", {
+                children: qQ.hud.gain
               })]
             })]
           })
-        }), "hud" === kd && (0, SN.jsx)(iN.g, {
-          children: Nd.hud && (0, SN.jsxs)("div", {
+        }), "hud" === wQ && (0, Iq.jsx)(Sq.d, {
+          children: qQ.hud && (0, Iq.jsxs)("div", {
             className: "SkyblockSkillsHud",
-            children: [(0, SN.jsxs)("div", {
+            children: [(0, Iq.jsxs)("div", {
               className: "SkyblockSkillsHudHeading",
-              children: [(0, SN.jsx)("strong", {
-                children: Nd.hud.skill.label
-              }), (0, SN.jsx)("span", {
-                children: Nd.hud.gain
+              children: [(0, Iq.jsx)("strong", {
+                children: qQ.hud.skill.label
+              }), (0, Iq.jsx)("span", {
+                children: qQ.hud.gain
               })]
-            }), (0, SN.jsx)(rN, {
-              percent: Nd.hud.skill.percent,
-              label: Nd.hud.skill.xp,
-              levelUpToken: Nd.hud.levelUpToken,
-              colour: Nd.hud.colour
-            }), (0, SN.jsxs)("div", {
+            }), (0, Iq.jsx)(hq, {
+              percent: qQ.hud.skill.percent,
+              label: qQ.hud.skill.xp,
+              levelUpToken: qQ.hud.levelUpToken,
+              colour: qQ.hud.colour
+            }), (0, Iq.jsxs)("div", {
               className: "SkyblockSkillsHudProgress",
-              children: [(0, SN.jsx)("span", {
-                children: Nd.hud.skill.level
-              }), (0, SN.jsx)("span", {
-                children: Nd.hud.skill.xp
+              children: [(0, Iq.jsx)("span", {
+                children: qQ.hud.skill.level
+              }), (0, Iq.jsx)("span", {
+                children: qQ.hud.skill.xp
               })]
             })]
           })
-        }), "menu" === kd && (0, SN.jsx)(TN.e, {
-          show: Nd.open,
-          close: Jd.dismiss,
+        }), "menu" === wQ && (0, Iq.jsx)(aq.d, {
+          show: qQ.open,
+          close: FQ.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, SN.jsxs)("section", {
+          children: (0, Iq.jsxs)("section", {
             className: "SkyblockSkillsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockSkillsTitle",
             tabIndex: -1,
-            ref: Wd,
-            onKeyDown: cN,
-            children: [(0, SN.jsxs)("header", {
+            ref: oQ,
+            onKeyDown: fq,
+            children: [(0, Iq.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, SN.jsxs)("div", {
-                children: [(0, SN.jsx)("h2", {
+              children: [(0, Iq.jsxs)("div", {
+                children: [(0, Iq.jsx)("h2", {
                   id: "skyblockSkillsTitle",
-                  children: pd("skyblockGame:skills")
-                }), (0, SN.jsx)("p", {
-                  children: pd("skyblockGame:skillsIntro")
+                  children: LQ("skyblockGame:skills")
+                }), (0, Iq.jsx)("p", {
+                  children: LQ("skyblockGame:skillsIntro")
                 })]
-              }), (0, SN.jsx)(EN.i, {
+              }), (0, Iq.jsx)(Xq.j, {
                 padIgnore: !0,
-                onClick: Jd.dismiss
+                onClick: FQ.dismiss
               })]
-            }), (0, SN.jsxs)("div", {
+            }), (0, Iq.jsxs)("div", {
               className: "SkyblockSkillsBody",
-              children: [(0, SN.jsx)("div", {
+              children: [(0, Iq.jsx)("div", {
                 className: "SkyblockSkillsList",
                 "data-pad-select-on-focus": !0,
-                children: Nd.skills.map((dd => (0, SN.jsxs)(EN.d, {
-                  className: BN()("SkyblockSkillCard", {
-                    Selected: dd.selected
+                children: qQ.skills.map((QQ => (0, Iq.jsxs)(Xq.f, {
+                  className: cq()("SkyblockSkillCard", {
+                    Selected: QQ.selected
                   }),
-                  ariaPressed: dd.selected,
+                  ariaPressed: QQ.selected,
                   onClick: () => {
-                    Jd.select(dd.id)
+                    FQ.select(QQ.id)
                   },
-                  children: [(0, SN.jsx)("div", {
+                  children: [(0, Iq.jsx)("div", {
                     className: "SkyblockSkillIcon",
-                    children: (0, SN.jsx)(MN.d, {
-                      itemName: dd.icon,
+                    children: (0, Iq.jsx)(Wq.e, {
+                      itemName: QQ.icon,
                       amount: 0
                     })
-                  }), (0, SN.jsxs)("div", {
+                  }), (0, Iq.jsxs)("div", {
                     className: "SkyblockSkillSummary",
-                    children: [(0, SN.jsxs)("div", {
+                    children: [(0, Iq.jsxs)("div", {
                       className: "SkyblockSkillTitle",
-                      children: [(0, SN.jsx)("strong", {
-                        children: dd.label
-                      }), (0, SN.jsx)("span", {
-                        children: dd.level
+                      children: [(0, Iq.jsx)("strong", {
+                        children: QQ.label
+                      }), (0, Iq.jsx)("span", {
+                        children: QQ.level
                       })]
-                    }), (0, SN.jsx)(rN, {
-                      percent: dd.percent,
-                      label: `${dd.label}: ${dd.xp}`
-                    }), (0, SN.jsx)("span", {
+                    }), (0, Iq.jsx)(hq, {
+                      percent: QQ.percent,
+                      label: `${QQ.label}: ${QQ.xp}`
+                    }), (0, Iq.jsx)("span", {
                       className: "SkyblockSkillXp",
-                      children: dd.xp
+                      children: QQ.xp
                     })]
                   })]
-                }, dd.id)))
-              }), Nd.detail && (0, SN.jsxs)("div", {
+                }, QQ.id)))
+              }), qQ.detail && (0, Iq.jsxs)("div", {
                 className: "SkyblockSkillDetail",
-                children: [(0, SN.jsx)("div", {
+                children: [(0, Iq.jsx)("div", {
                   className: "SkyblockSkillDetailIcon",
-                  children: (0, SN.jsx)(MN.d, {
-                    itemName: Nd.detail.icon,
+                  children: (0, Iq.jsx)(Wq.e, {
+                    itemName: qQ.detail.icon,
                     amount: 0
                   })
-                }), (0, SN.jsx)("h3", {
-                  children: Nd.detail.label
-                }), (0, SN.jsx)("strong", {
+                }), (0, Iq.jsx)("h3", {
+                  children: qQ.detail.label
+                }), (0, Iq.jsx)("strong", {
                   className: "SkyblockSkillDetailLevel",
-                  children: Nd.detail.level
-                }), (0, SN.jsx)("p", {
-                  children: Nd.detail.description
-                }), (0, SN.jsxs)("div", {
+                  children: qQ.detail.level
+                }), (0, Iq.jsx)("p", {
+                  children: qQ.detail.description
+                }), (0, Iq.jsxs)("div", {
                   className: "SkyblockSkillBenefit",
-                  children: [(0, SN.jsx)("strong", {
-                    children: pd("skyblockGame:currentBenefit")
-                  }), (0, SN.jsx)("span", {
-                    children: Nd.detail.benefit
+                  children: [(0, Iq.jsx)("strong", {
+                    children: LQ("skyblockGame:currentBenefit")
+                  }), (0, Iq.jsx)("span", {
+                    children: qQ.detail.benefit
                   })]
-                }), (0, SN.jsx)(rN, {
-                  percent: Nd.detail.percent,
-                  label: Nd.detail.xp
-                }), (0, SN.jsx)("p", {
-                  children: Nd.detail.xp
-                }), (0, SN.jsx)("h4", {
-                  children: pd("skyblockGame:earnXp")
-                }), (0, SN.jsx)("ul", {
-                  children: Nd.detail.sources.map((dd => (0, SN.jsx)("li", {
-                    children: dd
-                  }, dd)))
+                }), (0, Iq.jsx)(hq, {
+                  percent: qQ.detail.percent,
+                  label: qQ.detail.xp
+                }), (0, Iq.jsx)("p", {
+                  children: qQ.detail.xp
+                }), (0, Iq.jsx)("h4", {
+                  children: LQ("skyblockGame:earnXp")
+                }), (0, Iq.jsx)("ul", {
+                  children: qQ.detail.sources.map((QQ => (0, Iq.jsx)("li", {
+                    children: QQ
+                  }, QQ)))
                 })]
               })]
             })]
@@ -5758,274 +5758,274 @@ export const modules = {
         })]
       }) : null
     }
-    var ZW = kd(1384),
-      gW = kd(4726),
-      CW = kd(300);
+    var oo = wQ(1367),
+      Do = wQ(4674),
+      ko = wQ(307);
 
-    function KW(dd) {
+    function vo(QQ) {
       let {
-        item: Jd
-      } = dd;
-      return (0, SN.jsx)("span", {
+        item: FQ
+      } = QQ;
+      return (0, Iq.jsx)("span", {
         className: "SkyblockQuestStepIcon",
         "aria-hidden": "true",
-        children: (0, SN.jsx)(MN.d, {
-          itemName: Jd,
+        children: (0, Iq.jsx)(Wq.e, {
+          itemName: FQ,
           amount: 0
         })
       })
     }
 
-    function oW(dd) {
+    function mo(QQ) {
       let {
-        name: Jd,
-        percent: kd,
-        progress: pd
-      } = dd;
-      return (0, SN.jsxs)("span", {
+        name: FQ,
+        percent: wQ,
+        progress: LQ
+      } = QQ;
+      return (0, Iq.jsxs)("span", {
         className: "SkyblockQuestStepBar",
-        children: [(0, SN.jsx)(rN, {
-          percent: kd,
-          label: `${(0,CW.pb)(Jd)}: ${pd}`
-        }), (0, SN.jsx)("span", {
+        children: [(0, Iq.jsx)(hq, {
+          percent: wQ,
+          label: `${(0,ko.ib)(FQ)}: ${LQ}`
+        }), (0, Iq.jsx)("span", {
           className: "SkyblockQuestStepBarLabel",
-          children: pd
+          children: LQ
         })]
       })
     }
 
-    function lW(dd) {
+    function uo(QQ) {
       let {
-        subquests: Jd,
-        showDescriptions: kd = !1
-      } = dd;
-      return (0, SN.jsx)("ul", {
+        subquests: FQ,
+        showDescriptions: wQ = !1
+      } = QQ;
+      return (0, Iq.jsx)("ul", {
         className: "SkyblockQuestChecklist",
-        children: Jd.map((dd => {
-          const Jd = kd && "completed" === dd.status,
-            pd = (0, SN.jsxs)("li", {
-              className: BN()("SkyblockQuestStep", dd.status, {
-                JustFinished: dd.justFinished,
-                JustUnlocked: dd.justUnlocked
+        children: FQ.map((QQ => {
+          const FQ = wQ && "completed" === QQ.status,
+            LQ = (0, Iq.jsxs)("li", {
+              className: cq()("SkyblockQuestStep", QQ.status, {
+                JustFinished: QQ.justFinished,
+                JustUnlocked: QQ.justUnlocked
               }),
-              tabIndex: Jd ? 0 : void 0,
-              children: [null !== dd.iconItem && (0, SN.jsx)(KW, {
-                item: dd.iconItem
-              }), null === dd.iconItem && (0, SN.jsx)("span", {
+              tabIndex: FQ ? 0 : void 0,
+              children: [null !== QQ.iconItem && (0, Iq.jsx)(vo, {
+                item: QQ.iconItem
+              }), null === QQ.iconItem && (0, Iq.jsx)("span", {
                 className: "SkyblockQuestStepMark",
                 "aria-hidden": "true",
-                children: "completed" === dd.status ? "\u2713" : "skipped" === dd.status ? "\u2212" : "\u25cb"
-              }), (0, SN.jsxs)("span", {
+                children: "completed" === QQ.status ? "\u2713" : "skipped" === QQ.status ? "\u2212" : "\u25cb"
+              }), (0, Iq.jsxs)("span", {
                 className: "SkyblockQuestStepBody",
-                children: [(0, SN.jsx)("strong", {
-                  children: (0, SN.jsx)(gW.b, {
-                    text: dd.name
+                children: [(0, Iq.jsx)("strong", {
+                  children: (0, Iq.jsx)(Do.d, {
+                    text: QQ.name
                   })
-                }), kd && !Jd && (0, SN.jsx)("span", {
-                  children: (0, SN.jsx)(gW.b, {
-                    text: dd.description
+                }), wQ && !FQ && (0, Iq.jsx)("span", {
+                  children: (0, Iq.jsx)(Do.d, {
+                    text: QQ.description
                   })
-                }), null !== dd.barPercent && (0, SN.jsx)(oW, {
-                  name: dd.name,
-                  percent: dd.barPercent,
-                  progress: dd.progress
-                }), null === dd.barPercent && !Jd && (0, SN.jsx)("span", {
+                }), null !== QQ.barPercent && (0, Iq.jsx)(mo, {
+                  name: QQ.name,
+                  percent: QQ.barPercent,
+                  progress: QQ.progress
+                }), null === QQ.barPercent && !FQ && (0, Iq.jsx)("span", {
                   className: "SkyblockQuestStepStatus",
-                  children: dd.statusLabel
+                  children: QQ.statusLabel
                 })]
               })]
-            }, dd.id);
-          return Jd ? (0, SN.jsx)(ZW.f, {
+            }, QQ.id);
+          return FQ ? (0, Iq.jsx)(oo.f, {
             delayShow: 200,
-            tooltipInner: (0, SN.jsxs)("div", {
+            tooltipInner: (0, Iq.jsxs)("div", {
               className: "SkyblockQuestStepTooltip",
-              children: [(0, SN.jsx)("span", {
-                children: (0, SN.jsx)(gW.b, {
-                  text: dd.description
+              children: [(0, Iq.jsx)("span", {
+                children: (0, Iq.jsx)(Do.d, {
+                  text: QQ.description
                 })
-              }), (0, SN.jsx)("strong", {
-                children: dd.statusLabel
+              }), (0, Iq.jsx)("strong", {
+                children: QQ.statusLabel
               })]
             }),
-            children: pd
-          }, dd.id) : pd
+            children: LQ
+          }, QQ.id) : LQ
         }))
       })
     }
 
-    function QW(dd) {
+    function Ho(QQ) {
       let {
-        quest: Jd,
-        select: kd
-      } = dd;
+        quest: FQ,
+        select: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, mN.B)(), Nd = Jd.focusStep;
-      return (0, SN.jsxs)(EN.d, {
-        className: BN()("SkyblockQuestCard", {
-          Selected: Jd.selected,
-          Tracked: Jd.tracked
+        t: LQ
+      } = (0, sq.y)(), qQ = FQ.focusStep;
+      return (0, Iq.jsxs)(Xq.f, {
+        className: cq()("SkyblockQuestCard", {
+          Selected: FQ.selected,
+          Tracked: FQ.tracked
         }),
         onClick: () => {
-          kd(Jd.id)
+          wQ(FQ.id)
         },
-        children: [(0, SN.jsxs)("div", {
+        children: [(0, Iq.jsxs)("div", {
           className: "SkyblockQuestCardTitle",
-          children: [(0, SN.jsx)("strong", {
-            children: (0, SN.jsx)(gW.b, {
-              text: Jd.name
+          children: [(0, Iq.jsx)("strong", {
+            children: (0, Iq.jsx)(Do.d, {
+              text: FQ.name
             })
-          }), Jd.tracked && (0, SN.jsx)("span", {
+          }), FQ.tracked && (0, Iq.jsx)("span", {
             className: "SkyblockQuestTrackingBadge",
-            children: pd("skyblockGame:currentQuest")
+            children: LQ("skyblockGame:currentQuest")
           })]
-        }), Nd && (0, SN.jsxs)("div", {
+        }), qQ && (0, Iq.jsxs)("div", {
           className: "SkyblockQuestCardStep",
-          children: [null !== Nd.iconItem && (0, SN.jsx)(KW, {
-            item: Nd.iconItem
-          }), (0, SN.jsx)(oW, {
-            name: Nd.name,
-            percent: Nd.barPercent,
-            progress: Nd.progress
+          children: [null !== qQ.iconItem && (0, Iq.jsx)(vo, {
+            item: qQ.iconItem
+          }), (0, Iq.jsx)(mo, {
+            name: qQ.name,
+            percent: qQ.barPercent,
+            progress: qQ.progress
           })]
-        }), (0, SN.jsx)("span", {
+        }), (0, Iq.jsx)("span", {
           className: "SkyblockQuestProgress",
-          children: Jd.progress
+          children: FQ.progress
         })]
       })
     }
 
-    function LW(dd) {
+    function bo(QQ) {
       let {
-        controller: Jd,
-        surface: kd
-      } = dd;
-      const pd = (0, bN.i)(Kk, Jd.getSnapshot()),
+        controller: FQ,
+        surface: wQ
+      } = QQ;
+      const LQ = (0, rq.i)(mw, FQ.getSnapshot()),
         {
-          t: Nd
-        } = (0, mN.B)(),
-        Wd = hN();
-      return pd.enabled ? (0, SN.jsxs)(SN.Fragment, {
-        children: ["hud" === kd && (0, SN.jsx)(SN.Fragment, {
-          children: pd.tracked && (0, SN.jsx)("div", {
+          t: qQ
+        } = (0, sq.y)(),
+        oQ = Vq();
+      return LQ.enabled ? (0, Iq.jsxs)(Iq.Fragment, {
+        children: ["hud" === wQ && (0, Iq.jsx)(Iq.Fragment, {
+          children: LQ.tracked && (0, Iq.jsx)("div", {
             className: "SkyblockQuestTracker",
-            style: Ck,
-            children: (0, SN.jsxs)("div", {
+            style: vw,
+            children: (0, Iq.jsxs)("div", {
               className: "SkyblockQuestTrackerBody",
-              children: [pd.trackedStepPulse > 0 && (0, SN.jsx)("span", {
+              children: [LQ.trackedStepPulse > 0 && (0, Iq.jsx)("span", {
                 className: "SkyblockQuestTrackerPulse",
                 "aria-hidden": "true"
-              }, pd.trackedStepPulse), (0, SN.jsx)("span", {
+              }, LQ.trackedStepPulse), (0, Iq.jsx)("span", {
                 className: "SkyblockQuestEyebrow",
-                children: Nd("skyblockGame:currentQuest")
-              }), (0, SN.jsxs)("span", {
+                children: qQ("skyblockGame:currentQuest")
+              }), (0, Iq.jsxs)("span", {
                 className: "SkyblockQuestTrackerTitle",
-                children: [(0, SN.jsx)("strong", {
-                  children: (0, SN.jsx)(gW.b, {
-                    text: pd.tracked.name
+                children: [(0, Iq.jsx)("strong", {
+                  children: (0, Iq.jsx)(Do.d, {
+                    text: LQ.tracked.name
                   })
-                }), null !== pd.tracked.clock && (0, SN.jsx)("span", {
+                }), null !== LQ.tracked.clock && (0, Iq.jsx)("span", {
                   className: "SkyblockQuestClock",
-                  children: pd.tracked.clock
+                  children: LQ.tracked.clock
                 })]
-              }), (0, SN.jsx)(lW, {
-                subquests: pd.tracked.subquests
+              }), (0, Iq.jsx)(uo, {
+                subquests: LQ.tracked.subquests
               })]
             })
           })
-        }), "menu" === kd && (0, SN.jsx)(TN.e, {
-          show: pd.open,
-          close: Jd.dismiss,
+        }), "menu" === wQ && (0, Iq.jsx)(aq.d, {
+          show: LQ.open,
+          close: FQ.dismiss,
           togglePointerLock: !1,
           className: "SkyblockSkillsOverlay",
-          children: (0, SN.jsxs)("section", {
+          children: (0, Iq.jsxs)("section", {
             className: "SkyblockSkillsPanel SkyblockQuestsPanel",
             role: "dialog",
             "aria-modal": "true",
             "aria-labelledby": "skyblockQuestsTitle",
             tabIndex: -1,
-            ref: Wd,
-            onKeyDown: cN,
-            children: [(0, SN.jsxs)("header", {
+            ref: oQ,
+            onKeyDown: fq,
+            children: [(0, Iq.jsxs)("header", {
               className: "SkyblockSkillsHeader",
-              children: [(0, SN.jsx)("div", {
-                children: (0, SN.jsx)("h2", {
+              children: [(0, Iq.jsx)("div", {
+                children: (0, Iq.jsx)("h2", {
                   id: "skyblockQuestsTitle",
-                  children: Nd("skyblockGame:quests")
+                  children: qQ("skyblockGame:quests")
                 })
-              }), (0, SN.jsx)(EN.i, {
+              }), (0, Iq.jsx)(Xq.j, {
                 padIgnore: !0,
-                onClick: Jd.dismiss
+                onClick: FQ.dismiss
               })]
-            }), (0, SN.jsxs)("div", {
+            }), (0, Iq.jsxs)("div", {
               className: "SkyblockSkillsBody SkyblockQuestsBody",
-              children: [(0, SN.jsxs)("div", {
+              children: [(0, Iq.jsxs)("div", {
                 className: "SkyblockQuestList",
-                children: [(0, SN.jsx)("h3", {
-                  children: Nd("skyblockGame:current")
-                }), 0 === pd.active.length && (0, SN.jsx)("p", {
+                children: [(0, Iq.jsx)("h3", {
+                  children: qQ("skyblockGame:current")
+                }), 0 === LQ.active.length && (0, Iq.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: Nd("skyblockGame:noActiveQuests")
-                }), pd.active.map((dd => (0, SN.jsx)(QW, {
-                  quest: dd,
-                  select: Jd.select
-                }, dd.id))), (0, SN.jsx)("h3", {
-                  children: (0, SN.jsxs)("button", {
+                  children: qQ("skyblockGame:noActiveQuests")
+                }), LQ.active.map((QQ => (0, Iq.jsx)(Ho, {
+                  quest: QQ,
+                  select: FQ.select
+                }, QQ.id))), (0, Iq.jsx)("h3", {
+                  children: (0, Iq.jsxs)("button", {
                     type: "button",
-                    className: BN()("SkyblockQuestSectionToggle", {
-                      Expanded: pd.completedExpanded
+                    className: cq()("SkyblockQuestSectionToggle", {
+                      Expanded: LQ.completedExpanded
                     }),
-                    "aria-expanded": pd.completedExpanded,
-                    onClick: Jd.toggleCompleted,
-                    children: [(0, SN.jsx)("span", {
+                    "aria-expanded": LQ.completedExpanded,
+                    onClick: FQ.toggleCompleted,
+                    children: [(0, Iq.jsx)("span", {
                       className: "SkyblockQuestSectionCaret",
                       "aria-hidden": "true"
-                    }), Nd("skyblockGame:completed"), (0, SN.jsx)("span", {
+                    }), qQ("skyblockGame:completed"), (0, Iq.jsx)("span", {
                       className: "SkyblockQuestSectionCount",
-                      children: pd.completed.length
+                      children: LQ.completed.length
                     })]
                   })
-                }), pd.completedExpanded && 0 === pd.completed.length && (0, SN.jsx)("p", {
+                }), LQ.completedExpanded && 0 === LQ.completed.length && (0, Iq.jsx)("p", {
                   className: "SkyblockQuestEmpty",
-                  children: Nd("skyblockGame:noCompletedQuests")
-                }), pd.completedExpanded && pd.completed.map((dd => (0, SN.jsx)(QW, {
-                  quest: dd,
-                  select: Jd.select
-                }, dd.id)))]
-              }), pd.detail && (0, SN.jsxs)("div", {
+                  children: qQ("skyblockGame:noCompletedQuests")
+                }), LQ.completedExpanded && LQ.completed.map((QQ => (0, Iq.jsx)(Ho, {
+                  quest: QQ,
+                  select: FQ.select
+                }, QQ.id)))]
+              }), LQ.detail && (0, Iq.jsxs)("div", {
                 className: "SkyblockQuestDetail",
-                children: [pd.detail.completed && (0, SN.jsx)("span", {
+                children: [LQ.detail.completed && (0, Iq.jsx)("span", {
                   className: "SkyblockQuestEyebrow",
-                  children: Nd("skyblockGame:completedQuest")
-                }), (0, SN.jsx)("h3", {
-                  children: (0, SN.jsx)(gW.b, {
-                    text: pd.detail.name
+                  children: qQ("skyblockGame:completedQuest")
+                }), (0, Iq.jsx)("h3", {
+                  children: (0, Iq.jsx)(Do.d, {
+                    text: LQ.detail.name
                   })
-                }), (0, SN.jsx)("p", {
+                }), (0, Iq.jsx)("p", {
                   className: "SkyblockQuestDescription",
-                  children: (0, SN.jsx)(gW.b, {
-                    text: pd.detail.description
+                  children: (0, Iq.jsx)(Do.d, {
+                    text: LQ.detail.description
                   })
-                }), (0, SN.jsxs)("p", {
+                }), (0, Iq.jsxs)("p", {
                   className: "SkyblockQuestProgress",
-                  children: [pd.detail.progress, null !== pd.detail.clock && (0, SN.jsx)("span", {
+                  children: [LQ.detail.progress, null !== LQ.detail.clock && (0, Iq.jsx)("span", {
                     className: "SkyblockQuestClock",
-                    children: pd.detail.clock
+                    children: LQ.detail.clock
                   })]
-                }), (0, SN.jsx)(lW, {
-                  subquests: pd.detail.subquests,
+                }), (0, Iq.jsx)(uo, {
+                  subquests: LQ.detail.subquests,
                   showDescriptions: !0
-                }), pd.detail.tracked && (0, SN.jsx)("p", {
+                }), LQ.detail.tracked && (0, Iq.jsx)("p", {
                   className: "SkyblockQuestTrackingStatus",
-                  children: pd.detail.trackLabel
-                }), !pd.detail.completed && !pd.detail.tracked && (0, SN.jsx)(EN.j, {
-                  onClick: Jd.trackSelected,
-                  disabled: !pd.detail.canTrack,
-                  children: pd.detail.trackLabel
-                }), pd.detail.canViewDialogue && (0, SN.jsx)(EN.d, {
+                  children: LQ.detail.trackLabel
+                }), !LQ.detail.completed && !LQ.detail.tracked && (0, Iq.jsx)(Xq.m, {
+                  onClick: FQ.trackSelected,
+                  disabled: !LQ.detail.canTrack,
+                  children: LQ.detail.trackLabel
+                }), LQ.detail.canViewDialogue && (0, Iq.jsx)(Xq.f, {
                   className: "SkyblockQuestViewDialogue",
-                  onClick: Jd.viewDialogue,
-                  children: Nd("skyblockDialogue:viewDialogue")
+                  onClick: FQ.viewDialogue,
+                  children: qQ("skyblockDialogue:viewDialogue")
                 })]
               })]
             })]
@@ -6033,35 +6033,35 @@ export const modules = {
         })]
       }) : null
     }
-    var OW = kd(1059),
-      eW = kd(2502);
+    var Yo = wQ(1079),
+      xo = wQ(2511);
 
-    function RW(dd, Jd, kd, pd, Nd) {
-      const Wd = dd => "linear" === Nd ? dd : {
-          vd: Nd,
-          point: dd
+    function Ao(QQ, FQ, wQ, LQ, qQ) {
+      const oQ = QQ => "linear" === qQ ? QQ : {
+          MQ: qQ,
+          point: QQ
         },
-        Pd = {};
-      for (const [Zd, gd] of pd)
-        for (const [Jd, kd] of Object.entries(dd(Zd, gd, Wd))) Pd[Jd] ??= {
+        DQ = {};
+      for (const [kQ, vQ] of LQ)
+        for (const [FQ, wQ] of Object.entries(QQ(kQ, vQ, oQ))) DQ[FQ] ??= {
           timeline: []
-        }, Pd[Jd].timeline.push(kd);
+        }, DQ[FQ].timeline.push(wQ);
       return {
-        Ld: Jd,
-        loop: kd,
-        Rd: Pd
+        YQ: FQ,
+        loop: wQ,
+        AQ: DQ
       }
     }
-    const IW = .547,
-      GW = .022,
-      vW = {
+    const to = .547,
+      eo = .022,
+      Mo = {
         drop: -.03,
         torso: -.28,
         nod: -.4,
         arms: -2.85,
         spread: .18
       },
-      xW = {
+      Go = {
         drop: .22,
         torso: .7,
         nod: -.25,
@@ -6070,167 +6070,167 @@ export const modules = {
         spread: .12
       };
 
-    function qW(dd, Jd, kd) {
+    function po(QQ, FQ, wQ) {
       const {
-        drop: pd = 0,
-        shift: Nd = 0,
-        torso: Wd = 0,
-        nod: Pd = 0,
-        tilt: Zd = 0,
-        legs: gd = [0, 0],
-        arms: Cd = 0,
-        spread: Kd = 0
-      } = Jd, od = IW * Math.cos(Wd) - GW * Math.sin(Wd), ld = IW * Math.sin(Wd) + GW * Math.cos(Wd), Qd = kd([0, -pd, Nd]);
+        drop: LQ = 0,
+        shift: qQ = 0,
+        torso: oQ = 0,
+        nod: DQ = 0,
+        tilt: kQ = 0,
+        legs: vQ = [0, 0],
+        arms: mQ = 0,
+        spread: uQ = 0
+      } = FQ, HQ = to * Math.cos(oQ) - eo * Math.sin(oQ), bQ = to * Math.sin(oQ) + eo * Math.cos(oQ), YQ = wQ([0, -LQ, qQ]);
       return {
         LowerBody: {
-          timeFraction: dd,
-          position: Qd,
-          rotation: kd([0, 0, 0])
+          timeFraction: QQ,
+          position: YQ,
+          rotation: wQ([0, 0, 0])
         },
         UpperBody: {
-          timeFraction: dd,
-          position: Qd,
-          rotation: kd([Wd, 0, Zd])
+          timeFraction: QQ,
+          position: YQ,
+          rotation: wQ([oQ, 0, kQ])
         },
         HeadMesh: {
-          timeFraction: dd,
-          position: kd([0, od - IW - pd, ld - GW + Nd]),
-          rotation: kd([Wd + Pd, 0, Zd])
+          timeFraction: QQ,
+          position: wQ([0, HQ - to - LQ, bQ - eo + qQ]),
+          rotation: wQ([oQ + DQ, 0, kQ])
         },
         LegLeftMesh: {
-          timeFraction: dd,
-          rotation: kd([gd[0], 0, 0])
+          timeFraction: QQ,
+          rotation: wQ([vQ[0], 0, 0])
         },
         LegRightMesh: {
-          timeFraction: dd,
-          rotation: kd([gd[1], 0, 0])
+          timeFraction: QQ,
+          rotation: wQ([vQ[1], 0, 0])
         },
         ArmLeftMesh: {
-          timeFraction: dd,
-          rotation: kd([Cd, 0, Kd])
+          timeFraction: QQ,
+          rotation: wQ([mQ, 0, uQ])
         },
         ArmRightMesh: {
-          timeFraction: dd,
-          rotation: kd([Cd, 0, -Kd])
+          timeFraction: QQ,
+          rotation: wQ([mQ, 0, -uQ])
         }
       }
     }
 
-    function BW(dd, Jd, kd) {
-      return RW(qW, dd, Jd, kd, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+    function co(QQ, FQ, wQ) {
+      return Ao(po, QQ, FQ, wQ, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
     }
 
-    function sW(dd) {
-      return "number" === typeof dd ? [dd, dd] : dd
+    function Co(QQ) {
+      return "number" === typeof QQ ? [QQ, QQ] : QQ
     }
 
-    function iW(dd, Jd, kd) {
+    function So(QQ, FQ, wQ) {
       const {
-        rise: pd = 0,
-        shift: Nd = 0,
-        torso: Wd = 0,
-        twist: Pd = 0,
-        tilt: Zd = 0,
-        nod: gd = 0,
-        cock: Cd = 0,
-        arms: Kd = 0,
-        spread: od = 0
-      } = Jd, [ld, Qd] = sW(Kd), [Ld, Od] = sW(od);
+        rise: LQ = 0,
+        shift: qQ = 0,
+        torso: oQ = 0,
+        twist: DQ = 0,
+        tilt: kQ = 0,
+        nod: vQ = 0,
+        cock: mQ = 0,
+        arms: uQ = 0,
+        spread: HQ = 0
+      } = FQ, [bQ, YQ] = Co(uQ), [xQ, AQ] = Co(HQ);
       return {
         TorsoNode: {
-          timeFraction: dd,
-          position: kd([0, pd, Nd]),
-          rotation: kd([Wd, Pd, Zd])
+          timeFraction: QQ,
+          position: wQ([0, LQ, qQ]),
+          rotation: wQ([oQ, DQ, kQ])
         },
         HeadMesh: {
-          timeFraction: dd,
-          rotation: kd([gd, 0, Cd])
+          timeFraction: QQ,
+          rotation: wQ([vQ, 0, mQ])
         },
         ArmLeftMesh: {
-          timeFraction: dd,
-          rotation: kd([ld, 0, Ld])
+          timeFraction: QQ,
+          rotation: wQ([bQ, 0, xQ])
         },
         ArmRightMesh: {
-          timeFraction: dd,
-          rotation: kd([Qd, 0, -Od])
+          timeFraction: QQ,
+          rotation: wQ([YQ, 0, -AQ])
         }
       }
     }
-    const aW = [1.0625, -1, 0];
+    const io = [1.0625, -1, 0];
 
-    function MW(dd) {
-      return "number" === typeof dd ? [dd, dd] : dd
+    function Wo(QQ) {
+      return "number" === typeof QQ ? [QQ, QQ] : QQ
     }
 
-    function FW(dd, Jd, kd) {
+    function Ro(QQ, FQ, wQ) {
       const {
-        drop: pd = 0,
-        shift: Nd = 0,
-        torso: Wd = 0,
-        tilt: Pd = 0,
-        nod: Zd = 0,
-        cock: gd = 0,
-        legs: Cd = [0, 0],
-        arms: Kd = 0,
-        spread: od = 0
-      } = Jd, [ld, Qd] = MW(Kd), [Ld, Od] = MW(od), ed = -Wd, Rd = -Pd, [Id, Gd, vd] = function(dd, Jd) {
-        const [kd, pd, Nd] = [-aW[0], aW[1], -aW[2]], Wd = kd * Math.cos(Jd) - pd * Math.sin(Jd), Pd = kd * Math.sin(Jd) + pd * Math.cos(Jd);
-        return [Wd - kd, -(Pd * Math.cos(dd) - Nd * Math.sin(dd) - pd), Pd * Math.sin(dd) + Nd * Math.cos(dd) - Nd]
-      }(ed, Rd), xd = kd([0, -pd, Nd]);
+        drop: LQ = 0,
+        shift: qQ = 0,
+        torso: oQ = 0,
+        tilt: DQ = 0,
+        nod: kQ = 0,
+        cock: vQ = 0,
+        legs: mQ = [0, 0],
+        arms: uQ = 0,
+        spread: HQ = 0
+      } = FQ, [bQ, YQ] = Wo(uQ), [xQ, AQ] = Wo(HQ), tQ = -oQ, eQ = -DQ, [MQ, GQ, pQ] = function(QQ, FQ) {
+        const [wQ, LQ, qQ] = [-io[0], io[1], -io[2]], oQ = wQ * Math.cos(FQ) - LQ * Math.sin(FQ), DQ = wQ * Math.sin(FQ) + LQ * Math.cos(FQ);
+        return [oQ - wQ, -(DQ * Math.cos(QQ) - qQ * Math.sin(QQ) - LQ), DQ * Math.sin(QQ) + qQ * Math.cos(QQ) - qQ]
+      }(tQ, eQ), cQ = wQ([0, -LQ, qQ]);
       return {
         TorsoNode: {
-          timeFraction: dd,
-          position: kd([Id, Gd - pd, vd + Nd]),
-          rotation: kd([ed, 0, Rd])
+          timeFraction: QQ,
+          position: wQ([MQ, GQ - LQ, pQ + qQ]),
+          rotation: wQ([tQ, 0, eQ])
         },
         HeadMesh: {
-          timeFraction: dd,
-          rotation: kd([-Zd, 0, -gd])
+          timeFraction: QQ,
+          rotation: wQ([-kQ, 0, -vQ])
         },
         ArmLeftMesh: {
-          timeFraction: dd,
-          rotation: kd([-ld, 0, -Ld])
+          timeFraction: QQ,
+          rotation: wQ([-bQ, 0, -xQ])
         },
         ArmRightMesh: {
-          timeFraction: dd,
-          rotation: kd([-Qd, 0, Od])
+          timeFraction: QQ,
+          rotation: wQ([-YQ, 0, AQ])
         },
         LegLeftMesh: {
-          timeFraction: dd,
-          position: xd,
-          rotation: kd([-Cd[0], 0, 0])
+          timeFraction: QQ,
+          position: cQ,
+          rotation: wQ([-mQ[0], 0, 0])
         },
         LegRightMesh: {
-          timeFraction: dd,
-          position: xd,
-          rotation: kd([-Cd[1], 0, 0])
+          timeFraction: QQ,
+          position: cQ,
+          rotation: wQ([-mQ[1], 0, 0])
         }
       }
     }
-    var YW = kd(37329),
-      mW = kd(38613),
-      bW = kd(38776);
+    var Oo = wQ(36768),
+      so = wQ(38009),
+      ro = wQ(38164);
 
-    function SW(dd, Jd, kd) {
-      var pd, Nd;
-      const Wd = function() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-          return dd + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - dd) * kd
+    function Io(QQ, FQ, wQ) {
+      var LQ, qQ;
+      const oQ = function() {
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+          return QQ + ((arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0) - QQ) * wQ
         },
-        [Pd, Zd] = null !== (pd = dd.legs) && void 0 !== pd ? pd : [0, 0],
-        [gd, Cd] = null !== (Nd = Jd.legs) && void 0 !== Nd ? Nd : [0, 0];
+        [DQ, kQ] = null !== (LQ = QQ.legs) && void 0 !== LQ ? LQ : [0, 0],
+        [vQ, mQ] = null !== (qQ = FQ.legs) && void 0 !== qQ ? qQ : [0, 0];
       return {
-        drop: Wd(dd.drop, Jd.drop),
-        shift: Wd(dd.shift, Jd.shift),
-        torso: Wd(dd.torso, Jd.torso),
-        nod: Wd(dd.nod, Jd.nod),
-        tilt: Wd(dd.tilt, Jd.tilt),
-        legs: [Wd(Pd, gd), Wd(Zd, Cd)],
-        arms: Wd(dd.arms, Jd.arms),
-        spread: Wd(dd.spread, Jd.spread)
+        drop: oQ(QQ.drop, FQ.drop),
+        shift: oQ(QQ.shift, FQ.shift),
+        torso: oQ(QQ.torso, FQ.torso),
+        nod: oQ(QQ.nod, FQ.nod),
+        tilt: oQ(QQ.tilt, FQ.tilt),
+        legs: [oQ(DQ, vQ), oQ(kQ, mQ)],
+        arms: oQ(QQ.arms, FQ.arms),
+        spread: oQ(QQ.spread, FQ.spread)
       }
     }
-    const jW = {
+    const Uo = {
         drop: .1,
         torso: .22,
         nod: -.32,
@@ -6238,44 +6238,44 @@ export const modules = {
         arms: -.75,
         spread: .32
       },
-      XW = BW(4400, !0, [
-        [0, jW],
+      No = co(4400, !0, [
+        [0, Uo],
         [.16, {
-          ...jW,
+          ...Uo,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.3, jW],
+        [.3, Uo],
         [.44, {
-          ...jW,
+          ...Uo,
           drop: .06,
           torso: .16,
           arms: -.85
         }],
-        [.56, SW(jW, vW, .7)],
-        [.66, SW(jW, vW, .78)],
-        [.74, SW(jW, xW, .65)],
+        [.56, Io(Uo, Mo, .7)],
+        [.66, Io(Uo, Mo, .78)],
+        [.74, Io(Uo, Go, .65)],
         [.86, {
-          ...jW,
+          ...Uo,
           drop: .14
         }],
-        [1, jW]
+        [1, Uo]
       ], "catmull-rom-spline"),
-      fW = {
-        ...jW,
+      To = {
+        ...Uo,
         drop: .14,
         torso: .3,
         spread: .4
       },
-      nW = {
+      Ko = {
         rise: .15,
         torso: .15,
         nod: -.25,
         arms: -.6,
         spread: .35
       },
-      UW = {
+      zo = {
         drop: .06,
         torso: .18,
         nod: -.25,
@@ -6283,62 +6283,62 @@ export const modules = {
         arms: -.45,
         spread: .45
       },
-      yW = {
-        caveGolem: XW,
-        magmaGolem: BW(3600, !0, [
-          [0, fW],
+      jo = {
+        caveGolem: No,
+        magmaGolem: co(3600, !0, [
+          [0, To],
           [.12, {
-            ...fW,
+            ...To,
             tilt: .08,
             drop: .11
           }],
           [.26, {
-            ...fW,
+            ...To,
             tilt: -.08
           }],
           [.4, {
-            ...fW,
+            ...To,
             tilt: .06,
             drop: .11
           }],
-          [.52, SW(fW, vW, .9)],
-          [.62, SW(fW, xW, .8)],
-          [.7, SW(fW, xW, .45)],
-          [.78, SW(fW, xW, .85)],
+          [.52, Io(To, Mo, .9)],
+          [.62, Io(To, Go, .8)],
+          [.7, Io(To, Go, .45)],
+          [.78, Io(To, Go, .85)],
           [.9, {
-            ...fW,
+            ...To,
             drop: .17
           }],
-          [1, fW]
+          [1, To]
         ], "catmull-rom-spline"),
-        frostWraith: function(dd, Jd, kd) {
-          return RW(iW, dd, Jd, kd, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        frostWraith: function(QQ, FQ, wQ) {
+          return Ao(So, QQ, FQ, wQ, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4800, !0, [
-          [0, nW],
+          [0, Ko],
           [.14, {
-            ...nW,
+            ...Ko,
             rise: .25,
             tilt: .06
           }],
           [.28, {
-            ...nW,
+            ...Ko,
             rise: .12,
             tilt: -.04
           }],
           [.42, {
-            ...nW,
+            ...Ko,
             rise: .24,
             tilt: .04
           }],
           [.54, {
-            ...nW,
+            ...Ko,
             rise: .22,
             twist: .2,
             arms: [-.3, -1.6],
             spread: [.4, .05]
           }],
           [.64, {
-            ...nW,
+            ...Ko,
             rise: .26,
             twist: .2,
             torso: .05,
@@ -6346,7 +6346,7 @@ export const modules = {
             spread: [.4, .05]
           }],
           [.72, {
-            ...nW,
+            ...Ko,
             rise: .1,
             twist: .22,
             torso: .35,
@@ -6355,26 +6355,26 @@ export const modules = {
             spread: [.4, -.05]
           }],
           [.86, {
-            ...nW,
+            ...Ko,
             rise: .16,
             tilt: -.04
           }],
-          [1, nW]
+          [1, Ko]
         ], "catmull-rom-spline"),
-        tikiTerror: function(dd, Jd, kd) {
-          return RW(FW, dd, Jd, kd, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
+        tikiTerror: function(QQ, FQ, wQ) {
+          return Ao(Ro, QQ, FQ, wQ, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "linear")
         }(4400, !0, [
-          [0, UW],
+          [0, zo],
           [.16, {
-            ...UW,
+            ...zo,
             drop: .02,
             torso: .12,
             arms: -.55,
             spread: .52
           }],
-          [.3, UW],
+          [.3, zo],
           [.44, {
-            ...UW,
+            ...zo,
             drop: .02,
             torso: .12,
             arms: -.55,
@@ -6407,271 +6407,271 @@ export const modules = {
             spread: 1.1
           }],
           [.86, {
-            ...UW,
+            ...zo,
             drop: .1
           }],
-          [1, UW]
+          [1, zo]
         ], "catmull-rom-spline")
       },
-      DW = {
+      ao = {
         golem: "caveGolem",
         wraith: "frostWraith",
         tiki: "tikiTerror"
       },
-      TW = {
+      Xo = {
         "Cave Golem": "caveGolem",
         "Magma Golem": "magmaGolem"
       },
-      EW = Object.fromEntries(Object.entries(yW).map((dd => {
-        let [Jd, kd] = dd;
-        return [Jd, (0, bW.b)((0, YW.h)(kd), Jd)]
+      fo = Object.fromEntries(Object.entries(jo).map((QQ => {
+        let [FQ, wQ] = QQ;
+        return [FQ, (0, ro.d)((0, Oo.h)(wQ), FQ)]
       })));
 
-    function cW(dd) {
-      const Jd = function(dd) {
-        var Jd;
-        const kd = (0, mW.d)(dd).poseRig;
-        return null !== (Jd = TW[dd]) && void 0 !== Jd ? Jd : void 0 === kd ? null : DW[kd]
-      }(dd);
-      return null === Jd ? null : EW[Jd]
+    function Vo(QQ) {
+      const FQ = function(QQ) {
+        var FQ;
+        const wQ = (0, so.b)(QQ).poseRig;
+        return null !== (FQ = Xo[QQ]) && void 0 !== FQ ? FQ : void 0 === wQ ? null : ao[wQ]
+      }(QQ);
+      return null === FQ ? null : fo[FQ]
     }
 
-    function hW(dd) {
+    function ho(QQ) {
       return {
-        "--difficulty-colour": dd
+        "--difficulty-colour": QQ
       }
     }
-    const rW = (0, ad.lazy)((() => (0, eW.d)(kd.e(193).then((() => kd(41485))), (dd => dd.MobPreview))));
+    const Jo = (0, WQ.lazy)((() => (0, xo.b)(wQ.e(193).then((() => wQ(40922))), (QQ => QQ.MobPreview))));
 
-    function uW(dd) {
-      var Jd, kd, pd;
+    function Eo(QQ) {
+      var FQ, wQ, LQ;
       let {
-        picker: Nd,
-        controller: Wd
-      } = dd;
+        picker: qQ,
+        controller: oQ
+      } = QQ;
       const {
-        t: Pd
-      } = (0, mN.B)(), Zd = hN(), {
-        page: gd
-      } = Nd;
-      return (0, SN.jsxs)("section", {
+        t: DQ
+      } = (0, sq.y)(), kQ = Vq(), {
+        page: vQ
+      } = qQ;
+      return (0, Iq.jsxs)("section", {
         className: "SkyblockSkillsPanel SkyblockBossPicker",
         role: "dialog",
         "aria-modal": "true",
         "aria-labelledby": "skyblockBossPickerTitle",
         tabIndex: -1,
-        ref: Zd,
-        onKeyDown: dd => {
-          "ArrowLeft" === dd.key ? (dd.preventDefault(), dd.stopPropagation(), Wd.previous()) : "ArrowRight" === dd.key ? (dd.preventDefault(), dd.stopPropagation(), Wd.next()) : cN(dd)
+        ref: kQ,
+        onKeyDown: QQ => {
+          "ArrowLeft" === QQ.key ? (QQ.preventDefault(), QQ.stopPropagation(), oQ.previous()) : "ArrowRight" === QQ.key ? (QQ.preventDefault(), QQ.stopPropagation(), oQ.next()) : fq(QQ)
         },
-        style: hW(gd.colour),
-        children: [(0, SN.jsxs)("header", {
+        style: ho(vQ.colour),
+        children: [(0, Iq.jsxs)("header", {
           className: "SkyblockSkillsHeader",
-          children: [(0, SN.jsx)("h2", {
+          children: [(0, Iq.jsx)("h2", {
             id: "skyblockBossPickerTitle",
-            children: Nd.dungeonName
-          }), (0, SN.jsx)(EN.i, {
+            children: qQ.dungeonName
+          }), (0, Iq.jsx)(Xq.j, {
             padIgnore: !0,
-            onClick: Wd.dismiss
+            onClick: oQ.dismiss
           })]
-        }), (0, SN.jsxs)("div", {
+        }), (0, Iq.jsxs)("div", {
           className: "SkyblockBossPickerBody",
-          children: [(0, SN.jsxs)("div", {
+          children: [(0, Iq.jsxs)("div", {
             className: "SkyblockBossPickerStage",
-            children: [(0, SN.jsx)(EN.d, {
+            children: [(0, Iq.jsx)(Xq.f, {
               className: "SkyblockBossPickerTurn Previous",
-              disabled: !Nd.canPrevious,
-              onClick: Wd.previous,
-              children: (0, SN.jsx)("span", {
+              disabled: !qQ.canPrevious,
+              onClick: oQ.previous,
+              children: (0, Iq.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, SN.jsx)(OW.e, {
+                children: (0, Iq.jsx)(Yo.c, {
                   name: "angle-up"
                 })
               })
-            }), (0, SN.jsxs)("div", {
-              className: BN()("SkyblockBossPickerBoss", {
-                Locked: !gd.unlocked
+            }), (0, Iq.jsxs)("div", {
+              className: cq()("SkyblockBossPickerBoss", {
+                Locked: !vQ.unlocked
               }),
-              children: [null !== gd.bossMobType && (0, SN.jsx)(ad.Suspense, {
-                fallback: (0, SN.jsx)("div", {
+              children: [null !== vQ.bossMobType && (0, Iq.jsx)(WQ.Suspense, {
+                fallback: (0, Iq.jsx)("div", {
                   className: "SkyblockBossPickerModel"
                 }),
-                children: (0, SN.jsx)(rW, {
+                children: (0, Iq.jsx)(Jo, {
                   className: "SkyblockBossPickerModel",
-                  mobType: gd.bossMobType,
-                  variation: gd.bossMobVariation,
-                  animation: null !== (Jd = cW(gd.bossMobType)) && void 0 !== Jd ? Jd : void 0
+                  mobType: vQ.bossMobType,
+                  variation: vQ.bossMobVariation,
+                  animation: null !== (FQ = Vo(vQ.bossMobType)) && void 0 !== FQ ? FQ : void 0
                 })
-              }), null === gd.bossMobType && (0, SN.jsx)("div", {
+              }), null === vQ.bossMobType && (0, Iq.jsx)("div", {
                 className: "SkyblockBossPickerModel SkyblockBossPickerUnknown",
                 "aria-hidden": "true",
                 children: "?"
               })]
-            }), (0, SN.jsx)(EN.d, {
+            }), (0, Iq.jsx)(Xq.f, {
               className: "SkyblockBossPickerTurn Next",
-              disabled: !Nd.canNext,
-              onClick: Wd.next,
-              children: (0, SN.jsx)("span", {
+              disabled: !qQ.canNext,
+              onClick: oQ.next,
+              children: (0, Iq.jsx)("span", {
                 className: "SkyblockBossPickerChevron",
-                children: (0, SN.jsx)(OW.e, {
+                children: (0, Iq.jsx)(Yo.c, {
                   name: "angle-up"
                 })
               })
             })]
-          }), (0, SN.jsxs)("div", {
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockBossPickerCaption",
-            children: [(0, SN.jsxs)("span", {
+            children: [(0, Iq.jsxs)("span", {
               className: "SkyblockBossPickerDifficulty",
-              children: [gd.beaten && (0, SN.jsx)("span", {
+              children: [vQ.beaten && (0, Iq.jsx)("span", {
                 "aria-hidden": "true",
                 children: "\u2713 "
-              }), gd.label]
-            }), (0, SN.jsx)("strong", {
+              }), vQ.label]
+            }), (0, Iq.jsx)("strong", {
               className: "SkyblockBossPickerName",
-              children: null !== (kd = gd.bossName) && void 0 !== kd ? kd : "???"
-            }), (0, SN.jsxs)("span", {
-              className: BN()("SkyblockBossPickerRecord", {
-                Locked: null !== gd.lockedHint
+              children: null !== (wQ = vQ.bossName) && void 0 !== wQ ? wQ : "???"
+            }), (0, Iq.jsxs)("span", {
+              className: cq()("SkyblockBossPickerRecord", {
+                Locked: null !== vQ.lockedHint
               }),
-              children: [null !== gd.lockedHintHighlight && (0, SN.jsxs)(SN.Fragment, {
-                children: [gd.lockedHintHighlight.before, (0, SN.jsxs)("span", {
+              children: [null !== vQ.lockedHintHighlight && (0, Iq.jsxs)(Iq.Fragment, {
+                children: [vQ.lockedHintHighlight.before, (0, Iq.jsxs)("span", {
                   className: "SkyblockDifficulty",
-                  style: hW(gd.lockedHintHighlight.colour),
-                  children: [null !== gd.lockedHintHighlight.icon && (0, SN.jsx)("span", {
+                  style: ho(vQ.lockedHintHighlight.colour),
+                  children: [null !== vQ.lockedHintHighlight.icon && (0, Iq.jsx)("span", {
                     className: "SkyblockBossPickerHintIcon",
                     "aria-hidden": "true",
-                    children: (0, SN.jsx)(MN.d, {
-                      itemName: gd.lockedHintHighlight.icon,
+                    children: (0, Iq.jsx)(Wq.e, {
+                      itemName: vQ.lockedHintHighlight.icon,
                       amount: 0
                     })
-                  }), gd.lockedHintHighlight.name]
-                }), gd.lockedHintHighlight.after]
-              }), null === gd.lockedHintHighlight && (null !== (pd = gd.lockedHint) && void 0 !== pd ? pd : gd.summary)]
+                  }), vQ.lockedHintHighlight.name]
+                }), vQ.lockedHintHighlight.after]
+              }), null === vQ.lockedHintHighlight && (null !== (LQ = vQ.lockedHint) && void 0 !== LQ ? LQ : vQ.summary)]
             })]
-          }), (0, SN.jsx)("div", {
+          }), (0, Iq.jsx)("div", {
             className: "SkyblockBossPickerDots",
             "aria-hidden": "true",
-            children: Nd.pages.map((dd => (0, SN.jsx)("span", {
-              className: BN()("SkyblockBossPickerDot", {
-                Current: dd.current,
-                Locked: !dd.unlocked
+            children: qQ.pages.map((QQ => (0, Iq.jsx)("span", {
+              className: cq()("SkyblockBossPickerDot", {
+                Current: QQ.current,
+                Locked: !QQ.unlocked
               }),
-              style: hW(dd.colour)
-            }, dd.difficulty)))
-          }), (0, SN.jsx)(EN.n, {
+              style: ho(QQ.colour)
+            }, QQ.difficulty)))
+          }), (0, Iq.jsx)(Xq.s, {
             className: "SkyblockBossPickerFight",
-            disabled: !gd.unlocked,
-            onClick: Wd.enter,
-            children: Pd("skyblockGame:dungeonFight")
+            disabled: !vQ.unlocked,
+            onClick: oQ.enter,
+            children: DQ("skyblockGame:dungeonFight")
           })]
         })]
       })
     }
 
-    function tW(dd) {
+    function no(QQ) {
       let {
-        dungeon: Jd,
-        select: kd
-      } = dd;
-      return (0, SN.jsxs)(EN.d, {
-        className: BN()("SkyblockDungeonCard", {
-          Selected: Jd.selected
+        dungeon: FQ,
+        select: wQ
+      } = QQ;
+      return (0, Iq.jsxs)(Xq.f, {
+        className: cq()("SkyblockDungeonCard", {
+          Selected: FQ.selected
         }),
         onClick: () => {
-          kd(Jd.id)
+          wQ(FQ.id)
         },
-        children: [(0, SN.jsxs)("div", {
+        children: [(0, Iq.jsxs)("div", {
           className: "SkyblockDungeonCardTitle",
-          children: [(0, SN.jsx)("strong", {
-            children: Jd.name
-          }), (0, SN.jsx)("span", {
-            children: Jd.beatenSummary
+          children: [(0, Iq.jsx)("strong", {
+            children: FQ.name
+          }), (0, Iq.jsx)("span", {
+            children: FQ.beatenSummary
           })]
-        }), (0, SN.jsx)("div", {
+        }), (0, Iq.jsx)("div", {
           className: "SkyblockDungeonChips",
-          children: Jd.difficulties.map((dd => (0, SN.jsxs)("span", {
-            className: BN()("SkyblockDungeonChip", "SkyblockDifficulty", {
-              Beaten: dd.beaten
+          children: FQ.difficulties.map((QQ => (0, Iq.jsxs)("span", {
+            className: cq()("SkyblockDungeonChip", "SkyblockDifficulty", {
+              Beaten: QQ.beaten
             }),
-            style: hW(dd.colour),
-            title: dd.summary,
-            children: [dd.beaten && (0, SN.jsx)("span", {
+            style: ho(QQ.colour),
+            title: QQ.summary,
+            children: [QQ.beaten && (0, Iq.jsx)("span", {
               "aria-hidden": "true",
               children: "\u2713 "
-            }), dd.label]
-          }, dd.difficulty)))
+            }), QQ.label]
+          }, QQ.difficulty)))
         })]
       })
     }
 
-    function VW(dd) {
+    function go(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(Ok, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(Yw, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = hN();
-      return kd.enabled ? (0, SN.jsxs)(TN.e, {
-        show: kd.open,
-        close: Jd.dismiss,
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = Vq();
+      return wQ.enabled ? (0, Iq.jsxs)(aq.d, {
+        show: wQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: [kd.picker && (0, SN.jsx)(uW, {
-          picker: kd.picker,
-          controller: Jd
-        }), !kd.picker && (0, SN.jsxs)("section", {
+        children: [wQ.picker && (0, Iq.jsx)(Eo, {
+          picker: wQ.picker,
+          controller: FQ
+        }), !wQ.picker && (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDungeonsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDungeonsTitle",
           tabIndex: -1,
-          ref: Nd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: qQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockDungeonsTitle",
-                children: pd("skyblockGame:dungeons")
-              }), (0, SN.jsx)("p", {
-                children: pd("skyblockGame:dungeonsIntro")
+                children: LQ("skyblockGame:dungeons")
+              }), (0, Iq.jsx)("p", {
+                children: LQ("skyblockGame:dungeonsIntro")
               })]
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              onClick: Jd.dismiss
+              onClick: FQ.dismiss
             })]
-          }), (0, SN.jsxs)("div", {
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockSkillsBody SkyblockDungeonsBody",
-            children: [(0, SN.jsx)("div", {
+            children: [(0, Iq.jsx)("div", {
               className: "SkyblockDungeonList",
-              children: kd.dungeons.map((dd => (0, SN.jsx)(tW, {
-                dungeon: dd,
-                select: Jd.select
-              }, dd.id)))
-            }), kd.detail && (0, SN.jsxs)("div", {
+              children: wQ.dungeons.map((QQ => (0, Iq.jsx)(no, {
+                dungeon: QQ,
+                select: FQ.select
+              }, QQ.id)))
+            }), wQ.detail && (0, Iq.jsxs)("div", {
               className: "SkyblockDungeonDetail",
-              children: [(0, SN.jsx)("h3", {
-                children: kd.detail.name
-              }), (0, SN.jsx)("ul", {
+              children: [(0, Iq.jsx)("h3", {
+                children: wQ.detail.name
+              }), (0, Iq.jsx)("ul", {
                 className: "SkyblockDungeonRecords",
-                children: kd.detail.difficulties.map((dd => (0, SN.jsxs)("li", {
-                  className: BN()("SkyblockDungeonRecord", {
-                    Beaten: dd.beaten
+                children: wQ.detail.difficulties.map((QQ => (0, Iq.jsxs)("li", {
+                  className: cq()("SkyblockDungeonRecord", {
+                    Beaten: QQ.beaten
                   }),
-                  children: [(0, SN.jsxs)("span", {
+                  children: [(0, Iq.jsxs)("span", {
                     className: "SkyblockDungeonRecordName SkyblockDifficulty",
-                    style: hW(dd.colour),
-                    children: [dd.beaten && (0, SN.jsx)("span", {
+                    style: ho(QQ.colour),
+                    children: [QQ.beaten && (0, Iq.jsx)("span", {
                       "aria-hidden": "true",
                       children: "\u2713 "
-                    }), dd.label]
-                  }), (0, SN.jsx)("span", {
+                    }), QQ.label]
+                  }), (0, Iq.jsx)("span", {
                     className: "SkyblockDungeonRecordSummary",
-                    children: dd.summary
+                    children: QQ.summary
                   })]
-                }, dd.difficulty)))
+                }, QQ.difficulty)))
               })]
             })]
           })]
@@ -6679,236 +6679,236 @@ export const modules = {
       }) : null
     }
 
-    function zW(dd) {
+    function Po(QQ) {
       let {
-        collection: Jd,
-        select: kd
-      } = dd;
-      return (0, SN.jsxs)(EN.d, {
-        className: BN()("SkyblockSkillCard", "SkyblockCollectionCard", {
-          Selected: Jd.selected,
-          Locked: Jd.locked
+        collection: FQ,
+        select: wQ
+      } = QQ;
+      return (0, Iq.jsxs)(Xq.f, {
+        className: cq()("SkyblockSkillCard", "SkyblockCollectionCard", {
+          Selected: FQ.selected,
+          Locked: FQ.locked
         }),
-        ariaPressed: Jd.selected,
+        ariaPressed: FQ.selected,
         onClick: () => {
-          kd(Jd.id)
+          wQ(FQ.id)
         },
-        children: [(0, SN.jsx)("div", {
+        children: [(0, Iq.jsx)("div", {
           className: "SkyblockSkillIcon",
-          children: (0, SN.jsx)(MN.d, {
-            itemName: Jd.icon,
+          children: (0, Iq.jsx)(Wq.e, {
+            itemName: FQ.icon,
             amount: 0
           })
-        }), (0, SN.jsxs)("div", {
+        }), (0, Iq.jsxs)("div", {
           className: "SkyblockSkillSummary",
-          children: [(0, SN.jsxs)("div", {
+          children: [(0, Iq.jsxs)("div", {
             className: "SkyblockSkillTitle",
-            children: [(0, SN.jsx)("strong", {
-              children: Jd.name
-            }), (0, SN.jsx)("span", {
-              children: Jd.tier
+            children: [(0, Iq.jsx)("strong", {
+              children: FQ.name
+            }), (0, Iq.jsx)("span", {
+              children: FQ.tier
             })]
-          }), (0, SN.jsx)(rN, {
-            percent: Jd.percent,
-            label: `${Jd.name}: ${Jd.progress}`
-          }), (0, SN.jsx)("span", {
+          }), (0, Iq.jsx)(hq, {
+            percent: FQ.percent,
+            label: `${FQ.name}: ${FQ.progress}`
+          }), (0, Iq.jsx)("span", {
             className: "SkyblockSkillXp",
-            children: Jd.progress
+            children: FQ.progress
           })]
         })]
       })
     }
 
-    function HW(dd) {
+    function Zo(QQ) {
       let {
-        collection: Jd
-      } = dd;
+        collection: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)();
-      return (0, SN.jsxs)("div", {
+        t: wQ
+      } = (0, sq.y)();
+      return (0, Iq.jsxs)("div", {
         className: "SkyblockSkillDetail SkyblockCollectionDetail",
-        children: [(0, SN.jsx)("div", {
+        children: [(0, Iq.jsx)("div", {
           className: "SkyblockSkillDetailIcon",
-          children: (0, SN.jsx)(MN.d, {
-            itemName: Jd.icon,
+          children: (0, Iq.jsx)(Wq.e, {
+            itemName: FQ.icon,
             amount: 0
           })
-        }), (0, SN.jsx)("h3", {
-          children: Jd.name
-        }), (0, SN.jsx)("strong", {
+        }), (0, Iq.jsx)("h3", {
+          children: FQ.name
+        }), (0, Iq.jsx)("strong", {
           className: "SkyblockSkillDetailLevel",
-          children: Jd.tier
-        }), (0, SN.jsx)("p", {
-          children: Jd.locked ? kd("skyblockGame:collectionLocked") : Jd.count
-        }), null !== Jd.nextReward && (0, SN.jsxs)("div", {
+          children: FQ.tier
+        }), (0, Iq.jsx)("p", {
+          children: FQ.locked ? wQ("skyblockGame:collectionLocked") : FQ.count
+        }), null !== FQ.nextReward && (0, Iq.jsxs)("div", {
           className: "SkyblockSkillBenefit",
-          children: [(0, SN.jsx)("strong", {
-            children: kd("skyblockGame:collectionNextReward")
-          }), (0, SN.jsx)("span", {
-            children: Jd.nextReward
+          children: [(0, Iq.jsx)("strong", {
+            children: wQ("skyblockGame:collectionNextReward")
+          }), (0, Iq.jsx)("span", {
+            children: FQ.nextReward
           })]
-        }), (0, SN.jsx)(rN, {
-          percent: Jd.percent,
-          label: Jd.progress
-        }), (0, SN.jsx)("p", {
-          children: Jd.progress
+        }), (0, Iq.jsx)(hq, {
+          percent: FQ.percent,
+          label: FQ.progress
+        }), (0, Iq.jsx)("p", {
+          children: FQ.progress
         })]
       })
     }
 
-    function wW(dd) {
+    function yo(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(nk, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(zw, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = hN();
-      return kd.enabled ? (0, SN.jsx)(TN.e, {
-        show: kd.open,
-        close: Jd.dismiss,
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = Vq();
+      return wQ.enabled ? (0, Iq.jsx)(aq.d, {
+        show: wQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockCollectionsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockCollectionsTitle",
           tabIndex: -1,
-          ref: Nd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: qQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockCollectionsTitle",
-                children: pd("skyblockGame:collections")
-              }), (0, SN.jsxs)("p", {
-                children: [pd("skyblockGame:collectionsIntro"), " ", kd.tiersUnlocked]
+                children: LQ("skyblockGame:collections")
+              }), (0, Iq.jsxs)("p", {
+                children: [LQ("skyblockGame:collectionsIntro"), " ", wQ.tiersUnlocked]
               })]
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              onClick: Jd.dismiss
+              onClick: FQ.dismiss
             })]
-          }), (0, SN.jsx)("div", {
+          }), (0, Iq.jsx)("div", {
             className: "SkyblockCollectionCategories",
             "data-pad-tabs": "1",
-            children: kd.categories.map((dd => (0, SN.jsxs)(EN.d, {
-              className: BN()("SkyblockCollectionCategory", {
-                Selected: dd.selected
+            children: wQ.categories.map((QQ => (0, Iq.jsxs)(Xq.f, {
+              className: cq()("SkyblockCollectionCategory", {
+                Selected: QQ.selected
               }),
-              ariaPressed: dd.selected,
-              padTabSelected: dd.selected,
+              ariaPressed: QQ.selected,
+              padTabSelected: QQ.selected,
               onClick: () => {
-                Jd.selectCategory(dd.id)
+                FQ.selectCategory(QQ.id)
               },
-              children: [(0, SN.jsx)("span", {
+              children: [(0, Iq.jsx)("span", {
                 className: "SkyblockCollectionCategoryIcon",
-                children: (0, SN.jsx)(MN.d, {
-                  itemName: dd.icon,
+                children: (0, Iq.jsx)(Wq.e, {
+                  itemName: QQ.icon,
                   amount: 0
                 })
-              }), (0, SN.jsxs)("span", {
+              }), (0, Iq.jsxs)("span", {
                 className: "SkyblockCollectionCategoryText",
-                children: [(0, SN.jsx)("strong", {
-                  children: dd.label
-                }), (0, SN.jsx)("span", {
-                  children: dd.tiers
+                children: [(0, Iq.jsx)("strong", {
+                  children: QQ.label
+                }), (0, Iq.jsx)("span", {
+                  children: QQ.tiers
                 })]
               })]
-            }, dd.id)))
-          }), (0, SN.jsxs)("div", {
+            }, QQ.id)))
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockSkillsBody",
-            children: [(0, SN.jsx)("div", {
+            children: [(0, Iq.jsx)("div", {
               className: "SkyblockSkillsList",
               "data-pad-select-on-focus": !0,
-              children: kd.collections.map((dd => (0, SN.jsx)(zW, {
-                collection: dd,
-                select: Jd.select
-              }, dd.id)))
-            }), kd.detail && (0, SN.jsx)(HW, {
-              collection: kd.detail
+              children: wQ.collections.map((QQ => (0, Iq.jsx)(Po, {
+                collection: QQ,
+                select: FQ.select
+              }, QQ.id)))
+            }), wQ.detail && (0, Iq.jsx)(Zo, {
+              collection: wQ.detail
             })]
           })]
         })
       }) : null
     }
-    const AW = ["completed", "active", "available", "locked"],
-      dP = ["prerequisite", "acceptFirst", "sends", "awaits"];
+    const Bo = ["completed", "active", "available", "locked"],
+      QD = ["prerequisite", "acceptFirst", "sends", "awaits"];
 
-    function JP(dd) {
+    function FD(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(zk, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(Pw, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = hN();
-      return kd.enabled ? (0, SN.jsx)(TN.e, {
-        show: kd.open,
-        close: Jd.dismiss,
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = Vq();
+      return wQ.enabled ? (0, Iq.jsx)(aq.d, {
+        show: wQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockQuestGraphPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockQuestGraphTitle",
           tabIndex: -1,
-          ref: Nd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: qQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockQuestGraphTitle",
-                children: pd("skyblockDevQuests:title")
-              }), (0, SN.jsx)("p", {
-                children: pd("skyblockDevQuests:intro")
+                children: LQ("skyblockDevQuests:title")
+              }), (0, Iq.jsx)("p", {
+                children: LQ("skyblockDevQuests:intro")
               })]
-            }), (0, SN.jsx)(EN.i, {
-              onClick: Jd.dismiss
+            }), (0, Iq.jsx)(Xq.j, {
+              onClick: FQ.dismiss
             })]
-          }), (0, SN.jsxs)("div", {
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockQuestGraphLegend",
-            children: [AW.map((dd => (0, SN.jsx)("span", {
-              className: BN()("SkyblockQuestGraphLegendState", dd),
-              children: pd(`skyblockDevQuests:state_${dd}`)
-            }, dd))), dP.map((dd => (0, SN.jsxs)("span", {
+            children: [Bo.map((QQ => (0, Iq.jsx)("span", {
+              className: cq()("SkyblockQuestGraphLegendState", QQ),
+              children: LQ(`skyblockDevQuests:state_${QQ}`)
+            }, QQ))), QD.map((QQ => (0, Iq.jsxs)("span", {
               className: "SkyblockQuestGraphLegendEdge",
-              children: [(0, SN.jsx)("svg", {
+              children: [(0, Iq.jsx)("svg", {
                 width: "28",
                 height: "8",
                 "aria-hidden": "true",
-                children: (0, SN.jsx)("line", {
-                  className: BN()("SkyblockQuestGraphEdge", dd),
+                children: (0, Iq.jsx)("line", {
+                  className: cq()("SkyblockQuestGraphEdge", QQ),
                   x1: "0",
                   y1: "4",
                   x2: "28",
                   y2: "4"
                 })
-              }), pd(`skyblockDevQuests:edge_${dd}`)]
-            }, dd)))]
-          }), (0, SN.jsx)("div", {
+              }), LQ(`skyblockDevQuests:edge_${QQ}`)]
+            }, QQ)))]
+          }), (0, Iq.jsx)("div", {
             className: "SkyblockQuestGraphScroll",
-            children: (0, SN.jsxs)("div", {
-              className: BN()("SkyblockQuestGraphCanvas", {
-                Planning: kd.planning
+            children: (0, Iq.jsxs)("div", {
+              className: cq()("SkyblockQuestGraphCanvas", {
+                Planning: wQ.planning
               }),
               style: {
-                width: kd.width,
-                height: kd.height
+                width: wQ.width,
+                height: wQ.height
               },
-              children: [(0, SN.jsxs)("svg", {
+              children: [(0, Iq.jsxs)("svg", {
                 className: "SkyblockQuestGraphEdges",
-                width: kd.width,
-                height: kd.height,
+                width: wQ.width,
+                height: wQ.height,
                 "aria-hidden": "true",
-                children: [(0, SN.jsx)("defs", {
-                  children: (0, SN.jsx)("marker", {
+                children: [(0, Iq.jsx)("defs", {
+                  children: (0, Iq.jsx)("marker", {
                     id: "skyblockQuestGraphArrow",
                     viewBox: "0 0 8 8",
                     refX: "7",
@@ -6916,699 +6916,699 @@ export const modules = {
                     markerWidth: "6",
                     markerHeight: "6",
                     orient: "auto-start-reverse",
-                    children: (0, SN.jsx)("path", {
+                    children: (0, Iq.jsx)("path", {
                       className: "SkyblockQuestGraphArrow",
                       d: "M 0 0 L 8 4 L 0 8 z"
                     })
                   })
-                }), kd.edges.map((dd => (0, SN.jsx)("path", {
-                  className: BN()("SkyblockQuestGraphEdge", dd.kind, {
-                    InPlan: dd.inPlan
+                }), wQ.edges.map((QQ => (0, Iq.jsx)("path", {
+                  className: cq()("SkyblockQuestGraphEdge", QQ.kind, {
+                    InPlan: QQ.inPlan
                   }),
-                  d: dd.path,
+                  d: QQ.path,
                   markerEnd: "url(#skyblockQuestGraphArrow)"
-                }, dd.key)))]
-              }), kd.nodes.map((dd => (0, SN.jsxs)("button", {
+                }, QQ.key)))]
+              }), wQ.nodes.map((QQ => (0, Iq.jsxs)("button", {
                 type: "button",
-                className: BN()("SkyblockQuestGraphNode", dd.state, {
-                  InPlan: dd.inPlan,
-                  Hovered: dd.hovered
+                className: cq()("SkyblockQuestGraphNode", QQ.state, {
+                  InPlan: QQ.inPlan,
+                  Hovered: QQ.hovered
                 }),
                 style: {
-                  left: dd.left,
-                  top: dd.top,
+                  left: QQ.left,
+                  top: QQ.top,
                   width: 190,
                   height: 52
                 },
-                title: dd.id,
+                title: QQ.id,
                 onMouseEnter: () => {
-                  Jd.hover(dd.id)
+                  FQ.hover(QQ.id)
                 },
                 onMouseLeave: () => {
-                  Jd.hover(null)
+                  FQ.hover(null)
                 },
                 onFocus: () => {
-                  Jd.hover(dd.id)
+                  FQ.hover(QQ.id)
                 },
                 onBlur: () => {
-                  Jd.hover(null)
+                  FQ.hover(null)
                 },
                 onClick: () => {
-                  Jd.jump(dd.id)
+                  FQ.jump(QQ.id)
                 },
-                children: [(0, SN.jsx)("strong", {
-                  children: dd.name
-                }), (0, SN.jsx)("span", {
-                  children: dd.detail
+                children: [(0, Iq.jsx)("strong", {
+                  children: QQ.name
+                }), (0, Iq.jsx)("span", {
+                  children: QQ.detail
                 })]
-              }, dd.id)))]
+              }, QQ.id)))]
             })
           })]
         })
       }) : null
     }
-    const kP = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
-      pP = {
+    const wD = ["skyblockGame:forgeStatPower", "skyblockGame:forgeStatDamage", "skyblockGame:forgeStatSpeed", "skyblockGame:forgeStatKnockback"],
+      LD = {
         "--impact": "250ms",
         "--hold": "50ms",
-        "--pop-at": `${Cp}ms`,
+        "--pop-at": `${vL}ms`,
         "--forge-duration": "2150ms"
       },
-      NP = Array.from({
+      qD = Array.from({
         length: 18
-      }, ((dd, Jd) => ({
-        "--ember-left": `${(4+92*(.618034*Jd%1)).toFixed(1)}%`,
-        "--ember-size": 3 + Jd % 3 * 2 + "px",
-        "--ember-drift": 14 * (Jd % 5 - 2) + "px",
-        "--ember-duration": `${(5.5+7*Jd%5*.9).toFixed(1)}s`,
-        "--ember-delay": `${(-1.37*Jd%8).toFixed(2)}s`
+      }, ((QQ, FQ) => ({
+        "--ember-left": `${(4+92*(.618034*FQ%1)).toFixed(1)}%`,
+        "--ember-size": 3 + FQ % 3 * 2 + "px",
+        "--ember-drift": 14 * (FQ % 5 - 2) + "px",
+        "--ember-duration": `${(5.5+7*FQ%5*.9).toFixed(1)}s`,
+        "--ember-delay": `${(-1.37*FQ%8).toFixed(2)}s`
       })));
 
-    function WP(dd) {
-      if (dd.style.removeProperty("--part-size"), null === dd.parentElement || "wrap" === getComputedStyle(dd.parentElement).flexWrap) return;
-      const Jd = [...dd.children],
-        kd = getComputedStyle(dd),
-        pd = parseFloat(kd.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
-        Nd = (dd.clientHeight - parseFloat(kd.rowGap) * (Jd.length - 1)) / Jd.length,
-        Wd = Jd.map((dd => {
-          const Jd = getComputedStyle(dd),
-            kd = dd.querySelector("h3"),
-            Wd = dd.querySelector(".SkyblockForgeParts");
-          if (null === kd || null === Wd) return pd;
-          const Pd = Nd - parseFloat(Jd.paddingTop) - parseFloat(Jd.paddingBottom) - kd.offsetHeight - parseFloat(getComputedStyle(kd).marginBottom),
-            Zd = parseFloat(getComputedStyle(Wd).columnGap),
-            gd = Wd.children.length;
-          let Cd = 0;
-          for (let pd = 1; pd <= gd; pd++) {
-            const dd = Math.ceil(gd / pd);
-            Cd = Math.max(Cd, Math.min((Wd.clientWidth - Zd * (pd - 1)) / pd, (Pd - Zd * (dd - 1)) / dd))
+    function oD(QQ) {
+      if (QQ.style.removeProperty("--part-size"), null === QQ.parentElement || "wrap" === getComputedStyle(QQ.parentElement).flexWrap) return;
+      const FQ = [...QQ.children],
+        wQ = getComputedStyle(QQ),
+        LQ = parseFloat(wQ.getPropertyValue("--part-size")) * parseFloat(getComputedStyle(document.documentElement).fontSize),
+        qQ = (QQ.clientHeight - parseFloat(wQ.rowGap) * (FQ.length - 1)) / FQ.length,
+        oQ = FQ.map((QQ => {
+          const FQ = getComputedStyle(QQ),
+            wQ = QQ.querySelector("h3"),
+            oQ = QQ.querySelector(".SkyblockForgeParts");
+          if (null === wQ || null === oQ) return LQ;
+          const DQ = qQ - parseFloat(FQ.paddingTop) - parseFloat(FQ.paddingBottom) - wQ.offsetHeight - parseFloat(getComputedStyle(wQ).marginBottom),
+            kQ = parseFloat(getComputedStyle(oQ).columnGap),
+            vQ = oQ.children.length;
+          let mQ = 0;
+          for (let LQ = 1; LQ <= vQ; LQ++) {
+            const QQ = Math.ceil(vQ / LQ);
+            mQ = Math.max(mQ, Math.min((oQ.clientWidth - kQ * (LQ - 1)) / LQ, (DQ - kQ * (QQ - 1)) / QQ))
           }
-          return Cd
+          return mQ
         }));
-      dd.style.setProperty("--part-size", `${Math.floor(Math.max(pd,Math.min(...Wd)))}px`)
+      QQ.style.setProperty("--part-size", `${Math.floor(Math.max(LQ,Math.min(...oQ)))}px`)
     }
 
-    function PP(dd) {
-      var Jd, kd, pd, Wd, Pd;
+    function DD(QQ) {
+      var FQ, wQ, LQ, oQ, DQ;
       let {
-        controller: Zd
-      } = dd;
-      const gd = (0, bN.i)(ep, Zd.getSnapshot()),
+        controller: kQ
+      } = QQ;
+      const vQ = (0, rq.i)(AL, kQ.getSnapshot()),
         {
-          t: Cd
-        } = (0, mN.B)(),
-        Kd = hN(),
-        od = function() {
-          const dd = (0, ad.useRef)(null),
-            Jd = (0, ad.useRef)(null);
-          return (0, ad.useLayoutEffect)((() => {
-            null !== dd.current && WP(dd.current)
-          })), (0, ad.useCallback)((kd => {
-            var pd;
-            null === (pd = Jd.current) || void 0 === pd || pd.disconnect(), Jd.current = null, dd.current = kd, null !== kd && (Jd.current = new ResizeObserver((() => {
-              WP(kd)
-            })), Jd.current.observe(kd))
+          t: mQ
+        } = (0, sq.y)(),
+        uQ = Vq(),
+        HQ = function() {
+          const QQ = (0, WQ.useRef)(null),
+            FQ = (0, WQ.useRef)(null);
+          return (0, WQ.useLayoutEffect)((() => {
+            null !== QQ.current && oD(QQ.current)
+          })), (0, WQ.useCallback)((wQ => {
+            var LQ;
+            null === (LQ = FQ.current) || void 0 === LQ || LQ.disconnect(), FQ.current = null, QQ.current = wQ, null !== wQ && (FQ.current = new ResizeObserver((() => {
+              oD(wQ)
+            })), FQ.current.observe(wQ))
           }), [])
         }(),
-        ld = function(dd) {
-          const Jd = (0, ad.useRef)(null);
-          return (0, ad.useLayoutEffect)((() => {
-            const dd = Jd.current;
-            if (null !== dd) {
-              dd.style.removeProperty("font-size");
-              for (let Jd = 1.7; Jd > 1.1 && dd.scrollWidth > dd.clientWidth; Jd -= .1) dd.style.fontSize = Jd - .1 + "rem"
+        bQ = function(QQ) {
+          const FQ = (0, WQ.useRef)(null);
+          return (0, WQ.useLayoutEffect)((() => {
+            const QQ = FQ.current;
+            if (null !== QQ) {
+              QQ.style.removeProperty("font-size");
+              for (let FQ = 1.7; FQ > 1.1 && QQ.scrollWidth > QQ.clientWidth; FQ -= .1) QQ.style.fontSize = FQ - .1 + "rem"
             }
-          }), [dd]), (0, ad.useCallback)((dd => {
-            Jd.current = dd
+          }), [QQ]), (0, WQ.useCallback)((QQ => {
+            FQ.current = QQ
           }), [])
-        }(null === (Jd = gd.preview) || void 0 === Jd ? void 0 : Jd.name),
-        Qd = (0, ad.useRef)(null),
-        Ld = (0, ad.useRef)({}),
-        Od = gd.forging,
-        ed = null !== (kd = null === Od || void 0 === Od ? void 0 : Od.preview.tier) && void 0 !== kd ? kd : 0,
-        Rd = null !== (pd = null === Od || void 0 === Od ? void 0 : Od.preview.named) && void 0 !== pd && pd,
-        Id = (0, ad.useMemo)((() => {
-          return null === Od ? null : {
-            flames: (dd = ed, Jd = Rd, Array.from({
-              length: 26 + 6 * dd + (Jd ? 20 : 0)
-            }, ((dd, Jd) => {
-              const kd = Jd < 6,
-                pd = Math.random() * Math.PI * 2,
-                Nd = kd ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
-                Wd = Math.cos(pd) * Nd,
-                Pd = Math.sin(pd) * Nd - 2 - 3 * Math.random(),
-                Zd = Math.random(),
-                [gd, Cd, Kd] = kd ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : Zd < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : Zd < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [Zd < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
+        }(null === (FQ = vQ.preview) || void 0 === FQ ? void 0 : FQ.name),
+        YQ = (0, WQ.useRef)(null),
+        xQ = (0, WQ.useRef)({}),
+        AQ = vQ.forging,
+        tQ = null !== (wQ = null === AQ || void 0 === AQ ? void 0 : AQ.preview.tier) && void 0 !== wQ ? wQ : 0,
+        eQ = null !== (LQ = null === AQ || void 0 === AQ ? void 0 : AQ.preview.named) && void 0 !== LQ && LQ,
+        MQ = (0, WQ.useMemo)((() => {
+          return null === AQ ? null : {
+            flames: (QQ = tQ, FQ = eQ, Array.from({
+              length: 26 + 6 * QQ + (FQ ? 20 : 0)
+            }, ((QQ, FQ) => {
+              const wQ = FQ < 6,
+                LQ = Math.random() * Math.PI * 2,
+                qQ = wQ ? 5 + 3 * Math.random() : 6 + Math.random() ** 1.3 * 8,
+                oQ = Math.cos(LQ) * qQ,
+                DQ = Math.sin(LQ) * qQ - 2 - 3 * Math.random(),
+                kQ = Math.random(),
+                [vQ, mQ, uQ] = wQ ? ["var(--ember-glow)", .8 + .2 * Math.random(), 1100 + 200 * Math.random()] : kQ < .15 ? ["#fff6c2", .3 + .2 * Math.random(), 350 + 150 * Math.random()] : kQ < .45 ? ["var(--tier)", .35 + .45 * Math.random(), 500 + 300 * Math.random()] : [kQ < .7 ? "var(--ember)" : "var(--ember-glow)", .35 + .5 * Math.random(), 500 + 300 * Math.random()];
               return {
-                "--c": gd,
-                "--x0": `${(.15*Wd).toFixed(2)}rem`,
-                "--y0": `${(.15*Pd).toFixed(2)}rem`,
-                "--x": `${Wd.toFixed(2)}rem`,
-                "--y": `${Pd.toFixed(2)}rem`,
+                "--c": vQ,
+                "--x0": `${(.15*oQ).toFixed(2)}rem`,
+                "--y0": `${(.15*DQ).toFixed(2)}rem`,
+                "--x": `${oQ.toFixed(2)}rem`,
+                "--y": `${DQ.toFixed(2)}rem`,
                 "--spin": `${Math.round(360*(Math.random()-.5))}deg`,
-                "--size": `${Cd.toFixed(2)}rem`,
-                "--duration": `${Math.round(Kd)}ms`,
+                "--size": `${mQ.toFixed(2)}rem`,
+                "--duration": `${Math.round(uQ)}ms`,
                 "--delay": `${Math.round(80*Math.random())}ms`
               }
             }))),
-            sparks: lp(ed, Rd)
+            sparks: HL(tQ, eQ)
           };
-          var dd, Jd
-        }), [null === Od || void 0 === Od ? void 0 : Od.id]);
-      if (!gd.enabled) return null;
-      const Gd = gd.preview,
-        vd = gd.arriving,
-        xd = null !== vd && !vd.sameSword,
-        qd = null !== Gd && (0, SN.jsx)(MN.d, {
-          itemName: Gd.baseSword,
+          var QQ, FQ
+        }), [null === AQ || void 0 === AQ ? void 0 : AQ.id]);
+      if (!vQ.enabled) return null;
+      const GQ = vQ.preview,
+        pQ = vQ.arriving,
+        cQ = null !== pQ && !pQ.sameSword,
+        CQ = null !== GQ && (0, Iq.jsx)(Wq.e, {
+          itemName: GQ.baseSword,
           amount: 0,
-          enchantmentTier: Gd.enchantmentTier
+          enchantmentTier: GQ.enchantmentTier
         });
-      return (0, SN.jsx)(TN.e, {
-        show: gd.open,
-        close: Zd.dismiss,
+      return (0, Iq.jsx)(aq.d, {
+        show: vQ.open,
+        close: kQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockForgePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockForgeTitle",
           tabIndex: -1,
-          ref: Kd,
-          onKeyDown: cN,
-          children: [(0, SN.jsx)("div", {
+          ref: uQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsx)("div", {
             className: "SkyblockForgeEmbers",
             "aria-hidden": "true",
-            children: NP.map(((dd, Jd) => (0, SN.jsx)("span", {
-              style: dd
-            }, Jd)))
-          }), (0, SN.jsxs)("header", {
+            children: qD.map(((QQ, FQ) => (0, Iq.jsx)("span", {
+              style: QQ
+            }, FQ)))
+          }), (0, Iq.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockForgeTitle",
-                children: Cd("skyblockGame:forgeTitle")
-              }), (0, SN.jsx)("p", {
-                children: Cd("skyblockGame:forgeIntro")
+                children: mQ("skyblockGame:forgeTitle")
+              }), (0, Iq.jsx)("p", {
+                children: mQ("skyblockGame:forgeIntro")
               })]
-            }), (0, SN.jsx)(EN.i, {
-              onClick: Zd.dismiss
+            }), (0, Iq.jsx)(Xq.j, {
+              onClick: kQ.dismiss
             })]
-          }), (0, SN.jsxs)("div", {
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockForgeBody",
-            children: [(0, SN.jsx)("div", {
-              ref: od,
-              className: BN()("SkyblockForgeSlots", {
-                Locked: null !== Od
+            children: [(0, Iq.jsx)("div", {
+              ref: HQ,
+              className: cq()("SkyblockForgeSlots", {
+                Locked: null !== AQ
               }),
-              children: gd.slots.map((dd => (0, SN.jsxs)("div", {
+              children: vQ.slots.map((QQ => (0, Iq.jsxs)("div", {
                 className: "SkyblockForgeSlot",
-                children: [(0, SN.jsx)("h3", {
-                  children: dd.label
-                }), (0, SN.jsx)("div", {
+                children: [(0, Iq.jsx)("h3", {
+                  children: QQ.label
+                }), (0, Iq.jsx)("div", {
                   className: "SkyblockForgeParts",
-                  children: dd.parts.map((Jd => (0, SN.jsx)("button", {
+                  children: QQ.parts.map((FQ => (0, Iq.jsx)("button", {
                     type: "button",
-                    className: BN()("SkyblockForgePart", {
-                      Selected: Jd.selected,
-                      Missing: Jd.placeholder
+                    className: cq()("SkyblockForgePart", {
+                      Selected: FQ.selected,
+                      Missing: FQ.placeholder
                     }),
-                    disabled: Jd.placeholder,
-                    title: Jd.placeholder ? Cd("skyblockGame:forgePickParts") : Jd.itemName,
-                    "aria-pressed": Jd.selected,
+                    disabled: FQ.placeholder,
+                    title: FQ.placeholder ? mQ("skyblockGame:forgePickParts") : FQ.itemName,
+                    "aria-pressed": FQ.selected,
                     onClick: () => {
-                      Zd.select(dd.kind, Jd.material)
+                      kQ.select(QQ.kind, FQ.material)
                     },
-                    children: (0, SN.jsx)(MN.d, {
-                      itemName: Jd.itemName,
-                      amount: Jd.owned
+                    children: (0, Iq.jsx)(Wq.e, {
+                      itemName: FQ.itemName,
+                      amount: FQ.owned
                     })
-                  }, Jd.material)))
+                  }, FQ.material)))
                 })]
-              }, dd.kind)))
-            }), (0, SN.jsxs)("div", {
-              className: BN()("SkyblockForgeAnvil", {
-                Named: null === Gd || void 0 === Gd ? void 0 : Gd.named
+              }, QQ.kind)))
+            }), (0, Iq.jsxs)("div", {
+              className: cq()("SkyblockForgeAnvil", {
+                Named: null === GQ || void 0 === GQ ? void 0 : GQ.named
               }),
               style: {
-                "--tier": null === Gd ? "transparent" : Nd.tb[Gd.enchantmentTier]
+                "--tier": null === GQ ? "transparent" : qQ.pb[GQ.enchantmentTier]
               },
-              children: [(0, SN.jsxs)("div", {
-                className: BN()("SkyblockForgeAltar", {
-                  Forging: null !== Od
+              children: [(0, Iq.jsxs)("div", {
+                className: cq()("SkyblockForgeAltar", {
+                  Forging: null !== AQ
                 }),
-                style: null === Od ? void 0 : pP,
-                children: [(0, SN.jsxs)("div", {
-                  className: BN()("SkyblockForgeMount", {
-                    Arrive: null !== vd
+                style: null === AQ ? void 0 : LD,
+                children: [(0, Iq.jsxs)("div", {
+                  className: cq()("SkyblockForgeMount", {
+                    Arrive: null !== pQ
                   }),
-                  children: [null === Gd && (0, SN.jsx)("div", {
+                  children: [null === GQ && (0, Iq.jsx)("div", {
                     className: "SkyblockForgeSword Unformed",
-                    children: (0, SN.jsx)(MN.d, {
-                      itemName: gd.unformedSword,
+                    children: (0, Iq.jsx)(Wq.e, {
+                      itemName: vQ.unformedSword,
                       amount: 0
                     })
-                  }), null !== Gd && (0, SN.jsx)("div", {
+                  }), null !== GQ && (0, Iq.jsx)("div", {
                     className: "SkyblockForgeGlow"
-                  }), null !== Gd && null === Od && (0, SN.jsx)("div", {
-                    ref: Qd,
+                  }), null !== GQ && null === AQ && (0, Iq.jsx)("div", {
+                    ref: YQ,
                     className: "SkyblockForgeFloat",
-                    children: (0, SN.jsx)("div", {
+                    children: (0, Iq.jsx)("div", {
                       className: "SkyblockForgeSword",
-                      children: qd
+                      children: CQ
                     })
-                  }), null !== Gd && (0, SN.jsx)("div", {
+                  }), null !== GQ && (0, Iq.jsx)("div", {
                     className: "SkyblockForgeAura",
                     "aria-hidden": "true",
-                    children: op.map(((dd, Jd) => (0, SN.jsx)("span", {
-                      className: BN()({
-                        Rune: "" !== dd.rune
+                    children: uL.map(((QQ, FQ) => (0, Iq.jsx)("span", {
+                      className: cq()({
+                        Rune: "" !== QQ.rune
                       }),
-                      style: dd.style,
-                      children: dd.rune
-                    }, Jd)))
-                  }), null !== Od && null !== Id && (0, SN.jsxs)(SN.Fragment, {
-                    children: [(0, SN.jsx)("div", {
+                      style: QQ.style,
+                      children: QQ.rune
+                    }, FQ)))
+                  }), null !== AQ && null !== MQ && (0, Iq.jsxs)(Iq.Fragment, {
+                    children: [(0, Iq.jsx)("div", {
                       className: "SkyblockForgeFlash"
-                    }), (0, SN.jsx)("div", {
+                    }), (0, Iq.jsx)("div", {
                       className: "SkyblockForgeFlames",
-                      children: Id.flames.map(((dd, Jd) => (0, SN.jsx)("span", {
-                        style: dd
-                      }, Jd)))
-                    }), (0, SN.jsx)("div", {
+                      children: MQ.flames.map(((QQ, FQ) => (0, Iq.jsx)("span", {
+                        style: QQ
+                      }, FQ)))
+                    }), (0, Iq.jsx)("div", {
                       className: "SkyblockForgeSettle",
-                      style: Ld.current,
-                      children: (0, SN.jsx)("div", {
+                      style: xQ.current,
+                      children: (0, Iq.jsx)("div", {
                         className: "SkyblockForgeSword",
-                        children: qd
+                        children: CQ
                       })
-                    }), (0, SN.jsx)("div", {
+                    }), (0, Iq.jsx)("div", {
                       className: "SkyblockForgeHitFlash"
-                    }), (0, SN.jsx)("div", {
+                    }), (0, Iq.jsx)("div", {
                       className: "SkyblockForgeShock"
-                    }), (ed >= 4 || Rd) && (0, SN.jsx)("div", {
+                    }), (tQ >= 4 || eQ) && (0, Iq.jsx)("div", {
                       className: "SkyblockForgeShock Echo"
-                    }), (0, SN.jsx)("div", {
+                    }), (0, Iq.jsx)("div", {
                       className: "SkyblockForgeSparks",
-                      children: Id.sparks.map(((dd, Jd) => (0, SN.jsx)("span", {
-                        style: dd
-                      }, Jd)))
-                    }), (0, SN.jsx)("div", {
+                      children: MQ.sparks.map(((QQ, FQ) => (0, Iq.jsx)("span", {
+                        style: QQ
+                      }, FQ)))
+                    }), (0, Iq.jsx)("div", {
                       className: "SkyblockForgeSwing"
                     })]
                   })]
-                }), (0, SN.jsx)("p", {
-                  className: BN()("SkyblockForgeStatus", null === (Wd = gd.status) || void 0 === Wd ? void 0 : Wd.tone),
-                  children: null === (Pd = gd.status) || void 0 === Pd ? void 0 : Pd.text
+                }), (0, Iq.jsx)("p", {
+                  className: cq()("SkyblockForgeStatus", null === (oQ = vQ.status) || void 0 === oQ ? void 0 : oQ.tone),
+                  children: null === (DQ = vQ.status) || void 0 === DQ ? void 0 : DQ.text
                 })]
-              }), null === Gd && (0, SN.jsx)("p", {
-                className: BN()("SkyblockForgeName Waiting", {
-                  ArriveText: xd
+              }), null === GQ && (0, Iq.jsx)("p", {
+                className: cq()("SkyblockForgeName Waiting", {
+                  ArriveText: cQ
                 }),
-                children: Cd(gd.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
-              }), null !== Gd && (0, SN.jsx)("h3", {
-                ref: ld,
-                className: BN()("SkyblockForgeName", {
-                  ArriveText: xd
+                children: mQ(vQ.anyParts ? "skyblockGame:forgePickToPreview" : "skyblockGame:forgePickParts")
+              }), null !== GQ && (0, Iq.jsx)("h3", {
+                ref: bQ,
+                className: cq()("SkyblockForgeName", {
+                  ArriveText: cQ
                 }),
-                title: Gd.name,
-                children: Gd.name
-              }), (null === Gd || void 0 === Gd ? void 0 : Gd.named) && (0, SN.jsx)("span", {
+                title: GQ.name,
+                children: GQ.name
+              }), (null === GQ || void 0 === GQ ? void 0 : GQ.named) && (0, Iq.jsx)("span", {
                 className: "SkyblockForgeSecret",
-                children: Cd("skyblockGame:forgeSecret")
-              }), (0, SN.jsxs)(EN.n, {
+                children: mQ("skyblockGame:forgeSecret")
+              }), (0, Iq.jsxs)(Xq.s, {
                 className: "SkyblockForgeButton",
-                disabled: !gd.canForge,
-                title: null === Gd ? void 0 : Cd("skyblockGame:forgeCoalOwned", {
-                  owned: String(gd.coalOwned)
+                disabled: !vQ.canForge,
+                title: null === GQ ? void 0 : mQ("skyblockGame:forgeCoalOwned", {
+                  owned: String(vQ.coalOwned)
                 }),
                 onClick: () => {
-                  Ld.current = function(dd) {
-                    const Jd = null === dd ? "none" : getComputedStyle(dd).transform,
-                      kd = new DOMMatrixReadOnly("none" === Jd ? void 0 : Jd);
+                  xQ.current = function(QQ) {
+                    const FQ = null === QQ ? "none" : getComputedStyle(QQ).transform,
+                      wQ = new DOMMatrixReadOnly("none" === FQ ? void 0 : FQ);
                     return {
-                      "--settle-y": `${kd.f.toFixed(2)}px`,
-                      "--settle-turn": `${(180*Math.atan2(kd.b,kd.a)/Math.PI).toFixed(2)}deg`
+                      "--settle-y": `${wQ.f.toFixed(2)}px`,
+                      "--settle-turn": `${(180*Math.atan2(wQ.b,wQ.a)/Math.PI).toFixed(2)}deg`
                     }
-                  }(Qd.current), Op(), Zd.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
+                  }(YQ.current), xL(), kQ.forge(!window.matchMedia("(prefers-reduced-motion: reduce)").matches)
                 },
-                children: [Cd("skyblockGame:forgeButton"), null !== Gd && (0, SN.jsxs)("span", {
-                  className: BN()("SkyblockForgeCost", {
-                    Short: Gd.coalShort
+                children: [mQ("skyblockGame:forgeButton"), null !== GQ && (0, Iq.jsxs)("span", {
+                  className: cq()("SkyblockForgeCost", {
+                    Short: GQ.coalShort
                   }),
-                  children: [(0, SN.jsx)("span", {
+                  children: [(0, Iq.jsx)("span", {
                     className: "SkyblockForgeCoal",
-                    children: (0, SN.jsx)(MN.d, {
-                      itemName: Jp.b,
+                    children: (0, Iq.jsx)(Wq.e, {
+                      itemName: QL.e,
                       amount: 0
                     })
-                  }), Gd.coalCost]
+                  }), GQ.coalCost]
                 })]
               })]
-            }), (0, SN.jsxs)("div", {
-              className: BN()("SkyblockForgeDetails", {
-                Named: null === Gd || void 0 === Gd ? void 0 : Gd.named
+            }), (0, Iq.jsxs)("div", {
+              className: cq()("SkyblockForgeDetails", {
+                Named: null === GQ || void 0 === GQ ? void 0 : GQ.named
               }),
-              children: [(0, SN.jsx)("p", {
-                className: BN()("SkyblockForgeLore", {
-                  ArriveText: xd
+              children: [(0, Iq.jsx)("p", {
+                className: cq()("SkyblockForgeLore", {
+                  ArriveText: cQ
                 }),
-                title: null === Gd || void 0 === Gd ? void 0 : Gd.lore,
-                children: null === Gd || void 0 === Gd ? void 0 : Gd.lore
-              }), (0, SN.jsxs)("dl", {
-                className: BN()("SkyblockForgeStats", {
-                  ArriveText: xd
+                title: null === GQ || void 0 === GQ ? void 0 : GQ.lore,
+                children: null === GQ || void 0 === GQ ? void 0 : GQ.lore
+              }), (0, Iq.jsxs)("dl", {
+                className: cq()("SkyblockForgeStats", {
+                  ArriveText: cQ
                 }),
-                children: [null === Gd && kP.map((dd => (0, SN.jsxs)("div", {
+                children: [null === GQ && wD.map((QQ => (0, Iq.jsxs)("div", {
                   className: "SkyblockForgeStat Empty",
-                  children: [(0, SN.jsx)("dt", {
-                    children: Cd(dd)
-                  }), (0, SN.jsx)("dd", {
+                  children: [(0, Iq.jsx)("dt", {
+                    children: mQ(QQ)
+                  }), (0, Iq.jsx)("dd", {
                     children: "\u2013"
                   })]
-                }, dd))), null === Gd || void 0 === Gd ? void 0 : Gd.stats.map((dd => (0, SN.jsxs)("div", {
-                  className: BN()("SkyblockForgeStat", {
-                    Better: dd.better
+                }, QQ))), null === GQ || void 0 === GQ ? void 0 : GQ.stats.map((QQ => (0, Iq.jsxs)("div", {
+                  className: cq()("SkyblockForgeStat", {
+                    Better: QQ.better
                   }),
-                  children: [(0, SN.jsx)("dt", {
-                    children: dd.label
-                  }), (0, SN.jsx)("dd", {
-                    children: dd.value
+                  children: [(0, Iq.jsx)("dt", {
+                    children: QQ.label
+                  }), (0, Iq.jsx)("dd", {
+                    children: QQ.value
                   })]
-                }, dd.label)))]
-              }), (0, SN.jsx)("ul", {
-                className: BN()("SkyblockForgeEffects", {
-                  ArriveText: xd
+                }, QQ.label)))]
+              }), (0, Iq.jsx)("ul", {
+                className: cq()("SkyblockForgeEffects", {
+                  ArriveText: cQ
                 }),
-                children: null === Gd || void 0 === Gd ? void 0 : Gd.effects.map((dd => (0, SN.jsx)("li", {
-                  children: dd
-                }, dd)))
+                children: null === GQ || void 0 === GQ ? void 0 : GQ.effects.map((QQ => (0, Iq.jsx)("li", {
+                  children: QQ
+                }, QQ)))
               })]
             })]
           })]
         })
       })
     }
-    const ZP = "Doom Rivet",
-      gP = "Doom Crest";
+    const kD = "Doom Rivet",
+      vD = "Doom Crest";
 
-    function CP(dd) {
+    function mD(QQ) {
       let {
-        itemName: Jd,
-        amount: kd,
-        owned: pd
-      } = dd;
-      return (0, SN.jsxs)("span", {
-        className: BN()("SkyblockSmugglerPrice", {
-          Short: kd > pd
+        itemName: FQ,
+        amount: wQ,
+        owned: LQ
+      } = QQ;
+      return (0, Iq.jsxs)("span", {
+        className: cq()("SkyblockSmugglerPrice", {
+          Short: wQ > LQ
         }),
-        children: [(0, SN.jsx)("span", {
+        children: [(0, Iq.jsx)("span", {
           className: "SkyblockSmugglerPriceIcon",
-          children: (0, SN.jsx)(MN.d, {
-            itemName: Jd,
+          children: (0, Iq.jsx)(Wq.e, {
+            itemName: FQ,
             amount: 0
           })
-        }), (0, SN.jsx)("span", {
-          children: kd
+        }), (0, Iq.jsx)("span", {
+          children: wQ
         })]
       })
     }
 
-    function KP(dd) {
-      return dd.justBought ? "skyblockGame:smugglerJustBought" : dd.soldOut ? "skyblockGame:smugglerSoldOut" : "skyblockGame:smugglerBuy"
+    function uD(QQ) {
+      return QQ.justBought ? "skyblockGame:smugglerJustBought" : QQ.soldOut ? "skyblockGame:smugglerSoldOut" : "skyblockGame:smugglerBuy"
     }
 
-    function oP(dd) {
+    function HD(QQ) {
       let {
-        deal: Jd,
-        view: kd,
-        buy: pd
-      } = dd;
+        deal: FQ,
+        view: wQ,
+        buy: LQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, mN.B)();
-      return (0, SN.jsxs)("div", {
-        className: BN()("SkyblockSmugglerPocket", {
-          Bought: Jd.justBought,
-          Unaffordable: !Jd.affordable,
-          SoldOut: Jd.soldOut && !Jd.justBought
+        t: qQ
+      } = (0, sq.y)();
+      return (0, Iq.jsxs)("div", {
+        className: cq()("SkyblockSmugglerPocket", {
+          Bought: FQ.justBought,
+          Unaffordable: !FQ.affordable,
+          SoldOut: FQ.soldOut && !FQ.justBought
         }),
-        children: [(0, SN.jsx)("span", {
+        children: [(0, Iq.jsx)("span", {
           className: "SkyblockSmugglerBuckle",
           "aria-hidden": "true"
-        }), (0, SN.jsxs)("div", {
+        }), (0, Iq.jsxs)("div", {
           className: "SkyblockSmugglerGoods",
-          children: [(0, SN.jsx)(MN.d, {
-            itemName: Jd.itemName,
+          children: [(0, Iq.jsx)(Wq.e, {
+            itemName: FQ.itemName,
             amount: 0,
-            enchantmentTier: Jd.enchantmentTier
-          }), Jd.amount > 1 && (0, SN.jsx)("span", {
+            enchantmentTier: FQ.enchantmentTier
+          }), FQ.amount > 1 && (0, Iq.jsx)("span", {
             className: "SkyblockSmugglerAmount",
-            children: Nd("skyblockGame:smugglerAmount", {
-              amount: Jd.amount
+            children: qQ("skyblockGame:smugglerAmount", {
+              amount: FQ.amount
             })
           })]
-        }), (0, SN.jsx)("h3", {
-          children: Jd.displayName
-        }), (0, SN.jsxs)("div", {
+        }), (0, Iq.jsx)("h3", {
+          children: FQ.displayName
+        }), (0, Iq.jsxs)("div", {
           className: "SkyblockSmugglerDeal",
-          children: [(0, SN.jsxs)("div", {
+          children: [(0, Iq.jsxs)("div", {
             className: "SkyblockSmugglerPrices",
-            children: [Jd.rivets > 0 && (0, SN.jsx)(CP, {
-              itemName: ZP,
-              amount: Jd.rivets,
-              owned: kd.rivetsOwned
-            }), Jd.crests > 0 && (0, SN.jsx)(CP, {
-              itemName: gP,
-              amount: Jd.crests,
-              owned: kd.crestsOwned
+            children: [FQ.rivets > 0 && (0, Iq.jsx)(mD, {
+              itemName: kD,
+              amount: FQ.rivets,
+              owned: wQ.rivetsOwned
+            }), FQ.crests > 0 && (0, Iq.jsx)(mD, {
+              itemName: vD,
+              amount: FQ.crests,
+              owned: wQ.crestsOwned
             })]
-          }), (0, SN.jsx)(EN.d, {
+          }), (0, Iq.jsx)(Xq.f, {
             className: "SkyblockSmugglerBuy",
-            disabled: Jd.soldOut || !Jd.affordable || kd.pending,
+            disabled: FQ.soldOut || !FQ.affordable || wQ.pending,
             onClick: () => {
-              pd(Jd.slot)
+              LQ(FQ.slot)
             },
-            children: Nd(KP(Jd))
+            children: qQ(uD(FQ))
           })]
         })]
-      }, Jd.justBought ? kd.boughtCount : 0)
+      }, FQ.justBought ? wQ.boughtCount : 0)
     }
 
-    function lP(dd) {
+    function bD(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(Gp, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(ML, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = hN();
-      return kd.enabled ? (0, SN.jsx)(TN.e, {
-        show: kd.open,
-        close: Jd.dismiss,
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = Vq();
+      return wQ.enabled ? (0, Iq.jsx)(aq.d, {
+        show: wQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockSmugglerPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockSmugglerTitle",
           tabIndex: -1,
-          ref: Nd,
-          onKeyDown: cN,
-          children: [(0, SN.jsx)("span", {
+          ref: qQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockSmugglerStrap Left",
             "aria-hidden": "true"
-          }), (0, SN.jsx)("span", {
+          }), (0, Iq.jsx)("span", {
             className: "SkyblockSmugglerStrap Right",
             "aria-hidden": "true"
-          }), (0, SN.jsxs)("header", {
+          }), (0, Iq.jsxs)("header", {
             className: "SkyblockSmugglerFlap",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockSmugglerTitle",
-                children: pd("skyblockGame:smugglerTitle")
-              }), (0, SN.jsx)("p", {
-                children: pd("skyblockGame:smugglerIntro")
+                children: LQ("skyblockGame:smugglerTitle")
+              }), (0, Iq.jsx)("p", {
+                children: LQ("skyblockGame:smugglerIntro")
               })]
-            }), (0, SN.jsxs)("div", {
+            }), (0, Iq.jsxs)("div", {
               className: "SkyblockSmugglerFlapActions",
-              children: [(0, SN.jsxs)("div", {
+              children: [(0, Iq.jsxs)("div", {
                 className: "SkyblockSmugglerWallet",
-                children: [(0, SN.jsx)(CP, {
-                  itemName: ZP,
-                  amount: kd.rivetsOwned,
-                  owned: kd.rivetsOwned
-                }), (0, SN.jsx)(CP, {
-                  itemName: gP,
-                  amount: kd.crestsOwned,
-                  owned: kd.crestsOwned
+                children: [(0, Iq.jsx)(mD, {
+                  itemName: kD,
+                  amount: wQ.rivetsOwned,
+                  owned: wQ.rivetsOwned
+                }), (0, Iq.jsx)(mD, {
+                  itemName: vD,
+                  amount: wQ.crestsOwned,
+                  owned: wQ.crestsOwned
                 })]
-              }), (0, SN.jsx)(EN.i, {
-                onClick: Jd.dismiss
+              }), (0, Iq.jsx)(Xq.j, {
+                onClick: FQ.dismiss
               })]
             })]
-          }), (0, SN.jsx)("div", {
+          }), (0, Iq.jsx)("div", {
             className: "SkyblockSmugglerPockets",
-            children: kd.deals.map((dd => (0, SN.jsx)(oP, {
-              deal: dd,
-              view: kd,
-              buy: Jd.buy
-            }, dd.slot)))
-          }), (0, SN.jsxs)("footer", {
+            children: wQ.deals.map((QQ => (0, Iq.jsx)(HD, {
+              deal: QQ,
+              view: wQ,
+              buy: FQ.buy
+            }, QQ.slot)))
+          }), (0, Iq.jsxs)("footer", {
             className: "SkyblockSmugglerBedroll",
-            children: [(0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)("span", {
               className: "SkyblockSmugglerRotates",
-              children: kd.rotatesText
-            }), null !== kd.status && (0, SN.jsx)("span", {
-              className: BN()("SkyblockSmugglerStatus", kd.status.tone),
-              children: kd.status.text
+              children: wQ.rotatesText
+            }), null !== wQ.status && (0, Iq.jsx)("span", {
+              className: cq()("SkyblockSmugglerStatus", wQ.status.tone),
+              children: wQ.status.text
             })]
           })]
         })
       }) : null
     }
 
-    function QP(dd) {
+    function YD(QQ) {
       let {
-        phase: Jd,
-        className: kd
-      } = dd;
-      return (0, SN.jsx)("span", {
-        className: BN()("SkyblockMoon", `Moon-${Jd}`, kd),
+        phase: FQ,
+        className: wQ
+      } = QQ;
+      return (0, Iq.jsx)("span", {
+        className: cq()("SkyblockMoon", `Moon-${FQ}`, wQ),
         "aria-hidden": "true"
       })
     }
 
-    function LP(dd) {
+    function xD(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(qp, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(cL, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)();
-      return kd.enabled ? (0, SN.jsx)(iN.g, {
+          t: LQ
+        } = (0, sq.y)();
+      return wQ.enabled ? (0, Iq.jsx)(Sq.d, {
         placement: "statBars",
-        children: (0, SN.jsx)("button", {
+        children: (0, Iq.jsx)("button", {
           type: "button",
           tabIndex: -1,
-          className: BN()("SkyblockPassageChip", kd.open && "Open"),
-          "aria-label": pd("skyblockGame:passageChipLabel", {
-            phase: kd.phaseName
+          className: cq()("SkyblockPassageChip", wQ.open && "Open"),
+          "aria-label": LQ("skyblockGame:passageChipLabel", {
+            phase: wQ.phaseName
           }),
-          title: pd("skyblockGame:passageChipLabel", {
-            phase: kd.phaseName
+          title: LQ("skyblockGame:passageChipLabel", {
+            phase: wQ.phaseName
           }),
-          onMouseDown: dd => {
-            dd.preventDefault()
+          onMouseDown: QQ => {
+            QQ.preventDefault()
           },
-          onClick: Jd.toggle,
-          children: (0, SN.jsx)(QP, {
-            phase: kd.phase
-          }, kd.phase)
+          onClick: FQ.toggle,
+          children: (0, Iq.jsx)(YD, {
+            phase: wQ.phase
+          }, wQ.phase)
         })
       }) : null
     }
 
-    function OP(dd) {
+    function AD(QQ) {
       let {
-        fish: Jd
-      } = dd;
-      return (0, SN.jsxs)("li", {
+        fish: FQ
+      } = QQ;
+      return (0, Iq.jsxs)("li", {
         className: "SkyblockPassageFish",
-        children: [(0, SN.jsx)("span", {
+        children: [(0, Iq.jsx)("span", {
           className: "SkyblockPassageFishIcon",
-          children: (0, SN.jsx)(MN.d, {
-            itemName: Jd.itemName,
+          children: (0, Iq.jsx)(Wq.e, {
+            itemName: FQ.itemName,
             amount: 0
           })
-        }), (0, SN.jsxs)("span", {
+        }), (0, Iq.jsxs)("span", {
           className: "SkyblockPassageFishText",
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockPassageFishName",
-            children: Jd.displayName
-          }), (0, SN.jsx)("span", {
+            children: FQ.displayName
+          }), (0, Iq.jsx)("span", {
             className: "SkyblockPassageFishWhere",
-            children: Jd.where
+            children: FQ.where
           })]
         })]
       })
     }
 
-    function eP(dd) {
+    function tD(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(qp, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(cL, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = hN();
-      return kd.enabled ? (0, SN.jsx)(TN.e, {
-        show: kd.open,
-        close: Jd.dismiss,
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = Vq();
+      return wQ.enabled ? (0, Iq.jsx)(aq.d, {
+        show: wQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockPassagePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockPassageTitle",
           tabIndex: -1,
-          ref: Nd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: qQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockPassageHeader",
-            children: [(0, SN.jsx)(QP, {
-              phase: kd.phase,
+            children: [(0, Iq.jsx)(YD, {
+              phase: wQ.phase,
               className: "SkyblockPassageHeaderMoon"
-            }), (0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            }), (0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockPassageTitle",
-                children: pd("skyblockGame:passageTitle")
-              }), (0, SN.jsx)("p", {
+                children: LQ("skyblockGame:passageTitle")
+              }), (0, Iq.jsx)("p", {
                 className: "SkyblockPassagePhase",
-                children: kd.phaseName
+                children: wQ.phaseName
               })]
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              onClick: Jd.dismiss
+              onClick: FQ.dismiss
             })]
-          }), (0, SN.jsx)("p", {
+          }), (0, Iq.jsx)("p", {
             className: "SkyblockPassageIntro",
-            children: pd("skyblockGame:passageIntro")
-          }), (0, SN.jsxs)("div", {
+            children: LQ("skyblockGame:passageIntro")
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockPassageBody",
-            children: [(0, SN.jsxs)("section", {
+            children: [(0, Iq.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [(0, SN.jsx)("h3", {
-                children: pd("skyblockGame:passageVisiting")
-              }), (0, SN.jsx)("ul", {
+              children: [(0, Iq.jsx)("h3", {
+                children: LQ("skyblockGame:passageVisiting")
+              }), (0, Iq.jsx)("ul", {
                 className: "SkyblockPassageList",
-                children: kd.visitors.map((dd => (0, SN.jsx)(OP, {
-                  fish: dd
-                }, dd.itemName)))
+                children: wQ.visitors.map((QQ => (0, Iq.jsx)(AD, {
+                  fish: QQ
+                }, QQ.itemName)))
               })]
-            }), (0, SN.jsxs)("section", {
+            }), (0, Iq.jsxs)("section", {
               className: "SkyblockPassageColumn",
-              children: [null !== kd.resting && (0, SN.jsxs)(SN.Fragment, {
-                children: [(0, SN.jsx)("h3", {
-                  children: pd("skyblockGame:passageResting")
-                }), (0, SN.jsx)("ul", {
+              children: [null !== wQ.resting && (0, Iq.jsxs)(Iq.Fragment, {
+                children: [(0, Iq.jsx)("h3", {
+                  children: LQ("skyblockGame:passageResting")
+                }), (0, Iq.jsx)("ul", {
                   className: "SkyblockPassageList Resting",
-                  children: (0, SN.jsx)(OP, {
-                    fish: kd.resting
+                  children: (0, Iq.jsx)(AD, {
+                    fish: wQ.resting
                   })
                 })]
-              }), (0, SN.jsxs)("p", {
+              }), (0, Iq.jsxs)("p", {
                 className: "SkyblockPassageNext",
-                children: [(0, SN.jsx)(QP, {
-                  phase: kd.nextPhase
-                }), (0, SN.jsx)("span", {
-                  children: kd.next
+                children: [(0, Iq.jsx)(YD, {
+                  phase: wQ.nextPhase
+                }), (0, Iq.jsx)("span", {
+                  children: wQ.next
                 })]
               })]
             })]
@@ -7617,664 +7617,664 @@ export const modules = {
       }) : null
     }
 
-    function RP() {
-      return (0, SN.jsx)("span", {
+    function eD() {
+      return (0, Iq.jsx)("span", {
         className: "SkyblockLampLightSparkle",
         "aria-hidden": "true",
-        children: [0, 1, 2, 3, 4, 5].map((dd => (0, SN.jsx)("i", {
+        children: [0, 1, 2, 3, 4, 5].map((QQ => (0, Iq.jsx)("i", {
           style: {
-            "--sparkle-index": dd
+            "--sparkle-index": QQ
           }
-        }, dd)))
+        }, QQ)))
       })
     }
 
-    function IP(dd) {
-      var Jd;
+    function MD(QQ) {
+      var FQ;
       let {
-        charm: kd,
-        view: pd,
-        controller: Nd
-      } = dd;
+        charm: wQ,
+        view: LQ,
+        controller: qQ
+      } = QQ;
       const {
-        t: Wd
-      } = (0, mN.B)(), Pd = pd.shop, Zd = (null === (Jd = pd.sparkle) || void 0 === Jd ? void 0 : Jd.id) === kd.id;
-      return (0, SN.jsxs)("li", {
-        className: BN()("SkyblockLampLightCharm", kd.owned && "Owned", kd.socketed && "Socketed"),
-        children: [Zd && (0, SN.jsx)(RP, {}, pd.sparkle.count), (0, SN.jsx)("h4", {
-          children: kd.name
-        }), (0, SN.jsx)("p", {
+        t: oQ
+      } = (0, sq.y)(), DQ = LQ.shop, kQ = (null === (FQ = LQ.sparkle) || void 0 === FQ ? void 0 : FQ.id) === wQ.id;
+      return (0, Iq.jsxs)("li", {
+        className: cq()("SkyblockLampLightCharm", wQ.owned && "Owned", wQ.socketed && "Socketed"),
+        children: [kQ && (0, Iq.jsx)(eD, {}, LQ.sparkle.count), (0, Iq.jsx)("h4", {
+          children: wQ.name
+        }), (0, Iq.jsx)("p", {
           className: "SkyblockLampLightEffect",
-          children: kd.effect
-        }), (0, SN.jsx)("ul", {
+          children: wQ.effect
+        }), (0, Iq.jsx)("ul", {
           className: "SkyblockLampLightOdds",
-          children: kd.lines.map((dd => (0, SN.jsxs)("li", {
-            className: BN()("SkyblockLampLightOddsLine", "better" === dd.tone ? "Better" : "worse" === dd.tone ? "Worse" : "Same"),
-            children: [(0, SN.jsx)("span", {
+          children: wQ.lines.map((QQ => (0, Iq.jsxs)("li", {
+            className: cq()("SkyblockLampLightOddsLine", "better" === QQ.tone ? "Better" : "worse" === QQ.tone ? "Worse" : "Same"),
+            children: [(0, Iq.jsx)("span", {
               className: "Before",
-              children: dd.before
-            }), (0, SN.jsx)("span", {
+              children: QQ.before
+            }), (0, Iq.jsx)("span", {
               className: "Arrow",
               children: "\u2192"
-            }), (0, SN.jsx)("span", {
+            }), (0, Iq.jsx)("span", {
               className: "After",
-              children: dd.after
+              children: QQ.after
             })]
-          }, dd.label)))
-        }), (0, SN.jsx)("div", {
+          }, QQ.label)))
+        }), (0, Iq.jsx)("div", {
           className: "SkyblockLampLightCharmAction",
-          children: kd.owned ? kd.socketed ? (0, SN.jsxs)(SN.Fragment, {
-            children: [(0, SN.jsx)("span", {
+          children: wQ.owned ? wQ.socketed ? (0, Iq.jsxs)(Iq.Fragment, {
+            children: [(0, Iq.jsx)("span", {
               className: "SkyblockLampLightBadge",
-              children: Wd("skyblockGame:lampLightSocketed")
-            }), (0, SN.jsx)(EN.G, {
-              disabled: !pd.canCommand,
-              ariaLabel: Wd("skyblockGame:lampLightRemoveLabel", {
-                charm: kd.name
+              children: oQ("skyblockGame:lampLightSocketed")
+            }), (0, Iq.jsx)(Xq.L, {
+              disabled: !LQ.canCommand,
+              ariaLabel: oQ("skyblockGame:lampLightRemoveLabel", {
+                charm: wQ.name
               }),
               onClick: () => {
-                Nd.socket(null)
+                qQ.socket(null)
               },
-              children: Wd("skyblockGame:lampLightRemove")
+              children: oQ("skyblockGame:lampLightRemove")
             })]
-          }) : (0, SN.jsx)(EN.d, {
-            disabled: !pd.canCommand || !Pd.heldRod,
-            ariaLabel: Wd("skyblockGame:lampLightSocketLabel", {
-              charm: kd.name
+          }) : (0, Iq.jsx)(Xq.f, {
+            disabled: !LQ.canCommand || !DQ.heldRod,
+            ariaLabel: oQ("skyblockGame:lampLightSocketLabel", {
+              charm: wQ.name
             }),
             onClick: () => {
-              Nd.socket(kd.id)
+              qQ.socket(wQ.id)
             },
-            children: Wd("skyblockGame:lampLightSocket")
-          }) : (0, SN.jsx)(EN.d, {
-            disabled: !pd.canCommand || !kd.affordable,
-            ariaLabel: Wd("skyblockGame:lampLightBuyLabel", {
-              item: kd.name,
-              cost: kd.cost
+            children: oQ("skyblockGame:lampLightSocket")
+          }) : (0, Iq.jsx)(Xq.f, {
+            disabled: !LQ.canCommand || !wQ.affordable,
+            ariaLabel: oQ("skyblockGame:lampLightBuyLabel", {
+              item: wQ.name,
+              cost: wQ.cost
             }),
             onClick: () => {
-              Nd.buy(kd.id)
+              qQ.buy(wQ.id)
             },
-            children: kd.cost
+            children: wQ.cost
           })
         })]
       })
     }
 
-    function GP(dd) {
-      var Jd;
+    function GD(QQ) {
+      var FQ;
       let {
-        tint: kd,
-        view: pd,
-        controller: Nd
-      } = dd;
+        tint: wQ,
+        view: LQ,
+        controller: qQ
+      } = QQ;
       const {
-        t: Wd
-      } = (0, mN.B)();
-      return (0, SN.jsxs)("li", {
-        className: BN()("SkyblockLampLightTint", kd.wearing && "Wearing"),
+        t: oQ
+      } = (0, sq.y)();
+      return (0, Iq.jsxs)("li", {
+        className: cq()("SkyblockLampLightTint", wQ.wearing && "Wearing"),
         style: {
-          "--tint-colour": kd.colour
+          "--tint-colour": wQ.colour
         },
-        children: [(null === (Jd = pd.sparkle) || void 0 === Jd ? void 0 : Jd.id) === kd.id && (0, SN.jsx)(RP, {}, pd.sparkle.count), (0, SN.jsx)("span", {
+        children: [(null === (FQ = LQ.sparkle) || void 0 === FQ ? void 0 : FQ.id) === wQ.id && (0, Iq.jsx)(eD, {}, LQ.sparkle.count), (0, Iq.jsx)("span", {
           className: "SkyblockLampLightSwatch",
           "aria-hidden": "true"
-        }), (0, SN.jsx)("span", {
+        }), (0, Iq.jsx)("span", {
           className: "SkyblockLampLightTintName",
-          children: kd.name
-        }), kd.wearing ? (0, SN.jsx)("span", {
+          children: wQ.name
+        }), wQ.wearing ? (0, Iq.jsx)("span", {
           className: "SkyblockLampLightBadge",
-          children: Wd("skyblockGame:lampLightWearing")
-        }) : (0, SN.jsx)(EN.d, {
-          disabled: !pd.canCommand || !kd.owned && !kd.affordable,
-          ariaLabel: kd.owned ? Wd("skyblockGame:lampLightWearLabel", {
-            tint: kd.name
-          }) : Wd("skyblockGame:lampLightBuyLabel", {
-            item: kd.name,
-            cost: kd.cost
+          children: oQ("skyblockGame:lampLightWearing")
+        }) : (0, Iq.jsx)(Xq.f, {
+          disabled: !LQ.canCommand || !wQ.owned && !wQ.affordable,
+          ariaLabel: wQ.owned ? oQ("skyblockGame:lampLightWearLabel", {
+            tint: wQ.name
+          }) : oQ("skyblockGame:lampLightBuyLabel", {
+            item: wQ.name,
+            cost: wQ.cost
           }),
           onClick: () => {
-            kd.owned ? Nd.wearTint(kd.id) : Nd.buy(kd.id)
+            wQ.owned ? qQ.wearTint(wQ.id) : qQ.buy(wQ.id)
           },
-          children: kd.owned ? Wd("skyblockGame:lampLightWear") : kd.cost
+          children: wQ.owned ? oQ("skyblockGame:lampLightWear") : wQ.cost
         })]
       })
     }
 
-    function vP(dd) {
+    function pD(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(np, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(zL, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = kd.shop;
-      return (0, SN.jsxs)("div", {
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = wQ.shop;
+      return (0, Iq.jsxs)("div", {
         className: "SkyblockLampLightTab",
-        children: [(0, SN.jsxs)("div", {
+        children: [(0, Iq.jsxs)("div", {
           className: "SkyblockLampLightTop",
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockLampLightBalance",
-            children: kd.balance
-          }), (0, SN.jsxs)("button", {
+            children: wQ.balance
+          }), (0, Iq.jsxs)("button", {
             type: "button",
             role: "switch",
-            "aria-checked": kd.releasing,
-            className: BN()("SkyblockLampLightSwitch", kd.releasing && "On"),
-            disabled: kd.releasing ? "ready" !== kd.status : !kd.canCommand,
+            "aria-checked": wQ.releasing,
+            className: cq()("SkyblockLampLightSwitch", wQ.releasing && "On"),
+            disabled: wQ.releasing ? "ready" !== wQ.status : !wQ.canCommand,
             onClick: () => {
-              Jd.setRelease(!kd.releasing)
+              FQ.setRelease(!wQ.releasing)
             },
-            children: [(0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)("span", {
               className: "SkyblockLampLightSwitchTrack",
               "aria-hidden": "true",
-              children: (0, SN.jsx)("span", {
+              children: (0, Iq.jsx)("span", {
                 className: "SkyblockLampLightSwitchKnob"
               })
-            }), pd("skyblockGame:lampLightRelease")]
-          }), (0, SN.jsx)("span", {
+            }), LQ("skyblockGame:lampLightRelease")]
+          }), (0, Iq.jsx)("span", {
             className: "SkyblockLampLightHint",
-            children: pd("skyblockGame:lampLightReleaseHint")
+            children: LQ("skyblockGame:lampLightReleaseHint")
           })]
-        }), null !== kd.notice && (0, SN.jsx)("p", {
+        }), null !== wQ.notice && (0, Iq.jsx)("p", {
           className: "SkyblockLampLightNotice",
           role: "status",
-          children: kd.notice
-        }), null !== Nd && (0, SN.jsxs)(SN.Fragment, {
-          children: [(0, SN.jsxs)("div", {
+          children: wQ.notice
+        }), null !== qQ && (0, Iq.jsxs)(Iq.Fragment, {
+          children: [(0, Iq.jsxs)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: [(0, SN.jsx)("h3", {
-              children: pd("skyblockGame:lampLightCharms")
-            }), (0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)("h3", {
+              children: LQ("skyblockGame:lampLightCharms")
+            }), (0, Iq.jsx)("span", {
               className: "SkyblockLampLightOddsFor",
-              children: Nd.oddsFor
-            }), (0, SN.jsx)("div", {
+              children: qQ.oddsFor
+            }), (0, Iq.jsx)("div", {
               className: "SkyblockLampLightSituations",
               role: "group",
-              children: ["open", "bloom"].map((dd => (0, SN.jsx)("button", {
+              children: ["open", "bloom"].map((QQ => (0, Iq.jsx)("button", {
                 type: "button",
-                "aria-pressed": kd.situation === dd,
-                className: BN()("SkyblockLampLightSituation", kd.situation === dd && "Selected"),
+                "aria-pressed": wQ.situation === QQ,
+                className: cq()("SkyblockLampLightSituation", wQ.situation === QQ && "Selected"),
                 onClick: () => {
-                  Jd.setSituation(dd)
+                  FQ.setSituation(QQ)
                 },
-                children: pd("open" === dd ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
-              }, dd)))
+                children: LQ("open" === QQ ? "skyblockGame:lampLightOpenWater" : "skyblockGame:lampLightInBloom")
+              }, QQ)))
             })]
-          }), !Nd.heldRod && (0, SN.jsx)("p", {
+          }), !qQ.heldRod && (0, Iq.jsx)("p", {
             className: "SkyblockLampLightHoldRod",
-            children: pd("skyblockGame:lampLightHoldRod")
-          }), (0, SN.jsx)("ul", {
+            children: LQ("skyblockGame:lampLightHoldRod")
+          }), (0, Iq.jsx)("ul", {
             className: "SkyblockLampLightCharms",
-            children: Nd.charms.map((dd => (0, SN.jsx)(IP, {
-              charm: dd,
-              view: kd,
-              controller: Jd
-            }, dd.id)))
-          }), (0, SN.jsx)("div", {
+            children: qQ.charms.map((QQ => (0, Iq.jsx)(MD, {
+              charm: QQ,
+              view: wQ,
+              controller: FQ
+            }, QQ.id)))
+          }), (0, Iq.jsx)("div", {
             className: "SkyblockLampLightSectionHead",
-            children: (0, SN.jsx)("h3", {
-              children: pd("skyblockGame:lampLightTints")
+            children: (0, Iq.jsx)("h3", {
+              children: LQ("skyblockGame:lampLightTints")
             })
-          }), (0, SN.jsxs)("ul", {
+          }), (0, Iq.jsxs)("ul", {
             className: "SkyblockLampLightTints",
-            children: [(0, SN.jsxs)("li", {
-              className: BN()("SkyblockLampLightTint", "Islands", Nd.wearingIslandColours && "Wearing"),
-              children: [(0, SN.jsx)("span", {
+            children: [(0, Iq.jsxs)("li", {
+              className: cq()("SkyblockLampLightTint", "Islands", qQ.wearingIslandColours && "Wearing"),
+              children: [(0, Iq.jsx)("span", {
                 className: "SkyblockLampLightSwatch",
                 "aria-hidden": "true"
-              }), (0, SN.jsx)("span", {
+              }), (0, Iq.jsx)("span", {
                 className: "SkyblockLampLightTintName",
-                children: pd("skyblockGame:lampLightIslandColours")
-              }), Nd.wearingIslandColours ? (0, SN.jsx)("span", {
+                children: LQ("skyblockGame:lampLightIslandColours")
+              }), qQ.wearingIslandColours ? (0, Iq.jsx)("span", {
                 className: "SkyblockLampLightBadge",
-                children: pd("skyblockGame:lampLightWearing")
-              }) : (0, SN.jsx)(EN.d, {
-                disabled: !kd.canCommand,
-                ariaLabel: pd("skyblockGame:lampLightWearLabel", {
-                  tint: pd("skyblockGame:lampLightIslandColours")
+                children: LQ("skyblockGame:lampLightWearing")
+              }) : (0, Iq.jsx)(Xq.f, {
+                disabled: !wQ.canCommand,
+                ariaLabel: LQ("skyblockGame:lampLightWearLabel", {
+                  tint: LQ("skyblockGame:lampLightIslandColours")
                 }),
                 onClick: () => {
-                  Jd.wearTint(null)
+                  FQ.wearTint(null)
                 },
-                children: pd("skyblockGame:lampLightWear")
+                children: LQ("skyblockGame:lampLightWear")
               })]
-            }), Nd.tints.map((dd => (0, SN.jsx)(GP, {
-              tint: dd,
-              view: kd,
-              controller: Jd
-            }, dd.id)))]
+            }), qQ.tints.map((QQ => (0, Iq.jsx)(GD, {
+              tint: QQ,
+              view: wQ,
+              controller: FQ
+            }, QQ.id)))]
           })]
         })]
       })
     }
 
-    function xP(dd) {
+    function cD(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(np, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(zL, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)();
-      return kd.releasing ? (0, SN.jsx)(iN.g, {
-        children: (0, SN.jsxs)("button", {
+          t: LQ
+        } = (0, sq.y)();
+      return wQ.releasing ? (0, Iq.jsx)(Sq.d, {
+        children: (0, Iq.jsxs)("button", {
           type: "button",
           className: "SkyblockLampLightPill",
           onClick: () => {
-            Jd.setRelease(!1)
+            FQ.setRelease(!1)
           },
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockLampLightPillOrb",
             "aria-hidden": "true"
-          }), (0, SN.jsxs)("span", {
+          }), (0, Iq.jsxs)("span", {
             className: "SkyblockLampLightPillText SmallTextBold",
-            children: [pd("skyblockGame:lampLightReleasing"), " \xb7 ", kd.balance]
-          }), (0, SN.jsx)("span", {
+            children: [LQ("skyblockGame:lampLightReleasing"), " \xb7 ", wQ.balance]
+          }), (0, Iq.jsx)("span", {
             className: "SkyblockLampLightPillStop SmallTextBold",
-            children: pd("skyblockGame:lampLightKeepCatches")
-          }), null !== kd.gained && (0, SN.jsx)("span", {
+            children: LQ("skyblockGame:lampLightKeepCatches")
+          }), null !== wQ.gained && (0, Iq.jsx)("span", {
             className: "SkyblockLampLightPillGain SmallTextBold",
             "aria-hidden": "true",
-            children: kd.gained.text
-          }, kd.gained.count)]
+            children: wQ.gained.text
+          }, wQ.gained.count)]
         })
       }) : null
     }
 
-    function qP(dd) {
+    function CD(QQ) {
       let {
-        island: Jd,
-        view: kd,
-        aim: pd
-      } = dd;
+        island: FQ,
+        view: wQ,
+        aim: LQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, mN.B)(), Wd = Jd.featuredFish;
-      return (0, SN.jsxs)("li", {
-        className: BN()("SkyblockKeepersChairIsland", `Island-${Jd.id}`, Jd.favoured && "Aimed", !Jd.relit && "Dark"),
-        children: [(0, SN.jsx)("h3", {
-          children: Jd.name
-        }), Jd.relit && null !== Wd ? (0, SN.jsxs)("div", {
+        t: qQ
+      } = (0, sq.y)(), oQ = FQ.featuredFish;
+      return (0, Iq.jsxs)("li", {
+        className: cq()("SkyblockKeepersChairIsland", `Island-${FQ.id}`, FQ.favoured && "Aimed", !FQ.relit && "Dark"),
+        children: [(0, Iq.jsx)("h3", {
+          children: FQ.name
+        }), FQ.relit && null !== oQ ? (0, Iq.jsxs)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockKeepersChairNoticeLabel",
-            children: Nd("skyblockGame:keepersChairTideNotice")
-          }), (0, SN.jsx)("span", {
+            children: qQ("skyblockGame:keepersChairTideNotice")
+          }), (0, Iq.jsx)("span", {
             className: "SkyblockKeepersChairFish",
-            children: (0, SN.jsx)(MN.d, {
-              itemName: Wd.itemName,
+            children: (0, Iq.jsx)(Wq.e, {
+              itemName: oQ.itemName,
               amount: 0
             })
-          }), (0, SN.jsx)("span", {
+          }), (0, Iq.jsx)("span", {
             className: "SkyblockKeepersChairFishName",
-            children: Wd.displayName
+            children: oQ.displayName
           })]
-        }) : (0, SN.jsx)("div", {
+        }) : (0, Iq.jsx)("div", {
           className: "SkyblockKeepersChairNotice",
-          children: (0, SN.jsx)("span", {
+          children: (0, Iq.jsx)("span", {
             className: "SkyblockKeepersChairDarkLens",
-            children: Nd("skyblockGame:keepersChairDark")
+            children: qQ("skyblockGame:keepersChairDark")
           })
-        }), Jd.relit && (Jd.favoured ? (0, SN.jsx)("span", {
+        }), FQ.relit && (FQ.favoured ? (0, Iq.jsx)("span", {
           className: "SkyblockKeepersChairAimedBadge",
-          children: Nd("skyblockGame:keepersChairAimed")
-        }) : (0, SN.jsx)(EN.d, {
+          children: qQ("skyblockGame:keepersChairAimed")
+        }) : (0, Iq.jsx)(Xq.f, {
           className: "SkyblockKeepersChairAim",
-          disabled: !kd.canAim,
-          ariaLabel: Nd("skyblockGame:keepersChairAimLabel", {
-            island: Jd.name
+          disabled: !wQ.canAim,
+          ariaLabel: qQ("skyblockGame:keepersChairAimLabel", {
+            island: FQ.name
           }),
           onClick: () => {
-            pd(Jd.id)
+            LQ(FQ.id)
           },
-          children: Nd("skyblockGame:keepersChairAim")
+          children: qQ("skyblockGame:keepersChairAim")
         }))]
-      }, Jd.favoured ? kd.aimedCount : 0)
+      }, FQ.favoured ? wQ.aimedCount : 0)
     }
 
-    function BP(dd) {
+    function SD(QQ) {
       let {
-        controller: Jd,
-        lampLight: kd
-      } = dd;
-      const pd = (0, bN.i)(Fp, Jd.getSnapshot()),
-        Nd = (0, bN.i)(np, kd.getSnapshot()),
-        [Wd, Pd] = (0, ad.useState)("lamp"),
+        controller: FQ,
+        lampLight: wQ
+      } = QQ;
+      const LQ = (0, rq.i)(OL, FQ.getSnapshot()),
+        qQ = (0, rq.i)(zL, wQ.getSnapshot()),
+        [oQ, DQ] = (0, WQ.useState)("lamp"),
         {
-          t: Zd
-        } = (0, mN.B)(),
-        gd = hN();
-      if (!pd.enabled) return null;
-      const Cd = "light" === Wd && Nd.enabled;
-      return (0, SN.jsx)(TN.e, {
-        show: pd.open,
-        close: Jd.dismiss,
+          t: kQ
+        } = (0, sq.y)(),
+        vQ = Vq();
+      if (!LQ.enabled) return null;
+      const mQ = "light" === oQ && qQ.enabled;
+      return (0, Iq.jsx)(aq.d, {
+        show: LQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
-          className: BN()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", Cd && "OnLampLight"),
+        children: (0, Iq.jsxs)("section", {
+          className: cq()("SkyblockSkillsPanel", "SkyblockKeepersChairPanel", mQ && "OnLampLight"),
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockKeepersChairTitle",
           tabIndex: -1,
-          ref: gd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: vQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockKeepersChairHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockKeepersChairTitle",
-                children: Zd("skyblockGame:keepersChairTitle")
-              }), (0, SN.jsx)("p", {
-                children: Zd(Cd ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
+                children: kQ("skyblockGame:keepersChairTitle")
+              }), (0, Iq.jsx)("p", {
+                children: kQ(mQ ? "skyblockGame:keeperWickLampLightWelcome" : "skyblockGame:keeperWickKeepersChairWelcome")
               })]
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              ariaLabel: Zd("skyblockGame:keepersChairClose"),
-              onClick: Jd.dismiss
+              ariaLabel: kQ("skyblockGame:keepersChairClose"),
+              onClick: FQ.dismiss
             })]
-          }), Nd.enabled && (0, SN.jsx)("div", {
+          }), qQ.enabled && (0, Iq.jsx)("div", {
             className: "SkyblockKeepersChairTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: ["lamp", "light"].map((dd => (0, SN.jsxs)("button", {
+            children: ["lamp", "light"].map((QQ => (0, Iq.jsxs)("button", {
               type: "button",
               role: "tab",
-              "aria-selected": "light" === dd === Cd,
+              "aria-selected": "light" === QQ === mQ,
               "data-pad-tab": !0,
-              "data-pad-selected": "light" === dd === Cd ? "true" : void 0,
-              className: BN()("SkyblockKeepersChairTab", "light" === dd === Cd && "Selected"),
+              "data-pad-selected": "light" === QQ === mQ ? "true" : void 0,
+              className: cq()("SkyblockKeepersChairTab", "light" === QQ === mQ && "Selected"),
               onClick: () => {
-                Pd(dd)
+                DQ(QQ)
               },
-              children: [Zd("lamp" === dd ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === dd && (0, SN.jsx)("span", {
+              children: [kQ("lamp" === QQ ? "skyblockGame:lampLightChairTab" : "skyblockGame:lampLightTab"), "light" === QQ && (0, Iq.jsx)("span", {
                 className: "SkyblockKeepersChairTabBalance",
-                children: Nd.balance
+                children: qQ.balance
               })]
-            }, dd)))
-          }), Cd ? (0, SN.jsx)(vP, {
-            controller: kd
-          }) : (0, SN.jsx)(sP, {
-            view: pd,
-            controller: Jd
+            }, QQ)))
+          }), mQ ? (0, Iq.jsx)(pD, {
+            controller: wQ
+          }) : (0, Iq.jsx)(iD, {
+            view: LQ,
+            controller: FQ
           })]
         })
       })
     }
 
-    function sP(dd) {
+    function iD(QQ) {
       let {
-        view: Jd,
-        controller: kd
-      } = dd;
+        view: FQ,
+        controller: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, mN.B)();
-      return (0, SN.jsxs)(SN.Fragment, {
-        children: [(0, SN.jsx)("ul", {
+        t: LQ
+      } = (0, sq.y)();
+      return (0, Iq.jsxs)(Iq.Fragment, {
+        children: [(0, Iq.jsx)("ul", {
           className: "SkyblockKeepersChairIslands",
-          children: Jd.islands.map((dd => (0, SN.jsx)(qP, {
-            island: dd,
-            view: Jd,
-            aim: kd.aim
-          }, dd.id)))
-        }), null !== Jd.almanac && (0, SN.jsxs)("div", {
+          children: FQ.islands.map((QQ => (0, Iq.jsx)(CD, {
+            island: QQ,
+            view: FQ,
+            aim: wQ.aim
+          }, QQ.id)))
+        }), null !== FQ.almanac && (0, Iq.jsxs)("div", {
           className: "SkyblockKeepersChairAlmanac",
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockKeepersChairAlmanacLabel",
-            children: pd("skyblockGame:passageTitle")
-          }), (0, SN.jsxs)("span", {
+            children: LQ("skyblockGame:passageTitle")
+          }), (0, Iq.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek",
-            children: [(0, SN.jsx)(QP, {
-              phase: Jd.almanac.phase
-            }), Jd.almanac.phaseName]
-          }), (0, SN.jsxs)("span", {
+            children: [(0, Iq.jsx)(YD, {
+              phase: FQ.almanac.phase
+            }), FQ.almanac.phaseName]
+          }), (0, Iq.jsxs)("span", {
             className: "SkyblockKeepersChairAlmanacWeek Next",
-            children: [(0, SN.jsx)(QP, {
-              phase: Jd.almanac.nextPhase
-            }), Jd.almanac.next]
+            children: [(0, Iq.jsx)(YD, {
+              phase: FQ.almanac.nextPhase
+            }), FQ.almanac.next]
           })]
-        }), (0, SN.jsxs)("footer", {
+        }), (0, Iq.jsxs)("footer", {
           className: "SkyblockKeepersChairFooter",
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockKeepersChairFavour",
-            children: pd("skyblockGame:keepersChairFavour")
-          }), Jd.aimed && (0, SN.jsx)(EN.G, {
+            children: LQ("skyblockGame:keepersChairFavour")
+          }), FQ.aimed && (0, Iq.jsx)(Xq.L, {
             className: "SkyblockKeepersChairRest",
-            disabled: !Jd.canAim,
+            disabled: !FQ.canAim,
             onClick: () => {
-              kd.aim(null)
+              wQ.aim(null)
             },
-            children: pd("skyblockGame:keepersChairRest")
+            children: LQ("skyblockGame:keepersChairRest")
           })]
-        }), null !== Jd.status && (0, SN.jsx)("p", {
-          className: BN()("SkyblockKeepersChairStatus", "refused" === Jd.status.tone ? "Refused" : "Shines"),
+        }), null !== FQ.status && (0, Iq.jsx)("p", {
+          className: cq()("SkyblockKeepersChairStatus", "refused" === FQ.status.tone ? "Refused" : "Shines"),
           role: "status",
-          children: Jd.status.text
+          children: FQ.status.text
         })]
       })
     }
 
-    function iP(dd) {
+    function WD(QQ) {
       let {
-        controller: Jd
-      } = dd;
+        controller: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)(), pd = (0, bN.i)(mp, Jd.getSnapshot());
-      if (!pd.enabled) return null;
-      const Nd = pd.freshCount > 0 ? kd("skyblockGame:reachLogOpenNews", {
-        count: pd.freshCount
-      }) : kd("skyblockGame:reachLogOpen");
-      return (0, SN.jsx)(iN.g, {
+        t: wQ
+      } = (0, sq.y)(), LQ = (0, rq.i)(rL, FQ.getSnapshot());
+      if (!LQ.enabled) return null;
+      const qQ = LQ.freshCount > 0 ? wQ("skyblockGame:reachLogOpenNews", {
+        count: LQ.freshCount
+      }) : wQ("skyblockGame:reachLogOpen");
+      return (0, Iq.jsx)(Sq.d, {
         placement: "statBars",
-        children: (0, SN.jsxs)("button", {
+        children: (0, Iq.jsxs)("button", {
           type: "button",
-          className: BN()("SkyblockReachLogButton", pd.freshCount > 0 && "HasNews", pd.pending && "Pending"),
-          "aria-label": Nd,
-          title: Nd,
-          onClick: Jd.ask,
-          children: [pd.news && (0, SN.jsx)("span", {
+          className: cq()("SkyblockReachLogButton", LQ.freshCount > 0 && "HasNews", LQ.pending && "Pending"),
+          "aria-label": qQ,
+          title: qQ,
+          onClick: FQ.ask,
+          children: [LQ.news && (0, Iq.jsx)("span", {
             className: "SkyblockReachLogPulse",
             "aria-hidden": "true"
-          }, `pulse:${pd.newsToken}`), (0, SN.jsx)("span", {
-            className: BN()("SkyblockReachLogIcon", pd.news && "Jump"),
+          }, `pulse:${LQ.newsToken}`), (0, Iq.jsx)("span", {
+            className: cq()("SkyblockReachLogIcon", LQ.news && "Jump"),
             "aria-hidden": "true",
-            children: (0, SN.jsx)(MN.d, {
-              itemName: Sp,
+            children: (0, Iq.jsx)(Wq.e, {
+              itemName: UL,
               amount: 0
             })
-          }, `icon:${pd.newsToken}`), pd.freshCount > 0 && (0, SN.jsx)("span", {
+          }, `icon:${LQ.newsToken}`), LQ.freshCount > 0 && (0, Iq.jsx)("span", {
             className: "SkyblockReachLogBadge",
-            children: pd.freshCount
+            children: LQ.freshCount
           })]
         })
       })
     }
 
-    function aP(dd) {
+    function RD(QQ) {
       let {
-        gift: Jd
-      } = dd;
-      return (0, SN.jsx)("li", {
-        className: BN()("SkyblockRegularsGift", Jd.given && "Given"),
-        children: Jd.text
+        gift: FQ
+      } = QQ;
+      return (0, Iq.jsx)("li", {
+        className: cq()("SkyblockRegularsGift", FQ.given && "Given"),
+        children: FQ.text
       })
     }
 
-    function MP(dd) {
+    function OD(QQ) {
       let {
-        regular: Jd
-      } = dd;
+        regular: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)();
-      return (0, SN.jsxs)("li", {
-        className: BN()("SkyblockRegularsCard", Jd.tagged ? "Tagged" : "Untagged", Jd.resting && "Resting"),
-        children: [(0, SN.jsxs)("div", {
+        t: wQ
+      } = (0, sq.y)();
+      return (0, Iq.jsxs)("li", {
+        className: cq()("SkyblockRegularsCard", FQ.tagged ? "Tagged" : "Untagged", FQ.resting && "Resting"),
+        children: [(0, Iq.jsxs)("div", {
           className: "SkyblockRegularsCardTop",
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockRegularsIcon",
-            title: Jd.fishName,
-            children: (0, SN.jsx)(MN.d, {
-              itemName: Jd.itemName,
+            title: FQ.fishName,
+            children: (0, Iq.jsx)(Wq.e, {
+              itemName: FQ.itemName,
               amount: 0
             })
-          }), (0, SN.jsxs)("div", {
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockRegularsNames",
-            children: [(0, SN.jsx)("h3", {
-              children: Jd.name
-            }), (0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)("h3", {
+              children: FQ.name
+            }), (0, Iq.jsx)("span", {
               className: "SkyblockRegularsFish",
-              children: Jd.fishName
+              children: FQ.fishName
             })]
           })]
-        }), (0, SN.jsx)("p", {
+        }), (0, Iq.jsx)("p", {
           className: "SkyblockRegularsLine",
-          children: Jd.line
-        }), (0, SN.jsxs)("p", {
+          children: FQ.line
+        }), (0, Iq.jsxs)("p", {
           className: "SkyblockRegularsStats",
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockRegularsSize",
-            children: Jd.size
-          }), Jd.tagged && (0, SN.jsx)("span", {
+            children: FQ.size
+          }), FQ.tagged && (0, Iq.jsx)("span", {
             className: "SkyblockRegularsMeetings",
-            children: Jd.resting ? kd("skyblockGame:regularsResting") : Jd.meetings
+            children: FQ.resting ? wQ("skyblockGame:regularsResting") : FQ.meetings
           })]
-        }), (0, SN.jsx)("p", {
+        }), (0, Iq.jsx)("p", {
           className: "SkyblockRegularsChance",
-          children: Jd.chance
-        }), (0, SN.jsx)("ul", {
+          children: FQ.chance
+        }), (0, Iq.jsx)("ul", {
           className: "SkyblockRegularsGifts",
-          children: Jd.gifts.map((dd => (0, SN.jsx)(aP, {
-            gift: dd
-          }, dd.text)))
-        }), Jd.history.length > 0 && (0, SN.jsx)("ul", {
+          children: FQ.gifts.map((QQ => (0, Iq.jsx)(RD, {
+            gift: QQ
+          }, QQ.text)))
+        }), FQ.history.length > 0 && (0, Iq.jsx)("ul", {
           className: "SkyblockRegularsHistory",
-          children: Jd.history.map(((dd, Jd) => (0, SN.jsx)("li", {
-            children: dd
-          }, Jd)))
+          children: FQ.history.map(((QQ, FQ) => (0, Iq.jsx)("li", {
+            children: QQ
+          }, FQ)))
         })]
       })
     }
 
-    function FP(dd) {
+    function sD(QQ) {
       let {
-        controller: Jd,
-        island: kd
-      } = dd;
+        controller: FQ,
+        island: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, mN.B)(), Nd = (0, bN.i)(pN, Jd.getSnapshot()), Wd = Nd.islands.find((dd => dd.id === kd));
-      if (!Nd.enabled || void 0 === Wd) return null;
-      const Pd = pd("skyblockGame:regularsOpen");
-      return (0, SN.jsxs)("button", {
+        t: LQ
+      } = (0, sq.y)(), qQ = (0, rq.i)(Fq, FQ.getSnapshot()), oQ = qQ.islands.find((QQ => QQ.id === wQ));
+      if (!qQ.enabled || void 0 === oQ) return null;
+      const DQ = LQ("skyblockGame:regularsOpen");
+      return (0, Iq.jsxs)("button", {
         type: "button",
         className: "SkyblockRegularsStrip",
-        "aria-label": Pd,
-        title: Pd,
+        "aria-label": DQ,
+        title: DQ,
         onClick: () => {
-          Jd.openIsland(kd)
+          FQ.openIsland(wQ)
         },
-        children: [(0, SN.jsx)("span", {
+        children: [(0, Iq.jsx)("span", {
           className: "SkyblockRegularsStripTitle",
-          children: pd("skyblockGame:regularsTitle")
-        }), Wd.regulars.map((dd => (0, SN.jsx)("span", {
-          className: BN()("SkyblockRegularsStripIcon", dd.tagged && "Tagged"),
-          title: dd.name,
-          children: (0, SN.jsx)(MN.d, {
-            itemName: dd.itemName,
+          children: LQ("skyblockGame:regularsTitle")
+        }), oQ.regulars.map((QQ => (0, Iq.jsx)("span", {
+          className: cq()("SkyblockRegularsStripIcon", QQ.tagged && "Tagged"),
+          title: QQ.name,
+          children: (0, Iq.jsx)(Wq.e, {
+            itemName: QQ.itemName,
             amount: 0
           })
-        }, dd.id)))]
+        }, QQ.id)))]
       })
     }
 
-    function YP(dd) {
-      var Jd;
+    function rD(QQ) {
+      var FQ;
       let {
-        controller: kd
-      } = dd;
-      const pd = (0, bN.i)(pN, kd.getSnapshot()),
+        controller: wQ
+      } = QQ;
+      const LQ = (0, rq.i)(Fq, wQ.getSnapshot()),
         {
-          t: Nd
-        } = (0, mN.B)(),
-        Wd = hN();
-      if (!pd.enabled) return null;
-      const Pd = null !== (Jd = pd.islands.find((dd => dd.id === pd.selected))) && void 0 !== Jd ? Jd : null;
-      return (0, SN.jsx)(TN.e, {
-        show: pd.open,
-        close: kd.dismiss,
+          t: qQ
+        } = (0, sq.y)(),
+        oQ = Vq();
+      if (!LQ.enabled) return null;
+      const DQ = null !== (FQ = LQ.islands.find((QQ => QQ.id === LQ.selected))) && void 0 !== FQ ? FQ : null;
+      return (0, Iq.jsx)(aq.d, {
+        show: LQ.open,
+        close: wQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel SkyblockRegularsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockRegularsTitle",
           tabIndex: -1,
-          ref: Wd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: oQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockRegularsTitle",
-                children: Nd("skyblockGame:regularsTitle")
-              }), (0, SN.jsx)("p", {
-                children: Nd("skyblockGame:pimRegularsLedgerWelcome")
+                children: qQ("skyblockGame:regularsTitle")
+              }), (0, Iq.jsx)("p", {
+                children: qQ("skyblockGame:pimRegularsLedgerWelcome")
               })]
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              onClick: kd.dismiss
+              onClick: wQ.dismiss
             })]
-          }), (0, SN.jsx)("nav", {
+          }), (0, Iq.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: pd.islands.map((dd => {
-              const Jd = dd.id === pd.selected;
-              return (0, SN.jsx)("button", {
+            children: LQ.islands.map((QQ => {
+              const FQ = QQ.id === LQ.selected;
+              return (0, Iq.jsx)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": Jd,
+                "aria-selected": FQ,
                 "data-pad-tab": !0,
-                "data-pad-selected": Jd ? "true" : void 0,
-                className: BN()("SkyblockReachLogTab", `Island-${dd.id}`, Jd && "Selected", dd.charm.given && "GoldPage"),
+                "data-pad-selected": FQ ? "true" : void 0,
+                className: cq()("SkyblockReachLogTab", `Island-${QQ.id}`, FQ && "Selected", QQ.charm.given && "GoldPage"),
                 onClick: () => {
-                  kd.selectIsland(dd.id)
+                  wQ.selectIsland(QQ.id)
                 },
-                children: (0, SN.jsx)("span", {
+                children: (0, Iq.jsx)("span", {
                   className: "SkyblockReachLogTabName",
-                  children: dd.name
+                  children: QQ.name
                 })
-              }, dd.id)
+              }, QQ.id)
             }))
-          }), (0, SN.jsxs)("div", {
-            className: BN()("SkyblockRegularsPage", null !== Pd && `Island-${Pd.id}`),
+          }), (0, Iq.jsxs)("div", {
+            className: cq()("SkyblockRegularsPage", null !== DQ && `Island-${DQ.id}`),
             role: "tabpanel",
-            children: [(0, SN.jsx)("p", {
+            children: [(0, Iq.jsx)("p", {
               className: "SkyblockRegularsHow",
-              children: Nd("skyblockGame:regularsHow")
-            }), null !== Pd && (0, SN.jsx)("ul", {
+              children: qQ("skyblockGame:regularsHow")
+            }), null !== DQ && (0, Iq.jsx)("ul", {
               className: "SkyblockRegularsGrid",
-              children: Pd.regulars.map((dd => (0, SN.jsx)(MP, {
-                regular: dd
-              }, dd.id)))
+              children: DQ.regulars.map((QQ => (0, Iq.jsx)(OD, {
+                regular: QQ
+              }, QQ.id)))
             })]
-          }), null !== Pd && (0, SN.jsx)("footer", {
+          }), null !== DQ && (0, Iq.jsx)("footer", {
             className: "SkyblockRegularsFooter",
-            children: (0, SN.jsx)("span", {
-              className: BN()("SkyblockRegularsCharm", Pd.charm.given && "Given"),
-              children: Pd.charm.text
+            children: (0, Iq.jsx)("span", {
+              className: cq()("SkyblockRegularsCharm", DQ.charm.given && "Given"),
+              children: DQ.charm.text
             })
           })]
         })
       })
     }
-    const mP = [{
+    const ID = [{
         "--left": "12%",
         "--tilt": "14deg",
         "--duration": "11s",
@@ -8285,120 +8285,120 @@ export const modules = {
         "--duration": "14s",
         "--delay": "-9s"
       }],
-      bP = Array.from({
+      UD = Array.from({
         length: 6
-      }, ((dd, Jd) => ({
-        "--x": `${(88*(.618034*Jd%1)).toFixed(1)}%`,
-        "--y": `${(10+37*Jd%70).toFixed(1)}%`,
-        "--size": 7 + Jd % 3 * 3 + "rem",
-        "--drift-x": 3 * (Jd % 3 - 1) + "rem",
-        "--drift-y": 2 * (Jd % 2 === 0 ? -1 : 1) + "rem",
-        "--duration": 14 + Jd % 4 * 3 + "s",
-        "--delay": 2.5 * -Jd + "s"
+      }, ((QQ, FQ) => ({
+        "--x": `${(88*(.618034*FQ%1)).toFixed(1)}%`,
+        "--y": `${(10+37*FQ%70).toFixed(1)}%`,
+        "--size": 7 + FQ % 3 * 3 + "rem",
+        "--drift-x": 3 * (FQ % 3 - 1) + "rem",
+        "--drift-y": 2 * (FQ % 2 === 0 ? -1 : 1) + "rem",
+        "--duration": 14 + FQ % 4 * 3 + "s",
+        "--delay": 2.5 * -FQ + "s"
       }))),
-      SP = Array.from({
+      ND = Array.from({
         length: 14
-      }, ((dd, Jd) => ({
-        "--left": `${(3+94*((.618034*Jd+.3)%1)).toFixed(1)}%`,
-        "--size": 4 + Jd % 4 * 2 + "px",
-        "--sway": Jd % 3 * 3 + 3 + "px",
-        "--duration": `${(8+7*Jd%6*1.1).toFixed(1)}s`,
-        "--delay": `${(-1.73*Jd%12).toFixed(2)}s`
+      }, ((QQ, FQ) => ({
+        "--left": `${(3+94*((.618034*FQ+.3)%1)).toFixed(1)}%`,
+        "--size": 4 + FQ % 4 * 2 + "px",
+        "--sway": FQ % 3 * 3 + 3 + "px",
+        "--duration": `${(8+7*FQ%6*1.1).toFixed(1)}s`,
+        "--delay": `${(-1.73*FQ%12).toFixed(2)}s`
       }))),
-      jP = (0, ad.memo)((function(dd) {
+      TD = (0, WQ.memo)((function(QQ) {
         let {
-          island: Jd
-        } = dd;
-        return (0, SN.jsxs)("div", {
-          className: BN()("SkyblockReachLogDepths", null !== Jd && `Island-${Jd}`),
+          island: FQ
+        } = QQ;
+        return (0, Iq.jsxs)("div", {
+          className: cq()("SkyblockReachLogDepths", null !== FQ && `Island-${FQ}`),
           "aria-hidden": "true",
-          children: [mP.map(((dd, Jd) => (0, SN.jsx)("span", {
+          children: [ID.map(((QQ, FQ) => (0, Iq.jsx)("span", {
             className: "SkyblockReachLogShaft",
-            style: dd
-          }, `shaft${Jd}`))), bP.map(((dd, Jd) => (0, SN.jsx)("span", {
-            className: BN()("SkyblockReachLogMote", Jd % 2 === 1 && "Violet"),
-            style: dd
-          }, `mote${Jd}`))), SP.map(((dd, Jd) => (0, SN.jsx)("span", {
+            style: QQ
+          }, `shaft${FQ}`))), UD.map(((QQ, FQ) => (0, Iq.jsx)("span", {
+            className: cq()("SkyblockReachLogMote", FQ % 2 === 1 && "Violet"),
+            style: QQ
+          }, `mote${FQ}`))), ND.map(((QQ, FQ) => (0, Iq.jsx)("span", {
             className: "SkyblockReachLogBubble",
-            style: dd
-          }, `bubble${Jd}`)))]
+            style: QQ
+          }, `bubble${FQ}`)))]
         })
       })),
-      XP = 100;
+      KD = 100;
 
-    function fP(dd) {
+    function zD(QQ) {
       let {
-        view: Jd
-      } = dd;
+        view: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)();
-      if (null === Jd || 0 === Jd.total) return null;
-      const pd = XP * Jd.aspect,
-        Nd = kd("skyblockGame:hiddenWatersCount", {
-          found: Jd.found,
-          total: Jd.total
+        t: wQ
+      } = (0, sq.y)();
+      if (null === FQ || 0 === FQ.total) return null;
+      const LQ = KD * FQ.aspect,
+        qQ = wQ("skyblockGame:hiddenWatersCount", {
+          found: FQ.found,
+          total: FQ.total
         });
-      return (0, SN.jsxs)("div", {
+      return (0, Iq.jsxs)("div", {
         className: "SkyblockHiddenWatersStrip",
-        title: `${kd("skyblockGame:hiddenWatersTitle")}: ${Nd}`,
-        children: [(0, SN.jsxs)("svg", {
+        title: `${wQ("skyblockGame:hiddenWatersTitle")}: ${qQ}`,
+        children: [(0, Iq.jsxs)("svg", {
           className: "SkyblockHiddenWatersOutline",
-          viewBox: `0 0 100 ${pd}`,
+          viewBox: `0 0 100 ${LQ}`,
           "aria-hidden": "true",
-          children: [Jd.islands.map(((dd, Jd) => (0, SN.jsx)("ellipse", {
+          children: [FQ.islands.map(((QQ, FQ) => (0, Iq.jsx)("ellipse", {
             className: "SkyblockHiddenWatersIsland",
-            cx: (dd.left + dd.width / 2) * XP,
-            cy: (dd.top + dd.height / 2) * pd,
-            rx: dd.width / 2 * XP,
-            ry: dd.height / 2 * pd
-          }, Jd))), Jd.pins.map(((dd, Jd) => (0, SN.jsx)("circle", {
+            cx: (QQ.left + QQ.width / 2) * KD,
+            cy: (QQ.top + QQ.height / 2) * LQ,
+            rx: QQ.width / 2 * KD,
+            ry: QQ.height / 2 * LQ
+          }, FQ))), FQ.pins.map(((QQ, FQ) => (0, Iq.jsx)("circle", {
             className: "SkyblockHiddenWatersPin",
-            cx: dd.left * XP,
-            cy: dd.top * pd,
+            cx: QQ.left * KD,
+            cy: QQ.top * LQ,
             r: 13
-          }, Jd)))]
-        }), (0, SN.jsxs)("span", {
+          }, FQ)))]
+        }), (0, Iq.jsxs)("span", {
           className: "SkyblockHiddenWatersText",
-          children: [(0, SN.jsx)("span", {
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockHiddenWatersTitle",
-            children: kd("skyblockGame:hiddenWatersTitle")
-          }), (0, SN.jsx)("span", {
-            className: Jd.found === Jd.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
-            children: Nd
+            children: wQ("skyblockGame:hiddenWatersTitle")
+          }), (0, Iq.jsx)("span", {
+            className: FQ.found === FQ.total ? "SkyblockHiddenWatersCount AllFound" : "SkyblockHiddenWatersCount",
+            children: qQ
           })]
         })]
       })
     }
 
-    function nP(dd) {
+    function lD(QQ) {
       let {
-        view: Jd,
-        island: kd
-      } = dd;
+        view: FQ,
+        island: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, mN.B)(), Nd = null === Jd || void 0 === Jd ? void 0 : Jd.glimpses.get(kd);
-      return void 0 === Nd || 0 === Nd.length ? null : (0, SN.jsxs)("div", {
+        t: LQ
+      } = (0, sq.y)(), qQ = null === FQ || void 0 === FQ ? void 0 : FQ.glimpses.get(wQ);
+      return void 0 === qQ || 0 === qQ.length ? null : (0, Iq.jsxs)("div", {
         className: "SkyblockHiddenWatersGlimpses",
-        children: [(0, SN.jsx)("span", {
+        children: [(0, Iq.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesTitle",
-          children: pd("skyblockGame:hiddenWatersGlimpsed")
-        }), (0, SN.jsx)("span", {
+          children: LQ("skyblockGame:hiddenWatersGlimpsed")
+        }), (0, Iq.jsx)("span", {
           className: "SkyblockHiddenWatersGlimpsesRow",
-          children: Nd.map((dd => (0, SN.jsx)("span", {
+          children: qQ.map((QQ => (0, Iq.jsx)("span", {
             className: "SkyblockHiddenWatersSilhouette",
             "aria-hidden": "true",
-            children: (0, SN.jsx)(MN.d, {
-              itemName: dd,
+            children: (0, Iq.jsx)(Wq.e, {
+              itemName: QQ,
               amount: 0
             })
-          }, dd)))
+          }, QQ)))
         })]
       })
     }
-    const UP = ["Bronze", "Silver", "Gold"],
-      yP = [{
+    const jD = ["Bronze", "Silver", "Gold"],
+      aD = [{
         className: "Bloom",
         titleKey: "skyblockGame:reachLogRibbonBloomTitle",
         legendKey: "skyblockGame:reachLogLegendBloom"
@@ -8411,481 +8411,481 @@ export const modules = {
         titleKey: "skyblockGame:reachLogRibbonLetGoTitle",
         legendKey: "skyblockGame:reachLogLegendLetGo"
       }],
-      DP = yP.slice(0, 2);
+      XD = aD.slice(0, 2);
 
-    function TP(dd) {
-      return dd ? yP : DP
+    function fD(QQ) {
+      return QQ ? aD : XD
     }
 
-    function EP(dd) {
+    function VD(QQ) {
       let {
-        fish: Jd,
-        letGoShown: kd
-      } = dd;
+        fish: FQ,
+        letGoShown: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, mN.B)();
-      return (0, SN.jsxs)("span", {
+        t: LQ
+      } = (0, sq.y)();
+      return (0, Iq.jsxs)("span", {
         className: "SkyblockReachLogMarks",
-        children: [UP.map(((dd, kd) => {
-          const Nd = kd < Jd.marks;
-          return (0, SN.jsx)("span", {
-            className: BN()("SkyblockReachLogPip", dd, Nd && "Earned", Nd && Jd.fresh && kd === Jd.marks - 1 && "Newest"),
-            title: pd(bp[kd])
-          }, dd)
-        })), (0, SN.jsx)("span", {
+        children: [jD.map(((QQ, wQ) => {
+          const qQ = wQ < FQ.marks;
+          return (0, Iq.jsx)("span", {
+            className: cq()("SkyblockReachLogPip", QQ, qQ && "Earned", qQ && FQ.fresh && wQ === FQ.marks - 1 && "Newest"),
+            title: LQ(IL[wQ])
+          }, QQ)
+        })), (0, Iq.jsx)("span", {
           className: "SkyblockReachLogDivider"
-        }), TP(kd).map(((dd, kd) => (0, SN.jsx)("span", {
-          className: BN()("SkyblockReachLogRibbon", dd.className, !0 === Jd.ribbons[kd] && "Earned"),
-          title: pd(dd.titleKey)
-        }, dd.className)))]
+        }), fD(wQ).map(((QQ, wQ) => (0, Iq.jsx)("span", {
+          className: cq()("SkyblockReachLogRibbon", QQ.className, !0 === FQ.ribbons[wQ] && "Earned"),
+          title: LQ(QQ.titleKey)
+        }, QQ.className)))]
       })
     }
 
-    function cP(dd) {
+    function hD(QQ) {
       let {
-        letGoShown: Jd,
-        haloShown: kd
-      } = dd;
+        letGoShown: FQ,
+        haloShown: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, mN.B)();
-      return (0, SN.jsxs)("span", {
+        t: LQ
+      } = (0, sq.y)();
+      return (0, Iq.jsxs)("span", {
         className: "SkyblockReachLogLegend",
-        children: [(0, SN.jsxs)("span", {
+        children: [(0, Iq.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: pd("skyblockGame:reachLogMarks"),
-          children: [(0, SN.jsx)("span", {
+          title: LQ("skyblockGame:reachLogMarks"),
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockReachLogPip Gold Earned"
-          }), pd("skyblockGame:reachLogLegendMarks")]
-        }), TP(Jd).map((dd => (0, SN.jsxs)("span", {
+          }), LQ("skyblockGame:reachLogLegendMarks")]
+        }), fD(FQ).map((QQ => (0, Iq.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: pd(dd.titleKey),
-          children: [(0, SN.jsx)("span", {
-            className: BN()("SkyblockReachLogRibbon", dd.className, "Earned")
-          }), pd(dd.legendKey)]
-        }, dd.className))), (0, SN.jsxs)("span", {
+          title: LQ(QQ.titleKey),
+          children: [(0, Iq.jsx)("span", {
+            className: cq()("SkyblockReachLogRibbon", QQ.className, "Earned")
+          }), LQ(QQ.legendKey)]
+        }, QQ.className))), (0, Iq.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: pd("skyblockGame:reachLogGlimmerTitle"),
-          children: [(0, SN.jsx)("span", {
+          title: LQ("skyblockGame:reachLogGlimmerTitle"),
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockReachLogGlimmer"
-          }), pd("skyblockGame:reachLogLegendGlimmer")]
-        }), kd && (0, SN.jsxs)("span", {
+          }), LQ("skyblockGame:reachLogLegendGlimmer")]
+        }), wQ && (0, Iq.jsxs)("span", {
           className: "SkyblockReachLogLegendItem",
-          title: pd("skyblockGame:reachLogHaloTitle"),
-          children: [(0, SN.jsx)("span", {
+          title: LQ("skyblockGame:reachLogHaloTitle"),
+          children: [(0, Iq.jsx)("span", {
             className: "SkyblockReachLogHalo"
-          }), pd("skyblockGame:reachLogLegendHalo")]
+          }), LQ("skyblockGame:reachLogLegendHalo")]
         })]
       })
     }
 
-    function hP(dd) {
+    function JD(QQ) {
       let {
-        returner: Jd
-      } = dd;
-      return (0, SN.jsxs)("div", {
-        className: BN()("SkyblockReachLogReturner", Jd.back && "Back"),
-        children: [(0, SN.jsx)("span", {
+        returner: FQ
+      } = QQ;
+      return (0, Iq.jsxs)("div", {
+        className: cq()("SkyblockReachLogReturner", FQ.back && "Back"),
+        children: [(0, Iq.jsx)("span", {
           className: "SkyblockReachLogReturnerIcon",
           "aria-hidden": "true",
-          children: (0, SN.jsx)(MN.d, {
-            itemName: Jd.itemName,
+          children: (0, Iq.jsx)(Wq.e, {
+            itemName: FQ.itemName,
             amount: 0
           })
-        }), (0, SN.jsx)("span", {
+        }), (0, Iq.jsx)("span", {
           className: "SkyblockReachLogReturnerLine",
-          children: Jd.line
+          children: FQ.line
         })]
       })
     }
 
-    function rP(dd) {
+    function ED(QQ) {
       let {
-        fish: Jd,
-        letGoShown: kd
-      } = dd;
+        fish: FQ,
+        letGoShown: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, mN.B)();
-      return (0, SN.jsxs)("li", {
-        className: BN()("SkyblockReachLogCard", Jd.caught ? "Caught" : "Unknown", Jd.marks >= 3 && "GoldCard", Jd.fresh && "Fresh", Jd.visitor && "Visitor"),
-        children: [Jd.visitor && (0, SN.jsx)("span", {
+        t: LQ
+      } = (0, sq.y)();
+      return (0, Iq.jsxs)("li", {
+        className: cq()("SkyblockReachLogCard", FQ.caught ? "Caught" : "Unknown", FQ.marks >= 3 && "GoldCard", FQ.fresh && "Fresh", FQ.visitor && "Visitor"),
+        children: [FQ.visitor && (0, Iq.jsx)("span", {
           className: "SkyblockReachLogVisitorTag",
-          children: pd("skyblockGame:reachLogVisitor")
-        }), Jd.fresh && Array.from({
+          children: LQ("skyblockGame:reachLogVisitor")
+        }), FQ.fresh && Array.from({
           length: 4
-        }, ((dd, Jd) => (0, SN.jsx)("span", {
+        }, ((QQ, FQ) => (0, Iq.jsx)("span", {
           className: "SkyblockReachLogSparkle"
-        }, Jd))), (0, SN.jsxs)("span", {
+        }, FQ))), (0, Iq.jsxs)("span", {
           className: "SkyblockReachLogFishIcon",
           "aria-hidden": "true",
-          children: [Jd.halo && (0, SN.jsx)("span", {
+          children: [FQ.halo && (0, Iq.jsx)("span", {
             className: "SkyblockReachLogHalo",
-            title: pd("skyblockGame:reachLogHaloTitle")
-          }), (0, SN.jsx)(MN.d, {
-            itemName: Jd.itemName,
+            title: LQ("skyblockGame:reachLogHaloTitle")
+          }), (0, Iq.jsx)(Wq.e, {
+            itemName: FQ.itemName,
             amount: 0
-          }), Jd.glimmer && (0, SN.jsx)("span", {
+          }), FQ.glimmer && (0, Iq.jsx)("span", {
             className: "SkyblockReachLogGlimmer",
-            title: pd("skyblockGame:reachLogGlimmerTitle")
+            title: LQ("skyblockGame:reachLogGlimmerTitle")
           })]
-        }), (0, SN.jsx)("span", {
+        }), (0, Iq.jsx)("span", {
           className: "SkyblockReachLogFishName",
-          children: Jd.name
-        }), (0, SN.jsx)("span", {
+          children: FQ.name
+        }), (0, Iq.jsx)("span", {
           className: "SkyblockReachLogFishChance",
-          children: Jd.chance
-        }), (0, SN.jsx)("span", {
+          children: FQ.chance
+        }), (0, Iq.jsx)("span", {
           className: "SkyblockReachLogFishBest",
-          children: Jd.best
-        }), (0, SN.jsx)(EP, {
-          fish: Jd,
-          letGoShown: kd
+          children: FQ.best
+        }), (0, Iq.jsx)(VD, {
+          fish: FQ,
+          letGoShown: wQ
         })]
       })
     }
 
-    function uP(dd) {
+    function nD(QQ) {
       let {
-        page: Jd,
-        letGoShown: kd,
-        hiddenWaters: pd
-      } = dd;
+        page: FQ,
+        letGoShown: wQ,
+        hiddenWaters: LQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, mN.B)();
-      return Jd.awake ? (0, SN.jsx)("ul", {
+        t: qQ
+      } = (0, sq.y)();
+      return FQ.awake ? (0, Iq.jsx)("ul", {
         className: "SkyblockReachLogGrid",
-        children: Jd.fish.map((dd => (0, SN.jsx)(rP, {
-          fish: dd,
-          letGoShown: kd
-        }, dd.itemName)))
-      }) : (0, SN.jsxs)(SN.Fragment, {
-        children: [(0, SN.jsx)("p", {
+        children: FQ.fish.map((QQ => (0, Iq.jsx)(ED, {
+          fish: QQ,
+          letGoShown: wQ
+        }, QQ.itemName)))
+      }) : (0, Iq.jsxs)(Iq.Fragment, {
+        children: [(0, Iq.jsx)("p", {
           className: "SkyblockReachLogAsleep",
-          children: Nd("skyblockGame:reachLogAsleep")
-        }), (0, SN.jsx)(nP, {
-          view: pd,
-          island: Jd.id
+          children: qQ("skyblockGame:reachLogAsleep")
+        }), (0, Iq.jsx)(lD, {
+          view: LQ,
+          island: FQ.id
         })]
       })
     }
 
-    function tP(dd) {
-      var Jd, kd;
+    function gD(QQ) {
+      var FQ, wQ;
       let {
-        controller: pd,
-        regulars: Nd,
-        hiddenWaters: Wd
-      } = dd;
-      const Pd = (0, bN.i)(mp, pd.getSnapshot()),
-        Zd = function(dd) {
-          return (0, bN.i)(gN, dd.getSnapshot())
-        }(Wd),
-        gd = (0, bN.i)(pN, Nd.getSnapshot()),
+        controller: LQ,
+        regulars: qQ,
+        hiddenWaters: oQ
+      } = QQ;
+      const DQ = (0, rq.i)(rL, LQ.getSnapshot()),
+        kQ = function(QQ) {
+          return (0, rq.i)(Dq, QQ.getSnapshot())
+        }(oQ),
+        vQ = (0, rq.i)(Fq, qQ.getSnapshot()),
         {
-          t: Cd
-        } = (0, mN.B)(),
-        Kd = hN();
-      if (!Pd.enabled) return null;
-      const od = null !== (Jd = Pd.pages.find((dd => dd.id === Pd.selected))) && void 0 !== Jd ? Jd : null;
-      return (0, SN.jsx)(TN.e, {
-        show: Pd.open,
-        close: pd.dismiss,
+          t: mQ
+        } = (0, sq.y)(),
+        uQ = Vq();
+      if (!DQ.enabled) return null;
+      const HQ = null !== (FQ = DQ.pages.find((QQ => QQ.id === DQ.selected))) && void 0 !== FQ ? FQ : null;
+      return (0, Iq.jsx)(aq.d, {
+        show: DQ.open,
+        close: LQ.dismiss,
         togglePointerLock: !1,
-        className: BN()("SkyblockSkillsOverlay", gd.open && "SkyblockReachLogUnderLedger"),
-        children: (0, SN.jsxs)("section", {
+        className: cq()("SkyblockSkillsOverlay", vQ.open && "SkyblockReachLogUnderLedger"),
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockReachLogPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockReachLogTitle",
           tabIndex: -1,
-          ref: Kd,
-          onKeyDown: cN,
-          children: [(0, SN.jsx)(jP, {
-            island: null !== (kd = null === od || void 0 === od ? void 0 : od.id) && void 0 !== kd ? kd : null
-          }), (0, SN.jsxs)("header", {
+          ref: uQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsx)(TD, {
+            island: null !== (wQ = null === HQ || void 0 === HQ ? void 0 : HQ.id) && void 0 !== wQ ? wQ : null
+          }), (0, Iq.jsxs)("header", {
             className: "SkyblockReachLogHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockReachLogTitle",
-                children: Cd("skyblockGame:reachLogTitle")
-              }), (0, SN.jsx)("p", {
-                children: Cd("skyblockGame:keeperWickReachLogWelcome")
+                children: mQ("skyblockGame:reachLogTitle")
+              }), (0, Iq.jsx)("p", {
+                children: mQ("skyblockGame:keeperWickReachLogWelcome")
               })]
-            }), (0, SN.jsx)(fP, {
-              view: Zd
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(zD, {
+              view: kQ
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              onClick: pd.dismiss
+              onClick: LQ.dismiss
             })]
-          }), (0, SN.jsx)("nav", {
+          }), (0, Iq.jsx)("nav", {
             className: "SkyblockReachLogTabs",
             role: "tablist",
             "data-pad-tabs": "1",
-            children: Pd.pages.map((dd => {
-              const Jd = dd.id === Pd.selected,
-                kd = dd.fish.some((dd => dd.fresh));
-              return (0, SN.jsxs)("button", {
+            children: DQ.pages.map((QQ => {
+              const FQ = QQ.id === DQ.selected,
+                wQ = QQ.fish.some((QQ => QQ.fresh));
+              return (0, Iq.jsxs)("button", {
                 type: "button",
                 role: "tab",
-                "aria-selected": Jd,
+                "aria-selected": FQ,
                 "data-pad-tab": !0,
-                "data-pad-selected": Jd ? "true" : void 0,
-                className: BN()("SkyblockReachLogTab", `Island-${dd.id}`, Jd && "Selected", !dd.awake && "Asleep", dd.gold && "GoldPage", kd && "HasNews"),
+                "data-pad-selected": FQ ? "true" : void 0,
+                className: cq()("SkyblockReachLogTab", `Island-${QQ.id}`, FQ && "Selected", !QQ.awake && "Asleep", QQ.gold && "GoldPage", wQ && "HasNews"),
                 onClick: () => {
-                  pd.selectPage(dd.id)
+                  LQ.selectPage(QQ.id)
                 },
-                children: [(0, SN.jsx)("span", {
+                children: [(0, Iq.jsx)("span", {
                   className: "SkyblockReachLogTabName",
-                  children: dd.name
-                }), dd.awake && (0, SN.jsx)("span", {
+                  children: QQ.name
+                }), QQ.awake && (0, Iq.jsx)("span", {
                   className: "SkyblockReachLogTabCount",
-                  children: Cd("skyblockGame:reachLogCaughtCount", {
-                    caught: dd.caught,
-                    total: dd.total
+                  children: mQ("skyblockGame:reachLogCaughtCount", {
+                    caught: QQ.caught,
+                    total: QQ.total
                   })
                 })]
-              }, dd.id)
+              }, QQ.id)
             }))
-          }), (0, SN.jsxs)("div", {
-            className: BN()("SkyblockReachLogPage", null !== od && `Island-${od.id}`),
+          }), (0, Iq.jsxs)("div", {
+            className: cq()("SkyblockReachLogPage", null !== HQ && `Island-${HQ.id}`),
             role: "tabpanel",
-            children: [null !== od && (0, SN.jsx)(uP, {
-              page: od,
-              letGoShown: Pd.letGoShown,
-              hiddenWaters: Zd
-            }), !0 === (null === od || void 0 === od ? void 0 : od.awake) && null !== od.returner && (0, SN.jsx)(hP, {
-              returner: od.returner
-            }), !0 === (null === od || void 0 === od ? void 0 : od.awake) && (0, SN.jsx)(FP, {
-              controller: Nd,
-              island: od.id
+            children: [null !== HQ && (0, Iq.jsx)(nD, {
+              page: HQ,
+              letGoShown: DQ.letGoShown,
+              hiddenWaters: kQ
+            }), !0 === (null === HQ || void 0 === HQ ? void 0 : HQ.awake) && null !== HQ.returner && (0, Iq.jsx)(JD, {
+              returner: HQ.returner
+            }), !0 === (null === HQ || void 0 === HQ ? void 0 : HQ.awake) && (0, Iq.jsx)(sD, {
+              controller: qQ,
+              island: HQ.id
             })]
-          }), (0, SN.jsx)("footer", {
-            className: BN()("SkyblockReachLogFooter", null !== od && `Island-${od.id}`, !0 === (null === od || void 0 === od ? void 0 : od.gold) && "GoldPage"),
-            children: !0 === (null === od || void 0 === od ? void 0 : od.gold) ? (0, SN.jsx)("span", {
+          }), (0, Iq.jsx)("footer", {
+            className: cq()("SkyblockReachLogFooter", null !== HQ && `Island-${HQ.id}`, !0 === (null === HQ || void 0 === HQ ? void 0 : HQ.gold) && "GoldPage"),
+            children: !0 === (null === HQ || void 0 === HQ ? void 0 : HQ.gold) ? (0, Iq.jsx)("span", {
               className: "SkyblockReachLogGoldLine",
-              children: Cd("skyblockGame:keeperWickReachLogPageGold")
-            }) : (0, SN.jsxs)(SN.Fragment, {
-              children: [(0, SN.jsx)(cP, {
-                letGoShown: Pd.letGoShown,
-                haloShown: !0 === (null === od || void 0 === od ? void 0 : od.fish.some((dd => dd.halo)))
-              }), (0, SN.jsx)("span", {
+              children: mQ("skyblockGame:keeperWickReachLogPageGold")
+            }) : (0, Iq.jsxs)(Iq.Fragment, {
+              children: [(0, Iq.jsx)(hD, {
+                letGoShown: DQ.letGoShown,
+                haloShown: !0 === (null === HQ || void 0 === HQ ? void 0 : HQ.fish.some((QQ => QQ.halo)))
+              }), (0, Iq.jsx)("span", {
                 className: "SkyblockReachLogReward",
-                children: Cd("skyblockGame:reachLogPageReward")
+                children: mQ("skyblockGame:reachLogPageReward")
               })]
             })
           })]
         })
       })
     }
-    var VP = kd(4722);
+    var PD = wQ(4665);
 
-    function zP(dd) {
+    function ZD(QQ) {
       let {
-        conversation: Jd,
-        completedLabel: kd
-      } = dd;
-      return (0, SN.jsxs)("article", {
+        conversation: FQ,
+        completedLabel: wQ
+      } = QQ;
+      return (0, Iq.jsxs)("article", {
         className: "SkyblockDialogueConversation",
-        children: [(0, SN.jsxs)("header", {
-          children: [(0, SN.jsx)("h3", {
-            children: Jd.questName
-          }), Jd.completed && (0, SN.jsx)("span", {
+        children: [(0, Iq.jsxs)("header", {
+          children: [(0, Iq.jsx)("h3", {
+            children: FQ.questName
+          }), FQ.completed && (0, Iq.jsx)("span", {
             className: "SkyblockDialogueCompleted",
-            children: kd
+            children: wQ
           })]
-        }), Jd.lines.map((dd => (0, SN.jsx)(VP.b, {
-          display: dd.display
-        }, dd.key)))]
+        }), FQ.lines.map((QQ => (0, Iq.jsx)(PD.c, {
+          display: QQ.display
+        }, QQ.key)))]
       })
     }
 
-    function HP(dd) {
+    function yD(QQ) {
       let {
-        controller: Jd
-      } = dd;
+        controller: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)(), pd = (0, bN.i)(KN, Jd.getSnapshot()), Nd = hN();
-      if (!pd.enabled) return null;
-      const Wd = !pd.loading && 0 === pd.conversations.length;
-      return (0, SN.jsx)(TN.e, {
-        show: pd.open,
-        close: Jd.dismiss,
+        t: wQ
+      } = (0, sq.y)(), LQ = (0, rq.i)(vq, FQ.getSnapshot()), qQ = Vq();
+      if (!LQ.enabled) return null;
+      const oQ = !LQ.loading && 0 === LQ.conversations.length;
+      return (0, Iq.jsx)(aq.d, {
+        show: LQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockDialoguePanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockDialogueTitle",
           tabIndex: -1,
-          ref: Nd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: qQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockDialogueTitle",
-                children: kd("skyblockDialogue:title")
-              }), (0, SN.jsx)("p", {
-                children: kd("skyblockDialogue:intro")
+                children: wQ("skyblockDialogue:title")
+              }), (0, Iq.jsx)("p", {
+                children: wQ("skyblockDialogue:intro")
               })]
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              onClick: Jd.dismiss
+              onClick: FQ.dismiss
             })]
-          }), (0, SN.jsxs)("div", {
-            className: BN()("SkyblockDialogueBody", {
-              SingleColumn: null !== pd.questFocus || 0 === pd.characters.length
+          }), (0, Iq.jsxs)("div", {
+            className: cq()("SkyblockDialogueBody", {
+              SingleColumn: null !== LQ.questFocus || 0 === LQ.characters.length
             }),
-            children: [null === pd.questFocus && pd.characters.length > 0 && (0, SN.jsx)("nav", {
+            children: [null === LQ.questFocus && LQ.characters.length > 0 && (0, Iq.jsx)("nav", {
               className: "SkyblockDialogueCharacters",
-              children: pd.characters.map((dd => (0, SN.jsx)(EN.d, {
-                className: BN()("SkyblockDialogueCharacter", {
-                  Selected: dd.selected
+              children: LQ.characters.map((QQ => (0, Iq.jsx)(Xq.f, {
+                className: cq()("SkyblockDialogueCharacter", {
+                  Selected: QQ.selected
                 }),
                 onClick: () => {
-                  Jd.selectCharacter(dd.id)
+                  FQ.selectCharacter(QQ.id)
                 },
-                children: (0, SN.jsx)(FN.c, {
-                  text: dd.styling
+                children: (0, Iq.jsx)(Rq.e, {
+                  text: QQ.styling
                 })
-              }, dd.id)))
-            }), (0, SN.jsxs)("div", {
+              }, QQ.id)))
+            }), (0, Iq.jsxs)("div", {
               className: "SkyblockDialogueConversations",
-              children: [null !== pd.questFocus && (0, SN.jsx)(EN.d, {
+              children: [null !== LQ.questFocus && (0, Iq.jsx)(Xq.f, {
                 className: "SkyblockDialogueBack",
-                onClick: Jd.showCharacters,
-                children: kd("skyblockDialogue:allCharacters")
-              }), pd.loading && (0, SN.jsx)("p", {
+                onClick: FQ.showCharacters,
+                children: wQ("skyblockDialogue:allCharacters")
+              }), LQ.loading && (0, Iq.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: kd("skyblockDialogue:loading")
-              }), Wd && (0, SN.jsx)("p", {
+                children: wQ("skyblockDialogue:loading")
+              }), oQ && (0, Iq.jsx)("p", {
                 className: "SkyblockDialogueEmpty",
-                children: kd(null === pd.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
-              }), pd.conversations.map((dd => (0, SN.jsx)(zP, {
-                conversation: dd,
-                completedLabel: pd.completedLabel
-              }, dd.questId)))]
+                children: wQ(null === LQ.questFocus ? "skyblockDialogue:empty" : "skyblockDialogue:questEmpty")
+              }), LQ.conversations.map((QQ => (0, Iq.jsx)(ZD, {
+                conversation: QQ,
+                completedLabel: LQ.completedLabel
+              }, QQ.questId)))]
             })]
           })]
         })
       })
     }
 
-    function wP(dd) {
+    function BD(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(ON, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(Yq, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = hN();
-      return kd.enabled ? (0, SN.jsx)(TN.e, {
-        show: kd.open,
-        close: Jd.dismiss,
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = Vq();
+      return wQ.enabled ? (0, Iq.jsx)(aq.d, {
+        show: wQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockAutographsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockAutographsTitle",
           tabIndex: -1,
-          ref: Nd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: qQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockSkillsHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockAutographsTitle",
-                children: pd("skyblockGame:autographBook")
-              }), (0, SN.jsx)("p", {
-                children: pd("skyblockGame:autographBookIntro")
+                children: LQ("skyblockGame:autographBook")
+              }), (0, Iq.jsx)("p", {
+                children: LQ("skyblockGame:autographBookIntro")
               })]
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              onClick: Jd.dismiss
+              onClick: FQ.dismiss
             })]
-          }), (0, SN.jsxs)("div", {
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockAutographsBody",
-            children: [(0, SN.jsxs)("div", {
+            children: [(0, Iq.jsxs)("div", {
               className: "SkyblockAutographTotals",
-              children: [(0, SN.jsxs)("div", {
+              children: [(0, Iq.jsxs)("div", {
                 className: "SkyblockAutographTotal",
-                children: [(0, SN.jsx)("strong", {
-                  children: kd.total
-                }), (0, SN.jsx)("span", {
-                  children: pd("skyblockGame:autographTotal")
+                children: [(0, Iq.jsx)("strong", {
+                  children: wQ.total
+                }), (0, Iq.jsx)("span", {
+                  children: LQ("skyblockGame:autographTotal")
                 })]
-              }), (0, SN.jsxs)("div", {
+              }), (0, Iq.jsxs)("div", {
                 className: "SkyblockAutographTotal Ranked",
-                children: [(0, SN.jsx)("strong", {
-                  children: kd.rankTotal
-                }), (0, SN.jsx)("span", {
-                  children: pd("skyblockGame:autographRankTotal")
+                children: [(0, Iq.jsx)("strong", {
+                  children: wQ.rankTotal
+                }), (0, Iq.jsx)("span", {
+                  children: LQ("skyblockGame:autographRankTotal")
                 })]
               })]
-            }), 0 === kd.entries.length ? (0, SN.jsx)("p", {
+            }), 0 === wQ.entries.length ? (0, Iq.jsx)("p", {
               className: "SkyblockAutographsEmpty",
-              children: pd("skyblockGame:autographBookEmpty")
-            }) : (0, SN.jsx)("ul", {
+              children: LQ("skyblockGame:autographBookEmpty")
+            }) : (0, Iq.jsx)("ul", {
               className: "SkyblockAutographList",
-              children: kd.entries.map((dd => (0, SN.jsxs)("li", {
-                className: BN()("SkyblockAutograph", {
-                  Ranked: null !== dd.rank
+              children: wQ.entries.map((QQ => (0, Iq.jsxs)("li", {
+                className: cq()("SkyblockAutograph", {
+                  Ranked: null !== QQ.rank
                 }),
-                style: null === dd.rank ? void 0 : {
-                  color: dd.rank.colour
+                style: null === QQ.rank ? void 0 : {
+                  color: QQ.rank.colour
                 },
-                children: [null !== dd.rank && (0, SN.jsx)(OW.e, {
+                children: [null !== QQ.rank && (0, Iq.jsx)(Yo.c, {
                   className: "SkyblockAutographRankIcon",
-                  name: dd.rank.icon,
-                  kit: (0, OW.g)(dd.rank.icon)
-                }), (0, SN.jsxs)("div", {
+                  name: QQ.rank.icon,
+                  kit: (0, Yo.d)(QQ.rank.icon)
+                }), (0, Iq.jsxs)("div", {
                   className: "SkyblockAutographText",
-                  children: [(0, SN.jsx)("span", {
+                  children: [(0, Iq.jsx)("span", {
                     className: "SkyblockAutographName",
-                    children: dd.name
-                  }), (0, SN.jsxs)("span", {
+                    children: QQ.name
+                  }), (0, Iq.jsxs)("span", {
                     className: "SkyblockAutographDetails",
-                    children: [null !== dd.rank && (0, SN.jsx)("span", {
+                    children: [null !== QQ.rank && (0, Iq.jsx)("span", {
                       className: "SkyblockAutographRank",
-                      children: dd.rank.label
-                    }), (0, SN.jsx)("span", {
+                      children: QQ.rank.label
+                    }), (0, Iq.jsx)("span", {
                       className: "SkyblockAutographDate",
-                      children: dd.signedOn
+                      children: QQ.signedOn
                     })]
                   })]
                 })]
-              }, dd.key)))
+              }, QQ.key)))
             })]
           })]
         })
       }) : null
     }
-    const AP = (0, ad.memo)((function(dd) {
+    const dD = (0, WQ.memo)((function(QQ) {
         let {
-          controller: Jd
-        } = dd;
-        return (0, SN.jsxs)("div", {
+          controller: FQ
+        } = QQ;
+        return (0, Iq.jsxs)("div", {
           className: "SkyblockQuestWaypoint",
-          ref: Jd.display.mountWaypoint,
-          children: [(0, SN.jsx)("div", {
+          ref: FQ.display.mountWaypoint,
+          children: [(0, Iq.jsx)("div", {
             className: "SkyblockQuestWaypointMarker"
-          }), (0, SN.jsx)("div", {
+          }), (0, Iq.jsx)("div", {
             className: "SkyblockQuestWaypointTextClip",
-            children: (0, SN.jsxs)("div", {
+            children: (0, Iq.jsxs)("div", {
               className: "SkyblockQuestWaypointText",
-              children: [(0, SN.jsx)("span", {
+              children: [(0, Iq.jsx)("span", {
                 className: "SkyblockQuestWaypointLabel"
-              }), (0, SN.jsx)("span", {
+              }), (0, Iq.jsx)("span", {
                 className: "SkyblockQuestWaypointDistance"
-              }), (0, SN.jsx)("span", {
+              }), (0, Iq.jsx)("span", {
                 className: "SkyblockQuestWaypointHint",
                 hidden: !0
               })]
@@ -8893,7 +8893,7 @@ export const modules = {
           })]
         })
       })),
-      dZ = {
+      Qk = {
         started: "!",
         quest: "\u2605",
         step: "\u2713",
@@ -8902,631 +8902,631 @@ export const modules = {
         npcNote: "\u2709\ufe0e"
       };
 
-    function JZ(dd) {
-      return "next" === dd.phase ? "\u2192" : dZ[dd.kind]
+    function Fk(QQ) {
+      return "next" === QQ.phase ? "\u2192" : Qk[QQ.kind]
     }
-    const kZ = (0, ad.memo)((function(dd) {
+    const wk = (0, WQ.memo)((function(QQ) {
       let {
-        controller: Jd,
-        display: kd
-      } = dd;
-      const pd = (0, bN.i)(lk, Jd.getNotificationSnapshot()),
-        [Nd, Wd] = (0, ad.useState)(!1);
-      return (0, bN.h)("qteStateUpdated", (dd => {
-        Wd(dd.isActive)
-      })), (0, SN.jsxs)("div", {
-        className: "SkyblockQuestNotificationAnchor" + (Nd ? " UnderQte" : ""),
+        controller: FQ,
+        display: wQ
+      } = QQ;
+      const LQ = (0, rq.i)(uw, FQ.getNotificationSnapshot()),
+        [qQ, oQ] = (0, WQ.useState)(!1);
+      return (0, rq.g)("qteStateUpdated", (QQ => {
+        oQ(QQ.isActive)
+      })), (0, Iq.jsxs)("div", {
+        className: "SkyblockQuestNotificationAnchor" + (qQ ? " UnderQte" : ""),
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: [pd && (0, SN.jsxs)("div", {
-          className: `SkyblockQuestNotification ${pd.kind} ${pd.phase}`,
+        children: [LQ && (0, Iq.jsxs)("div", {
+          className: `SkyblockQuestNotification ${LQ.kind} ${LQ.phase}`,
           style: {
-            "--quest-notification-duration": `${pd.durationMs}ms`,
-            ...pd.accent && {
-              "--quest-notification-accent": pd.accent
+            "--quest-notification-duration": `${LQ.durationMs}ms`,
+            ...LQ.accent && {
+              "--quest-notification-accent": LQ.accent
             }
           },
-          children: [(0, SN.jsxs)("div", {
-            className: "SkyblockQuestNotificationSymbols" + (pd.iconItem ? " WithIcon" : ""),
+          children: [(0, Iq.jsxs)("div", {
+            className: "SkyblockQuestNotificationSymbols" + (LQ.iconItem ? " WithIcon" : ""),
             "aria-hidden": "true",
-            children: [(0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)("span", {
               className: "SkyblockQuestNotificationMark",
-              children: JZ(pd)
-            }), pd.iconItem && (0, SN.jsx)("span", {
+              children: Fk(LQ)
+            }), LQ.iconItem && (0, Iq.jsx)("span", {
               className: "SkyblockQuestNotificationIcon",
-              children: (0, SN.jsx)(MN.d, {
-                itemName: pd.iconItem,
+              children: (0, Iq.jsx)(Wq.e, {
+                itemName: LQ.iconItem,
                 amount: 0
               })
             })]
-          }), (0, SN.jsxs)("div", {
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockQuestNotificationText",
-            children: [(0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)("span", {
               className: "SkyblockQuestNotificationTitle",
-              children: pd.title
-            }), (0, SN.jsx)("strong", {
+              children: LQ.title
+            }), (0, Iq.jsx)("strong", {
               className: "SkyblockQuestNotificationName",
-              children: (0, SN.jsx)(gW.b, {
-                text: pd.name
+              children: (0, Iq.jsx)(Do.d, {
+                text: LQ.name
               })
-            }), pd.description && (0, SN.jsx)("span", {
+            }), LQ.description && (0, Iq.jsx)("span", {
               className: "SkyblockQuestNotificationDescription",
-              children: (0, SN.jsx)(gW.b, {
-                text: pd.description
+              children: (0, Iq.jsx)(Do.d, {
+                text: LQ.description
               })
-            }), pd.reward && (0, SN.jsx)("span", {
+            }), LQ.reward && (0, Iq.jsx)("span", {
               className: "SkyblockQuestNotificationReward",
-              children: (0, SN.jsx)(gW.b, {
-                text: pd.reward
+              children: (0, Iq.jsx)(Do.d, {
+                text: LQ.reward
               })
             })]
           })]
-        }, pd.token), (null === pd || void 0 === pd ? void 0 : pd.waypointNameKey) && (0, SN.jsx)("div", {
+        }, LQ.token), (null === LQ || void 0 === LQ ? void 0 : LQ.waypointNameKey) && (0, Iq.jsx)("div", {
           className: "SkyblockQuestNotificationWaypointOrigin",
-          "data-waypoint-name-key": pd.waypointNameKey,
-          "data-notification-token": pd.token,
-          ref: kd.mountWaypointOrigin,
+          "data-waypoint-name-key": LQ.waypointNameKey,
+          "data-notification-token": LQ.token,
+          ref: wQ.mountWaypointOrigin,
           "aria-hidden": "true"
-        }, `waypoint-${pd.token}`)]
+        }, `waypoint-${LQ.token}`)]
       })
     }));
 
-    function pZ(dd) {
-      const Jd = parseInt(dd.replace("#", ""), 16);
-      return `${Jd>>16&255}, ${Jd>>8&255}, ${255&Jd}`
+    function Lk(QQ) {
+      const FQ = parseInt(QQ.replace("#", ""), 16);
+      return `${FQ>>16&255}, ${FQ>>8&255}, ${255&FQ}`
     }
-    const NZ = (0, ad.memo)((function(dd) {
+    const qk = (0, WQ.memo)((function(QQ) {
       let {
-        controller: Jd
-      } = dd;
+        controller: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)(), pd = (0, bN.i)(yk, Jd.getSnapshot());
-      if (!pd) return null;
-      const Nd = "arrival" === pd.phase;
-      return (0, SN.jsxs)("div", {
-        className: BN()("SkyblockPortalTransit", {
-          Departure: !Nd,
-          Arrival: Nd
+        t: wQ
+      } = (0, sq.y)(), LQ = (0, rq.i)(jw, FQ.getSnapshot());
+      if (!LQ) return null;
+      const qQ = "arrival" === LQ.phase;
+      return (0, Iq.jsxs)("div", {
+        className: cq()("SkyblockPortalTransit", {
+          Departure: !qQ,
+          Arrival: qQ
         }),
         style: {
-          "--portal-rgb": pZ(pd.colour),
-          "--portal-duration": `${pd.durationMs}ms`
+          "--portal-rgb": Lk(LQ.colour),
+          "--portal-duration": `${LQ.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, SN.jsx)("div", {
+        children: [(0, Iq.jsx)("div", {
           className: "SkyblockPortalTransitVeil",
           "aria-hidden": "true"
-        }), (0, SN.jsx)("div", {
+        }), (0, Iq.jsx)("div", {
           className: "SkyblockPortalTransitRim",
           "aria-hidden": "true",
           onAnimationEnd: () => {
-            Jd.finishArrival(pd.token)
+            FQ.finishArrival(LQ.token)
           }
-        }), (0, SN.jsxs)("div", {
+        }), (0, Iq.jsxs)("div", {
           className: "SkyblockPortalTransitTitle",
-          children: [(0, SN.jsx)("div", {
+          children: [(0, Iq.jsx)("div", {
             className: "SkyblockPortalTransitBand",
             "aria-hidden": "true"
-          }), !Nd && (0, SN.jsx)("span", {
+          }), !qQ && (0, Iq.jsx)("span", {
             className: "SkyblockPortalTransitEyebrow",
-            children: kd("skyblockGame:portalTransitHeading")
-          }), (0, SN.jsx)("strong", {
+            children: wQ("skyblockGame:portalTransitHeading")
+          }), (0, Iq.jsx)("strong", {
             className: "SkyblockPortalTransitZone",
-            children: kd(pd.zoneNameKey)
+            children: wQ(LQ.zoneNameKey)
           })]
         })]
-      }, pd.token)
+      }, LQ.token)
     }));
 
-    function WZ() {
+    function Dk() {
       return window.matchMedia("(prefers-reduced-motion: reduce)").matches
     }
 
-    function PZ() {
-      const dd = document.querySelector(".SkyblockHudCoins"),
-        Jd = null === dd || void 0 === dd ? void 0 : dd.getBoundingClientRect();
-      return Jd && Jd.width > 0 ? {
-        x: Jd.left + Math.min(Jd.width, 24) / 2,
-        y: Jd.top + Jd.height / 2
+    function kk() {
+      const QQ = document.querySelector(".SkyblockHudCoins"),
+        FQ = null === QQ || void 0 === QQ ? void 0 : QQ.getBoundingClientRect();
+      return FQ && FQ.width > 0 ? {
+        x: FQ.left + Math.min(FQ.width, 24) / 2,
+        y: FQ.top + FQ.height / 2
       } : {
         x: window.innerWidth - 48,
         y: 48
       }
     }
 
-    function ZZ(dd) {
+    function vk(QQ) {
       return {
-        x: dd.left + dd.width / 2,
-        y: dd.top + dd.height / 2
+        x: QQ.left + QQ.width / 2,
+        y: QQ.top + QQ.height / 2
       }
     }
 
-    function gZ() {
-      var dd;
-      const Jd = null === (dd = document.querySelector(".HotBar")) || void 0 === dd ? void 0 : dd.getBoundingClientRect();
-      return Jd && Jd.width > 0 ? ZZ(Jd) : {
+    function mk() {
+      var QQ;
+      const FQ = null === (QQ = document.querySelector(".HotBar")) || void 0 === QQ ? void 0 : QQ.getBoundingClientRect();
+      return FQ && FQ.width > 0 ? vk(FQ) : {
         x: window.innerWidth / 2,
         y: window.innerHeight - 40
       }
     }
 
-    function CZ(dd) {
+    function uk(QQ) {
       let {
-        items: Jd,
-        origins: kd,
-        target: pd
-      } = dd;
-      return (0, SN.jsx)("div", {
+        items: FQ,
+        origins: wQ,
+        target: LQ
+      } = QQ;
+      return (0, Iq.jsx)("div", {
         className: "SkyblockDailyRewardFlyingItems",
-        children: Jd.map(((dd, Jd) => {
-          const Nd = kd[Jd];
-          return (0, SN.jsx)("span", {
+        children: FQ.map(((QQ, FQ) => {
+          const qQ = wQ[FQ];
+          return (0, Iq.jsx)("span", {
             className: "SkyblockDailyRewardFlyingItem",
             style: {
-              left: `${Nd.x}px`,
-              top: `${Nd.y}px`,
-              "--item-dx": pd.x - Nd.x + "px",
-              "--item-dy": pd.y - Nd.y + "px",
-              "--item-delay": 2e3 + 160 * Jd + "ms",
+              left: `${qQ.x}px`,
+              top: `${qQ.y}px`,
+              "--item-dx": LQ.x - qQ.x + "px",
+              "--item-dy": LQ.y - qQ.y + "px",
+              "--item-delay": 2e3 + 160 * FQ + "ms",
               "--item-flight": "700ms"
             },
-            children: (0, SN.jsx)(MN.d, {
-              itemName: dd.dailyRewardItemName,
+            children: (0, Iq.jsx)(Wq.e, {
+              itemName: QQ.dailyRewardItemName,
               amount: 0
             })
-          }, dd.dailyRewardItemName)
+          }, QQ.dailyRewardItemName)
         }))
       })
     }
 
-    function KZ(dd, Jd) {
-      const kd = -Math.PI / 2 + 1.25 * (dd / (Jd - 1) * 2 - 1),
-        pd = 70 + dd % 3 * 22;
+    function Hk(QQ, FQ) {
+      const wQ = -Math.PI / 2 + 1.25 * (QQ / (FQ - 1) * 2 - 1),
+        LQ = 70 + QQ % 3 * 22;
       return {
-        x: Math.cos(kd) * pd,
-        y: Math.sin(kd) * pd * .7
+        x: Math.cos(wQ) * LQ,
+        y: Math.sin(wQ) * LQ * .7
       }
     }
 
-    function oZ(dd) {
+    function bk(QQ) {
       let {
-        origin: Jd,
-        target: kd,
-        count: pd
-      } = dd;
-      const Nd = [];
-      for (let Wd = 0; Wd < pd; Wd++) {
-        const dd = KZ(Wd, pd);
-        Nd.push((0, SN.jsx)("span", {
+        origin: FQ,
+        target: wQ,
+        count: LQ
+      } = QQ;
+      const qQ = [];
+      for (let oQ = 0; oQ < LQ; oQ++) {
+        const QQ = Hk(oQ, LQ);
+        qQ.push((0, Iq.jsx)("span", {
           className: "SkyblockDailyRewardCoin",
           style: {
-            left: `${Jd.x}px`,
-            top: `${Jd.y}px`,
-            "--coin-bx": `${dd.x}px`,
-            "--coin-by": `${dd.y}px`,
-            "--coin-dx": kd.x - Jd.x + "px",
-            "--coin-dy": kd.y - Jd.y + "px",
-            "--coin-delay": `${rk(Wd,pd)}ms`,
+            left: `${FQ.x}px`,
+            top: `${FQ.y}px`,
+            "--coin-bx": `${QQ.x}px`,
+            "--coin-by": `${QQ.y}px`,
+            "--coin-dx": wQ.x - FQ.x + "px",
+            "--coin-dy": wQ.y - FQ.y + "px",
+            "--coin-delay": `${Jw(oQ,LQ)}ms`,
             "--coin-flight": "650ms"
           },
-          children: (0, SN.jsx)(MN.d, {
+          children: (0, Iq.jsx)(Wq.e, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }, Wd))
+        }, oQ))
       }
-      return (0, SN.jsx)("div", {
+      return (0, Iq.jsx)("div", {
         className: "SkyblockDailyRewardCoins",
-        children: Nd
+        children: qQ
       })
     }
 
-    function lZ(dd) {
+    function Yk(QQ) {
       let {
-        day: Jd
-      } = dd;
-      const kd = Md[Jd - 1];
-      return (0, SN.jsxs)(SN.Fragment, {
-        children: [(0, SN.jsxs)("span", {
+        day: FQ
+      } = QQ;
+      const wQ = RQ[FQ - 1];
+      return (0, Iq.jsxs)(Iq.Fragment, {
+        children: [(0, Iq.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, SN.jsx)(MN.d, {
+          children: [(0, Iq.jsx)(Wq.e, {
             itemName: "Gold Coin",
             amount: 0
-          }), (0, YN.h)(kd.dailyRewardCoins)]
-        }), kd.dailyRewardItems.map((dd => (0, SN.jsxs)("span", {
+          }), (0, Oq.d)(wQ.dailyRewardCoins)]
+        }), wQ.dailyRewardItems.map((QQ => (0, Iq.jsxs)("span", {
           className: "SkyblockDailyRewardFooterReward",
-          children: [(0, SN.jsx)(MN.d, {
-            itemName: dd.dailyRewardItemName,
+          children: [(0, Iq.jsx)(Wq.e, {
+            itemName: QQ.dailyRewardItemName,
             amount: 0
-          }), "\xd7", dd.dailyRewardItemAmount]
-        }, dd.dailyRewardItemName)))]
+          }), "\xd7", QQ.dailyRewardItemAmount]
+        }, QQ.dailyRewardItemName)))]
       })
     }
 
-    function QZ(dd) {
+    function xk(QQ) {
       let {
-        day: Jd
-      } = dd;
-      const kd = Yd(Jd);
-      return (0, SN.jsx)("ol", {
+        day: FQ
+      } = QQ;
+      const wQ = sQ(FQ);
+      return (0, Iq.jsx)("ol", {
         className: "SkyblockDailyRewardStrip",
-        children: Md.map(((dd, pd) => {
-          const Nd = pd + 1;
-          return (0, SN.jsxs)("li", {
-            className: BN()("SkyblockDailyRewardTile", {
-              Claimed: Nd < Jd && Nd !== kd,
-              Today: Nd === Jd,
-              Tomorrow: Nd === kd,
-              Jackpot: Nd === Fd
+        children: RQ.map(((QQ, LQ) => {
+          const qQ = LQ + 1;
+          return (0, Iq.jsxs)("li", {
+            className: cq()("SkyblockDailyRewardTile", {
+              Claimed: qQ < FQ && qQ !== wQ,
+              Today: qQ === FQ,
+              Tomorrow: qQ === wQ,
+              Jackpot: qQ === OQ
             }),
-            children: [(0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)("span", {
               className: "SkyblockDailyRewardTileDay",
-              children: Nd
-            }), (0, SN.jsxs)("span", {
+              children: qQ
+            }), (0, Iq.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward SkyblockDailyRewardTileCoins",
-              children: [(0, SN.jsx)(MN.d, {
+              children: [(0, Iq.jsx)(Wq.e, {
                 itemName: "Gold Coin",
                 amount: 0
-              }), (0, YN.h)(dd.dailyRewardCoins)]
-            }), dd.dailyRewardItems.map((dd => (0, SN.jsxs)("span", {
+              }), (0, Oq.d)(QQ.dailyRewardCoins)]
+            }), QQ.dailyRewardItems.map((QQ => (0, Iq.jsxs)("span", {
               className: "SkyblockDailyRewardTileReward",
-              children: [(0, SN.jsx)(MN.d, {
-                itemName: dd.dailyRewardItemName,
+              children: [(0, Iq.jsx)(Wq.e, {
+                itemName: QQ.dailyRewardItemName,
                 amount: 0
-              }), "\xd7", dd.dailyRewardItemAmount]
-            }, dd.dailyRewardItemName)))]
-          }, Nd)
+              }), "\xd7", QQ.dailyRewardItemAmount]
+            }, QQ.dailyRewardItemName)))]
+          }, qQ)
         }))
       })
     }
 
-    function LZ(dd) {
+    function Ak(QQ) {
       let {
-        view: Jd
-      } = dd;
+        view: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)(), pd = (0, ad.useRef)(null), Nd = (0, ad.useRef)(null), [Wd, Pd] = (0, ad.useState)(null);
-      (0, ad.useLayoutEffect)((() => {
-        var dd;
-        const Jd = null === (dd = pd.current) || void 0 === dd ? void 0 : dd.getBoundingClientRect();
-        if (Jd) {
-          var kd, Wd;
-          const dd = Array.from(null !== (kd = null === (Wd = Nd.current) || void 0 === Wd ? void 0 : Wd.children) && void 0 !== kd ? kd : [], (dd => ZZ(dd.getBoundingClientRect())));
-          Pd({
-            origin: ZZ(Jd),
-            target: PZ(),
-            itemOrigins: dd,
-            itemTarget: gZ()
+        t: wQ
+      } = (0, sq.y)(), LQ = (0, WQ.useRef)(null), qQ = (0, WQ.useRef)(null), [oQ, DQ] = (0, WQ.useState)(null);
+      (0, WQ.useLayoutEffect)((() => {
+        var QQ;
+        const FQ = null === (QQ = LQ.current) || void 0 === QQ ? void 0 : QQ.getBoundingClientRect();
+        if (FQ) {
+          var wQ, oQ;
+          const QQ = Array.from(null !== (wQ = null === (oQ = qQ.current) || void 0 === oQ ? void 0 : oQ.children) && void 0 !== wQ ? wQ : [], (QQ => vk(QQ.getBoundingClientRect())));
+          DQ({
+            origin: vk(FQ),
+            target: kk(),
+            itemOrigins: QQ,
+            itemTarget: mk()
           })
         }
       }), []);
-      const Zd = Yd(Jd.day),
-        gd = function(dd, Jd) {
-          const [kd, pd] = (0, ad.useState)((() => WZ() ? dd : 0));
-          return (0, ad.useEffect)((() => {
-            if (WZ()) return;
-            const kd = performance.now();
-            let Nd = 0;
-            const Wd = Pd => {
-              const Zd = Math.min(Math.max((Pd - kd) / Jd, 0), 1);
-              pd(Math.round(dd * (1 - (1 - Zd) ** 3))), Zd < 1 && (Nd = requestAnimationFrame(Wd))
+      const kQ = sQ(FQ.day),
+        vQ = function(QQ, FQ) {
+          const [wQ, LQ] = (0, WQ.useState)((() => Dk() ? QQ : 0));
+          return (0, WQ.useEffect)((() => {
+            if (Dk()) return;
+            const wQ = performance.now();
+            let qQ = 0;
+            const oQ = DQ => {
+              const kQ = Math.min(Math.max((DQ - wQ) / FQ, 0), 1);
+              LQ(Math.round(QQ * (1 - (1 - kQ) ** 3))), kQ < 1 && (qQ = requestAnimationFrame(oQ))
             };
-            return Nd = requestAnimationFrame(Wd), () => {
-              cancelAnimationFrame(Nd)
+            return qQ = requestAnimationFrame(oQ), () => {
+              cancelAnimationFrame(qQ)
             }
-          }), [dd, Jd]), kd
-        }(Jd.coins, 450);
-      return (0, SN.jsxs)("div", {
-        className: BN()("SkyblockDailyReward", {
-          Jackpot: Jd.day === Fd
+          }), [QQ, FQ]), wQ
+        }(FQ.coins, 450);
+      return (0, Iq.jsxs)("div", {
+        className: cq()("SkyblockDailyReward", {
+          Jackpot: FQ.day === OQ
         }),
         style: {
-          "--daily-duration": `${Jd.durationMs}ms`
+          "--daily-duration": `${FQ.durationMs}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: [(0, SN.jsx)("div", {
+        children: [(0, Iq.jsx)("div", {
           className: "SkyblockDailyRewardGlow",
           "aria-hidden": "true"
-        }), (0, SN.jsxs)("div", {
+        }), (0, Iq.jsxs)("div", {
           className: "SkyblockDailyRewardCard",
-          children: [(0, SN.jsxs)("div", {
+          children: [(0, Iq.jsxs)("div", {
             className: "SkyblockDailyRewardHeading",
-            children: [(0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)("span", {
               className: "SkyblockDailyRewardTitle",
-              children: kd("skyblockGame:dailyRewardTitle")
-            }), (0, SN.jsx)("span", {
+              children: wQ("skyblockGame:dailyRewardTitle")
+            }), (0, Iq.jsx)("span", {
               className: "SkyblockDailyRewardDay",
-              children: kd("skyblockGame:dailyRewardDay", {
-                day: String(Jd.day)
+              children: wQ("skyblockGame:dailyRewardDay", {
+                day: String(FQ.day)
               })
             })]
-          }), (0, SN.jsxs)("div", {
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockDailyRewardAmount",
-            ref: pd,
-            children: [(0, SN.jsx)(MN.d, {
+            ref: LQ,
+            children: [(0, Iq.jsx)(Wq.e, {
               itemName: "Gold Coin",
               amount: 0
-            }), (0, SN.jsxs)("span", {
-              children: ["+", (0, YN.h)(gd)]
+            }), (0, Iq.jsxs)("span", {
+              children: ["+", (0, Oq.d)(vQ)]
             })]
-          }), Jd.items.length > 0 && (0, SN.jsx)("div", {
+          }), FQ.items.length > 0 && (0, Iq.jsx)("div", {
             className: "SkyblockDailyRewardItems",
-            ref: Nd,
-            children: Jd.items.map((dd => (0, SN.jsxs)("span", {
+            ref: qQ,
+            children: FQ.items.map((QQ => (0, Iq.jsxs)("span", {
               className: "SkyblockDailyRewardItem",
-              children: [(0, SN.jsx)(MN.d, {
-                itemName: dd.dailyRewardItemName,
+              children: [(0, Iq.jsx)(Wq.e, {
+                itemName: QQ.dailyRewardItemName,
                 amount: 0
-              }), "\xd7", dd.dailyRewardItemAmount]
-            }, dd.dailyRewardItemName)))
-          }), (0, SN.jsx)(QZ, {
-            day: Jd.day
-          }), (0, SN.jsxs)("div", {
+              }), "\xd7", QQ.dailyRewardItemAmount]
+            }, QQ.dailyRewardItemName)))
+          }), (0, Iq.jsx)(xk, {
+            day: FQ.day
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockDailyRewardFooter",
-            children: [kd("skyblockGame:dailyRewardComeBack"), (0, SN.jsx)(lZ, {
-              day: Zd
+            children: [wQ("skyblockGame:dailyRewardComeBack"), (0, Iq.jsx)(Yk, {
+              day: kQ
             })]
           })]
-        }), null !== Wd && (0, SN.jsx)(oZ, {
-          origin: Wd.origin,
-          target: Wd.target,
-          count: Jd.flyingCoins
-        }), null !== Wd && Wd.itemOrigins.length === Jd.items.length && (0, SN.jsx)(CZ, {
-          items: Jd.items,
-          origins: Wd.itemOrigins,
-          target: Wd.itemTarget
+        }), null !== oQ && (0, Iq.jsx)(bk, {
+          origin: oQ.origin,
+          target: oQ.target,
+          count: FQ.flyingCoins
+        }), null !== oQ && oQ.itemOrigins.length === FQ.items.length && (0, Iq.jsx)(uk, {
+          items: FQ.items,
+          origins: oQ.itemOrigins,
+          target: oQ.itemTarget
         })]
       })
     }
-    const OZ = (0, ad.memo)((function(dd) {
+    const tk = (0, WQ.memo)((function(QQ) {
         let {
-          controller: Jd
-        } = dd;
-        const kd = (0, bN.i)(Ek, Jd.getSnapshot());
-        return kd ? (0, SN.jsx)(LZ, {
-          view: kd
-        }, kd.token) : null
+          controller: FQ
+        } = QQ;
+        const wQ = (0, rq.i)(fw, FQ.getSnapshot());
+        return wQ ? (0, Iq.jsx)(Ak, {
+          view: wQ
+        }, wQ.token) : null
       })),
-      eZ = "Gold Coin";
+      ek = "Gold Coin";
 
-    function RZ(dd) {
-      return 650 + 220 * dd
+    function Mk(QQ) {
+      return 650 + 220 * QQ
     }
 
-    function IZ(dd) {
+    function Gk(QQ) {
       return {
-        "--letter-delay": `${RZ(dd)}ms`,
-        "--letter-land": `${RZ(dd)+300}ms`
+        "--letter-delay": `${Mk(QQ)}ms`,
+        "--letter-land": `${Mk(QQ)+300}ms`
       }
     }
 
-    function GZ(dd) {
+    function pk(QQ) {
       let {
-        letterCount: Jd
-      } = dd;
-      return (0, SN.jsxs)("div", {
+        letterCount: FQ
+      } = QQ;
+      return (0, Iq.jsxs)("div", {
         className: "SkyblockMailboxArt",
         "aria-hidden": "true",
-        children: [(0, SN.jsx)("img", {
+        children: [(0, Iq.jsx)("img", {
           className: "SkyblockMailboxFrame",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAPUlEQVR4nGNgGBTgPxbMgKHoU7Y/Cr7hqI9VMVji8yqV//8veYHxPC0l7ApBEugYp/UgXBNljteN6BrIBwC4hzWhsgbVSgAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, SN.jsx)("img", {
+        }), (0, Iq.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameFlag",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAATElEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEU/H/T9n+YIUgGoRvOOpjVQyWACkE0SA8T0sJu0KQBDrGaT0I10SZ43UjugbyAQAsw0ABFINz6QAAAABJRU5ErkJggg==",
           alt: ""
-        }), (0, SN.jsx)("img", {
+        }), (0, Iq.jsx)("img", {
           className: "SkyblockMailboxFrame SkyblockMailboxFrameOpen",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAW0lEQVR4nGNgIBP8h2L8iv5f8gJjQor/f16lAlOEjBlQFH3K9gcrBNEgHGyt9P//rwMYiv/fcNQHKwTRIPzh8SEwxlA4T0sJBYNMBJmM1XoQrokyx+tGdA3kAwD3jUzPjfodhAAAAABJRU5ErkJggg==",
           alt: ""
         }), Array.from({
-          length: Jd
-        }, ((dd, Jd) => (0, SN.jsx)("img", {
+          length: FQ
+        }, ((QQ, FQ) => (0, Iq.jsx)("img", {
           className: "SkyblockMailboxFlyingLetter",
-          style: IZ(Jd),
+          style: Gk(FQ),
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAP0lEQVR4nGNgoCX4jwOjgP//fx1AwZ+y/f/fcNTHUPz/w+NDKBikaJ6WEnaFa7qCwBhZA0ETcSkEKybGM9QDAOtbYxX7UuH5AAAAAElFTkSuQmCC",
           alt: ""
-        }, Jd)))]
+        }, FQ)))]
       })
     }
 
-    function vZ(dd) {
-      var Jd, kd, pd;
+    function ck(QQ) {
+      var FQ, wQ, LQ;
       let {
-        letter: Nd,
-        index: Wd
-      } = dd;
+        letter: qQ,
+        index: oQ
+      } = QQ;
       const {
-        t: Pd
-      } = (0, mN.B)(), Zd = null !== (Jd = null === (kd = Nd.items[0]) || void 0 === kd ? void 0 : kd.itemName) && void 0 !== Jd ? Jd : eZ;
-      return (0, SN.jsxs)("li", {
+        t: DQ
+      } = (0, sq.y)(), kQ = null !== (FQ = null === (wQ = qQ.items[0]) || void 0 === wQ ? void 0 : wQ.itemName) && void 0 !== FQ ? FQ : ek;
+      return (0, Iq.jsxs)("li", {
         className: "SkyblockMailboxLetter",
-        style: IZ(Wd),
-        children: [(0, SN.jsx)("div", {
+        style: Gk(oQ),
+        children: [(0, Iq.jsx)("div", {
           className: "SkyblockMailboxStamp",
           "aria-hidden": "true",
-          children: (0, SN.jsx)(MN.d, {
-            itemName: Zd,
+          children: (0, Iq.jsx)(Wq.e, {
+            itemName: kQ,
             amount: 0
           })
-        }), (0, SN.jsx)("div", {
+        }), (0, Iq.jsx)("div", {
           className: "SkyblockMailboxReason",
-          children: Pd(Nd.reasonKey, null !== (pd = Nd.reasonParams) && void 0 !== pd ? pd : void 0)
-        }), (0, SN.jsxs)("div", {
+          children: DQ(qQ.reasonKey, null !== (LQ = qQ.reasonParams) && void 0 !== LQ ? LQ : void 0)
+        }), (0, Iq.jsxs)("div", {
           className: "SkyblockMailboxContents",
-          children: [Nd.coins > 0 && (0, SN.jsxs)("span", {
+          children: [qQ.coins > 0 && (0, Iq.jsxs)("span", {
             className: "SkyblockMailboxGift SkyblockMailboxCoins",
-            children: [(0, SN.jsx)(MN.d, {
-              itemName: eZ,
+            children: [(0, Iq.jsx)(Wq.e, {
+              itemName: ek,
               amount: 0
-            }), "+", (0, YN.h)(Nd.coins)]
-          }), Nd.items.map(((dd, Jd) => (0, SN.jsxs)("span", {
+            }), "+", (0, Oq.d)(qQ.coins)]
+          }), qQ.items.map(((QQ, FQ) => (0, Iq.jsxs)("span", {
             className: "SkyblockMailboxGift",
-            children: [(0, SN.jsx)(MN.d, {
-              itemName: dd.itemName,
+            children: [(0, Iq.jsx)(Wq.e, {
+              itemName: QQ.itemName,
               amount: 0
-            }), dd.label, " \xd7", dd.amount]
-          }, Jd)))]
+            }), QQ.label, " \xd7", QQ.amount]
+          }, FQ)))]
         })]
       })
     }
 
-    function xZ(dd) {
+    function Ck(QQ) {
       let {
-        view: Jd
-      } = dd;
+        view: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)();
-      return (0, SN.jsx)("div", {
+        t: wQ
+      } = (0, sq.y)();
+      return (0, Iq.jsx)("div", {
         className: "SkyblockMailbox",
         style: {
-          "--mail-duration": `${Jd.durationMs}ms`,
+          "--mail-duration": `${FQ.durationMs}ms`,
           "--flag-up": "300ms",
           "--door-open": "500ms",
-          "--more-land": `${RZ(Jd.letters.length)+300}ms`
+          "--more-land": `${Mk(FQ.letters.length)+300}ms`
         },
         role: "status",
         "aria-live": "polite",
-        children: (0, SN.jsxs)("div", {
+        children: (0, Iq.jsxs)("div", {
           className: "SkyblockMailboxCard",
-          children: [(0, SN.jsxs)("div", {
+          children: [(0, Iq.jsxs)("div", {
             className: "SkyblockMailboxHeading",
-            children: [(0, SN.jsx)(GZ, {
-              letterCount: Jd.letters.length
-            }), (0, SN.jsx)("span", {
+            children: [(0, Iq.jsx)(pk, {
+              letterCount: FQ.letters.length
+            }), (0, Iq.jsx)("span", {
               className: "SkyblockMailboxTitle",
-              children: kd("skyblockGame:mailboxTitle")
+              children: wQ("skyblockGame:mailboxTitle")
             })]
-          }), (0, SN.jsx)("ol", {
+          }), (0, Iq.jsx)("ol", {
             className: "SkyblockMailboxLetters",
-            children: Jd.letters.map(((dd, Jd) => (0, SN.jsx)(vZ, {
-              letter: dd,
-              index: Jd
-            }, Jd)))
-          }), Jd.more > 0 && (0, SN.jsx)("div", {
+            children: FQ.letters.map(((QQ, FQ) => (0, Iq.jsx)(ck, {
+              letter: QQ,
+              index: FQ
+            }, FQ)))
+          }), FQ.more > 0 && (0, Iq.jsx)("div", {
             className: "SkyblockMailboxMore",
-            children: kd("skyblockGame:mailboxMore", {
-              count: String(Jd.more)
+            children: wQ("skyblockGame:mailboxMore", {
+              count: String(FQ.more)
             })
           })]
         })
       })
     }
-    const qZ = (0, ad.memo)((function(dd) {
+    const Sk = (0, WQ.memo)((function(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(tk, Jd.getSnapshot());
-      return kd ? (0, SN.jsx)(xZ, {
-        view: kd
-      }, kd.token) : null
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(nw, FQ.getSnapshot());
+      return wQ ? (0, Iq.jsx)(Ck, {
+        view: wQ
+      }, wQ.token) : null
     }));
 
-    function BZ(dd) {
+    function ik(QQ) {
       let {
-        controller: Jd
-      } = dd;
+        controller: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)(), pd = (0, bN.i)(yp, Jd.getSnapshot());
-      if (null === pd) return null;
-      const Nd = pd.fullSet ? "empty" === pd.fuelState ? {
-        text: kd("skyblockGame:magmawardHudNoFuel"),
+        t: wQ
+      } = (0, sq.y)(), LQ = (0, rq.i)(jL, FQ.getSnapshot());
+      if (null === LQ) return null;
+      const qQ = LQ.fullSet ? "empty" === LQ.fuelState ? {
+        text: wQ("skyblockGame:magmawardHudNoFuel"),
         tone: "empty"
       } : null : {
-        text: kd("skyblockGame:magmawardHudFullSet", {
-          worn: String(pd.wornCount)
+        text: wQ("skyblockGame:magmawardHudFullSet", {
+          worn: String(LQ.wornCount)
         }),
         tone: "partial"
       };
-      return (0, SN.jsx)(iN.g, {
+      return (0, Iq.jsx)(Sq.d, {
         placement: "statBars",
-        children: (0, SN.jsxs)("div", {
-          className: BN()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${pd.fuelState}`, {
-            "SkyblockMagmawardHud-partial": !pd.fullSet,
-            "SkyblockMagmawardHud-armed": pd.fullSet && "empty" !== pd.fuelState
+        children: (0, Iq.jsxs)("div", {
+          className: cq()("SkyblockMagmawardHud", `SkyblockMagmawardHud-${LQ.fuelState}`, {
+            "SkyblockMagmawardHud-partial": !LQ.fullSet,
+            "SkyblockMagmawardHud-armed": LQ.fullSet && "empty" !== LQ.fuelState
           }),
-          children: [null !== pd.flare && (0, SN.jsx)("div", {
-            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${pd.flare}`
-          }, `flare:${pd.flareToken}`), (0, SN.jsx)("div", {
-            className: BN()("SkyblockMagmawardPieces", {
-              SkyblockMagmawardPiecesComplete: pd.setLit
+          children: [null !== LQ.flare && (0, Iq.jsx)("div", {
+            className: `SkyblockMagmawardFlare SkyblockMagmawardFlare-${LQ.flare}`
+          }, `flare:${LQ.flareToken}`), (0, Iq.jsx)("div", {
+            className: cq()("SkyblockMagmawardPieces", {
+              SkyblockMagmawardPiecesComplete: LQ.setLit
             }),
-            children: pd.pieces.map(((dd, Jd) => (0, SN.jsx)("div", {
-              className: BN()("SkyblockMagmawardPiece", {
-                SkyblockMagmawardPieceWorn: dd.worn,
-                SkyblockMagmawardPieceJustWorn: dd.justWorn
+            children: LQ.pieces.map(((QQ, FQ) => (0, Iq.jsx)("div", {
+              className: cq()("SkyblockMagmawardPiece", {
+                SkyblockMagmawardPieceWorn: QQ.worn,
+                SkyblockMagmawardPieceJustWorn: QQ.justWorn
               }),
-              children: (0, SN.jsx)(MN.d, {
-                itemName: dd.itemName,
+              children: (0, Iq.jsx)(Wq.e, {
+                itemName: QQ.itemName,
                 amount: 0
               })
-            }, `${Jd}:${dd.wornToken}`)))
-          }, `pieces:${pd.setLitToken}`), (0, SN.jsxs)("div", {
+            }, `${FQ}:${QQ.wornToken}`)))
+          }, `pieces:${LQ.setLitToken}`), (0, Iq.jsxs)("div", {
             className: "SkyblockMagmawardFuel",
-            children: [(0, SN.jsx)("div", {
+            children: [(0, Iq.jsx)("div", {
               className: "SkyblockMagmawardLowGlow"
-            }), (0, SN.jsxs)("div", {
-              className: BN()("SkyblockMagmawardFuelCounter", pd.pulse && `SkyblockMagmawardFuelCounter-${pd.pulse}`),
-              children: [(0, SN.jsx)("div", {
+            }), (0, Iq.jsxs)("div", {
+              className: cq()("SkyblockMagmawardFuelCounter", LQ.pulse && `SkyblockMagmawardFuelCounter-${LQ.pulse}`),
+              children: [(0, Iq.jsx)("div", {
                 className: "SkyblockMagmawardFuelIcon",
-                children: (0, SN.jsx)(MN.d, {
+                children: (0, Iq.jsx)(Wq.e, {
                   itemName: "Magmaward Fuel",
                   amount: 0
                 })
-              }), (0, SN.jsx)("span", {
+              }), (0, Iq.jsx)("span", {
                 className: "SkyblockMagmawardFuelCount SmallTextBold",
-                children: pd.fuel
+                children: LQ.fuel
               })]
-            }, `counter:${pd.pulseToken}`), "burn" === pd.pulse && (0, SN.jsx)("span", {
+            }, `counter:${LQ.pulseToken}`), "burn" === LQ.pulse && (0, Iq.jsx)("span", {
               className: "SkyblockMagmawardEmber SmallTextBold",
               children: "-1"
-            }, `ember:${pd.pulseToken}`)]
-          }), Nd && (0, SN.jsx)("div", {
-            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${Nd.tone} SmallTextBold`,
-            children: Nd.text
+            }, `ember:${LQ.pulseToken}`)]
+          }), qQ && (0, Iq.jsx)("div", {
+            className: `SkyblockMagmawardCaption SkyblockMagmawardCaption-${qQ.tone} SmallTextBold`,
+            children: qQ.text
           })]
         })
       })
     }
 
-    function sZ(dd) {
+    function Wk(QQ) {
       let {
-        controller: Jd
-      } = dd;
+        controller: FQ
+      } = QQ;
       const {
-        t: kd,
-        selectedLanguage: pd
-      } = (0, mN.B)(), Nd = (0, bN.i)(Tp, Jd.getSnapshot());
-      return null === Nd ? null : (0, SN.jsx)(iN.g, {
+        t: wQ,
+        selectedLanguage: LQ
+      } = (0, sq.y)(), qQ = (0, rq.i)(XL, FQ.getSnapshot());
+      return null === qQ ? null : (0, Iq.jsx)(Sq.d, {
         placement: "statBars",
-        children: (0, SN.jsxs)("div", {
-          className: BN()("SkyblockGlowtideChip", {
-            SkyblockGlowtideChipInRange: Nd.inRange
+        children: (0, Iq.jsxs)("div", {
+          className: cq()("SkyblockGlowtideChip", {
+            SkyblockGlowtideChipInRange: qQ.inRange
           }),
           style: {
-            "--glowtide-colour": Nd.colour
+            "--glowtide-colour": qQ.colour
           },
-          "aria-label": kd("skyblockGame:glowtideChipLabel"),
-          children: [(0, SN.jsx)("div", {
+          "aria-label": wQ("skyblockGame:glowtideChipLabel"),
+          children: [(0, Iq.jsx)("div", {
             className: "SkyblockGlowtideChipOrb"
-          }), Nd.inRange ? (0, SN.jsx)("span", {
+          }), qQ.inRange ? (0, Iq.jsx)("span", {
             className: "SkyblockGlowtideChipCall SmallTextBold",
-            children: kd("skyblockGame:glowtideChipInRange")
-          }, `call:${Nd.inRangeToken}`) : (0, SN.jsxs)(SN.Fragment, {
-            children: [(0, SN.jsx)("div", {
-              ref: Jd.mountArrow,
+            children: wQ("skyblockGame:glowtideChipInRange")
+          }, `call:${qQ.inRangeToken}`) : (0, Iq.jsxs)(Iq.Fragment, {
+            children: [(0, Iq.jsx)("div", {
+              ref: FQ.mountArrow,
               className: "SkyblockGlowtideChipArrow"
-            }), (0, SN.jsx)("span", {
+            }), (0, Iq.jsx)("span", {
               className: "SkyblockGlowtideChipDistance SmallTextBold",
-              children: kd("skyblockGame:waypointDistance", {
-                distance: qd(Nd.distance, pd.code)
+              children: wQ("skyblockGame:waypointDistance", {
+                distance: CQ(qQ.distance, LQ.code)
               })
             })]
           })]
@@ -9534,266 +9534,266 @@ export const modules = {
       })
     }
 
-    function iZ(dd) {
+    function Rk(QQ) {
       let {
-        controller: Jd
-      } = dd;
+        controller: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)(), pd = (0, bN.i)(cp, Jd.getSnapshot());
-      return null === pd ? null : (0, SN.jsx)(iN.g, {
+        t: wQ
+      } = (0, sq.y)(), LQ = (0, rq.i)(VL, FQ.getSnapshot());
+      return null === LQ ? null : (0, Iq.jsx)(Sq.d, {
         placement: "statBars",
-        children: (0, SN.jsxs)("div", {
-          className: BN()("SkyblockGlowMeter", {
-            SkyblockGlowMeterFull: pd.full
+        children: (0, Iq.jsxs)("div", {
+          className: cq()("SkyblockGlowMeter", {
+            SkyblockGlowMeterFull: LQ.full
           }),
-          "aria-label": kd("skyblockGame:glowMeterLabel", {
-            fill: String(pd.fill),
-            oo: String(pd.oo)
+          "aria-label": wQ("skyblockGame:glowMeterLabel", {
+            fill: String(LQ.fill),
+            MH: String(LQ.MH)
           }),
-          children: [pd.burst && (0, SN.jsx)("div", {
+          children: [LQ.burst && (0, Iq.jsx)("div", {
             className: "SkyblockGlowMeterBurst"
-          }, `burst:${pd.burstToken}`), (0, SN.jsxs)("div", {
+          }, `burst:${LQ.burstToken}`), (0, Iq.jsxs)("div", {
             className: "SkyblockGlowMeterVial",
-            children: [(0, SN.jsx)("div", {
+            children: [(0, Iq.jsx)("div", {
               className: "SkyblockGlowMeterLiquid",
               style: {
-                transform: `scaleX(${pd.ratio})`
+                transform: `scaleX(${LQ.ratio})`
               }
-            }), pd.gained && (0, SN.jsx)("div", {
+            }), LQ.gained && (0, Iq.jsx)("div", {
               className: "SkyblockGlowMeterGlint"
-            }, `gain:${pd.gainToken}`), pd.full && Array.from({
+            }, `gain:${LQ.gainToken}`), LQ.full && Array.from({
               length: 5
-            }, ((dd, Jd) => (0, SN.jsx)("span", {
+            }, ((QQ, FQ) => (0, Iq.jsx)("span", {
               className: "SkyblockGlowMeterSparkle"
-            }, Jd)))]
-          }), pd.full && pd.rares.map((dd => (0, SN.jsx)("div", {
+            }, FQ)))]
+          }), LQ.full && LQ.rares.map((QQ => (0, Iq.jsx)("div", {
             className: "SkyblockGlowMeterRare",
-            children: (0, SN.jsx)(MN.d, {
-              itemName: dd,
+            children: (0, Iq.jsx)(Wq.e, {
+              itemName: QQ,
               amount: 0
             })
-          }, dd))), pd.ready && (0, SN.jsx)("div", {
+          }, QQ))), LQ.ready && (0, Iq.jsx)("div", {
             className: "SkyblockGlowMeterReady SmallTextBold",
-            children: (0, SN.jsx)("span", {
-              children: kd("skyblockGame:glowMeterReady")
+            children: (0, Iq.jsx)("span", {
+              children: wQ("skyblockGame:glowMeterReady")
             })
-          }, `ready:${pd.fullToken}`)]
+          }, `ready:${LQ.fullToken}`)]
         })
       })
     }
 
-    function aZ(dd) {
+    function Ok(QQ) {
       let {
-        controller: Jd
-      } = dd;
+        controller: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, mN.B)(), pd = (0, bN.i)(rp, Jd.getSnapshot());
-      if (null === pd) return null;
-      const Nd = "waiting" === pd.phase,
-        Wd = {
-          animationDuration: `${pd.waitMs}ms`,
-          animationDelay: -pd.elapsedMs + "ms"
+        t: wQ
+      } = (0, sq.y)(), LQ = (0, rq.i)(JL, FQ.getSnapshot());
+      if (null === LQ) return null;
+      const qQ = "waiting" === LQ.phase,
+        oQ = {
+          animationDuration: `${LQ.waitMs}ms`,
+          animationDelay: -LQ.elapsedMs + "ms"
         },
-        Pd = Nd ? void 0 : {
-          animationDuration: `${pd.waitMs}ms`
+        DQ = qQ ? void 0 : {
+          animationDuration: `${LQ.waitMs}ms`
         };
-      return (0, SN.jsxs)("div", {
-        className: Nd ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
-        children: [Nd && (0, SN.jsxs)("div", {
+      return (0, Iq.jsxs)("div", {
+        className: qQ ? "SkyblockHushWait" : "SkyblockHushWait SkyblockHushWaitAbandoned",
+        children: [qQ && (0, Iq.jsxs)("div", {
           className: "SkyblockHushWaitRing",
           children: [Array.from({
             length: 3
-          }, ((dd, Jd) => (0, SN.jsx)("span", {
+          }, ((QQ, FQ) => (0, Iq.jsx)("span", {
             className: "SkyblockHushWaitRipple"
-          }, Jd))), (0, SN.jsx)("span", {
+          }, FQ))), (0, Iq.jsx)("span", {
             className: "SkyblockHushWaitClosing",
-            style: Wd
-          }), (0, SN.jsxs)("svg", {
+            style: oQ
+          }), (0, Iq.jsxs)("svg", {
             className: "SkyblockHushWaitProgress",
             viewBox: "0 0 100 100",
-            children: [(0, SN.jsx)("circle", {
+            children: [(0, Iq.jsx)("circle", {
               className: "SkyblockHushWaitTrack",
               cx: "50",
               cy: "50",
               r: 46
-            }), (0, SN.jsx)("circle", {
+            }), (0, Iq.jsx)("circle", {
               className: "SkyblockHushWaitArc",
               cx: "50",
               cy: "50",
               r: 46,
               pathLength: 100,
-              style: Wd
+              style: oQ
             })]
-          }), (0, SN.jsx)("span", {
+          }), (0, Iq.jsx)("span", {
             className: "SkyblockHushWaitMoon"
           })]
-        }), (0, SN.jsx)("div", {
+        }), (0, Iq.jsx)("div", {
           className: "SkyblockHushWaitLine SmallTextBold",
-          style: Pd,
-          children: kd(pd.line)
-        }, pd.lineIndex)]
-      }, pd.token)
+          style: DQ,
+          children: wQ(LQ.line)
+        }, LQ.lineIndex)]
+      }, LQ.token)
     }
 
-    function MZ(dd) {
+    function sk(QQ) {
       let {
-        chart: Jd,
-        showHere: kd,
-        className: pd
-      } = dd;
-      return (0, SN.jsx)("div", {
-        className: BN()("SkyblockTideChartGrid", pd, null !== Jd.pictureName && "Complete"),
+        chart: FQ,
+        showHere: wQ,
+        className: LQ
+      } = QQ;
+      return (0, Iq.jsx)("div", {
+        className: cq()("SkyblockTideChartGrid", LQ, null !== FQ.pictureName && "Complete"),
         "aria-hidden": "true",
-        children: Jd.cells.map(((dd, pd) => {
-          const Nd = 0 !== (Jd.pulseCells & 1 << pd),
-            Wd = Jd.castCell === pd;
-          return (0, SN.jsx)("span", {
-            className: BN()("SkyblockTideChartCell", `Cell-${dd}`, Nd && "Pulse", Wd && "Cast", kd && Jd.hereCell === pd && "Here")
-          }, `${pd}:${Nd?`p${Jd.pulseToken}`:""}:${Wd?`c${Jd.castToken}`:""}`)
+        children: FQ.cells.map(((QQ, LQ) => {
+          const qQ = 0 !== (FQ.pulseCells & 1 << LQ),
+            oQ = FQ.castCell === LQ;
+          return (0, Iq.jsx)("span", {
+            className: cq()("SkyblockTideChartCell", `Cell-${QQ}`, qQ && "Pulse", oQ && "Cast", wQ && FQ.hereCell === LQ && "Here")
+          }, `${LQ}:${qQ?`p${FQ.pulseToken}`:""}:${oQ?`c${FQ.castToken}`:""}`)
         }))
       })
     }
 
-    function FZ(dd) {
+    function rk(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(Vp, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(nL, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = kd.chip;
-      if (!kd.enabled || null === Nd) return null;
-      const Wd = pd("skyblockGame:tideChartsChipLabel", {
-        island: Nd.islandName,
-        lit: String(Nd.lit),
-        ink: String(Nd.ink)
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = wQ.chip;
+      if (!wQ.enabled || null === qQ) return null;
+      const oQ = LQ("skyblockGame:tideChartsChipLabel", {
+        island: qQ.islandName,
+        lit: String(qQ.lit),
+        ink: String(qQ.ink)
       });
-      return (0, SN.jsx)(iN.g, {
+      return (0, Iq.jsx)(Sq.d, {
         placement: "statBars",
-        children: (0, SN.jsxs)("button", {
+        children: (0, Iq.jsxs)("button", {
           type: "button",
           tabIndex: -1,
-          className: BN()("SkyblockTideChartsChip", kd.open && "Open", null !== Nd.pictureName && "Complete"),
-          "aria-label": Wd,
-          title: Wd,
-          onMouseDown: dd => {
-            dd.preventDefault()
+          className: cq()("SkyblockTideChartsChip", wQ.open && "Open", null !== qQ.pictureName && "Complete"),
+          "aria-label": oQ,
+          title: oQ,
+          onMouseDown: QQ => {
+            QQ.preventDefault()
           },
-          onClick: Jd.toggle,
-          children: [(0, SN.jsx)(MZ, {
-            chart: Nd,
+          onClick: FQ.toggle,
+          children: [(0, Iq.jsx)(sk, {
+            chart: qQ,
             showHere: !1,
             className: "Mini"
-          }), (0, SN.jsxs)("span", {
+          }), (0, Iq.jsxs)("span", {
             className: "SkyblockTideChartsChipCount SmallTextBold",
-            children: [Nd.lit, "/", Nd.ink]
+            children: [qQ.lit, "/", qQ.ink]
           })]
         })
       })
     }
 
-    function YZ(dd) {
+    function Ik(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      const kd = (0, bN.i)(Vp, Jd.getSnapshot()),
+        controller: FQ
+      } = QQ;
+      const wQ = (0, rq.i)(nL, FQ.getSnapshot()),
         {
-          t: pd
-        } = (0, mN.B)(),
-        Nd = hN(),
-        Wd = kd.card;
-      return kd.enabled && null !== Wd ? (0, SN.jsx)(TN.e, {
-        show: kd.open,
-        close: Jd.dismiss,
+          t: LQ
+        } = (0, sq.y)(),
+        qQ = Vq(),
+        oQ = wQ.card;
+      return wQ.enabled && null !== oQ ? (0, Iq.jsx)(aq.d, {
+        show: wQ.open,
+        close: FQ.dismiss,
         togglePointerLock: !1,
         className: "SkyblockSkillsOverlay",
-        children: (0, SN.jsxs)("section", {
+        children: (0, Iq.jsxs)("section", {
           className: "SkyblockSkillsPanel SkyblockTideChartsPanel",
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "skyblockTideChartsTitle",
           tabIndex: -1,
-          ref: Nd,
-          onKeyDown: cN,
-          children: [(0, SN.jsxs)("header", {
+          ref: qQ,
+          onKeyDown: fq,
+          children: [(0, Iq.jsxs)("header", {
             className: "SkyblockTideChartsHeader",
-            children: [(0, SN.jsxs)("div", {
-              children: [(0, SN.jsx)("h2", {
+            children: [(0, Iq.jsxs)("div", {
+              children: [(0, Iq.jsx)("h2", {
                 id: "skyblockTideChartsTitle",
-                children: pd("skyblockGame:tideChartsTitle")
-              }), (0, SN.jsx)("p", {
+                children: LQ("skyblockGame:tideChartsTitle")
+              }), (0, Iq.jsx)("p", {
                 className: "SkyblockTideChartsIntro",
-                children: pd("skyblockGame:tideChartsIntro")
+                children: LQ("skyblockGame:tideChartsIntro")
               })]
-            }), (0, SN.jsx)(EN.i, {
+            }), (0, Iq.jsx)(Xq.j, {
               padIgnore: !0,
-              ariaLabel: pd("skyblockGame:tideChartsClose"),
-              onClick: Jd.dismiss
+              ariaLabel: LQ("skyblockGame:tideChartsClose"),
+              onClick: FQ.dismiss
             })]
-          }), kd.tabs.length > 1 && (0, SN.jsx)("div", {
+          }), wQ.tabs.length > 1 && (0, Iq.jsx)("div", {
             className: "SkyblockTideChartsTabs",
             role: "group",
-            "aria-label": pd("skyblockGame:tideChartsIslands"),
-            children: kd.tabs.map((dd => (0, SN.jsx)("button", {
+            "aria-label": LQ("skyblockGame:tideChartsIslands"),
+            children: wQ.tabs.map((QQ => (0, Iq.jsx)("button", {
               type: "button",
-              className: BN()("SkyblockTideChartsTab", dd.selected && "Selected"),
-              "aria-pressed": dd.selected,
+              className: cq()("SkyblockTideChartsTab", QQ.selected && "Selected"),
+              "aria-pressed": QQ.selected,
               onClick: () => {
-                Jd.Tl(dd.island)
+                FQ.Vb(QQ.island)
               },
-              children: dd.name
-            }, dd.island)))
-          }), (0, SN.jsxs)("div", {
+              children: QQ.name
+            }, QQ.island)))
+          }), (0, Iq.jsxs)("div", {
             className: "SkyblockTideChartsBody",
-            children: [(0, SN.jsx)("div", {
+            children: [(0, Iq.jsx)("div", {
               className: "SkyblockTideChartsMap",
               role: "img",
-              "aria-label": Wd.gridLabel,
-              children: (0, SN.jsx)(MZ, {
-                chart: Wd,
+              "aria-label": oQ.gridLabel,
+              children: (0, Iq.jsx)(sk, {
+                chart: oQ,
                 showHere: !0,
                 className: "Large"
               })
-            }), (0, SN.jsxs)("div", {
+            }), (0, Iq.jsxs)("div", {
               className: "SkyblockTideChartsInfo",
-              children: [(0, SN.jsx)("h3", {
-                children: Wd.islandName
-              }), (0, SN.jsx)("p", {
+              children: [(0, Iq.jsx)("h3", {
+                children: oQ.islandName
+              }), (0, Iq.jsx)("p", {
                 className: "SkyblockTideChartsLit",
-                children: Wd.litText
-              }), null === Wd.pictureName ? (0, SN.jsx)("p", {
+                children: oQ.litText
+              }), null === oQ.pictureName ? (0, Iq.jsx)("p", {
                 className: "SkyblockTideChartsPicture",
-                children: pd("skyblockGame:tideChartsPictureHidden")
-              }) : (0, SN.jsx)("p", {
+                children: LQ("skyblockGame:tideChartsPictureHidden")
+              }) : (0, Iq.jsx)("p", {
                 className: "SkyblockTideChartsPicture Revealed",
-                children: pd("skyblockGame:tideChartsPictureRevealed", {
-                  picture: Wd.pictureName
+                children: LQ("skyblockGame:tideChartsPictureRevealed", {
+                  picture: oQ.pictureName
                 })
-              }, Wd.pictureName), (0, SN.jsxs)("ul", {
+              }, oQ.pictureName), (0, Iq.jsxs)("ul", {
                 className: "SkyblockTideChartsLegend",
                 "aria-hidden": "true",
-                children: [(0, SN.jsxs)("li", {
-                  children: [(0, SN.jsx)("span", {
+                children: [(0, Iq.jsxs)("li", {
+                  children: [(0, Iq.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-lit"
-                  }), pd("skyblockGame:tideChartsLegendLit")]
-                }), (0, SN.jsxs)("li", {
-                  children: [(0, SN.jsx)("span", {
+                  }), LQ("skyblockGame:tideChartsLegendLit")]
+                }), (0, Iq.jsxs)("li", {
+                  children: [(0, Iq.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-clear"
-                  }), pd("skyblockGame:tideChartsLegendClear")]
-                }), null !== Wd.hereCell && (0, SN.jsxs)("li", {
-                  children: [(0, SN.jsx)("span", {
+                  }), LQ("skyblockGame:tideChartsLegendClear")]
+                }), null !== oQ.hereCell && (0, Iq.jsxs)("li", {
+                  children: [(0, Iq.jsx)("span", {
                     className: "SkyblockTideChartCell Cell-water Here"
-                  }), pd("skyblockGame:tideChartsLegendHere")]
+                  }), LQ("skyblockGame:tideChartsLegendHere")]
                 })]
-              }), (0, SN.jsxs)("p", {
+              }), (0, Iq.jsxs)("p", {
                 className: "SkyblockTideChartsFooter",
-                children: [(0, SN.jsx)("span", {
-                  children: kd.turnsText
-                }), (0, SN.jsx)("span", {
-                  children: kd.bookText
+                children: [(0, Iq.jsx)("span", {
+                  children: wQ.turnsText
+                }), (0, Iq.jsx)("span", {
+                  children: wQ.bookText
                 })]
               })]
             })]
@@ -9802,153 +9802,153 @@ export const modules = {
       }) : null
     }
 
-    function mZ(dd) {
-      var Jd;
+    function Uk(QQ) {
+      var FQ;
       let {
-        controller: kd
-      } = dd;
+        controller: wQ
+      } = QQ;
       const {
-        selectedLanguage: pd
-      } = (0, mN.B)(), Nd = pd.code;
-      (0, ad.useEffect)((() => {
-        kd.setTranslator(((dd, Jd) => (0, mN.x)(Nd, dd, Jd)), Nd, ((dd, Jd) => (0, mN.t)(Nd, dd, Jd)))
-      }), [kd, Nd]);
-      const Wd = (0, bN.i)(ld, kd.map.getSnapshot()),
+        selectedLanguage: LQ
+      } = (0, sq.y)(), qQ = LQ.code;
+      (0, WQ.useEffect)((() => {
+        wQ.setTranslator(((QQ, FQ) => (0, sq.u)(qQ, QQ, FQ)), qQ, ((QQ, FQ) => (0, sq.o)(qQ, QQ, FQ)))
+      }), [wQ, qQ]);
+      const oQ = (0, rq.i)(bQ, wQ.map.getSnapshot()),
         {
-          openInGameMenuName: Pd
-        } = (0, sN.j)(["openInGameMenuName"]);
-      return (0, SN.jsxs)(SN.Fragment, {
-        children: [(0, SN.jsx)(kZ, {
-          controller: kd.quests,
-          display: kd.navigation.display
-        }), Wd.enabled && !Pd && (0, SN.jsx)(WW, {
-          controller: kd.navigation
-        }), (0, SN.jsx)(jN, {
-          controller: kd,
-          minimap: Wd.enabled && (null === (Jd = Wd.presentation) || void 0 === Jd ? void 0 : Jd.minimap) && (0, SN.jsx)(NW, {
-            view: Wd.presentation.minimap,
-            navigation: kd.navigation,
-            controller: kd.map
+          openInGameMenuName: DQ
+        } = (0, Cq.l)(["openInGameMenuName"]);
+      return (0, Iq.jsxs)(Iq.Fragment, {
+        children: [(0, Iq.jsx)(wk, {
+          controller: wQ.quests,
+          display: wQ.navigation.display
+        }), oQ.enabled && !DQ && (0, Iq.jsx)(Lo, {
+          controller: wQ.navigation
+        }), (0, Iq.jsx)(Uq, {
+          controller: wQ,
+          minimap: oQ.enabled && (null === (FQ = oQ.presentation) || void 0 === FQ ? void 0 : FQ.minimap) && (0, Iq.jsx)(wo, {
+            view: oQ.presentation.minimap,
+            navigation: wQ.navigation,
+            controller: wQ.map
           }),
-          children: (0, SN.jsx)(LW, {
-            controller: kd.quests,
+          children: (0, Iq.jsx)(bo, {
+            controller: wQ.quests,
             surface: "hud"
           })
-        }), (0, SN.jsx)(AP, {
-          controller: kd.navigation
-        }), (0, SN.jsx)(NZ, {
-          controller: kd.portalTransit
-        }), (0, SN.jsx)(OZ, {
-          controller: kd.dailyReward
-        }), (0, SN.jsx)(qZ, {
-          controller: kd.mailbox
-        }), (0, SN.jsx)(BZ, {
-          controller: kd.magmaward
-        }), (0, SN.jsx)(sZ, {
-          controller: kd.glowtide
-        }), (0, SN.jsx)(LP, {
-          controller: kd.passage
-        }), (0, SN.jsx)(FZ, {
-          controller: kd.tideCharts
-        }), (0, SN.jsx)(iZ, {
-          controller: kd.glowMeter
-        }), (0, SN.jsx)(iP, {
-          controller: kd.reachLog
-        }), (0, SN.jsx)(aZ, {
-          controller: kd.hushWait
-        }), (0, SN.jsx)(xP, {
-          controller: kd.lampLight
-        }), (0, SN.jsx)(PW, {
-          controller: kd.skills,
+        }), (0, Iq.jsx)(dD, {
+          controller: wQ.navigation
+        }), (0, Iq.jsx)(qk, {
+          controller: wQ.portalTransit
+        }), (0, Iq.jsx)(tk, {
+          controller: wQ.dailyReward
+        }), (0, Iq.jsx)(Sk, {
+          controller: wQ.mailbox
+        }), (0, Iq.jsx)(ik, {
+          controller: wQ.magmaward
+        }), (0, Iq.jsx)(Wk, {
+          controller: wQ.glowtide
+        }), (0, Iq.jsx)(xD, {
+          controller: wQ.passage
+        }), (0, Iq.jsx)(rk, {
+          controller: wQ.tideCharts
+        }), (0, Iq.jsx)(Rk, {
+          controller: wQ.glowMeter
+        }), (0, Iq.jsx)(WD, {
+          controller: wQ.reachLog
+        }), (0, Iq.jsx)(Ok, {
+          controller: wQ.hushWait
+        }), (0, Iq.jsx)(cD, {
+          controller: wQ.lampLight
+        }), (0, Iq.jsx)(qo, {
+          controller: wQ.skills,
           surface: "hud"
         })]
       })
     }
 
-    function bZ(dd) {
+    function Nk(QQ) {
       let {
-        controller: Jd
-      } = dd;
-      return (0, SN.jsxs)(SN.Fragment, {
-        children: [(0, SN.jsx)(pW, {
-          controller: Jd.map,
-          navigation: Jd.navigation
-        }), (0, SN.jsx)(PW, {
-          controller: Jd.skills,
+        controller: FQ
+      } = QQ;
+      return (0, Iq.jsxs)(Iq.Fragment, {
+        children: [(0, Iq.jsx)(Fo, {
+          controller: FQ.map,
+          navigation: FQ.navigation
+        }), (0, Iq.jsx)(qo, {
+          controller: FQ.skills,
           surface: "menu"
-        }), (0, SN.jsx)(LW, {
-          controller: Jd.quests,
+        }), (0, Iq.jsx)(bo, {
+          controller: FQ.quests,
           surface: "menu"
-        }), (0, SN.jsx)(VW, {
-          controller: Jd.dungeons
-        }), (0, SN.jsx)(wW, {
-          controller: Jd.collections
-        }), (0, SN.jsx)(JP, {
-          controller: Jd.questGraph
-        }), (0, SN.jsx)(PP, {
-          controller: Jd.forge
-        }), (0, SN.jsx)(lP, {
-          controller: Jd.smuggler
-        }), (0, SN.jsx)(BP, {
-          controller: Jd.keepersChair,
-          lampLight: Jd.lampLight
-        }), (0, SN.jsx)(tP, {
-          controller: Jd.reachLog,
-          regulars: Jd.regulars,
-          hiddenWaters: Jd.hiddenWaters
-        }), (0, SN.jsx)(YP, {
-          controller: Jd.regulars
-        }), (0, SN.jsx)(eP, {
-          controller: Jd.passage
-        }), (0, SN.jsx)(YZ, {
-          controller: Jd.tideCharts
-        }), (0, SN.jsx)(HP, {
-          controller: Jd.dialogue
-        }), (0, SN.jsx)(wP, {
-          controller: Jd.autographs
+        }), (0, Iq.jsx)(go, {
+          controller: FQ.dungeons
+        }), (0, Iq.jsx)(yo, {
+          controller: FQ.collections
+        }), (0, Iq.jsx)(FD, {
+          controller: FQ.questGraph
+        }), (0, Iq.jsx)(DD, {
+          controller: FQ.forge
+        }), (0, Iq.jsx)(bD, {
+          controller: FQ.smuggler
+        }), (0, Iq.jsx)(SD, {
+          controller: FQ.keepersChair,
+          lampLight: FQ.lampLight
+        }), (0, Iq.jsx)(gD, {
+          controller: FQ.reachLog,
+          regulars: FQ.regulars,
+          hiddenWaters: FQ.hiddenWaters
+        }), (0, Iq.jsx)(rD, {
+          controller: FQ.regulars
+        }), (0, Iq.jsx)(tD, {
+          controller: FQ.passage
+        }), (0, Iq.jsx)(Ik, {
+          controller: FQ.tideCharts
+        }), (0, Iq.jsx)(yD, {
+          controller: FQ.dialogue
+        }), (0, Iq.jsx)(BD, {
+          controller: FQ.autographs
         })]
       })
     }
-    var SZ = kd(36933);
-    const jZ = kp + Cp;
+    var Tk = wQ(36388);
+    const Kk = FL + vL;
 
-    function XZ(dd, Jd, kd, pd, Nd) {
-      const Wd = [],
-        Pd = [],
-        Zd = kd => {
-          const pd = dd.playSound(Jd, kd.sound, kd.volume, kd.rate);
-          pd && (Pd.push(pd), void 0 !== kd.cutAfter && Wd.push(setTimeout((() => {
-            pd.fade(pd.getVolume(), 0, 300)
-          }), kd.cutAfter)))
+    function zk(QQ, FQ, wQ, LQ, qQ) {
+      const oQ = [],
+        DQ = [],
+        kQ = wQ => {
+          const LQ = QQ.playSound(FQ, wQ.sound, wQ.volume, wQ.rate);
+          LQ && (DQ.push(LQ), void 0 !== wQ.cutAfter && oQ.push(setTimeout((() => {
+            LQ.fade(LQ.getVolume(), 0, 300)
+          }), wQ.cutAfter)))
         };
-      for (const gd of function(dd, Jd) {
-          const kd = [{
+      for (const vQ of function(QQ, FQ) {
+          const wQ = [{
             sound: "rpgKnifeSlice1",
-            beat: kp,
+            beat: FL,
             lead: 260,
             volume: .5,
             rate: 1
           }, {
             sound: "sweep6",
-            beat: kp,
+            beat: FL,
             lead: 140,
             volume: .35,
             rate: .85
           }, {
             sound: "rpgMetalPot1",
-            beat: kp,
+            beat: FL,
             lead: 100,
             volume: 1,
             rate: .78 + .04 * Math.random()
           }, {
             sound: "hit1",
-            beat: kp,
+            beat: FL,
             lead: 0,
             volume: .8,
             rate: .7
           }, {
             sound: "lowDrum1",
-            beat: kp,
+            beat: FL,
             lead: 60,
             volume: .6,
             rate: 1
@@ -9959,7 +9959,7 @@ export const modules = {
             volume: .3,
             rate: 1.3
           }, {
-            sound: (0, SZ.g)("firecracker"),
+            sound: (0, Tk.c)("firecracker"),
             beat: 420,
             lead: 160,
             volume: .25,
@@ -9967,109 +9967,109 @@ export const modules = {
             cutAfter: 500
           }, {
             sound: "fireBurn",
-            beat: jZ + 150,
+            beat: Kk + 150,
             lead: 400,
             volume: .6,
             rate: 1.2
           }, {
-            sound: (0, SZ.g)("bigDrumSwish"),
-            beat: jZ + 80,
+            sound: (0, Tk.c)("bigDrumSwish"),
+            beat: Kk + 80,
             lead: 480,
             volume: .35,
             rate: 1,
             cutAfter: 1400
           }, {
             sound: "magicAccent2",
-            beat: jZ + 60,
+            beat: Kk + 60,
             lead: 180,
-            volume: .5 + .06 * dd,
-            rate: .82 + .07 * dd
+            volume: .5 + .06 * QQ,
+            rate: .82 + .07 * QQ
           }];
-          return dd >= 4 && kd.push({
+          return QQ >= 4 && wQ.push({
             sound: "exp_levelup",
-            beat: jZ + 120,
+            beat: Kk + 120,
             lead: 60,
             volume: .35,
             rate: 1
-          }), Jd && kd.push({
+          }), FQ && wQ.push({
             sound: "trumpetFlare",
-            beat: jZ + 40,
+            beat: Kk + 40,
             lead: 20,
             volume: .8,
             rate: 1
-          }), kd.push({
+          }), wQ.push({
             sound: "harp_pling",
-            beat: pp,
+            beat: wL,
             lead: 40,
             volume: .2,
             rate: 1.5
-          }), kd
-        }(kd, pd)) Nd ? Wd.push(setTimeout((() => {
-        Zd(gd)
-      }), Math.max(0, gd.beat - gd.lead / gd.rate))) : gd.beat !== kp && "magicAccent2" !== gd.sound && "trumpetFlare" !== gd.sound || Zd(gd);
+          }), wQ
+        }(wQ, LQ)) qQ ? oQ.push(setTimeout((() => {
+        kQ(vQ)
+      }), Math.max(0, vQ.beat - vQ.lead / vQ.rate))) : vQ.beat !== FL && "magicAccent2" !== vQ.sound && "trumpetFlare" !== vQ.sound || kQ(vQ);
       return () => {
-        for (const dd of Wd) clearTimeout(dd);
-        for (const dd of Pd) dd.fade(dd.getVolume(), 0, 120)
+        for (const QQ of oQ) clearTimeout(QQ);
+        for (const QQ of DQ) QQ.fade(QQ.getVolume(), 0, 120)
       }
     }
-    class fZ {
-      constructor(dd) {
-        this.deps = dd, this.pending = new Map, this.localHook = null
+    class lk {
+      constructor(QQ) {
+        this.deps = QQ, this.pending = new Map, this.localHook = null
       }
-      hookWaiting(dd, Jd) {
-        this.pending.delete(dd);
-        const kd = this.deps.now();
-        if (null === Jd) {
-          var pd;
-          if ((null === (pd = this.localHook) || void 0 === pd ? void 0 : pd.hookId) === dd) {
-            const dd = kd >= this.localHook.biteAtMs - 300;
-            this.localHook = null, this.deps.onLocalWaitEnded(dd)
+      hookWaiting(QQ, FQ) {
+        this.pending.delete(QQ);
+        const wQ = this.deps.now();
+        if (null === FQ) {
+          var LQ;
+          if ((null === (LQ = this.localHook) || void 0 === LQ ? void 0 : LQ.hookId) === QQ) {
+            const QQ = wQ >= this.localHook.biteAtMs - 300;
+            this.localHook = null, this.deps.onLocalWaitEnded(QQ)
           }
           return
         }
-        const Nd = kd + Jd;
-        this.settle(dd, Nd) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(dd, {
-          untilMs: kd + 1e3,
-          biteAtMs: Nd
+        const qQ = wQ + FQ;
+        this.settle(QQ, qQ) || (this.pending.size >= 16 && this.pending.delete(this.pending.keys().next().value), this.pending.set(QQ, {
+          untilMs: wQ + 1e3,
+          biteAtMs: qQ
         }))
       }
       getLocalHook() {
-        var dd, Jd;
-        return null !== (dd = null === (Jd = this.localHook) || void 0 === Jd ? void 0 : Jd.hookId) && void 0 !== dd ? dd : null
+        var QQ, FQ;
+        return null !== (QQ = null === (FQ = this.localHook) || void 0 === FQ ? void 0 : FQ.hookId) && void 0 !== QQ ? QQ : null
       }
       afterRender() {
         if (0 === this.pending.size) return;
-        const dd = this.deps.now();
-        for (const [Jd, {
-            untilMs: kd,
-            biteAtMs: pd
-          }] of this.pending)(this.settle(Jd, pd) || dd > kd) && this.pending.delete(Jd)
+        const QQ = this.deps.now();
+        for (const [FQ, {
+            untilMs: wQ,
+            biteAtMs: LQ
+          }] of this.pending)(this.settle(FQ, LQ) || QQ > wQ) && this.pending.delete(FQ)
       }
       dispose() {
         this.pending.clear(), this.localHook = null
       }
-      settle(dd, Jd) {
-        const kd = this.deps.getLineOwner(dd);
-        if (null === kd) return !1;
-        if (!this.deps.isLocalPlayer(kd)) return !0;
+      settle(QQ, FQ) {
+        const wQ = this.deps.getLineOwner(QQ);
+        if (null === wQ) return !1;
+        if (!this.deps.isLocalPlayer(wQ)) return !0;
         if (this.localHook = {
-            hookId: dd,
-            biteAtMs: Jd
+            hookId: QQ,
+            biteAtMs: FQ
           }, !this.deps.isHushWaiting()) {
-          const [Jd, kd] = this.deps.getHookPosition(dd);
-          this.deps.onCastLanded(Jd, kd)
+          const [FQ, wQ] = this.deps.getHookPosition(QQ);
+          this.deps.onCastLanded(FQ, wQ)
         }
         return this.deps.onLocalHookSettled(), !0
       }
     }
-    var nZ = kd(4090);
-    const UZ = {
+    var jk = wQ(4119);
+    const ak = {
         0: [15],
         1: [40, 60, 40],
         2: [40, 60, 40, 60, 60],
         3: [30, 50, 30, 50, 90]
       },
-      yZ = {
+      Xk = {
         1: {
           count: 24,
           rise: 2.5,
@@ -10086,16 +10086,16 @@ export const modules = {
           colour: [206, 145, 206]
         }
       };
-    class DZ {
-      constructor(dd) {
-        this.deps = dd, this.tell = null
+    class fk {
+      constructor(QQ) {
+        this.deps = QQ, this.tell = null
       }
-      receiveTell(dd) {
+      receiveTell(QQ) {
         let {
-          biteTellTier: Jd
-        } = dd;
+          biteTellTier: FQ
+        } = QQ;
         this.tell = {
-          tier: Jd,
+          tier: FQ,
           atMs: this.deps.now(),
           burst: !1
         }, this.burstAtHook()
@@ -10103,35 +10103,35 @@ export const modules = {
       onLocalHookSettled() {
         null !== this.tell && this.deps.now() - this.tell.atMs <= 500 && this.burstAtHook()
       }
-      onLocalWaitEnded(dd) {
-        const Jd = this.tell;
-        if (this.tell = null, !dd) return;
-        const kd = null !== Jd && this.deps.now() - Jd.atMs <= 3e3 ? Jd.tier : 0;
-        this.deps.vibrate(UZ[kd])
+      onLocalWaitEnded(QQ) {
+        const FQ = this.tell;
+        if (this.tell = null, !QQ) return;
+        const wQ = null !== FQ && this.deps.now() - FQ.atMs <= 3e3 ? FQ.tier : 0;
+        this.deps.vibrate(ak[wQ])
       }
       burstAtHook() {
-        const dd = this.tell,
-          Jd = this.deps.getLocalHookPosition();
-        null === dd || dd.burst || null === Jd || (dd.burst = !0, this.deps.playParticles(function(dd, Jd) {
-          let [kd, pd, Nd] = Jd;
+        const QQ = this.tell,
+          FQ = this.deps.getLocalHookPosition();
+        null === QQ || QQ.burst || null === FQ || (QQ.burst = !0, this.deps.playParticles(function(QQ, FQ) {
+          let [wQ, LQ, qQ] = FQ;
           const {
-            count: Wd,
-            rise: Pd,
-            colour: Zd
-          } = yZ[dd], [gd, Cd, Kd] = Zd;
+            count: oQ,
+            rise: DQ,
+            colour: kQ
+          } = Xk[QQ], [vQ, mQ, uQ] = kQ;
           return {
             texture: "glint",
-            pos1: [kd - .3, pd, Nd - .3],
-            pos2: [kd + .3, pd + .2, Nd + .3],
-            dir1: [-.6, Pd, -.6],
-            dir2: [.6, 1.4 * Pd, .6],
+            pos1: [wQ - .3, LQ, qQ - .3],
+            pos2: [wQ + .3, LQ + .2, qQ + .3],
+            dir1: [-.6, DQ, -.6],
+            dir2: [.6, 1.4 * DQ, .6],
             minLifeTime: .5,
             maxLifeTime: .9,
             minEmitPower: 1,
             maxEmitPower: 1.6,
             minSize: .12,
             maxSize: .3,
-            manualEmitCount: Wd,
+            manualEmitCount: oQ,
             gravity: [0, -4, 0],
             velocityGradients: [{
               timeFraction: 0,
@@ -10144,38 +10144,38 @@ export const modules = {
             }],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [gd, Cd, Kd, 1],
+              minColor: [vQ, mQ, uQ, 1],
               maxColor: [255, 255, 255, 1]
             }, {
               timeFraction: 1,
-              minColor: [gd, Cd, Kd, 0],
-              maxColor: [gd, Cd, Kd, 0]
+              minColor: [vQ, mQ, uQ, 0],
+              maxColor: [vQ, mQ, uQ, 0]
             }],
-            blendMode: nZ.d.Add,
+            blendMode: jk.f.Add,
             hideDist: 48
           }
-        }(dd.tier, Jd)))
+        }(QQ.tier, FQ)))
       }
     }
-    var TZ = kd(1273),
-      EZ = kd(1938),
-      cZ = kd(33);
+    var Vk = wQ(1265),
+      hk = wQ(1899),
+      Jk = wQ(27);
 
-    function hZ(dd, Jd) {
+    function Ek(QQ, FQ) {
       return [{
         timeFraction: 0,
-        minColor: [255 * dd[0], 255 * dd[1], 255 * dd[2], 1],
-        maxColor: [255 * Jd[0], 255 * Jd[1], 255 * Jd[2], 1]
+        minColor: [255 * QQ[0], 255 * QQ[1], 255 * QQ[2], 1],
+        maxColor: [255 * FQ[0], 255 * FQ[1], 255 * FQ[2], 1]
       }, {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }]
     }
-    const rZ = [0, 0, 0],
-      uZ = {
+    const nk = [0, 0, 0],
+      gk = {
         texture: "glint",
         mipmaps: !1,
-        oo: 24,
+        MH: 24,
         minLifeTime: .18,
         maxLifeTime: .35,
         minSize: .07,
@@ -10183,23 +10183,23 @@ export const modules = {
         minEmitPower: 0,
         maxEmitPower: 0,
         emitRate: 12,
-        dir1: rZ,
-        dir2: rZ,
-        blendMode: nZ.d.OneOne
+        dir1: nk,
+        dir2: nk,
+        blendMode: jk.f.OneOne
       },
-      tZ = {
-        ...uZ,
-        colorGradients: hZ([1, .88, .38], [1, .65, .15])
+      Pk = {
+        ...gk,
+        colorGradients: Ek([1, .88, .38], [1, .65, .15])
       },
-      VZ = {
-        ...uZ,
-        colorGradients: hZ([.55, .95, 1], [.9, 1, 1])
+      Zk = {
+        ...gk,
+        colorGradients: Ek([.55, .95, 1], [.9, 1, 1])
       },
-      zZ = [.5, .5, .5],
-      HZ = {
+      yk = [.5, .5, .5],
+      Bk = {
         texture: "glint",
         mipmaps: !1,
-        oo: 24,
+        MH: 24,
         minLifeTime: .2,
         maxLifeTime: .4,
         minSize: .12,
@@ -10207,24 +10207,24 @@ export const modules = {
         minEmitPower: .5,
         maxEmitPower: 1.5,
         emitRate: 0,
-        colorGradients: hZ([1, .12, .12], [1, .35, .2]),
-        blendMode: nZ.d.OneOne
+        colorGradients: Ek([1, .12, .12], [1, .35, .2]),
+        blendMode: jk.f.OneOne
       };
-    class wZ {
+    class dk {
       constructor() {
         this.drops = new Map
       }
-      ZL(dd, Jd) {
-        if ("overflowFlash" === Jd.kind) {
-          const [kd, pd, Nd] = Jd.position, Wd = dd.createParticles(HZ, {
-            pos: [kd, pd, Nd],
-            half: zZ
+      bx(QQ, FQ) {
+        if ("overflowFlash" === FQ.kind) {
+          const [wQ, LQ, qQ] = FQ.position, oQ = QQ.createParticles(Bk, {
+            pos: [wQ, LQ, qQ],
+            half: yk
           });
-          return Wd.emit(18), void Wd.stop()
+          return oQ.emit(18), void oQ.stop()
         }
-        this.drops.has(Jd.itemId) || this.drops.set(Jd.itemId, {
-          owner: Jd.owner,
-          cosmetic: Jd.cosmetic,
+        this.drops.has(FQ.itemId) || this.drops.set(FQ.itemId, {
+          owner: FQ.owner,
+          cosmetic: FQ.cosmetic,
           pickupDelayCleared: !1,
           seen: !1,
           markedAt: performance.now(),
@@ -10233,105 +10233,105 @@ export const modules = {
           particles: null
         })
       }
-      Do(dd) {
+      fH(QQ) {
         if (0 === this.drops.size) return;
-        const Jd = performance.now(),
-          kd = dd.getCameraPosition();
-        let pd = 0;
-        for (const Wd of this.drops.values()) null !== Wd.particles && pd++;
-        for (const [Wd, Pd] of this.drops) {
-          const Zd = dd.getPositionView(Wd);
-          if (null === Zd) {
-            var Nd;
-            if (Pd.seen || Jd - Pd.markedAt > 5e3) null !== Pd.particles && pd--, null === (Nd = Pd.particles) || void 0 === Nd || Nd.stop(), this.drops.delete(Wd);
+        const FQ = performance.now(),
+          wQ = QQ.getCameraPosition();
+        let LQ = 0;
+        for (const oQ of this.drops.values()) null !== oQ.particles && LQ++;
+        for (const [oQ, DQ] of this.drops) {
+          const kQ = QQ.getPositionView(oQ);
+          if (null === kQ) {
+            var qQ;
+            if (DQ.seen || FQ - DQ.markedAt > 5e3) null !== DQ.particles && LQ--, null === (qQ = DQ.particles) || void 0 === qQ || qQ.stop(), this.drops.delete(oQ);
             continue
           }
-          Pd.cosmetic || !dd.isLocalPlayer(Pd.owner) || Pd.pickupDelayCleared || (dd.clearPickupDelay(Wd), Pd.pickupDelayCleared = !0);
-          const gd = Pd.lastPosition,
-            Cd = Pd.seen && (Zd[0] - gd[0]) ** 2 + (Zd[1] - gd[1]) ** 2 + (Zd[2] - gd[2]) ** 2 > 4e-4,
-            Kd = (Zd[0] - kd[0]) ** 2 + (Zd[1] - kd[1]) ** 2 + (Zd[2] - kd[2]) ** 2 < 2025;
-          Pd.seen = !0, gd[0] = Zd[0], gd[1] = Zd[1], gd[2] = Zd[2], Cd && (Pd.lastMovingAt = Jd), null !== Pd.particles && (!Kd || Jd - Pd.lastMovingAt > 500) && (Pd.particles.stop(), Pd.particles = null, pd--), Cd && Kd && null === Pd.particles && pd < 32 && (Pd.particles = dd.createParticles(Pd.cosmetic ? VZ : tZ, {
-            pos: Zd
-          }), pd++), null !== Pd.particles && (Pd.particles.moveTo(Zd), Pd.particles.setEmitRate(Cd ? 12 : 0)), !Cd && null === Pd.particles && Jd - Math.max(Pd.lastMovingAt, Pd.markedAt) > 2e3 && this.drops.delete(Wd)
+          DQ.cosmetic || !QQ.isLocalPlayer(DQ.owner) || DQ.pickupDelayCleared || (QQ.clearPickupDelay(oQ), DQ.pickupDelayCleared = !0);
+          const vQ = DQ.lastPosition,
+            mQ = DQ.seen && (kQ[0] - vQ[0]) ** 2 + (kQ[1] - vQ[1]) ** 2 + (kQ[2] - vQ[2]) ** 2 > 4e-4,
+            uQ = (kQ[0] - wQ[0]) ** 2 + (kQ[1] - wQ[1]) ** 2 + (kQ[2] - wQ[2]) ** 2 < 2025;
+          DQ.seen = !0, vQ[0] = kQ[0], vQ[1] = kQ[1], vQ[2] = kQ[2], mQ && (DQ.lastMovingAt = FQ), null !== DQ.particles && (!uQ || FQ - DQ.lastMovingAt > 500) && (DQ.particles.stop(), DQ.particles = null, LQ--), mQ && uQ && null === DQ.particles && LQ < 32 && (DQ.particles = QQ.createParticles(DQ.cosmetic ? Zk : Pk, {
+            pos: kQ
+          }), LQ++), null !== DQ.particles && (DQ.particles.moveTo(kQ), DQ.particles.setEmitRate(mQ ? 12 : 0)), !mQ && null === DQ.particles && FQ - Math.max(DQ.lastMovingAt, DQ.markedAt) > 2e3 && this.drops.delete(oQ)
         }
       }
       dispose() {
-        for (const Jd of this.drops.values()) {
-          var dd;
-          null === (dd = Jd.particles) || void 0 === dd || dd.stop()
+        for (const FQ of this.drops.values()) {
+          var QQ;
+          null === (QQ = FQ.particles) || void 0 === QQ || QQ.stop()
         }
         this.drops.clear()
       }
     }
-    var AZ = kd(193);
-    const dg = AZ.g.uR * AZ.g.playerEyeToHeightRatio;
-    class Jg {
-      constructor(dd) {
-        this.host = dd, this.lava = [], this.loop = null, this.nextUpdateAt = 0
+    var Qv = wQ(201);
+    const Fv = Qv.e.iG * Qv.e.playerEyeToHeightRatio;
+    class wv {
+      constructor(QQ) {
+        this.host = QQ, this.lava = [], this.loop = null, this.nextUpdateAt = 0
       }
-      ZL(dd) {
-        this.lava = dd, this.nextUpdateAt = 0
+      bx(QQ) {
+        this.lava = QQ, this.nextUpdateAt = 0
       }
-      Do() {
-        var dd;
-        const Jd = this.host.now();
-        if (Jd < this.nextUpdateAt) return;
-        this.nextUpdateAt = Jd + 250;
-        const kd = this.host.playerPosition(),
-          pd = kd && this.findNearest([kd[0], kd[1] + dg, kd[2]]);
-        if (!pd || pd.distance >= 40) return void this.stop();
-        const Nd = .5 * Math.min(1, (40 - pd.distance) / 8);
-        this.loop ? this.loop.setRelativeVolume(Nd) : this.loop = this.host.play("lavaFlow", Nd, pd.position, 40 + dg, 9, !0), null === (dd = this.loop) || void 0 === dd || dd.setPosition(pd.position)
+      fH() {
+        var QQ;
+        const FQ = this.host.now();
+        if (FQ < this.nextUpdateAt) return;
+        this.nextUpdateAt = FQ + 250;
+        const wQ = this.host.playerPosition(),
+          LQ = wQ && this.findNearest([wQ[0], wQ[1] + Fv, wQ[2]]);
+        if (!LQ || LQ.distance >= 40) return void this.stop();
+        const qQ = .5 * Math.min(1, (40 - LQ.distance) / 8);
+        this.loop ? this.loop.setRelativeVolume(qQ) : this.loop = this.host.play("lavaFlow", qQ, LQ.position, 40 + Fv, 9, !0), null === (QQ = this.loop) || void 0 === QQ || QQ.setPosition(LQ.position)
       }
       dispose() {
         this.stop(), this.lava = []
       }
       stop() {
-        var dd;
-        null === (dd = this.loop) || void 0 === dd || dd.stop(), this.loop = null
+        var QQ;
+        null === (QQ = this.loop) || void 0 === QQ || QQ.stop(), this.loop = null
       }
-      findNearest(dd) {
-        let Jd = -1,
-          kd = 1 / 0;
-        for (let pd = 0; pd < this.lava.length; pd += 3) {
-          const Nd = this.lava[pd] - dd[0],
-            Wd = this.lava[pd + 1] - dd[1],
-            Pd = this.lava[pd + 2] - dd[2],
-            Zd = Nd * Nd + Wd * Wd + Pd * Pd;
-          Zd < kd && (kd = Zd, Jd = pd)
+      findNearest(QQ) {
+        let FQ = -1,
+          wQ = 1 / 0;
+        for (let LQ = 0; LQ < this.lava.length; LQ += 3) {
+          const qQ = this.lava[LQ] - QQ[0],
+            oQ = this.lava[LQ + 1] - QQ[1],
+            DQ = this.lava[LQ + 2] - QQ[2],
+            kQ = qQ * qQ + oQ * oQ + DQ * DQ;
+          kQ < wQ && (wQ = kQ, FQ = LQ)
         }
-        return Jd < 0 ? null : {
-          position: [this.lava[Jd], this.lava[Jd + 1], this.lava[Jd + 2]],
-          distance: Math.sqrt(kd)
+        return FQ < 0 ? null : {
+          position: [this.lava[FQ], this.lava[FQ + 1], this.lava[FQ + 2]],
+          distance: Math.sqrt(wQ)
         }
       }
     }
-    var kg = kd(1915),
-      pg = kd(38780);
-    const Ng = {
+    var Lv = wQ(1880),
+      qv = wQ(38166);
+    const ov = {
       "Grey Portal": "Gray"
     };
-    for (const Kg of Nd.Oc) Ng[`${Kg} Portal`] = Kg;
-    const Wg = Object.keys(Ng),
-      Pg = Object.fromEntries(Wg.map((dd => [dd, (0, Nd.$)(Nd.M[`${(0,Nd.Be)(Ng[dd])}Team`])])));
-    Object.fromEntries(Wg.map((dd => [dd, Nd.M[`${(0,Nd.Be)(Ng[dd])}UiText`]])));
-    class Zg {
-      constructor(dd, Jd) {
-        this.presentation = dd, this.portal = Jd, this.unlocked = void 0
+    for (const Hv of qQ.Kc) ov[`${Hv} Portal`] = Hv;
+    const Dv = Object.keys(ov),
+      kv = Object.fromEntries(Dv.map((QQ => [QQ, (0, qQ.Z)(qQ.K[`${(0,qQ.He)(ov[QQ])}Team`])])));
+    Object.fromEntries(Dv.map((QQ => [QQ, qQ.K[`${(0,qQ.He)(ov[QQ])}UiText`]])));
+    class vv {
+      constructor(QQ, FQ) {
+        this.presentation = QQ, this.portal = FQ, this.unlocked = void 0
       }
-      ZL(dd) {
-        const Jd = !1 === this.unlocked && dd;
-        this.unlocked = dd, this.Do();
+      bx(QQ) {
+        const FQ = !1 === this.unlocked && QQ;
+        this.unlocked = QQ, this.fH();
         const {
-          min: kd,
-          max: pd,
-          unlockedBlock: Nd
+          min: wQ,
+          max: LQ,
+          unlockedBlock: qQ
         } = this.portal;
-        if (Jd && this.presentation.hasChunk(...kd)) {
-          const [dd, Jd, Wd] = Pg[Nd];
+        if (FQ && this.presentation.hasChunk(...wQ)) {
+          const [QQ, FQ, oQ] = kv[qQ];
           this.presentation.playParticles({
-            pos1: [...kd],
-            pos2: pd.map((dd => dd + 1)),
+            pos1: [...wQ],
+            pos2: LQ.map((QQ => QQ + 1)),
             dir1: [-1, 0, -1],
             dir2: [1, 1, 1],
             texture: "glint",
@@ -10346,8 +10346,8 @@ export const modules = {
             gravity: [0, .5, 0],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [dd, Jd, Wd, 1],
-              maxColor: [Math.min(255, dd + 55), Math.min(255, Jd + 55), Math.min(255, Wd + 90), 1]
+              minColor: [QQ, FQ, oQ, 1],
+              maxColor: [Math.min(255, QQ + 55), Math.min(255, FQ + 55), Math.min(255, oQ + 90), 1]
             }],
             velocityGradients: [{
               timeFraction: 0,
@@ -10358,316 +10358,316 @@ export const modules = {
           })
         }
       }
-      Do() {
-        var dd;
-        const Jd = this.unlocked ? this.portal.unlockedBlock : null !== (dd = this.portal.lockedBlock) && void 0 !== dd ? dd : "Light Gray Portal",
+      fH() {
+        var QQ;
+        const FQ = this.unlocked ? this.portal.unlockedBlock : null !== (QQ = this.portal.lockedBlock) && void 0 !== QQ ? QQ : "Light Gray Portal",
           {
-            min: kd,
-            max: pd
+            min: wQ,
+            max: LQ
           } = this.portal;
-        for (let Nd = kd[0]; Nd <= pd[0]; Nd++)
-          for (let dd = kd[1]; dd <= pd[1]; dd++)
-            for (let Wd = kd[2]; Wd <= pd[2]; Wd++) this.presentation.hasChunk(Nd, dd, Wd) && this.presentation.MI(Nd, dd, Wd) !== Jd && this.presentation.aY(Nd, dd, Wd, Jd)
+        for (let qQ = wQ[0]; qQ <= LQ[0]; qQ++)
+          for (let QQ = wQ[1]; QQ <= LQ[1]; QQ++)
+            for (let oQ = wQ[2]; oQ <= LQ[2]; oQ++) this.presentation.hasChunk(qQ, QQ, oQ) && this.presentation.JG(qQ, QQ, oQ) !== FQ && this.presentation.KU(qQ, QQ, oQ, FQ)
       }
     }
-    const gg = {
+    const mv = {
         farming_1: {
-          raises: dd => "NPC" === dd.type && "chef" === dd.variation,
+          raises: QQ => "NPC" === QQ.type && "chef" === QQ.variation,
           rise: .4
         },
         fishing_1: {
-          raises: dd => "Draugr Warper" === dd.type,
+          raises: QQ => "Draugr Warper" === QQ.type,
           rise: .4
         }
       },
-      Cg = (dd, Jd, kd, Wd) => {
+      uv = (QQ, FQ, wQ, oQ) => {
         let {
-          localPlayerId: Pd
-        } = Wd;
-        const Zd = new xN({
-          translate: (dd, Jd) => (0, mN.x)(TZ.c.get().getCurrentLanguageCode(), dd, Jd),
-          translateWithIcons: (dd, Jd) => (0, mN.t)(TZ.c.get().getCurrentLanguageCode(), dd, Jd),
-          setMenuOpen: dd => {
-            dd ? (0, td.p)() : (0, td.g)()
+          localPlayerId: DQ
+        } = oQ;
+        const kQ = new Gq({
+          translate: (QQ, FQ) => (0, sq.u)(Vk.e.get().getCurrentLanguageCode(), QQ, FQ),
+          translateWithIcons: (QQ, FQ) => (0, sq.o)(Vk.e.get().getCurrentLanguageCode(), QQ, FQ),
+          setMenuOpen: QQ => {
+            QQ ? (0, nQ.o)() : (0, nQ.f)()
           },
-          dismissMenu: td.j,
-          publishSkills: dd => {
-            Vd.j.nO(Pk, dd, !0)
+          dismissMenu: nQ.i,
+          publishSkills: QQ => {
+            gQ.l.GA(ow, QQ, !0)
           },
-          publishQuests: dd => {
-            Vd.j.nO(Kk, dd, !0)
+          publishQuests: QQ => {
+            gQ.l.GA(mw, QQ, !0)
           },
-          publishQuestNotification: dd => {
-            Vd.j.nO(lk, dd, !0)
+          publishQuestNotification: QQ => {
+            gQ.l.GA(uw, QQ, !0)
           },
-          publishDungeons: dd => {
-            Vd.j.nO(Ok, dd, !0)
+          publishDungeons: QQ => {
+            gQ.l.GA(Yw, QQ, !0)
           },
-          publishCollections: dd => {
-            Vd.j.nO(nk, dd, !0)
+          publishCollections: QQ => {
+            gQ.l.GA(zw, QQ, !0)
           },
-          publishMap: dd => {
-            Vd.j.nO(ld, dd, !0)
+          publishMap: QQ => {
+            gQ.l.GA(bQ, QQ, !0)
           },
-          publishHud: dd => {
-            Vd.j.nO(IN, dd, !0)
+          publishHud: QQ => {
+            gQ.l.GA(tq, QQ, !0)
           },
-          publishPortalTransit: dd => {
-            Vd.j.nO(yk, dd, !0)
+          publishPortalTransit: QQ => {
+            gQ.l.GA(jw, QQ, !0)
           },
-          isLoadingScreenUp: () => sN.d.get("loadingOverlayVisible"),
-          publishDailyReward: dd => {
-            Vd.j.nO(Ek, dd, !0)
+          isLoadingScreenUp: () => Cq.c.get("loadingOverlayVisible"),
+          publishDailyReward: QQ => {
+            gQ.l.GA(fw, QQ, !0)
           },
-          publishMailbox: dd => {
-            Vd.j.nO(tk, dd, !0)
+          publishMailbox: QQ => {
+            gQ.l.GA(nw, QQ, !0)
           },
-          publishQuestGraph: dd => {
-            Vd.j.nO(zk, dd, !0)
+          publishQuestGraph: QQ => {
+            gQ.l.GA(Pw, QQ, !0)
           },
-          publishForge: dd => {
-            Vd.j.nO(ep, dd, !0)
+          publishForge: QQ => {
+            gQ.l.GA(AL, QQ, !0)
           },
-          publishSmuggler: dd => {
-            Vd.j.nO(Gp, dd, !0)
+          publishSmuggler: QQ => {
+            gQ.l.GA(ML, QQ, !0)
           },
-          publishKeepersChair: dd => {
-            Vd.j.nO(Fp, dd, !0)
+          publishKeepersChair: QQ => {
+            gQ.l.GA(OL, QQ, !0)
           },
-          publishReachLog: dd => {
-            Vd.j.nO(mp, dd, !0)
+          publishReachLog: QQ => {
+            gQ.l.GA(rL, QQ, !0)
           },
-          publishLampLight: dd => {
-            Vd.j.nO(np, dd, !0)
+          publishLampLight: QQ => {
+            gQ.l.GA(zL, QQ, !0)
           },
-          publishMagmaward: dd => {
-            Vd.j.nO(yp, dd, !0)
+          publishMagmaward: QQ => {
+            gQ.l.GA(jL, QQ, !0)
           },
-          publishGlowtide: dd => {
-            Vd.j.nO(Tp, dd, !0)
+          publishGlowtide: QQ => {
+            gQ.l.GA(XL, QQ, !0)
           },
-          publishGlowMeter: dd => {
-            Vd.j.nO(cp, dd, !0)
+          publishGlowMeter: QQ => {
+            gQ.l.GA(VL, QQ, !0)
           },
-          publishHushWait: dd => {
-            Vd.j.nO(rp, dd, !0)
+          publishHushWait: QQ => {
+            gQ.l.GA(JL, QQ, !0)
           },
-          publishPassage: dd => {
-            Vd.j.nO(qp, dd, !0)
+          publishPassage: QQ => {
+            gQ.l.GA(cL, QQ, !0)
           },
-          publishTideCharts: dd => {
-            Vd.j.nO(Vp, dd, !0)
+          publishTideCharts: QQ => {
+            gQ.l.GA(nL, QQ, !0)
           },
-          publishRegulars: dd => {
-            Vd.j.nO(pN, dd, !0)
+          publishRegulars: QQ => {
+            gQ.l.GA(Fq, QQ, !0)
           },
-          publishHiddenWaters: dd => {
-            Vd.j.nO(gN, dd, !0)
+          publishHiddenWaters: QQ => {
+            gQ.l.GA(Dq, QQ, !0)
           },
-          publishDialogue: dd => {
-            Vd.j.nO(KN, dd, !0)
+          publishDialogue: QQ => {
+            gQ.l.GA(vq, QQ, !0)
           },
-          publishAutographs: dd => {
-            Vd.j.nO(ON, dd, !0)
+          publishAutographs: QQ => {
+            gQ.l.GA(Yq, QQ, !0)
           },
-          onDailyRewardStarted: dd => {
-            Sd.playSound(Pd, dd.day === Fd ? "trumpetFlare" : "chestOpen", .8, 1)
+          onDailyRewardStarted: QQ => {
+            UQ.playSound(DQ, QQ.day === OQ ? "trumpetFlare" : "chestOpen", .8, 1)
           },
-          onDailyRewardCoinLanded: (dd, Jd) => {
-            Sd.playSound(Pd, "exp_collect", .35, 1 + .6 * dd / (Jd - 1)), Vd.j.nO(ck, dd === Jd - 1)
+          onDailyRewardCoinLanded: (QQ, FQ) => {
+            UQ.playSound(DQ, "exp_collect", .35, 1 + .6 * QQ / (FQ - 1)), gQ.l.GA(Vw, QQ === FQ - 1)
           },
-          onDailyRewardItemLanded: dd => {
-            Sd.playSound(Pd, "pickUp", .6, 1 + .15 * dd)
+          onDailyRewardItemLanded: QQ => {
+            UQ.playSound(DQ, "pickUp", .6, 1 + .15 * QQ)
           },
           onMailboxStarted: () => {
-            Sd.playSound(Pd, "rpgMetalClick", .6, 1), Sd.playSound(Pd, "rpgBookFlip1", .7, 1)
+            UQ.playSound(DQ, "rpgMetalClick", .6, 1), UQ.playSound(DQ, "rpgBookFlip1", .7, 1)
           },
           onDailyRewardFinished: () => {
-            Sd.sendCommand("skyblockDailyRewardDone")
+            UQ.sendCommand("skyblockDailyRewardDone")
           },
-          journeyStorage: cZ.k,
-          requestTracking: dd => {
-            Sd.sendCommand(`quests track ${dd}`)
+          journeyStorage: Jk.m,
+          requestTracking: QQ => {
+            UQ.sendCommand(`quests track ${QQ}`)
           },
-          requestDungeonEnter: (dd, Jd) => {
-            Sd.sendCommand(`dungeonEnter ${dd} ${Jd}`)
+          requestDungeonEnter: (QQ, FQ) => {
+            UQ.sendCommand(`dungeonEnter ${QQ} ${FQ}`)
           },
-          requestQuestJump: dd => {
-            Sd.sendCommand(`${Xd} jump ${dd}`)
+          requestQuestJump: QQ => {
+            UQ.sendCommand(`${TQ} jump ${QQ}`)
           },
-          requestQuestArrive: (dd, Jd) => {
-            const kd = `${Xd} arrive ${dd}`;
-            Sd.sendCommand(Jd ? `${kd} complete` : kd)
+          requestQuestArrive: (QQ, FQ) => {
+            const wQ = `${TQ} arrive ${QQ}`;
+            UQ.sendCommand(FQ ? `${wQ} complete` : wQ)
           },
-          requestForge: dd => {
+          requestForge: QQ => {
             let {
-              blade: Jd,
-              guard: kd,
-              handle: pd
-            } = dd;
-            Sd.sendCommand(`forge ${Jd} ${kd} ${pd}`)
+              blade: FQ,
+              guard: wQ,
+              handle: LQ
+            } = QQ;
+            UQ.sendCommand(`forge ${FQ} ${wQ} ${LQ}`)
           },
           requestDialogue: () => {
-            Sd.sendCommand("quests dialogue")
+            UQ.sendCommand("quests dialogue")
           },
-          requestSmuggle: (dd, Jd) => {
-            Sd.sendCommand(`smuggle ${dd} ${Jd}`)
+          requestSmuggle: (QQ, FQ) => {
+            UQ.sendCommand(`smuggle ${QQ} ${FQ}`)
           },
-          requestKeepersChairAim: dd => {
-            Sd.sendCommand(`keeperschair-aim ${dd}`)
+          requestKeepersChairAim: QQ => {
+            UQ.sendCommand(`keeperschair-aim ${QQ}`)
           },
           requestReachLogOpen: () => {
-            Sd.sendCommand("reachlog-open")
+            UQ.sendCommand("reachlog-open")
           },
-          requestLampLight: dd => {
-            Sd.sendCommand(`${dd}`)
+          requestLampLight: QQ => {
+            UQ.sendCommand(`${QQ}`)
           },
-          requestTravel: dd => {
-            Sd.sendCommand(`map travel ${dd.kind} ${dd.id} ${dd.requestId}`)
+          requestTravel: QQ => {
+            UQ.sendCommand(`map travel ${QQ.kind} ${QQ.id} ${QQ.requestId}`)
           }
         });
-        let gd, Cd, Kd, od, Qd, Ld, Od, vd, xd, qd, Bd, Md, Yd;
-        const bd = new wZ;
-        let Sd, jd = null;
-        const fd = gg[null !== kd && void 0 !== kd ? kd : ""],
-          Dd = (dd, Jd) => {
-            null !== fd && void 0 !== fd && fd.raises(Jd) && Sd.setNametagOffset(dd, fd.rise)
+        let vQ, mQ, uQ, HQ, YQ, xQ, AQ, pQ, cQ, CQ, SQ, RQ, sQ;
+        const IQ = new dk;
+        let UQ, NQ = null;
+        const KQ = mv[null !== wQ && void 0 !== wQ ? wQ : ""],
+          aQ = (QQ, FQ) => {
+            null !== KQ && void 0 !== KQ && KQ.raises(FQ) && UQ.setNametagOffset(QQ, KQ.rise)
           },
-          cd = new DZ({
+          VQ = new fk({
             getLocalHookPosition: () => {
-              const dd = hd.getLocalHook();
-              return null !== dd && Sd.checkValid(dd) ? Sd.yI(dd) : null
+              const QQ = hQ.getLocalHook();
+              return null !== QQ && UQ.checkValid(QQ) ? UQ.Qp(QQ) : null
             },
-            playParticles: dd => {
-              Sd.playParticleEffect(dd)
+            playParticles: QQ => {
+              UQ.playParticleEffect(QQ)
             },
-            vibrate: dd => {
-              zd.d.play("fishBite", dd)
+            vibrate: QQ => {
+              PQ.f.play("fishBite", QQ)
             },
             now: () => performance.now()
           }),
-          hd = new fZ({
-            getLineOwner: dd => Sd.checkValid(dd) ? Sd.getLineOwner(dd) : null,
-            isLocalPlayer: dd => Sd.isLocalPlayer(dd),
-            getHookPosition: dd => {
-              const [Jd, , kd] = Sd.yI(dd);
-              return [Jd, kd]
+          hQ = new lk({
+            getLineOwner: QQ => UQ.checkValid(QQ) ? UQ.getLineOwner(QQ) : null,
+            isLocalPlayer: QQ => UQ.isLocalPlayer(QQ),
+            getHookPosition: QQ => {
+              const [FQ, , wQ] = UQ.Qp(QQ);
+              return [FQ, wQ]
             },
             isHushWaiting: () => {
-              var dd;
-              return "waiting" === (null === (dd = Zd.hushWait.getSnapshot()) || void 0 === dd ? void 0 : dd.phase)
+              var QQ;
+              return "waiting" === (null === (QQ = kQ.hushWait.getSnapshot()) || void 0 === QQ ? void 0 : QQ.phase)
             },
-            onCastLanded: (dd, Jd) => {
-              Zd.tideCharts.castLanded(dd, Jd)
+            onCastLanded: (QQ, FQ) => {
+              kQ.tideCharts.castLanded(QQ, FQ)
             },
             onLocalHookSettled: () => {
-              cd.onLocalHookSettled()
+              VQ.onLocalHookSettled()
             },
-            onLocalWaitEnded: dd => {
-              cd.onLocalWaitEnded(dd)
+            onLocalWaitEnded: QQ => {
+              VQ.onLocalWaitEnded(QQ)
             },
             now: () => performance.now()
           }),
-          Hd = new Jg({
+          ZQ = new wv({
             now: () => performance.now(),
-            playerPosition: () => Sd.checkValid(Pd) ? Sd.yI(Pd) : null,
-            play: (dd, Jd, kd, pd, Nd, Wd) => Sd.playSound(Pd, dd, Jd, 1, {
-              Pk: kd,
-              maxHearDist: pd,
-              refDistance: Nd
-            }, Wd)
+            playerPosition: () => UQ.checkValid(DQ) ? UQ.Qp(DQ) : null,
+            play: (QQ, FQ, wQ, LQ, qQ, oQ) => UQ.playSound(DQ, QQ, FQ, 1, {
+              BF: wQ,
+              maxHearDist: LQ,
+              refDistance: qQ
+            }, oQ)
           }),
-          wd = new Map;
-        let Ad;
+          yQ = new Map;
+        let BQ;
         return {
-          onCreate: dd => {
-            if (Sd = dd, jd = new pg.SkyblockEntityFacing(dd, fd ? Dd : null), Zd.portalTransit.resumeArrival(null !== kd && void 0 !== kd ? kd : null), (null !== kd && void 0 !== kd ? kd : pd) === pd) {
-              let dd = -1 / 0;
-              Ad = Vd.j.subscribe("toggleMenu", (Jd => {
-                const kd = performance.now();
-                "inventory|Workbench" !== Jd || "cross_to_hub" !== Zd.quests.getTrackedQuestId() || kd - dd < 1e4 || (dd = kd, Sd.sendCommand("skyblockWorkbenchOpened"))
+          onCreate: QQ => {
+            if (UQ = QQ, NQ = new qv.SkyblockEntityFacing(QQ, KQ ? aQ : null), kQ.portalTransit.resumeArrival(null !== wQ && void 0 !== wQ ? wQ : null), (null !== wQ && void 0 !== wQ ? wQ : LQ) === LQ) {
+              let QQ = -1 / 0;
+              BQ = gQ.l.subscribe("toggleMenu", (FQ => {
+                const wQ = performance.now();
+                "inventory|Workbench" !== FQ || "cross_to_hub" !== kQ.quests.getTrackedQuestId() || wQ - QQ < 1e4 || (QQ = wQ, UQ.sendCommand("skyblockWorkbenchOpened"))
               }))
             }
-            for (const [pd, Nd] of Object.entries(null !== (Jd = nd[null !== kd && void 0 !== kd ? kd : ""]) && void 0 !== Jd ? Jd : {})) {
-              var Jd;
-              wd.set(pd, new Zg({
-                hasChunk: (Jd, kd, pd) => dd.isBlockInLoadedChunk(Jd, kd, pd),
-                MI: (Jd, kd, pd) => dd.blockIdToBlockName(dd.getBlockId(Jd, kd, pd)),
-                aY: (Jd, kd, pd, Nd) => {
-                  dd.aY(Jd, kd, pd, Nd)
+            for (const [LQ, qQ] of Object.entries(null !== (FQ = zQ[null !== wQ && void 0 !== wQ ? wQ : ""]) && void 0 !== FQ ? FQ : {})) {
+              var FQ;
+              yQ.set(LQ, new vv({
+                hasChunk: (FQ, wQ, LQ) => QQ.isBlockInLoadedChunk(FQ, wQ, LQ),
+                JG: (FQ, wQ, LQ) => QQ.blockIdToBlockName(QQ.getBlockId(FQ, wQ, LQ)),
+                KU: (FQ, wQ, LQ, qQ) => {
+                  QQ.KU(FQ, wQ, LQ, qQ)
                 },
-                playParticles: Jd => {
-                  dd.playParticleEffect(Jd)
+                playParticles: FQ => {
+                  QQ.playParticleEffect(FQ)
                 }
-              }, Nd))
+              }, qQ))
             }
-            Yd = (0, kg.h)((dd => function(dd) {
-              return Object.hasOwn(hJ, dd) || dd.startsWith("npc_")
-            }(dd) ? uJ(dd) : null)), Zd.resolveItemName = (Jd, kd) => {
-              const pd = dd.getItemStat(Pd, Jd, "displayName");
-              return pd && "object" === typeof pd && "translationKey" in pd ? kd(pd.translationKey, (0, mN.r)(pd.params, EZ.d.shown)) : "string" === typeof pd ? kd(pd) : Jd
-            }, Zd.quests.notifications.onShown = dd => {
-              "quest" === dd ? Sd.playSound(Pd, "magicAccent1", 1, 1) : "skillLevel" === dd ? Sd.playSound(Pd, "magicAccent1", 1, .6) : "landmark" === dd ? Sd.playSound(Pd, "trumpetFlare", 1, .6) : "npcNote" === dd ? Sd.playSound(Pd, "magicAccent2", .8, 1.1) : "started" === dd ? Sd.playSound(Pd, (0, SZ.g)("bigDrumSwish"), 1, 1) : Sd.playSound(Pd, (0, SZ.g)("rpgHandleSmallLeather"), 1, 1)
-            }, Zd.forge.onPartSelected = () => {
-              Sd.playSound(Pd, "rpgMetalClick", .6, .9 + .2 * Math.random())
-            }, Zd.forge.onOpened = () => {
-              ! function(dd) {
-                dd.preloadSounds([(0, SZ.g)("firecracker"), "fireBurn", "magicAccent2"])
-              }(dd)
-            }, Zd.forge.onForgeStarted = (Jd, kd, pd) => XZ(dd, Pd, Jd, kd, pd), Zd.smuggler.onBought = () => {
-              Sd.playSound(Pd, (0, SZ.g)("rpgHandleSmallLeather"), 1, 1), Sd.playSound(Pd, "chestOpen", .6, 1)
-            }, Zd.compass.register(new ed(Zd.map, !0)), Zd.compass.register(new ed(Zd.map, !1)), Zd.compass.register(new Id(Zd.map)), Zd.compass.register(new Gd((() => Zd.quests.getSnapshot().compassTarget)));
-            for (const kd of ["enemy", "npc"]) Zd.compass.register(new Rd(Zd.map, kd, (Jd => dd.checkValid(Jd) ? dd.yI(Jd) : void 0), (Jd => dd.isAlive(Jd))))
+            sQ = (0, Lv.g)((QQ => function(QQ) {
+              return Object.hasOwn(hF, QQ) || QQ.startsWith("npc_")
+            }(QQ) ? EF(QQ) : null)), kQ.resolveItemName = (FQ, wQ) => {
+              const LQ = QQ.getItemStat(DQ, FQ, "displayName");
+              return LQ && "object" === typeof LQ && "translationKey" in LQ ? wQ(LQ.translationKey, (0, sq.m)(LQ.params, hk.b.shown)) : "string" === typeof LQ ? wQ(LQ) : FQ
+            }, kQ.quests.notifications.onShown = QQ => {
+              "quest" === QQ ? UQ.playSound(DQ, "magicAccent1", 1, 1) : "skillLevel" === QQ ? UQ.playSound(DQ, "magicAccent1", 1, .6) : "landmark" === QQ ? UQ.playSound(DQ, "trumpetFlare", 1, .6) : "npcNote" === QQ ? UQ.playSound(DQ, "magicAccent2", .8, 1.1) : "started" === QQ ? UQ.playSound(DQ, (0, Tk.c)("bigDrumSwish"), 1, 1) : UQ.playSound(DQ, (0, Tk.c)("rpgHandleSmallLeather"), 1, 1)
+            }, kQ.forge.onPartSelected = () => {
+              UQ.playSound(DQ, "rpgMetalClick", .6, .9 + .2 * Math.random())
+            }, kQ.forge.onOpened = () => {
+              ! function(QQ) {
+                QQ.preloadSounds([(0, Tk.c)("firecracker"), "fireBurn", "magicAccent2"])
+              }(QQ)
+            }, kQ.forge.onForgeStarted = (FQ, wQ, LQ) => zk(QQ, DQ, FQ, wQ, LQ), kQ.smuggler.onBought = () => {
+              UQ.playSound(DQ, (0, Tk.c)("rpgHandleSmallLeather"), 1, 1), UQ.playSound(DQ, "chestOpen", .6, 1)
+            }, kQ.compass.register(new tQ(kQ.map, !0)), kQ.compass.register(new tQ(kQ.map, !1)), kQ.compass.register(new MQ(kQ.map)), kQ.compass.register(new GQ((() => kQ.quests.getSnapshot().compassTarget)));
+            for (const wQ of ["enemy", "npc"]) kQ.compass.register(new eQ(kQ.map, wQ, (FQ => QQ.checkValid(FQ) ? QQ.Qp(FQ) : void 0), (FQ => QQ.isAlive(FQ))))
           },
-          onAfterRender: (dd, Jd) => {
-            const kd = Sd.checkValid(Pd) ? Sd.yI(Pd) : null;
-            Zd.navigation.afterRender(kd, performance.now(), Jd), Zd.glowtide.afterRender(kd, Jd.cameraHeading), Zd.tideCharts.afterRender(kd), hd.afterRender()
+          onAfterRender: (QQ, FQ) => {
+            const wQ = UQ.checkValid(DQ) ? UQ.Qp(DQ) : null;
+            kQ.navigation.afterRender(wQ, performance.now(), FQ), kQ.glowtide.afterRender(wQ, FQ.cameraHeading), kQ.tideCharts.afterRender(wQ), hQ.afterRender()
           },
           onClose: () => {
-            var dd, Jd, kd, pd, Nd, Wd, Pd, ld, Ld, ed, Rd, Id, Gd, sd, ad;
-            Ad && Vd.j.unsubscribe(Ad), null === (dd = Yd) || void 0 === dd || dd(), bd.dispose(), Hd.dispose(), null === (Jd = jd) || void 0 === Jd || Jd.dispose(), hd.dispose(), Zd.dispose(), null === (kd = gd) || void 0 === kd || kd(), null === (pd = Cd) || void 0 === pd || pd(), null === (Nd = Kd) || void 0 === Nd || Nd(), null === (Wd = od) || void 0 === Wd || Wd(), null === (Pd = Qd) || void 0 === Pd || Pd(), null === (ld = Od) || void 0 === ld || ld(), null === (Ld = undefined) || void 0 === Ld || Ld(), null === (ed = vd) || void 0 === ed || ed(), null === (Rd = xd) || void 0 === Rd || Rd(), null === (Id = qd) || void 0 === Id || Id(), null === (Gd = Bd) || void 0 === Gd || Gd(), null === (sd = undefined) || void 0 === sd || sd(), null === (ad = Md) || void 0 === ad || ad()
+            var QQ, FQ, wQ, LQ, qQ, oQ, DQ, bQ, xQ, tQ, eQ, MQ, GQ, iQ, WQ;
+            BQ && gQ.l.unsubscribe(BQ), null === (QQ = sQ) || void 0 === QQ || QQ(), IQ.dispose(), ZQ.dispose(), null === (FQ = NQ) || void 0 === FQ || FQ.dispose(), hQ.dispose(), kQ.dispose(), null === (wQ = vQ) || void 0 === wQ || wQ(), null === (LQ = mQ) || void 0 === LQ || LQ(), null === (qQ = uQ) || void 0 === qQ || qQ(), null === (oQ = HQ) || void 0 === oQ || oQ(), null === (DQ = YQ) || void 0 === DQ || DQ(), null === (bQ = AQ) || void 0 === bQ || bQ(), null === (xQ = undefined) || void 0 === xQ || xQ(), null === (tQ = pQ) || void 0 === tQ || tQ(), null === (eQ = cQ) || void 0 === eQ || eQ(), null === (MQ = CQ) || void 0 === MQ || MQ(), null === (GQ = SQ) || void 0 === GQ || GQ(), null === (iQ = undefined) || void 0 === iQ || iQ(), null === (WQ = RQ) || void 0 === WQ || WQ()
           },
-          onPlayerChangeBlock: (dd, Jd, pd, Wd, gd, Cd) => {
-            if (dd === Pd && "Air" === Cd) {
-              const dd = Sd.getClientOption(Pd, "creative");
-              Zd.skills.predictBlock([Jd, pd, Wd], gd, dd);
-              const Cd = function(dd, Jd) {
-                  if ("hub" === Jd || "farming_1" === Jd || "mining_1" === Jd) return !Td.has(dd) || "hub" !== Jd && "mining_1" !== Jd ? Object.hasOwn(yd, dd) ? yd[dd] : void 0 : Ud
-                }(gd, kd),
-                Kd = ("hub" === kd || "mining_1" === kd) && (Nd.xd.some((dd => dd === gd)) || Object.hasOwn(Ed, gd) || "mining_1" === kd && "Block of Coal" === gd);
-              dd || void 0 === Cd && !Kd || Sd.aY(Jd, pd, Wd, null !== Cd && void 0 !== Cd ? Cd : Ud)
+          onPlayerChangeBlock: (QQ, FQ, LQ, oQ, vQ, mQ) => {
+            if (QQ === DQ && "Air" === mQ) {
+              const QQ = UQ.getClientOption(DQ, "creative");
+              kQ.skills.predictBlock([FQ, LQ, oQ], vQ, QQ);
+              const mQ = function(QQ, FQ) {
+                  if ("hub" === FQ || "farming_1" === FQ || "mining_1" === FQ) return !XQ.has(QQ) || "hub" !== FQ && "mining_1" !== FQ ? Object.hasOwn(jQ, QQ) ? jQ[QQ] : void 0 : lQ
+                }(vQ, wQ),
+                uQ = ("hub" === wQ || "mining_1" === wQ) && (qQ.zd.some((QQ => QQ === vQ)) || Object.hasOwn(fQ, vQ) || "mining_1" === wQ && "Block of Coal" === vQ);
+              QQ || void 0 === mQ && !uQ || UQ.KU(FQ, LQ, oQ, null !== mQ && void 0 !== mQ ? mQ : lQ)
             }
           },
-          onPlayerAttackEntity: (dd, Jd) => {
-            if (dd !== Pd || "Player" !== Sd.getEntityType(Jd)) return;
-            const [kd, pd, Nd] = Sd.yI(Jd);
-            Sd.burstParticlePreset("critical", [kd, pd + 1, Nd], 10)
+          onPlayerAttackEntity: (QQ, FQ) => {
+            if (QQ !== DQ || "Player" !== UQ.getEntityType(FQ)) return;
+            const [wQ, LQ, qQ] = UQ.Qp(FQ);
+            UQ.burstParticlePreset("critical", [wQ, LQ + 1, qQ], 10)
           },
-          onChangeBlockFail: dd => {
+          onChangeBlockFail: QQ => {
             for (const {
-                uW: Jd
+                Vo: FQ
               }
-              of dd) Zd.skills.rejectBlock(Jd)
+              of QQ) kQ.skills.rejectBlock(FQ)
           },
-          onReceivedMessageFromServer: (dd, Jd) => {
-            if ("skyblockGatedPortal" === dd) {
-              var kd;
-              const [dd, pd] = Jd;
-              return void(null === (kd = wd.get(dd)) || void 0 === kd || kd.ZL(pd))
+          onReceivedMessageFromServer: (QQ, FQ) => {
+            if ("skyblockGatedPortal" === QQ) {
+              var wQ;
+              const [QQ, LQ] = FQ;
+              return void(null === (wQ = yQ.get(QQ)) || void 0 === wQ || wQ.bx(LQ))
             }
-            if ("skyblockDailyReward" === dd) return void Zd.dailyReward.ZL(Jd);
-            if ("skyblockMailbox" === dd) return void Zd.mailbox.ZL(Jd);
-            if ("skyblockPortalTransit" === dd) return void Zd.portalTransit.ZL(Jd);
-            if ("skyblockLoot" === dd) return void bd.ZL(Sd, Jd);
-            if ("skyblockLava" === dd) return void Hd.ZL(Jd);
-            if ("skyblockForge" === dd) return void Zd.forge.ZL(Jd);
-            if ("skyblockMagmaward" === dd) return void Zd.magmaward.ZL(Jd);
-            if ("skyblockGlowtide" === dd) return void Zd.glowtide.ZL(Jd);
-            if ("skyblockGlowMeter" === dd) return void Zd.glowMeter.ZL(Jd);
-            if ("skyblockHushWait" === dd) return void Zd.hushWait.ZL(Jd);
-            if ("skyblockPassage" === dd) {
-              const dd = Jd;
-              return Zd.passage.ZL(dd), Zd.reachLog.receivePassagePhase(dd.passagePhase), qd ??= (0, sd.x)({
+            if ("skyblockDailyReward" === QQ) return void kQ.dailyReward.bx(FQ);
+            if ("skyblockMailbox" === QQ) return void kQ.mailbox.bx(FQ);
+            if ("skyblockPortalTransit" === QQ) return void kQ.portalTransit.bx(FQ);
+            if ("skyblockLoot" === QQ) return void IQ.bx(UQ, FQ);
+            if ("skyblockLava" === QQ) return void ZQ.bx(FQ);
+            if ("skyblockForge" === QQ) return void kQ.forge.bx(FQ);
+            if ("skyblockMagmaward" === QQ) return void kQ.magmaward.bx(FQ);
+            if ("skyblockGlowtide" === QQ) return void kQ.glowtide.bx(FQ);
+            if ("skyblockGlowMeter" === QQ) return void kQ.glowMeter.bx(FQ);
+            if ("skyblockHushWait" === QQ) return void kQ.hushWait.bx(FQ);
+            if ("skyblockPassage" === QQ) {
+              const QQ = FQ;
+              return kQ.passage.bx(QQ), kQ.reachLog.receivePassagePhase(QQ.passagePhase), CQ ??= (0, iQ.u)({
                 id: "skyblockPassage",
                 order: 5,
                 labelKey: "skyblockGame:passageButton",
@@ -10676,16 +10676,16 @@ export const modules = {
                   name: "Moonfish"
                 },
                 panel: !0,
-                onClick: Zd.passage.show
-              }), void Zd.keepersChair.receivePassage({
-                keepersChairPassagePhase: dd.passagePhase,
-                keepersChairPassageNextPhase: dd.passageNextPhase,
-                keepersChairPassageTurnsInMs: dd.passageTurnsInMs
+                onClick: kQ.passage.show
+              }), void kQ.keepersChair.receivePassage({
+                keepersChairPassagePhase: QQ.passagePhase,
+                keepersChairPassageNextPhase: QQ.passageNextPhase,
+                keepersChairPassageTurnsInMs: QQ.passageTurnsInMs
               })
             }
-            if ("skyblockTideCharts" === dd) {
-              const dd = Jd;
-              return Zd.tideCharts.ZL(dd), void(dd.tideCharts.length > 0 && (Bd ??= (0, sd.x)({
+            if ("skyblockTideCharts" === QQ) {
+              const QQ = FQ;
+              return kQ.tideCharts.bx(QQ), void(QQ.tideCharts.length > 0 && (SQ ??= (0, iQ.u)({
                 id: "skyblockTideCharts",
                 order: 8,
                 labelKey: "skyblockGame:tideChartsTitle",
@@ -10694,24 +10694,24 @@ export const modules = {
                   name: "Chunk Map"
                 },
                 panel: !0,
-                onClick: Zd.tideCharts.show
+                onClick: kQ.tideCharts.show
               })))
             }
-            if (dd === rd.C) {
-              var pd;
+            if (QQ === JQ.C) {
+              var LQ;
               const {
-                hookId: dd,
-                waiting: kd
-              } = Jd;
-              return void hd.hookWaiting(dd, null !== (pd = null === kd || void 0 === kd ? void 0 : kd.remainingMs) && void 0 !== pd ? pd : null)
+                hookId: QQ,
+                waiting: wQ
+              } = FQ;
+              return void hQ.hookWaiting(QQ, null !== (LQ = null === wQ || void 0 === wQ ? void 0 : wQ.remainingMs) && void 0 !== LQ ? LQ : null)
             }
-            if ("skyblockBiteTell" === dd) return void cd.receiveTell(Jd);
-            if ("skyblockSmuggler" === dd) return void Zd.smuggler.ZL(Jd);
-            if ("skyblockKeepersChair" === dd) return Zd.keepersChair.ZL(Jd), void Zd.lampLight.setAtChair(Zd.keepersChair.isAtChair());
-            if ("skyblockLampLight" === dd) {
-              const dd = Jd;
-              var Nd;
-              if (Zd.lampLight.ZL(dd), dd.lampLightReleasing) xd ??= (0, sd.x)({
+            if ("skyblockBiteTell" === QQ) return void VQ.receiveTell(FQ);
+            if ("skyblockSmuggler" === QQ) return void kQ.smuggler.bx(FQ);
+            if ("skyblockKeepersChair" === QQ) return kQ.keepersChair.bx(FQ), void kQ.lampLight.setAtChair(kQ.keepersChair.isAtChair());
+            if ("skyblockLampLight" === QQ) {
+              const QQ = FQ;
+              var qQ;
+              if (kQ.lampLight.bx(QQ), QQ.lampLightReleasing) cQ ??= (0, iQ.u)({
                 id: "skyblockLampLightKeepCatches",
                 order: 7,
                 labelKey: "skyblockGame:lampLightKeepCatches",
@@ -10720,42 +10720,42 @@ export const modules = {
                   name: "Bucket"
                 },
                 onClick: () => {
-                  Zd.lampLight.setRelease(!1)
+                  kQ.lampLight.setRelease(!1)
                 }
               });
-              else null === (Nd = xd) || void 0 === Nd || Nd(), xd = void 0;
+              else null === (qQ = cQ) || void 0 === qQ || qQ(), cQ = void 0;
               return
             }
-            if ("skyblockRegulars" === dd) return void Zd.regulars.ZL(Jd);
-            if ("skyblockHiddenWaters" === dd) return void Zd.hiddenWaters.ZL(Jd);
-            if ("skyblockReachLog" === dd) return Zd.reachLog.ZL(Jd), void(vd ??= (0, sd.x)({
+            if ("skyblockRegulars" === QQ) return void kQ.regulars.bx(FQ);
+            if ("skyblockHiddenWaters" === QQ) return void kQ.hiddenWaters.bx(FQ);
+            if ("skyblockReachLog" === QQ) return kQ.reachLog.bx(FQ), void(pQ ??= (0, iQ.u)({
               id: "skyblockReachLog",
               order: 6,
               labelKey: "skyblockGame:reachLogTitle",
               icon: {
                 kind: "item",
-                name: Sp
+                name: UL
               },
-              onClick: Zd.reachLog.ask
+              onClick: kQ.reachLog.ask
             }));
-            if ("skyblockBurrowDoor" === dd) {
-              for (const [dd, kd, pd, Nd] of Jd) Sd.aY(dd, kd, pd, Nd);
+            if ("skyblockBurrowDoor" === QQ) {
+              for (const [QQ, wQ, LQ, qQ] of FQ) UQ.KU(QQ, wQ, LQ, qQ);
               return
             }
-            if ("skyblockHud" === dd) Zd.receiveHud(Jd);
-            else if ("skyblockMap" === dd) Zd.map.ZL(Jd);
-            else if (dd === ud.g) Zd.skills.ZL(Jd);
-            else if (dd === md && "dialogue" === Jd.kind) Zd.dialogue.ZL(Jd);
-            else if (dd === md) Zd.quests.ZL(Jd);
-            else if ("skyblockDungeons" === dd) Zd.dungeons.ZL(Jd);
-            else if ("sbCollections" === dd) Zd.collections.ZL(Jd);
-            else if ("skyblockQuestGraph" === dd) Zd.questGraph.ZL(Jd);
+            if ("skyblockHud" === QQ) kQ.receiveHud(FQ);
+            else if ("skyblockMap" === QQ) kQ.map.bx(FQ);
+            else if (QQ === EQ.e) kQ.skills.bx(FQ);
+            else if (QQ === rQ && "dialogue" === FQ.kind) kQ.dialogue.bx(FQ);
+            else if (QQ === rQ) kQ.quests.bx(FQ);
+            else if ("skyblockDungeons" === QQ) kQ.dungeons.bx(FQ);
+            else if ("sbCollections" === QQ) kQ.collections.bx(FQ);
+            else if ("skyblockQuestGraph" === QQ) kQ.questGraph.bx(FQ);
             else {
-              if ("skyblockAutographs" !== dd) return;
-              Zd.autographs.ZL(Jd)
+              if ("skyblockAutographs" !== QQ) return;
+              kQ.autographs.bx(FQ)
             }
-            if (!Cd && Zd.map.getSnapshot().enabled) {
-              const dd = (0, sd.x)({
+            if (!mQ && kQ.map.getSnapshot().enabled) {
+              const QQ = (0, iQ.u)({
                   id: "skyblockMap",
                   order: 3,
                   labelKey: "skyblockGame:map",
@@ -10764,13 +10764,13 @@ export const modules = {
                     name: "Compass"
                   },
                   panel: !0,
-                  onClick: Zd.map.show
+                  onClick: kQ.map.show
                 }),
-                Jd = (0, td.t)(Zd.map.show);
-              Cd = () => {
-                dd(), Jd()
+                FQ = (0, nQ.q)(kQ.map.show);
+              mQ = () => {
+                QQ(), FQ()
               }
-            }!Kd && Zd.skills.getSnapshot().enabled && (Kd = (0, sd.x)({
+            }!uQ && kQ.skills.getSnapshot().enabled && (uQ = (0, iQ.u)({
               id: "skyblockSkills",
               order: 0,
               labelKey: "skyblockGame:skills",
@@ -10779,8 +10779,8 @@ export const modules = {
                 name: "Iron Sword"
               },
               panel: !0,
-              onClick: Zd.skills.show
-            })), !Od && Zd.collections.getSnapshot().enabled && (Od = (0, sd.x)({
+              onClick: kQ.skills.show
+            })), !AQ && kQ.collections.getSnapshot().enabled && (AQ = (0, iQ.u)({
               id: "skyblockCollections",
               order: 2.5,
               labelKey: "skyblockGame:collections",
@@ -10789,8 +10789,8 @@ export const modules = {
                 name: "Coal"
               },
               panel: !0,
-              onClick: Zd.collections.show
-            })), !od && Zd.quests.getSnapshot().enabled && (od = (0, sd.x)({
+              onClick: kQ.collections.show
+            })), !HQ && kQ.quests.getSnapshot().enabled && (HQ = (0, iQ.u)({
               id: "skyblockQuests",
               order: 1,
               labelKey: "skyblockGame:quests",
@@ -10799,8 +10799,8 @@ export const modules = {
                 name: "Book"
               },
               panel: !0,
-              onClick: Zd.quests.show
-            })), !Md && Zd.autographs.getSnapshot().enabled && (Md = (0, sd.x)({
+              onClick: kQ.quests.show
+            })), !RQ && kQ.autographs.getSnapshot().enabled && (RQ = (0, iQ.u)({
               id: "skyblockAutographs",
               order: 5,
               labelKey: "skyblockGame:autographs",
@@ -10809,53 +10809,53 @@ export const modules = {
                 name: "Name Tag"
               },
               panel: !0,
-              onClick: Zd.autographs.show
+              onClick: kQ.autographs.show
             }));
-            const Wd = Zd.dungeons.getSnapshot().enabled;
-            var Pd;
-            (Kd || od || Wd) && Ld !== Wd && (Ld = Wd, null === (Pd = Qd) || void 0 === Pd || Pd(), Qd = (0, sd.x)({
+            const oQ = kQ.dungeons.getSnapshot().enabled;
+            var DQ;
+            (uQ || HQ || oQ) && xQ !== oQ && (xQ = oQ, null === (DQ = YQ) || void 0 === DQ || DQ(), YQ = (0, iQ.u)({
               id: "skyblockDungeons",
               order: 2,
               labelKey: "skyblockGame:dungeons",
               icon: {
                 kind: "image",
-                src: jJ
+                src: NF
               },
-              disabled: !Wd,
+              disabled: !oQ,
               panel: !0,
-              onClick: Zd.dungeons.show
+              onClick: kQ.dungeons.show
             }));
-            gd || (gd = (0, td.w)((0, ad.createElement)(mZ, {
-              controller: Zd
+            vQ || (vQ = (0, nQ.u)((0, WQ.createElement)(Uk, {
+              controller: kQ
             }), {
-              content: (0, ad.createElement)(bZ, {
-                controller: Zd
+              content: (0, WQ.createElement)(Nk, {
+                controller: kQ
               }),
-              onClose: Zd.close
+              onClose: kQ.close
             }))
           },
-          Do: () => {
-            var dd;
-            for (const Jd of wd.values()) Jd.Do();
-            bd.Do(Sd), Hd.Do(), null === (dd = jd) || void 0 === dd || dd.Do(), Zd.skills.Do(), Zd.quests.Do(), Zd.dailyReward.Do(), Zd.mailbox.Do(), Zd.map.Do()
+          fH: () => {
+            var QQ;
+            for (const FQ of yQ.values()) FQ.fH();
+            IQ.fH(UQ), ZQ.fH(), null === (QQ = NQ) || void 0 === QQ || QQ.fH(), kQ.skills.fH(), kQ.quests.fH(), kQ.dailyReward.fH(), kQ.mailbox.fH(), kQ.map.fH()
           }
         }
       }
   },
-  36534: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Nd,
-      g: () => pd
+  36021: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => qQ,
+      e: () => LQ
     });
-    const pd = "skyblockSkills",
-      Nd = "skills_test_gym"
+    const LQ = "skyblockSkills",
+      qQ = "skills_test_gym"
   },
-  9257: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Nd,
-      h: () => Pd
+  9127: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => qQ,
+      d: () => DQ
     });
-    const pd = [{
+    const LQ = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -11037,164 +11037,164 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Nd(dd) {
-      let Jd, kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof dd) {
-        if (!Number.isFinite(dd)) return "0";
-        if (Math.abs(dd) < 100) {
-          const Jd = dd < 0 ? "-" : "",
-            kd = Math.abs(dd);
-          return kd >= 10 ? `${Jd}${kd.toFixed(1).replace(/\.0$/,"")}` : `${Jd}${kd.toFixed(2).replace(/\.?0+$/,"")}`
+    function qQ(QQ) {
+      let FQ, wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof QQ) {
+        if (!Number.isFinite(QQ)) return "0";
+        if (Math.abs(QQ) < 100) {
+          const FQ = QQ < 0 ? "-" : "",
+            wQ = Math.abs(QQ);
+          return wQ >= 10 ? `${FQ}${wQ.toFixed(1).replace(/\.0$/,"")}` : `${FQ}${wQ.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Jd = BigInt(Math.floor(dd))
-      } else Jd = dd;
-      const Nd = Jd < 0n ? -Jd : Jd,
-        Wd = Jd < 0n ? "-" : "",
-        Pd = Nd.toString();
-      if (Pd.length <= kd) return `${Wd}${Pd}`;
-      const Zd = 3 * Math.floor((Pd.length - 1) / 3);
-      if (Zd < 3) return `${Wd}${Pd}`;
-      if (Zd > 3 * pd.length) {
-        const dd = Pd[0],
-          Jd = Pd.slice(1, 3).replace(/0+$/, "");
-        return `${Wd}${Jd?`${dd}.${Jd}`:dd}e${Pd.length-1}`
+        FQ = BigInt(Math.floor(QQ))
+      } else FQ = QQ;
+      const qQ = FQ < 0n ? -FQ : FQ,
+        oQ = FQ < 0n ? "-" : "",
+        DQ = qQ.toString();
+      if (DQ.length <= wQ) return `${oQ}${DQ}`;
+      const kQ = 3 * Math.floor((DQ.length - 1) / 3);
+      if (kQ < 3) return `${oQ}${DQ}`;
+      if (kQ > 3 * LQ.length) {
+        const QQ = DQ[0],
+          FQ = DQ.slice(1, 3).replace(/0+$/, "");
+        return `${oQ}${FQ?`${QQ}.${FQ}`:QQ}e${DQ.length-1}`
       }
       const {
-        threshold: gd,
-        suffix: Cd
-      } = pd[pd.length - Zd / 3], Kd = Nd / gd, od = Number(1000n * (Nd % gd) / gd), ld = Number(Kd) + od / 1e3;
-      let Qd;
-      return Qd = ld >= 100 ? Math.floor(ld).toString() : ld >= 10 ? ld.toFixed(1).replace(/\.0$/, "") : ld.toFixed(2).replace(/\.?0+$/, ""), `${Wd}${Qd}${Cd}`
+        threshold: vQ,
+        suffix: mQ
+      } = LQ[LQ.length - kQ / 3], uQ = qQ / vQ, HQ = Number(1000n * (qQ % vQ) / vQ), bQ = Number(uQ) + HQ / 1e3;
+      let YQ;
+      return YQ = bQ >= 100 ? Math.floor(bQ).toString() : bQ >= 10 ? bQ.toFixed(1).replace(/\.0$/, "") : bQ.toFixed(2).replace(/\.?0+$/, ""), `${oQ}${YQ}${mQ}`
     }
-    const Wd = pd.map((dd => {
+    const oQ = LQ.map((QQ => {
       let {
-        threshold: Jd,
-        suffix: kd
-      } = dd;
+        threshold: FQ,
+        suffix: wQ
+      } = QQ;
       return {
-        threshold: Number(Jd),
-        suffix: kd
+        threshold: Number(FQ),
+        suffix: wQ
       }
-    })).filter((dd => {
+    })).filter((QQ => {
       let {
-        threshold: Jd
-      } = dd;
-      return Number.isFinite(Jd)
+        threshold: FQ
+      } = QQ;
+      return Number.isFinite(FQ)
     }));
 
-    function Pd(dd) {
-      const Jd = Math.abs(dd),
-        kd = dd < 0 ? "-" : "";
+    function DQ(QQ) {
+      const FQ = Math.abs(QQ),
+        wQ = QQ < 0 ? "-" : "";
       for (const {
-          threshold: pd,
-          suffix: Nd
+          threshold: LQ,
+          suffix: qQ
         }
-        of Wd)
-        if (Jd >= pd) {
-          const dd = Jd / pd;
-          if (dd >= 1e3) return `${kd}${Jd.toExponential(2).replace("e+","e")}`;
-          let Wd;
-          return Wd = dd >= 100 ? Math.floor(dd).toString() : dd >= 10 ? dd.toFixed(1).replace(/\.0$/, "") : dd.toFixed(2).replace(/\.?0+$/, ""), `${kd}${Wd}${Nd}`
-        } return `${kd}${Jd}`
+        of oQ)
+        if (FQ >= LQ) {
+          const QQ = FQ / LQ;
+          if (QQ >= 1e3) return `${wQ}${FQ.toExponential(2).replace("e+","e")}`;
+          let oQ;
+          return oQ = QQ >= 100 ? Math.floor(QQ).toString() : QQ >= 10 ? QQ.toFixed(1).replace(/\.0$/, "") : QQ.toFixed(2).replace(/\.?0+$/, ""), `${wQ}${oQ}${qQ}`
+        } return `${wQ}${FQ}`
     }
   },
-  38694: (dd, Jd, kd) => {
-    var pd = {
-      "./combat_1.png": 38700,
-      "./dungeon_crumbling_crypt.png": 38709,
-      "./dungeon_frozen_hollow.png": 38714,
-      "./dungeon_wildwood_grove.png": 38719,
-      "./dungeons.png": 38725,
-      "./farming_1.png": 38730,
-      "./fishing_1.png": 38739,
-      "./hub.png": 38742,
-      "./island.png": 38745,
-      "./mining_1.png": 38752,
-      "./mining_1_bridge.png": 38760,
-      "./mining_1_gallery.png": 38763,
-      "./mining_1_hollow.png": 38768,
-      "./mining_1_village.png": 38772
+  38085: (QQ, FQ, wQ) => {
+    var LQ = {
+      "./combat_1.png": 38090,
+      "./dungeon_crumbling_crypt.png": 38093,
+      "./dungeon_frozen_hollow.png": 38099,
+      "./dungeon_wildwood_grove.png": 38103,
+      "./dungeons.png": 38109,
+      "./farming_1.png": 38116,
+      "./fishing_1.png": 38124,
+      "./hub.png": 38126,
+      "./island.png": 38134,
+      "./mining_1.png": 38140,
+      "./mining_1_bridge.png": 38143,
+      "./mining_1_gallery.png": 38148,
+      "./mining_1_hollow.png": 38151,
+      "./mining_1_village.png": 38156
     };
 
-    function Nd(dd) {
-      var Jd = Wd(dd);
-      return kd(Jd)
+    function qQ(QQ) {
+      var FQ = oQ(QQ);
+      return wQ(FQ)
     }
 
-    function Wd(dd) {
-      if (!kd.o(pd, dd)) {
-        var Jd = new Error("Cannot find module '" + dd + "'");
-        throw Jd.code = "MODULE_NOT_FOUND", Jd
+    function oQ(QQ) {
+      if (!wQ.o(LQ, QQ)) {
+        var FQ = new Error("Cannot find module '" + QQ + "'");
+        throw FQ.code = "MODULE_NOT_FOUND", FQ
       }
-      return pd[dd]
+      return LQ[QQ]
     }
-    Nd.keys = function() {
-      return Object.keys(pd)
-    }, Nd.resolve = Wd, dd.exports = Nd, Nd.id = 38694
+    qQ.keys = function() {
+      return Object.keys(LQ)
+    }, qQ.resolve = oQ, QQ.exports = qQ, qQ.id = 38085
   },
-  38700: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/combat_1.72ac23641446e4f80923.png"
+  38090: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/combat_1.72ac23641446e4f80923.png"
   },
-  38709: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
+  38093: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/dungeon_crumbling_crypt.39389aef74bd36e64180.png"
   },
-  38714: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
+  38099: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/dungeon_frozen_hollow.042bf06d2cfd2c68c7e6.png"
   },
-  38719: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
+  38103: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/dungeon_wildwood_grove.d5115bf7a4d3fc811ff4.png"
   },
-  38725: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/dungeons.6836b40c30687755a545.png"
+  38109: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/dungeons.6836b40c30687755a545.png"
   },
-  38730: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/farming_1.08302e28e41bf98474fe.png"
+  38116: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/farming_1.08302e28e41bf98474fe.png"
   },
-  38739: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
+  38124: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/fishing_1.c63e97744abce5bb9af7.png"
   },
-  38742: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/hub.8b20a64678134496251d.png"
+  38126: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/hub.8b20a64678134496251d.png"
   },
-  38745: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/island.113e20c7bd7db93fe1ce.png"
+  38134: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/island.113e20c7bd7db93fe1ce.png"
   },
-  38752: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/mining_1.68cac4bdadc5ef809ae5.png"
+  38140: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/mining_1.68cac4bdadc5ef809ae5.png"
   },
-  38760: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/mining_1_bridge.56ff82ba845db0b52726.png"
+  38143: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/mining_1_bridge.56ff82ba845db0b52726.png"
   },
-  38763: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/mining_1_gallery.4e799e6329dbc66249ce.png"
+  38148: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/mining_1_gallery.4e799e6329dbc66249ce.png"
   },
-  38768: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
+  38151: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/mining_1_hollow.82ed2e9c753519918230.png"
   },
-  38772: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/mining_1_village.c2a625c1c4541a1fbe65.png"
+  38156: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/mining_1_village.c2a625c1c4541a1fbe65.png"
   },
-  18700: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAFT2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIxMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLzEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiPgogICA8ZGM6dGl0bGU+CiAgICA8cmRmOkFsdD4KICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlBsYW5rczwvcmRmOmxpPgogICAgPC9yZGY6QWx0PgogICA8L2RjOnRpdGxlPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC42IgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTA5LTExVDA2OjA4OjEzLTA0OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5RDOytAAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz9PxTcRtLAQDKJWKlEhaGOR4AvUIp7gq0kul0RI4nEXkWAr2AoKoo2vQv8CbQVrQVAUQay1VbTRcM7lAhExs8zOt7/dGXZnQVGTWsqq8EEqnTFDYwHv3PyCt+qVGuqoRaEtrFnG1MyoSkn7vKfMibc9Tq3S5/61uqhuaVBWLTysGWZGeFx4ci1jOLwj3KwlwlHhM+FuUy4ofOfoEZdfHI67/O2wqYaCoDQKe+O/OPKLtYSZEpaX05FKrmqF+zgvqdfTszMS28VbsQgxRgAvE4wQxE8fQzL76aGfXllRIt+Xz59mRXI1mQ2ymCwTJ0GGblFXpbouMSa6LiNJ1un/375asYF+t3p9ACqfbfu9E6q2Ibdl219Htp07hvInuEwX81cOYfBD9K2i1nEAng04vypqkV242ISWRyNshvNSubgSi8HbKTTMQ9MN1C66PSvsc/IA6rp81TXs7UOXnPcs/QAlUWfIbV2y+QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9JREFUGJVjYKAQ/IdiOGDEpqh6jiYDAwMDQ2vKdbgaJnzG5nSqwEzHUPj/1WJThpZPDxg+vv2N212vFpv+/9/H+f9yFi/MjXB3wtz4/38fJwMDAwPDlTssDLrTPmO4nwXGuHIHwsSmCMVELGLkAQBi0iUZsdoC/wAAAABJRU5ErkJggg=="
+  18442: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAFT2lUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS41LjAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iCiAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgZXhpZjpQaXhlbFhEaW1lbnNpb249IjEwIgogICBleGlmOlBpeGVsWURpbWVuc2lvbj0iMTAiCiAgIGV4aWY6Q29sb3JTcGFjZT0iMSIKICAgdGlmZjpJbWFnZVdpZHRoPSIxMCIKICAgdGlmZjpJbWFnZUxlbmd0aD0iMTAiCiAgIHRpZmY6UmVzb2x1dGlvblVuaXQ9IjIiCiAgIHRpZmY6WFJlc29sdXRpb249IjcyLzEiCiAgIHRpZmY6WVJlc29sdXRpb249IjcyLzEiCiAgIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiCiAgIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIKICAgeG1wOk1vZGlmeURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiCiAgIHhtcDpNZXRhZGF0YURhdGU9IjIwMjUtMDktMTFUMDY6MDg6MTMtMDQ6MDAiPgogICA8ZGM6dGl0bGU+CiAgICA8cmRmOkFsdD4KICAgICA8cmRmOmxpIHhtbDpsYW5nPSJ4LWRlZmF1bHQiPlBsYW5rczwvcmRmOmxpPgogICAgPC9yZGY6QWx0PgogICA8L2RjOnRpdGxlPgogICA8eG1wTU06SGlzdG9yeT4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJwcm9kdWNlZCIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWZmaW5pdHkgRGVzaWduZXIgMS4xMC42IgogICAgICBzdEV2dDp3aGVuPSIyMDI1LTA5LTExVDA2OjA4OjEzLTA0OjAwIi8+CiAgICA8L3JkZjpTZXE+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+Cjw/eHBhY2tldCBlbmQ9InIiPz5RDOytAAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kbtLA0EQhz9PxTcRtLAQDKJWKlEhaGOR4AvUIp7gq0kul0RI4nEXkWAr2AoKoo2vQv8CbQVrQVAUQay1VbTRcM7lAhExs8zOt7/dGXZnQVGTWsqq8EEqnTFDYwHv3PyCt+qVGuqoRaEtrFnG1MyoSkn7vKfMibc9Tq3S5/61uqhuaVBWLTysGWZGeFx4ci1jOLwj3KwlwlHhM+FuUy4ofOfoEZdfHI67/O2wqYaCoDQKe+O/OPKLtYSZEpaX05FKrmqF+zgvqdfTszMS28VbsQgxRgAvE4wQxE8fQzL76aGfXllRIt+Xz59mRXI1mQ2ymCwTJ0GGblFXpbouMSa6LiNJ1un/375asYF+t3p9ACqfbfu9E6q2Ibdl219Htp07hvInuEwX81cOYfBD9K2i1nEAng04vypqkV242ISWRyNshvNSubgSi8HbKTTMQ9MN1C66PSvsc/IA6rp81TXs7UOXnPcs/QAlUWfIbV2y+QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAG9JREFUGJVjYKAQ/IdiOGDEpqh6jiYDAwMDQ2vKdbgaJnzG5nSqwEzHUPj/1WJThpZPDxg+vv2N212vFpv+/9/H+f9yFi/MjXB3wtz4/38fJwMDAwPDlTssDLrTPmO4nwXGuHIHwsSmCMVELGLkAQBi0iUZsdoC/wAAAABJRU5ErkJggg=="
   },
-  20930: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9miMYIsbCweGlYDflREymLmRgKizHKYPPmmTejZsbrvZFkq2wVJTZ+LfgL2CprpYiUbFkTG/ScZ6Zmkjm3c8/nfu89p3vPBVc0rWWsym7IZHNmJBxUZmKzSvUzNbTSyCAeVbOMiamRKGXt444KJ950OrXKn/vXahcSlgYVNcJDmmHmhEeFx1dyhsPbws1aSl0QPhX2m3JB4VtHj+f5xeFknr8cNqORELgahJVkCcdLWEuZGWF5Ob5Melkr3Md5iTeRnZ6S2CbeikWEMEEUxhgmRIAeBmQO0EkvXbKiTH73b/4kS5KryWywiskiSVLk8Iu6LNUTEnXREzLSrDr9/9tXS+/rzVf3BqHqybbf2qF6C743bfvz0La/j8D9CBfZYv7SAfS/i75Z1Hz7UL8OZ5dFLb4D5xvQ8mCopvorucVdug6vJ1AXg6Zr8Mzle1bY5/geomvyVVewuwcdcr5+/gejEmgBy3n7uAAAAGRJREFUGJWVkDEOgCAMRZ+Eu5iQeBtu6MpRnNkYuUZhULQwKP7lN+n7bVOY1HJ5+eJsq8q+AiA5ARCDALAdpxsdk5yIQYhBcL5rPWCDmka4j73oBscJzptug9UpDWsIfrxn9kQqJZUnE6phAjUAAAAASUVORK5CYII="
+  20487: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAABgWlDQ1BzUkdCIElFQzYxOTY2LTIuMQAAKJF1kc8rRFEUxz9miMYIsbCweGlYDflREymLmRgKizHKYPPmmTejZsbrvZFkq2wVJTZ+LfgL2CprpYiUbFkTG/ScZ6Zmkjm3c8/nfu89p3vPBVc0rWWsym7IZHNmJBxUZmKzSvUzNbTSyCAeVbOMiamRKGXt444KJ950OrXKn/vXahcSlgYVNcJDmmHmhEeFx1dyhsPbws1aSl0QPhX2m3JB4VtHj+f5xeFknr8cNqORELgahJVkCcdLWEuZGWF5Ob5Melkr3Md5iTeRnZ6S2CbeikWEMEEUxhgmRIAeBmQO0EkvXbKiTH73b/4kS5KryWywiskiSVLk8Iu6LNUTEnXREzLSrDr9/9tXS+/rzVf3BqHqybbf2qF6C743bfvz0La/j8D9CBfZYv7SAfS/i75Z1Hz7UL8OZ5dFLb4D5xvQ8mCopvorucVdug6vJ1AXg6Zr8Mzle1bY5/geomvyVVewuwcdcr5+/gejEmgBy3n7uAAAAGRJREFUGJWVkDEOgCAMRZ+Eu5iQeBtu6MpRnNkYuUZhULQwKP7lN+n7bVOY1HJ5+eJsq8q+AiA5ARCDALAdpxsdk5yIQYhBcL5rPWCDmka4j73oBscJzptug9UpDWsIfrxn9kQqJZUnE6phAjUAAAAASUVORK5CYII="
   },
-  23256: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGtJREFUGJVjYKAC+A/FDAwMDAxMuBR9fr6D4esduAasCv9/fr6D4cX7yyiC6Ar/f36+g4GBgYFBQlAXp0K4InTTGBgYGBjRrYOZxPTVg4FbBUUNROHXO6iYgYHhv3eYEHafImMXfz6siggCADC+M1RlDaxOAAAAAElFTkSuQmCC"
+  22892: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGtJREFUGJVjYKAC+A/FDAwMDAxMuBR9fr6D4esduAasCv9/fr6D4cX7yyiC6Ar/f36+g4GBgYFBQlAXp0K4InTTGBgYGBjRrYOZxPTVg4FbBUUNROHXO6iYgYHhv3eYEHafImMXfz6siggCADC+M1RlDaxOAAAAAElFTkSuQmCC"
   },
-  24763: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE9JREFUGJVjYCASMKLx/+OSR1b4/z9PMqqqL3OxGcbwHxl3MXj9/8+T/B+LLQgNNVHm/6E24FT4f2qRG9xUXAqRFTHgUoiuCNnNWD1COQAAFWcvZJ927BwAAAAASUVORK5CYII="
+  24459: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE9JREFUGJVjYCASMKLx/+OSR1b4/z9PMqqqL3OxGcbwHxl3MXj9/8+T/B+LLQgNNVHm/6E24FT4f2qRG9xUXAqRFTHgUoiuCNnNWD1COQAAFWcvZJ927BwAAAAASUVORK5CYII="
   },
-  26456: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAH1JREFUGJVjYKAC+A/FDAwMDAxMuBSdyDdkWLzBGKYBq8L/J+wNGR4se4IiiK7w/wl7QwYGBgYGBS0ZnArhih5cQzUNWeH/E/mGcAUKWjIMtwuZGGIDzjIwMDAwwgkGBob/UIfDQWzAWQbvMCHGraveYXoCGbv482HxJxEAAJssJtLET2YfAAAAAElFTkSuQmCC"
+  26092: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAH1JREFUGJVjYKAC+A/FDAwMDAxMuBSdyDdkWLzBGKYBq8L/J+wNGR4se4IiiK7w/wl7QwYGBgYGBS0ZnArhih5cQzUNWeH/E/mGcAUKWjIMtwuZGGIDzjIwMDAwwgkGBob/UIfDQWzAWQbvMCHGraveYXoCGbv482HxJxEAAJssJtLET2YfAAAAAElFTkSuQmCC"
   },
-  26472: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAItJREFUGJVjYKAA/Ifh3nJb/Arv7E79X+Mp+p+BgeH/1EYX7Ir299n8v7M79f/+PhuYyQwMDAwMTOgqZXU1GR5fvs4gq6vJcGd3KswpDCzoCmGKHl++zrB3901UybBACwYGBob/NZ6icLfBMFSOgRHJbQwMDAwMjkVHGMICLRiRDVq1/gTCE+gmkA0A4Aw5D/wQUU0AAAAASUVORK5CYII="
+  26105: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAItJREFUGJVjYKAA/Ifh3nJb/Arv7E79X+Mp+p+BgeH/1EYX7Ir299n8v7M79f/+PhuYyQwMDAwMTOgqZXU1GR5fvs4gq6vJcGd3KswpDCzoCmGKHl++zrB3901UybBACwYGBob/NZ6icLfBMFSOgRHJbQwMDAwMjkVHGMICLRiRDVq1/gTCE+gmkA0A4Aw5D/wQUU0AAAAASUVORK5CYII="
   },
-  38683: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  38072: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

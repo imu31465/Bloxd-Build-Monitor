@@ -1,559 +1,559 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  41062: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      noaDevTools: () => od
+  40475: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      noaDevTools: () => HQ
     });
-    var pd = kd(37760),
-      Nd = kd(37743),
-      Wd = kd(2634),
-      Pd = kd(1753);
+    var LQ = wQ(37129),
+      qQ = wQ(37118),
+      oQ = wQ(2676),
+      DQ = wQ(1725);
 
-    function Zd(dd) {
+    function kQ(QQ) {
       const {
-        UL: Jd
-      } = dd, kd = Jd.engine, pd = {
-        width: kd.getRenderWidth(),
-        height: kd.getRenderHeight()
+        Zx: FQ
+      } = QQ, wQ = FQ.engine, LQ = {
+        width: wQ.getRenderWidth(),
+        height: wQ.getRenderHeight()
       };
       return {
-        canvas: kd.getRenderingCanvas(),
-        maxTextureSize: kd.getCaps().maxTextureSize,
-        drawing: () => !dd.YG,
-        resize: (dd, Jd) => {
-          kd.setSize(dd, Jd)
+        canvas: wQ.getRenderingCanvas(),
+        maxTextureSize: wQ.getCaps().maxTextureSize,
+        drawing: () => !QQ.WC,
+        resize: (QQ, FQ) => {
+          wQ.setSize(QQ, FQ)
         },
         restoreSize: () => {
-          kd.setSize(pd.width, pd.height), Jd.resize()
+          wQ.setSize(LQ.width, LQ.height), FQ.resize()
         },
-        onFrameDrawn: Jd => (dd.on("afterRender", Jd), () => {
-          dd.off("afterRender", Jd)
+        onFrameDrawn: FQ => (QQ.on("afterRender", FQ), () => {
+          QQ.off("afterRender", FQ)
         })
       }
     }
-    var gd = kd(41042),
-      Cd = kd(9117);
+    var vQ = wQ(40455),
+      mQ = wQ(8978);
 
-    function Kd(dd, Jd) {
+    function uQ(QQ, FQ) {
       let {
-        width: Cd,
-        height: Kd,
-        colouring: od
-      } = Jd;
-      const ld = "normals" === od,
-        Qd = "depth" === od;
-      return new Promise((Jd => {
+        width: mQ,
+        height: uQ,
+        colouring: HQ
+      } = FQ;
+      const bQ = "normals" === HQ,
+        YQ = "depth" === HQ;
+      return new Promise((FQ => {
         try {
-          const Ld = (0, Wd.e)();
-          if (Ld.UL.yL) return "screenshot" !== dd || null !== od ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void Jd()) : void(0, gd.b)(Zd(Ld), Cd, Kd).finally(Jd);
-          const Od = Ld.UL.engine,
-            ed = Ld.UL.Wm(),
-            Rd = Cd,
-            Id = Kd;
-          Promise.all([Promise.all([kd.e(246), kd.e(247), kd.e(228)]).then((() => kd(60859))), Promise.all([kd.e(227), kd.e(226), kd.e(246), kd.e(247), kd.e(244), kd.e(248), kd.e(251), kd.e(302), kd.e(232)]).then((() => kd(60867))), Promise.all([kd.e(227), kd.e(226), kd.e(246), kd.e(247), kd.e(244), kd.e(254), kd.e(248), kd.e(256), kd.e(234)]).then((() => kd(60873))), kd.e(345).then((() => kd(60880))), Promise.all([kd.e(226), kd.e(222)]).then((() => kd(37245))), kd.e(245).then((() => kd(60885))), kd.e(229).then((() => kd(60893)))]).then((Wd => {
+          const xQ = (0, oQ.d)();
+          if (xQ.Zx.yx) return "screenshot" !== QQ || null !== HQ ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void FQ()) : void(0, vQ.c)(kQ(xQ), mQ, uQ).finally(FQ);
+          const AQ = xQ.Zx.engine,
+            tQ = xQ.Zx.iN(),
+            eQ = mQ,
+            MQ = uQ;
+          Promise.all([Promise.all([wQ.e(246), wQ.e(247), wQ.e(228)]).then((() => wQ(60631))), Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(248), wQ.e(251), wQ.e(302), wQ.e(232)]).then((() => wQ(60637))), Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(254), wQ.e(248), wQ.e(256), wQ.e(234)]).then((() => wQ(60642))), wQ.e(345).then((() => wQ(60647))), Promise.all([wQ.e(226), wQ.e(222)]).then((() => wQ(36688))), wQ.e(245).then((() => wQ(60652))), wQ.e(229).then((() => wQ(60660)))]).then((oQ => {
             const {
-              CreateScreenshotUsingRenderTarget: Zd
-            } = Wd[1], {
-              ShaderMaterial: gd
-            } = Wd[2], {
-              ShaderLanguage: Cd
-            } = Wd[3], {
-              IL: Kd
-            } = Wd[4], {
-              registerDevtoolsShader: od
-            } = Wd[6], Ld = Cd.GLSL, Gd = new Map, vd = ed.meshes.filter((dd => dd.material));
-            let xd = !1,
-              qd = null;
+              CreateScreenshotUsingRenderTarget: kQ
+            } = oQ[1], {
+              ShaderMaterial: vQ
+            } = oQ[2], {
+              ShaderLanguage: mQ
+            } = oQ[3], {
+              Ox: uQ
+            } = oQ[4], {
+              registerDevtoolsShader: HQ
+            } = oQ[6], xQ = mQ.GLSL, GQ = new Map, pQ = tQ.meshes.filter((QQ => QQ.material));
+            let cQ = !1,
+              CQ = null;
 
-            function Bd() {
-              var dd;
-              xd && (xd = !1, (0, pd.i)(ed.meshes, !1)), null === (dd = qd) || void 0 === dd || dd(), qd = null, vd.forEach((dd => {
-                const Jd = Gd.get(dd);
-                Jd && (dd.material = Jd)
+            function SQ() {
+              var QQ;
+              cQ && (cQ = !1, (0, LQ.f)(tQ.meshes, !1)), null === (QQ = CQ) || void 0 === QQ || QQ(), CQ = null, pQ.forEach((QQ => {
+                const FQ = GQ.get(QQ);
+                FQ && (QQ.material = FQ)
               }))
             }
-            if (ld) {
-              const dd = [],
-                Jd = [];
-              vd.forEach((kd => {
-                const pd = kd.name.toLowerCase(),
-                  Nd = kd.pU().boundingBox.center,
-                  Wd = ed.activeCamera.position.subtract(Nd).length();
-                pd.includes("sky") || pd.includes("background") || pd.includes("environment") || Wd > 1e3 ? Jd.push(kd) : dd.push(kd)
-              })), od("devtoolsNormal", Ld);
-              const kd = new gd("normalMaterial", ed, "devtoolsNormal", {
+            if (bQ) {
+              const QQ = [],
+                FQ = [];
+              pQ.forEach((wQ => {
+                const LQ = wQ.name.toLowerCase(),
+                  qQ = wQ.sK().boundingBox.center,
+                  oQ = tQ.activeCamera.position.subtract(qQ).length();
+                LQ.includes("sky") || LQ.includes("background") || LQ.includes("environment") || oQ > 1e3 ? FQ.push(wQ) : QQ.push(wQ)
+              })), HQ("devtoolsNormal", xQ);
+              const wQ = new vQ("normalMaterial", tQ, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: Ld
+                shaderLanguage: xQ
               });
-              od("devtoolsWhite", Ld);
-              const pd = new gd("whiteMaterial", ed, "devtoolsWhite", {
+              HQ("devtoolsWhite", xQ);
+              const LQ = new vQ("whiteMaterial", tQ, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: Ld
+                shaderLanguage: xQ
               });
-              dd.forEach((dd => {
-                Gd.set(dd, dd.material), dd.material = kd
-              })), Jd.forEach((dd => {
-                Gd.set(dd, dd.material), dd.material = pd
+              QQ.forEach((QQ => {
+                GQ.set(QQ, QQ.material), QQ.material = wQ
+              })), FQ.forEach((QQ => {
+                GQ.set(QQ, QQ.material), QQ.material = LQ
               }))
-            } else if (Qd) {
-              od("devtoolsDepth", Ld);
-              const dd = ed.activeCamera.position;
-              let Jd = 0,
-                kd = 1 / 0;
-              vd.forEach((pd => {
-                const Nd = pd.name.toLowerCase();
-                if (Nd.includes("sky") || Nd.includes("background") || Nd.includes("environment")) return;
-                const Wd = pd.pU().boundingBox.center,
-                  Pd = Kd.TransformCoordinates(Wd, pd.getWorldMatrix()),
-                  Zd = dd.subtract(Pd).length();
-                Zd > 1e3 || (Jd = Math.max(Jd, Zd), kd = Math.min(kd, Zd))
+            } else if (YQ) {
+              HQ("devtoolsDepth", xQ);
+              const QQ = tQ.activeCamera.position;
+              let FQ = 0,
+                wQ = 1 / 0;
+              pQ.forEach((LQ => {
+                const qQ = LQ.name.toLowerCase();
+                if (qQ.includes("sky") || qQ.includes("background") || qQ.includes("environment")) return;
+                const oQ = LQ.sK().boundingBox.center,
+                  DQ = uQ.TransformCoordinates(oQ, LQ.getWorldMatrix()),
+                  kQ = QQ.subtract(DQ).length();
+                kQ > 1e3 || (FQ = Math.max(FQ, kQ), wQ = Math.min(wQ, kQ))
               }));
-              const pd = Jd - kd;
-              Jd += .1 * pd, kd = Math.max(0, kd - .1 * pd), console.log(`Depth range: min=${kd.toFixed(2)}, max=${Jd.toFixed(2)}, range=${pd.toFixed(2)}`), pd < 1 && (Jd = kd + 10);
-              const Nd = new gd("depthMaterial", ed, "devtoolsDepth", {
+              const LQ = FQ - wQ;
+              FQ += .1 * LQ, wQ = Math.max(0, wQ - .1 * LQ), console.log(`Depth range: min=${wQ.toFixed(2)}, max=${FQ.toFixed(2)}, range=${LQ.toFixed(2)}`), LQ < 1 && (FQ = wQ + 10);
+              const qQ = new vQ("depthMaterial", tQ, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: Ld
+                shaderLanguage: xQ
               });
-              Nd.setVector3("cameraPosition", dd), Nd.setFloat("maxDepth", Jd), Nd.setFloat("minDepth", kd), vd.forEach((dd => {
-                Gd.set(dd, dd.material), dd.material = Nd
+              qQ.setVector3("cameraPosition", QQ), qQ.setFloat("maxDepth", FQ), qQ.setFloat("minDepth", wQ), pQ.forEach((QQ => {
+                GQ.set(QQ, QQ.material), QQ.material = qQ
               }))
             }
-            if ((0, pd.i)(ed.meshes, !0), xd = !0, "glb" === dd && (qd = (0, Nd.b)(ed.meshes)), "screenshot" === dd) {
-              let dd = `bloxd-screenshot-${Rd}x${Id}-${Date.now()}.png`;
-              ld ? dd = `bloxd-screenshot-normals-${Rd}x${Id}-${Date.now()}.png` : Qd && (dd = `bloxd-screenshot-depth-${Rd}x${Id}-${Date.now()}.png`), Zd(Od, ed.activeCamera, {
-                width: Rd,
-                height: Id
-              }, (function(kd) {
-                Bd(), fetch(kd).then((function(dd) {
-                  return dd.blob()
-                })).then((function(kd) {
-                  (0, Pd.downloadBlob)(kd, dd), Jd()
-                })).catch((function(dd) {
-                  console.error("Error processing screenshot:", dd), Jd()
+            if ((0, LQ.f)(tQ.meshes, !0), cQ = !0, "glb" === QQ && (CQ = (0, qQ.b)(tQ.meshes)), "screenshot" === QQ) {
+              let QQ = `bloxd-screenshot-${eQ}x${MQ}-${Date.now()}.png`;
+              bQ ? QQ = `bloxd-screenshot-normals-${eQ}x${MQ}-${Date.now()}.png` : YQ && (QQ = `bloxd-screenshot-depth-${eQ}x${MQ}-${Date.now()}.png`), kQ(AQ, tQ.activeCamera, {
+                width: eQ,
+                height: MQ
+              }, (function(wQ) {
+                SQ(), fetch(wQ).then((function(QQ) {
+                  return QQ.blob()
+                })).then((function(wQ) {
+                  (0, DQ.downloadBlob)(wQ, QQ), FQ()
+                })).catch((function(QQ) {
+                  console.error("Error processing screenshot:", QQ), FQ()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), Bd(), Jd()
+                console.error("Screenshot timed out"), SQ(), FQ()
               }))
             } else {
-              let dd = "BO";
-              ld ? dd = "scene-normals" : Qd && (dd = "scene-depth"), ld || Qd ? setTimeout((() => {
+              let QQ = "lA";
+              bQ ? QQ = "scene-normals" : YQ && (QQ = "scene-depth"), bQ || YQ ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: dd
-                  } = await Promise.all([kd.e(227), kd.e(226), kd.e(246), kd.e(247), kd.e(244), kd.e(254), kd.e(253), kd.e(233)]).then((() => kd(40251))), {
-                    Color3: Jd
-                  } = await Promise.all([kd.e(227), kd.e(230)]).then((() => kd(37438))), pd = [], Nd = [];
-                  if (vd.forEach((dd => {
-                      const Jd = dd.name.toLowerCase(),
-                        kd = dd.pU().boundingBox.center,
-                        Wd = ed.activeCamera.position.subtract(kd).length();
-                      Jd.includes("sky") || Jd.includes("background") || Jd.includes("environment") || Wd > 1e3 ? Nd.push(dd) : pd.push(dd)
-                    })), ld) pd.forEach(((kd, pd) => {
-                    const Nd = kd.getVerticesData("normal");
-                    if (Nd) {
-                      const Wd = [];
-                      for (let dd = 0; dd < Nd.length; dd += 3) {
-                        const Jd = Math.abs(Nd[dd]),
-                          kd = Math.abs(Nd[dd + 1]),
-                          pd = Math.abs(Nd[dd + 2]);
-                        Wd.push(Jd, kd, pd, 1)
+                    StandardMaterial: QQ
+                  } = await Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(254), wQ.e(253), wQ.e(233)]).then((() => wQ(39692))), {
+                    Color3: FQ
+                  } = await Promise.all([wQ.e(227), wQ.e(230)]).then((() => wQ(36870))), LQ = [], qQ = [];
+                  if (pQ.forEach((QQ => {
+                      const FQ = QQ.name.toLowerCase(),
+                        wQ = QQ.sK().boundingBox.center,
+                        oQ = tQ.activeCamera.position.subtract(wQ).length();
+                      FQ.includes("sky") || FQ.includes("background") || FQ.includes("environment") || oQ > 1e3 ? qQ.push(QQ) : LQ.push(QQ)
+                    })), bQ) LQ.forEach(((wQ, LQ) => {
+                    const qQ = wQ.getVerticesData("normal");
+                    if (qQ) {
+                      const oQ = [];
+                      for (let QQ = 0; QQ < qQ.length; QQ += 3) {
+                        const FQ = Math.abs(qQ[QQ]),
+                          wQ = Math.abs(qQ[QQ + 1]),
+                          LQ = Math.abs(qQ[QQ + 2]);
+                        oQ.push(FQ, wQ, LQ, 1)
                       }
-                      kd.setVerticesData("color", Wd);
-                      const Pd = new dd(`vertexColorMat_${pd}`, ed);
-                      Pd.disableLighting = !0, Pd.emissiveColor = new Jd(1, 1, 1), Pd.specularColor = new Jd(0, 0, 0), kd.material = Pd
+                      wQ.setVerticesData("color", oQ);
+                      const DQ = new QQ(`vertexColorMat_${LQ}`, tQ);
+                      DQ.disableLighting = !0, DQ.emissiveColor = new FQ(1, 1, 1), DQ.specularColor = new FQ(0, 0, 0), wQ.material = DQ
                     }
-                  })), Nd.forEach(((kd, pd) => {
-                    const Nd = kd.getVerticesData("position");
-                    if (Nd) {
-                      const Wd = [],
-                        Pd = Nd.length / 3;
-                      for (let dd = 0; dd < Pd; dd++) Wd.push(1, 1, 1, 1);
-                      kd.setVerticesData("color", Wd);
-                      const Zd = new dd(`whiteMat_${pd}`, ed);
-                      Zd.disableLighting = !0, Zd.emissiveColor = new Jd(1, 1, 1), Zd.specularColor = new Jd(0, 0, 0), kd.material = Zd
+                  })), qQ.forEach(((wQ, LQ) => {
+                    const qQ = wQ.getVerticesData("position");
+                    if (qQ) {
+                      const oQ = [],
+                        DQ = qQ.length / 3;
+                      for (let QQ = 0; QQ < DQ; QQ++) oQ.push(1, 1, 1, 1);
+                      wQ.setVerticesData("color", oQ);
+                      const kQ = new QQ(`whiteMat_${LQ}`, tQ);
+                      kQ.disableLighting = !0, kQ.emissiveColor = new FQ(1, 1, 1), kQ.specularColor = new FQ(0, 0, 0), wQ.material = kQ
                     }
                   }));
-                  else if (Qd) {
-                    const kd = ed.activeCamera.position;
-                    let Nd = 0,
-                      Wd = 1 / 0;
-                    pd.forEach((dd => {
-                      const Jd = dd.pU().boundingBox.center,
-                        pd = Kd.TransformCoordinates(Jd, dd.getWorldMatrix()),
-                        Pd = kd.subtract(pd).length();
-                      Nd = Math.max(Nd, Pd), Wd = Math.min(Wd, Pd)
+                  else if (YQ) {
+                    const wQ = tQ.activeCamera.position;
+                    let qQ = 0,
+                      oQ = 1 / 0;
+                    LQ.forEach((QQ => {
+                      const FQ = QQ.sK().boundingBox.center,
+                        LQ = uQ.TransformCoordinates(FQ, QQ.getWorldMatrix()),
+                        DQ = wQ.subtract(LQ).length();
+                      qQ = Math.max(qQ, DQ), oQ = Math.min(oQ, DQ)
                     }));
-                    const Pd = Nd - Wd;
-                    Nd += .1 * Pd, Wd = Math.max(0, Wd - .1 * Pd), Pd < 1 && (Nd = Wd + 10), vd.forEach(((pd, Pd) => {
-                      const Zd = pd.name.toLowerCase(),
-                        gd = pd.pU().boundingBox.center,
-                        Cd = Kd.TransformCoordinates(gd, pd.getWorldMatrix()),
-                        od = kd.subtract(Cd).length();
-                      if (!(Zd.includes("sky") || Zd.includes("background") || Zd.includes("environment") || od > 1e3)) {
-                        const kd = 1 - Math.min(Math.max((od - Wd) / (Nd - Wd), 0), 1),
-                          Zd = new dd(`depthMat_${Pd}`, ed);
-                        Zd.diffuseColor = new Jd(kd, kd, kd), Zd.specularColor = new Jd(0, 0, 0), pd.material = Zd
+                    const DQ = qQ - oQ;
+                    qQ += .1 * DQ, oQ = Math.max(0, oQ - .1 * DQ), DQ < 1 && (qQ = oQ + 10), pQ.forEach(((LQ, DQ) => {
+                      const kQ = LQ.name.toLowerCase(),
+                        vQ = LQ.sK().boundingBox.center,
+                        mQ = uQ.TransformCoordinates(vQ, LQ.getWorldMatrix()),
+                        HQ = wQ.subtract(mQ).length();
+                      if (!(kQ.includes("sky") || kQ.includes("background") || kQ.includes("environment") || HQ > 1e3)) {
+                        const wQ = 1 - Math.min(Math.max((HQ - oQ) / (qQ - oQ), 0), 1),
+                          kQ = new QQ(`depthMat_${DQ}`, tQ);
+                        kQ.diffuseColor = new FQ(wQ, wQ, wQ), kQ.specularColor = new FQ(0, 0, 0), LQ.material = kQ
                       }
                     }))
                   }
-                })().then((() => Promise.all([kd.e(227), kd.e(226), kd.e(246), kd.e(247), kd.e(244), kd.e(254), kd.e(248), kd.e(253), kd.e(251), kd.e(243), kd.e(256), kd.e(265), kd.e(302), kd.e(238), kd.e(255), kd.e(225)]).then((() => kd(60897))))).then((Jd => Jd.GLTF2Export.GLBAsync(ed, dd))).then((dd => {
-                  Bd(), dd.downloadFiles(), Jd()
-                })).catch((dd => {
-                  console.error("Error exporting GLB:", dd), Bd(), Jd()
+                })().then((() => Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(254), wQ.e(248), wQ.e(253), wQ.e(251), wQ.e(243), wQ.e(256), wQ.e(265), wQ.e(302), wQ.e(238), wQ.e(255), wQ.e(225)]).then((() => wQ(60666))))).then((FQ => FQ.GLTF2Export.GLBAsync(tQ, QQ))).then((QQ => {
+                  SQ(), QQ.downloadFiles(), FQ()
+                })).catch((QQ => {
+                  console.error("Error exporting GLB:", QQ), SQ(), FQ()
                 }))
-              }), 100) : Promise.all([kd.e(227), kd.e(226), kd.e(246), kd.e(247), kd.e(244), kd.e(254), kd.e(248), kd.e(253), kd.e(251), kd.e(243), kd.e(256), kd.e(265), kd.e(302), kd.e(238), kd.e(255), kd.e(225)]).then((() => kd(60897))).then((kd => {
-                kd.GLTF2Export.GLBAsync(ed, dd).then((dd => {
-                  Bd(), dd.downloadFiles(), Jd()
-                })).catch((dd => {
-                  console.error("Error exporting GLB:", dd), Bd(), Jd()
+              }), 100) : Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(254), wQ.e(248), wQ.e(253), wQ.e(251), wQ.e(243), wQ.e(256), wQ.e(265), wQ.e(302), wQ.e(238), wQ.e(255), wQ.e(225)]).then((() => wQ(60666))).then((wQ => {
+                wQ.GLTF2Export.GLBAsync(tQ, QQ).then((QQ => {
+                  SQ(), QQ.downloadFiles(), FQ()
+                })).catch((QQ => {
+                  console.error("Error exporting GLB:", QQ), SQ(), FQ()
                 }))
-              })).catch((dd => {
-                console.error("Error importing serializers:", dd), Bd(), Jd()
+              })).catch((QQ => {
+                console.error("Error importing serializers:", QQ), SQ(), FQ()
               }))
             }
-          })).catch((dd => {
-            console.error("Error downloading the scene:", dd), Jd()
+          })).catch((QQ => {
+            console.error("Error downloading the scene:", QQ), FQ()
           }))
-        } catch (Ld) {
-          console.error("Error taking screenshot:", Ld), Jd()
+        } catch (xQ) {
+          console.error("Error taking screenshot:", xQ), FQ()
         }
       }))
     }
-    const od = new class {
+    const HQ = new class {
       constructor() {
-        this.tools = Cd.ALL_DEV_TOOLS
+        this.tools = mQ.ALL_DEV_TOOLS
       }
-      downloadScene(dd, Jd) {
-        return Kd(dd, Jd)
+      downloadScene(QQ, FQ) {
+        return uQ(QQ, FQ)
       }
-      async setAmbientLightIntensity(dd) {
+      async setAmbientLightIntensity(QQ) {
         const {
-          Color3: Jd
-        } = await Promise.all([kd.e(227), kd.e(230)]).then((() => kd(37438)));
-        (0, Wd.e)().UL.Wm().ambientColor = Jd.FromArray([dd, dd, dd])
+          Color3: FQ
+        } = await Promise.all([wQ.e(227), wQ.e(230)]).then((() => wQ(36870)));
+        (0, oQ.d)().Zx.iN().ambientColor = FQ.FromArray([QQ, QQ, QQ])
       }
     }
   },
-  41042: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => gd
+  40455: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => vQ
     });
-    var pd = kd(1769);
-    const Nd = 33177600,
-      Wd = 3e4;
-    let Pd = !1;
+    var LQ = wQ(1739);
+    const qQ = 33177600,
+      oQ = 3e4;
+    let DQ = !1;
 
-    function Zd(dd, Jd, kd) {
-      if (!dd.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (Pd) return Promise.reject(new Error("A screenshot is already being taken"));
-      Pd = !0;
-      const pd = function(dd, Jd, kd) {
-        const pd = Math.max(1, dd),
-          Wd = Math.max(1, Jd),
-          Pd = Math.min(1, kd / Math.max(pd, Wd), Math.sqrt(Nd / (pd * Wd)));
+    function kQ(QQ, FQ, wQ) {
+      if (!QQ.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (DQ) return Promise.reject(new Error("A screenshot is already being taken"));
+      DQ = !0;
+      const LQ = function(QQ, FQ, wQ) {
+        const LQ = Math.max(1, QQ),
+          oQ = Math.max(1, FQ),
+          DQ = Math.min(1, wQ / Math.max(LQ, oQ), Math.sqrt(qQ / (LQ * oQ)));
         return {
-          width: Math.max(1, Math.floor(pd * Pd)),
-          height: Math.max(1, Math.floor(Wd * Pd))
+          width: Math.max(1, Math.floor(LQ * DQ)),
+          height: Math.max(1, Math.floor(oQ * DQ))
         }
-      }(Jd, kd, dd.maxTextureSize);
-      return dd.resize(pd.width, pd.height), new Promise(((Jd, kd) => {
-        let pd, Nd = 2,
-          Zd = null;
-        const gd = () => {
-          var Jd;
-          Pd = !1, null === (Jd = Zd) || void 0 === Jd || Jd(), clearTimeout(pd), dd.restoreSize()
+      }(FQ, wQ, QQ.maxTextureSize);
+      return QQ.resize(LQ.width, LQ.height), new Promise(((FQ, wQ) => {
+        let LQ, qQ = 2,
+          kQ = null;
+        const vQ = () => {
+          var FQ;
+          DQ = !1, null === (FQ = kQ) || void 0 === FQ || FQ(), clearTimeout(LQ), QQ.restoreSize()
         };
-        pd = setTimeout((() => {
-          gd(), kd(new Error("No frame was drawn to capture"))
-        }), Wd), Zd = dd.onFrameDrawn((() => {
-          if (Nd--, Nd > 0) return;
+        LQ = setTimeout((() => {
+          vQ(), wQ(new Error("No frame was drawn to capture"))
+        }), oQ), kQ = QQ.onFrameDrawn((() => {
+          if (qQ--, qQ > 0) return;
           const {
-            canvas: pd
-          } = dd, Wd = {
-            width: pd.width,
-            height: pd.height
+            canvas: LQ
+          } = QQ, oQ = {
+            width: LQ.width,
+            height: LQ.height
           };
           try {
-            pd.toBlob((dd => {
-              dd ? Jd({
-                blob: dd,
-                ...Wd
-              }) : kd(new Error("The canvas gave no image"))
+            LQ.toBlob((QQ => {
+              QQ ? FQ({
+                blob: QQ,
+                ...oQ
+              }) : wQ(new Error("The canvas gave no image"))
             }), "image/png")
-          } catch (Pd) {
-            kd(Pd)
+          } catch (DQ) {
+            wQ(DQ)
           } finally {
-            gd()
+            vQ()
           }
         }))
       }))
     }
-    async function gd(dd, Jd, kd) {
+    async function vQ(QQ, FQ, wQ) {
       try {
-        const Nd = await Zd(dd, Jd, kd);
-        (0, pd.d)(Nd.blob, `bloxd-screenshot-${Nd.width}x${Nd.height}-${Date.now()}.png`)
-      } catch (Nd) {
-        console.error("Error taking screenshot:", Nd)
+        const qQ = await kQ(QQ, FQ, wQ);
+        (0, LQ.e)(qQ.blob, `bloxd-screenshot-${qQ.width}x${qQ.height}-${Date.now()}.png`)
+      } catch (qQ) {
+        console.error("Error taking screenshot:", qQ)
       }
     }
   },
-  37760: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Cd,
-      i: () => Zd,
-      j: () => Pd
+  37129: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => mQ,
+      f: () => kQ,
+      j: () => DQ
     });
-    var pd = kd(37753),
-      Nd = kd(37769);
-    let Wd = 0;
+    var LQ = wQ(37123),
+      qQ = wQ(37134);
+    let oQ = 0;
 
-    function Pd(dd, Jd) {
-      const kd = dd;
-      kd._noaFaceGroups = null !== Jd && void 0 !== Jd ? Jd : null, kd._noaFaceEpoch = -1, kd._noaFaceMask = -1, kd._noaFaceCount = -1, kd._noaFaceMaterial = null;
-      const pd = dd.rG;
-      pd && 1 === pd.length && (pd[0].indexStart = 0, pd[0].indexCount = dd.getTotalIndices())
+    function DQ(QQ, FQ) {
+      const wQ = QQ;
+      wQ._noaFaceGroups = null !== FQ && void 0 !== FQ ? FQ : null, wQ._noaFaceEpoch = -1, wQ._noaFaceMask = -1, wQ._noaFaceCount = -1, wQ._noaFaceMaterial = null;
+      const LQ = QQ.lC;
+      LQ && 1 === LQ.length && (LQ[0].indexStart = 0, LQ[0].indexCount = QQ.getTotalIndices())
     }
 
-    function Zd(dd, Jd) {
-      if (Jd) {
-        Wd++;
-        for (const Jd of dd) {
-          const dd = Jd._noaFaceGroups;
-          dd && Pd(Jd, dd)
+    function kQ(QQ, FQ) {
+      if (FQ) {
+        oQ++;
+        for (const FQ of QQ) {
+          const QQ = FQ._noaFaceGroups;
+          QQ && DQ(FQ, QQ)
         }
-      } else Wd = Math.max(0, Wd - 1)
+      } else oQ = Math.max(0, oQ - 1)
     }
 
-    function gd(dd, Jd, kd) {
-      let Nd = -1,
-        Wd = 0;
-      for (let Pd = 0; Pd < pd.g; Pd++) {
-        const kd = dd[Pd],
-          Zd = dd[Pd + 1];
-        Zd > kd && Jd & 1 << pd.e[Pd] && (Nd < 0 && (Nd = kd), Wd = Zd)
+    function vQ(QQ, FQ, wQ) {
+      let qQ = -1,
+        oQ = 0;
+      for (let DQ = 0; DQ < LQ.d; DQ++) {
+        const wQ = QQ[DQ],
+          kQ = QQ[DQ + 1];
+        kQ > wQ && FQ & 1 << LQ.b[DQ] && (qQ < 0 && (qQ = wQ), oQ = kQ)
       }
-      return Nd < 0 ? (kd[0] = 0, kd[1] = 0, 0) : (kd[0] = Nd, kd[1] = Wd - Nd, Wd - Nd)
+      return qQ < 0 ? (wQ[0] = 0, wQ[1] = 0, 0) : (wQ[0] = qQ, wQ[1] = oQ - qQ, oQ - qQ)
     }
-    class Cd {
-      constructor(dd, Jd) {
-        this.KL = dd, this.engine = Jd, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class mQ {
+      constructor(QQ, FQ) {
+        this.tx = QQ, this.engine = FQ, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(dd, Jd) {
-        if (!Jd) return;
-        const kd = Jd.getProjectionMatrix().m,
-          Pd = 0 === Wd && 0 === kd[15],
-          Zd = Jd.globalPosition,
+      apply(QQ, FQ) {
+        if (!FQ) return;
+        const wQ = FQ.getProjectionMatrix().m,
+          DQ = 0 === oQ && 0 === wQ[15],
+          kQ = FQ.globalPosition,
           {
-            engine: Cd
+            engine: mQ
           } = this,
-          Kd = Pd ? (0, Nd.e)(kd, Cd.getRenderWidth(), Cd.getRenderHeight()) : 0;
-        Zd.x === this.eyeX && Zd.y === this.eyeY && Zd.z === this.eyeZ && Kd === this.focalPx && Pd === this.culling || (this.epoch++, this.eyeX = Zd.x, this.eyeY = Zd.y, this.eyeZ = Zd.z, this.focalPx = Kd, this.culling = Pd);
+          uQ = DQ ? (0, qQ.c)(wQ, mQ.getRenderWidth(), mQ.getRenderHeight()) : 0;
+        kQ.x === this.eyeX && kQ.y === this.eyeY && kQ.z === this.eyeZ && uQ === this.focalPx && DQ === this.culling || (this.epoch++, this.eyeX = kQ.x, this.eyeY = kQ.y, this.eyeZ = kQ.z, this.focalPx = uQ, this.culling = DQ);
         const {
-          epoch: od,
-          range: ld
-        } = this, Qd = this.KL / 2, Ld = Qd * Math.sqrt(3), Od = dd.data, ed = dd.length;
-        let Rd = 0;
-        for (let Wd = 0; Wd < ed; Wd++) {
-          const dd = Od[Wd],
-            Jd = dd._noaFaceGroups;
-          if (Jd && (dd._noaFaceEpoch !== od || dd._noaFaceMaterial !== dd.material)) {
-            dd._noaFaceEpoch = od, dd._noaFaceMaterial = dd.material;
-            const kd = dd.rG,
-              Wd = kd && 1 === kd.length ? kd[0] : null;
-            let Cd = -1;
-            if (Pd && Wd && (0, pd.u)(dd.material)) {
-              const kd = dd.position,
-                pd = Zd.x - kd.x,
-                Wd = Zd.y - kd.y,
-                Pd = Zd.z - kd.z,
-                gd = pd - Qd,
-                od = Wd - Qd,
-                ld = Pd - Qd,
-                Od = Math.sqrt(gd * gd + od * od + ld * ld) + Ld;
-              Cd = (0, Nd.m)(Jd, pd, Wd, Pd, (0, Nd.i)(Od, Kd))
+          epoch: HQ,
+          range: bQ
+        } = this, YQ = this.tx / 2, xQ = YQ * Math.sqrt(3), AQ = QQ.data, tQ = QQ.length;
+        let eQ = 0;
+        for (let oQ = 0; oQ < tQ; oQ++) {
+          const QQ = AQ[oQ],
+            FQ = QQ._noaFaceGroups;
+          if (FQ && (QQ._noaFaceEpoch !== HQ || QQ._noaFaceMaterial !== QQ.material)) {
+            QQ._noaFaceEpoch = HQ, QQ._noaFaceMaterial = QQ.material;
+            const wQ = QQ.lC,
+              oQ = wQ && 1 === wQ.length ? wQ[0] : null;
+            let mQ = -1;
+            if (DQ && oQ && (0, LQ.p)(QQ.material)) {
+              const wQ = QQ.position,
+                LQ = kQ.x - wQ.x,
+                oQ = kQ.y - wQ.y,
+                DQ = kQ.z - wQ.z,
+                vQ = LQ - YQ,
+                HQ = oQ - YQ,
+                bQ = DQ - YQ,
+                AQ = Math.sqrt(vQ * vQ + HQ * HQ + bQ * bQ) + xQ;
+              mQ = (0, qQ.l)(FQ, LQ, oQ, DQ, (0, qQ.f)(AQ, uQ))
             }
-            if (Wd && Cd !== dd._noaFaceMask) {
-              dd._noaFaceMask = Cd;
-              let kd = 0,
-                Nd = Jd[pd.g]; - 1 !== Cd && (Nd = gd(Jd, Cd, ld), kd = ld[0]), dd._noaFaceCount = Nd, Wd.indexStart = 6 * kd, Wd.indexCount = 6 * Nd, Wd.setBoundingInfo(dd.pU())
+            if (oQ && mQ !== QQ._noaFaceMask) {
+              QQ._noaFaceMask = mQ;
+              let wQ = 0,
+                qQ = FQ[LQ.d]; - 1 !== mQ && (qQ = vQ(FQ, mQ, bQ), wQ = bQ[0]), QQ._noaFaceCount = qQ, oQ.indexStart = 6 * wQ, oQ.indexCount = 6 * qQ, oQ.setBoundingInfo(QQ.sK())
             }
           }
-          Jd && 0 === dd._noaFaceCount || (Od[Rd++] = dd)
+          FQ && 0 === QQ._noaFaceCount || (AQ[eQ++] = QQ)
         }
-        dd.length = Rd
+        QQ.length = eQ
       }
     }
   },
-  37743: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => gd,
-      d: () => Zd
+  37118: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => vQ,
+      d: () => kQ
     });
-    const pd = new WeakSet;
-    let Nd = 0;
-    const Wd = new Set;
+    const LQ = new WeakSet;
+    let qQ = 0;
+    const oQ = new Set;
 
-    function Pd(dd, Jd) {
-      dd._data = Jd
+    function DQ(QQ, FQ) {
+      QQ._data = FQ
     }
 
-    function Zd(dd) {
-      var Jd, kd;
-      (null !== (Jd = null === (kd = dd.getBuffer()) || void 0 === kd ? void 0 : kd.oo) && void 0 !== Jd ? Jd : 0) > 0 && (pd.add(dd), 0 === Nd ? Pd(dd, null) : Wd.add(dd))
+    function kQ(QQ) {
+      var FQ, wQ;
+      (null !== (FQ = null === (wQ = QQ.getBuffer()) || void 0 === wQ ? void 0 : wQ.MH) && void 0 !== FQ ? FQ : 0) > 0 && (LQ.add(QQ), 0 === qQ ? DQ(QQ, null) : oQ.add(QQ))
     }
 
-    function gd(dd) {
-      Nd++;
-      for (const kd of function(dd) {
-          const Jd = new Set;
-          for (const Nd of dd) {
-            const dd = Nd.geometry;
-            for (const Nd of Object.values(null !== (kd = null === dd || void 0 === dd ? void 0 : dd.getVertexBuffers()) && void 0 !== kd ? kd : {})) {
-              var kd;
-              const dd = Nd.getWrapperBuffer();
-              pd.has(dd) && Jd.add(dd)
+    function vQ(QQ) {
+      qQ++;
+      for (const wQ of function(QQ) {
+          const FQ = new Set;
+          for (const qQ of QQ) {
+            const QQ = qQ.geometry;
+            for (const qQ of Object.values(null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ.getVertexBuffers()) && void 0 !== wQ ? wQ : {})) {
+              var wQ;
+              const QQ = qQ.getWrapperBuffer();
+              LQ.has(QQ) && FQ.add(QQ)
             }
           }
-          return Jd
-        }(dd)) kd.getData() || Cd(kd), Wd.add(kd);
-      let Jd = !0;
+          return FQ
+        }(QQ)) wQ.getData() || mQ(wQ), oQ.add(wQ);
+      let FQ = !0;
       return () => {
-        if (Jd && (Jd = !1, Nd--, 0 === Nd)) {
-          for (const dd of Wd) Pd(dd, null);
-          Wd.clear()
+        if (FQ && (FQ = !1, qQ--, 0 === qQ)) {
+          for (const QQ of oQ) DQ(QQ, null);
+          oQ.clear()
         }
       }
     }
 
-    function Cd(dd) {
-      const Jd = dd.getBuffer();
-      if (!Jd || !(Jd.oo > 0)) return;
-      const kd = dd._engine,
-        pd = new Uint8Array(Jd.oo);
-      kd.bindArrayBuffer(Jd), kd._gl.getBufferSubData(kd._gl.ARRAY_BUFFER, 0, pd), kd._resetVertexBufferBinding(), Pd(dd, pd)
+    function mQ(QQ) {
+      const FQ = QQ.getBuffer();
+      if (!FQ || !(FQ.MH > 0)) return;
+      const wQ = QQ._engine,
+        LQ = new Uint8Array(FQ.MH);
+      wQ.bindArrayBuffer(FQ), wQ._gl.getBufferSubData(wQ._gl.ARRAY_BUFFER, 0, LQ), wQ._resetVertexBufferBinding(), DQ(QQ, LQ)
     }
   },
-  37753: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Pd,
-      g: () => Wd,
-      k: () => gd,
-      n: () => pd,
-      p: () => Zd,
-      r: () => Nd,
-      u: () => Cd
+  37123: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => DQ,
+      d: () => oQ,
+      g: () => vQ,
+      k: () => LQ,
+      l: () => kQ,
+      n: () => qQ,
+      p: () => mQ
     });
-    const pd = 6,
-      Nd = [0, 2, 4, 1, 3, 5, 0, 2],
-      Wd = 6,
-      Pd = [1, 0, 3, 2, 5, 4];
-    for (let Kd = Wd; Kd < Nd.length; Kd++)
-      if (Nd[Kd] !== Nd[Kd - Wd]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const Zd = Nd.length + 1,
-      gd = (() => {
-        const dd = [];
-        for (let Jd = 0; Jd < Wd; Jd++) dd[Nd[Jd]] = Jd;
-        return dd
+    const LQ = 6,
+      qQ = [0, 2, 4, 1, 3, 5, 0, 2],
+      oQ = 6,
+      DQ = [1, 0, 3, 2, 5, 4];
+    for (let uQ = oQ; uQ < qQ.length; uQ++)
+      if (qQ[uQ] !== qQ[uQ - oQ]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const kQ = qQ.length + 1,
+      vQ = (() => {
+        const QQ = [];
+        for (let FQ = 0; FQ < oQ; FQ++) QQ[qQ[FQ]] = FQ;
+        return QQ
       })();
 
-    function Cd(dd) {
-      return !!dd && dd.backFaceCulling && (0 === dd.transparencyMode || 1 === dd.transparencyMode)
+    function mQ(QQ) {
+      return !!QQ && QQ.backFaceCulling && (0 === QQ.transparencyMode || 1 === QQ.transparencyMode)
     }
   },
-  37769: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Zd,
-      i: () => gd,
-      k: () => Kd,
-      m: () => Cd,
-      n: () => Ld
+  37134: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => kQ,
+      f: () => vQ,
+      j: () => uQ,
+      l: () => mQ,
+      p: () => xQ
     });
-    var pd = kd(37753);
-    const Nd = 1 / 16,
-      Wd = 1 / 64,
-      Pd = 2048;
-    pd.n;
+    var LQ = wQ(37123);
+    const qQ = 1 / 16,
+      oQ = 1 / 64,
+      DQ = 2048;
+    LQ.k;
 
-    function Zd(dd, Jd, kd) {
-      return Math.min(Math.abs(dd[0] * Jd), Math.abs(dd[5] * kd)) / 2
+    function kQ(QQ, FQ, wQ) {
+      return Math.min(Math.abs(QQ[0] * FQ), Math.abs(QQ[5] * wQ)) / 2
     }
 
-    function gd(dd, Jd) {
-      return Nd + Wd * dd * dd / Jd
+    function vQ(QQ, FQ) {
+      return qQ + oQ * QQ * QQ / FQ
     }
 
-    function Cd(dd, Jd, kd, Nd, Wd) {
-      const Pd = pd.p;
-      return Kd(dd[Pd], dd[Pd + 1], dd[Pd + 2], dd[Pd + 3], dd[Pd + 4], dd[Pd + 5], Jd, kd, Nd, Wd)
+    function mQ(QQ, FQ, wQ, qQ, oQ) {
+      const DQ = LQ.l;
+      return uQ(QQ[DQ], QQ[DQ + 1], QQ[DQ + 2], QQ[DQ + 3], QQ[DQ + 4], QQ[DQ + 5], FQ, wQ, qQ, oQ)
     }
 
-    function Kd(dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd) {
-      return (Pd <= dd - Cd ? 0 : 1) | (Pd >= Jd + Cd ? 0 : 2) | (Zd <= kd - Cd ? 0 : 4) | (Zd >= pd + Cd ? 0 : 8) | (gd <= Nd - Cd ? 0 : 16) | (gd >= Wd + Cd ? 0 : 32)
+    function uQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ) {
+      return (DQ <= QQ - mQ ? 0 : 1) | (DQ >= FQ + mQ ? 0 : 2) | (kQ <= wQ - mQ ? 0 : 4) | (kQ >= LQ + mQ ? 0 : 8) | (vQ <= qQ - mQ ? 0 : 16) | (vQ >= oQ + mQ ? 0 : 32)
     }
-    const od = (() => {
-        const dd = [];
-        for (let Jd = 0; Jd < pd.r.length; Jd++) {
-          let kd = 0;
-          for (let Nd = Jd + 1; Nd <= pd.r.length; Nd++) {
-            const Wd = 1 << pd.r[Nd - 1];
-            if (kd & Wd) break;
-            kd |= Wd, dd.push({
-              start: Jd,
-              end: Nd,
-              qJ: kd
+    const HQ = (() => {
+        const QQ = [];
+        for (let FQ = 0; FQ < LQ.n.length; FQ++) {
+          let wQ = 0;
+          for (let qQ = FQ + 1; qQ <= LQ.n.length; qQ++) {
+            const oQ = 1 << LQ.n[qQ - 1];
+            if (wQ & oQ) break;
+            wQ |= oQ, QQ.push({
+              start: FQ,
+              end: qQ,
+              tF: wQ
             })
           }
         }
-        return dd
+        return QQ
       })(),
-      ld = [];
+      bQ = [];
 
-    function Qd(dd, Jd) {
-      const kd = pd.k[Jd];
-      return dd[kd + 1] - dd[kd]
+    function YQ(QQ, FQ) {
+      const wQ = LQ.g[FQ];
+      return QQ[wQ + 1] - QQ[wQ]
     }
 
-    function Ld(dd, Jd, kd) {
-      let Nd = 0;
-      for (let Pd = 0; Pd < pd.n; Pd++) Qd(dd, Pd) > 0 && (Nd |= 1 << Pd);
-      if (0 === (Jd &= Nd)) return 0;
-      if (Jd === Nd) return kd[0] = 0, kd[1] = dd[pd.g], 1;
-      let Wd = null,
-        Zd = 1 / 0;
-      for (const Cd of function(dd) {
-          let Jd = ld[dd];
-          if (Jd) return Jd;
-          const kd = new Map,
-            pd = (dd, Jd) => {
-              const pd = 4 * dd + Jd.length / 2;
-              kd.has(pd) || kd.set(pd, {
-                qJ: dd,
-                windows: Jd
+    function xQ(QQ, FQ, wQ) {
+      let qQ = 0;
+      for (let DQ = 0; DQ < LQ.k; DQ++) YQ(QQ, DQ) > 0 && (qQ |= 1 << DQ);
+      if (0 === (FQ &= qQ)) return 0;
+      if (FQ === qQ) return wQ[0] = 0, wQ[1] = QQ[LQ.d], 1;
+      let oQ = null,
+        kQ = 1 / 0;
+      for (const mQ of function(QQ) {
+          let FQ = bQ[QQ];
+          if (FQ) return FQ;
+          const wQ = new Map,
+            LQ = (QQ, FQ) => {
+              const LQ = 4 * QQ + FQ.length / 2;
+              wQ.has(LQ) || wQ.set(LQ, {
+                tF: QQ,
+                windows: FQ
               })
             };
-          for (const Wd of od)
-            if ((Wd.qJ & dd) === dd && pd(Wd.qJ, [Wd.start, Wd.end]), 0 !== (Wd.qJ & dd))
-              for (const Jd of od) Jd.start < Wd.end || 0 !== (Wd.qJ & Jd.qJ) || 0 === (Jd.qJ & dd) || ((Wd.qJ | Jd.qJ) & dd) !== dd || pd(Wd.qJ | Jd.qJ, [Wd.start, Wd.end, Jd.start, Jd.end]);
-          const Nd = [...kd.values()];
-          return Jd = Nd.filter((dd => !Nd.some((Jd => Jd !== dd && (Jd.qJ & dd.qJ) === Jd.qJ && Jd.windows.length <= dd.windows.length)))), ld[dd] = Jd, Jd
-        }(Jd)) {
-        let kd = (Cd.windows.length / 2 - 1) * Pd;
-        const gd = Cd.qJ & ~Jd & Nd;
-        for (let Jd = 0; Jd < pd.n; Jd++) gd & 1 << Jd && (kd += Qd(dd, Jd));
-        kd < Zd && (Wd = Cd, Zd = kd)
+          for (const oQ of HQ)
+            if ((oQ.tF & QQ) === QQ && LQ(oQ.tF, [oQ.start, oQ.end]), 0 !== (oQ.tF & QQ))
+              for (const FQ of HQ) FQ.start < oQ.end || 0 !== (oQ.tF & FQ.tF) || 0 === (FQ.tF & QQ) || ((oQ.tF | FQ.tF) & QQ) !== QQ || LQ(oQ.tF | FQ.tF, [oQ.start, oQ.end, FQ.start, FQ.end]);
+          const qQ = [...wQ.values()];
+          return FQ = qQ.filter((QQ => !qQ.some((FQ => FQ !== QQ && (FQ.tF & QQ.tF) === FQ.tF && FQ.windows.length <= QQ.windows.length)))), bQ[QQ] = FQ, FQ
+        }(FQ)) {
+        let wQ = (mQ.windows.length / 2 - 1) * DQ;
+        const vQ = mQ.tF & ~FQ & qQ;
+        for (let FQ = 0; FQ < LQ.k; FQ++) vQ & 1 << FQ && (wQ += YQ(QQ, FQ));
+        wQ < kQ && (oQ = mQ, kQ = wQ)
       }
-      const gd = Wd.windows;
-      for (let pd = 0; pd < gd.length; pd += 2) {
-        const Jd = dd[gd[pd]];
-        kd[pd] = Jd, kd[pd + 1] = dd[gd[pd + 1]] - Jd
+      const vQ = oQ.windows;
+      for (let LQ = 0; LQ < vQ.length; LQ += 2) {
+        const FQ = QQ[vQ[LQ]];
+        wQ[LQ] = FQ, wQ[LQ + 1] = QQ[vQ[LQ + 1]] - FQ
       }
-      return gd.length / 2
+      return vQ.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

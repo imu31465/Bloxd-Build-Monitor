@@ -1,105 +1,105 @@
 export const id = 300;
 export const ids = [300];
 export const modules = {
-  41728: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      _IESTextureLoader: () => Zd
+  41175: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      _IESTextureLoader: () => kQ
     });
-    var pd = kd(37289);
+    var LQ = wQ(36729);
 
-    function Nd(dd) {
-      return dd.split(" ").filter((dd => "" !== dd)).map((dd => parseFloat(dd)))
+    function qQ(QQ) {
+      return QQ.split(" ").filter((QQ => "" !== QQ)).map((QQ => parseFloat(QQ)))
     }
 
-    function Wd(dd, Jd, kd) {
-      for (; kd.length !== Jd;) {
-        const Jd = Nd(dd.lines[dd.index++]);
-        kd.push(...Jd)
+    function oQ(QQ, FQ, wQ) {
+      for (; wQ.length !== FQ;) {
+        const FQ = qQ(QQ.lines[QQ.index++]);
+        wQ.push(...FQ)
       }
     }
 
-    function Pd(dd, Jd, kd) {
-      let Nd = 0,
-        Wd = 0,
-        Pd = 0,
-        Zd = 0,
-        gd = 0,
-        Cd = 0;
-      for (let pd = 0; pd < dd.numberOfHorizontalAngles - 1; pd++)
-        if (kd < dd.horizontalAngles[pd + 1] || pd === dd.numberOfHorizontalAngles - 2) {
-          Wd = pd, Pd = dd.horizontalAngles[pd], Zd = dd.horizontalAngles[pd + 1];
+    function DQ(QQ, FQ, wQ) {
+      let qQ = 0,
+        oQ = 0,
+        DQ = 0,
+        kQ = 0,
+        vQ = 0,
+        mQ = 0;
+      for (let LQ = 0; LQ < QQ.numberOfHorizontalAngles - 1; LQ++)
+        if (wQ < QQ.horizontalAngles[LQ + 1] || LQ === QQ.numberOfHorizontalAngles - 2) {
+          oQ = LQ, DQ = QQ.horizontalAngles[LQ], kQ = QQ.horizontalAngles[LQ + 1];
           break
-        } for (let pd = 0; pd < dd.numberOfVerticalAngles - 1; pd++)
-        if (Jd < dd.verticalAngles[pd + 1] || pd === dd.numberOfVerticalAngles - 2) {
-          Nd = pd, gd = dd.verticalAngles[pd], Cd = dd.verticalAngles[pd + 1];
+        } for (let LQ = 0; LQ < QQ.numberOfVerticalAngles - 1; LQ++)
+        if (FQ < QQ.verticalAngles[LQ + 1] || LQ === QQ.numberOfVerticalAngles - 2) {
+          qQ = LQ, vQ = QQ.verticalAngles[LQ], mQ = QQ.verticalAngles[LQ + 1];
           break
-        } const Kd = Zd - Pd,
-        od = Cd - gd;
-      if (0 === od) return 0;
-      const ld = 0 === Kd ? 0 : (kd - Pd) / Kd,
-        Qd = (Jd - gd) / od,
-        Ld = 0 === Kd ? Wd : Wd + 1,
-        Od = (0, pd.Lerp)(dd.candelaValues[Wd][Nd], dd.candelaValues[Ld][Nd], ld),
-        ed = (0, pd.Lerp)(dd.candelaValues[Wd][Nd + 1], dd.candelaValues[Ld][Nd + 1], ld);
-      return (0, pd.Lerp)(Od, ed, Qd)
+        } const uQ = kQ - DQ,
+        HQ = mQ - vQ;
+      if (0 === HQ) return 0;
+      const bQ = 0 === uQ ? 0 : (wQ - DQ) / uQ,
+        YQ = (FQ - vQ) / HQ,
+        xQ = 0 === uQ ? oQ : oQ + 1,
+        AQ = (0, LQ.Lerp)(QQ.candelaValues[oQ][qQ], QQ.candelaValues[xQ][qQ], bQ),
+        tQ = (0, LQ.Lerp)(QQ.candelaValues[oQ][qQ + 1], QQ.candelaValues[xQ][qQ + 1], bQ);
+      return (0, LQ.Lerp)(AQ, tQ, YQ)
     }
-    class Zd {
+    class kQ {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".ies not supported in Cube."
       }
-      loadData(dd, Jd, kd) {
-        const pd = function(dd) {
-          const Jd = {
-              lines: new TextDecoder("utf-8").decode(dd).split("\n"),
+      loadData(QQ, FQ, wQ) {
+        const LQ = function(QQ) {
+          const FQ = {
+              lines: new TextDecoder("utf-8").decode(QQ).split("\n"),
               index: 0
             },
-            kd = {
-              version: Jd.lines[0],
+            wQ = {
+              version: FQ.lines[0],
               candelaValues: [],
               horizontalAngles: [],
               verticalAngles: [],
               numberOfHorizontalAngles: 0,
               numberOfVerticalAngles: 0
             };
-          for (Jd.index = 1; Jd.lines.length > 0 && !Jd.lines[Jd.index].includes("TILT=");) Jd.index++;
-          Jd.lines[Jd.index].includes("INCLUDE"), Jd.index++;
-          const pd = Nd(Jd.lines[Jd.index++]);
-          kd.numberOfLights = pd[0], kd.lumensPerLamp = pd[1], kd.numberOfVerticalAngles = pd[3], kd.numberOfHorizontalAngles = pd[4], kd.photometricType = pd[5], kd.unitsType = pd[6], kd.width = pd[7], kd.length = pd[8], kd.height = pd[9], Jd.index++;
-          for (let Nd = 0; Nd < kd.numberOfHorizontalAngles; Nd++) kd.candelaValues[Nd] = [];
-          Wd(Jd, kd.numberOfVerticalAngles, kd.verticalAngles), Wd(Jd, kd.numberOfHorizontalAngles, kd.horizontalAngles);
-          for (let Nd = 0; Nd < kd.numberOfHorizontalAngles; Nd++) Wd(Jd, kd.numberOfVerticalAngles, kd.candelaValues[Nd]);
-          let Zd = -1;
-          for (let Nd = 0; Nd < kd.numberOfHorizontalAngles; Nd++)
-            for (let dd = 0; dd < kd.numberOfVerticalAngles; dd++) Zd = Math.max(Zd, kd.candelaValues[Nd][dd]);
-          if (Zd > 0)
-            for (let Nd = 0; Nd < kd.numberOfHorizontalAngles; Nd++)
-              for (let dd = 0; dd < kd.numberOfVerticalAngles; dd++) kd.candelaValues[Nd][dd] /= Zd;
-          const gd = 180,
-            Cd = 360,
-            Kd = new Float32Array(64800),
-            od = kd.horizontalAngles[0],
-            ld = kd.horizontalAngles[kd.numberOfHorizontalAngles - 1];
-          for (let Nd = 0; Nd < 64800; Nd++) {
-            let dd = Nd % Cd;
-            const Jd = Math.floor(Nd / Cd);
-            ld - od !== 0 && (dd < od || dd >= ld) && (dd %= 2 * ld, dd > ld && (dd = 2 * ld - dd)), Kd[Jd + dd * gd] = Pd(kd, Jd, dd)
+          for (FQ.index = 1; FQ.lines.length > 0 && !FQ.lines[FQ.index].includes("TILT=");) FQ.index++;
+          FQ.lines[FQ.index].includes("INCLUDE"), FQ.index++;
+          const LQ = qQ(FQ.lines[FQ.index++]);
+          wQ.numberOfLights = LQ[0], wQ.lumensPerLamp = LQ[1], wQ.numberOfVerticalAngles = LQ[3], wQ.numberOfHorizontalAngles = LQ[4], wQ.photometricType = LQ[5], wQ.unitsType = LQ[6], wQ.width = LQ[7], wQ.length = LQ[8], wQ.height = LQ[9], FQ.index++;
+          for (let qQ = 0; qQ < wQ.numberOfHorizontalAngles; qQ++) wQ.candelaValues[qQ] = [];
+          oQ(FQ, wQ.numberOfVerticalAngles, wQ.verticalAngles), oQ(FQ, wQ.numberOfHorizontalAngles, wQ.horizontalAngles);
+          for (let qQ = 0; qQ < wQ.numberOfHorizontalAngles; qQ++) oQ(FQ, wQ.numberOfVerticalAngles, wQ.candelaValues[qQ]);
+          let kQ = -1;
+          for (let qQ = 0; qQ < wQ.numberOfHorizontalAngles; qQ++)
+            for (let QQ = 0; QQ < wQ.numberOfVerticalAngles; QQ++) kQ = Math.max(kQ, wQ.candelaValues[qQ][QQ]);
+          if (kQ > 0)
+            for (let qQ = 0; qQ < wQ.numberOfHorizontalAngles; qQ++)
+              for (let QQ = 0; QQ < wQ.numberOfVerticalAngles; QQ++) wQ.candelaValues[qQ][QQ] /= kQ;
+          const vQ = 180,
+            mQ = 360,
+            uQ = new Float32Array(64800),
+            HQ = wQ.horizontalAngles[0],
+            bQ = wQ.horizontalAngles[wQ.numberOfHorizontalAngles - 1];
+          for (let qQ = 0; qQ < 64800; qQ++) {
+            let QQ = qQ % mQ;
+            const FQ = Math.floor(qQ / mQ);
+            bQ - HQ !== 0 && (QQ < HQ || QQ >= bQ) && (QQ %= 2 * bQ, QQ > bQ && (QQ = 2 * bQ - QQ)), uQ[FQ + QQ * vQ] = DQ(wQ, FQ, QQ)
           }
           return {
             width: 180,
             height: 1,
-            data: Kd
+            data: uQ
           }
-        }(new Uint8Array(dd.buffer, dd.byteOffset, dd.byteLength));
-        kd(pd.width, pd.height, !!Jd.useMipMaps, !1, (() => {
-          const dd = Jd.eL();
-          Jd.type = 1, Jd.format = 6, Jd._gammaSpace = !1, dd._uploadDataToTextureDirectly(Jd, pd.data)
+        }(new Uint8Array(QQ.buffer, QQ.byteOffset, QQ.byteLength));
+        wQ(LQ.width, LQ.height, !!FQ.useMipMaps, !1, (() => {
+          const QQ = FQ.Wx();
+          FQ.type = 1, FQ.format = 6, FQ._gammaSpace = !1, QQ._uploadDataToTextureDirectly(FQ, LQ.data)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

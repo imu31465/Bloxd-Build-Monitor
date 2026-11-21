@@ -1,758 +1,758 @@
 export const id = 282;
 export const ids = [282, 283];
 export const modules = {
-  41247: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      CharacterCustomisationUI: () => yd
+  40667: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      CharacterCustomisationUI: () => jQ
     });
-    var pd = kd(56),
-      Nd = kd(2851),
-      Wd = kd(1140),
-      Pd = kd(1932),
-      Zd = kd(1044),
-      gd = kd.n(Zd),
-      Cd = kd(1260),
-      Kd = kd(593),
-      od = kd(1211),
-      ld = kd(2196),
-      Qd = kd(1598),
-      Ld = kd(8734),
-      Od = kd(2203),
-      ed = kd(2953),
-      Rd = kd(1968),
-      Id = kd(1461),
-      Gd = kd(2231),
-      vd = kd(22),
-      xd = kd(1520),
-      qd = kd(313),
-      Bd = kd(41253),
-      sd = kd(1594),
-      ad = kd(2280),
-      Md = kd(2845),
-      Fd = kd(2126),
-      Yd = kd(2479),
-      md = kd(1059);
-    kd(9272), kd(2962);
+    var LQ = wQ(53),
+      qQ = wQ(2910),
+      oQ = wQ(1140),
+      DQ = wQ(1897),
+      kQ = wQ(1070),
+      vQ = wQ.n(kQ),
+      mQ = wQ(1254),
+      uQ = wQ(600),
+      HQ = wQ(1207),
+      bQ = wQ(2148),
+      YQ = wQ(1560),
+      xQ = wQ(8582),
+      AQ = wQ(2153),
+      tQ = wQ(2987),
+      eQ = wQ(1927),
+      MQ = wQ(1451),
+      GQ = wQ(2188),
+      pQ = wQ(17),
+      cQ = wQ(1489),
+      CQ = wQ(317),
+      SQ = wQ(40672),
+      iQ = wQ(1551),
+      WQ = wQ(2240),
+      RQ = wQ(2903),
+      OQ = wQ(2088),
+      sQ = wQ(2489),
+      rQ = wQ(1079);
+    wQ(9137), wQ(2990);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var bd = kd(2243),
-      Sd = kd(1384),
-      jd = kd(1103);
+    var IQ = wQ(2197),
+      UQ = wQ(1367),
+      NQ = wQ(1107);
 
-    function Xd(dd, Jd, kd) {
-      return (0, ld.l)(dd, Jd).purchasable && !(0, ad.r)(dd, Jd, kd)
+    function TQ(QQ, FQ, wQ) {
+      return (0, bQ.m)(QQ, FQ).purchasable && !(0, WQ.p)(QQ, FQ, wQ)
     }
 
-    function fd(dd, Jd) {
-      return Object.entries(dd).some((dd => {
-        let [kd, pd] = dd;
-        return Xd(kd, pd, Jd)
+    function KQ(QQ, FQ) {
+      return Object.entries(QQ).some((QQ => {
+        let [wQ, LQ] = QQ;
+        return TQ(wQ, LQ, FQ)
       }))
     }
 
-    function nd(dd) {
-      var Jd;
+    function zQ(QQ) {
+      var FQ;
       let {
-        pack: kd,
-        ownedPacks: pd,
-        showStoreLink: Nd = !1,
-        children: Wd
-      } = dd;
+        pack: wQ,
+        ownedPacks: LQ,
+        showStoreLink: qQ = !1,
+        children: oQ
+      } = QQ;
       const {
-        t: Pd
-      } = (0, od.B)(), Zd = sd.d[kd], Cd = Zd.purchasable && !pd.includes(kd) && sd.r.includes(kd), Kd = Md.k[kd];
-      return (0, jd.jsxs)("div", {
-        className: gd()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: Cd
+        t: DQ
+      } = (0, HQ.y)(), kQ = iQ.e[wQ], mQ = kQ.purchasable && !LQ.includes(wQ) && iQ.u.includes(wQ), uQ = RQ.l[wQ];
+      return (0, NQ.jsxs)("div", {
+        className: vQ()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: mQ
         }),
-        children: [Kd && (0, jd.jsx)(Kd, {}), (0, jd.jsxs)("div", {
+        children: [uQ && (0, NQ.jsx)(uQ, {}), (0, NQ.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, jd.jsx)("span", {
+          children: [(0, NQ.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: null !== (Jd = Zd.displayName) && void 0 !== Jd ? Jd : kd
-          }), (Cd || Nd) && (0, jd.jsxs)(Id.y, {
+            children: null !== (FQ = kQ.displayName) && void 0 !== FQ ? FQ : wQ
+          }), (mQ || qQ) && (0, NQ.jsxs)(MQ.A, {
             onClick: () => {
-              Cd ? (0, Md.i)(kd) : (0, Gd.q)({
+              mQ ? (0, RQ.i)(wQ) : (0, GQ.o)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, jd.jsx)(md.e, {
+            children: [(0, NQ.jsx)(rQ.c, {
               name: "store"
-            }), " ", Pd("general:viewInShop")]
+            }), " ", DQ("general:viewInShop")]
           })]
-        }), Cd && "bee" === kd && (0, jd.jsx)(Md.d, {}), Wd]
+        }), mQ && "bee" === wQ && (0, NQ.jsx)(RQ.b, {}), oQ]
       })
     }
 
-    function Ud(dd) {
+    function lQ(QQ) {
       let {
-        equippedEmoteIds: Jd,
-        ownedPacks: kd,
-        canBuy: pd,
-        onUpdateLoadout: Nd,
-        onEmoteSelected: Wd,
-        onEquipPreviewSkin: Pd
-      } = dd;
+        equippedEmoteIds: FQ,
+        ownedPacks: wQ,
+        canBuy: LQ,
+        onUpdateLoadout: qQ,
+        onEmoteSelected: oQ,
+        onEquipPreviewSkin: DQ
+      } = QQ;
       const {
-        t: Zd
-      } = (0, od.B)(), Kd = new Set(Jd), Qd = new Map, Ld = Object.keys(ld.e.emote).sort(((dd, Jd) => {
-        var kd, pd, Nd, Wd;
-        return (null !== (kd = null === (pd = (0, ld.h)("emote", dd)) || void 0 === pd ? void 0 : pd.clientIdx) && void 0 !== kd ? kd : 0) - (null !== (Nd = null === (Wd = (0, ld.h)("emote", Jd)) || void 0 === Wd ? void 0 : Wd.clientIdx) && void 0 !== Nd ? Nd : 0)
-      })).filter((dd => {
-        const Jd = (0, ld.l)("emote", dd),
-          Nd = (0, ad.r)("emote", dd, kd);
-        return !(Jd.purchasable && !Nd && !pd) && (Jd.clientSelectable || Nd)
+        t: kQ
+      } = (0, HQ.y)(), uQ = new Set(FQ), YQ = new Map, xQ = Object.keys(bQ.d.emote).sort(((QQ, FQ) => {
+        var wQ, LQ, qQ, oQ;
+        return (null !== (wQ = null === (LQ = (0, bQ.i)("emote", QQ)) || void 0 === LQ ? void 0 : LQ.clientIdx) && void 0 !== wQ ? wQ : 0) - (null !== (qQ = null === (oQ = (0, bQ.i)("emote", FQ)) || void 0 === oQ ? void 0 : oQ.clientIdx) && void 0 !== qQ ? qQ : 0)
+      })).filter((QQ => {
+        const FQ = (0, bQ.m)("emote", QQ),
+          qQ = (0, WQ.p)("emote", QQ, wQ);
+        return !(FQ.purchasable && !qQ && !LQ) && (FQ.clientSelectable || qQ)
       }));
-      for (const gd of Ld) {
-        const dd = (0, ld.h)("emote", gd).cosmeticPack;
-        Qd.has(dd) || Qd.set(dd, []), Qd.get(dd).push(gd)
+      for (const vQ of xQ) {
+        const QQ = (0, bQ.i)("emote", vQ).cosmeticPack;
+        YQ.has(QQ) || YQ.set(QQ, []), YQ.get(QQ).push(vQ)
       }
-      const ed = Array.from(Qd.keys());
-      return (0, jd.jsxs)("div", {
+      const tQ = Array.from(YQ.keys());
+      return (0, NQ.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, jd.jsxs)("div", {
+        children: [!1, (0, NQ.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, jd.jsx)("span", {
+          children: [(0, NQ.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: Zd("emotes:equippedCount", {
-              count: Jd.length,
-              max: Cd.n
+            children: kQ("emotes:equippedCount", {
+              count: FQ.length,
+              max: mQ.q
             })
-          }), (0, jd.jsx)("span", {
+          }), (0, NQ.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: Zd("emotes:loadoutHint")
+            children: kQ("emotes:loadoutHint")
           })]
-        }), ed.map((dd => {
-          const pd = Qd.get(dd);
-          return (0, jd.jsx)(nd, {
-            pack: dd,
-            ownedPacks: kd,
-            children: (0, jd.jsx)("div", {
+        }), tQ.map((QQ => {
+          const LQ = YQ.get(QQ);
+          return (0, NQ.jsx)(zQ, {
+            pack: QQ,
+            ownedPacks: wQ,
+            children: (0, NQ.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: pd.map((dd => {
-                var pd;
-                const Pd = Jd.indexOf(dd),
-                  od = -1 !== Pd,
-                  ld = Jd.length >= Cd.n,
-                  Qd = Xd("emote", dd, kd),
-                  Ld = Qd || !od && ld,
-                  ed = (0, Od.h)(dd);
-                return (0, jd.jsxs)("div", {
-                  className: gd()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: od
+              children: LQ.map((QQ => {
+                var LQ;
+                const DQ = FQ.indexOf(QQ),
+                  HQ = -1 !== DQ,
+                  bQ = FQ.length >= mQ.q,
+                  YQ = TQ("emote", QQ, wQ),
+                  xQ = YQ || !HQ && bQ,
+                  tQ = (0, AQ.f)(QQ);
+                return (0, NQ.jsxs)("div", {
+                  className: vQ()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: HQ
                   }),
                   onClick: () => {
-                    Wd(dd)
+                    oQ(QQ)
                   },
-                  children: [(0, jd.jsxs)("div", {
+                  children: [(0, NQ.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, jd.jsx)("div", {
+                    children: [(0, NQ.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(/textures/charSkins/previews/emote_${dd}_preview.png)`
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${QQ}_preview.png)`
                       },
                       "aria-hidden": !0
-                    }), (0, jd.jsx)("span", {
+                    }), (0, NQ.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (pd = null === ed || void 0 === ed ? void 0 : ed.displayName) && void 0 !== pd ? pd : dd
+                      children: null !== (LQ = null === tQ || void 0 === tQ ? void 0 : tQ.displayName) && void 0 !== LQ ? LQ : QQ
                     })]
-                  }), (0, jd.jsxs)("div", {
+                  }), (0, NQ.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [od && (0, jd.jsx)("span", {
+                    children: [HQ && (0, NQ.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: Pd + 1
-                    }), Qd && (0, jd.jsx)(md.e, {
+                      children: DQ + 1
+                    }), YQ && (0, NQ.jsx)(rQ.c, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, jd.jsx)(Sd.f, {
-                      tooltipInner: (0, jd.jsx)(jd.Fragment, {
-                        children: Zd(od ? "general:remove" : "general:add")
+                    }), (0, NQ.jsx)(UQ.f, {
+                      tooltipInner: (0, NQ.jsx)(NQ.Fragment, {
+                        children: kQ(HQ ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, jd.jsx)("div", {
-                        className: gd()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: Ld,
-                          EmoteCustomPartToggleEquipped: od
+                      children: (0, NQ.jsx)("div", {
+                        className: vQ()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: xQ,
+                          EmoteCustomPartToggleEquipped: HQ
                         }),
-                        onClick: kd => {
-                          kd.stopPropagation(), Ld || function(dd) {
-                            Kd.has(dd) ? Nd(Jd.filter((Jd => Jd !== dd))) : Jd.length >= Cd.n || Nd([...Jd, dd])
-                          }(dd)
+                        onClick: wQ => {
+                          wQ.stopPropagation(), xQ || function(QQ) {
+                            uQ.has(QQ) ? qQ(FQ.filter((FQ => FQ !== QQ))) : FQ.length >= mQ.q || qQ([...FQ, QQ])
+                          }(QQ)
                         },
-                        children: (0, jd.jsx)(md.e, {
-                          name: od ? "minus" : "plus",
+                        children: (0, NQ.jsx)(rQ.c, {
+                          name: HQ ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, dd)
+                }, QQ)
               }))
             })
-          }, dd)
+          }, QQ)
         }))]
       })
     }
-    const yd = (0, pd.memo)((function(dd) {
+    const jQ = (0, LQ.memo)((function(QQ) {
       let {
-        selectedTab: Jd
-      } = dd;
-      const kd = "characters" === Jd ? "skin" : Jd,
+        selectedTab: FQ
+      } = QQ;
+      const wQ = "characters" === FQ ? "skin" : FQ,
         {
-          t: Zd
-        } = (0, od.B)(),
+          t: kQ
+        } = (0, HQ.y)(),
         {
-          userContext: Od,
-          isUserContextUpdating: Md
-        } = (0, Wd.c)(),
-        Sd = (0, Nd.b)(),
+          userContext: AQ,
+          isUserContextUpdating: RQ
+        } = (0, oQ.e)(),
+        UQ = (0, qQ.b)(),
         {
-          gameState: yd,
-          initSdkSelectorFinished: Dd
-        } = (0, vd.j)(["gameState", "initSdkSelectorFinished"]),
-        [Td, Ed] = (0, pd.useState)({}),
-        [cd, hd] = (0, pd.useState)({}),
+          gameState: jQ,
+          initSdkSelectorFinished: aQ
+        } = (0, pQ.l)(["gameState", "initSdkSelectorFinished"]),
+        [XQ, fQ] = (0, LQ.useState)({}),
+        [VQ, hQ] = (0, LQ.useState)({}),
         {
-          previewEmote: rd,
-          triggerEmote: ud
-        } = (0, ed.b)(),
-        td = (0, pd.useRef)(Cd.x.reduce(((dd, Jd) => (dd[Jd] = (0, Ld.b)(Jd), dd)), {})),
-        Vd = (0, pd.useRef)(!1),
-        zd = (0, pd.useRef)(null),
-        Hd = (0, pd.useRef)(null),
-        wd = (0, pd.useRef)(null);
+          previewEmote: JQ,
+          triggerEmote: EQ
+        } = (0, tQ.c)(),
+        nQ = (0, LQ.useRef)(mQ.w.reduce(((QQ, FQ) => (QQ[FQ] = (0, xQ.e)(FQ), QQ)), {})),
+        gQ = (0, LQ.useRef)(!1),
+        PQ = (0, LQ.useRef)(null),
+        ZQ = (0, LQ.useRef)(null),
+        yQ = (0, LQ.useRef)(null);
 
-      function Ad() {
-        null !== Hd.current && (clearTimeout(Hd.current), Hd.current = null);
-        const dd = wd.current;
-        if (null === dd) return;
-        wd.current = null;
-        const Jd = {
-          np: "emote",
-          Up: dd
+      function BQ() {
+        null !== ZQ.current && (clearTimeout(ZQ.current), ZQ.current = null);
+        const QQ = yQ.current;
+        if (null === QQ) return;
+        yQ.current = null;
+        const FQ = {
+          SL: "emote",
+          iL: QQ
         };
-        null !== Pd.gameBridge.latest("connectedGame").websocketUrl ? Pd.gameBridge.send("updateMyCosmetic", Jd) : xd.d.updateCosmetics(Od, [Jd]).catch((dd => {
-          console.error("Failed to update emote loadout", dd)
+        null !== DQ.gameBridge.latest("connectedGame").websocketUrl ? DQ.gameBridge.send("updateMyCosmetic", FQ) : cQ.b.updateCosmetics(AQ, [FQ]).catch((QQ => {
+          console.error("Failed to update emote loadout", QQ)
         }))
       }
 
-      function dJ(dd, Jd, kd) {
-        var pd, Nd, Wd;
-        if (td.current = {
-            ...td.current,
-            [dd]: Jd
-          }, Sd(), kd) {
-          const kd = {
-            np: dd,
-            Up: Jd
+      function dQ(QQ, FQ, wQ) {
+        var LQ, qQ, oQ;
+        if (nQ.current = {
+            ...nQ.current,
+            [QQ]: FQ
+          }, UQ(), wQ) {
+          const wQ = {
+            SL: QQ,
+            iL: FQ
           };
-          null !== Pd.gameBridge.latest("connectedGame").websocketUrl ? Pd.gameBridge.send("updateMyCosmetic", kd) : xd.d.updateCosmetics(Od, [kd]).catch((dd => {
-            console.error("Failed to update cosmetic", dd)
-          })), Od.setPlayerCosmetics(dd, Jd)
+          null !== DQ.gameBridge.latest("connectedGame").websocketUrl ? DQ.gameBridge.send("updateMyCosmetic", wQ) : cQ.b.updateCosmetics(AQ, [wQ]).catch((QQ => {
+            console.error("Failed to update cosmetic", QQ)
+          })), AQ.setPlayerCosmetics(QQ, FQ)
         }
-        const Zd = (0, ld.h)(dd, Jd);
-        if (null !== Zd && void 0 !== Zd && Zd.colourGroup && null !== (pd = sd.d[Zd.cosmeticPack].colourGroups) && void 0 !== pd && null !== (Nd = pd[Zd.colourGroup]) && void 0 !== Nd && Nd.showSwatchSelector) {
-          const kd = (0, ld.g)(Jd);
-          kd && hd((Jd => ({
-            ...Jd,
-            [`${Zd.cosmeticPack}_${dd}_${Zd.colourGroup}`]: parseInt(kd[1])
+        const kQ = (0, bQ.i)(QQ, FQ);
+        if (null !== kQ && void 0 !== kQ && kQ.colourGroup && null !== (LQ = iQ.e[kQ.cosmeticPack].colourGroups) && void 0 !== LQ && null !== (qQ = LQ[kQ.colourGroup]) && void 0 !== qQ && qQ.showSwatchSelector) {
+          const wQ = (0, bQ.f)(FQ);
+          wQ && hQ((FQ => ({
+            ...FQ,
+            [`${kQ.cosmeticPack}_${QQ}_${kQ.colourGroup}`]: parseInt(wQ[1])
           })))
         }
-        null !== (Wd = zd.current) && void 0 !== Wd && Wd.isReady() && zd.current.updateCosmetic(dd, Jd)
+        null !== (oQ = PQ.current) && void 0 !== oQ && oQ.isReady() && PQ.current.updateCosmetic(QQ, FQ)
       }
 
-      function JJ(dd) {
-        return Object.entries(dd).every((dd => {
-          let [Jd, kd] = dd;
-          return Td[Jd] === kd
+      function QF(QQ) {
+        return Object.entries(QQ).every((QQ => {
+          let [FQ, wQ] = QQ;
+          return XQ[FQ] === wQ
         }))
-      }(0, Rd.d)("cosmeticsUpdated", (dd => {
-        let Jd = !1;
+      }(0, eQ.d)("cosmeticsUpdated", (QQ => {
+        let FQ = !1;
         for (const {
-            local: kd,
-            np: pd,
-            Up: Nd
+            local: wQ,
+            SL: LQ,
+            iL: qQ
           }
-          of dd) {
-          if (!kd) return;
-          Jd = !0, Vd.current || dJ(pd, Nd, !1), Sd()
+          of QQ) {
+          if (!wQ) return;
+          FQ = !0, gQ.current || dQ(LQ, qQ, !1), UQ()
         }
-        Jd && (Vd.current = !0)
-      })), (0, pd.useEffect)((() => {
-        if (!Md) {
-          for (const [dd, Jd] of Object.entries(Od.getPlayerCosmetics())) dJ(dd, Jd, !1);
-          Sd()
+        FQ && (gQ.current = !0)
+      })), (0, LQ.useEffect)((() => {
+        if (!RQ) {
+          for (const [QQ, FQ] of Object.entries(AQ.getPlayerCosmetics())) dQ(QQ, FQ, !1);
+          UQ()
         }
-      }), [Md]), (0, pd.useEffect)((() => () => {
-        Ad()
+      }), [RQ]), (0, LQ.useEffect)((() => () => {
+        BQ()
       }), []);
-      const kJ = Od.getOwnedCosmeticPacks(),
-        pJ = (0, bd.purchasesAllowed)(),
-        NJ = Object.keys(ld.e[kd]).filter((dd => {
-          const Jd = (0, ld.l)(kd, dd),
-            pd = (0, ad.r)(kd, dd, kJ);
-          return !(Jd.purchasable && !pd && !pJ) && (Jd.clientSelectable || pd)
-        })).sort(((dd, Jd) => {
-          var pd, Nd, Wd, Pd;
-          return (null !== (pd = null === (Nd = (0, ld.h)(kd, dd)) || void 0 === Nd ? void 0 : Nd.clientIdx) && void 0 !== pd ? pd : 0) - (null !== (Wd = null === (Pd = (0, ld.h)(kd, Jd)) || void 0 === Pd ? void 0 : Pd.clientIdx) && void 0 !== Wd ? Wd : 0)
+      const FF = AQ.getOwnedCosmeticPacks(),
+        wF = (0, IQ.purchasesAllowed)(),
+        LF = Object.keys(bQ.d[wQ]).filter((QQ => {
+          const FQ = (0, bQ.m)(wQ, QQ),
+            LQ = (0, WQ.p)(wQ, QQ, FF);
+          return !(FQ.purchasable && !LQ && !wF) && (FQ.clientSelectable || LQ)
+        })).sort(((QQ, FQ) => {
+          var LQ, qQ, oQ, DQ;
+          return (null !== (LQ = null === (qQ = (0, bQ.i)(wQ, QQ)) || void 0 === qQ ? void 0 : qQ.clientIdx) && void 0 !== LQ ? LQ : 0) - (null !== (oQ = null === (DQ = (0, bQ.i)(wQ, FQ)) || void 0 === DQ ? void 0 : DQ.clientIdx) && void 0 !== oQ ? oQ : 0)
         })),
-        WJ = new Map;
-      for (const pd of NJ) {
-        var PJ;
-        const dd = null === (PJ = (0, ld.h)(kd, pd)) || void 0 === PJ ? void 0 : PJ.cosmeticPack;
-        WJ.has(dd) || WJ.set(dd, []), WJ.get(dd).push(pd)
+        qF = new Map;
+      for (const LQ of LF) {
+        var oF;
+        const QQ = null === (oF = (0, bQ.i)(wQ, LQ)) || void 0 === oF ? void 0 : oF.cosmeticPack;
+        qF.has(QQ) || qF.set(QQ, []), qF.get(QQ).push(LQ)
       }
-      const ZJ = function(dd, Jd) {
-          const kd = new Set,
-            pd = new Set;
-          for (const [Nd, Wd] of Object.entries(ld.e[dd])) {
-            if (void 0 === Wd.colourGroup) continue;
-            const Pd = `${Wd.cosmeticPack}_${Wd.colourGroup}`;
-            (Xd(dd, Nd, Jd) ? pd : kd).add(Pd)
+      const DF = function(QQ, FQ) {
+          const wQ = new Set,
+            LQ = new Set;
+          for (const [qQ, oQ] of Object.entries(bQ.d[QQ])) {
+            if (void 0 === oQ.colourGroup) continue;
+            const DQ = `${oQ.cosmeticPack}_${oQ.colourGroup}`;
+            (TQ(QQ, qQ, FQ) ? LQ : wQ).add(DQ)
           }
-          return new Set([...kd].filter((dd => pd.has(dd))))
-        }(kd, kJ),
-        gJ = new Map;
-      for (const [pd, Nd] of WJ) {
-        const dd = [],
-          Jd = new Map;
-        for (const pd of Nd) {
-          var CJ, KJ;
-          const Nd = null !== (CJ = null === (KJ = (0, ld.h)(kd, pd)) || void 0 === KJ ? void 0 : KJ.colourGroup) && void 0 !== CJ ? CJ : null;
-          Jd.has(Nd) || (Jd.set(Nd, []), dd.push(Nd)), Jd.get(Nd).push(pd)
+          return new Set([...wQ].filter((QQ => LQ.has(QQ))))
+        }(wQ, FF),
+        kF = new Map;
+      for (const [LQ, qQ] of qF) {
+        const QQ = [],
+          FQ = new Map;
+        for (const LQ of qQ) {
+          var vF, mF;
+          const qQ = null !== (vF = null === (mF = (0, bQ.i)(wQ, LQ)) || void 0 === mF ? void 0 : mF.colourGroup) && void 0 !== vF ? vF : null;
+          FQ.has(qQ) || (FQ.set(qQ, []), QQ.push(qQ)), FQ.get(qQ).push(LQ)
         }
-        const Wd = dd.map((dd => {
-          var Nd;
-          const Wd = Jd.get(dd),
-            Pd = dd ? null === (Nd = sd.d[pd].colourGroups) || void 0 === Nd ? void 0 : Nd[dd] : void 0,
-            Zd = !0 === (null === Pd || void 0 === Pd ? void 0 : Pd.showSwatchSelector) && !ZJ.has(`${pd}_${dd}`);
-          if (Zd && Pd) {
-            var gd;
-            const Jd = null !== (gd = cd[`${pd}_${kd}_${dd}`]) && void 0 !== gd ? gd : (0, sd.i)(Pd.colours);
+        const oQ = QQ.map((QQ => {
+          var qQ;
+          const oQ = FQ.get(QQ),
+            DQ = QQ ? null === (qQ = iQ.e[LQ].colourGroups) || void 0 === qQ ? void 0 : qQ[QQ] : void 0,
+            kQ = !0 === (null === DQ || void 0 === DQ ? void 0 : DQ.showSwatchSelector) && !DF.has(`${LQ}_${QQ}`);
+          if (kQ && DQ) {
+            var vQ;
+            const FQ = null !== (vQ = VQ[`${LQ}_${wQ}_${QQ}`]) && void 0 !== vQ ? vQ : (0, iQ.k)(DQ.colours);
             return {
-              groupName: dd,
-              showSwatch: Zd,
-              cosmetics: Wd.filter((dd => {
-                const kd = (0, ld.g)(dd);
-                return !kd || Jd.toString() === kd[1].toString()
+              groupName: QQ,
+              showSwatch: kQ,
+              cosmetics: oQ.filter((QQ => {
+                const wQ = (0, bQ.f)(QQ);
+                return !wQ || FQ.toString() === wQ[1].toString()
               }))
             }
           }
           return {
-            groupName: dd,
-            cosmetics: Wd,
-            showSwatch: Zd
+            groupName: QQ,
+            cosmetics: oQ,
+            showSwatch: kQ
           }
         }));
-        gJ.set(pd, Wd)
+        kF.set(LQ, oQ)
       }
-      const oJ = Array.from(WJ.keys()),
-        lJ = new Map;
-      for (const [pd, Nd] of Object.entries(Qd.c)) {
-        const dd = sd.d[Nd.cosmeticPack],
-          Jd = !fd(Nd.cosmetics, kJ),
-          kd = sd.n.some((dd => (0, sd.f)(dd) === pd));
-        (dd.clientSelectable || kd || Jd) && ((!dd.purchasable || Jd || pJ) && (lJ.has(Nd.cosmeticPack) || lJ.set(Nd.cosmeticPack, []), lJ.get(Nd.cosmeticPack).push([pd, Nd])))
+      const uF = Array.from(qF.keys()),
+        HF = new Map;
+      for (const [LQ, qQ] of Object.entries(YQ.e)) {
+        const QQ = iQ.e[qQ.cosmeticPack],
+          FQ = !KQ(qQ.cosmetics, FF),
+          wQ = iQ.p.some((QQ => (0, iQ.i)(QQ) === LQ));
+        (QQ.clientSelectable || wQ || FQ) && ((!QQ.purchasable || FQ || wF) && (HF.has(qQ.cosmeticPack) || HF.set(qQ.cosmeticPack, []), HF.get(qQ.cosmeticPack).push([LQ, qQ])))
       }
-      const QJ = Array.from(lJ.keys());
-      return (0, jd.jsxs)("div", {
+      const bF = Array.from(HF.keys());
+      return (0, NQ.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === kd || "nameColour" === kd) && !Od.playerHasRank("super") && (0, jd.jsxs)("div", {
+        children: [("cape" === wQ || "nameColour" === wQ) && !AQ.playerHasRank("super") && (0, NQ.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, jd.jsx)(md.e, {
+          children: [(0, NQ.jsx)(rQ.c, {
             name: "bolt"
-          }), Zd("homePage:unlockWithSuperRank"), pJ && (0, jd.jsx)(Id.j, {
+          }), kQ("homePage:unlockWithSuperRank"), wF && (0, NQ.jsx)(MQ.m, {
             onClick: () => {
-              (0, Gd.q)({
+              (0, GQ.o)({
                 mode: "self",
                 source: "characterCustomisation",
                 openItem: "superRank"
               })
             },
-            children: Zd("general:getItNow")
+            children: kQ("general:getItNow")
           })]
-        }), (0, jd.jsxs)("div", {
+        }), (0, NQ.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === Jd && (0, jd.jsxs)("div", {
+          children: ["characters" === FQ && (0, NQ.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, QJ.map((dd => {
-              const Jd = lJ.get(dd);
-              return (0, jd.jsx)(nd, {
-                pack: dd,
-                ownedPacks: kJ,
-                showStoreLink: !sd.q.includes(dd) && Jd.some((dd => {
+            children: [!1, bF.map((QQ => {
+              const FQ = HF.get(QQ);
+              return (0, NQ.jsx)(zQ, {
+                pack: QQ,
+                ownedPacks: FF,
+                showStoreLink: !iQ.t.includes(QQ) && FQ.some((QQ => {
                   let [, {
-                    cosmetics: Jd
-                  }] = dd;
-                  return fd(Jd, kJ)
+                    cosmetics: FQ
+                  }] = QQ;
+                  return KQ(FQ, FF)
                 })),
-                children: (0, jd.jsx)("div", {
+                children: (0, NQ.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: Jd.map((dd => {
-                    let [Jd, {
-                      cosmetics: kd
-                    }] = dd;
-                    const pd = fd(kd, kJ),
-                      Nd = JJ(kd),
-                      Wd = !Nd && Object.entries(kd).every((dd => {
-                        let [Jd, kd] = dd;
-                        return td.current[Jd] === kd
+                  children: FQ.map((QQ => {
+                    let [FQ, {
+                      cosmetics: wQ
+                    }] = QQ;
+                    const LQ = KQ(wQ, FF),
+                      qQ = QF(wQ),
+                      oQ = !qQ && Object.entries(wQ).every((QQ => {
+                        let [FQ, wQ] = QQ;
+                        return nQ.current[FQ] === wQ
                       }));
-                    return (0, jd.jsxs)("div", {
+                    return (0, NQ.jsxs)("div", {
                       "data-pad-focusable": !0,
-                      className: gd()("CharacterPresetCard", {
-                        CharacterPresetCardActive: Wd,
-                        CharacterPresetCardTryingOn: Nd
+                      className: vQ()("CharacterPresetCard", {
+                        CharacterPresetCardActive: oQ,
+                        CharacterPresetCardTryingOn: qQ
                       }),
                       onClick: () => {
-                        if (pd) ! function(dd) {
-                          JJ(dd) ? Ed({}) : Ed({
-                            ...dd
+                        if (LQ) ! function(QQ) {
+                          QF(QQ) ? fQ({}) : fQ({
+                            ...QQ
                           })
-                        }(kd);
+                        }(wQ);
                         else {
-                          Object.keys(Td).length > 0 && Ed({});
-                          const dd = Object.entries(kd);
-                          for (const [Jd, kd] of dd) dJ(Jd, kd, !1), Od.setPlayerCosmetics(Jd, kd);
-                          if (null !== Pd.gameBridge.latest("connectedGame").websocketUrl)
-                            for (const [Jd, kd] of dd) Pd.gameBridge.send("updateMyCosmetic", {
-                              np: Jd,
-                              Up: kd
+                          Object.keys(XQ).length > 0 && fQ({});
+                          const QQ = Object.entries(wQ);
+                          for (const [FQ, wQ] of QQ) dQ(FQ, wQ, !1), AQ.setPlayerCosmetics(FQ, wQ);
+                          if (null !== DQ.gameBridge.latest("connectedGame").websocketUrl)
+                            for (const [FQ, wQ] of QQ) DQ.gameBridge.send("updateMyCosmetic", {
+                              SL: FQ,
+                              iL: wQ
                             });
-                          else xd.d.updateCosmetics(Od, dd.map((dd => {
-                            let [Jd, kd] = dd;
+                          else cQ.b.updateCosmetics(AQ, QQ.map((QQ => {
+                            let [FQ, wQ] = QQ;
                             return {
-                              np: Jd,
-                              Up: kd
+                              SL: FQ,
+                              iL: wQ
                             }
-                          }))).catch((dd => {
-                            console.error("Failed to update cosmetics", dd)
+                          }))).catch((QQ => {
+                            console.error("Failed to update cosmetics", QQ)
                           }))
                         }
                       },
-                      children: [(0, jd.jsx)("div", {
+                      children: [(0, NQ.jsx)("div", {
                         className: "CharacterPresetCardPreview",
                         style: {
-                          backgroundImage: `url(/textures/charSkins/previews/character_${Jd}_preview.png)`
+                          backgroundImage: `url(/textures/charSkins/previews/character_${FQ}_preview.png)`
                         }
-                      }), pd && (0, jd.jsx)(md.e, {
+                      }), LQ && (0, NQ.jsx)(rQ.c, {
                         name: "lock",
                         className: "LockedCosmeticIcon"
                       })]
-                    }, Jd)
+                    }, FQ)
                   }))
                 })
-              }, dd)
+              }, QQ)
             }))]
-          }), "emote" === Jd && (0, jd.jsx)(Ud, {
-            equippedEmoteIds: (0, Ld.d)(td.current.emote),
-            ownedPacks: kJ,
-            canBuy: pJ,
-            onUpdateLoadout: dd => {
-              const Jd = (0, Ld.e)(dd);
-              var kd;
-              td.current = {
-                ...td.current,
-                emote: Jd
-              }, Od.setPlayerCosmetics("emote", Jd), Sd(), kd = Jd, wd.current = kd, null !== Hd.current && clearTimeout(Hd.current), Hd.current = setTimeout(Ad, 350)
+          }), "emote" === FQ && (0, NQ.jsx)(lQ, {
+            equippedEmoteIds: (0, xQ.g)(nQ.current.emote),
+            ownedPacks: FF,
+            canBuy: wF,
+            onUpdateLoadout: QQ => {
+              const FQ = (0, xQ.h)(QQ);
+              var wQ;
+              nQ.current = {
+                ...nQ.current,
+                emote: FQ
+              }, AQ.setPlayerCosmetics("emote", FQ), UQ(), wQ = FQ, yQ.current = wQ, null !== ZQ.current && clearTimeout(ZQ.current), ZQ.current = setTimeout(BQ, 350)
             },
-            onEmoteSelected: ud,
+            onEmoteSelected: EQ,
             onEquipPreviewSkin: () => {
-              ! function(dd, Jd) {
-                for (const kd of Cd.x) "cape" !== kd && "nameColour" !== kd && "emote" !== kd && dd(kd, "skin" === kd ? "skin_preview" : `${kd}_none`, !1);
-                Jd()
-              }(dJ, Sd)
+              ! function(QQ, FQ) {
+                for (const wQ of mQ.w) "cape" !== wQ && "nameColour" !== wQ && "emote" !== wQ && QQ(wQ, "skin" === wQ ? "skin_preview" : `${wQ}_none`, !1);
+                FQ()
+              }(dQ, UQ)
             }
-          }), "characters" !== Jd && "emote" !== Jd && (0, jd.jsxs)("div", {
+          }), "characters" !== FQ && "emote" !== FQ && (0, NQ.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, oJ.map((dd => {
-              const Jd = gJ.get(dd);
-              return (0, jd.jsx)(nd, {
-                pack: dd,
-                ownedPacks: kJ,
-                children: Jd.map((Jd => {
-                  var pd;
+            children: [!1, uF.map((QQ => {
+              const FQ = kF.get(QQ);
+              return (0, NQ.jsx)(zQ, {
+                pack: QQ,
+                ownedPacks: FF,
+                children: FQ.map((FQ => {
+                  var LQ;
                   let {
-                    groupName: Nd,
-                    cosmetics: Wd,
-                    showSwatch: Pd
-                  } = Jd;
-                  const Zd = Nd ? null === (pd = sd.d[dd].colourGroups) || void 0 === pd ? void 0 : pd[Nd] : void 0,
-                    Cd = `${dd}_${kd}_${Nd}`;
-                  return (0, jd.jsxs)("div", {
+                    groupName: qQ,
+                    cosmetics: oQ,
+                    showSwatch: DQ
+                  } = FQ;
+                  const kQ = qQ ? null === (LQ = iQ.e[QQ].colourGroups) || void 0 === LQ ? void 0 : LQ[qQ] : void 0,
+                    mQ = `${QQ}_${wQ}_${qQ}`;
+                  return (0, NQ.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [Pd && Zd && (0, jd.jsx)("div", {
+                    children: [DQ && kQ && (0, NQ.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...Zd.colours.map(((dd, Jd) => ({
-                        color: dd,
-                        index: Jd
-                      })))].sort(((dd, Jd) => dd.color.order - Jd.color.order)).map((Jd => {
-                        var pd;
+                      children: [...kQ.colours.map(((QQ, FQ) => ({
+                        color: QQ,
+                        index: FQ
+                      })))].sort(((QQ, FQ) => QQ.color.order - FQ.color.order)).map((FQ => {
+                        var LQ;
                         let {
-                          color: Wd,
-                          index: Pd
-                        } = Jd;
-                        return (0, jd.jsx)("div", {
-                          className: gd()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (pd = cd[Cd]) && void 0 !== pd ? pd : (0, sd.i)(Zd.colours)) === Pd
+                          color: oQ,
+                          index: DQ
+                        } = FQ;
+                        return (0, NQ.jsx)("div", {
+                          className: vQ()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (LQ = VQ[mQ]) && void 0 !== LQ ? LQ : (0, iQ.k)(kQ.colours)) === DQ
                           }),
                           style: {
-                            backgroundColor: `rgb(${Wd.rbg.join(",")})`
+                            backgroundColor: `rgb(${oQ.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var Jd;
-                            hd((dd => ({
-                              ...dd,
-                              [Cd]: Pd
+                            var FQ;
+                            hQ((QQ => ({
+                              ...QQ,
+                              [mQ]: DQ
                             })));
-                            const pd = Td[kd],
-                              Wd = pd ? (0, ld.h)(kd, pd) : null,
-                              Zd = (null === Wd || void 0 === Wd ? void 0 : Wd.cosmeticPack) === dd,
-                              gd = Zd ? pd : td.current[kd],
-                              Kd = Zd ? Wd : (0, ld.h)(kd, gd);
-                            if ((null === Kd || void 0 === Kd ? void 0 : Kd.cosmeticPack) !== dd) return;
-                            if ((null !== (Jd = null === Kd || void 0 === Kd ? void 0 : Kd.colourGroup) && void 0 !== Jd ? Jd : null) !== Nd) return;
-                            const od = (0, ld.g)(gd);
-                            if (od) {
-                              const dd = `${kd}_${od[0]}_${Pd}`;
-                              Zd ? Ed((Jd => ({
-                                ...Jd,
-                                [kd]: dd
-                              }))) : dJ(kd, dd, !0)
+                            const LQ = XQ[wQ],
+                              oQ = LQ ? (0, bQ.i)(wQ, LQ) : null,
+                              kQ = (null === oQ || void 0 === oQ ? void 0 : oQ.cosmeticPack) === QQ,
+                              vQ = kQ ? LQ : nQ.current[wQ],
+                              uQ = kQ ? oQ : (0, bQ.i)(wQ, vQ);
+                            if ((null === uQ || void 0 === uQ ? void 0 : uQ.cosmeticPack) !== QQ) return;
+                            if ((null !== (FQ = null === uQ || void 0 === uQ ? void 0 : uQ.colourGroup) && void 0 !== FQ ? FQ : null) !== qQ) return;
+                            const HQ = (0, bQ.f)(vQ);
+                            if (HQ) {
+                              const QQ = `${wQ}_${HQ[0]}_${DQ}`;
+                              kQ ? fQ((FQ => ({
+                                ...FQ,
+                                [wQ]: QQ
+                              }))) : dQ(wQ, QQ, !0)
                             }
                           }
-                        }, Wd.rbg.join())
+                        }, oQ.rbg.join())
                       }))
-                    }), Wd.map((dd => {
-                      const Jd = dd === td.current[kd],
-                        pd = Td[kd] === dd,
-                        Nd = Xd(kd, dd, kJ);
-                      let Wd = !0;
-                      return Nd || Jd || ("cape" !== kd || (0, qd.Sd)(Od.getPlayerRanks(), dd)) && ("nameColour" !== kd || Od.playerHasRank("super")) || (Wd = !1), (0, jd.jsxs)("div", {
-                        className: gd()("CharCustomPartWrapper", {
-                          SelectedCharCustomPartWrapper: Jd && !pd,
-                          TryingOnCharCustomPartWrapper: pd,
-                          DisabledCharCustomPartWrapper: !Wd,
-                          CharCustomPartWrapperProfileEffect: "profileEffect" === kd
+                    }), oQ.map((QQ => {
+                      const FQ = QQ === nQ.current[wQ],
+                        LQ = XQ[wQ] === QQ,
+                        qQ = TQ(wQ, QQ, FF);
+                      let oQ = !0;
+                      return qQ || FQ || ("cape" !== wQ || (0, CQ.Wd)(AQ.getPlayerRanks(), QQ)) && ("nameColour" !== wQ || AQ.playerHasRank("super")) || (oQ = !1), (0, NQ.jsxs)("div", {
+                        className: vQ()("CharCustomPartWrapper", {
+                          SelectedCharCustomPartWrapper: FQ && !LQ,
+                          TryingOnCharCustomPartWrapper: LQ,
+                          DisabledCharCustomPartWrapper: !oQ,
+                          CharCustomPartWrapperProfileEffect: "profileEffect" === wQ
                         }),
                         onClick: () => {
-                          if (Wd)
-                            if (Nd) Ed((Jd => {
-                              if (Jd[kd] === dd) {
-                                const dd = {
-                                  ...Jd
+                          if (oQ)
+                            if (qQ) fQ((FQ => {
+                              if (FQ[wQ] === QQ) {
+                                const QQ = {
+                                  ...FQ
                                 };
-                                return delete dd[kd], dd
+                                return delete QQ[wQ], QQ
                               }
                               return {
-                                ...Jd,
-                                [kd]: dd
+                                ...FQ,
+                                [wQ]: QQ
                               }
                             }));
                             else {
-                              var Jd;
-                              if (Td[kd] && Ed((dd => {
-                                  const Jd = {
-                                    ...dd
+                              var FQ;
+                              if (XQ[wQ] && fQ((QQ => {
+                                  const FQ = {
+                                    ...QQ
                                   };
-                                  return delete Jd[kd], Jd
-                                })), dd === td.current[kd]) return;
-                              null !== (Jd = zd.current) && void 0 !== Jd && Jd.isReady() && dJ(kd, dd, !0)
+                                  return delete FQ[wQ], FQ
+                                })), QQ === nQ.current[wQ]) return;
+                              null !== (FQ = PQ.current) && void 0 !== FQ && FQ.isReady() && dQ(wQ, QQ, !0)
                             }
                         },
-                        children: ["profileEffect" === kd ? (0, jd.jsx)("div", {
+                        children: ["profileEffect" === wQ ? (0, NQ.jsx)("div", {
                           className: "CharCustomPart CharCustomProfileEffect",
-                          children: (0, jd.jsx)(Yd.f, {
-                            playerSocialPreview: (0, Fd.b)(dd, {
-                              name: Od.getPlayerName(),
-                              cosmetics: Od.getPlayerCosmetics()
+                          children: (0, NQ.jsx)(sQ.e, {
+                            playerSocialPreview: (0, OQ.c)(QQ, {
+                              name: AQ.getPlayerName(),
+                              cosmetics: AQ.getPlayerCosmetics()
                             }),
                             showLocation: !1,
                             opensProfileCard: !1
                           })
-                        }) : (0, jd.jsx)("div", {
-                          className: gd()("CharCustomPart", {
-                            PixelatedImage: "cape" === kd
+                        }) : (0, NQ.jsx)("div", {
+                          className: vQ()("CharCustomPart", {
+                            PixelatedImage: "cape" === wQ
                           }),
-                          style: (0, ld.h)(kd, dd).previewTex ? {
-                            backgroundImage: `url(/textures/charSkins/previews/${(0,ld.h)(kd,dd).previewTex}.png)`
+                          style: (0, bQ.i)(wQ, QQ).previewTex ? {
+                            backgroundImage: `url(/textures/charSkins/previews/${(0,bQ.i)(wQ,QQ).previewTex}.png)`
                           } : {
-                            backgroundColor: Kd.m[dd]
+                            backgroundColor: uQ.s[QQ]
                           }
-                        }), Nd && (0, jd.jsx)(md.e, {
+                        }), qQ && (0, NQ.jsx)(rQ.c, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
-                      }, dd)
+                      }, QQ)
                     }))]
-                  }, null !== Nd && void 0 !== Nd ? Nd : "ungrouped")
+                  }, null !== qQ && void 0 !== qQ ? qQ : "ungrouped")
                 }))
-              }, dd)
+              }, QQ)
             }))]
-          }), (0, jd.jsx)(Bd.CharacterPreview, {
-            ref: zd,
-            forcedCosmetics: Td,
-            HC: rd.id,
-            emotePlaySeq: rd.seq,
+          }), (0, NQ.jsx)(SQ.CharacterPreview, {
+            ref: PQ,
+            forcedCosmetics: XQ,
+            ou: JQ.id,
+            emotePlaySeq: JQ.seq,
             onReady: () => {
-              for (const dd of Cd.x) dJ(dd, td.current[dd], !1)
+              for (const QQ of mQ.w) dQ(QQ, nQ.current[QQ], !1)
             }
           })]
         })]
       })
     }))
   },
-  41253: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      CharacterPreview: () => od
+  40672: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      CharacterPreview: () => HQ
     });
-    var pd = kd(56),
-      Nd = kd(2615),
-      Wd = kd(1260),
-      Pd = kd(8734),
-      Zd = kd(9272),
-      gd = kd(3519),
-      Cd = kd(1103);
-    const Kd = .6 * Math.PI,
-      od = (0, pd.memo)((0, pd.forwardRef)((function(dd, Jd) {
+    var LQ = wQ(53),
+      qQ = wQ(2657),
+      oQ = wQ(1254),
+      DQ = wQ(8582),
+      kQ = wQ(9137),
+      vQ = wQ(3511),
+      mQ = wQ(1107);
+    const uQ = .6 * Math.PI,
+      HQ = (0, LQ.memo)((0, LQ.forwardRef)((function(QQ, FQ) {
         let {
-          onReady: kd,
-          onDrawn: od,
-          owner: ld = "other",
-          framing: Qd = "player",
-          forcedCosmetics: Ld,
-          HC: Od,
-          emotePlaySeq: ed,
-          turntableFromYaw: Rd = null
-        } = dd;
-        const Id = (0, pd.useRef)(null),
+          onReady: wQ,
+          onDrawn: HQ,
+          owner: bQ = "other",
+          framing: YQ = "player",
+          forcedCosmetics: xQ,
+          ou: AQ,
+          emotePlaySeq: tQ,
+          turntableFromYaw: eQ = null
+        } = QQ;
+        const MQ = (0, LQ.useRef)(null),
           {
-            width: Gd,
-            height: vd
-          } = (0, Nd.c)(Id),
-          xd = (0, pd.useRef)(null),
-          qd = (0, pd.useRef)({}),
-          Bd = (0, pd.useRef)({}),
-          [sd, ad] = (0, pd.useState)(!1),
-          Md = (0, pd.useRef)(kd);
-        Md.current = kd;
-        const Fd = (0, pd.useRef)(od);
-        Fd.current = od;
-        const Yd = (0, pd.useRef)(null),
-          md = (0, pd.useRef)(!1),
-          bd = (0, pd.useRef)(!1),
-          Sd = (0, pd.useCallback)((() => {
-            const dd = xd.current;
-            if (!dd || !Fd.current || md.current || !bd.current) return;
-            const Jd = {};
-            Yd.current = Jd, queueMicrotask((() => {
-              if (Yd.current !== Jd) return;
-              const kd = Promise.all(Wd.x.map((Jd => dd.untilDrawn(Jd)))).catch((dd => {
-                  console.error("Failed to draw the character preview", dd)
+            width: GQ,
+            height: pQ
+          } = (0, qQ.c)(MQ),
+          cQ = (0, LQ.useRef)(null),
+          CQ = (0, LQ.useRef)({}),
+          SQ = (0, LQ.useRef)({}),
+          [iQ, WQ] = (0, LQ.useState)(!1),
+          RQ = (0, LQ.useRef)(wQ);
+        RQ.current = wQ;
+        const OQ = (0, LQ.useRef)(HQ);
+        OQ.current = HQ;
+        const sQ = (0, LQ.useRef)(null),
+          rQ = (0, LQ.useRef)(!1),
+          IQ = (0, LQ.useRef)(!1),
+          UQ = (0, LQ.useCallback)((() => {
+            const QQ = cQ.current;
+            if (!QQ || !OQ.current || rQ.current || !IQ.current) return;
+            const FQ = {};
+            sQ.current = FQ, queueMicrotask((() => {
+              if (sQ.current !== FQ) return;
+              const wQ = Promise.all(oQ.w.map((FQ => QQ.untilDrawn(FQ)))).catch((QQ => {
+                  console.error("Failed to draw the character preview", QQ)
                 })),
-                pd = new Promise((dd => {
-                  setTimeout(dd, 1e4)
+                LQ = new Promise((QQ => {
+                  setTimeout(QQ, 1e4)
                 }));
-              Promise.race([kd, pd]).then((() => {
-                var kd;
-                xd.current !== dd || Yd.current !== Jd || md.current || (md.current = !0, null === (kd = Fd.current) || void 0 === kd || kd.call(Fd))
+              Promise.race([wQ, LQ]).then((() => {
+                var wQ;
+                cQ.current !== QQ || sQ.current !== FQ || rQ.current || (rQ.current = !0, null === (wQ = OQ.current) || void 0 === wQ || wQ.call(OQ))
               }))
             }))
           }), []);
-        return (0, pd.useImperativeHandle)(Jd, (() => {
-          const dd = (dd, Jd) => {
-            var kd;
-            (qd.current[dd] = Jd, null !== Ld && void 0 !== Ld && Ld[dd]) || (null === (kd = xd.current) || void 0 === kd || kd.setCosmetic(dd, Jd), Sd())
+        return (0, LQ.useImperativeHandle)(FQ, (() => {
+          const QQ = (QQ, FQ) => {
+            var wQ;
+            (CQ.current[QQ] = FQ, null !== xQ && void 0 !== xQ && xQ[QQ]) || (null === (wQ = cQ.current) || void 0 === wQ || wQ.setCosmetic(QQ, FQ), UQ())
           };
           return {
-            updateCosmetic: dd,
-            setAllCosmetics(Jd) {
-              for (const pd of Wd.x) {
-                var kd;
-                dd(pd, null !== (kd = Jd[pd]) && void 0 !== kd ? kd : (0, Pd.b)(pd))
+            updateCosmetic: QQ,
+            setAllCosmetics(FQ) {
+              for (const LQ of oQ.w) {
+                var wQ;
+                QQ(LQ, null !== (wQ = FQ[LQ]) && void 0 !== wQ ? wQ : (0, DQ.e)(LQ))
               }
             },
             isReady() {
-              var dd, Jd;
-              return null !== (dd = null === (Jd = xd.current) || void 0 === Jd ? void 0 : Jd.isReady()) && void 0 !== dd && dd
+              var QQ, FQ;
+              return null !== (QQ = null === (FQ = cQ.current) || void 0 === FQ ? void 0 : FQ.isReady()) && void 0 !== QQ && QQ
             },
             resetCamera() {
-              var dd;
-              null === (dd = xd.current) || void 0 === dd || dd.resetCamera()
+              var QQ;
+              null === (QQ = cQ.current) || void 0 === QQ || QQ.resetCamera()
             },
-            setOrbit(dd) {
-              var Jd;
-              null === (Jd = xd.current) || void 0 === Jd || Jd.setOrbit(dd)
+            setOrbit(QQ) {
+              var FQ;
+              null === (FQ = cQ.current) || void 0 === FQ || FQ.setOrbit(QQ)
             },
-            async ensureReadyForCapture(dd) {
-              var Jd;
-              await (null === (Jd = xd.current) || void 0 === Jd ? void 0 : Jd.untilDrawn(dd))
+            async ensureReadyForCapture(QQ) {
+              var FQ;
+              await (null === (FQ = cQ.current) || void 0 === FQ ? void 0 : FQ.untilDrawn(QQ))
             },
             getDevTools() {
-              var dd;
-              return null !== (dd = xd.current) && void 0 !== dd && dd.isReady() ? xd.current.dev : null
+              var QQ;
+              return null !== (QQ = cQ.current) && void 0 !== QQ && QQ.isReady() ? cQ.current.dev : null
             }
           }
-        }), [Ld, Sd]), (0, pd.useEffect)((() => {
-          const dd = gd.e.register(ld),
-            Jd = Zd.j.openCharacter(Id.current, Qd);
-          xd.current = Jd;
-          let kd = !0;
-          return Jd.ready.then((() => {
-            kd && (ad(!0), Md.current())
-          })).catch((dd => {
-            console.error("Failed to set up the character preview", dd)
+        }), [xQ, UQ]), (0, LQ.useEffect)((() => {
+          const QQ = vQ.d.register(bQ),
+            FQ = kQ.d.openCharacter(MQ.current, YQ);
+          cQ.current = FQ;
+          let wQ = !0;
+          return FQ.ready.then((() => {
+            wQ && (WQ(!0), RQ.current())
+          })).catch((QQ => {
+            console.error("Failed to set up the character preview", QQ)
           })), () => {
-            kd = !1, dd(), Jd.resetCamera(), Jd.close(), xd.current = null
+            wQ = !1, QQ(), FQ.resetCamera(), FQ.close(), cQ.current = null
           }
-        }), []), (0, pd.useEffect)((() => {
-          Gd <= 0 || vd <= 0 || xd.current.resize(Gd, vd)
-        }), [Gd, vd]), (0, pd.useEffect)((() => {
-          if (!sd) return;
-          const dd = Bd.current;
-          for (const Jd of Wd.x) {
-            const kd = null === Ld || void 0 === Ld ? void 0 : Ld[Jd],
-              pd = dd[Jd];
-            kd && kd !== pd ? xd.current.setCosmetic(Jd, kd) : !kd && pd && qd.current[Jd] && xd.current.setCosmetic(Jd, qd.current[Jd])
+        }), []), (0, LQ.useEffect)((() => {
+          GQ <= 0 || pQ <= 0 || cQ.current.resize(GQ, pQ)
+        }), [GQ, pQ]), (0, LQ.useEffect)((() => {
+          if (!iQ) return;
+          const QQ = SQ.current;
+          for (const FQ of oQ.w) {
+            const wQ = null === xQ || void 0 === xQ ? void 0 : xQ[FQ],
+              LQ = QQ[FQ];
+            wQ && wQ !== LQ ? cQ.current.setCosmetic(FQ, wQ) : !wQ && LQ && CQ.current[FQ] && cQ.current.setCosmetic(FQ, CQ.current[FQ])
           }
-          Bd.current = {
-            ...Ld
-          }, bd.current = !0, Sd()
-        }), [Ld, sd, Sd]), (0, pd.useEffect)((() => {
-          sd && xd.current.playEmote(null !== Od && void 0 !== Od ? Od : null)
-        }), [Od, ed, sd]), (0, pd.useEffect)((() => {
-          if (!sd || null === Rd) return;
-          const dd = xd.current,
+          SQ.current = {
+            ...xQ
+          }, IQ.current = !0, UQ()
+        }), [xQ, iQ, UQ]), (0, LQ.useEffect)((() => {
+          iQ && cQ.current.playEmote(null !== AQ && void 0 !== AQ ? AQ : null)
+        }), [AQ, tQ, iQ]), (0, LQ.useEffect)((() => {
+          if (!iQ || null === eQ) return;
+          const QQ = cQ.current,
             {
-              pitch: Jd,
-              radius: kd
-            } = Zd.b[Qd];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return dd.setOrbit({
-            yaw: Rd + Kd,
-            pitch: Jd,
-            radius: kd
+              pitch: FQ,
+              radius: wQ
+            } = kQ.b[YQ];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return QQ.setOrbit({
+            yaw: eQ + uQ,
+            pitch: FQ,
+            radius: wQ
           }), () => {
-            dd.resetCamera()
+            QQ.resetCamera()
           };
-          const pd = performance.now();
-          let Nd = 0;
-          const Wd = Pd => {
-            dd.setOrbit({
-              yaw: Rd + (Pd - pd) / 6e3 * 2 * Math.PI,
-              pitch: Jd,
-              radius: kd
-            }), Nd = requestAnimationFrame(Wd)
+          const LQ = performance.now();
+          let qQ = 0;
+          const oQ = DQ => {
+            QQ.setOrbit({
+              yaw: eQ + (DQ - LQ) / 6e3 * 2 * Math.PI,
+              pitch: FQ,
+              radius: wQ
+            }), qQ = requestAnimationFrame(oQ)
           };
-          return Nd = requestAnimationFrame(Wd), () => {
-            cancelAnimationFrame(Nd), dd.resetCamera()
+          return qQ = requestAnimationFrame(oQ), () => {
+            cancelAnimationFrame(qQ), QQ.resetCamera()
           }
-        }), [sd, Rd]), (0, Cd.jsx)("div", {
+        }), [iQ, eQ]), (0, mQ.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: Id
+          ref: MQ
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

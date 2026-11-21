@@ -1,62 +1,62 @@
 export const id = 48;
 export const ids = [48];
 export const modules = {
-  43231: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      startRenderLite: () => Bd
+  42722: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      startRenderLite: () => SQ
     });
-    var pd = kd(2761),
-      Nd = kd(626),
-      Wd = kd(119),
-      Pd = kd(4688),
-      Zd = kd(40714),
-      gd = kd(4680),
-      Cd = kd(40771),
-      Kd = kd(40575),
-      od = kd(40952),
-      ld = kd(2704),
-      Qd = kd(4369);
-    const Ld = new Map([
+    var LQ = wQ(2809),
+      qQ = wQ(634),
+      oQ = wQ(126),
+      DQ = wQ(4638),
+      kQ = wQ(40169),
+      vQ = wQ(4632),
+      mQ = wQ(40222),
+      uQ = wQ(40009),
+      HQ = wQ(40378),
+      bQ = wQ(2753),
+      YQ = wQ(4352);
+    const xQ = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class Od {
+    class AQ {
       constructor() {
         this.failuresLogged = 0, this.summary = void 0, this.summaries = 0, this.summaryAtMs = -1 / 0
       }
-      failures(dd) {
-        const Jd = dd ? dd.split(" ") : [],
-          kd = Jd.slice(this.failuresLogged).map((dd => {
-            var Jd;
-            const [kd, pd] = dd.split(":"), Nd = null !== (Jd = Ld.get(kd.slice(-1))) && void 0 !== Jd ? Jd : "";
-            return `gl link failed: program row ${parseInt(kd)}${Nd}, read ${pd} ms after issue`
+      failures(QQ) {
+        const FQ = QQ ? QQ.split(" ") : [],
+          wQ = FQ.slice(this.failuresLogged).map((QQ => {
+            var FQ;
+            const [wQ, LQ] = QQ.split(":"), qQ = null !== (FQ = xQ.get(wQ.slice(-1))) && void 0 !== FQ ? FQ : "";
+            return `gl link failed: program row ${parseInt(wQ)}${qQ}, read ${LQ} ms after issue`
           }));
-        return this.failuresLogged = Jd.length, kd
+        return this.failuresLogged = FQ.length, wQ
       }
-      summaryLine(dd, Jd) {
-        const kd = this.summaries < 10 ? 6e4 : 6e5;
-        return void 0 === dd || dd === this.summary || Jd - this.summaryAtMs < kd ? null : (this.summary = dd, this.summaries++, this.summaryAtMs = Jd, `gl links: ${dd}`)
+      summaryLine(QQ, FQ) {
+        const wQ = this.summaries < 10 ? 6e4 : 6e5;
+        return void 0 === QQ || QQ === this.summary || FQ - this.summaryAtMs < wQ ? null : (this.summary = QQ, this.summaries++, this.summaryAtMs = FQ, `gl links: ${QQ}`)
       }
     }
-    var ed = kd(4569);
-    class Rd {
+    var tQ = wQ(4544);
+    class eQ {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(dd, Jd, kd) {
-        if ("none" !== Jd && (this.frames++, "paced" === Jd && this.paced++, "drawn" === Jd)) {
-          if (this.drawn++, this.renderUs += kd, this.renderUsMax = Math.max(this.renderUsMax, kd), null !== this.lastDrawnMs) {
-            const Jd = dd - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, Jd), Jd >= 50 && this.longGaps++
+      frame(QQ, FQ, wQ) {
+        if ("none" !== FQ && (this.frames++, "paced" === FQ && this.paced++, "drawn" === FQ)) {
+          if (this.drawn++, this.renderUs += wQ, this.renderUsMax = Math.max(this.renderUsMax, wQ), null !== this.lastDrawnMs) {
+            const FQ = QQ - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, FQ), FQ >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = dd
+          this.lastDrawnMs = QQ
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const dd = {
+        const QQ = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -65,224 +65,224 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, dd
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, QQ
       }
     }
 
-    function Id(dd) {
-      return (dd / 1048576).toFixed(1)
+    function MQ(QQ) {
+      return (QQ / 1048576).toFixed(1)
     }
-    class Gd {
+    class GQ {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(dd) {
-        return this.logged >= 20 || this.seen.has(dd) ? (this.unlogged++, null) : (this.seen.add(dd), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${dd}` : dd)
+      admit(QQ) {
+        return this.logged >= 20 || this.seen.has(QQ) ? (this.unlogged++, null) : (this.seen.add(QQ), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${QQ}` : QQ)
       }
       takeUnlogged() {
-        const dd = this.unlogged;
-        return this.unlogged = 0, dd
+        const QQ = this.unlogged;
+        return this.unlogged = 0, QQ
       }
     }
 
-    function vd(dd) {
-      (0, ld.h)("renderlite", dd)
+    function pQ(QQ) {
+      (0, bQ.m)("renderlite", QQ)
     }
-    class xd {
-      constructor(dd) {
-        this.frames = new Rd, this.events = new Gd, this.links = new Od, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
+    class cQ {
+      constructor(QQ) {
+        this.frames = new eQ, this.events = new GQ, this.links = new AQ, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
           this.restartWindow(performance.now())
-        }, this.Do = () => {
-          var dd, Jd;
-          const kd = this.session,
-            Nd = (0, Kd.k)(),
-            Wd = performance.now();
-          if (this.logLinks(Wd), this.logGrid(), null === kd || kd.isStopped || !0 !== (null === Nd || void 0 === Nd ? void 0 : Nd.isCoreRunning)) return void this.restartWindow(Wd);
+        }, this.fH = () => {
+          var QQ, FQ;
+          const wQ = this.session,
+            qQ = (0, uQ.k)(),
+            oQ = performance.now();
+          if (this.logLinks(oQ), this.logGrid(), null === wQ || wQ.isStopped || !0 !== (null === qQ || void 0 === qQ ? void 0 : qQ.isCoreRunning)) return void this.restartWindow(oQ);
           if (document.hidden) return;
-          if (Wd - this.windowStart < 2500) return;
-          if (! function(dd) {
-              return dd < 12 || (dd - 12) % 3 === 2
+          if (oQ - this.windowStart < 2500) return;
+          if (! function(QQ) {
+              return QQ < 12 || (QQ - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const gd = kd.headerWord(Pd.B.GpuTimed),
-            od = kd.headerWord(Pd.B.GpuFrameUs),
-            ld = this.sampled === kd ? {
-              timed: gd - this.gpuTimed >>> 0,
-              us: od - this.gpuUs >>> 0
+          const vQ = wQ.headerWord(DQ.F.GpuTimed),
+            HQ = wQ.headerWord(DQ.F.GpuFrameUs),
+            bQ = this.sampled === wQ ? {
+              timed: vQ - this.gpuTimed >>> 0,
+              us: HQ - this.gpuUs >>> 0
             } : null;
-          this.sampled = kd, this.gpuTimed = gd, this.gpuUs = od;
-          const Qd = null !== (dd = null === (Jd = (0, Cd.C)((0, pd.x)())) || void 0 === Jd ? void 0 : Jd.Ipd()) && void 0 !== dd ? dd : 0;
-          vd(function(dd, Jd) {
-            const kd = Jd.windowMs / 1e3,
-              pd = [`${Math.round(kd)}s: ${dd.drawn} drawn (${(dd.drawn/kd).toFixed(1)}/s), ${dd.paced} paced, ${dd.frames-dd.drawn-dd.paced} skipped`, `gap max ${Math.round(dd.gapMaxMs)} ms, ${dd.longGaps} over 50 ms`, `render cpu ${dd.drawn?(dd.renderUs/dd.drawn/1e3).toFixed(2):"-"} ms mean, ${(dd.renderUsMax/1e3).toFixed(1)} max`];
-            null !== Jd.gpu && pd.push(`gpu ${Jd.gpu.timed?(Jd.gpu.us/Jd.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${Jd.gpu.timed} timed`);
-            const Nd = Jd.census;
-            pd.push(null === Nd ? "draws none yet" : `draws ${(0,Zd.d)(Nd)} (terrain ${Nd.terrainOpaque}+${Nd.terrainTransparent}, pack ${Nd.terrainPack}, meshes ${Nd.regular+Nd.thin+Nd.line+Nd.text}, sky ${Nd.earthSky+Nd.skyMeshes}, particles ${Nd.particles})`);
-            const Wd = null === Jd.gpuBytesBefore ? "" : ` (${Jd.gpuBytes>=Jd.gpuBytesBefore?"+":"-"}${Id(Math.abs(Jd.gpuBytes-Jd.gpuBytesBefore))})`;
-            return pd.push(`gpu mem ${Id(Jd.gpuBytes)} MiB${Wd}`), pd.push(`pending ${Jd.pending}`, "terrain " + (Jd.terrainDrawn ? "drawn" : "not drawn yet")), Jd.eventsUnlogged > 0 && pd.push(`${Jd.eventsUnlogged} events unlogged`), pd.join("; ")
+          this.sampled = wQ, this.gpuTimed = vQ, this.gpuUs = HQ;
+          const YQ = null !== (QQ = null === (FQ = (0, mQ.J)((0, LQ.B)())) || void 0 === FQ ? void 0 : FQ.cLQ()) && void 0 !== QQ ? QQ : 0;
+          pQ(function(QQ, FQ) {
+            const wQ = FQ.windowMs / 1e3,
+              LQ = [`${Math.round(wQ)}s: ${QQ.drawn} drawn (${(QQ.drawn/wQ).toFixed(1)}/s), ${QQ.paced} paced, ${QQ.frames-QQ.drawn-QQ.paced} skipped`, `gap max ${Math.round(QQ.gapMaxMs)} ms, ${QQ.longGaps} over 50 ms`, `render cpu ${QQ.drawn?(QQ.renderUs/QQ.drawn/1e3).toFixed(2):"-"} ms mean, ${(QQ.renderUsMax/1e3).toFixed(1)} max`];
+            null !== FQ.gpu && LQ.push(`gpu ${FQ.gpu.timed?(FQ.gpu.us/FQ.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${FQ.gpu.timed} timed`);
+            const qQ = FQ.census;
+            LQ.push(null === qQ ? "draws none yet" : `draws ${(0,kQ.b)(qQ)} (terrain ${qQ.terrainOpaque}+${qQ.terrainTransparent}, pack ${qQ.terrainPack}, meshes ${qQ.regular+qQ.thin+qQ.line+qQ.text}, sky ${qQ.earthSky+qQ.skyMeshes}, particles ${qQ.particles})`);
+            const oQ = null === FQ.gpuBytesBefore ? "" : ` (${FQ.gpuBytes>=FQ.gpuBytesBefore?"+":"-"}${MQ(Math.abs(FQ.gpuBytes-FQ.gpuBytesBefore))})`;
+            return LQ.push(`gpu mem ${MQ(FQ.gpuBytes)} MiB${oQ}`), LQ.push(`pending ${FQ.pending}`, "terrain " + (FQ.terrainDrawn ? "drawn" : "not drawn yet")), FQ.eventsUnlogged > 0 && LQ.push(`${FQ.eventsUnlogged} events unlogged`), LQ.join("; ")
           }(this.frames.take(), {
-            windowMs: Wd - this.windowStart,
-            gpu: ld,
-            census: (0, Zd.h)(Nd.api),
-            gpuBytes: Qd,
+            windowMs: oQ - this.windowStart,
+            gpu: bQ,
+            census: (0, kQ.f)(qQ.api),
+            gpuBytes: YQ,
             gpuBytesBefore: this.gpuBytes,
-            pending: kd.headerWord(Pd.B.RenderPending),
-            terrainDrawn: 0 !== (kd.headerWord(Pd.B.LoadSteps) & Pd.P.TerrainDrawn),
+            pending: wQ.headerWord(DQ.F.RenderPending),
+            terrainDrawn: 0 !== (wQ.headerWord(DQ.F.LoadSteps) & DQ.U.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = Qd, this.windowStart = Wd
-        }, vd(`${(0,ed.b)(dd)}; client ${Nd.l.client} (${Nd.l.reason})`), setInterval(this.Do, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = YQ, this.windowStart = oQ
+        }, pQ(`${(0,tQ.c)(QQ)}; client ${qQ.j.client} (${qQ.j.reason})`), setInterval(this.fH, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(dd, Jd, kd) {
-        this.session = dd, this.frames.frame(Jd, kd, "drawn" === kd ? dd.headerWord(Pd.B.RenderUs) : 0)
+      frame(QQ, FQ, wQ) {
+        this.session = QQ, this.frames.frame(FQ, wQ, "drawn" === wQ ? QQ.headerWord(DQ.F.RenderUs) : 0)
       }
-      coreErrors(dd) {
+      coreErrors(QQ) {
         for (const {
-            code: pd,
-            detail: Nd
+            code: LQ,
+            detail: qQ
           }
-          of dd) {
-          var Jd, kd;
-          if (pd >= Pd.d.RenderDeviceLost && pd <= Pd.d.RenderSerialLinks) this.event(`render error ${(0,gd.ie)(pd)}${null!==(Jd=null===(kd=(0,od.c)(pd,Nd))||void 0===kd?void 0:kd.words)&&void 0!==Jd?Jd:""} (detail ${Nd})`)
+          of QQ) {
+          var FQ, wQ;
+          if (LQ >= DQ.h.RenderDeviceLost && LQ <= DQ.h.RenderSerialLinks) this.event(`render error ${(0,vQ.Dd)(LQ)}${null!==(FQ=null===(wQ=(0,HQ.d)(LQ,qQ))||void 0===wQ?void 0:wQ.words)&&void 0!==FQ?FQ:""} (detail ${qQ})`)
         }
       }
-      reload(dd, Jd, kd, pd) {
-        this.event(`render reload: ${dd?"webgpu":"gl"} ${kd}, losses ${Jd}${void 0===pd?"":`: ${pd}`}`)
+      reload(QQ, FQ, wQ, LQ) {
+        this.event(`render reload: ${QQ?"webgpu":"gl"} ${wQ}, losses ${FQ}${void 0===LQ?"":`: ${LQ}`}`)
       }
-      crashed(dd) {
+      crashed(QQ) {
         let {
-          site: Jd,
-          error: kd,
-          header: pd
-        } = dd;
-        const Nd = null !== pd && 0 !== pd.lastError ? `, last error ${(0,gd.ie)(pd.lastError)} (detail ${pd.lastErrorDetail})` : "",
-          Wd = kd instanceof Error ? `${kd.name}: ${kd.message}` : null === kd || void 0 === kd ? "" : String(kd);
-        this.event(`core stopped at ${Jd}${Nd}${Wd&&`: ${Wd}`}`)
+          site: FQ,
+          error: wQ,
+          header: LQ
+        } = QQ;
+        const qQ = null !== LQ && 0 !== LQ.lastError ? `, last error ${(0,vQ.Dd)(LQ.lastError)} (detail ${LQ.lastErrorDetail})` : "",
+          oQ = wQ instanceof Error ? `${wQ.name}: ${wQ.message}` : null === wQ || void 0 === wQ ? "" : String(wQ);
+        this.event(`core stopped at ${FQ}${qQ}${oQ&&`: ${oQ}`}`)
       }
-      event(dd) {
-        const Jd = this.events.admit(dd);
-        null !== Jd && vd(Jd)
+      event(QQ) {
+        const FQ = this.events.admit(QQ);
+        null !== FQ && pQ(FQ)
       }
-      restartWindow(dd) {
-        this.frames.restart(), this.windowStart = dd;
-        const Jd = this.session;
-        null === Jd || Jd.isStopped ? this.sampled = null : (this.sampled = Jd, this.gpuTimed = Jd.headerWord(Pd.B.GpuTimed), this.gpuUs = Jd.headerWord(Pd.B.GpuFrameUs))
+      restartWindow(QQ) {
+        this.frames.restart(), this.windowStart = QQ;
+        const FQ = this.session;
+        null === FQ || FQ.isStopped ? this.sampled = null : (this.sampled = FQ, this.gpuTimed = FQ.headerWord(DQ.F.GpuTimed), this.gpuUs = FQ.headerWord(DQ.F.GpuFrameUs))
       }
-      logLinks(dd) {
-        const Jd = window.bloxdRenderDebug;
-        for (const pd of this.links.failures(null === Jd || void 0 === Jd ? void 0 : Jd.linkFailures)) this.event(pd);
-        const kd = this.links.summaryLine(null === Jd || void 0 === Jd ? void 0 : Jd.links, dd);
-        null !== kd && vd(kd)
+      logLinks(QQ) {
+        const FQ = window.bloxdRenderDebug;
+        for (const LQ of this.links.failures(null === FQ || void 0 === FQ ? void 0 : FQ.linkFailures)) this.event(LQ);
+        const wQ = this.links.summaryLine(null === FQ || void 0 === FQ ? void 0 : FQ.links, QQ);
+        null !== wQ && pQ(wQ)
       }
       logGrid() {
-        var dd;
-        const Jd = null === (dd = window.bloxdRenderDebug) || void 0 === dd ? void 0 : dd.gridFaces;
-        this.gridLogged || void 0 === Jd || (this.gridLogged = !0, vd(`gl1 grid ${Jd}`))
+        var QQ;
+        const FQ = null === (QQ = window.bloxdRenderDebug) || void 0 === QQ ? void 0 : QQ.gridFaces;
+        this.gridLogged || void 0 === FQ || (this.gridLogged = !0, pQ(`gl1 grid ${FQ}`))
       }
       logRenderer() {
-        var dd, Jd;
+        var QQ, FQ;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const kd = window.bloxdRenderDebug,
-          pd = (0, Wd.q)(),
-          Nd = void 0 === (null === kd || void 0 === kd ? void 0 : kd.parallelCompile) ? "" : `; parallel compile ${kd.parallelCompile}`;
-        vd(`renderer gl ${pd?`${pd.vendor} / ${pd.renderer}`:"(not read)"}; terrain fetch ${null!==(dd=null===kd||void 0===kd?void 0:kd.fetch)&&void 0!==dd?dd:"(not noted)"}${Nd}`), vd(`renderer caps ${null!==(Jd=null===kd||void 0===kd?void 0:kd.caps)&&void 0!==Jd?Jd:"(not noted)"}`)
+        const wQ = window.bloxdRenderDebug,
+          LQ = (0, oQ.q)(),
+          qQ = void 0 === (null === wQ || void 0 === wQ ? void 0 : wQ.parallelCompile) ? "" : `; parallel compile ${wQ.parallelCompile}`;
+        pQ(`renderer gl ${LQ?`${LQ.vendor} / ${LQ.renderer}`:"(not read)"}; terrain fetch ${null!==(QQ=null===wQ||void 0===wQ?void 0:wQ.fetch)&&void 0!==QQ?QQ:"(not noted)"}${qQ}`), pQ(`renderer caps ${null!==(FQ=null===wQ||void 0===wQ?void 0:wQ.caps)&&void 0!==FQ?FQ:"(not noted)"}`)
       }
     }
-    let qd = null;
+    let CQ = null;
 
-    function Bd(dd) {
-      return (0, Qd.h)(), qd ??= new xd(dd), qd
+    function SQ(QQ) {
+      return (0, YQ.h)(), CQ ??= new cQ(QQ), CQ
     }
   },
-  4569: (dd, Jd, kd) => {
-    function pd(dd) {
-      if (null === dd) return "backend: none picked (no renderer build)";
-      const Jd = dd.adapter ? `${dd.adapter.vendor}/${dd.adapter.architecture}` : "none";
-      return `backend ${dd.backend}: reason ${dd.reason}, source ${dd.source}, adapter ${Jd}`
+  4544: (QQ, FQ, wQ) => {
+    function LQ(QQ) {
+      if (null === QQ) return "backend: none picked (no renderer build)";
+      const FQ = QQ.adapter ? `${QQ.adapter.vendor}/${QQ.adapter.architecture}` : "none";
+      return `backend ${QQ.backend}: reason ${QQ.reason}, source ${QQ.source}, adapter ${FQ}`
     }
-    kd.d(Jd, {
-      b: () => pd
+    wQ.d(FQ, {
+      c: () => LQ
     })
   },
-  40714: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Pd,
-      h: () => Wd,
-      k: () => Zd
+  40169: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => DQ,
+      f: () => oQ,
+      j: () => kQ
     });
-    var pd = kd(40569),
-      Nd = kd(40575);
+    var LQ = wQ(40003),
+      qQ = wQ(40009);
 
-    function Wd(dd) {
-      if (dd.queries.drawCensus() < pd.Gb.BYTES) return null;
-      const Jd = dd.memoryData(dd.scratch(), pd.Gb.BYTES, 4, "the draw census");
-      return null === Jd ? null : {
-        terrainOpaque: pd.Gb.terrainOpaque(Jd, 0),
-        terrainTransparent: pd.Gb.terrainTransparent(Jd, 0),
-        terrainPack: pd.Gb.terrainPack(Jd, 0),
-        earthSky: pd.Gb.earthSky(Jd, 0),
-        skyMeshes: pd.Gb.skyMeshes(Jd, 0),
-        regular: pd.Gb.regular(Jd, 0),
-        thin: pd.Gb.thin(Jd, 0),
-        line: pd.Gb.line(Jd, 0),
-        text: pd.Gb.text(Jd, 0),
-        particles: pd.Gb.particles(Jd, 0),
-        terrainParts: pd.Gb.terrainParts(Jd, 0),
-        terrainCompiling: pd.Gb.terrainCompiling(Jd, 0)
+    function oQ(QQ) {
+      if (QQ.queries.drawCensus() < LQ.Hb.BYTES) return null;
+      const FQ = QQ.memoryData(QQ.scratch(), LQ.Hb.BYTES, 4, "the draw census");
+      return null === FQ ? null : {
+        terrainOpaque: LQ.Hb.terrainOpaque(FQ, 0),
+        terrainTransparent: LQ.Hb.terrainTransparent(FQ, 0),
+        terrainPack: LQ.Hb.terrainPack(FQ, 0),
+        earthSky: LQ.Hb.earthSky(FQ, 0),
+        skyMeshes: LQ.Hb.skyMeshes(FQ, 0),
+        regular: LQ.Hb.regular(FQ, 0),
+        thin: LQ.Hb.thin(FQ, 0),
+        line: LQ.Hb.line(FQ, 0),
+        text: LQ.Hb.text(FQ, 0),
+        particles: LQ.Hb.particles(FQ, 0),
+        terrainParts: LQ.Hb.terrainParts(FQ, 0),
+        terrainCompiling: LQ.Hb.terrainCompiling(FQ, 0)
       }
     }
 
-    function Pd(dd) {
+    function DQ(QQ) {
       const {
-        terrainOpaque: Jd,
-        terrainTransparent: kd,
-        earthSky: pd,
-        skyMeshes: Nd,
-        regular: Wd,
-        thin: Pd,
-        line: Zd,
-        text: gd,
-        particles: Cd
-      } = dd;
-      return Jd + kd + pd + Nd + Wd + Pd + Zd + gd + Cd
+        terrainOpaque: FQ,
+        terrainTransparent: wQ,
+        earthSky: LQ,
+        skyMeshes: qQ,
+        regular: oQ,
+        thin: DQ,
+        line: kQ,
+        text: vQ,
+        particles: mQ
+      } = QQ;
+      return FQ + wQ + LQ + qQ + oQ + DQ + kQ + vQ + mQ
     }
 
-    function Zd() {
-      const dd = (0, Nd.k)();
-      return !0 === (null === dd || void 0 === dd ? void 0 : dd.isCoreRunning) ? function(dd) {
-        const Jd = Wd(dd);
-        if (null === Jd) return [];
+    function kQ() {
+      const QQ = (0, qQ.k)();
+      return !0 === (null === QQ || void 0 === QQ ? void 0 : QQ.isCoreRunning) ? function(QQ) {
+        const FQ = oQ(QQ);
+        if (null === FQ) return [];
         const {
-          terrainOpaque: kd,
-          terrainTransparent: pd,
-          terrainPack: Nd,
-          earthSky: Zd,
-          skyMeshes: gd,
-          regular: Cd,
-          thin: Kd,
-          line: od,
-          text: ld,
-          particles: Qd
-        } = Jd;
+          terrainOpaque: wQ,
+          terrainTransparent: LQ,
+          terrainPack: qQ,
+          earthSky: kQ,
+          skyMeshes: vQ,
+          regular: mQ,
+          thin: uQ,
+          line: HQ,
+          text: bQ,
+          particles: YQ
+        } = FQ;
         return [{
           label: "Drawn",
-          value: `${Pd(Jd)}`
+          value: `${DQ(FQ)}`
         }, {
           label: "Terrain",
-          value: `${kd} opaque / ${pd} transparent (${Nd} shader pack)`
+          value: `${wQ} opaque / ${LQ} transparent (${qQ} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${Cd} / ${Kd}`
+          value: `${mQ} / ${uQ}`
         }, {
           label: "Text / Lines",
-          value: `${ld} / ${od}`
+          value: `${bQ} / ${HQ}`
         }, {
           label: "Sky / Particles",
-          value: `${Zd+gd} / ${Qd}`
+          value: `${kQ+vQ} / ${YQ}`
         }]
-      }(dd.api) : []
+      }(QQ.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

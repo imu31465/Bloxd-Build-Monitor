@@ -1,263 +1,263 @@
 export const id = 85;
 export const ids = [85];
 export const modules = {
-  40529: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      startWasmPadGameplay: () => yd
+  39967: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      startWasmPadGameplay: () => jQ
     });
-    kd(40537);
-    var pd = kd(40543),
-      Nd = kd(40558),
-      Wd = kd(1955),
-      Pd = kd(40569),
-      Zd = kd(4688),
-      gd = kd(4666),
-      Cd = kd(40571),
-      Kd = kd(40575),
-      od = kd(4704),
-      ld = kd(40658),
-      Qd = kd(2345),
-      Ld = kd(8771),
-      Od = kd(40548),
-      ed = kd(8740),
-      Rd = kd(39252);
-    const Id = dd => {
-        const Jd = od.c.indexOf(dd);
-        if (Jd < 0) throw new Error(`No core action "${dd}"`);
-        return Jd
+    wQ(39969);
+    var LQ = wQ(39973),
+      qQ = wQ(39989),
+      oQ = wQ(1911),
+      DQ = wQ(40003),
+      kQ = wQ(4638),
+      vQ = wQ(4621),
+      mQ = wQ(40005),
+      uQ = wQ(40009),
+      HQ = wQ(4651),
+      bQ = wQ(40089),
+      YQ = wQ(2320),
+      xQ = wQ(8614),
+      AQ = wQ(39978),
+      tQ = wQ(8596),
+      eQ = wQ(38642);
+    const MQ = QQ => {
+        const FQ = HQ.b.indexOf(QQ);
+        if (FQ < 0) throw new Error(`No core action "${QQ}"`);
+        return FQ
       },
-      Gd = Id("primary-fire"),
-      vd = Id("alt-fire"),
-      xd = Id("mid-fire"),
-      qd = Id("jump"),
-      Bd = Id("ReloadGun"),
-      sd = Id("SwapCameraZoom"),
-      ad = Id("TouchAction1"),
-      Md = {
-        SpecialAction1: Id("SpecialAction1"),
-        SpecialAction2: Id("SpecialAction2")
+      GQ = MQ("primary-fire"),
+      pQ = MQ("alt-fire"),
+      cQ = MQ("mid-fire"),
+      CQ = MQ("jump"),
+      SQ = MQ("ReloadGun"),
+      iQ = MQ("SwapCameraZoom"),
+      WQ = MQ("TouchAction1"),
+      RQ = {
+        SpecialAction1: MQ("SpecialAction1"),
+        SpecialAction2: MQ("SpecialAction2")
       },
-      Fd = (dd, Jd) => {
-        (0, Qd.z)(Zd.F.PadAction, dd, 0, 0, (0, Qd.v)(Jd, performance.now()))
+      OQ = (QQ, FQ) => {
+        (0, YQ.v)(kQ.I.PadAction, QQ, 0, 0, (0, YQ.t)(FQ, performance.now()))
       },
-      Yd = dd => {
-        Fd(dd, Pd.Hd.Down)
+      sQ = QQ => {
+        OQ(QQ, DQ.wd.Down)
       },
-      md = dd => {
-        Fd(dd, 0)
+      rQ = QQ => {
+        OQ(QQ, 0)
       },
-      bd = dd => {
-        Yd(dd), md(dd)
+      IQ = QQ => {
+        sQ(QQ), rQ(QQ)
       },
-      Sd = () => {
-        const dd = (0, Kd.k)();
-        return null !== dd && void 0 !== dd && dd.isCoreRunning ? dd : null
+      UQ = () => {
+        const QQ = (0, uQ.k)();
+        return null !== QQ && void 0 !== QQ && QQ.isCoreRunning ? QQ : null
       },
-      jd = dd => Pd.u.playerFlags(dd.api.apiView, 0),
-      Xd = dd => null !== dd && Pd.u.targetBlockId(dd.api.apiView, 0) !== Pd.kd,
-      fd = () => {
-        const dd = (0, Ld.e)(),
-          Jd = new Od.d;
-        let kd = !1;
-        const pd = (dd, Jd) => {
-            (0, Qd.z)(Zd.F.PadLook, Pd.Qd.Rate, dd, Jd, 0)
+      NQ = QQ => DQ.v.playerFlags(QQ.api.apiView, 0),
+      TQ = QQ => null !== QQ && DQ.v.targetBlockId(QQ.api.apiView, 0) !== DQ.ed,
+      KQ = () => {
+        const QQ = (0, xQ.d)(),
+          FQ = new AQ.c;
+        let wQ = !1;
+        const LQ = (QQ, FQ) => {
+            (0, YQ.v)(kQ.I.PadLook, DQ.Cd.Rate, QQ, FQ, 0)
           },
-          Nd = () => {
-            kd = !1, Jd.reset(), pd(0, 0)
+          qQ = () => {
+            wQ = !1, FQ.reset(), LQ(0, 0)
           };
         return {
-          update: (Nd, Wd, gd) => {
-            kd || (dd.discardPending(), kd = !0);
-            const Cd = (0, Od.s)(Jd, Nd, Wd, gd, performance.now());
-            pd(Cd.yawRadPerSec, Cd.pitchRadPerSec);
-            const Kd = dd.drainLookDelta();
-            0 === Kd.bY && 0 === Kd.fY || (0, Qd.z)(Zd.F.PadLook, Pd.Qd.Gyro, Kd.bY, Kd.fY, 0)
+          update: (qQ, oQ, vQ) => {
+            wQ || (QQ.discardPending(), wQ = !0);
+            const mQ = (0, AQ.o)(FQ, qQ, oQ, vQ, performance.now());
+            LQ(mQ.yawRadPerSec, mQ.pitchRadPerSec);
+            const uQ = QQ.drainLookDelta();
+            0 === uQ.PU && 0 === uQ.dU || (0, YQ.v)(kQ.I.PadLook, DQ.Cd.Gyro, uQ.PU, uQ.dU, 0)
           },
-          release: Nd,
-          uninstall: Nd
+          release: qQ,
+          uninstall: qQ
         }
       },
-      nd = () => {
-        const dd = Sd();
-        return null !== dd && 0 !== (jd(dd) & Pd.Ud.PadSneakToggled)
+      zQ = () => {
+        const QQ = UQ();
+        return null !== QQ && 0 !== (NQ(QQ) & DQ.Gd.PadSneakToggled)
       },
-      Ud = () => {
-        const dd = (dd => {
-          const Jd = dd => function() {
-            return (0, ld.d)(), dd(...arguments)
+      lQ = () => {
+        const QQ = (QQ => {
+          const FQ = QQ => function() {
+            return (0, bQ.d)(), QQ(...arguments)
           };
           return {
-            primaryFireDown: Jd((() => (Yd(Gd), 0))),
-            primaryFireUp: Jd((() => {
-              md(Gd)
+            primaryFireDown: FQ((() => (sQ(GQ), 0))),
+            primaryFireUp: FQ((() => {
+              rQ(GQ)
             })),
-            altFireDown: Jd((() => (Yd(vd), 0))),
-            altFireUp: Jd((() => {
-              md(vd)
+            altFireDown: FQ((() => (sQ(pQ), 0))),
+            altFireUp: FQ((() => {
+              rQ(pQ)
             })),
-            jumpDown: Jd((() => {
-              bd(qd)
+            jumpDown: FQ((() => {
+              IQ(CQ)
             })),
-            specialActionDown: Jd((dd => {
-              Yd(Md[dd])
+            specialActionDown: FQ((QQ => {
+              sQ(RQ[QQ])
             })),
-            specialActionUp: Jd((dd => {
-              md(Md[dd])
+            specialActionUp: FQ((QQ => {
+              rQ(RQ[QQ])
             })),
-            reloadGun: Jd((() => {
-              bd(Bd)
+            reloadGun: FQ((() => {
+              IQ(SQ)
             })),
-            dropItem: Jd((dd => {
-              Fd(Pd.Kd.Drop, Pd.Hd.Down | (dd ? Pd.Hd.Stack : 0))
+            dropItem: FQ((QQ => {
+              OQ(DQ.yd.Drop, DQ.wd.Down | (QQ ? DQ.wd.Stack : 0))
             })),
-            swapCameraZoom: Jd((() => {
-              bd(sd)
+            swapCameraZoom: FQ((() => {
+              IQ(iQ)
             })),
-            pickBlock: Jd((() => (bd(xd), Xd(dd()))))
+            pickBlock: FQ((() => (IQ(cQ), TQ(QQ()))))
           }
-        })(Sd);
-        let Jd = !1,
-          kd = null;
-        const pd = () => {
-          var dd;
-          null === (dd = kd) || void 0 === dd || dd(), kd = null
+        })(UQ);
+        let FQ = !1,
+          wQ = null;
+        const LQ = () => {
+          var QQ;
+          null === (QQ = wQ) || void 0 === QQ || QQ(), wQ = null
         };
         return {
-          bodies: () => dd,
-          look: fd(),
-          move: (dd, kd) => {
-            var Nd;
-            pd();
+          bodies: () => QQ,
+          look: KQ(),
+          move: (QQ, wQ) => {
+            var qQ;
+            LQ();
             const {
-              bits: Wd,
-              flips: Zd
-            } = (dd => {
-              if (null === dd) return {
-                bits: Pd.Od.Peek,
+              bits: oQ,
+              flips: kQ
+            } = (QQ => {
+              if (null === QQ) return {
+                bits: DQ.zd.Peek,
                 flips: 0
               };
-              const Jd = dd.sneakHeld ? Pd.Od.SneakHeld : 0;
-              return "hold" === dd.mode ? {
-                bits: Jd | Pd.Od.SneakHoldMode,
-                flips: dd.sneakTogglePressed ? 1 : 0
+              const FQ = QQ.sneakHeld ? DQ.zd.SneakHeld : 0;
+              return "hold" === QQ.mode ? {
+                bits: FQ | DQ.zd.SneakHoldMode,
+                flips: QQ.sneakTogglePressed ? 1 : 0
               } : {
-                bits: Jd,
-                flips: dd.sneakPressed || dd.sneakTogglePressed ? 1 : 0
+                bits: FQ,
+                flips: QQ.sneakPressed || QQ.sneakTogglePressed ? 1 : 0
               }
-            })(kd);
-            null !== (Nd = Sd()) && void 0 !== Nd && Nd.padMove(dd.x, dd.y, dd.magnitude, dd.headingOffset, (dd => Pd.Od.Active | (dd.jumpHeld ? Pd.Od.JumpHeld : 0) | (dd.jumpPressed ? Pd.Od.JumpPressed : 0) | (dd.running ? Pd.Od.Running : 0) | (dd.sprintHeld ? Pd.Od.SprintHeld : 0))(dd) | Wd, Zd) && (Jd = !0), (0, ed.e)(nd())
+            })(wQ);
+            null !== (qQ = UQ()) && void 0 !== qQ && qQ.padMove(QQ.x, QQ.y, QQ.magnitude, QQ.headingOffset, (QQ => DQ.zd.Active | (QQ.jumpHeld ? DQ.zd.JumpHeld : 0) | (QQ.jumpPressed ? DQ.zd.JumpPressed : 0) | (QQ.running ? DQ.zd.Running : 0) | (QQ.sprintHeld ? DQ.zd.SprintHeld : 0))(QQ) | oQ, kQ) && (FQ = !0), (0, tQ.i)(zQ())
           },
           stopMoving: () => {
-            var dd;
-            Jd && (Jd = !(null !== (dd = Sd()) && void 0 !== dd && dd.padMove(0, 0, 0, 0, 0, 0)), pd(), kd = (0, gd.D)((() => {
-              pd(), (0, ed.e)(nd())
+            var QQ;
+            FQ && (FQ = !(null !== (QQ = UQ()) && void 0 !== QQ && QQ.padMove(0, 0, 0, 0, 0, 0)), LQ(), wQ = (0, vQ.x)((() => {
+              LQ(), (0, tQ.i)(zQ())
             })))
           },
-          uninstall: pd,
-          deviceChanged: dd => {
-            var kd;
-            "touch" === dd ? ((0, ed.e)(!1), null !== (kd = Sd()) && void 0 !== kd && kd.padMove(0, 0, 0, 0, Pd.Od.EndToggle, 0) && (Jd = !1)) : "gamepad" === dd && (0, ed.e)(nd())
+          uninstall: LQ,
+          deviceChanged: QQ => {
+            var wQ;
+            "touch" === QQ ? ((0, tQ.i)(!1), null !== (wQ = UQ()) && void 0 !== wQ && wQ.padMove(0, 0, 0, 0, DQ.zd.EndToggle, 0) && (FQ = !1)) : "gamepad" === QQ && (0, tQ.i)(zQ())
           },
-          hasPlayer: () => null !== Sd(),
+          hasPlayer: () => null !== UQ(),
           isPlayerDead: () => {
-            var dd;
-            return !1 === (null === (dd = Sd()) || void 0 === dd ? void 0 : dd.localPlayerAlive())
+            var QQ;
+            return !1 === (null === (QQ = UQ()) || void 0 === QQ ? void 0 : QQ.localPlayerAlive())
           },
           isReplayMode: () => {
-            const dd = Sd();
-            return null !== dd && 0 !== (jd(dd) & Pd.Ud.Replay)
+            const QQ = UQ();
+            return null !== QQ && 0 !== (NQ(QQ) & DQ.Gd.Replay)
           },
           isFreeCameraOn: () => {
-            const dd = Sd();
-            return null !== dd && 0 !== (jd(dd) & Pd.Ud.FreeCam)
+            const QQ = UQ();
+            return null !== QQ && 0 !== (NQ(QQ) & DQ.Gd.FreeCam)
           },
-          targetsBlock: () => Xd(Sd()),
+          targetsBlock: () => TQ(UQ()),
           selectedSlotEmpty: () => {
-            var dd;
-            return !(null !== (dd = Sd()) && void 0 !== dd && dd.items.EC())
+            var QQ;
+            return !(null !== (QQ = UQ()) && void 0 !== QQ && QQ.items.ym())
           },
-          pickBlockAllowed: () => !!Wd.b.get("creative") && !!Wd.b.get("canPickBlocks"),
-          scrollHotbar: dd => {
-            Fd(Pd.Kd.Hotbar, Pd.Hd.Down | (dd > 0 ? Pd.Hd.Next : 0))
+          pickBlockAllowed: () => !!oQ.b.get("creative") && !!oQ.b.get("canPickBlocks"),
+          scrollHotbar: QQ => {
+            OQ(DQ.yd.Hotbar, DQ.wd.Down | (QQ > 0 ? DQ.wd.Next : 0))
           },
-          hasFullInventory: Cd.n,
-          hasLobbyTab: () => (0, Rd.e)({
-            lobbyLeaderboardInfo: Wd.b.get("lobbyLeaderboardInfo"),
-            lobbyManage: Wd.b.get("lobbyManage")
+          hasFullInventory: mQ.l,
+          hasLobbyTab: () => (0, eQ.b)({
+            lobbyLeaderboardInfo: oQ.b.get("lobbyLeaderboardInfo"),
+            lobbyManage: oQ.b.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var dd, Jd, kd, pd;
-            const Nd = Sd();
+            var QQ, FQ, wQ, LQ;
+            const qQ = UQ();
             return {
-              holdingGun: !1 !== (null === Nd || void 0 === Nd ? void 0 : Nd.localPlayerAlive()) && "Gun" === (null === Nd || void 0 === Nd || null === (dd = Nd.items.EC()) || void 0 === dd || null === (Jd = dd.typeObj) || void 0 === Jd ? void 0 : Jd.type),
-              customButtons: null !== (kd = Wd.b.get("customButtons")) && void 0 !== kd ? kd : null,
-              touchscreenActionButton: null !== (pd = Wd.b.get("touchscreenActionButton")) && void 0 !== pd ? pd : null
+              holdingGun: !1 !== (null === qQ || void 0 === qQ ? void 0 : qQ.localPlayerAlive()) && "Gun" === (null === qQ || void 0 === qQ || null === (QQ = qQ.items.ym()) || void 0 === QQ || null === (FQ = QQ.typeObj) || void 0 === FQ ? void 0 : FQ.type),
+              customButtons: null !== (wQ = oQ.b.get("customButtons")) && void 0 !== wQ ? wQ : null,
+              touchscreenActionButton: null !== (LQ = oQ.b.get("touchscreenActionButton")) && void 0 !== LQ ? LQ : null
             }
           },
-          pressTouchButton: dd => {
-            dd ? Yd(ad) : md(ad)
+          pressTouchButton: QQ => {
+            QQ ? sQ(WQ) : rQ(WQ)
           }
         }
       },
-      yd = () => {
-        const dd = (0, Nd.c)(Ud()),
-          Jd = (0, pd.e)(),
-          kd = null;
+      jQ = () => {
+        const QQ = (0, qQ.e)(lQ()),
+          FQ = (0, LQ.d)(),
+          wQ = null;
         return () => {
-          dd(), Jd(), null === kd || void 0 === kd || kd()
+          QQ(), FQ(), null === wQ || void 0 === wQ || wQ()
         }
       }
   },
-  4688: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      B: () => Wd,
-      Db: () => sd,
-      Eb: () => Bd,
-      F: () => ed,
-      Gb: () => jd,
-      Hb: () => Td,
-      I: () => Vd,
-      L: () => Kd,
-      Lb: () => fd,
-      M: () => od,
-      Ob: () => Ud,
-      P: () => Cd,
-      Qb: () => yd,
-      Sb: () => xd,
-      T: () => Rd,
-      Tb: () => qd,
-      Vb: () => cd,
-      X: () => gd,
-      Yb: () => Nd,
-      Z: () => Ld,
-      ab: () => Qd,
-      ac: () => td,
-      b: () => ud,
-      bb: () => ad,
-      d: () => rd,
-      eb: () => Fd,
-      gb: () => Yd,
-      h: () => ld,
-      ib: () => Md,
-      jb: () => md,
-      kb: () => Ed,
-      l: () => vd,
-      o: () => hd,
-      ob: () => Dd,
-      p: () => Gd,
-      q: () => Id,
-      sb: () => nd,
-      tb: () => bd,
-      u: () => Pd,
-      vb: () => Xd,
-      w: () => Zd,
-      xb: () => Sd,
-      y: () => pd,
-      zb: () => Od
+  4638: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      Ab: () => zQ,
+      B: () => LQ,
+      Eb: () => IQ,
+      F: () => oQ,
+      I: () => tQ,
+      Ib: () => TQ,
+      L: () => gQ,
+      Lb: () => UQ,
+      Nb: () => AQ,
+      O: () => uQ,
+      Q: () => HQ,
+      Qb: () => iQ,
+      U: () => mQ,
+      Ub: () => SQ,
+      Vb: () => NQ,
+      Y: () => eQ,
+      Zb: () => XQ,
+      ab: () => vQ,
+      bc: () => KQ,
+      cc: () => lQ,
+      db: () => xQ,
+      dc: () => jQ,
+      e: () => EQ,
+      eb: () => YQ,
+      fc: () => cQ,
+      h: () => JQ,
+      hb: () => WQ,
+      i: () => bQ,
+      jc: () => CQ,
+      l: () => pQ,
+      lb: () => OQ,
+      mc: () => VQ,
+      n: () => hQ,
+      nc: () => qQ,
+      ob: () => sQ,
+      pb: () => RQ,
+      qb: () => rQ,
+      r: () => GQ,
+      rc: () => nQ,
+      ub: () => fQ,
+      v: () => MQ,
+      wb: () => aQ,
+      x: () => DQ,
+      z: () => kQ
     });
-    const pd = 32,
-      Nd = 33.333333333333336,
-      Wd = {
+    const LQ = 32,
+      qQ = 33.333333333333336,
+      oQ = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -291,18 +291,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Pd = {
+      DQ = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Zd = {
+      kQ = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      gd = {
+      vQ = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -310,15 +310,15 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Cd = {
+      mQ = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Kd = 7,
-      od = {
+      uQ = 7,
+      HQ = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -327,13 +327,13 @@ export const modules = {
         WorkersLive: 5,
         WorkersRetired: 6
       },
-      ld = {
+      bQ = {
         Look: 0,
         Remesh: 1
       },
-      Qd = 8,
-      Ld = 1,
-      Od = {
+      YQ = 8,
+      xQ = 1,
+      AQ = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -342,7 +342,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      ed = {
+      tQ = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -370,12 +370,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Rd = {
+      eQ = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Id = {
+      MQ = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -427,7 +427,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Gd = {
+      GQ = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -437,10 +437,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      vd = 4,
-      xd = 4,
-      qd = 65535,
-      Bd = {
+      pQ = 4,
+      cQ = 4,
+      CQ = 65535,
+      SQ = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -453,7 +453,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      sd = {
+      iQ = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -461,12 +461,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      ad = 88,
-      Md = 0,
-      Fd = 24,
-      Yd = 48,
-      md = 80,
-      bd = {
+      WQ = 88,
+      RQ = 0,
+      OQ = 24,
+      sQ = 48,
+      rQ = 80,
+      IQ = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -477,18 +477,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Sd = {
+      UQ = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      jd = {
+      NQ = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Xd = {
+      TQ = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -506,34 +506,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      fd = {
+      KQ = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      nd = 65535,
-      Ud = {
+      zQ = 65535,
+      lQ = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      yd = {
+      jQ = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Dd = 2,
-      Td = {
+      aQ = 2,
+      XQ = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Ed = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      cd = {
+      fQ = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      VQ = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -545,7 +545,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      hd = {
+      hQ = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -572,7 +572,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      rd = {
+      JQ = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -730,8 +730,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      ud = 8,
-      td = {
+      EQ = 8,
+      nQ = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -756,292 +756,292 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      Vd = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      gQ = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4666: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      D: () => Md,
-      G: () => Fd,
-      J: () => Yd,
-      L: () => Id,
-      O: () => Pd,
-      P: () => Zd,
-      T: () => ad,
-      e: () => sd,
-      i: () => vd,
-      m: () => bd,
-      n: () => md,
-      q: () => Rd,
-      s: () => qd,
-      v: () => Gd,
-      z: () => xd
+  4621: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      A: () => sQ,
+      B: () => MQ,
+      F: () => DQ,
+      H: () => kQ,
+      I: () => WQ,
+      d: () => iQ,
+      e: () => pQ,
+      f: () => IQ,
+      g: () => rQ,
+      k: () => eQ,
+      n: () => CQ,
+      r: () => GQ,
+      v: () => cQ,
+      x: () => RQ,
+      y: () => OQ
     });
-    var pd = kd(4673);
-    const Nd = {
+    var LQ = wQ(4626);
+    const qQ = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Wd = Nd;
+    let oQ = qQ;
 
-    function Pd(dd) {
-      Wd = null !== dd && void 0 !== dd ? dd : Nd
+    function DQ(QQ) {
+      oQ = null !== QQ && void 0 !== QQ ? QQ : qQ
     }
 
-    function Zd() {
-      return Wd
+    function kQ() {
+      return oQ
     }
-    const gd = new Set,
-      Cd = new Set;
-    let Kd = -1;
-    const od = new Set,
-      ld = new Set;
-    let Qd = 0,
-      Ld = 0;
-    const Od = new Set,
-      ed = new Set;
+    const vQ = new Set,
+      mQ = new Set;
+    let uQ = -1;
+    const HQ = new Set,
+      bQ = new Set;
+    let YQ = 0,
+      xQ = 0;
+    const AQ = new Set,
+      tQ = new Set;
 
-    function Rd(dd) {
-      return gd.add(dd), () => {
-        gd.delete(dd)
+    function eQ(QQ) {
+      return vQ.add(QQ), () => {
+        vQ.delete(QQ)
       }
     }
 
-    function Id(dd, Jd) {
-      for (const pd of gd) try {
-        pd(dd)
-      } catch (kd) {
-        Jd(kd)
+    function MQ(QQ, FQ) {
+      for (const LQ of vQ) try {
+        LQ(QQ)
+      } catch (wQ) {
+        FQ(wQ)
       }
     }
 
-    function Gd(dd) {
-      return Cd.add(dd), () => {
-        Cd.delete(dd)
+    function GQ(QQ) {
+      return mQ.add(QQ), () => {
+        mQ.delete(QQ)
       }
     }
 
-    function vd(dd, Jd) {
-      const kd = Kd < 0 ? 0 : dd - Kd;
-      Kd = dd;
-      for (const Nd of Cd) try {
-        Nd(kd)
-      } catch (pd) {
-        Jd(pd)
+    function pQ(QQ, FQ) {
+      const wQ = uQ < 0 ? 0 : QQ - uQ;
+      uQ = QQ;
+      for (const qQ of mQ) try {
+        qQ(wQ)
+      } catch (LQ) {
+        FQ(LQ)
       }
     }
 
-    function xd(dd) {
-      return od.add(dd), () => {
-        od.delete(dd)
+    function cQ(QQ) {
+      return HQ.add(QQ), () => {
+        HQ.delete(QQ)
       }
     }
 
-    function qd(dd) {
-      return ld.add(dd), () => {
-        ld.delete(dd)
+    function CQ(QQ) {
+      return bQ.add(QQ), () => {
+        bQ.delete(QQ)
       }
     }
-    let Bd = 0;
+    let SQ = 0;
 
-    function sd(dd) {
-      Bd += dd
+    function iQ(QQ) {
+      SQ += QQ
     }
 
-    function ad() {
-      const dd = Bd;
-      return Bd = 0, dd
+    function WQ() {
+      const QQ = SQ;
+      return SQ = 0, QQ
     }
 
-    function Md(dd) {
-      return Od.add(dd), () => {
-        Od.delete(dd)
-      }
-    }
-
-    function Fd(dd) {
-      return ed.add(dd), () => {
-        ed.delete(dd)
+    function RQ(QQ) {
+      return AQ.add(QQ), () => {
+        AQ.delete(QQ)
       }
     }
 
-    function Yd() {
-      Qd = 0, Ld = 0, Kd = -1
+    function OQ(QQ) {
+      return tQ.add(QQ), () => {
+        tQ.delete(QQ)
+      }
     }
 
-    function md(dd, Jd) {
-      if ("paced" === dd) return Ld += Jd, null;
-      if ("drawn" !== dd && "skipped" !== dd) return null;
-      const kd = Jd + Ld;
-      return Ld = 0, kd
+    function sQ() {
+      YQ = 0, xQ = 0, uQ = -1
     }
 
-    function bd(dd, Jd, kd, Nd) {
-      const Wd = (0, pd.h)(Jd),
-        Pd = dd > 0 ? performance.now() : 0;
-      for (let pd = 0; pd < dd; pd++)
-        for (const dd of Od) try {
-          dd()
-        } catch (Zd) {
-          Nd(Zd)
+    function rQ(QQ, FQ) {
+      if ("paced" === QQ) return xQ += FQ, null;
+      if ("drawn" !== QQ && "skipped" !== QQ) return null;
+      const wQ = FQ + xQ;
+      return xQ = 0, wQ
+    }
+
+    function IQ(QQ, FQ, wQ, qQ) {
+      const oQ = (0, LQ.h)(FQ),
+        DQ = QQ > 0 ? performance.now() : 0;
+      for (let LQ = 0; LQ < QQ; LQ++)
+        for (const QQ of AQ) try {
+          QQ()
+        } catch (kQ) {
+          qQ(kQ)
         }
-      if (dd > 0 && sd(performance.now() - Pd), null !== kd) {
-        for (const dd of od) try {
-          dd(kd)
-        } catch (Zd) {
-          Nd(Zd)
+      if (QQ > 0 && iQ(performance.now() - DQ), null !== wQ) {
+        for (const QQ of HQ) try {
+          QQ(wQ)
+        } catch (kQ) {
+          qQ(kQ)
         }
-        Qd += kd
+        YQ += wQ
       }
-      if ("drawn" === Jd) {
-        const dd = Qd;
-        Qd = 0;
-        for (const Jd of ld) try {
-          Jd(dd)
-        } catch (Zd) {
-          Nd(Zd)
+      if ("drawn" === FQ) {
+        const QQ = YQ;
+        YQ = 0;
+        for (const FQ of bQ) try {
+          FQ(QQ)
+        } catch (kQ) {
+          qQ(kQ)
         }
       }
-      for (const pd of ed) try {
-        pd(dd, Wd)
-      } catch (Zd) {
-        Nd(Zd)
+      for (const LQ of tQ) try {
+        LQ(QQ, oQ)
+      } catch (kQ) {
+        qQ(kQ)
       }
     }
   },
-  4680: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      $b: () => xd,
-      A: () => Pd,
-      Ab: () => JJ,
-      B: () => Sd,
-      Bc: () => pd.ib,
-      Bd: () => pd.Tb,
-      C: () => LJ,
-      Cc: () => pd.jb,
-      Eb: () => pJ,
-      F: () => wd,
-      Fc: () => pd.sb,
-      Fd: () => pd.Yb,
-      G: () => pd.d,
-      Gd: () => Wd,
-      Hc: () => OJ,
-      Ib: () => pd.M,
-      Id: () => ed,
-      J: () => Cd,
-      Kc: () => oJ,
-      L: () => pd.h,
-      Lb: () => Nd.g,
-      Ld: () => CJ,
-      Md: () => Dd,
-      Nb: () => sd,
-      Nc: () => WJ,
-      O: () => dJ,
-      Pd: () => Ed,
-      Qc: () => pd.tb,
-      Rb: () => Ud,
-      S: () => pd.l,
-      Sd: () => yd,
-      U: () => zd,
-      Uc: () => pd.vb,
-      Vb: () => md,
-      Wc: () => pd.xb,
-      Wd: () => rd,
-      X: () => pd.q,
-      Xb: () => Fd,
-      Zb: () => pd.T,
-      _: () => pd.u,
-      _b: () => bd,
-      _c: () => Ad,
-      ab: () => pd.w,
-      b: () => kJ,
-      bd: () => pd.Db,
-      be: () => cd,
-      c: () => Od,
-      cc: () => ZJ,
-      db: () => od,
-      de: () => td,
-      ed: () => pd.Eb,
-      fe: () => ud,
-      g: () => Ld,
-      gb: () => Id,
-      gc: () => Gd,
-      ge: () => gJ,
-      h: () => KJ,
-      ib: () => pd.y,
-      ic: () => lJ,
-      id: () => pd.Gb,
-      ie: () => eJ,
-      j: () => ad,
-      jb: () => pd.B,
-      ke: () => vd,
-      lc: () => Nd.l,
-      ld: () => pd.Lb,
-      m: () => Bd,
-      nb: () => Td,
-      ne: () => Vd,
-      oe: () => fd,
-      pc: () => Rd,
-      pd: () => pd.Ob,
-      q: () => pd.b,
-      qe: () => Xd,
-      rb: () => PJ,
-      rc: () => NJ,
-      sd: () => pd.Qb,
-      tb: () => Kd,
-      td: () => Md,
-      te: () => jd,
-      u: () => QJ,
-      ub: () => pd.F,
-      uc: () => pd.bb,
-      vb: () => hd,
-      ve: () => gd,
-      w: () => Yd,
-      xb: () => Hd,
-      xc: () => pd.eb,
-      xd: () => pd.Sb,
-      xe: () => nd,
-      yb: () => pd.L,
-      ye: () => RJ,
-      zc: () => pd.gb,
-      ze: () => Qd
+  4632: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      $: () => XQ,
+      $b: () => qQ.k,
+      $c: () => LQ.fc,
+      Ab: () => rQ,
+      Ac: () => LQ.Eb,
+      Ad: () => kF,
+      B: () => yQ,
+      Cc: () => LQ.Ib,
+      D: () => LQ.h,
+      Db: () => OQ,
+      Dd: () => AF,
+      G: () => mQ,
+      Gc: () => LQ.Lb,
+      H: () => LQ.i,
+      Hb: () => LQ.Y,
+      Hd: () => pQ,
+      I: () => dQ,
+      Ic: () => BQ,
+      J: () => LQ.l,
+      Kc: () => LQ.Qb,
+      Kd: () => gQ,
+      L: () => PQ,
+      Lb: () => IQ,
+      Ld: () => KQ,
+      O: () => LQ.v,
+      Ob: () => cQ,
+      Oc: () => LQ.Ub,
+      Pc: () => LQ.Vb,
+      Pd: () => TQ,
+      Q: () => LQ.x,
+      Qc: () => LQ.bc,
+      Qd: () => NQ,
+      R: () => LQ.z,
+      Rb: () => DF,
+      S: () => HQ,
+      Sc: () => LQ.cc,
+      T: () => MQ,
+      U: () => LQ.B,
+      Uc: () => LQ.dc,
+      Ud: () => vQ,
+      Vb: () => GQ,
+      Xc: () => RQ,
+      Y: () => LQ.F,
+      Yd: () => zQ,
+      Zb: () => HF,
+      Zd: () => tF,
+      ab: () => oF,
+      ad: () => LQ.jc,
+      ae: () => YQ,
+      b: () => FF,
+      bb: () => uQ,
+      bd: () => LQ.nc,
+      c: () => AQ,
+      cc: () => eQ,
+      cd: () => oQ,
+      d: () => xQ,
+      dc: () => LF,
+      e: () => mF,
+      ed: () => tQ,
+      fb: () => LQ.I,
+      fc: () => LQ.hb,
+      gd: () => vF,
+      h: () => WQ,
+      hb: () => hQ,
+      hc: () => LQ.lb,
+      hd: () => aQ,
+      ib: () => ZQ,
+      id: () => fQ,
+      jb: () => LQ.O,
+      jc: () => LQ.ob,
+      jd: () => jQ,
+      kb: () => QF,
+      l: () => SQ,
+      m: () => LQ.e,
+      mc: () => LQ.pb,
+      md: () => JQ,
+      n: () => bF,
+      nb: () => wF,
+      oc: () => LQ.qb,
+      pb: () => LQ.Q,
+      q: () => sQ,
+      qd: () => VQ,
+      rb: () => qQ.g,
+      sb: () => iQ,
+      sc: () => LQ.Ab,
+      t: () => DQ,
+      tc: () => xF,
+      td: () => nQ,
+      v: () => UQ,
+      vc: () => uF,
+      wb: () => lQ,
+      wd: () => EQ,
+      xc: () => qF,
+      z: () => YF
     });
-    var pd = kd(4688),
-      Nd = kd(2337);
-    const Wd = Math.round(1e3 / pd.Yb),
-      Pd = 4,
-      Zd = 2;
+    var LQ = wQ(4638),
+      qQ = wQ(2313);
+    const oQ = Math.round(1e3 / LQ.nc),
+      DQ = 4,
+      kQ = 2;
 
-    function gd() {
-      return crypto.getRandomValues(new Uint32Array(Zd))
+    function vQ() {
+      return crypto.getRandomValues(new Uint32Array(kQ))
     }
-    const Cd = {
+    const mQ = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      Kd = 16,
-      od = {
+      uQ = 16,
+      HQ = {
         Draws: 1,
         NetAll: 2
       },
-      ld = {
+      bQ = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function Qd(dd) {
-      return (dd.nametagsHidden ? qd.NametagsHidden : 0) | (dd.crouchToggle ? qd.CrouchToggle : 0) | (dd.bhopDisabled ? qd.BhopDisabled : 0) | (dd.disableBobbing ? qd.DisableBobbing : 0) | (dd.ezTowering ? qd.EzTowering : 0) | (dd.ezBridging ? qd.EzBridging : 0) | (dd.showChunkBorders ? qd.ShowChunkBorders : 0)
+    function YQ(QQ) {
+      return (QQ.nametagsHidden ? CQ.NametagsHidden : 0) | (QQ.crouchToggle ? CQ.CrouchToggle : 0) | (QQ.bhopDisabled ? CQ.BhopDisabled : 0) | (QQ.disableBobbing ? CQ.DisableBobbing : 0) | (QQ.ezTowering ? CQ.EzTowering : 0) | (QQ.ezBridging ? CQ.EzBridging : 0) | (QQ.showChunkBorders ? CQ.ShowChunkBorders : 0)
     }
-    const Ld = {
+    const xQ = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      Od = {
+      AQ = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1049,7 +1049,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      ed = {
+      tQ = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1058,7 +1058,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      Rd = {
+      eQ = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1067,20 +1067,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      Id = 5,
-      Gd = 4294967295;
+      MQ = 5,
+      GQ = 4294967295;
 
-    function vd(dd) {
-      return (dd.showFog ? ld.ShowFog : 0) | (dd.lighting ? ld.Lighting : 0) | (dd.chunkFade ? ld.ChunkFade : 0)
+    function pQ(QQ) {
+      return (QQ.showFog ? bQ.ShowFog : 0) | (QQ.lighting ? bQ.Lighting : 0) | (QQ.chunkFade ? bQ.ChunkFade : 0)
     }
-    const xd = {
+    const cQ = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      qd = {
+      CQ = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1090,50 +1090,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      Bd = {
+      SQ = {
         Release: 1,
         KeepTouches: 2
       },
-      sd = {
+      iQ = {
         Point: 1,
         Stamped: 2
       },
-      ad = {
+      WQ = {
         Add: 1,
         Clear: 2
       },
-      Md = 1,
-      Fd = 8,
-      Yd = 16777215,
-      md = 4,
-      bd = {
+      RQ = 1,
+      OQ = 8,
+      sQ = 16777215,
+      rQ = 4,
+      IQ = {
         Resume: 1
       },
-      Sd = {
+      UQ = {
         Held: 1
       };
 
-    function jd(dd, Jd) {
-      return (dd | Jd << 8) >>> 0
+    function NQ(QQ, FQ) {
+      return (QQ | FQ << 8) >>> 0
     }
 
-    function Xd(dd) {
-      return 255 & dd
+    function TQ(QQ) {
+      return 255 & QQ
     }
 
-    function fd(dd) {
-      return dd >>> 8
+    function KQ(QQ) {
+      return QQ >>> 8
     }
 
-    function nd(dd) {
-      return dd + 3 & -4
+    function zQ(QQ) {
+      return QQ + 3 & -4
     }
-    const Ud = 16777216,
-      yd = 20;
-    const Dd = 8,
-      Td = 8,
-      Ed = 16777216,
-      cd = {
+    const lQ = 16777216,
+      jQ = 20;
+    const aQ = 8,
+      XQ = 8,
+      fQ = 16777216,
+      VQ = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1141,19 +1141,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      hd = {
+      hQ = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      rd = 16,
-      ud = {
+      JQ = 16,
+      EQ = {
         Lost: 0,
         Gone: 1
       },
-      td = {
+      nQ = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1161,18 +1161,18 @@ export const modules = {
         Retire: 5
       };
 
-    function Vd(dd) {
-      return dd === td.WorldgenSeed || dd === td.Generate
+    function gQ(QQ) {
+      return QQ === nQ.WorldgenSeed || QQ === nQ.Generate
     }
-    const zd = 4,
-      Hd = 99,
-      wd = {
+    const PQ = 4,
+      ZQ = 99,
+      yQ = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      Ad = {
+      BQ = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1180,45 +1180,45 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      dJ = {
+      dQ = {
         FRAMES: 65535,
         RESTORE_UNHELD: 65536,
         LINKS_RUNNING: 1 << 17
       },
-      JJ = 12,
-      kJ = 16,
-      pJ = 4,
-      NJ = 12,
-      WJ = {
+      QF = 12,
+      FF = 16,
+      wF = 4,
+      LF = 12,
+      qF = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      PJ = 4,
-      ZJ = 8,
-      gJ = 8,
-      CJ = {
+      oF = 4,
+      DF = 8,
+      kF = 8,
+      vF = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      KJ = {
+      mF = {
         Crit: 1,
         HitSelf: 2
       },
-      oJ = {
+      uF = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      lJ = {
+      HF = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      QJ = 12,
-      LJ = {
+      bF = 12,
+      YF = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1227,65 +1227,65 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      OJ = 67108864;
+      xF = 67108864;
 
-    function eJ(dd) {
-      for (const [Jd, kd] of Object.entries(pd.d))
-        if (kd === dd) return Jd;
-      return `Unknown${dd}`
+    function AF(QQ) {
+      for (const [FQ, wQ] of Object.entries(LQ.h))
+        if (wQ === QQ) return FQ;
+      return `Unknown${QQ}`
     }
 
-    function RJ(dd) {
+    function tF(QQ) {
       return {
-        status: dd[pd.B.Status],
-        lastError: dd[pd.B.LastError],
-        lastErrorDetail: dd[pd.B.LastErrorDetail],
-        errorCount: dd[pd.B.ErrorCount],
-        frameIndex: dd[pd.B.FrameIndex],
-        tickIndex: dd[pd.B.TickIndex],
-        renderPending: dd[pd.B.RenderPending],
-        firstView: dd[pd.B.FirstView],
-        chunksCancelled: dd[pd.B.ChunksCancelled]
+        status: QQ[LQ.F.Status],
+        lastError: QQ[LQ.F.LastError],
+        lastErrorDetail: QQ[LQ.F.LastErrorDetail],
+        errorCount: QQ[LQ.F.ErrorCount],
+        frameIndex: QQ[LQ.F.FrameIndex],
+        tickIndex: QQ[LQ.F.TickIndex],
+        renderPending: QQ[LQ.F.RenderPending],
+        firstView: QQ[LQ.F.FirstView],
+        chunksCancelled: QQ[LQ.F.ChunksCancelled]
       }
     }
   },
-  4673: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Pd,
-      f: () => Wd,
-      h: () => Nd
+  4626: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => DQ,
+      e: () => oQ,
+      h: () => qQ
     });
-    var pd = kd(4680);
+    var LQ = wQ(4632);
 
-    function Nd(dd) {
-      return "none" !== dd
+    function qQ(QQ) {
+      return "none" !== QQ
     }
 
-    function Wd(dd, Jd) {
-      if (!dd) return "none";
-      switch (Jd) {
-        case pd.ab.Drawn:
+    function oQ(QQ, FQ) {
+      if (!QQ) return "none";
+      switch (FQ) {
+        case LQ.R.Drawn:
           return "drawn";
-        case pd.ab.Paced:
+        case LQ.R.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function Pd(dd) {
-      return "drawn" === dd
+    function DQ(QQ) {
+      return "drawn" === QQ
     }
   },
-  4704: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Nd,
-      f: () => Wd,
-      j: () => Pd,
-      n: () => pd,
-      r: () => Zd
+  4651: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => qQ,
+      c: () => oQ,
+      d: () => DQ,
+      f: () => LQ,
+      g: () => kQ
     });
-    const pd = {
+    const LQ = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1482,8 +1482,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      Nd = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Wd = {
+      qQ = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      oQ = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1546,160 +1546,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      Pd = {
+      DQ = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      Zd = [16]
+      kQ = [16]
   },
-  40658: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Pd,
-      e: () => Wd,
-      f: () => Nd
+  40089: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => DQ,
+      g: () => oQ,
+      j: () => qQ
     });
-    let pd = null;
+    let LQ = null;
 
-    function Nd(dd) {
-      pd = dd
+    function qQ(QQ) {
+      LQ = QQ
     }
 
-    function Wd(dd) {
-      pd === dd && (pd = null)
+    function oQ(QQ) {
+      LQ === QQ && (LQ = null)
     }
 
-    function Pd() {
-      var dd;
-      null === (dd = pd) || void 0 === dd || dd()
+    function DQ() {
+      var QQ;
+      null === (QQ = LQ) || void 0 === QQ || QQ()
     }
   },
-  4709: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Zd,
-      f: () => Pd,
-      i: () => Cd
+  4657: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => kQ,
+      g: () => DQ,
+      i: () => mQ
     });
-    var pd = kd(2337),
-      Nd = kd(2345);
-    const Wd = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var LQ = wQ(2313),
+      qQ = wQ(2320);
+    const oQ = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function Pd(dd) {
-      return dd instanceof HTMLElement && (!!(dd.isContentEditable || dd instanceof HTMLTextAreaElement || dd instanceof HTMLSelectElement) || dd instanceof HTMLInputElement && !Wd.has(dd.type))
+    function DQ(QQ) {
+      return QQ instanceof HTMLElement && (!!(QQ.isContentEditable || QQ instanceof HTMLTextAreaElement || QQ instanceof HTMLSelectElement) || QQ instanceof HTMLInputElement && !oQ.has(QQ.type))
     }
 
-    function Zd(dd) {
-      let Jd = null;
-      const kd = kd => {
-          const Nd = Pd(kd);
-          Nd !== Jd && (Jd = Nd, dd(pd.k.UiCapture, pd.y.Keyboard, 0, 0, Nd ? pd.y.Keyboard : 0))
+    function kQ(QQ) {
+      let FQ = null;
+      const wQ = wQ => {
+          const qQ = DQ(wQ);
+          qQ !== FQ && (FQ = qQ, QQ(LQ.i.UiCapture, LQ.w.Keyboard, 0, 0, qQ ? LQ.w.Keyboard : 0))
         },
-        Nd = dd => {
-          kd(dd.target)
+        qQ = QQ => {
+          wQ(QQ.target)
         },
-        Wd = dd => {
-          kd(dd.relatedTarget)
+        oQ = QQ => {
+          wQ(QQ.relatedTarget)
         },
-        Zd = () => {
-          kd(document.activeElement)
+        kQ = () => {
+          wQ(document.activeElement)
         },
-        gd = {
+        vQ = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", Nd, gd), document.addEventListener("focusout", Wd, gd), document.addEventListener("keydown", Zd, gd), kd(document.activeElement), () => {
-        document.removeEventListener("focusin", Nd, gd), document.removeEventListener("focusout", Wd, gd), document.removeEventListener("keydown", Zd, gd)
+      return document.addEventListener("focusin", qQ, vQ), document.addEventListener("focusout", oQ, vQ), document.addEventListener("keydown", kQ, vQ), wQ(document.activeElement), () => {
+        document.removeEventListener("focusin", qQ, vQ), document.removeEventListener("focusout", oQ, vQ), document.removeEventListener("keydown", kQ, vQ)
       }
     }
-    const gd = new Map;
+    const vQ = new Map;
 
-    function Cd(dd, Jd) {
-      var kd;
-      let pd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      gd.set(pd, (null !== (kd = gd.get(pd)) && void 0 !== kd ? kd : 0) & ~dd | Jd & dd);
-      let Wd = 0;
-      for (const Nd of gd.values()) Wd |= Nd;
-      return (0, Nd.F)(dd, Wd & dd)
+    function mQ(QQ, FQ) {
+      var wQ;
+      let LQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      vQ.set(LQ, (null !== (wQ = vQ.get(LQ)) && void 0 !== wQ ? wQ : 0) & ~QQ | FQ & QQ);
+      let oQ = 0;
+      for (const qQ of vQ.values()) oQ |= qQ;
+      return (0, qQ.A)(QQ, oQ & QQ)
     }
   },
-  37106: (dd, Jd, kd) => {
-    function pd(dd) {
-      return dd.includes("Leaf Bed")
+  36561: (QQ, FQ, wQ) => {
+    function LQ(QQ) {
+      return QQ.includes("Leaf Bed")
     }
 
-    function Nd(dd) {
-      return / Bed(?: Head)?(?:\||$)/.test(dd) && !pd(dd)
+    function qQ(QQ) {
+      return / Bed(?: Head)?(?:\||$)/.test(QQ) && !LQ(QQ)
     }
 
-    function Wd(dd) {
-      return dd.includes(" Strongbed")
+    function oQ(QQ) {
+      return QQ.includes(" Strongbed")
     }
 
-    function Pd(dd) {
-      return pd(dd) || Nd(dd) || Wd(dd)
+    function DQ(QQ) {
+      return LQ(QQ) || qQ(QQ) || oQ(QQ)
     }
-    kd.d(Jd, {
-      c: () => Pd,
-      f: () => pd,
-      j: () => Wd,
-      n: () => Nd
+    wQ.d(FQ, {
+      e: () => DQ,
+      i: () => LQ,
+      m: () => oQ,
+      q: () => qQ
     })
   },
-  37101: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Cd
+  36554: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => mQ
     });
-    var pd = kd(37106),
-      Nd = kd(9331);
-    const Wd = [],
-      Pd = [],
-      Zd = [],
-      gd = [];
-    for (const Kd of Object.keys(Nd.n))(0, pd.f)(Kd) ? Wd.push(Kd) : (0, pd.n)(Kd) && Pd.push(Kd), (0, pd.j)(Kd) && Zd.push(Kd), (Kd.includes(" Bed Head") || Kd.includes(" Strongbed Head")) && gd.push(Kd);
-    const Cd = {
-      leafBeds: Wd,
-      woolBeds: Pd,
-      strongBeds: Zd,
-      beds: [...Wd, ...Pd, ...Zd],
-      bedHeads: gd,
+    var LQ = wQ(36561),
+      qQ = wQ(9195);
+    const oQ = [],
+      DQ = [],
+      kQ = [],
+      vQ = [];
+    for (const uQ of Object.keys(qQ.k))(0, LQ.i)(uQ) ? oQ.push(uQ) : (0, LQ.q)(uQ) && DQ.push(uQ), (0, LQ.m)(uQ) && kQ.push(uQ), (uQ.includes(" Bed Head") || uQ.includes(" Strongbed Head")) && vQ.push(uQ);
+    const mQ = {
+      leafBeds: oQ,
+      woolBeds: DQ,
+      strongBeds: kQ,
+      beds: [...oQ, ...DQ, ...kQ],
+      bedHeads: vQ,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6347: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Pd,
-      c: () => Nd,
-      d: () => gd,
-      h: () => Wd,
-      i: () => Cd,
-      k: () => pd,
-      o: () => Zd
+  6314: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => DQ,
+      h: () => qQ,
+      l: () => vQ,
+      o: () => oQ,
+      q: () => mQ,
+      r: () => LQ,
+      s: () => kQ
     });
-    let pd = function(dd) {
-        return dd[dd.DEFAULT = 0] = "DEFAULT", dd[dd.BOAT = 1] = "BOAT", dd[dd.GLIDER = 2] = "GLIDER", dd[dd.BALLOON = 3] = "BALLOON", dd[dd.SLEEPING = 4] = "SLEEPING", dd[dd.RIDING_MOB = 5] = "RIDING_MOB", dd[dd.CAR = 6] = "CAR", dd[dd.HOVERCRAFT = 7] = "HOVERCRAFT", dd
+    let LQ = function(QQ) {
+        return QQ[QQ.DEFAULT = 0] = "DEFAULT", QQ[QQ.BOAT = 1] = "BOAT", QQ[QQ.GLIDER = 2] = "GLIDER", QQ[QQ.BALLOON = 3] = "BALLOON", QQ[QQ.SLEEPING = 4] = "SLEEPING", QQ[QQ.RIDING_MOB = 5] = "RIDING_MOB", QQ[QQ.CAR = 6] = "CAR", QQ[QQ.HOVERCRAFT = 7] = "HOVERCRAFT", QQ
       }({}),
-      Nd = function(dd) {
-        return dd[dd.WOOD = 0] = "WOOD", dd[dd.OBSIDIAN = 1] = "OBSIDIAN", dd[dd.SPEED = 2] = "SPEED", dd
+      qQ = function(QQ) {
+        return QQ[QQ.WOOD = 0] = "WOOD", QQ[QQ.OBSIDIAN = 1] = "OBSIDIAN", QQ[QQ.SPEED = 2] = "SPEED", QQ
       }({}),
-      Wd = function(dd) {
-        return dd[dd.WOOD = 0] = "WOOD", dd[dd.IRON = 1] = "IRON", dd[dd.GOLD = 2] = "GOLD", dd[dd.DIAMOND = 3] = "DIAMOND", dd
+      oQ = function(QQ) {
+        return QQ[QQ.WOOD = 0] = "WOOD", QQ[QQ.IRON = 1] = "IRON", QQ[QQ.GOLD = 2] = "GOLD", QQ[QQ.DIAMOND = 3] = "DIAMOND", QQ
       }({}),
-      Pd = function(dd) {
-        return dd[dd.YELLOW = 0] = "YELLOW", dd[dd.WHITE = 1] = "WHITE", dd[dd.RED = 2] = "RED", dd[dd.PURPLE = 3] = "PURPLE", dd[dd.PINK = 4] = "PINK", dd[dd.ORANGE = 5] = "ORANGE", dd[dd.MAGENTA = 6] = "MAGENTA", dd[dd.LIME = 7] = "LIME", dd[dd.LIGHT_GRAY = 8] = "LIGHT_GRAY", dd[dd.LIGHT_BLUE = 9] = "LIGHT_BLUE", dd[dd.GREEN = 10] = "GREEN", dd[dd.GRAY = 11] = "GRAY", dd[dd.CYAN = 12] = "CYAN", dd[dd.BROWN = 13] = "BROWN", dd[dd.BLUE = 14] = "BLUE", dd[dd.BLACK = 15] = "BLACK", dd
+      DQ = function(QQ) {
+        return QQ[QQ.YELLOW = 0] = "YELLOW", QQ[QQ.WHITE = 1] = "WHITE", QQ[QQ.RED = 2] = "RED", QQ[QQ.PURPLE = 3] = "PURPLE", QQ[QQ.PINK = 4] = "PINK", QQ[QQ.ORANGE = 5] = "ORANGE", QQ[QQ.MAGENTA = 6] = "MAGENTA", QQ[QQ.LIME = 7] = "LIME", QQ[QQ.LIGHT_GRAY = 8] = "LIGHT_GRAY", QQ[QQ.LIGHT_BLUE = 9] = "LIGHT_BLUE", QQ[QQ.GREEN = 10] = "GREEN", QQ[QQ.GRAY = 11] = "GRAY", QQ[QQ.CYAN = 12] = "CYAN", QQ[QQ.BROWN = 13] = "BROWN", QQ[QQ.BLUE = 14] = "BLUE", QQ[QQ.BLACK = 15] = "BLACK", QQ
       }({}),
-      Zd = function(dd) {
-        return dd[dd.ROTATION_1 = 0] = "ROTATION_1", dd[dd.ROTATION_2 = 1] = "ROTATION_2", dd[dd.ROTATION_3 = 2] = "ROTATION_3", dd[dd.ROTATION_4 = 3] = "ROTATION_4", dd
+      kQ = function(QQ) {
+        return QQ[QQ.ROTATION_1 = 0] = "ROTATION_1", QQ[QQ.ROTATION_2 = 1] = "ROTATION_2", QQ[QQ.ROTATION_3 = 2] = "ROTATION_3", QQ[QQ.ROTATION_4 = 3] = "ROTATION_4", QQ
       }({}),
-      gd = function(dd) {
-        return dd[dd.KART = 0] = "KART", dd[dd.OFF_ROADER = 1] = "OFF_ROADER", dd[dd.CAR = 2] = "CAR", dd[dd.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", dd[dd.ARMORED_CAR = 4] = "ARMORED_CAR", dd[dd.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", dd[dd.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", dd[dd.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", dd
+      vQ = function(QQ) {
+        return QQ[QQ.KART = 0] = "KART", QQ[QQ.OFF_ROADER = 1] = "OFF_ROADER", QQ[QQ.CAR = 2] = "CAR", QQ[QQ.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", QQ[QQ.ARMORED_CAR = 4] = "ARMORED_CAR", QQ[QQ.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", QQ[QQ.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", QQ[QQ.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", QQ
       }({});
-    pd.DEFAULT, pd.BOAT, Nd.SPEED, pd.GLIDER, Wd.DIAMOND, pd.BALLOON, Pd.BLACK, pd.SLEEPING, Zd.ROTATION_4, pd.RIDING_MOB, pd.CAR, gd.MOONSTONE_MINING_DRILL, pd.HOVERCRAFT;
-    let Cd = function(dd) {
-      return dd[dd.NORMAL = 0] = "NORMAL", dd[dd.GLIDING = 1] = "GLIDING", dd[dd.FLOATING = 2] = "FLOATING", dd
+    LQ.DEFAULT, LQ.BOAT, qQ.SPEED, LQ.GLIDER, oQ.DIAMOND, LQ.BALLOON, DQ.BLACK, LQ.SLEEPING, kQ.ROTATION_4, LQ.RIDING_MOB, LQ.CAR, vQ.MOONSTONE_MINING_DRILL, LQ.HOVERCRAFT;
+    let mQ = function(QQ) {
+      return QQ[QQ.NORMAL = 0] = "NORMAL", QQ[QQ.GLIDING = 1] = "GLIDING", QQ[QQ.FLOATING = 2] = "FLOATING", QQ
     }({})
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

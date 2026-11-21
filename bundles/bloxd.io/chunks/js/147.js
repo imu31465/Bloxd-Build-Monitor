@@ -1,68 +1,68 @@
 export const id = 147;
 export const ids = [147];
 export const modules = {
-  7991: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      AdinPlaySdkAdaptor: () => Zd
+  7927: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      AdinPlaySdkAdaptor: () => kQ
     });
-    var pd = kd(1341),
-      Nd = kd(1195),
-      Wd = kd(237);
-    const Pd = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
-    class Zd extends pd.d {
+    var LQ = wQ(1335),
+      qQ = wQ(1196),
+      oQ = wQ(239);
+    const DQ = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
+    class kQ extends LQ.b {
       constructor() {
-        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = Pd
+        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = DQ
       }
       static async setup() {
-        return (0, Wd.canonicaliseZonesWhenIdle)(Pd), await (0, Nd.c)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"), new Zd
+        return (0, oQ.canonicaliseZonesWhenIdle)(DQ), await (0, qQ.e)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"), new kQ
       }
-      playRewarded(dd, Jd) {
+      playRewarded(QQ, FQ) {
         if ("undefined" !== typeof window.aiptag.adplayer) {
           console.log("AD: Requesting AdInPlay preroll ad for rewarded placement");
-          const kd = "video_reward";
+          const wQ = "video_reward";
           window.aiptag.cmd.player.push((function() {
             window.aiptag.adplayer.startPreRoll({
-              alias: kd
+              alias: wQ
             })
-          })), window.adStartSoPause(dd, {
-            onFailCb: Jd
+          })), window.adStartSoPause(QQ, {
+            onFailCb: FQ
           })
-        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), Jd()
+        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), FQ()
       }
-      playVideoAd(dd, Jd) {
-        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (Jd ? ` (alias: ${Jd})` : "")), window.aiptag.cmd.player.push((function() {
+      playVideoAd(QQ, FQ) {
+        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (FQ ? ` (alias: ${FQ})` : "")), window.aiptag.cmd.player.push((function() {
           window.aiptag.adplayer.startPreRoll({
-            alias: Jd
+            alias: FQ
           })
-        })), window.adStartSoPause(dd)) : (dd(), console.error("AIP ad lib not loaded, no ad playing"))
+        })), window.adStartSoPause(QQ)) : (QQ(), console.error("AIP ad lib not loaded, no ad playing"))
       }
-      renderBanner(dd) {
+      renderBanner(QQ) {
         if ("undefined" === typeof window.aiptag.adplayer) return void console.log("AD: User has adblock, not requesting new banners");
         const {
-          divId: Jd,
-          alias: kd
-        } = dd;
+          divId: FQ,
+          alias: wQ
+        } = QQ;
         window.aiptag.cmd.display.push((function() {
           window.aipDisplayTag.display({
-            adUnitName: Jd,
-            alias: kd
+            adUnitName: FQ,
+            alias: wQ
           })
-        })), console.log("AD: Requested aip banner", document.getElementById(dd.divId), kd ? `(alias: ${kd})` : "")
+        })), console.log("AD: Requested aip banner", document.getElementById(QQ.divId), wQ ? `(alias: ${wQ})` : "")
       }
-      clearBanner(dd) {
+      clearBanner(QQ) {
         "undefined" !== typeof window.aiptag.adplayer ? (window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.destroy(dd.divId)
-        })), console.log(`AD: Clearing aip banner ad ${dd.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
+          window.aipDisplayTag.destroy(QQ.divId)
+        })), console.log(`AD: Clearing aip banner ad ${QQ.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
       }
-      setBannerAutoRefreshEnabled(dd, Jd) {
+      setBannerAutoRefreshEnabled(QQ, FQ) {
         window.aiptag.cmd.display.push((function() {
-          window.aipDisplayTag.setAutoRefresh(dd.divId, Jd)
+          window.aipDisplayTag.setAutoRefresh(QQ.divId, FQ)
         }))
       }
       newPageSession() {
         console.log("AD: Requesting new page session"), window.aiptag.cmd.display.push((function() {
-          window.__VM.push((function(dd, Jd) {
-            Jd.Instances.pageManager.newPageSession(!1)
+          window.__VM.push((function(QQ, FQ) {
+            FQ.Instances.pageManager.newPageSession(!1)
           }))
         }))
       }
@@ -70,4 +70,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

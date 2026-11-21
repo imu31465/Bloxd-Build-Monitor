@@ -1,19 +1,19 @@
 export const id = 364;
 export const ids = [364];
 export const modules = {
-  61174: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      passPixelShaderWGSL: () => Pd
+  60953: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      passPixelShaderWGSL: () => DQ
     });
-    var pd = kd(39829);
-    const Nd = "passPixelShader",
-      Wd = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);}";
-    pd.c.ShadersStoreWGSL[Nd] || (pd.c.ShadersStoreWGSL[Nd] = Wd);
-    const Pd = {
-      name: Nd,
-      shader: Wd
+    var LQ = wQ(39251);
+    const qQ = "passPixelShader",
+      oQ = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);}";
+    LQ.c.ShadersStoreWGSL[qQ] || (LQ.c.ShadersStoreWGSL[qQ] = oQ);
+    const DQ = {
+      name: qQ,
+      shader: oQ
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

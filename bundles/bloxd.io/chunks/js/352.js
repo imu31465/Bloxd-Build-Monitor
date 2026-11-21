@@ -1,27 +1,27 @@
 export const id = 352;
 export const ids = [352];
 export const modules = {
-  60963: (dd, Jd, kd) => {
-    function pd(dd, Jd, kd, pd, Nd, Wd, Pd) {
-      const Zd = Jd,
-        gd = pd,
-        Cd = kd;
-      dd[Cd + 0] = Zd[gd + 0], dd[Cd + 1] = Zd[gd + 1], dd[Cd + 2] = Zd[gd + 2], dd[Cd + 3] = Zd[gd + 3], dd[Cd + 4] = Zd[gd + 4], dd[Cd + 5] = Zd[gd + 5], dd[Cd + 6] = Zd[gd + 6], dd[Cd + 7] = Zd[gd + 7], dd[Cd + 8] = Zd[gd + 8], dd[Cd + 9] = Zd[gd + 9], dd[Cd + 10] = Zd[gd + 10], dd[Cd + 11] = Zd[gd + 11], dd[Cd + 12] = Zd[gd + 12] - Nd, dd[Cd + 13] = Zd[gd + 13] - Wd, dd[Cd + 14] = Zd[gd + 14] - Pd, dd[Cd + 15] = Zd[gd + 15]
+  60724: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
+      const kQ = FQ,
+        vQ = LQ,
+        mQ = wQ;
+      QQ[mQ + 0] = kQ[vQ + 0], QQ[mQ + 1] = kQ[vQ + 1], QQ[mQ + 2] = kQ[vQ + 2], QQ[mQ + 3] = kQ[vQ + 3], QQ[mQ + 4] = kQ[vQ + 4], QQ[mQ + 5] = kQ[vQ + 5], QQ[mQ + 6] = kQ[vQ + 6], QQ[mQ + 7] = kQ[vQ + 7], QQ[mQ + 8] = kQ[vQ + 8], QQ[mQ + 9] = kQ[vQ + 9], QQ[mQ + 10] = kQ[vQ + 10], QQ[mQ + 11] = kQ[vQ + 11], QQ[mQ + 12] = kQ[vQ + 12] - qQ, QQ[mQ + 13] = kQ[vQ + 13] - oQ, QQ[mQ + 14] = kQ[vQ + 14] - DQ, QQ[mQ + 15] = kQ[vQ + 15]
     }
 
-    function Nd(dd) {
-      return (Jd, kd, Nd, Wd) => {
-        const Pd = dd.camera;
-        if (!Pd) return void pd(Jd, kd, Nd, Wd, 0, 0, 0);
-        const Zd = Pd.worldMatrix;
-        pd(Jd, kd, Nd, Wd, Zd[12], Zd[13], Zd[14])
+    function qQ(QQ) {
+      return (FQ, wQ, qQ, oQ) => {
+        const DQ = QQ.camera;
+        if (!DQ) return void LQ(FQ, wQ, qQ, oQ, 0, 0, 0);
+        const kQ = DQ.worldMatrix;
+        LQ(FQ, wQ, qQ, oQ, kQ[12], kQ[13], kQ[14])
       }
     }
-    kd.r(Jd), kd.d(Jd, {
-      makePackMeshWorld: () => Nd,
-      packMat4IntoF32WithOffset: () => pd
+    wQ.r(FQ), wQ.d(FQ, {
+      makePackMeshWorld: () => qQ,
+      packMat4IntoF32WithOffset: () => LQ
     })
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

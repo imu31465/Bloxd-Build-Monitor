@@ -1,19 +1,19 @@
 export const id = 357;
 export const ids = [357];
 export const modules = {
-  61119: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      postprocessVertexShaderWGSL: () => Pd
+  60891: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      postprocessVertexShaderWGSL: () => DQ
     });
-    var pd = kd(39829);
-    const Nd = "postprocessVertexShader",
-      Wd = "attribute position: vec2<f32>;uniform scale: vec2<f32>;varying vUV: vec2<f32>;const madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.vUV=(vertexInputs.position*madd+madd)*uniforms.scale;vertexOutputs.position=vec4(vertexInputs.position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
-    pd.c.ShadersStoreWGSL[Nd] || (pd.c.ShadersStoreWGSL[Nd] = Wd);
-    const Pd = {
-      name: Nd,
-      shader: Wd
+    var LQ = wQ(39251);
+    const qQ = "postprocessVertexShader",
+      oQ = "attribute position: vec2<f32>;uniform scale: vec2<f32>;varying vUV: vec2<f32>;const madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.vUV=(vertexInputs.position*madd+madd)*uniforms.scale;vertexOutputs.position=vec4(vertexInputs.position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
+    LQ.c.ShadersStoreWGSL[qQ] || (LQ.c.ShadersStoreWGSL[qQ] = oQ);
+    const DQ = {
+      name: qQ,
+      shader: oQ
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

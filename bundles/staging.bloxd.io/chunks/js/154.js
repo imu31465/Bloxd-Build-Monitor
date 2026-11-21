@@ -1,536 +1,536 @@
 export const id = 154;
 export const ids = [154];
 export const modules = {
-  41150: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      openCharacterPreview: () => td
+  40583: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      openCharacterPreview: () => nQ
     });
-    var pd = kd(38286),
-      Nd = kd(2634),
-      Wd = kd(593),
-      Pd = kd(37329),
-      Zd = kd(2203),
-      gd = kd(37314),
-      Cd = kd(39791),
-      Kd = kd(40054),
-      od = kd(41074),
-      ld = kd(37245),
-      Qd = kd(40226),
-      Ld = kd(37438),
-      Od = kd(40251),
-      ed = kd(41115),
-      Rd = kd(37236),
-      Id = kd(1245),
-      Gd = kd(2196),
-      vd = kd(37395),
-      xd = kd(37501);
-    class qd {
-      constructor(dd, Jd) {
-        this.pose = dd, this.nodes = void 0, this.nodes = dd.boneNames.map((dd => Jd.get(dd)))
+    var LQ = wQ(37639),
+      qQ = wQ(2676),
+      oQ = wQ(600),
+      DQ = wQ(36768),
+      kQ = wQ(2153),
+      vQ = wQ(36753),
+      mQ = wQ(39211),
+      uQ = wQ(39491),
+      HQ = wQ(40496),
+      bQ = wQ(36688),
+      YQ = wQ(39678),
+      xQ = wQ(36870),
+      AQ = wQ(39692),
+      tQ = wQ(40539),
+      eQ = wQ(36679),
+      MQ = wQ(1237),
+      GQ = wQ(2148),
+      pQ = wQ(36836),
+      cQ = wQ(36924);
+    class CQ {
+      constructor(QQ, FQ) {
+        this.pose = QQ, this.nodes = void 0, this.nodes = QQ.boneNames.map((QQ => FQ.get(QQ)))
       }
-      write(dd) {
-        this.pose.pose(dd);
+      write(QQ) {
+        this.pose.pose(QQ);
         const {
-          rotations: Jd
+          rotations: FQ
         } = this.pose;
-        for (let kd = 0; kd < this.nodes.length; kd++) {
-          const dd = 4 * kd;
-          this.nodes[kd].rotationQuaternion.set(Jd[dd], Jd[dd + 1], Jd[dd + 2], Jd[dd + 3])
+        for (let wQ = 0; wQ < this.nodes.length; wQ++) {
+          const QQ = 4 * wQ;
+          this.nodes[wQ].rotationQuaternion.set(FQ[QQ], FQ[QQ + 1], FQ[QQ + 2], FQ[QQ + 3])
         }
       }
     }
 
-    function Bd(dd) {
-      dd.unfreezeWorldMatrix();
-      for (const Jd of dd.getChildren()) Bd(Jd)
+    function SQ(QQ) {
+      QQ.unfreezeWorldMatrix();
+      for (const FQ of QQ.getChildren()) SQ(FQ)
     }
 
-    function sd(dd, Jd) {
-      dd.isVisible = Jd;
-      for (const kd of dd.getChildMeshes()) kd.isVisible = Jd
+    function iQ(QQ, FQ) {
+      QQ.isVisible = FQ;
+      for (const wQ of QQ.getChildMeshes()) wQ.isVisible = FQ
     }
-    class ad {
-      constructor(dd, Jd, kd) {
-        this.BO = dd, this.thinInstMgr = Jd, this.Rm = kd, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
+    class WQ {
+      constructor(QQ, FQ, wQ) {
+        this.lA = QQ, this.thinInstMgr = FQ, this.XN = wQ, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
       }
-      loadModel(dd, Jd, kd) {
-        const pd = (0, vd.h)(dd, Jd);
-        return pd in this.modelCache || (this.modelCache[pd] = (async () => {
+      loadModel(QQ, FQ, wQ) {
+        const LQ = (0, pQ.h)(QQ, FQ);
+        return LQ in this.modelCache || (this.modelCache[LQ] = (async () => {
           try {
-            const pd = await (0, vd.i)(dd, this.BO),
-              Nd = new Map;
-            for (const dd of pd.getNodes()) Nd.set(dd.name, dd);
-            const Wd = (0, vd.d)(null !== Jd && void 0 !== Jd ? Jd : dd, this.BO);
-            (0, vd.l)(pd, Wd, {
-              keepTransforms: void 0 !== kd,
-              onProcessedMesh: dd => {
-                (0, vd.o)(dd), this.BO.apd(dd, !1), dd.isVisible = !1
+            const LQ = await (0, pQ.l)(QQ, this.lA),
+              qQ = new Map;
+            for (const QQ of LQ.getNodes()) qQ.set(QQ.name, QQ);
+            const oQ = (0, pQ.d)(null !== FQ && void 0 !== FQ ? FQ : QQ, this.lA);
+            (0, pQ.n)(LQ, oQ, {
+              keepTransforms: void 0 !== wQ,
+              onProcessedMesh: QQ => {
+                (0, pQ.r)(QQ), this.lA.sLQ(QQ, !1), QQ.isVisible = !1
               }
             });
-            for (const dd of pd.rootNodes) Bd(dd);
-            const Pd = void 0 === kd ? null : (0, xd.e)(kd, (dd => {
-              var Jd, kd;
-              return null !== (Jd = null === (kd = Nd.get(dd)) || void 0 === kd ? void 0 : kd.rotationQuaternion) && void 0 !== Jd ? Jd : null
+            for (const QQ of LQ.rootNodes) SQ(QQ);
+            const DQ = void 0 === wQ ? null : (0, cQ.e)(wQ, (QQ => {
+              var FQ, wQ;
+              return null !== (FQ = null === (wQ = qQ.get(QQ)) || void 0 === wQ ? void 0 : wQ.rotationQuaternion) && void 0 !== FQ ? FQ : null
             }));
             return {
-              nodesByName: Nd,
-              bones: null === Pd ? null : new qd(Pd, Nd)
+              nodesByName: qQ,
+              bones: null === DQ ? null : new CQ(DQ, qQ)
             }
-          } catch (Nd) {
-            throw delete this.modelCache[pd], console.error(`Failed to load preview attachment ${pd}:`, Nd), Nd
+          } catch (qQ) {
+            throw delete this.modelCache[LQ], console.error(`Failed to load preview attachment ${LQ}:`, qQ), qQ
           }
-        })()), this.modelCache[pd]
+        })()), this.modelCache[LQ]
       }
-      async update(dd, Jd) {
-        var kd;
+      async update(QQ, FQ) {
+        var wQ;
         const {
-          thinInstMgr: pd,
-          Rm: Nd
+          thinInstMgr: LQ,
+          XN: qQ
         } = this;
-        this.cosmeticNames[dd] = Jd;
-        const Wd = this.attachmentsByType[dd];
-        if (Wd)
+        this.cosmeticNames[QQ] = FQ;
+        const oQ = this.attachmentsByType[QQ];
+        if (oQ)
           for (const {
-              mesh: Zd,
-              destNode: gd,
-              bones: Cd
+              mesh: kQ,
+              destNode: vQ,
+              bones: mQ
             }
-            of Wd) {
-            null !== Cd && (0, Id.jb)(this.shownBones, Cd), sd(Zd, !1);
-            const dd = pd.getNamedNode(Nd, gd);
-            pd.detachTransformNodeIfFound(Zd, Nd, dd)
+            of oQ) {
+            null !== mQ && (0, MQ.tb)(this.shownBones, mQ), iQ(kQ, !1);
+            const QQ = LQ.getNamedNode(qQ, vQ);
+            LQ.detachTransformNodeIfFound(kQ, qQ, QQ)
           }
-        this.attachmentsByType[dd] = [];
-        const Pd = (0, Gd.h)(dd, Jd);
-        if (null !== Pd && void 0 !== Pd && null !== (kd = Pd.attachments) && void 0 !== kd && kd.length)
-          for (const Zd of Pd.attachments) {
-            let kd;
+        this.attachmentsByType[QQ] = [];
+        const DQ = (0, GQ.i)(QQ, FQ);
+        if (null !== DQ && void 0 !== DQ && null !== (wQ = DQ.attachments) && void 0 !== wQ && wQ.length)
+          for (const kQ of DQ.attachments) {
+            let wQ;
             try {
-              kd = await this.loadModel(Zd.modelGlb, Zd.texture, Zd.animation)
+              wQ = await this.loadModel(kQ.modelGlb, kQ.texture, kQ.animation)
             } catch {
               continue
             }
-            if (this.cosmeticNames[dd] !== Jd) return;
-            const Wd = kd.nodesByName.get(Zd.modelNode);
-            if (!Wd) {
-              console.error(`Preview attachment node ${Zd.modelNode} not found in ${Zd.modelGlb}`);
+            if (this.cosmeticNames[QQ] !== FQ) return;
+            const oQ = wQ.nodesByName.get(kQ.modelNode);
+            if (!oQ) {
+              console.error(`Preview attachment node ${kQ.modelNode} not found in ${kQ.modelGlb}`);
               continue
             }
-            sd(Wd, !0), (0, vd.s)(Wd, Zd.overlayColour);
-            const Pd = pd.getNamedNode(Nd, Zd.destNode);
-            pd.attachTransformNode(Wd, Nd, Pd), this.attachmentsByType[dd].push({
-              mesh: Wd,
-              destNode: Zd.destNode,
-              bones: kd.bones
-            }), null !== kd.bones && this.shownBones.push(kd.bones)
+            iQ(oQ, !0), (0, pQ.x)(oQ, kQ.overlayColour);
+            const DQ = LQ.getNamedNode(qQ, kQ.destNode);
+            LQ.attachTransformNode(oQ, qQ, DQ), this.attachmentsByType[QQ].push({
+              mesh: oQ,
+              destNode: kQ.destNode,
+              bones: wQ.bones
+            }), null !== wQ.bones && this.shownBones.push(wQ.bones)
           }
       }
-      writePoses(dd) {
-        for (const Jd of this.shownBones) Jd.write(dd)
+      writePoses(QQ) {
+        for (const FQ of this.shownBones) FQ.write(QQ)
       }
     }
-    var Md = kd(37334),
-      Fd = (kd(41095), kd(40475), kd(41099), kd(9274));
-    let Yd, md, bd, Sd, jd, Xd, fd, nd, Ud, yd;
-    const Dd = document.createElement("canvas");
-    async function Td() {
-      await new Promise((dd => {
+    var RQ = wQ(36777),
+      OQ = (wQ(40526), wQ(39906), wQ(40532), wQ(9142));
+    let sQ, rQ, IQ, UQ, NQ, TQ, KQ, zQ, lQ, jQ;
+    const aQ = document.createElement("canvas");
+    async function XQ() {
+      await new Promise((QQ => {
         setTimeout((() => {
-          dd()
+          QQ()
         }), 100)
       }))
     }
-    Dd.classList.add("CharCustomisationPreviewCanvas");
-    const Ed = {};
+    aQ.classList.add("CharCustomisationPreviewCanvas");
+    const fQ = {};
 
-    function cd(dd, Jd) {
-      Dd.width = dd, Dd.height = Jd, Yd.resize()
+    function VQ(QQ, FQ) {
+      aQ.width = QQ, aQ.height = FQ, sQ.resize()
     }
-    let hd = 0;
-    class rd {
-      constructor(dd, Jd) {
-        this.framing = Jd, this.ready = yd, this.dev = {
-          canvas: () => Dd,
-          isolateHead(dd) {
-            const Jd = Xd.getNodeNames(fd);
-            for (let kd = 0; kd < Jd.length; kd++) "HeadMesh" !== Jd[kd] && "__root__" !== Jd[kd] && "TorsoNode" !== Jd[kd] && Xd.setNodeEnabled(fd, kd, !1);
-            if (dd) {
-              const dd = Xd.getNamedNode(fd, "HeadMesh");
-              Xd.setNodeDisableColorWrite(fd, dd, !0, (dd => {
-                const Jd = new Od.StandardMaterial(`${dd.name}_depthOnly`, dd.Wm());
-                return Jd.disableColorWrite = !0, Jd
+    let hQ = 0;
+    class JQ {
+      constructor(QQ, FQ) {
+        this.framing = FQ, this.ready = jQ, this.dev = {
+          canvas: () => aQ,
+          isolateHead(QQ) {
+            const FQ = TQ.getNodeNames(KQ);
+            for (let wQ = 0; wQ < FQ.length; wQ++) "HeadMesh" !== FQ[wQ] && "__root__" !== FQ[wQ] && "TorsoNode" !== FQ[wQ] && TQ.setNodeEnabled(KQ, wQ, !1);
+            if (QQ) {
+              const QQ = TQ.getNamedNode(KQ, "HeadMesh");
+              TQ.setNodeDisableColorWrite(KQ, QQ, !0, (QQ => {
+                const FQ = new AQ.StandardMaterial(`${QQ.name}_depthOnly`, QQ.iN());
+                return FQ.disableColorWrite = !0, FQ
               }))
             }
-            Xd.setPosition(fd, 0, -12, 0)
+            TQ.setPosition(KQ, 0, -12, 0)
           }
         }, this.closed = !1, this.resetCamera();
-        const kd = dd.getBoundingClientRect();
-        cd(kd.width, kd.height), hd++, Yd.stopRenderLoop(), Yd.runRenderLoop((() => {
-          var dd, Jd;
-          null === (dd = nd) || void 0 === dd || dd.render(Yd.getDeltaTime()), null === (Jd = Ud) || void 0 === Jd || Jd.writePoses(performance.now() / 1e3), bd.render()
+        const wQ = QQ.getBoundingClientRect();
+        VQ(wQ.width, wQ.height), hQ++, sQ.stopRenderLoop(), sQ.runRenderLoop((() => {
+          var QQ, FQ;
+          null === (QQ = zQ) || void 0 === QQ || QQ.render(sQ.getDeltaTime()), null === (FQ = lQ) || void 0 === FQ || FQ.writePoses(performance.now() / 1e3), IQ.render()
         }))
       }
       isReady() {
-        return !!Sd
+        return !!UQ
       }
-      setCosmetic(dd, Jd) {
-        ! function(dd, Jd) {
-          if (!Sd) return;
-          const Pd = (0, Nd.e)();
-          Pd.SF(!1), pd.e.Player.meshApi.updatePlayerCosmetic(Pd.kU, fd, dd, Jd, !0), "cape" === dd && (Jd === Wd.d ? jd.XM(!1) : (jd.XM(!0), jd.material.diffuseTexture = new ed.d(kd(38955)(`./cape_${Jd}.png`), jd.Wm(), {
+      setCosmetic(QQ, FQ) {
+        ! function(QQ, FQ) {
+          if (!UQ) return;
+          const DQ = (0, qQ.d)();
+          DQ.pI(!1), LQ.d.Player.meshApi.updatePlayerCosmetic(DQ.WK, KQ, QQ, FQ, !0), "cape" === QQ && (FQ === oQ.h ? NQ.Qr(!1) : (NQ.Qr(!0), NQ.material.diffuseTexture = new tQ.b(wQ(38333)(`./cape_${FQ}.png`), NQ.iN(), {
             invertY: !1,
-            samplingMode: ed.d.NEAREST_NEAREST_MIPLINEAR
+            samplingMode: tQ.b.NEAREST_NEAREST_MIPLINEAR
           })));
-          Ed[dd] = Ud.update(dd, Jd)
-        }(dd, Jd)
+          fQ[QQ] = lQ.update(QQ, FQ)
+        }(QQ, FQ)
       }
-      playEmote(dd) {
-        if (!nd) return;
-        if (!dd) return void nd.stopAnimation(gd.h.Emote);
-        const Jd = (0, Pd.h)((0, Zd.h)(dd).animation);
-        nd.startAnimation(Jd, gd.h.Emote, 0, Zd.d)
+      playEmote(QQ) {
+        if (!zQ) return;
+        if (!QQ) return void zQ.stopAnimation(vQ.h.Emote);
+        const FQ = (0, DQ.h)((0, kQ.f)(QQ).animation);
+        zQ.startAnimation(FQ, vQ.h.Emote, 0, kQ.c)
       }
-      async untilDrawn(dd) {
-        if (await Td(), "cape" === dd && jd) {
-          const dd = jd.material,
-            Jd = null === dd || void 0 === dd ? void 0 : dd.diffuseTexture;
-          Jd && !Jd.isReady() && (await new Promise((dd => {
-            Jd.onLoadObservable.addOnce((() => {
-              dd()
+      async untilDrawn(QQ) {
+        if (await XQ(), "cape" === QQ && NQ) {
+          const QQ = NQ.material,
+            FQ = null === QQ || void 0 === QQ ? void 0 : QQ.diffuseTexture;
+          FQ && !FQ.isReady() && (await new Promise((QQ => {
+            FQ.onLoadObservable.addOnce((() => {
+              QQ()
             }))
-          })), await Td())
+          })), await XQ())
         }
-        Ed[dd] && (await Ed[dd], await Td()), await bd.whenReadyAsync(), await new Promise((dd => {
-          bd.onAfterRenderObservable.addOnce((() => {
-            dd()
+        fQ[QQ] && (await fQ[QQ], await XQ()), await IQ.whenReadyAsync(), await new Promise((QQ => {
+          IQ.onAfterRenderObservable.addOnce((() => {
+            QQ()
           }))
         }))
       }
-      setOrbit(dd) {
-        ud(dd)
+      setOrbit(QQ) {
+        EQ(QQ)
       }
       resetCamera() {
-        md.inertialAlphaOffset = 0, md.inertialBetaOffset = 0, md.inertialRadiusOffset = 0, ud(Fd.c[this.framing])
+        rQ.inertialAlphaOffset = 0, rQ.inertialBetaOffset = 0, rQ.inertialRadiusOffset = 0, EQ(OQ.b[this.framing])
       }
-      resize(dd, Jd) {
-        cd(dd, Jd)
+      resize(QQ, FQ) {
+        VQ(QQ, FQ)
       }
       close() {
-        this.closed || (this.closed = !0, hd--, 0 === hd && Yd.stopRenderLoop())
+        this.closed || (this.closed = !0, hQ--, 0 === hQ && sQ.stopRenderLoop())
       }
     }
 
-    function ud(dd) {
+    function EQ(QQ) {
       let {
-        yaw: Jd,
-        pitch: kd,
-        radius: pd,
-        target: Nd
-      } = dd;
-      md.alpha = Jd, md.beta = kd, pd && (md.radius = pd), Nd && md.target.set(Nd[0], Nd[1], Nd[2])
+        yaw: FQ,
+        pitch: wQ,
+        radius: LQ,
+        target: qQ
+      } = QQ;
+      rQ.alpha = FQ, rQ.beta = wQ, LQ && (rQ.radius = LQ), qQ && rQ.target.set(qQ[0], qQ[1], qQ[2])
     }
 
-    function td(dd, Jd) {
-      return dd.appendChild(Dd), Yd || function() {
-        Yd = new Cd.b(Dd, !0, {
+    function nQ(QQ, FQ) {
+      return QQ.appendChild(aQ), sQ || function() {
+        sQ = new mQ.b(aQ, !0, {
           preserveDrawingBuffer: !0
         });
-        const dd = (0, Nd.e)();
-        Yd.vpd = dd.UL.engine.vpd, bd = new Kd.e(Yd), bd.clearColor = new Ld.c(0, 0, 0, 0), bd.ambientColor = new Ld.Color3(1, 1, 1), md = new od.e("Ge", 0, 0, 1, ld.IL.Zero(), bd), md.attachControl(Dd, !0), md.panningSensibility = 0, yd = (0, pd.z)("Player", bd, !0).then((Jd => {
-          Sd = Jd.meshApi, jd = Jd.capeMesh, Xd = dd.UL.Qm;
-          const kd = 8.33;
-          fd = (0, pd.m)("Player", kd, !0, !0), Xd.setPosition(fd, 0, -8.33, 0);
-          const Nd = Xd.getNamedNode(fd, "BodyMesh");
-          Xd.attachTransformNode(jd, fd, Nd), Xd.set(fd, "aOpacity", 1), Xd.WU(fd, "aOpacity", 1), Ud = new ad(bd, Xd, fd), nd = new Rd.AnimatorState, nd.Jl = dd, nd.thinInstMgr = Xd, nd.Rm = fd, nd.rkd = Xd.qpd(fd, 0), nd.modelLifeformType = "Player", nd.nodeNameAliases = (0, Md.b)("Player").nodeNameAliases;
-          const Wd = jd.pU().boundingBox;
-          jd.position.y = ((24 - Wd.maximum.y + Wd.minimum.y) / 2 - 1 / 32) / kd, jd.position.z = -1 / kd, jd.rotationQuaternion = null;
-          const Pd = Math.PI / 18,
-            Zd = Wd.maximum.y / kd;
-          jd.rotation.x = Pd;
-          const gd = Math.cos(Pd),
-            Cd = Math.sin(Pd);
-          jd.position.y += Zd * (1 - gd) + 0 * Cd, jd.position.z -= Zd * Cd + 0 * (1 - gd);
-          const Kd = new Od.StandardMaterial("capeMaterial", jd.Wm());
-          jd.material = Kd;
-          const od = new Ld.Color3(1, 1, 1);
-          Kd.diffuseColor = new Ld.Color3, Kd.specularColor = new Ld.Color3, Kd.emissiveColor = new Ld.Color3, Kd.ambientColor = new Ld.Color3, od.scaleToRef(.43, Kd.diffuseColor), od.scaleToRef(1.75, Kd.ambientColor), Kd.freeze();
-          const ed = new Qd.c("light", new ld.IL(-.1, 1, -.3), bd);
-          ed.diffuse = new Ld.Color3(1, 1, 1), ed.specular = new Ld.Color3(1, 1, 1), ed.groundColor = new Ld.Color3(.5, .5, .5)
+        const QQ = (0, qQ.d)();
+        sQ.SLQ = QQ.Zx.engine.SLQ, IQ = new uQ.d(sQ), IQ.clearColor = new xQ.b(0, 0, 0, 0), IQ.ambientColor = new xQ.Color3(1, 1, 1), rQ = new HQ.b("Tt", 0, 0, 1, bQ.Ox.Zero(), IQ), rQ.attachControl(aQ, !0), rQ.panningSensibility = 0, jQ = (0, LQ.w)("Player", IQ, !0).then((FQ => {
+          UQ = FQ.meshApi, NQ = FQ.capeMesh, TQ = QQ.Zx.aN;
+          const wQ = 8.33;
+          KQ = (0, LQ.m)("Player", wQ, !0, !0), TQ.setPosition(KQ, 0, -8.33, 0);
+          const qQ = TQ.getNamedNode(KQ, "BodyMesh");
+          TQ.attachTransformNode(NQ, KQ, qQ), TQ.set(KQ, "aOpacity", 1), TQ.rK(KQ, "aOpacity", 1), lQ = new WQ(IQ, TQ, KQ), zQ = new eQ.AnimatorState, zQ.dH = QQ, zQ.thinInstMgr = TQ, zQ.XN = KQ, zQ.nwQ = TQ.iLQ(KQ, 0), zQ.modelLifeformType = "Player", zQ.nodeNameAliases = (0, RQ.b)("Player").nodeNameAliases;
+          const oQ = NQ.sK().boundingBox;
+          NQ.position.y = ((24 - oQ.maximum.y + oQ.minimum.y) / 2 - 1 / 32) / wQ, NQ.position.z = -1 / wQ, NQ.rotationQuaternion = null;
+          const DQ = Math.PI / 18,
+            kQ = oQ.maximum.y / wQ;
+          NQ.rotation.x = DQ;
+          const vQ = Math.cos(DQ),
+            mQ = Math.sin(DQ);
+          NQ.position.y += kQ * (1 - vQ) + 0 * mQ, NQ.position.z -= kQ * mQ + 0 * (1 - vQ);
+          const uQ = new AQ.StandardMaterial("capeMaterial", NQ.iN());
+          NQ.material = uQ;
+          const HQ = new xQ.Color3(1, 1, 1);
+          uQ.diffuseColor = new xQ.Color3, uQ.specularColor = new xQ.Color3, uQ.emissiveColor = new xQ.Color3, uQ.ambientColor = new xQ.Color3, HQ.scaleToRef(.43, uQ.diffuseColor), HQ.scaleToRef(1.75, uQ.ambientColor), uQ.freeze();
+          const tQ = new YQ.b("light", new bQ.Ox(-.1, 1, -.3), IQ);
+          tQ.diffuse = new xQ.Color3(1, 1, 1), tQ.specular = new xQ.Color3(1, 1, 1), tQ.groundColor = new xQ.Color3(.5, .5, .5)
         }))
-      }(), new rd(dd, Jd)
+      }(), new JQ(QQ, FQ)
     }
   },
-  38947: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => ld
+  38328: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => bQ
     });
-    var pd = kd(37341),
-      Nd = kd(37351),
-      Wd = kd(37632),
-      Pd = kd(37360),
-      Zd = kd(37347);
+    var LQ = wQ(36786),
+      qQ = wQ(36797),
+      oQ = wQ(37032),
+      DQ = wQ(36803),
+      kQ = wQ(36795);
 
-    function gd(dd) {
-      return `\n\t\t\t\t${(0,Zd.w)(dd,"mat2","rotate",[{name:"ang",type:"float"}],`\
+    function vQ(QQ) {
+      return `\n\t\t\t\t${(0,kQ.E)(QQ,"mat2","rotate",[{name:"ang",type:"float"}],`\
       n\ t\ t\ t\ t\ t$ {
-        (0, Zd.z)(dd, "float", "s", "sin(ang)")
+        (0, kQ.I)(QQ, "float", "s", "sin(ang)")
       }\
       n\ t\ t\ t\ t\ t$ {
-        (0, Zd.z)(dd, "float", "c", "cos(ang)")
+        (0, kQ.I)(QQ, "float", "c", "cos(ang)")
       }\
       n\ t\ t\ t\ t\ treturn $ {
-        (0, Zd.n)(dd, "mat2", "c", "s", "-s", "c")
+        (0, kQ.q)(QQ, "mat2", "c", "s", "-s", "c")
       };\
       n\ t\ t\ t\ t`)}\n\t\t\t`
     }
 
-    function Cd(dd, Jd) {
-      let kd = (0, Zd.Cb)(dd, "skele" + (Jd - 1));
-      for (let Nd = Jd - 2; Nd >= 0; Nd--) kd = (0, Zd.sb)(dd, `boneIdx == ${Nd}`, (0, Zd.Cb)(dd, `skele${Nd}`), kd);
-      const pd = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,Zd.z)(dd,"int","boneIdx",(0,Zd.yb)(dd,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,Zd.z)(dd,"vec3","bone",kd)}\n\t\t\t\t${(0,Zd.z)(dd,"vec2","pivot",(0,Zd.n)(dd,"vec2","0.0",`${(0,Zd.Jb)(dd,"position")}.z`))}\n\t\t\t\t${(0,Zd.V)(dd)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${pd}));`:`positionUpdated.yz += ${pd};`}\n\t\t`
+    function mQ(QQ, FQ) {
+      let wQ = (0, kQ.Pb)(QQ, "skele" + (FQ - 1));
+      for (let qQ = FQ - 2; qQ >= 0; qQ--) wQ = (0, kQ.Gb)(QQ, `boneIdx == ${qQ}`, (0, kQ.Pb)(QQ, `skele${qQ}`), wQ);
+      const LQ = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,kQ.I)(QQ,"int","boneIdx",(0,kQ.Kb)(QQ,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,kQ.I)(QQ,"vec3","bone",wQ)}\n\t\t\t\t${(0,kQ.I)(QQ,"vec2","pivot",(0,kQ.q)(QQ,"vec2","0.0",`${(0,kQ.Vb)(QQ,"position")}.z`))}\n\t\t\t\t${(0,kQ.ib)(QQ)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${LQ}));`:`positionUpdated.yz += ${LQ};`}\n\t\t`
     }
 
-    function Kd(dd) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,Zd.n)(dd,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    function uQ(QQ) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,kQ.q)(QQ,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
     }
-    const od = {
+    const HQ = {
         x: 0,
         y: 0,
         z: 0,
-        lkd(dd, Jd) {
-          return this.x = dd[Jd], this.y = dd[Jd + 1], this.z = dd[Jd + 2], this
+        bwQ(QQ, FQ) {
+          return this.x = QQ[FQ], this.y = QQ[FQ + 1], this.z = QQ[FQ + 2], this
         }
       },
-      ld = {
+      bQ = {
         name: "Cape",
         className: "CapeMaterialPlugin",
         priority: 200,
-        defines: (dd, Jd) => ({
-          ...(0, pd.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${dd}`,
-          BLOXD_CAPE_MAX_Y: (0, Nd.mb)(Jd)
+        defines: (QQ, FQ) => ({
+          ...(0, LQ.e)("CAPE"),
+          BLOXD_CAPE_BONES: `${QQ}`,
+          BLOXD_CAPE_MAX_Y: (0, qQ.rb)(FQ)
         }),
-        getUniforms(dd) {
-          return (0, Wd.c)(function(dd) {
-            const Jd = [];
-            for (let kd = 0; kd < dd; kd++) Jd.push({
-              name: `skele${kd}`,
+        getUniforms(QQ) {
+          return (0, oQ.e)(function(QQ) {
+            const FQ = [];
+            for (let wQ = 0; wQ < QQ; wQ++) FQ.push({
+              name: `skele${wQ}`,
               type: "highp vec3"
             });
-            return Jd
-          }(this.skeleLen), "vertex", dd)
+            return FQ
+          }(this.skeleLen), "vertex", QQ)
         },
-        bind(dd) {
-          for (let Jd = 0; Jd < this.skeleLen; Jd++) dd.updateVector3(`skele${Jd}`, od.lkd(this.skele, 3 * Jd))
+        bind(QQ) {
+          for (let FQ = 0; FQ < this.skeleLen; FQ++) QQ.updateVector3(`skele${FQ}`, HQ.bwQ(this.skele, 3 * FQ))
         },
         uniformsVersion() {
           return this.bonesVersion
         },
-        getCustomCode(dd, Jd) {
-          return "vertex" !== dd ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: gd(Jd),
-            CUSTOM_VERTEX_UPDATE_POSITION: Cd(Jd, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: Kd(Jd)
+        getCustomCode(QQ, FQ) {
+          return "vertex" !== QQ ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: vQ(FQ),
+            CUSTOM_VERTEX_UPDATE_POSITION: mQ(FQ, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: uQ(FQ)
           }
         }
       };
-    (0, Pd.n)(ld)
+    (0, DQ.p)(bQ)
   },
-  38817: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Kd,
-      f: () => od
+  38220: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => uQ,
+      e: () => HQ
     });
-    var pd = kd(37341),
-      Nd = kd(37632),
-      Wd = kd(37347),
-      Pd = kd(37360);
-    const Zd = "bloxdTextLodBias",
-      gd = [{
-        name: Zd,
+    var LQ = wQ(36786),
+      qQ = wQ(37032),
+      oQ = wQ(36795),
+      DQ = wQ(36803);
+    const kQ = "bloxdTextLodBias",
+      vQ = [{
+        name: kQ,
         type: "float"
       }],
-      Cd = "bloxdTextSample",
-      Kd = {
+      mQ = "bloxdTextSample",
+      uQ = {
         planes: -.5,
         boards: -.5
       },
-      od = {
+      HQ = {
         name: "TextSampler",
         className: "TextSamplerMaterialPlugin",
         priority: 60,
-        defines: () => (0, pd.b)("TEXT_SAMPLER"),
-        getUniforms: dd => (0, Nd.c)(gd, "fragment", dd),
-        bind(dd) {
-          dd.updateFloat(Zd, this.lodBias)
+        defines: () => (0, LQ.e)("TEXT_SAMPLER"),
+        getUniforms: QQ => (0, qQ.e)(vQ, "fragment", QQ),
+        bind(QQ) {
+          QQ.updateFloat(kQ, this.lodBias)
         },
         uniformsVersion: () => 0,
-        getCustomCode(dd, Jd) {
-          if ("fragment" !== dd) return null;
-          const kd = (0, Wd.F)(Jd, `vec4 ${Cd}(sampler2D s, vec2 uv, float bias)`, `fn ${Cd}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            pd = (0, Wd.F)(Jd, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            Nd = `${(0,Wd.M)(Jd,"vDiffuseUV")} + uvOffset`,
-            Pd = (0, Wd.F)(Jd, `${Cd}(diffuseSampler, ${Nd}, ${(0,Wd.Cb)(Jd,Zd)})`, `${Cd}(diffuseSampler, diffuseSamplerSampler, ${Nd}, ${(0,Wd.Cb)(Jd,Zd)})`);
+        getCustomCode(QQ, FQ) {
+          if ("fragment" !== QQ) return null;
+          const wQ = (0, oQ.T)(FQ, `vec4 ${mQ}(sampler2D s, vec2 uv, float bias)`, `fn ${mQ}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            LQ = (0, oQ.T)(FQ, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            qQ = `${(0,oQ.bb)(FQ,"vDiffuseUV")} + uvOffset`,
+            DQ = (0, oQ.T)(FQ, `${mQ}(diffuseSampler, ${qQ}, ${(0,oQ.Pb)(FQ,kQ)})`, `${mQ}(diffuseSampler, diffuseSamplerSampler, ${qQ}, ${(0,oQ.Pb)(FQ,kQ)})`);
           return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${kd} {\n\t\t\t\t\t${(0,Wd.z)(Jd,"vec4","texel",pd)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,Wd.n)(Jd,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,Wd.n)(Jd,"vec3","0.0")}, ${(0,Wd.n)(Jd,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, Wd.A)(Jd)]: `baseColor = ${Pd};`
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${wQ} {\n\t\t\t\t\t${(0,oQ.I)(FQ,"vec4","texel",LQ)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,oQ.q)(FQ,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,oQ.q)(FQ,"vec3","0.0")}, ${(0,oQ.q)(FQ,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, oQ.L)(FQ)]: `baseColor = ${DQ};`
           }
         }
       };
-    (0, Pd.n)(od)
+    (0, DQ.p)(HQ)
   },
-  41099: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      CapeMaterialPlugin: () => vd,
-      HueTintMaterialPlugin: () => xd,
-      LifeformMaterialPlugin: () => qd,
-      OverlayMaterialPlugin: () => Bd
+  40532: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      CapeMaterialPlugin: () => pQ,
+      HueTintMaterialPlugin: () => cQ,
+      LifeformMaterialPlugin: () => CQ,
+      OverlayMaterialPlugin: () => SQ
     });
-    var pd = kd(41102),
-      Nd = kd(38202);
-    class Wd extends((0, pd.g)(Nd.c)) {}(0, pd.k)(Nd.c, Wd);
-    var Pd = kd(37337);
-    class Zd extends((0, pd.g)(Pd.h)) {}(0, pd.k)(Pd.h, Zd);
-    var gd = kd(38054);
-    class Cd extends((0, pd.g)(gd.f)) {}(0, pd.k)(gd.f, Cd);
-    var Kd = kd(37613),
-      od = kd(40251),
-      ld = kd(37610);
-    class Qd extends((0, pd.g)(ld.f)) {
-      constructor(dd, Jd, kd) {
-        super(dd, Jd, kd), (0, Kd.j)(dd)
+    var LQ = wQ(40535),
+      qQ = wQ(37557);
+    class oQ extends((0, LQ.h)(qQ.c)) {}(0, LQ.j)(qQ.c, oQ);
+    var DQ = wQ(36782);
+    class kQ extends((0, LQ.h)(DQ.f)) {}(0, LQ.j)(DQ.f, kQ);
+    var vQ = wQ(37401);
+    class mQ extends((0, LQ.h)(vQ.e)) {}(0, LQ.j)(vQ.e, mQ);
+    var uQ = wQ(37019),
+      HQ = wQ(39692),
+      bQ = wQ(37016);
+    class YQ extends((0, LQ.h)(bQ.h)) {
+      constructor(QQ, FQ, wQ) {
+        super(QQ, FQ, wQ), (0, uQ.e)(QQ)
       }
-      dispose(dd) {
-        (0, Kd.l)(this._material), super.dispose(dd)
+      dispose(QQ) {
+        (0, uQ.g)(this._material), super.dispose(QQ)
       }
-    }(0, pd.k)(ld.f, Qd), (0, ld.j)({
-      disableUnusedSpecularTerm: pd.e,
-      isLightingDisabled: dd => dd instanceof od.StandardMaterial && dd.disableLighting
+    }(0, LQ.j)(bQ.h, YQ), (0, bQ.j)({
+      disableUnusedSpecularTerm: LQ.d,
+      isLightingDisabled: QQ => QQ instanceof HQ.StandardMaterial && QQ.disableLighting
     });
-    var Ld = kd(38817);
-    class Od extends((0, pd.g)(Ld.f)) {}(0, pd.k)(Ld.f, Od);
-    var ed = kd(38947),
-      Rd = kd(37446),
-      Id = kd(38317),
-      Gd = kd(37389);
-    class vd extends((0, pd.g)(ed.e)) {}(0, pd.k)(ed.e, vd);
-    class xd extends((0, pd.g)(Rd.b)) {}(0, pd.k)(Rd.b, xd);
-    class qd extends((0, pd.g)(Id.n)) {}(0, pd.k)(Id.n, qd);
-    class Bd extends((0, pd.g)(Gd.d)) {}(0, pd.k)(Gd.d, Bd)
+    var xQ = wQ(38220);
+    class AQ extends((0, LQ.h)(xQ.e)) {}(0, LQ.j)(xQ.e, AQ);
+    var tQ = wQ(38328),
+      eQ = wQ(36881),
+      MQ = wQ(37678),
+      GQ = wQ(36831);
+    class pQ extends((0, LQ.h)(tQ.e)) {}(0, LQ.j)(tQ.e, pQ);
+    class cQ extends((0, LQ.h)(eQ.d)) {}(0, LQ.j)(eQ.d, cQ);
+    class CQ extends((0, LQ.h)(MQ.o)) {}(0, LQ.j)(MQ.o, CQ);
+    class SQ extends((0, LQ.h)(GQ.b)) {}(0, LQ.j)(GQ.b, SQ)
   },
-  41102: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Td,
-      g: () => Id,
-      k: () => td
+  40535: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => XQ,
+      h: () => MQ,
+      j: () => nQ
     });
-    var pd = kd(40251),
-      Nd = kd(41108),
-      Wd = kd(41148),
-      Pd = kd(41115),
-      Zd = kd(38016),
-      gd = kd(38027),
-      Cd = kd(38034),
-      Kd = kd(38043),
-      od = kd(37381),
-      ld = kd(37386),
-      Qd = kd(41117),
-      Ld = kd(37360),
-      Od = kd(37366),
-      ed = kd(37347);
+    var LQ = wQ(39692),
+      qQ = wQ(40537),
+      oQ = wQ(40575),
+      DQ = wQ(40539),
+      kQ = wQ(37368),
+      vQ = wQ(37381),
+      mQ = wQ(37389),
+      uQ = wQ(37392),
+      HQ = wQ(36820),
+      bQ = wQ(36822),
+      YQ = wQ(40544),
+      xQ = wQ(36803),
+      AQ = wQ(36809),
+      tQ = wQ(36795);
 
-    function Rd(dd, Jd) {
-      return Object.assign((function(dd, kd, pd, Nd) {
-        return Jd(this.featureState, dd, kd, pd, Nd)
+    function eQ(QQ, FQ) {
+      return Object.assign((function(QQ, wQ, LQ, qQ) {
+        return FQ(this.featureState, QQ, wQ, LQ, qQ)
       }), {
-        hQ: dd
+        gY: QQ
       })
     }
 
-    function Id(dd) {
-      const Jd = class extends Qd.d {
-          constructor(Jd, kd) {
-            const pd = (0, Od.$)(Jd),
-              Nd = pd && (0, Od.v)(pd, dd.name);
-            for (var Wd = arguments.length, Pd = new Array(Wd > 2 ? Wd - 2 : 0), Zd = 2; Zd < Wd; Zd++) Pd[Zd - 2] = arguments[Zd];
-            super(Jd, dd.name, dd.priority, Nd ? Nd.defines : dd.defines(...Pd), !1), this.featureState = void 0, this.featureState = kd, this._pluginManager._addPlugin(this), this._enable(!0), (0, Od.w)(this._material, dd, this.featureState, this._pluginDefineNames)
+    function MQ(QQ) {
+      const FQ = class extends YQ.d {
+          constructor(FQ, wQ) {
+            const LQ = (0, AQ.jb)(FQ),
+              qQ = LQ && (0, AQ.z)(LQ, QQ.name);
+            for (var oQ = arguments.length, DQ = new Array(oQ > 2 ? oQ - 2 : 0), kQ = 2; kQ < oQ; kQ++) DQ[kQ - 2] = arguments[kQ];
+            super(FQ, QQ.name, QQ.priority, qQ ? qQ.defines : QQ.defines(...DQ), !1), this.featureState = void 0, this.featureState = wQ, this._pluginManager._addPlugin(this), this._enable(!0), (0, AQ.C)(this._material, QQ, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return dd.className
+            return QQ.className
           }
-          isCompatible(dd) {
-            return dd === ed.d.GLSL || dd === ed.d.WGSL
+          isCompatible(QQ) {
+            return QQ === tQ.d.GLSL || QQ === tQ.d.WGSL
           }
         },
-        kd = (0, Ld.i)(dd);
-      for (const [pd, Nd] of Object.entries(Ld.c)) {
-        const Wd = dd[pd];
-        if (Wd) {
-          const dd = kd[pd];
-          Object.defineProperty(Jd.prototype, Nd, {
-            value: Rd(Wd, dd),
+        wQ = (0, xQ.j)(QQ);
+      for (const [LQ, qQ] of Object.entries(xQ.e)) {
+        const oQ = QQ[LQ];
+        if (oQ) {
+          const QQ = wQ[LQ];
+          Object.defineProperty(FQ.prototype, qQ, {
+            value: eQ(oQ, QQ),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return Jd
+      return FQ
     }
-    class Gd extends(Id(Zd.d)) {}
-    var vd = kd(39791),
-      xd = kd(41125);
-    const qd = new WeakMap;
+    class GQ extends(MQ(kQ.e)) {}
+    var pQ = wQ(39211),
+      cQ = wQ(40551);
+    const CQ = new WeakMap;
 
-    function Bd(dd, Jd, kd) {
-      let pd = qd.get(kd);
-      pd || (pd = new Map, qd.set(kd, pd));
+    function SQ(QQ, FQ, wQ) {
+      let LQ = CQ.get(wQ);
+      LQ || (LQ = new Map, CQ.set(wQ, LQ));
       const {
-        url: Nd
-      } = dd;
-      let Wd = pd.get(Nd);
-      return Wd || (Wd = async function(dd, Jd, kd) {
+        url: qQ
+      } = QQ;
+      let oQ = LQ.get(qQ);
+      return oQ || (oQ = async function(QQ, FQ, wQ) {
         const {
-          width: pd,
-          height: Nd
-        } = dd.getSize(), Wd = Math.round(Nd / pd), Zd = Jd && Jd.byteLength === pd * pd * Wd * 4 ? Jd : dd._readPixelsSync();
-        return new xd.d(Zd, pd, pd, Wd, vd.b.TEXTUREFORMAT_RGBA, kd, !0, !1, Pd.d.NEAREST_NEAREST_MIPLINEAR)
-      }(dd, Jd, kd), pd.set(Nd, Wd), Wd.catch((() => {
-        pd.delete(Nd)
-      }))), Wd
+          width: LQ,
+          height: qQ
+        } = QQ.getSize(), oQ = Math.round(qQ / LQ), kQ = FQ && FQ.byteLength === LQ * LQ * oQ * 4 ? FQ : QQ._readPixelsSync();
+        return new cQ.e(kQ, LQ, LQ, oQ, pQ.b.TEXTUREFORMAT_RGBA, wQ, !0, !1, DQ.b.NEAREST_NEAREST_MIPLINEAR)
+      }(QQ, FQ, wQ), LQ.set(qQ, oQ), oQ.catch((() => {
+        LQ.delete(qQ)
+      }))), oQ
     }
-    var sd = kd(38047);
-    class ad extends(Id(gd.i)) {
-      constructor(dd, Jd) {
-        super(dd, Jd), Jd.textures.forEach(((dd, Jd) => {
-          dd.mirror.onLoadObservable.add((dd => {
-            this.setTextureArrayData(dd, Jd).catch((dd => {
-              console.error(`Failed to build texture array for atlas ${Jd}`, dd)
+    var iQ = wQ(37399);
+    class WQ extends(MQ(vQ.l)) {
+      constructor(QQ, FQ) {
+        super(QQ, FQ), FQ.textures.forEach(((QQ, FQ) => {
+          QQ.mirror.onLoadObservable.add((QQ => {
+            this.setTextureArrayData(QQ, FQ).catch((QQ => {
+              console.error(`Failed to build texture array for atlas ${FQ}`, QQ)
             }))
           }))
-        })), (0, sd.j)(Jd, dd.shaderLanguage)
+        })), (0, iQ.m)(FQ, QQ.shaderLanguage)
       }
-      async setTextureArrayData(dd, Jd) {
-        var kd, pd;
-        const Nd = this.featureState,
+      async setTextureArrayData(QQ, FQ) {
+        var wQ, LQ;
+        const qQ = this.featureState,
           {
-            width: Wd,
-            height: Pd
-          } = dd.getSize(),
-          Zd = Nd.useWebGL2 ? await Bd(dd, null !== (kd = null === (pd = Nd.sources.pixels) || void 0 === pd ? void 0 : pd[Jd]) && void 0 !== kd ? kd : null, this._material.Wm()) : null;
-        (0, sd.e)(this._material, Nd, Jd, Zd, Wd, Math.round(Pd / Wd), this._material.shaderLanguage)
+            width: oQ,
+            height: DQ
+          } = QQ.getSize(),
+          kQ = qQ.useWebGL2 ? await SQ(QQ, null !== (wQ = null === (LQ = qQ.sources.pixels) || void 0 === LQ ? void 0 : LQ[FQ]) && void 0 !== wQ ? wQ : null, this._material.iN()) : null;
+        (0, iQ.e)(this._material, qQ, FQ, kQ, oQ, Math.round(DQ / oQ), this._material.shaderLanguage)
       }
     }
-    var Md = kd(41134),
-      Fd = kd(40292),
-      Yd = kd(37245),
-      md = kd(41140),
-      bd = kd(40402),
-      Sd = kd(40282),
-      jd = kd(41090),
-      Xd = kd(37797),
-      fd = kd(41144);
-    class nd extends Md.e {
+    var RQ = wQ(40554),
+      OQ = wQ(39731),
+      sQ = wQ(36688),
+      rQ = wQ(40563),
+      IQ = wQ(39835),
+      UQ = wQ(39725),
+      NQ = wQ(40518),
+      TQ = wQ(37152),
+      KQ = wQ(40571);
+    class zQ extends RQ.c {
       getData() {
         return null
       }
@@ -539,399 +539,399 @@ export const modules = {
         super._rebuild()
       }
     }
-    const Ud = {
-      Mesh: md.d,
-      TransformNode: jd.e,
-      kL: Md.e,
-      VertexBuffer: Md.f,
-      BoundingInfo: Fd.b,
-      IL: Yd.IL,
-      ArenaBuffer: nd,
-      SubMesh: Sd.c,
-      VertexData: bd.c,
-      MirroredGeometry: fd.b,
-      meshFromArrays: fd.c,
-      plainMeshFromArrays: fd.g
+    const lQ = {
+      Mesh: rQ.c,
+      TransformNode: NQ.e,
+      Dx: RQ.c,
+      VertexBuffer: RQ.d,
+      BoundingInfo: OQ.d,
+      Ox: sQ.Ox,
+      ArenaBuffer: zQ,
+      SubMesh: UQ.c,
+      VertexData: IQ.c,
+      MirroredGeometry: KQ.e,
+      meshFromArrays: KQ.i,
+      plainMeshFromArrays: KQ.k
     };
-    (0, Xd.g)(Ud);
-    var yd = kd(37613);
-    class Dd extends(Id(Kd.f)) {
-      constructor(dd, Jd) {
-        if (super(dd, Jd), dd instanceof pd.StandardMaterial && Jd.dirLightCount > 0) {
-          const Jd = dd,
-            kd = Jd._blockDirtyMechanism;
-          Jd._blockDirtyMechanism = !0, dd.disableLighting = !0, Jd._blockDirtyMechanism = kd;
-          const pd = (0, Od.$)(dd);
-          pd && (pd.disableLighting = !0, (0, Od.Y)(pd))
-        }(0, yd.j)(dd)
+    (0, TQ.d)(lQ);
+    var jQ = wQ(37019);
+    class aQ extends(MQ(uQ.h)) {
+      constructor(QQ, FQ) {
+        if (super(QQ, FQ), QQ instanceof LQ.StandardMaterial && FQ.dirLightCount > 0) {
+          const FQ = QQ,
+            wQ = FQ._blockDirtyMechanism;
+          FQ._blockDirtyMechanism = !0, QQ.disableLighting = !0, FQ._blockDirtyMechanism = wQ;
+          const LQ = (0, AQ.jb)(QQ);
+          LQ && (LQ.disableLighting = !0, (0, AQ.fb)(LQ))
+        }(0, jQ.e)(QQ)
       }
-      dispose(dd) {
-        (0, yd.l)(this._material), super.dispose(dd)
+      dispose(QQ) {
+        (0, jQ.g)(this._material), super.dispose(QQ)
       }
     }
 
-    function Td(dd, Jd) {
-      if (!(Jd instanceof pd.StandardMaterial) || Jd.specularTexture) return;
+    function XQ(QQ, FQ) {
+      if (!(FQ instanceof LQ.StandardMaterial) || FQ.specularTexture) return;
       const {
-        r: kd,
-        g: Nd,
-        b: Wd
-      } = Jd.specularColor;
-      0 === kd && 0 === Nd && 0 === Wd && (dd.SPECULARTERM = !1)
-    }(0, Kd.c)({
-      disableUnusedSpecularTerm: Td
+        r: wQ,
+        g: qQ,
+        b: oQ
+      } = FQ.specularColor;
+      0 === wQ && 0 === qQ && 0 === oQ && (QQ.SPECULARTERM = !1)
+    }(0, uQ.g)({
+      disableUnusedSpecularTerm: XQ
     });
-    var Ed = kd(37473),
-      cd = kd(37807);
-    const hd = new RegExp(`^#define ${Cd.c}\\s*$`, "m");
-    class rd extends(Id(Cd.i)) {
-      constructor(dd, Jd) {
-        super(dd, Jd), this.pL = !1, Jd.ditherOnlyWhileFading && (cd.e.add(dd), this.prewarmDitherTwins(dd))
+    var fQ = wQ(36897),
+      VQ = wQ(37158);
+    const hQ = new RegExp(`^#define ${mQ.c}\\s*$`, "m");
+    class JQ extends(MQ(mQ.j)) {
+      constructor(QQ, FQ) {
+        super(QQ, FQ), this.kx = !1, FQ.ditherOnlyWhileFading && (VQ.f.add(QQ), this.prewarmDitherTwins(QQ))
       }
-      prewarmDitherTwins(dd) {
-        const Jd = new WeakSet;
-        dd.onEffectCreatedObservable.add((kd => {
+      prewarmDitherTwins(QQ) {
+        const FQ = new WeakSet;
+        QQ.onEffectCreatedObservable.add((wQ => {
           let {
-            effect: pd,
-            subMesh: Nd
-          } = kd;
-          if (this.featureState.prewarmingDither || Jd.has(pd)) return;
-          Jd.add(pd);
-          const Wd = null === Nd || void 0 === Nd ? void 0 : Nd.getMesh();
-          Wd && !hd.test(pd.defines) && dd.Wm().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(Wd) || Jd.delete(pd)
+            effect: LQ,
+            subMesh: qQ
+          } = wQ;
+          if (this.featureState.prewarmingDither || FQ.has(LQ)) return;
+          FQ.add(LQ);
+          const oQ = null === qQ || void 0 === qQ ? void 0 : qQ.getMesh();
+          oQ && !hQ.test(LQ.defines) && QQ.iN().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(oQ) || FQ.delete(LQ)
           }))
         }))
       }
-      prewarmDither(dd) {
-        if (this.pL || dd.lq()) return !1;
-        const Jd = new Sd.c(0, 0, 0, 0, 0, dd, void 0, !1, !1);
+      prewarmDither(QQ) {
+        if (this.kx || QQ.vW()) return !1;
+        const FQ = new UQ.c(0, 0, 0, 0, 0, QQ, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(dd, Jd)
+          this._material.isReadyForSubMesh(QQ, FQ)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== Jd.effect
+        return null !== FQ.effect
       }
-      dispose(dd) {
-        this.pL = !0, super.dispose(dd)
+      dispose(QQ) {
+        this.kx = !0, super.dispose(QQ)
       }
     }
-    const ud = new Map;
+    const EQ = new Map;
 
-    function td(dd, Jd) {
-      ud.set(dd, Jd)
+    function nQ(QQ, FQ) {
+      EQ.set(QQ, FQ)
     }
-    td(Zd.d, Gd), td(gd.i, ad), td(Cd.i, rd), td(Kd.f, Dd), (0, od.c)({
-      create: (dd, Jd) => {
-        const kd = new pd.StandardMaterial(dd.name, Jd);
-        return (0, Ed.p)(dd, kd), kd.detailMap._pluginDefineNames
+    nQ(kQ.e, GQ), nQ(vQ.l, WQ), nQ(mQ.j, JQ), nQ(uQ.h, aQ), (0, HQ.d)({
+      create: (QQ, FQ) => {
+        const wQ = new LQ.StandardMaterial(QQ.name, FQ);
+        return (0, fQ.p)(QQ, wQ), wQ.detailMap._pluginDefineNames
       },
-      write: (dd, Jd, kd) => {
-        (0, Ed.R)(dd.mirror, Jd, kd)
+      write: (QQ, FQ, wQ) => {
+        (0, fQ.S)(QQ.mirror, FQ, wQ)
       },
-      addFeature: (dd, Jd, kd) => {
-        const pd = ud.get(Jd.feature);
-        if (!pd) throw new Error(`${Jd.feature.name} has no plugin class (registerPluginClass)`);
-        new pd(dd.mirror, Jd.state, ...kd)
+      addFeature: (QQ, FQ, wQ) => {
+        const LQ = EQ.get(FQ.feature);
+        if (!LQ) throw new Error(`${FQ.feature.name} has no plugin class (registerPluginClass)`);
+        new LQ(QQ.mirror, FQ.state, ...wQ)
       },
-      texture: (dd, Jd, kd) => {
+      texture: (QQ, FQ, wQ) => {
         let {
-          url: pd,
-          noMipmap: Nd,
-          invertY: Wd,
-          samplingMode: Zd,
-          data: gd,
-          sets: Cd
-        } = kd;
-        if (!gd) {
-          const kd = new Pd.d(pd, Jd, Nd, Wd, Zd);
-          return Object.assign(kd, Cd), void(0, ld.K)(dd, kd)
+          url: LQ,
+          noMipmap: qQ,
+          invertY: oQ,
+          samplingMode: kQ,
+          data: vQ,
+          sets: mQ
+        } = wQ;
+        if (!vQ) {
+          const wQ = new DQ.b(LQ, FQ, qQ, oQ, kQ);
+          return Object.assign(wQ, mQ), void(0, bQ.C)(QQ, wQ)
         }
-        const Kd = {},
-          od = new Promise(((dd, Jd) => {
-            Kd.onLoad = dd, Kd.onError = (dd, kd) => {
-              Jd(new Error(`${gd.context}: ${(null===kd||void 0===kd?void 0:kd.message)||dd||"Failed to load texture"}`))
+        const uQ = {},
+          HQ = new Promise(((QQ, FQ) => {
+            uQ.onLoad = QQ, uQ.onError = (QQ, wQ) => {
+              FQ(new Error(`${vQ.context}: ${(null===wQ||void 0===wQ?void 0:wQ.message)||QQ||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: Qd,
-            bytes: Ld,
-            label: Od
-          } = gd,
-          ed = {
-            noMipmap: Nd,
+            mimeType: YQ,
+            bytes: xQ,
+            label: AQ
+          } = vQ,
+          tQ = {
+            noMipmap: qQ,
             invertY: !1,
-            samplingMode: Zd,
-            ...Kd,
-            mimeType: Qd,
+            samplingMode: kQ,
+            ...uQ,
+            mimeType: YQ,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          Rd = new Pd.d(null, Jd, ed);
-        Ed.s.set(Rd, od), Object.assign(Rd, Cd), Rd.updateURL(pd, Ld);
-        const Id = Rd.getInternalTexture();
-        Id && (Id.label = Od), dd.uvSet = Rd.coordinatesIndex, dd.matrix.set((0, Ed.L)(Rd)), (0, ld.K)(dd, Rd)
+          eQ = new DQ.b(null, FQ, tQ);
+        fQ.r.set(eQ, HQ), Object.assign(eQ, mQ), eQ.updateURL(LQ, xQ);
+        const MQ = eQ.getInternalTexture();
+        MQ && (MQ.label = AQ), QQ.uvSet = eQ.coordinatesIndex, QQ.matrix.set((0, fQ.M)(eQ)), (0, bQ.C)(QQ, eQ)
       },
-      cube: (dd, Jd, kd) => {
+      cube: (QQ, FQ, wQ) => {
         let {
-          rootUrl: pd,
-          files: Wd,
-          noMipmap: Zd,
-          luminance: gd
-        } = kd;
+          rootUrl: LQ,
+          files: oQ,
+          noMipmap: kQ,
+          luminance: vQ
+        } = wQ;
         const {
-          samplingMode: Cd
-        } = dd.sampler, Kd = Cd === (0, ld.D)(Zd) ? null : () => {
-          (0, Ed.I)(od, Cd)
-        }, od = new Nd.e(pd, Jd, null, Zd, Wd, Kd, null, (0, ld.A)(gd));
-        od.coordinatesMode = Pd.d.SKYBOX_MODE, (0, ld.K)(dd, od)
+          samplingMode: mQ
+        } = QQ.sampler, uQ = mQ === (0, bQ.t)(kQ) ? null : () => {
+          (0, fQ.J)(HQ, mQ)
+        }, HQ = new qQ.d(LQ, FQ, null, kQ, oQ, uQ, null, (0, bQ.s)(vQ));
+        HQ.coordinatesMode = DQ.b.SKYBOX_MODE, (0, bQ.C)(QQ, HQ)
       },
-      canvas: (dd, Jd, kd) => {
+      canvas: (QQ, FQ, wQ) => {
         let {
-          width: pd,
-          height: Nd,
-          mipmaps: Zd,
-          samplingMode: gd,
-          hasAlpha: Cd = !1,
-          wrap: Kd = Pd.d.CLAMP_ADDRESSMODE
-        } = kd;
-        const od = new Wd.b(Jd, {
-          width: pd,
-          height: Nd
-        }, dd, Zd, gd);
-        od.hasAlpha = Cd, od.wrapU = Kd, od.wrapV = Kd;
-        const ld = (0, Ed.z)(od);
-        return (0, Ed.B)(ld, od), ld
+          width: LQ,
+          height: qQ,
+          mipmaps: kQ,
+          samplingMode: vQ,
+          hasAlpha: mQ = !1,
+          wrap: uQ = DQ.b.CLAMP_ADDRESSMODE
+        } = wQ;
+        const HQ = new oQ.e(FQ, {
+          width: LQ,
+          height: qQ
+        }, QQ, kQ, vQ);
+        HQ.hasAlpha = mQ, HQ.wrapU = uQ, HQ.wrapV = uQ;
+        const bQ = (0, fQ.A)(HQ);
+        return (0, fQ.E)(bQ, HQ), bQ
       }
     })
   },
-  41144: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Kd,
-      c: () => od,
-      g: () => ld
+  40571: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => uQ,
+      i: () => HQ,
+      k: () => bQ
     });
-    var pd = kd(41134),
-      Nd = kd(40032),
-      Wd = kd(40292),
-      Pd = kd(40411),
-      Zd = kd(41140),
-      gd = kd(40402),
-      Cd = kd(37682);
-    class Kd extends Pd.e {
+    var LQ = wQ(40554),
+      qQ = wQ(39470),
+      oQ = wQ(39731),
+      DQ = wQ(39840),
+      kQ = wQ(40563),
+      vQ = wQ(39835),
+      mQ = wQ(37065);
+    class uQ extends DQ.c {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (dd, Jd) => {
-          this.releaseUnlessInstanced(Jd)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (QQ, FQ) => {
+          this.releaseUnlessInstanced(FQ)
         }, this.onLinked = null
       }
-      link(dd) {
-        var Jd;
-        (0, Cd.j)(dd), this.model = dd, null === (Jd = this.onLinked) || void 0 === Jd || Jd.call(this, dd)
+      link(QQ) {
+        var FQ;
+        (0, mQ.p)(QQ), this.model = QQ, null === (FQ = this.onLinked) || void 0 === FQ || FQ.call(this, QQ)
       }
       relink() {
         this.release();
-        const dd = [];
-        for (const Nd of Object.values(this._vertexBuffers))
-          if (!Nd.getIsInstanced()) {
+        const QQ = [];
+        for (const qQ of Object.values(this._vertexBuffers))
+          if (!qQ.getIsInstanced()) {
             const {
-              byteOffset: Jd,
-              byteStride: kd,
-              type: pd,
-              normalized: Wd
-            } = Nd;
-            dd.push({
-              kind: Nd.getKind(),
-              data: Nd.getData(),
-              offset: Jd,
-              stride: kd,
-              components: Nd.getSize(),
-              glType: pd,
-              isNormalized: Wd
+              byteOffset: FQ,
+              byteStride: wQ,
+              type: LQ,
+              normalized: oQ
+            } = qQ;
+            QQ.push({
+              kind: qQ.getKind(),
+              data: qQ.getData(),
+              offset: FQ,
+              stride: wQ,
+              components: qQ.getSize(),
+              glType: LQ,
+              isNormalized: oQ
             })
-          } const Jd = this._indices.length ? this._indices : null,
+          } const FQ = this._indices.length ? this._indices : null,
           {
-            minimum: kd,
-            maximum: pd
+            minimum: wQ,
+            maximum: LQ
           } = this.extend;
-        this.link(new Cd.c(dd, Jd, this.getTotalVertices(), new Float64Array(kd.spd()), new Float64Array(pd.spd())))
+        this.link(new mQ.h(QQ, FQ, this.getTotalVertices(), new Float64Array(wQ.RLQ()), new Float64Array(LQ.RLQ())))
       }
-      copy(dd) {
-        if (!this.model) return super.copy(dd);
-        const Jd = new Kd(dd, this.Wm()),
-          kd = this.ipd(void 0, !0);
-        kd && Jd.setIndices(kd);
-        let Pd = !1;
-        for (const Wd in this._vertexBuffers) {
-          const dd = this._vertexBuffers[Wd],
-            kd = dd.getData();
-          if (!kd) continue;
-          const Zd = dd.getSize(),
+      copy(QQ) {
+        if (!this.model) return super.copy(QQ);
+        const FQ = new uQ(QQ, this.iN()),
+          wQ = this.OLQ(void 0, !0);
+        wQ && FQ.setIndices(wQ);
+        let DQ = !1;
+        for (const oQ in this._vertexBuffers) {
+          const QQ = this._vertexBuffers[oQ],
+            wQ = QQ.getData();
+          if (!wQ) continue;
+          const kQ = QQ.getSize(),
             {
-              type: gd,
-              byteOffset: Cd,
-              byteStride: Kd,
-              normalized: od
-            } = dd;
-          Pd ||= dd.isUpdatable();
-          const ld = dd.getIsInstanced() ? (kd instanceof Array ? 4 * kd.length : kd.byteLength) / Kd : this.getTotalVertices(),
-            Qd = (0, Nd.t)(kd, Zd, gd, Cd, Kd, ld, !0),
-            Ld = {
-              updatable: dd.isUpdatable(),
-              stride: Zd,
-              type: gd,
-              normalized: od,
+              type: vQ,
+              byteOffset: mQ,
+              byteStride: uQ,
+              normalized: HQ
+            } = QQ;
+          DQ ||= QQ.isUpdatable();
+          const bQ = QQ.getIsInstanced() ? (wQ instanceof Array ? 4 * wQ.length : wQ.byteLength) / uQ : this.getTotalVertices(),
+            YQ = (0, qQ.u)(wQ, kQ, vQ, mQ, uQ, bQ, !0),
+            xQ = {
+              updatable: QQ.isUpdatable(),
+              stride: kQ,
+              type: vQ,
+              normalized: HQ,
               takeBufferOwnership: !0,
-              instanced: dd.getIsInstanced()
+              instanced: QQ.getIsInstanced()
             };
-          Jd.setVerticesBuffer(new pd.f(this.eL(), Qd, Wd, Ld), ld)
+          FQ.setVerticesBuffer(new LQ.d(this.Wx(), YQ, oQ, xQ), bQ)
         }
-        return Jd._updatable = Pd, Jd._boundingInfo = new Wd.b(this.extend.minimum, this.extend.maximum), Jd.relink(), Jd
+        return FQ._updatable = DQ, FQ._boundingInfo = new oQ.d(this.extend.minimum, this.extend.maximum), FQ.relink(), FQ
       }
-      static mergeMeshes(dd, Jd, kd, pd, Nd, Wd) {
-        const gd = dd[0].Wm(),
-          Cd = new Zd.d(dd[0].name + "_merged", gd),
-          od = new Kd(Pd.e.RandomId(), gd, void 0, !1, Cd);
+      static mergeMeshes(QQ, FQ, wQ, LQ, qQ, oQ) {
+        const vQ = QQ[0].iN(),
+          mQ = new kQ.c(QQ[0].name + "_merged", vQ),
+          HQ = new uQ(DQ.c.RandomId(), vQ, void 0, !1, mQ);
         try {
-          if (!Zd.d.MergeMeshes(dd, Jd, kd, Cd, Nd, Wd)) return Cd.dispose(), null
-        } catch (ld) {
-          throw Cd.dispose(), ld
+          if (!kQ.c.MergeMeshes(QQ, FQ, wQ, mQ, qQ, oQ)) return mQ.dispose(), null
+        } catch (bQ) {
+          throw mQ.dispose(), bQ
         }
-        return od.relink(), Cd
+        return HQ.relink(), mQ
       }
-      removeVerticesData(dd) {
-        this.releaseUnlessInstanced(dd), super.removeVerticesData(dd)
+      removeVerticesData(QQ) {
+        this.releaseUnlessInstanced(QQ), super.removeVerticesData(QQ)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(dd) {
-        var Jd;
-        dd && null !== (Jd = this.getVertexBuffer(dd)) && void 0 !== Jd && Jd.getIsInstanced() || this.release()
+      releaseUnlessInstanced(QQ) {
+        var FQ;
+        QQ && null !== (FQ = this.getVertexBuffer(QQ)) && void 0 !== FQ && FQ.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, Cd.t)(this.model), this.model = null)
+        this.model && ((0, mQ.B)(this.model), this.model = null)
       }
     }
 
-    function od(dd, Jd, kd) {
-      let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Zd.d(dd, kd);
-      const Nd = (0, Cd.h)(Jd),
+    function HQ(QQ, FQ, wQ) {
+      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new kQ.c(QQ, wQ);
+      const qQ = (0, mQ.m)(FQ),
         {
-          positions: Wd,
-          normals: od,
-          uvs: ld,
-          indices: Qd,
-          named: Ld = {}
-        } = Jd,
-        Od = new gd.c;
-      Od.positions = Wd, Od.normals = null !== od && void 0 !== od ? od : null, Od.uvs = null !== ld && void 0 !== ld ? ld : null, Od.indices = Qd;
-      const ed = new Kd(Pd.e.RandomId(), kd, Od, !1, pd);
+          positions: oQ,
+          normals: HQ,
+          uvs: bQ,
+          indices: YQ,
+          named: xQ = {}
+        } = FQ,
+        AQ = new vQ.c;
+      AQ.positions = oQ, AQ.normals = null !== HQ && void 0 !== HQ ? HQ : null, AQ.uvs = null !== bQ && void 0 !== bQ ? bQ : null, AQ.indices = YQ;
+      const tQ = new uQ(DQ.c.RandomId(), wQ, AQ, !1, LQ);
       for (const {
-          kind: Pd,
-          components: Zd
+          kind: DQ,
+          components: kQ
         }
-        of Nd.vertexAttributes) Pd in Ld && pd.setVerticesData(Pd, Ld[Pd], !1, Zd);
-      return ed.link(Nd), pd
+        of qQ.vertexAttributes) DQ in xQ && LQ.setVerticesData(DQ, xQ[DQ], !1, kQ);
+      return tQ.link(qQ), LQ
     }
 
-    function ld(dd, Jd, kd) {
-      let pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const Nd = new Zd.d(dd, kd),
+    function bQ(QQ, FQ, wQ) {
+      let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const qQ = new kQ.c(QQ, wQ),
         {
-          positions: Wd,
-          normals: Pd,
-          uvs: Cd,
-          indices: Kd
-        } = Jd;
-      return Object.assign(new gd.c, {
-        positions: Wd,
-        normals: Pd,
-        uvs: Cd,
-        indices: Kd
-      }).applyToMesh(Nd, pd), Nd
+          positions: oQ,
+          normals: DQ,
+          uvs: mQ,
+          indices: uQ
+        } = FQ;
+      return Object.assign(new vQ.c, {
+        positions: oQ,
+        normals: DQ,
+        uvs: mQ,
+        indices: uQ
+      }).applyToMesh(qQ, LQ), qQ
     }
   },
-  8734: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Kd,
-      d: () => Zd,
-      e: () => gd
+  8582: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => uQ,
+      g: () => kQ,
+      h: () => vQ
     });
-    var pd = kd(2196),
-      Nd = kd(1260),
-      Wd = kd(2203);
-    const Pd = ",";
+    var LQ = wQ(2148),
+      qQ = wQ(1254),
+      oQ = wQ(2153);
+    const DQ = ",";
 
-    function Zd(dd) {
-      if (!dd) return [];
-      const Jd = new Set,
-        kd = [];
-      for (const pd of dd.split(Pd)) {
-        const dd = pd.trim();
-        if ((0, Wd.i)(dd) && !Jd.has(dd) && (Jd.add(dd), kd.push(dd), kd.length >= Nd.n)) break
+    function kQ(QQ) {
+      if (!QQ) return [];
+      const FQ = new Set,
+        wQ = [];
+      for (const LQ of QQ.split(DQ)) {
+        const QQ = LQ.trim();
+        if ((0, oQ.g)(QQ) && !FQ.has(QQ) && (FQ.add(QQ), wQ.push(QQ), wQ.length >= qQ.q)) break
       }
-      return kd
+      return wQ
     }
 
-    function gd(dd) {
-      const Jd = new Set,
-        kd = [];
-      for (const pd of dd)
-        if ((0, Wd.i)(pd) && !Jd.has(pd) && (Jd.add(pd), kd.push(pd), kd.length >= Nd.n)) break;
-      return kd.join(Pd)
+    function vQ(QQ) {
+      const FQ = new Set,
+        wQ = [];
+      for (const LQ of QQ)
+        if ((0, oQ.g)(LQ) && !FQ.has(LQ) && (FQ.add(LQ), wQ.push(LQ), wQ.length >= qQ.q)) break;
+      return wQ.join(DQ)
     }
 
-    function Cd() {
-      return gd(Wd.e)
+    function mQ() {
+      return vQ(oQ.d)
     }
 
-    function Kd(dd) {
-      var Jd;
-      return "emote" === dd ? Cd() : null !== (Jd = od[dd][0]) && void 0 !== Jd ? Jd : ld[dd]
+    function uQ(QQ) {
+      var FQ;
+      return "emote" === QQ ? mQ() : null !== (FQ = HQ[QQ][0]) && void 0 !== FQ ? FQ : bQ[QQ]
     }
-    const od = Nd.x.reduce(((dd, Jd) => {
-        const kd = [];
-        for (const Wd in pd.e[Jd]) {
-          var Nd;
-          "default" === (null === (Nd = (0, pd.h)(Jd, Wd)) || void 0 === Nd ? void 0 : Nd.cosmeticPack) && kd.push(Wd)
+    const HQ = qQ.w.reduce(((QQ, FQ) => {
+        const wQ = [];
+        for (const oQ in LQ.d[FQ]) {
+          var qQ;
+          "default" === (null === (qQ = (0, LQ.i)(FQ, oQ)) || void 0 === qQ ? void 0 : qQ.cosmeticPack) && wQ.push(oQ)
         }
-        return dd[Jd] = kd, dd
+        return QQ[FQ] = wQ, QQ
       }), {}),
-      ld = Nd.x.reduce(((dd, Jd) => (dd[Jd] = Object.keys(pd.e[Jd])[0], dd)), {})
+      bQ = qQ.w.reduce(((QQ, FQ) => (QQ[FQ] = Object.keys(LQ.d[FQ])[0], QQ)), {})
   },
-  38955: (dd, Jd, kd) => {
-    var pd = {
-      "./cape_cow_cream.png": 28259,
-      "./cape_cow_normal.png": 28265,
-      "./cape_creator_level1.png": 28268,
-      "./cape_creator_level2.png": 28277,
-      "./cape_creator_level3.png": 28285,
-      "./cape_none.png": 28288,
-      "./cape_pig.png": 28293,
-      "./cape_sheep.png": 28299,
-      "./cape_super.png": 28303,
-      "./cape_super_inverted.png": 28306,
-      "./cape_youtuber.png": 28311
+  38333: (QQ, FQ, wQ) => {
+    var LQ = {
+      "./cape_cow_cream.png": 27876,
+      "./cape_cow_normal.png": 27885,
+      "./cape_creator_level1.png": 27887,
+      "./cape_creator_level2.png": 27892,
+      "./cape_creator_level3.png": 27895,
+      "./cape_none.png": 27902,
+      "./cape_pig.png": 27905,
+      "./cape_sheep.png": 27908,
+      "./cape_super.png": 27912,
+      "./cape_super_inverted.png": 27914,
+      "./cape_youtuber.png": 27919
     };
 
-    function Nd(dd) {
-      var Jd = Wd(dd);
-      return kd(Jd)
+    function qQ(QQ) {
+      var FQ = oQ(QQ);
+      return wQ(FQ)
     }
 
-    function Wd(dd) {
-      if (!kd.o(pd, dd)) {
-        var Jd = new Error("Cannot find module '" + dd + "'");
-        throw Jd.code = "MODULE_NOT_FOUND", Jd
+    function oQ(QQ) {
+      if (!wQ.o(LQ, QQ)) {
+        var FQ = new Error("Cannot find module '" + QQ + "'");
+        throw FQ.code = "MODULE_NOT_FOUND", FQ
       }
-      return pd[dd]
+      return LQ[QQ]
     }
-    Nd.keys = function() {
-      return Object.keys(pd)
-    }, Nd.resolve = Wd, dd.exports = Nd, Nd.id = 38955
+    qQ.keys = function() {
+      return Object.keys(LQ)
+    }, qQ.resolve = oQ, QQ.exports = qQ, qQ.id = 38333
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

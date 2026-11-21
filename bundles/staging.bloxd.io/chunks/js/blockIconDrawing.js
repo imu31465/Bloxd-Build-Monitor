@@ -1,449 +1,449 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36551: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      drawBlockIcon: () => vd,
-      drawBlockIconUrl: () => xd,
-      getDrawnBlockIcon: () => Gd
+  36033: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      drawBlockIcon: () => pQ,
+      drawBlockIconUrl: () => cQ,
+      getDrawnBlockIcon: () => GQ
     });
-    var pd = kd(36557);
-    const Nd = Math.SQRT1_2,
-      Wd = Math.sqrt(3) / 2,
-      Pd = .5,
-      Zd = {
+    var LQ = wQ(36040);
+    const qQ = Math.SQRT1_2,
+      oQ = Math.sqrt(3) / 2,
+      DQ = .5,
+      kQ = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      gd = {
+      vQ = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      Cd = {
+      mQ = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const Kd = 1e-6;
+    const uQ = 1e-6;
 
-    function od(dd, Jd, kd, pd) {
+    function HQ(QQ, FQ, wQ, LQ) {
       let {
-        origin: Nd,
-        across: Wd,
-        down: Pd,
-        texture: Zd,
-        rect: [gd, Cd, od, ld],
-        shade: Qd
-      } = pd;
-      const Ld = Wd.x * Pd.y - Wd.y * Pd.x;
-      if (Math.abs(Ld) < 1e-9) return;
-      const Od = [Nd.x, Nd.x + Wd.x, Nd.x + Pd.x, Nd.x + Wd.x + Pd.x],
-        ed = [Nd.y, Nd.y + Wd.y, Nd.y + Pd.y, Nd.y + Wd.y + Pd.y],
-        Rd = Math.max(0, Math.floor(Math.min(...Od))),
-        Id = Math.min(kd - 1, Math.ceil(Math.max(...Od))),
-        Gd = Math.max(0, Math.floor(Math.min(...ed))),
-        vd = Math.min(kd - 1, Math.ceil(Math.max(...ed)));
-      for (let xd = Gd; xd <= vd; xd++)
-        for (let pd = Rd; pd <= Id; pd++) {
-          const Od = pd + .5 - Nd.x,
-            ed = xd + .5 - Nd.y,
-            Rd = (Od * Pd.y - ed * Pd.x) / Ld,
-            Id = (Wd.x * ed - Wd.y * Od) / Ld;
-          if (Rd < -Kd || Rd > 1 + Kd || Id < -Kd || Id > 1 + Kd) continue;
-          const Gd = xd * kd + pd;
-          Jd[Gd] = 1;
-          const vd = gd + Math.min(Math.max(Rd, 0), 1) * (od - gd),
-            qd = Cd + Math.min(Math.max(Id, 0), 1) * (ld - Cd),
-            Bd = Math.min(Zd.width - 1, Math.floor(vd * Zd.width)),
-            sd = 4 * (Math.min(Zd.height - 1, Math.floor(qd * Zd.height)) * Zd.width + Bd),
-            ad = Zd.pixels[sd + 3] / 255;
-          if (0 === ad) continue;
-          const Md = 4 * Gd,
-            Fd = dd[Md + 3] / 255 * (1 - ad),
-            Yd = ad + Fd;
-          for (let Jd = 0; Jd < 3; Jd++) dd[Md + Jd] = (Zd.pixels[sd + Jd] * Qd * ad + dd[Md + Jd] * Fd) / Yd;
-          dd[Md + 3] = 255 * Yd
+        origin: qQ,
+        across: oQ,
+        down: DQ,
+        texture: kQ,
+        rect: [vQ, mQ, HQ, bQ],
+        shade: YQ
+      } = LQ;
+      const xQ = oQ.x * DQ.y - oQ.y * DQ.x;
+      if (Math.abs(xQ) < 1e-9) return;
+      const AQ = [qQ.x, qQ.x + oQ.x, qQ.x + DQ.x, qQ.x + oQ.x + DQ.x],
+        tQ = [qQ.y, qQ.y + oQ.y, qQ.y + DQ.y, qQ.y + oQ.y + DQ.y],
+        eQ = Math.max(0, Math.floor(Math.min(...AQ))),
+        MQ = Math.min(wQ - 1, Math.ceil(Math.max(...AQ))),
+        GQ = Math.max(0, Math.floor(Math.min(...tQ))),
+        pQ = Math.min(wQ - 1, Math.ceil(Math.max(...tQ)));
+      for (let cQ = GQ; cQ <= pQ; cQ++)
+        for (let LQ = eQ; LQ <= MQ; LQ++) {
+          const AQ = LQ + .5 - qQ.x,
+            tQ = cQ + .5 - qQ.y,
+            eQ = (AQ * DQ.y - tQ * DQ.x) / xQ,
+            MQ = (oQ.x * tQ - oQ.y * AQ) / xQ;
+          if (eQ < -uQ || eQ > 1 + uQ || MQ < -uQ || MQ > 1 + uQ) continue;
+          const GQ = cQ * wQ + LQ;
+          FQ[GQ] = 1;
+          const pQ = vQ + Math.min(Math.max(eQ, 0), 1) * (HQ - vQ),
+            CQ = mQ + Math.min(Math.max(MQ, 0), 1) * (bQ - mQ),
+            SQ = Math.min(kQ.width - 1, Math.floor(pQ * kQ.width)),
+            iQ = 4 * (Math.min(kQ.height - 1, Math.floor(CQ * kQ.height)) * kQ.width + SQ),
+            WQ = kQ.pixels[iQ + 3] / 255;
+          if (0 === WQ) continue;
+          const RQ = 4 * GQ,
+            OQ = QQ[RQ + 3] / 255 * (1 - WQ),
+            sQ = WQ + OQ;
+          for (let FQ = 0; FQ < 3; FQ++) QQ[RQ + FQ] = (kQ.pixels[iQ + FQ] * YQ * WQ + QQ[RQ + FQ] * OQ) / sQ;
+          QQ[RQ + 3] = 255 * sQ
         }
     }
-    var ld = kd(36559);
-    const Qd = new Map,
-      Ld = new Map,
-      Od = new Map,
-      ed = new Map;
+    var bQ = wQ(36047);
+    const YQ = new Map,
+      xQ = new Map,
+      AQ = new Map,
+      tQ = new Map;
 
-    function Rd(dd, Jd, kd) {
-      return `${Jd}|${kd}|${dd}`
+    function eQ(QQ, FQ, wQ) {
+      return `${FQ}|${wQ}|${QQ}`
     }
 
-    function Id(dd, Jd, kd) {
-      let pd = dd.get(Jd);
-      return void 0 === pd && (pd = kd().catch((kd => {
-        throw dd.delete(Jd), kd
-      })), dd.set(Jd, pd)), pd
+    function MQ(QQ, FQ, wQ) {
+      let LQ = QQ.get(FQ);
+      return void 0 === LQ && (LQ = wQ().catch((wQ => {
+        throw QQ.delete(FQ), wQ
+      })), QQ.set(FQ, LQ)), LQ
     }
 
-    function Gd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Ld.get(Rd(dd, Jd, kd))
+    function GQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return xQ.get(eQ(QQ, FQ, wQ))
     }
 
-    function vd(dd, Jd, kd, pd) {
-      const Nd = Rd(dd, Jd, kd);
-      return Id(Qd, Nd, (async () => {
-        const Wd = await Bd(pd(dd), Jd, qd(kd));
-        return Ld.set(Nd, Wd), Wd
+    function pQ(QQ, FQ, wQ, LQ) {
+      const qQ = eQ(QQ, FQ, wQ);
+      return MQ(YQ, qQ, (async () => {
+        const oQ = await SQ(LQ(QQ), FQ, CQ(wQ));
+        return xQ.set(qQ, oQ), oQ
       }))
     }
 
-    function xd(dd, Jd, kd, pd) {
-      return Id(Od, Rd(dd, Jd, kd), (async () => {
-        var Nd;
-        const Wd = pd(dd),
-          Pd = qd(kd);
-        return null !== (Nd = await (0, ld.d)(Wd, Jd, Pd)) && void 0 !== Nd ? Nd : (await Bd(Wd, Jd, Pd)).toDataURL()
+    function cQ(QQ, FQ, wQ, LQ) {
+      return MQ(AQ, eQ(QQ, FQ, wQ), (async () => {
+        var qQ;
+        const oQ = LQ(QQ),
+          DQ = CQ(wQ);
+        return null !== (qQ = await (0, bQ.c)(oQ, FQ, DQ)) && void 0 !== qQ ? qQ : (await SQ(oQ, FQ, DQ)).toDataURL()
       }))
     }
 
-    function qd(dd) {
-      return Math.max(1, Math.round(dd))
+    function CQ(QQ) {
+      return Math.max(1, Math.round(QQ))
     }
-    async function Bd(dd, Jd, kd) {
+    async function SQ(QQ, FQ, wQ) {
       let {
-        top: Kd,
-        left: ld,
-        right: Qd,
-        itemType: Ld
-      } = dd;
-      const [Od, ed, Rd] = await Promise.all([sd(Kd), sd(ld), sd(Qd)]), Id = function(dd, Jd, kd, Zd) {
-        const gd = .6 * kd,
-          Cd = gd * Nd,
-          Kd = gd * Nd * Pd,
-          ld = gd * Wd,
-          Qd = Math.max(...Jd.boxes.map((dd => dd[4]))),
-          Ld = Cd / 2 + (kd - Cd) / 2,
-          Od = Kd + (kd - Kd - Kd - Qd * ld) / 2,
-          ed = (dd, Jd, kd) => ({
-            x: Ld + (dd - kd) * Cd,
-            y: Od - Kd + (dd + kd) * Kd + (Qd - Jd) * ld
+        top: uQ,
+        left: bQ,
+        right: YQ,
+        itemType: xQ
+      } = QQ;
+      const [AQ, tQ, eQ] = await Promise.all([iQ(uQ), iQ(bQ), iQ(YQ)]), MQ = function(QQ, FQ, wQ, kQ) {
+        const vQ = .6 * wQ,
+          mQ = vQ * qQ,
+          uQ = vQ * qQ * DQ,
+          bQ = vQ * oQ,
+          YQ = Math.max(...FQ.boxes.map((QQ => QQ[4]))),
+          xQ = mQ / 2 + (wQ - mQ) / 2,
+          AQ = uQ + (wQ - uQ - uQ - YQ * bQ) / 2,
+          tQ = (QQ, FQ, wQ) => ({
+            x: xQ + (QQ - wQ) * mQ,
+            y: AQ - uQ + (QQ + wQ) * uQ + (YQ - FQ) * bQ
           }),
-          Rd = (dd, kd, pd, Nd, Wd, Pd) => ({
-            origin: dd,
+          eQ = (QQ, wQ, LQ, qQ, oQ, DQ) => ({
+            origin: QQ,
             across: {
-              x: kd.x - dd.x,
-              y: kd.y - dd.y
+              x: wQ.x - QQ.x,
+              y: wQ.y - QQ.y
             },
             down: {
-              x: pd.x - dd.x,
-              y: pd.y - dd.y
+              x: LQ.x - QQ.x,
+              y: LQ.y - QQ.y
             },
-            texture: Nd,
-            rect: Jd.cropFaces ? Wd : [0, 0, 1, 1],
-            shade: Pd
+            texture: qQ,
+            rect: FQ.cropFaces ? oQ : [0, 0, 1, 1],
+            shade: DQ
           }),
-          Id = new Uint8ClampedArray(kd * kd * 4),
-          Gd = new Uint8Array(kd * kd),
-          vd = pd.d;
-        for (const [pd, Nd, Wd, Pd, xd, qd] of Jd.boxes) {
-          const Jd = Rd(ed(Pd, xd, qd), ed(Pd, xd, Wd), ed(Pd, Nd, qd), dd.right, [1 - qd, 1 - xd, 1 - Wd, 1 - Nd], vd.right),
-            Zd = Rd(ed(pd, xd, qd), ed(Pd, xd, qd), ed(pd, Nd, qd), dd.left, [pd, 1 - xd, Pd, 1 - Nd], vd.left),
-            gd = Rd(ed(pd, xd, Wd), ed(Pd, xd, Wd), ed(pd, xd, qd), dd.top, [pd, Wd, Pd, qd], vd.top);
-          for (const dd of [Jd, Zd, gd]) od(Id, Gd, kd, dd)
+          MQ = new Uint8ClampedArray(wQ * wQ * 4),
+          GQ = new Uint8Array(wQ * wQ),
+          pQ = LQ.e;
+        for (const [LQ, qQ, oQ, DQ, cQ, CQ] of FQ.boxes) {
+          const FQ = eQ(tQ(DQ, cQ, CQ), tQ(DQ, cQ, oQ), tQ(DQ, qQ, CQ), QQ.right, [1 - CQ, 1 - cQ, 1 - oQ, 1 - qQ], pQ.right),
+            kQ = eQ(tQ(LQ, cQ, CQ), tQ(DQ, cQ, CQ), tQ(LQ, qQ, CQ), QQ.left, [LQ, 1 - cQ, DQ, 1 - qQ], pQ.left),
+            vQ = eQ(tQ(LQ, cQ, oQ), tQ(DQ, cQ, oQ), tQ(LQ, cQ, CQ), QQ.top, [LQ, oQ, DQ, CQ], pQ.top);
+          for (const QQ of [FQ, kQ, vQ]) HQ(MQ, GQ, wQ, QQ)
         }
-        return (0, pd.f)(Id, kd, Zd, (dd => 1 === Gd[dd])), Id
+        return (0, LQ.g)(MQ, wQ, kQ, (QQ => 1 === GQ[QQ])), MQ
       }({
-        top: Od,
-        left: ed,
-        right: Rd
-      }, function(dd) {
-        return "SlabBlock" === dd ? gd : "StairsBlock" === dd ? Cd : Zd
-      }(Ld), Jd, kd), Gd = document.createElement("canvas");
-      Gd.width = Jd, Gd.height = Jd;
-      const vd = Gd.getContext("2d");
-      if (!vd) throw new Error("Failed to get 2D context");
-      return vd.putImageData(new ImageData(Id, Jd, Jd), 0, 0), Gd
+        top: AQ,
+        left: tQ,
+        right: eQ
+      }, function(QQ) {
+        return "SlabBlock" === QQ ? vQ : "StairsBlock" === QQ ? mQ : kQ
+      }(xQ), FQ, wQ), GQ = document.createElement("canvas");
+      GQ.width = FQ, GQ.height = FQ;
+      const pQ = GQ.getContext("2d");
+      if (!pQ) throw new Error("Failed to get 2D context");
+      return pQ.putImageData(new ImageData(MQ, FQ, FQ), 0, 0), GQ
     }
 
-    function sd(dd) {
-      return Id(ed, dd, (async () => {
-        const Jd = await (0, ld.i)(dd),
-          kd = document.createElement("canvas");
-        kd.width = Jd.width, kd.height = Jd.height;
-        const pd = kd.getContext("2d");
-        if (!pd) throw new Error("Failed to get 2D context");
-        return pd.drawImage(Jd, 0, 0), {
-          width: Jd.width,
-          height: Jd.height,
-          pixels: pd.getImageData(0, 0, Jd.width, Jd.height).data
+    function iQ(QQ) {
+      return MQ(tQ, QQ, (async () => {
+        const FQ = await (0, bQ.h)(QQ),
+          wQ = document.createElement("canvas");
+        wQ.width = FQ.width, wQ.height = FQ.height;
+        const LQ = wQ.getContext("2d");
+        if (!LQ) throw new Error("Failed to get 2D context");
+        return LQ.drawImage(FQ, 0, 0), {
+          width: FQ.width,
+          height: FQ.height,
+          pixels: LQ.getImageData(0, 0, FQ.width, FQ.height).data
         }
       }))
     }
   },
-  36559: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Md,
-      e: () => Fd,
-      i: () => Gd
+  36047: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => RQ,
+      f: () => OQ,
+      h: () => GQ
     });
-    var pd = kd(284),
-      Nd = kd(95);
-    const Wd = new(kd(36564).c)(new URL(kd.p + kd.u(3), kd.b), {
+    var LQ = wQ(291),
+      qQ = wQ(96);
+    const oQ = new(wQ(36050).c)(new URL(wQ.p + wQ.u(3), wQ.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var Pd = kd(1797),
-      Zd = kd(3054);
-    const gd = 1e4,
-      Cd = 3e4;
-    let Kd = null,
-      od = null,
-      ld = null,
-      Qd = !1,
-      Ld = 0;
-    const Od = new Map;
-    let ed = null;
-    const Rd = new Map,
-      Id = new Map;
+    var DQ = wQ(1772),
+      kQ = wQ(3080);
+    const vQ = 1e4,
+      mQ = 3e4;
+    let uQ = null,
+      HQ = null,
+      bQ = null,
+      YQ = !1,
+      xQ = 0;
+    const AQ = new Map;
+    let tQ = null;
+    const eQ = new Map,
+      MQ = new Map;
 
-    function Gd(dd) {
-      const Jd = new Promise(((Jd, kd) => {
-        const pd = new Image;
-        pd.crossOrigin = "anonymous", pd.fetchPriority = "high", pd.onload = () => {
-          Jd(pd)
-        }, pd.onerror = () => {
-          kd(new Error(`A block icon's texture did not load: ${dd.slice(0,100)}`))
-        }, pd.src = dd
+    function GQ(QQ) {
+      const FQ = new Promise(((FQ, wQ) => {
+        const LQ = new Image;
+        LQ.crossOrigin = "anonymous", LQ.fetchPriority = "high", LQ.onload = () => {
+          FQ(LQ)
+        }, LQ.onerror = () => {
+          wQ(new Error(`A block icon's texture did not load: ${QQ.slice(0,100)}`))
+        }, LQ.src = QQ
       }));
-      return (0, Zd.d)(Jd)
+      return (0, kQ.f)(FQ)
     }
 
-    function vd(dd) {
-      var Jd, kd;
-      Qd || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${dd}`), Qd = !0, null === (Jd = Kd) || void 0 === Jd || Jd.terminate(), Kd = null, od = null, Rd.clear(), Id.clear();
-      for (const pd of Od.values()) pd(null);
-      Od.clear(), null === (kd = ed) || void 0 === kd || kd()
+    function pQ(QQ) {
+      var FQ, wQ;
+      YQ || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${QQ}`), YQ = !0, null === (FQ = uQ) || void 0 === FQ || FQ.terminate(), uQ = null, HQ = null, eQ.clear(), MQ.clear();
+      for (const LQ of AQ.values()) LQ(null);
+      AQ.clear(), null === (wQ = tQ) || void 0 === wQ || wQ()
     }
 
-    function xd() {
-      return ld ??= async function() {
+    function cQ() {
+      return bQ ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === pd.c.ios_icon_worker_v1 && (0, Nd.isWebKit)()) return;
+        if ("page" === LQ.e.ios_icon_worker_v1 && (0, qQ.isWebKit)()) return;
         try {
-          Kd = await async function() {
-            return await Wd.ready(), Wd.start()
+          uQ = await async function() {
+            return await oQ.ready(), oQ.start()
           }()
-        } catch (Zd) {
-          return void vd(`did not start (${String(Zd)})`)
+        } catch (kQ) {
+          return void pQ(`did not start (${String(kQ)})`)
         }
-        let dd = () => {};
-        const Jd = new Promise((Jd => {
-          dd = Jd
+        let QQ = () => {};
+        const FQ = new Promise((FQ => {
+          QQ = FQ
         }));
-        Kd.onmessage = Jd => {
+        uQ.onmessage = FQ => {
           let {
-            data: kd
-          } = Jd;
-          if ("started" === kd.type) od = Kd, dd();
-          else if ("failed" === kd.type) vd(`failed a draw (${kd.message})`);
+            data: wQ
+          } = FQ;
+          if ("started" === wQ.type) HQ = uQ, QQ();
+          else if ("failed" === wQ.type) pQ(`failed a draw (${wQ.message})`);
           else {
-            var pd, Nd;
-            null === (pd = Od.get(kd.id)) || void 0 === pd || pd(kd.url), Od.delete(kd.id), null === (Nd = ed) || void 0 === Nd || Nd()
+            var LQ, qQ;
+            null === (LQ = AQ.get(wQ.id)) || void 0 === LQ || LQ(wQ.url), AQ.delete(wQ.id), null === (qQ = tQ) || void 0 === qQ || qQ()
           }
-        }, Kd.onerror = Jd => {
-          Jd.preventDefault(), vd(`stopped (${Jd.message||"its script did not load or run"})`), dd()
+        }, uQ.onerror = FQ => {
+          FQ.preventDefault(), pQ(`stopped (${FQ.message||"its script did not load or run"})`), QQ()
         };
-        const kd = `did not start in ${Cd/1e3} s`;
-        await (0, Pd.m)(Jd, Cd, kd).catch((() => {
-          vd(kd)
+        const wQ = `did not start in ${mQ/1e3} s`;
+        await (0, DQ.l)(FQ, mQ, wQ).catch((() => {
+          pQ(wQ)
         }))
-      }(), ld
+      }(), bQ
     }
 
-    function qd() {
-      if (null !== ed || 0 === Od.size) return;
-      const dd = new Promise((dd => {
-          ed = dd
+    function CQ() {
+      if (null !== tQ || 0 === AQ.size) return;
+      const QQ = new Promise((QQ => {
+          tQ = QQ
         })),
-        Jd = `did not answer in ${gd/1e3} s`;
-      (0, Pd.m)(dd, gd, Jd).then((() => {
-        ed = null, qd()
+        FQ = `did not answer in ${vQ/1e3} s`;
+      (0, DQ.l)(QQ, vQ, FQ).then((() => {
+        tQ = null, CQ()
       }), (() => {
-        ed = null, vd(Jd)
+        tQ = null, pQ(FQ)
       }))
     }
 
-    function Bd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      dd.postMessage(Jd, kd)
+    function SQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      QQ.postMessage(FQ, wQ)
     }
 
-    function sd(dd, Jd, kd, pd) {
-      let Nd = Jd.get(kd);
-      return void 0 === Nd && (Nd = pd().then((async Jd => {
+    function iQ(QQ, FQ, wQ, LQ) {
+      let qQ = FQ.get(wQ);
+      return void 0 === qQ && (qQ = LQ().then((async FQ => {
         let {
-          image: kd,
-          request: pd
-        } = Jd;
+          image: wQ,
+          request: LQ
+        } = FQ;
         try {
-          const Jd = await createImageBitmap(kd);
-          Bd(dd, pd(Jd), [Jd])
-        } catch (Nd) {
-          vd(`could not take an image (${String(Nd)})`)
+          const FQ = await createImageBitmap(wQ);
+          SQ(QQ, LQ(FQ), [FQ])
+        } catch (qQ) {
+          pQ(`could not take an image (${String(qQ)})`)
         }
-      })), Nd.catch((() => {
-        Jd.get(kd) === Nd && Jd.delete(kd)
-      })), Jd.set(kd, Nd)), Nd
+      })), qQ.catch((() => {
+        FQ.get(wQ) === qQ && FQ.delete(wQ)
+      })), FQ.set(wQ, qQ)), qQ
     }
-    async function ad(dd, Jd) {
-      xd();
-      const kd = od;
-      if (null === kd) return null;
-      if (await dd(kd), od !== kd) return null;
-      const pd = ++Ld;
-      return new Promise((dd => {
-        Od.set(pd, dd), Bd(kd, Jd(pd)), qd()
+    async function WQ(QQ, FQ) {
+      cQ();
+      const wQ = HQ;
+      if (null === wQ) return null;
+      if (await QQ(wQ), HQ !== wQ) return null;
+      const LQ = ++xQ;
+      return new Promise((QQ => {
+        AQ.set(LQ, QQ), SQ(wQ, FQ(LQ)), CQ()
       }))
     }
 
-    function Md(dd, Jd, kd) {
-      return ad((Jd => Promise.all([dd.top, dd.left, dd.right].map((dd => function(dd, Jd) {
-        return sd(dd, Rd, Jd, (async () => ({
-          image: await Gd(Jd),
-          request: dd => ({
+    function RQ(QQ, FQ, wQ) {
+      return WQ((FQ => Promise.all([QQ.top, QQ.left, QQ.right].map((QQ => function(QQ, FQ) {
+        return iQ(QQ, eQ, FQ, (async () => ({
+          image: await GQ(FQ),
+          request: QQ => ({
             type: "texture",
-            url: Jd,
-            bitmap: dd
+            url: FQ,
+            bitmap: QQ
           })
         })))
-      }(Jd, dd))))), (pd => ({
+      }(FQ, QQ))))), (LQ => ({
         type: "draw",
-        id: pd,
-        ...dd,
-        size: Jd,
-        outlineWidth: kd
+        id: LQ,
+        ...QQ,
+        size: FQ,
+        outlineWidth: wQ
       })))
     }
 
-    function Fd(dd, Jd, kd, pd) {
-      return ad((kd => function(dd, Jd, kd) {
-        return sd(dd, Id, Jd, (async () => {
+    function OQ(QQ, FQ, wQ, LQ) {
+      return WQ((wQ => function(QQ, FQ, wQ) {
+        return iQ(QQ, MQ, FQ, (async () => {
           const {
-            texture: dd,
-            ...pd
-          } = await kd();
+            texture: QQ,
+            ...LQ
+          } = await wQ();
           return {
-            image: await Gd(dd),
-            request: dd => ({
+            image: await GQ(QQ),
+            request: QQ => ({
               type: "model",
-              name: Jd,
-              bitmap: dd,
-              geometry: pd
+              name: FQ,
+              bitmap: QQ,
+              geometry: LQ
             })
           }
         }))
-      }(kd, dd, Jd)), (Jd => ({
+      }(wQ, QQ, FQ)), (FQ => ({
         type: "drawModel",
-        id: Jd,
-        name: dd,
-        size: kd,
-        outlineWidth: pd
+        id: FQ,
+        name: QQ,
+        size: wQ,
+        outlineWidth: LQ
       })))
     }
   },
-  36557: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Wd,
-      f: () => Zd,
-      j: () => Pd
+  36040: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => oQ,
+      g: () => kQ,
+      h: () => DQ
     });
-    const pd = 1 / 32,
-      Nd = [15, 15, 15],
-      Wd = {
+    const LQ = 1 / 32,
+      qQ = [15, 15, 15],
+      oQ = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function Pd(dd, Jd, kd, Nd) {
+    function DQ(QQ, FQ, wQ, qQ) {
       const {
-        vertices: Wd,
-        uvs: Pd,
-        indices: gd,
-        shades: Cd
-      } = dd, Kd = kd * pd, od = kd - 2 * Kd, ld = new Float32Array(Wd.length);
-      for (let pd = 0; pd < Wd.length; pd += 3) ld[pd] = Kd + Wd[pd] * od, ld[pd + 1] = Kd + Wd[pd + 1] * od, ld[pd + 2] = Wd[pd + 2];
-      const Qd = new Float32Array(kd * kd).fill(-1 / 0),
-        Ld = new Uint8ClampedArray(kd * kd * 4),
-        Od = 255 * dd.alphaCutoff;
-      for (let pd = 0; pd < gd.length; pd += 3) {
-        const [dd, Nd, Wd] = [gd[pd], gd[pd + 1], gd[pd + 2]], [Zd, Kd, od] = [3 * dd, 3 * Nd, 3 * Wd], [ed, Rd, Id, Gd, vd, xd] = [ld[Zd], ld[Zd + 1], ld[Kd], ld[Kd + 1], ld[od], ld[od + 1]], qd = (Id - ed) * (xd - Rd) - (vd - ed) * (Gd - Rd);
-        if (Math.abs(qd) < 1e-9) continue;
-        const Bd = Cd[pd / 3],
-          [sd, ad, Md, Fd, Yd, md] = [Pd[2 * dd], Pd[2 * dd + 1], Pd[2 * Nd], Pd[2 * Nd + 1], Pd[2 * Wd], Pd[2 * Wd + 1]],
-          bd = Math.max(0, Math.floor(Math.min(ed, Id, vd))),
-          Sd = Math.min(kd - 1, Math.ceil(Math.max(ed, Id, vd))),
-          jd = Math.max(0, Math.floor(Math.min(Rd, Gd, xd))),
-          Xd = Math.min(kd - 1, Math.ceil(Math.max(Rd, Gd, xd)));
-        for (let pd = jd; pd <= Xd; pd++)
-          for (let dd = bd; dd <= Sd; dd++) {
-            const [Nd, Wd] = [dd + .5, pd + .5], Pd = ((Nd - ed) * (xd - Rd) - (vd - ed) * (Wd - Rd)) / qd, gd = ((Id - ed) * (Wd - Rd) - (Nd - ed) * (Gd - Rd)) / qd, Cd = 1 - Pd - gd;
-            if (Cd < 0 || Pd < 0 || gd < 0) continue;
-            const bd = Cd * ld[Zd + 2] + Pd * ld[Kd + 2] + gd * ld[od + 2],
-              Sd = pd * kd + dd;
-            if (bd <= Qd[Sd]) continue;
-            const jd = Math.max(0, Math.min(Jd.width - 1, Math.floor((Cd * sd + Pd * Md + gd * Yd) * Jd.width))),
-              Xd = 4 * (Math.max(0, Math.min(Jd.height - 1, Math.floor((Cd * ad + Pd * Fd + gd * md) * Jd.height))) * Jd.width + jd);
-            Jd.pixels[Xd + 3] < Od || (Qd[Sd] = bd, Ld[4 * Sd] = Jd.pixels[Xd] * Bd, Ld[4 * Sd + 1] = Jd.pixels[Xd + 1] * Bd, Ld[4 * Sd + 2] = Jd.pixels[Xd + 2] * Bd, Ld[4 * Sd + 3] = 255)
+        vertices: oQ,
+        uvs: DQ,
+        indices: vQ,
+        shades: mQ
+      } = QQ, uQ = wQ * LQ, HQ = wQ - 2 * uQ, bQ = new Float32Array(oQ.length);
+      for (let LQ = 0; LQ < oQ.length; LQ += 3) bQ[LQ] = uQ + oQ[LQ] * HQ, bQ[LQ + 1] = uQ + oQ[LQ + 1] * HQ, bQ[LQ + 2] = oQ[LQ + 2];
+      const YQ = new Float32Array(wQ * wQ).fill(-1 / 0),
+        xQ = new Uint8ClampedArray(wQ * wQ * 4),
+        AQ = 255 * QQ.alphaCutoff;
+      for (let LQ = 0; LQ < vQ.length; LQ += 3) {
+        const [QQ, qQ, oQ] = [vQ[LQ], vQ[LQ + 1], vQ[LQ + 2]], [kQ, uQ, HQ] = [3 * QQ, 3 * qQ, 3 * oQ], [tQ, eQ, MQ, GQ, pQ, cQ] = [bQ[kQ], bQ[kQ + 1], bQ[uQ], bQ[uQ + 1], bQ[HQ], bQ[HQ + 1]], CQ = (MQ - tQ) * (cQ - eQ) - (pQ - tQ) * (GQ - eQ);
+        if (Math.abs(CQ) < 1e-9) continue;
+        const SQ = mQ[LQ / 3],
+          [iQ, WQ, RQ, OQ, sQ, rQ] = [DQ[2 * QQ], DQ[2 * QQ + 1], DQ[2 * qQ], DQ[2 * qQ + 1], DQ[2 * oQ], DQ[2 * oQ + 1]],
+          IQ = Math.max(0, Math.floor(Math.min(tQ, MQ, pQ))),
+          UQ = Math.min(wQ - 1, Math.ceil(Math.max(tQ, MQ, pQ))),
+          NQ = Math.max(0, Math.floor(Math.min(eQ, GQ, cQ))),
+          TQ = Math.min(wQ - 1, Math.ceil(Math.max(eQ, GQ, cQ)));
+        for (let LQ = NQ; LQ <= TQ; LQ++)
+          for (let QQ = IQ; QQ <= UQ; QQ++) {
+            const [qQ, oQ] = [QQ + .5, LQ + .5], DQ = ((qQ - tQ) * (cQ - eQ) - (pQ - tQ) * (oQ - eQ)) / CQ, vQ = ((MQ - tQ) * (oQ - eQ) - (qQ - tQ) * (GQ - eQ)) / CQ, mQ = 1 - DQ - vQ;
+            if (mQ < 0 || DQ < 0 || vQ < 0) continue;
+            const IQ = mQ * bQ[kQ + 2] + DQ * bQ[uQ + 2] + vQ * bQ[HQ + 2],
+              UQ = LQ * wQ + QQ;
+            if (IQ <= YQ[UQ]) continue;
+            const NQ = Math.max(0, Math.min(FQ.width - 1, Math.floor((mQ * iQ + DQ * RQ + vQ * sQ) * FQ.width))),
+              TQ = 4 * (Math.max(0, Math.min(FQ.height - 1, Math.floor((mQ * WQ + DQ * OQ + vQ * rQ) * FQ.height))) * FQ.width + NQ);
+            FQ.pixels[TQ + 3] < AQ || (YQ[UQ] = IQ, xQ[4 * UQ] = FQ.pixels[TQ] * SQ, xQ[4 * UQ + 1] = FQ.pixels[TQ + 1] * SQ, xQ[4 * UQ + 2] = FQ.pixels[TQ + 2] * SQ, xQ[4 * UQ + 3] = 255)
           }
       }
-      return Zd(Ld, kd, Nd), Ld
+      return kQ(xQ, wQ, qQ), xQ
     }
 
-    function Zd(dd, Jd, kd) {
-      let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Jd => 0 !== dd[4 * Jd + 3];
-      const Wd = (dd, kd) => dd < 0 || kd < 0 || dd >= Jd || kd >= Jd || !pd(kd * Jd + dd),
-        Pd = [];
-      for (let Nd = 0; Nd < Jd; Nd++)
-        for (let dd = 0; dd < Jd; dd++)
-          if (!Wd(dd, Nd)) dd: for (let pd = -kd; pd <= kd; pd++) {
-            const Zd = kd - Math.abs(pd);
-            for (let kd = -Zd; kd <= Zd; kd++)
-              if (Wd(dd + kd, Nd + pd)) {
-                Pd.push(Nd * Jd + dd);
-                break dd
+    function kQ(QQ, FQ, wQ) {
+      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : FQ => 0 !== QQ[4 * FQ + 3];
+      const oQ = (QQ, wQ) => QQ < 0 || wQ < 0 || QQ >= FQ || wQ >= FQ || !LQ(wQ * FQ + QQ),
+        DQ = [];
+      for (let qQ = 0; qQ < FQ; qQ++)
+        for (let QQ = 0; QQ < FQ; QQ++)
+          if (!oQ(QQ, qQ)) QQ: for (let LQ = -wQ; LQ <= wQ; LQ++) {
+            const kQ = wQ - Math.abs(LQ);
+            for (let wQ = -kQ; wQ <= kQ; wQ++)
+              if (oQ(QQ + wQ, qQ + LQ)) {
+                DQ.push(qQ * FQ + QQ);
+                break QQ
               }
           }
-      for (const Zd of Pd) dd.set(Nd, 4 * Zd), dd[4 * Zd + 3] = 255
+      for (const kQ of DQ) QQ.set(qQ, 4 * kQ), QQ[4 * kQ + 3] = 255
     }
   },
-  36564: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Nd
+  36050: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => qQ
     });
-    const pd = {
-      wait: function(dd) {
-        return new Promise((Jd => {
-          setTimeout(Jd, dd)
+    const LQ = {
+      wait: function(QQ) {
+        return new Promise((FQ => {
+          setTimeout(FQ, QQ)
         }))
       },
       stallMs: 2e4
     };
-    class Nd {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pd;
-        this.url = dd, this.options = Jd, this.timing = kd, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = dd
+    class qQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : LQ;
+        this.url = QQ, this.options = FQ, this.timing = wQ, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = QQ
       }
       ready() {
         if (null === this.fetched) {
-          const dd = new AbortController;
-          this.fetchAbort = dd, this.fetched = this.fetchWithRetries(dd.signal).finally((() => {
-            this.fetchAbort === dd && (this.fetchAbort = null)
+          const QQ = new AbortController;
+          this.fetchAbort = QQ, this.fetched = this.fetchWithRetries(QQ.signal).finally((() => {
+            this.fetchAbort === QQ && (this.fetchAbort = null)
           }))
         }
         return this.fetched
@@ -454,51 +454,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(dd) {
-        for (let Jd = 0;; Jd++) {
-          const kd = new URL(this.url);
-          if (Jd > 0 && kd.searchParams.set("cache-bust", `${Date.now()}-${Jd}`), await this.fetchWhole(kd, dd)) return void(this.scriptUrl = kd);
-          if (Jd >= 3 || dd.aborted) return;
-          if (await this.timing.wait(500 * 2 ** Jd), dd.aborted) return
+      async fetchWithRetries(QQ) {
+        for (let FQ = 0;; FQ++) {
+          const wQ = new URL(this.url);
+          if (FQ > 0 && wQ.searchParams.set("cache-bust", `${Date.now()}-${FQ}`), await this.fetchWhole(wQ, QQ)) return void(this.scriptUrl = wQ);
+          if (FQ >= 3 || QQ.aborted) return;
+          if (await this.timing.wait(500 * 2 ** FQ), QQ.aborted) return
         }
       }
-      async fetchWhole(dd, Jd) {
-        const kd = new AbortController;
-        let pd;
-        const Nd = () => {
-            clearTimeout(pd), pd = setTimeout((() => {
-              kd.abort()
+      async fetchWhole(QQ, FQ) {
+        const wQ = new AbortController;
+        let LQ;
+        const qQ = () => {
+            clearTimeout(LQ), LQ = setTimeout((() => {
+              wQ.abort()
             }), this.timing.stallMs)
           },
-          Wd = () => {
-            kd.abort()
+          oQ = () => {
+            wQ.abort()
           };
-        Jd.addEventListener("abort", Wd, {
+        FQ.addEventListener("abort", oQ, {
           once: !0
-        }), Nd();
+        }), qQ();
         try {
-          var Pd;
-          const Jd = await fetch(dd, {
-            signal: kd.signal
+          var DQ;
+          const FQ = await fetch(QQ, {
+            signal: wQ.signal
           });
-          if (!Jd.ok) return !1;
-          const pd = null === (Pd = Jd.body) || void 0 === Pd ? void 0 : Pd.getReader();
-          if (!pd) return !1;
+          if (!FQ.ok) return !1;
+          const LQ = null === (DQ = FQ.body) || void 0 === DQ ? void 0 : DQ.getReader();
+          if (!LQ) return !1;
           for (;;) {
             const {
-              done: dd
-            } = await pd.read();
-            if (dd) return !0;
-            Nd()
+              done: QQ
+            } = await LQ.read();
+            if (QQ) return !0;
+            qQ()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(pd), Jd.removeEventListener("abort", Wd)
+          clearTimeout(LQ), FQ.removeEventListener("abort", oQ)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

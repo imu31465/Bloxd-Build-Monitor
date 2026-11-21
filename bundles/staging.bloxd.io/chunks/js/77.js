@@ -1,99 +1,99 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  4592: dd => {
-    function Jd(dd) {
-      return dd instanceof Map ? dd.clear = dd.delete = dd.set = function() {
+  4566: QQ => {
+    function FQ(QQ) {
+      return QQ instanceof Map ? QQ.clear = QQ.delete = QQ.set = function() {
         throw new Error("map is read-only")
-      } : dd instanceof Set && (dd.add = dd.clear = dd.delete = function() {
+      } : QQ instanceof Set && (QQ.add = QQ.clear = QQ.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(dd), Object.getOwnPropertyNames(dd).forEach((kd => {
-        const pd = dd[kd],
-          Nd = typeof pd;
-        "object" !== Nd && "function" !== Nd || Object.isFrozen(pd) || Jd(pd)
-      })), dd
+      }), Object.freeze(QQ), Object.getOwnPropertyNames(QQ).forEach((wQ => {
+        const LQ = QQ[wQ],
+          qQ = typeof LQ;
+        "object" !== qQ && "function" !== qQ || Object.isFrozen(LQ) || FQ(LQ)
+      })), QQ
     }
-    class kd {
-      constructor(dd) {
-        void 0 === dd.data && (dd.data = {}), this.data = dd.data, this.isMatchIgnored = !1
+    class wQ {
+      constructor(QQ) {
+        void 0 === QQ.data && (QQ.data = {}), this.data = QQ.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function pd(dd) {
-      return dd.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function LQ(QQ) {
+      return QQ.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function Nd(dd) {
-      const Jd = Object.create(null);
-      for (const Wd in dd) Jd[Wd] = dd[Wd];
-      for (var kd = arguments.length, pd = new Array(kd > 1 ? kd - 1 : 0), Nd = 1; Nd < kd; Nd++) pd[Nd - 1] = arguments[Nd];
-      return pd.forEach((function(dd) {
-        for (const kd in dd) Jd[kd] = dd[kd]
-      })), Jd
+    function qQ(QQ) {
+      const FQ = Object.create(null);
+      for (const oQ in QQ) FQ[oQ] = QQ[oQ];
+      for (var wQ = arguments.length, LQ = new Array(wQ > 1 ? wQ - 1 : 0), qQ = 1; qQ < wQ; qQ++) LQ[qQ - 1] = arguments[qQ];
+      return LQ.forEach((function(QQ) {
+        for (const wQ in QQ) FQ[wQ] = QQ[wQ]
+      })), FQ
     }
-    const Wd = dd => !!dd.scope;
-    class Pd {
-      constructor(dd, Jd) {
-        this.buffer = "", this.classPrefix = Jd.classPrefix, dd.walk(this)
+    const oQ = QQ => !!QQ.scope;
+    class DQ {
+      constructor(QQ, FQ) {
+        this.buffer = "", this.classPrefix = FQ.classPrefix, QQ.walk(this)
       }
-      addText(dd) {
-        this.buffer += pd(dd)
+      addText(QQ) {
+        this.buffer += LQ(QQ)
       }
-      openNode(dd) {
-        if (!Wd(dd)) return;
-        const Jd = ((dd, Jd) => {
+      openNode(QQ) {
+        if (!oQ(QQ)) return;
+        const FQ = ((QQ, FQ) => {
           let {
-            prefix: kd
-          } = Jd;
-          if (dd.startsWith("language:")) return dd.replace("language:", "language-");
-          if (dd.includes(".")) {
-            const Jd = dd.split(".");
-            return [`${kd}${Jd.shift()}`, ...Jd.map(((dd, Jd) => `${dd}${"_".repeat(Jd+1)}`))].join(" ")
+            prefix: wQ
+          } = FQ;
+          if (QQ.startsWith("language:")) return QQ.replace("language:", "language-");
+          if (QQ.includes(".")) {
+            const FQ = QQ.split(".");
+            return [`${wQ}${FQ.shift()}`, ...FQ.map(((QQ, FQ) => `${QQ}${"_".repeat(FQ+1)}`))].join(" ")
           }
-          return `${kd}${dd}`
-        })(dd.scope, {
+          return `${wQ}${QQ}`
+        })(QQ.scope, {
           prefix: this.classPrefix
         });
-        this.span(Jd)
+        this.span(FQ)
       }
-      closeNode(dd) {
-        Wd(dd) && (this.buffer += "</span>")
+      closeNode(QQ) {
+        oQ(QQ) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(dd) {
-        this.buffer += `<span class="${dd}">`
+      span(QQ) {
+        this.buffer += `<span class="${QQ}">`
       }
     }
-    const Zd = function() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const Jd = {
+    const kQ = function() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const FQ = {
         children: []
       };
-      return Object.assign(Jd, dd), Jd
+      return Object.assign(FQ, QQ), FQ
     };
-    class gd {
+    class vQ {
       constructor() {
-        this.bI = Zd(), this.stack = [this.bI]
+        this.yG = kQ(), this.stack = [this.yG]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.bI
+        return this.yG
       }
-      add(dd) {
-        this.top.children.push(dd)
+      add(QQ) {
+        this.top.children.push(QQ)
       }
-      openNode(dd) {
-        const Jd = Zd({
-          scope: dd
+      openNode(QQ) {
+        const FQ = kQ({
+          scope: QQ
         });
-        this.add(Jd), this.stack.push(Jd)
+        this.add(FQ), this.stack.push(FQ)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.bI, null, 4)
+        return JSON.stringify(this.yG, null, 4)
       }
-      walk(dd) {
-        return this.constructor._walk(dd, this.bI)
+      walk(QQ) {
+        return this.constructor._walk(QQ, this.yG)
       }
-      static _walk(dd, Jd) {
-        return "string" === typeof Jd ? dd.addText(Jd) : Jd.children && (dd.openNode(Jd), Jd.children.forEach((Jd => this._walk(dd, Jd))), dd.closeNode(Jd)), dd
+      static _walk(QQ, FQ) {
+        return "string" === typeof FQ ? QQ.addText(FQ) : FQ.children && (QQ.openNode(FQ), FQ.children.forEach((FQ => this._walk(QQ, FQ))), QQ.closeNode(FQ)), QQ
       }
-      static _collapse(dd) {
-        "string" !== typeof dd && dd.children && (dd.children.every((dd => "string" === typeof dd)) ? dd.children = [dd.children.join("")] : dd.children.forEach((dd => {
-          gd._collapse(dd)
+      static _collapse(QQ) {
+        "string" !== typeof QQ && QQ.children && (QQ.children.every((QQ => "string" === typeof QQ)) ? QQ.children = [QQ.children.join("")] : QQ.children.forEach((QQ => {
+          vQ._collapse(QQ)
         })))
       }
     }
-    class Cd extends gd {
-      constructor(dd) {
-        super(), this.options = dd
+    class mQ extends vQ {
+      constructor(QQ) {
+        super(), this.options = QQ
       }
-      addText(dd) {
-        "" !== dd && this.add(dd)
+      addText(QQ) {
+        "" !== QQ && this.add(QQ)
       }
-      startScope(dd) {
-        this.openNode(dd)
+      startScope(QQ) {
+        this.openNode(QQ)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(dd, Jd) {
-        const kd = dd.root;
-        Jd && (kd.scope = `language:${Jd}`), this.add(kd)
+      __addSublanguage(QQ, FQ) {
+        const wQ = QQ.root;
+        FQ && (wQ.scope = `language:${FQ}`), this.add(wQ)
       }
       toHTML() {
-        return new Pd(this, this.options).value()
+        return new DQ(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function Kd(dd) {
-      return dd ? "string" === typeof dd ? dd : dd.source : null
+    function uQ(QQ) {
+      return QQ ? "string" === typeof QQ ? QQ : QQ.source : null
     }
 
-    function od(dd) {
-      return Ld("(?=", dd, ")")
+    function HQ(QQ) {
+      return xQ("(?=", QQ, ")")
     }
 
-    function ld(dd) {
-      return Ld("(?:", dd, ")*")
+    function bQ(QQ) {
+      return xQ("(?:", QQ, ")*")
     }
 
-    function Qd(dd) {
-      return Ld("(?:", dd, ")?")
+    function YQ(QQ) {
+      return xQ("(?:", QQ, ")?")
     }
 
-    function Ld() {
-      for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
-      return Jd.map((dd => Kd(dd))).join("")
+    function xQ() {
+      for (var QQ = arguments.length, FQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) FQ[wQ] = arguments[wQ];
+      return FQ.map((QQ => uQ(QQ))).join("")
     }
 
-    function Od() {
-      for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
-      const pd = function(dd) {
-        const Jd = dd[dd.length - 1];
-        return "object" === typeof Jd && Jd.constructor === Object ? (dd.splice(dd.length - 1, 1), Jd) : {}
-      }(Jd);
-      return "(" + (pd.capture ? "" : "?:") + Jd.map((dd => Kd(dd))).join("|") + ")"
+    function AQ() {
+      for (var QQ = arguments.length, FQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) FQ[wQ] = arguments[wQ];
+      const LQ = function(QQ) {
+        const FQ = QQ[QQ.length - 1];
+        return "object" === typeof FQ && FQ.constructor === Object ? (QQ.splice(QQ.length - 1, 1), FQ) : {}
+      }(FQ);
+      return "(" + (LQ.capture ? "" : "?:") + FQ.map((QQ => uQ(QQ))).join("|") + ")"
     }
 
-    function ed(dd) {
-      return new RegExp(dd.toString() + "|").exec("").length - 1
+    function tQ(QQ) {
+      return new RegExp(QQ.toString() + "|").exec("").length - 1
     }
-    const Rd = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const eQ = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function Id(dd, Jd) {
+    function MQ(QQ, FQ) {
       let {
-        joinWith: kd
-      } = Jd, pd = 0;
-      return dd.map((dd => {
-        pd += 1;
-        const Jd = pd;
-        let kd = Kd(dd),
-          Nd = "";
-        for (; kd.length > 0;) {
-          const dd = Rd.exec(kd);
-          if (!dd) {
-            Nd += kd;
+        joinWith: wQ
+      } = FQ, LQ = 0;
+      return QQ.map((QQ => {
+        LQ += 1;
+        const FQ = LQ;
+        let wQ = uQ(QQ),
+          qQ = "";
+        for (; wQ.length > 0;) {
+          const QQ = eQ.exec(wQ);
+          if (!QQ) {
+            qQ += wQ;
             break
           }
-          Nd += kd.substring(0, dd.index), kd = kd.substring(dd.index + dd[0].length), "\\" === dd[0][0] && dd[1] ? Nd += "\\" + String(Number(dd[1]) + Jd) : (Nd += dd[0], "(" === dd[0] && pd++)
+          qQ += wQ.substring(0, QQ.index), wQ = wQ.substring(QQ.index + QQ[0].length), "\\" === QQ[0][0] && QQ[1] ? qQ += "\\" + String(Number(QQ[1]) + FQ) : (qQ += QQ[0], "(" === QQ[0] && LQ++)
         }
-        return Nd
-      })).map((dd => `(${dd})`)).join(kd)
+        return qQ
+      })).map((QQ => `(${QQ})`)).join(wQ)
     }
-    const Gd = "[a-zA-Z]\\w*",
-      vd = "[a-zA-Z_]\\w*",
-      xd = "\\b\\d+(\\.\\d+)?",
-      qd = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      Bd = "\\b(0b[01]+)",
-      sd = {
-        ZQ: "\\\\[\\s\\S]",
+    const GQ = "[a-zA-Z]\\w*",
+      pQ = "[a-zA-Z_]\\w*",
+      cQ = "\\b\\d+(\\.\\d+)?",
+      CQ = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      SQ = "\\b(0b[01]+)",
+      iQ = {
+        mY: "\\\\[\\s\\S]",
         relevance: 0
       },
-      ad = {
+      WQ = {
         scope: "string",
-        ZQ: "'",
+        mY: "'",
         end: "'",
         illegal: "\\n",
-        contains: [sd]
+        contains: [iQ]
       },
-      Md = {
+      RQ = {
         scope: "string",
-        ZQ: '"',
+        mY: '"',
         end: '"',
         illegal: "\\n",
-        contains: [sd]
+        contains: [iQ]
       },
-      Fd = function(dd, Jd) {
-        const kd = Nd({
+      OQ = function(QQ, FQ) {
+        const wQ = qQ({
           scope: "comment",
-          ZQ: dd,
-          end: Jd,
+          mY: QQ,
+          end: FQ,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        kd.contains.push({
+        wQ.contains.push({
           scope: "doctag",
-          ZQ: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          mY: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const pd = Od("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return kd.contains.push({
-          ZQ: Ld(/[ ]+/, "(", pd, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), kd
+        const LQ = AQ("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return wQ.contains.push({
+          mY: xQ(/[ ]+/, "(", LQ, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), wQ
       },
-      Yd = Fd("//", "$"),
-      md = Fd("/\\*", "\\*/"),
-      bd = Fd("#", "$"),
-      Sd = {
+      sQ = OQ("//", "$"),
+      rQ = OQ("/\\*", "\\*/"),
+      IQ = OQ("#", "$"),
+      UQ = {
         scope: "number",
-        ZQ: xd,
+        mY: cQ,
         relevance: 0
       },
-      jd = {
+      NQ = {
         scope: "number",
-        ZQ: qd,
+        mY: CQ,
         relevance: 0
       },
-      Xd = {
+      TQ = {
         scope: "number",
-        ZQ: Bd,
+        mY: SQ,
         relevance: 0
       },
-      fd = {
+      KQ = {
         scope: "regexp",
-        ZQ: /\/(?=[^/\n]*\/)/,
+        mY: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [sd, {
-          ZQ: /\[/,
+        contains: [iQ, {
+          mY: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [sd]
+          contains: [iQ]
         }]
       },
-      nd = {
+      zQ = {
         scope: "title",
-        ZQ: Gd,
+        mY: GQ,
         relevance: 0
       },
-      Ud = {
+      lQ = {
         scope: "title",
-        ZQ: vd,
+        mY: pQ,
         relevance: 0
       },
-      yd = {
-        ZQ: "\\.\\s*" + vd,
+      jQ = {
+        mY: "\\.\\s*" + pQ,
         relevance: 0
       };
-    var Dd = Object.freeze({
+    var aQ = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: ad,
-      BACKSLASH_ESCAPE: sd,
-      BINARY_NUMBER_MODE: Xd,
-      BINARY_NUMBER_RE: Bd,
-      COMMENT: Fd,
-      C_BLOCK_COMMENT_MODE: md,
-      C_LINE_COMMENT_MODE: Yd,
-      C_NUMBER_MODE: jd,
-      C_NUMBER_RE: qd,
-      END_SAME_AS_BEGIN: function(dd) {
-        return Object.assign(dd, {
-          "on:begin": (dd, Jd) => {
-            Jd.data._beginMatch = dd[1]
+      APOS_STRING_MODE: WQ,
+      BACKSLASH_ESCAPE: iQ,
+      BINARY_NUMBER_MODE: TQ,
+      BINARY_NUMBER_RE: SQ,
+      COMMENT: OQ,
+      C_BLOCK_COMMENT_MODE: rQ,
+      C_LINE_COMMENT_MODE: sQ,
+      C_NUMBER_MODE: NQ,
+      C_NUMBER_RE: CQ,
+      END_SAME_AS_BEGIN: function(QQ) {
+        return Object.assign(QQ, {
+          "on:begin": (QQ, FQ) => {
+            FQ.data._beginMatch = QQ[1]
           },
-          "on:end": (dd, Jd) => {
-            Jd.data._beginMatch !== dd[1] && Jd.ignoreMatch()
+          "on:end": (QQ, FQ) => {
+            FQ.data._beginMatch !== QQ[1] && FQ.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: bd,
-      IDENT_RE: Gd,
+      HASH_COMMENT_MODE: IQ,
+      IDENT_RE: GQ,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: yd,
-      NUMBER_MODE: Sd,
-      NUMBER_RE: xd,
+      METHOD_GUARD: jQ,
+      NUMBER_MODE: UQ,
+      NUMBER_RE: cQ,
       PHRASAL_WORDS_MODE: {
-        ZQ: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        mY: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: Md,
-      REGEXP_MODE: fd,
+      QUOTE_STRING_MODE: RQ,
+      REGEXP_MODE: KQ,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const Jd = /^#![ ]*\//;
-        return dd.binary && (dd.ZQ = Ld(Jd, /.*\b/, dd.binary, /\b.*/)), Nd({
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const FQ = /^#![ ]*\//;
+        return QQ.binary && (QQ.mY = xQ(FQ, /.*\b/, QQ.binary, /\b.*/)), qQ({
           scope: "meta",
-          ZQ: Jd,
+          mY: FQ,
           end: /$/,
           relevance: 0,
-          "on:begin": (dd, Jd) => {
-            0 !== dd.index && Jd.ignoreMatch()
+          "on:begin": (QQ, FQ) => {
+            0 !== QQ.index && FQ.ignoreMatch()
           }
-        }, dd)
+        }, QQ)
       },
-      TITLE_MODE: nd,
-      UNDERSCORE_IDENT_RE: vd,
-      UNDERSCORE_TITLE_MODE: Ud
+      TITLE_MODE: zQ,
+      UNDERSCORE_IDENT_RE: pQ,
+      UNDERSCORE_TITLE_MODE: lQ
     });
 
-    function Td(dd, Jd) {
-      "." === dd.input[dd.index - 1] && Jd.ignoreMatch()
+    function XQ(QQ, FQ) {
+      "." === QQ.input[QQ.index - 1] && FQ.ignoreMatch()
     }
 
-    function Ed(dd, Jd) {
-      void 0 !== dd.className && (dd.scope = dd.className, delete dd.className)
+    function fQ(QQ, FQ) {
+      void 0 !== QQ.className && (QQ.scope = QQ.className, delete QQ.className)
     }
 
-    function cd(dd, Jd) {
-      Jd && dd.beginKeywords && (dd.ZQ = "\\b(" + dd.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", dd.__beforeBegin = Td, dd.keywords = dd.keywords || dd.beginKeywords, delete dd.beginKeywords, void 0 === dd.relevance && (dd.relevance = 0))
+    function VQ(QQ, FQ) {
+      FQ && QQ.beginKeywords && (QQ.mY = "\\b(" + QQ.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", QQ.__beforeBegin = XQ, QQ.keywords = QQ.keywords || QQ.beginKeywords, delete QQ.beginKeywords, void 0 === QQ.relevance && (QQ.relevance = 0))
     }
 
-    function hd(dd, Jd) {
-      Array.isArray(dd.illegal) && (dd.illegal = Od(...dd.illegal))
+    function hQ(QQ, FQ) {
+      Array.isArray(QQ.illegal) && (QQ.illegal = AQ(...QQ.illegal))
     }
 
-    function rd(dd, Jd) {
-      if (dd.match) {
-        if (dd.ZQ || dd.end) throw new Error("begin & end are not supported with match");
-        dd.ZQ = dd.match, delete dd.match
+    function JQ(QQ, FQ) {
+      if (QQ.match) {
+        if (QQ.mY || QQ.end) throw new Error("begin & end are not supported with match");
+        QQ.mY = QQ.match, delete QQ.match
       }
     }
 
-    function ud(dd, Jd) {
-      void 0 === dd.relevance && (dd.relevance = 1)
+    function EQ(QQ, FQ) {
+      void 0 === QQ.relevance && (QQ.relevance = 1)
     }
-    const td = (dd, Jd) => {
-        if (!dd.beforeMatch) return;
-        if (dd.starts) throw new Error("beforeMatch cannot be used with starts");
-        const kd = Object.assign({}, dd);
-        Object.keys(dd).forEach((Jd => {
-          delete dd[Jd]
-        })), dd.keywords = kd.keywords, dd.ZQ = Ld(kd.beforeMatch, od(kd.ZQ)), dd.starts = {
+    const nQ = (QQ, FQ) => {
+        if (!QQ.beforeMatch) return;
+        if (QQ.starts) throw new Error("beforeMatch cannot be used with starts");
+        const wQ = Object.assign({}, QQ);
+        Object.keys(QQ).forEach((FQ => {
+          delete QQ[FQ]
+        })), QQ.keywords = wQ.keywords, QQ.mY = xQ(wQ.beforeMatch, HQ(wQ.mY)), QQ.starts = {
           relevance: 0,
-          contains: [Object.assign(kd, {
+          contains: [Object.assign(wQ, {
             endsParent: !0
           })]
-        }, dd.relevance = 0, delete kd.beforeMatch
+        }, QQ.relevance = 0, delete wQ.beforeMatch
       },
-      Vd = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      gQ = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function zd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const pd = Object.create(null);
-      return "string" === typeof dd ? Nd(kd, dd.split(" ")) : Array.isArray(dd) ? Nd(kd, dd) : Object.keys(dd).forEach((function(kd) {
-        Object.assign(pd, zd(dd[kd], Jd, kd))
-      })), pd;
+    function PQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const LQ = Object.create(null);
+      return "string" === typeof QQ ? qQ(wQ, QQ.split(" ")) : Array.isArray(QQ) ? qQ(wQ, QQ) : Object.keys(QQ).forEach((function(wQ) {
+        Object.assign(LQ, PQ(QQ[wQ], FQ, wQ))
+      })), LQ;
 
-      function Nd(dd, kd) {
-        Jd && (kd = kd.map((dd => dd.toLowerCase()))), kd.forEach((function(Jd) {
-          const kd = Jd.split("|");
-          pd[kd[0]] = [dd, Hd(kd[0], kd[1])]
+      function qQ(QQ, wQ) {
+        FQ && (wQ = wQ.map((QQ => QQ.toLowerCase()))), wQ.forEach((function(FQ) {
+          const wQ = FQ.split("|");
+          LQ[wQ[0]] = [QQ, ZQ(wQ[0], wQ[1])]
         }))
       }
     }
 
-    function Hd(dd, Jd) {
-      return Jd ? Number(Jd) : function(dd) {
-        return Vd.includes(dd.toLowerCase())
-      }(dd) ? 0 : 1
+    function ZQ(QQ, FQ) {
+      return FQ ? Number(FQ) : function(QQ) {
+        return gQ.includes(QQ.toLowerCase())
+      }(QQ) ? 0 : 1
     }
-    const wd = {},
-      Ad = dd => {
-        console.error(dd)
+    const yQ = {},
+      BQ = QQ => {
+        console.error(QQ)
       },
-      dJ = function(dd) {
-        for (var Jd = arguments.length, kd = new Array(Jd > 1 ? Jd - 1 : 0), pd = 1; pd < Jd; pd++) kd[pd - 1] = arguments[pd];
-        console.log(`WARN: ${dd}`, ...kd)
+      dQ = function(QQ) {
+        for (var FQ = arguments.length, wQ = new Array(FQ > 1 ? FQ - 1 : 0), LQ = 1; LQ < FQ; LQ++) wQ[LQ - 1] = arguments[LQ];
+        console.log(`WARN: ${QQ}`, ...wQ)
       },
-      JJ = (dd, Jd) => {
-        wd[`${dd}/${Jd}`] || (console.log(`Deprecated as of ${dd}. ${Jd}`), wd[`${dd}/${Jd}`] = !0)
+      QF = (QQ, FQ) => {
+        yQ[`${QQ}/${FQ}`] || (console.log(`Deprecated as of ${QQ}. ${FQ}`), yQ[`${QQ}/${FQ}`] = !0)
       },
-      kJ = new Error;
+      FF = new Error;
 
-    function pJ(dd, Jd, kd) {
+    function wF(QQ, FQ, wQ) {
       let {
-        key: pd
-      } = kd, Nd = 0;
-      const Wd = dd[pd],
-        Pd = {},
-        Zd = {};
-      for (let gd = 1; gd <= Jd.length; gd++) Zd[gd + Nd] = Wd[gd], Pd[gd + Nd] = !0, Nd += ed(Jd[gd - 1]);
-      dd[pd] = Zd, dd[pd]._emit = Pd, dd[pd]._multi = !0
+        key: LQ
+      } = wQ, qQ = 0;
+      const oQ = QQ[LQ],
+        DQ = {},
+        kQ = {};
+      for (let vQ = 1; vQ <= FQ.length; vQ++) kQ[vQ + qQ] = oQ[vQ], DQ[vQ + qQ] = !0, qQ += tQ(FQ[vQ - 1]);
+      QQ[LQ] = kQ, QQ[LQ]._emit = DQ, QQ[LQ]._multi = !0
     }
 
-    function NJ(dd) {
-      ! function(dd) {
-        dd.scope && "object" === typeof dd.scope && null !== dd.scope && (dd.beginScope = dd.scope, delete dd.scope)
-      }(dd), "string" === typeof dd.beginScope && (dd.beginScope = {
-          _wrap: dd.beginScope
-        }), "string" === typeof dd.endScope && (dd.endScope = {
-          _wrap: dd.endScope
+    function LF(QQ) {
+      ! function(QQ) {
+        QQ.scope && "object" === typeof QQ.scope && null !== QQ.scope && (QQ.beginScope = QQ.scope, delete QQ.scope)
+      }(QQ), "string" === typeof QQ.beginScope && (QQ.beginScope = {
+          _wrap: QQ.beginScope
+        }), "string" === typeof QQ.endScope && (QQ.endScope = {
+          _wrap: QQ.endScope
         }),
-        function(dd) {
-          if (Array.isArray(dd.ZQ)) {
-            if (dd.skip || dd.excludeBegin || dd.returnBegin) throw Ad("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), kJ;
-            if ("object" !== typeof dd.beginScope || null === dd.beginScope) throw Ad("beginScope must be object"), kJ;
-            pJ(dd, dd.ZQ, {
+        function(QQ) {
+          if (Array.isArray(QQ.mY)) {
+            if (QQ.skip || QQ.excludeBegin || QQ.returnBegin) throw BQ("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), FF;
+            if ("object" !== typeof QQ.beginScope || null === QQ.beginScope) throw BQ("beginScope must be object"), FF;
+            wF(QQ, QQ.mY, {
               key: "beginScope"
-            }), dd.ZQ = Id(dd.ZQ, {
+            }), QQ.mY = MQ(QQ.mY, {
               joinWith: ""
             })
           }
-        }(dd),
-        function(dd) {
-          if (Array.isArray(dd.end)) {
-            if (dd.skip || dd.excludeEnd || dd.returnEnd) throw Ad("skip, excludeEnd, returnEnd not compatible with endScope: {}"), kJ;
-            if ("object" !== typeof dd.endScope || null === dd.endScope) throw Ad("endScope must be object"), kJ;
-            pJ(dd, dd.end, {
+        }(QQ),
+        function(QQ) {
+          if (Array.isArray(QQ.end)) {
+            if (QQ.skip || QQ.excludeEnd || QQ.returnEnd) throw BQ("skip, excludeEnd, returnEnd not compatible with endScope: {}"), FF;
+            if ("object" !== typeof QQ.endScope || null === QQ.endScope) throw BQ("endScope must be object"), FF;
+            wF(QQ, QQ.end, {
               key: "endScope"
-            }), dd.end = Id(dd.end, {
+            }), QQ.end = MQ(QQ.end, {
               joinWith: ""
             })
           }
-        }(dd)
+        }(QQ)
     }
 
-    function WJ(dd) {
-      function Jd(Jd, kd) {
-        return new RegExp(Kd(Jd), "m" + (dd.case_insensitive ? "i" : "") + (dd.unicodeRegex ? "u" : "") + (kd ? "g" : ""))
+    function qF(QQ) {
+      function FQ(FQ, wQ) {
+        return new RegExp(uQ(FQ), "m" + (QQ.case_insensitive ? "i" : "") + (QQ.unicodeRegex ? "u" : "") + (wQ ? "g" : ""))
       }
-      class kd {
+      class wQ {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(dd, Jd) {
-          Jd.position = this.position++, this.matchIndexes[this.matchAt] = Jd, this.regexes.push([Jd, dd]), this.matchAt += ed(dd) + 1
+        addRule(QQ, FQ) {
+          FQ.position = this.position++, this.matchIndexes[this.matchAt] = FQ, this.regexes.push([FQ, QQ]), this.matchAt += tQ(QQ) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const dd = this.regexes.map((dd => dd[1]));
-          this.matcherRe = Jd(Id(dd, {
+          const QQ = this.regexes.map((QQ => QQ[1]));
+          this.matcherRe = FQ(MQ(QQ, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(dd) {
+        exec(QQ) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const Jd = this.matcherRe.exec(dd);
-          if (!Jd) return null;
-          const kd = Jd.findIndex(((dd, Jd) => Jd > 0 && void 0 !== dd)),
-            pd = this.matchIndexes[kd];
-          return Jd.splice(0, kd), Object.assign(Jd, pd)
+          const FQ = this.matcherRe.exec(QQ);
+          if (!FQ) return null;
+          const wQ = FQ.findIndex(((QQ, FQ) => FQ > 0 && void 0 !== QQ)),
+            LQ = this.matchIndexes[wQ];
+          return FQ.splice(0, wQ), Object.assign(FQ, LQ)
         }
       }
-      class pd {
+      class LQ {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(dd) {
-          if (this.multiRegexes[dd]) return this.multiRegexes[dd];
-          const Jd = new kd;
-          return this.rules.slice(dd).forEach((dd => {
-            let [kd, pd] = dd;
-            return Jd.addRule(kd, pd)
-          })), Jd.compile(), this.multiRegexes[dd] = Jd, Jd
+        getMatcher(QQ) {
+          if (this.multiRegexes[QQ]) return this.multiRegexes[QQ];
+          const FQ = new wQ;
+          return this.rules.slice(QQ).forEach((QQ => {
+            let [wQ, LQ] = QQ;
+            return FQ.addRule(wQ, LQ)
+          })), FQ.compile(), this.multiRegexes[QQ] = FQ, FQ
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(dd, Jd) {
-          this.rules.push([dd, Jd]), "ZQ" === Jd.type && this.count++
+        addRule(QQ, FQ) {
+          this.rules.push([QQ, FQ]), "mY" === FQ.type && this.count++
         }
-        exec(dd) {
-          const Jd = this.getMatcher(this.regexIndex);
-          Jd.lastIndex = this.lastIndex;
-          let kd = Jd.exec(dd);
+        exec(QQ) {
+          const FQ = this.getMatcher(this.regexIndex);
+          FQ.lastIndex = this.lastIndex;
+          let wQ = FQ.exec(QQ);
           if (this.resumingScanAtSamePosition())
-            if (kd && kd.index === this.lastIndex);
+            if (wQ && wQ.index === this.lastIndex);
             else {
-              const Jd = this.getMatcher(0);
-              Jd.lastIndex = this.lastIndex + 1, kd = Jd.exec(dd)
-            } return kd && (this.regexIndex += kd.position + 1, this.regexIndex === this.count && this.considerAll()), kd
+              const FQ = this.getMatcher(0);
+              FQ.lastIndex = this.lastIndex + 1, wQ = FQ.exec(QQ)
+            } return wQ && (this.regexIndex += wQ.position + 1, this.regexIndex === this.count && this.considerAll()), wQ
         }
       }
-      if (dd.compilerExtensions || (dd.compilerExtensions = []), dd.contains && dd.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return dd.classNameAliases = Nd(dd.classNameAliases || {}),
-        function kd(Wd, Pd) {
-          const Zd = Wd;
-          if (Wd.isCompiled) return Zd;
-          [Ed, rd, NJ, td].forEach((dd => dd(Wd, Pd))), dd.compilerExtensions.forEach((dd => dd(Wd, Pd))), Wd.__beforeBegin = null, [cd, hd, ud].forEach((dd => dd(Wd, Pd))), Wd.isCompiled = !0;
-          let gd = null;
-          return "object" === typeof Wd.keywords && Wd.keywords.$pattern && (Wd.keywords = Object.assign({}, Wd.keywords), gd = Wd.keywords.$pattern, delete Wd.keywords.$pattern), gd = gd || /\w+/, Wd.keywords && (Wd.keywords = zd(Wd.keywords, dd.case_insensitive)), Zd.keywordPatternRe = Jd(gd, !0), Pd && (Wd.ZQ || (Wd.ZQ = /\B|\b/), Zd.beginRe = Jd(Zd.ZQ), Wd.end || Wd.endsWithParent || (Wd.end = /\B|\b/), Wd.end && (Zd.endRe = Jd(Zd.end)), Zd.terminatorEnd = Kd(Zd.end) || "", Wd.endsWithParent && Pd.terminatorEnd && (Zd.terminatorEnd += (Wd.end ? "|" : "") + Pd.terminatorEnd)), Wd.illegal && (Zd.illegalRe = Jd(Wd.illegal)), Wd.contains || (Wd.contains = []), Wd.contains = [].concat(...Wd.contains.map((function(dd) {
-            return function(dd) {
-              dd.variants && !dd.cachedVariants && (dd.cachedVariants = dd.variants.map((function(Jd) {
-                return Nd(dd, {
+      if (QQ.compilerExtensions || (QQ.compilerExtensions = []), QQ.contains && QQ.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return QQ.classNameAliases = qQ(QQ.classNameAliases || {}),
+        function wQ(oQ, DQ) {
+          const kQ = oQ;
+          if (oQ.isCompiled) return kQ;
+          [fQ, JQ, LF, nQ].forEach((QQ => QQ(oQ, DQ))), QQ.compilerExtensions.forEach((QQ => QQ(oQ, DQ))), oQ.__beforeBegin = null, [VQ, hQ, EQ].forEach((QQ => QQ(oQ, DQ))), oQ.isCompiled = !0;
+          let vQ = null;
+          return "object" === typeof oQ.keywords && oQ.keywords.$pattern && (oQ.keywords = Object.assign({}, oQ.keywords), vQ = oQ.keywords.$pattern, delete oQ.keywords.$pattern), vQ = vQ || /\w+/, oQ.keywords && (oQ.keywords = PQ(oQ.keywords, QQ.case_insensitive)), kQ.keywordPatternRe = FQ(vQ, !0), DQ && (oQ.mY || (oQ.mY = /\B|\b/), kQ.beginRe = FQ(kQ.mY), oQ.end || oQ.endsWithParent || (oQ.end = /\B|\b/), oQ.end && (kQ.endRe = FQ(kQ.end)), kQ.terminatorEnd = uQ(kQ.end) || "", oQ.endsWithParent && DQ.terminatorEnd && (kQ.terminatorEnd += (oQ.end ? "|" : "") + DQ.terminatorEnd)), oQ.illegal && (kQ.illegalRe = FQ(oQ.illegal)), oQ.contains || (oQ.contains = []), oQ.contains = [].concat(...oQ.contains.map((function(QQ) {
+            return function(QQ) {
+              QQ.variants && !QQ.cachedVariants && (QQ.cachedVariants = QQ.variants.map((function(FQ) {
+                return qQ(QQ, {
                   variants: null
-                }, Jd)
+                }, FQ)
               })));
-              if (dd.cachedVariants) return dd.cachedVariants;
-              if (PJ(dd)) return Nd(dd, {
-                starts: dd.starts ? Nd(dd.starts) : null
+              if (QQ.cachedVariants) return QQ.cachedVariants;
+              if (oF(QQ)) return qQ(QQ, {
+                starts: QQ.starts ? qQ(QQ.starts) : null
               });
-              if (Object.isFrozen(dd)) return Nd(dd);
-              return dd
-            }("self" === dd ? Wd : dd)
-          }))), Wd.contains.forEach((function(dd) {
-            kd(dd, Zd)
-          })), Wd.starts && kd(Wd.starts, Pd), Zd.matcher = function(dd) {
-            const Jd = new pd;
-            return dd.contains.forEach((dd => Jd.addRule(dd.ZQ, {
-              rule: dd,
-              type: "ZQ"
-            }))), dd.terminatorEnd && Jd.addRule(dd.terminatorEnd, {
+              if (Object.isFrozen(QQ)) return qQ(QQ);
+              return QQ
+            }("self" === QQ ? oQ : QQ)
+          }))), oQ.contains.forEach((function(QQ) {
+            wQ(QQ, kQ)
+          })), oQ.starts && wQ(oQ.starts, DQ), kQ.matcher = function(QQ) {
+            const FQ = new LQ;
+            return QQ.contains.forEach((QQ => FQ.addRule(QQ.mY, {
+              rule: QQ,
+              type: "mY"
+            }))), QQ.terminatorEnd && FQ.addRule(QQ.terminatorEnd, {
               type: "end"
-            }), dd.illegal && Jd.addRule(dd.illegal, {
+            }), QQ.illegal && FQ.addRule(QQ.illegal, {
               type: "illegal"
-            }), Jd
-          }(Zd), Zd
-        }(dd)
+            }), FQ
+          }(kQ), kQ
+        }(QQ)
     }
 
-    function PJ(dd) {
-      return !!dd && (dd.endsWithParent || PJ(dd.starts))
+    function oF(QQ) {
+      return !!QQ && (QQ.endsWithParent || oF(QQ.starts))
     }
-    class ZJ extends Error {
-      constructor(dd, Jd) {
-        super(dd), this.name = "HTMLInjectionError", this.html = Jd
+    class DF extends Error {
+      constructor(QQ, FQ) {
+        super(QQ), this.name = "HTMLInjectionError", this.html = FQ
       }
     }
-    const gJ = pd,
-      CJ = Nd,
-      KJ = Symbol("nomatch"),
-      oJ = function(dd) {
-        const pd = Object.create(null),
-          Nd = Object.create(null),
-          Wd = [];
-        let Pd = !0;
-        const Zd = "Could not find the language '{}', did you forget to load/include a language module?",
-          gd = {
+    const kF = LQ,
+      vF = qQ,
+      mF = Symbol("nomatch"),
+      uF = function(QQ) {
+        const LQ = Object.create(null),
+          qQ = Object.create(null),
+          oQ = [];
+        let DQ = !0;
+        const kQ = "Could not find the language '{}', did you forget to load/include a language module?",
+          vQ = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let Kd = {
+        let uQ = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: Cd
+          __emitter: mQ
         };
 
-        function ed(dd) {
-          return Kd.noHighlightRe.test(dd)
+        function tQ(QQ) {
+          return uQ.noHighlightRe.test(QQ)
         }
 
-        function Rd(dd, Jd, kd) {
-          let pd = "",
-            Nd = "";
-          "object" === typeof Jd ? (pd = dd, kd = Jd.ignoreIllegals, Nd = Jd.language) : (JJ("10.7.0", "highlight(lang, code, ...args) has been deprecated."), JJ("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), Nd = dd, pd = Jd), void 0 === kd && (kd = !0);
-          const Wd = {
-            code: pd,
-            language: Nd
+        function eQ(QQ, FQ, wQ) {
+          let LQ = "",
+            qQ = "";
+          "object" === typeof FQ ? (LQ = QQ, wQ = FQ.ignoreIllegals, qQ = FQ.language) : (QF("10.7.0", "highlight(lang, code, ...args) has been deprecated."), QF("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), qQ = QQ, LQ = FQ), void 0 === wQ && (wQ = !0);
+          const oQ = {
+            code: LQ,
+            language: qQ
           };
-          Md("before:highlight", Wd);
-          const Pd = Wd.result ? Wd.result : Id(Wd.language, Wd.code, kd);
-          return Pd.code = Wd.code, Md("after:highlight", Pd), Pd
+          RQ("before:highlight", oQ);
+          const DQ = oQ.result ? oQ.result : MQ(oQ.language, oQ.code, wQ);
+          return DQ.code = oQ.code, RQ("after:highlight", DQ), DQ
         }
 
-        function Id(dd, Jd, Nd, Wd) {
-          const gd = Object.create(null);
+        function MQ(QQ, FQ, qQ, oQ) {
+          const vQ = Object.create(null);
 
-          function Cd() {
-            if (!Md.keywords) return void Yd.addText(md);
-            let dd = 0;
-            Md.keywordPatternRe.lastIndex = 0;
-            let Jd = Md.keywordPatternRe.exec(md),
-              kd = "";
-            for (; Jd;) {
-              kd += md.substring(dd, Jd.index);
-              const Nd = qd.case_insensitive ? Jd[0].toLowerCase() : Jd[0],
-                Wd = (pd = Nd, Md.keywords[pd]);
-              if (Wd) {
-                const [dd, pd] = Wd;
-                if (Yd.addText(kd), kd = "", gd[Nd] = (gd[Nd] || 0) + 1, gd[Nd] <= 7 && (bd += pd), dd.startsWith("_")) kd += Jd[0];
+          function mQ() {
+            if (!RQ.keywords) return void sQ.addText(rQ);
+            let QQ = 0;
+            RQ.keywordPatternRe.lastIndex = 0;
+            let FQ = RQ.keywordPatternRe.exec(rQ),
+              wQ = "";
+            for (; FQ;) {
+              wQ += rQ.substring(QQ, FQ.index);
+              const qQ = CQ.case_insensitive ? FQ[0].toLowerCase() : FQ[0],
+                oQ = (LQ = qQ, RQ.keywords[LQ]);
+              if (oQ) {
+                const [QQ, LQ] = oQ;
+                if (sQ.addText(wQ), wQ = "", vQ[qQ] = (vQ[qQ] || 0) + 1, vQ[qQ] <= 7 && (IQ += LQ), QQ.startsWith("_")) wQ += FQ[0];
                 else {
-                  const kd = qd.classNameAliases[dd] || dd;
-                  ld(Jd[0], kd)
+                  const wQ = CQ.classNameAliases[QQ] || QQ;
+                  bQ(FQ[0], wQ)
                 }
-              } else kd += Jd[0];
-              dd = Md.keywordPatternRe.lastIndex, Jd = Md.keywordPatternRe.exec(md)
+              } else wQ += FQ[0];
+              QQ = RQ.keywordPatternRe.lastIndex, FQ = RQ.keywordPatternRe.exec(rQ)
             }
-            var pd;
-            kd += md.substring(dd), Yd.addText(kd)
+            var LQ;
+            wQ += rQ.substring(QQ), sQ.addText(wQ)
           }
 
-          function od() {
-            null != Md.subLanguage ? function() {
-              if ("" === md) return;
-              let dd = null;
-              if ("string" === typeof Md.subLanguage) {
-                if (!pd[Md.subLanguage]) return void Yd.addText(md);
-                dd = Id(Md.subLanguage, md, !0, Fd[Md.subLanguage]), Fd[Md.subLanguage] = dd._top
-              } else dd = Gd(md, Md.subLanguage.length ? Md.subLanguage : null);
-              Md.relevance > 0 && (bd += dd.relevance), Yd.__addSublanguage(dd._emitter, dd.language)
-            }() : Cd(), md = ""
+          function HQ() {
+            null != RQ.subLanguage ? function() {
+              if ("" === rQ) return;
+              let QQ = null;
+              if ("string" === typeof RQ.subLanguage) {
+                if (!LQ[RQ.subLanguage]) return void sQ.addText(rQ);
+                QQ = MQ(RQ.subLanguage, rQ, !0, OQ[RQ.subLanguage]), OQ[RQ.subLanguage] = QQ._top
+              } else QQ = GQ(rQ, RQ.subLanguage.length ? RQ.subLanguage : null);
+              RQ.relevance > 0 && (IQ += QQ.relevance), sQ.__addSublanguage(QQ._emitter, QQ.language)
+            }() : mQ(), rQ = ""
           }
 
-          function ld(dd, Jd) {
-            "" !== dd && (Yd.startScope(Jd), Yd.addText(dd), Yd.endScope())
+          function bQ(QQ, FQ) {
+            "" !== QQ && (sQ.startScope(FQ), sQ.addText(QQ), sQ.endScope())
           }
 
-          function Qd(dd, Jd) {
-            let kd = 1;
-            const pd = Jd.length - 1;
-            for (; kd <= pd;) {
-              if (!dd._emit[kd]) {
-                kd++;
+          function YQ(QQ, FQ) {
+            let wQ = 1;
+            const LQ = FQ.length - 1;
+            for (; wQ <= LQ;) {
+              if (!QQ._emit[wQ]) {
+                wQ++;
                 continue
               }
-              const pd = qd.classNameAliases[dd[kd]] || dd[kd],
-                Nd = Jd[kd];
-              pd ? ld(Nd, pd) : (md = Nd, Cd(), md = ""), kd++
+              const LQ = CQ.classNameAliases[QQ[wQ]] || QQ[wQ],
+                qQ = FQ[wQ];
+              LQ ? bQ(qQ, LQ) : (rQ = qQ, mQ(), rQ = ""), wQ++
             }
           }
 
-          function Ld(dd, Jd) {
-            return dd.scope && "string" === typeof dd.scope && Yd.openNode(qd.classNameAliases[dd.scope] || dd.scope), dd.beginScope && (dd.beginScope._wrap ? (ld(md, qd.classNameAliases[dd.beginScope._wrap] || dd.beginScope._wrap), md = "") : dd.beginScope._multi && (Qd(dd.beginScope, Jd), md = "")), Md = Object.create(dd, {
+          function xQ(QQ, FQ) {
+            return QQ.scope && "string" === typeof QQ.scope && sQ.openNode(CQ.classNameAliases[QQ.scope] || QQ.scope), QQ.beginScope && (QQ.beginScope._wrap ? (bQ(rQ, CQ.classNameAliases[QQ.beginScope._wrap] || QQ.beginScope._wrap), rQ = "") : QQ.beginScope._multi && (YQ(QQ.beginScope, FQ), rQ = "")), RQ = Object.create(QQ, {
               parent: {
-                value: Md
+                value: RQ
               }
-            }), Md
+            }), RQ
           }
 
-          function Od(dd, Jd, pd) {
-            let Nd = function(dd, Jd) {
-              const kd = dd && dd.exec(Jd);
-              return kd && 0 === kd.index
-            }(dd.endRe, pd);
-            if (Nd) {
-              if (dd["on:end"]) {
-                const pd = new kd(dd);
-                dd["on:end"](Jd, pd), pd.isMatchIgnored && (Nd = !1)
+          function AQ(QQ, FQ, LQ) {
+            let qQ = function(QQ, FQ) {
+              const wQ = QQ && QQ.exec(FQ);
+              return wQ && 0 === wQ.index
+            }(QQ.endRe, LQ);
+            if (qQ) {
+              if (QQ["on:end"]) {
+                const LQ = new wQ(QQ);
+                QQ["on:end"](FQ, LQ), LQ.isMatchIgnored && (qQ = !1)
               }
-              if (Nd) {
-                for (; dd.endsParent && dd.parent;) dd = dd.parent;
-                return dd
+              if (qQ) {
+                for (; QQ.endsParent && QQ.parent;) QQ = QQ.parent;
+                return QQ
               }
             }
-            if (dd.endsWithParent) return Od(dd.parent, Jd, pd)
+            if (QQ.endsWithParent) return AQ(QQ.parent, FQ, LQ)
           }
 
-          function ed(dd) {
-            return 0 === Md.matcher.regexIndex ? (md += dd[0], 1) : (Xd = !0, 0)
+          function tQ(QQ) {
+            return 0 === RQ.matcher.regexIndex ? (rQ += QQ[0], 1) : (TQ = !0, 0)
           }
 
-          function Rd(dd) {
-            const kd = dd[0],
-              pd = Jd.substring(dd.index),
-              Nd = Od(Md, dd, pd);
-            if (!Nd) return KJ;
-            const Wd = Md;
-            Md.endScope && Md.endScope._wrap ? (od(), ld(kd, Md.endScope._wrap)) : Md.endScope && Md.endScope._multi ? (od(), Qd(Md.endScope, dd)) : Wd.skip ? md += kd : (Wd.returnEnd || Wd.excludeEnd || (md += kd), od(), Wd.excludeEnd && (md = kd));
+          function eQ(QQ) {
+            const wQ = QQ[0],
+              LQ = FQ.substring(QQ.index),
+              qQ = AQ(RQ, QQ, LQ);
+            if (!qQ) return mF;
+            const oQ = RQ;
+            RQ.endScope && RQ.endScope._wrap ? (HQ(), bQ(wQ, RQ.endScope._wrap)) : RQ.endScope && RQ.endScope._multi ? (HQ(), YQ(RQ.endScope, QQ)) : oQ.skip ? rQ += wQ : (oQ.returnEnd || oQ.excludeEnd || (rQ += wQ), HQ(), oQ.excludeEnd && (rQ = wQ));
             do {
-              Md.scope && Yd.closeNode(), Md.skip || Md.subLanguage || (bd += Md.relevance), Md = Md.parent
-            } while (Md !== Nd.parent);
-            return Nd.starts && Ld(Nd.starts, dd), Wd.returnEnd ? 0 : kd.length
+              RQ.scope && sQ.closeNode(), RQ.skip || RQ.subLanguage || (IQ += RQ.relevance), RQ = RQ.parent
+            } while (RQ !== qQ.parent);
+            return qQ.starts && xQ(qQ.starts, QQ), oQ.returnEnd ? 0 : wQ.length
           }
-          let vd = {};
+          let pQ = {};
 
-          function xd(pd, Wd) {
-            const Zd = Wd && Wd[0];
-            if (md += pd, null == Zd) return od(), 0;
-            if ("ZQ" === vd.type && "end" === Wd.type && vd.index === Wd.index && "" === Zd) {
-              if (md += Jd.slice(Wd.index, Wd.index + 1), !Pd) {
-                const Jd = new Error(`0 width match regex (${dd})`);
-                throw Jd.languageName = dd, Jd.badRule = vd.rule, Jd
+          function cQ(LQ, oQ) {
+            const kQ = oQ && oQ[0];
+            if (rQ += LQ, null == kQ) return HQ(), 0;
+            if ("mY" === pQ.type && "end" === oQ.type && pQ.index === oQ.index && "" === kQ) {
+              if (rQ += FQ.slice(oQ.index, oQ.index + 1), !DQ) {
+                const FQ = new Error(`0 width match regex (${QQ})`);
+                throw FQ.languageName = QQ, FQ.badRule = pQ.rule, FQ
               }
               return 1
             }
-            if (vd = Wd, "ZQ" === Wd.type) return function(dd) {
-              const Jd = dd[0],
-                pd = dd.rule,
-                Nd = new kd(pd),
-                Wd = [pd.__beforeBegin, pd["on:begin"]];
-              for (const kd of Wd)
-                if (kd && (kd(dd, Nd), Nd.isMatchIgnored)) return ed(Jd);
-              return pd.skip ? md += Jd : (pd.excludeBegin && (md += Jd), od(), pd.returnBegin || pd.excludeBegin || (md = Jd)), Ld(pd, dd), pd.returnBegin ? 0 : Jd.length
-            }(Wd);
-            if ("illegal" === Wd.type && !Nd) {
-              const dd = new Error('Illegal lexeme "' + Zd + '" for mode "' + (Md.scope || "<unnamed>") + '"');
-              throw dd.mode = Md, dd
+            if (pQ = oQ, "mY" === oQ.type) return function(QQ) {
+              const FQ = QQ[0],
+                LQ = QQ.rule,
+                qQ = new wQ(LQ),
+                oQ = [LQ.__beforeBegin, LQ["on:begin"]];
+              for (const wQ of oQ)
+                if (wQ && (wQ(QQ, qQ), qQ.isMatchIgnored)) return tQ(FQ);
+              return LQ.skip ? rQ += FQ : (LQ.excludeBegin && (rQ += FQ), HQ(), LQ.returnBegin || LQ.excludeBegin || (rQ = FQ)), xQ(LQ, QQ), LQ.returnBegin ? 0 : FQ.length
+            }(oQ);
+            if ("illegal" === oQ.type && !qQ) {
+              const QQ = new Error('Illegal lexeme "' + kQ + '" for mode "' + (RQ.scope || "<unnamed>") + '"');
+              throw QQ.mode = RQ, QQ
             }
-            if ("end" === Wd.type) {
-              const dd = Rd(Wd);
-              if (dd !== KJ) return dd
+            if ("end" === oQ.type) {
+              const QQ = eQ(oQ);
+              if (QQ !== mF) return QQ
             }
-            if ("illegal" === Wd.type && "" === Zd) return md += "\n", 1;
-            if (jd > 1e5 && jd > 3 * Wd.index) {
+            if ("illegal" === oQ.type && "" === kQ) return rQ += "\n", 1;
+            if (NQ > 1e5 && NQ > 3 * oQ.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return md += Zd, Zd.length
+            return rQ += kQ, kQ.length
           }
-          const qd = Bd(dd);
-          if (!qd) throw Ad(Zd.replace("{}", dd)), new Error('Unknown language: "' + dd + '"');
-          const sd = WJ(qd);
-          let ad = "",
-            Md = Wd || sd;
-          const Fd = {},
-            Yd = new Kd.__emitter(Kd);
+          const CQ = SQ(QQ);
+          if (!CQ) throw BQ(kQ.replace("{}", QQ)), new Error('Unknown language: "' + QQ + '"');
+          const iQ = qF(CQ);
+          let WQ = "",
+            RQ = oQ || iQ;
+          const OQ = {},
+            sQ = new uQ.__emitter(uQ);
           ! function() {
-            const dd = [];
-            for (let Jd = Md; Jd !== qd; Jd = Jd.parent) Jd.scope && dd.unshift(Jd.scope);
-            dd.forEach((dd => Yd.openNode(dd)))
+            const QQ = [];
+            for (let FQ = RQ; FQ !== CQ; FQ = FQ.parent) FQ.scope && QQ.unshift(FQ.scope);
+            QQ.forEach((QQ => sQ.openNode(QQ)))
           }();
-          let md = "",
-            bd = 0,
-            Sd = 0,
-            jd = 0,
-            Xd = !1;
+          let rQ = "",
+            IQ = 0,
+            UQ = 0,
+            NQ = 0,
+            TQ = !1;
           try {
-            if (qd.__emitTokens) qd.__emitTokens(Jd, Yd);
+            if (CQ.__emitTokens) CQ.__emitTokens(FQ, sQ);
             else {
-              for (Md.matcher.considerAll();;) {
-                jd++, Xd ? Xd = !1 : Md.matcher.considerAll(), Md.matcher.lastIndex = Sd;
-                const dd = Md.matcher.exec(Jd);
-                if (!dd) break;
-                const kd = xd(Jd.substring(Sd, dd.index), dd);
-                Sd = dd.index + kd
+              for (RQ.matcher.considerAll();;) {
+                NQ++, TQ ? TQ = !1 : RQ.matcher.considerAll(), RQ.matcher.lastIndex = UQ;
+                const QQ = RQ.matcher.exec(FQ);
+                if (!QQ) break;
+                const wQ = cQ(FQ.substring(UQ, QQ.index), QQ);
+                UQ = QQ.index + wQ
               }
-              xd(Jd.substring(Sd))
+              cQ(FQ.substring(UQ))
             }
-            return Yd.finalize(), ad = Yd.toHTML(), {
-              language: dd,
-              value: ad,
-              relevance: bd,
+            return sQ.finalize(), WQ = sQ.toHTML(), {
+              language: QQ,
+              value: WQ,
+              relevance: IQ,
               illegal: !1,
-              _emitter: Yd,
-              _top: Md
+              _emitter: sQ,
+              _top: RQ
             }
-          } catch (fd) {
-            if (fd.message && fd.message.includes("Illegal")) return {
-              language: dd,
-              value: gJ(Jd),
+          } catch (KQ) {
+            if (KQ.message && KQ.message.includes("Illegal")) return {
+              language: QQ,
+              value: kF(FQ),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: fd.message,
-                index: Sd,
-                context: Jd.slice(Sd - 100, Sd + 100),
-                mode: fd.mode,
-                resultSoFar: ad
+                message: KQ.message,
+                index: UQ,
+                context: FQ.slice(UQ - 100, UQ + 100),
+                mode: KQ.mode,
+                resultSoFar: WQ
               },
-              _emitter: Yd
+              _emitter: sQ
             };
-            if (Pd) return {
-              language: dd,
-              value: gJ(Jd),
+            if (DQ) return {
+              language: QQ,
+              value: kF(FQ),
               illegal: !1,
               relevance: 0,
-              errorRaised: fd,
-              _emitter: Yd,
-              _top: Md
+              errorRaised: KQ,
+              _emitter: sQ,
+              _top: RQ
             };
-            throw fd
+            throw KQ
           }
         }
 
-        function Gd(dd, Jd) {
-          Jd = Jd || Kd.languages || Object.keys(pd);
-          const kd = function(dd) {
-              const Jd = {
-                value: gJ(dd),
+        function GQ(QQ, FQ) {
+          FQ = FQ || uQ.languages || Object.keys(LQ);
+          const wQ = function(QQ) {
+              const FQ = {
+                value: kF(QQ),
                 illegal: !1,
                 relevance: 0,
-                _top: gd,
-                _emitter: new Kd.__emitter(Kd)
+                _top: vQ,
+                _emitter: new uQ.__emitter(uQ)
               };
-              return Jd._emitter.addText(dd), Jd
-            }(dd),
-            Nd = Jd.filter(Bd).filter(ad).map((Jd => Id(Jd, dd, !1)));
-          Nd.unshift(kd);
-          const Wd = Nd.sort(((dd, Jd) => {
-              if (dd.relevance !== Jd.relevance) return Jd.relevance - dd.relevance;
-              if (dd.language && Jd.language) {
-                if (Bd(dd.language).supersetOf === Jd.language) return 1;
-                if (Bd(Jd.language).supersetOf === dd.language) return -1
+              return FQ._emitter.addText(QQ), FQ
+            }(QQ),
+            qQ = FQ.filter(SQ).filter(WQ).map((FQ => MQ(FQ, QQ, !1)));
+          qQ.unshift(wQ);
+          const oQ = qQ.sort(((QQ, FQ) => {
+              if (QQ.relevance !== FQ.relevance) return FQ.relevance - QQ.relevance;
+              if (QQ.language && FQ.language) {
+                if (SQ(QQ.language).supersetOf === FQ.language) return 1;
+                if (SQ(FQ.language).supersetOf === QQ.language) return -1
               }
               return 0
             })),
-            [Pd, Zd] = Wd,
-            Cd = Pd;
-          return Cd.secondBest = Zd, Cd
+            [DQ, kQ] = oQ,
+            mQ = DQ;
+          return mQ.secondBest = kQ, mQ
         }
 
-        function vd(dd) {
-          let Jd = null;
-          const kd = function(dd) {
-            let Jd = dd.className + " ";
-            Jd += dd.parentNode ? dd.parentNode.className : "";
-            const kd = Kd.languageDetectRe.exec(Jd);
-            if (kd) {
-              const Jd = Bd(kd[1]);
-              return Jd || (dJ(Zd.replace("{}", kd[1])), dJ("Falling back to no-highlight mode for this block.", dd)), Jd ? kd[1] : "no-highlight"
+        function pQ(QQ) {
+          let FQ = null;
+          const wQ = function(QQ) {
+            let FQ = QQ.className + " ";
+            FQ += QQ.parentNode ? QQ.parentNode.className : "";
+            const wQ = uQ.languageDetectRe.exec(FQ);
+            if (wQ) {
+              const FQ = SQ(wQ[1]);
+              return FQ || (dQ(kQ.replace("{}", wQ[1])), dQ("Falling back to no-highlight mode for this block.", QQ)), FQ ? wQ[1] : "no-highlight"
             }
-            return Jd.split(/\s+/).find((dd => ed(dd) || Bd(dd)))
-          }(dd);
-          if (ed(kd)) return;
-          if (Md("before:highlightElement", {
-              el: dd,
-              language: kd
-            }), dd.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", dd);
-          if (dd.children.length > 0 && (Kd.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(dd)), Kd.throwUnescapedHTML)) {
-            throw new ZJ("One of your code blocks includes unescaped HTML.", dd.innerHTML)
+            return FQ.split(/\s+/).find((QQ => tQ(QQ) || SQ(QQ)))
+          }(QQ);
+          if (tQ(wQ)) return;
+          if (RQ("before:highlightElement", {
+              el: QQ,
+              language: wQ
+            }), QQ.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", QQ);
+          if (QQ.children.length > 0 && (uQ.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(QQ)), uQ.throwUnescapedHTML)) {
+            throw new DF("One of your code blocks includes unescaped HTML.", QQ.innerHTML)
           }
-          Jd = dd;
-          const pd = Jd.textContent,
-            Wd = kd ? Rd(pd, {
-              language: kd,
+          FQ = QQ;
+          const LQ = FQ.textContent,
+            oQ = wQ ? eQ(LQ, {
+              language: wQ,
               ignoreIllegals: !0
-            }) : Gd(pd);
-          dd.innerHTML = Wd.value, dd.dataset.highlighted = "yes",
-            function(dd, Jd, kd) {
-              const pd = Jd && Nd[Jd] || kd;
-              dd.classList.add("hljs"), dd.classList.add(`language-${pd}`)
-            }(dd, kd, Wd.language), dd.result = {
-              language: Wd.language,
-              re: Wd.relevance,
-              relevance: Wd.relevance
-            }, Wd.secondBest && (dd.secondBest = {
-              language: Wd.secondBest.language,
-              relevance: Wd.secondBest.relevance
-            }), Md("after:highlightElement", {
-              el: dd,
-              result: Wd,
-              text: pd
+            }) : GQ(LQ);
+          QQ.innerHTML = oQ.value, QQ.dataset.highlighted = "yes",
+            function(QQ, FQ, wQ) {
+              const LQ = FQ && qQ[FQ] || wQ;
+              QQ.classList.add("hljs"), QQ.classList.add(`language-${LQ}`)
+            }(QQ, wQ, oQ.language), QQ.result = {
+              language: oQ.language,
+              re: oQ.relevance,
+              relevance: oQ.relevance
+            }, oQ.secondBest && (QQ.secondBest = {
+              language: oQ.secondBest.language,
+              relevance: oQ.secondBest.relevance
+            }), RQ("after:highlightElement", {
+              el: QQ,
+              result: oQ,
+              text: LQ
             })
         }
-        let xd = !1;
+        let cQ = !1;
 
-        function qd() {
-          if ("loading" === document.readyState) return xd || window.addEventListener("DOMContentLoaded", (function() {
-            qd()
-          }), !1), void(xd = !0);
-          document.querySelectorAll(Kd.cssSelector).forEach(vd)
+        function CQ() {
+          if ("loading" === document.readyState) return cQ || window.addEventListener("DOMContentLoaded", (function() {
+            CQ()
+          }), !1), void(cQ = !0);
+          document.querySelectorAll(uQ.cssSelector).forEach(pQ)
         }
 
-        function Bd(dd) {
-          return dd = (dd || "").toLowerCase(), pd[dd] || pd[Nd[dd]]
+        function SQ(QQ) {
+          return QQ = (QQ || "").toLowerCase(), LQ[QQ] || LQ[qQ[QQ]]
         }
 
-        function sd(dd, Jd) {
+        function iQ(QQ, FQ) {
           let {
-            languageName: kd
-          } = Jd;
-          "string" === typeof dd && (dd = [dd]), dd.forEach((dd => {
-            Nd[dd.toLowerCase()] = kd
+            languageName: wQ
+          } = FQ;
+          "string" === typeof QQ && (QQ = [QQ]), QQ.forEach((QQ => {
+            qQ[QQ.toLowerCase()] = wQ
           }))
         }
 
-        function ad(dd) {
-          const Jd = Bd(dd);
-          return Jd && !Jd.disableAutodetect
+        function WQ(QQ) {
+          const FQ = SQ(QQ);
+          return FQ && !FQ.disableAutodetect
         }
 
-        function Md(dd, Jd) {
-          const kd = dd;
-          Wd.forEach((function(dd) {
-            dd[kd] && dd[kd](Jd)
+        function RQ(QQ, FQ) {
+          const wQ = QQ;
+          oQ.forEach((function(QQ) {
+            QQ[wQ] && QQ[wQ](FQ)
           }))
         }
-        Object.assign(dd, {
-          highlight: Rd,
-          highlightAuto: Gd,
-          highlightAll: qd,
-          highlightElement: vd,
-          highlightBlock: function(dd) {
-            return JJ("10.7.0", "highlightBlock will be removed entirely in v12.0"), JJ("10.7.0", "Please use highlightElement now."), vd(dd)
+        Object.assign(QQ, {
+          highlight: eQ,
+          highlightAuto: GQ,
+          highlightAll: CQ,
+          highlightElement: pQ,
+          highlightBlock: function(QQ) {
+            return QF("10.7.0", "highlightBlock will be removed entirely in v12.0"), QF("10.7.0", "Please use highlightElement now."), pQ(QQ)
           },
-          configure: function(dd) {
-            Kd = CJ(Kd, dd)
+          configure: function(QQ) {
+            uQ = vF(uQ, QQ)
           },
           initHighlighting: () => {
-            qd(), JJ("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            CQ(), QF("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            qd(), JJ("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            CQ(), QF("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(Jd, kd) {
-            let Nd = null;
+          registerLanguage: function(FQ, wQ) {
+            let qQ = null;
             try {
-              Nd = kd(dd)
-            } catch (Wd) {
-              if (Ad("Language definition for '{}' could not be registered.".replace("{}", Jd)), !Pd) throw Wd;
-              Ad(Wd), Nd = gd
+              qQ = wQ(QQ)
+            } catch (oQ) {
+              if (BQ("Language definition for '{}' could not be registered.".replace("{}", FQ)), !DQ) throw oQ;
+              BQ(oQ), qQ = vQ
             }
-            Nd.name || (Nd.name = Jd), pd[Jd] = Nd, Nd.rawDefinition = kd.bind(null, dd), Nd.aliases && sd(Nd.aliases, {
-              languageName: Jd
+            qQ.name || (qQ.name = FQ), LQ[FQ] = qQ, qQ.rawDefinition = wQ.bind(null, QQ), qQ.aliases && iQ(qQ.aliases, {
+              languageName: FQ
             })
           },
-          unregisterLanguage: function(dd) {
-            delete pd[dd];
-            for (const Jd of Object.keys(Nd)) Nd[Jd] === dd && delete Nd[Jd]
+          unregisterLanguage: function(QQ) {
+            delete LQ[QQ];
+            for (const FQ of Object.keys(qQ)) qQ[FQ] === QQ && delete qQ[FQ]
           },
           listLanguages: function() {
-            return Object.keys(pd)
+            return Object.keys(LQ)
           },
-          getLanguage: Bd,
-          registerAliases: sd,
-          autoDetection: ad,
-          inherit: CJ,
-          addPlugin: function(dd) {
-            ! function(dd) {
-              dd["before:highlightBlock"] && !dd["before:highlightElement"] && (dd["before:highlightElement"] = Jd => {
-                dd["before:highlightBlock"](Object.assign({
-                  block: Jd.el
-                }, Jd))
-              }), dd["after:highlightBlock"] && !dd["after:highlightElement"] && (dd["after:highlightElement"] = Jd => {
-                dd["after:highlightBlock"](Object.assign({
-                  block: Jd.el
-                }, Jd))
+          getLanguage: SQ,
+          registerAliases: iQ,
+          autoDetection: WQ,
+          inherit: vF,
+          addPlugin: function(QQ) {
+            ! function(QQ) {
+              QQ["before:highlightBlock"] && !QQ["before:highlightElement"] && (QQ["before:highlightElement"] = FQ => {
+                QQ["before:highlightBlock"](Object.assign({
+                  block: FQ.el
+                }, FQ))
+              }), QQ["after:highlightBlock"] && !QQ["after:highlightElement"] && (QQ["after:highlightElement"] = FQ => {
+                QQ["after:highlightBlock"](Object.assign({
+                  block: FQ.el
+                }, FQ))
               })
-            }(dd), Wd.push(dd)
+            }(QQ), oQ.push(QQ)
           },
-          removePlugin: function(dd) {
-            const Jd = Wd.indexOf(dd); - 1 !== Jd && Wd.splice(Jd, 1)
+          removePlugin: function(QQ) {
+            const FQ = oQ.indexOf(QQ); - 1 !== FQ && oQ.splice(FQ, 1)
           }
-        }), dd.debugMode = function() {
-          Pd = !1
-        }, dd.safeMode = function() {
-          Pd = !0
-        }, dd.versionString = "11.11.1", dd.regex = {
-          concat: Ld,
-          lookahead: od,
-          either: Od,
-          optional: Qd,
-          anyNumberOfTimes: ld
+        }), QQ.debugMode = function() {
+          DQ = !1
+        }, QQ.safeMode = function() {
+          DQ = !0
+        }, QQ.versionString = "11.11.1", QQ.regex = {
+          concat: xQ,
+          lookahead: HQ,
+          either: AQ,
+          optional: YQ,
+          anyNumberOfTimes: bQ
         };
-        for (const kd in Dd) "object" === typeof Dd[kd] && Jd(Dd[kd]);
-        return Object.assign(dd, Dd), dd
+        for (const wQ in aQ) "object" === typeof aQ[wQ] && FQ(aQ[wQ]);
+        return Object.assign(QQ, aQ), QQ
       },
-      lJ = oJ({});
-    lJ.newInstance = () => oJ({}), dd.exports = lJ, lJ.HighlightJS = lJ, lJ.default = lJ
+      HF = uF({});
+    HF.newInstance = () => uF({}), QQ.exports = HF, HF.HighlightJS = HF, HF.default = HF
   },
-  4583: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => pd
+  4557: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => LQ
     });
-    const pd = kd(4592)
+    const LQ = wQ(4566)
   },
-  4599: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => od
+  4575: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => HQ
     });
-    const pd = "[A-Za-z$_][0-9A-Za-z$_]*",
-      Nd = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      Wd = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      Pd = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      Zd = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      gd = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      Cd = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      Kd = [].concat(gd, Pd, Zd);
+    const LQ = "[A-Za-z$_][0-9A-Za-z$_]*",
+      qQ = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      oQ = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      DQ = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      kQ = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      vQ = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      mQ = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      uQ = [].concat(vQ, DQ, kQ);
 
-    function od(dd) {
-      const Jd = dd.regex,
-        kd = pd,
-        od = "<>",
-        ld = "</>",
-        Qd = {
-          ZQ: /<[A-Za-z0-9\\._:-]+/,
+    function HQ(QQ) {
+      const FQ = QQ.regex,
+        wQ = LQ,
+        HQ = "<>",
+        bQ = "</>",
+        YQ = {
+          mY: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (dd, Jd) => {
-            const kd = dd[0].length + dd.index,
-              pd = dd.input[kd];
-            if ("<" === pd || "," === pd) return void Jd.ignoreMatch();
-            let Nd;
-            ">" === pd && (((dd, Jd) => {
+          isTrulyOpeningTag: (QQ, FQ) => {
+            const wQ = QQ[0].length + QQ.index,
+              LQ = QQ.input[wQ];
+            if ("<" === LQ || "," === LQ) return void FQ.ignoreMatch();
+            let qQ;
+            ">" === LQ && (((QQ, FQ) => {
               let {
-                after: kd
-              } = Jd;
-              const pd = "</" + dd[0].slice(1);
-              return -1 !== dd.input.indexOf(pd, kd)
-            })(dd, {
-              after: kd
-            }) || Jd.ignoreMatch());
-            const Wd = dd.input.substring(kd);
-            ((Nd = Wd.match(/^\s*=/)) || (Nd = Wd.match(/^\s+extends\s+/)) && 0 === Nd.index) && Jd.ignoreMatch()
+                after: wQ
+              } = FQ;
+              const LQ = "</" + QQ[0].slice(1);
+              return -1 !== QQ.input.indexOf(LQ, wQ)
+            })(QQ, {
+              after: wQ
+            }) || FQ.ignoreMatch());
+            const oQ = QQ.input.substring(wQ);
+            ((qQ = oQ.match(/^\s*=/)) || (qQ = oQ.match(/^\s+extends\s+/)) && 0 === qQ.index) && FQ.ignoreMatch()
           }
         },
-        Ld = {
-          $pattern: pd,
-          keyword: Nd,
-          literal: Wd,
-          built_in: Kd,
-          "variable.language": Cd
+        xQ = {
+          $pattern: LQ,
+          keyword: qQ,
+          literal: oQ,
+          built_in: uQ,
+          "variable.language": mQ
         },
-        Od = "[0-9](_?[0-9])*",
-        ed = `\\.(${Od})`,
-        Rd = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        Id = {
+        AQ = "[0-9](_?[0-9])*",
+        tQ = `\\.(${AQ})`,
+        eQ = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        MQ = {
           className: "number",
           variants: [{
-            ZQ: `(\\b(${Rd})((${ed})|\\.)?|(${ed}))[eE][+-]?(${Od})\\b`
+            mY: `(\\b(${eQ})((${tQ})|\\.)?|(${tQ}))[eE][+-]?(${AQ})\\b`
           }, {
-            ZQ: `\\b(${Rd})\\b((${ed})\\b|\\.)?|(${ed})\\b`
+            mY: `\\b(${eQ})\\b((${tQ})\\b|\\.)?|(${tQ})\\b`
           }, {
-            ZQ: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            mY: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            ZQ: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            mY: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            ZQ: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            mY: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            ZQ: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            mY: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            ZQ: "\\b0[0-7]+n?\\b"
+            mY: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        Gd = {
+        GQ = {
           className: "subst",
-          ZQ: "\\$\\{",
+          mY: "\\$\\{",
           end: "\\}",
-          keywords: Ld,
+          keywords: xQ,
           contains: []
         },
-        vd = {
-          ZQ: ".?html`",
+        pQ = {
+          mY: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [dd.BACKSLASH_ESCAPE, Gd],
+            contains: [QQ.BACKSLASH_ESCAPE, GQ],
             subLanguage: "xml"
           }
         },
-        xd = {
-          ZQ: ".?css`",
+        cQ = {
+          mY: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [dd.BACKSLASH_ESCAPE, Gd],
+            contains: [QQ.BACKSLASH_ESCAPE, GQ],
             subLanguage: "css"
           }
         },
-        qd = {
-          ZQ: ".?gql`",
+        CQ = {
+          mY: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [dd.BACKSLASH_ESCAPE, Gd],
+            contains: [QQ.BACKSLASH_ESCAPE, GQ],
             subLanguage: "graphql"
           }
         },
-        Bd = {
+        SQ = {
           className: "string",
-          ZQ: "`",
+          mY: "`",
           end: "`",
-          contains: [dd.BACKSLASH_ESCAPE, Gd]
+          contains: [QQ.BACKSLASH_ESCAPE, GQ]
         },
-        sd = {
+        iQ = {
           className: "comment",
-          variants: [dd.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [QQ.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              ZQ: "(?=@[A-Za-z]+)",
+              mY: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                ZQ: "@[A-Za-z]+"
+                mY: "@[A-Za-z]+"
               }, {
                 className: "type",
-                ZQ: "\\{",
+                mY: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                ZQ: kd + "(?=\\s*(-)|$)",
+                mY: wQ + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                ZQ: /(?=[^\n])\s/,
+                mY: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), dd.C_BLOCK_COMMENT_MODE, dd.C_LINE_COMMENT_MODE]
+          }), QQ.C_BLOCK_COMMENT_MODE, QQ.C_LINE_COMMENT_MODE]
         },
-        ad = [dd.APOS_STRING_MODE, dd.QUOTE_STRING_MODE, vd, xd, qd, Bd, {
+        WQ = [QQ.APOS_STRING_MODE, QQ.QUOTE_STRING_MODE, pQ, cQ, CQ, SQ, {
           match: /\$\d+/
-        }, Id];
-      Gd.contains = ad.concat({
-        ZQ: /\{/,
+        }, MQ];
+      GQ.contains = WQ.concat({
+        mY: /\{/,
         end: /\}/,
-        keywords: Ld,
-        contains: ["self"].concat(ad)
+        keywords: xQ,
+        contains: ["self"].concat(WQ)
       });
-      const Md = [].concat(sd, Gd.contains),
-        Fd = Md.concat([{
-          ZQ: /(\s*)\(/,
+      const RQ = [].concat(iQ, GQ.contains),
+        OQ = RQ.concat([{
+          mY: /(\s*)\(/,
           end: /\)/,
-          keywords: Ld,
-          contains: ["self"].concat(Md)
+          keywords: xQ,
+          contains: ["self"].concat(RQ)
         }]),
-        Yd = {
+        sQ = {
           className: "params",
-          ZQ: /(\s*)\(/,
+          mY: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: Ld,
-          contains: Fd
+          keywords: xQ,
+          contains: OQ
         },
-        md = {
+        rQ = {
           variants: [{
-            match: [/class/, /\s+/, kd, /\s+/, /extends/, /\s+/, Jd.concat(kd, "(", Jd.concat(/\./, kd), ")*")],
+            match: [/class/, /\s+/, wQ, /\s+/, /extends/, /\s+/, FQ.concat(wQ, "(", FQ.concat(/\./, wQ), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, kd],
+            match: [/class/, /\s+/, wQ],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        bd = {
+        IQ = {
           relevance: 0,
-          match: Jd.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: FQ.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...Pd, ...Zd]
+            _: [...DQ, ...kQ]
           }
         },
-        Sd = {
+        UQ = {
           variants: [{
-            match: [/function/, /\s+/, kd, /(?=\s*\()/]
+            match: [/function/, /\s+/, wQ, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [Yd],
+          contains: [sQ],
           illegal: /%/
         };
-      const jd = {
-        match: Jd.concat(/\b/, (Xd = [...gd, "super", "import"].map((dd => `${dd}\\s*\\(`)), Jd.concat("(?!", Xd.join("|"), ")")), kd, Jd.lookahead(/\s*\(/)),
+      const NQ = {
+        match: FQ.concat(/\b/, (TQ = [...vQ, "super", "import"].map((QQ => `${QQ}\\s*\\(`)), FQ.concat("(?!", TQ.join("|"), ")")), wQ, FQ.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var Xd;
-      const fd = {
-          ZQ: Jd.concat(/\./, Jd.lookahead(Jd.concat(kd, /(?![0-9A-Za-z$_(])/))),
-          end: kd,
+      var TQ;
+      const KQ = {
+          mY: FQ.concat(/\./, FQ.lookahead(FQ.concat(wQ, /(?![0-9A-Za-z$_(])/))),
+          end: wQ,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        nd = {
-          match: [/get|set/, /\s+/, kd, /(?=\()/],
+        zQ = {
+          match: [/get|set/, /\s+/, wQ, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            ZQ: /\(\)/
-          }, Yd]
+            mY: /\(\)/
+          }, sQ]
         },
-        Ud = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + dd.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        yd = {
-          match: [/const|var|let/, /\s+/, kd, /\s*/, /=\s*/, /(async\s*)?/, Jd.lookahead(Ud)],
+        lQ = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + QQ.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        jQ = {
+          match: [/const|var|let/, /\s+/, wQ, /\s*/, /=\s*/, /(async\s*)?/, FQ.lookahead(lQ)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [Yd]
+          contains: [sQ]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: Ld,
+        keywords: xQ,
         exports: {
-          PARAMS_CONTAINS: Fd,
-          CLASS_REFERENCE: bd
+          PARAMS_CONTAINS: OQ,
+          CLASS_REFERENCE: IQ
         },
         illegal: /#(?![$_A-z])/,
-        contains: [dd.SHEBANG({
+        contains: [QQ.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          ZQ: /^\s*['"]use (strict|asm)['"]/
-        }, dd.APOS_STRING_MODE, dd.QUOTE_STRING_MODE, vd, xd, qd, Bd, sd, {
+          mY: /^\s*['"]use (strict|asm)['"]/
+        }, QQ.APOS_STRING_MODE, QQ.QUOTE_STRING_MODE, pQ, cQ, CQ, SQ, iQ, {
           match: /\$\d+/
-        }, Id, bd, {
+        }, MQ, IQ, {
           scope: "attr",
-          match: kd + Jd.lookahead(":"),
+          match: wQ + FQ.lookahead(":"),
           relevance: 0
-        }, yd, {
-          ZQ: "(" + dd.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, jQ, {
+          mY: "(" + QQ.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [sd, dd.REGEXP_MODE, {
+          contains: [iQ, QQ.REGEXP_MODE, {
             className: "function",
-            ZQ: Ud,
+            mY: lQ,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                ZQ: dd.UNDERSCORE_IDENT_RE,
+                mY: QQ.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                ZQ: /\(\s*\)/,
+                mY: /\(\s*\)/,
                 skip: !0
               }, {
-                ZQ: /(\s*)\(/,
+                mY: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: Ld,
-                contains: Fd
+                keywords: xQ,
+                contains: OQ
               }]
             }]
           }, {
-            ZQ: /,/,
+            mY: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              ZQ: od,
-              end: ld
+              mY: HQ,
+              end: bQ
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              ZQ: Qd.ZQ,
-              "on:begin": Qd.isTrulyOpeningTag,
-              end: Qd.end
+              mY: YQ.mY,
+              "on:begin": YQ.isTrulyOpeningTag,
+              end: YQ.end
             }],
             subLanguage: "xml",
             contains: [{
-              ZQ: Qd.ZQ,
-              end: Qd.end,
+              mY: YQ.mY,
+              end: YQ.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, Sd, {
+        }, UQ, {
           beginKeywords: "while if switch catch for"
         }, {
-          ZQ: "\\b(?!function)" + dd.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          mY: "\\b(?!function)" + QQ.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [Yd, dd.inherit(dd.TITLE_MODE, {
-            ZQ: kd,
+          contains: [sQ, QQ.inherit(QQ.TITLE_MODE, {
+            mY: wQ,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, fd, {
-          match: "\\$" + kd,
+        }, KQ, {
+          match: "\\$" + wQ,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [Yd]
-        }, jd, {
+          contains: [sQ]
+        }, NQ, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, md, nd, {
+        }, rQ, zQ, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  4603: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => ld
+  4582: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => bQ
     });
-    const pd = "[A-Za-z$_][0-9A-Za-z$_]*",
-      Nd = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      Wd = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      Pd = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      Zd = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      gd = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      Cd = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      Kd = [].concat(gd, Pd, Zd);
+    const LQ = "[A-Za-z$_][0-9A-Za-z$_]*",
+      qQ = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      oQ = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      DQ = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      kQ = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      vQ = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      mQ = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      uQ = [].concat(vQ, DQ, kQ);
 
-    function od(dd) {
-      const Jd = dd.regex,
-        kd = pd,
-        od = "<>",
-        ld = "</>",
-        Qd = {
-          ZQ: /<[A-Za-z0-9\\._:-]+/,
+    function HQ(QQ) {
+      const FQ = QQ.regex,
+        wQ = LQ,
+        HQ = "<>",
+        bQ = "</>",
+        YQ = {
+          mY: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (dd, Jd) => {
-            const kd = dd[0].length + dd.index,
-              pd = dd.input[kd];
-            if ("<" === pd || "," === pd) return void Jd.ignoreMatch();
-            let Nd;
-            ">" === pd && (((dd, Jd) => {
+          isTrulyOpeningTag: (QQ, FQ) => {
+            const wQ = QQ[0].length + QQ.index,
+              LQ = QQ.input[wQ];
+            if ("<" === LQ || "," === LQ) return void FQ.ignoreMatch();
+            let qQ;
+            ">" === LQ && (((QQ, FQ) => {
               let {
-                after: kd
-              } = Jd;
-              const pd = "</" + dd[0].slice(1);
-              return -1 !== dd.input.indexOf(pd, kd)
-            })(dd, {
-              after: kd
-            }) || Jd.ignoreMatch());
-            const Wd = dd.input.substring(kd);
-            ((Nd = Wd.match(/^\s*=/)) || (Nd = Wd.match(/^\s+extends\s+/)) && 0 === Nd.index) && Jd.ignoreMatch()
+                after: wQ
+              } = FQ;
+              const LQ = "</" + QQ[0].slice(1);
+              return -1 !== QQ.input.indexOf(LQ, wQ)
+            })(QQ, {
+              after: wQ
+            }) || FQ.ignoreMatch());
+            const oQ = QQ.input.substring(wQ);
+            ((qQ = oQ.match(/^\s*=/)) || (qQ = oQ.match(/^\s+extends\s+/)) && 0 === qQ.index) && FQ.ignoreMatch()
           }
         },
-        Ld = {
-          $pattern: pd,
-          keyword: Nd,
-          literal: Wd,
-          built_in: Kd,
-          "variable.language": Cd
+        xQ = {
+          $pattern: LQ,
+          keyword: qQ,
+          literal: oQ,
+          built_in: uQ,
+          "variable.language": mQ
         },
-        Od = "[0-9](_?[0-9])*",
-        ed = `\\.(${Od})`,
-        Rd = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        Id = {
+        AQ = "[0-9](_?[0-9])*",
+        tQ = `\\.(${AQ})`,
+        eQ = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        MQ = {
           className: "number",
           variants: [{
-            ZQ: `(\\b(${Rd})((${ed})|\\.)?|(${ed}))[eE][+-]?(${Od})\\b`
+            mY: `(\\b(${eQ})((${tQ})|\\.)?|(${tQ}))[eE][+-]?(${AQ})\\b`
           }, {
-            ZQ: `\\b(${Rd})\\b((${ed})\\b|\\.)?|(${ed})\\b`
+            mY: `\\b(${eQ})\\b((${tQ})\\b|\\.)?|(${tQ})\\b`
           }, {
-            ZQ: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            mY: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            ZQ: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            mY: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            ZQ: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            mY: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            ZQ: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            mY: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            ZQ: "\\b0[0-7]+n?\\b"
+            mY: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        Gd = {
+        GQ = {
           className: "subst",
-          ZQ: "\\$\\{",
+          mY: "\\$\\{",
           end: "\\}",
-          keywords: Ld,
+          keywords: xQ,
           contains: []
         },
-        vd = {
-          ZQ: ".?html`",
+        pQ = {
+          mY: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [dd.BACKSLASH_ESCAPE, Gd],
+            contains: [QQ.BACKSLASH_ESCAPE, GQ],
             subLanguage: "xml"
           }
         },
-        xd = {
-          ZQ: ".?css`",
+        cQ = {
+          mY: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [dd.BACKSLASH_ESCAPE, Gd],
+            contains: [QQ.BACKSLASH_ESCAPE, GQ],
             subLanguage: "css"
           }
         },
-        qd = {
-          ZQ: ".?gql`",
+        CQ = {
+          mY: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [dd.BACKSLASH_ESCAPE, Gd],
+            contains: [QQ.BACKSLASH_ESCAPE, GQ],
             subLanguage: "graphql"
           }
         },
-        Bd = {
+        SQ = {
           className: "string",
-          ZQ: "`",
+          mY: "`",
           end: "`",
-          contains: [dd.BACKSLASH_ESCAPE, Gd]
+          contains: [QQ.BACKSLASH_ESCAPE, GQ]
         },
-        sd = {
+        iQ = {
           className: "comment",
-          variants: [dd.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [QQ.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              ZQ: "(?=@[A-Za-z]+)",
+              mY: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                ZQ: "@[A-Za-z]+"
+                mY: "@[A-Za-z]+"
               }, {
                 className: "type",
-                ZQ: "\\{",
+                mY: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                ZQ: kd + "(?=\\s*(-)|$)",
+                mY: wQ + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                ZQ: /(?=[^\n])\s/,
+                mY: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), dd.C_BLOCK_COMMENT_MODE, dd.C_LINE_COMMENT_MODE]
+          }), QQ.C_BLOCK_COMMENT_MODE, QQ.C_LINE_COMMENT_MODE]
         },
-        ad = [dd.APOS_STRING_MODE, dd.QUOTE_STRING_MODE, vd, xd, qd, Bd, {
+        WQ = [QQ.APOS_STRING_MODE, QQ.QUOTE_STRING_MODE, pQ, cQ, CQ, SQ, {
           match: /\$\d+/
-        }, Id];
-      Gd.contains = ad.concat({
-        ZQ: /\{/,
+        }, MQ];
+      GQ.contains = WQ.concat({
+        mY: /\{/,
         end: /\}/,
-        keywords: Ld,
-        contains: ["self"].concat(ad)
+        keywords: xQ,
+        contains: ["self"].concat(WQ)
       });
-      const Md = [].concat(sd, Gd.contains),
-        Fd = Md.concat([{
-          ZQ: /(\s*)\(/,
+      const RQ = [].concat(iQ, GQ.contains),
+        OQ = RQ.concat([{
+          mY: /(\s*)\(/,
           end: /\)/,
-          keywords: Ld,
-          contains: ["self"].concat(Md)
+          keywords: xQ,
+          contains: ["self"].concat(RQ)
         }]),
-        Yd = {
+        sQ = {
           className: "params",
-          ZQ: /(\s*)\(/,
+          mY: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: Ld,
-          contains: Fd
+          keywords: xQ,
+          contains: OQ
         },
-        md = {
+        rQ = {
           variants: [{
-            match: [/class/, /\s+/, kd, /\s+/, /extends/, /\s+/, Jd.concat(kd, "(", Jd.concat(/\./, kd), ")*")],
+            match: [/class/, /\s+/, wQ, /\s+/, /extends/, /\s+/, FQ.concat(wQ, "(", FQ.concat(/\./, wQ), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, kd],
+            match: [/class/, /\s+/, wQ],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        bd = {
+        IQ = {
           relevance: 0,
-          match: Jd.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: FQ.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...Pd, ...Zd]
+            _: [...DQ, ...kQ]
           }
         },
-        Sd = {
+        UQ = {
           variants: [{
-            match: [/function/, /\s+/, kd, /(?=\s*\()/]
+            match: [/function/, /\s+/, wQ, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [Yd],
+          contains: [sQ],
           illegal: /%/
         };
-      const jd = {
-        match: Jd.concat(/\b/, (Xd = [...gd, "super", "import"].map((dd => `${dd}\\s*\\(`)), Jd.concat("(?!", Xd.join("|"), ")")), kd, Jd.lookahead(/\s*\(/)),
+      const NQ = {
+        match: FQ.concat(/\b/, (TQ = [...vQ, "super", "import"].map((QQ => `${QQ}\\s*\\(`)), FQ.concat("(?!", TQ.join("|"), ")")), wQ, FQ.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var Xd;
-      const fd = {
-          ZQ: Jd.concat(/\./, Jd.lookahead(Jd.concat(kd, /(?![0-9A-Za-z$_(])/))),
-          end: kd,
+      var TQ;
+      const KQ = {
+          mY: FQ.concat(/\./, FQ.lookahead(FQ.concat(wQ, /(?![0-9A-Za-z$_(])/))),
+          end: wQ,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        nd = {
-          match: [/get|set/, /\s+/, kd, /(?=\()/],
+        zQ = {
+          match: [/get|set/, /\s+/, wQ, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            ZQ: /\(\)/
-          }, Yd]
+            mY: /\(\)/
+          }, sQ]
         },
-        Ud = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + dd.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        yd = {
-          match: [/const|var|let/, /\s+/, kd, /\s*/, /=\s*/, /(async\s*)?/, Jd.lookahead(Ud)],
+        lQ = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + QQ.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        jQ = {
+          match: [/const|var|let/, /\s+/, wQ, /\s*/, /=\s*/, /(async\s*)?/, FQ.lookahead(lQ)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [Yd]
+          contains: [sQ]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: Ld,
+        keywords: xQ,
         exports: {
-          PARAMS_CONTAINS: Fd,
-          CLASS_REFERENCE: bd
+          PARAMS_CONTAINS: OQ,
+          CLASS_REFERENCE: IQ
         },
         illegal: /#(?![$_A-z])/,
-        contains: [dd.SHEBANG({
+        contains: [QQ.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          ZQ: /^\s*['"]use (strict|asm)['"]/
-        }, dd.APOS_STRING_MODE, dd.QUOTE_STRING_MODE, vd, xd, qd, Bd, sd, {
+          mY: /^\s*['"]use (strict|asm)['"]/
+        }, QQ.APOS_STRING_MODE, QQ.QUOTE_STRING_MODE, pQ, cQ, CQ, SQ, iQ, {
           match: /\$\d+/
-        }, Id, bd, {
+        }, MQ, IQ, {
           scope: "attr",
-          match: kd + Jd.lookahead(":"),
+          match: wQ + FQ.lookahead(":"),
           relevance: 0
-        }, yd, {
-          ZQ: "(" + dd.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, jQ, {
+          mY: "(" + QQ.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [sd, dd.REGEXP_MODE, {
+          contains: [iQ, QQ.REGEXP_MODE, {
             className: "function",
-            ZQ: Ud,
+            mY: lQ,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                ZQ: dd.UNDERSCORE_IDENT_RE,
+                mY: QQ.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                ZQ: /\(\s*\)/,
+                mY: /\(\s*\)/,
                 skip: !0
               }, {
-                ZQ: /(\s*)\(/,
+                mY: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: Ld,
-                contains: Fd
+                keywords: xQ,
+                contains: OQ
               }]
             }]
           }, {
-            ZQ: /,/,
+            mY: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              ZQ: od,
-              end: ld
+              mY: HQ,
+              end: bQ
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              ZQ: Qd.ZQ,
-              "on:begin": Qd.isTrulyOpeningTag,
-              end: Qd.end
+              mY: YQ.mY,
+              "on:begin": YQ.isTrulyOpeningTag,
+              end: YQ.end
             }],
             subLanguage: "xml",
             contains: [{
-              ZQ: Qd.ZQ,
-              end: Qd.end,
+              mY: YQ.mY,
+              end: YQ.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, Sd, {
+        }, UQ, {
           beginKeywords: "while if switch catch for"
         }, {
-          ZQ: "\\b(?!function)" + dd.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          mY: "\\b(?!function)" + QQ.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [Yd, dd.inherit(dd.TITLE_MODE, {
-            ZQ: kd,
+          contains: [sQ, QQ.inherit(QQ.TITLE_MODE, {
+            mY: wQ,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, fd, {
-          match: "\\$" + kd,
+        }, KQ, {
+          match: "\\$" + wQ,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [Yd]
-        }, jd, {
+          contains: [sQ]
+        }, NQ, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, md, nd, {
+        }, rQ, zQ, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function ld(dd) {
-      const Jd = dd.regex,
-        kd = od(dd),
-        Pd = pd,
-        Zd = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        gd = {
-          ZQ: [/namespace/, /\s+/, dd.IDENT_RE],
+    function bQ(QQ) {
+      const FQ = QQ.regex,
+        wQ = HQ(QQ),
+        DQ = LQ,
+        kQ = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        vQ = {
+          mY: [/namespace/, /\s+/, QQ.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        ld = {
+        bQ = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: Zd
+            built_in: kQ
           },
-          contains: [kd.exports.CLASS_REFERENCE]
+          contains: [wQ.exports.CLASS_REFERENCE]
         },
-        Qd = {
-          $pattern: pd,
-          keyword: Nd.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: Wd,
-          built_in: Kd.concat(Zd),
-          "variable.language": Cd
+        YQ = {
+          $pattern: LQ,
+          keyword: qQ.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: oQ,
+          built_in: uQ.concat(kQ),
+          "variable.language": mQ
         },
-        Ld = {
+        xQ = {
           className: "meta",
-          ZQ: "@" + Pd
+          mY: "@" + DQ
         },
-        Od = (dd, Jd, kd) => {
-          const pd = dd.contains.findIndex((dd => dd.label === Jd));
-          if (-1 === pd) throw new Error("can not find mode to replace");
-          dd.contains.splice(pd, 1, kd)
+        AQ = (QQ, FQ, wQ) => {
+          const LQ = QQ.contains.findIndex((QQ => QQ.label === FQ));
+          if (-1 === LQ) throw new Error("can not find mode to replace");
+          QQ.contains.splice(LQ, 1, wQ)
         };
-      Object.assign(kd.keywords, Qd), kd.exports.PARAMS_CONTAINS.push(Ld);
-      const ed = kd.contains.find((dd => "attr" === dd.scope)),
-        Rd = Object.assign({}, ed, {
-          match: Jd.concat(Pd, Jd.lookahead(/\s*\?:/))
+      Object.assign(wQ.keywords, YQ), wQ.exports.PARAMS_CONTAINS.push(xQ);
+      const tQ = wQ.contains.find((QQ => "attr" === QQ.scope)),
+        eQ = Object.assign({}, tQ, {
+          match: FQ.concat(DQ, FQ.lookahead(/\s*\?:/))
         });
-      kd.exports.PARAMS_CONTAINS.push([kd.exports.CLASS_REFERENCE, ed, Rd]), kd.contains = kd.contains.concat([Ld, gd, ld, Rd]), Od(kd, "shebang", dd.SHEBANG()), Od(kd, "use_strict", {
+      wQ.exports.PARAMS_CONTAINS.push([wQ.exports.CLASS_REFERENCE, tQ, eQ]), wQ.contains = wQ.contains.concat([xQ, vQ, bQ, eQ]), AQ(wQ, "shebang", QQ.SHEBANG()), AQ(wQ, "use_strict", {
         className: "meta",
         relevance: 10,
-        ZQ: /^\s*['"]use strict['"]/
+        mY: /^\s*['"]use strict['"]/
       });
-      return kd.contains.find((dd => "func.def" === dd.label)).relevance = 0, Object.assign(kd, {
+      return wQ.contains.find((QQ => "func.def" === QQ.label)).relevance = 0, Object.assign(wQ, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), kd
+      }), wQ
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

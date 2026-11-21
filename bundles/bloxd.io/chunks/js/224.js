@@ -1,127 +1,127 @@
 export const id = 224;
 export const ids = [224, 230, 233];
 export const modules = {
-  40223: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Pd,
-      g: () => Zd
+  39676: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => DQ,
+      e: () => kQ
     });
-    var pd = kd(38812),
-      Nd = kd(39983),
-      Wd = kd(40199),
-      Pd = {};
-    class Zd {
-      constructor(dd) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = dd, this.checkInputs = () => {}
+    var LQ = wQ(38203),
+      qQ = wQ(39426),
+      oQ = wQ(39642),
+      DQ = {};
+    class kQ {
+      constructor(QQ) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = QQ, this.checkInputs = () => {}
       }
-      add(dd) {
-        const Jd = dd.getSimpleName();
-        this.attached[Jd] ? pd.c.Warn("camera input of type " + Jd + " already exists on camera") : (this.attached[Jd] = dd, dd.camera = this.camera, dd.checkInputs && (this.checkInputs = this._addCheckInputs(dd.checkInputs.bind(dd))), this.attachedToElement && dd.attachControl(this.noPreventDefault))
+      add(QQ) {
+        const FQ = QQ.getSimpleName();
+        this.attached[FQ] ? LQ.c.Warn("camera input of type " + FQ + " already exists on camera") : (this.attached[FQ] = QQ, QQ.camera = this.camera, QQ.checkInputs && (this.checkInputs = this._addCheckInputs(QQ.checkInputs.bind(QQ))), this.attachedToElement && QQ.attachControl(this.noPreventDefault))
       }
-      remove(dd) {
-        for (const Jd in this.attached) {
-          const kd = this.attached[Jd];
-          if (kd === dd) return kd.detachControl(), kd.camera = null, delete this.attached[Jd], void this.rebuildInputCheck()
+      remove(QQ) {
+        for (const FQ in this.attached) {
+          const wQ = this.attached[FQ];
+          if (wQ === QQ) return wQ.detachControl(), wQ.camera = null, delete this.attached[FQ], void this.rebuildInputCheck()
         }
       }
-      removeByType(dd) {
-        for (const Jd in this.attached) {
-          const kd = this.attached[Jd];
-          kd.getClassName() === dd && (kd.detachControl(), kd.camera = null, delete this.attached[Jd], this.rebuildInputCheck())
+      removeByType(QQ) {
+        for (const FQ in this.attached) {
+          const wQ = this.attached[FQ];
+          wQ.getClassName() === QQ && (wQ.detachControl(), wQ.camera = null, delete this.attached[FQ], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(dd) {
-        const Jd = this.checkInputs;
+      _addCheckInputs(QQ) {
+        const FQ = this.checkInputs;
         return () => {
-          Jd(), dd()
+          FQ(), QQ()
         }
       }
-      attachInput(dd) {
-        this.attachedToElement && dd.attachControl(this.noPreventDefault)
+      attachInput(QQ) {
+        this.attachedToElement && QQ.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          dd = !Wd.e.ForceAttachControlToAlwaysPreventDefault && dd, this.attachedToElement = !0, this.noPreventDefault = dd;
-          for (const Jd in this.attached) this.attached[Jd].attachControl(dd)
+          QQ = !oQ.e.ForceAttachControlToAlwaysPreventDefault && QQ, this.attachedToElement = !0, this.noPreventDefault = QQ;
+          for (const FQ in this.attached) this.attached[FQ].attachControl(QQ)
         }
       }
       detachElement() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const Jd in this.attached) this.attached[Jd].detachControl(), dd && (this.attached[Jd].camera = null);
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const FQ in this.attached) this.attached[FQ].detachControl(), QQ && (this.attached[FQ].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const dd in this.attached) {
-          const Jd = this.attached[dd];
-          Jd.checkInputs && (this.checkInputs = this._addCheckInputs(Jd.checkInputs.bind(Jd)))
+        for (const QQ in this.attached) {
+          const FQ = this.attached[QQ];
+          FQ.checkInputs && (this.checkInputs = this._addCheckInputs(FQ.checkInputs.bind(FQ)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(dd) {
-        const Jd = {};
-        for (const kd in this.attached) {
-          const dd = this.attached[kd],
-            pd = Nd.c.Serialize(dd);
-          Jd[dd.getClassName()] = pd
+      serialize(QQ) {
+        const FQ = {};
+        for (const wQ in this.attached) {
+          const QQ = this.attached[wQ],
+            LQ = qQ.c.Serialize(QQ);
+          FQ[QQ.getClassName()] = LQ
         }
-        dd.inputsmgr = Jd
+        QQ.inputsmgr = FQ
       }
-      parse(dd) {
-        const Jd = dd.inputsmgr;
-        if (Jd) {
+      parse(QQ) {
+        const FQ = QQ.inputsmgr;
+        if (FQ) {
           this.clear();
-          for (const dd in Jd) {
-            const kd = Pd[dd];
-            if (kd) {
-              const pd = Jd[dd],
-                Wd = Nd.c.Parse((() => new kd), pd, null);
-              this.add(Wd)
+          for (const QQ in FQ) {
+            const wQ = DQ[QQ];
+            if (wQ) {
+              const LQ = FQ[QQ],
+                oQ = qQ.c.Parse((() => new wQ), LQ, null);
+              this.add(oQ)
             }
           }
         } else
-          for (const kd in this.attached) {
-            const Jd = Pd[this.attached[kd].getClassName()];
-            if (Jd) {
-              const pd = Nd.c.Parse((() => new Jd), dd, null);
-              this.remove(this.attached[kd]), this.add(pd)
+          for (const wQ in this.attached) {
+            const FQ = DQ[this.attached[wQ].getClassName()];
+            if (FQ) {
+              const LQ = qQ.c.Parse((() => new FQ), QQ, null);
+              this.remove(this.attached[wQ]), this.add(LQ)
             }
           }
       }
     }
   },
-  40226: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd.d
+  39678: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ.c
     });
-    var pd = kd(40234);
-    (0, pd.e)()
+    var LQ = wQ(39686);
+    (0, LQ.e)()
   },
-  40234: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Kd,
-      e: () => ld
+  39686: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => uQ,
+      e: () => bQ
     });
-    var pd = kd(39964),
-      Nd = kd(39966),
-      Wd = kd(37251),
-      Pd = kd(37443),
-      Zd = kd(40243),
-      gd = kd(40205),
-      Cd = kd(37303);
-    let Kd = (() => {
-        var dd;
-        let Jd, kd, gd = Zd.d,
-          Cd = [],
-          Kd = [],
-          od = [],
-          ld = [];
-        return dd = class extends gd {
-          constructor(dd, Jd, kd, Nd) {
-            super(dd, kd, Nd), this.groundColor = (0, pd.i)(this, Cd, new Pd.c(0, 0, 0)), this.direction = ((0, pd.i)(this, Kd), (0, pd.i)(this, od, void 0)), (0, pd.i)(this, ld), this.direction = Jd || Wd.n.Up()
+    var LQ = wQ(39402),
+      qQ = wQ(39409),
+      oQ = wQ(36696),
+      DQ = wQ(36873),
+      kQ = wQ(39690),
+      vQ = wQ(39650),
+      mQ = wQ(36741);
+    let uQ = (() => {
+        var QQ;
+        let FQ, wQ, vQ = kQ.c,
+          mQ = [],
+          uQ = [],
+          HQ = [],
+          bQ = [];
+        return QQ = class extends vQ {
+          constructor(QQ, FQ, wQ, qQ) {
+            super(QQ, wQ, qQ), this.groundColor = (0, LQ.l)(this, mQ, new DQ.b(0, 0, 0)), this.direction = ((0, LQ.l)(this, uQ), (0, LQ.l)(this, HQ, void 0)), (0, LQ.l)(this, bQ), this.direction = FQ || oQ.p.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -129,499 +129,499 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(dd) {
-            return this.direction = Wd.n.Normalize(dd.subtract(Wd.n.Zero())), this.direction
+          setDirectionToTarget(QQ) {
+            return this.direction = oQ.p.Normalize(QQ.subtract(oQ.p.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(dd, Jd) {
-            const kd = Wd.n.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", kd.x, kd.y, kd.z, 0, Jd), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), Jd), this
+          transferToEffect(QQ, FQ) {
+            const wQ = oQ.p.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", wQ.x, wQ.y, wQ.z, 0, FQ), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), FQ), this
           }
-          transferToNodeMaterialEffect(dd, Jd) {
-            const kd = Wd.n.Normalize(this.direction);
-            return dd.setFloat3(Jd, kd.x, kd.y, kd.z), this
+          transferToNodeMaterialEffect(QQ, FQ) {
+            const wQ = oQ.p.Normalize(this.direction);
+            return QQ.setFloat3(FQ, wQ.x, wQ.y, wQ.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = Wd.b.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = oQ.c.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return Zd.d.LIGHTTYPEID_HEMISPHERICLIGHT
+            return kQ.c.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(dd, Jd) {
-            dd["HEMILIGHT" + Jd] = !0
+          prepareLightSpecificDefines(QQ, FQ) {
+            QQ["HEMILIGHT" + FQ] = !0
           }
         }, (() => {
-          const Wd = "function" === typeof Symbol && Symbol.metadata ? Object.create(gd[Symbol.metadata] ?? null) : void 0;
-          Jd = [(0, Nd.n)()], kd = [(0, Nd.F)()], (0, pd.h)(null, null, Jd, {
+          const oQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(vQ[Symbol.metadata] ?? null) : void 0;
+          FQ = [(0, qQ.m)()], wQ = [(0, qQ.F)()], (0, LQ.i)(null, null, FQ, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: dd => "groundColor" in dd,
-              get: dd => dd.groundColor,
-              set: (dd, Jd) => {
-                dd.groundColor = Jd
+              has: QQ => "groundColor" in QQ,
+              get: QQ => QQ.groundColor,
+              set: (QQ, FQ) => {
+                QQ.groundColor = FQ
               }
             },
-            metadata: Wd
-          }, Cd, Kd), (0, pd.h)(null, null, kd, {
+            metadata: oQ
+          }, mQ, uQ), (0, LQ.i)(null, null, wQ, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: dd => "direction" in dd,
-              get: dd => dd.direction,
-              set: (dd, Jd) => {
-                dd.direction = Jd
+              has: QQ => "direction" in QQ,
+              get: QQ => QQ.direction,
+              set: (QQ, FQ) => {
+                QQ.direction = FQ
               }
             },
-            metadata: Wd
-          }, od, ld), Wd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: oQ
+          }, HQ, bQ), oQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Wd
+            value: oQ
           })
-        })(), dd
+        })(), QQ
       })(),
-      od = !1;
+      HQ = !1;
 
-    function ld() {
-      od || (od = !0, gd.c.AddNodeConstructor("Light_Type_3", ((dd, Jd) => () => new Kd(dd, Wd.n.Zero(), Jd))), (0, Cd.h)("BABYLON.HemisphericLight", Kd))
+    function bQ() {
+      HQ || (HQ = !0, vQ.c.AddNodeConstructor("Light_Type_3", ((QQ, FQ) => () => new uQ(QQ, oQ.p.Zero(), FQ))), (0, mQ.e)("BABYLON.HemisphericLight", uQ))
     }
   },
-  37438: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      Color3: () => pd.c,
-      c: () => pd.g
+  36870: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      Color3: () => LQ.b,
+      b: () => LQ.e
     });
-    var pd = kd(37443);
-    (0, pd.k)()
+    var LQ = wQ(36873);
+    (0, LQ.h)()
   },
-  37966: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Nd
+  37320: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => qQ
     });
-    var pd = kd(37969);
-    class Nd {
-      static GetPlanes(dd) {
-        const Jd = [];
-        for (let kd = 0; kd < 6; kd++) Jd.push(new pd.c(0, 0, 0, 0));
-        return Nd.GetPlanesToRef(dd, Jd), Jd
+    var LQ = wQ(37324);
+    class qQ {
+      static GetPlanes(QQ) {
+        const FQ = [];
+        for (let wQ = 0; wQ < 6; wQ++) FQ.push(new LQ.d(0, 0, 0, 0));
+        return qQ.GetPlanesToRef(QQ, FQ), FQ
       }
-      static GetNearPlaneToRef(dd, Jd) {
-        const kd = dd.m;
-        Jd.normal.x = kd[3] + kd[2], Jd.normal.y = kd[7] + kd[6], Jd.normal.z = kd[11] + kd[10], Jd.d = kd[15] + kd[14], Jd.normalize()
+      static GetNearPlaneToRef(QQ, FQ) {
+        const wQ = QQ.m;
+        FQ.normal.x = wQ[3] + wQ[2], FQ.normal.y = wQ[7] + wQ[6], FQ.normal.z = wQ[11] + wQ[10], FQ.d = wQ[15] + wQ[14], FQ.normalize()
       }
-      static GetFarPlaneToRef(dd, Jd) {
-        const kd = dd.m;
-        Jd.normal.x = kd[3] - kd[2], Jd.normal.y = kd[7] - kd[6], Jd.normal.z = kd[11] - kd[10], Jd.d = kd[15] - kd[14], Jd.normalize()
+      static GetFarPlaneToRef(QQ, FQ) {
+        const wQ = QQ.m;
+        FQ.normal.x = wQ[3] - wQ[2], FQ.normal.y = wQ[7] - wQ[6], FQ.normal.z = wQ[11] - wQ[10], FQ.d = wQ[15] - wQ[14], FQ.normalize()
       }
-      static GetLeftPlaneToRef(dd, Jd) {
-        const kd = dd.m;
-        Jd.normal.x = kd[3] + kd[0], Jd.normal.y = kd[7] + kd[4], Jd.normal.z = kd[11] + kd[8], Jd.d = kd[15] + kd[12], Jd.normalize()
+      static GetLeftPlaneToRef(QQ, FQ) {
+        const wQ = QQ.m;
+        FQ.normal.x = wQ[3] + wQ[0], FQ.normal.y = wQ[7] + wQ[4], FQ.normal.z = wQ[11] + wQ[8], FQ.d = wQ[15] + wQ[12], FQ.normalize()
       }
-      static GetRightPlaneToRef(dd, Jd) {
-        const kd = dd.m;
-        Jd.normal.x = kd[3] - kd[0], Jd.normal.y = kd[7] - kd[4], Jd.normal.z = kd[11] - kd[8], Jd.d = kd[15] - kd[12], Jd.normalize()
+      static GetRightPlaneToRef(QQ, FQ) {
+        const wQ = QQ.m;
+        FQ.normal.x = wQ[3] - wQ[0], FQ.normal.y = wQ[7] - wQ[4], FQ.normal.z = wQ[11] - wQ[8], FQ.d = wQ[15] - wQ[12], FQ.normalize()
       }
-      static GetTopPlaneToRef(dd, Jd) {
-        const kd = dd.m;
-        Jd.normal.x = kd[3] - kd[1], Jd.normal.y = kd[7] - kd[5], Jd.normal.z = kd[11] - kd[9], Jd.d = kd[15] - kd[13], Jd.normalize()
+      static GetTopPlaneToRef(QQ, FQ) {
+        const wQ = QQ.m;
+        FQ.normal.x = wQ[3] - wQ[1], FQ.normal.y = wQ[7] - wQ[5], FQ.normal.z = wQ[11] - wQ[9], FQ.d = wQ[15] - wQ[13], FQ.normalize()
       }
-      static GetBottomPlaneToRef(dd, Jd) {
-        const kd = dd.m;
-        Jd.normal.x = kd[3] + kd[1], Jd.normal.y = kd[7] + kd[5], Jd.normal.z = kd[11] + kd[9], Jd.d = kd[15] + kd[13], Jd.normalize()
+      static GetBottomPlaneToRef(QQ, FQ) {
+        const wQ = QQ.m;
+        FQ.normal.x = wQ[3] + wQ[1], FQ.normal.y = wQ[7] + wQ[5], FQ.normal.z = wQ[11] + wQ[9], FQ.d = wQ[15] + wQ[13], FQ.normalize()
       }
-      static GetPlanesToRef(dd, Jd) {
-        Nd.GetNearPlaneToRef(dd, Jd[0]), Nd.GetFarPlaneToRef(dd, Jd[1]), Nd.GetLeftPlaneToRef(dd, Jd[2]), Nd.GetRightPlaneToRef(dd, Jd[3]), Nd.GetTopPlaneToRef(dd, Jd[4]), Nd.GetBottomPlaneToRef(dd, Jd[5])
+      static GetPlanesToRef(QQ, FQ) {
+        qQ.GetNearPlaneToRef(QQ, FQ[0]), qQ.GetFarPlaneToRef(QQ, FQ[1]), qQ.GetLeftPlaneToRef(QQ, FQ[2]), qQ.GetRightPlaneToRef(QQ, FQ[3]), qQ.GetTopPlaneToRef(QQ, FQ[4]), qQ.GetBottomPlaneToRef(QQ, FQ[5])
       }
-      static IsPointInFrustum(dd, Jd) {
-        for (let kd = 0; kd < 6; kd++)
-          if (Jd[kd].dotCoordinate(dd) < 0) return !1;
+      static IsPointInFrustum(QQ, FQ) {
+        for (let wQ = 0; wQ < 6; wQ++)
+          if (FQ[wQ].dotCoordinate(QQ) < 0) return !1;
         return !0
       }
     }
   },
-  37969: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Nd
+  37324: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => qQ
     });
-    var pd = kd(37251);
-    class Nd {
-      constructor(dd, Jd, kd, Nd) {
-        this.normal = new pd.n(dd, Jd, kd), this.d = Nd
+    var LQ = wQ(36696);
+    class qQ {
+      constructor(QQ, FQ, wQ, qQ) {
+        this.normal = new LQ.p(QQ, FQ, wQ), this.d = qQ
       }
-      spd() {
+      RLQ() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new Nd(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new qQ(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let dd = this.normal.getHashCode();
-        return dd = 397 * dd ^ this.d, dd
+        let QQ = this.normal.getHashCode();
+        return QQ = 397 * QQ ^ this.d, QQ
       }
       normalize() {
-        const dd = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let Jd = 0;
-        return 0 !== dd && (Jd = 1 / dd), this.normal.x *= Jd, this.normal.y *= Jd, this.normal.z *= Jd, this.d *= Jd, this
+        const QQ = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let FQ = 0;
+        return 0 !== QQ && (FQ = 1 / QQ), this.normal.x *= FQ, this.normal.y *= FQ, this.normal.z *= FQ, this.d *= FQ, this
       }
-      transform(dd) {
-        const Jd = Nd._TmpMatrix;
-        dd.invertToRef(Jd);
-        const kd = Jd.m,
-          pd = this.normal.x,
-          Wd = this.normal.y,
-          Pd = this.normal.z,
-          Zd = this.d,
-          gd = pd * kd[0] + Wd * kd[1] + Pd * kd[2] + Zd * kd[3],
-          Cd = pd * kd[4] + Wd * kd[5] + Pd * kd[6] + Zd * kd[7],
-          Kd = pd * kd[8] + Wd * kd[9] + Pd * kd[10] + Zd * kd[11],
-          od = pd * kd[12] + Wd * kd[13] + Pd * kd[14] + Zd * kd[15];
-        return new Nd(gd, Cd, Kd, od)
+      transform(QQ) {
+        const FQ = qQ._TmpMatrix;
+        QQ.invertToRef(FQ);
+        const wQ = FQ.m,
+          LQ = this.normal.x,
+          oQ = this.normal.y,
+          DQ = this.normal.z,
+          kQ = this.d,
+          vQ = LQ * wQ[0] + oQ * wQ[1] + DQ * wQ[2] + kQ * wQ[3],
+          mQ = LQ * wQ[4] + oQ * wQ[5] + DQ * wQ[6] + kQ * wQ[7],
+          uQ = LQ * wQ[8] + oQ * wQ[9] + DQ * wQ[10] + kQ * wQ[11],
+          HQ = LQ * wQ[12] + oQ * wQ[13] + DQ * wQ[14] + kQ * wQ[15];
+        return new qQ(vQ, mQ, uQ, HQ)
       }
-      dotCoordinate(dd) {
-        return this.normal.x * dd.x + this.normal.y * dd.y + this.normal.z * dd.z + this.d
+      dotCoordinate(QQ) {
+        return this.normal.x * QQ.x + this.normal.y * QQ.y + this.normal.z * QQ.z + this.d
       }
-      copyFromPoints(dd, Jd, kd) {
-        const pd = Jd.x - dd.x,
-          Nd = Jd.y - dd.y,
-          Wd = Jd.z - dd.z,
-          Pd = kd.x - dd.x,
-          Zd = kd.y - dd.y,
-          gd = kd.z - dd.z,
-          Cd = Nd * gd - Wd * Zd,
-          Kd = Wd * Pd - pd * gd,
-          od = pd * Zd - Nd * Pd,
-          ld = Math.sqrt(Cd * Cd + Kd * Kd + od * od);
-        let Qd;
-        return Qd = 0 !== ld ? 1 / ld : 0, this.normal.x = Cd * Qd, this.normal.y = Kd * Qd, this.normal.z = od * Qd, this.d = -(this.normal.x * dd.x + this.normal.y * dd.y + this.normal.z * dd.z), this
+      copyFromPoints(QQ, FQ, wQ) {
+        const LQ = FQ.x - QQ.x,
+          qQ = FQ.y - QQ.y,
+          oQ = FQ.z - QQ.z,
+          DQ = wQ.x - QQ.x,
+          kQ = wQ.y - QQ.y,
+          vQ = wQ.z - QQ.z,
+          mQ = qQ * vQ - oQ * kQ,
+          uQ = oQ * DQ - LQ * vQ,
+          HQ = LQ * kQ - qQ * DQ,
+          bQ = Math.sqrt(mQ * mQ + uQ * uQ + HQ * HQ);
+        let YQ;
+        return YQ = 0 !== bQ ? 1 / bQ : 0, this.normal.x = mQ * YQ, this.normal.y = uQ * YQ, this.normal.z = HQ * YQ, this.d = -(this.normal.x * QQ.x + this.normal.y * QQ.y + this.normal.z * QQ.z), this
       }
-      isFrontFacingTo(dd, Jd) {
-        return pd.n.Dot(this.normal, dd) <= Jd
+      isFrontFacingTo(QQ, FQ) {
+        return LQ.p.Dot(this.normal, QQ) <= FQ
       }
-      signedDistanceTo(dd) {
-        return pd.n.Dot(dd, this.normal) + this.d
+      signedDistanceTo(QQ) {
+        return LQ.p.Dot(QQ, this.normal) + this.d
       }
-      static FromArray(dd) {
-        return new Nd(dd[0], dd[1], dd[2], dd[3])
+      static FromArray(QQ) {
+        return new qQ(QQ[0], QQ[1], QQ[2], QQ[3])
       }
-      static FromPoints(dd, Jd, kd) {
-        const pd = new Nd(0, 0, 0, 0);
-        return pd.copyFromPoints(dd, Jd, kd), pd
+      static FromPoints(QQ, FQ, wQ) {
+        const LQ = new qQ(0, 0, 0, 0);
+        return LQ.copyFromPoints(QQ, FQ, wQ), LQ
       }
-      static FromPositionAndNormal(dd, Jd) {
-        const kd = new Nd(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(dd, Jd, kd)
+      static FromPositionAndNormal(QQ, FQ) {
+        const wQ = new qQ(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(QQ, FQ, wQ)
       }
-      static FromPositionAndNormalToRef(dd, Jd, kd) {
-        return kd.normal.Fs(Jd), kd.normal.normalize(), kd.d = -dd.dot(kd.normal), kd
+      static FromPositionAndNormalToRef(QQ, FQ, wQ) {
+        return wQ.normal.Qs(FQ), wQ.normal.normalize(), wQ.d = -QQ.dot(wQ.normal), wQ
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(dd, Jd, kd) {
-        const Nd = -(Jd.x * dd.x + Jd.y * dd.y + Jd.z * dd.z);
-        return pd.n.Dot(kd, Jd) + Nd
+      static SignedDistanceToPlaneFromPositionAndNormal(QQ, FQ, wQ) {
+        const qQ = -(FQ.x * QQ.x + FQ.y * QQ.y + FQ.z * QQ.z);
+        return LQ.p.Dot(wQ, FQ) + qQ
       }
     }
-    Nd._TmpMatrix = pd.b.Identity()
+    qQ._TmpMatrix = LQ.c.Identity()
   },
-  37245: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      Matrix: () => pd.b,
-      Quaternion: () => pd.d,
-      RegisterMathVector: () => pd.f,
-      TmpVectors: () => pd.h,
-      Vector2: () => pd.k,
-      IL: () => pd.n,
-      Vector4: () => pd.o
+  36688: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      Matrix: () => LQ.c,
+      Quaternion: () => LQ.e,
+      RegisterMathVector: () => LQ.i,
+      TmpVectors: () => LQ.k,
+      Vector2: () => LQ.n,
+      Ox: () => LQ.p,
+      Vector4: () => LQ.t
     });
-    var pd = kd(37251);
-    (0, pd.f)()
+    var LQ = wQ(36696);
+    (0, LQ.i)()
   },
-  38281: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => pd
+  37631: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => LQ
     });
-    class pd {
-      constructor(dd, Jd, kd, pd) {
-        this.x = dd, this.y = Jd, this.width = kd, this.height = pd
+    class LQ {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.x = QQ, this.y = FQ, this.width = wQ, this.height = LQ
       }
-      toGlobal(dd, Jd) {
-        return new pd(this.x * dd, this.y * Jd, this.width * dd, this.height * Jd)
+      toGlobal(QQ, FQ) {
+        return new LQ(this.x * QQ, this.y * FQ, this.width * QQ, this.height * FQ)
       }
-      toGlobalToRef(dd, Jd, kd) {
-        return kd.x = this.x * dd, kd.y = this.y * Jd, kd.width = this.width * dd, kd.height = this.height * Jd, this
+      toGlobalToRef(QQ, FQ, wQ) {
+        return wQ.x = this.x * QQ, wQ.y = this.y * FQ, wQ.width = this.width * QQ, wQ.height = this.height * FQ, this
       }
       clone() {
-        return new pd(this.x, this.y, this.width, this.height)
+        return new LQ(this.x, this.y, this.width, this.height)
       }
     }
   },
-  40388: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Cd
+  39822: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => mQ
     });
-    var pd = kd(37251),
-      Nd = kd(37443),
-      Wd = kd(40393),
-      Pd = kd(40402),
-      Zd = kd(40419);
+    var LQ = wQ(36696),
+      qQ = wQ(36873),
+      oQ = wQ(39829),
+      DQ = wQ(39835),
+      kQ = wQ(39852);
 
-    function gd(dd) {
-      let Jd = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
-      const kd = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
-        Wd = [],
-        gd = dd.width || dd.size || 1,
-        Cd = dd.height || dd.size || 1,
-        Kd = dd.depth || dd.size || 1,
-        od = dd.wrap || !1;
-      let ld = void 0 === dd.topBaseAt ? 1 : dd.topBaseAt,
-        Qd = void 0 === dd.bottomBaseAt ? 0 : dd.bottomBaseAt;
-      ld = (ld + 4) % 4, Qd = (Qd + 4) % 4;
-      let Ld = [2, 0, 3, 1][ld],
-        Od = [2, 0, 1, 3][Qd],
-        ed = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
-      if (od) {
-        Jd = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], ed = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
-        let dd = [
+    function vQ(QQ) {
+      let FQ = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const wQ = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        oQ = [],
+        vQ = QQ.width || QQ.size || 1,
+        mQ = QQ.height || QQ.size || 1,
+        uQ = QQ.depth || QQ.size || 1,
+        HQ = QQ.wrap || !1;
+      let bQ = void 0 === QQ.topBaseAt ? 1 : QQ.topBaseAt,
+        YQ = void 0 === QQ.bottomBaseAt ? 0 : QQ.bottomBaseAt;
+      bQ = (bQ + 4) % 4, YQ = (YQ + 4) % 4;
+      let xQ = [2, 0, 3, 1][bQ],
+        AQ = [2, 0, 1, 3][YQ],
+        tQ = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (HQ) {
+        FQ = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], tQ = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+        let QQ = [
             [1, 1, 1],
             [-1, 1, 1],
             [-1, 1, -1],
             [1, 1, -1]
           ],
-          kd = [
+          wQ = [
             [-1, -1, 1],
             [1, -1, 1],
             [1, -1, -1],
             [-1, -1, -1]
           ];
-        const pd = [17, 18, 19, 16],
-          Nd = [22, 23, 20, 21];
-        for (; Ld > 0;) dd.unshift(dd.pop()), pd.unshift(pd.pop()), Ld--;
-        for (; Od > 0;) kd.unshift(kd.pop()), Nd.unshift(Nd.pop()), Od--;
-        dd = dd.flat(), kd = kd.flat(), ed = ed.concat(dd).concat(kd), Jd.push(pd[0], pd[2], pd[3], pd[0], pd[1], pd[2]), Jd.push(Nd[0], Nd[2], Nd[3], Nd[0], Nd[1], Nd[2])
+        const LQ = [17, 18, 19, 16],
+          qQ = [22, 23, 20, 21];
+        for (; xQ > 0;) QQ.unshift(QQ.pop()), LQ.unshift(LQ.pop()), xQ--;
+        for (; AQ > 0;) wQ.unshift(wQ.pop()), qQ.unshift(qQ.pop()), AQ--;
+        QQ = QQ.flat(), wQ = wQ.flat(), tQ = tQ.concat(QQ).concat(wQ), FQ.push(LQ[0], LQ[2], LQ[3], LQ[0], LQ[1], LQ[2]), FQ.push(qQ[0], qQ[2], qQ[3], qQ[0], qQ[1], qQ[2])
       }
-      const Rd = [gd / 2, Cd / 2, Kd / 2],
-        Id = ed.reduce(((dd, Jd, kd) => dd.concat(Jd * Rd[kd % 3])), []),
-        Gd = 0 === dd.sideOrientation ? 0 : dd.sideOrientation || Pd.c.DEFAULTSIDE,
-        vd = dd.faceUV || new Array(6),
-        xd = dd.faceColors,
-        qd = [];
-      for (let Pd = 0; Pd < 6; Pd++) void 0 === vd[Pd] && (vd[Pd] = new pd.o(0, 0, 1, 1)), xd && void 0 === xd[Pd] && (xd[Pd] = new Nd.g(1, 1, 1, 1));
-      for (let pd = 0; pd < 6; pd++)
-        if (Wd.push(vd[pd].z, Zd.d ? 1 - vd[pd].w : vd[pd].w), Wd.push(vd[pd].x, Zd.d ? 1 - vd[pd].w : vd[pd].w), Wd.push(vd[pd].x, Zd.d ? 1 - vd[pd].y : vd[pd].y), Wd.push(vd[pd].z, Zd.d ? 1 - vd[pd].y : vd[pd].y), xd)
-          for (let dd = 0; dd < 4; dd++) qd.push(xd[pd].r, xd[pd].g, xd[pd].b, xd[pd].a);
-      Pd.c._ComputeSides(Gd, Id, Jd, kd, Wd, dd.frontUVs, dd.backUVs);
-      const Bd = new Pd.c;
-      if (Bd.indices = Jd, Bd.positions = Id, Bd.normals = kd, Bd.uvs = Wd, xd) {
-        const dd = Gd === Pd.c.DOUBLESIDE ? qd.concat(qd) : qd;
-        Bd.colors = dd
+      const eQ = [vQ / 2, mQ / 2, uQ / 2],
+        MQ = tQ.reduce(((QQ, FQ, wQ) => QQ.concat(FQ * eQ[wQ % 3])), []),
+        GQ = 0 === QQ.sideOrientation ? 0 : QQ.sideOrientation || DQ.c.DEFAULTSIDE,
+        pQ = QQ.faceUV || new Array(6),
+        cQ = QQ.faceColors,
+        CQ = [];
+      for (let DQ = 0; DQ < 6; DQ++) void 0 === pQ[DQ] && (pQ[DQ] = new LQ.t(0, 0, 1, 1)), cQ && void 0 === cQ[DQ] && (cQ[DQ] = new qQ.e(1, 1, 1, 1));
+      for (let LQ = 0; LQ < 6; LQ++)
+        if (oQ.push(pQ[LQ].z, kQ.d ? 1 - pQ[LQ].w : pQ[LQ].w), oQ.push(pQ[LQ].x, kQ.d ? 1 - pQ[LQ].w : pQ[LQ].w), oQ.push(pQ[LQ].x, kQ.d ? 1 - pQ[LQ].y : pQ[LQ].y), oQ.push(pQ[LQ].z, kQ.d ? 1 - pQ[LQ].y : pQ[LQ].y), cQ)
+          for (let QQ = 0; QQ < 4; QQ++) CQ.push(cQ[LQ].r, cQ[LQ].g, cQ[LQ].b, cQ[LQ].a);
+      DQ.c._ComputeSides(GQ, MQ, FQ, wQ, oQ, QQ.frontUVs, QQ.backUVs);
+      const SQ = new DQ.c;
+      if (SQ.indices = FQ, SQ.positions = MQ, SQ.normals = wQ, SQ.uvs = oQ, cQ) {
+        const QQ = GQ === DQ.c.DOUBLESIDE ? CQ.concat(CQ) : CQ;
+        SQ.colors = QQ
       }
-      return Bd
+      return SQ
     }
 
-    function Cd(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const pd = new Wd.b(dd, kd);
-      Jd.sideOrientation = Wd.b._GetDefaultSideOrientation(Jd.sideOrientation), pd._originalBuilderSideOrientation = Jd.sideOrientation;
-      return gd(Jd).applyToMesh(pd, Jd.updatable), pd
+    function mQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const LQ = new oQ.c(QQ, wQ);
+      FQ.sideOrientation = oQ.c._GetDefaultSideOrientation(FQ.sideOrientation), LQ._originalBuilderSideOrientation = FQ.sideOrientation;
+      return vQ(FQ).applyToMesh(LQ, FQ.updatable), LQ
     }
-    let Kd = !1;
-    Kd || (Kd = !0, Pd.c.CreateBox = gd, Wd.b.CreateBox = function(dd, Jd) {
-      return Cd(dd, {
-        size: Jd,
+    let uQ = !1;
+    uQ || (uQ = !0, DQ.c.CreateBox = vQ, oQ.c.CreateBox = function(QQ, FQ) {
+      return mQ(QQ, {
+        size: FQ,
         sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
         updatable: arguments.length > 3 ? arguments[3] : void 0
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  40444: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => od
+  39872: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => HQ
     });
-    var pd = kd(37251),
-      Nd = kd(40393),
-      Wd = kd(40402),
-      Pd = kd(40448),
-      Zd = kd(40115),
-      gd = kd(38812);
+    var LQ = wQ(36696),
+      qQ = wQ(39829),
+      oQ = wQ(39835),
+      DQ = wQ(39881),
+      kQ = wQ(39561),
+      vQ = wQ(38203);
 
-    function Cd(dd) {
-      const Jd = [],
-        kd = [],
-        pd = dd.lines,
-        Nd = dd.colors,
-        Pd = [];
-      let Zd = 0;
-      for (let Wd = 0; Wd < pd.length; Wd++) {
-        const dd = pd[Wd];
-        for (let pd = 0; pd < dd.length; pd++) {
+    function mQ(QQ) {
+      const FQ = [],
+        wQ = [],
+        LQ = QQ.lines,
+        qQ = QQ.colors,
+        DQ = [];
+      let kQ = 0;
+      for (let oQ = 0; oQ < LQ.length; oQ++) {
+        const QQ = LQ[oQ];
+        for (let LQ = 0; LQ < QQ.length; LQ++) {
           const {
-            x: gd,
-            y: Cd,
-            z: Kd
-          } = dd[pd];
-          if (kd.push(gd, Cd, Kd), Nd) {
-            const dd = Nd[Wd],
+            x: vQ,
+            y: mQ,
+            z: uQ
+          } = QQ[LQ];
+          if (wQ.push(vQ, mQ, uQ), qQ) {
+            const QQ = qQ[oQ],
               {
-                r: Jd,
-                g: kd,
-                b: Zd,
-                a: gd
-              } = dd[pd];
-            Pd.push(Jd, kd, Zd, gd)
+                r: FQ,
+                g: wQ,
+                b: kQ,
+                a: vQ
+              } = QQ[LQ];
+            DQ.push(FQ, wQ, kQ, vQ)
           }
-          pd > 0 && (Jd.push(Zd - 1), Jd.push(Zd)), Zd++
+          LQ > 0 && (FQ.push(kQ - 1), FQ.push(kQ)), kQ++
         }
       }
-      const gd = new Wd.c;
-      return gd.indices = Jd, gd.positions = kd, Nd && (gd.colors = Pd), gd
+      const vQ = new oQ.c;
+      return vQ.indices = FQ, vQ.positions = wQ, qQ && (vQ.colors = DQ), vQ
     }
 
-    function Kd(dd) {
-      const Jd = dd.dashSize || 3,
-        kd = dd.gapSize || 1,
-        Nd = dd.dashNb || 200,
-        Pd = dd.points,
-        Zd = [],
-        gd = [],
-        Cd = pd.n.Zero();
-      let Kd, od, ld, Qd = 0,
-        Ld = 0;
-      for (ld = 0; ld < Pd.length - 1; ld++) Pd[ld + 1].subtractToRef(Pd[ld], Cd), Qd += Cd.length();
-      const Od = Qd / Nd,
-        ed = Jd * Od / (Jd + kd);
-      for (ld = 0; ld < Pd.length - 1; ld++) {
-        Pd[ld + 1].subtractToRef(Pd[ld], Cd), Kd = Math.floor(Cd.length() / Od), Cd.normalize();
-        for (let dd = 0; dd < Kd; dd++) od = Od * dd, Zd.push(Pd[ld].x + od * Cd.x, Pd[ld].y + od * Cd.y, Pd[ld].z + od * Cd.z), Zd.push(Pd[ld].x + (od + ed) * Cd.x, Pd[ld].y + (od + ed) * Cd.y, Pd[ld].z + (od + ed) * Cd.z), gd.push(Ld, Ld + 1), Ld += 2
+    function uQ(QQ) {
+      const FQ = QQ.dashSize || 3,
+        wQ = QQ.gapSize || 1,
+        qQ = QQ.dashNb || 200,
+        DQ = QQ.points,
+        kQ = [],
+        vQ = [],
+        mQ = LQ.p.Zero();
+      let uQ, HQ, bQ, YQ = 0,
+        xQ = 0;
+      for (bQ = 0; bQ < DQ.length - 1; bQ++) DQ[bQ + 1].subtractToRef(DQ[bQ], mQ), YQ += mQ.length();
+      const AQ = YQ / qQ,
+        tQ = FQ * AQ / (FQ + wQ);
+      for (bQ = 0; bQ < DQ.length - 1; bQ++) {
+        DQ[bQ + 1].subtractToRef(DQ[bQ], mQ), uQ = Math.floor(mQ.length() / AQ), mQ.normalize();
+        for (let QQ = 0; QQ < uQ; QQ++) HQ = AQ * QQ, kQ.push(DQ[bQ].x + HQ * mQ.x, DQ[bQ].y + HQ * mQ.y, DQ[bQ].z + HQ * mQ.z), kQ.push(DQ[bQ].x + (HQ + tQ) * mQ.x, DQ[bQ].y + (HQ + tQ) * mQ.y, DQ[bQ].z + (HQ + tQ) * mQ.z), vQ.push(xQ, xQ + 1), xQ += 2
       }
-      const Rd = new Wd.c;
-      return Rd.positions = Zd, Rd.indices = gd, Rd
+      const eQ = new oQ.c;
+      return eQ.positions = kQ, eQ.indices = vQ, eQ
     }
 
-    function od(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const pd = Jd.instance,
-        Nd = Jd.lines,
-        Wd = Jd.colors;
-      if (pd) {
-        const dd = pd.getVerticesData(Zd.j.PositionKind);
-        let Jd, kd;
-        Wd && (Jd = pd.getVerticesData(Zd.j.ColorKind));
-        let Pd = 0,
-          gd = 0;
-        for (let pd = 0; pd < Nd.length; pd++) {
-          const Zd = Nd[pd];
-          for (let Nd = 0; Nd < Zd.length; Nd++) dd[Pd] = Zd[Nd].x, dd[Pd + 1] = Zd[Nd].y, dd[Pd + 2] = Zd[Nd].z, Wd && Jd && (kd = Wd[pd], Jd[gd] = kd[Nd].r, Jd[gd + 1] = kd[Nd].g, Jd[gd + 2] = kd[Nd].b, Jd[gd + 3] = kd[Nd].a, gd += 4), Pd += 3
+    function HQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const LQ = FQ.instance,
+        qQ = FQ.lines,
+        oQ = FQ.colors;
+      if (LQ) {
+        const QQ = LQ.getVerticesData(kQ.h.PositionKind);
+        let FQ, wQ;
+        oQ && (FQ = LQ.getVerticesData(kQ.h.ColorKind));
+        let DQ = 0,
+          vQ = 0;
+        for (let LQ = 0; LQ < qQ.length; LQ++) {
+          const kQ = qQ[LQ];
+          for (let qQ = 0; qQ < kQ.length; qQ++) QQ[DQ] = kQ[qQ].x, QQ[DQ + 1] = kQ[qQ].y, QQ[DQ + 2] = kQ[qQ].z, oQ && FQ && (wQ = oQ[LQ], FQ[vQ] = wQ[qQ].r, FQ[vQ + 1] = wQ[qQ].g, FQ[vQ + 2] = wQ[qQ].b, FQ[vQ + 3] = wQ[qQ].a, vQ += 4), DQ += 3
         }
-        return pd.updateVerticesData(Zd.j.PositionKind, dd, !1, !1), Wd && Jd && pd.updateVerticesData(Zd.j.ColorKind, Jd, !1, !1), pd.refreshBoundingInfo(), pd
+        return LQ.updateVerticesData(kQ.h.PositionKind, QQ, !1, !1), oQ && FQ && LQ.updateVerticesData(kQ.h.ColorKind, FQ, !1, !1), LQ.refreshBoundingInfo(), LQ
       }
-      const gd = !!Wd,
-        Kd = new Pd.e(dd, kd, null, void 0, void 0, gd, Jd.useVertexAlpha, Jd.material);
-      return Cd(Jd).applyToMesh(Kd, Jd.updatable), Kd
+      const vQ = !!oQ,
+        uQ = new DQ.b(QQ, wQ, null, void 0, void 0, vQ, FQ.useVertexAlpha, FQ.material);
+      return mQ(FQ).applyToMesh(uQ, FQ.updatable), uQ
     }
 
-    function ld(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const pd = Jd.colors ? [Jd.colors] : null;
-      return od(dd, {
-        lines: [Jd.points],
-        updatable: Jd.updatable,
-        instance: Jd.instance,
-        colors: pd,
-        useVertexAlpha: Jd.useVertexAlpha,
-        material: Jd.material
-      }, kd)
+    function bQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const LQ = FQ.colors ? [FQ.colors] : null;
+      return HQ(QQ, {
+        lines: [FQ.points],
+        updatable: FQ.updatable,
+        instance: FQ.instance,
+        colors: LQ,
+        useVertexAlpha: FQ.useVertexAlpha,
+        material: FQ.material
+      }, wQ)
     }
 
-    function Qd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Wd = Jd.points,
-        Zd = Jd.instance,
-        Cd = Jd.gapSize || 1,
-        od = Jd.dashSize || 3;
-      if (Zd) {
-        const dd = dd => {
-          const Jd = pd.n.Zero(),
-            kd = dd.length / 6;
-          let Nd, Pd, gd, Cd, Kd = 0,
-            od = 0;
-          for (gd = 0; gd < Wd.length - 1; gd++) Wd[gd + 1].subtractToRef(Wd[gd], Jd), Kd += Jd.length();
-          const ld = Kd / kd,
-            Qd = Zd._creationDataStorage.dashSize,
-            Ld = Qd * ld / (Qd + Zd._creationDataStorage.gapSize);
-          for (gd = 0; gd < Wd.length - 1; gd++)
-            for (Wd[gd + 1].subtractToRef(Wd[gd], Jd), Nd = Math.floor(Jd.length() / ld), Jd.normalize(), Cd = 0; Cd < Nd && od < dd.length;) Pd = ld * Cd, dd[od] = Wd[gd].x + Pd * Jd.x, dd[od + 1] = Wd[gd].y + Pd * Jd.y, dd[od + 2] = Wd[gd].z + Pd * Jd.z, dd[od + 3] = Wd[gd].x + (Pd + Ld) * Jd.x, dd[od + 4] = Wd[gd].y + (Pd + Ld) * Jd.y, dd[od + 5] = Wd[gd].z + (Pd + Ld) * Jd.z, od += 6, Cd++;
-          for (; od < dd.length;) dd[od] = Wd[gd].x, dd[od + 1] = Wd[gd].y, dd[od + 2] = Wd[gd].z, od += 3
+    function YQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const oQ = FQ.points,
+        kQ = FQ.instance,
+        mQ = FQ.gapSize || 1,
+        HQ = FQ.dashSize || 3;
+      if (kQ) {
+        const QQ = QQ => {
+          const FQ = LQ.p.Zero(),
+            wQ = QQ.length / 6;
+          let qQ, DQ, vQ, mQ, uQ = 0,
+            HQ = 0;
+          for (vQ = 0; vQ < oQ.length - 1; vQ++) oQ[vQ + 1].subtractToRef(oQ[vQ], FQ), uQ += FQ.length();
+          const bQ = uQ / wQ,
+            YQ = kQ._creationDataStorage.dashSize,
+            xQ = YQ * bQ / (YQ + kQ._creationDataStorage.gapSize);
+          for (vQ = 0; vQ < oQ.length - 1; vQ++)
+            for (oQ[vQ + 1].subtractToRef(oQ[vQ], FQ), qQ = Math.floor(FQ.length() / bQ), FQ.normalize(), mQ = 0; mQ < qQ && HQ < QQ.length;) DQ = bQ * mQ, QQ[HQ] = oQ[vQ].x + DQ * FQ.x, QQ[HQ + 1] = oQ[vQ].y + DQ * FQ.y, QQ[HQ + 2] = oQ[vQ].z + DQ * FQ.z, QQ[HQ + 3] = oQ[vQ].x + (DQ + xQ) * FQ.x, QQ[HQ + 4] = oQ[vQ].y + (DQ + xQ) * FQ.y, QQ[HQ + 5] = oQ[vQ].z + (DQ + xQ) * FQ.z, HQ += 6, mQ++;
+          for (; HQ < QQ.length;) QQ[HQ] = oQ[vQ].x, QQ[HQ + 1] = oQ[vQ].y, QQ[HQ + 2] = oQ[vQ].z, HQ += 3
         };
-        return (Jd.dashNb || Jd.dashSize || Jd.gapSize || Jd.useVertexAlpha || Jd.material) && gd.c.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), Zd.updateMeshPositions(dd, !1), Zd
+        return (FQ.dashNb || FQ.dashSize || FQ.gapSize || FQ.useVertexAlpha || FQ.material) && vQ.c.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), kQ.updateMeshPositions(QQ, !1), kQ
       }
-      const ld = new Pd.e(dd, kd, null, void 0, void 0, void 0, Jd.useVertexAlpha, Jd.material);
-      return Kd(Jd).applyToMesh(ld, Jd.updatable), ld._creationDataStorage = new Nd.g, ld._creationDataStorage.dashSize = od, ld._creationDataStorage.gapSize = Cd, ld
+      const bQ = new DQ.b(QQ, wQ, null, void 0, void 0, void 0, FQ.useVertexAlpha, FQ.material);
+      return uQ(FQ).applyToMesh(bQ, FQ.updatable), bQ._creationDataStorage = new qQ.f, bQ._creationDataStorage.dashSize = HQ, bQ._creationDataStorage.gapSize = mQ, bQ
     }
-    let Ld = !1;
-    Ld || (Ld = !0, Wd.c.CreateLineSystem = Cd, Wd.c.CreateDashedLines = Kd, Nd.b.CreateLines = function(dd, Jd) {
-      return ld(dd, {
-        points: Jd,
+    let xQ = !1;
+    xQ || (xQ = !0, oQ.c.CreateLineSystem = mQ, oQ.c.CreateDashedLines = uQ, qQ.c.CreateLines = function(QQ, FQ) {
+      return bQ(QQ, {
+        points: FQ,
         updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
-    }, Nd.b.CreateDashedLines = function(dd, Jd, kd, pd, Nd) {
-      return Qd(dd, {
-        points: Jd,
-        dashSize: kd,
-        gapSize: pd,
-        dashNb: Nd,
+    }, qQ.c.CreateDashedLines = function(QQ, FQ, wQ, LQ, qQ) {
+      return YQ(QQ, {
+        points: FQ,
+        dashSize: wQ,
+        gapSize: LQ,
+        dashNb: qQ,
         updatable: arguments.length > 6 ? arguments[6] : void 0,
         instance: arguments.length > 7 ? arguments[7] : void 0
       }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
     })
   },
-  40448: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => ld,
-      i: () => Od
+  39881: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => bQ,
+      f: () => AQ
     });
-    var pd, Nd, Wd = kd(37443),
-      Pd = kd(40115),
-      Zd = kd(40393),
-      gd = kd(40456),
-      Cd = kd(40278),
-      Kd = kd(40465),
-      od = kd(39860);
-    class ld extends Zd.b {
-      _isShaderMaterial(dd) {
-        return !!dd && "ShaderMaterial" === dd.getClassName()
+    var LQ, qQ, oQ = wQ(36873),
+      DQ = wQ(39561),
+      kQ = wQ(39829),
+      vQ = wQ(39886),
+      mQ = wQ(39717),
+      uQ = wQ(39892),
+      HQ = wQ(39277);
+    class bQ extends kQ.c {
+      _isShaderMaterial(QQ) {
+        return !!QQ && "ShaderMaterial" === QQ.getClassName()
       }
-      constructor(dd) {
-        let Jd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          pd = arguments.length > 5 ? arguments[5] : void 0,
-          Nd = arguments.length > 6 ? arguments[6] : void 0,
-          Zd = arguments.length > 7 ? arguments[7] : void 0;
-        super(dd, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, Jd, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = pd, this.useVertexAlpha = Nd, this.color = new Wd.c(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, Jd && (this.color = Jd.color.clone(), this.alpha = Jd.alpha, this.useVertexColor = Jd.useVertexColor, this.useVertexAlpha = Jd.useVertexAlpha), this.intersectionThreshold = .1;
-        const gd = {
-          attributes: [Pd.j.PositionKind],
+      constructor(QQ) {
+        let FQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          LQ = arguments.length > 5 ? arguments[5] : void 0,
+          qQ = arguments.length > 6 ? arguments[6] : void 0,
+          kQ = arguments.length > 7 ? arguments[7] : void 0;
+        super(QQ, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, FQ, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = LQ, this.useVertexAlpha = qQ, this.color = new oQ.b(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, FQ && (this.color = FQ.color.clone(), this.alpha = FQ.alpha, this.useVertexColor = FQ.useVertexColor, this.useVertexAlpha = FQ.useVertexAlpha), this.intersectionThreshold = .1;
+        const vQ = {
+          attributes: [DQ.h.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? gd.defines.push("#define VERTEXALPHA") : gd.needAlphaBlending = !1, this.useVertexColor ? (gd.defines.push("#define VERTEXCOLOR"), gd.attributes.push(Pd.j.ColorKind)) : (gd.uniforms.push("color"), this._color4 = new Wd.g), Zd) this.material = Zd;
+        if (this.useVertexAlpha ? vQ.defines.push("#define VERTEXALPHA") : vQ.needAlphaBlending = !1, this.useVertexColor ? (vQ.defines.push("#define VERTEXCOLOR"), vQ.attributes.push(DQ.h.ColorKind)) : (vQ.uniforms.push("color"), this._color4 = new oQ.e), kQ) this.material = kQ;
         else {
-          this.Wm().eL().isWebGPU && !ld.ForceGLSL && (this._shaderLanguage = 1), gd.shaderLanguage = this._shaderLanguage, gd.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([kd.e(335).then((() => kd(42467))), kd.e(341).then((() => kd(42469)))]) : await Promise.all([kd.e(317).then((() => kd(42477))), kd.e(323).then((() => kd(42483)))])
+          this.iN().Wx().isWebGPU && !bQ.ForceGLSL && (this._shaderLanguage = 1), vQ.shaderLanguage = this._shaderLanguage, vQ.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([wQ.e(335).then((() => wQ(41934))), wQ.e(341).then((() => wQ(41942)))]) : await Promise.all([wQ.e(317).then((() => wQ(41944))), wQ.e(323).then((() => wQ(41950)))])
           };
-          const dd = new Kd.v("colorShader", this.Wm(), "color", gd, !1);
-          dd.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(dd)
+          const QQ = new uQ.q("colorShader", this.iN(), "color", vQ, !1);
+          QQ.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(QQ)
         }
       }
       getClassName() {
@@ -630,193 +630,193 @@ export const modules = {
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(dd) {
-        const Jd = this.material;
-        if (Jd === dd) return;
-        const kd = Jd && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(dd), kd && Jd?.dispose()
+      set material(QQ) {
+        const FQ = this.material;
+        if (FQ === QQ) return;
+        const wQ = FQ && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(QQ), wQ && FQ?.dispose()
       }
-      _setInternalMaterial(dd) {
-        this._setMaterial(dd), this.material && (this.material.fillMode = Cd.b.LineListDrawMode, this.material.disableLighting = !0)
+      _setInternalMaterial(QQ) {
+        this._setMaterial(QQ), this.material && (this.material.fillMode = mQ.d.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
-      set checkCollisions(dd) {}
-      _bind(dd, Jd) {
+      set checkCollisions(QQ) {}
+      _bind(QQ, FQ) {
         if (!this._geometry) return this;
-        const kd = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(Jd, kd) : this._geometry._bind(Jd, kd, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const wQ = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(FQ, wQ) : this._geometry._bind(FQ, wQ, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
-            r: dd,
-            g: Jd,
-            b: kd
+            r: QQ,
+            g: FQ,
+            b: wQ
           } = this.color;
-          this._color4.set(dd, Jd, kd, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(QQ, FQ, wQ, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(dd, Jd, kd) {
+      _draw(QQ, FQ, wQ) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const pd = this.Wm().eL();
-        return this._unIndexed ? pd.drawArraysType(Cd.b.LineListDrawMode, dd.verticesStart, dd.verticesCount, kd) : pd.drawElementsType(Cd.b.LineListDrawMode, dd.indexStart, dd.indexCount, kd), this
+        const LQ = this.iN().Wx();
+        return this._unIndexed ? LQ.drawArraysType(mQ.d.LineListDrawMode, QQ.verticesStart, QQ.verticesCount, wQ) : LQ.drawElementsType(mQ.d.LineListDrawMode, QQ.indexStart, QQ.indexCount, wQ), this
       }
-      dispose(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || Jd) && this.material?.dispose(!1, !1, !0), super.dispose(dd)
+      dispose(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || FQ) && this.material?.dispose(!1, !1, !0), super.dispose(QQ)
       }
-      clone(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        if (Jd && void 0 === Jd._addToSceneRootNodes) {
-          const kd = Jd;
-          return kd.source = this, new ld(dd, this.Wm(), kd.parent, kd.source, kd.doNotCloneChildren)
+      clone(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        if (FQ && void 0 === FQ._addToSceneRootNodes) {
+          const wQ = FQ;
+          return wQ.source = this, new bQ(QQ, this.iN(), wQ.parent, wQ.source, wQ.doNotCloneChildren)
         }
-        return new ld(dd, this.Wm(), Jd, this, kd)
+        return new bQ(QQ, this.iN(), FQ, this, wQ)
       }
-      createInstance(dd) {
-        const Jd = new Qd(dd, this);
-        if (this.fn) {
-          Jd.fn = {};
-          for (const dd in this.fn) Jd.fn[dd] = this.fn[dd]
+      createInstance(QQ) {
+        const FQ = new YQ(QQ, this);
+        if (this.bK) {
+          FQ.bK = {};
+          for (const QQ in this.bK) FQ.bK[QQ] = this.bK[QQ]
         }
-        return Jd
+        return FQ
       }
-      serialize(dd) {
-        super.serialize(dd), dd.color = this.color.spd(), dd.alpha = this.alpha
+      serialize(QQ) {
+        super.serialize(QQ), QQ.color = this.color.RLQ(), QQ.alpha = this.alpha
       }
-      static Parse(dd, Jd) {
-        const kd = new ld(dd.name, Jd);
-        return kd.color = Wd.c.FromArray(dd.color), kd.alpha = dd.alpha, kd
+      static Parse(QQ, FQ) {
+        const wQ = new bQ(QQ.name, FQ);
+        return wQ.color = oQ.b.FromArray(QQ.color), wQ.alpha = QQ.alpha, wQ
       }
     }
-    ld.ForceGLSL = !1;
-    class Qd extends gd.c {
-      constructor(dd, Jd) {
-        super(dd, Jd), this.intersectionThreshold = Jd.intersectionThreshold
+    bQ.ForceGLSL = !1;
+    class YQ extends vQ.c {
+      constructor(QQ, FQ) {
+        super(QQ, FQ), this.intersectionThreshold = FQ.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let Ld = !1;
+    let xQ = !1;
 
-    function Od() {
-      Ld || (Ld = !0, Zd.b._LinesMeshParser = (dd, Jd) => ld.Parse(dd, Jd))
-    }(pd = ld.prototype).enableEdgesRendering ?? (pd.enableEdgesRendering = (0, od.j)("LinesMesh", "enableEdgesRendering")), (Nd = Qd.prototype).enableEdgesRendering ?? (Nd.enableEdgesRendering = (0, od.j)("InstancedLinesMesh", "enableEdgesRendering"))
+    function AQ() {
+      xQ || (xQ = !0, kQ.c._LinesMeshParser = (QQ, FQ) => bQ.Parse(QQ, FQ))
+    }(LQ = bQ.prototype).enableEdgesRendering ?? (LQ.enableEdgesRendering = (0, HQ.g)("LinesMesh", "enableEdgesRendering")), (qQ = YQ.prototype).enableEdgesRendering ?? (qQ.enableEdgesRendering = (0, HQ.g)("InstancedLinesMesh", "enableEdgesRendering"))
   },
-  38806: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Wd
+  38200: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => oQ
     });
-    var pd = kd(38812);
-    const Nd = (dd, Jd, kd) => dd ? dd.getClassName && "Mesh" === dd.getClassName() ? null : !dd.getClassName || "SubMesh" !== dd.getClassName() && "PhysicsBody" !== dd.getClassName() ? dd.clone ? dd.clone() : Array.isArray(dd) ? dd.slice() : kd && "object" === typeof dd ? {
-      ...dd
-    } : null : dd.clone(Jd) : null;
-    class Wd {
-      static DeepCopy(dd, Jd, kd, Wd) {
-        let Pd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Zd = function(dd) {
-          const Jd = [];
+    var LQ = wQ(38203);
+    const qQ = (QQ, FQ, wQ) => QQ ? QQ.getClassName && "Mesh" === QQ.getClassName() ? null : !QQ.getClassName || "SubMesh" !== QQ.getClassName() && "PhysicsBody" !== QQ.getClassName() ? QQ.clone ? QQ.clone() : Array.isArray(QQ) ? QQ.slice() : wQ && "object" === typeof QQ ? {
+      ...QQ
+    } : null : QQ.clone(FQ) : null;
+    class oQ {
+      static DeepCopy(QQ, FQ, wQ, oQ) {
+        let DQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const kQ = function(QQ) {
+          const FQ = [];
           do {
-            const kd = Object.getOwnPropertyNames(dd);
-            for (const dd of kd) - 1 === Jd.indexOf(dd) && Jd.push(dd)
-          } while (dd = Object.getPrototypeOf(dd));
-          return Jd
-        }(dd);
-        for (const Cd of Zd) {
-          if ("_" === Cd[0] && (!Wd || -1 === Wd.indexOf(Cd))) continue;
-          if (Cd.endsWith("Observable")) continue;
-          if (kd && -1 !== kd.indexOf(Cd)) continue;
-          const Zd = dd[Cd],
-            Kd = typeof Zd;
-          if ("function" !== Kd) try {
-            if ("object" === Kd)
-              if (Zd instanceof Uint8Array) Jd[Cd] = Uint8Array.from(Zd);
-              else if (Zd instanceof Array) {
-              if (Jd[Cd] = [], Zd.length > 0)
-                if ("object" == typeof Zd[0])
-                  for (let dd = 0; dd < Zd.length; dd++) {
-                    const kd = Nd(Zd[dd], Jd, Pd); - 1 === Jd[Cd].indexOf(kd) && Jd[Cd].push(kd)
-                  } else Jd[Cd] = Zd.slice(0)
-            } else Jd[Cd] = Nd(Zd, Jd, Pd);
-            else Jd[Cd] = Zd
-          } catch (gd) {
-            pd.c.Warn(gd.message)
+            const wQ = Object.getOwnPropertyNames(QQ);
+            for (const QQ of wQ) - 1 === FQ.indexOf(QQ) && FQ.push(QQ)
+          } while (QQ = Object.getPrototypeOf(QQ));
+          return FQ
+        }(QQ);
+        for (const mQ of kQ) {
+          if ("_" === mQ[0] && (!oQ || -1 === oQ.indexOf(mQ))) continue;
+          if (mQ.endsWith("Observable")) continue;
+          if (wQ && -1 !== wQ.indexOf(mQ)) continue;
+          const kQ = QQ[mQ],
+            uQ = typeof kQ;
+          if ("function" !== uQ) try {
+            if ("object" === uQ)
+              if (kQ instanceof Uint8Array) FQ[mQ] = Uint8Array.from(kQ);
+              else if (kQ instanceof Array) {
+              if (FQ[mQ] = [], kQ.length > 0)
+                if ("object" == typeof kQ[0])
+                  for (let QQ = 0; QQ < kQ.length; QQ++) {
+                    const wQ = qQ(kQ[QQ], FQ, DQ); - 1 === FQ[mQ].indexOf(wQ) && FQ[mQ].push(wQ)
+                  } else FQ[mQ] = kQ.slice(0)
+            } else FQ[mQ] = qQ(kQ, FQ, DQ);
+            else FQ[mQ] = kQ
+          } catch (vQ) {
+            LQ.c.Warn(vQ.message)
           }
         }
       }
     }
   },
-  38105: (dd, Jd, kd) => {
-    function pd() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (dd => {
-        const Jd = 16 * Math.random() | 0;
-        return ("x" === dd ? Jd : 3 & Jd | 8).toString(16)
+  37452: (QQ, FQ, wQ) => {
+    function LQ() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (QQ => {
+        const FQ = 16 * Math.random() | 0;
+        return ("x" === QQ ? FQ : 3 & FQ | 8).toString(16)
       }))
     }
-    kd.d(Jd, {
-      c: () => pd
+    wQ.d(FQ, {
+      d: () => LQ
     })
   },
-  38812: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd
+  38203: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => LQ
     });
-    class pd {
-      static _CheckLimit(dd, Jd) {
-        let kd = pd._LogLimitOutputs[dd];
-        return kd ? kd.current++ : (kd = {
-          limit: Jd,
+    class LQ {
+      static _CheckLimit(QQ, FQ) {
+        let wQ = LQ._LogLimitOutputs[QQ];
+        return wQ ? wQ.current++ : (wQ = {
+          limit: FQ,
           current: 1
-        }, pd._LogLimitOutputs[dd] = kd), kd.current <= kd.limit
+        }, LQ._LogLimitOutputs[QQ] = wQ), wQ.current <= wQ.limit
       }
-      static _GenerateLimitMessage(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const kd = pd._LogLimitOutputs[dd];
-        if (!kd || !pd.MessageLimitReached) return;
-        const Nd = this._Levels[Jd];
-        kd.current === kd.limit && pd[Nd.name](pd.MessageLimitReached.replace(/%LIMIT%/g, "" + kd.limit).replace(/%TYPE%/g, Nd.name ?? ""))
+      static _GenerateLimitMessage(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const wQ = LQ._LogLimitOutputs[QQ];
+        if (!wQ || !LQ.MessageLimitReached) return;
+        const qQ = this._Levels[FQ];
+        wQ.current === wQ.limit && LQ[qQ.name](LQ.MessageLimitReached.replace(/%LIMIT%/g, "" + wQ.limit).replace(/%TYPE%/g, qQ.name ?? ""))
       }
-      static _AddLogEntry(dd) {
-        pd._LogCache = dd + pd._LogCache, pd.OnNewCacheEntry && pd.OnNewCacheEntry(dd)
+      static _AddLogEntry(QQ) {
+        LQ._LogCache = QQ + LQ._LogCache, LQ.OnNewCacheEntry && LQ.OnNewCacheEntry(QQ)
       }
-      static _FormatMessage(dd) {
-        const Jd = dd => dd < 10 ? "0" + dd : "" + dd,
-          kd = new Date;
-        return "[" + Jd(kd.getHours()) + ":" + Jd(kd.getMinutes()) + ":" + Jd(kd.getSeconds()) + "]: " + dd
+      static _FormatMessage(QQ) {
+        const FQ = QQ => QQ < 10 ? "0" + QQ : "" + QQ,
+          wQ = new Date;
+        return "[" + FQ(wQ.getHours()) + ":" + FQ(wQ.getMinutes()) + ":" + FQ(wQ.getSeconds()) + "]: " + QQ
       }
-      static _LogDisabled(dd, Jd) {}
+      static _LogDisabled(QQ, FQ) {}
       static _LogEnabled() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 ? arguments[1] : void 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        const Nd = Array.isArray(Jd) ? Jd[0] : Jd;
-        if (void 0 !== kd && !pd._CheckLimit(Nd, kd)) return;
-        const Wd = pd._FormatMessage(Nd),
-          Pd = this._Levels[dd],
-          Zd = Array.isArray(Jd) ? Jd.slice(1) : [];
-        Pd.logFunc && Pd.logFunc("BJS - " + Wd, ...Zd);
-        const gd = `<div style='color:${Pd.color}'>${Wd}</div><br>`;
-        pd._AddLogEntry(gd), pd._GenerateLimitMessage(Nd, dd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 ? arguments[1] : void 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        const qQ = Array.isArray(FQ) ? FQ[0] : FQ;
+        if (void 0 !== wQ && !LQ._CheckLimit(qQ, wQ)) return;
+        const oQ = LQ._FormatMessage(qQ),
+          DQ = this._Levels[QQ],
+          kQ = Array.isArray(FQ) ? FQ.slice(1) : [];
+        DQ.logFunc && DQ.logFunc("BJS - " + oQ, ...kQ);
+        const vQ = `<div style='color:${DQ.color}'>${oQ}</div><br>`;
+        LQ._AddLogEntry(vQ), LQ._GenerateLimitMessage(qQ, QQ)
       }
       static get LogCache() {
-        return pd._LogCache
+        return LQ._LogCache
       }
       static ClearLogCache() {
-        pd._LogCache = "", pd._LogLimitOutputs = {}, pd.errorsCount = 0
+        LQ._LogCache = "", LQ._LogLimitOutputs = {}, LQ.errorsCount = 0
       }
-      static set LogLevels(dd) {
-        pd.Log = pd._LogDisabled, pd.Warn = pd._LogDisabled, pd.Error = pd._LogDisabled;
-        const Jd = [pd.MessageLogLevel, pd.WarningLogLevel, pd.ErrorLogLevel];
-        for (const kd of Jd)
-          if ((dd & kd) === kd) {
-            const dd = this._Levels[kd];
-            pd[dd.name] = pd._LogEnabled.bind(pd, kd)
+      static set LogLevels(QQ) {
+        LQ.Log = LQ._LogDisabled, LQ.Warn = LQ._LogDisabled, LQ.Error = LQ._LogDisabled;
+        const FQ = [LQ.MessageLogLevel, LQ.WarningLogLevel, LQ.ErrorLogLevel];
+        for (const wQ of FQ)
+          if ((QQ & wQ) === wQ) {
+            const QQ = this._Levels[wQ];
+            LQ[QQ.name] = LQ._LogEnabled.bind(LQ, wQ)
           }
       }
     }
-    pd.NoneLogLevel = 0, pd.MessageLogLevel = 1, pd.WarningLogLevel = 2, pd.ErrorLogLevel = 4, pd.AllLogLevel = 7, pd.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", pd._LogCache = "", pd._LogLimitOutputs = {}, pd._Levels = [{}, {
+    LQ.NoneLogLevel = 0, LQ.MessageLogLevel = 1, LQ.WarningLogLevel = 2, LQ.ErrorLogLevel = 4, LQ.AllLogLevel = 7, LQ.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", LQ._LogCache = "", LQ._LogLimitOutputs = {}, LQ._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -828,15 +828,15 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], pd.errorsCount = 0, pd.Log = pd._LogEnabled.bind(pd, pd.MessageLogLevel), pd.Warn = pd._LogEnabled.bind(pd, pd.WarningLogLevel), pd.Error = pd._LogEnabled.bind(pd, pd.ErrorLogLevel)
+    }], LQ.errorsCount = 0, LQ.Log = LQ._LogEnabled.bind(LQ, LQ.MessageLogLevel), LQ.Warn = LQ._LogEnabled.bind(LQ, LQ.WarningLogLevel), LQ.Error = LQ._LogEnabled.bind(LQ, LQ.ErrorLogLevel)
   },
-  40054: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => pd.i
+  39491: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => LQ.e
     });
-    var pd = kd(40062);
-    (0, pd.e)()
+    var LQ = wQ(39496);
+    (0, LQ.c)()
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,80 +1,80 @@
 export const id = 293;
 export const ids = [293];
 export const modules = {
-  41457: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      ensureLocalBloxdTypes: () => Rd
+  40881: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      ensureLocalBloxdTypes: () => eQ
     });
-    var pd = kd(4636),
-      Nd = kd(41351),
-      Wd = kd(41347),
-      Pd = kd(37030),
-      Zd = kd(37035),
-      gd = kd(37050);
-    const Cd = JSON.stringify({
+    var LQ = wQ(4610),
+      qQ = wQ(40770),
+      oQ = wQ(40764),
+      DQ = wQ(36472),
+      kQ = wQ(36481),
+      vQ = wQ(36491);
+    const mQ = JSON.stringify({
       name: "@bloxd",
       types: "index.d.ts"
     }, null, "\t") + "\n";
 
-    function Kd(dd) {
-      return dd.replace(/^\//, "")
+    function uQ(QQ) {
+      return QQ.replace(/^\//, "")
     }
 
-    function od(dd) {
-      return Kd((0, Zd.A)(dd.name, "")).replace(/\/$/, "")
+    function HQ(QQ) {
+      return uQ((0, kQ.p)(QQ.name, "")).replace(/\/$/, "")
     }
 
-    function ld(dd) {
-      return dd.typesVfsPath.slice(dd.typesVfsPath.lastIndexOf("/") + 1)
+    function bQ(QQ) {
+      return QQ.typesVfsPath.slice(QQ.typesVfsPath.lastIndexOf("/") + 1)
     }
 
-    function Qd(dd) {
+    function YQ(QQ) {
       return JSON.stringify({
-        name: dd.specifier,
-        types: ld(dd)
+        name: QQ.specifier,
+        types: bQ(QQ)
       }, null, "\t") + "\n"
     }
-    async function Ld(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-      const kd = [];
-      for await (const [pd, Nd] of dd.entries()) {
-        const dd = Jd ? `${Jd}/${pd}` : pd;
-        "directory" !== Nd.kind ? kd.push(dd) : kd.push(...await Ld(Nd, dd))
+    async function xQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+      const wQ = [];
+      for await (const [LQ, qQ] of QQ.entries()) {
+        const QQ = FQ ? `${FQ}/${LQ}` : LQ;
+        "directory" !== qQ.kind ? wQ.push(QQ) : wQ.push(...await xQ(qQ, QQ))
       }
-      return kd
+      return wQ
     }
-    async function Od(dd, Jd, kd) {
-      const pd = od(Jd),
-        Nd = await (0, gd.j)(dd, pd);
-      if (!Nd) return;
-      const Wd = new Set([ld(Jd), "package.json"]);
-      if (kd)
-        for (const gd of Object.keys(Jd.files)) Wd.add(gd);
-      const Pd = await Ld(Nd),
-        Zd = new Set;
-      for (const od of Pd) {
-        if (Wd.has(od)) continue;
-        await (0, gd.x)(dd, `${pd}/${od}`);
-        const Jd = od.split("/");
-        for (let dd = 1; dd < Jd.length; dd++) Zd.add(Jd.slice(0, dd).join("/"))
+    async function AQ(QQ, FQ, wQ) {
+      const LQ = HQ(FQ),
+        qQ = await (0, vQ.j)(QQ, LQ);
+      if (!qQ) return;
+      const oQ = new Set([bQ(FQ), "package.json"]);
+      if (wQ)
+        for (const vQ of Object.keys(FQ.files)) oQ.add(vQ);
+      const DQ = await xQ(qQ),
+        kQ = new Set;
+      for (const HQ of DQ) {
+        if (oQ.has(HQ)) continue;
+        await (0, vQ.y)(QQ, `${LQ}/${HQ}`);
+        const FQ = HQ.split("/");
+        for (let QQ = 1; QQ < FQ.length; QQ++) kQ.add(FQ.slice(0, QQ).join("/"))
       }
-      const Cd = [...Zd].sort(((dd, Jd) => Jd.split("/").length - dd.split("/").length));
-      for (const od of Cd) try {
-        await (0, gd.x)(dd, `${pd}/${od}`)
-      } catch (Kd) {
-        if (Kd instanceof DOMException && "InvalidModificationError" === Kd.name) continue;
-        throw Kd
+      const mQ = [...kQ].sort(((QQ, FQ) => FQ.split("/").length - QQ.split("/").length));
+      for (const HQ of mQ) try {
+        await (0, vQ.y)(QQ, `${LQ}/${HQ}`)
+      } catch (uQ) {
+        if (uQ instanceof DOMException && "InvalidModificationError" === uQ.name) continue;
+        throw uQ
       }
     }
 
-    function ed(dd) {
-      const Jd = {
+    function tQ(QQ) {
+      const FQ = {
         "@bloxd": ["./node_modules/@bloxd/index.d.ts"]
       };
-      for (const pd of Object.values(Pd.g)) Jd[pd.specifier] = [`.${pd.typesVfsPath}`];
-      const kd = [];
-      for (const pd of dd)
-        for (const dd of Object.keys(pd.files)) kd.push(Kd((0, Zd.A)(pd.name, dd)));
+      for (const LQ of Object.values(DQ.e)) FQ[LQ.specifier] = [`.${LQ.typesVfsPath}`];
+      const wQ = [];
+      for (const LQ of QQ)
+        for (const QQ of Object.keys(LQ.files)) wQ.push(uQ((0, kQ.p)(LQ.name, QQ)));
       return JSON.stringify({
         compilerOptions: {
           allowJs: !0,
@@ -87,26 +87,26 @@ export const modules = {
           noLib: !0,
           skipLibCheck: !0,
           baseUrl: ".",
-          paths: Jd
+          paths: FQ
         },
         include: ["./**/*.ts", "./**/*.js", "./**/*.d.ts"],
-        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...kd]
+        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...wQ]
       }, null, "\t") + "\n"
     }
-    async function Rd(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-      const kd = new Set(Jd.map((dd => dd.name))),
-        ld = Object.values(Pd.g).flatMap((Jd => {
-          const pd = Kd(Jd.typesVfsPath),
-            Nd = `${od(Jd)}/package.json`;
-          return [...kd.has(Jd.name) ? Object.entries(Jd.files).map((kd => {
-            let [pd, Nd] = kd;
-            return (0, gd.D)(dd, Kd((0, Zd.A)(Jd.name, pd)), Nd)
-          })) : [], (0, gd.D)(dd, pd, Jd.types), (0, gd.D)(dd, Nd, Qd(Jd))]
+    async function eQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+      const wQ = new Set(FQ.map((QQ => QQ.name))),
+        bQ = Object.values(DQ.e).flatMap((FQ => {
+          const LQ = uQ(FQ.typesVfsPath),
+            qQ = `${HQ(FQ)}/package.json`;
+          return [...wQ.has(FQ.name) ? Object.entries(FQ.files).map((wQ => {
+            let [LQ, qQ] = wQ;
+            return (0, vQ.H)(QQ, uQ((0, kQ.p)(FQ.name, LQ)), qQ)
+          })) : [], (0, vQ.H)(QQ, LQ, FQ.types), (0, vQ.H)(QQ, qQ, YQ(FQ))]
         }));
-      await Promise.all([(0, gd.D)(dd, "node_modules/@bloxd/index.d.ts", pd.default), (0, gd.D)(dd, "node_modules/@bloxd/globals.d.ts", Wd.b), (0, gd.D)(dd, "node_modules/@bloxd/lib.d.ts", Nd.c), (0, gd.D)(dd, "node_modules/@bloxd/package.json", Cd), (0, gd.D)(dd, "tsconfig.json", ed(Jd)), ...ld]), await Promise.all(Object.values(Pd.g).map((Jd => Od(dd, Jd, kd.has(Jd.name)))))
+      await Promise.all([(0, vQ.H)(QQ, "node_modules/@bloxd/index.d.ts", LQ.default), (0, vQ.H)(QQ, "node_modules/@bloxd/globals.d.ts", oQ.b), (0, vQ.H)(QQ, "node_modules/@bloxd/lib.d.ts", qQ.c), (0, vQ.H)(QQ, "node_modules/@bloxd/package.json", mQ), (0, vQ.H)(QQ, "tsconfig.json", tQ(FQ)), ...bQ]), await Promise.all(Object.values(DQ.e).map((FQ => AQ(QQ, FQ, wQ.has(FQ.name)))))
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

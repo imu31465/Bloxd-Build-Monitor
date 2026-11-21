@@ -1,132 +1,132 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  6505: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => vd,
-      f: () => xd,
-      h: () => Id,
-      l: () => Rd
+  6467: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => pQ,
+      g: () => cQ,
+      k: () => MQ,
+      l: () => eQ
     });
-    var pd = kd(6514);
-    const Nd = 6,
-      Wd = 3,
-      Pd = 1,
-      Zd = 2,
-      gd = 4,
-      Cd = 8,
-      Kd = 16,
-      od = 32,
-      ld = 64,
-      Qd = 128,
-      Ld = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var LQ = wQ(6470);
+    const qQ = 6,
+      oQ = 3,
+      DQ = 1,
+      kQ = 2,
+      vQ = 4,
+      mQ = 8,
+      uQ = 16,
+      HQ = 32,
+      bQ = 64,
+      YQ = 128,
+      xQ = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Od(dd) {
-      if (!dd) return 0;
-      const Jd = Ld.indexOf(dd);
-      if (Jd <= 0) throw new Error(`"${dd}" is not a shader pack hook function`);
-      return Jd
+    function AQ(QQ) {
+      if (!QQ) return 0;
+      const FQ = xQ.indexOf(QQ);
+      if (FQ <= 0) throw new Error(`"${QQ}" is not a shader pack hook function`);
+      return FQ
     }
 
-    function ed(dd) {
-      if (0 === dd) return null;
-      const Jd = Ld[dd];
-      if (void 0 === Jd) throw new Error(`${dd} is not a shader pack hook function id`);
-      return Jd
+    function tQ(QQ) {
+      if (0 === QQ) return null;
+      const FQ = xQ[QQ];
+      if (void 0 === FQ) throw new Error(`${QQ} is not a shader pack hook function id`);
+      return FQ
     }
 
-    function Rd(dd) {
-      const Jd = pd.c.length;
+    function eQ(QQ) {
+      const FQ = LQ.d.length;
       return {
-        strict: dd >= Jd,
-        program: pd.c[dd % Jd]
+        strict: QQ >= FQ,
+        program: LQ.d[QQ % FQ]
       }
     }
 
-    function Id(dd) {
-      return Number(dd.strict) * pd.c.length + pd.c.indexOf(dd.program)
+    function MQ(QQ) {
+      return Number(QQ.strict) * LQ.d.length + LQ.d.indexOf(QQ.program)
     }
 
-    function Gd(dd) {
-      return "" === dd ? [] : dd.split(" ")
+    function GQ(QQ) {
+      return "" === QQ ? [] : QQ.split(" ")
     }
 
-    function vd(dd) {
-      const Jd = {
-        variantFlags: new Uint8Array(Nd),
-        hooks: new Uint8Array(Nd * Wd),
-        moduleCodes: Array(Nd).fill(""),
-        reads: Array(2 * Nd).fill("")
+    function pQ(QQ) {
+      const FQ = {
+        variantFlags: new Uint8Array(qQ),
+        hooks: new Uint8Array(qQ * oQ),
+        moduleCodes: Array(qQ).fill(""),
+        reads: Array(2 * qQ).fill("")
       };
-      for (const kd of dd) {
-        const dd = Id(kd.key),
-          pd = (dd, Jd) => null === kd.hooks.surface || kd.reads.fragment.includes(dd) ? 0 : Jd;
-        Jd.variantFlags[dd] = (kd.sceneDepth ? Pd : 0) | (kd.movesVertices ? Zd : 0) | (kd.sunShadow ? gd : 0) | (kd.airShadow ? Cd : 0) | (kd.discards ? Kd : 0) | pd("localPosition", od) | pd("enchantSpeed", ld) | pd("enchantTier", Qd), Jd.hooks[dd * Wd] = Od(kd.hooks.vertex), Jd.hooks[dd * Wd + 1] = Od(kd.hooks.surface), Jd.hooks[dd * Wd + 2] = Od(kd.hooks.light), Jd.moduleCodes[dd] = kd.moduleCode, Jd.reads[2 * dd] = kd.reads.vertex.join(" "), Jd.reads[2 * dd + 1] = kd.reads.fragment.join(" ")
+      for (const wQ of QQ) {
+        const QQ = MQ(wQ.key),
+          LQ = (QQ, FQ) => null === wQ.hooks.surface || wQ.reads.fragment.includes(QQ) ? 0 : FQ;
+        FQ.variantFlags[QQ] = (wQ.sceneDepth ? DQ : 0) | (wQ.movesVertices ? kQ : 0) | (wQ.sunShadow ? vQ : 0) | (wQ.airShadow ? mQ : 0) | (wQ.discards ? uQ : 0) | LQ("localPosition", HQ) | LQ("enchantSpeed", bQ) | LQ("enchantTier", YQ), FQ.hooks[QQ * oQ] = AQ(wQ.hooks.vertex), FQ.hooks[QQ * oQ + 1] = AQ(wQ.hooks.surface), FQ.hooks[QQ * oQ + 2] = AQ(wQ.hooks.light), FQ.moduleCodes[QQ] = wQ.moduleCode, FQ.reads[2 * QQ] = wQ.reads.vertex.join(" "), FQ.reads[2 * QQ + 1] = wQ.reads.fragment.join(" ")
       }
-      return Jd
+      return FQ
     }
 
-    function xd(dd) {
+    function cQ(QQ) {
       const {
-        hooks: Jd,
-        moduleCodes: kd,
-        reads: pd
-      } = dd;
-      return Array.from(dd.variantFlags, ((dd, Nd) => {
-        const od = Nd * Wd;
+        hooks: FQ,
+        moduleCodes: wQ,
+        reads: LQ
+      } = QQ;
+      return Array.from(QQ.variantFlags, ((QQ, qQ) => {
+        const HQ = qQ * oQ;
         return {
-          key: Rd(Nd),
+          key: eQ(qQ),
           hooks: {
-            vertex: ed(Jd[od]),
-            surface: ed(Jd[od + 1]),
-            light: ed(Jd[od + 2])
+            vertex: tQ(FQ[HQ]),
+            surface: tQ(FQ[HQ + 1]),
+            light: tQ(FQ[HQ + 2])
           },
-          moduleCode: kd[Nd],
-          sceneDepth: 0 !== (dd & Pd),
-          sunShadow: 0 !== (dd & gd),
-          airShadow: 0 !== (dd & Cd),
-          movesVertices: 0 !== (dd & Zd),
-          discards: 0 !== (dd & Kd),
+          moduleCode: wQ[qQ],
+          sceneDepth: 0 !== (QQ & DQ),
+          sunShadow: 0 !== (QQ & vQ),
+          airShadow: 0 !== (QQ & mQ),
+          movesVertices: 0 !== (QQ & kQ),
+          discards: 0 !== (QQ & uQ),
           reads: {
-            vertex: Gd(pd[2 * Nd]),
-            fragment: Gd(pd[2 * Nd + 1])
+            vertex: GQ(LQ[2 * qQ]),
+            fragment: GQ(LQ[2 * qQ + 1])
           }
         }
       }))
     }
   },
-  40880: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      A: () => Od,
-      E: () => Qd,
-      H: () => Ld,
-      b: () => Nd,
-      f: () => pd,
-      j: () => ld,
-      m: () => Kd,
-      q: () => ed,
-      s: () => Wd,
-      t: () => Zd,
-      w: () => gd,
-      x: () => Pd
+  40307: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      A: () => DQ,
+      D: () => AQ,
+      F: () => YQ,
+      J: () => xQ,
+      e: () => qQ,
+      h: () => LQ,
+      i: () => bQ,
+      k: () => uQ,
+      n: () => tQ,
+      q: () => oQ,
+      u: () => kQ,
+      x: () => vQ
     });
-    const pd = 3,
-      Nd = 0,
-      Wd = 1,
-      Pd = 2,
-      Zd = {
+    const LQ = 3,
+      qQ = 0,
+      oQ = 1,
+      DQ = 2,
+      kQ = {
         uniform: 3,
-        ql: 4,
+        Sb: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      gd = 10,
-      Cd = "BloxdPackInputs",
-      Kd = "bloxdPackInputs",
-      od = [{
+      vQ = 10,
+      mQ = "BloxdPackInputs",
+      uQ = "bloxdPackInputs",
+      HQ = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      ld = 80;
+      bQ = 80;
 
-    function Qd() {
-      const dd = od.map((dd => {
+    function YQ() {
+      const QQ = HQ.map((QQ => {
         let {
-          name: Jd,
-          type: kd
-        } = dd;
-        return `    ${Jd}: ${kd},\n`
+          name: FQ,
+          type: wQ
+        } = QQ;
+        return `    ${FQ}: ${wQ},\n`
       })).join("");
-      return `struct ${Cd} {\n${dd}}\n@group(${pd}) @binding(${Nd}) var<uniform> ${Kd}: ${Cd};\n`
+      return `struct ${mQ} {\n${QQ}}\n@group(${LQ}) @binding(${qQ}) var<uniform> ${uQ}: ${mQ};\n`
     }
 
-    function Ld(dd, Jd) {
-      const kd = new DataView(dd, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, ld),
-        [pd, Nd, Wd, Pd, Zd, gd] = od;
-      kd.setFloat32(pd.offset, Jd.seconds, !0), kd.setUint32(Nd.offset, Jd.lit ? 1 : 0, !0);
-      for (let Cd = 0; Cd < 3; Cd++) kd.setInt32(Wd.offset + 4 * Cd, Jd.renderOffset[Cd], !0), kd.setFloat32(Pd.offset + 4 * Cd, Jd.Qdd[Cd], !0), kd.setFloat32(Zd.offset + 4 * Cd, Jd.eyePosition[Cd], !0), kd.setFloat32(gd.offset + 4 * Cd, Jd.shadowDirection[Cd], !0)
+    function xQ(QQ, FQ) {
+      const wQ = new DataView(QQ, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, bQ),
+        [LQ, qQ, oQ, DQ, kQ, vQ] = HQ;
+      wQ.setFloat32(LQ.offset, FQ.seconds, !0), wQ.setUint32(qQ.offset, FQ.lit ? 1 : 0, !0);
+      for (let mQ = 0; mQ < 3; mQ++) wQ.setInt32(oQ.offset + 4 * mQ, FQ.renderOffset[mQ], !0), wQ.setFloat32(DQ.offset + 4 * mQ, FQ.MQQ[mQ], !0), wQ.setFloat32(kQ.offset + 4 * mQ, FQ.eyePosition[mQ], !0), wQ.setFloat32(vQ.offset + 4 * mQ, FQ.shadowDirection[mQ], !0)
     }
 
-    function Od(dd) {
-      const Jd = new Uint32Array(Math.max(1, dd.length));
-      return dd.forEach(((dd, kd) => {
+    function AQ(QQ) {
+      const FQ = new Uint32Array(Math.max(1, QQ.length));
+      return QQ.forEach(((QQ, wQ) => {
         let {
-          id: pd,
-          rotation: Nd
-        } = dd;
-        Jd[kd] = 65535 & pd | (3 & Nd) << 16
-      })), Jd
+          id: LQ,
+          rotation: qQ
+        } = QQ;
+        FQ[wQ] = 65535 & LQ | (3 & qQ) << 16
+      })), FQ
     }
-    const ed = {
+    const tQ = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6514: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd,
-      f: () => Pd,
-      i: () => Zd,
-      j: () => Nd,
-      n: () => Wd
+  6470: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => LQ,
+      h: () => DQ,
+      l: () => kQ,
+      m: () => qQ,
+      o: () => oQ
     });
-    const pd = ["terrain", "liquid", "model"];
+    const LQ = ["terrain", "liquid", "model"];
 
-    function Nd() {
-      const dd = [];
-      for (const Jd of [!1, !0])
-        for (const kd of pd) dd.push({
-          strict: Jd,
-          program: kd
+    function qQ() {
+      const QQ = [];
+      for (const FQ of [!1, !0])
+        for (const wQ of LQ) QQ.push({
+          strict: FQ,
+          program: wQ
         });
-      return dd
+      return QQ
     }
 
-    function Wd(dd) {
-      return `${dd.strict?"strict":"allow"}.${dd.program}`
+    function oQ(QQ) {
+      return `${QQ.strict?"strict":"allow"}.${QQ.program}`
     }
 
-    function Pd(dd) {
-      return !dd.hooks.vertex && !dd.hooks.surface && !dd.hooks.light
+    function DQ(QQ) {
+      return !QQ.hooks.vertex && !QQ.hooks.surface && !QQ.hooks.light
     }
 
-    function Zd(dd, Jd) {
-      return "off" !== Jd && (null === dd || dd.some((dd => dd.key.strict === ("strict" === Jd) && !Pd(dd))))
+    function kQ(QQ, FQ) {
+      return "off" !== FQ && (null === QQ || QQ.some((QQ => QQ.key.strict === ("strict" === FQ) && !DQ(QQ))))
     }
   },
-  41242: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      SHADER_PACK_INPUTS_BINDING: () => Wd.b,
-      SHADER_PACK_INPUTS_GROUP: () => Wd.f,
-      SHADER_PACK_INPUTS_SIZE: () => Wd.j,
-      SHADER_PACK_INPUTS_VAR: () => Wd.m,
-      SHADER_PACK_MODES: () => Wd.q,
-      SHADER_PACK_PROGRAMS: () => pd.c,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => Wd.s,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Wd.t,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Wd.w,
-      SHADER_PACK_TEXTURES_BINDING: () => Wd.x,
-      encodeTextureLayers: () => Wd.A,
-      flattenVariants: () => Nd.d,
-      isVariantOff: () => pd.f,
-      packRunsIn: () => pd.i,
-      shaderPackInputsWgsl: () => Wd.E,
-      shaderPackVariantKeys: () => pd.j,
-      variantKeyId: () => pd.n,
-      writeShaderPackInputs: () => Wd.H
+  40664: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      SHADER_PACK_INPUTS_BINDING: () => oQ.e,
+      SHADER_PACK_INPUTS_GROUP: () => oQ.h,
+      SHADER_PACK_INPUTS_SIZE: () => oQ.i,
+      SHADER_PACK_INPUTS_VAR: () => oQ.k,
+      SHADER_PACK_MODES: () => oQ.n,
+      SHADER_PACK_PROGRAMS: () => LQ.d,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => oQ.q,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => oQ.u,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => oQ.x,
+      SHADER_PACK_TEXTURES_BINDING: () => oQ.A,
+      encodeTextureLayers: () => oQ.D,
+      flattenVariants: () => qQ.c,
+      isVariantOff: () => LQ.h,
+      packRunsIn: () => LQ.l,
+      shaderPackInputsWgsl: () => oQ.F,
+      shaderPackVariantKeys: () => LQ.m,
+      variantKeyId: () => LQ.o,
+      writeShaderPackInputs: () => oQ.J
     });
-    var pd = kd(6514),
-      Nd = kd(6505),
-      Wd = kd(40880)
+    var LQ = wQ(6470),
+      qQ = wQ(6467),
+      oQ = wQ(40307)
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

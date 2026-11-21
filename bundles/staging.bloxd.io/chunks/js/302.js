@@ -1,52 +1,52 @@
 export const id = 302;
 export const ids = [302];
 export const modules = {
-  41773: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Rd
+  41218: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => eQ
     });
-    var pd = kd(37280),
-      Nd = kd(37251),
-      Wd = kd(40471),
-      Pd = kd(40124),
-      Zd = kd(39902),
-      gd = kd(38812),
-      Cd = kd(40101),
-      Kd = kd(40131),
-      od = kd(37267),
-      ld = kd(39866),
-      Qd = kd(40080),
-      Ld = kd(40186);
-    class Od {
+    var LQ = wQ(36722),
+      qQ = wQ(36696),
+      oQ = wQ(39897),
+      DQ = wQ(39566),
+      kQ = wQ(39333),
+      vQ = wQ(38203),
+      mQ = wQ(39550),
+      uQ = wQ(39574),
+      HQ = wQ(36709),
+      bQ = wQ(39289),
+      YQ = wQ(39518),
+      xQ = wQ(39623);
+    class AQ {
       get renderList() {
         return this._renderList
       }
-      set renderList(dd) {
-        this._renderList !== dd && (this._unObserveRenderList && (this._unObserveRenderList(), this._unObserveRenderList = null), dd && (this._unObserveRenderList = (0, od.h)(dd, this._renderListHasChanged)), this._renderList = dd)
+      set renderList(QQ) {
+        this._renderList !== QQ && (this._unObserveRenderList && (this._unObserveRenderList(), this._unObserveRenderList = null), QQ && (this._unObserveRenderList = (0, HQ.h)(QQ, this._renderListHasChanged)), this._renderList = QQ)
       }
       get disableImageProcessing() {
         return this._disableImageProcessing
       }
-      set disableImageProcessing(dd) {
-        dd !== this._disableImageProcessing && (this._disableImageProcessing = dd, this._scene.markAllMaterialsAsDirty(64))
+      set disableImageProcessing(QQ) {
+        QQ !== this._disableImageProcessing && (this._disableImageProcessing = QQ, this._scene.markAllMaterialsAsDirty(64))
       }
       get disableDepthPrePass() {
         return this._disableDepthPrePass
       }
-      set disableDepthPrePass(dd) {
-        this._disableDepthPrePass = dd, this._renderingManager.disableDepthPrePass = dd
+      set disableDepthPrePass(QQ) {
+        this._disableDepthPrePass = QQ, this._renderingManager.disableDepthPrePass = QQ
       }
       get name() {
         return this._name
       }
-      set name(dd) {
-        if (this._name !== dd) {
-          if (this._name = dd, this._sceneUBOs)
-            for (let dd = 0; dd < this._sceneUBOs.length; ++dd) this._sceneUBOs[dd].name = `Scene ubo #${dd} for ${this.name}`;
+      set name(QQ) {
+        if (this._name !== QQ) {
+          if (this._name = QQ, this._sceneUBOs)
+            for (let QQ = 0; QQ < this._sceneUBOs.length; ++QQ) this._sceneUBOs[QQ].name = `Scene ubo #${QQ} for ${this.name}`;
           if (this._scene)
-            for (let dd = 0; dd < this._renderPassIds.length; ++dd) {
-              const Jd = this._renderPassIds[dd];
-              this._engine._renderPassNames[Jd] = `${this._name}#${dd}`
+            for (let QQ = 0; QQ < this._renderPassIds.length; ++QQ) {
+              const FQ = this._renderPassIds[QQ];
+              this._engine._renderPassNames[FQ] = `${this._name}#${QQ}`
             }
         }
       }
@@ -59,66 +59,66 @@ export const modules = {
       getActiveMeshes() {
         return this._activeMeshes
       }
-      setMaterialForRendering(dd, Jd) {
-        let kd;
-        kd = Array.isArray(dd) ? dd : [dd];
-        for (let pd = 0; pd < kd.length; ++pd)
-          for (let dd = 0; dd < this.options.numPasses; ++dd) {
-            let Nd = kd[pd];
-            kd[pd].Km && (Nd = kd[pd].RNd), Nd.setMaterialForRenderPass(this._renderPassIds[dd], void 0 !== Jd ? Array.isArray(Jd) ? Jd[dd] : Jd : void 0)
+      setMaterialForRendering(QQ, FQ) {
+        let wQ;
+        wQ = Array.isArray(QQ) ? QQ : [QQ];
+        for (let LQ = 0; LQ < wQ.length; ++LQ)
+          for (let QQ = 0; QQ < this.options.numPasses; ++QQ) {
+            let qQ = wQ[LQ];
+            wQ[LQ].lN && (qQ = wQ[LQ].cqQ), qQ.setMaterialForRenderPass(this._renderPassIds[QQ], void 0 !== FQ ? Array.isArray(FQ) ? FQ[QQ] : FQ : void 0)
           }
       }
-      _freezeActiveMeshes(dd) {
-        this._freezeActiveMeshesCancel = (0, ld.f)((() => this._checkReadiness()), (() => {
-          if (this._freezeActiveMeshesCancel = null, dd)
-            for (let dd = 0; dd < this._activeMeshes.length; dd++) this._activeMeshes.data[dd]._freeze();
+      _freezeActiveMeshes(QQ) {
+        this._freezeActiveMeshesCancel = (0, bQ.e)((() => this._checkReadiness()), (() => {
+          if (this._freezeActiveMeshesCancel = null, QQ)
+            for (let QQ = 0; QQ < this._activeMeshes.length; QQ++) this._activeMeshes.data[QQ]._freeze();
           this._prepareRenderingManager(0, !0), this._isFrozen = !0
-        }), ((dd, Jd) => {
-          this._freezeActiveMeshesCancel = null, Jd ? (gd.c.Error("ObjectRenderer: Timeout while waiting for the renderer to be ready."), dd && gd.c.Error(dd)) : (gd.c.Error("ObjectRenderer: An unexpected error occurred while waiting for the renderer to be ready."), dd && (gd.c.Error(dd), dd.stack && gd.c.Error(dd.stack)))
+        }), ((QQ, FQ) => {
+          this._freezeActiveMeshesCancel = null, FQ ? (vQ.c.Error("ObjectRenderer: Timeout while waiting for the renderer to be ready."), QQ && vQ.c.Error(QQ)) : (vQ.c.Error("ObjectRenderer: An unexpected error occurred while waiting for the renderer to be ready."), QQ && (vQ.c.Error(QQ), QQ.stack && vQ.c.Error(QQ.stack)))
         }))
       }
       _unfreezeActiveMeshes() {
         this._freezeActiveMeshesCancel?.(), this._freezeActiveMeshesCancel = null;
-        for (let dd = 0; dd < this._activeMeshes.length; dd++) this._activeMeshes.data[dd]._unFreeze();
+        for (let QQ = 0; QQ < this._activeMeshes.length; QQ++) this._activeMeshes.data[QQ]._unFreeze();
         this._isFrozen = !1
       }
-      constructor(dd, Jd, kd) {
-        this._unObserveRenderList = null, this._renderListHasChanged = (dd, Jd) => {
-          const kd = this._renderList ? this._renderList.length : 0;
-          if (0 === Jd && kd > 0 || 0 === kd)
-            for (const pd of this._scene.meshes) pd._markSubMeshesAsLightDirty()
-        }, this.particleSystemList = null, this.spriteManagerList = null, this.getCustomRenderList = null, this.renderMeshes = !0, this.renderDepthOnlyMeshes = !0, this.renderOpaqueMeshes = !0, this.renderAlphaTestMeshes = !0, this.renderTransparentMeshes = !0, this.renderParticles = !0, this.renderSprites = !1, this.forceLayerMaskCheck = !1, this.enableBoundingBoxRendering = !1, this.enableOutlineRendering = !0, this._disableImageProcessing = !1, this.dontSetTransformationMatrix = !1, this._disableDepthPrePass = !1, this.onBeforeRenderObservable = new pd.e, this.onAfterRenderObservable = new pd.e, this.onBeforeRenderingManagerRenderObservable = new pd.e, this.onAfterRenderingManagerRenderObservable = new pd.e, this.onInitRenderingObservable = new pd.e, this.onFinishRenderingObservable = new pd.e, this.onFastPathRenderObservable = new pd.e, this._currentRefreshId = -1, this._refreshRate = 1, this._currentApplyByPostProcessSetting = !1, this._activeMeshes = new Qd.h(256), this._activeBoundingBoxes = new Qd.h(32), this._currentFrameId = -1, this._currentSceneUBOIndex = 0, this._isFrozen = !1, this._freezeActiveMeshesCancel = null, this._currentSceneCamera = null, this.name = dd, this._scene = Jd, this._engine = this._scene.eL(), this._useUBO = this._engine.supportsUniformBuffers, this.renderList = [], this._renderPassIds = [], this.options = {
+      constructor(QQ, FQ, wQ) {
+        this._unObserveRenderList = null, this._renderListHasChanged = (QQ, FQ) => {
+          const wQ = this._renderList ? this._renderList.length : 0;
+          if (0 === FQ && wQ > 0 || 0 === wQ)
+            for (const LQ of this._scene.meshes) LQ._markSubMeshesAsLightDirty()
+        }, this.particleSystemList = null, this.spriteManagerList = null, this.getCustomRenderList = null, this.renderMeshes = !0, this.renderDepthOnlyMeshes = !0, this.renderOpaqueMeshes = !0, this.renderAlphaTestMeshes = !0, this.renderTransparentMeshes = !0, this.renderParticles = !0, this.renderSprites = !1, this.forceLayerMaskCheck = !1, this.enableBoundingBoxRendering = !1, this.enableOutlineRendering = !0, this._disableImageProcessing = !1, this.dontSetTransformationMatrix = !1, this._disableDepthPrePass = !1, this.onBeforeRenderObservable = new LQ.e, this.onAfterRenderObservable = new LQ.e, this.onBeforeRenderingManagerRenderObservable = new LQ.e, this.onAfterRenderingManagerRenderObservable = new LQ.e, this.onInitRenderingObservable = new LQ.e, this.onFinishRenderingObservable = new LQ.e, this.onFastPathRenderObservable = new LQ.e, this._currentRefreshId = -1, this._refreshRate = 1, this._currentApplyByPostProcessSetting = !1, this._activeMeshes = new YQ.d(256), this._activeBoundingBoxes = new YQ.d(32), this._currentFrameId = -1, this._currentSceneUBOIndex = 0, this._isFrozen = !1, this._freezeActiveMeshesCancel = null, this._currentSceneCamera = null, this.name = QQ, this._scene = FQ, this._engine = this._scene.Wx(), this._useUBO = this._engine.supportsUniformBuffers, this.renderList = [], this._renderPassIds = [], this.options = {
           numPasses: 1,
           doNotChangeAspectRatio: !0,
           enableClusteredLights: !1,
-          ...kd
-        }, this._createRenderPassId(), this.renderPassId = this._renderPassIds[0], this._renderingManager = new Kd.b(Jd), this._renderingManager._useSceneAutoClearSetup = !0, this.options.enableClusteredLights && this.onInitRenderingObservable.add((() => {
-          for (const dd of this._scene.lights) dd.getTypeID() === Ld.d.LIGHTTYPEID_CLUSTERED_CONTAINER && dd.isSupported && dd._updateBatches(this.activeCamera).render()
+          ...wQ
+        }, this._createRenderPassId(), this.renderPassId = this._renderPassIds[0], this._renderingManager = new uQ.e(FQ), this._renderingManager._useSceneAutoClearSetup = !0, this.options.enableClusteredLights && this.onInitRenderingObservable.add((() => {
+          for (const QQ of this._scene.lights) QQ.getTypeID() === xQ.c.LIGHTTYPEID_CLUSTERED_CONTAINER && QQ.isSupported && QQ._updateBatches(this.activeCamera).render()
         })), this._scene.addObjectRenderer(this)
       }
       _releaseRenderPassId() {
-        for (let dd = 0; dd < this.options.numPasses; ++dd) this._engine.releaseRenderPassId(this._renderPassIds[dd]);
+        for (let QQ = 0; QQ < this.options.numPasses; ++QQ) this._engine.releaseRenderPassId(this._renderPassIds[QQ]);
         this._renderPassIds.length = 0
       }
       _createRenderPassId() {
         this._releaseRenderPassId();
-        for (let dd = 0; dd < this.options.numPasses; ++dd) this._renderPassIds[dd] = this._engine.createRenderPassId(`${this.name}#${dd}`)
+        for (let QQ = 0; QQ < this.options.numPasses; ++QQ) this._renderPassIds[QQ] = this._engine.createRenderPassId(`${this.name}#${QQ}`)
       }
-      _createSceneUBO(dd, Jd) {
-        const kd = this._scene.eL(),
-          pd = new Cd.e(kd, void 0, Jd, dd, void 0, !1);
-        return pd.addUniform("viewProjection", 16), Jd && pd.addUniform("viewProjectionR", 16), pd.addUniform("view", 16), pd.addUniform("projection", 16), pd.addUniform("vEyePosition", 4), pd.addUniform("inverseProjection", 16), pd
+      _createSceneUBO(QQ, FQ) {
+        const wQ = this._scene.Wx(),
+          LQ = new mQ.d(wQ, void 0, FQ, QQ, void 0, !1);
+        return LQ.addUniform("viewProjection", 16), FQ && LQ.addUniform("viewProjectionR", 16), LQ.addUniform("view", 16), LQ.addUniform("projection", 16), LQ.addUniform("vEyePosition", 4), LQ.addUniform("inverseProjection", 16), LQ
       }
       _getSceneUBO() {
         this._currentFrameId !== this._engine.frameId && (this._currentSceneUBOIndex = 0, this._currentFrameId = this._engine.frameId), this._sceneUBOs || (this._sceneUBOs = [], this._sceneUBOIsMultiview = []);
-        const dd = this._engine._currentRenderTarget,
-          Jd = !(!dd || !dd.texture?.isMultiview) || !!this._scene._multiviewSceneUboIsActive;
+        const QQ = this._engine._currentRenderTarget,
+          FQ = !(!QQ || !QQ.texture?.isMultiview) || !!this._scene._multiviewSceneUboIsActive;
         if (this._currentSceneUBOIndex >= this._sceneUBOs.length) {
-          const dd = this._sceneUBOs.length;
-          this._sceneUBOs.push(this._createSceneUBO(`Scene ubo #${dd} for ${this.name}`, Jd)), this._sceneUBOIsMultiview.push(Jd)
-        } else this._sceneUBOIsMultiview[this._currentSceneUBOIndex] !== Jd && (this._sceneUBOs[this._currentSceneUBOIndex].dispose(), this._sceneUBOs[this._currentSceneUBOIndex] = this._createSceneUBO(`Scene ubo #${this._currentSceneUBOIndex} for ${this.name}`, Jd), this._sceneUBOIsMultiview[this._currentSceneUBOIndex] = Jd);
-        const kd = this._sceneUBOs[this._currentSceneUBOIndex++];
-        return kd.unbindEffect(), kd
+          const QQ = this._sceneUBOs.length;
+          this._sceneUBOs.push(this._createSceneUBO(`Scene ubo #${QQ} for ${this.name}`, FQ)), this._sceneUBOIsMultiview.push(FQ)
+        } else this._sceneUBOIsMultiview[this._currentSceneUBOIndex] !== FQ && (this._sceneUBOs[this._currentSceneUBOIndex].dispose(), this._sceneUBOs[this._currentSceneUBOIndex] = this._createSceneUBO(`Scene ubo #${this._currentSceneUBOIndex} for ${this.name}`, FQ), this._sceneUBOIsMultiview[this._currentSceneUBOIndex] = FQ);
+        const wQ = this._sceneUBOs[this._currentSceneUBOIndex++];
+        return wQ.unbindEffect(), wQ
       }
       resetRefreshCounter() {
         this._currentRefreshId = -1
@@ -126,306 +126,306 @@ export const modules = {
       get refreshRate() {
         return this._refreshRate
       }
-      set refreshRate(dd) {
-        this._refreshRate = dd, this.resetRefreshCounter()
+      set refreshRate(QQ) {
+        this._refreshRate = QQ, this.resetRefreshCounter()
       }
       shouldRender() {
         return !!this._engine.snapshotRendering || (-1 === this._currentRefreshId || this.refreshRate === this._currentRefreshId ? (this._currentRefreshId = 1, !0) : (this._currentRefreshId++, !1))
       }
-      isReadyForRendering(dd, Jd) {
-        this.prepareRenderList(), this.initRender(dd, Jd);
-        const kd = this._checkReadiness();
-        return this.finishRender(), kd
+      isReadyForRendering(QQ, FQ) {
+        this.prepareRenderList(), this.initRender(QQ, FQ);
+        const wQ = this._checkReadiness();
+        return this.finishRender(), wQ
       }
       prepareRenderList() {
-        const dd = this._scene;
+        const QQ = this._scene;
         if (this._waitingRenderList) {
           if (!this.renderListPredicate) {
             this.renderList = [];
-            for (let Jd = 0; Jd < this._waitingRenderList.length; Jd++) {
-              const kd = this._waitingRenderList[Jd],
-                pd = dd.getMeshById(kd);
-              pd && this.renderList.push(pd)
+            for (let FQ = 0; FQ < this._waitingRenderList.length; FQ++) {
+              const wQ = this._waitingRenderList[FQ],
+                LQ = QQ.getMeshById(wQ);
+              LQ && this.renderList.push(LQ)
             }
           }
           this._waitingRenderList = void 0
         }
         if (this.renderListPredicate) {
           this.renderList ? this.renderList.length = 0 : this.renderList = [];
-          const dd = this._scene.meshes;
-          for (let Jd = 0; Jd < dd.length; Jd++) {
-            const kd = dd[Jd];
-            this.renderListPredicate(kd) && this.renderList.push(kd)
+          const QQ = this._scene.meshes;
+          for (let FQ = 0; FQ < QQ.length; FQ++) {
+            const wQ = QQ[FQ];
+            this.renderListPredicate(wQ) && this.renderList.push(wQ)
           }
         }
         this._currentApplyByPostProcessSetting = this._scene.imageProcessingConfiguration.applyByPostProcess, this._disableImageProcessing && (this._scene.imageProcessingConfiguration._applyByPostProcess = this._disableImageProcessing)
       }
-      initRender(dd, Jd) {
-        const kd = this.activeCamera ?? this._scene.activeCamera;
-        this._currentSceneCamera = this._scene.activeCamera, this._useUBO && (this._currentSceneUBO = this._scene.getSceneUniformBuffer(), this._currentSceneUBO.unbindEffect(), this._scene.setSceneUniformBuffer(this._getSceneUBO())), this.onInitRenderingObservable.notifyObservers(this), kd && (this.dontSetTransformationMatrix || this._scene.setTransformMatrix(kd.getViewMatrix(), kd.getProjectionMatrix(!0)), this._scene._activeCamera = kd, this._engine.setViewport(kd.rigParent ? kd.rigParent.viewport : kd.viewport, dd, Jd)), this._useUBO && this._scene.finalizeSceneUbo(), this._defaultRenderListPrepared = !1
+      initRender(QQ, FQ) {
+        const wQ = this.activeCamera ?? this._scene.activeCamera;
+        this._currentSceneCamera = this._scene.activeCamera, this._useUBO && (this._currentSceneUBO = this._scene.getSceneUniformBuffer(), this._currentSceneUBO.unbindEffect(), this._scene.setSceneUniformBuffer(this._getSceneUBO())), this.onInitRenderingObservable.notifyObservers(this), wQ && (this.dontSetTransformationMatrix || this._scene.setTransformMatrix(wQ.getViewMatrix(), wQ.getProjectionMatrix(!0)), this._scene._activeCamera = wQ, this._engine.setViewport(wQ.rigParent ? wQ.rigParent.viewport : wQ.viewport, QQ, FQ)), this._useUBO && this._scene.finalizeSceneUbo(), this._defaultRenderListPrepared = !1
       }
       finishRender() {
-        const dd = this._scene;
-        this._useUBO && this._scene.setSceneUniformBuffer(this._currentSceneUBO), this._disableImageProcessing && (dd.imageProcessingConfiguration._applyByPostProcess = this._currentApplyByPostProcessSetting), dd._activeCamera = this._currentSceneCamera, this._currentSceneCamera && (this.activeCamera && this.activeCamera !== dd.activeCamera && dd.setTransformMatrix(this._currentSceneCamera.getViewMatrix(), this._currentSceneCamera.getProjectionMatrix(!0)), this._engine.setViewport(this._currentSceneCamera.viewport)), dd.resetCachedMaterial(), this.onFinishRenderingObservable.notifyObservers(this)
+        const QQ = this._scene;
+        this._useUBO && this._scene.setSceneUniformBuffer(this._currentSceneUBO), this._disableImageProcessing && (QQ.imageProcessingConfiguration._applyByPostProcess = this._currentApplyByPostProcessSetting), QQ._activeCamera = this._currentSceneCamera, this._currentSceneCamera && (this.activeCamera && this.activeCamera !== QQ.activeCamera && QQ.setTransformMatrix(this._currentSceneCamera.getViewMatrix(), this._currentSceneCamera.getProjectionMatrix(!0)), this._engine.setViewport(this._currentSceneCamera.viewport)), QQ.resetCachedMaterial(), this.onFinishRenderingObservable.notifyObservers(this)
       }
       render() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const kd = this._engine.currentRenderPassId;
-        this._engine.currentRenderPassId = this._renderPassIds[dd], this.onBeforeRenderObservable.notifyObservers(dd);
-        if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) this.onFastPathRenderObservable.notifyObservers(dd);
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const wQ = this._engine.currentRenderPassId;
+        this._engine.currentRenderPassId = this._renderPassIds[QQ], this.onBeforeRenderObservable.notifyObservers(QQ);
+        if (this._engine.snapshotRendering && 1 === this._engine.snapshotRenderingMode) this.onFastPathRenderObservable.notifyObservers(QQ);
         else {
-          const Jd = this._prepareRenderingManager(dd),
-            kd = this._scene.getOutlineRenderer?.(),
-            pd = kd?.enabled;
-          kd && (kd.enabled = this.enableOutlineRendering), this.onBeforeRenderingManagerRenderObservable.notifyObservers(dd), this._renderingManager.render(this.customRenderFunction, Jd, this.renderParticles, this.renderSprites, this.renderDepthOnlyMeshes, this.renderOpaqueMeshes, this.renderAlphaTestMeshes, this.renderTransparentMeshes, this.customRenderTransparentSubMeshes, this.spriteManagerList), this.onAfterRenderingManagerRenderObservable.notifyObservers(dd), kd && (kd.enabled = pd)
+          const FQ = this._prepareRenderingManager(QQ),
+            wQ = this._scene.getOutlineRenderer?.(),
+            LQ = wQ?.enabled;
+          wQ && (wQ.enabled = this.enableOutlineRendering), this.onBeforeRenderingManagerRenderObservable.notifyObservers(QQ), this._renderingManager.render(this.customRenderFunction, FQ, this.renderParticles, this.renderSprites, this.renderDepthOnlyMeshes, this.renderOpaqueMeshes, this.renderAlphaTestMeshes, this.renderTransparentMeshes, this.customRenderTransparentSubMeshes, this.spriteManagerList), this.onAfterRenderingManagerRenderObservable.notifyObservers(QQ), wQ && (wQ.enabled = LQ)
         }
-        Jd || this.onAfterRenderObservable.notifyObservers(dd), this._engine.currentRenderPassId = kd
+        FQ || this.onAfterRenderObservable.notifyObservers(QQ), this._engine.currentRenderPassId = wQ
       }
       _checkReadiness() {
-        const dd = this._scene,
-          Jd = this._engine.currentRenderPassId;
-        let kd = !0;
-        dd.getViewMatrix() || dd.updateTransformMatrix();
-        const pd = this.options.numPasses;
-        for (let Nd = 0; Nd < pd && kd; Nd++) {
-          const Jd = this.renderList ? this.renderList : dd.frameGraph ? dd.meshes : dd.getActiveMeshes().data,
-            Wd = this.renderList || dd.frameGraph ? Jd.length : dd.getActiveMeshes().length;
-          this._engine.currentRenderPassId = this._renderPassIds[Nd], this.onBeforeRenderObservable.notifyObservers(Nd);
-          let Pd = null,
-            Zd = Wd;
-          this.getCustomRenderList && (Pd = this.getCustomRenderList(Nd, Jd, Wd), Pd && (Zd = Pd.length)), Pd || (Pd = Jd), this.options.doNotChangeAspectRatio || dd.updateTransformMatrix(!0);
-          for (let dd = 0; dd < Zd && kd; ++dd) {
-            const Jd = Pd[dd];
-            if (!Jd.isEnabled() || Jd.isBlocked || !Jd.isVisible || !Jd.rG) continue;
+        const QQ = this._scene,
+          FQ = this._engine.currentRenderPassId;
+        let wQ = !0;
+        QQ.getViewMatrix() || QQ.updateTransformMatrix();
+        const LQ = this.options.numPasses;
+        for (let qQ = 0; qQ < LQ && wQ; qQ++) {
+          const FQ = this.renderList ? this.renderList : QQ.frameGraph ? QQ.meshes : QQ.getActiveMeshes().data,
+            oQ = this.renderList || QQ.frameGraph ? FQ.length : QQ.getActiveMeshes().length;
+          this._engine.currentRenderPassId = this._renderPassIds[qQ], this.onBeforeRenderObservable.notifyObservers(qQ);
+          let DQ = null,
+            kQ = oQ;
+          this.getCustomRenderList && (DQ = this.getCustomRenderList(qQ, FQ, oQ), DQ && (kQ = DQ.length)), DQ || (DQ = FQ), this.options.doNotChangeAspectRatio || QQ.updateTransformMatrix(!0);
+          for (let QQ = 0; QQ < kQ && wQ; ++QQ) {
+            const FQ = DQ[QQ];
+            if (!FQ.isEnabled() || FQ.isBlocked || !FQ.isVisible || !FQ.lC) continue;
             if (this.customIsReadyFunction) {
-              if (!this.customIsReadyFunction(Jd, this.refreshRate, !0)) {
-                kd = !1;
+              if (!this.customIsReadyFunction(FQ, this.refreshRate, !0)) {
+                wQ = !1;
                 continue
               }
-            } else if (!Jd.isReady(!0)) {
-              kd = !1;
+            } else if (!FQ.isReady(!0)) {
+              wQ = !1;
               continue
             }
-            let pd = Jd._edgesRenderer,
-              Nd = Jd.hasThinInstances;
-            if (Jd.Km) {
-              const dd = Jd.RNd;
-              dd.edgesShareWithInstances && dd._edgesRenderer?.isEnabled && (pd = dd._edgesRenderer, Nd = !0)
-            } else Jd.eNd && Jd.edgesShareWithInstances && (Nd = !0);
-            !this.customRenderFunction && this.renderOpaqueMeshes && pd?.isEnabled && (pd.isReady(Nd) || (kd = !1))
+            let LQ = FQ._edgesRenderer,
+              qQ = FQ.hasThinInstances;
+            if (FQ.lN) {
+              const QQ = FQ.cqQ;
+              QQ.edgesShareWithInstances && QQ._edgesRenderer?.isEnabled && (LQ = QQ._edgesRenderer, qQ = !0)
+            } else FQ.pqQ && FQ.edgesShareWithInstances && (qQ = !0);
+            !this.customRenderFunction && this.renderOpaqueMeshes && LQ?.isEnabled && (LQ.isReady(qQ) || (wQ = !1))
           }
-          if (this.renderParticles && dd.particlesEnabled) {
-            const Jd = this.particleSystemList || dd.Qv;
-            for (const dd of Jd) dd.isReady() || (kd = !1)
+          if (this.renderParticles && QQ.particlesEnabled) {
+            const FQ = this.particleSystemList || QQ.fC;
+            for (const QQ of FQ) QQ.isReady() || (wQ = !1)
           }
-          if (this.renderSprites && dd.spritesEnabled) {
-            const Jd = this.spriteManagerList || dd.spriteManagers;
-            if (Jd)
-              for (const pd of Jd) dd.activeCamera && 0 === (pd.layerMask & dd.activeCamera.layerMask) || pd.isReady && !pd.isReady() && (kd = !1)
+          if (this.renderSprites && QQ.spritesEnabled) {
+            const FQ = this.spriteManagerList || QQ.spriteManagers;
+            if (FQ)
+              for (const LQ of FQ) QQ.activeCamera && 0 === (LQ.layerMask & QQ.activeCamera.layerMask) || LQ.isReady && !LQ.isReady() && (wQ = !1)
           }
-          this.onAfterRenderObservable.notifyObservers(Nd), pd > 1 && (dd.incrementRenderId(), dd.resetCachedMaterial())
+          this.onAfterRenderObservable.notifyObservers(qQ), LQ > 1 && (QQ.incrementRenderId(), QQ.resetCachedMaterial())
         }
-        return this._engine.currentRenderPassId = Jd, kd
+        return this._engine.currentRenderPassId = FQ, wQ
       }
       _prepareRenderingManager() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const kd = this._scene;
-        let pd, Nd, Wd = null;
-        const Pd = this.renderList ? this.renderList : kd.frameGraph ? kd.meshes : kd.getActiveMeshes().data,
-          Zd = this.renderList || kd.frameGraph ? Pd.length : kd.getActiveMeshes().length;
-        if (this.getCustomRenderList && (Wd = this.getCustomRenderList(dd, Pd, Zd)), Wd) pd = Wd.length, Nd = this.forceLayerMaskCheck;
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const wQ = this._scene;
+        let LQ, qQ, oQ = null;
+        const DQ = this.renderList ? this.renderList : wQ.frameGraph ? wQ.meshes : wQ.getActiveMeshes().data,
+          kQ = this.renderList || wQ.frameGraph ? DQ.length : wQ.getActiveMeshes().length;
+        if (this.getCustomRenderList && (oQ = this.getCustomRenderList(QQ, DQ, kQ)), oQ) LQ = oQ.length, qQ = this.forceLayerMaskCheck;
         else {
-          if (this._defaultRenderListPrepared && !Jd && !this._engine.isWebGPU) return Pd;
-          this._defaultRenderListPrepared = !0, Wd = Pd, pd = Zd, Nd = !this.renderList || this.forceLayerMaskCheck
+          if (this._defaultRenderListPrepared && !FQ && !this._engine.isWebGPU) return DQ;
+          this._defaultRenderListPrepared = !0, oQ = DQ, LQ = kQ, qQ = !this.renderList || this.forceLayerMaskCheck
         }
-        const gd = kd.activeCamera,
-          Cd = this.cameraForLOD ?? gd,
-          Kd = kd.getBoundingBoxRenderer?.();
-        if (kd._activeMeshesFrozen && this._isFrozen) {
-          if (this._renderingManager.resetSprites(), this.enableBoundingBoxRendering && Kd) {
-            Kd.reset();
-            for (let dd = 0; dd < this._activeBoundingBoxes.length; dd++) {
-              const Jd = this._activeBoundingBoxes.data[dd];
-              Kd.renderList.push(Jd)
+        const vQ = wQ.activeCamera,
+          mQ = this.cameraForLOD ?? vQ,
+          uQ = wQ.getBoundingBoxRenderer?.();
+        if (wQ._activeMeshesFrozen && this._isFrozen) {
+          if (this._renderingManager.resetSprites(), this.enableBoundingBoxRendering && uQ) {
+            uQ.reset();
+            for (let QQ = 0; QQ < this._activeBoundingBoxes.length; QQ++) {
+              const FQ = this._activeBoundingBoxes.data[QQ];
+              uQ.renderList.push(FQ)
             }
           }
-          return Wd
+          return oQ
         }
-        if (this._renderingManager.reset(), this._activeMeshes.reset(), this._activeBoundingBoxes.reset(), Kd && Kd.reset(), this.renderMeshes) {
-          const dd = kd.getRenderId(),
-            Jd = kd.getFrameId();
-          for (let Pd = 0; Pd < pd; Pd++) {
-            const pd = Wd[Pd];
-            if (pd && !pd.isBlocked) {
+        if (this._renderingManager.reset(), this._activeMeshes.reset(), this._activeBoundingBoxes.reset(), uQ && uQ.reset(), this.renderMeshes) {
+          const QQ = wQ.getRenderId(),
+            FQ = wQ.getFrameId();
+          for (let DQ = 0; DQ < LQ; DQ++) {
+            const LQ = oQ[DQ];
+            if (LQ && !LQ.isBlocked) {
               if (this.customIsReadyFunction) {
-                if (!this.customIsReadyFunction(pd, this.refreshRate, !1)) {
+                if (!this.customIsReadyFunction(LQ, this.refreshRate, !1)) {
                   this.resetRefreshCounter();
                   continue
                 }
-              } else if (!pd.isReady(0 === this.refreshRate)) {
+              } else if (!LQ.isReady(0 === this.refreshRate)) {
                 this.resetRefreshCounter();
                 continue
               }
-              let Wd, Pd;
-              if (Cd) {
-                const dd = pd._internalAbstractMeshDataInfo._currentLOD.get(Cd);
-                dd && dd[1] === Jd ? Wd = dd[0] : (Wd = kd.customLODSelector ? kd.customLODSelector(pd, Cd) : pd.getLOD(Cd), dd ? (dd[0] = Wd, dd[1] = Jd) : pd._internalAbstractMeshDataInfo._currentLOD.set(Cd, [Wd, Jd]))
-              } else Wd = pd;
-              if (!Wd) continue;
-              if (Wd !== pd && 0 !== Wd.billboardMode && Wd.computeWorldMatrix(), Wd._preActivateForIntermediateRendering(dd), Pd = !(!Nd || !gd) && 0 === (pd.layerMask & gd.layerMask), pd.isEnabled() && pd.isVisible && pd.rG && !Pd) {
-                if (this._activeMeshes.push(pd), Wd._internalAbstractMeshDataInfo._wasActiveLastFrame = !0, Wd !== pd && Wd._activate(dd, !0), this.enableBoundingBoxRendering && Kd && Kd._preActiveMesh(pd), pd._activate(dd, !0) && pd.rG.length) {
-                  pd.Km ? pd._internalAbstractMeshDataInfo._actAsRegularMesh && (Wd = pd) : Wd._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !1, Wd._internalAbstractMeshDataInfo._isActiveIntermediate = !0, kd._prepareSkeleton(Wd);
-                  for (let dd = 0; dd < Wd.rG.length; dd++) {
-                    const Jd = Wd.rG[dd];
-                    this.enableBoundingBoxRendering && Kd && Kd._evaluateSubMesh(pd, Jd), this._renderingManager.dispatch(Jd, Wd)
+              let oQ, DQ;
+              if (mQ) {
+                const QQ = LQ._internalAbstractMeshDataInfo._currentLOD.get(mQ);
+                QQ && QQ[1] === FQ ? oQ = QQ[0] : (oQ = wQ.customLODSelector ? wQ.customLODSelector(LQ, mQ) : LQ.getLOD(mQ), QQ ? (QQ[0] = oQ, QQ[1] = FQ) : LQ._internalAbstractMeshDataInfo._currentLOD.set(mQ, [oQ, FQ]))
+              } else oQ = LQ;
+              if (!oQ) continue;
+              if (oQ !== LQ && 0 !== oQ.billboardMode && oQ.computeWorldMatrix(), oQ._preActivateForIntermediateRendering(QQ), DQ = !(!qQ || !vQ) && 0 === (LQ.layerMask & vQ.layerMask), LQ.isEnabled() && LQ.isVisible && LQ.lC && !DQ) {
+                if (this._activeMeshes.push(LQ), oQ._internalAbstractMeshDataInfo._wasActiveLastFrame = !0, oQ !== LQ && oQ._activate(QQ, !0), this.enableBoundingBoxRendering && uQ && uQ._preActiveMesh(LQ), LQ._activate(QQ, !0) && LQ.lC.length) {
+                  LQ.lN ? LQ._internalAbstractMeshDataInfo._actAsRegularMesh && (oQ = LQ) : oQ._internalAbstractMeshDataInfo._onlyForInstancesIntermediate = !1, oQ._internalAbstractMeshDataInfo._isActiveIntermediate = !0, wQ._prepareSkeleton(oQ);
+                  for (let QQ = 0; QQ < oQ.lC.length; QQ++) {
+                    const FQ = oQ.lC[QQ];
+                    this.enableBoundingBoxRendering && uQ && uQ._evaluateSubMesh(LQ, FQ), this._renderingManager.dispatch(FQ, oQ)
                   }
                 }
-                pd._postActivate()
+                LQ._postActivate()
               }
             }
           }
         }
-        if (this.enableBoundingBoxRendering && Kd && Jd)
-          for (let od = 0; od < Kd.renderList.length; od++) {
-            const dd = Kd.renderList.data[od];
-            this._activeBoundingBoxes.push(dd)
+        if (this.enableBoundingBoxRendering && uQ && FQ)
+          for (let HQ = 0; HQ < uQ.renderList.length; HQ++) {
+            const QQ = uQ.renderList.data[HQ];
+            this._activeBoundingBoxes.push(QQ)
           }
         if (this._scene.particlesEnabled && this.renderParticles) {
           this._scene.onBeforeParticlesRenderingObservable.notifyObservers(this._scene);
-          const dd = this.particleSystemList || kd.Qv;
-          for (let Jd = 0; Jd < dd.length; Jd++) {
-            const kd = dd[Jd],
-              pd = kd.emitter;
-            kd.isStarted() && pd && (!pd.position || pd.isEnabled()) && this._renderingManager.dispatchParticles(kd)
+          const QQ = this.particleSystemList || wQ.fC;
+          for (let FQ = 0; FQ < QQ.length; FQ++) {
+            const wQ = QQ[FQ],
+              LQ = wQ.emitter;
+            wQ.isStarted() && LQ && (!LQ.position || LQ.isEnabled()) && this._renderingManager.dispatchParticles(wQ)
           }
           this._scene.onAfterParticlesRenderingObservable.notifyObservers(this._scene)
         }
-        return Wd
+        return oQ
       }
       get renderingManager() {
         return this._renderingManager
       }
-      setRenderingOrder(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._renderingManager.setRenderingOrder(dd, Jd, kd, pd)
+      setRenderingOrder(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._renderingManager.setRenderingOrder(QQ, FQ, wQ, LQ)
       }
-      setRenderingAutoClearDepthStencil(dd, Jd) {
-        let kd = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-          pd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._renderingManager.setRenderingAutoClearDepthStencil(dd, Jd, kd, pd), this._renderingManager._useSceneAutoClearSetup = !1
+      setRenderingAutoClearDepthStencil(QQ, FQ) {
+        let wQ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+          LQ = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._renderingManager.setRenderingAutoClearDepthStencil(QQ, FQ, wQ, LQ), this._renderingManager._useSceneAutoClearSetup = !1
       }
       clone() {
-        const dd = new Od(this.name, this._scene, this.options);
-        return this.renderList && (dd.renderList = this.renderList.slice(0)), dd
+        const QQ = new AQ(this.name, this._scene, this.options);
+        return this.renderList && (QQ.renderList = this.renderList.slice(0)), QQ
       }
       dispose() {
-        const dd = this.renderList ? this.renderList : this._scene.getActiveMeshes().data,
-          Jd = this.renderList ? this.renderList.length : this._scene.getActiveMeshes().length;
-        for (let kd = 0; kd < Jd; kd++) {
-          const Jd = dd[kd];
-          Jd && void 0 !== Jd.getMaterialForRenderPass(this.renderPassId) && Jd.setMaterialForRenderPass(this.renderPassId, void 0)
+        const QQ = this.renderList ? this.renderList : this._scene.getActiveMeshes().data,
+          FQ = this.renderList ? this.renderList.length : this._scene.getActiveMeshes().length;
+        for (let wQ = 0; wQ < FQ; wQ++) {
+          const FQ = QQ[wQ];
+          FQ && void 0 !== FQ.getMaterialForRenderPass(this.renderPassId) && FQ.setMaterialForRenderPass(this.renderPassId, void 0)
         }
         if (this.onInitRenderingObservable.clear(), this.onFinishRenderingObservable.clear(), this.onBeforeRenderObservable.clear(), this.onAfterRenderObservable.clear(), this.onBeforeRenderingManagerRenderObservable.clear(), this.onAfterRenderingManagerRenderObservable.clear(), this.onFastPathRenderObservable.clear(), this._releaseRenderPassId(), this.renderList = null, this._sceneUBOs)
-          for (const kd of this._sceneUBOs) kd.dispose();
+          for (const wQ of this._sceneUBOs) wQ.dispose();
         this._sceneUBOs = void 0, this._scene.removeObjectRenderer(this)
       }
       _rebuild() {
-        this.refreshRate === Od.REFRESHRATE_RENDER_ONCE && (this.refreshRate = Od.REFRESHRATE_RENDER_ONCE)
+        this.refreshRate === AQ.REFRESHRATE_RENDER_ONCE && (this.refreshRate = AQ.REFRESHRATE_RENDER_ONCE)
       }
       freeRenderingGroups() {
         this._renderingManager && this._renderingManager.freeRenderingGroups()
       }
     }
-    Od.REFRESHRATE_RENDER_ONCE = 0, Od.REFRESHRATE_RENDER_ONEVERYFRAME = 1, Od.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = 2;
-    var ed = kd(39860);
-    class Rd extends Wd.c {
+    AQ.REFRESHRATE_RENDER_ONCE = 0, AQ.REFRESHRATE_RENDER_ONEVERYFRAME = 1, AQ.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = 2;
+    var tQ = wQ(39277);
+    class eQ extends oQ.e {
       get renderListPredicate() {
         return this._objectRenderer.renderListPredicate
       }
-      set renderListPredicate(dd) {
-        this._objectRenderer.renderListPredicate = dd
+      set renderListPredicate(QQ) {
+        this._objectRenderer.renderListPredicate = QQ
       }
       get renderList() {
         return this._objectRenderer.renderList
       }
-      set renderList(dd) {
-        this._objectRenderer.renderList = dd
+      set renderList(QQ) {
+        this._objectRenderer.renderList = QQ
       }
       get particleSystemList() {
         return this._objectRenderer.particleSystemList
       }
-      set particleSystemList(dd) {
-        this._objectRenderer.particleSystemList = dd
+      set particleSystemList(QQ) {
+        this._objectRenderer.particleSystemList = QQ
       }
       get getCustomRenderList() {
         return this._objectRenderer.getCustomRenderList
       }
-      set getCustomRenderList(dd) {
-        this._objectRenderer.getCustomRenderList = dd
+      set getCustomRenderList(QQ) {
+        this._objectRenderer.getCustomRenderList = QQ
       }
       get renderParticles() {
         return this._objectRenderer.renderParticles
       }
-      set renderParticles(dd) {
-        this._objectRenderer.renderParticles = dd
+      set renderParticles(QQ) {
+        this._objectRenderer.renderParticles = QQ
       }
       get renderSprites() {
         return this._objectRenderer.renderSprites
       }
-      set renderSprites(dd) {
-        this._objectRenderer.renderSprites = dd
+      set renderSprites(QQ) {
+        this._objectRenderer.renderSprites = QQ
       }
       get enableBoundingBoxRendering() {
         return this._objectRenderer.enableBoundingBoxRendering
       }
-      set enableBoundingBoxRendering(dd) {
-        this._objectRenderer.enableBoundingBoxRendering = dd
+      set enableBoundingBoxRendering(QQ) {
+        this._objectRenderer.enableBoundingBoxRendering = QQ
       }
       get enableOutlineRendering() {
         return this._objectRenderer.enableOutlineRendering
       }
-      set enableOutlineRendering(dd) {
-        this._objectRenderer.enableOutlineRendering = dd
+      set enableOutlineRendering(QQ) {
+        this._objectRenderer.enableOutlineRendering = QQ
       }
       get forceLayerMaskCheck() {
         return this._objectRenderer.forceLayerMaskCheck
       }
-      set forceLayerMaskCheck(dd) {
-        this._objectRenderer.forceLayerMaskCheck = dd
+      set forceLayerMaskCheck(QQ) {
+        this._objectRenderer.forceLayerMaskCheck = QQ
       }
       get activeCamera() {
         return this._objectRenderer.activeCamera
       }
-      set activeCamera(dd) {
-        this._objectRenderer.activeCamera = dd
+      set activeCamera(QQ) {
+        this._objectRenderer.activeCamera = QQ
       }
       get cameraForLOD() {
         return this._objectRenderer.cameraForLOD
       }
-      set cameraForLOD(dd) {
-        this._objectRenderer.cameraForLOD = dd
+      set cameraForLOD(QQ) {
+        this._objectRenderer.cameraForLOD = QQ
       }
       get disableImageProcessing() {
         return this._objectRenderer.disableImageProcessing
       }
-      set disableImageProcessing(dd) {
-        this._objectRenderer.disableImageProcessing = dd
+      set disableImageProcessing(QQ) {
+        this._objectRenderer.disableImageProcessing = QQ
       }
       get customIsReadyFunction() {
         return this._objectRenderer.customIsReadyFunction
       }
-      set customIsReadyFunction(dd) {
-        this._objectRenderer.customIsReadyFunction = dd
+      set customIsReadyFunction(QQ) {
+        this._objectRenderer.customIsReadyFunction = QQ
       }
       get customRenderFunction() {
         return this._objectRenderer.customRenderFunction
       }
-      set customRenderFunction(dd) {
-        this._objectRenderer.customRenderFunction = dd
+      set customRenderFunction(QQ) {
+        this._objectRenderer.customRenderFunction = QQ
       }
       get postProcesses() {
         return this._postProcesses
@@ -433,29 +433,29 @@ export const modules = {
       get _prePassEnabled() {
         return !!this._prePassRenderTarget && this._prePassRenderTarget.enabled
       }
-      set onAfterUnbind(dd) {
-        this._onAfterUnbindObserver && this.onAfterUnbindObservable.remove(this._onAfterUnbindObserver), this._onAfterUnbindObserver = this.onAfterUnbindObservable.add(dd)
+      set onAfterUnbind(QQ) {
+        this._onAfterUnbindObserver && this.onAfterUnbindObservable.remove(this._onAfterUnbindObserver), this._onAfterUnbindObserver = this.onAfterUnbindObservable.add(QQ)
       }
       get onBeforeRenderObservable() {
         return this._objectRenderer.onBeforeRenderObservable
       }
-      set onBeforeRender(dd) {
-        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(dd)
+      set onBeforeRender(QQ) {
+        this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(QQ)
       }
       get onAfterRenderObservable() {
         return this._objectRenderer.onAfterRenderObservable
       }
-      set onAfterRender(dd) {
-        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(dd)
+      set onAfterRender(QQ) {
+        this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(QQ)
       }
-      set onClear(dd) {
-        this._onClearObserver && this.onClearObservable.remove(this._onClearObserver), this._onClearObserver = this.onClearObservable.add(dd)
+      set onClear(QQ) {
+        this._onClearObserver && this.onClearObservable.remove(this._onClearObserver), this._onClearObserver = this.onClearObservable.add(QQ)
       }
       get _waitingRenderList() {
         return this._objectRenderer._waitingRenderList
       }
-      set _waitingRenderList(dd) {
-        this._objectRenderer._waitingRenderList = dd
+      set _waitingRenderList(QQ) {
+        this._objectRenderer._waitingRenderList = QQ
       }
       get renderPassId() {
         return this._objectRenderer.renderPassId
@@ -466,8 +466,8 @@ export const modules = {
       get currentRefreshId() {
         return this._objectRenderer.currentRefreshId
       }
-      setMaterialForRendering(dd, Jd) {
-        this._objectRenderer.setMaterialForRendering(dd, Jd)
+      setMaterialForRendering(QQ, FQ) {
+        this._objectRenderer.setMaterialForRendering(QQ, FQ)
       }
       get isMulti() {
         return this._renderTarget?.isMulti ?? !1
@@ -481,11 +481,11 @@ export const modules = {
       _onRatioRescale() {
         this._sizeRatio && this.resize(this._initialSizeParameter)
       }
-      set boundingBoxSize(dd) {
-        if (this._boundingBoxSize && this._boundingBoxSize.equals(dd)) return;
-        this._boundingBoxSize = dd;
-        const Jd = this.Wm();
-        Jd && Jd.markAllMaterialsAsDirty(1)
+      set boundingBoxSize(QQ) {
+        if (this._boundingBoxSize && this._boundingBoxSize.equals(QQ)) return;
+        this._boundingBoxSize = QQ;
+        const FQ = this.iN();
+        FQ && FQ.markAllMaterialsAsDirty(1)
       }
       get boundingBoxSize() {
         return this._boundingBoxSize
@@ -493,108 +493,108 @@ export const modules = {
       get depthStencilTexture() {
         return this._renderTarget?._depthStencilTexture ?? null
       }
-      constructor(dd, Jd, kd) {
-        let Pd, Zd, Cd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          Kd = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          od = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          ld = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          Qd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Wd.c.TRILINEAR_SAMPLINGMODE,
-          Ld = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          ed = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-          Rd = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-          Id = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 5,
-          Gd = arguments.length > 12 && void 0 !== arguments[12] && arguments[12],
-          vd = arguments.length > 13 ? arguments[13] : void 0,
-          xd = arguments.length > 14 ? arguments[14] : void 0,
-          qd = arguments.length > 15 && void 0 !== arguments[15] && arguments[15],
-          Bd = arguments.length > 16 && void 0 !== arguments[16] && arguments[16],
-          sd = !0,
-          ad = !1;
-        if ("object" === typeof Cd) {
-          const dd = Cd;
-          Cd = !!dd.generateMipMaps, Kd = dd.doNotChangeAspectRatio ?? !0, od = dd.type ?? 0, ld = !!dd.isCube, Qd = dd.samplingMode ?? Wd.c.TRILINEAR_SAMPLINGMODE, Ld = dd.generateDepthBuffer ?? !0, ed = !!dd.generateStencilBuffer, Rd = !!dd.isMulti, Id = dd.format ?? 5, Gd = !!dd.delayAllocation, vd = dd.samples, xd = dd.creationFlags, qd = !!dd.noColorAttachment, Bd = !!dd.useSRGBBuffer, Pd = dd.colorAttachment, sd = dd.gammaSpace ?? sd, Zd = dd.existingObjectRenderer, ad = !!dd.enableClusteredLights
+      constructor(QQ, FQ, wQ) {
+        let DQ, kQ, mQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          uQ = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          HQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          bQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          YQ = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : oQ.e.TRILINEAR_SAMPLINGMODE,
+          xQ = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          tQ = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+          eQ = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+          MQ = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 5,
+          GQ = arguments.length > 12 && void 0 !== arguments[12] && arguments[12],
+          pQ = arguments.length > 13 ? arguments[13] : void 0,
+          cQ = arguments.length > 14 ? arguments[14] : void 0,
+          CQ = arguments.length > 15 && void 0 !== arguments[15] && arguments[15],
+          SQ = arguments.length > 16 && void 0 !== arguments[16] && arguments[16],
+          iQ = !0,
+          WQ = !1;
+        if ("object" === typeof mQ) {
+          const QQ = mQ;
+          mQ = !!QQ.generateMipMaps, uQ = QQ.doNotChangeAspectRatio ?? !0, HQ = QQ.type ?? 0, bQ = !!QQ.isCube, YQ = QQ.samplingMode ?? oQ.e.TRILINEAR_SAMPLINGMODE, xQ = QQ.generateDepthBuffer ?? !0, tQ = !!QQ.generateStencilBuffer, eQ = !!QQ.isMulti, MQ = QQ.format ?? 5, GQ = !!QQ.delayAllocation, pQ = QQ.samples, cQ = QQ.creationFlags, CQ = !!QQ.noColorAttachment, SQ = !!QQ.useSRGBBuffer, DQ = QQ.colorAttachment, iQ = QQ.gammaSpace ?? iQ, kQ = QQ.existingObjectRenderer, WQ = !!QQ.enableClusteredLights
         }
-        if (super(null, kd, !Cd, void 0, Qd, void 0, void 0, void 0, void 0, Id), this.ignoreCameraViewport = !1, this.onBeforeBindObservable = new pd.e, this.onAfterUnbindObservable = new pd.e, this.onClearObservable = new pd.e, this.onResizeObservable = new pd.e, this._cleared = !1, this.skipInitialClear = !1, this._samples = 1, this._canRescale = !0, this._renderTarget = null, this._dontDisposeObjectRenderer = !1, this.boundingBoxPosition = Nd.n.Zero(), this._disableEngineStages = !1, this._dumpToolsLoading = !1, !(kd = this.Wm())) return;
-        const Md = this.Wm().eL();
-        this._gammaSpace = sd, this._coordinatesMode = Wd.c.PROJECTION_MODE, this.name = dd, this.isRenderTarget = !0, this._initialSizeParameter = Jd, this._dontDisposeObjectRenderer = !!Zd, this._processSizeParameter(Jd), this._objectRenderer = Zd ?? new Od(dd, kd, {
-          numPasses: ld ? 6 : this.getRenderLayers() || 1,
-          doNotChangeAspectRatio: Kd,
-          enableClusteredLights: ad
+        if (super(null, wQ, !mQ, void 0, YQ, void 0, void 0, void 0, void 0, MQ), this.ignoreCameraViewport = !1, this.onBeforeBindObservable = new LQ.e, this.onAfterUnbindObservable = new LQ.e, this.onClearObservable = new LQ.e, this.onResizeObservable = new LQ.e, this._cleared = !1, this.skipInitialClear = !1, this._samples = 1, this._canRescale = !0, this._renderTarget = null, this._dontDisposeObjectRenderer = !1, this.boundingBoxPosition = qQ.p.Zero(), this._disableEngineStages = !1, this._dumpToolsLoading = !1, !(wQ = this.iN())) return;
+        const RQ = this.iN().Wx();
+        this._gammaSpace = iQ, this._coordinatesMode = oQ.e.PROJECTION_MODE, this.name = QQ, this.isRenderTarget = !0, this._initialSizeParameter = FQ, this._dontDisposeObjectRenderer = !!kQ, this._processSizeParameter(FQ), this._objectRenderer = kQ ?? new AQ(QQ, wQ, {
+          numPasses: bQ ? 6 : this.getRenderLayers() || 1,
+          doNotChangeAspectRatio: uQ,
+          enableClusteredLights: WQ
         }), this._onBeforeRenderingManagerRenderObserver = this._objectRenderer.onBeforeRenderingManagerRenderObservable.add((() => {
-          const dd = this._scene;
+          const QQ = this._scene;
           if (!this._disableEngineStages)
-            for (const Jd of dd._beforeRenderTargetClearStage) Jd.action(this, this._currentFaceIndex, this._currentLayer);
-          if (this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(Md) : this.skipInitialClear || Md.clear(this.clearColor ?? dd.clearColor, !0, !0, !0), this._doNotChangeAspectRatio || dd.updateTransformMatrix(!0), !this._disableEngineStages)
-            for (const Jd of dd._beforeRenderTargetDrawStage) Jd.action(this, this._currentFaceIndex, this._currentLayer);
-          Md._debugPushGroup && Md._debugPushGroup(`Render to ${this.name} (face #${this._currentFaceIndex} layer #${this._currentLayer})`)
+            for (const FQ of QQ._beforeRenderTargetClearStage) FQ.action(this, this._currentFaceIndex, this._currentLayer);
+          if (this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(RQ) : this.skipInitialClear || RQ.clear(this.clearColor ?? QQ.clearColor, !0, !0, !0), this._doNotChangeAspectRatio || QQ.updateTransformMatrix(!0), !this._disableEngineStages)
+            for (const FQ of QQ._beforeRenderTargetDrawStage) FQ.action(this, this._currentFaceIndex, this._currentLayer);
+          RQ._debugPushGroup && RQ._debugPushGroup(`Render to ${this.name} (face #${this._currentFaceIndex} layer #${this._currentLayer})`)
         })), this._onAfterRenderingManagerRenderObserver = this._objectRenderer.onAfterRenderingManagerRenderObservable.add((() => {
-          if (Md._debugPopGroup && Md._debugPopGroup(), !this._disableEngineStages)
-            for (const Jd of this._scene._afterRenderTargetDrawStage) Jd.action(this, this._currentFaceIndex, this._currentLayer);
-          const dd = this._texture?.generateMipMaps ?? !1;
+          if (RQ._debugPopGroup && RQ._debugPopGroup(), !this._disableEngineStages)
+            for (const FQ of this._scene._afterRenderTargetDrawStage) FQ.action(this, this._currentFaceIndex, this._currentLayer);
+          const QQ = this._texture?.generateMipMaps ?? !1;
           if (this._texture && (this._texture.generateMipMaps = !1), this._postProcessManager ? this._postProcessManager._finalizeFrame(!1, this._renderTarget ?? void 0, this._currentFaceIndex, this._postProcesses, this.ignoreCameraViewport) : this._currentUseCameraPostProcess && this._scene.postProcessManager._finalizeFrame(!1, this._renderTarget ?? void 0, this._currentFaceIndex), !this._disableEngineStages)
-            for (const Jd of this._scene._afterRenderTargetPostProcessStage) Jd.action(this, this._currentFaceIndex, this._currentLayer);
-          this._texture && (this._texture.generateMipMaps = dd), this._doNotChangeAspectRatio || this._scene.updateTransformMatrix(!0), this._currentDumpForDebug && (this._dumpTools ? this._dumpTools.DumpFramebuffer(this.getRenderWidth(), this.getRenderHeight(), Md) : gd.c.Error("dumpTools module is still being loaded. To speed up the process import dump tools directly in your project"))
+            for (const FQ of this._scene._afterRenderTargetPostProcessStage) FQ.action(this, this._currentFaceIndex, this._currentLayer);
+          this._texture && (this._texture.generateMipMaps = QQ), this._doNotChangeAspectRatio || this._scene.updateTransformMatrix(!0), this._currentDumpForDebug && (this._dumpTools ? this._dumpTools.DumpFramebuffer(this.getRenderWidth(), this.getRenderHeight(), RQ) : vQ.c.Error("dumpTools module is still being loaded. To speed up the process import dump tools directly in your project"))
         })), this._onFastPathRenderObserver = this._objectRenderer.onFastPathRenderObservable.add((() => {
-          this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(Md) : this.skipInitialClear || Md.clear(this.clearColor || this._scene.clearColor, !0, !0, !0)
-        })), this._resizeObserver = Md.onResizeObservable.add((() => {})), this._generateMipMaps = !!Cd, this._doNotChangeAspectRatio = Kd, Rd || (this._renderTargetOptions = {
-          generateMipMaps: Cd,
-          type: od,
+          this.onClearObservable.hasObservers() ? this.onClearObservable.notifyObservers(RQ) : this.skipInitialClear || RQ.clear(this.clearColor || this._scene.clearColor, !0, !0, !0)
+        })), this._resizeObserver = RQ.onResizeObservable.add((() => {})), this._generateMipMaps = !!mQ, this._doNotChangeAspectRatio = uQ, eQ || (this._renderTargetOptions = {
+          generateMipMaps: mQ,
+          type: HQ,
           format: this._format ?? void 0,
           samplingMode: this.samplingMode,
-          generateDepthBuffer: Ld,
-          generateStencilBuffer: ed,
-          samples: vd,
-          creationFlags: xd,
-          noColorAttachment: qd,
-          useSRGBBuffer: Bd,
-          colorAttachment: Pd,
+          generateDepthBuffer: xQ,
+          generateStencilBuffer: tQ,
+          samples: pQ,
+          creationFlags: cQ,
+          noColorAttachment: CQ,
+          useSRGBBuffer: SQ,
+          colorAttachment: DQ,
           label: this.name
-        }, this.samplingMode === Wd.c.NEAREST_SAMPLINGMODE && (this.wrapU = Wd.c.CLAMP_ADDRESSMODE, this.wrapV = Wd.c.CLAMP_ADDRESSMODE), Gd || (ld ? (this._renderTarget = kd.eL().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions), this.coordinatesMode = Wd.c.INVCUBIC_MODE, this._textureMatrix = Nd.b.Identity()) : this._renderTarget = kd.eL().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== vd && (this.samples = vd)))
+        }, this.samplingMode === oQ.e.NEAREST_SAMPLINGMODE && (this.wrapU = oQ.e.CLAMP_ADDRESSMODE, this.wrapV = oQ.e.CLAMP_ADDRESSMODE), GQ || (bQ ? (this._renderTarget = wQ.Wx().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions), this.coordinatesMode = oQ.e.INVCUBIC_MODE, this._textureMatrix = qQ.c.Identity()) : this._renderTarget = wQ.Wx().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== pQ && (this.samples = pQ)))
       }
       createDepthStencilTexture() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
-          Wd = arguments.length > 5 ? arguments[5] : void 0;
-        this._renderTarget?.createDepthStencilTexture(dd, Jd, kd, pd, Nd, Wd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 14,
+          oQ = arguments.length > 5 ? arguments[5] : void 0;
+        this._renderTarget?.createDepthStencilTexture(QQ, FQ, wQ, LQ, qQ, oQ)
       }
-      _processSizeParameter(dd) {
-        if (dd.ratio) {
-          this._sizeRatio = dd.ratio;
-          const Jd = this._getEngine();
+      _processSizeParameter(QQ) {
+        if (QQ.ratio) {
+          this._sizeRatio = QQ.ratio;
+          const FQ = this._getEngine();
           this._size = {
-            width: this._bestReflectionRenderTargetDimension(Jd.getRenderWidth(), this._sizeRatio),
-            height: this._bestReflectionRenderTargetDimension(Jd.getRenderHeight(), this._sizeRatio)
+            width: this._bestReflectionRenderTargetDimension(FQ.getRenderWidth(), this._sizeRatio),
+            height: this._bestReflectionRenderTargetDimension(FQ.getRenderHeight(), this._sizeRatio)
           }
-        } else this._size = dd
+        } else this._size = QQ
       }
       get samples() {
         return this._renderTarget?.samples ?? this._samples
       }
-      set samples(dd) {
-        this._renderTarget && (this._samples = this._renderTarget.setSamples(dd))
+      set samples(QQ) {
+        this._renderTarget && (this._samples = this._renderTarget.setSamples(QQ))
       }
-      addPostProcess(dd) {
+      addPostProcess(QQ) {
         if (!this._postProcessManager) {
-          const dd = this.Wm();
-          if (!dd) return;
-          this._postProcessManager = new Pd.d(dd), this._postProcesses = new Array
+          const QQ = this.iN();
+          if (!QQ) return;
+          this._postProcessManager = new DQ.d(QQ), this._postProcesses = new Array
         }
-        this._postProcesses.push(dd), this._postProcesses[0].autoClear = !1
+        this._postProcesses.push(QQ), this._postProcesses[0].autoClear = !1
       }
       clearPostProcesses() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this._postProcesses) {
-          if (dd)
-            for (const dd of this._postProcesses) dd.dispose();
+          if (QQ)
+            for (const QQ of this._postProcesses) QQ.dispose();
           this._postProcesses = []
         }
       }
-      removePostProcess(dd) {
+      removePostProcess(QQ) {
         if (!this._postProcesses) return;
-        const Jd = this._postProcesses.indexOf(dd); - 1 !== Jd && (this._postProcesses.splice(Jd, 1), this._postProcesses.length > 0 && (this._postProcesses[0].autoClear = !1))
+        const FQ = this._postProcesses.indexOf(QQ); - 1 !== FQ && (this._postProcesses.splice(FQ, 1), this._postProcesses.length > 0 && (this._postProcesses[0].autoClear = !1))
       }
       resetRefreshCounter() {
         this._objectRenderer.resetRefreshCounter()
@@ -602,8 +602,8 @@ export const modules = {
       get refreshRate() {
         return this._objectRenderer.refreshRate
       }
-      set refreshRate(dd) {
-        this._objectRenderer.refreshRate = dd
+      set refreshRate(QQ) {
+        this._objectRenderer.refreshRate = QQ
       }
       _shouldRender() {
         return this._objectRenderer.shouldRender()
@@ -618,10 +618,10 @@ export const modules = {
         return this._size.width ? this._size.height : this._size
       }
       getRenderLayers() {
-        const dd = this._size.layers;
-        if (dd) return dd;
-        const Jd = this._size.depth;
-        return Jd || 0
+        const QQ = this._size.layers;
+        if (QQ) return QQ;
+        const FQ = this._size.depth;
+        return FQ || 0
       }
       disableRescaling() {
         this._canRescale = !1
@@ -629,92 +629,92 @@ export const modules = {
       get canRescale() {
         return this._canRescale
       }
-      scale(dd) {
-        const Jd = Math.max(1, this.getRenderSize() * dd);
-        this.resize(Jd)
+      scale(QQ) {
+        const FQ = Math.max(1, this.getRenderSize() * QQ);
+        this.resize(FQ)
       }
       getReflectionTextureMatrix() {
         return this.isCube ? this._textureMatrix : super.getReflectionTextureMatrix()
       }
-      resize(dd) {
-        const Jd = this.isCube;
+      resize(QQ) {
+        const FQ = this.isCube;
         this._renderTarget?.dispose(), this._renderTarget = null;
-        const kd = this.Wm();
-        kd && (this._processSizeParameter(dd), this._renderTarget = Jd ? kd.eL().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions) : kd.eL().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== this._renderTargetOptions.samples && (this.samples = this._renderTargetOptions.samples), this.onResizeObservable.hasObservers() && this.onResizeObservable.notifyObservers(this))
+        const wQ = this.iN();
+        wQ && (this._processSizeParameter(QQ), this._renderTarget = FQ ? wQ.Wx().createRenderTargetCubeTexture(this.getRenderSize(), this._renderTargetOptions) : wQ.Wx().createRenderTargetTexture(this._size, this._renderTargetOptions), this._texture = this._renderTarget.texture, void 0 !== this._renderTargetOptions.samples && (this.samples = this._renderTargetOptions.samples), this.onResizeObservable.hasObservers() && this.onResizeObservable.notifyObservers(this))
       }
       render() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._render(dd, Jd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._render(QQ, FQ)
       }
       isReadyForRendering() {
-        this._dumpToolsLoading || (this._dumpToolsLoading = !0, Promise.resolve().then((() => kd(41784))).then((dd => this._dumpTools = dd))), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight());
-        const dd = this._objectRenderer._checkReadiness();
-        return this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), dd
+        this._dumpToolsLoading || (this._dumpToolsLoading = !0, Promise.resolve().then((() => wQ(41235))).then((QQ => this._dumpTools = QQ))), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight());
+        const QQ = this._objectRenderer._checkReadiness();
+        return this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), QQ
       }
       _render() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const kd = this.Wm();
-        if (!kd) return;
-        void 0 !== this.useCameraPostProcesses && (dd = this.useCameraPostProcesses);
-        const pd = kd.eL();
-        if (pd._debugPushGroup && pd._debugPushGroup(`Render to ${this.name}`), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight()), !this.is2DArray && !this.is3D || this.isMulti)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const wQ = this.iN();
+        if (!wQ) return;
+        void 0 !== this.useCameraPostProcesses && (QQ = this.useCameraPostProcesses);
+        const LQ = wQ.Wx();
+        if (LQ._debugPushGroup && LQ._debugPushGroup(`Render to ${this.name}`), this._objectRenderer.prepareRenderList(), this.onBeforeBindObservable.notifyObservers(this), this._objectRenderer.initRender(this.getRenderWidth(), this.getRenderHeight()), !this.is2DArray && !this.is3D || this.isMulti)
           if (this.isCube && !this.isMulti)
-            for (let Nd = 0; Nd < 6; Nd++) this._renderToTarget(Nd, dd, Jd), kd.incrementRenderId(), kd.resetCachedMaterial();
-          else this._renderToTarget(0, dd, Jd);
+            for (let qQ = 0; qQ < 6; qQ++) this._renderToTarget(qQ, QQ, FQ), wQ.incrementRenderId(), wQ.resetCachedMaterial();
+          else this._renderToTarget(0, QQ, FQ);
         else
-          for (let Nd = 0; Nd < this.getRenderLayers(); Nd++) this._renderToTarget(0, dd, Jd, Nd), kd.incrementRenderId(), kd.resetCachedMaterial();
-        this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), pd._debugPopGroup && pd._debugPopGroup()
+          for (let qQ = 0; qQ < this.getRenderLayers(); qQ++) this._renderToTarget(0, QQ, FQ, qQ), wQ.incrementRenderId(), wQ.resetCachedMaterial();
+        this.onAfterUnbindObservable.notifyObservers(this), this._objectRenderer.finishRender(), LQ._debugPopGroup && LQ._debugPopGroup()
       }
-      _bestReflectionRenderTargetDimension(dd, Jd) {
-        const kd = dd * Jd,
-          pd = (0, Zd.m)(kd + 16384 / (128 + kd));
-        return Math.min((0, Zd.b)(dd), pd)
+      _bestReflectionRenderTargetDimension(QQ, FQ) {
+        const wQ = QQ * FQ,
+          LQ = (0, kQ.i)(wQ + 16384 / (128 + wQ));
+        return Math.min((0, kQ.d)(QQ), LQ)
       }
       _bindFrameBuffer() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const kd = this.Wm();
-        if (!kd) return;
-        const pd = kd.eL();
-        this._renderTarget && pd.bindFramebuffer(this._renderTarget, this.isCube ? dd : void 0, void 0, void 0, this.ignoreCameraViewport, 0, Jd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const wQ = this.iN();
+        if (!wQ) return;
+        const LQ = wQ.Wx();
+        this._renderTarget && LQ.bindFramebuffer(this._renderTarget, this.isCube ? QQ : void 0, void 0, void 0, this.ignoreCameraViewport, 0, FQ)
       }
-      _unbindFrameBuffer(dd, Jd) {
-        this._renderTarget && dd.unBindFramebuffer(this._renderTarget, this.isCube, (() => {
-          this.onAfterRenderObservable.notifyObservers(Jd)
+      _unbindFrameBuffer(QQ, FQ) {
+        this._renderTarget && QQ.unBindFramebuffer(this._renderTarget, this.isCube, (() => {
+          this.onAfterRenderObservable.notifyObservers(FQ)
         }))
       }
-      _prepareFrame(dd, Jd, kd, pd) {
-        this._postProcessManager ? this._prePassEnabled || this._postProcessManager._prepareFrame(this._texture, this._postProcesses) || this._bindFrameBuffer(Jd, kd) : pd && dd.postProcessManager._prepareFrame(this._texture) || this._bindFrameBuffer(Jd, kd)
+      _prepareFrame(QQ, FQ, wQ, LQ) {
+        this._postProcessManager ? this._prePassEnabled || this._postProcessManager._prepareFrame(this._texture, this._postProcesses) || this._bindFrameBuffer(FQ, wQ) : LQ && QQ.postProcessManager._prepareFrame(this._texture) || this._bindFrameBuffer(FQ, wQ)
       }
-      _renderToTarget(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const Nd = this.Wm();
-        if (!Nd) return;
-        const Wd = Nd.eL();
-        this._currentFaceIndex = dd, this._currentLayer = pd, this._currentUseCameraPostProcess = Jd, this._currentDumpForDebug = kd, this._prepareFrame(Nd, dd, pd, Jd), this._objectRenderer.render(dd + pd, !0), this._unbindFrameBuffer(Wd, dd), this._texture && this.isCube && 5 === dd && Wd.generateMipMapsForCubemap(this._texture, !0)
+      _renderToTarget(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const qQ = this.iN();
+        if (!qQ) return;
+        const oQ = qQ.Wx();
+        this._currentFaceIndex = QQ, this._currentLayer = LQ, this._currentUseCameraPostProcess = FQ, this._currentDumpForDebug = wQ, this._prepareFrame(qQ, QQ, LQ, FQ), this._objectRenderer.render(QQ + LQ, !0), this._unbindFrameBuffer(oQ, QQ), this._texture && this.isCube && 5 === QQ && oQ.generateMipMapsForCubemap(this._texture, !0)
       }
-      setRenderingOrder(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this._objectRenderer.setRenderingOrder(dd, Jd, kd, pd)
+      setRenderingOrder(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this._objectRenderer.setRenderingOrder(QQ, FQ, wQ, LQ)
       }
-      setRenderingAutoClearDepthStencil(dd, Jd) {
-        this._objectRenderer.setRenderingAutoClearDepthStencil(dd, Jd)
+      setRenderingAutoClearDepthStencil(QQ, FQ) {
+        this._objectRenderer.setRenderingAutoClearDepthStencil(QQ, FQ)
       }
       clone() {
-        const dd = this.getSize(),
-          Jd = new Rd(this.name, dd, this.Wm(), this._renderTargetOptions.generateMipMaps, this._doNotChangeAspectRatio, this._renderTargetOptions.type, this.isCube, this._renderTargetOptions.samplingMode, this._renderTargetOptions.generateDepthBuffer, this._renderTargetOptions.generateStencilBuffer, void 0, this._renderTargetOptions.format, void 0, this._renderTargetOptions.samples);
-        return Jd.hasAlpha = this.hasAlpha, Jd.level = this.level, Jd.coordinatesMode = this.coordinatesMode, this.renderList && (Jd.renderList = this.renderList.slice(0)), Jd
+        const QQ = this.getSize(),
+          FQ = new eQ(this.name, QQ, this.iN(), this._renderTargetOptions.generateMipMaps, this._doNotChangeAspectRatio, this._renderTargetOptions.type, this.isCube, this._renderTargetOptions.samplingMode, this._renderTargetOptions.generateDepthBuffer, this._renderTargetOptions.generateStencilBuffer, void 0, this._renderTargetOptions.format, void 0, this._renderTargetOptions.samples);
+        return FQ.hasAlpha = this.hasAlpha, FQ.level = this.level, FQ.coordinatesMode = this.coordinatesMode, this.renderList && (FQ.renderList = this.renderList.slice(0)), FQ
       }
       serialize() {
         if (!this.name) return null;
-        const dd = super.serialize();
-        if (dd.renderTargetSize = this.getRenderSize(), dd.renderList = [], this.renderList)
-          for (let Jd = 0; Jd < this.renderList.length; Jd++) dd.renderList.push(this.renderList[Jd].id);
-        return dd
+        const QQ = super.serialize();
+        if (QQ.renderTargetSize = this.getRenderSize(), QQ.renderList = [], this.renderList)
+          for (let FQ = 0; FQ < this.renderList.length; FQ++) QQ.renderList.push(this.renderList[FQ].id);
+        return QQ
       }
       disposeFramebufferObjects() {
         this._renderTarget?.dispose(!0)
@@ -723,12 +723,12 @@ export const modules = {
         this._renderTarget?.releaseTextures(), this._texture = null
       }
       dispose() {
-        this.onResizeObservable.clear(), this.onClearObservable.clear(), this.onAfterUnbindObservable.clear(), this.onBeforeBindObservable.clear(), this._postProcessManager && (this._postProcessManager.dispose(), this._postProcessManager = null), this._prePassRenderTarget && this._prePassRenderTarget.dispose(), this._objectRenderer.onBeforeRenderingManagerRenderObservable.remove(this._onBeforeRenderingManagerRenderObserver), this._objectRenderer.onAfterRenderingManagerRenderObservable.remove(this._onAfterRenderingManagerRenderObserver), this._objectRenderer.onFastPathRenderObservable.remove(this._onFastPathRenderObserver), this._dontDisposeObjectRenderer || this._objectRenderer.dispose(), this.clearPostProcesses(!0), this._resizeObserver && (this.Wm().eL().onResizeObservable.remove(this._resizeObserver), this._resizeObserver = null);
-        const dd = this.Wm();
-        if (!dd) return;
-        let Jd = dd.customRenderTargets.indexOf(this);
-        Jd >= 0 && dd.customRenderTargets.splice(Jd, 1);
-        for (const kd of dd.cameras) Jd = kd.customRenderTargets.indexOf(this), Jd >= 0 && kd.customRenderTargets.splice(Jd, 1);
+        this.onResizeObservable.clear(), this.onClearObservable.clear(), this.onAfterUnbindObservable.clear(), this.onBeforeBindObservable.clear(), this._postProcessManager && (this._postProcessManager.dispose(), this._postProcessManager = null), this._prePassRenderTarget && this._prePassRenderTarget.dispose(), this._objectRenderer.onBeforeRenderingManagerRenderObservable.remove(this._onBeforeRenderingManagerRenderObserver), this._objectRenderer.onAfterRenderingManagerRenderObservable.remove(this._onAfterRenderingManagerRenderObserver), this._objectRenderer.onFastPathRenderObservable.remove(this._onFastPathRenderObserver), this._dontDisposeObjectRenderer || this._objectRenderer.dispose(), this.clearPostProcesses(!0), this._resizeObserver && (this.iN().Wx().onResizeObservable.remove(this._resizeObserver), this._resizeObserver = null);
+        const QQ = this.iN();
+        if (!QQ) return;
+        let FQ = QQ.customRenderTargets.indexOf(this);
+        FQ >= 0 && QQ.customRenderTargets.splice(FQ, 1);
+        for (const wQ of QQ.cameras) FQ = wQ.customRenderTargets.indexOf(this), FQ >= 0 && wQ.customRenderTargets.splice(FQ, 1);
         this._renderTarget?.dispose(), this._renderTarget = null, this._texture = null, super.dispose()
       }
       _rebuild() {
@@ -741,49 +741,49 @@ export const modules = {
         return 1
       }
     }
-    Rd.REFRESHRATE_RENDER_ONCE = Od.REFRESHRATE_RENDER_ONCE, Rd.REFRESHRATE_RENDER_ONEVERYFRAME = Od.REFRESHRATE_RENDER_ONEVERYFRAME, Rd.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = Od.REFRESHRATE_RENDER_ONEVERYTWOFRAMES;
-    Object.getOwnPropertyDescriptor(Rd.prototype, "noPrePassRenderer") || Object.defineProperty(Rd.prototype, "noPrePassRenderer", (0, ed.g)("RenderTargetTexture", "noPrePassRenderer"))
+    eQ.REFRESHRATE_RENDER_ONCE = AQ.REFRESHRATE_RENDER_ONCE, eQ.REFRESHRATE_RENDER_ONEVERYFRAME = AQ.REFRESHRATE_RENDER_ONEVERYFRAME, eQ.REFRESHRATE_RENDER_ONEVERYTWOFRAMES = AQ.REFRESHRATE_RENDER_ONEVERYTWOFRAMES;
+    Object.getOwnPropertyDescriptor(eQ.prototype, "noPrePassRenderer") || Object.defineProperty(eQ.prototype, "noPrePassRenderer", (0, tQ.e)("RenderTargetTexture", "noPrePassRenderer"))
   },
-  41761: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Cd,
-      f: () => Kd
+  41202: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => mQ,
+      f: () => uQ
     });
-    var pd = kd(40115),
-      Nd = kd(38281),
-      Wd = kd(37280),
-      Pd = kd(39822),
-      Zd = kd(40304);
-    const gd = {
+    var LQ = wQ(39561),
+      qQ = wQ(37631),
+      oQ = wQ(36722),
+      DQ = wQ(39243),
+      kQ = wQ(39748);
+    const vQ = {
       positions: [1, 1, -1, 1, -1, -1, 1, -1],
       indices: [0, 1, 2, 0, 2, 3]
     };
-    class Cd {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gd;
-        this._fullscreenViewport = new Nd.b(0, 0, 1, 1);
-        const kd = Jd.positions ?? gd.positions,
-          Wd = Jd.indices ?? gd.indices;
-        this.engine = dd, this._vertexBuffers = {
-          [pd.j.PositionKind]: new pd.j(dd, kd, pd.j.PositionKind, !1, !1, 2)
-        }, this._indexBuffer = dd.createIndexBuffer(Wd), this._indexBufferLength = Wd.length, this._onContextRestoredObserver = dd.onContextRestoredObservable.add((() => {
-          this._indexBuffer = dd.createIndexBuffer(Wd);
-          for (const dd in this._vertexBuffers) {
-            this._vertexBuffers[dd]._rebuild()
+    class mQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vQ;
+        this._fullscreenViewport = new qQ.c(0, 0, 1, 1);
+        const wQ = FQ.positions ?? vQ.positions,
+          oQ = FQ.indices ?? vQ.indices;
+        this.engine = QQ, this._vertexBuffers = {
+          [LQ.h.PositionKind]: new LQ.h(QQ, wQ, LQ.h.PositionKind, !1, !1, 2)
+        }, this._indexBuffer = QQ.createIndexBuffer(oQ), this._indexBufferLength = oQ.length, this._onContextRestoredObserver = QQ.onContextRestoredObservable.add((() => {
+          this._indexBuffer = QQ.createIndexBuffer(oQ);
+          for (const QQ in this._vertexBuffers) {
+            this._vertexBuffers[QQ]._rebuild()
           }
         }))
       }
       setViewport() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._fullscreenViewport;
-        this.engine.setViewport(dd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._fullscreenViewport;
+        this.engine.setViewport(QQ)
       }
-      bindBuffers(dd) {
-        this.engine.bindBuffers(this._vertexBuffers, this._indexBuffer, dd)
+      bindBuffers(QQ) {
+        this.engine.bindBuffers(this._vertexBuffers, this._indexBuffer, QQ)
       }
-      applyEffectWrapper(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.engine.setState(!0), this.engine.depthCullingState.depthTest = Jd, this.engine.stencilState.stencilTest = kd, this.engine.enableEffect(dd.drawWrapper), this.bindBuffers(dd.effect), dd.onApplyObservable.notifyObservers({})
+      applyEffectWrapper(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.engine.setState(!0), this.engine.depthCullingState.depthTest = FQ, this.engine.stencilState.stencilTest = wQ, this.engine.enableEffect(QQ.drawWrapper), this.bindBuffers(QQ.effect), QQ.onApplyObservable.notifyObservers({})
       }
       saveStates() {
         this._savedStateDepthTest = this.engine.depthCullingState.depthTest, this._savedStateStencilTest = this.engine.stencilState.stencilTest
@@ -794,33 +794,33 @@ export const modules = {
       draw() {
         this.engine.drawElementsType(0, 0, this._indexBufferLength)
       }
-      _isRenderTargetTexture(dd) {
-        return void 0 !== dd.renderTarget
+      _isRenderTargetTexture(QQ) {
+        return void 0 !== QQ.renderTarget
       }
-      render(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (!dd.effect.isReady()) return;
+      render(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (!QQ.effect.isReady()) return;
         this.saveStates(), this.setViewport();
-        const kd = null === Jd ? null : this._isRenderTargetTexture(Jd) ? Jd.renderTarget : Jd;
-        kd && this.engine.bindFramebuffer(kd), this.applyEffectWrapper(dd), this.draw(), kd && this.engine.unBindFramebuffer(kd), this.restoreStates()
+        const wQ = null === FQ ? null : this._isRenderTargetTexture(FQ) ? FQ.renderTarget : FQ;
+        wQ && this.engine.bindFramebuffer(wQ), this.applyEffectWrapper(QQ), this.draw(), wQ && this.engine.unBindFramebuffer(wQ), this.restoreStates()
       }
       dispose() {
-        const dd = this._vertexBuffers[pd.j.PositionKind];
-        dd && (dd.dispose(), delete this._vertexBuffers[pd.j.PositionKind]), this._indexBuffer && this.engine._releaseBuffer(this._indexBuffer), this._onContextRestoredObserver && (this.engine.onContextRestoredObservable.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null)
+        const QQ = this._vertexBuffers[LQ.h.PositionKind];
+        QQ && (QQ.dispose(), delete this._vertexBuffers[LQ.h.PositionKind]), this._indexBuffer && this.engine._releaseBuffer(this._indexBuffer), this._onContextRestoredObserver && (this.engine.onContextRestoredObservable.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null)
       }
     }
-    class Kd {
-      static RegisterShaderCodeProcessing(dd, Jd) {
-        Jd ? Kd._CustomShaderCodeProcessing[dd ?? ""] = Jd : delete Kd._CustomShaderCodeProcessing[dd ?? ""]
+    class uQ {
+      static RegisterShaderCodeProcessing(QQ, FQ) {
+        FQ ? uQ._CustomShaderCodeProcessing[QQ ?? ""] = FQ : delete uQ._CustomShaderCodeProcessing[QQ ?? ""]
       }
-      static _GetShaderCodeProcessing(dd) {
-        return Kd._CustomShaderCodeProcessing[dd] ?? Kd._CustomShaderCodeProcessing[""]
+      static _GetShaderCodeProcessing(QQ) {
+        return uQ._CustomShaderCodeProcessing[QQ] ?? uQ._CustomShaderCodeProcessing[""]
       }
       get name() {
         return this.options.name
       }
-      set name(dd) {
-        this.options.name = dd
+      set name(QQ) {
+        this.options.name = QQ
       }
       isReady() {
         return this._drawWrapper.effect?.isReady() ?? !1
@@ -831,34 +831,34 @@ export const modules = {
       get effect() {
         return this._drawWrapper.effect
       }
-      set effect(dd) {
-        this._drawWrapper.effect = dd
+      set effect(QQ) {
+        this._drawWrapper.effect = QQ
       }
-      constructor(dd) {
-        this.alphaMode = 0, this.onEffectCreatedObservable = new Wd.e(void 0, !0), this.onApplyObservable = new Wd.e, this._shadersLoaded = !1, this._webGPUReady = !1, this._importPromises = [], this.options = {
-          ...dd,
-          name: dd.name || "effectWrapper",
-          engine: dd.engine,
-          uniforms: dd.uniforms || dd.uniformNames || [],
+      constructor(QQ) {
+        this.alphaMode = 0, this.onEffectCreatedObservable = new oQ.e(void 0, !0), this.onApplyObservable = new oQ.e, this._shadersLoaded = !1, this._webGPUReady = !1, this._importPromises = [], this.options = {
+          ...QQ,
+          name: QQ.name || "effectWrapper",
+          engine: QQ.engine,
+          uniforms: QQ.uniforms || QQ.uniformNames || [],
           uniformNames: void 0,
-          samplers: dd.samplers || dd.samplerNames || [],
+          samplers: QQ.samplers || QQ.samplerNames || [],
           samplerNames: void 0,
-          attributeNames: dd.attributeNames || ["position"],
-          uniformBuffers: dd.uniformBuffers || [],
-          defines: dd.defines || "",
-          useShaderStore: dd.useShaderStore || !1,
-          vertexUrl: dd.vertexUrl || dd.vertexShader || "postprocess",
+          attributeNames: QQ.attributeNames || ["position"],
+          uniformBuffers: QQ.uniformBuffers || [],
+          defines: QQ.defines || "",
+          useShaderStore: QQ.useShaderStore || !1,
+          vertexUrl: QQ.vertexUrl || QQ.vertexShader || "postprocess",
           vertexShader: void 0,
-          fragmentShader: dd.fragmentShader || "pass",
-          indexParameters: dd.indexParameters,
-          blockCompilation: dd.blockCompilation || !1,
-          shaderLanguage: dd.shaderLanguage || 0,
-          onCompiled: dd.onCompiled || void 0,
-          extraInitializations: dd.extraInitializations || void 0,
-          extraInitializationsAsync: dd.extraInitializationsAsync || void 0,
-          useAsPostProcess: dd.useAsPostProcess ?? !1,
-          allowEmptySourceTexture: dd.allowEmptySourceTexture ?? !1
-        }, this.options.uniformNames = this.options.uniforms, this.options.samplerNames = this.options.samplers, this.options.vertexShader = this.options.vertexUrl, this.options.useAsPostProcess && (this.options.allowEmptySourceTexture || -1 !== this.options.samplers.indexOf("textureSampler") || this.options.samplers.push("textureSampler"), -1 === this.options.uniforms.indexOf("scale") && this.options.uniforms.push("scale")), dd.vertexUrl || dd.vertexShader ? this._shaderPath = {
+          fragmentShader: QQ.fragmentShader || "pass",
+          indexParameters: QQ.indexParameters,
+          blockCompilation: QQ.blockCompilation || !1,
+          shaderLanguage: QQ.shaderLanguage || 0,
+          onCompiled: QQ.onCompiled || void 0,
+          extraInitializations: QQ.extraInitializations || void 0,
+          extraInitializationsAsync: QQ.extraInitializationsAsync || void 0,
+          useAsPostProcess: QQ.useAsPostProcess ?? !1,
+          allowEmptySourceTexture: QQ.allowEmptySourceTexture ?? !1
+        }, this.options.uniformNames = this.options.uniforms, this.options.samplerNames = this.options.samplers, this.options.vertexShader = this.options.vertexUrl, this.options.useAsPostProcess && (this.options.allowEmptySourceTexture || -1 !== this.options.samplers.indexOf("textureSampler") || this.options.samplers.push("textureSampler"), -1 === this.options.uniforms.indexOf("scale") && this.options.uniforms.push("scale")), QQ.vertexUrl || QQ.vertexShader ? this._shaderPath = {
           vertexSource: this.options.vertexShader
         } : (this.options.useAsPostProcess || (this.options.uniforms.push("scale"), this.onApplyObservable.add((() => {
           this.effect.setFloat2("scale", 1, 1)
@@ -868,99 +868,99 @@ export const modules = {
           this.bind()
         })), this.options.useShaderStore || (this._onContextRestoredObserver = this.options.engine.onContextRestoredObservable.add((() => {
           this.effect._pipelineContext = null, this.effect._prepareEffect()
-        }))), this._drawWrapper = new Zd.d(this.options.engine), this._webGPUReady = 1 === this.options.shaderLanguage;
-        const Jd = Array.isArray(this.options.defines) ? this.options.defines.join("\n") : this.options.defines;
-        this._postConstructor(this.options.blockCompilation, Jd, this.options.extraInitializations)
+        }))), this._drawWrapper = new kQ.d(this.options.engine), this._webGPUReady = 1 === this.options.shaderLanguage;
+        const FQ = Array.isArray(this.options.defines) ? this.options.defines.join("\n") : this.options.defines;
+        this._postConstructor(this.options.blockCompilation, FQ, this.options.extraInitializations)
       }
       _gatherImports() {}
-      _postConstructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          pd = arguments.length > 2 ? arguments[2] : void 0,
-          Nd = arguments.length > 3 ? arguments[3] : void 0;
-        this._importPromises.length = 0, Nd && this._importPromises.push(...Nd);
-        const Wd = this.options.engine.isWebGPU && !Kd.ForceGLSL;
-        this._gatherImports(Wd, this._importPromises), this.options.useShaderStore && "postprocess" === this._shaderPath.vertex && this._importPromises.push(Wd && this._webGPUReady ? kd.e(357).then((() => kd(61119))) : kd.e(346).then((() => kd(60885)))), void 0 !== pd && pd(Wd, this._importPromises), Wd && this._webGPUReady && (this.options.shaderLanguage = 1), dd || this.updateEffect(Jd)
+      _postConstructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          LQ = arguments.length > 2 ? arguments[2] : void 0,
+          qQ = arguments.length > 3 ? arguments[3] : void 0;
+        this._importPromises.length = 0, qQ && this._importPromises.push(...qQ);
+        const oQ = this.options.engine.isWebGPU && !uQ.ForceGLSL;
+        this._gatherImports(oQ, this._importPromises), this.options.useShaderStore && "postprocess" === this._shaderPath.vertex && this._importPromises.push(oQ && this._webGPUReady ? wQ.e(357).then((() => wQ(60891))) : wQ.e(346).then((() => wQ(60652)))), void 0 !== LQ && LQ(oQ, this._importPromises), oQ && this._webGPUReady && (this.options.shaderLanguage = 1), QQ || this.updateEffect(FQ)
       }
       updateEffect() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          pd = arguments.length > 3 ? arguments[3] : void 0,
-          Nd = arguments.length > 4 ? arguments[4] : void 0,
-          Wd = arguments.length > 5 ? arguments[5] : void 0,
-          Zd = arguments.length > 6 ? arguments[6] : void 0,
-          gd = arguments.length > 7 ? arguments[7] : void 0;
-        const Cd = Kd._GetShaderCodeProcessing(this.name);
-        if (Cd?.defineCustomBindings) {
-          const pd = Jd?.slice() ?? [];
-          pd.push(...this.options.uniforms);
-          const Nd = kd?.slice() ?? [];
-          Nd.push(...this.options.samplers), dd = Cd.defineCustomBindings(this.name, dd, pd, Nd), Jd = pd, kd = Nd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          LQ = arguments.length > 3 ? arguments[3] : void 0,
+          qQ = arguments.length > 4 ? arguments[4] : void 0,
+          oQ = arguments.length > 5 ? arguments[5] : void 0,
+          kQ = arguments.length > 6 ? arguments[6] : void 0,
+          vQ = arguments.length > 7 ? arguments[7] : void 0;
+        const mQ = uQ._GetShaderCodeProcessing(this.name);
+        if (mQ?.defineCustomBindings) {
+          const LQ = FQ?.slice() ?? [];
+          LQ.push(...this.options.uniforms);
+          const qQ = wQ?.slice() ?? [];
+          qQ.push(...this.options.samplers), QQ = mQ.defineCustomBindings(this.name, QQ, LQ, qQ), FQ = LQ, wQ = qQ
         }
-        this.options.defines = dd || "";
-        const od = this._shadersLoaded || 0 === this._importPromises.length ? void 0 : async () => {
+        this.options.defines = QQ || "";
+        const HQ = this._shadersLoaded || 0 === this._importPromises.length ? void 0 : async () => {
           await Promise.all(this._importPromises), this._shadersLoaded = !0
         };
-        let ld;
-        ld = this.options.extraInitializationsAsync ? async () => {
-          await (od?.()), await this.options.extraInitializationsAsync()
-        }: od, this.options.useShaderStore ? this._drawWrapper.effect = this.options.engine.createEffect({
-          vertex: Zd ?? this._shaderPath.vertex,
-          fragment: gd ?? this._shaderPath.fragment
+        let bQ;
+        bQ = this.options.extraInitializationsAsync ? async () => {
+          await (HQ?.()), await this.options.extraInitializationsAsync()
+        }: HQ, this.options.useShaderStore ? this._drawWrapper.effect = this.options.engine.createEffect({
+          vertex: kQ ?? this._shaderPath.vertex,
+          fragment: vQ ?? this._shaderPath.fragment
         }, {
           attributes: this.options.attributeNames,
-          uniformsNames: Jd || this.options.uniforms,
+          uniformsNames: FQ || this.options.uniforms,
           uniformBuffersNames: this.options.uniformBuffers,
-          samplers: kd || this.options.samplers,
-          defines: null !== dd ? dd : "",
+          samplers: wQ || this.options.samplers,
+          defines: null !== QQ ? QQ : "",
           fallbacks: null,
-          onCompiled: Nd ?? this.options.onCompiled,
-          onError: Wd ?? null,
-          indexParameters: pd || this.options.indexParameters,
-          processCodeAfterIncludes: Cd?.processCodeAfterIncludes ? (dd, Jd) => Cd.processCodeAfterIncludes(this.name, dd, Jd) : null,
-          processFinalCode: Cd?.processFinalCode ? (dd, Jd) => Cd.processFinalCode(this.name, dd, Jd) : null,
+          onCompiled: qQ ?? this.options.onCompiled,
+          onError: oQ ?? null,
+          indexParameters: LQ || this.options.indexParameters,
+          processCodeAfterIncludes: mQ?.processCodeAfterIncludes ? (QQ, FQ) => mQ.processCodeAfterIncludes(this.name, QQ, FQ) : null,
+          processFinalCode: mQ?.processFinalCode ? (QQ, FQ) => mQ.processFinalCode(this.name, QQ, FQ) : null,
           shaderLanguage: this.options.shaderLanguage,
-          extraInitializationsAsync: ld
-        }, this.options.engine) : this._drawWrapper.effect = new Pd.b(this._shaderPath, this.options.attributeNames, Jd || this.options.uniforms, kd || this.options.samplerNames, this.options.engine, dd, void 0, Nd || this.options.onCompiled, void 0, void 0, void 0, this.options.shaderLanguage, ld), this.onEffectCreatedObservable.notifyObservers(this._drawWrapper.effect)
+          extraInitializationsAsync: bQ
+        }, this.options.engine) : this._drawWrapper.effect = new DQ.d(this._shaderPath, this.options.attributeNames, FQ || this.options.uniforms, wQ || this.options.samplerNames, this.options.engine, QQ, void 0, qQ || this.options.onCompiled, void 0, void 0, void 0, this.options.shaderLanguage, bQ), this.onEffectCreatedObservable.notifyObservers(this._drawWrapper.effect)
       }
       bind() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.options.useAsPostProcess && !dd && (this.options.engine.setAlphaMode(this.alphaMode), this.drawWrapper.effect.setFloat2("scale", 1, 1)), Kd._GetShaderCodeProcessing(this.name)?.bindCustomBindings?.(this.name, this._drawWrapper.effect)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.options.useAsPostProcess && !QQ && (this.options.engine.setAlphaMode(this.alphaMode), this.drawWrapper.effect.setFloat2("scale", 1, 1)), uQ._GetShaderCodeProcessing(this.name)?.bindCustomBindings?.(this.name, this._drawWrapper.effect)
       }
       dispose() {
-        this._onContextRestoredObserver && (this.effect.eL().onContextRestoredObservable.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null), this.onEffectCreatedObservable.clear(), this._drawWrapper.dispose(!0)
+        this._onContextRestoredObserver && (this.effect.Wx().onContextRestoredObservable.remove(this._onContextRestoredObserver), this._onContextRestoredObserver = null), this.onEffectCreatedObservable.clear(), this._drawWrapper.dispose(!0)
       }
     }
-    Kd.ForceGLSL = !1, Kd._CustomShaderCodeProcessing = {}
+    uQ.ForceGLSL = !1, uQ._CustomShaderCodeProcessing = {}
   },
-  41784: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      Dispose: () => Id,
-      DumpData: () => Rd,
-      DumpDataAsync: () => ed,
-      DumpFramebuffer: () => Od,
-      DumpTools: () => Gd,
-      EncodeImageAsync: () => Ld,
-      RegisterDumpTools: () => xd
+  41235: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      Dispose: () => MQ,
+      DumpData: () => eQ,
+      DumpDataAsync: () => tQ,
+      DumpFramebuffer: () => AQ,
+      DumpTools: () => GQ,
+      EncodeImageAsync: () => xQ,
+      RegisterDumpTools: () => cQ
     });
-    var pd = kd(39964),
-      Nd = kd(41761),
-      Wd = kd(40066),
-      Pd = kd(37289),
-      Zd = kd(37277),
-      gd = kd(38812),
-      Cd = kd(40023),
-      Kd = kd(39966);
-    let od = null;
-    async function ld() {
-      return od || (od = async function() {
-        const dd = Zd.d.LastCreatedEngine?.createCanvas(100, 100) ?? new OffscreenCanvas(100, 100);
-        dd instanceof OffscreenCanvas && gd.c.Warn("DumpData: OffscreenCanvas will be used for dumping data. This may result in lossy alpha values.");
+    var LQ = wQ(39402),
+      qQ = wQ(41202),
+      oQ = wQ(39505),
+      DQ = wQ(36729),
+      kQ = wQ(36720),
+      vQ = wQ(38203),
+      mQ = wQ(39468),
+      uQ = wQ(39409);
+    let HQ = null;
+    async function bQ() {
+      return HQ || (HQ = async function() {
+        const QQ = kQ.d.LastCreatedEngine?.createCanvas(100, 100) ?? new OffscreenCanvas(100, 100);
+        QQ instanceof OffscreenCanvas && vQ.c.Warn("DumpData: OffscreenCanvas will be used for dumping data. This may result in lossy alpha values.");
         const {
-          ThinEngine: Jd
-        } = await Promise.resolve().then((() => kd(39813)));
-        if (!Jd.IsSupported) throw new Error("DumpData: No WebGL context available. Cannot dump data.");
-        const pd = new Jd(dd, !1, {
+          ThinEngine: FQ
+        } = await Promise.resolve().then((() => wQ(39240)));
+        if (!FQ.IsSupported) throw new Error("DumpData: No WebGL context available. Cannot dump data.");
+        const LQ = new FQ(QQ, !1, {
           preserveDrawingBuffer: !0,
           depth: !1,
           stencil: !1,
@@ -969,262 +969,262 @@ export const modules = {
           antialias: !1,
           failIfMajorPerformanceCaveat: !1
         });
-        Zd.d.Instances.pop(), Zd.d.OnEnginesDisposedObservable.add((dd => {
-          pd && dd !== pd && !pd.lq && 0 === Zd.d.Instances.length && Id()
-        })), pd.getCaps().parallelShaderCompile = void 0;
-        const Wd = new Nd.b(pd),
+        kQ.d.Instances.pop(), kQ.d.OnEnginesDisposedObservable.add((QQ => {
+          LQ && QQ !== LQ && !LQ.vW && 0 === kQ.d.Instances.length && MQ()
+        })), LQ.getCaps().parallelShaderCompile = void 0;
+        const oQ = new qQ.b(LQ),
           {
-            passPixelShader: Pd
-          } = await kd.e(365).then((() => kd(61182))),
-          Cd = new Nd.f({
-            engine: pd,
-            name: Pd.name,
-            fragmentShader: Pd.shader,
+            passPixelShader: DQ
+          } = await wQ.e(365).then((() => wQ(60956))),
+          mQ = new qQ.f({
+            engine: LQ,
+            name: DQ.name,
+            fragmentShader: DQ.shader,
             samplerNames: ["textureSampler"]
           });
         return {
-          canvas: dd,
+          canvas: QQ,
           dumpEngine: {
-            engine: pd,
-            renderer: Wd,
-            wrapper: Cd
+            engine: LQ,
+            renderer: oQ,
+            wrapper: mQ
           }
         }
-      }()), await od
+      }()), await HQ
     }
-    let Qd = (() => {
-      var dd;
-      let Jd, kd = [];
-      return dd = class {
-        static async EncodeImageAsync(dd, Jd, kd, pd, Nd, Pd) {
-          const Zd = await ld(),
-            gd = Zd.dumpEngine;
-          gd.engine.setSize(Jd, kd, !0);
-          const Cd = gd.engine.createRawTexture(dd, Jd, kd, 5, !1, !Nd, 1);
-          return gd.renderer.setViewport(), gd.renderer.applyEffectWrapper(gd.wrapper), gd.wrapper.effect._bindTexture("textureSampler", Cd), gd.renderer.draw(), Cd.dispose(), await new Promise(((dd, Jd) => {
-            Wd.h.ToBlob(Zd.canvas, (kd => {
-              kd ? dd(kd) : Jd(new Error("EncodeImageAsync: Failed to convert canvas to blob."))
-            }), pd, Pd)
+    let YQ = (() => {
+      var QQ;
+      let FQ, wQ = [];
+      return QQ = class {
+        static async EncodeImageAsync(QQ, FQ, wQ, LQ, qQ, DQ) {
+          const kQ = await bQ(),
+            vQ = kQ.dumpEngine;
+          vQ.engine.setSize(FQ, wQ, !0);
+          const mQ = vQ.engine.createRawTexture(QQ, FQ, wQ, 5, !1, !qQ, 1);
+          return vQ.renderer.setViewport(), vQ.renderer.applyEffectWrapper(vQ.wrapper), vQ.wrapper.effect._bindTexture("textureSampler", mQ), vQ.renderer.draw(), mQ.dispose(), await new Promise(((QQ, FQ) => {
+            oQ.g.ToBlob(kQ.canvas, (wQ => {
+              wQ ? QQ(wQ) : FQ(new Error("EncodeImageAsync: Failed to convert canvas to blob."))
+            }), LQ, DQ)
           }))
         }
       }, (() => {
-        const Nd = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Jd = [Kd.h], (0, pd.h)(dd, null, Jd, {
+        const qQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        FQ = [uQ.i], (0, LQ.i)(QQ, null, FQ, {
           kind: "method",
           name: "EncodeImageAsync",
           static: !0,
           private: !1,
           access: {
-            has: dd => "EncodeImageAsync" in dd,
-            get: dd => dd.EncodeImageAsync
+            has: QQ => "EncodeImageAsync" in QQ,
+            get: QQ => QQ.EncodeImageAsync
           },
-          metadata: Nd
-        }, null, kd), Nd && Object.defineProperty(dd, Symbol.metadata, {
+          metadata: qQ
+        }, null, wQ), qQ && Object.defineProperty(QQ, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Nd
-        }), (0, pd.i)(dd, kd)
-      })(), dd
+          value: qQ
+        }), (0, LQ.l)(QQ, wQ)
+      })(), QQ
     })();
-    const Ld = Qd.EncodeImageAsync;
-    async function Od(dd, Jd, kd, pd) {
-      let Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
-        Wd = arguments.length > 5 ? arguments[5] : void 0,
-        Pd = arguments.length > 6 ? arguments[6] : void 0;
-      const Zd = await kd.readPixels(0, 0, dd, Jd);
-      Rd(dd, Jd, new Uint8Array(Zd.buffer), pd, Nd, Wd, !0, void 0, Pd)
+    const xQ = YQ.EncodeImageAsync;
+    async function AQ(QQ, FQ, wQ, LQ) {
+      let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        oQ = arguments.length > 5 ? arguments[5] : void 0,
+        DQ = arguments.length > 6 ? arguments[6] : void 0;
+      const kQ = await wQ.readPixels(0, 0, QQ, FQ);
+      eQ(QQ, FQ, new Uint8Array(kQ.buffer), LQ, qQ, oQ, !0, void 0, DQ)
     }
-    async function ed(dd, Jd, kd) {
-      let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
-        Nd = arguments.length > 4 ? arguments[4] : void 0,
-        Zd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Kd = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        od = arguments.length > 7 ? arguments[7] : void 0;
-      if (kd instanceof Float32Array) {
-        const dd = new Uint8Array(kd.length);
-        let Jd = kd.length;
-        for (; Jd--;) {
-          const pd = kd[Jd];
-          dd[Jd] = Math.round(255 * (0, Pd.Clamp)(pd))
+    async function tQ(QQ, FQ, wQ) {
+      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        qQ = arguments.length > 4 ? arguments[4] : void 0,
+        kQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        uQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        HQ = arguments.length > 7 ? arguments[7] : void 0;
+      if (wQ instanceof Float32Array) {
+        const QQ = new Uint8Array(wQ.length);
+        let FQ = wQ.length;
+        for (; FQ--;) {
+          const LQ = wQ[FQ];
+          QQ[FQ] = Math.round(255 * (0, DQ.Clamp)(LQ))
         }
-        kd = dd
+        wQ = QQ
       }
-      const ld = await Qd.EncodeImageAsync(kd, dd, Jd, pd, Zd, od);
-      void 0 !== Nd && Wd.h.DownloadBlob(ld, Nd), ld.type !== pd && gd.c.Warn(`DumpData: The requested mimeType '${pd}' is not supported. The result has mimeType '${ld.type}' instead.`);
-      const Ld = await ld.arrayBuffer();
-      return Kd ? Ld : `data:${pd};base64,${(0,Cd.j)(Ld)}`
+      const bQ = await YQ.EncodeImageAsync(wQ, QQ, FQ, LQ, kQ, HQ);
+      void 0 !== qQ && oQ.g.DownloadBlob(bQ, qQ), bQ.type !== LQ && vQ.c.Warn(`DumpData: The requested mimeType '${LQ}' is not supported. The result has mimeType '${bQ.type}' instead.`);
+      const xQ = await bQ.arrayBuffer();
+      return uQ ? xQ : `data:${LQ};base64,${(0,mQ.i)(xQ)}`
     }
 
-    function Rd(dd, Jd, kd, pd) {
-      let Nd = arguments.length > 5 ? arguments[5] : void 0;
-      void 0 !== Nd || pd || (Nd = ""), ed(dd, Jd, kd, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png", Nd, arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] && arguments[7], arguments.length > 8 ? arguments[8] : void 0).then((dd => {
-        pd && pd(dd)
+    function eQ(QQ, FQ, wQ, LQ) {
+      let qQ = arguments.length > 5 ? arguments[5] : void 0;
+      void 0 !== qQ || LQ || (qQ = ""), tQ(QQ, FQ, wQ, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png", qQ, arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] && arguments[7], arguments.length > 8 ? arguments[8] : void 0).then((QQ => {
+        LQ && LQ(QQ)
       }))
     }
 
-    function Id() {
-      od && (od?.then((dd => {
-        dd.canvas instanceof HTMLCanvasElement && dd.canvas.remove(), dd.dumpEngine && (dd.dumpEngine.engine.dispose(), dd.dumpEngine.renderer.dispose(), dd.dumpEngine.wrapper.dispose())
-      })), od = null)
+    function MQ() {
+      HQ && (HQ?.then((QQ => {
+        QQ.canvas instanceof HTMLCanvasElement && QQ.canvas.remove(), QQ.dumpEngine && (QQ.dumpEngine.engine.dispose(), QQ.dumpEngine.renderer.dispose(), QQ.dumpEngine.wrapper.dispose())
+      })), HQ = null)
     }
-    const Gd = {
-      DumpData: Rd,
-      DumpDataAsync: ed,
-      DumpFramebuffer: Od,
-      Dispose: Id
+    const GQ = {
+      DumpData: eQ,
+      DumpDataAsync: tQ,
+      DumpFramebuffer: AQ,
+      Dispose: MQ
     };
-    let vd = !1;
+    let pQ = !1;
 
-    function xd() {
-      if (vd) return;
-      vd = !0;
-      Wd.h.DumpData = Rd, Wd.h.DumpDataAsync = ed, Wd.h.DumpFramebuffer = Od
+    function cQ() {
+      if (pQ) return;
+      pQ = !0;
+      oQ.g.DumpData = eQ, oQ.g.DumpDataAsync = tQ, oQ.g.DumpFramebuffer = AQ
     }
   },
-  41767: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Qd,
-      f: () => Ld,
-      g: () => Od
+  41214: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => YQ,
+      d: () => xQ,
+      e: () => AQ
     });
-    var pd = kd(40471),
-      Nd = kd(41773),
-      Wd = kd(39964),
-      Pd = kd(41752),
-      Zd = kd(39983),
-      gd = kd(41782),
-      Cd = kd(39966);
-    class Kd extends Pd.e {
+    var LQ = wQ(39897),
+      qQ = wQ(41218),
+      oQ = wQ(39402),
+      DQ = wQ(41200),
+      kQ = wQ(39426),
+      vQ = wQ(41226),
+      mQ = wQ(39409);
+    class uQ extends DQ.d {
       getClassName() {
         return "PassPostProcess"
       }
-      constructor(dd, Jd) {
-        let kd = arguments.length > 4 ? arguments[4] : void 0;
-        const pd = {
-          size: "number" === typeof Jd ? Jd : void 0,
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 4 ? arguments[4] : void 0;
+        const LQ = {
+          size: "number" === typeof FQ ? FQ : void 0,
           camera: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
           samplingMode: arguments.length > 3 ? arguments[3] : void 0,
-          engine: kd,
+          engine: wQ,
           reusable: arguments.length > 5 ? arguments[5] : void 0,
           textureType: arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
           blockCompilation: arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-          ...Jd
+          ...FQ
         };
-        super(dd, gd.e.FragmentUrl, {
-          effectWrapper: "number" !== typeof Jd && Jd.effectWrapper ? void 0 : new gd.e(dd, kd, pd),
-          ...pd
+        super(QQ, vQ.f.FragmentUrl, {
+          effectWrapper: "number" !== typeof FQ && FQ.effectWrapper ? void 0 : new vQ.f(QQ, wQ, LQ),
+          ...LQ
         })
       }
-      static _Parse(dd, Jd, kd, pd) {
-        return Zd.c.Parse((() => new Kd(dd.name, dd.options, Jd, dd.renderTargetSamplingMode, dd._engine, dd.reusable)), dd, kd, pd)
+      static _Parse(QQ, FQ, wQ, LQ) {
+        return kQ.c.Parse((() => new uQ(QQ.name, QQ.options, FQ, QQ.renderTargetSamplingMode, QQ._engine, QQ.reusable)), QQ, wQ, LQ)
       }
     }(() => {
-      var dd;
-      let Jd, kd = Pd.e,
-        pd = [];
-      dd = class extends kd {
+      var QQ;
+      let FQ, wQ = DQ.d,
+        LQ = [];
+      QQ = class extends wQ {
         get face() {
           return this._effectWrapper.face
         }
-        set face(dd) {
-          this._effectWrapper.face = dd
+        set face(QQ) {
+          this._effectWrapper.face = QQ
         }
         getClassName() {
           return "PassCubePostProcess"
         }
-        constructor(dd, Jd) {
-          let kd = arguments.length > 4 ? arguments[4] : void 0;
-          const Nd = {
-            size: "number" === typeof Jd ? Jd : void 0,
+        constructor(QQ, FQ) {
+          let wQ = arguments.length > 4 ? arguments[4] : void 0;
+          const qQ = {
+            size: "number" === typeof FQ ? FQ : void 0,
             camera: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             samplingMode: arguments.length > 3 ? arguments[3] : void 0,
-            engine: kd,
+            engine: wQ,
             reusable: arguments.length > 5 ? arguments[5] : void 0,
             textureType: arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
             blockCompilation: arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-            ...Jd
+            ...FQ
           };
-          super(dd, gd.e.FragmentUrl, {
-            effectWrapper: "number" !== typeof Jd && Jd.effectWrapper ? void 0 : new gd.d(dd, kd, Nd),
-            ...Nd
-          }), (0, Wd.i)(this, pd)
+          super(QQ, vQ.f.FragmentUrl, {
+            effectWrapper: "number" !== typeof FQ && FQ.effectWrapper ? void 0 : new vQ.c(QQ, wQ, qQ),
+            ...qQ
+          }), (0, oQ.l)(this, LQ)
         }
-        static _Parse(Jd, kd, pd, Nd) {
-          return Zd.c.Parse((() => new dd(Jd.name, Jd.options, kd, Jd.renderTargetSamplingMode, Jd._engine, Jd.reusable)), Jd, pd, Nd)
+        static _Parse(FQ, wQ, LQ, qQ) {
+          return kQ.c.Parse((() => new QQ(FQ.name, FQ.options, wQ, FQ.renderTargetSamplingMode, FQ._engine, FQ.reusable)), FQ, LQ, qQ)
         }
       }, (() => {
-        const Nd = "function" === typeof Symbol && Symbol.metadata ? Object.create(kd[Symbol.metadata] ?? null) : void 0;
-        Jd = [(0, Cd.H)()], (0, Wd.h)(dd, null, Jd, {
+        const qQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(wQ[Symbol.metadata] ?? null) : void 0;
+        FQ = [(0, mQ.I)()], (0, oQ.i)(QQ, null, FQ, {
           kind: "getter",
           name: "face",
           static: !1,
           private: !1,
           access: {
-            has: dd => "face" in dd,
-            get: dd => dd.face
+            has: QQ => "face" in QQ,
+            get: QQ => QQ.face
           },
-          metadata: Nd
-        }, null, pd), Nd && Object.defineProperty(dd, Symbol.metadata, {
+          metadata: qQ
+        }, null, LQ), qQ && Object.defineProperty(QQ, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Nd
+          value: qQ
         })
       })()
     })();
-    var od = kd(37289),
-      ld = kd(40037);
+    var HQ = wQ(36729),
+      bQ = wQ(39475);
 
-    function Qd(dd, Jd, kd, pd, Nd, Wd, Zd, gd) {
-      const Cd = Jd.eL();
-      return Jd.isReady = !1, Nd = Nd ?? Jd.samplingMode, pd = pd ?? Jd.type, Wd = Wd ?? Jd.format, Zd = Zd ?? Jd.width, gd = gd ?? Jd.height, -1 === pd && (pd = 0), new Promise((Kd => {
-        const od = new Pd.e("postprocess", dd, null, null, 1, null, Nd, Cd, !1, void 0, pd, void 0, null, !1, Wd);
-        od.externalTextureSamplerBinding = !0;
-        const ld = Cd.createRenderTargetTexture({
-          width: Zd,
-          height: gd
+    function YQ(QQ, FQ, wQ, LQ, qQ, oQ, kQ, vQ) {
+      const mQ = FQ.Wx();
+      return FQ.isReady = !1, qQ = qQ ?? FQ.samplingMode, LQ = LQ ?? FQ.type, oQ = oQ ?? FQ.format, kQ = kQ ?? FQ.width, vQ = vQ ?? FQ.height, -1 === LQ && (LQ = 0), new Promise((uQ => {
+        const HQ = new DQ.d("postprocess", QQ, null, null, 1, null, qQ, mQ, !1, void 0, LQ, void 0, null, !1, oQ);
+        HQ.externalTextureSamplerBinding = !0;
+        const bQ = mQ.createRenderTargetTexture({
+          width: kQ,
+          height: vQ
         }, {
           generateDepthBuffer: !1,
           generateMipMaps: !1,
           generateStencilBuffer: !1,
-          samplingMode: Nd,
-          type: pd,
-          format: Wd
+          samplingMode: qQ,
+          type: LQ,
+          format: oQ
         });
-        od.onEffectCreatedObservable.addOnce((dd => {
-          dd.executeWhenCompiled((() => {
-            od.onApply = dd => {
-              dd._bindTexture("textureSampler", Jd), dd.setFloat2("scale", 1, 1)
-            }, kd.postProcessManager.directRender([od], ld, !0), Cd.restoreDefaultFramebuffer(), Cd._releaseTexture(Jd), od && od.dispose(), ld._swapAndDie(Jd), Jd.type = pd, Jd.format = 5, Jd.isReady = !0, Kd(Jd)
+        HQ.onEffectCreatedObservable.addOnce((QQ => {
+          QQ.executeWhenCompiled((() => {
+            HQ.onApply = QQ => {
+              QQ._bindTexture("textureSampler", FQ), QQ.setFloat2("scale", 1, 1)
+            }, wQ.postProcessManager.directRender([HQ], bQ, !0), mQ.restoreDefaultFramebuffer(), mQ._releaseTexture(FQ), HQ && HQ.dispose(), bQ._swapAndDie(FQ), FQ.type = LQ, FQ.format = 5, FQ.isReady = !0, uQ(FQ)
           }))
         }))
       }))
     }
-    async function Ld(dd, Jd, Wd) {
-      let Zd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        gd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
-        Cd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Kd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
-      await async function(dd) {
-        if (dd.isReady()) return;
-        if (dd.loadingError) throw new Error(dd.errorObject?.message || `Texture ${dd.name} errored while loading.`);
-        const Jd = dd.onLoadObservable;
-        if (Jd) return await new Promise((dd => Jd.addOnce((() => dd()))));
-        const kd = dd._texture?.onLoadedObservable;
-        if (kd) return await new Promise((dd => kd.addOnce((() => dd()))));
-        throw new Error(`Cannot determine readiness of texture ${dd.name}.`)
-      }(dd);
-      const ld = dd.getInternalTexture(),
-        Qd = dd.is3D || !!ld?.is3D,
+    async function xQ(QQ, FQ, oQ) {
+      let kQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        vQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
+        mQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        uQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+      await async function(QQ) {
+        if (QQ.isReady()) return;
+        if (QQ.loadingError) throw new Error(QQ.errorObject?.message || `Texture ${QQ.name} errored while loading.`);
+        const FQ = QQ.onLoadObservable;
+        if (FQ) return await new Promise((QQ => FQ.addOnce((() => QQ()))));
+        const wQ = QQ._texture?.onLoadedObservable;
+        if (wQ) return await new Promise((QQ => wQ.addOnce((() => QQ()))));
+        throw new Error(`Cannot determine readiness of texture ${QQ.name}.`)
+      }(QQ);
+      const bQ = QQ.getInternalTexture(),
+        YQ = QQ.is3D || !!bQ?.is3D,
         {
-          width: Ld,
-          height: Od
-        } = dd.getSize(),
-        ed = Jd ?? Ld,
-        Rd = Wd ?? Od;
-      if (Cd || Qd || function(dd) {
-          switch (dd) {
+          width: xQ,
+          height: AQ
+        } = QQ.getSize(),
+        tQ = FQ ?? xQ,
+        eQ = oQ ?? AQ;
+      if (mQ || YQ || function(QQ) {
+          switch (QQ) {
             case 36492:
             case 36493:
             case 36495:
@@ -1276,196 +1276,196 @@ export const modules = {
             default:
               return !1
           }
-        }(dd.textureFormat) || ed !== Ld || Rd !== Od) {
-        if (dd.is2DArray) throw new Error(`Reading pixels from 2D array textures with ${Cd?"RTT":"compression"} is not supported.`);
-        return await async function(dd, Jd, Wd, Zd, gd) {
-          let Cd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          const Kd = dd.Wm(),
-            od = Kd.eL(),
-            ld = dd.getInternalTexture(),
-            Qd = dd.is3D || !!ld?.is3D;
-          let Ld;
-          if (od.isWebGPU ? Qd ? await kd.e(361).then((() => kd(61160))) : dd.isCube ? await kd.e(362).then((() => kd(61165))) : await kd.e(363).then((() => kd(61169))) : Qd ? await kd.e(358).then((() => kd(61140))) : dd.isCube ? await kd.e(359).then((() => kd(61148))) : await kd.e(360).then((() => kd(61152))), Qd) Ld = new Pd.e("lod3D", "lod3D", {
+        }(QQ.textureFormat) || tQ !== xQ || eQ !== AQ) {
+        if (QQ.is2DArray) throw new Error(`Reading pixels from 2D array textures with ${mQ?"RTT":"compression"} is not supported.`);
+        return await async function(QQ, FQ, oQ, kQ, vQ) {
+          let mQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          const uQ = QQ.iN(),
+            HQ = uQ.Wx(),
+            bQ = QQ.getInternalTexture(),
+            YQ = QQ.is3D || !!bQ?.is3D;
+          let xQ;
+          if (HQ.isWebGPU ? YQ ? await wQ.e(361).then((() => wQ(60934))) : QQ.isCube ? await wQ.e(362).then((() => wQ(60942))) : await wQ.e(363).then((() => wQ(60950))) : YQ ? await wQ.e(358).then((() => wQ(60913))) : QQ.isCube ? await wQ.e(359).then((() => wQ(60920))) : await wQ.e(360).then((() => wQ(60928))), YQ) xQ = new DQ.d("lod3D", "lod3D", {
             uniforms: ["lod", "gamma", "slice"],
-            samplingMode: pd.c.NEAREST_NEAREST_MIPNEAREST,
-            engine: od,
-            shaderLanguage: od.isWebGPU ? 1 : 0
+            samplingMode: LQ.e.NEAREST_NEAREST_MIPNEAREST,
+            engine: HQ,
+            shaderLanguage: HQ.isWebGPU ? 1 : 0
           });
-          else if (dd.isCube) {
-            const dd = ["#define POSITIVEX", "#define NEGATIVEX", "#define POSITIVEY", "#define NEGATIVEY", "#define POSITIVEZ", "#define NEGATIVEZ"];
-            Ld = new Pd.e("lodCube", "lodCube", {
+          else if (QQ.isCube) {
+            const QQ = ["#define POSITIVEX", "#define NEGATIVEX", "#define POSITIVEY", "#define NEGATIVEY", "#define POSITIVEZ", "#define NEGATIVEZ"];
+            xQ = new DQ.d("lodCube", "lodCube", {
               uniforms: ["lod", "gamma"],
-              samplingMode: pd.c.NEAREST_NEAREST_MIPNEAREST,
-              engine: od,
-              defines: dd[Zd],
-              shaderLanguage: od.isWebGPU ? 1 : 0
+              samplingMode: LQ.e.NEAREST_NEAREST_MIPNEAREST,
+              engine: HQ,
+              defines: QQ[kQ],
+              shaderLanguage: HQ.isWebGPU ? 1 : 0
             })
-          } else Ld = new Pd.e("lod", "lod", {
+          } else xQ = new DQ.d("lod", "lod", {
             uniforms: ["lod", "gamma"],
-            samplingMode: pd.c.NEAREST_NEAREST_MIPNEAREST,
-            engine: od,
-            shaderLanguage: od.isWebGPU ? 1 : 0
+            samplingMode: LQ.e.NEAREST_NEAREST_MIPNEAREST,
+            engine: HQ,
+            shaderLanguage: HQ.isWebGPU ? 1 : 0
           });
-          await new Promise((dd => {
-            Ld.onEffectCreatedObservable.addOnce((Jd => {
-              Jd.executeWhenCompiled((() => {
-                dd(0)
+          await new Promise((QQ => {
+            xQ.onEffectCreatedObservable.addOnce((FQ => {
+              FQ.executeWhenCompiled((() => {
+                QQ(0)
               }))
             }))
           }));
-          const Od = new Nd.c("temp", {
-            width: Jd,
-            height: Wd
-          }, Kd, !1);
-          Ld.onApply = function(Jd) {
-            Jd.setTexture("textureSampler", dd), Jd.setFloat("lod", gd), Jd.setInt("gamma", dd.gammaSpace ? 1 : 0), Qd && Jd.setFloat("slice", Cd)
+          const AQ = new qQ.e("temp", {
+            width: FQ,
+            height: oQ
+          }, uQ, !1);
+          xQ.onApply = function(FQ) {
+            FQ.setTexture("textureSampler", QQ), FQ.setFloat("lod", vQ), FQ.setInt("gamma", QQ.gammaSpace ? 1 : 0), YQ && FQ.setFloat("slice", mQ)
           };
           try {
-            if (Od.renderTarget && ld) {
-              const kd = ld.samplingMode;
-              0 !== gd ? dd.updateSamplingMode(pd.c.NEAREST_NEAREST_MIPNEAREST) : dd.updateSamplingMode(pd.c.NEAREST_NEAREST), Kd.postProcessManager.directRender([Ld], Od.renderTarget, !0), dd.updateSamplingMode(kd);
-              const Nd = await od.readPixels(0, 0, Jd, Wd),
-                Pd = new Uint8Array(Nd.buffer, Nd.byteOffset, Nd.byteLength);
-              return od.unBindFramebuffer(Od.renderTarget), Pd
+            if (AQ.renderTarget && bQ) {
+              const wQ = bQ.samplingMode;
+              0 !== vQ ? QQ.updateSamplingMode(LQ.e.NEAREST_NEAREST_MIPNEAREST) : QQ.updateSamplingMode(LQ.e.NEAREST_NEAREST), uQ.postProcessManager.directRender([xQ], AQ.renderTarget, !0), QQ.updateSamplingMode(wQ);
+              const qQ = await HQ.readPixels(0, 0, FQ, oQ),
+                DQ = new Uint8Array(qQ.buffer, qQ.byteOffset, qQ.byteLength);
+              return HQ.unBindFramebuffer(AQ.renderTarget), DQ
             }
             throw Error("Render to texture failed.")
           } finally {
-            Od.dispose(), Ld.dispose()
+            AQ.dispose(), xQ.dispose()
           }
-        }(dd, ed, Rd, Zd, gd, Kd)
+        }(QQ, tQ, eQ, kQ, vQ, uQ)
       }
-      let Id = await dd.readPixels(Zd, gd);
-      if (!Id) throw new Error(`Failed to read pixels from texture ${dd.name}.`);
-      if (Id instanceof Float32Array) {
-        const dd = new Uint8Array(Id.length);
-        let Jd = Id.length;
-        for (; Jd--;) {
-          const kd = Id[Jd];
-          dd[Jd] = Math.round(255 * (0, od.Clamp)(kd))
+      let MQ = await QQ.readPixels(kQ, vQ);
+      if (!MQ) throw new Error(`Failed to read pixels from texture ${QQ.name}.`);
+      if (MQ instanceof Float32Array) {
+        const QQ = new Uint8Array(MQ.length);
+        let FQ = MQ.length;
+        for (; FQ--;) {
+          const wQ = MQ[FQ];
+          QQ[FQ] = Math.round(255 * (0, HQ.Clamp)(wQ))
         }
-        Id = dd
+        MQ = QQ
       }
-      const Gd = ed * Rd,
-        vd = 4 * Gd;
-      if (Id.length !== vd) {
-        const dd = 0 === Gd ? 0 : Id.length / Gd;
-        if (1 === dd || 2 === dd || 3 === dd) {
-          const Jd = new Uint8Array(vd);
-          for (let kd = 0, pd = 0, Nd = 0; kd < Gd; kd++, Nd += 4) {
-            const kd = Id[pd++];
-            if (1 === dd) {
-              Jd[Nd] = kd, Jd[Nd + 1] = kd, Jd[Nd + 2] = kd, Jd[Nd + 3] = 255;
+      const GQ = tQ * eQ,
+        pQ = 4 * GQ;
+      if (MQ.length !== pQ) {
+        const QQ = 0 === GQ ? 0 : MQ.length / GQ;
+        if (1 === QQ || 2 === QQ || 3 === QQ) {
+          const FQ = new Uint8Array(pQ);
+          for (let wQ = 0, LQ = 0, qQ = 0; wQ < GQ; wQ++, qQ += 4) {
+            const wQ = MQ[LQ++];
+            if (1 === QQ) {
+              FQ[qQ] = wQ, FQ[qQ + 1] = wQ, FQ[qQ + 2] = wQ, FQ[qQ + 3] = 255;
               continue
             }
-            const Wd = Id[pd++];
-            2 !== dd ? (Jd[Nd] = kd, Jd[Nd + 1] = Wd, Jd[Nd + 2] = Id[pd++], Jd[Nd + 3] = 255) : (Jd[Nd] = kd, Jd[Nd + 1] = Wd, Jd[Nd + 2] = 0, Jd[Nd + 3] = 255)
+            const oQ = MQ[LQ++];
+            2 !== QQ ? (FQ[qQ] = wQ, FQ[qQ + 1] = oQ, FQ[qQ + 2] = MQ[LQ++], FQ[qQ + 3] = 255) : (FQ[qQ] = wQ, FQ[qQ + 1] = oQ, FQ[qQ + 2] = 0, FQ[qQ + 3] = 255)
           }
-          return Jd
+          return FQ
         }
       }
-      return Id
+      return MQ
     }
-    const Od = {
-      CreateResizedCopy: function(dd, Jd, kd) {
-        let Wd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const Pd = dd.Wm(),
-          Zd = Pd.eL(),
-          gd = new Nd.c("resized" + dd.name, {
-            width: Jd,
-            height: kd
-          }, Pd, !dd.noMipmap, !0, dd._texture.type, !1, dd.samplingMode, !1);
-        gd.wrapU = dd.wrapU, gd.wrapV = dd.wrapV, gd.uOffset = dd.uOffset, gd.vOffset = dd.vOffset, gd.uScale = dd.uScale, gd.vScale = dd.vScale, gd.uAng = dd.uAng, gd.vAng = dd.vAng, gd.wAng = dd.wAng, gd.coordinatesIndex = dd.coordinatesIndex, gd.level = dd.level, gd.anisotropicFilteringLevel = dd.anisotropicFilteringLevel, gd._texture.isReady = !1, dd.wrapU = pd.c.CLAMP_ADDRESSMODE, dd.wrapV = pd.c.CLAMP_ADDRESSMODE;
-        const Cd = new Kd("pass", 1, null, Wd ? pd.c.BILINEAR_SAMPLINGMODE : pd.c.NEAREST_SAMPLINGMODE, Zd, !1, 0);
-        return Cd.externalTextureSamplerBinding = !0, Cd.onEffectCreatedObservable.addOnce((Jd => {
-          Jd.executeWhenCompiled((() => {
-            Cd.onApply = function(Jd) {
-              Jd.setTexture("textureSampler", dd)
+    const AQ = {
+      CreateResizedCopy: function(QQ, FQ, wQ) {
+        let oQ = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const DQ = QQ.iN(),
+          kQ = DQ.Wx(),
+          vQ = new qQ.e("resized" + QQ.name, {
+            width: FQ,
+            height: wQ
+          }, DQ, !QQ.noMipmap, !0, QQ._texture.type, !1, QQ.samplingMode, !1);
+        vQ.wrapU = QQ.wrapU, vQ.wrapV = QQ.wrapV, vQ.uOffset = QQ.uOffset, vQ.vOffset = QQ.vOffset, vQ.uScale = QQ.uScale, vQ.vScale = QQ.vScale, vQ.uAng = QQ.uAng, vQ.vAng = QQ.vAng, vQ.wAng = QQ.wAng, vQ.coordinatesIndex = QQ.coordinatesIndex, vQ.level = QQ.level, vQ.anisotropicFilteringLevel = QQ.anisotropicFilteringLevel, vQ._texture.isReady = !1, QQ.wrapU = LQ.e.CLAMP_ADDRESSMODE, QQ.wrapV = LQ.e.CLAMP_ADDRESSMODE;
+        const mQ = new uQ("pass", 1, null, oQ ? LQ.e.BILINEAR_SAMPLINGMODE : LQ.e.NEAREST_SAMPLINGMODE, kQ, !1, 0);
+        return mQ.externalTextureSamplerBinding = !0, mQ.onEffectCreatedObservable.addOnce((FQ => {
+          FQ.executeWhenCompiled((() => {
+            mQ.onApply = function(FQ) {
+              FQ.setTexture("textureSampler", QQ)
             };
-            const Jd = gd.renderTarget;
-            Jd && (Pd.postProcessManager.directRender([Cd], Jd), Zd.unBindFramebuffer(Jd), gd.disposeFramebufferObjects(), Cd.dispose(), gd.getInternalTexture().isReady = !0)
+            const FQ = vQ.renderTarget;
+            FQ && (DQ.postProcessManager.directRender([mQ], FQ), kQ.unBindFramebuffer(FQ), vQ.disposeFramebufferObjects(), mQ.dispose(), vQ.getInternalTexture().isReady = !0)
           }))
-        })), gd
+        })), vQ
       },
-      ApplyPostProcess: Qd,
-      ToHalfFloat: ld.l,
-      FromHalfFloat: ld.e,
-      GetTextureDataAsync: Ld
+      ApplyPostProcess: YQ,
+      ToHalfFloat: bQ.j,
+      FromHalfFloat: bQ.d,
+      GetTextureDataAsync: xQ
     }
   },
-  41752: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Ld
+  41200: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => xQ
     });
-    var pd = kd(39964),
-      Nd = kd(40080),
-      Wd = kd(37280),
-      Pd = kd(37251),
-      Zd = kd(39822),
-      gd = kd(39966),
-      Cd = kd(39983),
-      Kd = kd(37303),
-      od = kd(39874),
-      ld = kd(39902),
-      Qd = kd(41761);
-    let Ld = (() => {
-        var dd;
-        let Jd, Zd, od, Ld, Od, Rd, Id, Gd, vd, xd, qd, Bd, sd, ad, Md, Fd, Yd = [],
-          md = [],
-          bd = [],
-          Sd = [],
-          jd = [],
-          Xd = [],
-          fd = [],
-          nd = [],
-          Ud = [],
-          yd = [],
-          Dd = [],
-          Td = [],
-          Ed = [],
-          cd = [],
-          hd = [],
-          rd = [],
-          ud = [],
-          td = [],
-          Vd = [],
-          zd = [],
-          Hd = [],
-          wd = [],
-          Ad = [],
-          dJ = [],
-          JJ = [],
-          kJ = [],
-          pJ = [],
-          NJ = [],
-          WJ = [];
-        return dd = class {
+    var LQ = wQ(39402),
+      qQ = wQ(39518),
+      oQ = wQ(36722),
+      DQ = wQ(36696),
+      kQ = wQ(39243),
+      vQ = wQ(39409),
+      mQ = wQ(39426),
+      uQ = wQ(36741),
+      HQ = wQ(39295),
+      bQ = wQ(39333),
+      YQ = wQ(41202);
+    let xQ = (() => {
+        var QQ;
+        let FQ, kQ, HQ, xQ, AQ, eQ, MQ, GQ, pQ, cQ, CQ, SQ, iQ, WQ, RQ, OQ, sQ = [],
+          rQ = [],
+          IQ = [],
+          UQ = [],
+          NQ = [],
+          TQ = [],
+          KQ = [],
+          zQ = [],
+          lQ = [],
+          jQ = [],
+          aQ = [],
+          XQ = [],
+          fQ = [],
+          VQ = [],
+          hQ = [],
+          JQ = [],
+          EQ = [],
+          nQ = [],
+          gQ = [],
+          PQ = [],
+          ZQ = [],
+          yQ = [],
+          BQ = [],
+          dQ = [],
+          QF = [],
+          FF = [],
+          wF = [],
+          LF = [],
+          qF = [];
+        return QQ = class {
           static get ForceGLSL() {
-            return Qd.f.ForceGLSL
+            return YQ.f.ForceGLSL
           }
-          static set ForceGLSL(dd) {
-            Qd.f.ForceGLSL = dd
+          static set ForceGLSL(QQ) {
+            YQ.f.ForceGLSL = QQ
           }
-          static RegisterShaderCodeProcessing(dd, Jd) {
-            Qd.f.RegisterShaderCodeProcessing(dd, Jd)
+          static RegisterShaderCodeProcessing(QQ, FQ) {
+            YQ.f.RegisterShaderCodeProcessing(QQ, FQ)
           }
           get name() {
             return this._effectWrapper.name
           }
-          set name(dd) {
-            this._effectWrapper.name = dd
+          set name(QQ) {
+            this._effectWrapper.name = QQ
           }
           get alphaMode() {
             return this._effectWrapper.alphaMode
           }
-          set alphaMode(dd) {
-            this._effectWrapper.alphaMode = dd
+          set alphaMode(QQ) {
+            this._effectWrapper.alphaMode = QQ
           }
           get samples() {
             return this._samples
           }
-          set samples(dd) {
-            this._samples = Math.min(dd, this._engine.getCaps().maxMSAASamples), this._textures.forEach((dd => {
-              dd.setSamples(this._samples)
+          set samples(QQ) {
+            this._samples = Math.min(QQ, this._engine.getCaps().maxMSAASamples), this._textures.forEach((QQ => {
+              QQ.setSamples(this._samples)
             }))
           }
           get shaderLanguage() {
@@ -1474,108 +1474,108 @@ export const modules = {
           getEffectName() {
             return this._fragmentUrl
           }
-          set onActivate(dd) {
-            this._onActivateObserver && this.onActivateObservable.remove(this._onActivateObserver), dd && (this._onActivateObserver = this.onActivateObservable.add(dd))
+          set onActivate(QQ) {
+            this._onActivateObserver && this.onActivateObservable.remove(this._onActivateObserver), QQ && (this._onActivateObserver = this.onActivateObservable.add(QQ))
           }
-          set onSizeChanged(dd) {
-            this._onSizeChangedObserver && this.onSizeChangedObservable.remove(this._onSizeChangedObserver), this._onSizeChangedObserver = this.onSizeChangedObservable.add(dd)
+          set onSizeChanged(QQ) {
+            this._onSizeChangedObserver && this.onSizeChangedObservable.remove(this._onSizeChangedObserver), this._onSizeChangedObserver = this.onSizeChangedObservable.add(QQ)
           }
-          set onApply(dd) {
-            this._onApplyObserver && this.onApplyObservable.remove(this._onApplyObserver), this._onApplyObserver = this.onApplyObservable.add(dd)
+          set onApply(QQ) {
+            this._onApplyObserver && this.onApplyObservable.remove(this._onApplyObserver), this._onApplyObserver = this.onApplyObservable.add(QQ)
           }
-          set onBeforeRender(dd) {
-            this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(dd)
+          set onBeforeRender(QQ) {
+            this._onBeforeRenderObserver && this.onBeforeRenderObservable.remove(this._onBeforeRenderObserver), this._onBeforeRenderObserver = this.onBeforeRenderObservable.add(QQ)
           }
-          set onAfterRender(dd) {
-            this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(dd)
+          set onAfterRender(QQ) {
+            this._onAfterRenderObserver && this.onAfterRenderObservable.remove(this._onAfterRenderObserver), this._onAfterRenderObserver = this.onAfterRenderObservable.add(QQ)
           }
           get inputTexture() {
             return this._textures.data[this._currentRenderTextureInd]
           }
-          set inputTexture(dd) {
-            this._forcedOutputTexture = dd
+          set inputTexture(QQ) {
+            this._forcedOutputTexture = QQ
           }
           restoreDefaultInputTexture() {
             this._forcedOutputTexture && (this._forcedOutputTexture = null, this.markTextureDirty())
           }
           getCamera() {
-            return this.JA
+            return this.W8
           }
           get texelSize() {
-            return this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.texelSize : (this._forcedOutputTexture && this._texelSize.kdd(1 / this._forcedOutputTexture.width, 1 / this._forcedOutputTexture.height), this._texelSize)
+            return this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.texelSize : (this._forcedOutputTexture && this._texelSize.vQQ(1 / this._forcedOutputTexture.width, 1 / this._forcedOutputTexture.height), this._texelSize)
           }
-          constructor(Jd, kd, Zd, gd, Cd, Kd) {
-            let od = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1,
-              ld = arguments.length > 7 ? arguments[7] : void 0,
-              Ld = arguments.length > 8 ? arguments[8] : void 0,
-              Od = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-              Rd = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-              Id = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : "postprocess",
-              Gd = arguments.length > 12 ? arguments[12] : void 0,
-              vd = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
-              xd = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 5,
-              qd = arguments.length > 15 ? arguments[15] : void 0,
-              Bd = arguments.length > 16 ? arguments[16] : void 0;
-            this._parentContainer = ((0, pd.i)(this, Yd), null), this.uniqueId = (0, pd.i)(this, md, void 0), this.width = ((0, pd.i)(this, bd), (0, pd.i)(this, Sd, -1)), this.height = ((0, pd.i)(this, jd), (0, pd.i)(this, Xd, -1)), this.nodeMaterialSource = ((0, pd.i)(this, fd), null), this._outputTexture = null, this.renderTargetSamplingMode = (0, pd.i)(this, nd, void 0), this.clearColor = ((0, pd.i)(this, Ud), (0, pd.i)(this, yd, void 0)), this.autoClear = ((0, pd.i)(this, Dd), (0, pd.i)(this, Td, !0)), this.forceAutoClearInAlphaMode = ((0, pd.i)(this, Ed), (0, pd.i)(this, cd, !1)), this.alphaConstants = ((0, pd.i)(this, hd), (0, pd.i)(this, rd, void 0)), this.animations = ((0, pd.i)(this, ud), []), this.enablePixelPerfectMode = (0, pd.i)(this, td, !1), this.forceFullscreenViewport = ((0, pd.i)(this, Vd), (0, pd.i)(this, zd, !0)), this.inspectableCustomProperties = (0, pd.i)(this, Hd), this.scaleMode = (0, pd.i)(this, wd, 1), this.alwaysForcePOT = ((0, pd.i)(this, Ad), (0, pd.i)(this, dJ, !1)), this._samples = ((0, pd.i)(this, JJ), (0, pd.i)(this, kJ, 1)), this.adaptScaleToCurrentViewport = ((0, pd.i)(this, pJ), (0, pd.i)(this, NJ, !1)), this.doNotSerialize = ((0, pd.i)(this, WJ), !1), this._webGPUReady = !1, this._reusable = !1, this._renderId = 0, this.externalTextureSamplerBinding = !1, this._textures = new Nd.h(2), this._textureCache = [], this._currentRenderTextureInd = 0, this._scaleRatio = new Pd.k(1, 1), this._texelSize = Pd.k.Zero(), this.onActivateObservable = new Wd.e, this.onSizeChangedObservable = new Wd.e, this.onApplyObservable = new Wd.e, this.onBeforeRenderObservable = new Wd.e, this.onAfterRenderObservable = new Wd.e, this.Zm = new Wd.e, ed();
-            let sd, ad = 1,
-              Md = null;
-            if (Zd && !Array.isArray(Zd)) {
-              const dd = Zd;
-              Zd = dd.uniforms ?? null, gd = dd.samplers ?? null, ad = dd.size ?? 1, Kd = dd.camera ?? null, od = dd.samplingMode ?? 1, ld = dd.engine, Ld = dd.reusable, Od = Array.isArray(dd.defines) ? dd.defines.join("\n") : dd.defines ?? null, Rd = dd.textureType ?? 0, Id = dd.vertexUrl ?? "postprocess", Gd = dd.indexParameters, vd = dd.blockCompilation ?? !1, xd = dd.textureFormat ?? 5, qd = dd.shaderLanguage ?? 0, Md = dd.uniformBuffers ?? null, Bd = dd.extraInitializations, sd = dd.effectWrapper
-            } else Cd && (ad = "number" === typeof Cd ? Cd : {
-              width: Cd.width,
-              height: Cd.height
+          constructor(FQ, wQ, kQ, vQ, mQ, uQ) {
+            let HQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1,
+              bQ = arguments.length > 7 ? arguments[7] : void 0,
+              xQ = arguments.length > 8 ? arguments[8] : void 0,
+              AQ = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+              eQ = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+              MQ = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : "postprocess",
+              GQ = arguments.length > 12 ? arguments[12] : void 0,
+              pQ = arguments.length > 13 && void 0 !== arguments[13] && arguments[13],
+              cQ = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 5,
+              CQ = arguments.length > 15 ? arguments[15] : void 0,
+              SQ = arguments.length > 16 ? arguments[16] : void 0;
+            this._parentContainer = ((0, LQ.l)(this, sQ), null), this.uniqueId = (0, LQ.l)(this, rQ, void 0), this.width = ((0, LQ.l)(this, IQ), (0, LQ.l)(this, UQ, -1)), this.height = ((0, LQ.l)(this, NQ), (0, LQ.l)(this, TQ, -1)), this.nodeMaterialSource = ((0, LQ.l)(this, KQ), null), this._outputTexture = null, this.renderTargetSamplingMode = (0, LQ.l)(this, zQ, void 0), this.clearColor = ((0, LQ.l)(this, lQ), (0, LQ.l)(this, jQ, void 0)), this.autoClear = ((0, LQ.l)(this, aQ), (0, LQ.l)(this, XQ, !0)), this.forceAutoClearInAlphaMode = ((0, LQ.l)(this, fQ), (0, LQ.l)(this, VQ, !1)), this.alphaConstants = ((0, LQ.l)(this, hQ), (0, LQ.l)(this, JQ, void 0)), this.animations = ((0, LQ.l)(this, EQ), []), this.enablePixelPerfectMode = (0, LQ.l)(this, nQ, !1), this.forceFullscreenViewport = ((0, LQ.l)(this, gQ), (0, LQ.l)(this, PQ, !0)), this.inspectableCustomProperties = (0, LQ.l)(this, ZQ), this.scaleMode = (0, LQ.l)(this, yQ, 1), this.alwaysForcePOT = ((0, LQ.l)(this, BQ), (0, LQ.l)(this, dQ, !1)), this._samples = ((0, LQ.l)(this, QF), (0, LQ.l)(this, FF, 1)), this.adaptScaleToCurrentViewport = ((0, LQ.l)(this, wF), (0, LQ.l)(this, LF, !1)), this.doNotSerialize = ((0, LQ.l)(this, qF), !1), this._webGPUReady = !1, this._reusable = !1, this._renderId = 0, this.externalTextureSamplerBinding = !1, this._textures = new qQ.d(2), this._textureCache = [], this._currentRenderTextureInd = 0, this._scaleRatio = new DQ.n(1, 1), this._texelSize = DQ.n.Zero(), this.onActivateObservable = new oQ.e, this.onSizeChangedObservable = new oQ.e, this.onApplyObservable = new oQ.e, this.onBeforeRenderObservable = new oQ.e, this.onAfterRenderObservable = new oQ.e, this.zN = new oQ.e, tQ();
+            let iQ, WQ = 1,
+              RQ = null;
+            if (kQ && !Array.isArray(kQ)) {
+              const QQ = kQ;
+              kQ = QQ.uniforms ?? null, vQ = QQ.samplers ?? null, WQ = QQ.size ?? 1, uQ = QQ.camera ?? null, HQ = QQ.samplingMode ?? 1, bQ = QQ.engine, xQ = QQ.reusable, AQ = Array.isArray(QQ.defines) ? QQ.defines.join("\n") : QQ.defines ?? null, eQ = QQ.textureType ?? 0, MQ = QQ.vertexUrl ?? "postprocess", GQ = QQ.indexParameters, pQ = QQ.blockCompilation ?? !1, cQ = QQ.textureFormat ?? 5, CQ = QQ.shaderLanguage ?? 0, RQ = QQ.uniformBuffers ?? null, SQ = QQ.extraInitializations, iQ = QQ.effectWrapper
+            } else mQ && (WQ = "number" === typeof mQ ? mQ : {
+              width: mQ.width,
+              height: mQ.height
             });
-            if (this._useExistingThinPostProcess = !!sd, this._effectWrapper = sd ?? new Qd.f({
-                name: Jd,
+            if (this._useExistingThinPostProcess = !!iQ, this._effectWrapper = iQ ?? new YQ.f({
+                name: FQ,
                 useShaderStore: !0,
                 useAsPostProcess: !0,
-                fragmentShader: kd,
-                engine: ld || Kd?.Wm().eL(),
-                uniforms: Zd,
-                samplers: gd,
-                uniformBuffers: Md,
-                defines: Od,
-                vertexUrl: Id,
-                indexParameters: Gd,
+                fragmentShader: wQ,
+                engine: bQ || uQ?.iN().Wx(),
+                uniforms: kQ,
+                samplers: vQ,
+                uniformBuffers: RQ,
+                defines: AQ,
+                vertexUrl: MQ,
+                indexParameters: GQ,
                 blockCompilation: !0,
-                shaderLanguage: qd,
+                shaderLanguage: CQ,
                 extraInitializations: void 0
-              }), this.name = Jd, this.onEffectCreatedObservable = this._effectWrapper.onEffectCreatedObservable, null != Kd ? (this.JA = Kd, this._scene = Kd.Wm(), Kd.attachPostProcess(this), this._engine = this._scene.eL(), this._scene.addPostProcess(this), this.uniqueId = this._scene.getUniqueId()) : ld && (this._engine = ld, this._engine.postProcesses.push(this)), this._options = ad, this.renderTargetSamplingMode = od || 1, this._reusable = Ld || !1, this._textureType = Rd, this._textureFormat = xd, this._shaderLanguage = qd || 0, this._samplers = gd || [], -1 === this._samplers.indexOf("textureSampler") && this._samplers.push("textureSampler"), this._fragmentUrl = kd, this._vertexUrl = Id, this._parameters = Zd || [], -1 === this._parameters.indexOf("scale") && this._parameters.push("scale"), this._uniformBuffers = Md || [], this._indexParameters = Gd, !this._useExistingThinPostProcess) {
+              }), this.name = FQ, this.onEffectCreatedObservable = this._effectWrapper.onEffectCreatedObservable, null != uQ ? (this.W8 = uQ, this._scene = uQ.iN(), uQ.attachPostProcess(this), this._engine = this._scene.Wx(), this._scene.addPostProcess(this), this.uniqueId = this._scene.getUniqueId()) : bQ && (this._engine = bQ, this._engine.postProcesses.push(this)), this._options = WQ, this.renderTargetSamplingMode = HQ || 1, this._reusable = xQ || !1, this._textureType = eQ, this._textureFormat = cQ, this._shaderLanguage = CQ || 0, this._samplers = vQ || [], -1 === this._samplers.indexOf("textureSampler") && this._samplers.push("textureSampler"), this._fragmentUrl = wQ, this._vertexUrl = MQ, this._parameters = kQ || [], -1 === this._parameters.indexOf("scale") && this._parameters.push("scale"), this._uniformBuffers = RQ || [], this._indexParameters = GQ, !this._useExistingThinPostProcess) {
               this._webGPUReady = 1 === this._shaderLanguage;
-              const Jd = [];
-              this._gatherImports(this._engine.isWebGPU && !dd.ForceGLSL, Jd), this._effectWrapper._webGPUReady = this._webGPUReady, this._effectWrapper._postConstructor(vd, Od, Bd, Jd)
+              const FQ = [];
+              this._gatherImports(this._engine.isWebGPU && !QQ.ForceGLSL, FQ), this._effectWrapper._webGPUReady = this._webGPUReady, this._effectWrapper._postConstructor(pQ, AQ, SQ, FQ)
             }
           }
           _gatherImports() {
-            let dd = arguments.length > 1 ? arguments[1] : void 0;
-            arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && this._webGPUReady ? dd.push(Promise.all([kd.e(357).then((() => kd(61119)))])) : dd.push(Promise.all([kd.e(346).then((() => kd(60885)))]))
+            let QQ = arguments.length > 1 ? arguments[1] : void 0;
+            arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && this._webGPUReady ? QQ.push(Promise.all([wQ.e(357).then((() => wQ(60891)))])) : QQ.push(Promise.all([wQ.e(346).then((() => wQ(60652)))]))
           }
           getClassName() {
             return "PostProcess"
           }
-          eL() {
+          Wx() {
             return this._engine
           }
           getEffect() {
             return this._effectWrapper.drawWrapper.effect
           }
-          shareOutputWith(dd) {
-            return this._disposeTextures(), this._shareOutputWithPostProcess = dd, this
+          shareOutputWith(QQ) {
+            return this._disposeTextures(), this._shareOutputWithPostProcess = QQ, this
           }
           useOwnOutput() {
-            0 == this._textures.length && (this._textures = new Nd.h(2)), this._shareOutputWithPostProcess = null
+            0 == this._textures.length && (this._textures = new qQ.d(2)), this._shareOutputWithPostProcess = null
           }
           updateEffect() {
-            let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-              Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              pd = arguments.length > 3 ? arguments[3] : void 0,
-              Nd = arguments.length > 4 ? arguments[4] : void 0,
-              Wd = arguments.length > 5 ? arguments[5] : void 0,
-              Pd = arguments.length > 6 ? arguments[6] : void 0,
-              Zd = arguments.length > 7 ? arguments[7] : void 0;
-            this._effectWrapper.updateEffect(dd, Jd, kd, pd, Nd, Wd, Pd, Zd), this._postProcessDefines = Array.isArray(this._effectWrapper.options.defines) ? this._effectWrapper.options.defines.join("\n") : this._effectWrapper.options.defines
+            let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+              FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              LQ = arguments.length > 3 ? arguments[3] : void 0,
+              qQ = arguments.length > 4 ? arguments[4] : void 0,
+              oQ = arguments.length > 5 ? arguments[5] : void 0,
+              DQ = arguments.length > 6 ? arguments[6] : void 0,
+              kQ = arguments.length > 7 ? arguments[7] : void 0;
+            this._effectWrapper.updateEffect(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ), this._postProcessDefines = Array.isArray(this._effectWrapper.options.defines) ? this._effectWrapper.options.defines.join("\n") : this._effectWrapper.options.defines
           }
           isReusable() {
             return this._reusable
@@ -1583,93 +1583,93 @@ export const modules = {
           markTextureDirty() {
             this.width = -1
           }
-          _createRenderTargetTexture(dd, Jd) {
-            let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            for (let Nd = 0; Nd < this._textureCache.length; Nd++)
-              if (this._textureCache[Nd].texture.width === dd.width && this._textureCache[Nd].texture.height === dd.height && this._textureCache[Nd].postProcessChannel === kd && this._textureCache[Nd].texture._generateDepthBuffer === Jd.generateDepthBuffer && this._textureCache[Nd].texture.samples === Jd.samples) return this._textureCache[Nd].texture;
-            const pd = this._engine.createRenderTargetTexture(dd, Jd);
+          _createRenderTargetTexture(QQ, FQ) {
+            let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            for (let qQ = 0; qQ < this._textureCache.length; qQ++)
+              if (this._textureCache[qQ].texture.width === QQ.width && this._textureCache[qQ].texture.height === QQ.height && this._textureCache[qQ].postProcessChannel === wQ && this._textureCache[qQ].texture._generateDepthBuffer === FQ.generateDepthBuffer && this._textureCache[qQ].texture.samples === FQ.samples) return this._textureCache[qQ].texture;
+            const LQ = this._engine.createRenderTargetTexture(QQ, FQ);
             return this._textureCache.push({
-              texture: pd,
-              postProcessChannel: kd,
+              texture: LQ,
+              postProcessChannel: wQ,
               lastUsedRenderId: -1
-            }), pd
+            }), LQ
           }
           _flushTextureCache() {
-            const dd = this._renderId;
-            for (let Jd = this._textureCache.length - 1; Jd >= 0; Jd--)
-              if (dd - this._textureCache[Jd].lastUsedRenderId > 100) {
-                let dd = !1;
-                for (let kd = 0; kd < this._textures.length; kd++)
-                  if (this._textures.data[kd] === this._textureCache[Jd].texture) {
-                    dd = !0;
+            const QQ = this._renderId;
+            for (let FQ = this._textureCache.length - 1; FQ >= 0; FQ--)
+              if (QQ - this._textureCache[FQ].lastUsedRenderId > 100) {
+                let QQ = !1;
+                for (let wQ = 0; wQ < this._textures.length; wQ++)
+                  if (this._textures.data[wQ] === this._textureCache[FQ].texture) {
+                    QQ = !0;
                     break
-                  } dd || (this._textureCache[Jd].texture.dispose(), this._textureCache.splice(Jd, 1))
+                  } QQ || (this._textureCache[FQ].texture.dispose(), this._textureCache.splice(FQ, 1))
               }
           }
-          resize(dd, Jd) {
-            let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              Nd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this._textures.length > 0 && this._textures.reset(), this.width = dd, this.height = Jd;
-            let Wd = null;
-            if (kd)
-              for (let gd = 0; gd < kd._postProcesses.length; gd++)
-                if (null !== kd._postProcesses[gd]) {
-                  Wd = kd._postProcesses[gd];
+          resize(QQ, FQ) {
+            let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              qQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this._textures.length > 0 && this._textures.reset(), this.width = QQ, this.height = FQ;
+            let oQ = null;
+            if (wQ)
+              for (let vQ = 0; vQ < wQ._postProcesses.length; vQ++)
+                if (null !== wQ._postProcesses[vQ]) {
+                  oQ = wQ._postProcesses[vQ];
                   break
-                } const Pd = {
+                } const DQ = {
                 width: this.width,
                 height: this.height
               },
-              Zd = {
-                generateMipMaps: pd,
-                generateDepthBuffer: Nd || Wd === this,
-                generateStencilBuffer: (Nd || Wd === this) && this._engine.isStencilEnable,
+              kQ = {
+                generateMipMaps: LQ,
+                generateDepthBuffer: qQ || oQ === this,
+                generateStencilBuffer: (qQ || oQ === this) && this._engine.isStencilEnable,
                 samplingMode: this.renderTargetSamplingMode,
                 type: this._textureType,
                 format: this._textureFormat,
                 samples: this._samples,
                 label: "PostProcessRTT-" + this.name
               };
-            this._textures.push(this._createRenderTargetTexture(Pd, Zd, 0)), this._reusable && this._textures.push(this._createRenderTargetTexture(Pd, Zd, 1)), this._texelSize.kdd(1 / this.width, 1 / this.height), this.onSizeChangedObservable.notifyObservers(this)
+            this._textures.push(this._createRenderTargetTexture(DQ, kQ, 0)), this._reusable && this._textures.push(this._createRenderTargetTexture(DQ, kQ, 1)), this._texelSize.vQQ(1 / this.width, 1 / this.height), this.onSizeChangedObservable.notifyObservers(this)
           }
           _getTarget() {
-            let dd;
-            if (this._shareOutputWithPostProcess) dd = this._shareOutputWithPostProcess.inputTexture;
-            else if (this._forcedOutputTexture) dd = this._forcedOutputTexture, this.width = this._forcedOutputTexture.width, this.height = this._forcedOutputTexture.height;
+            let QQ;
+            if (this._shareOutputWithPostProcess) QQ = this._shareOutputWithPostProcess.inputTexture;
+            else if (this._forcedOutputTexture) QQ = this._forcedOutputTexture, this.width = this._forcedOutputTexture.width, this.height = this._forcedOutputTexture.height;
             else {
-              let Jd;
-              dd = this.inputTexture;
-              for (let kd = 0; kd < this._textureCache.length; kd++)
-                if (this._textureCache[kd].texture === dd) {
-                  Jd = this._textureCache[kd];
+              let FQ;
+              QQ = this.inputTexture;
+              for (let wQ = 0; wQ < this._textureCache.length; wQ++)
+                if (this._textureCache[wQ].texture === QQ) {
+                  FQ = this._textureCache[wQ];
                   break
-                } Jd && (Jd.lastUsedRenderId = this._renderId)
+                } FQ && (FQ.lastUsedRenderId = this._renderId)
             }
-            return dd
+            return QQ
           }
-          activate(dd) {
-            let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              kd = arguments.length > 2 ? arguments[2] : void 0;
-            const pd = null === dd || void 0 !== dd.cameraRigMode ? dd || this.JA : null,
-              Nd = pd?.Wm() ?? dd,
-              Wd = Nd.eL(),
-              Pd = Wd.getCaps().maxTextureSize,
-              Zd = (Jd ? Jd.width : this._engine.getRenderWidth(!0)) * this._options | 0,
-              gd = (Jd ? Jd.height : this._engine.getRenderHeight(!0)) * this._options | 0;
-            let Cd = this._options.width || Zd,
-              Kd = this._options.height || gd;
-            const od = 7 !== this.renderTargetSamplingMode && 1 !== this.renderTargetSamplingMode && 2 !== this.renderTargetSamplingMode;
-            let Qd = null;
+          activate(QQ) {
+            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              wQ = arguments.length > 2 ? arguments[2] : void 0;
+            const LQ = null === QQ || void 0 !== QQ.cameraRigMode ? QQ || this.W8 : null,
+              qQ = LQ?.iN() ?? QQ,
+              oQ = qQ.Wx(),
+              DQ = oQ.getCaps().maxTextureSize,
+              kQ = (FQ ? FQ.width : this._engine.getRenderWidth(!0)) * this._options | 0,
+              vQ = (FQ ? FQ.height : this._engine.getRenderHeight(!0)) * this._options | 0;
+            let mQ = this._options.width || kQ,
+              uQ = this._options.height || vQ;
+            const HQ = 7 !== this.renderTargetSamplingMode && 1 !== this.renderTargetSamplingMode && 2 !== this.renderTargetSamplingMode;
+            let YQ = null;
             if (!this._shareOutputWithPostProcess && !this._forcedOutputTexture) {
               if (this.adaptScaleToCurrentViewport) {
-                const dd = Wd.currentViewport;
-                dd && (Cd *= dd.width, Kd *= dd.height)
-              }(od || this.alwaysForcePOT) && (this._options.width || (Cd = Wd.needPOTTextures ? (0, ld.e)(Cd, Pd, this.scaleMode) : Cd), this._options.height || (Kd = Wd.needPOTTextures ? (0, ld.e)(Kd, Pd, this.scaleMode) : Kd)), this.width === Cd && this.height === Kd && (Qd = this._getTarget()) || this.resize(Cd, Kd, pd, od, kd), this._textures.forEach((dd => {
-                dd.samples !== this.samples && this._engine.updateRenderTargetTextureSampleCount(dd, this.samples)
+                const QQ = oQ.currentViewport;
+                QQ && (mQ *= QQ.width, uQ *= QQ.height)
+              }(HQ || this.alwaysForcePOT) && (this._options.width || (mQ = oQ.needPOTTextures ? (0, bQ.e)(mQ, DQ, this.scaleMode) : mQ), this._options.height || (uQ = oQ.needPOTTextures ? (0, bQ.e)(uQ, DQ, this.scaleMode) : uQ)), this.width === mQ && this.height === uQ && (YQ = this._getTarget()) || this.resize(mQ, uQ, LQ, HQ, wQ), this._textures.forEach((QQ => {
+                QQ.samples !== this.samples && this._engine.updateRenderTargetTextureSampleCount(QQ, this.samples)
               })), this._flushTextureCache(), this._renderId++
             }
-            return Qd || (Qd = this._getTarget()), this.enablePixelPerfectMode ? (this._scaleRatio.kdd(Zd / Cd, gd / Kd), this._engine.bindFramebuffer(Qd, 0, Zd, gd, this.forceFullscreenViewport)) : (this._scaleRatio.kdd(1, 1), this._engine.bindFramebuffer(Qd, 0, void 0, void 0, this.forceFullscreenViewport)), this._engine._debugInsertMarker?.(`post process ${this.name} input`), this.onActivateObservable.notifyObservers(pd), this.autoClear && (0 === this.alphaMode || this.forceAutoClearInAlphaMode) && this._engine.clear(this.clearColor ? this.clearColor : Nd.clearColor, Nd._allowPostProcessClearColor, !0, !0), this._reusable && (this._currentRenderTextureInd = (this._currentRenderTextureInd + 1) % 2), Qd
+            return YQ || (YQ = this._getTarget()), this.enablePixelPerfectMode ? (this._scaleRatio.vQQ(kQ / mQ, vQ / uQ), this._engine.bindFramebuffer(YQ, 0, kQ, vQ, this.forceFullscreenViewport)) : (this._scaleRatio.vQQ(1, 1), this._engine.bindFramebuffer(YQ, 0, void 0, void 0, this.forceFullscreenViewport)), this._engine._debugInsertMarker?.(`post process ${this.name} input`), this.onActivateObservable.notifyObservers(LQ), this.autoClear && (0 === this.alphaMode || this.forceAutoClearInAlphaMode) && this._engine.clear(this.clearColor ? this.clearColor : qQ.clearColor, qQ._allowPostProcessClearColor, !0, !0), this._reusable && (this._currentRenderTextureInd = (this._currentRenderTextureInd + 1) % 2), YQ
           }
           get isSupported() {
             return this._effectWrapper.drawWrapper.effect.isSupported
@@ -1682,321 +1682,321 @@ export const modules = {
           }
           apply() {
             if (!this._effectWrapper.isReady()) return null;
-            let dd;
-            return this._engine.enableEffect(this._effectWrapper.drawWrapper), this._engine.setState(!1), this._engine.setDepthBuffer(!1), this._engine.setDepthWrite(!1), this.alphaConstants && this.eL().setAlphaConstants(this.alphaConstants.r, this.alphaConstants.g, this.alphaConstants.b, this.alphaConstants.a), this._engine.setAlphaMode(this.alphaMode), dd = this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.inputTexture : this._forcedOutputTexture ? this._forcedOutputTexture : this.inputTexture, this.externalTextureSamplerBinding || this._effectWrapper.drawWrapper.effect._bindTexture("textureSampler", dd?.texture), this._effectWrapper.drawWrapper.effect.setVector2("scale", this._scaleRatio), this.onApplyObservable.notifyObservers(this._effectWrapper.drawWrapper.effect), this._effectWrapper.bind(!0), this._effectWrapper.drawWrapper.effect
+            let QQ;
+            return this._engine.enableEffect(this._effectWrapper.drawWrapper), this._engine.setState(!1), this._engine.setDepthBuffer(!1), this._engine.setDepthWrite(!1), this.alphaConstants && this.Wx().setAlphaConstants(this.alphaConstants.r, this.alphaConstants.g, this.alphaConstants.b, this.alphaConstants.a), this._engine.setAlphaMode(this.alphaMode), QQ = this._shareOutputWithPostProcess ? this._shareOutputWithPostProcess.inputTexture : this._forcedOutputTexture ? this._forcedOutputTexture : this.inputTexture, this.externalTextureSamplerBinding || this._effectWrapper.drawWrapper.effect._bindTexture("textureSampler", QQ?.texture), this._effectWrapper.drawWrapper.effect.setVector2("scale", this._scaleRatio), this.onApplyObservable.notifyObservers(this._effectWrapper.drawWrapper.effect), this._effectWrapper.bind(!0), this._effectWrapper.drawWrapper.effect
           }
           _disposeTextures() {
             this._shareOutputWithPostProcess || this._forcedOutputTexture ? this._disposeTextureCache() : (this._disposeTextureCache(), this._textures.dispose())
           }
           _disposeTextureCache() {
-            for (let dd = this._textureCache.length - 1; dd >= 0; dd--) this._textureCache[dd].texture.dispose();
+            for (let QQ = this._textureCache.length - 1; QQ >= 0; QQ--) this._textureCache[QQ].texture.dispose();
             this._textureCache.length = 0
           }
-          setPrePassRenderer(dd) {
-            return !!this._prePassEffectConfiguration && (this._prePassEffectConfiguration = dd.addEffectConfiguration(this._prePassEffectConfiguration), this._prePassEffectConfiguration.enabled = !0, !0)
+          setPrePassRenderer(QQ) {
+            return !!this._prePassEffectConfiguration && (this._prePassEffectConfiguration = QQ.addEffectConfiguration(this._prePassEffectConfiguration), this._prePassEffectConfiguration.enabled = !0, !0)
           }
-          dispose(dd) {
-            let Jd;
-            if (dd = dd || this.JA, this._useExistingThinPostProcess || this._effectWrapper.dispose(), this._disposeTextures(), this._scene && this._scene.removePostProcess(this), this._parentContainer && (Jd = this._parentContainer.postProcesses.indexOf(this), Jd > -1 && this._parentContainer.postProcesses.splice(Jd, 1), this._parentContainer = null), Jd = this._engine.postProcesses.indexOf(this), -1 !== Jd && this._engine.postProcesses.splice(Jd, 1), this.Zm.notifyObservers(), dd) {
-              if (dd.detachPostProcess(this), Jd = dd._postProcesses.indexOf(this), 0 === Jd && dd._postProcesses.length > 0) {
-                const dd = this.JA._getFirstPostProcess();
-                dd && dd.markTextureDirty()
+          dispose(QQ) {
+            let FQ;
+            if (QQ = QQ || this.W8, this._useExistingThinPostProcess || this._effectWrapper.dispose(), this._disposeTextures(), this._scene && this._scene.removePostProcess(this), this._parentContainer && (FQ = this._parentContainer.postProcesses.indexOf(this), FQ > -1 && this._parentContainer.postProcesses.splice(FQ, 1), this._parentContainer = null), FQ = this._engine.postProcesses.indexOf(this), -1 !== FQ && this._engine.postProcesses.splice(FQ, 1), this.zN.notifyObservers(), QQ) {
+              if (QQ.detachPostProcess(this), FQ = QQ._postProcesses.indexOf(this), 0 === FQ && QQ._postProcesses.length > 0) {
+                const QQ = this.W8._getFirstPostProcess();
+                QQ && QQ.markTextureDirty()
               }
               this.onActivateObservable.clear(), this.onAfterRenderObservable.clear(), this.onApplyObservable.clear(), this.onBeforeRenderObservable.clear(), this.onSizeChangedObservable.clear(), this.onEffectCreatedObservable.clear()
             }
           }
           serialize() {
-            const dd = Cd.c.Serialize(this),
-              Jd = this.getCamera() || this._scene && this._scene.activeCamera;
-            return dd.customType = "BABYLON." + this.getClassName(), dd.cameraId = Jd ? Jd.id : null, dd.reusable = this._reusable, dd.textureType = this._textureType, dd.fragmentUrl = this._fragmentUrl, dd.parameters = this._parameters, dd.samplers = this._samplers, dd.uniformBuffers = this._uniformBuffers, dd.options = this._options, dd.defines = this._postProcessDefines, dd.textureFormat = this._textureFormat, dd.vertexUrl = this._vertexUrl, dd.indexParameters = this._indexParameters, dd
+            const QQ = mQ.c.Serialize(this),
+              FQ = this.getCamera() || this._scene && this._scene.activeCamera;
+            return QQ.customType = "BABYLON." + this.getClassName(), QQ.cameraId = FQ ? FQ.id : null, QQ.reusable = this._reusable, QQ.textureType = this._textureType, QQ.fragmentUrl = this._fragmentUrl, QQ.parameters = this._parameters, QQ.samplers = this._samplers, QQ.uniformBuffers = this._uniformBuffers, QQ.options = this._options, QQ.defines = this._postProcessDefines, QQ.textureFormat = this._textureFormat, QQ.vertexUrl = this._vertexUrl, QQ.indexParameters = this._indexParameters, QQ
           }
           clone() {
-            const Jd = this.serialize();
-            Jd._engine = this._engine, Jd.cameraId = null;
-            const kd = dd.Parse(Jd, this._scene, "");
-            return kd ? (kd.onActivateObservable = this.onActivateObservable.clone(), kd.onSizeChangedObservable = this.onSizeChangedObservable.clone(), kd.onApplyObservable = this.onApplyObservable.clone(), kd.onBeforeRenderObservable = this.onBeforeRenderObservable.clone(), kd.onAfterRenderObservable = this.onAfterRenderObservable.clone(), kd._prePassEffectConfiguration = this._prePassEffectConfiguration, kd) : null
+            const FQ = this.serialize();
+            FQ._engine = this._engine, FQ.cameraId = null;
+            const wQ = QQ.Parse(FQ, this._scene, "");
+            return wQ ? (wQ.onActivateObservable = this.onActivateObservable.clone(), wQ.onSizeChangedObservable = this.onSizeChangedObservable.clone(), wQ.onApplyObservable = this.onApplyObservable.clone(), wQ.onBeforeRenderObservable = this.onBeforeRenderObservable.clone(), wQ.onAfterRenderObservable = this.onAfterRenderObservable.clone(), wQ._prePassEffectConfiguration = this._prePassEffectConfiguration, wQ) : null
           }
-          static Parse(dd, Jd, kd) {
-            const pd = (0, Kd.e)(dd.customType);
-            if (!pd || !pd._Parse) return null;
-            const Nd = Jd ? Jd.getCameraById(dd.cameraId) : null;
-            return pd._Parse(dd, Nd, Jd, kd)
+          static Parse(QQ, FQ, wQ) {
+            const LQ = (0, uQ.b)(QQ.customType);
+            if (!LQ || !LQ._Parse) return null;
+            const qQ = FQ ? FQ.getCameraById(QQ.cameraId) : null;
+            return LQ._Parse(QQ, qQ, FQ, wQ)
           }
-          static _Parse(Jd, kd, pd, Nd) {
-            return Cd.c.Parse((() => new dd(Jd.name, Jd.fragmentUrl, Jd.parameters, Jd.samplers, Jd.options, kd, Jd.renderTargetSamplingMode, Jd._engine, Jd.reusable, Jd.defines, Jd.textureType, Jd.vertexUrl, Jd.indexParameters, !1, Jd.textureFormat)), Jd, pd, Nd)
+          static _Parse(FQ, wQ, LQ, qQ) {
+            return mQ.c.Parse((() => new QQ(FQ.name, FQ.fragmentUrl, FQ.parameters, FQ.samplers, FQ.options, wQ, FQ.renderTargetSamplingMode, FQ._engine, FQ.reusable, FQ.defines, FQ.textureType, FQ.vertexUrl, FQ.indexParameters, !1, FQ.textureFormat)), FQ, LQ, qQ)
           }
         }, (() => {
-          const kd = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          Jd = [(0, gd.H)()], Zd = [(0, gd.H)()], od = [(0, gd.H)()], Ld = [(0, gd.H)()], Od = [(0, gd.H)()], Rd = [(0, gd.q)()], Id = [(0, gd.H)()], Gd = [(0, gd.H)()], vd = [(0, gd.H)()], xd = [(0, gd.H)()], qd = [(0, gd.H)()], Bd = [(0, gd.H)()], sd = [(0, gd.H)()], ad = [(0, gd.H)()], Md = [(0, gd.H)("samples")], Fd = [(0, gd.H)()], (0, pd.h)(dd, null, Zd, {
+          const wQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          FQ = [(0, vQ.I)()], kQ = [(0, vQ.I)()], HQ = [(0, vQ.I)()], xQ = [(0, vQ.I)()], AQ = [(0, vQ.I)()], eQ = [(0, vQ.n)()], MQ = [(0, vQ.I)()], GQ = [(0, vQ.I)()], pQ = [(0, vQ.I)()], cQ = [(0, vQ.I)()], CQ = [(0, vQ.I)()], SQ = [(0, vQ.I)()], iQ = [(0, vQ.I)()], WQ = [(0, vQ.I)()], RQ = [(0, vQ.I)("samples")], OQ = [(0, vQ.I)()], (0, LQ.i)(QQ, null, kQ, {
             kind: "getter",
             name: "name",
             static: !1,
             private: !1,
             access: {
-              has: dd => "name" in dd,
-              get: dd => dd.name
+              has: QQ => "name" in QQ,
+              get: QQ => QQ.name
             },
-            metadata: kd
-          }, null, Yd), (0, pd.h)(dd, null, vd, {
+            metadata: wQ
+          }, null, sQ), (0, LQ.i)(QQ, null, pQ, {
             kind: "getter",
             name: "alphaMode",
             static: !1,
             private: !1,
             access: {
-              has: dd => "alphaMode" in dd,
-              get: dd => dd.alphaMode
+              has: QQ => "alphaMode" in QQ,
+              get: QQ => QQ.alphaMode
             },
-            metadata: kd
-          }, null, Yd), (0, pd.h)(null, null, Jd, {
+            metadata: wQ
+          }, null, sQ), (0, LQ.i)(null, null, FQ, {
             kind: "field",
             name: "uniqueId",
             static: !1,
             private: !1,
             access: {
-              has: dd => "uniqueId" in dd,
-              get: dd => dd.uniqueId,
-              set: (dd, Jd) => {
-                dd.uniqueId = Jd
+              has: QQ => "uniqueId" in QQ,
+              get: QQ => QQ.uniqueId,
+              set: (QQ, FQ) => {
+                QQ.uniqueId = FQ
               }
             },
-            metadata: kd
-          }, md, bd), (0, pd.h)(null, null, od, {
+            metadata: wQ
+          }, rQ, IQ), (0, LQ.i)(null, null, HQ, {
             kind: "field",
             name: "width",
             static: !1,
             private: !1,
             access: {
-              has: dd => "width" in dd,
-              get: dd => dd.width,
-              set: (dd, Jd) => {
-                dd.width = Jd
+              has: QQ => "width" in QQ,
+              get: QQ => QQ.width,
+              set: (QQ, FQ) => {
+                QQ.width = FQ
               }
             },
-            metadata: kd
-          }, Sd, jd), (0, pd.h)(null, null, Ld, {
+            metadata: wQ
+          }, UQ, NQ), (0, LQ.i)(null, null, xQ, {
             kind: "field",
             name: "height",
             static: !1,
             private: !1,
             access: {
-              has: dd => "height" in dd,
-              get: dd => dd.height,
-              set: (dd, Jd) => {
-                dd.height = Jd
+              has: QQ => "height" in QQ,
+              get: QQ => QQ.height,
+              set: (QQ, FQ) => {
+                QQ.height = FQ
               }
             },
-            metadata: kd
-          }, Xd, fd), (0, pd.h)(null, null, Od, {
+            metadata: wQ
+          }, TQ, KQ), (0, LQ.i)(null, null, AQ, {
             kind: "field",
             name: "renderTargetSamplingMode",
             static: !1,
             private: !1,
             access: {
-              has: dd => "renderTargetSamplingMode" in dd,
-              get: dd => dd.renderTargetSamplingMode,
-              set: (dd, Jd) => {
-                dd.renderTargetSamplingMode = Jd
+              has: QQ => "renderTargetSamplingMode" in QQ,
+              get: QQ => QQ.renderTargetSamplingMode,
+              set: (QQ, FQ) => {
+                QQ.renderTargetSamplingMode = FQ
               }
             },
-            metadata: kd
-          }, nd, Ud), (0, pd.h)(null, null, Rd, {
+            metadata: wQ
+          }, zQ, lQ), (0, LQ.i)(null, null, eQ, {
             kind: "field",
             name: "clearColor",
             static: !1,
             private: !1,
             access: {
-              has: dd => "clearColor" in dd,
-              get: dd => dd.clearColor,
-              set: (dd, Jd) => {
-                dd.clearColor = Jd
+              has: QQ => "clearColor" in QQ,
+              get: QQ => QQ.clearColor,
+              set: (QQ, FQ) => {
+                QQ.clearColor = FQ
               }
             },
-            metadata: kd
-          }, yd, Dd), (0, pd.h)(null, null, Id, {
+            metadata: wQ
+          }, jQ, aQ), (0, LQ.i)(null, null, MQ, {
             kind: "field",
             name: "autoClear",
             static: !1,
             private: !1,
             access: {
-              has: dd => "autoClear" in dd,
-              get: dd => dd.autoClear,
-              set: (dd, Jd) => {
-                dd.autoClear = Jd
+              has: QQ => "autoClear" in QQ,
+              get: QQ => QQ.autoClear,
+              set: (QQ, FQ) => {
+                QQ.autoClear = FQ
               }
             },
-            metadata: kd
-          }, Td, Ed), (0, pd.h)(null, null, Gd, {
+            metadata: wQ
+          }, XQ, fQ), (0, LQ.i)(null, null, GQ, {
             kind: "field",
             name: "forceAutoClearInAlphaMode",
             static: !1,
             private: !1,
             access: {
-              has: dd => "forceAutoClearInAlphaMode" in dd,
-              get: dd => dd.forceAutoClearInAlphaMode,
-              set: (dd, Jd) => {
-                dd.forceAutoClearInAlphaMode = Jd
+              has: QQ => "forceAutoClearInAlphaMode" in QQ,
+              get: QQ => QQ.forceAutoClearInAlphaMode,
+              set: (QQ, FQ) => {
+                QQ.forceAutoClearInAlphaMode = FQ
               }
             },
-            metadata: kd
-          }, cd, hd), (0, pd.h)(null, null, xd, {
+            metadata: wQ
+          }, VQ, hQ), (0, LQ.i)(null, null, cQ, {
             kind: "field",
             name: "alphaConstants",
             static: !1,
             private: !1,
             access: {
-              has: dd => "alphaConstants" in dd,
-              get: dd => dd.alphaConstants,
-              set: (dd, Jd) => {
-                dd.alphaConstants = Jd
+              has: QQ => "alphaConstants" in QQ,
+              get: QQ => QQ.alphaConstants,
+              set: (QQ, FQ) => {
+                QQ.alphaConstants = FQ
               }
             },
-            metadata: kd
-          }, rd, ud), (0, pd.h)(null, null, qd, {
+            metadata: wQ
+          }, JQ, EQ), (0, LQ.i)(null, null, CQ, {
             kind: "field",
             name: "enablePixelPerfectMode",
             static: !1,
             private: !1,
             access: {
-              has: dd => "enablePixelPerfectMode" in dd,
-              get: dd => dd.enablePixelPerfectMode,
-              set: (dd, Jd) => {
-                dd.enablePixelPerfectMode = Jd
+              has: QQ => "enablePixelPerfectMode" in QQ,
+              get: QQ => QQ.enablePixelPerfectMode,
+              set: (QQ, FQ) => {
+                QQ.enablePixelPerfectMode = FQ
               }
             },
-            metadata: kd
-          }, td, Vd), (0, pd.h)(null, null, Bd, {
+            metadata: wQ
+          }, nQ, gQ), (0, LQ.i)(null, null, SQ, {
             kind: "field",
             name: "forceFullscreenViewport",
             static: !1,
             private: !1,
             access: {
-              has: dd => "forceFullscreenViewport" in dd,
-              get: dd => dd.forceFullscreenViewport,
-              set: (dd, Jd) => {
-                dd.forceFullscreenViewport = Jd
+              has: QQ => "forceFullscreenViewport" in QQ,
+              get: QQ => QQ.forceFullscreenViewport,
+              set: (QQ, FQ) => {
+                QQ.forceFullscreenViewport = FQ
               }
             },
-            metadata: kd
-          }, zd, Hd), (0, pd.h)(null, null, sd, {
+            metadata: wQ
+          }, PQ, ZQ), (0, LQ.i)(null, null, iQ, {
             kind: "field",
             name: "scaleMode",
             static: !1,
             private: !1,
             access: {
-              has: dd => "scaleMode" in dd,
-              get: dd => dd.scaleMode,
-              set: (dd, Jd) => {
-                dd.scaleMode = Jd
+              has: QQ => "scaleMode" in QQ,
+              get: QQ => QQ.scaleMode,
+              set: (QQ, FQ) => {
+                QQ.scaleMode = FQ
               }
             },
-            metadata: kd
-          }, wd, Ad), (0, pd.h)(null, null, ad, {
+            metadata: wQ
+          }, yQ, BQ), (0, LQ.i)(null, null, WQ, {
             kind: "field",
             name: "alwaysForcePOT",
             static: !1,
             private: !1,
             access: {
-              has: dd => "alwaysForcePOT" in dd,
-              get: dd => dd.alwaysForcePOT,
-              set: (dd, Jd) => {
-                dd.alwaysForcePOT = Jd
+              has: QQ => "alwaysForcePOT" in QQ,
+              get: QQ => QQ.alwaysForcePOT,
+              set: (QQ, FQ) => {
+                QQ.alwaysForcePOT = FQ
               }
             },
-            metadata: kd
-          }, dJ, JJ), (0, pd.h)(null, null, Md, {
+            metadata: wQ
+          }, dQ, QF), (0, LQ.i)(null, null, RQ, {
             kind: "field",
             name: "_samples",
             static: !1,
             private: !1,
             access: {
-              has: dd => "_samples" in dd,
-              get: dd => dd._samples,
-              set: (dd, Jd) => {
-                dd._samples = Jd
+              has: QQ => "_samples" in QQ,
+              get: QQ => QQ._samples,
+              set: (QQ, FQ) => {
+                QQ._samples = FQ
               }
             },
-            metadata: kd
-          }, kJ, pJ), (0, pd.h)(null, null, Fd, {
+            metadata: wQ
+          }, FF, wF), (0, LQ.i)(null, null, OQ, {
             kind: "field",
             name: "adaptScaleToCurrentViewport",
             static: !1,
             private: !1,
             access: {
-              has: dd => "adaptScaleToCurrentViewport" in dd,
-              get: dd => dd.adaptScaleToCurrentViewport,
-              set: (dd, Jd) => {
-                dd.adaptScaleToCurrentViewport = Jd
+              has: QQ => "adaptScaleToCurrentViewport" in QQ,
+              get: QQ => QQ.adaptScaleToCurrentViewport,
+              set: (QQ, FQ) => {
+                QQ.adaptScaleToCurrentViewport = FQ
               }
             },
-            metadata: kd
-          }, NJ, WJ), kd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: wQ
+          }, LF, qF), wQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: kd
+            value: wQ
           })
-        })(), dd
+        })(), QQ
       })(),
-      Od = !1;
+      AQ = !1;
 
-    function ed() {
-      Od || (Od = !0, od.b.prototype.setTextureFromPostProcess = function(dd, Jd, kd) {
-        let pd = null;
-        Jd && (Jd._forcedOutputTexture ? pd = Jd._forcedOutputTexture : Jd._textures.data[Jd._currentRenderTextureInd] && (pd = Jd._textures.data[Jd._currentRenderTextureInd])), this._bindTexture(dd, pd?.texture ?? null, kd)
-      }, od.b.prototype.setTextureFromPostProcessOutput = function(dd, Jd, kd) {
-        this._bindTexture(dd, Jd?._outputTexture?.texture ?? null, kd)
-      }, Zd.b.prototype.setTextureFromPostProcess = function(dd, Jd) {
-        this._engine.setTextureFromPostProcess(this._samplers[dd], Jd, dd)
-      }, Zd.b.prototype.setTextureFromPostProcessOutput = function(dd, Jd) {
-        this._engine.setTextureFromPostProcessOutput(this._samplers[dd], Jd, dd)
-      }, (0, Kd.h)("BABYLON.PostProcess", Ld))
+    function tQ() {
+      AQ || (AQ = !0, HQ.e.prototype.setTextureFromPostProcess = function(QQ, FQ, wQ) {
+        let LQ = null;
+        FQ && (FQ._forcedOutputTexture ? LQ = FQ._forcedOutputTexture : FQ._textures.data[FQ._currentRenderTextureInd] && (LQ = FQ._textures.data[FQ._currentRenderTextureInd])), this._bindTexture(QQ, LQ?.texture ?? null, wQ)
+      }, HQ.e.prototype.setTextureFromPostProcessOutput = function(QQ, FQ, wQ) {
+        this._bindTexture(QQ, FQ?._outputTexture?.texture ?? null, wQ)
+      }, kQ.d.prototype.setTextureFromPostProcess = function(QQ, FQ) {
+        this._engine.setTextureFromPostProcess(this._samplers[QQ], FQ, QQ)
+      }, kQ.d.prototype.setTextureFromPostProcessOutput = function(QQ, FQ) {
+        this._engine.setTextureFromPostProcessOutput(this._samplers[QQ], FQ, QQ)
+      }, (0, uQ.e)("BABYLON.PostProcess", xQ))
     }
   },
-  41782: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Pd,
-      e: () => Wd
+  41226: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => DQ,
+      f: () => oQ
     });
-    var pd = kd(41761),
-      Nd = kd(37277);
-    class Wd extends pd.f {
-      _gatherImports(dd, Jd) {
-        dd ? (this._webGPUReady = !0, Jd.push(Promise.all([kd.e(364).then((() => kd(61174)))]))) : Jd.push(Promise.all([kd.e(365).then((() => kd(61182)))])), super._gatherImports(dd, Jd)
+    var LQ = wQ(41202),
+      qQ = wQ(36720);
+    class oQ extends LQ.f {
+      _gatherImports(QQ, FQ) {
+        QQ ? (this._webGPUReady = !0, FQ.push(Promise.all([wQ.e(364).then((() => wQ(60953)))]))) : FQ.push(Promise.all([wQ.e(365).then((() => wQ(60956)))])), super._gatherImports(QQ, FQ)
       }
-      constructor(dd) {
-        let Jd = arguments.length > 2 ? arguments[2] : void 0;
-        const kd = {
-          name: dd,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || Nd.d.LastCreatedEngine,
+      constructor(QQ) {
+        let FQ = arguments.length > 2 ? arguments[2] : void 0;
+        const wQ = {
+          name: QQ,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || qQ.d.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          fragmentShader: Wd.FragmentUrl,
-          ...Jd
+          fragmentShader: oQ.FragmentUrl,
+          ...FQ
         };
-        kd.engine || (kd.engine = Nd.d.LastCreatedEngine), super(kd)
+        wQ.engine || (wQ.engine = qQ.d.LastCreatedEngine), super(wQ)
       }
     }
-    Wd.FragmentUrl = "pass";
-    class Pd extends pd.f {
-      _gatherImports(dd, Jd) {
-        dd ? (this._webGPUReady = !0, Jd.push(Promise.all([kd.e(366).then((() => kd(61189)))]))) : Jd.push(Promise.all([kd.e(367).then((() => kd(61192)))])), super._gatherImports(dd, Jd)
+    oQ.FragmentUrl = "pass";
+    class DQ extends LQ.f {
+      _gatherImports(QQ, FQ) {
+        QQ ? (this._webGPUReady = !0, FQ.push(Promise.all([wQ.e(366).then((() => wQ(60959)))]))) : FQ.push(Promise.all([wQ.e(367).then((() => wQ(60964)))])), super._gatherImports(QQ, FQ)
       }
-      constructor(dd) {
+      constructor(QQ) {
         super({
           ...arguments.length > 2 ? arguments[2] : void 0,
-          name: dd,
-          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || Nd.d.LastCreatedEngine,
+          name: QQ,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || qQ.d.LastCreatedEngine,
           useShaderStore: !0,
           useAsPostProcess: !0,
-          fragmentShader: Pd.FragmentUrl,
+          fragmentShader: DQ.FragmentUrl,
           defines: "#define POSITIVEX"
         }), this._face = 0
       }
       get face() {
         return this._face
       }
-      set face(dd) {
-        if (!(dd < 0 || dd > 5)) switch (this._face = dd, this._face) {
+      set face(QQ) {
+        if (!(QQ < 0 || QQ > 5)) switch (this._face = QQ, this._face) {
           case 0:
             this.updateEffect("#define POSITIVEX");
             break;
@@ -2017,8 +2017,8 @@ export const modules = {
         }
       }
     }
-    Pd.FragmentUrl = "passCube"
+    DQ.FragmentUrl = "passCube"
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

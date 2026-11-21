@@ -1,117 +1,117 @@
 export const id = 100;
 export const ids = [100];
 export const modules = {
-  4794: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => ld
+  4737: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => bQ
     });
-    var pd = kd(1044),
-      Nd = kd.n(pd),
-      Wd = kd(1059),
-      Pd = kd(1359),
-      Zd = kd(3360),
-      gd = kd(126),
-      Cd = kd(3408),
-      Kd = kd(3397),
-      od = kd(1103);
+    var LQ = wQ(1070),
+      qQ = wQ.n(LQ),
+      oQ = wQ(1079),
+      DQ = wQ(1348),
+      kQ = wQ(3380),
+      vQ = wQ(134),
+      mQ = wQ(3415),
+      uQ = wQ(3399),
+      HQ = wQ(1107);
 
-    function ld(dd) {
+    function bQ(QQ) {
       let {
-        game: Jd
-      } = dd;
-      const kd = (0, gd.n)() ? "large" : "small",
-        pd = (0, Cd.d)(Jd, kd),
-        ld = (0, Zd.h)(pd),
-        Qd = void 0 !== ld.blurhash;
-      return (0, od.jsxs)("div", {
+        game: FQ
+      } = QQ;
+      const wQ = (0, vQ.l)() ? "large" : "small",
+        LQ = (0, mQ.e)(FQ, wQ),
+        bQ = (0, kQ.f)(LQ),
+        YQ = void 0 !== bQ.blurhash;
+      return (0, HQ.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [ld.isLoading && !Qd && (0, od.jsx)(Pd.b, {
+        children: [bQ.isLoading && !YQ && (0, HQ.jsx)(DQ.c, {
           loaderType: "Secondary"
-        }), !ld.failed && (null !== ld.src || Qd) && (0, od.jsx)("div", {
-          className: Nd()("SchematicImage", Kd.f, {
-            SchematicImageFadeIn: ld.fadeIn && !Qd
+        }), !bQ.failed && (null !== bQ.src || YQ) && (0, HQ.jsx)("div", {
+          className: qQ()("SchematicImage", uQ.j, {
+            SchematicImageFadeIn: bQ.fadeIn && !YQ
           }),
-          style: (0, Kd.c)(ld),
-          children: (0, od.jsx)(Kd.b, {
-            image: ld
+          style: (0, uQ.f)(bQ),
+          children: (0, HQ.jsx)(uQ.b, {
+            image: bQ
           })
-        }), ld.failed && (0, od.jsx)("div", {
+        }), bQ.failed && (0, HQ.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, od.jsx)(Wd.e, {
+          children: (0, HQ.jsx)(oQ.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4780: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      default: () => ad
+  4731: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      default: () => WQ
     });
-    kd(4788);
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(300),
-      Zd = kd(1022),
-      gd = kd(1245),
-      Cd = kd(1211),
-      Kd = kd(1140),
-      od = kd(1520),
-      ld = kd(4794),
-      Qd = kd(1461),
-      Ld = kd(4796),
-      Od = kd(1359),
-      ed = kd(1543),
-      Rd = kd(4489),
-      Id = kd(1059),
-      Gd = kd(1008),
-      vd = kd(2432),
-      xd = kd(4799),
-      qd = kd(1569),
-      Bd = kd(1103);
+    wQ(4735);
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(307),
+      kQ = wQ(1047),
+      vQ = wQ(1237),
+      mQ = wQ(1207),
+      uQ = wQ(1140),
+      HQ = wQ(1489),
+      bQ = wQ(4737),
+      YQ = wQ(1451),
+      xQ = wQ(4746),
+      AQ = wQ(1348),
+      tQ = wQ(1503),
+      eQ = wQ(4478),
+      MQ = wQ(1079),
+      GQ = wQ(1030),
+      pQ = wQ(2444),
+      cQ = wQ(4754),
+      CQ = wQ(1532),
+      SQ = wQ(1107);
 
-    function sd() {
+    function iQ() {
       const {
-        t: dd
-      } = (0, Cd.B)(), Jd = (0, ed.useNavigatePreserveSearch)(), kd = (0, vd.i)(), Nd = (0, pd.useMemo)((() => [...Gd.d].sort(((Jd, pd) => {
-        var Nd, Wd;
-        const Pd = (null !== (Nd = (0, vd.b)(pd, kd)) && void 0 !== Nd ? Nd : 0) - (null !== (Wd = (0, vd.b)(Jd, kd)) && void 0 !== Wd ? Wd : 0);
-        return 0 !== Pd ? Pd : (0, qd.p)(Jd, dd).localeCompare((0, qd.p)(pd, dd))
-      }))), [kd, dd]);
-      return (0, Bd.jsxs)(Bd.Fragment, {
-        children: [(0, Bd.jsx)("div", {
+        t: QQ
+      } = (0, mQ.y)(), FQ = (0, tQ.useNavigatePreserveSearch)(), wQ = (0, pQ.m)(), qQ = (0, LQ.useMemo)((() => [...GQ.d].sort(((FQ, LQ) => {
+        var qQ, oQ;
+        const DQ = (null !== (qQ = (0, pQ.b)(LQ, wQ)) && void 0 !== qQ ? qQ : 0) - (null !== (oQ = (0, pQ.b)(FQ, wQ)) && void 0 !== oQ ? oQ : 0);
+        return 0 !== DQ ? DQ : (0, CQ.n)(FQ, QQ).localeCompare((0, CQ.n)(LQ, QQ))
+      }))), [wQ, QQ]);
+      return (0, SQ.jsxs)(SQ.Fragment, {
+        children: [(0, SQ.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, Bd.jsx)("h1", {
+          children: (0, SQ.jsx)("h1", {
             className: "StudioPageTitle",
-            children: dd("studio:firstPartyGames")
+            children: QQ("studio:firstPartyGames")
           })
-        }), (0, Bd.jsx)(Ld.d, {
+        }), (0, SQ.jsx)(xQ.e, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: dd("general:game")
+            header: QQ("general:game")
           }, {
             key: "ccu",
-            header: dd("studio:metricCcu")
+            header: QQ("studio:metricCcu")
           }],
-          rows: Nd,
-          getRowKey: dd => dd,
-          renderRow: pd => {
-            var Nd;
-            return (0, Bd.jsxs)("tr", {
+          rows: qQ,
+          getRowKey: QQ => QQ,
+          renderRow: LQ => {
+            var qQ;
+            return (0, SQ.jsxs)("tr", {
               onClick: () => {
-                Jd((0, qd.s)((0, Zd.i)(pd, !0)))
+                FQ((0, CQ.r)((0, kQ.h)(LQ, !0)))
               },
-              children: [(0, Bd.jsx)("td", {
-                children: (0, Bd.jsx)(xd.f, {
-                  thumbnail: (0, Bd.jsx)(xd.b, {
-                    game: pd
+              children: [(0, SQ.jsx)("td", {
+                children: (0, SQ.jsx)(cQ.f, {
+                  thumbnail: (0, SQ.jsx)(cQ.b, {
+                    game: LQ
                   }),
-                  name: (0, qd.p)(pd, dd)
+                  name: (0, CQ.n)(LQ, QQ)
                 })
-              }), (0, Bd.jsx)("td", {
-                children: (0, gd.Q)(null !== (Nd = (0, vd.b)(pd, kd)) && void 0 !== Nd ? Nd : 0)
+              }), (0, SQ.jsx)("td", {
+                children: (0, vQ.W)(null !== (qQ = (0, pQ.b)(LQ, wQ)) && void 0 !== qQ ? qQ : 0)
               })]
             })
           }
@@ -119,18 +119,18 @@ export const modules = {
       })
     }
 
-    function ad() {
+    function WQ() {
       const {
-        t: dd
-      } = (0, Cd.B)(), Jd = (0, ed.useNavigatePreserveSearch)(), {
-        userContext: kd,
-        isUserContextUpdating: Nd
-      } = (0, Kd.c)(), {
-        isCreating: Gd,
-        create: vd
-      } = (0, Rd.d)(), [ad, Md] = (0, pd.useState)(null), [Fd, Yd] = (0, pd.useState)(null), [md, bd] = (0, pd.useState)(!1);
-      (0, pd.useEffect)((() => {
-        Nd || (bd(!1), od.d.getPublishedGamePreviews(kd, {
+        t: QQ
+      } = (0, mQ.y)(), FQ = (0, tQ.useNavigatePreserveSearch)(), {
+        userContext: wQ,
+        isUserContextUpdating: qQ
+      } = (0, uQ.e)(), {
+        isCreating: GQ,
+        create: pQ
+      } = (0, eQ.e)(), [WQ, RQ] = (0, LQ.useState)(null), [OQ, sQ] = (0, LQ.useState)(null), [rQ, IQ] = (0, LQ.useState)(!1);
+      (0, LQ.useEffect)((() => {
+        qQ || (IQ(!1), HQ.b.getPublishedGamePreviews(wQ, {
           searchQuery: null,
           pageNumber: 1,
           pageSize: 50,
@@ -140,162 +140,162 @@ export const modules = {
           schematicIdsToExclude: [],
           gameCategories: [],
           upAndComing: !1
-        }).then((dd => {
-          Md({
-            ...dd,
-            results: (0, Pd.bb)(dd.results)
+        }).then((QQ => {
+          RQ({
+            ...QQ,
+            results: (0, DQ.X)(QQ.results)
           })
-        })).catch((dd => {
-          console.error("Failed to get owned published games", dd), bd(!0)
-        })), od.d.getOwnedUnpublishedGames(kd).then((dd => {
-          Yd(dd)
-        })).catch((dd => {
-          console.error("Failed to get owned unpublished games", dd), bd(!0)
+        })).catch((QQ => {
+          console.error("Failed to get owned published games", QQ), IQ(!0)
+        })), HQ.b.getOwnedUnpublishedGames(wQ).then((QQ => {
+          sQ(QQ)
+        })).catch((QQ => {
+          console.error("Failed to get owned unpublished games", QQ), IQ(!0)
         })))
-      }), [Nd, kd]);
-      const Sd = null !== ad && null !== Fd ? [...ad.results, ...Fd] : [],
-        jd = !md && (null === ad || null === Fd),
-        Xd = !jd && !md && 0 === Sd.length,
-        fd = !Nd && kd.playerHasRank("developer");
-      return (0, Bd.jsxs)("div", {
+      }), [qQ, wQ]);
+      const UQ = null !== WQ && null !== OQ ? [...WQ.results, ...OQ] : [],
+        NQ = !rQ && (null === WQ || null === OQ),
+        TQ = !NQ && !rQ && 0 === UQ.length,
+        KQ = !qQ && wQ.playerHasRank("developer");
+      return (0, SQ.jsxs)("div", {
         className: "StudioPage StudioGameList",
-        children: [(0, Bd.jsxs)("div", {
+        children: [(0, SQ.jsxs)("div", {
           className: "StudioPageHeader",
-          children: [(0, Bd.jsx)("h1", {
+          children: [(0, SQ.jsx)("h1", {
             className: "StudioPageTitle",
-            children: dd("studio:myGames")
-          }), (0, Bd.jsxs)(Qd.j, {
-            onClick: vd,
-            loading: Gd,
-            children: [(0, Bd.jsx)(Id.e, {
+            children: QQ("studio:myGames")
+          }), (0, SQ.jsxs)(YQ.m, {
+            onClick: pQ,
+            loading: GQ,
+            children: [(0, SQ.jsx)(MQ.c, {
               name: "plus"
-            }), " ", dd("homePage:createCustomGame")]
+            }), " ", QQ("homePage:createCustomGame")]
           })]
-        }), jd && (0, Bd.jsx)("div", {
+        }), NQ && (0, SQ.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, Bd.jsx)(Od.b, {})
-        }), md && (0, Bd.jsx)("div", {
+          children: (0, SQ.jsx)(AQ.c, {})
+        }), rQ && (0, SQ.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: dd("studio:failedToLoadGames")
-        }), Xd && (0, Bd.jsx)("div", {
+          children: QQ("studio:failedToLoadGames")
+        }), TQ && (0, SQ.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: dd("studio:noGamesYet")
-        }), !jd && !md && !Xd && (0, Bd.jsx)(Ld.d, {
+          children: QQ("studio:noGamesYet")
+        }), !NQ && !rQ && !TQ && (0, SQ.jsx)(xQ.e, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: dd("general:game")
+            header: QQ("general:game")
           }, {
             key: "status",
-            header: dd("general:status")
+            header: QQ("general:status")
           }, {
             key: "ccu",
-            header: dd("studio:metricCcu")
+            header: QQ("studio:metricCcu")
           }, {
             key: "favourites",
-            header: dd("general:favourites")
+            header: QQ("general:favourites")
           }],
-          rows: Sd,
-          getRowKey: dd => dd.schematicId,
-          renderRow: kd => (0, Bd.jsxs)("tr", {
+          rows: UQ,
+          getRowKey: QQ => QQ.schematicId,
+          renderRow: wQ => (0, SQ.jsxs)("tr", {
             onClick: () => {
-              var dd;
-              dd = kd.schematicId, Jd((0, qd.s)((0, Zd.e)(dd)))
+              var QQ;
+              QQ = wQ.schematicId, FQ((0, CQ.r)((0, kQ.e)(QQ)))
             },
-            children: [(0, Bd.jsx)("td", {
-              children: (0, Bd.jsx)(xd.f, {
-                thumbnail: (0, Bd.jsx)(ld.c, {
-                  game: kd
+            children: [(0, SQ.jsx)("td", {
+              children: (0, SQ.jsx)(cQ.f, {
+                thumbnail: (0, SQ.jsx)(bQ.d, {
+                  game: wQ
                 }),
-                name: kd.name
+                name: wQ.name
               })
-            }), (0, Bd.jsx)("td", {
-              children: (0, Bd.jsx)("span", {
-                className: Wd()("StudioGameListStatusChip", {
-                  StudioGameListStatusChipPublished: kd.gamePublished
+            }), (0, SQ.jsx)("td", {
+              children: (0, SQ.jsx)("span", {
+                className: oQ()("StudioGameListStatusChip", {
+                  StudioGameListStatusChipPublished: wQ.gamePublished
                 }),
-                children: kd.gamePublished ? dd("general:published") : dd("general:draft")
+                children: wQ.gamePublished ? QQ("general:published") : QQ("general:draft")
               })
-            }), (0, Bd.jsx)("td", {
-              children: (0, gd.Q)(kd.ccu)
-            }), (0, Bd.jsx)("td", {
-              children: (0, gd.Q)(kd.favourites)
+            }), (0, SQ.jsx)("td", {
+              children: (0, vQ.W)(wQ.ccu)
+            }), (0, SQ.jsx)("td", {
+              children: (0, vQ.W)(wQ.favourites)
             })]
           })
-        }), fd && (0, Bd.jsx)(sd, {})]
+        }), KQ && (0, SQ.jsx)(iQ, {})]
       })
     }
   },
-  4799: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Pd,
-      f: () => Wd
+  4754: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => DQ,
+      f: () => oQ
     });
-    var pd = kd(1569),
-      Nd = kd(1103);
+    var LQ = wQ(1532),
+      qQ = wQ(1107);
 
-    function Wd(dd) {
+    function oQ(QQ) {
       let {
-        thumbnail: Jd,
-        name: kd
-      } = dd;
-      return (0, Nd.jsxs)("div", {
+        thumbnail: FQ,
+        name: wQ
+      } = QQ;
+      return (0, qQ.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, Nd.jsx)("div", {
+        children: [(0, qQ.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: Jd
-        }), (0, Nd.jsx)("span", {
+          children: FQ
+        }), (0, qQ.jsx)("span", {
           className: "StudioTableGameName",
-          children: kd
+          children: wQ
         })]
       })
     }
 
-    function Pd(dd) {
+    function DQ(QQ) {
       let {
-        game: Jd
-      } = dd;
-      return (0, Nd.jsx)("img", {
+        game: FQ
+      } = QQ;
+      return (0, qQ.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, pd.l)(Jd),
+        src: (0, LQ.l)(FQ),
         alt: ""
       })
     }
   },
-  4796: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Zd
+  4746: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => kQ
     });
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(1107);
 
-    function Zd(dd) {
+    function kQ(QQ) {
       let {
-        columns: Jd,
-        rows: kd,
-        getRowKey: Nd,
-        renderRow: Zd,
-        className: gd
-      } = dd;
-      return (0, Pd.jsxs)("table", {
-        className: Wd()("Table", gd),
-        children: [(0, Pd.jsx)("thead", {
-          children: (0, Pd.jsx)("tr", {
-            children: Jd.map((dd => (0, Pd.jsx)("th", {
-              children: dd.header
-            }, dd.key)))
+        columns: FQ,
+        rows: wQ,
+        getRowKey: qQ,
+        renderRow: kQ,
+        className: vQ
+      } = QQ;
+      return (0, DQ.jsxs)("table", {
+        className: oQ()("Table", vQ),
+        children: [(0, DQ.jsx)("thead", {
+          children: (0, DQ.jsx)("tr", {
+            children: FQ.map((QQ => (0, DQ.jsx)("th", {
+              children: QQ.header
+            }, QQ.key)))
           })
-        }), (0, Pd.jsx)("tbody", {
-          children: kd.map((dd => (0, Pd.jsx)(pd.Fragment, {
-            children: Zd(dd)
-          }, Nd(dd))))
+        }), (0, DQ.jsx)("tbody", {
+          children: wQ.map((QQ => (0, DQ.jsx)(LQ.Fragment, {
+            children: kQ(QQ)
+          }, qQ(QQ))))
         })]
       })
     }
   },
-  4788: () => {}
+  4735: () => {}
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

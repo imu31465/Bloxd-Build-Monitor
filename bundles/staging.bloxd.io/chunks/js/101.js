@@ -1,79 +1,79 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  4794: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => ld
+  4737: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => bQ
     });
-    var pd = kd(1044),
-      Nd = kd.n(pd),
-      Wd = kd(1059),
-      Pd = kd(1359),
-      Zd = kd(3360),
-      gd = kd(126),
-      Cd = kd(3408),
-      Kd = kd(3397),
-      od = kd(1103);
+    var LQ = wQ(1070),
+      qQ = wQ.n(LQ),
+      oQ = wQ(1079),
+      DQ = wQ(1348),
+      kQ = wQ(3380),
+      vQ = wQ(134),
+      mQ = wQ(3415),
+      uQ = wQ(3399),
+      HQ = wQ(1107);
 
-    function ld(dd) {
+    function bQ(QQ) {
       let {
-        game: Jd
-      } = dd;
-      const kd = (0, gd.n)() ? "large" : "small",
-        pd = (0, Cd.d)(Jd, kd),
-        ld = (0, Zd.h)(pd),
-        Qd = void 0 !== ld.blurhash;
-      return (0, od.jsxs)("div", {
+        game: FQ
+      } = QQ;
+      const wQ = (0, vQ.l)() ? "large" : "small",
+        LQ = (0, mQ.e)(FQ, wQ),
+        bQ = (0, kQ.f)(LQ),
+        YQ = void 0 !== bQ.blurhash;
+      return (0, HQ.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [ld.isLoading && !Qd && (0, od.jsx)(Pd.b, {
+        children: [bQ.isLoading && !YQ && (0, HQ.jsx)(DQ.c, {
           loaderType: "Secondary"
-        }), !ld.failed && (null !== ld.src || Qd) && (0, od.jsx)("div", {
-          className: Nd()("SchematicImage", Kd.f, {
-            SchematicImageFadeIn: ld.fadeIn && !Qd
+        }), !bQ.failed && (null !== bQ.src || YQ) && (0, HQ.jsx)("div", {
+          className: qQ()("SchematicImage", uQ.j, {
+            SchematicImageFadeIn: bQ.fadeIn && !YQ
           }),
-          style: (0, Kd.c)(ld),
-          children: (0, od.jsx)(Kd.b, {
-            image: ld
+          style: (0, uQ.f)(bQ),
+          children: (0, HQ.jsx)(uQ.b, {
+            image: bQ
           })
-        }), ld.failed && (0, od.jsx)("div", {
+        }), bQ.failed && (0, HQ.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, od.jsx)(Wd.e, {
+          children: (0, HQ.jsx)(oQ.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6381: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      default: () => yd
+  6341: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      default: () => jQ
     });
-    kd(4788);
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(300),
-      Zd = kd(1022),
-      gd = kd(1245),
-      Cd = kd(1008),
-      Kd = kd(1211),
-      od = kd(1520),
-      ld = kd(3424),
-      Qd = kd(1140),
-      Ld = kd(4794),
-      Od = kd(2479),
-      ed = kd(1461),
-      Rd = kd(4417),
-      Id = kd(4796),
-      Gd = kd(1359),
-      vd = kd(1543),
-      xd = kd(4411),
-      qd = kd(2432),
-      Bd = kd(4799),
-      sd = kd(6282),
-      ad = kd(1569),
-      Md = kd(1103);
-    const Fd = [{
+    wQ(4735);
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(307),
+      kQ = wQ(1047),
+      vQ = wQ(1237),
+      mQ = wQ(1030),
+      uQ = wQ(1207),
+      HQ = wQ(1489),
+      bQ = wQ(3426),
+      YQ = wQ(1140),
+      xQ = wQ(4737),
+      AQ = wQ(2489),
+      tQ = wQ(1451),
+      eQ = wQ(4415),
+      MQ = wQ(4746),
+      GQ = wQ(1348),
+      pQ = wQ(1503),
+      cQ = wQ(4409),
+      CQ = wQ(2444),
+      SQ = wQ(4754),
+      iQ = wQ(6257),
+      WQ = wQ(1532),
+      RQ = wQ(1107);
+    const OQ = [{
         scope: "customGames",
         title: "studio:leaderboardCustomGames"
       }, {
@@ -83,407 +83,407 @@ export const modules = {
         scope: "dormantGames",
         title: "studio:leaderboardDormantGames"
       }],
-      Yd = 25,
-      md = "scope",
-      bd = "category",
-      Sd = "customGames";
-    const jd = 7,
-      Xd = {
+      sQ = 25,
+      rQ = "scope",
+      IQ = "category",
+      UQ = "customGames";
+    const NQ = 7,
+      TQ = {
         playsPerDay: null,
         avgPlaytimeMinutes: null,
         retention: null
       };
 
-    function fd(dd) {
+    function KQ(QQ) {
       let {
-        position: Jd
-      } = dd;
-      const kd = sd.d[Jd];
-      return (0, Md.jsxs)("td", {
-        className: Wd()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== kd,
-          [`StudioLeaderboardTopPosition${Jd}`]: void 0 !== kd
+        position: FQ
+      } = QQ;
+      const wQ = iQ.b[FQ];
+      return (0, RQ.jsxs)("td", {
+        className: oQ()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== wQ,
+          [`StudioLeaderboardTopPosition${FQ}`]: void 0 !== wQ
         }),
-        children: [void 0 !== kd && (0, Md.jsx)("img", {
+        children: [void 0 !== wQ && (0, RQ.jsx)("img", {
           className: "StudioLeaderboardPositionItem",
-          src: kd,
+          src: wQ,
           alt: ""
-        }), Jd]
+        }), FQ]
       })
     }
 
-    function nd(dd) {
+    function zQ(QQ) {
       let {
-        discoverability: Jd
-      } = dd;
+        discoverability: FQ
+      } = QQ;
       const {
-        playsPerDay: kd,
-        avgPlaytimeMinutes: Nd,
-        retention: Wd
-      } = null === Jd ? Xd : (0, ld.h)(Jd);
-      return (0, Md.jsxs)(pd.Fragment, {
-        children: [(0, Md.jsx)("td", {
-          children: null !== kd ? (0, ld.b)(kd) : "-"
-        }), (0, Md.jsx)("td", {
-          children: null !== Nd ? (0, ld.d)(Nd) : "-"
-        }), (0, Md.jsx)("td", {
-          children: null !== Wd ? (0, ld.f)(Wd) : "-"
+        playsPerDay: wQ,
+        avgPlaytimeMinutes: qQ,
+        retention: oQ
+      } = null === FQ ? TQ : (0, bQ.k)(FQ);
+      return (0, RQ.jsxs)(LQ.Fragment, {
+        children: [(0, RQ.jsx)("td", {
+          children: null !== wQ ? (0, bQ.c)(wQ) : "-"
+        }), (0, RQ.jsx)("td", {
+          children: null !== qQ ? (0, bQ.g)(qQ) : "-"
+        }), (0, RQ.jsx)("td", {
+          children: null !== oQ ? (0, bQ.h)(oQ) : "-"
         })]
       })
     }
 
-    function Ud(dd) {
+    function lQ(QQ) {
       let {
-        discoverability: Jd
-      } = dd;
-      return (0, Md.jsx)("td", {
+        discoverability: FQ
+      } = QQ;
+      return (0, RQ.jsx)("td", {
         className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === Jd || void 0 === Jd ? void 0 : Jd.engagementScore) ? (0, gd.Q)(Math.round(Jd.engagementScore)) : "-"
+        children: void 0 !== (null === FQ || void 0 === FQ ? void 0 : FQ.engagementScore) ? (0, vQ.W)(Math.round(FQ.engagementScore)) : "-"
       })
     }
 
-    function yd() {
-      var dd, Jd;
+    function jQ() {
+      var QQ, FQ;
       const {
-        t: kd
-      } = (0, Kd.B)(), Nd = (0, vd.useNavigatePreserveSearch)(), {
-        userContext: Wd,
-        isUserContextUpdating: sd
-      } = (0, Qd.c)(), Xd = (0, qd.i)(), [yd, Dd] = (0, xd.l)(), Td = (Ed = yd.get(md), Fd.some((dd => dd.scope === Ed)) ? Ed : Sd);
-      var Ed;
-      const cd = function(dd) {
-          return Pd.U.includes(dd) ? dd : null
-        }(yd.get(bd)),
-        hd = (0, xd.e)(yd.get(xd.b)),
-        [rd, ud] = (0, pd.useState)(null),
-        [td, Vd] = (0, pd.useState)(!1);
+        t: wQ
+      } = (0, uQ.y)(), qQ = (0, pQ.useNavigatePreserveSearch)(), {
+        userContext: oQ,
+        isUserContextUpdating: iQ
+      } = (0, YQ.e)(), TQ = (0, CQ.m)(), [jQ, aQ] = (0, cQ.k)(), XQ = (fQ = jQ.get(rQ), OQ.some((QQ => QQ.scope === fQ)) ? fQ : UQ);
+      var fQ;
+      const VQ = function(QQ) {
+          return DQ.R.includes(QQ) ? QQ : null
+        }(jQ.get(IQ)),
+        hQ = (0, cQ.d)(jQ.get(cQ.b)),
+        [JQ, EQ] = (0, LQ.useState)(null),
+        [nQ, gQ] = (0, LQ.useState)(!1);
 
-      function zd(dd) {
-        Dd((Jd => {
-          (0, xd.i)(Jd, md, dd.scope === Sd ? null : dd.scope), (0, xd.i)(Jd, bd, dd.category), (0, xd.k)(Jd, dd.page)
+      function PQ(QQ) {
+        aQ((FQ => {
+          (0, cQ.g)(FQ, rQ, QQ.scope === UQ ? null : QQ.scope), (0, cQ.g)(FQ, IQ, QQ.category), (0, cQ.i)(FQ, QQ.page)
         }))
       }
-      const Hd = !sd && Wd.playerHasRank("developer"),
-        wd = Hd && "allGames" === Td,
-        Ad = Hd && "dormantGames" === Td;
-      (0, pd.useEffect)((() => {
-        if (sd) return;
-        let dd = !1;
-        return ud(null), Vd(!1), od.d.getPublishedGamePreviews(Wd, {
+      const ZQ = !iQ && oQ.playerHasRank("developer"),
+        yQ = ZQ && "allGames" === XQ,
+        BQ = ZQ && "dormantGames" === XQ;
+      (0, LQ.useEffect)((() => {
+        if (iQ) return;
+        let QQ = !1;
+        return EQ(null), gQ(!1), HQ.b.getPublishedGamePreviews(oQ, {
           searchQuery: null,
-          pageNumber: hd,
-          pageSize: Yd,
+          pageNumber: hQ,
+          pageSize: sQ,
           onlyFavouriteGames: !1,
           onlyOwnedGames: !1,
           onlyApprovedGames: !1,
           schematicIdsToExclude: [],
-          gameCategories: null !== cd ? [cd] : [],
+          gameCategories: null !== VQ ? [VQ] : [],
           upAndComing: !1,
-          dormantGames: Ad,
+          dormantGames: BQ,
           sortByEngagementScore: !0,
-          firstPartyGameNames: wd ? Cd.d : void 0,
+          firstPartyGameNames: yQ ? mQ.d : void 0,
           includeOwners: !0
-        }).then((Jd => {
-          dd || ud(Jd)
-        })).catch((Jd => {
-          console.error("Failed to load the studio leaderboard", Jd), dd || Vd(!0)
+        }).then((FQ => {
+          QQ || EQ(FQ)
+        })).catch((FQ => {
+          console.error("Failed to load the studio leaderboard", FQ), QQ || gQ(!0)
         })), () => {
-          dd = !0
+          QQ = !0
         }
-      }), [sd, wd, Ad, cd, hd, Wd]);
-      const dJ = null !== (dd = null === rd || void 0 === rd ? void 0 : rd.results) && void 0 !== dd ? dd : null,
-        JJ = function(dd, Jd, kd) {
-          const [Nd, Wd] = (0, pd.useState)({}), Pd = kd ? (null !== dd && void 0 !== dd ? dd : []).flatMap((dd => "firstPartyGame" === dd.type ? [(0, Zd.i)(dd.gameNameWithVariation, !0)] : [])).join(",") : "", gd = (0, pd.useMemo)((() => "" === Pd ? [] : Pd.split(",")), [Pd]);
-          return (0, pd.useEffect)((() => {
-            if (0 === gd.length) return void Wd({});
-            let dd = !1;
-            return od.d.getGamesByAnalyticsIds(Jd, gd).then((Jd => {
-              dd || Wd(Jd)
-            })).catch((dd => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", dd)
+      }), [iQ, yQ, BQ, VQ, hQ, oQ]);
+      const dQ = null !== (QQ = null === JQ || void 0 === JQ ? void 0 : JQ.results) && void 0 !== QQ ? QQ : null,
+        QF = function(QQ, FQ, wQ) {
+          const [qQ, oQ] = (0, LQ.useState)({}), DQ = wQ ? (null !== QQ && void 0 !== QQ ? QQ : []).flatMap((QQ => "firstPartyGame" === QQ.type ? [(0, kQ.h)(QQ.gameNameWithVariation, !0)] : [])).join(",") : "", vQ = (0, LQ.useMemo)((() => "" === DQ ? [] : DQ.split(",")), [DQ]);
+          return (0, LQ.useEffect)((() => {
+            if (0 === vQ.length) return void oQ({});
+            let QQ = !1;
+            return HQ.b.getGamesByAnalyticsIds(FQ, vQ).then((FQ => {
+              QQ || oQ(FQ)
+            })).catch((QQ => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", QQ)
             })), () => {
-              dd = !0
+              QQ = !0
             }
-          }), [gd, Jd]), Nd
-        }(dJ, Wd, Hd),
-        kJ = null !== dJ ? function(dd, Jd, kd, pd, Nd) {
-          return dd.map(((dd, Wd) => {
-            var Pd;
-            const gd = pd + Wd + 1;
-            if ("customGame" === dd.type) {
-              const Jd = dd.preview;
+          }), [vQ, FQ]), qQ
+        }(dQ, oQ, ZQ),
+        FF = null !== dQ ? function(QQ, FQ, wQ, LQ, qQ) {
+          return QQ.map(((QQ, oQ) => {
+            var DQ;
+            const vQ = LQ + oQ + 1;
+            if ("customGame" === QQ.type) {
+              const FQ = QQ.preview;
               return {
-                key: Jd.schematicId,
-                position: gd,
-                thumbnail: (0, Md.jsx)(Ld.c, {
-                  game: Jd
+                key: FQ.schematicId,
+                position: vQ,
+                thumbnail: (0, RQ.jsx)(xQ.d, {
+                  game: FQ
                 }),
-                name: Jd.name,
-                owner: dd.owner,
-                category: Jd.gameCategory,
-                ccu: Jd.ccu,
-                favourites: Jd.favourites,
-                discoverability: (0, ld.j)(Jd) ? Jd : null,
-                url: (0, ad.s)((0, Zd.e)(Jd.schematicId))
+                name: FQ.name,
+                owner: QQ.owner,
+                category: FQ.gameCategory,
+                ccu: FQ.ccu,
+                favourites: FQ.favourites,
+                discoverability: (0, bQ.n)(FQ) ? FQ : null,
+                url: (0, WQ.r)((0, kQ.e)(FQ.schematicId))
               }
             }
-            const Cd = dd.gameNameWithVariation,
-              Kd = (0, Zd.i)(Cd, !0);
+            const mQ = QQ.gameNameWithVariation,
+              uQ = (0, kQ.h)(mQ, !0);
             return {
-              key: Cd,
-              position: gd,
-              thumbnail: (0, Md.jsx)(Bd.b, {
-                game: Cd
+              key: mQ,
+              position: vQ,
+              thumbnail: (0, RQ.jsx)(SQ.b, {
+                game: mQ
               }),
-              name: (0, ad.p)(Cd, Nd),
+              name: (0, WQ.n)(mQ, qQ),
               owner: null,
-              category: (0, ad.e)(Cd),
-              ccu: (0, qd.b)(Cd, Jd),
+              category: (0, WQ.e)(mQ),
+              ccu: (0, CQ.b)(mQ, FQ),
               favourites: null,
-              discoverability: null !== (Pd = kd[Kd]) && void 0 !== Pd ? Pd : null,
-              url: (0, ad.s)(Kd)
+              discoverability: null !== (DQ = wQ[uQ]) && void 0 !== DQ ? DQ : null,
+              url: (0, WQ.r)(uQ)
             }
           }))
-        }(dJ, Xd, JJ, (hd - 1) * Yd, kd) : [],
-        pJ = !td && null === rd,
-        NJ = !pJ && !td && 0 === kJ.length,
-        WJ = null !== (Jd = null === rd || void 0 === rd ? void 0 : rd.totalPages) && void 0 !== Jd ? Jd : 1;
-      return (0, Md.jsxs)("div", {
+        }(dQ, TQ, QF, (hQ - 1) * sQ, wQ) : [],
+        wF = !nQ && null === JQ,
+        LF = !wF && !nQ && 0 === FF.length,
+        qF = null !== (FQ = null === JQ || void 0 === JQ ? void 0 : JQ.totalPages) && void 0 !== FQ ? FQ : 1;
+      return (0, RQ.jsxs)("div", {
         className: "StudioPage StudioLeaderboard",
-        children: [(0, Md.jsx)("div", {
+        children: [(0, RQ.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, Md.jsx)("h1", {
+          children: (0, RQ.jsx)("h1", {
             className: "StudioPageTitle",
-            children: kd("studio:leaderboard")
+            children: wQ("studio:leaderboard")
           })
-        }), (0, Md.jsxs)("div", {
+        }), (0, RQ.jsxs)("div", {
           className: "StudioLeaderboardBanner",
-          children: [!Ad && (0, Md.jsx)("div", {
-            children: kd("studio:leaderboardBanner")
-          }), Ad && (0, Md.jsx)("div", {
-            children: kd("studio:leaderboardDormantBanner")
-          }), (0, Md.jsx)("div", {
-            children: kd("studio:leaderboardMetricsBanner", {
-              days: jd
+          children: [!BQ && (0, RQ.jsx)("div", {
+            children: wQ("studio:leaderboardBanner")
+          }), BQ && (0, RQ.jsx)("div", {
+            children: wQ("studio:leaderboardDormantBanner")
+          }), (0, RQ.jsx)("div", {
+            children: wQ("studio:leaderboardMetricsBanner", {
+              days: NQ
             })
           })]
-        }), Hd && (0, Md.jsx)("div", {
+        }), ZQ && (0, RQ.jsx)("div", {
           className: "StudioLeaderboardScopes",
-          children: Fd.map((dd => (0, Md.jsx)(ed.G, {
-            active: Td === dd.scope,
+          children: OQ.map((QQ => (0, RQ.jsx)(tQ.L, {
+            active: XQ === QQ.scope,
             onClick: () => {
-              zd({
-                scope: dd.scope,
-                category: cd,
+              PQ({
+                scope: QQ.scope,
+                category: VQ,
                 page: 1
               })
             },
-            children: kd(dd.title)
-          }, dd.scope)))
-        }), (0, Md.jsxs)("div", {
+            children: wQ(QQ.title)
+          }, QQ.scope)))
+        }), (0, RQ.jsxs)("div", {
           className: "StudioLeaderboardCategories",
-          children: [(0, Md.jsx)(ed.G, {
-            active: null === cd,
+          children: [(0, RQ.jsx)(tQ.L, {
+            active: null === VQ,
             onClick: () => {
-              zd({
-                scope: Td,
+              PQ({
+                scope: XQ,
                 category: null,
                 page: 1
               })
             },
-            children: kd("studio:leaderboardAllCategories")
-          }), Pd.U.map((dd => (0, Md.jsx)(ed.G, {
-            active: cd === dd,
+            children: wQ("studio:leaderboardAllCategories")
+          }), DQ.R.map((QQ => (0, RQ.jsx)(tQ.L, {
+            active: VQ === QQ,
             onClick: () => {
-              zd({
-                scope: Td,
-                category: dd,
+              PQ({
+                scope: XQ,
+                category: QQ,
                 page: 1
               })
             },
-            children: (0, Pd.eb)(dd)
-          }, dd)))]
-        }), pJ && (0, Md.jsx)("div", {
+            children: (0, DQ._)(QQ)
+          }, QQ)))]
+        }), wF && (0, RQ.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, Md.jsx)(Gd.b, {})
-        }), td && (0, Md.jsx)("div", {
+          children: (0, RQ.jsx)(GQ.c, {})
+        }), nQ && (0, RQ.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: kd("studio:failedToLoadLeaderboard")
-        }), NJ && (0, Md.jsx)("div", {
+          children: wQ("studio:failedToLoadLeaderboard")
+        }), LF && (0, RQ.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: kd("studio:leaderboardEmpty")
-        }), !pJ && !td && !NJ && (0, Md.jsx)("div", {
+          children: wQ("studio:leaderboardEmpty")
+        }), !wF && !nQ && !LF && (0, RQ.jsx)("div", {
           className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, Md.jsx)(Id.d, {
+          children: (0, RQ.jsx)(MQ.e, {
             className: "StudioTable",
             columns: [{
               key: "position",
               header: "#"
             }, {
               key: "game",
-              header: kd("general:game")
+              header: wQ("general:game")
             }, {
               key: "owner",
-              header: kd("general:owner")
-            }, ...null === cd ? [{
+              header: wQ("general:owner")
+            }, ...null === VQ ? [{
               key: "category",
-              header: kd("general:category")
-            }] : [], ...Hd ? [{
+              header: wQ("general:category")
+            }] : [], ...ZQ ? [{
               key: "engagementScore",
               header: "engagementScore"
             }] : [], {
               key: "playsPerDay",
-              header: kd("studio:leaderboardPlaysPerDay")
+              header: wQ("studio:leaderboardPlaysPerDay")
             }, {
               key: "sessionLength",
-              header: kd("studio:leaderboardSessionLength")
+              header: wQ("studio:leaderboardSessionLength")
             }, {
               key: "retention",
-              header: kd("studio:leaderboardSessionsPerPlayer")
-            }, ...Ad ? [] : [{
+              header: wQ("studio:leaderboardSessionsPerPlayer")
+            }, ...BQ ? [] : [{
               key: "ccu",
-              header: kd("studio:metricCcu")
+              header: wQ("studio:metricCcu")
             }], {
               key: "favourites",
-              header: kd("general:favourites")
+              header: wQ("general:favourites")
             }],
-            rows: kJ,
-            getRowKey: dd => dd.key,
-            renderRow: dd => (0, Md.jsxs)("tr", {
+            rows: FF,
+            getRowKey: QQ => QQ.key,
+            renderRow: QQ => (0, RQ.jsxs)("tr", {
               onClick: () => {
-                Nd(dd.url)
+                qQ(QQ.url)
               },
-              children: [(0, Md.jsx)(fd, {
-                position: dd.position
-              }), (0, Md.jsx)("td", {
-                children: (0, Md.jsx)(Bd.f, {
-                  thumbnail: dd.thumbnail,
-                  name: dd.name
+              children: [(0, RQ.jsx)(KQ, {
+                position: QQ.position
+              }), (0, RQ.jsx)("td", {
+                children: (0, RQ.jsx)(SQ.f, {
+                  thumbnail: QQ.thumbnail,
+                  name: QQ.name
                 })
-              }), (0, Md.jsxs)("td", {
+              }), (0, RQ.jsxs)("td", {
                 className: "StudioLeaderboardOwner",
-                children: [null === dd.owner && "-", null !== dd.owner && (0, Md.jsx)(Od.f, {
-                  playerSocialPreview: dd.owner,
+                children: [null === QQ.owner && "-", null !== QQ.owner && (0, RQ.jsx)(AQ.e, {
+                  playerSocialPreview: QQ.owner,
                   showLocation: !1,
                   opensProfileCard: !1
                 })]
-              }), null === cd && (0, Md.jsx)("td", {
-                children: (0, Pd.eb)(dd.category)
-              }), Hd && (0, Md.jsx)(Ud, {
-                discoverability: dd.discoverability
-              }), (0, Md.jsx)(nd, {
-                discoverability: dd.discoverability
-              }), !Ad && (0, Md.jsx)("td", {
-                children: null !== dd.ccu ? (0, gd.Q)(dd.ccu) : "-"
-              }), (0, Md.jsx)("td", {
-                children: null !== dd.favourites ? (0, gd.Q)(dd.favourites) : "-"
+              }), null === VQ && (0, RQ.jsx)("td", {
+                children: (0, DQ._)(QQ.category)
+              }), ZQ && (0, RQ.jsx)(lQ, {
+                discoverability: QQ.discoverability
+              }), (0, RQ.jsx)(zQ, {
+                discoverability: QQ.discoverability
+              }), !BQ && (0, RQ.jsx)("td", {
+                children: null !== QQ.ccu ? (0, vQ.W)(QQ.ccu) : "-"
+              }), (0, RQ.jsx)("td", {
+                children: null !== QQ.favourites ? (0, vQ.W)(QQ.favourites) : "-"
               })]
             })
           })
-        }), !td && (0, Md.jsx)(Rd.b, {
+        }), !nQ && (0, RQ.jsx)(eQ.e, {
           className: "AnimFadeIn",
-          page: hd,
-          totalPages: WJ,
-          onSetPage: dd => {
-            zd({
-              scope: Td,
-              category: cd,
-              page: dd
+          page: hQ,
+          totalPages: qF,
+          onSetPage: QQ => {
+            PQ({
+              scope: XQ,
+              category: VQ,
+              page: QQ
             })
           }
         })]
       })
     }
   },
-  4799: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Pd,
-      f: () => Wd
+  4754: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => DQ,
+      f: () => oQ
     });
-    var pd = kd(1569),
-      Nd = kd(1103);
+    var LQ = wQ(1532),
+      qQ = wQ(1107);
 
-    function Wd(dd) {
+    function oQ(QQ) {
       let {
-        thumbnail: Jd,
-        name: kd
-      } = dd;
-      return (0, Nd.jsxs)("div", {
+        thumbnail: FQ,
+        name: wQ
+      } = QQ;
+      return (0, qQ.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, Nd.jsx)("div", {
+        children: [(0, qQ.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: Jd
-        }), (0, Nd.jsx)("span", {
+          children: FQ
+        }), (0, qQ.jsx)("span", {
           className: "StudioTableGameName",
-          children: kd
+          children: wQ
         })]
       })
     }
 
-    function Pd(dd) {
+    function DQ(QQ) {
       let {
-        game: Jd
-      } = dd;
-      return (0, Nd.jsx)("img", {
+        game: FQ
+      } = QQ;
+      return (0, qQ.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, pd.l)(Jd),
+        src: (0, LQ.l)(FQ),
         alt: ""
       })
     }
   },
-  6282: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => pd
+  6257: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ
     });
-    const pd = {
-      1: kd(6287),
-      2: kd(6289),
-      3: kd(6295)
+    const LQ = {
+      1: wQ(6263),
+      2: wQ(6269),
+      3: wQ(6273)
     }
   },
-  4796: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Zd
+  4746: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => kQ
     });
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(1107);
 
-    function Zd(dd) {
+    function kQ(QQ) {
       let {
-        columns: Jd,
-        rows: kd,
-        getRowKey: Nd,
-        renderRow: Zd,
-        className: gd
-      } = dd;
-      return (0, Pd.jsxs)("table", {
-        className: Wd()("Table", gd),
-        children: [(0, Pd.jsx)("thead", {
-          children: (0, Pd.jsx)("tr", {
-            children: Jd.map((dd => (0, Pd.jsx)("th", {
-              children: dd.header
-            }, dd.key)))
+        columns: FQ,
+        rows: wQ,
+        getRowKey: qQ,
+        renderRow: kQ,
+        className: vQ
+      } = QQ;
+      return (0, DQ.jsxs)("table", {
+        className: oQ()("Table", vQ),
+        children: [(0, DQ.jsx)("thead", {
+          children: (0, DQ.jsx)("tr", {
+            children: FQ.map((QQ => (0, DQ.jsx)("th", {
+              children: QQ.header
+            }, QQ.key)))
           })
-        }), (0, Pd.jsx)("tbody", {
-          children: kd.map((dd => (0, Pd.jsx)(pd.Fragment, {
-            children: Zd(dd)
-          }, Nd(dd))))
+        }), (0, DQ.jsx)("tbody", {
+          children: wQ.map((QQ => (0, DQ.jsx)(LQ.Fragment, {
+            children: kQ(QQ)
+          }, qQ(QQ))))
         })]
       })
     }
   },
-  4788: () => {},
-  6287: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  4735: () => {},
+  6263: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
   },
-  6289: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  6269: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
   },
-  6295: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
+  6273: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

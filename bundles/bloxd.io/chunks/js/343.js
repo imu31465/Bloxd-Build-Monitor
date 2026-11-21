@@ -1,97 +1,97 @@
 export const id = 343;
 export const ids = [343, 344];
 export const modules = {
-  43223: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      gamePackSource: () => Wd
+  42714: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      gamePackSource: () => oQ
     });
-    var pd = kd(4867),
-      Nd = kd(1520);
+    var LQ = wQ(4832),
+      qQ = wQ(1489);
 
-    function Wd(dd) {
+    function oQ(QQ) {
       return {
-        packKey: async Jd => (await Nd.d.getGame(dd, Jd, !0)).customTexturePackKey,
-        fetchPack: pd.d
+        packKey: async FQ => (await qQ.b.getGame(QQ, FQ, !0)).customTexturePackKey,
+        fetchPack: LQ.d
       }
     }
   },
-  43215: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      fetchGuestContext: () => ld,
-      guestJoinTarget: () => Gd,
-      guestJoinWithPack: () => Ld,
-      guestPackForGame: () => Qd,
-      invalidateGuestTrafficCode: () => Id
+  42707: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      fetchGuestContext: () => bQ,
+      guestJoinTarget: () => GQ,
+      guestJoinWithPack: () => xQ,
+      guestPackForGame: () => YQ,
+      invalidateGuestTrafficCode: () => MQ
     });
-    var pd = kd(1220),
-      Nd = kd(1520),
-      Wd = kd(95),
-      Pd = kd(36631),
-      Zd = kd(1147),
-      gd = kd(40940),
-      Cd = kd(43223),
-      Kd = kd(40886);
+    var LQ = wQ(1213),
+      qQ = wQ(1489),
+      oQ = wQ(96),
+      DQ = wQ(36102),
+      kQ = wQ(1147),
+      vQ = wQ(40369),
+      mQ = wQ(42714),
+      uQ = wQ(40314);
 
-    function od() {
-      if (Wd.featureFlags.useTurnstile) throw new gd.TurnstilePageError
+    function HQ() {
+      if (oQ.featureFlags.useTurnstile) throw new vQ.TurnstilePageError
     }
 
-    function ld() {
-      return (0, Zd.fetchAnonymousUserContext)().catch((dd => (console.warn("the guest context didn't load", dd), null)))
+    function bQ() {
+      return (0, kQ.fetchAnonymousUserContext)().catch((QQ => (console.warn("the guest context didn't load", QQ), null)))
     }
-    async function Qd(dd, Jd, kd, pd) {
+    async function YQ(QQ, FQ, wQ, LQ) {
       try {
-        const Nd = await kd;
-        if (null === Nd) return void console.warn(`the texture pack step for ${dd} has no guest context: the pack in play stays`);
-        await Jd.packForGame(dd, (0, Cd.gamePackSource)(Nd), pd)
-      } catch (Nd) {
-        console.warn(`the texture pack step for ${dd} failed: the pack in play stays`, Nd)
+        const qQ = await wQ;
+        if (null === qQ) return void console.warn(`the texture pack step for ${QQ} has no guest context: the pack in play stays`);
+        await FQ.packForGame(QQ, (0, mQ.gamePackSource)(qQ), LQ)
+      } catch (qQ) {
+        console.warn(`the texture pack step for ${QQ} failed: the pack in play stays`, qQ)
       }
     }
-    async function Ld(dd, Jd, kd, pd) {
-      od();
-      const Nd = ld();
-      return await kd(((Jd, kd) => Qd(dd, Jd, Nd, kd))), Gd(dd, Jd, pd(), await Nd)
+    async function xQ(QQ, FQ, wQ, LQ) {
+      HQ();
+      const qQ = bQ();
+      return await wQ(((FQ, wQ) => YQ(QQ, FQ, qQ, wQ))), GQ(QQ, FQ, LQ(), await qQ)
     }
-    let Od = null,
-      ed = null;
-    async function Rd() {
-      if ((null === Od || Od.hasExpired()) && (ed ??= (0, Zd.fetchAnonymousUserContext)().then((dd => {
-          Od = dd
+    let AQ = null,
+      tQ = null;
+    async function eQ() {
+      if ((null === AQ || AQ.hasExpired()) && (tQ ??= (0, kQ.fetchAnonymousUserContext)().then((QQ => {
+          AQ = QQ
         })).finally((() => {
-          ed = null
-        })), await ed), null === Od) throw new Error("no guest context to post as");
-      return Od.getMetricsCookies()
+          tQ = null
+        })), await tQ), null === AQ) throw new Error("no guest context to post as");
+      return AQ.getMetricsCookies()
     }
-    async function Id() {
-      var dd;
-      await (null === (dd = Od) || void 0 === dd ? void 0 : dd.invalidateTrafficCode())
+    async function MQ() {
+      var QQ;
+      await (null === (QQ = AQ) || void 0 === QQ ? void 0 : QQ.invalidateTrafficCode())
     }
-    async function Gd(dd, Jd, kd) {
-      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      od();
-      const gd = null !== Wd && void 0 !== Wd ? Wd : await (0, Zd.fetchAnonymousUserContext)();
-      if (Od = gd, gd.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const Cd = await Nd.d.matchmakePlayer(gd, Jd, dd, (0, Pd.d)()),
-        ld = performance.now();
-      if (!("gameServerHost" in Cd)) throw new Error(`matchmaking refused: ${Cd.failReason}`);
-      const Qd = pd.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(Cd.gameServerHost);
-      if (Qd.isError()) throw new Error(`no socket URL for ${Cd.gameServerHost}: ${Qd.asError().message}`);
-      const Ld = {
-        endpoint: Qd.getValue(),
-        gameNameWithVariation: Cd.gameNameWithVariation,
-        lobbyName: Cd.lobbyName
+    async function GQ(QQ, FQ, wQ) {
+      let oQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      HQ();
+      const vQ = null !== oQ && void 0 !== oQ ? oQ : await (0, kQ.fetchAnonymousUserContext)();
+      if (AQ = vQ, vQ.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const mQ = await qQ.b.matchmakePlayer(vQ, FQ, QQ, (0, DQ.d)()),
+        bQ = performance.now();
+      if (!("gameServerHost" in mQ)) throw new Error(`matchmaking refused: ${mQ.failReason}`);
+      const YQ = LQ.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(mQ.gameServerHost);
+      if (YQ.isError()) throw new Error(`no socket URL for ${mQ.gameServerHost}: ${YQ.asError().message}`);
+      const xQ = {
+        endpoint: YQ.getValue(),
+        gameNameWithVariation: mQ.gameNameWithVariation,
+        lobbyName: mQ.lobbyName
       };
       return {
         target: {
-          ...await (0, Kd.c)(gd, Ld, kd, !1),
-          postCookies: Rd
+          ...await (0, uQ.i)(vQ, xQ, wQ, !1),
+          postCookies: eQ
         },
-        matchedAt: ld,
-        freshMs: Kd.b
+        matchedAt: bQ,
+        freshMs: uQ.e
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

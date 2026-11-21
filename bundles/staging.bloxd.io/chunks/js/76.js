@@ -1,272 +1,272 @@
 export const id = 76;
 export const ids = [76, 92];
 export const modules = {
-    4722: (dd, Jd, kd) => {
-      kd.d(Jd, {
-        b: () => ed,
-        d: () => Rd
+    4665: (QQ, FQ, wQ) => {
+      wQ.d(FQ, {
+        c: () => tQ,
+        f: () => eQ
       });
-      var pd = kd(1044),
-        Nd = kd.n(pd),
-        Wd = kd(56),
-        Pd = kd(1211),
-        Zd = kd(4726),
-        gd = kd(1904),
-        Cd = kd(2357),
-        Kd = kd(4729),
-        od = kd(1103);
-      const ld = new WeakMap;
-      let Qd = 0;
+      var LQ = wQ(1070),
+        qQ = wQ.n(LQ),
+        oQ = wQ(53),
+        DQ = wQ(1207),
+        kQ = wQ(4674),
+        vQ = wQ(1873),
+        mQ = wQ(2345),
+        uQ = wQ(4680),
+        HQ = wQ(1107);
+      const bQ = new WeakMap;
+      let YQ = 0;
 
-      function Ld(dd) {
-        let Jd = ld.get(dd);
-        return void 0 === Jd && (Jd = Qd++, ld.set(dd, Jd)), Jd
+      function xQ(QQ) {
+        let FQ = bQ.get(QQ);
+        return void 0 === FQ && (FQ = YQ++, bQ.set(QQ, FQ)), FQ
       }
 
-      function Od(dd) {
+      function AQ(QQ) {
         let {
-          piece: Jd
-        } = dd;
-        return "space" === Jd.kind ? (0, od.jsx)(od.Fragment, {
-          children: Jd.text
-        }) : (0, od.jsx)("span", {
+          piece: FQ
+        } = QQ;
+        return "space" === FQ.kind ? (0, HQ.jsx)(HQ.Fragment, {
+          children: FQ.text
+        }) : (0, HQ.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${Jd.delayMs}ms`
+            "--word-delay": `${FQ.delayMs}ms`
           },
-          children: (0, od.jsx)(Zd.b, {
-            text: "icon" === Jd.kind ? `[[${Jd.icon}]]` : Jd.text
+          children: (0, HQ.jsx)(kQ.d, {
+            text: "icon" === FQ.kind ? `[[${FQ.icon}]]` : FQ.text
           })
         })
       }
 
-      function ed(dd) {
+      function tQ(QQ) {
         let {
-          display: Jd
-        } = dd;
+          display: FQ
+        } = QQ;
         const {
-          selectedLanguage: kd
-        } = (0, Pd.B)(), pd = (0, Wd.useMemo)((() => (0, Kd.c)((0, Kd.d)(Jd).plan.pieces)), [Jd, kd.code]);
-        return (0, od.jsxs)("div", {
-          className: Nd()("Dialogue", {
-            DialogueAnimateIn: !1 !== Jd.animateIn
+          selectedLanguage: wQ
+        } = (0, DQ.y)(), LQ = (0, oQ.useMemo)((() => (0, uQ.b)((0, uQ.f)(FQ).plan.pieces)), [FQ, wQ.code]);
+        return (0, HQ.jsxs)("div", {
+          className: qQ()("Dialogue", {
+            DialogueAnimateIn: !1 !== FQ.animateIn
           }),
-          children: [Jd.speakerName && (0, od.jsx)(gd.c, {
-            text: Jd.speakerName,
+          children: [FQ.speakerName && (0, HQ.jsx)(vQ.e, {
+            text: FQ.speakerName,
             className: "DialogueSpeaker"
-          }), (0, od.jsx)("p", {
+          }), (0, HQ.jsx)("p", {
             className: "DialogueLine",
-            children: pd.map(((dd, Jd) => 1 === dd.length && "space" === dd[0].kind ? dd[0].text : (0, od.jsx)("span", {
+            children: LQ.map(((QQ, FQ) => 1 === QQ.length && "space" === QQ[0].kind ? QQ[0].text : (0, HQ.jsx)("span", {
               className: "DialogueGlue",
-              children: dd.map(((dd, Jd) => (0, od.jsx)(Od, {
-                piece: dd
-              }, Jd)))
-            }, Jd)))
+              children: QQ.map(((QQ, FQ) => (0, HQ.jsx)(AQ, {
+                piece: QQ
+              }, FQ)))
+            }, FQ)))
           })]
         })
       }
-      const Rd = (0, Wd.memo)((function() {
-        const dd = (0, Cd.j)("dialogue");
-        return (0, od.jsx)("div", {
+      const eQ = (0, oQ.memo)((function() {
+        const QQ = (0, mQ.l)("dialogue");
+        return (0, HQ.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: dd && (0, od.jsx)(ed, {
-            display: dd
-          }, Ld(dd))
+          children: QQ && (0, HQ.jsx)(tQ, {
+            display: QQ
+          }, xQ(QQ))
         })
       }))
     },
-    4578: (dd, Jd, kd) => {
-        kd.r(Jd), kd.d(Jd, {
-          default: () => JP
+    4552: (QQ, FQ, wQ) => {
+        wQ.r(FQ), wQ.d(FQ, {
+          default: () => FD
         });
-        var pd = kd(56),
-          Nd = kd(1044),
-          Wd = kd.n(Nd),
-          Pd = kd(1551),
-          Zd = kd(1557),
-          gd = kd(22),
-          Cd = kd(72),
-          Kd = kd(4583),
-          od = kd(4599),
-          ld = kd(4603),
-          Qd = kd(4195),
-          Ld = kd(1103);
-        const Od = "/textures/docs/icons";
+        var LQ = wQ(53),
+          qQ = wQ(1070),
+          oQ = wQ.n(qQ),
+          DQ = wQ(1508),
+          kQ = wQ(1515),
+          vQ = wQ(17),
+          mQ = wQ(71),
+          uQ = wQ(4557),
+          HQ = wQ(4575),
+          bQ = wQ(4582),
+          YQ = wQ(4226),
+          xQ = wQ(1107);
+        const AQ = "/textures/docs/icons";
 
-        function ed(dd) {
+        function tQ(QQ) {
           let {
-            name: Jd,
-            isTinted: kd,
-            className: pd,
-            style: Nd
-          } = dd;
-          const Pd = `${Od}/${Jd}.png`;
-          return kd ? (0, Ld.jsxs)("span", {
-            className: Wd()("DocsPixelIcon", "Tinted", pd),
+            name: FQ,
+            isTinted: wQ,
+            className: LQ,
+            style: qQ
+          } = QQ;
+          const DQ = `${AQ}/${FQ}.png`;
+          return wQ ? (0, xQ.jsxs)("span", {
+            className: oQ()("DocsPixelIcon", "Tinted", LQ),
             "aria-hidden": "true",
-            style: Nd,
-            children: [(0, Ld.jsx)("span", {
+            style: qQ,
+            children: [(0, xQ.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${Pd}")`,
-                WebkitMaskImage: `url("${Pd}")`
+                maskImage: `url("${DQ}")`,
+                WebkitMaskImage: `url("${DQ}")`
               }
-            }), (0, Ld.jsx)("img", {
-              src: Pd,
+            }), (0, xQ.jsx)("img", {
+              src: DQ,
               alt: ""
             })]
-          }) : (0, Ld.jsx)("img", {
-            className: Wd()("DocsPixelIcon", pd),
-            src: Pd,
+          }) : (0, xQ.jsx)("img", {
+            className: oQ()("DocsPixelIcon", LQ),
+            src: DQ,
             alt: "",
             "aria-hidden": "true",
-            style: Nd
+            style: qQ
           })
         }
-        const Rd = 1500;
+        const eQ = 1500;
 
-        function Id() {
-          const [dd, Jd] = (0, pd.useState)(null);
-          (0, pd.useEffect)((() => {
-            if (null === dd) return;
-            const kd = setTimeout((() => {
-              Jd(null)
-            }), Rd);
+        function MQ() {
+          const [QQ, FQ] = (0, LQ.useState)(null);
+          (0, LQ.useEffect)((() => {
+            if (null === QQ) return;
+            const wQ = setTimeout((() => {
+              FQ(null)
+            }), eQ);
             return () => {
-              clearTimeout(kd)
+              clearTimeout(wQ)
             }
-          }), [dd]);
-          return [dd, dd => {
-            (0, Qd.d)(dd).then((() => {
-              Jd({
-                text: dd,
+          }), [QQ]);
+          return [QQ, QQ => {
+            (0, YQ.d)(QQ).then((() => {
+              FQ({
+                text: QQ,
                 failed: !1
               })
-            }), (kd => {
-              console.error("Could not copy to the clipboard", kd), Jd({
-                text: dd,
+            }), (wQ => {
+              console.error("Could not copy to the clipboard", wQ), FQ({
+                text: QQ,
                 failed: !0
               })
             }))
           }]
         }
 
-        function Gd(dd) {
+        function GQ(QQ) {
           let {
-            text: Jd,
-            label: kd,
-            className: pd
-          } = dd;
-          const [Nd, Pd] = Id(), Zd = !1 === (null === Nd || void 0 === Nd ? void 0 : Nd.failed);
-          return (0, Ld.jsxs)("button", {
+            text: FQ,
+            label: wQ,
+            className: LQ
+          } = QQ;
+          const [qQ, DQ] = MQ(), kQ = !1 === (null === qQ || void 0 === qQ ? void 0 : qQ.failed);
+          return (0, xQ.jsxs)("button", {
             type: "button",
-            className: Wd()("DocsCopyButton", pd, {
-              Copied: Zd
+            className: oQ()("DocsCopyButton", LQ, {
+              Copied: kQ
             }),
-            title: `Copy ${Jd.length>40?"to clipboard":Jd}`,
-            "aria-label": kd ? void 0 : `Copy ${Jd}`,
-            onClick: dd => {
-              dd.stopPropagation(), Pd(Jd)
+            title: `Copy ${FQ.length>40?"to clipboard":FQ}`,
+            "aria-label": wQ ? void 0 : `Copy ${FQ}`,
+            onClick: QQ => {
+              QQ.stopPropagation(), DQ(FQ)
             },
-            children: [(0, Ld.jsx)(ed, {
-              name: Zd ? "check" : "copy"
-            }), kd && (0, Ld.jsx)("span", {
-              children: Zd ? "Copied" : null !== Nd && void 0 !== Nd && Nd.failed ? "Copy failed" : kd
+            children: [(0, xQ.jsx)(tQ, {
+              name: kQ ? "check" : "copy"
+            }), wQ && (0, xQ.jsx)("span", {
+              children: kQ ? "Copied" : null !== qQ && void 0 !== qQ && qQ.failed ? "Copy failed" : wQ
             })]
           })
         }
-        Kd.d.registerLanguage("javascript", od.b), Kd.d.registerLanguage("typescript", ld.d);
-        const vd = {
+        uQ.d.registerLanguage("javascript", HQ.e), uQ.d.registerLanguage("typescript", bQ.c);
+        const pQ = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          xd = {
+          cQ = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          qd = 24;
+          CQ = 24;
 
-        function Bd(dd) {
+        function SQ(QQ) {
           let {
-            code: Jd,
-            lang: kd,
-            compact: Nd = !1
-          } = dd;
-          const Pd = (0, pd.useMemo)((() => function(dd, Jd) {
-              const kd = vd[Jd];
-              return kd ? Kd.d.highlight(dd, {
-                language: kd
-              }).value : dd.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(Jd, kd)), [Jd, kd]),
-            Zd = Jd.split("\n").length,
-            gd = !Nd && Zd > qd + 6,
-            [Cd, od] = (0, pd.useState)(!1),
-            ld = vd[kd];
-          return (0, Ld.jsxs)("div", {
-            className: Wd()("DocsCodeBlock", {
-              Compact: Nd,
-              Collapsed: gd && !Cd
+            code: FQ,
+            lang: wQ,
+            compact: qQ = !1
+          } = QQ;
+          const DQ = (0, LQ.useMemo)((() => function(QQ, FQ) {
+              const wQ = pQ[FQ];
+              return wQ ? uQ.d.highlight(QQ, {
+                language: wQ
+              }).value : QQ.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(FQ, wQ)), [FQ, wQ]),
+            kQ = FQ.split("\n").length,
+            vQ = !qQ && kQ > CQ + 6,
+            [mQ, HQ] = (0, LQ.useState)(!1),
+            bQ = pQ[wQ];
+          return (0, xQ.jsxs)("div", {
+            className: oQ()("DocsCodeBlock", {
+              Compact: qQ,
+              Collapsed: vQ && !mQ
             }),
-            children: [!Nd && (0, Ld.jsxs)("div", {
+            children: [!qQ && (0, xQ.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, Ld.jsx)("span", {
+              children: [(0, xQ.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: ld ? xd[ld] : "Text"
-              }), (0, Ld.jsx)(Gd, {
-                text: Jd,
+                children: bQ ? cQ[bQ] : "Text"
+              }), (0, xQ.jsx)(GQ, {
+                text: FQ,
                 label: "Copy"
               })]
-            }), (0, Ld.jsx)("pre", {
-              children: (0, Ld.jsx)("code", {
+            }), (0, xQ.jsx)("pre", {
+              children: (0, xQ.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: Pd
+                  __html: DQ
                 }
               })
-            }), gd && (0, Ld.jsxs)("button", {
+            }), vQ && (0, xQ.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": Cd,
+              "aria-expanded": mQ,
               onClick: () => {
-                od(!Cd)
+                HQ(!mQ)
               },
-              children: [(0, Ld.jsx)(ed, {
-                name: Cd ? "chevron-up" : "chevron-down"
-              }), Cd ? "Show less" : `Show all ${Zd} lines`]
+              children: [(0, xQ.jsx)(tQ, {
+                name: mQ ? "chevron-up" : "chevron-down"
+              }), mQ ? "Show less" : `Show all ${kQ} lines`]
             })]
           })
         }
-        var sd = kd(4612);
-        var ad = kd(4620);
-        const Md = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var iQ = wQ(4585);
+        var WQ = wQ(4593);
+        const RQ = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Fd(dd) {
-          const Jd = new Map;
-          let kd, pd = [],
-            Nd = !1;
-          const Wd = () => {
-            kd && Jd.set(kd.name, kd.lines.join("\n").trimEnd())
+        function OQ(QQ) {
+          const FQ = new Map;
+          let wQ, LQ = [],
+            qQ = !1;
+          const oQ = () => {
+            wQ && FQ.set(wQ.name, wQ.lines.join("\n").trimEnd())
           };
-          for (const Pd of dd.split("\n")) {
-            const dd = Pd.match(Md);
-            Nd || Pd.startsWith("/*") ? (Nd || (Wd(), kd = void 0), pd.push(Pd), Nd = !Pd.includes("*/")) : dd ? (Wd(), kd = {
-              name: dd[1],
-              lines: [...pd, Pd]
-            }, pd = []) : kd && (Pd.startsWith(" ") || Pd.startsWith("\t") || /^[}\])|]/.test(Pd)) ? kd.lines.push(Pd) : kd && "" !== Pd.trim() && (Wd(), kd = void 0)
+          for (const DQ of QQ.split("\n")) {
+            const QQ = DQ.match(RQ);
+            qQ || DQ.startsWith("/*") ? (qQ || (oQ(), wQ = void 0), LQ.push(DQ), qQ = !DQ.includes("*/")) : QQ ? (oQ(), wQ = {
+              name: QQ[1],
+              lines: [...LQ, DQ]
+            }, LQ = []) : wQ && (DQ.startsWith(" ") || DQ.startsWith("\t") || /^[}\])|]/.test(DQ)) ? wQ.lines.push(DQ) : wQ && "" !== DQ.trim() && (oQ(), wQ = void 0)
           }
-          return Wd(), Jd
+          return oQ(), FQ
         }
 
-        function Yd(dd) {
-          return "methods" === dd || "callbacks" === dd || "settings" === dd
+        function sQ(QQ) {
+          return "methods" === QQ || "callbacks" === QQ || "settings" === QQ
         }
-        const md = {
+        const rQ = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (dd, Jd) => `api.setClientOption(playerId, "${dd}", ${Jd})`
+              setterSnippet: (QQ, FQ) => `api.setClientOption(playerId, "${QQ}", ${FQ})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (dd, Jd) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${dd}", ${Jd})`
+              setterSnippet: (QQ, FQ) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${QQ}", ${FQ})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (dd, Jd) => `api.setMobSetting(mobId, "${dd}", ${Jd})`
+              setterSnippet: (QQ, FQ) => `api.setMobSetting(mobId, "${QQ}", ${FQ})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (dd, Jd) => `api.setVehicleSetting(vehicleId, "${dd}", ${Jd})`
+              setterSnippet: (QQ, FQ) => `api.setVehicleSetting(vehicleId, "${QQ}", ${FQ})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          bd = {
+          IQ = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function Sd(dd) {
-          return dd.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function UQ(QQ) {
+          return QQ.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function jd(dd) {
-          let Jd = !1;
-          return dd.split("\n").map((dd => (dd.startsWith("```") && (Jd = !Jd), !Jd && /^#{3,} /.test(dd) ? dd.slice(1) : dd))).join("\n")
+        function NQ(QQ) {
+          let FQ = !1;
+          return QQ.split("\n").map((QQ => (QQ.startsWith("```") && (FQ = !FQ), !FQ && /^#{3,} /.test(QQ) ? QQ.slice(1) : QQ))).join("\n")
         }
 
-        function Xd(dd) {
-          return "readme" === dd ? "getting-started" : Sd(dd)
+        function TQ(QQ) {
+          return "readme" === QQ ? "getting-started" : UQ(QQ)
         }
-        const fd = "## Glossary of Referenced Types";
-        const nd = [{
+        const KQ = "## Glossary of Referenced Types";
+        const zQ = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...ad.e.flatMap((dd => {
-            const Jd = {
-              id: dd.id,
-              slug: Xd(dd.id),
-              title: dd.title,
-              markdown: dd.content,
-              ...md[dd.id]
+          }, ...WQ.c.flatMap((QQ => {
+            const FQ = {
+              id: QQ.id,
+              slug: TQ(QQ.id),
+              title: QQ.title,
+              markdown: QQ.content,
+              ...rQ[QQ.id]
             };
-            if ("readme" === dd.id) return function(dd) {
-              const Jd = dd.markdown.indexOf(fd),
-                kd = dd.markdown.indexOf("\n```", Jd),
-                pd = dd.markdown.indexOf("\n```", kd + 1);
-              if (-1 === Jd || -1 === kd || -1 === pd) throw new Error(`Getting started has no "${fd}" section with a code block`);
-              const Nd = dd.markdown.slice(Jd + 31, kd).trim(),
-                Wd = [...Fd(dd.markdown.slice(dd.markdown.indexOf("\n", kd + 1) + 1, pd))].map((dd => {
-                  let [Jd, kd] = dd;
-                  return `## ${Jd}\n\n\`\`\`ts\n${kd}\n\`\`\`\n`
+            if ("readme" === QQ.id) return function(QQ) {
+              const FQ = QQ.markdown.indexOf(KQ),
+                wQ = QQ.markdown.indexOf("\n```", FQ),
+                LQ = QQ.markdown.indexOf("\n```", wQ + 1);
+              if (-1 === FQ || -1 === wQ || -1 === LQ) throw new Error(`Getting started has no "${KQ}" section with a code block`);
+              const qQ = QQ.markdown.slice(FQ + 31, wQ).trim(),
+                oQ = [...OQ(QQ.markdown.slice(QQ.markdown.indexOf("\n", wQ + 1) + 1, LQ))].map((QQ => {
+                  let [FQ, wQ] = QQ;
+                  return `## ${FQ}\n\n\`\`\`ts\n${wQ}\n\`\`\`\n`
                 })),
-                Pd = dd.markdown.slice(dd.markdown.indexOf("\n", pd + 1) + 1);
+                DQ = QQ.markdown.slice(QQ.markdown.indexOf("\n", LQ + 1) + 1);
               return [{
-                ...dd,
-                markdown: `${dd.markdown.slice(0,Jd)}${Pd}`
+                ...QQ,
+                markdown: `${QQ.markdown.slice(0,FQ)}${DQ}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${Nd}\n\n${Wd.join("\n")}`
+                markdown: `# Types\n\n${qQ}\n\n${oQ.join("\n")}`
               }]
-            }(Jd);
-            if ("howTo" === dd.id) {
+            }(FQ);
+            if ("howTo" === QQ.id) {
               const {
-                parent: dd,
-                guides: kd
-              } = function(dd) {
-                const [Jd, ...kd] = dd.markdown.split(/^(?=## )/m), pd = [Jd], Nd = [];
-                for (const Pd of kd) {
-                  var Wd;
-                  const Jd = Pd.indexOf("\n"),
-                    kd = Pd.slice(3, Jd).trim(),
-                    Zd = Pd.slice(Jd + 1);
-                  if (!Zd.includes("```")) {
-                    pd.push(Pd);
+                parent: QQ,
+                guides: wQ
+              } = function(QQ) {
+                const [FQ, ...wQ] = QQ.markdown.split(/^(?=## )/m), LQ = [FQ], qQ = [];
+                for (const DQ of wQ) {
+                  var oQ;
+                  const FQ = DQ.indexOf("\n"),
+                    wQ = DQ.slice(3, FQ).trim(),
+                    kQ = DQ.slice(FQ + 1);
+                  if (!kQ.includes("```")) {
+                    LQ.push(DQ);
                     continue
                   }
-                  const gd = null !== (Wd = bd[kd]) && void 0 !== Wd ? Wd : {
+                  const vQ = null !== (oQ = IQ[wQ]) && void 0 !== oQ ? oQ : {
                     icon: "lightbulb",
-                    summary: `How to use ${kd.toLowerCase()} in World Code.`
+                    summary: `How to use ${wQ.toLowerCase()} in World Code.`
                   };
-                  Nd.push({
-                    id: `${dd.id}${kd.split(/[^A-Za-z0-9]+/).map((dd=>dd.charAt(0).toUpperCase()+dd.slice(1))).join("")}`,
-                    slug: `${dd.slug}-${Sd(kd)}`,
-                    title: kd,
+                  qQ.push({
+                    id: `${QQ.id}${wQ.split(/[^A-Za-z0-9]+/).map((QQ=>QQ.charAt(0).toUpperCase()+QQ.slice(1))).join("")}`,
+                    slug: `${QQ.slug}-${UQ(wQ)}`,
+                    title: wQ,
                     layout: "article",
-                    sourceAnchor: (0, sd.r)(kd),
-                    markdown: `# ${kd}\n\n${jd(Zd)}`,
-                    ...gd
+                    sourceAnchor: (0, iQ.u)(wQ),
+                    markdown: `# ${wQ}\n\n${NQ(kQ)}`,
+                    ...vQ
                   })
                 }
                 return {
                   parent: {
-                    ...dd,
-                    markdown: pd.join(""),
-                    childPageIds: Nd.map((dd => dd.id))
+                    ...QQ,
+                    markdown: LQ.join(""),
+                    childPageIds: qQ.map((QQ => QQ.id))
                   },
-                  guides: Nd
+                  guides: qQ
                 }
-              }(Jd);
-              return [dd, ...kd]
+              }(FQ);
+              return [QQ, ...wQ]
             }
-            return [Jd]
+            return [FQ]
           }))],
-          Ud = [{
+          lQ = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...nd.filter((dd => void 0 !== dd.sourceAnchor)).map((dd => dd.id))]
+            pageIds: ["howTo", ...zQ.filter((QQ => void 0 !== QQ.sourceAnchor)).map((QQ => QQ.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function yd(dd) {
-          return nd.find((Jd => Jd.id === dd))
+        function jQ(QQ) {
+          return zQ.find((FQ => FQ.id === QQ))
         }
-        const Dd = new Map;
+        const aQ = new Map;
 
-        function Td(dd) {
-          let Jd = Dd.get(dd.id);
-          return Jd || (Jd = (0, sd.v)(dd.markdown, "changelog" === dd.layout ? 3 : 2), Dd.set(dd.id, Jd)), Jd
-        }
-
-        function Ed(dd, Jd) {
-          return Td(dd).sections.some((dd => dd.heading.anchor === Jd || dd.blocks.some((dd => "heading" === dd.kind && dd.anchor === Jd))))
+        function XQ(QQ) {
+          let FQ = aQ.get(QQ.id);
+          return FQ || (FQ = (0, iQ.B)(QQ.markdown, "changelog" === QQ.layout ? 3 : 2), aQ.set(QQ.id, FQ)), FQ
         }
 
-        function cd(dd) {
-          const [Jd, ...kd] = dd.replace(/^#/, "").split("-"), pd = nd.find((dd => dd.id === Jd));
-          if (!pd) return null;
-          const Nd = kd.length > 0 ? (0, sd.r)(kd.join("-")) : "";
-          for (const Pd of null !== (Wd = pd.childPageIds) && void 0 !== Wd ? Wd : []) {
-            var Wd;
-            const dd = yd(Pd);
-            if (dd.sourceAnchor === Nd) return {
-              page: dd,
+        function fQ(QQ, FQ) {
+          return XQ(QQ).sections.some((QQ => QQ.heading.anchor === FQ || QQ.blocks.some((QQ => "heading" === QQ.kind && QQ.anchor === FQ))))
+        }
+
+        function VQ(QQ) {
+          const [FQ, ...wQ] = QQ.replace(/^#/, "").split("-"), LQ = zQ.find((QQ => QQ.id === FQ));
+          if (!LQ) return null;
+          const qQ = wQ.length > 0 ? (0, iQ.u)(wQ.join("-")) : "";
+          for (const DQ of null !== (oQ = LQ.childPageIds) && void 0 !== oQ ? oQ : []) {
+            var oQ;
+            const QQ = jQ(DQ);
+            if (QQ.sourceAnchor === qQ) return {
+              page: QQ,
               anchor: ""
             };
-            if (Ed(dd, Nd)) return {
-              page: dd,
-              anchor: Nd
+            if (fQ(QQ, qQ)) return {
+              page: QQ,
+              anchor: qQ
             }
           }
           return {
-            page: pd,
-            anchor: Nd
+            page: LQ,
+            anchor: qQ
           }
         }
-        const hd = {
+        const hQ = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function rd(dd, Jd) {
-          let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const pd = Jd.slug ? `${dd}/${Jd.slug}` : dd;
-          return kd ? `${pd}#${kd}` : pd
+        function JQ(QQ, FQ) {
+          let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const LQ = FQ.slug ? `${QQ}/${FQ.slug}` : QQ;
+          return wQ ? `${LQ}#${wQ}` : LQ
         }
-        var ud = kd(4636);
-        const td = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          Vd = new Set(["GameApi", "Console", "_TypeOf"]),
-          zd = 4;
+        var EQ = wQ(4610);
+        const nQ = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          gQ = new Set(["GameApi", "Console", "_TypeOf"]),
+          PQ = 4;
 
-        function Hd(dd) {
-          let Jd = dd.length;
-          for (; Jd > 0 && "" === dd[Jd - 1].trim();) Jd--;
-          return dd.slice(0, Jd)
+        function ZQ(QQ) {
+          let FQ = QQ.length;
+          for (; FQ > 0 && "" === QQ[FQ - 1].trim();) FQ--;
+          return QQ.slice(0, FQ)
         }
 
-        function wd(dd) {
-          var Jd;
-          const kd = Hd(dd);
-          if (null === (Jd = kd.at(-1)) || void 0 === Jd || !Jd.trimEnd().endsWith("*/")) return {
-            lines: kd,
+        function yQ(QQ) {
+          var FQ;
+          const wQ = ZQ(QQ);
+          if (null === (FQ = wQ.at(-1)) || void 0 === FQ || !FQ.trimEnd().endsWith("*/")) return {
+            lines: wQ,
             doc: ""
           };
-          const pd = kd.findLastIndex((dd => dd.startsWith("/**")));
-          return -1 === pd ? {
-            lines: kd,
+          const LQ = wQ.findLastIndex((QQ => QQ.startsWith("/**")));
+          return -1 === LQ ? {
+            lines: wQ,
             doc: ""
           } : {
-            lines: Hd(kd.slice(0, pd)),
-            doc: kd.slice(pd).join("\n")
+            lines: ZQ(wQ.slice(0, LQ)),
+            doc: wQ.slice(LQ).join("\n")
           }
         }
 
-        function Ad(dd) {
-          var Jd;
-          const kd = dd.split("\n"),
-            pd = kd.flatMap(((dd, Jd) => td.test(dd) ? [Jd] : []));
-          let Nd = wd(kd.slice(0, null !== (Jd = pd[0]) && void 0 !== Jd ? Jd : kd.length)).doc;
-          return pd.map(((dd, Jd) => {
-            var Wd;
-            const Pd = wd(kd.slice(dd, null !== (Wd = pd[Jd + 1]) && void 0 !== Wd ? Wd : kd.length)),
-              Zd = {
-                name: kd[dd].match(td)[1],
-                doc: Nd,
-                lines: Pd.lines
+        function BQ(QQ) {
+          var FQ;
+          const wQ = QQ.split("\n"),
+            LQ = wQ.flatMap(((QQ, FQ) => nQ.test(QQ) ? [FQ] : []));
+          let qQ = yQ(wQ.slice(0, null !== (FQ = LQ[0]) && void 0 !== FQ ? FQ : wQ.length)).doc;
+          return LQ.map(((QQ, FQ) => {
+            var oQ;
+            const DQ = yQ(wQ.slice(QQ, null !== (oQ = LQ[FQ + 1]) && void 0 !== oQ ? oQ : wQ.length)),
+              kQ = {
+                name: wQ[QQ].match(nQ)[1],
+                doc: qQ,
+                lines: DQ.lines
               };
-            return Nd = Pd.doc, Zd
+            return qQ = DQ.doc, kQ
           }))
         }
 
-        function dJ(dd) {
-          var Jd;
-          const kd = dd.match(/^readonly \[([\s\S]*)\]$/);
-          return kd ? null !== (Jd = kd[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Jd ? Jd : [] : null
+        function dQ(QQ) {
+          var FQ;
+          const wQ = QQ.match(/^readonly \[([\s\S]*)\]$/);
+          return wQ ? null !== (FQ = wQ[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== FQ ? FQ : [] : null
         }
 
-        function JJ(dd) {
-          if (!dd.startsWith("{") || !dd.endsWith("}")) return null;
-          const Jd = {
+        function QF(QQ) {
+          if (!QQ.startsWith("{") || !QQ.endsWith("}")) return null;
+          const FQ = {
               keys: [],
               values: []
             },
-            kd = dd => {
-              const kd = dd.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              kd && (Jd.keys.push(kd[1].startsWith('"') ? kd[1] : `"${kd[1]}"`), Jd.values.push(kd[2].trim()))
+            wQ = QQ => {
+              const wQ = QQ.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              wQ && (FQ.keys.push(wQ[1].startsWith('"') ? wQ[1] : `"${wQ[1]}"`), FQ.values.push(wQ[2].trim()))
             };
-          let pd = 0,
-            Nd = "";
-          for (const Wd of dd.slice(1, -1)) "{[(".includes(Wd) ? pd++ : "}])".includes(Wd) && pd--, ";" === Wd && 0 === pd ? (kd(Nd), Nd = "") : Nd += Wd;
-          return kd(Nd), Jd
+          let LQ = 0,
+            qQ = "";
+          for (const oQ of QQ.slice(1, -1)) "{[(".includes(oQ) ? LQ++ : "}])".includes(oQ) && LQ--, ";" === oQ && 0 === LQ ? (wQ(qQ), qQ = "") : qQ += oQ;
+          return wQ(qQ), FQ
         }
 
-        function kJ(dd) {
-          return dd.length > zd ? `\n\t| ${dd.join("\n\t| ")}` : dd.join(" | ")
+        function FF(QQ) {
+          return QQ.length > PQ ? `\n\t| ${QQ.join("\n\t| ")}` : QQ.join(" | ")
         }
 
-        function pJ(dd, Jd) {
-          const kd = function(dd, Jd) {
-            return dd.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((dd, kd) => {
-              var pd;
-              const Nd = null === (pd = Jd.get(kd)) || void 0 === pd ? void 0 : pd.object;
-              return Nd ? kJ(Nd.values) : dd
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((dd, kd) => {
-              var pd, Nd;
-              const Wd = null === (pd = Jd.get(kd)) || void 0 === pd || null === (Nd = pd.object) || void 0 === Nd ? void 0 : Nd.values.map(dJ);
-              return null !== Wd && void 0 !== Wd && Wd.every((dd => null !== dd)) ? kJ([...new Set(Wd.flat())]) : dd
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((dd, kd) => {
-              var pd;
-              const Nd = null === (pd = Jd.get(kd)) || void 0 === pd ? void 0 : pd.members;
-              return Nd ? kJ(Nd) : dd
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((dd, kd) => {
-              var pd;
-              const Nd = null === (pd = Jd.get(kd)) || void 0 === pd ? void 0 : pd.object;
-              return Nd ? kJ(Nd.keys) : dd
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((dd, kd) => {
-              var pd, Nd;
-              return null !== (pd = null === (Nd = Jd.get(kd)) || void 0 === Nd ? void 0 : Nd.text) && void 0 !== pd ? pd : dd
+        function wF(QQ, FQ) {
+          const wQ = function(QQ, FQ) {
+            return QQ.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((QQ, wQ) => {
+              var LQ;
+              const qQ = null === (LQ = FQ.get(wQ)) || void 0 === LQ ? void 0 : LQ.object;
+              return qQ ? FF(qQ.values) : QQ
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((QQ, wQ) => {
+              var LQ, qQ;
+              const oQ = null === (LQ = FQ.get(wQ)) || void 0 === LQ || null === (qQ = LQ.object) || void 0 === qQ ? void 0 : qQ.values.map(dQ);
+              return null !== oQ && void 0 !== oQ && oQ.every((QQ => null !== QQ)) ? FF([...new Set(oQ.flat())]) : QQ
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((QQ, wQ) => {
+              var LQ;
+              const qQ = null === (LQ = FQ.get(wQ)) || void 0 === LQ ? void 0 : LQ.members;
+              return qQ ? FF(qQ) : QQ
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((QQ, wQ) => {
+              var LQ;
+              const qQ = null === (LQ = FQ.get(wQ)) || void 0 === LQ ? void 0 : LQ.object;
+              return qQ ? FF(qQ.keys) : QQ
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((QQ, wQ) => {
+              var LQ, qQ;
+              return null !== (LQ = null === (qQ = FQ.get(wQ)) || void 0 === qQ ? void 0 : qQ.text) && void 0 !== LQ ? LQ : QQ
             }))
-          }(dd.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Jd);
-          return [dd.doc, kd].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(QQ.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), FQ);
+          return [QQ.doc, wQ].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function NJ(dd) {
-          const Jd = Ad(dd),
-            kd = function(dd) {
-              const Jd = new Map,
-                kd = dd.find((dd => "_TypeOf" === dd.name));
-              let pd = null;
-              const Nd = () => {
-                if (pd) {
-                  const dd = pd.lines.join("\n");
-                  Jd.set(pd.name, {
-                    text: dd,
-                    members: dJ(dd),
-                    object: JJ(dd)
+        function LF(QQ) {
+          const FQ = BQ(QQ),
+            wQ = function(QQ) {
+              const FQ = new Map,
+                wQ = QQ.find((QQ => "_TypeOf" === QQ.name));
+              let LQ = null;
+              const qQ = () => {
+                if (LQ) {
+                  const QQ = LQ.lines.join("\n");
+                  FQ.set(LQ.name, {
+                    text: QQ,
+                    members: dQ(QQ),
+                    object: QF(QQ)
                   })
                 }
               };
-              for (const Wd of kd.lines.slice(1, -1)) {
-                const dd = Wd.match(/^\t([\w$]+): (.+)$/);
-                dd ? (Nd(), pd = {
-                  name: dd[1],
-                  lines: [dd[2]]
-                }) : pd && pd.lines.push(Wd.replace(/^\t/, ""))
+              for (const oQ of wQ.lines.slice(1, -1)) {
+                const QQ = oQ.match(/^\t([\w$]+): (.+)$/);
+                QQ ? (qQ(), LQ = {
+                  name: QQ[1],
+                  lines: [QQ[2]]
+                }) : LQ && LQ.lines.push(oQ.replace(/^\t/, ""))
               }
-              return Nd(), Jd
-            }(Jd),
-            pd = new Map;
-          for (const Nd of Jd) Vd.has(Nd.name) || pd.has(Nd.name) || pd.set(Nd.name, pJ(Nd, kd));
-          return pd
+              return qQ(), FQ
+            }(FQ),
+            LQ = new Map;
+          for (const qQ of FQ) gQ.has(qQ.name) || LQ.has(qQ.name) || LQ.set(qQ.name, wF(qQ, wQ));
+          return LQ
         }
-        let WJ, PJ, ZJ;
+        let qF, oF, DF;
 
-        function gJ() {
-          return PJ ??= function(dd) {
-            const Jd = Ad(dd).find((dd => "GameApi" === dd.name)),
-              kd = new Map,
-              pd = Jd.lines;
-            for (let Wd = 0; Wd < pd.length; Wd++) {
-              var Nd;
-              if (!pd[Wd].trimStart().startsWith("/**")) continue;
-              const dd = Wd;
-              for (; Wd < pd.length && !pd[Wd].includes("*/");) Wd++;
-              const Jd = null === (Nd = pd[Wd + 1]) || void 0 === Nd ? void 0 : Nd.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!Jd) continue;
-              let Pd = null;
-              const Zd = [];
-              let gd = "description",
-                Cd = !1;
-              for (const kd of pd.slice(dd, Wd + 1).join("\n").split("\n").map((dd => dd.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const dd = kd.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                dd ? (Pd = dd[1].trim(), gd = "deprecation") : kd.startsWith("@") ? (gd = "otherTag", Cd = !0) : "" === kd.trim() ? Cd || (gd = "description", Zd.push(kd)) : "deprecation" !== gd || /^[A-Z]/.test(kd.trim()) ? "otherTag" !== gd && (gd = "description", Zd.push(kd)) : Pd = `${Pd} ${kd.trim()}`.trim()
+        function kF() {
+          return oF ??= function(QQ) {
+            const FQ = BQ(QQ).find((QQ => "GameApi" === QQ.name)),
+              wQ = new Map,
+              LQ = FQ.lines;
+            for (let oQ = 0; oQ < LQ.length; oQ++) {
+              var qQ;
+              if (!LQ[oQ].trimStart().startsWith("/**")) continue;
+              const QQ = oQ;
+              for (; oQ < LQ.length && !LQ[oQ].includes("*/");) oQ++;
+              const FQ = null === (qQ = LQ[oQ + 1]) || void 0 === qQ ? void 0 : qQ.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!FQ) continue;
+              let DQ = null;
+              const kQ = [];
+              let vQ = "description",
+                mQ = !1;
+              for (const wQ of LQ.slice(QQ, oQ + 1).join("\n").split("\n").map((QQ => QQ.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const QQ = wQ.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                QQ ? (DQ = QQ[1].trim(), vQ = "deprecation") : wQ.startsWith("@") ? (vQ = "otherTag", mQ = !0) : "" === wQ.trim() ? mQ || (vQ = "description", kQ.push(wQ)) : "deprecation" !== vQ || /^[A-Z]/.test(wQ.trim()) ? "otherTag" !== vQ && (vQ = "description", kQ.push(wQ)) : DQ = `${DQ} ${wQ.trim()}`.trim()
               }
-              kd.set(Jd[1], {
-                deprecation: Pd,
-                description: Zd.join("\n").trim()
+              wQ.set(FQ[1], {
+                deprecation: DQ,
+                description: kQ.join("\n").trim()
               })
             }
-            return kd
-          }(ud.default), PJ
+            return wQ
+          }(EQ.default), oF
         }
 
-        function CJ() {
-          if (!ZJ) {
-            ZJ = new Map;
-            for (const dd of nd) {
-              const Jd = (0, sd.t)(Td(dd)).flatMap((dd => dd.blocks));
-              for (const dd of (0, sd.k)(Jd))
-                if ("ts" === dd.lang || "typescript" === dd.lang)
-                  for (const [Jd, kd] of Fd(dd.code)) ZJ.set(Jd, kd)
+        function vF() {
+          if (!DF) {
+            DF = new Map;
+            for (const QQ of zQ) {
+              const FQ = (0, iQ.y)(XQ(QQ)).flatMap((QQ => QQ.blocks));
+              for (const QQ of (0, iQ.l)(FQ))
+                if ("ts" === QQ.lang || "typescript" === QQ.lang)
+                  for (const [FQ, wQ] of OQ(QQ.code)) DF.set(FQ, wQ)
             }
-            for (const [dd, Jd] of(WJ ??= NJ(ud.default), WJ)) ZJ.has(dd) || ZJ.set(dd, Jd)
+            for (const [QQ, FQ] of(qF ??= LF(EQ.default), qF)) DF.has(QQ) || DF.set(QQ, FQ)
           }
-          return ZJ
+          return DF
         }
-        const KJ = {
+        const mF = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let oJ;
+        let uF;
 
-        function lJ() {
-          if (!oJ) {
-            oJ = new Map;
-            for (const dd of nd)
-              if (Yd(dd.layout))
-                for (const Jd of Td(dd).sections) oJ.has(Jd.heading.text) || oJ.set(Jd.heading.text, {
-                  pageId: dd.id,
-                  anchor: Jd.heading.anchor
+        function HF() {
+          if (!uF) {
+            uF = new Map;
+            for (const QQ of zQ)
+              if (sQ(QQ.layout))
+                for (const FQ of XQ(QQ).sections) uF.has(FQ.heading.text) || uF.set(FQ.heading.text, {
+                  pageId: QQ.id,
+                  anchor: FQ.heading.anchor
                 })
           }
-          return oJ
+          return uF
         }
 
-        function QJ(dd) {
-          const Jd = dd.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return Jd ? lJ().get(Jd[1]) : void 0
+        function bF(QQ) {
+          const FQ = QQ.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return FQ ? HF().get(FQ[1]) : void 0
         }
-        const LJ = (0, pd.createContext)("/docs"),
-          OJ = (0, pd.createContext)(null),
-          eJ = (0, pd.createContext)(!1),
-          RJ = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const YF = (0, LQ.createContext)("/docs"),
+          xF = (0, LQ.createContext)(null),
+          AF = (0, LQ.createContext)(!1),
+          tF = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function IJ(dd) {
-          const Jd = dd.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return Jd ? Jd[1] : null
+        function eF(QQ) {
+          const FQ = QQ.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return FQ ? FQ[1] : null
         }
 
-        function GJ(dd) {
+        function MF(QQ) {
           let {
-            colour: Jd
-          } = dd;
-          return (0, Ld.jsx)("span", {
+            colour: FQ
+          } = QQ;
+          return (0, xQ.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: Jd
+              background: FQ
             },
             "aria-hidden": "true"
           })
         }
 
-        function vJ(dd) {
-          const Jd = [];
-          let kd = 0;
-          for (const pd of dd.matchAll(RJ)) Jd.push(dd.slice(kd, pd.index), (0, Ld.jsx)(GJ, {
-            colour: pd[0]
-          }), pd[0]), kd = pd.index + pd[0].length;
-          return Jd.push(dd.slice(kd)), Jd
+        function GF(QQ) {
+          const FQ = [];
+          let wQ = 0;
+          for (const LQ of QQ.matchAll(tF)) FQ.push(QQ.slice(wQ, LQ.index), (0, xQ.jsx)(MF, {
+            colour: LQ[0]
+          }), LQ[0]), wQ = LQ.index + LQ[0].length;
+          return FQ.push(QQ.slice(wQ)), FQ
         }
 
-        function xJ(dd) {
+        function pF(QQ) {
           let {
-            href: Jd,
-            children: kd
-          } = dd;
-          const Nd = (0, pd.useContext)(LJ);
-          if (Jd.startsWith("#")) {
-            const dd = cd(Jd);
-            if (dd) return (0, Ld.jsx)(Pd.d, {
-              to: rd(Nd, dd.page, dd.anchor),
-              children: (0, Ld.jsx)(eJ.Provider, {
+            href: FQ,
+            children: wQ
+          } = QQ;
+          const qQ = (0, LQ.useContext)(YF);
+          if (FQ.startsWith("#")) {
+            const QQ = VQ(FQ);
+            if (QQ) return (0, xQ.jsx)(DQ.b, {
+              to: JQ(qQ, QQ.page, QQ.anchor),
+              children: (0, xQ.jsx)(AF.Provider, {
                 value: !0,
-                children: kd
+                children: wQ
               })
             })
           }
-          return (0, Ld.jsx)("a", {
-            href: Jd,
+          return (0, xQ.jsx)("a", {
+            href: FQ,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, Ld.jsx)(eJ.Provider, {
+            children: (0, xQ.jsx)(AF.Provider, {
               value: !0,
-              children: kd
+              children: wQ
             })
           })
         }
 
-        function qJ(dd) {
+        function cF(QQ) {
           let {
-            code: Jd
-          } = dd;
-          const kd = (0, pd.useContext)(LJ);
-          if ((0, pd.useContext)(eJ)) return (0, Ld.jsx)("code", {
+            code: FQ
+          } = QQ;
+          const wQ = (0, LQ.useContext)(YF);
+          if ((0, LQ.useContext)(AF)) return (0, xQ.jsx)("code", {
             className: "DocsInlineCode",
-            children: Jd
+            children: FQ
           });
-          if (CJ().has(Jd)) return (0, Ld.jsx)(aJ, {
-            type: Jd
+          if (vF().has(FQ)) return (0, xQ.jsx)(WF, {
+            type: FQ
           });
-          const Nd = QJ(Jd);
-          if (Nd) return (0, Ld.jsx)(Pd.d, {
+          const qQ = bF(FQ);
+          if (qQ) return (0, xQ.jsx)(DQ.b, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: rd(kd, yd(Nd.pageId), Nd.anchor),
-            children: Jd
+            to: JQ(wQ, jQ(qQ.pageId), qQ.anchor),
+            children: FQ
           });
-          const Wd = IJ(Jd);
-          return (0, Ld.jsxs)("code", {
+          const oQ = eF(FQ);
+          return (0, xQ.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [Wd && (0, Ld.jsx)(GJ, {
-              colour: Wd
-            }), Jd]
+            children: [oQ && (0, xQ.jsx)(MF, {
+              colour: oQ
+            }), FQ]
           })
         }
 
-        function BJ(dd) {
+        function CF(QQ) {
           let {
-            text: Jd
-          } = dd;
-          const kd = [];
-          let Nd = 0;
-          for (const pd of Jd.matchAll(sd.f)) {
-            pd.index > Nd && kd.push(...vJ(Jd.slice(Nd, pd.index)));
-            const [, dd, Wd, Pd, Zd, gd] = pd;
-            dd ? kd.push((0, Ld.jsx)(qJ, {
-              code: (0, sd.m)(dd, Wd)
-            })) : Pd ? kd.push((0, Ld.jsx)("strong", {
-              children: (0, Ld.jsx)(BJ, {
-                text: Pd
+            text: FQ
+          } = QQ;
+          const wQ = [];
+          let qQ = 0;
+          for (const LQ of FQ.matchAll(iQ.f)) {
+            LQ.index > qQ && wQ.push(...GF(FQ.slice(qQ, LQ.index)));
+            const [, QQ, oQ, DQ, kQ, vQ] = LQ;
+            QQ ? wQ.push((0, xQ.jsx)(cF, {
+              code: (0, iQ.m)(QQ, oQ)
+            })) : DQ ? wQ.push((0, xQ.jsx)("strong", {
+              children: (0, xQ.jsx)(CF, {
+                text: DQ
               })
-            })) : kd.push((0, Ld.jsx)(xJ, {
-              href: gd,
-              children: (0, Ld.jsx)(BJ, {
-                text: Zd
+            })) : wQ.push((0, xQ.jsx)(pF, {
+              href: vQ,
+              children: (0, xQ.jsx)(CF, {
+                text: kQ
               })
-            })), Nd = pd.index + pd[0].length
+            })), qQ = LQ.index + LQ[0].length
           }
-          return Nd < Jd.length && kd.push(...vJ(Jd.slice(Nd))), (0, Ld.jsx)(Ld.Fragment, {
-            children: kd.map(((dd, Jd) => (0, Ld.jsx)(pd.Fragment, {
-              children: dd
-            }, Jd)))
+          return qQ < FQ.length && wQ.push(...GF(FQ.slice(qQ))), (0, xQ.jsx)(xQ.Fragment, {
+            children: wQ.map(((QQ, FQ) => (0, xQ.jsx)(LQ.Fragment, {
+              children: QQ
+            }, FQ)))
           })
         }
-        const sJ = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          iJ = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const SF = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          iF = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function aJ(dd) {
+        function WF(QQ) {
           let {
-            type: Jd
-          } = dd;
-          const kd = CJ(),
-            Nd = [];
-          for (const pd of Jd.trim().matchAll(sJ)) {
-            const [dd, Jd, Wd, Pd, Zd] = pd;
-            Jd ? Nd.push((0, Ld.jsx)("span", {
+            type: FQ
+          } = QQ;
+          const wQ = vF(),
+            qQ = [];
+          for (const LQ of FQ.trim().matchAll(SF)) {
+            const [QQ, FQ, oQ, DQ, kQ] = LQ;
+            FQ ? qQ.push((0, xQ.jsx)("span", {
               className: "DocsTypeString",
-              children: dd
-            })) : Wd && kd.has(Wd) ? Nd.push((0, Ld.jsx)(bJ, {
-              name: Wd,
-              definition: kd.get(Wd)
-            })) : Wd ? Nd.push((0, Ld.jsx)("span", {
-              className: iJ.has(Wd) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: dd
-            })) : Pd ? Nd.push((0, Ld.jsx)("span", {
+              children: QQ
+            })) : oQ && wQ.has(oQ) ? qQ.push((0, xQ.jsx)(IF, {
+              name: oQ,
+              definition: wQ.get(oQ)
+            })) : oQ ? qQ.push((0, xQ.jsx)("span", {
+              className: iF.has(oQ) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: QQ
+            })) : DQ ? qQ.push((0, xQ.jsx)("span", {
               className: "DocsTypeNumber",
-              children: dd
-            })) : Zd ? Nd.push(" ") : Nd.push((0, Ld.jsx)("span", {
+              children: QQ
+            })) : kQ ? qQ.push(" ") : qQ.push((0, xQ.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: dd
+              children: QQ
             }))
           }
-          return (0, Ld.jsx)("code", {
+          return (0, xQ.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: Nd.map(((dd, Jd) => (0, Ld.jsx)(pd.Fragment, {
-              children: dd
-            }, Jd)))
+            children: qQ.map(((QQ, FQ) => (0, xQ.jsx)(LQ.Fragment, {
+              children: QQ
+            }, FQ)))
           })
         }
-        const MJ = 480,
-          FJ = 6,
-          YJ = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let mJ = 0;
+        const RF = 480,
+          OF = 6,
+          sF = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let rF = 0;
 
-        function bJ(dd) {
+        function IF(QQ) {
           let {
-            name: Jd,
-            definition: kd
-          } = dd;
-          const Nd = (0, pd.useContext)(LJ),
-            Wd = KJ[Jd],
-            Zd = (0, pd.useRef)(null),
-            gd = (0, pd.useRef)(null),
-            Kd = (0, pd.useRef)(null),
-            [od, ld] = (0, pd.useState)(!1),
-            [Qd, Od] = (0, pd.useState)(null),
-            Rd = (0, pd.useRef)(),
-            Id = (0, pd.useContext)(OJ),
-            [Gd] = (0, pd.useState)((() => "DocsTypePopover-" + mJ++)),
-            vd = () => {
-              clearTimeout(Rd.current), ld(!0)
+            name: FQ,
+            definition: wQ
+          } = QQ;
+          const qQ = (0, LQ.useContext)(YF),
+            oQ = mF[FQ],
+            kQ = (0, LQ.useRef)(null),
+            vQ = (0, LQ.useRef)(null),
+            uQ = (0, LQ.useRef)(null),
+            [HQ, bQ] = (0, LQ.useState)(!1),
+            [YQ, AQ] = (0, LQ.useState)(null),
+            eQ = (0, LQ.useRef)(),
+            MQ = (0, LQ.useContext)(xF),
+            [GQ] = (0, LQ.useState)((() => "DocsTypePopover-" + rF++)),
+            pQ = () => {
+              clearTimeout(eQ.current), bQ(!0)
             },
-            xd = () => {
-              clearTimeout(Rd.current), Rd.current = setTimeout((() => {
-                ld(!1)
+            cQ = () => {
+              clearTimeout(eQ.current), eQ.current = setTimeout((() => {
+                bQ(!1)
               }), 120)
             };
-          return (0, pd.useEffect)((() => {
-            if (!od) return;
-            const dd = dd => {
-              if ("Escape" === dd.key) {
-                var Jd, kd;
-                if (null !== (Jd = gd.current) && void 0 !== Jd && Jd.contains(document.activeElement)) null === (kd = Zd.current) || void 0 === kd || kd.focus();
-                ld(!1)
+          return (0, LQ.useEffect)((() => {
+            if (!HQ) return;
+            const QQ = QQ => {
+              if ("Escape" === QQ.key) {
+                var FQ, wQ;
+                if (null !== (FQ = vQ.current) && void 0 !== FQ && FQ.contains(document.activeElement)) null === (wQ = kQ.current) || void 0 === wQ || wQ.focus();
+                bQ(!1)
               }
             };
-            return document.addEventListener("keydown", dd), () => {
-              document.removeEventListener("keydown", dd)
+            return document.addEventListener("keydown", QQ), () => {
+              document.removeEventListener("keydown", QQ)
             }
-          }), [od]), (0, pd.useEffect)((() => () => {
-            clearTimeout(Rd.current)
-          }), []), (0, pd.useLayoutEffect)((() => {
-            if (!od || !Zd.current || !gd.current) return void Od(null);
-            const dd = Zd.current.getBoundingClientRect(),
-              Jd = gd.current.offsetHeight,
-              kd = Math.min(MJ, window.innerWidth - 32),
-              pd = Math.min(Math.max(16, dd.left), window.innerWidth - kd - 16),
-              Nd = dd.bottom + FJ + Jd < window.innerHeight;
-            Od({
-              left: pd,
-              top: Nd ? dd.bottom + FJ : Math.max(16, dd.top - FJ - Jd)
+          }), [HQ]), (0, LQ.useEffect)((() => () => {
+            clearTimeout(eQ.current)
+          }), []), (0, LQ.useLayoutEffect)((() => {
+            if (!HQ || !kQ.current || !vQ.current) return void AQ(null);
+            const QQ = kQ.current.getBoundingClientRect(),
+              FQ = vQ.current.offsetHeight,
+              wQ = Math.min(RF, window.innerWidth - 32),
+              LQ = Math.min(Math.max(16, QQ.left), window.innerWidth - wQ - 16),
+              qQ = QQ.bottom + OF + FQ < window.innerHeight;
+            AQ({
+              left: LQ,
+              top: qQ ? QQ.bottom + OF : Math.max(16, QQ.top - OF - FQ)
             })
-          }), [od]), (0, Ld.jsxs)(Ld.Fragment, {
-            children: [(0, Ld.jsx)("button", {
+          }), [HQ]), (0, xQ.jsxs)(xQ.Fragment, {
+            children: [(0, xQ.jsx)("button", {
               type: "button",
-              ref: Zd,
+              ref: kQ,
               className: "DocsTypeLink",
-              "aria-expanded": od,
-              "aria-describedby": od ? Gd : void 0,
-              onMouseEnter: vd,
-              onMouseLeave: xd,
-              onFocus: vd,
-              onBlur: xd,
-              onKeyDown: dd => {
-                "Tab" === dd.key && !dd.shiftKey && Kd.current && (dd.preventDefault(), Kd.current.focus())
+              "aria-expanded": HQ,
+              "aria-describedby": HQ ? GQ : void 0,
+              onMouseEnter: pQ,
+              onMouseLeave: cQ,
+              onFocus: pQ,
+              onBlur: cQ,
+              onKeyDown: QQ => {
+                "Tab" === QQ.key && !QQ.shiftKey && uQ.current && (QQ.preventDefault(), uQ.current.focus())
               },
-              onClick: vd,
-              children: Jd
-            }), od && (0, Cd.createPortal)((0, Ld.jsxs)("span", {
-              ref: gd,
-              id: Gd,
+              onClick: pQ,
+              children: FQ
+            }), HQ && (0, mQ.createPortal)((0, xQ.jsxs)("span", {
+              ref: vQ,
+              id: GQ,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: Qd ? {
-                left: Qd.left,
-                top: Qd.top,
-                maxWidth: MJ
+              style: YQ ? {
+                left: YQ.left,
+                top: YQ.top,
+                maxWidth: RF
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: vd,
-              onMouseLeave: xd,
-              onFocus: vd,
-              onBlur: xd,
-              children: [(0, Ld.jsxs)("span", {
+              onMouseEnter: pQ,
+              onMouseLeave: cQ,
+              onFocus: pQ,
+              onBlur: cQ,
+              children: [(0, xQ.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, Ld.jsx)("span", {
+                children: [(0, xQ.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: Jd
-                }), Wd && (0, Ld.jsxs)(Pd.d, {
-                  ref: Kd,
+                  children: FQ
+                }), oQ && (0, xQ.jsxs)(DQ.b, {
+                  ref: uQ,
                   className: "DocsTypePopoverLink",
-                  to: rd(Nd, yd(Wd)),
+                  to: JQ(qQ, jQ(oQ)),
                   onClick: () => {
-                    ld(!1)
+                    bQ(!1)
                   },
-                  onKeyDown: dd => {
-                    if ("Tab" === dd.key) {
-                      var Jd;
-                      if (dd.preventDefault(), dd.shiftKey || !Zd.current || ! function(dd, Jd) {
-                          const kd = [...document.querySelectorAll(YJ)],
-                            pd = kd.slice(kd.indexOf(dd) + 1).find((dd => dd.getClientRects().length > 0 && !(null !== Jd && void 0 !== Jd && Jd.contains(dd))));
-                          return null === pd || void 0 === pd || pd.focus(), void 0 !== pd
-                        }(Zd.current, gd.current)) null === (Jd = Zd.current) || void 0 === Jd || Jd.focus();
-                      dd.shiftKey || ld(!1)
+                  onKeyDown: QQ => {
+                    if ("Tab" === QQ.key) {
+                      var FQ;
+                      if (QQ.preventDefault(), QQ.shiftKey || !kQ.current || ! function(QQ, FQ) {
+                          const wQ = [...document.querySelectorAll(sF)],
+                            LQ = wQ.slice(wQ.indexOf(QQ) + 1).find((QQ => QQ.getClientRects().length > 0 && !(null !== FQ && void 0 !== FQ && FQ.contains(QQ))));
+                          return null === LQ || void 0 === LQ || LQ.focus(), void 0 !== LQ
+                        }(kQ.current, vQ.current)) null === (FQ = kQ.current) || void 0 === FQ || FQ.focus();
+                      QQ.shiftKey || bQ(!1)
                     }
                   },
-                  children: [yd(Wd).title, (0, Ld.jsx)(ed, {
+                  children: [jQ(oQ).title, (0, xQ.jsx)(tQ, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, Ld.jsx)(Bd, {
+              }), (0, xQ.jsx)(SQ, {
                 lang: "ts",
-                code: kd,
+                code: wQ,
                 compact: !0
               })]
-            }), null !== Id && void 0 !== Id ? Id : document.body)]
+            }), null !== MQ && void 0 !== MQ ? MQ : document.body)]
           })
         }
-        var SJ = kd(193),
-          jJ = kd(4642),
-          XJ = kd(4649),
-          fJ = kd(4657);
-        const nJ = {
+        var UF = wQ(201),
+          NF = wQ(4612),
+          TF = wQ(4615),
+          KF = wQ(4619);
+        const zF = {
           progressBar: {
-            cp: 30,
-            hp: .075,
-            rp: 5,
-            tp: !1,
+            rL: 30,
+            IL: .075,
+            UL: 5,
+            NL: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            Vp: "fa-solid fa-computer-mouse",
+            TL: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            Hp: 3e3,
+            zL: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            wp: !0,
+            lL: !0,
             scale: 3,
             rotation: 15,
-            Ap: !1
+            jL: !1
           },
           gravityBar: {
-            cp: 30,
-            JN: .25,
-            kN: 3,
-            pN: .8,
+            rL: 30,
+            XL: .25,
+            fL: 3,
+            VL: .8,
             gravity: 1,
-            NN: 1.5,
-            WN: 8,
-            PN: 4,
-            tp: !1,
+            hL: 1.5,
+            JL: 8,
+            EL: 4,
+            NL: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            gN: .15,
+            gL: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            KN: 5,
-            oN: 1200,
-            lN: .15,
-            QN: 3,
+            ZL: 5,
+            yL: 1200,
+            BL: .15,
+            dL: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var UJ = kd(300),
-          yJ = kd(1982);
+        var lF = wQ(307),
+          jF = wQ(1951);
 
-        function DJ(dd) {
-          return dd.startsWith("fa-")
+        function aF(QQ) {
+          return QQ.startsWith("fa-")
         }
-        const TJ = {
+        const XF = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          EJ = {
+          fF = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function cJ(dd) {
-          return "string" === typeof dd ? "text" : "entityName" in dd || "translationKey" in dd ? "other" : (0, UJ.sb)(dd) ? "progressBar" : (0, UJ.qb)(dd) ? "keyBinding" : "icon" in dd ? "icon" : "str" in dd && "string" === typeof dd.str ? "text" : "other"
+        function VF(QQ) {
+          return "string" === typeof QQ ? "text" : "entityName" in QQ || "translationKey" in QQ ? "other" : (0, lF.qb)(QQ) ? "progressBar" : (0, lF.mb)(QQ) ? "keyBinding" : "icon" in QQ ? "icon" : "str" in QQ && "string" === typeof QQ.str ? "text" : "other"
         }
-        const hJ = [{
+        const hF = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          rJ = {
+          JF = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...hJ],
+            }, ...hF],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: yJ.i
+                options: jF.n
               },
               isRequired: !0
-            }, ...hJ],
+            }, ...hF],
             other: []
           };
 
-        function uJ(dd) {
-          return "string" === typeof dd ? {
-            str: dd
-          } : dd
+        function EF(QQ) {
+          return "string" === typeof QQ ? {
+            str: QQ
+          } : QQ
         }
 
-        function tJ(dd, Jd) {
-          let kd = uJ(dd);
-          for (const pd of Jd) kd = kd && "object" === typeof kd ? kd[pd] : void 0;
-          return kd
+        function nF(QQ, FQ) {
+          let wQ = EF(QQ);
+          for (const LQ of FQ) wQ = wQ && "object" === typeof wQ ? wQ[LQ] : void 0;
+          return wQ
         }
 
-        function VJ(dd, Jd, kd) {
-          const pd = (dd, Nd) => {
-            var Wd;
-            const Pd = Jd[Nd],
-              Zd = {
-                ...dd
+        function gF(QQ, FQ, wQ) {
+          const LQ = (QQ, qQ) => {
+            var oQ;
+            const DQ = FQ[qQ],
+              kQ = {
+                ...QQ
               };
-            if (Nd === Jd.length - 1) return void 0 === kd ? delete Zd[Pd] : Zd[Pd] = kd, Zd;
-            const gd = pd(null !== (Wd = dd[Pd]) && void 0 !== Wd ? Wd : {}, Nd + 1);
-            return 0 === Object.keys(gd).length ? delete Zd[Pd] : Zd[Pd] = gd, Zd
+            if (qQ === FQ.length - 1) return void 0 === wQ ? delete kQ[DQ] : kQ[DQ] = wQ, kQ;
+            const vQ = LQ(null !== (oQ = QQ[DQ]) && void 0 !== oQ ? oQ : {}, qQ + 1);
+            return 0 === Object.keys(vQ).length ? delete kQ[DQ] : kQ[DQ] = vQ, kQ
           };
-          return function(dd) {
-            const Jd = Object.keys(dd);
-            return "string" === typeof dd.str && 1 === Jd.length ? dd.str : dd
-          }(pd(uJ(dd), 0))
+          return function(QQ) {
+            const FQ = Object.keys(QQ);
+            return "string" === typeof QQ.str && 1 === FQ.length ? QQ.str : QQ
+          }(LQ(EF(QQ), 0))
         }
 
-        function zJ(dd, Jd) {
-          const kd = cJ(dd),
-            pd = rJ[kd].find((dd => dd.path.join(".") === Jd.join("."))),
-            Nd = null !== pd && void 0 !== pd && pd.isRequired && "other" !== kd ? tJ(EJ[kd], Jd) : void 0;
-          return VJ(dd, Jd, Nd)
+        function PF(QQ, FQ) {
+          const wQ = VF(QQ),
+            LQ = JF[wQ].find((QQ => QQ.path.join(".") === FQ.join("."))),
+            qQ = null !== LQ && void 0 !== LQ && LQ.isRequired && "other" !== wQ ? nF(fF[wQ], FQ) : void 0;
+          return gF(QQ, FQ, qQ)
         }
 
-        function HJ(dd) {
-          switch (cJ(dd)) {
+        function ZF(QQ) {
+          switch (VF(QQ)) {
             case "text":
-              return String(tJ(dd, ["str"]));
+              return String(nF(QQ, ["str"]));
             case "icon":
-              return String(tJ(dd, ["icon"]));
+              return String(nF(QQ, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(tJ(dd,["progress"])))}%`;
+              return `${Math.round(100*Number(nF(QQ,["progress"])))}%`;
             case "keyBinding":
-              return String(tJ(dd, ["action"]));
+              return String(nF(QQ, ["action"]));
             case "other":
-              return JSON.stringify(dd)
+              return JSON.stringify(QQ)
           }
         }
-        const wJ = /^[A-Za-z_$][\w$]*$/;
+        const yF = /^[A-Za-z_$][\w$]*$/;
 
-        function AJ(dd) {
-          if (Array.isArray(dd)) return `[${dd.map(AJ).join(", ")}]`;
-          if (dd && "object" === typeof dd) {
-            const Jd = Object.entries(dd).map((dd => {
-              let [Jd, kd] = dd;
-              return `${wJ.test(Jd)?Jd:JSON.stringify(Jd)}: ${AJ(kd)}`
+        function BF(QQ) {
+          if (Array.isArray(QQ)) return `[${QQ.map(BF).join(", ")}]`;
+          if (QQ && "object" === typeof QQ) {
+            const FQ = Object.entries(QQ).map((QQ => {
+              let [FQ, wQ] = QQ;
+              return `${yF.test(FQ)?FQ:JSON.stringify(FQ)}: ${BF(wQ)}`
             }));
-            return 0 === Jd.length ? "{}" : `{ ${Jd.join(", ")} }`
+            return 0 === FQ.length ? "{}" : `{ ${FQ.join(", ")} }`
           }
-          return JSON.stringify(dd)
+          return JSON.stringify(QQ)
         }
 
-        function dk(dd) {
-          const Jd = dd.map(AJ),
-            kd = `[${Jd.join(", ")}]`;
-          return kd.length <= 60 ? kd : `[\n${Jd.map((dd=>`    ${dd},`)).join("\n")}\n]`
+        function dF(QQ) {
+          const FQ = QQ.map(BF),
+            wQ = `[${FQ.join(", ")}]`;
+          return wQ.length <= 60 ? wQ : `[\n${FQ.map((QQ=>`    ${QQ},`)).join("\n")}\n]`
         }
-        const Jk = {
+        const Qw = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function kk(dd) {
-          let Jd = "";
-          for (let Nd = 0; Nd < dd.length; Nd++) {
-            const Wd = dd[Nd];
-            if ("\\" === Wd) {
-              var kd;
-              const pd = null !== (kd = dd[Nd + 1]) && void 0 !== kd ? kd : "";
-              Jd += "'" === pd ? "'" : Wd + pd, Nd++
-            } else if ('"' === Wd) Jd += '\\"';
+        function Fw(QQ) {
+          let FQ = "";
+          for (let qQ = 0; qQ < QQ.length; qQ++) {
+            const oQ = QQ[qQ];
+            if ("\\" === oQ) {
+              var wQ;
+              const LQ = null !== (wQ = QQ[qQ + 1]) && void 0 !== wQ ? wQ : "";
+              FQ += "'" === LQ ? "'" : oQ + LQ, qQ++
+            } else if ('"' === oQ) FQ += '\\"';
             else {
-              var pd;
-              Jd += null !== (pd = Jk[Wd]) && void 0 !== pd ? pd : Wd
+              var LQ;
+              FQ += null !== (LQ = Qw[oQ]) && void 0 !== LQ ? LQ : oQ
             }
           }
-          return `"${Jd}"`
+          return `"${FQ}"`
         }
 
-        function pk(dd) {
-          if ("string" === typeof dd) return !0;
-          if (!dd || "object" !== typeof dd || Array.isArray(dd)) return !1;
-          const Jd = dd;
-          return "ProgressBar" === Jd.type ? "number" === typeof Jd.progress : "StyledKeyBinding" === Jd.type ? yJ.i.includes(Jd.action) : "string" === typeof Jd.icon || "string" === typeof Jd.str || "string" === typeof Jd.entityName || "string" === typeof Jd.translationKey
+        function ww(QQ) {
+          if ("string" === typeof QQ) return !0;
+          if (!QQ || "object" !== typeof QQ || Array.isArray(QQ)) return !1;
+          const FQ = QQ;
+          return "ProgressBar" === FQ.type ? "number" === typeof FQ.progress : "StyledKeyBinding" === FQ.type ? jF.n.includes(FQ.action) : "string" === typeof FQ.icon || "string" === typeof FQ.str || "string" === typeof FQ.entityName || "string" === typeof FQ.translationKey
         }
 
-        function Nk(dd) {
-          let Jd;
+        function Lw(QQ) {
+          let FQ;
           try {
-            Jd = function(dd) {
-              let Jd = "",
-                kd = "",
-                pd = 0;
-              const Nd = () => {
-                Jd += kd.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), kd = ""
+            FQ = function(QQ) {
+              let FQ = "",
+                wQ = "",
+                LQ = 0;
+              const qQ = () => {
+                FQ += wQ.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), wQ = ""
               };
-              for (; pd < dd.length;) {
-                const Wd = dd.slice(pd).search(/["'`]|\/\//);
-                if (-1 === Wd) {
-                  kd += dd.slice(pd);
+              for (; LQ < QQ.length;) {
+                const oQ = QQ.slice(LQ).search(/["'`]|\/\//);
+                if (-1 === oQ) {
+                  wQ += QQ.slice(LQ);
                   break
                 }
-                kd += dd.slice(pd, pd + Wd);
-                const Pd = pd + Wd,
-                  Zd = dd[Pd];
-                if ("/" === Zd) {
-                  const Jd = dd.indexOf("\n", Pd);
-                  pd = -1 === Jd ? dd.length : Jd;
+                wQ += QQ.slice(LQ, LQ + oQ);
+                const DQ = LQ + oQ,
+                  kQ = QQ[DQ];
+                if ("/" === kQ) {
+                  const FQ = QQ.indexOf("\n", DQ);
+                  LQ = -1 === FQ ? QQ.length : FQ;
                   continue
                 }
-                if (Nd(), "`" === Zd) throw new Error("Use quotes rather than template strings.");
-                let gd = Pd + 1;
-                for (; gd < dd.length && dd[gd] !== Zd;) gd += "\\" === dd[gd] ? 2 : 1;
-                if (gd >= dd.length) throw new Error("A string is missing its closing quote.");
-                const Cd = dd.slice(Pd + 1, gd);
-                Jd += kk(Cd), pd = gd + 1
+                if (qQ(), "`" === kQ) throw new Error("Use quotes rather than template strings.");
+                let vQ = DQ + 1;
+                for (; vQ < QQ.length && QQ[vQ] !== kQ;) vQ += "\\" === QQ[vQ] ? 2 : 1;
+                if (vQ >= QQ.length) throw new Error("A string is missing its closing quote.");
+                const mQ = QQ.slice(DQ + 1, vQ);
+                FQ += Fw(mQ), LQ = vQ + 1
               }
-              return Nd(), JSON.parse(Jd)
-            }(dd.trim())
-          } catch (pd) {
+              return qQ(), JSON.parse(FQ)
+            }(QQ.trim())
+          } catch (LQ) {
             return {
               parts: null,
-              error: pd instanceof SyntaxError ? "This isn't a valid array yet." : pd.message
+              error: LQ instanceof SyntaxError ? "This isn't a valid array yet." : LQ.message
             }
           }
-          if (!Array.isArray(Jd)) return {
+          if (!Array.isArray(FQ)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const kd = Jd.findIndex((dd => !pk(dd)));
-          return -1 !== kd ? {
+          const wQ = FQ.findIndex((QQ => !ww(QQ)));
+          return -1 !== wQ ? {
             parts: null,
-            error: `Part ${kd+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${wQ+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: Jd,
+            parts: FQ,
             error: null
           }
         }
-        const Wk = 1 / SJ.g.clientTicksPerSecond,
-          Pk = 700,
-          Zk = {
+        const qw = 1 / UF.e.clientTicksPerSecond,
+          ow = 700,
+          Dw = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          gk = {
-            progressBar: nJ.progressBar.Vp,
-            timedClick: nJ.timedClick.icon,
-            gravityBar: nJ.gravityBar.icon,
-            precisionBar: nJ.precisionBar.icon,
-            rhythmClick: nJ.rhythmClick.icon
+          kw = {
+            progressBar: zF.progressBar.TL,
+            timedClick: zF.timedClick.icon,
+            gravityBar: zF.gravityBar.icon,
+            precisionBar: zF.precisionBar.icon,
+            rhythmClick: zF.rhythmClick.icon
           };
 
-        function Ck(dd) {
+        function vw(QQ) {
           let {
-            type: Jd
-          } = dd;
-          const [kd, Nd] = (0, pd.useState)("ready"), [Pd, Zd] = (0, pd.useState)(1), [gd, Cd] = (0, pd.useState)(!0), Kd = (0, pd.useRef)(null), od = (0, pd.useRef)(null), ld = (0, pd.useRef)(null), Qd = (0, pd.useRef)(new Set), Od = (0, pd.useRef)(!1), Rd = gk[Jd], Id = (0, pd.useMemo)((() => ({
+            type: FQ
+          } = QQ;
+          const [wQ, qQ] = (0, LQ.useState)("ready"), [DQ, kQ] = (0, LQ.useState)(1), [vQ, mQ] = (0, LQ.useState)(!0), uQ = (0, LQ.useRef)(null), HQ = (0, LQ.useRef)(null), bQ = (0, LQ.useRef)(null), YQ = (0, LQ.useRef)(new Set), AQ = (0, LQ.useRef)(!1), eQ = kw[FQ], MQ = (0, LQ.useMemo)((() => ({
             getState: () => {
-              var dd, Jd;
-              return null !== (dd = null === (Jd = ld.current) || void 0 === Jd ? void 0 : Jd.getState()) && void 0 !== dd ? dd : Zk
+              var QQ, FQ;
+              return null !== (QQ = null === (FQ = bQ.current) || void 0 === FQ ? void 0 : FQ.getState()) && void 0 !== QQ ? QQ : Dw
             },
-            onFrame: dd => (Qd.current.add(dd), () => {
-              Qd.current.delete(dd)
+            onFrame: QQ => (YQ.current.add(QQ), () => {
+              YQ.current.delete(QQ)
             })
           })), []);
-          (0, pd.useEffect)((() => {
-            const dd = Kd.current,
-              Jd = od.current;
-            if (!dd || !Jd) return;
-            const kd = new ResizeObserver((() => {
-              Zd(dd.clientWidth / Math.max(1, Jd.offsetWidth))
+          (0, LQ.useEffect)((() => {
+            const QQ = uQ.current,
+              FQ = HQ.current;
+            if (!QQ || !FQ) return;
+            const wQ = new ResizeObserver((() => {
+              kQ(QQ.clientWidth / Math.max(1, FQ.offsetWidth))
             }));
-            return kd.observe(dd), () => {
-              kd.disconnect()
+            return wQ.observe(QQ), () => {
+              wQ.disconnect()
             }
-          }), []), (0, pd.useEffect)((() => {
-            var dd;
-            if ("playing" !== kd) return;
-            let pd = !1;
-            const Wd = new fJ.h[Jd](nJ[Jd], (dd => {
-              pd = !0, Cd(!1), Nd(dd ? "succeeded" : "failed")
+          }), []), (0, LQ.useEffect)((() => {
+            var QQ;
+            if ("playing" !== wQ) return;
+            let LQ = !1;
+            const oQ = new KF.d[FQ](zF[FQ], (QQ => {
+              LQ = !0, mQ(!1), qQ(QQ ? "succeeded" : "failed")
             }), (() => {}));
-            ld.current = Wd;
-            let Pd = 0,
-              Zd = performance.now(),
-              gd = requestAnimationFrame((function dd(Jd) {
-                for (Pd += Math.min(.25, (Jd - Zd) / 1e3), Zd = Jd; Pd >= Wk && !pd;) Pd -= Wk, Wd.handleTick(Wk);
-                for (const kd of Qd.current) kd();
-                pd || (gd = requestAnimationFrame(dd))
+            bQ.current = oQ;
+            let DQ = 0,
+              kQ = performance.now(),
+              vQ = requestAnimationFrame((function QQ(FQ) {
+                for (DQ += Math.min(.25, (FQ - kQ) / 1e3), kQ = FQ; DQ >= qw && !LQ;) DQ -= qw, oQ.handleTick(qw);
+                for (const wQ of YQ.current) wQ();
+                LQ || (vQ = requestAnimationFrame(QQ))
               }));
-            return null === (dd = Kd.current) || void 0 === dd || dd.focus({
+            return null === (QQ = uQ.current) || void 0 === QQ || QQ.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(gd), Wd.tearDown(), ld.current = null, Od.current = !1
+              cancelAnimationFrame(vQ), oQ.tearDown(), bQ.current = null, AQ.current = !1
             }
-          }), [kd, Jd]), (0, pd.useEffect)((() => {
-            if (gd) return;
-            const dd = setTimeout((() => {
-              Cd(!0)
-            }), Pk);
+          }), [wQ, FQ]), (0, LQ.useEffect)((() => {
+            if (vQ) return;
+            const QQ = setTimeout((() => {
+              mQ(!0)
+            }), ow);
             return () => {
-              clearTimeout(dd)
+              clearTimeout(QQ)
             }
-          }), [gd]);
-          const Gd = dd => {
-            var Jd;
-            "playing" === kd && Od.current !== dd && (Od.current = dd, null === (Jd = ld.current) || void 0 === Jd || Jd.handleMouseInput(dd))
+          }), [vQ]);
+          const GQ = QQ => {
+            var FQ;
+            "playing" === wQ && AQ.current !== QQ && (AQ.current = QQ, null === (FQ = bQ.current) || void 0 === FQ || FQ.handleMouseInput(QQ))
           };
-          return (0, Ld.jsxs)("div", {
+          return (0, xQ.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, Ld.jsxs)("div", {
-              ref: Kd,
-              className: Wd()("DocsQteStage", {
-                Playing: "playing" === kd
+            children: [(0, xQ.jsxs)("div", {
+              ref: uQ,
+              className: oQ()("DocsQteStage", {
+                Playing: "playing" === wQ
               }),
-              tabIndex: "playing" === kd ? 0 : -1,
-              role: "playing" === kd ? "button" : void 0,
-              "aria-label": "playing" === kd ? `${Jd} quick time event: click or press Space` : void 0,
-              onPointerDown: dd => {
-                0 === dd.button && Gd(!0)
+              tabIndex: "playing" === wQ ? 0 : -1,
+              role: "playing" === wQ ? "button" : void 0,
+              "aria-label": "playing" === wQ ? `${FQ} quick time event: click or press Space` : void 0,
+              onPointerDown: QQ => {
+                0 === QQ.button && GQ(!0)
               },
               onPointerUp: () => {
-                Gd(!1)
+                GQ(!1)
               },
               onPointerLeave: () => {
-                Gd(!1)
+                GQ(!1)
               },
               onPointerCancel: () => {
-                Gd(!1)
+                GQ(!1)
               },
-              onKeyDown: dd => {
-                "playing" !== kd || " " !== dd.key && "Enter" !== dd.key || (dd.preventDefault(), Gd(!0))
+              onKeyDown: QQ => {
+                "playing" !== wQ || " " !== QQ.key && "Enter" !== QQ.key || (QQ.preventDefault(), GQ(!0))
               },
-              onKeyUp: dd => {
-                "playing" !== kd || " " !== dd.key && "Enter" !== dd.key || Gd(!1)
+              onKeyUp: QQ => {
+                "playing" !== wQ || " " !== QQ.key && "Enter" !== QQ.key || GQ(!1)
               },
-              children: [(0, Ld.jsx)("div", {
-                ref: od,
+              children: [(0, xQ.jsx)("div", {
+                ref: HQ,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${Pd})`
+                  transform: `scale(${DQ})`
                 },
-                children: "playing" === kd && (0, Ld.jsx)(XJ.e.Provider, {
-                  value: Id,
-                  children: (0, Ld.jsx)(jJ.d, {
+                children: "playing" === wQ && (0, xQ.jsx)(TF.d.Provider, {
+                  value: MQ,
+                  children: (0, xQ.jsx)(NF.b, {
                     qte: {
-                      type: Jd,
-                      parameters: nJ[Jd]
+                      type: FQ,
+                      parameters: zF[FQ]
                     }
                   })
                 })
-              }), "playing" !== kd && (0, Ld.jsxs)("div", {
+              }), "playing" !== wQ && (0, xQ.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== kd && (0, Ld.jsxs)("div", {
-                  className: Wd()("DocsQteResult", "succeeded" === kd ? "Succeeded" : "Failed"),
-                  children: [(0, Ld.jsx)(ed, {
-                    name: "succeeded" === kd ? "check" : "cross",
+                children: ["ready" !== wQ && (0, xQ.jsxs)("div", {
+                  className: oQ()("DocsQteResult", "succeeded" === wQ ? "Succeeded" : "Failed"),
+                  children: [(0, xQ.jsx)(tQ, {
+                    name: "succeeded" === wQ ? "check" : "cross",
                     isTinted: !0
-                  }), (0, Ld.jsx)("span", {
-                    children: "succeeded" === kd ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, xQ.jsx)("span", {
+                    children: "succeeded" === wQ ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, Ld.jsxs)("button", {
+                }), (0, xQ.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !gd,
+                  disabled: !vQ,
                   onClick: () => {
-                    Nd("playing")
+                    qQ("playing")
                   },
-                  children: [(0, Ld.jsx)(ed, {
-                    name: "ready" === kd ? "play" : "replay"
-                  }), (0, Ld.jsx)("span", {
-                    children: "ready" === kd ? `Try ${Jd}` : "Play again"
+                  children: [(0, xQ.jsx)(tQ, {
+                    name: "ready" === wQ ? "play" : "replay"
+                  }), (0, xQ.jsx)("span", {
+                    children: "ready" === wQ ? `Try ${FQ}` : "Play again"
                   })]
                 })]
               })]
-            }), Rd && !DJ(Rd) && (0, Ld.jsxs)("p", {
+            }), eQ && !aF(eQ) && (0, xQ.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, Ld.jsx)("code", {
-                children: Rd
+              children: ["The ", (0, xQ.jsx)("code", {
+                children: eQ
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Kk(dd) {
+        function mw(QQ) {
           let {
-            level: Jd,
-            text: kd,
-            anchor: pd,
-            className: Nd
-          } = dd;
-          const Pd = `h${Math.min(Jd,6)}`;
-          return (0, Ld.jsxs)(Pd, {
-                id: pd,
-                className: Wd()("DocsHeading", Nd),
-                children: [(0, Ld.jsx)(BJ, {
-                      text: kd
-                    }), (0, Ld.jsx)("a", {
+            level: FQ,
+            text: wQ,
+            anchor: LQ,
+            className: qQ
+          } = QQ;
+          const DQ = `h${Math.min(FQ,6)}`;
+          return (0, xQ.jsxs)(DQ, {
+                id: LQ,
+                className: oQ()("DocsHeading", qQ),
+                children: [(0, xQ.jsx)(CF, {
+                      text: wQ
+                    }), (0, xQ.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${pd}`,
-                        "aria-label": `Link to ${kd.replace(/`/g,"")}`,children:"#"})]})}function lk(dd){let{items:Jd,ordered:kd}=dd;const pd=kd?"ol":"ul";return(0,Ld.jsx)(pd,{className:"DocsList",children:Jd.map(((dd,Jd)=>(0,Ld.jsxs)("li",{children:[(0,Ld.jsx)(BJ,{text:dd.text}),dd.children.length>0&&(0,Ld.jsx)(lk,{items:dd.children,ordered:kd})]},Jd)))})}function Qk(dd){const Jd=dd[0],kd="paragraph"===(null===Jd||void 0===Jd?void 0:Jd.kind)?Jd.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(kd)?"warning":/^\*\*(tip|prefer)/.test(kd)?"tip":"note"}function Lk(dd){let{block:Jd}=dd;switch(Jd.kind){case"heading":return(0,Ld.jsx)(Kk,{level:Jd.level,text:Jd.text,anchor:Jd.anchor});case"paragraph":return(0,Ld.jsx)("p",{children:(0,Ld.jsx)(BJ,{text:Jd.text})});case"code":{const dd="ts"===Jd.lang?function(dd){const Jd=dd.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Jd&&Object.hasOwn(nJ,Jd[1])?Jd[1]:null}(Jd.code):null;return(0,Ld.jsxs)(Ld.Fragment,{children:[(0,Ld.jsx)(Bd,{code:Jd.code,lang:Jd.lang}),dd&&(0,Ld.jsx)(Ck,{type:dd})]})}case"table":return(0,Ld.jsx)("div",{className:"DocsTableScroll",children:(0,Ld.jsxs)("table",{className:"DocsTable",children:[(0,Ld.jsx)("thead",{children:(0,Ld.jsx)("tr",{children:Jd.header.map(((dd,Jd)=>(0,Ld.jsx)("th",{children:(0,Ld.jsx)(BJ,{text:dd})},Jd)))})}),(0,Ld.jsx)("tbody",{children:Jd.rows.map(((dd,Jd)=>(0,Ld.jsx)("tr",{children:dd.map(((dd,Jd)=>(0,Ld.jsx)("td",{children:(0,Ld.jsx)(BJ,{text:dd})},Jd)))},Jd)))})]})});case"list":return(0,Ld.jsx)(lk,{items:Jd.items,ordered:Jd.ordered});case"quote":return(0,Ld.jsx)("aside",{className:Wd()("DocsCallout",Qk(Jd.blocks)),children:(0,Ld.jsx)(Ok,{blocks:Jd.blocks})});case"rule":return(0,Ld.jsx)("hr",{className:"DocsRule"})}}function Ok(dd){let{blocks:Jd}=dd;return(0,Ld.jsx)(Ld.Fragment,{children:Jd.map(((dd,Jd)=>(0,Ld.jsx)(Lk,{block:dd},Jd)))})}var ek=kd(4623),Rk=kd(4630);function Ik(dd){return"blocks"===dd||"items"===dd}const Gk=new Map;function vk(dd){let Jd=Gk.get(dd);return Jd||(Jd=function(dd){const Jd={entries:[],legend:[],notes:[],examples:[]};let kd=!1;for(const Wd of dd.split(/\r?\n/).slice(1)){if(Wd.startsWith("#")){const dd=Wd.replace(/^# ?/,""),pd=dd.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);pd?Jd.legend.push({code:pd[1],meaning:pd[2],usage:pd[3].trim()}):/^Examples:/.test(dd.trim())?kd=!0:kd&&dd.trim()?Jd.examples.push(dd.trim()):dd.trim()&&!/^\s/.test(dd)&&Jd.notes.push(dd.trim());continue}const dd=Wd.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var pd,Nd;dd&&Jd.entries.push({name:dd[1],variants:null!==(pd=null===(Nd=dd[2])||void 0===Nd?void 0:Nd.split(","))&&void 0!==pd?pd:[]})}return Jd}("blocks"===dd?ek:Rk),Gk.set(dd,Jd)),Jd}function xk(dd){let{className:Jd,value:kd,placeholder:pd,label:Nd,onChange:Wd,count:Pd,children:Zd}=dd;return(0,Ld.jsxs)("div",{className:Jd,children:[(0,Ld.jsx)(ed,{name:"magnifying-glass"}),(0,Ld.jsx)("input",{type:"search",value:kd,placeholder:pd,"aria-label":Nd,onChange:dd=>{Wd(dd.target.value)}}),Zd,Pd&&(0,Ld.jsxs)("span",{className:"DocsFilterCount",children:[Pd.visible," of ",Pd.total]})]})}var qk=kd(1059);function Bk(dd){const Jd=dd.trim().match(/^(` {
+                        href: `#${LQ}`,
+                        "aria-label": `Link to ${wQ.replace(/`/g,"")}`,children:"#"})]})}function uw(QQ){let{items:FQ,ordered:wQ}=QQ;const LQ=wQ?"ol":"ul";return(0,xQ.jsx)(LQ,{className:"DocsList",children:FQ.map(((QQ,FQ)=>(0,xQ.jsxs)("li",{children:[(0,xQ.jsx)(CF,{text:QQ.text}),QQ.children.length>0&&(0,xQ.jsx)(uw,{items:QQ.children,ordered:wQ})]},FQ)))})}function Hw(QQ){const FQ=QQ[0],wQ="paragraph"===(null===FQ||void 0===FQ?void 0:FQ.kind)?FQ.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(wQ)?"warning":/^\*\*(tip|prefer)/.test(wQ)?"tip":"note"}function bw(QQ){let{block:FQ}=QQ;switch(FQ.kind){case"heading":return(0,xQ.jsx)(mw,{level:FQ.level,text:FQ.text,anchor:FQ.anchor});case"paragraph":return(0,xQ.jsx)("p",{children:(0,xQ.jsx)(CF,{text:FQ.text})});case"code":{const QQ="ts"===FQ.lang?function(QQ){const FQ=QQ.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return FQ&&Object.hasOwn(zF,FQ[1])?FQ[1]:null}(FQ.code):null;return(0,xQ.jsxs)(xQ.Fragment,{children:[(0,xQ.jsx)(SQ,{code:FQ.code,lang:FQ.lang}),QQ&&(0,xQ.jsx)(vw,{type:QQ})]})}case"table":return(0,xQ.jsx)("div",{className:"DocsTableScroll",children:(0,xQ.jsxs)("table",{className:"DocsTable",children:[(0,xQ.jsx)("thead",{children:(0,xQ.jsx)("tr",{children:FQ.header.map(((QQ,FQ)=>(0,xQ.jsx)("th",{children:(0,xQ.jsx)(CF,{text:QQ})},FQ)))})}),(0,xQ.jsx)("tbody",{children:FQ.rows.map(((QQ,FQ)=>(0,xQ.jsx)("tr",{children:QQ.map(((QQ,FQ)=>(0,xQ.jsx)("td",{children:(0,xQ.jsx)(CF,{text:QQ})},FQ)))},FQ)))})]})});case"list":return(0,xQ.jsx)(uw,{items:FQ.items,ordered:FQ.ordered});case"quote":return(0,xQ.jsx)("aside",{className:oQ()("DocsCallout",Hw(FQ.blocks)),children:(0,xQ.jsx)(Yw,{blocks:FQ.blocks})});case"rule":return(0,xQ.jsx)("hr",{className:"DocsRule"})}}function Yw(QQ){let{blocks:FQ}=QQ;return(0,xQ.jsx)(xQ.Fragment,{children:FQ.map(((QQ,FQ)=>(0,xQ.jsx)(bw,{block:QQ},FQ)))})}var xw=wQ(4597),Aw=wQ(4605);function tw(QQ){return"blocks"===QQ||"items"===QQ}const ew=new Map;function Mw(QQ){let FQ=ew.get(QQ);return FQ||(FQ=function(QQ){const FQ={entries:[],legend:[],notes:[],examples:[]};let wQ=!1;for(const oQ of QQ.split(/\r?\n/).slice(1)){if(oQ.startsWith("#")){const QQ=oQ.replace(/^# ?/,""),LQ=QQ.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);LQ?FQ.legend.push({code:LQ[1],meaning:LQ[2],usage:LQ[3].trim()}):/^Examples:/.test(QQ.trim())?wQ=!0:wQ&&QQ.trim()?FQ.examples.push(QQ.trim()):QQ.trim()&&!/^\s/.test(QQ)&&FQ.notes.push(QQ.trim());continue}const QQ=oQ.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var LQ,qQ;QQ&&FQ.entries.push({name:QQ[1],variants:null!==(LQ=null===(qQ=QQ[2])||void 0===qQ?void 0:qQ.split(","))&&void 0!==LQ?LQ:[]})}return FQ}("blocks"===QQ?xw:Aw),ew.set(QQ,FQ)),FQ}function Gw(QQ){let{className:FQ,value:wQ,placeholder:LQ,label:qQ,onChange:oQ,count:DQ,children:kQ}=QQ;return(0,xQ.jsxs)("div",{className:FQ,children:[(0,xQ.jsx)(tQ,{name:"magnifying-glass"}),(0,xQ.jsx)("input",{type:"search",value:wQ,placeholder:LQ,"aria-label":qQ,onChange:QQ=>{oQ(QQ.target.value)}}),kQ,DQ&&(0,xQ.jsxs)("span",{className:"DocsFilterCount",children:[DQ.visible," of ",DQ.total]})]})}var pw=wQ(1079);function Cw(QQ){const FQ=QQ.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return Jd?Jd[2]:null}function sk(dd){return"paragraph"===dd.kind&&""===dd.text.trim()}function ik(dd){const Jd={name:dd.heading.text,description:[],params:[],returns:null};let kd="description";for(const Nd of dd.blocks)if(!sk(Nd))if("heading"===Nd.kind&&/^Parameters:?$/.test(Nd.text))kd="params";else if("heading"===Nd.kind&&/^Returns:?$/.test(Nd.text))kd="returns",Jd.returns={type:"",description:[]};else if("params"!==kd||"table"!==Nd.kind){if("returns"===kd&&"paragraph"===Nd.kind&&""===Jd.returns.type){const dd=Bk(Nd.text);if(null!==dd){Jd.returns.type=dd.replaceAll("\\|","|");continue}}"returns"===kd?Jd.returns.description.push(Nd):Jd.description.push(Nd)}else for(const[dd,kd,Wd]of Nd.rows){var pd;Jd.params.push({name:dd,type:null!==(pd=Bk(kd))&&void 0!==pd?pd:kd,description:null!==Wd&&void 0!==Wd?Wd:""})}return Jd}const ak=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Mk(dd){return dd.filter((dd=>!sk(dd)))}const Fk=/^[\w][\w .'&!:()-]*$/,Yk=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function mk(dd){var Jd;if("code"===dd.kind&&"text"===dd.lang){const Jd=dd.code.split("\n").map((dd=>dd.trim())).filter(Boolean);return Jd.length>0&&Jd.every((dd=>Fk.test(dd)))?Jd.map((dd=>({name:dd}))):null}return"paragraph"===dd.kind&&Yk.test(dd.text.trim())?[...dd.text.matchAll(/`([ ^ `]+)` / g)].flatMap((dd => dd[1].split(/,\s*/).map((dd => ({
-                              name: dd.trim()
-                            }))))): "table" === dd.kind && null !== (Jd = dd.header[0]) && void 0 !== Jd && Jd.startsWith("Song") ? dd.rows.map((dd => {
-                              let [Jd, kd] = dd;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return FQ?FQ[2]:null}function Sw(QQ){return"paragraph"===QQ.kind&&""===QQ.text.trim()}function iw(QQ){const FQ={name:QQ.heading.text,description:[],params:[],returns:null};let wQ="description";for(const qQ of QQ.blocks)if(!Sw(qQ))if("heading"===qQ.kind&&/^Parameters:?$/.test(qQ.text))wQ="params";else if("heading"===qQ.kind&&/^Returns:?$/.test(qQ.text))wQ="returns",FQ.returns={type:"",description:[]};else if("params"!==wQ||"table"!==qQ.kind){if("returns"===wQ&&"paragraph"===qQ.kind&&""===FQ.returns.type){const QQ=Cw(qQ.text);if(null!==QQ){FQ.returns.type=QQ.replaceAll("\\|","|");continue}}"returns"===wQ?FQ.returns.description.push(qQ):FQ.description.push(qQ)}else for(const[QQ,wQ,oQ]of qQ.rows){var LQ;FQ.params.push({name:QQ,type:null!==(LQ=Cw(wQ))&&void 0!==LQ?LQ:wQ,description:null!==oQ&&void 0!==oQ?oQ:""})}return FQ}const Ww=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Rw(QQ){return QQ.filter((QQ=>!Sw(QQ)))}const Ow=/^[\w][\w .'&!:()-]*$/,sw=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function rw(QQ){var FQ;if("code"===QQ.kind&&"text"===QQ.lang){const FQ=QQ.code.split("\n").map((QQ=>QQ.trim())).filter(Boolean);return FQ.length>0&&FQ.every((QQ=>Ow.test(QQ)))?FQ.map((QQ=>({name:QQ}))):null}return"paragraph"===QQ.kind&&sw.test(QQ.text.trim())?[...QQ.text.matchAll(/`([ ^ `]+)` / g)].flatMap((QQ => QQ[1].split(/,\s*/).map((QQ => ({
+                              name: QQ.trim()
+                            }))))): "table" === QQ.kind && null !== (FQ = QQ.header[0]) && void 0 !== FQ && FQ.startsWith("Song") ? QQ.rows.map((QQ => {
+                              let [FQ, wQ] = QQ;
                               return {
-                                name: Jd.replace(/`/g, ""),
-                                caption: kd
+                                name: FQ.replace(/`/g, ""),
+                                caption: wQ
                               }
                             })) : null
                           }
 
-                          function bk(dd) {
-                            const Jd = [];
-                            for (const kd of dd) {
-                              const dd = mk(kd),
-                                pd = Jd.at(-1),
-                                Nd = "table" === kd.kind;
-                              dd ? "names" === (null === pd || void 0 === pd ? void 0 : pd.kind) && pd.isSongs === Nd ? pd.names.push(...dd) : Jd.push({
+                          function Iw(QQ) {
+                            const FQ = [];
+                            for (const wQ of QQ) {
+                              const QQ = rw(wQ),
+                                LQ = FQ.at(-1),
+                                qQ = "table" === wQ.kind;
+                              QQ ? "names" === (null === LQ || void 0 === LQ ? void 0 : LQ.kind) && LQ.isSongs === qQ ? LQ.names.push(...QQ) : FQ.push({
                                 kind: "names",
-                                names: dd,
-                                isSongs: Nd
-                              }) : Jd.push({
+                                names: QQ,
+                                isSongs: qQ
+                              }) : FQ.push({
                                 kind: "block",
-                                block: kd
+                                block: wQ
                               })
                             }
-                            return Jd
+                            return FQ
                           }
-                          const Sk = {
+                          const Uw = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function jk(dd, Jd) {
-                            return `${Sk[dd]}-${(0,sd.r)(Jd)}`
+                          function Nw(QQ, FQ) {
+                            return `${Uw[QQ]}-${(0,iQ.u)(FQ)}`
                           }
-                          const Xk = new WeakMap;
+                          const Tw = new WeakMap;
 
-                          function fk(dd, Jd, kd) {
-                            let pd = Xk.get(Jd);
-                            if (!pd) {
-                              pd = new Map;
-                              const kd = new Set;
-                              for (const Nd of (0, sd.t)(Jd)) {
-                                const Jd = bk(Mk(Nd.blocks)).map((Jd => {
-                                  if ("block" === Jd.kind) return Jd;
+                          function Kw(QQ, FQ, wQ) {
+                            let LQ = Tw.get(FQ);
+                            if (!LQ) {
+                              LQ = new Map;
+                              const wQ = new Set;
+                              for (const qQ of (0, iQ.y)(FQ)) {
+                                const FQ = Iw(Rw(qQ.blocks)).map((FQ => {
+                                  if ("block" === FQ.kind) return FQ;
                                   return {
                                     kind: "names",
-                                    names: Jd.names.map((Jd => {
-                                      var pd, Wd;
-                                      const Pd = jk(dd, Jd.name);
-                                      let Zd = Pd;
-                                      for (let dd = 2; kd.has(Zd); dd++) Zd = `${Pd}-${dd}`;
-                                      return kd.add(Zd), {
-                                        ...Jd,
-                                        anchor: Zd,
-                                        heading: null !== (pd = null === (Wd = Nd.heading) || void 0 === Wd ? void 0 : Wd.text) && void 0 !== pd ? pd : ""
+                                    names: FQ.names.map((FQ => {
+                                      var LQ, oQ;
+                                      const DQ = Nw(QQ, FQ.name);
+                                      let kQ = DQ;
+                                      for (let QQ = 2; wQ.has(kQ); QQ++) kQ = `${DQ}-${QQ}`;
+                                      return wQ.add(kQ), {
+                                        ...FQ,
+                                        anchor: kQ,
+                                        heading: null !== (LQ = null === (oQ = qQ.heading) || void 0 === oQ ? void 0 : oQ.text) && void 0 !== LQ ? LQ : ""
                                       }
                                     })),
-                                    isSongs: Jd.isSongs
+                                    isSongs: FQ.isSongs
                                   }
                                 }));
-                                pd.set(Nd.blocks, Jd)
+                                LQ.set(qQ.blocks, FQ)
                               }
-                              Xk.set(Jd, pd)
+                              Tw.set(FQ, LQ)
                             }
-                            const Nd = pd.get(kd);
-                            if (!Nd) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return Nd
+                            const qQ = LQ.get(wQ);
+                            if (!qQ) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return qQ
                           }
-                          const nk = "/textures/docs/skinPreviews",
-                            Uk = [{
+                          const zw = "/textures/docs/skinPreviews",
+                            lw = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var yk = kd(4081),
-                            Dk = kd(4090);
+                          var jw = wQ(4109),
+                            aw = wQ(4119);
 
-                          function Tk(dd) {
-                            return Object.hasOwn(yk.d, dd) ? yk.d[dd] : null
+                          function Xw(QQ) {
+                            return Object.hasOwn(jw.e, QQ) ? jw.e[QQ] : null
                           }
-                          const Ek = {
+                          const fw = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Dk.d.Standard
+                            blendMode: aw.f.Standard
                           };
 
-                          function ck(dd, Jd, kd) {
-                            return Jd + (kd - Jd) * dd()
+                          function Vw(QQ, FQ, wQ) {
+                            return FQ + (wQ - FQ) * QQ()
                           }
 
-                          function hk(dd, Jd, kd) {
-                            return dd + (Jd - dd) * kd
+                          function hw(QQ, FQ, wQ) {
+                            return QQ + (FQ - QQ) * wQ
                           }
 
-                          function rk(dd) {
-                            return dd.length > 0 && "timeFraction" in dd[0]
+                          function Jw(QQ) {
+                            return QQ.length > 0 && "timeFraction" in QQ[0]
                           }
 
-                          function uk(dd, Jd) {
-                            if (0 === dd.colorGradients.length) return [{
+                          function Ew(QQ, FQ) {
+                            if (0 === QQ.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!rk(dd.colorGradients)) {
-                              const kd = dd.colorGradients,
+                            if (!Jw(QQ.colorGradients)) {
+                              const wQ = QQ.colorGradients,
                                 {
-                                  color: pd
-                                } = kd[Math.floor(Jd() * kd.length) % kd.length];
+                                  color: LQ
+                                } = wQ[Math.floor(FQ() * wQ.length) % wQ.length];
                               return [{
                                 at: 0,
-                                colour: [pd[0] / 255, pd[1] / 255, pd[2] / 255, 1]
+                                colour: [LQ[0] / 255, LQ[1] / 255, LQ[2] / 255, 1]
                               }]
                             }
-                            return [...dd.colorGradients].sort(((dd, Jd) => dd.timeFraction - Jd.timeFraction)).map((dd => {
-                              var kd, pd, Nd;
-                              const Wd = dd.minColor,
-                                Pd = null !== (kd = dd.maxColor) && void 0 !== kd ? kd : Wd,
-                                Zd = Jd(),
-                                gd = [hk(Wd[0], Pd[0], Zd) / 255, hk(Wd[1], Pd[1], Zd) / 255, hk(Wd[2], Pd[2], Zd) / 255, hk(null !== (pd = Wd[3]) && void 0 !== pd ? pd : 1, null !== (Nd = Pd[3]) && void 0 !== Nd ? Nd : 1, Zd)];
+                            return [...QQ.colorGradients].sort(((QQ, FQ) => QQ.timeFraction - FQ.timeFraction)).map((QQ => {
+                              var wQ, LQ, qQ;
+                              const oQ = QQ.minColor,
+                                DQ = null !== (wQ = QQ.maxColor) && void 0 !== wQ ? wQ : oQ,
+                                kQ = FQ(),
+                                vQ = [hw(oQ[0], DQ[0], kQ) / 255, hw(oQ[1], DQ[1], kQ) / 255, hw(oQ[2], DQ[2], kQ) / 255, hw(null !== (LQ = oQ[3]) && void 0 !== LQ ? LQ : 1, null !== (qQ = DQ[3]) && void 0 !== qQ ? qQ : 1, kQ)];
                               return {
-                                at: dd.timeFraction,
-                                colour: gd
+                                at: QQ.timeFraction,
+                                colour: vQ
                               }
                             }))
                           }
 
-                          function tk(dd, Jd, kd, pd) {
-                            const Nd = ck(pd, dd.minEmitPower, dd.maxEmitPower),
-                              Wd = Jd => ck(pd, Math.min(dd.dir1[Jd], dd.dir2[Jd]), Math.max(dd.dir1[Jd], dd.dir2[Jd])) * Nd,
-                              Pd = [...dd.velocityGradients].sort(((dd, Jd) => dd.timeFraction - Jd.timeFraction)).map((dd => ({
-                                at: dd.timeFraction,
-                                factor: ck(pd, dd.factor, dd.factor2)
+                          function nw(QQ, FQ, wQ, LQ) {
+                            const qQ = Vw(LQ, QQ.minEmitPower, QQ.maxEmitPower),
+                              oQ = FQ => Vw(LQ, Math.min(QQ.dir1[FQ], QQ.dir2[FQ]), Math.max(QQ.dir1[FQ], QQ.dir2[FQ])) * qQ,
+                              DQ = [...QQ.velocityGradients].sort(((QQ, FQ) => QQ.timeFraction - FQ.timeFraction)).map((QQ => ({
+                                at: QQ.timeFraction,
+                                factor: Vw(LQ, QQ.factor, QQ.factor2)
                               })));
                             return {
-                              pos: [ck(pd, Jd[0], kd[0]), ck(pd, Jd[1], kd[1]), ck(pd, Jd[2], kd[2])],
-                              dir: [Wd(0), Wd(1), Wd(2)],
+                              pos: [Vw(LQ, FQ[0], wQ[0]), Vw(LQ, FQ[1], wQ[1]), Vw(LQ, FQ[2], wQ[2])],
+                              dir: [oQ(0), oQ(1), oQ(2)],
                               age: 0,
-                              life: ck(pd, dd.minLifeTime, dd.maxLifeTime),
-                              size: ck(pd, dd.minSize, dd.maxSize),
-                              colours: uk(dd, pd),
-                              velocityFactors: Pd
+                              life: Vw(LQ, QQ.minLifeTime, QQ.maxLifeTime),
+                              size: Vw(LQ, QQ.minSize, QQ.maxSize),
+                              colours: Ew(QQ, LQ),
+                              velocityFactors: DQ
                             }
                           }
 
-                          function Vk(dd, Jd, kd, pd) {
-                            if (Jd < dd[0].at) return kd(Math.min(1, dd.length - 1));
-                            for (let Nd = 0; Nd < dd.length - 1; Nd++)
-                              if (Jd <= dd[Nd + 1].at) {
-                                const Wd = dd[Nd + 1].at - dd[Nd].at;
-                                return pd(kd(Nd), kd(Nd + 1), Wd > 0 ? (Jd - dd[Nd].at) / Wd : 1)
-                              } return kd(dd.length - 1)
+                          function gw(QQ, FQ, wQ, LQ) {
+                            if (FQ < QQ[0].at) return wQ(Math.min(1, QQ.length - 1));
+                            for (let qQ = 0; qQ < QQ.length - 1; qQ++)
+                              if (FQ <= QQ[qQ + 1].at) {
+                                const oQ = QQ[qQ + 1].at - QQ[qQ].at;
+                                return LQ(wQ(qQ), wQ(qQ + 1), oQ > 0 ? (FQ - QQ[qQ].at) / oQ : 1)
+                              } return wQ(QQ.length - 1)
                           }
 
-                          function zk(dd) {
-                            return Vk(dd.colours, dd.age / dd.life, (Jd => dd.colours[Jd].colour), ((dd, Jd, kd) => [hk(dd[0], Jd[0], kd), hk(dd[1], Jd[1], kd), hk(dd[2], Jd[2], kd), hk(dd[3], Jd[3], kd)]))
+                          function Pw(QQ) {
+                            return gw(QQ.colours, QQ.age / QQ.life, (FQ => QQ.colours[FQ].colour), ((QQ, FQ, wQ) => [hw(QQ[0], FQ[0], wQ), hw(QQ[1], FQ[1], wQ), hw(QQ[2], FQ[2], wQ), hw(QQ[3], FQ[3], wQ)]))
                           }
 
-                          function Hk(dd, Jd, kd) {
-                            if (dd.age += kd, dd.age >= dd.life) return !1;
-                            const pd = function(dd) {
-                              return 0 === dd.velocityFactors.length ? 1 : Vk(dd.velocityFactors, dd.age / dd.life, (Jd => dd.velocityFactors[Jd].factor), hk)
-                            }(dd) * kd;
-                            for (let Wd = 0; Wd < 3; Wd++) {
-                              var Nd;
-                              dd.pos[Wd] += dd.dir[Wd] * pd, dd.dir[Wd] += (null !== (Nd = Jd[Wd]) && void 0 !== Nd ? Nd : 0) * kd
+                          function Zw(QQ, FQ, wQ) {
+                            if (QQ.age += wQ, QQ.age >= QQ.life) return !1;
+                            const LQ = function(QQ) {
+                              return 0 === QQ.velocityFactors.length ? 1 : gw(QQ.velocityFactors, QQ.age / QQ.life, (FQ => QQ.velocityFactors[FQ].factor), hw)
+                            }(QQ) * wQ;
+                            for (let oQ = 0; oQ < 3; oQ++) {
+                              var qQ;
+                              QQ.pos[oQ] += QQ.dir[oQ] * LQ, QQ.dir[oQ] += (null !== (qQ = FQ[oQ]) && void 0 !== qQ ? qQ : 0) * wQ
                             }
                             return !0
                           }
 
-                          function wk(dd) {
-                            return String(Math.round(1e6 * dd) / 1e6)
+                          function yw(QQ) {
+                            return String(Math.round(1e6 * QQ) / 1e6)
                           }
 
-                          function Ak(dd) {
-                            return `[${dd.map(wk).join(", ")}]`
+                          function Bw(QQ) {
+                            return `[${QQ.map(yw).join(", ")}]`
                           }
 
-                          function dp(dd, Jd) {
-                            const kd = `${Jd}    `;
-                            return `[\n${(rk(dd)?dd.map((dd=>{const Jd=[`${kd}    timeFraction: ${wk(dd.timeFraction)},`,`${kd}    minColor: ${Ak(dd.minColor)},`];return dd.maxColor&&Jd.push(`${kd}    maxColor: ${Ak(dd.maxColor)},`),`${kd}{\n${Jd.join("\n")}\n${kd}},`})):dd.map((dd=>`
+                          function dw(QQ, FQ) {
+                            const wQ = `${FQ}    `;
+                            return `[\n${(Jw(QQ)?QQ.map((QQ=>{const FQ=[`${wQ}    timeFraction: ${yw(QQ.timeFraction)},`,`${wQ}    minColor: ${Bw(QQ.minColor)},`];return QQ.maxColor&&FQ.push(`${wQ}    maxColor: ${Bw(QQ.maxColor)},`),`${wQ}{\n${FQ.join("\n")}\n${wQ}},`})):QQ.map((QQ=>`
                             $ {
-                              kd
+                              wQ
                             } {
                               color: $ {
-                                Ak(dd.color)
+                                Bw(QQ.color)
                               }
-                            }, `))).join("\n")}\n${Jd}]`
+                            }, `))).join("\n")}\n${FQ}]`
                           }
-                          const Jp = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            kp = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const pp = .6;
+                          const QL = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            FL = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const wL = .6;
 
-                          function Np(dd, Jd) {
-                            return `${Jd?"song":"sound"}:${dd}`
+                          function LL(QQ, FQ) {
+                            return `${FQ?"song":"sound"}:${QQ}`
                           }
-                          let Wp = {
+                          let qL = {
                               track: null,
-                              volume: pp
+                              volume: wL
                             },
-                            Pp = null,
-                            Zp = 0,
-                            gp = 0;
-                          const Cp = new Set;
+                            oL = null,
+                            DL = 0,
+                            kL = 0;
+                          const vL = new Set;
 
-                          function Kp(dd) {
-                            Wp = {
-                              ...Wp,
-                              ...dd
-                            }, Cp.forEach((dd => {
-                              dd()
+                          function mL(QQ) {
+                            qL = {
+                              ...qL,
+                              ...QQ
+                            }, vL.forEach((QQ => {
+                              QQ()
                             }))
                           }
 
-                          function op(dd) {
-                            Wp.track && Kp({
+                          function uL(QQ) {
+                            qL.track && mL({
                               track: {
-                                ...Wp.track,
-                                ...dd
+                                ...qL.track,
+                                ...QQ
                               }
                             })
                           }
 
-                          function lp(dd) {
-                            const [Jd, kd] = (0, pd.useState)((() => dd(Wp))), Nd = (0, pd.useRef)(dd);
-                            return Nd.current = dd, (0, pd.useEffect)((() => {
-                              const dd = () => {
-                                kd((() => Nd.current(Wp)))
+                          function HL(QQ) {
+                            const [FQ, wQ] = (0, LQ.useState)((() => QQ(qL))), qQ = (0, LQ.useRef)(QQ);
+                            return qQ.current = QQ, (0, LQ.useEffect)((() => {
+                              const QQ = () => {
+                                wQ((() => qQ.current(qL)))
                               };
-                              return Cp.add(dd), dd(), () => {
-                                Cp.delete(dd)
+                              return vL.add(QQ), QQ(), () => {
+                                vL.delete(QQ)
                               }
-                            }), []), Jd
+                            }), []), FQ
                           }
 
-                          function Qp() {
-                            Zp++;
-                            const dd = Pp;
-                            Pp = null, null === dd || void 0 === dd || dd.stop()
+                          function bL() {
+                            DL++;
+                            const QQ = oL;
+                            oL = null, null === QQ || void 0 === QQ || QQ.stop()
                           }
 
-                          function Lp(dd, Jd) {
-                            let pd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            Qp();
-                            const Nd = Zp,
+                          function YL(QQ, FQ) {
+                            let LQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            bL();
+                            const qQ = DL,
                               {
-                                track: Wd
-                              } = Wp,
-                              Pd = Wd && Wd.name === dd && Wd.isSong === Jd ? Wd.duration : 0;
-                            gp = pd, Kp({
+                                track: oQ
+                              } = qL,
+                              DQ = oQ && oQ.name === QQ && oQ.isSong === FQ ? oQ.duration : 0;
+                            kL = LQ, mL({
                               track: {
-                                name: dd,
-                                isSong: Jd,
+                                name: QQ,
+                                isSong: FQ,
                                 status: "loading",
-                                duration: Pd
+                                duration: DQ
                               }
-                            }), Promise.all([kd.e(217), kd.e(241)]).then((() => kd(39770))).then((kd => {
+                            }), Promise.all([wQ.e(217), wQ.e(241)]).then((() => wQ(39195))).then((wQ => {
                               let {
-                                playDocsSound: Wd
-                              } = kd;
-                              Nd === Zp && (Pp = Wd(dd, Jd, Wp.volume, pd, {
-                                onPlay: dd => {
-                                  Nd === Zp && op({
+                                playDocsSound: oQ
+                              } = wQ;
+                              qQ === DL && (oL = oQ(QQ, FQ, qL.volume, LQ, {
+                                onPlay: QQ => {
+                                  qQ === DL && uL({
                                     status: "playing",
-                                    duration: dd
+                                    duration: QQ
                                   })
                                 },
-                                onEnd: dd => {
-                                  var Jd, kd;
-                                  Nd === Zp && (Pp = null, dd ? Kp({
+                                onEnd: QQ => {
+                                  var FQ, wQ;
+                                  qQ === DL && (oL = null, QQ ? mL({
                                     track: null
-                                  }) : (gp = null !== (Jd = null === (kd = Wp.track) || void 0 === kd ? void 0 : kd.duration) && void 0 !== Jd ? Jd : 0, op({
+                                  }) : (kL = null !== (FQ = null === (wQ = qL.track) || void 0 === wQ ? void 0 : wQ.duration) && void 0 !== FQ ? FQ : 0, uL({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((Jd => {
-                              console.error(`Could not play docs sound ${dd}`, Jd), Nd === Zp && Kp({
+                            })).catch((FQ => {
+                              console.error(`Could not play docs sound ${QQ}`, FQ), qQ === DL && mL({
                                 track: null
                               })
                             }))
                           }
 
-                          function Op() {
+                          function xL() {
                             const {
-                              track: dd
-                            } = Wp;
-                            if (!dd) return;
-                            if ("playing" === dd.status && Pp) return gp = Pp.yI(), Pp.pause(), void op({
+                              track: QQ
+                            } = qL;
+                            if (!QQ) return;
+                            if ("playing" === QQ.status && oL) return kL = oL.Qp(), oL.pause(), void uL({
                               status: "paused"
                             });
-                            if ("loading" === dd.status) return Qp(), void op({
+                            if ("loading" === QQ.status) return bL(), void uL({
                               status: "paused"
                             });
-                            if (Pp) return void Pp.resume();
-                            const Jd = dd.duration > 0 && gp >= dd.duration - .05;
-                            Lp(dd.name, dd.isSong, Jd ? 0 : gp)
+                            if (oL) return void oL.resume();
+                            const FQ = QQ.duration > 0 && kL >= QQ.duration - .05;
+                            YL(QQ.name, QQ.isSong, FQ ? 0 : kL)
                           }
 
-                          function ep() {
-                            var dd;
-                            return Pp && "playing" === (null === (dd = Wp.track) || void 0 === dd ? void 0 : dd.status) ? Pp.yI() : gp
+                          function AL() {
+                            var QQ;
+                            return oL && "playing" === (null === (QQ = qL.track) || void 0 === QQ ? void 0 : QQ.status) ? oL.Qp() : kL
                           }
 
-                          function Rp(dd) {
-                            var Jd;
-                            null === (Jd = Pp) || void 0 === Jd || Jd.setVolume(dd), Kp({
-                              volume: dd
+                          function tL(QQ) {
+                            var FQ;
+                            null === (FQ = oL) || void 0 === FQ || FQ.setVolume(QQ), mL({
+                              volume: QQ
                             })
                           }
 
-                          function Ip() {
-                            Qp(), gp = 0, Kp({
+                          function eL() {
+                            bL(), kL = 0, mL({
                               track: null
                             })
                           }
-                          const Gp = (0, pd.createContext)(null);
-                          let vp = null;
+                          const ML = (0, LQ.createContext)(null);
+                          let GL = null;
 
-                          function xp() {
-                            const [dd, Jd] = (0, pd.useState)(null);
-                            return (0, pd.useEffect)((() => {
-                              let dd = !1;
-                              return vp ??= Promise.all([kd.e(70), kd.e(73), kd.e(72), kd.e(71), kd.e(197), kd.e(97), kd.e(221)]).then((() => kd(39763))), vp.then((kd => {
-                                dd || Jd(kd)
-                              }), (dd => {
-                                console.error("Could not load the docs gallery's textures", dd), vp = null
+                          function pL() {
+                            const [QQ, FQ] = (0, LQ.useState)(null);
+                            return (0, LQ.useEffect)((() => {
+                              let QQ = !1;
+                              return GL ??= Promise.all([wQ.e(70), wQ.e(73), wQ.e(72), wQ.e(71), wQ.e(197), wQ.e(97), wQ.e(221)]).then((() => wQ(39193))), GL.then((wQ => {
+                                QQ || FQ(wQ)
+                              }), (QQ => {
+                                console.error("Could not load the docs gallery's textures", QQ), GL = null
                               })), () => {
-                                dd = !0
+                                QQ = !0
                               }
-                            }), []), dd
+                            }), []), QQ
                           }
-                          const qp = 24,
-                            Bp = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const cL = 24,
+                            CL = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function sp(dd, Jd) {
-                            const kd = "skins" === dd ? function(dd, Jd) {
-                              const kd = Uk.find((Jd => dd.startsWith(Jd.heading)));
-                              return kd ? function(dd, Jd) {
-                                return `${dd}-${Jd}`
-                              }(kd.prefix, Jd) : null
-                            }(Jd.heading, Jd.name) : null;
-                            return null === kd ? null : `${nk}/${kd}.webp`
+                          function SL(QQ, FQ) {
+                            const wQ = "skins" === QQ ? function(QQ, FQ) {
+                              const wQ = lw.find((FQ => QQ.startsWith(FQ.heading)));
+                              return wQ ? function(QQ, FQ) {
+                                return `${QQ}-${FQ}`
+                              }(wQ.prefix, FQ) : null
+                            }(FQ.heading, FQ.name) : null;
+                            return null === wQ ? null : `${zw}/${wQ}.webp`
                           }
 
-                          function ip(dd) {
+                          function iL(QQ) {
                             let {
-                              kind: Jd,
-                              entry: kd,
-                              assets: Nd,
-                              renderedUrl: Pd
-                            } = dd;
+                              kind: FQ,
+                              entry: wQ,
+                              assets: qQ,
+                              renderedUrl: DQ
+                            } = QQ;
                             const {
-                              name: Zd
-                            } = kd, [gd, Cd] = (0, pd.useState)(!1);
-                            if ("icons" === Jd && DJ(Zd)) return (0, Ld.jsx)(qk.e, {
+                              name: kQ
+                            } = wQ, [vQ, mQ] = (0, LQ.useState)(!1);
+                            if ("icons" === FQ && aF(kQ)) return (0, xQ.jsx)(pw.c, {
                               className: "DocsTileIcon",
-                              name: Zd
+                              name: kQ
                             });
-                            let Kd = null;
-                            var od;
-                            if ("icons" === Jd) Kd = null !== (od = null === Nd || void 0 === Nd ? void 0 : Nd.getIngameIconUrl(Zd)) && void 0 !== od ? od : null;
-                            else if ("particles" === Jd) {
-                              var ld, Qd, Od;
-                              Kd = null !== (ld = null === Nd || void 0 === Nd ? void 0 : Nd.getParticleTextureUrl(null !== (Qd = null === (Od = Tk(Zd)) || void 0 === Od ? void 0 : Od.texture) && void 0 !== Qd ? Qd : Zd)) && void 0 !== ld ? ld : null
-                            } else "skins" === Jd && (Kd = null !== Pd && void 0 !== Pd ? Pd : Bp.test(Zd) ? `/textures/charSkins/previews/${Zd}_preview.png` : null);
-                            return !Kd || gd ? (0, Ld.jsx)(ed, {
+                            let uQ = null;
+                            var HQ;
+                            if ("icons" === FQ) uQ = null !== (HQ = null === qQ || void 0 === qQ ? void 0 : qQ.getIngameIconUrl(kQ)) && void 0 !== HQ ? HQ : null;
+                            else if ("particles" === FQ) {
+                              var bQ, YQ, AQ;
+                              uQ = null !== (bQ = null === qQ || void 0 === qQ ? void 0 : qQ.getParticleTextureUrl(null !== (YQ = null === (AQ = Xw(kQ)) || void 0 === AQ ? void 0 : AQ.texture) && void 0 !== YQ ? YQ : kQ)) && void 0 !== bQ ? bQ : null
+                            } else "skins" === FQ && (uQ = null !== DQ && void 0 !== DQ ? DQ : CL.test(kQ) ? `/textures/charSkins/previews/${kQ}_preview.png` : null);
+                            return !uQ || vQ ? (0, xQ.jsx)(tQ, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === Jd ? "person" : "image"
-                            }) : (0, Ld.jsx)("img", {
-                              className: Wd()("DocsTileImage", {
-                                Pixelated: "skins" !== Jd
+                              name: "skins" === FQ ? "person" : "image"
+                            }) : (0, xQ.jsx)("img", {
+                              className: oQ()("DocsTileImage", {
+                                Pixelated: "skins" !== FQ
                               }),
-                              src: Kd,
-                              srcSet: Kd === Pd ? `${Kd} 2x` : void 0,
+                              src: uQ,
+                              srcSet: uQ === DQ ? `${uQ} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${Kd}`), Cd(!0)
+                                console.warn(`Docs gallery: could not load ${uQ}`), mQ(!0)
                               }
                             })
                           }
 
-                          function ap(dd) {
+                          function WL(QQ) {
                             let {
-                              entry: Jd,
-                              isSong: kd
-                            } = dd;
-                            const pd = lp((dd => {
+                              entry: FQ,
+                              isSong: wQ
+                            } = QQ;
+                            const LQ = HL((QQ => {
                                 let {
-                                  track: pd
-                                } = dd;
-                                return (null === pd || void 0 === pd ? void 0 : pd.name) === Jd.name && pd.isSong === kd ? pd.status : null
+                                  track: LQ
+                                } = QQ;
+                                return (null === LQ || void 0 === LQ ? void 0 : LQ.name) === FQ.name && LQ.isSong === wQ ? LQ.status : null
                               })),
-                              Nd = null !== pd && "paused" !== pd;
-                            return (0, Ld.jsxs)("button", {
+                              qQ = null !== LQ && "paused" !== LQ;
+                            return (0, xQ.jsxs)("button", {
                               type: "button",
-                              id: Jd.anchor,
-                              className: Wd()("DocsSoundTile", {
-                                Playing: Nd
+                              id: FQ.anchor,
+                              className: oQ()("DocsSoundTile", {
+                                Playing: qQ
                               }),
-                              "data-docs-track": Np(Jd.name, kd),
-                              "aria-label": Nd ? `Pause ${Jd.name}` : `Play ${Jd.name}`,
+                              "data-docs-track": LL(FQ.name, wQ),
+                              "aria-label": qQ ? `Pause ${FQ.name}` : `Play ${FQ.name}`,
                               onClick: () => {
-                                null !== pd ? Op() : Lp(Jd.name, kd)
+                                null !== LQ ? xL() : YL(FQ.name, wQ)
                               },
-                              children: [(0, Ld.jsx)("span", {
+                              children: [(0, xQ.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, Ld.jsx)(ed, {
-                                  name: Nd ? "pause" : "play"
+                                children: (0, xQ.jsx)(tQ, {
+                                  name: qQ ? "pause" : "play"
                                 })
-                              }), (0, Ld.jsx)("code", {
+                              }), (0, xQ.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: Jd.name
-                              }), Jd.caption && (0, Ld.jsx)("span", {
+                                children: FQ.name
+                              }), FQ.caption && (0, xQ.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: Jd.caption
+                                children: FQ.caption
                               })]
                             })
                           }
 
-                          function Mp(dd) {
+                          function RL(QQ) {
                             let {
-                              kind: Jd,
-                              names: kd,
-                              isSongs: Nd
-                            } = dd;
-                            const Pd = xp(),
-                              [Zd, gd] = Id(),
-                              Cd = !1 === (null === Zd || void 0 === Zd ? void 0 : Zd.failed) ? Zd.text : null,
-                              Kd = (0, pd.useContext)(Gp),
-                              [od, ld] = (0, pd.useState)(""),
-                              Qd = od.trim().toLowerCase(),
-                              Od = Qd ? kd.filter((dd => dd.name.toLowerCase().includes(Qd))) : kd;
-                            return (0, Ld.jsxs)("div", {
+                              kind: FQ,
+                              names: wQ,
+                              isSongs: qQ
+                            } = QQ;
+                            const DQ = pL(),
+                              [kQ, vQ] = MQ(),
+                              mQ = !1 === (null === kQ || void 0 === kQ ? void 0 : kQ.failed) ? kQ.text : null,
+                              uQ = (0, LQ.useContext)(ML),
+                              [HQ, bQ] = (0, LQ.useState)(""),
+                              YQ = HQ.trim().toLowerCase(),
+                              AQ = YQ ? wQ.filter((QQ => QQ.name.toLowerCase().includes(YQ))) : wQ;
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [kd.length > qp && (0, Ld.jsx)(xk, {
+                              children: [wQ.length > cL && (0, xQ.jsx)(Gw, {
                                 className: "DocsGalleryFilter",
-                                value: od,
-                                placeholder: `Filter ${kd.length} names\u2026`,
+                                value: HQ,
+                                placeholder: `Filter ${wQ.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: ld,
-                                count: Qd ? {
-                                  visible: Od.length,
-                                  total: kd.length
+                                onChange: bQ,
+                                count: YQ ? {
+                                  visible: AQ.length,
+                                  total: wQ.length
                                 } : null
-                              }), (0, Ld.jsx)("div", {
-                                className: Wd()("DocsGalleryGrid", `Kind-${Jd}`, {
-                                  Songs: Nd
+                              }), (0, xQ.jsx)("div", {
+                                className: oQ()("DocsGalleryGrid", `Kind-${FQ}`, {
+                                  Songs: qQ
                                 }),
-                                children: Od.map((dd => {
-                                  if ("sounds" === Jd) return (0, Ld.jsx)(ap, {
-                                    entry: dd,
-                                    isSong: Nd
-                                  }, dd.anchor);
-                                  if (Kd && "particles" === Jd && Tk(dd.name)) return (0, Ld.jsxs)("button", {
+                                children: AQ.map((QQ => {
+                                  if ("sounds" === FQ) return (0, xQ.jsx)(WL, {
+                                    entry: QQ,
+                                    isSong: qQ
+                                  }, QQ.anchor);
+                                  if (uQ && "particles" === FQ && Xw(QQ.name)) return (0, xQ.jsxs)("button", {
                                     type: "button",
-                                    id: dd.anchor,
-                                    className: Wd()("DocsTile Previewable", {
-                                      Copied: Cd === dd.name
+                                    id: QQ.anchor,
+                                    className: oQ()("DocsTile Previewable", {
+                                      Copied: mQ === QQ.name
                                     }),
-                                    title: `Play "${dd.name}" in the playground and copy its name`,
+                                    title: `Play "${QQ.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      Kd(dd.name), gd(dd.name)
+                                      uQ(QQ.name), vQ(QQ.name)
                                     },
-                                    children: [(0, Ld.jsxs)("span", {
+                                    children: [(0, xQ.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, Ld.jsx)(ip, {
-                                        kind: Jd,
-                                        entry: dd,
-                                        assets: Pd,
+                                      children: [(0, xQ.jsx)(iL, {
+                                        kind: FQ,
+                                        entry: QQ,
+                                        assets: DQ,
                                         renderedUrl: null
-                                      }), (0, Ld.jsx)("span", {
+                                      }), (0, xQ.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, Ld.jsx)(ed, {
+                                        children: (0, xQ.jsx)(tQ, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, Ld.jsx)("span", {
+                                    }), (0, xQ.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Cd === dd.name ? "Copied!" : dd.name
+                                      children: mQ === QQ.name ? "Copied!" : QQ.name
                                     })]
-                                  }, dd.anchor);
-                                  const kd = sp(Jd, dd);
-                                  return (0, Ld.jsxs)("button", {
+                                  }, QQ.anchor);
+                                  const wQ = SL(FQ, QQ);
+                                  return (0, xQ.jsxs)("button", {
                                     type: "button",
-                                    id: dd.anchor,
-                                    className: Wd()("DocsTile", {
-                                      Copied: Cd === dd.name
+                                    id: QQ.anchor,
+                                    className: oQ()("DocsTile", {
+                                      Copied: mQ === QQ.name
                                     }),
-                                    title: `Copy "${dd.name}"`,
+                                    title: `Copy "${QQ.name}"`,
                                     onClick: () => {
-                                      gd(dd.name)
+                                      vQ(QQ.name)
                                     },
-                                    children: [(0, Ld.jsx)("span", {
-                                      className: Wd()("DocsTilePreview", {
-                                        Rendered: null !== kd
+                                    children: [(0, xQ.jsx)("span", {
+                                      className: oQ()("DocsTilePreview", {
+                                        Rendered: null !== wQ
                                       }),
-                                      children: (0, Ld.jsx)(ip, {
-                                        kind: Jd,
-                                        entry: dd,
-                                        assets: Pd,
-                                        renderedUrl: kd
+                                      children: (0, xQ.jsx)(iL, {
+                                        kind: FQ,
+                                        entry: QQ,
+                                        assets: DQ,
+                                        renderedUrl: wQ
                                       })
-                                    }), (0, Ld.jsx)("span", {
+                                    }), (0, xQ.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Cd === dd.name ? "Copied!" : dd.name
+                                      children: mQ === QQ.name ? "Copied!" : QQ.name
                                     })]
-                                  }, dd.anchor)
+                                  }, QQ.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function Fp(dd) {
+                          function OL(QQ) {
                             let {
-                              kind: Jd,
-                              content: kd,
-                              blocks: pd
-                            } = dd;
-                            return (0, Ld.jsx)(Ld.Fragment, {
-                              children: fk(Jd, kd, pd).map(((dd, kd) => "block" === dd.kind ? (0, Ld.jsx)(Lk, {
-                                block: dd.block
-                              }, kd) : (0, Ld.jsx)(Mp, {
-                                kind: Jd,
-                                names: dd.names,
-                                isSongs: dd.isSongs
-                              }, kd)))
+                              kind: FQ,
+                              content: wQ,
+                              blocks: LQ
+                            } = QQ;
+                            return (0, xQ.jsx)(xQ.Fragment, {
+                              children: Kw(FQ, wQ, LQ).map(((QQ, wQ) => "block" === QQ.kind ? (0, xQ.jsx)(bw, {
+                                block: QQ.block
+                              }, wQ) : (0, xQ.jsx)(RL, {
+                                kind: FQ,
+                                names: QQ.names,
+                                isSongs: QQ.isSongs
+                              }, wQ)))
                             })
                           }
-                          const Yp = [{
+                          const sL = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function mp(dd) {
+                          function rL(QQ) {
                             let {
-                              cards: Jd = Yp,
-                              label: kd = "Start here"
-                            } = dd;
-                            const Nd = (0, pd.useContext)(LJ);
-                            return (0, Ld.jsx)("nav", {
+                              cards: FQ = sL,
+                              label: wQ = "Start here"
+                            } = QQ;
+                            const qQ = (0, LQ.useContext)(YF);
+                            return (0, xQ.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": kd,
-                              children: Jd.map((dd => {
+                              "aria-label": wQ,
+                              children: FQ.map((QQ => {
                                 let {
-                                  pageId: Jd,
-                                  countNoun: kd
-                                } = dd;
-                                const pd = yd(Jd);
-                                return (0, Ld.jsxs)(Pd.d, {
-                                  to: rd(Nd, pd),
+                                  pageId: FQ,
+                                  countNoun: wQ
+                                } = QQ;
+                                const LQ = jQ(FQ);
+                                return (0, xQ.jsxs)(DQ.b, {
+                                  to: JQ(qQ, LQ),
                                   className: "DocsLandingCard",
-                                  children: [(0, Ld.jsx)("span", {
+                                  children: [(0, xQ.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, Ld.jsx)(ed, {
-                                      name: pd.icon
+                                    children: (0, xQ.jsx)(tQ, {
+                                      name: LQ.icon
                                     })
-                                  }), (0, Ld.jsx)("span", {
+                                  }), (0, xQ.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: pd.title
-                                  }), (0, Ld.jsx)("span", {
+                                    children: LQ.title
+                                  }), (0, xQ.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: pd.summary
-                                  }), kd && (0, Ld.jsxs)("span", {
+                                    children: LQ.summary
+                                  }), wQ && (0, xQ.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [Td(pd).sections.length, " ", kd]
+                                    children: [XQ(LQ).sections.length, " ", wQ]
                                   })]
-                                }, Jd)
+                                }, FQ)
                               }))
                             })
                           }
-                          const bp = 240;
+                          const IL = 240;
 
-                          function Sp(dd) {
+                          function UL(QQ) {
                             let {
-                              faces: Jd
-                            } = dd;
-                            return (0, Ld.jsxs)("span", {
+                              faces: FQ
+                            } = QQ;
+                            return (0, xQ.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, Ld.jsx)("span", {
+                              children: [(0, xQ.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${Jd.top}")`
+                                  backgroundImage: `url("${FQ.top}")`
                                 }
-                              }), (0, Ld.jsx)("span", {
+                              }), (0, xQ.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${Jd.left}")`
+                                  backgroundImage: `url("${FQ.left}")`
                                 }
-                              }), (0, Ld.jsx)("span", {
+                              }), (0, xQ.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${Jd.right}")`
+                                  backgroundImage: `url("${FQ.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function jp(dd) {
+                          function NL(QQ) {
                             let {
-                              src: Jd
-                            } = dd;
-                            const [kd, Nd] = (0, pd.useState)(!1);
-                            return kd ? null : (0, Ld.jsx)("img", {
-                              src: Jd,
+                              src: FQ
+                            } = QQ;
+                            const [wQ, qQ] = (0, LQ.useState)(!1);
+                            return wQ ? null : (0, xQ.jsx)("img", {
+                              src: FQ,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${Jd}`), Nd(!0)
+                                console.warn(`Docs catalogue: could not load ${FQ}`), qQ(!0)
                               }
                             })
                           }
 
-                          function Xp(dd) {
+                          function TL(QQ) {
                             let {
-                              kind: Jd
-                            } = dd;
-                            const kd = vk(Jd),
-                              Nd = xp(),
-                              Pd = (0, Zd.v)(),
-                              [gd, Cd] = (0, pd.useState)(""),
-                              [Kd, od] = (0, pd.useState)(null),
-                              [ld, Qd] = (0, pd.useState)(bp),
-                              [Od, Rd] = (0, pd.useState)(null),
-                              Id = (0, pd.useRef)(null),
-                              vd = gd.trim().toLowerCase();
-                            (0, pd.useEffect)((() => {
-                              const dd = (0, sd.q)(Pd.hash),
-                                pd = kd.entries.find((kd => jk(Jd, kd.name) === dd));
-                              if (pd) Id.current = pd.name, Cd(pd.name), od(null), Rd(pd.name);
-                              else if (null !== Id.current) {
-                                const dd = Id.current;
-                                Id.current = null, Cd((Jd => Jd === dd ? "" : Jd)), Rd(null)
+                              kind: FQ
+                            } = QQ;
+                            const wQ = Mw(FQ),
+                              qQ = pL(),
+                              DQ = (0, kQ.r)(),
+                              [vQ, mQ] = (0, LQ.useState)(""),
+                              [uQ, HQ] = (0, LQ.useState)(null),
+                              [bQ, YQ] = (0, LQ.useState)(IL),
+                              [AQ, eQ] = (0, LQ.useState)(null),
+                              MQ = (0, LQ.useRef)(null),
+                              pQ = vQ.trim().toLowerCase();
+                            (0, LQ.useEffect)((() => {
+                              const QQ = (0, iQ.q)(DQ.hash),
+                                LQ = wQ.entries.find((wQ => Nw(FQ, wQ.name) === QQ));
+                              if (LQ) MQ.current = LQ.name, mQ(LQ.name), HQ(null), eQ(LQ.name);
+                              else if (null !== MQ.current) {
+                                const QQ = MQ.current;
+                                MQ.current = null, mQ((FQ => FQ === QQ ? "" : FQ)), eQ(null)
                               }
-                            }), [kd, Jd, Pd.hash, Pd.key]), (0, pd.useEffect)((() => {
-                              var dd;
-                              null !== Od && (null === (dd = document.getElementById(jk(Jd, Od))) || void 0 === dd || dd.scrollIntoView({
+                            }), [wQ, FQ, DQ.hash, DQ.key]), (0, LQ.useEffect)((() => {
+                              var QQ;
+                              null !== AQ && (null === (QQ = document.getElementById(Nw(FQ, AQ))) || void 0 === QQ || QQ.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [Jd, Od]);
-                            const xd = kd.entries.filter((dd => (!vd || dd.name.toLowerCase().includes(vd)) && (!Kd || dd.variants.includes(Kd))));
-                            return (0, Ld.jsxs)("div", {
+                            }), [FQ, AQ]);
+                            const cQ = wQ.entries.filter((QQ => (!pQ || QQ.name.toLowerCase().includes(pQ)) && (!uQ || QQ.variants.includes(uQ))));
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [kd.notes.length > 0 && (0, Ld.jsx)("div", {
+                              children: [wQ.notes.length > 0 && (0, xQ.jsx)("div", {
                                 className: "DocsProse",
-                                children: kd.notes.map((dd => (0, Ld.jsx)("p", {
-                                  children: dd
-                                }, dd)))
-                              }), kd.legend.length > 0 && (0, Ld.jsx)("div", {
+                                children: wQ.notes.map((QQ => (0, xQ.jsx)("p", {
+                                  children: QQ
+                                }, QQ)))
+                              }), wQ.legend.length > 0 && (0, xQ.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, Ld.jsxs)("table", {
+                                children: (0, xQ.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, Ld.jsx)("thead", {
-                                    children: (0, Ld.jsxs)("tr", {
-                                      children: [(0, Ld.jsx)("th", {
+                                  children: [(0, xQ.jsx)("thead", {
+                                    children: (0, xQ.jsxs)("tr", {
+                                      children: [(0, xQ.jsx)("th", {
                                         children: "Code"
-                                      }), (0, Ld.jsx)("th", {
+                                      }), (0, xQ.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, Ld.jsx)("th", {
+                                      }), (0, xQ.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, Ld.jsx)("tbody", {
-                                    children: kd.legend.map((dd => (0, Ld.jsxs)("tr", {
-                                      children: [(0, Ld.jsx)("td", {
-                                        children: (0, Ld.jsx)("button", {
+                                  }), (0, xQ.jsx)("tbody", {
+                                    children: wQ.legend.map((QQ => (0, xQ.jsxs)("tr", {
+                                      children: [(0, xQ.jsx)("td", {
+                                        children: (0, xQ.jsx)("button", {
                                           type: "button",
-                                          className: Wd()("DocsVariantChip", {
-                                            Active: Kd === dd.code
+                                          className: oQ()("DocsVariantChip", {
+                                            Active: uQ === QQ.code
                                           }),
-                                          "aria-pressed": Kd === dd.code,
-                                          title: `Show only ${Jd} with ${dd.meaning} variants`,
+                                          "aria-pressed": uQ === QQ.code,
+                                          title: `Show only ${FQ} with ${QQ.meaning} variants`,
                                           onClick: () => {
-                                            od(Kd === dd.code ? null : dd.code)
+                                            HQ(uQ === QQ.code ? null : QQ.code)
                                           },
-                                          children: dd.code
+                                          children: QQ.code
                                         })
-                                      }), (0, Ld.jsx)("td", {
-                                        children: dd.meaning
-                                      }), (0, Ld.jsx)("td", {
-                                        children: (0, Ld.jsx)("code", {
+                                      }), (0, xQ.jsx)("td", {
+                                        children: QQ.meaning
+                                      }), (0, xQ.jsx)("td", {
+                                        children: (0, xQ.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: dd.usage
+                                          children: QQ.usage
                                         })
                                       })]
-                                    }, dd.code)))
+                                    }, QQ.code)))
                                   })]
                                 })
-                              }), kd.examples.length > 0 && (0, Ld.jsx)(Bd, {
+                              }), wQ.examples.length > 0 && (0, xQ.jsx)(SQ, {
                                 lang: "text",
-                                code: kd.examples.join("\n")
-                              }), (0, Ld.jsx)(xk, {
+                                code: wQ.examples.join("\n")
+                              }), (0, xQ.jsx)(Gw, {
                                 className: "DocsFilterBar",
-                                value: gd,
-                                placeholder: `Search ${kd.entries.length} ${Jd}\u2026`,
-                                label: `Search ${Jd}`,
-                                onChange: dd => {
-                                  Cd(dd), Qd(bp)
+                                value: vQ,
+                                placeholder: `Search ${wQ.entries.length} ${FQ}\u2026`,
+                                label: `Search ${FQ}`,
+                                onChange: QQ => {
+                                  mQ(QQ), YQ(IL)
                                 },
-                                count: vd || Kd ? {
-                                  visible: xd.length,
-                                  total: kd.entries.length
+                                count: pQ || uQ ? {
+                                  visible: cQ.length,
+                                  total: wQ.entries.length
                                 } : null,
-                                children: Kd && (0, Ld.jsxs)("button", {
+                                children: uQ && (0, xQ.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    od(null)
+                                    HQ(null)
                                   },
-                                  children: [Kd, " ", (0, Ld.jsx)(ed, {
+                                  children: [uQ, " ", (0, xQ.jsx)(tQ, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, Ld.jsx)("div", {
+                              }), (0, xQ.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: xd.slice(0, ld).map((dd => {
-                                  const kd = "blocks" === Jd ? null === Nd || void 0 === Nd ? void 0 : Nd.getBlockFaces(dd.name) : null,
-                                    pd = Nd && !kd ? Nd.getItemTextureUrl(dd.name) : null;
-                                  return (0, Ld.jsxs)("div", {
-                                    id: jk(Jd, dd.name),
-                                    className: Wd()("DocsCatalogueTile", {
-                                      Linked: dd.name === Od
+                                children: cQ.slice(0, bQ).map((QQ => {
+                                  const wQ = "blocks" === FQ ? null === qQ || void 0 === qQ ? void 0 : qQ.getBlockFaces(QQ.name) : null,
+                                    LQ = qQ && !wQ ? qQ.getItemTextureUrl(QQ.name) : null;
+                                  return (0, xQ.jsxs)("div", {
+                                    id: Nw(FQ, QQ.name),
+                                    className: oQ()("DocsCatalogueTile", {
+                                      Linked: QQ.name === AQ
                                     }),
-                                    children: [(0, Ld.jsxs)("span", {
+                                    children: [(0, xQ.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [kd && (0, Ld.jsx)(Sp, {
-                                        faces: kd
-                                      }), pd && (0, Ld.jsx)(jp, {
-                                        src: pd
+                                      children: [wQ && (0, xQ.jsx)(UL, {
+                                        faces: wQ
+                                      }), LQ && (0, xQ.jsx)(NL, {
+                                        src: LQ
                                       })]
-                                    }), (0, Ld.jsx)("span", {
+                                    }), (0, xQ.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: dd.name
-                                    }), dd.variants.length > 0 && (0, Ld.jsx)("span", {
+                                      children: QQ.name
+                                    }), QQ.variants.length > 0 && (0, xQ.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: dd.variants.map((dd => (0, Ld.jsx)("span", {
-                                        children: dd
-                                      }, dd)))
-                                    }), (0, Ld.jsx)(Gd, {
-                                      text: dd.name,
+                                      children: QQ.variants.map((QQ => (0, xQ.jsx)("span", {
+                                        children: QQ
+                                      }, QQ)))
+                                    }), (0, xQ.jsx)(GQ, {
+                                      text: QQ.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, dd.name)
+                                  }, QQ.name)
                                 }))
-                              }), xd.length > ld && (0, Ld.jsxs)("button", {
+                              }), cQ.length > bQ && (0, xQ.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  Qd(xd.length)
+                                  YQ(cQ.length)
                                 },
-                                children: ["Show all ", xd.length]
-                              }), 0 === xd.length && (0, Ld.jsxs)("p", {
+                                children: ["Show all ", cQ.length]
+                              }), 0 === cQ.length && (0, xQ.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", Jd, " match."]
+                                children: ["No ", FQ, " match."]
                               })]
                             })
                           }
-                          var fp = kd(4718),
-                            np = kd(1627);
-                          const Up = .95 * fp.d;
+                          var KL = wQ(4659),
+                            zL = wQ(1582);
+                          const lL = .95 * KL.b;
 
-                          function yp(dd) {
-                            return /^\s*```/.test(dd)
+                          function jL(QQ) {
+                            return /^\s*```/.test(QQ)
                           }
 
-                          function Dp(dd, Jd) {
-                            const kd = [
+                          function aL(QQ, FQ) {
+                            const wQ = [
                               []
                             ];
-                            let pd = !1;
-                            for (const Nd of dd.split("\n")) !pd && Jd(Nd) && kd.at(-1).length > 0 && kd.push([]), yp(Nd) && (pd = !pd), kd.at(-1).push(Nd);
-                            return kd.map((dd => dd.join("\n").trim())).filter(Boolean)
+                            let LQ = !1;
+                            for (const qQ of QQ.split("\n")) !LQ && FQ(qQ) && wQ.at(-1).length > 0 && wQ.push([]), jL(qQ) && (LQ = !LQ), wQ.at(-1).push(qQ);
+                            return wQ.map((QQ => QQ.join("\n").trim())).filter(Boolean)
                           }
 
-                          function Tp(dd, Jd) {
-                            const kd = `${"#".repeat(Jd)} `,
-                              pd = [];
-                            let Nd = !1;
-                            for (const Wd of dd.split("\n")) yp(Wd) ? Nd = !Nd : !Nd && Wd.startsWith(kd) && pd.push(Wd.slice(kd.length).trim());
-                            return pd
+                          function XL(QQ, FQ) {
+                            const wQ = `${"#".repeat(FQ)} `,
+                              LQ = [];
+                            let qQ = !1;
+                            for (const oQ of QQ.split("\n")) jL(oQ) ? qQ = !qQ : !qQ && oQ.startsWith(wQ) && LQ.push(oQ.slice(wQ.length).trim());
+                            return LQ
                           }
 
-                          function Ep(dd) {
-                            return dd.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function fL(QQ) {
+                            return QQ.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class cp {
-                            constructor(dd, Jd) {
-                              this.origin = Jd, this.pages = void 0, this.partPaths = new Map;
-                              const kd = dd.map((dd => {
-                                const Jd = Jd => this.resolveLinks(dd, Jd).length,
-                                  kd = function(dd, Jd) {
-                                    const kd = dd.map((dd => Jd(dd.markdown) + 2)),
-                                      pd = kd.reduce(((dd, Jd) => dd + Jd), 0),
-                                      Nd = pd / Math.ceil(pd / Up),
-                                      Wd = [];
-                                    let Pd = 0;
-                                    return dd.forEach(((dd, Jd) => {
-                                      const pd = kd[Jd];
-                                      (0 === Wd.length || Pd + pd > Up || Pd + pd / 2 > Nd) && (Wd.push([]), Pd = 0), Wd.at(-1).push(dd), Pd += pd
-                                    })), Wd
-                                  }(function(dd, Jd) {
-                                    return Dp(dd, (dd => dd.startsWith("## "))).flatMap((dd => {
-                                      var kd;
-                                      const pd = null !== (kd = Tp(dd, 2)[0]) && void 0 !== kd ? kd : "";
-                                      if (Jd(dd) <= Up) return [{
-                                        markdown: dd,
-                                        section: pd
+                          class VL {
+                            constructor(QQ, FQ) {
+                              this.origin = FQ, this.pages = void 0, this.partPaths = new Map;
+                              const wQ = QQ.map((QQ => {
+                                const FQ = FQ => this.resolveLinks(QQ, FQ).length,
+                                  wQ = function(QQ, FQ) {
+                                    const wQ = QQ.map((QQ => FQ(QQ.markdown) + 2)),
+                                      LQ = wQ.reduce(((QQ, FQ) => QQ + FQ), 0),
+                                      qQ = LQ / Math.ceil(LQ / lL),
+                                      oQ = [];
+                                    let DQ = 0;
+                                    return QQ.forEach(((QQ, FQ) => {
+                                      const LQ = wQ[FQ];
+                                      (0 === oQ.length || DQ + LQ > lL || DQ + LQ / 2 > qQ) && (oQ.push([]), DQ = 0), oQ.at(-1).push(QQ), DQ += LQ
+                                    })), oQ
+                                  }(function(QQ, FQ) {
+                                    return aL(QQ, (QQ => QQ.startsWith("## "))).flatMap((QQ => {
+                                      var wQ;
+                                      const LQ = null !== (wQ = XL(QQ, 2)[0]) && void 0 !== wQ ? wQ : "";
+                                      if (FQ(QQ) <= lL) return [{
+                                        markdown: QQ,
+                                        section: LQ
                                       }];
-                                      let Nd = !1,
-                                        Wd = "";
-                                      return Dp(dd, (dd => {
-                                        const Jd = Nd && "" !== dd.trim();
-                                        return Nd = "" === dd.trim(), Jd
-                                      })).map((dd => {
-                                        var Jd;
-                                        const kd = Tp(dd, 3),
-                                          Nd = dd.startsWith("### ") ? kd[0] : Wd;
-                                        return Wd = null !== (Jd = kd.at(-1)) && void 0 !== Jd ? Jd : Wd, {
-                                          markdown: dd,
-                                          section: pd || Nd
+                                      let qQ = !1,
+                                        oQ = "";
+                                      return aL(QQ, (QQ => {
+                                        const FQ = qQ && "" !== QQ.trim();
+                                        return qQ = "" === QQ.trim(), FQ
+                                      })).map((QQ => {
+                                        var FQ;
+                                        const wQ = XL(QQ, 3),
+                                          qQ = QQ.startsWith("### ") ? wQ[0] : oQ;
+                                        return oQ = null !== (FQ = wQ.at(-1)) && void 0 !== FQ ? FQ : oQ, {
+                                          markdown: QQ,
+                                          section: LQ || qQ
                                         }
                                       }))
                                     }))
-                                  }(Ep(dd), Jd), Jd);
+                                  }(fL(QQ), FQ), FQ);
                                 return {
-                                  page: dd,
-                                  groups: kd.length > 1 ? kd : []
+                                  page: QQ,
+                                  groups: wQ.length > 1 ? wQ : []
                                 }
                               }));
                               for (const {
-                                  page: pd,
-                                  groups: Nd
+                                  page: LQ,
+                                  groups: qQ
                                 }
-                                of kd) Nd.forEach(((dd, Jd) => {
-                                const kd = (0, fp.s)(pd.slug, Jd);
-                                for (const Nd of dd.flatMap((dd => [...Tp(dd.markdown, 2), ...Tp(dd.markdown, 3)]))) {
-                                  const dd = `${pd.id}#${(0,sd.r)(Nd)}`;
-                                  this.partPaths.has(dd) || this.partPaths.set(dd, kd)
+                                of wQ) qQ.forEach(((QQ, FQ) => {
+                                const wQ = (0, KL.r)(LQ.slug, FQ);
+                                for (const qQ of QQ.flatMap((QQ => [...XL(QQ.markdown, 2), ...XL(QQ.markdown, 3)]))) {
+                                  const QQ = `${LQ.id}#${(0,iQ.u)(qQ)}`;
+                                  this.partPaths.has(QQ) || this.partPaths.set(QQ, wQ)
                                 }
                               }));
-                              this.pages = kd.map((dd => {
+                              this.pages = wQ.map((QQ => {
                                 let {
-                                  page: Jd,
-                                  groups: kd
-                                } = dd;
+                                  page: FQ,
+                                  groups: wQ
+                                } = QQ;
                                 return {
-                                  page: Jd,
-                                  path: (0, fp.p)(Jd.slug),
-                                  markdown: `# ${Jd.title}\n\n${this.resolveLinks(Jd,Ep(Jd))}\n`,
-                                  parts: kd.map(((dd, pd) => this.renderPart(Jd, dd, pd, kd.length)))
+                                  page: FQ,
+                                  path: (0, KL.q)(FQ.slug),
+                                  markdown: `# ${FQ.title}\n\n${this.resolveLinks(FQ,fL(FQ))}\n`,
+                                  parts: wQ.map(((QQ, LQ) => this.renderPart(FQ, QQ, LQ, wQ.length)))
                                 }
                               }))
                             }
-                            url(dd) {
-                              return `${this.origin}${dd}`
+                            url(QQ) {
+                              return `${this.origin}${QQ}`
                             }
-                            getPage(dd) {
-                              return this.pages.find((Jd => Jd.page.id === dd))
+                            getPage(QQ) {
+                              return this.pages.find((FQ => FQ.page.id === QQ))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((dd => (dd.parts.length > 0 ? dd.parts : [{
-                                path: dd.path,
+                              return this.pages.flatMap((QQ => (QQ.parts.length > 0 ? QQ.parts : [{
+                                path: QQ.path,
                                 label: "",
-                                markdown: dd.markdown
-                              }]).filter((dd => dd.markdown.length > fp.d))))
+                                markdown: QQ.markdown
+                              }]).filter((QQ => QQ.markdown.length > KL.b))))
                             }
-                            markdownUrl(dd, Jd) {
-                              const kd = Jd && this.partPaths.get(`${dd.id}#${Jd}`) || (0, fp.p)(dd.slug);
-                              return this.url(Jd ? `${kd}#${Jd}` : kd)
+                            markdownUrl(QQ, FQ) {
+                              const wQ = FQ && this.partPaths.get(`${QQ.id}#${FQ}`) || (0, KL.q)(QQ.slug);
+                              return this.url(FQ ? `${wQ}#${FQ}` : wQ)
                             }
-                            resolveLinks(dd, Jd) {
-                              return Jd.replace(/\]\((#[^)]+)\)/g, ((Jd, kd) => {
-                                var pd;
-                                const Nd = null !== (pd = cd(kd)) && void 0 !== pd ? pd : this.samePageTarget(dd, kd);
-                                return Nd ? `](${this.markdownUrl(Nd.page,Nd.anchor)})` : Jd
+                            resolveLinks(QQ, FQ) {
+                              return FQ.replace(/\]\((#[^)]+)\)/g, ((FQ, wQ) => {
+                                var LQ;
+                                const qQ = null !== (LQ = VQ(wQ)) && void 0 !== LQ ? LQ : this.samePageTarget(QQ, wQ);
+                                return qQ ? `](${this.markdownUrl(qQ.page,qQ.anchor)})` : FQ
                               }))
                             }
-                            samePageTarget(dd, Jd) {
-                              const kd = (0, sd.r)(Jd.slice(1));
-                              return Ed(dd, kd) ? {
-                                page: dd,
-                                anchor: kd
+                            samePageTarget(QQ, FQ) {
+                              const wQ = (0, iQ.u)(FQ.slice(1));
+                              return fQ(QQ, wQ) ? {
+                                page: QQ,
+                                anchor: wQ
                               } : null
                             }
-                            renderPart(dd, Jd, kd, pd) {
-                              const Nd = function(dd) {
-                                  const Jd = dd.map((dd => dd.section)).filter(Boolean);
-                                  if (0 === Jd.length) return "";
-                                  const kd = Jd[0],
-                                    pd = Jd.at(-1);
-                                  return kd === pd ? kd : `${kd} to ${pd}`
-                                }(Jd),
-                                Wd = Jd.map((dd => dd.markdown)).join("\n\n"),
-                                Pd = Nd ? `It covers ${Nd}. ` : "",
-                                Zd = `Part ${kd+1} of ${pd} of [${dd.title}](${this.url((0,fp.p)(dd.slug))}). ${Pd}[llms.txt](${this.url(fp.h)}) lists every part.`;
+                            renderPart(QQ, FQ, wQ, LQ) {
+                              const qQ = function(QQ) {
+                                  const FQ = QQ.map((QQ => QQ.section)).filter(Boolean);
+                                  if (0 === FQ.length) return "";
+                                  const wQ = FQ[0],
+                                    LQ = FQ.at(-1);
+                                  return wQ === LQ ? wQ : `${wQ} to ${LQ}`
+                                }(FQ),
+                                oQ = FQ.map((QQ => QQ.markdown)).join("\n\n"),
+                                DQ = qQ ? `It covers ${qQ}. ` : "",
+                                kQ = `Part ${wQ+1} of ${LQ} of [${QQ.title}](${this.url((0,KL.q)(QQ.slug))}). ${DQ}[llms.txt](${this.url(KL.i)}) lists every part.`;
                               return {
-                                path: (0, fp.s)(dd.slug, kd),
-                                label: Nd,
-                                markdown: `# ${dd.title}, part ${kd+1} of ${pd}\n\n${Zd}\n\n${this.resolveLinks(dd,Wd)}\n`
+                                path: (0, KL.r)(QQ.slug, wQ),
+                                label: qQ,
+                                markdown: `# ${QQ.title}, part ${wQ+1} of ${LQ}\n\n${kQ}\n\n${this.resolveLinks(QQ,oQ)}\n`
                               }
                             }
-                            llmsTxt(dd) {
-                              const Jd = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${hp(fp.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const kd of Ud) {
-                                Jd.push("", `## ${kd.title}`, "");
-                                for (const dd of kd.pageIds) {
-                                  const kd = this.getPage(dd),
+                            llmsTxt(QQ) {
+                              const FQ = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${hL(KL.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const wQ of lQ) {
+                                FQ.push("", `## ${wQ.title}`, "");
+                                for (const QQ of wQ.pageIds) {
+                                  const wQ = this.getPage(QQ),
                                     {
-                                      page: pd,
-                                      parts: Nd
-                                    } = kd,
-                                    Wd = `About ${hp(kd.markdown.length)} tokens${Nd.length>0?`, in ${Nd.length} parts:`:"."}`;
-                                  Jd.push(`- [${pd.title}](${this.url(kd.path)}): ${pd.summary} ${Wd}`), Nd.forEach(((dd, kd) => {
-                                    Jd.push(`  - [Part ${kd+1}${dd.label?`: ${dd.label}`:""}](${this.url(dd.path)})`)
+                                      page: LQ,
+                                      parts: qQ
+                                    } = wQ,
+                                    oQ = `About ${hL(wQ.markdown.length)} tokens${qQ.length>0?`, in ${qQ.length} parts:`:"."}`;
+                                  FQ.push(`- [${LQ.title}](${this.url(wQ.path)}): ${LQ.summary} ${oQ}`), qQ.forEach(((QQ, wQ) => {
+                                    FQ.push(`  - [Part ${wQ+1}${QQ.label?`: ${QQ.label}`:""}](${this.url(QQ.path)})`)
                                   }))
                                 }
                               }
-                              return Jd.push("", "## Optional", "", `- [Every page in one file](${this.url(fp.g)}): About ${hp(dd.length)} tokens, for a model with a large context window.`, ""), Jd.join("\n")
+                              return FQ.push("", "## Optional", "", `- [Every page in one file](${this.url(KL.f)}): About ${hL(QQ.length)} tokens, for a model with a large context window.`, ""), FQ.join("\n")
                             }
                             llmsFullTxt() {
-                              return Ud.flatMap((dd => dd.pageIds.map((dd => this.getPage(dd).markdown)))).join("\n---\n\n")
+                              return lQ.flatMap((QQ => QQ.pageIds.map((QQ => this.getPage(QQ).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const dd = this.llmsFullTxt(),
-                                Jd = this.llmsTxt(dd),
-                                kd = new Map([
-                                  [fp.m, Jd],
-                                  [fp.h, Jd],
-                                  [fp.g, dd]
+                              const QQ = this.llmsFullTxt(),
+                                FQ = this.llmsTxt(QQ),
+                                wQ = new Map([
+                                  [KL.m, FQ],
+                                  [KL.i, FQ],
+                                  [KL.f, QQ]
                                 ]);
-                              for (const pd of this.pages) {
-                                kd.set(pd.path, pd.markdown);
-                                for (const dd of pd.parts) kd.set(dd.path, dd.markdown)
+                              for (const LQ of this.pages) {
+                                wQ.set(LQ.path, LQ.markdown);
+                                for (const QQ of LQ.parts) wQ.set(QQ.path, QQ.markdown)
                               }
-                              return kd
+                              return wQ
                             }
                           }
 
-                          function hp(dd) {
-                            return `${Math.max(1,Math.round(dd/4e3))}K`
+                          function hL(QQ) {
+                            return `${Math.max(1,Math.round(QQ/4e3))}K`
                           }
-                          let rp = null;
+                          let JL = null;
 
-                          function tp() {
-                            return rp ??= new cp(nd, np.b), rp
+                          function EL() {
+                            return JL ??= new VL(zQ, zL.c), JL
                           }
-                          const Vp = [{
+                          const nL = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function zp(dd) {
-                            return tp().getPage(dd.id).parts.length > 0 ? `Read ${fp.i}, then the parts of the Bloxd Code API's ${dd.title} page it lists, so I can ask questions about it.` : `Read ${np.b}${(0,fp.p)(dd.slug)} so I can ask questions about it. ${fp.i} lists every page of the Bloxd Code API docs.`
+                          function gL(QQ) {
+                            return EL().getPage(QQ.id).parts.length > 0 ? `Read ${KL.j}, then the parts of the Bloxd Code API's ${QQ.title} page it lists, so I can ask questions about it.` : `Read ${zL.c}${(0,KL.q)(QQ.slug)} so I can ask questions about it. ${KL.j} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function Hp(dd) {
+                          function PL(QQ) {
                             let {
-                              page: Jd
-                            } = dd;
-                            const [kd, pd] = Id();
-                            return (0, Ld.jsxs)("div", {
+                              page: FQ
+                            } = QQ;
+                            const [wQ, LQ] = MQ();
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, Ld.jsxs)("button", {
+                              children: [(0, xQ.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  pd(tp().getPage(Jd.id).markdown)
+                                  LQ(EL().getPage(FQ.id).markdown)
                                 },
-                                children: [(0, Ld.jsx)(ed, {
-                                  name: !1 === (null === kd || void 0 === kd ? void 0 : kd.failed) ? "check" : "copy"
-                                }), (0, Ld.jsx)("span", {
-                                  children: kd ? kd.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, xQ.jsx)(tQ, {
+                                  name: !1 === (null === wQ || void 0 === wQ ? void 0 : wQ.failed) ? "check" : "copy"
+                                }), (0, xQ.jsx)("span", {
+                                  children: wQ ? wQ.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), Vp.map((dd => (0, Ld.jsxs)("a", {
+                              }), nL.map((QQ => (0, xQ.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${dd.url}${encodeURIComponent(zp(Jd))}`,
+                                href: `${QQ.url}${encodeURIComponent(gL(FQ))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, Ld.jsx)(ed, {
+                                children: [(0, xQ.jsx)(tQ, {
                                   name: "external-link"
-                                }), (0, Ld.jsxs)("span", {
-                                  children: ["Open in ", dd.name]
+                                }), (0, xQ.jsxs)("span", {
+                                  children: ["Open in ", QQ.name]
                                 })]
-                              }, dd.name)))]
+                              }, QQ.name)))]
                             })
                           }
 
-                          function wp(dd) {
-                            return `#${[0,1,2].map((Jd=>Math.round(Math.min(255,Math.max(0,dd[Jd]))).toString(16).padStart(2,"0"))).join("")}`
+                          function ZL(QQ) {
+                            return `#${[0,1,2].map((FQ=>Math.round(Math.min(255,Math.max(0,QQ[FQ]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function Ap(dd) {
-                            return [parseInt(dd.slice(1, 3), 16), parseInt(dd.slice(3, 5), 16), parseInt(dd.slice(5, 7), 16)]
+                          function yL(QQ) {
+                            return [parseInt(QQ.slice(1, 3), 16), parseInt(QQ.slice(3, 5), 16), parseInt(QQ.slice(5, 7), 16)]
                           }
 
-                          function dN(dd) {
+                          function BL(QQ) {
                             let {
-                              label: Jd,
-                              min: kd,
-                              max: pd,
-                              step: Nd,
-                              low: Wd,
-                              high: Pd,
-                              onChange: Zd
-                            } = dd;
-                            return (0, Ld.jsxs)("div", {
+                              label: FQ,
+                              min: wQ,
+                              max: LQ,
+                              step: qQ,
+                              low: oQ,
+                              high: DQ,
+                              onChange: kQ
+                            } = QQ;
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ld.jsxs)("div", {
+                              children: [(0, xQ.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ld.jsx)("span", {
-                                  children: Jd
-                                }), (0, Ld.jsx)("span", {
+                                children: [(0, xQ.jsx)("span", {
+                                  children: FQ
+                                }), (0, xQ.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Wd === Pd ? Wd : `${Wd}\u2013${Pd}`
+                                  children: oQ === DQ ? oQ : `${oQ}\u2013${DQ}`
                                 })]
-                              }), (0, Ld.jsxs)("div", {
+                              }), (0, xQ.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, Ld.jsx)("input", {
+                                children: [(0, xQ.jsx)("input", {
                                   type: "range",
-                                  min: kd,
-                                  max: pd,
-                                  step: Nd,
-                                  value: Math.min(pd, Wd),
-                                  "aria-label": `Minimum ${Jd.toLowerCase()}`,
-                                  onChange: dd => {
-                                    const Jd = Number(dd.target.value);
-                                    Zd(Jd, Math.max(Jd, Pd))
+                                  min: wQ,
+                                  max: LQ,
+                                  step: qQ,
+                                  value: Math.min(LQ, oQ),
+                                  "aria-label": `Minimum ${FQ.toLowerCase()}`,
+                                  onChange: QQ => {
+                                    const FQ = Number(QQ.target.value);
+                                    kQ(FQ, Math.max(FQ, DQ))
                                   }
-                                }), (0, Ld.jsx)("input", {
+                                }), (0, xQ.jsx)("input", {
                                   type: "range",
-                                  min: kd,
-                                  max: pd,
-                                  step: Nd,
-                                  value: Math.min(pd, Pd),
-                                  "aria-label": `Maximum ${Jd.toLowerCase()}`,
-                                  onChange: dd => {
-                                    const Jd = Number(dd.target.value);
-                                    Zd(Math.min(Jd, Wd), Jd)
+                                  min: wQ,
+                                  max: LQ,
+                                  step: qQ,
+                                  value: Math.min(LQ, DQ),
+                                  "aria-label": `Maximum ${FQ.toLowerCase()}`,
+                                  onChange: QQ => {
+                                    const FQ = Number(QQ.target.value);
+                                    kQ(Math.min(FQ, oQ), FQ)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function JN(dd) {
+                          function dL(QQ) {
                             let {
-                              label: Jd,
-                              min: kd,
-                              max: pd,
-                              step: Nd,
-                              value: Wd,
-                              onChange: Pd,
-                              format: Zd = String
-                            } = dd;
-                            return (0, Ld.jsxs)("div", {
+                              label: FQ,
+                              min: wQ,
+                              max: LQ,
+                              step: qQ,
+                              value: oQ,
+                              onChange: DQ,
+                              format: kQ = String
+                            } = QQ;
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ld.jsxs)("div", {
+                              children: [(0, xQ.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ld.jsx)("span", {
-                                  children: Jd
-                                }), (0, Ld.jsx)("span", {
+                                children: [(0, xQ.jsx)("span", {
+                                  children: FQ
+                                }), (0, xQ.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Zd(Wd)
+                                  children: kQ(oQ)
                                 })]
-                              }), (0, Ld.jsx)("input", {
+                              }), (0, xQ.jsx)("input", {
                                 type: "range",
-                                min: kd,
-                                max: pd,
-                                step: Nd,
-                                value: Math.min(pd, Math.max(kd, Wd)),
-                                "aria-label": Jd,
-                                onChange: dd => {
-                                  Pd(Number(dd.target.value))
+                                min: wQ,
+                                max: LQ,
+                                step: qQ,
+                                value: Math.min(LQ, Math.max(wQ, oQ)),
+                                "aria-label": FQ,
+                                onChange: QQ => {
+                                  DQ(Number(QQ.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function kN(dd) {
+                          function Qq(QQ) {
                             let {
-                              opts: Jd,
-                              onChange: kd
-                            } = dd;
-                            const pd = Jd.colorGradients;
-                            if (!rk(pd)) return (0, Ld.jsxs)("div", {
+                              opts: FQ,
+                              onChange: wQ
+                            } = QQ;
+                            const LQ = FQ.colorGradients;
+                            if (!Jw(LQ)) return (0, xQ.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ld.jsx)("div", {
+                              children: [(0, xQ.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, Ld.jsx)("span", {
+                                children: (0, xQ.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, Ld.jsx)("div", {
+                              }), (0, xQ.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: pd.map(((dd, Jd) => (0, Ld.jsx)("input", {
+                                children: LQ.map(((QQ, FQ) => (0, xQ.jsx)("input", {
                                   type: "color",
-                                  value: wp(dd.color),
-                                  "aria-label": `Colour ${Jd+1}`,
-                                  onChange: dd => {
-                                    const Nd = [...pd];
-                                    Nd[Jd] = {
-                                      color: Ap(dd.target.value)
-                                    }, kd(Nd)
+                                  value: ZL(QQ.color),
+                                  "aria-label": `Colour ${FQ+1}`,
+                                  onChange: QQ => {
+                                    const qQ = [...LQ];
+                                    qQ[FQ] = {
+                                      color: yL(QQ.target.value)
+                                    }, wQ(qQ)
                                   }
-                                }, Jd)))
+                                }, FQ)))
                               })]
                             });
-                            const Nd = (dd, Jd) => {
-                              const Nd = [...pd];
-                              Nd[dd] = Jd, kd(Nd)
+                            const qQ = (QQ, FQ) => {
+                              const qQ = [...LQ];
+                              qQ[QQ] = FQ, wQ(qQ)
                             };
-                            return (0, Ld.jsxs)("div", {
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ld.jsxs)("div", {
+                              children: [(0, xQ.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ld.jsx)("span", {
+                                children: [(0, xQ.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, Ld.jsx)("span", {
+                                }), (0, xQ.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), pd.map(((dd, Jd) => {
-                                var kd;
-                                const pd = null !== (kd = dd.maxColor) && void 0 !== kd ? kd : dd.minColor;
-                                return (0, Ld.jsxs)("div", {
+                              }), LQ.map(((QQ, FQ) => {
+                                var wQ;
+                                const LQ = null !== (wQ = QQ.maxColor) && void 0 !== wQ ? wQ : QQ.minColor;
+                                return (0, xQ.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, Ld.jsxs)("span", {
+                                  children: [(0, xQ.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * dd.timeFraction), "%"]
-                                  }), (0, Ld.jsx)("span", {
+                                    children: [Math.round(100 * QQ.timeFraction), "%"]
+                                  }), (0, xQ.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${wp(dd.minColor)}, ${wp(pd)})`
+                                      background: `linear-gradient(90deg, ${ZL(QQ.minColor)}, ${ZL(LQ)})`
                                     }
-                                  }), (0, Ld.jsx)("input", {
+                                  }), (0, xQ.jsx)("input", {
                                     type: "color",
-                                    value: wp(dd.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*dd.timeFraction)}%`,
-                                    onChange: kd => {
-                                      Nd(Jd, {
-                                        ...dd,
-                                        minColor: [...Ap(kd.target.value), dd.minColor[3]]
+                                    value: ZL(QQ.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*QQ.timeFraction)}%`,
+                                    onChange: wQ => {
+                                      qQ(FQ, {
+                                        ...QQ,
+                                        minColor: [...yL(wQ.target.value), QQ.minColor[3]]
                                       })
                                     }
-                                  }), (0, Ld.jsx)("input", {
+                                  }), (0, xQ.jsx)("input", {
                                     type: "color",
-                                    value: wp(pd),
-                                    "aria-label": `Maximum colour at ${Math.round(100*dd.timeFraction)}%`,
-                                    onChange: kd => {
-                                      Nd(Jd, {
-                                        ...dd,
-                                        maxColor: [...Ap(kd.target.value), pd[3]]
+                                    value: ZL(LQ),
+                                    "aria-label": `Maximum colour at ${Math.round(100*QQ.timeFraction)}%`,
+                                    onChange: wQ => {
+                                      qQ(FQ, {
+                                        ...QQ,
+                                        maxColor: [...yL(wQ.target.value), LQ[3]]
                                       })
                                     }
                                   })]
-                                }, Jd)
+                                }, FQ)
                               }))]
                             })
                           }
-                          const pN = [-.5, -.5, -.5],
-                            NN = [.5, .5, .5],
-                            WN = [0, 1, 2, 3, 4, 5, 6, 7].map((dd => [1 & dd ? NN[0] : pN[0], 2 & dd ? NN[1] : pN[1], 4 & dd ? NN[2] : pN[2]]));class PN {
+                          const Fq = [-.5, -.5, -.5],
+                            wq = [.5, .5, .5],
+                            Lq = [0, 1, 2, 3, 4, 5, 6, 7].map((QQ => [1 & QQ ? wq[0] : Fq[0], 2 & QQ ? wq[1] : Fq[1], 4 & QQ ? wq[2] : Fq[2]]));class qq {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(dd, Jd, kd, pd) {
-                              const Nd = Math.round(31 * Jd),
-                                Wd = Math.round(31 * kd),
-                                Pd = Math.round(31 * pd),
-                                Zd = `${Nd}|${Wd}|${Pd}`;
-                              let gd = this.tints.get(dd);
-                              (!gd || gd.size > 2e3) && (gd = new Map, this.tints.set(dd, gd));
-                              let Cd = gd.get(Zd);
-                              if (Cd) return Cd;
-                              Cd = document.createElement("canvas"), Cd.width = dd.naturalWidth || 16, Cd.height = dd.naturalHeight || 16;
-                              const Kd = Cd.getContext("2d");
-                              return Kd ? (Kd.imageSmoothingEnabled = !1, Kd.drawImage(dd, 0, 0, Cd.width, Cd.height), Kd.globalCompositeOperation = "multiply", Kd.fillStyle = `rgb(${Nd/31*255}, ${Wd/31*255}, ${Pd/31*255})`, Kd.fillRect(0, 0, Cd.width, Cd.height), Kd.globalCompositeOperation = "destination-in", Kd.drawImage(dd, 0, 0, Cd.width, Cd.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), gd.set(Zd, Cd), Cd
+                            get(QQ, FQ, wQ, LQ) {
+                              const qQ = Math.round(31 * FQ),
+                                oQ = Math.round(31 * wQ),
+                                DQ = Math.round(31 * LQ),
+                                kQ = `${qQ}|${oQ}|${DQ}`;
+                              let vQ = this.tints.get(QQ);
+                              (!vQ || vQ.size > 2e3) && (vQ = new Map, this.tints.set(QQ, vQ));
+                              let mQ = vQ.get(kQ);
+                              if (mQ) return mQ;
+                              mQ = document.createElement("canvas"), mQ.width = QQ.naturalWidth || 16, mQ.height = QQ.naturalHeight || 16;
+                              const uQ = mQ.getContext("2d");
+                              return uQ ? (uQ.imageSmoothingEnabled = !1, uQ.drawImage(QQ, 0, 0, mQ.width, mQ.height), uQ.globalCompositeOperation = "multiply", uQ.fillStyle = `rgb(${qQ/31*255}, ${oQ/31*255}, ${DQ/31*255})`, uQ.fillRect(0, 0, mQ.width, mQ.height), uQ.globalCompositeOperation = "destination-in", uQ.drawImage(QQ, 0, 0, mQ.width, mQ.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), vQ.set(kQ, mQ), mQ
                             }
                           }
 
-                          function ZN(dd) {
+                          function oq(QQ) {
                             let {
-                              opts: Jd,
-                              textureUrl: kd,
-                              burst: Nd,
-                              paused: Wd
-                            } = dd;
-                            const Pd = (0, pd.useRef)(null),
-                              Zd = (0, pd.useRef)(Jd);
-                            Zd.current = Jd;
-                            const gd = (0, pd.useRef)(Wd);
-                            gd.current = Wd;
-                            const Cd = (0, pd.useRef)(null),
-                              Kd = (0, pd.useRef)(null),
-                              od = (0, pd.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(dd) {
-                                let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const kd = [-.5, -.5, -.5],
-                                  pd = [.5, .5, .5];
-                                let Nd = .5;
-                                for (let Wd = 0; Wd < 40; Wd++) {
-                                  const Wd = tk(dd, kd, pd, Jd),
-                                    Pd = Math.max(Wd.life / 30, .001);
-                                  for (; Hk(Wd, dd.gravity, Pd);) Nd = Math.max(Nd, Math.hypot(Wd.pos[0], Wd.pos[1], Wd.pos[2]) + Wd.size / 2)
+                              opts: FQ,
+                              textureUrl: wQ,
+                              burst: qQ,
+                              paused: oQ
+                            } = QQ;
+                            const DQ = (0, LQ.useRef)(null),
+                              kQ = (0, LQ.useRef)(FQ);
+                            kQ.current = FQ;
+                            const vQ = (0, LQ.useRef)(oQ);
+                            vQ.current = oQ;
+                            const mQ = (0, LQ.useRef)(null),
+                              uQ = (0, LQ.useRef)(null),
+                              HQ = (0, LQ.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(QQ) {
+                                let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const wQ = [-.5, -.5, -.5],
+                                  LQ = [.5, .5, .5];
+                                let qQ = .5;
+                                for (let oQ = 0; oQ < 40; oQ++) {
+                                  const oQ = nw(QQ, wQ, LQ, FQ),
+                                    DQ = Math.max(oQ.life / 30, .001);
+                                  for (; Zw(oQ, QQ.gravity, DQ);) qQ = Math.max(qQ, Math.hypot(oQ.pos[0], oQ.pos[1], oQ.pos[2]) + oQ.size / 2)
                                 }
-                                return Nd
-                              }(Jd)))), [Jd]),
-                              ld = (0, pd.useRef)(od);
-                            return ld.current = od, (0, pd.useEffect)((() => {
-                              if (Cd.current = null, !kd) return;
-                              const dd = new Image;
-                              let Jd = !1;
-                              return dd.onload = () => {
-                                Jd || (Cd.current = dd)
-                              }, dd.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${kd}`)
-                              }, dd.src = kd, () => {
-                                Jd = !0
+                                return qQ
+                              }(FQ)))), [FQ]),
+                              bQ = (0, LQ.useRef)(HQ);
+                            return bQ.current = HQ, (0, LQ.useEffect)((() => {
+                              if (mQ.current = null, !wQ) return;
+                              const QQ = new Image;
+                              let FQ = !1;
+                              return QQ.onload = () => {
+                                FQ || (mQ.current = QQ)
+                              }, QQ.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${wQ}`)
+                              }, QQ.src = wQ, () => {
+                                FQ = !0
                               }
-                            }), [kd]), (0, pd.useEffect)((() => {
-                              var dd;
-                              null === (dd = Kd.current) || void 0 === dd || dd.call(Kd)
-                            }), [Jd, Nd]), (0, pd.useEffect)((() => {
-                              const dd = Pd.current,
-                                Jd = null === dd || void 0 === dd ? void 0 : dd.getContext("2d");
-                              if (!dd || !Jd) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const kd = new PN;
-                              let pd = [],
-                                Nd = 0,
-                                Wd = -.7,
-                                od = ld.current,
-                                Qd = performance.now(),
-                                Ld = 0,
-                                Od = !0,
-                                ed = null;
-                              const Rd = () => {
-                                const dd = Zd.current,
-                                  Jd = Math.min(400, Math.max(0, Math.ceil(dd.manualEmitCount)));
-                                pd = [];
-                                for (let kd = 0; kd < Jd; kd++) pd.push(tk(dd, pN, NN, Math.random));
-                                Nd = 0
+                            }), [wQ]), (0, LQ.useEffect)((() => {
+                              var QQ;
+                              null === (QQ = uQ.current) || void 0 === QQ || QQ.call(uQ)
+                            }), [FQ, qQ]), (0, LQ.useEffect)((() => {
+                              const QQ = DQ.current,
+                                FQ = null === QQ || void 0 === QQ ? void 0 : QQ.getContext("2d");
+                              if (!QQ || !FQ) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const wQ = new qq;
+                              let LQ = [],
+                                qQ = 0,
+                                oQ = -.7,
+                                HQ = bQ.current,
+                                YQ = performance.now(),
+                                xQ = 0,
+                                AQ = !0,
+                                tQ = null;
+                              const eQ = () => {
+                                const QQ = kQ.current,
+                                  FQ = Math.min(400, Math.max(0, Math.ceil(QQ.manualEmitCount)));
+                                LQ = [];
+                                for (let wQ = 0; wQ < FQ; wQ++) LQ.push(nw(QQ, Fq, wq, Math.random));
+                                qQ = 0
                               };
-                              Kd.current = Rd, Rd();
-                              const Id = Pd => {
-                                Ld = requestAnimationFrame(Id);
-                                const Kd = Math.min(.05, (Pd - Qd) / 1e3);
-                                if (Qd = Pd, !Od) return;
-                                const Gd = window.devicePixelRatio || 1,
-                                  vd = Math.round(dd.clientWidth * Gd),
-                                  xd = Math.round(dd.clientHeight * Gd);
-                                if (0 === vd || 0 === xd) return;
-                                dd.width === vd && dd.height === xd || (dd.width = vd, dd.height = xd);
-                                const qd = Zd.current;
-                                null === ed && (Wd += .18 * Kd), od += (ld.current - od) * Math.min(1, 4 * Kd);
-                                const Bd = .6 * Kd;
-                                pd = pd.filter((dd => Hk(dd, qd.gravity, Bd))), 0 !== pd.length || gd.current || (Nd += Kd, Nd > .6 && Rd());
-                                const sd = function(dd, Jd, kd, pd) {
-                                  const Nd = 3.2 * pd,
-                                    Wd = .44 * Math.min(dd, Jd) * Nd / pd,
-                                    Pd = Math.cos(kd),
-                                    Zd = Math.sin(kd),
-                                    gd = Math.cos(.42),
-                                    Cd = Math.sin(.42);
-                                  return (kd, pd, Kd) => {
-                                    const od = kd * Zd + Kd * Pd,
-                                      ld = Nd - (pd * Cd + od * gd);
-                                    if (ld < .05) return null;
-                                    const Qd = Wd / ld;
+                              uQ.current = eQ, eQ();
+                              const MQ = DQ => {
+                                xQ = requestAnimationFrame(MQ);
+                                const uQ = Math.min(.05, (DQ - YQ) / 1e3);
+                                if (YQ = DQ, !AQ) return;
+                                const GQ = window.devicePixelRatio || 1,
+                                  pQ = Math.round(QQ.clientWidth * GQ),
+                                  cQ = Math.round(QQ.clientHeight * GQ);
+                                if (0 === pQ || 0 === cQ) return;
+                                QQ.width === pQ && QQ.height === cQ || (QQ.width = pQ, QQ.height = cQ);
+                                const CQ = kQ.current;
+                                null === tQ && (oQ += .18 * uQ), HQ += (bQ.current - HQ) * Math.min(1, 4 * uQ);
+                                const SQ = .6 * uQ;
+                                LQ = LQ.filter((QQ => Zw(QQ, CQ.gravity, SQ))), 0 !== LQ.length || vQ.current || (qQ += uQ, qQ > .6 && eQ());
+                                const iQ = function(QQ, FQ, wQ, LQ) {
+                                  const qQ = 3.2 * LQ,
+                                    oQ = .44 * Math.min(QQ, FQ) * qQ / LQ,
+                                    DQ = Math.cos(wQ),
+                                    kQ = Math.sin(wQ),
+                                    vQ = Math.cos(.42),
+                                    mQ = Math.sin(.42);
+                                  return (wQ, LQ, uQ) => {
+                                    const HQ = wQ * kQ + uQ * DQ,
+                                      bQ = qQ - (LQ * mQ + HQ * vQ);
+                                    if (bQ < .05) return null;
+                                    const YQ = oQ / bQ;
                                     return {
-                                      x: dd / 2 + (kd * Pd - Kd * Zd) * Qd,
-                                      y: Jd / 2 - (pd * gd - od * Cd) * Qd,
-                                      scale: Qd,
-                                      depth: ld
+                                      x: QQ / 2 + (wQ * DQ - uQ * kQ) * YQ,
+                                      y: FQ / 2 - (LQ * vQ - HQ * mQ) * YQ,
+                                      scale: YQ,
+                                      depth: bQ
                                     }
                                   }
-                                }(vd, xd, Wd, od);
-                                ! function(dd, Jd, kd, pd, Nd) {
-                                  const Wd = dd.createLinearGradient(0, 0, 0, kd);
-                                  Wd.addColorStop(0, "#23262d"), Wd.addColorStop(1, "#16181c"), dd.globalCompositeOperation = "source-over", dd.globalAlpha = 1, dd.fillStyle = Wd, dd.fillRect(0, 0, Jd, kd);
-                                  const Pd = (Jd, kd) => {
-                                      const Nd = pd(Jd[0], Jd[1], Jd[2]),
-                                        Wd = pd(kd[0], kd[1], kd[2]);
-                                      Nd && Wd && (dd.beginPath(), dd.moveTo(Nd.x, Nd.y), dd.lineTo(Wd.x, Wd.y), dd.stroke())
+                                }(pQ, cQ, oQ, HQ);
+                                ! function(QQ, FQ, wQ, LQ, qQ) {
+                                  const oQ = QQ.createLinearGradient(0, 0, 0, wQ);
+                                  oQ.addColorStop(0, "#23262d"), oQ.addColorStop(1, "#16181c"), QQ.globalCompositeOperation = "source-over", QQ.globalAlpha = 1, QQ.fillStyle = oQ, QQ.fillRect(0, 0, FQ, wQ);
+                                  const DQ = (FQ, wQ) => {
+                                      const qQ = LQ(FQ[0], FQ[1], FQ[2]),
+                                        oQ = LQ(wQ[0], wQ[1], wQ[2]);
+                                      qQ && oQ && (QQ.beginPath(), QQ.moveTo(qQ.x, qQ.y), QQ.lineTo(oQ.x, oQ.y), QQ.stroke())
                                     },
-                                    Zd = Math.ceil(Nd) + 1,
-                                    gd = pN[1];
-                                  dd.lineWidth = 1, dd.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let Cd = -Zd; Cd <= Zd; Cd++) Pd([Cd + .5, gd, .5 - Zd], [Cd + .5, gd, Zd + .5]), Pd([.5 - Zd, gd, Cd + .5], [Zd + .5, gd, Cd + .5]);
-                                  dd.strokeStyle = "rgba(255, 255, 255, 0.28)", dd.setLineDash([4, 4]);
-                                  for (const Cd of WN)
-                                    for (const dd of WN) {
-                                      const Jd = [0, 1, 2].filter((Jd => Cd[Jd] !== dd[Jd]));
-                                      1 === Jd.length && Cd[Jd[0]] < dd[Jd[0]] && Pd(Cd, dd)
+                                    kQ = Math.ceil(qQ) + 1,
+                                    vQ = Fq[1];
+                                  QQ.lineWidth = 1, QQ.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let mQ = -kQ; mQ <= kQ; mQ++) DQ([mQ + .5, vQ, .5 - kQ], [mQ + .5, vQ, kQ + .5]), DQ([.5 - kQ, vQ, mQ + .5], [kQ + .5, vQ, mQ + .5]);
+                                  QQ.strokeStyle = "rgba(255, 255, 255, 0.28)", QQ.setLineDash([4, 4]);
+                                  for (const mQ of Lq)
+                                    for (const QQ of Lq) {
+                                      const FQ = [0, 1, 2].filter((FQ => mQ[FQ] !== QQ[FQ]));
+                                      1 === FQ.length && mQ[FQ[0]] < QQ[FQ[0]] && DQ(mQ, QQ)
                                     }
-                                  dd.setLineDash([])
-                                }(Jd, vd, xd, sd, od);
-                                const ad = Cd.current,
-                                  Md = pd.map((dd => ({
-                                    particle: dd,
-                                    at: sd(dd.pos[0], dd.pos[1], dd.pos[2])
-                                  }))).filter((dd => null !== dd.at)).sort(((dd, Jd) => Jd.at.depth - dd.at.depth));
-                                Jd.imageSmoothingEnabled = !1;
-                                for (const dd of function(dd) {
-                                    switch (dd) {
-                                      case Dk.d.OneOne:
+                                  QQ.setLineDash([])
+                                }(FQ, pQ, cQ, iQ, HQ);
+                                const WQ = mQ.current,
+                                  RQ = LQ.map((QQ => ({
+                                    particle: QQ,
+                                    at: iQ(QQ.pos[0], QQ.pos[1], QQ.pos[2])
+                                  }))).filter((QQ => null !== QQ.at)).sort(((QQ, FQ) => FQ.at.depth - QQ.at.depth));
+                                FQ.imageSmoothingEnabled = !1;
+                                for (const QQ of function(QQ) {
+                                    switch (QQ) {
+                                      case aw.f.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Dk.d.Add:
+                                      case aw.f.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Dk.d.Multiply:
+                                      case aw.f.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Dk.d.MultiplyAdd:
+                                      case aw.f.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(qd.blendMode)) {
-                                  Jd.globalCompositeOperation = dd.operation;
+                                  }(CQ.blendMode)) {
+                                  FQ.globalCompositeOperation = QQ.operation;
                                   for (const {
-                                      particle: pd,
-                                      at: Nd
+                                      particle: LQ,
+                                      at: qQ
                                     }
-                                    of Md) {
-                                    const [Wd, Pd, Zd, gd] = zk(pd), Cd = Math.max(1, pd.size * Nd.scale);
-                                    Jd.globalAlpha = dd.usesAlpha ? Math.min(1, Math.max(0, gd)) : 1, ad ? Jd.drawImage(kd.get(ad, Wd, Pd, Zd), Nd.x - Cd / 2, Nd.y - Cd / 2, Cd, Cd) : (Jd.fillStyle = `rgb(${255*Wd}, ${255*Pd}, ${255*Zd})`, Jd.fillRect(Nd.x - Cd / 2, Nd.y - Cd / 2, Cd, Cd))
+                                    of RQ) {
+                                    const [oQ, DQ, kQ, vQ] = Pw(LQ), mQ = Math.max(1, LQ.size * qQ.scale);
+                                    FQ.globalAlpha = QQ.usesAlpha ? Math.min(1, Math.max(0, vQ)) : 1, WQ ? FQ.drawImage(wQ.get(WQ, oQ, DQ, kQ), qQ.x - mQ / 2, qQ.y - mQ / 2, mQ, mQ) : (FQ.fillStyle = `rgb(${255*oQ}, ${255*DQ}, ${255*kQ})`, FQ.fillRect(qQ.x - mQ / 2, qQ.y - mQ / 2, mQ, mQ))
                                   }
                                 }
-                                Jd.globalCompositeOperation = "source-over", Jd.globalAlpha = 1
+                                FQ.globalCompositeOperation = "source-over", FQ.globalAlpha = 1
                               };
-                              Ld = requestAnimationFrame(Id);
-                              const Gd = new IntersectionObserver((dd => {
-                                let [Jd] = dd;
-                                Od = Jd.isIntersecting
+                              xQ = requestAnimationFrame(MQ);
+                              const GQ = new IntersectionObserver((QQ => {
+                                let [FQ] = QQ;
+                                AQ = FQ.isIntersecting
                               }));
-                              Gd.observe(dd);
-                              const vd = Jd => {
-                                  ed = Jd.clientX, dd.setPointerCapture(Jd.pointerId)
+                              GQ.observe(QQ);
+                              const pQ = FQ => {
+                                  tQ = FQ.clientX, QQ.setPointerCapture(FQ.pointerId)
                                 },
-                                xd = dd => {
-                                  null !== ed && (Wd += .01 * (dd.clientX - ed), ed = dd.clientX)
+                                cQ = QQ => {
+                                  null !== tQ && (oQ += .01 * (QQ.clientX - tQ), tQ = QQ.clientX)
                                 },
-                                qd = () => {
-                                  ed = null
+                                CQ = () => {
+                                  tQ = null
                                 };
-                              return dd.addEventListener("pointerdown", vd), dd.addEventListener("pointermove", xd), dd.addEventListener("pointerup", qd), dd.addEventListener("pointercancel", qd), () => {
-                                cancelAnimationFrame(Ld), Gd.disconnect(), Kd.current = null, dd.removeEventListener("pointerdown", vd), dd.removeEventListener("pointermove", xd), dd.removeEventListener("pointerup", qd), dd.removeEventListener("pointercancel", qd)
+                              return QQ.addEventListener("pointerdown", pQ), QQ.addEventListener("pointermove", cQ), QQ.addEventListener("pointerup", CQ), QQ.addEventListener("pointercancel", CQ), () => {
+                                cancelAnimationFrame(xQ), GQ.disconnect(), uQ.current = null, QQ.removeEventListener("pointerdown", pQ), QQ.removeEventListener("pointermove", cQ), QQ.removeEventListener("pointerup", CQ), QQ.removeEventListener("pointercancel", CQ)
                               }
-                            }), []), (0, Ld.jsx)("canvas", {
-                              ref: Pd,
+                            }), []), (0, xQ.jsx)("canvas", {
+                              ref: DQ,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${Jd.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${FQ.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const gN = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            CN = [{
-                              mode: Dk.d.OneOne,
+                          const Dq = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            kq = [{
+                              mode: aw.f.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Dk.d.Standard,
+                              mode: aw.f.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Dk.d.Add,
+                              mode: aw.f.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Dk.d.Multiply,
+                              mode: aw.f.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Dk.d.MultiplyAdd,
+                              mode: aw.f.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            KN = (0, pd.forwardRef)((function(dd, Jd) {
-                              var kd, Nd;
+                            vq = (0, LQ.forwardRef)((function(QQ, FQ) {
+                              var wQ, qQ;
                               let {
-                                textures: Pd
-                              } = dd;
-                              const Zd = xp(),
-                                gd = (0, pd.useRef)(null),
-                                [Cd, Kd] = (0, pd.useState)(Ek),
-                                [od, ld] = (0, pd.useState)("example"),
-                                [Qd, Od] = (0, pd.useState)(0),
-                                [Rd, Id] = (0, pd.useState)(!1),
-                                vd = dd => {
-                                  const Jd = "example" === dd ? Ek : Tk(dd);
-                                  Jd && (Kd(Jd), ld(dd))
+                                textures: DQ
+                              } = QQ;
+                              const kQ = pL(),
+                                vQ = (0, LQ.useRef)(null),
+                                [mQ, uQ] = (0, LQ.useState)(fw),
+                                [HQ, bQ] = (0, LQ.useState)("example"),
+                                [YQ, AQ] = (0, LQ.useState)(0),
+                                [eQ, MQ] = (0, LQ.useState)(!1),
+                                pQ = QQ => {
+                                  const FQ = "example" === QQ ? fw : Xw(QQ);
+                                  FQ && (uQ(FQ), bQ(QQ))
                                 };
-                              (0, pd.useImperativeHandle)(Jd, (() => ({
-                                preview: dd => {
-                                  var Jd;
-                                  vd(dd), null === (Jd = gd.current) || void 0 === Jd || Jd.scrollIntoView({
+                              (0, LQ.useImperativeHandle)(FQ, (() => ({
+                                preview: QQ => {
+                                  var FQ;
+                                  pQ(QQ), null === (FQ = vQ.current) || void 0 === FQ || FQ.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const xd = dd => {
-                                  Kd({
-                                    ...Cd,
-                                    ...dd
-                                  }), ld(null)
+                              const cQ = QQ => {
+                                  uQ({
+                                    ...mQ,
+                                    ...QQ
+                                  }), bQ(null)
                                 },
-                                qd = function(dd, Jd) {
-                                  if (null !== Jd) return `${Jp}    presetId: "${Jd}",\n${kp}\n})`;
-                                  const kd = dd.velocityGradients.map((dd => `        {\n            timeFraction: ${wk(dd.timeFraction)},\n            factor: ${wk(dd.factor)},\n            factor2: ${wk(dd.factor2)},\n        },`)),
-                                    pd = [`    dir1: ${Ak(dd.dir1)},`, `    dir2: ${Ak(dd.dir2)},`, kp, `    texture: "${dd.texture}",`, `    minLifeTime: ${wk(dd.minLifeTime)},`, `    maxLifeTime: ${wk(dd.maxLifeTime)},`, `    minEmitPower: ${wk(dd.minEmitPower)},`, `    maxEmitPower: ${wk(dd.maxEmitPower)},`, `    minSize: ${wk(dd.minSize)},`, `    maxSize: ${wk(dd.maxSize)},`, `    manualEmitCount: ${wk(dd.manualEmitCount)},`, `    gravity: ${Ak(dd.gravity)},`, `    colorGradients: ${dp(dd.colorGradients,"    ")},`, `    velocityGradients: ${kd.length>0?`[\n${kd.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${wk(dd.blendMode)},`];
-                                  return void 0 !== dd.hideDist && pd.push(`    hideDist: ${wk(dd.hideDist)},`), `${Jp}${pd.join("\n")}\n})`
-                                }(Cd, null === od || "example" === od ? null : od),
-                                sd = Pd.includes(Cd.texture) ? Pd : [...Pd, Cd.texture];
-                              return (0, Ld.jsxs)("section", {
-                                ref: gd,
+                                CQ = function(QQ, FQ) {
+                                  if (null !== FQ) return `${QL}    presetId: "${FQ}",\n${FL}\n})`;
+                                  const wQ = QQ.velocityGradients.map((QQ => `        {\n            timeFraction: ${yw(QQ.timeFraction)},\n            factor: ${yw(QQ.factor)},\n            factor2: ${yw(QQ.factor2)},\n        },`)),
+                                    LQ = [`    dir1: ${Bw(QQ.dir1)},`, `    dir2: ${Bw(QQ.dir2)},`, FL, `    texture: "${QQ.texture}",`, `    minLifeTime: ${yw(QQ.minLifeTime)},`, `    maxLifeTime: ${yw(QQ.maxLifeTime)},`, `    minEmitPower: ${yw(QQ.minEmitPower)},`, `    maxEmitPower: ${yw(QQ.maxEmitPower)},`, `    minSize: ${yw(QQ.minSize)},`, `    maxSize: ${yw(QQ.maxSize)},`, `    manualEmitCount: ${yw(QQ.manualEmitCount)},`, `    gravity: ${Bw(QQ.gravity)},`, `    colorGradients: ${dw(QQ.colorGradients,"    ")},`, `    velocityGradients: ${wQ.length>0?`[\n${wQ.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${yw(QQ.blendMode)},`];
+                                  return void 0 !== QQ.hideDist && LQ.push(`    hideDist: ${yw(QQ.hideDist)},`), `${QL}${LQ.join("\n")}\n})`
+                                }(mQ, null === HQ || "example" === HQ ? null : HQ),
+                                iQ = DQ.includes(mQ.texture) ? DQ : [...DQ, mQ.texture];
+                              return (0, xQ.jsxs)("section", {
+                                ref: vQ,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, Ld.jsxs)("header", {
+                                children: [(0, xQ.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, Ld.jsxs)("div", {
-                                    children: [(0, Ld.jsx)("div", {
+                                  children: [(0, xQ.jsxs)("div", {
+                                    children: [(0, xQ.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, Ld.jsx)("div", {
+                                    }), (0, xQ.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, Ld.jsx)(Gd, {
-                                    text: qd,
+                                  }), (0, xQ.jsx)(GQ, {
+                                    text: CQ,
                                     label: "Copy code"
                                   })]
-                                }), (0, Ld.jsxs)("div", {
+                                }), (0, xQ.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, Ld.jsx)("button", {
+                                  children: [(0, xQ.jsx)("button", {
                                     type: "button",
-                                    className: Wd()("DocsVariantChip", {
-                                      Active: "example" === od
+                                    className: oQ()("DocsVariantChip", {
+                                      Active: "example" === HQ
                                     }),
                                     onClick: () => {
-                                      vd("example")
+                                      pQ("example")
                                     },
                                     children: "Example"
-                                  }), gN.filter((dd => null !== Tk(dd))).map((dd => (0, Ld.jsx)("button", {
+                                  }), Dq.filter((QQ => null !== Xw(QQ))).map((QQ => (0, xQ.jsx)("button", {
                                     type: "button",
-                                    className: Wd()("DocsVariantChip", {
-                                      Active: od === dd
+                                    className: oQ()("DocsVariantChip", {
+                                      Active: HQ === QQ
                                     }),
                                     onClick: () => {
-                                      vd(dd)
+                                      pQ(QQ)
                                     },
-                                    children: dd
-                                  }, dd))), (0, Ld.jsxs)("select", {
+                                    children: QQ
+                                  }, QQ))), (0, xQ.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== od && void 0 !== od ? od : "custom",
+                                    value: null !== HQ && void 0 !== HQ ? HQ : "custom",
                                     "aria-label": "Preset",
-                                    onChange: dd => {
-                                      vd(dd.target.value)
+                                    onChange: QQ => {
+                                      pQ(QQ.target.value)
                                     },
-                                    children: [(0, Ld.jsx)("option", {
+                                    children: [(0, xQ.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === od && (0, Ld.jsx)("option", {
+                                    }), null === HQ && (0, xQ.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), yk.c.map((dd => (0, Ld.jsx)("option", {
-                                      value: dd,
-                                      children: dd
-                                    }, dd)))]
+                                    }), jw.d.map((QQ => (0, xQ.jsx)("option", {
+                                      value: QQ,
+                                      children: QQ
+                                    }, QQ)))]
                                   })]
-                                }), (0, Ld.jsxs)("div", {
+                                }), (0, xQ.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, Ld.jsxs)("div", {
+                                  children: [(0, xQ.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, Ld.jsx)(ZN, {
-                                      opts: Cd,
-                                      textureUrl: null !== (kd = null === Zd || void 0 === Zd ? void 0 : Zd.getParticleTextureUrl(Cd.texture)) && void 0 !== kd ? kd : null,
-                                      burst: Qd,
-                                      paused: Rd
-                                    }), (0, Ld.jsxs)("div", {
+                                    children: [(0, xQ.jsx)(oq, {
+                                      opts: mQ,
+                                      textureUrl: null !== (wQ = null === kQ || void 0 === kQ ? void 0 : kQ.getParticleTextureUrl(mQ.texture)) && void 0 !== wQ ? wQ : null,
+                                      burst: YQ,
+                                      paused: eQ
+                                    }), (0, xQ.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, Ld.jsxs)("button", {
+                                      children: [(0, xQ.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          Od(Qd + 1)
+                                          AQ(YQ + 1)
                                         },
-                                        children: [(0, Ld.jsx)(ed, {
+                                        children: [(0, xQ.jsx)(tQ, {
                                           name: "replay"
-                                        }), (0, Ld.jsx)("span", {
+                                        }), (0, xQ.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, Ld.jsxs)("button", {
+                                      }), (0, xQ.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": Rd,
+                                        "aria-pressed": eQ,
                                         onClick: () => {
-                                          Id(!Rd)
+                                          MQ(!eQ)
                                         },
-                                        children: [(0, Ld.jsx)(ed, {
-                                          name: Rd ? "play" : "pause"
-                                        }), (0, Ld.jsx)("span", {
-                                          children: Rd ? "Loop" : "Stop looping"
+                                        children: [(0, xQ.jsx)(tQ, {
+                                          name: eQ ? "play" : "pause"
+                                        }), (0, xQ.jsx)("span", {
+                                          children: eQ ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, Ld.jsxs)("div", {
+                                  }), (0, xQ.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, Ld.jsxs)("div", {
+                                    children: [(0, xQ.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Ld.jsxs)("div", {
+                                      children: [(0, xQ.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, Ld.jsx)("span", {
+                                        children: [(0, xQ.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, Ld.jsx)("code", {
+                                        }), (0, xQ.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: Cd.texture
+                                          children: mQ.texture
                                         })]
-                                      }), (0, Ld.jsx)("div", {
+                                      }), (0, xQ.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: sd.map((dd => {
-                                          var Jd;
-                                          const kd = null !== (Jd = null === Zd || void 0 === Zd ? void 0 : Zd.getParticleTextureUrl(dd)) && void 0 !== Jd ? Jd : null;
-                                          return (0, Ld.jsx)("button", {
+                                        children: iQ.map((QQ => {
+                                          var FQ;
+                                          const wQ = null !== (FQ = null === kQ || void 0 === kQ ? void 0 : kQ.getParticleTextureUrl(QQ)) && void 0 !== FQ ? FQ : null;
+                                          return (0, xQ.jsx)("button", {
                                             type: "button",
-                                            className: Wd()("DocsParticleTexture", {
-                                              Active: Cd.texture === dd
+                                            className: oQ()("DocsParticleTexture", {
+                                              Active: mQ.texture === QQ
                                             }),
-                                            title: dd,
-                                            "aria-label": dd,
-                                            "aria-pressed": Cd.texture === dd,
+                                            title: QQ,
+                                            "aria-label": QQ,
+                                            "aria-pressed": mQ.texture === QQ,
                                             onClick: () => {
-                                              xd({
-                                                texture: dd
+                                              cQ({
+                                                texture: QQ
                                               })
                                             },
-                                            children: kd ? (0, Ld.jsx)("img", {
-                                              src: kd,
+                                            children: wQ ? (0, xQ.jsx)("img", {
+                                              src: wQ,
                                               alt: ""
-                                            }) : (0, Ld.jsx)(ed, {
+                                            }) : (0, xQ.jsx)(tQ, {
                                               name: "image"
                                             })
-                                          }, dd)
+                                          }, QQ)
                                         }))
                                       })]
-                                    }), (0, Ld.jsx)(JN, {
+                                    }), (0, xQ.jsx)(dL, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: Cd.manualEmitCount,
-                                      onChange: dd => {
-                                        xd({
-                                          manualEmitCount: dd
+                                      value: mQ.manualEmitCount,
+                                      onChange: QQ => {
+                                        cQ({
+                                          manualEmitCount: QQ
                                         })
                                       }
-                                    }), (0, Ld.jsx)(dN, {
+                                    }), (0, xQ.jsx)(BL, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: Cd.minLifeTime,
-                                      high: Cd.maxLifeTime,
-                                      onChange: (dd, Jd) => {
-                                        xd({
-                                          minLifeTime: dd,
-                                          maxLifeTime: Jd
+                                      low: mQ.minLifeTime,
+                                      high: mQ.maxLifeTime,
+                                      onChange: (QQ, FQ) => {
+                                        cQ({
+                                          minLifeTime: QQ,
+                                          maxLifeTime: FQ
                                         })
                                       }
-                                    }), (0, Ld.jsx)(dN, {
+                                    }), (0, xQ.jsx)(BL, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: Cd.minEmitPower,
-                                      high: Cd.maxEmitPower,
-                                      onChange: (dd, Jd) => {
-                                        xd({
-                                          minEmitPower: dd,
-                                          maxEmitPower: Jd
+                                      low: mQ.minEmitPower,
+                                      high: mQ.maxEmitPower,
+                                      onChange: (QQ, FQ) => {
+                                        cQ({
+                                          minEmitPower: QQ,
+                                          maxEmitPower: FQ
                                         })
                                       }
-                                    }), (0, Ld.jsx)(dN, {
+                                    }), (0, xQ.jsx)(BL, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: Cd.minSize,
-                                      high: Cd.maxSize,
-                                      onChange: (dd, Jd) => {
-                                        xd({
-                                          minSize: dd,
-                                          maxSize: Jd
+                                      low: mQ.minSize,
+                                      high: mQ.maxSize,
+                                      onChange: (QQ, FQ) => {
+                                        cQ({
+                                          minSize: QQ,
+                                          maxSize: FQ
                                         })
                                       }
-                                    }), (0, Ld.jsx)(JN, {
+                                    }), (0, xQ.jsx)(dL, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (Nd = Cd.gravity[1]) && void 0 !== Nd ? Nd : 0,
-                                      onChange: dd => {
-                                        var Jd, kd;
-                                        xd({
-                                          gravity: [null !== (Jd = Cd.gravity[0]) && void 0 !== Jd ? Jd : 0, dd, null !== (kd = Cd.gravity[2]) && void 0 !== kd ? kd : 0]
+                                      value: null !== (qQ = mQ.gravity[1]) && void 0 !== qQ ? qQ : 0,
+                                      onChange: QQ => {
+                                        var FQ, wQ;
+                                        cQ({
+                                          gravity: [null !== (FQ = mQ.gravity[0]) && void 0 !== FQ ? FQ : 0, QQ, null !== (wQ = mQ.gravity[2]) && void 0 !== wQ ? wQ : 0]
                                         })
                                       }
-                                    }), (0, Ld.jsxs)("div", {
+                                    }), (0, xQ.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Ld.jsx)("div", {
+                                      children: [(0, xQ.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, Ld.jsx)("span", {
+                                        children: (0, xQ.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, Ld.jsx)("select", {
+                                      }), (0, xQ.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: Cd.blendMode,
+                                        value: mQ.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: dd => {
-                                          xd({
-                                            blendMode: Number(dd.target.value)
+                                        onChange: QQ => {
+                                          cQ({
+                                            blendMode: Number(QQ.target.value)
                                           })
                                         },
-                                        children: CN.map((dd => {
+                                        children: kq.map((QQ => {
                                           let {
-                                            mode: Jd,
-                                            label: kd
-                                          } = dd;
-                                          return (0, Ld.jsx)("option", {
-                                            value: Jd,
-                                            children: kd
-                                          }, Jd)
+                                            mode: FQ,
+                                            label: wQ
+                                          } = QQ;
+                                          return (0, xQ.jsx)("option", {
+                                            value: FQ,
+                                            children: wQ
+                                          }, FQ)
                                         }))
                                       })]
-                                    }), (0, Ld.jsx)(kN, {
-                                      opts: Cd,
-                                      onChange: dd => {
-                                        xd({
-                                          colorGradients: dd
+                                    }), (0, xQ.jsx)(Qq, {
+                                      opts: mQ,
+                                      onChange: QQ => {
+                                        cQ({
+                                          colorGradients: QQ
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, Ld.jsx)(Bd, {
-                                  code: qd,
+                                }), (0, xQ.jsx)(SQ, {
+                                  code: CQ,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var oN = kd(4326),
-                            lN = kd(1904);
+                          var mq = wQ(4315),
+                            uq = wQ(1873);
 
-                          function QN(dd, Jd) {
-                            return dd ? oN.b.includes(Jd) ? dd.getIngameIconUrl(Jd) : dd.getItemIconUrl(Jd) : null
+                          function Hq(QQ, FQ) {
+                            return QQ ? mq.d.includes(FQ) ? QQ.getIngameIconUrl(FQ) : QQ.getItemIconUrl(FQ) : null
                           }
 
-                          function LN(dd) {
-                            var Jd, kd, pd;
+                          function bq(QQ) {
+                            var FQ, wQ, LQ;
                             let {
-                              part: Nd,
-                              assets: Pd
-                            } = dd;
-                            const Zd = QN(Pd, Nd.icon),
-                              gd = null !== (Jd = null === (kd = Nd.style) || void 0 === kd ? void 0 : kd.fontSize) && void 0 !== Jd ? Jd : "1.8em",
-                              Cd = (0, UJ.Ob)(Nd.style);
-                            return (0, Ld.jsxs)("span", {
-                              className: Wd()("DocsBloxdTextIcon", {
-                                Missing: !Zd
+                              part: qQ,
+                              assets: DQ
+                            } = QQ;
+                            const kQ = Hq(DQ, qQ.icon),
+                              vQ = null !== (FQ = null === (wQ = qQ.style) || void 0 === wQ ? void 0 : wQ.fontSize) && void 0 !== FQ ? FQ : "1.8em",
+                              mQ = (0, lF.Wb)(qQ.style);
+                            return (0, xQ.jsxs)("span", {
+                              className: oQ()("DocsBloxdTextIcon", {
+                                Missing: !kQ
                               }),
                               style: {
-                                width: gd,
-                                height: gd,
-                                opacity: null === (pd = Nd.style) || void 0 === pd ? void 0 : pd.opacity
+                                width: vQ,
+                                height: vQ,
+                                opacity: null === (LQ = qQ.style) || void 0 === LQ ? void 0 : LQ.opacity
                               },
-                              title: Zd ? void 0 : `No Bloxd icon, item or block is called "${Nd.icon}"`,
-                              children: [Zd && Cd && (0, Ld.jsx)("span", {
+                              title: kQ ? void 0 : `No Bloxd icon, item or block is called "${qQ.icon}"`,
+                              children: [kQ && mQ && (0, xQ.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: Cd,
-                                  maskImage: `url("${Zd}")`,
-                                  WebkitMaskImage: `url("${Zd}")`
+                                  background: mQ,
+                                  maskImage: `url("${kQ}")`,
+                                  WebkitMaskImage: `url("${kQ}")`
                                 }
-                              }), Zd ? (0, Ld.jsx)("img", {
-                                src: Zd,
+                              }), kQ ? (0, xQ.jsx)("img", {
+                                src: kQ,
                                 alt: "",
-                                className: Wd()({
-                                  Tinted: Cd
+                                className: oQ()({
+                                  Tinted: mQ
                                 })
-                              }) : (0, Ld.jsx)(ed, {
+                              }) : (0, xQ.jsx)(tQ, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function ON(dd) {
+                          function Yq(QQ) {
                             let {
-                              parts: Jd,
-                              className: kd
-                            } = dd;
-                            const pd = xp(),
-                              Nd = [];
-                            let Pd = [];
-                            const Zd = dd => {
-                              Pd.length > 0 && (Nd.push((0, Ld.jsx)(lN.c, {
-                                text: Pd
-                              }, `run-${dd}`)), Pd = [])
+                              parts: FQ,
+                              className: wQ
+                            } = QQ;
+                            const LQ = pL(),
+                              qQ = [];
+                            let DQ = [];
+                            const kQ = QQ => {
+                              DQ.length > 0 && (qQ.push((0, xQ.jsx)(uq.e, {
+                                text: DQ
+                              }, `run-${QQ}`)), DQ = [])
                             };
-                            return Jd.forEach(((dd, Jd) => {
-                              "icon" !== cJ(dd) || DJ(dd.icon) ? Pd.push(dd) : (Zd(Jd), Nd.push((0, Ld.jsx)(LN, {
-                                part: dd,
-                                assets: pd
-                              }, `icon-${Jd}`)))
-                            })), Zd(Jd.length), (0, Ld.jsx)("div", {
-                              className: Wd()("DocsStyledTextPreview", kd),
-                              children: Nd
+                            return FQ.forEach(((QQ, FQ) => {
+                              "icon" !== VF(QQ) || aF(QQ.icon) ? DQ.push(QQ) : (kQ(FQ), qQ.push((0, xQ.jsx)(bq, {
+                                part: QQ,
+                                assets: LQ
+                              }, `icon-${FQ}`)))
+                            })), kQ(FQ.length), (0, xQ.jsx)("div", {
+                              className: oQ()("DocsStyledTextPreview", wQ),
+                              children: qQ
                             })
                           }
-                          const eN = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let RN = null;
+                          const xq = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let Aq = null;
 
-                          function IN(dd) {
-                            if (RN ??= document.createElement("canvas").getContext("2d"), !RN) return "#000000";
-                            RN.fillStyle = "#000000", RN.fillStyle = dd;
-                            const Jd = RN.fillStyle;
-                            return Jd.startsWith("#") ? Jd : "#000000"
+                          function tq(QQ) {
+                            if (Aq ??= document.createElement("canvas").getContext("2d"), !Aq) return "#000000";
+                            Aq.fillStyle = "#000000", Aq.fillStyle = QQ;
+                            const FQ = Aq.fillStyle;
+                            return FQ.startsWith("#") ? FQ : "#000000"
                           }
 
-                          function GN(dd) {
+                          function eq(QQ) {
                             let {
-                              value: Jd,
-                              label: kd,
-                              onChange: pd
-                            } = dd;
-                            return (0, Ld.jsxs)("span", {
+                              value: FQ,
+                              label: wQ,
+                              onChange: LQ
+                            } = QQ;
+                            return (0, xQ.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, Ld.jsx)("input", {
+                              children: [(0, xQ.jsx)("input", {
                                 type: "color",
-                                value: IN(Jd),
-                                "aria-label": `${kd} picker`,
-                                onChange: dd => {
-                                  pd(dd.target.value)
+                                value: tq(FQ),
+                                "aria-label": `${wQ} picker`,
+                                onChange: QQ => {
+                                  LQ(QQ.target.value)
                                 }
-                              }), (0, Ld.jsx)("input", {
+                              }), (0, xQ.jsx)("input", {
                                 type: "text",
-                                value: Jd,
+                                value: FQ,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": kd,
+                                "aria-label": wQ,
                                 spellCheck: !1,
-                                onChange: dd => {
-                                  pd(dd.target.value)
+                                onChange: QQ => {
+                                  LQ(QQ.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function vN(dd) {
+                          function Mq(QQ) {
                             let {
-                              value: Jd,
-                              fontAwesomeIcons: kd,
-                              onChange: Nd
-                            } = dd;
-                            const Pd = xp(),
-                              [Zd, gd] = (0, pd.useState)(DJ(Jd) ? "fontAwesome" : "bloxd"),
-                              [Cd, Kd] = (0, pd.useState)(""),
-                              od = Cd.trim().toLowerCase(),
-                              ld = "bloxd" === Zd ? oN.b : kd,
-                              Qd = od ? ld.filter((dd => dd.toLowerCase().includes(od))) : ld;
-                            return (0, Ld.jsxs)("div", {
+                              value: FQ,
+                              fontAwesomeIcons: wQ,
+                              onChange: qQ
+                            } = QQ;
+                            const DQ = pL(),
+                              [kQ, vQ] = (0, LQ.useState)(aF(FQ) ? "fontAwesome" : "bloxd"),
+                              [mQ, uQ] = (0, LQ.useState)(""),
+                              HQ = mQ.trim().toLowerCase(),
+                              bQ = "bloxd" === kQ ? mq.d : wQ,
+                              YQ = HQ ? bQ.filter((QQ => QQ.toLowerCase().includes(HQ))) : bQ;
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, Ld.jsx)("input", {
+                              children: [(0, xQ.jsx)("input", {
                                 type: "text",
-                                value: Jd,
+                                value: FQ,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: dd => {
-                                  Nd(dd.target.value)
+                                onChange: QQ => {
+                                  qQ(QQ.target.value)
                                 }
-                              }), (0, Ld.jsx)("p", {
+                              }), (0, xQ.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, Ld.jsxs)("div", {
+                              }), (0, xQ.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((dd => (0, Ld.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((QQ => (0, xQ.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": Zd === dd,
-                                    className: Wd()("DocsVariantChip", {
-                                      Active: Zd === dd
+                                    "aria-selected": kQ === QQ,
+                                    className: oQ()("DocsVariantChip", {
+                                      Active: kQ === QQ
                                     }),
                                     onClick: () => {
-                                      gd(dd)
+                                      vQ(QQ)
                                     },
-                                    children: "bloxd" === dd ? `Bloxd icons (${oN.b.length})` : `Font Awesome (${kd.length})`
-                                  }, dd))), (0, Ld.jsx)("input", {
+                                    children: "bloxd" === QQ ? `Bloxd icons (${mq.d.length})` : `Font Awesome (${wQ.length})`
+                                  }, QQ))), (0, xQ.jsx)("input", {
                                     type: "search",
-                                    value: Cd,
+                                    value: mQ,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: dd => {
-                                      Kd(dd.target.value)
+                                    onChange: QQ => {
+                                      uQ(QQ.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, Ld.jsxs)("div", {
+                              }), (0, xQ.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [Qd.map((dd => {
-                                  const kd = "bloxd" === Zd ? QN(Pd, dd) : null;
-                                  return (0, Ld.jsx)("button", {
+                                children: [YQ.map((QQ => {
+                                  const wQ = "bloxd" === kQ ? Hq(DQ, QQ) : null;
+                                  return (0, xQ.jsx)("button", {
                                     type: "button",
-                                    title: dd,
-                                    "aria-label": dd,
-                                    "aria-pressed": dd === Jd,
-                                    className: Wd()("DocsIconPickerOption", {
-                                      Active: dd === Jd
+                                    title: QQ,
+                                    "aria-label": QQ,
+                                    "aria-pressed": QQ === FQ,
+                                    className: oQ()("DocsIconPickerOption", {
+                                      Active: QQ === FQ
                                     }),
                                     onClick: () => {
-                                      Nd(dd)
+                                      qQ(QQ)
                                     },
-                                    children: "fontAwesome" === Zd ? (0, Ld.jsx)(qk.e, {
-                                      name: dd
-                                    }) : kd ? (0, Ld.jsx)("img", {
-                                      src: kd,
+                                    children: "fontAwesome" === kQ ? (0, xQ.jsx)(pw.c, {
+                                      name: QQ
+                                    }) : wQ ? (0, xQ.jsx)("img", {
+                                      src: wQ,
                                       alt: ""
-                                    }) : (0, Ld.jsx)(ed, {
+                                    }) : (0, xQ.jsx)(tQ, {
                                       name: "image"
                                     })
-                                  }, dd)
-                                })), 0 === Qd.length && (0, Ld.jsxs)("p", {
+                                  }, QQ)
+                                })), 0 === YQ.length && (0, xQ.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", Cd, "\u201d."]
+                                  children: ["No icons match \u201c", mQ, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function xN(dd) {
+                          function Gq(QQ) {
                             let {
-                              property: Jd,
-                              value: kd,
-                              fontAwesomeIcons: pd,
-                              onChange: Nd
-                            } = dd;
+                              property: FQ,
+                              value: wQ,
+                              fontAwesomeIcons: LQ,
+                              onChange: qQ
+                            } = QQ;
                             const {
-                              field: Wd,
-                              label: Pd
-                            } = Jd, Zd = dd => "" !== dd || Jd.isRequired ? dd : void 0;
-                            switch (Wd.kind) {
+                              field: oQ,
+                              label: DQ
+                            } = FQ, kQ = QQ => "" !== QQ || FQ.isRequired ? QQ : void 0;
+                            switch (oQ.kind) {
                               case "text":
-                                return Wd.multiline ? (0, Ld.jsx)("textarea", {
-                                  value: String(null !== kd && void 0 !== kd ? kd : ""),
+                                return oQ.multiline ? (0, xQ.jsx)("textarea", {
+                                  value: String(null !== wQ && void 0 !== wQ ? wQ : ""),
                                   rows: 2,
-                                  "aria-label": Pd,
-                                  onChange: dd => {
-                                    Nd(dd.target.value)
+                                  "aria-label": DQ,
+                                  onChange: QQ => {
+                                    qQ(QQ.target.value)
                                   }
-                                }) : (0, Ld.jsx)("input", {
+                                }) : (0, xQ.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== kd && void 0 !== kd ? kd : ""),
-                                  "aria-label": Pd,
-                                  onChange: dd => {
-                                    Nd(Zd(dd.target.value))
+                                  value: String(null !== wQ && void 0 !== wQ ? wQ : ""),
+                                  "aria-label": DQ,
+                                  onChange: QQ => {
+                                    qQ(kQ(QQ.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, Ld.jsx)("input", {
+                                return (0, xQ.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== kd && void 0 !== kd ? kd : ""),
-                                  placeholder: Jd.defaultText,
+                                  value: String(null !== wQ && void 0 !== wQ ? wQ : ""),
+                                  placeholder: FQ.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": Pd,
+                                  "aria-label": DQ,
                                   spellCheck: !1,
-                                  onChange: dd => {
-                                    Nd(Zd(dd.target.value.trim()))
+                                  onChange: QQ => {
+                                    qQ(kQ(QQ.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, Ld.jsx)(GN, {
-                                  value: String(null !== kd && void 0 !== kd ? kd : ""),
-                                  label: Pd,
-                                  onChange: dd => {
-                                    Nd(Zd(dd))
+                                return (0, xQ.jsx)(eq, {
+                                  value: String(null !== wQ && void 0 !== wQ ? wQ : ""),
+                                  label: DQ,
+                                  onChange: QQ => {
+                                    qQ(kQ(QQ))
                                   }
                                 });
                               case "colours": {
-                                const dd = Array.isArray(kd) ? kd : [],
-                                  Jd = dd => {
-                                    Nd(dd.length > 0 ? dd : void 0)
+                                const QQ = Array.isArray(wQ) ? wQ : [],
+                                  FQ = QQ => {
+                                    qQ(QQ.length > 0 ? QQ : void 0)
                                   };
-                                return (0, Ld.jsxs)("div", {
+                                return (0, xQ.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [dd.map(((kd, pd) => (0, Ld.jsxs)("span", {
+                                  children: [QQ.map(((wQ, LQ) => (0, xQ.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, Ld.jsx)(GN, {
-                                      value: kd,
-                                      label: `${Pd} ${pd+1}`,
-                                      onChange: kd => {
-                                        Jd(dd.map(((dd, Jd) => Jd === pd ? kd : dd)))
+                                    children: [(0, xQ.jsx)(eq, {
+                                      value: wQ,
+                                      label: `${DQ} ${LQ+1}`,
+                                      onChange: wQ => {
+                                        FQ(QQ.map(((QQ, FQ) => FQ === LQ ? wQ : QQ)))
                                       }
-                                    }), (0, Ld.jsx)("button", {
+                                    }), (0, xQ.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${pd+1}`,
+                                      "aria-label": `Remove colour ${LQ+1}`,
                                       onClick: () => {
-                                        Jd(dd.filter(((dd, Jd) => Jd !== pd)))
+                                        FQ(QQ.filter(((QQ, FQ) => FQ !== LQ)))
                                       },
-                                      children: (0, Ld.jsx)(ed, {
+                                      children: (0, xQ.jsx)(tQ, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, pd))), (0, Ld.jsxs)("button", {
+                                  }, LQ))), (0, xQ.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var kd;
-                                      Jd([...dd, null !== (kd = dd.at(-1)) && void 0 !== kd ? kd : "#ffffff"])
+                                      var wQ;
+                                      FQ([...QQ, null !== (wQ = QQ.at(-1)) && void 0 !== wQ ? wQ : "#ffffff"])
                                     },
-                                    children: [(0, Ld.jsx)(ed, {
+                                    children: [(0, xQ.jsx)(tQ, {
                                       name: "plus"
-                                    }), 0 === dd.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === QQ.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var gd;
-                                const dd = "number" === typeof kd ? kd : Number(null !== (gd = Jd.defaultText) && void 0 !== gd ? gd : 0);
-                                return (0, Ld.jsxs)("span", {
+                                var vQ;
+                                const QQ = "number" === typeof wQ ? wQ : Number(null !== (vQ = FQ.defaultText) && void 0 !== vQ ? vQ : 0);
+                                return (0, xQ.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, Ld.jsx)("input", {
+                                  children: [(0, xQ.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: dd,
-                                    "aria-label": Pd,
-                                    onChange: dd => {
-                                      Nd(Number(dd.target.value))
+                                    value: QQ,
+                                    "aria-label": DQ,
+                                    onChange: QQ => {
+                                      qQ(Number(QQ.target.value))
                                     }
-                                  }), (0, Ld.jsx)("output", {
-                                    children: dd.toFixed(2)
+                                  }), (0, xQ.jsx)("output", {
+                                    children: QQ.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, Ld.jsxs)("select", {
-                                  value: String(null !== kd && void 0 !== kd ? kd : ""),
-                                  "aria-label": Pd,
-                                  onChange: dd => {
-                                    Nd(Zd(dd.target.value))
+                                return (0, xQ.jsxs)("select", {
+                                  value: String(null !== wQ && void 0 !== wQ ? wQ : ""),
+                                  "aria-label": DQ,
+                                  onChange: QQ => {
+                                    qQ(kQ(QQ.target.value))
                                   },
-                                  children: [!Jd.isRequired && (0, Ld.jsxs)("option", {
+                                  children: [!FQ.isRequired && (0, xQ.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", Jd.defaultText, ")"]
-                                  }), Wd.options.map((dd => (0, Ld.jsx)("option", {
-                                    value: dd,
-                                    children: dd
-                                  }, dd)))]
+                                    children: ["Default (", FQ.defaultText, ")"]
+                                  }), oQ.options.map((QQ => (0, xQ.jsx)("option", {
+                                    value: QQ,
+                                    children: QQ
+                                  }, QQ)))]
                                 });
                               case "icon":
-                                return (0, Ld.jsx)(vN, {
-                                  value: String(null !== kd && void 0 !== kd ? kd : ""),
-                                  fontAwesomeIcons: pd,
-                                  onChange: Nd
+                                return (0, xQ.jsx)(Mq, {
+                                  value: String(null !== wQ && void 0 !== wQ ? wQ : ""),
+                                  fontAwesomeIcons: LQ,
+                                  onChange: qQ
                                 })
                             }
                           }
 
-                          function qN(dd) {
-                            let Jd;
+                          function pq(QQ) {
+                            let FQ;
                             try {
-                              Jd = JSON.parse(dd)
-                            } catch (kd) {
+                              FQ = JSON.parse(QQ)
+                            } catch (wQ) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${kd.message}`
+                                error: `Not valid JSON yet: ${wQ.message}`
                               }
                             }
-                            return pk(Jd) ? {
-                              part: Jd,
+                            return ww(FQ) ? {
+                              part: FQ,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function BN(dd) {
+                          function cq(QQ) {
                             let {
-                              parts: Jd,
-                              index: kd,
-                              fontAwesomeIcons: Nd,
-                              onChange: Wd,
-                              RY: Pd,
-                              onClose: Zd
-                            } = dd;
-                            const gd = (0, pd.useContext)(OJ),
-                              Kd = (0, pd.useRef)(null),
-                              od = Jd[kd],
-                              ld = cJ(od),
-                              [Qd, Od] = (0, pd.useState)((() => JSON.stringify(od, null, 2))),
-                              Rd = (0, pd.useMemo)((() => "other" === ld ? qN(Qd).error : null), [ld, Qd]);
-                            (0, pd.useEffect)((() => {
-                              var dd;
-                              null === (dd = Kd.current) || void 0 === dd || dd.focus()
+                              parts: FQ,
+                              index: wQ,
+                              fontAwesomeIcons: qQ,
+                              onChange: oQ,
+                              rU: DQ,
+                              onClose: kQ
+                            } = QQ;
+                            const vQ = (0, LQ.useContext)(xF),
+                              uQ = (0, LQ.useRef)(null),
+                              HQ = FQ[wQ],
+                              bQ = VF(HQ),
+                              [YQ, AQ] = (0, LQ.useState)((() => JSON.stringify(HQ, null, 2))),
+                              eQ = (0, LQ.useMemo)((() => "other" === bQ ? pq(YQ).error : null), [bQ, YQ]);
+                            (0, LQ.useEffect)((() => {
+                              var QQ;
+                              null === (QQ = uQ.current) || void 0 === QQ || QQ.focus()
                             }), []);
-                            const Id = (0, Ld.jsx)("div", {
+                            const MQ = (0, xQ.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: dd => {
-                                dd.target === dd.currentTarget && Zd()
+                              onMouseDown: QQ => {
+                                QQ.target === QQ.currentTarget && kQ()
                               },
-                              children: (0, Ld.jsxs)("div", {
-                                ref: Kd,
+                              children: (0, xQ.jsxs)("div", {
+                                ref: uQ,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${kd+1}: ${TJ[ld]}`,
+                                "aria-label": `Edit part ${wQ+1}: ${XF[bQ]}`,
                                 tabIndex: -1,
-                                onKeyDown: dd => {
-                                  "Escape" === dd.key ? (dd.stopPropagation(), Zd()) : "Tab" === dd.key && Kd.current && function(dd, Jd) {
-                                    const kd = Array.from(dd.querySelectorAll(YJ)),
-                                      pd = kd[0],
-                                      Nd = kd.at(-1);
-                                    if (!pd || !Nd) return;
-                                    const Wd = document.activeElement;
-                                    !Jd.shiftKey || Wd !== pd && Wd !== dd ? Jd.shiftKey || Wd !== Nd || (Jd.preventDefault(), pd.focus()) : (Jd.preventDefault(), Nd.focus())
-                                  }(Kd.current, dd)
+                                onKeyDown: QQ => {
+                                  "Escape" === QQ.key ? (QQ.stopPropagation(), kQ()) : "Tab" === QQ.key && uQ.current && function(QQ, FQ) {
+                                    const wQ = Array.from(QQ.querySelectorAll(sF)),
+                                      LQ = wQ[0],
+                                      qQ = wQ.at(-1);
+                                    if (!LQ || !qQ) return;
+                                    const oQ = document.activeElement;
+                                    !FQ.shiftKey || oQ !== LQ && oQ !== QQ ? FQ.shiftKey || oQ !== qQ || (FQ.preventDefault(), LQ.focus()) : (FQ.preventDefault(), qQ.focus())
+                                  }(uQ.current, QQ)
                                 },
-                                children: [(0, Ld.jsxs)("header", {
+                                children: [(0, xQ.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, Ld.jsxs)("div", {
-                                    children: [(0, Ld.jsxs)("div", {
+                                  children: [(0, xQ.jsxs)("div", {
+                                    children: [(0, xQ.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", kd + 1]
-                                    }), (0, Ld.jsx)("div", {
+                                      children: ["Part ", wQ + 1]
+                                    }), (0, xQ.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: TJ[ld]
+                                      children: XF[bQ]
                                     })]
-                                  }), (0, Ld.jsx)("button", {
+                                  }), (0, xQ.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: Zd,
-                                    children: (0, Ld.jsx)(ed, {
+                                    onClick: kQ,
+                                    children: (0, xQ.jsx)(tQ, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, Ld.jsx)(ON, {
-                                  parts: Jd,
+                                }), (0, xQ.jsx)(Yq, {
+                                  parts: FQ,
                                   className: "DocsTextDialogPreview"
-                                }), (0, Ld.jsx)("div", {
+                                }), (0, xQ.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === ld ? (0, Ld.jsxs)("label", {
+                                  children: "other" === bQ ? (0, xQ.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, Ld.jsx)("span", {
+                                    children: [(0, xQ.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, Ld.jsx)("textarea", {
+                                    }), (0, xQ.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: Qd,
+                                      value: YQ,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: dd => {
-                                        Od(dd.target.value);
-                                        const Jd = qN(dd.target.value);
-                                        null !== Jd.part && Wd(Jd.part)
+                                      onChange: QQ => {
+                                        AQ(QQ.target.value);
+                                        const FQ = pq(QQ.target.value);
+                                        null !== FQ.part && oQ(FQ.part)
                                       }
-                                    }), Rd && (0, Ld.jsx)("span", {
+                                    }), eQ && (0, xQ.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: Rd
+                                      children: eQ
                                     })]
-                                  }) : rJ[ld].map((dd => {
-                                    const Jd = tJ(od, dd.path),
-                                      kd = dd.isRequired ? JSON.stringify(zJ(od, dd.path)) === JSON.stringify(od) : void 0 === Jd;
-                                    return (0, Ld.jsxs)("div", {
+                                  }) : JF[bQ].map((QQ => {
+                                    const FQ = nF(HQ, QQ.path),
+                                      wQ = QQ.isRequired ? JSON.stringify(PF(HQ, QQ.path)) === JSON.stringify(HQ) : void 0 === FQ;
+                                    return (0, xQ.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, Ld.jsxs)("div", {
+                                      children: [(0, xQ.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, Ld.jsx)("span", {
-                                          children: dd.label
-                                        }), (0, Ld.jsxs)("button", {
+                                        children: [(0, xQ.jsx)("span", {
+                                          children: QQ.label
+                                        }), (0, xQ.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: kd,
-                                          "aria-label": `Reset ${dd.label.toLowerCase()} to default`,
+                                          disabled: wQ,
+                                          "aria-label": `Reset ${QQ.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            Wd(zJ(od, dd.path))
+                                            oQ(PF(HQ, QQ.path))
                                           },
-                                          children: [(0, Ld.jsx)(ed, {
+                                          children: [(0, xQ.jsx)(tQ, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, Ld.jsx)(xN, {
-                                        property: dd,
-                                        value: Jd,
-                                        fontAwesomeIcons: Nd,
-                                        onChange: Jd => {
-                                          Wd(VJ(od, dd.path, Jd))
+                                      }), (0, xQ.jsx)(Gq, {
+                                        property: QQ,
+                                        value: FQ,
+                                        fontAwesomeIcons: qQ,
+                                        onChange: FQ => {
+                                          oQ(gF(HQ, QQ.path, FQ))
                                         }
-                                      }), !dd.isRequired && (0, Ld.jsxs)("span", {
+                                      }), !QQ.isRequired && (0, xQ.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", dd.defaultText]
+                                        children: ["Default: ", QQ.defaultText]
                                       })]
-                                    }, dd.path.join("."))
+                                    }, QQ.path.join("."))
                                   }))
-                                }), (0, Ld.jsxs)("footer", {
+                                }), (0, xQ.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, Ld.jsxs)("button", {
+                                  children: [(0, xQ.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: Pd,
-                                    children: [(0, Ld.jsx)(ed, {
+                                    onClick: DQ,
+                                    children: [(0, xQ.jsx)(tQ, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, Ld.jsx)("button", {
+                                  }), (0, xQ.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: Zd,
+                                    onClick: kQ,
                                     children: "Done"
                                   })]
-                                }), (0, Ld.jsx)("datalist", {
+                                }), (0, xQ.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: eN.map((dd => (0, Ld.jsx)("option", {
-                                    value: dd
-                                  }, dd)))
+                                  children: xq.map((QQ => (0, xQ.jsx)("option", {
+                                    value: QQ
+                                  }, QQ)))
                                 })]
                               })
                             });
-                            return gd ? (0, Cd.createPortal)(Id, gd) : Id
+                            return vQ ? (0, mQ.createPortal)(MQ, vQ) : MQ
                           }
-                          const sN = [{
+                          const Cq = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            iN = Object.keys(EJ);
+                            Sq = Object.keys(fF);
 
-                          function aN(dd) {
+                          function iq(QQ) {
                             let {
-                              fontAwesomeIcons: Jd
-                            } = dd;
-                            const [kd, Nd] = (0, pd.useState)(sN[0].parts), [Pd, Zd] = (0, pd.useState)((() => dk(sN[0].parts))), [gd, Cd] = (0, pd.useState)(null), [Kd, od] = (0, pd.useState)(!1), [ld, Qd] = (0, pd.useState)(null), [Od, Rd] = (0, pd.useState)(!1), [Id, Gd] = (0, pd.useState)(null), vd = (0, pd.useRef)(null), xd = dk(kd);
-                            (0, pd.useLayoutEffect)((() => {
-                              var dd;
-                              if (!Id) return;
-                              const Jd = dd => {
-                                  var Jd;
-                                  return null === (Jd = vd.current) || void 0 === Jd ? void 0 : Jd.querySelector(`[data-focus-key="${dd}"]`)
+                              fontAwesomeIcons: FQ
+                            } = QQ;
+                            const [wQ, qQ] = (0, LQ.useState)(Cq[0].parts), [DQ, kQ] = (0, LQ.useState)((() => dF(Cq[0].parts))), [vQ, mQ] = (0, LQ.useState)(null), [uQ, HQ] = (0, LQ.useState)(!1), [bQ, YQ] = (0, LQ.useState)(null), [AQ, eQ] = (0, LQ.useState)(!1), [MQ, GQ] = (0, LQ.useState)(null), pQ = (0, LQ.useRef)(null), cQ = dF(wQ);
+                            (0, LQ.useLayoutEffect)((() => {
+                              var QQ;
+                              if (!MQ) return;
+                              const FQ = QQ => {
+                                  var FQ;
+                                  return null === (FQ = pQ.current) || void 0 === FQ ? void 0 : FQ.querySelector(`[data-focus-key="${QQ}"]`)
                                 },
-                                kd = Jd(Id.key);
-                              null === (dd = kd && !kd.disabled ? kd : Jd(Id.fallback)) || void 0 === dd || dd.focus(), Gd(null)
-                            }), [Id]);
-                            const qd = dd => {
-                                Nd(dd), Zd(dk(dd)), Cd(null)
+                                wQ = FQ(MQ.key);
+                              null === (QQ = wQ && !wQ.disabled ? wQ : FQ(MQ.fallback)) || void 0 === QQ || QQ.focus(), GQ(null)
+                            }), [MQ]);
+                            const CQ = QQ => {
+                                qQ(QQ), kQ(dF(QQ)), mQ(null)
                               },
-                              sd = dd => {
-                                qd(kd.filter(((Jd, kd) => kd !== dd))), Gd({
-                                  key: `edit-${Math.min(dd,kd.length-2)}`,
+                              iQ = QQ => {
+                                CQ(wQ.filter(((FQ, wQ) => wQ !== QQ))), GQ({
+                                  key: `edit-${Math.min(QQ,wQ.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              ad = (dd, Jd) => {
-                                const pd = [...kd],
-                                  [Nd] = pd.splice(dd, 1);
-                                pd.splice(dd + Jd, 0, Nd), qd(pd);
-                                Gd({
-                                  key: `${Jd<0?"up":"down"}-${dd+Jd}`,
-                                  fallback: `edit-${dd+Jd}`
+                              WQ = (QQ, FQ) => {
+                                const LQ = [...wQ],
+                                  [qQ] = LQ.splice(QQ, 1);
+                                LQ.splice(QQ + FQ, 0, qQ), CQ(LQ);
+                                GQ({
+                                  key: `${FQ<0?"up":"down"}-${QQ+FQ}`,
+                                  fallback: `edit-${QQ+FQ}`
                                 })
                               };
-                            return (0, Ld.jsxs)("section", {
-                              ref: vd,
+                            return (0, xQ.jsxs)("section", {
+                              ref: pQ,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, Ld.jsx)("header", {
+                              children: [(0, xQ.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, Ld.jsxs)("div", {
-                                  children: [(0, Ld.jsx)("div", {
+                                children: (0, xQ.jsxs)("div", {
+                                  children: [(0, xQ.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, Ld.jsx)("div", {
+                                  }), (0, xQ.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, Ld.jsx)("div", {
+                              }), (0, xQ.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: sN.map((dd => (0, Ld.jsx)("button", {
+                                children: Cq.map((QQ => (0, xQ.jsx)("button", {
                                   type: "button",
-                                  className: Wd()("DocsVariantChip", {
-                                    Active: xd === dk(dd.parts)
+                                  className: oQ()("DocsVariantChip", {
+                                    Active: cQ === dF(QQ.parts)
                                   }),
                                   onClick: () => {
-                                    qd(dd.parts)
+                                    CQ(QQ.parts)
                                   },
-                                  children: dd.label
-                                }, dd.label)))
-                              }), (0, Ld.jsx)(ON, {
-                                parts: kd,
+                                  children: QQ.label
+                                }, QQ.label)))
+                              }), (0, xQ.jsx)(Yq, {
+                                parts: wQ,
                                 className: "DocsTextEditorPreview"
-                              }), (0, Ld.jsxs)("div", {
+                              }), (0, xQ.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, Ld.jsxs)("div", {
+                                children: [(0, xQ.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Ld.jsx)("div", {
+                                  children: [(0, xQ.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, Ld.jsxs)("ol", {
+                                  }), (0, xQ.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [kd.map(((dd, Jd) => {
-                                      const pd = cJ(dd);
-                                      return (0, Ld.jsxs)("li", {
+                                    children: [wQ.map(((QQ, FQ) => {
+                                      const LQ = VF(QQ);
+                                      return (0, xQ.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, Ld.jsxs)("button", {
+                                        children: [(0, xQ.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${Jd}`,
-                                          "aria-label": `Edit part ${Jd+1}, ${TJ[pd]}`,
+                                          "data-focus-key": `edit-${FQ}`,
+                                          "aria-label": `Edit part ${FQ+1}, ${XF[LQ]}`,
                                           onClick: () => {
-                                            Qd(Jd)
+                                            YQ(FQ)
                                           },
-                                          children: [(0, Ld.jsx)("span", {
+                                          children: [(0, xQ.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: TJ[pd]
-                                          }), (0, Ld.jsx)(ON, {
-                                            parts: [dd],
+                                            children: XF[LQ]
+                                          }), (0, xQ.jsx)(Yq, {
+                                            parts: [QQ],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== pd && (0, Ld.jsx)("code", {
+                                          }), "text" !== LQ && (0, xQ.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: HJ(dd)
+                                            children: ZF(QQ)
                                           })]
-                                        }), (0, Ld.jsxs)("span", {
+                                        }), (0, xQ.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, Ld.jsx)("button", {
+                                          children: [(0, xQ.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Jd+1} up`,
-                                            "data-focus-key": `up-${Jd}`,
-                                            disabled: 0 === Jd,
+                                            "aria-label": `Move part ${FQ+1} up`,
+                                            "data-focus-key": `up-${FQ}`,
+                                            disabled: 0 === FQ,
                                             onClick: () => {
-                                              ad(Jd, -1)
+                                              WQ(FQ, -1)
                                             },
-                                            children: (0, Ld.jsx)(ed, {
+                                            children: (0, xQ.jsx)(tQ, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, Ld.jsx)("button", {
+                                          }), (0, xQ.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Jd+1} down`,
-                                            "data-focus-key": `down-${Jd}`,
-                                            disabled: Jd === kd.length - 1,
+                                            "aria-label": `Move part ${FQ+1} down`,
+                                            "data-focus-key": `down-${FQ}`,
+                                            disabled: FQ === wQ.length - 1,
                                             onClick: () => {
-                                              ad(Jd, 1)
+                                              WQ(FQ, 1)
                                             },
-                                            children: (0, Ld.jsx)(ed, {
+                                            children: (0, xQ.jsx)(tQ, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, Ld.jsx)("button", {
+                                          }), (0, xQ.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${Jd+1}`,
+                                            "aria-label": `Remove part ${FQ+1}`,
                                             onClick: () => {
-                                              sd(Jd)
+                                              iQ(FQ)
                                             },
-                                            children: (0, Ld.jsx)(ed, {
+                                            children: (0, xQ.jsx)(tQ, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, Jd)
-                                    })), 0 === kd.length && (0, Ld.jsx)("li", {
+                                      }, FQ)
+                                    })), 0 === wQ.length && (0, xQ.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, Ld.jsxs)("div", {
+                                  }), (0, xQ.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: dd => {
-                                      "Escape" === dd.key && Od && (dd.stopPropagation(), Rd(!1), Gd({
+                                    onKeyDown: QQ => {
+                                      "Escape" === QQ.key && AQ && (QQ.stopPropagation(), eQ(!1), GQ({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, Ld.jsxs)("button", {
+                                    children: [(0, xQ.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": Od,
+                                      "aria-expanded": AQ,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        Rd(!Od)
+                                        eQ(!AQ)
                                       },
-                                      children: [(0, Ld.jsx)(ed, {
+                                      children: [(0, xQ.jsx)(tQ, {
                                         name: "plus"
-                                      }), "Add a part", (0, Ld.jsx)(ed, {
-                                        name: Od ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, xQ.jsx)(tQ, {
+                                        name: AQ ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), Od && (0, Ld.jsx)("ul", {
+                                    }), AQ && (0, xQ.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: iN.map((dd => (0, Ld.jsx)("li", {
-                                        children: (0, Ld.jsx)("button", {
+                                      children: Sq.map((QQ => (0, xQ.jsx)("li", {
+                                        children: (0, xQ.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (dd => {
-                                              qd([...kd, EJ[dd]]), Rd(!1), Qd(kd.length)
-                                            })(dd)
+                                            (QQ => {
+                                              CQ([...wQ, fF[QQ]]), eQ(!1), YQ(wQ.length)
+                                            })(QQ)
                                           },
-                                          children: TJ[dd]
+                                          children: XF[QQ]
                                         })
-                                      }, dd)))
+                                      }, QQ)))
                                     })]
                                   })]
-                                }), (0, Ld.jsxs)("div", {
+                                }), (0, xQ.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Ld.jsxs)("div", {
+                                  children: [(0, xQ.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, Ld.jsxs)("button", {
+                                    children: ["Code", (0, xQ.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": Kd,
+                                      "aria-pressed": uQ,
                                       onClick: () => {
-                                        od(!Kd)
+                                        HQ(!uQ)
                                       },
-                                      children: [(0, Ld.jsx)(ed, {
-                                        name: Kd ? "check" : "pencil"
-                                      }), Kd ? "Done" : "Edit"]
+                                      children: [(0, xQ.jsx)(tQ, {
+                                        name: uQ ? "check" : "pencil"
+                                      }), uQ ? "Done" : "Edit"]
                                     })]
-                                  }), Kd ? (0, Ld.jsxs)(Ld.Fragment, {
-                                    children: [(0, Ld.jsx)("textarea", {
+                                  }), uQ ? (0, xQ.jsxs)(xQ.Fragment, {
+                                    children: [(0, xQ.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: Pd,
+                                      value: DQ,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: dd => {
-                                        Zd(dd.target.value);
-                                        const Jd = Nk(dd.target.value);
-                                        Cd(Jd.error), Jd.parts && Nd(Jd.parts)
+                                      onChange: QQ => {
+                                        kQ(QQ.target.value);
+                                        const FQ = Lw(QQ.target.value);
+                                        mQ(FQ.error), FQ.parts && qQ(FQ.parts)
                                       }
-                                    }), gd && (0, Ld.jsx)("p", {
+                                    }), vQ && (0, xQ.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: gd
+                                      children: vQ
                                     })]
-                                  }) : (0, Ld.jsx)(Bd, {
+                                  }) : (0, xQ.jsx)(SQ, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${xd})`
+                                    code: `api.sendMessage(playerId, ${cQ})`
                                   })]
                                 })]
-                              }), null !== ld && ld < kd.length && (0, Ld.jsx)(BN, {
-                                parts: kd,
-                                index: ld,
-                                fontAwesomeIcons: Jd,
-                                onChange: dd => {
-                                  ((dd, Jd) => {
-                                    qd(kd.map(((kd, pd) => pd === dd ? Jd : kd)))
-                                  })(ld, dd)
+                              }), null !== bQ && bQ < wQ.length && (0, xQ.jsx)(cq, {
+                                parts: wQ,
+                                index: bQ,
+                                fontAwesomeIcons: FQ,
+                                onChange: QQ => {
+                                  ((QQ, FQ) => {
+                                    CQ(wQ.map(((wQ, LQ) => LQ === QQ ? FQ : wQ)))
+                                  })(bQ, QQ)
                                 },
-                                RY: () => {
-                                  sd(ld), Qd(null)
+                                rU: () => {
+                                  iQ(bQ), YQ(null)
                                 },
                                 onClose: () => {
-                                  Qd(null), Gd({
-                                    key: `edit-${ld}`,
+                                  YQ(null), GQ({
+                                    key: `edit-${bQ}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var MN = kd(4733),
-                            FN = kd(4722),
-                            YN = kd(4729),
-                            mN = kd(4740);
-                          const bN = 40,
-                            SN = 800,
-                            jN = 150,
-                            XN = 8e3,
-                            fN = 2e3;
+                          var Wq = wQ(4686),
+                            Rq = wQ(4665),
+                            Oq = wQ(4680),
+                            sq = wQ(4691);
+                          const rq = 40,
+                            Iq = 800,
+                            Uq = 150,
+                            Nq = 8e3,
+                            Tq = 2e3;
 
-                          function nN(dd, Jd) {
-                            return 12 * Math.log2(Jd / dd)
+                          function Kq(QQ, FQ) {
+                            return 12 * Math.log2(FQ / QQ)
                           }
 
-                          function UN(dd, Jd) {
-                            return Math.round(dd * 2 ** (Jd / 12) * 10) / 10
+                          function zq(QQ, FQ) {
+                            return Math.round(QQ * 2 ** (FQ / 12) * 10) / 10
                           }
 
-                          function yN(dd) {
-                            return `${dd} ms`
+                          function lq(QQ) {
+                            return `${QQ} ms`
                           }
 
-                          function DN(dd) {
-                            return `${dd} st`
+                          function jq(QQ) {
+                            return `${QQ} st`
                           }
-                          const TN = [{
+                          const aq = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function EN(dd) {
+                          function Xq(QQ) {
                             let {
-                              synth: Jd,
-                              onChange: kd
-                            } = dd;
-                            const pd = (0, MN.k)(Jd);
-                            return (0, Ld.jsxs)("div", {
+                              synth: FQ,
+                              onChange: wQ
+                            } = QQ;
+                            const LQ = (0, Wq.i)(FQ);
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, Ld.jsxs)("div", {
+                              children: [(0, xQ.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ld.jsx)("div", {
+                                children: [(0, xQ.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, Ld.jsxs)("div", {
+                                }), (0, xQ.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, Ld.jsx)("div", {
+                                  children: [(0, xQ.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, Ld.jsx)("span", {
+                                    children: (0, xQ.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, Ld.jsx)("div", {
+                                  }), (0, xQ.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: MN.f.map((dd => (0, Ld.jsx)("button", {
+                                    children: Wq.d.map((QQ => (0, xQ.jsx)("button", {
                                       type: "button",
-                                      className: Wd()("DocsVariantChip", {
-                                        Active: Jd.waveform === dd
+                                      className: oQ()("DocsVariantChip", {
+                                        Active: FQ.waveform === QQ
                                       }),
-                                      "aria-pressed": Jd.waveform === dd,
+                                      "aria-pressed": FQ.waveform === QQ,
                                       onClick: () => {
-                                        kd({
-                                          waveform: dd
+                                        wQ({
+                                          waveform: QQ
                                         })
                                       },
-                                      children: dd
-                                    }, dd)))
+                                      children: QQ
+                                    }, QQ)))
                                   })]
-                                }), (0, Ld.jsx)(JN, {
+                                }), (0, xQ.jsx)(dL, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: nN(bN, SN),
+                                  max: Kq(rq, Iq),
                                   step: .1,
-                                  value: nN(bN, Jd.pitchHz),
-                                  format: () => `${Jd.pitchHz} Hz`,
-                                  onChange: dd => {
-                                    kd({
-                                      pitchHz: UN(bN, dd)
+                                  value: Kq(rq, FQ.pitchHz),
+                                  format: () => `${FQ.pitchHz} Hz`,
+                                  onChange: QQ => {
+                                    wQ({
+                                      pitchHz: zq(rq, QQ)
                                     })
                                   }
-                                }), (0, Ld.jsx)(JN, {
+                                }), (0, xQ.jsx)(dL, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: Jd.syllableMs,
-                                  format: yN,
-                                  onChange: dd => {
-                                    kd({
-                                      syllableMs: dd
+                                  value: FQ.syllableMs,
+                                  format: lq,
+                                  onChange: QQ => {
+                                    wQ({
+                                      syllableMs: QQ
                                     })
                                   }
-                                }), (0, Ld.jsx)(JN, {
+                                }), (0, xQ.jsx)(dL, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: Jd.volume,
-                                  onChange: dd => {
-                                    kd({
-                                      volume: dd
+                                  value: FQ.volume,
+                                  onChange: QQ => {
+                                    wQ({
+                                      volume: QQ
                                     })
                                   }
                                 })]
-                              }), (0, Ld.jsxs)("div", {
+                              }), (0, xQ.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ld.jsx)("div", {
+                                children: [(0, xQ.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, Ld.jsx)(JN, {
+                                }), (0, xQ.jsx)(dL, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: Jd.durationMs,
-                                  format: yN,
-                                  onChange: dd => {
-                                    kd({
-                                      durationMs: dd
+                                  value: FQ.durationMs,
+                                  format: lq,
+                                  onChange: QQ => {
+                                    wQ({
+                                      durationMs: QQ
                                     })
                                   }
-                                }), (0, Ld.jsx)(JN, {
+                                }), (0, xQ.jsx)(dL, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: pd.durationMs,
+                                  max: LQ.durationMs,
                                   step: 1,
-                                  value: pd.attackMs,
-                                  format: yN,
-                                  onChange: dd => {
-                                    kd({
-                                      attackMs: dd
+                                  value: LQ.attackMs,
+                                  format: lq,
+                                  onChange: QQ => {
+                                    wQ({
+                                      attackMs: QQ
                                     })
                                   }
-                                }), (0, Ld.jsx)(JN, {
+                                }), (0, xQ.jsx)(dL, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: pd.durationMs - pd.attackMs,
+                                  max: LQ.durationMs - LQ.attackMs,
                                   step: 1,
-                                  value: pd.releaseMs,
-                                  format: yN,
-                                  onChange: dd => {
-                                    kd({
-                                      releaseMs: dd
+                                  value: LQ.releaseMs,
+                                  format: lq,
+                                  onChange: QQ => {
+                                    wQ({
+                                      releaseMs: QQ
                                     })
                                   }
-                                }), (0, Ld.jsx)(JN, {
+                                }), (0, xQ.jsx)(dL, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: Jd.glideSemitones,
-                                  format: DN,
-                                  onChange: dd => {
-                                    kd({
-                                      glideSemitones: dd
+                                  value: FQ.glideSemitones,
+                                  format: jq,
+                                  onChange: QQ => {
+                                    wQ({
+                                      glideSemitones: QQ
                                     })
                                   }
-                                }), (0, Ld.jsxs)("label", {
+                                }), (0, xQ.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, Ld.jsx)("input", {
+                                  children: [(0, xQ.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== Jd.lowpassHz,
-                                    onChange: dd => {
-                                      kd({
-                                        lowpassHz: dd.target.checked ? fN : null
+                                    checked: null !== FQ.lowpassHz,
+                                    onChange: QQ => {
+                                      wQ({
+                                        lowpassHz: QQ.target.checked ? Tq : null
                                       })
                                     }
-                                  }), (0, Ld.jsx)("span", {
+                                  }), (0, xQ.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== Jd.lowpassHz && (0, Ld.jsx)(JN, {
+                                }), null !== FQ.lowpassHz && (0, xQ.jsx)(dL, {
                                   label: "Filter",
                                   min: 0,
-                                  max: nN(jN, XN),
+                                  max: Kq(Uq, Nq),
                                   step: .1,
-                                  value: nN(jN, Jd.lowpassHz),
-                                  format: () => `${Jd.lowpassHz} Hz`,
-                                  onChange: dd => {
-                                    kd({
-                                      lowpassHz: UN(jN, dd)
+                                  value: Kq(Uq, FQ.lowpassHz),
+                                  format: () => `${FQ.lowpassHz} Hz`,
+                                  onChange: QQ => {
+                                    wQ({
+                                      lowpassHz: zq(Uq, QQ)
                                     })
                                   }
                                 })]
-                              }), (0, Ld.jsxs)("div", {
+                              }), (0, xQ.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ld.jsx)("div", {
+                                children: [(0, xQ.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), TN.map((dd => {
+                                }), aq.map((QQ => {
                                   let {
-                                    key: pd,
-                                    label: Nd,
-                                    max: Wd
-                                  } = dd;
-                                  return (0, Ld.jsx)(JN, {
-                                    label: Nd,
+                                    key: LQ,
+                                    label: qQ,
+                                    max: oQ
+                                  } = QQ;
+                                  return (0, xQ.jsx)(dL, {
+                                    label: qQ,
                                     min: 0,
-                                    max: Wd,
+                                    max: oQ,
                                     step: .1,
-                                    value: Jd.intonation[pd],
-                                    format: DN,
-                                    onChange: dd => {
-                                      kd({
+                                    value: FQ.intonation[LQ],
+                                    format: jq,
+                                    onChange: QQ => {
+                                      wQ({
                                         intonation: {
-                                          ...Jd.intonation,
-                                          [pd]: dd
+                                          ...FQ.intonation,
+                                          [LQ]: QQ
                                         }
                                       })
                                     }
-                                  }, pd)
+                                  }, LQ)
                                 }))]
                               })]
                             })
                           }
-                          const cN = Object.keys(MN.i),
-                            hN = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const fq = Object.keys(Wq.f),
+                            Vq = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function rN(dd) {
-                            var Jd;
-                            const kd = JSON.stringify((0, MN.k)(dd));
-                            return null !== (Jd = cN.find((dd => JSON.stringify((0, MN.k)(MN.i[dd])) === kd))) && void 0 !== Jd ? Jd : null
+                          function hq(QQ) {
+                            var FQ;
+                            const wQ = JSON.stringify((0, Wq.i)(QQ));
+                            return null !== (FQ = fq.find((QQ => JSON.stringify((0, Wq.i)(Wq.f[QQ])) === wQ))) && void 0 !== FQ ? FQ : null
                           }
 
-                          function uN(dd) {
-                            let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof dd || null === dd) return JSON.stringify(dd);
-                            return `{\n${Object.entries(dd).map((dd=>{let[kd,pd]=dd;return`${Jd}    ${kd}: ${uN(pd,`${Jd}    `)},`})).join("\n")}\n${Jd}}`
+                          function Jq(QQ) {
+                            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof QQ || null === QQ) return JSON.stringify(QQ);
+                            return `{\n${Object.entries(QQ).map((QQ=>{let[wQ,LQ]=QQ;return`${FQ}    ${wQ}: ${Jq(LQ,`${FQ}    `)},`})).join("\n")}\n${FQ}}`
                           }
 
-                          function tN(dd, Jd, kd) {
-                            const pd = rN(dd),
-                              Nd = [`    line: ${JSON.stringify(Jd)},`];
-                            return kd && Nd.push(`    speakerName: ${JSON.stringify(kd)},`), Nd.push("    voice,"), `const voice = ${pd?JSON.stringify(pd):uN((0,MN.k)(dd))}\n\napi.setClientOption(playerId, "dialogue", {\n${Nd.join("\n")}\n})`
+                          function Eq(QQ, FQ, wQ) {
+                            const LQ = hq(QQ),
+                              qQ = [`    line: ${JSON.stringify(FQ)},`];
+                            return wQ && qQ.push(`    speakerName: ${JSON.stringify(wQ)},`), qQ.push("    voice,"), `const voice = ${LQ?JSON.stringify(LQ):Jq((0,Wq.i)(QQ))}\n\napi.setClientOption(playerId, "dialogue", {\n${qQ.join("\n")}\n})`
                           }
-                          const VN = 400,
-                            zN = 90;
-                          let HN = null;
+                          const nq = 400,
+                            gq = 90;
+                          let Pq = null;
 
-                          function wN(dd, Jd, kd) {
-                            return HN ??= new AudioContext, HN.resume(), (0, mN.d)(HN, HN.destination, dd, Jd, kd, (() => {}))
+                          function Zq(QQ, FQ, wQ) {
+                            return Pq ??= new AudioContext, Pq.resume(), (0, sq.c)(Pq, Pq.destination, QQ, FQ, wQ, (() => {}))
                           }
 
-                          function AN() {
-                            const [dd, Jd] = (0, pd.useState)(MN.i.regular), [kd, Nd] = (0, pd.useState)(hN[0]), [Pd, Zd] = (0, pd.useState)("Innkeeper"), [gd, Cd] = (0, pd.useState)(0), Kd = lp((dd => dd.volume)), od = (0, pd.useRef)(null), ld = (0, pd.useRef)(0), Qd = (0, pd.useRef)(0), Od = () => {
-                              var dd;
-                              null === (dd = od.current) || void 0 === dd || dd.call(od), od.current = null
+                          function yq() {
+                            const [QQ, FQ] = (0, LQ.useState)(Wq.f.regular), [wQ, qQ] = (0, LQ.useState)(Vq[0]), [DQ, kQ] = (0, LQ.useState)("Innkeeper"), [vQ, mQ] = (0, LQ.useState)(0), uQ = HL((QQ => QQ.volume)), HQ = (0, LQ.useRef)(null), bQ = (0, LQ.useRef)(0), YQ = (0, LQ.useRef)(0), AQ = () => {
+                              var QQ;
+                              null === (QQ = HQ.current) || void 0 === QQ || QQ.call(HQ), HQ.current = null
                             };
-                            (0, pd.useEffect)((() => () => {
-                              var dd;
-                              null === (dd = od.current) || void 0 === dd || dd.call(od), window.clearTimeout(ld.current)
+                            (0, LQ.useEffect)((() => () => {
+                              var QQ;
+                              null === (QQ = HQ.current) || void 0 === QQ || QQ.call(HQ), window.clearTimeout(bQ.current)
                             }), []);
-                            const Rd = (0, pd.useMemo)((() => ({
-                                line: kd,
-                                speakerName: Pd || void 0,
-                                voice: dd
-                              })), [kd, Pd, dd]),
-                              Id = (0, pd.useRef)(Rd);
-                            Id.current = Rd;
-                            const vd = rN(dd),
-                              xd = dd => {
-                                window.clearTimeout(ld.current), Od();
+                            const eQ = (0, LQ.useMemo)((() => ({
+                                line: wQ,
+                                speakerName: DQ || void 0,
+                                voice: QQ
+                              })), [wQ, DQ, QQ]),
+                              MQ = (0, LQ.useRef)(eQ);
+                            MQ.current = eQ;
+                            const pQ = hq(QQ),
+                              cQ = QQ => {
+                                window.clearTimeout(bQ.current), AQ();
                                 const {
-                                  plan: Jd,
-                                  synth: kd
-                                } = (0, YN.d)(dd);
-                                kd && (od.current = wN(kd, Jd.blips, Kd)), Cd((dd => dd + 1))
+                                  plan: FQ,
+                                  synth: wQ
+                                } = (0, Oq.f)(QQ);
+                                wQ && (HQ.current = Zq(wQ, FQ.blips, uQ)), mQ((QQ => QQ + 1))
                               },
-                              qd = tN(dd, kd, Pd);
-                            return (0, Ld.jsxs)("section", {
+                              CQ = Eq(QQ, wQ, DQ);
+                            return (0, xQ.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, Ld.jsxs)("header", {
+                              children: [(0, xQ.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, Ld.jsxs)("div", {
-                                  children: [(0, Ld.jsx)("div", {
+                                children: [(0, xQ.jsxs)("div", {
+                                  children: [(0, xQ.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, Ld.jsx)("div", {
+                                  }), (0, xQ.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, Ld.jsx)(Gd, {
-                                  text: qd,
+                                }), (0, xQ.jsx)(GQ, {
+                                  text: CQ,
                                   label: "Copy code"
                                 })]
-                              }), (0, Ld.jsxs)("div", {
+                              }), (0, xQ.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [cN.map((dd => (0, Ld.jsx)("button", {
+                                children: [fq.map((QQ => (0, xQ.jsx)("button", {
                                   type: "button",
-                                  className: Wd()("DocsVariantChip", {
-                                    Active: vd === dd
+                                  className: oQ()("DocsVariantChip", {
+                                    Active: pQ === QQ
                                   }),
-                                  "aria-pressed": vd === dd,
+                                  "aria-pressed": pQ === QQ,
                                   onClick: () => {
-                                    (dd => {
-                                      const kd = MN.i[dd];
-                                      Jd(kd), xd({
-                                        ...Rd,
-                                        voice: kd
+                                    (QQ => {
+                                      const wQ = Wq.f[QQ];
+                                      FQ(wQ), cQ({
+                                        ...eQ,
+                                        voice: wQ
                                       })
-                                    })(dd)
+                                    })(QQ)
                                   },
-                                  children: dd
-                                }, dd))), !vd && (0, Ld.jsx)("span", {
+                                  children: QQ
+                                }, QQ))), !pQ && (0, xQ.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, Ld.jsxs)("div", {
+                              }), (0, xQ.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, Ld.jsxs)("div", {
+                                children: [(0, xQ.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, Ld.jsx)("div", {
+                                  children: [(0, xQ.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, Ld.jsx)(FN.b, {
-                                      display: Rd
-                                    }, gd)
-                                  }), (0, Ld.jsxs)("form", {
+                                    children: (0, xQ.jsx)(Rq.c, {
+                                      display: eQ
+                                    }, vQ)
+                                  }), (0, xQ.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: dd => {
-                                      dd.preventDefault(), xd(Rd)
+                                    onSubmit: QQ => {
+                                      QQ.preventDefault(), cQ(eQ)
                                     },
-                                    children: [(0, Ld.jsx)("input", {
-                                      value: kd,
+                                    children: [(0, xQ.jsx)("input", {
+                                      value: wQ,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: dd => {
-                                        Nd(dd.target.value)
+                                      onChange: QQ => {
+                                        qQ(QQ.target.value)
                                       }
-                                    }), (0, Ld.jsxs)("button", {
+                                    }), (0, xQ.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, Ld.jsx)(ed, {
+                                      children: [(0, xQ.jsx)(tQ, {
                                         name: "play"
-                                      }), (0, Ld.jsx)("span", {
+                                      }), (0, xQ.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, Ld.jsx)("div", {
+                                  }), (0, xQ.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: hN.map((dd => (0, Ld.jsx)("button", {
+                                    children: Vq.map((QQ => (0, xQ.jsx)("button", {
                                       type: "button",
-                                      className: Wd()("DocsVariantChip", {
-                                        Active: kd === dd
+                                      className: oQ()("DocsVariantChip", {
+                                        Active: wQ === QQ
                                       }),
                                       onClick: () => {
-                                        var Jd;
-                                        Nd(Jd = dd), xd({
-                                          ...Rd,
-                                          line: Jd
+                                        var FQ;
+                                        qQ(FQ = QQ), cQ({
+                                          ...eQ,
+                                          line: FQ
                                         })
                                       },
-                                      children: dd
-                                    }, dd)))
-                                  }), (0, Ld.jsxs)("label", {
+                                      children: QQ
+                                    }, QQ)))
+                                  }), (0, xQ.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, Ld.jsx)("span", {
+                                    children: [(0, xQ.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, Ld.jsx)("input", {
-                                      value: Pd,
+                                    }), (0, xQ.jsx)("input", {
+                                      value: DQ,
                                       placeholder: "No name",
-                                      onChange: dd => {
-                                        Zd(dd.target.value)
+                                      onChange: QQ => {
+                                        kQ(QQ.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, Ld.jsx)(EN, {
-                                  synth: dd,
-                                  onChange: kd => {
-                                    const pd = {
-                                      ...dd,
-                                      ...kd
+                                }), (0, xQ.jsx)(Xq, {
+                                  synth: QQ,
+                                  onChange: wQ => {
+                                    const LQ = {
+                                      ...QQ,
+                                      ...wQ
                                     };
-                                    Jd(pd);
-                                    const Nd = {
-                                        ...Rd,
-                                        voice: pd
+                                    FQ(LQ);
+                                    const qQ = {
+                                        ...eQ,
+                                        voice: LQ
                                       },
-                                      Wd = performance.now();
-                                    if (Wd - Qd.current >= zN) {
-                                      Qd.current = Wd, Od();
-                                      const dd = (0, YN.d)(Nd).plan.blips[0];
-                                      dd && (od.current = wN((0, MN.k)(pd), [{
-                                        ...dd,
+                                      oQ = performance.now();
+                                    if (oQ - YQ.current >= gq) {
+                                      YQ.current = oQ, AQ();
+                                      const QQ = (0, Oq.f)(qQ).plan.blips[0];
+                                      QQ && (HQ.current = Zq((0, Wq.i)(LQ), [{
+                                        ...QQ,
                                         atMs: 0
-                                      }], Kd))
+                                      }], uQ))
                                     }
-                                    window.clearTimeout(ld.current), ld.current = window.setTimeout((() => {
-                                      xd(Id.current)
-                                    }), VN)
+                                    window.clearTimeout(bQ.current), bQ.current = window.setTimeout((() => {
+                                      cQ(MQ.current)
+                                    }), nq)
                                   }
                                 })]
-                              }), (0, Ld.jsx)(Bd, {
-                                code: qd,
+                              }), (0, xQ.jsx)(SQ, {
+                                code: CQ,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var dW = kd(4752);
-                          const JW = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            kW = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            pW = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${kW}`, "g"), dW.m],
+                          var Bq = wQ(4705);
+                          const dq = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            Qo = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            Fo = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${Qo}`, "g"), Bq.m],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, dW.m]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Bq.m]
                             ];
 
-                          function NW(dd) {
-                            return `${dd.pageId}#${dd.anchor}`
+                          function wo(QQ) {
+                            return `${QQ.pageId}#${QQ.anchor}`
                           }
-                          let WW, PW, ZW;
+                          let Lo, qo, oo;
 
-                          function gW(dd) {
-                            const Jd = (0, sd.h)(dd),
-                              kd = new Set;
-                            for (const [, , pd] of Jd.matchAll(sd.e)) {
-                              const dd = pd.startsWith("#") ? cd(pd) : null,
-                                Jd = dd ? NW({
-                                  pageId: dd.page.id,
-                                  anchor: dd.anchor
+                          function Do(QQ) {
+                            const FQ = (0, iQ.h)(QQ),
+                              wQ = new Set;
+                            for (const [, , LQ] of FQ.matchAll(iQ.c)) {
+                              const QQ = LQ.startsWith("#") ? VQ(LQ) : null,
+                                FQ = QQ ? wo({
+                                  pageId: QQ.page.id,
+                                  anchor: QQ.anchor
                                 }) : null;
-                              null !== Jd && (WW || (WW = new Set(nd.flatMap((dd => Yd(dd.layout) ? Td(dd).sections.map((Jd => NW({
-                                pageId: dd.id,
-                                anchor: Jd.heading.anchor
-                              }))) : [])))), WW).has(Jd) && kd.add(Jd)
+                              null !== FQ && (Lo || (Lo = new Set(zQ.flatMap((QQ => sQ(QQ.layout) ? XQ(QQ).sections.map((FQ => wo({
+                                pageId: QQ.id,
+                                anchor: FQ.heading.anchor
+                              }))) : [])))), Lo).has(FQ) && wQ.add(FQ)
                             }
-                            for (const [, , pd] of Jd.matchAll(JW)) {
-                              const dd = QJ(pd);
-                              dd && kd.add(NW(dd))
+                            for (const [, , LQ] of FQ.matchAll(dq)) {
+                              const QQ = bF(LQ);
+                              QQ && wQ.add(wo(QQ))
                             }
-                            return kd
+                            return wQ
                           }
 
-                          function CW(dd, Jd) {
-                            const kd = new Set,
-                              pd = function(dd) {
-                                return dd.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(dd);
-                            for (const [, Nd] of pd.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) kd.add(Nd);
-                            for (const [Nd, Wd] of pW)
-                              for (const [, dd] of(0, dW.f)(pd, Nd, Wd)) Jd.has(dd) && kd.add(dd);
-                            return kd
+                          function ko(QQ, FQ) {
+                            const wQ = new Set,
+                              LQ = function(QQ) {
+                                return QQ.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(QQ);
+                            for (const [, qQ] of LQ.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) wQ.add(qQ);
+                            for (const [qQ, oQ] of Fo)
+                              for (const [, QQ] of(0, Bq.d)(LQ, qQ, oQ)) FQ.has(QQ) && wQ.add(QQ);
+                            return wQ
                           }
 
-                          function KW(dd, Jd, kd, pd) {
-                            const Nd = dd.get(Jd);
-                            Nd ? !pd && Nd.some((dd => dd.pageId === kd.pageId)) || Nd.push(kd) : dd.set(Jd, [kd])
+                          function vo(QQ, FQ, wQ, LQ) {
+                            const qQ = QQ.get(FQ);
+                            qQ ? !LQ && qQ.some((QQ => QQ.pageId === wQ.pageId)) || qQ.push(wQ) : QQ.set(FQ, [wQ])
                           }
-                          const oW = /^[A-Za-z_$][\w$]*$/;
+                          const mo = /^[A-Za-z_$][\w$]*$/;
 
-                          function lW(dd) {
-                            return oW.test(dd.name) ? dd.name : "options"
-                          }
-
-                          function QW(dd, Jd) {
-                            const kd = dd.params.map(lW).join(", ");
-                            return Jd ? `${dd.name} = (${kd}) => {\n\t\n}` : `api.${dd.name}(${kd})`
+                          function uo(QQ) {
+                            return mo.test(QQ.name) ? QQ.name : "options"
                           }
 
-                          function LW(dd) {
+                          function Ho(QQ, FQ) {
+                            const wQ = QQ.params.map(uo).join(", ");
+                            return FQ ? `${QQ.name} = (${wQ}) => {\n\t\n}` : `api.${QQ.name}(${wQ})`
+                          }
+
+                          function bo(QQ) {
                             let {
-                              method: Jd,
-                              isCallback: kd
-                            } = dd;
-                            return (0, Ld.jsxs)("div", {
+                              method: FQ,
+                              isCallback: wQ
+                            } = QQ;
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, Ld.jsxs)("span", {
+                              children: [(0, xQ.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [kd ? (0, Ld.jsxs)(Ld.Fragment, {
-                                  children: [(0, Ld.jsx)("span", {
+                                children: [wQ ? (0, xQ.jsxs)(xQ.Fragment, {
+                                  children: [(0, xQ.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Jd.name
-                                  }), (0, Ld.jsx)("span", {
+                                    children: FQ.name
+                                  }), (0, xQ.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, Ld.jsxs)(Ld.Fragment, {
-                                  children: [(0, Ld.jsx)("span", {
+                                }) : (0, xQ.jsxs)(xQ.Fragment, {
+                                  children: [(0, xQ.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, Ld.jsx)("span", {
+                                  }), (0, xQ.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Jd.name
-                                  }), (0, Ld.jsx)("span", {
+                                    children: FQ.name
+                                  }), (0, xQ.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), Jd.params.map(((dd, kd) => (0, Ld.jsxs)(pd.Fragment, {
-                                  children: [kd > 0 && (0, Ld.jsx)("span", {
+                                }), FQ.params.map(((QQ, wQ) => (0, xQ.jsxs)(LQ.Fragment, {
+                                  children: [wQ > 0 && (0, xQ.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, Ld.jsx)("a", {
+                                  }), (0, xQ.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${Jd.name}-${lW(dd)}`,
-                                    children: dd.name
+                                    href: `#${FQ.name}-${uo(QQ)}`,
+                                    children: QQ.name
                                   })]
-                                }, dd.name))), (0, Ld.jsx)("span", {
+                                }, QQ.name))), (0, xQ.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: kd ? ") => " : ")"
-                                }), kd && !Jd.returns && (0, Ld.jsx)("span", {
+                                  children: wQ ? ") => " : ")"
+                                }), wQ && !FQ.returns && (0, xQ.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), Jd.returns && Jd.returns.type && (0, Ld.jsxs)("span", {
+                              }), FQ.returns && FQ.returns.type && (0, xQ.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!kd && (0, Ld.jsx)("span", {
+                                children: [!wQ && (0, xQ.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, Ld.jsx)(aJ, {
-                                  type: Jd.returns.type
+                                }), (0, xQ.jsx)(WF, {
+                                  type: FQ.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function OW(dd) {
+                          function Yo(QQ) {
                             let {
-                              title: Jd,
-                              references: kd
-                            } = dd;
-                            const Nd = (0, pd.useContext)(LJ);
-                            return (0, Ld.jsxs)("div", {
+                              title: FQ,
+                              references: wQ
+                            } = QQ;
+                            const qQ = (0, LQ.useContext)(YF);
+                            return (0, xQ.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, Ld.jsx)("span", {
+                              children: [(0, xQ.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: Jd
-                              }), kd.map((dd => (0, Ld.jsx)(Pd.d, {
-                                to: rd(Nd, yd(dd.pageId), dd.anchor),
-                                children: dd.label
-                              }, `${dd.pageId}#${dd.anchor}`)))]
+                                children: FQ
+                              }), wQ.map((QQ => (0, xQ.jsx)(DQ.b, {
+                                to: JQ(qQ, jQ(QQ.pageId), QQ.anchor),
+                                children: QQ.label
+                              }, `${QQ.pageId}#${QQ.anchor}`)))]
                             })
                           }
 
-                          function eW(dd) {
-                            var Jd, kd;
+                          function xo(QQ) {
+                            var FQ, wQ;
                             let {
-                              pageId: pd,
-                              anchor: Nd
-                            } = dd;
-                            const Wd = NW({
-                                pageId: pd,
-                                anchor: Nd
+                              pageId: LQ,
+                              anchor: qQ
+                            } = QQ;
+                            const oQ = wo({
+                                pageId: LQ,
+                                anchor: qQ
                               }),
-                              Pd = null !== (Jd = function() {
-                                if (!ZW) {
-                                  ZW = new Map;
-                                  const pd = new Set(nd.filter((dd => "callbacks" === dd.layout)).flatMap((dd => Td(dd).sections.map((dd => dd.heading.text)))));
-                                  for (const Nd of nd)
-                                    if ("article" === Nd.layout || "snippets" === Nd.layout)
-                                      for (const Wd of (0, sd.t)(Td(Nd)))
+                              DQ = null !== (FQ = function() {
+                                if (!oo) {
+                                  oo = new Map;
+                                  const LQ = new Set(zQ.filter((QQ => "callbacks" === QQ.layout)).flatMap((QQ => XQ(QQ).sections.map((QQ => QQ.heading.text)))));
+                                  for (const qQ of zQ)
+                                    if ("article" === qQ.layout || "snippets" === qQ.layout)
+                                      for (const oQ of (0, iQ.y)(XQ(qQ)))
                                         for (const {
-                                            code: Pd
+                                            code: DQ
                                           }
-                                          of(0, sd.k)(Wd.blocks))
-                                          for (const Zd of CW(Pd, pd)) {
-                                            const pd = lJ().get(Zd);
-                                            if (pd) {
-                                              var dd, Jd, kd;
-                                              const Pd = {
-                                                pageId: Nd.id,
-                                                anchor: null !== (dd = null === (Jd = Wd.heading) || void 0 === Jd ? void 0 : Jd.anchor) && void 0 !== dd ? dd : "",
-                                                label: null !== (kd = Nd.navTitle) && void 0 !== kd ? kd : Nd.title
+                                          of(0, iQ.l)(oQ.blocks))
+                                          for (const kQ of ko(DQ, LQ)) {
+                                            const LQ = HF().get(kQ);
+                                            if (LQ) {
+                                              var QQ, FQ, wQ;
+                                              const DQ = {
+                                                pageId: qQ.id,
+                                                anchor: null !== (QQ = null === (FQ = oQ.heading) || void 0 === FQ ? void 0 : FQ.anchor) && void 0 !== QQ ? QQ : "",
+                                                label: null !== (wQ = qQ.navTitle) && void 0 !== wQ ? wQ : qQ.title
                                               };
-                                              KW(ZW, NW(pd), Pd, !1)
+                                              vo(oo, wo(LQ), DQ, !1)
                                             }
                                           }
                                 }
-                                return ZW
-                              }().get(Wd)) && void 0 !== Jd ? Jd : [],
-                              Zd = null !== (kd = function() {
-                                if (!PW) {
-                                  PW = new Map;
-                                  const dd = yd("changelog");
-                                  for (const Jd of Td(dd).sections) {
-                                    const kd = new Set(Jd.blocks.flatMap((dd => [...gW(dd)])));
-                                    for (const pd of kd) {
-                                      const kd = {
-                                        pageId: dd.id,
-                                        anchor: Jd.heading.anchor,
-                                        label: Jd.heading.text
+                                return oo
+                              }().get(oQ)) && void 0 !== FQ ? FQ : [],
+                              kQ = null !== (wQ = function() {
+                                if (!qo) {
+                                  qo = new Map;
+                                  const QQ = jQ("changelog");
+                                  for (const FQ of XQ(QQ).sections) {
+                                    const wQ = new Set(FQ.blocks.flatMap((QQ => [...Do(QQ)])));
+                                    for (const LQ of wQ) {
+                                      const wQ = {
+                                        pageId: QQ.id,
+                                        anchor: FQ.heading.anchor,
+                                        label: FQ.heading.text
                                       };
-                                      KW(PW, pd, kd, !0)
+                                      vo(qo, LQ, wQ, !0)
                                     }
                                   }
                                 }
-                                return PW
-                              }().get(Wd)) && void 0 !== kd ? kd : [];
-                            return 0 === Pd.length && 0 === Zd.length ? null : (0, Ld.jsxs)("footer", {
+                                return qo
+                              }().get(oQ)) && void 0 !== wQ ? wQ : [];
+                            return 0 === DQ.length && 0 === kQ.length ? null : (0, xQ.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [Pd.length > 0 && (0, Ld.jsx)(OW, {
+                              children: [DQ.length > 0 && (0, xQ.jsx)(Yo, {
                                 title: "Used in",
-                                references: Pd
-                              }), Zd.length > 0 && (0, Ld.jsx)(OW, {
+                                references: DQ
+                              }), kQ.length > 0 && (0, xQ.jsx)(Yo, {
                                 title: "Changelog",
-                                references: Zd
+                                references: kQ
                               })]
                             })
                           }
 
-                          function RW(dd) {
+                          function Ao(QQ) {
                             let {
-                              method: Jd,
-                              pageId: kd,
-                              anchor: pd,
-                              isCallback: Nd
-                            } = dd;
-                            const Wd = Nd ? void 0 : gJ().get(Jd.name),
-                              Pd = Jd.description.length > 0 || null === Wd || void 0 === Wd || !Wd.description ? Jd.description : (0, sd.y)(Wd.description);
-                            return (0, Ld.jsxs)("article", {
+                              method: FQ,
+                              pageId: wQ,
+                              anchor: LQ,
+                              isCallback: qQ
+                            } = QQ;
+                            const oQ = qQ ? void 0 : kF().get(FQ.name),
+                              DQ = FQ.description.length > 0 || null === oQ || void 0 === oQ || !oQ.description ? FQ.description : (0, iQ.F)(oQ.description);
+                            return (0, xQ.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, Ld.jsxs)("header", {
+                              children: [(0, xQ.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Ld.jsx)(Kk, {
+                                children: [(0, xQ.jsx)(mw, {
                                   level: 2,
-                                  text: Jd.name,
-                                  anchor: pd,
+                                  text: FQ.name,
+                                  anchor: LQ,
                                   className: "DocsCardTitle"
-                                }), (0, Ld.jsx)(Gd, {
-                                  text: QW(Jd, Nd),
-                                  label: Nd ? "Copy handler" : "Copy call",
+                                }), (0, xQ.jsx)(GQ, {
+                                  text: Ho(FQ, qQ),
+                                  label: qQ ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Ld.jsx)(LW, {
-                                method: Jd,
-                                isCallback: Nd
-                              }), Wd && null !== Wd.deprecation && (0, Ld.jsxs)("aside", {
+                              }), (0, xQ.jsx)(bo, {
+                                method: FQ,
+                                isCallback: qQ
+                              }), oQ && null !== oQ.deprecation && (0, xQ.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, Ld.jsx)("strong", {
+                                children: [(0, xQ.jsx)("strong", {
                                   children: "Deprecated"
-                                }), Wd.deprecation && (0, Ld.jsxs)(Ld.Fragment, {
-                                  children: [": ", (0, Ld.jsx)(BJ, {
-                                    text: (Zd = Wd.deprecation, (0, dW.s)(Zd, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, dW.k)("`\\w"), (dd => {
-                                      let [Jd] = dd;
-                                      return lJ().has(Jd) ? `\`${Jd}\`` : Jd
+                                }), oQ.deprecation && (0, xQ.jsxs)(xQ.Fragment, {
+                                  children: [": ", (0, xQ.jsx)(CF, {
+                                    text: (kQ = oQ.deprecation, (0, Bq.x)(kQ, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Bq.i)("`\\w"), (QQ => {
+                                      let [FQ] = QQ;
+                                      return HF().has(FQ) ? `\`${FQ}\`` : FQ
                                     })))
                                   })]
                                 })]
-                              }), Pd.length > 0 && (0, Ld.jsx)("div", {
+                              }), DQ.length > 0 && (0, xQ.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Ld.jsx)(Ok, {
-                                  blocks: Pd
+                                children: (0, xQ.jsx)(Yw, {
+                                  blocks: DQ
                                 })
-                              }), Jd.params.length > 0 && (0, Ld.jsxs)("section", {
+                              }), FQ.params.length > 0 && (0, xQ.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Ld.jsx)("h3", {
+                                children: [(0, xQ.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, Ld.jsx)("dl", {
+                                }), (0, xQ.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: Jd.params.map((dd => (0, Ld.jsxs)("div", {
-                                    id: `${Jd.name}-${lW(dd)}`,
+                                  children: FQ.params.map((QQ => (0, xQ.jsxs)("div", {
+                                    id: `${FQ.name}-${uo(QQ)}`,
                                     className: "DocsParam",
-                                    children: [(0, Ld.jsxs)("dt", {
-                                      children: [(0, Ld.jsx)("code", {
+                                    children: [(0, xQ.jsxs)("dt", {
+                                      children: [(0, xQ.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: dd.name
-                                      }), (0, Ld.jsx)(aJ, {
-                                        type: dd.type
+                                        children: QQ.name
+                                      }), (0, xQ.jsx)(WF, {
+                                        type: QQ.type
                                       })]
-                                    }), dd.description && (0, Ld.jsx)("dd", {
-                                      children: (0, Ld.jsx)(BJ, {
-                                        text: dd.description
+                                    }), QQ.description && (0, xQ.jsx)("dd", {
+                                      children: (0, xQ.jsx)(CF, {
+                                        text: QQ.description
                                       })
                                     })]
-                                  }, dd.name)))
+                                  }, QQ.name)))
                                 })]
-                              }), Jd.returns && (Jd.returns.type || Jd.returns.description.length > 0) && (0, Ld.jsxs)("section", {
+                              }), FQ.returns && (FQ.returns.type || FQ.returns.description.length > 0) && (0, xQ.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Ld.jsx)("h3", {
+                                children: [(0, xQ.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, Ld.jsxs)("div", {
+                                }), (0, xQ.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [Jd.returns.type && (0, Ld.jsx)(aJ, {
-                                    type: Jd.returns.type
-                                  }), Jd.returns.description.length > 0 && (0, Ld.jsx)("div", {
+                                  children: [FQ.returns.type && (0, xQ.jsx)(WF, {
+                                    type: FQ.returns.type
+                                  }), FQ.returns.description.length > 0 && (0, xQ.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, Ld.jsx)(Ok, {
-                                      blocks: Jd.returns.description
+                                    children: (0, xQ.jsx)(Yw, {
+                                      blocks: FQ.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, Ld.jsx)(eW, {
-                                pageId: kd,
-                                anchor: pd
+                              }), (0, xQ.jsx)(xo, {
+                                pageId: wQ,
+                                anchor: LQ
                               })]
                             });
-                            var Zd
+                            var kQ
                           }
 
-                          function IW(dd) {
-                            var Jd;
-                            return null !== dd.defaultValue && "undefined" !== dd.defaultValue ? dd.defaultValue : null !== (Jd = dd.example) && void 0 !== Jd ? Jd : "value"
+                          function to(QQ) {
+                            var FQ;
+                            return null !== QQ.defaultValue && "undefined" !== QQ.defaultValue ? QQ.defaultValue : null !== (FQ = QQ.example) && void 0 !== FQ ? FQ : "value"
                           }
 
-                          function GW(dd) {
+                          function eo(QQ) {
                             let {
-                              setting: Jd,
-                              pageId: kd,
-                              anchor: pd,
-                              setterSnippet: Nd
-                            } = dd;
-                            const Wd = null === Jd.defaultValue ? null : IJ(Jd.defaultValue);
-                            return (0, Ld.jsxs)("article", {
+                              setting: FQ,
+                              pageId: wQ,
+                              anchor: LQ,
+                              setterSnippet: qQ
+                            } = QQ;
+                            const oQ = null === FQ.defaultValue ? null : eF(FQ.defaultValue);
+                            return (0, xQ.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, Ld.jsxs)("header", {
+                              children: [(0, xQ.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Ld.jsx)(Kk, {
+                                children: [(0, xQ.jsx)(mw, {
                                   level: 2,
-                                  text: Jd.name,
-                                  anchor: pd,
+                                  text: FQ.name,
+                                  anchor: LQ,
                                   className: "DocsCardTitle"
-                                }), (0, Ld.jsx)(Gd, {
-                                  text: Nd(Jd.name, IW(Jd)),
+                                }), (0, xQ.jsx)(GQ, {
+                                  text: qQ(FQ.name, to(FQ)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Ld.jsxs)("dl", {
+                              }), (0, xQ.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, Ld.jsxs)("div", {
-                                  children: [(0, Ld.jsx)("dt", {
+                                children: [(0, xQ.jsxs)("div", {
+                                  children: [(0, xQ.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, Ld.jsx)("dd", {
-                                    children: (0, Ld.jsx)(aJ, {
-                                      type: Jd.type
+                                  }), (0, xQ.jsx)("dd", {
+                                    children: (0, xQ.jsx)(WF, {
+                                      type: FQ.type
                                     })
                                   })]
-                                }), null !== Jd.defaultValue && (0, Ld.jsxs)("div", {
-                                  children: [(0, Ld.jsx)("dt", {
+                                }), null !== FQ.defaultValue && (0, xQ.jsxs)("div", {
+                                  children: [(0, xQ.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, Ld.jsx)("dd", {
-                                    children: (0, Ld.jsxs)("code", {
+                                  }), (0, xQ.jsx)("dd", {
+                                    children: (0, xQ.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [Wd && (0, Ld.jsx)(GJ, {
-                                        colour: Wd
-                                      }), Jd.defaultValue]
+                                      children: [oQ && (0, xQ.jsx)(MF, {
+                                        colour: oQ
+                                      }), FQ.defaultValue]
                                     })
                                   })]
-                                }), null !== Jd.example && (0, Ld.jsxs)("div", {
-                                  children: [(0, Ld.jsx)("dt", {
+                                }), null !== FQ.example && (0, xQ.jsxs)("div", {
+                                  children: [(0, xQ.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, Ld.jsx)("dd", {
-                                    children: (0, Ld.jsx)("code", {
+                                  }), (0, xQ.jsx)("dd", {
+                                    children: (0, xQ.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: Jd.example
+                                      children: FQ.example
                                     })
                                   })]
                                 })]
-                              }), Jd.description.length > 0 && (0, Ld.jsx)("div", {
+                              }), FQ.description.length > 0 && (0, xQ.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Ld.jsx)(Ok, {
-                                  blocks: Jd.description
+                                children: (0, xQ.jsx)(Yw, {
+                                  blocks: FQ.description
                                 })
-                              }), (0, Ld.jsx)(eW, {
-                                pageId: kd,
-                                anchor: pd
+                              }), (0, xQ.jsx)(xo, {
+                                pageId: wQ,
+                                anchor: LQ
                               })]
                             })
                           }
 
-                          function vW(dd) {
+                          function Mo(QQ) {
                             let {
-                              section: Jd
-                            } = dd;
-                            return (0, Ld.jsxs)("article", {
+                              section: FQ
+                            } = QQ;
+                            return (0, xQ.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, Ld.jsx)(Kk, {
+                              children: [(0, xQ.jsx)(mw, {
                                 level: 2,
-                                text: Jd.heading.text,
-                                anchor: Jd.heading.anchor,
+                                text: FQ.heading.text,
+                                anchor: FQ.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, Ld.jsx)("div", {
+                              }), (0, xQ.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, Ld.jsx)(Ok, {
-                                  blocks: Jd.blocks
+                                children: (0, xQ.jsx)(Yw, {
+                                  blocks: FQ.blocks
                                 })
                               })]
                             })
                           }
 
-                          function xW(dd) {
+                          function Go(QQ) {
                             let {
-                              section: Jd
-                            } = dd;
-                            return (0, Ld.jsxs)("section", {
+                              section: FQ
+                            } = QQ;
+                            return (0, xQ.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Ld.jsx)(Kk, {
-                                level: Jd.heading.level,
-                                text: Jd.heading.text,
-                                anchor: Jd.heading.anchor
-                              }), (0, Ld.jsx)(Ok, {
-                                blocks: Jd.blocks
+                              children: [(0, xQ.jsx)(mw, {
+                                level: FQ.heading.level,
+                                text: FQ.heading.text,
+                                anchor: FQ.heading.anchor
+                              }), (0, xQ.jsx)(Yw, {
+                                blocks: FQ.blocks
                               })]
                             })
                           }
-                          const qW = {
+                          const po = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function BW(dd) {
+                          function co(QQ) {
                             let {
-                              page: Jd,
-                              section: kd
-                            } = dd;
-                            if ("methods" === Jd.layout || "callbacks" === Jd.layout) return (0, Ld.jsx)(RW, {
-                              method: ik(kd),
-                              pageId: Jd.id,
-                              anchor: kd.heading.anchor,
-                              isCallback: "callbacks" === Jd.layout
+                              page: FQ,
+                              section: wQ
+                            } = QQ;
+                            if ("methods" === FQ.layout || "callbacks" === FQ.layout) return (0, xQ.jsx)(Ao, {
+                              method: iw(wQ),
+                              pageId: FQ.id,
+                              anchor: wQ.heading.anchor,
+                              isCallback: "callbacks" === FQ.layout
                             });
-                            if ("settings" === Jd.layout) {
-                              const dd = function(dd) {
-                                const Jd = {
-                                  name: dd.heading.text,
+                            if ("settings" === FQ.layout) {
+                              const QQ = function(QQ) {
+                                const FQ = {
+                                  name: QQ.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const pd of dd.blocks) {
-                                  var kd;
-                                  if (sk(pd)) continue;
-                                  const dd = "paragraph" === pd.kind ? pd.text.match(ak) : null;
-                                  if (!dd) {
-                                    Jd.description.push(pd);
+                                for (const LQ of QQ.blocks) {
+                                  var wQ;
+                                  if (Sw(LQ)) continue;
+                                  const QQ = "paragraph" === LQ.kind ? LQ.text.match(Ww) : null;
+                                  if (!QQ) {
+                                    FQ.description.push(LQ);
                                     continue
                                   }
-                                  const Nd = null !== (kd = Bk(dd[2])) && void 0 !== kd ? kd : dd[2];
-                                  "Type" === dd[1] ? Jd.type = Nd : "Default" === dd[1] ? Jd.defaultValue = Nd : "" !== Nd && (Jd.example = Nd)
+                                  const qQ = null !== (wQ = Cw(QQ[2])) && void 0 !== wQ ? wQ : QQ[2];
+                                  "Type" === QQ[1] ? FQ.type = qQ : "Default" === QQ[1] ? FQ.defaultValue = qQ : "" !== qQ && (FQ.example = qQ)
                                 }
-                                return Jd.type ? Jd : null
-                              }(kd);
-                              if (dd) return (0, Ld.jsx)(GW, {
-                                setting: dd,
-                                pageId: Jd.id,
-                                anchor: kd.heading.anchor,
-                                setterSnippet: Jd.setterSnippet
+                                return FQ.type ? FQ : null
+                              }(wQ);
+                              if (QQ) return (0, xQ.jsx)(eo, {
+                                setting: QQ,
+                                pageId: FQ.id,
+                                anchor: wQ.heading.anchor,
+                                setterSnippet: FQ.setterSnippet
                               })
                             }
-                            return "snippets" === Jd.layout ? (0, Ld.jsx)(vW, {
-                              section: kd
-                            }) : "changelog" === Jd.layout ? (0, Ld.jsxs)("section", {
+                            return "snippets" === FQ.layout ? (0, xQ.jsx)(Mo, {
+                              section: wQ
+                            }) : "changelog" === FQ.layout ? (0, xQ.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, Ld.jsx)("div", {
+                              children: [(0, xQ.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, Ld.jsx)(Kk, {
+                                children: (0, xQ.jsx)(mw, {
                                   level: 2,
-                                  text: kd.heading.text,
-                                  anchor: kd.heading.anchor
+                                  text: wQ.heading.text,
+                                  anchor: wQ.heading.anchor
                                 })
-                              }), (0, Ld.jsx)("div", {
+                              }), (0, xQ.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, Ld.jsx)(Ok, {
-                                  blocks: Mk(kd.blocks)
+                                children: (0, xQ.jsx)(Yw, {
+                                  blocks: Rw(wQ.blocks)
                                 })
                               })]
-                            }) : Jd.gallery ? (0, Ld.jsxs)("section", {
+                            }) : FQ.gallery ? (0, xQ.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Ld.jsx)(Kk, {
-                                level: kd.heading.level,
-                                text: kd.heading.text,
-                                anchor: kd.heading.anchor
-                              }), (0, Ld.jsx)(Fp, {
-                                kind: Jd.gallery,
-                                content: Td(Jd),
-                                blocks: kd.blocks
+                              children: [(0, xQ.jsx)(mw, {
+                                level: wQ.heading.level,
+                                text: wQ.heading.text,
+                                anchor: wQ.heading.anchor
+                              }), (0, xQ.jsx)(OL, {
+                                kind: FQ.gallery,
+                                content: XQ(FQ),
+                                blocks: wQ.blocks
                               })]
-                            }) : (0, Ld.jsx)(xW, {
-                              section: kd
+                            }) : (0, xQ.jsx)(Go, {
+                              section: wQ
                             })
                           }
 
-                          function sW(dd) {
+                          function Co(QQ) {
                             let {
-                              page: Jd,
-                              onTocChange: kd
-                            } = dd;
-                            const Nd = Td(Jd),
-                              [Wd, Pd] = (0, pd.useState)(""),
-                              Zd = "article" !== Jd.layout,
-                              gd = Ik(Jd.gallery) ? Jd.gallery : null,
-                              Cd = null !== gd,
-                              Kd = Wd.trim().toLowerCase(),
-                              od = (0, pd.useRef)(null),
-                              ld = (0, pd.useCallback)((dd => {
-                                var Jd;
-                                null === (Jd = od.current) || void 0 === Jd || Jd.preview(dd)
+                              page: FQ,
+                              onTocChange: wQ
+                            } = QQ;
+                            const qQ = XQ(FQ),
+                              [oQ, DQ] = (0, LQ.useState)(""),
+                              kQ = "article" !== FQ.layout,
+                              vQ = tw(FQ.gallery) ? FQ.gallery : null,
+                              mQ = null !== vQ,
+                              uQ = oQ.trim().toLowerCase(),
+                              HQ = (0, LQ.useRef)(null),
+                              bQ = (0, LQ.useCallback)((QQ => {
+                                var FQ;
+                                null === (FQ = HQ.current) || void 0 === FQ || FQ.preview(QQ)
                               }), []),
-                              Qd = (0, pd.useMemo)((() => {
-                                if (!Jd.hasParticlePlayground) return [];
-                                const dd = bk(Nd.intro).find((dd => "names" === dd.kind && !dd.names.some((dd => null !== Tk(dd.name)))));
-                                return "names" === (null === dd || void 0 === dd ? void 0 : dd.kind) ? dd.names.map((dd => dd.name)) : []
-                              }), [Jd, Nd]),
-                              Od = (0, pd.useMemo)((() => {
-                                if (!Jd.hasTextPlayground) return [];
-                                const dd = Nd.sections.flatMap((dd => dd.blocks.flatMap((dd => {
-                                  var Jd;
-                                  return (null !== (Jd = mk(dd)) && void 0 !== Jd ? Jd : []).flatMap((dd => DJ(dd.name) ? [dd.name] : []))
+                              YQ = (0, LQ.useMemo)((() => {
+                                if (!FQ.hasParticlePlayground) return [];
+                                const QQ = Iw(qQ.intro).find((QQ => "names" === QQ.kind && !QQ.names.some((QQ => null !== Xw(QQ.name)))));
+                                return "names" === (null === QQ || void 0 === QQ ? void 0 : QQ.kind) ? QQ.names.map((QQ => QQ.name)) : []
+                              }), [FQ, qQ]),
+                              AQ = (0, LQ.useMemo)((() => {
+                                if (!FQ.hasTextPlayground) return [];
+                                const QQ = qQ.sections.flatMap((QQ => QQ.blocks.flatMap((QQ => {
+                                  var FQ;
+                                  return (null !== (FQ = rw(QQ)) && void 0 !== FQ ? FQ : []).flatMap((QQ => aF(QQ.name) ? [QQ.name] : []))
                                 }))));
-                                return [...new Set(dd)]
-                              }), [Jd, Nd]),
-                              ed = (0, pd.useMemo)((() => Kd ? Nd.sections.filter((dd => function(dd, Jd) {
-                                return !!dd.heading.text.toLowerCase().includes(Jd) || dd.blocks.some((dd => (0, sd.h)(dd).toLowerCase().includes(Jd)))
-                              }(dd, Kd))) : Nd.sections), [Nd, Kd]),
-                              Rd = (0, pd.useMemo)((() => function(dd, Jd) {
-                                return "article" !== dd.layout ? Jd.map((dd => ({
-                                  anchor: dd.heading.anchor,
-                                  text: dd.heading.text,
+                                return [...new Set(QQ)]
+                              }), [FQ, qQ]),
+                              tQ = (0, LQ.useMemo)((() => uQ ? qQ.sections.filter((QQ => function(QQ, FQ) {
+                                return !!QQ.heading.text.toLowerCase().includes(FQ) || QQ.blocks.some((QQ => (0, iQ.h)(QQ).toLowerCase().includes(FQ)))
+                              }(QQ, uQ))) : qQ.sections), [qQ, uQ]),
+                              eQ = (0, LQ.useMemo)((() => function(QQ, FQ) {
+                                return "article" !== QQ.layout ? FQ.map((QQ => ({
+                                  anchor: QQ.heading.anchor,
+                                  text: QQ.heading.text,
                                   level: 2
-                                }))) : Jd.flatMap((dd => {
-                                  const Jd = dd.blocks.flatMap((dd => "heading" === dd.kind && 3 === dd.level ? [{
-                                    anchor: dd.anchor,
-                                    text: dd.text,
+                                }))) : FQ.flatMap((QQ => {
+                                  const FQ = QQ.blocks.flatMap((QQ => "heading" === QQ.kind && 3 === QQ.level ? [{
+                                    anchor: QQ.anchor,
+                                    text: QQ.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: dd.heading.anchor,
-                                    text: dd.heading.text,
+                                    anchor: QQ.heading.anchor,
+                                    text: QQ.heading.text,
                                     level: 2
-                                  }, ...Jd]
+                                  }, ...FQ]
                                 }))
-                              }(Jd, ed)), [Jd, ed]);
-                            return (0, pd.useEffect)((() => {
-                              kd(Rd)
-                            }), [Rd, kd]), (0, Ld.jsxs)("article", {
+                              }(FQ, tQ)), [FQ, tQ]);
+                            return (0, LQ.useEffect)((() => {
+                              wQ(eQ)
+                            }), [eQ, wQ]), (0, xQ.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, Ld.jsxs)("header", {
+                              children: [(0, xQ.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, Ld.jsx)("h1", {
+                                children: [(0, xQ.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: Nd.title || Jd.title
-                                }), (0, Ld.jsx)("p", {
+                                  children: qQ.title || FQ.title
+                                }), (0, xQ.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: Jd.summary
-                                }), (0, Ld.jsx)(Hp, {
-                                  page: Jd
-                                }), Zd && (0, Ld.jsx)("div", {
+                                  children: FQ.summary
+                                }), (0, xQ.jsx)(PL, {
+                                  page: FQ
+                                }), kQ && (0, xQ.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, Ld.jsxs)("span", {
-                                    children: [(0, Ld.jsx)("strong", {
-                                      children: Nd.sections.length
-                                    }), " ", qW[Jd.layout]]
+                                  children: (0, xQ.jsxs)("span", {
+                                    children: [(0, xQ.jsx)("strong", {
+                                      children: qQ.sections.length
+                                    }), " ", po[FQ.layout]]
                                   })
                                 })]
-                              }), "" === Jd.slug && (0, Ld.jsx)(mp, {}), gd && (0, Ld.jsx)(Xp, {
-                                kind: gd
-                              }, gd), Jd.hasParticlePlayground && (0, Ld.jsx)(KN, {
-                                ref: od,
-                                textures: Qd
-                              }), !Cd && Nd.intro.length > 0 && (0, Ld.jsx)("div", {
+                              }), "" === FQ.slug && (0, xQ.jsx)(rL, {}), vQ && (0, xQ.jsx)(TL, {
+                                kind: vQ
+                              }, vQ), FQ.hasParticlePlayground && (0, xQ.jsx)(vq, {
+                                ref: HQ,
+                                textures: YQ
+                              }), !mQ && qQ.intro.length > 0 && (0, xQ.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: Jd.gallery ? (0, Ld.jsx)(Gp.Provider, {
-                                  value: Jd.hasParticlePlayground ? ld : null,
-                                  children: (0, Ld.jsx)(Fp, {
-                                    kind: Jd.gallery,
-                                    content: Nd,
-                                    blocks: Nd.intro
+                                children: FQ.gallery ? (0, xQ.jsx)(ML.Provider, {
+                                  value: FQ.hasParticlePlayground ? bQ : null,
+                                  children: (0, xQ.jsx)(OL, {
+                                    kind: FQ.gallery,
+                                    content: qQ,
+                                    blocks: qQ.intro
                                   })
-                                }) : (0, Ld.jsx)(Ok, {
-                                  blocks: Mk(Nd.intro)
+                                }) : (0, xQ.jsx)(Yw, {
+                                  blocks: Rw(qQ.intro)
                                 })
-                              }), Jd.hasTextPlayground && (0, Ld.jsx)(aN, {
-                                fontAwesomeIcons: Od
-                              }), Jd.hasVoicePlayground && (0, Ld.jsx)(AN, {}), Jd.childPageIds && (0, Ld.jsx)(mp, {
-                                cards: Jd.childPageIds.map((dd => ({
-                                  pageId: dd
+                              }), FQ.hasTextPlayground && (0, xQ.jsx)(iq, {
+                                fontAwesomeIcons: AQ
+                              }), FQ.hasVoicePlayground && (0, xQ.jsx)(yq, {}), FQ.childPageIds && (0, xQ.jsx)(rL, {
+                                cards: FQ.childPageIds.map((QQ => ({
+                                  pageId: QQ
                                 }))),
-                                label: Jd.title
-                              }), Zd && (0, Ld.jsx)(xk, {
+                                label: FQ.title
+                              }), kQ && (0, xQ.jsx)(Gw, {
                                 className: "DocsFilterBar",
-                                value: Wd,
-                                placeholder: `Filter ${Nd.sections.length} ${qW[Jd.layout]}\u2026`,
-                                label: `Filter ${qW[Jd.layout]}`,
-                                onChange: Pd,
-                                count: Kd ? {
-                                  visible: ed.length,
-                                  total: Nd.sections.length
+                                value: oQ,
+                                placeholder: `Filter ${qQ.sections.length} ${po[FQ.layout]}\u2026`,
+                                label: `Filter ${po[FQ.layout]}`,
+                                onChange: DQ,
+                                count: uQ ? {
+                                  visible: tQ.length,
+                                  total: qQ.sections.length
                                 } : null
-                              }), !Cd && (0, Ld.jsxs)("div", {
-                                className: `DocsSections Layout-${Jd.layout}`,
-                                children: [ed.map((dd => (0, Ld.jsx)(BW, {
-                                  page: Jd,
-                                  section: dd
-                                }, dd.heading.anchor))), 0 === ed.length && (0, Ld.jsxs)("p", {
+                              }), !mQ && (0, xQ.jsxs)("div", {
+                                className: `DocsSections Layout-${FQ.layout}`,
+                                children: [tQ.map((QQ => (0, xQ.jsx)(co, {
+                                  page: FQ,
+                                  section: QQ
+                                }, QQ.heading.anchor))), 0 === tQ.length && (0, xQ.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", qW[Jd.layout], " match \u201c", Wd, "\u201d."]
+                                  children: ["No ", po[FQ.layout], " match \u201c", oQ, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const iW = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const So = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function aW(dd) {
+                          function io(QQ) {
                             let {
-                              entry: Jd,
-                              isActive: kd,
-                              onNavigate: pd,
-                              label: Nd,
-                              children: Pd
-                            } = dd;
-                            return (0, Ld.jsx)("a", {
-                              href: `#${Jd.anchor}`,
-                              "aria-label": Nd,
-                              className: Wd()(`Level${Jd.level}`, {
-                                Active: kd
+                              entry: FQ,
+                              isActive: wQ,
+                              onNavigate: LQ,
+                              label: qQ,
+                              children: DQ
+                            } = QQ;
+                            return (0, xQ.jsx)("a", {
+                              href: `#${FQ.anchor}`,
+                              "aria-label": qQ,
+                              className: oQ()(`Level${FQ.level}`, {
+                                Active: wQ
                               }),
-                              "aria-current": kd ? "location" : void 0,
-                              onClick: dd => {
-                                dd.preventDefault(), pd(Jd.anchor)
+                              "aria-current": wQ ? "location" : void 0,
+                              onClick: QQ => {
+                                QQ.preventDefault(), LQ(FQ.anchor)
                               },
-                              children: Pd
+                              children: DQ
                             })
                           }
 
-                          function MW(dd) {
+                          function Wo(QQ) {
                             let {
-                              toc: Jd,
-                              activeAnchor: kd,
-                              onNavigate: Nd
-                            } = dd;
-                            const Pd = Math.max(0, Jd.findIndex((dd => dd.anchor === kd))),
-                              Zd = (0, pd.useRef)(null),
-                              gd = (0, pd.useRef)(!1);
-                            (0, pd.useEffect)((() => {
-                              var dd, kd;
-                              const pd = null === (dd = Zd.current) || void 0 === dd ? void 0 : dd.closest(".DocsToc"),
-                                Nd = null === (kd = Zd.current) || void 0 === kd ? void 0 : kd.querySelector(".DocsTimelineNotch.Active");
-                              if (!pd || !Nd) return;
-                              let Wd = 0;
-                              if (Pd === Jd.length - 1) Wd = pd.scrollHeight;
-                              else if (Pd > 0) {
-                                const dd = pd.getBoundingClientRect(),
-                                  Jd = Nd.getBoundingClientRect();
-                                Wd = pd.scrollTop + Jd.top + Jd.height / 2 - (dd.top + pd.clientHeight / 2)
+                              toc: FQ,
+                              activeAnchor: wQ,
+                              onNavigate: qQ
+                            } = QQ;
+                            const DQ = Math.max(0, FQ.findIndex((QQ => QQ.anchor === wQ))),
+                              kQ = (0, LQ.useRef)(null),
+                              vQ = (0, LQ.useRef)(!1);
+                            (0, LQ.useEffect)((() => {
+                              var QQ, wQ;
+                              const LQ = null === (QQ = kQ.current) || void 0 === QQ ? void 0 : QQ.closest(".DocsToc"),
+                                qQ = null === (wQ = kQ.current) || void 0 === wQ ? void 0 : wQ.querySelector(".DocsTimelineNotch.Active");
+                              if (!LQ || !qQ) return;
+                              let oQ = 0;
+                              if (DQ === FQ.length - 1) oQ = LQ.scrollHeight;
+                              else if (DQ > 0) {
+                                const QQ = LQ.getBoundingClientRect(),
+                                  FQ = qQ.getBoundingClientRect();
+                                oQ = LQ.scrollTop + FQ.top + FQ.height / 2 - (QQ.top + LQ.clientHeight / 2)
                               }
-                              pd.scrollTo({
-                                top: Wd,
-                                behavior: gd.current ? "smooth" : "auto"
-                              }), gd.current = !0
-                            }), [Pd, Jd.length]);
-                            const Cd = [];
-                            return Jd.forEach(((dd, Jd) => {
-                              var kd, pd, Nd;
-                              const Wd = function(dd) {
-                                  const Jd = dd.trim().match(iW);
-                                  return Jd ? {
-                                    day: Jd[1],
-                                    month: `${Jd[2]} ${Jd[3]}`
+                              LQ.scrollTo({
+                                top: oQ,
+                                behavior: vQ.current ? "smooth" : "auto"
+                              }), vQ.current = !0
+                            }), [DQ, FQ.length]);
+                            const mQ = [];
+                            return FQ.forEach(((QQ, FQ) => {
+                              var wQ, LQ, qQ;
+                              const oQ = function(QQ) {
+                                  const FQ = QQ.trim().match(So);
+                                  return FQ ? {
+                                    day: FQ[1],
+                                    month: `${FQ[2]} ${FQ[3]}`
                                   } : null
-                                }(dd.text),
-                                Pd = null !== (kd = null === Wd || void 0 === Wd ? void 0 : Wd.month) && void 0 !== kd ? kd : null;
-                              null !== Pd && (null === (pd = Cd.at(-1)) || void 0 === pd ? void 0 : pd.month) === Pd || Cd.push({
-                                month: Pd,
+                                }(QQ.text),
+                                DQ = null !== (wQ = null === oQ || void 0 === oQ ? void 0 : oQ.month) && void 0 !== wQ ? wQ : null;
+                              null !== DQ && (null === (LQ = mQ.at(-1)) || void 0 === LQ ? void 0 : LQ.month) === DQ || mQ.push({
+                                month: DQ,
                                 entries: []
-                              }), Cd.at(-1).entries.push({
-                                entry: dd,
-                                day: null !== (Nd = null === Wd || void 0 === Wd ? void 0 : Wd.day) && void 0 !== Nd ? Nd : null,
-                                index: Jd
+                              }), mQ.at(-1).entries.push({
+                                entry: QQ,
+                                day: null !== (qQ = null === oQ || void 0 === oQ ? void 0 : oQ.day) && void 0 !== qQ ? qQ : null,
+                                index: FQ
                               })
-                            })), (0, Ld.jsx)("ol", {
-                              ref: Zd,
+                            })), (0, xQ.jsx)("ol", {
+                              ref: kQ,
                               className: "DocsTimeline",
-                              children: Cd.map((dd => {
+                              children: mQ.map((QQ => {
                                 let {
-                                  month: Jd,
-                                  entries: kd
-                                } = dd;
-                                return (0, Ld.jsxs)("li", {
+                                  month: FQ,
+                                  entries: wQ
+                                } = QQ;
+                                return (0, xQ.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [Jd && (0, Ld.jsx)("span", {
+                                  children: [FQ && (0, xQ.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: Jd
-                                  }), (0, Ld.jsx)("ol", {
-                                    children: kd.map((dd => {
+                                    children: FQ
+                                  }), (0, xQ.jsx)("ol", {
+                                    children: wQ.map((QQ => {
                                       let {
-                                        entry: Jd,
-                                        day: kd,
-                                        index: pd
-                                      } = dd;
-                                      return (0, Ld.jsx)("li", {
-                                        className: Wd()("DocsTimelineNotch", {
-                                          Passed: pd < Pd,
-                                          Active: pd === Pd
+                                        entry: FQ,
+                                        day: wQ,
+                                        index: LQ
+                                      } = QQ;
+                                      return (0, xQ.jsx)("li", {
+                                        className: oQ()("DocsTimelineNotch", {
+                                          Passed: LQ < DQ,
+                                          Active: LQ === DQ
                                         }),
-                                        children: (0, Ld.jsx)(aW, {
-                                          entry: Jd,
-                                          isActive: pd === Pd,
-                                          onNavigate: Nd,
-                                          label: Jd.text,
-                                          children: (0, Ld.jsx)("span", {
+                                        children: (0, xQ.jsx)(io, {
+                                          entry: FQ,
+                                          isActive: LQ === DQ,
+                                          onNavigate: qQ,
+                                          label: FQ.text,
+                                          children: (0, xQ.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== kd && void 0 !== kd ? kd : Jd.text
+                                            children: null !== wQ && void 0 !== wQ ? wQ : FQ.text
                                           })
                                         })
-                                      }, Jd.anchor)
+                                      }, FQ.anchor)
                                     }))
                                   })]
-                                }, kd[0].entry.anchor)
+                                }, wQ[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function FW(dd) {
+                          function Ro(QQ) {
                             let {
-                              isChangelog: Jd,
-                              toc: kd,
-                              activeAnchor: pd,
-                              onNavigate: Nd
-                            } = dd;
-                            return 0 === kd.length ? null : (0, Ld.jsxs)(Ld.Fragment, {
-                              children: [(0, Ld.jsx)("div", {
+                              isChangelog: FQ,
+                              toc: wQ,
+                              activeAnchor: LQ,
+                              onNavigate: qQ
+                            } = QQ;
+                            return 0 === wQ.length ? null : (0, xQ.jsxs)(xQ.Fragment, {
+                              children: [(0, xQ.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: Jd ? "Updates" : "On this page"
-                              }), Jd ? (0, Ld.jsx)(MW, {
-                                toc: kd,
-                                activeAnchor: pd,
-                                onNavigate: Nd
-                              }) : (0, Ld.jsx)("ul", {
-                                children: kd.map((dd => (0, Ld.jsx)("li", {
-                                  children: (0, Ld.jsx)(aW, {
-                                    entry: dd,
-                                    isActive: dd.anchor === pd,
-                                    onNavigate: Nd,
-                                    children: dd.text.replace(/`/g, "")
+                                children: FQ ? "Updates" : "On this page"
+                              }), FQ ? (0, xQ.jsx)(Wo, {
+                                toc: wQ,
+                                activeAnchor: LQ,
+                                onNavigate: qQ
+                              }) : (0, xQ.jsx)("ul", {
+                                children: wQ.map((QQ => (0, xQ.jsx)("li", {
+                                  children: (0, xQ.jsx)(io, {
+                                    entry: QQ,
+                                    isActive: QQ.anchor === LQ,
+                                    onNavigate: qQ,
+                                    children: QQ.text.replace(/`/g, "")
                                   })
-                                }, dd.anchor)))
+                                }, QQ.anchor)))
                               })]
                             })
                           }
-                          const YW = {
+                          const Oo = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            mW = {
+                            so = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            bW = 20,
-                            SW = 10,
-                            jW = 40,
-                            XW = 120;
-                          let fW;
+                            ro = 20,
+                            Io = 10,
+                            Uo = 40,
+                            No = 120;
+                          let To;
 
-                          function nW(dd) {
-                            const Jd = dd.gallery;
-                            if (!Jd) return [];
-                            if (Ik(Jd)) return function(dd) {
-                              return vk(dd).entries.map((dd => dd.name))
-                            }(Jd).map((kd => ({
-                              page: dd,
-                              anchor: jk(Jd, kd),
-                              title: kd,
-                              kind: mW[Jd],
+                          function Ko(QQ) {
+                            const FQ = QQ.gallery;
+                            if (!FQ) return [];
+                            if (tw(FQ)) return function(QQ) {
+                              return Mw(QQ).entries.map((QQ => QQ.name))
+                            }(FQ).map((wQ => ({
+                              page: QQ,
+                              anchor: Nw(FQ, wQ),
+                              title: wQ,
+                              kind: so[FQ],
                               text: "",
-                              listedUnder: dd.title
+                              listedUnder: QQ.title
                             })));
-                            const kd = Td(dd);
-                            return (0, sd.t)(kd).flatMap((pd => {
-                              const Nd = pd.heading ? `${dd.title} \u203a ${pd.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : dd.title;
-                              return fk(Jd, kd, pd.blocks).flatMap((kd => "names" !== kd.kind ? [] : kd.names.map((pd => {
-                                const Wd = kd.isSongs ? "Song" : mW[Jd];
+                            const wQ = XQ(QQ);
+                            return (0, iQ.y)(wQ).flatMap((LQ => {
+                              const qQ = LQ.heading ? `${QQ.title} \u203a ${LQ.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : QQ.title;
+                              return Kw(FQ, wQ, LQ.blocks).flatMap((wQ => "names" !== wQ.kind ? [] : wQ.names.map((LQ => {
+                                const oQ = wQ.isSongs ? "Song" : so[FQ];
                                 return {
-                                  page: dd,
-                                  anchor: pd.anchor,
-                                  title: pd.name,
-                                  kind: Wd,
+                                  page: QQ,
+                                  anchor: LQ.anchor,
+                                  title: LQ.name,
+                                  kind: oQ,
                                   text: "",
-                                  listedUnder: Nd
+                                  listedUnder: qQ
                                 }
                               }))))
                             }))
                           }
 
-                          function UW(dd, Jd, kd) {
-                            const pd = dd.title.toLowerCase();
-                            let Nd = 0;
-                            if (pd === Jd) Nd = 100;
-                            else if (pd.startsWith(Jd)) Nd = 80;
-                            else if (pd.includes(Jd)) Nd = 60;
-                            else if (kd.every((dd => pd.includes(dd)))) Nd = 45;
+                          function zo(QQ, FQ, wQ) {
+                            const LQ = QQ.title.toLowerCase();
+                            let qQ = 0;
+                            if (LQ === FQ) qQ = 100;
+                            else if (LQ.startsWith(FQ)) qQ = 80;
+                            else if (LQ.includes(FQ)) qQ = 60;
+                            else if (wQ.every((QQ => LQ.includes(QQ)))) qQ = 45;
                             else {
-                              if (!dd.text.toLowerCase().includes(Jd)) return 0;
-                              Nd = 20
+                              if (!QQ.text.toLowerCase().includes(FQ)) return 0;
+                              qQ = 20
                             }
-                            return Nd - Math.min(pd.length / 10, 9) + ("Page" === dd.kind ? 8 : "Method" === dd.kind ? 3 : 0) - (dd.listedUnder ? bW : 0)
+                            return qQ - Math.min(LQ.length / 10, 9) + ("Page" === QQ.kind ? 8 : "Method" === QQ.kind ? 3 : 0) - (QQ.listedUnder ? ro : 0)
                           }
 
-                          function yW(dd, Jd) {
-                            const kd = dd.toLowerCase().indexOf(Jd),
-                              pd = Math.max(0, kd - XW / 3);
-                            return `${pd>0?"\u2026":""}${dd.slice(pd,pd+XW)}${pd+XW<dd.length?"\u2026":""}`
+                          function jo(QQ, FQ) {
+                            const wQ = QQ.toLowerCase().indexOf(FQ),
+                              LQ = Math.max(0, wQ - No / 3);
+                            return `${LQ>0?"\u2026":""}${QQ.slice(LQ,LQ+No)}${LQ+No<QQ.length?"\u2026":""}`
                           }
 
-                          function DW(dd) {
+                          function ao(QQ) {
                             let {
-                              text: Jd,
-                              query: kd
-                            } = dd;
-                            const pd = kd ? Jd.toLowerCase().indexOf(kd) : -1;
-                            return -1 === pd ? (0, Ld.jsx)(Ld.Fragment, {
-                              children: Jd
-                            }) : (0, Ld.jsxs)(Ld.Fragment, {
-                              children: [Jd.slice(0, pd), (0, Ld.jsx)("mark", {
-                                children: Jd.slice(pd, pd + kd.length)
-                              }), Jd.slice(pd + kd.length)]
+                              text: FQ,
+                              query: wQ
+                            } = QQ;
+                            const LQ = wQ ? FQ.toLowerCase().indexOf(wQ) : -1;
+                            return -1 === LQ ? (0, xQ.jsx)(xQ.Fragment, {
+                              children: FQ
+                            }) : (0, xQ.jsxs)(xQ.Fragment, {
+                              children: [FQ.slice(0, LQ), (0, xQ.jsx)("mark", {
+                                children: FQ.slice(LQ, LQ + wQ.length)
+                              }), FQ.slice(LQ + wQ.length)]
                             })
                           }
 
-                          function TW(dd) {
+                          function Xo(QQ) {
                             let {
-                              basePath: Jd,
-                              onClose: kd
-                            } = dd;
-                            const Nd = (0, Zd.w)(),
-                              [Pd, gd] = (0, pd.useState)(""),
-                              [Cd, Kd] = (0, pd.useState)(0),
-                              od = (0, pd.useRef)(null),
-                              ld = (0, pd.useRef)(null),
-                              Qd = Pd.trim().toLowerCase(),
-                              Od = (0, pd.useMemo)((() => {
-                                const dd = (fW || (fW = nd.flatMap((dd => {
-                                  const Jd = Td(dd);
+                              basePath: FQ,
+                              onClose: wQ
+                            } = QQ;
+                            const qQ = (0, kQ.v)(),
+                              [DQ, vQ] = (0, LQ.useState)(""),
+                              [mQ, uQ] = (0, LQ.useState)(0),
+                              HQ = (0, LQ.useRef)(null),
+                              bQ = (0, LQ.useRef)(null),
+                              YQ = DQ.trim().toLowerCase(),
+                              AQ = (0, LQ.useMemo)((() => {
+                                const QQ = (To || (To = zQ.flatMap((QQ => {
+                                  const FQ = XQ(QQ);
                                   return [{
-                                    page: dd,
+                                    page: QQ,
                                     anchor: "",
-                                    title: dd.title,
+                                    title: QQ.title,
                                     kind: "Page",
-                                    text: dd.summary
-                                  }, ...Jd.sections.flatMap((Jd => {
-                                    const kd = Jd.blocks.filter((dd => "paragraph" === dd.kind)).map(sd.h).join(" ").replace(/[`*]/g, ""),
-                                      pd = {
-                                        page: dd,
-                                        anchor: Jd.heading.anchor,
-                                        title: Jd.heading.text.replace(/`/g, ""),
-                                        kind: YW[dd.layout],
-                                        text: kd
+                                    text: QQ.summary
+                                  }, ...FQ.sections.flatMap((FQ => {
+                                    const wQ = FQ.blocks.filter((QQ => "paragraph" === QQ.kind)).map(iQ.h).join(" ").replace(/[`*]/g, ""),
+                                      LQ = {
+                                        page: QQ,
+                                        anchor: FQ.heading.anchor,
+                                        title: FQ.heading.text.replace(/`/g, ""),
+                                        kind: Oo[QQ.layout],
+                                        text: wQ
                                       },
-                                      Nd = Jd.blocks.flatMap((Jd => "article" === dd.layout && "heading" === Jd.kind && 3 === Jd.level ? [{
-                                        page: dd,
-                                        anchor: Jd.anchor,
-                                        title: Jd.text.replace(/`/g, ""),
+                                      qQ = FQ.blocks.flatMap((FQ => "article" === QQ.layout && "heading" === FQ.kind && 3 === FQ.level ? [{
+                                        page: QQ,
+                                        anchor: FQ.anchor,
+                                        title: FQ.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: pd.title
+                                        text: LQ.title
                                       }] : []));
-                                    return [pd, ...Nd]
-                                  })), ...nW(dd)]
-                                }))), fW);
-                                if (!Qd) return dd.filter((dd => "Page" === dd.kind));
-                                const Jd = Qd.split(/\s+/);
-                                let kd = 0;
-                                return dd.map((dd => ({
-                                  entry: dd,
-                                  score: UW(dd, Qd, Jd)
-                                }))).filter((dd => dd.score > 0)).sort(((dd, Jd) => Jd.score - dd.score)).filter((dd => !dd.entry.listedUnder || (kd++, kd <= SW))).slice(0, jW).map((dd => dd.entry))
-                              }), [Qd]);
-                            (0, pd.useEffect)((() => {
-                              Kd(0)
-                            }), [Qd]), (0, pd.useEffect)((() => {
-                              const dd = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [LQ, ...qQ]
+                                  })), ...Ko(QQ)]
+                                }))), To);
+                                if (!YQ) return QQ.filter((QQ => "Page" === QQ.kind));
+                                const FQ = YQ.split(/\s+/);
+                                let wQ = 0;
+                                return QQ.map((QQ => ({
+                                  entry: QQ,
+                                  score: zo(QQ, YQ, FQ)
+                                }))).filter((QQ => QQ.score > 0)).sort(((QQ, FQ) => FQ.score - QQ.score)).filter((QQ => !QQ.entry.listedUnder || (wQ++, wQ <= Io))).slice(0, Uo).map((QQ => QQ.entry))
+                              }), [YQ]);
+                            (0, LQ.useEffect)((() => {
+                              uQ(0)
+                            }), [YQ]), (0, LQ.useEffect)((() => {
+                              const QQ = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === dd || void 0 === dd || dd.focus()
+                                null === QQ || void 0 === QQ || QQ.focus()
                               }
-                            }), []), (0, pd.useEffect)((() => {
-                              var dd, Jd;
-                              null === (dd = od.current) || void 0 === dd || null === (Jd = dd.querySelector(".Active")) || void 0 === Jd || Jd.scrollIntoView({
+                            }), []), (0, LQ.useEffect)((() => {
+                              var QQ, FQ;
+                              null === (QQ = HQ.current) || void 0 === QQ || null === (FQ = QQ.querySelector(".Active")) || void 0 === FQ || FQ.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [Cd]);
-                            const Rd = dd => {
-                              Nd(rd(Jd, dd.page, dd.anchor)), kd()
+                            }), [mQ]);
+                            const eQ = QQ => {
+                              qQ(JQ(FQ, QQ.page, QQ.anchor)), wQ()
                             };
-                            return (0, Ld.jsx)("div", {
+                            return (0, xQ.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: dd => {
-                                dd.target === dd.currentTarget && kd()
+                              onMouseDown: QQ => {
+                                QQ.target === QQ.currentTarget && wQ()
                               },
-                              children: (0, Ld.jsxs)("div", {
+                              children: (0, xQ.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: dd => {
-                                  dd.target !== ld.current && dd.preventDefault()
+                                onMouseDown: QQ => {
+                                  QQ.target !== bQ.current && QQ.preventDefault()
                                 },
-                                onKeyDown: dd => {
-                                  if ("Escape" === dd.key) kd();
-                                  else if ("Tab" === dd.key) {
-                                    var Jd;
-                                    dd.preventDefault(), null === (Jd = ld.current) || void 0 === Jd || Jd.focus()
+                                onKeyDown: QQ => {
+                                  if ("Escape" === QQ.key) wQ();
+                                  else if ("Tab" === QQ.key) {
+                                    var FQ;
+                                    QQ.preventDefault(), null === (FQ = bQ.current) || void 0 === FQ || FQ.focus()
                                   }
                                 },
-                                children: [(0, Ld.jsxs)("div", {
+                                children: [(0, xQ.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, Ld.jsx)(ed, {
+                                  children: [(0, xQ.jsx)(tQ, {
                                     name: "magnifying-glass"
-                                  }), (0, Ld.jsx)("input", {
-                                    ref: ld,
+                                  }), (0, xQ.jsx)("input", {
+                                    ref: bQ,
                                     autoFocus: !0,
-                                    value: Pd,
+                                    value: DQ,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": Od.length > 0 ? `DocsSearchResult-${Cd}` : void 0,
-                                    onChange: dd => {
-                                      gd(dd.target.value)
+                                    "aria-activedescendant": AQ.length > 0 ? `DocsSearchResult-${mQ}` : void 0,
+                                    onChange: QQ => {
+                                      vQ(QQ.target.value)
                                     },
-                                    onKeyDown: dd => {
-                                      if ("ArrowDown" === dd.key || "ArrowUp" === dd.key) {
-                                        dd.preventDefault();
-                                        const Jd = "ArrowDown" === dd.key ? 1 : -1;
-                                        Kd((Cd + Jd + Od.length) % Math.max(Od.length, 1))
-                                      } else "Enter" === dd.key && Od[Cd] && Rd(Od[Cd])
+                                    onKeyDown: QQ => {
+                                      if ("ArrowDown" === QQ.key || "ArrowUp" === QQ.key) {
+                                        QQ.preventDefault();
+                                        const FQ = "ArrowDown" === QQ.key ? 1 : -1;
+                                        uQ((mQ + FQ + AQ.length) % Math.max(AQ.length, 1))
+                                      } else "Enter" === QQ.key && AQ[mQ] && eQ(AQ[mQ])
                                     }
-                                  }), (0, Ld.jsx)("kbd", {
+                                  }), (0, xQ.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, Ld.jsxs)("ul", {
+                                }), (0, xQ.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: od,
+                                  ref: HQ,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!Qd && (0, Ld.jsx)("li", {
+                                  children: [!YQ && (0, xQ.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), Od.map(((dd, Jd) => {
-                                    var kd;
-                                    return (0, Ld.jsxs)("li", {
-                                      id: `DocsSearchResult-${Jd}`,
+                                  }), AQ.map(((QQ, FQ) => {
+                                    var wQ;
+                                    return (0, xQ.jsxs)("li", {
+                                      id: `DocsSearchResult-${FQ}`,
                                       role: "option",
-                                      "aria-selected": Jd === Cd,
-                                      className: Wd()("DocsSearchResult", {
-                                        Active: Jd === Cd
+                                      "aria-selected": FQ === mQ,
+                                      className: oQ()("DocsSearchResult", {
+                                        Active: FQ === mQ
                                       }),
                                       onMouseMove: () => {
-                                        Kd(Jd)
+                                        uQ(FQ)
                                       },
                                       onClick: () => {
-                                        Rd(dd)
+                                        eQ(QQ)
                                       },
-                                      children: [(0, Ld.jsx)(ed, {
-                                        name: dd.page.icon
-                                      }), (0, Ld.jsxs)("div", {
+                                      children: [(0, xQ.jsx)(tQ, {
+                                        name: QQ.page.icon
+                                      }), (0, xQ.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, Ld.jsx)("div", {
+                                        children: [(0, xQ.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, Ld.jsx)(DW, {
-                                            text: dd.title,
-                                            query: Qd
+                                          children: (0, xQ.jsx)(ao, {
+                                            text: QQ.title,
+                                            query: YQ
                                           })
-                                        }), dd.text && (0, Ld.jsx)("div", {
+                                        }), QQ.text && (0, xQ.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, Ld.jsx)(DW, {
-                                            text: yW(dd.text, Qd),
-                                            query: Qd
+                                          children: (0, xQ.jsx)(ao, {
+                                            text: jo(QQ.text, YQ),
+                                            query: YQ
                                           })
                                         })]
-                                      }), (0, Ld.jsx)("span", {
+                                      }), (0, xQ.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === dd.kind ? "Page" : null !== (kd = dd.listedUnder) && void 0 !== kd ? kd : `${dd.kind} \xb7 ${dd.page.title}`
+                                        children: "Page" === QQ.kind ? "Page" : null !== (wQ = QQ.listedUnder) && void 0 !== wQ ? wQ : `${QQ.kind} \xb7 ${QQ.page.title}`
                                       })]
-                                    }, `${dd.page.id}#${dd.anchor}`)
-                                  })), Qd && 0 === Od.length && (0, Ld.jsxs)("li", {
+                                    }, `${QQ.page.id}#${QQ.anchor}`)
+                                  })), YQ && 0 === AQ.length && (0, xQ.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", Pd, "\u201d."]
+                                    children: ["Nothing matches \u201c", DQ, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function EW(dd, Jd) {
-                            if (Jd < 10) return `${dd.toFixed(1)}s`;
-                            const kd = Math.floor(dd);
-                            return `${Math.floor(kd/60)}:${String(kd%60).padStart(2,"0")}`
+                          function fo(QQ, FQ) {
+                            if (FQ < 10) return `${QQ.toFixed(1)}s`;
+                            const wQ = Math.floor(QQ);
+                            return `${Math.floor(wQ/60)}:${String(wQ%60).padStart(2,"0")}`
                           }
 
-                          function cW() {
-                            const dd = lp((dd => dd.track)),
-                              Jd = lp((dd => dd.volume)),
-                              [kd, Nd] = (0, pd.useState)(0),
-                              Pd = (0, pd.useRef)(pp);
-                            if ((0, pd.useEffect)((() => {
-                                if (!dd) return;
-                                if (Nd(ep()), "playing" !== dd.status) return;
-                                let Jd = 0;
-                                const kd = () => {
-                                  Nd(ep()), Jd = requestAnimationFrame(kd)
+                          function Vo() {
+                            const QQ = HL((QQ => QQ.track)),
+                              FQ = HL((QQ => QQ.volume)),
+                              [wQ, qQ] = (0, LQ.useState)(0),
+                              DQ = (0, LQ.useRef)(wL);
+                            if ((0, LQ.useEffect)((() => {
+                                if (!QQ) return;
+                                if (qQ(AL()), "playing" !== QQ.status) return;
+                                let FQ = 0;
+                                const wQ = () => {
+                                  qQ(AL()), FQ = requestAnimationFrame(wQ)
                                 };
-                                return Jd = requestAnimationFrame(kd), () => {
-                                  cancelAnimationFrame(Jd)
+                                return FQ = requestAnimationFrame(wQ), () => {
+                                  cancelAnimationFrame(FQ)
                                 }
-                              }), [dd]), !dd) return null;
-                            const Zd = "paused" !== dd.status,
-                              gd = Math.min(kd, dd.duration);
-                            return (0, Ld.jsx)("div", {
+                              }), [QQ]), !QQ) return null;
+                            const kQ = "paused" !== QQ.status,
+                              vQ = Math.min(wQ, QQ.duration);
+                            return (0, xQ.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, Ld.jsxs)("section", {
+                              children: (0, xQ.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, Ld.jsx)("button", {
+                                children: [(0, xQ.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": Zd ? `Pause ${dd.name}` : `Play ${dd.name}`,
-                                  onClick: Op,
-                                  children: (0, Ld.jsx)(ed, {
-                                    name: Zd ? "pause" : "play"
+                                  "aria-label": kQ ? `Pause ${QQ.name}` : `Play ${QQ.name}`,
+                                  onClick: xL,
+                                  children: (0, xQ.jsx)(tQ, {
+                                    name: kQ ? "pause" : "play"
                                   })
-                                }), (0, Ld.jsxs)("div", {
+                                }), (0, xQ.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, Ld.jsxs)("div", {
+                                  children: [(0, xQ.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, Ld.jsx)("code", {
-                                      children: dd.name
-                                    }), (0, Ld.jsx)("span", {
-                                      children: dd.isSong ? "Song" : "Sound"
+                                    children: [(0, xQ.jsx)("code", {
+                                      children: QQ.name
+                                    }), (0, xQ.jsx)("span", {
+                                      children: QQ.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, Ld.jsxs)("div", {
+                                  }), (0, xQ.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, Ld.jsx)("span", {
-                                      children: EW(gd, dd.duration)
-                                    }), (0, Ld.jsx)("input", {
+                                    children: [(0, xQ.jsx)("span", {
+                                      children: fo(vQ, QQ.duration)
+                                    }), (0, xQ.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: dd.duration || 1,
+                                      max: QQ.duration || 1,
                                       step: .01,
-                                      value: gd,
-                                      disabled: 0 === dd.duration,
+                                      value: vQ,
+                                      disabled: 0 === QQ.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${EW(gd,dd.duration)} of ${EW(dd.duration,dd.duration)}`,
-                                      onChange: dd => {
-                                        const Jd = Number(dd.target.value);
-                                        ! function(dd) {
-                                          var Jd;
-                                          gp = dd, null === (Jd = Pp) || void 0 === Jd || Jd.seek(dd)
-                                        }(Jd), Nd(Jd)
+                                      "aria-valuetext": `${fo(vQ,QQ.duration)} of ${fo(QQ.duration,QQ.duration)}`,
+                                      onChange: QQ => {
+                                        const FQ = Number(QQ.target.value);
+                                        ! function(QQ) {
+                                          var FQ;
+                                          kL = QQ, null === (FQ = oL) || void 0 === FQ || FQ.seek(QQ)
+                                        }(FQ), qQ(FQ)
                                       }
-                                    }), (0, Ld.jsx)("span", {
-                                      children: dd.duration > 0 ? EW(dd.duration, dd.duration) : "\u2013"
+                                    }), (0, xQ.jsx)("span", {
+                                      children: QQ.duration > 0 ? fo(QQ.duration, QQ.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, Ld.jsxs)("div", {
+                                }), (0, xQ.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, Ld.jsx)("button", {
+                                  children: [(0, xQ.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === Jd ? "Unmute" : "Mute",
+                                    "aria-label": 0 === FQ ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === Jd ? Rp(Pd.current) : (Pd.current = Jd, Rp(0))
+                                      0 === FQ ? tL(DQ.current) : (DQ.current = FQ, tL(0))
                                     },
-                                    children: (0, Ld.jsx)(ed, {
+                                    children: (0, xQ.jsx)(tQ, {
                                       name: "volume",
-                                      className: Wd()({
-                                        Muted: 0 === Jd
+                                      className: oQ()({
+                                        Muted: 0 === FQ
                                       })
                                     })
-                                  }), (0, Ld.jsx)("input", {
+                                  }), (0, xQ.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: Jd,
+                                    value: FQ,
                                     "aria-label": "Volume",
-                                    onChange: dd => {
-                                      Rp(Number(dd.target.value))
+                                    onChange: QQ => {
+                                      tL(Number(QQ.target.value))
                                     }
                                   })]
-                                }), (0, Ld.jsx)("button", {
+                                }), (0, xQ.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var Jd;
-                                    null === (Jd = document.querySelector(`[data-docs-track="${CSS.escape(Np(dd.name,dd.isSong))}"]`)) || void 0 === Jd || Jd.focus(), Ip()
+                                    var FQ;
+                                    null === (FQ = document.querySelector(`[data-docs-track="${CSS.escape(LL(QQ.name,QQ.isSong))}"]`)) || void 0 === FQ || FQ.focus(), eL()
                                   },
-                                  children: (0, Ld.jsx)(ed, {
+                                  children: (0, xQ.jsx)(tQ, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var hW = kd(33);
-                          const rW = "docsTheme",
-                            uW = window.matchMedia("(prefers-color-scheme: light)");
+                          var ho = wQ(27);
+                          const Jo = "docsTheme",
+                            Eo = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function tW(dd) {
+                          function no(QQ) {
                             let {
-                              theme: Jd,
-                              onChange: kd
-                            } = dd;
-                            const pd = "dark" === Jd ? "light" : "dark";
-                            return (0, Ld.jsx)("button", {
+                              theme: FQ,
+                              onChange: wQ
+                            } = QQ;
+                            const LQ = "dark" === FQ ? "light" : "dark";
+                            return (0, xQ.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${pd} theme`,
-                              title: `Switch to ${pd} theme`,
+                              "aria-label": `Switch to ${LQ} theme`,
+                              title: `Switch to ${LQ} theme`,
                               onClick: () => {
-                                kd(pd)
+                                wQ(LQ)
                               },
-                              children: (0, Ld.jsx)(ed, {
-                                name: "dark" === Jd ? "moon" : "sun"
+                              children: (0, xQ.jsx)(tQ, {
+                                name: "dark" === FQ ? "moon" : "sun"
                               })
                             })
                           }
-                          const VW = "https://github.com/Bloxdy/code-api",
-                            zW = "https://discord.gg/playbloxd",
-                            HW = 180,
-                            wW = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const go = "https://github.com/Bloxdy/code-api",
+                            Po = "https://discord.gg/playbloxd",
+                            Zo = 180,
+                            yo = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function AW(dd) {
+                          function Bo(QQ) {
                             let {
-                              basePath: Jd,
-                              activePageId: kd,
-                              onNavigate: pd
-                            } = dd;
-                            return (0, Ld.jsx)("nav", {
+                              basePath: FQ,
+                              activePageId: wQ,
+                              onNavigate: LQ
+                            } = QQ;
+                            return (0, xQ.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: Ud.map((dd => (0, Ld.jsxs)("div", {
+                              children: lQ.map((QQ => (0, xQ.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, Ld.jsx)("div", {
+                                children: [(0, xQ.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: dd.title
-                                }), dd.pageIds.map((dd => {
-                                  var Nd;
-                                  const Zd = yd(dd);
-                                  return (0, Ld.jsxs)(Pd.d, {
-                                    to: rd(Jd, Zd),
-                                    className: Wd()("DocsNavLink", {
-                                      Active: Zd.id === kd
+                                  children: QQ.title
+                                }), QQ.pageIds.map((QQ => {
+                                  var qQ;
+                                  const kQ = jQ(QQ);
+                                  return (0, xQ.jsxs)(DQ.b, {
+                                    to: JQ(FQ, kQ),
+                                    className: oQ()("DocsNavLink", {
+                                      Active: kQ.id === wQ
                                     }),
-                                    "aria-current": Zd.id === kd ? "page" : void 0,
-                                    onClick: pd,
-                                    children: [(0, Ld.jsx)(ed, {
-                                      name: Zd.icon
-                                    }), (0, Ld.jsx)("span", {
-                                      children: null !== (Nd = Zd.navTitle) && void 0 !== Nd ? Nd : Zd.title
+                                    "aria-current": kQ.id === wQ ? "page" : void 0,
+                                    onClick: LQ,
+                                    children: [(0, xQ.jsx)(tQ, {
+                                      name: kQ.icon
+                                    }), (0, xQ.jsx)("span", {
+                                      children: null !== (qQ = kQ.navTitle) && void 0 !== qQ ? qQ : kQ.title
                                     })]
-                                  }, Zd.id)
+                                  }, kQ.id)
                                 }))]
-                              }, dd.title)))
+                              }, QQ.title)))
                             })
                           }
 
-                          function dP(dd) {
+                          function QD(QQ) {
                             let {
-                              basePath: Jd,
-                              pageId: kd
-                            } = dd;
-                            const pd = Ud.flatMap((dd => dd.pageIds)),
-                              Nd = pd.indexOf(kd),
-                              Wd = Nd > 0 ? yd(pd[Nd - 1]) : null,
-                              Zd = Nd < pd.length - 1 ? yd(pd[Nd + 1]) : null;
-                            return (0, Ld.jsxs)("nav", {
+                              basePath: FQ,
+                              pageId: wQ
+                            } = QQ;
+                            const LQ = lQ.flatMap((QQ => QQ.pageIds)),
+                              qQ = LQ.indexOf(wQ),
+                              oQ = qQ > 0 ? jQ(LQ[qQ - 1]) : null,
+                              kQ = qQ < LQ.length - 1 ? jQ(LQ[qQ + 1]) : null;
+                            return (0, xQ.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [Wd ? (0, Ld.jsxs)(Pd.d, {
+                              children: [oQ ? (0, xQ.jsxs)(DQ.b, {
                                 className: "DocsPagerLink Previous",
-                                to: rd(Jd, Wd),
-                                children: [(0, Ld.jsx)("span", {
+                                to: JQ(FQ, oQ),
+                                children: [(0, xQ.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, Ld.jsx)("span", {
+                                }), (0, xQ.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Wd.title
+                                  children: oQ.title
                                 })]
-                              }) : (0, Ld.jsx)("span", {}), Zd && (0, Ld.jsxs)(Pd.d, {
+                              }) : (0, xQ.jsx)("span", {}), kQ && (0, xQ.jsxs)(DQ.b, {
                                 className: "DocsPagerLink Next",
-                                to: rd(Jd, Zd),
-                                children: [(0, Ld.jsx)("span", {
+                                to: JQ(FQ, kQ),
+                                children: [(0, xQ.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, Ld.jsx)("span", {
+                                }), (0, xQ.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Zd.title
+                                  children: kQ.title
                                 })]
                               })]
                             })
                           }
 
-                          function JP(dd) {
+                          function FD(QQ) {
                             let {
-                              basePath: Jd,
-                              embedded: kd = !1
-                            } = dd;
+                              basePath: FQ,
+                              embedded: wQ = !1
+                            } = QQ;
                             const {
-                              pageSlug: Nd = ""
-                            } = (0, Zd.y)(), Cd = (0, Zd.v)(), Kd = (0, Zd.w)(), od = (ld = Nd, nd.find((dd => dd.slug === ld)));
-                            var ld;
-                            const [Qd, Od] = function() {
-                              const [dd, Jd] = (0, pd.useState)((() => {
-                                const dd = hW.i.getItem(rW);
-                                return "dark" === dd || "light" === dd ? dd : null
-                              })), [kd, Nd] = (0, pd.useState)(uW.matches ? "light" : "dark");
-                              return (0, pd.useEffect)((() => {
-                                const dd = () => {
-                                  Nd(uW.matches ? "light" : "dark")
+                              pageSlug: qQ = ""
+                            } = (0, kQ.y)(), mQ = (0, kQ.r)(), uQ = (0, kQ.v)(), HQ = (bQ = qQ, zQ.find((QQ => QQ.slug === bQ)));
+                            var bQ;
+                            const [YQ, AQ] = function() {
+                              const [QQ, FQ] = (0, LQ.useState)((() => {
+                                const QQ = ho.i.getItem(Jo);
+                                return "dark" === QQ || "light" === QQ ? QQ : null
+                              })), [wQ, qQ] = (0, LQ.useState)(Eo.matches ? "light" : "dark");
+                              return (0, LQ.useEffect)((() => {
+                                const QQ = () => {
+                                  qQ(Eo.matches ? "light" : "dark")
                                 };
-                                return uW.addEventListener("change", dd), () => {
-                                  uW.removeEventListener("change", dd)
+                                return Eo.addEventListener("change", QQ), () => {
+                                  Eo.removeEventListener("change", QQ)
                                 }
-                              }), []), [null !== dd && void 0 !== dd ? dd : kd, dd => {
-                                hW.i.setItem(rW, dd), Jd(dd)
+                              }), []), [null !== QQ && void 0 !== QQ ? QQ : wQ, QQ => {
+                                ho.i.setItem(Jo, QQ), FQ(QQ)
                               }]
-                            }(), [Rd, Id] = (0, pd.useState)(null), [Gd, vd] = (0, pd.useState)(!1), [xd, qd] = (0, pd.useState)(!1), [Bd, ad] = (0, pd.useState)([]), Md = function(dd, Jd) {
-                              const [kd, Nd] = (0, pd.useState)("");
-                              return (0, pd.useEffect)((() => {
-                                if (!Jd) return;
-                                let kd = 0;
-                                const pd = () => {
-                                    var pd, Wd;
-                                    kd = 0;
-                                    const Pd = Jd.getBoundingClientRect().top + HW;
-                                    let Zd = null !== (pd = null === (Wd = dd[0]) || void 0 === Wd ? void 0 : Wd.anchor) && void 0 !== pd ? pd : "";
-                                    for (const Jd of dd) {
-                                      const dd = document.getElementById(Jd.anchor);
-                                      dd && dd.getBoundingClientRect().top <= Pd && (Zd = Jd.anchor)
+                            }(), [eQ, MQ] = (0, LQ.useState)(null), [GQ, pQ] = (0, LQ.useState)(!1), [cQ, CQ] = (0, LQ.useState)(!1), [SQ, WQ] = (0, LQ.useState)([]), RQ = function(QQ, FQ) {
+                              const [wQ, qQ] = (0, LQ.useState)("");
+                              return (0, LQ.useEffect)((() => {
+                                if (!FQ) return;
+                                let wQ = 0;
+                                const LQ = () => {
+                                    var LQ, oQ;
+                                    wQ = 0;
+                                    const DQ = FQ.getBoundingClientRect().top + Zo;
+                                    let kQ = null !== (LQ = null === (oQ = QQ[0]) || void 0 === oQ ? void 0 : oQ.anchor) && void 0 !== LQ ? LQ : "";
+                                    for (const FQ of QQ) {
+                                      const QQ = document.getElementById(FQ.anchor);
+                                      QQ && QQ.getBoundingClientRect().top <= DQ && (kQ = FQ.anchor)
                                     }
-                                    Jd.scrollTop + Jd.clientHeight >= Jd.scrollHeight - 2 && Jd.scrollTop > 0 && dd.length > 0 && (Zd = dd[dd.length - 1].anchor), Nd(Zd)
+                                    FQ.scrollTop + FQ.clientHeight >= FQ.scrollHeight - 2 && FQ.scrollTop > 0 && QQ.length > 0 && (kQ = QQ[QQ.length - 1].anchor), qQ(kQ)
                                   },
-                                  Wd = () => {
-                                    kd || (kd = requestAnimationFrame(pd))
+                                  oQ = () => {
+                                    wQ || (wQ = requestAnimationFrame(LQ))
                                   };
-                                return pd(), Jd.addEventListener("scroll", Wd, {
+                                return LQ(), FQ.addEventListener("scroll", oQ, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(kd), Jd.removeEventListener("scroll", Wd)
+                                  cancelAnimationFrame(wQ), FQ.removeEventListener("scroll", oQ)
                                 }
-                              }), [dd, Jd]), kd
-                            }(Bd, Rd), Fd = "" === Nd && Cd.hash ? function(dd) {
-                              const Jd = (0, sd.q)(dd);
-                              if (Ed(yd("welcome"), Jd)) return null;
-                              const kd = Object.hasOwn(hd, Jd) ? hd[Jd] : null;
-                              if (kd) return {
-                                page: yd(kd.pageId),
-                                anchor: kd.anchor
+                              }), [QQ, FQ]), wQ
+                            }(SQ, eQ), OQ = "" === qQ && mQ.hash ? function(QQ) {
+                              const FQ = (0, iQ.q)(QQ);
+                              if (fQ(jQ("welcome"), FQ)) return null;
+                              const wQ = Object.hasOwn(hQ, FQ) ? hQ[FQ] : null;
+                              if (wQ) return {
+                                page: jQ(wQ.pageId),
+                                anchor: wQ.anchor
                               };
-                              const pd = yd("readme");
-                              return Ed(pd, Jd) ? {
-                                page: pd,
-                                anchor: Jd
-                              } : cd(`#${Jd}`)
-                            }(Cd.hash) : null;
-                            (0, pd.useEffect)((() => (gd.d.set({
+                              const LQ = jQ("readme");
+                              return fQ(LQ, FQ) ? {
+                                page: LQ,
+                                anchor: FQ
+                              } : VQ(`#${FQ}`)
+                            }(mQ.hash) : null;
+                            (0, LQ.useEffect)((() => (vQ.c.set({
                               musicOnFromPage: !1
                             }), () => {
-                              gd.d.set({
+                              vQ.c.set({
                                 musicOnFromPage: !0
-                              }), Ip()
-                            })), []), (0, pd.useEffect)((() => {
-                              const dd = dd => {
-                                const Jd = dd.target;
-                                if (Jd.closest(".DocsTextDialog")) return;
-                                const kd = Jd.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Jd.tagName);
-                                "k" === dd.key && (dd.metaKey || dd.ctrlKey) || "/" === dd.key && !kd ? (dd.preventDefault(), qd(!0)) : "Escape" === dd.key && vd(!1)
+                              }), eL()
+                            })), []), (0, LQ.useEffect)((() => {
+                              const QQ = QQ => {
+                                const FQ = QQ.target;
+                                if (FQ.closest(".DocsTextDialog")) return;
+                                const wQ = FQ.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(FQ.tagName);
+                                "k" === QQ.key && (QQ.metaKey || QQ.ctrlKey) || "/" === QQ.key && !wQ ? (QQ.preventDefault(), CQ(!0)) : "Escape" === QQ.key && pQ(!1)
                               };
-                              return window.addEventListener("keydown", dd), () => {
-                                window.removeEventListener("keydown", dd)
+                              return window.addEventListener("keydown", QQ), () => {
+                                window.removeEventListener("keydown", QQ)
                               }
                             }), []);
-                            const Yd = (0, pd.useRef)(null);
-                            (0, pd.useLayoutEffect)((() => {
-                              var dd, Jd;
-                              if (!Rd) return;
-                              const kd = Yd.current === Cd.pathname;
-                              Yd.current = Cd.pathname;
-                              const pd = (0, sd.q)(Cd.hash),
-                                Nd = pd ? document.getElementById(pd) : null;
-                              if (null === (dd = Rd.querySelector(".DocsTargeted")) || void 0 === dd || dd.classList.remove("DocsTargeted"), null === Nd || void 0 === Nd || null === (Jd = Nd.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Jd || Jd.classList.add("DocsTargeted"), Nd) {
-                                var Wd;
-                                const dd = Nd.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (Wd = Nd.closest(".DocsChangelogEntry")) && void 0 !== Wd ? Wd : Nd).scrollIntoView({
-                                  block: dd ? "center" : "start",
-                                  behavior: kd ? "smooth" : "auto"
+                            const sQ = (0, LQ.useRef)(null);
+                            (0, LQ.useLayoutEffect)((() => {
+                              var QQ, FQ;
+                              if (!eQ) return;
+                              const wQ = sQ.current === mQ.pathname;
+                              sQ.current = mQ.pathname;
+                              const LQ = (0, iQ.q)(mQ.hash),
+                                qQ = LQ ? document.getElementById(LQ) : null;
+                              if (null === (QQ = eQ.querySelector(".DocsTargeted")) || void 0 === QQ || QQ.classList.remove("DocsTargeted"), null === qQ || void 0 === qQ || null === (FQ = qQ.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === FQ || FQ.classList.add("DocsTargeted"), qQ) {
+                                var oQ;
+                                const QQ = qQ.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (oQ = qQ.closest(".DocsChangelogEntry")) && void 0 !== oQ ? oQ : qQ).scrollIntoView({
+                                  block: QQ ? "center" : "start",
+                                  behavior: wQ ? "smooth" : "auto"
                                 })
-                              } else kd || Rd.scrollTo({
+                              } else wQ || eQ.scrollTo({
                                 top: 0
                               })
-                            }), [Rd, Cd.pathname, Cd.hash, Cd.key]);
-                            const md = (0, pd.useCallback)((() => {
-                                vd(!1)
+                            }), [eQ, mQ.pathname, mQ.hash, mQ.key]);
+                            const rQ = (0, LQ.useCallback)((() => {
+                                pQ(!1)
                               }), []),
-                              bd = (0, pd.useCallback)((dd => {
-                                Kd({
-                                  hash: dd
+                              IQ = (0, LQ.useCallback)((QQ => {
+                                uQ({
+                                  hash: QQ
                                 })
-                              }), [Kd]);
-                            if (Fd) return (0, Ld.jsx)(Zd.e, {
+                              }), [uQ]);
+                            if (OQ) return (0, xQ.jsx)(kQ.e, {
                               replace: !0,
-                              to: rd(Jd, Fd.page, Fd.anchor)
+                              to: JQ(FQ, OQ.page, OQ.anchor)
                             });
-                            if (!od) return (0, Ld.jsx)(Zd.e, {
+                            if (!HQ) return (0, xQ.jsx)(kQ.e, {
                               replace: !0,
-                              to: Jd
+                              to: FQ
                             });
-                            const Sd = kd ? "div" : "main";
-                            return (0, Ld.jsx)(LJ.Provider, {
-                              value: Jd,
-                              children: (0, Ld.jsx)(OJ.Provider, {
-                                value: Rd,
-                                children: (0, Ld.jsxs)("div", {
-                                  ref: Id,
-                                  className: Wd()("DocsSite", {
-                                    Embedded: kd,
-                                    NavOpen: Gd
+                            const UQ = wQ ? "div" : "main";
+                            return (0, xQ.jsx)(YF.Provider, {
+                              value: FQ,
+                              children: (0, xQ.jsx)(xF.Provider, {
+                                value: eQ,
+                                children: (0, xQ.jsxs)("div", {
+                                  ref: MQ,
+                                  className: oQ()("DocsSite", {
+                                    Embedded: wQ,
+                                    NavOpen: GQ
                                   }),
-                                  "data-theme": Qd,
-                                  children: [(0, Ld.jsxs)("header", {
+                                  "data-theme": YQ,
+                                  children: [(0, xQ.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, Ld.jsx)("button", {
+                                    children: [(0, xQ.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": Gd ? "Close menu" : "Open menu",
-                                      "aria-expanded": Gd,
+                                      "aria-label": GQ ? "Close menu" : "Open menu",
+                                      "aria-expanded": GQ,
                                       onClick: () => {
-                                        vd(!Gd)
+                                        pQ(!GQ)
                                       },
-                                      children: (0, Ld.jsx)(ed, {
-                                        name: Gd ? "cross" : "menu"
+                                      children: (0, xQ.jsx)(tQ, {
+                                        name: GQ ? "cross" : "menu"
                                       })
-                                    }), (0, Ld.jsxs)(Pd.d, {
-                                      to: Jd,
+                                    }), (0, xQ.jsxs)(DQ.b, {
+                                      to: FQ,
                                       className: "DocsBrand",
-                                      children: [(0, Ld.jsx)("img", {
+                                      children: [(0, xQ.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, Ld.jsx)("span", {
+                                      }), (0, xQ.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, Ld.jsx)("span", {
+                                      }), (0, xQ.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, Ld.jsxs)("button", {
+                                    }), (0, xQ.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        qd(!0)
+                                        CQ(!0)
                                       },
-                                      children: [(0, Ld.jsx)(ed, {
+                                      children: [(0, xQ.jsx)(tQ, {
                                         name: "magnifying-glass"
-                                      }), (0, Ld.jsx)("span", {
+                                      }), (0, xQ.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, Ld.jsxs)("kbd", {
-                                        children: [wW ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, xQ.jsxs)("kbd", {
+                                        children: [yo ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, Ld.jsxs)("div", {
+                                    }), (0, xQ.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, Ld.jsxs)("a", {
-                                        href: zW,
+                                      children: [(0, xQ.jsxs)("a", {
+                                        href: Po,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Ld.jsx)(ed, {
+                                        children: [(0, xQ.jsx)(tQ, {
                                           name: "discord"
-                                        }), (0, Ld.jsx)("span", {
+                                        }), (0, xQ.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, Ld.jsxs)("a", {
-                                        href: VW,
+                                      }), (0, xQ.jsxs)("a", {
+                                        href: go,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Ld.jsx)(ed, {
+                                        children: [(0, xQ.jsx)(tQ, {
                                           name: "external-link"
-                                        }), (0, Ld.jsx)("span", {
+                                        }), (0, xQ.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !kd && (0, Ld.jsxs)(Pd.d, {
+                                      }), !wQ && (0, xQ.jsxs)(DQ.b, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, Ld.jsx)(ed, {
+                                        children: [(0, xQ.jsx)(tQ, {
                                           name: "play"
-                                        }), (0, Ld.jsx)("span", {
+                                        }), (0, xQ.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, Ld.jsx)(tW, {
-                                        theme: Qd,
-                                        onChange: Od
+                                      }), (0, xQ.jsx)(no, {
+                                        theme: YQ,
+                                        onChange: AQ
                                       })]
                                     })]
-                                  }), (0, Ld.jsxs)("div", {
+                                  }), (0, xQ.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, Ld.jsx)("aside", {
+                                    children: [(0, xQ.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, Ld.jsx)(AW, {
-                                        basePath: Jd,
-                                        activePageId: od.id,
-                                        onNavigate: md
+                                      children: (0, xQ.jsx)(Bo, {
+                                        basePath: FQ,
+                                        activePageId: HQ.id,
+                                        onNavigate: rQ
                                       })
-                                    }), (0, Ld.jsx)("div", {
+                                    }), (0, xQ.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: md
-                                    }), (0, Ld.jsxs)(Sd, {
+                                      onClick: rQ
+                                    }), (0, xQ.jsxs)(UQ, {
                                       className: "DocsMain",
-                                      children: [(0, Ld.jsx)(sW, {
-                                        page: od,
-                                        onTocChange: ad
-                                      }, od.id), (0, Ld.jsx)(dP, {
-                                        basePath: Jd,
-                                        pageId: od.id
+                                      children: [(0, xQ.jsx)(Co, {
+                                        page: HQ,
+                                        onTocChange: WQ
+                                      }, HQ.id), (0, xQ.jsx)(QD, {
+                                        basePath: FQ,
+                                        pageId: HQ.id
                                       })]
-                                    }), (0, Ld.jsx)("aside", {
-                                      className: Wd()("DocsToc", {
-                                        Timeline: "changelog" === od.layout
+                                    }), (0, xQ.jsx)("aside", {
+                                      className: oQ()("DocsToc", {
+                                        Timeline: "changelog" === HQ.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, Ld.jsx)(FW, {
-                                        isChangelog: "changelog" === od.layout,
-                                        toc: Bd,
-                                        activeAnchor: Md,
-                                        onNavigate: bd
+                                      children: (0, xQ.jsx)(Ro, {
+                                        isChangelog: "changelog" === HQ.layout,
+                                        toc: SQ,
+                                        activeAnchor: RQ,
+                                        onNavigate: IQ
                                       })
                                     })]
-                                  }), (0, Ld.jsx)(cW, {}), xd && (0, Ld.jsx)(TW, {
-                                    basePath: Jd,
+                                  }), (0, xQ.jsx)(Vo, {}), cQ && (0, xQ.jsx)(Xo, {
+                                    basePath: FQ,
                                     onClose: () => {
-                                      qd(!1)
+                                      CQ(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4612: (dd, Jd, kd) => {
-                          kd.d(Jd, {
-                            e: () => pd,
-                            f: () => Pd,
-                            h: () => ed,
-                            k: () => Od,
-                            m: () => Zd,
-                            q: () => Nd,
-                            r: () => Wd,
-                            t: () => Ld,
-                            v: () => Qd,
-                            y: () => ld
+                        }, 4585: (QQ, FQ, wQ) => {
+                          wQ.d(FQ, {
+                            B: () => YQ,
+                            F: () => bQ,
+                            c: () => LQ,
+                            f: () => DQ,
+                            h: () => tQ,
+                            l: () => AQ,
+                            m: () => kQ,
+                            q: () => qQ,
+                            u: () => oQ,
+                            y: () => xQ
                           });
-                          const pd = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const LQ = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function Nd(dd) {
+                          function qQ(QQ) {
                             try {
-                              return decodeURIComponent(dd.slice(1))
+                              return decodeURIComponent(QQ.slice(1))
                             } catch {
-                              return dd.slice(1)
+                              return QQ.slice(1)
                             }
                           }
 
-                          function Wd(dd) {
-                            return dd.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function oQ(QQ) {
+                            return QQ.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const Pd = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${pd.source}`, "g");
+                          const DQ = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${LQ.source}`, "g");
 
-                          function Zd(dd, Jd) {
-                            return 2 === dd.length ? Jd.replace(/^ (.*) $/, "$1") : Jd
-                          }
-
-                          function gd(dd) {
-                            return "" === dd.trim()
+                          function kQ(QQ, FQ) {
+                            return 2 === QQ.length ? FQ.replace(/^ (.*) $/, "$1") : FQ
                           }
 
-                          function Cd(dd) {
-                            const Jd = [];
-                            for (const kd of dd.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Jd.length > 0 && Jd[Jd.length - 1].endsWith("\\") ? Jd[Jd.length - 1] += `|${kd}` : Jd.push(kd);
-                            return Jd.map((dd => dd.trim().replaceAll("\\|", "|")))
+                          function vQ(QQ) {
+                            return "" === QQ.trim()
                           }
-                          const Kd = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function od(dd) {
-                            const Jd = [],
-                              kd = [{
+                          function mQ(QQ) {
+                            const FQ = [];
+                            for (const wQ of QQ.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) FQ.length > 0 && FQ[FQ.length - 1].endsWith("\\") ? FQ[FQ.length - 1] += `|${wQ}` : FQ.push(wQ);
+                            return FQ.map((QQ => QQ.trim().replaceAll("\\|", "|")))
+                          }
+                          const uQ = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function HQ(QQ) {
+                            const FQ = [],
+                              wQ = [{
                                 indent: -1,
-                                items: Jd
+                                items: FQ
                               }];
-                            let pd = null;
-                            for (const Nd of dd) {
-                              const dd = Nd.match(Kd);
-                              if (!dd) {
-                                pd && (pd.text += ` ${Nd.trim()}`);
+                            let LQ = null;
+                            for (const qQ of QQ) {
+                              const QQ = qQ.match(uQ);
+                              if (!QQ) {
+                                LQ && (LQ.text += ` ${qQ.trim()}`);
                                 continue
                               }
-                              const Jd = dd[1].replace(/\t/g, "  ").length;
-                              for (; Jd <= kd[kd.length - 1].indent;) kd.pop();
-                              pd = {
-                                text: dd[3].trim(),
+                              const FQ = QQ[1].replace(/\t/g, "  ").length;
+                              for (; FQ <= wQ[wQ.length - 1].indent;) wQ.pop();
+                              LQ = {
+                                text: QQ[3].trim(),
                                 children: []
-                              }, kd[kd.length - 1].items.push(pd), kd.push({
-                                indent: Jd,
-                                items: pd.children
+                              }, wQ[wQ.length - 1].items.push(LQ), wQ.push({
+                                indent: FQ,
+                                items: LQ.children
                               })
                             }
-                            return Jd
+                            return FQ
                           }
 
-                          function ld(dd) {
-                            const Jd = dd.replace(/\r\n/g, "\n").split("\n"),
-                              kd = [];
-                            let pd = 0;
-                            for (; pd < Jd.length;) {
-                              const dd = Jd[pd];
-                              if (gd(dd)) {
-                                pd++;
+                          function bQ(QQ) {
+                            const FQ = QQ.replace(/\r\n/g, "\n").split("\n"),
+                              wQ = [];
+                            let LQ = 0;
+                            for (; LQ < FQ.length;) {
+                              const QQ = FQ[LQ];
+                              if (vQ(QQ)) {
+                                LQ++;
                                 continue
                               }
-                              const Nd = dd.match(/^\s*```\s*(\w*)\s*$/);
-                              if (Nd) {
-                                const dd = [];
-                                for (pd++; pd < Jd.length && !/^\s*```\s*$/.test(Jd[pd]);) dd.push(Jd[pd]), pd++;
-                                pd++, kd.push({
+                              const qQ = QQ.match(/^\s*```\s*(\w*)\s*$/);
+                              if (qQ) {
+                                const QQ = [];
+                                for (LQ++; LQ < FQ.length && !/^\s*```\s*$/.test(FQ[LQ]);) QQ.push(FQ[LQ]), LQ++;
+                                LQ++, wQ.push({
                                   kind: "code",
-                                  lang: Nd[1] || "text",
-                                  code: dd.join("\n").replace(/\s+$/, "")
+                                  lang: qQ[1] || "text",
+                                  code: QQ.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const Pd = dd.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (Pd) {
-                                const dd = Pd[2].trim();
-                                kd.push({
+                              const DQ = QQ.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (DQ) {
+                                const QQ = DQ[2].trim();
+                                wQ.push({
                                   kind: "heading",
-                                  level: Pd[1].length,
-                                  text: dd,
-                                  anchor: Wd(dd)
-                                }), pd++;
+                                  level: DQ[1].length,
+                                  text: QQ,
+                                  anchor: oQ(QQ)
+                                }), LQ++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(dd)) {
-                                kd.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(QQ)) {
+                                wQ.push({
                                   kind: "rule"
-                                }), pd++;
+                                }), LQ++;
                                 continue
                               }
-                              if (dd.trim().startsWith("|") && pd + 1 < Jd.length && /^\s*\|[\s:|-]+\|\s*$/.test(Jd[pd + 1])) {
-                                const Nd = Cd(dd),
-                                  Wd = [];
-                                for (pd += 2; pd < Jd.length && Jd[pd].trim().startsWith("|");) Wd.push(Cd(Jd[pd])), pd++;
-                                kd.push({
+                              if (QQ.trim().startsWith("|") && LQ + 1 < FQ.length && /^\s*\|[\s:|-]+\|\s*$/.test(FQ[LQ + 1])) {
+                                const qQ = mQ(QQ),
+                                  oQ = [];
+                                for (LQ += 2; LQ < FQ.length && FQ[LQ].trim().startsWith("|");) oQ.push(mQ(FQ[LQ])), LQ++;
+                                wQ.push({
                                   kind: "table",
-                                  header: Nd,
-                                  rows: Wd
+                                  header: qQ,
+                                  rows: oQ
                                 });
                                 continue
                               }
-                              if (dd.startsWith(">")) {
-                                const dd = [];
-                                for (; pd < Jd.length && Jd[pd].startsWith(">");) dd.push(Jd[pd].replace(/^>\s?/, "")), pd++;
-                                kd.push({
+                              if (QQ.startsWith(">")) {
+                                const QQ = [];
+                                for (; LQ < FQ.length && FQ[LQ].startsWith(">");) QQ.push(FQ[LQ].replace(/^>\s?/, "")), LQ++;
+                                wQ.push({
                                   kind: "quote",
-                                  blocks: ld(dd.join("\n"))
+                                  blocks: bQ(QQ.join("\n"))
                                 });
                                 continue
                               }
-                              if (Kd.test(dd)) {
-                                const Nd = [],
-                                  Wd = /^\s*\d+\./.test(dd);
-                                for (; pd < Jd.length && !gd(Jd[pd]) && (Kd.test(Jd[pd]) || /^\s+\S/.test(Jd[pd]));) Nd.push(Jd[pd]), pd++;
-                                kd.push({
+                              if (uQ.test(QQ)) {
+                                const qQ = [],
+                                  oQ = /^\s*\d+\./.test(QQ);
+                                for (; LQ < FQ.length && !vQ(FQ[LQ]) && (uQ.test(FQ[LQ]) || /^\s+\S/.test(FQ[LQ]));) qQ.push(FQ[LQ]), LQ++;
+                                wQ.push({
                                   kind: "list",
-                                  ordered: Wd,
-                                  items: od(Nd)
+                                  ordered: oQ,
+                                  items: HQ(qQ)
                                 });
                                 continue
                               }
-                              const Zd = [];
-                              for (; pd < Jd.length && !gd(Jd[pd]) && !/^\s*```/.test(Jd[pd]) && !/^#{1,6}\s/.test(Jd[pd]) && !Jd[pd].startsWith(">") && !Kd.test(Jd[pd]) && (!Jd[pd].trim().startsWith("|") || 0 !== Zd.length);) Zd.push(Jd[pd].trim()), pd++;
-                              0 === Zd.length && (Zd.push(Jd[pd].trim()), pd++), kd.push({
+                              const kQ = [];
+                              for (; LQ < FQ.length && !vQ(FQ[LQ]) && !/^\s*```/.test(FQ[LQ]) && !/^#{1,6}\s/.test(FQ[LQ]) && !FQ[LQ].startsWith(">") && !uQ.test(FQ[LQ]) && (!FQ[LQ].trim().startsWith("|") || 0 !== kQ.length);) kQ.push(FQ[LQ].trim()), LQ++;
+                              0 === kQ.length && (kQ.push(FQ[LQ].trim()), LQ++), wQ.push({
                                 kind: "paragraph",
-                                text: Zd.join(" ")
+                                text: kQ.join(" ")
                               })
                             }
-                            return kd
+                            return wQ
                           }
 
-                          function Qd(dd) {
-                            let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const kd = ld(dd);
-                            let pd = "";
-                            const Nd = [],
-                              Wd = [],
-                              Pd = new Map;
-                            for (const Cd of kd) {
-                              if ("heading" === Cd.kind) {
-                                var Zd;
-                                const dd = (null !== (Zd = Pd.get(Cd.anchor)) && void 0 !== Zd ? Zd : 0) + 1;
-                                Pd.set(Cd.anchor, dd), dd > 1 && (Cd.anchor = `${Cd.anchor}-${dd}`)
+                          function YQ(QQ) {
+                            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const wQ = bQ(QQ);
+                            let LQ = "";
+                            const qQ = [],
+                              oQ = [],
+                              DQ = new Map;
+                            for (const mQ of wQ) {
+                              if ("heading" === mQ.kind) {
+                                var kQ;
+                                const QQ = (null !== (kQ = DQ.get(mQ.anchor)) && void 0 !== kQ ? kQ : 0) + 1;
+                                DQ.set(mQ.anchor, QQ), QQ > 1 && (mQ.anchor = `${mQ.anchor}-${QQ}`)
                               }
-                              if ("heading" === Cd.kind && 1 === Cd.level && !pd) {
-                                pd = Cd.text;
+                              if ("heading" === mQ.kind && 1 === mQ.level && !LQ) {
+                                LQ = mQ.text;
                                 continue
                               }
-                              if ("heading" === Cd.kind && Cd.level <= Jd) {
-                                Wd.push({
-                                  heading: Cd,
+                              if ("heading" === mQ.kind && mQ.level <= FQ) {
+                                oQ.push({
+                                  heading: mQ,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const dd = Wd.at(-1);
-                              dd ? dd.blocks.push(Cd) : Nd.push(Cd)
+                              const QQ = oQ.at(-1);
+                              QQ ? QQ.blocks.push(mQ) : qQ.push(mQ)
                             }
-                            const gd = dd => {
+                            const vQ = QQ => {
                               for (;
-                                "rule" === (null === (Jd = dd.at(-1)) || void 0 === Jd ? void 0 : Jd.kind);) {
-                                var Jd;
-                                dd.pop()
+                                "rule" === (null === (FQ = QQ.at(-1)) || void 0 === FQ ? void 0 : FQ.kind);) {
+                                var FQ;
+                                QQ.pop()
                               }
                             };
-                            gd(Nd);
-                            for (const Cd of Wd) gd(Cd.blocks);
+                            vQ(qQ);
+                            for (const mQ of oQ) vQ(mQ.blocks);
                             return {
-                              title: pd,
-                              intro: Nd,
-                              sections: Wd
+                              title: LQ,
+                              intro: qQ,
+                              sections: oQ
                             }
                           }
 
-                          function Ld(dd) {
+                          function xQ(QQ) {
                             return [{
                               heading: null,
-                              blocks: dd.intro
-                            }, ...dd.sections.map((dd => ({
-                              heading: dd.heading,
-                              blocks: dd.blocks
+                              blocks: QQ.intro
+                            }, ...QQ.sections.map((QQ => ({
+                              heading: QQ.heading,
+                              blocks: QQ.blocks
                             })))]
                           }
 
-                          function Od(dd) {
-                            return dd.flatMap((dd => "code" === dd.kind ? [dd] : "quote" === dd.kind ? Od(dd.blocks) : []))
+                          function AQ(QQ) {
+                            return QQ.flatMap((QQ => "code" === QQ.kind ? [QQ] : "quote" === QQ.kind ? AQ(QQ.blocks) : []))
                           }
 
-                          function ed(dd) {
-                            switch (dd.kind) {
+                          function tQ(QQ) {
+                            switch (QQ.kind) {
                               case "heading":
                               case "paragraph":
-                                return dd.text;
+                                return QQ.text;
                               case "code":
-                                return dd.code;
+                                return QQ.code;
                               case "table":
-                                return [dd.header, ...dd.rows].map((dd => dd.join(" "))).join(" ");
+                                return [QQ.header, ...QQ.rows].map((QQ => QQ.join(" "))).join(" ");
                               case "list": {
-                                const Jd = dd => dd.map((dd => `${dd.text} ${Jd(dd.children)}`)).join(" ");
-                                return Jd(dd.items)
+                                const FQ = QQ => QQ.map((QQ => `${QQ.text} ${FQ(QQ.children)}`)).join(" ");
+                                return FQ(QQ.items)
                               }
                               case "quote":
-                                return dd.blocks.map(ed).join(" ");
+                                return QQ.blocks.map(tQ).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4726: (dd, Jd, kd) => {
-                          kd.d(Jd, {
-                            b: () => Zd
+                        }, 4674: (QQ, FQ, wQ) => {
+                          wQ.d(FQ, {
+                            d: () => kQ
                           });
-                          var pd = kd(56),
-                            Nd = kd(300),
-                            Wd = kd(1924),
-                            Pd = kd(1103);
+                          var LQ = wQ(53),
+                            qQ = wQ(307),
+                            oQ = wQ(1887),
+                            DQ = wQ(1107);
 
-                          function Zd(dd) {
+                          function kQ(QQ) {
                             let {
-                              text: Jd
-                            } = dd;
-                            const kd = [];
-                            let Zd = "";
-                            return (0, Nd.Wb)(Jd).forEach(((dd, Jd) => {
-                              if ("string" === typeof dd || !(0, Wd.f)(dd.icon)) return void(Zd += "string" === typeof dd ? dd : dd.icon);
-                              const Nd = Math.max(0, Zd.trimEnd().search(/\S{1,12}$/));
-                              kd.push((0, Pd.jsxs)(pd.Fragment, {
-                                children: [Zd.slice(0, Nd), (0, Pd.jsxs)("span", {
+                              text: FQ
+                            } = QQ;
+                            const wQ = [];
+                            let kQ = "";
+                            return (0, qQ.ec)(FQ).forEach(((QQ, FQ) => {
+                              if ("string" === typeof QQ || !(0, oQ.g)(QQ.icon)) return void(kQ += "string" === typeof QQ ? QQ : QQ.icon);
+                              const qQ = Math.max(0, kQ.trimEnd().search(/\S{1,12}$/));
+                              wQ.push((0, DQ.jsxs)(LQ.Fragment, {
+                                children: [kQ.slice(0, qQ), (0, DQ.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [Zd.slice(Nd), (0, Pd.jsx)("span", {
+                                  children: [kQ.slice(qQ), (0, DQ.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": dd.icon,
-                                    children: (0, Pd.jsx)(Wd.d, {
-                                      itemName: dd.icon,
+                                    "aria-label": QQ.icon,
+                                    children: (0, DQ.jsx)(oQ.e, {
+                                      itemName: QQ.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, Jd)), Zd = ""
-                            })), kd.push(Zd), (0, Pd.jsx)(Pd.Fragment, {
-                              children: kd
+                              }, FQ)), kQ = ""
+                            })), wQ.push(kQ), (0, DQ.jsx)(DQ.Fragment, {
+                              children: wQ
                             })
                           }
-                        }, 4642: (dd, Jd, kd) => {
-                          kd.d(Jd, {
-                            f: () => Id,
-                            d: () => Rd
+                        }, 4612: (QQ, FQ, wQ) => {
+                          wQ.d(FQ, {
+                            c: () => MQ,
+                            b: () => eQ
                           });
-                          var pd = kd(56),
-                            Nd = kd(1459),
-                            Wd = kd(1904),
-                            Pd = kd(4649),
-                            Zd = kd(1103);
-                          const gd = (0, pd.memo)((function(dd) {
+                          var LQ = wQ(53),
+                            qQ = wQ(1447),
+                            oQ = wQ(1873),
+                            DQ = wQ(4615),
+                            kQ = wQ(1107);
+                          const vQ = (0, LQ.memo)((function(QQ) {
                             let {
-                              initialParameters: Jd
-                            } = dd;
-                            const kd = (0, pd.useRef)(null),
-                              Nd = (0, pd.useRef)(null),
-                              gd = (0, pd.useRef)(0),
-                              Cd = (0, pd.useRef)(null),
-                              Kd = Jd.description,
-                              od = Jd.Vp,
+                              initialParameters: FQ
+                            } = QQ;
+                            const wQ = (0, LQ.useRef)(null),
+                              qQ = (0, LQ.useRef)(null),
+                              vQ = (0, LQ.useRef)(0),
+                              mQ = (0, LQ.useRef)(null),
+                              uQ = FQ.description,
+                              HQ = FQ.TL,
                               {
-                                scale: ld,
-                                rotation: Qd
-                              } = null !== Jd && void 0 !== Jd ? Jd : {},
-                              Ld = (0, Pd.h)();
-                            return (0, pd.useEffect)((() => {
-                              const dd = Ld.onFrame((() => {
-                                const dd = Ld.getState();
-                                if (!dd.isActive || !kd.current || !Nd.current) return;
-                                const Jd = dd.state;
-                                if (kd.current.value = Jd.progress, Jd.clickCount > gd.current) {
-                                  gd.current = Jd.clickCount;
-                                  const dd = Nd.current;
-                                  dd.classList.add("pulse"), Cd.current = setTimeout((() => {
-                                    dd.classList.remove("pulse")
+                                scale: bQ,
+                                rotation: YQ
+                              } = null !== FQ && void 0 !== FQ ? FQ : {},
+                              xQ = (0, DQ.f)();
+                            return (0, LQ.useEffect)((() => {
+                              const QQ = xQ.onFrame((() => {
+                                const QQ = xQ.getState();
+                                if (!QQ.isActive || !wQ.current || !qQ.current) return;
+                                const FQ = QQ.state;
+                                if (wQ.current.value = FQ.progress, FQ.clickCount > vQ.current) {
+                                  vQ.current = FQ.clickCount;
+                                  const QQ = qQ.current;
+                                  QQ.classList.add("pulse"), mQ.current = setTimeout((() => {
+                                    QQ.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(Cd.current), dd()
+                                clearTimeout(mQ.current), QQ()
                               }
-                            }), [Ld]), (0, Zd.jsx)(Zd.Fragment, {
-                              children: (0, Zd.jsxs)("div", {
+                            }), [xQ]), (0, kQ.jsx)(kQ.Fragment, {
+                              children: (0, kQ.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== ld && {
-                                    "--scale": ld
+                                  ...null !== bQ && {
+                                    "--scale": bQ
                                   },
-                                  ...null !== Qd && {
-                                    "--rotation": `${Qd}deg`
+                                  ...null !== YQ && {
+                                    "--rotation": `${YQ}deg`
                                   }
                                 },
-                                children: [(0, Zd.jsx)("progress", {
+                                children: [(0, kQ.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: kd
-                                }), (0, Zd.jsx)("span", {
+                                  ref: wQ
+                                }), (0, kQ.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: Nd,
-                                  children: (0, Zd.jsx)(Wd.c, {
+                                  ref: qQ,
+                                  children: (0, kQ.jsx)(oQ.e, {
                                     text: [{
-                                      icon: od
+                                      icon: HQ
                                     }]
                                   })
-                                }), (0, Zd.jsx)("div", {
+                                }), (0, kQ.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, Zd.jsx)(Wd.c, {
-                                    text: Kd
+                                  children: (0, kQ.jsx)(oQ.e, {
+                                    text: uQ
                                   })
                                 })]
                               })
                             })
                           }));
-                          var Cd = kd(1044),
-                            Kd = kd.n(Cd);
-                          const od = 2 * Math.PI * 90,
-                            ld = (0, pd.memo)((function(dd) {
+                          var mQ = wQ(1070),
+                            uQ = wQ.n(mQ);
+                          const HQ = 2 * Math.PI * 90,
+                            bQ = (0, LQ.memo)((function(QQ) {
                               let {
-                                initialParameters: Jd
-                              } = dd;
-                              const kd = (0, pd.useRef)(null),
-                                Nd = (0, pd.useRef)(null),
-                                gd = (0, pd.useRef)(null),
-                                Cd = Jd.label,
-                                ld = Jd.icon,
-                                Qd = Jd.wp,
+                                initialParameters: FQ
+                              } = QQ;
+                              const wQ = (0, LQ.useRef)(null),
+                                qQ = (0, LQ.useRef)(null),
+                                vQ = (0, LQ.useRef)(null),
+                                mQ = FQ.label,
+                                bQ = FQ.icon,
+                                YQ = FQ.lL,
                                 {
-                                  scale: Ld,
-                                  rotation: Od,
-                                  Ap: ed
-                                } = null !== Jd && void 0 !== Jd ? Jd : {},
-                                Rd = (0, Pd.h)();
-                              return (0, pd.useEffect)((() => {
-                                const dd = Rd.onFrame((() => {
-                                  var dd, Jd;
-                                  const pd = Rd.getState();
-                                  if (!pd.isActive || !Nd.current) return;
-                                  const Wd = pd.state,
-                                    Pd = null !== (dd = Wd.timeRemaining) && void 0 !== dd ? dd : 0,
-                                    Zd = null !== (Jd = Wd.Hp) && void 0 !== Jd ? Jd : 1,
-                                    Cd = od * (1 - Pd / Zd);
-                                  Nd.current.style.strokeDashoffset = `${Cd}`, kd.current && (kd.current.style.opacity = Pd > 0 ? "1" : "0"), gd.current && Qd && (gd.current.textContent = `${(Pd/1e3).toFixed(1)}s`)
+                                  scale: xQ,
+                                  rotation: AQ,
+                                  jL: tQ
+                                } = null !== FQ && void 0 !== FQ ? FQ : {},
+                                eQ = (0, DQ.f)();
+                              return (0, LQ.useEffect)((() => {
+                                const QQ = eQ.onFrame((() => {
+                                  var QQ, FQ;
+                                  const LQ = eQ.getState();
+                                  if (!LQ.isActive || !qQ.current) return;
+                                  const oQ = LQ.state,
+                                    DQ = null !== (QQ = oQ.timeRemaining) && void 0 !== QQ ? QQ : 0,
+                                    kQ = null !== (FQ = oQ.zL) && void 0 !== FQ ? FQ : 1,
+                                    mQ = HQ * (1 - DQ / kQ);
+                                  qQ.current.style.strokeDashoffset = `${mQ}`, wQ.current && (wQ.current.style.opacity = DQ > 0 ? "1" : "0"), vQ.current && YQ && (vQ.current.textContent = `${(DQ/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  dd()
+                                  QQ()
                                 }
-                              }), [Rd, Qd]), (0, Zd.jsxs)("div", {
+                              }), [eQ, YQ]), (0, kQ.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: kd,
+                                ref: wQ,
                                 style: {
-                                  ...null !== Ld && {
-                                    "--scale": Ld
+                                  ...null !== xQ && {
+                                    "--scale": xQ
                                   },
-                                  ...null !== Od && {
-                                    "--rotation": `${Od}deg`
+                                  ...null !== AQ && {
+                                    "--rotation": `${AQ}deg`
                                   }
                                 },
-                                children: [(0, Zd.jsxs)("div", {
+                                children: [(0, kQ.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, Zd.jsxs)("svg", {
+                                  children: [(0, kQ.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Zd.jsx)("circle", {
+                                    children: [(0, kQ.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, Zd.jsx)("circle", {
+                                    }), (0, kQ.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: od,
-                                      ref: Nd
+                                      strokeDasharray: HQ,
+                                      ref: qQ
                                     })]
-                                  }), (0, Zd.jsx)("div", {
+                                  }), (0, kQ.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, Zd.jsx)(Wd.c, {
+                                    children: (0, kQ.jsx)(oQ.e, {
                                       text: [{
-                                        icon: ld
+                                        icon: bQ
                                       }],
-                                      className: Kd()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: ed
+                                      className: uQ()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: tQ
                                       })
                                     })
                                   })]
-                                }), (0, Zd.jsxs)("div", {
+                                }), (0, kQ.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, Zd.jsx)(Wd.c, {
-                                    text: Cd,
+                                  children: [(0, kQ.jsx)(oQ.e, {
+                                    text: mQ,
                                     className: "QTETimedClickLabelText"
-                                  }), Qd && (0, Zd.jsx)("span", {
+                                  }), YQ && (0, kQ.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: gd
+                                    ref: vQ
                                   })]
                                 })]
                               })
                             })),
-                            Qd = (0, pd.memo)((function(dd) {
+                            YQ = (0, LQ.memo)((function(QQ) {
                               let {
-                                initialParameters: Jd
-                              } = dd;
-                              const kd = (0, pd.useRef)(null),
-                                Nd = (0, pd.useRef)(null),
-                                gd = (0, pd.useRef)(null),
-                                Cd = (0, pd.useRef)(!1),
-                                Kd = Jd.description,
-                                od = null === Jd || void 0 === Jd ? void 0 : Jd.icon,
-                                ld = (0, Pd.h)();
-                              return (0, pd.useEffect)((() => {
-                                const dd = ld.onFrame((() => {
-                                  const dd = ld.getState();
-                                  if (!dd.isActive) return;
-                                  const Jd = dd.state;
-                                  if (kd.current) {
-                                    const dd = 100 * (Jd.catchZonePosition - Jd.JN / 2);
-                                    kd.current.style.left = `${dd}%`, kd.current.style.width = 100 * Jd.JN + "%", Jd.isCatching !== Cd.current && (Cd.current = Jd.isCatching, Jd.isCatching ? kd.current.classList.add("catching") : kd.current.classList.remove("catching"))
+                                initialParameters: FQ
+                              } = QQ;
+                              const wQ = (0, LQ.useRef)(null),
+                                qQ = (0, LQ.useRef)(null),
+                                vQ = (0, LQ.useRef)(null),
+                                mQ = (0, LQ.useRef)(!1),
+                                uQ = FQ.description,
+                                HQ = null === FQ || void 0 === FQ ? void 0 : FQ.icon,
+                                bQ = (0, DQ.f)();
+                              return (0, LQ.useEffect)((() => {
+                                const QQ = bQ.onFrame((() => {
+                                  const QQ = bQ.getState();
+                                  if (!QQ.isActive) return;
+                                  const FQ = QQ.state;
+                                  if (wQ.current) {
+                                    const QQ = 100 * (FQ.catchZonePosition - FQ.XL / 2);
+                                    wQ.current.style.left = `${QQ}%`, wQ.current.style.width = 100 * FQ.XL + "%", FQ.isCatching !== mQ.current && (mQ.current = FQ.isCatching, FQ.isCatching ? wQ.current.classList.add("catching") : wQ.current.classList.remove("catching"))
                                   }
-                                  Nd.current && (Nd.current.style.left = 100 * Jd.moverPosition + "%"), gd.current && (gd.current.value = Jd.progress)
+                                  qQ.current && (qQ.current.style.left = 100 * FQ.moverPosition + "%"), vQ.current && (vQ.current.value = FQ.progress)
                                 }));
                                 return () => {
-                                  dd()
+                                  QQ()
                                 }
-                              }), [ld]), (0, Zd.jsxs)("div", {
+                              }), [bQ]), (0, kQ.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, Zd.jsx)("div", {
+                                children: [(0, kQ.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, Zd.jsx)(Wd.c, {
-                                    text: Kd
+                                  children: (0, kQ.jsx)(oQ.e, {
+                                    text: uQ
                                   })
-                                }), (0, Zd.jsx)("progress", {
+                                }), (0, kQ.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: gd
-                                }), (0, Zd.jsxs)("div", {
+                                  ref: vQ
+                                }), (0, kQ.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, Zd.jsx)("div", {
+                                  children: [(0, kQ.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: kd
-                                  }), (0, Zd.jsx)("div", {
+                                    ref: wQ
+                                  }), (0, kQ.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: Nd,
-                                    children: (0, Zd.jsx)("span", {
-                                      children: od && (0, Zd.jsx)(Wd.c, {
+                                    ref: qQ,
+                                    children: (0, kQ.jsx)("span", {
+                                      children: HQ && (0, kQ.jsx)(oQ.e, {
                                         text: [{
-                                          icon: od,
+                                          icon: HQ,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,697 +6379,697 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var Ld = kd(610);
-                          const Od = (0, pd.memo)((function(dd) {
+                          var xQ = wQ(619);
+                          const AQ = (0, LQ.memo)((function(QQ) {
                               let {
-                                initialParameters: Jd
-                              } = dd;
-                              const kd = (0, pd.useRef)(null),
-                                Nd = Jd.label,
-                                gd = Jd.gN,
+                                initialParameters: FQ
+                              } = QQ;
+                              const wQ = (0, LQ.useRef)(null),
+                                qQ = FQ.label,
+                                vQ = FQ.gL,
                                 {
-                                  icon: Cd,
-                                  scale: Kd,
-                                  rotation: od
-                                } = null !== Jd && void 0 !== Jd ? Jd : {},
-                                ld = 100 * (.5 - gd / 2),
-                                Qd = 100 * gd,
-                                Od = (0, Pd.h)();
-                              return (0, pd.useEffect)((() => {
-                                const dd = Od.onFrame((() => {
-                                  const dd = Od.getState();
-                                  if (!dd.isActive || !kd.current) return;
-                                  const Jd = dd.state;
-                                  kd.current.style.left = 100 * Jd.markerPosition + "%"
+                                  icon: mQ,
+                                  scale: uQ,
+                                  rotation: HQ
+                                } = null !== FQ && void 0 !== FQ ? FQ : {},
+                                bQ = 100 * (.5 - vQ / 2),
+                                YQ = 100 * vQ,
+                                AQ = (0, DQ.f)();
+                              return (0, LQ.useEffect)((() => {
+                                const QQ = AQ.onFrame((() => {
+                                  const QQ = AQ.getState();
+                                  if (!QQ.isActive || !wQ.current) return;
+                                  const FQ = QQ.state;
+                                  wQ.current.style.left = 100 * FQ.markerPosition + "%"
                                 }));
                                 return () => {
-                                  dd()
+                                  QQ()
                                 }
-                              }), [Od]), (0, Zd.jsxs)("div", {
+                              }), [AQ]), (0, kQ.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, Ld.I)(Kd) && {
-                                    "--scale": Kd
+                                  ...!(0, xQ.F)(uQ) && {
+                                    "--scale": uQ
                                   },
-                                  ...!(0, Ld.I)(od) && {
-                                    "--rotation": `${od}deg`
+                                  ...!(0, xQ.F)(HQ) && {
+                                    "--rotation": `${HQ}deg`
                                   }
                                 },
-                                children: [Cd && (0, Zd.jsx)(Wd.c, {
+                                children: [mQ && (0, kQ.jsx)(oQ.e, {
                                   text: [{
-                                    icon: Cd
+                                    icon: mQ
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, Zd.jsxs)("div", {
+                                }), (0, kQ.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, Zd.jsx)("div", {
+                                  children: [(0, kQ.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${ld}%`,
-                                      width: `${Qd}%`
+                                      left: `${bQ}%`,
+                                      width: `${YQ}%`
                                     }
-                                  }), (0, Zd.jsx)("div", {
+                                  }), (0, kQ.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: kd
+                                    ref: wQ
                                   })]
-                                }), (0, Zd.jsx)("div", {
+                                }), (0, kQ.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, Zd.jsx)(Wd.c, {
-                                    text: Nd
+                                  children: (0, kQ.jsx)(oQ.e, {
+                                    text: qQ
                                   })
                                 })]
                               })
                             })),
-                            ed = (0, pd.memo)((function(dd) {
+                            tQ = (0, LQ.memo)((function(QQ) {
                               let {
-                                initialParameters: Jd
-                              } = dd;
-                              const kd = (0, pd.useRef)(null),
-                                [Nd, gd] = (0, pd.useState)((() => new Array(Jd.KN).fill("pending"))),
-                                [Cd, Kd] = (0, pd.useState)((() => {
-                                  const dd = Jd.QN;
-                                  return (0, Ld.I)(dd) || dd <= 0 ? [] : new Array(dd).fill("pending")
+                                initialParameters: FQ
+                              } = QQ;
+                              const wQ = (0, LQ.useRef)(null),
+                                [qQ, vQ] = (0, LQ.useState)((() => new Array(FQ.ZL).fill("pending"))),
+                                [mQ, uQ] = (0, LQ.useState)((() => {
+                                  const QQ = FQ.dL;
+                                  return (0, xQ.F)(QQ) || QQ <= 0 ? [] : new Array(QQ).fill("pending")
                                 })),
-                                od = Jd.label,
+                                HQ = FQ.label,
                                 {
-                                  icon: ld
-                                } = Jd,
-                                Qd = (0, pd.useRef)(0),
-                                Od = (0, pd.useRef)(0),
-                                ed = (0, pd.useRef)([]),
-                                Rd = (0, Pd.h)();
-                              return (0, pd.useEffect)((() => {
-                                const dd = Rd.onFrame((() => {
-                                  const dd = Rd.getState();
-                                  if (!dd.isActive || !kd.current) return;
-                                  const Jd = dd.state,
-                                    pd = 30 + 60 * Jd.outerCircleProgress;
-                                  if (kd.current.setAttribute("r", String(pd)), !0 === Jd.lastClickResult && Jd.successes > Qd.current) {
-                                    kd.current.classList.remove("QTERhythmClickOuterCircle--miss"), kd.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const dd = setTimeout((() => {
-                                      var dd;
-                                      null === (dd = kd.current) || void 0 === dd || dd.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: bQ
+                                } = FQ,
+                                YQ = (0, LQ.useRef)(0),
+                                AQ = (0, LQ.useRef)(0),
+                                tQ = (0, LQ.useRef)([]),
+                                eQ = (0, DQ.f)();
+                              return (0, LQ.useEffect)((() => {
+                                const QQ = eQ.onFrame((() => {
+                                  const QQ = eQ.getState();
+                                  if (!QQ.isActive || !wQ.current) return;
+                                  const FQ = QQ.state,
+                                    LQ = 30 + 60 * FQ.outerCircleProgress;
+                                  if (wQ.current.setAttribute("r", String(LQ)), !0 === FQ.lastClickResult && FQ.successes > YQ.current) {
+                                    wQ.current.classList.remove("QTERhythmClickOuterCircle--miss"), wQ.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const QQ = setTimeout((() => {
+                                      var QQ;
+                                      null === (QQ = wQ.current) || void 0 === QQ || QQ.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    ed.current.push(dd)
-                                  } else if (!1 === Jd.lastClickResult && Jd.misses > Od.current) {
-                                    kd.current.classList.remove("QTERhythmClickOuterCircle--hit"), kd.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const dd = setTimeout((() => {
-                                      var dd;
-                                      null === (dd = kd.current) || void 0 === dd || dd.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    tQ.current.push(QQ)
+                                  } else if (!1 === FQ.lastClickResult && FQ.misses > AQ.current) {
+                                    wQ.current.classList.remove("QTERhythmClickOuterCircle--hit"), wQ.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const QQ = setTimeout((() => {
+                                      var QQ;
+                                      null === (QQ = wQ.current) || void 0 === QQ || QQ.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    ed.current.push(dd)
+                                    tQ.current.push(QQ)
                                   }
-                                  Jd.successes === Qd.current && Jd.misses === Od.current || (Qd.current = Jd.successes, Od.current = Jd.misses, gd((dd => {
-                                    const kd = [...dd];
-                                    for (let pd = 0; pd < Jd.KN; pd++) kd[pd] = pd < Jd.successes ? "success" : "pending";
-                                    return kd
-                                  })), Kd((dd => {
-                                    if (0 === dd.length) return dd;
-                                    const kd = [...dd];
-                                    for (let pd = 0; pd < kd.length; pd++) kd[pd] = pd < Jd.misses ? "miss" : "pending";
-                                    return kd
+                                  FQ.successes === YQ.current && FQ.misses === AQ.current || (YQ.current = FQ.successes, AQ.current = FQ.misses, vQ((QQ => {
+                                    const wQ = [...QQ];
+                                    for (let LQ = 0; LQ < FQ.ZL; LQ++) wQ[LQ] = LQ < FQ.successes ? "success" : "pending";
+                                    return wQ
+                                  })), uQ((QQ => {
+                                    if (0 === QQ.length) return QQ;
+                                    const wQ = [...QQ];
+                                    for (let LQ = 0; LQ < wQ.length; LQ++) wQ[LQ] = LQ < FQ.misses ? "miss" : "pending";
+                                    return wQ
                                   })))
                                 }));
                                 return () => {
-                                  dd();
-                                  for (const dd of ed.current) clearTimeout(dd);
-                                  ed.current = []
+                                  QQ();
+                                  for (const QQ of tQ.current) clearTimeout(QQ);
+                                  tQ.current = []
                                 }
-                              }), [Rd]), (0, Zd.jsxs)("div", {
+                              }), [eQ]), (0, kQ.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, Zd.jsx)("div", {
+                                children: [(0, kQ.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Nd.map(((dd, Jd) => (0, Zd.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === dd ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, Jd)))
-                                }), (0, Zd.jsxs)("div", {
+                                  children: qQ.map(((QQ, FQ) => (0, kQ.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === QQ ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, FQ)))
+                                }), (0, kQ.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, Zd.jsxs)("svg", {
+                                  children: [(0, kQ.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Zd.jsx)("circle", {
+                                    children: [(0, kQ.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, Zd.jsx)("circle", {
+                                    }), (0, kQ.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: kd
+                                      ref: wQ
                                     })]
-                                  }), ld && (0, Zd.jsx)("div", {
+                                  }), bQ && (0, kQ.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, Zd.jsx)(Wd.c, {
+                                    children: (0, kQ.jsx)(oQ.e, {
                                       text: [{
-                                        icon: ld
+                                        icon: bQ
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), Cd.length > 0 && (0, Zd.jsx)("div", {
+                                }), mQ.length > 0 && (0, kQ.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Cd.map(((dd, Jd) => (0, Zd.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === dd ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, Jd)))
-                                }), (0, Zd.jsx)("div", {
+                                  children: mQ.map(((QQ, FQ) => (0, kQ.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === QQ ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, FQ)))
+                                }), (0, kQ.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, Zd.jsx)(Wd.c, {
-                                    text: od
+                                  children: (0, kQ.jsx)(oQ.e, {
+                                    text: HQ
                                   })
                                 })]
                               })
                             }));
 
-                          function Rd(dd) {
+                          function eQ(QQ) {
                             let {
-                              qte: Jd
-                            } = dd;
-                            switch (Jd.type) {
+                              qte: FQ
+                            } = QQ;
+                            switch (FQ.type) {
                               case "progressBar":
-                                return (0, Zd.jsx)(gd, {
-                                  initialParameters: Jd.parameters
+                                return (0, kQ.jsx)(vQ, {
+                                  initialParameters: FQ.parameters
                                 });
                               case "timedClick":
-                                return (0, Zd.jsx)(ld, {
-                                  initialParameters: Jd.parameters
+                                return (0, kQ.jsx)(bQ, {
+                                  initialParameters: FQ.parameters
                                 });
                               case "gravityBar":
-                                return (0, Zd.jsx)(Qd, {
-                                  initialParameters: Jd.parameters
+                                return (0, kQ.jsx)(YQ, {
+                                  initialParameters: FQ.parameters
                                 });
                               case "precisionBar":
-                                return (0, Zd.jsx)(Od, {
-                                  initialParameters: Jd.parameters
+                                return (0, kQ.jsx)(AQ, {
+                                  initialParameters: FQ.parameters
                                 });
                               case "rhythmClick":
-                                return (0, Zd.jsx)(ed, {
-                                  initialParameters: Jd.parameters
+                                return (0, kQ.jsx)(tQ, {
+                                  initialParameters: FQ.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const Id = (0, pd.memo)((function() {
-                            const [dd, Jd] = (0, pd.useState)({
+                          const MQ = (0, LQ.memo)((function() {
+                            const [QQ, FQ] = (0, LQ.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, Nd.h)("qteStateUpdated", (dd => {
-                              Jd(dd)
-                            })), dd.isActive && dd.type ? (0, Zd.jsx)("div", {
+                            return (0, qQ.g)("qteStateUpdated", (QQ => {
+                              FQ(QQ)
+                            })), QQ.isActive && QQ.type ? (0, kQ.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, Zd.jsx)(Rd, {
-                                qte: dd
+                              children: (0, kQ.jsx)(eQ, {
+                                qte: QQ
                               })
                             }) : null
                           }))
-                        }, 4649: (dd, Jd, kd) => {
-                          kd.d(Jd, {
-                            e: () => Zd,
-                            h: () => gd
+                        }, 4615: (QQ, FQ, wQ) => {
+                          wQ.d(FQ, {
+                            d: () => kQ,
+                            f: () => vQ
                           });
-                          var pd = kd(56),
-                            Nd = kd(1320),
-                            Wd = kd(4657);
-                          const Pd = {
-                              getState: () => Wd.d.getCurrentState(),
-                              onFrame: Nd.p
+                          var LQ = wQ(53),
+                            qQ = wQ(1314),
+                            oQ = wQ(4619);
+                          const DQ = {
+                              getState: () => oQ.c.getCurrentState(),
+                              onFrame: qQ.q
                             },
-                            Zd = (0, pd.createContext)(Pd);
+                            kQ = (0, LQ.createContext)(DQ);
 
-                          function gd() {
-                            return (0, pd.useContext)(Zd)
+                          function vQ() {
+                            return (0, LQ.useContext)(kQ)
                           }
-                        }, 4729: (dd, Jd, kd) => {
-                          kd.d(Jd, {
-                            c: () => Xd,
-                            d: () => jd
+                        }, 4680: (QQ, FQ, wQ) => {
+                          wQ.d(FQ, {
+                            b: () => TQ,
+                            f: () => NQ
                           });
-                          var pd = kd(4733),
-                            Nd = kd(300);
-                          const Wd = 120,
-                            Pd = 260,
-                            Zd = 1.15,
-                            gd = 1.2,
-                            Cd = 2,
-                            Kd = 1.08,
-                            od = .8,
-                            ld = .95,
-                            Qd = 8,
-                            Ld = "[\"')\\]\u300d\u300f\uff09]*",
-                            Od = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ld}$`),
-                            ed = new RegExp(`[?\uff1f]${Ld}$`),
-                            Rd = new RegExp(`[!\uff01]${Ld}$`),
-                            Id = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            Gd = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            vd = new RegExp(`[${Gd}]`),
-                            xd = new RegExp(`[${Gd}]|[^${Gd}]+`, "g"),
-                            qd = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var LQ = wQ(4686),
+                            qQ = wQ(307);
+                          const oQ = 120,
+                            DQ = 260,
+                            kQ = 1.15,
+                            vQ = 1.2,
+                            mQ = 2,
+                            uQ = 1.08,
+                            HQ = .8,
+                            bQ = .95,
+                            YQ = 8,
+                            xQ = "[\"')\\]\u300d\u300f\uff09]*",
+                            AQ = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${xQ}$`),
+                            tQ = new RegExp(`[?\uff1f]${xQ}$`),
+                            eQ = new RegExp(`[!\uff01]${xQ}$`),
+                            MQ = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            GQ = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            pQ = new RegExp(`[${GQ}]`),
+                            cQ = new RegExp(`[${GQ}]|[^${GQ}]+`, "g"),
+                            CQ = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function Bd(dd) {
-                            let Jd = 2166136261;
-                            for (let kd = 0; kd < dd.length; kd++) Jd ^= dd.charCodeAt(kd), Jd = Math.imul(Jd, 16777619);
-                            return (Jd >>> 0) / 4294967295 * 2 - 1
+                          function SQ(QQ) {
+                            let FQ = 2166136261;
+                            for (let wQ = 0; wQ < QQ.length; wQ++) FQ ^= QQ.charCodeAt(wQ), FQ = Math.imul(FQ, 16777619);
+                            return (FQ >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function sd(dd) {
-                            var Jd;
-                            if (vd.test(dd)) return 1;
-                            const kd = dd.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              pd = kd.replace(/[^0-9]/g, "");
-                            if (pd.length > 0 && !/\p{L}/u.test(kd)) return Math.min(pd.length, 4);
-                            const Nd = null !== (Jd = kd.match(qd)) && void 0 !== Jd ? Jd : [];
-                            if (0 === Nd.length) {
-                              var Wd, Pd;
-                              const dd = null !== (Wd = null === (Pd = kd.match(/\p{L}/gu)) || void 0 === Pd ? void 0 : Pd.length) && void 0 !== Wd ? Wd : 0;
-                              return 0 === dd ? 0 : Math.min(Math.max(1, Math.round(dd / 2.5)), Qd)
+                          function iQ(QQ) {
+                            var FQ;
+                            if (pQ.test(QQ)) return 1;
+                            const wQ = QQ.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              LQ = wQ.replace(/[^0-9]/g, "");
+                            if (LQ.length > 0 && !/\p{L}/u.test(wQ)) return Math.min(LQ.length, 4);
+                            const qQ = null !== (FQ = wQ.match(CQ)) && void 0 !== FQ ? FQ : [];
+                            if (0 === qQ.length) {
+                              var oQ, DQ;
+                              const QQ = null !== (oQ = null === (DQ = wQ.match(/\p{L}/gu)) || void 0 === DQ ? void 0 : DQ.length) && void 0 !== oQ ? oQ : 0;
+                              return 0 === QQ ? 0 : Math.min(Math.max(1, Math.round(QQ / 2.5)), YQ)
                             }
-                            const Zd = kd.replace(/[^\p{L}]/gu, ""),
-                              gd = Nd.length > 1 && "e" === Nd.at(-1) && Zd.endsWith("e") && !Zd.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(dd.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(Nd.length - (gd ? 1 : 0), Qd)
+                            const kQ = wQ.replace(/[^\p{L}]/gu, ""),
+                              vQ = qQ.length > 1 && "e" === qQ.at(-1) && kQ.endsWith("e") && !kQ.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(QQ.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(qQ.length - (vQ ? 1 : 0), YQ)
                           }
 
-                          function ad(dd) {
-                            return dd.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function WQ(QQ) {
+                            return QQ.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function Md(dd) {
-                            const Jd = dd.replace(/[^\p{L}]/gu, "");
-                            return Jd.length >= 2 && Jd === Jd.toUpperCase() && Jd !== Jd.toLowerCase()
+                          function RQ(QQ) {
+                            const FQ = QQ.replace(/[^\p{L}]/gu, "");
+                            return FQ.length >= 2 && FQ === FQ.toUpperCase() && FQ !== FQ.toLowerCase()
                           }
 
-                          function Fd(dd, Jd) {
-                            var kd;
-                            const Qd = Jd && (0, pd.k)(Jd),
-                              Ld = null !== (kd = null === Qd || void 0 === Qd ? void 0 : Qd.syllableMs) && void 0 !== kd ? kd : pd.b,
-                              Gd = function(dd) {
-                                const Jd = [];
-                                for (const pd of (0, Nd.Wb)(dd))
-                                  if ("string" === typeof pd)
-                                    for (const dd of pd.split(/(\s+)/)) {
-                                      if ("" === dd) continue;
-                                      if (/^\s+$/.test(dd)) {
-                                        Jd.push({
+                          function OQ(QQ, FQ) {
+                            var wQ;
+                            const YQ = FQ && (0, LQ.i)(FQ),
+                              xQ = null !== (wQ = null === YQ || void 0 === YQ ? void 0 : YQ.syllableMs) && void 0 !== wQ ? wQ : LQ.c,
+                              GQ = function(QQ) {
+                                const FQ = [];
+                                for (const LQ of (0, qQ.ec)(QQ))
+                                  if ("string" === typeof LQ)
+                                    for (const QQ of LQ.split(/(\s+)/)) {
+                                      if ("" === QQ) continue;
+                                      if (/^\s+$/.test(QQ)) {
+                                        FQ.push({
                                           kind: "space",
-                                          text: dd
+                                          text: QQ
                                         });
                                         continue
                                       }
-                                      if (!vd.test(dd)) {
-                                        Jd.push({
+                                      if (!pQ.test(QQ)) {
+                                        FQ.push({
                                           kind: "word",
-                                          text: dd,
+                                          text: QQ,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let pd = !0;
-                                      for (const Nd of null !== (kd = dd.match(xd)) && void 0 !== kd ? kd : []) {
-                                        var kd;
-                                        const dd = Jd.at(-1);
-                                        pd || "word" !== (null === dd || void 0 === dd ? void 0 : dd.kind) || vd.test(Nd) || /[\p{L}\p{N}]/u.test(Nd) ? (pd || Jd.push({
+                                      let LQ = !0;
+                                      for (const qQ of null !== (wQ = QQ.match(cQ)) && void 0 !== wQ ? wQ : []) {
+                                        var wQ;
+                                        const QQ = FQ.at(-1);
+                                        LQ || "word" !== (null === QQ || void 0 === QQ ? void 0 : QQ.kind) || pQ.test(qQ) || /[\p{L}\p{N}]/u.test(qQ) ? (LQ || FQ.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), Jd.push({
+                                        }), FQ.push({
                                           kind: "word",
-                                          text: Nd,
+                                          text: qQ,
                                           delayMs: 0
-                                        }), pd = !1) : dd.text += Nd
+                                        }), LQ = !1) : QQ.text += qQ
                                       }
-                                    } else Jd.push({
+                                    } else FQ.push({
                                       kind: "icon",
-                                      text: pd.icon,
+                                      text: LQ.icon,
                                       delayMs: 0
                                     });
-                                return Jd
-                              }(dd),
-                              qd = [];
-                            let Fd = [];
-                            for (const pd of Gd) "space" !== pd.kind && (Fd.push(pd), Od.test(pd.text) && (qd.push(Fd), Fd = []));
-                            qd.push(Fd);
-                            const Yd = [];
-                            let md = 0;
-                            for (const pd of qd) {
-                              var bd, Sd;
-                              const dd = null !== (bd = null === (Sd = pd.at(-1)) || void 0 === Sd ? void 0 : Sd.text) && void 0 !== bd ? bd : "",
-                                Jd = ed.test(dd),
-                                kd = Rd.test(dd),
-                                Nd = pd.map((dd => "word" === dd.kind ? sd(dd.text) : 1)),
-                                Gd = Nd.findLastIndex((dd => dd > 0));
-                              for (const [ed, Rd] of pd.entries()) {
-                                const dd = "word" === Rd.kind,
-                                  pd = Nd[ed];
-                                Rd.delayMs = md;
-                                for (let Nd = 0; Qd && Nd < pd; Nd++) {
+                                return FQ
+                              }(QQ),
+                              CQ = [];
+                            let OQ = [];
+                            for (const LQ of GQ) "space" !== LQ.kind && (OQ.push(LQ), AQ.test(LQ.text) && (CQ.push(OQ), OQ = []));
+                            CQ.push(OQ);
+                            const sQ = [];
+                            let rQ = 0;
+                            for (const LQ of CQ) {
+                              var IQ, UQ;
+                              const QQ = null !== (IQ = null === (UQ = LQ.at(-1)) || void 0 === UQ ? void 0 : UQ.text) && void 0 !== IQ ? IQ : "",
+                                FQ = tQ.test(QQ),
+                                wQ = eQ.test(QQ),
+                                qQ = LQ.map((QQ => "word" === QQ.kind ? iQ(QQ.text) : 1)),
+                                GQ = qQ.findLastIndex((QQ => QQ > 0));
+                              for (const [tQ, eQ] of LQ.entries()) {
+                                const QQ = "word" === eQ.kind,
+                                  LQ = qQ[tQ];
+                                eQ.delayMs = rQ;
+                                for (let qQ = 0; YQ && qQ < LQ; qQ++) {
                                   const {
-                                    intonation: Wd
-                                  } = Qd;
-                                  let Pd = Gd > 0 ? -Wd.declineSemitones * (ed / Gd) : 0;
-                                  Pd += Bd(`${ad(Rd.text)}|${Nd}`) * Wd.variationSemitones;
-                                  const Od = Math.min(1, Wd.variationSemitones);
-                                  let Id = Qd.glideSemitones,
-                                    vd = 1;
-                                  kd && (Pd += Wd.exclaimLiftSemitones, vd *= Zd), Jd && ed === Gd && (Pd += Wd.questionRiseSemitones * (pd > 1 ? .5 + .5 * Nd / (pd - 1) : 1), Nd === pd - 1 && (Id = Math.abs(Id) + Wd.questionRiseSemitones / 2)), dd && Md(Rd.text) && (Pd += Cd * Od, vd *= gd), pd > 1 && 0 === Nd && (Pd += od * Od, vd *= Kd), Yd.push({
-                                    atMs: md + Nd * Ld,
-                                    semitones: Pd,
-                                    glideSemitones: Id,
-                                    durationMs: Nd < pd - 1 ? Math.min(Qd.durationMs, Ld * ld) : Qd.durationMs,
-                                    level: vd
+                                    intonation: oQ
+                                  } = YQ;
+                                  let DQ = GQ > 0 ? -oQ.declineSemitones * (tQ / GQ) : 0;
+                                  DQ += SQ(`${WQ(eQ.text)}|${qQ}`) * oQ.variationSemitones;
+                                  const AQ = Math.min(1, oQ.variationSemitones);
+                                  let MQ = YQ.glideSemitones,
+                                    pQ = 1;
+                                  wQ && (DQ += oQ.exclaimLiftSemitones, pQ *= kQ), FQ && tQ === GQ && (DQ += oQ.questionRiseSemitones * (LQ > 1 ? .5 + .5 * qQ / (LQ - 1) : 1), qQ === LQ - 1 && (MQ = Math.abs(MQ) + oQ.questionRiseSemitones / 2)), QQ && RQ(eQ.text) && (DQ += mQ * AQ, pQ *= vQ), LQ > 1 && 0 === qQ && (DQ += HQ * AQ, pQ *= uQ), sQ.push({
+                                    atMs: rQ + qQ * xQ,
+                                    semitones: DQ,
+                                    glideSemitones: MQ,
+                                    durationMs: qQ < LQ - 1 ? Math.min(YQ.durationMs, xQ * bQ) : YQ.durationMs,
+                                    level: pQ
                                   })
                                 }
-                                md += pd * Ld + (Od.test(Rd.text) ? Pd : Id.test(Rd.text) ? Wd : 0)
+                                rQ += LQ * xQ + (AQ.test(eQ.text) ? DQ : MQ.test(eQ.text) ? oQ : 0)
                               }
                             }
                             return {
-                              pieces: Gd.map((dd => "space" === dd.kind ? dd : "icon" === dd.kind ? {
+                              pieces: GQ.map((QQ => "space" === QQ.kind ? QQ : "icon" === QQ.kind ? {
                                 kind: "icon",
-                                icon: dd.text,
-                                delayMs: dd.delayMs
+                                icon: QQ.text,
+                                delayMs: QQ.delayMs
                               } : {
                                 kind: "word",
-                                text: dd.text,
-                                delayMs: dd.delayMs
+                                text: QQ.text,
+                                delayMs: QQ.delayMs
                               })),
-                              blips: Yd
+                              blips: sQ
                             }
                           }
-                          var Yd = kd(1211),
-                            md = kd(1273),
-                            bd = kd(1938);
+                          var sQ = wQ(1207),
+                            rQ = wQ(1265),
+                            IQ = wQ(1899);
 
-                          function Sd(dd) {
-                            if ("string" === typeof dd) return dd;
-                            const Jd = md.c.get().getCurrentLanguageCode();
-                            return (0, Yd.t)(Jd, dd.translationKey, (0, Yd.r)(dd.params, bd.d.shown))
+                          function UQ(QQ) {
+                            if ("string" === typeof QQ) return QQ;
+                            const FQ = rQ.e.get().getCurrentLanguageCode();
+                            return (0, sQ.o)(FQ, QQ.translationKey, (0, sQ.m)(QQ.params, IQ.b.shown))
                           }
 
-                          function jd(dd) {
-                            const Jd = void 0 === dd.voice ? null : (0, pd.m)(dd.voice),
-                              kd = Jd && (0, pd.k)(Jd);
+                          function NQ(QQ) {
+                            const FQ = void 0 === QQ.voice ? null : (0, LQ.k)(QQ.voice),
+                              wQ = FQ && (0, LQ.i)(FQ);
                             return {
-                              plan: Fd(Sd(dd.line), kd),
-                              synth: kd
+                              plan: OQ(UQ(QQ.line), wQ),
+                              synth: wQ
                             }
                           }
 
-                          function Xd(dd) {
-                            const Jd = [];
-                            let kd = [];
-                            for (const [Nd, Wd] of dd.entries()) {
-                              var pd;
-                              "space" === Wd.kind && (" " !== Wd.text || "icon" !== (null === (pd = dd[Nd + 1]) || void 0 === pd ? void 0 : pd.kind)) ? (kd.length > 0 && Jd.push(kd), Jd.push([Wd]), kd = []) : kd.push(Wd)
+                          function TQ(QQ) {
+                            const FQ = [];
+                            let wQ = [];
+                            for (const [qQ, oQ] of QQ.entries()) {
+                              var LQ;
+                              "space" === oQ.kind && (" " !== oQ.text || "icon" !== (null === (LQ = QQ[qQ + 1]) || void 0 === LQ ? void 0 : LQ.kind)) ? (wQ.length > 0 && FQ.push(wQ), FQ.push([oQ]), wQ = []) : wQ.push(oQ)
                             }
-                            return kd.length > 0 && Jd.push(kd), Jd
+                            return wQ.length > 0 && FQ.push(wQ), FQ
                           }
-                        }, 4740: (dd, Jd, kd) => {
-                          kd.d(Jd, {
-                            d: () => Kd,
-                            h: () => od
+                        }, 4691: (QQ, FQ, wQ) => {
+                          wQ.d(FQ, {
+                            c: () => uQ,
+                            d: () => HQ
                           });
-                          var pd = kd(4743),
-                            Nd = kd(22);
-                          const Wd = .25,
-                            Pd = .85,
-                            Zd = .02,
-                            gd = .01;
+                          var LQ = wQ(4694),
+                            qQ = wQ(17);
+                          const oQ = .25,
+                            DQ = .85,
+                            kQ = .02,
+                            vQ = .01;
 
-                          function Cd(dd, Jd, kd, pd, Nd, Wd, Zd) {
+                          function mQ(QQ, FQ, wQ, LQ, qQ, oQ, kQ) {
                             const {
-                              waveform: gd,
-                              pitchHz: Cd,
-                              attackMs: Kd,
-                              releaseMs: od,
-                              lowpassHz: ld
-                            } = kd, Qd = Nd + pd.durationMs / 1e3, Ld = Cd * 2 ** (pd.semitones / 12), Od = dd.createOscillator();
-                            Od.type = gd, Od.frequency.setValueAtTime(Ld, Nd), Od.frequency.exponentialRampToValueAtTime(Ld * 2 ** (pd.glideSemitones / 12), Qd);
-                            const ed = Nd + Math.min(Kd, pd.durationMs) / 1e3,
-                              Rd = dd.createGain();
-                            Rd.gain.setValueAtTime(0, Nd), Rd.gain.linearRampToValueAtTime(Wd, ed), Rd.gain.linearRampToValueAtTime(Wd * Pd, Math.max(ed, Qd - od / 1e3)), Rd.gain.linearRampToValueAtTime(0, Qd);
-                            const Id = [Od];
-                            if (null !== ld) {
-                              const Jd = dd.createBiquadFilter();
-                              Jd.type = "lowpass", Jd.frequency.value = ld, Id.push(Jd)
+                              waveform: vQ,
+                              pitchHz: mQ,
+                              attackMs: uQ,
+                              releaseMs: HQ,
+                              lowpassHz: bQ
+                            } = wQ, YQ = qQ + LQ.durationMs / 1e3, xQ = mQ * 2 ** (LQ.semitones / 12), AQ = QQ.createOscillator();
+                            AQ.type = vQ, AQ.frequency.setValueAtTime(xQ, qQ), AQ.frequency.exponentialRampToValueAtTime(xQ * 2 ** (LQ.glideSemitones / 12), YQ);
+                            const tQ = qQ + Math.min(uQ, LQ.durationMs) / 1e3,
+                              eQ = QQ.createGain();
+                            eQ.gain.setValueAtTime(0, qQ), eQ.gain.linearRampToValueAtTime(oQ, tQ), eQ.gain.linearRampToValueAtTime(oQ * DQ, Math.max(tQ, YQ - HQ / 1e3)), eQ.gain.linearRampToValueAtTime(0, YQ);
+                            const MQ = [AQ];
+                            if (null !== bQ) {
+                              const FQ = QQ.createBiquadFilter();
+                              FQ.type = "lowpass", FQ.frequency.value = bQ, MQ.push(FQ)
                             }
-                            Id.push(Rd, Jd);
-                            for (let Pd = 1; Pd < Id.length; Pd++) Id[Pd - 1].connect(Id[Pd]);
-                            return Od.onended = () => {
-                              for (const dd of Id.slice(0, -1)) dd.disconnect();
-                              Zd()
-                            }, Od.start(Nd), Od.stop(Qd), Od
+                            MQ.push(eQ, FQ);
+                            for (let DQ = 1; DQ < MQ.length; DQ++) MQ[DQ - 1].connect(MQ[DQ]);
+                            return AQ.onended = () => {
+                              for (const QQ of MQ.slice(0, -1)) QQ.disconnect();
+                              kQ()
+                            }, AQ.start(qQ), AQ.stop(YQ), AQ
                           }
 
-                          function Kd(dd, Jd, kd, pd, Nd, Pd) {
-                            if (0 === pd.length) return Pd(), () => {};
-                            const Kd = Wd * kd.volume * Nd,
-                              od = dd.createGain();
-                            od.connect(Jd);
-                            const ld = dd.currentTime + Zd,
-                              Qd = new Set;
-                            for (const Wd of pd) {
-                              const Jd = Cd(dd, od, kd, Wd, ld + Wd.atMs / 1e3, Kd * Wd.level, (() => {
-                                Qd.delete(Jd), 0 === Qd.size && (od.disconnect(), Pd())
+                          function uQ(QQ, FQ, wQ, LQ, qQ, DQ) {
+                            if (0 === LQ.length) return DQ(), () => {};
+                            const uQ = oQ * wQ.volume * qQ,
+                              HQ = QQ.createGain();
+                            HQ.connect(FQ);
+                            const bQ = QQ.currentTime + kQ,
+                              YQ = new Set;
+                            for (const oQ of LQ) {
+                              const FQ = mQ(QQ, HQ, wQ, oQ, bQ + oQ.atMs / 1e3, uQ * oQ.level, (() => {
+                                YQ.delete(FQ), 0 === YQ.size && (HQ.disconnect(), DQ())
                               }));
-                              Qd.add(Jd)
+                              YQ.add(FQ)
                             }
                             return () => {
-                              const Jd = dd.currentTime;
-                              od.gain.setTargetAtTime(0, Jd, gd);
-                              for (const dd of Qd) try {
-                                dd.stop(Jd + 5 * gd)
+                              const FQ = QQ.currentTime;
+                              HQ.gain.setTargetAtTime(0, FQ, vQ);
+                              for (const QQ of YQ) try {
+                                QQ.stop(FQ + 5 * vQ)
                               } catch {}
                             }
                           }
 
-                          function od(dd, Jd) {
-                            var kd;
-                            const Wd = pd.Howler.ctx,
-                              Pd = pd.Howler.masterGain;
-                            if (!Wd || !Pd || !Nd.d.get("soundOnFromAd")) return () => {};
-                            const Zd = pd.Howler;
-                            return null === (kd = Zd._autoResume) || void 0 === kd || kd.call(Zd), Kd(Wd, Pd, dd, Jd, Nd.d.get("soundVolume"), (() => {
-                              var dd;
-                              null === (dd = Zd._autoSuspend) || void 0 === dd || dd.call(Zd)
+                          function HQ(QQ, FQ) {
+                            var wQ;
+                            const oQ = LQ.Howler.ctx,
+                              DQ = LQ.Howler.masterGain;
+                            if (!oQ || !DQ || !qQ.c.get("soundOnFromAd")) return () => {};
+                            const kQ = LQ.Howler;
+                            return null === (wQ = kQ._autoResume) || void 0 === wQ || wQ.call(kQ), uQ(oQ, DQ, QQ, FQ, qQ.c.get("soundVolume"), (() => {
+                              var QQ;
+                              null === (QQ = kQ._autoSuspend) || void 0 === QQ || QQ.call(kQ)
                             }))
                           }
-                        }, 4743: (dd, Jd, kd) => {
-                          kd.r(Jd), kd.d(Jd, {
-                            Howl: () => Nd.Howl,
-                            Howler: () => Nd.Howler,
-                            musicOutput: () => Ld,
-                            readyAudioContext: () => Od
+                        }, 4694: (QQ, FQ, wQ) => {
+                          wQ.r(FQ), wQ.d(FQ, {
+                            Howl: () => qQ.Howl,
+                            Howler: () => qQ.Howler,
+                            musicOutput: () => xQ,
+                            readyAudioContext: () => AQ
                           });
-                          var pd, Nd = kd(4745),
-                            Wd = kd(4516);
-                          const Pd = Nd.Howler;
+                          var LQ, qQ = wQ(4702),
+                            oQ = wQ(4494);
+                          const DQ = qQ.Howler;
 
-                          function Zd() {
-                            var dd, Jd;
-                            if (Pd.ctx || !Pd.usingWebAudio || "undefined" === typeof AudioContext || !(0, Wd.h)()) return;
-                            const kd = navigator.audioSession;
-                            let pd;
-                            "auto" === (null === kd || void 0 === kd ? void 0 : kd.type) && (kd.type = "ambient");
+                          function kQ() {
+                            var QQ, FQ;
+                            if (DQ.ctx || !DQ.usingWebAudio || "undefined" === typeof AudioContext || !(0, oQ.i)()) return;
+                            const wQ = navigator.audioSession;
+                            let LQ;
+                            "auto" === (null === wQ || void 0 === wQ ? void 0 : wQ.type) && (wQ.type = "ambient");
                             try {
-                              pd = new AudioContext({
+                              LQ = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const Nd = pd.createGain();
-                            Nd.gain.setValueAtTime(Pd._muted ? 0 : null !== (dd = Pd._volume) && void 0 !== dd ? dd : 1, pd.currentTime), Nd.connect(pd.destination), Pd.ctx = pd, Pd.masterGain = Nd, null === (Jd = Pd._setup) || void 0 === Jd || Jd.call(Pd)
+                            const qQ = LQ.createGain();
+                            qQ.gain.setValueAtTime(DQ._muted ? 0 : null !== (QQ = DQ._volume) && void 0 !== QQ ? QQ : 1, LQ.currentTime), qQ.connect(LQ.destination), DQ.ctx = LQ, DQ.masterGain = qQ, null === (FQ = DQ._setup) || void 0 === FQ || FQ.call(DQ)
                           }
-                          Pd._mobileUnloaded = !0;
-                          const gd = Pd.volume.bind(Nd.Howler);
-                          Pd.volume = function() {
-                            return Zd(), gd(...arguments)
+                          DQ._mobileUnloaded = !0;
+                          const vQ = DQ.volume.bind(qQ.Howler);
+                          DQ.volume = function() {
+                            return kQ(), vQ(...arguments)
                           };
-                          const Cd = Pd.mute.bind(Nd.Howler);
-                          Pd.mute = dd => (Zd(), Cd(dd));
-                          const Kd = Nd.Howl.prototype,
-                            od = Kd.init;
-                          Kd.init = function(dd) {
-                            return Zd(), od.call(this, dd)
+                          const mQ = DQ.mute.bind(qQ.Howler);
+                          DQ.mute = QQ => (kQ(), mQ(QQ));
+                          const uQ = qQ.Howl.prototype,
+                            HQ = uQ.init;
+                          uQ.init = function(QQ) {
+                            return kQ(), HQ.call(this, QQ)
                           };
-                          let ld = 0;
-                          const Qd = null === (pd = Pd._autoSuspend) || void 0 === pd ? void 0 : pd.bind(Nd.Howler);
+                          let bQ = 0;
+                          const YQ = null === (LQ = DQ._autoSuspend) || void 0 === LQ ? void 0 : LQ.bind(qQ.Howler);
 
-                          function Ld() {
-                            Od();
+                          function xQ() {
+                            AQ();
                             const {
-                              ctx: dd,
-                              masterGain: Jd
-                            } = Pd;
-                            return dd && Jd ? {
-                              ctx: dd,
-                              destination: Jd,
-                              holdAwake: dd => {
-                                var Jd, kd;
-                                (ld += dd ? 1 : -1, dd) ? null === (Jd = Pd._autoResume) || void 0 === Jd || Jd.call(Pd): null === (kd = Pd._autoSuspend) || void 0 === kd || kd.call(Pd)
+                              ctx: QQ,
+                              masterGain: FQ
+                            } = DQ;
+                            return QQ && FQ ? {
+                              ctx: QQ,
+                              destination: FQ,
+                              holdAwake: QQ => {
+                                var FQ, wQ;
+                                (bQ += QQ ? 1 : -1, QQ) ? null === (FQ = DQ._autoResume) || void 0 === FQ || FQ.call(DQ): null === (wQ = DQ._autoSuspend) || void 0 === wQ || wQ.call(DQ)
                               },
                               wake: () => {
-                                var Jd;
-                                "running" !== dd.state && (null === (Jd = Pd._autoResume) || void 0 === Jd || Jd.call(Pd), dd.resume().catch((() => {})))
+                                var FQ;
+                                "running" !== QQ.state && (null === (FQ = DQ._autoResume) || void 0 === FQ || FQ.call(DQ), QQ.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function Od() {
-                            var dd;
-                            (Pd.volume(), Pd.ctx && Pd.autoUnlock) && (null === (dd = Pd._unlockAudio) || void 0 === dd || dd.call(Pd))
+                          function AQ() {
+                            var QQ;
+                            (DQ.volume(), DQ.ctx && DQ.autoUnlock) && (null === (QQ = DQ._unlockAudio) || void 0 === QQ || QQ.call(DQ))
                           }
-                          Qd && (Pd._autoSuspend = () => ld > 0 ? Nd.Howler : Qd())
-                        }, 4752: (dd, Jd, kd) => {
-                          function pd(dd) {
+                          YQ && (DQ._autoSuspend = () => bQ > 0 ? qQ.Howler : YQ())
+                        }, 4705: (QQ, FQ, wQ) => {
+                          function LQ(QQ) {
                             return {
-                              notAfter: dd
+                              notAfter: QQ
                             }
                           }
-                          kd.d(Jd, {
-                            e: () => gd,
-                            f: () => Cd,
-                            i: () => Zd,
-                            k: () => pd,
-                            m: () => Nd,
-                            q: () => Wd,
-                            r: () => Pd,
-                            s: () => Kd,
-                            u: () => od
+                          wQ.d(FQ, {
+                            c: () => vQ,
+                            d: () => mQ,
+                            g: () => kQ,
+                            i: () => LQ,
+                            m: () => qQ,
+                            q: () => oQ,
+                            u: () => DQ,
+                            x: () => uQ,
+                            y: () => HQ
                           });
-                          const Nd = pd("\\w$."),
-                            Wd = pd("\\w.,");
+                          const qQ = LQ("\\w$."),
+                            oQ = LQ("\\w.,");
 
-                          function Pd(dd) {
-                            return Jd => gd(Jd, dd)
+                          function DQ(QQ) {
+                            return FQ => vQ(FQ, QQ)
                           }
 
-                          function Zd(dd) {
-                            return Jd => !dd.test(Jd.input.slice(0, Jd.index))
+                          function kQ(QQ) {
+                            return FQ => !QQ.test(FQ.input.slice(0, FQ.index))
                           }
 
-                          function gd(dd, Jd) {
-                            return dd.index > 0 && new RegExp(`[${Jd}]`).test(dd.input[dd.index - 1])
+                          function vQ(QQ, FQ) {
+                            return QQ.index > 0 && new RegExp(`[${FQ}]`).test(QQ.input[QQ.index - 1])
                           }
 
-                          function Cd(dd, Jd, kd) {
-                            return function(dd) {
-                              return void 0 !== dd && "function" !== typeof dd
-                            }(kd) ? function(dd, Jd, kd) {
-                              const pd = Jd.flags.replace(/[gy]/g, ""),
-                                Nd = new RegExp(`[^${kd}](?:${Jd.source})`, `${pd}g`),
-                                Wd = [],
-                                Pd = kd => {
-                                  const pd = kd.index + kd[0].length;
-                                  return ("" === kd[0] ? ld(dd, Jd, pd) : pd) - 1
+                          function mQ(QQ, FQ, wQ) {
+                            return function(QQ) {
+                              return void 0 !== QQ && "function" !== typeof QQ
+                            }(wQ) ? function(QQ, FQ, wQ) {
+                              const LQ = FQ.flags.replace(/[gy]/g, ""),
+                                qQ = new RegExp(`[^${wQ}](?:${FQ.source})`, `${LQ}g`),
+                                oQ = [],
+                                DQ = wQ => {
+                                  const LQ = wQ.index + wQ[0].length;
+                                  return ("" === wQ[0] ? bQ(QQ, FQ, LQ) : LQ) - 1
                                 },
-                                Zd = new RegExp(`(?:${Jd.source})`, `${pd}y`).exec(dd);
-                              if (Zd) {
-                                if (Wd.push(Zd), !Jd.global) return Wd;
-                                Nd.lastIndex = Pd(Zd)
+                                kQ = new RegExp(`(?:${FQ.source})`, `${LQ}y`).exec(QQ);
+                              if (kQ) {
+                                if (oQ.push(kQ), !FQ.global) return oQ;
+                                qQ.lastIndex = DQ(kQ)
                               }
-                              for (let gd = Nd.exec(dd); gd; gd = Nd.exec(dd)) {
-                                const kd = ld(dd, Jd, gd.index) - gd.index;
-                                if (gd[0] = gd[0].slice(kd), gd.index += kd, Wd.push(gd), !Jd.global) break;
-                                Nd.lastIndex = Pd(gd)
+                              for (let vQ = qQ.exec(QQ); vQ; vQ = qQ.exec(QQ)) {
+                                const wQ = bQ(QQ, FQ, vQ.index) - vQ.index;
+                                if (vQ[0] = vQ[0].slice(wQ), vQ.index += wQ, oQ.push(vQ), !FQ.global) break;
+                                qQ.lastIndex = DQ(vQ)
                               }
-                              return Wd
-                            }(dd, Jd, kd.notAfter) : function(dd, Jd, kd) {
-                              const pd = new RegExp(Jd.source, `${Jd.flags.replace(/[gy]/g,"")}g`),
-                                Nd = [];
-                              for (let Wd = pd.exec(dd); Wd; Wd = pd.exec(dd))
-                                if (!kd || kd(Wd)) {
-                                  if (Nd.push(Wd), !Jd.global) break;
-                                  "" === Wd[0] && (pd.lastIndex = ld(dd, Jd, pd.lastIndex))
-                                } else pd.lastIndex = ld(dd, Jd, Wd.index);
-                              return Nd
-                            }(dd, Jd, kd)
+                              return oQ
+                            }(QQ, FQ, wQ.notAfter) : function(QQ, FQ, wQ) {
+                              const LQ = new RegExp(FQ.source, `${FQ.flags.replace(/[gy]/g,"")}g`),
+                                qQ = [];
+                              for (let oQ = LQ.exec(QQ); oQ; oQ = LQ.exec(QQ))
+                                if (!wQ || wQ(oQ)) {
+                                  if (qQ.push(oQ), !FQ.global) break;
+                                  "" === oQ[0] && (LQ.lastIndex = bQ(QQ, FQ, LQ.lastIndex))
+                                } else LQ.lastIndex = bQ(QQ, FQ, oQ.index);
+                              return qQ
+                            }(QQ, FQ, wQ)
                           }
 
-                          function Kd(dd, Jd, kd, pd) {
-                            let Nd = "",
-                              Wd = 0;
-                            for (const Pd of Cd(dd, Jd, kd)) Nd += dd.slice(Wd, Pd.index) + pd(Pd), Wd = Pd.index + Pd[0].length;
-                            return Nd + dd.slice(Wd)
+                          function uQ(QQ, FQ, wQ, LQ) {
+                            let qQ = "",
+                              oQ = 0;
+                            for (const DQ of mQ(QQ, FQ, wQ)) qQ += QQ.slice(oQ, DQ.index) + LQ(DQ), oQ = DQ.index + DQ[0].length;
+                            return qQ + QQ.slice(oQ)
                           }
 
-                          function od(dd, Jd, kd) {
-                            const pd = [];
-                            let Nd = 0;
-                            for (const Wd of Cd(dd, Jd, kd)) pd.push(dd.slice(Nd, Wd.index)), Nd = Wd.index + Wd[0].length;
-                            return [...pd, dd.slice(Nd)]
+                          function HQ(QQ, FQ, wQ) {
+                            const LQ = [];
+                            let qQ = 0;
+                            for (const oQ of mQ(QQ, FQ, wQ)) LQ.push(QQ.slice(qQ, oQ.index)), qQ = oQ.index + oQ[0].length;
+                            return [...LQ, QQ.slice(qQ)]
                           }
 
-                          function ld(dd, Jd, kd) {
-                            var pd;
-                            return kd + (Jd.unicode && (null !== (pd = dd.codePointAt(kd)) && void 0 !== pd ? pd : 0) > 65535 ? 2 : 1)
+                          function bQ(QQ, FQ, wQ) {
+                            var LQ;
+                            return wQ + (FQ.unicode && (null !== (LQ = QQ.codePointAt(wQ)) && void 0 !== LQ ? LQ : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4718: (dd, Jd, kd) => {
-                          kd.d(Jd, {
-                            d: () => Nd,
-                            g: () => gd,
-                            h: () => Wd,
-                            i: () => Pd,
-                            m: () => Zd,
-                            n: () => ed,
-                            p: () => Kd,
-                            s: () => od,
-                            w: () => Od,
-                            y: () => Qd
+                        }, 4659: (QQ, FQ, wQ) => {
+                          wQ.d(FQ, {
+                            b: () => qQ,
+                            f: () => vQ,
+                            i: () => oQ,
+                            j: () => DQ,
+                            m: () => kQ,
+                            o: () => tQ,
+                            q: () => uQ,
+                            r: () => HQ,
+                            s: () => AQ,
+                            t: () => YQ
                           });
-                          var pd = kd(1627);
-                          const Nd = 24e3,
-                            Wd = "/docs/llms.txt",
-                            Pd = `${pd.b}${Wd}`,
-                            Zd = "/llms.txt",
-                            gd = "/docs/llms-full.txt";
+                          var LQ = wQ(1582);
+                          const qQ = 24e3,
+                            oQ = "/docs/llms.txt",
+                            DQ = `${LQ.c}${oQ}`,
+                            kQ = "/llms.txt",
+                            vQ = "/docs/llms-full.txt";
 
-                          function Cd(dd) {
-                            return dd || "index"
+                          function mQ(QQ) {
+                            return QQ || "index"
                           }
 
-                          function Kd(dd) {
-                            return `/docs/${Cd(dd)}.md`
+                          function uQ(QQ) {
+                            return `/docs/${mQ(QQ)}.md`
                           }
 
-                          function od(dd, Jd) {
-                            return `/docs/${Cd(dd)}/${Jd+1}.md`
+                          function HQ(QQ, FQ) {
+                            return `/docs/${mQ(QQ)}/${FQ+1}.md`
                           }
-                          const ld = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const bQ = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function Qd(dd) {
-                            const Jd = ld.exec(dd);
-                            return null === Jd ? null : {
-                              name: Jd[1],
-                              part: void 0 === Jd[2] ? null : Number(Jd[2])
+                          function YQ(QQ) {
+                            const FQ = bQ.exec(QQ);
+                            return null === FQ ? null : {
+                              name: FQ[1],
+                              part: void 0 === FQ[2] ? null : Number(FQ[2])
                             }
                           }
-                          const Ld = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const xQ = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function Od(dd) {
-                            const Jd = Ld.exec(dd);
-                            if (null === Jd) return null;
-                            const [, kd = "", pd] = Jd;
-                            return void 0 === pd ? Kd(kd) : od(kd, Number(pd) - 1)
+                          function AQ(QQ) {
+                            const FQ = xQ.exec(QQ);
+                            if (null === FQ) return null;
+                            const [, wQ = "", LQ] = FQ;
+                            return void 0 === LQ ? uQ(wQ) : HQ(wQ, Number(LQ) - 1)
                           }
 
-                          function ed(dd) {
-                            return `/docsHtml/${Cd(dd)}.html`
+                          function tQ(QQ) {
+                            return `/docsHtml/${mQ(QQ)}.html`
                           }
-                        }, 4733: (dd, Jd, kd) => {
-                          kd.d(Jd, {
-                            b: () => Nd,
-                            f: () => pd,
-                            i: () => Wd,
-                            k: () => gd,
-                            m: () => Pd
+                        }, 4686: (QQ, FQ, wQ) => {
+                          wQ.d(FQ, {
+                            c: () => qQ,
+                            d: () => LQ,
+                            f: () => oQ,
+                            i: () => vQ,
+                            k: () => DQ
                           });
-                          const pd = ["sine", "triangle", "square", "sawtooth"],
-                            Nd = 55,
-                            Wd = {
+                          const LQ = ["sine", "triangle", "square", "sawtooth"],
+                            qQ = 55,
+                            oQ = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7208,38 +7208,38 @@ export const modules = {
                               }
                             };
 
-                          function Pd(dd) {
-                            return "string" !== typeof dd ? dd : Object.hasOwn(Wd, dd) ? Wd[dd] : null
+                          function DQ(QQ) {
+                            return "string" !== typeof QQ ? QQ : Object.hasOwn(oQ, QQ) ? oQ[QQ] : null
                           }
 
-                          function Zd(dd, Jd, kd) {
-                            return Math.min(kd, Math.max(Jd, dd))
+                          function kQ(QQ, FQ, wQ) {
+                            return Math.min(wQ, Math.max(FQ, QQ))
                           }
 
-                          function gd(dd) {
-                            const Jd = Zd(dd.durationMs, 10, 500),
-                              kd = Zd(dd.attackMs, 0, Jd),
+                          function vQ(QQ) {
+                            const FQ = kQ(QQ.durationMs, 10, 500),
+                              wQ = kQ(QQ.attackMs, 0, FQ),
                               {
-                                intonation: Nd
-                              } = dd;
+                                intonation: qQ
+                              } = QQ;
                             return {
-                              waveform: pd.includes(dd.waveform) ? dd.waveform : "sine",
-                              pitchHz: Zd(dd.pitchHz, 20, 4e3),
-                              glideSemitones: Zd(dd.glideSemitones, -24, 24),
-                              durationMs: Jd,
-                              attackMs: kd,
-                              releaseMs: Zd(dd.releaseMs, 0, Jd - kd),
-                              lowpassHz: null === dd.lowpassHz ? null : Zd(dd.lowpassHz, 20, 2e4),
-                              volume: Zd(dd.volume, 0, 2),
+                              waveform: LQ.includes(QQ.waveform) ? QQ.waveform : "sine",
+                              pitchHz: kQ(QQ.pitchHz, 20, 4e3),
+                              glideSemitones: kQ(QQ.glideSemitones, -24, 24),
+                              durationMs: FQ,
+                              attackMs: wQ,
+                              releaseMs: kQ(QQ.releaseMs, 0, FQ - wQ),
+                              lowpassHz: null === QQ.lowpassHz ? null : kQ(QQ.lowpassHz, 20, 2e4),
+                              volume: kQ(QQ.volume, 0, 2),
                               intonation: {
-                                variationSemitones: Zd(Nd.variationSemitones, 0, 6),
-                                declineSemitones: Zd(Nd.declineSemitones, 0, 12),
-                                questionRiseSemitones: Zd(Nd.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: Zd(Nd.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: kQ(qQ.variationSemitones, 0, 6),
+                                declineSemitones: kQ(qQ.declineSemitones, 0, 12),
+                                questionRiseSemitones: kQ(qQ.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: kQ(qQ.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: Zd(dd.syllableMs, 25, 200)
+                              syllableMs: kQ(QQ.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const dd in modules) Object.freeze(modules[dd]);
+                      for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,79 +1,79 @@
 export const id = 215;
 export const ids = [215];
 export const modules = {
-  41067: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      LobbyManageView: () => xJ
+  40485: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      LobbyManageView: () => pF
     });
-    var pd = kd(56),
-      Nd = kd(1492),
-      Wd = kd(2357),
-      Pd = kd(2372),
-      Zd = kd(2376),
-      gd = kd(36733);
+    var LQ = wQ(53),
+      qQ = wQ(1471),
+      oQ = wQ(2345),
+      DQ = wQ(2359),
+      kQ = wQ(2367),
+      vQ = wQ(36193);
 
-    function Cd() {
-      const [dd, Jd] = (0, pd.useState)(new Map);
+    function mQ() {
+      const [QQ, FQ] = (0, LQ.useState)(new Map);
       return {
-        get: Jd => dd.get(Jd),
-        hold: (0, pd.useCallback)(((dd, kd, pd) => {
-          Jd((Jd => new Map(Jd).set(dd, kd))), pd.then((() => {
-            Jd((Jd => {
-              const kd = new Map(Jd);
-              return kd.delete(dd), kd
+        get: FQ => QQ.get(FQ),
+        hold: (0, LQ.useCallback)(((QQ, wQ, LQ) => {
+          FQ((FQ => new Map(FQ).set(QQ, wQ))), LQ.then((() => {
+            FQ((FQ => {
+              const wQ = new Map(FQ);
+              return wQ.delete(QQ), wQ
             }))
           }))
         }), [])
       }
     }
-    var Kd = kd(1044),
-      od = kd.n(Kd),
-      ld = kd(1211),
-      Qd = kd(1059),
-      Ld = kd(1359),
-      Od = kd(2530),
-      ed = kd(4904),
-      Rd = kd(3451);
-    var Id = kd(1968),
-      Gd = kd(1461);
+    var uQ = wQ(1070),
+      HQ = wQ.n(uQ),
+      bQ = wQ(1207),
+      YQ = wQ(1079),
+      xQ = wQ(1348),
+      AQ = wQ(2552),
+      tQ = wQ(4867),
+      eQ = wQ(3451);
+    var MQ = wQ(1927),
+      GQ = wQ(1451);
 
-    function vd(dd, Jd, kd) {
-      const pd = dd.filter((dd => dd.name !== Jd)),
-        Nd = pd.filter((dd => "none" === dd.role)).sort(((dd, Jd) => Jd.at - dd.at)),
-        Wd = pd.filter((dd => "none" !== dd.role)).sort(((dd, Jd) => kd.indexOf(dd.role) - kd.indexOf(Jd.role) || Jd.at - dd.at));
-      return [...dd.some((dd => dd.name === Jd)) && null !== Jd ? [Jd] : [], ...[...Nd, ...Wd].map((dd => dd.name))]
+    function pQ(QQ, FQ, wQ) {
+      const LQ = QQ.filter((QQ => QQ.name !== FQ)),
+        qQ = LQ.filter((QQ => "none" === QQ.role)).sort(((QQ, FQ) => FQ.at - QQ.at)),
+        oQ = LQ.filter((QQ => "none" !== QQ.role)).sort(((QQ, FQ) => wQ.indexOf(QQ.role) - wQ.indexOf(FQ.role) || FQ.at - QQ.at));
+      return [...QQ.some((QQ => QQ.name === FQ)) && null !== FQ ? [FQ] : [], ...[...qQ, ...oQ].map((QQ => QQ.name))]
     }
 
-    function xd(dd, Jd) {
-      const kd = dd.banned.map((dd => dd.name)),
-        pd = new Set(kd);
+    function cQ(QQ, FQ) {
+      const wQ = QQ.banned.map((QQ => QQ.name)),
+        LQ = new Set(wQ);
       return {
-        here: vd(dd.here, Jd, dd.roles.map((dd => dd.role))),
-        away: dd.away.filter((dd => !pd.has(dd.name))).map((dd => dd.name)),
-        banned: kd
+        here: pQ(QQ.here, FQ, QQ.roles.map((QQ => QQ.role))),
+        away: QQ.away.filter((QQ => !LQ.has(QQ.name))).map((QQ => QQ.name)),
+        banned: wQ
       }
     }
 
-    function qd(dd, Jd) {
-      const kd = dd.here.find((dd => dd.name === Jd));
-      if (kd) return {
+    function CQ(QQ, FQ) {
+      const wQ = QQ.here.find((QQ => QQ.name === FQ));
+      if (wQ) return {
         section: "here",
-        player: kd
+        player: wQ
       };
-      const pd = dd.banned.find((dd => dd.name === Jd));
-      if (pd) return {
+      const LQ = QQ.banned.find((QQ => QQ.name === FQ));
+      if (LQ) return {
         section: "banned",
-        bannedAt: pd.at
+        bannedAt: LQ.at
       };
-      const Nd = dd.away.find((dd => dd.name === Jd));
-      return Nd ? {
+      const qQ = QQ.away.find((QQ => QQ.name === FQ));
+      return qQ ? {
         section: "away",
-        player: Nd
+        player: qQ
       } : {
         section: "gone"
       }
     }
-    const Bd = {
+    const SQ = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -81,357 +81,357 @@ export const modules = {
       ban: !1,
       unban: !1
     };
-    var sd = kd(2525),
-      ad = kd(36720),
-      Md = kd(36896),
-      Fd = kd(2999),
-      Yd = kd(313);
+    var iQ = wQ(2545),
+      WQ = wQ(36185),
+      RQ = wQ(36353),
+      OQ = wQ(3029),
+      sQ = wQ(317);
 
-    function md(dd, Jd, kd) {
-      return Jd.map((Jd => {
-        if ("string" === typeof Jd) return Jd;
-        const pd = "str" in Jd ? Jd.str : Jd;
-        return "string" === typeof pd ? pd : "entityName" in pd ? pd.entityName : "translationKey" in pd ? dd(pd.translationKey, (0, ld.r)(pd.params, kd)) : ""
+    function rQ(QQ, FQ, wQ) {
+      return FQ.map((FQ => {
+        if ("string" === typeof FQ) return FQ;
+        const LQ = "str" in FQ ? FQ.str : FQ;
+        return "string" === typeof LQ ? LQ : "entityName" in LQ ? LQ.entityName : "translationKey" in LQ ? QQ(LQ.translationKey, (0, bQ.m)(LQ.params, wQ)) : ""
       })).join("")
     }
 
-    function bd(dd, Jd, kd, pd, Nd) {
-      return Nd - pd < 6e4 ? dd(`${kd}JustNow`) : dd(kd, {
-        time: (0, Yd.ib)((0, ld.n)(Jd, kd), pd, Nd)
+    function IQ(QQ, FQ, wQ, LQ, qQ) {
+      return qQ - LQ < 6e4 ? QQ(`${wQ}JustNow`) : QQ(wQ, {
+        time: (0, sQ.db)((0, bQ.k)(FQ, wQ), LQ, qQ)
       })
     }
-    var Sd = kd(1904),
-      jd = kd(1714),
-      Xd = kd(1103);
+    var UQ = wQ(1873),
+      NQ = wQ(1682),
+      TQ = wQ(1107);
 
-    function fd(dd) {
+    function KQ(QQ) {
       let {
-        status: Jd
-      } = dd;
-      return (0, Xd.jsx)("span", {
-        className: od()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !Jd.ok
+        status: FQ
+      } = QQ;
+      return (0, TQ.jsx)("span", {
+        className: HQ()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !FQ.ok
         }),
-        children: (0, Xd.jsx)(Sd.c, {
-          text: Jd.text
+        children: (0, TQ.jsx)(UQ.e, {
+          text: FQ.text
         })
       })
     }
 
-    function nd(dd) {
+    function zQ(QQ) {
       let {
-        names: Jd,
-        cap: kd,
-        filterFrom: Nd,
-        moreLabel: Wd,
-        reveal: Pd = null,
-        renderRow: Zd
-      } = dd;
+        names: FQ,
+        cap: wQ,
+        filterFrom: qQ,
+        moreLabel: oQ,
+        reveal: DQ = null,
+        renderRow: kQ
+      } = QQ;
       const {
-        t: gd
-      } = (0, ld.B)(), [Cd, Kd] = (0, pd.useState)(!1), [od, Ld] = (0, pd.useState)(""), ed = Cd || null !== Pd && Jd.indexOf(Pd) >= kd, Rd = (ed || Jd.length <= kd) && null !== Nd && Jd.length > Nd, Id = od.trim().toLowerCase();
-      let Gd = ed ? Jd : Jd.slice(0, kd);
-      return Rd && "" !== Id && (Gd = Gd.filter((dd => dd.toLowerCase().includes(Id)))), (0, Xd.jsxs)(Xd.Fragment, {
-        children: [Rd && (0, Xd.jsx)(jd.e, {
+        t: vQ
+      } = (0, bQ.y)(), [mQ, uQ] = (0, LQ.useState)(!1), [HQ, xQ] = (0, LQ.useState)(""), tQ = mQ || null !== DQ && FQ.indexOf(DQ) >= wQ, eQ = (tQ || FQ.length <= wQ) && null !== qQ && FQ.length > qQ, MQ = HQ.trim().toLowerCase();
+      let GQ = tQ ? FQ : FQ.slice(0, wQ);
+      return eQ && "" !== MQ && (GQ = GQ.filter((QQ => QQ.toLowerCase().includes(MQ)))), (0, TQ.jsxs)(TQ.Fragment, {
+        children: [eQ && (0, TQ.jsx)(NQ.b, {
           className: "LobbyManageFilter",
-          placeholderText: gd("lobbyManage:findName"),
-          ariaLabel: gd("lobbyManage:findName"),
-          onValueChange: dd => {
-            Ld(dd)
+          placeholderText: vQ("lobbyManage:findName"),
+          ariaLabel: vQ("lobbyManage:findName"),
+          onValueChange: QQ => {
+            xQ(QQ)
           }
-        }), Gd.length > 0 && (0, Xd.jsx)("div", {
+        }), GQ.length > 0 && (0, TQ.jsx)("div", {
           className: "PlayerRows",
-          children: Gd.map(((dd, Jd) => Zd(dd, Gd.length - Jd)))
-        }), !ed && Jd.length > kd && (0, Xd.jsx)("div", {
+          children: GQ.map(((QQ, FQ) => kQ(QQ, GQ.length - FQ)))
+        }), !tQ && FQ.length > wQ && (0, TQ.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, Xd.jsx)(Od.c, {
-            label: (0, Xd.jsxs)(Xd.Fragment, {
-              children: [Wd, " ", (0, Xd.jsx)(Qd.e, {
+          children: (0, TQ.jsx)(AQ.b, {
+            label: (0, TQ.jsxs)(TQ.Fragment, {
+              children: [oQ, " ", (0, TQ.jsx)(YQ.c, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              Kd(!0)
+              uQ(!0)
             }
           })
         })]
       })
     }
 
-    function Ud(dd) {
+    function lQ(QQ) {
       let {
-        value: Jd,
-        placeholder: kd,
-        ariaLabel: Nd,
-        maxLength: Wd,
-        wide: Pd = !1,
-        onSave: Zd
-      } = dd;
-      const gd = (0, pd.useRef)(null),
-        [Cd, Kd] = (0, pd.useState)(0),
-        ld = (0, pd.useRef)(!0),
-        Qd = (0, pd.useRef)(null),
-        Ld = (0, pd.useRef)({
-          value: Jd,
-          onSave: Zd
+        value: FQ,
+        placeholder: wQ,
+        ariaLabel: qQ,
+        maxLength: oQ,
+        wide: DQ = !1,
+        onSave: kQ
+      } = QQ;
+      const vQ = (0, LQ.useRef)(null),
+        [mQ, uQ] = (0, LQ.useState)(0),
+        bQ = (0, LQ.useRef)(!0),
+        YQ = (0, LQ.useRef)(null),
+        xQ = (0, LQ.useRef)({
+          value: FQ,
+          onSave: kQ
         });
-      Ld.current = {
-        value: Jd,
-        onSave: Zd
+      xQ.current = {
+        value: FQ,
+        onSave: kQ
       };
-      const Od = () => {
-        const dd = Qd.current;
-        Qd.current = null, null !== dd && dd !== Ld.current.value && Ld.current.onSave(dd).then((() => {
-          ld.current && Kd((dd => dd + 1))
+      const AQ = () => {
+        const QQ = YQ.current;
+        YQ.current = null, null !== QQ && QQ !== xQ.current.value && xQ.current.onSave(QQ).then((() => {
+          bQ.current && uQ((QQ => QQ + 1))
         }))
       };
-      return (0, pd.useEffect)((() => {
-        null === Qd.current && gd.current && (gd.current.value = Jd)
-      }), [Jd, Cd]), (0, pd.useEffect)((() => () => {
-        ld.current = !1, Od()
-      }), []), (0, Xd.jsx)("div", {
-        className: od()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: Pd
+      return (0, LQ.useEffect)((() => {
+        null === YQ.current && vQ.current && (vQ.current.value = FQ)
+      }), [FQ, mQ]), (0, LQ.useEffect)((() => () => {
+        bQ.current = !1, AQ()
+      }), []), (0, TQ.jsx)("div", {
+        className: HQ()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: DQ
         }),
-        onBlur: Od,
-        children: (0, Xd.jsx)(jd.e, {
-          domRef: gd,
-          defaultValue: Jd,
-          placeholderText: kd,
-          ariaLabel: Nd,
-          maxLength: Wd,
-          onValueChange: dd => {
-            Qd.current = dd
+        onBlur: AQ,
+        children: (0, TQ.jsx)(NQ.b, {
+          domRef: vQ,
+          defaultValue: FQ,
+          placeholderText: wQ,
+          ariaLabel: qQ,
+          maxLength: oQ,
+          onValueChange: QQ => {
+            YQ.current = QQ
           },
-          onEnter: Od
+          onEnter: AQ
         })
       })
     }
-    const yd = ["mod", "coOwner"],
-      Dd = {
+    const jQ = ["mod", "coOwner"],
+      aQ = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function Td(dd) {
-      var Jd, kd, Wd;
+    function XQ(QQ) {
+      var FQ, wQ, oQ;
       let {
-        name: Pd,
-        place: Zd,
-        openedIn: gd,
-        isYou: Kd,
-        manage: od,
-        hiddenNames: Ld,
-        zIndex: Od
-      } = dd;
+        name: DQ,
+        place: kQ,
+        openedIn: vQ,
+        isYou: uQ,
+        manage: HQ,
+        hiddenNames: xQ,
+        zIndex: AQ
+      } = QQ;
       const {
-        t: ed,
-        selectedLanguage: Rd
-      } = (0, ld.B)(), [Id, vd] = (0, pd.useState)(null), {
-        state: xd
-      } = od, qd = `player:${Pd}`, Yd = function(dd, Jd) {
-        if ("banned" === dd.section) return {
-          ...Bd,
+        t: tQ,
+        selectedLanguage: eQ
+      } = (0, bQ.y)(), [MQ, pQ] = (0, LQ.useState)(null), {
+        state: cQ
+      } = HQ, CQ = `player:${DQ}`, sQ = function(QQ, FQ) {
+        if ("banned" === QQ.section) return {
+          ...SQ,
           unban: !0
         };
-        if ("gone" === dd.section) return Bd;
+        if ("gone" === QQ.section) return SQ;
         const {
-          player: kd
-        } = dd, pd = "here" === dd.section, Nd = pd || "none" !== kd.role ? kd.can.roles : [];
+          player: wQ
+        } = QQ, LQ = "here" === QQ.section, qQ = LQ || "none" !== wQ.role ? wQ.can.roles : [];
         return {
-          gamemode: pd && Jd && null !== kd.gamemode && kd.can.gamemode,
-          roles: Nd,
-          fixedRole: 0 === Nd.length && "none" !== kd.role ? kd.role : null,
-          kick: pd && kd.can.kick,
-          ban: kd.can.ban,
+          gamemode: LQ && FQ && null !== wQ.gamemode && wQ.can.gamemode,
+          roles: qQ,
+          fixedRole: 0 === qQ.length && "none" !== wQ.role ? wQ.role : null,
+          kick: LQ && wQ.can.kick,
+          ban: wQ.can.ban,
           unban: !1
         }
-      }(Zd, null !== xd.gamemodes), Sd = od.statusOf(qd), jd = od.isPending(qd), nd = Cd(), Ud = Date.now(), Td = dd => {
-        var Jd, kd;
-        return null !== (Jd = null === (kd = (dd => xd.roles.find((Jd => Jd.role === dd)))(dd)) || void 0 === kd ? void 0 : kd.label) && void 0 !== Jd ? Jd : dd
-      }, Ed = dd => {
-        const Jd = Dd[dd];
-        return void 0 === Jd ? void 0 : ed(Jd)
-      }, cd = "here" === Zd.section || "away" === Zd.section ? Zd.player : null, hd = "here" === Zd.section ? Zd.player.id : null, {
-        playerSocialPreview: rd,
-        isFriend: ud
-      } = null === hd ? {
-        playerSocialPreview: (0, Md.h)(Pd, null),
+      }(kQ, null !== cQ.gamemodes), UQ = HQ.statusOf(CQ), NQ = HQ.isPending(CQ), zQ = mQ(), lQ = Date.now(), XQ = QQ => {
+        var FQ, wQ;
+        return null !== (FQ = null === (wQ = (QQ => cQ.roles.find((FQ => FQ.role === QQ)))(QQ)) || void 0 === wQ ? void 0 : wQ.label) && void 0 !== FQ ? FQ : QQ
+      }, fQ = QQ => {
+        const FQ = aQ[QQ];
+        return void 0 === FQ ? void 0 : tQ(FQ)
+      }, VQ = "here" === kQ.section || "away" === kQ.section ? kQ.player : null, hQ = "here" === kQ.section ? kQ.player.id : null, {
+        playerSocialPreview: JQ,
+        isFriend: EQ
+      } = null === hQ ? {
+        playerSocialPreview: (0, RQ.e)(DQ, null),
         isFriend: !1
-      } : (0, ad.c)(hd, Pd), td = function() {
-        od.send(...arguments)
-      }, Vd = (dd, Jd) => {
-        nd.hold("role", dd, od.send({
+      } : (0, WQ.c)(hQ, DQ), nQ = function() {
+        HQ.send(...arguments)
+      }, gQ = (QQ, FQ) => {
+        zQ.hold("role", QQ, HQ.send({
           type: "setRole",
-          name: Pd,
-          role: dd
-        }, qd, Jd))
+          name: DQ,
+          role: QQ
+        }, CQ, FQ))
       };
-      let zd = null;
-      if ("ban" === (null === Id || void 0 === Id ? void 0 : Id.kind)) zd = ed("lobbyManageEntry:banConfirm", {
-        playerName: Pd
+      let PQ = null;
+      if ("ban" === (null === MQ || void 0 === MQ ? void 0 : MQ.kind)) PQ = tQ("lobbyManageEntry:banConfirm", {
+        playerName: DQ
       });
-      else if ("role" === (null === Id || void 0 === Id ? void 0 : Id.kind)) {
-        var Hd;
-        zd = `${ed("lobbyManage:roleConfirm",{playerName:Pd,role:Td(Id.role)})} ${null!==(Hd=Ed(Id.role))&&void 0!==Hd?Hd:""}`
-      } else if (Sd) zd = (0, Xd.jsx)(fd, {
-        status: Sd
+      else if ("role" === (null === MQ || void 0 === MQ ? void 0 : MQ.kind)) {
+        var ZQ;
+        PQ = `${tQ("lobbyManage:roleConfirm",{playerName:DQ,role:XQ(MQ.role)})} ${null!==(ZQ=fQ(MQ.role))&&void 0!==ZQ?ZQ:""}`
+      } else if (UQ) PQ = (0, TQ.jsx)(KQ, {
+        status: UQ
       });
-      else if (Kd) zd = ed("lobbyManage:you");
-      else if ("here" === Zd.section) "none" === Zd.player.role && Ud - Zd.player.at < 6e5 && (zd = bd(ed, Rd.code, "lobbyManage:joinedAgo", Zd.player.at, Ud));
-      else if ("away" === Zd.section) {
-        if (Zd.player.at > 0) {
-          const dd = "kicked" === Zd.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          zd = bd(ed, Rd.code, dd, Zd.player.at, Ud)
+      else if (uQ) PQ = tQ("lobbyManage:you");
+      else if ("here" === kQ.section) "none" === kQ.player.role && lQ - kQ.player.at < 6e5 && (PQ = IQ(tQ, eQ.code, "lobbyManage:joinedAgo", kQ.player.at, lQ));
+      else if ("away" === kQ.section) {
+        if (kQ.player.at > 0) {
+          const QQ = "kicked" === kQ.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          PQ = IQ(tQ, eQ.code, QQ, kQ.player.at, lQ)
         }
-      } else "banned" === Zd.section ? null !== Zd.bannedAt && (zd = bd(ed, Rd.code, "lobbyManage:bannedAgo", Zd.bannedAt, Ud)) : "banned" === gd && (zd = ed("lobbyManageEntry:unbanned"));
-      return (0, Xd.jsx)("div", {
+      } else "banned" === kQ.section ? null !== kQ.bannedAt && (PQ = IQ(tQ, eQ.code, "lobbyManage:bannedAgo", kQ.bannedAt, lQ)) : "banned" === vQ && (PQ = tQ("lobbyManageEntry:unbanned"));
+      return (0, TQ.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": Pd,
-        children: (0, Xd.jsxs)(sd.d, {
-          playerSocialPreview: rd,
-          isFriend: ud,
-          status: zd,
-          opensProfileCard: !Kd && (0, ad.g)(!0, Pd, Ld),
-          zIndex: Od,
-          children: [null !== Id && (0, Xd.jsxs)("div", {
+        "data-lobby-manage-row": DQ,
+        children: (0, TQ.jsxs)(iQ.f, {
+          playerSocialPreview: JQ,
+          isFriend: EQ,
+          status: PQ,
+          opensProfileCard: !uQ && (0, WQ.g)(!0, DQ, xQ),
+          zIndex: AQ,
+          children: [null !== MQ && (0, TQ.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === Id.kind && (0, Xd.jsxs)(Gd.B, {
+            children: ["ban" === MQ.kind && (0, TQ.jsxs)(GQ.F, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                vd(null), td({
+                pQ(null), nQ({
                   type: "ban",
-                  name: Pd
-                }, qd)
+                  name: DQ
+                }, CQ)
               },
-              children: [(0, Xd.jsx)(Qd.e, {
+              children: [(0, TQ.jsx)(YQ.c, {
                 name: "gavel"
-              }), (0, Xd.jsx)("span", {
+              }), (0, TQ.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: ed("lobbyManageEntry:ban")
+                children: tQ("lobbyManageEntry:ban")
               })]
-            }), "role" === Id.kind && (0, Xd.jsx)(Gd.d, {
+            }), "role" === MQ.kind && (0, TQ.jsx)(GQ.f, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: Id.role
+                value: MQ.role
               },
               onClick: () => {
-                vd(null), Vd(Id.role)
+                pQ(null), gQ(MQ.role)
               },
-              children: ed("lobbyManage:makeRole", {
-                role: Td(Id.role)
+              children: tQ("lobbyManage:makeRole", {
+                role: XQ(MQ.role)
               })
-            }), (0, Xd.jsx)(Gd.f, {
+            }), (0, TQ.jsx)(GQ.i, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                vd(null)
+                pQ(null)
               },
-              children: ed("general:cancel")
+              children: tQ("general:cancel")
             })]
-          }), null === Id && (0, Xd.jsxs)(Xd.Fragment, {
-            children: [(0, Xd.jsxs)("div", {
+          }), null === MQ && (0, TQ.jsxs)(TQ.Fragment, {
+            children: [(0, TQ.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [Yd.gamemode && null !== cd && (0, Xd.jsx)(Fd.c, {
-                options: (null !== (Jd = xd.gamemodes) && void 0 !== Jd ? Jd : []).map((dd => ({
-                  value: dd.value,
-                  label: md(ed, dd.label, Ld)
+              children: [sQ.gamemode && null !== VQ && (0, TQ.jsx)(OQ.d, {
+                options: (null !== (FQ = cQ.gamemodes) && void 0 !== FQ ? FQ : []).map((QQ => ({
+                  value: QQ.value,
+                  label: rQ(tQ, QQ.label, xQ)
                 }))),
-                value: null !== (kd = nd.get("gamemode")) && void 0 !== kd ? kd : cd.gamemode,
-                disabled: jd,
-                onChange: dd => {
-                  (0, Nd.reportAnalyticsClick)({
+                value: null !== (wQ = zQ.get("gamemode")) && void 0 !== wQ ? wQ : VQ.gamemode,
+                disabled: NQ,
+                onChange: QQ => {
+                  (0, qQ.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
-                    value: dd.value
-                  }), nd.hold("gamemode", dd.value, od.send({
+                    value: QQ.value
+                  }), zQ.hold("gamemode", QQ.value, HQ.send({
                     type: "setGamemode",
-                    name: Pd,
-                    gamemode: dd.value
-                  }, qd))
+                    name: DQ,
+                    gamemode: QQ.value
+                  }, CQ))
                 }
-              }), Yd.roles.length > 0 && null !== cd && (0, Xd.jsx)(Fd.c, {
-                options: [...xd.roles].reverse().filter((dd => Yd.roles.includes(dd.role))).map((dd => ({
-                  value: dd.role,
-                  label: dd.label
+              }), sQ.roles.length > 0 && null !== VQ && (0, TQ.jsx)(OQ.d, {
+                options: [...cQ.roles].reverse().filter((QQ => sQ.roles.includes(QQ.role))).map((QQ => ({
+                  value: QQ.role,
+                  label: QQ.label
                 }))),
-                value: null !== (Wd = nd.get("role")) && void 0 !== Wd ? Wd : cd.role,
-                disabled: jd,
-                onChange: dd => {
-                  var Jd;
-                  (Jd = dd.value) !== (null === cd || void 0 === cd ? void 0 : cd.role) && (yd.includes(Jd) ? vd({
+                value: null !== (oQ = zQ.get("role")) && void 0 !== oQ ? oQ : VQ.role,
+                disabled: NQ,
+                onChange: QQ => {
+                  var FQ;
+                  (FQ = QQ.value) !== (null === VQ || void 0 === VQ ? void 0 : VQ.role) && (jQ.includes(FQ) ? pQ({
                     kind: "role",
-                    role: Jd
-                  }) : ((0, Nd.reportAnalyticsClick)({
+                    role: FQ
+                  }) : ((0, qQ.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: Jd
-                  }), Vd(Jd, Ed(Jd))))
+                    value: FQ
+                  }), gQ(FQ, fQ(FQ))))
                 }
-              }), null !== Yd.fixedRole && (0, Xd.jsx)("div", {
+              }), null !== sQ.fixedRole && (0, TQ.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: Td(Yd.fixedRole)
+                children: XQ(sQ.fixedRole)
               })]
-            }), (0, Xd.jsxs)("div", {
+            }), (0, TQ.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [Yd.kick && (0, Xd.jsxs)(Gd.f, {
+              children: [sQ.kick && (0, TQ.jsxs)(GQ.i, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${ed("lobbyManageEntry:kick")} ${Pd}`,
-                disabled: jd,
+                ariaLabel: `${tQ("lobbyManageEntry:kick")} ${DQ}`,
+                disabled: NQ,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  td({
+                  nQ({
                     type: "kick",
-                    name: Pd
-                  }, qd)
+                    name: DQ
+                  }, CQ)
                 },
-                children: [(0, Xd.jsx)(Qd.e, {
+                children: [(0, TQ.jsx)(YQ.c, {
                   name: "person-falling-burst"
-                }), (0, Xd.jsx)("span", {
+                }), (0, TQ.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: ed("lobbyManageEntry:kick")
+                  children: tQ("lobbyManageEntry:kick")
                 })]
-              }), Yd.ban && (0, Xd.jsxs)(Gd.E, {
+              }), sQ.ban && (0, TQ.jsxs)(GQ.G, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${ed("lobbyManageEntry:ban")} ${Pd}`,
-                disabled: jd,
+                ariaLabel: `${tQ("lobbyManageEntry:ban")} ${DQ}`,
+                disabled: NQ,
                 padDestructive: !0,
                 onClick: () => {
-                  vd({
+                  pQ({
                     kind: "ban"
                   })
                 },
-                children: [(0, Xd.jsx)(Qd.e, {
+                children: [(0, TQ.jsx)(YQ.c, {
                   name: "gavel"
-                }), (0, Xd.jsx)("span", {
+                }), (0, TQ.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: ed("lobbyManageEntry:ban")
+                  children: tQ("lobbyManageEntry:ban")
                 })]
-              }), Yd.unban && (0, Xd.jsxs)(Gd.f, {
+              }), sQ.unban && (0, TQ.jsxs)(GQ.i, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${ed("lobbyManageEntry:unban")} ${Pd}`,
-                disabled: jd,
+                ariaLabel: `${tQ("lobbyManageEntry:unban")} ${DQ}`,
+                disabled: NQ,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  td({
+                  nQ({
                     type: "unban",
-                    name: Pd
-                  }, qd)
+                    name: DQ
+                  }, CQ)
                 },
-                children: [(0, Xd.jsx)(Qd.e, {
+                children: [(0, TQ.jsx)(YQ.c, {
                   name: "user-unlock"
-                }), (0, Xd.jsx)("span", {
+                }), (0, TQ.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: ed("lobbyManageEntry:unban")
+                  children: tQ("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -440,783 +440,783 @@ export const modules = {
       })
     }
 
-    function Ed(dd) {
-      var Jd, kd, Nd, Wd;
+    function fQ(QQ) {
+      var FQ, wQ, qQ, oQ;
       let {
-        manage: Pd,
-        focusRequest: Zd,
-        onFocused: gd
-      } = dd;
+        manage: DQ,
+        focusRequest: kQ,
+        onFocused: vQ
+      } = QQ;
       const {
-        t: Cd
-      } = (0, ld.B)(), Kd = (0, Id.k)("players"), od = (0, Id.k)("hiddenPlayerNames"), Ld = (0, pd.useRef)(null), {
-        state: ed
-      } = Pd, Rd = null === Kd.localId ? null : null !== (Jd = null === (kd = Kd.byId[Kd.localId]) || void 0 === kd ? void 0 : kd.name) && void 0 !== Jd ? Jd : null, [vd] = (0, pd.useState)((() => xd(ed, Rd))), Bd = function(dd, Jd, kd) {
-        const pd = new Set([...dd.here, ...dd.away, ...dd.banned]),
-          Nd = xd(Jd, kd),
-          Wd = Jd => {
-            const kd = Nd[Jd].filter((dd => !pd.has(dd)));
-            for (const dd of kd) pd.add(dd);
-            return [...dd[Jd], ...kd]
+        t: mQ
+      } = (0, bQ.y)(), uQ = (0, MQ.k)("players"), HQ = (0, MQ.k)("hiddenPlayerNames"), xQ = (0, LQ.useRef)(null), {
+        state: tQ
+      } = DQ, eQ = null === uQ.localId ? null : null !== (FQ = null === (wQ = uQ.byId[uQ.localId]) || void 0 === wQ ? void 0 : wQ.name) && void 0 !== FQ ? FQ : null, [pQ] = (0, LQ.useState)((() => cQ(tQ, eQ))), SQ = function(QQ, FQ, wQ) {
+        const LQ = new Set([...QQ.here, ...QQ.away, ...QQ.banned]),
+          qQ = cQ(FQ, wQ),
+          oQ = FQ => {
+            const wQ = qQ[FQ].filter((QQ => !LQ.has(QQ)));
+            for (const QQ of wQ) LQ.add(QQ);
+            return [...QQ[FQ], ...wQ]
           };
         return {
-          here: Wd("here"),
-          away: Wd("away"),
-          banned: Wd("banned")
+          here: oQ("here"),
+          away: oQ("away"),
+          banned: oQ("banned")
         }
-      }(vd, ed, Rd), [sd, ad] = (0, pd.useState)(!1), Md = function(dd, Jd) {
-        return dd.here.filter((dd => dd.name !== Jd && "none" === dd.role && dd.can.kick)).length
-      }(ed, Rd), Fd = Pd.statusOf("kickAll");
-      (0, pd.useEffect)((() => {
-        var dd, Jd;
-        if (null === Zd) return;
-        const kd = null === (dd = Ld.current) || void 0 === dd ? void 0 : dd.querySelector(`[data-lobby-manage-row="${CSS.escape(Zd.name)}"]`);
-        null === kd || void 0 === kd || kd.scrollIntoView({
+      }(pQ, tQ, eQ), [iQ, WQ] = (0, LQ.useState)(!1), RQ = function(QQ, FQ) {
+        return QQ.here.filter((QQ => QQ.name !== FQ && "none" === QQ.role && QQ.can.kick)).length
+      }(tQ, eQ), OQ = DQ.statusOf("kickAll");
+      (0, LQ.useEffect)((() => {
+        var QQ, FQ;
+        if (null === kQ) return;
+        const wQ = null === (QQ = xQ.current) || void 0 === QQ ? void 0 : QQ.querySelector(`[data-lobby-manage-row="${CSS.escape(kQ.name)}"]`);
+        null === wQ || void 0 === wQ || wQ.scrollIntoView({
           block: "center"
-        }), null === kd || void 0 === kd || null === (Jd = kd.querySelector(".ProfilePreview")) || void 0 === Jd || Jd.focus({
+        }), null === wQ || void 0 === wQ || null === (FQ = wQ.querySelector(".ProfilePreview")) || void 0 === FQ || FQ.focus({
           preventScroll: !0
-        }), gd(Zd.seq)
-      }), [null === Zd || void 0 === Zd ? void 0 : Zd.seq]);
-      const Yd = dd => (Jd, kd) => (0, Xd.jsx)(Td, {
-        name: Jd,
-        place: qd(ed, Jd),
-        openedIn: dd,
-        isYou: Jd === Rd,
-        manage: Pd,
-        hiddenNames: od,
-        zIndex: kd
-      }, Jd);
-      return (0, Xd.jsxs)("div", {
-        ref: Ld,
+        }), vQ(kQ.seq)
+      }), [null === kQ || void 0 === kQ ? void 0 : kQ.seq]);
+      const sQ = QQ => (FQ, wQ) => (0, TQ.jsx)(XQ, {
+        name: FQ,
+        place: CQ(tQ, FQ),
+        openedIn: QQ,
+        isYou: FQ === eQ,
+        manage: DQ,
+        hiddenNames: HQ,
+        zIndex: wQ
+      }, FQ);
+      return (0, TQ.jsxs)("div", {
+        ref: xQ,
         className: "LobbyManagePage",
-        children: [Bd.here.length > 0 && (0, Xd.jsxs)("div", {
+        children: [SQ.here.length > 0 && (0, TQ.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Xd.jsxs)("div", {
+          children: [(0, TQ.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, Xd.jsx)(Od.c, {
-              label: Cd("lobbyManage:here"),
-              meta: ed.here.length
-            }), Md >= 2 && !sd && (0, Xd.jsxs)(Gd.E, {
+            children: [(0, TQ.jsx)(AQ.b, {
+              label: mQ("lobbyManage:here"),
+              meta: tQ.here.length
+            }), RQ >= 2 && !iQ && (0, TQ.jsxs)(GQ.G, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: Pd.isPending("kickAll"),
+              disabled: DQ.isPending("kickAll"),
               onClick: () => {
-                ad(!0)
+                WQ(!0)
               },
-              children: [(0, Xd.jsx)(Qd.e, {
+              children: [(0, TQ.jsx)(YQ.c, {
                 name: "person-falling-burst"
-              }), " ", Cd("lobbyManage:kickAll")]
+              }), " ", mQ("lobbyManage:kickAll")]
             })]
-          }), sd && Md >= 2 && (0, Xd.jsxs)("div", {
+          }), iQ && RQ >= 2 && (0, TQ.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, Xd.jsx)("span", {
+            children: [(0, TQ.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: Cd("lobbyManage:kickAllConfirm", {
-                count: Md
+              children: mQ("lobbyManage:kickAllConfirm", {
+                count: RQ
               })
-            }), (0, Xd.jsxs)("div", {
+            }), (0, TQ.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, Xd.jsx)(Gd.B, {
+              children: [(0, TQ.jsx)(GQ.F, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  ad(!1), Pd.send({
+                  WQ(!1), DQ.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: Cd("lobbyManage:kickAll")
-              }), (0, Xd.jsx)(Gd.f, {
+                children: mQ("lobbyManage:kickAll")
+              }), (0, TQ.jsx)(GQ.i, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  ad(!1)
+                  WQ(!1)
                 },
-                children: Cd("general:cancel")
+                children: mQ("general:cancel")
               })]
             })]
-          }), Fd && (0, Xd.jsx)("div", {
+          }), OQ && (0, TQ.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, Xd.jsx)(fd, {
-              status: Fd
+            children: (0, TQ.jsx)(KQ, {
+              status: OQ
             })
-          }), (0, Xd.jsx)(nd, {
-            names: Bd.here,
-            cap: Bd.here.length,
+          }), (0, TQ.jsx)(zQ, {
+            names: SQ.here,
+            cap: SQ.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: Yd("here")
+            renderRow: sQ("here")
           })]
-        }), Bd.away.length > 0 && (0, Xd.jsxs)("div", {
+        }), SQ.away.length > 0 && (0, TQ.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Xd.jsx)(Od.c, {
-            label: Cd("lobbyManage:notHere"),
-            meta: Bd.away.length
-          }), (0, Xd.jsx)(nd, {
-            names: Bd.away,
+          children: [(0, TQ.jsx)(AQ.b, {
+            label: mQ("lobbyManage:notHere"),
+            meta: SQ.away.length
+          }), (0, TQ.jsx)(zQ, {
+            names: SQ.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: Cd("lobbyManage:allCount", {
-              count: Bd.away.length
+            moreLabel: mQ("lobbyManage:allCount", {
+              count: SQ.away.length
             }),
-            reveal: null !== (Nd = null === Zd || void 0 === Zd ? void 0 : Zd.name) && void 0 !== Nd ? Nd : null,
-            renderRow: Yd("away")
+            reveal: null !== (qQ = null === kQ || void 0 === kQ ? void 0 : kQ.name) && void 0 !== qQ ? qQ : null,
+            renderRow: sQ("away")
           })]
-        }), Bd.banned.length > 0 && (0, Xd.jsxs)("div", {
+        }), SQ.banned.length > 0 && (0, TQ.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Xd.jsx)(Od.c, {
-            label: Cd("lobbyManage:banned"),
-            meta: Bd.banned.length
-          }), (0, Xd.jsx)(nd, {
-            names: Bd.banned,
+          children: [(0, TQ.jsx)(AQ.b, {
+            label: mQ("lobbyManage:banned"),
+            meta: SQ.banned.length
+          }), (0, TQ.jsx)(zQ, {
+            names: SQ.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: Cd("lobbyManage:allCount", {
-              count: Bd.banned.length
+            moreLabel: mQ("lobbyManage:allCount", {
+              count: SQ.banned.length
             }),
-            reveal: null !== (Wd = null === Zd || void 0 === Zd ? void 0 : Zd.name) && void 0 !== Wd ? Wd : null,
-            renderRow: Yd("banned")
+            reveal: null !== (oQ = null === kQ || void 0 === kQ ? void 0 : kQ.name) && void 0 !== oQ ? oQ : null,
+            renderRow: sQ("banned")
           })]
         })]
       })
     }
-    var cd = kd(4482),
-      hd = kd(1675),
-      rd = kd(36877),
-      ud = kd(36890),
-      td = kd(36887),
-      Vd = kd(36880),
-      zd = kd(36911),
-      Hd = kd(36905),
-      wd = kd(36907);
+    var VQ = wQ(4475),
+      hQ = wQ(1645),
+      JQ = wQ(36329),
+      EQ = wQ(36349),
+      nQ = wQ(36341),
+      gQ = wQ(36335),
+      PQ = wQ(36369),
+      ZQ = wQ(36356),
+      yQ = wQ(36362);
 
-    function Ad(dd) {
-      const Jd = new Set;
-      for (const kd of dd) Jd.add(kd.toLowerCase());
-      return Jd
+    function BQ(QQ) {
+      const FQ = new Set;
+      for (const wQ of QQ) FQ.add(wQ.toLowerCase());
+      return FQ
     }
 
-    function dJ(dd) {
-      var Jd, kd;
+    function dQ(QQ) {
+      var FQ, wQ;
       let {
-        state: Nd,
-        lobbyName: Wd,
-        listed: Pd,
-        isListed: Zd,
-        mI: gd,
-        QG: Cd,
-        statusOf: Kd
-      } = dd;
+        state: qQ,
+        lobbyName: oQ,
+        listed: DQ,
+        isListed: kQ,
+        nG: vQ,
+        uC: mQ,
+        statusOf: uQ
+      } = QQ;
       const {
-        t: od,
-        selectedLanguage: Qd
-      } = (0, ld.B)(), Ld = (0, hd.j)(), ed = (0, Id.k)("players"), Rd = null === ed.localId ? null : null !== (Jd = null === (kd = ed.byId[ed.localId]) || void 0 === kd ? void 0 : kd.name) && void 0 !== Jd ? Jd : null, Gd = (0, pd.useMemo)((() => (0, Vd.j)(Ld.friends, Wd, Nd.here.map((dd => dd.name)))), [Ld.friends, Wd, Nd.here]), vd = new Map(Gd.map((dd => [dd.friend.name.toLowerCase(), dd]))), xd = function(dd) {
+        t: HQ,
+        selectedLanguage: YQ
+      } = (0, bQ.y)(), xQ = (0, hQ.m)(), tQ = (0, MQ.k)("players"), eQ = null === tQ.localId ? null : null !== (FQ = null === (wQ = tQ.byId[tQ.localId]) || void 0 === wQ ? void 0 : wQ.name) && void 0 !== FQ ? FQ : null, GQ = (0, LQ.useMemo)((() => (0, gQ.g)(xQ.friends, oQ, qQ.here.map((QQ => QQ.name)))), [xQ.friends, oQ, qQ.here]), pQ = new Map(GQ.map((QQ => [QQ.friend.name.toLowerCase(), QQ]))), cQ = function(QQ) {
         let {
-          refused: Jd,
-          listed: kd,
-          here: pd,
-          friends: Nd,
-          excluded: Wd
-        } = dd;
-        const Pd = Ad(Wd),
-          Zd = dd => dd.filter((dd => {
-            const Jd = dd.toLowerCase();
-            return !Pd.has(Jd) && (Pd.add(Jd), !0)
+          refused: FQ,
+          listed: wQ,
+          here: LQ,
+          friends: qQ,
+          excluded: oQ
+        } = QQ;
+        const DQ = BQ(oQ),
+          kQ = QQ => QQ.filter((QQ => {
+            const FQ = QQ.toLowerCase();
+            return !DQ.has(FQ) && (DQ.add(FQ), !0)
           }));
         return {
           added: [],
-          refused: Zd(Jd),
-          listed: Zd(kd),
-          suggested: Zd([...pd, ...Nd])
+          refused: kQ(FQ),
+          listed: kQ(wQ),
+          suggested: kQ([...LQ, ...qQ])
         }
       }({
-        refused: Nd.refused.map((dd => dd.name)),
-        listed: Pd,
-        here: Nd.here.map((dd => dd.name)),
-        friends: Gd.flatMap((dd => "here" === dd.place ? [] : [dd.friend.name])),
-        excluded: [...null === Rd ? [] : [Rd], ...[...Nd.here, ...Nd.away].flatMap((dd => "none" === dd.role || (0, Vd.l)(Pd, dd.name) ? [] : [dd.name]))]
-      }), [qd] = (0, pd.useState)(xd), [Bd, sd] = (0, pd.useState)([]), Fd = function(dd, Jd, kd) {
-        const pd = Ad(kd),
-          Nd = Ad([...kd, ...dd.refused, ...dd.listed, ...dd.suggested]),
-          Wd = kd => [...dd[kd].filter((dd => !pd.has(dd.toLowerCase()))), ...Jd[kd].filter((dd => {
-            const Jd = dd.toLowerCase();
-            return !Nd.has(Jd) && (Nd.add(Jd), !0)
+        refused: qQ.refused.map((QQ => QQ.name)),
+        listed: DQ,
+        here: qQ.here.map((QQ => QQ.name)),
+        friends: GQ.flatMap((QQ => "here" === QQ.place ? [] : [QQ.friend.name])),
+        excluded: [...null === eQ ? [] : [eQ], ...[...qQ.here, ...qQ.away].flatMap((QQ => "none" === QQ.role || (0, gQ.h)(DQ, QQ.name) ? [] : [QQ.name]))]
+      }), [CQ] = (0, LQ.useState)(cQ), [SQ, iQ] = (0, LQ.useState)([]), OQ = function(QQ, FQ, wQ) {
+        const LQ = BQ(wQ),
+          qQ = BQ([...wQ, ...QQ.refused, ...QQ.listed, ...QQ.suggested]),
+          oQ = wQ => [...QQ[wQ].filter((QQ => !LQ.has(QQ.toLowerCase()))), ...FQ[wQ].filter((QQ => {
+            const FQ = QQ.toLowerCase();
+            return !qQ.has(FQ) && (qQ.add(FQ), !0)
           }))];
         return {
-          added: [...kd],
-          refused: Wd("refused"),
-          listed: Wd("listed"),
-          suggested: Wd("suggested")
+          added: [...wQ],
+          refused: oQ("refused"),
+          listed: oQ("listed"),
+          suggested: oQ("suggested")
         }
-      }(qd, xd, Bd), Yd = (dd, Jd) => {
-        var kd, pd;
-        const Wd = dd.toLowerCase(),
-          Pd = vd.get(Wd),
-          Cd = Nd.here.find((dd => dd.name.toLowerCase() === Wd)),
-          ld = Nd.refused.find((dd => dd.name.toLowerCase() === Wd)),
-          Ld = null !== (kd = null === Kd || void 0 === Kd ? void 0 : Kd(dd)) && void 0 !== kd ? kd : null;
-        let Od = null;
-        Ld ? Od = (0, Xd.jsx)(fd, {
-          status: Ld
-        }) : ld ? Od = bd(od, Qd.code, "lobbyManage:triedToJoinAgo", ld.at, Date.now()) : Pd && Cd ? Od = od("lobbyManage:friendHere") : Pd ? Od = "online" === Pd.place ? od("lobbyManage:friendOnline") : od("lobbyManage:friend") : Cd && (Od = od("lobbyManage:hereStatus"));
-        let ed = null !== (pd = null === Pd || void 0 === Pd ? void 0 : Pd.friend) && void 0 !== pd ? pd : (0, Md.h)(dd, null);
-        return !Pd && null !== Cd && void 0 !== Cd && Cd.id && (ed = (0, ad.c)(Cd.id, Cd.name).playerSocialPreview), (0, Xd.jsx)(Hd.b, {
-          playerSocialPreview: ed,
-          isFriend: void 0 !== Pd,
+      }(CQ, cQ, SQ), sQ = (QQ, FQ) => {
+        var wQ, LQ;
+        const oQ = QQ.toLowerCase(),
+          DQ = pQ.get(oQ),
+          mQ = qQ.here.find((QQ => QQ.name.toLowerCase() === oQ)),
+          bQ = qQ.refused.find((QQ => QQ.name.toLowerCase() === oQ)),
+          xQ = null !== (wQ = null === uQ || void 0 === uQ ? void 0 : uQ(QQ)) && void 0 !== wQ ? wQ : null;
+        let AQ = null;
+        xQ ? AQ = (0, TQ.jsx)(KQ, {
+          status: xQ
+        }) : bQ ? AQ = IQ(HQ, YQ.code, "lobbyManage:triedToJoinAgo", bQ.at, Date.now()) : DQ && mQ ? AQ = HQ("lobbyManage:friendHere") : DQ ? AQ = "online" === DQ.place ? HQ("lobbyManage:friendOnline") : HQ("lobbyManage:friend") : mQ && (AQ = HQ("lobbyManage:hereStatus"));
+        let tQ = null !== (LQ = null === DQ || void 0 === DQ ? void 0 : DQ.friend) && void 0 !== LQ ? LQ : (0, RQ.e)(QQ, null);
+        return !DQ && null !== mQ && void 0 !== mQ && mQ.id && (tQ = (0, WQ.c)(mQ.id, mQ.name).playerSocialPreview), (0, TQ.jsx)(ZQ.d, {
+          playerSocialPreview: tQ,
+          isFriend: void 0 !== DQ,
           hideFriendBadge: !0,
-          status: Od,
-          zIndex: Jd,
-          Do: {
-            on: Zd(dd),
-            onChange: Jd => {
-              gd(dd, Jd)
+          status: AQ,
+          zIndex: FQ,
+          fH: {
+            on: kQ(QQ),
+            onChange: FQ => {
+              vQ(QQ, FQ)
             }
           }
-        }, Wd)
-      }, md = [...Fd.added, ...Fd.refused];
-      return (0, Xd.jsxs)("div", {
+        }, oQ)
+      }, rQ = [...OQ.added, ...OQ.refused];
+      return (0, TQ.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, Xd.jsx)(Od.c, {
-          label: od("worldSocial:whitelist"),
-          meta: Pd.length
-        }), (0, Xd.jsx)(wd.e, {
-          label: od("lobbyManage:add"),
+        children: [(0, TQ.jsx)(AQ.b, {
+          label: HQ("worldSocial:whitelist"),
+          meta: DQ.length
+        }), (0, TQ.jsx)(yQ.d, {
+          label: HQ("lobbyManage:add"),
           icon: "user-check",
-          placeholder: od("socialBar:enterPlayerName"),
-          onSubmit: async dd => {
-            const Jd = await Cd(dd);
-            return Jd.ok && sd((Jd => [dd, ...Jd])), Jd
+          placeholder: HQ("socialBar:enterPlayerName"),
+          onSubmit: async QQ => {
+            const FQ = await mQ(QQ);
+            return FQ.ok && iQ((FQ => [QQ, ...FQ])), FQ
           }
-        }), md.length > 0 && (0, Xd.jsx)("div", {
+        }), rQ.length > 0 && (0, TQ.jsx)("div", {
           className: "PlayerRows",
-          children: md.map(((dd, Jd) => Yd(dd, md.length - Jd)))
-        }), (0, Xd.jsx)(nd, {
-          names: Fd.listed,
+          children: rQ.map(((QQ, FQ) => sQ(QQ, rQ.length - FQ)))
+        }), (0, TQ.jsx)(zQ, {
+          names: OQ.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: od("lobbyManage:allOnWhitelist", {
-            count: Fd.listed.length
+          moreLabel: HQ("lobbyManage:allOnWhitelist", {
+            count: OQ.listed.length
           }),
-          renderRow: Yd
-        }), (0, Xd.jsx)(nd, {
-          names: Fd.suggested,
+          renderRow: sQ
+        }), (0, TQ.jsx)(zQ, {
+          names: OQ.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: od("lobbyManage:allCount", {
-            count: Fd.suggested.length
+          moreLabel: HQ("lobbyManage:allCount", {
+            count: OQ.suggested.length
           }),
-          renderRow: Yd
+          renderRow: sQ
         })]
       })
     }
 
-    function JJ(dd) {
+    function QF(QQ) {
       let {
-        manage: Jd,
-        listing: kd
-      } = dd;
+        manage: FQ,
+        listing: wQ
+      } = QQ;
       const {
-        t: pd
-      } = (0, ld.B)(), Wd = (dd, kd) => ((0, Nd.reportAnalyticsClick)({
+        t: LQ
+      } = (0, bQ.y)(), oQ = (QQ, wQ) => ((0, qQ.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
-        value: dd
-      }), Jd.send({
+        value: QQ
+      }), FQ.send({
         type: "setListing",
-        field: dd,
-        value: kd
-      }, `listing:${dd}`)), Pd = dd => {
-        const kd = Jd.statusOf(`listing:${dd}`);
-        return kd && !kd.ok && (0, Xd.jsx)("div", {
+        field: QQ,
+        value: wQ
+      }, `listing:${QQ}`)), DQ = QQ => {
+        const wQ = FQ.statusOf(`listing:${QQ}`);
+        return wQ && !wQ.ok && (0, TQ.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, Xd.jsx)(fd, {
-            status: kd
+          children: (0, TQ.jsx)(KQ, {
+            status: wQ
           })
         })
       };
-      return (0, Xd.jsxs)("div", {
+      return (0, TQ.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, Xd.jsx)(Od.c, {
-          label: pd("lobbyManage:inWorldsList")
-        }), (0, Xd.jsxs)("div", {
+        children: [(0, TQ.jsx)(AQ.b, {
+          label: LQ("lobbyManage:inWorldsList")
+        }), (0, TQ.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Xd.jsx)("div", {
+          children: [(0, TQ.jsx)("div", {
             className: "SliderText",
-            children: pd("lobbyManage:description")
-          }), (0, Xd.jsx)(Ud, {
-            value: kd.description,
-            ariaLabel: pd("lobbyManage:description"),
+            children: LQ("lobbyManage:description")
+          }), (0, TQ.jsx)(lQ, {
+            value: wQ.description,
+            ariaLabel: LQ("lobbyManage:description"),
             wide: !0,
-            onSave: dd => Wd("description", dd)
+            onSave: QQ => oQ("description", QQ)
           })]
-        }), Pd("description"), (0, Xd.jsxs)("div", {
+        }), DQ("description"), (0, TQ.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Xd.jsx)("div", {
+          children: [(0, TQ.jsx)("div", {
             className: "SliderText",
-            children: pd("lobbyManage:emojis")
-          }), (0, Xd.jsx)(Ud, {
-            value: kd.emojis,
-            ariaLabel: pd("lobbyManage:emojis"),
-            onSave: dd => Wd("emojis", dd)
+            children: LQ("lobbyManage:emojis")
+          }), (0, TQ.jsx)(lQ, {
+            value: wQ.emojis,
+            ariaLabel: LQ("lobbyManage:emojis"),
+            onSave: QQ => oQ("emojis", QQ)
           })]
-        }), Pd("emojis"), (0, Xd.jsxs)("div", {
+        }), DQ("emojis"), (0, TQ.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Xd.jsx)("div", {
+          children: [(0, TQ.jsx)("div", {
             className: "SliderText",
-            children: pd("lobbyManage:colour")
-          }), (0, Xd.jsx)(kJ, {
-            value: kd.colour,
-            ariaLabel: pd("lobbyManage:colour"),
-            onSave: dd => {
-              Wd("colour", dd)
+            children: LQ("lobbyManage:colour")
+          }), (0, TQ.jsx)(FF, {
+            value: wQ.colour,
+            ariaLabel: LQ("lobbyManage:colour"),
+            onSave: QQ => {
+              oQ("colour", QQ)
             }
           })]
-        }), Pd("colour")]
+        }), DQ("colour")]
       })
     }
 
-    function kJ(dd) {
+    function FF(QQ) {
       let {
-        value: Jd,
-        ariaLabel: kd,
-        onSave: Nd
-      } = dd;
-      const Wd = (0, pd.useRef)(null),
-        Pd = (0, pd.useRef)({
-          value: Jd,
-          onSave: Nd
+        value: FQ,
+        ariaLabel: wQ,
+        onSave: qQ
+      } = QQ;
+      const oQ = (0, LQ.useRef)(null),
+        DQ = (0, LQ.useRef)({
+          value: FQ,
+          onSave: qQ
         });
-      Pd.current = {
-        value: Jd,
-        onSave: Nd
+      DQ.current = {
+        value: FQ,
+        onSave: qQ
       };
-      const Zd = (0, pd.useRef)(null),
-        gd = (0, pd.useRef)(!1),
-        Cd = dd => {
-          gd.current && dd.value !== Pd.current.value && dd.value !== Zd.current && (Zd.current = dd.value, Pd.current.onSave(dd.value))
+      const kQ = (0, LQ.useRef)(null),
+        vQ = (0, LQ.useRef)(!1),
+        mQ = QQ => {
+          vQ.current && QQ.value !== DQ.current.value && QQ.value !== kQ.current && (kQ.current = QQ.value, DQ.current.onSave(QQ.value))
         };
-      return (0, pd.useEffect)((() => {
-        Wd.current && document.activeElement !== Wd.current && (Wd.current.value = Jd)
-      }), [Jd]), (0, pd.useEffect)((() => {
-        const dd = Wd.current,
-          Jd = () => {
-            Cd(dd)
+      return (0, LQ.useEffect)((() => {
+        oQ.current && document.activeElement !== oQ.current && (oQ.current.value = FQ)
+      }), [FQ]), (0, LQ.useEffect)((() => {
+        const QQ = oQ.current,
+          FQ = () => {
+            mQ(QQ)
           };
-        return dd.addEventListener("change", Jd), () => {
-          dd.removeEventListener("change", Jd), Cd(dd)
+        return QQ.addEventListener("change", FQ), () => {
+          QQ.removeEventListener("change", FQ), mQ(QQ)
         }
-      }), []), (0, Xd.jsx)("input", {
-        ref: Wd,
+      }), []), (0, TQ.jsx)("input", {
+        ref: oQ,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: Jd,
-        "aria-label": kd,
+        defaultValue: FQ,
+        "aria-label": wQ,
         onInput: () => {
-          gd.current = !0
+          vQ.current = !0
         },
-        onBlur: dd => {
-          Cd(dd.currentTarget)
+        onBlur: QQ => {
+          mQ(QQ.currentTarget)
         }
       })
     }
 
-    function pJ(dd) {
+    function wF(QQ) {
       let {
-        manage: Jd
-      } = dd;
+        manage: FQ
+      } = QQ;
       const {
-        lobbyName: kd,
-        shownLobbyName: pd
-      } = (0, Id.k)("connectedGame");
-      return Jd.state.you.canSetVisibility && null !== kd ? (0, Xd.jsx)(WJ, {
-        manage: Jd,
-        lobbyName: kd,
-        worldCode: null !== pd && void 0 !== pd ? pd : kd
-      }, kd) : (0, Xd.jsx)(PJ, {
-        manage: Jd,
-        lobbyName: null !== kd && void 0 !== kd ? kd : ""
+        lobbyName: wQ,
+        shownLobbyName: LQ
+      } = (0, MQ.k)("connectedGame");
+      return FQ.state.you.canSetVisibility && null !== wQ ? (0, TQ.jsx)(qF, {
+        manage: FQ,
+        lobbyName: wQ,
+        worldCode: null !== LQ && void 0 !== LQ ? LQ : wQ
+      }, wQ) : (0, TQ.jsx)(oF, {
+        manage: FQ,
+        lobbyName: null !== wQ && void 0 !== wQ ? wQ : ""
       })
     }
 
-    function NJ(dd) {
-      return dd.map((dd => dd.toLowerCase())).sort().join(",")
+    function LF(QQ) {
+      return QQ.map((QQ => QQ.toLowerCase())).sort().join(",")
     }
 
-    function WJ(dd) {
-      var Jd;
+    function qF(QQ) {
+      var FQ;
       let {
-        manage: kd,
-        lobbyName: Wd,
-        worldCode: Pd
-      } = dd;
+        manage: wQ,
+        lobbyName: oQ,
+        worldCode: DQ
+      } = QQ;
       const {
-        t: Zd
-      } = (0, ld.B)(), {
-        settings: gd,
-        loading: Cd,
-        change: Kd,
-        retry: od,
-        refresh: Qd
-      } = (0, rd.g)(Wd), ed = (0, hd.j)(), {
-        state: Rd
-      } = kd, Id = (0, pd.useRef)(gd);
-      Id.current = gd;
-      const vd = NJ(null !== (Jd = Rd.whitelist) && void 0 !== Jd ? Jd : []),
-        xd = null !== Rd.whitelist;
-      (0, pd.useEffect)((() => {
-        const dd = Id.current;
-        null !== dd && (dd.visibility !== Rd.visibility || xd && NJ(dd.whitelist) !== vd) && Qd()
-      }), [Rd.visibility, vd, xd, Qd]);
-      const qd = async (dd, Jd) => {
-        let kd = null;
-        return await Kd(dd, Jd, {
+        t: kQ
+      } = (0, bQ.y)(), {
+        settings: vQ,
+        loading: mQ,
+        change: uQ,
+        retry: HQ,
+        refresh: YQ
+      } = (0, JQ.h)(oQ), tQ = (0, hQ.m)(), {
+        state: eQ
+      } = wQ, MQ = (0, LQ.useRef)(vQ);
+      MQ.current = vQ;
+      const pQ = LF(null !== (FQ = eQ.whitelist) && void 0 !== FQ ? FQ : []),
+        cQ = null !== eQ.whitelist;
+      (0, LQ.useEffect)((() => {
+        const QQ = MQ.current;
+        null !== QQ && (QQ.visibility !== eQ.visibility || cQ && LF(QQ.whitelist) !== pQ) && YQ()
+      }), [eQ.visibility, pQ, cQ, YQ]);
+      const CQ = async (QQ, FQ) => {
+        let wQ = null;
+        return await uQ(QQ, FQ, {
           quiet: !0,
-          onAnswer: dd => {
-            kd = dd
+          onAnswer: QQ => {
+            wQ = QQ
           }
-        }), kd
-      }, Bd = (dd, Jd) => {
-        null !== Jd && "error" in Jd && kd.showStatus(dd, {
+        }), wQ
+      }, SQ = (QQ, FQ) => {
+        null !== FQ && "error" in FQ && wQ.showStatus(QQ, {
           ok: !1,
-          text: [Zd(Jd.error)]
+          text: [kQ(FQ.error)]
         })
-      }, sd = async dd => {
-        if (null === gd || dd === gd.visibility) return;
-        (0, Nd.reportAnalyticsClick)({
+      }, iQ = async QQ => {
+        if (null === vQ || QQ === vQ.visibility) return;
+        (0, qQ.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
-          value: dd
+          value: QQ
         });
-        const Jd = "whitelist" === dd ? (0, Vd.g)((0, Vd.j)(ed.friends, Wd, Rd.here.map((dd => dd.name))), (0, zd.c)(Wd), gd.whitelist) : [],
-          kd = await qd({
-            setVisibility: dd
-          }, (Jd => ({
-            ...Jd,
-            visibility: dd
+        const FQ = "whitelist" === QQ ? (0, gQ.f)((0, gQ.g)(tQ.friends, oQ, eQ.here.map((QQ => QQ.name))), (0, PQ.c)(oQ), vQ.whitelist) : [],
+          wQ = await CQ({
+            setVisibility: QQ
+          }, (FQ => ({
+            ...FQ,
+            visibility: QQ
           })));
-        Bd("mode", kd), null === kd || "error" in kd || await (async dd => {
-          for (const Jd of (0, Vd.o)(dd, cd.x))
-            if (!await Kd({
-                whitelistAdd: Jd
-              }, (dd => (0, Vd.t)(dd, Jd, !0)))) return !1;
+        SQ("mode", wQ), null === wQ || "error" in wQ || await (async QQ => {
+          for (const FQ of (0, gQ.j)(QQ, VQ.y))
+            if (!await uQ({
+                whitelistAdd: FQ
+              }, (QQ => (0, gQ.n)(QQ, FQ, !0)))) return !1;
           return !0
-        })(Jd)
-      }, ad = (0, pd.useMemo)((() => {
-        var dd;
-        if (null === gd) return [];
-        const Jd = null !== (dd = Rd.whitelist) && void 0 !== dd ? dd : [];
-        return [...Jd.filter((dd => (0, Vd.l)(gd.whitelist, dd))), ...gd.whitelist.filter((dd => !(0, Vd.l)(Jd, dd)))]
-      }), [gd, Rd.whitelist]), Md = kd.statusOf("mode");
-      return (0, Xd.jsxs)("div", {
+        })(FQ)
+      }, WQ = (0, LQ.useMemo)((() => {
+        var QQ;
+        if (null === vQ) return [];
+        const FQ = null !== (QQ = eQ.whitelist) && void 0 !== QQ ? QQ : [];
+        return [...FQ.filter((QQ => (0, gQ.h)(vQ.whitelist, QQ))), ...vQ.whitelist.filter((QQ => !(0, gQ.h)(FQ, QQ)))]
+      }), [vQ, eQ.whitelist]), RQ = wQ.statusOf("mode");
+      return (0, TQ.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, Xd.jsxs)("div", {
+        children: [(0, TQ.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Xd.jsx)(Od.c, {
-            label: Zd("worldSocial:whoCanJoin")
-          }), null === gd && Cd && (0, Xd.jsx)("div", {
+          children: [(0, TQ.jsx)(AQ.b, {
+            label: kQ("worldSocial:whoCanJoin")
+          }), null === vQ && mQ && (0, TQ.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, Xd.jsx)(Ld.b, {})
-          }), null === gd && !Cd && (0, Xd.jsx)(Gd.f, {
+            children: (0, TQ.jsx)(xQ.c, {})
+          }), null === vQ && !mQ && (0, TQ.jsx)(GQ.i, {
             className: "SmallTextLight",
-            onClick: od,
-            children: Zd("worldSocial:loadFailed")
-          }), null !== gd && (0, Xd.jsx)(ud.c, {
-            visibility: gd.visibility,
-            onPick: dd => {
-              sd(dd)
+            onClick: HQ,
+            children: kQ("worldSocial:loadFailed")
+          }), null !== vQ && (0, TQ.jsx)(EQ.d, {
+            visibility: vQ.visibility,
+            onPick: QQ => {
+              iQ(QQ)
             }
-          }), Md && (0, Xd.jsx)("div", {
+          }), RQ && (0, TQ.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, Xd.jsx)(fd, {
-              status: Md
+            children: (0, TQ.jsx)(KQ, {
+              status: RQ
             })
-          }), null !== gd && "private" !== gd.visibility && (0, Xd.jsx)(td.c, {
-            worldCode: Pd,
+          }), null !== vQ && "private" !== vQ.visibility && (0, TQ.jsx)(nQ.e, {
+            worldCode: DQ,
             message: null
           })]
-        }), "whitelist" === (null === gd || void 0 === gd ? void 0 : gd.visibility) && (0, Xd.jsx)(dJ, {
-          state: Rd,
-          lobbyName: Wd,
-          listed: ad,
-          isListed: dd => (0, Vd.l)(gd.whitelist, dd),
-          mI: (dd, Jd) => {
-            (0, Nd.reportAnalyticsClick)(Jd ? {
+        }), "whitelist" === (null === vQ || void 0 === vQ ? void 0 : vQ.visibility) && (0, TQ.jsx)(dQ, {
+          state: eQ,
+          lobbyName: oQ,
+          listed: WQ,
+          isListed: QQ => (0, gQ.h)(vQ.whitelist, QQ),
+          nG: (QQ, FQ) => {
+            (0, qQ.reportAnalyticsClick)(FQ ? {
               id: "lobby_manage.whitelist_add",
-              value: "Do"
+              value: "fH"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), qd(Jd ? {
-              whitelistAdd: [dd]
+            }), CQ(FQ ? {
+              whitelistAdd: [QQ]
             } : {
-              whitelistRemove: dd
-            }, (kd => (0, Vd.t)(kd, [dd], Jd))).then((Jd => {
-              Bd(`whitelist:${dd.toLowerCase()}`, Jd)
+              whitelistRemove: QQ
+            }, (wQ => (0, gQ.n)(wQ, [QQ], FQ))).then((FQ => {
+              SQ(`whitelist:${QQ.toLowerCase()}`, FQ)
             }))
           },
-          QG: async dd => {
-            (0, Nd.reportAnalyticsClick)({
+          uC: async QQ => {
+            (0, qQ.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const Jd = await qd({
-              whitelistAdd: [dd]
-            }, (Jd => (0, Vd.t)(Jd, [dd], !0)));
-            return null === Jd ? {
+            const FQ = await CQ({
+              whitelistAdd: [QQ]
+            }, (FQ => (0, gQ.n)(FQ, [QQ], !0)));
+            return null === FQ ? {
               ok: !1,
-              error: Zd("worldSocial:changeFailed")
-            } : "error" in Jd ? {
+              error: kQ("worldSocial:changeFailed")
+            } : "error" in FQ ? {
               ok: !1,
-              error: Zd(Jd.error)
-            } : (0, Vd.l)(Jd.notFound, dd) ? {
+              error: kQ(FQ.error)
+            } : (0, gQ.h)(FQ.notFound, QQ) ? {
               ok: !1,
-              error: Zd("lobbyManage:noPlayerCalled", {
-                playerName: dd
+              error: kQ("lobbyManage:noPlayerCalled", {
+                playerName: QQ
               })
             } : {
               ok: !0
             }
           },
-          statusOf: dd => kd.statusOf(`whitelist:${dd.toLowerCase()}`)
-        }), "public" === (null === gd || void 0 === gd ? void 0 : gd.visibility) && null !== Rd.listing && (0, Xd.jsx)(JJ, {
-          manage: kd,
-          listing: Rd.listing
+          statusOf: QQ => wQ.statusOf(`whitelist:${QQ.toLowerCase()}`)
+        }), "public" === (null === vQ || void 0 === vQ ? void 0 : vQ.visibility) && null !== eQ.listing && (0, TQ.jsx)(QF, {
+          manage: wQ,
+          listing: eQ.listing
         })]
       })
     }
 
-    function PJ(dd) {
-      var Jd;
+    function oF(QQ) {
+      var FQ;
       let {
-        manage: kd,
-        lobbyName: pd
-      } = dd;
+        manage: wQ,
+        lobbyName: LQ
+      } = QQ;
       const {
-        t: Wd
-      } = (0, ld.B)(), {
-        state: Pd
-      } = kd, Zd = Cd(), gd = null !== (Jd = Pd.whitelist) && void 0 !== Jd ? Jd : [];
-      return (0, Xd.jsxs)("div", {
+        t: oQ
+      } = (0, bQ.y)(), {
+        state: DQ
+      } = wQ, kQ = mQ(), vQ = null !== (FQ = DQ.whitelist) && void 0 !== FQ ? FQ : [];
+      return (0, TQ.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, Xd.jsxs)("div", {
+        children: [(0, TQ.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Xd.jsx)(Od.c, {
-            label: Wd("worldSocial:whoCanJoin")
-          }), (0, Xd.jsx)("div", {
+          children: [(0, TQ.jsx)(AQ.b, {
+            label: oQ("worldSocial:whoCanJoin")
+          }), (0, TQ.jsx)("div", {
             className: "LobbyManageModeText",
-            children: Wd(`worldSocial:${Pd.visibility}`)
+            children: oQ(`worldSocial:${DQ.visibility}`)
           })]
-        }), "whitelist" === Pd.visibility && Pd.you.canEditWhitelist && (0, Xd.jsx)(dJ, {
-          state: Pd,
-          lobbyName: pd,
-          listed: gd,
-          isListed: dd => {
-            var Jd;
-            return null !== (Jd = Zd.get(dd.toLowerCase())) && void 0 !== Jd ? Jd : (0, Vd.l)(gd, dd)
+        }), "whitelist" === DQ.visibility && DQ.you.canEditWhitelist && (0, TQ.jsx)(dQ, {
+          state: DQ,
+          lobbyName: LQ,
+          listed: vQ,
+          isListed: QQ => {
+            var FQ;
+            return null !== (FQ = kQ.get(QQ.toLowerCase())) && void 0 !== FQ ? FQ : (0, gQ.h)(vQ, QQ)
           },
-          mI: (dd, Jd) => {
-            (0, Nd.reportAnalyticsClick)(Jd ? {
+          nG: (QQ, FQ) => {
+            (0, qQ.reportAnalyticsClick)(FQ ? {
               id: "lobby_manage.whitelist_add",
-              value: "Do"
+              value: "fH"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const pd = dd.toLowerCase();
-            Zd.hold(pd, Jd, kd.send(Jd ? {
+            const LQ = QQ.toLowerCase();
+            kQ.hold(LQ, FQ, wQ.send(FQ ? {
               type: "whitelistAdd",
-              names: [dd]
+              names: [QQ]
             } : {
               type: "whitelistRemove",
-              name: dd
-            }, `whitelist:${pd}`))
+              name: QQ
+            }, `whitelist:${LQ}`))
           },
-          QG: async dd => {
-            (0, Nd.reportAnalyticsClick)({
+          uC: async QQ => {
+            (0, qQ.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const Jd = await kd.send({
+            const FQ = await wQ.send({
               type: "whitelistAdd",
-              names: [dd]
+              names: [QQ]
             }, "whitelist-field");
-            return Jd.ok ? {
+            return FQ.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, Xd.jsx)(Sd.c, {
-                text: Jd.message
+              error: (0, TQ.jsx)(UQ.e, {
+                text: FQ.message
               })
             }
           },
-          statusOf: dd => kd.statusOf(`whitelist:${dd.toLowerCase()}`)
-        }), "public" === Pd.visibility && null !== Pd.listing && (0, Xd.jsx)(JJ, {
-          manage: kd,
-          listing: Pd.listing
+          statusOf: QQ => wQ.statusOf(`whitelist:${QQ.toLowerCase()}`)
+        }), "public" === DQ.visibility && null !== DQ.listing && (0, TQ.jsx)(QF, {
+          manage: wQ,
+          listing: DQ.listing
         })]
       })
     }
-    var ZJ = kd(4877),
-      gJ = kd(1384);
-    const CJ = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const KJ = (0, pd.memo)((function(dd) {
-      var Jd;
+    var DF = wQ(4837),
+      kF = wQ(1367);
+    const vF = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const mF = (0, LQ.memo)((function(QQ) {
+      var FQ;
       let {
-        rule: kd,
-        value: pd,
-        status: Nd,
-        pending: Wd,
-        hiddenNames: Pd,
-        wq: Zd,
-        onAction: gd
-      } = dd;
+        rule: wQ,
+        value: LQ,
+        status: qQ,
+        pending: oQ,
+        hiddenNames: DQ,
+        dW: kQ,
+        onAction: vQ
+      } = QQ;
       const {
-        t: Cd
-      } = (0, ld.B)(), Kd = dd => Zd(kd, dd), od = (dd, Jd) => {
-        gd(kd, dd, Jd)
-      }, Qd = md(Cd, kd.label, Pd), Ld = kd.info ? md(Cd, kd.info, Pd) : void 0, Od = kd.placeholder ? md(Cd, kd.placeholder, Pd) : void 0, ed = (null !== (Jd = kd.options) && void 0 !== Jd ? Jd : []).map((dd => ({
-        value: dd.value,
-        label: md(Cd, dd.label, Pd)
-      }))), Rd = Math.max(0, ...ed.map((dd => function(dd) {
-        let Jd = 0;
-        for (const kd of dd) Jd += CJ.test(kd) ? 2 : 1;
-        return Jd
-      }(dd.label)))), Id = Nd && (0, Xd.jsx)("div", {
+        t: mQ
+      } = (0, bQ.y)(), uQ = QQ => kQ(wQ, QQ), HQ = (QQ, FQ) => {
+        vQ(wQ, QQ, FQ)
+      }, YQ = rQ(mQ, wQ.label, DQ), xQ = wQ.info ? rQ(mQ, wQ.info, DQ) : void 0, AQ = wQ.placeholder ? rQ(mQ, wQ.placeholder, DQ) : void 0, tQ = (null !== (FQ = wQ.options) && void 0 !== FQ ? FQ : []).map((QQ => ({
+        value: QQ.value,
+        label: rQ(mQ, QQ.label, DQ)
+      }))), eQ = Math.max(0, ...tQ.map((QQ => function(QQ) {
+        let FQ = 0;
+        for (const wQ of QQ) FQ += vF.test(wQ) ? 2 : 1;
+        return FQ
+      }(QQ.label)))), MQ = qQ && (0, TQ.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, Xd.jsx)(fd, {
-          status: Nd
+        children: (0, TQ.jsx)(KQ, {
+          status: qQ
         })
-      }), vd = (0, Xd.jsxs)("div", {
+      }), pQ = (0, TQ.jsxs)("div", {
         className: "SliderText",
-        children: [Qd, void 0 !== Ld && (0, Xd.jsx)(gJ.e, {
+        children: [YQ, void 0 !== xQ && (0, TQ.jsx)(kF.b, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: Ld
+          hoverInfo: xQ
         })]
       });
-      return "toggle" === kd.kind ? (0, Xd.jsxs)(Xd.Fragment, {
-        children: [(0, Xd.jsx)(ZJ.d, {
-          label: Qd,
-          checked: !0 === pd,
-          circleInfoText: Ld,
-          disabled: Wd,
-          onClick: Kd
-        }), Id]
-      }) : "choice" === kd.kind && ed.length <= 3 ? (0, Xd.jsxs)(Xd.Fragment, {
-        children: [(0, Xd.jsx)(ZJ.g, {
-          label: Qd,
-          options: ed,
-          value: String(pd),
-          circleInfoText: Ld,
-          onChange: Kd
-        }), Id]
-      }) : (0, Xd.jsxs)("div", {
+      return "toggle" === wQ.kind ? (0, TQ.jsxs)(TQ.Fragment, {
+        children: [(0, TQ.jsx)(DF.e, {
+          label: YQ,
+          checked: !0 === LQ,
+          circleInfoText: xQ,
+          disabled: oQ,
+          onClick: uQ
+        }), MQ]
+      }) : "choice" === wQ.kind && tQ.length <= 3 ? (0, TQ.jsxs)(TQ.Fragment, {
+        children: [(0, TQ.jsx)(DF.f, {
+          label: YQ,
+          options: tQ,
+          value: String(LQ),
+          circleInfoText: xQ,
+          onChange: uQ
+        }), MQ]
+      }) : (0, TQ.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [vd, "choice" === kd.kind && (0, Xd.jsx)("span", {
+        children: [pQ, "choice" === wQ.kind && (0, TQ.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": Rd
+            "--lobby-choice-chars": eQ
           },
-          children: (0, Xd.jsx)(Fd.c, {
-            options: ed,
-            value: String(pd),
-            disabled: Wd,
-            onChange: dd => {
-              Kd(dd.value)
+          children: (0, TQ.jsx)(OQ.d, {
+            options: tQ,
+            value: String(LQ),
+            disabled: oQ,
+            onChange: QQ => {
+              uQ(QQ.value)
             }
           })
-        }), ("number" === kd.kind || "text" === kd.kind) && (0, Xd.jsx)(Ud, {
-          value: null === pd ? "" : String(pd),
-          placeholder: Od,
-          ariaLabel: Qd,
-          onSave: dd => {
-            const Jd = dd.trim(),
-              pd = Number(Jd);
-            return Kd("number" === kd.kind && "" !== Jd && Number.isFinite(pd) ? pd : Jd)
+        }), ("number" === wQ.kind || "text" === wQ.kind) && (0, TQ.jsx)(lQ, {
+          value: null === LQ ? "" : String(LQ),
+          placeholder: AQ,
+          ariaLabel: YQ,
+          onSave: QQ => {
+            const FQ = QQ.trim(),
+              LQ = Number(FQ);
+            return uQ("number" === wQ.kind && "" !== FQ && Number.isFinite(LQ) ? LQ : FQ)
           }
-        }), "action" === kd.kind && (0, Xd.jsxs)("div", {
+        }), "action" === wQ.kind && (0, TQ.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [ed.length > 3 && (0, Xd.jsx)(Fd.c, {
-            options: ed,
+          children: [tQ.length > 3 && (0, TQ.jsx)(OQ.d, {
+            options: tQ,
             value: {
               value: "",
-              label: null !== Od && void 0 !== Od ? Od : Qd
+              label: null !== AQ && void 0 !== AQ ? AQ : YQ
             },
-            disabled: Wd,
-            onChange: dd => {
-              od(dd.value)
+            disabled: oQ,
+            onChange: QQ => {
+              HQ(QQ.value)
             }
-          }), ed.length > 0 && ed.length <= 3 && ed.map((dd => (0, Xd.jsx)(Gd.f, {
+          }), tQ.length > 0 && tQ.length <= 3 && tQ.map((QQ => (0, TQ.jsx)(GQ.i, {
             className: "SmallTextLight",
-            disabled: Wd,
+            disabled: oQ,
             onClick: () => {
-              od(dd.value)
+              HQ(QQ.value)
             },
-            children: dd.label
-          }, dd.value))), 0 === ed.length && (0, Xd.jsx)(Gd.f, {
+            children: QQ.label
+          }, QQ.value))), 0 === tQ.length && (0, TQ.jsx)(GQ.i, {
             className: "SmallTextLight",
-            disabled: Wd,
+            disabled: oQ,
             onClick: () => {
-              od()
+              HQ()
             },
-            children: null !== Od && void 0 !== Od ? Od : Qd
+            children: null !== AQ && void 0 !== AQ ? AQ : YQ
           })]
-        }), "names" === kd.kind && (0, Xd.jsx)(oJ, {
-          names: Array.isArray(pd) ? pd : [],
-          pending: Wd,
-          onAction: od
-        }), Id]
+        }), "names" === wQ.kind && (0, TQ.jsx)(uF, {
+          names: Array.isArray(LQ) ? LQ : [],
+          pending: oQ,
+          onAction: HQ
+        }), MQ]
       })
     }));
 
-    function oJ(dd) {
+    function uF(QQ) {
       let {
-        names: Jd,
-        pending: kd,
-        onAction: Nd
-      } = dd;
+        names: FQ,
+        pending: wQ,
+        onAction: qQ
+      } = QQ;
       const {
-        t: Wd
-      } = (0, ld.B)(), Pd = (0, pd.useRef)(null), [Zd, gd] = (0, pd.useState)(""), Cd = () => {
-        const dd = Zd.trim();
-        "" !== dd && (Nd(dd, "add"), Pd.current && (Pd.current.value = ""), gd(""))
+        t: oQ
+      } = (0, bQ.y)(), DQ = (0, LQ.useRef)(null), [kQ, vQ] = (0, LQ.useState)(""), mQ = () => {
+        const QQ = kQ.trim();
+        "" !== QQ && (qQ(QQ, "add"), DQ.current && (DQ.current.value = ""), vQ(""))
       };
-      return (0, Xd.jsxs)("div", {
+      return (0, TQ.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [Jd.map((dd => (0, Xd.jsxs)("div", {
+        children: [FQ.map((QQ => (0, TQ.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, Xd.jsx)("span", {
+          children: [(0, TQ.jsx)("span", {
             className: "LobbyManageNameText",
-            children: dd
-          }), (0, Xd.jsx)(Gd.f, {
+            children: QQ
+          }), (0, TQ.jsx)(GQ.i, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: Wd("lobbyManage:removeName", {
-              name: dd
+            ariaLabel: oQ("lobbyManage:removeName", {
+              name: QQ
             }),
-            disabled: kd,
+            disabled: wQ,
             onClick: () => {
-              Nd(dd, "remove")
+              qQ(QQ, "remove")
             },
-            children: (0, Xd.jsx)(Qd.e, {
+            children: (0, TQ.jsx)(YQ.c, {
               name: "xmark"
             })
           })]
-        }, dd))), (0, Xd.jsxs)("div", {
+        }, QQ))), (0, TQ.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, Xd.jsx)(jd.e, {
-            domRef: Pd,
-            placeholderText: Wd("lobbyManage:namePlaceholder"),
-            ariaLabel: Wd("lobbyManage:namePlaceholder"),
+          children: [(0, TQ.jsx)(NQ.b, {
+            domRef: DQ,
+            placeholderText: oQ("lobbyManage:namePlaceholder"),
+            ariaLabel: oQ("lobbyManage:namePlaceholder"),
             maxLength: 32,
-            onValueChange: dd => {
-              gd(dd)
+            onValueChange: QQ => {
+              vQ(QQ)
             },
-            onEnter: Cd
-          }), (0, Xd.jsx)(Gd.f, {
+            onEnter: mQ
+          }), (0, TQ.jsx)(GQ.i, {
             className: "SmallTextLight",
-            disabled: kd || "" === Zd.trim(),
-            onClick: Cd,
-            children: Wd("lobbyManage:addHere")
+            disabled: wQ || "" === kQ.trim(),
+            onClick: mQ,
+            children: oQ("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const lJ = [{
+    const HF = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1224,89 +1224,89 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function QJ(dd) {
-      return lJ.flatMap((Jd => {
+    function bF(QQ) {
+      return HF.flatMap((FQ => {
         let {
-          group: kd
-        } = Jd;
-        return dd.filter((dd => dd.group === kd && void 0 === dd.parent))
+          group: wQ
+        } = FQ;
+        return QQ.filter((QQ => QQ.group === wQ && void 0 === QQ.parent))
       }))
     }
 
-    function LJ(dd) {
+    function YF(QQ) {
       let {
-        manage: Jd,
-        rowsShown: kd
-      } = dd;
+        manage: FQ,
+        rowsShown: wQ
+      } = QQ;
       const {
-        t: Wd
-      } = (0, ld.B)(), Pd = (0, Id.k)("hiddenPlayerNames"), {
-        rules: Zd
-      } = Jd.state, gd = Cd(), Kd = new Set(QJ(Zd).slice(0, kd)), od = dd => {
-        const Jd = gd.get(dd.key);
-        return void 0 === Jd ? dd.value : Jd
+        t: oQ
+      } = (0, bQ.y)(), DQ = (0, MQ.k)("hiddenPlayerNames"), {
+        rules: kQ
+      } = FQ.state, vQ = mQ(), uQ = new Set(bF(kQ).slice(0, wQ)), HQ = QQ => {
+        const FQ = vQ.get(QQ.key);
+        return void 0 === FQ ? QQ.value : FQ
       }, {
-        hold: Qd
-      } = gd, Ld = (0, pd.useCallback)(((dd, kd) => {
-        (0, Nd.reportAnalyticsClick)({
+        hold: YQ
+      } = vQ, xQ = (0, LQ.useCallback)(((QQ, wQ) => {
+        (0, qQ.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: dd.key
+          value: QQ.key
         });
-        const pd = Jd.send({
+        const LQ = FQ.send({
           type: "setRule",
-          key: dd.key,
-          value: kd
-        }, `rule:${dd.key}`);
-        return Qd(dd.key, kd, pd), pd
-      }), [Jd, Qd]), ed = (0, pd.useCallback)(((dd, kd, pd) => {
-        (0, Nd.reportAnalyticsClick)({
+          key: QQ.key,
+          value: wQ
+        }, `rule:${QQ.key}`);
+        return YQ(QQ.key, wQ, LQ), LQ
+      }), [FQ, YQ]), tQ = (0, LQ.useCallback)(((QQ, wQ, LQ) => {
+        (0, qQ.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: dd.key
-        }), Jd.send({
+          value: QQ.key
+        }), FQ.send({
           type: "ruleAction",
-          key: dd.key,
-          ...void 0 === kd ? {} : {
-            arg: kd
+          key: QQ.key,
+          ...void 0 === wQ ? {} : {
+            arg: wQ
           },
-          ...void 0 === pd ? {} : {
-            op: pd
+          ...void 0 === LQ ? {} : {
+            op: LQ
           }
-        }, `rule:${dd.key}`, void 0 === pd ? Wd("lobbyManage:setJustNow") : void 0)
-      }), [Jd, Wd]), Rd = dd => {
-        const kd = `rule:${dd.key}`;
-        return (0, Xd.jsx)(KJ, {
-          rule: dd,
-          value: od(dd),
-          status: Jd.statusOf(kd),
-          pending: Jd.isPending(kd),
-          hiddenNames: Pd,
-          wq: Ld,
-          onAction: ed
-        }, dd.key)
+        }, `rule:${QQ.key}`, void 0 === LQ ? oQ("lobbyManage:setJustNow") : void 0)
+      }), [FQ, oQ]), eQ = QQ => {
+        const wQ = `rule:${QQ.key}`;
+        return (0, TQ.jsx)(mF, {
+          rule: QQ,
+          value: HQ(QQ),
+          status: FQ.statusOf(wQ),
+          pending: FQ.isPending(wQ),
+          hiddenNames: DQ,
+          dW: xQ,
+          onAction: tQ
+        }, QQ.key)
       };
-      return (0, Xd.jsx)("div", {
+      return (0, TQ.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: lJ.map((dd => {
+        children: HF.map((QQ => {
           let {
-            group: Jd,
-            title: kd
-          } = dd;
-          const Nd = Zd.filter((dd => dd.group === Jd && Kd.has(dd)));
-          return 0 === Nd.length ? null : (0, Xd.jsxs)(pd.Fragment, {
-            children: [(0, Xd.jsx)(Od.c, {
-              label: Wd(kd)
-            }), Nd.map((dd => {
-              const Jd = Zd.filter((Jd => Jd.parent === dd.key));
-              return 0 === Jd.length || !0 !== od(dd) ? Rd(dd) : (0, Xd.jsxs)("div", {
+            group: FQ,
+            title: wQ
+          } = QQ;
+          const qQ = kQ.filter((QQ => QQ.group === FQ && uQ.has(QQ)));
+          return 0 === qQ.length ? null : (0, TQ.jsxs)(LQ.Fragment, {
+            children: [(0, TQ.jsx)(AQ.b, {
+              label: oQ(wQ)
+            }), qQ.map((QQ => {
+              const FQ = kQ.filter((FQ => FQ.parent === QQ.key));
+              return 0 === FQ.length || !0 !== HQ(QQ) ? eQ(QQ) : (0, TQ.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [Rd(dd), Jd.map(Rd)]
-              }, dd.key)
+                children: [eQ(QQ), FQ.map(eQ)]
+              }, QQ.key)
             }))]
-          }, Jd)
+          }, FQ)
         }))
       })
     }
-    const OJ = {
+    const xF = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1324,587 +1324,587 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      eJ = 5,
-      RJ = (0, pd.memo)((function(dd) {
+      AF = 5,
+      tF = (0, LQ.memo)((function(QQ) {
         let {
-          page: Jd,
-          manage: kd,
-          leaderboard: Nd,
-          focusRequest: Wd,
-          onFocused: Pd,
-          ruleRowsShown: Zd
-        } = dd;
-        return "leaderboard" === Jd ? (0, Xd.jsx)(pd.Suspense, {
-          fallback: (0, Xd.jsx)("div", {
+          page: FQ,
+          manage: wQ,
+          leaderboard: qQ,
+          focusRequest: oQ,
+          onFocused: DQ,
+          ruleRowsShown: kQ
+        } = QQ;
+        return "leaderboard" === FQ ? (0, TQ.jsx)(LQ.Suspense, {
+          fallback: (0, TQ.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, Xd.jsx)(Ld.b, {})
+            children: (0, TQ.jsx)(xQ.c, {})
           }),
-          children: Nd
-        }) : "joining" === Jd ? (0, Xd.jsx)(pJ, {
-          manage: kd
-        }) : "rules" === Jd ? (0, Xd.jsx)(LJ, {
-          manage: kd,
-          rowsShown: Zd
-        }) : (0, Xd.jsx)(Ed, {
-          manage: kd,
-          focusRequest: Wd,
-          onFocused: Pd
+          children: qQ
+        }) : "joining" === FQ ? (0, TQ.jsx)(wF, {
+          manage: wQ
+        }) : "rules" === FQ ? (0, TQ.jsx)(YF, {
+          manage: wQ,
+          rowsShown: kQ
+        }) : (0, TQ.jsx)(fQ, {
+          manage: wQ,
+          focusRequest: oQ,
+          onFocused: DQ
         })
       }));
 
-    function IJ(dd) {
+    function eF(QQ) {
       let {
-        page: Jd
-      } = dd;
+        page: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, ld.B)(), pd = OJ[Jd];
-      return (0, Xd.jsxs)(Xd.Fragment, {
-        children: [(0, Xd.jsx)(Qd.e, {
-          name: pd.icon
-        }), " ", (0, Xd.jsx)("span", {
+        t: wQ
+      } = (0, bQ.y)(), LQ = xF[FQ];
+      return (0, TQ.jsxs)(TQ.Fragment, {
+        children: [(0, TQ.jsx)(YQ.c, {
+          name: LQ.icon
+        }), " ", (0, TQ.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: kd(pd.title)
+          children: wQ(LQ.title)
         })]
       })
     }
 
-    function GJ(dd) {
-      var Jd;
+    function MF(QQ) {
+      var FQ;
       const {
-        t: kd
-      } = (0, ld.B)(), {
-        pages: Wd,
-        landing: Pd
-      } = dd, gd = (0, pd.useRef)(null), Cd = (0, pd.useRef)(null), Kd = (0, pd.useRef)(null), Qd = (0, pd.useRef)(new Map), [Ld, Id] = (0, pd.useState)(null), Gd = (0, pd.useRef)(Ld), vd = (0, pd.useRef)(0), [xd, qd] = (0, pd.useState)(Wd[0]), Bd = null !== Ld && void 0 !== Ld ? Ld : Wd.includes(xd) ? xd : Wd[0], [sd] = (0, pd.useState)(null !== (Jd = null === Pd || void 0 === Pd ? void 0 : Pd.page) && void 0 !== Jd ? Jd : null), ad = null !== sd && Wd.includes(sd) ? [sd, ...Wd.filter((dd => dd !== sd))] : Wd, Md = Math.max(1, Math.ceil(QJ(dd.manage.state.rules).length / eJ)), Fd = ad.flatMap((dd => "rules" === dd ? Array(Md).fill(dd) : [dd])), Yd = function(dd, Jd) {
-        const [kd, Nd] = (0, pd.useState)(dd), Wd = kd >= Jd;
-        return Wd && kd !== 1 / 0 && Nd(1 / 0), (0, pd.useLayoutEffect)((() => {
-          if (Wd) return;
-          let dd = !0;
-          return (0, Rd.d)().then((() => {
-            dd && Nd((dd => dd + 1))
+        t: wQ
+      } = (0, bQ.y)(), {
+        pages: oQ,
+        landing: DQ
+      } = QQ, vQ = (0, LQ.useRef)(null), mQ = (0, LQ.useRef)(null), uQ = (0, LQ.useRef)(null), YQ = (0, LQ.useRef)(new Map), [xQ, MQ] = (0, LQ.useState)(null), GQ = (0, LQ.useRef)(xQ), pQ = (0, LQ.useRef)(0), [cQ, CQ] = (0, LQ.useState)(oQ[0]), SQ = null !== xQ && void 0 !== xQ ? xQ : oQ.includes(cQ) ? cQ : oQ[0], [iQ] = (0, LQ.useState)(null !== (FQ = null === DQ || void 0 === DQ ? void 0 : DQ.page) && void 0 !== FQ ? FQ : null), WQ = null !== iQ && oQ.includes(iQ) ? [iQ, ...oQ.filter((QQ => QQ !== iQ))] : oQ, RQ = Math.max(1, Math.ceil(bF(QQ.manage.state.rules).length / AF)), OQ = WQ.flatMap((QQ => "rules" === QQ ? Array(RQ).fill(QQ) : [QQ])), sQ = function(QQ, FQ) {
+        const [wQ, qQ] = (0, LQ.useState)(QQ), oQ = wQ >= FQ;
+        return oQ && wQ !== 1 / 0 && qQ(1 / 0), (0, LQ.useLayoutEffect)((() => {
+          if (oQ) return;
+          let QQ = !0;
+          return (0, eQ.d)().then((() => {
+            QQ && qQ((QQ => QQ + 1))
           })), () => {
-            dd = !1
+            QQ = !1
           }
-        }), [kd, Wd]), Wd ? 1 / 0 : kd
-      }(1, Fd.length), md = Fd.slice(0, Yd), bd = new Set(md), Sd = Yd < Fd.length, jd = Sd ? md.filter((dd => "rules" === dd)).length * eJ : 1 / 0, fd = (0, pd.useRef)(dd.focusRequest);
-      fd.current = dd.focusRequest;
-      const nd = dd => {
-          Gd.current = dd, Id(dd)
+        }), [wQ, oQ]), oQ ? 1 / 0 : wQ
+      }(1, OQ.length), rQ = OQ.slice(0, sQ), IQ = new Set(rQ), UQ = sQ < OQ.length, NQ = UQ ? rQ.filter((QQ => "rules" === QQ)).length * AF : 1 / 0, KQ = (0, LQ.useRef)(QQ.focusRequest);
+      KQ.current = QQ.focusRequest;
+      const zQ = QQ => {
+          GQ.current = QQ, MQ(QQ)
         },
-        Ud = () => {
-          var dd, Jd;
-          gd.current.style.scrollPaddingTop = `${null!==(dd=null===(Jd=Kd.current)||void 0===Jd?void 0:Jd.offsetHeight)&&void 0!==dd?dd:0}px`
+        lQ = () => {
+          var QQ, FQ;
+          vQ.current.style.scrollPaddingTop = `${null!==(QQ=null===(FQ=uQ.current)||void 0===FQ?void 0:FQ.offsetHeight)&&void 0!==QQ?QQ:0}px`
         },
-        yd = dd => {
-          const Jd = gd.current,
-            kd = Qd.current.get(dd);
-          if (void 0 === kd) return;
-          const pd = document.activeElement,
-            Nd = fd.current,
-            Wd = null === Nd ? null : kd.querySelector(`[data-lobby-manage-row="${CSS.escape(Nd.name)}"]`);
-          Ud(), pd instanceof HTMLElement && null !== Wd && void 0 !== Wd && Wd.contains(pd) ? pd.scrollIntoView({
+        jQ = QQ => {
+          const FQ = vQ.current,
+            wQ = YQ.current.get(QQ);
+          if (void 0 === wQ) return;
+          const LQ = document.activeElement,
+            qQ = KQ.current,
+            oQ = null === qQ ? null : wQ.querySelector(`[data-lobby-manage-row="${CSS.escape(qQ.name)}"]`);
+          lQ(), LQ instanceof HTMLElement && null !== oQ && void 0 !== oQ && oQ.contains(LQ) ? LQ.scrollIntoView({
             block: "center"
-          }) : null === kd.previousElementSibling ? Jd.scrollTop = 0 : kd.scrollIntoView({
+          }) : null === wQ.previousElementSibling ? FQ.scrollTop = 0 : wQ.scrollIntoView({
             block: "start"
-          }), vd.current = Jd.scrollTop
+          }), pQ.current = FQ.scrollTop
         },
-        Dd = dd => {
-          (0, Nd.reportAnalyticsClick)({
+        aQ = QQ => {
+          (0, qQ.reportAnalyticsClick)({
             id: "lobby_manage.page",
-            value: dd
-          }), nd(dd), yd(dd)
+            value: QQ
+          }), zQ(QQ), jQ(QQ)
         },
-        Td = () => {
-          var dd, Jd;
-          const kd = gd.current,
-            pd = kd.getBoundingClientRect().top + (null !== (dd = null === (Jd = Kd.current) || void 0 === Jd ? void 0 : Jd.offsetHeight) && void 0 !== dd ? dd : 0),
-            Nd = Wd.map((dd => {
-              var Jd, kd;
-              return (null !== (Jd = null === (kd = Qd.current.get(dd)) || void 0 === kd ? void 0 : kd.getBoundingClientRect().top) && void 0 !== Jd ? Jd : 1 / 0) - pd
+        XQ = () => {
+          var QQ, FQ;
+          const wQ = vQ.current,
+            LQ = wQ.getBoundingClientRect().top + (null !== (QQ = null === (FQ = uQ.current) || void 0 === FQ ? void 0 : FQ.offsetHeight) && void 0 !== QQ ? QQ : 0),
+            qQ = oQ.map((QQ => {
+              var FQ, wQ;
+              return (null !== (FQ = null === (wQ = YQ.current.get(QQ)) || void 0 === wQ ? void 0 : wQ.getBoundingClientRect().top) && void 0 !== FQ ? FQ : 1 / 0) - LQ
             })),
-            Pd = !Sd && kd.scrollTop + kd.clientHeight >= kd.scrollHeight - 1;
-          qd(Wd[(0, Zd.k)(Nd, Pd)])
+            DQ = !UQ && wQ.scrollTop + wQ.clientHeight >= wQ.scrollHeight - 1;
+          CQ(oQ[(0, kQ.k)(qQ, DQ)])
         },
-        Ed = () => {
-          null !== Gd.current && (nd(null), Td())
+        fQ = () => {
+          null !== GQ.current && (zQ(null), XQ())
         };
-      (0, pd.useLayoutEffect)((() => {
-        null !== Pd && Wd.includes(Pd.page) && Dd(Pd.page)
-      }), [null === Pd || void 0 === Pd ? void 0 : Pd.seq]), (0, pd.useLayoutEffect)((() => {
-        null === Gd.current || Wd.includes(Gd.current) || Ed()
+      (0, LQ.useLayoutEffect)((() => {
+        null !== DQ && oQ.includes(DQ.page) && aQ(DQ.page)
+      }), [null === DQ || void 0 === DQ ? void 0 : DQ.seq]), (0, LQ.useLayoutEffect)((() => {
+        null === GQ.current || oQ.includes(GQ.current) || fQ()
       }));
       const {
-        onFocused: cd
-      } = dd, hd = (0, pd.useCallback)((dd => {
-        null !== Gd.current && yd(Gd.current), cd(dd)
-      }), [cd]);
-      (0, pd.useLayoutEffect)((() => {
-        const dd = Gd.current;
-        null !== dd && (!Sd || Wd.indexOf(Fd[Yd - 1]) < Wd.indexOf(dd)) && yd(dd)
-      }), [Yd]), (0, pd.useEffect)((() => {
-        const dd = new ResizeObserver((() => {
-          null !== Gd.current ? yd(Gd.current) : Ud()
+        onFocused: VQ
+      } = QQ, hQ = (0, LQ.useCallback)((QQ => {
+        null !== GQ.current && jQ(GQ.current), VQ(QQ)
+      }), [VQ]);
+      (0, LQ.useLayoutEffect)((() => {
+        const QQ = GQ.current;
+        null !== QQ && (!UQ || oQ.indexOf(OQ[sQ - 1]) < oQ.indexOf(QQ)) && jQ(QQ)
+      }), [sQ]), (0, LQ.useEffect)((() => {
+        const QQ = new ResizeObserver((() => {
+          null !== GQ.current ? jQ(GQ.current) : lQ()
         }));
-        return dd.observe(gd.current), dd.observe(Cd.current), () => {
-          dd.disconnect()
+        return QQ.observe(vQ.current), QQ.observe(mQ.current), () => {
+          QQ.disconnect()
         }
-      }), []), (0, pd.useLayoutEffect)((() => {
-        const dd = Kd.current,
-          Jd = null === dd || void 0 === dd ? void 0 : dd.querySelector(".SegmentedToggleOptionSelected");
-        Jd && (dd.scrollLeft = Math.min(Jd.offsetLeft, Math.max(dd.scrollLeft, Jd.offsetLeft + Jd.offsetWidth - dd.clientWidth)))
-      }), [Bd]);
-      return (0, Xd.jsxs)("div", {
-        ref: gd,
+      }), []), (0, LQ.useLayoutEffect)((() => {
+        const QQ = uQ.current,
+          FQ = null === QQ || void 0 === QQ ? void 0 : QQ.querySelector(".SegmentedToggleOptionSelected");
+        FQ && (QQ.scrollLeft = Math.min(FQ.offsetLeft, Math.max(QQ.scrollLeft, FQ.offsetLeft + FQ.offsetWidth - QQ.clientWidth)))
+      }), [SQ]);
+      return (0, TQ.jsxs)("div", {
+        ref: vQ,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === Gd.current ? Td() : Math.abs(gd.current.scrollTop - vd.current) > 1 && Ed()
+          null === GQ.current ? XQ() : Math.abs(vQ.current.scrollTop - pQ.current) > 1 && fQ()
         },
-        onClick: dd => {
-          var Jd;
-          null !== (Jd = Kd.current) && void 0 !== Jd && Jd.contains(dd.target) || Ed()
+        onClick: QQ => {
+          var FQ;
+          null !== (FQ = uQ.current) && void 0 !== FQ && FQ.contains(QQ.target) || fQ()
         },
-        onFocus: dd => {
-          var Jd;
-          const kd = null === Gd.current ? null : Qd.current.get(Gd.current);
-          !kd || kd.contains(dd.target) || null !== (Jd = Kd.current) && void 0 !== Jd && Jd.contains(dd.target) || Ed()
+        onFocus: QQ => {
+          var FQ;
+          const wQ = null === GQ.current ? null : YQ.current.get(GQ.current);
+          !wQ || wQ.contains(QQ.target) || null !== (FQ = uQ.current) && void 0 !== FQ && FQ.contains(QQ.target) || fQ()
         },
-        children: [Wd.length > 1 && (0, Xd.jsx)("div", {
-          ref: Kd,
+        children: [oQ.length > 1 && (0, TQ.jsx)("div", {
+          ref: uQ,
           className: "LobbyManageChips",
-          children: (0, Xd.jsx)(ed.c, {
-            options: Wd.map((dd => ({
-              value: dd,
-              label: (0, Xd.jsx)(IJ, {
-                page: dd
+          children: (0, TQ.jsx)(tQ.c, {
+            options: oQ.map((QQ => ({
+              value: QQ,
+              label: (0, TQ.jsx)(eF, {
+                page: QQ
               }),
-              ariaLabel: kd(OJ[dd].title)
+              ariaLabel: wQ(xF[QQ].title)
             }))),
-            value: Bd,
+            value: SQ,
             padTabs: "2",
-            ariaLabel: kd("lobbyManageEntry:manageLobby"),
+            ariaLabel: wQ("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: Dd
+            onChange: aQ
           })
-        }), (0, Xd.jsx)("div", {
-          ref: Cd,
-          className: od()("LobbyManageInner", {
-            Staging: Sd
+        }), (0, TQ.jsx)("div", {
+          ref: mQ,
+          className: HQ()("LobbyManageInner", {
+            Staging: UQ
           }),
-          children: Wd.filter((dd => bd.has(dd))).map((Jd => {
-            const kd = Jd === Ld;
-            return (0, Xd.jsxs)("section", {
-              ref: dd => {
-                dd ? Qd.current.set(Jd, dd) : Qd.current.delete(Jd)
+          children: oQ.filter((QQ => IQ.has(QQ))).map((FQ => {
+            const wQ = FQ === xQ;
+            return (0, TQ.jsxs)("section", {
+              ref: QQ => {
+                QQ ? YQ.current.set(FQ, QQ) : YQ.current.delete(FQ)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": kd || void 0,
-              children: [Wd.length > 1 && (0, Xd.jsx)("div", {
+              "data-pad-initial-area": wQ || void 0,
+              children: [oQ.length > 1 && (0, TQ.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": kd || void 0,
-                "data-pad-unavailable": kd || void 0,
-                children: (0, Xd.jsx)(Od.c, {
-                  label: (0, Xd.jsx)(IJ, {
-                    page: Jd
+                "data-pad-focusable": wQ || void 0,
+                "data-pad-unavailable": wQ || void 0,
+                children: (0, TQ.jsx)(AQ.b, {
+                  label: (0, TQ.jsx)(eF, {
+                    page: FQ
                   })
                 })
-              }), (0, Xd.jsx)(RJ, {
-                page: Jd,
-                manage: dd.manage,
-                leaderboard: dd.leaderboard,
-                focusRequest: dd.focusRequest,
-                onFocused: hd,
-                ruleRowsShown: "rules" === Jd ? jd : 1 / 0
+              }), (0, TQ.jsx)(tF, {
+                page: FQ,
+                manage: QQ.manage,
+                leaderboard: QQ.leaderboard,
+                focusRequest: QQ.focusRequest,
+                onFocused: hQ,
+                ruleRowsShown: "rules" === FQ ? NQ : 1 / 0
               })]
-            }, Jd)
+            }, FQ)
           }))
         })]
       })
     }
 
-    function vJ(dd) {
-      return void 0 === (null === dd || void 0 === dd ? void 0 : dd.page) ? null : {
-        page: dd.page,
-        seq: dd.seq
+    function GF(QQ) {
+      return void 0 === (null === QQ || void 0 === QQ ? void 0 : QQ.page) ? null : {
+        page: QQ.page,
+        seq: QQ.seq
       }
     }
 
-    function xJ(dd) {
+    function pF(QQ) {
       let {
-        leaderboard: Jd
-      } = dd;
-      const kd = function() {
-          const dd = (0, Wd.j)("lobbyManage"),
-            [Jd, kd] = (0, pd.useReducer)((dd => dd + 1), 0),
-            [Nd] = (0, pd.useState)((() => new gd.c(kd)));
-          return (0, pd.useEffect)((() => {
-            const dd = Nd.nextDeadline();
-            if (null === dd) return;
-            const Jd = setTimeout((() => {
-              Nd.expire(Date.now()), kd()
-            }), Math.max(0, dd - Date.now()));
+        leaderboard: FQ
+      } = QQ;
+      const wQ = function() {
+          const QQ = (0, oQ.l)("lobbyManage"),
+            [FQ, wQ] = (0, LQ.useReducer)((QQ => QQ + 1), 0),
+            [qQ] = (0, LQ.useState)((() => new vQ.b(wQ)));
+          return (0, LQ.useEffect)((() => {
+            const QQ = qQ.nextDeadline();
+            if (null === QQ) return;
+            const FQ = setTimeout((() => {
+              qQ.expire(Date.now()), wQ()
+            }), Math.max(0, QQ - Date.now()));
             return () => {
-              clearTimeout(Jd)
+              clearTimeout(FQ)
             }
-          })), (0, pd.useMemo)((() => null === dd ? null : {
-            state: dd,
-            send: (dd, Jd, pd) => {
-              const Wd = Nd.send(dd, Jd, null !== pd && void 0 !== pd ? pd : null);
-              return kd(), Wd
+          })), (0, LQ.useMemo)((() => null === QQ ? null : {
+            state: QQ,
+            send: (QQ, FQ, LQ) => {
+              const oQ = qQ.send(QQ, FQ, null !== LQ && void 0 !== LQ ? LQ : null);
+              return wQ(), oQ
             },
-            statusOf: dd => Nd.statusOf(dd, Date.now()),
-            showStatus: (dd, Jd) => {
-              Nd.show(dd, Jd)
+            statusOf: QQ => qQ.statusOf(QQ, Date.now()),
+            showStatus: (QQ, FQ) => {
+              qQ.show(QQ, FQ)
             },
-            isPending: dd => Nd.isPending(dd)
-          }), [dd, Jd, Nd])
+            isPending: QQ => qQ.isPending(QQ)
+          }), [QQ, FQ, qQ])
         }(),
-        Cd = (0, Zd.m)((0, Wd.j)("lobbyLeaderboardInfo")),
-        Kd = (0, Pd.m)(),
-        [od, ld] = (0, pd.useState)((() => vJ(Kd))),
-        [Qd, Ld] = (0, pd.useState)(null);
-      return (0, pd.useEffect)((() => {
-        null === Kd && (0, Nd.reportAnalyticsClick)({
+        mQ = (0, kQ.o)((0, oQ.l)("lobbyLeaderboardInfo")),
+        uQ = (0, DQ.i)(),
+        [HQ, bQ] = (0, LQ.useState)((() => GF(uQ))),
+        [YQ, xQ] = (0, LQ.useState)(null);
+      return (0, LQ.useEffect)((() => {
+        null === uQ && (0, qQ.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, pd.useEffect)((() => {
-        null !== Kd && (ld((dd => (null === dd || void 0 === dd ? void 0 : dd.seq) === Kd.seq ? dd : vJ(Kd))), void 0 !== Kd.focusName && "players" === Kd.page ? Ld({
-          name: Kd.focusName,
-          seq: Kd.seq
-        }) : (0, Pd.i)(Kd.seq))
-      }), [null === Kd || void 0 === Kd ? void 0 : Kd.seq]), null === kd ? null : (0, Xd.jsx)("div", {
+      }), []), (0, LQ.useEffect)((() => {
+        null !== uQ && (bQ((QQ => (null === QQ || void 0 === QQ ? void 0 : QQ.seq) === uQ.seq ? QQ : GF(uQ))), void 0 !== uQ.focusName && "players" === uQ.page ? xQ({
+          name: uQ.focusName,
+          seq: uQ.seq
+        }) : (0, DQ.h)(uQ.seq))
+      }), [null === uQ || void 0 === uQ ? void 0 : uQ.seq]), null === wQ ? null : (0, TQ.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, Xd.jsx)(GJ, {
-          pages: (0, Zd.g)(kd.state, Cd),
-          manage: kd,
-          leaderboard: Jd,
-          focusRequest: Qd,
-          onFocused: Pd.i,
-          landing: od
+        children: (0, TQ.jsx)(MF, {
+          pages: (0, kQ.h)(wQ.state, mQ),
+          manage: wQ,
+          leaderboard: FQ,
+          focusRequest: YQ,
+          onFocused: DQ.h,
+          landing: HQ
         })
       })
     }
   },
-  36733: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Kd,
-      e: () => gd
+  36193: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => uQ,
+      f: () => vQ
     });
-    var pd = kd(1492),
-      Nd = kd(1955),
-      Wd = kd(1932);
-    const Pd = 1e4;
-    let Zd = 0;
+    var LQ = wQ(1471),
+      qQ = wQ(1911),
+      oQ = wQ(1897);
+    const DQ = 1e4;
+    let kQ = 0;
 
-    function gd(dd) {
-      const Jd = ++Zd;
-      return new Promise((kd => {
-        const Zd = Jd => {
-            gd(), clearTimeout(Cd), !1 === (null === Jd || void 0 === Jd ? void 0 : Jd.ok) && (0, pd.reportAnalyticsClick)({
+    function vQ(QQ) {
+      const FQ = ++kQ;
+      return new Promise((wQ => {
+        const kQ = FQ => {
+            vQ(), clearTimeout(mQ), !1 === (null === FQ || void 0 === FQ ? void 0 : FQ.ok) && (0, LQ.reportAnalyticsClick)({
               id: "lobby_manage.refused",
-              value: dd.type
-            }), kd(Jd)
+              value: QQ.type
+            }), wQ(FQ)
           },
-          gd = Nd.b.subscribe("lobbyManage", (dd => {
-            const kd = function(dd, Jd) {
-              var kd;
-              return null !== (kd = null === dd || void 0 === dd ? void 0 : dd.results.find((dd => dd.requestId === Jd))) && void 0 !== kd ? kd : null
-            }(dd, Jd);
-            null !== kd && Zd(kd)
+          vQ = qQ.b.subscribe("lobbyManage", (QQ => {
+            const wQ = function(QQ, FQ) {
+              var wQ;
+              return null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ.results.find((QQ => QQ.requestId === FQ))) && void 0 !== wQ ? wQ : null
+            }(QQ, FQ);
+            null !== wQ && kQ(wQ)
           })),
-          Cd = setTimeout((() => {
-            Zd(null)
-          }), Pd);
-        Wd.gameBridge.send("lobbyManage", {
-          ...dd,
-          requestId: Jd
+          mQ = setTimeout((() => {
+            kQ(null)
+          }), DQ);
+        oQ.gameBridge.send("lobbyManage", {
+          ...QQ,
+          requestId: FQ
         })
       }))
     }
-    const Cd = [{
+    const mQ = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class Kd {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gd;
-        this.onChange = dd, this.sendAction = Jd, this.pending = new Map, this.statuses = new Map
+    class uQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vQ;
+        this.onChange = QQ, this.sendAction = FQ, this.pending = new Map, this.statuses = new Map
       }
-      send(dd, Jd, kd) {
-        var pd;
-        return this.statuses.delete(Jd), this.pending.set(Jd, (null !== (pd = this.pending.get(Jd)) && void 0 !== pd ? pd : 0) + 1), this.sendAction(dd).then((dd => {
-          var pd;
-          const Nd = null !== dd && void 0 !== dd ? dd : {
+      send(QQ, FQ, wQ) {
+        var LQ;
+        return this.statuses.delete(FQ), this.pending.set(FQ, (null !== (LQ = this.pending.get(FQ)) && void 0 !== LQ ? LQ : 0) + 1), this.sendAction(QQ).then((QQ => {
+          var LQ;
+          const qQ = null !== QQ && void 0 !== QQ ? QQ : {
               requestId: -1,
               ok: !1,
-              message: Cd
+              message: mQ
             },
-            Wd = (null !== (pd = this.pending.get(Jd)) && void 0 !== pd ? pd : 1) - 1;
-          Wd > 0 ? this.pending.set(Jd, Wd) : this.pending.delete(Jd);
-          const Pd = !Nd.ok || Nd.message.length > 0 ? Nd.message : null === kd ? null : [kd];
-          return null !== Pd && this.statuses.set(Jd, {
-            ok: Nd.ok,
-            text: Pd,
+            oQ = (null !== (LQ = this.pending.get(FQ)) && void 0 !== LQ ? LQ : 1) - 1;
+          oQ > 0 ? this.pending.set(FQ, oQ) : this.pending.delete(FQ);
+          const DQ = !qQ.ok || qQ.message.length > 0 ? qQ.message : null === wQ ? null : [wQ];
+          return null !== DQ && this.statuses.set(FQ, {
+            ok: qQ.ok,
+            text: DQ,
             until: Date.now() + 4e3
-          }), this.onChange(), Nd
+          }), this.onChange(), qQ
         }))
       }
-      show(dd, Jd) {
-        this.statuses.set(dd, {
-          ...Jd,
+      show(QQ, FQ) {
+        this.statuses.set(QQ, {
+          ...FQ,
           until: Date.now() + 4e3
         }), this.onChange()
       }
-      expire(dd) {
-        for (const [Jd, kd] of this.statuses) kd.until <= dd && this.statuses.delete(Jd)
+      expire(QQ) {
+        for (const [FQ, wQ] of this.statuses) wQ.until <= QQ && this.statuses.delete(FQ)
       }
       nextDeadline() {
-        let dd = null;
-        for (const kd of this.statuses.values()) {
-          var Jd;
-          dd = Math.min(null !== (Jd = dd) && void 0 !== Jd ? Jd : 1 / 0, kd.until)
+        let QQ = null;
+        for (const wQ of this.statuses.values()) {
+          var FQ;
+          QQ = Math.min(null !== (FQ = QQ) && void 0 !== FQ ? FQ : 1 / 0, wQ.until)
         }
-        return dd
+        return QQ
       }
-      statusOf(dd, Jd) {
-        const kd = this.statuses.get(dd);
-        return !kd || kd.until <= Jd ? null : {
-          ok: kd.ok,
-          text: kd.text
+      statusOf(QQ, FQ) {
+        const wQ = this.statuses.get(QQ);
+        return !wQ || wQ.until <= FQ ? null : {
+          ok: wQ.ok,
+          text: wQ.text
         }
       }
-      isPending(dd) {
-        return this.pending.has(dd)
+      isPending(QQ) {
+        return this.pending.has(QQ)
       }
     }
   },
-  36720: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Cd,
-      g: () => gd
+  36185: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => mQ,
+      g: () => vQ
     });
-    var pd = kd(593),
-      Nd = kd(1932),
-      Wd = kd(1675),
-      Pd = kd(95),
-      Zd = kd(1279);
+    var LQ = wQ(600),
+      qQ = wQ(1897),
+      oQ = wQ(1645),
+      DQ = wQ(96),
+      kQ = wQ(1276);
 
-    function gd(dd, Jd, kd) {
-      return Pd.featureFlags.useSocialFeatures && dd && null === (0, Zd.d)(Jd, kd)
+    function vQ(QQ, FQ, wQ) {
+      return DQ.featureFlags.useSocialFeatures && QQ && null === (0, kQ.b)(FQ, wQ)
     }
 
-    function Cd(dd, Jd) {
-      var kd, Pd;
-      const Zd = Wd.c.getSocialState().friends.find((dd => dd.name.toLowerCase() === Jd.toLowerCase())),
-        gd = Nd.gameBridge.latest("players").byId[dd],
-        Cd = void 0 !== gd && gd.name === Jd,
-        Kd = Cd && null !== (kd = gd.cosmetics) && void 0 !== kd ? kd : void 0,
-        od = Zd && Kd ? {
-          ...Zd,
-          cosmetics: Kd
-        } : Zd;
+    function mQ(QQ, FQ) {
+      var wQ, DQ;
+      const kQ = oQ.e.getSocialState().friends.find((QQ => QQ.name.toLowerCase() === FQ.toLowerCase())),
+        vQ = qQ.gameBridge.latest("players").byId[QQ],
+        mQ = void 0 !== vQ && vQ.name === FQ,
+        uQ = mQ && null !== (wQ = vQ.cosmetics) && void 0 !== wQ ? wQ : void 0,
+        HQ = kQ && uQ ? {
+          ...kQ,
+          cosmetics: uQ
+        } : kQ;
       return {
-        playerSocialPreview: null !== od && void 0 !== od ? od : {
+        playerSocialPreview: null !== HQ && void 0 !== HQ ? HQ : {
           isError: !1,
-          name: Jd,
-          ranks: Cd ? [...gd.ranks] : [],
-          cosmetics: null !== Kd && void 0 !== Kd ? Kd : {},
-          nameColour: null !== (Pd = null === Kd || void 0 === Kd ? void 0 : Kd.nameColour) && void 0 !== Pd ? Pd : pd.c,
+          name: FQ,
+          ranks: mQ ? [...vQ.ranks] : [],
+          cosmetics: null !== uQ && void 0 !== uQ ? uQ : {},
+          nameColour: null !== (DQ = null === uQ || void 0 === uQ ? void 0 : uQ.nameColour) && void 0 !== DQ ? DQ : LQ.d,
           location: {
             status: "inGame"
           }
         },
-        isFriend: void 0 !== Zd
+        isFriend: void 0 !== kQ
       }
     }
   },
-  36907: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => od
+  36362: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => HQ
     });
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(1714),
-      Zd = kd(1461),
-      gd = kd(1359),
-      Cd = kd(1059),
-      Kd = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(1682),
+      kQ = wQ(1451),
+      vQ = wQ(1348),
+      mQ = wQ(1079),
+      uQ = wQ(1107);
 
-    function od(dd) {
+    function HQ(QQ) {
       let {
-        label: Jd,
-        icon: kd,
-        placeholder: Nd,
-        onSubmit: od
-      } = dd;
-      const ld = (0, pd.useRef)(null),
-        [Qd, Ld] = (0, pd.useState)(""),
-        [Od, ed] = (0, pd.useState)("Enter"),
-        [Rd, Id] = (0, pd.useState)(null);
-      (0, pd.useEffect)((() => {
-        if ("Success" !== Od && "Error" !== Od) return;
-        const dd = setTimeout((() => {
-          "Success" === Od && ld.current && (ld.current.value = "", Ld("")), ed("Enter")
-        }), "Success" === Od ? 1e3 : 4e3);
+        label: FQ,
+        icon: wQ,
+        placeholder: qQ,
+        onSubmit: HQ
+      } = QQ;
+      const bQ = (0, LQ.useRef)(null),
+        [YQ, xQ] = (0, LQ.useState)(""),
+        [AQ, tQ] = (0, LQ.useState)("Enter"),
+        [eQ, MQ] = (0, LQ.useState)(null);
+      (0, LQ.useEffect)((() => {
+        if ("Success" !== AQ && "Error" !== AQ) return;
+        const QQ = setTimeout((() => {
+          "Success" === AQ && bQ.current && (bQ.current.value = "", xQ("")), tQ("Enter")
+        }), "Success" === AQ ? 1e3 : 4e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(QQ)
         }
-      }), [Od]);
-      const Gd = () => {
-        const dd = Qd.trim();
-        "" !== dd && "Enter" === Od && (ed("Loading"), od(dd).then((dd => {
-          ld.current && ("error" in dd ? null === dd.error ? ed("Enter") : (Id(dd.error), ed("Error")) : ed("Success"))
+      }), [AQ]);
+      const GQ = () => {
+        const QQ = YQ.trim();
+        "" !== QQ && "Enter" === AQ && (tQ("Loading"), HQ(QQ).then((QQ => {
+          bQ.current && ("error" in QQ ? null === QQ.error ? tQ("Enter") : (MQ(QQ.error), tQ("Error")) : tQ("Success"))
         })))
       };
-      return (0, Kd.jsxs)("div", {
+      return (0, uQ.jsxs)("div", {
         className: "PlayerNameField",
-        onKeyDown: dd => {
-          dd.target === ld.current && "Escape" !== dd.key && dd.stopPropagation()
+        onKeyDown: QQ => {
+          QQ.target === bQ.current && "Escape" !== QQ.key && QQ.stopPropagation()
         },
-        children: [(0, Kd.jsxs)("div", {
-          className: Wd()("AddFriendBodyOverlay", `AddFriendBodyOverlay${Od}`),
-          children: ["Loading" === Od && (0, Kd.jsx)(gd.b, {}), "Success" === Od && (0, Kd.jsx)(Cd.e, {
+        children: [(0, uQ.jsxs)("div", {
+          className: oQ()("AddFriendBodyOverlay", `AddFriendBodyOverlay${AQ}`),
+          children: ["Loading" === AQ && (0, uQ.jsx)(vQ.c, {}), "Success" === AQ && (0, uQ.jsx)(mQ.c, {
             name: "check"
-          }), "Error" === Od && Rd]
-        }), (0, Kd.jsxs)("div", {
+          }), "Error" === AQ && eQ]
+        }), (0, uQ.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, Kd.jsx)(Pd.e, {
+          children: [(0, uQ.jsx)(DQ.b, {
             className: "PlayerSearchInput",
-            domRef: ld,
+            domRef: bQ,
             maxLength: 32,
-            placeholderText: Nd,
-            ariaLabel: Nd,
+            placeholderText: qQ,
+            ariaLabel: qQ,
             stopPropagation: !1,
-            onValueChange: dd => {
-              Ld(dd)
+            onValueChange: QQ => {
+              xQ(QQ)
             },
-            onEnter: Gd
-          }), (0, Kd.jsxs)(Zd.d, {
+            onEnter: GQ
+          }), (0, uQ.jsxs)(kQ.f, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== Od || "" === Qd.trim(),
-            onClick: Gd,
-            children: [(0, Kd.jsx)(Cd.e, {
-              name: kd
-            }), " ", Jd]
+            disabled: "Enter" !== AQ || "" === YQ.trim(),
+            onClick: GQ,
+            children: [(0, uQ.jsx)(mQ.c, {
+              name: wQ
+            }), " ", FQ]
           })]
         })]
       })
     }
   },
-  36890: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => od
+  36349: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => HQ
     });
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(1211),
-      Zd = kd(1059),
-      gd = kd(1103);
-    const Cd = {
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(1207),
+      kQ = wQ(1079),
+      vQ = wQ(1107);
+    const mQ = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      Kd = ["unlisted", "public", "whitelist", "private"];
+      uQ = ["unlisted", "public", "whitelist", "private"];
 
-    function od(dd) {
+    function HQ(QQ) {
       let {
-        visibility: Jd,
-        onPick: kd
-      } = dd;
+        visibility: FQ,
+        onPick: wQ
+      } = QQ;
       const {
-        t: Nd
-      } = (0, Pd.B)(), od = (0, pd.useRef)([]);
-      return (0, gd.jsx)("div", {
+        t: qQ
+      } = (0, DQ.y)(), HQ = (0, LQ.useRef)([]);
+      return (0, vQ.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": Nd("worldSocial:whoCanJoin"),
-        children: Kd.map(((dd, pd) => {
-          const Pd = dd === Jd;
-          return (0, gd.jsxs)("button", {
-            ref: dd => {
-              od.current[pd] = dd
+        "aria-label": qQ("worldSocial:whoCanJoin"),
+        children: uQ.map(((QQ, LQ) => {
+          const DQ = QQ === FQ;
+          return (0, vQ.jsxs)("button", {
+            ref: QQ => {
+              HQ.current[LQ] = QQ
             },
             type: "button",
-            className: Wd()("WorldSocialTile", {
-              WorldSocialTileSelected: Pd
+            className: oQ()("WorldSocialTile", {
+              WorldSocialTileSelected: DQ
             }),
-            "aria-pressed": Pd,
-            tabIndex: Pd ? 0 : -1,
-            onKeyDown: dd => {
-              ((dd, Jd) => {
-                const kd = "ArrowRight" === dd.key || "ArrowDown" === dd.key ? 1 : "ArrowLeft" === dd.key || "ArrowUp" === dd.key ? -1 : 0;
-                var pd;
-                0 !== kd && (dd.preventDefault(), null === (pd = od.current[(Jd + kd + Kd.length) % Kd.length]) || void 0 === pd || pd.focus())
-              })(dd, pd)
+            "aria-pressed": DQ,
+            tabIndex: DQ ? 0 : -1,
+            onKeyDown: QQ => {
+              ((QQ, FQ) => {
+                const wQ = "ArrowRight" === QQ.key || "ArrowDown" === QQ.key ? 1 : "ArrowLeft" === QQ.key || "ArrowUp" === QQ.key ? -1 : 0;
+                var LQ;
+                0 !== wQ && (QQ.preventDefault(), null === (LQ = HQ.current[(FQ + wQ + uQ.length) % uQ.length]) || void 0 === LQ || LQ.focus())
+              })(QQ, LQ)
             },
             onClick: () => {
-              kd(dd)
+              wQ(QQ)
             },
-            children: [(0, gd.jsx)("span", {
+            children: [(0, vQ.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, gd.jsx)(Zd.e, {
-                name: Cd[dd]
+              children: (0, vQ.jsx)(kQ.c, {
+                name: mQ[QQ]
               })
-            }), (0, gd.jsxs)("span", {
+            }), (0, vQ.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, gd.jsx)("span", {
+              children: [(0, vQ.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: Nd(`worldSocial:${dd}`)
-              }), (0, gd.jsx)("span", {
+                children: qQ(`worldSocial:${QQ}`)
+              }), (0, vQ.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: Nd(`worldSocial:${dd}Description`)
+                children: qQ(`worldSocial:${QQ}Description`)
               })]
             })]
-          }, dd)
+          }, QQ)
         }))
       })
     }
   },
-  36905: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Zd
+  36356: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => kQ
     });
-    var pd = kd(1211),
-      Nd = kd(2525),
-      Wd = kd(4203),
-      Pd = kd(1103);
+    var LQ = wQ(1207),
+      qQ = wQ(2545),
+      oQ = wQ(4233),
+      DQ = wQ(1107);
 
-    function Zd(dd) {
+    function kQ(QQ) {
       let {
-        Do: Jd,
-        children: kd,
-        ...Zd
-      } = dd;
+        fH: FQ,
+        children: wQ,
+        ...kQ
+      } = QQ;
       const {
-        t: gd
-      } = (0, pd.B)();
-      return (0, Pd.jsx)("div", {
+        t: vQ
+      } = (0, LQ.y)();
+      return (0, DQ.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          Jd.onChange(!Jd.on)
+          FQ.onChange(!FQ.on)
         },
-        children: (0, Pd.jsx)(Nd.d, {
-          ...Zd,
+        children: (0, DQ.jsx)(qQ.f, {
+          ...kQ,
           opensProfileCard: !1,
-          children: (0, Pd.jsxs)("div", {
+          children: (0, DQ.jsxs)("div", {
             className: "WhitelistTickRowActions",
-            onClick: dd => {
-              dd.stopPropagation()
+            onClick: QQ => {
+              QQ.stopPropagation()
             },
-            children: [kd, (0, Pd.jsx)("label", {
+            children: [wQ, (0, DQ.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, Pd.jsx)(Wd.e, {
-                checked: Jd.on,
+              children: (0, DQ.jsx)(oQ.d, {
+                checked: FQ.on,
                 disabled: !1,
-                ariaLabel: gd("worldSocial:letJoin", {
-                  playerName: Zd.playerSocialPreview.name
+                ariaLabel: vQ("worldSocial:letJoin", {
+                  playerName: kQ.playerSocialPreview.name
                 }),
-                onChange: dd => {
-                  Jd.onChange(dd.target.checked)
+                onChange: QQ => {
+                  FQ.onChange(QQ.target.checked)
                 }
               })
             })]
@@ -1913,372 +1913,372 @@ export const modules = {
       })
     }
   },
-  36887: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Ld
+  36341: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => xQ
     });
-    var pd = kd(56),
-      Nd = kd(1211),
-      Wd = kd(1858),
-      Pd = kd(95),
-      Zd = kd(22),
-      gd = kd(1492),
-      Cd = kd(2552),
-      Kd = kd(9134),
-      od = kd(1461),
-      ld = kd(1059),
-      Qd = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(1207),
+      oQ = wQ(1835),
+      DQ = wQ(96),
+      kQ = wQ(17),
+      vQ = wQ(1471),
+      mQ = wQ(2580),
+      uQ = wQ(8995),
+      HQ = wQ(1451),
+      bQ = wQ(1079),
+      YQ = wQ(1107);
 
-    function Ld(dd) {
+    function xQ(QQ) {
       let {
-        worldCode: Jd,
-        message: kd
-      } = dd;
+        worldCode: FQ,
+        message: wQ
+      } = QQ;
       const {
-        t: Ld
-      } = (0, Nd.B)(), {
-        isTouchScreen: Od
-      } = (0, Zd.j)(["isTouchScreen"]), ed = Pd.featureFlags.canUseInviteLinks, Rd = (0, Kd.j)(ed && null === kd), [Id, Gd] = (0, Cd.h)(), vd = (0, pd.useRef)(null);
-      if (null !== kd) return (0, Qd.jsxs)("div", {
+        t: xQ
+      } = (0, qQ.y)(), {
+        isTouchScreen: AQ
+      } = (0, kQ.l)(["isTouchScreen"]), tQ = DQ.featureFlags.canUseInviteLinks, eQ = (0, uQ.g)(tQ && null === wQ), [MQ, GQ] = (0, mQ.g)(), pQ = (0, LQ.useRef)(null);
+      if (null !== wQ) return (0, YQ.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, Qd.jsx)(ld.e, {
+        children: [(0, YQ.jsx)(bQ.c, {
           name: "lock"
-        }), (0, Qd.jsx)("span", {
-          children: kd
+        }), (0, YQ.jsx)("span", {
+          children: wQ
         })]
       });
-      const xd = ed ? Rd : Jd,
-        qd = Od && ed && (0, Cd.d)();
-      return (0, Qd.jsxs)("div", {
+      const cQ = tQ ? eQ : FQ,
+        CQ = AQ && tQ && (0, mQ.c)();
+      return (0, YQ.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!ed && (0, Qd.jsx)("span", {
+        children: [!tQ && (0, YQ.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: Ld("worldSocial:worldCode")
-        }), (0, Qd.jsx)("input", {
-          ref: vd,
+          children: xQ("worldSocial:worldCode")
+        }), (0, YQ.jsx)("input", {
+          ref: pQ,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== xd && void 0 !== xd ? xd : "",
-          "aria-label": Ld(ed ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: dd => {
-            dd.currentTarget.select()
+          value: null !== cQ && void 0 !== cQ ? cQ : "",
+          "aria-label": xQ(tQ ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: QQ => {
+            QQ.currentTarget.select()
           }
-        }), (0, Qd.jsxs)(od.d, {
+        }), (0, YQ.jsxs)(HQ.f, {
           className: "WorldSocialCopy",
-          disabled: null === xd,
+          disabled: null === cQ,
           onClick: () => {
-            null !== xd && (0, Cd.e)(xd, {
-              useShareSheet: qd,
-              onOutcome: dd => {
-                if ((0, gd.reportAnalyticsClick)({
+            null !== cQ && (0, mQ.e)(cQ, {
+              useShareSheet: CQ,
+              onOutcome: QQ => {
+                if ((0, vQ.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== dd || ed ? dd : "code"
-                  }), "copied" === dd) Gd();
-                else if ("failed" === dd) {
-                  var Jd;
-                  null === (Jd = vd.current) || void 0 === Jd || Jd.focus(), Wd.f.showMessage({
+                    value: "copied" !== QQ || tQ ? QQ : "code"
+                  }), "copied" === QQ) GQ();
+                else if ("failed" === QQ) {
+                  var FQ;
+                  null === (FQ = pQ.current) || void 0 === FQ || FQ.focus(), oQ.f.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, Qd.jsx)(ld.e, {
-            name: Id ? "check" : qd ? "up-from-bracket" : "copy"
-          }), " ", Ld(Id ? "general:copied" : qd ? "worldSocial:share" : "general:copy")]
+          children: [(0, YQ.jsx)(bQ.c, {
+            name: MQ ? "check" : CQ ? "up-from-bracket" : "copy"
+          }), " ", xQ(MQ ? "general:copied" : CQ ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  36896: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Qd,
-      f: () => ld,
-      h: () => od
+  36353: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => YQ,
+      d: () => bQ,
+      e: () => HQ
     });
-    var pd = kd(593),
-      Nd = kd(1211),
-      Wd = kd(1675),
-      Pd = kd(2525),
-      Zd = kd(2479),
-      gd = kd(1461),
-      Cd = kd(36905),
-      Kd = kd(1103);
+    var LQ = wQ(600),
+      qQ = wQ(1207),
+      oQ = wQ(1645),
+      DQ = wQ(2545),
+      kQ = wQ(2489),
+      vQ = wQ(1451),
+      mQ = wQ(36356),
+      uQ = wQ(1107);
 
-    function od(dd, Jd) {
-      var kd;
+    function HQ(QQ, FQ) {
+      var wQ;
       return {
         isError: !1,
-        name: dd,
+        name: QQ,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== Jd && void 0 !== Jd ? Jd : {},
-        nameColour: null !== (kd = null === Jd || void 0 === Jd ? void 0 : Jd.nameColour) && void 0 !== kd ? kd : pd.c,
+        cosmetics: null !== FQ && void 0 !== FQ ? FQ : {},
+        nameColour: null !== (wQ = null === FQ || void 0 === FQ ? void 0 : FQ.nameColour) && void 0 !== wQ ? wQ : LQ.d,
         location: {
           status: "offline"
         }
       }
     }
 
-    function ld(dd) {
+    function bQ(QQ) {
       let {
-        player: Jd,
-        isFriend: kd = !1,
-        status: pd,
-        showLocation: gd = void 0 === pd,
-        Do: od,
-        onSendFriendRequest: ld,
-        actions: Qd,
-        zIndex: Ld
-      } = dd;
+        player: FQ,
+        isFriend: wQ = !1,
+        status: LQ,
+        showLocation: vQ = void 0 === LQ,
+        fH: HQ,
+        onSendFriendRequest: bQ,
+        actions: YQ,
+        zIndex: xQ
+      } = QQ;
       const {
-        t: Od
-      } = (0, Nd.B)();
-      let ed = pd;
-      null !== od && void 0 !== od && od.on && (ed = (0, Kd.jsxs)(Kd.Fragment, {
-        children: [null !== pd && void 0 !== pd ? pd : (0, Kd.jsx)(Zd.c, {
-          socialPreview: Jd
-        }), (0, Kd.jsxs)("span", {
+        t: AQ
+      } = (0, qQ.y)();
+      let tQ = LQ;
+      null !== HQ && void 0 !== HQ && HQ.on && (tQ = (0, uQ.jsxs)(uQ.Fragment, {
+        children: [null !== LQ && void 0 !== LQ ? LQ : (0, uQ.jsx)(kQ.c, {
+          socialPreview: FQ
+        }), (0, uQ.jsxs)("span", {
           className: "WorldSocialCanJoin",
-          children: [" \xb7 ", Od("worldSocial:canJoin")]
+          children: [" \xb7 ", AQ("worldSocial:canJoin")]
         })]
       }));
-      const Rd = {
-        playerSocialPreview: Jd,
-        isFriend: kd,
+      const eQ = {
+        playerSocialPreview: FQ,
+        isFriend: wQ,
         hideFriendBadge: !0,
-        onFriendRemoved: kd ? dd => {
-          Wd.c.removeFriendFromState(dd)
+        onFriendRemoved: wQ ? QQ => {
+          oQ.e.removeFriendFromState(QQ)
         } : void 0,
-        status: ed,
-        showLocation: gd,
-        onSendFriendRequest: ld,
-        zIndex: Ld
+        status: tQ,
+        showLocation: vQ,
+        onSendFriendRequest: bQ,
+        zIndex: xQ
       };
-      return od ? (0, Kd.jsx)(Cd.b, {
-        ...Rd,
-        Do: od,
-        children: Qd
-      }) : (0, Kd.jsx)(Pd.d, {
-        ...Rd,
+      return HQ ? (0, uQ.jsx)(mQ.d, {
+        ...eQ,
+        fH: HQ,
+        children: YQ
+      }) : (0, uQ.jsx)(DQ.f, {
+        ...eQ,
         opensProfileCard: !1,
-        children: Qd || void 0
+        children: YQ || void 0
       })
     }
 
-    function Qd(dd) {
+    function YQ(QQ) {
       let {
-        row: Jd,
-        Do: kd,
-        canInvite: pd,
-        invited: Wd,
-        onInvite: Pd,
-        zIndex: Zd
-      } = dd;
+        row: FQ,
+        fH: wQ,
+        canInvite: LQ,
+        invited: oQ,
+        onInvite: DQ,
+        zIndex: kQ
+      } = QQ;
       const {
-        t: Cd
-      } = (0, Nd.B)(), od = "online" === Jd.place ? gd.d : gd.f;
-      return (0, Kd.jsx)(ld, {
-        player: Jd.friend,
+        t: mQ
+      } = (0, qQ.y)(), HQ = "online" === FQ.place ? vQ.f : vQ.i;
+      return (0, uQ.jsx)(bQ, {
+        player: FQ.friend,
         isFriend: !0,
-        status: "here" === Jd.place ? Cd("worldSocial:inThisWorld") : void 0,
+        status: "here" === FQ.place ? mQ("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        Do: kd,
-        zIndex: Zd,
-        actions: pd && (0, Kd.jsx)(od, {
+        fH: wQ,
+        zIndex: kQ,
+        actions: LQ && (0, uQ.jsx)(HQ, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: Wd,
-          onClick: Pd,
-          ariaLabel: `${Cd("worldSocial:invite")} ${Jd.friend.name}`,
-          children: Cd(Wd ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: oQ,
+          onClick: DQ,
+          ariaLabel: `${mQ("worldSocial:invite")} ${FQ.friend.name}`,
+          children: mQ(oQ ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  36877: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => gd,
-      e: () => Pd,
-      g: () => Cd
+  36329: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => vQ,
+      e: () => DQ,
+      h: () => mQ
     });
-    var pd = kd(56),
-      Nd = kd(4434),
-      Wd = kd(1858);
+    var LQ = wQ(53),
+      qQ = wQ(4435),
+      oQ = wQ(1835);
 
-    function Pd(dd) {
-      const Jd = {
-        lobbyName: dd,
+    function DQ(QQ) {
+      const FQ = {
+        lobbyName: QQ,
         answer: null,
-        response: Nd.e.getSocialSettings(dd)
+        response: qQ.d.getSocialSettings(QQ)
       };
-      return Jd.response.then((dd => {
-        Jd.answer = dd
-      })), Jd
+      return FQ.response.then((QQ => {
+        FQ.answer = QQ
+      })), FQ
     }
-    const Zd = new Map;
+    const kQ = new Map;
 
-    function gd(dd) {
-      Zd.set(dd.lobbyName, dd)
+    function vQ(QQ) {
+      kQ.set(QQ.lobbyName, QQ)
     }
 
-    function Cd(dd) {
-      const [Jd] = (0, pd.useState)((() => function(dd) {
-        var Jd;
-        const kd = null !== (Jd = Zd.get(dd)) && void 0 !== Jd ? Jd : null;
-        return null !== kd && void 0 !== kd && kd.answer && "error" in kd.answer ? null : kd
-      }(dd))), [kd, Pd] = (0, pd.useState)((() => null !== Jd && void 0 !== Jd && Jd.answer && "settings" in Jd.answer ? Jd.answer.settings : null)), [gd, Cd] = (0, pd.useState)(!0), [Kd, od] = (0, pd.useState)(null !== kd), ld = (0, pd.useRef)(kd);
-      ld.current = kd;
-      const Qd = (0, pd.useRef)(0),
-        Ld = (0, pd.useRef)(0),
-        Od = (0, pd.useRef)(!1),
-        ed = (0, pd.useRef)(!0),
-        Rd = (0, pd.useCallback)((async Jd => {
-          const kd = ++Qd.current,
-            pd = await (null !== Jd && void 0 !== Jd ? Jd : Nd.e.getSocialSettings(dd));
-          ed.current && kd === Qd.current && (od(!0), Cd(!1), "error" in pd || Pd(pd.settings))
-        }), [dd]),
-        Id = (0, pd.useCallback)((() => {
-          Cd(!0), Rd()
-        }), [Rd]),
-        Gd = (0, pd.useCallback)((() => {
-          Ld.current > 0 ? Od.current = !0 : Rd()
-        }), [Rd]);
-      (0, pd.useEffect)((() => (ed.current = !0, Zd.delete(dd), Cd(!0), Rd(null === Jd || void 0 === Jd ? void 0 : Jd.response), () => {
-        ed.current = !1
-      })), [Rd, dd, Jd]);
-      const vd = dd => {
-        Qd.current++, Cd(!1), ld.current = dd, Pd(dd)
+    function mQ(QQ) {
+      const [FQ] = (0, LQ.useState)((() => function(QQ) {
+        var FQ;
+        const wQ = null !== (FQ = kQ.get(QQ)) && void 0 !== FQ ? FQ : null;
+        return null !== wQ && void 0 !== wQ && wQ.answer && "error" in wQ.answer ? null : wQ
+      }(QQ))), [wQ, DQ] = (0, LQ.useState)((() => null !== FQ && void 0 !== FQ && FQ.answer && "settings" in FQ.answer ? FQ.answer.settings : null)), [vQ, mQ] = (0, LQ.useState)(!0), [uQ, HQ] = (0, LQ.useState)(null !== wQ), bQ = (0, LQ.useRef)(wQ);
+      bQ.current = wQ;
+      const YQ = (0, LQ.useRef)(0),
+        xQ = (0, LQ.useRef)(0),
+        AQ = (0, LQ.useRef)(!1),
+        tQ = (0, LQ.useRef)(!0),
+        eQ = (0, LQ.useCallback)((async FQ => {
+          const wQ = ++YQ.current,
+            LQ = await (null !== FQ && void 0 !== FQ ? FQ : qQ.d.getSocialSettings(QQ));
+          tQ.current && wQ === YQ.current && (HQ(!0), mQ(!1), "error" in LQ || DQ(LQ.settings))
+        }), [QQ]),
+        MQ = (0, LQ.useCallback)((() => {
+          mQ(!0), eQ()
+        }), [eQ]),
+        GQ = (0, LQ.useCallback)((() => {
+          xQ.current > 0 ? AQ.current = !0 : eQ()
+        }), [eQ]);
+      (0, LQ.useEffect)((() => (tQ.current = !0, kQ.delete(QQ), mQ(!0), eQ(null === FQ || void 0 === FQ ? void 0 : FQ.response), () => {
+        tQ.current = !1
+      })), [eQ, QQ, FQ]);
+      const pQ = QQ => {
+        YQ.current++, mQ(!1), bQ.current = QQ, DQ(QQ)
       };
       return {
-        settings: kd,
-        loading: gd,
-        answered: Kd,
-        retry: Id,
-        refresh: Gd,
-        change: async function(Jd, kd) {
+        settings: wQ,
+        loading: vQ,
+        answered: uQ,
+        retry: MQ,
+        refresh: GQ,
+        change: async function(FQ, wQ) {
           let {
-            quiet: pd = !1,
-            onAnswer: Pd
+            quiet: LQ = !1,
+            onAnswer: DQ
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const Zd = ld.current;
-          if (null === Zd) return !1;
-          vd(kd(Zd)), Ld.current > 0 && (Od.current = !0), Ld.current++;
-          const gd = await Nd.e.setSocialSettings(dd, Jd);
-          Ld.current--;
-          const Cd = !("error" in gd);
-          if (!ed.current) return Cd;
-          if (null === Pd || void 0 === Pd || Pd(gd), pd);
-          else if ("error" in gd) Wd.f.showMessage({
-            translationKey: gd.error
+          const kQ = bQ.current;
+          if (null === kQ) return !1;
+          pQ(wQ(kQ)), xQ.current > 0 && (AQ.current = !0), xQ.current++;
+          const vQ = await qQ.d.setSocialSettings(QQ, FQ);
+          xQ.current--;
+          const mQ = !("error" in vQ);
+          if (!tQ.current) return mQ;
+          if (null === DQ || void 0 === DQ || DQ(vQ), LQ);
+          else if ("error" in vQ) oQ.f.showMessage({
+            translationKey: vQ.error
           });
           else
-            for (const dd of gd.notFound) Wd.f.showMessage({
+            for (const QQ of vQ.notFound) oQ.f.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
-                playerName: dd
+                playerName: QQ
               }
             });
-          if (Ld.current > 0) return Cd;
-          const Kd = Od.current;
-          return Od.current = !1, !Kd && "settings" in gd ? vd(gd.settings) : (Kd || vd(Zd), Rd()), Cd
+          if (xQ.current > 0) return mQ;
+          const uQ = AQ.current;
+          return AQ.current = !1, !uQ && "settings" in vQ ? pQ(vQ.settings) : (uQ || pQ(kQ), eQ()), mQ
         }
       }
     }
   },
-  36911: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Pd,
-      g: () => Wd
+  36369: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => DQ,
+      g: () => oQ
     });
-    var pd = kd(149);
-    const Nd = new Map;
+    var LQ = wQ(160);
+    const qQ = new Map;
 
-    function Wd(dd, Jd) {
-      var kd;
-      const pd = null !== (kd = Nd.get(dd)) && void 0 !== kd ? kd : new Map;
-      pd.set(Jd, Date.now()), Nd.set(dd, pd)
+    function oQ(QQ, FQ) {
+      var wQ;
+      const LQ = null !== (wQ = qQ.get(QQ)) && void 0 !== wQ ? wQ : new Map;
+      LQ.set(FQ, Date.now()), qQ.set(QQ, LQ)
     }
 
-    function Pd(dd) {
-      const Jd = Nd.get(dd);
-      if (!Jd) return [];
-      const kd = Date.now();
-      for (const [Nd, Wd] of Jd) kd - Wd >= pd.r && Jd.delete(Nd);
-      return [...Jd.keys()]
+    function DQ(QQ) {
+      const FQ = qQ.get(QQ);
+      if (!FQ) return [];
+      const wQ = Date.now();
+      for (const [qQ, oQ] of FQ) wQ - oQ >= LQ.q && FQ.delete(qQ);
+      return [...FQ.keys()]
     }
   },
-  36880: (dd, Jd, kd) => {
-    function pd(dd, Jd) {
-      const kd = Jd.toLowerCase();
-      for (const pd of dd)
-        if (pd.toLowerCase() === kd) return !0;
+  36335: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ) {
+      const wQ = FQ.toLowerCase();
+      for (const LQ of QQ)
+        if (LQ.toLowerCase() === wQ) return !0;
       return !1
     }
 
-    function Nd(dd, Jd, kd) {
-      const Nd = [],
-        Wd = [],
-        Pd = [];
-      for (const Zd of dd) !Zd.isError && Zd.name && ("inGame" === Zd.location.status && Zd.location.inLobbyName === Jd || pd(kd, Zd.name) ? Wd.push({
-        friend: Zd,
+    function qQ(QQ, FQ, wQ) {
+      const qQ = [],
+        oQ = [],
+        DQ = [];
+      for (const kQ of QQ) !kQ.isError && kQ.name && ("inGame" === kQ.location.status && kQ.location.inLobbyName === FQ || LQ(wQ, kQ.name) ? oQ.push({
+        friend: kQ,
         place: "here"
-      }) : "offline" === Zd.location.status ? Pd.push({
-        friend: Zd,
+      }) : "offline" === kQ.location.status ? DQ.push({
+        friend: kQ,
         place: "offline"
-      }) : Nd.push({
-        friend: Zd,
+      }) : qQ.push({
+        friend: kQ,
         place: "online"
       }));
-      return [...Nd, ...Wd, ...Pd]
+      return [...qQ, ...oQ, ...DQ]
     }
 
-    function Wd(dd, Jd, kd) {
-      const Nd = [],
-        Wd = dd.flatMap((dd => "here" === dd.place ? [dd.friend.name] : []));
-      for (const Pd of [...Wd, ...Jd]) pd(Nd, Pd) || pd(kd, Pd) || Nd.push(Pd);
-      return Nd
+    function oQ(QQ, FQ, wQ) {
+      const qQ = [],
+        oQ = QQ.flatMap((QQ => "here" === QQ.place ? [QQ.friend.name] : []));
+      for (const DQ of [...oQ, ...FQ]) LQ(qQ, DQ) || LQ(wQ, DQ) || qQ.push(DQ);
+      return qQ
     }
 
-    function Pd(dd, Jd) {
-      return null === dd || void 0 === dd || !dd.canManage || pd(dd.whitelist, Jd) ? "none" : "whitelist" === dd.visibility ? "required" : "quiet"
+    function DQ(QQ, FQ) {
+      return null === QQ || void 0 === QQ || !QQ.canManage || LQ(QQ.whitelist, FQ) ? "none" : "whitelist" === QQ.visibility ? "required" : "quiet"
     }
 
-    function Zd(dd) {
-      if (null === dd) return !0;
+    function kQ(QQ) {
+      if (null === QQ) return !0;
       const {
-        visibility: Jd
-      } = dd;
-      return "public" === Jd || "unlisted" === Jd || "whitelist" === Jd && dd.canManage
+        visibility: FQ
+      } = QQ;
+      return "public" === FQ || "unlisted" === FQ || "whitelist" === FQ && QQ.canManage
     }
 
-    function gd(dd, Jd, kd) {
-      if (kd) {
-        const kd = Jd.filter((Jd => !pd(dd.whitelist, Jd)));
+    function vQ(QQ, FQ, wQ) {
+      if (wQ) {
+        const wQ = FQ.filter((FQ => !LQ(QQ.whitelist, FQ)));
         return {
-          ...dd,
-          whitelist: [...dd.whitelist, ...kd]
+          ...QQ,
+          whitelist: [...QQ.whitelist, ...wQ]
         }
       }
       return {
-        ...dd,
-        whitelist: dd.whitelist.filter((dd => !pd(Jd, dd)))
+        ...QQ,
+        whitelist: QQ.whitelist.filter((QQ => !LQ(FQ, QQ)))
       }
     }
 
-    function Cd(dd, Jd) {
-      const kd = [];
-      for (let pd = 0; pd < dd.length; pd += Jd) kd.push(dd.slice(pd, pd + Jd));
-      return kd
+    function mQ(QQ, FQ) {
+      const wQ = [];
+      for (let LQ = 0; LQ < QQ.length; LQ += FQ) wQ.push(QQ.slice(LQ, LQ + FQ));
+      return wQ
     }
-    kd.d(Jd, {
-      c: () => Zd,
-      g: () => Wd,
-      j: () => Nd,
-      l: () => pd,
-      o: () => Cd,
-      r: () => Pd,
-      t: () => gd
+    wQ.d(FQ, {
+      c: () => kQ,
+      f: () => oQ,
+      g: () => qQ,
+      h: () => LQ,
+      j: () => mQ,
+      k: () => DQ,
+      n: () => vQ
     })
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

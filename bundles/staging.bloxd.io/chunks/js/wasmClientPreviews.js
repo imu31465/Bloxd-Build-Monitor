@@ -1,38 +1,38 @@
 export const id = 57;
 export const ids = [57];
 export const modules = {
-  38776: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Nd,
-      c: () => Wd
+  38164: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => qQ,
+      f: () => oQ
     });
-    const pd = new WeakMap;
+    const LQ = new WeakMap;
 
-    function Nd(dd, Jd) {
-      return pd.set(dd, Jd), dd
+    function qQ(QQ, FQ) {
+      return LQ.set(QQ, FQ), QQ
     }
 
-    function Wd(dd) {
-      var Jd;
-      return null !== (Jd = pd.get(dd)) && void 0 !== Jd ? Jd : null
+    function oQ(QQ) {
+      var FQ;
+      return null !== (FQ = LQ.get(QQ)) && void 0 !== FQ ? FQ : null
     }
   },
-  38794: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Zd
+  38183: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => kQ
     });
-    var pd = kd(1245);
+    var LQ = wQ(1237);
 
-    function Nd(dd) {
-      const Jd = /(\d*\.?\d+)px/.exec(dd);
-      return Jd ? Number(Jd[1]) : null
+    function qQ(QQ) {
+      const FQ = /(\d*\.?\d+)px/.exec(QQ);
+      return FQ ? Number(FQ[1]) : null
     }
 
-    function Wd(dd) {
-      return dd.split(/[\s,]+/).pop()
+    function oQ(QQ) {
+      return QQ.split(/[\s,]+/).pop()
     }
-    let Pd = !1;
-    const Zd = {
+    let DQ = !1;
+    const kQ = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,572 +43,572 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(dd, Jd, pd, Zd, gd, Cd) {
-        if (gd <= 0 || Cd <= 0 || this.fontSize <= 0) return {
+      drawText: function(QQ, FQ, LQ, kQ, vQ, mQ) {
+        if (vQ <= 0 || mQ <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Kd,
-          fontVariant: od,
-          fontWeight: ld,
-          fontSize: Qd,
-          font: Ld
-        } = this, Od = [Kd, od, ld, `${Qd}px`, Ld].filter(Boolean).join(" "), ed = [
-          [ld, `${Qd}px`, Wd(Ld)].filter(Boolean).join(" "), `${Qd}px sans-serif`
-        ], Rd = dd.font, Id = function(dd, Jd, kd) {
-          for (const pd of Jd) {
-            dd.font = pd;
-            const Jd = Nd(dd.font),
-              Pd = Wd(pd);
-            if (null !== Jd && Math.abs(Jd - kd) <= .5 && dd.font.toLowerCase().includes(Pd.toLowerCase())) return pd
+          fontStyle: uQ,
+          fontVariant: HQ,
+          fontWeight: bQ,
+          fontSize: YQ,
+          font: xQ
+        } = this, AQ = [uQ, HQ, bQ, `${YQ}px`, xQ].filter(Boolean).join(" "), tQ = [
+          [bQ, `${YQ}px`, oQ(xQ)].filter(Boolean).join(" "), `${YQ}px sans-serif`
+        ], eQ = QQ.font, MQ = function(QQ, FQ, wQ) {
+          for (const LQ of FQ) {
+            QQ.font = LQ;
+            const FQ = qQ(QQ.font),
+              DQ = oQ(LQ);
+            if (null !== FQ && Math.abs(FQ - wQ) <= .5 && QQ.font.toLowerCase().includes(DQ.toLowerCase())) return LQ
           }
           return null
-        }(dd, [Od, ...ed], Qd);
-        Id !== Od && function(dd, Jd, pd) {
-          Pd || (Pd = !0, Promise.resolve().then((() => kd(1078))).then((kd => {
+        }(QQ, [AQ, ...tQ], YQ);
+        MQ !== AQ && function(QQ, FQ, LQ) {
+          DQ || (DQ = !0, Promise.resolve().then((() => wQ(1087))).then((wQ => {
             let {
-              ZO: Nd
-            } = kd;
-            Nd(new Error("A canvas didn't take canvasTxt's font"), {
-              font: dd,
-              qQ: Jd,
-              drawnWith: null !== pd && void 0 !== pd ? pd : "the kept font, scaled"
+              pA: qQ
+            } = wQ;
+            qQ(new Error("A canvas didn't take canvasTxt's font"), {
+              font: QQ,
+              iY: FQ,
+              drawnWith: null !== LQ && void 0 !== LQ ? LQ : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(Od, Rd, Id);
-        const Gd = Nd(dd.font);
-        if (null === Id && null !== Gd && Gd > 0) {
-          const kd = Qd / Gd;
-          dd.save();
+        }(AQ, eQ, MQ);
+        const GQ = qQ(QQ.font);
+        if (null === MQ && null !== GQ && GQ > 0) {
+          const wQ = YQ / GQ;
+          QQ.save();
           try {
-            return dd.scale(kd, kd), {
-              height: this.drawLines(dd, Jd, pd / kd, Zd / kd, gd / kd, Cd / kd, Gd).height * kd
+            return QQ.scale(wQ, wQ), {
+              height: this.drawLines(QQ, FQ, LQ / wQ, kQ / wQ, vQ / wQ, mQ / wQ, GQ).height * wQ
             }
           } finally {
-            dd.restore()
+            QQ.restore()
           }
         }
-        return this.drawLines(dd, Jd, pd, Zd, gd, Cd, Qd)
+        return this.drawLines(QQ, FQ, LQ, kQ, vQ, mQ, YQ)
       },
-      drawLines: function(dd, Jd, kd, Nd, Wd, Pd, Zd) {
-        const gd = kd + Wd,
-          Cd = Nd + Pd;
-        let Kd, od = Nd + Pd / 2 + Zd / 2;
-        "right" === this.align ? (Kd = gd, dd.textAlign = "right") : "left" === this.align ? (Kd = kd, dd.textAlign = "left") : (Kd = kd + Wd / 2, dd.textAlign = "center");
-        for (const pd of Jd) {
-          dd.measureText(pd).width >= Wd && (Jd = Jd.replace(pd, ""))
+      drawLines: function(QQ, FQ, wQ, qQ, oQ, DQ, kQ) {
+        const vQ = wQ + oQ,
+          mQ = qQ + DQ;
+        let uQ, HQ = qQ + DQ / 2 + kQ / 2;
+        "right" === this.align ? (uQ = vQ, QQ.textAlign = "right") : "left" === this.align ? (uQ = wQ, QQ.textAlign = "left") : (uQ = wQ + oQ / 2, QQ.textAlign = "center");
+        for (const LQ of FQ) {
+          QQ.measureText(LQ).width >= oQ && (FQ = FQ.replace(LQ, ""))
         }
-        Jd = (0, pd.R)(Jd);
-        const ld = [],
-          Qd = Jd.split("\n"),
-          Ld = this.justify ? dd.measureText("\u200a").width : 0;
-        Qd.forEach((Jd => {
-          let kd = dd.measureText(Jd).width;
-          if (kd <= Wd) ld.push(Jd);
+        FQ = (0, LQ.Z)(FQ);
+        const bQ = [],
+          YQ = FQ.split("\n"),
+          xQ = this.justify ? QQ.measureText("\u200a").width : 0;
+        YQ.forEach((FQ => {
+          let wQ = QQ.measureText(FQ).width;
+          if (wQ <= oQ) bQ.push(FQ);
           else {
-            let pd = Jd;
-            const Nd = Wd;
-            let Pd, Zd, gd;
-            for (kd = dd.measureText(pd).width; kd > Nd;) {
-              for (Pd = 0, Zd = 0, gd = ""; Zd < Nd;) Pd++, gd = pd.substr(0, Pd), Zd = dd.measureText(gd).width;
-              Pd--, gd = gd.substr(0, Pd);
-              const Jd = Pd;
-              if (" " !== pd.substr(Pd, 1)) {
+            let LQ = FQ;
+            const qQ = oQ;
+            let DQ, kQ, vQ;
+            for (wQ = QQ.measureText(LQ).width; wQ > qQ;) {
+              for (DQ = 0, kQ = 0, vQ = ""; kQ < qQ;) DQ++, vQ = LQ.substr(0, DQ), kQ = QQ.measureText(vQ).width;
+              DQ--, vQ = vQ.substr(0, DQ);
+              const FQ = DQ;
+              if (" " !== LQ.substr(DQ, 1)) {
                 for (;
-                  " " !== pd.substr(Pd, 1) && 0 !== Pd;) Pd--;
-                0 === Pd && (Pd = Jd), gd = pd.substr(0, Pd)
+                  " " !== LQ.substr(DQ, 1) && 0 !== DQ;) DQ--;
+                0 === DQ && (DQ = FQ), vQ = LQ.substr(0, DQ)
               }
-              gd = this.justify ? this.justifyLine(dd, gd, Ld, "\u200a", Wd) : gd, pd = pd.substr(Pd), kd = dd.measureText(pd).width, ld.push(gd)
+              vQ = this.justify ? this.justifyLine(QQ, vQ, xQ, "\u200a", oQ) : vQ, LQ = LQ.substr(DQ), wQ = QQ.measureText(LQ).width, bQ.push(vQ)
             }
-            kd > 0 && ld.push(pd)
+            wQ > 0 && bQ.push(LQ)
           }
         }));
-        const Od = this.lineHeight ? this.lineHeight : this.getTextHeight(dd, Jd),
-          ed = Od * (ld.length - 1),
-          Rd = ed / 2;
-        let Id = Nd;
-        "top" === this.vAlign ? od = Nd + Zd : "bottom" === this.vAlign ? (od = Cd - ed, Id = Cd) : (Id = Nd + Pd / 2, od -= Rd), ld.forEach((Jd => {
-          Jd = Jd.trim(), dd.fillText(Jd, Kd, od), od += Od
-        })), this.debug && (dd.lineWidth = 3, dd.strokeStyle = "#00909e", dd.strokeRect(kd, Nd, Wd, Pd), dd.lineWidth = 2, dd.strokeStyle = "#f6d743", dd.beginPath(), dd.moveTo(Kd, Nd), dd.lineTo(Kd, Cd), dd.stroke(), dd.strokeStyle = "#ff6363", dd.beginPath(), dd.moveTo(kd, Id), dd.lineTo(gd, Id), dd.stroke());
+        const AQ = this.lineHeight ? this.lineHeight : this.getTextHeight(QQ, FQ),
+          tQ = AQ * (bQ.length - 1),
+          eQ = tQ / 2;
+        let MQ = qQ;
+        "top" === this.vAlign ? HQ = qQ + kQ : "bottom" === this.vAlign ? (HQ = mQ - tQ, MQ = mQ) : (MQ = qQ + DQ / 2, HQ -= eQ), bQ.forEach((FQ => {
+          FQ = FQ.trim(), QQ.fillText(FQ, uQ, HQ), HQ += AQ
+        })), this.debug && (QQ.lineWidth = 3, QQ.strokeStyle = "#00909e", QQ.strokeRect(wQ, qQ, oQ, DQ), QQ.lineWidth = 2, QQ.strokeStyle = "#f6d743", QQ.beginPath(), QQ.moveTo(uQ, qQ), QQ.lineTo(uQ, mQ), QQ.stroke(), QQ.strokeStyle = "#ff6363", QQ.beginPath(), QQ.moveTo(wQ, MQ), QQ.lineTo(vQ, MQ), QQ.stroke());
         return {
-          height: ed + Od
+          height: tQ + AQ
         }
       },
-      getTextHeight: function(dd, Jd) {
-        const kd = dd.textBaseline;
-        dd.textBaseline = "bottom";
+      getTextHeight: function(QQ, FQ) {
+        const wQ = QQ.textBaseline;
+        QQ.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: pd
-        } = dd.measureText(Jd);
-        return dd.textBaseline = kd, pd
+          actualBoundingBoxAscent: LQ
+        } = QQ.measureText(FQ);
+        return QQ.textBaseline = wQ, LQ
       },
-      justifyLine: function(dd, Jd, kd, pd, Nd) {
-        const Wd = Jd.trim(),
-          Pd = dd.measureText(Wd).width,
-          Zd = Wd.split(/\s+/).length - 1,
-          gd = Math.floor((Nd - Pd) / kd);
-        if (Zd <= 0 || gd <= 0) return Wd;
-        const Cd = Math.floor(gd / Zd);
-        let Kd = gd - Zd * Cd,
-          od = [];
-        for (let ld = 0; ld < Cd; ld++) od.push(pd);
-        od = od.join("");
-        return Wd.replace(/\s+/g, (dd => {
-          const Jd = Kd > 0 ? od + pd : od;
-          return Kd--, dd + Jd
+      justifyLine: function(QQ, FQ, wQ, LQ, qQ) {
+        const oQ = FQ.trim(),
+          DQ = QQ.measureText(oQ).width,
+          kQ = oQ.split(/\s+/).length - 1,
+          vQ = Math.floor((qQ - DQ) / wQ);
+        if (kQ <= 0 || vQ <= 0) return oQ;
+        const mQ = Math.floor(vQ / kQ);
+        let uQ = vQ - kQ * mQ,
+          HQ = [];
+        for (let bQ = 0; bQ < mQ; bQ++) HQ.push(LQ);
+        HQ = HQ.join("");
+        return oQ.replace(/\s+/g, (QQ => {
+          const FQ = uQ > 0 ? HQ + LQ : HQ;
+          return uQ--, QQ + FQ
         }))
       }
     }
   },
-  38798: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Od,
-      f: () => Ld,
-      j: () => ld,
-      l: () => Kd,
-      n: () => od
+  38188: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => AQ,
+      d: () => xQ,
+      h: () => bQ,
+      k: () => uQ,
+      l: () => HQ
     });
-    var pd = kd(4090),
-      Nd = kd(313);
-    const Wd = 1024,
-      Pd = 1536,
-      Zd = 2 * pd.l + 1,
-      gd = new Intl.NumberFormat("en", {
+    var LQ = wQ(4119),
+      qQ = wQ(317);
+    const oQ = 1024,
+      DQ = 1536,
+      kQ = 2 * LQ.k + 1,
+      vQ = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      Cd = 1.5;
+      mQ = 1.5;
 
-    function Kd(dd, Jd, kd) {
-      if ("string" !== typeof dd) return Jd;
+    function uQ(QQ, FQ, wQ) {
+      if ("string" !== typeof QQ) return FQ;
       try {
-        const kd = JSON.parse(dd);
-        return kd && "object" === typeof kd ? kd : Jd
-      } catch (pd) {
-        return void 0 !== kd && console.error(`Couldn't parse ${kd}`, pd), Jd
+        const wQ = JSON.parse(QQ);
+        return wQ && "object" === typeof wQ ? wQ : FQ
+      } catch (LQ) {
+        return void 0 !== wQ && console.error(`Couldn't parse ${wQ}`, LQ), FQ
       }
     }
 
-    function od(dd) {
-      return Kd(dd, null, "a leaderboard's rows")
+    function HQ(QQ) {
+      return uQ(QQ, null, "a leaderboard's rows")
     }
 
-    function ld(dd, Jd) {
-      var kd, pd;
-      return null !== Jd && void 0 !== Jd ? Jd : {
-        status: null !== (kd = dd.status) && void 0 !== kd ? kd : "loading",
-        entries: null !== (pd = dd.entries) && void 0 !== pd ? pd : []
+    function bQ(QQ, FQ) {
+      var wQ, LQ;
+      return null !== FQ && void 0 !== FQ ? FQ : {
+        status: null !== (wQ = QQ.status) && void 0 !== wQ ? wQ : "loading",
+        entries: null !== (LQ = QQ.entries) && void 0 !== LQ ? LQ : []
       }
     }
 
-    function Qd(dd, Jd) {
-      return "number" === typeof dd && Number.isFinite(dd) && dd > 0 ? dd : Jd
+    function YQ(QQ, FQ) {
+      return "number" === typeof QQ && Number.isFinite(QQ) && QQ > 0 ? QQ : FQ
     }
 
-    function Ld(dd, Jd) {
-      const kd = Qd(dd.size, 1);
-      let pd = Qd(dd.width, Qd(2.5 * kd, 2.5)),
-        Nd = Qd(dd.height, Qd(3.75 * kd, 3.75));
-      Number.isFinite(Wd * Nd / pd) && Number.isFinite(Pd * pd / Nd) || (pd = 2.5, Nd = 3.75);
-      const Zd = Nd / pd,
-        gd = Math.max(1, Math.min(Wd, Jd / Zd));
+    function xQ(QQ, FQ) {
+      const wQ = YQ(QQ.size, 1);
+      let LQ = YQ(QQ.width, YQ(2.5 * wQ, 2.5)),
+        qQ = YQ(QQ.height, YQ(3.75 * wQ, 3.75));
+      Number.isFinite(oQ * qQ / LQ) && Number.isFinite(DQ * LQ / qQ) || (LQ = 2.5, qQ = 3.75);
+      const kQ = qQ / LQ,
+        vQ = Math.max(1, Math.min(oQ, FQ / kQ));
       return {
-        width: pd,
-        height: Nd,
-        layoutWidth: Math.max(Wd, Pd / Zd),
-        layoutHeight: Math.max(Pd, Wd * Zd),
-        pixelWidth: Math.round(gd),
-        pixelHeight: Math.round(Math.max(1, Math.min(Jd, gd * Zd)))
+        width: LQ,
+        height: qQ,
+        layoutWidth: Math.max(oQ, DQ / kQ),
+        layoutHeight: Math.max(DQ, oQ * kQ),
+        pixelWidth: Math.round(vQ),
+        pixelHeight: Math.round(Math.max(1, Math.min(FQ, vQ * kQ)))
       }
     }
 
-    function Od(dd, Jd, kd, Pd, Kd, od) {
-      dd.setTransform(1, 0, 0, 1, 0, 0), dd.fillStyle = Nd.M.defaultNameTagBackground, dd.fillRect(0, 0, Jd, kd), dd.scale(Jd / Pd.layoutWidth, kd / Pd.layoutHeight), dd.translate((Pd.layoutWidth - Wd) / 2, 0),
-        function(dd, Jd, kd, Wd) {
-          var Pd, Kd, od, ld;
+    function AQ(QQ, FQ, wQ, DQ, uQ, HQ) {
+      QQ.setTransform(1, 0, 0, 1, 0, 0), QQ.fillStyle = qQ.K.defaultNameTagBackground, QQ.fillRect(0, 0, FQ, wQ), QQ.scale(FQ / DQ.layoutWidth, wQ / DQ.layoutHeight), QQ.translate((DQ.layoutWidth - oQ) / 2, 0),
+        function(QQ, FQ, wQ, oQ) {
+          var DQ, uQ, HQ, bQ;
           const {
-            top: Qd,
-            around: Ld,
-            showPlayerText: Od,
-            localPlayerDbId: Id
-          } = kd, {
-            whiteUiText: Gd,
-            grayUiText: vd,
-            yellowUiText: xd
-          } = Nd.M;
-          dd.textBaseline = "middle";
-          const qd = function(Jd, kd, pd, Nd, Wd, Pd) {
-              let Zd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              dd.font = `bold ${Nd}px 'Jetbrains Mono', monospace`, dd.fillStyle = Wd, dd.textAlign = Zd;
-              let gd = Jd.replace(/[\r\n\t]/g, " ");
-              if (dd.measureText(gd).width > Pd) {
-                for (; gd.length > 0 && dd.measureText(`${gd}\u2026`).width > Pd;) gd = gd.slice(0, -1);
-                gd += "\u2026"
+            top: YQ,
+            around: xQ,
+            showPlayerText: AQ,
+            localPlayerDbId: MQ
+          } = wQ, {
+            whiteUiText: GQ,
+            grayUiText: pQ,
+            yellowUiText: cQ
+          } = qQ.K;
+          QQ.textBaseline = "middle";
+          const CQ = function(FQ, wQ, LQ, qQ, oQ, DQ) {
+              let kQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              QQ.font = `bold ${qQ}px 'Jetbrains Mono', monospace`, QQ.fillStyle = oQ, QQ.textAlign = kQ;
+              let vQ = FQ.replace(/[\r\n\t]/g, " ");
+              if (QQ.measureText(vQ).width > DQ) {
+                for (; vQ.length > 0 && QQ.measureText(`${vQ}\u2026`).width > DQ;) vQ = vQ.slice(0, -1);
+                vQ += "\u2026"
               }
-              dd.fillText(gd, kd, pd)
+              QQ.fillText(vQ, wQ, LQ)
             },
-            Bd = Jd => {
-              dd.fillStyle = Gd, dd.globalAlpha = .15, dd.fillRect(24, Jd, 976, 2), dd.globalAlpha = 1
+            SQ = FQ => {
+              QQ.fillStyle = GQ, QQ.globalAlpha = .15, QQ.fillRect(24, FQ, 976, 2), QQ.globalAlpha = 1
             },
-            sd = null === Id ? null : (0, Nd.qc)(Id),
-            ad = dd => null !== sd && dd.playerHash === sd,
-            Md = ed(Qd.entries, pd.m),
-            Fd = "ready" === Qd.status && Md.length > 0,
-            Yd = null === Ld ? [] : ed(Ld.entries, Zd),
-            md = Md.some(ad),
-            bd = null === Ld ? null : function(dd) {
-              const Jd = dd;
-              if (!Jd || !Number.isFinite(Jd.rank) || !Number.isFinite(Jd.tied) || !Number.isFinite(Jd.total)) return null;
-              return Jd
-            }(Ld.standing),
-            Sd = Yd.find(ad),
-            jd = Md.find(ad),
-            Xd = null === bd || void 0 === Sd ? null : {
-              value: Sd.value,
-              rank: bd.rank
+            iQ = null === MQ ? null : (0, qQ.pc)(MQ),
+            WQ = QQ => null !== iQ && QQ.playerHash === iQ,
+            RQ = tQ(YQ.entries, LQ.o),
+            OQ = "ready" === YQ.status && RQ.length > 0,
+            sQ = null === xQ ? [] : tQ(xQ.entries, kQ),
+            rQ = RQ.some(WQ),
+            IQ = null === xQ ? null : function(QQ) {
+              const FQ = QQ;
+              if (!FQ || !Number.isFinite(FQ.rank) || !Number.isFinite(FQ.tied) || !Number.isFinite(FQ.total)) return null;
+              return FQ
+            }(xQ.standing),
+            UQ = sQ.find(WQ),
+            NQ = RQ.find(WQ),
+            TQ = null === IQ || void 0 === UQ ? null : {
+              value: UQ.value,
+              rank: IQ.rank
             },
-            fd = Rd(Md, void 0 === jd || jd.value === (null === Xd || void 0 === Xd ? void 0 : Xd.value) ? Xd : null),
-            nd = Rd(Yd, Xd),
-            Ud = (dd, Jd) => {
-              const kd = dd.findIndex(ad);
-              return kd >= 0 ? Jd[kd] : null
+            KQ = eQ(RQ, void 0 === NQ || NQ.value === (null === TQ || void 0 === TQ ? void 0 : TQ.value) ? TQ : null),
+            zQ = eQ(sQ, TQ),
+            lQ = (QQ, FQ) => {
+              const wQ = QQ.findIndex(WQ);
+              return wQ >= 0 ? FQ[wQ] : null
             },
-            yd = null !== (Pd = null !== (Kd = null === bd || void 0 === bd ? void 0 : bd.rank) && void 0 !== Kd ? Kd : Ud(Yd, nd)) && void 0 !== Pd ? Pd : Ud(Md, fd);
-          dd.font = "bold 34px 'Jetbrains Mono', monospace";
-          const Dd = [...Fd ? fd : [], ...md ? [] : nd],
-            Td = Math.min(280, Math.max(0, ...Dd.map((Jd => dd.measureText(gd.format(Jd)).width)))),
-            Ed = Td <= 80,
-            cd = Ed ? 80 : 32 + Td,
-            hd = Ed ? 148 : cd + 28,
-            rd = 660 - hd;
-          qd(`TOP ${pd.m}  /  ALL TIME`, 24, 52, 28, vd, 976), qd(Od ? String(null !== (od = Jd.title) && void 0 !== od ? od : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Gd, 976), qd("RANK", 32, 174, 28, vd, hd - 40), qd("PLAYER", hd, 174, 28, vd, rd), qd(Od ? String(null !== (ld = Jd.scoreLabel) && void 0 !== ld ? ld : "Score").slice(0, 24) : "Score", 992, 174, 28, vd, 304, "right"), Bd(202);
-          const ud = (Wd - 232) / (pd.m + Cd + Zd),
-            td = 208 + pd.m * ud,
-            Vd = td + Cd * ud,
-            zd = (Jd, kd, pd, Nd) => {
-              const Wd = ad(Jd);
-              dd.fillStyle = Wd ? xd : Gd, dd.globalAlpha = Wd ? .15 : Nd ? .035 : 0, dd.fillRect(24, pd - ud / 2 + 1, 976, ud - 2), dd.globalAlpha = 1;
-              const Pd = Wd ? xd : Gd;
-              qd(gd.format(kd), cd, pd, 34, Pd, Ed ? 80 : Td, Ed ? "center" : "right"), qd(Od ? String(Jd.name).slice(0, 64) : "Player", hd, pd, 34, Pd, rd);
-              const Zd = gd.format(Jd.value);
-              qd(dd.measureText(Zd).width > 304 ? Jd.value.toExponential(6) : Zd, 992, pd, 34, Pd, 304, "right")
+            jQ = null !== (DQ = null !== (uQ = null === IQ || void 0 === IQ ? void 0 : IQ.rank) && void 0 !== uQ ? uQ : lQ(sQ, zQ)) && void 0 !== DQ ? DQ : lQ(RQ, KQ);
+          QQ.font = "bold 34px 'Jetbrains Mono', monospace";
+          const aQ = [...OQ ? KQ : [], ...rQ ? [] : zQ],
+            XQ = Math.min(280, Math.max(0, ...aQ.map((FQ => QQ.measureText(vQ.format(FQ)).width)))),
+            fQ = XQ <= 80,
+            VQ = fQ ? 80 : 32 + XQ,
+            hQ = fQ ? 148 : VQ + 28,
+            JQ = 660 - hQ;
+          CQ(`TOP ${LQ.o}  /  ALL TIME`, 24, 52, 28, pQ, 976), CQ(AQ ? String(null !== (HQ = FQ.title) && void 0 !== HQ ? HQ : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, GQ, 976), CQ("RANK", 32, 174, 28, pQ, hQ - 40), CQ("PLAYER", hQ, 174, 28, pQ, JQ), CQ(AQ ? String(null !== (bQ = FQ.scoreLabel) && void 0 !== bQ ? bQ : "Score").slice(0, 24) : "Score", 992, 174, 28, pQ, 304, "right"), SQ(202);
+          const EQ = (oQ - 232) / (LQ.o + mQ + kQ),
+            nQ = 208 + LQ.o * EQ,
+            gQ = nQ + mQ * EQ,
+            PQ = (FQ, wQ, LQ, qQ) => {
+              const oQ = WQ(FQ);
+              QQ.fillStyle = oQ ? cQ : GQ, QQ.globalAlpha = oQ ? .15 : qQ ? .035 : 0, QQ.fillRect(24, LQ - EQ / 2 + 1, 976, EQ - 2), QQ.globalAlpha = 1;
+              const DQ = oQ ? cQ : GQ;
+              CQ(vQ.format(wQ), VQ, LQ, 34, DQ, fQ ? 80 : XQ, fQ ? "center" : "right"), CQ(AQ ? String(FQ.name).slice(0, 64) : "Player", hQ, LQ, 34, DQ, JQ);
+              const kQ = vQ.format(FQ.value);
+              CQ(QQ.measureText(kQ).width > 304 ? FQ.value.toExponential(6) : kQ, 992, LQ, 34, DQ, 304, "right")
             };
-          if (Fd)
-            for (const [pd, Nd] of Md.entries()) zd(Nd, fd[pd], 208 + (pd + .5) * ud, pd % 2 === 0);
+          if (OQ)
+            for (const [LQ, qQ] of RQ.entries()) PQ(qQ, KQ[LQ], 208 + (LQ + .5) * EQ, LQ % 2 === 0);
           else {
-            const dd = "error" === Qd.status,
-              Jd = dd ? "Couldn't load leaderboard" : "ready" === Qd.status ? "No scores yet" : "Loading leaderboard\u2026",
-              kd = dd ? "Trying again shortly" : "ready" === Qd.status ? "Be the first on the board!" : "Fetching the top players",
-              pd = (208 + td) / 2;
-            qd(Jd, 512, pd - 28, 40, dd ? Nd.M.redUiText : Gd, 960, "center"), qd(kd, 512, pd + 27, 30, vd, 960, "center")
+            const QQ = "error" === YQ.status,
+              FQ = QQ ? "Couldn't load leaderboard" : "ready" === YQ.status ? "No scores yet" : "Loading leaderboard\u2026",
+              wQ = QQ ? "Trying again shortly" : "ready" === YQ.status ? "Be the first on the board!" : "Fetching the top players",
+              LQ = (208 + nQ) / 2;
+            CQ(FQ, 512, LQ - 28, 40, QQ ? qQ.K.redUiText : GQ, 960, "center"), CQ(wQ, 512, LQ + 27, 30, pQ, 960, "center")
           }
-          const Hd = td + Cd * ud / 2;
-          if (null === yd) Bd(Hd);
+          const ZQ = nQ + mQ * EQ / 2;
+          if (null === jQ) SQ(ZQ);
           else {
-            const Jd = null === bd ? 0 : bd.tied - 1,
-              kd = `YOUR RANK #${gd.format(yd)}${null===bd?"":` of ${gd.format(bd.total)}`}`;
-            dd.font = "bold 36px 'Jetbrains Mono', monospace";
-            const pd = Math.max(20, Math.min(36, Math.floor(34560 / dd.measureText(kd).width)));
-            qd(kd, 512, Hd - (Jd > 0 ? 15 : 0), pd, xd, 960, "center"), Jd > 0 && qd(`Tied with ${gd.format(Jd)} other${1===Jd?"":"s"}`, 512, Hd + 24, 24, vd, 960, "center")
+            const FQ = null === IQ ? 0 : IQ.tied - 1,
+              wQ = `YOUR RANK #${vQ.format(jQ)}${null===IQ?"":` of ${vQ.format(IQ.total)}`}`;
+            QQ.font = "bold 36px 'Jetbrains Mono', monospace";
+            const LQ = Math.max(20, Math.min(36, Math.floor(34560 / QQ.measureText(wQ).width)));
+            CQ(wQ, 512, ZQ - (FQ > 0 ? 15 : 0), LQ, cQ, 960, "center"), FQ > 0 && CQ(`Tied with ${vQ.format(FQ)} other${1===FQ?"":"s"}`, 512, ZQ + 24, 24, pQ, 960, "center")
           }
-          if (null === Ld) return;
-          const wd = Vd + Zd * ud / 2;
-          if (md) qd(`You're in the top ${pd.m}!`, 512, wd, 40, xd, 960, "center");
-          else if (0 === Yd.length) qd("You're not on this board yet", 512, wd, 34, vd, 960, "center");
+          if (null === xQ) return;
+          const yQ = gQ + kQ * EQ / 2;
+          if (rQ) CQ(`You're in the top ${LQ.o}!`, 512, yQ, 40, cQ, 960, "center");
+          else if (0 === sQ.length) CQ("You're not on this board yet", 512, yQ, 34, pQ, 960, "center");
           else
-            for (const [pd, Nd] of Yd.entries()) zd(Nd, nd[pd], Vd + (pd + .5) * ud, pd % 2 === 0)
-        }(dd, Kd, od, Pd.layoutHeight)
+            for (const [LQ, qQ] of sQ.entries()) PQ(qQ, zQ[LQ], gQ + (LQ + .5) * EQ, LQ % 2 === 0)
+        }(QQ, uQ, HQ, DQ.layoutHeight)
     }
 
-    function ed(dd, Jd) {
-      return Array.isArray(dd) ? dd.slice(0, Jd).filter((dd => dd && Number.isFinite(dd.rank) && Number.isFinite(dd.value))) : []
+    function tQ(QQ, FQ) {
+      return Array.isArray(QQ) ? QQ.slice(0, FQ).filter((QQ => QQ && Number.isFinite(QQ.rank) && Number.isFinite(QQ.value))) : []
     }
 
-    function Rd(dd, Jd) {
-      const kd = [];
-      let pd = !1;
-      return dd.forEach(((Nd, Wd) => {
-        if (null !== Jd && Nd.value === Jd.value) return void kd.push(Jd.rank);
-        const Pd = Wd > 0 && Nd.value === dd[Wd - 1].value;
-        Pd || (pd = 0 === Wd && 1 !== Nd.rank), kd.push(Pd && !pd ? kd[Wd - 1] : Nd.rank)
-      })), kd
+    function eQ(QQ, FQ) {
+      const wQ = [];
+      let LQ = !1;
+      return QQ.forEach(((qQ, oQ) => {
+        if (null !== FQ && qQ.value === FQ.value) return void wQ.push(FQ.rank);
+        const DQ = oQ > 0 && qQ.value === QQ[oQ - 1].value;
+        DQ || (LQ = 0 === oQ && 1 !== qQ.rank), wQ.push(DQ && !LQ ? wQ[oQ - 1] : qQ.rank)
+      })), wQ
     }
   },
-  39039: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Nd,
-      g: () => Wd
+  38395: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => qQ,
+      c: () => oQ
     });
-    const pd = 32;
+    const LQ = 32;
 
-    function Nd(dd) {
-      return Array.from(dd).length
+    function qQ(QQ) {
+      return Array.from(QQ).length
     }
 
-    function Wd(dd) {
-      const Jd = [""];
-      let kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Nd = "";
-      const Wd = () => {
-        Jd.push(""), kd = 0, Nd = ""
+    function oQ(QQ) {
+      const FQ = [""];
+      let wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        qQ = "";
+      const oQ = () => {
+        FQ.push(""), wQ = 0, qQ = ""
       };
-      for (const Pd of dd.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(Pd)) Wd();
-        else if (/^\s+$/.test(Pd)) Nd += Pd;
-      else if (Pd.length > 0) {
-        const dd = Array.from(Pd);
-        kd > 0 && kd + Nd.length + dd.length > pd && Wd(), Jd[Jd.length - 1] += Nd, kd += Nd.length, Nd = "";
-        for (const Nd of dd) kd >= pd && Wd(), Jd[Jd.length - 1] += Nd, kd++
+      for (const DQ of QQ.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(DQ)) oQ();
+        else if (/^\s+$/.test(DQ)) qQ += DQ;
+      else if (DQ.length > 0) {
+        const QQ = Array.from(DQ);
+        wQ > 0 && wQ + qQ.length + QQ.length > LQ && oQ(), FQ[FQ.length - 1] += qQ, wQ += qQ.length, qQ = "";
+        for (const qQ of QQ) wQ >= LQ && oQ(), FQ[FQ.length - 1] += qQ, wQ++
       }
-      return Jd[Jd.length - 1] += Nd, Jd
+      return FQ[FQ.length - 1] += qQ, FQ
     }
   },
-  43193: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      WasmPreviewHost: () => sJ,
-      pageBuiltInAnimationPack: () => ld,
-      pagePreviews: () => pJ,
-      previewModule: () => Vd
+  42687: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      WasmPreviewHost: () => SF,
+      pageBuiltInAnimationPack: () => bQ,
+      pagePreviews: () => wF,
+      previewModule: () => gQ
     });
-    var pd = kd(2770),
-      Nd = kd(614);
-    const Wd = "[bloxd-wasm-client]";
+    var LQ = wQ(2811),
+      qQ = wQ(626);
+    const oQ = "[bloxd-wasm-client]";
 
-    function Pd(dd) {
-      const Jd = {
+    function DQ(QQ) {
+      const FQ = {
         wasm: "unknown",
-        client: String(Nd.c)
+        client: String(qQ.b)
       };
       try {
-        var kd;
-        Jd.wasm = null !== (kd = null === dd || void 0 === dd ? void 0 : dd.Zo()) && void 0 !== kd ? kd : Jd.wasm
+        var wQ;
+        FQ.wasm = null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ.AH()) && void 0 !== wQ ? wQ : FQ.wasm
       } catch {}
-      return Jd
+      return FQ
     }
-    async function Zd(dd) {
-      if (dd.length < 2 || 31 !== dd[0] || 139 !== dd[1]) return dd;
+    async function kQ(QQ) {
+      if (QQ.length < 2 || 31 !== QQ[0] || 139 !== QQ[1]) return QQ;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: Jd
-        } = await Promise.resolve().then((() => kd(2716)));
-        return Jd(dd)
+          ungzip: FQ
+        } = await Promise.resolve().then((() => wQ(2766)));
+        return FQ(QQ)
       }
-      const Jd = new Blob([dd]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(Jd).arrayBuffer())
+      const FQ = new Blob([QQ]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(FQ).arrayBuffer())
     }
 
-    function gd(dd, Jd, pd, Nd) {
-      Promise.resolve().then((() => kd(40940))).then((kd => {
+    function vQ(QQ, FQ, LQ, qQ) {
+      Promise.resolve().then((() => wQ(40369))).then((wQ => {
         let {
-          reportDataLoadFailure: Wd
-        } = kd;
-        Wd(dd, Jd, pd, Nd)
-      }), (Jd => {
-        console.warn(`${Wd} ${dd} didn't load, and the report couldn't be sent`, pd.error, Jd)
+          reportDataLoadFailure: oQ
+        } = wQ;
+        oQ(QQ, FQ, LQ, qQ)
+      }), (FQ => {
+        console.warn(`${oQ} ${QQ} didn't load, and the report couldn't be sent`, LQ.error, FQ)
       }))
     }
-    const Cd = [3e4, 12e4, 3e5];
-    class Kd {
-      constructor(dd) {
-        this.deps = dd, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((dd => {
-          this.resolveSet = dd
+    const mQ = [3e4, 12e4, 3e5];
+    class uQ {
+      constructor(QQ) {
+        this.deps = QQ, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((QQ => {
+          this.resolveSet = QQ
         }))
       }
-      provide(dd) {
-        return this.loading ??= this.load(dd), this.loading
+      provide(QQ) {
+        return this.loading ??= this.load(QQ), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(dd) {
-        const Jd = Pd(dd),
-          kd = await async function(dd, Jd) {
-            let kd;
+      async load(QQ) {
+        const FQ = DQ(QQ),
+          wQ = await async function(QQ, FQ) {
+            let wQ;
             try {
-              kd = await dd()
-            } catch (pd) {
+              wQ = await QQ()
+            } catch (LQ) {
               return {
                 stage: "fetch",
-                error: pd
+                error: LQ
               }
             }
             try {
-              return Jd(kd) ? null : {
+              return FQ(wQ) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (pd) {
+            } catch (LQ) {
               return {
                 stage: "decode",
-                error: pd
+                error: LQ
               }
             }
-          }((() => this.deps.fetch()), (Jd => {
-            const kd = dd.mWd(Jd);
-            return kd && this.resolveSet(Jd), kd
+          }((() => this.deps.fetch()), (FQ => {
+            const wQ = QQ.ToQ(FQ);
+            return wQ && this.resolveSet(FQ), wQ
           }));
-        if (null !== kd) {
-          if ("fetch" === kd.stage) {
+        if (null !== wQ) {
+          if ("fetch" === wQ.stage) {
             this.loading = null;
-            const Jd = Cd[this.retries++];
-            void 0 !== Jd && this.deps.later((() => {
-              this.provide(dd)
-            }), Jd)
+            const FQ = mQ[this.retries++];
+            void 0 !== FQ && this.deps.later((() => {
+              this.provide(QQ)
+            }), FQ)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(kd, Jd))
+          this.reported || (this.reported = !0, this.deps.onFailed(wQ, FQ))
         }
       }
     }
-    let od = null;
+    let HQ = null;
 
-    function ld() {
-      return od ??= new Kd({
-        fetch: async () => Zd(await (0, pd.D)(Qd(), {
+    function bQ() {
+      return HQ ??= new uQ({
+        fetch: async () => kQ(await (0, LQ.T)(YQ(), {
           priority: "low"
         })),
-        onFailed: (dd, Jd) => {
-          gd("builtInAnimations", Qd(), dd, Jd)
+        onFailed: (QQ, FQ) => {
+          vQ("builtInAnimations", YQ(), QQ, FQ)
         },
-        later: (dd, Jd) => {
-          setTimeout(dd, Jd)
+        later: (QQ, FQ) => {
+          setTimeout(QQ, FQ)
         }
-      }), od
+      }), HQ
     }
 
-    function Qd() {
-      return kd(43197)
+    function YQ() {
+      return wQ(42690)
     }
-    var Ld = kd(2761),
-      Od = kd(36480),
-      ed = kd(40745),
-      Rd = kd(1220),
-      Id = kd(296),
-      Gd = kd(626),
-      vd = kd(40771),
-      xd = kd(41006),
-      qd = (kd(40781), kd(40954)),
-      Bd = kd(40963),
-      sd = kd(40972),
-      ad = kd(40778),
-      Md = kd(41020),
-      Fd = kd(41028),
-      Yd = kd(40801),
-      md = kd(40891),
-      bd = kd(40893),
-      Sd = kd(41011),
-      jd = kd(42499),
-      Xd = kd(36458),
-      fd = kd(3591);
-    const nd = "[bloxd-previews]",
-      Ud = 4e5,
-      yd = 0,
-      Dd = 1,
-      Td = 2,
-      Ed = 1,
-      cd = 2,
-      hd = 3,
-      rd = 0,
-      ud = 1,
-      td = 2;
+    var xQ = wQ(2809),
+      AQ = wQ(35962),
+      tQ = wQ(40201),
+      eQ = wQ(1213),
+      MQ = wQ(299),
+      GQ = wQ(634),
+      pQ = wQ(40222),
+      cQ = wQ(40426),
+      CQ = (wQ(40229), wQ(40380)),
+      SQ = wQ(40385),
+      iQ = wQ(40388),
+      WQ = wQ(40226),
+      RQ = wQ(40436),
+      OQ = wQ(40443),
+      sQ = wQ(40242),
+      rQ = wQ(40325),
+      IQ = wQ(40332),
+      UQ = wQ(40430),
+      NQ = wQ(41970),
+      TQ = wQ(35943),
+      KQ = wQ(3583);
+    const zQ = "[bloxd-previews]",
+      lQ = 4e5,
+      jQ = 0,
+      aQ = 1,
+      XQ = 2,
+      fQ = 1,
+      VQ = 2,
+      hQ = 3,
+      JQ = 0,
+      EQ = 1,
+      nQ = 2;
 
-    function Vd(dd) {
-      const Jd = dd,
-        kd = (0, vd.C)(dd),
-        pd = (0, vd.h)(dd);
-      return null !== kd && null !== pd && "function" === typeof Jd.MWd && "function" === typeof Jd.FWd && "function" === typeof Jd.YWd ? Jd : null
-    }
-
-    function zd(dd, Jd, kd) {
-      let [pd, Nd] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [dd, Jd], Wd = Math.min(Number.isFinite(kd) && kd > 0 ? kd : 1, 2);
-      const Pd = Math.max(0, pd, dd) * Math.max(0, Nd, Jd) * Wd * Wd;
-      return Pd > Ud && (Wd *= Math.sqrt(Ud / Pd)), [Math.max(1, Math.floor(Math.max(0, dd) * Wd)), Math.max(1, Math.floor(Math.max(0, Jd) * Wd))]
+    function gQ(QQ) {
+      const FQ = QQ,
+        wQ = (0, pQ.J)(QQ),
+        LQ = (0, pQ.l)(QQ);
+      return null !== wQ && null !== LQ && "function" === typeof FQ.IoQ && "function" === typeof FQ.UoQ && "function" === typeof FQ.NoQ ? FQ : null
     }
 
-    function Hd() {
-      return kd(43201)
+    function PQ(QQ, FQ, wQ) {
+      let [LQ, qQ] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [QQ, FQ], oQ = Math.min(Number.isFinite(wQ) && wQ > 0 ? wQ : 1, 2);
+      const DQ = Math.max(0, LQ, QQ) * Math.max(0, qQ, FQ) * oQ * oQ;
+      return DQ > lQ && (oQ *= Math.sqrt(lQ / DQ)), [Math.max(1, Math.floor(Math.max(0, QQ) * oQ)), Math.max(1, Math.floor(Math.max(0, FQ) * oQ))]
     }
-    async function wd(dd, Jd) {
-      "lost" === dd && (0, Yd.z)();
-      const pd = await (0, Yd.R)();
-      if (null === pd || (0, vd.l)(pd) || (0, Yd.d)()) return;
-      const Nd = "webgpu" === pd.backend;
-      if (!Nd && "lost" !== dd) return;
-      const Wd = Nd ? (0, vd.J)(dd) : null;
-      if (null !== Wd) {
-        const kd = `WebGPU failed at home (${dd}${void 0===Jd?"":`: ${Jd instanceof Error?Jd.message:(0,Xd.j)(Jd)}`}) and ${Wd}`;
-        return console.warn(`${nd} ${kd}: the previews stop`, null !== Jd && void 0 !== Jd ? Jd : ""), void(0, Yd.r)(kd)
+
+    function ZQ() {
+      return wQ(42698)
+    }
+    async function yQ(QQ, FQ) {
+      "lost" === QQ && (0, sQ.w)();
+      const LQ = await (0, sQ.M)();
+      if (null === LQ || (0, pQ.p)(LQ) || (0, sQ.c)()) return;
+      const qQ = "webgpu" === LQ.backend;
+      if (!qQ && "lost" !== QQ) return;
+      const oQ = qQ ? (0, pQ.Q)(QQ) : null;
+      if (null !== oQ) {
+        const wQ = `WebGPU failed at home (${QQ}${void 0===FQ?"":`: ${FQ instanceof Error?FQ.message:(0,TQ.k)(FQ)}`}) and ${oQ}`;
+        return console.warn(`${zQ} ${wQ}: the previews stop`, null !== FQ && void 0 !== FQ ? FQ : ""), void(0, sQ.q)(wQ)
       }
-      Nd || (0, Gd.n)(), (0, Yd.o)();
+      qQ || (0, GQ.k)(), (0, sQ.p)();
       try {
-        await async function(dd, Jd, pd) {
-          var Nd;
+        await async function(QQ, FQ, LQ) {
+          var qQ;
           let {
-            backend: Wd,
-            adapter: Zd
-          } = dd;
-          const gd = (0, Ld.M)(),
+            backend: oQ,
+            adapter: kQ
+          } = QQ;
+          const vQ = (0, xQ.I)(),
             {
-              flushCrashReports: Cd,
-              reportRenderReload: Kd
-            } = await Promise.resolve().then((() => kd(40940)));
-          Kd(Wd, "start_failed" === Jd ? 0 : 1, Pd(gd ? (0, Ld.x)() : null), {
-            cause: Jd,
-            error: "lost" === Jd && null !== (Nd = (0, vd.M)(gd ? (0, vd.C)((0, Ld.x)()) : null)) && void 0 !== Nd ? Nd : pd,
+              flushCrashReports: mQ,
+              reportRenderReload: uQ
+            } = await Promise.resolve().then((() => wQ(40369)));
+          uQ(oQ, "start_failed" === FQ ? 0 : 1, DQ(vQ ? (0, xQ.B)() : null), {
+            cause: FQ,
+            error: "lost" === FQ && null !== (qQ = (0, pQ.U)(vQ ? (0, pQ.J)((0, xQ.B)()) : null)) && void 0 !== qQ ? qQ : LQ,
             context: {
-              adapter: Zd,
-              boundAtMs: "start_failed" === Jd ? null : (0, Yd.P)(),
-              indirectHangs: (0, Yd.C)()
+              adapter: kQ,
+              boundAtMs: "start_failed" === FQ ? null : (0, sQ.J)(),
+              indirectHangs: (0, sQ.z)()
             }
-          }), await Cd(md.d)
-        }(pd, dd, Jd)
-      } catch (Zd) {
-        console.warn(`${nd} ${pd.backend} failed at home (${dd}), and its report couldn't be sent`, Zd)
-      }(0, md.i)()
+          }), await mQ(rQ.c)
+        }(LQ, QQ, FQ)
+      } catch (kQ) {
+        console.warn(`${zQ} ${LQ.backend} failed at home (${QQ}), and its report couldn't be sent`, kQ)
+      }(0, rQ.i)()
     }
-    async function Ad() {
-      if (!(0, Ld.M)()) {
-        const dd = await (0, Yd.R)();
-        if (null === dd || (0, vd.l)(dd)) return null;
-        if (await (0, Od.h)(await dd.load(), ed.g), !(0, Ld.M)()) return null
+    async function BQ() {
+      if (!(0, xQ.I)()) {
+        const QQ = await (0, sQ.M)();
+        if (null === QQ || (0, pQ.p)(QQ)) return null;
+        if (await (0, AQ.l)(await QQ.load(), tQ.e), !(0, xQ.I)()) return null
       }
-      return Vd((0, Ld.x)())
+      return gQ((0, xQ.B)())
     }
-    class dJ {
-      constructor(dd, Jd, kd, pd, Nd, Wd) {
-        this.page = dd, this.host = Jd, this.id = kd, this.canvas = pd, this.size = Nd, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const Pd = {
-            ...Wd.images,
-            glbUrl: dd => {
-              var Jd;
-              return null !== (Jd = this.models.drawnUrl(dd)) && void 0 !== Jd ? Jd : Wd.images.glbUrl(dd)
+    class dQ {
+      constructor(QQ, FQ, wQ, LQ, qQ, oQ) {
+        this.page = QQ, this.host = FQ, this.id = wQ, this.canvas = LQ, this.size = qQ, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const DQ = {
+            ...oQ.images,
+            glbUrl: QQ => {
+              var FQ;
+              return null !== (FQ = this.models.drawnUrl(QQ)) && void 0 !== FQ ? FQ : oQ.images.glbUrl(QQ)
             }
           },
-          Zd = Jd => dd.modelFile(Jd);
-        this.images = new xd.i(Pd, (dd => {
-          console.warn(`${nd} image ${dd.key.kind}:${dd.key.index}:${dd.key.word} failed`, dd.error)
+          kQ = FQ => QQ.modelFile(FQ);
+        this.images = new cQ.c(DQ, (QQ => {
+          console.warn(`${zQ} image ${QQ.key.kind}:${QQ.key.index}:${QQ.key.word} failed`, QQ.error)
         }), {
-          fetchFile: Zd,
-          fetchImage: Jd => dd.imageFile(Jd)
-        }), dd.startModels(), this.models = new qd.m(Wd.files, ((Jd, kd) => dd.buildModel(Jd, kd)), (dd => {
-          console.warn(`${nd} model file ${dd.file} (${dd.url}) failed`, dd.error)
+          fetchFile: kQ,
+          fetchImage: FQ => QQ.imageFile(FQ)
+        }), QQ.startModels(), this.models = new CQ.h(oQ.files, ((FQ, wQ) => QQ.buildModel(FQ, wQ)), (QQ => {
+          console.warn(`${zQ} model file ${QQ.file} (${QQ.url}) failed`, QQ.error)
         }), {
-          fetchFile: Zd,
-          onWritten: (dd, Jd) => {
-            this.images.glbWritten(dd, Jd)
+          fetchFile: kQ,
+          onWritten: (QQ, FQ) => {
+            this.images.glbWritten(QQ, FQ)
           },
-          onTaken: (dd, Jd) => {
-            this.images.glbTaken(dd, Jd)
+          onTaken: (QQ, FQ) => {
+            this.images.glbTaken(QQ, FQ)
           }
-        }), this.write = (dd, Jd, kd) => {
+        }), this.write = (QQ, FQ, wQ) => {
           if (this.closed) return !0;
-          if (dd === qd.e) {
-            const dd = new DataView(kd.buffer, kd.byteOffset, sd.b),
-              pd = dd.getUint32(0, !0),
-              Nd = dd.getUint32(sd.d, !0),
-              Wd = this.page.hostCall(td, (() => this.host.SPd(this.id, pd, Jd, kd.subarray(sd.b))));
-            return this.outcomes.push([Nd, Wd]), !0
+          if (QQ === CQ.b) {
+            const QQ = new DataView(wQ.buffer, wQ.byteOffset, iQ.b),
+              LQ = QQ.getUint32(0, !0),
+              qQ = QQ.getUint32(iQ.f, !0),
+              oQ = this.page.hostCall(nQ, (() => this.host.aDQ(this.id, LQ, FQ, wQ.subarray(iQ.b))));
+            return this.outcomes.push([qQ, oQ]), !0
           }
-          return dd === xd.e && (this.page.hostCall(void 0, (() => {
-            this.host.XPd(this.id, kd)
+          return QQ === cQ.b && (this.page.hostCall(void 0, (() => {
+            this.host.fDQ(this.id, wQ)
           })), !0)
         }
       }
@@ -618,74 +618,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(dd, Jd, kd) {
+      resize(QQ, FQ, wQ) {
         if (this.closed) return;
-        const [pd, Nd] = zd(dd, Jd, this.page.dpr(), kd);
-        pd === this.size[0] && Nd === this.size[1] || (this.size = [pd, Nd], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, pd, Nd)
+        const [LQ, qQ] = PQ(QQ, FQ, this.page.dpr(), wQ);
+        LQ === this.size[0] && qQ === this.size[1] || (this.size = [LQ, qQ], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, LQ, qQ)
         })))
       }
-      setMob(dd, Jd, kd, pd) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.DPd(this.id, dd, Jd, kd, pd))))
+      setMob(QQ, FQ, wQ, LQ) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.nDQ(this.id, QQ, FQ, wQ, LQ))))
       }
-      setPet(dd, Jd, kd, pd) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.EPd(this.id, dd, Jd, kd, pd))))
+      setPet(QQ, FQ, wQ, LQ) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ZDQ(this.id, QQ, FQ, wQ, LQ))))
       }
-      setPlayer(dd, Jd, kd) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.nPd(this.id, dd, Jd, kd))))
+      setPlayer(QQ, FQ, wQ) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.hDQ(this.id, QQ, FQ, wQ))))
       }
-      setFigure(dd, Jd, kd, pd) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.UPd(this.id, dd, Jd, kd, pd))))
+      setFigure(QQ, FQ, wQ, LQ) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.JDQ(this.id, QQ, FQ, wQ, LQ))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const dd = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === dd || dd.length < 3 ? null : {
-          alpha: dd[0],
-          beta: dd[1],
-          radius: dd[2]
+        const QQ = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === QQ || QQ.length < 3 ? null : {
+          alpha: QQ[0],
+          beta: QQ[1],
+          radius: QQ[2]
         }
       }
-      setOrbit(dd) {
+      setOrbit(QQ) {
         let {
-          alpha: Jd,
-          beta: kd,
-          radius: pd
-        } = dd;
+          alpha: FQ,
+          beta: wQ,
+          radius: LQ
+        } = QQ;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.TPd(this.id, Jd, kd, pd)
+          this.host.PDQ(this.id, FQ, wQ, LQ)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((dd => {
-          this.settled.push(dd)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((QQ => {
+          this.settled.push(QQ)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, Md.h)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, RQ.f)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [dd, Jd] of this.outcomes) {
-          const kd = Jd === rd ? [] : [Jd === ud ? dd : (dd | qd.i) >>> 0];
-          this.models.taken(dd, kd)
+        for (const [QQ, FQ] of this.outcomes) {
+          const wQ = FQ === JQ ? [] : [FQ === EQ ? QQ : (QQ | CQ.e) >>> 0];
+          this.models.taken(QQ, wQ)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(dd) {
-        let Jd = !1;
-        if (dd) {
-          const dd = this.host.rPd(this.id);
-          for (const Jd of dd) this.models.request(Jd);
-          const kd = this.host.hPd(this.id);
-          kd.length > 0 && this.images.onEvent(kd), Jd = dd.length > 0 || kd.length > 0
+      collect(QQ) {
+        let FQ = !1;
+        if (QQ) {
+          const QQ = this.host.dDQ(this.id);
+          for (const FQ of QQ) this.models.request(FQ);
+          const wQ = this.host.BDQ(this.id);
+          wQ.length > 0 && this.images.onEvent(wQ), FQ = QQ.length > 0 || wQ.length > 0
         }
-        const kd = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          pd = Jd || kd > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = pd ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const wQ = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          LQ = FQ || wQ > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = LQ ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -693,418 +693,418 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(dd) {
+      dispose(QQ) {
         this.page.hostCall(void 0, (() => {
-          const Jd = this.host.close(this.id);
-          Jd.length > 0 && this.images.onEvent(Jd), this.page.isTrapped || dd.YWd(this.id)
+          const FQ = this.host.close(this.id);
+          FQ.length > 0 && this.images.onEvent(FQ), this.page.isTrapped || QQ.NoQ(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const dd = this.settled;
+        const QQ = this.settled;
         this.settled = [];
-        for (const Jd of dd) Jd()
+        for (const FQ of QQ) FQ()
       }
     }
-    class JJ {
-      constructor(dd) {
-        this.deps = dd, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: dd => {
-            this.modelsFailed(dd)
+    class QF {
+      constructor(QQ) {
+        this.deps = QQ, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: QQ => {
+            this.modelsFailed(QQ)
           },
-          onDecoderFailed: dd => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${nd} the Draco decoder didn't load: models waiting on it won't draw`, dd))
+          onDecoderFailed: QQ => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${zQ} the Draco decoder didn't load: models waiting on it won't draw`, QQ))
           },
-          onWorkerLost: dd => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${nd} a model worker was lost: ${dd}`))
+          onWorkerLost: QQ => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${zQ} a model worker was lost: ${QQ}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.EQ = {
-          setShaderPack: (dd, Jd, kd, pd, Nd) => (this.shaderPackArgs = [dd, Jd, kd, pd, Nd], this.handOverShaderPack(), !0)
-        }, this.frame = dd => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.JY = {
+          setShaderPack: (QQ, FQ, wQ, LQ, qQ) => (this.shaderPackArgs = [QQ, FQ, wQ, LQ, qQ], this.handOverShaderPack(), !0)
+        }, this.frame = QQ => {
           this.frameId = null;
-          const Jd = this.host;
-          if (null !== Jd && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(Jd, dd)
-          } catch (kd) {
-            if (!this.stopIfTrapped(kd) && (this.stop(), (0, vd.n)(kd))) return void this.deps.onRenderFailed("frames_refused", kd);
-            console.warn(`${nd} the previews stopped: their frame threw`, kd)
+          const FQ = this.host;
+          if (null !== FQ && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(FQ, QQ)
+          } catch (wQ) {
+            if (!this.stopIfTrapped(wQ) && (this.stop(), (0, pQ.t)(wQ))) return void this.deps.onRenderFailed("frames_refused", wQ);
+            console.warn(`${zQ} the previews stopped: their frame threw`, wQ)
           }
-        }, dd.pack.onChange((() => {
+        }, QQ.pack.onChange((() => {
           this.packChanged()
-        })), dd.game.onGameChange((() => {
+        })), QQ.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const dd of this.previews.values()) dd.packChanged()
+          for (const QQ of this.previews.values()) QQ.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var dd, Jd;
-        return null !== (dd = null === (Jd = this.host) || void 0 === Jd ? void 0 : Jd.attached()) && void 0 !== dd && dd
+        var QQ, FQ;
+        return null !== (QQ = null === (FQ = this.host) || void 0 === FQ ? void 0 : FQ.attached()) && void 0 !== QQ && QQ
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((dd, Jd) => dd + Jd), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((QQ, FQ) => QQ + FQ), 0) / this.costs.length
       }
-      async bindSession(dd, Jd, kd) {
-        const pd = this.binding,
-          Nd = this.sessionEnds;
+      async bindSession(QQ, FQ, wQ) {
+        const LQ = this.binding,
+          qQ = this.sessionEnds;
         try {
-          const Wd = this.hostOf(dd);
-          if (!Wd.jPd()) {
-            const Jd = (0, bd.d)().sampleCount,
-              Pd = await kd(Jd);
-            if (this.sessionEnds !== Nd) return this.keepRendererOfEndedSession(dd, Wd, Pd, Jd, pd), Jd;
-            if (!Wd.IPd(Pd)) throw new Error("the page has a renderer already");
-            (0, Yd.v)(performance.now()), this.samples = Jd, (0, Sd.h)((0, vd.h)(dd))
+          const oQ = this.hostOf(QQ);
+          if (!oQ.XDQ()) {
+            const FQ = (0, IQ.f)().sampleCount,
+              DQ = await wQ(FQ);
+            if (this.sessionEnds !== qQ) return this.keepRendererOfEndedSession(QQ, oQ, DQ, FQ, LQ), FQ;
+            if (!oQ.SDQ(DQ)) throw new Error("the page has a renderer already");
+            (0, sQ.s)(performance.now()), this.samples = FQ, (0, UQ.c)((0, pQ.l)(QQ))
           }
-          if (!Wd.attach(Jd)) throw new Error("the page's renderer is lent to another session");
+          if (!oQ.attach(FQ)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === pd && this.endBinding()
+          this.binding === LQ && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(dd, Jd, kd, pd, Nd) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== Nd) try {
-          kd.free()
-        } catch (Wd) {
-          console.warn(`${nd} an ended session's renderer didn't free`, Wd)
-        } else Jd.IPd(kd) && ((0, Yd.v)(performance.now()), this.samples = pd, (0, Sd.h)(this.registryOf(dd)))
+      keepRendererOfEndedSession(QQ, FQ, wQ, LQ, qQ) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== qQ) try {
+          wQ.free()
+        } catch (oQ) {
+          console.warn(`${zQ} an ended session's renderer didn't free`, oQ)
+        } else FQ.SDQ(wQ) && ((0, sQ.s)(performance.now()), this.samples = LQ, (0, UQ.c)(this.registryOf(QQ)))
       }
       async beginSession() {
-        var dd;
-        let Jd = () => {};
-        const kd = new Promise((dd => {
-          Jd = dd
+        var QQ;
+        let FQ = () => {};
+        const wQ = new Promise((QQ => {
+          FQ = QQ
         }));
         this.binding = {
-          done: kd,
-          release: Jd
-        }, await (null === (dd = this.opening) || void 0 === dd ? void 0 : dd.catch((() => null)));
-        const pd = this.pageCanvas;
-        return this.pageCanvas = null, pd
+          done: wQ,
+          release: FQ
+        }, await (null === (QQ = this.opening) || void 0 === QQ ? void 0 : QQ.catch((() => null)));
+        const LQ = this.pageCanvas;
+        return this.pageCanvas = null, LQ
       }
-      endSession(dd) {
-        var Jd, kd;
-        if (this.sessionEnds++, this.lastEndReturned = dd, this.endBinding(), dd) {
+      endSession(QQ) {
+        var FQ, wQ;
+        if (this.sessionEnds++, this.lastEndReturned = QQ, this.endBinding(), QQ) {
           try {
-            var pd;
-            null === (pd = this.host) || void 0 === pd || pd.detach()
-          } catch (Nd) {
-            return void console.warn(`${nd} the session's core kept the page's renderer`, Nd)
-          }!0 === (null === (Jd = this.host) || void 0 === Jd ? void 0 : Jd.attached()) && console.warn(`${nd} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (kd = this.host) || void 0 === kd ? void 0 : kd.jPd()) && (0, Sd.h)(this.registryOf(this.module))
+            var LQ;
+            null === (LQ = this.host) || void 0 === LQ || LQ.detach()
+          } catch (qQ) {
+            return void console.warn(`${zQ} the session's core kept the page's renderer`, qQ)
+          }!0 === (null === (FQ = this.host) || void 0 === FQ ? void 0 : FQ.attached()) && console.warn(`${zQ} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (wQ = this.host) || void 0 === wQ ? void 0 : wQ.XDQ()) && (0, UQ.c)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var dd;
-        null === (dd = this.binding) || void 0 === dd || dd.release(), this.binding = null
+        var QQ;
+        null === (QQ = this.binding) || void 0 === QQ || QQ.release(), this.binding = null
       }
-      async openPreview(dd, Jd, kd, pd) {
-        const Nd = await this.renderingHost(),
-          Wd = this.module;
-        if (null === Nd || null === Wd) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(Nd), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(QQ, FQ, wQ, LQ) {
+        const qQ = await this.renderingHost(),
+          oQ = this.module;
+        if (null === qQ || null === oQ) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(qQ), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(Wd)
+          this.deps.provideBuiltInAnimationPack(oQ)
         }));
-        const Pd = this.nextId++,
-          Zd = this.deps.createCanvas(),
-          [gd, Cd] = zd(Jd, kd, this.deps.dpr(), pd);
-        Zd.width = gd, Zd.height = Cd;
-        if (!this.guarded((() => (Wd.FWd(Pd, Zd), Nd.open(Pd, gd, Cd, dd))))) throw this.hostCall(void 0, (() => {
-          Wd.YWd(Pd)
+        const DQ = this.nextId++,
+          kQ = this.deps.createCanvas(),
+          [vQ, mQ] = PQ(FQ, wQ, this.deps.dpr(), LQ);
+        kQ.width = vQ, kQ.height = mQ;
+        if (!this.guarded((() => (oQ.UoQ(DQ, kQ), qQ.open(DQ, vQ, mQ, QQ))))) throw this.hostCall(void 0, (() => {
+          oQ.NoQ(DQ)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const Kd = new dJ(this, Nd, Pd, Zd, [gd, Cd], this.deps);
-        return this.previews.set(Pd, Kd), this.startFrames(), Kd
+        const uQ = new dQ(this, qQ, DQ, kQ, [vQ, mQ], this.deps);
+        return this.previews.set(DQ, uQ), this.startFrames(), uQ
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, Yd.d)() || null !== (0, Yd.L)()) return;
+        if (this.prefetched || this.isStopped || (0, sQ.c)() || null !== (0, sQ.G)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((dd => {
-          null === dd || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((QQ => {
+          null === QQ || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(dd) {
-        return this.prefetchedOr(dd, this.deps.fetchModel)
+      modelFile(QQ) {
+        return this.prefetchedOr(QQ, this.deps.fetchModel)
       }
-      imageFile(dd) {
-        return this.prefetchedOr(dd, pd.D)
+      imageFile(QQ) {
+        return this.prefetchedOr(QQ, LQ.T)
       }
-      prefetchedOr(dd, Jd) {
-        const kd = this.prefetchedFiles.get(dd);
-        return void 0 === kd ? Jd(dd) : kd.catch((() => Jd(dd)))
+      prefetchedOr(QQ, FQ) {
+        const wQ = this.prefetchedFiles.get(QQ);
+        return void 0 === wQ ? FQ(QQ) : wQ.catch((() => FQ(QQ)))
       }
       async prefetchPlayerFiles() {
-        const dd = this.deps.playerFile().then((dd => this.deps.files.url(dd))),
-          Jd = await Promise.all([dd, this.deps.images.lifeformAtlasUrl(Md.d)]).catch((() => null));
-        if (null === Jd) return;
-        const [kd, pd] = Jd, Nd = (dd, Jd) => {
-          if (null === dd) return;
-          const kd = Jd(dd);
-          this.prefetchedFiles.set(dd, kd), kd.catch((() => {
-            this.prefetchedFiles.delete(dd)
+        const QQ = this.deps.playerFile().then((QQ => this.deps.files.url(QQ))),
+          FQ = await Promise.all([QQ, this.deps.images.lifeformAtlasUrl(RQ.c)]).catch((() => null));
+        if (null === FQ) return;
+        const [wQ, LQ] = FQ, qQ = (QQ, FQ) => {
+          if (null === QQ) return;
+          const wQ = FQ(QQ);
+          this.prefetchedFiles.set(QQ, wQ), wQ.catch((() => {
+            this.prefetchedFiles.delete(QQ)
           }))
         };
-        Nd(kd, (dd => this.modelFile(dd))), Nd(pd, (dd => this.imageFile(dd)))
+        qQ(wQ, (QQ => this.modelFile(QQ))), qQ(LQ, (QQ => this.imageFile(QQ)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((dd => (null === dd && (this.moduleLoad = null), dd)), (dd => {
-          throw this.moduleLoad = null, dd
+        return this.moduleLoad ??= this.deps.loadModule().then((QQ => (null === QQ && (this.moduleLoad = null), QQ)), (QQ => {
+          throw this.moduleLoad = null, QQ
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((dd => {
-          throw this.animationTable = null, dd
+        return this.animationTable ??= this.deps.fetchAnimations().catch((QQ => {
+          throw this.animationTable = null, QQ
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((dd => (this.modelsFailed(dd), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((QQ => (this.modelsFailed(QQ), () => new Promise((() => {})))))
       }
-      buildModel(dd, Jd) {
-        return this.startModels(), this.models.then((kd => kd(dd, Jd))).then((dd => this.unavailable ? new Promise((() => {})) : dd))
+      buildModel(QQ, FQ) {
+        return this.startModels(), this.models.then((wQ => wQ(QQ, FQ))).then((QQ => this.unavailable ? new Promise((() => {})) : QQ))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(dd) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${nd} the model workers didn't start: models won't draw in the previews`, dd))
+      modelsFailed(QQ) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${zQ} the model workers didn't start: models won't draw in the previews`, QQ))
       }
-      called(dd) {
-        return 0 !== dd && this.logError(dd, 0), dd
+      called(QQ) {
+        return 0 !== QQ && this.logError(QQ, 0), QQ
       }
-      closePreview(dd) {
-        this.previews.delete(dd.id), null !== this.module && dd.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(QQ) {
+        this.previews.delete(QQ.id), null !== this.module && QQ.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(dd) {
-        if (null !== this.module && this.module !== dd) throw new Error("a second renderer module on one page");
-        return this.module = dd, null === this.host && (this.host = this.guarded((() => new dd.MWd)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(QQ) {
+        if (null !== this.module && this.module !== QQ) throw new Error("a second renderer module on one page");
+        return this.module = QQ, null === this.host && (this.host = this.guarded((() => new QQ.IoQ)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: dd
+          host: QQ
         } = this;
-        null !== dd && this.outsideCall("the game's start or end", (() => {
-          dd.yPd(this.deps.game.inGame())
+        null !== QQ && this.outsideCall("the game's start or end", (() => {
+          QQ.EDQ(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: dd,
-          shaderPackArgs: Jd
+          host: QQ,
+          shaderPackArgs: FQ
         } = this;
-        null !== dd && null !== Jd && this.outsideCall("the shader pack's hand-over", (() => {
-          dd.Mpd(...Jd) || console.warn(`${nd} the host refused the shader pack: previews draw without it at home`)
+        null !== QQ && null !== FQ && this.outsideCall("the shader pack's hand-over", (() => {
+          QQ.rLQ(...FQ) || console.warn(`${zQ} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(dd, Jd) {
+      outsideCall(QQ, FQ) {
         try {
-          this.hostCall(void 0, Jd)
-        } catch (kd) {
-          this.stop(), console.warn(`${nd} the previews stopped: ${dd} threw`, kd)
+          this.hostCall(void 0, FQ)
+        } catch (wQ) {
+          this.stop(), console.warn(`${zQ} the previews stopped: ${QQ} threw`, wQ)
         }
       }
-      async loadAnimations(dd) {
-        const Jd = Pd(null),
-          kd = this.module;
+      async loadAnimations(QQ) {
+        const FQ = DQ(null),
+          wQ = this.module;
         try {
-          Jd.wasm = null === kd ? Jd.wasm : this.hostCall(Jd.wasm, (() => kd.Zo()))
+          FQ.wasm = null === wQ ? FQ.wasm : this.hostCall(FQ.wasm, (() => wQ.AH()))
         } catch {}
-        let pd, Nd;
+        let LQ, qQ;
         try {
-          pd = await this.fetchAnimationTable()
-        } catch (Wd) {
+          LQ = await this.fetchAnimationTable()
+        } catch (oQ) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: Wd
-          }, Jd)
+            error: oQ
+          }, FQ)
         }
         if (!this.settleIfTrapped()) {
           try {
-            Nd = dd.fPd(pd)
-          } catch (Wd) {
-            if (this.stopIfTrapped(Wd)) return;
+            qQ = QQ.VDQ(LQ)
+          } catch (oQ) {
+            if (this.stopIfTrapped(oQ)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: Wd
-            }, Jd)
+              error: oQ
+            }, FQ)
           }
-          Nd || this.deps.onAnimationsFailed({
+          qQ || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, Jd)
+          }, FQ)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const dd = this.host;
-        return null !== dd && this.guarded((() => dd.jPd())) ? dd : (this.opening ??= this.openAtHome().finally((() => {
+        const QQ = this.host;
+        return null !== QQ && this.guarded((() => QQ.XDQ())) ? QQ : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var dd;
-        const Jd = null !== (dd = this.module) && void 0 !== dd ? dd : await this.loadModule();
-        if (null === Jd) return null;
-        const kd = this.hostOf(Jd),
-          pd = () => this.guarded((() => kd.jPd()));
-        if (pd()) return kd;
-        if (null !== (0, Yd.L)() || (0, Yd.d)()) return null;
-        const Nd = this.deps.createCanvas();
-        Nd.width = 1, Nd.height = 1;
-        const Wd = await this.deps.openExtras();
+        var QQ;
+        const FQ = null !== (QQ = this.module) && void 0 !== QQ ? QQ : await this.loadModule();
+        if (null === FQ) return null;
+        const wQ = this.hostOf(FQ),
+          LQ = () => this.guarded((() => wQ.XDQ()));
+        if (LQ()) return wQ;
+        if (null !== (0, sQ.G)() || (0, sQ.c)()) return null;
+        const qQ = this.deps.createCanvas();
+        qQ.width = 1, qQ.height = 1;
+        const oQ = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const Pd = (0, bd.d)().sampleCount;
-        let Zd;
+        const DQ = (0, IQ.f)().sampleCount;
+        let kQ;
         try {
-          Zd = await (0, vd.s)(Jd, "previewRenderer", Nd, Pd, jd.b, Wd)
-        } catch (gd) {
-          throw gd instanceof ad.e ? this.stopForTrap(gd) : (0, vd.r)(gd) && await this.deps.onRenderFailed("start_failed", gd), gd
+          kQ = await (0, pQ.w)(FQ, "previewRenderer", qQ, DQ, NQ.e, oQ)
+        } catch (vQ) {
+          throw vQ instanceof WQ.b ? this.stopForTrap(vQ) : (0, pQ.v)(vQ) && await this.deps.onRenderFailed("start_failed", vQ), vQ
         }
-        return this.guarded((() => kd.IPd(Zd))) ? ((0, Yd.v)(performance.now()), this.samples = Pd, this.pageCanvas = Nd, (0, Sd.h)(this.registryOf(Jd)), kd) : pd() ? kd : null
+        return this.guarded((() => wQ.SDQ(kQ))) ? ((0, sQ.s)(performance.now()), this.samples = DQ, this.pageCanvas = qQ, (0, UQ.c)(this.registryOf(FQ)), wQ) : LQ() ? wQ : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(dd, Jd) {
-        for (const Pd of this.previews.values()) Pd.feed();
+      drawFrame(QQ, FQ) {
+        for (const DQ of this.previews.values()) DQ.feed();
         if (this.stopped) return;
-        const kd = this.deps.now(),
-          pd = dd.frame(Jd);
-        this.costs.push(this.deps.now() - kd), this.costs.length > 120 && this.costs.shift();
-        const Nd = 0 !== (256 & pd),
-          Wd = 255 & pd;
-        for (const Pd of this.previews.values()) {
+        const wQ = this.deps.now(),
+          LQ = QQ.frame(FQ);
+        this.costs.push(this.deps.now() - wQ), this.costs.length > 120 && this.costs.shift();
+        const qQ = 0 !== (256 & LQ),
+          oQ = 255 & LQ;
+        for (const DQ of this.previews.values()) {
           if (this.stopped) return;
-          Pd.collect(Nd)
+          DQ.collect(qQ)
         }
         if (!this.stopped) {
-          if (Nd) {
-            const Jd = dd.cPd();
-            for (let dd = 0; dd + 1 < Jd.length; dd += 2) this.logError(Jd[dd], Jd[dd + 1])
+          if (qQ) {
+            const FQ = QQ.yDQ();
+            for (let QQ = 0; QQ + 1 < FQ.length; QQ += 2) this.logError(FQ[QQ], FQ[QQ + 1])
           }
-          if (Wd === Ed) return this.stop(), void this.deps.onRenderFailed("lost");
-          if (Wd === cd) return this.stop(), void this.deps.onFatal(dd.mPd(), dd.bPd());
-          if (Wd === hd) return this.stop(), void console.warn(`${nd} the previews stopped: the page's renderer went with its session`);
-          (0, Id.e)(Jd), this.startFrames()
+          if (oQ === fQ) return this.stop(), void this.deps.onRenderFailed("lost");
+          if (oQ === VQ) return this.stop(), void this.deps.onFatal(QQ.lDQ(), QQ.jDQ());
+          if (oQ === hQ) return this.stop(), void console.warn(`${zQ} the previews stopped: the page's renderer went with its session`);
+          (0, MQ.b)(FQ), this.startFrames()
         }
       }
       get isStopped() {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, ad.j)(this.module) || "failed" === (0, Ld.v)())
+        return null !== this.module && ((0, WQ.g)(this.module) || "failed" === (0, xQ.z)())
       }
-      hostCall(dd, Jd) {
-        if (this.settleIfTrapped()) return dd;
+      hostCall(QQ, FQ) {
+        if (this.settleIfTrapped()) return QQ;
         try {
-          return Jd()
-        } catch (kd) {
-          if (this.stopIfTrapped(kd)) return dd;
-          throw kd
+          return FQ()
+        } catch (wQ) {
+          if (this.stopIfTrapped(wQ)) return QQ;
+          throw wQ
         }
       }
-      guarded(dd) {
+      guarded(QQ) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return dd()
-        } catch (Jd) {
-          throw this.stopIfTrapped(Jd), Jd
+          return QQ()
+        } catch (FQ) {
+          throw this.stopIfTrapped(FQ), FQ
         }
       }
-      registryOf(dd) {
+      registryOf(QQ) {
         return {
-          Kpd: (Jd, kd) => {
+          bLQ: (FQ, wQ) => {
             this.hostCall(void 0, (() => {
-              dd.Kpd(Jd, kd)
+              QQ.bLQ(FQ, wQ)
             }))
           },
-          lpd: Jd => {
+          YLQ: FQ => {
             this.hostCall(void 0, (() => {
-              dd.lpd(Jd)
+              QQ.YLQ(FQ)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Sd.h)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, UQ.c)(null)), !0)
       }
-      stopIfTrapped(dd) {
-        return !(null === this.module || !(0, ad.k)(this.module, dd)) && (this.stopForTrap(dd), !0)
+      stopIfTrapped(QQ) {
+        return !(null === this.module || !(0, WQ.j)(this.module, QQ)) && (this.stopForTrap(QQ), !0)
       }
-      stopForTrap(dd) {
-        this.stop(), (0, Sd.h)(null), (0, fd.i)("previews", dd)
+      stopForTrap(QQ) {
+        this.stop(), (0, UQ.c)(null), (0, KQ.g)("previews", QQ)
       }
       stop() {
         this.stopped = !0;
-        for (const dd of this.previews.values()) dd.abandon()
+        for (const QQ of this.previews.values()) QQ.abandon()
       }
-      logError(dd, Jd) {
-        const kd = `${dd}:${Jd}`;
-        this.loggedErrors.has(kd) || (this.loggedErrors.add(kd), console.warn(`${nd} error ${dd} (detail ${Jd})`))
+      logError(QQ, FQ) {
+        const wQ = `${QQ}:${FQ}`;
+        this.loggedErrors.has(wQ) || (this.loggedErrors.add(wQ), console.warn(`${zQ} error ${QQ} (detail ${FQ})`))
       }
     }
-    let kJ = null;
+    let FF = null;
 
-    function pJ() {
-      return kJ ??= new JJ(function() {
-        const dd = (0, Bd.n)(Rd.clientSideServerUrls.staticUrl, {
-          packUrl: dd => {
-            var Jd, kd;
-            return null !== (Jd = null === (kd = Md.g.current) || void 0 === kd ? void 0 : kd.modelUrl(dd)) && void 0 !== Jd ? Jd : null
+    function wF() {
+      return FF ??= new QF(function() {
+        const QQ = (0, SQ.r)(eQ.clientSideServerUrls.staticUrl, {
+          packUrl: QQ => {
+            var FQ, wQ;
+            return null !== (FQ = null === (wQ = RQ.e.current) || void 0 === wQ ? void 0 : wQ.modelUrl(QQ)) && void 0 !== FQ ? FQ : null
           }
         });
         return {
-          loadModule: Ad,
-          startModels: async dd => {
+          loadModule: BQ,
+          startModels: async QQ => {
             const {
-              pageModelPool: Jd
-            } = await kd.e(42).then((() => kd(43280))), {
-              pool: pd
-            } = Jd(dd);
-            return (dd, Jd) => pd.build(dd, Jd)
+              pageModelPool: FQ
+            } = await wQ.e(42).then((() => wQ(42779))), {
+              pool: LQ
+            } = FQ(QQ);
+            return (QQ, FQ) => LQ.build(QQ, FQ)
           },
-          fetchAnimations: async () => Zd(await (0, pd.D)(Hd())),
-          playerFile: async () => (await (0, Bd.l)()).PLAYER_FILE,
-          onAnimationsFailed: (dd, Jd) => {
-            gd("previewAnimations", Hd(), dd, Jd)
+          fetchAnimations: async () => kQ(await (0, LQ.T)(ZQ())),
+          playerFile: async () => (await (0, SQ.o)()).PLAYER_FILE,
+          onAnimationsFailed: (QQ, FQ) => {
+            vQ("previewAnimations", ZQ(), QQ, FQ)
           },
-          provideBuiltInAnimationPack: dd => {
-            ld().provide(dd)
+          provideBuiltInAnimationPack: QQ => {
+            bQ().provide(QQ)
           },
-          openExtras: Yd.E,
-          files: dd,
-          images: (0, Md.k)((0, xd.p)(dd.url), (() => Md.g.current)),
-          pack: Md.g,
-          game: Fd.b,
-          fetchModel: dd => (0, Bd.h)(dd),
+          openExtras: sQ.A,
+          files: QQ,
+          images: (0, RQ.h)((0, cQ.o)(QQ.url), (() => RQ.e.current)),
+          pack: RQ.e,
+          game: OQ.d,
+          fetchModel: QQ => (0, SQ.j)(QQ),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: dd => requestAnimationFrame(dd),
-          cancelFrame: dd => {
-            cancelAnimationFrame(dd)
+          requestFrame: QQ => requestAnimationFrame(QQ),
+          cancelFrame: QQ => {
+            cancelAnimationFrame(QQ)
           },
-          onRenderFailed: wd,
-          onFatal: (dd, Jd) => {
-            console.error(`${nd} the previews stopped: renderer error ${dd} (detail ${Jd})`)
+          onRenderFailed: yQ,
+          onFatal: (QQ, FQ) => {
+            console.error(`${zQ} the previews stopped: renderer error ${QQ} (detail ${FQ})`)
           }
         }
-      }()), kJ
+      }()), FF
     }
-    var NJ = kd(597),
-      WJ = kd(38776),
-      PJ = kd(3130);
-    const ZJ = {
+    var LF = wQ(609),
+      qF = wQ(38164),
+      oF = wQ(3149);
+    const DF = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1122,320 +1122,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const gJ = "[bloxd-previews]",
-      CJ = new Uint32Array(5);
+    const kF = "[bloxd-previews]",
+      vF = new Uint32Array(5);
 
-    function KJ(dd) {
-      return NJ.k.indexOf(dd)
+    function mF(QQ) {
+      return LF.l.indexOf(QQ)
     }
-    const oJ = new WeakSet;
+    const uF = new WeakSet;
 
-    function lJ(dd) {
-      const Jd = (0, WJ.c)(dd),
-        kd = null === Jd ? -1 : QJ(Jd);
-      return -1 !== kd ? kd : (oJ.has(dd) || (oJ.add(dd), console.warn(`${gJ} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function QJ(dd) {
-      var Jd;
-      return null !== (Jd = ZJ[dd]) && void 0 !== Jd ? Jd : -1
+    function HF(QQ) {
+      const FQ = (0, qF.f)(QQ),
+        wQ = null === FQ ? -1 : bF(FQ);
+      return -1 !== wQ ? wQ : (uF.has(QQ) || (uF.add(QQ), console.warn(`${kF} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function LJ(dd, Jd) {
+    function bF(QQ) {
+      var FQ;
+      return null !== (FQ = DF[QQ]) && void 0 !== FQ ? FQ : -1
+    }
+
+    function YF(QQ, FQ) {
       const {
-        canvas: kd
-      } = Jd;
-      kd.style.width = "100%", kd.style.height = "100%", kd.style.display = "block", dd.appendChild(kd)
+        canvas: wQ
+      } = FQ;
+      wQ.style.width = "100%", wQ.style.height = "100%", wQ.style.display = "block", QQ.appendChild(wQ)
     }
 
-    function OJ(dd) {
-      const Jd = dd.getBoundingClientRect();
-      return [Jd.width, Jd.height]
+    function xF(QQ) {
+      const FQ = QQ.getBoundingClientRect();
+      return [FQ.width, FQ.height]
     }
-    class eJ {
-      constructor(dd, Jd) {
-        this.preview = dd, this.showView = Jd
+    class AF {
+      constructor(QQ, FQ) {
+        this.preview = QQ, this.showView = FQ
       }
-      show(dd) {
-        this.showView(this.preview, dd)
+      show(QQ) {
+        this.showView(this.preview, QQ)
       }
-      resize(dd, Jd) {
-        this.preview.resize(dd, Jd)
+      resize(QQ, FQ) {
+        this.preview.resize(QQ, FQ)
       }
       close() {
         this.preview.close()
       }
     }
-    class RJ {
-      constructor(dd) {
-        this.preview = dd, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(dd) {
+    class tF {
+      constructor(QQ) {
+        this.preview = QQ, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(QQ) {
           const {
-            canvas: Jd
-          } = dd;
-          let kd = null;
-          const pd = dd => {
-              var pd;
-              kd = {
-                pointer: dd.pointerId,
-                x: dd.clientX,
-                y: dd.clientY
-              }, null === (pd = Jd.setPointerCapture) || void 0 === pd || pd.call(Jd, dd.pointerId)
+            canvas: FQ
+          } = QQ;
+          let wQ = null;
+          const LQ = QQ => {
+              var LQ;
+              wQ = {
+                pointer: QQ.pointerId,
+                x: QQ.clientX,
+                y: QQ.clientY
+              }, null === (LQ = FQ.setPointerCapture) || void 0 === LQ || LQ.call(FQ, QQ.pointerId)
             },
-            Nd = Jd => {
-              var pd;
-              const Nd = dd.orbit;
-              if ((null === (pd = kd) || void 0 === pd ? void 0 : pd.pointer) !== Jd.pointerId || null === Nd) return;
-              const Wd = Jd.clientX - kd.x,
-                Pd = Jd.clientY - kd.y;
-              kd = {
-                ...kd,
-                x: Jd.clientX,
-                y: Jd.clientY
-              }, dd.setOrbit({
-                alpha: Nd.alpha - .01 * Wd,
-                beta: Math.min(Math.PI - .01, Math.max(.01, Nd.beta - .01 * Pd)),
-                radius: Nd.radius
+            qQ = FQ => {
+              var LQ;
+              const qQ = QQ.orbit;
+              if ((null === (LQ = wQ) || void 0 === LQ ? void 0 : LQ.pointer) !== FQ.pointerId || null === qQ) return;
+              const oQ = FQ.clientX - wQ.x,
+                DQ = FQ.clientY - wQ.y;
+              wQ = {
+                ...wQ,
+                x: FQ.clientX,
+                y: FQ.clientY
+              }, QQ.setOrbit({
+                alpha: qQ.alpha - .01 * oQ,
+                beta: Math.min(Math.PI - .01, Math.max(.01, qQ.beta - .01 * DQ)),
+                radius: qQ.radius
               })
             },
-            Wd = dd => {
-              var Jd;
-              (null === (Jd = kd) || void 0 === Jd ? void 0 : Jd.pointer) === dd.pointerId && (kd = null)
+            oQ = QQ => {
+              var FQ;
+              (null === (FQ = wQ) || void 0 === FQ ? void 0 : FQ.pointer) === QQ.pointerId && (wQ = null)
             },
-            Pd = Jd => {
-              const kd = dd.orbit;
-              if (null === kd) return;
-              Jd.preventDefault();
-              const pd = Jd.deltaY * (Jd.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : Jd.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                Nd = Math.min(100, Math.max(5, kd.radius + .08 * pd));
-              dd.setOrbit({
-                ...kd,
-                radius: Nd
+            DQ = FQ => {
+              const wQ = QQ.orbit;
+              if (null === wQ) return;
+              FQ.preventDefault();
+              const LQ = FQ.deltaY * (FQ.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : FQ.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                qQ = Math.min(100, Math.max(5, wQ.radius + .08 * LQ));
+              QQ.setOrbit({
+                ...wQ,
+                radius: qQ
               })
             };
-          return Jd.style.touchAction = "none", Jd.addEventListener("pointerdown", pd), Jd.addEventListener("pointermove", Nd), Jd.addEventListener("pointerup", Wd), Jd.addEventListener("pointercancel", Wd), Jd.addEventListener("wheel", Pd, {
+          return FQ.style.touchAction = "none", FQ.addEventListener("pointerdown", LQ), FQ.addEventListener("pointermove", qQ), FQ.addEventListener("pointerup", oQ), FQ.addEventListener("pointercancel", oQ), FQ.addEventListener("wheel", DQ, {
             passive: !1
           }), () => {
-            Jd.removeEventListener("pointerdown", pd), Jd.removeEventListener("pointermove", Nd), Jd.removeEventListener("pointerup", Wd), Jd.removeEventListener("pointercancel", Wd), Jd.removeEventListener("wheel", Pd)
+            FQ.removeEventListener("pointerdown", LQ), FQ.removeEventListener("pointermove", qQ), FQ.removeEventListener("pointerup", oQ), FQ.removeEventListener("pointercancel", oQ), FQ.removeEventListener("wheel", DQ)
           }
-        }(dd), this.dev = {
-          canvas: () => dd.canvas,
+        }(QQ), this.dev = {
+          canvas: () => QQ.canvas,
           isolateHead: () => {
-            console.warn(`${gJ} isolateHead: noa's character preview only`)
+            console.warn(`${kF} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = dd.untilSettled().then((() => {
-          if (dd.isStopped) throw new Error(`${gJ} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = QQ.untilSettled().then((() => {
+          if (QQ.isStopped) throw new Error(`${kF} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(dd, Jd) {
-        this.cosmetics[dd] = Jd, this.apply()
+      setCosmetic(QQ, FQ) {
+        this.cosmetics[QQ] = FQ, this.apply()
       }
-      playEmote(dd) {
-        null === dd || dd !== this.emote ? (this.emote = dd, this.apply()) : this.preview.replay()
+      playEmote(QQ) {
+        null === QQ || QQ !== this.emote ? (this.emote = QQ, this.apply()) : this.preview.replay()
       }
-      untilDrawn(dd) {
+      untilDrawn(QQ) {
         return this.preview.untilSettled()
       }
-      setOrbit(dd) {
+      setOrbit(QQ) {
         let {
-          yaw: Jd,
-          pitch: kd,
-          radius: pd
-        } = dd;
-        const Nd = this.preview.orbit;
-        null !== Nd && this.preview.setOrbit({
-          alpha: Jd,
-          beta: kd,
-          radius: null !== pd && void 0 !== pd ? pd : Nd.radius
+          yaw: FQ,
+          pitch: wQ,
+          radius: LQ
+        } = QQ;
+        const qQ = this.preview.orbit;
+        null !== qQ && this.preview.setOrbit({
+          alpha: FQ,
+          beta: wQ,
+          radius: null !== LQ && void 0 !== LQ ? LQ : qQ.radius
         })
       }
       resetCamera() {}
-      resize(dd, Jd) {
-        this.preview.resize(dd, Jd)
+      resize(QQ, FQ) {
+        this.preview.resize(QQ, FQ)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var dd;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), CJ, null === (dd = this.emote) ? -1 : QJ(dd))
+        var QQ;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), vF, null === (QQ = this.emote) ? -1 : bF(QQ))
       }
     }
 
-    function IJ(dd, Jd) {
+    function eF(QQ, FQ) {
       let {
-        mobType: kd,
-        variation: pd,
-        animation: Nd
-      } = Jd;
-      dd.setMob(KJ(kd), null !== pd && void 0 !== pd ? pd : "", 1, lJ(Nd))
+        mobType: wQ,
+        variation: LQ,
+        animation: qQ
+      } = FQ;
+      QQ.setMob(mF(wQ), null !== LQ && void 0 !== LQ ? LQ : "", 1, HF(qQ))
     }
 
-    function GJ(dd, Jd) {
+    function MF(QQ, FQ) {
       let {
-        mobType: kd,
-        variation: pd,
-        metaInfo: Nd,
-        tamed: Wd
-      } = Jd;
-      dd.setPet(KJ(kd), pd, Nd, Wd)
+        mobType: wQ,
+        variation: LQ,
+        metaInfo: qQ,
+        tamed: oQ
+      } = FQ;
+      QQ.setPet(mF(wQ), LQ, qQ, oQ)
     }
-    const vJ = {
+    const GF = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class xJ {
-      constructor(dd, Jd, kd, pd) {
+    class pF {
+      constructor(QQ, FQ, wQ, LQ) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, dd(kd.width, pd[1], pd).then((dd => {
-          if (this.closed) return void dd.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, QQ(wQ.width, LQ[1], LQ).then((QQ => {
+          if (this.closed) return void QQ.close();
           const {
-            style: kd
-          } = dd.canvas;
-          kd.position = "absolute", kd.top = "0", kd.visibility = "hidden", LJ(Jd, dd), this.preview = dd, this.apply()
-        })).catch((dd => {
-          console.error(`${gJ} couldn't open a lineup figure`, dd)
+            style: wQ
+          } = QQ.canvas;
+          wQ.position = "absolute", wQ.top = "0", wQ.visibility = "hidden", YF(FQ, QQ), this.preview = QQ, this.apply()
+        })).catch((QQ => {
+          console.error(`${kF} couldn't open a lineup figure`, QQ)
         }))
       }
-      update(dd, Jd, kd, pd, Nd) {
-        this.figure = dd, this.shown = Jd, this.order = kd, this.span = pd, this.lineup = Nd, this.apply()
+      update(QQ, FQ, wQ, LQ, qQ) {
+        this.figure = QQ, this.shown = FQ, this.order = wQ, this.span = LQ, this.lineup = qQ, this.apply()
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.preview) || void 0 === dd || dd.close(), this.preview = null
+        var QQ;
+        this.closed = !0, null === (QQ = this.preview) || void 0 === QQ || QQ.close(), this.preview = null
       }
       apply() {
         const {
-          preview: dd,
-          figure: Jd,
-          lineup: kd
+          preview: QQ,
+          figure: FQ,
+          lineup: wQ
         } = this;
-        if (null === dd || null === Jd) return;
-        if (this.given !== Jd) {
-          var pd;
-          this.given = Jd, this.loaded = !1;
-          const kd = null === Jd.Dv ? 0 : null !== (pd = (0, PJ.c)(Jd.Dv)) && void 0 !== pd ? pd : 0;
-          dd.setFigure(function(dd) {
-            return JSON.stringify(Object.fromEntries(dd.cosmetics))
-          }(Jd), kd, lJ(Jd.animation), Jd.size), dd.untilSettled().then((() => {
-            this.given === Jd && (this.loaded = !0, this.apply())
+        if (null === QQ || null === FQ) return;
+        if (this.given !== FQ) {
+          var LQ;
+          this.given = FQ, this.loaded = !1;
+          const wQ = null === FQ.nC ? 0 : null !== (LQ = (0, oF.c)(FQ.nC)) && void 0 !== LQ ? LQ : 0;
+          QQ.setFigure(function(QQ) {
+            return JSON.stringify(Object.fromEntries(QQ.cosmetics))
+          }(FQ), wQ, HF(FQ.animation), FQ.size), QQ.untilSettled().then((() => {
+            this.given === FQ && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: Nd,
-          width: Wd
+          left: qQ,
+          width: oQ
         } = this.span;
-        dd.resize(Wd, kd[1], kd);
+        QQ.resize(oQ, wQ[1], wQ);
         const {
-          style: Pd
-        } = dd.canvas;
-        Pd.left = `${Nd}px`, Pd.width = `${Wd}px`, Pd.zIndex = this.order, Pd.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: DQ
+        } = QQ.canvas;
+        DQ.left = `${qQ}px`, DQ.width = `${oQ}px`, DQ.zIndex = this.order, DQ.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class qJ {
-      constructor(dd, Jd) {
-        this.open = Jd, this.layer = void 0, this.figures = [], this.view = {
+    class cF {
+      constructor(QQ, FQ) {
+        this.open = FQ, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = OJ(dd), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = xF(QQ), this.layer = document.createElement("div");
         const {
-          style: kd
+          style: wQ
         } = this.layer;
-        kd.position = "relative", kd.isolation = "isolate", kd.overflow = "hidden", kd.width = "100%", kd.height = "100%", kd.pointerEvents = "none", dd.appendChild(this.layer)
+        wQ.position = "relative", wQ.isolation = "isolate", wQ.overflow = "hidden", wQ.width = "100%", wQ.height = "100%", wQ.pointerEvents = "none", QQ.appendChild(this.layer)
       }
-      show(dd) {
-        this.view = dd, this.place()
+      show(QQ) {
+        this.view = QQ, this.place()
       }
-      resize(dd, Jd) {
-        this.size = [dd, Jd], this.place()
+      resize(QQ, FQ) {
+        this.size = [QQ, FQ], this.place()
       }
       close() {
-        for (const dd of this.figures) dd.close();
+        for (const QQ of this.figures) QQ.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: dd,
-          shown: Jd
+          figures: QQ,
+          shown: FQ
         } = this.view;
-        for (const pd of this.figures.splice(dd.length)) pd.close();
+        for (const LQ of this.figures.splice(QQ.length)) LQ.close();
         const {
-          size: kd
+          size: wQ
         } = this;
-        dd.forEach(((pd, Nd) => {
-          var Wd;
-          const Pd = function(dd, Jd, kd, pd) {
-            let [Nd, Wd] = pd;
-            const Pd = (dd + .5) * Nd / Jd,
-              Zd = Math.min(Math.max(Nd / Jd, 2 * kd * Wd), 2 * Math.max(Pd, Nd - Pd));
+        QQ.forEach(((LQ, qQ) => {
+          var oQ;
+          const DQ = function(QQ, FQ, wQ, LQ) {
+            let [qQ, oQ] = LQ;
+            const DQ = (QQ + .5) * qQ / FQ,
+              kQ = Math.min(Math.max(qQ / FQ, 2 * wQ * oQ), 2 * Math.max(DQ, qQ - DQ));
             return {
-              left: Pd - Zd / 2,
-              width: Zd
+              left: DQ - kQ / 2,
+              width: kQ
             }
-          }(Nd, dd.length, function(dd) {
+          }(qQ, QQ.length, function(QQ) {
             let {
-              animation: Jd,
-              size: kd
-            } = dd;
+              animation: FQ,
+              size: wQ
+            } = QQ;
             const {
-              aimed: pd,
-              ready: Nd
-            } = vJ;
-            return (lJ(Jd) === ZJ.gunAimed ? pd : Nd) * kd
-          }(pd), kd);
-          this.figures[Nd] ??= new xJ(this.open, this.layer, Pd, kd), this.figures[Nd].update(pd, null !== (Wd = Jd[Nd]) && void 0 !== Wd && Wd, function(dd, Jd) {
-            return String(Math.round(1e3 * dd) + Jd)
-          }(pd.size, Nd), Pd, kd)
+              aimed: LQ,
+              ready: qQ
+            } = GF;
+            return (HF(FQ) === DF.gunAimed ? LQ : qQ) * wQ
+          }(LQ), wQ);
+          this.figures[qQ] ??= new pF(this.open, this.layer, DQ, wQ), this.figures[qQ].update(LQ, null !== (oQ = FQ[qQ]) && void 0 !== oQ && oQ, function(QQ, FQ) {
+            return String(Math.round(1e3 * QQ) + FQ)
+          }(LQ.size, qQ), DQ, wQ)
         }))
       }
     }
-    const BJ = {
-      player: Dd,
-      store: Td
+    const CF = {
+      player: aQ,
+      store: XQ
     };
-    class sJ {
-      constructor(dd) {
-        this.page = dd
+    class SF {
+      constructor(QQ) {
+        this.page = QQ
       }
-      async openMob(dd) {
-        return new eJ(await this.open(dd, yd), IJ)
+      async openMob(QQ) {
+        return new AF(await this.open(QQ, jQ), eF)
       }
-      async openPet(dd) {
-        return new eJ(await this.open(dd, yd), GJ)
+      async openPet(QQ) {
+        return new AF(await this.open(QQ, jQ), MF)
       }
-      openMobLineup(dd) {
-        return new qJ(dd, ((dd, Jd, kd) => this.page.openPreview(yd, dd, Jd, kd)))
+      openMobLineup(QQ) {
+        return new cF(QQ, ((QQ, FQ, wQ) => this.page.openPreview(jQ, QQ, FQ, wQ)))
       }
-      async openCharacter(dd, Jd) {
-        return new RJ(await this.open(dd, BJ[Jd]))
+      async openCharacter(QQ, FQ) {
+        return new tF(await this.open(QQ, CF[FQ]))
       }
-      async open(dd, Jd) {
-        const [kd, pd] = OJ(dd), Nd = await this.page.openPreview(Jd, kd, pd);
-        return LJ(dd, Nd), Nd
+      async open(QQ, FQ) {
+        const [wQ, LQ] = xF(QQ), qQ = await this.page.openPreview(FQ, wQ, LQ);
+        return YF(QQ, qQ), qQ
       }
     }
   },
-  36919: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      B: () => Ld,
-      C: () => Od,
-      E: () => Rd,
-      c: () => pd,
-      f: () => Nd,
-      i: () => ld,
-      l: () => ed,
-      m: () => Kd,
-      q: () => Id,
-      u: () => gd,
-      v: () => Cd,
-      y: () => Qd
+  36378: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      D: () => AQ,
+      H: () => eQ,
+      e: () => LQ,
+      g: () => qQ,
+      i: () => bQ,
+      l: () => tQ,
+      o: () => uQ,
+      p: () => MQ,
+      s: () => vQ,
+      v: () => mQ,
+      y: () => YQ,
+      z: () => xQ
     });
-    const pd = [{
+    const LQ = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1452,64 +1452,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function Nd(dd, Jd) {
+    function qQ(QQ, FQ) {
       const {
-        numLines: kd,
-        charsPerLine: Nd
-      } = pd[Jd];
-      return Gd(dd, kd, Nd, !1)
+        numLines: wQ,
+        charsPerLine: qQ
+      } = LQ[FQ];
+      return GQ(QQ, wQ, qQ, !1)
     }
-    const Wd = 7 / 8,
-      Pd = .25,
-      Zd = 8;
+    const oQ = 7 / 8,
+      DQ = .25,
+      kQ = 8;
 
-    function gd(dd, Jd) {
+    function vQ(QQ, FQ) {
       return {
-        width: Math.min(dd, Zd) - 2 * Pd,
-        height: Math.min(Jd, Zd) - 2 * Pd
+        width: Math.min(QQ, kQ) - 2 * DQ,
+        height: Math.min(FQ, kQ) - 2 * DQ
       }
     }
 
-    function Cd(dd, Jd, kd) {
-      const Nd = gd(dd, Jd),
+    function mQ(QQ, FQ, wQ) {
+      const qQ = vQ(QQ, FQ),
         {
-          numLines: Pd,
-          charsPerLine: Zd
-        } = pd[kd];
+          numLines: DQ,
+          charsPerLine: kQ
+        } = LQ[wQ];
       return {
-        numLines: Math.max(1, Math.floor(Pd / Wd * Nd.height)),
-        charsPerLine: Math.max(1, Math.floor(Zd * Nd.width))
+        numLines: Math.max(1, Math.floor(DQ / oQ * qQ.height)),
+        charsPerLine: Math.max(1, Math.floor(kQ * qQ.width))
       }
     }
 
-    function Kd(dd, Jd, kd, pd) {
+    function uQ(QQ, FQ, wQ, LQ) {
       const {
-        numLines: Nd,
-        charsPerLine: Wd
-      } = Cd(kd, pd, Jd);
-      return Gd(dd, Nd, Wd, !1)
+        numLines: qQ,
+        charsPerLine: oQ
+      } = mQ(wQ, LQ, FQ);
+      return GQ(QQ, qQ, oQ, !1)
     }
-    const od = 32e3;
+    const HQ = 32e3;
 
-    function ld(dd) {
-      return dd.slice(0, od)
+    function bQ(QQ) {
+      return QQ.slice(0, HQ)
     }
-    const Qd = 512e3,
-      Ld = 64,
-      Od = Qd;
+    const YQ = 512e3,
+      xQ = 64,
+      AQ = YQ;
 
-    function ed(dd, Jd) {
-      const kd = Math.max(0, Od - Jd),
-        pd = Math.min(Qd, kd);
-      return dd.slice(0, pd)
+    function tQ(QQ, FQ) {
+      const wQ = Math.max(0, AQ - FQ),
+        LQ = Math.min(YQ, wQ);
+      return QQ.slice(0, LQ)
     }
-    const Rd = {
+    const eQ = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      iC: {
+      Tm: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1521,31 +1521,31 @@ export const modules = {
       }
     };
 
-    function Id(dd, Jd) {
+    function MQ(QQ, FQ) {
       const {
-        numLines: kd,
-        charsPerLine: pd
-      } = Rd[Jd];
-      return Gd(dd, kd, pd, !1)
+        numLines: wQ,
+        charsPerLine: LQ
+      } = eQ[FQ];
+      return GQ(QQ, wQ, LQ, !1)
     }
 
-    function Gd(dd, Jd, kd, pd, Nd) {
-      (Nd || pd) && (dd = dd.slice(0, null !== Nd && void 0 !== Nd ? Nd : Jd * kd));
-      const Wd = dd.split("\n");
-      if (Wd.length > Jd && Wd.splice(Jd, Wd.length - Jd), !pd)
-        for (let Pd = 0; Pd < Wd.length; Pd++) {
-          const dd = Wd[Pd];
-          dd.length > kd && (Wd[Pd] = dd.substring(0, kd), Wd.length < Jd && Wd.splice(Pd + 1, 0, dd.substring(kd)))
+    function GQ(QQ, FQ, wQ, LQ, qQ) {
+      (qQ || LQ) && (QQ = QQ.slice(0, null !== qQ && void 0 !== qQ ? qQ : FQ * wQ));
+      const oQ = QQ.split("\n");
+      if (oQ.length > FQ && oQ.splice(FQ, oQ.length - FQ), !LQ)
+        for (let DQ = 0; DQ < oQ.length; DQ++) {
+          const QQ = oQ[DQ];
+          QQ.length > wQ && (oQ[DQ] = QQ.substring(0, wQ), oQ.length < FQ && oQ.splice(DQ + 1, 0, QQ.substring(wQ)))
         }
-      return Wd.join("\n")
+      return oQ.join("\n")
     }
   },
-  43197: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  42690: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  43201: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  42698: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

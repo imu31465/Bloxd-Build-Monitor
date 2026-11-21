@@ -1,30 +1,30 @@
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  4557: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Kd
+  4536: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => uQ
     });
-    var pd = kd(22),
-      Nd = kd(29),
-      Wd = kd(1307),
-      Pd = kd(2704);
-    const Zd = 3e4,
-      gd = 1e3;
+    var LQ = wQ(17),
+      qQ = wQ(22),
+      oQ = wQ(1302),
+      DQ = wQ(2753);
+    const kQ = 3e4,
+      vQ = 1e3;
 
-    function Cd() {
-      return "visible" === document.visibilityState && "inGame" === pd.d.get("gameState") && (0, Wd.s)()
+    function mQ() {
+      return "visible" === document.visibilityState && "inGame" === LQ.c.get("gameState") && (0, oQ.p)()
     }
 
-    function Kd(dd, Jd) {
-      (0, Pd.o)() || function(dd, Jd, kd) {
-        let pd = 0;
-        const Nd = setInterval((() => {
-          Jd() && (pd += gd, pd >= dd && (clearInterval(Nd), kd()))
-        }), gd)
-      }(Zd, Cd, (() => {
-        Jd().then((() => {
-          dd(`saved for the player after ${Zd/1e3} s of play`), (0, Pd.u)(), Nd.j.nO("chat", {
+    function uQ(QQ, FQ) {
+      (0, DQ.p)() || function(QQ, FQ, wQ) {
+        let LQ = 0;
+        const qQ = setInterval((() => {
+          FQ() && (LQ += vQ, LQ >= QQ && (clearInterval(qQ), wQ()))
+        }), vQ)
+      }(kQ, mQ, (() => {
+        FQ().then((() => {
+          QQ(`saved for the player after ${kQ/1e3} s of play`), (0, DQ.y)(), qQ.l.GA("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,330 +36,330 @@ export const modules = {
       }))
     }
   },
-  9098: (dd, Jd, kd) => {
-    function pd(dd, Jd) {
-      return 0 === dd.length ? 0 : dd[Math.min(dd.length - 1, Math.floor(Jd * dd.length))]
+  8968: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ) {
+      return 0 === QQ.length ? 0 : QQ[Math.min(QQ.length - 1, Math.floor(FQ * QQ.length))]
     }
 
-    function Nd(dd) {
-      return dd.toFixed(1)
+    function qQ(QQ) {
+      return QQ.toFixed(1)
     }
-    kd.d(Jd, {
-      c: () => Nd,
-      e: () => pd
+    wQ.d(FQ, {
+      c: () => qQ,
+      g: () => LQ
     })
   },
-  38138: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Cd,
-      d: () => Kd,
-      e: () => vd,
-      f: () => Gd,
-      i: () => Id
+  37486: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => mQ,
+      f: () => uQ,
+      j: () => pQ,
+      m: () => GQ,
+      o: () => MQ
     });
-    var pd = kd(4557),
-      Nd = kd(9098),
-      Wd = kd(2704);
-    const Pd = 20,
-      Zd = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "oo", "jobMs"];
+    var LQ = wQ(4536),
+      qQ = wQ(8968),
+      oQ = wQ(2753);
+    const DQ = 20,
+      kQ = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "MH", "jobMs"];
 
-    function gd(dd) {
-      return [...dd].sort(((dd, Jd) => dd - Jd))
+    function vQ(QQ) {
+      return [...QQ].sort(((QQ, FQ) => QQ - FQ))
     }
-    const Cd = [];
+    const mQ = [];
 
-    function Kd(dd, Jd, kd) {
-      return `${dd},${Jd},${kd}`
+    function uQ(QQ, FQ, wQ) {
+      return `${QQ},${FQ},${wQ}`
     }
-    class od {
+    class HQ {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(dd, Jd) {
-        var kd;
-        const pd = null !== (kd = this.pending.get(dd)) && void 0 !== kd ? kd : [];
-        pd.push({
-          editAt: Jd,
+      edit(QQ, FQ) {
+        var wQ;
+        const LQ = null !== (wQ = this.pending.get(QQ)) && void 0 !== wQ ? wQ : [];
+        LQ.push({
+          editAt: FQ,
           meshJobId: 0
-        }), this.pending.set(dd, pd)
+        }), this.pending.set(QQ, LQ)
       }
-      frame(dd) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, dd - this.lastFrameAt)), this.lastFrameAt = dd, this.frames++, dd - this.windowStart >= 1e3 && this.summarise(dd)
+      frame(QQ) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, QQ - this.lastFrameAt)), this.lastFrameAt = QQ, this.frames++, QQ - this.windowStart >= 1e3 && this.summarise(QQ)
       }
-      sent(dd, Jd, kd, pd, Nd, Wd, Pd) {
-        this.jobs.set(Jd, {
-          sentAt: Pd,
+      sent(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
+        this.jobs.set(FQ, {
+          sentAt: DQ,
           receivedAt: 0,
-          ahead: kd,
-          inFlight: pd,
-          oo: Nd,
+          ahead: wQ,
+          inFlight: LQ,
+          MH: qQ,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, kd), this.maxCapacity = Math.max(this.maxCapacity, Nd);
-        for (const gd of null !== (Zd = this.pending.get(dd)) && void 0 !== Zd ? Zd : []) {
-          var Zd;
-          Wd.includes(gd.meshJobId) || (gd.meshJobId = Jd)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, wQ), this.maxCapacity = Math.max(this.maxCapacity, qQ);
+        for (const vQ of null !== (kQ = this.pending.get(QQ)) && void 0 !== kQ ? kQ : []) {
+          var kQ;
+          oQ.includes(vQ.meshJobId) || (vQ.meshJobId = FQ)
         }
       }
-      received(dd, Jd, kd) {
-        const pd = this.jobs.get(dd);
-        void 0 !== pd && (this.roundTrips.push(kd - pd.sentAt), pd.receivedAt = kd, pd.jobMs = Jd)
+      received(QQ, FQ, wQ) {
+        const LQ = this.jobs.get(QQ);
+        void 0 !== LQ && (this.roundTrips.push(wQ - LQ.sentAt), LQ.receivedAt = wQ, LQ.jobMs = FQ)
       }
-      failed(dd) {
-        this.jobs.delete(dd)
+      failed(QQ) {
+        this.jobs.delete(QQ)
       }
-      reassign(dd, Jd, kd) {
-        this.jobs.delete(Jd);
-        for (const Nd of null !== (pd = this.pending.get(dd)) && void 0 !== pd ? pd : []) {
-          var pd;
-          Nd.meshJobId === Jd && (Nd.meshJobId = kd)
+      reassign(QQ, FQ, wQ) {
+        this.jobs.delete(FQ);
+        for (const qQ of null !== (LQ = this.pending.get(QQ)) && void 0 !== LQ ? LQ : []) {
+          var LQ;
+          qQ.meshJobId === FQ && (qQ.meshJobId = wQ)
         }
       }
-      applied(dd, Jd, kd) {
-        const pd = this.jobs.get(Jd);
-        this.jobs.delete(Jd), void 0 !== pd && this.show(dd, pd, kd, (dd => dd.meshJobId === Jd))
+      applied(QQ, FQ, wQ) {
+        const LQ = this.jobs.get(FQ);
+        this.jobs.delete(FQ), void 0 !== LQ && this.show(QQ, LQ, wQ, (QQ => QQ.meshJobId === FQ))
       }
-      emptied(dd, Jd) {
-        const kd = {
-          sentAt: Jd,
-          receivedAt: Jd,
+      emptied(QQ, FQ) {
+        const wQ = {
+          sentAt: FQ,
+          receivedAt: FQ,
           ahead: 0,
           inFlight: 0,
-          oo: 0,
+          MH: 0,
           jobMs: 0
         };
-        this.show(dd, kd, Jd, (() => !0))
+        this.show(QQ, wQ, FQ, (() => !0))
       }
-      show(dd, Jd, kd, pd) {
-        const Nd = this.pending.get(dd);
-        if (!Nd) return;
-        const Wd = Nd.filter((Nd => !pd(Nd) || (this.record(dd, Nd.editAt, Jd, kd), !1)));
-        Wd.length > 0 ? this.pending.set(dd, Wd) : this.pending.delete(dd)
+      show(QQ, FQ, wQ, LQ) {
+        const qQ = this.pending.get(QQ);
+        if (!qQ) return;
+        const oQ = qQ.filter((qQ => !LQ(qQ) || (this.record(QQ, qQ.editAt, FQ, wQ), !1)));
+        oQ.length > 0 ? this.pending.set(QQ, oQ) : this.pending.delete(QQ)
       }
-      TQ(dd) {
-        this.reported += dd, this === Qd && this.reported >= Pd && null !== Ld && (Ld(), Ld = null)
+      hY(QQ) {
+        this.reported += QQ, this === YQ && this.reported >= DQ && null !== xQ && (xQ(), xQ = null)
       }
-      record(dd, Jd, kd, pd) {
-        const Nd = {
-          totalMs: pd - Jd,
-          slotMs: kd.sentAt - Jd,
-          workerMs: kd.receivedAt - kd.sentAt,
-          applyMs: pd - kd.receivedAt,
-          ahead: kd.ahead,
-          inFlight: kd.inFlight,
-          oo: kd.oo,
-          jobMs: kd.jobMs
+      record(QQ, FQ, wQ, LQ) {
+        const qQ = {
+          totalMs: LQ - FQ,
+          slotMs: wQ.sentAt - FQ,
+          workerMs: wQ.receivedAt - wQ.sentAt,
+          applyMs: LQ - wQ.receivedAt,
+          ahead: wQ.ahead,
+          inFlight: wQ.inFlight,
+          MH: wQ.MH,
+          jobMs: wQ.jobMs
         };
-        if (this.edits[this.nextEdit] = Nd, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Nd.totalMs), this.TQ(1), Nd.totalMs < 100 || ++this.outliers > 5) return;
-        const Pd = dd => Math.round(dd);
-        (0, Wd.h)("remesh", `slow edit (${dd}) shown in ${Pd(Nd.totalMs)} ms: slot ${Pd(Nd.slotMs)}, worker ${Pd(Nd.workerMs)} (${Nd.ahead} ahead, ${Nd.inFlight}/${Nd.oo} in flight; job ${Pd(Nd.jobMs)}), apply ${Pd(Nd.applyMs)}`)
+        if (this.edits[this.nextEdit] = qQ, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(qQ.totalMs), this.hY(1), qQ.totalMs < 100 || ++this.outliers > 5) return;
+        const DQ = QQ => Math.round(QQ);
+        (0, oQ.m)("remesh", `slow edit (${QQ}) shown in ${DQ(qQ.totalMs)} ms: slot ${DQ(qQ.slotMs)}, worker ${DQ(qQ.workerMs)} (${qQ.ahead} ahead, ${qQ.inFlight}/${qQ.MH} in flight; job ${DQ(qQ.jobMs)}), apply ${DQ(qQ.applyMs)}`)
       }
-      summarise(dd) {
-        const Jd = (dd - this.windowStart) / 1e3;
-        for (const [kd, pd] of this.pending) {
-          const Jd = pd.filter((Jd => dd - Jd.editAt <= 1e4));
-          this.gaveUp += pd.length - Jd.length, this.TQ(pd.length - Jd.length), Jd.length > 0 ? this.pending.set(kd, Jd) : this.pending.delete(kd)
+      summarise(QQ) {
+        const FQ = (QQ - this.windowStart) / 1e3;
+        for (const [wQ, LQ] of this.pending) {
+          const FQ = LQ.filter((FQ => QQ - FQ.editAt <= 1e4));
+          this.gaveUp += LQ.length - FQ.length, this.hY(LQ.length - FQ.length), FQ.length > 0 ? this.pending.set(wQ, FQ) : this.pending.delete(wQ)
         }
-        for (const [kd, pd] of this.jobs) dd - pd.sentAt > (pd.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(kd);
+        for (const [wQ, LQ] of this.jobs) QQ - LQ.sentAt > (LQ.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(wQ);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const dd = gd(this.roundTrips),
-            kd = gd(this.windowEdits),
-            pd = Math.max(0, this.outliers - 5);
-          (0, Wd.h)("remesh", `${Math.round(this.frames/Jd)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Nd.e)(dd,.5))} max ${Math.round((0,Nd.e)(dd,1))} ms | ${kd.length} edits shown, p50 ${Math.round((0,Nd.e)(kd,.5))} max ${Math.round((0,Nd.e)(kd,1))} ms${pd>0?`, ${pd} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const QQ = vQ(this.roundTrips),
+            wQ = vQ(this.windowEdits),
+            LQ = Math.max(0, this.outliers - 5);
+          (0, oQ.m)("remesh", `${Math.round(this.frames/FQ)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,qQ.g)(QQ,.5))} max ${Math.round((0,qQ.g)(QQ,1))} ms | ${wQ.length} edits shown, p50 ${Math.round((0,qQ.g)(wQ,.5))} max ${Math.round((0,qQ.g)(wQ,1))} ms${LQ>0?`, ${LQ} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = dd, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = QQ, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const dd = Zd.map((dd => {
-          const Jd = gd(this.edits.map((Jd => Jd[dd])));
-          return `${dd}: p50 ${Math.round((0,Nd.e)(Jd,.5))} p90 ${Math.round((0,Nd.e)(Jd,.9))} max ${Math.round((0,Nd.e)(Jd,1))}`
+        const QQ = kQ.map((QQ => {
+          const FQ = vQ(this.edits.map((FQ => FQ[QQ])));
+          return `${QQ}: p50 ${Math.round((0,qQ.g)(FQ,.5))} p90 ${Math.round((0,qQ.g)(FQ,.9))} max ${Math.round((0,qQ.g)(FQ,1))}`
         }));
-        return [`${this.edits.length} edits`, ...dd].join("\n")
+        return [`${this.edits.length} edits`, ...QQ].join("\n")
       }
       dump() {
-        const dd = this.edits.map((dd => Zd.map((Jd => Math.round(10 * dd[Jd]) / 10)).join(",")));
-        return [this.stats(), Zd.join(","), ...dd].join("\n")
+        const QQ = this.edits.map((QQ => kQ.map((FQ => Math.round(10 * QQ[FQ]) / 10)).join(",")));
+        return [this.stats(), kQ.join(","), ...QQ].join("\n")
       }
     }
-    class ld {
-      constructor(dd, Jd) {
-        this.log = dd, this.Jl = Jd
+    class bQ {
+      constructor(QQ, FQ) {
+        this.log = QQ, this.dH = FQ
       }
-      edit(dd, Jd, kd) {
-        const [pd, Nd, Wd] = this.Jl.Vo.GNd(dd, Jd, kd), Pd = this.Jl.Vo.pO.NO(pd, Nd, Wd);
-        Pd && Pd.JO && this.log.edit(Kd(pd, Nd, Wd), performance.now())
+      edit(QQ, FQ, wQ) {
+        const [LQ, qQ, oQ] = this.dH.nH.iqQ(QQ, FQ, wQ), DQ = this.dH.nH.AA.tA(LQ, qQ, oQ);
+        DQ && DQ.YA && this.log.edit(uQ(LQ, qQ, oQ), performance.now())
       }
-      sent(dd, Jd, kd, pd, Nd) {
-        this.log.sent(Kd(dd.i, dd.j, dd.k), Jd, kd, pd, Nd, Cd, performance.now())
+      sent(QQ, FQ, wQ, LQ, qQ) {
+        this.log.sent(uQ(QQ.i, QQ.j, QQ.k), FQ, wQ, LQ, qQ, mQ, performance.now())
       }
-      received(dd) {
-        this.log.received(dd.meshJobId, dd.jobMs, performance.now())
+      received(QQ) {
+        this.log.received(QQ.meshJobId, QQ.jobMs, performance.now())
       }
-      failed(dd) {
-        this.log.failed(dd)
+      failed(QQ) {
+        this.log.failed(QQ)
       }
-      applied(dd, Jd) {
-        this.log.applied(Kd(dd.i, dd.j, dd.k), Jd, performance.now())
+      applied(QQ, FQ) {
+        this.log.applied(uQ(QQ.i, QQ.j, QQ.k), FQ, performance.now())
       }
     }
-    let Qd = null,
-      Ld = null,
-      Od = !1,
-      ed = null;
+    let YQ = null,
+      xQ = null,
+      AQ = !1,
+      tQ = null;
 
-    function Rd() {
-      return new Promise((dd => {
-        null !== Qd && Qd.reported >= Pd ? dd() : Ld = dd
+    function eQ() {
+      return new Promise((QQ => {
+        null !== YQ && YQ.reported >= DQ ? QQ() : xQ = QQ
       }))
     }
 
-    function Id() {
-      const dd = new od;
-      return Qd = dd, (0, Wd.g)("remesh", (() => dd.dump())), (0, Wd.b)("remeshStats", (() => {
-        console.log(dd.stats())
-      })), Od || (Od = !0, (0, pd.b)((dd => {
-        (0, Wd.h)("remesh", dd)
-      }), Rd)), dd
+    function MQ() {
+      const QQ = new HQ;
+      return YQ = QQ, (0, oQ.i)("remesh", (() => QQ.dump())), (0, oQ.e)("remeshStats", (() => {
+        console.log(QQ.stats())
+      })), AQ || (AQ = !0, (0, LQ.c)((QQ => {
+        (0, oQ.m)("remesh", QQ)
+      }), eQ)), QQ
     }
 
-    function Gd(dd) {
-      const Jd = Id();
-      ed = new ld(Jd, dd), dd.mG.meshProbe = ed, dd.on("beforeRender", (() => {
-        Jd.frame(performance.now())
+    function GQ(QQ) {
+      const FQ = MQ();
+      tQ = new bQ(FQ, QQ), QQ.RC.meshProbe = tQ, QQ.on("beforeRender", (() => {
+        FQ.frame(performance.now())
       }))
     }
 
-    function vd(dd, Jd, kd) {
-      var pd;
-      null === (pd = ed) || void 0 === pd || pd.edit(dd, Jd, kd)
+    function pQ(QQ, FQ, wQ) {
+      var LQ;
+      null === (LQ = tQ) || void 0 === LQ || LQ.edit(QQ, FQ, wQ)
     }
   },
-  37938: (dd, Jd, kd) => {
-    function pd(dd) {
-      return "string" !== typeof dd || 2 !== dd.length && ":" !== dd[2] ? null : dd[0] + dd[1]
+  37296: (QQ, FQ, wQ) => {
+    function LQ(QQ) {
+      return "string" !== typeof QQ || 2 !== QQ.length && ":" !== QQ[2] ? null : QQ[0] + QQ[1]
     }
-    kd.d(Jd, {
-      e: () => ed,
-      i: () => vd,
-      j: () => xd,
-      k: () => Zd,
-      n: () => Pd,
-      r: () => Wd,
-      v: () => gd,
-      x: () => Rd,
-      z: () => Od
+    wQ.d(FQ, {
+      d: () => tQ,
+      g: () => pQ,
+      i: () => cQ,
+      l: () => kQ,
+      o: () => DQ,
+      r: () => oQ,
+      s: () => vQ,
+      t: () => eQ,
+      v: () => AQ
     });
-    const Nd = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const qQ = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function Wd(dd) {
-      if (function(dd) {
-          for (let Jd = 0; Jd < Nd.length; Jd++)
-            if (dd === Nd[Jd]) return !0;
+    function oQ(QQ) {
+      if (function(QQ) {
+          for (let FQ = 0; FQ < qQ.length; FQ++)
+            if (QQ === qQ[FQ]) return !0;
           return !1
-        }(dd)) return !1;
-      const Jd = pd(dd);
-      return "op" === Jd || "ep" === Jd || "wi" === Jd || "pp" === Jd || "fp:call" === dd || "fp:t" === dd
+        }(QQ)) return !1;
+      const FQ = LQ(QQ);
+      return "op" === FQ || "ep" === FQ || "wi" === FQ || "pp" === FQ || "fp:call" === QQ || "fp:t" === QQ
     }
 
-    function Pd(dd) {
-      return "fp" === pd(dd) && !Wd(dd)
+    function DQ(QQ) {
+      return "fp" === LQ(QQ) && !oQ(QQ)
     }
 
-    function Zd(dd) {
-      if ("string" !== typeof dd) return !1;
-      return "o" === dd[0] && "p" === dd[1] && (2 === dd.length || ":" === dd[2]) || "fp:call" === dd || "2" === dd || "t" === dd || "a" === dd
+    function kQ(QQ) {
+      if ("string" !== typeof QQ) return !1;
+      return "o" === QQ[0] && "p" === QQ[1] && (2 === QQ.length || ":" === QQ[2]) || "fp:call" === QQ || "2" === QQ || "t" === QQ || "a" === QQ
     }
 
-    function gd(dd, Jd) {
-      return `~${function(dd){return dd.length<2?dd:":"===dd[1]?dd[0]:dd[0]+dd[1]}(Jd)}~${dd}`
+    function vQ(QQ, FQ) {
+      return `~${function(QQ){return QQ.length<2?QQ:":"===QQ[1]?QQ[0]:QQ[0]+QQ[1]}(FQ)}~${QQ}`
     }
-    const Cd = 200;
+    const mQ = 200;
 
-    function Kd(dd) {
-      let Jd = dd.length - 1;
-      for (let kd = 0; kd < 2; kd++) {
-        const kd = Jd;
-        for (; Jd >= 0 && dd[Jd] >= "0" && dd[Jd] <= "9";) Jd--;
-        if (Jd < 0 || Jd === kd || ":" !== dd[Jd]) return -1;
-        Jd--
+    function uQ(QQ) {
+      let FQ = QQ.length - 1;
+      for (let wQ = 0; wQ < 2; wQ++) {
+        const wQ = FQ;
+        for (; FQ >= 0 && QQ[FQ] >= "0" && QQ[FQ] <= "9";) FQ--;
+        if (FQ < 0 || FQ === wQ || ":" !== QQ[FQ]) return -1;
+        FQ--
       }
-      return Jd + 1
+      return FQ + 1
     }
 
-    function od(dd) {
-      return "unknown" === dd || Kd(dd) >= 0
+    function HQ(QQ) {
+      return "unknown" === QQ || uQ(QQ) >= 0
     }
 
-    function ld(dd, Jd) {
-      return dd[Jd] >= "\ud800" && dd[Jd] <= "\udbff" && Jd + 1 < dd.length && dd[Jd + 1] >= "\udc00" && dd[Jd + 1] <= "\udfff" ? 2 : 1
+    function bQ(QQ, FQ) {
+      return QQ[FQ] >= "\ud800" && QQ[FQ] <= "\udbff" && FQ + 1 < QQ.length && QQ[FQ + 1] >= "\udc00" && QQ[FQ + 1] <= "\udfff" ? 2 : 1
     }
 
-    function Qd(dd, Jd, kd) {
-      return 2 === kd ? 4 : dd[Jd] <= "\x7f" ? 1 : dd[Jd] <= "\u07ff" ? 2 : 3
+    function YQ(QQ, FQ, wQ) {
+      return 2 === wQ ? 4 : QQ[FQ] <= "\x7f" ? 1 : QQ[FQ] <= "\u07ff" ? 2 : 3
     }
 
-    function Ld(dd, Jd, kd) {
-      let pd = 0;
-      for (; pd < Jd;) {
-        const Jd = ld(dd, pd),
-          Nd = Qd(dd, pd, Jd);
-        if (Nd > kd) break;
-        kd -= Nd, pd += Jd
+    function xQ(QQ, FQ, wQ) {
+      let LQ = 0;
+      for (; LQ < FQ;) {
+        const FQ = bQ(QQ, LQ),
+          qQ = YQ(QQ, LQ, FQ);
+        if (qQ > wQ) break;
+        wQ -= qQ, LQ += FQ
       }
-      return pd
+      return LQ
     }
 
-    function Od(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof dd || dd.length > Cd || !od(dd)) return "t";
-      let kd = 2;
-      for (let Zd = 0; Zd < dd.length;) {
-        const Jd = ld(dd, Zd);
-        kd += Qd(dd, Zd, Jd), Zd += Jd
+    function AQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof QQ || QQ.length > mQ || !HQ(QQ)) return "t";
+      let wQ = 2;
+      for (let kQ = 0; kQ < QQ.length;) {
+        const FQ = bQ(QQ, kQ);
+        wQ += YQ(QQ, kQ, FQ), kQ += FQ
       }
-      if (kd <= Jd) return `t ${dd}`;
-      const pd = Kd(dd),
-        Nd = Jd - 2 - (dd.length - pd);
-      if (Nd < 0) return "t";
-      const Wd = Ld(dd, pd, Nd);
-      let Pd = "t ";
-      for (let Zd = 0; Zd < Wd; Zd++) Pd += dd[Zd];
-      for (let Zd = pd; Zd < dd.length; Zd++) Pd += dd[Zd];
-      return Pd
+      if (wQ <= FQ) return `t ${QQ}`;
+      const LQ = uQ(QQ),
+        qQ = FQ - 2 - (QQ.length - LQ);
+      if (qQ < 0) return "t";
+      const oQ = xQ(QQ, LQ, qQ);
+      let DQ = "t ";
+      for (let kQ = 0; kQ < oQ; kQ++) DQ += QQ[kQ];
+      for (let kQ = LQ; kQ < QQ.length; kQ++) DQ += QQ[kQ];
+      return DQ
     }
-    const ed = 62;
+    const tQ = 62;
 
-    function Rd(dd) {
-      let Jd = "so:";
-      const kd = Ld(dd, dd.length, ed - Jd.length);
-      for (let pd = 0; pd < kd; pd++) Jd += dd[pd];
-      return Jd
+    function eQ(QQ) {
+      let FQ = "so:";
+      const wQ = xQ(QQ, QQ.length, tQ - FQ.length);
+      for (let LQ = 0; LQ < wQ; LQ++) FQ += QQ[LQ];
+      return FQ
     }
-    const Id = "BABYLON ",
-      Gd = "DECODE ";
+    const MQ = "BABYLON ",
+      GQ = "DECODE ";
 
-    function vd(dd) {
-      return Rd(Id + dd)
+    function pQ(QQ) {
+      return eQ(MQ + QQ)
     }
 
-    function xd(dd) {
-      return Rd(Gd + dd)
+    function cQ(QQ) {
+      return eQ(GQ + QQ)
     }
   },
-  38163: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  37520: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  38154: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  37510: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  38167: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37527: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  38151: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  37502: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  38160: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37514: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

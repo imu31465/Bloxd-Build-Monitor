@@ -1,56 +1,56 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  4688: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      B: () => Wd,
-      Db: () => sd,
-      Eb: () => Bd,
-      F: () => ed,
-      Gb: () => jd,
-      Hb: () => Td,
-      I: () => Vd,
-      L: () => Kd,
-      Lb: () => fd,
-      M: () => od,
-      Ob: () => Ud,
-      P: () => Cd,
-      Qb: () => yd,
-      Sb: () => xd,
-      T: () => Rd,
-      Tb: () => qd,
-      Vb: () => cd,
-      X: () => gd,
-      Yb: () => Nd,
-      Z: () => Ld,
-      ab: () => Qd,
-      ac: () => td,
-      b: () => ud,
-      bb: () => ad,
-      d: () => rd,
-      eb: () => Fd,
-      gb: () => Yd,
-      h: () => ld,
-      ib: () => Md,
-      jb: () => md,
-      kb: () => Ed,
-      l: () => vd,
-      o: () => hd,
-      ob: () => Dd,
-      p: () => Gd,
-      q: () => Id,
-      sb: () => nd,
-      tb: () => bd,
-      u: () => Pd,
-      vb: () => Xd,
-      w: () => Zd,
-      xb: () => Sd,
-      y: () => pd,
-      zb: () => Od
+  4638: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      Ab: () => zQ,
+      B: () => LQ,
+      Eb: () => IQ,
+      F: () => oQ,
+      I: () => tQ,
+      Ib: () => TQ,
+      L: () => gQ,
+      Lb: () => UQ,
+      Nb: () => AQ,
+      O: () => uQ,
+      Q: () => HQ,
+      Qb: () => iQ,
+      U: () => mQ,
+      Ub: () => SQ,
+      Vb: () => NQ,
+      Y: () => eQ,
+      Zb: () => XQ,
+      ab: () => vQ,
+      bc: () => KQ,
+      cc: () => lQ,
+      db: () => xQ,
+      dc: () => jQ,
+      e: () => EQ,
+      eb: () => YQ,
+      fc: () => cQ,
+      h: () => JQ,
+      hb: () => WQ,
+      i: () => bQ,
+      jc: () => CQ,
+      l: () => pQ,
+      lb: () => OQ,
+      mc: () => VQ,
+      n: () => hQ,
+      nc: () => qQ,
+      ob: () => sQ,
+      pb: () => RQ,
+      qb: () => rQ,
+      r: () => GQ,
+      rc: () => nQ,
+      ub: () => fQ,
+      v: () => MQ,
+      wb: () => aQ,
+      x: () => DQ,
+      z: () => kQ
     });
-    const pd = 32,
-      Nd = 33.333333333333336,
-      Wd = {
+    const LQ = 32,
+      qQ = 33.333333333333336,
+      oQ = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -84,18 +84,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Pd = {
+      DQ = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Zd = {
+      kQ = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      gd = {
+      vQ = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -103,15 +103,15 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Cd = {
+      mQ = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Kd = 7,
-      od = {
+      uQ = 7,
+      HQ = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -120,13 +120,13 @@ export const modules = {
         WorkersLive: 5,
         WorkersRetired: 6
       },
-      ld = {
+      bQ = {
         Look: 0,
         Remesh: 1
       },
-      Qd = 8,
-      Ld = 1,
-      Od = {
+      YQ = 8,
+      xQ = 1,
+      AQ = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -135,7 +135,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      ed = {
+      tQ = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -163,12 +163,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Rd = {
+      eQ = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Id = {
+      MQ = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -220,7 +220,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Gd = {
+      GQ = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -230,10 +230,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      vd = 4,
-      xd = 4,
-      qd = 65535,
-      Bd = {
+      pQ = 4,
+      cQ = 4,
+      CQ = 65535,
+      SQ = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -246,7 +246,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      sd = {
+      iQ = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -254,12 +254,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      ad = 88,
-      Md = 0,
-      Fd = 24,
-      Yd = 48,
-      md = 80,
-      bd = {
+      WQ = 88,
+      RQ = 0,
+      OQ = 24,
+      sQ = 48,
+      rQ = 80,
+      IQ = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -270,18 +270,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Sd = {
+      UQ = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      jd = {
+      NQ = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Xd = {
+      TQ = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -299,34 +299,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      fd = {
+      KQ = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      nd = 65535,
-      Ud = {
+      zQ = 65535,
+      lQ = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      yd = {
+      jQ = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Dd = 2,
-      Td = {
+      aQ = 2,
+      XQ = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Ed = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      cd = {
+      fQ = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      VQ = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -338,7 +338,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      hd = {
+      hQ = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -365,7 +365,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      rd = {
+      JQ = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -523,8 +523,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      ud = 8,
-      td = {
+      EQ = 8,
+      nQ = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -549,147 +549,147 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      Vd = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      gQ = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  40785: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Zd
+  40232: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => kQ
     });
-    const pd = 1 << 20,
-      Nd = 1 << 21,
-      Wd = 1024,
-      Pd = 2048;
+    const LQ = 1 << 20,
+      qQ = 1 << 21,
+      oQ = 1024,
+      DQ = 2048;
 
-    function Zd(dd, Jd, kd) {
-      const Zd = dd + pd,
-        gd = Jd + Wd,
-        Cd = kd + pd;
-      return Zd < 0 || Zd >= Nd || Cd < 0 || Cd >= Nd || gd < 0 || gd >= Pd ? -1 : (Zd * Nd + Cd) * Pd + gd
+    function kQ(QQ, FQ, wQ) {
+      const kQ = QQ + LQ,
+        vQ = FQ + oQ,
+        mQ = wQ + LQ;
+      return kQ < 0 || kQ >= qQ || mQ < 0 || mQ >= qQ || vQ < 0 || vQ >= DQ ? -1 : (kQ * qQ + mQ) * DQ + vQ
     }
   },
-  40781: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd,
-      g: () => Pd,
-      h: () => Nd,
-      l: () => Wd,
-      m: () => Kd,
-      n: () => Cd,
-      q: () => gd,
-      u: () => Zd
+  40229: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ,
+      e: () => DQ,
+      f: () => qQ,
+      j: () => oQ,
+      l: () => uQ,
+      n: () => mQ,
+      o: () => vQ,
+      q: () => kQ
     });
-    kd(3291);
-    kd(40785);
+    wQ(3325);
+    wQ(40232);
 
-    function pd(dd) {}
+    function LQ(QQ) {}
 
-    function Nd(dd) {}
+    function qQ(QQ) {}
 
-    function Wd(dd) {}
+    function oQ(QQ) {}
 
-    function Pd(dd) {}
+    function DQ(QQ) {}
 
-    function Zd(dd) {}
+    function kQ(QQ) {}
 
-    function gd(dd, Jd, kd) {}
+    function vQ(QQ, FQ, wQ) {}
 
-    function Cd(dd) {}
+    function mQ(QQ) {}
 
-    function Kd(dd) {}
+    function uQ(QQ) {}
   },
-  40771: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      C: () => JJ,
-      G: () => Ed,
-      H: () => Td,
-      J: () => td,
-      L: () => ud,
-      M: () => pJ,
-      Q: () => Hd,
-      R: () => Fd,
-      d: () => kJ,
-      f: () => ZJ,
-      g: () => zd,
-      h: () => dJ,
-      l: () => rd,
-      n: () => Ad,
-      r: () => wd,
-      s: () => PJ,
-      v: () => yd,
-      w: () => Dd,
-      z: () => hd
+  40222: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      D: () => aQ,
+      H: () => hQ,
+      J: () => QF,
+      M: () => fQ,
+      N: () => XQ,
+      Q: () => nQ,
+      T: () => EQ,
+      U: () => wF,
+      Y: () => ZQ,
+      ab: () => OQ,
+      c: () => FF,
+      d: () => DF,
+      h: () => PQ,
+      l: () => dQ,
+      p: () => JQ,
+      t: () => BQ,
+      v: () => yQ,
+      w: () => oF,
+      z: () => jQ
     });
-    var pd = kd(300),
-      Nd = kd(268),
-      Wd = kd(271),
-      Pd = kd(22),
-      Zd = kd(2704),
-      gd = kd(661),
-      Cd = kd(4376),
-      Kd = kd(2651),
-      od = kd(3282),
-      ld = kd(95),
-      Qd = kd(296),
-      Ld = kd(33),
-      Od = kd(282),
-      ed = kd(111),
-      Rd = kd(618),
-      Id = kd(119),
-      Gd = kd(113),
-      vd = kd(4688),
-      xd = kd(40775),
-      qd = kd(1797),
-      Bd = kd(40778);
-    const sd = "bloxd-webgpuOffAfterLoss",
-      ad = "context:webgl",
-      Md = "probe:threw";
+    var LQ = wQ(307),
+      qQ = wQ(268),
+      oQ = wQ(273),
+      DQ = wQ(17),
+      kQ = wQ(2753),
+      vQ = wQ(656),
+      mQ = wQ(4358),
+      uQ = wQ(2697),
+      HQ = wQ(3318),
+      bQ = wQ(96),
+      YQ = wQ(299),
+      xQ = wQ(27),
+      AQ = wQ(282),
+      tQ = wQ(118),
+      eQ = wQ(629),
+      MQ = wQ(126),
+      GQ = wQ(124),
+      pQ = wQ(4638),
+      cQ = wQ(40224),
+      CQ = wQ(1772),
+      SQ = wQ(40226);
+    const iQ = "bloxd-webgpuOffAfterLoss",
+      WQ = "context:webgl",
+      RQ = "probe:threw";
 
-    function Fd(dd) {
-      let Jd;
+    function OQ(QQ) {
+      let FQ;
       try {
-        Jd = dd.getContext("webgl", {
-          powerPreference: Id.b
+        FQ = QQ.getContext("webgl", {
+          powerPreference: MQ.c
         })
       } catch {
-        Jd = null
+        FQ = null
       }
-      if (null === Jd) return null;
-      let kd = null;
+      if (null === FQ) return null;
+      let wQ = null;
       try {
-        const dd = Jd.getParameter(Jd.MAX_TEXTURE_SIZE);
-        kd = "number" === typeof dd && dd > 0 ? dd : null
+        const QQ = FQ.getParameter(FQ.MAX_TEXTURE_SIZE);
+        wQ = "number" === typeof QQ && QQ > 0 ? QQ : null
       } catch {
-        kd = null
+        wQ = null
       }
       try {
-        var pd;
-        null === (pd = Jd.getExtension("WEBGL_lose_context")) || void 0 === pd || pd.loseContext()
+        var LQ;
+        null === (LQ = FQ.getExtension("WEBGL_lose_context")) || void 0 === LQ || LQ.loseContext()
       } catch {}
-      return kd
+      return wQ
     }
-    const Yd = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
-      md = "mali_valhall",
-      bd = new Set(["nvidia_pre_turing"]);
+    const sQ = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
+      rQ = "mali_valhall",
+      IQ = new Set(["nvidia_pre_turing"]);
 
-    function Sd(dd) {
-      return function(dd) {
+    function UQ(QQ) {
+      return function(QQ) {
         try {
-          return dd()
+          return QQ()
         } catch {
           return null
         }
       }((() => {
-        var Jd, kd, pd, Pd;
-        const Zd = null !== (Jd = null === (kd = dd.info) || void 0 === kd ? void 0 : kd.vendor) && void 0 !== Jd ? Jd : "";
-        return "windows" === (0, ld.getOperatingSystem)() && "" !== Zd && "intel" !== (0, ld.normaliseGpuVendor)(Zd) ? null : ((0, ld.seedGpuVendor)(Zd), gd = (0, Nd.h)(), Cd = (0, Wd.g)(Zd, null !== (pd = null === (Pd = dd.info) || void 0 === Pd ? void 0 : Pd.architecture) && void 0 !== pd ? pd : ""), Yd.has(gd) ? "android_arm" === gd && Cd === md ? "webgpu_default" : "webgl_default" : null);
-        var gd, Cd
+        var FQ, wQ, LQ, DQ;
+        const kQ = null !== (FQ = null === (wQ = QQ.info) || void 0 === wQ ? void 0 : wQ.vendor) && void 0 !== FQ ? FQ : "";
+        return "windows" === (0, bQ.getOperatingSystem)() && "" !== kQ && "intel" !== (0, bQ.normaliseGpuVendor)(kQ) ? null : ((0, bQ.seedGpuVendor)(kQ), vQ = (0, qQ.k)(), mQ = (0, oQ.f)(kQ, null !== (LQ = null === (DQ = QQ.info) || void 0 === DQ ? void 0 : DQ.architecture) && void 0 !== LQ ? LQ : ""), sQ.has(vQ) ? "android_arm" === vQ && mQ === rQ ? "webgpu_default" : "webgl_default" : null);
+        var vQ, mQ
       }))
     }
 
-    function jd() {
-      var dd;
+    function NQ() {
+      var QQ;
       return {
-        gpu: null !== (dd = navigator.gpu) && void 0 !== dd ? dd : null,
+        gpu: null !== (QQ = navigator.gpu) && void 0 !== QQ ? QQ : null,
         webgl2: () => {
           try {
             return null !== document.createElement("canvas").getContext("webgl2")
@@ -697,317 +697,317 @@ export const modules = {
             return !1
           }
         },
-        webgl1: () => function(dd) {
-          let Jd, kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xd.d;
+        webgl1: () => function(QQ) {
+          let FQ, wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cQ.b;
           try {
-            Jd = dd.getContext("webgl")
+            FQ = QQ.getContext("webgl")
           } catch {
-            Jd = null
+            FQ = null
           }
-          if (null === Jd) return [ad];
-          const pd = [];
+          if (null === FQ) return [WQ];
+          const LQ = [];
           try {
-            for (const Nd of kd.extensions) null === Jd.getExtension(Nd) && pd.push(Nd);
-            for (const [Nd, Wd] of Object.entries(kd.limits)) {
-              const dd = Jd[Nd],
-                kd = "number" === typeof dd ? Jd.getParameter(dd) : null;
-              ("number" !== typeof kd || kd < Wd) && pd.push(`limit:${Nd}`)
+            for (const qQ of wQ.extensions) null === FQ.getExtension(qQ) && LQ.push(qQ);
+            for (const [qQ, oQ] of Object.entries(wQ.limits)) {
+              const QQ = FQ[qQ],
+                wQ = "number" === typeof QQ ? FQ.getParameter(QQ) : null;
+              ("number" !== typeof wQ || wQ < oQ) && LQ.push(`limit:${qQ}`)
             }
-            const dd = Jd.getShaderPrecisionFormat(Jd.VERTEX_SHADER, Jd.HIGH_FLOAT);
-            (null === dd || dd.precision < kd.vertexHighFloatBits) && pd.push("precision:vertex_high_float")
+            const QQ = FQ.getShaderPrecisionFormat(FQ.VERTEX_SHADER, FQ.HIGH_FLOAT);
+            (null === QQ || QQ.precision < wQ.vertexHighFloatBits) && LQ.push("precision:vertex_high_float")
           } catch {
-            pd.push(Md)
+            LQ.push(RQ)
           }
           try {
-            var Nd;
-            null === (Nd = Jd.getExtension("WEBGL_lose_context")) || void 0 === Nd || Nd.loseContext()
+            var qQ;
+            null === (qQ = FQ.getExtension("WEBGL_lose_context")) || void 0 === qQ || qQ.loseContext()
           } catch {}
-          return pd
+          return LQ
         }(document.createElement("canvas")),
-        offAfterLoss: dd => Xd((() => dd ? (0, Od.G)() : Pd.d.isWebGpuOffAfterLoss())),
-        oldIntelDriver: dd => Xd((() => (0, ed.c)(dd))),
-        intelGen9: dd => Xd((() => (0, ed.g)(dd))),
-        gpuClassWebGlArm: Sd,
-        storeGpuClassVerdict: dd => {
-          Ld.i.setItem(ed.x, dd)
+        offAfterLoss: QQ => TQ((() => QQ ? (0, AQ.v)() : DQ.c.isWebGpuOffAfterLoss())),
+        oldIntelDriver: QQ => TQ((() => (0, tQ.g)(QQ))),
+        intelGen9: QQ => TQ((() => (0, tQ.n)(QQ))),
+        gpuClassWebGlArm: UQ,
+        storeGpuClassVerdict: QQ => {
+          xQ.i.setItem(tQ.F, QQ)
         },
-        gpuClassOnWebGl: dd => (0, Rd.e)(dd),
+        gpuClassOnWebGl: QQ => (0, eQ.c)(QQ),
         override: () => function() {
-          if ((0, Zd.m)("render") && "webgl1" === (0, Zd.i)("renderer")) return "webgl1";
-          const dd = [() => new URLSearchParams(window.location.search).get(Kd.d), () => Ld.i.getItem(Kd.h), () => {
-            const dd = localStorage.getItem(sd);
-            return null !== dd && localStorage.removeItem(sd), "1" === dd ? "webgl2" : null
+          if ((0, kQ.o)("render") && "webgl1" === (0, kQ.n)("renderer")) return "webgl1";
+          const QQ = [() => new URLSearchParams(window.location.search).get(uQ.b), () => xQ.i.getItem(uQ.e), () => {
+            const QQ = localStorage.getItem(iQ);
+            return null !== QQ && localStorage.removeItem(iQ), "1" === QQ ? "webgl2" : null
           }];
-          for (const Jd of dd) {
-            let dd = null;
+          for (const FQ of QQ) {
+            let QQ = null;
             try {
-              dd = fd(Jd())
+              QQ = KQ(FQ())
             } catch {}
-            if (null !== dd) return dd
+            if (null !== QQ) return QQ
           }
           return null
         }(),
-        claimed: () => fd((0, gd.g)()),
+        claimed: () => KQ((0, vQ.j)()),
         webGpuSetting: () => {
-          const dd = Ld.i.getItem(pd._b);
-          return "boolean" === typeof dd ? dd : null
+          const QQ = xQ.i.getItem(LQ.lc);
+          return "boolean" === typeof QQ ? QQ : null
         },
-        heldBack: () => Rd.h,
-        storeHoldbackSpared: dd => {
-          Ld.i.setItem(ed.v, dd)
+        heldBack: () => eQ.g,
+        storeHoldbackSpared: QQ => {
+          xQ.i.setItem(tQ.D, QQ)
         },
-        intelGen9OnWebGl: () => Rd.j,
-        EQ: () => Xd((() => (0, od.d)(ld.featureFlags.settings.canUseShaderPacks))),
-        windows: () => Xd((() => "windows" === (0, ld.getOperatingSystem)()))
+        intelGen9OnWebGl: () => eQ.j,
+        JY: () => TQ((() => (0, HQ.f)(bQ.featureFlags.settings.canUseShaderPacks))),
+        windows: () => TQ((() => "windows" === (0, bQ.getOperatingSystem)()))
       }
     }
 
-    function Xd(dd) {
+    function TQ(QQ) {
       try {
-        return dd()
+        return QQ()
       } catch {
         return !1
       }
     }
 
-    function fd(dd) {
-      return "lite" === dd ? "webgpu" : "webgl2" === dd || "babylon" === dd ? "webgl" : null
+    function KQ(QQ) {
+      return "lite" === QQ ? "webgpu" : "webgl2" === QQ || "babylon" === QQ ? "webgl" : null
     }
-    async function nd() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : jd();
-      const Jd = await async function(dd) {
-        const Jd = function(dd) {
-            const Jd = dd.override(),
-              kd = dd.webGpuSetting(),
-              pd = null === Jd && !0 !== kd && dd.EQ(),
-              Nd = null !== Jd || null !== kd || pd ? null : dd.claimed(),
-              Wd = null !== Jd ? "override" : !0 === kd ? "setting" : pd ? "pack" : !1 === kd ? "setting" : null !== Nd ? "claim" : "default",
-              Pd = function(dd) {
-                return "override" === dd || "setting" === dd
-              }(Wd);
-            if ("webgl" === Jd || "webgl1" === Jd || "webgl" === Nd || "setting" === Wd && !1 === kd) return {
-              source: Wd,
-              asked: Pd,
+    async function zQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : NQ();
+      const FQ = await async function(QQ) {
+        const FQ = function(QQ) {
+            const FQ = QQ.override(),
+              wQ = QQ.webGpuSetting(),
+              LQ = null === FQ && !0 !== wQ && QQ.JY(),
+              qQ = null !== FQ || null !== wQ || LQ ? null : QQ.claimed(),
+              oQ = null !== FQ ? "override" : !0 === wQ ? "setting" : LQ ? "pack" : !1 === wQ ? "setting" : null !== qQ ? "claim" : "default",
+              DQ = function(QQ) {
+                return "override" === QQ || "setting" === QQ
+              }(oQ);
+            if ("webgl" === FQ || "webgl1" === FQ || "webgl" === qQ || "setting" === oQ && !1 === wQ) return {
+              source: oQ,
+              asked: DQ,
               refused: "not_requested"
             };
-            if (!dd.gpu) return {
-              source: Wd,
-              asked: Pd,
+            if (!QQ.gpu) return {
+              source: oQ,
+              asked: DQ,
               refused: "no_webgpu_api"
             };
-            const Zd = "default" === Wd && dd.heldBack();
-            if (Zd && !dd.windows()) return {
-              source: Wd,
-              asked: Pd,
+            const kQ = "default" === oQ && QQ.heldBack();
+            if (kQ && !QQ.windows()) return {
+              source: oQ,
+              asked: DQ,
               refused: "webgl_holdback"
             };
-            if (!Pd && dd.offAfterLoss("pack" === Wd)) return {
-              source: Wd,
-              asked: Pd,
-              refused: Zd ? "webgl_holdback" : "off_after_loss"
+            if (!DQ && QQ.offAfterLoss("pack" === oQ)) return {
+              source: oQ,
+              asked: DQ,
+              refused: kQ ? "webgl_holdback" : "off_after_loss"
             };
             return {
-              source: Wd,
-              asked: Pd,
-              heldBack: Zd,
-              gpu: dd.gpu
+              source: oQ,
+              asked: DQ,
+              heldBack: kQ,
+              gpu: QQ.gpu
             }
-          }(dd),
+          }(QQ),
           {
-            source: kd
-          } = Jd,
-          pd = !Jd.asked,
-          Nd = "gpu" in Jd && Jd.heldBack,
-          Pd = function(dd) {
-            return Nd && "none" !== dd ? {
+            source: wQ
+          } = FQ,
+          LQ = !FQ.asked,
+          qQ = "gpu" in FQ && FQ.heldBack,
+          DQ = function(QQ) {
+            return qQ && "none" !== QQ ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: kd
+              source: wQ
             } : {
-              reason: dd,
+              reason: QQ,
               adapter: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              source: kd
+              source: wQ
             }
           };
-        if (!("gpu" in Jd)) return Pd(Jd.refused);
-        let Zd;
+        if (!("gpu" in FQ)) return DQ(FQ.refused);
+        let kQ;
         try {
-          Zd = await (0, qd.m)((0, Gd.i)(Jd.gpu), NJ, `requestAdapter didn't settle in ${NJ/1e3} s`)
+          kQ = await (0, CQ.l)((0, GQ.l)(FQ.gpu), LF, `requestAdapter didn't settle in ${LF/1e3} s`)
         } catch {
-          return Pd("adapter_error")
+          return DQ("adapter_error")
         }
-        if ("string" === typeof Zd) return Pd(Zd);
-        const gd = (0, Gd.b)(Zd);
-        if ((0, Gd.e)(Zd)) return Pd("software_adapter", gd);
-        const Cd = dd.windows() && function(dd) {
-          return bd.has((0, Wd.g)(dd.vendor, dd.architecture))
-        }(gd);
-        if (dd.storeHoldbackSpared(Cd), Nd && !Cd) return Pd("webgl_holdback");
-        const Kd = dd.intelGen9(Zd),
-          od = Kd ? null : dd.gpuClassWebGlArm(Zd);
-        if (dd.storeGpuClassVerdict(null !== od && void 0 !== od && od), pd && dd.oldIntelDriver(Zd)) return Pd("old_intel_driver", gd);
-        if ("default" === kd && dd.intelGen9OnWebGl() && Kd) return Pd("intel_gen9", gd);
-        if ("default" === kd && null !== od && dd.gpuClassOnWebGl(od)) return Pd("gpu_class_webgl", gd);
-        return Pd("none", gd)
-      }(dd);
-      if ("none" === Jd.reason) return {
+        if ("string" === typeof kQ) return DQ(kQ);
+        const vQ = (0, GQ.d)(kQ);
+        if ((0, GQ.g)(kQ)) return DQ("software_adapter", vQ);
+        const mQ = QQ.windows() && function(QQ) {
+          return IQ.has((0, oQ.f)(QQ.vendor, QQ.architecture))
+        }(vQ);
+        if (QQ.storeHoldbackSpared(mQ), qQ && !mQ) return DQ("webgl_holdback");
+        const uQ = QQ.intelGen9(kQ),
+          HQ = uQ ? null : QQ.gpuClassWebGlArm(kQ);
+        if (QQ.storeGpuClassVerdict(null !== HQ && void 0 !== HQ && HQ), LQ && QQ.oldIntelDriver(kQ)) return DQ("old_intel_driver", vQ);
+        if ("default" === wQ && QQ.intelGen9OnWebGl() && uQ) return DQ("intel_gen9", vQ);
+        if ("default" === wQ && null !== HQ && QQ.gpuClassOnWebGl(HQ)) return DQ("gpu_class_webgl", vQ);
+        return DQ("none", vQ)
+      }(QQ);
+      if ("none" === FQ.reason) return {
         backend: "webgpu",
-        ...Jd
+        ...FQ
       };
-      if ("webgl1" !== dd.override() && dd.webgl2()) return {
+      if ("webgl1" !== QQ.override() && QQ.webgl2()) return {
         backend: "webgl",
-        ...Jd
+        ...FQ
       };
-      const kd = dd.webgl1();
-      return 0 === kd.length ? {
+      const wQ = QQ.webgl1();
+      return 0 === wQ.length ? {
         backend: "webgl1",
-        ...Jd
+        ...FQ
       } : {
-        missing: kd
+        missing: wQ
       }
     }
-    let Ud = !1;
-    async function yd(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jd();
-      if (null === dd) return null;
-      const kd = await nd(Jd);
-      return Ud = !("missing" in kd) && "webgpu" === kd.backend && "claim" === kd.source, "missing" in kd ? kd : {
-        ...kd,
-        load: dd[kd.backend]
+    let lQ = !1;
+    async function jQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NQ();
+      if (null === QQ) return null;
+      const wQ = await zQ(FQ);
+      return lQ = !("missing" in wQ) && "webgpu" === wQ.backend && "claim" === wQ.source, "missing" in wQ ? wQ : {
+        ...wQ,
+        load: QQ[wQ.backend]
       }
     }
-    async function Dd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : jd().gpu,
-        pd = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== dd.backend) return !1;
-      const Nd = cd(Jd, "indirectDraws", "off", "on");
-      if (null !== Nd) return Nd;
-      if (null !== dd.adapter && (0, ed.k)(dd.adapter, pd)) return !0;
-      if (null === kd) return !1;
+    async function aQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : NQ().gpu,
+        LQ = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== QQ.backend) return !1;
+      const qQ = VQ(FQ, "indirectDraws", "off", "on");
+      if (null !== qQ) return qQ;
+      if (null !== QQ.adapter && (0, tQ.q)(QQ.adapter, LQ)) return !0;
+      if (null === wQ) return !1;
       try {
-        var Wd;
-        const dd = await (0, qd.m)(kd.requestAdapter({
+        var oQ;
+        const QQ = await (0, CQ.l)(wQ.requestAdapter({
           powerPreference: "low-power"
-        }).then((async dd => (null !== dd && await (0, Gd.d)(dd), dd))), NJ, `the low-power requestAdapter didn't settle in ${NJ/1e3} s`);
-        return (0, ed.k)(null !== (Wd = null === dd || void 0 === dd ? void 0 : dd.info) && void 0 !== Wd ? Wd : {}, pd)
-      } catch (Pd) {
-        return Pd instanceof qd.i
+        }).then((async QQ => (null !== QQ && await (0, GQ.e)(QQ), QQ))), LF, `the low-power requestAdapter didn't settle in ${LF/1e3} s`);
+        return (0, tQ.q)(null !== (oQ = null === QQ || void 0 === QQ ? void 0 : QQ.info) && void 0 !== oQ ? oQ : {}, LQ)
+      } catch (DQ) {
+        return DQ instanceof CQ.g
       }
     }
 
-    function Td(dd, Jd, kd) {
-      if ("webgpu" !== dd.backend) return !1;
-      const pd = cd(Jd, "terrainFetch", "texture", "storage");
-      return null !== pd ? pd : null !== dd.adapter && (0, ed.e)(dd.adapter, kd)
+    function XQ(QQ, FQ, wQ) {
+      if ("webgpu" !== QQ.backend) return !1;
+      const LQ = VQ(FQ, "terrainFetch", "texture", "storage");
+      return null !== LQ ? LQ : null !== QQ.adapter && (0, tQ.k)(QQ.adapter, wQ)
     }
 
-    function Ed(dd, Jd, kd) {
-      if ("webgpu" !== dd.backend) return !1;
-      const pd = cd(Jd, "sceneDepth", "off", "on");
-      return null !== pd ? pd : null !== dd.adapter && (0, ed.f)(dd.adapter, kd)
+    function fQ(QQ, FQ, wQ) {
+      if ("webgpu" !== QQ.backend) return !1;
+      const LQ = VQ(FQ, "sceneDepth", "off", "on");
+      return null !== LQ ? LQ : null !== QQ.adapter && (0, tQ.l)(QQ.adapter, wQ)
     }
 
-    function cd(dd, Jd, kd, pd) {
-      const Nd = new URLSearchParams(dd).get(Jd),
-        Wd = null !== Nd && void 0 !== Nd ? Nd : (0, gd.e)(Jd);
-      return Wd !== kd && Wd !== pd ? null : (Ud ||= null === Nd, Wd === kd)
+    function VQ(QQ, FQ, wQ, LQ) {
+      const qQ = new URLSearchParams(QQ).get(FQ),
+        oQ = null !== qQ && void 0 !== qQ ? qQ : (0, vQ.d)(FQ);
+      return oQ !== wQ && oQ !== LQ ? null : (lQ ||= null === qQ, oQ === wQ)
     }
 
-    function hd(dd, Jd) {
-      return "webgl" === dd.backend && (0, Wd.n)(Jd)
+    function hQ(QQ, FQ) {
+      return "webgl" === QQ.backend && (0, oQ.q)(FQ)
     }
 
-    function rd(dd) {
-      return null !== dd && "missing" in dd
+    function JQ(QQ) {
+      return null !== QQ && "missing" in QQ
     }
 
-    function ud(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Pd.d;
+    function EQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DQ.c;
       try {
-        const kd = "start_failed" === dd || "pipeline_failed" === dd,
-          pd = Jd.turnOffWebGpuAfterDeviceLoss(kd ? "visible" : (0, Od.l)((0, Qd.h)()));
-        return !Ud || pd && !Jd.isWebGpuOffAfterLoss() || (0, gd.q)("webgpuLoss"), Jd.isWebGpuOffAfterLoss() && "webgpu" === fd(Ld.i.getItem(Kd.h)) && Ld.i.removeItem(Kd.h), (0, Zd.m)("webgpuloss") && (0, Cd.d)((Jd => {
-          Jd.noteWebGpuLoss("wasm", pd ? dd : `${dd}, which storage didn't keep`, null)
-        })), pd
+        const wQ = "start_failed" === QQ || "pipeline_failed" === QQ,
+          LQ = FQ.turnOffWebGpuAfterDeviceLoss(wQ ? "visible" : (0, AQ.j)((0, YQ.g)()));
+        return !lQ || LQ && !FQ.isWebGpuOffAfterLoss() || (0, vQ.s)("webgpuLoss"), FQ.isWebGpuOffAfterLoss() && "webgpu" === KQ(xQ.i.getItem(uQ.e)) && xQ.i.removeItem(uQ.e), (0, kQ.o)("webgpuloss") && (0, mQ.b)((FQ => {
+          FQ.noteWebGpuLoss("wasm", LQ ? QQ : `${QQ}, which storage didn't keep`, null)
+        })), LQ
       } catch {
         return !1
       }
     }
 
-    function td(dd) {
-      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !Hd()) ? ud(dd) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+    function nQ(QQ) {
+      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !ZQ()) ? EQ(QQ) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const Vd = "framePacing";
+    const gQ = "framePacing";
 
-    function zd(dd) {
-      const Jd = new URLSearchParams(dd).get(Vd);
-      return null !== Jd && /^\d{1,9}$/.test(Jd) ? Number(Jd) : void 0
+    function PQ(QQ) {
+      const FQ = new URLSearchParams(QQ).get(gQ);
+      return null !== FQ && /^\d{1,9}$/.test(FQ) ? Number(FQ) : void 0
     }
 
-    function Hd() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function ZQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === fd(new URLSearchParams(dd).get(Kd.d))
+        return "webgpu" === KQ(new URLSearchParams(QQ).get(uQ.b))
       } catch {
         return !1
       }
     }
 
-    function wd(dd) {
-      return !!Ad(dd) || dd instanceof Error && !(dd instanceof WebAssembly.RuntimeError) && dd.message.startsWith(`${vd.d.RenderSurfaceUnusable}:`)
+    function yQ(QQ) {
+      return !!BQ(QQ) || QQ instanceof Error && !(QQ instanceof WebAssembly.RuntimeError) && QQ.message.startsWith(`${pQ.h.RenderSurfaceUnusable}:`)
     }
 
-    function Ad(dd) {
+    function BQ(QQ) {
       const {
-        name: Jd,
-        message: kd
-      } = null !== dd && void 0 !== dd ? dd : {};
-      return "InvalidStateError" === Jd && "string" === typeof kd && kd.startsWith("GPUDevice.")
+        name: FQ,
+        message: wQ
+      } = null !== QQ && void 0 !== QQ ? QQ : {};
+      return "InvalidStateError" === FQ && "string" === typeof wQ && wQ.startsWith("GPUDevice.")
     }
 
-    function dJ(dd) {
-      const Jd = dd;
-      return "function" === typeof Jd.Kpd && "function" === typeof Jd.lpd ? Jd : null
+    function dQ(QQ) {
+      const FQ = QQ;
+      return "function" === typeof FQ.bLQ && "function" === typeof FQ.YLQ ? FQ : null
     }
 
-    function JJ(dd) {
-      return "function" === typeof dd.Gpd ? dd : null
+    function QF(QQ) {
+      return "function" === typeof QQ.CLQ ? QQ : null
     }
-    const kJ = "openRenderer";
+    const FF = "openRenderer";
 
-    function pJ(dd) {
-      const Jd = null === dd || void 0 === dd ? void 0 : dd.bWd();
-      return void 0 === Jd ? void 0 : new Error(Jd)
+    function wF(QQ) {
+      const FQ = null === QQ || void 0 === QQ ? void 0 : QQ.KoQ();
+      return void 0 === FQ ? void 0 : new Error(FQ)
     }
-    const NJ = 5e3,
-      WJ = 15e3;
+    const LF = 5e3,
+      qF = 15e3;
 
-    function PJ(dd, Jd, kd, pd, Nd, Wd) {
-      return (0, qd.m)(function(dd, Jd, kd, pd, Nd, Wd) {
-        return (0, Bd.f)(dd, Jd, (() => dd.Gpd(kd, pd, Nd, Wd.indirectHangs, Wd.storagePullBreaks, Wd.splitPassBreaks, Wd.framesAhead, Wd.instancedTerrainSlow)))
-      }(dd, Jd, kd, pd, Nd, Wd), WJ, `${vd.d.RenderSurfaceUnusable}: the renderer didn't open in ${WJ/1e3} s`, gJ)
+    function oF(QQ, FQ, wQ, LQ, qQ, oQ) {
+      return (0, CQ.l)(function(QQ, FQ, wQ, LQ, qQ, oQ) {
+        return (0, SQ.f)(QQ, FQ, (() => QQ.CLQ(wQ, LQ, qQ, oQ.indirectHangs, oQ.storagePullBreaks, oQ.splitPassBreaks, oQ.framesAhead, oQ.instancedTerrainSlow)))
+      }(QQ, FQ, wQ, LQ, qQ, oQ), qF, `${pQ.h.RenderSurfaceUnusable}: the renderer didn't open in ${qF/1e3} s`, kF)
     }
-    async function ZJ(dd, Jd, kd, pd, Nd, Wd) {
-      if ("function" !== typeof dd.IPd) throw new Error("this core has no set_renderer");
-      const Pd = await PJ(Jd, kJ, kd, Nd, pd, Wd);
+    async function DF(QQ, FQ, wQ, LQ, qQ, oQ) {
+      if ("function" !== typeof QQ.SDQ) throw new Error("this core has no set_renderer");
+      const DQ = await oF(FQ, FF, wQ, qQ, LQ, oQ);
       try {
-        dd.IPd(Pd)
-      } catch (Zd) {
-        throw gJ(Pd), Zd
+        QQ.SDQ(DQ)
+      } catch (kQ) {
+        throw kF(DQ), kQ
       }
     }
 
-    function gJ(dd) {
+    function kF(QQ) {
       try {
-        dd.free()
+        QQ.free()
       } catch {}
     }
   },
-  40775: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => pd
+  40224: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ
     });
-    const pd = {
+    const LQ = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -1020,361 +1020,361 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  40792: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => gd,
-      f: () => Zd
+  40239: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => vQ,
+      d: () => kQ
     });
-    var pd = kd(679),
-      Nd = kd(681);
+    var LQ = wQ(671),
+      qQ = wQ(676);
 
-    function Wd(dd, Jd) {
-      const kd = null === Jd ? void 0 : pd.c.get(Jd);
-      return "all" === kd || "webgl" === kd && "webgpu" !== dd.backend ? Jd : null
+    function oQ(QQ, FQ) {
+      const wQ = null === FQ ? void 0 : LQ.c.get(FQ);
+      return "all" === wQ || "webgl" === wQ && "webgpu" !== QQ.backend ? FQ : null
     }
 
-    function Pd(dd) {
-      return "software_adapter" === dd.reason ? null : dd.adapter
+    function DQ(QQ) {
+      return "software_adapter" === QQ.reason ? null : QQ.adapter
     }
 
-    function Zd(dd, Jd) {
-      const kd = (0, pd.u)();
-      return null === kd ? null : (0, pd.e)(Pd(dd), kd, Jd ? pd.j : pd.h)
+    function kQ(QQ, FQ) {
+      const wQ = (0, LQ.n)();
+      return null === wQ ? null : (0, LQ.d)(DQ(QQ), wQ, FQ ? LQ.i : LQ.h)
     }
 
-    function gd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Nd.j;
-      const pd = Wd(dd, Jd);
-      return null !== pd && "webgl" === dd.backend && kd(pd) ? null : pd
+    function vQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qQ.j;
+      const LQ = oQ(QQ, FQ);
+      return null !== LQ && "webgl" === QQ.backend && wQ(LQ) ? null : LQ
     }
   },
-  40778: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Nd,
-      f: () => Kd,
-      j: () => Pd,
-      k: () => gd
+  40226: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => qQ,
+      f: () => uQ,
+      g: () => DQ,
+      j: () => vQ
     });
-    var pd = kd(36458);
-    class Nd extends Error {
-      constructor(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${dd}: the module trapped${kd?" in an earlier call":""}: ${String(Jd)}`, {
-          cause: Jd
-        }), this.site = dd, this.trap = Jd, this.earlier = kd, this.name = "ModuleTrapError", Jd instanceof Error && void 0 !== Jd.stack && (this.stack = `${this.name}: ${this.message}\n${Jd.stack}`)
+    var LQ = wQ(35943);
+    class qQ extends Error {
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${QQ}: the module trapped${wQ?" in an earlier call":""}: ${String(FQ)}`, {
+          cause: FQ
+        }), this.site = QQ, this.trap = FQ, this.earlier = wQ, this.name = "ModuleTrapError", FQ instanceof Error && void 0 !== FQ.stack && (this.stack = `${this.name}: ${this.message}\n${FQ.stack}`)
       }
     }
-    const Wd = new WeakMap;
+    const oQ = new WeakMap;
 
-    function Pd(dd) {
-      return Wd.has(dd)
+    function DQ(QQ) {
+      return oQ.has(QQ)
     }
 
-    function Zd(dd, Jd) {
-      Wd.has(dd) || Wd.set(dd, Jd)
+    function kQ(QQ, FQ) {
+      oQ.has(QQ) || oQ.set(QQ, FQ)
     }
 
-    function gd(dd, Jd) {
-      return !!(0, pd.h)(Jd) && (Zd(dd, Jd), !0)
+    function vQ(QQ, FQ) {
+      return !!(0, LQ.h)(FQ) && (kQ(QQ, FQ), !0)
     }
-    const Cd = [
-      ["error", dd => dd.error],
-      ["unhandledrejection", dd => dd.reason]
+    const mQ = [
+      ["error", QQ => QQ.error],
+      ["unhandledrejection", QQ => QQ.reason]
     ];
 
-    function Kd(dd, Jd, kd) {
-      let Pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return Wd.has(dd) ? Promise.reject(new Nd(Jd, Wd.get(dd), !0)) : new Promise(((Wd, gd) => {
-        const Kd = kd => {
-            Zd(dd, kd), Qd(), gd(new Nd(Jd, kd))
+    function uQ(QQ, FQ, wQ) {
+      let DQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return oQ.has(QQ) ? Promise.reject(new qQ(FQ, oQ.get(QQ), !0)) : new Promise(((oQ, vQ) => {
+        const uQ = wQ => {
+            kQ(QQ, wQ), YQ(), vQ(new qQ(FQ, wQ))
           },
-          od = dd => {
-            dd instanceof WebAssembly.RuntimeError ? Kd(dd) : (Qd(), gd(dd))
+          HQ = QQ => {
+            QQ instanceof WebAssembly.RuntimeError ? uQ(QQ) : (YQ(), vQ(QQ))
           },
-          ld = Cd.map((dd => {
-            let [Jd, kd] = dd;
-            return [Jd, dd => {
-              const Jd = kd(dd);
-              (0, pd.h)(Jd) && Kd(Jd)
+          bQ = mQ.map((QQ => {
+            let [FQ, wQ] = QQ;
+            return [FQ, QQ => {
+              const FQ = wQ(QQ);
+              (0, LQ.h)(FQ) && uQ(FQ)
             }]
           })),
-          Qd = () => {
-            for (const [dd, Jd] of ld) null === Pd || void 0 === Pd || Pd.removeEventListener(dd, Jd)
+          YQ = () => {
+            for (const [QQ, FQ] of bQ) null === DQ || void 0 === DQ || DQ.removeEventListener(QQ, FQ)
           };
-        for (const [dd, Jd] of ld) null === Pd || void 0 === Pd || Pd.addEventListener(dd, Jd);
-        let Ld;
+        for (const [QQ, FQ] of bQ) null === DQ || void 0 === DQ || DQ.addEventListener(QQ, FQ);
+        let xQ;
         try {
-          Ld = kd()
-        } catch (Od) {
-          return void od(Od)
+          xQ = wQ()
+        } catch (AQ) {
+          return void HQ(AQ)
         }
-        Ld.then((dd => {
-          Qd(), Wd(dd)
-        }), od)
+        xQ.then((QQ => {
+          YQ(), oQ(QQ)
+        }), HQ)
       }))
     }
   },
-  40801: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      C: () => Td,
-      E: () => Dd,
-      H: () => jd,
-      L: () => sd,
-      P: () => bd,
-      R: () => Sd,
-      S: () => fd,
-      T: () => md,
-      d: () => Bd,
-      e: () => vd,
-      h: () => nd,
-      i: () => Xd,
-      k: () => Gd,
-      o: () => qd,
-      r: () => Rd,
-      v: () => Md,
-      z: () => Yd
+  40242: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      A: () => aQ,
+      D: () => NQ,
+      G: () => iQ,
+      J: () => IQ,
+      M: () => UQ,
+      O: () => KQ,
+      R: () => rQ,
+      c: () => SQ,
+      d: () => pQ,
+      h: () => zQ,
+      k: () => TQ,
+      n: () => GQ,
+      p: () => CQ,
+      q: () => eQ,
+      s: () => RQ,
+      w: () => sQ,
+      z: () => XQ
     });
-    var pd = kd(201),
-      Nd = kd(271),
-      Wd = kd(22),
-      Pd = kd(296),
-      Zd = kd(33),
-      gd = kd(40771),
-      Cd = kd(40792),
-      Kd = kd(40807),
-      od = (kd(40781), kd(40811)),
-      ld = kd(40818);
-    const Qd = "wasmJoinBuild";
-    let Ld = null,
-      Od = null,
-      ed = null;
+    var LQ = wQ(217),
+      qQ = wQ(273),
+      oQ = wQ(17),
+      DQ = wQ(299),
+      kQ = wQ(27),
+      vQ = wQ(40222),
+      mQ = wQ(40239),
+      uQ = wQ(40250),
+      HQ = (wQ(40229), wQ(40254)),
+      bQ = wQ(40259);
+    const YQ = "wasmJoinBuild";
+    let xQ = null,
+      AQ = null,
+      tQ = null;
 
-    function Rd(dd) {
-      ed = dd
+    function eQ(QQ) {
+      tQ = QQ
     }
-    let Id = !1;
+    let MQ = !1;
 
-    function Gd() {
-      Id = !0
-    }
-
-    function vd() {
-      return Id
-    }
-    let xd = !1;
-
-    function qd() {
-      xd = !0
+    function GQ() {
+      MQ = !0
     }
 
-    function Bd() {
-      return xd
+    function pQ() {
+      return MQ
+    }
+    let cQ = !1;
+
+    function CQ() {
+      cQ = !0
     }
 
-    function sd() {
-      return ed
-    }
-    let ad = null;
-
-    function Md(dd) {
-      ad = dd, (0, Pd.e)(dd)
-    }
-    const Fd = "wasmClientRenderLost";
-
-    function Yd() {
-      Zd.k.setItem(Fd, !0)
+    function SQ() {
+      return cQ
     }
 
-    function md() {
-      return !0 === Zd.k.getItem(Fd)
+    function iQ() {
+      return tQ
+    }
+    let WQ = null;
+
+    function RQ(QQ) {
+      WQ = QQ, (0, DQ.b)(QQ)
+    }
+    const OQ = "wasmClientRenderLost";
+
+    function sQ() {
+      kQ.m.setItem(OQ, !0)
     }
 
-    function bd() {
-      return ad
+    function rQ() {
+      return !0 === kQ.m.getItem(OQ)
     }
 
-    function Sd() {
-      return null === Ld && (Zd.i.removeItem("wasmLastPick"), Zd.i.removeItem("wasmGuessVerdict"), (0, Pd.j)(), Ld = (0, gd.v)(Kd.g).then((dd => (null === dd || (0, gd.l)(dd) || (Od = od.d[dd.backend], Wd.d.followGameGpu("webgpu" === dd.backend ? dd.adapter : null), "webgpu" === dd.backend && (0, ld.g)()), dd)))), Ld
+    function IQ() {
+      return WQ
     }
 
-    function jd() {
-      return Od
+    function UQ() {
+      return null === xQ && (kQ.i.removeItem("wasmLastPick"), kQ.i.removeItem("wasmGuessVerdict"), (0, DQ.h)(), xQ = (0, vQ.z)(uQ.e).then((QQ => (null === QQ || (0, vQ.p)(QQ) || (AQ = HQ.b[QQ.backend], oQ.c.followGameGpu("webgpu" === QQ.backend ? QQ.adapter : null), "webgpu" === QQ.backend && (0, bQ.f)()), QQ)))), xQ
     }
 
-    function Xd(dd) {
-      return dd ? dd.load() : Promise.resolve().then((function() {
-        var dd = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw dd.code = "MODULE_NOT_FOUND", dd
-      })).then((dd => dd.bloxdWasmClient))
+    function NQ() {
+      return AQ
     }
 
-    function fd(dd) {
-      Zd.i.setItem(Qd, dd)
+    function TQ(QQ) {
+      return QQ ? QQ.load() : Promise.resolve().then((function() {
+        var QQ = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw QQ.code = "MODULE_NOT_FOUND", QQ
+      })).then((QQ => QQ.bloxdWasmClient))
     }
-    async function nd() {
-      if (null === Kd.g) return Xd(null);
-      const dd = Zd.i.getItem(Qd);
-      let Jd = "none" === dd ? null : "webgl";
-      return null !== dd && "none" !== dd && ("string" === typeof dd && void 0 !== (0, pd.d)(Kd.g, dd) ? Jd = dd : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(dd)}, is none of this client's: guessing WebGL2's`)), null === Jd ? null : Kd.g[Jd]()
-    }
-    let Ud = null,
-      yd = null;
 
-    function Dd() {
-      return Ud ??= Sd().then((async dd => {
-        var Jd;
-        const kd = null !== dd && !(0, gd.l)(dd),
-          pd = {
-            indirectHangs: kd && await (0, gd.w)(dd, window.location.search),
-            storagePullBreaks: kd && (0, gd.H)(dd, window.location.search),
-            splitPassBreaks: kd && (0, gd.G)(dd, window.location.search),
-            framesAhead: (0, gd.g)(window.location.search),
-            instancedTerrainSlow: kd && (0, gd.z)(dd, null !== (Jd = (0, Cd.f)(dd, !1)) && void 0 !== Jd ? Jd : (0, Nd.c)())
+    function KQ(QQ) {
+      kQ.i.setItem(YQ, QQ)
+    }
+    async function zQ() {
+      if (null === uQ.e) return TQ(null);
+      const QQ = kQ.i.getItem(YQ);
+      let FQ = "none" === QQ ? null : "webgl";
+      return null !== QQ && "none" !== QQ && ("string" === typeof QQ && void 0 !== (0, LQ.b)(uQ.e, QQ) ? FQ = QQ : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(QQ)}, is none of this client's: guessing WebGL2's`)), null === FQ ? null : uQ.e[FQ]()
+    }
+    let lQ = null,
+      jQ = null;
+
+    function aQ() {
+      return lQ ??= UQ().then((async QQ => {
+        var FQ;
+        const wQ = null !== QQ && !(0, vQ.p)(QQ),
+          LQ = {
+            indirectHangs: wQ && await (0, vQ.D)(QQ, window.location.search),
+            storagePullBreaks: wQ && (0, vQ.N)(QQ, window.location.search),
+            splitPassBreaks: wQ && (0, vQ.M)(QQ, window.location.search),
+            framesAhead: (0, vQ.h)(window.location.search),
+            instancedTerrainSlow: wQ && (0, vQ.H)(QQ, null !== (FQ = (0, mQ.d)(QQ, !1)) && void 0 !== FQ ? FQ : (0, qQ.e)())
           };
-        return yd = pd.indirectHangs, pd
-      })), Ud
+        return jQ = LQ.indirectHangs, LQ
+      })), lQ
     }
 
-    function Td() {
-      return yd
+    function XQ() {
+      return jQ
     }
   },
-  40811: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => pd
+  40254: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ
     });
-    const pd = {
+    const LQ = {
       webgpu: "rust_webgpu",
       webgl: "rust_webgl2",
       webgl1: "rust_webgl1"
     }
   },
-  40807: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Nd,
-      g: () => pd
+  40250: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => qQ,
+      e: () => LQ
     });
-    const pd = {
-        webgpu: async () => (await kd.e(8).then((() => kd(43151)))).bloxdWasmWebgpu,
-        webgl: async () => (await kd.e(6).then((() => kd(43164)))).bloxdWasmWebgl,
-        webgl1: async () => (await kd.e(7).then((() => kd(43175)))).bloxdWasmWebgl1
+    const LQ = {
+        webgpu: async () => (await wQ.e(8).then((() => wQ(42644)))).bloxdWasmWebgpu,
+        webgl: async () => (await wQ.e(6).then((() => wQ(42656)))).bloxdWasmWebgl,
+        webgl1: async () => (await wQ.e(7).then((() => wQ(42666)))).bloxdWasmWebgl1
       },
-      Nd = async () => (await kd.e(5).then((() => kd(43180)))).compileAnimationPackInWasm
+      qQ = async () => (await wQ.e(5).then((() => wQ(42675)))).compileAnimationPackInWasm
   },
-  40827: (dd, Jd, kd) => {
-    function pd() {
-      return kd(40835)
+  40262: (QQ, FQ, wQ) => {
+    function LQ() {
+      return wQ(40264)
     }
 
-    function Nd() {
-      return kd(40842)
+    function qQ() {
+      return wQ(40268)
     }
 
-    function Wd(dd) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(dd)
+    function oQ(QQ) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(QQ)
     }
-    kd.d(Jd, {
-      e: () => Wd,
-      g: () => pd,
-      h: () => Nd
+    wQ.d(FQ, {
+      c: () => oQ,
+      d: () => LQ,
+      e: () => qQ
     })
   },
-  40818: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Zd,
-      g: () => gd
+  40259: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => kQ,
+      f: () => vQ
     });
-    var pd = kd(95);
-    const Nd = "webgpuPipeline";
+    var LQ = wQ(96);
+    const qQ = "webgpuPipeline";
 
-    function Wd(dd) {
-      return dd.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function oQ(QQ) {
+      return QQ.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let Pd = null;
+    let DQ = null;
 
-    function Zd() {
-      if (null === Pd) try {
-        dd = (0, pd.getBrowserName)(), Jd = (0, pd.getBrowserVersion)(), kd = (0, pd.getOperatingSystem)(), Nd = (0, pd.getOperatingSystemVersion)(), Pd = `${dd.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===Jd?"unknown":Wd(Jd)}-${kd}${void 0===Nd?"":`_${Wd(Nd)}`}`
-      } catch (Zd) {
-        console.warn("The user agent couldn't be read for its browser code", Zd), Pd = "unknown"
+    function kQ() {
+      if (null === DQ) try {
+        QQ = (0, LQ.getBrowserName)(), FQ = (0, LQ.getBrowserVersion)(), wQ = (0, LQ.getOperatingSystem)(), qQ = (0, LQ.getOperatingSystemVersion)(), DQ = `${QQ.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===FQ?"unknown":oQ(FQ)}-${wQ}${void 0===qQ?"":`_${oQ(qQ)}`}`
+      } catch (kQ) {
+        console.warn("The user agent couldn't be read for its browser code", kQ), DQ = "unknown"
       }
-      var dd, Jd, kd, Nd;
-      return Pd
+      var QQ, FQ, wQ, qQ;
+      return DQ
     }
 
-    function gd() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const Jd = `WGPU-${Zd()}`,
-        pd = (dd, pd) => {
+    function vQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const FQ = `WGPU-${kQ()}`,
+        LQ = (QQ, LQ) => {
           const {
-            reason: Wd,
-            message: Pd
-          } = pd, Zd = {
-            pipeline: null !== dd && void 0 !== dd ? dd : "",
-            reason: String(Wd),
-            browserMessage: String(Pd)
+            reason: oQ,
+            message: DQ
+          } = LQ, kQ = {
+            pipeline: null !== QQ && void 0 !== QQ ? QQ : "",
+            reason: String(oQ),
+            browserMessage: String(DQ)
           };
-          Promise.all([kd.e(263), kd.e(87)]).then((() => kd(40940))).then((dd => {
+          Promise.all([wQ.e(263), wQ.e(87)]).then((() => wQ(40369))).then((QQ => {
             let {
-              reportCrash: kd
-            } = dd;
-            kd({
+              reportCrash: wQ
+            } = QQ;
+            wQ({
               kind: "coreError",
-              code: Jd,
-              site: Nd,
+              code: FQ,
+              site: qQ,
               fatal: !1,
-              message: `${Zd.pipeline} ${Zd.reason}: ${Zd.browserMessage}`,
-              details: Zd,
-              error: pd
+              message: `${kQ.pipeline} ${kQ.reason}: ${kQ.browserMessage}`,
+              details: kQ,
+              error: LQ
             })
-          })).catch((dd => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", dd)
+          })).catch((QQ => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", QQ)
           }))
         },
-        Wd = dd.createRenderPipelineAsync;
-      dd.createRenderPipelineAsync = function(dd) {
-        return Wd.call(this, dd).catch((Jd => {
-          throw pd(dd.label, Jd), Jd
+        oQ = QQ.createRenderPipelineAsync;
+      QQ.createRenderPipelineAsync = function(QQ) {
+        return oQ.call(this, QQ).catch((FQ => {
+          throw LQ(QQ.label, FQ), FQ
         }))
       };
-      const Pd = dd.createComputePipelineAsync;
-      dd.createComputePipelineAsync = function(dd) {
-        return Pd.call(this, dd).catch((Jd => {
-          throw pd(dd.label, Jd), Jd
+      const DQ = QQ.createComputePipelineAsync;
+      QQ.createComputePipelineAsync = function(QQ) {
+        return DQ.call(this, QQ).catch((FQ => {
+          throw LQ(QQ.label, FQ), FQ
         }))
       }
     }
   },
-  40762: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/bloxd_wasm_models_bg.df969d045c7e01bce06e.wasm"
+  40217: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/bloxd_wasm_models_bg.593d3d487912d0f5515a.wasm"
   },
-  40753: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/bloxd_wasm_workers_bg.1b50c07459d1b86abfd9.wasm"
+  40209: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/bloxd_wasm_workers_bg.bbb759863ba8f8a8aa47.wasm"
   },
-  40835: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  40264: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  40842: (dd, Jd, kd) => {
-    dd.exports = kd.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  40268: (QQ, FQ, wQ) => {
+    QQ.exports = wQ.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   },
-  40745: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Nd,
-      g: () => pd
+  40201: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => qQ,
+      e: () => LQ
     });
-    const pd = {
+    const LQ = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new kd.U(kd(40753))
+        return new wQ.U(wQ(40209))
       }
     };
-    const Nd = {
+    const qQ = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new kd.U(kd(40762))
+        return new wQ.U(wQ(40217))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

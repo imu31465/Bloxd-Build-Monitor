@@ -1,945 +1,945 @@
 export const id = 295;
 export const ids = [295];
 export const modules = {
-  41583: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Wd
+  41021: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => oQ
     });
-    var pd = kd(40080),
-      Nd = kd(41589);
-    class Wd {
-      constructor(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2;
-        this.maxDepth = kd, this.ypd = [], this._maxBlockCapacity = Jd || 64, this._selectionContent = new pd.d(1024), this._creationFunc = dd
+    var LQ = wQ(39518),
+      qQ = wQ(41027);
+    class oQ {
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2;
+        this.maxDepth = wQ, this.fLQ = [], this._maxBlockCapacity = FQ || 64, this._selectionContent = new LQ.b(1024), this._creationFunc = QQ
       }
-      update(dd, Jd, kd) {
-        Nd.b._CreateBlocks(dd, Jd, kd, this._maxBlockCapacity, 0, this.maxDepth, this, this._creationFunc)
+      update(QQ, FQ, wQ) {
+        qQ.e._CreateBlocks(QQ, FQ, wQ, this._maxBlockCapacity, 0, this.maxDepth, this, this._creationFunc)
       }
-      apd(dd) {
-        for (let Jd = 0; Jd < this.blocks.length; Jd++) {
-          this.blocks[Jd].addEntry(dd)
+      sLQ(QQ) {
+        for (let FQ = 0; FQ < this.blocks.length; FQ++) {
+          this.blocks[FQ].addEntry(QQ)
         }
       }
-      Tm(dd) {
-        for (let Jd = 0; Jd < this.blocks.length; Jd++) {
-          this.blocks[Jd].removeEntry(dd)
+      yN(QQ) {
+        for (let FQ = 0; FQ < this.blocks.length; FQ++) {
+          this.blocks[FQ].removeEntry(QQ)
         }
       }
-      select(dd, Jd) {
+      select(QQ, FQ) {
         this._selectionContent.reset();
-        for (let kd = 0; kd < this.blocks.length; kd++) {
-          this.blocks[kd].select(dd, this._selectionContent, Jd)
+        for (let wQ = 0; wQ < this.blocks.length; wQ++) {
+          this.blocks[wQ].select(QQ, this._selectionContent, FQ)
         }
-        return Jd ? this._selectionContent.concat(this.ypd) : this._selectionContent.concatWithNoDuplicate(this.ypd), this._selectionContent
+        return FQ ? this._selectionContent.concat(this.fLQ) : this._selectionContent.concatWithNoDuplicate(this.fLQ), this._selectionContent
       }
-      intersects(dd, Jd, kd) {
+      intersects(QQ, FQ, wQ) {
         this._selectionContent.reset();
-        for (let pd = 0; pd < this.blocks.length; pd++) {
-          this.blocks[pd].intersects(dd, Jd, this._selectionContent, kd)
+        for (let LQ = 0; LQ < this.blocks.length; LQ++) {
+          this.blocks[LQ].intersects(QQ, FQ, this._selectionContent, wQ)
         }
-        return kd ? this._selectionContent.concat(this.ypd) : this._selectionContent.concatWithNoDuplicate(this.ypd), this._selectionContent
+        return wQ ? this._selectionContent.concat(this.fLQ) : this._selectionContent.concatWithNoDuplicate(this.fLQ), this._selectionContent
       }
-      intersectsRay(dd) {
+      intersectsRay(QQ) {
         this._selectionContent.reset();
-        for (let Jd = 0; Jd < this.blocks.length; Jd++) {
-          this.blocks[Jd].intersectsRay(dd, this._selectionContent)
+        for (let FQ = 0; FQ < this.blocks.length; FQ++) {
+          this.blocks[FQ].intersectsRay(QQ, this._selectionContent)
         }
-        return this._selectionContent.concatWithNoDuplicate(this.ypd), this._selectionContent
+        return this._selectionContent.concatWithNoDuplicate(this.fLQ), this._selectionContent
       }
     }
-    Wd.CreationFuncForMeshes = (dd, Jd) => {
-      const kd = dd.pU();
-      !dd.isBlocked && kd.boundingBox.intersectsMinMax(Jd.bpd, Jd.mpd) && Jd.entries.push(dd)
-    }, Wd.CreationFuncForSubMeshes = (dd, Jd) => {
-      dd.pU().boundingBox.intersectsMinMax(Jd.bpd, Jd.mpd) && Jd.entries.push(dd)
+    oQ.CreationFuncForMeshes = (QQ, FQ) => {
+      const wQ = QQ.sK();
+      !QQ.isBlocked && wQ.boundingBox.intersectsMinMax(FQ.TLQ, FQ.NLQ) && FQ.entries.push(QQ)
+    }, oQ.CreationFuncForSubMeshes = (QQ, FQ) => {
+      QQ.sK().boundingBox.intersectsMinMax(FQ.TLQ, FQ.NLQ) && FQ.entries.push(QQ)
     }
   },
-  41589: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Wd
+  41027: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => oQ
     });
-    var pd = kd(37251),
-      Nd = kd(40294);
-    class Wd {
-      constructor(dd, Jd, kd, pd, Nd, Wd) {
-        this.entries = [], this.Dpd = new Array, this._capacity = kd, this._depth = pd, this._maxDepth = Nd, this._creationFunc = Wd, this._minPoint = dd, this._maxPoint = Jd, this.Dpd.push(dd.clone()), this.Dpd.push(Jd.clone()), this.Dpd.push(dd.clone()), this.Dpd[2].x = Jd.x, this.Dpd.push(dd.clone()), this.Dpd[3].y = Jd.y, this.Dpd.push(dd.clone()), this.Dpd[4].z = Jd.z, this.Dpd.push(Jd.clone()), this.Dpd[5].z = dd.z, this.Dpd.push(Jd.clone()), this.Dpd[6].x = dd.x, this.Dpd.push(Jd.clone()), this.Dpd[7].y = dd.y
+    var LQ = wQ(36696),
+      qQ = wQ(39736);
+    class oQ {
+      constructor(QQ, FQ, wQ, LQ, qQ, oQ) {
+        this.entries = [], this.hLQ = new Array, this._capacity = wQ, this._depth = LQ, this._maxDepth = qQ, this._creationFunc = oQ, this._minPoint = QQ, this._maxPoint = FQ, this.hLQ.push(QQ.clone()), this.hLQ.push(FQ.clone()), this.hLQ.push(QQ.clone()), this.hLQ[2].x = FQ.x, this.hLQ.push(QQ.clone()), this.hLQ[3].y = FQ.y, this.hLQ.push(QQ.clone()), this.hLQ[4].z = FQ.z, this.hLQ.push(FQ.clone()), this.hLQ[5].z = QQ.z, this.hLQ.push(FQ.clone()), this.hLQ[6].x = QQ.x, this.hLQ.push(FQ.clone()), this.hLQ[7].y = QQ.y
       }
-      get oo() {
+      get MH() {
         return this._capacity
       }
-      get bpd() {
+      get TLQ() {
         return this._minPoint
       }
-      get mpd() {
+      get NLQ() {
         return this._maxPoint
       }
-      addEntry(dd) {
+      addEntry(QQ) {
         if (this.blocks)
-          for (let Jd = 0; Jd < this.blocks.length; Jd++) {
-            this.blocks[Jd].addEntry(dd)
-          } else this._creationFunc(dd, this), this.entries.length > this.oo && this._depth < this._maxDepth && this.createInnerBlocks()
+          for (let FQ = 0; FQ < this.blocks.length; FQ++) {
+            this.blocks[FQ].addEntry(QQ)
+          } else this._creationFunc(QQ, this), this.entries.length > this.MH && this._depth < this._maxDepth && this.createInnerBlocks()
       }
-      removeEntry(dd) {
+      removeEntry(QQ) {
         if (this.blocks) {
-          for (let Jd = 0; Jd < this.blocks.length; Jd++) {
-            this.blocks[Jd].removeEntry(dd)
+          for (let FQ = 0; FQ < this.blocks.length; FQ++) {
+            this.blocks[FQ].removeEntry(QQ)
           }
           return
         }
-        const Jd = this.entries.indexOf(dd);
-        Jd > -1 && this.entries.splice(Jd, 1)
+        const FQ = this.entries.indexOf(QQ);
+        FQ > -1 && this.entries.splice(FQ, 1)
       }
-      addEntries(dd) {
-        for (let Jd = 0; Jd < dd.length; Jd++) {
-          const kd = dd[Jd];
-          this.addEntry(kd)
+      addEntries(QQ) {
+        for (let FQ = 0; FQ < QQ.length; FQ++) {
+          const wQ = QQ[FQ];
+          this.addEntry(wQ)
         }
       }
-      select(dd, Jd, kd) {
-        if (Nd.b.IsInFrustum(this.Dpd, dd)) {
+      select(QQ, FQ, wQ) {
+        if (qQ.e.IsInFrustum(this.hLQ, QQ)) {
           if (this.blocks) {
-            for (let pd = 0; pd < this.blocks.length; pd++) {
-              this.blocks[pd].select(dd, Jd, kd)
+            for (let LQ = 0; LQ < this.blocks.length; LQ++) {
+              this.blocks[LQ].select(QQ, FQ, wQ)
             }
             return
           }
-          kd ? Jd.concat(this.entries) : Jd.concatWithNoDuplicate(this.entries)
+          wQ ? FQ.concat(this.entries) : FQ.concatWithNoDuplicate(this.entries)
         }
       }
-      intersects(dd, Jd, kd, pd) {
-        if (Nd.b.IntersectsSphere(this._minPoint, this._maxPoint, dd, Jd)) {
+      intersects(QQ, FQ, wQ, LQ) {
+        if (qQ.e.IntersectsSphere(this._minPoint, this._maxPoint, QQ, FQ)) {
           if (this.blocks) {
-            for (let Nd = 0; Nd < this.blocks.length; Nd++) {
-              this.blocks[Nd].intersects(dd, Jd, kd, pd)
+            for (let qQ = 0; qQ < this.blocks.length; qQ++) {
+              this.blocks[qQ].intersects(QQ, FQ, wQ, LQ)
             }
             return
           }
-          pd ? kd.concat(this.entries) : kd.concatWithNoDuplicate(this.entries)
+          LQ ? wQ.concat(this.entries) : wQ.concatWithNoDuplicate(this.entries)
         }
       }
-      intersectsRay(dd, Jd) {
-        if (dd.intersectsBoxMinMax(this._minPoint, this._maxPoint)) {
+      intersectsRay(QQ, FQ) {
+        if (QQ.intersectsBoxMinMax(this._minPoint, this._maxPoint)) {
           if (this.blocks) {
-            for (let kd = 0; kd < this.blocks.length; kd++) {
-              this.blocks[kd].intersectsRay(dd, Jd)
+            for (let wQ = 0; wQ < this.blocks.length; wQ++) {
+              this.blocks[wQ].intersectsRay(QQ, FQ)
             }
             return
           }
-          Jd.concatWithNoDuplicate(this.entries)
+          FQ.concatWithNoDuplicate(this.entries)
         }
       }
       createInnerBlocks() {
-        Wd._CreateBlocks(this._minPoint, this._maxPoint, this.entries, this._capacity, this._depth, this._maxDepth, this, this._creationFunc), this.entries.splice(0)
+        oQ._CreateBlocks(this._minPoint, this._maxPoint, this.entries, this._capacity, this._depth, this._maxDepth, this, this._creationFunc), this.entries.splice(0)
       }
-      static _CreateBlocks(dd, Jd, kd, Nd, Pd, Zd, gd, Cd) {
-        gd.blocks = new Array;
-        const Kd = new pd.n((Jd.x - dd.x) / 2, (Jd.y - dd.y) / 2, (Jd.z - dd.z) / 2);
-        for (let pd = 0; pd < 2; pd++)
-          for (let Jd = 0; Jd < 2; Jd++)
-            for (let od = 0; od < 2; od++) {
-              const ld = dd.add(Kd.multiplyByFloats(pd, Jd, od)),
-                Qd = dd.add(Kd.multiplyByFloats(pd + 1, Jd + 1, od + 1)),
-                Ld = new Wd(ld, Qd, Nd, Pd + 1, Zd, Cd);
-              Ld.addEntries(kd), gd.blocks.push(Ld)
+      static _CreateBlocks(QQ, FQ, wQ, qQ, DQ, kQ, vQ, mQ) {
+        vQ.blocks = new Array;
+        const uQ = new LQ.p((FQ.x - QQ.x) / 2, (FQ.y - QQ.y) / 2, (FQ.z - QQ.z) / 2);
+        for (let LQ = 0; LQ < 2; LQ++)
+          for (let FQ = 0; FQ < 2; FQ++)
+            for (let HQ = 0; HQ < 2; HQ++) {
+              const bQ = QQ.add(uQ.multiplyByFloats(LQ, FQ, HQ)),
+                YQ = QQ.add(uQ.multiplyByFloats(LQ + 1, FQ + 1, HQ + 1)),
+                xQ = new oQ(bQ, YQ, qQ, DQ + 1, kQ, mQ);
+              xQ.addEntries(wQ), vQ.blocks.push(xQ)
             }
       }
     }
   },
-  41594: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Kd
+  41033: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => uQ
     });
-    var pd = kd(40062),
-      Nd = kd(37251),
-      Wd = kd(40426),
-      Pd = kd(41535),
-      Zd = kd(40147),
-      gd = kd(37277),
-      Cd = kd(41583);
-    class Kd {
-      constructor(dd) {
-        this.name = Zd.b.NAME_OCTREE, this.checksIsEnabled = !0, this._tempRay = new Pd.B(Nd.n.Zero(), new Nd.n(1, 1, 1)), (dd = dd || gd.d.LastCreatedScene) && (this.BO = dd, this.BO.getActiveMeshCandidates = () => this.getActiveMeshCandidates(), this.BO.getActiveSubMeshCandidates = dd => this.getActiveSubMeshCandidates(dd), this.BO.getCollidingSubMeshCandidates = (dd, Jd) => this.getCollidingSubMeshCandidates(dd, Jd), this.BO.getIntersectingSubMeshCandidates = (dd, Jd) => this.getIntersectingSubMeshCandidates(dd, Jd))
+    var LQ = wQ(39496),
+      qQ = wQ(36696),
+      oQ = wQ(39855),
+      DQ = wQ(40972),
+      kQ = wQ(39589),
+      vQ = wQ(36720),
+      mQ = wQ(41021);
+    class uQ {
+      constructor(QQ) {
+        this.name = kQ.b.NAME_OCTREE, this.checksIsEnabled = !0, this._tempRay = new DQ.A(qQ.p.Zero(), new qQ.p(1, 1, 1)), (QQ = QQ || vQ.d.LastCreatedScene) && (this.lA = QQ, this.lA.getActiveMeshCandidates = () => this.getActiveMeshCandidates(), this.lA.getActiveSubMeshCandidates = QQ => this.getActiveSubMeshCandidates(QQ), this.lA.getCollidingSubMeshCandidates = (QQ, FQ) => this.getCollidingSubMeshCandidates(QQ, FQ), this.lA.getIntersectingSubMeshCandidates = (QQ, FQ) => this.getIntersectingSubMeshCandidates(QQ, FQ))
       }
       register() {
-        this.BO.onMeshRemovedObservable.add((dd => {
-          const Jd = this.BO.selectionOctree;
-          if (void 0 !== Jd && null !== Jd) {
-            const kd = Jd.ypd.indexOf(dd); - 1 !== kd && Jd.ypd.splice(kd, 1)
+        this.lA.onMeshRemovedObservable.add((QQ => {
+          const FQ = this.lA.selectionOctree;
+          if (void 0 !== FQ && null !== FQ) {
+            const wQ = FQ.fLQ.indexOf(QQ); - 1 !== wQ && FQ.fLQ.splice(wQ, 1)
           }
-        })), this.BO.onMeshImportedObservable.add((dd => {
-          const Jd = this.BO.selectionOctree;
-          void 0 !== Jd && null !== Jd && Jd.apd(dd)
+        })), this.lA.onMeshImportedObservable.add((QQ => {
+          const FQ = this.lA.selectionOctree;
+          void 0 !== FQ && null !== FQ && FQ.sLQ(QQ)
         }))
       }
       getActiveMeshCandidates() {
-        return this.BO.tpd?.select(this.BO.frustumPlanes) || this.BO._getDefaultMeshCandidates()
+        return this.lA.ZLQ?.select(this.lA.frustumPlanes) || this.lA._getDefaultMeshCandidates()
       }
-      getActiveSubMeshCandidates(dd) {
-        if (dd._submeshesOctree && dd.useOctreeForRenderingSelection) {
-          return dd._submeshesOctree.select(this.BO.frustumPlanes)
+      getActiveSubMeshCandidates(QQ) {
+        if (QQ._submeshesOctree && QQ.useOctreeForRenderingSelection) {
+          return QQ._submeshesOctree.select(this.lA.frustumPlanes)
         }
-        return this.BO._getDefaultSubMeshCandidates(dd)
+        return this.lA._getDefaultSubMeshCandidates(QQ)
       }
-      getIntersectingSubMeshCandidates(dd, Jd) {
-        if (dd._submeshesOctree && dd.useOctreeForPicking) {
-          Pd.B.TransformToRef(Jd, dd.getWorldMatrix(), this._tempRay);
-          return dd._submeshesOctree.intersectsRay(this._tempRay)
+      getIntersectingSubMeshCandidates(QQ, FQ) {
+        if (QQ._submeshesOctree && QQ.useOctreeForPicking) {
+          DQ.A.TransformToRef(FQ, QQ.getWorldMatrix(), this._tempRay);
+          return QQ._submeshesOctree.intersectsRay(this._tempRay)
         }
-        return this.BO._getDefaultSubMeshCandidates(dd)
+        return this.lA._getDefaultSubMeshCandidates(QQ)
       }
-      getCollidingSubMeshCandidates(dd, Jd) {
-        if (dd._submeshesOctree && dd.useOctreeForCollisions) {
-          const kd = Jd._velocityWorldLength + Math.max(Jd._radius.x, Jd._radius.y, Jd._radius.z);
-          return dd._submeshesOctree.intersects(Jd._basePointWorld, kd)
+      getCollidingSubMeshCandidates(QQ, FQ) {
+        if (QQ._submeshesOctree && QQ.useOctreeForCollisions) {
+          const wQ = FQ._velocityWorldLength + Math.max(FQ._radius.x, FQ._radius.y, FQ._radius.z);
+          return QQ._submeshesOctree.intersects(FQ._basePointWorld, wQ)
         }
-        return this.BO._getDefaultSubMeshCandidates(dd)
+        return this.lA._getDefaultSubMeshCandidates(QQ)
       }
       rebuild() {}
       dispose() {}
     }
-    let od = !1;
-    od || (od = !0, pd.i.prototype.createOrUpdateSelectionOctree = function() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
-        Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2,
-        kd = this._getComponent(Zd.b.NAME_OCTREE);
-      kd || (kd = new Kd(this), this.Cpd(kd)), this.tpd || (this.tpd = new Cd.e(Cd.e.CreationFuncForMeshes, dd, Jd));
-      const pd = this.getWorldExtends();
-      return this.tpd.update(pd.min, pd.max, this.meshes), this.tpd
-    }, Object.defineProperty(pd.i.prototype, "selectionOctree", {
+    let HQ = !1;
+    HQ || (HQ = !0, LQ.e.prototype.createOrUpdateSelectionOctree = function() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
+        FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2,
+        wQ = this._getComponent(kQ.b.NAME_OCTREE);
+      wQ || (wQ = new uQ(this), this.HLQ(wQ)), this.ZLQ || (this.ZLQ = new mQ.e(mQ.e.CreationFuncForMeshes, QQ, FQ));
+      const LQ = this.getWorldExtends();
+      return this.ZLQ.update(LQ.min, LQ.max, this.meshes), this.ZLQ
+    }, Object.defineProperty(LQ.e.prototype, "selectionOctree", {
       get: function() {
-        return this.tpd
+        return this.ZLQ
       },
       enumerable: !0,
       configurable: !0
-    }), Wd.c.prototype.createOrUpdateSubmeshesOctree = function() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
-        Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const kd = this.Wm();
-      let pd = kd._getComponent(Zd.b.NAME_OCTREE);
-      pd || (pd = new Kd(kd), kd.Cpd(pd)), this._submeshesOctree || (this._submeshesOctree = new Cd.e(Cd.e.CreationFuncForSubMeshes, dd, Jd)), this.computeWorldMatrix(!0);
-      const Nd = this.pU().boundingBox;
-      return this._submeshesOctree.update(Nd.minimumWorld, Nd.maximumWorld, this.rG), this._submeshesOctree
+    }), oQ.c.prototype.createOrUpdateSubmeshesOctree = function() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
+        FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const wQ = this.iN();
+      let LQ = wQ._getComponent(kQ.b.NAME_OCTREE);
+      LQ || (LQ = new uQ(wQ), wQ.HLQ(LQ)), this._submeshesOctree || (this._submeshesOctree = new mQ.e(mQ.e.CreationFuncForSubMeshes, QQ, FQ)), this.computeWorldMatrix(!0);
+      const qQ = this.sK().boundingBox;
+      return this._submeshesOctree.update(qQ.minimumWorld, qQ.maximumWorld, this.lC), this._submeshesOctree
     })
   },
-  41535: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      B: () => od,
-      c: () => md,
-      g: () => Od,
-      i: () => Ld,
-      k: () => Qd,
-      m: () => Fd,
-      n: () => Md,
-      p: () => Bd,
-      t: () => ad,
-      x: () => sd
+  40972: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      A: () => HQ,
+      e: () => rQ,
+      g: () => AQ,
+      i: () => xQ,
+      k: () => YQ,
+      l: () => OQ,
+      o: () => RQ,
+      r: () => SQ,
+      s: () => WQ,
+      w: () => iQ
     });
-    var pd = kd(37259),
-      Nd = kd(37251),
-      Wd = kd(37267),
-      Pd = kd(40285),
-      Zd = kd(40107),
-      gd = kd(37277),
-      Cd = kd(40178);
-    const Kd = {
+    var LQ = wQ(36705),
+      qQ = wQ(36696),
+      oQ = wQ(36709),
+      DQ = wQ(39729),
+      kQ = wQ(39552),
+      vQ = wQ(36720),
+      mQ = wQ(39617);
+    const uQ = {
       internalPickerForMesh: void 0
     };
-    class od {
-      constructor(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Number.MAX_VALUE,
-          Nd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : pd.e;
-        this.origin = dd, this.direction = Jd, this.length = kd, this.epsilon = Nd
+    class HQ {
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Number.MAX_VALUE,
+          qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LQ.b;
+        this.origin = QQ, this.direction = FQ, this.length = wQ, this.epsilon = qQ
       }
       clone() {
-        return new od(this.origin.clone(), this.direction.clone(), this.length)
+        return new HQ(this.origin.clone(), this.direction.clone(), this.length)
       }
-      intersectsBoxMinMax(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const pd = od._TmpVector3[0].kdd(dd.x - kd, dd.y - kd, dd.z - kd),
-          Nd = od._TmpVector3[1].kdd(Jd.x + kd, Jd.y + kd, Jd.z + kd);
-        let Wd, Pd, Zd, gd, Cd = 0,
-          Kd = Number.MAX_VALUE;
+      intersectsBoxMinMax(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const LQ = HQ._TmpVector3[0].vQQ(QQ.x - wQ, QQ.y - wQ, QQ.z - wQ),
+          qQ = HQ._TmpVector3[1].vQQ(FQ.x + wQ, FQ.y + wQ, FQ.z + wQ);
+        let oQ, DQ, kQ, vQ, mQ = 0,
+          uQ = Number.MAX_VALUE;
         if (Math.abs(this.direction.x) < 1e-7) {
-          if (this.origin.x < pd.x || this.origin.x > Nd.x) return !1
-        } else if (Wd = 1 / this.direction.x, Pd = (pd.x - this.origin.x) * Wd, Zd = (Nd.x - this.origin.x) * Wd, Zd === -1 / 0 && (Zd = 1 / 0), Pd > Zd && (gd = Pd, Pd = Zd, Zd = gd), Cd = Math.max(Pd, Cd), Kd = Math.min(Zd, Kd), Cd > Kd) return !1;
+          if (this.origin.x < LQ.x || this.origin.x > qQ.x) return !1
+        } else if (oQ = 1 / this.direction.x, DQ = (LQ.x - this.origin.x) * oQ, kQ = (qQ.x - this.origin.x) * oQ, kQ === -1 / 0 && (kQ = 1 / 0), DQ > kQ && (vQ = DQ, DQ = kQ, kQ = vQ), mQ = Math.max(DQ, mQ), uQ = Math.min(kQ, uQ), mQ > uQ) return !1;
         if (Math.abs(this.direction.y) < 1e-7) {
-          if (this.origin.y < pd.y || this.origin.y > Nd.y) return !1
-        } else if (Wd = 1 / this.direction.y, Pd = (pd.y - this.origin.y) * Wd, Zd = (Nd.y - this.origin.y) * Wd, Zd === -1 / 0 && (Zd = 1 / 0), Pd > Zd && (gd = Pd, Pd = Zd, Zd = gd), Cd = Math.max(Pd, Cd), Kd = Math.min(Zd, Kd), Cd > Kd) return !1;
+          if (this.origin.y < LQ.y || this.origin.y > qQ.y) return !1
+        } else if (oQ = 1 / this.direction.y, DQ = (LQ.y - this.origin.y) * oQ, kQ = (qQ.y - this.origin.y) * oQ, kQ === -1 / 0 && (kQ = 1 / 0), DQ > kQ && (vQ = DQ, DQ = kQ, kQ = vQ), mQ = Math.max(DQ, mQ), uQ = Math.min(kQ, uQ), mQ > uQ) return !1;
         if (Math.abs(this.direction.z) < 1e-7) {
-          if (this.origin.z < pd.z || this.origin.z > Nd.z) return !1
-        } else if (Wd = 1 / this.direction.z, Pd = (pd.z - this.origin.z) * Wd, Zd = (Nd.z - this.origin.z) * Wd, Zd === -1 / 0 && (Zd = 1 / 0), Pd > Zd && (gd = Pd, Pd = Zd, Zd = gd), Cd = Math.max(Pd, Cd), Kd = Math.min(Zd, Kd), Cd > Kd) return !1;
+          if (this.origin.z < LQ.z || this.origin.z > qQ.z) return !1
+        } else if (oQ = 1 / this.direction.z, DQ = (LQ.z - this.origin.z) * oQ, kQ = (qQ.z - this.origin.z) * oQ, kQ === -1 / 0 && (kQ = 1 / 0), DQ > kQ && (vQ = DQ, DQ = kQ, kQ = vQ), mQ = Math.max(DQ, mQ), uQ = Math.min(kQ, uQ), mQ > uQ) return !1;
         return !0
       }
-      intersectsBox(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.intersectsBoxMinMax(dd.minimum, dd.maximum, Jd)
+      intersectsBox(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.intersectsBoxMinMax(QQ.minimum, QQ.maximum, FQ)
       }
-      intersectsSphere(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const kd = dd.center.x - this.origin.x,
-          pd = dd.center.y - this.origin.y,
-          Nd = dd.center.z - this.origin.z,
-          Wd = kd * kd + pd * pd + Nd * Nd,
-          Pd = dd.radius + Jd,
-          Zd = Pd * Pd;
-        if (Wd <= Zd) return !0;
-        const gd = kd * this.direction.x + pd * this.direction.y + Nd * this.direction.z;
-        if (gd < 0) return !1;
-        return Wd - gd * gd <= Zd
+      intersectsSphere(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const wQ = QQ.center.x - this.origin.x,
+          LQ = QQ.center.y - this.origin.y,
+          qQ = QQ.center.z - this.origin.z,
+          oQ = wQ * wQ + LQ * LQ + qQ * qQ,
+          DQ = QQ.radius + FQ,
+          kQ = DQ * DQ;
+        if (oQ <= kQ) return !0;
+        const vQ = wQ * this.direction.x + LQ * this.direction.y + qQ * this.direction.z;
+        if (vQ < 0) return !1;
+        return oQ - vQ * vQ <= kQ
       }
-      intersectsTriangle(dd, Jd, kd) {
-        const pd = od._TmpVector3[0],
-          Wd = od._TmpVector3[1],
-          Zd = od._TmpVector3[2],
-          gd = od._TmpVector3[3],
-          Cd = od._TmpVector3[4];
-        Jd.subtractToRef(dd, pd), kd.subtractToRef(dd, Wd), Nd.n.CrossToRef(this.direction, Wd, Zd);
-        const Kd = Nd.n.Dot(pd, Zd);
-        if (0 === Kd) return null;
-        const ld = 1 / Kd;
-        this.origin.subtractToRef(dd, gd);
-        const Qd = Nd.n.Dot(gd, Zd) * ld;
-        if (Qd < -this.epsilon || Qd > 1 + this.epsilon) return null;
-        Nd.n.CrossToRef(gd, pd, Cd);
-        const Ld = Nd.n.Dot(this.direction, Cd) * ld;
-        if (Ld < -this.epsilon || Qd + Ld > 1 + this.epsilon) return null;
-        const Od = Nd.n.Dot(Wd, Cd) * ld;
-        return Od > this.length || Od < 0 ? null : new Pd.e(1 - Qd - Ld, Qd, Od)
+      intersectsTriangle(QQ, FQ, wQ) {
+        const LQ = HQ._TmpVector3[0],
+          oQ = HQ._TmpVector3[1],
+          kQ = HQ._TmpVector3[2],
+          vQ = HQ._TmpVector3[3],
+          mQ = HQ._TmpVector3[4];
+        FQ.subtractToRef(QQ, LQ), wQ.subtractToRef(QQ, oQ), qQ.p.CrossToRef(this.direction, oQ, kQ);
+        const uQ = qQ.p.Dot(LQ, kQ);
+        if (0 === uQ) return null;
+        const bQ = 1 / uQ;
+        this.origin.subtractToRef(QQ, vQ);
+        const YQ = qQ.p.Dot(vQ, kQ) * bQ;
+        if (YQ < -this.epsilon || YQ > 1 + this.epsilon) return null;
+        qQ.p.CrossToRef(vQ, LQ, mQ);
+        const xQ = qQ.p.Dot(this.direction, mQ) * bQ;
+        if (xQ < -this.epsilon || YQ + xQ > 1 + this.epsilon) return null;
+        const AQ = qQ.p.Dot(oQ, mQ) * bQ;
+        return AQ > this.length || AQ < 0 ? null : new DQ.c(1 - YQ - xQ, YQ, AQ)
       }
-      intersectsPlane(dd) {
-        let Jd;
-        const kd = Nd.n.Dot(dd.normal, this.direction);
-        if (Math.abs(kd) < 9.99999997475243e-7) return null;
+      intersectsPlane(QQ) {
+        let FQ;
+        const wQ = qQ.p.Dot(QQ.normal, this.direction);
+        if (Math.abs(wQ) < 9.99999997475243e-7) return null;
         {
-          const pd = Nd.n.Dot(dd.normal, this.origin);
-          return Jd = (-dd.d - pd) / kd, Jd < 0 ? Jd < -9.99999997475243e-7 ? null : 0 : Jd
+          const LQ = qQ.p.Dot(QQ.normal, this.origin);
+          return FQ = (-QQ.d - LQ) / wQ, FQ < 0 ? FQ < -9.99999997475243e-7 ? null : 0 : FQ
         }
       }
-      intersectsAxis(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        switch (dd) {
+      intersectsAxis(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        switch (QQ) {
           case "y": {
-            const dd = (this.origin.y - Jd) / this.direction.y;
-            return dd > 0 ? null : new Nd.n(this.origin.x + this.direction.x * -dd, Jd, this.origin.z + this.direction.z * -dd)
+            const QQ = (this.origin.y - FQ) / this.direction.y;
+            return QQ > 0 ? null : new qQ.p(this.origin.x + this.direction.x * -QQ, FQ, this.origin.z + this.direction.z * -QQ)
           }
           case "x": {
-            const dd = (this.origin.x - Jd) / this.direction.x;
-            return dd > 0 ? null : new Nd.n(Jd, this.origin.y + this.direction.y * -dd, this.origin.z + this.direction.z * -dd)
+            const QQ = (this.origin.x - FQ) / this.direction.x;
+            return QQ > 0 ? null : new qQ.p(FQ, this.origin.y + this.direction.y * -QQ, this.origin.z + this.direction.z * -QQ)
           }
           case "z": {
-            const dd = (this.origin.z - Jd) / this.direction.z;
-            return dd > 0 ? null : new Nd.n(this.origin.x + this.direction.x * -dd, this.origin.y + this.direction.y * -dd, Jd)
+            const QQ = (this.origin.z - FQ) / this.direction.z;
+            return QQ > 0 ? null : new qQ.p(this.origin.x + this.direction.x * -QQ, this.origin.y + this.direction.y * -QQ, FQ)
           }
           default:
             return null
         }
       }
-      KNd(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          Wd = arguments.length > 4 ? arguments[4] : void 0,
-          Pd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const Zd = Nd.h.Matrix[0];
-        return dd.getWorldMatrix().invertToRef(Zd), this._tmpRay ? od.TransformToRef(this, Zd, this._tmpRay) : this._tmpRay = od.Transform(this, Zd), dd.intersects(this._tmpRay, Jd, kd, pd, Wd, Pd)
+      YqQ(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          oQ = arguments.length > 4 ? arguments[4] : void 0,
+          DQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const kQ = qQ.k.Matrix[0];
+        return QQ.getWorldMatrix().invertToRef(kQ), this._tmpRay ? HQ.TransformToRef(this, kQ, this._tmpRay) : this._tmpRay = HQ.Transform(this, kQ), QQ.intersects(this._tmpRay, FQ, wQ, LQ, oQ, DQ)
       }
-      intersectsMeshes(dd, Jd, kd) {
-        kd ? kd.length = 0 : kd = [];
-        for (let pd = 0; pd < dd.length; pd++) {
-          const Nd = this.KNd(dd[pd], Jd);
-          Nd.hit && kd.push(Nd)
+      intersectsMeshes(QQ, FQ, wQ) {
+        wQ ? wQ.length = 0 : wQ = [];
+        for (let LQ = 0; LQ < QQ.length; LQ++) {
+          const qQ = this.YqQ(QQ[LQ], FQ);
+          qQ.hit && wQ.push(qQ)
         }
-        return kd.sort(this._comparePickingInfo), kd
+        return wQ.sort(this._comparePickingInfo), wQ
       }
-      _comparePickingInfo(dd, Jd) {
-        return dd.distance < Jd.distance ? -1 : dd.distance > Jd.distance ? 1 : 0
+      _comparePickingInfo(QQ, FQ) {
+        return QQ.distance < FQ.distance ? -1 : QQ.distance > FQ.distance ? 1 : 0
       }
-      intersectionSegment(dd, Jd, kd) {
-        const pd = this.origin,
-          Wd = Nd.h.IL[0],
-          Pd = Nd.h.IL[1],
-          Zd = Nd.h.IL[2],
-          gd = Nd.h.IL[3];
-        Jd.subtractToRef(dd, Wd), this.direction.scaleToRef(od._Rayl, Zd), pd.addToRef(Zd, Pd), dd.subtractToRef(pd, gd);
-        const Cd = Nd.n.Dot(Wd, Wd),
-          Kd = Nd.n.Dot(Wd, Zd),
-          ld = Nd.n.Dot(Zd, Zd),
-          Qd = Nd.n.Dot(Wd, gd),
-          Ld = Nd.n.Dot(Zd, gd),
-          Od = Cd * ld - Kd * Kd;
-        let ed, Rd, Id = Od,
-          Gd = Od;
-        Od < od._Smallnum ? (ed = 0, Id = 1, Rd = Ld, Gd = ld) : (ed = Kd * Ld - ld * Qd, Rd = Cd * Ld - Kd * Qd, ed < 0 ? (ed = 0, Rd = Ld, Gd = ld) : ed > Id && (ed = Id, Rd = Ld + Kd, Gd = ld)), Rd < 0 ? (Rd = 0, -Qd < 0 ? ed = 0 : -Qd > Cd ? ed = Id : (ed = -Qd, Id = Cd)) : Rd > Gd && (Rd = Gd, -Qd + Kd < 0 ? ed = 0 : -Qd + Kd > Cd ? ed = Id : (ed = -Qd + Kd, Id = Cd));
-        const vd = Math.abs(ed) < od._Smallnum ? 0 : ed / Id,
-          xd = Math.abs(Rd) < od._Smallnum ? 0 : Rd / Gd,
-          qd = Nd.h.IL[4];
-        Zd.scaleToRef(xd, qd);
-        const Bd = Nd.h.IL[5];
-        Wd.scaleToRef(vd, Bd), Bd.addInPlace(gd);
-        const sd = Nd.h.IL[6];
-        Bd.subtractToRef(qd, sd);
-        return xd > 0 && xd <= this.length && sd.lengthSquared() < kd * kd ? Bd.length() : -1
+      intersectionSegment(QQ, FQ, wQ) {
+        const LQ = this.origin,
+          oQ = qQ.k.Ox[0],
+          DQ = qQ.k.Ox[1],
+          kQ = qQ.k.Ox[2],
+          vQ = qQ.k.Ox[3];
+        FQ.subtractToRef(QQ, oQ), this.direction.scaleToRef(HQ._Rayl, kQ), LQ.addToRef(kQ, DQ), QQ.subtractToRef(LQ, vQ);
+        const mQ = qQ.p.Dot(oQ, oQ),
+          uQ = qQ.p.Dot(oQ, kQ),
+          bQ = qQ.p.Dot(kQ, kQ),
+          YQ = qQ.p.Dot(oQ, vQ),
+          xQ = qQ.p.Dot(kQ, vQ),
+          AQ = mQ * bQ - uQ * uQ;
+        let tQ, eQ, MQ = AQ,
+          GQ = AQ;
+        AQ < HQ._Smallnum ? (tQ = 0, MQ = 1, eQ = xQ, GQ = bQ) : (tQ = uQ * xQ - bQ * YQ, eQ = mQ * xQ - uQ * YQ, tQ < 0 ? (tQ = 0, eQ = xQ, GQ = bQ) : tQ > MQ && (tQ = MQ, eQ = xQ + uQ, GQ = bQ)), eQ < 0 ? (eQ = 0, -YQ < 0 ? tQ = 0 : -YQ > mQ ? tQ = MQ : (tQ = -YQ, MQ = mQ)) : eQ > GQ && (eQ = GQ, -YQ + uQ < 0 ? tQ = 0 : -YQ + uQ > mQ ? tQ = MQ : (tQ = -YQ + uQ, MQ = mQ));
+        const pQ = Math.abs(tQ) < HQ._Smallnum ? 0 : tQ / MQ,
+          cQ = Math.abs(eQ) < HQ._Smallnum ? 0 : eQ / GQ,
+          CQ = qQ.k.Ox[4];
+        kQ.scaleToRef(cQ, CQ);
+        const SQ = qQ.k.Ox[5];
+        oQ.scaleToRef(pQ, SQ), SQ.addInPlace(vQ);
+        const iQ = qQ.k.Ox[6];
+        SQ.subtractToRef(CQ, iQ);
+        return cQ > 0 && cQ <= this.length && iQ.lengthSquared() < wQ * wQ ? SQ.length() : -1
       }
-      update(dd, Jd, kd, pd, Wd, Pd, Zd) {
+      update(QQ, FQ, wQ, LQ, oQ, DQ, kQ) {
         if (arguments.length > 7 && void 0 !== arguments[7] && arguments[7]) {
-          od._RayDistant || (od._RayDistant = od.Zero()), od._RayDistant.unprojectRayToRef(dd, Jd, kd, pd, Nd.b.IdentityReadOnly, Pd, Zd);
-          const gd = Nd.h.Matrix[0];
-          Wd.invertToRef(gd), od.TransformToRef(od._RayDistant, gd, this)
-        } else this.unprojectRayToRef(dd, Jd, kd, pd, Wd, Pd, Zd);
+          HQ._RayDistant || (HQ._RayDistant = HQ.Zero()), HQ._RayDistant.unprojectRayToRef(QQ, FQ, wQ, LQ, qQ.c.IdentityReadOnly, DQ, kQ);
+          const vQ = qQ.k.Matrix[0];
+          oQ.invertToRef(vQ), HQ.TransformToRef(HQ._RayDistant, vQ, this)
+        } else this.unprojectRayToRef(QQ, FQ, wQ, LQ, oQ, DQ, kQ);
         return this
       }
       static Zero() {
-        return new od(Nd.n.Zero(), Nd.n.Zero())
+        return new HQ(qQ.p.Zero(), qQ.p.Zero())
       }
-      static CreateNew(dd, Jd, kd, pd, Nd, Wd, Pd) {
-        return od.Zero().update(dd, Jd, kd, pd, Nd, Wd, Pd)
+      static CreateNew(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
+        return HQ.Zero().update(QQ, FQ, wQ, LQ, qQ, oQ, DQ)
       }
-      static CreateNewFromTo(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Nd.b.IdentityReadOnly;
-        const pd = new od(new Nd.n(0, 0, 0), new Nd.n(0, 0, 0));
-        return od.CreateFromToToRef(dd, Jd, pd, kd)
+      static CreateNewFromTo(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qQ.c.IdentityReadOnly;
+        const LQ = new HQ(new qQ.p(0, 0, 0), new qQ.p(0, 0, 0));
+        return HQ.CreateFromToToRef(QQ, FQ, LQ, wQ)
       }
-      static CreateFromToToRef(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Nd.b.IdentityReadOnly;
-        kd.origin.Fs(dd);
-        const Wd = Jd.subtractToRef(dd, kd.direction),
-          Pd = Math.sqrt(Wd.x * Wd.x + Wd.y * Wd.y + Wd.z * Wd.z);
-        return kd.length = Pd, kd.direction.normalize(), od.TransformToRef(kd, pd, kd)
+      static CreateFromToToRef(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : qQ.c.IdentityReadOnly;
+        wQ.origin.Qs(QQ);
+        const oQ = FQ.subtractToRef(QQ, wQ.direction),
+          DQ = Math.sqrt(oQ.x * oQ.x + oQ.y * oQ.y + oQ.z * oQ.z);
+        return wQ.length = DQ, wQ.direction.normalize(), HQ.TransformToRef(wQ, LQ, wQ)
       }
-      static Transform(dd, Jd) {
-        const kd = new od(new Nd.n(0, 0, 0), new Nd.n(0, 0, 0));
-        return od.TransformToRef(dd, Jd, kd), kd
+      static Transform(QQ, FQ) {
+        const wQ = new HQ(new qQ.p(0, 0, 0), new qQ.p(0, 0, 0));
+        return HQ.TransformToRef(QQ, FQ, wQ), wQ
       }
-      static TransformToRef(dd, Jd, kd) {
-        Nd.n.TransformCoordinatesToRef(dd.origin, Jd, kd.origin), Nd.n.TransformNormalToRef(dd.direction, Jd, kd.direction), kd.length = dd.length, kd.epsilon = dd.epsilon;
-        const pd = kd.direction,
-          Wd = pd.length();
-        if (0 !== Wd && 1 !== Wd) {
-          const dd = 1 / Wd;
-          pd.x *= dd, pd.y *= dd, pd.z *= dd, kd.length *= Wd
+      static TransformToRef(QQ, FQ, wQ) {
+        qQ.p.TransformCoordinatesToRef(QQ.origin, FQ, wQ.origin), qQ.p.TransformNormalToRef(QQ.direction, FQ, wQ.direction), wQ.length = QQ.length, wQ.epsilon = QQ.epsilon;
+        const LQ = wQ.direction,
+          oQ = LQ.length();
+        if (0 !== oQ && 1 !== oQ) {
+          const QQ = 1 / oQ;
+          LQ.x *= QQ, LQ.y *= QQ, LQ.z *= QQ, wQ.length *= oQ
         }
-        return kd
+        return wQ
       }
-      unprojectRayToRef(dd, Jd, kd, pd, Wd, Pd, Zd) {
-        const Cd = Nd.h.Matrix[0];
-        Wd.multiplyToRef(Pd, Cd), Cd.multiplyToRef(Zd, Cd), Cd.invert();
-        const Kd = gd.d.LastCreatedEngine,
-          od = Nd.h.IL[0];
-        od.x = dd / kd * 2 - 1, od.y = -(Jd / pd * 2 - 1), od.z = Kd?.vpd ? 1 : Kd?.isNDCHalfZRange ? 0 : -1;
-        const ld = Nd.h.IL[1].kdd(od.x, od.y, 1 - 1e-8),
-          Qd = Nd.h.IL[2],
-          Ld = Nd.h.IL[3];
-        Nd.n.TransformCoordinatesToRef(od, Cd, Qd), Nd.n.TransformCoordinatesToRef(ld, Cd, Ld), this.origin.Fs(Qd), Ld.subtractToRef(Qd, this.direction), this.direction.normalize()
+      unprojectRayToRef(QQ, FQ, wQ, LQ, oQ, DQ, kQ) {
+        const mQ = qQ.k.Matrix[0];
+        oQ.multiplyToRef(DQ, mQ), mQ.multiplyToRef(kQ, mQ), mQ.invert();
+        const uQ = vQ.d.LastCreatedEngine,
+          HQ = qQ.k.Ox[0];
+        HQ.x = QQ / wQ * 2 - 1, HQ.y = -(FQ / LQ * 2 - 1), HQ.z = uQ?.SLQ ? 1 : uQ?.isNDCHalfZRange ? 0 : -1;
+        const bQ = qQ.k.Ox[1].vQQ(HQ.x, HQ.y, 1 - 1e-8),
+          YQ = qQ.k.Ox[2],
+          xQ = qQ.k.Ox[3];
+        qQ.p.TransformCoordinatesToRef(HQ, mQ, YQ), qQ.p.TransformCoordinatesToRef(bQ, mQ, xQ), this.origin.Qs(YQ), xQ.subtractToRef(YQ, this.direction), this.direction.normalize()
       }
     }
 
-    function ld(dd, Jd, kd, pd, Nd) {
-      let Wd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      const Pd = od.Zero();
-      return Qd(dd, Jd, kd, pd, Pd, Nd, Wd), Pd
+    function bQ(QQ, FQ, wQ, LQ, qQ) {
+      let oQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      const DQ = HQ.Zero();
+      return YQ(QQ, FQ, wQ, LQ, DQ, qQ, oQ), DQ
     }
 
-    function Qd(dd, Jd, kd, pd, Wd, Pd) {
-      let Zd = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        gd = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-      const Cd = dd.eL();
-      if (!Pd && !(Pd = dd.activeCamera) && !(Pd = dd.cameraToUseForPointers)) return dd;
-      const Kd = Pd.viewport,
-        od = Cd.getRenderHeight(),
+    function YQ(QQ, FQ, wQ, LQ, oQ, DQ) {
+      let kQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        vQ = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+      const mQ = QQ.Wx();
+      if (!DQ && !(DQ = QQ.activeCamera) && !(DQ = QQ.cameraToUseForPointers)) return QQ;
+      const uQ = DQ.viewport,
+        HQ = mQ.getRenderHeight(),
         {
-          x: ld,
-          y: Qd,
-          width: Ld,
-          height: Od
-        } = Kd.toGlobal(Cd.getRenderWidth(), od),
-        ed = 1 / Cd.getHardwareScalingLevel();
-      return Jd = Jd * ed - ld, kd = kd * ed - (od - Qd - Od), Wd.update(Jd, kd, Ld, Od, pd || Nd.b.IdentityReadOnly, Zd ? Nd.b.IdentityReadOnly : Pd.getViewMatrix(), Pd.getProjectionMatrix(), gd), dd
+          x: bQ,
+          y: YQ,
+          width: xQ,
+          height: AQ
+        } = uQ.toGlobal(mQ.getRenderWidth(), HQ),
+        tQ = 1 / mQ.getHardwareScalingLevel();
+      return FQ = FQ * tQ - bQ, wQ = wQ * tQ - (HQ - YQ - AQ), oQ.update(FQ, wQ, xQ, AQ, LQ || qQ.c.IdentityReadOnly, kQ ? qQ.c.IdentityReadOnly : DQ.getViewMatrix(), DQ.getProjectionMatrix(), vQ), QQ
     }
 
-    function Ld(dd, Jd, kd, pd) {
-      const Nd = od.Zero();
-      return Od(dd, Jd, kd, Nd, pd), Nd
+    function xQ(QQ, FQ, wQ, LQ) {
+      const qQ = HQ.Zero();
+      return AQ(QQ, FQ, wQ, qQ, LQ), qQ
     }
 
-    function Od(dd, Jd, kd, pd, Wd) {
-      if (!Zd.d) return dd;
-      const Pd = dd.eL();
-      if (!Wd && !(Wd = dd.activeCamera) && !(Wd = dd.cameraToUseForPointers)) throw new Error("Active camera not set");
-      const gd = Wd.viewport,
-        Cd = Pd.getRenderHeight(),
+    function AQ(QQ, FQ, wQ, LQ, oQ) {
+      if (!kQ.d) return QQ;
+      const DQ = QQ.Wx();
+      if (!oQ && !(oQ = QQ.activeCamera) && !(oQ = QQ.cameraToUseForPointers)) throw new Error("Active camera not set");
+      const vQ = oQ.viewport,
+        mQ = DQ.getRenderHeight(),
         {
-          x: Kd,
-          y: od,
-          width: ld,
-          height: Qd
-        } = gd.toGlobal(Pd.getRenderWidth(), Cd),
-        Ld = Nd.b.Identity(),
-        Od = 1 / Pd.getHardwareScalingLevel();
-      return Jd = Jd * Od - Kd, kd = kd * Od - (Cd - od - Qd), pd.update(Jd, kd, ld, Qd, Ld, Ld, Wd.getProjectionMatrix()), dd
+          x: uQ,
+          y: HQ,
+          width: bQ,
+          height: YQ
+        } = vQ.toGlobal(DQ.getRenderWidth(), mQ),
+        xQ = qQ.c.Identity(),
+        AQ = 1 / DQ.getHardwareScalingLevel();
+      return FQ = FQ * AQ - uQ, wQ = wQ * AQ - (mQ - HQ - YQ), LQ.update(FQ, wQ, bQ, YQ, xQ, xQ, oQ.getProjectionMatrix()), QQ
     }
 
-    function ed(dd, Jd, kd, pd, Nd, Wd, Pd, Zd) {
-      return Rd(dd, kd, pd, Jd(pd, kd.enableDistantPicking), Nd, Wd, Pd, Zd)
+    function tQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ) {
+      return eQ(QQ, wQ, LQ, FQ(LQ, wQ.enableDistantPicking), qQ, oQ, DQ, kQ)
     }
 
-    function Rd(dd, Jd, kd, pd, Nd, Wd, Pd, Zd) {
-      const gd = Jd.intersects(pd, Nd, Pd, Wd, kd, Zd);
-      return gd && gd.hit ? !Nd && null != dd && gd.distance >= dd.distance ? null : gd : null
+    function eQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ) {
+      const vQ = FQ.intersects(LQ, qQ, DQ, oQ, wQ, kQ);
+      return vQ && vQ.hit ? !qQ && null != QQ && vQ.distance >= QQ.distance ? null : vQ : null
     }
 
-    function Id(dd, Jd) {
-      return "InstancedLinesMesh" === dd || "LinesMesh" === dd ? Jd.intersectionThreshold : 0
+    function MQ(QQ, FQ) {
+      return "InstancedLinesMesh" === QQ || "LinesMesh" === QQ ? FQ.intersectionThreshold : 0
     }
 
-    function Gd(dd) {
-      const Jd = dd.getClassName();
-      if ("GreasedLineMesh" === Jd) return {
+    function GQ(QQ) {
+      const FQ = QQ.getClassName();
+      if ("GreasedLineMesh" === FQ) return {
         rawBoundingInfo: null,
         intersectionThreshold: 0
       };
-      const kd = dd.rawBoundingInfo;
+      const wQ = QQ.rawBoundingInfo;
       return {
-        rawBoundingInfo: kd,
-        intersectionThreshold: kd ? Id(Jd, dd) : 0
+        rawBoundingInfo: wQ,
+        intersectionThreshold: wQ ? MQ(FQ, QQ) : 0
       }
     }
 
-    function vd(dd, Jd, kd, pd, Nd) {
-      const Wd = dd(kd, Jd.enableDistantPicking);
-      return Wd.intersectsSphere(pd.zpd, Nd) && Wd.intersectsBox(pd.boundingBox, Nd) ? Wd : null
+    function pQ(QQ, FQ, wQ, LQ, qQ) {
+      const oQ = QQ(wQ, FQ.enableDistantPicking);
+      return oQ.intersectsSphere(LQ.BLQ, qQ) && oQ.intersectsBox(LQ.boundingBox, qQ) ? oQ : null
     }
 
-    function xd(dd, Jd, kd, pd, Wd, Pd) {
-      let gd = null;
-      const Cd = !!(dd.activeCameras && dd.activeCameras.length > 1 && dd.cameraToUseForPointers !== dd.activeCamera),
-        od = dd.cameraToUseForPointers || dd.activeCamera,
-        ld = Kd.internalPickerForMesh || ed,
-        Qd = ld === ed;
-      for (let Zd = 0; Zd < dd.meshes.length; Zd++) {
-        const Kd = dd.meshes[Zd];
-        if (kd) {
-          if (!kd(Kd, -1)) continue
-        } else if (!Kd.isEnabled() || !Kd.isVisible || !Kd.iO) continue;
-        const Ld = Cd && Kd.isWorldMatrixCameraDependent(),
-          Od = Kd.computeWorldMatrix(Ld, od);
-        if (Kd.hasThinInstances && Kd.hJd) {
-          const dd = ld(gd, Jd, Kd, Od, !0, !0, Pd);
-          if (dd) {
-            if (Wd) return dd;
+    function cQ(QQ, FQ, wQ, LQ, oQ, DQ) {
+      let vQ = null;
+      const mQ = !!(QQ.activeCameras && QQ.activeCameras.length > 1 && QQ.cameraToUseForPointers !== QQ.activeCamera),
+        HQ = QQ.cameraToUseForPointers || QQ.activeCamera,
+        bQ = uQ.internalPickerForMesh || tQ,
+        YQ = bQ === tQ;
+      for (let kQ = 0; kQ < QQ.meshes.length; kQ++) {
+        const uQ = QQ.meshes[kQ];
+        if (wQ) {
+          if (!wQ(uQ, -1)) continue
+        } else if (!uQ.isEnabled() || !uQ.isVisible || !uQ.aA) continue;
+        const xQ = mQ && uQ.isWorldMatrixCameraDependent(),
+          AQ = uQ.computeWorldMatrix(xQ, HQ);
+        if (uQ.hasThinInstances && uQ.hFQ) {
+          const QQ = bQ(vQ, FQ, uQ, AQ, !0, !0, DQ);
+          if (QQ) {
+            if (oQ) return QQ;
             const {
-              rawBoundingInfo: Zd,
-              intersectionThreshold: Cd
-            } = Gd(Kd), od = Kd._thinInstanceDataStorage.matrixData;
-            if (od) {
-              const dd = Nd.h.Matrix[0],
-                Ld = Nd.h.Matrix[1],
-                ed = Math.min(Kd.W8, od.length >> 4);
-              for (let Id = 0; Id < ed; Id++) {
-                if (kd && !kd(Kd, Id)) continue;
-                Nd.b.FromArrayToRef(od, Id << 4, dd), dd.multiplyToRef(Od, Ld);
-                const ed = Qd && Zd ? vd(Jd, Kd, Ld, Zd, Cd) : null;
-                if (Qd && Zd && !ed) continue;
-                const Gd = Qd && ed ? Rd(gd, Kd, Ld, ed, pd, Wd, Pd, !0) : ld(gd, Jd, Kd, Ld, pd, Wd, Pd, !0);
-                if (Gd && (gd = Gd, gd.thinInstanceIndex = Id, pd)) return gd
+              rawBoundingInfo: kQ,
+              intersectionThreshold: mQ
+            } = GQ(uQ), HQ = uQ._thinInstanceDataStorage.matrixData;
+            if (HQ) {
+              const QQ = qQ.k.Matrix[0],
+                xQ = qQ.k.Matrix[1],
+                tQ = Math.min(uQ.o4, HQ.length >> 4);
+              for (let MQ = 0; MQ < tQ; MQ++) {
+                if (wQ && !wQ(uQ, MQ)) continue;
+                qQ.c.FromArrayToRef(HQ, MQ << 4, QQ), QQ.multiplyToRef(AQ, xQ);
+                const tQ = YQ && kQ ? pQ(FQ, uQ, xQ, kQ, mQ) : null;
+                if (YQ && kQ && !tQ) continue;
+                const GQ = YQ && tQ ? eQ(vQ, uQ, xQ, tQ, LQ, oQ, DQ, !0) : bQ(vQ, FQ, uQ, xQ, LQ, oQ, DQ, !0);
+                if (GQ && (vQ = GQ, vQ.thinInstanceIndex = MQ, LQ)) return vQ
               }
             }
           }
         } else {
-          const dd = ld(gd, Jd, Kd, Od, pd, Wd, Pd);
-          if (dd && (gd = dd, pd)) return gd
+          const QQ = bQ(vQ, FQ, uQ, AQ, LQ, oQ, DQ);
+          if (QQ && (vQ = QQ, LQ)) return vQ
         }
       }
-      return gd || new Zd.d
+      return vQ || new kQ.d
     }
 
-    function qd(dd, Jd, kd, pd) {
-      if (!Zd.d) return null;
-      const Wd = [],
-        Pd = !!(dd.activeCameras && dd.activeCameras.length > 1 && dd.cameraToUseForPointers !== dd.activeCamera),
-        gd = dd.cameraToUseForPointers || dd.activeCamera,
-        Cd = Kd.internalPickerForMesh || ed,
-        od = Cd === ed;
-      for (let Zd = 0; Zd < dd.meshes.length; Zd++) {
-        const Kd = dd.meshes[Zd];
-        if (kd) {
-          if (!kd(Kd, -1)) continue
-        } else if (!Kd.isEnabled() || !Kd.isVisible || !Kd.iO) continue;
-        const ld = Pd && Kd.isWorldMatrixCameraDependent(),
-          Qd = Kd.computeWorldMatrix(ld, gd);
-        if (Kd.hasThinInstances && Kd.hJd) {
-          if (Cd(null, Jd, Kd, Qd, !0, !0, pd)) {
+    function CQ(QQ, FQ, wQ, LQ) {
+      if (!kQ.d) return null;
+      const oQ = [],
+        DQ = !!(QQ.activeCameras && QQ.activeCameras.length > 1 && QQ.cameraToUseForPointers !== QQ.activeCamera),
+        vQ = QQ.cameraToUseForPointers || QQ.activeCamera,
+        mQ = uQ.internalPickerForMesh || tQ,
+        HQ = mQ === tQ;
+      for (let kQ = 0; kQ < QQ.meshes.length; kQ++) {
+        const uQ = QQ.meshes[kQ];
+        if (wQ) {
+          if (!wQ(uQ, -1)) continue
+        } else if (!uQ.isEnabled() || !uQ.isVisible || !uQ.aA) continue;
+        const bQ = DQ && uQ.isWorldMatrixCameraDependent(),
+          YQ = uQ.computeWorldMatrix(bQ, vQ);
+        if (uQ.hasThinInstances && uQ.hFQ) {
+          if (mQ(null, FQ, uQ, YQ, !0, !0, LQ)) {
             const {
-              rawBoundingInfo: dd,
-              intersectionThreshold: Pd
-            } = Gd(Kd), Zd = Kd._thinInstanceDataStorage.matrixData;
-            if (Zd) {
-              const gd = Nd.h.Matrix[0],
-                ld = Nd.h.Matrix[1],
-                Ld = Math.min(Kd.W8, Zd.length >> 4);
-              for (let Od = 0; Od < Ld; Od++) {
-                if (kd && !kd(Kd, Od)) continue;
-                Nd.b.FromArrayToRef(Zd, Od << 4, gd), gd.multiplyToRef(Qd, ld);
-                const Ld = od && dd ? vd(Jd, Kd, ld, dd, Pd) : null;
-                if (od && dd && !Ld) continue;
-                const ed = od && Ld ? Rd(null, Kd, ld, Ld, !1, !1, pd, !0) : Cd(null, Jd, Kd, ld, !1, !1, pd, !0);
-                ed && (ed.thinInstanceIndex = Od, Wd.push(ed))
+              rawBoundingInfo: QQ,
+              intersectionThreshold: DQ
+            } = GQ(uQ), kQ = uQ._thinInstanceDataStorage.matrixData;
+            if (kQ) {
+              const vQ = qQ.k.Matrix[0],
+                bQ = qQ.k.Matrix[1],
+                xQ = Math.min(uQ.o4, kQ.length >> 4);
+              for (let AQ = 0; AQ < xQ; AQ++) {
+                if (wQ && !wQ(uQ, AQ)) continue;
+                qQ.c.FromArrayToRef(kQ, AQ << 4, vQ), vQ.multiplyToRef(YQ, bQ);
+                const xQ = HQ && QQ ? pQ(FQ, uQ, bQ, QQ, DQ) : null;
+                if (HQ && QQ && !xQ) continue;
+                const tQ = HQ && xQ ? eQ(null, uQ, bQ, xQ, !1, !1, LQ, !0) : mQ(null, FQ, uQ, bQ, !1, !1, LQ, !0);
+                tQ && (tQ.thinInstanceIndex = AQ, oQ.push(tQ))
               }
             }
           }
         } else {
-          const dd = Cd(null, Jd, Kd, Qd, !1, !1, pd);
-          dd && Wd.push(dd)
+          const QQ = mQ(null, FQ, uQ, YQ, !1, !1, LQ);
+          QQ && oQ.push(QQ)
         }
       }
-      return Wd
+      return oQ
     }
 
-    function Bd(dd, Jd, kd, pd, Wd, Pd) {
-      if (!Zd.d) return null;
-      const gd = xd(dd, (pd => (dd._tempPickingRay || (dd._tempPickingRay = od.Zero()), Qd(dd, Jd, kd, pd, dd._tempPickingRay, Pd || null), dd._tempPickingRay)), pd, Wd, !0);
-      return gd && (gd.ray = ld(dd, Jd, kd, Nd.b.Identity(), Pd || null)), gd
+    function SQ(QQ, FQ, wQ, LQ, oQ, DQ) {
+      if (!kQ.d) return null;
+      const vQ = cQ(QQ, (LQ => (QQ._tempPickingRay || (QQ._tempPickingRay = HQ.Zero()), YQ(QQ, FQ, wQ, LQ, QQ._tempPickingRay, DQ || null), QQ._tempPickingRay)), LQ, oQ, !0);
+      return vQ && (vQ.ray = bQ(QQ, FQ, wQ, qQ.c.Identity(), DQ || null)), vQ
     }
 
-    function sd(dd, Jd, kd, pd, Wd, Pd, Zd) {
-      const gd = xd(dd, ((pd, Nd) => (dd._tempPickingRay || (dd._tempPickingRay = od.Zero()), Qd(dd, Jd, kd, pd, dd._tempPickingRay, Pd || null, !1, Nd), dd._tempPickingRay)), pd, Wd, !1, Zd);
-      return gd && (gd.ray = ld(dd, Jd, kd, Nd.b.Identity(), Pd || null)), gd
+    function iQ(QQ, FQ, wQ, LQ, oQ, DQ, kQ) {
+      const vQ = cQ(QQ, ((LQ, qQ) => (QQ._tempPickingRay || (QQ._tempPickingRay = HQ.Zero()), YQ(QQ, FQ, wQ, LQ, QQ._tempPickingRay, DQ || null, !1, qQ), QQ._tempPickingRay)), LQ, oQ, !1, kQ);
+      return vQ && (vQ.ray = bQ(QQ, FQ, wQ, qQ.c.Identity(), DQ || null)), vQ
     }
 
-    function ad(dd, Jd, kd, pd, Wd) {
-      const Pd = xd(dd, (kd => (dd._pickWithRayInverseMatrix || (dd._pickWithRayInverseMatrix = Nd.b.Identity()), kd.invertToRef(dd._pickWithRayInverseMatrix), dd._cachedRayForTransform || (dd._cachedRayForTransform = od.Zero()), od.TransformToRef(Jd, dd._pickWithRayInverseMatrix, dd._cachedRayForTransform), dd._cachedRayForTransform)), kd, pd, !1, Wd);
-      return Pd && (Pd.ray = Jd), Pd
+    function WQ(QQ, FQ, wQ, LQ, oQ) {
+      const DQ = cQ(QQ, (wQ => (QQ._pickWithRayInverseMatrix || (QQ._pickWithRayInverseMatrix = qQ.c.Identity()), wQ.invertToRef(QQ._pickWithRayInverseMatrix), QQ._cachedRayForTransform || (QQ._cachedRayForTransform = HQ.Zero()), HQ.TransformToRef(FQ, QQ._pickWithRayInverseMatrix, QQ._cachedRayForTransform), QQ._cachedRayForTransform)), wQ, LQ, !1, oQ);
+      return DQ && (DQ.ray = FQ), DQ
     }
 
-    function Md(dd, Jd, kd, pd, Nd, Wd) {
-      return qd(dd, (pd => ld(dd, Jd, kd, pd, Nd || null)), pd, Wd)
+    function RQ(QQ, FQ, wQ, LQ, qQ, oQ) {
+      return CQ(QQ, (LQ => bQ(QQ, FQ, wQ, LQ, qQ || null)), LQ, oQ)
     }
 
-    function Fd(dd, Jd, kd, pd) {
-      return qd(dd, (kd => (dd._pickWithRayInverseMatrix || (dd._pickWithRayInverseMatrix = Nd.b.Identity()), kd.invertToRef(dd._pickWithRayInverseMatrix), dd._cachedRayForTransform || (dd._cachedRayForTransform = od.Zero()), od.TransformToRef(Jd, dd._pickWithRayInverseMatrix, dd._cachedRayForTransform), dd._cachedRayForTransform)), kd, pd)
+    function OQ(QQ, FQ, wQ, LQ) {
+      return CQ(QQ, (wQ => (QQ._pickWithRayInverseMatrix || (QQ._pickWithRayInverseMatrix = qQ.c.Identity()), wQ.invertToRef(QQ._pickWithRayInverseMatrix), QQ._cachedRayForTransform || (QQ._cachedRayForTransform = HQ.Zero()), HQ.TransformToRef(FQ, QQ._pickWithRayInverseMatrix, QQ._cachedRayForTransform), QQ._cachedRayForTransform)), wQ, LQ)
     }
 
-    function Yd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100,
-        pd = arguments.length > 3 ? arguments[3] : void 0,
-        Wd = arguments.length > 4 ? arguments[4] : void 0;
-      pd || (pd = dd.getWorldMatrix()), Jd.length = kd, Wd ? Jd.origin.Fs(Wd) : Jd.origin.Fs(dd.position);
-      const Pd = Nd.h.IL[2];
-      Pd.set(0, 0, dd._scene.useRightHandedSystem ? -1 : 1);
-      const Zd = Nd.h.IL[3];
-      return Nd.n.TransformNormalToRef(Pd, pd, Zd), Nd.n.NormalizeToRef(Zd, Jd.direction), Jd
+    function sQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100,
+        LQ = arguments.length > 3 ? arguments[3] : void 0,
+        oQ = arguments.length > 4 ? arguments[4] : void 0;
+      LQ || (LQ = QQ.getWorldMatrix()), FQ.length = wQ, oQ ? FQ.origin.Qs(oQ) : FQ.origin.Qs(QQ.position);
+      const DQ = qQ.k.Ox[2];
+      DQ.set(0, 0, QQ._scene.useRightHandedSystem ? -1 : 1);
+      const kQ = qQ.k.Ox[3];
+      return qQ.p.TransformNormalToRef(DQ, LQ, kQ), qQ.p.NormalizeToRef(kQ, FQ.direction), FQ
     }
 
-    function md(dd, Jd) {
-      Jd && (Jd.prototype.getForwardRay = function() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 100,
-          Jd = arguments.length > 1 ? arguments[1] : void 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        return Yd(this, new od(Nd.n.Zero(), Nd.n.Zero(), dd), dd, Jd, kd)
-      }, Jd.prototype.getForwardRayToRef = function(dd) {
-        return Yd(this, dd, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100, arguments.length > 2 ? arguments[2] : void 0, arguments.length > 3 ? arguments[3] : void 0)
-      }), dd && (Cd.c._IsPickingAvailable = !0, dd.prototype.createPickingRay = function(dd, Jd, kd, pd) {
-        return ld(this, dd, Jd, kd, pd, arguments.length > 4 && void 0 !== arguments[4] && arguments[4])
+    function rQ(QQ, FQ) {
+      FQ && (FQ.prototype.getForwardRay = function() {
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 100,
+          FQ = arguments.length > 1 ? arguments[1] : void 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        return sQ(this, new HQ(qQ.p.Zero(), qQ.p.Zero(), QQ), QQ, FQ, wQ)
+      }, FQ.prototype.getForwardRayToRef = function(QQ) {
+        return sQ(this, QQ, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100, arguments.length > 2 ? arguments[2] : void 0, arguments.length > 3 ? arguments[3] : void 0)
+      }), QQ && (mQ.c._IsPickingAvailable = !0, QQ.prototype.createPickingRay = function(QQ, FQ, wQ, LQ) {
+        return bQ(this, QQ, FQ, wQ, LQ, arguments.length > 4 && void 0 !== arguments[4] && arguments[4])
       })
     }
-    od._TmpVector3 = (0, Wd.b)(6, Nd.n.Zero), od._RayDistant = od.Zero(), od._Smallnum = 1e-8, od._Rayl = 1e9
+    HQ._TmpVector3 = (0, oQ.b)(6, qQ.p.Zero), HQ._RayDistant = HQ.Zero(), HQ._Smallnum = 1e-8, HQ._Rayl = 1e9
   },
-  41531: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Wd.B
+  40970: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => oQ.A
     });
-    var pd = kd(40062),
-      Nd = kd(40199),
-      Wd = kd(41535);
-    let Pd = !1;
-    Pd || (Pd = !0, (0, Wd.c)(pd.i, Nd.e), pd.i.prototype.createPickingRayToRef = function(dd, Jd, kd, pd, Nd) {
-      let Pd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        Zd = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return (0, Wd.k)(this, dd, Jd, kd, pd, Nd, Pd, Zd)
-    }, pd.i.prototype.createPickingRayInCameraSpace = function(dd, Jd, kd) {
-      return (0, Wd.i)(this, dd, Jd, kd)
-    }, pd.i.prototype.createPickingRayInCameraSpaceToRef = function(dd, Jd, kd, pd) {
-      return (0, Wd.g)(this, dd, Jd, kd, pd)
-    }, pd.i.prototype.pickWithBoundingInfo = function(dd, Jd, kd, pd, Nd) {
-      return (0, Wd.p)(this, dd, Jd, kd, pd, Nd)
-    }, pd.i.prototype.Tl = function(dd, Jd, kd, pd, Nd, Pd) {
-      let Zd = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return (0, Wd.x)(this, dd, Jd, kd, pd, Nd, Pd, Zd)
-    }, pd.i.prototype.pickWithRay = function(dd, Jd, kd, pd) {
-      return (0, Wd.t)(this, dd, Jd, kd, pd)
-    }, pd.i.prototype.multiPick = function(dd, Jd, kd, pd, Nd) {
-      return (0, Wd.n)(this, dd, Jd, kd, pd, Nd)
-    }, pd.i.prototype.multiPickWithRay = function(dd, Jd, kd) {
-      return (0, Wd.m)(this, dd, Jd, kd)
+    var LQ = wQ(39496),
+      qQ = wQ(39642),
+      oQ = wQ(40972);
+    let DQ = !1;
+    DQ || (DQ = !0, (0, oQ.e)(LQ.e, qQ.e), LQ.e.prototype.createPickingRayToRef = function(QQ, FQ, wQ, LQ, qQ) {
+      let DQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        kQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return (0, oQ.k)(this, QQ, FQ, wQ, LQ, qQ, DQ, kQ)
+    }, LQ.e.prototype.createPickingRayInCameraSpace = function(QQ, FQ, wQ) {
+      return (0, oQ.i)(this, QQ, FQ, wQ)
+    }, LQ.e.prototype.createPickingRayInCameraSpaceToRef = function(QQ, FQ, wQ, LQ) {
+      return (0, oQ.g)(this, QQ, FQ, wQ, LQ)
+    }, LQ.e.prototype.pickWithBoundingInfo = function(QQ, FQ, wQ, LQ, qQ) {
+      return (0, oQ.r)(this, QQ, FQ, wQ, LQ, qQ)
+    }, LQ.e.prototype.Vb = function(QQ, FQ, wQ, LQ, qQ, DQ) {
+      let kQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return (0, oQ.w)(this, QQ, FQ, wQ, LQ, qQ, DQ, kQ)
+    }, LQ.e.prototype.pickWithRay = function(QQ, FQ, wQ, LQ) {
+      return (0, oQ.s)(this, QQ, FQ, wQ, LQ)
+    }, LQ.e.prototype.multiPick = function(QQ, FQ, wQ, LQ, qQ) {
+      return (0, oQ.o)(this, QQ, FQ, wQ, LQ, qQ)
+    }, LQ.e.prototype.multiPickWithRay = function(QQ, FQ, wQ) {
+      return (0, oQ.l)(this, QQ, FQ, wQ)
     })
   },
-  41543: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Kd
+  40981: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => uQ
     });
-    var pd = kd(39964),
-      Nd = kd(39966),
-      Wd = kd(37251),
-      Pd = kd(40243),
-      Zd = kd(41547),
-      gd = kd(40205),
-      Cd = kd(37303);
-    let Kd = (() => {
-        var dd;
-        let Jd, kd, gd, Cd, Kd, od, ld, Qd, Ld = Zd.b,
-          Od = [],
-          ed = [],
-          Rd = [],
-          Id = [],
-          Gd = [],
-          vd = [],
-          xd = [],
-          qd = [],
-          Bd = [],
-          sd = [],
-          ad = [],
-          Md = [],
-          Fd = [];
-        return dd = class extends Ld {
+    var LQ = wQ(39402),
+      qQ = wQ(39409),
+      oQ = wQ(36696),
+      DQ = wQ(39690),
+      kQ = wQ(40986),
+      vQ = wQ(39650),
+      mQ = wQ(36741);
+    let uQ = (() => {
+        var QQ;
+        let FQ, wQ, vQ, mQ, uQ, HQ, bQ, YQ, xQ = kQ.b,
+          AQ = [],
+          tQ = [],
+          eQ = [],
+          MQ = [],
+          GQ = [],
+          pQ = [],
+          cQ = [],
+          CQ = [],
+          SQ = [],
+          iQ = [],
+          WQ = [],
+          RQ = [],
+          OQ = [];
+        return QQ = class extends xQ {
           get shadowFrustumSize() {
             return this._shadowFrustumSize
           }
-          set shadowFrustumSize(dd) {
-            this._shadowFrustumSize = dd, this.forceProjectionMatrixCompute()
+          set shadowFrustumSize(QQ) {
+            this._shadowFrustumSize = QQ, this.forceProjectionMatrixCompute()
           }
           get shadowOrthoScale() {
             return this._shadowOrthoScale
           }
-          set shadowOrthoScale(dd) {
-            this._shadowOrthoScale = dd, this.forceProjectionMatrixCompute()
+          set shadowOrthoScale(QQ) {
+            this._shadowOrthoScale = QQ, this.forceProjectionMatrixCompute()
           }
           get orthoLeft() {
             return this._orthoLeft
           }
-          set orthoLeft(dd) {
-            this._orthoLeft = dd
+          set orthoLeft(QQ) {
+            this._orthoLeft = QQ
           }
           get orthoRight() {
             return this._orthoRight
           }
-          set orthoRight(dd) {
-            this._orthoRight = dd
+          set orthoRight(QQ) {
+            this._orthoRight = QQ
           }
           get orthoTop() {
             return this._orthoTop
           }
-          set orthoTop(dd) {
-            this._orthoTop = dd
+          set orthoTop(QQ) {
+            this._orthoTop = QQ
           }
           get orthoBottom() {
             return this._orthoBottom
           }
-          set orthoBottom(dd) {
-            this._orthoBottom = dd
+          set orthoBottom(QQ) {
+            this._orthoBottom = QQ
           }
-          constructor(dd, Jd, kd, Nd) {
-            super(dd, kd, Nd), this._shadowFrustumSize = ((0, pd.i)(this, Od), 0), this._shadowOrthoScale = .1, this.autoUpdateExtends = (0, pd.i)(this, ed, !0), this.autoCalcShadowZBounds = ((0, pd.i)(this, Rd), (0, pd.i)(this, Id, !1)), this._orthoLeft = ((0, pd.i)(this, Gd), (0, pd.i)(this, vd, Number.MAX_VALUE)), this._orthoRight = ((0, pd.i)(this, xd), (0, pd.i)(this, qd, Number.MIN_VALUE)), this._orthoTop = ((0, pd.i)(this, Bd), (0, pd.i)(this, sd, Number.MIN_VALUE)), this._orthoBottom = ((0, pd.i)(this, ad), (0, pd.i)(this, Md, Number.MAX_VALUE)), (0, pd.i)(this, Fd), this.position = Jd.scale(-1), this.direction = Jd
+          constructor(QQ, FQ, wQ, qQ) {
+            super(QQ, wQ, qQ), this._shadowFrustumSize = ((0, LQ.l)(this, AQ), 0), this._shadowOrthoScale = .1, this.autoUpdateExtends = (0, LQ.l)(this, tQ, !0), this.autoCalcShadowZBounds = ((0, LQ.l)(this, eQ), (0, LQ.l)(this, MQ, !1)), this._orthoLeft = ((0, LQ.l)(this, GQ), (0, LQ.l)(this, pQ, Number.MAX_VALUE)), this._orthoRight = ((0, LQ.l)(this, cQ), (0, LQ.l)(this, CQ, Number.MIN_VALUE)), this._orthoTop = ((0, LQ.l)(this, SQ), (0, LQ.l)(this, iQ, Number.MIN_VALUE)), this._orthoBottom = ((0, LQ.l)(this, WQ), (0, LQ.l)(this, RQ, Number.MAX_VALUE)), (0, LQ.l)(this, OQ), this.position = FQ.scale(-1), this.direction = FQ
           }
           getClassName() {
             return "DirectionalLight"
           }
           getTypeID() {
-            return Pd.d.LIGHTTYPEID_DIRECTIONALLIGHT
+            return DQ.c.LIGHTTYPEID_DIRECTIONALLIGHT
           }
-          _setDefaultShadowProjectionMatrix(dd, Jd, kd) {
-            this.shadowFrustumSize > 0 ? this._setDefaultFixedFrustumShadowProjectionMatrix(dd) : this._setDefaultAutoExtendShadowProjectionMatrix(dd, Jd, kd)
+          _setDefaultShadowProjectionMatrix(QQ, FQ, wQ) {
+            this.shadowFrustumSize > 0 ? this._setDefaultFixedFrustumShadowProjectionMatrix(QQ) : this._setDefaultAutoExtendShadowProjectionMatrix(QQ, FQ, wQ)
           }
-          _setDefaultFixedFrustumShadowProjectionMatrix(dd) {
-            const Jd = this.Wm().activeCamera;
-            Wd.b.OrthoLHToRef(this.shadowFrustumSize, this.shadowFrustumSize, void 0 !== this.shadowMinZ ? this.shadowMinZ : Jd ? Jd.minZ : 0, void 0 !== this.shadowMaxZ ? this.shadowMaxZ : Jd ? Jd.maxZ : 1e4, dd, this.Wm().eL().isNDCHalfZRange)
+          _setDefaultFixedFrustumShadowProjectionMatrix(QQ) {
+            const FQ = this.iN().activeCamera;
+            oQ.c.OrthoLHToRef(this.shadowFrustumSize, this.shadowFrustumSize, void 0 !== this.shadowMinZ ? this.shadowMinZ : FQ ? FQ.minZ : 0, void 0 !== this.shadowMaxZ ? this.shadowMaxZ : FQ ? FQ.maxZ : 1e4, QQ, this.iN().Wx().isNDCHalfZRange)
           }
-          _setDefaultAutoExtendShadowProjectionMatrix(dd, Jd, kd) {
-            const pd = this.Wm().activeCamera;
+          _setDefaultAutoExtendShadowProjectionMatrix(QQ, FQ, wQ) {
+            const LQ = this.iN().activeCamera;
             if (this.autoUpdateExtends || this._orthoLeft === Number.MAX_VALUE) {
-              const dd = Wd.n.Zero();
+              const QQ = oQ.p.Zero();
               this._orthoLeft = Number.MAX_VALUE, this._orthoRight = -Number.MAX_VALUE, this._orthoTop = -Number.MAX_VALUE, this._orthoBottom = Number.MAX_VALUE;
-              let pd = Number.MAX_VALUE,
-                Nd = -Number.MAX_VALUE;
-              for (let Pd = 0; Pd < kd.length; Pd++) {
-                const Zd = kd[Pd];
-                if (!Zd) continue;
-                const gd = Zd.pU().boundingBox;
-                for (let kd = 0; kd < gd.vectorsWorld.length; kd++) Wd.n.TransformCoordinatesToRef(gd.vectorsWorld[kd], Jd, dd), dd.x < this._orthoLeft && (this._orthoLeft = dd.x), dd.y < this._orthoBottom && (this._orthoBottom = dd.y), dd.x > this._orthoRight && (this._orthoRight = dd.x), dd.y > this._orthoTop && (this._orthoTop = dd.y), this.autoCalcShadowZBounds && (dd.z < pd && (pd = dd.z), dd.z > Nd && (Nd = dd.z))
+              let LQ = Number.MAX_VALUE,
+                qQ = -Number.MAX_VALUE;
+              for (let DQ = 0; DQ < wQ.length; DQ++) {
+                const kQ = wQ[DQ];
+                if (!kQ) continue;
+                const vQ = kQ.sK().boundingBox;
+                for (let wQ = 0; wQ < vQ.vectorsWorld.length; wQ++) oQ.p.TransformCoordinatesToRef(vQ.vectorsWorld[wQ], FQ, QQ), QQ.x < this._orthoLeft && (this._orthoLeft = QQ.x), QQ.y < this._orthoBottom && (this._orthoBottom = QQ.y), QQ.x > this._orthoRight && (this._orthoRight = QQ.x), QQ.y > this._orthoTop && (this._orthoTop = QQ.y), this.autoCalcShadowZBounds && (QQ.z < LQ && (LQ = QQ.z), QQ.z > qQ && (qQ = QQ.z))
               }
-              this.autoCalcShadowZBounds && (this._shadowMinZ = pd, this._shadowMaxZ = Nd)
+              this.autoCalcShadowZBounds && (this._shadowMinZ = LQ, this._shadowMaxZ = qQ)
             }
-            const Nd = this._orthoRight - this._orthoLeft,
-              Pd = this._orthoTop - this._orthoBottom,
-              Zd = void 0 !== this.shadowMinZ ? this.shadowMinZ : pd?.minZ || 0,
-              gd = void 0 !== this.shadowMaxZ ? this.shadowMaxZ : pd?.maxZ || 1e4,
-              Cd = this.Wm().eL().vpd;
-            Wd.b.OrthoOffCenterLHToRef(this._orthoLeft - Nd * this.shadowOrthoScale, this._orthoRight + Nd * this.shadowOrthoScale, this._orthoBottom - Pd * this.shadowOrthoScale, this._orthoTop + Pd * this.shadowOrthoScale, Cd ? gd : Zd, Cd ? Zd : gd, dd, this.Wm().eL().isNDCHalfZRange)
+            const qQ = this._orthoRight - this._orthoLeft,
+              DQ = this._orthoTop - this._orthoBottom,
+              kQ = void 0 !== this.shadowMinZ ? this.shadowMinZ : LQ?.minZ || 0,
+              vQ = void 0 !== this.shadowMaxZ ? this.shadowMaxZ : LQ?.maxZ || 1e4,
+              mQ = this.iN().Wx().SLQ;
+            oQ.c.OrthoOffCenterLHToRef(this._orthoLeft - qQ * this.shadowOrthoScale, this._orthoRight + qQ * this.shadowOrthoScale, this._orthoBottom - DQ * this.shadowOrthoScale, this._orthoTop + DQ * this.shadowOrthoScale, mQ ? vQ : kQ, mQ ? kQ : vQ, QQ, this.iN().Wx().isNDCHalfZRange)
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
           }
-          transferToEffect(dd, Jd) {
-            return this.computeTransformedInformation() ? (this._uniformBuffer.updateFloat4("vLightData", this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z, 1, Jd), this) : (this._uniformBuffer.updateFloat4("vLightData", this.direction.x, this.direction.y, this.direction.z, 1, Jd), this)
+          transferToEffect(QQ, FQ) {
+            return this.computeTransformedInformation() ? (this._uniformBuffer.updateFloat4("vLightData", this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z, 1, FQ), this) : (this._uniformBuffer.updateFloat4("vLightData", this.direction.x, this.direction.y, this.direction.z, 1, FQ), this)
           }
-          transferToNodeMaterialEffect(dd, Jd) {
-            return this.computeTransformedInformation() ? (dd.setFloat3(Jd, this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z), this) : (dd.setFloat3(Jd, this.direction.x, this.direction.y, this.direction.z), this)
+          transferToNodeMaterialEffect(QQ, FQ) {
+            return this.computeTransformedInformation() ? (QQ.setFloat3(FQ, this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z), this) : (QQ.setFloat3(FQ, this.direction.x, this.direction.y, this.direction.z), this)
           }
-          getDepthMinZ(dd) {
-            const Jd = this._scene.eL();
-            return !Jd.vpd && Jd.isNDCHalfZRange ? 0 : 1
+          getDepthMinZ(QQ) {
+            const FQ = this._scene.Wx();
+            return !FQ.SLQ && FQ.isNDCHalfZRange ? 0 : 1
           }
-          getDepthMaxZ(dd) {
-            const Jd = this._scene.eL();
-            return Jd.vpd && Jd.isNDCHalfZRange ? 0 : 1
+          getDepthMaxZ(QQ) {
+            const FQ = this._scene.Wx();
+            return FQ.SLQ && FQ.isNDCHalfZRange ? 0 : 1
           }
-          prepareLightSpecificDefines(dd, Jd) {
-            dd["DIRLIGHT" + Jd] = !0
+          prepareLightSpecificDefines(QQ, FQ) {
+            QQ["DIRLIGHT" + FQ] = !0
           }
         }, (() => {
-          const Wd = "function" === typeof Symbol && Symbol.metadata ? Object.create(Ld[Symbol.metadata] ?? null) : void 0;
-          Jd = [(0, Nd.H)()], kd = [(0, Nd.H)()], gd = [(0, Nd.H)()], Cd = [(0, Nd.H)()], Kd = [(0, Nd.H)("orthoLeft")], od = [(0, Nd.H)("orthoRight")], ld = [(0, Nd.H)("orthoTop")], Qd = [(0, Nd.H)("orthoBottom")], (0, pd.h)(dd, null, Jd, {
+          const oQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(xQ[Symbol.metadata] ?? null) : void 0;
+          FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], vQ = [(0, qQ.I)()], mQ = [(0, qQ.I)()], uQ = [(0, qQ.I)("orthoLeft")], HQ = [(0, qQ.I)("orthoRight")], bQ = [(0, qQ.I)("orthoTop")], YQ = [(0, qQ.I)("orthoBottom")], (0, LQ.i)(QQ, null, FQ, {
             kind: "getter",
             name: "shadowFrustumSize",
             static: !1,
             private: !1,
             access: {
-              has: dd => "shadowFrustumSize" in dd,
-              get: dd => dd.shadowFrustumSize
+              has: QQ => "shadowFrustumSize" in QQ,
+              get: QQ => QQ.shadowFrustumSize
             },
-            metadata: Wd
-          }, null, Od), (0, pd.h)(dd, null, kd, {
+            metadata: oQ
+          }, null, AQ), (0, LQ.i)(QQ, null, wQ, {
             kind: "getter",
             name: "shadowOrthoScale",
             static: !1,
             private: !1,
             access: {
-              has: dd => "shadowOrthoScale" in dd,
-              get: dd => dd.shadowOrthoScale
+              has: QQ => "shadowOrthoScale" in QQ,
+              get: QQ => QQ.shadowOrthoScale
             },
-            metadata: Wd
-          }, null, Od), (0, pd.h)(null, null, gd, {
+            metadata: oQ
+          }, null, AQ), (0, LQ.i)(null, null, vQ, {
             kind: "field",
             name: "autoUpdateExtends",
             static: !1,
             private: !1,
             access: {
-              has: dd => "autoUpdateExtends" in dd,
-              get: dd => dd.autoUpdateExtends,
-              set: (dd, Jd) => {
-                dd.autoUpdateExtends = Jd
+              has: QQ => "autoUpdateExtends" in QQ,
+              get: QQ => QQ.autoUpdateExtends,
+              set: (QQ, FQ) => {
+                QQ.autoUpdateExtends = FQ
               }
             },
-            metadata: Wd
-          }, ed, Rd), (0, pd.h)(null, null, Cd, {
+            metadata: oQ
+          }, tQ, eQ), (0, LQ.i)(null, null, mQ, {
             kind: "field",
             name: "autoCalcShadowZBounds",
             static: !1,
             private: !1,
             access: {
-              has: dd => "autoCalcShadowZBounds" in dd,
-              get: dd => dd.autoCalcShadowZBounds,
-              set: (dd, Jd) => {
-                dd.autoCalcShadowZBounds = Jd
+              has: QQ => "autoCalcShadowZBounds" in QQ,
+              get: QQ => QQ.autoCalcShadowZBounds,
+              set: (QQ, FQ) => {
+                QQ.autoCalcShadowZBounds = FQ
               }
             },
-            metadata: Wd
-          }, Id, Gd), (0, pd.h)(null, null, Kd, {
+            metadata: oQ
+          }, MQ, GQ), (0, LQ.i)(null, null, uQ, {
             kind: "field",
             name: "_orthoLeft",
             static: !1,
             private: !1,
             access: {
-              has: dd => "_orthoLeft" in dd,
-              get: dd => dd._orthoLeft,
-              set: (dd, Jd) => {
-                dd._orthoLeft = Jd
+              has: QQ => "_orthoLeft" in QQ,
+              get: QQ => QQ._orthoLeft,
+              set: (QQ, FQ) => {
+                QQ._orthoLeft = FQ
               }
             },
-            metadata: Wd
-          }, vd, xd), (0, pd.h)(null, null, od, {
+            metadata: oQ
+          }, pQ, cQ), (0, LQ.i)(null, null, HQ, {
             kind: "field",
             name: "_orthoRight",
             static: !1,
             private: !1,
             access: {
-              has: dd => "_orthoRight" in dd,
-              get: dd => dd._orthoRight,
-              set: (dd, Jd) => {
-                dd._orthoRight = Jd
+              has: QQ => "_orthoRight" in QQ,
+              get: QQ => QQ._orthoRight,
+              set: (QQ, FQ) => {
+                QQ._orthoRight = FQ
               }
             },
-            metadata: Wd
-          }, qd, Bd), (0, pd.h)(null, null, ld, {
+            metadata: oQ
+          }, CQ, SQ), (0, LQ.i)(null, null, bQ, {
             kind: "field",
             name: "_orthoTop",
             static: !1,
             private: !1,
             access: {
-              has: dd => "_orthoTop" in dd,
-              get: dd => dd._orthoTop,
-              set: (dd, Jd) => {
-                dd._orthoTop = Jd
+              has: QQ => "_orthoTop" in QQ,
+              get: QQ => QQ._orthoTop,
+              set: (QQ, FQ) => {
+                QQ._orthoTop = FQ
               }
             },
-            metadata: Wd
-          }, sd, ad), (0, pd.h)(null, null, Qd, {
+            metadata: oQ
+          }, iQ, WQ), (0, LQ.i)(null, null, YQ, {
             kind: "field",
             name: "_orthoBottom",
             static: !1,
             private: !1,
             access: {
-              has: dd => "_orthoBottom" in dd,
-              get: dd => dd._orthoBottom,
-              set: (dd, Jd) => {
-                dd._orthoBottom = Jd
+              has: QQ => "_orthoBottom" in QQ,
+              get: QQ => QQ._orthoBottom,
+              set: (QQ, FQ) => {
+                QQ._orthoBottom = FQ
               }
             },
-            metadata: Wd
-          }, Md, Fd), Wd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: oQ
+          }, RQ, OQ), oQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Wd
+            value: oQ
           })
-        })(), dd
+        })(), QQ
       })(),
-      od = !1;
-    od || (od = !0, gd.c.AddNodeConstructor("Light_Type_1", ((dd, Jd) => () => new Kd(dd, Wd.n.Zero(), Jd))), (0, Cd.h)("BABYLON.DirectionalLight", Kd))
+      HQ = !1;
+    HQ || (HQ = !0, vQ.c.AddNodeConstructor("Light_Type_1", ((QQ, FQ) => () => new uQ(QQ, oQ.p.Zero(), FQ))), (0, mQ.e)("BABYLON.DirectionalLight", uQ))
   },
-  41556: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => uJ
+  40992: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => EF
     });
-    var pd = kd(38835),
-      Nd = kd(37280),
-      Wd = kd(37251),
-      Pd = kd(40115),
-      Zd = kd(41561),
-      gd = kd(37277),
-      Cd = kd(40266),
-      Kd = kd(37443),
-      od = kd(38844),
-      ld = kd(38806),
-      Qd = kd(37289);
-    class Ld {
+    var LQ = wQ(38236),
+      qQ = wQ(36722),
+      oQ = wQ(36696),
+      DQ = wQ(39561),
+      kQ = wQ(40998),
+      vQ = wQ(36720),
+      mQ = wQ(39708),
+      uQ = wQ(36873),
+      HQ = wQ(38244),
+      bQ = wQ(38200),
+      YQ = wQ(36729);
+    class xQ {
       constructor() {
-        this.direction1 = new Wd.n(0, 1, 0), this.direction2 = new Wd.n(0, 1, 0)
+        this.direction1 = new oQ.p(0, 1, 0), this.direction2 = new oQ.p(0, 1, 0)
       }
-      startDirectionFunction(dd, Jd, kd, pd) {
-        const Nd = (0, Qd.RandomRange)(this.direction1.x, this.direction2.x),
-          Pd = (0, Qd.RandomRange)(this.direction1.y, this.direction2.y),
-          Zd = (0, Qd.RandomRange)(this.direction1.z, this.direction2.z);
-        pd ? Jd.kdd(Nd, Pd, Zd) : Wd.n.TransformNormalFromFloatsToRef(Nd, Pd, Zd, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = (0, YQ.RandomRange)(this.direction1.x, this.direction2.x),
+          DQ = (0, YQ.RandomRange)(this.direction1.y, this.direction2.y),
+          kQ = (0, YQ.RandomRange)(this.direction1.z, this.direction2.z);
+        LQ ? FQ.vQQ(qQ, DQ, kQ) : oQ.p.TransformNormalFromFloatsToRef(qQ, DQ, kQ, QQ, FQ)
       }
-      startPositionFunction(dd, Jd, kd, pd) {
-        pd ? Jd.kdd(0, 0, 0) : Wd.n.TransformCoordinatesFromFloatsToRef(0, 0, 0, dd, Jd)
+      startPositionFunction(QQ, FQ, wQ, LQ) {
+        LQ ? FQ.vQQ(0, 0, 0) : oQ.p.TransformCoordinatesFromFloatsToRef(0, 0, 0, QQ, FQ)
       }
       clone() {
-        const dd = new Ld;
-        return ld.c.DeepCopy(this, dd), dd
+        const QQ = new xQ;
+        return bQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setVector3("direction1", this.direction1), dd.setVector3("direction2", this.direction2)
+      applyToShader(QQ) {
+        QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("direction1", 3), dd.addUniform("direction2", 3)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define POINTEMITTER"
@@ -948,46 +948,46 @@ export const modules = {
         return "PointParticleEmitter"
       }
       serialize() {
-        const dd = {};
-        return dd.type = this.getClassName(), dd.direction1 = this.direction1.spd(), dd.direction2 = this.direction2.spd(), dd
+        const QQ = {};
+        return QQ.type = this.getClassName(), QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ
       }
-      parse(dd) {
-        Wd.n.FromArrayToRef(dd.direction1, 0, this.direction1), Wd.n.FromArrayToRef(dd.direction2, 0, this.direction2)
+      parse(QQ) {
+        oQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), oQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2)
       }
     }
-    class Od {
+    class AQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.radius = dd, this.radiusRange = Jd, this.directionRandomizer = kd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.radius = QQ, this.radiusRange = FQ, this.directionRandomizer = wQ
       }
-      startDirectionFunction(dd, Jd, kd, pd) {
-        const Nd = kd.position.subtract(dd.getTranslation()).normalize(),
-          Pd = (0, Qd.RandomRange)(0, this.directionRandomizer),
-          Zd = (0, Qd.RandomRange)(0, this.directionRandomizer),
-          gd = (0, Qd.RandomRange)(0, this.directionRandomizer);
-        Nd.x += Pd, Nd.y += Zd, Nd.z += gd, Nd.normalize(), pd ? Jd.Fs(Nd) : Wd.n.TransformNormalFromFloatsToRef(Nd.x, Nd.y, Nd.z, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = wQ.position.subtract(QQ.getTranslation()).normalize(),
+          DQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
+          kQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
+          vQ = (0, YQ.RandomRange)(0, this.directionRandomizer);
+        qQ.x += DQ, qQ.y += kQ, qQ.z += vQ, qQ.normalize(), LQ ? FQ.Qs(qQ) : oQ.p.TransformNormalFromFloatsToRef(qQ.x, qQ.y, qQ.z, QQ, FQ)
       }
-      startPositionFunction(dd, Jd, kd, pd) {
-        const Nd = this.radius - (0, Qd.RandomRange)(0, this.radius * this.radiusRange),
-          Pd = (0, Qd.RandomRange)(0, 1),
-          Zd = (0, Qd.RandomRange)(0, 2 * Math.PI),
-          gd = Math.acos(2 * Pd - 1),
-          Cd = Nd * Math.cos(Zd) * Math.sin(gd),
-          Kd = Nd * Math.cos(gd),
-          od = Nd * Math.sin(Zd) * Math.sin(gd);
-        pd ? Jd.kdd(Cd, Math.abs(Kd), od) : Wd.n.TransformCoordinatesFromFloatsToRef(Cd, Math.abs(Kd), od, dd, Jd)
+      startPositionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = this.radius - (0, YQ.RandomRange)(0, this.radius * this.radiusRange),
+          DQ = (0, YQ.RandomRange)(0, 1),
+          kQ = (0, YQ.RandomRange)(0, 2 * Math.PI),
+          vQ = Math.acos(2 * DQ - 1),
+          mQ = qQ * Math.cos(kQ) * Math.sin(vQ),
+          uQ = qQ * Math.cos(vQ),
+          HQ = qQ * Math.sin(kQ) * Math.sin(vQ);
+        LQ ? FQ.vQQ(mQ, Math.abs(uQ), HQ) : oQ.p.TransformCoordinatesFromFloatsToRef(mQ, Math.abs(uQ), HQ, QQ, FQ)
       }
       clone() {
-        const dd = new Od(this.radius, this.directionRandomizer);
-        return ld.c.DeepCopy(this, dd), dd
+        const QQ = new AQ(this.radius, this.directionRandomizer);
+        return bQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setFloat("radius", this.radius), dd.setFloat("radiusRange", this.radiusRange), dd.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(QQ) {
+        QQ.setFloat("radius", this.radius), QQ.setFloat("radiusRange", this.radiusRange), QQ.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("radius", 1), dd.addUniform("radiusRange", 1), dd.addUniform("directionRandomizer", 1)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("radius", 1), QQ.addUniform("radiusRange", 1), QQ.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define HEMISPHERICEMITTER"
@@ -996,46 +996,46 @@ export const modules = {
         return "HemisphericParticleEmitter"
       }
       serialize() {
-        const dd = {};
-        return dd.type = this.getClassName(), dd.radius = this.radius, dd.radiusRange = this.radiusRange, dd.directionRandomizer = this.directionRandomizer, dd
+        const QQ = {};
+        return QQ.type = this.getClassName(), QQ.radius = this.radius, QQ.radiusRange = this.radiusRange, QQ.directionRandomizer = this.directionRandomizer, QQ
       }
-      parse(dd) {
-        this.radius = dd.radius, this.radiusRange = dd.radiusRange, this.directionRandomizer = dd.directionRandomizer
+      parse(QQ) {
+        this.radius = QQ.radius, this.radiusRange = QQ.radiusRange, this.directionRandomizer = QQ.directionRandomizer
       }
     }
-    class ed {
+    class tQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.radius = dd, this.radiusRange = Jd, this.directionRandomizer = kd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.radius = QQ, this.radiusRange = FQ, this.directionRandomizer = wQ
       }
-      startDirectionFunction(dd, Jd, kd, pd) {
-        const Nd = kd.position.subtract(dd.getTranslation()).normalize(),
-          Pd = (0, Qd.RandomRange)(0, this.directionRandomizer),
-          Zd = (0, Qd.RandomRange)(0, this.directionRandomizer),
-          gd = (0, Qd.RandomRange)(0, this.directionRandomizer);
-        Nd.x += Pd, Nd.y += Zd, Nd.z += gd, Nd.normalize(), pd ? Jd.Fs(Nd) : Wd.n.TransformNormalFromFloatsToRef(Nd.x, Nd.y, Nd.z, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = wQ.position.subtract(QQ.getTranslation()).normalize(),
+          DQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
+          kQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
+          vQ = (0, YQ.RandomRange)(0, this.directionRandomizer);
+        qQ.x += DQ, qQ.y += kQ, qQ.z += vQ, qQ.normalize(), LQ ? FQ.Qs(qQ) : oQ.p.TransformNormalFromFloatsToRef(qQ.x, qQ.y, qQ.z, QQ, FQ)
       }
-      startPositionFunction(dd, Jd, kd, pd) {
-        const Nd = this.radius - (0, Qd.RandomRange)(0, this.radius * this.radiusRange),
-          Pd = (0, Qd.RandomRange)(0, 1),
-          Zd = (0, Qd.RandomRange)(0, 2 * Math.PI),
-          gd = Math.acos(2 * Pd - 1),
-          Cd = Nd * Math.cos(Zd) * Math.sin(gd),
-          Kd = Nd * Math.cos(gd),
-          od = Nd * Math.sin(Zd) * Math.sin(gd);
-        pd ? Jd.kdd(Cd, Kd, od) : Wd.n.TransformCoordinatesFromFloatsToRef(Cd, Kd, od, dd, Jd)
+      startPositionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = this.radius - (0, YQ.RandomRange)(0, this.radius * this.radiusRange),
+          DQ = (0, YQ.RandomRange)(0, 1),
+          kQ = (0, YQ.RandomRange)(0, 2 * Math.PI),
+          vQ = Math.acos(2 * DQ - 1),
+          mQ = qQ * Math.cos(kQ) * Math.sin(vQ),
+          uQ = qQ * Math.cos(vQ),
+          HQ = qQ * Math.sin(kQ) * Math.sin(vQ);
+        LQ ? FQ.vQQ(mQ, uQ, HQ) : oQ.p.TransformCoordinatesFromFloatsToRef(mQ, uQ, HQ, QQ, FQ)
       }
       clone() {
-        const dd = new ed(this.radius, this.directionRandomizer);
-        return ld.c.DeepCopy(this, dd), dd
+        const QQ = new tQ(this.radius, this.directionRandomizer);
+        return bQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setFloat("radius", this.radius), dd.setFloat("radiusRange", this.radiusRange), dd.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(QQ) {
+        QQ.setFloat("radius", this.radius), QQ.setFloat("radiusRange", this.radiusRange), QQ.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("radius", 1), dd.addUniform("radiusRange", 1), dd.addUniform("directionRandomizer", 1)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("radius", 1), QQ.addUniform("radiusRange", 1), QQ.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define SPHEREEMITTER"
@@ -1044,35 +1044,35 @@ export const modules = {
         return "SphereParticleEmitter"
       }
       serialize() {
-        const dd = {};
-        return dd.type = this.getClassName(), dd.radius = this.radius, dd.radiusRange = this.radiusRange, dd.directionRandomizer = this.directionRandomizer, dd
+        const QQ = {};
+        return QQ.type = this.getClassName(), QQ.radius = this.radius, QQ.radiusRange = this.radiusRange, QQ.directionRandomizer = this.directionRandomizer, QQ
       }
-      parse(dd) {
-        this.radius = dd.radius, this.radiusRange = dd.radiusRange, this.directionRandomizer = dd.directionRandomizer
+      parse(QQ) {
+        this.radius = QQ.radius, this.radiusRange = QQ.radiusRange, this.directionRandomizer = QQ.directionRandomizer
       }
     }
-    class Rd extends ed {
+    class eQ extends tQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Wd.n(0, 1, 0),
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Wd.n(0, 1, 0);
-        super(dd), this.direction1 = Jd, this.direction2 = kd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new oQ.p(0, 1, 0),
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0);
+        super(QQ), this.direction1 = FQ, this.direction2 = wQ
       }
-      startDirectionFunction(dd, Jd, kd, pd) {
-        const Nd = (0, Qd.RandomRange)(this.direction1.x, this.direction2.x),
-          Pd = (0, Qd.RandomRange)(this.direction1.y, this.direction2.y),
-          Zd = (0, Qd.RandomRange)(this.direction1.z, this.direction2.z);
-        pd ? Jd.kdd(Nd, Pd, Zd) : Wd.n.TransformNormalFromFloatsToRef(Nd, Pd, Zd, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = (0, YQ.RandomRange)(this.direction1.x, this.direction2.x),
+          DQ = (0, YQ.RandomRange)(this.direction1.y, this.direction2.y),
+          kQ = (0, YQ.RandomRange)(this.direction1.z, this.direction2.z);
+        LQ ? FQ.vQQ(qQ, DQ, kQ) : oQ.p.TransformNormalFromFloatsToRef(qQ, DQ, kQ, QQ, FQ)
       }
       clone() {
-        const dd = new Rd(this.radius, this.direction1, this.direction2);
-        return ld.c.DeepCopy(this, dd), dd
+        const QQ = new eQ(this.radius, this.direction1, this.direction2);
+        return bQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setFloat("radius", this.radius), dd.setFloat("radiusRange", this.radiusRange), dd.setVector3("direction1", this.direction1), dd.setVector3("direction2", this.direction2)
+      applyToShader(QQ) {
+        QQ.setFloat("radius", this.radius), QQ.setFloat("radiusRange", this.radiusRange), QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("radius", 1), dd.addUniform("radiusRange", 1), dd.addUniform("direction1", 3), dd.addUniform("direction2", 3)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("radius", 1), QQ.addUniform("radiusRange", 1), QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define SPHEREEMITTER\n#define DIRECTEDSPHEREEMITTER"
@@ -1081,103 +1081,103 @@ export const modules = {
         return "SphereDirectedParticleEmitter"
       }
       serialize() {
-        const dd = super.serialize();
-        return dd.direction1 = this.direction1.spd(), dd.direction2 = this.direction2.spd(), dd
+        const QQ = super.serialize();
+        return QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ
       }
-      parse(dd) {
-        super.parse(dd), Wd.n.FromArrayToRef(dd.direction1, 0, this.direction1), Wd.n.FromArrayToRef(dd.direction2, 0, this.direction2)
+      parse(QQ) {
+        super.parse(QQ), oQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), oQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2)
       }
     }
-    var Id = kd(38801);
-    class Gd {
+    var MQ = wQ(38192);
+    class GQ {
       get radius() {
         return this._radius
       }
-      set radius(dd) {
-        this._radius = dd, this._buildHeight()
+      set radius(QQ) {
+        this._radius = QQ, this._buildHeight()
       }
       get angle() {
         return this._angle
       }
-      set angle(dd) {
-        this._angle = dd, this._buildHeight()
+      set angle(QQ) {
+        this._angle = QQ, this._buildHeight()
       }
       _buildHeight() {
         0 !== this._angle ? this._height = this._radius / Math.tan(this._angle / 2) : this._height = 1
       }
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.directionRandomizer = kd, this.radiusRange = 1, this.heightRange = 1, this.emitFromSpawnPointOnly = !1, this.angle = Jd, this.radius = dd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.directionRandomizer = wQ, this.radiusRange = 1, this.heightRange = 1, this.emitFromSpawnPointOnly = !1, this.angle = FQ, this.radius = QQ
       }
-      startDirectionFunction(dd, Jd, kd, pd) {
-        const Nd = kd.position.subtract(dd.getTranslation()).normalize(),
-          Pd = (0, Qd.RandomRange)(0, this.directionRandomizer),
-          Zd = (0, Qd.RandomRange)(0, this.directionRandomizer),
-          gd = (0, Qd.RandomRange)(0, this.directionRandomizer);
-        Nd.x += Pd, Nd.y += Zd, Nd.z += gd, Nd.normalize(), pd ? Jd.Fs(Nd) : Wd.n.TransformNormalFromFloatsToRef(Nd.x, Nd.y, Nd.z, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = wQ.position.subtract(QQ.getTranslation()).normalize(),
+          DQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
+          kQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
+          vQ = (0, YQ.RandomRange)(0, this.directionRandomizer);
+        qQ.x += DQ, qQ.y += kQ, qQ.z += vQ, qQ.normalize(), LQ ? FQ.Qs(qQ) : oQ.p.TransformNormalFromFloatsToRef(qQ.x, qQ.y, qQ.z, QQ, FQ)
       }
-      startPositionFunction(dd, Jd, kd, pd) {
-        const Nd = (0, Qd.RandomRange)(0, 2 * Math.PI);
-        let Pd;
-        this.emitFromSpawnPointOnly ? Pd = 1e-4 : (Pd = (0, Qd.RandomRange)(0, this.heightRange), Pd = 1 - Pd * Pd);
-        let Zd = this._radius - (0, Qd.RandomRange)(0, this._radius * this.radiusRange);
-        Zd *= Pd;
-        const gd = Zd * Math.sin(Nd),
-          Cd = Zd * Math.cos(Nd),
-          Kd = Pd * this._height;
-        if (pd) return Jd.x = gd, Jd.y = Kd, void(Jd.z = Cd);
-        Wd.n.TransformCoordinatesFromFloatsToRef(gd, Kd, Cd, dd, Jd)
+      startPositionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = (0, YQ.RandomRange)(0, 2 * Math.PI);
+        let DQ;
+        this.emitFromSpawnPointOnly ? DQ = 1e-4 : (DQ = (0, YQ.RandomRange)(0, this.heightRange), DQ = 1 - DQ * DQ);
+        let kQ = this._radius - (0, YQ.RandomRange)(0, this._radius * this.radiusRange);
+        kQ *= DQ;
+        const vQ = kQ * Math.sin(qQ),
+          mQ = kQ * Math.cos(qQ),
+          uQ = DQ * this._height;
+        if (LQ) return FQ.x = vQ, FQ.y = uQ, void(FQ.z = mQ);
+        oQ.p.TransformCoordinatesFromFloatsToRef(vQ, uQ, mQ, QQ, FQ)
       }
       clone() {
-        const dd = new Gd(this._radius, this._angle, this.directionRandomizer);
-        return ld.c.DeepCopy(this, dd), dd
+        const QQ = new GQ(this._radius, this._angle, this.directionRandomizer);
+        return bQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setFloat2("radius", this._radius, this.radiusRange), dd.setFloat("coneAngle", this._angle), dd.setFloat2("height", this._height, this.heightRange), dd.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(QQ) {
+        QQ.setFloat2("radius", this._radius, this.radiusRange), QQ.setFloat("coneAngle", this._angle), QQ.setFloat2("height", this._height, this.heightRange), QQ.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("radius", 2), dd.addUniform("coneAngle", 1), dd.addUniform("height", 2), dd.addUniform("directionRandomizer", 1)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("radius", 2), QQ.addUniform("coneAngle", 1), QQ.addUniform("height", 2), QQ.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
-        let dd = "#define CONEEMITTER";
-        return this.emitFromSpawnPointOnly && (dd += "\n#define CONEEMITTERSPAWNPOINT"), dd
+        let QQ = "#define CONEEMITTER";
+        return this.emitFromSpawnPointOnly && (QQ += "\n#define CONEEMITTERSPAWNPOINT"), QQ
       }
       getClassName() {
         return "ConeParticleEmitter"
       }
       serialize() {
-        const dd = {};
-        return dd.type = this.getClassName(), dd.radius = this._radius, dd.angle = this._angle, dd.directionRandomizer = this.directionRandomizer, dd.radiusRange = this.radiusRange, dd.heightRange = this.heightRange, dd.emitFromSpawnPointOnly = this.emitFromSpawnPointOnly, dd
+        const QQ = {};
+        return QQ.type = this.getClassName(), QQ.radius = this._radius, QQ.angle = this._angle, QQ.directionRandomizer = this.directionRandomizer, QQ.radiusRange = this.radiusRange, QQ.heightRange = this.heightRange, QQ.emitFromSpawnPointOnly = this.emitFromSpawnPointOnly, QQ
       }
-      parse(dd) {
-        this.radius = dd.radius, this.angle = dd.angle, this.directionRandomizer = dd.directionRandomizer, this.radiusRange = void 0 !== dd.radiusRange ? dd.radiusRange : 1, this.heightRange = void 0 !== dd.heightRange ? dd.heightRange : 1, this.emitFromSpawnPointOnly = void 0 !== dd.emitFromSpawnPointOnly && dd.emitFromSpawnPointOnly
+      parse(QQ) {
+        this.radius = QQ.radius, this.angle = QQ.angle, this.directionRandomizer = QQ.directionRandomizer, this.radiusRange = void 0 !== QQ.radiusRange ? QQ.radiusRange : 1, this.heightRange = void 0 !== QQ.heightRange ? QQ.heightRange : 1, this.emitFromSpawnPointOnly = void 0 !== QQ.emitFromSpawnPointOnly && QQ.emitFromSpawnPointOnly
       }
     }
-    class vd extends Gd {
+    class pQ extends GQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Wd.n(0, 1, 0),
-          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Wd.n(0, 1, 0);
-        super(dd, Jd), this.direction1 = kd, this.direction2 = pd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0),
+          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0);
+        super(QQ, FQ), this.direction1 = wQ, this.direction2 = LQ
       }
-      startDirectionFunction(dd, Jd, kd, pd) {
-        const Nd = (0, Qd.RandomRange)(this.direction1.x, this.direction2.x),
-          Pd = (0, Qd.RandomRange)(this.direction1.y, this.direction2.y),
-          Zd = (0, Qd.RandomRange)(this.direction1.z, this.direction2.z);
-        pd ? Jd.kdd(Nd, Pd, Zd) : Wd.n.TransformNormalFromFloatsToRef(Nd, Pd, Zd, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = (0, YQ.RandomRange)(this.direction1.x, this.direction2.x),
+          DQ = (0, YQ.RandomRange)(this.direction1.y, this.direction2.y),
+          kQ = (0, YQ.RandomRange)(this.direction1.z, this.direction2.z);
+        LQ ? FQ.vQQ(qQ, DQ, kQ) : oQ.p.TransformNormalFromFloatsToRef(qQ, DQ, kQ, QQ, FQ)
       }
       clone() {
-        const dd = new vd(this.radius, this.angle, this.direction1, this.direction2);
-        return ld.c.DeepCopy(this, dd), dd
+        const QQ = new pQ(this.radius, this.angle, this.direction1, this.direction2);
+        return bQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        super.applyToShader(dd), dd.setVector3("direction1", this.direction1), dd.setVector3("direction2", this.direction2)
+      applyToShader(QQ) {
+        super.applyToShader(QQ), QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(dd) {
-        super.buildUniformLayout(dd), dd.addUniform("direction1", 3), dd.addUniform("direction2", 3)
+      buildUniformLayout(QQ) {
+        super.buildUniformLayout(QQ), QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CONEEMITTER\n#define DIRECTEDCONEEMITTER"
@@ -1186,55 +1186,55 @@ export const modules = {
         return "ConeDirectedParticleEmitter"
       }
       serialize() {
-        const dd = super.serialize();
-        return dd.direction1 = this.direction1.spd(), dd.direction2 = this.direction2.spd(), dd
+        const QQ = super.serialize();
+        return QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ
       }
-      parse(dd) {
-        super.parse(dd), Wd.n.FromArrayToRef(dd.direction1, 0, this.direction1), Wd.n.FromArrayToRef(dd.direction2, 0, this.direction2)
+      parse(QQ) {
+        super.parse(QQ), oQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), oQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2)
       }
     }
-    class xd {
+    class cQ {
       get mesh() {
         return this._mesh
       }
-      set mesh(dd) {
-        this._mesh !== dd && (this._mesh = dd, dd ? (this._indices = dd.ipd(), this._positions = dd.getVerticesData(Pd.j.PositionKind), this._normals = dd.getVerticesData(Pd.j.NormalKind)) : (this._indices = null, this._positions = null, this._normals = null))
+      set mesh(QQ) {
+        this._mesh !== QQ && (this._mesh = QQ, QQ ? (this._indices = QQ.OLQ(), this._positions = QQ.getVerticesData(DQ.h.PositionKind), this._normals = QQ.getVerticesData(DQ.h.NormalKind)) : (this._indices = null, this._positions = null, this._normals = null))
       }
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this._indices = null, this._positions = null, this._normals = null, this._storedNormal = Wd.n.Zero(), this._mesh = null, this.direction1 = new Wd.n(0, 1, 0), this.direction2 = new Wd.n(0, 1, 0), this.useMeshNormalsForDirection = !0, this.mesh = dd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this._indices = null, this._positions = null, this._normals = null, this._storedNormal = oQ.p.Zero(), this._mesh = null, this.direction1 = new oQ.p(0, 1, 0), this.direction2 = new oQ.p(0, 1, 0), this.useMeshNormalsForDirection = !0, this.mesh = QQ
       }
-      startDirectionFunction(dd, Jd, kd, pd) {
-        if (this.useMeshNormalsForDirection && this._normals) return void Wd.n.TransformNormalToRef(this._storedNormal, dd, Jd);
-        const Nd = (0, Qd.RandomRange)(this.direction1.x, this.direction2.x),
-          Pd = (0, Qd.RandomRange)(this.direction1.y, this.direction2.y),
-          Zd = (0, Qd.RandomRange)(this.direction1.z, this.direction2.z);
-        pd ? Jd.kdd(Nd, Pd, Zd) : Wd.n.TransformNormalFromFloatsToRef(Nd, Pd, Zd, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, LQ) {
+        if (this.useMeshNormalsForDirection && this._normals) return void oQ.p.TransformNormalToRef(this._storedNormal, QQ, FQ);
+        const qQ = (0, YQ.RandomRange)(this.direction1.x, this.direction2.x),
+          DQ = (0, YQ.RandomRange)(this.direction1.y, this.direction2.y),
+          kQ = (0, YQ.RandomRange)(this.direction1.z, this.direction2.z);
+        LQ ? FQ.vQQ(qQ, DQ, kQ) : oQ.p.TransformNormalFromFloatsToRef(qQ, DQ, kQ, QQ, FQ)
       }
-      startPositionFunction(dd, Jd, kd, pd) {
+      startPositionFunction(QQ, FQ, wQ, LQ) {
         if (!this._indices || !this._positions) return;
-        const Nd = 3 * (Math.random() * (this._indices.length / 3) | 0),
-          Pd = Math.random(),
-          Zd = Math.random() * (1 - Pd),
-          gd = 1 - Pd - Zd,
-          Cd = this._indices[Nd],
-          Kd = this._indices[Nd + 1],
-          od = this._indices[Nd + 2],
-          ld = Wd.h.IL[0],
-          Qd = Wd.h.IL[1],
-          Ld = Wd.h.IL[2],
-          Od = Wd.h.IL[3];
-        Wd.n.FromArrayToRef(this._positions, 3 * Cd, ld), Wd.n.FromArrayToRef(this._positions, 3 * Kd, Qd), Wd.n.FromArrayToRef(this._positions, 3 * od, Ld), Od.x = Pd * ld.x + Zd * Qd.x + gd * Ld.x, Od.y = Pd * ld.y + Zd * Qd.y + gd * Ld.y, Od.z = Pd * ld.z + Zd * Qd.z + gd * Ld.z, pd ? Jd.kdd(Od.x, Od.y, Od.z) : Wd.n.TransformCoordinatesFromFloatsToRef(Od.x, Od.y, Od.z, dd, Jd), this.useMeshNormalsForDirection && this._normals && (Wd.n.FromArrayToRef(this._normals, 3 * Cd, ld), Wd.n.FromArrayToRef(this._normals, 3 * Kd, Qd), Wd.n.FromArrayToRef(this._normals, 3 * od, Ld), this._storedNormal.x = Pd * ld.x + Zd * Qd.x + gd * Ld.x, this._storedNormal.y = Pd * ld.y + Zd * Qd.y + gd * Ld.y, this._storedNormal.z = Pd * ld.z + Zd * Qd.z + gd * Ld.z)
+        const qQ = 3 * (Math.random() * (this._indices.length / 3) | 0),
+          DQ = Math.random(),
+          kQ = Math.random() * (1 - DQ),
+          vQ = 1 - DQ - kQ,
+          mQ = this._indices[qQ],
+          uQ = this._indices[qQ + 1],
+          HQ = this._indices[qQ + 2],
+          bQ = oQ.k.Ox[0],
+          YQ = oQ.k.Ox[1],
+          xQ = oQ.k.Ox[2],
+          AQ = oQ.k.Ox[3];
+        oQ.p.FromArrayToRef(this._positions, 3 * mQ, bQ), oQ.p.FromArrayToRef(this._positions, 3 * uQ, YQ), oQ.p.FromArrayToRef(this._positions, 3 * HQ, xQ), AQ.x = DQ * bQ.x + kQ * YQ.x + vQ * xQ.x, AQ.y = DQ * bQ.y + kQ * YQ.y + vQ * xQ.y, AQ.z = DQ * bQ.z + kQ * YQ.z + vQ * xQ.z, LQ ? FQ.vQQ(AQ.x, AQ.y, AQ.z) : oQ.p.TransformCoordinatesFromFloatsToRef(AQ.x, AQ.y, AQ.z, QQ, FQ), this.useMeshNormalsForDirection && this._normals && (oQ.p.FromArrayToRef(this._normals, 3 * mQ, bQ), oQ.p.FromArrayToRef(this._normals, 3 * uQ, YQ), oQ.p.FromArrayToRef(this._normals, 3 * HQ, xQ), this._storedNormal.x = DQ * bQ.x + kQ * YQ.x + vQ * xQ.x, this._storedNormal.y = DQ * bQ.y + kQ * YQ.y + vQ * xQ.y, this._storedNormal.z = DQ * bQ.z + kQ * YQ.z + vQ * xQ.z)
       }
       clone() {
-        const dd = new xd(this.mesh);
-        return ld.c.DeepCopy(this, dd), dd
+        const QQ = new cQ(this.mesh);
+        return bQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setVector3("direction1", this.direction1), dd.setVector3("direction2", this.direction2)
+      applyToShader(QQ) {
+        QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("direction1", 3), dd.addUniform("direction2", 3)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return ""
@@ -1243,19 +1243,19 @@ export const modules = {
         return "MeshParticleEmitter"
       }
       serialize() {
-        const dd = {};
-        return dd.type = this.getClassName(), dd.direction1 = this.direction1.spd(), dd.direction2 = this.direction2.spd(), dd.meshId = this.mesh?.id, dd.useMeshNormalsForDirection = this.useMeshNormalsForDirection, dd
+        const QQ = {};
+        return QQ.type = this.getClassName(), QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ.meshId = this.mesh?.id, QQ.useMeshNormalsForDirection = this.useMeshNormalsForDirection, QQ
       }
-      parse(dd, Jd) {
-        Wd.n.FromArrayToRef(dd.direction1, 0, this.direction1), Wd.n.FromArrayToRef(dd.direction2, 0, this.direction2), dd.meshId && Jd && (this.mesh = Jd.getLastMeshById(dd.meshId)), this.useMeshNormalsForDirection = dd.useMeshNormalsForDirection
+      parse(QQ, FQ) {
+        oQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), oQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2), QQ.meshId && FQ && (this.mesh = FQ.getLastMeshById(QQ.meshId)), this.useMeshNormalsForDirection = QQ.useMeshNormalsForDirection
       }
     }
-    class qd {
+    class CQ {
       get targetStopDuration() {
         return this._targetStopDuration
       }
-      set targetStopDuration(dd) {
-        this._targetStopDuration !== dd && (this._targetStopDuration = dd)
+      set targetStopDuration(QQ) {
+        this._targetStopDuration !== QQ && (this._targetStopDuration = QQ)
       }
       get isNodeGenerated() {
         return !1
@@ -1263,62 +1263,62 @@ export const modules = {
       get noiseTexture() {
         return this._noiseTexture
       }
-      set noiseTexture(dd) {
-        this._noiseTexture !== dd && (this._noiseTexture = dd, this._reset())
+      set noiseTexture(QQ) {
+        this._noiseTexture !== QQ && (this._noiseTexture = QQ, this._reset())
       }
       get attractors() {
         return this._attractors.slice(0)
       }
-      addAttractor(dd) {
-        this._attractors.push(dd)
+      addAttractor(QQ) {
+        this._attractors.push(QQ)
       }
-      removeAttractor(dd) {
-        const Jd = this._attractors.indexOf(dd); - 1 !== Jd && this._attractors.splice(Jd, 1)
+      removeAttractor(QQ) {
+        const FQ = this._attractors.indexOf(QQ); - 1 !== FQ && this._attractors.splice(FQ, 1)
       }
       get _isAnimationSheetEnabled() {
         return this._animationSheetEnabled
       }
-      set _isAnimationSheetEnabled(dd) {
-        this._animationSheetEnabled !== dd && (this._animationSheetEnabled = dd)
+      set _isAnimationSheetEnabled(QQ) {
+        this._animationSheetEnabled !== QQ && (this._animationSheetEnabled = QQ)
       }
       get isAnimationSheetEnabled() {
         return this._isAnimationSheetEnabled
       }
-      set isAnimationSheetEnabled(dd) {
-        this._isAnimationSheetEnabled != dd && (this._isAnimationSheetEnabled = dd, this._reset())
+      set isAnimationSheetEnabled(QQ) {
+        this._isAnimationSheetEnabled != QQ && (this._isAnimationSheetEnabled = QQ, this._reset())
       }
       get useLogarithmicDepth() {
         return this._useLogarithmicDepth
       }
-      set useLogarithmicDepth(dd) {
-        this._useLogarithmicDepth = dd && this.Wm().eL().getCaps().fragmentDepthSupported
+      set useLogarithmicDepth(QQ) {
+        this._useLogarithmicDepth = QQ && this.iN().Wx().getCaps().fragmentDepthSupported
       }
-      Wm() {
+      iN() {
         return this._scene
       }
       _hasTargetStopDurationDependantGradient() {
         return this._startSizeGradients && this._startSizeGradients.length > 0 || this._emitRateGradients && this._emitRateGradients.length > 0 || this._lifeTimeGradients && this._lifeTimeGradients.length > 0
       }
-      _setEngineBasedOnBlendMode(dd) {
-        switch (dd) {
-          case qd.BLENDMODE_MULTIPLYADD:
+      _setEngineBasedOnBlendMode(QQ) {
+        switch (QQ) {
+          case CQ.BLENDMODE_MULTIPLYADD:
             return;
-          case qd.BLENDMODE_ADD:
-            dd = 1;
+          case CQ.BLENDMODE_ADD:
+            QQ = 1;
             break;
-          case qd.BLENDMODE_ONEONE:
-            dd = 6;
+          case CQ.BLENDMODE_ONEONE:
+            QQ = 6;
             break;
-          case qd.BLENDMODE_STANDARD:
-            dd = 2;
+          case CQ.BLENDMODE_STANDARD:
+            QQ = 2;
             break;
-          case qd.BLENDMODE_MULTIPLY:
-            dd = 4;
+          case CQ.BLENDMODE_MULTIPLY:
+            QQ = 4;
             break;
-          case qd.BLENDMODE_SUBTRACT:
-            dd = 3
+          case CQ.BLENDMODE_SUBTRACT:
+            QQ = 3
         }
-        this._engine.setAlphaMode(dd)
+        this._engine.setAlphaMode(QQ)
       }
       getDragGradients() {
         return this._dragGradients
@@ -1353,216 +1353,216 @@ export const modules = {
       getEmitRateGradients() {
         return this._emitRateGradients
       }
-      addEmitRateGradient(dd, Jd, kd) {
-        return this._emitRateGradients || (this._emitRateGradients = []), this._addFactorGradient(this._emitRateGradients, dd, Jd, kd), this
+      addEmitRateGradient(QQ, FQ, wQ) {
+        return this._emitRateGradients || (this._emitRateGradients = []), this._addFactorGradient(this._emitRateGradients, QQ, FQ, wQ), this
       }
-      removeEmitRateGradient(dd) {
-        return this._removeFactorGradient(this._emitRateGradients, dd), this
+      removeEmitRateGradient(QQ) {
+        return this._removeFactorGradient(this._emitRateGradients, QQ), this
       }
       get direction1() {
-        return this.particleEmitterType.direction1 ? this.particleEmitterType.direction1 : Wd.n.Zero()
+        return this.particleEmitterType.direction1 ? this.particleEmitterType.direction1 : oQ.p.Zero()
       }
-      set direction1(dd) {
-        this.particleEmitterType.direction1 && (this.particleEmitterType.direction1 = dd)
+      set direction1(QQ) {
+        this.particleEmitterType.direction1 && (this.particleEmitterType.direction1 = QQ)
       }
       get direction2() {
-        return this.particleEmitterType.direction2 ? this.particleEmitterType.direction2 : Wd.n.Zero()
+        return this.particleEmitterType.direction2 ? this.particleEmitterType.direction2 : oQ.p.Zero()
       }
-      set direction2(dd) {
-        this.particleEmitterType.direction2 && (this.particleEmitterType.direction2 = dd)
+      set direction2(QQ) {
+        this.particleEmitterType.direction2 && (this.particleEmitterType.direction2 = QQ)
       }
       get minEmitBox() {
-        return this.particleEmitterType.minEmitBox ? this.particleEmitterType.minEmitBox : Wd.n.Zero()
+        return this.particleEmitterType.minEmitBox ? this.particleEmitterType.minEmitBox : oQ.p.Zero()
       }
-      set minEmitBox(dd) {
-        this.particleEmitterType.minEmitBox && (this.particleEmitterType.minEmitBox = dd)
+      set minEmitBox(QQ) {
+        this.particleEmitterType.minEmitBox && (this.particleEmitterType.minEmitBox = QQ)
       }
       get maxEmitBox() {
-        return this.particleEmitterType.maxEmitBox ? this.particleEmitterType.maxEmitBox : Wd.n.Zero()
+        return this.particleEmitterType.maxEmitBox ? this.particleEmitterType.maxEmitBox : oQ.p.Zero()
       }
-      set maxEmitBox(dd) {
-        this.particleEmitterType.maxEmitBox && (this.particleEmitterType.maxEmitBox = dd)
+      set maxEmitBox(QQ) {
+        this.particleEmitterType.maxEmitBox && (this.particleEmitterType.maxEmitBox = QQ)
       }
       get billboardMode() {
         return this._billboardMode
       }
-      set billboardMode(dd) {
-        this._billboardMode !== dd && (this._billboardMode = dd, this._reset())
+      set billboardMode(QQ) {
+        this._billboardMode !== QQ && (this._billboardMode = QQ, this._reset())
       }
       get isBillboardBased() {
         return this._isBillboardBased
       }
-      set isBillboardBased(dd) {
-        this._isBillboardBased !== dd && (this._isBillboardBased = dd, this._reset())
+      set isBillboardBased(QQ) {
+        this._isBillboardBased !== QQ && (this._isBillboardBased = QQ, this._reset())
       }
       get imageProcessingConfiguration() {
         return this._imageProcessingConfiguration
       }
-      set imageProcessingConfiguration(dd) {
-        this._attachImageProcessingConfiguration(dd)
+      set imageProcessingConfiguration(QQ) {
+        this._attachImageProcessingConfiguration(QQ)
       }
-      _attachImageProcessingConfiguration(dd) {
-        dd !== this._imageProcessingConfiguration && (!dd && this._scene ? this._imageProcessingConfiguration = this._scene.imageProcessingConfiguration : this._imageProcessingConfiguration = dd)
+      _attachImageProcessingConfiguration(QQ) {
+        QQ !== this._imageProcessingConfiguration && (!QQ && this._scene ? this._imageProcessingConfiguration = this._scene.imageProcessingConfiguration : this._imageProcessingConfiguration = QQ)
       }
       _reset() {}
-      _addFactorGradient(dd, Jd, kd, Nd) {
-        const Wd = new pd.h(Jd, kd, Nd);
-        dd.push(Wd), dd.sort(((dd, Jd) => dd.gradient < Jd.gradient ? -1 : dd.gradient > Jd.gradient ? 1 : 0))
+      _addFactorGradient(QQ, FQ, wQ, qQ) {
+        const oQ = new LQ.j(FQ, wQ, qQ);
+        QQ.push(oQ), QQ.sort(((QQ, FQ) => QQ.gradient < FQ.gradient ? -1 : QQ.gradient > FQ.gradient ? 1 : 0))
       }
-      _removeFactorGradient(dd, Jd) {
-        if (!dd) return;
-        let kd = 0;
-        for (const pd of dd) {
-          if (pd.gradient === Jd) {
-            dd.splice(kd, 1);
+      _removeFactorGradient(QQ, FQ) {
+        if (!QQ) return;
+        let wQ = 0;
+        for (const LQ of QQ) {
+          if (LQ.gradient === FQ) {
+            QQ.splice(wQ, 1);
             break
           }
-          kd++
+          wQ++
         }
       }
-      _removeGradientAndTexture(dd, Jd, kd) {
-        if (!Jd) return this;
-        let pd = 0;
-        for (const Nd of Jd) {
-          if (Nd.gradient === dd) {
-            Jd.splice(pd, 1);
+      _removeGradientAndTexture(QQ, FQ, wQ) {
+        if (!FQ) return this;
+        let LQ = 0;
+        for (const qQ of FQ) {
+          if (qQ.gradient === QQ) {
+            FQ.splice(LQ, 1);
             break
           }
-          pd++
+          LQ++
         }
-        return kd && kd.dispose(), this
+        return wQ && wQ.dispose(), this
       }
-      constructor(dd) {
-        this.animations = [], this.renderingGroupId = 0, this.emitter = Wd.n.Zero(), this.emitRate = 10, this.manualEmitCount = -1, this.updateSpeed = .01, this._targetStopDuration = 0, this.disposeOnStop = !1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minSize = 1, this.maxSize = 1, this.minScaleX = 1, this.maxScaleX = 1, this.minScaleY = 1, this.maxScaleY = 1, this.minInitialRotation = 0, this.maxInitialRotation = 0, this.minAngularSpeed = 0, this.maxAngularSpeed = 0, this.layerMask = 268435455, this.customShader = null, this.preventAutoStart = !1, this.applyFog = !1, this._wasDispatched = !1, this._rootUrl = "", this.noiseStrength = new Wd.n(10, 10, 10), this._attractors = [], this.onAnimationEnd = null, this.blendMode = qd.BLENDMODE_ONEONE, this.forceDepthWrite = !1, this.preWarmCycles = 0, this.preWarmStepOffset = 1, this.spriteCellChangeSpeed = 1, this.startSpriteCellID = 0, this.endSpriteCellID = 0, this.spriteCellWidth = 0, this.spriteCellHeight = 0, this.spriteCellLoop = !0, this.spriteRandomStartCell = !1, this.translationPivot = new Wd.k(0, 0), this._animationSheetEnabled = !1, this.beginAnimationOnStart = !1, this.beginAnimationFrom = 0, this.beginAnimationTo = 60, this.beginAnimationLoop = !1, this.worldOffset = new Wd.n(0, 0, 0), this._useLogarithmicDepth = !1, this.gravity = Wd.n.Zero(), this._colorGradients = null, this._sizeGradients = null, this._lifeTimeGradients = null, this._angularSpeedGradients = null, this._velocityGradients = null, this._limitVelocityGradients = null, this._dragGradients = null, this._emitRateGradients = null, this._startSizeGradients = null, this._rampGradients = null, this._colorRemapGradients = null, this._alphaRemapGradients = null, this.startDelay = 0, this.limitVelocityDamping = .4, this.color1 = new Kd.g(1, 1, 1, 1), this.color2 = new Kd.g(1, 1, 1, 1), this.colorDead = new Kd.g(0, 0, 0, 1), this.textureMask = new Kd.g(1, 1, 1, 1), this._isSubEmitter = !1, this._billboardMode = 7, this._isBillboardBased = !0, this._imageProcessingConfigurationDefines = new Cd.b, this.id = dd, this.name = dd
+      constructor(QQ) {
+        this.animations = [], this.renderingGroupId = 0, this.emitter = oQ.p.Zero(), this.emitRate = 10, this.manualEmitCount = -1, this.updateSpeed = .01, this._targetStopDuration = 0, this.disposeOnStop = !1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minSize = 1, this.maxSize = 1, this.minScaleX = 1, this.maxScaleX = 1, this.minScaleY = 1, this.maxScaleY = 1, this.minInitialRotation = 0, this.maxInitialRotation = 0, this.minAngularSpeed = 0, this.maxAngularSpeed = 0, this.layerMask = 268435455, this.customShader = null, this.preventAutoStart = !1, this.applyFog = !1, this._wasDispatched = !1, this._rootUrl = "", this.noiseStrength = new oQ.p(10, 10, 10), this._attractors = [], this.onAnimationEnd = null, this.blendMode = CQ.BLENDMODE_ONEONE, this.forceDepthWrite = !1, this.preWarmCycles = 0, this.preWarmStepOffset = 1, this.spriteCellChangeSpeed = 1, this.startSpriteCellID = 0, this.endSpriteCellID = 0, this.spriteCellWidth = 0, this.spriteCellHeight = 0, this.spriteCellLoop = !0, this.spriteRandomStartCell = !1, this.translationPivot = new oQ.n(0, 0), this._animationSheetEnabled = !1, this.beginAnimationOnStart = !1, this.beginAnimationFrom = 0, this.beginAnimationTo = 60, this.beginAnimationLoop = !1, this.worldOffset = new oQ.p(0, 0, 0), this._useLogarithmicDepth = !1, this.gravity = oQ.p.Zero(), this._colorGradients = null, this._sizeGradients = null, this._lifeTimeGradients = null, this._angularSpeedGradients = null, this._velocityGradients = null, this._limitVelocityGradients = null, this._dragGradients = null, this._emitRateGradients = null, this._startSizeGradients = null, this._rampGradients = null, this._colorRemapGradients = null, this._alphaRemapGradients = null, this.startDelay = 0, this.limitVelocityDamping = .4, this.color1 = new uQ.e(1, 1, 1, 1), this.color2 = new uQ.e(1, 1, 1, 1), this.colorDead = new uQ.e(0, 0, 0, 1), this.textureMask = new uQ.e(1, 1, 1, 1), this._isSubEmitter = !1, this._billboardMode = 7, this._isBillboardBased = !0, this._imageProcessingConfigurationDefines = new mQ.b, this.id = QQ, this.name = QQ
       }
-      createPointEmitter(dd, Jd) {
-        const kd = function(dd, Jd) {
-          const kd = new Ld;
-          return kd.direction1 = dd, kd.direction2 = Jd, kd
-        }(dd, Jd);
-        return this.particleEmitterType = kd, kd
+      createPointEmitter(QQ, FQ) {
+        const wQ = function(QQ, FQ) {
+          const wQ = new xQ;
+          return wQ.direction1 = QQ, wQ.direction2 = FQ, wQ
+        }(QQ, FQ);
+        return this.particleEmitterType = wQ, wQ
       }
       createHemisphericEmitter() {
-        const dd = function() {
-          return new Od(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
+        const QQ = function() {
+          return new AQ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1);
-        return this.particleEmitterType = dd, dd
+        return this.particleEmitterType = QQ, QQ
       }
       createSphereEmitter() {
-        const dd = function() {
-          return new ed(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
+        const QQ = function() {
+          return new tQ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1);
-        return this.particleEmitterType = dd, dd
+        return this.particleEmitterType = QQ, QQ
       }
       createDirectedSphereEmitter() {
-        const dd = function() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Wd.n(0, 1, 0),
-            kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Wd.n(0, 1, 0);
-          return new Rd(dd, Jd, kd)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Wd.n(0, 1, 0), arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Wd.n(0, 1, 0));
-        return this.particleEmitterType = dd, dd
+        const QQ = function() {
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new oQ.p(0, 1, 0),
+            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0);
+          return new eQ(QQ, FQ, wQ)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new oQ.p(0, 1, 0), arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0));
+        return this.particleEmitterType = QQ, QQ
       }
       createCylinderEmitter() {
-        const dd = function() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-          return new Id.d(dd, Jd, kd, pd)
+        const QQ = function() {
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+            LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+          return new MQ.e(QQ, FQ, wQ, LQ)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return this.particleEmitterType = dd, dd
+        return this.particleEmitterType = QQ, QQ
       }
       createDirectedCylinderEmitter() {
-        const dd = function() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Wd.n(0, 1, 0),
-            Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Wd.n(0, 1, 0);
-          return new Id.c(dd, Jd, kd, pd, Nd)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Wd.n(0, 1, 0), arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Wd.n(0, 1, 0));
-        return this.particleEmitterType = dd, dd
+        const QQ = function() {
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+            LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0),
+            qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new oQ.p(0, 1, 0);
+          return new MQ.d(QQ, FQ, wQ, LQ, qQ)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0), arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new oQ.p(0, 1, 0));
+        return this.particleEmitterType = QQ, QQ
       }
       createConeEmitter() {
-        const dd = function() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4;
-          return new Gd(dd, Jd)
+        const QQ = function() {
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4;
+          return new GQ(QQ, FQ)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4);
-        return this.particleEmitterType = dd, dd
+        return this.particleEmitterType = QQ, QQ
       }
       createDirectedConeEmitter() {
-        const dd = function() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4,
-            kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Wd.n(0, 1, 0),
-            pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Wd.n(0, 1, 0);
-          return new vd(dd, Jd, kd, pd)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Wd.n(0, 1, 0), arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Wd.n(0, 1, 0));
-        return this.particleEmitterType = dd, dd
+        const QQ = function() {
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4,
+            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0),
+            LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0);
+          return new pQ(QQ, FQ, wQ, LQ)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0), arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0));
+        return this.particleEmitterType = QQ, QQ
       }
-      createBoxEmitter(dd, Jd, kd, pd) {
-        const Nd = new od.d;
-        return this.particleEmitterType = Nd, this.direction1 = dd, this.direction2 = Jd, this.minEmitBox = kd, this.maxEmitBox = pd, Nd
+      createBoxEmitter(QQ, FQ, wQ, LQ) {
+        const qQ = new HQ.d;
+        return this.particleEmitterType = qQ, this.direction1 = QQ, this.direction2 = FQ, this.minEmitBox = wQ, this.maxEmitBox = LQ, qQ
       }
       createMeshEmitter() {
-        const dd = function() {
-          return new xd(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null)
+        const QQ = function() {
+          return new cQ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null);
-        return this.particleEmitterType = dd, dd
+        return this.particleEmitterType = QQ, QQ
       }
     }
-    qd.BLENDMODE_ONEONE = 0, qd.BLENDMODE_STANDARD = 1, qd.BLENDMODE_ADD = 2, qd.BLENDMODE_MULTIPLY = 3, qd.BLENDMODE_MULTIPLYADD = 4, qd.BLENDMODE_SUBTRACT = -1;
-    class Bd {
+    CQ.BLENDMODE_ONEONE = 0, CQ.BLENDMODE_STANDARD = 1, CQ.BLENDMODE_ADD = 2, CQ.BLENDMODE_MULTIPLY = 3, CQ.BLENDMODE_MULTIPLYADD = 4, CQ.BLENDMODE_SUBTRACT = -1;
+    class SQ {
       constructor() {
-        this.attachedSubEmitters = null, this.currentColor1 = new Kd.g(0, 0, 0, 0), this.currentColor2 = new Kd.g(0, 0, 0, 0), this.currentSize1 = 0, this.currentSize2 = 0, this.currentAngularSpeed1 = 0, this.currentAngularSpeed2 = 0, this.currentVelocity1 = 0, this.currentVelocity2 = 0, this.scaledDirection = Wd.n.Zero(), this.currentLimitVelocity1 = 0, this.currentLimitVelocity2 = 0, this.currentDrag1 = 0, this.currentDrag2 = 0
+        this.attachedSubEmitters = null, this.currentColor1 = new uQ.e(0, 0, 0, 0), this.currentColor2 = new uQ.e(0, 0, 0, 0), this.currentSize1 = 0, this.currentSize2 = 0, this.currentAngularSpeed1 = 0, this.currentAngularSpeed2 = 0, this.currentVelocity1 = 0, this.currentVelocity2 = 0, this.scaledDirection = oQ.p.Zero(), this.currentLimitVelocity1 = 0, this.currentLimitVelocity2 = 0, this.currentDrag1 = 0, this.currentDrag2 = 0
       }
       reset() {
         this.currentColorGradient = null, this.currentSizeGradient = null, this.currentAngularSpeedGradient = null, this.currentVelocityGradient = null, this.currentLimitVelocityGradient = null, this.currentDragGradient = null, this.randomCellOffset = void 0, this.randomNoiseCoordinates1 = null, this.randomNoiseCoordinates2 = null
       }
     }
-    class sd {
-      constructor(dd) {
-        this.particleSystem = dd, this.position = Wd.n.Zero(), this.direction = Wd.n.Zero(), this.color = new Kd.g(0, 0, 0, 0), this.colorStep = new Kd.g(0, 0, 0, 0), this.initialColor = new Kd.g(0, 0, 0, 0), this.colorDead = new Kd.g(0, 0, 0, 0), this.lifeTime = 1, this.age = 0, this.size = 0, this.scale = new Wd.k(1, 1), this.angle = 0, this.angularSpeed = 0, this.cellIndex = 0, this.metadata = null, this._properties = new Bd, this.id = sd._Count++, this.particleSystem.isAnimationSheetEnabled && this._updateCellInfoFromSystem()
+    class iQ {
+      constructor(QQ) {
+        this.particleSystem = QQ, this.position = oQ.p.Zero(), this.direction = oQ.p.Zero(), this.color = new uQ.e(0, 0, 0, 0), this.colorStep = new uQ.e(0, 0, 0, 0), this.initialColor = new uQ.e(0, 0, 0, 0), this.colorDead = new uQ.e(0, 0, 0, 0), this.lifeTime = 1, this.age = 0, this.size = 0, this.scale = new oQ.n(1, 1), this.angle = 0, this.angularSpeed = 0, this.cellIndex = 0, this.metadata = null, this._properties = new SQ, this.id = iQ._Count++, this.particleSystem.isAnimationSheetEnabled && this._updateCellInfoFromSystem()
       }
       _updateCellInfoFromSystem() {
         this.cellIndex = this.particleSystem.startSpriteCellID
       }
       updateCellIndex() {
-        let dd = this.age,
-          Jd = this.particleSystem.spriteCellChangeSpeed;
-        this.particleSystem.spriteRandomStartCell && (void 0 === this._properties.randomCellOffset && (this._properties.randomCellOffset = Math.random() * this.lifeTime), 0 === Jd ? (Jd = 1, dd = this._properties.randomCellOffset) : dd += this._properties.randomCellOffset);
-        const kd = this._properties.initialEndSpriteCellId - this._properties.initialStartSpriteCellId + 1;
-        let pd;
-        pd = this._properties.initialSpriteCellLoop ? (0, Qd.Clamp)(dd * Jd % this.lifeTime / this.lifeTime) : (0, Qd.Clamp)(dd * Jd / this.lifeTime), this.cellIndex = this._properties.initialStartSpriteCellId + pd * kd | 0
+        let QQ = this.age,
+          FQ = this.particleSystem.spriteCellChangeSpeed;
+        this.particleSystem.spriteRandomStartCell && (void 0 === this._properties.randomCellOffset && (this._properties.randomCellOffset = Math.random() * this.lifeTime), 0 === FQ ? (FQ = 1, QQ = this._properties.randomCellOffset) : QQ += this._properties.randomCellOffset);
+        const wQ = this._properties.initialEndSpriteCellId - this._properties.initialStartSpriteCellId + 1;
+        let LQ;
+        LQ = this._properties.initialSpriteCellLoop ? (0, YQ.Clamp)(QQ * FQ % this.lifeTime / this.lifeTime) : (0, YQ.Clamp)(QQ * FQ / this.lifeTime), this.cellIndex = this._properties.initialStartSpriteCellId + LQ * wQ | 0
       }
-      _inheritParticleInfoToSubEmitter(dd) {
-        if (dd.particleSystem.emitter.position) {
-          const Jd = dd.particleSystem.emitter;
-          if (Jd.position.Fs(this.position), dd.inheritDirection) {
-            const dd = Wd.h.IL[0];
-            this.direction.normalizeToRef(dd), Jd.setDirection(dd, 0, Math.PI / 2)
+      _inheritParticleInfoToSubEmitter(QQ) {
+        if (QQ.particleSystem.emitter.position) {
+          const FQ = QQ.particleSystem.emitter;
+          if (FQ.position.Qs(this.position), QQ.inheritDirection) {
+            const QQ = oQ.k.Ox[0];
+            this.direction.normalizeToRef(QQ), FQ.setDirection(QQ, 0, Math.PI / 2)
           }
         } else {
-          dd.particleSystem.emitter.Fs(this.position)
+          QQ.particleSystem.emitter.Qs(this.position)
         }
-        this.direction.scaleToRef(dd.inheritedVelocityAmount / 2, Wd.h.IL[0]), dd.particleSystem._inheritedVelocityOffset.Fs(Wd.h.IL[0])
+        this.direction.scaleToRef(QQ.inheritedVelocityAmount / 2, oQ.k.Ox[0]), QQ.particleSystem._inheritedVelocityOffset.Qs(oQ.k.Ox[0])
       }
       _inheritParticleInfoToSubEmitters() {
         if (this._properties.attachedSubEmitters && this._properties.attachedSubEmitters.length > 0)
-          for (const dd of this._properties.attachedSubEmitters) this._inheritParticleInfoToSubEmitter(dd)
+          for (const QQ of this._properties.attachedSubEmitters) this._inheritParticleInfoToSubEmitter(QQ)
       }
       _reset() {
-        this._properties.onReset && this._properties.onReset(), this.age = 0, this.id = sd._Count++, this._properties.reset(), this.metadata = null, this.cellIndex = this.particleSystem.startSpriteCellID
+        this._properties.onReset && this._properties.onReset(), this.age = 0, this.id = iQ._Count++, this._properties.reset(), this.metadata = null, this.cellIndex = this.particleSystem.startSpriteCellID
       }
-      copyTo(dd) {
-        dd.position.Fs(this.position), this._properties.initialDirection ? dd._properties.initialDirection ? dd._properties.initialDirection.Fs(this._properties.initialDirection) : dd._properties.initialDirection = this._properties.initialDirection.clone() : dd._properties.initialDirection = null, dd.direction.Fs(this.direction), this._properties.localPosition && (dd._properties.localPosition ? dd._properties.localPosition.Fs(this._properties.localPosition) : dd._properties.localPosition = this._properties.localPosition.clone()), dd.color.Fs(this.color), dd.colorStep.Fs(this.colorStep), dd.initialColor.Fs(this.initialColor), dd.colorDead.Fs(this.colorDead), dd.lifeTime = this.lifeTime, dd.age = this.age, dd._properties.randomCellOffset = this._properties.randomCellOffset, dd.size = this.size, dd.scale.Fs(this.scale), dd.angle = this.angle, dd.angularSpeed = this.angularSpeed, dd.particleSystem = this.particleSystem, dd.cellIndex = this.cellIndex, dd.id = this.id, dd._properties.attachedSubEmitters = this._properties.attachedSubEmitters, this._properties.currentColorGradient && (dd._properties.currentColorGradient = this._properties.currentColorGradient, dd._properties.currentColor1.Fs(this._properties.currentColor1), dd._properties.currentColor2.Fs(this._properties.currentColor2)), this._properties.currentSizeGradient && (dd._properties.currentSizeGradient = this._properties.currentSizeGradient, dd._properties.currentSize1 = this._properties.currentSize1, dd._properties.currentSize2 = this._properties.currentSize2), this._properties.currentAngularSpeedGradient && (dd._properties.currentAngularSpeedGradient = this._properties.currentAngularSpeedGradient, dd._properties.currentAngularSpeed1 = this._properties.currentAngularSpeed1, dd._properties.currentAngularSpeed2 = this._properties.currentAngularSpeed2), this._properties.currentVelocityGradient && (dd._properties.currentVelocityGradient = this._properties.currentVelocityGradient, dd._properties.currentVelocity1 = this._properties.currentVelocity1, dd._properties.currentVelocity2 = this._properties.currentVelocity2), this._properties.currentLimitVelocityGradient && (dd._properties.currentLimitVelocityGradient = this._properties.currentLimitVelocityGradient, dd._properties.currentLimitVelocity1 = this._properties.currentLimitVelocity1, dd._properties.currentLimitVelocity2 = this._properties.currentLimitVelocity2), this._properties.currentDragGradient && (dd._properties.currentDragGradient = this._properties.currentDragGradient, dd._properties.currentDrag1 = this._properties.currentDrag1, dd._properties.currentDrag2 = this._properties.currentDrag2), this.particleSystem.isAnimationSheetEnabled && (dd._properties.initialStartSpriteCellId = this._properties.initialStartSpriteCellId, dd._properties.initialEndSpriteCellId = this._properties.initialEndSpriteCellId, dd._properties.initialSpriteCellLoop = this._properties.initialSpriteCellLoop), this.particleSystem.useRampGradients && (dd.remapData && this.remapData ? dd.remapData.Fs(this.remapData) : dd.remapData = new Wd.o(0, 0, 0, 0)), this._properties.randomNoiseCoordinates1 && this._properties.randomNoiseCoordinates2 && (dd._properties.randomNoiseCoordinates1 && dd._properties.randomNoiseCoordinates2 ? (dd._properties.randomNoiseCoordinates1.Fs(this._properties.randomNoiseCoordinates1), dd._properties.randomNoiseCoordinates2.Fs(this._properties.randomNoiseCoordinates2)) : (dd._properties.randomNoiseCoordinates1 = this._properties.randomNoiseCoordinates1.clone(), dd._properties.randomNoiseCoordinates2 = this._properties.randomNoiseCoordinates2.clone())), dd.metadata = this.metadata
+      copyTo(QQ) {
+        QQ.position.Qs(this.position), this._properties.initialDirection ? QQ._properties.initialDirection ? QQ._properties.initialDirection.Qs(this._properties.initialDirection) : QQ._properties.initialDirection = this._properties.initialDirection.clone() : QQ._properties.initialDirection = null, QQ.direction.Qs(this.direction), this._properties.localPosition && (QQ._properties.localPosition ? QQ._properties.localPosition.Qs(this._properties.localPosition) : QQ._properties.localPosition = this._properties.localPosition.clone()), QQ.color.Qs(this.color), QQ.colorStep.Qs(this.colorStep), QQ.initialColor.Qs(this.initialColor), QQ.colorDead.Qs(this.colorDead), QQ.lifeTime = this.lifeTime, QQ.age = this.age, QQ._properties.randomCellOffset = this._properties.randomCellOffset, QQ.size = this.size, QQ.scale.Qs(this.scale), QQ.angle = this.angle, QQ.angularSpeed = this.angularSpeed, QQ.particleSystem = this.particleSystem, QQ.cellIndex = this.cellIndex, QQ.id = this.id, QQ._properties.attachedSubEmitters = this._properties.attachedSubEmitters, this._properties.currentColorGradient && (QQ._properties.currentColorGradient = this._properties.currentColorGradient, QQ._properties.currentColor1.Qs(this._properties.currentColor1), QQ._properties.currentColor2.Qs(this._properties.currentColor2)), this._properties.currentSizeGradient && (QQ._properties.currentSizeGradient = this._properties.currentSizeGradient, QQ._properties.currentSize1 = this._properties.currentSize1, QQ._properties.currentSize2 = this._properties.currentSize2), this._properties.currentAngularSpeedGradient && (QQ._properties.currentAngularSpeedGradient = this._properties.currentAngularSpeedGradient, QQ._properties.currentAngularSpeed1 = this._properties.currentAngularSpeed1, QQ._properties.currentAngularSpeed2 = this._properties.currentAngularSpeed2), this._properties.currentVelocityGradient && (QQ._properties.currentVelocityGradient = this._properties.currentVelocityGradient, QQ._properties.currentVelocity1 = this._properties.currentVelocity1, QQ._properties.currentVelocity2 = this._properties.currentVelocity2), this._properties.currentLimitVelocityGradient && (QQ._properties.currentLimitVelocityGradient = this._properties.currentLimitVelocityGradient, QQ._properties.currentLimitVelocity1 = this._properties.currentLimitVelocity1, QQ._properties.currentLimitVelocity2 = this._properties.currentLimitVelocity2), this._properties.currentDragGradient && (QQ._properties.currentDragGradient = this._properties.currentDragGradient, QQ._properties.currentDrag1 = this._properties.currentDrag1, QQ._properties.currentDrag2 = this._properties.currentDrag2), this.particleSystem.isAnimationSheetEnabled && (QQ._properties.initialStartSpriteCellId = this._properties.initialStartSpriteCellId, QQ._properties.initialEndSpriteCellId = this._properties.initialEndSpriteCellId, QQ._properties.initialSpriteCellLoop = this._properties.initialSpriteCellLoop), this.particleSystem.useRampGradients && (QQ.remapData && this.remapData ? QQ.remapData.Qs(this.remapData) : QQ.remapData = new oQ.t(0, 0, 0, 0)), this._properties.randomNoiseCoordinates1 && this._properties.randomNoiseCoordinates2 && (QQ._properties.randomNoiseCoordinates1 && QQ._properties.randomNoiseCoordinates2 ? (QQ._properties.randomNoiseCoordinates1.Qs(this._properties.randomNoiseCoordinates1), QQ._properties.randomNoiseCoordinates2.Qs(this._properties.randomNoiseCoordinates2)) : (QQ._properties.randomNoiseCoordinates1 = this._properties.randomNoiseCoordinates1.clone(), QQ._properties.randomNoiseCoordinates2 = this._properties.randomNoiseCoordinates2.clone())), QQ.metadata = this.metadata
       }
     }
-    sd._Count = 0;
-    var ad = kd(41082);
-    class Md {
+    iQ._Count = 0;
+    var WQ = wQ(40506);
+    class RQ {
       get currentFrame() {
         return this._currentFrame
       }
@@ -1596,247 +1596,247 @@ export const modules = {
       get isAdditive() {
         return this._host && this._host.isAdditive
       }
-      constructor(dd, Jd, kd, pd) {
-        if (this._events = new Array, this._currentFrame = 0, this._originalValue = new Array, this._originalBlendValue = null, this._offsetsCache = {}, this._highLimitsCache = {}, this._stopped = !1, this._blendingFactor = 0, this._currentValue = null, this._currentActiveTarget = null, this._directTarget = null, this._targetPath = "", this._weight = 1, this._absoluteFrameOffset = 0, this._previousElapsedTime = 0, this._yoyoDirection = 1, this._previousAbsoluteFrame = 0, this._playbackFrom = 0, this._playbackTo = 0, this._playbackFrames = 0, this._playbackProgress = 0, this._playbackSyncRoot = null, this._playbackJumped = !1, this._playbackSyncMasterPlayed = 0, this._playbackSyncMasterFrame = 0, this._targetIsArray = !1, this._coreRuntimeAnimation = null, this._animation = Jd, this.sA = dd, this._scene = kd, this._host = pd, this._activeTargets = [], Jd._runtimeAnimations.push(this), this._animationState = {
+      constructor(QQ, FQ, wQ, LQ) {
+        if (this._events = new Array, this._currentFrame = 0, this._originalValue = new Array, this._originalBlendValue = null, this._offsetsCache = {}, this._highLimitsCache = {}, this._stopped = !1, this._blendingFactor = 0, this._currentValue = null, this._currentActiveTarget = null, this._directTarget = null, this._targetPath = "", this._weight = 1, this._absoluteFrameOffset = 0, this._previousElapsedTime = 0, this._yoyoDirection = 1, this._previousAbsoluteFrame = 0, this._playbackFrom = 0, this._playbackTo = 0, this._playbackFrames = 0, this._playbackProgress = 0, this._playbackSyncRoot = null, this._playbackJumped = !1, this._playbackSyncMasterPlayed = 0, this._playbackSyncMasterFrame = 0, this._targetIsArray = !1, this._coreRuntimeAnimation = null, this._animation = FQ, this.K8 = QQ, this._scene = wQ, this._host = LQ, this._activeTargets = [], FQ._runtimeAnimations.push(this), this._animationState = {
             key: 0,
             repeatCount: 0,
-            Od: this._getCorrectLoopMode()
-          }, this._animation.dataType === ad.c.ANIMATIONTYPE_MATRIX && (this._animationState.workValue = Wd.b.Zero()), this._keys = this._animation.getKeys(), this._minFrame = this._keys[0].frame, this._maxFrame = this._keys[this._keys.length - 1].frame, 0 !== this._minFrame) {
-          const dd = {
+            xQ: this._getCorrectLoopMode()
+          }, this._animation.dataType === WQ.d.ANIMATIONTYPE_MATRIX && (this._animationState.workValue = oQ.c.Zero()), this._keys = this._animation.getKeys(), this._minFrame = this._keys[0].frame, this._maxFrame = this._keys[this._keys.length - 1].frame, 0 !== this._minFrame) {
+          const QQ = {
             frame: 0,
             value: this._keys[0].value
           };
-          this._keys.splice(0, 0, dd)
+          this._keys.splice(0, 0, QQ)
         }
-        if (this.sA instanceof Array) {
-          let dd = 0;
-          for (const Jd of this.sA) this._preparePath(Jd, dd), this._getOriginalValues(dd), dd++;
+        if (this.K8 instanceof Array) {
+          let QQ = 0;
+          for (const FQ of this.K8) this._preparePath(FQ, QQ), this._getOriginalValues(QQ), QQ++;
           this._targetIsArray = !0
-        } else this._preparePath(this.sA), this._getOriginalValues(), this._targetIsArray = !1, this._directTarget = this._activeTargets[0];
-        const Nd = Jd.getEvents();
-        if (Nd && Nd.length > 0)
-          for (const Wd of Nd) this._events.push(Wd._clone());
-        this._enableBlending = dd && dd.animationPropertiesOverride ? dd.animationPropertiesOverride.enableBlending : this._animation.enableBlending
+        } else this._preparePath(this.K8), this._getOriginalValues(), this._targetIsArray = !1, this._directTarget = this._activeTargets[0];
+        const qQ = FQ.getEvents();
+        if (qQ && qQ.length > 0)
+          for (const oQ of qQ) this._events.push(oQ._clone());
+        this._enableBlending = QQ && QQ.animationPropertiesOverride ? QQ.animationPropertiesOverride.enableBlending : this._animation.enableBlending
       }
-      _preparePath(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const kd = this._animation.targetPropertyPath;
-        if (kd.length > 1) {
-          let pd = dd;
-          for (let dd = 0; dd < kd.length - 1; dd++) {
-            const Jd = kd[dd];
-            if (pd = pd[Jd], void 0 === pd) throw new Error(`Invalid property (${Jd}) in property path (${kd.join(".")})`)
+      _preparePath(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const wQ = this._animation.targetPropertyPath;
+        if (wQ.length > 1) {
+          let LQ = QQ;
+          for (let QQ = 0; QQ < wQ.length - 1; QQ++) {
+            const FQ = wQ[QQ];
+            if (LQ = LQ[FQ], void 0 === LQ) throw new Error(`Invalid property (${FQ}) in property path (${wQ.join(".")})`)
           }
-          this._targetPath = kd[kd.length - 1], this._activeTargets[Jd] = pd
-        } else this._targetPath = kd[0], this._activeTargets[Jd] = dd;
-        if (void 0 === this._activeTargets[Jd][this._targetPath]) throw new Error(`Invalid property (${this._targetPath}) in property path (${kd.join(".")})`)
+          this._targetPath = wQ[wQ.length - 1], this._activeTargets[FQ] = LQ
+        } else this._targetPath = wQ[0], this._activeTargets[FQ] = QQ;
+        if (void 0 === this._activeTargets[FQ][this._targetPath]) throw new Error(`Invalid property (${this._targetPath}) in property path (${wQ.join(".")})`)
       }
       get animation() {
         return this._animation
       }
       reset() {
         if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0])
-          if (this.sA instanceof Array) {
-            let dd = 0;
-            for (const Jd of this.sA) void 0 !== this._originalValue[dd] && this._setValue(Jd, this._activeTargets[dd], this._originalValue[dd], -1, dd), dd++
-          } else void 0 !== this._originalValue[0] && this._setValue(this.sA, this._directTarget, this._originalValue[0], -1, 0);
+          if (this.K8 instanceof Array) {
+            let QQ = 0;
+            for (const FQ of this.K8) void 0 !== this._originalValue[QQ] && this._setValue(FQ, this._activeTargets[QQ], this._originalValue[QQ], -1, QQ), QQ++
+          } else void 0 !== this._originalValue[0] && this._setValue(this.K8, this._directTarget, this._originalValue[0], -1, 0);
         this._offsetsCache = {}, this._highLimitsCache = {}, this._currentFrame = 0, this._blendingFactor = 0;
-        for (let dd = 0; dd < this._events.length; dd++) this._events[dd].isDone = !1
+        for (let QQ = 0; QQ < this._events.length; QQ++) this._events[QQ].isDone = !1
       }
       isStopped() {
         return this._stopped
       }
       dispose() {
-        const dd = this._animation.runtimeAnimations.indexOf(this);
-        dd > -1 && this._animation.runtimeAnimations.splice(dd, 1)
+        const QQ = this._animation.runtimeAnimations.indexOf(this);
+        QQ > -1 && this._animation.runtimeAnimations.splice(QQ, 1)
       }
-      setValue(dd, Jd) {
+      setValue(QQ, FQ) {
         if (this._targetIsArray)
-          for (let kd = 0; kd < this.sA.length; kd++) {
-            const pd = this.sA[kd];
-            this._setValue(pd, this._activeTargets[kd], dd, Jd, kd)
-          } else this._setValue(this.sA, this._directTarget, dd, Jd, 0)
+          for (let wQ = 0; wQ < this.K8.length; wQ++) {
+            const LQ = this.K8[wQ];
+            this._setValue(LQ, this._activeTargets[wQ], QQ, FQ, wQ)
+          } else this._setValue(this.K8, this._directTarget, QQ, FQ, 0)
       }
       _getOriginalValues() {
-        let dd, Jd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        const kd = this._activeTargets[Jd];
-        if (ad.c.InheritOriginalValueFromActiveAnimations) {
-          const dd = this._scene._activeAnimatables;
-          for (let pd = 0; pd < dd.length; pd++) {
-            const Nd = dd[pd]._runtimeAnimations;
-            for (let dd = 0; dd < Nd.length; dd++) {
-              const pd = Nd[dd];
-              if (pd !== this && pd._targetPath === this._targetPath)
-                for (let dd = 0; dd < pd._activeTargets.length; dd++)
-                  if (pd._activeTargets[dd] === kd && void 0 !== pd._originalValue[dd]) return void(pd._originalValue[dd] && pd._originalValue[dd].clone ? this._originalValue[Jd] = pd._originalValue[dd].clone() : this._originalValue[Jd] = pd._originalValue[dd])
+        let QQ, FQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        const wQ = this._activeTargets[FQ];
+        if (WQ.d.InheritOriginalValueFromActiveAnimations) {
+          const QQ = this._scene._activeAnimatables;
+          for (let LQ = 0; LQ < QQ.length; LQ++) {
+            const qQ = QQ[LQ]._runtimeAnimations;
+            for (let QQ = 0; QQ < qQ.length; QQ++) {
+              const LQ = qQ[QQ];
+              if (LQ !== this && LQ._targetPath === this._targetPath)
+                for (let QQ = 0; QQ < LQ._activeTargets.length; QQ++)
+                  if (LQ._activeTargets[QQ] === wQ && void 0 !== LQ._originalValue[QQ]) return void(LQ._originalValue[QQ] && LQ._originalValue[QQ].clone ? this._originalValue[FQ] = LQ._originalValue[QQ].clone() : this._originalValue[FQ] = LQ._originalValue[QQ])
             }
           }
         }
-        dd = kd.getLocalMatrix && "_matrix" === this._targetPath ? kd.getLocalMatrix() : kd[this._targetPath], dd && dd.clone ? this._originalValue[Jd] = dd.clone() : this._originalValue[Jd] = dd
+        QQ = wQ.getLocalMatrix && "_matrix" === this._targetPath ? wQ.getLocalMatrix() : wQ[this._targetPath], QQ && QQ.clone ? this._originalValue[FQ] = QQ.clone() : this._originalValue[FQ] = QQ
       }
-      _registerTargetForLateAnimationBinding(dd, Jd) {
-        const kd = dd.target;
-        this._scene._registeredForLateAnimationBindings.pushNoDuplicate(kd), kd._lateAnimationHolders || (kd._lateAnimationHolders = {}), kd._lateAnimationHolders[dd.targetPath] || (kd._lateAnimationHolders[dd.targetPath] = {
+      _registerTargetForLateAnimationBinding(QQ, FQ) {
+        const wQ = QQ.target;
+        this._scene._registeredForLateAnimationBindings.pushNoDuplicate(wQ), wQ._lateAnimationHolders || (wQ._lateAnimationHolders = {}), wQ._lateAnimationHolders[QQ.targetPath] || (wQ._lateAnimationHolders[QQ.targetPath] = {
           totalWeight: 0,
           totalAdditiveWeight: 0,
           animations: [],
           additiveAnimations: [],
-          originalValue: Jd
-        }), dd.isAdditive ? (kd._lateAnimationHolders[dd.targetPath].additiveAnimations.push(dd), kd._lateAnimationHolders[dd.targetPath].totalAdditiveWeight += dd.weight) : (kd._lateAnimationHolders[dd.targetPath].animations.push(dd), kd._lateAnimationHolders[dd.targetPath].totalWeight += dd.weight)
+          originalValue: FQ
+        }), QQ.isAdditive ? (wQ._lateAnimationHolders[QQ.targetPath].additiveAnimations.push(QQ), wQ._lateAnimationHolders[QQ.targetPath].totalAdditiveWeight += QQ.weight) : (wQ._lateAnimationHolders[QQ.targetPath].animations.push(QQ), wQ._lateAnimationHolders[QQ.targetPath].totalWeight += QQ.weight)
       }
-      _setValue(dd, Jd, kd, pd, Nd) {
-        const Pd = this._scene._animationWrites,
-          Zd = this._scene._animationWriteCount++;
-        let gd = Pd[Zd];
-        if (gd || (gd = Pd[Zd] = {
+      _setValue(QQ, FQ, wQ, LQ, qQ) {
+        const DQ = this._scene._animationWrites,
+          kQ = this._scene._animationWriteCount++;
+        let vQ = DQ[kQ];
+        if (vQ || (vQ = DQ[kQ] = {
             runtimeAnimation: this,
-            target: dd,
-            weight: pd,
+            target: QQ,
+            weight: LQ,
             additive: !1,
             blendingFactor: 1,
-            rO: !1
-          }), gd.runtimeAnimation = this, gd.target = dd, gd.weight = pd, gd.additive = this.isAdditive, gd.rO = !1, this._currentActiveTarget = Jd, this._weight = pd, this._enableBlending && this._blendingFactor <= 1) {
+            Ft: !1
+          }), vQ.runtimeAnimation = this, vQ.target = QQ, vQ.weight = LQ, vQ.additive = this.isAdditive, vQ.Ft = !1, this._currentActiveTarget = FQ, this._weight = LQ, this._enableBlending && this._blendingFactor <= 1) {
           if (!this._originalBlendValue) {
-            const dd = Jd[this._targetPath];
-            dd.clone ? this._originalBlendValue = dd.clone() : this._originalBlendValue = dd
+            const QQ = FQ[this._targetPath];
+            QQ.clone ? this._originalBlendValue = QQ.clone() : this._originalBlendValue = QQ
           }
-          this._originalBlendValue.m ? ad.c.AllowMatrixDecomposeForInterpolation ? this._currentValue ? Wd.b.DecomposeLerpToRef(this._originalBlendValue, kd, this._blendingFactor, this._currentValue) : this._currentValue = Wd.b.DecomposeLerp(this._originalBlendValue, kd, this._blendingFactor) : this._currentValue ? Wd.b.LerpToRef(this._originalBlendValue, kd, this._blendingFactor, this._currentValue) : this._currentValue = Wd.b.Lerp(this._originalBlendValue, kd, this._blendingFactor) : this._currentValue = ad.c._UniversalLerp(this._originalBlendValue, kd, this._blendingFactor);
-          const pd = dd && dd.animationPropertiesOverride ? dd.animationPropertiesOverride.blendingSpeed : this._animation.blendingSpeed;
-          gd.blendingFactor = this._blendingFactor, this._blendingFactor += pd
-        } else gd.blendingFactor = 1, this._currentValue ? this._currentValue.Fs ? this._currentValue.Fs(kd) : this._currentValue = kd : this._currentValue = kd?.clone ? kd.clone() : kd; - 1 !== pd ? this._registerTargetForLateAnimationBinding(this, this._originalValue[Nd]) : this._animationState.Od === ad.c.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT ? this._currentValue.addToRef ? this._currentValue.addToRef(this._originalValue[Nd], Jd[this._targetPath]) : Jd[this._targetPath] = this._originalValue[Nd] + this._currentValue : Jd[this._targetPath] = this._currentValue, dd.dkd && dd.dkd(this._animation.targetProperty)
+          this._originalBlendValue.m ? WQ.d.AllowMatrixDecomposeForInterpolation ? this._currentValue ? oQ.c.DecomposeLerpToRef(this._originalBlendValue, wQ, this._blendingFactor, this._currentValue) : this._currentValue = oQ.c.DecomposeLerp(this._originalBlendValue, wQ, this._blendingFactor) : this._currentValue ? oQ.c.LerpToRef(this._originalBlendValue, wQ, this._blendingFactor, this._currentValue) : this._currentValue = oQ.c.Lerp(this._originalBlendValue, wQ, this._blendingFactor) : this._currentValue = WQ.d._UniversalLerp(this._originalBlendValue, wQ, this._blendingFactor);
+          const LQ = QQ && QQ.animationPropertiesOverride ? QQ.animationPropertiesOverride.blendingSpeed : this._animation.blendingSpeed;
+          vQ.blendingFactor = this._blendingFactor, this._blendingFactor += LQ
+        } else vQ.blendingFactor = 1, this._currentValue ? this._currentValue.Qs ? this._currentValue.Qs(wQ) : this._currentValue = wQ : this._currentValue = wQ?.clone ? wQ.clone() : wQ; - 1 !== LQ ? this._registerTargetForLateAnimationBinding(this, this._originalValue[qQ]) : this._animationState.xQ === WQ.d.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT ? this._currentValue.addToRef ? this._currentValue.addToRef(this._originalValue[qQ], FQ[this._targetPath]) : FQ[this._targetPath] = this._originalValue[qQ] + this._currentValue : FQ[this._targetPath] = this._currentValue, QQ.dFQ && QQ.dFQ(this._animation.targetProperty)
       }
       _getCorrectLoopMode() {
-        if (this.sA && this.sA.animationPropertiesOverride) {
-          return "MorphTarget" === this.sA.getClassName?.() && null == this.sA._animationPropertiesOverride ? this._animation.Od : this.sA.animationPropertiesOverride.Od
+        if (this.K8 && this.K8.animationPropertiesOverride) {
+          return "MorphTarget" === this.K8.getClassName?.() && null == this.K8._animationPropertiesOverride ? this._animation.xQ : this.K8.animationPropertiesOverride.xQ
         }
-        return this._animation.Od
+        return this._animation.xQ
       }
-      goToFrame(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        const kd = this._animation.getKeys();
-        dd < kd[0].frame ? dd = kd[0].frame : dd > kd[kd.length - 1].frame && (dd = kd[kd.length - 1].frame);
-        const pd = this._events;
-        if (pd.length)
-          for (let Wd = 0; Wd < pd.length; Wd++) pd[Wd].onlyOnce || (pd[Wd].isDone = pd[Wd].frame < dd);
-        this._currentFrame = dd;
-        const Nd = this._animation._interpolate(dd, this._animationState);
-        this.setValue(Nd, Jd)
+      goToFrame(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        const wQ = this._animation.getKeys();
+        QQ < wQ[0].frame ? QQ = wQ[0].frame : QQ > wQ[wQ.length - 1].frame && (QQ = wQ[wQ.length - 1].frame);
+        const LQ = this._events;
+        if (LQ.length)
+          for (let oQ = 0; oQ < LQ.length; oQ++) LQ[oQ].onlyOnce || (LQ[oQ].isDone = LQ[oQ].frame < QQ);
+        this._currentFrame = QQ;
+        const qQ = this._animation._interpolate(QQ, this._animationState);
+        this.setValue(qQ, FQ)
       }
-      _prepareForSpeedRatioChange(dd) {
-        const Jd = this._previousElapsedTime * (this._animation.framePerSecond * dd) / 1e3;
-        this._absoluteFrameOffset = this._previousAbsoluteFrame - Jd
+      _prepareForSpeedRatioChange(QQ) {
+        const FQ = this._previousElapsedTime * (this._animation.framePerSecond * QQ) / 1e3;
+        this._absoluteFrameOffset = this._previousAbsoluteFrame - FQ
       }
-      animate(dd, Jd, kd, pd, Nd) {
-        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : -1;
-        const Pd = this._animation,
-          Zd = Pd.targetPropertyPath;
-        if (!Zd || Zd.length < 1) return this._stopped = !0, !1;
-        let gd, Cd = !0;
-        const Kd = this._events;
-        let od;
-        if (this._coreRuntimeAnimation) od = kd - Jd, gd = this._coreRuntimeAnimation.currentFrame, this._currentFrame = gd, this._animationState.repeatCount = this._coreRuntimeAnimation._animationState.repeatCount, this._animationState.highLimitValue = this._coreRuntimeAnimation._animationState.highLimitValue, this._animationState.offsetValue = this._coreRuntimeAnimation._animationState.offsetValue, this._playbackFrom = this._coreRuntimeAnimation._playbackFrom, this._playbackTo = this._coreRuntimeAnimation._playbackTo, this._playbackFrames = this._coreRuntimeAnimation._playbackFrames, this._playbackProgress = this._coreRuntimeAnimation._playbackProgress, this._playbackJumped = this._coreRuntimeAnimation._playbackJumped, this._playbackSyncRoot = this._coreRuntimeAnimation._playbackSyncRoot;
+      animate(QQ, FQ, wQ, LQ, qQ) {
+        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : -1;
+        const DQ = this._animation,
+          kQ = DQ.targetPropertyPath;
+        if (!kQ || kQ.length < 1) return this._stopped = !0, !1;
+        let vQ, mQ = !0;
+        const uQ = this._events;
+        let HQ;
+        if (this._coreRuntimeAnimation) HQ = wQ - FQ, vQ = this._coreRuntimeAnimation.currentFrame, this._currentFrame = vQ, this._animationState.repeatCount = this._coreRuntimeAnimation._animationState.repeatCount, this._animationState.highLimitValue = this._coreRuntimeAnimation._animationState.highLimitValue, this._animationState.offsetValue = this._coreRuntimeAnimation._animationState.offsetValue, this._playbackFrom = this._coreRuntimeAnimation._playbackFrom, this._playbackTo = this._coreRuntimeAnimation._playbackTo, this._playbackFrames = this._coreRuntimeAnimation._playbackFrames, this._playbackProgress = this._coreRuntimeAnimation._playbackProgress, this._playbackJumped = this._coreRuntimeAnimation._playbackJumped, this._playbackSyncRoot = this._coreRuntimeAnimation._playbackSyncRoot;
         else {
-          let Wd;
-          (Jd < this._minFrame || Jd > this._maxFrame) && (Jd = this._minFrame), (kd < this._minFrame || kd > this._maxFrame) && (kd = this._maxFrame), od = kd - Jd;
-          let Zd = dd * (Pd.framePerSecond * Nd) / 1e3 + this._absoluteFrameOffset,
-            ld = 0,
-            Qd = !1;
-          const Ld = pd && this._animationState.Od === ad.c.ANIMATIONLOOPMODE_YOYO;
-          if (Ld) {
-            const dd = (Zd - Jd) / od,
-              kd = Math.sin(dd * Math.PI);
-            Zd = Math.abs(kd) * od + Jd;
-            const pd = kd >= 0 ? 1 : -1;
-            this._yoyoDirection !== pd && (Qd = !0), this._yoyoDirection = pd
+          let oQ;
+          (FQ < this._minFrame || FQ > this._maxFrame) && (FQ = this._minFrame), (wQ < this._minFrame || wQ > this._maxFrame) && (wQ = this._maxFrame), HQ = wQ - FQ;
+          let kQ = QQ * (DQ.framePerSecond * qQ) / 1e3 + this._absoluteFrameOffset,
+            bQ = 0,
+            YQ = !1;
+          const xQ = LQ && this._animationState.xQ === WQ.d.ANIMATIONLOOPMODE_YOYO;
+          if (xQ) {
+            const QQ = (kQ - FQ) / HQ,
+              wQ = Math.sin(QQ * Math.PI);
+            kQ = Math.abs(wQ) * HQ + FQ;
+            const LQ = wQ >= 0 ? 1 : -1;
+            this._yoyoDirection !== LQ && (YQ = !0), this._yoyoDirection = LQ
           }
-          if (this._previousElapsedTime = dd, this._previousAbsoluteFrame = Zd, !pd && kd >= Jd && (Zd >= od && Nd > 0 || Zd <= 0 && Nd < 0)) Cd = !1, ld = Pd.evaluate(kd);
-          else if (!pd && Jd >= kd && (Zd <= od && Nd < 0 || Zd >= 0 && Nd > 0)) Cd = !1, ld = Pd.evaluate(Jd);
-          else if (this._animationState.Od !== ad.c.ANIMATIONLOOPMODE_CYCLE) {
-            const dd = kd.toString() + Jd.toString();
-            if (!this._offsetsCache[dd]) {
-              this._animationState.repeatCount = 0, this._animationState.Od = ad.c.ANIMATIONLOOPMODE_CYCLE;
-              const pd = Pd._interpolate(Jd, this._animationState),
-                Nd = Pd._interpolate(kd, this._animationState);
-              switch (this._animationState.Od = this._getCorrectLoopMode(), Pd.dataType) {
-                case ad.c.ANIMATIONTYPE_FLOAT:
-                  this._offsetsCache[dd] = Nd - pd;
+          if (this._previousElapsedTime = QQ, this._previousAbsoluteFrame = kQ, !LQ && wQ >= FQ && (kQ >= HQ && qQ > 0 || kQ <= 0 && qQ < 0)) mQ = !1, bQ = DQ.evaluate(wQ);
+          else if (!LQ && FQ >= wQ && (kQ <= HQ && qQ < 0 || kQ >= 0 && qQ > 0)) mQ = !1, bQ = DQ.evaluate(FQ);
+          else if (this._animationState.xQ !== WQ.d.ANIMATIONLOOPMODE_CYCLE) {
+            const QQ = wQ.toString() + FQ.toString();
+            if (!this._offsetsCache[QQ]) {
+              this._animationState.repeatCount = 0, this._animationState.xQ = WQ.d.ANIMATIONLOOPMODE_CYCLE;
+              const LQ = DQ._interpolate(FQ, this._animationState),
+                qQ = DQ._interpolate(wQ, this._animationState);
+              switch (this._animationState.xQ = this._getCorrectLoopMode(), DQ.dataType) {
+                case WQ.d.ANIMATIONTYPE_FLOAT:
+                  this._offsetsCache[QQ] = qQ - LQ;
                   break;
-                case ad.c.ANIMATIONTYPE_QUATERNION:
-                case ad.c.ANIMATIONTYPE_VECTOR3:
-                case ad.c.ANIMATIONTYPE_VECTOR2:
-                case ad.c.ANIMATIONTYPE_SIZE:
-                case ad.c.ANIMATIONTYPE_COLOR3:
-                case ad.c.ANIMATIONTYPE_COLOR4:
-                  this._offsetsCache[dd] = Nd.subtract(pd)
+                case WQ.d.ANIMATIONTYPE_QUATERNION:
+                case WQ.d.ANIMATIONTYPE_VECTOR3:
+                case WQ.d.ANIMATIONTYPE_VECTOR2:
+                case WQ.d.ANIMATIONTYPE_SIZE:
+                case WQ.d.ANIMATIONTYPE_COLOR3:
+                case WQ.d.ANIMATIONTYPE_COLOR4:
+                  this._offsetsCache[QQ] = qQ.subtract(LQ)
               }
-              this._highLimitsCache[dd] = Nd
+              this._highLimitsCache[QQ] = qQ
             }
-            ld = this._highLimitsCache[dd], Wd = this._offsetsCache[dd]
+            bQ = this._highLimitsCache[QQ], oQ = this._offsetsCache[QQ]
           }
-          if (void 0 === Wd) switch (Pd.dataType) {
-            case ad.c.ANIMATIONTYPE_FLOAT:
-              Wd = 0;
+          if (void 0 === oQ) switch (DQ.dataType) {
+            case WQ.d.ANIMATIONTYPE_FLOAT:
+              oQ = 0;
               break;
-            case ad.c.ANIMATIONTYPE_QUATERNION:
-              Wd = ad.p;
+            case WQ.d.ANIMATIONTYPE_QUATERNION:
+              oQ = WQ.q;
               break;
-            case ad.c.ANIMATIONTYPE_VECTOR3:
-              Wd = ad.x;
+            case WQ.d.ANIMATIONTYPE_VECTOR3:
+              oQ = WQ.A;
               break;
-            case ad.c.ANIMATIONTYPE_VECTOR2:
-              Wd = ad.u;
+            case WQ.d.ANIMATIONTYPE_VECTOR2:
+              oQ = WQ.w;
               break;
-            case ad.c.ANIMATIONTYPE_SIZE:
-              Wd = ad.q;
+            case WQ.d.ANIMATIONTYPE_SIZE:
+              oQ = WQ.u;
               break;
-            case ad.c.ANIMATIONTYPE_COLOR3:
-              Wd = ad.i;
+            case WQ.d.ANIMATIONTYPE_COLOR3:
+              oQ = WQ.l;
               break;
-            case ad.c.ANIMATIONTYPE_COLOR4:
-              Wd = ad.l
+            case WQ.d.ANIMATIONTYPE_COLOR4:
+              oQ = WQ.p
           }
-          const Od = this._host ? this._host.syncRoot : null;
-          let ed, Rd = this._playbackFrames,
-            Id = !1;
-          if (Od) {
-            const dd = Od.toFrame - Od.fromFrame,
-              kd = Od.masterFrame,
-              pd = (kd - Od.fromFrame) / dd;
-            gd = Jd + od * pd;
-            const Nd = Od.getAnimations()[0];
-            if (Nd && 0 !== dd) {
-              const dd = od * pd,
-                Jd = Nd._playbackTo - Nd._playbackFrom;
-              if (0 !== Jd && Nd._playbackFrom <= Od.fromFrame && Nd._playbackTo >= Od.toFrame) {
-                Rd = od * Math.round((Nd._playbackFrames - (Nd._currentFrame - Nd._playbackFrom)) / Jd) + dd
-              } else Id = (kd - this._playbackSyncMasterFrame) * (Nd._playbackFrames - this._playbackSyncMasterPlayed) < 0, Rd = dd;
-              Id = Id || Nd._playbackJumped, this._playbackSyncMasterPlayed = Nd._playbackFrames, this._playbackSyncMasterFrame = kd
+          const AQ = this._host ? this._host.syncRoot : null;
+          let tQ, eQ = this._playbackFrames,
+            MQ = !1;
+          if (AQ) {
+            const QQ = AQ.toFrame - AQ.fromFrame,
+              wQ = AQ.masterFrame,
+              LQ = (wQ - AQ.fromFrame) / QQ;
+            vQ = FQ + HQ * LQ;
+            const qQ = AQ.getAnimations()[0];
+            if (qQ && 0 !== QQ) {
+              const QQ = HQ * LQ,
+                FQ = qQ._playbackTo - qQ._playbackFrom;
+              if (0 !== FQ && qQ._playbackFrom <= AQ.fromFrame && qQ._playbackTo >= AQ.toFrame) {
+                eQ = HQ * Math.round((qQ._playbackFrames - (qQ._currentFrame - qQ._playbackFrom)) / FQ) + QQ
+              } else MQ = (wQ - this._playbackSyncMasterFrame) * (qQ._playbackFrames - this._playbackSyncMasterPlayed) < 0, eQ = QQ;
+              MQ = MQ || qQ._playbackJumped, this._playbackSyncMasterPlayed = qQ._playbackFrames, this._playbackSyncMasterFrame = wQ
             }
-          } else gd = Zd > 0 && Jd > kd || Zd < 0 && Jd < kd ? Cd && 0 !== od ? kd + Zd % od : Jd : Cd && 0 !== od ? Jd + Zd % od : kd;
-          if (!Ld && (Nd > 0 && this.currentFrame > gd || Nd < 0 && this.currentFrame < gd) || Ld && Qd) {
+          } else vQ = kQ > 0 && FQ > wQ || kQ < 0 && FQ < wQ ? mQ && 0 !== HQ ? wQ + kQ % HQ : FQ : mQ && 0 !== HQ ? FQ + kQ % HQ : wQ;
+          if (!xQ && (qQ > 0 && this.currentFrame > vQ || qQ < 0 && this.currentFrame < vQ) || xQ && YQ) {
             this._onLoop();
-            for (let dd = 0; dd < Kd.length; dd++) Kd[dd].onlyOnce || (Kd[dd].isDone = !1);
-            this._animationState.key = Nd > 0 ? 0 : Pd.getKeys().length - 1
+            for (let QQ = 0; QQ < uQ.length; QQ++) uQ[QQ].onlyOnce || (uQ[QQ].isDone = !1);
+            this._animationState.key = qQ > 0 ? 0 : DQ.getKeys().length - 1
           }
-          if (this._currentFrame = gd, this._animationState.repeatCount = 0 === od ? 0 : Zd / od | 0, this._animationState.highLimitValue = ld, this._animationState.offsetValue = Wd, this._playbackFrom = Jd, this._playbackTo = kd, this._playbackJumped = Id, this._playbackSyncRoot = Od, Od) ed = Rd;
-          else if (Cd) ed = Ld ? gd === Jd && Zd === kd ? od : gd - Jd : Zd;
+          if (this._currentFrame = vQ, this._animationState.repeatCount = 0 === HQ ? 0 : kQ / HQ | 0, this._animationState.highLimitValue = bQ, this._animationState.offsetValue = oQ, this._playbackFrom = FQ, this._playbackTo = wQ, this._playbackJumped = MQ, this._playbackSyncRoot = AQ, AQ) tQ = eQ;
+          else if (mQ) tQ = xQ ? vQ === FQ && kQ === wQ ? HQ : vQ - FQ : kQ;
           else {
-            const dd = 0 !== od ? Math.floor(this._playbackFrames / od) : 0;
-            ed = (gd === kd ? dd + 1 : dd) * od
+            const QQ = 0 !== HQ ? Math.floor(this._playbackFrames / HQ) : 0;
+            tQ = (vQ === wQ ? QQ + 1 : QQ) * HQ
           }
-          this._playbackFrames = ed, this._playbackProgress = this._animationState.Od === ad.c.ANIMATIONLOOPMODE_CONSTANT && this._animationState.repeatCount > 0 ? od : ed
+          this._playbackFrames = tQ, this._playbackProgress = this._animationState.xQ === WQ.d.ANIMATIONLOOPMODE_CONSTANT && this._animationState.repeatCount > 0 ? HQ : tQ
         }
-        const ld = Pd._interpolate(gd, this._animationState);
-        if (this.setValue(ld, Wd), Kd.length)
-          for (let Qd = 0; Qd < Kd.length; Qd++)
-            if (od >= 0 && gd >= Kd[Qd].frame && Kd[Qd].frame >= Jd || od < 0 && gd <= Kd[Qd].frame && Kd[Qd].frame <= Jd) {
-              const dd = Kd[Qd];
-              dd.isDone || (dd.onlyOnce && (Kd.splice(Qd, 1), Qd--), dd.isDone = !0, dd.action(gd))
-            } return Cd || (this._stopped = !0), Cd
+        const bQ = DQ._interpolate(vQ, this._animationState);
+        if (this.setValue(bQ, oQ), uQ.length)
+          for (let YQ = 0; YQ < uQ.length; YQ++)
+            if (HQ >= 0 && vQ >= uQ[YQ].frame && uQ[YQ].frame >= FQ || HQ < 0 && vQ <= uQ[YQ].frame && uQ[YQ].frame <= FQ) {
+              const QQ = uQ[YQ];
+              QQ.isDone || (QQ.onlyOnce && (uQ.splice(YQ, 1), YQ--), QQ.isDone = !0, QQ.action(vQ))
+            } return mQ || (this._stopped = !0), mQ
       }
     }
-    var Fd = kd(39876);
-    class Yd {
+    var OQ = wQ(39303);
+    class sQ {
       get syncRoot() {
         return this._syncRoot
       }
@@ -1846,412 +1846,412 @@ export const modules = {
       get weight() {
         return this._weight
       }
-      set weight(dd) {
-        this._weight = -1 !== dd ? Math.min(Math.max(dd, 0), 1) : -1
+      set weight(QQ) {
+        this._weight = -1 !== QQ ? Math.min(Math.max(QQ, 0), 1) : -1
       }
       get speedRatio() {
         return this._speedRatio
       }
-      set speedRatio(dd) {
-        for (let Jd = 0; Jd < this._runtimeAnimations.length; Jd++) {
-          this._runtimeAnimations[Jd]._prepareForSpeedRatioChange(dd)
+      set speedRatio(QQ) {
+        for (let FQ = 0; FQ < this._runtimeAnimations.length; FQ++) {
+          this._runtimeAnimations[FQ]._prepareForSpeedRatioChange(QQ)
         }
-        this._speedRatio = dd, null !== this._goToFrame && this.goToFrame(this._goToFrame)
+        this._speedRatio = QQ, null !== this._goToFrame && this.goToFrame(this._goToFrame)
       }
       get elapsedTime() {
         return null === this._localDelayOffset ? 0 : this._scene._animationTime - this._localDelayOffset
       }
-      constructor(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 100,
-          Wd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          Pd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          Zd = arguments.length > 6 ? arguments[6] : void 0,
-          gd = arguments.length > 7 ? arguments[7] : void 0,
-          Cd = arguments.length > 8 ? arguments[8] : void 0,
-          Kd = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-          od = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0;
-        this.target = Jd, this.fromFrame = kd, this.toFrame = pd, this.loopAnimation = Wd, this.onAnimationEnd = Zd, this.onAnimationLoop = Cd, this.isAdditive = Kd, this.playOrder = od, this._localDelayOffset = null, this._pausedDelay = null, this._manualJumpDelay = null, this._runtimeAnimations = new Array, this.YG = !1, this._speedRatio = 1, this._weight = -1, this._previousWeight = -1, this._syncRoot = null, this._frameToSyncFromJump = null, this._goToFrame = null, this.disposeOnEnd = !0, this.animationStarted = !1, this.onAnimationEndObservable = new Nd.e, this.onAnimationLoopObservable = new Nd.e, this._scene = dd, gd && this.appendAnimations(Jd, gd), this._speedRatio = Pd, dd._activeAnimatables.push(this)
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 100,
+          oQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          DQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          kQ = arguments.length > 6 ? arguments[6] : void 0,
+          vQ = arguments.length > 7 ? arguments[7] : void 0,
+          mQ = arguments.length > 8 ? arguments[8] : void 0,
+          uQ = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+          HQ = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0;
+        this.target = FQ, this.fromFrame = wQ, this.toFrame = LQ, this.loopAnimation = oQ, this.onAnimationEnd = kQ, this.onAnimationLoop = mQ, this.isAdditive = uQ, this.playOrder = HQ, this._localDelayOffset = null, this._pausedDelay = null, this._manualJumpDelay = null, this._runtimeAnimations = new Array, this.WC = !1, this._speedRatio = 1, this._weight = -1, this._previousWeight = -1, this._syncRoot = null, this._frameToSyncFromJump = null, this._goToFrame = null, this.disposeOnEnd = !0, this.animationStarted = !1, this.onAnimationEndObservable = new qQ.e, this.onAnimationLoopObservable = new qQ.e, this._scene = QQ, vQ && this.appendAnimations(FQ, vQ), this._speedRatio = DQ, QQ._activeAnimatables.push(this)
       }
-      syncWith(dd) {
-        if (this._syncRoot = dd, dd) {
-          const dd = this._scene._activeAnimatables.indexOf(this);
-          dd > -1 && (this._scene._activeAnimatables.splice(dd, 1), this._scene._activeAnimatables.push(this))
+      syncWith(QQ) {
+        if (this._syncRoot = QQ, QQ) {
+          const QQ = this._scene._activeAnimatables.indexOf(this);
+          QQ > -1 && (this._scene._activeAnimatables.splice(QQ, 1), this._scene._activeAnimatables.push(this))
         }
         return this
       }
       getAnimations() {
         return this._runtimeAnimations
       }
-      appendAnimations(dd, Jd) {
-        for (let kd = 0; kd < Jd.length; kd++) {
-          const pd = Jd[kd],
-            Nd = new Md(dd, pd, this._scene, this);
-          Nd._onLoop = () => {
+      appendAnimations(QQ, FQ) {
+        for (let wQ = 0; wQ < FQ.length; wQ++) {
+          const LQ = FQ[wQ],
+            qQ = new RQ(QQ, LQ, this._scene, this);
+          qQ._onLoop = () => {
             this.onAnimationLoopObservable.notifyObservers(this), this.onAnimationLoop && this.onAnimationLoop()
-          }, this._runtimeAnimations.push(Nd)
+          }, this._runtimeAnimations.push(qQ)
         }
       }
-      getAnimationByTargetProperty(dd) {
-        const Jd = this._runtimeAnimations;
-        for (let kd = 0; kd < Jd.length; kd++)
-          if (Jd[kd].animation.targetProperty === dd) return Jd[kd].animation;
+      getAnimationByTargetProperty(QQ) {
+        const FQ = this._runtimeAnimations;
+        for (let wQ = 0; wQ < FQ.length; wQ++)
+          if (FQ[wQ].animation.targetProperty === QQ) return FQ[wQ].animation;
         return null
       }
-      getRuntimeAnimationByTargetProperty(dd) {
-        const Jd = this._runtimeAnimations;
-        for (let kd = 0; kd < Jd.length; kd++)
-          if (Jd[kd].animation.targetProperty === dd) return Jd[kd];
+      getRuntimeAnimationByTargetProperty(QQ) {
+        const FQ = this._runtimeAnimations;
+        for (let wQ = 0; wQ < FQ.length; wQ++)
+          if (FQ[wQ].animation.targetProperty === QQ) return FQ[wQ];
         return null
       }
       reset() {
-        const dd = this._runtimeAnimations;
-        for (let Jd = 0; Jd < dd.length; Jd++) dd[Jd].reset(!0);
+        const QQ = this._runtimeAnimations;
+        for (let FQ = 0; FQ < QQ.length; FQ++) QQ[FQ].reset(!0);
         this._localDelayOffset = null, this._pausedDelay = null
       }
-      enableBlending(dd) {
-        const Jd = this._runtimeAnimations;
-        for (let kd = 0; kd < Jd.length; kd++) Jd[kd].animation.enableBlending = !0, Jd[kd].animation.blendingSpeed = dd
+      enableBlending(QQ) {
+        const FQ = this._runtimeAnimations;
+        for (let wQ = 0; wQ < FQ.length; wQ++) FQ[wQ].animation.enableBlending = !0, FQ[wQ].animation.blendingSpeed = QQ
       }
       disableBlending() {
-        const dd = this._runtimeAnimations;
-        for (let Jd = 0; Jd < dd.length; Jd++) dd[Jd].animation.enableBlending = !1
+        const QQ = this._runtimeAnimations;
+        for (let FQ = 0; FQ < QQ.length; FQ++) QQ[FQ].animation.enableBlending = !1
       }
-      goToFrame(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const kd = this._runtimeAnimations;
-        if (kd[0]) {
-          const Jd = kd[0].animation.framePerSecond;
-          this._frameToSyncFromJump = this._frameToSyncFromJump ?? kd[0].currentFrame;
-          const pd = 0 === this.speedRatio ? 0 : (dd - this._frameToSyncFromJump) / Jd * 1e3 / this.speedRatio;
-          this._manualJumpDelay = -pd
+      goToFrame(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const wQ = this._runtimeAnimations;
+        if (wQ[0]) {
+          const FQ = wQ[0].animation.framePerSecond;
+          this._frameToSyncFromJump = this._frameToSyncFromJump ?? wQ[0].currentFrame;
+          const LQ = 0 === this.speedRatio ? 0 : (QQ - this._frameToSyncFromJump) / FQ * 1e3 / this.speedRatio;
+          this._manualJumpDelay = -LQ
         }
-        for (let pd = 0; pd < kd.length; pd++) kd[pd].goToFrame(dd, Jd ? this._weight : -1);
-        this._goToFrame = dd
+        for (let LQ = 0; LQ < wQ.length; LQ++) wQ[LQ].goToFrame(QQ, FQ ? this._weight : -1);
+        this._goToFrame = QQ
       }
       get paused() {
-        return this.YG
+        return this.WC
       }
       pause() {
-        this.YG || (this.YG = !0)
+        this.WC || (this.WC = !0)
       }
       restart() {
-        this.YG = !1
+        this.WC = !1
       }
       _raiseOnAnimationEnd() {
         this.onAnimationEnd && this.onAnimationEnd(), this.onAnimationEndObservable.notifyObservers(this)
       }
-      stop(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (dd || Jd) {
-          const Nd = this._scene._activeAnimatables.indexOf(this);
-          if (Nd > -1) {
-            const Wd = this._runtimeAnimations;
-            for (let kd = Wd.length - 1; kd >= 0; kd--) {
-              const pd = Wd[kd];
-              dd && pd.animation.name != dd || (Jd && !Jd(pd.target) || (pd.dispose(), Wd.splice(kd, 1)))
+      stop(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (QQ || FQ) {
+          const qQ = this._scene._activeAnimatables.indexOf(this);
+          if (qQ > -1) {
+            const oQ = this._runtimeAnimations;
+            for (let wQ = oQ.length - 1; wQ >= 0; wQ--) {
+              const LQ = oQ[wQ];
+              QQ && LQ.animation.name != QQ || (FQ && !FQ(LQ.target) || (LQ.dispose(), oQ.splice(wQ, 1)))
             }
-            0 == Wd.length && (kd || this._scene._activeAnimatables.splice(Nd, 1), pd || this._raiseOnAnimationEnd())
+            0 == oQ.length && (wQ || this._scene._activeAnimatables.splice(qQ, 1), LQ || this._raiseOnAnimationEnd())
           }
         } else {
-          const dd = this._scene._activeAnimatables.indexOf(this);
-          if (dd > -1) {
-            kd || this._scene._activeAnimatables.splice(dd, 1);
-            const Jd = this._runtimeAnimations;
-            for (let dd = 0; dd < Jd.length; dd++) Jd[dd].dispose();
-            this._runtimeAnimations.length = 0, pd || this._raiseOnAnimationEnd()
+          const QQ = this._scene._activeAnimatables.indexOf(this);
+          if (QQ > -1) {
+            wQ || this._scene._activeAnimatables.splice(QQ, 1);
+            const FQ = this._runtimeAnimations;
+            for (let QQ = 0; QQ < FQ.length; QQ++) FQ[QQ].dispose();
+            this._runtimeAnimations.length = 0, LQ || this._raiseOnAnimationEnd()
           }
         }
       }
       async waitAsync() {
-        return await new Promise((dd => {
+        return await new Promise((QQ => {
           this.onAnimationEndObservable.add((() => {
-            dd(this)
+            QQ(this)
           }), void 0, void 0, this, !0)
         }))
       }
-      _animate(dd) {
-        if (this.YG) return this.animationStarted = !1, null === this._pausedDelay && (this._pausedDelay = dd), !0;
-        if (null === this._localDelayOffset ? (this._localDelayOffset = dd, this._pausedDelay = null) : null !== this._pausedDelay && (this._localDelayOffset += dd - this._pausedDelay, this._pausedDelay = null), null !== this._manualJumpDelay && (this._localDelayOffset += this.speedRatio < 0 ? -this._manualJumpDelay : this._manualJumpDelay, this._manualJumpDelay = null, this._frameToSyncFromJump = null), this._goToFrame = null, !Yd.ProcessPausedAnimatables && 0 === this._weight && 0 === this._previousWeight) return !0;
+      _animate(QQ) {
+        if (this.WC) return this.animationStarted = !1, null === this._pausedDelay && (this._pausedDelay = QQ), !0;
+        if (null === this._localDelayOffset ? (this._localDelayOffset = QQ, this._pausedDelay = null) : null !== this._pausedDelay && (this._localDelayOffset += QQ - this._pausedDelay, this._pausedDelay = null), null !== this._manualJumpDelay && (this._localDelayOffset += this.speedRatio < 0 ? -this._manualJumpDelay : this._manualJumpDelay, this._manualJumpDelay = null, this._frameToSyncFromJump = null), this._goToFrame = null, !sQ.ProcessPausedAnimatables && 0 === this._weight && 0 === this._previousWeight) return !0;
         this._previousWeight = this._weight;
-        let Jd = !1;
-        const kd = this._runtimeAnimations;
-        let pd;
-        for (pd = 0; pd < kd.length; pd++) {
-          const Nd = kd[pd].animate(dd - this._localDelayOffset, this.fromFrame, this.toFrame, this.loopAnimation, this._speedRatio, this._weight);
-          Jd = Jd || Nd
+        let FQ = !1;
+        const wQ = this._runtimeAnimations;
+        let LQ;
+        for (LQ = 0; LQ < wQ.length; LQ++) {
+          const qQ = wQ[LQ].animate(QQ - this._localDelayOffset, this.fromFrame, this.toFrame, this.loopAnimation, this._speedRatio, this._weight);
+          FQ = FQ || qQ
         }
-        if (this.animationStarted = Jd, !Jd) {
+        if (this.animationStarted = FQ, !FQ) {
           if (this.disposeOnEnd)
-            for (pd = this._scene._activeAnimatables.indexOf(this), this._scene._activeAnimatables.splice(pd, 1), pd = 0; pd < kd.length; pd++) kd[pd].dispose();
+            for (LQ = this._scene._activeAnimatables.indexOf(this), this._scene._activeAnimatables.splice(LQ, 1), LQ = 0; LQ < wQ.length; LQ++) wQ[LQ].dispose();
           this._raiseOnAnimationEnd(), this.disposeOnEnd && (this.onAnimationEnd = null, this.onAnimationLoop = null, this.onAnimationLoopObservable.clear(), this.onAnimationEndObservable.clear())
         }
-        return Jd
+        return FQ
       }
     }
 
-    function md(dd) {
-      if (0 === dd.totalWeight && 0 === dd.totalAdditiveWeight) return dd.originalValue;
-      let Jd = 1;
-      const kd = Wd.h.IL[0],
-        pd = Wd.h.IL[1],
-        Nd = Wd.h.Quaternion[0];
-      let Pd = 0;
-      const Zd = dd.animations[0],
-        gd = dd.originalValue;
-      let Cd, Kd = !1;
-      if (dd.totalWeight < 1) Cd = 1 - dd.totalWeight, gd.decompose(pd, Nd, kd);
+    function rQ(QQ) {
+      if (0 === QQ.totalWeight && 0 === QQ.totalAdditiveWeight) return QQ.originalValue;
+      let FQ = 1;
+      const wQ = oQ.k.Ox[0],
+        LQ = oQ.k.Ox[1],
+        qQ = oQ.k.Quaternion[0];
+      let DQ = 0;
+      const kQ = QQ.animations[0],
+        vQ = QQ.originalValue;
+      let mQ, uQ = !1;
+      if (QQ.totalWeight < 1) mQ = 1 - QQ.totalWeight, vQ.decompose(LQ, qQ, wQ);
       else {
-        if (Pd = 1, Jd = dd.totalWeight, Cd = Zd.weight / Jd, 1 == Cd) {
-          if (!dd.totalAdditiveWeight) return Zd.currentValue;
-          Kd = !0
+        if (DQ = 1, FQ = QQ.totalWeight, mQ = kQ.weight / FQ, 1 == mQ) {
+          if (!QQ.totalAdditiveWeight) return kQ.currentValue;
+          uQ = !0
         }
-        Zd.currentValue.decompose(pd, Nd, kd)
+        kQ.currentValue.decompose(LQ, qQ, wQ)
       }
-      if (!Kd) {
-        pd.scaleInPlace(Cd), kd.scaleInPlace(Cd), Nd.scaleInPlace(Cd);
-        for (let Zd = Pd; Zd < dd.animations.length; Zd++) {
-          const Pd = dd.animations[Zd];
-          if (0 === Pd.weight) continue;
-          Cd = Pd.weight / Jd;
-          const gd = Wd.h.IL[2],
-            Kd = Wd.h.IL[3],
-            od = Wd.h.Quaternion[1];
-          Pd.currentValue.decompose(Kd, od, gd), Kd.scaleAndAddToRef(Cd, pd), od.scaleAndAddToRef(Wd.d.Dot(Nd, od) > 0 ? Cd : -Cd, Nd), gd.scaleAndAddToRef(Cd, kd)
+      if (!uQ) {
+        LQ.scaleInPlace(mQ), wQ.scaleInPlace(mQ), qQ.scaleInPlace(mQ);
+        for (let kQ = DQ; kQ < QQ.animations.length; kQ++) {
+          const DQ = QQ.animations[kQ];
+          if (0 === DQ.weight) continue;
+          mQ = DQ.weight / FQ;
+          const vQ = oQ.k.Ox[2],
+            uQ = oQ.k.Ox[3],
+            HQ = oQ.k.Quaternion[1];
+          DQ.currentValue.decompose(uQ, HQ, vQ), uQ.scaleAndAddToRef(mQ, LQ), HQ.scaleAndAddToRef(oQ.e.Dot(qQ, HQ) > 0 ? mQ : -mQ, qQ), vQ.scaleAndAddToRef(mQ, wQ)
         }
-        Nd.normalize()
+        qQ.normalize()
       }
-      for (let ld = 0; ld < dd.additiveAnimations.length; ld++) {
-        const Jd = dd.additiveAnimations[ld];
-        if (0 === Jd.weight) continue;
-        const Pd = Wd.h.IL[2],
-          Zd = Wd.h.IL[3],
-          gd = Wd.h.Quaternion[1];
-        Jd.currentValue.decompose(Zd, gd, Pd), Zd.multiplyToRef(pd, Zd), Wd.n.LerpToRef(pd, Zd, Jd.weight, pd), Nd.multiplyToRef(gd, gd), Wd.d.SlerpToRef(Nd, gd, Jd.weight, Nd), Pd.scaleAndAddToRef(Jd.weight, kd)
+      for (let bQ = 0; bQ < QQ.additiveAnimations.length; bQ++) {
+        const FQ = QQ.additiveAnimations[bQ];
+        if (0 === FQ.weight) continue;
+        const DQ = oQ.k.Ox[2],
+          kQ = oQ.k.Ox[3],
+          vQ = oQ.k.Quaternion[1];
+        FQ.currentValue.decompose(kQ, vQ, DQ), kQ.multiplyToRef(LQ, kQ), oQ.p.LerpToRef(LQ, kQ, FQ.weight, LQ), qQ.multiplyToRef(vQ, vQ), oQ.e.SlerpToRef(qQ, vQ, FQ.weight, qQ), DQ.scaleAndAddToRef(FQ.weight, wQ)
       }
-      const od = Zd ? Zd._animationState.workValue : Wd.h.Matrix[0].clone();
-      return Wd.b.ComposeToRef(pd, Nd, kd, od), od
+      const HQ = kQ ? kQ._animationState.workValue : oQ.k.Matrix[0].clone();
+      return oQ.c.ComposeToRef(LQ, qQ, wQ, HQ), HQ
     }
 
-    function bd(dd, Jd) {
-      if (0 === dd.totalWeight && 0 === dd.totalAdditiveWeight) return Jd;
-      const kd = dd.animations[0],
-        pd = dd.originalValue;
-      let Nd = Jd;
-      if (0 === dd.totalWeight && dd.totalAdditiveWeight > 0) Nd.Fs(pd);
-      else if (1 === dd.animations.length) {
-        if (Wd.d.SlerpToRef(pd, kd.currentValue, Math.min(1, dd.totalWeight), Nd), 0 === dd.totalAdditiveWeight) return Nd
-      } else if (dd.animations.length > 1) {
-        let kd, Pd, Zd = 1;
-        if (dd.totalWeight < 1) {
-          const Jd = 1 - dd.totalWeight;
-          kd = [], Pd = [], kd.push(pd), Pd.push(Jd)
+    function IQ(QQ, FQ) {
+      if (0 === QQ.totalWeight && 0 === QQ.totalAdditiveWeight) return FQ;
+      const wQ = QQ.animations[0],
+        LQ = QQ.originalValue;
+      let qQ = FQ;
+      if (0 === QQ.totalWeight && QQ.totalAdditiveWeight > 0) qQ.Qs(LQ);
+      else if (1 === QQ.animations.length) {
+        if (oQ.e.SlerpToRef(LQ, wQ.currentValue, Math.min(1, QQ.totalWeight), qQ), 0 === QQ.totalAdditiveWeight) return qQ
+      } else if (QQ.animations.length > 1) {
+        let wQ, DQ, kQ = 1;
+        if (QQ.totalWeight < 1) {
+          const FQ = 1 - QQ.totalWeight;
+          wQ = [], DQ = [], wQ.push(LQ), DQ.push(FQ)
         } else {
-          if (2 === dd.animations.length && (Wd.d.SlerpToRef(dd.animations[0].currentValue, dd.animations[1].currentValue, dd.animations[1].weight / dd.totalWeight, Jd), 0 === dd.totalAdditiveWeight)) return Jd;
-          kd = [], Pd = [], Zd = dd.totalWeight
+          if (2 === QQ.animations.length && (oQ.e.SlerpToRef(QQ.animations[0].currentValue, QQ.animations[1].currentValue, QQ.animations[1].weight / QQ.totalWeight, FQ), 0 === QQ.totalAdditiveWeight)) return FQ;
+          wQ = [], DQ = [], kQ = QQ.totalWeight
         }
-        for (let Jd = 0; Jd < dd.animations.length; Jd++) {
-          const pd = dd.animations[Jd];
-          kd.push(pd.currentValue), Pd.push(pd.weight / Zd)
+        for (let FQ = 0; FQ < QQ.animations.length; FQ++) {
+          const LQ = QQ.animations[FQ];
+          wQ.push(LQ.currentValue), DQ.push(LQ.weight / kQ)
         }
-        let gd = 0;
-        for (let dd = 0; dd < kd.length;) dd ? (gd += Pd[dd], Wd.d.SlerpToRef(Nd, kd[dd], Pd[dd] / gd, Nd), dd++) : (Wd.d.SlerpToRef(kd[dd], kd[dd + 1], Pd[dd + 1] / (Pd[dd] + Pd[dd + 1]), Jd), Nd = Jd, gd = Pd[dd] + Pd[dd + 1], dd += 2)
+        let vQ = 0;
+        for (let QQ = 0; QQ < wQ.length;) QQ ? (vQ += DQ[QQ], oQ.e.SlerpToRef(qQ, wQ[QQ], DQ[QQ] / vQ, qQ), QQ++) : (oQ.e.SlerpToRef(wQ[QQ], wQ[QQ + 1], DQ[QQ + 1] / (DQ[QQ] + DQ[QQ + 1]), FQ), qQ = FQ, vQ = DQ[QQ] + DQ[QQ + 1], QQ += 2)
       }
-      for (let Pd = 0; Pd < dd.additiveAnimations.length; Pd++) {
-        const Jd = dd.additiveAnimations[Pd];
-        0 !== Jd.weight && (Nd.multiplyToRef(Jd.currentValue, Wd.h.Quaternion[0]), Wd.d.SlerpToRef(Nd, Wd.h.Quaternion[0], Jd.weight, Nd))
+      for (let DQ = 0; DQ < QQ.additiveAnimations.length; DQ++) {
+        const FQ = QQ.additiveAnimations[DQ];
+        0 !== FQ.weight && (qQ.multiplyToRef(FQ.currentValue, oQ.k.Quaternion[0]), oQ.e.SlerpToRef(qQ, oQ.k.Quaternion[0], FQ.weight, qQ))
       }
-      return Nd
+      return qQ
     }
 
-    function Sd(dd, Jd) {
-      Jd && (Jd.prototype.copyAnimationRange = function(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        0 === this.animations.length && (this.animations.push(new ad.c(this.name, "_matrix", dd.animations[0].framePerSecond, ad.c.ANIMATIONTYPE_MATRIX, 0)), this.animations[0].setKeys([]));
-        const Wd = dd.animations[0].getRange(Jd);
-        if (!Wd) return !1;
-        const Pd = Wd.from,
-          Zd = Wd.to,
-          gd = dd.animations[0].getKeys(),
-          Cd = dd.length,
-          Kd = dd.getParent(),
-          od = this.getParent(),
-          ld = pd && Kd && Cd && this.length && Cd !== this.length,
-          Qd = ld && od && Kd ? od.length / Kd.length : 1,
-          Ld = pd && !od && Nd && (1 !== Nd.x || 1 !== Nd.y || 1 !== Nd.z),
-          Od = this.animations[0].getKeys();
-        let ed, Rd, Id;
-        for (let Gd = 0, vd = gd.length; Gd < vd; Gd++) ed = gd[Gd], ed.frame >= Pd && ed.frame <= Zd && (pd ? (Id = ed.value.clone(), ld ? (Rd = Id.getTranslation(), Id.setTranslation(Rd.scaleInPlace(Qd))) : Ld && Nd ? (Rd = Id.getTranslation(), Id.setTranslation(Rd.multiplyInPlace(Nd))) : Id = ed.value) : Id = ed.value, Od.push({
-          frame: ed.frame + kd,
-          value: Id
+    function UQ(QQ, FQ) {
+      FQ && (FQ.prototype.copyAnimationRange = function(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        0 === this.animations.length && (this.animations.push(new WQ.d(this.name, "_matrix", QQ.animations[0].framePerSecond, WQ.d.ANIMATIONTYPE_MATRIX, 0)), this.animations[0].setKeys([]));
+        const oQ = QQ.animations[0].getRange(FQ);
+        if (!oQ) return !1;
+        const DQ = oQ.from,
+          kQ = oQ.to,
+          vQ = QQ.animations[0].getKeys(),
+          mQ = QQ.length,
+          uQ = QQ.getParent(),
+          HQ = this.getParent(),
+          bQ = LQ && uQ && mQ && this.length && mQ !== this.length,
+          YQ = bQ && HQ && uQ ? HQ.length / uQ.length : 1,
+          xQ = LQ && !HQ && qQ && (1 !== qQ.x || 1 !== qQ.y || 1 !== qQ.z),
+          AQ = this.animations[0].getKeys();
+        let tQ, eQ, MQ;
+        for (let GQ = 0, pQ = vQ.length; GQ < pQ; GQ++) tQ = vQ[GQ], tQ.frame >= DQ && tQ.frame <= kQ && (LQ ? (MQ = tQ.value.clone(), bQ ? (eQ = MQ.getTranslation(), MQ.setTranslation(eQ.scaleInPlace(YQ))) : xQ && qQ ? (eQ = MQ.getTranslation(), MQ.setTranslation(eQ.multiplyInPlace(qQ))) : MQ = tQ.value) : MQ = tQ.value, AQ.push({
+          frame: tQ.frame + wQ,
+          value: MQ
         }));
-        return this.animations[0].createRange(Jd, Pd + kd, Zd + kd), !0
-      }), dd && (dd.prototype._animate = function(dd) {
-        const Jd = this._animationWrites,
-          kd = this._animationWriteCount;
-        let pd = 0;
-        for (let Wd = this._animationStepWriteCount; Wd < kd; Wd++) {
-          const dd = Jd[Wd];
-          dd.rO && -1 === dd.weight || (dd.rO = !0, Jd[Wd] = Jd[pd], Jd[pd] = dd, pd++)
+        return this.animations[0].createRange(FQ, DQ + wQ, kQ + wQ), !0
+      }), QQ && (QQ.prototype._animate = function(QQ) {
+        const FQ = this._animationWrites,
+          wQ = this._animationWriteCount;
+        let LQ = 0;
+        for (let oQ = this._animationStepWriteCount; oQ < wQ; oQ++) {
+          const QQ = FQ[oQ];
+          QQ.Ft && -1 === QQ.weight || (QQ.Ft = !0, FQ[oQ] = FQ[LQ], FQ[LQ] = QQ, LQ++)
         }
-        for (let Wd = pd; Wd < kd; Wd++) {
-          const dd = Jd[Wd];
-          dd.runtimeAnimation = null, dd.target = null
+        for (let oQ = LQ; oQ < wQ; oQ++) {
+          const QQ = FQ[oQ];
+          QQ.runtimeAnimation = null, QQ.target = null
         }
-        if (this._animationWriteCount = pd, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, !this.animationsEnabled) return;
-        const Nd = Fd.d.Now;
+        if (this._animationWriteCount = LQ, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, !this.animationsEnabled) return;
+        const qQ = OQ.e.Now;
         if (!this._animationTimeLast) {
           if (this._pendingData.length > 0) return;
-          this._animationTimeLast = Nd
+          this._animationTimeLast = qQ
         }
-        this.deltaTime = void 0 !== dd ? dd : this.useConstantAnimationDeltaTime ? 16 : (Nd - this._animationTimeLast) * this.animationTimeScale, this._animationTimeLast = Nd;
-        const Pd = this._activeAnimatables;
-        if (0 === Pd.length) return;
+        this.deltaTime = void 0 !== QQ ? QQ : this.useConstantAnimationDeltaTime ? 16 : (qQ - this._animationTimeLast) * this.animationTimeScale, this._animationTimeLast = qQ;
+        const DQ = this._activeAnimatables;
+        if (0 === DQ.length) return;
         this._animationTime += this.deltaTime;
-        const Zd = this._animationTime;
+        const kQ = this._animationTime;
         this._animationStepEvaluated = !0;
-        for (let Wd = 0; Wd < Pd.length; Wd++) {
-          const dd = Pd[Wd];
-          !dd._animate(Zd) && dd.disposeOnEnd && Wd--
-        }! function(dd) {
-          if (dd._registeredForLateAnimationBindings.length) {
-            for (let Jd = 0; Jd < dd._registeredForLateAnimationBindings.length; Jd++) {
-              const kd = dd._registeredForLateAnimationBindings.data[Jd];
-              for (const dd in kd._lateAnimationHolders) {
-                const Jd = kd._lateAnimationHolders[dd],
-                  pd = Jd.animations[0],
-                  Nd = Jd.originalValue;
-                if (void 0 === Nd || null === Nd) continue;
-                const Pd = ad.c.AllowMatrixDecomposeForInterpolation && Nd.m;
-                let Zd = kd[dd];
-                if (Pd) Zd = md(Jd);
-                else if (void 0 !== Nd.w) Zd = bd(Jd, Zd || Wd.d.Identity());
+        for (let oQ = 0; oQ < DQ.length; oQ++) {
+          const QQ = DQ[oQ];
+          !QQ._animate(kQ) && QQ.disposeOnEnd && oQ--
+        }! function(QQ) {
+          if (QQ._registeredForLateAnimationBindings.length) {
+            for (let FQ = 0; FQ < QQ._registeredForLateAnimationBindings.length; FQ++) {
+              const wQ = QQ._registeredForLateAnimationBindings.data[FQ];
+              for (const QQ in wQ._lateAnimationHolders) {
+                const FQ = wQ._lateAnimationHolders[QQ],
+                  LQ = FQ.animations[0],
+                  qQ = FQ.originalValue;
+                if (void 0 === qQ || null === qQ) continue;
+                const DQ = WQ.d.AllowMatrixDecomposeForInterpolation && qQ.m;
+                let kQ = wQ[QQ];
+                if (DQ) kQ = rQ(FQ);
+                else if (void 0 !== qQ.w) kQ = IQ(FQ, kQ || oQ.e.Identity());
                 else {
-                  let dd = 0,
-                    kd = 1;
-                  const Wd = pd && pd._animationState.Od === ad.c.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT;
-                  if (Jd.totalWeight < 1) Zd = Wd ? Nd.clone ? Nd.clone() : Nd : pd && Nd.scale ? Nd.scale(1 - Jd.totalWeight) : pd ? Nd * (1 - Jd.totalWeight) : Nd.clone ? Nd.clone() : Nd;
-                  else if (pd) {
-                    kd = Jd.totalWeight;
-                    const Pd = pd.weight / kd;
-                    Zd = 1 !== Pd ? pd.currentValue.scale ? pd.currentValue.scale(Pd) : pd.currentValue * Pd : (Jd.animations.length > 1 || Jd.additiveAnimations.length > 0) && pd.currentValue.clone ? pd.currentValue.clone() : pd.currentValue, Wd && (Zd.addToRef ? Zd.addToRef(Nd, Zd) : Zd += Nd), dd = 1
+                  let QQ = 0,
+                    wQ = 1;
+                  const oQ = LQ && LQ._animationState.xQ === WQ.d.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT;
+                  if (FQ.totalWeight < 1) kQ = oQ ? qQ.clone ? qQ.clone() : qQ : LQ && qQ.scale ? qQ.scale(1 - FQ.totalWeight) : LQ ? qQ * (1 - FQ.totalWeight) : qQ.clone ? qQ.clone() : qQ;
+                  else if (LQ) {
+                    wQ = FQ.totalWeight;
+                    const DQ = LQ.weight / wQ;
+                    kQ = 1 !== DQ ? LQ.currentValue.scale ? LQ.currentValue.scale(DQ) : LQ.currentValue * DQ : (FQ.animations.length > 1 || FQ.additiveAnimations.length > 0) && LQ.currentValue.clone ? LQ.currentValue.clone() : LQ.currentValue, oQ && (kQ.addToRef ? kQ.addToRef(qQ, kQ) : kQ += qQ), QQ = 1
                   }
-                  for (let pd = dd; pd < Jd.animations.length; pd++) {
-                    const dd = Jd.animations[pd],
-                      Nd = dd.weight / kd;
-                    Nd && (dd.currentValue.scaleAndAddToRef ? dd.currentValue.scaleAndAddToRef(Nd, Zd) : Zd += dd.currentValue * Nd)
+                  for (let LQ = QQ; LQ < FQ.animations.length; LQ++) {
+                    const QQ = FQ.animations[LQ],
+                      qQ = QQ.weight / wQ;
+                    qQ && (QQ.currentValue.scaleAndAddToRef ? QQ.currentValue.scaleAndAddToRef(qQ, kQ) : kQ += QQ.currentValue * qQ)
                   }
-                  for (let pd = 0; pd < Jd.additiveAnimations.length; pd++) {
-                    const dd = Jd.additiveAnimations[pd],
-                      kd = dd.weight;
-                    kd && (dd.currentValue.scaleAndAddToRef ? dd.currentValue.scaleAndAddToRef(kd, Zd) : Zd += dd.currentValue * kd)
+                  for (let LQ = 0; LQ < FQ.additiveAnimations.length; LQ++) {
+                    const QQ = FQ.additiveAnimations[LQ],
+                      wQ = QQ.weight;
+                    wQ && (QQ.currentValue.scaleAndAddToRef ? QQ.currentValue.scaleAndAddToRef(wQ, kQ) : kQ += QQ.currentValue * wQ)
                   }
                 }
-                kd[dd] = Zd
+                wQ[QQ] = kQ
               }
-              kd._lateAnimationHolders = {}
+              wQ._lateAnimationHolders = {}
             }
-            dd._registeredForLateAnimationBindings.reset()
+            QQ._registeredForLateAnimationBindings.reset()
           }
         }(this), this._animationStepWriteCount = this._animationWriteCount
-      }, dd.prototype.sortActiveAnimatables = function() {
-        this._activeAnimatables.sort(((dd, Jd) => dd.playOrder - Jd.playOrder))
-      }, dd.prototype.beginWeightedAnimation = function(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          Nd = arguments.length > 4 ? arguments[4] : void 0,
-          Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          Pd = arguments.length > 6 ? arguments[6] : void 0,
-          Zd = arguments.length > 7 ? arguments[7] : void 0,
-          gd = arguments.length > 8 ? arguments[8] : void 0,
-          Cd = arguments.length > 9 ? arguments[9] : void 0,
-          Kd = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        const od = this.beginAnimation(dd, Jd, kd, Nd, Wd, Pd, Zd, !1, gd, Cd, Kd);
-        return od.weight = pd, od
-      }, dd.prototype.beginAnimation = function(dd, Jd, kd, pd) {
-        let Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-          Wd = arguments.length > 5 ? arguments[5] : void 0,
-          Pd = arguments.length > 6 ? arguments[6] : void 0,
-          Zd = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          gd = arguments.length > 8 ? arguments[8] : void 0,
-          Cd = arguments.length > 9 ? arguments[9] : void 0,
-          Kd = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        if (Nd < 0) {
-          const dd = Jd;
-          Jd = kd, kd = dd, Nd = -Nd
+      }, QQ.prototype.sortActiveAnimatables = function() {
+        this._activeAnimatables.sort(((QQ, FQ) => QQ.playOrder - FQ.playOrder))
+      }, QQ.prototype.beginWeightedAnimation = function(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          qQ = arguments.length > 4 ? arguments[4] : void 0,
+          oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          DQ = arguments.length > 6 ? arguments[6] : void 0,
+          kQ = arguments.length > 7 ? arguments[7] : void 0,
+          vQ = arguments.length > 8 ? arguments[8] : void 0,
+          mQ = arguments.length > 9 ? arguments[9] : void 0,
+          uQ = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        const HQ = this.beginAnimation(QQ, FQ, wQ, qQ, oQ, DQ, kQ, !1, vQ, mQ, uQ);
+        return HQ.weight = LQ, HQ
+      }, QQ.prototype.beginAnimation = function(QQ, FQ, wQ, LQ) {
+        let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+          oQ = arguments.length > 5 ? arguments[5] : void 0,
+          DQ = arguments.length > 6 ? arguments[6] : void 0,
+          kQ = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          vQ = arguments.length > 8 ? arguments[8] : void 0,
+          mQ = arguments.length > 9 ? arguments[9] : void 0,
+          uQ = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        if (qQ < 0) {
+          const QQ = FQ;
+          FQ = wQ, wQ = QQ, qQ = -qQ
         }
-        Jd > kd && (Nd = -Nd), Zd && this.stopAnimation(dd, void 0, gd), Pd || (Pd = new Yd(this, dd, Jd, kd, pd, Nd, Wd, void 0, Cd, Kd));
-        const od = !gd || gd(dd);
-        if (dd.animations && od && Pd.appendAnimations(dd, dd.animations), dd.getAnimatables) {
-          const Kd = dd.getAnimatables();
-          for (let dd = 0; dd < Kd.length; dd++) this.beginAnimation(Kd[dd], Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd)
+        FQ > wQ && (qQ = -qQ), kQ && this.stopAnimation(QQ, void 0, vQ), DQ || (DQ = new sQ(this, QQ, FQ, wQ, LQ, qQ, oQ, void 0, mQ, uQ));
+        const HQ = !vQ || vQ(QQ);
+        if (QQ.animations && HQ && DQ.appendAnimations(QQ, QQ.animations), QQ.getAnimatables) {
+          const uQ = QQ.getAnimatables();
+          for (let QQ = 0; QQ < uQ.length; QQ++) this.beginAnimation(uQ[QQ], FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ)
         }
-        return Pd.reset(), Pd
-      }, dd.prototype.beginHierarchyAnimation = function(dd, Jd, kd, pd, Nd) {
-        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          Pd = arguments.length > 6 ? arguments[6] : void 0,
-          Zd = arguments.length > 7 ? arguments[7] : void 0,
-          gd = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          Cd = arguments.length > 9 ? arguments[9] : void 0,
-          Kd = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
-        const od = dd.getDescendants(Jd),
-          ld = [];
-        ld.push(this.beginAnimation(dd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd, void 0, Kd));
-        for (const Qd of od) ld.push(this.beginAnimation(Qd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd, void 0, Kd));
-        return ld
-      }, dd.prototype.beginDirectAnimation = function(dd, Jd, kd, pd, Nd) {
-        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1;
-        if (Wd < 0) {
-          const dd = kd;
-          kd = pd, pd = dd, Wd = -Wd
+        return DQ.reset(), DQ
+      }, QQ.prototype.beginHierarchyAnimation = function(QQ, FQ, wQ, LQ, qQ) {
+        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          DQ = arguments.length > 6 ? arguments[6] : void 0,
+          kQ = arguments.length > 7 ? arguments[7] : void 0,
+          vQ = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          mQ = arguments.length > 9 ? arguments[9] : void 0,
+          uQ = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
+        const HQ = QQ.getDescendants(FQ),
+          bQ = [];
+        bQ.push(this.beginAnimation(QQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ, void 0, uQ));
+        for (const YQ of HQ) bQ.push(this.beginAnimation(YQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ, void 0, uQ));
+        return bQ
+      }, QQ.prototype.beginDirectAnimation = function(QQ, FQ, wQ, LQ, qQ) {
+        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1;
+        if (oQ < 0) {
+          const QQ = wQ;
+          wQ = LQ, LQ = QQ, oQ = -oQ
         }
-        kd > pd && (Wd = -Wd);
-        return new Yd(this, dd, kd, pd, Nd, Wd, arguments.length > 6 ? arguments[6] : void 0, Jd, arguments.length > 7 ? arguments[7] : void 0, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
-      }, dd.prototype.beginDirectHierarchyAnimation = function(dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd) {
-        let Cd = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
-        const Kd = dd.getDescendants(Jd),
-          od = [];
-        od.push(this.beginDirectAnimation(dd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd));
-        for (const ld of Kd) od.push(this.beginDirectAnimation(ld, kd, pd, Nd, Wd, Pd, Zd, gd, Cd));
-        return od
-      }, dd.prototype.getAnimatableByTarget = function(dd) {
-        for (let Jd = 0; Jd < this._activeAnimatables.length; Jd++)
-          if (this._activeAnimatables[Jd].target === dd) return this._activeAnimatables[Jd];
+        wQ > LQ && (oQ = -oQ);
+        return new sQ(this, QQ, wQ, LQ, qQ, oQ, arguments.length > 6 ? arguments[6] : void 0, FQ, arguments.length > 7 ? arguments[7] : void 0, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      }, QQ.prototype.beginDirectHierarchyAnimation = function(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ) {
+        let mQ = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
+        const uQ = QQ.getDescendants(FQ),
+          HQ = [];
+        HQ.push(this.beginDirectAnimation(QQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ));
+        for (const bQ of uQ) HQ.push(this.beginDirectAnimation(bQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ));
+        return HQ
+      }, QQ.prototype.getAnimatableByTarget = function(QQ) {
+        for (let FQ = 0; FQ < this._activeAnimatables.length; FQ++)
+          if (this._activeAnimatables[FQ].target === QQ) return this._activeAnimatables[FQ];
         return null
-      }, dd.prototype.getAllAnimatablesByTarget = function(dd) {
-        const Jd = [];
-        for (let kd = 0; kd < this._activeAnimatables.length; kd++) this._activeAnimatables[kd].target === dd && Jd.push(this._activeAnimatables[kd]);
-        return Jd
-      }, dd.prototype.stopAnimation = function(dd, Jd, kd) {
-        const pd = this.getAllAnimatablesByTarget(dd);
-        for (const Nd of pd) Nd.stop(Jd, kd)
-      }, dd.prototype.stopAllAnimations = function() {
+      }, QQ.prototype.getAllAnimatablesByTarget = function(QQ) {
+        const FQ = [];
+        for (let wQ = 0; wQ < this._activeAnimatables.length; wQ++) this._activeAnimatables[wQ].target === QQ && FQ.push(this._activeAnimatables[wQ]);
+        return FQ
+      }, QQ.prototype.stopAnimation = function(QQ, FQ, wQ) {
+        const LQ = this.getAllAnimatablesByTarget(QQ);
+        for (const qQ of LQ) qQ.stop(FQ, wQ)
+      }, QQ.prototype.stopAllAnimations = function() {
         if (this._activeAnimatables) {
-          for (let dd = 0; dd < this._activeAnimatables.length; dd++) this._activeAnimatables[dd].stop(void 0, void 0, !0);
+          for (let QQ = 0; QQ < this._activeAnimatables.length; QQ++) this._activeAnimatables[QQ].stop(void 0, void 0, !0);
           this._activeAnimatables.length = 0
         }
-        for (const dd of this.animationGroups) dd.stop()
+        for (const QQ of this.animationGroups) QQ.stop()
       })
     }
-    Yd.ProcessPausedAnimatables = !1;
-    var jd, Xd = kd(37267),
-      fd = kd(40205),
-      nd = kd(39860);
-    class Ud extends fd.c {
+    sQ.ProcessPausedAnimatables = !1;
+    var NQ, TQ = wQ(36709),
+      KQ = wQ(39650),
+      zQ = wQ(39277);
+    class lQ extends KQ.c {
       get _matrix() {
         return this._compose(), this._localMatrix
       }
-      set _matrix(dd) {
-        (dd.updateFlag !== this._localMatrix.updateFlag || this._needToCompose) && (this._needToCompose = !1, this._localMatrix.Fs(dd), this._markAsDirtyAndDecompose())
+      set _matrix(QQ) {
+        (QQ.updateFlag !== this._localMatrix.updateFlag || this._needToCompose) && (this._needToCompose = !1, this._localMatrix.Qs(QQ), this._markAsDirtyAndDecompose())
       }
-      constructor(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          Pd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          Zd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        super(dd, Jd.Wm(), !1), this.name = dd, this.children = [], this.animations = [], this._index = null, this._scalingDeterminant = 1, this._needToDecompose = !0, this._needToCompose = !1, this._linkedTransformNode = null, this._waitingTransformNodeId = null, this._waitingTransformNodeUniqueId = null, this._skeleton = Jd, this._localMatrix = pd?.clone() ?? Wd.b.Identity(), this._restMatrix = Nd ?? this._localMatrix.clone(), this._bindMatrix = Pd ?? this._localMatrix.clone(), this._index = Zd, this._absoluteMatrix = new Wd.b, this._absoluteBindMatrix = new Wd.b, this._absoluteInverseBindMatrix = new Wd.b, this._finalMatrix = new Wd.b, Jd.bones.push(this), this.setParent(kd, !1), this._updateAbsoluteBindMatrices()
+      constructor(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          DQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          kQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
+        super(QQ, FQ.iN(), !1), this.name = QQ, this.children = [], this.animations = [], this._index = null, this._scalingDeterminant = 1, this._needToDecompose = !0, this._needToCompose = !1, this._linkedTransformNode = null, this._waitingTransformNodeId = null, this._waitingTransformNodeUniqueId = null, this._skeleton = FQ, this._localMatrix = LQ?.clone() ?? oQ.c.Identity(), this._restMatrix = qQ ?? this._localMatrix.clone(), this._bindMatrix = DQ ?? this._localMatrix.clone(), this._index = kQ, this._absoluteMatrix = new oQ.c, this._absoluteBindMatrix = new oQ.c, this._absoluteInverseBindMatrix = new oQ.c, this._finalMatrix = new oQ.c, FQ.bones.push(this), this.setParent(wQ, !1), this._updateAbsoluteBindMatrices()
       }
       getClassName() {
         return "Bone"
@@ -2271,16 +2271,16 @@ export const modules = {
       getIndex() {
         return null === this._index ? this.getSkeleton().bones.indexOf(this) : this._index
       }
-      set parent(dd) {
-        this.setParent(dd)
+      set parent(QQ) {
+        this.setParent(QQ)
       }
-      setParent(dd) {
-        let Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (this.parent !== dd) {
+      setParent(QQ) {
+        let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (this.parent !== QQ) {
           if (this.parent) {
-            const dd = this.parent.children.indexOf(this); - 1 !== dd && this.parent.children.splice(dd, 1)
+            const QQ = this.parent.children.indexOf(this); - 1 !== QQ && this.parent.children.splice(QQ, 1)
           }
-          this._parentNode = dd, this.parent && this.parent.children.push(this), Jd && this._updateAbsoluteBindMatrices(), this.dkd()
+          this._parentNode = QQ, this.parent && this.parent.children.push(this), FQ && this._updateAbsoluteBindMatrices(), this.dFQ()
         }
       }
       getLocalMatrix() {
@@ -2298,20 +2298,20 @@ export const modules = {
       getRestPose() {
         return this.getRestMatrix()
       }
-      setRestMatrix(dd) {
-        this._restMatrix.Fs(dd)
+      setRestMatrix(QQ) {
+        this._restMatrix.Qs(QQ)
       }
-      setRestPose(dd) {
-        this.setRestMatrix(dd)
+      setRestPose(QQ) {
+        this.setRestMatrix(QQ)
       }
       getBindPose() {
         return this.getBindMatrix()
       }
-      setBindMatrix(dd) {
-        this.o3(dd)
+      setBindMatrix(QQ) {
+        this.Y5(QQ)
       }
-      setBindPose(dd) {
-        this.setBindMatrix(dd)
+      setBindPose(QQ) {
+        this.setBindMatrix(QQ)
       }
       getFinalMatrix() {
         return this._finalMatrix
@@ -2321,10 +2321,10 @@ export const modules = {
       }
       returnToRest() {
         if (this._linkedTransformNode) {
-          const dd = Wd.h.IL[0],
-            Jd = Wd.h.Quaternion[0],
-            kd = Wd.h.IL[1];
-          this.getRestMatrix().decompose(dd, Jd, kd), this._linkedTransformNode.position.Fs(kd), this._linkedTransformNode.rotationQuaternion = this._linkedTransformNode.rotationQuaternion ?? Wd.d.Identity(), this._linkedTransformNode.rotationQuaternion.Fs(Jd), this._linkedTransformNode.fp.Fs(dd)
+          const QQ = oQ.k.Ox[0],
+            FQ = oQ.k.Quaternion[0],
+            wQ = oQ.k.Ox[1];
+          this.getRestMatrix().decompose(QQ, FQ, wQ), this._linkedTransformNode.position.Qs(wQ), this._linkedTransformNode.rotationQuaternion = this._linkedTransformNode.rotationQuaternion ?? oQ.e.Identity(), this._linkedTransformNode.rotationQuaternion.Qs(FQ), this._linkedTransformNode.ck.Qs(QQ)
         } else this._matrix = this._restMatrix
       }
       getAbsoluteInverseBindMatrix() {
@@ -2339,565 +2339,565 @@ export const modules = {
       getAbsoluteTransform() {
         return this.getAbsoluteMatrix()
       }
-      linkTransformNode(dd) {
-        this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode--, this._linkedTransformNode = dd, this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode++
+      linkTransformNode(QQ) {
+        this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode--, this._linkedTransformNode = QQ, this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode++
       }
       getTransformNode() {
         return this._linkedTransformNode
       }
       get position() {
-        return this._decompose(), this.OJd
+        return this._decompose(), this.xFQ
       }
-      set position(dd) {
-        this._decompose(), this.OJd.Fs(dd), this._markAsDirtyAndCompose()
+      set position(QQ) {
+        this._decompose(), this.xFQ.Qs(QQ), this._markAsDirtyAndCompose()
       }
       get rotation() {
         return this.getRotation()
       }
-      set rotation(dd) {
-        this.setRotation(dd)
+      set rotation(QQ) {
+        this.setRotation(QQ)
       }
       get rotationQuaternion() {
         return this._decompose(), this._localRotation
       }
-      set rotationQuaternion(dd) {
-        this.setRotationQuaternion(dd)
+      set rotationQuaternion(QQ) {
+        this.setRotationQuaternion(QQ)
       }
-      get fp() {
+      get ck() {
         return this.getScale()
       }
-      set fp(dd) {
-        this.setScale(dd)
+      set ck(QQ) {
+        this.setScale(QQ)
       }
       get animationPropertiesOverride() {
         return this._skeleton.animationPropertiesOverride
       }
       _decompose() {
-        this._needToDecompose && (this._needToDecompose = !1, this._localScaling || (this._localScaling = Wd.n.Zero(), this._localRotation = Wd.d.Zero(), this.OJd = Wd.n.Zero()), this._localMatrix.decompose(this._localScaling, this._localRotation, this.OJd))
+        this._needToDecompose && (this._needToDecompose = !1, this._localScaling || (this._localScaling = oQ.p.Zero(), this._localRotation = oQ.e.Zero(), this.xFQ = oQ.p.Zero()), this._localMatrix.decompose(this._localScaling, this._localRotation, this.xFQ))
       }
       _compose() {
-        this._needToCompose && (this._localScaling ? (this._needToCompose = !1, Wd.b.ComposeToRef(this._localScaling, this._localRotation, this.OJd, this._localMatrix)) : this._needToCompose = !1)
+        this._needToCompose && (this._localScaling ? (this._needToCompose = !1, oQ.c.ComposeToRef(this._localScaling, this._localRotation, this.xFQ, this._localMatrix)) : this._needToCompose = !1)
       }
-      o3(dd) {
-        let Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          kd = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this._bindMatrix.Fs(dd), Jd && this._updateAbsoluteBindMatrices(), kd ? this._matrix = dd : this.dkd()
+      Y5(QQ) {
+        let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          wQ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this._bindMatrix.Qs(QQ), FQ && this._updateAbsoluteBindMatrices(), wQ ? this._matrix = QQ : this.dFQ()
       }
-      _updateAbsoluteBindMatrices(dd) {
-        let Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (dd || (dd = this._bindMatrix), this.parent ? dd.multiplyToRef(this.parent._absoluteBindMatrix, this._absoluteBindMatrix) : this._absoluteBindMatrix.Fs(dd), this._absoluteBindMatrix.invertToRef(this._absoluteInverseBindMatrix), Jd)
-          for (let kd = 0; kd < this.children.length; kd++) this.children[kd]._updateAbsoluteBindMatrices();
+      _updateAbsoluteBindMatrices(QQ) {
+        let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (QQ || (QQ = this._bindMatrix), this.parent ? QQ.multiplyToRef(this.parent._absoluteBindMatrix, this._absoluteBindMatrix) : this._absoluteBindMatrix.Qs(QQ), this._absoluteBindMatrix.invertToRef(this._absoluteInverseBindMatrix), FQ)
+          for (let wQ = 0; wQ < this.children.length; wQ++) this.children[wQ]._updateAbsoluteBindMatrices();
         this._scalingDeterminant = this._absoluteBindMatrix.determinant() < 0 ? -1 : 1
       }
-      dkd() {
+      dFQ() {
         return this._currentRenderId++, this._childUpdateId++, this._skeleton._markAsDirty(), this
       }
       _markAsDirtyAndCompose() {
-        this.dkd(), this._needToCompose = !0
+        this.dFQ(), this._needToCompose = !0
       }
       _markAsDirtyAndDecompose() {
-        this.dkd(), this._needToDecompose = !0
+        this.dFQ(), this._needToDecompose = !0
       }
-      _updatePosition(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0,
-          pd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const Nd = this.getLocalMatrix();
-        if (0 == Jd) pd ? (Nd.addAtIndex(12, dd.x), Nd.addAtIndex(13, dd.y), Nd.addAtIndex(14, dd.z)) : Nd.setTranslationFromFloats(dd.x, dd.y, dd.z);
+      _updatePosition(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0,
+          LQ = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const qQ = this.getLocalMatrix();
+        if (0 == FQ) LQ ? (qQ.addAtIndex(12, QQ.x), qQ.addAtIndex(13, QQ.y), qQ.addAtIndex(14, QQ.z)) : qQ.setTranslationFromFloats(QQ.x, QQ.y, QQ.z);
         else {
-          const Jd = Ud._TmpMats[0],
-            Pd = Ud._TmpVecs[0];
-          this.parent ? (Jd.Fs(this.parent.getAbsoluteMatrix()), kd && Jd.multiplyToRef(kd.getWorldMatrix(), Jd)) : Wd.b.IdentityToRef(Jd), pd && Jd.setTranslationFromFloats(0, 0, 0), Jd.invert(), Wd.n.TransformCoordinatesToRef(dd, Jd, Pd), pd ? (Nd.addAtIndex(12, Pd.x), Nd.addAtIndex(13, Pd.y), Nd.addAtIndex(14, Pd.z)) : Nd.setTranslationFromFloats(Pd.x, Pd.y, Pd.z)
+          const FQ = lQ._TmpMats[0],
+            DQ = lQ._TmpVecs[0];
+          this.parent ? (FQ.Qs(this.parent.getAbsoluteMatrix()), wQ && FQ.multiplyToRef(wQ.getWorldMatrix(), FQ)) : oQ.c.IdentityToRef(FQ), LQ && FQ.setTranslationFromFloats(0, 0, 0), FQ.invert(), oQ.p.TransformCoordinatesToRef(QQ, FQ, DQ), LQ ? (qQ.addAtIndex(12, DQ.x), qQ.addAtIndex(13, DQ.y), qQ.addAtIndex(14, DQ.z)) : qQ.setTranslationFromFloats(DQ.x, DQ.y, DQ.z)
         }
         this._markAsDirtyAndDecompose()
       }
-      translate(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        this._updatePosition(dd, Jd, kd, !0)
+      translate(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        this._updatePosition(QQ, FQ, wQ, !0)
       }
-      setPosition(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        this._updatePosition(dd, Jd, kd, !1)
+      setPosition(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        this._updatePosition(QQ, FQ, wQ, !1)
       }
-      setAbsolutePosition(dd, Jd) {
-        this.setPosition(dd, 1, Jd)
+      setAbsolutePosition(QQ, FQ) {
+        this.setPosition(QQ, 1, FQ)
       }
-      scale(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const Nd = this.getLocalMatrix(),
-          Pd = Ud._TmpMats[0];
-        Wd.b.ScalingToRef(dd, Jd, kd, Pd), Pd.multiplyToRef(Nd, Nd), Pd.invert();
-        for (const Wd of this.children) {
-          const pd = Wd.getLocalMatrix();
-          pd.multiplyToRef(Pd, pd), pd.multiplyAtIndex(12, dd), pd.multiplyAtIndex(13, Jd), pd.multiplyAtIndex(14, kd), Wd._markAsDirtyAndDecompose()
+      scale(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const qQ = this.getLocalMatrix(),
+          DQ = lQ._TmpMats[0];
+        oQ.c.ScalingToRef(QQ, FQ, wQ, DQ), DQ.multiplyToRef(qQ, qQ), DQ.invert();
+        for (const oQ of this.children) {
+          const LQ = oQ.getLocalMatrix();
+          LQ.multiplyToRef(DQ, LQ), LQ.multiplyAtIndex(12, QQ), LQ.multiplyAtIndex(13, FQ), LQ.multiplyAtIndex(14, wQ), oQ._markAsDirtyAndDecompose()
         }
-        if (this._markAsDirtyAndDecompose(), pd)
-          for (const Wd of this.children) Wd.scale(dd, Jd, kd, pd)
+        if (this._markAsDirtyAndDecompose(), LQ)
+          for (const oQ of this.children) oQ.scale(QQ, FQ, wQ, LQ)
       }
-      setScale(dd) {
-        this._decompose(), this._localScaling.Fs(dd), this._markAsDirtyAndCompose()
+      setScale(QQ) {
+        this._decompose(), this._localScaling.Qs(QQ), this._markAsDirtyAndCompose()
       }
       getScale() {
         return this._decompose(), this._localScaling
       }
-      getScaleToRef(dd) {
-        this._decompose(), dd.Fs(this._localScaling)
+      getScaleToRef(QQ) {
+        this._decompose(), QQ.Qs(this._localScaling)
       }
-      setYawPitchRoll(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Nd = arguments.length > 4 ? arguments[4] : void 0;
-        if (0 === pd) {
-          const Pd = Ud._TmpQuat;
-          return Wd.d.RotationYawPitchRollToRef(dd, Jd, kd, Pd), void this.setRotationQuaternion(Pd, pd, Nd)
+      setYawPitchRoll(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          qQ = arguments.length > 4 ? arguments[4] : void 0;
+        if (0 === LQ) {
+          const DQ = lQ._TmpQuat;
+          return oQ.e.RotationYawPitchRollToRef(QQ, FQ, wQ, DQ), void this.setRotationQuaternion(DQ, LQ, qQ)
         }
-        const Pd = Ud._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(Pd, Nd)) return;
-        const Zd = Ud._TmpMats[1];
-        Wd.b.RotationYawPitchRollToRef(dd, Jd, kd, Zd), Pd.multiplyToRef(Zd, Zd), this._rotateWithMatrix(Zd, pd, Nd)
+        const DQ = lQ._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(DQ, qQ)) return;
+        const kQ = lQ._TmpMats[1];
+        oQ.c.RotationYawPitchRollToRef(QQ, FQ, wQ, kQ), DQ.multiplyToRef(kQ, kQ), this._rotateWithMatrix(kQ, LQ, qQ)
       }
-      rotate(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          pd = arguments.length > 3 ? arguments[3] : void 0;
-        const Nd = Ud._TmpMats[0];
-        Nd.setTranslationFromFloats(0, 0, 0), Wd.b.RotationAxisToRef(dd, Jd, Nd), this._rotateWithMatrix(Nd, kd, pd)
+      rotate(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          LQ = arguments.length > 3 ? arguments[3] : void 0;
+        const qQ = lQ._TmpMats[0];
+        qQ.setTranslationFromFloats(0, 0, 0), oQ.c.RotationAxisToRef(QQ, FQ, qQ), this._rotateWithMatrix(qQ, wQ, LQ)
       }
-      setAxisAngle(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          pd = arguments.length > 3 ? arguments[3] : void 0;
-        if (0 === kd) {
-          const Nd = Ud._TmpQuat;
-          return Wd.d.RotationAxisToRef(dd, Jd, Nd), void this.setRotationQuaternion(Nd, kd, pd)
+      setAxisAngle(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          LQ = arguments.length > 3 ? arguments[3] : void 0;
+        if (0 === wQ) {
+          const qQ = lQ._TmpQuat;
+          return oQ.e.RotationAxisToRef(QQ, FQ, qQ), void this.setRotationQuaternion(qQ, wQ, LQ)
         }
-        const Nd = Ud._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(Nd, pd)) return;
-        const Pd = Ud._TmpMats[1];
-        Wd.b.RotationAxisToRef(dd, Jd, Pd), Nd.multiplyToRef(Pd, Pd), this._rotateWithMatrix(Pd, kd, pd)
+        const qQ = lQ._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(qQ, LQ)) return;
+        const DQ = lQ._TmpMats[1];
+        oQ.c.RotationAxisToRef(QQ, FQ, DQ), qQ.multiplyToRef(DQ, DQ), this._rotateWithMatrix(DQ, wQ, LQ)
       }
-      setRotation(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        this.setYawPitchRoll(dd.y, dd.x, dd.z, Jd, kd)
+      setRotation(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        this.setYawPitchRoll(QQ.y, QQ.x, QQ.z, FQ, wQ)
       }
-      setRotationQuaternion(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 === Jd) return this._decompose(), this._localRotation.Fs(dd), void this._markAsDirtyAndCompose();
-        const pd = Ud._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(pd, kd)) return;
-        const Nd = Ud._TmpMats[1];
-        Wd.b.FromQuaternionToRef(dd, Nd), pd.multiplyToRef(Nd, Nd), this._rotateWithMatrix(Nd, Jd, kd)
+      setRotationQuaternion(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 === FQ) return this._decompose(), this._localRotation.Qs(QQ), void this._markAsDirtyAndCompose();
+        const LQ = lQ._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(LQ, wQ)) return;
+        const qQ = lQ._TmpMats[1];
+        oQ.c.FromQuaternionToRef(QQ, qQ), LQ.multiplyToRef(qQ, qQ), this._rotateWithMatrix(qQ, FQ, wQ)
       }
-      setRotationMatrix(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 === Jd) {
-          const pd = Ud._TmpQuat;
-          return Wd.d.FromRotationMatrixToRef(dd, pd), void this.setRotationQuaternion(pd, Jd, kd)
+      setRotationMatrix(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 === FQ) {
+          const LQ = lQ._TmpQuat;
+          return oQ.e.FromRotationMatrixToRef(QQ, LQ), void this.setRotationQuaternion(LQ, FQ, wQ)
         }
-        const pd = Ud._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(pd, kd)) return;
-        const Nd = Ud._TmpMats[1];
-        Nd.Fs(dd), pd.multiplyToRef(dd, Nd), this._rotateWithMatrix(Nd, Jd, kd)
+        const LQ = lQ._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(LQ, wQ)) return;
+        const qQ = lQ._TmpMats[1];
+        qQ.Qs(QQ), LQ.multiplyToRef(QQ, qQ), this._rotateWithMatrix(qQ, FQ, wQ)
       }
-      _rotateWithMatrix(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        const pd = this.getLocalMatrix(),
-          Nd = pd.m[12],
-          Wd = pd.m[13],
-          Pd = pd.m[14],
-          Zd = this.getParent(),
-          gd = Ud._TmpMats[3],
-          Cd = Ud._TmpMats[4];
-        Zd && 1 == Jd ? (kd ? (gd.Fs(kd.getWorldMatrix()), Zd.getAbsoluteMatrix().multiplyToRef(gd, gd)) : gd.Fs(Zd.getAbsoluteMatrix()), Cd.Fs(gd), Cd.invert(), pd.multiplyToRef(gd, pd), pd.multiplyToRef(dd, pd), pd.multiplyToRef(Cd, pd)) : 1 == Jd && kd ? (gd.Fs(kd.getWorldMatrix()), Cd.Fs(gd), Cd.invert(), pd.multiplyToRef(gd, pd), pd.multiplyToRef(dd, pd), pd.multiplyToRef(Cd, pd)) : pd.multiplyToRef(dd, pd), pd.setTranslationFromFloats(Nd, Wd, Pd), this._markAsDirtyAndDecompose()
+      _rotateWithMatrix(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        const LQ = this.getLocalMatrix(),
+          qQ = LQ.m[12],
+          oQ = LQ.m[13],
+          DQ = LQ.m[14],
+          kQ = this.getParent(),
+          vQ = lQ._TmpMats[3],
+          mQ = lQ._TmpMats[4];
+        kQ && 1 == FQ ? (wQ ? (vQ.Qs(wQ.getWorldMatrix()), kQ.getAbsoluteMatrix().multiplyToRef(vQ, vQ)) : vQ.Qs(kQ.getAbsoluteMatrix()), mQ.Qs(vQ), mQ.invert(), LQ.multiplyToRef(vQ, LQ), LQ.multiplyToRef(QQ, LQ), LQ.multiplyToRef(mQ, LQ)) : 1 == FQ && wQ ? (vQ.Qs(wQ.getWorldMatrix()), mQ.Qs(vQ), mQ.invert(), LQ.multiplyToRef(vQ, LQ), LQ.multiplyToRef(QQ, LQ), LQ.multiplyToRef(mQ, LQ)) : LQ.multiplyToRef(QQ, LQ), LQ.setTranslationFromFloats(qQ, oQ, DQ), this._markAsDirtyAndDecompose()
       }
-      _getAbsoluteInverseMatrixUnscaledToRef(dd, Jd) {
-        const kd = Ud._TmpMats[2];
-        return dd.Fs(this.getAbsoluteMatrix()), Jd ? (dd.multiplyToRef(Jd.getWorldMatrix(), dd), Wd.b.ScalingToRef(Jd.fp.x, Jd.fp.y, Jd.fp.z, kd)) : Wd.b.IdentityToRef(kd), dd.invert(), !isNaN(dd.m[0]) && (kd.multiplyAtIndex(0, this._scalingDeterminant), dd.multiplyToRef(kd, dd), !0)
+      _getAbsoluteInverseMatrixUnscaledToRef(QQ, FQ) {
+        const wQ = lQ._TmpMats[2];
+        return QQ.Qs(this.getAbsoluteMatrix()), FQ ? (QQ.multiplyToRef(FQ.getWorldMatrix(), QQ), oQ.c.ScalingToRef(FQ.ck.x, FQ.ck.y, FQ.ck.z, wQ)) : oQ.c.IdentityToRef(wQ), QQ.invert(), !isNaN(QQ.m[0]) && (wQ.multiplyAtIndex(0, this._scalingDeterminant), QQ.multiplyToRef(wQ, QQ), !0)
       }
-      yI() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const kd = Wd.n.Zero();
-        return this.getPositionToRef(dd, Jd, kd), kd
+      Qp() {
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const wQ = oQ.p.Zero();
+        return this.getPositionToRef(QQ, FQ, wQ), wQ
       }
       getPositionToRef() {
-        let dd = arguments.length > 1 ? arguments[1] : void 0,
-          Jd = arguments.length > 2 ? arguments[2] : void 0;
+        let QQ = arguments.length > 1 ? arguments[1] : void 0,
+          FQ = arguments.length > 2 ? arguments[2] : void 0;
         if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) {
-          const dd = this.getLocalMatrix();
-          Jd.x = dd.m[12], Jd.y = dd.m[13], Jd.z = dd.m[14]
+          const QQ = this.getLocalMatrix();
+          FQ.x = QQ.m[12], FQ.y = QQ.m[13], FQ.z = QQ.m[14]
         } else {
-          const kd = Ud._TmpMats[0].Fs(this.getAbsoluteMatrix());
-          dd && kd.multiplyToRef(dd.getWorldMatrix(), kd), Jd.x = kd.m[12], Jd.y = kd.m[13], Jd.z = kd.m[14]
+          const wQ = lQ._TmpMats[0].Qs(this.getAbsoluteMatrix());
+          QQ && wQ.multiplyToRef(QQ.getWorldMatrix(), wQ), FQ.x = wQ.m[12], FQ.y = wQ.m[13], FQ.z = wQ.m[14]
         }
       }
       getAbsolutePosition() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        const Jd = Wd.n.Zero();
-        return this.getPositionToRef(1, dd, Jd), Jd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        const FQ = oQ.p.Zero();
+        return this.getPositionToRef(1, QQ, FQ), FQ
       }
-      getAbsolutePositionToRef(dd, Jd) {
-        this.getPositionToRef(1, dd, Jd)
+      getAbsolutePositionToRef(QQ, FQ) {
+        this.getPositionToRef(1, QQ, FQ)
       }
       computeAbsoluteMatrices() {
         if (this._compose(), this.parent) this._localMatrix.multiplyToRef(this.parent._absoluteMatrix, this._absoluteMatrix);
         else {
-          this._absoluteMatrix.Fs(this._localMatrix);
-          const dd = this._skeleton.getPoseMatrix();
-          dd && this._absoluteMatrix.multiplyToRef(dd, this._absoluteMatrix)
+          this._absoluteMatrix.Qs(this._localMatrix);
+          const QQ = this._skeleton.getPoseMatrix();
+          QQ && this._absoluteMatrix.multiplyToRef(QQ, this._absoluteMatrix)
         }
-        const dd = this.children,
-          Jd = dd.length;
-        for (let kd = 0; kd < Jd; kd++) dd[kd].computeAbsoluteMatrices()
+        const QQ = this.children,
+          FQ = QQ.length;
+        for (let wQ = 0; wQ < FQ; wQ++) QQ[wQ].computeAbsoluteMatrices()
       }
       computeAbsoluteTransforms() {
         this.computeAbsoluteMatrices()
       }
-      UH(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const kd = Wd.n.Zero();
-        return this.getDirectionToRef(dd, Jd, kd), kd
+      Py(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const wQ = oQ.p.Zero();
+        return this.getDirectionToRef(QQ, FQ, wQ), wQ
       }
-      getDirectionToRef(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        const pd = Ud._TmpMats[0].Fs(this.getAbsoluteMatrix());
-        Jd && pd.multiplyToRef(Jd.getWorldMatrix(), pd), Wd.n.TransformNormalToRef(dd, pd, kd), kd.normalize()
+      getDirectionToRef(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        const LQ = lQ._TmpMats[0].Qs(this.getAbsoluteMatrix());
+        FQ && LQ.multiplyToRef(FQ.getWorldMatrix(), LQ), oQ.p.TransformNormalToRef(QQ, LQ, wQ), wQ.normalize()
       }
       getRotation() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const kd = Wd.n.Zero();
-        return this.getRotationToRef(dd, Jd, kd), kd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const wQ = oQ.p.Zero();
+        return this.getRotationToRef(QQ, FQ, wQ), wQ
       }
       getRotationToRef() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        const pd = Ud._TmpQuat;
-        this.getRotationQuaternionToRef(dd, Jd, pd), pd.toEulerAnglesToRef(kd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        const LQ = lQ._TmpQuat;
+        this.getRotationQuaternionToRef(QQ, FQ, LQ), LQ.toEulerAnglesToRef(wQ)
       }
       getRotationQuaternion() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const kd = Wd.d.Identity();
-        return this.getRotationQuaternionToRef(dd, Jd, kd), kd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const wQ = oQ.e.Identity();
+        return this.getRotationQuaternionToRef(QQ, FQ, wQ), wQ
       }
       getRotationQuaternionToRef() {
-        let dd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          Jd = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this._decompose(), Jd.Fs(this._localRotation);
+        let QQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          FQ = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this._decompose(), FQ.Qs(this._localRotation);
         else {
-          const kd = Ud._TmpMats[0],
-            pd = this.getAbsoluteMatrix();
-          dd ? pd.multiplyToRef(dd.getWorldMatrix(), kd) : kd.Fs(pd), kd.multiplyAtIndex(0, this._scalingDeterminant), kd.multiplyAtIndex(1, this._scalingDeterminant), kd.multiplyAtIndex(2, this._scalingDeterminant), kd.decompose(void 0, Jd, void 0)
+          const wQ = lQ._TmpMats[0],
+            LQ = this.getAbsoluteMatrix();
+          QQ ? LQ.multiplyToRef(QQ.getWorldMatrix(), wQ) : wQ.Qs(LQ), wQ.multiplyAtIndex(0, this._scalingDeterminant), wQ.multiplyAtIndex(1, this._scalingDeterminant), wQ.multiplyAtIndex(2, this._scalingDeterminant), wQ.decompose(void 0, FQ, void 0)
         }
       }
       getRotationMatrix() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 ? arguments[1] : void 0;
-        const kd = Wd.b.Identity();
-        return this.getRotationMatrixToRef(dd, Jd, kd), kd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 ? arguments[1] : void 0;
+        const wQ = oQ.c.Identity();
+        return this.getRotationMatrixToRef(QQ, FQ, wQ), wQ
       }
       getRotationMatrixToRef() {
-        let dd = arguments.length > 1 ? arguments[1] : void 0,
-          Jd = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this.getLocalMatrix().getRotationMatrixToRef(Jd);
+        let QQ = arguments.length > 1 ? arguments[1] : void 0,
+          FQ = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this.getLocalMatrix().getRotationMatrixToRef(FQ);
         else {
-          const kd = Ud._TmpMats[0],
-            pd = this.getAbsoluteMatrix();
-          dd ? pd.multiplyToRef(dd.getWorldMatrix(), kd) : kd.Fs(pd), kd.multiplyAtIndex(0, this._scalingDeterminant), kd.multiplyAtIndex(1, this._scalingDeterminant), kd.multiplyAtIndex(2, this._scalingDeterminant), kd.getRotationMatrixToRef(Jd)
+          const wQ = lQ._TmpMats[0],
+            LQ = this.getAbsoluteMatrix();
+          QQ ? LQ.multiplyToRef(QQ.getWorldMatrix(), wQ) : wQ.Qs(LQ), wQ.multiplyAtIndex(0, this._scalingDeterminant), wQ.multiplyAtIndex(1, this._scalingDeterminant), wQ.multiplyAtIndex(2, this._scalingDeterminant), wQ.getRotationMatrixToRef(FQ)
         }
       }
-      getAbsolutePositionFromLocal(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const kd = Wd.n.Zero();
-        return this.getAbsolutePositionFromLocalToRef(dd, Jd, kd), kd
+      getAbsolutePositionFromLocal(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const wQ = oQ.p.Zero();
+        return this.getAbsolutePositionFromLocalToRef(QQ, FQ, wQ), wQ
       }
-      getAbsolutePositionFromLocalToRef(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        const pd = Ud._TmpMats[0].Fs(this.getAbsoluteMatrix());
-        Jd && pd.multiplyToRef(Jd.getWorldMatrix(), pd), Wd.n.TransformCoordinatesToRef(dd, pd, kd)
+      getAbsolutePositionFromLocalToRef(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        const LQ = lQ._TmpMats[0].Qs(this.getAbsoluteMatrix());
+        FQ && LQ.multiplyToRef(FQ.getWorldMatrix(), LQ), oQ.p.TransformCoordinatesToRef(QQ, LQ, wQ)
       }
-      getLocalPositionFromAbsolute(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const kd = Wd.n.Zero();
-        return this.getLocalPositionFromAbsoluteToRef(dd, Jd, kd), kd
+      getLocalPositionFromAbsolute(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const wQ = oQ.p.Zero();
+        return this.getLocalPositionFromAbsoluteToRef(QQ, FQ, wQ), wQ
       }
-      getLocalPositionFromAbsoluteToRef(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        const pd = Ud._TmpMats[0].Fs(this.getAbsoluteMatrix());
-        Jd && pd.multiplyToRef(Jd.getWorldMatrix(), pd), pd.invert(), Wd.n.TransformCoordinatesToRef(dd, pd, kd)
+      getLocalPositionFromAbsoluteToRef(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        const LQ = lQ._TmpMats[0].Qs(this.getAbsoluteMatrix());
+        FQ && LQ.multiplyToRef(FQ.getWorldMatrix(), LQ), LQ.invert(), oQ.p.TransformCoordinatesToRef(QQ, LQ, wQ)
       }
       setCurrentPoseAsRest() {
         this.setRestMatrix(this.getLocalMatrix())
       }
       dispose() {
         this._linkedTransformNode = null;
-        const dd = this._skeleton.bones.indexOf(this);
-        if (-1 !== dd && this._skeleton.bones.splice(dd, 1), this._parentNode && this._parentNode.children) {
-          const dd = this._parentNode.children,
-            Jd = dd.indexOf(this); - 1 !== Jd && dd.splice(Jd, 1)
+        const QQ = this._skeleton.bones.indexOf(this);
+        if (-1 !== QQ && this._skeleton.bones.splice(QQ, 1), this._parentNode && this._parentNode.children) {
+          const QQ = this._parentNode.children,
+            FQ = QQ.indexOf(this); - 1 !== FQ && QQ.splice(FQ, 1)
         }
         super.dispose()
       }
     }
-    Ud._TmpVecs = (0, Xd.b)(2, Wd.n.Zero), Ud._TmpQuat = Wd.d.Identity(), Ud._TmpMats = (0, Xd.b)(5, Wd.b.Identity), (jd = Ud.prototype).copyAnimationRange ?? (jd.copyAnimationRange = (0, nd.j)("Bone", "copyAnimationRange"));
-    var yd = kd(40062);
-    let Dd = !1;
-    var Td = kd(39931),
-      Ed = kd(40304),
-      cd = kd(40317),
-      hd = kd(40308),
-      rd = kd(40095);
+    lQ._TmpVecs = (0, TQ.b)(2, oQ.p.Zero), lQ._TmpQuat = oQ.e.Identity(), lQ._TmpMats = (0, TQ.b)(5, oQ.c.Identity), (NQ = lQ.prototype).copyAnimationRange ?? (NQ.copyAnimationRange = (0, zQ.g)("Bone", "copyAnimationRange"));
+    var jQ = wQ(39496);
+    let aQ = !1;
+    var XQ = wQ(39367),
+      fQ = wQ(39748),
+      VQ = wQ(39754),
+      hQ = wQ(39752),
+      JQ = wQ(39542);
 
-    function ud(dd, Jd) {
-      const kd = (0, Qd.RandomRange)(0, 1);
-      Kd.g.LerpToRef(Jd.color1, Jd.color2, kd, dd.color)
+    function EQ(QQ, FQ) {
+      const wQ = (0, YQ.RandomRange)(0, 1);
+      uQ.e.LerpToRef(FQ.color1, FQ.color2, wQ, QQ.color)
     }
 
-    function td(dd, Jd) {
-      Jd.colorDead.subtractToRef(dd.color, Jd._colorDiff), Jd._colorDiff.scaleToRef(1 / dd.lifeTime, dd.colorStep)
+    function nQ(QQ, FQ) {
+      FQ.colorDead.subtractToRef(QQ.color, FQ._colorDiff), FQ._colorDiff.scaleToRef(1 / QQ.lifeTime, QQ.colorStep)
     }
 
-    function Vd(dd, Jd) {
-      dd._properties.currentColorGradient = Jd._colorGradients[0], dd._properties.currentColorGradient.getColorToRef(dd.color), dd._properties.currentColor1.Fs(dd.color), Jd._colorGradients.length > 1 ? Jd._colorGradients[1].getColorToRef(dd._properties.currentColor2) : dd._properties.currentColor2.Fs(dd.color)
+    function gQ(QQ, FQ) {
+      QQ._properties.currentColorGradient = FQ._colorGradients[0], QQ._properties.currentColorGradient.getColorToRef(QQ.color), QQ._properties.currentColor1.Qs(QQ.color), FQ._colorGradients.length > 1 ? FQ._colorGradients[1].getColorToRef(QQ._properties.currentColor2) : QQ._properties.currentColor2.Qs(QQ.color)
     }
 
-    function zd(dd, Jd) {
-      const kd = Jd._colorGradients;
-      pd.k.GetCurrentGradient(Jd._ratio, kd, ((Jd, kd, pd) => {
-        Jd !== dd._properties.currentColorGradient && (dd._properties.currentColor1.Fs(dd._properties.currentColor2), kd.getColorToRef(dd._properties.currentColor2), dd._properties.currentColorGradient = Jd), Kd.g.LerpToRef(dd._properties.currentColor1, dd._properties.currentColor2, pd, dd.color), dd.color.a < 0 && (dd.color.a = 0)
+    function PQ(QQ, FQ) {
+      const wQ = FQ._colorGradients;
+      LQ.k.GetCurrentGradient(FQ._ratio, wQ, ((FQ, wQ, LQ) => {
+        FQ !== QQ._properties.currentColorGradient && (QQ._properties.currentColor1.Qs(QQ._properties.currentColor2), wQ.getColorToRef(QQ._properties.currentColor2), QQ._properties.currentColorGradient = FQ), uQ.e.LerpToRef(QQ._properties.currentColor1, QQ._properties.currentColor2, LQ, QQ.color), QQ.color.a < 0 && (QQ.color.a = 0)
       }))
     }
 
-    function Hd(dd, Jd) {
-      dd.colorStep.scaleToRef(Jd._scaledUpdateSpeed, Jd._scaledColorStep), dd.color.addInPlace(Jd._scaledColorStep), dd.color.a < 0 && (dd.color.a = 0)
+    function ZQ(QQ, FQ) {
+      QQ.colorStep.scaleToRef(FQ._scaledUpdateSpeed, FQ._scaledColorStep), QQ.color.addInPlace(FQ._scaledColorStep), QQ.color.a < 0 && (QQ.color.a = 0)
     }
 
-    function wd(dd, Jd) {
-      pd.k.GetCurrentGradient(Jd._ratio, Jd._angularSpeedGradients, ((Jd, kd, pd) => {
-        Jd !== dd._properties.currentAngularSpeedGradient && (dd._properties.currentAngularSpeed1 = dd._properties.currentAngularSpeed2, dd._properties.currentAngularSpeed2 = kd.getFactor(), dd._properties.currentAngularSpeedGradient = Jd), dd.angularSpeed = (0, Qd.Lerp)(dd._properties.currentAngularSpeed1, dd._properties.currentAngularSpeed2, pd)
+    function yQ(QQ, FQ) {
+      LQ.k.GetCurrentGradient(FQ._ratio, FQ._angularSpeedGradients, ((FQ, wQ, LQ) => {
+        FQ !== QQ._properties.currentAngularSpeedGradient && (QQ._properties.currentAngularSpeed1 = QQ._properties.currentAngularSpeed2, QQ._properties.currentAngularSpeed2 = wQ.getFactor(), QQ._properties.currentAngularSpeedGradient = FQ), QQ.angularSpeed = (0, YQ.Lerp)(QQ._properties.currentAngularSpeed1, QQ._properties.currentAngularSpeed2, LQ)
       }))
     }
 
-    function Ad(dd, Jd) {
-      dd.angle += dd.angularSpeed * Jd._scaledUpdateSpeed
+    function BQ(QQ, FQ) {
+      QQ.angle += QQ.angularSpeed * FQ._scaledUpdateSpeed
     }
 
-    function dJ(dd, Jd) {
-      Jd.particleEmitterType.startDirectionFunction(Jd._emitterWorldMatrix, dd.direction, dd, Jd.isLocal, Jd._emitterInverseWorldMatrix)
+    function dQ(QQ, FQ) {
+      FQ.particleEmitterType.startDirectionFunction(FQ._emitterWorldMatrix, QQ.direction, QQ, FQ.isLocal, FQ._emitterInverseWorldMatrix)
     }
 
-    function JJ(dd, Jd) {
-      Jd.startDirectionFunction(Jd._emitterWorldMatrix, dd.direction, dd, Jd.isLocal)
+    function QF(QQ, FQ) {
+      FQ.startDirectionFunction(FQ._emitterWorldMatrix, QQ.direction, QQ, FQ.isLocal)
     }
 
-    function kJ(dd, Jd) {
-      dd._properties.currentVelocityGradient = Jd._velocityGradients[0], dd._properties.currentVelocity1 = dd._properties.currentVelocityGradient.getFactor(), Jd._velocityGradients.length > 1 ? dd._properties.currentVelocity2 = Jd._velocityGradients[1].getFactor() : dd._properties.currentVelocity2 = dd._properties.currentVelocity1
+    function FF(QQ, FQ) {
+      QQ._properties.currentVelocityGradient = FQ._velocityGradients[0], QQ._properties.currentVelocity1 = QQ._properties.currentVelocityGradient.getFactor(), FQ._velocityGradients.length > 1 ? QQ._properties.currentVelocity2 = FQ._velocityGradients[1].getFactor() : QQ._properties.currentVelocity2 = QQ._properties.currentVelocity1
     }
 
-    function pJ(dd, Jd) {
-      dd._properties.currentLimitVelocityGradient = Jd._limitVelocityGradients[0], dd._properties.currentLimitVelocity1 = dd._properties.currentLimitVelocityGradient.getFactor(), Jd._limitVelocityGradients.length > 1 ? dd._properties.currentLimitVelocity2 = Jd._limitVelocityGradients[1].getFactor() : dd._properties.currentLimitVelocity2 = dd._properties.currentLimitVelocity1
+    function wF(QQ, FQ) {
+      QQ._properties.currentLimitVelocityGradient = FQ._limitVelocityGradients[0], QQ._properties.currentLimitVelocity1 = QQ._properties.currentLimitVelocityGradient.getFactor(), FQ._limitVelocityGradients.length > 1 ? QQ._properties.currentLimitVelocity2 = FQ._limitVelocityGradients[1].getFactor() : QQ._properties.currentLimitVelocity2 = QQ._properties.currentLimitVelocity1
     }
 
-    function NJ(dd, Jd) {
-      pd.k.GetCurrentGradient(Jd._ratio, Jd._velocityGradients, ((Jd, kd, pd) => {
-        Jd !== dd._properties.currentVelocityGradient && (dd._properties.currentVelocity1 = dd._properties.currentVelocity2, dd._properties.currentVelocity2 = kd.getFactor(), dd._properties.currentVelocityGradient = Jd), dd._properties.directionScale *= (0, Qd.Lerp)(dd._properties.currentVelocity1, dd._properties.currentVelocity2, pd)
+    function LF(QQ, FQ) {
+      LQ.k.GetCurrentGradient(FQ._ratio, FQ._velocityGradients, ((FQ, wQ, LQ) => {
+        FQ !== QQ._properties.currentVelocityGradient && (QQ._properties.currentVelocity1 = QQ._properties.currentVelocity2, QQ._properties.currentVelocity2 = wQ.getFactor(), QQ._properties.currentVelocityGradient = FQ), QQ._properties.directionScale *= (0, YQ.Lerp)(QQ._properties.currentVelocity1, QQ._properties.currentVelocity2, LQ)
       }))
     }
 
-    function WJ(dd, Jd) {
-      pd.k.GetCurrentGradient(Jd._ratio, Jd._limitVelocityGradients, ((kd, pd, Nd) => {
-        kd !== dd._properties.currentLimitVelocityGradient && (dd._properties.currentLimitVelocity1 = dd._properties.currentLimitVelocity2, dd._properties.currentLimitVelocity2 = pd.getFactor(), dd._properties.currentLimitVelocityGradient = kd);
-        const Wd = (0, Qd.Lerp)(dd._properties.currentLimitVelocity1, dd._properties.currentLimitVelocity2, Nd);
-        dd.direction.length() > Wd && dd.direction.scaleInPlace(Jd.limitVelocityDamping)
+    function qF(QQ, FQ) {
+      LQ.k.GetCurrentGradient(FQ._ratio, FQ._limitVelocityGradients, ((wQ, LQ, qQ) => {
+        wQ !== QQ._properties.currentLimitVelocityGradient && (QQ._properties.currentLimitVelocity1 = QQ._properties.currentLimitVelocity2, QQ._properties.currentLimitVelocity2 = LQ.getFactor(), QQ._properties.currentLimitVelocityGradient = wQ);
+        const oQ = (0, YQ.Lerp)(QQ._properties.currentLimitVelocity1, QQ._properties.currentLimitVelocity2, qQ);
+        QQ.direction.length() > oQ && QQ.direction.scaleInPlace(FQ.limitVelocityDamping)
       }))
     }
 
-    function PJ(dd) {
-      dd.direction.scaleToRef(dd._properties.directionScale, dd._properties.scaledDirection)
+    function oF(QQ) {
+      QQ.direction.scaleToRef(QQ._properties.directionScale, QQ._properties.scaledDirection)
     }
 
-    function ZJ(dd, Jd) {
-      Jd.particleEmitterType.startPositionFunction(Jd._emitterWorldMatrix, dd.position, dd, Jd.isLocal)
+    function DF(QQ, FQ) {
+      FQ.particleEmitterType.startPositionFunction(FQ._emitterWorldMatrix, QQ.position, QQ, FQ.isLocal)
     }
 
-    function gJ(dd, Jd) {
-      Jd.startPositionFunction(Jd._emitterWorldMatrix, dd.position, dd, Jd.isLocal)
+    function kF(QQ, FQ) {
+      FQ.startPositionFunction(FQ._emitterWorldMatrix, QQ.position, QQ, FQ.isLocal)
     }
 
-    function CJ(dd, Jd) {
-      dd._properties.localPosition ? dd._properties.localPosition.Fs(dd.position) : dd._properties.localPosition = dd.position.clone(), Wd.n.TransformCoordinatesToRef(dd._properties.localPosition, Jd._emitterWorldMatrix, dd.position)
+    function vF(QQ, FQ) {
+      QQ._properties.localPosition ? QQ._properties.localPosition.Qs(QQ.position) : QQ._properties.localPosition = QQ.position.clone(), oQ.p.TransformCoordinatesToRef(QQ._properties.localPosition, FQ._emitterWorldMatrix, QQ.position)
     }
 
-    function KJ(dd, Jd) {
-      Jd.isLocal && dd._properties.localPosition ? (dd._properties.localPosition.addInPlace(dd._properties.scaledDirection), Wd.n.TransformCoordinatesToRef(dd._properties.localPosition, Jd._emitterWorldMatrix, dd.position)) : dd.position.addInPlace(dd._properties.scaledDirection)
+    function mF(QQ, FQ) {
+      FQ.isLocal && QQ._properties.localPosition ? (QQ._properties.localPosition.addInPlace(QQ._properties.scaledDirection), oQ.p.TransformCoordinatesToRef(QQ._properties.localPosition, FQ._emitterWorldMatrix, QQ.position)) : QQ.position.addInPlace(QQ._properties.scaledDirection)
     }
 
-    function oJ(dd, Jd) {
-      dd._properties.currentDragGradient = Jd._dragGradients[0], dd._properties.currentDrag1 = dd._properties.currentDragGradient.getFactor(), Jd._dragGradients.length > 1 ? dd._properties.currentDrag2 = Jd._dragGradients[1].getFactor() : dd._properties.currentDrag2 = dd._properties.currentDrag1
+    function uF(QQ, FQ) {
+      QQ._properties.currentDragGradient = FQ._dragGradients[0], QQ._properties.currentDrag1 = QQ._properties.currentDragGradient.getFactor(), FQ._dragGradients.length > 1 ? QQ._properties.currentDrag2 = FQ._dragGradients[1].getFactor() : QQ._properties.currentDrag2 = QQ._properties.currentDrag1
     }
 
-    function lJ(dd, Jd) {
-      pd.k.GetCurrentGradient(Jd._ratio, Jd._dragGradients, ((Jd, kd, pd) => {
-        Jd !== dd._properties.currentDragGradient && (dd._properties.currentDrag1 = dd._properties.currentDrag2, dd._properties.currentDrag2 = kd.getFactor(), dd._properties.currentDragGradient = Jd);
-        const Nd = (0, Qd.Lerp)(dd._properties.currentDrag1, dd._properties.currentDrag2, pd);
-        dd._properties.scaledDirection.scaleInPlace(1 - Nd)
+    function HF(QQ, FQ) {
+      LQ.k.GetCurrentGradient(FQ._ratio, FQ._dragGradients, ((FQ, wQ, LQ) => {
+        FQ !== QQ._properties.currentDragGradient && (QQ._properties.currentDrag1 = QQ._properties.currentDrag2, QQ._properties.currentDrag2 = wQ.getFactor(), QQ._properties.currentDragGradient = FQ);
+        const qQ = (0, YQ.Lerp)(QQ._properties.currentDrag1, QQ._properties.currentDrag2, LQ);
+        QQ._properties.scaledDirection.scaleInPlace(1 - qQ)
       }))
     }
 
-    function QJ(dd, Jd) {
-      dd._properties.randomNoiseCoordinates1 && dd._properties.randomNoiseCoordinates2 ? (dd._properties.randomNoiseCoordinates1.kdd(Math.random(), Math.random(), Math.random()), dd._properties.randomNoiseCoordinates2.kdd(Math.random(), Math.random(), Math.random())) : (dd._properties.randomNoiseCoordinates1 = new Wd.n(Math.random(), Math.random(), Math.random()), dd._properties.randomNoiseCoordinates2 = new Wd.n(Math.random(), Math.random(), Math.random()))
+    function bF(QQ, FQ) {
+      QQ._properties.randomNoiseCoordinates1 && QQ._properties.randomNoiseCoordinates2 ? (QQ._properties.randomNoiseCoordinates1.vQQ(Math.random(), Math.random(), Math.random()), QQ._properties.randomNoiseCoordinates2.vQQ(Math.random(), Math.random(), Math.random())) : (QQ._properties.randomNoiseCoordinates1 = new oQ.p(Math.random(), Math.random(), Math.random()), QQ._properties.randomNoiseCoordinates2 = new oQ.p(Math.random(), Math.random(), Math.random()))
     }
 
-    function LJ(dd, Jd) {
-      const kd = Jd._noiseTextureData,
-        pd = Jd._noiseTextureSize;
-      if (kd && pd && dd._properties.randomNoiseCoordinates1 && dd._properties.randomNoiseCoordinates2) {
-        const Nd = Jd._fetchR(dd._properties.randomNoiseCoordinates1.x, dd._properties.randomNoiseCoordinates1.y, pd.width, pd.height, kd),
-          Pd = Jd._fetchR(dd._properties.randomNoiseCoordinates1.z, dd._properties.randomNoiseCoordinates2.x, pd.width, pd.height, kd),
-          Zd = Jd._fetchR(dd._properties.randomNoiseCoordinates2.y, dd._properties.randomNoiseCoordinates2.z, pd.width, pd.height, kd),
-          gd = Wd.h.IL[0],
-          Cd = Wd.h.IL[1];
-        gd.kdd((2 * Nd - 1) * Jd.noiseStrength.x, (2 * Pd - 1) * Jd.noiseStrength.y, (2 * Zd - 1) * Jd.noiseStrength.z), gd.scaleToRef(Jd._tempScaledUpdateSpeed, Cd), dd.direction.addInPlace(Cd)
+    function YF(QQ, FQ) {
+      const wQ = FQ._noiseTextureData,
+        LQ = FQ._noiseTextureSize;
+      if (wQ && LQ && QQ._properties.randomNoiseCoordinates1 && QQ._properties.randomNoiseCoordinates2) {
+        const qQ = FQ._fetchR(QQ._properties.randomNoiseCoordinates1.x, QQ._properties.randomNoiseCoordinates1.y, LQ.width, LQ.height, wQ),
+          DQ = FQ._fetchR(QQ._properties.randomNoiseCoordinates1.z, QQ._properties.randomNoiseCoordinates2.x, LQ.width, LQ.height, wQ),
+          kQ = FQ._fetchR(QQ._properties.randomNoiseCoordinates2.y, QQ._properties.randomNoiseCoordinates2.z, LQ.width, LQ.height, wQ),
+          vQ = oQ.k.Ox[0],
+          mQ = oQ.k.Ox[1];
+        vQ.vQQ((2 * qQ - 1) * FQ.noiseStrength.x, (2 * DQ - 1) * FQ.noiseStrength.y, (2 * kQ - 1) * FQ.noiseStrength.z), vQ.scaleToRef(FQ._tempScaledUpdateSpeed, mQ), QQ.direction.addInPlace(mQ)
       }
     }
 
-    function OJ(dd, Jd) {
-      Jd.gravity.scaleToRef(Jd._tempScaledUpdateSpeed, Jd._scaledGravity), dd.direction.addInPlace(Jd._scaledGravity)
+    function xF(QQ, FQ) {
+      FQ.gravity.scaleToRef(FQ._tempScaledUpdateSpeed, FQ._scaledGravity), QQ.direction.addInPlace(FQ._scaledGravity)
     }
 
-    function eJ(dd, Jd) {
-      dd.size = (0, Qd.RandomRange)(Jd.minSize, Jd.maxSize), dd.scale.kdd((0, Qd.RandomRange)(Jd.minScaleX, Jd.maxScaleX), (0, Qd.RandomRange)(Jd.minScaleY, Jd.maxScaleY))
+    function AF(QQ, FQ) {
+      QQ.size = (0, YQ.RandomRange)(FQ.minSize, FQ.maxSize), QQ.scale.vQQ((0, YQ.RandomRange)(FQ.minScaleX, FQ.maxScaleX), (0, YQ.RandomRange)(FQ.minScaleY, FQ.maxScaleY))
     }
 
-    function RJ(dd, Jd) {
-      dd._properties.currentSizeGradient = Jd._sizeGradients[0], dd._properties.currentSize1 = dd._properties.currentSizeGradient.getFactor(), dd.size = dd._properties.currentSize1, Jd._sizeGradients.length > 1 ? dd._properties.currentSize2 = Jd._sizeGradients[1].getFactor() : dd._properties.currentSize2 = dd._properties.currentSize1, dd.scale.kdd((0, Qd.RandomRange)(Jd.minScaleX, Jd.maxScaleX), (0, Qd.RandomRange)(Jd.minScaleY, Jd.maxScaleY))
+    function tF(QQ, FQ) {
+      QQ._properties.currentSizeGradient = FQ._sizeGradients[0], QQ._properties.currentSize1 = QQ._properties.currentSizeGradient.getFactor(), QQ.size = QQ._properties.currentSize1, FQ._sizeGradients.length > 1 ? QQ._properties.currentSize2 = FQ._sizeGradients[1].getFactor() : QQ._properties.currentSize2 = QQ._properties.currentSize1, QQ.scale.vQQ((0, YQ.RandomRange)(FQ.minScaleX, FQ.maxScaleX), (0, YQ.RandomRange)(FQ.minScaleY, FQ.maxScaleY))
     }
 
-    function IJ(dd, Jd) {
-      const kd = Jd._actualFrame / Jd.targetStopDuration;
-      pd.k.GetCurrentGradient(kd, Jd._startSizeGradients, ((kd, pd, Nd) => {
-        kd !== Jd._currentStartSizeGradient && (Jd._currentStartSize1 = Jd._currentStartSize2, Jd._currentStartSize2 = pd.getFactor(), Jd._currentStartSizeGradient = kd);
-        const Wd = (0, Qd.Lerp)(Jd._currentStartSize1, Jd._currentStartSize2, Nd);
-        dd.scale.scaleInPlace(Wd)
+    function eF(QQ, FQ) {
+      const wQ = FQ._actualFrame / FQ.targetStopDuration;
+      LQ.k.GetCurrentGradient(wQ, FQ._startSizeGradients, ((wQ, LQ, qQ) => {
+        wQ !== FQ._currentStartSizeGradient && (FQ._currentStartSize1 = FQ._currentStartSize2, FQ._currentStartSize2 = LQ.getFactor(), FQ._currentStartSizeGradient = wQ);
+        const oQ = (0, YQ.Lerp)(FQ._currentStartSize1, FQ._currentStartSize2, qQ);
+        QQ.scale.scaleInPlace(oQ)
       }))
     }
 
-    function GJ(dd, Jd) {
-      pd.k.GetCurrentGradient(Jd._ratio, Jd._sizeGradients, ((Jd, kd, pd) => {
-        Jd !== dd._properties.currentSizeGradient && (dd._properties.currentSize1 = dd._properties.currentSize2, dd._properties.currentSize2 = kd.getFactor(), dd._properties.currentSizeGradient = Jd), dd.size = (0, Qd.Lerp)(dd._properties.currentSize1, dd._properties.currentSize2, pd)
+    function MF(QQ, FQ) {
+      LQ.k.GetCurrentGradient(FQ._ratio, FQ._sizeGradients, ((FQ, wQ, LQ) => {
+        FQ !== QQ._properties.currentSizeGradient && (QQ._properties.currentSize1 = QQ._properties.currentSize2, QQ._properties.currentSize2 = wQ.getFactor(), QQ._properties.currentSizeGradient = FQ), QQ.size = (0, YQ.Lerp)(QQ._properties.currentSize1, QQ._properties.currentSize2, LQ)
       }))
     }
 
-    function vJ(dd, Jd) {
-      dd.remapData = new Wd.o(0, 1, 0, 1)
+    function GF(QQ, FQ) {
+      QQ.remapData = new oQ.t(0, 1, 0, 1)
     }
 
-    function xJ(dd, Jd) {
-      Jd._colorRemapGradients && Jd._colorRemapGradients.length > 0 && pd.k.GetCurrentGradient(Jd._ratio, Jd._colorRemapGradients, ((Jd, kd, pd) => {
-        const Nd = (0, Qd.Lerp)(Jd.factor1, kd.factor1, pd),
-          Wd = (0, Qd.Lerp)(Jd.factor2, kd.factor2, pd);
-        dd.remapData.x = Nd, dd.remapData.y = Wd - Nd
-      })), Jd._alphaRemapGradients && Jd._alphaRemapGradients.length > 0 && pd.k.GetCurrentGradient(Jd._ratio, Jd._alphaRemapGradients, ((Jd, kd, pd) => {
-        const Nd = (0, Qd.Lerp)(Jd.factor1, kd.factor1, pd),
-          Wd = (0, Qd.Lerp)(Jd.factor2, kd.factor2, pd);
-        dd.remapData.z = Nd, dd.remapData.w = Wd - Nd
+    function pF(QQ, FQ) {
+      FQ._colorRemapGradients && FQ._colorRemapGradients.length > 0 && LQ.k.GetCurrentGradient(FQ._ratio, FQ._colorRemapGradients, ((FQ, wQ, LQ) => {
+        const qQ = (0, YQ.Lerp)(FQ.factor1, wQ.factor1, LQ),
+          oQ = (0, YQ.Lerp)(FQ.factor2, wQ.factor2, LQ);
+        QQ.remapData.x = qQ, QQ.remapData.y = oQ - qQ
+      })), FQ._alphaRemapGradients && FQ._alphaRemapGradients.length > 0 && LQ.k.GetCurrentGradient(FQ._ratio, FQ._alphaRemapGradients, ((FQ, wQ, LQ) => {
+        const qQ = (0, YQ.Lerp)(FQ.factor1, wQ.factor1, LQ),
+          oQ = (0, YQ.Lerp)(FQ.factor2, wQ.factor2, LQ);
+        QQ.remapData.z = qQ, QQ.remapData.w = oQ - qQ
       }))
     }
 
-    function qJ(dd, Jd) {
-      const kd = (0, Qd.Clamp)(Jd._actualFrame / Jd.targetStopDuration);
-      pd.k.GetCurrentGradient(kd, Jd._lifeTimeGradients, ((Jd, pd) => {
-        const Nd = Jd,
-          Wd = pd,
-          Pd = Nd.getFactor(),
-          Zd = Wd.getFactor(),
-          gd = (kd - Nd.gradient) / (Wd.gradient - Nd.gradient);
-        dd.lifeTime = (0, Qd.Lerp)(Pd, Zd, gd)
-      })), Jd._emitPower = (0, Qd.RandomRange)(Jd.minEmitPower, Jd.maxEmitPower)
+    function cF(QQ, FQ) {
+      const wQ = (0, YQ.Clamp)(FQ._actualFrame / FQ.targetStopDuration);
+      LQ.k.GetCurrentGradient(wQ, FQ._lifeTimeGradients, ((FQ, LQ) => {
+        const qQ = FQ,
+          oQ = LQ,
+          DQ = qQ.getFactor(),
+          kQ = oQ.getFactor(),
+          vQ = (wQ - qQ.gradient) / (oQ.gradient - qQ.gradient);
+        QQ.lifeTime = (0, YQ.Lerp)(DQ, kQ, vQ)
+      })), FQ._emitPower = (0, YQ.RandomRange)(FQ.minEmitPower, FQ.maxEmitPower)
     }
 
-    function BJ(dd, Jd) {
-      dd.lifeTime = (0, Qd.RandomRange)(Jd.minLifeTime, Jd.maxLifeTime), Jd._emitPower = (0, Qd.RandomRange)(Jd.minEmitPower, Jd.maxEmitPower)
+    function CF(QQ, FQ) {
+      QQ.lifeTime = (0, YQ.RandomRange)(FQ.minLifeTime, FQ.maxLifeTime), FQ._emitPower = (0, YQ.RandomRange)(FQ.minEmitPower, FQ.maxEmitPower)
     }
 
-    function sJ(dd, Jd) {
-      0 === Jd._emitPower ? (dd._properties.initialDirection ? dd._properties.initialDirection.Fs(dd.direction) : dd._properties.initialDirection = dd.direction.clone(), dd.direction.set(0, 0, 0)) : (dd._properties.initialDirection = null, dd.direction.scaleInPlace(Jd._emitPower)), dd.direction.addInPlace(Jd._inheritedVelocityOffset)
+    function SF(QQ, FQ) {
+      0 === FQ._emitPower ? (QQ._properties.initialDirection ? QQ._properties.initialDirection.Qs(QQ.direction) : QQ._properties.initialDirection = QQ.direction.clone(), QQ.direction.set(0, 0, 0)) : (QQ._properties.initialDirection = null, QQ.direction.scaleInPlace(FQ._emitPower)), QQ.direction.addInPlace(FQ._inheritedVelocityOffset)
     }
 
-    function iJ(dd, Jd) {
-      dd.angularSpeed = (0, Qd.RandomRange)(Jd.minAngularSpeed, Jd.maxAngularSpeed), dd.angle = (0, Qd.RandomRange)(Jd.minInitialRotation, Jd.maxInitialRotation)
+    function iF(QQ, FQ) {
+      QQ.angularSpeed = (0, YQ.RandomRange)(FQ.minAngularSpeed, FQ.maxAngularSpeed), QQ.angle = (0, YQ.RandomRange)(FQ.minInitialRotation, FQ.maxInitialRotation)
     }
 
-    function aJ(dd, Jd) {
-      dd._properties.currentAngularSpeedGradient = Jd._angularSpeedGradients[0], dd.angularSpeed = dd._properties.currentAngularSpeedGradient.getFactor(), dd._properties.currentAngularSpeed1 = dd.angularSpeed, Jd._angularSpeedGradients.length > 1 ? dd._properties.currentAngularSpeed2 = Jd._angularSpeedGradients[1].getFactor() : dd._properties.currentAngularSpeed2 = dd._properties.currentAngularSpeed1, dd.angle = (0, Qd.RandomRange)(Jd.minInitialRotation, Jd.maxInitialRotation)
+    function WF(QQ, FQ) {
+      QQ._properties.currentAngularSpeedGradient = FQ._angularSpeedGradients[0], QQ.angularSpeed = QQ._properties.currentAngularSpeedGradient.getFactor(), QQ._properties.currentAngularSpeed1 = QQ.angularSpeed, FQ._angularSpeedGradients.length > 1 ? QQ._properties.currentAngularSpeed2 = FQ._angularSpeedGradients[1].getFactor() : QQ._properties.currentAngularSpeed2 = QQ._properties.currentAngularSpeed1, QQ.angle = (0, YQ.RandomRange)(FQ.minInitialRotation, FQ.maxInitialRotation)
     }
 
-    function MJ(dd, Jd) {
-      dd._properties.initialStartSpriteCellId = Jd.startSpriteCellID, dd._properties.initialEndSpriteCellId = Jd.endSpriteCellID, dd._properties.initialSpriteCellLoop = Jd.spriteCellLoop
+    function RF(QQ, FQ) {
+      QQ._properties.initialStartSpriteCellId = FQ.startSpriteCellID, QQ._properties.initialEndSpriteCellId = FQ.endSpriteCellID, QQ._properties.initialSpriteCellLoop = FQ.spriteCellLoop
     }
 
-    function FJ(dd, Jd) {
-      dd.previousItem = Jd.previousItem, dd.nextItem = Jd, Jd.previousItem && (Jd.previousItem.nextItem = dd), Jd.previousItem = dd
+    function OF(QQ, FQ) {
+      QQ.previousItem = FQ.previousItem, QQ.nextItem = FQ, FQ.previousItem && (FQ.previousItem.nextItem = QQ), FQ.previousItem = QQ
     }
 
-    function YJ(dd, Jd) {
-      dd.previousItem = Jd, dd.nextItem = Jd.nextItem, Jd.nextItem && (Jd.nextItem.previousItem = dd), Jd.nextItem = dd
+    function sF(QQ, FQ) {
+      QQ.previousItem = FQ, QQ.nextItem = FQ.nextItem, FQ.nextItem && (FQ.nextItem.previousItem = QQ), FQ.nextItem = QQ
     }
 
-    function mJ(dd) {
-      dd.previousItem && (dd.previousItem.nextItem = dd.nextItem), dd.nextItem && (dd.nextItem.previousItem = dd.previousItem)
+    function rF(QQ) {
+      QQ.previousItem && (QQ.previousItem.nextItem = QQ.nextItem), QQ.nextItem && (QQ.nextItem.previousItem = QQ.previousItem)
     }
-    var bJ = kd(40364);
-    class SJ extends qd {
+    var IF = wQ(39796);
+    class UF extends CQ {
       get startDirectionFunction() {
         return this._startDirectionFunction
       }
-      set startDirectionFunction(dd) {
-        this._startDirectionFunction !== dd && (this._startDirectionFunction = dd, this._directionCreation.process = dd ? JJ : dJ)
+      set startDirectionFunction(QQ) {
+        this._startDirectionFunction !== QQ && (this._startDirectionFunction = QQ, this._directionCreation.process = QQ ? QF : dQ)
       }
       get startPositionFunction() {
         return this._startPositionFunction
       }
-      set startPositionFunction(dd) {
-        this._startPositionFunction !== dd && (this._startPositionFunction = dd, this._positionCreation.process = dd ? gJ : ZJ)
+      set startPositionFunction(QQ) {
+        this._startPositionFunction !== QQ && (this._startPositionFunction = QQ, this._positionCreation.process = QQ ? kF : DF)
       }
-      set onDispose(dd) {
-        this._onDisposeObserver && this.Zm.remove(this._onDisposeObserver), this._onDisposeObserver = this.Zm.add(dd)
+      set onDispose(QQ) {
+        this._onDisposeObserver && this.zN.remove(this._onDisposeObserver), this._onDisposeObserver = this.zN.add(QQ)
       }
-      get lq() {
+      get vW() {
         return this._isDisposed
       }
       get useRampGradients() {
         return this._useRampGradients
       }
-      set useRampGradients(dd) {
-        this._useRampGradients !== dd && (this._useRampGradients = dd, this._resetEffect(), dd ? (this._rampCreation = {
-          process: vJ,
+      set useRampGradients(QQ) {
+        this._useRampGradients !== QQ && (this._useRampGradients = QQ, this._resetEffect(), QQ ? (this._rampCreation = {
+          process: GF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._rampCreation, this._colorDeadCreation), this._gravityProcessing && (this._remapGradientProcessing = {
-          process: xJ,
+        }, sF(this._rampCreation, this._colorDeadCreation), this._gravityProcessing && (this._remapGradientProcessing = {
+          process: pF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._remapGradientProcessing, this._gravityProcessing))) : (mJ(this._rampCreation), mJ(this._remapGradientProcessing)))
+        }, sF(this._remapGradientProcessing, this._gravityProcessing))) : (rF(this._rampCreation), rF(this._remapGradientProcessing)))
       }
       get isLocal() {
         return this._isLocal
       }
-      set isLocal(dd) {
-        this._isLocal !== dd && (this._isLocal = dd, dd ? (this._isLocalCreation = {
-          process: CJ,
+      set isLocal(QQ) {
+        this._isLocal !== QQ && (this._isLocal = QQ, QQ ? (this._isLocalCreation = {
+          process: vF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._isLocalCreation, this._positionCreation)) : mJ(this._isLocalCreation))
+        }, sF(this._isLocalCreation, this._positionCreation)) : rF(this._isLocalCreation))
       }
       get particles() {
         return this._particles
@@ -2908,12 +2908,12 @@ export const modules = {
       get _isAnimationSheetEnabled() {
         return this._animationSheetEnabled
       }
-      set _isAnimationSheetEnabled(dd) {
-        this._animationSheetEnabled !== dd && (this._animationSheetEnabled = dd, dd ? (this._sheetCreation = {
-          process: MJ,
+      set _isAnimationSheetEnabled(QQ) {
+        this._animationSheetEnabled !== QQ && (this._animationSheetEnabled = QQ, QQ ? (this._sheetCreation = {
+          process: RF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._sheetCreation, this._colorDeadCreation)) : mJ(this._sheetCreation), this._reset())
+        }, sF(this._sheetCreation, this._colorDeadCreation)) : rF(this._sheetCreation), this._reset())
       }
       getActiveCount() {
         return this._particles.length
@@ -2925,19 +2925,19 @@ export const modules = {
         return this._stopped && this.isAlive()
       }
       getCustomEffect() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._customWrappers[dd]?.effect ?? this._customWrappers[0].effect
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._customWrappers[QQ]?.effect ?? this._customWrappers[0].effect
       }
       _getCustomDrawWrapper() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._customWrappers[dd] ?? this._customWrappers[0]
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._customWrappers[QQ] ?? this._customWrappers[0]
       }
-      setCustomEffect(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this._customWrappers[Jd] = new Ed.d(this._engine), this._customWrappers[Jd].effect = dd, this._customWrappers[Jd].drawContext && (this._customWrappers[Jd].drawContext.useInstancing = this._useInstancing)
+      setCustomEffect(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this._customWrappers[FQ] = new fQ.d(this._engine), this._customWrappers[FQ].effect = QQ, this._customWrappers[FQ].drawContext && (this._customWrappers[FQ].drawContext.useInstancing = this._useInstancing)
       }
       get onBeforeDrawParticlesObservable() {
-        return this._onBeforeDrawParticlesObservable || (this._onBeforeDrawParticlesObservable = new Nd.e), this._onBeforeDrawParticlesObservable
+        return this._onBeforeDrawParticlesObservable || (this._onBeforeDrawParticlesObservable = new qQ.e), this._onBeforeDrawParticlesObservable
       }
       get vertexShaderName() {
         return "particles"
@@ -2951,231 +2951,231 @@ export const modules = {
       get noiseTexture() {
         return this._noiseTexture
       }
-      set noiseTexture(dd) {
-        if (this.noiseTexture !== dd) {
-          if (this._noiseTexture = dd, !dd) return mJ(this._noiseCreation), void mJ(this._noiseProcessing);
+      set noiseTexture(QQ) {
+        if (this.noiseTexture !== QQ) {
+          if (this._noiseTexture = QQ, !QQ) return rF(this._noiseCreation), void rF(this._noiseProcessing);
           this._noiseCreation = {
-            process: QJ,
+            process: bF,
             previousItem: null,
             nextItem: null
-          }, YJ(this._noiseCreation, this._colorDeadCreation), this._noiseProcessing = {
-            process: LJ,
+          }, sF(this._noiseCreation, this._colorDeadCreation), this._noiseProcessing = {
+            process: YF,
             previousItem: null,
             nextItem: null
-          }, YJ(this._noiseProcessing, this._positionProcessing)
+          }, sF(this._noiseProcessing, this._positionProcessing)
         }
       }
-      constructor(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Pd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          Zd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : .01,
-          Cd = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        Dd || (Dd = !0, Sd(yd.i, Ud)), (0, Td.b)(), super(dd), this._emitterInverseWorldMatrix = Wd.b.Identity(), this._startDirectionFunction = null, this._startPositionFunction = null, this._inheritedVelocityOffset = new Wd.n, this.Zm = new Nd.e, this.onStoppedObservable = new Nd.e, this.onStartedObservable = new Nd.e, this._noiseTextureSize = null, this._noiseTextureData = null, this._particles = new Array, this._stockParticles = new Array, this._newPartsExcess = 0, this._vertexBuffers = {}, this._renderPassObserver = null, this._scaledColorStep = new Kd.g(0, 0, 0, 0), this._colorDiff = new Kd.g(0, 0, 0, 0), this._scaledGravity = Wd.n.Zero(), this._currentRenderId = -1, this._useInstancing = !1, this._useFixedCapacityForSnapshot = !1, this._fixedCapacityHighWaterMark = 0, this._isDisposed = !1, this._started = !1, this._stopped = !1, this._actualFrame = 0, this._currentEmitRate1 = 0, this._currentEmitRate2 = 0, this._currentStartSize1 = 0, this._currentStartSize2 = 0, this.updateInAnimate = !0, this._rawTextureWidth = 256, this._useRampGradients = !1, this._updateQueueStart = null, this._startSizeCreation = null, this._createQueueStart = null, this._isLocal = !1, this.isGPU = !1, this._shaderLanguage = 0, this._onBeforeDrawParticlesObservable = null, this._emitFromParticle = dd => {}, this.recycleParticle = dd => {
-          const Jd = this._particles.pop();
-          Jd !== dd && Jd.copyTo(dd), Jd.metadata = null, this._stockParticles.push(Jd)
+      constructor(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          DQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          kQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : .01,
+          mQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        aQ || (aQ = !0, UQ(jQ.e, lQ)), (0, XQ.b)(), super(QQ), this._emitterInverseWorldMatrix = oQ.c.Identity(), this._startDirectionFunction = null, this._startPositionFunction = null, this._inheritedVelocityOffset = new oQ.p, this.zN = new qQ.e, this.onStoppedObservable = new qQ.e, this.onStartedObservable = new qQ.e, this._noiseTextureSize = null, this._noiseTextureData = null, this._particles = new Array, this._stockParticles = new Array, this._newPartsExcess = 0, this._vertexBuffers = {}, this._renderPassObserver = null, this._scaledColorStep = new uQ.e(0, 0, 0, 0), this._colorDiff = new uQ.e(0, 0, 0, 0), this._scaledGravity = oQ.p.Zero(), this._currentRenderId = -1, this._useInstancing = !1, this._useFixedCapacityForSnapshot = !1, this._fixedCapacityHighWaterMark = 0, this._isDisposed = !1, this._started = !1, this._stopped = !1, this._actualFrame = 0, this._currentEmitRate1 = 0, this._currentEmitRate2 = 0, this._currentStartSize1 = 0, this._currentStartSize2 = 0, this.updateInAnimate = !0, this._rawTextureWidth = 256, this._useRampGradients = !1, this._updateQueueStart = null, this._startSizeCreation = null, this._createQueueStart = null, this._isLocal = !1, this.isGPU = !1, this._shaderLanguage = 0, this._onBeforeDrawParticlesObservable = null, this._emitFromParticle = QQ => {}, this.recycleParticle = QQ => {
+          const FQ = this._particles.pop();
+          FQ !== QQ && FQ.copyTo(QQ), FQ.metadata = null, this._stockParticles.push(FQ)
         }, this._createParticle = () => {
-          let dd;
-          return 0 !== this._stockParticles.length ? (dd = this._stockParticles.pop(), dd._reset()) : dd = new sd(this), this._prepareParticle(dd), dd
-        }, this.paused = !1, this._shadersLoaded = !1, this._capacity = Jd, this._epsilon = Zd, kd && "Scene" !== kd.getClassName() ? (this._engine = kd, this.defaultProjectionMatrix = Wd.b.PerspectiveFovLH(.8, 1, .1, 100, this._engine.isNDCHalfZRange)) : (this._scene = kd || gd.d.LastCreatedScene, this._engine = this._scene.eL(), this.uniqueId = this._scene.getUniqueId(), this.layerMask = this._scene.defaultRenderableLayerMask, this._scene.Qv.push(this)), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._initShaderSourceAsync(), this._lifeTimeCreation = {
-          process: BJ,
+          let QQ;
+          return 0 !== this._stockParticles.length ? (QQ = this._stockParticles.pop(), QQ._reset()) : QQ = new iQ(this), this._prepareParticle(QQ), QQ
+        }, this.paused = !1, this._shadersLoaded = !1, this._capacity = FQ, this._epsilon = kQ, wQ && "Scene" !== wQ.getClassName() ? (this._engine = wQ, this.defaultProjectionMatrix = oQ.c.PerspectiveFovLH(.8, 1, .1, 100, this._engine.isNDCHalfZRange)) : (this._scene = wQ || vQ.d.LastCreatedScene, this._engine = this._scene.Wx(), this.uniqueId = this._scene.getUniqueId(), this.layerMask = this._scene.defaultRenderableLayerMask, this._scene.fC.push(this)), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._initShaderSourceAsync(), this._lifeTimeCreation = {
+          process: CF,
           previousItem: null,
           nextItem: null
         }, this._positionCreation = {
-          process: ZJ,
+          process: DF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._positionCreation, this._lifeTimeCreation), this._directionCreation = {
-          process: dJ,
+        }, sF(this._positionCreation, this._lifeTimeCreation), this._directionCreation = {
+          process: dQ,
           previousItem: null,
           nextItem: null
-        }, YJ(this._directionCreation, this._positionCreation), this._emitPowerCreation = {
-          process: sJ,
+        }, sF(this._directionCreation, this._positionCreation), this._emitPowerCreation = {
+          process: SF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._emitPowerCreation, this._directionCreation), this._sizeCreation = {
-          process: eJ,
+        }, sF(this._emitPowerCreation, this._directionCreation), this._sizeCreation = {
+          process: AF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._sizeCreation, this._emitPowerCreation), this._angleCreation = {
-          process: iJ,
+        }, sF(this._sizeCreation, this._emitPowerCreation), this._angleCreation = {
+          process: iF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._angleCreation, this._sizeCreation), this._colorCreation = {
-          process: ud,
+        }, sF(this._angleCreation, this._sizeCreation), this._colorCreation = {
+          process: EQ,
           previousItem: null,
           nextItem: null
-        }, YJ(this._colorCreation, this._angleCreation), this._colorDeadCreation = {
-          process: td,
+        }, sF(this._colorCreation, this._angleCreation), this._colorDeadCreation = {
+          process: nQ,
           previousItem: null,
           nextItem: null
-        }, YJ(this._colorDeadCreation, this._colorCreation), this._createQueueStart = this._lifeTimeCreation, Cd || (this._colorProcessing = {
-          process: Hd,
+        }, sF(this._colorDeadCreation, this._colorCreation), this._createQueueStart = this._lifeTimeCreation, mQ || (this._colorProcessing = {
+          process: ZQ,
           previousItem: null,
           nextItem: null
         }, this._angularSpeedProcessing = {
-          process: Ad,
+          process: BQ,
           previousItem: null,
           nextItem: null
-        }, YJ(this._angularSpeedProcessing, this._colorProcessing), this._directionProcessing = {
-          process: PJ,
+        }, sF(this._angularSpeedProcessing, this._colorProcessing), this._directionProcessing = {
+          process: oF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._directionProcessing, this._angularSpeedProcessing), this._positionProcessing = {
-          process: KJ,
+        }, sF(this._directionProcessing, this._angularSpeedProcessing), this._positionProcessing = {
+          process: mF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._positionProcessing, this._directionProcessing), this._gravityProcessing = {
-          process: OJ,
+        }, sF(this._positionProcessing, this._directionProcessing), this._gravityProcessing = {
+          process: xF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._gravityProcessing, this._positionProcessing), this._updateQueueStart = this._colorProcessing), this._isAnimationSheetEnabled = Pd, this._attachImageProcessingConfiguration(null), this._customWrappers = {
-          0: new Ed.d(this._engine)
-        }, this._customWrappers[0].effect = pd, this._drawWrappers = [], this._useInstancing = this._engine.getCaps().instancedArrays, this._createIndexBuffer(), this._createVertexBuffers(), this.particleEmitterType = new od.d, this.updateFunction = dd => {
-          this.noiseTexture && (this._noiseTextureSize = this.noiseTexture.getSize(), this.noiseTexture.getContent()?.then((dd => {
-            this._noiseTextureData = dd
+        }, sF(this._gravityProcessing, this._positionProcessing), this._updateQueueStart = this._colorProcessing), this._isAnimationSheetEnabled = DQ, this._attachImageProcessingConfiguration(null), this._customWrappers = {
+          0: new fQ.d(this._engine)
+        }, this._customWrappers[0].effect = LQ, this._drawWrappers = [], this._useInstancing = this._engine.getCaps().instancedArrays, this._createIndexBuffer(), this._createVertexBuffers(), this.particleEmitterType = new HQ.d, this.updateFunction = QQ => {
+          this.noiseTexture && (this._noiseTextureSize = this.noiseTexture.getSize(), this.noiseTexture.getContent()?.then((QQ => {
+            this._noiseTextureData = QQ
           })));
-          const Jd = dd === this._particles;
-          for (let kd = 0; kd < dd.length; kd++) {
-            const pd = dd[kd];
+          const FQ = QQ === this._particles;
+          for (let wQ = 0; wQ < QQ.length; wQ++) {
+            const LQ = QQ[wQ];
             this._tempScaledUpdateSpeed = this._scaledUpdateSpeed;
-            const Nd = pd.age;
-            if (pd.age += this._tempScaledUpdateSpeed, pd.age > pd.lifeTime) {
-              const dd = pd.age - Nd,
-                Jd = pd.lifeTime - Nd;
-              this._tempScaledUpdateSpeed = Jd * this._tempScaledUpdateSpeed / dd, pd.age = pd.lifeTime
+            const qQ = LQ.age;
+            if (LQ.age += this._tempScaledUpdateSpeed, LQ.age > LQ.lifeTime) {
+              const QQ = LQ.age - qQ,
+                FQ = LQ.lifeTime - qQ;
+              this._tempScaledUpdateSpeed = FQ * this._tempScaledUpdateSpeed / QQ, LQ.age = LQ.lifeTime
             }
-            this._ratio = pd.age / pd.lifeTime, pd._properties.directionScale = this._tempScaledUpdateSpeed;
-            let Wd = this._updateQueueStart;
-            for (; Wd;) Wd.process(pd, this), Wd = Wd.nextItem;
-            if (this._isAnimationSheetEnabled && !Cd && pd.updateCellIndex(), pd._inheritParticleInfoToSubEmitters(), pd.age >= pd.lifeTime) {
-              if (this._emitFromParticle(pd), pd._properties.attachedSubEmitters) {
-                for (const dd of pd._properties.attachedSubEmitters) dd.particleSystem.disposeOnStop = !0, dd.particleSystem.stop();
-                pd._properties.attachedSubEmitters = null
+            this._ratio = LQ.age / LQ.lifeTime, LQ._properties.directionScale = this._tempScaledUpdateSpeed;
+            let oQ = this._updateQueueStart;
+            for (; oQ;) oQ.process(LQ, this), oQ = oQ.nextItem;
+            if (this._isAnimationSheetEnabled && !mQ && LQ.updateCellIndex(), LQ._inheritParticleInfoToSubEmitters(), LQ.age >= LQ.lifeTime) {
+              if (this._emitFromParticle(LQ), LQ._properties.attachedSubEmitters) {
+                for (const QQ of LQ._properties.attachedSubEmitters) QQ.particleSystem.disposeOnStop = !0, QQ.particleSystem.stop();
+                LQ._properties.attachedSubEmitters = null
               }
-              this.recycleParticle(pd), Jd && kd--
+              this.recycleParticle(LQ), FQ && wQ--
             } else;
           }
         }
       }
-      serialize(dd) {
+      serialize(QQ) {
         throw new Error("Method not implemented.")
       }
-      clone(dd, Jd) {
+      clone(QQ, FQ) {
         throw new Error("Method not implemented.")
       }
       _syncLifeTimeCreation() {
-        this.targetStopDuration && this._lifeTimeGradients && this._lifeTimeGradients.length > 0 ? this._lifeTimeCreation.process = qJ : this._lifeTimeCreation.process = BJ
+        this.targetStopDuration && this._lifeTimeGradients && this._lifeTimeGradients.length > 0 ? this._lifeTimeCreation.process = cF : this._lifeTimeCreation.process = CF
       }
       _syncStartSizeCreation() {
         this._startSizeGradients && this._startSizeGradients[0] && this.targetStopDuration ? this._startSizeCreation || (this._startSizeCreation = {
-          process: IJ,
+          process: eF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._startSizeCreation, this._sizeCreation)) : this._startSizeCreation && (mJ(this._startSizeCreation), this._startSizeCreation = null)
+        }, sF(this._startSizeCreation, this._sizeCreation)) : this._startSizeCreation && (rF(this._startSizeCreation), this._startSizeCreation = null)
       }
       get targetStopDuration() {
         return this._targetStopDuration
       }
-      set targetStopDuration(dd) {
-        this.targetStopDuration !== dd && (this._targetStopDuration = dd, this._syncLifeTimeCreation(), this._syncStartSizeCreation())
+      set targetStopDuration(QQ) {
+        this.targetStopDuration !== QQ && (this._targetStopDuration = QQ, this._syncLifeTimeCreation(), this._syncStartSizeCreation())
       }
-      addLifeTimeGradient(dd, Jd, kd) {
-        return this._lifeTimeGradients || (this._lifeTimeGradients = []), this._addFactorGradient(this._lifeTimeGradients, dd, Jd, kd), this._syncLifeTimeCreation(), this
+      addLifeTimeGradient(QQ, FQ, wQ) {
+        return this._lifeTimeGradients || (this._lifeTimeGradients = []), this._addFactorGradient(this._lifeTimeGradients, QQ, FQ, wQ), this._syncLifeTimeCreation(), this
       }
-      removeLifeTimeGradient(dd) {
-        return this._removeFactorGradient(this._lifeTimeGradients, dd), this._syncLifeTimeCreation(), this
+      removeLifeTimeGradient(QQ) {
+        return this._removeFactorGradient(this._lifeTimeGradients, QQ), this._syncLifeTimeCreation(), this
       }
-      addSizeGradient(dd, Jd, kd) {
-        return this._sizeGradients || (this._sizeGradients = []), 0 === this._sizeGradients.length && (this._sizeCreation.process = RJ, this._sizeGradientProcessing = {
-          process: GJ,
+      addSizeGradient(QQ, FQ, wQ) {
+        return this._sizeGradients || (this._sizeGradients = []), 0 === this._sizeGradients.length && (this._sizeCreation.process = tF, this._sizeGradientProcessing = {
+          process: MF,
           previousItem: null,
           nextItem: null
-        }, FJ(this._sizeGradientProcessing, this._gravityProcessing)), this._addFactorGradient(this._sizeGradients, dd, Jd, kd), this
+        }, OF(this._sizeGradientProcessing, this._gravityProcessing)), this._addFactorGradient(this._sizeGradients, QQ, FQ, wQ), this
       }
-      removeSizeGradient(dd) {
-        return this._removeFactorGradient(this._sizeGradients, dd), 0 === this._sizeGradients?.length && (mJ(this._sizeGradientProcessing), this._sizeCreation.process = eJ), this
+      removeSizeGradient(QQ) {
+        return this._removeFactorGradient(this._sizeGradients, QQ), 0 === this._sizeGradients?.length && (rF(this._sizeGradientProcessing), this._sizeCreation.process = AF), this
       }
-      addColorRemapGradient(dd, Jd, kd) {
-        return this._colorRemapGradients || (this._colorRemapGradients = []), this._addFactorGradient(this._colorRemapGradients, dd, Jd, kd), this
+      addColorRemapGradient(QQ, FQ, wQ) {
+        return this._colorRemapGradients || (this._colorRemapGradients = []), this._addFactorGradient(this._colorRemapGradients, QQ, FQ, wQ), this
       }
-      removeColorRemapGradient(dd) {
-        return this._removeFactorGradient(this._colorRemapGradients, dd), this
+      removeColorRemapGradient(QQ) {
+        return this._removeFactorGradient(this._colorRemapGradients, QQ), this
       }
-      addAlphaRemapGradient(dd, Jd, kd) {
-        return this._alphaRemapGradients || (this._alphaRemapGradients = []), this._addFactorGradient(this._alphaRemapGradients, dd, Jd, kd), this
+      addAlphaRemapGradient(QQ, FQ, wQ) {
+        return this._alphaRemapGradients || (this._alphaRemapGradients = []), this._addFactorGradient(this._alphaRemapGradients, QQ, FQ, wQ), this
       }
-      removeAlphaRemapGradient(dd) {
-        return this._removeFactorGradient(this._alphaRemapGradients, dd), this
+      removeAlphaRemapGradient(QQ) {
+        return this._removeFactorGradient(this._alphaRemapGradients, QQ), this
       }
-      addAngularSpeedGradient(dd, Jd, kd) {
-        return this._angularSpeedGradients || (this._angularSpeedGradients = []), 0 === this._angularSpeedGradients.length && (this._angleCreation.process = aJ, this._angularSpeedGradientProcessing = {
-          process: wd,
+      addAngularSpeedGradient(QQ, FQ, wQ) {
+        return this._angularSpeedGradients || (this._angularSpeedGradients = []), 0 === this._angularSpeedGradients.length && (this._angleCreation.process = WF, this._angularSpeedGradientProcessing = {
+          process: yQ,
           previousItem: null,
           nextItem: null
-        }, FJ(this._angularSpeedGradientProcessing, this._angularSpeedProcessing)), this._addFactorGradient(this._angularSpeedGradients, dd, Jd, kd), this
+        }, OF(this._angularSpeedGradientProcessing, this._angularSpeedProcessing)), this._addFactorGradient(this._angularSpeedGradients, QQ, FQ, wQ), this
       }
-      removeAngularSpeedGradient(dd) {
-        return this._removeFactorGradient(this._angularSpeedGradients, dd), 0 === this._angularSpeedGradients?.length && (this._angleCreation.process = iJ, mJ(this._angularSpeedGradientProcessing)), this
+      removeAngularSpeedGradient(QQ) {
+        return this._removeFactorGradient(this._angularSpeedGradients, QQ), 0 === this._angularSpeedGradients?.length && (this._angleCreation.process = iF, rF(this._angularSpeedGradientProcessing)), this
       }
-      addVelocityGradient(dd, Jd, kd) {
+      addVelocityGradient(QQ, FQ, wQ) {
         return this._velocityGradients || (this._velocityGradients = []), 0 === this._velocityGradients.length && (this._velocityCreation = {
-          process: kJ,
+          process: FF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._velocityCreation, this._angleCreation), this._velocityGradientProcessing = {
-          process: NJ,
+        }, sF(this._velocityCreation, this._angleCreation), this._velocityGradientProcessing = {
+          process: LF,
           previousItem: null,
           nextItem: null
-        }, FJ(this._velocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._velocityGradients, dd, Jd, kd), this
+        }, OF(this._velocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._velocityGradients, QQ, FQ, wQ), this
       }
-      removeVelocityGradient(dd) {
-        return this._removeFactorGradient(this._velocityGradients, dd), 0 === this._velocityGradients?.length && (mJ(this._velocityCreation), mJ(this._velocityGradientProcessing)), this
+      removeVelocityGradient(QQ) {
+        return this._removeFactorGradient(this._velocityGradients, QQ), 0 === this._velocityGradients?.length && (rF(this._velocityCreation), rF(this._velocityGradientProcessing)), this
       }
-      addLimitVelocityGradient(dd, Jd, kd) {
+      addLimitVelocityGradient(QQ, FQ, wQ) {
         return this._limitVelocityGradients || (this._limitVelocityGradients = []), 0 === this._limitVelocityGradients.length && (this._limitVelocityCreation = {
-          process: pJ,
+          process: wF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._limitVelocityCreation, this._angleCreation), this._limitVelocityGradientProcessing = {
-          process: WJ,
+        }, sF(this._limitVelocityCreation, this._angleCreation), this._limitVelocityGradientProcessing = {
+          process: qF,
           previousItem: null,
           nextItem: null
-        }, YJ(this._limitVelocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._limitVelocityGradients, dd, Jd, kd), this
+        }, sF(this._limitVelocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._limitVelocityGradients, QQ, FQ, wQ), this
       }
-      removeLimitVelocityGradient(dd) {
-        return this._removeFactorGradient(this._limitVelocityGradients, dd), 0 === this._limitVelocityGradients?.length && (mJ(this._limitVelocityCreation), mJ(this._limitVelocityGradientProcessing)), this
+      removeLimitVelocityGradient(QQ) {
+        return this._removeFactorGradient(this._limitVelocityGradients, QQ), 0 === this._limitVelocityGradients?.length && (rF(this._limitVelocityCreation), rF(this._limitVelocityGradientProcessing)), this
       }
-      addDragGradient(dd, Jd, kd) {
+      addDragGradient(QQ, FQ, wQ) {
         return this._dragGradients || (this._dragGradients = []), 0 === this._dragGradients.length && (this._dragCreation = {
-          process: oJ,
+          process: uF,
           previousItem: null,
           nextItem: null
-        }, FJ(this._dragCreation, this._colorDeadCreation), this._dragGradientProcessing = {
-          process: lJ,
+        }, OF(this._dragCreation, this._colorDeadCreation), this._dragGradientProcessing = {
+          process: HF,
           previousItem: null,
           nextItem: null
-        }, FJ(this._dragGradientProcessing, this._positionProcessing)), this._addFactorGradient(this._dragGradients, dd, Jd, kd), this
+        }, OF(this._dragGradientProcessing, this._positionProcessing)), this._addFactorGradient(this._dragGradients, QQ, FQ, wQ), this
       }
-      removeDragGradient(dd) {
-        return this._removeFactorGradient(this._dragGradients, dd), 0 === this._dragGradients?.length && (mJ(this._dragCreation), mJ(this._dragGradientProcessing)), this
+      removeDragGradient(QQ) {
+        return this._removeFactorGradient(this._dragGradients, QQ), 0 === this._dragGradients?.length && (rF(this._dragCreation), rF(this._dragGradientProcessing)), this
       }
-      addStartSizeGradient(dd, Jd, kd) {
-        return this._startSizeGradients || (this._startSizeGradients = []), this._addFactorGradient(this._startSizeGradients, dd, Jd, kd), this._syncStartSizeCreation(), this
+      addStartSizeGradient(QQ, FQ, wQ) {
+        return this._startSizeGradients || (this._startSizeGradients = []), this._addFactorGradient(this._startSizeGradients, QQ, FQ, wQ), this._syncStartSizeCreation(), this
       }
-      removeStartSizeGradient(dd) {
-        return this._removeFactorGradient(this._startSizeGradients, dd), this._syncStartSizeCreation(), this
+      removeStartSizeGradient(QQ) {
+        return this._removeFactorGradient(this._startSizeGradients, QQ), this._syncStartSizeCreation(), this
       }
       _createRampGradientTexture() {
         if (!this._rampGradients || !this._rampGradients.length || this._rampGradientsTexture || !this._scene) return;
-        const dd = new Uint8Array(4 * this._rawTextureWidth),
-          Jd = Kd.m.Color3[0];
-        for (let kd = 0; kd < this._rawTextureWidth; kd++) {
-          const Nd = kd / this._rawTextureWidth;
-          pd.k.GetCurrentGradient(Nd, this._rampGradients, ((pd, Nd, Wd) => {
-            Kd.c.LerpToRef(pd.color, Nd.color, Wd, Jd), dd[4 * kd] = 255 * Jd.r, dd[4 * kd + 1] = 255 * Jd.g, dd[4 * kd + 2] = 255 * Jd.b, dd[4 * kd + 3] = 255
+        const QQ = new Uint8Array(4 * this._rawTextureWidth),
+          FQ = uQ.i.Color3[0];
+        for (let wQ = 0; wQ < this._rawTextureWidth; wQ++) {
+          const qQ = wQ / this._rawTextureWidth;
+          LQ.k.GetCurrentGradient(qQ, this._rampGradients, ((LQ, qQ, oQ) => {
+            uQ.b.LerpToRef(LQ.color, qQ.color, oQ, FQ), QQ[4 * wQ] = 255 * FQ.r, QQ[4 * wQ + 1] = 255 * FQ.g, QQ[4 * wQ + 2] = 255 * FQ.b, QQ[4 * wQ + 3] = 255
           }))
         }
-        this._rampGradientsTexture = Zd.d.CreateRGBATexture(dd, this._rawTextureWidth, 1, this._scene, !1, !1, 1)
+        this._rampGradientsTexture = kQ.c.CreateRGBATexture(QQ, this._rawTextureWidth, 1, this._scene, !1, !1, 1)
       }
       getRampGradients() {
         return this._rampGradients
@@ -3184,43 +3184,43 @@ export const modules = {
         this._syncRampGradientTexture()
       }
       _syncRampGradientTexture() {
-        this._rampGradients && (this._rampGradients.sort(((dd, Jd) => dd.gradient < Jd.gradient ? -1 : dd.gradient > Jd.gradient ? 1 : 0)), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._createRampGradientTexture())
+        this._rampGradients && (this._rampGradients.sort(((QQ, FQ) => QQ.gradient < FQ.gradient ? -1 : QQ.gradient > FQ.gradient ? 1 : 0)), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._createRampGradientTexture())
       }
-      addRampGradient(dd, Jd) {
+      addRampGradient(QQ, FQ) {
         this._rampGradients || (this._rampGradients = []);
-        const kd = new pd.f(dd, Jd);
-        return this._rampGradients.push(kd), this._syncRampGradientTexture(), this
+        const wQ = new LQ.f(QQ, FQ);
+        return this._rampGradients.push(wQ), this._syncRampGradientTexture(), this
       }
-      removeRampGradient(dd) {
-        return this._removeGradientAndTexture(dd, this._rampGradients, this._rampGradientsTexture), this._rampGradientsTexture = null, this._rampGradients && this._rampGradients.length > 0 && this._createRampGradientTexture(), this
+      removeRampGradient(QQ) {
+        return this._removeGradientAndTexture(QQ, this._rampGradients, this._rampGradientsTexture), this._rampGradientsTexture = null, this._rampGradients && this._rampGradients.length > 0 && this._createRampGradientTexture(), this
       }
-      addColorGradient(dd, Jd, kd) {
-        this._colorGradients || (this._colorGradients = []), 0 === this._colorGradients.length && (this._colorCreation.process = Vd, this._colorProcessing.process = zd);
-        const Nd = new pd.c(dd, Jd, kd);
-        return this._colorGradients.push(Nd), this._colorGradients.sort(((dd, Jd) => dd.gradient < Jd.gradient ? -1 : dd.gradient > Jd.gradient ? 1 : 0)), this
+      addColorGradient(QQ, FQ, wQ) {
+        this._colorGradients || (this._colorGradients = []), 0 === this._colorGradients.length && (this._colorCreation.process = gQ, this._colorProcessing.process = PQ);
+        const qQ = new LQ.e(QQ, FQ, wQ);
+        return this._colorGradients.push(qQ), this._colorGradients.sort(((QQ, FQ) => QQ.gradient < FQ.gradient ? -1 : QQ.gradient > FQ.gradient ? 1 : 0)), this
       }
-      removeColorGradient(dd) {
+      removeColorGradient(QQ) {
         if (!this._colorGradients) return this;
-        let Jd = 0;
-        for (const kd of this._colorGradients) {
-          if (kd.gradient === dd) {
-            this._colorGradients.splice(Jd, 1);
+        let FQ = 0;
+        for (const wQ of this._colorGradients) {
+          if (wQ.gradient === QQ) {
+            this._colorGradients.splice(FQ, 1);
             break
           }
-          Jd++
+          FQ++
         }
-        return 0 === this._colorGradients.length && (this._colorCreation.process = ud, this._colorProcessing.process = Hd), this
+        return 0 === this._colorGradients.length && (this._colorCreation.process = EQ, this._colorProcessing.process = ZQ), this
       }
       resetDrawCache() {
         if (this._drawWrappers) {
-          for (const dd of this._drawWrappers)
-            if (dd)
-              for (const Jd of dd) Jd?.dispose();
+          for (const QQ of this._drawWrappers)
+            if (QQ)
+              for (const FQ of QQ) FQ?.dispose();
           this._drawWrappers = []
         }
       }
-      _fetchR(dd, Jd, kd, pd, Nd) {
-        return Nd[4 * (((dd = .5 * Math.abs(dd) + .5) * kd % kd | 0) + ((Jd = .5 * Math.abs(Jd) + .5) * pd % pd | 0) * kd)] / 255
+      _fetchR(QQ, FQ, wQ, LQ, qQ) {
+        return qQ[4 * (((QQ = .5 * Math.abs(QQ) + .5) * wQ % wQ | 0) + ((FQ = .5 * Math.abs(FQ) + .5) * LQ % LQ | 0) * wQ)] / 255
       }
       _reset() {
         this._resetEffect()
@@ -3230,43 +3230,43 @@ export const modules = {
       }
       _createVertexBuffers() {
         this._vertexBufferSize = this._useInstancing ? 10 : 12, this._isAnimationSheetEnabled && (this._vertexBufferSize += 1), this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexBufferSize += 3), this._useRampGradients && (this._vertexBufferSize += 4);
-        const dd = this._engine,
-          Jd = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
-        this._vertexData = new Float32Array(this._capacity * Jd), this._vertexBuffer = new Pd.e(dd, this._vertexData, !0, Jd);
-        let kd = 0;
-        const pd = this._vertexBuffer.createVertexBuffer(Pd.j.PositionKind, kd, 3, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers[Pd.j.PositionKind] = pd, kd += 3;
-        const Nd = this._vertexBuffer.createVertexBuffer(Pd.j.ColorKind, kd, 4, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers[Pd.j.ColorKind] = Nd, kd += 4;
-        const Wd = this._vertexBuffer.createVertexBuffer("angle", kd, 1, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers.angle = Wd, kd += 1;
-        const Zd = this._vertexBuffer.createVertexBuffer("size", kd, 2, this._vertexBufferSize, this._useInstancing);
-        if (this._vertexBuffers.size = Zd, kd += 2, this._isAnimationSheetEnabled) {
-          const dd = this._vertexBuffer.createVertexBuffer("cellIndex", kd, 1, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.cellIndex = dd, kd += 1
+        const QQ = this._engine,
+          FQ = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
+        this._vertexData = new Float32Array(this._capacity * FQ), this._vertexBuffer = new DQ.c(QQ, this._vertexData, !0, FQ);
+        let wQ = 0;
+        const LQ = this._vertexBuffer.createVertexBuffer(DQ.h.PositionKind, wQ, 3, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers[DQ.h.PositionKind] = LQ, wQ += 3;
+        const qQ = this._vertexBuffer.createVertexBuffer(DQ.h.ColorKind, wQ, 4, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers[DQ.h.ColorKind] = qQ, wQ += 4;
+        const oQ = this._vertexBuffer.createVertexBuffer("angle", wQ, 1, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers.angle = oQ, wQ += 1;
+        const kQ = this._vertexBuffer.createVertexBuffer("size", wQ, 2, this._vertexBufferSize, this._useInstancing);
+        if (this._vertexBuffers.size = kQ, wQ += 2, this._isAnimationSheetEnabled) {
+          const QQ = this._vertexBuffer.createVertexBuffer("cellIndex", wQ, 1, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.cellIndex = QQ, wQ += 1
         }
         if (!this._isBillboardBased || 8 === this.billboardMode || 9 === this.billboardMode) {
-          const dd = this._vertexBuffer.createVertexBuffer("direction", kd, 3, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.direction = dd, kd += 3
+          const QQ = this._vertexBuffer.createVertexBuffer("direction", wQ, 3, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.direction = QQ, wQ += 3
         }
         if (this._useRampGradients) {
-          const dd = this._vertexBuffer.createVertexBuffer("remapData", kd, 4, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.remapData = dd, kd += 4
+          const QQ = this._vertexBuffer.createVertexBuffer("remapData", wQ, 4, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.remapData = QQ, wQ += 4
         }
-        let gd;
+        let vQ;
         if (this._useInstancing) {
-          const Jd = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
-          this._spriteBuffer = new Pd.e(dd, Jd, !1, 2), gd = this._spriteBuffer.createVertexBuffer("offset", 0, 2)
-        } else gd = this._vertexBuffer.createVertexBuffer("offset", kd, 2, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers.offset = gd, this.resetDrawCache()
+          const FQ = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
+          this._spriteBuffer = new DQ.c(QQ, FQ, !1, 2), vQ = this._spriteBuffer.createVertexBuffer("offset", 0, 2)
+        } else vQ = this._vertexBuffer.createVertexBuffer("offset", wQ, 2, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers.offset = vQ, this.resetDrawCache()
       }
       _createIndexBuffer() {
         if (this._useInstancing) return void(this._linesIndexBufferUseInstancing = this._engine.createIndexBuffer(new Uint32Array([0, 1, 1, 3, 3, 2, 2, 0, 0, 3])));
-        const dd = [],
-          Jd = [];
-        let kd = 0;
-        for (let pd = 0; pd < this._capacity; pd++) dd.push(kd), dd.push(kd + 1), dd.push(kd + 2), dd.push(kd), dd.push(kd + 2), dd.push(kd + 3), Jd.push(kd, kd + 1, kd + 1, kd + 2, kd + 2, kd + 3, kd + 3, kd, kd, kd + 3), kd += 4;
-        this._indexBuffer = this._engine.createIndexBuffer(dd), this._linesIndexBuffer = this._engine.createIndexBuffer(Jd)
+        const QQ = [],
+          FQ = [];
+        let wQ = 0;
+        for (let LQ = 0; LQ < this._capacity; LQ++) QQ.push(wQ), QQ.push(wQ + 1), QQ.push(wQ + 2), QQ.push(wQ), QQ.push(wQ + 2), QQ.push(wQ + 3), FQ.push(wQ, wQ + 1, wQ + 1, wQ + 2, wQ + 2, wQ + 3, wQ + 3, wQ, wQ, wQ + 3), wQ += 4;
+        this._indexBuffer = this._engine.createIndexBuffer(QQ), this._linesIndexBuffer = this._engine.createIndexBuffer(FQ)
       }
       getCapacity() {
         return this._capacity
@@ -3279,171 +3279,171 @@ export const modules = {
       }
       _preStart() {}
       start() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
         if (!this.targetStopDuration && this._hasTargetStopDurationDependantGradient()) throw "Particle system started with a targetStopDuration dependant gradient (eg. startSizeGradients) but no targetStopDuration set";
-        if (dd) return this.startDelay = dd, void setTimeout((() => {
+        if (QQ) return this.startDelay = QQ, void setTimeout((() => {
           this.start(0)
-        }), dd);
+        }), QQ);
         if (this._started = !0, this._stopped = !1, this._actualFrame = 0, this._preStart(), this._emitRateGradients && (this._emitRateGradients.length > 0 && (this._currentEmitRateGradient = this._emitRateGradients[0], this._currentEmitRate1 = this._currentEmitRateGradient.getFactor(), this._currentEmitRate2 = this._currentEmitRate1), this._emitRateGradients.length > 1 && (this._currentEmitRate2 = this._emitRateGradients[1].getFactor())), this._startSizeGradients && (this._startSizeGradients.length > 0 && (this._currentStartSizeGradient = this._startSizeGradients[0], this._currentStartSize1 = this._currentStartSizeGradient.getFactor(), this._currentStartSize2 = this._currentStartSize1), this._startSizeGradients.length > 1 && (this._currentStartSize2 = this._startSizeGradients[1].getFactor())), this.preWarmCycles) {
           -1 !== this.emitter?.getClassName().indexOf("Mesh") && this.emitter.computeWorldMatrix(!0), this._scene?.updateTransformMatrix();
-          const dd = this.noiseTexture;
-          if (dd && dd.onGeneratedObservable) dd.onGeneratedObservable.addOnce((() => {
+          const QQ = this.noiseTexture;
+          if (QQ && QQ.onGeneratedObservable) QQ.onGeneratedObservable.addOnce((() => {
             setTimeout((() => {
-              for (let Jd = 0; Jd < this.preWarmCycles; Jd++) this.animate(!0), dd.render()
+              for (let FQ = 0; FQ < this.preWarmCycles; FQ++) this.animate(!0), QQ.render()
             }))
           }));
           else
-            for (let Jd = 0; Jd < this.preWarmCycles; Jd++) this.animate(!0)
+            for (let FQ = 0; FQ < this.preWarmCycles; FQ++) this.animate(!0)
         }
         this.beginAnimationOnStart && this.animations && this.animations.length > 0 && this._scene && this._scene.beginAnimation(this, this.beginAnimationFrom, this.beginAnimationTo, this.beginAnimationLoop), this.onStartedObservable.notifyObservers(this)
       }
       stop() {
-        let dd = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this._stopped || (this.onStoppedObservable.notifyObservers(this), this._stopped = !0, this._postStop(dd))
+        let QQ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this._stopped || (this.onStoppedObservable.notifyObservers(this), this._stopped = !0, this._postStop(QQ))
       }
-      _postStop(dd) {}
+      _postStop(QQ) {}
       reset() {
         this._stockParticles.length = 0, this._particles.length = 0
       }
-      _appendParticleVertex(dd, Jd, kd, pd) {
-        let Nd = dd * this._vertexBufferSize;
-        const Pd = Wd.h.IL[0].Fs(this._scene?.floatingOriginOffset || Wd.n.ZeroReadOnly);
-        if (this._vertexData[Nd++] = Jd.position.x + this.worldOffset.x - Pd.x, this._vertexData[Nd++] = Jd.position.y + this.worldOffset.y - Pd.y, this._vertexData[Nd++] = Jd.position.z + this.worldOffset.z - Pd.z, this._vertexData[Nd++] = Jd.color.r, this._vertexData[Nd++] = Jd.color.g, this._vertexData[Nd++] = Jd.color.b, this._vertexData[Nd++] = Jd.color.a, this._vertexData[Nd++] = Jd.angle, this._vertexData[Nd++] = Jd.scale.x * Jd.size, this._vertexData[Nd++] = Jd.scale.y * Jd.size, this._isAnimationSheetEnabled && (this._vertexData[Nd++] = Jd.cellIndex), this._isBillboardBased) 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexData[Nd++] = Jd.direction.x, this._vertexData[Nd++] = Jd.direction.y, this._vertexData[Nd++] = Jd.direction.z);
-        else if (Jd._properties.initialDirection) {
-          let dd = Jd._properties.initialDirection;
-          this.isLocal && (Wd.n.TransformNormalToRef(dd, this._emitterWorldMatrix, Wd.h.IL[0]), dd = Wd.h.IL[0]), 0 === dd.x && 0 === dd.z && (dd.x = .001), this._vertexData[Nd++] = dd.x, this._vertexData[Nd++] = dd.y, this._vertexData[Nd++] = dd.z
+      _appendParticleVertex(QQ, FQ, wQ, LQ) {
+        let qQ = QQ * this._vertexBufferSize;
+        const DQ = oQ.k.Ox[0].Qs(this._scene?.floatingOriginOffset || oQ.p.ZeroReadOnly);
+        if (this._vertexData[qQ++] = FQ.position.x + this.worldOffset.x - DQ.x, this._vertexData[qQ++] = FQ.position.y + this.worldOffset.y - DQ.y, this._vertexData[qQ++] = FQ.position.z + this.worldOffset.z - DQ.z, this._vertexData[qQ++] = FQ.color.r, this._vertexData[qQ++] = FQ.color.g, this._vertexData[qQ++] = FQ.color.b, this._vertexData[qQ++] = FQ.color.a, this._vertexData[qQ++] = FQ.angle, this._vertexData[qQ++] = FQ.scale.x * FQ.size, this._vertexData[qQ++] = FQ.scale.y * FQ.size, this._isAnimationSheetEnabled && (this._vertexData[qQ++] = FQ.cellIndex), this._isBillboardBased) 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexData[qQ++] = FQ.direction.x, this._vertexData[qQ++] = FQ.direction.y, this._vertexData[qQ++] = FQ.direction.z);
+        else if (FQ._properties.initialDirection) {
+          let QQ = FQ._properties.initialDirection;
+          this.isLocal && (oQ.p.TransformNormalToRef(QQ, this._emitterWorldMatrix, oQ.k.Ox[0]), QQ = oQ.k.Ox[0]), 0 === QQ.x && 0 === QQ.z && (QQ.x = .001), this._vertexData[qQ++] = QQ.x, this._vertexData[qQ++] = QQ.y, this._vertexData[qQ++] = QQ.z
         } else {
-          let dd = Jd.direction;
-          this.isLocal && (Wd.n.TransformNormalToRef(dd, this._emitterWorldMatrix, Wd.h.IL[0]), dd = Wd.h.IL[0]), 0 === dd.x && 0 === dd.z && (dd.x = .001), this._vertexData[Nd++] = dd.x, this._vertexData[Nd++] = dd.y, this._vertexData[Nd++] = dd.z
+          let QQ = FQ.direction;
+          this.isLocal && (oQ.p.TransformNormalToRef(QQ, this._emitterWorldMatrix, oQ.k.Ox[0]), QQ = oQ.k.Ox[0]), 0 === QQ.x && 0 === QQ.z && (QQ.x = .001), this._vertexData[qQ++] = QQ.x, this._vertexData[qQ++] = QQ.y, this._vertexData[qQ++] = QQ.z
         }
-        this._useRampGradients && Jd.remapData && (this._vertexData[Nd++] = Jd.remapData.x, this._vertexData[Nd++] = Jd.remapData.y, this._vertexData[Nd++] = Jd.remapData.z, this._vertexData[Nd++] = Jd.remapData.w), this._useInstancing || (this._isAnimationSheetEnabled && (0 === kd ? kd = this._epsilon : 1 === kd && (kd = 1 - this._epsilon), 0 === pd ? pd = this._epsilon : 1 === pd && (pd = 1 - this._epsilon)), this._vertexData[Nd++] = kd, this._vertexData[Nd] = pd)
+        this._useRampGradients && FQ.remapData && (this._vertexData[qQ++] = FQ.remapData.x, this._vertexData[qQ++] = FQ.remapData.y, this._vertexData[qQ++] = FQ.remapData.z, this._vertexData[qQ++] = FQ.remapData.w), this._useInstancing || (this._isAnimationSheetEnabled && (0 === wQ ? wQ = this._epsilon : 1 === wQ && (wQ = 1 - this._epsilon), 0 === LQ ? LQ = this._epsilon : 1 === LQ && (LQ = 1 - this._epsilon)), this._vertexData[qQ++] = wQ, this._vertexData[qQ] = LQ)
       }
-      _prepareParticle(dd) {}
-      _createNewOnes(dd) {
-        let Jd;
-        for (let kd = 0; kd < dd && this._particles.length !== this._capacity; kd++) {
-          Jd = this._createParticle(), this._particles.push(Jd);
-          let dd = this._createQueueStart;
-          for (; dd;) dd.process(Jd, this), dd = dd.nextItem;
-          Jd._inheritParticleInfoToSubEmitters()
+      _prepareParticle(QQ) {}
+      _createNewOnes(QQ) {
+        let FQ;
+        for (let wQ = 0; wQ < QQ && this._particles.length !== this._capacity; wQ++) {
+          FQ = this._createParticle(), this._particles.push(FQ);
+          let QQ = this._createQueueStart;
+          for (; QQ;) QQ.process(FQ, this), QQ = QQ.nextItem;
+          FQ._inheritParticleInfoToSubEmitters()
         }
       }
-      _update(dd) {
+      _update(QQ) {
         if (this._alive = this._particles.length > 0, this.emitter.position) {
-          const dd = this.emitter;
-          this._emitterWorldMatrix = dd.getWorldMatrix()
+          const QQ = this.emitter;
+          this._emitterWorldMatrix = QQ.getWorldMatrix()
         } else {
-          const dd = this.emitter;
-          this._emitterWorldMatrix = Wd.b.Translation(dd.x, dd.y, dd.z)
+          const QQ = this.emitter;
+          this._emitterWorldMatrix = oQ.c.Translation(QQ.x, QQ.y, QQ.z)
         }
-        this._emitterWorldMatrix.invertToRef(this._emitterInverseWorldMatrix), this.updateFunction(this._particles), this._createNewOnes(dd)
+        this._emitterWorldMatrix.invertToRef(this._emitterInverseWorldMatrix), this.updateFunction(this._particles), this._createNewOnes(QQ)
       }
       static _GetAttributeNamesOrOptions() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const pd = [Pd.j.PositionKind, Pd.j.ColorKind, "angle", "offset", "size"];
-        return dd && pd.push("cellIndex"), Jd || pd.push("direction"), kd && pd.push("remapData"), pd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const LQ = [DQ.h.PositionKind, DQ.h.ColorKind, "angle", "offset", "size"];
+        return QQ && LQ.push("cellIndex"), FQ || LQ.push("direction"), wQ && LQ.push("remapData"), LQ
       }
       static _GetEffectCreationOptions() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const pd = ["invView", "view", "projection", "textureMask", "translationPivot", "eyePosition"];
-        return (0, cd.e)(pd), dd && pd.push("particlesInfos"), Jd && pd.push("logarithmicDepthConstant"), kd && (pd.push("vFogInfos"), pd.push("vFogColor")), pd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const LQ = ["invView", "view", "projection", "textureMask", "translationPivot", "eyePosition"];
+        return (0, VQ.d)(LQ), QQ && LQ.push("particlesInfos"), FQ && LQ.push("logarithmicDepthConstant"), wQ && (LQ.push("vFogInfos"), LQ.push("vFogColor")), LQ
       }
-      fillDefines(dd, Jd) {
-        let kd = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        if (this._scene && ((0, cd.m)(this, this._scene, dd), this.applyFog && this._scene.fogEnabled && 0 !== this._scene.fogMode && dd.push("#define FOG")), this._isAnimationSheetEnabled && dd.push("#define ANIMATESHEET"), this.useLogarithmicDepth && dd.push("#define LOGARITHMICDEPTH"), Jd === qd.BLENDMODE_MULTIPLY && dd.push("#define BLENDMULTIPLYMODE"), this.isLocal && dd.push("#define LOCAL"), this._useRampGradients && dd.push("#define RAMPGRADIENT"), this._isBillboardBased) switch (dd.push("#define BILLBOARD"), this.billboardMode) {
+      fillDefines(QQ, FQ) {
+        let wQ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        if (this._scene && ((0, VQ.o)(this, this._scene, QQ), this.applyFog && this._scene.fogEnabled && 0 !== this._scene.fogMode && QQ.push("#define FOG")), this._isAnimationSheetEnabled && QQ.push("#define ANIMATESHEET"), this.useLogarithmicDepth && QQ.push("#define LOGARITHMICDEPTH"), FQ === CQ.BLENDMODE_MULTIPLY && QQ.push("#define BLENDMULTIPLYMODE"), this.isLocal && QQ.push("#define LOCAL"), this._useRampGradients && QQ.push("#define RAMPGRADIENT"), this._isBillboardBased) switch (QQ.push("#define BILLBOARD"), this.billboardMode) {
           case 2:
-            dd.push("#define BILLBOARDY");
+            QQ.push("#define BILLBOARDY");
             break;
           case 8:
           case 9:
-            dd.push("#define BILLBOARDSTRETCHED"), 9 === this.billboardMode && dd.push("#define BILLBOARDSTRETCHED_LOCAL");
+            QQ.push("#define BILLBOARDSTRETCHED"), 9 === this.billboardMode && QQ.push("#define BILLBOARDSTRETCHED_LOCAL");
             break;
           case 7:
-            dd.push("#define BILLBOARDMODE_ALL")
+            QQ.push("#define BILLBOARDMODE_ALL")
         }
-        kd && this._imageProcessingConfiguration && (this._imageProcessingConfiguration.prepareDefines(this._imageProcessingConfigurationDefines), dd.push(this._imageProcessingConfigurationDefines.toString()))
+        wQ && this._imageProcessingConfiguration && (this._imageProcessingConfiguration.prepareDefines(this._imageProcessingConfigurationDefines), QQ.push(this._imageProcessingConfigurationDefines.toString()))
       }
-      fillUniformsAttributesAndSamplerNames(dd, Jd, kd) {
-        Jd.push(...SJ._GetAttributeNamesOrOptions(this._isAnimationSheetEnabled, this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode, this._useRampGradients)), dd.push(...SJ._GetEffectCreationOptions(this._isAnimationSheetEnabled, this.useLogarithmicDepth, this.applyFog)), kd.push("diffuseSampler", "rampSampler"), this._imageProcessingConfiguration && ((0, rd.e)(dd, this._imageProcessingConfigurationDefines), (0, rd.c)(kd, this._imageProcessingConfigurationDefines))
+      fillUniformsAttributesAndSamplerNames(QQ, FQ, wQ) {
+        FQ.push(...UF._GetAttributeNamesOrOptions(this._isAnimationSheetEnabled, this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode, this._useRampGradients)), QQ.push(...UF._GetEffectCreationOptions(this._isAnimationSheetEnabled, this.useLogarithmicDepth, this.applyFog)), wQ.push("diffuseSampler", "rampSampler"), this._imageProcessingConfiguration && ((0, JQ.e)(QQ, this._imageProcessingConfigurationDefines), (0, JQ.c)(wQ, this._imageProcessingConfigurationDefines))
       }
-      _getWrapper(dd) {
-        var Jd;
-        const kd = this._getCustomDrawWrapper(dd);
-        if (kd?.effect) return kd;
-        const pd = [];
-        this.fillDefines(pd, dd);
-        const Wd = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
-          Pd = bJ.b._PrepareStringDefines(Wd, pd),
-          Zd = Pd ? bJ.b.GetConfiguration(Wd) : void 0;
-        let gd = this._drawWrappers[Wd];
-        gd || (gd = this._drawWrappers[Wd] = [], 0 === Wd || this._renderPassObserver || (this._renderPassObserver = ((Jd = this._engine)._onReleaseRenderPassObservable ?? (Jd._onReleaseRenderPassObservable = new Nd.e)).add((dd => {
-          const Jd = this._drawWrappers[dd];
-          if (Jd) {
-            for (const dd of Jd) dd?.dispose();
-            delete this._drawWrappers[dd]
+      _getWrapper(QQ) {
+        var FQ;
+        const wQ = this._getCustomDrawWrapper(QQ);
+        if (wQ?.effect) return wQ;
+        const LQ = [];
+        this.fillDefines(LQ, QQ);
+        const oQ = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
+          DQ = IF.b._PrepareStringDefines(oQ, LQ),
+          kQ = DQ ? IF.b.GetConfiguration(oQ) : void 0;
+        let vQ = this._drawWrappers[oQ];
+        vQ || (vQ = this._drawWrappers[oQ] = [], 0 === oQ || this._renderPassObserver || (this._renderPassObserver = ((FQ = this._engine)._onReleaseRenderPassObservable ?? (FQ._onReleaseRenderPassObservable = new qQ.e)).add((QQ => {
+          const FQ = this._drawWrappers[QQ];
+          if (FQ) {
+            for (const QQ of FQ) QQ?.dispose();
+            delete this._drawWrappers[QQ]
           }
         }))));
-        let Cd = gd[dd];
-        Cd || (Cd = new Ed.d(this._engine), Cd.drawContext && (Cd.drawContext.useInstancing = this._useInstancing), gd[dd] = Cd);
-        const Kd = pd.join("\n");
-        if (Cd.defines !== Kd) {
-          const dd = [],
-            Jd = [],
-            kd = [];
-          this.fillUniformsAttributesAndSamplerNames(Jd, dd, kd), Pd && (Jd.push("cameraInfo", "objectId", "meshBlendTag", "geometryZeroAlphaDiscard"), this.isLocal && void 0 !== Zd?.defines.PREPASS_LOCAL_POSITION_INDEX && Jd.push("inverseEmitterWM", "geometryWorldOffset")), Cd.setEffect(this._engine.createEffect("particles", {
-            attributes: dd,
-            uniformsNames: Jd,
-            samplers: kd,
-            defines: Kd,
+        let mQ = vQ[QQ];
+        mQ || (mQ = new fQ.d(this._engine), mQ.drawContext && (mQ.drawContext.useInstancing = this._useInstancing), vQ[QQ] = mQ);
+        const uQ = LQ.join("\n");
+        if (mQ.defines !== uQ) {
+          const QQ = [],
+            FQ = [],
+            wQ = [];
+          this.fillUniformsAttributesAndSamplerNames(FQ, QQ, wQ), DQ && (FQ.push("cameraInfo", "objectId", "meshBlendTag", "geometryZeroAlphaDiscard"), this.isLocal && void 0 !== kQ?.defines.PREPASS_LOCAL_POSITION_INDEX && FQ.push("inverseEmitterWM", "geometryWorldOffset")), mQ.setEffect(this._engine.createEffect("particles", {
+            attributes: QQ,
+            uniformsNames: FQ,
+            samplers: wQ,
+            defines: uQ,
             shaderLanguage: this._shaderLanguage,
-            multiTarget: Pd,
-            indexParameters: Pd ? {
-              buffersCount: Zd?._mrtCount ?? 0
+            multiTarget: DQ,
+            indexParameters: DQ ? {
+              buffersCount: kQ?._mrtCount ?? 0
             } : void 0
-          }, this._engine), Kd)
+          }, this._engine), uQ)
         }
-        return Cd
+        return mQ
       }
-      _bindGeometryRendering(dd) {
-        const Jd = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
-          kd = bJ.b.GetConfiguration(Jd);
-        if (!kd?._defines) return;
-        dd.setFloat("objectId", 0), dd.setInt("meshBlendTag", 0);
-        const pd = this._scene?.activeCamera;
-        if (dd.setFloat2("cameraInfo", pd?.minZ ?? 0, pd?.maxZ ?? 1), this.isLocal && void 0 !== kd.defines.PREPASS_LOCAL_POSITION_INDEX) {
-          dd.setMatrix("inverseEmitterWM", this._emitterInverseWorldMatrix);
-          const Jd = this.worldOffset.subtractToRef(this._scene?.floatingOriginOffset || Wd.n.ZeroReadOnly, Wd.h.IL[0]);
-          dd.setVector3("geometryWorldOffset", Jd)
+      _bindGeometryRendering(QQ) {
+        const FQ = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
+          wQ = IF.b.GetConfiguration(FQ);
+        if (!wQ?._defines) return;
+        QQ.setFloat("objectId", 0), QQ.setInt("meshBlendTag", 0);
+        const LQ = this._scene?.activeCamera;
+        if (QQ.setFloat2("cameraInfo", LQ?.minZ ?? 0, LQ?.maxZ ?? 1), this.isLocal && void 0 !== wQ.defines.PREPASS_LOCAL_POSITION_INDEX) {
+          QQ.setMatrix("inverseEmitterWM", this._emitterInverseWorldMatrix);
+          const FQ = this.worldOffset.subtractToRef(this._scene?.floatingOriginOffset || oQ.p.ZeroReadOnly, oQ.k.Ox[0]);
+          QQ.setVector3("geometryWorldOffset", FQ)
         }
       }
       animate() {
-        let dd, Jd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let QQ, FQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this._started && !this.paused) {
-          if (!Jd && this._scene) {
+          if (!FQ && this._scene) {
             if (!this.isReady()) return;
             if (this._currentRenderId === this._scene.getFrameId()) return;
             this._currentRenderId = this._scene.getFrameId()
           }
-          if (this._scaledUpdateSpeed = this.updateSpeed * (Jd ? this.preWarmStepOffset : this._scene?.getAnimationRatio() || 1), this.manualEmitCount > -1) dd = this.manualEmitCount, this._newPartsExcess = 0, this.manualEmitCount = 0;
+          if (this._scaledUpdateSpeed = this.updateSpeed * (FQ ? this.preWarmStepOffset : this._scene?.getAnimationRatio() || 1), this.manualEmitCount > -1) QQ = this.manualEmitCount, this._newPartsExcess = 0, this.manualEmitCount = 0;
           else {
-            const Jd = this._calculateEmitRate();
-            dd = Jd * this._scaledUpdateSpeed | 0, this._newPartsExcess += Jd * this._scaledUpdateSpeed - dd
+            const FQ = this._calculateEmitRate();
+            QQ = FQ * this._scaledUpdateSpeed | 0, this._newPartsExcess += FQ * this._scaledUpdateSpeed - QQ
           }
-          if (this._newPartsExcess > 1 && (dd += this._newPartsExcess | 0, this._newPartsExcess -= this._newPartsExcess | 0), this._alive = !1, this._stopped ? dd = 0 : (this._actualFrame += this._scaledUpdateSpeed, this.targetStopDuration && this._actualFrame >= this.targetStopDuration && this.stop()), this._update(dd), this._stopped && (this._alive || (this._started = !1, this.onAnimationEnd && this.onAnimationEnd(), this.disposeOnStop && this._scene && this._scene._toBeDisposed.push(this))), !Jd) {
-            let dd = 0;
-            for (let Jd = 0; Jd < this._particles.length; Jd++) {
-              const kd = this._particles[Jd];
-              this._appendParticleVertices(dd, kd), dd += this._useInstancing ? 1 : 4
+          if (this._newPartsExcess > 1 && (QQ += this._newPartsExcess | 0, this._newPartsExcess -= this._newPartsExcess | 0), this._alive = !1, this._stopped ? QQ = 0 : (this._actualFrame += this._scaledUpdateSpeed, this.targetStopDuration && this._actualFrame >= this.targetStopDuration && this.stop()), this._update(QQ), this._stopped && (this._alive || (this._started = !1, this.onAnimationEnd && this.onAnimationEnd(), this.disposeOnStop && this._scene && this._scene._toBeDisposed.push(this))), !FQ) {
+            let QQ = 0;
+            for (let FQ = 0; FQ < this._particles.length; FQ++) {
+              const wQ = this._particles[FQ];
+              this._appendParticleVertices(QQ, wQ), QQ += this._useInstancing ? 1 : 4
             }
             if (this._vertexBuffer)
               if (this._useFixedCapacityForSnapshot) {
-                const dd = this._vertexBufferSize * (this._useInstancing ? 1 : 4),
-                  Jd = this._particles.length;
-                Jd < this._fixedCapacityHighWaterMark && this._vertexData.fill(0, Jd * dd, this._fixedCapacityHighWaterMark * dd), this._fixedCapacityHighWaterMark = Jd, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
+                const QQ = this._vertexBufferSize * (this._useInstancing ? 1 : 4),
+                  FQ = this._particles.length;
+                FQ < this._fixedCapacityHighWaterMark && this._vertexData.fill(0, FQ * QQ, this._fixedCapacityHighWaterMark * QQ), this._fixedCapacityHighWaterMark = FQ, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
               } else this._vertexBuffer.updateDirectly(this._vertexData, 0, this._particles.length)
           }
           0 === this.manualEmitCount && this.disposeOnStop && this.stop()
@@ -3454,151 +3454,151 @@ export const modules = {
       }
       _clearFixedCapacitySnapshotData() {
         if (!this._useFixedCapacityForSnapshot || !this._vertexBuffer || 0 === this._fixedCapacityHighWaterMark) return;
-        const dd = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
-        this._vertexData.fill(0, 0, this._fixedCapacityHighWaterMark * dd), this._fixedCapacityHighWaterMark = 0, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
+        const QQ = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
+        this._vertexData.fill(0, 0, this._fixedCapacityHighWaterMark * QQ), this._fixedCapacityHighWaterMark = 0, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
       }
       _calculateEmitRate() {
-        let dd = this.emitRate;
+        let QQ = this.emitRate;
         if (this._emitRateGradients && this._emitRateGradients.length > 0 && this.targetStopDuration) {
-          const Jd = this._actualFrame / this.targetStopDuration;
-          pd.k.GetCurrentGradient(Jd, this._emitRateGradients, ((Jd, kd, pd) => {
-            Jd !== this._currentEmitRateGradient && (this._currentEmitRate1 = this._currentEmitRate2, this._currentEmitRate2 = kd.getFactor(), this._currentEmitRateGradient = Jd), dd = (0, Qd.Lerp)(this._currentEmitRate1, this._currentEmitRate2, pd)
+          const FQ = this._actualFrame / this.targetStopDuration;
+          LQ.k.GetCurrentGradient(FQ, this._emitRateGradients, ((FQ, wQ, LQ) => {
+            FQ !== this._currentEmitRateGradient && (this._currentEmitRate1 = this._currentEmitRate2, this._currentEmitRate2 = wQ.getFactor(), this._currentEmitRateGradient = FQ), QQ = (0, YQ.Lerp)(this._currentEmitRate1, this._currentEmitRate2, LQ)
           }))
         }
-        return dd
+        return QQ
       }
-      _appendParticleVertices(dd, Jd) {
-        this._appendParticleVertex(dd++, Jd, 0, 0), this._useInstancing || (this._appendParticleVertex(dd++, Jd, 1, 0), this._appendParticleVertex(dd++, Jd, 1, 1), this._appendParticleVertex(dd, Jd, 0, 1))
+      _appendParticleVertices(QQ, FQ) {
+        this._appendParticleVertex(QQ++, FQ, 0, 0), this._useInstancing || (this._appendParticleVertex(QQ++, FQ, 1, 0), this._appendParticleVertex(QQ++, FQ, 1, 1), this._appendParticleVertex(QQ, FQ, 0, 1))
       }
       rebuild() {
         this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._createIndexBuffer(), this._spriteBuffer?._rebuild(), this._createVertexBuffers(), this.resetDrawCache()
       }
       async _initShaderSourceAsync() {
-        this._engine.isWebGPU && !SJ.ForceGLSL ? (this._shaderLanguage = 1, await Promise.all([kd.e(337).then((() => kd(60910))), kd.e(331).then((() => kd(60917)))])) : await Promise.all([kd.e(320).then((() => kd(60925))), Promise.all([kd.e(313), kd.e(349)]).then((() => kd(60931)))]), this._shadersLoaded = !0
+        this._engine.isWebGPU && !UF.ForceGLSL ? (this._shaderLanguage = 1, await Promise.all([wQ.e(337).then((() => wQ(60676))), wQ.e(331).then((() => wQ(60680)))])) : await Promise.all([wQ.e(320).then((() => wQ(60684))), Promise.all([wQ.e(313), wQ.e(349)]).then((() => wQ(60691)))]), this._shadersLoaded = !0
       }
       isReady() {
         if (!this._shadersLoaded) return !1;
         if (!this.emitter || this._imageProcessingConfiguration && !this._imageProcessingConfiguration.isReady() || !this.particleTexture || !this.particleTexture.isReady()) return !1;
-        if (this.blendMode !== qd.BLENDMODE_MULTIPLYADD) {
+        if (this.blendMode !== CQ.BLENDMODE_MULTIPLYADD) {
           if (!this._getWrapper(this.blendMode).effect.isReady()) return !1
         } else {
-          if (!this._getWrapper(qd.BLENDMODE_MULTIPLY).effect.isReady()) return !1;
-          if (!this._getWrapper(qd.BLENDMODE_ADD).effect.isReady()) return !1
+          if (!this._getWrapper(CQ.BLENDMODE_MULTIPLY).effect.isReady()) return !1;
+          if (!this._getWrapper(CQ.BLENDMODE_ADD).effect.isReady()) return !1
         }
         return !0
       }
-      _render(dd) {
-        const Jd = this._getWrapper(dd),
-          kd = Jd.effect,
-          pd = this._engine;
-        pd.enableEffect(Jd);
-        const Nd = this.defaultViewMatrix ?? this._scene.getViewMatrix();
-        kd.setTexture("diffuseSampler", this.particleTexture), kd.setMatrix("view", Nd);
-        const Pd = this.defaultProjectionMatrix ?? this._scene.getProjectionMatrix();
-        if (kd.setMatrix("projection", Pd), this._isAnimationSheetEnabled && this.particleTexture) {
-          const dd = this.particleTexture.getBaseSize();
-          kd.setFloat3("particlesInfos", this.spriteCellWidth / dd.width, this.spriteCellHeight / dd.height, this.spriteCellWidth / dd.width)
+      _render(QQ) {
+        const FQ = this._getWrapper(QQ),
+          wQ = FQ.effect,
+          LQ = this._engine;
+        LQ.enableEffect(FQ);
+        const qQ = this.defaultViewMatrix ?? this._scene.getViewMatrix();
+        wQ.setTexture("diffuseSampler", this.particleTexture), wQ.setMatrix("view", qQ);
+        const DQ = this.defaultProjectionMatrix ?? this._scene.getProjectionMatrix();
+        if (wQ.setMatrix("projection", DQ), this._isAnimationSheetEnabled && this.particleTexture) {
+          const QQ = this.particleTexture.getBaseSize();
+          wQ.setFloat3("particlesInfos", this.spriteCellWidth / QQ.width, this.spriteCellHeight / QQ.height, this.spriteCellWidth / QQ.width)
         }
-        if (kd.setVector2("translationPivot", this.translationPivot), kd.setFloat4("textureMask", this.textureMask.r, this.textureMask.g, this.textureMask.b, this.textureMask.a), this._isBillboardBased && this._scene) {
-          const dd = this._scene.activeCamera;
-          kd.setVector3("eyePosition", dd.globalPosition)
+        if (wQ.setVector2("translationPivot", this.translationPivot), wQ.setFloat4("textureMask", this.textureMask.r, this.textureMask.g, this.textureMask.b, this.textureMask.a), this._isBillboardBased && this._scene) {
+          const QQ = this._scene.activeCamera;
+          wQ.setVector3("eyePosition", QQ.globalPosition)
         }
-        this._rampGradientsTexture && (this._rampGradients && this._rampGradients.length || (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), kd.setTexture("rampSampler", this._rampGradientsTexture));
-        const Zd = kd.defines;
-        this._scene && ((0, cd.i)(kd, this, this._scene), this.applyFog && (0, hd.k)(this._scene, void 0, kd)), Zd.indexOf("#define BILLBOARDMODE_ALL") >= 0 && (Nd.invertToRef(Wd.h.Matrix[0]), kd.setMatrix("invView", Wd.h.Matrix[0])), kd._multiTarget && this._bindGeometryRendering(kd), void 0 !== this._vertexArrayObject ? this._scene?.forceWireframe ? pd.bindBuffers(this._vertexBuffers, this._linesIndexBufferUseInstancing, kd) : (this._vertexArrayObject || (this._vertexArrayObject = this._engine.recordVertexArrayObject(this._vertexBuffers, this._indexBuffer, kd)), this._engine.bindVertexArrayObject(this._vertexArrayObject, this._indexBuffer)) : this._indexBuffer ? pd.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBuffer : this._indexBuffer, kd) : pd.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBufferUseInstancing : null, kd), this.useLogarithmicDepth && this._scene && (0, hd.s)(Zd, kd, this._scene), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(kd), this._setEngineBasedOnBlendMode(dd), kd._multiTarget && bJ.b._BindZeroAlphaDiscard(pd, kd);
-        let gd = !1;
+        this._rampGradientsTexture && (this._rampGradients && this._rampGradients.length || (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), wQ.setTexture("rampSampler", this._rampGradientsTexture));
+        const kQ = wQ.defines;
+        this._scene && ((0, VQ.h)(wQ, this, this._scene), this.applyFog && (0, hQ.g)(this._scene, void 0, wQ)), kQ.indexOf("#define BILLBOARDMODE_ALL") >= 0 && (qQ.invertToRef(oQ.k.Matrix[0]), wQ.setMatrix("invView", oQ.k.Matrix[0])), wQ._multiTarget && this._bindGeometryRendering(wQ), void 0 !== this._vertexArrayObject ? this._scene?.forceWireframe ? LQ.bindBuffers(this._vertexBuffers, this._linesIndexBufferUseInstancing, wQ) : (this._vertexArrayObject || (this._vertexArrayObject = this._engine.recordVertexArrayObject(this._vertexBuffers, this._indexBuffer, wQ)), this._engine.bindVertexArrayObject(this._vertexArrayObject, this._indexBuffer)) : this._indexBuffer ? LQ.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBuffer : this._indexBuffer, wQ) : LQ.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBufferUseInstancing : null, wQ), this.useLogarithmicDepth && this._scene && (0, hQ.r)(kQ, wQ, this._scene), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(wQ), this._setEngineBasedOnBlendMode(QQ), wQ._multiTarget && IF.b._BindZeroAlphaDiscard(LQ, wQ);
+        let vQ = !1;
         try {
-          bJ.b._BindAttachmentsForEffect(pd, kd) && (this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.notifyObservers(kd), this._useInstancing ? this._scene?.forceWireframe ? pd.drawElementsType(6, 0, 10, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : pd.drawArraysType(7, 0, 4, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : this._scene?.forceWireframe ? pd.drawElementsType(1, 0, 10 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)) : pd.drawElementsType(0, 0, 6 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)), gd = !0)
+          IF.b._BindAttachmentsForEffect(LQ, wQ) && (this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.notifyObservers(wQ), this._useInstancing ? this._scene?.forceWireframe ? LQ.drawElementsType(6, 0, 10, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : LQ.drawArraysType(7, 0, 4, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : this._scene?.forceWireframe ? LQ.drawElementsType(1, 0, 10 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)) : LQ.drawElementsType(0, 0, 6 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)), vQ = !0)
         } finally {
-          bJ.b._RestoreAttachments(pd)
+          IF.b._RestoreAttachments(LQ)
         }
-        return gd ? this._particles.length : 0
+        return vQ ? this._particles.length : 0
       }
       render() {
         if (!this.isReady() || !this._particles.length && !this._useFixedCapacityForSnapshot) return 0;
-        const dd = this._engine;
-        let Jd;
-        return dd.setState && (dd.setState(!1), this.forceDepthWrite && dd.setDepthWrite(!0)), Jd = this.blendMode === qd.BLENDMODE_MULTIPLYADD ? this._render(qd.BLENDMODE_MULTIPLY) + this._render(qd.BLENDMODE_ADD) : this._render(this.blendMode), this._engine.unbindInstanceAttributes(), this._engine.setAlphaMode(0), Jd
+        const QQ = this._engine;
+        let FQ;
+        return QQ.setState && (QQ.setState(!1), this.forceDepthWrite && QQ.setDepthWrite(!0)), FQ = this.blendMode === CQ.BLENDMODE_MULTIPLYADD ? this._render(CQ.BLENDMODE_MULTIPLY) + this._render(CQ.BLENDMODE_ADD) : this._render(this.blendMode), this._engine.unbindInstanceAttributes(), this._engine.setAlphaMode(0), FQ
       }
       _onDispose() {}
       dispose() {
-        let dd = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this._engine._onReleaseRenderPassObservable?.remove(this._renderPassObserver), this._renderPassObserver = null, this.resetDrawCache(), this._vertexBuffer && (this._vertexBuffer.dispose(), this._vertexBuffer = null), this._spriteBuffer && (this._spriteBuffer.dispose(), this._spriteBuffer = null), this._indexBuffer && (this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null), this._linesIndexBuffer && (this._engine._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null), this._linesIndexBufferUseInstancing && (this._engine._releaseBuffer(this._linesIndexBufferUseInstancing), this._linesIndexBufferUseInstancing = null), this._vertexArrayObject && (this._engine.releaseVertexArrayObject(this._vertexArrayObject), this._vertexArrayObject = null), dd && this.particleTexture && (this.particleTexture.dispose(), this.particleTexture = null), dd && this.noiseTexture && (this.noiseTexture.dispose(), this.noiseTexture = null), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._onDispose(Jd, kd), this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.clear(), this._scene) {
-          const dd = this._scene.Qv.indexOf(this);
-          dd > -1 && this._scene.Qv.splice(dd, 1), this._scene._activeParticleSystems.dispose()
+        let QQ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this._engine._onReleaseRenderPassObservable?.remove(this._renderPassObserver), this._renderPassObserver = null, this.resetDrawCache(), this._vertexBuffer && (this._vertexBuffer.dispose(), this._vertexBuffer = null), this._spriteBuffer && (this._spriteBuffer.dispose(), this._spriteBuffer = null), this._indexBuffer && (this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null), this._linesIndexBuffer && (this._engine._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null), this._linesIndexBufferUseInstancing && (this._engine._releaseBuffer(this._linesIndexBufferUseInstancing), this._linesIndexBufferUseInstancing = null), this._vertexArrayObject && (this._engine.releaseVertexArrayObject(this._vertexArrayObject), this._vertexArrayObject = null), QQ && this.particleTexture && (this.particleTexture.dispose(), this.particleTexture = null), QQ && this.noiseTexture && (this.noiseTexture.dispose(), this.noiseTexture = null), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._onDispose(FQ, wQ), this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.clear(), this._scene) {
+          const QQ = this._scene.fC.indexOf(this);
+          QQ > -1 && this._scene.fC.splice(QQ, 1), this._scene._activeParticleSystems.dispose()
         }
-        this.Zm.notifyObservers(this), this.Zm.clear(), this.onStoppedObservable.clear(), this.onStartedObservable.clear(), this.reset(), this._isDisposed = !0
+        this.zN.notifyObservers(this), this.zN.clear(), this.onStoppedObservable.clear(), this.onStartedObservable.clear(), this.reset(), this._isDisposed = !0
       }
     }
-    SJ.ForceGLSL = !1;
-    var jJ, XJ = kd(37303);
-    ! function(dd) {
-      dd[dd.ATTACHED = 0] = "ATTACHED", dd[dd.END = 1] = "END"
-    }(jJ || (jJ = {}));
-    class fJ {
-      constructor(dd) {
-        if (this.particleSystem = dd, this.type = 1, this.inheritDirection = !1, this.inheritedVelocityAmount = 0, !dd.emitter || !dd.emitter.dispose) {
-          const Jd = (0, XJ.e)("BABYLON.AbstractMesh");
-          dd.emitter = new Jd("SubemitterSystemEmitter", dd.Wm()), dd._disposeEmitterOnDispose = !0
+    UF.ForceGLSL = !1;
+    var NF, TF = wQ(36741);
+    ! function(QQ) {
+      QQ[QQ.ATTACHED = 0] = "ATTACHED", QQ[QQ.END = 1] = "END"
+    }(NF || (NF = {}));
+    class KF {
+      constructor(QQ) {
+        if (this.particleSystem = QQ, this.type = 1, this.inheritDirection = !1, this.inheritedVelocityAmount = 0, !QQ.emitter || !QQ.emitter.dispose) {
+          const FQ = (0, TF.b)("BABYLON.AbstractMesh");
+          QQ.emitter = new FQ("SubemitterSystemEmitter", QQ.iN()), QQ._disposeEmitterOnDispose = !0
         }
       }
       clone() {
-        let dd = this.particleSystem.emitter;
-        if (dd) {
-          if (dd instanceof Wd.n) dd = dd.clone();
-          else if (-1 !== dd.getClassName().indexOf("Mesh")) {
-            dd = new((0, XJ.e)("BABYLON.Mesh"))("", dd.Wm()), dd.isVisible = !1
+        let QQ = this.particleSystem.emitter;
+        if (QQ) {
+          if (QQ instanceof oQ.p) QQ = QQ.clone();
+          else if (-1 !== QQ.getClassName().indexOf("Mesh")) {
+            QQ = new((0, TF.b)("BABYLON.Mesh"))("", QQ.iN()), QQ.isVisible = !1
           }
-        } else dd = new Wd.n;
-        const Jd = new fJ(this.particleSystem.clone(this.particleSystem.name, dd));
-        return Jd.particleSystem.name += "Clone", Jd.type = this.type, Jd.inheritDirection = this.inheritDirection, Jd.inheritedVelocityAmount = this.inheritedVelocityAmount, Jd.particleSystem._disposeEmitterOnDispose = !0, Jd.particleSystem.disposeOnStop = !0, Jd
+        } else QQ = new oQ.p;
+        const FQ = new KF(this.particleSystem.clone(this.particleSystem.name, QQ));
+        return FQ.particleSystem.name += "Clone", FQ.type = this.type, FQ.inheritDirection = this.inheritDirection, FQ.inheritedVelocityAmount = this.inheritedVelocityAmount, FQ.particleSystem._disposeEmitterOnDispose = !0, FQ.particleSystem.disposeOnStop = !0, FQ
       }
       serialize() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Jd = {};
-        return Jd.type = this.type, Jd.inheritDirection = this.inheritDirection, Jd.inheritedVelocityAmount = this.inheritedVelocityAmount, Jd.particleSystem = this.particleSystem.serialize(dd), Jd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const FQ = {};
+        return FQ.type = this.type, FQ.inheritDirection = this.inheritDirection, FQ.inheritedVelocityAmount = this.inheritedVelocityAmount, FQ.particleSystem = this.particleSystem.serialize(QQ), FQ
       }
-      static _ParseParticleSystem(dd, Jd, kd) {
-        throw (0, nd.n)("ParseParticle")
+      static _ParseParticleSystem(QQ, FQ, wQ) {
+        throw (0, zQ.k)("ParseParticle")
       }
-      static Parse(dd, Jd, kd) {
-        const pd = dd.particleSystem,
-          Nd = new fJ(fJ._ParseParticleSystem(pd, Jd, kd, !0));
-        return Nd.type = dd.type, Nd.inheritDirection = dd.inheritDirection, Nd.inheritedVelocityAmount = dd.inheritedVelocityAmount, Nd.particleSystem._isSubEmitter = !0, Nd
+      static Parse(QQ, FQ, wQ) {
+        const LQ = QQ.particleSystem,
+          qQ = new KF(KF._ParseParticleSystem(LQ, FQ, wQ, !0));
+        return qQ.type = QQ.type, qQ.inheritDirection = QQ.inheritDirection, qQ.inheritedVelocityAmount = QQ.inheritedVelocityAmount, qQ.particleSystem._isSubEmitter = !0, qQ
       }
       dispose() {
         this.particleSystem.dispose()
       }
     }
-    var nJ = kd(39874),
-      UJ = kd(39983);
-    const yJ = () => {};
-    class DJ {
+    var zF = wQ(39295),
+      lF = wQ(39426);
+    const jF = () => {};
+    class aF {
       constructor() {
-        this.particlePositionGenerator = yJ, this.particleDestinationGenerator = yJ, this.particleDirectionGenerator = yJ
+        this.particlePositionGenerator = jF, this.particleDestinationGenerator = jF, this.particleDirectionGenerator = jF
       }
-      startDirectionFunction(dd, Jd, kd, pd) {
-        const Nd = Wd.h.IL[0];
-        if (this.particleDirectionGenerator && this.particleDirectionGenerator !== yJ) this.particleDirectionGenerator(-1, kd, Nd);
-        else if (this.particleDestinationGenerator && this.particleDestinationGenerator !== yJ) {
-          this.particleDestinationGenerator(-1, kd, Nd);
-          const dd = Wd.h.IL[1];
-          Nd.subtractToRef(kd.position, dd), dd.scaleToRef(1 / kd.lifeTime, Nd)
-        } else Nd.set(0, 0, 0);
-        pd ? Jd.Fs(Nd) : Wd.n.TransformNormalToRef(Nd, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = oQ.k.Ox[0];
+        if (this.particleDirectionGenerator && this.particleDirectionGenerator !== jF) this.particleDirectionGenerator(-1, wQ, qQ);
+        else if (this.particleDestinationGenerator && this.particleDestinationGenerator !== jF) {
+          this.particleDestinationGenerator(-1, wQ, qQ);
+          const QQ = oQ.k.Ox[1];
+          qQ.subtractToRef(wQ.position, QQ), QQ.scaleToRef(1 / wQ.lifeTime, qQ)
+        } else qQ.set(0, 0, 0);
+        LQ ? FQ.Qs(qQ) : oQ.p.TransformNormalToRef(qQ, QQ, FQ)
       }
-      startPositionFunction(dd, Jd, kd, pd) {
-        const Nd = Wd.h.IL[0];
-        this.particlePositionGenerator && this.particlePositionGenerator !== yJ ? this.particlePositionGenerator(-1, kd, Nd) : Nd.set(0, 0, 0), pd ? Jd.Fs(Nd) : Wd.n.TransformCoordinatesToRef(Nd, dd, Jd)
+      startPositionFunction(QQ, FQ, wQ, LQ) {
+        const qQ = oQ.k.Ox[0];
+        this.particlePositionGenerator && this.particlePositionGenerator !== jF ? this.particlePositionGenerator(-1, wQ, qQ) : qQ.set(0, 0, 0), LQ ? FQ.Qs(qQ) : oQ.p.TransformCoordinatesToRef(qQ, QQ, FQ)
       }
       clone() {
-        const dd = new DJ;
-        return ld.c.DeepCopy(this, dd), dd
+        const QQ = new aF;
+        return bQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {}
-      buildUniformLayout(dd) {}
+      applyToShader(QQ) {}
+      buildUniformLayout(QQ) {}
       getEffectDefines() {
         return "#define CUSTOMEMITTER"
       }
@@ -3606,42 +3606,42 @@ export const modules = {
         return "CustomParticleEmitter"
       }
       serialize() {
-        const dd = {};
-        return dd.type = this.getClassName(), dd.particlePositionGenerator = this.particlePositionGenerator, dd.particleDestinationGenerator = this.particleDestinationGenerator, dd
+        const QQ = {};
+        return QQ.type = this.getClassName(), QQ.particlePositionGenerator = this.particlePositionGenerator, QQ.particleDestinationGenerator = this.particleDestinationGenerator, QQ
       }
-      parse(dd) {
-        dd.particlePositionGenerator && (this.particlePositionGenerator = dd.particlePositionGenerator), dd.particleDestinationGenerator && (this.particleDestinationGenerator = dd.particleDestinationGenerator)
+      parse(QQ) {
+        QQ.particlePositionGenerator && (this.particlePositionGenerator = QQ.particlePositionGenerator), QQ.particleDestinationGenerator && (this.particleDestinationGenerator = QQ.particleDestinationGenerator)
       }
     }
-    const TJ = Wd.n.Zero(),
-      EJ = Wd.n.Zero(),
-      cJ = Wd.n.Zero();
-    class hJ {
+    const XF = oQ.p.Zero(),
+      fF = oQ.p.Zero(),
+      VF = oQ.p.Zero();
+    class hF {
       constructor() {
-        this.strength = 0, this.position = Wd.n.Zero()
+        this.strength = 0, this.position = oQ.p.Zero()
       }
-      _processParticle(dd, Jd) {
-        this.position.subtractToRef(dd.position, TJ);
-        const kd = TJ.lengthSquared() + 1;
-        TJ.normalize().scaleToRef(this.strength / kd, EJ), EJ.scaleToRef(Jd._tempScaledUpdateSpeed, cJ), dd.direction.addInPlace(cJ)
+      _processParticle(QQ, FQ) {
+        this.position.subtractToRef(QQ.position, XF);
+        const wQ = XF.lengthSquared() + 1;
+        XF.normalize().scaleToRef(this.strength / wQ, fF), fF.scaleToRef(FQ._tempScaledUpdateSpeed, VF), QQ.direction.addInPlace(VF)
       }
       serialize() {
         return {
-          position: this.position.spd(),
+          position: this.position.RLQ(),
           strength: this.strength
         }
       }
     }
-    const rJ = ["level", "hasAlpha", "getAlphaFromRGB", "gammaSpace", "coordinatesIndex", "coordinatesMode", "wrapU", "wrapV", "wrapR", "anisotropicFilteringLevel", "uOffset", "vOffset", "uScale", "vScale", "uAng", "vAng", "wAng", "uRotationCenter", "vRotationCenter", "wRotationCenter"];
-    class uJ extends SJ {
+    const JF = ["level", "hasAlpha", "getAlphaFromRGB", "gammaSpace", "coordinatesIndex", "coordinatesMode", "wrapU", "wrapV", "wrapR", "anisotropicFilteringLevel", "uOffset", "vOffset", "uScale", "vScale", "uAng", "vAng", "wAng", "uRotationCenter", "vRotationCenter", "wRotationCenter"];
+    class EF extends UF {
       constructor() {
-        super(...arguments), this._disposeEmitterOnDispose = !1, this.doNotSerialize = !1, this.canStart = () => !0, this._flowMap = null, this._flowMapUpdate = null, this._source = null, this._blockReference = 0, this.flowMapStrength = 1, this._attractorUpdate = null, this.metadata = null, this._emitFromParticle = dd => {
+        super(...arguments), this._disposeEmitterOnDispose = !1, this.doNotSerialize = !1, this.canStart = () => !0, this._flowMap = null, this._flowMapUpdate = null, this._source = null, this._blockReference = 0, this.flowMapStrength = 1, this._attractorUpdate = null, this.metadata = null, this._emitFromParticle = QQ => {
           if (!this._subEmitters || 0 === this._subEmitters.length) return;
-          const Jd = Math.floor(Math.random() * this._subEmitters.length);
-          for (const kd of this._subEmitters[Jd])
-            if (1 === kd.type) {
-              const Jd = kd.clone();
-              dd._inheritParticleInfoToSubEmitter(Jd), Jd.particleSystem._rootParticleSystem = this, this.activeSubSystems.push(Jd.particleSystem), Jd.particleSystem.start()
+          const FQ = Math.floor(Math.random() * this._subEmitters.length);
+          for (const wQ of this._subEmitters[FQ])
+            if (1 === wQ.type) {
+              const FQ = wQ.clone();
+              QQ._inheritParticleInfoToSubEmitter(FQ), FQ.particleSystem._rootParticleSystem = this, this.activeSubSystems.push(FQ.particleSystem), FQ.particleSystem.start()
             }
         }
       }
@@ -3654,465 +3654,465 @@ export const modules = {
       get flowMap() {
         return this._flowMap
       }
-      set flowMap(dd) {
-        this._flowMap !== dd && (this._flowMap = dd, this._flowMapUpdate && (mJ(this._flowMapUpdate), this._flowMapUpdate = null), dd && (this._flowMapUpdate = {
-          process: dd => {
-            const Jd = this.Wm()?.getTransformMatrix();
-            this._flowMap._processParticle(dd, this.flowMapStrength * this._tempScaledUpdateSpeed, Jd)
+      set flowMap(QQ) {
+        this._flowMap !== QQ && (this._flowMap = QQ, this._flowMapUpdate && (rF(this._flowMapUpdate), this._flowMapUpdate = null), QQ && (this._flowMapUpdate = {
+          process: QQ => {
+            const FQ = this.iN()?.getTransformMatrix();
+            this._flowMap._processParticle(QQ, this.flowMapStrength * this._tempScaledUpdateSpeed, FQ)
           },
           previousItem: null,
           nextItem: null
-        }, YJ(this._flowMapUpdate, this._directionProcessing)))
+        }, sF(this._flowMapUpdate, this._directionProcessing)))
       }
-      addAttractor(dd) {
-        super.addAttractor(dd), 1 === this._attractors.length && (this._attractorUpdate = {
-          process: dd => {
-            for (const Jd of this._attractors) Jd._processParticle(dd, this)
+      addAttractor(QQ) {
+        super.addAttractor(QQ), 1 === this._attractors.length && (this._attractorUpdate = {
+          process: QQ => {
+            for (const FQ of this._attractors) FQ._processParticle(QQ, this)
           },
           previousItem: null,
           nextItem: null
-        }, YJ(this._attractorUpdate, this._directionProcessing))
+        }, sF(this._attractorUpdate, this._directionProcessing))
       }
-      removeAttractor(dd) {
-        super.removeAttractor(dd), 0 === this._attractors.length && this._attractorUpdate && mJ(this._attractorUpdate)
+      removeAttractor(QQ) {
+        super.removeAttractor(QQ), 0 === this._attractors.length && this._attractorUpdate && rF(this._attractorUpdate)
       }
       start() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
-        this.canStart() && super.start(dd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
+        this.canStart() && super.start(QQ)
       }
       _prepareSubEmitterInternalArray() {
         if (this._subEmitters = new Array, this.subEmitters)
-          for (const dd of this.subEmitters) dd instanceof uJ ? this._subEmitters.push([new fJ(dd)]) : dd instanceof fJ ? this._subEmitters.push([dd]) : dd instanceof Array && this._subEmitters.push(dd)
+          for (const QQ of this.subEmitters) QQ instanceof EF ? this._subEmitters.push([new KF(QQ)]) : QQ instanceof KF ? this._subEmitters.push([QQ]) : QQ instanceof Array && this._subEmitters.push(QQ)
       }
       _stopSubEmitters() {
         if (this.activeSubSystems) {
-          for (const dd of this.activeSubSystems) dd.stop(!0);
+          for (const QQ of this.activeSubSystems) QQ.stop(!0);
           this.activeSubSystems = []
         }
       }
       _removeFromRoot() {
         if (!this._rootParticleSystem) return;
-        const dd = this._rootParticleSystem.activeSubSystems.indexOf(this); - 1 !== dd && this._rootParticleSystem.activeSubSystems.splice(dd, 1), this._rootParticleSystem = null
+        const QQ = this._rootParticleSystem.activeSubSystems.indexOf(this); - 1 !== QQ && this._rootParticleSystem.activeSubSystems.splice(QQ, 1), this._rootParticleSystem = null
       }
       _preStart() {
         this._prepareSubEmitterInternalArray(), this._subEmitters && 0 != this._subEmitters.length && (this.activeSubSystems = [])
       }
-      _postStop(dd) {
-        dd && this._stopSubEmitters()
+      _postStop(QQ) {
+        QQ && this._stopSubEmitters()
       }
-      _prepareParticle(dd) {
+      _prepareParticle(QQ) {
         if (this._subEmitters && this._subEmitters.length > 0) {
-          const Jd = this._subEmitters[Math.floor(Math.random() * this._subEmitters.length)];
-          dd._properties.attachedSubEmitters = [];
-          for (const kd of Jd)
-            if (0 === kd.type) {
-              const Jd = kd.clone();
-              dd._properties.attachedSubEmitters.push(Jd), Jd.particleSystem.start()
+          const FQ = this._subEmitters[Math.floor(Math.random() * this._subEmitters.length)];
+          QQ._properties.attachedSubEmitters = [];
+          for (const wQ of FQ)
+            if (0 === wQ.type) {
+              const FQ = wQ.clone();
+              QQ._properties.attachedSubEmitters.push(FQ), FQ.particleSystem.start()
             }
         }
       }
       _onDispose() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this._removeFromRoot(), this.subEmitters && !this._subEmitters && this._prepareSubEmitterInternalArray(), dd && this.particles)
-          for (const kd of this.particles)
-            if (kd._properties.attachedSubEmitters)
-              for (let dd = kd._properties.attachedSubEmitters.length - 1; dd >= 0; dd -= 1) kd._properties.attachedSubEmitters[dd].dispose();
-        if (Jd && this.activeSubSystems)
-          for (let kd = this.activeSubSystems.length - 1; kd >= 0; kd -= 1) this.activeSubSystems[kd].dispose();
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this._removeFromRoot(), this.subEmitters && !this._subEmitters && this._prepareSubEmitterInternalArray(), QQ && this.particles)
+          for (const wQ of this.particles)
+            if (wQ._properties.attachedSubEmitters)
+              for (let QQ = wQ._properties.attachedSubEmitters.length - 1; QQ >= 0; QQ -= 1) wQ._properties.attachedSubEmitters[QQ].dispose();
+        if (FQ && this.activeSubSystems)
+          for (let wQ = this.activeSubSystems.length - 1; wQ >= 0; wQ -= 1) this.activeSubSystems[wQ].dispose();
         if (this._subEmitters && this._subEmitters.length) {
-          for (let dd = 0; dd < this._subEmitters.length; dd++)
-            for (const Jd of this._subEmitters[dd]) Jd.dispose();
+          for (let QQ = 0; QQ < this._subEmitters.length; QQ++)
+            for (const FQ of this._subEmitters[QQ]) FQ.dispose();
           this._subEmitters = [], this.subEmitters = []
         }
         this._disposeEmitterOnDispose && this.emitter && this.emitter.dispose && this.emitter.dispose(!0)
       }
-      static _Parse(dd, Jd, kd, pd) {
-        let Nd;
-        Nd = kd instanceof nJ.b ? null : kd;
-        const Pd = (0, XJ.e)("BABYLON.Texture");
-        if (Pd && Nd)
-          if (dd.texture) Jd.particleTexture = Pd.Parse(dd.texture, Nd, pd);
-          else if (dd.textureName) {
-          const kd = dd.textureSettings;
-          if (Jd.particleTexture = new Pd(pd + dd.textureName, Nd, !1, void 0 === dd.invertY || dd.invertY, kd ? kd.samplingMode : void 0), Jd.particleTexture.name = dd.textureName, kd) {
-            const dd = Jd.particleTexture;
-            for (const Jd of rJ) void 0 !== kd[Jd] && (dd[Jd] = kd[Jd])
+      static _Parse(QQ, FQ, wQ, LQ) {
+        let qQ;
+        qQ = wQ instanceof zF.e ? null : wQ;
+        const DQ = (0, TF.b)("BABYLON.Texture");
+        if (DQ && qQ)
+          if (QQ.texture) FQ.particleTexture = DQ.Parse(QQ.texture, qQ, LQ);
+          else if (QQ.textureName) {
+          const wQ = QQ.textureSettings;
+          if (FQ.particleTexture = new DQ(LQ + QQ.textureName, qQ, !1, void 0 === QQ.invertY || QQ.invertY, wQ ? wQ.samplingMode : void 0), FQ.particleTexture.name = QQ.textureName, wQ) {
+            const QQ = FQ.particleTexture;
+            for (const FQ of JF) void 0 !== wQ[FQ] && (QQ[FQ] = wQ[FQ])
           }
         }
-        if (dd.emitterId || 0 === dd.emitterId || void 0 !== dd.emitter ? (dd.emitterId || 0 === dd.emitterId) && Nd ? (Jd.emitter = Nd.getLastMeshById(dd.emitterId), Jd.emitter || (Jd.emitter = Wd.n.Zero())) : Jd.emitter = Wd.n.FromArray(dd.emitter) : Jd.emitter = Wd.n.Zero(), Jd.isLocal = !!dd.isLocal, void 0 !== dd.renderingGroupId && (Jd.renderingGroupId = dd.renderingGroupId), void 0 !== dd.isBillboardBased && (Jd.isBillboardBased = dd.isBillboardBased), void 0 !== dd.billboardMode && (Jd.billboardMode = dd.billboardMode), void 0 !== dd.useLogarithmicDepth && (Jd.useLogarithmicDepth = dd.useLogarithmicDepth), dd.animations) {
-          for (let kd = 0; kd < dd.animations.length; kd++) {
-            const pd = dd.animations[kd],
-              Nd = (0, XJ.e)("BABYLON.Animation");
-            Nd && Jd.animations.push(Nd.Parse(pd))
+        if (QQ.emitterId || 0 === QQ.emitterId || void 0 !== QQ.emitter ? (QQ.emitterId || 0 === QQ.emitterId) && qQ ? (FQ.emitter = qQ.getLastMeshById(QQ.emitterId), FQ.emitter || (FQ.emitter = oQ.p.Zero())) : FQ.emitter = oQ.p.FromArray(QQ.emitter) : FQ.emitter = oQ.p.Zero(), FQ.isLocal = !!QQ.isLocal, void 0 !== QQ.renderingGroupId && (FQ.renderingGroupId = QQ.renderingGroupId), void 0 !== QQ.isBillboardBased && (FQ.isBillboardBased = QQ.isBillboardBased), void 0 !== QQ.billboardMode && (FQ.billboardMode = QQ.billboardMode), void 0 !== QQ.useLogarithmicDepth && (FQ.useLogarithmicDepth = QQ.useLogarithmicDepth), QQ.animations) {
+          for (let wQ = 0; wQ < QQ.animations.length; wQ++) {
+            const LQ = QQ.animations[wQ],
+              qQ = (0, TF.b)("BABYLON.Animation");
+            qQ && FQ.animations.push(qQ.Parse(LQ))
           }
-          Jd.beginAnimationOnStart = dd.beginAnimationOnStart, Jd.beginAnimationFrom = dd.beginAnimationFrom, Jd.beginAnimationTo = dd.beginAnimationTo, Jd.beginAnimationLoop = dd.beginAnimationLoop
+          FQ.beginAnimationOnStart = QQ.beginAnimationOnStart, FQ.beginAnimationFrom = QQ.beginAnimationFrom, FQ.beginAnimationTo = QQ.beginAnimationTo, FQ.beginAnimationLoop = QQ.beginAnimationLoop
         }
-        if (dd.autoAnimate && Nd && Nd.beginAnimation(Jd, dd.autoAnimateFrom, dd.autoAnimateTo, dd.autoAnimateLoop, dd.autoAnimateSpeed || 1), Jd.startDelay = 0 | dd.startDelay, Jd.minAngularSpeed = dd.minAngularSpeed, Jd.maxAngularSpeed = dd.maxAngularSpeed, Jd.minSize = dd.minSize, Jd.maxSize = dd.maxSize, dd.minScaleX && (Jd.minScaleX = dd.minScaleX, Jd.maxScaleX = dd.maxScaleX, Jd.minScaleY = dd.minScaleY, Jd.maxScaleY = dd.maxScaleY), void 0 !== dd.preWarmCycles && (Jd.preWarmCycles = dd.preWarmCycles, Jd.preWarmStepOffset = dd.preWarmStepOffset), void 0 !== dd.minInitialRotation && (Jd.minInitialRotation = dd.minInitialRotation, Jd.maxInitialRotation = dd.maxInitialRotation), Jd.minLifeTime = dd.minLifeTime, Jd.maxLifeTime = dd.maxLifeTime, Jd.minEmitPower = dd.minEmitPower, Jd.maxEmitPower = dd.maxEmitPower, Jd.emitRate = dd.emitRate, Jd.gravity = Wd.n.FromArray(dd.gravity), dd.noiseStrength && (Jd.noiseStrength = Wd.n.FromArray(dd.noiseStrength)), Jd.color1 = Kd.g.FromArray(dd.color1), Jd.color2 = Kd.g.FromArray(dd.color2), Jd.colorDead = Kd.g.FromArray(dd.colorDead), Jd.updateSpeed = dd.updateSpeed, Jd.targetStopDuration = dd.targetStopDuration, Jd.blendMode = dd.blendMode, dd.colorGradients)
-          for (const Wd of dd.colorGradients) Jd.addColorGradient(Wd.gradient, Kd.g.FromArray(Wd.color1), Wd.color2 ? Kd.g.FromArray(Wd.color2) : void 0);
-        if (dd.rampGradients) {
-          for (const kd of dd.rampGradients) Jd.addRampGradient(kd.gradient, Kd.c.FromArray(kd.color));
-          Jd.useRampGradients = dd.useRampGradients
+        if (QQ.autoAnimate && qQ && qQ.beginAnimation(FQ, QQ.autoAnimateFrom, QQ.autoAnimateTo, QQ.autoAnimateLoop, QQ.autoAnimateSpeed || 1), FQ.startDelay = 0 | QQ.startDelay, FQ.minAngularSpeed = QQ.minAngularSpeed, FQ.maxAngularSpeed = QQ.maxAngularSpeed, FQ.minSize = QQ.minSize, FQ.maxSize = QQ.maxSize, QQ.minScaleX && (FQ.minScaleX = QQ.minScaleX, FQ.maxScaleX = QQ.maxScaleX, FQ.minScaleY = QQ.minScaleY, FQ.maxScaleY = QQ.maxScaleY), void 0 !== QQ.preWarmCycles && (FQ.preWarmCycles = QQ.preWarmCycles, FQ.preWarmStepOffset = QQ.preWarmStepOffset), void 0 !== QQ.minInitialRotation && (FQ.minInitialRotation = QQ.minInitialRotation, FQ.maxInitialRotation = QQ.maxInitialRotation), FQ.minLifeTime = QQ.minLifeTime, FQ.maxLifeTime = QQ.maxLifeTime, FQ.minEmitPower = QQ.minEmitPower, FQ.maxEmitPower = QQ.maxEmitPower, FQ.emitRate = QQ.emitRate, FQ.gravity = oQ.p.FromArray(QQ.gravity), QQ.noiseStrength && (FQ.noiseStrength = oQ.p.FromArray(QQ.noiseStrength)), FQ.color1 = uQ.e.FromArray(QQ.color1), FQ.color2 = uQ.e.FromArray(QQ.color2), FQ.colorDead = uQ.e.FromArray(QQ.colorDead), FQ.updateSpeed = QQ.updateSpeed, FQ.targetStopDuration = QQ.targetStopDuration, FQ.blendMode = QQ.blendMode, QQ.colorGradients)
+          for (const oQ of QQ.colorGradients) FQ.addColorGradient(oQ.gradient, uQ.e.FromArray(oQ.color1), oQ.color2 ? uQ.e.FromArray(oQ.color2) : void 0);
+        if (QQ.rampGradients) {
+          for (const wQ of QQ.rampGradients) FQ.addRampGradient(wQ.gradient, uQ.b.FromArray(wQ.color));
+          FQ.useRampGradients = QQ.useRampGradients
         }
-        if (dd.colorRemapGradients)
-          for (const Wd of dd.colorRemapGradients) Jd.addColorRemapGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.alphaRemapGradients)
-          for (const Wd of dd.alphaRemapGradients) Jd.addAlphaRemapGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.sizeGradients)
-          for (const Wd of dd.sizeGradients) Jd.addSizeGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.angularSpeedGradients)
-          for (const Wd of dd.angularSpeedGradients) Jd.addAngularSpeedGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.velocityGradients)
-          for (const Wd of dd.velocityGradients) Jd.addVelocityGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.dragGradients)
-          for (const Wd of dd.dragGradients) Jd.addDragGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.emitRateGradients)
-          for (const Wd of dd.emitRateGradients) Jd.addEmitRateGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.startSizeGradients)
-          for (const Wd of dd.startSizeGradients) Jd.addStartSizeGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.lifeTimeGradients)
-          for (const Wd of dd.lifeTimeGradients) Jd.addLifeTimeGradient(Wd.gradient, void 0 !== Wd.factor1 ? Wd.factor1 : Wd.factor, Wd.factor2);
-        if (dd.limitVelocityGradients) {
-          for (const kd of dd.limitVelocityGradients) Jd.addLimitVelocityGradient(kd.gradient, void 0 !== kd.factor1 ? kd.factor1 : kd.factor, kd.factor2);
-          Jd.limitVelocityDamping = dd.limitVelocityDamping
+        if (QQ.colorRemapGradients)
+          for (const oQ of QQ.colorRemapGradients) FQ.addColorRemapGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.alphaRemapGradients)
+          for (const oQ of QQ.alphaRemapGradients) FQ.addAlphaRemapGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.sizeGradients)
+          for (const oQ of QQ.sizeGradients) FQ.addSizeGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.angularSpeedGradients)
+          for (const oQ of QQ.angularSpeedGradients) FQ.addAngularSpeedGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.velocityGradients)
+          for (const oQ of QQ.velocityGradients) FQ.addVelocityGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.dragGradients)
+          for (const oQ of QQ.dragGradients) FQ.addDragGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.emitRateGradients)
+          for (const oQ of QQ.emitRateGradients) FQ.addEmitRateGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.startSizeGradients)
+          for (const oQ of QQ.startSizeGradients) FQ.addStartSizeGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.lifeTimeGradients)
+          for (const oQ of QQ.lifeTimeGradients) FQ.addLifeTimeGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
+        if (QQ.limitVelocityGradients) {
+          for (const wQ of QQ.limitVelocityGradients) FQ.addLimitVelocityGradient(wQ.gradient, void 0 !== wQ.factor1 ? wQ.factor1 : wQ.factor, wQ.factor2);
+          FQ.limitVelocityDamping = QQ.limitVelocityDamping
         }
-        if (dd.noiseTexture && Nd) {
-          const kd = (0, XJ.e)("BABYLON.ProceduralTexture");
-          Jd.noiseTexture = kd.Parse(dd.noiseTexture, Nd, pd)
+        if (QQ.noiseTexture && qQ) {
+          const wQ = (0, TF.b)("BABYLON.ProceduralTexture");
+          FQ.noiseTexture = wQ.Parse(QQ.noiseTexture, qQ, LQ)
         }
-        let Zd;
-        if (dd.particleEmitterType) {
-          switch (dd.particleEmitterType.type) {
+        let kQ;
+        if (QQ.particleEmitterType) {
+          switch (QQ.particleEmitterType.type) {
             case "SphereParticleEmitter":
-              Zd = new ed;
+              kQ = new tQ;
               break;
             case "SphereDirectedParticleEmitter":
-              Zd = new Rd;
+              kQ = new eQ;
               break;
             case "ConeEmitter":
             case "ConeParticleEmitter":
-              Zd = new Gd;
+              kQ = new GQ;
               break;
             case "ConeDirectedParticleEmitter":
-              Zd = new vd;
+              kQ = new pQ;
               break;
             case "CylinderParticleEmitter":
-              Zd = new Id.d;
+              kQ = new MQ.e;
               break;
             case "CylinderDirectedParticleEmitter":
-              Zd = new Id.c;
+              kQ = new MQ.d;
               break;
             case "HemisphericParticleEmitter":
-              Zd = new Od;
+              kQ = new AQ;
               break;
             case "PointParticleEmitter":
-              Zd = new Ld;
+              kQ = new xQ;
               break;
             case "MeshParticleEmitter":
-              Zd = new xd;
+              kQ = new cQ;
               break;
             case "CustomParticleEmitter":
-              Zd = new DJ;
+              kQ = new aF;
               break;
             default:
-              Zd = new od.d
+              kQ = new HQ.d
           }
-          Zd.parse(dd.particleEmitterType, Nd)
-        } else Zd = new od.d, Zd.parse(dd, Nd);
-        Jd.particleEmitterType = Zd, Jd.startSpriteCellID = dd.startSpriteCellID, Jd.endSpriteCellID = dd.endSpriteCellID, Jd.spriteCellLoop = dd.spriteCellLoop ?? !0, Jd.spriteCellWidth = dd.spriteCellWidth, Jd.spriteCellHeight = dd.spriteCellHeight, Jd.spriteCellChangeSpeed = dd.spriteCellChangeSpeed, Jd.spriteRandomStartCell = dd.spriteRandomStartCell, Jd.disposeOnStop = dd.disposeOnStop ?? !1, Jd.manualEmitCount = dd.manualEmitCount ?? -1
+          kQ.parse(QQ.particleEmitterType, qQ)
+        } else kQ = new HQ.d, kQ.parse(QQ, qQ);
+        FQ.particleEmitterType = kQ, FQ.startSpriteCellID = QQ.startSpriteCellID, FQ.endSpriteCellID = QQ.endSpriteCellID, FQ.spriteCellLoop = QQ.spriteCellLoop ?? !0, FQ.spriteCellWidth = QQ.spriteCellWidth, FQ.spriteCellHeight = QQ.spriteCellHeight, FQ.spriteCellChangeSpeed = QQ.spriteCellChangeSpeed, FQ.spriteRandomStartCell = QQ.spriteRandomStartCell, FQ.disposeOnStop = QQ.disposeOnStop ?? !1, FQ.manualEmitCount = QQ.manualEmitCount ?? -1
       }
-      static Parse(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          Nd = arguments.length > 4 ? arguments[4] : void 0;
-        const Pd = dd.name;
-        let Zd, gd, Cd = null,
-          od = null;
-        if (Jd instanceof nJ.b ? Zd = Jd : (gd = Jd, Zd = gd.eL()), dd.customShader && (0, nd.e)(Zd.createEffectForParticles)) {
-          od = dd.customShader;
-          const Jd = od.shaderOptions.defines.length > 0 ? od.shaderOptions.defines.join("\n") : "";
-          Cd = Zd.createEffectForParticles(od.shaderPath.fragmentElement, od.shaderOptions.uniforms, od.shaderOptions.samplers, Jd)
+      static Parse(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          qQ = arguments.length > 4 ? arguments[4] : void 0;
+        const DQ = QQ.name;
+        let kQ, vQ, mQ = null,
+          HQ = null;
+        if (FQ instanceof zF.e ? kQ = FQ : (vQ = FQ, kQ = vQ.Wx()), QQ.customShader && (0, zQ.b)(kQ.createEffectForParticles)) {
+          HQ = QQ.customShader;
+          const FQ = HQ.shaderOptions.defines.length > 0 ? HQ.shaderOptions.defines.join("\n") : "";
+          mQ = kQ.createEffectForParticles(HQ.shaderPath.fragmentElement, HQ.shaderOptions.uniforms, HQ.shaderOptions.samplers, FQ)
         }
-        const ld = new uJ(Pd, Nd || dd.oo, Jd, Cd, dd.isAnimationSheetEnabled);
-        if (ld.customShader = od, ld._rootUrl = kd, dd.id && (ld.id = dd.id), dd.subEmitters) {
-          ld.subEmitters = [];
-          for (const pd of dd.subEmitters) {
-            const dd = [];
-            for (const Nd of pd) dd.push(fJ.Parse(Nd, Jd, kd));
-            ld.subEmitters.push(dd)
+        const bQ = new EF(DQ, qQ || QQ.MH, FQ, mQ, QQ.isAnimationSheetEnabled);
+        if (bQ.customShader = HQ, bQ._rootUrl = wQ, QQ.id && (bQ.id = QQ.id), QQ.subEmitters) {
+          bQ.subEmitters = [];
+          for (const LQ of QQ.subEmitters) {
+            const QQ = [];
+            for (const qQ of LQ) QQ.push(KF.Parse(qQ, FQ, wQ));
+            bQ.subEmitters.push(QQ)
           }
         }
-        if (dd.attractors)
-          for (const Kd of dd.attractors) {
-            const dd = new hJ;
-            dd.position = Wd.n.FromArray(Kd.position), dd.strength = Kd.strength, ld.addAttractor(dd)
+        if (QQ.attractors)
+          for (const uQ of QQ.attractors) {
+            const QQ = new hF;
+            QQ.position = oQ.p.FromArray(uQ.position), QQ.strength = uQ.strength, bQ.addAttractor(QQ)
           }
-        return uJ._Parse(dd, ld, Jd, kd), dd.textureMask && (ld.textureMask = Kd.g.FromArray(dd.textureMask)), dd.worldOffset && (ld.worldOffset = Wd.n.FromArray(dd.worldOffset)), dd.preventAutoStart && (ld.preventAutoStart = dd.preventAutoStart), dd.metadata && (ld.metadata = dd.metadata), pd || ld.preventAutoStart || ld.start(), ld
+        return EF._Parse(QQ, bQ, FQ, wQ), QQ.textureMask && (bQ.textureMask = uQ.e.FromArray(QQ.textureMask)), QQ.worldOffset && (bQ.worldOffset = oQ.p.FromArray(QQ.worldOffset)), QQ.preventAutoStart && (bQ.preventAutoStart = QQ.preventAutoStart), QQ.metadata && (bQ.metadata = QQ.metadata), LQ || bQ.preventAutoStart || bQ.start(), bQ
       }
       serialize() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Jd = {};
-        if (uJ._Serialize(Jd, this, dd), Jd.textureMask = this.textureMask.spd(), Jd.customShader = this.customShader, Jd.preventAutoStart = this.preventAutoStart, Jd.worldOffset = this.worldOffset.spd(), this.metadata && (Jd.metadata = this.metadata), this.subEmitters) {
-          Jd.subEmitters = [], this._subEmitters || this._prepareSubEmitterInternalArray();
-          for (const kd of this._subEmitters) {
-            const pd = [];
-            for (const Jd of kd) Jd.particleSystem.doNotSerialize || pd.push(Jd.serialize(dd));
-            Jd.subEmitters.push(pd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const FQ = {};
+        if (EF._Serialize(FQ, this, QQ), FQ.textureMask = this.textureMask.RLQ(), FQ.customShader = this.customShader, FQ.preventAutoStart = this.preventAutoStart, FQ.worldOffset = this.worldOffset.RLQ(), this.metadata && (FQ.metadata = this.metadata), this.subEmitters) {
+          FQ.subEmitters = [], this._subEmitters || this._prepareSubEmitterInternalArray();
+          for (const wQ of this._subEmitters) {
+            const LQ = [];
+            for (const FQ of wQ) FQ.particleSystem.doNotSerialize || LQ.push(FQ.serialize(QQ));
+            FQ.subEmitters.push(LQ)
           }
         }
         if (this._attractors && this._attractors.length) {
-          Jd.attractors = [];
-          for (const dd of this._attractors) Jd.attractors.push(dd.serialize())
+          FQ.attractors = [];
+          for (const QQ of this._attractors) FQ.attractors.push(QQ.serialize())
         }
-        return Jd
+        return FQ
       }
-      static _Serialize(dd, Jd, kd) {
-        if (dd.name = Jd.name, dd.id = Jd.id, dd.oo = Jd.getCapacity(), dd.disposeOnStop = Jd.disposeOnStop, dd.manualEmitCount = Jd.manualEmitCount, Jd.emitter.position) {
-          const kd = Jd.emitter;
-          dd.emitterId = kd.id
+      static _Serialize(QQ, FQ, wQ) {
+        if (QQ.name = FQ.name, QQ.id = FQ.id, QQ.MH = FQ.getCapacity(), QQ.disposeOnStop = FQ.disposeOnStop, QQ.manualEmitCount = FQ.manualEmitCount, FQ.emitter.position) {
+          const wQ = FQ.emitter;
+          QQ.emitterId = wQ.id
         } else {
-          const kd = Jd.emitter;
-          dd.emitter = kd.spd()
+          const wQ = FQ.emitter;
+          QQ.emitter = wQ.RLQ()
         }
-        if (Jd.particleEmitterType && (dd.particleEmitterType = Jd.particleEmitterType.serialize()), Jd.particleTexture)
-          if (kd) dd.texture = Jd.particleTexture.serialize();
+        if (FQ.particleEmitterType && (QQ.particleEmitterType = FQ.particleEmitterType.serialize()), FQ.particleTexture)
+          if (wQ) QQ.texture = FQ.particleTexture.serialize();
           else {
-            const kd = Jd.particleTexture;
-            dd.textureName = Jd.particleTexture.name, dd.invertY = !!kd._invertY;
-            const pd = {};
-            for (const dd of rJ) pd[dd] = kd[dd];
-            pd.samplingMode = kd.samplingMode, dd.textureSettings = pd
-          } dd.isLocal = Jd.isLocal, UJ.c.AppendSerializedAnimations(Jd, dd), dd.beginAnimationOnStart = Jd.beginAnimationOnStart, dd.beginAnimationFrom = Jd.beginAnimationFrom, dd.beginAnimationTo = Jd.beginAnimationTo, dd.beginAnimationLoop = Jd.beginAnimationLoop, dd.startDelay = Jd.startDelay, dd.renderingGroupId = Jd.renderingGroupId, dd.isBillboardBased = Jd.isBillboardBased, dd.billboardMode = Jd.billboardMode, dd.minAngularSpeed = Jd.minAngularSpeed, dd.maxAngularSpeed = Jd.maxAngularSpeed, dd.minSize = Jd.minSize, dd.maxSize = Jd.maxSize, dd.minScaleX = Jd.minScaleX, dd.maxScaleX = Jd.maxScaleX, dd.minScaleY = Jd.minScaleY, dd.maxScaleY = Jd.maxScaleY, dd.minEmitPower = Jd.minEmitPower, dd.maxEmitPower = Jd.maxEmitPower, dd.minLifeTime = Jd.minLifeTime, dd.maxLifeTime = Jd.maxLifeTime, dd.emitRate = Jd.emitRate, dd.gravity = Jd.gravity.spd(), dd.noiseStrength = Jd.noiseStrength.spd(), dd.color1 = Jd.color1.spd(), dd.color2 = Jd.color2.spd(), dd.colorDead = Jd.colorDead.spd(), dd.updateSpeed = Jd.updateSpeed, dd.targetStopDuration = Jd.targetStopDuration, dd.blendMode = Jd.blendMode, dd.preWarmCycles = Jd.preWarmCycles, dd.preWarmStepOffset = Jd.preWarmStepOffset, dd.minInitialRotation = Jd.minInitialRotation, dd.maxInitialRotation = Jd.maxInitialRotation, dd.startSpriteCellID = Jd.startSpriteCellID, dd.spriteCellLoop = Jd.spriteCellLoop, dd.endSpriteCellID = Jd.endSpriteCellID, dd.spriteCellChangeSpeed = Jd.spriteCellChangeSpeed, dd.spriteCellWidth = Jd.spriteCellWidth, dd.spriteCellHeight = Jd.spriteCellHeight, dd.spriteRandomStartCell = Jd.spriteRandomStartCell, dd.isAnimationSheetEnabled = Jd.isAnimationSheetEnabled, dd.useLogarithmicDepth = Jd.useLogarithmicDepth;
-        const pd = Jd.getColorGradients();
-        if (pd) {
-          dd.colorGradients = [];
-          for (const Jd of pd) {
-            const kd = {
-              gradient: Jd.gradient,
-              color1: Jd.color1.spd()
+            const wQ = FQ.particleTexture;
+            QQ.textureName = FQ.particleTexture.name, QQ.invertY = !!wQ._invertY;
+            const LQ = {};
+            for (const QQ of JF) LQ[QQ] = wQ[QQ];
+            LQ.samplingMode = wQ.samplingMode, QQ.textureSettings = LQ
+          } QQ.isLocal = FQ.isLocal, lF.c.AppendSerializedAnimations(FQ, QQ), QQ.beginAnimationOnStart = FQ.beginAnimationOnStart, QQ.beginAnimationFrom = FQ.beginAnimationFrom, QQ.beginAnimationTo = FQ.beginAnimationTo, QQ.beginAnimationLoop = FQ.beginAnimationLoop, QQ.startDelay = FQ.startDelay, QQ.renderingGroupId = FQ.renderingGroupId, QQ.isBillboardBased = FQ.isBillboardBased, QQ.billboardMode = FQ.billboardMode, QQ.minAngularSpeed = FQ.minAngularSpeed, QQ.maxAngularSpeed = FQ.maxAngularSpeed, QQ.minSize = FQ.minSize, QQ.maxSize = FQ.maxSize, QQ.minScaleX = FQ.minScaleX, QQ.maxScaleX = FQ.maxScaleX, QQ.minScaleY = FQ.minScaleY, QQ.maxScaleY = FQ.maxScaleY, QQ.minEmitPower = FQ.minEmitPower, QQ.maxEmitPower = FQ.maxEmitPower, QQ.minLifeTime = FQ.minLifeTime, QQ.maxLifeTime = FQ.maxLifeTime, QQ.emitRate = FQ.emitRate, QQ.gravity = FQ.gravity.RLQ(), QQ.noiseStrength = FQ.noiseStrength.RLQ(), QQ.color1 = FQ.color1.RLQ(), QQ.color2 = FQ.color2.RLQ(), QQ.colorDead = FQ.colorDead.RLQ(), QQ.updateSpeed = FQ.updateSpeed, QQ.targetStopDuration = FQ.targetStopDuration, QQ.blendMode = FQ.blendMode, QQ.preWarmCycles = FQ.preWarmCycles, QQ.preWarmStepOffset = FQ.preWarmStepOffset, QQ.minInitialRotation = FQ.minInitialRotation, QQ.maxInitialRotation = FQ.maxInitialRotation, QQ.startSpriteCellID = FQ.startSpriteCellID, QQ.spriteCellLoop = FQ.spriteCellLoop, QQ.endSpriteCellID = FQ.endSpriteCellID, QQ.spriteCellChangeSpeed = FQ.spriteCellChangeSpeed, QQ.spriteCellWidth = FQ.spriteCellWidth, QQ.spriteCellHeight = FQ.spriteCellHeight, QQ.spriteRandomStartCell = FQ.spriteRandomStartCell, QQ.isAnimationSheetEnabled = FQ.isAnimationSheetEnabled, QQ.useLogarithmicDepth = FQ.useLogarithmicDepth;
+        const LQ = FQ.getColorGradients();
+        if (LQ) {
+          QQ.colorGradients = [];
+          for (const FQ of LQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              color1: FQ.color1.RLQ()
             };
-            Jd.color2 ? kd.color2 = Jd.color2.spd() : kd.color2 = Jd.color1.spd(), dd.colorGradients.push(kd)
+            FQ.color2 ? wQ.color2 = FQ.color2.RLQ() : wQ.color2 = FQ.color1.RLQ(), QQ.colorGradients.push(wQ)
           }
         }
-        const Nd = Jd.getRampGradients();
-        if (Nd) {
-          dd.rampGradients = [];
-          for (const Jd of Nd) {
-            const kd = {
-              gradient: Jd.gradient,
-              color: Jd.color.spd()
+        const qQ = FQ.getRampGradients();
+        if (qQ) {
+          QQ.rampGradients = [];
+          for (const FQ of qQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              color: FQ.color.RLQ()
             };
-            dd.rampGradients.push(kd)
+            QQ.rampGradients.push(wQ)
           }
-          dd.useRampGradients = Jd.useRampGradients
+          QQ.useRampGradients = FQ.useRampGradients
         }
-        const Wd = Jd.getColorRemapGradients();
-        if (Wd) {
-          dd.colorRemapGradients = [];
-          for (const Jd of Wd) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const oQ = FQ.getColorRemapGradients();
+        if (oQ) {
+          QQ.colorRemapGradients = [];
+          for (const FQ of oQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.colorRemapGradients.push(kd)
-          }
-        }
-        const Pd = Jd.getAlphaRemapGradients();
-        if (Pd) {
-          dd.alphaRemapGradients = [];
-          for (const Jd of Pd) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
-            };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.alphaRemapGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.colorRemapGradients.push(wQ)
           }
         }
-        const Zd = Jd.getSizeGradients();
-        if (Zd) {
-          dd.sizeGradients = [];
-          for (const Jd of Zd) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const DQ = FQ.getAlphaRemapGradients();
+        if (DQ) {
+          QQ.alphaRemapGradients = [];
+          for (const FQ of DQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.sizeGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.alphaRemapGradients.push(wQ)
           }
         }
-        const gd = Jd.getAngularSpeedGradients();
-        if (gd) {
-          dd.angularSpeedGradients = [];
-          for (const Jd of gd) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const kQ = FQ.getSizeGradients();
+        if (kQ) {
+          QQ.sizeGradients = [];
+          for (const FQ of kQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.angularSpeedGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.sizeGradients.push(wQ)
           }
         }
-        const Cd = Jd.getVelocityGradients();
-        if (Cd) {
-          dd.velocityGradients = [];
-          for (const Jd of Cd) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const vQ = FQ.getAngularSpeedGradients();
+        if (vQ) {
+          QQ.angularSpeedGradients = [];
+          for (const FQ of vQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.velocityGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.angularSpeedGradients.push(wQ)
           }
         }
-        const Kd = Jd.getDragGradients();
-        if (Kd) {
-          dd.dragGradients = [];
-          for (const Jd of Kd) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const mQ = FQ.getVelocityGradients();
+        if (mQ) {
+          QQ.velocityGradients = [];
+          for (const FQ of mQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.dragGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.velocityGradients.push(wQ)
           }
         }
-        const od = Jd.getEmitRateGradients();
-        if (od) {
-          dd.emitRateGradients = [];
-          for (const Jd of od) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const uQ = FQ.getDragGradients();
+        if (uQ) {
+          QQ.dragGradients = [];
+          for (const FQ of uQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.emitRateGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.dragGradients.push(wQ)
           }
         }
-        const ld = Jd.getStartSizeGradients();
-        if (ld) {
-          dd.startSizeGradients = [];
-          for (const Jd of ld) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const HQ = FQ.getEmitRateGradients();
+        if (HQ) {
+          QQ.emitRateGradients = [];
+          for (const FQ of HQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.startSizeGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.emitRateGradients.push(wQ)
           }
         }
-        const Qd = Jd.getLifeTimeGradients();
-        if (Qd) {
-          dd.lifeTimeGradients = [];
-          for (const Jd of Qd) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const bQ = FQ.getStartSizeGradients();
+        if (bQ) {
+          QQ.startSizeGradients = [];
+          for (const FQ of bQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.lifeTimeGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.startSizeGradients.push(wQ)
           }
         }
-        const Ld = Jd.getLimitVelocityGradients();
-        if (Ld) {
-          dd.limitVelocityGradients = [];
-          for (const Jd of Ld) {
-            const kd = {
-              gradient: Jd.gradient,
-              factor1: Jd.factor1
+        const YQ = FQ.getLifeTimeGradients();
+        if (YQ) {
+          QQ.lifeTimeGradients = [];
+          for (const FQ of YQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
             };
-            void 0 !== Jd.factor2 ? kd.factor2 = Jd.factor2 : kd.factor2 = Jd.factor1, dd.limitVelocityGradients.push(kd)
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.lifeTimeGradients.push(wQ)
           }
-          dd.limitVelocityDamping = Jd.limitVelocityDamping
         }
-        Jd.noiseTexture && (dd.noiseTexture = Jd.noiseTexture.serialize())
+        const xQ = FQ.getLimitVelocityGradients();
+        if (xQ) {
+          QQ.limitVelocityGradients = [];
+          for (const FQ of xQ) {
+            const wQ = {
+              gradient: FQ.gradient,
+              factor1: FQ.factor1
+            };
+            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.limitVelocityGradients.push(wQ)
+          }
+          QQ.limitVelocityDamping = FQ.limitVelocityDamping
+        }
+        FQ.noiseTexture && (QQ.noiseTexture = FQ.noiseTexture.serialize())
       }
-      clone(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const pd = {
+      clone(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const LQ = {
           ...this._customWrappers
         };
-        let Nd = null;
-        const Wd = this._engine;
-        if ((0, nd.e)(Wd.createEffectForParticles) && null != this.customShader) {
-          Nd = this.customShader;
-          const dd = Nd.shaderOptions.defines.length > 0 ? Nd.shaderOptions.defines.join("\n") : "",
-            Jd = Wd.createEffectForParticles(Nd.shaderPath.fragmentElement, Nd.shaderOptions.uniforms, Nd.shaderOptions.samplers, dd);
-          pd[0] ? pd[0].effect = Jd : this.setCustomEffect(Jd, 0)
+        let qQ = null;
+        const oQ = this._engine;
+        if ((0, zQ.b)(oQ.createEffectForParticles) && null != this.customShader) {
+          qQ = this.customShader;
+          const QQ = qQ.shaderOptions.defines.length > 0 ? qQ.shaderOptions.defines.join("\n") : "",
+            FQ = oQ.createEffectForParticles(qQ.shaderPath.fragmentElement, qQ.shaderOptions.uniforms, qQ.shaderOptions.samplers, QQ);
+          LQ[0] ? LQ[0].effect = FQ : this.setCustomEffect(FQ, 0)
         }
-        const Pd = this.serialize(kd),
-          Zd = !1 === kd && this.particleTexture ? this.particleTexture.clone() : null;
-        Zd && (Pd.textureName = void 0);
-        const gd = uJ.Parse(Pd, this._scene || this._engine, this._rootUrl);
-        return gd.name = dd, gd.customShader = Nd, gd._customWrappers = pd, Zd && (gd.particleTexture = Zd), void 0 === Jd && (Jd = this.emitter), this.noiseTexture && (gd.noiseTexture = this.noiseTexture.clone()), gd.emitter = Jd, this.preventAutoStart || gd.start(), gd
+        const DQ = this.serialize(wQ),
+          kQ = !1 === wQ && this.particleTexture ? this.particleTexture.clone() : null;
+        kQ && (DQ.textureName = void 0);
+        const vQ = EF.Parse(DQ, this._scene || this._engine, this._rootUrl);
+        return vQ.name = QQ, vQ.customShader = qQ, vQ._customWrappers = LQ, kQ && (vQ.particleTexture = kQ), void 0 === FQ && (FQ = this.emitter), this.noiseTexture && (vQ.noiseTexture = this.noiseTexture.clone()), vQ.emitter = FQ, this.preventAutoStart || vQ.start(), vQ
       }
     }
-    uJ.BILLBOARDMODE_Y = 2, uJ.BILLBOARDMODE_ALL = 7, uJ.BILLBOARDMODE_STRETCHED = 8, uJ.BILLBOARDMODE_STRETCHED_LOCAL = 9;
-    let tJ = !1;
-    tJ || (tJ = !0, fJ._ParseParticleSystem = uJ.Parse)
+    EF.BILLBOARDMODE_Y = 2, EF.BILLBOARDMODE_ALL = 7, EF.BILLBOARDMODE_STRETCHED = 8, EF.BILLBOARDMODE_STRETCHED_LOCAL = 9;
+    let nF = !1;
+    nF || (nF = !0, KF._ParseParticleSystem = EF.Parse)
   },
-  41607: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      SkyMaterial: () => Gd,
-      _MaxColorValueForRenderTarget: () => Id
+  41048: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      SkyMaterial: () => GQ,
+      _MaxColorValueForRenderTarget: () => MQ
     });
-    var pd = kd(39964),
-      Nd = kd(39966),
-      Wd = kd(39983),
-      Pd = kd(37245),
-      Zd = kd(40275),
-      gd = kd(40333),
-      Cd = kd(41566),
-      Kd = kd(41134),
-      od = kd(40054),
-      ld = kd(37303),
-      Qd = kd(40358),
-      Ld = kd(40339),
-      Od = kd(40317),
-      ed = kd(40308);
-    class Rd extends Zd.d {
+    var LQ = wQ(39402),
+      qQ = wQ(39409),
+      oQ = wQ(39426),
+      DQ = wQ(36688),
+      kQ = wQ(39711),
+      vQ = wQ(39768),
+      mQ = wQ(41005),
+      uQ = wQ(40554),
+      HQ = wQ(39491),
+      bQ = wQ(36741),
+      YQ = wQ(39790),
+      xQ = wQ(39770),
+      AQ = wQ(39754),
+      tQ = wQ(39752);
+    class eQ extends kQ.c {
       constructor() {
         super(), this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.POINTSIZE = !1, this.FOG = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.SKIPFINALCOLORCLAMP = !1, this.DITHER = !1, this.LOGARITHMICDEPTH = !1, this.SKY_RAW_HDR_OUTPUT = !1, this.rebuild()
       }
     }
 
-    function Id(dd) {
-      switch (dd) {
-        case Cd.e.TEXTURETYPE_HALF_FLOAT:
+    function MQ(QQ) {
+      switch (QQ) {
+        case mQ.d.TEXTURETYPE_HALF_FLOAT:
           return 65504;
-        case Cd.e.TEXTURETYPE_FLOAT:
+        case mQ.d.TEXTURETYPE_FLOAT:
           return 3e38;
         default:
           return 1
       }
     }
-    let Gd = (() => {
-      var dd;
-      let Jd, Zd, Cd, ld, Gd, vd, xd, qd, Bd, sd, ad, Md, Fd, Yd, md, bd = gd.c,
-        Sd = [],
-        jd = [],
-        Xd = [],
-        fd = [],
-        nd = [],
-        Ud = [],
-        yd = [],
-        Dd = [],
-        Td = [],
-        Ed = [],
-        cd = [],
-        hd = [],
-        rd = [],
-        ud = [],
-        td = [],
-        Vd = [],
-        zd = [],
-        Hd = [],
-        wd = [],
-        Ad = [],
-        dJ = [],
-        JJ = [],
-        kJ = [],
-        pJ = [],
-        NJ = [],
-        WJ = [],
-        PJ = [],
-        ZJ = [],
-        gJ = [],
-        CJ = [];
-      return dd = class extends bd {
-        constructor(dd, Jd) {
-          super(dd, Jd, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.luminance = (0, pd.i)(this, Sd, 1), this.turbidity = ((0, pd.i)(this, jd), (0, pd.i)(this, Xd, 10)), this.rayleigh = ((0, pd.i)(this, fd), (0, pd.i)(this, nd, 2)), this.mieCoefficient = ((0, pd.i)(this, Ud), (0, pd.i)(this, yd, .005)), this.mieDirectionalG = ((0, pd.i)(this, Dd), (0, pd.i)(this, Td, .8)), this.distance = ((0, pd.i)(this, Ed), (0, pd.i)(this, cd, 500)), this.inclination = ((0, pd.i)(this, hd), (0, pd.i)(this, rd, .49)), this.azimuth = ((0, pd.i)(this, ud), (0, pd.i)(this, td, .25)), this.sunPosition = ((0, pd.i)(this, Vd), (0, pd.i)(this, zd, new Pd.IL(0, 100, 0))), this.useSunPosition = ((0, pd.i)(this, Hd), (0, pd.i)(this, wd, !1)), this.cameraOffset = ((0, pd.i)(this, Ad), (0, pd.i)(this, dJ, Pd.IL.Zero())), this.up = ((0, pd.i)(this, JJ), (0, pd.i)(this, kJ, Pd.IL.Up())), this.dithering = ((0, pd.i)(this, pJ), (0, pd.i)(this, NJ, !1)), this.rawHdrOutput = ((0, pd.i)(this, WJ), (0, pd.i)(this, PJ, !1)), this.cloudiness = ((0, pd.i)(this, ZJ), (0, pd.i)(this, gJ, 0)), this._cameraPosition = ((0, pd.i)(this, CJ), Pd.IL.Zero()), this._skyOrientation = new Pd.Quaternion
+    let GQ = (() => {
+      var QQ;
+      let FQ, kQ, mQ, bQ, GQ, pQ, cQ, CQ, SQ, iQ, WQ, RQ, OQ, sQ, rQ, IQ = vQ.e,
+        UQ = [],
+        NQ = [],
+        TQ = [],
+        KQ = [],
+        zQ = [],
+        lQ = [],
+        jQ = [],
+        aQ = [],
+        XQ = [],
+        fQ = [],
+        VQ = [],
+        hQ = [],
+        JQ = [],
+        EQ = [],
+        nQ = [],
+        gQ = [],
+        PQ = [],
+        ZQ = [],
+        yQ = [],
+        BQ = [],
+        dQ = [],
+        QF = [],
+        FF = [],
+        wF = [],
+        LF = [],
+        qF = [],
+        oF = [],
+        DF = [],
+        kF = [],
+        vF = [];
+      return QQ = class extends IQ {
+        constructor(QQ, FQ) {
+          super(QQ, FQ, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.luminance = (0, LQ.l)(this, UQ, 1), this.turbidity = ((0, LQ.l)(this, NQ), (0, LQ.l)(this, TQ, 10)), this.rayleigh = ((0, LQ.l)(this, KQ), (0, LQ.l)(this, zQ, 2)), this.mieCoefficient = ((0, LQ.l)(this, lQ), (0, LQ.l)(this, jQ, .005)), this.mieDirectionalG = ((0, LQ.l)(this, aQ), (0, LQ.l)(this, XQ, .8)), this.distance = ((0, LQ.l)(this, fQ), (0, LQ.l)(this, VQ, 500)), this.inclination = ((0, LQ.l)(this, hQ), (0, LQ.l)(this, JQ, .49)), this.azimuth = ((0, LQ.l)(this, EQ), (0, LQ.l)(this, nQ, .25)), this.sunPosition = ((0, LQ.l)(this, gQ), (0, LQ.l)(this, PQ, new DQ.Ox(0, 100, 0))), this.useSunPosition = ((0, LQ.l)(this, ZQ), (0, LQ.l)(this, yQ, !1)), this.cameraOffset = ((0, LQ.l)(this, BQ), (0, LQ.l)(this, dQ, DQ.Ox.Zero())), this.up = ((0, LQ.l)(this, QF), (0, LQ.l)(this, FF, DQ.Ox.Up())), this.dithering = ((0, LQ.l)(this, wF), (0, LQ.l)(this, LF, !1)), this.rawHdrOutput = ((0, LQ.l)(this, qF), (0, LQ.l)(this, oF, !1)), this.cloudiness = ((0, LQ.l)(this, DF), (0, LQ.l)(this, kF, 0)), this._cameraPosition = ((0, LQ.l)(this, vF), DQ.Ox.Zero()), this._skyOrientation = new DQ.Quaternion
         }
         needAlphaBlending() {
           return this.alpha < 1
@@ -4123,287 +4123,287 @@ export const modules = {
         getAlphaTestTexture() {
           return null
         }
-        isReadyForSubMesh(Jd, kd) {
-          const pd = kd._drawWrapper;
-          if (this.isFrozen && pd.effect && pd._wasPreviouslyReady) return !0;
-          kd.materialDefines || (kd.materialDefines = new Rd);
-          const Nd = kd.materialDefines,
-            Wd = this.Wm();
-          if (this._isReadyForSubMesh(kd)) return !0;
-          if ((0, ed.eb)(Jd, Wd, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, !1, Nd, void 0, void 0, void 0, this._isVertexOutputInvariant), (0, ed.R)(Jd, Nd, !0, !1), Nd.IMAGEPROCESSINGPOSTPROCESS !== Wd.imageProcessingConfiguration.applyByPostProcess && Nd.markAsMiscDirty(), Nd.DITHER !== this.dithering && Nd.markAsMiscDirty(), Nd.SKY_RAW_HDR_OUTPUT !== this.rawHdrOutput && Nd.markAsMiscDirty(), Nd.isDirty) {
-            Nd.markAsProcessed(), Wd.resetCachedMaterial();
-            const Jd = new Ld.e;
-            Nd.FOG && Jd.addFallback(1, "FOG"), Nd.IMAGEPROCESSINGPOSTPROCESS = Wd.imageProcessingConfiguration.applyByPostProcess, Nd.DITHER = this.dithering, Nd.SKY_RAW_HDR_OUTPUT = this.rawHdrOutput;
-            const pd = [Kd.f.PositionKind];
-            Nd.VERTEXCOLOR && pd.push(Kd.f.ColorKind);
-            const Pd = "sky",
-              Zd = ["world", "viewProjection", "view", "vFogInfos", "vFogColor", "logarithmicDepthConstant", "pointSize", "luminance", "turbidity", "rayleigh", "mieCoefficient", "mieDirectionalG", "sunPosition", "cameraPosition", "cameraOffset", "up", "cloudiness", "maxColorValue"];
-            (0, Od.e)(Zd);
-            const gd = Nd.toString();
-            kd.setEffect(Wd.eL().createEffect(Pd, {
-              attributes: pd,
-              uniformsNames: Zd,
+        isReadyForSubMesh(FQ, wQ) {
+          const LQ = wQ._drawWrapper;
+          if (this.isFrozen && LQ.effect && LQ._wasPreviouslyReady) return !0;
+          wQ.materialDefines || (wQ.materialDefines = new eQ);
+          const qQ = wQ.materialDefines,
+            oQ = this.iN();
+          if (this._isReadyForSubMesh(wQ)) return !0;
+          if ((0, tQ.Y)(FQ, oQ, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, !1, qQ, void 0, void 0, void 0, this._isVertexOutputInvariant), (0, tQ.N)(FQ, qQ, !0, !1), qQ.IMAGEPROCESSINGPOSTPROCESS !== oQ.imageProcessingConfiguration.applyByPostProcess && qQ.markAsMiscDirty(), qQ.DITHER !== this.dithering && qQ.markAsMiscDirty(), qQ.SKY_RAW_HDR_OUTPUT !== this.rawHdrOutput && qQ.markAsMiscDirty(), qQ.isDirty) {
+            qQ.markAsProcessed(), oQ.resetCachedMaterial();
+            const FQ = new xQ.d;
+            qQ.FOG && FQ.addFallback(1, "FOG"), qQ.IMAGEPROCESSINGPOSTPROCESS = oQ.imageProcessingConfiguration.applyByPostProcess, qQ.DITHER = this.dithering, qQ.SKY_RAW_HDR_OUTPUT = this.rawHdrOutput;
+            const LQ = [uQ.d.PositionKind];
+            qQ.VERTEXCOLOR && LQ.push(uQ.d.ColorKind);
+            const DQ = "sky",
+              kQ = ["world", "viewProjection", "view", "vFogInfos", "vFogColor", "logarithmicDepthConstant", "pointSize", "luminance", "turbidity", "rayleigh", "mieCoefficient", "mieDirectionalG", "sunPosition", "cameraPosition", "cameraOffset", "up", "cloudiness", "maxColorValue"];
+            (0, AQ.d)(kQ);
+            const vQ = qQ.toString();
+            wQ.setEffect(oQ.Wx().createEffect(DQ, {
+              attributes: LQ,
+              uniformsNames: kQ,
               uniformBuffersNames: [],
               samplers: [],
-              defines: gd,
-              fallbacks: Jd,
+              defines: vQ,
+              fallbacks: FQ,
               onCompiled: this.onCompiled,
               onError: this.onError,
               shaderLanguage: this._shaderLanguage,
-              extraInitializationsAsync: dd._ShaderLoader.getLoadCallback(this._shaderLanguage)
-            }, Wd.eL()), Nd, this._materialContext)
+              extraInitializationsAsync: QQ._ShaderLoader.getLoadCallback(this._shaderLanguage)
+            }, oQ.Wx()), qQ, this._materialContext)
           }
-          return !(!kd.effect || !kd.effect.isReady()) && (Nd._renderId = Wd.getRenderId(), pd._wasPreviouslyReady = !0, !0)
+          return !(!wQ.effect || !wQ.effect.isReady()) && (qQ._renderId = oQ.getRenderId(), LQ._wasPreviouslyReady = !0, !0)
         }
-        bindForSubMesh(dd, Jd, kd) {
-          const pd = this.Wm(),
-            Nd = kd.materialDefines;
-          if (!Nd) return;
-          const Wd = kd.effect;
-          if (!Wd) return;
-          this._activeEffect = Wd, this.bindOnlyWorldMatrix(dd), this._activeEffect.setMatrix("viewProjection", pd.getTransformMatrix()), this._mustRebind(pd, Wd, kd) && ((0, Od.i)(Wd, this, pd), this.pointsCloud && this._activeEffect.setFloat("pointSize", this.pointSize), this._useLogarithmicDepth && (0, ed.s)(Nd, Wd, pd)), pd.fogEnabled && Jd.applyFog && pd.fogMode !== od.e.FOGMODE_NONE && this._activeEffect.setMatrix("view", pd.getViewMatrix()), (0, ed.k)(pd, Jd, this._activeEffect, this.rawHdrOutput);
-          const Zd = pd.activeCamera;
-          if (Zd) {
-            const dd = Zd.getWorldMatrix();
-            this._cameraPosition.x = dd.m[12], this._cameraPosition.y = dd.m[13], this._cameraPosition.z = dd.m[14], this._activeEffect.setVector3("cameraPosition", Pd.TmpVectors.IL[0].Fs(this._cameraPosition).hpd(pd.floatingOriginOffset))
+        bindForSubMesh(QQ, FQ, wQ) {
+          const LQ = this.iN(),
+            qQ = wQ.materialDefines;
+          if (!qQ) return;
+          const oQ = wQ.effect;
+          if (!oQ) return;
+          this._activeEffect = oQ, this.bindOnlyWorldMatrix(QQ), this._activeEffect.setMatrix("viewProjection", LQ.getTransformMatrix()), this._mustRebind(LQ, oQ, wQ) && ((0, AQ.h)(oQ, this, LQ), this.pointsCloud && this._activeEffect.setFloat("pointSize", this.pointSize), this._useLogarithmicDepth && (0, tQ.r)(qQ, oQ, LQ)), LQ.fogEnabled && FQ.applyFog && LQ.fogMode !== HQ.d.FOGMODE_NONE && this._activeEffect.setMatrix("view", LQ.getViewMatrix()), (0, tQ.g)(LQ, FQ, this._activeEffect, this.rawHdrOutput);
+          const kQ = LQ.activeCamera;
+          if (kQ) {
+            const QQ = kQ.getWorldMatrix();
+            this._cameraPosition.x = QQ.m[12], this._cameraPosition.y = QQ.m[13], this._cameraPosition.z = QQ.m[14], this._activeEffect.setVector3("cameraPosition", DQ.TmpVectors.Ox[0].Qs(this._cameraPosition).gLQ(LQ.floatingOriginOffset))
           }
           if (this._activeEffect.setVector3("cameraOffset", this.cameraOffset), this._activeEffect.setVector3("up", this.up), (this.rawHdrOutput || this.luminance > 0) && this._activeEffect.setFloat("luminance", this.luminance), this._activeEffect.setFloat("turbidity", this.turbidity), this._activeEffect.setFloat("rayleigh", this.rayleigh), this._activeEffect.setFloat("mieCoefficient", this.mieCoefficient), this._activeEffect.setFloat("mieDirectionalG", this.mieDirectionalG), this._activeEffect.setFloat("cloudiness", this.cloudiness), this.rawHdrOutput) {
-            const dd = pd.eL()._currentRenderTarget;
-            this._activeEffect.setFloat("maxColorValue", Id(dd?.texture?.type))
+            const QQ = LQ.Wx()._currentRenderTarget;
+            this._activeEffect.setFloat("maxColorValue", MQ(QQ?.texture?.type))
           }
           if (!this.useSunPosition) {
-            const dd = Math.PI * (this.inclination - .5),
-              Jd = 2 * Math.PI * (this.azimuth - .5);
-            this.sunPosition.x = this.distance * Math.cos(Jd) * Math.cos(dd), this.sunPosition.y = this.distance * Math.sin(-dd), this.sunPosition.z = this.distance * Math.sin(Jd) * Math.cos(dd), Pd.Quaternion.FromUnitVectorsToRef(Pd.IL.UpReadOnly, this.up, this._skyOrientation), this.sunPosition.rotateByQuaternionToRef(this._skyOrientation, this.sunPosition)
+            const QQ = Math.PI * (this.inclination - .5),
+              FQ = 2 * Math.PI * (this.azimuth - .5);
+            this.sunPosition.x = this.distance * Math.cos(FQ) * Math.cos(QQ), this.sunPosition.y = this.distance * Math.sin(-QQ), this.sunPosition.z = this.distance * Math.sin(FQ) * Math.cos(QQ), DQ.Quaternion.FromUnitVectorsToRef(DQ.Ox.UpReadOnly, this.up, this._skyOrientation), this.sunPosition.rotateByQuaternionToRef(this._skyOrientation, this.sunPosition)
           }
-          this._activeEffect.setVector3("sunPosition", this.sunPosition), this._afterBind(Jd, this._activeEffect, kd)
+          this._activeEffect.setVector3("sunPosition", this.sunPosition), this._afterBind(FQ, this._activeEffect, wQ)
         }
         getAnimatables() {
           return []
         }
-        dispose(dd) {
-          super.dispose(dd)
+        dispose(QQ) {
+          super.dispose(QQ)
         }
-        clone(Jd) {
-          return Wd.c.Clone((() => new dd(Jd, this.Wm())), this)
+        clone(FQ) {
+          return oQ.c.Clone((() => new QQ(FQ, this.iN())), this)
         }
         serialize() {
-          const dd = super.serialize();
-          return dd.customType = "BABYLON.SkyMaterial", dd
+          const QQ = super.serialize();
+          return QQ.customType = "BABYLON.SkyMaterial", QQ
         }
         getClassName() {
           return "SkyMaterial"
         }
-        static Parse(Jd, kd, pd) {
-          return Wd.c.Parse((() => new dd(Jd.name, kd)), Jd, kd, pd)
+        static Parse(FQ, wQ, LQ) {
+          return oQ.c.Parse((() => new QQ(FQ.name, wQ)), FQ, wQ, LQ)
         }
       }, (() => {
-        const kd = "function" === typeof Symbol && Symbol.metadata ? Object.create(bd[Symbol.metadata] ?? null) : void 0;
-        Jd = [(0, Nd.H)()], Zd = [(0, Nd.H)()], Cd = [(0, Nd.H)()], ld = [(0, Nd.H)()], Gd = [(0, Nd.H)()], vd = [(0, Nd.H)()], xd = [(0, Nd.H)()], qd = [(0, Nd.H)()], Bd = [(0, Nd.F)()], sd = [(0, Nd.H)()], ad = [(0, Nd.F)()], Md = [(0, Nd.F)()], Fd = [(0, Nd.H)()], Yd = [(0, Nd.H)()], md = [(0, Nd.H)()], (0, pd.h)(null, null, Jd, {
+        const wQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(IQ[Symbol.metadata] ?? null) : void 0;
+        FQ = [(0, qQ.I)()], kQ = [(0, qQ.I)()], mQ = [(0, qQ.I)()], bQ = [(0, qQ.I)()], GQ = [(0, qQ.I)()], pQ = [(0, qQ.I)()], cQ = [(0, qQ.I)()], CQ = [(0, qQ.I)()], SQ = [(0, qQ.F)()], iQ = [(0, qQ.I)()], WQ = [(0, qQ.F)()], RQ = [(0, qQ.F)()], OQ = [(0, qQ.I)()], sQ = [(0, qQ.I)()], rQ = [(0, qQ.I)()], (0, LQ.i)(null, null, FQ, {
           kind: "field",
           name: "luminance",
           static: !1,
           private: !1,
           access: {
-            has: dd => "luminance" in dd,
-            get: dd => dd.luminance,
-            set: (dd, Jd) => {
-              dd.luminance = Jd
+            has: QQ => "luminance" in QQ,
+            get: QQ => QQ.luminance,
+            set: (QQ, FQ) => {
+              QQ.luminance = FQ
             }
           },
-          metadata: kd
-        }, Sd, jd), (0, pd.h)(null, null, Zd, {
+          metadata: wQ
+        }, UQ, NQ), (0, LQ.i)(null, null, kQ, {
           kind: "field",
           name: "turbidity",
           static: !1,
           private: !1,
           access: {
-            has: dd => "turbidity" in dd,
-            get: dd => dd.turbidity,
-            set: (dd, Jd) => {
-              dd.turbidity = Jd
+            has: QQ => "turbidity" in QQ,
+            get: QQ => QQ.turbidity,
+            set: (QQ, FQ) => {
+              QQ.turbidity = FQ
             }
           },
-          metadata: kd
-        }, Xd, fd), (0, pd.h)(null, null, Cd, {
+          metadata: wQ
+        }, TQ, KQ), (0, LQ.i)(null, null, mQ, {
           kind: "field",
           name: "rayleigh",
           static: !1,
           private: !1,
           access: {
-            has: dd => "rayleigh" in dd,
-            get: dd => dd.rayleigh,
-            set: (dd, Jd) => {
-              dd.rayleigh = Jd
+            has: QQ => "rayleigh" in QQ,
+            get: QQ => QQ.rayleigh,
+            set: (QQ, FQ) => {
+              QQ.rayleigh = FQ
             }
           },
-          metadata: kd
-        }, nd, Ud), (0, pd.h)(null, null, ld, {
+          metadata: wQ
+        }, zQ, lQ), (0, LQ.i)(null, null, bQ, {
           kind: "field",
           name: "mieCoefficient",
           static: !1,
           private: !1,
           access: {
-            has: dd => "mieCoefficient" in dd,
-            get: dd => dd.mieCoefficient,
-            set: (dd, Jd) => {
-              dd.mieCoefficient = Jd
+            has: QQ => "mieCoefficient" in QQ,
+            get: QQ => QQ.mieCoefficient,
+            set: (QQ, FQ) => {
+              QQ.mieCoefficient = FQ
             }
           },
-          metadata: kd
-        }, yd, Dd), (0, pd.h)(null, null, Gd, {
+          metadata: wQ
+        }, jQ, aQ), (0, LQ.i)(null, null, GQ, {
           kind: "field",
           name: "mieDirectionalG",
           static: !1,
           private: !1,
           access: {
-            has: dd => "mieDirectionalG" in dd,
-            get: dd => dd.mieDirectionalG,
-            set: (dd, Jd) => {
-              dd.mieDirectionalG = Jd
+            has: QQ => "mieDirectionalG" in QQ,
+            get: QQ => QQ.mieDirectionalG,
+            set: (QQ, FQ) => {
+              QQ.mieDirectionalG = FQ
             }
           },
-          metadata: kd
-        }, Td, Ed), (0, pd.h)(null, null, vd, {
+          metadata: wQ
+        }, XQ, fQ), (0, LQ.i)(null, null, pQ, {
           kind: "field",
           name: "distance",
           static: !1,
           private: !1,
           access: {
-            has: dd => "distance" in dd,
-            get: dd => dd.distance,
-            set: (dd, Jd) => {
-              dd.distance = Jd
+            has: QQ => "distance" in QQ,
+            get: QQ => QQ.distance,
+            set: (QQ, FQ) => {
+              QQ.distance = FQ
             }
           },
-          metadata: kd
-        }, cd, hd), (0, pd.h)(null, null, xd, {
+          metadata: wQ
+        }, VQ, hQ), (0, LQ.i)(null, null, cQ, {
           kind: "field",
           name: "inclination",
           static: !1,
           private: !1,
           access: {
-            has: dd => "inclination" in dd,
-            get: dd => dd.inclination,
-            set: (dd, Jd) => {
-              dd.inclination = Jd
+            has: QQ => "inclination" in QQ,
+            get: QQ => QQ.inclination,
+            set: (QQ, FQ) => {
+              QQ.inclination = FQ
             }
           },
-          metadata: kd
-        }, rd, ud), (0, pd.h)(null, null, qd, {
+          metadata: wQ
+        }, JQ, EQ), (0, LQ.i)(null, null, CQ, {
           kind: "field",
           name: "azimuth",
           static: !1,
           private: !1,
           access: {
-            has: dd => "azimuth" in dd,
-            get: dd => dd.azimuth,
-            set: (dd, Jd) => {
-              dd.azimuth = Jd
+            has: QQ => "azimuth" in QQ,
+            get: QQ => QQ.azimuth,
+            set: (QQ, FQ) => {
+              QQ.azimuth = FQ
             }
           },
-          metadata: kd
-        }, td, Vd), (0, pd.h)(null, null, Bd, {
+          metadata: wQ
+        }, nQ, gQ), (0, LQ.i)(null, null, SQ, {
           kind: "field",
           name: "sunPosition",
           static: !1,
           private: !1,
           access: {
-            has: dd => "sunPosition" in dd,
-            get: dd => dd.sunPosition,
-            set: (dd, Jd) => {
-              dd.sunPosition = Jd
+            has: QQ => "sunPosition" in QQ,
+            get: QQ => QQ.sunPosition,
+            set: (QQ, FQ) => {
+              QQ.sunPosition = FQ
             }
           },
-          metadata: kd
-        }, zd, Hd), (0, pd.h)(null, null, sd, {
+          metadata: wQ
+        }, PQ, ZQ), (0, LQ.i)(null, null, iQ, {
           kind: "field",
           name: "useSunPosition",
           static: !1,
           private: !1,
           access: {
-            has: dd => "useSunPosition" in dd,
-            get: dd => dd.useSunPosition,
-            set: (dd, Jd) => {
-              dd.useSunPosition = Jd
+            has: QQ => "useSunPosition" in QQ,
+            get: QQ => QQ.useSunPosition,
+            set: (QQ, FQ) => {
+              QQ.useSunPosition = FQ
             }
           },
-          metadata: kd
-        }, wd, Ad), (0, pd.h)(null, null, ad, {
+          metadata: wQ
+        }, yQ, BQ), (0, LQ.i)(null, null, WQ, {
           kind: "field",
           name: "cameraOffset",
           static: !1,
           private: !1,
           access: {
-            has: dd => "cameraOffset" in dd,
-            get: dd => dd.cameraOffset,
-            set: (dd, Jd) => {
-              dd.cameraOffset = Jd
+            has: QQ => "cameraOffset" in QQ,
+            get: QQ => QQ.cameraOffset,
+            set: (QQ, FQ) => {
+              QQ.cameraOffset = FQ
             }
           },
-          metadata: kd
-        }, dJ, JJ), (0, pd.h)(null, null, Md, {
+          metadata: wQ
+        }, dQ, QF), (0, LQ.i)(null, null, RQ, {
           kind: "field",
           name: "up",
           static: !1,
           private: !1,
           access: {
-            has: dd => "up" in dd,
-            get: dd => dd.up,
-            set: (dd, Jd) => {
-              dd.up = Jd
+            has: QQ => "up" in QQ,
+            get: QQ => QQ.up,
+            set: (QQ, FQ) => {
+              QQ.up = FQ
             }
           },
-          metadata: kd
-        }, kJ, pJ), (0, pd.h)(null, null, Fd, {
+          metadata: wQ
+        }, FF, wF), (0, LQ.i)(null, null, OQ, {
           kind: "field",
           name: "dithering",
           static: !1,
           private: !1,
           access: {
-            has: dd => "dithering" in dd,
-            get: dd => dd.dithering,
-            set: (dd, Jd) => {
-              dd.dithering = Jd
+            has: QQ => "dithering" in QQ,
+            get: QQ => QQ.dithering,
+            set: (QQ, FQ) => {
+              QQ.dithering = FQ
             }
           },
-          metadata: kd
-        }, NJ, WJ), (0, pd.h)(null, null, Yd, {
+          metadata: wQ
+        }, LF, qF), (0, LQ.i)(null, null, sQ, {
           kind: "field",
           name: "rawHdrOutput",
           static: !1,
           private: !1,
           access: {
-            has: dd => "rawHdrOutput" in dd,
-            get: dd => dd.rawHdrOutput,
-            set: (dd, Jd) => {
-              dd.rawHdrOutput = Jd
+            has: QQ => "rawHdrOutput" in QQ,
+            get: QQ => QQ.rawHdrOutput,
+            set: (QQ, FQ) => {
+              QQ.rawHdrOutput = FQ
             }
           },
-          metadata: kd
-        }, PJ, ZJ), (0, pd.h)(null, null, md, {
+          metadata: wQ
+        }, oF, DF), (0, LQ.i)(null, null, rQ, {
           kind: "field",
           name: "cloudiness",
           static: !1,
           private: !1,
           access: {
-            has: dd => "cloudiness" in dd,
-            get: dd => dd.cloudiness,
-            set: (dd, Jd) => {
-              dd.cloudiness = Jd
+            has: QQ => "cloudiness" in QQ,
+            get: QQ => QQ.cloudiness,
+            set: (QQ, FQ) => {
+              QQ.cloudiness = FQ
             }
           },
-          metadata: kd
-        }, gJ, CJ), kd && Object.defineProperty(dd, Symbol.metadata, {
+          metadata: wQ
+        }, kF, vF), wQ && Object.defineProperty(QQ, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: kd
+          value: wQ
         })
-      })(), dd._ShaderLoader = new Qd.e((() => [kd.e(321).then((() => kd(60939))), kd.e(314).then((() => kd(60946)))]), (() => [kd.e(338).then((() => kd(60950))), kd.e(332).then((() => kd(60952)))])), dd
+      })(), QQ._ShaderLoader = new YQ.b((() => [wQ.e(321).then((() => wQ(60695))), wQ.e(314).then((() => wQ(60699)))]), (() => [wQ.e(338).then((() => wQ(60704))), wQ.e(332).then((() => wQ(60709)))])), QQ
     })();
-    (0, ld.h)("BABYLON.SkyMaterial", Gd)
+    (0, bQ.e)("BABYLON.SkyMaterial", GQ)
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

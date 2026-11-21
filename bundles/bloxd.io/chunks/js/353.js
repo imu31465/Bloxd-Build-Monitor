@@ -1,28 +1,28 @@
 export const id = 353;
 export const ids = [353];
 export const modules = {
-  60968: (dd, Jd, kd) => {
-    function pd(dd) {
-      return dd.features.has("timestamp-query")
+  60731: (QQ, FQ, wQ) => {
+    function LQ(QQ) {
+      return QQ.features.has("timestamp-query")
     }
 
-    function Nd(dd) {
-      return pd(dd) ? {
-        device: dd,
-        markerPipeline: dd.createComputePipeline({
+    function qQ(QQ) {
+      return LQ(QQ) ? {
+        device: QQ,
+        markerPipeline: QQ.createComputePipeline({
           layout: "auto",
           compute: {
-            module: dd.createShaderModule({
+            module: QQ.createShaderModule({
               code: "@compute @workgroup_size(1) fn main() {}"
             }),
             entryPoint: "main"
           }
         }),
-        querySet: dd.createQuerySet({
+        querySet: QQ.createQuerySet({
           type: "timestamp",
           count: 2
         }),
-        resolveBuf: dd.createBuffer({
+        resolveBuf: QQ.createBuffer({
           size: 16,
           usage: GPUBufferUsage.QUERY_RESOLVE | GPUBufferUsage.COPY_SRC
         }),
@@ -32,57 +32,57 @@ export const modules = {
       } : null
     }
 
-    function Wd(dd, Jd) {
-      const kd = Jd.beginComputePass({
+    function oQ(QQ, FQ) {
+      const wQ = FQ.beginComputePass({
         timestampWrites: {
-          querySet: dd.querySet,
+          querySet: QQ.querySet,
           beginningOfPassWriteIndex: 0
         }
       });
-      kd.setPipeline(dd.markerPipeline), kd.dispatchWorkgroups(1), kd.end()
+      wQ.setPipeline(QQ.markerPipeline), wQ.dispatchWorkgroups(1), wQ.end()
     }
 
-    function Pd(dd, Jd) {
-      const kd = Jd.beginComputePass({
+    function DQ(QQ, FQ) {
+      const wQ = FQ.beginComputePass({
         timestampWrites: {
-          querySet: dd.querySet,
+          querySet: QQ.querySet,
           endOfPassWriteIndex: 1
         }
       });
-      kd.setPipeline(dd.markerPipeline), kd.dispatchWorkgroups(1), kd.end()
+      wQ.setPipeline(QQ.markerPipeline), wQ.dispatchWorkgroups(1), wQ.end()
     }
 
-    function Zd(dd) {
-      if (dd.inFlight > 3) return;
-      const Jd = dd.device,
-        kd = dd.pool.pop() ?? Jd.createBuffer({
+    function kQ(QQ) {
+      if (QQ.inFlight > 3) return;
+      const FQ = QQ.device,
+        wQ = QQ.pool.pop() ?? FQ.createBuffer({
           size: 16,
           usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
         }),
-        pd = Jd.createCommandEncoder();
-      pd.resolveQuerySet(dd.querySet, 0, 2, dd.resolveBuf, 0), pd.copyBufferToBuffer(dd.resolveBuf, 0, kd, 0, 16), Jd.queue.submit([pd.finish()]), dd.inFlight++, kd.mapAsync(GPUMapMode.READ).then((() => {
-        const Jd = new BigInt64Array(kd.getMappedRange()),
-          pd = Number(Jd[1] - Jd[0]) / 1e6;
-        pd >= 0 && pd < 5e3 && (dd.lastMs = dd.lastMs > 0 ? .8 * dd.lastMs + .2 * pd : pd), kd.unmap(), dd.pool.push(kd), dd.inFlight--
+        LQ = FQ.createCommandEncoder();
+      LQ.resolveQuerySet(QQ.querySet, 0, 2, QQ.resolveBuf, 0), LQ.copyBufferToBuffer(QQ.resolveBuf, 0, wQ, 0, 16), FQ.queue.submit([LQ.finish()]), QQ.inFlight++, wQ.mapAsync(GPUMapMode.READ).then((() => {
+        const FQ = new BigInt64Array(wQ.getMappedRange()),
+          LQ = Number(FQ[1] - FQ[0]) / 1e6;
+        LQ >= 0 && LQ < 5e3 && (QQ.lastMs = QQ.lastMs > 0 ? .8 * QQ.lastMs + .2 * LQ : LQ), wQ.unmap(), QQ.pool.push(wQ), QQ.inFlight--
       }), (() => {
-        dd.inFlight--
+        QQ.inFlight--
       }))
     }
 
-    function gd(dd) {
-      dd.querySet.destroy(), dd.resolveBuf.destroy();
-      for (const Jd of dd.pool) Jd.destroy();
-      dd.pool.length = 0
+    function vQ(QQ) {
+      QQ.querySet.destroy(), QQ.resolveBuf.destroy();
+      for (const FQ of QQ.pool) FQ.destroy();
+      QQ.pool.length = 0
     }
-    kd.r(Jd), kd.d(Jd, {
-      createGpuFrameTimer: () => Nd,
-      destroyGpuFrameTimer: () => gd,
-      gpuFrameTimerBegin: () => Wd,
-      gpuFrameTimerEnd: () => Pd,
-      gpuFrameTimerResolve: () => Zd,
-      gpuTimingSupportedFor: () => pd
+    wQ.r(FQ), wQ.d(FQ, {
+      createGpuFrameTimer: () => qQ,
+      destroyGpuFrameTimer: () => vQ,
+      gpuFrameTimerBegin: () => oQ,
+      gpuFrameTimerEnd: () => DQ,
+      gpuFrameTimerResolve: () => kQ,
+      gpuTimingSupportedFor: () => LQ
     })
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,162 +1,162 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  4794: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => ld
+  4737: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => bQ
     });
-    var pd = kd(1044),
-      Nd = kd.n(pd),
-      Wd = kd(1059),
-      Pd = kd(1359),
-      Zd = kd(3360),
-      gd = kd(126),
-      Cd = kd(3408),
-      Kd = kd(3397),
-      od = kd(1103);
+    var LQ = wQ(1070),
+      qQ = wQ.n(LQ),
+      oQ = wQ(1079),
+      DQ = wQ(1348),
+      kQ = wQ(3380),
+      vQ = wQ(134),
+      mQ = wQ(3415),
+      uQ = wQ(3399),
+      HQ = wQ(1107);
 
-    function ld(dd) {
+    function bQ(QQ) {
       let {
-        game: Jd
-      } = dd;
-      const kd = (0, gd.n)() ? "large" : "small",
-        pd = (0, Cd.d)(Jd, kd),
-        ld = (0, Zd.h)(pd),
-        Qd = void 0 !== ld.blurhash;
-      return (0, od.jsxs)("div", {
+        game: FQ
+      } = QQ;
+      const wQ = (0, vQ.l)() ? "large" : "small",
+        LQ = (0, mQ.e)(FQ, wQ),
+        bQ = (0, kQ.f)(LQ),
+        YQ = void 0 !== bQ.blurhash;
+      return (0, HQ.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [ld.isLoading && !Qd && (0, od.jsx)(Pd.b, {
+        children: [bQ.isLoading && !YQ && (0, HQ.jsx)(DQ.c, {
           loaderType: "Secondary"
-        }), !ld.failed && (null !== ld.src || Qd) && (0, od.jsx)("div", {
-          className: Nd()("SchematicImage", Kd.f, {
-            SchematicImageFadeIn: ld.fadeIn && !Qd
+        }), !bQ.failed && (null !== bQ.src || YQ) && (0, HQ.jsx)("div", {
+          className: qQ()("SchematicImage", uQ.j, {
+            SchematicImageFadeIn: bQ.fadeIn && !YQ
           }),
-          style: (0, Kd.c)(ld),
-          children: (0, od.jsx)(Kd.b, {
-            image: ld
+          style: (0, uQ.f)(bQ),
+          children: (0, HQ.jsx)(uQ.b, {
+            image: bQ
           })
-        }), ld.failed && (0, od.jsx)("div", {
+        }), bQ.failed && (0, HQ.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, od.jsx)(Wd.e, {
+          children: (0, HQ.jsx)(oQ.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4909: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Qd
+  4879: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => YQ
     });
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(4841),
-      Zd = kd(1359),
-      gd = kd(1211),
-      Cd = kd(3014),
-      Kd = kd(3142),
-      od = kd(1059),
-      ld = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(4794),
+      kQ = wQ(1348),
+      vQ = wQ(1207),
+      mQ = wQ(3045),
+      uQ = wQ(3162),
+      HQ = wQ(1079),
+      bQ = wQ(1107);
 
-    function Qd(dd) {
+    function YQ(QQ) {
       let {
-        folderName: Jd,
-        onTexturePackUpdated: Nd,
-        disabled: Qd = !1,
-        maxFileSizeMb: Ld,
-        packOwner: Od
-      } = dd;
+        folderName: FQ,
+        onTexturePackUpdated: qQ,
+        disabled: YQ = !1,
+        maxFileSizeMb: xQ,
+        packOwner: AQ
+      } = QQ;
       const {
-        t: ed
-      } = (0, gd.B)(), [Rd, Id] = (0, pd.useState)(!1), [Gd, vd] = (0, pd.useState)(null), [xd, qd] = (0, pd.useState)(null), Bd = (0, pd.useRef)(null);
+        t: tQ
+      } = (0, vQ.y)(), [eQ, MQ] = (0, LQ.useState)(!1), [GQ, pQ] = (0, LQ.useState)(null), [cQ, CQ] = (0, LQ.useState)(null), SQ = (0, LQ.useRef)(null);
       const {
-        getRootProps: sd,
-        getInputProps: ad,
-        isDragActive: Md
-      } = (0, Pd.c)({
-        onDrop: async function(dd) {
-          Id(!0);
+        getRootProps: iQ,
+        getInputProps: WQ,
+        isDragActive: RQ
+      } = (0, DQ.b)({
+        onDrop: async function(QQ) {
+          MQ(!0);
           try {
-            const Jd = await (0, Cd.o)(dd);
-            if ("customGame" === Od && (0, Kd.l)(Jd)) return void vd(ed(Kd.b));
-            if (void 0 !== Ld) {
-              const dd = JSON.stringify(Jd).length / 1048576;
-              if (dd > Ld) return void vd(`File size is too large. Max size is ${Ld}MB. Current size is ${dd}MB.`)
+            const FQ = await (0, mQ.o)(QQ);
+            if ("customGame" === AQ && (0, uQ.n)(FQ)) return void pQ(tQ(uQ.e));
+            if (void 0 !== xQ) {
+              const QQ = JSON.stringify(FQ).length / 1048576;
+              if (QQ > xQ) return void pQ(`File size is too large. Max size is ${xQ}MB. Current size is ${QQ}MB.`)
             }
-            vd(null), qd(null), Nd(Jd), Bd.current = Jd,
-              function(dd, Jd) {
-                const pd = dd.modelOverrides;
-                pd && Promise.all([kd.e(196), kd.e(195)]).then((() => kd(9306))).then((kd => {
+            pQ(null), CQ(null), qQ(FQ), SQ.current = FQ,
+              function(QQ, FQ) {
+                const LQ = QQ.modelOverrides;
+                LQ && Promise.all([wQ.e(196), wQ.e(195)]).then((() => wQ(9173))).then((wQ => {
                   let {
-                    packDisplayName: Nd,
-                    refusedPackModels: Wd,
-                    packModelSummary: Pd
-                  } = kd;
-                  const Zd = Nd(dd.metaData);
-                  Jd(Pd(Zd, Wd(Zd, pd, !1)))
-                })).catch((dd => {
-                  console.error("Checking the texture pack's models failed:", dd)
+                    packDisplayName: qQ,
+                    refusedPackModels: oQ,
+                    packModelSummary: DQ
+                  } = wQ;
+                  const kQ = qQ(QQ.metaData);
+                  FQ(DQ(kQ, oQ(kQ, LQ, !1)))
+                })).catch((QQ => {
+                  console.error("Checking the texture pack's models failed:", QQ)
                 }))
-              }(Jd, (dd => {
-                Bd.current === Jd && qd(dd)
+              }(FQ, (QQ => {
+                SQ.current === FQ && CQ(QQ)
               }))
           } catch {
-            vd("Invalid Texture Pack Folder")
+            pQ("Invalid Texture Pack Folder")
           } finally {
-            Id(!1)
+            MQ(!1)
           }
         },
         useFsAccessApi: !1,
-        disabled: Qd
+        disabled: YQ
       });
-      return (0, ld.jsxs)("div", {
+      return (0, bQ.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, ld.jsxs)("div", {
+        children: [(0, bQ.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [ed("settingsMenu:customTextureWarning"), ".", (0, ld.jsx)("br", {}), ed("settingsMenu:viewDocumentation"), ":", " ", (0, ld.jsx)("a", {
+          children: [tQ("settingsMenu:customTextureWarning"), ".", (0, bQ.jsx)("br", {}), tQ("settingsMenu:viewDocumentation"), ":", " ", (0, bQ.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), Gd && (0, ld.jsxs)("div", {
+        }), GQ && (0, bQ.jsxs)("div", {
           className: "CustomTextureError",
-          children: [ed("general:error"), ": ", Gd]
-        }), xd && (0, ld.jsx)("div", {
+          children: [tQ("general:error"), ": ", GQ]
+        }), cQ && (0, bQ.jsx)("div", {
           className: "CustomTextureError",
-          children: xd
-        }), (0, ld.jsxs)("div", {
-          ...sd({
-            className: Wd()("CustomTextureFolderUpload", {
-              ActiveDrag: Md,
-              Disabled: Qd
+          children: cQ
+        }), (0, bQ.jsxs)("div", {
+          ...iQ({
+            className: oQ()("CustomTextureFolderUpload", {
+              ActiveDrag: RQ,
+              Disabled: YQ
             })
           }),
-          children: [(0, ld.jsx)("input", {
-            ...ad({
+          children: [(0, bQ.jsx)("input", {
+            ...WQ({
               webkitdirectory: "true"
             })
-          }), Rd && (0, ld.jsx)("div", {
+          }), eQ && (0, bQ.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, ld.jsx)(Zd.b, {})
-          }), !Rd && !Md && Jd && (0, ld.jsxs)(ld.Fragment, {
-            children: [(0, ld.jsx)("div", {
+            children: (0, bQ.jsx)(kQ.c, {})
+          }), !eQ && !RQ && FQ && (0, bQ.jsxs)(bQ.Fragment, {
+            children: [(0, bQ.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, ld.jsx)(od.e, {
+              children: (0, bQ.jsx)(HQ.c, {
                 name: "folder-image"
               })
-            }), (0, ld.jsx)("div", {
+            }), (0, bQ.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: Jd
+              children: FQ
             })]
-          }), !Rd && (Md || !Jd) && (0, ld.jsxs)(ld.Fragment, {
-            children: [(0, ld.jsx)("div", {
+          }), !eQ && (RQ || !FQ) && (0, bQ.jsxs)(bQ.Fragment, {
+            children: [(0, bQ.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, ld.jsx)(od.e, {
+              children: (0, bQ.jsx)(HQ.c, {
                 name: "up-from-bracket"
               })
-            }), (0, ld.jsx)("div", {
+            }), (0, bQ.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
               children: "Drag and drop a Texture Pack folder here"
             })]
@@ -165,310 +165,310 @@ export const modules = {
       })
     }
   },
-  4877: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Ld,
-      g: () => Gd,
-      h: () => Od,
-      l: () => Id
+  4837: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => xQ,
+      f: () => GQ,
+      g: () => AQ,
+      h: () => MQ
     });
-    var pd = kd(56),
-      Nd = kd(4883),
-      Wd = kd(4203),
-      Pd = kd(1384),
-      Zd = kd(4904),
-      gd = kd(1044),
-      Cd = kd.n(gd),
-      Kd = kd(1371),
-      od = kd(1753),
-      ld = kd(4907),
-      Qd = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(4844),
+      oQ = wQ(4233),
+      DQ = wQ(1367),
+      kQ = wQ(4867),
+      vQ = wQ(1070),
+      mQ = wQ.n(vQ),
+      uQ = wQ(1362),
+      HQ = wQ(1725),
+      bQ = wQ(4875),
+      YQ = wQ(1107);
 
-    function Ld(dd) {
+    function xQ(QQ) {
       let {
-        label: Jd,
-        onClick: kd,
-        checked: pd,
-        circleInfoText: Nd,
-        className: Zd,
-        disabled: gd,
-        note: Kd
-      } = dd;
-      return (0, Qd.jsxs)("div", {
-        "aria-disabled": gd || void 0,
+        label: FQ,
+        onClick: wQ,
+        checked: LQ,
+        circleInfoText: qQ,
+        className: kQ,
+        disabled: vQ,
+        note: uQ
+      } = QQ;
+      return (0, YQ.jsxs)("div", {
+        "aria-disabled": vQ || void 0,
         "data-pad-focusable": !0,
-        className: Cd()("SettingBox CheckboxContainer", {
-          [Zd]: Zd,
-          SettingBoxDisabled: gd
+        className: mQ()("SettingBox CheckboxContainer", {
+          [kQ]: kQ,
+          SettingBoxDisabled: vQ
         }),
         onClick: () => {
-          gd || kd(!pd)
+          vQ || wQ(!LQ)
         },
-        children: [(0, Qd.jsxs)("div", {
+        children: [(0, YQ.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Qd.jsx)("label", {
+          children: [(0, YQ.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Qd.jsx)(Wd.e, {
+            children: (0, YQ.jsx)(oQ.d, {
               className: "SettingsCheckbox",
-              checked: pd,
-              disabled: gd,
+              checked: LQ,
+              disabled: vQ,
               onChange: () => {}
             })
-          }), (0, Qd.jsxs)("div", {
+          }), (0, YQ.jsxs)("div", {
             className: "CheckboxText",
-            children: [Jd, Nd && (0, Qd.jsx)("span", {
-              onClick: dd => dd.stopPropagation(),
-              children: (0, Qd.jsx)(Pd.e, {
+            children: [FQ, qQ && (0, YQ.jsx)("span", {
+              onClick: QQ => QQ.stopPropagation(),
+              children: (0, YQ.jsx)(DQ.b, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: Nd
+                hoverInfo: qQ
               })
             })]
           })]
-        }), Kd && (0, Qd.jsx)("div", {
+        }), uQ && (0, YQ.jsx)("div", {
           className: "SettingNote",
-          children: Kd
+          children: uQ
         })]
       })
     }
 
-    function Od(dd) {
+    function AQ(QQ) {
       let {
-        name: Jd,
-        onChange: kd,
-        min: Nd,
-        max: Wd,
-        step: Zd,
-        initValue: gd,
-        circleInfoText: Kd,
-        format: od,
-        className: ld,
-        padStep: Ld,
-        disabled: Od = !1,
-        selectableMax: ed,
-        cappedNote: Id,
-        onChangeComplete: Gd
-      } = dd;
-      const [vd, xd] = (0, pd.useState)(gd), qd = (0, pd.useRef)(gd);
-      (0, pd.useEffect)((() => {
-        qd.current = gd, xd(gd)
-      }), [gd]);
-      const Bd = void 0 !== ed && ed < Wd,
-        sd = Bd ? {
-          "--slider-selectable": (ed - Nd) / (Wd - Nd)
+        name: FQ,
+        onChange: wQ,
+        min: qQ,
+        max: oQ,
+        step: kQ,
+        initValue: vQ,
+        circleInfoText: uQ,
+        format: HQ,
+        className: bQ,
+        padStep: xQ,
+        disabled: AQ = !1,
+        selectableMax: tQ,
+        cappedNote: MQ,
+        onChangeComplete: GQ
+      } = QQ;
+      const [pQ, cQ] = (0, LQ.useState)(vQ), CQ = (0, LQ.useRef)(vQ);
+      (0, LQ.useEffect)((() => {
+        CQ.current = vQ, cQ(vQ)
+      }), [vQ]);
+      const SQ = void 0 !== tQ && tQ < oQ,
+        iQ = SQ ? {
+          "--slider-selectable": (tQ - qQ) / (oQ - qQ)
         } : void 0;
-      return (0, Qd.jsxs)("div", {
-        className: Cd()("SettingBox SettingsSliderDiv", {
-          [ld]: ld,
-          SettingBoxDisabled: Od,
-          SliderCapped: Bd
+      return (0, YQ.jsxs)("div", {
+        className: mQ()("SettingBox SettingsSliderDiv", {
+          [bQ]: bQ,
+          SettingBoxDisabled: AQ,
+          SliderCapped: SQ
         }),
-        style: sd,
-        children: [(0, Qd.jsxs)("div", {
+        style: iQ,
+        children: [(0, YQ.jsxs)("div", {
           className: "SliderText",
-          children: [`${Jd}: ${od?od(vd):vd}`, Kd && (0, Qd.jsx)(Pd.e, {
+          children: [`${FQ}: ${HQ?HQ(pQ):pQ}`, uQ && (0, YQ.jsx)(DQ.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Kd
+            hoverInfo: uQ
           })]
-        }), (0, Qd.jsx)("div", {
+        }), (0, YQ.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Qd.jsx)(Rd, {
-            value: vd,
-            min: Nd,
-            max: Wd,
-            step: Zd,
-            onChange: dd => {
-              if (Bd && dd >= ed && vd === ed) return;
-              const Jd = Bd ? Math.min(dd, ed) : dd;
-              qd.current = Jd, xd(Jd), kd(Jd)
+          children: (0, YQ.jsx)(eQ, {
+            value: pQ,
+            min: qQ,
+            max: oQ,
+            step: kQ,
+            onChange: QQ => {
+              if (SQ && QQ >= tQ && pQ === tQ) return;
+              const FQ = SQ ? Math.min(QQ, tQ) : QQ;
+              CQ.current = FQ, cQ(FQ), wQ(FQ)
             },
-            onChangeComplete: Gd && (() => {
-              Gd(qd.current)
+            onChangeComplete: GQ && (() => {
+              GQ(CQ.current)
             }),
-            format: od,
-            padStep: Ld,
-            disabled: Od
+            format: HQ,
+            padStep: xQ,
+            disabled: AQ
           })
-        }), Bd && Id && (0, Qd.jsx)("div", {
+        }), SQ && MQ && (0, YQ.jsx)("div", {
           className: "SettingNote",
-          children: Id
+          children: MQ
         })]
       })
     }
-    const ed = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const tQ = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function Rd(dd) {
-      var Jd;
+    function eQ(QQ) {
+      var FQ;
       let {
-        value: kd,
-        min: Wd,
-        max: Pd,
-        step: Zd,
-        onChange: gd,
-        orientation: Cd,
-        reverse: Kd,
-        setIsChanging: od,
-        tooltip: Ld,
-        labels: Od,
-        handleLabel: Rd,
-        format: Id,
-        onChangeStart: Gd,
-        onChangeComplete: vd,
-        padStep: xd,
-        disabled: qd = !1
-      } = dd;
-      const Bd = (0, pd.useRef)(null),
-        sd = (0, pd.useRef)(null);
-      (0, pd.useLayoutEffect)((() => {
-        var dd, Jd, kd;
-        const pd = null !== (dd = null === (Jd = Bd.current) || void 0 === Jd ? void 0 : Jd.querySelector(".rangeslider")) && void 0 !== dd ? dd : null;
-        null === pd || void 0 === pd || pd.setAttribute("data-pad-slider", ""), null === pd || void 0 === pd || pd.setAttribute("data-pad-focusable", ""), null === pd || void 0 === pd || null === (kd = pd.querySelector(".rangeslider__handle")) || void 0 === kd || kd.setAttribute("data-pad-slider-handle", ""), sd.current = pd
-      }), []), (0, pd.useLayoutEffect)((() => {
-        var dd, Jd;
-        qd ? null === (dd = sd.current) || void 0 === dd || dd.setAttribute("aria-disabled", "true") : null === (Jd = sd.current) || void 0 === Jd || Jd.removeAttribute("aria-disabled")
-      }), [qd]);
-      const ad = (null !== (Jd = String(Zd).split(".")[1]) && void 0 !== Jd ? Jd : "").length,
-        Md = dd => {
-          const Jd = Number((Math.round((dd - Wd) / Zd) * Zd + Wd).toFixed(ad));
-          return Math.min(Pd, Math.max(Wd, Jd))
+        value: wQ,
+        min: oQ,
+        max: DQ,
+        step: kQ,
+        onChange: vQ,
+        orientation: mQ,
+        reverse: uQ,
+        setIsChanging: HQ,
+        tooltip: xQ,
+        labels: AQ,
+        handleLabel: eQ,
+        format: MQ,
+        onChangeStart: GQ,
+        onChangeComplete: pQ,
+        padStep: cQ,
+        disabled: CQ = !1
+      } = QQ;
+      const SQ = (0, LQ.useRef)(null),
+        iQ = (0, LQ.useRef)(null);
+      (0, LQ.useLayoutEffect)((() => {
+        var QQ, FQ, wQ;
+        const LQ = null !== (QQ = null === (FQ = SQ.current) || void 0 === FQ ? void 0 : FQ.querySelector(".rangeslider")) && void 0 !== QQ ? QQ : null;
+        null === LQ || void 0 === LQ || LQ.setAttribute("data-pad-slider", ""), null === LQ || void 0 === LQ || LQ.setAttribute("data-pad-focusable", ""), null === LQ || void 0 === LQ || null === (wQ = LQ.querySelector(".rangeslider__handle")) || void 0 === wQ || wQ.setAttribute("data-pad-slider-handle", ""), iQ.current = LQ
+      }), []), (0, LQ.useLayoutEffect)((() => {
+        var QQ, FQ;
+        CQ ? null === (QQ = iQ.current) || void 0 === QQ || QQ.setAttribute("aria-disabled", "true") : null === (FQ = iQ.current) || void 0 === FQ || FQ.removeAttribute("aria-disabled")
+      }), [CQ]);
+      const WQ = (null !== (FQ = String(kQ).split(".")[1]) && void 0 !== FQ ? FQ : "").length,
+        RQ = QQ => {
+          const FQ = Number((Math.round((QQ - oQ) / kQ) * kQ + oQ).toFixed(WQ));
+          return Math.min(DQ, Math.max(oQ, FQ))
         },
-        Fd = (0, pd.useRef)(vd);
-      Fd.current = vd, (0, pd.useEffect)((() => {
-        const dd = Bd.current;
-        if (!dd) return;
-        const Jd = dd => {
-          var Jd;
-          ed.has(dd.key) && (null === (Jd = Fd.current) || void 0 === Jd || Jd.call(Fd))
+        OQ = (0, LQ.useRef)(pQ);
+      OQ.current = pQ, (0, LQ.useEffect)((() => {
+        const QQ = SQ.current;
+        if (!QQ) return;
+        const FQ = QQ => {
+          var FQ;
+          tQ.has(QQ.key) && (null === (FQ = OQ.current) || void 0 === FQ || FQ.call(OQ))
         };
-        return dd.addEventListener("keyup", Jd), () => {
-          dd.removeEventListener("keyup", Jd)
+        return QQ.addEventListener("keyup", FQ), () => {
+          QQ.removeEventListener("keyup", FQ)
         }
       }), []);
-      const Yd = (0, pd.useRef)(!1);
-      return (0, ld.e)(sd, {
-        adjust: dd => {
-          if (qd) return;
-          const Jd = null !== xd && void 0 !== xd ? xd : Math.max(Zd, Math.round((Pd - Wd) / 20 / Zd) * Zd),
-            pd = Md(kd + dd * Jd * (Kd ? -1 : 1));
-          pd !== kd && (null === Gd || void 0 === Gd || Gd(), gd(pd), null === vd || void 0 === vd || vd())
+      const sQ = (0, LQ.useRef)(!1);
+      return (0, bQ.c)(iQ, {
+        adjust: QQ => {
+          if (CQ) return;
+          const FQ = null !== cQ && void 0 !== cQ ? cQ : Math.max(kQ, Math.round((DQ - oQ) / 20 / kQ) * kQ),
+            LQ = RQ(wQ + QQ * FQ * (uQ ? -1 : 1));
+          LQ !== wQ && (null === GQ || void 0 === GQ || GQ(), vQ(LQ), null === pQ || void 0 === pQ || pQ())
         },
-        setFraction: dd => {
-          if (qd) return;
-          const Jd = Md(Wd + (Kd ? 1 - dd : dd) * (Pd - Wd));
-          Jd !== kd && (Yd.current || (Yd.current = !0, null === Gd || void 0 === Gd || Gd()), gd(Jd))
+        setFraction: QQ => {
+          if (CQ) return;
+          const FQ = RQ(oQ + (uQ ? 1 - QQ : QQ) * (DQ - oQ));
+          FQ !== wQ && (sQ.current || (sQ.current = !0, null === GQ || void 0 === GQ || GQ()), vQ(FQ))
         },
         endDrag: () => {
-          Yd.current && (Yd.current = !1, null === vd || void 0 === vd || vd())
+          sQ.current && (sQ.current = !1, null === pQ || void 0 === pQ || pQ())
         }
-      }), (0, Qd.jsx)("div", {
-        ref: Bd,
+      }), (0, YQ.jsx)("div", {
+        ref: SQ,
         style: {
           display: "contents"
         },
-        children: (0, Qd.jsx)(Nd.c, {
-          value: kd,
-          min: Wd,
-          max: Pd,
-          step: Zd,
-          onChange: gd,
-          orientation: Cd,
-          reverse: Kd,
-          tooltip: Ld,
-          labels: Od,
-          handleLabel: Rd,
-          format: Id,
+        children: (0, YQ.jsx)(qQ.b, {
+          value: wQ,
+          min: oQ,
+          max: DQ,
+          step: kQ,
+          onChange: vQ,
+          orientation: mQ,
+          reverse: uQ,
+          tooltip: xQ,
+          labels: AQ,
+          handleLabel: eQ,
+          format: MQ,
           onChangeStart: () => {
-            null === Gd || void 0 === Gd || Gd(), null === od || void 0 === od || od(!0)
+            null === GQ || void 0 === GQ || GQ(), null === HQ || void 0 === HQ || HQ(!0)
           },
           onChangeComplete: () => {
-            null === od || void 0 === od || od(!1), null === vd || void 0 === vd || vd()
+            null === HQ || void 0 === HQ || HQ(!1), null === pQ || void 0 === pQ || pQ()
           }
         })
       })
     }
-    async function Id() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const Jd = Kd.NotificationProvider.showPromptPopup({
+    async function MQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const FQ = uQ.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: dd
+        unlockPointerKey: QQ
       });
-      !0 === await Jd.getResult() && (0, od.reloadBloxd)()
+      !0 === await FQ.getResult() && (0, HQ.reloadBloxd)()
     }
 
-    function Gd(dd) {
+    function GQ(QQ) {
       let {
-        label: Jd,
-        options: kd,
-        value: pd,
-        onChange: Nd,
-        circleInfoText: Wd
-      } = dd;
-      return (0, Qd.jsxs)("div", {
+        label: FQ,
+        options: wQ,
+        value: LQ,
+        onChange: qQ,
+        circleInfoText: oQ
+      } = QQ;
+      return (0, YQ.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Qd.jsxs)("div", {
+        children: [(0, YQ.jsxs)("div", {
           className: "SliderText",
-          children: [Jd, Wd && (0, Qd.jsx)(Pd.e, {
+          children: [FQ, oQ && (0, YQ.jsx)(DQ.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Wd
+            hoverInfo: oQ
           })]
-        }), (0, Qd.jsx)(Zd.c, {
-          ariaLabel: Jd,
-          options: kd,
-          value: pd,
-          onChange: Nd
+        }), (0, YQ.jsx)(kQ.c, {
+          ariaLabel: FQ,
+          options: wQ,
+          value: LQ,
+          onChange: qQ
         })]
       })
     }
   },
-  4869: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Rd,
-      f: () => Id
+  4834: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => eQ,
+      f: () => MQ
     });
-    var pd = kd(3014),
-      Nd = kd(3018),
-      Wd = kd(56),
-      Pd = kd(1044),
-      Zd = kd.n(Pd),
-      gd = kd(1359),
-      Cd = kd(3011),
-      Kd = kd(1371),
-      od = kd(4877),
-      ld = kd(4909),
-      Qd = kd(626),
-      Ld = kd(4911),
-      Od = kd(1103);
+    var LQ = wQ(3045),
+      qQ = wQ(3047),
+      oQ = wQ(53),
+      DQ = wQ(1070),
+      kQ = wQ.n(DQ),
+      vQ = wQ(1348),
+      mQ = wQ(3037),
+      uQ = wQ(1362),
+      HQ = wQ(4837),
+      bQ = wQ(4879),
+      YQ = wQ(634),
+      xQ = wQ(4884),
+      AQ = wQ(1107);
 
-    function ed() {
-      (0, od.l)("texturePackPickReload")
+    function tQ() {
+      (0, HQ.h)("texturePackPickReload")
     }
 
-    function Rd(dd) {
-      var Jd;
+    function eQ(QQ) {
+      var FQ;
       let {
-        setApplySettingsCallback: kd
-      } = dd;
-      const [, Pd] = (0, Wd.useReducer)((dd => dd + 1), 0), Zd = (0, Wd.useRef)(!1), gd = (0, Wd.useRef)(null);
+        setApplySettingsCallback: wQ
+      } = QQ;
+      const [, DQ] = (0, oQ.useReducer)((QQ => QQ + 1), 0), kQ = (0, oQ.useRef)(!1), vQ = (0, oQ.useRef)(null);
 
-      function Rd(dd, Jd) {
-        Cd.d.setFromJson(dd, "player");
-        const pd = Cd.d.saveTexturePack();
-        if (Qd.x) {
-          const dd = Cd.d.toJson();
-          pd.then((Jd => {
-            Jd && (0, Ld.i)(dd, ed)
+      function eQ(QQ, FQ) {
+        mQ.b.setFromJson(QQ, "player");
+        const LQ = mQ.b.saveTexturePack();
+        if (YQ.s) {
+          const QQ = mQ.b.toJson();
+          LQ.then((FQ => {
+            FQ && (0, xQ.i)(QQ, tQ)
           }))
-        } else Zd.current ||= Jd, gd.current !== Cd.d.getId() || Cd.d.getId() === Nd.s.CUSTOM && Zd.current ? kd((() => od.l)) : kd(null);
-        Pd()
+        } else kQ.current ||= FQ, vQ.current !== mQ.b.getId() || mQ.b.getId() === qQ.s.CUSTOM && kQ.current ? wQ((() => HQ.h)) : wQ(null);
+        DQ()
       }
-      async function Gd(dd) {
-        if (Cd.d.getId() !== dd.metaData.id) {
-          if (Cd.d.getId() === Nd.s.CUSTOM && Cd.d.getFromFolderName()) {
-            const dd = Kd.NotificationProvider.showPromptPopup({
+      async function GQ(QQ) {
+        if (mQ.b.getId() !== QQ.metaData.id) {
+          if (mQ.b.getId() === qQ.s.CUSTOM && mQ.b.getFromFolderName()) {
+            const QQ = uQ.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -477,29 +477,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await dd.getResult()) return
+            if (!0 !== await QQ.getResult()) return
           }
-          Rd(dd, !1)
+          eQ(QQ, !1)
         }
-      }(0, Wd.useEffect)((() => {
-        gd.current = Cd.d.getId()
+      }(0, oQ.useEffect)((() => {
+        vQ.current = mQ.b.getId()
       }), []);
-      const vd = pd.b,
-        xd = [vd, ...Object.values(Nd.s).filter((dd => dd !== vd))];
-      return (0, Od.jsx)(Od.Fragment, {
-        children: (0, Od.jsxs)("div", {
+      const pQ = LQ.c,
+        cQ = [pQ, ...Object.values(qQ.s).filter((QQ => QQ !== pQ))];
+      return (0, AQ.jsx)(AQ.Fragment, {
+        children: (0, AQ.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Od.jsx)("div", {
+          children: [(0, AQ.jsx)("div", {
             className: "TexturePackList",
-            children: xd.map((dd => (0, Od.jsx)(Id, {
-              id: dd,
-              isSelected: dd === Cd.d.getId(),
-              setSelected: Gd
-            }, dd)))
-          }), Cd.d.getId() === Nd.s.CUSTOM && (0, Od.jsx)(ld.c, {
-            folderName: null !== (Jd = Cd.d.getFromFolderName()) && void 0 !== Jd ? Jd : null,
-            onTexturePackUpdated: function(dd) {
-              Rd(dd, !0)
+            children: cQ.map((QQ => (0, AQ.jsx)(MQ, {
+              id: QQ,
+              isSelected: QQ === mQ.b.getId(),
+              setSelected: GQ
+            }, QQ)))
+          }), mQ.b.getId() === qQ.s.CUSTOM && (0, AQ.jsx)(bQ.d, {
+            folderName: null !== (FQ = mQ.b.getFromFolderName()) && void 0 !== FQ ? FQ : null,
+            onTexturePackUpdated: function(QQ) {
+              eQ(QQ, !0)
             },
             packOwner: "player"
           })]
@@ -507,169 +507,169 @@ export const modules = {
       })
     }
 
-    function Id(dd) {
+    function MQ(QQ) {
       let {
-        id: Jd,
-        isSelected: kd,
-        setSelected: Pd,
-        disabled: Cd = !1
-      } = dd;
-      const [Kd, od] = (0, Wd.useState)(!0), [ld, Qd] = (0, Wd.useState)(""), [Ld, ed] = (0, Wd.useState)(""), [Rd, Id] = (0, Wd.useState)(""), Gd = (0, Wd.useRef)({});
-      return (0, Wd.useEffect)((() => {
-        (0, pd.k)(Jd).then((dd => {
-          var Jd;
-          dd && (Gd.current = dd, od(!1), Qd(Gd.current.metaData.name), ed(Gd.current.metaData.author), Id(null !== (Jd = Gd.current.metaData.previewImage) && void 0 !== Jd ? Jd : ""))
-        })).catch((dd => {
-          console.warn(`Failed to fetch texture pack ${Jd}`, dd)
+        id: FQ,
+        isSelected: wQ,
+        setSelected: DQ,
+        disabled: mQ = !1
+      } = QQ;
+      const [uQ, HQ] = (0, oQ.useState)(!0), [bQ, YQ] = (0, oQ.useState)(""), [xQ, tQ] = (0, oQ.useState)(""), [eQ, MQ] = (0, oQ.useState)(""), GQ = (0, oQ.useRef)({});
+      return (0, oQ.useEffect)((() => {
+        (0, LQ.n)(FQ).then((QQ => {
+          var FQ;
+          QQ && (GQ.current = QQ, HQ(!1), YQ(GQ.current.metaData.name), tQ(GQ.current.metaData.author), MQ(null !== (FQ = GQ.current.metaData.previewImage) && void 0 !== FQ ? FQ : ""))
+        })).catch((QQ => {
+          console.warn(`Failed to fetch texture pack ${FQ}`, QQ)
         }))
-      }), [Jd]), (0, Od.jsxs)("div", {
+      }), [FQ]), (0, AQ.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": Cd || void 0,
-        className: Zd()("TexturePack", {
-          Selected: kd,
-          Custom: Jd === Nd.s.CUSTOM,
-          Disabled: Cd
+        "aria-disabled": mQ || void 0,
+        className: kQ()("TexturePack", {
+          Selected: wQ,
+          Custom: FQ === qQ.s.CUSTOM,
+          Disabled: mQ
         }),
         onClick: () => {
-          Kd || Cd || Pd(Gd.current)
+          uQ || mQ || DQ(GQ.current)
         },
-        children: [(0, Od.jsx)("div", {
+        children: [(0, AQ.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: Rd ? `url(${Rd})` : void 0
+            backgroundImage: eQ ? `url(${eQ})` : void 0
           }
-        }), Kd && (0, Od.jsx)("div", {
+        }), uQ && (0, AQ.jsx)("div", {
           className: "TexturePackName",
-          children: (0, Od.jsx)(gd.b, {})
-        }), !Kd && ld && (0, Od.jsx)("div", {
+          children: (0, AQ.jsx)(vQ.c, {})
+        }), !uQ && bQ && (0, AQ.jsx)("div", {
           className: "TexturePackName",
-          children: ld
-        }), !Kd && Ld && (0, Od.jsx)("div", {
+          children: bQ
+        }), !uQ && xQ && (0, AQ.jsx)("div", {
           className: "TexturePackAuthor",
-          children: Ld
+          children: xQ
         })]
       })
     }
   },
-  4904: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Pd
+  4867: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => DQ
     });
-    var pd = kd(1044),
-      Nd = kd.n(pd),
-      Wd = kd(1103);
+    var LQ = wQ(1070),
+      qQ = wQ.n(LQ),
+      oQ = wQ(1107);
 
-    function Pd(dd) {
+    function DQ(QQ) {
       let {
-        options: Jd,
-        value: kd,
-        onChange: pd,
-        ariaLabel: Pd,
-        className: Zd,
-        reselectable: gd = !1,
-        keepsFocus: Cd = !1,
-        padTabs: Kd
-      } = dd;
-      const od = void 0 !== Kd;
-      return (0, Wd.jsx)("div", {
-        className: Nd()("SegmentedToggle", Zd),
+        options: FQ,
+        value: wQ,
+        onChange: LQ,
+        ariaLabel: DQ,
+        className: kQ,
+        reselectable: vQ = !1,
+        keepsFocus: mQ = !1,
+        padTabs: uQ
+      } = QQ;
+      const HQ = void 0 !== uQ;
+      return (0, oQ.jsx)("div", {
+        className: qQ()("SegmentedToggle", kQ),
         role: "group",
-        "aria-label": Pd,
-        "data-pad-tabs": Kd,
-        children: Jd.map((dd => {
-          const Jd = dd.value === kd;
-          return (0, Wd.jsx)("button", {
+        "aria-label": DQ,
+        "data-pad-tabs": uQ,
+        children: FQ.map((QQ => {
+          const FQ = QQ.value === wQ;
+          return (0, oQ.jsx)("button", {
             type: "button",
-            "aria-pressed": Jd,
-            "data-pad-tab": od || void 0,
-            "data-pad-selected": od && Jd ? "true" : void 0,
-            "data-pad-default-focus": od && Jd || void 0,
-            "aria-label": dd.ariaLabel,
-            title: dd.ariaLabel,
-            className: Nd()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: Jd
+            "aria-pressed": FQ,
+            "data-pad-tab": HQ || void 0,
+            "data-pad-selected": HQ && FQ ? "true" : void 0,
+            "data-pad-default-focus": HQ && FQ || void 0,
+            "aria-label": QQ.ariaLabel,
+            title: QQ.ariaLabel,
+            className: qQ()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: FQ
             }),
-            onMouseDown: Cd ? dd => {
-              dd.preventDefault()
+            onMouseDown: mQ ? QQ => {
+              QQ.preventDefault()
             } : void 0,
             onClick: () => {
-              Jd && !gd || pd(dd.value)
+              FQ && !vQ || LQ(QQ.value)
             },
-            children: dd.label
-          }, dd.value)
+            children: QQ.label
+          }, QQ.value)
         }))
       })
     }
   },
-  4907: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Wd,
-      e: () => Pd
+  4875: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => oQ,
+      c: () => DQ
     });
-    var pd = kd(56);
-    const Nd = new WeakMap,
-      Wd = dd => {
-        var Jd;
-        const kd = dd.closest("[data-pad-slider]");
-        return kd && null !== (Jd = Nd.get(kd)) && void 0 !== Jd ? Jd : null
+    var LQ = wQ(53);
+    const qQ = new WeakMap,
+      oQ = QQ => {
+        var FQ;
+        const wQ = QQ.closest("[data-pad-slider]");
+        return wQ && null !== (FQ = qQ.get(wQ)) && void 0 !== FQ ? FQ : null
       },
-      Pd = (dd, Jd) => {
-        const kd = (0, pd.useRef)(Jd);
-        kd.current = Jd, (0, pd.useEffect)((() => {
-          if (dd.current) return ((dd, Jd) => (Nd.set(dd, Jd), () => {
-            Nd.get(dd) === Jd && Nd.delete(dd)
-          }))(dd.current, {
-            adjust: dd => {
-              kd.current.adjust(dd)
+      DQ = (QQ, FQ) => {
+        const wQ = (0, LQ.useRef)(FQ);
+        wQ.current = FQ, (0, LQ.useEffect)((() => {
+          if (QQ.current) return ((QQ, FQ) => (qQ.set(QQ, FQ), () => {
+            qQ.get(QQ) === FQ && qQ.delete(QQ)
+          }))(QQ.current, {
+            adjust: QQ => {
+              wQ.current.adjust(QQ)
             },
-            setFraction: dd => {
-              kd.current.setFraction(dd)
+            setFraction: QQ => {
+              wQ.current.setFraction(QQ)
             },
             endDrag: () => {
-              kd.current.endDrag()
+              wQ.current.endDrag()
             }
           })
-        }), [dd])
+        }), [QQ])
       }
   },
-  4911: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Zd,
-      i: () => Pd
+  4884: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => kQ,
+      i: () => DQ
     });
-    var pd = kd(3018),
-      Nd = kd(4915);
-    let Wd = null;
+    var LQ = wQ(3047),
+      qQ = wQ(4892);
+    let oQ = null;
 
-    function Pd(dd, Jd) {
-      Wd = {
-        pack: dd.metaData.id === pd.e ? null : dd,
-        prompt: Jd
+    function DQ(QQ, FQ) {
+      oQ = {
+        pack: QQ.metaData.id === LQ.d ? null : QQ,
+        prompt: FQ
       }
     }
 
-    function Zd(dd, Jd) {
-      const kd = Wd;
-      null !== kd && (0, Nd.d)(kd.pack, dd) && (Wd = null, Jd && kd.prompt())
+    function kQ(QQ, FQ) {
+      const wQ = oQ;
+      null !== wQ && (0, qQ.d)(wQ.pack, QQ) && (oQ = null, FQ && wQ.prompt())
     }
   },
-  4915: (dd, Jd, kd) => {
-    function pd(dd, Jd) {
-      return Nd(dd, Jd)
+  4892: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ) {
+      return qQ(QQ, FQ)
     }
 
-    function Nd(dd, Jd) {
-      if (dd === Jd) return !0;
-      if ("object" !== typeof dd || "object" !== typeof Jd || null === dd || null === Jd || Array.isArray(dd) !== Array.isArray(Jd)) return !1;
-      const kd = dd,
-        pd = Jd,
-        Wd = Object.keys(kd);
-      return Wd.length === Object.keys(pd).length && Wd.every((dd => Object.prototype.hasOwnProperty.call(pd, dd) && Nd(kd[dd], pd[dd])))
+    function qQ(QQ, FQ) {
+      if (QQ === FQ) return !0;
+      if ("object" !== typeof QQ || "object" !== typeof FQ || null === QQ || null === FQ || Array.isArray(QQ) !== Array.isArray(FQ)) return !1;
+      const wQ = QQ,
+        LQ = FQ,
+        oQ = Object.keys(wQ);
+      return oQ.length === Object.keys(LQ).length && oQ.every((QQ => Object.prototype.hasOwnProperty.call(LQ, QQ) && qQ(wQ[QQ], LQ[QQ])))
     }
-    kd.d(Jd, {
-      d: () => pd
+    wQ.d(FQ, {
+      d: () => LQ
     })
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

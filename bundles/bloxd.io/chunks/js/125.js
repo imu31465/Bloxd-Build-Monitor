@@ -1,229 +1,229 @@
 export const id = 125;
 export const ids = [125];
 export const modules = {
-  6451: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      ShaderPackPublishForm: () => Gd
+  6406: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      ShaderPackPublishForm: () => GQ
     });
-    var pd = kd(56),
-      Nd = kd(6425),
-      Wd = kd(195),
-      Pd = kd(6457),
-      Zd = kd(1059),
-      gd = kd(1461),
-      Cd = kd(1714),
-      Kd = kd(1140),
-      od = kd(6459),
-      ld = kd(6472),
-      Qd = kd(1520),
-      Ld = kd(1211),
-      Od = kd(6478),
-      ed = kd(6522),
-      Rd = kd(6419),
-      Id = kd(1103);
+    var LQ = wQ(53),
+      qQ = wQ(6374),
+      oQ = wQ(210),
+      DQ = wQ(6414),
+      kQ = wQ(1079),
+      vQ = wQ(1451),
+      mQ = wQ(1682),
+      uQ = wQ(1140),
+      HQ = wQ(6422),
+      bQ = wQ(6435),
+      YQ = wQ(1489),
+      xQ = wQ(1207),
+      AQ = wQ(6438),
+      tQ = wQ(6476),
+      eQ = wQ(6371),
+      MQ = wQ(1107);
 
-    function Gd(dd) {
-      var Jd, kd, od;
+    function GQ(QQ) {
+      var FQ, wQ, HQ;
       let {
-        existing: Gd,
-        onPublished: xd
-      } = dd;
+        existing: GQ,
+        onPublished: cQ
+      } = QQ;
       const {
-        t: Bd
-      } = (0, Ld.B)(), {
-        userContext: sd,
-        isUserContextUpdating: ad
-      } = (0, Kd.c)(), [Md, Fd] = (0, pd.useState)(null), [Yd, md] = (0, pd.useState)(0), [bd, Sd] = (0, pd.useState)(null !== (Jd = null === Gd || void 0 === Gd ? void 0 : Gd.name) && void 0 !== Jd ? Jd : ""), jd = (0, pd.useRef)(bd), Xd = (0, pd.useRef)(""), fd = dd => {
-        jd.current = dd, Sd(dd)
-      }, [nd, Ud] = (0, pd.useState)(null !== (kd = null === Gd || void 0 === Gd ? void 0 : Gd.description) && void 0 !== kd ? kd : ""), yd = (0, pd.useRef)(nd), Dd = (0, pd.useRef)(""), Td = dd => {
-        yd.current = dd, Ud(dd)
-      }, [Ed, cd] = (0, pd.useState)(!1), {
-        loading: hd,
-        error: rd,
-        setError: ud,
-        onFiles: td
-      } = (0, ld.h)((async dd => {
-        const Jd = await (0, Od.loadPageShaderPackCompiler)();
-        if (!Jd) return void ud(Bd("shaderPack:compilerUnavailable"));
-        const kd = await (0, ed.f)(Jd, dd.files);
-        if (Fd({
-            pack: dd,
-            validation: kd,
-            sourceBytes: (0, Pd.w)(dd.files)
-          }), !Gd) {
-          var pd;
-          if ("" !== jd.current.trim() && jd.current !== Xd.current || (Xd.current = (0, Nd.I)(dd.manifest.name.trim(), Nd.t), fd(Xd.current)), "" === yd.current.trim() || yd.current === Dd.current) Dd.current = (0, Nd.I)((null !== (pd = dd.manifest.description) && void 0 !== pd ? pd : "").trim(), Nd.m), Td(Dd.current);
-          md((dd => dd + 1))
+        t: SQ
+      } = (0, xQ.y)(), {
+        userContext: iQ,
+        isUserContextUpdating: WQ
+      } = (0, uQ.e)(), [RQ, OQ] = (0, LQ.useState)(null), [sQ, rQ] = (0, LQ.useState)(0), [IQ, UQ] = (0, LQ.useState)(null !== (FQ = null === GQ || void 0 === GQ ? void 0 : GQ.name) && void 0 !== FQ ? FQ : ""), NQ = (0, LQ.useRef)(IQ), TQ = (0, LQ.useRef)(""), KQ = QQ => {
+        NQ.current = QQ, UQ(QQ)
+      }, [zQ, lQ] = (0, LQ.useState)(null !== (wQ = null === GQ || void 0 === GQ ? void 0 : GQ.description) && void 0 !== wQ ? wQ : ""), jQ = (0, LQ.useRef)(zQ), aQ = (0, LQ.useRef)(""), XQ = QQ => {
+        jQ.current = QQ, lQ(QQ)
+      }, [fQ, VQ] = (0, LQ.useState)(!1), {
+        loading: hQ,
+        error: JQ,
+        setError: EQ,
+        onFiles: nQ
+      } = (0, bQ.g)((async QQ => {
+        const FQ = await (0, AQ.loadPageShaderPackCompiler)();
+        if (!FQ) return void EQ(SQ("shaderPack:compilerUnavailable"));
+        const wQ = await (0, tQ.f)(FQ, QQ.files);
+        if (OQ({
+            pack: QQ,
+            validation: wQ,
+            sourceBytes: (0, DQ.v)(QQ.files)
+          }), !GQ) {
+          var LQ;
+          if ("" !== NQ.current.trim() && NQ.current !== TQ.current || (TQ.current = (0, qQ.O)(QQ.manifest.name.trim(), qQ.z), KQ(TQ.current)), "" === jQ.current.trim() || jQ.current === aQ.current) aQ.current = (0, qQ.O)((null !== (LQ = QQ.manifest.description) && void 0 !== LQ ? LQ : "").trim(), qQ.p), XQ(aQ.current);
+          rQ((QQ => QQ + 1))
         }
-      })), Vd = !ad && !sd.isLoggedIn() && !Wd.b.offlineMode, zd = bd.trim(), Hd = zd.length < Nd.v, wd = null !== Md && !1 !== (null === (od = Md.validation) || void 0 === od ? void 0 : od.ok) && !hd && !Hd && !Vd && !ad;
-      return (0, Id.jsxs)("div", {
+      })), gQ = !WQ && !iQ.isLoggedIn() && !oQ.d.offlineMode, PQ = IQ.trim(), ZQ = PQ.length < qQ.B, yQ = null !== RQ && !1 !== (null === (HQ = RQ.validation) || void 0 === HQ ? void 0 : HQ.ok) && !hQ && !ZQ && !gQ && !WQ;
+      return (0, MQ.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, Id.jsx)("p", {
+        children: [(0, MQ.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: Gd ? Bd("shaderPackListing:uploadIntro", {
-            minutes: String(Nd.z / 6e4)
-          }) : Bd("shaderPackListing:publishIntro")
-        }), (0, Id.jsx)(qd, {}), Vd && (0, Id.jsx)("div", {
+          children: GQ ? SQ("shaderPackListing:uploadIntro", {
+            minutes: String(qQ.H / 6e4)
+          }) : SQ("shaderPackListing:publishIntro")
+        }), (0, MQ.jsx)(CQ, {}), gQ && (0, MQ.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: Bd("shaderPackListing:publishNeedsLogin")
-        }), (0, Id.jsx)(ld.e, {
-          busy: hd,
-          disabled: hd || Ed,
-          onFiles: dd => {
-            Fd(null), td(dd)
+          children: SQ("shaderPackListing:publishNeedsLogin")
+        }), (0, MQ.jsx)(bQ.c, {
+          busy: hQ,
+          disabled: hQ || fQ,
+          onFiles: QQ => {
+            OQ(null), nQ(QQ)
           }
-        }), Md && (0, Id.jsxs)("div", {
+        }), RQ && (0, MQ.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, Id.jsx)("div", {
+          children: [(0, MQ.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: Md.pack.manifest.name
-          }), (0, Id.jsxs)("div", {
+            children: RQ.pack.manifest.name
+          }), (0, MQ.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [Bd("shaderPackListing:sizeValue", {
-              kilobytes: String((0, Rd.R)(Md.sourceBytes))
-            }), " \xb7", " ", Bd("shaderPackListing:filesValue", {
-              files: String(Md.pack.files.length)
+            children: [SQ("shaderPackListing:sizeValue", {
+              kilobytes: String((0, eQ.R)(RQ.sourceBytes))
+            }), " \xb7", " ", SQ("shaderPackListing:filesValue", {
+              files: String(RQ.pack.files.length)
             })]
-          }), (0, Id.jsx)(vd, {
-            picked: Md
+          }), (0, MQ.jsx)(pQ, {
+            picked: RQ
           })]
-        }), !Gd && (0, Id.jsxs)(Id.Fragment, {
-          children: [(0, Id.jsxs)("label", {
+        }), !GQ && (0, MQ.jsxs)(MQ.Fragment, {
+          children: [(0, MQ.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, Id.jsx)("span", {
-              children: Bd("general:name")
-            }), (0, Id.jsx)(Cd.e, {
+            children: [(0, MQ.jsx)("span", {
+              children: SQ("general:name")
+            }), (0, MQ.jsx)(mQ.b, {
               className: "ShaderPackPublishInput",
-              defaultValue: bd,
-              maxLength: Nd.t,
-              onValueChange: fd
-            }, Yd), Md && Hd && (0, Id.jsx)("span", {
+              defaultValue: IQ,
+              maxLength: qQ.z,
+              onValueChange: KQ
+            }, sQ), RQ && ZQ && (0, MQ.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: Bd("shaderPackListing:nameTooShort", {
-                min: String(Nd.v)
+              children: SQ("shaderPackListing:nameTooShort", {
+                min: String(qQ.B)
               })
             })]
-          }), (0, Id.jsxs)("label", {
+          }), (0, MQ.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, Id.jsx)("span", {
-              children: Bd("general:description")
-            }), (0, Id.jsx)(Cd.e, {
+            children: [(0, MQ.jsx)("span", {
+              children: SQ("general:description")
+            }), (0, MQ.jsx)(mQ.b, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: nd,
-              maxLength: Nd.m,
-              onValueChange: Td,
+              defaultValue: zQ,
+              maxLength: qQ.p,
+              onValueChange: XQ,
               useTextarea: !0
-            }, Yd)]
+            }, sQ)]
           })]
-        }), rd && (0, Id.jsx)("div", {
+        }), JQ && (0, MQ.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: rd
-        }), (0, Id.jsxs)(gd.j, {
+          children: JQ
+        }), (0, MQ.jsxs)(vQ.m, {
           className: "ShaderPackPublishButton",
-          disabled: !wd,
-          loading: Ed,
+          disabled: !yQ,
+          loading: fQ,
           onClick: () => {
             !async function() {
-              var dd;
-              if (!Md) return;
+              var QQ;
+              if (!RQ) return;
               const {
-                name: Jd,
-                description: kd
-              } = null !== Gd && void 0 !== Gd ? Gd : {
-                name: zd,
-                description: nd.trim()
-              }, pd = {
-                packId: null !== (dd = null === Gd || void 0 === Gd ? void 0 : Gd.packId) && void 0 !== dd ? dd : null,
-                name: Jd,
-                description: kd,
-                apiVersion: Md.pack.manifest.apiVersion,
-                files: (0, Pd.v)(Md.pack.files),
-                keepCircleShadows: !0 === Md.pack.manifest.keepCircleShadows
+                name: FQ,
+                description: wQ
+              } = null !== GQ && void 0 !== GQ ? GQ : {
+                name: PQ,
+                description: zQ.trim()
+              }, LQ = {
+                packId: null !== (QQ = null === GQ || void 0 === GQ ? void 0 : GQ.packId) && void 0 !== QQ ? QQ : null,
+                name: FQ,
+                description: wQ,
+                apiVersion: RQ.pack.manifest.apiVersion,
+                files: (0, DQ.r)(RQ.pack.files),
+                keepCircleShadows: !0 === RQ.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(pd)).byteLength > 1024 * Nd.G) ud(Bd("shaderPackListing:publishTooBig", {
-                kilobytes: String(Nd.G)
+              if ((new TextEncoder).encode(JSON.stringify(LQ)).byteLength > 1024 * qQ.L) EQ(SQ("shaderPackListing:publishTooBig", {
+                kilobytes: String(qQ.L)
               }));
               else {
-                cd(!0), ud(null);
+                VQ(!0), EQ(null);
                 try {
-                  xd(await Qd.d.publishShaderPack(sd, pd))
-                } catch (Wd) {
-                  console.error("Failed to publish the shader pack", Wd), ud((0, Rd.x)(Wd, Bd, "shaderPackListing:publishFailed"))
+                  cQ(await YQ.b.publishShaderPack(iQ, LQ))
+                } catch (oQ) {
+                  console.error("Failed to publish the shader pack", oQ), EQ((0, eQ.z)(oQ, SQ, "shaderPackListing:publishFailed"))
                 } finally {
-                  cd(!1)
+                  VQ(!1)
                 }
               }
             }()
           },
-          children: [(0, Id.jsx)(Zd.e, {
+          children: [(0, MQ.jsx)(kQ.c, {
             name: "upload"
-          }), " ", Bd(Gd ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", SQ(GQ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function vd(dd) {
+    function pQ(QQ) {
       let {
-        picked: Jd
-      } = dd;
+        picked: FQ
+      } = QQ;
       const {
-        t: kd
-      } = (0, Ld.B)(), {
-        validation: pd
-      } = Jd;
-      return null === pd ? (0, Id.jsx)("div", {
+        t: wQ
+      } = (0, xQ.y)(), {
+        validation: LQ
+      } = FQ;
+      return null === LQ ? (0, MQ.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: kd("shaderPackListing:publishUnchecked")
-      }) : pd.ok ? (0, Id.jsxs)(Id.Fragment, {
-        children: [(0, Id.jsxs)("div", {
+        children: wQ("shaderPackListing:publishUnchecked")
+      }) : LQ.ok ? (0, MQ.jsxs)(MQ.Fragment, {
+        children: [(0, MQ.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, Id.jsx)(Zd.e, {
+          children: [(0, MQ.jsx)(kQ.c, {
             name: "circle-check"
-          }), " ", kd("shaderPackListing:publishReady")]
-        }), pd.offInStrict.length > 0 && (0, Id.jsxs)(Id.Fragment, {
-          children: [(0, Id.jsxs)("div", {
+          }), " ", wQ("shaderPackListing:publishReady")]
+        }), LQ.offInStrict.length > 0 && (0, MQ.jsxs)(MQ.Fragment, {
+          children: [(0, MQ.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, Id.jsx)(Zd.e, {
+            children: [(0, MQ.jsx)(kQ.c, {
               name: "triangle-exclamation"
-            }), " ", kd("shaderPack:offInStrict")]
-          }), (0, Id.jsx)(od.c, {
-            diagnostics: pd.offInStrict,
-            t: kd
+            }), " ", wQ("shaderPack:offInStrict")]
+          }), (0, MQ.jsx)(HQ.e, {
+            diagnostics: LQ.offInStrict,
+            t: wQ
           })]
         })]
-      }) : (0, Id.jsxs)(Id.Fragment, {
-        children: [(0, Id.jsxs)("div", {
+      }) : (0, MQ.jsxs)(MQ.Fragment, {
+        children: [(0, MQ.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, Id.jsx)(Zd.e, {
+          children: [(0, MQ.jsx)(kQ.c, {
             name: "triangle-exclamation"
-          }), " ", kd("shaderPackListing:publishHasErrors")]
-        }), (0, Id.jsx)(od.c, {
-          diagnostics: pd.errors,
-          more: pd.moreErrors,
-          t: kd
+          }), " ", wQ("shaderPackListing:publishHasErrors")]
+        }), (0, MQ.jsx)(HQ.e, {
+          diagnostics: LQ.errors,
+          more: LQ.moreErrors,
+          t: wQ
         })]
       })
     }
-    const xd = "\0";
+    const cQ = "\0";
 
-    function qd() {
+    function CQ() {
       const {
-        t: dd
-      } = (0, Ld.B)(), [Jd, kd] = dd("shaderPackListing:bloxdhubHelp", {
-        site: xd
-      }).split(xd);
-      return (0, Id.jsxs)("p", {
+        t: QQ
+      } = (0, xQ.y)(), [FQ, wQ] = QQ("shaderPackListing:bloxdhubHelp", {
+        site: cQ
+      }).split(cQ);
+      return (0, MQ.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [Jd, (0, Id.jsx)("a", {
+        children: [FQ, (0, MQ.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: Nd.g,
+          href: qQ.h,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: Nd.c
-        }), kd]
+          children: qQ.c
+        }), wQ]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

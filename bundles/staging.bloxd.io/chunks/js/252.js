@@ -1,47 +1,47 @@
 export const id = 252;
 export const ids = [252];
 export const modules = {
-  41074: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Td
+  40496: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => XQ
     });
-    var pd = kd(39964),
-      Nd = kd(39966),
-      Wd = kd(37280),
-      Pd = kd(37251),
-      Zd = kd(37289),
-      gd = kd(40205),
-      Cd = kd(40393),
-      Kd = kd(40156),
-      od = kd(39876),
-      ld = kd(37259);
-    class Qd {
+    var LQ = wQ(39402),
+      qQ = wQ(39409),
+      oQ = wQ(36722),
+      DQ = wQ(36696),
+      kQ = wQ(36729),
+      vQ = wQ(39650),
+      mQ = wQ(39829),
+      uQ = wQ(39595),
+      HQ = wQ(39303),
+      bQ = wQ(36705);
+    class YQ {
       constructor() {
         this._zoomStopsAnimation = !1, this._idleRotationSpeed = .05, this._idleRotationWaitTime = 2e3, this._idleRotationSpinupTime = 2e3, this.targetAlpha = null, this._attachedCamera = null, this._isPointerDown = !1, this._lastFrameTime = null, this._lastInteractionTime = -1 / 0, this._cameraRotationSpeed = 0, this._lastFrameRadius = 0
       }
       get name() {
         return "AutoRotation"
       }
-      set zoomStopsAnimation(dd) {
-        this._zoomStopsAnimation = dd
+      set zoomStopsAnimation(QQ) {
+        this._zoomStopsAnimation = QQ
       }
       get zoomStopsAnimation() {
         return this._zoomStopsAnimation
       }
-      set idleRotationSpeed(dd) {
-        this._idleRotationSpeed = dd
+      set idleRotationSpeed(QQ) {
+        this._idleRotationSpeed = QQ
       }
       get idleRotationSpeed() {
         return this._idleRotationSpeed
       }
-      set idleRotationWaitTime(dd) {
-        this._idleRotationWaitTime = dd
+      set idleRotationWaitTime(QQ) {
+        this._idleRotationWaitTime = QQ
       }
       get idleRotationWaitTime() {
         return this._idleRotationWaitTime
       }
-      set idleRotationSpinupTime(dd) {
-        this._idleRotationSpinupTime = dd
+      set idleRotationSpinupTime(QQ) {
+        this._idleRotationSpinupTime = QQ
       }
       get idleRotationSpinupTime() {
         return this._idleRotationSpinupTime
@@ -53,75 +53,75 @@ export const modules = {
         return this._attachedCamera
       }
       init() {}
-      attach(dd) {
-        this._attachedCamera = dd;
-        const Jd = this._attachedCamera.Wm();
-        this._onPrePointerObservableObserver = Jd.onPrePointerObservable.add((dd => {
-          dd.type !== Kd.b.POINTERDOWN ? dd.type === Kd.b.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onAfterCheckInputsObserver = dd.onAfterCheckInputsObservable.add((() => {
+      attach(QQ) {
+        this._attachedCamera = QQ;
+        const FQ = this._attachedCamera.iN();
+        this._onPrePointerObservableObserver = FQ.onPrePointerObservable.add((QQ => {
+          QQ.type !== uQ.e.POINTERDOWN ? QQ.type === uQ.e.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
+        })), this._onAfterCheckInputsObserver = QQ.onAfterCheckInputsObservable.add((() => {
           if (this._reachTargetAlpha()) return;
-          const dd = od.d.Now;
-          let Jd = 0;
-          null != this._lastFrameTime && (Jd = dd - this._lastFrameTime), this._lastFrameTime = dd, this._applyUserInteraction();
-          const kd = dd - this._lastInteractionTime - this._idleRotationWaitTime,
-            pd = Math.max(Math.min(kd / this._idleRotationSpinupTime, 1), 0);
-          this._cameraRotationSpeed = this._idleRotationSpeed * pd, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (Jd / 1e3))
+          const QQ = HQ.e.Now;
+          let FQ = 0;
+          null != this._lastFrameTime && (FQ = QQ - this._lastFrameTime), this._lastFrameTime = QQ, this._applyUserInteraction();
+          const wQ = QQ - this._lastInteractionTime - this._idleRotationWaitTime,
+            LQ = Math.max(Math.min(wQ / this._idleRotationSpinupTime, 1), 0);
+          this._cameraRotationSpeed = this._idleRotationSpeed * LQ, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (FQ / 1e3))
         }))
       }
       detach() {
         if (!this._attachedCamera) return;
-        const dd = this._attachedCamera.Wm();
-        this._onPrePointerObservableObserver && dd.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
+        const QQ = this._attachedCamera.iN();
+        this._onPrePointerObservableObserver && QQ.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
       }
-      resetLastInteractionTime(dd) {
-        this._lastInteractionTime = dd ?? od.d.Now
+      resetLastInteractionTime(QQ) {
+        this._lastInteractionTime = QQ ?? HQ.e.Now
       }
       _reachTargetAlpha() {
-        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < ld.e
+        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < bQ.b
       }
       _userIsZooming() {
         return !!this._attachedCamera && 0 !== this._attachedCamera.inertialRadiusOffset
       }
       _shouldAnimationStopForInteraction() {
         if (!this._attachedCamera) return !1;
-        let dd = !1;
-        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (dd = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? dd : this._userIsZooming()
+        let QQ = !1;
+        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (QQ = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? QQ : this._userIsZooming()
       }
       _applyUserInteraction() {
-        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = od.d.Now)
+        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = HQ.e.Now)
       }
       _userIsMoving() {
         return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
       }
     }
-    kd(41077);
-    class Ld {
+    wQ(40502);
+    class xQ {
       constructor() {
-        this._easingMode = Ld.EASINGMODE_EASEIN
+        this._easingMode = xQ.EASINGMODE_EASEIN
       }
-      setEasingMode(dd) {
-        const Jd = Math.min(Math.max(dd, 0), 2);
-        this._easingMode = Jd
+      setEasingMode(QQ) {
+        const FQ = Math.min(Math.max(QQ, 0), 2);
+        this._easingMode = FQ
       }
       getEasingMode() {
         return this._easingMode
       }
-      easeInCore(dd) {
+      easeInCore(QQ) {
         throw new Error("You must implement this method")
       }
-      ease(dd) {
+      ease(QQ) {
         switch (this._easingMode) {
-          case Ld.EASINGMODE_EASEIN:
-            return this.easeInCore(dd);
-          case Ld.EASINGMODE_EASEOUT:
-            return 1 - this.easeInCore(1 - dd)
+          case xQ.EASINGMODE_EASEIN:
+            return this.easeInCore(QQ);
+          case xQ.EASINGMODE_EASEOUT:
+            return 1 - this.easeInCore(1 - QQ)
         }
-        return dd >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - dd))) + .5 : .5 * this.easeInCore(2 * dd)
+        return QQ >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - QQ))) + .5 : .5 * this.easeInCore(2 * QQ)
       }
     }
-    Ld.EASINGMODE_EASEIN = 0, Ld.EASINGMODE_EASEOUT = 1, Ld.EASINGMODE_EASEINOUT = 2;
-    var Od = kd(41082);
-    class ed {
+    xQ.EASINGMODE_EASEIN = 0, xQ.EASINGMODE_EASEOUT = 1, xQ.EASINGMODE_EASEINOUT = 2;
+    var AQ = wQ(40506);
+    class tQ {
       constructor() {
         this.transitionDuration = 450, this.lowerRadiusTransitionRange = 2, this.upperRadiusTransitionRange = -2, this._autoTransitionRange = !1, this._attachedCamera = null, this._radiusIsAnimating = !1, this._radiusBounceTransition = null, this._animatables = new Array
       }
@@ -131,37 +131,37 @@ export const modules = {
       get autoTransitionRange() {
         return this._autoTransitionRange
       }
-      set autoTransitionRange(dd) {
-        if (this._autoTransitionRange === dd) return;
-        this._autoTransitionRange = dd;
-        const Jd = this._attachedCamera;
-        Jd && (dd ? this._onMeshTargetChangedObserver = Jd.onMeshTargetChangedObservable.add((dd => {
-          if (dd && (dd.computeWorldMatrix(!0), dd.pU)) {
-            const Jd = dd.pU().diagonalLength;
-            this.lowerRadiusTransitionRange = .05 * Jd, this.upperRadiusTransitionRange = .05 * Jd
+      set autoTransitionRange(QQ) {
+        if (this._autoTransitionRange === QQ) return;
+        this._autoTransitionRange = QQ;
+        const FQ = this._attachedCamera;
+        FQ && (QQ ? this._onMeshTargetChangedObserver = FQ.onMeshTargetChangedObservable.add((QQ => {
+          if (QQ && (QQ.computeWorldMatrix(!0), QQ.sK)) {
+            const FQ = QQ.sK().diagonalLength;
+            this.lowerRadiusTransitionRange = .05 * FQ, this.upperRadiusTransitionRange = .05 * FQ
           }
-        })) : this._onMeshTargetChangedObserver && Jd.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
+        })) : this._onMeshTargetChangedObserver && FQ.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
       }
       get attachedNode() {
         return this._attachedCamera
       }
       init() {}
-      attach(dd) {
-        this._attachedCamera = dd, this._onAfterCheckInputsObserver = dd.onAfterCheckInputsObservable.add((() => {
+      attach(QQ) {
+        this._attachedCamera = QQ, this._onAfterCheckInputsObserver = QQ.onAfterCheckInputsObservable.add((() => {
           this._attachedCamera && (this._isRadiusAtLimit(this._attachedCamera.lowerRadiusLimit) && this._applyBoundRadiusAnimation(this.lowerRadiusTransitionRange), this._isRadiusAtLimit(this._attachedCamera.upperRadiusLimit) && this._applyBoundRadiusAnimation(this.upperRadiusTransitionRange))
         }))
       }
       detach() {
         this._attachedCamera && (this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null)
       }
-      _isRadiusAtLimit(dd) {
-        return !!this._attachedCamera && (this._attachedCamera.radius === dd && !this._radiusIsAnimating)
+      _isRadiusAtLimit(QQ) {
+        return !!this._attachedCamera && (this._attachedCamera.radius === QQ && !this._radiusIsAnimating)
       }
-      _applyBoundRadiusAnimation(dd) {
+      _applyBoundRadiusAnimation(QQ) {
         if (!this._attachedCamera) return;
-        this._radiusBounceTransition || (ed.EasingFunction.setEasingMode(ed.EasingMode), this._radiusBounceTransition = Od.c.CreateAnimation("radius", Od.c.ANIMATIONTYPE_FLOAT, 60, ed.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
-        const Jd = Od.c.TransitionTo("radius", this._attachedCamera.radius + dd, this._attachedCamera, this._attachedCamera.Wm(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
-        Jd && this._animatables.push(Jd)
+        this._radiusBounceTransition || (tQ.EasingFunction.setEasingMode(tQ.EasingMode), this._radiusBounceTransition = AQ.d.CreateAnimation("radius", AQ.d.ANIMATIONTYPE_FLOAT, 60, tQ.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
+        const FQ = AQ.d.TransitionTo("radius", this._attachedCamera.radius + QQ, this._attachedCamera, this._attachedCamera.iN(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
+        FQ && this._animatables.push(FQ)
       }
       _clearAnimationLocks() {
         this._radiusIsAnimating = !1, this._attachedCamera && (this._attachedCamera.wheelPrecision = this._cachedWheelPrecision)
@@ -170,67 +170,67 @@ export const modules = {
         for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0].onAnimationEnd = null, this._animatables[0].stop(), this._animatables.shift()
       }
     }
-    ed.EasingFunction = new class extends Ld {
+    tQ.EasingFunction = new class extends xQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        super(), this.amplitude = dd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        super(), this.amplitude = QQ
       }
-      easeInCore(dd) {
-        const Jd = Math.max(0, this.amplitude);
-        return Math.pow(dd, 3) - dd * Jd * Math.sin(3.141592653589793 * dd)
+      easeInCore(QQ) {
+        const FQ = Math.max(0, this.amplitude);
+        return Math.pow(QQ, 3) - QQ * FQ * Math.sin(3.141592653589793 * QQ)
       }
-    }(.3), ed.EasingMode = Ld.EASINGMODE_EASEOUT;
-    class Rd {
+    }(.3), tQ.EasingMode = xQ.EASINGMODE_EASEOUT;
+    class eQ {
       constructor() {
-        this.onTargetFramingAnimationEndObservable = new Wd.e, this._mode = Rd.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
+        this.onTargetFramingAnimationEndObservable = new oQ.e, this._mode = eQ.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
       }
       get name() {
         return "Framing"
       }
-      set mode(dd) {
-        this._mode = dd
+      set mode(QQ) {
+        this._mode = QQ
       }
       get mode() {
         return this._mode
       }
-      set radiusScale(dd) {
-        this._radiusScale = dd
+      set radiusScale(QQ) {
+        this._radiusScale = QQ
       }
       get radiusScale() {
         return this._radiusScale
       }
-      set positionScale(dd) {
-        this._positionScale = dd
+      set positionScale(QQ) {
+        this._positionScale = QQ
       }
       get positionScale() {
         return this._positionScale
       }
-      set defaultElevation(dd) {
-        this._defaultElevation = dd
+      set defaultElevation(QQ) {
+        this._defaultElevation = QQ
       }
       get defaultElevation() {
         return this._defaultElevation
       }
-      set elevationReturnTime(dd) {
-        this._elevationReturnTime = dd
+      set elevationReturnTime(QQ) {
+        this._elevationReturnTime = QQ
       }
       get elevationReturnTime() {
         return this._elevationReturnTime
       }
-      set elevationReturnWaitTime(dd) {
-        this._elevationReturnWaitTime = dd
+      set elevationReturnWaitTime(QQ) {
+        this._elevationReturnWaitTime = QQ
       }
       get elevationReturnWaitTime() {
         return this._elevationReturnWaitTime
       }
-      set zoomStopsAnimation(dd) {
-        this._zoomStopsAnimation = dd
+      set zoomStopsAnimation(QQ) {
+        this._zoomStopsAnimation = QQ
       }
       get zoomStopsAnimation() {
         return this._zoomStopsAnimation
       }
-      set framingTime(dd) {
-        this._framingTime = dd
+      set framingTime(QQ) {
+        this._framingTime = QQ
       }
       get framingTime() {
         return this._framingTime
@@ -239,102 +239,102 @@ export const modules = {
         return this._attachedCamera
       }
       init() {}
-      attach(dd) {
-        this._attachedCamera = dd;
-        const Jd = this._attachedCamera.Wm();
-        Rd.EasingFunction.setEasingMode(Rd.EasingMode), this._onPrePointerObservableObserver = Jd.onPrePointerObservable.add((dd => {
-          dd.type !== Kd.b.POINTERDOWN ? dd.type === Kd.b.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onMeshTargetChangedObserver = dd.onMeshTargetChangedObservable.add((dd => {
-          dd && dd.pU && this.zoomOnMesh(dd, void 0, (() => {
+      attach(QQ) {
+        this._attachedCamera = QQ;
+        const FQ = this._attachedCamera.iN();
+        eQ.EasingFunction.setEasingMode(eQ.EasingMode), this._onPrePointerObservableObserver = FQ.onPrePointerObservable.add((QQ => {
+          QQ.type !== uQ.e.POINTERDOWN ? QQ.type === uQ.e.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
+        })), this._onMeshTargetChangedObserver = QQ.onMeshTargetChangedObservable.add((QQ => {
+          QQ && QQ.sK && this.zoomOnMesh(QQ, void 0, (() => {
             this.onTargetFramingAnimationEndObservable.notifyObservers()
           }))
-        })), this._onAfterCheckInputsObserver = dd.onAfterCheckInputsObservable.add((() => {
+        })), this._onAfterCheckInputsObserver = QQ.onAfterCheckInputsObservable.add((() => {
           this._applyUserInteraction(), this._maintainCameraAboveGround()
         }))
       }
       detach() {
         if (!this._attachedCamera) return;
-        const dd = this._attachedCamera.Wm();
-        this._onPrePointerObservableObserver && dd.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
+        const QQ = this._attachedCamera.iN();
+        this._onPrePointerObservableObserver && QQ.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
       }
-      zoomOnMesh(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        dd.computeWorldMatrix(!0);
-        const pd = dd.pU().boundingBox;
-        this.zoomOnBoundingInfo(pd.minimumWorld, pd.maximumWorld, Jd, kd)
+      zoomOnMesh(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        QQ.computeWorldMatrix(!0);
+        const LQ = QQ.sK().boundingBox;
+        this.zoomOnBoundingInfo(LQ.minimumWorld, LQ.maximumWorld, FQ, wQ)
       }
-      zoomOnMeshHierarchy(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        dd.computeWorldMatrix(!0);
-        const pd = dd.getHierarchyBoundingVectors(!0);
-        this.zoomOnBoundingInfo(pd.min, pd.max, Jd, kd)
+      zoomOnMeshHierarchy(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        QQ.computeWorldMatrix(!0);
+        const LQ = QQ.getHierarchyBoundingVectors(!0);
+        this.zoomOnBoundingInfo(LQ.min, LQ.max, FQ, wQ)
       }
-      zoomOnMeshesHierarchy(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const pd = new Pd.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          Nd = new Pd.n(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        for (let Wd = 0; Wd < dd.length; Wd++) {
-          const Jd = dd[Wd].getHierarchyBoundingVectors(!0);
-          Pd.n.CheckExtends(Jd.min, pd, Nd), Pd.n.CheckExtends(Jd.max, pd, Nd)
+      zoomOnMeshesHierarchy(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const LQ = new DQ.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+          qQ = new DQ.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+        for (let oQ = 0; oQ < QQ.length; oQ++) {
+          const FQ = QQ[oQ].getHierarchyBoundingVectors(!0);
+          DQ.p.CheckExtends(FQ.min, LQ, qQ), DQ.p.CheckExtends(FQ.max, LQ, qQ)
         }
-        this.zoomOnBoundingInfo(pd, Nd, Jd, kd)
+        this.zoomOnBoundingInfo(LQ, qQ, FQ, wQ)
       }
-      zoomOnBoundingInfo(dd, Jd) {
-        let kd, pd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Nd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      zoomOnBoundingInfo(QQ, FQ) {
+        let wQ, LQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
         if (!this._attachedCamera) return !1;
-        const Wd = dd.y,
-          Zd = Wd + (Jd.y - Wd) * this._positionScale,
-          gd = Jd.subtract(dd).scale(.5);
-        if (!isFinite(Zd)) return !1;
-        if (pd) kd = new Pd.n(0, Zd, 0);
+        const oQ = QQ.y,
+          kQ = oQ + (FQ.y - oQ) * this._positionScale,
+          vQ = FQ.subtract(QQ).scale(.5);
+        if (!isFinite(kQ)) return !1;
+        if (LQ) wQ = new DQ.p(0, kQ, 0);
         else {
-          const Jd = dd.add(gd);
-          kd = new Pd.n(Jd.x, Zd, Jd.z)
+          const FQ = QQ.add(vQ);
+          wQ = new DQ.p(FQ.x, kQ, FQ.z)
         }
-        this._vectorTransition || (this._vectorTransition = Od.c.CreateAnimation("target", Od.c.ANIMATIONTYPE_VECTOR3, 60, Rd.EasingFunction)), this._betaIsAnimating = !0;
-        let Cd = Od.c.TransitionTo("target", kd, this._attachedCamera, this._attachedCamera.Wm(), 60, this._vectorTransition, this._framingTime);
-        Cd && this._animatables.push(Cd);
-        let Kd = 0;
-        if (this._mode === Rd.FitFrustumSidesMode) {
-          const kd = this._calculateLowerRadiusFromModelBoundingSphere(dd, Jd);
-          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = gd.length() + this._attachedCamera.minZ), Kd = kd
-        } else this._mode === Rd.IgnoreBoundsSizeMode && (Kd = this._calculateLowerRadiusFromModelBoundingSphere(dd, Jd), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
+        this._vectorTransition || (this._vectorTransition = AQ.d.CreateAnimation("target", AQ.d.ANIMATIONTYPE_VECTOR3, 60, eQ.EasingFunction)), this._betaIsAnimating = !0;
+        let mQ = AQ.d.TransitionTo("target", wQ, this._attachedCamera, this._attachedCamera.iN(), 60, this._vectorTransition, this._framingTime);
+        mQ && this._animatables.push(mQ);
+        let uQ = 0;
+        if (this._mode === eQ.FitFrustumSidesMode) {
+          const wQ = this._calculateLowerRadiusFromModelBoundingSphere(QQ, FQ);
+          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = vQ.length() + this._attachedCamera.minZ), uQ = wQ
+        } else this._mode === eQ.IgnoreBoundsSizeMode && (uQ = this._calculateLowerRadiusFromModelBoundingSphere(QQ, FQ), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
         if (this.autoCorrectCameraLimitsAndSensibility) {
-          const kd = Jd.subtract(dd).length();
-          this._attachedCamera.panningSensibility = 5e3 / kd, this._attachedCamera.wheelPrecision = 100 / Kd
+          const wQ = FQ.subtract(QQ).length();
+          this._attachedCamera.panningSensibility = 5e3 / wQ, this._attachedCamera.wheelPrecision = 100 / uQ
         }
-        return this._radiusTransition || (this._radiusTransition = Od.c.CreateAnimation("radius", Od.c.ANIMATIONTYPE_FLOAT, 60, Rd.EasingFunction)), Cd = Od.c.TransitionTo("radius", Kd, this._attachedCamera, this._attachedCamera.Wm(), 60, this._radiusTransition, this._framingTime, (() => {
-          this.stopAllAnimations(), Nd && Nd(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
-        })), Cd && this._animatables.push(Cd), !0
+        return this._radiusTransition || (this._radiusTransition = AQ.d.CreateAnimation("radius", AQ.d.ANIMATIONTYPE_FLOAT, 60, eQ.EasingFunction)), mQ = AQ.d.TransitionTo("radius", uQ, this._attachedCamera, this._attachedCamera.iN(), 60, this._radiusTransition, this._framingTime, (() => {
+          this.stopAllAnimations(), qQ && qQ(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
+        })), mQ && this._animatables.push(mQ), !0
       }
-      _calculateLowerRadiusFromModelBoundingSphere(dd, Jd) {
-        const kd = this._attachedCamera;
-        if (!kd) return 0;
-        let pd = kd._calculateLowerRadiusFromModelBoundingSphere(dd, Jd, this._radiusScale);
-        return kd.lowerRadiusLimit && this._mode === Rd.IgnoreBoundsSizeMode && (pd = pd < kd.lowerRadiusLimit ? kd.lowerRadiusLimit : pd), kd.upperRadiusLimit && (pd = pd > kd.upperRadiusLimit ? kd.upperRadiusLimit : pd), pd
+      _calculateLowerRadiusFromModelBoundingSphere(QQ, FQ) {
+        const wQ = this._attachedCamera;
+        if (!wQ) return 0;
+        let LQ = wQ._calculateLowerRadiusFromModelBoundingSphere(QQ, FQ, this._radiusScale);
+        return wQ.lowerRadiusLimit && this._mode === eQ.IgnoreBoundsSizeMode && (LQ = LQ < wQ.lowerRadiusLimit ? wQ.lowerRadiusLimit : LQ), wQ.upperRadiusLimit && (LQ = LQ > wQ.upperRadiusLimit ? wQ.upperRadiusLimit : LQ), LQ
       }
       _maintainCameraAboveGround() {
         if (this._elevationReturnTime < 0) return;
-        const dd = od.d.Now - this._lastInteractionTime,
-          Jd = .5 * Math.PI - this._defaultElevation,
-          kd = .5 * Math.PI;
-        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > kd && dd >= this._elevationReturnWaitTime) {
-          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = Od.c.CreateAnimation("beta", Od.c.ANIMATIONTYPE_FLOAT, 60, Rd.EasingFunction));
-          const dd = Od.c.TransitionTo("beta", Jd, this._attachedCamera, this._attachedCamera.Wm(), 60, this._betaTransition, this._elevationReturnTime, (() => {
+        const QQ = HQ.e.Now - this._lastInteractionTime,
+          FQ = .5 * Math.PI - this._defaultElevation,
+          wQ = .5 * Math.PI;
+        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > wQ && QQ >= this._elevationReturnWaitTime) {
+          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = AQ.d.CreateAnimation("beta", AQ.d.ANIMATIONTYPE_FLOAT, 60, eQ.EasingFunction));
+          const QQ = AQ.d.TransitionTo("beta", FQ, this._attachedCamera, this._attachedCamera.iN(), 60, this._betaTransition, this._elevationReturnTime, (() => {
             this._clearAnimationLocks(), this.stopAllAnimations()
           }));
-          dd && this._animatables.push(dd)
+          QQ && this._animatables.push(QQ)
         }
       }
       _clearAnimationLocks() {
         this._betaIsAnimating = !1
       }
       _applyUserInteraction() {
-        this.isUserIsMoving && (this._lastInteractionTime = od.d.Now, this.stopAllAnimations(), this._clearAnimationLocks())
+        this.isUserIsMoving && (this._lastInteractionTime = HQ.e.Now, this.stopAllAnimations(), this._clearAnimationLocks())
       }
       stopAllAnimations() {
         for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0] && (this._animatables[0].onAnimationEnd = null, this._animatables[0].stop()), this._animatables.shift()
@@ -343,115 +343,115 @@ export const modules = {
         return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
       }
     }
-    Rd.EasingFunction = new class extends Ld {
+    eQ.EasingFunction = new class extends xQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        super(), this.exponent = dd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
+        super(), this.exponent = QQ
       }
-      easeInCore(dd) {
-        return this.exponent <= 0 ? dd : (Math.exp(this.exponent * dd) - 1) / (Math.exp(this.exponent) - 1)
+      easeInCore(QQ) {
+        return this.exponent <= 0 ? QQ : (Math.exp(this.exponent * QQ) - 1) / (Math.exp(this.exponent) - 1)
       }
-    }, Rd.EasingMode = Ld.EASINGMODE_EASEINOUT, Rd.IgnoreBoundsSizeMode = 0, Rd.FitFrustumSidesMode = 1;
-    var Id = kd(40199),
-      Gd = kd(40195),
-      vd = kd(40223),
-      xd = kd(40066);
-    let qd = (() => {
-        var dd;
-        let Jd, kd = [],
-          Wd = [];
-        return dd = class {
+    }, eQ.EasingMode = xQ.EASINGMODE_EASEINOUT, eQ.IgnoreBoundsSizeMode = 0, eQ.FitFrustumSidesMode = 1;
+    var MQ = wQ(39642),
+      GQ = wQ(39633),
+      pQ = wQ(39676),
+      cQ = wQ(39505);
+    let CQ = (() => {
+        var QQ;
+        let FQ, wQ = [],
+          oQ = [];
+        return QQ = class {
           constructor() {
-            this._currentMousePointerIdDown = -1, this.buttons = (0, pd.i)(this, kd, [0, 1, 2]), this._pointerInput = (0, pd.i)(this, Wd)
+            this._currentMousePointerIdDown = -1, this.buttons = (0, LQ.l)(this, wQ, [0, 1, 2]), this._pointerInput = (0, LQ.l)(this, oQ)
           }
-          attachControl(dd) {
-            dd = xd.h.BackCompatCameraNoPreventDefault(arguments);
-            const Jd = this.camera.eL(),
-              kd = Jd.getInputElement();
-            let pd = 0,
-              Nd = null;
-            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = Wd => {
-              const Pd = Wd.event,
-                Zd = "touch" === Pd.pointerType;
-              if (Wd.type !== Kd.b.POINTERMOVE && -1 === this.buttons.indexOf(Pd.button)) return;
-              const gd = Pd.target;
-              if (this._altKey = Pd.altKey, this._ctrlKey = Pd.ctrlKey, this._metaKey = Pd.metaKey, this._shiftKey = Pd.shiftKey, this._buttonsPressed = Pd.buttons, Jd.isPointerLock) {
-                const dd = Pd.movementX,
-                  Jd = Pd.movementY;
-                this.onTouch(null, dd, Jd), this._pointA = null, this._pointB = null
+          attachControl(QQ) {
+            QQ = cQ.g.BackCompatCameraNoPreventDefault(arguments);
+            const FQ = this.camera.Wx(),
+              wQ = FQ.getInputElement();
+            let LQ = 0,
+              qQ = null;
+            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = oQ => {
+              const DQ = oQ.event,
+                kQ = "touch" === DQ.pointerType;
+              if (oQ.type !== uQ.e.POINTERMOVE && -1 === this.buttons.indexOf(DQ.button)) return;
+              const vQ = DQ.target;
+              if (this._altKey = DQ.altKey, this._ctrlKey = DQ.ctrlKey, this._metaKey = DQ.metaKey, this._shiftKey = DQ.shiftKey, this._buttonsPressed = DQ.buttons, FQ.isPointerLock) {
+                const QQ = DQ.movementX,
+                  FQ = DQ.movementY;
+                this.onTouch(null, QQ, FQ), this._pointA = null, this._pointB = null
               } else {
-                if (Wd.type !== Kd.b.POINTERDOWN && Wd.type !== Kd.b.POINTERDOUBLETAP && Zd && this._pointA?.pointerId !== Pd.pointerId && this._pointB?.pointerId !== Pd.pointerId) return;
-                if (Wd.type !== Kd.b.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !Zd)
-                  if (Wd.type === Kd.b.POINTERDOUBLETAP) this.onDoubleTap(Pd.pointerType, Pd);
-                  else if (Wd.type !== Kd.b.POINTERUP || this._currentMousePointerIdDown !== Pd.pointerId && !Zd) {
-                  if (Wd.type === Kd.b.POINTERMOVE)
-                    if (dd || Pd.preventDefault(), this._pointA && null === this._pointB) {
-                      const dd = Pd.clientX - this._pointA.x,
-                        Jd = Pd.clientY - this._pointA.y;
-                      this._pointA.x = Pd.clientX, this._pointA.y = Pd.clientY, this.onTouch(this._pointA, dd, Jd)
+                if (oQ.type !== uQ.e.POINTERDOWN && oQ.type !== uQ.e.POINTERDOUBLETAP && kQ && this._pointA?.pointerId !== DQ.pointerId && this._pointB?.pointerId !== DQ.pointerId) return;
+                if (oQ.type !== uQ.e.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !kQ)
+                  if (oQ.type === uQ.e.POINTERDOUBLETAP) this.onDoubleTap(DQ.pointerType, DQ);
+                  else if (oQ.type !== uQ.e.POINTERUP || this._currentMousePointerIdDown !== DQ.pointerId && !kQ) {
+                  if (oQ.type === uQ.e.POINTERMOVE)
+                    if (QQ || DQ.preventDefault(), this._pointA && null === this._pointB) {
+                      const QQ = DQ.clientX - this._pointA.x,
+                        FQ = DQ.clientY - this._pointA.y;
+                      this._pointA.x = DQ.clientX, this._pointA.y = DQ.clientY, this.onTouch(this._pointA, QQ, FQ)
                     } else if (this._pointA && this._pointB) {
-                    const dd = this._pointA.pointerId === Pd.pointerId ? this._pointA : this._pointB;
-                    dd.x = Pd.clientX, dd.y = Pd.clientY;
-                    const Jd = this._pointA.x - this._pointB.x,
-                      kd = this._pointA.y - this._pointB.y,
-                      Zd = Jd * Jd + kd * kd,
-                      gd = {
+                    const QQ = this._pointA.pointerId === DQ.pointerId ? this._pointA : this._pointB;
+                    QQ.x = DQ.clientX, QQ.y = DQ.clientY;
+                    const FQ = this._pointA.x - this._pointB.x,
+                      wQ = this._pointA.y - this._pointB.y,
+                      kQ = FQ * FQ + wQ * wQ,
+                      vQ = {
                         x: (this._pointA.x + this._pointB.x) / 2,
                         y: (this._pointA.y + this._pointB.y) / 2,
-                        pointerId: Pd.pointerId,
-                        type: Wd.type
+                        pointerId: DQ.pointerId,
+                        type: oQ.type
                       };
-                    this.onMultiTouch(this._pointA, this._pointB, pd, Zd, Nd, gd), Nd = gd, pd = Zd
+                    this.onMultiTouch(this._pointA, this._pointB, LQ, kQ, qQ, vQ), qQ = vQ, LQ = kQ
                   }
                 } else {
                   try {
-                    gd?.releasePointerCapture(Pd.pointerId)
-                  } catch (Cd) {}
-                  Zd || (this._pointB = null), Jd._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == Pd.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == Pd.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== pd || Nd) && (this.onMultiTouch(this._pointA, this._pointB, pd, 0, Nd, null), pd = 0, Nd = null), this._currentMousePointerIdDown = -1, this.onButtonUp(Pd), dd || Pd.preventDefault()
+                    vQ?.releasePointerCapture(DQ.pointerId)
+                  } catch (mQ) {}
+                  kQ || (this._pointB = null), FQ._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == DQ.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == DQ.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== LQ || qQ) && (this.onMultiTouch(this._pointA, this._pointB, LQ, 0, qQ, null), LQ = 0, qQ = null), this._currentMousePointerIdDown = -1, this.onButtonUp(DQ), QQ || DQ.preventDefault()
                 } else {
                   try {
-                    gd?.setPointerCapture(Pd.pointerId)
-                  } catch (Cd) {}
+                    vQ?.setPointerCapture(DQ.pointerId)
+                  } catch (mQ) {}
                   if (null === this._pointA) this._pointA = {
-                    x: Pd.clientX,
-                    y: Pd.clientY,
-                    pointerId: Pd.pointerId,
-                    type: Pd.pointerType,
-                    button: Pd.button
+                    x: DQ.clientX,
+                    y: DQ.clientY,
+                    pointerId: DQ.pointerId,
+                    type: DQ.pointerType,
+                    button: DQ.button
                   };
                   else {
                     if (null !== this._pointB) return;
                     this._pointB = {
-                      x: Pd.clientX,
-                      y: Pd.clientY,
-                      pointerId: Pd.pointerId,
-                      type: Pd.pointerType,
-                      button: Pd.button
+                      x: DQ.clientX,
+                      y: DQ.clientY,
+                      pointerId: DQ.pointerId,
+                      type: DQ.pointerType,
+                      button: DQ.button
                     }
-                  } - 1 !== this._currentMousePointerIdDown || Zd || (this._currentMousePointerIdDown = Pd.pointerId), this.onButtonDown(Pd), dd || (Pd.preventDefault(), kd && kd.focus())
+                  } - 1 !== this._currentMousePointerIdDown || kQ || (this._currentMousePointerIdDown = DQ.pointerId), this.onButtonDown(DQ), QQ || (DQ.preventDefault(), wQ && wQ.focus())
                 }
               }
-            }, this._observer = this.camera.Wm()._inputManager._addCameraPointerObserver(this._pointerInput, Kd.b.POINTERDOWN | Kd.b.POINTERUP | Kd.b.POINTERMOVE | Kd.b.POINTERDOUBLETAP), this._onLostFocus = () => {
-              this._pointA = this._pointB = null, pd = 0, Nd = null, this.onLostFocus()
-            }, this._contextMenuBind = dd => this.onContextMenu(dd), kd && kd.addEventListener("contextmenu", this._contextMenuBind, !1);
-            const Wd = this.camera.Wm().eL().getHostWindow();
-            Wd && xd.h.RegisterTopRootEvents(Wd, [{
+            }, this._observer = this.camera.iN()._inputManager._addCameraPointerObserver(this._pointerInput, uQ.e.POINTERDOWN | uQ.e.POINTERUP | uQ.e.POINTERMOVE | uQ.e.POINTERDOUBLETAP), this._onLostFocus = () => {
+              this._pointA = this._pointB = null, LQ = 0, qQ = null, this.onLostFocus()
+            }, this._contextMenuBind = QQ => this.onContextMenu(QQ), wQ && wQ.addEventListener("contextmenu", this._contextMenuBind, !1);
+            const oQ = this.camera.iN().Wx().getHostWindow();
+            oQ && cQ.g.RegisterTopRootEvents(oQ, [{
               name: "blur",
               handler: this._onLostFocus
             }])
           }
           detachControl() {
             if (this._onLostFocus) {
-              const dd = this.camera.Wm().eL().getHostWindow();
-              dd && xd.h.UnregisterTopRootEvents(dd, [{
+              const QQ = this.camera.iN().Wx().getHostWindow();
+              QQ && cQ.g.UnregisterTopRootEvents(QQ, [{
                 name: "blur",
                 handler: this._onLostFocus
               }])
             }
             if (this._observer) {
-              if (this.camera.Wm()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
-                const dd = this.camera.Wm().eL().getInputElement();
-                dd && dd.removeEventListener("contextmenu", this._contextMenuBind)
+              if (this.camera.iN()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
+                const QQ = this.camera.iN().Wx().getInputElement();
+                QQ && QQ.removeEventListener("contextmenu", this._contextMenuBind)
               }
               this._onLostFocus = null
             }
@@ -463,131 +463,131 @@ export const modules = {
           getSimpleName() {
             return "pointers"
           }
-          onDoubleTap(dd, Jd) {}
-          onTouch(dd, Jd, kd) {}
-          onMultiTouch(dd, Jd, kd, pd, Nd, Wd) {}
-          onContextMenu(dd) {
-            dd.preventDefault()
+          onDoubleTap(QQ, FQ) {}
+          onTouch(QQ, FQ, wQ) {}
+          onMultiTouch(QQ, FQ, wQ, LQ, qQ, oQ) {}
+          onContextMenu(QQ) {
+            QQ.preventDefault()
           }
-          onButtonDown(dd) {}
-          onButtonUp(dd) {}
+          onButtonDown(QQ) {}
+          onButtonUp(QQ) {}
           onLostFocus() {}
         }, (() => {
-          const Pd = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          Jd = [(0, Nd.H)()], (0, pd.h)(null, null, Jd, {
+          const DQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+          FQ = [(0, qQ.I)()], (0, LQ.i)(null, null, FQ, {
             kind: "field",
             name: "buttons",
             static: !1,
             private: !1,
             access: {
-              has: dd => "buttons" in dd,
-              get: dd => dd.buttons,
-              set: (dd, Jd) => {
-                dd.buttons = Jd
+              has: QQ => "buttons" in QQ,
+              get: QQ => QQ.buttons,
+              set: (QQ, FQ) => {
+                QQ.buttons = FQ
               }
             },
-            metadata: Pd
-          }, kd, Wd), Pd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: DQ
+          }, wQ, oQ), DQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Pd
+            value: DQ
           })
-        })(), dd
+        })(), QQ
       })(),
-      Bd = (() => {
-        var dd;
-        let Jd, kd, Wd, Pd = qd,
-          Zd = [],
-          gd = [],
-          Cd = [],
-          Kd = [],
-          od = [],
-          ld = [];
-        return dd = class extends Pd {
+      SQ = (() => {
+        var QQ;
+        let FQ, wQ, oQ, DQ = CQ,
+          kQ = [],
+          vQ = [],
+          mQ = [],
+          uQ = [],
+          HQ = [],
+          bQ = [];
+        return QQ = class extends DQ {
           constructor() {
-            super(...arguments), this.pinchZoom = (0, pd.i)(this, Zd, !0), this.multiTouchPanning = ((0, pd.i)(this, gd), (0, pd.i)(this, Cd, !0)), this.multiTouchPanAndZoom = ((0, pd.i)(this, Kd), (0, pd.i)(this, od, !0)), this._isPinching = ((0, pd.i)(this, ld), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
+            super(...arguments), this.pinchZoom = (0, LQ.l)(this, kQ, !0), this.multiTouchPanning = ((0, LQ.l)(this, vQ), (0, LQ.l)(this, mQ, !0)), this.multiTouchPanAndZoom = ((0, LQ.l)(this, uQ), (0, LQ.l)(this, HQ, !0)), this._isPinching = ((0, LQ.l)(this, bQ), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
           }
-          _computePinchZoom(dd, Jd) {}
-          _computeMultiTouchPanning(dd, Jd) {}
-          onMultiTouch(dd, Jd, kd, pd, Nd, Wd) {
-            0 === kd && null === Nd || 0 === pd && null === Wd || (this.multiTouchPanAndZoom ? (this._computePinchZoom(kd, pd), this._computeMultiTouchPanning(Nd, Wd)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(kd, pd), this._isPinching = !0) : this._computeMultiTouchPanning(Nd, Wd)) : this.multiTouchPanning ? this._computeMultiTouchPanning(Nd, Wd) : this.pinchZoom && this._computePinchZoom(kd, pd))
+          _computePinchZoom(QQ, FQ) {}
+          _computeMultiTouchPanning(QQ, FQ) {}
+          onMultiTouch(QQ, FQ, wQ, LQ, qQ, oQ) {
+            0 === wQ && null === qQ || 0 === LQ && null === oQ || (this.multiTouchPanAndZoom ? (this._computePinchZoom(wQ, LQ), this._computeMultiTouchPanning(qQ, oQ)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(wQ, LQ), this._isPinching = !0) : this._computeMultiTouchPanning(qQ, oQ)) : this.multiTouchPanning ? this._computeMultiTouchPanning(qQ, oQ) : this.pinchZoom && this._computePinchZoom(wQ, LQ))
           }
-          onButtonUp(dd) {
+          onButtonUp(QQ) {
             this._twoFingerActivityCount = 0, this._isPinching = !1
           }
           onLostFocus() {
             this._twoFingerActivityCount = 0, this._isPinching = !1
           }
         }, (() => {
-          const Qd = "function" === typeof Symbol && Symbol.metadata ? Object.create(Pd[Symbol.metadata] ?? null) : void 0;
-          Jd = [(0, Nd.H)()], kd = [(0, Nd.H)()], Wd = [(0, Nd.H)()], (0, pd.h)(null, null, Jd, {
+          const YQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(DQ[Symbol.metadata] ?? null) : void 0;
+          FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], oQ = [(0, qQ.I)()], (0, LQ.i)(null, null, FQ, {
             kind: "field",
             name: "pinchZoom",
             static: !1,
             private: !1,
             access: {
-              has: dd => "pinchZoom" in dd,
-              get: dd => dd.pinchZoom,
-              set: (dd, Jd) => {
-                dd.pinchZoom = Jd
+              has: QQ => "pinchZoom" in QQ,
+              get: QQ => QQ.pinchZoom,
+              set: (QQ, FQ) => {
+                QQ.pinchZoom = FQ
               }
             },
-            metadata: Qd
-          }, Zd, gd), (0, pd.h)(null, null, kd, {
+            metadata: YQ
+          }, kQ, vQ), (0, LQ.i)(null, null, wQ, {
             kind: "field",
             name: "multiTouchPanning",
             static: !1,
             private: !1,
             access: {
-              has: dd => "multiTouchPanning" in dd,
-              get: dd => dd.multiTouchPanning,
-              set: (dd, Jd) => {
-                dd.multiTouchPanning = Jd
+              has: QQ => "multiTouchPanning" in QQ,
+              get: QQ => QQ.multiTouchPanning,
+              set: (QQ, FQ) => {
+                QQ.multiTouchPanning = FQ
               }
             },
-            metadata: Qd
-          }, Cd, Kd), (0, pd.h)(null, null, Wd, {
+            metadata: YQ
+          }, mQ, uQ), (0, LQ.i)(null, null, oQ, {
             kind: "field",
             name: "multiTouchPanAndZoom",
             static: !1,
             private: !1,
             access: {
-              has: dd => "multiTouchPanAndZoom" in dd,
-              get: dd => dd.multiTouchPanAndZoom,
-              set: (dd, Jd) => {
-                dd.multiTouchPanAndZoom = Jd
+              has: QQ => "multiTouchPanAndZoom" in QQ,
+              get: QQ => QQ.multiTouchPanAndZoom,
+              set: (QQ, FQ) => {
+                QQ.multiTouchPanAndZoom = FQ
               }
             },
-            metadata: Qd
-          }, od, ld), Qd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: YQ
+          }, HQ, bQ), YQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Qd
+            value: YQ
           })
-        })(), dd
+        })(), QQ
       })(),
-      sd = (() => {
-        var dd;
-        let Jd, kd, Wd, Pd, Zd, gd, Cd, Kd = Bd,
-          od = [],
-          ld = [],
-          Qd = [],
-          Ld = [],
-          Od = [],
-          ed = [],
-          Rd = [],
-          Id = [],
-          Gd = [],
-          vd = [],
-          xd = [],
-          qd = [],
-          sd = [],
-          ad = [];
-        return dd = class extends Kd {
+      iQ = (() => {
+        var QQ;
+        let FQ, wQ, oQ, DQ, kQ, vQ, mQ, uQ = SQ,
+          HQ = [],
+          bQ = [],
+          YQ = [],
+          xQ = [],
+          AQ = [],
+          tQ = [],
+          eQ = [],
+          MQ = [],
+          GQ = [],
+          pQ = [],
+          cQ = [],
+          CQ = [],
+          iQ = [],
+          WQ = [];
+        return QQ = class extends uQ {
           constructor() {
-            super(...arguments), this.buttons = (0, pd.i)(this, od, [0, 1, 2]), this.angularSensibilityX = ((0, pd.i)(this, ld), (0, pd.i)(this, Qd, 1e3)), this.angularSensibilityY = ((0, pd.i)(this, Ld), (0, pd.i)(this, Od, 1e3)), this.pinchPrecision = ((0, pd.i)(this, ed), (0, pd.i)(this, Rd, 12)), this.pinchDeltaPercentage = ((0, pd.i)(this, Id), (0, pd.i)(this, Gd, 0)), this.useNaturalPinchZoom = ((0, pd.i)(this, vd), (0, pd.i)(this, xd, !1)), this.panningSensibility = ((0, pd.i)(this, qd), (0, pd.i)(this, sd, 1e3)), this.pinchInwards = ((0, pd.i)(this, ad), !0), this._activeEntry = null, this._pointerLockConditions = {
+            super(...arguments), this.buttons = (0, LQ.l)(this, HQ, [0, 1, 2]), this.angularSensibilityX = ((0, LQ.l)(this, bQ), (0, LQ.l)(this, YQ, 1e3)), this.angularSensibilityY = ((0, LQ.l)(this, xQ), (0, LQ.l)(this, AQ, 1e3)), this.pinchPrecision = ((0, LQ.l)(this, tQ), (0, LQ.l)(this, eQ, 12)), this.pinchDeltaPercentage = ((0, LQ.l)(this, MQ), (0, LQ.l)(this, GQ, 0)), this.useNaturalPinchZoom = ((0, LQ.l)(this, pQ), (0, LQ.l)(this, cQ, !1)), this.panningSensibility = ((0, LQ.l)(this, CQ), (0, LQ.l)(this, iQ, 1e3)), this.pinchInwards = ((0, LQ.l)(this, WQ), !0), this._activeEntry = null, this._pointerLockConditions = {
               button: 0,
               modifiers: {}
             }, this._pointerModifiers = {
@@ -601,203 +601,203 @@ export const modules = {
           getClassName() {
             return "ArcRotateCameraPointersInput"
           }
-          _computeMultiTouchPanning(dd, Jd) {
-            if (dd && Jd) {
-              const kd = Jd.x - dd.x,
-                pd = Jd.y - dd.y,
-                Nd = this.camera.movement.input.getEntry("pointer", "pan"),
-                Wd = Nd?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-              0 !== Wd && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -kd * Wd, this.camera.movement.panAccumulatedPixels.y += pd * Wd)
+          _computeMultiTouchPanning(QQ, FQ) {
+            if (QQ && FQ) {
+              const wQ = FQ.x - QQ.x,
+                LQ = FQ.y - QQ.y,
+                qQ = this.camera.movement.input.getEntry("pointer", "pan"),
+                oQ = qQ?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
+              0 !== oQ && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -wQ * oQ, this.camera.movement.panAccumulatedPixels.y += LQ * oQ)
             }
           }
-          _computePinchZoom(Jd, kd) {
-            const pd = this.camera.radius || dd.MinimumRadiusForPinch;
-            if (this.useNaturalPinchZoom) this.camera.radius = pd * Math.sqrt(Jd) / Math.sqrt(kd);
+          _computePinchZoom(FQ, wQ) {
+            const LQ = this.camera.radius || QQ.MinimumRadiusForPinch;
+            if (this.useNaturalPinchZoom) this.camera.radius = LQ * Math.sqrt(FQ) / Math.sqrt(wQ);
             else if (this.pinchDeltaPercentage) {
-              const dd = .001 * (kd - Jd) * pd * this.pinchDeltaPercentage;
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += dd
+              const QQ = .001 * (wQ - FQ) * LQ * this.pinchDeltaPercentage;
+              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += QQ
             } else {
-              const dd = (kd - Jd) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += dd
+              const QQ = (wQ - FQ) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
+              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += QQ
             }
           }
-          onTouch(dd, Jd, kd) {
-            const pd = this._activeEntry ?? (this.camera.eL().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
-            if (pd)
-              if ("pan" === pd.interaction) {
-                const dd = pd.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-                0 !== dd && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -Jd * dd, this.camera.movement.panAccumulatedPixels.y += kd * dd)
-              } else if ("rotate" === pd.interaction) {
-              const dd = pd.vV ?? pd.sensitivity ?? 1 / this.angularSensibilityX,
-                Nd = pd.xV ?? pd.sensitivity ?? 1 / this.angularSensibilityY;
-              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -Jd * dd, this.camera.movement.rotationAccumulatedPixels.y += -kd * Nd
+          onTouch(QQ, FQ, wQ) {
+            const LQ = this._activeEntry ?? (this.camera.Wx().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
+            if (LQ)
+              if ("pan" === LQ.interaction) {
+                const QQ = LQ.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
+                0 !== QQ && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -FQ * QQ, this.camera.movement.panAccumulatedPixels.y += wQ * QQ)
+              } else if ("rotate" === LQ.interaction) {
+              const QQ = LQ.OE ?? LQ.sensitivity ?? 1 / this.angularSensibilityX,
+                qQ = LQ.sE ?? LQ.sensitivity ?? 1 / this.angularSensibilityY;
+              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -FQ * QQ, this.camera.movement.rotationAccumulatedPixels.y += -wQ * qQ
             }
           }
           onDoubleTap() {
             this.camera.useInputToRestoreState && this.camera.restoreState()
           }
-          onMultiTouch(dd, Jd, kd, pd, Nd, Wd) {
-            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(pd) - Math.sqrt(kd)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(dd, Jd, kd, pd, Nd, Wd)
+          onMultiTouch(QQ, FQ, wQ, LQ, qQ, oQ) {
+            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(LQ) - Math.sqrt(wQ)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(QQ, FQ, wQ, LQ, qQ, oQ)
           }
-          onButtonDown(dd) {
-            this._pointerConditions.button = dd.button, this._pointerModifiers.ctrl = dd.ctrlKey, this._pointerModifiers.alt = dd.altKey, this._pointerModifiers.shift = dd.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(dd)
+          onButtonDown(QQ) {
+            this._pointerConditions.button = QQ.button, this._pointerModifiers.ctrl = QQ.ctrlKey, this._pointerModifiers.alt = QQ.altKey, this._pointerModifiers.shift = QQ.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(QQ)
           }
-          onButtonUp(dd) {
-            this._activeEntry = null, super.onButtonUp(dd)
+          onButtonUp(QQ) {
+            this._activeEntry = null, super.onButtonUp(QQ)
           }
           onLostFocus() {
             this._activeEntry = null, super.onLostFocus()
           }
         }, (() => {
-          const Bd = "function" === typeof Symbol && Symbol.metadata ? Object.create(Kd[Symbol.metadata] ?? null) : void 0;
-          Jd = [(0, Nd.H)()], kd = [(0, Nd.H)()], Wd = [(0, Nd.H)()], Pd = [(0, Nd.H)()], Zd = [(0, Nd.H)()], gd = [(0, Nd.H)()], Cd = [(0, Nd.H)()], (0, pd.h)(null, null, Jd, {
+          const SQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(uQ[Symbol.metadata] ?? null) : void 0;
+          FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], oQ = [(0, qQ.I)()], DQ = [(0, qQ.I)()], kQ = [(0, qQ.I)()], vQ = [(0, qQ.I)()], mQ = [(0, qQ.I)()], (0, LQ.i)(null, null, FQ, {
             kind: "field",
             name: "buttons",
             static: !1,
             private: !1,
             access: {
-              has: dd => "buttons" in dd,
-              get: dd => dd.buttons,
-              set: (dd, Jd) => {
-                dd.buttons = Jd
+              has: QQ => "buttons" in QQ,
+              get: QQ => QQ.buttons,
+              set: (QQ, FQ) => {
+                QQ.buttons = FQ
               }
             },
-            metadata: Bd
-          }, od, ld), (0, pd.h)(null, null, kd, {
+            metadata: SQ
+          }, HQ, bQ), (0, LQ.i)(null, null, wQ, {
             kind: "field",
             name: "angularSensibilityX",
             static: !1,
             private: !1,
             access: {
-              has: dd => "angularSensibilityX" in dd,
-              get: dd => dd.angularSensibilityX,
-              set: (dd, Jd) => {
-                dd.angularSensibilityX = Jd
+              has: QQ => "angularSensibilityX" in QQ,
+              get: QQ => QQ.angularSensibilityX,
+              set: (QQ, FQ) => {
+                QQ.angularSensibilityX = FQ
               }
             },
-            metadata: Bd
-          }, Qd, Ld), (0, pd.h)(null, null, Wd, {
+            metadata: SQ
+          }, YQ, xQ), (0, LQ.i)(null, null, oQ, {
             kind: "field",
             name: "angularSensibilityY",
             static: !1,
             private: !1,
             access: {
-              has: dd => "angularSensibilityY" in dd,
-              get: dd => dd.angularSensibilityY,
-              set: (dd, Jd) => {
-                dd.angularSensibilityY = Jd
+              has: QQ => "angularSensibilityY" in QQ,
+              get: QQ => QQ.angularSensibilityY,
+              set: (QQ, FQ) => {
+                QQ.angularSensibilityY = FQ
               }
             },
-            metadata: Bd
-          }, Od, ed), (0, pd.h)(null, null, Pd, {
+            metadata: SQ
+          }, AQ, tQ), (0, LQ.i)(null, null, DQ, {
             kind: "field",
             name: "pinchPrecision",
             static: !1,
             private: !1,
             access: {
-              has: dd => "pinchPrecision" in dd,
-              get: dd => dd.pinchPrecision,
-              set: (dd, Jd) => {
-                dd.pinchPrecision = Jd
+              has: QQ => "pinchPrecision" in QQ,
+              get: QQ => QQ.pinchPrecision,
+              set: (QQ, FQ) => {
+                QQ.pinchPrecision = FQ
               }
             },
-            metadata: Bd
-          }, Rd, Id), (0, pd.h)(null, null, Zd, {
+            metadata: SQ
+          }, eQ, MQ), (0, LQ.i)(null, null, kQ, {
             kind: "field",
             name: "pinchDeltaPercentage",
             static: !1,
             private: !1,
             access: {
-              has: dd => "pinchDeltaPercentage" in dd,
-              get: dd => dd.pinchDeltaPercentage,
-              set: (dd, Jd) => {
-                dd.pinchDeltaPercentage = Jd
+              has: QQ => "pinchDeltaPercentage" in QQ,
+              get: QQ => QQ.pinchDeltaPercentage,
+              set: (QQ, FQ) => {
+                QQ.pinchDeltaPercentage = FQ
               }
             },
-            metadata: Bd
-          }, Gd, vd), (0, pd.h)(null, null, gd, {
+            metadata: SQ
+          }, GQ, pQ), (0, LQ.i)(null, null, vQ, {
             kind: "field",
             name: "useNaturalPinchZoom",
             static: !1,
             private: !1,
             access: {
-              has: dd => "useNaturalPinchZoom" in dd,
-              get: dd => dd.useNaturalPinchZoom,
-              set: (dd, Jd) => {
-                dd.useNaturalPinchZoom = Jd
+              has: QQ => "useNaturalPinchZoom" in QQ,
+              get: QQ => QQ.useNaturalPinchZoom,
+              set: (QQ, FQ) => {
+                QQ.useNaturalPinchZoom = FQ
               }
             },
-            metadata: Bd
-          }, xd, qd), (0, pd.h)(null, null, Cd, {
+            metadata: SQ
+          }, cQ, CQ), (0, LQ.i)(null, null, mQ, {
             kind: "field",
             name: "panningSensibility",
             static: !1,
             private: !1,
             access: {
-              has: dd => "panningSensibility" in dd,
-              get: dd => dd.panningSensibility,
-              set: (dd, Jd) => {
-                dd.panningSensibility = Jd
+              has: QQ => "panningSensibility" in QQ,
+              get: QQ => QQ.panningSensibility,
+              set: (QQ, FQ) => {
+                QQ.panningSensibility = FQ
               }
             },
-            metadata: Bd
-          }, sd, ad), Bd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: SQ
+          }, iQ, WQ), SQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Bd
+            value: SQ
           })
-        })(), dd.MinimumRadiusForPinch = .001, dd
+        })(), QQ.MinimumRadiusForPinch = .001, QQ
       })();
-    vd.d.ArcRotateCameraPointersInput = sd;
-    var ad = kd(40164);
-    let Md = (() => {
-      var dd;
-      let Jd, kd, Wd, Zd, gd, Cd, Kd, od, ld, Qd, Ld, Od = [],
-        ed = [],
-        Rd = [],
-        Id = [],
-        Gd = [],
-        vd = [],
-        qd = [],
-        Bd = [],
-        sd = [],
-        Md = [],
-        Fd = [],
-        Yd = [],
-        md = [],
-        bd = [],
-        Sd = [],
-        jd = [],
-        Xd = [],
-        fd = [],
-        nd = [],
-        Ud = [],
-        yd = [];
-      return dd = class {
+    pQ.c.ArcRotateCameraPointersInput = iQ;
+    var WQ = wQ(39601);
+    let RQ = (() => {
+      var QQ;
+      let FQ, wQ, oQ, kQ, vQ, mQ, uQ, HQ, bQ, YQ, xQ, AQ = [],
+        tQ = [],
+        eQ = [],
+        MQ = [],
+        GQ = [],
+        pQ = [],
+        CQ = [],
+        SQ = [],
+        iQ = [],
+        RQ = [],
+        OQ = [],
+        sQ = [],
+        rQ = [],
+        IQ = [],
+        UQ = [],
+        NQ = [],
+        TQ = [],
+        KQ = [],
+        zQ = [],
+        lQ = [],
+        jQ = [];
+      return QQ = class {
         constructor() {
-          this.camera = (0, pd.i)(this, Od), this.keysUp = (0, pd.i)(this, ed, [38]), this.keysDown = ((0, pd.i)(this, Rd), (0, pd.i)(this, Id, [40])), this.keysLeft = ((0, pd.i)(this, Gd), (0, pd.i)(this, vd, [37])), this.keysRight = ((0, pd.i)(this, qd), (0, pd.i)(this, Bd, [39])), this.keysReset = ((0, pd.i)(this, sd), (0, pd.i)(this, Md, [220])), this.keysZoomIn = ((0, pd.i)(this, Fd), (0, pd.i)(this, Yd, [187, 107])), this.keysZoomOut = ((0, pd.i)(this, md), (0, pd.i)(this, bd, [189, 109])), this.panningSensibility = ((0, pd.i)(this, Sd), (0, pd.i)(this, jd, 50)), this.zoomingSensibility = ((0, pd.i)(this, Xd), (0, pd.i)(this, fd, 25)), this.angularSpeed = ((0, pd.i)(this, nd), (0, pd.i)(this, Ud, .01)), this._useAltToZoom = ((0, pd.i)(this, yd), !0), this._keys = new Array, this._keyboardModifiers = {
+          this.camera = (0, LQ.l)(this, AQ), this.keysUp = (0, LQ.l)(this, tQ, [38]), this.keysDown = ((0, LQ.l)(this, eQ), (0, LQ.l)(this, MQ, [40])), this.keysLeft = ((0, LQ.l)(this, GQ), (0, LQ.l)(this, pQ, [37])), this.keysRight = ((0, LQ.l)(this, CQ), (0, LQ.l)(this, SQ, [39])), this.keysReset = ((0, LQ.l)(this, iQ), (0, LQ.l)(this, RQ, [220])), this.keysZoomIn = ((0, LQ.l)(this, OQ), (0, LQ.l)(this, sQ, [187, 107])), this.keysZoomOut = ((0, LQ.l)(this, rQ), (0, LQ.l)(this, IQ, [189, 109])), this.panningSensibility = ((0, LQ.l)(this, UQ), (0, LQ.l)(this, NQ, 50)), this.zoomingSensibility = ((0, LQ.l)(this, TQ), (0, LQ.l)(this, KQ, 25)), this.angularSpeed = ((0, LQ.l)(this, zQ), (0, LQ.l)(this, lQ, .01)), this._useAltToZoom = ((0, LQ.l)(this, jQ), !0), this._keys = new Array, this._keyboardModifiers = {
             ctrl: !1,
             alt: !1
           }, this._keyboardConditions = {
             modifiers: this._keyboardModifiers
-          }, this._rotateDirection = new Pd.k, this._panDirection = new Pd.k
+          }, this._rotateDirection = new DQ.n, this._panDirection = new DQ.n
         }
         get useAltToZoom() {
           return this._useAltToZoom
         }
-        set useAltToZoom(dd) {
-          this._useAltToZoom = dd, this._applyUseAltToZoomToInputMap()
+        set useAltToZoom(QQ) {
+          this._useAltToZoom = QQ, this._applyUseAltToZoomToInputMap()
         }
         _applyUseAltToZoomToInputMap() {
           if (!this.camera?.movement) return;
-          const dd = this.camera.movement.input,
-            Jd = dd.getEntry("keyboard", "zoom", {
+          const QQ = this.camera.movement.input,
+            FQ = QQ.getEntry("keyboard", "zoom", {
               modifiers: {
                 alt: !0
               }
             });
-          !this._useAltToZoom && Jd ? dd.inputMap.splice(dd.inputMap.indexOf(Jd), 1) : this._useAltToZoom && !Jd && dd.addEntry({
+          !this._useAltToZoom && FQ ? QQ.inputMap.splice(QQ.inputMap.indexOf(FQ), 1) : this._useAltToZoom && !FQ && QQ.addEntry({
             source: "keyboard",
             modifiers: {
               alt: !0
@@ -805,19 +805,19 @@ export const modules = {
             interaction: "zoom"
           })
         }
-        attachControl(dd) {
-          dd = xd.h.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.Wm(), this._engine = this._scene.eL(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
+        attachControl(QQ) {
+          QQ = cQ.g.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.iN(), this._engine = this._scene.Wx(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
             this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((Jd => {
-            const kd = Jd.event;
-            if (!kd.metaKey)
-              if (Jd.type === ad.d.KEYDOWN) {
-                if (this._ctrlPressed = kd.ctrlKey, this._altPressed = kd.altKey, -1 !== this.keysUp.indexOf(kd.keyCode) || -1 !== this.keysDown.indexOf(kd.keyCode) || -1 !== this.keysLeft.indexOf(kd.keyCode) || -1 !== this.keysRight.indexOf(kd.keyCode) || -1 !== this.keysReset.indexOf(kd.keyCode) || -1 !== this.keysZoomIn.indexOf(kd.keyCode) || -1 !== this.keysZoomOut.indexOf(kd.keyCode)) {
-                  -1 === this._keys.indexOf(kd.keyCode) && this._keys.push(kd.keyCode), kd.preventDefault && (dd || kd.preventDefault())
+          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((FQ => {
+            const wQ = FQ.event;
+            if (!wQ.metaKey)
+              if (FQ.type === WQ.e.KEYDOWN) {
+                if (this._ctrlPressed = wQ.ctrlKey, this._altPressed = wQ.altKey, -1 !== this.keysUp.indexOf(wQ.keyCode) || -1 !== this.keysDown.indexOf(wQ.keyCode) || -1 !== this.keysLeft.indexOf(wQ.keyCode) || -1 !== this.keysRight.indexOf(wQ.keyCode) || -1 !== this.keysReset.indexOf(wQ.keyCode) || -1 !== this.keysZoomIn.indexOf(wQ.keyCode) || -1 !== this.keysZoomOut.indexOf(wQ.keyCode)) {
+                  -1 === this._keys.indexOf(wQ.keyCode) && this._keys.push(wQ.keyCode), wQ.preventDefault && (QQ || wQ.preventDefault())
                 }
-              } else if (-1 !== this.keysUp.indexOf(kd.keyCode) || -1 !== this.keysDown.indexOf(kd.keyCode) || -1 !== this.keysLeft.indexOf(kd.keyCode) || -1 !== this.keysRight.indexOf(kd.keyCode) || -1 !== this.keysReset.indexOf(kd.keyCode) || -1 !== this.keysZoomIn.indexOf(kd.keyCode) || -1 !== this.keysZoomOut.indexOf(kd.keyCode)) {
-              const Jd = this._keys.indexOf(kd.keyCode);
-              Jd >= 0 && this._keys.splice(Jd, 1), kd.preventDefault && (dd || kd.preventDefault())
+              } else if (-1 !== this.keysUp.indexOf(wQ.keyCode) || -1 !== this.keysDown.indexOf(wQ.keyCode) || -1 !== this.keysLeft.indexOf(wQ.keyCode) || -1 !== this.keysRight.indexOf(wQ.keyCode) || -1 !== this.keysReset.indexOf(wQ.keyCode) || -1 !== this.keysZoomIn.indexOf(wQ.keyCode) || -1 !== this.keysZoomOut.indexOf(wQ.keyCode)) {
+              const FQ = this._keys.indexOf(wQ.keyCode);
+              FQ >= 0 && this._keys.splice(FQ, 1), wQ.preventDefault && (QQ || wQ.preventDefault())
             }
           })))
         }
@@ -826,25 +826,25 @@ export const modules = {
         }
         checkInputs() {
           if (this._onKeyboardObserver) {
-            const dd = this.camera,
-              Jd = dd.movement.input;
+            const QQ = this.camera,
+              FQ = QQ.movement.input;
             this._keyboardModifiers.ctrl = this._ctrlPressed, this._keyboardModifiers.alt = this._altPressed;
-            const kd = this._rotateDirection.set(0, 0),
-              pd = this._panDirection.set(0, 0);
-            let Nd = 0,
-              Wd = 0;
-            for (let Pd = 0; Pd < this._keys.length; Pd++) {
-              const Zd = this._keys[Pd];
-              if (this._keyboardConditions.key = Zd, -1 === this.keysReset.indexOf(Zd)) {
-                const dd = Jd.resolveInteraction("keyboard", this._keyboardConditions);
-                if (dd)
-                  if ("pan" === dd.interaction) Wd = Math.max(Wd, dd.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(Zd) ? pd.x -= 1 : -1 !== this.keysRight.indexOf(Zd) ? pd.x += 1 : -1 !== this.keysUp.indexOf(Zd) ? pd.y += 1 : -1 !== this.keysDown.indexOf(Zd) && (pd.y -= 1);
-                  else if ("zoom" === dd.interaction) {
-                  const kd = dd.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(Zd) || -1 !== this.keysZoomIn.indexOf(Zd) ? Jd.handlers.zoom(kd) : -1 === this.keysDown.indexOf(Zd) && -1 === this.keysZoomOut.indexOf(Zd) || Jd.handlers.zoom(-kd)
-                } else "rotate" === dd.interaction && (Nd = Math.max(Nd, dd.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(Zd) ? kd.x -= 1 : -1 !== this.keysRight.indexOf(Zd) ? kd.x += 1 : -1 !== this.keysUp.indexOf(Zd) ? kd.y -= 1 : -1 !== this.keysDown.indexOf(Zd) && (kd.y += 1))
-              } - 1 !== this.keysReset.indexOf(Zd) && dd.useInputToRestoreState && dd.restoreState()
+            const wQ = this._rotateDirection.set(0, 0),
+              LQ = this._panDirection.set(0, 0);
+            let qQ = 0,
+              oQ = 0;
+            for (let DQ = 0; DQ < this._keys.length; DQ++) {
+              const kQ = this._keys[DQ];
+              if (this._keyboardConditions.key = kQ, -1 === this.keysReset.indexOf(kQ)) {
+                const QQ = FQ.resolveInteraction("keyboard", this._keyboardConditions);
+                if (QQ)
+                  if ("pan" === QQ.interaction) oQ = Math.max(oQ, QQ.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(kQ) ? LQ.x -= 1 : -1 !== this.keysRight.indexOf(kQ) ? LQ.x += 1 : -1 !== this.keysUp.indexOf(kQ) ? LQ.y += 1 : -1 !== this.keysDown.indexOf(kQ) && (LQ.y -= 1);
+                  else if ("zoom" === QQ.interaction) {
+                  const wQ = QQ.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(kQ) || -1 !== this.keysZoomIn.indexOf(kQ) ? FQ.handlers.zoom(wQ) : -1 === this.keysDown.indexOf(kQ) && -1 === this.keysZoomOut.indexOf(kQ) || FQ.handlers.zoom(-wQ)
+                } else "rotate" === QQ.interaction && (qQ = Math.max(qQ, QQ.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(kQ) ? wQ.x -= 1 : -1 !== this.keysRight.indexOf(kQ) ? wQ.x += 1 : -1 !== this.keysUp.indexOf(kQ) ? wQ.y -= 1 : -1 !== this.keysDown.indexOf(kQ) && (wQ.y += 1))
+              } - 1 !== this.keysReset.indexOf(kQ) && QQ.useInputToRestoreState && QQ.restoreState()
             }
-            0 === kd.x && 0 === kd.y || (kd.normalize().scaleInPlace(Nd), Jd.handlers.rotate(kd.x, kd.y)), 0 === pd.x && 0 === pd.y || (pd.normalize().scaleInPlace(Wd), Jd.handlers.pan(pd.x, pd.y))
+            0 === wQ.x && 0 === wQ.y || (wQ.normalize().scaleInPlace(qQ), FQ.handlers.rotate(wQ.x, wQ.y)), 0 === LQ.x && 0 === LQ.y || (LQ.normalize().scaleInPlace(oQ), FQ.handlers.pan(LQ.x, LQ.y))
           }
         }
         getClassName() {
@@ -854,208 +854,208 @@ export const modules = {
           return "keyboard"
         }
       }, (() => {
-        const Pd = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Jd = [(0, Nd.H)()], kd = [(0, Nd.H)()], Wd = [(0, Nd.H)()], Zd = [(0, Nd.H)()], gd = [(0, Nd.H)()], Cd = [(0, Nd.H)()], Kd = [(0, Nd.H)()], od = [(0, Nd.H)()], ld = [(0, Nd.H)()], Qd = [(0, Nd.H)()], Ld = [(0, Nd.H)()], (0, pd.h)(dd, null, Ld, {
+        const DQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], oQ = [(0, qQ.I)()], kQ = [(0, qQ.I)()], vQ = [(0, qQ.I)()], mQ = [(0, qQ.I)()], uQ = [(0, qQ.I)()], HQ = [(0, qQ.I)()], bQ = [(0, qQ.I)()], YQ = [(0, qQ.I)()], xQ = [(0, qQ.I)()], (0, LQ.i)(QQ, null, xQ, {
           kind: "getter",
           name: "useAltToZoom",
           static: !1,
           private: !1,
           access: {
-            has: dd => "useAltToZoom" in dd,
-            get: dd => dd.useAltToZoom
+            has: QQ => "useAltToZoom" in QQ,
+            get: QQ => QQ.useAltToZoom
           },
-          metadata: Pd
-        }, null, Od), (0, pd.h)(null, null, Jd, {
+          metadata: DQ
+        }, null, AQ), (0, LQ.i)(null, null, FQ, {
           kind: "field",
           name: "keysUp",
           static: !1,
           private: !1,
           access: {
-            has: dd => "keysUp" in dd,
-            get: dd => dd.keysUp,
-            set: (dd, Jd) => {
-              dd.keysUp = Jd
+            has: QQ => "keysUp" in QQ,
+            get: QQ => QQ.keysUp,
+            set: (QQ, FQ) => {
+              QQ.keysUp = FQ
             }
           },
-          metadata: Pd
-        }, ed, Rd), (0, pd.h)(null, null, kd, {
+          metadata: DQ
+        }, tQ, eQ), (0, LQ.i)(null, null, wQ, {
           kind: "field",
           name: "keysDown",
           static: !1,
           private: !1,
           access: {
-            has: dd => "keysDown" in dd,
-            get: dd => dd.keysDown,
-            set: (dd, Jd) => {
-              dd.keysDown = Jd
+            has: QQ => "keysDown" in QQ,
+            get: QQ => QQ.keysDown,
+            set: (QQ, FQ) => {
+              QQ.keysDown = FQ
             }
           },
-          metadata: Pd
-        }, Id, Gd), (0, pd.h)(null, null, Wd, {
+          metadata: DQ
+        }, MQ, GQ), (0, LQ.i)(null, null, oQ, {
           kind: "field",
           name: "keysLeft",
           static: !1,
           private: !1,
           access: {
-            has: dd => "keysLeft" in dd,
-            get: dd => dd.keysLeft,
-            set: (dd, Jd) => {
-              dd.keysLeft = Jd
+            has: QQ => "keysLeft" in QQ,
+            get: QQ => QQ.keysLeft,
+            set: (QQ, FQ) => {
+              QQ.keysLeft = FQ
             }
           },
-          metadata: Pd
-        }, vd, qd), (0, pd.h)(null, null, Zd, {
+          metadata: DQ
+        }, pQ, CQ), (0, LQ.i)(null, null, kQ, {
           kind: "field",
           name: "keysRight",
           static: !1,
           private: !1,
           access: {
-            has: dd => "keysRight" in dd,
-            get: dd => dd.keysRight,
-            set: (dd, Jd) => {
-              dd.keysRight = Jd
+            has: QQ => "keysRight" in QQ,
+            get: QQ => QQ.keysRight,
+            set: (QQ, FQ) => {
+              QQ.keysRight = FQ
             }
           },
-          metadata: Pd
-        }, Bd, sd), (0, pd.h)(null, null, gd, {
+          metadata: DQ
+        }, SQ, iQ), (0, LQ.i)(null, null, vQ, {
           kind: "field",
           name: "keysReset",
           static: !1,
           private: !1,
           access: {
-            has: dd => "keysReset" in dd,
-            get: dd => dd.keysReset,
-            set: (dd, Jd) => {
-              dd.keysReset = Jd
+            has: QQ => "keysReset" in QQ,
+            get: QQ => QQ.keysReset,
+            set: (QQ, FQ) => {
+              QQ.keysReset = FQ
             }
           },
-          metadata: Pd
-        }, Md, Fd), (0, pd.h)(null, null, Cd, {
+          metadata: DQ
+        }, RQ, OQ), (0, LQ.i)(null, null, mQ, {
           kind: "field",
           name: "keysZoomIn",
           static: !1,
           private: !1,
           access: {
-            has: dd => "keysZoomIn" in dd,
-            get: dd => dd.keysZoomIn,
-            set: (dd, Jd) => {
-              dd.keysZoomIn = Jd
+            has: QQ => "keysZoomIn" in QQ,
+            get: QQ => QQ.keysZoomIn,
+            set: (QQ, FQ) => {
+              QQ.keysZoomIn = FQ
             }
           },
-          metadata: Pd
-        }, Yd, md), (0, pd.h)(null, null, Kd, {
+          metadata: DQ
+        }, sQ, rQ), (0, LQ.i)(null, null, uQ, {
           kind: "field",
           name: "keysZoomOut",
           static: !1,
           private: !1,
           access: {
-            has: dd => "keysZoomOut" in dd,
-            get: dd => dd.keysZoomOut,
-            set: (dd, Jd) => {
-              dd.keysZoomOut = Jd
+            has: QQ => "keysZoomOut" in QQ,
+            get: QQ => QQ.keysZoomOut,
+            set: (QQ, FQ) => {
+              QQ.keysZoomOut = FQ
             }
           },
-          metadata: Pd
-        }, bd, Sd), (0, pd.h)(null, null, od, {
+          metadata: DQ
+        }, IQ, UQ), (0, LQ.i)(null, null, HQ, {
           kind: "field",
           name: "panningSensibility",
           static: !1,
           private: !1,
           access: {
-            has: dd => "panningSensibility" in dd,
-            get: dd => dd.panningSensibility,
-            set: (dd, Jd) => {
-              dd.panningSensibility = Jd
+            has: QQ => "panningSensibility" in QQ,
+            get: QQ => QQ.panningSensibility,
+            set: (QQ, FQ) => {
+              QQ.panningSensibility = FQ
             }
           },
-          metadata: Pd
-        }, jd, Xd), (0, pd.h)(null, null, ld, {
+          metadata: DQ
+        }, NQ, TQ), (0, LQ.i)(null, null, bQ, {
           kind: "field",
           name: "zoomingSensibility",
           static: !1,
           private: !1,
           access: {
-            has: dd => "zoomingSensibility" in dd,
-            get: dd => dd.zoomingSensibility,
-            set: (dd, Jd) => {
-              dd.zoomingSensibility = Jd
+            has: QQ => "zoomingSensibility" in QQ,
+            get: QQ => QQ.zoomingSensibility,
+            set: (QQ, FQ) => {
+              QQ.zoomingSensibility = FQ
             }
           },
-          metadata: Pd
-        }, fd, nd), (0, pd.h)(null, null, Qd, {
+          metadata: DQ
+        }, KQ, zQ), (0, LQ.i)(null, null, YQ, {
           kind: "field",
           name: "angularSpeed",
           static: !1,
           private: !1,
           access: {
-            has: dd => "angularSpeed" in dd,
-            get: dd => dd.angularSpeed,
-            set: (dd, Jd) => {
-              dd.angularSpeed = Jd
+            has: QQ => "angularSpeed" in QQ,
+            get: QQ => QQ.angularSpeed,
+            set: (QQ, FQ) => {
+              QQ.angularSpeed = FQ
             }
           },
-          metadata: Pd
-        }, Ud, yd), Pd && Object.defineProperty(dd, Symbol.metadata, {
+          metadata: DQ
+        }, lQ, jQ), DQ && Object.defineProperty(QQ, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Pd
+          value: DQ
         })
-      })(), dd
+      })(), QQ
     })();
-    vd.d.ArcRotateCameraKeyboardMoveInput = Md;
-    var Fd = kd(37969),
-      Yd = kd(40169);
-    let md = (() => {
-      var dd;
-      let Jd, kd, Wd, gd = [],
-        Cd = [],
-        od = [],
-        Qd = [],
-        Ld = [],
-        Od = [];
-      return dd = class {
+    pQ.c.ArcRotateCameraKeyboardMoveInput = RQ;
+    var OQ = wQ(37324),
+      sQ = wQ(39610);
+    let rQ = (() => {
+      var QQ;
+      let FQ, wQ, oQ, vQ = [],
+        mQ = [],
+        HQ = [],
+        YQ = [],
+        xQ = [],
+        AQ = [];
+      return QQ = class {
         constructor() {
-          this.wheelPrecision = (0, pd.i)(this, gd, 3), this.zoomToMouseLocation = ((0, pd.i)(this, Cd), (0, pd.i)(this, od, !1)), this.wheelDeltaPercentage = ((0, pd.i)(this, Qd), (0, pd.i)(this, Ld, 0)), this.customComputeDeltaFromMouseWheel = ((0, pd.i)(this, Od), null), this._viewOffset = new Pd.n(0, 0, 0), this._globalOffset = new Pd.n(0, 0, 0), this._inertialPanning = Pd.n.Zero(), this._zoomToMouseRadiusOffset = 0
+          this.wheelPrecision = (0, LQ.l)(this, vQ, 3), this.zoomToMouseLocation = ((0, LQ.l)(this, mQ), (0, LQ.l)(this, HQ, !1)), this.wheelDeltaPercentage = ((0, LQ.l)(this, YQ), (0, LQ.l)(this, xQ, 0)), this.customComputeDeltaFromMouseWheel = ((0, LQ.l)(this, AQ), null), this._viewOffset = new DQ.p(0, 0, 0), this._globalOffset = new DQ.p(0, 0, 0), this._inertialPanning = DQ.p.Zero(), this._zoomToMouseRadiusOffset = 0
         }
-        _computeDeltaFromMouseWheelLegacyEvent(dd, Jd) {
-          let kd;
-          const pd = .01 * dd * this.wheelDeltaPercentage * Jd;
-          return kd = dd > 0 ? pd / (1 + this.wheelDeltaPercentage) : pd * (1 + this.wheelDeltaPercentage), kd
+        _computeDeltaFromMouseWheelLegacyEvent(QQ, FQ) {
+          let wQ;
+          const LQ = .01 * QQ * this.wheelDeltaPercentage * FQ;
+          return wQ = QQ > 0 ? LQ / (1 + this.wheelDeltaPercentage) : LQ * (1 + this.wheelDeltaPercentage), wQ
         }
-        attachControl(dd) {
-          dd = xd.h.BackCompatCameraNoPreventDefault(arguments), this._wheel = Jd => {
-            if (Jd.type !== Kd.b.POINTERWHEEL) return;
-            const kd = Jd.event;
-            let pd;
-            const Nd = kd.deltaMode === Yd.d.DOM_DELTA_LINE ? 40 : 1,
-              Wd = -kd.deltaY * Nd;
-            if (this.customComputeDeltaFromMouseWheel) pd = this.customComputeDeltaFromMouseWheel(Wd, this, kd);
+        attachControl(QQ) {
+          QQ = cQ.g.BackCompatCameraNoPreventDefault(arguments), this._wheel = FQ => {
+            if (FQ.type !== uQ.e.POINTERWHEEL) return;
+            const wQ = FQ.event;
+            let LQ;
+            const qQ = wQ.deltaMode === sQ.c.DOM_DELTA_LINE ? 40 : 1,
+              oQ = -wQ.deltaY * qQ;
+            if (this.customComputeDeltaFromMouseWheel) LQ = this.customComputeDeltaFromMouseWheel(oQ, this, wQ);
             else if (this.wheelDeltaPercentage) {
-              if (pd = this._computeDeltaFromMouseWheelLegacyEvent(Wd, this.camera.radius), pd > 0) {
-                const dd = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
-                let Jd = this.camera.radius,
-                  kd = dd + pd;
-                for (let pd = 0; pd < 20 && !(Jd <= kd) && !(Math.abs(kd * this.camera.inertia) < .001); pd++) Jd -= kd, kd *= this.camera.inertia;
-                Jd = (0, Zd.Clamp)(Jd, 0, Number.MAX_VALUE), pd = this._computeDeltaFromMouseWheelLegacyEvent(Wd, Jd)
+              if (LQ = this._computeDeltaFromMouseWheelLegacyEvent(oQ, this.camera.radius), LQ > 0) {
+                const QQ = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
+                let FQ = this.camera.radius,
+                  wQ = QQ + LQ;
+                for (let LQ = 0; LQ < 20 && !(FQ <= wQ) && !(Math.abs(wQ * this.camera.inertia) < .001); LQ++) FQ -= wQ, wQ *= this.camera.inertia;
+                FQ = (0, kQ.Clamp)(FQ, 0, Number.MAX_VALUE), LQ = this._computeDeltaFromMouseWheelLegacyEvent(oQ, FQ)
               }
             } else {
-              const dd = this.camera.movement.input.getEntry("wheel", "zoom");
-              pd = Wd * (dd?.sensitivity ?? 1 / (40 * this.wheelPrecision))
+              const QQ = this.camera.movement.input.getEntry("wheel", "zoom");
+              LQ = oQ * (QQ?.sensitivity ?? 1 / (40 * this.wheelPrecision))
             }
-            pd && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(pd)) : this.camera.movement.zoomAccumulatedPixels += pd), kd.preventDefault && (dd || kd.preventDefault())
-          }, this._observer = this.camera.Wm()._inputManager._addCameraPointerObserver(this._wheel, Kd.b.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.o5(0)
+            LQ && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(LQ)) : this.camera.movement.zoomAccumulatedPixels += LQ), wQ.preventDefault && (QQ || wQ.preventDefault())
+          }, this._observer = this.camera.iN()._inputManager._addCameraPointerObserver(this._wheel, uQ.e.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.K3(0)
         }
         detachControl() {
-          this._observer && (this.camera.Wm()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
+          this._observer && (this.camera.iN()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
         }
         checkInputs() {
           if (!this.zoomToMouseLocation) return;
-          const dd = this.camera;
-          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(dd.inertialAlphaOffset) + Math.abs(dd.inertialBetaOffset) + Math.abs(dd.inertialRadiusOffset)) {
-            this._updateHitPlane(), dd.target.addInPlace(this._inertialPanning), dd.radius -= this._zoomToMouseRadiusOffset;
-            const Jd = dd.movement.getFrameIndependentDecay(dd.inertia);
-            this._inertialPanning.scaleInPlace(Jd), this._zoomToMouseRadiusOffset *= Jd, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < ld.e && (this._zoomToMouseRadiusOffset = 0)
+          const QQ = this.camera;
+          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(QQ.inertialAlphaOffset) + Math.abs(QQ.inertialBetaOffset) + Math.abs(QQ.inertialRadiusOffset)) {
+            this._updateHitPlane(), QQ.target.addInPlace(this._inertialPanning), QQ.radius -= this._zoomToMouseRadiusOffset;
+            const FQ = QQ.movement.getFrameIndependentDecay(QQ.inertia);
+            this._inertialPanning.scaleInPlace(FQ), this._zoomToMouseRadiusOffset *= FQ, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < bQ.b && (this._zoomToMouseRadiusOffset = 0)
           }
         }
         getClassName() {
@@ -1065,117 +1065,117 @@ export const modules = {
           return "mousewheel"
         }
         _updateHitPlane() {
-          const dd = this.camera,
-            Jd = dd.target.subtract(dd.position);
-          this._hitPlane = Fd.c.FromPositionAndNormal(dd.target, Jd)
+          const QQ = this.camera,
+            FQ = QQ.target.subtract(QQ.position);
+          this._hitPlane = OQ.d.FromPositionAndNormal(QQ.target, FQ)
         }
         _getPosition() {
-          const dd = this.camera,
-            Jd = dd.Wm(),
-            kd = Jd.createPickingRay(Jd.pointerX, Jd.pointerY, Pd.b.Identity(), dd, !1);
-          0 === dd.targetScreenOffset.x && 0 === dd.targetScreenOffset.y || (this._viewOffset.set(dd.targetScreenOffset.x, dd.targetScreenOffset.y, 0), dd.getViewMatrix().invertToRef(dd._cameraTransformMatrix), this._globalOffset = Pd.n.TransformNormal(this._viewOffset, dd._cameraTransformMatrix), kd.origin.addInPlace(this._globalOffset));
-          let pd = 0;
-          return this._hitPlane && (pd = kd.intersectsPlane(this._hitPlane) ?? 0), kd.origin.addInPlace(kd.direction.scaleInPlace(pd))
+          const QQ = this.camera,
+            FQ = QQ.iN(),
+            wQ = FQ.createPickingRay(FQ.pointerX, FQ.pointerY, DQ.c.Identity(), QQ, !1);
+          0 === QQ.targetScreenOffset.x && 0 === QQ.targetScreenOffset.y || (this._viewOffset.set(QQ.targetScreenOffset.x, QQ.targetScreenOffset.y, 0), QQ.getViewMatrix().invertToRef(QQ._cameraTransformMatrix), this._globalOffset = DQ.p.TransformNormal(this._viewOffset, QQ._cameraTransformMatrix), wQ.origin.addInPlace(this._globalOffset));
+          let LQ = 0;
+          return this._hitPlane && (LQ = wQ.intersectsPlane(this._hitPlane) ?? 0), wQ.origin.addInPlace(wQ.direction.scaleInPlace(LQ))
         }
-        _zoomToMouse(dd) {
-          const Jd = this.camera,
-            kd = 1 - Jd.inertia,
-            pd = Jd.movement.getFrameIndependentInputScale(Jd.inertia);
-          if (Jd.lowerRadiusLimit) {
-            const Nd = Jd.lowerRadiusLimit ?? 0;
-            Jd.radius - (this._zoomToMouseRadiusOffset + dd * pd) / kd < Nd && (dd = ((Jd.radius - Nd) * kd - this._zoomToMouseRadiusOffset) / pd)
+        _zoomToMouse(QQ) {
+          const FQ = this.camera,
+            wQ = 1 - FQ.inertia,
+            LQ = FQ.movement.getFrameIndependentInputScale(FQ.inertia);
+          if (FQ.lowerRadiusLimit) {
+            const qQ = FQ.lowerRadiusLimit ?? 0;
+            FQ.radius - (this._zoomToMouseRadiusOffset + QQ * LQ) / wQ < qQ && (QQ = ((FQ.radius - qQ) * wQ - this._zoomToMouseRadiusOffset) / LQ)
           }
-          if (Jd.upperRadiusLimit) {
-            const Nd = Jd.upperRadiusLimit ?? 0;
-            Jd.radius - (this._zoomToMouseRadiusOffset + dd * pd) / kd > Nd && (dd = ((Jd.radius - Nd) * kd - this._zoomToMouseRadiusOffset) / pd)
+          if (FQ.upperRadiusLimit) {
+            const qQ = FQ.upperRadiusLimit ?? 0;
+            FQ.radius - (this._zoomToMouseRadiusOffset + QQ * LQ) / wQ > qQ && (QQ = ((FQ.radius - qQ) * wQ - this._zoomToMouseRadiusOffset) / LQ)
           }
-          const Nd = dd / kd / Jd.radius,
-            Wd = this._getPosition(),
-            Zd = Pd.h.IL[6];
-          Wd.subtractToRef(Jd.target, Zd), Zd.scaleInPlace(Nd), Zd.scaleInPlace(kd), Zd.scaleInPlace(pd), this._inertialPanning.addInPlace(Zd), this._zoomToMouseRadiusOffset += dd * pd
+          const qQ = QQ / wQ / FQ.radius,
+            oQ = this._getPosition(),
+            kQ = DQ.k.Ox[6];
+          oQ.subtractToRef(FQ.target, kQ), kQ.scaleInPlace(qQ), kQ.scaleInPlace(wQ), kQ.scaleInPlace(LQ), this._inertialPanning.addInPlace(kQ), this._zoomToMouseRadiusOffset += QQ * LQ
         }
-        _zeroIfClose(dd) {
-          Math.abs(dd.x) < ld.e && (dd.x = 0), Math.abs(dd.y) < ld.e && (dd.y = 0), Math.abs(dd.z) < ld.e && (dd.z = 0)
+        _zeroIfClose(QQ) {
+          Math.abs(QQ.x) < bQ.b && (QQ.x = 0), Math.abs(QQ.y) < bQ.b && (QQ.y = 0), Math.abs(QQ.z) < bQ.b && (QQ.z = 0)
         }
       }, (() => {
-        const Pd = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Jd = [(0, Nd.H)()], kd = [(0, Nd.H)()], Wd = [(0, Nd.H)()], (0, pd.h)(null, null, Jd, {
+        const DQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], oQ = [(0, qQ.I)()], (0, LQ.i)(null, null, FQ, {
           kind: "field",
           name: "wheelPrecision",
           static: !1,
           private: !1,
           access: {
-            has: dd => "wheelPrecision" in dd,
-            get: dd => dd.wheelPrecision,
-            set: (dd, Jd) => {
-              dd.wheelPrecision = Jd
+            has: QQ => "wheelPrecision" in QQ,
+            get: QQ => QQ.wheelPrecision,
+            set: (QQ, FQ) => {
+              QQ.wheelPrecision = FQ
             }
           },
-          metadata: Pd
-        }, gd, Cd), (0, pd.h)(null, null, kd, {
+          metadata: DQ
+        }, vQ, mQ), (0, LQ.i)(null, null, wQ, {
           kind: "field",
           name: "zoomToMouseLocation",
           static: !1,
           private: !1,
           access: {
-            has: dd => "zoomToMouseLocation" in dd,
-            get: dd => dd.zoomToMouseLocation,
-            set: (dd, Jd) => {
-              dd.zoomToMouseLocation = Jd
+            has: QQ => "zoomToMouseLocation" in QQ,
+            get: QQ => QQ.zoomToMouseLocation,
+            set: (QQ, FQ) => {
+              QQ.zoomToMouseLocation = FQ
             }
           },
-          metadata: Pd
-        }, od, Qd), (0, pd.h)(null, null, Wd, {
+          metadata: DQ
+        }, HQ, YQ), (0, LQ.i)(null, null, oQ, {
           kind: "field",
           name: "wheelDeltaPercentage",
           static: !1,
           private: !1,
           access: {
-            has: dd => "wheelDeltaPercentage" in dd,
-            get: dd => dd.wheelDeltaPercentage,
-            set: (dd, Jd) => {
-              dd.wheelDeltaPercentage = Jd
+            has: QQ => "wheelDeltaPercentage" in QQ,
+            get: QQ => QQ.wheelDeltaPercentage,
+            set: (QQ, FQ) => {
+              QQ.wheelDeltaPercentage = FQ
             }
           },
-          metadata: Pd
-        }, Ld, Od), Pd && Object.defineProperty(dd, Symbol.metadata, {
+          metadata: DQ
+        }, xQ, AQ), DQ && Object.defineProperty(QQ, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Pd
+          value: DQ
         })
-      })(), dd
+      })(), QQ
     })();
-    vd.d.ArcRotateCameraMouseWheelInput = md;
-    var bd, Sd, jd = kd(39860);
-    class Xd extends vd.g {
-      constructor(dd) {
-        super(dd)
+    pQ.c.ArcRotateCameraMouseWheelInput = rQ;
+    var IQ, UQ, NQ = wQ(39277);
+    class TQ extends pQ.e {
+      constructor(QQ) {
+        super(QQ)
       }
       addMouseWheel() {
-        return this.add(new md), this
+        return this.add(new rQ), this
       }
       addPointers() {
-        return this.add(new sd), this
+        return this.add(new iQ), this
       }
       addKeyboard() {
-        return this.add(new Md), this
+        return this.add(new RQ), this
       }
-    }(bd = Xd.prototype).addVRDeviceOrientation ?? (bd.addVRDeviceOrientation = (0, jd.j)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (Sd = Xd.prototype).addGamepad ?? (Sd.addGamepad = (0, jd.j)("ArcRotateCameraInputsManager", "addGamepad"));
-    var fd = kd(37303),
-      nd = kd(40211),
-      Ud = kd(40217);
-    class yd extends nd.e {
-      constructor(dd, Jd, kd) {
-        super(dd, Jd, kd), this.input = new Ud.b({
-          pan: (dd, Jd) => {
-            this.panAccumulatedPixels.x += dd, this.panAccumulatedPixels.y += Jd
+    }(IQ = TQ.prototype).addVRDeviceOrientation ?? (IQ.addVRDeviceOrientation = (0, NQ.g)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (UQ = TQ.prototype).addGamepad ?? (UQ.addGamepad = (0, NQ.g)("ArcRotateCameraInputsManager", "addGamepad"));
+    var KQ = wQ(36741),
+      zQ = wQ(39664),
+      lQ = wQ(39667);
+    class jQ extends zQ.b {
+      constructor(QQ, FQ, wQ) {
+        super(QQ, FQ, wQ), this.input = new lQ.c({
+          pan: (QQ, FQ) => {
+            this.panAccumulatedPixels.x += QQ, this.panAccumulatedPixels.y += FQ
           },
-          rotate: (dd, Jd) => {
-            this.rotationAccumulatedPixels.x += dd, this.rotationAccumulatedPixels.y += Jd
+          rotate: (QQ, FQ) => {
+            this.rotationAccumulatedPixels.x += QQ, this.rotationAccumulatedPixels.y += FQ
           },
-          zoom: dd => {
-            this.zoomAccumulatedPixels += dd
+          zoom: QQ => {
+            this.zoomAccumulatedPixels += QQ
           }
         }, (() => this._createDefaultInputMap()))
       }
@@ -1221,71 +1221,71 @@ export const modules = {
       }
     }
 
-    function Dd(dd, Jd) {
-      return isNaN(dd) ? Jd : dd
+    function aQ(QQ, FQ) {
+      return isNaN(QQ) ? FQ : QQ
     }
-    let Td = (() => {
-        var dd;
-        let Jd, kd, gd, Kd, od, Ld, Od, vd, qd, Bd, sd, ad, Md, Fd, Yd, md, bd, Sd, jd, fd, nd, Ud, Td, Ed, cd, hd, rd, ud, td = Gd.d,
-          Vd = [],
-          zd = [],
-          Hd = [],
-          wd = [],
-          Ad = [],
-          dJ = [],
-          JJ = [],
-          kJ = [],
-          pJ = [],
-          NJ = [],
-          WJ = [],
-          PJ = [],
-          ZJ = [],
-          gJ = [],
-          CJ = [],
-          KJ = [],
-          oJ = [],
-          lJ = [],
-          QJ = [],
-          LJ = [],
-          OJ = [],
-          eJ = [],
-          RJ = [],
-          IJ = [],
-          GJ = [],
-          vJ = [],
-          xJ = [],
-          qJ = [],
-          BJ = [],
-          sJ = [],
-          iJ = [],
-          aJ = [],
-          MJ = [],
-          FJ = [],
-          YJ = [],
-          mJ = [],
-          bJ = [],
-          SJ = [],
-          jJ = [],
-          XJ = [],
-          fJ = [],
-          nJ = [],
-          UJ = [],
-          yJ = [],
-          DJ = [],
-          TJ = [],
-          EJ = [];
-        return dd = class extends td {
+    let XQ = (() => {
+        var QQ;
+        let FQ, wQ, vQ, uQ, HQ, xQ, AQ, pQ, CQ, SQ, iQ, WQ, RQ, OQ, sQ, rQ, IQ, UQ, NQ, KQ, zQ, lQ, XQ, fQ, VQ, hQ, JQ, EQ, nQ = GQ.g,
+          gQ = [],
+          PQ = [],
+          ZQ = [],
+          yQ = [],
+          BQ = [],
+          dQ = [],
+          QF = [],
+          FF = [],
+          wF = [],
+          LF = [],
+          qF = [],
+          oF = [],
+          DF = [],
+          kF = [],
+          vF = [],
+          mF = [],
+          uF = [],
+          HF = [],
+          bF = [],
+          YF = [],
+          xF = [],
+          AF = [],
+          tF = [],
+          eF = [],
+          MF = [],
+          GF = [],
+          pF = [],
+          cF = [],
+          CF = [],
+          SF = [],
+          iF = [],
+          WF = [],
+          RF = [],
+          OF = [],
+          sF = [],
+          rF = [],
+          IF = [],
+          UF = [],
+          NF = [],
+          TF = [],
+          KF = [],
+          zF = [],
+          lF = [],
+          jF = [],
+          aF = [],
+          XF = [],
+          fF = [];
+        return QQ = class extends nQ {
           get target() {
-            return this.sA
+            return this.K8
           }
-          set target(dd) {
-            this.setTarget(dd)
+          set target(QQ) {
+            this.setTarget(QQ)
           }
           get targetHost() {
             return this._targetHost
           }
-          set targetHost(dd) {
-            dd && this.setTarget(dd)
+          set targetHost(QQ) {
+            QQ && this.setTarget(QQ)
           }
           getTarget() {
             return this.target
@@ -1293,185 +1293,185 @@ export const modules = {
           get position() {
             return this._position
           }
-          set position(dd) {
-            this.setPosition(dd)
+          set position(QQ) {
+            this.setPosition(QQ)
           }
-          set upVector(dd) {
-            this._upToYMatrix || (this._yToUpMatrix = new Pd.b, this._upToYMatrix = new Pd.b, this._upVector = Pd.n.Zero()), dd.normalize(), this._upVector.Fs(dd), this.setMatUp()
+          set upVector(QQ) {
+            this._upToYMatrix || (this._yToUpMatrix = new DQ.c, this._upToYMatrix = new DQ.c, this._upVector = DQ.p.Zero()), QQ.normalize(), this._upVector.Qs(QQ), this.setMatUp()
           }
           get upVector() {
             return this._upVector
           }
           setMatUp() {
-            Pd.b.RotationAlignToRef(Pd.n.UpReadOnly, this._upVector, this._yToUpMatrix), Pd.b.RotationAlignToRef(this._upVector, Pd.n.UpReadOnly, this._upToYMatrix)
+            DQ.c.RotationAlignToRef(DQ.p.UpReadOnly, this._upVector, this._yToUpMatrix), DQ.c.RotationAlignToRef(this._upVector, DQ.p.UpReadOnly, this._upToYMatrix)
           }
           get inertialAlphaOffset() {
             if (0 !== this._inertialAlphaOffset) return this._inertialAlphaOffset;
             if (0 !== this.movement.rotationAccumulatedPixels.x) return this.movement.rotationAccumulatedPixels.x;
-            const dd = this.movement.rotationDeltaCurrentFrame.x;
-            return Math.abs(dd) < this._rotationEpsilon ? 0 : dd
+            const QQ = this.movement.rotationDeltaCurrentFrame.x;
+            return Math.abs(QQ) < this._rotationEpsilon ? 0 : QQ
           }
-          set inertialAlphaOffset(dd) {
-            this._inertialAlphaOffset = dd, 0 === dd && this.movement.resetRotationVelocity()
+          set inertialAlphaOffset(QQ) {
+            this._inertialAlphaOffset = QQ, 0 === QQ && this.movement.resetRotationVelocity()
           }
           get inertialBetaOffset() {
             if (0 !== this._inertialBetaOffset) return this._inertialBetaOffset;
             if (0 !== this.movement.rotationAccumulatedPixels.y) return this.movement.rotationAccumulatedPixels.y;
-            const dd = this.movement.rotationDeltaCurrentFrame.y;
-            return Math.abs(dd) < this._rotationEpsilon ? 0 : dd
+            const QQ = this.movement.rotationDeltaCurrentFrame.y;
+            return Math.abs(QQ) < this._rotationEpsilon ? 0 : QQ
           }
-          set inertialBetaOffset(dd) {
-            this._inertialBetaOffset = dd, 0 === dd && this.movement.resetRotationVelocity()
+          set inertialBetaOffset(QQ) {
+            this._inertialBetaOffset = QQ, 0 === QQ && this.movement.resetRotationVelocity()
           }
           get inertialRadiusOffset() {
             if (0 !== this._inertialRadiusOffset) return this._inertialRadiusOffset;
             if (0 !== this.movement.zoomAccumulatedPixels) return this.movement.zoomAccumulatedPixels;
-            const dd = this.movement.zoomDeltaCurrentFrame;
-            return Math.abs(dd) < this._rotationEpsilon ? 0 : dd
+            const QQ = this.movement.zoomDeltaCurrentFrame;
+            return Math.abs(QQ) < this._rotationEpsilon ? 0 : QQ
           }
-          set inertialRadiusOffset(dd) {
-            this._inertialRadiusOffset = dd, 0 === dd && this.movement.resetZoomVelocity()
+          set inertialRadiusOffset(QQ) {
+            this._inertialRadiusOffset = QQ, 0 === QQ && this.movement.resetZoomVelocity()
           }
           get panningInertia() {
             return this._panningInertia
           }
-          set panningInertia(dd) {
-            this._panningInertia = dd, this.movement && (this.movement.panInertia = dd)
+          set panningInertia(QQ) {
+            this._panningInertia = QQ, this.movement && (this.movement.panInertia = QQ)
           }
           get inertia() {
             return this._inertia
           }
-          set inertia(dd) {
-            this._inertia = dd, this.movement && (this.movement.rotationInertia = dd, this.movement.zoomInertia = dd)
+          set inertia(QQ) {
+            this._inertia = QQ, this.movement && (this.movement.rotationInertia = QQ, this.movement.zoomInertia = QQ)
           }
           get angularSensibilityX() {
-            const dd = this.inputs.attached.pointers;
-            return dd ? dd.angularSensibilityX : 0
+            const QQ = this.inputs.attached.pointers;
+            return QQ ? QQ.angularSensibilityX : 0
           }
-          set angularSensibilityX(dd) {
-            const Jd = this.inputs.attached.pointers;
-            Jd && (Jd.angularSensibilityX = dd)
+          set angularSensibilityX(QQ) {
+            const FQ = this.inputs.attached.pointers;
+            FQ && (FQ.angularSensibilityX = QQ)
           }
           get angularSensibilityY() {
-            const dd = this.inputs.attached.pointers;
-            return dd ? dd.angularSensibilityY : 0
+            const QQ = this.inputs.attached.pointers;
+            return QQ ? QQ.angularSensibilityY : 0
           }
-          set angularSensibilityY(dd) {
-            const Jd = this.inputs.attached.pointers;
-            Jd && (Jd.angularSensibilityY = dd)
+          set angularSensibilityY(QQ) {
+            const FQ = this.inputs.attached.pointers;
+            FQ && (FQ.angularSensibilityY = QQ)
           }
           get pinchPrecision() {
-            const dd = this.inputs.attached.pointers;
-            return dd ? dd.pinchPrecision : 0
+            const QQ = this.inputs.attached.pointers;
+            return QQ ? QQ.pinchPrecision : 0
           }
-          set pinchPrecision(dd) {
-            const Jd = this.inputs.attached.pointers;
-            Jd && (Jd.pinchPrecision = dd)
+          set pinchPrecision(QQ) {
+            const FQ = this.inputs.attached.pointers;
+            FQ && (FQ.pinchPrecision = QQ)
           }
           get pinchDeltaPercentage() {
-            const dd = this.inputs.attached.pointers;
-            return dd ? dd.pinchDeltaPercentage : 0
+            const QQ = this.inputs.attached.pointers;
+            return QQ ? QQ.pinchDeltaPercentage : 0
           }
-          set pinchDeltaPercentage(dd) {
-            const Jd = this.inputs.attached.pointers;
-            Jd && (Jd.pinchDeltaPercentage = dd)
+          set pinchDeltaPercentage(QQ) {
+            const FQ = this.inputs.attached.pointers;
+            FQ && (FQ.pinchDeltaPercentage = QQ)
           }
           get useNaturalPinchZoom() {
-            const dd = this.inputs.attached.pointers;
-            return !!dd && dd.useNaturalPinchZoom
+            const QQ = this.inputs.attached.pointers;
+            return !!QQ && QQ.useNaturalPinchZoom
           }
-          set useNaturalPinchZoom(dd) {
-            const Jd = this.inputs.attached.pointers;
-            Jd && (Jd.useNaturalPinchZoom = dd)
+          set useNaturalPinchZoom(QQ) {
+            const FQ = this.inputs.attached.pointers;
+            FQ && (FQ.useNaturalPinchZoom = QQ)
           }
           get panningSensibility() {
-            const dd = this.inputs.attached.pointers;
-            return dd ? dd.panningSensibility : 0
+            const QQ = this.inputs.attached.pointers;
+            return QQ ? QQ.panningSensibility : 0
           }
-          set panningSensibility(dd) {
-            const Jd = this.inputs.attached.pointers;
-            Jd && (Jd.panningSensibility = dd)
+          set panningSensibility(QQ) {
+            const FQ = this.inputs.attached.pointers;
+            FQ && (FQ.panningSensibility = QQ)
           }
           get keysUp() {
-            const dd = this.inputs.attached.keyboard;
-            return dd ? dd.keysUp : []
+            const QQ = this.inputs.attached.keyboard;
+            return QQ ? QQ.keysUp : []
           }
-          set keysUp(dd) {
-            const Jd = this.inputs.attached.keyboard;
-            Jd && (Jd.keysUp = dd)
+          set keysUp(QQ) {
+            const FQ = this.inputs.attached.keyboard;
+            FQ && (FQ.keysUp = QQ)
           }
           get keysDown() {
-            const dd = this.inputs.attached.keyboard;
-            return dd ? dd.keysDown : []
+            const QQ = this.inputs.attached.keyboard;
+            return QQ ? QQ.keysDown : []
           }
-          set keysDown(dd) {
-            const Jd = this.inputs.attached.keyboard;
-            Jd && (Jd.keysDown = dd)
+          set keysDown(QQ) {
+            const FQ = this.inputs.attached.keyboard;
+            FQ && (FQ.keysDown = QQ)
           }
           get keysLeft() {
-            const dd = this.inputs.attached.keyboard;
-            return dd ? dd.keysLeft : []
+            const QQ = this.inputs.attached.keyboard;
+            return QQ ? QQ.keysLeft : []
           }
-          set keysLeft(dd) {
-            const Jd = this.inputs.attached.keyboard;
-            Jd && (Jd.keysLeft = dd)
+          set keysLeft(QQ) {
+            const FQ = this.inputs.attached.keyboard;
+            FQ && (FQ.keysLeft = QQ)
           }
           get keysRight() {
-            const dd = this.inputs.attached.keyboard;
-            return dd ? dd.keysRight : []
+            const QQ = this.inputs.attached.keyboard;
+            return QQ ? QQ.keysRight : []
           }
-          set keysRight(dd) {
-            const Jd = this.inputs.attached.keyboard;
-            Jd && (Jd.keysRight = dd)
+          set keysRight(QQ) {
+            const FQ = this.inputs.attached.keyboard;
+            FQ && (FQ.keysRight = QQ)
           }
           get wheelPrecision() {
-            const dd = this.inputs.attached.mousewheel;
-            return dd ? dd.wheelPrecision : 0
+            const QQ = this.inputs.attached.mousewheel;
+            return QQ ? QQ.wheelPrecision : 0
           }
-          set wheelPrecision(dd) {
-            const Jd = this.inputs.attached.mousewheel;
-            Jd && (Jd.wheelPrecision = dd)
+          set wheelPrecision(QQ) {
+            const FQ = this.inputs.attached.mousewheel;
+            FQ && (FQ.wheelPrecision = QQ)
           }
           get zoomToMouseLocation() {
-            const dd = this.inputs.attached.mousewheel;
-            return !!dd && dd.zoomToMouseLocation
+            const QQ = this.inputs.attached.mousewheel;
+            return !!QQ && QQ.zoomToMouseLocation
           }
-          set zoomToMouseLocation(dd) {
-            const Jd = this.inputs.attached.mousewheel;
-            Jd && (Jd.zoomToMouseLocation = dd)
+          set zoomToMouseLocation(QQ) {
+            const FQ = this.inputs.attached.mousewheel;
+            FQ && (FQ.zoomToMouseLocation = QQ)
           }
           get wheelDeltaPercentage() {
-            const dd = this.inputs.attached.mousewheel;
-            return dd ? dd.wheelDeltaPercentage : 0
+            const QQ = this.inputs.attached.mousewheel;
+            return QQ ? QQ.wheelDeltaPercentage : 0
           }
-          set wheelDeltaPercentage(dd) {
-            const Jd = this.inputs.attached.mousewheel;
-            Jd && (Jd.wheelDeltaPercentage = dd)
+          set wheelDeltaPercentage(QQ) {
+            const FQ = this.inputs.attached.mousewheel;
+            FQ && (FQ.wheelDeltaPercentage = QQ)
           }
           get _useCtrlForPanning() {
             return this._useCtrlForPanningInternal
           }
-          set _useCtrlForPanning(dd) {
-            this._useCtrlForPanningInternal = dd;
-            const Jd = this.movement.input,
-              kd = Jd.getEntry("keyboard", "pan", {
+          set _useCtrlForPanning(QQ) {
+            this._useCtrlForPanningInternal = QQ;
+            const FQ = this.movement.input,
+              wQ = FQ.getEntry("keyboard", "pan", {
                 modifiers: {
                   ctrl: !0
                 }
               });
-            !dd && kd ? Jd.inputMap.splice(Jd.inputMap.indexOf(kd), 1) : dd && !kd && Jd.addEntry({
+            !QQ && wQ ? FQ.inputMap.splice(FQ.inputMap.indexOf(wQ), 1) : QQ && !wQ && FQ.addEntry({
               source: "keyboard",
               modifiers: {
                 ctrl: !0
               },
               interaction: "pan"
             });
-            const pd = Jd.getEntry("pointer", "pan", {
+            const LQ = FQ.getEntry("pointer", "pan", {
               modifiers: {
                 ctrl: !0
               }
             });
-            !dd && pd ? Jd.inputMap.splice(Jd.inputMap.indexOf(pd), 1) : dd && !pd && Jd.addEntry({
+            !QQ && LQ ? FQ.inputMap.splice(FQ.inputMap.indexOf(LQ), 1) : QQ && !LQ && FQ.addEntry({
               source: "pointer",
               button: 0,
               modifiers: {
@@ -1483,12 +1483,12 @@ export const modules = {
           get _panningMouseButton() {
             return this._panningMouseButtonInternal
           }
-          set _panningMouseButton(dd) {
-            this._panningMouseButtonInternal = dd;
-            const Jd = this.movement.input.getEntry("pointer", "pan", {
+          set _panningMouseButton(QQ) {
+            this._panningMouseButtonInternal = QQ;
+            const FQ = this.movement.input.getEntry("pointer", "pan", {
               modifiers: {}
             });
-            Jd && (Jd.button = dd)
+            FQ && (FQ.button = QQ)
           }
           get isInterpolating() {
             return this._isInterpolating
@@ -1499,8 +1499,8 @@ export const modules = {
           get useBouncingBehavior() {
             return null != this._bouncingBehavior
           }
-          set useBouncingBehavior(dd) {
-            dd !== this.useBouncingBehavior && (dd ? (this._bouncingBehavior = new ed, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
+          set useBouncingBehavior(QQ) {
+            QQ !== this.useBouncingBehavior && (QQ ? (this._bouncingBehavior = new tQ, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
           }
           get framingBehavior() {
             return this._framingBehavior
@@ -1508,8 +1508,8 @@ export const modules = {
           get useFramingBehavior() {
             return null != this._framingBehavior
           }
-          set useFramingBehavior(dd) {
-            dd !== this.useFramingBehavior && (dd ? (this._framingBehavior = new Rd, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
+          set useFramingBehavior(QQ) {
+            QQ !== this.useFramingBehavior && (QQ ? (this._framingBehavior = new eQ, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
           }
           get autoRotationBehavior() {
             return this._autoRotationBehavior
@@ -1517,136 +1517,136 @@ export const modules = {
           get useAutoRotationBehavior() {
             return null != this._autoRotationBehavior
           }
-          set useAutoRotationBehavior(dd) {
-            dd !== this.useAutoRotationBehavior && (dd ? (this._autoRotationBehavior = new Qd, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
+          set useAutoRotationBehavior(QQ) {
+            QQ !== this.useAutoRotationBehavior && (QQ ? (this._autoRotationBehavior = new YQ, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
           }
-          constructor(dd, Jd, kd, Nd, Zd, gd) {
-            var Cd;
-            let Kd = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-            super(dd, Pd.n.Zero(), gd, Kd), Cd = this, this.alpha = ((0, pd.i)(this, Vd), (0, pd.i)(this, zd, void 0)), this.beta = ((0, pd.i)(this, Hd), (0, pd.i)(this, wd, void 0)), this.radius = ((0, pd.i)(this, Ad), (0, pd.i)(this, dJ, void 0)), this.overrideCloneAlphaBetaRadius = ((0, pd.i)(this, JJ), (0, pd.i)(this, kJ, void 0)), this.sA = ((0, pd.i)(this, pJ), (0, pd.i)(this, NJ, void 0)), this._targetHost = ((0, pd.i)(this, WJ), (0, pd.i)(this, PJ, void 0)), this._upToYMatrix = (0, pd.i)(this, ZJ), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, pd.i)(this, gJ, null), this.upperAlphaLimit = ((0, pd.i)(this, CJ), (0, pd.i)(this, KJ, null)), this.lowerBetaLimit = ((0, pd.i)(this, oJ), (0, pd.i)(this, lJ, .01)), this.upperBetaLimit = ((0, pd.i)(this, QJ), (0, pd.i)(this, LJ, Math.PI - .01)), this.lowerRadiusLimit = ((0, pd.i)(this, OJ), (0, pd.i)(this, eJ, null)), this.upperRadiusLimit = ((0, pd.i)(this, RJ), (0, pd.i)(this, IJ, null)), this.lowerTargetYLimit = ((0, pd.i)(this, GJ), (0, pd.i)(this, vJ, -1 / 0)), this.inertialPanningX = ((0, pd.i)(this, xJ), (0, pd.i)(this, qJ, 0)), this.inertialPanningY = ((0, pd.i)(this, BJ), (0, pd.i)(this, sJ, 0)), this.pinchToPanMaxDistance = ((0, pd.i)(this, iJ), (0, pd.i)(this, aJ, 20)), this.panningDistanceLimit = ((0, pd.i)(this, MJ), (0, pd.i)(this, FJ, null)), this.panningOriginTarget = ((0, pd.i)(this, YJ), (0, pd.i)(this, mJ, Pd.n.Zero())), this._panningInertia = ((0, pd.i)(this, bJ), .9), this._inertia = .9, this.zoomOnFactor = (0, pd.i)(this, SJ, 1), this.targetScreenOffset = ((0, pd.i)(this, jJ), (0, pd.i)(this, XJ, Pd.k.Zero())), this.allowUpsideDown = ((0, pd.i)(this, fJ), (0, pd.i)(this, nJ, !0)), this.useInputToRestoreState = ((0, pd.i)(this, UJ), (0, pd.i)(this, yJ, !0)), this.restoreStateInterpolationFactor = ((0, pd.i)(this, DJ), (0, pd.i)(this, TJ, 0)), this._currentInterpolationFactor = ((0, pd.i)(this, EJ), 0), this._viewMatrix = new Pd.b, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new Pd.n(1, 1, 0), this._transformedDirection = new Pd.n, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new Wd.e, this.checkCollisions = !1, this.collisionRadius = new Pd.n(.5, .5, .5), this._previousPosition = Pd.n.Zero(), this._collisionVelocity = Pd.n.Zero(), this._newPosition = Pd.n.Zero(), this._computationVector = Pd.n.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new Pd.n(NaN, NaN, NaN), this._goalTargetScreenOffset = new Pd.k(NaN, NaN), this._onCollisionPositionChange = function(dd, Jd) {
-              let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              kd ? (Cd.setPosition(Jd), Cd.Pl && Cd.Pl(kd)) : Cd._previousPosition.Fs(Cd._position);
-              const pd = Math.cos(Cd.alpha),
-                Nd = Math.sin(Cd.alpha),
-                Wd = Math.cos(Cd.beta);
-              let Pd = Math.sin(Cd.beta);
-              0 === Pd && (Pd = 1e-4);
-              const Zd = Cd._getTargetPosition();
-              Cd._computationVector.kdd(Cd.radius * pd * Pd, Cd.radius * Wd, Cd.radius * Nd * Pd), Zd.addToRef(Cd._computationVector, Cd._newPosition), Cd._position.Fs(Cd._newPosition);
-              let gd = Cd.upVector;
-              Cd.allowUpsideDown && Cd.beta < 0 && (gd = gd.clone(), gd = gd.ck()), Cd._computeViewMatrix(Cd._position, Zd, gd), Cd._viewMatrix.addAtIndex(12, Cd.targetScreenOffset.x), Cd._viewMatrix.addAtIndex(13, Cd.targetScreenOffset.y), Cd._collisionTriggered = !1
-            }, this.sA = Pd.n.Zero(), Zd && this.setTarget(Zd), this.alpha = Jd, this.beta = kd, this.radius = Nd, this.getViewMatrix(), this.inputs = new Xd(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new yd(this.Wm(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
+          constructor(QQ, FQ, wQ, qQ, kQ, vQ) {
+            var mQ;
+            let uQ = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+            super(QQ, DQ.p.Zero(), vQ, uQ), mQ = this, this.alpha = ((0, LQ.l)(this, gQ), (0, LQ.l)(this, PQ, void 0)), this.beta = ((0, LQ.l)(this, ZQ), (0, LQ.l)(this, yQ, void 0)), this.radius = ((0, LQ.l)(this, BQ), (0, LQ.l)(this, dQ, void 0)), this.overrideCloneAlphaBetaRadius = ((0, LQ.l)(this, QF), (0, LQ.l)(this, FF, void 0)), this.K8 = ((0, LQ.l)(this, wF), (0, LQ.l)(this, LF, void 0)), this._targetHost = ((0, LQ.l)(this, qF), (0, LQ.l)(this, oF, void 0)), this._upToYMatrix = (0, LQ.l)(this, DF), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, LQ.l)(this, kF, null), this.upperAlphaLimit = ((0, LQ.l)(this, vF), (0, LQ.l)(this, mF, null)), this.lowerBetaLimit = ((0, LQ.l)(this, uF), (0, LQ.l)(this, HF, .01)), this.upperBetaLimit = ((0, LQ.l)(this, bF), (0, LQ.l)(this, YF, Math.PI - .01)), this.lowerRadiusLimit = ((0, LQ.l)(this, xF), (0, LQ.l)(this, AF, null)), this.upperRadiusLimit = ((0, LQ.l)(this, tF), (0, LQ.l)(this, eF, null)), this.lowerTargetYLimit = ((0, LQ.l)(this, MF), (0, LQ.l)(this, GF, -1 / 0)), this.inertialPanningX = ((0, LQ.l)(this, pF), (0, LQ.l)(this, cF, 0)), this.inertialPanningY = ((0, LQ.l)(this, CF), (0, LQ.l)(this, SF, 0)), this.pinchToPanMaxDistance = ((0, LQ.l)(this, iF), (0, LQ.l)(this, WF, 20)), this.panningDistanceLimit = ((0, LQ.l)(this, RF), (0, LQ.l)(this, OF, null)), this.panningOriginTarget = ((0, LQ.l)(this, sF), (0, LQ.l)(this, rF, DQ.p.Zero())), this._panningInertia = ((0, LQ.l)(this, IF), .9), this._inertia = .9, this.zoomOnFactor = (0, LQ.l)(this, UF, 1), this.targetScreenOffset = ((0, LQ.l)(this, NF), (0, LQ.l)(this, TF, DQ.n.Zero())), this.allowUpsideDown = ((0, LQ.l)(this, KF), (0, LQ.l)(this, zF, !0)), this.useInputToRestoreState = ((0, LQ.l)(this, lF), (0, LQ.l)(this, jF, !0)), this.restoreStateInterpolationFactor = ((0, LQ.l)(this, aF), (0, LQ.l)(this, XF, 0)), this._currentInterpolationFactor = ((0, LQ.l)(this, fF), 0), this._viewMatrix = new DQ.c, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new DQ.p(1, 1, 0), this._transformedDirection = new DQ.p, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new oQ.e, this.checkCollisions = !1, this.collisionRadius = new DQ.p(.5, .5, .5), this._previousPosition = DQ.p.Zero(), this._collisionVelocity = DQ.p.Zero(), this._newPosition = DQ.p.Zero(), this._computationVector = DQ.p.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new DQ.p(NaN, NaN, NaN), this._goalTargetScreenOffset = new DQ.n(NaN, NaN), this._onCollisionPositionChange = function(QQ, FQ) {
+              let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+              wQ ? (mQ.setPosition(FQ), mQ.ob && mQ.ob(wQ)) : mQ._previousPosition.Qs(mQ._position);
+              const LQ = Math.cos(mQ.alpha),
+                qQ = Math.sin(mQ.alpha),
+                oQ = Math.cos(mQ.beta);
+              let DQ = Math.sin(mQ.beta);
+              0 === DQ && (DQ = 1e-4);
+              const kQ = mQ._getTargetPosition();
+              mQ._computationVector.vQQ(mQ.radius * LQ * DQ, mQ.radius * oQ, mQ.radius * qQ * DQ), kQ.addToRef(mQ._computationVector, mQ._newPosition), mQ._position.Qs(mQ._newPosition);
+              let vQ = mQ.upVector;
+              mQ.allowUpsideDown && mQ.beta < 0 && (vQ = vQ.clone(), vQ = vQ.mo()), mQ._computeViewMatrix(mQ._position, kQ, vQ), mQ._viewMatrix.addAtIndex(12, mQ.targetScreenOffset.x), mQ._viewMatrix.addAtIndex(13, mQ.targetScreenOffset.y), mQ._collisionTriggered = !1
+            }, this.K8 = DQ.p.Zero(), kQ && this.setTarget(kQ), this.alpha = FQ, this.beta = wQ, this.radius = qQ, this.getViewMatrix(), this.inputs = new TQ(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new jQ(this.iN(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
           }
           _initCache() {
-            super._initCache(), this._cache.sA = new Pd.n(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = Pd.k.Zero()
+            super._initCache(), this._cache.K8 = new DQ.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = DQ.n.Zero()
           }
-          _updateCache(dd) {
-            dd || super._updateCache(), this._cache.sA.Fs(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.Fs(this.targetScreenOffset)
+          _updateCache(QQ) {
+            QQ || super._updateCache(), this._cache.K8.Qs(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.Qs(this.targetScreenOffset)
           }
           _getTargetPosition() {
             if (this._targetHost && this._targetHost.getAbsolutePosition) {
-              const dd = this._targetHost.getAbsolutePosition();
-              this._targetBoundingCenter ? dd.addToRef(this._targetBoundingCenter, this.sA) : this.sA.Fs(dd)
+              const QQ = this._targetHost.getAbsolutePosition();
+              this._targetBoundingCenter ? QQ.addToRef(this._targetBoundingCenter, this.K8) : this.K8.Qs(QQ)
             }
-            const dd = this._getLockedTargetPosition();
-            return dd || this.sA
+            const QQ = this._getLockedTargetPosition();
+            return QQ || this.K8
           }
           storeState() {
             return this._storedAlpha = this.alpha, this._storedBeta = this.beta, this._storedRadius = this.radius, this._storedTarget = this._getTargetPosition().clone(), this._storedTargetScreenOffset = this.targetScreenOffset.clone(), super.storeState()
           }
           _restoreStateValues() {
-            return this.hasStateStored() && this.restoreStateInterpolationFactor > ld.e && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
+            return this.hasStateStored() && this.restoreStateInterpolationFactor > bQ.b && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
           }
           stopInterpolation() {
             this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget.set(NaN, NaN, NaN), this._goalTargetScreenOffset.set(NaN, NaN)
           }
           interpolateTo() {
-            let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
-              Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
-              kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
-              pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
-              Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
-              Wd = arguments.length > 5 ? arguments[5] : void 0;
-            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != Wd ? this._currentInterpolationFactor = Wd : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = Dd(dd, this._goalAlpha), this._goalBeta = Dd(Jd, this._goalBeta), this._goalRadius = Dd(kd, this._goalRadius), this._goalTarget.set(Dd(pd.x, this._goalTarget.x), Dd(pd.y, this._goalTarget.y), Dd(pd.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(Dd(Nd.x, this._goalTargetScreenOffset.x), Dd(Nd.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, Zd.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, Zd.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, Zd.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, Zd.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
+            let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
+              FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
+              wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
+              LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
+              qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
+              oQ = arguments.length > 5 ? arguments[5] : void 0;
+            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != oQ ? this._currentInterpolationFactor = oQ : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = aQ(QQ, this._goalAlpha), this._goalBeta = aQ(FQ, this._goalBeta), this._goalRadius = aQ(wQ, this._goalRadius), this._goalTarget.set(aQ(LQ.x, this._goalTarget.x), aQ(LQ.y, this._goalTarget.y), aQ(LQ.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(aQ(qQ.x, this._goalTargetScreenOffset.x), aQ(qQ.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, kQ.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, kQ.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, kQ.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, kQ.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
           }
           _isSynchronizedViewMatrix() {
-            return !!super._isSynchronizedViewMatrix() && (this._cache.sA.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
+            return !!super._isSynchronizedViewMatrix() && (this._cache.K8.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
           }
-          attachControl(dd, Jd) {
-            let kd = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-              pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            const Nd = arguments;
-            Jd = xd.h.BackCompatCameraNoPreventDefault(Nd), this._useCtrlForPanning = kd, this._panningMouseButton = pd, "boolean" === typeof Nd[0] && (Nd.length > 1 && (this._useCtrlForPanning = Nd[1]), Nd.length > 2 && (this._panningMouseButton = Nd[2])), this.inputs.attachElement(Jd), this._reset = () => {
+          attachControl(QQ, FQ) {
+            let wQ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+              LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
+            const qQ = arguments;
+            FQ = cQ.g.BackCompatCameraNoPreventDefault(qQ), this._useCtrlForPanning = wQ, this._panningMouseButton = LQ, "boolean" === typeof qQ[0] && (qQ.length > 1 && (this._useCtrlForPanning = qQ[1]), qQ.length > 2 && (this._panningMouseButton = qQ[2])), this.inputs.attachElement(FQ), this._reset = () => {
               this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0
             }
           }
           detachControl() {
             this.inputs.detachElement(), this._reset && this._reset()
           }
-          _applyRotationAndZoomDelta(dd, Jd, kd) {
-            const pd = this.invertRotation ? -1 : 1;
-            let Nd = dd * this._calculateHandednessMultiplier();
-            this.beta < 0 && (Nd *= -1), this.alpha += Nd * pd, this.beta += Jd * pd, this.radius -= kd
+          _applyRotationAndZoomDelta(QQ, FQ, wQ) {
+            const LQ = this.invertRotation ? -1 : 1;
+            let qQ = QQ * this._calculateHandednessMultiplier();
+            this.beta < 0 && (qQ *= -1), this.alpha += qQ * LQ, this.beta += FQ * LQ, this.radius -= wQ
           }
-          _applyPanDelta(dd, Jd) {
-            const kd = Pd.h.IL[0].kdd(dd, Jd, Jd);
-            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), kd.multiplyInPlace(this.panningAxis), Pd.n.TransformNormalToRef(kd, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
-              const dd = this.upVector,
-                Jd = Pd.n.CrossToRef(this._transformedDirection, dd, this._transformedDirection);
-              Pd.n.CrossToRef(dd, Jd, this._transformedDirection)
+          _applyPanDelta(QQ, FQ) {
+            const wQ = DQ.k.Ox[0].vQQ(QQ, FQ, FQ);
+            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), wQ.multiplyInPlace(this.panningAxis), DQ.p.TransformNormalToRef(wQ, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
+              const QQ = this.upVector,
+                FQ = DQ.p.CrossToRef(this._transformedDirection, QQ, this._transformedDirection);
+              DQ.p.CrossToRef(QQ, FQ, this._transformedDirection)
             } else this.panningAxis.y || (this._transformedDirection.y = 0);
             if (!this._targetHost)
               if (null !== this.panningDistanceLimit) {
-                this._transformedDirection.addInPlace(this.sA);
-                Pd.n.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.sA.Fs(this._transformedDirection)
+                this._transformedDirection.addInPlace(this.K8);
+                DQ.p.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.K8.Qs(this._transformedDirection)
               } else {
                 if (this.parent) {
-                  const dd = Pd.h.Matrix[0];
-                  this.parent.getWorldMatrix().getRotationMatrixToRef(dd), dd.transposeToRef(dd), Pd.n.TransformCoordinatesToRef(this._transformedDirection, dd, this._transformedDirection)
+                  const QQ = DQ.k.Matrix[0];
+                  this.parent.getWorldMatrix().getRotationMatrixToRef(QQ), QQ.transposeToRef(QQ), DQ.p.TransformCoordinatesToRef(this._transformedDirection, QQ, this._transformedDirection)
                 }
-                this.sA.addInPlace(this._transformedDirection)
+                this.K8.addInPlace(this._transformedDirection)
               }
           }
           _checkInputs() {
             if (this._collisionTriggered) return;
             this.inputs.checkInputs();
-            let dd = !1;
+            let QQ = !1;
             this.movement.computeCurrentFrameDeltas();
-            const Jd = this.movement.rotationDeltaCurrentFrame,
-              kd = this.movement.zoomDeltaCurrentFrame,
-              pd = this.movement.panDeltaCurrentFrame;
-            if (0 === Jd.x && 0 === Jd.y && 0 === kd && 0 === pd.x && 0 === pd.y || (dd = !0, 0 === Jd.x && 0 === Jd.y && 0 === kd || this._applyRotationAndZoomDelta(Jd.x, Jd.y, kd), 0 === pd.x && 0 === pd.y || this._applyPanDelta(pd.x, pd.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), dd = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
+            const FQ = this.movement.rotationDeltaCurrentFrame,
+              wQ = this.movement.zoomDeltaCurrentFrame,
+              LQ = this.movement.panDeltaCurrentFrame;
+            if (0 === FQ.x && 0 === FQ.y && 0 === wQ && 0 === LQ.x && 0 === LQ.y || (QQ = !0, 0 === FQ.x && 0 === FQ.y && 0 === wQ || this._applyRotationAndZoomDelta(FQ.x, FQ.y, wQ), 0 === LQ.x && 0 === LQ.y || this._applyPanDelta(LQ.x, LQ.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), QQ = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
               this._applyPanDelta(this.inertialPanningX, this.inertialPanningY), this.inertialPanningX *= this.panningInertia, this.inertialPanningY *= this.panningInertia;
-              const Jd = this._panningEpsilon;
-              Math.abs(this.inertialPanningX) < Jd && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < Jd && (this.inertialPanningY = 0), dd = !0
+              const FQ = this._panningEpsilon;
+              Math.abs(this.inertialPanningX) < FQ && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < FQ && (this.inertialPanningY = 0), QQ = !0
             }
-            if (dd) this.stopInterpolation();
+            if (QQ) this.stopInterpolation();
             else if (this._isInterpolating) {
-              let dd = !1;
-              const Jd = this._scene.eL().getDeltaTime() / 1e3,
-                kd = 1 - Math.pow(2, -Jd / this._currentInterpolationFactor),
-                pd = Dd(this._goalRadius, this.radius);
+              let QQ = !1;
+              const FQ = this._scene.Wx().getDeltaTime() / 1e3,
+                wQ = 1 - Math.pow(2, -FQ / this._currentInterpolationFactor),
+                LQ = aQ(this._goalRadius, this.radius);
               if (!isNaN(this._goalTarget.x) || !isNaN(this._goalTarget.y) || !isNaN(this._goalTarget.z)) {
-                const Jd = Pd.h.IL[0].set(Dd(this._goalTarget.x, this.sA.x), Dd(this._goalTarget.y, this.sA.y), Dd(this._goalTarget.z, this.sA.z));
-                Pd.n.LerpToRef(this.target, Jd, kd, this.sA), 10 * Pd.n.Distance(this.target, Jd) / pd < ld.e ? (this._goalTarget.set(NaN, NaN, NaN), this.target.Fs(Jd), this.setTarget(this.target, !1, !0, !0)) : dd = !0
+                const FQ = DQ.k.Ox[0].set(aQ(this._goalTarget.x, this.K8.x), aQ(this._goalTarget.y, this.K8.y), aQ(this._goalTarget.z, this.K8.z));
+                DQ.p.LerpToRef(this.target, FQ, wQ, this.K8), 10 * DQ.p.Distance(this.target, FQ) / LQ < bQ.b ? (this._goalTarget.set(NaN, NaN, NaN), this.target.Qs(FQ), this.setTarget(this.target, !1, !0, !0)) : QQ = !0
               }
               if (!isNaN(this._goalAlpha) || !isNaN(this._goalBeta)) {
-                const Jd = Pd.d.RotationAlphaBetaGammaToRef(Dd(this._goalAlpha, this.alpha), Dd(this._goalBeta, this.beta), 0, Pd.h.Quaternion[0]),
-                  pd = Pd.d.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, Pd.h.Quaternion[1]),
-                  Nd = Pd.d.SlerpToRef(pd, Jd, kd, Pd.h.Quaternion[2]);
-                Nd.normalize();
-                const Wd = Nd.toAlphaBetaGammaToRef(Pd.h.IL[0]);
-                if (this.alpha = Wd.x, this.beta = Wd.y, Nd.isApprox(Jd, ld.e / 5)) {
+                const FQ = DQ.e.RotationAlphaBetaGammaToRef(aQ(this._goalAlpha, this.alpha), aQ(this._goalBeta, this.beta), 0, DQ.k.Quaternion[0]),
+                  LQ = DQ.e.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, DQ.k.Quaternion[1]),
+                  qQ = DQ.e.SlerpToRef(LQ, FQ, wQ, DQ.k.Quaternion[2]);
+                qQ.normalize();
+                const oQ = qQ.toAlphaBetaGammaToRef(DQ.k.Ox[0]);
+                if (this.alpha = oQ.x, this.beta = oQ.y, qQ.isApprox(FQ, bQ.b / 5)) {
                   this._goalAlpha = NaN, this._goalBeta = NaN;
-                  const dd = Jd.toAlphaBetaGammaToRef(Pd.h.IL[0]);
-                  this.alpha = dd.x, this.beta = dd.y
-                } else dd = !0
+                  const QQ = FQ.toAlphaBetaGammaToRef(DQ.k.Ox[0]);
+                  this.alpha = QQ.x, this.beta = QQ.y
+                } else QQ = !0
               }
-              if (isNaN(this._goalRadius) || (this.radius += (pd - this.radius) * kd, Math.abs(pd / this.radius - 1) < ld.e ? (this._goalRadius = NaN, this.radius = pd) : dd = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
-                const Jd = Pd.h.Vector2[0].set(Dd(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), Dd(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
-                Pd.k.LerpToRef(this.targetScreenOffset, Jd, kd, this.targetScreenOffset), Pd.k.Distance(this.targetScreenOffset, Jd) < ld.e ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.Fs(Jd)) : dd = !0
+              if (isNaN(this._goalRadius) || (this.radius += (LQ - this.radius) * wQ, Math.abs(LQ / this.radius - 1) < bQ.b ? (this._goalRadius = NaN, this.radius = LQ) : QQ = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
+                const FQ = DQ.k.Vector2[0].set(aQ(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), aQ(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
+                DQ.n.LerpToRef(this.targetScreenOffset, FQ, wQ, this.targetScreenOffset), DQ.n.Distance(this.targetScreenOffset, FQ) < bQ.b ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.Qs(FQ)) : QQ = !0
               }
-              this._isInterpolating = dd
+              this._isInterpolating = QQ
             }
             this._checkLimits(), super._checkInputs()
           }
@@ -1654,117 +1654,117 @@ export const modules = {
             null === this.lowerBetaLimit || void 0 === this.lowerBetaLimit ? this.allowUpsideDown && this.beta > Math.PI && (this.beta = this.beta - 2 * Math.PI) : this.beta < this.lowerBetaLimit && (this.beta = this.lowerBetaLimit), null === this.upperBetaLimit || void 0 === this.upperBetaLimit ? this.allowUpsideDown && this.beta < -Math.PI && (this.beta = this.beta + 2 * Math.PI) : this.beta > this.upperBetaLimit && (this.beta = this.upperBetaLimit), null !== this.lowerAlphaLimit && this.alpha < this.lowerAlphaLimit && (this.alpha = this.lowerAlphaLimit), null !== this.upperAlphaLimit && this.alpha > this.upperAlphaLimit && (this.alpha = this.upperAlphaLimit), null !== this.lowerRadiusLimit && this.radius < this.lowerRadiusLimit && (this.radius = this.lowerRadiusLimit, this.inertialRadiusOffset = 0), null !== this.upperRadiusLimit && this.radius > this.upperRadiusLimit && (this.radius = this.upperRadiusLimit, this.inertialRadiusOffset = 0), this.target.y = Math.max(this.target.y, this.lowerTargetYLimit)
           }
           rebuildAnglesAndRadius() {
-            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || Pd.n.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
-            const dd = this.alpha;
-            var Jd, kd;
-            this.alpha = function(dd) {
-              let Jd = Math.PI / 2;
-              return 0 === dd.x && 0 === dd.z || (Jd = Math.acos(dd.x / Math.sqrt(Math.pow(dd.x, 2) + Math.pow(dd.z, 2)))), dd.z < 0 && (Jd = 2 * Math.PI - Jd), Jd
-            }(this._computationVector), this.beta = (Jd = this._computationVector.y, kd = this.radius, Math.acos(Jd / kd));
-            const pd = Math.round((dd - this.alpha) / (2 * Math.PI));
-            this.alpha += 2 * pd * Math.PI, this._checkLimits()
+            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || DQ.p.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
+            const QQ = this.alpha;
+            var FQ, wQ;
+            this.alpha = function(QQ) {
+              let FQ = Math.PI / 2;
+              return 0 === QQ.x && 0 === QQ.z || (FQ = Math.acos(QQ.x / Math.sqrt(Math.pow(QQ.x, 2) + Math.pow(QQ.z, 2)))), QQ.z < 0 && (FQ = 2 * Math.PI - FQ), FQ
+            }(this._computationVector), this.beta = (FQ = this._computationVector.y, wQ = this.radius, Math.acos(FQ / wQ));
+            const LQ = Math.round((QQ - this.alpha) / (2 * Math.PI));
+            this.alpha += 2 * LQ * Math.PI, this._checkLimits()
           }
-          setPosition(dd) {
-            this._position.equals(dd) || (this._position.Fs(dd), this.rebuildAnglesAndRadius())
+          setPosition(QQ) {
+            this._position.equals(QQ) || (this._position.Qs(QQ), this.rebuildAnglesAndRadius())
           }
-          setTarget(dd) {
-            let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-              pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            if (pd = this.overrideCloneAlphaBetaRadius ?? pd, dd.computeWorldMatrix) Jd && dd.pU ? this._targetBoundingCenter = dd.pU().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, dd.computeWorldMatrix(), this._targetHost = dd, this.sA = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
+          setTarget(QQ) {
+            let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+              LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            if (LQ = this.overrideCloneAlphaBetaRadius ?? LQ, QQ.computeWorldMatrix) FQ && QQ.sK ? this._targetBoundingCenter = QQ.sK().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, QQ.computeWorldMatrix(), this._targetHost = QQ, this.K8 = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
             else {
-              const Jd = dd,
-                pd = this._getTargetPosition();
-              if (pd && !kd && pd.equals(Jd)) return;
-              this._targetHost = null, this.sA = Jd, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
+              const FQ = QQ,
+                LQ = this._getTargetPosition();
+              if (LQ && !wQ && LQ.equals(FQ)) return;
+              this._targetHost = null, this.K8 = FQ, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
             }
-            pd || this.rebuildAnglesAndRadius()
+            LQ || this.rebuildAnglesAndRadius()
           }
           _getViewMatrix() {
-            const dd = Math.cos(this.alpha),
-              Jd = Math.sin(this.alpha),
-              kd = Math.cos(this.beta);
-            let pd = Math.sin(this.beta);
-            0 === pd && (pd = 1e-4), 0 === this.radius && (this.radius = 1e-4);
-            const Nd = this._getTargetPosition();
-            if (this._computationVector.kdd(this.radius * dd * pd, this.radius * kd, this.radius * Jd * pd), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || Pd.n.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), Nd.addToRef(this._computationVector, this._newPosition), this.Wm().collisionsEnabled && this.checkCollisions) {
-              const dd = this.Wm().collisionCoordinator;
-              this._collider || (this._collider = dd.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, dd.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
+            const QQ = Math.cos(this.alpha),
+              FQ = Math.sin(this.alpha),
+              wQ = Math.cos(this.beta);
+            let LQ = Math.sin(this.beta);
+            0 === LQ && (LQ = 1e-4), 0 === this.radius && (this.radius = 1e-4);
+            const qQ = this._getTargetPosition();
+            if (this._computationVector.vQQ(this.radius * QQ * LQ, this.radius * wQ, this.radius * FQ * LQ), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || DQ.p.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), qQ.addToRef(this._computationVector, this._newPosition), this.iN().collisionsEnabled && this.checkCollisions) {
+              const QQ = this.iN().collisionCoordinator;
+              this._collider || (this._collider = QQ.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, QQ.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
             } else {
-              this._position.Fs(this._newPosition);
-              let dd = this.upVector;
-              this.allowUpsideDown && pd < 0 && (dd = dd.ck()), this._computeViewMatrix(this._position, Nd, dd), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
+              this._position.Qs(this._newPosition);
+              let QQ = this.upVector;
+              this.allowUpsideDown && LQ < 0 && (QQ = QQ.mo()), this._computeViewMatrix(this._position, qQ, QQ), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
             }
-            return this._currentTarget.Fs(Nd), this._viewMatrix
+            return this._currentTarget.Qs(qQ), this._viewMatrix
           }
-          zoomOn(dd) {
-            let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            dd = dd || this.Wm().meshes;
-            const kd = Cd.b.MinMax(dd);
-            let pd = this._calculateLowerRadiusFromModelBoundingSphere(kd.min, kd.max);
-            if (pd = Math.max(Math.min(pd, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = pd * this.zoomOnFactor, this.mode === Id.e.ORTHOGRAPHIC_CAMERA) {
-              const dd = this.Wm().eL().getAspectRatio(this),
-                Jd = pd * this.zoomOnFactor / 2;
-              this.orthoLeft = -Jd * dd, this.orthoRight = Jd * dd, this.orthoBottom = -Jd, this.orthoTop = Jd
+          zoomOn(QQ) {
+            let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            QQ = QQ || this.iN().meshes;
+            const wQ = mQ.c.MinMax(QQ);
+            let LQ = this._calculateLowerRadiusFromModelBoundingSphere(wQ.min, wQ.max);
+            if (LQ = Math.max(Math.min(LQ, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = LQ * this.zoomOnFactor, this.mode === MQ.e.ORTHOGRAPHIC_CAMERA) {
+              const QQ = this.iN().Wx().getAspectRatio(this),
+                FQ = LQ * this.zoomOnFactor / 2;
+              this.orthoLeft = -FQ * QQ, this.orthoRight = FQ * QQ, this.orthoBottom = -FQ, this.orthoTop = FQ
             }
             this.focusOn({
-              min: kd.min,
-              max: kd.max,
-              distance: pd
-            }, Jd)
+              min: wQ.min,
+              max: wQ.max,
+              distance: LQ
+            }, FQ)
           }
-          focusOn(dd) {
-            let Jd, kd, pd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (void 0 === dd.min) {
-              const pd = dd || this.Wm().meshes;
-              Jd = Cd.b.MinMax(pd), kd = Pd.n.Distance(Jd.min, Jd.max)
+          focusOn(QQ) {
+            let FQ, wQ, LQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (void 0 === QQ.min) {
+              const LQ = QQ || this.iN().meshes;
+              FQ = mQ.c.MinMax(LQ), wQ = DQ.p.Distance(FQ.min, FQ.max)
             } else {
-              Jd = dd, kd = dd.distance
+              FQ = QQ, wQ = QQ.distance
             }
-            this.sA = Cd.b.Center(Jd), pd || (this.maxZ = 2 * kd)
+            this.K8 = mQ.c.Center(FQ), LQ || (this.maxZ = 2 * wQ)
           }
-          createRigCamera(Jd, kd) {
-            let pd = 0;
+          createRigCamera(FQ, wQ) {
+            let LQ = 0;
             switch (this.cameraRigMode) {
-              case Id.e.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case Id.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case Id.e.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case Id.e.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case Id.e.RIG_MODE_VR:
-                pd = this._cameraRigParams.stereoHalfAngle * (0 === kd ? 1 : -1);
+              case MQ.e.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case MQ.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case MQ.e.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case MQ.e.RIG_MODE_STEREOSCOPIC_INTERLACED:
+              case MQ.e.RIG_MODE_VR:
+                LQ = this._cameraRigParams.stereoHalfAngle * (0 === wQ ? 1 : -1);
                 break;
-              case Id.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                pd = this._cameraRigParams.stereoHalfAngle * (0 === kd ? -1 : 1)
+              case MQ.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+                LQ = this._cameraRigParams.stereoHalfAngle * (0 === wQ ? -1 : 1)
             }
-            const Nd = new dd(Jd, this.alpha + pd, this.beta, this.radius, this.sA, this.Wm());
-            return Nd._cameraRigParams = {}, Nd.isRigCamera = !0, Nd.rigParent = this, Nd.upVector = this.upVector, Nd.mode = this.mode, Nd.orthoLeft = this.orthoLeft, Nd.orthoRight = this.orthoRight, Nd.orthoBottom = this.orthoBottom, Nd.orthoTop = this.orthoTop, Nd
+            const qQ = new QQ(FQ, this.alpha + LQ, this.beta, this.radius, this.K8, this.iN());
+            return qQ._cameraRigParams = {}, qQ.isRigCamera = !0, qQ.rigParent = this, qQ.upVector = this.upVector, qQ.mode = this.mode, qQ.orthoLeft = this.orthoLeft, qQ.orthoRight = this.orthoRight, qQ.orthoBottom = this.orthoBottom, qQ.orthoTop = this.orthoTop, qQ
           }
           _updateRigCameras() {
-            const dd = this._rigCameras[0],
-              Jd = this._rigCameras[1];
-            switch (dd.beta = Jd.beta = this.beta, this.cameraRigMode) {
-              case Id.e.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case Id.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case Id.e.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case Id.e.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case Id.e.RIG_MODE_VR:
-                dd.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, Jd.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
+            const QQ = this._rigCameras[0],
+              FQ = this._rigCameras[1];
+            switch (QQ.beta = FQ.beta = this.beta, this.cameraRigMode) {
+              case MQ.e.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
+              case MQ.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
+              case MQ.e.RIG_MODE_STEREOSCOPIC_OVERUNDER:
+              case MQ.e.RIG_MODE_STEREOSCOPIC_INTERLACED:
+              case MQ.e.RIG_MODE_VR:
+                QQ.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, FQ.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
                 break;
-              case Id.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                dd.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, Jd.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
+              case MQ.e.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
+                QQ.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, FQ.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
             }
             super._updateRigCameras()
           }
-          _calculateLowerRadiusFromModelBoundingSphere(dd, Jd) {
-            let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-            const pd = Pd.n.Distance(dd, Jd),
-              Nd = this.Wm().eL().getAspectRatio(this),
-              Wd = Math.tan(this.fov / 2),
-              Zd = Wd * Nd,
-              gd = .5 * pd * kd,
-              Cd = gd * Math.sqrt(1 + 1 / (Zd * Zd)),
-              Kd = gd * Math.sqrt(1 + 1 / (Wd * Wd));
-            return Math.max(Cd, Kd)
+          _calculateLowerRadiusFromModelBoundingSphere(QQ, FQ) {
+            let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+            const LQ = DQ.p.Distance(QQ, FQ),
+              qQ = this.iN().Wx().getAspectRatio(this),
+              oQ = Math.tan(this.fov / 2),
+              kQ = oQ * qQ,
+              vQ = .5 * LQ * wQ,
+              mQ = vQ * Math.sqrt(1 + 1 / (kQ * kQ)),
+              uQ = vQ * Math.sqrt(1 + 1 / (oQ * oQ));
+            return Math.max(mQ, uQ)
           }
           dispose() {
             this.inputs.clear(), super.dispose()
@@ -1773,396 +1773,396 @@ export const modules = {
             return "ArcRotateCamera"
           }
         }, (() => {
-          const Wd = "function" === typeof Symbol && Symbol.metadata ? Object.create(td[Symbol.metadata] ?? null) : void 0;
-          Jd = [(0, Nd.H)()], kd = [(0, Nd.H)()], gd = [(0, Nd.H)()], Kd = [(0, Nd.H)()], od = [(0, Nd.F)("target")], Ld = [(0, Nd.v)("targetHost")], Od = [(0, Nd.H)()], vd = [(0, Nd.H)()], qd = [(0, Nd.H)()], Bd = [(0, Nd.H)()], sd = [(0, Nd.H)()], ad = [(0, Nd.H)()], Md = [(0, Nd.H)()], Fd = [(0, Nd.H)()], Yd = [(0, Nd.H)()], md = [(0, Nd.H)()], bd = [(0, Nd.H)()], Sd = [(0, Nd.H)()], jd = [(0, Nd.H)()], fd = [(0, Nd.H)()], nd = [(0, Nd.F)()], Ud = [(0, Nd.H)()], Td = [(0, Nd.H)()], Ed = [(0, Nd.H)()], cd = [(0, Nd.B)()], hd = [(0, Nd.H)()], rd = [(0, Nd.H)()], ud = [(0, Nd.H)()], (0, pd.h)(dd, null, Od, {
+          const oQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(nQ[Symbol.metadata] ?? null) : void 0;
+          FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], vQ = [(0, qQ.I)()], uQ = [(0, qQ.I)()], HQ = [(0, qQ.F)("target")], xQ = [(0, qQ.w)("targetHost")], AQ = [(0, qQ.I)()], pQ = [(0, qQ.I)()], CQ = [(0, qQ.I)()], SQ = [(0, qQ.I)()], iQ = [(0, qQ.I)()], WQ = [(0, qQ.I)()], RQ = [(0, qQ.I)()], OQ = [(0, qQ.I)()], sQ = [(0, qQ.I)()], rQ = [(0, qQ.I)()], IQ = [(0, qQ.I)()], UQ = [(0, qQ.I)()], NQ = [(0, qQ.I)()], KQ = [(0, qQ.I)()], zQ = [(0, qQ.F)()], lQ = [(0, qQ.I)()], XQ = [(0, qQ.I)()], fQ = [(0, qQ.I)()], VQ = [(0, qQ.C)()], hQ = [(0, qQ.I)()], JQ = [(0, qQ.I)()], EQ = [(0, qQ.I)()], (0, LQ.i)(QQ, null, AQ, {
             kind: "getter",
             name: "inertialAlphaOffset",
             static: !1,
             private: !1,
             access: {
-              has: dd => "inertialAlphaOffset" in dd,
-              get: dd => dd.inertialAlphaOffset
+              has: QQ => "inertialAlphaOffset" in QQ,
+              get: QQ => QQ.inertialAlphaOffset
             },
-            metadata: Wd
-          }, null, Vd), (0, pd.h)(dd, null, vd, {
+            metadata: oQ
+          }, null, gQ), (0, LQ.i)(QQ, null, pQ, {
             kind: "getter",
             name: "inertialBetaOffset",
             static: !1,
             private: !1,
             access: {
-              has: dd => "inertialBetaOffset" in dd,
-              get: dd => dd.inertialBetaOffset
+              has: QQ => "inertialBetaOffset" in QQ,
+              get: QQ => QQ.inertialBetaOffset
             },
-            metadata: Wd
-          }, null, Vd), (0, pd.h)(dd, null, qd, {
+            metadata: oQ
+          }, null, gQ), (0, LQ.i)(QQ, null, CQ, {
             kind: "getter",
             name: "inertialRadiusOffset",
             static: !1,
             private: !1,
             access: {
-              has: dd => "inertialRadiusOffset" in dd,
-              get: dd => dd.inertialRadiusOffset
+              has: QQ => "inertialRadiusOffset" in QQ,
+              get: QQ => QQ.inertialRadiusOffset
             },
-            metadata: Wd
-          }, null, Vd), (0, pd.h)(dd, null, Ud, {
+            metadata: oQ
+          }, null, gQ), (0, LQ.i)(QQ, null, lQ, {
             kind: "getter",
             name: "panningInertia",
             static: !1,
             private: !1,
             access: {
-              has: dd => "panningInertia" in dd,
-              get: dd => dd.panningInertia
+              has: QQ => "panningInertia" in QQ,
+              get: QQ => QQ.panningInertia
             },
-            metadata: Wd
-          }, null, Vd), (0, pd.h)(dd, null, Td, {
+            metadata: oQ
+          }, null, gQ), (0, LQ.i)(QQ, null, XQ, {
             kind: "getter",
             name: "zoomToMouseLocation",
             static: !1,
             private: !1,
             access: {
-              has: dd => "zoomToMouseLocation" in dd,
-              get: dd => dd.zoomToMouseLocation
+              has: QQ => "zoomToMouseLocation" in QQ,
+              get: QQ => QQ.zoomToMouseLocation
             },
-            metadata: Wd
-          }, null, Vd), (0, pd.h)(null, null, Jd, {
+            metadata: oQ
+          }, null, gQ), (0, LQ.i)(null, null, FQ, {
             kind: "field",
             name: "alpha",
             static: !1,
             private: !1,
             access: {
-              has: dd => "alpha" in dd,
-              get: dd => dd.alpha,
-              set: (dd, Jd) => {
-                dd.alpha = Jd
+              has: QQ => "alpha" in QQ,
+              get: QQ => QQ.alpha,
+              set: (QQ, FQ) => {
+                QQ.alpha = FQ
               }
             },
-            metadata: Wd
-          }, zd, Hd), (0, pd.h)(null, null, kd, {
+            metadata: oQ
+          }, PQ, ZQ), (0, LQ.i)(null, null, wQ, {
             kind: "field",
             name: "beta",
             static: !1,
             private: !1,
             access: {
-              has: dd => "beta" in dd,
-              get: dd => dd.beta,
-              set: (dd, Jd) => {
-                dd.beta = Jd
+              has: QQ => "beta" in QQ,
+              get: QQ => QQ.beta,
+              set: (QQ, FQ) => {
+                QQ.beta = FQ
               }
             },
-            metadata: Wd
-          }, wd, Ad), (0, pd.h)(null, null, gd, {
+            metadata: oQ
+          }, yQ, BQ), (0, LQ.i)(null, null, vQ, {
             kind: "field",
             name: "radius",
             static: !1,
             private: !1,
             access: {
-              has: dd => "radius" in dd,
-              get: dd => dd.radius,
-              set: (dd, Jd) => {
-                dd.radius = Jd
+              has: QQ => "radius" in QQ,
+              get: QQ => QQ.radius,
+              set: (QQ, FQ) => {
+                QQ.radius = FQ
               }
             },
-            metadata: Wd
-          }, dJ, JJ), (0, pd.h)(null, null, Kd, {
+            metadata: oQ
+          }, dQ, QF), (0, LQ.i)(null, null, uQ, {
             kind: "field",
             name: "overrideCloneAlphaBetaRadius",
             static: !1,
             private: !1,
             access: {
-              has: dd => "overrideCloneAlphaBetaRadius" in dd,
-              get: dd => dd.overrideCloneAlphaBetaRadius,
-              set: (dd, Jd) => {
-                dd.overrideCloneAlphaBetaRadius = Jd
+              has: QQ => "overrideCloneAlphaBetaRadius" in QQ,
+              get: QQ => QQ.overrideCloneAlphaBetaRadius,
+              set: (QQ, FQ) => {
+                QQ.overrideCloneAlphaBetaRadius = FQ
               }
             },
-            metadata: Wd
-          }, kJ, pJ), (0, pd.h)(null, null, od, {
+            metadata: oQ
+          }, FF, wF), (0, LQ.i)(null, null, HQ, {
             kind: "field",
-            name: "sA",
+            name: "K8",
             static: !1,
             private: !1,
             access: {
-              has: dd => "sA" in dd,
-              get: dd => dd.sA,
-              set: (dd, Jd) => {
-                dd.sA = Jd
+              has: QQ => "K8" in QQ,
+              get: QQ => QQ.K8,
+              set: (QQ, FQ) => {
+                QQ.K8 = FQ
               }
             },
-            metadata: Wd
-          }, NJ, WJ), (0, pd.h)(null, null, Ld, {
+            metadata: oQ
+          }, LF, qF), (0, LQ.i)(null, null, xQ, {
             kind: "field",
             name: "_targetHost",
             static: !1,
             private: !1,
             access: {
-              has: dd => "_targetHost" in dd,
-              get: dd => dd._targetHost,
-              set: (dd, Jd) => {
-                dd._targetHost = Jd
+              has: QQ => "_targetHost" in QQ,
+              get: QQ => QQ._targetHost,
+              set: (QQ, FQ) => {
+                QQ._targetHost = FQ
               }
             },
-            metadata: Wd
-          }, PJ, ZJ), (0, pd.h)(null, null, Bd, {
+            metadata: oQ
+          }, oF, DF), (0, LQ.i)(null, null, SQ, {
             kind: "field",
             name: "lowerAlphaLimit",
             static: !1,
             private: !1,
             access: {
-              has: dd => "lowerAlphaLimit" in dd,
-              get: dd => dd.lowerAlphaLimit,
-              set: (dd, Jd) => {
-                dd.lowerAlphaLimit = Jd
+              has: QQ => "lowerAlphaLimit" in QQ,
+              get: QQ => QQ.lowerAlphaLimit,
+              set: (QQ, FQ) => {
+                QQ.lowerAlphaLimit = FQ
               }
             },
-            metadata: Wd
-          }, gJ, CJ), (0, pd.h)(null, null, sd, {
+            metadata: oQ
+          }, kF, vF), (0, LQ.i)(null, null, iQ, {
             kind: "field",
             name: "upperAlphaLimit",
             static: !1,
             private: !1,
             access: {
-              has: dd => "upperAlphaLimit" in dd,
-              get: dd => dd.upperAlphaLimit,
-              set: (dd, Jd) => {
-                dd.upperAlphaLimit = Jd
+              has: QQ => "upperAlphaLimit" in QQ,
+              get: QQ => QQ.upperAlphaLimit,
+              set: (QQ, FQ) => {
+                QQ.upperAlphaLimit = FQ
               }
             },
-            metadata: Wd
-          }, KJ, oJ), (0, pd.h)(null, null, ad, {
+            metadata: oQ
+          }, mF, uF), (0, LQ.i)(null, null, WQ, {
             kind: "field",
             name: "lowerBetaLimit",
             static: !1,
             private: !1,
             access: {
-              has: dd => "lowerBetaLimit" in dd,
-              get: dd => dd.lowerBetaLimit,
-              set: (dd, Jd) => {
-                dd.lowerBetaLimit = Jd
+              has: QQ => "lowerBetaLimit" in QQ,
+              get: QQ => QQ.lowerBetaLimit,
+              set: (QQ, FQ) => {
+                QQ.lowerBetaLimit = FQ
               }
             },
-            metadata: Wd
-          }, lJ, QJ), (0, pd.h)(null, null, Md, {
+            metadata: oQ
+          }, HF, bF), (0, LQ.i)(null, null, RQ, {
             kind: "field",
             name: "upperBetaLimit",
             static: !1,
             private: !1,
             access: {
-              has: dd => "upperBetaLimit" in dd,
-              get: dd => dd.upperBetaLimit,
-              set: (dd, Jd) => {
-                dd.upperBetaLimit = Jd
+              has: QQ => "upperBetaLimit" in QQ,
+              get: QQ => QQ.upperBetaLimit,
+              set: (QQ, FQ) => {
+                QQ.upperBetaLimit = FQ
               }
             },
-            metadata: Wd
-          }, LJ, OJ), (0, pd.h)(null, null, Fd, {
+            metadata: oQ
+          }, YF, xF), (0, LQ.i)(null, null, OQ, {
             kind: "field",
             name: "lowerRadiusLimit",
             static: !1,
             private: !1,
             access: {
-              has: dd => "lowerRadiusLimit" in dd,
-              get: dd => dd.lowerRadiusLimit,
-              set: (dd, Jd) => {
-                dd.lowerRadiusLimit = Jd
+              has: QQ => "lowerRadiusLimit" in QQ,
+              get: QQ => QQ.lowerRadiusLimit,
+              set: (QQ, FQ) => {
+                QQ.lowerRadiusLimit = FQ
               }
             },
-            metadata: Wd
-          }, eJ, RJ), (0, pd.h)(null, null, Yd, {
+            metadata: oQ
+          }, AF, tF), (0, LQ.i)(null, null, sQ, {
             kind: "field",
             name: "upperRadiusLimit",
             static: !1,
             private: !1,
             access: {
-              has: dd => "upperRadiusLimit" in dd,
-              get: dd => dd.upperRadiusLimit,
-              set: (dd, Jd) => {
-                dd.upperRadiusLimit = Jd
+              has: QQ => "upperRadiusLimit" in QQ,
+              get: QQ => QQ.upperRadiusLimit,
+              set: (QQ, FQ) => {
+                QQ.upperRadiusLimit = FQ
               }
             },
-            metadata: Wd
-          }, IJ, GJ), (0, pd.h)(null, null, md, {
+            metadata: oQ
+          }, eF, MF), (0, LQ.i)(null, null, rQ, {
             kind: "field",
             name: "lowerTargetYLimit",
             static: !1,
             private: !1,
             access: {
-              has: dd => "lowerTargetYLimit" in dd,
-              get: dd => dd.lowerTargetYLimit,
-              set: (dd, Jd) => {
-                dd.lowerTargetYLimit = Jd
+              has: QQ => "lowerTargetYLimit" in QQ,
+              get: QQ => QQ.lowerTargetYLimit,
+              set: (QQ, FQ) => {
+                QQ.lowerTargetYLimit = FQ
               }
             },
-            metadata: Wd
-          }, vJ, xJ), (0, pd.h)(null, null, bd, {
+            metadata: oQ
+          }, GF, pF), (0, LQ.i)(null, null, IQ, {
             kind: "field",
             name: "inertialPanningX",
             static: !1,
             private: !1,
             access: {
-              has: dd => "inertialPanningX" in dd,
-              get: dd => dd.inertialPanningX,
-              set: (dd, Jd) => {
-                dd.inertialPanningX = Jd
+              has: QQ => "inertialPanningX" in QQ,
+              get: QQ => QQ.inertialPanningX,
+              set: (QQ, FQ) => {
+                QQ.inertialPanningX = FQ
               }
             },
-            metadata: Wd
-          }, qJ, BJ), (0, pd.h)(null, null, Sd, {
+            metadata: oQ
+          }, cF, CF), (0, LQ.i)(null, null, UQ, {
             kind: "field",
             name: "inertialPanningY",
             static: !1,
             private: !1,
             access: {
-              has: dd => "inertialPanningY" in dd,
-              get: dd => dd.inertialPanningY,
-              set: (dd, Jd) => {
-                dd.inertialPanningY = Jd
+              has: QQ => "inertialPanningY" in QQ,
+              get: QQ => QQ.inertialPanningY,
+              set: (QQ, FQ) => {
+                QQ.inertialPanningY = FQ
               }
             },
-            metadata: Wd
-          }, sJ, iJ), (0, pd.h)(null, null, jd, {
+            metadata: oQ
+          }, SF, iF), (0, LQ.i)(null, null, NQ, {
             kind: "field",
             name: "pinchToPanMaxDistance",
             static: !1,
             private: !1,
             access: {
-              has: dd => "pinchToPanMaxDistance" in dd,
-              get: dd => dd.pinchToPanMaxDistance,
-              set: (dd, Jd) => {
-                dd.pinchToPanMaxDistance = Jd
+              has: QQ => "pinchToPanMaxDistance" in QQ,
+              get: QQ => QQ.pinchToPanMaxDistance,
+              set: (QQ, FQ) => {
+                QQ.pinchToPanMaxDistance = FQ
               }
             },
-            metadata: Wd
-          }, aJ, MJ), (0, pd.h)(null, null, fd, {
+            metadata: oQ
+          }, WF, RF), (0, LQ.i)(null, null, KQ, {
             kind: "field",
             name: "panningDistanceLimit",
             static: !1,
             private: !1,
             access: {
-              has: dd => "panningDistanceLimit" in dd,
-              get: dd => dd.panningDistanceLimit,
-              set: (dd, Jd) => {
-                dd.panningDistanceLimit = Jd
+              has: QQ => "panningDistanceLimit" in QQ,
+              get: QQ => QQ.panningDistanceLimit,
+              set: (QQ, FQ) => {
+                QQ.panningDistanceLimit = FQ
               }
             },
-            metadata: Wd
-          }, FJ, YJ), (0, pd.h)(null, null, nd, {
+            metadata: oQ
+          }, OF, sF), (0, LQ.i)(null, null, zQ, {
             kind: "field",
             name: "panningOriginTarget",
             static: !1,
             private: !1,
             access: {
-              has: dd => "panningOriginTarget" in dd,
-              get: dd => dd.panningOriginTarget,
-              set: (dd, Jd) => {
-                dd.panningOriginTarget = Jd
+              has: QQ => "panningOriginTarget" in QQ,
+              get: QQ => QQ.panningOriginTarget,
+              set: (QQ, FQ) => {
+                QQ.panningOriginTarget = FQ
               }
             },
-            metadata: Wd
-          }, mJ, bJ), (0, pd.h)(null, null, Ed, {
+            metadata: oQ
+          }, rF, IF), (0, LQ.i)(null, null, fQ, {
             kind: "field",
             name: "zoomOnFactor",
             static: !1,
             private: !1,
             access: {
-              has: dd => "zoomOnFactor" in dd,
-              get: dd => dd.zoomOnFactor,
-              set: (dd, Jd) => {
-                dd.zoomOnFactor = Jd
+              has: QQ => "zoomOnFactor" in QQ,
+              get: QQ => QQ.zoomOnFactor,
+              set: (QQ, FQ) => {
+                QQ.zoomOnFactor = FQ
               }
             },
-            metadata: Wd
-          }, SJ, jJ), (0, pd.h)(null, null, cd, {
+            metadata: oQ
+          }, UF, NF), (0, LQ.i)(null, null, VQ, {
             kind: "field",
             name: "targetScreenOffset",
             static: !1,
             private: !1,
             access: {
-              has: dd => "targetScreenOffset" in dd,
-              get: dd => dd.targetScreenOffset,
-              set: (dd, Jd) => {
-                dd.targetScreenOffset = Jd
+              has: QQ => "targetScreenOffset" in QQ,
+              get: QQ => QQ.targetScreenOffset,
+              set: (QQ, FQ) => {
+                QQ.targetScreenOffset = FQ
               }
             },
-            metadata: Wd
-          }, XJ, fJ), (0, pd.h)(null, null, hd, {
+            metadata: oQ
+          }, TF, KF), (0, LQ.i)(null, null, hQ, {
             kind: "field",
             name: "allowUpsideDown",
             static: !1,
             private: !1,
             access: {
-              has: dd => "allowUpsideDown" in dd,
-              get: dd => dd.allowUpsideDown,
-              set: (dd, Jd) => {
-                dd.allowUpsideDown = Jd
+              has: QQ => "allowUpsideDown" in QQ,
+              get: QQ => QQ.allowUpsideDown,
+              set: (QQ, FQ) => {
+                QQ.allowUpsideDown = FQ
               }
             },
-            metadata: Wd
-          }, nJ, UJ), (0, pd.h)(null, null, rd, {
+            metadata: oQ
+          }, zF, lF), (0, LQ.i)(null, null, JQ, {
             kind: "field",
             name: "useInputToRestoreState",
             static: !1,
             private: !1,
             access: {
-              has: dd => "useInputToRestoreState" in dd,
-              get: dd => dd.useInputToRestoreState,
-              set: (dd, Jd) => {
-                dd.useInputToRestoreState = Jd
+              has: QQ => "useInputToRestoreState" in QQ,
+              get: QQ => QQ.useInputToRestoreState,
+              set: (QQ, FQ) => {
+                QQ.useInputToRestoreState = FQ
               }
             },
-            metadata: Wd
-          }, yJ, DJ), (0, pd.h)(null, null, ud, {
+            metadata: oQ
+          }, jF, aF), (0, LQ.i)(null, null, EQ, {
             kind: "field",
             name: "restoreStateInterpolationFactor",
             static: !1,
             private: !1,
             access: {
-              has: dd => "restoreStateInterpolationFactor" in dd,
-              get: dd => dd.restoreStateInterpolationFactor,
-              set: (dd, Jd) => {
-                dd.restoreStateInterpolationFactor = Jd
+              has: QQ => "restoreStateInterpolationFactor" in QQ,
+              get: QQ => QQ.restoreStateInterpolationFactor,
+              set: (QQ, FQ) => {
+                QQ.restoreStateInterpolationFactor = FQ
               }
             },
-            metadata: Wd
-          }, TJ, EJ), Wd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: oQ
+          }, XF, fF), oQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Wd
+            value: oQ
           })
-        })(), dd
+        })(), QQ
       })(),
-      Ed = !1;
-    Ed || (Ed = !0, gd.c.AddNodeConstructor("ArcRotateCamera", ((dd, Jd) => () => new Td(dd, 0, 0, 1, Pd.n.Zero(), Jd))), (0, fd.h)("BABYLON.ArcRotateCamera", Td))
+      fQ = !1;
+    fQ || (fQ = !0, vQ.c.AddNodeConstructor("ArcRotateCamera", ((QQ, FQ) => () => new XQ(QQ, 0, 0, 1, DQ.p.Zero(), FQ))), (0, KQ.e)("BABYLON.ArcRotateCamera", XQ))
   },
-  40226: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd.d
+  39678: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ.c
     });
-    var pd = kd(40234);
-    (0, pd.e)()
+    var LQ = wQ(39686);
+    (0, LQ.e)()
   },
-  40234: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Kd,
-      e: () => ld
+  39686: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => uQ,
+      e: () => bQ
     });
-    var pd = kd(39964),
-      Nd = kd(39966),
-      Wd = kd(37251),
-      Pd = kd(37443),
-      Zd = kd(40243),
-      gd = kd(40205),
-      Cd = kd(37303);
-    let Kd = (() => {
-        var dd;
-        let Jd, kd, gd = Zd.d,
-          Cd = [],
-          Kd = [],
-          od = [],
-          ld = [];
-        return dd = class extends gd {
-          constructor(dd, Jd, kd, Nd) {
-            super(dd, kd, Nd), this.groundColor = (0, pd.i)(this, Cd, new Pd.c(0, 0, 0)), this.direction = ((0, pd.i)(this, Kd), (0, pd.i)(this, od, void 0)), (0, pd.i)(this, ld), this.direction = Jd || Wd.n.Up()
+    var LQ = wQ(39402),
+      qQ = wQ(39409),
+      oQ = wQ(36696),
+      DQ = wQ(36873),
+      kQ = wQ(39690),
+      vQ = wQ(39650),
+      mQ = wQ(36741);
+    let uQ = (() => {
+        var QQ;
+        let FQ, wQ, vQ = kQ.c,
+          mQ = [],
+          uQ = [],
+          HQ = [],
+          bQ = [];
+        return QQ = class extends vQ {
+          constructor(QQ, FQ, wQ, qQ) {
+            super(QQ, wQ, qQ), this.groundColor = (0, LQ.l)(this, mQ, new DQ.b(0, 0, 0)), this.direction = ((0, LQ.l)(this, uQ), (0, LQ.l)(this, HQ, void 0)), (0, LQ.l)(this, bQ), this.direction = FQ || oQ.p.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -2170,71 +2170,71 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(dd) {
-            return this.direction = Wd.n.Normalize(dd.subtract(Wd.n.Zero())), this.direction
+          setDirectionToTarget(QQ) {
+            return this.direction = oQ.p.Normalize(QQ.subtract(oQ.p.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(dd, Jd) {
-            const kd = Wd.n.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", kd.x, kd.y, kd.z, 0, Jd), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), Jd), this
+          transferToEffect(QQ, FQ) {
+            const wQ = oQ.p.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", wQ.x, wQ.y, wQ.z, 0, FQ), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), FQ), this
           }
-          transferToNodeMaterialEffect(dd, Jd) {
-            const kd = Wd.n.Normalize(this.direction);
-            return dd.setFloat3(Jd, kd.x, kd.y, kd.z), this
+          transferToNodeMaterialEffect(QQ, FQ) {
+            const wQ = oQ.p.Normalize(this.direction);
+            return QQ.setFloat3(FQ, wQ.x, wQ.y, wQ.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = Wd.b.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = oQ.c.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return Zd.d.LIGHTTYPEID_HEMISPHERICLIGHT
+            return kQ.c.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(dd, Jd) {
-            dd["HEMILIGHT" + Jd] = !0
+          prepareLightSpecificDefines(QQ, FQ) {
+            QQ["HEMILIGHT" + FQ] = !0
           }
         }, (() => {
-          const Wd = "function" === typeof Symbol && Symbol.metadata ? Object.create(gd[Symbol.metadata] ?? null) : void 0;
-          Jd = [(0, Nd.n)()], kd = [(0, Nd.F)()], (0, pd.h)(null, null, Jd, {
+          const oQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(vQ[Symbol.metadata] ?? null) : void 0;
+          FQ = [(0, qQ.m)()], wQ = [(0, qQ.F)()], (0, LQ.i)(null, null, FQ, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: dd => "groundColor" in dd,
-              get: dd => dd.groundColor,
-              set: (dd, Jd) => {
-                dd.groundColor = Jd
+              has: QQ => "groundColor" in QQ,
+              get: QQ => QQ.groundColor,
+              set: (QQ, FQ) => {
+                QQ.groundColor = FQ
               }
             },
-            metadata: Wd
-          }, Cd, Kd), (0, pd.h)(null, null, kd, {
+            metadata: oQ
+          }, mQ, uQ), (0, LQ.i)(null, null, wQ, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: dd => "direction" in dd,
-              get: dd => dd.direction,
-              set: (dd, Jd) => {
-                dd.direction = Jd
+              has: QQ => "direction" in QQ,
+              get: QQ => QQ.direction,
+              set: (QQ, FQ) => {
+                QQ.direction = FQ
               }
             },
-            metadata: Wd
-          }, od, ld), Wd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: oQ
+          }, HQ, bQ), oQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Wd
+            value: oQ
           })
-        })(), dd
+        })(), QQ
       })(),
-      od = !1;
+      HQ = !1;
 
-    function ld() {
-      od || (od = !0, gd.c.AddNodeConstructor("Light_Type_3", ((dd, Jd) => () => new Kd(dd, Wd.n.Zero(), Jd))), (0, Cd.h)("BABYLON.HemisphericLight", Kd))
+    function bQ() {
+      HQ || (HQ = !0, vQ.c.AddNodeConstructor("Light_Type_3", ((QQ, FQ) => () => new uQ(QQ, oQ.p.Zero(), FQ))), (0, mQ.e)("BABYLON.HemisphericLight", uQ))
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,80 +1,80 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  39770: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      playDocsSound: () => Zd
+  39195: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      playDocsSound: () => kQ
     });
-    var pd = kd(4743),
-      Nd = kd(36933),
-      Wd = kd(1220);
-    const Pd = new Map;
+    var LQ = wQ(4694),
+      qQ = wQ(36388),
+      oQ = wQ(1213);
+    const DQ = new Map;
 
-    function Zd(dd, Jd, kd, Zd, gd) {
-      let Cd, Kd = null,
-        od = 0,
-        ld = 0;
-      if (Jd) Cd = new pd.Howl({
-        src: [`${Wd.clientSideServerUrls.staticUrl}/sounds/music/${dd}.mp3`],
+    function kQ(QQ, FQ, wQ, kQ, vQ) {
+      let mQ, uQ = null,
+        HQ = 0,
+        bQ = 0;
+      if (FQ) mQ = new LQ.Howl({
+        src: [`${oQ.clientSideServerUrls.staticUrl}/sounds/music/${QQ}.mp3`],
         html5: !0,
-        volume: kd
+        volume: wQ
       });
       else {
-        var Qd;
-        Kd = (0, Nd.m)(dd);
-        const Jd = (0, Nd.k)(Kd),
-          kd = null !== (Qd = Jd.sprite[dd]) && void 0 !== Qd ? Qd : null;
-        if (!kd) throw new Error(`Docs sound ${dd} is not in sprite sheet ${Kd}`);
-        od = kd[0] / 1e3, ld = kd[1] / 1e3, Cd = Pd.get(Kd), Cd || (Cd = new pd.Howl({
-          ...Jd,
+        var YQ;
+        uQ = (0, qQ.h)(QQ);
+        const FQ = (0, qQ.e)(uQ),
+          wQ = null !== (YQ = FQ.sprite[QQ]) && void 0 !== YQ ? YQ : null;
+        if (!wQ) throw new Error(`Docs sound ${QQ} is not in sprite sheet ${uQ}`);
+        HQ = wQ[0] / 1e3, bQ = wQ[1] / 1e3, mQ = DQ.get(uQ), mQ || (mQ = new LQ.Howl({
+          ...FQ,
           volume: 1
-        }), Pd.set(Kd, Cd))
+        }), DQ.set(uQ, mQ))
       }
-      const Ld = Jd ? Cd.play() : Cd.play(dd);
-      Cd.volume(kd, Ld), Zd > 0 && Cd.seek(od + Zd, Ld);
-      const Od = () => Jd ? Cd.duration() : ld;
-      let ed = !1;
-      const Rd = dd => {
-          ed || (ed = !0, Cd.off("play", Id, Ld), Cd.off("end", Gd, Ld), Cd.off("loaderror", xd), Cd.off("playerror", vd, Ld), Jd && Cd.unload(), gd.onEnd(dd))
+      const xQ = FQ ? mQ.play() : mQ.play(QQ);
+      mQ.volume(wQ, xQ), kQ > 0 && mQ.seek(HQ + kQ, xQ);
+      const AQ = () => FQ ? mQ.duration() : bQ;
+      let tQ = !1;
+      const eQ = QQ => {
+          tQ || (tQ = !0, mQ.off("play", MQ, xQ), mQ.off("end", GQ, xQ), mQ.off("loaderror", cQ), mQ.off("playerror", pQ, xQ), FQ && mQ.unload(), vQ.onEnd(QQ))
         },
-        Id = () => {
-          gd.onPlay(Od())
+        MQ = () => {
+          vQ.onPlay(AQ())
         },
-        Gd = () => {
-          Rd(!1)
+        GQ = () => {
+          eQ(!1)
         },
-        vd = (Jd, kd) => {
-          console.error(`Could not play docs sound ${dd}`, kd), Rd(!0)
+        pQ = (FQ, wQ) => {
+          console.error(`Could not play docs sound ${QQ}`, wQ), eQ(!0)
         },
-        xd = (dd, Jd) => {
-          null !== Kd && Pd.get(Kd) === Cd && (Pd.delete(Kd), Cd.unload()), vd(dd, Jd)
+        cQ = (QQ, FQ) => {
+          null !== uQ && DQ.get(uQ) === mQ && (DQ.delete(uQ), mQ.unload()), pQ(QQ, FQ)
         };
-      return Cd.on("play", Id, Ld), Cd.once("end", Gd, Ld), Cd.once("loaderror", xd), Cd.once("playerror", vd, Ld), {
+      return mQ.on("play", MQ, xQ), mQ.once("end", GQ, xQ), mQ.once("loaderror", cQ), mQ.once("playerror", pQ, xQ), {
         pause: () => {
-          Cd.pause(Ld)
+          mQ.pause(xQ)
         },
         resume: () => {
-          Cd.play(Ld)
+          mQ.play(xQ)
         },
-        seek: dd => {
-          const Jd = Od(),
-            kd = Math.max(dd, 0);
-          Cd.seek(od + (Jd > 0 ? Math.min(kd, Jd) : kd), Ld)
+        seek: QQ => {
+          const FQ = AQ(),
+            wQ = Math.max(QQ, 0);
+          mQ.seek(HQ + (FQ > 0 ? Math.min(wQ, FQ) : wQ), xQ)
         },
-        yI: () => {
-          const dd = Cd.seek(Ld);
-          return "number" === typeof dd ? Math.max(0, dd - od) : 0
+        Qp: () => {
+          const QQ = mQ.seek(xQ);
+          return "number" === typeof QQ ? Math.max(0, QQ - HQ) : 0
         },
-        getDuration: Od,
-        setVolume: dd => {
-          Cd.volume(dd, Ld)
+        getDuration: AQ,
+        setVolume: QQ => {
+          mQ.volume(QQ, xQ)
         },
         stop: () => {
-          ed || (Cd.stop(Ld), Rd(!1))
+          tQ || (mQ.stop(xQ), eQ(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

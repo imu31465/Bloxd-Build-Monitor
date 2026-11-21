@@ -1,35 +1,35 @@
 export const id = 248;
 export const ids = [248];
 export const modules = {
-  40419: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => pd
+  39852: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => LQ
     });
-    let pd = !1
+    let LQ = !1
   },
-  39957: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Ld
+  39397: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => xQ
     });
-    var pd = kd(39964),
-      Nd = kd(39966),
-      Wd = kd(37280),
-      Pd = kd(37251),
-      Zd = kd(37277),
-      gd = kd(38105),
-      Cd = kd(39981);
-    class Kd {
+    var LQ = wQ(39402),
+      qQ = wQ(39409),
+      oQ = wQ(36722),
+      DQ = wQ(36696),
+      kQ = wQ(36720),
+      vQ = wQ(37452),
+      mQ = wQ(39418);
+    class uQ {
       get wrapU() {
         return this._wrapU
       }
-      set wrapU(dd) {
-        this._wrapU = dd
+      set wrapU(QQ) {
+        this._wrapU = QQ
       }
       get wrapV() {
         return this._wrapV
       }
-      set wrapV(dd) {
-        this._wrapV = dd
+      set wrapV(QQ) {
+        this._wrapV = QQ
       }
       get coordinatesMode() {
         return 0
@@ -37,29 +37,29 @@ export const modules = {
       get isCube() {
         return !!this._texture && this._texture.isCube
       }
-      set isCube(dd) {
-        this._texture && (this._texture.isCube = dd)
+      set isCube(QQ) {
+        this._texture && (this._texture.isCube = QQ)
       }
       get is3D() {
         return !!this._texture && this._texture.is3D
       }
-      set is3D(dd) {
-        this._texture && (this._texture.is3D = dd)
+      set is3D(QQ) {
+        this._texture && (this._texture.is3D = QQ)
       }
       get is2DArray() {
         return !!this._texture && this._texture.is2DArray
       }
-      set is2DArray(dd) {
-        this._texture && (this._texture.is2DArray = dd)
+      set is2DArray(QQ) {
+        this._texture && (this._texture.is2DArray = QQ)
       }
       getClassName() {
         return "ThinTexture"
       }
-      static _IsRenderTargetWrapper(dd) {
-        return void 0 !== dd?.shareDepth
+      static _IsRenderTargetWrapper(QQ) {
+        return void 0 !== QQ?.shareDepth
       }
-      constructor(dd) {
-        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = Cd.c.Zero(), this._cachedBaseSize = Cd.c.Zero(), this._initialSamplingMode = 2, this._texture = Kd._IsRenderTargetWrapper(dd) ? dd.texture : dd, this._texture && (this._engine = this._texture.eL(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
+      constructor(QQ) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = mQ.d.Zero(), this._cachedBaseSize = mQ.d.Zero(), this._initialSamplingMode = 2, this._texture = uQ._IsRenderTargetWrapper(QQ) ? QQ.texture : QQ, this._texture && (this._engine = this._texture.Wx(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
       }
       isReady() {
         return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
@@ -81,9 +81,9 @@ export const modules = {
       get samplingMode() {
         return this._texture ? this._texture.samplingMode : this._initialSamplingMode
       }
-      updateSamplingMode(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this._texture && this._engine && this._engine.updateTextureSamplingMode(dd, this._texture, this._texture.generateMipMaps && Jd)
+      updateSamplingMode(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(QQ, this._texture, this._texture.generateMipMaps && FQ)
       }
       releaseInternalTexture() {
         this._texture && (this._texture.dispose(), this._texture = null)
@@ -92,63 +92,63 @@ export const modules = {
         this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
     }
-    var od, ld = kd(39983),
-      Qd = kd(39860);
-    let Ld = (() => {
-      var dd;
-      let Jd, kd, Cd, od, Qd, Ld, Od, ed, Rd, Id, Gd, vd, xd, qd, Bd, sd, ad, Md, Fd, Yd, md, bd, Sd, jd, Xd, fd = Kd,
-        nd = [],
-        Ud = [],
-        yd = [],
-        Dd = [],
-        Td = [],
-        Ed = [],
-        cd = [],
-        hd = [],
-        rd = [],
-        ud = [],
-        td = [],
-        Vd = [],
-        zd = [],
-        Hd = [],
-        wd = [],
-        Ad = [],
-        dJ = [],
-        JJ = [],
-        kJ = [],
-        pJ = [],
-        NJ = [],
-        WJ = [],
-        PJ = [],
-        ZJ = [],
-        gJ = [],
-        CJ = [],
-        KJ = [],
-        oJ = [],
-        lJ = [],
-        QJ = [],
-        LJ = [];
-      return dd = class extends fd {
-        set hasAlpha(dd) {
-          this._hasAlpha = dd
+    var HQ, bQ = wQ(39426),
+      YQ = wQ(39277);
+    let xQ = (() => {
+      var QQ;
+      let FQ, wQ, mQ, HQ, YQ, xQ, AQ, tQ, eQ, MQ, GQ, pQ, cQ, CQ, SQ, iQ, WQ, RQ, OQ, sQ, rQ, IQ, UQ, NQ, TQ, KQ = uQ,
+        zQ = [],
+        lQ = [],
+        jQ = [],
+        aQ = [],
+        XQ = [],
+        fQ = [],
+        VQ = [],
+        hQ = [],
+        JQ = [],
+        EQ = [],
+        nQ = [],
+        gQ = [],
+        PQ = [],
+        ZQ = [],
+        yQ = [],
+        BQ = [],
+        dQ = [],
+        QF = [],
+        FF = [],
+        wF = [],
+        LF = [],
+        qF = [],
+        oF = [],
+        DF = [],
+        kF = [],
+        vF = [],
+        mF = [],
+        uF = [],
+        HF = [],
+        bF = [],
+        YF = [];
+      return QQ = class extends KQ {
+        set hasAlpha(QQ) {
+          this._hasAlpha = QQ
         }
         get hasAlpha() {
           return this._hasAlpha
         }
-        set getAlphaFromRGB(dd) {
-          this._getAlphaFromRGB !== dd && (this._getAlphaFromRGB = dd, this._scene && this._scene.markAllMaterialsAsDirty(1, (dd => dd.hasTexture(this))))
+        set getAlphaFromRGB(QQ) {
+          this._getAlphaFromRGB !== QQ && (this._getAlphaFromRGB = QQ, this._scene && this._scene.markAllMaterialsAsDirty(1, (QQ => QQ.hasTexture(this))))
         }
         get getAlphaFromRGB() {
           return this._getAlphaFromRGB
         }
-        set coordinatesIndex(dd) {
-          this._coordinatesIndex !== dd && (this._coordinatesIndex = dd, this._scene && this._scene.markAllMaterialsAsDirty(1, (dd => dd.hasTexture(this))))
+        set coordinatesIndex(QQ) {
+          this._coordinatesIndex !== QQ && (this._coordinatesIndex = QQ, this._scene && this._scene.markAllMaterialsAsDirty(1, (QQ => QQ.hasTexture(this))))
         }
         get coordinatesIndex() {
           return this._coordinatesIndex
         }
-        set coordinatesMode(dd) {
-          this._coordinatesMode !== dd && (this._coordinatesMode = dd, this._scene && this._scene.markAllMaterialsAsDirty(1, (dd => dd.hasTexture(this))))
+        set coordinatesMode(QQ) {
+          this._coordinatesMode !== QQ && (this._coordinatesMode = QQ, this._scene && this._scene.markAllMaterialsAsDirty(1, (QQ => QQ.hasTexture(this))))
         }
         get coordinatesMode() {
           return this._coordinatesMode
@@ -156,51 +156,51 @@ export const modules = {
         get wrapU() {
           return this._wrapU
         }
-        set wrapU(dd) {
-          this._wrapU = dd
+        set wrapU(QQ) {
+          this._wrapU = QQ
         }
         get wrapV() {
           return this._wrapV
         }
-        set wrapV(dd) {
-          this._wrapV = dd
+        set wrapV(QQ) {
+          this._wrapV = QQ
         }
         get isCube() {
           return this._texture ? this._texture.isCube : this._isCube
         }
-        set isCube(dd) {
-          this._texture ? this._texture.isCube = dd : this._isCube = dd
+        set isCube(QQ) {
+          this._texture ? this._texture.isCube = QQ : this._isCube = QQ
         }
         get is3D() {
           return !!this._texture && this._texture.is3D
         }
-        set is3D(dd) {
-          this._texture && (this._texture.is3D = dd)
+        set is3D(QQ) {
+          this._texture && (this._texture.is3D = QQ)
         }
         get is2DArray() {
           return !!this._texture && this._texture.is2DArray
         }
-        set is2DArray(dd) {
-          this._texture && (this._texture.is2DArray = dd)
+        set is2DArray(QQ) {
+          this._texture && (this._texture.is2DArray = QQ)
         }
         get gammaSpace() {
           return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
         }
-        set gammaSpace(dd) {
+        set gammaSpace(QQ) {
           if (this._texture) {
-            if (this._texture._gammaSpace === dd) return;
-            this._texture._gammaSpace = dd
+            if (this._texture._gammaSpace === QQ) return;
+            this._texture._gammaSpace = QQ
           } else {
-            if (this._gammaSpace === dd) return;
-            this._gammaSpace = dd
+            if (this._gammaSpace === QQ) return;
+            this._gammaSpace = QQ
           }
-          this.Wm()?.markAllMaterialsAsDirty(1, (dd => dd.hasTexture(this)))
+          this.iN()?.markAllMaterialsAsDirty(1, (QQ => QQ.hasTexture(this)))
         }
         get isRGBD() {
           return null != this._texture && this._texture._isRGBD
         }
-        set isRGBD(dd) {
-          dd !== this.isRGBD && (this._texture && (this._texture._isRGBD = dd), this.Wm()?.markAllMaterialsAsDirty(1, (dd => dd.hasTexture(this))))
+        set isRGBD(QQ) {
+          QQ !== this.isRGBD && (this._texture && (this._texture._isRGBD = QQ), this.iN()?.markAllMaterialsAsDirty(1, (QQ => QQ.hasTexture(this))))
         }
         get noMipmap() {
           return !1
@@ -208,29 +208,29 @@ export const modules = {
         get lodGenerationOffset() {
           return this._texture ? this._texture._lodGenerationOffset : 0
         }
-        set lodGenerationOffset(dd) {
-          this._texture && (this._texture._lodGenerationOffset = dd)
+        set lodGenerationOffset(QQ) {
+          this._texture && (this._texture._lodGenerationOffset = QQ)
         }
         get lodGenerationScale() {
           return this._texture ? this._texture._lodGenerationScale : 0
         }
-        set lodGenerationScale(dd) {
-          this._texture && (this._texture._lodGenerationScale = dd)
+        set lodGenerationScale(QQ) {
+          this._texture && (this._texture._lodGenerationScale = QQ)
         }
         get linearSpecularLOD() {
           return !!this._texture && this._texture._linearSpecularLOD
         }
-        set linearSpecularLOD(dd) {
-          this._texture && (this._texture._linearSpecularLOD = dd)
+        set linearSpecularLOD(QQ) {
+          this._texture && (this._texture._linearSpecularLOD = QQ)
         }
         get irradianceTexture() {
           return this._texture ? this._texture._irradianceTexture : null
         }
-        set irradianceTexture(dd) {
-          this._texture && (this._texture._irradianceTexture = dd)
+        set irradianceTexture(QQ) {
+          this._texture && (this._texture._irradianceTexture = QQ)
         }
         get uid() {
-          return this._uid || (this._uid = (0, gd.c)()), this._uid
+          return this._uid || (this._uid = (0, vQ.d)()), this._uid
         }
         toString() {
           return this.name
@@ -238,8 +238,8 @@ export const modules = {
         getClassName() {
           return "BaseTexture"
         }
-        set onDispose(dd) {
-          this._onDisposeObserver && this.Zm.remove(this._onDisposeObserver), this._onDisposeObserver = this.Zm.add(dd)
+        set onDispose(QQ) {
+          this._onDisposeObserver && this.zN.remove(this._onDisposeObserver), this._onDisposeObserver = this.zN.add(QQ)
         }
         get isBlocking() {
           return !0
@@ -250,21 +250,21 @@ export const modules = {
         get errorObject() {
           return this._errorObject
         }
-        constructor(Jd) {
-          let kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          super(null), this.uniqueId = ((0, pd.i)(this, nd), (0, pd.i)(this, Ud, void 0)), this.name = ((0, pd.i)(this, yd), (0, pd.i)(this, Dd, void 0)), this.displayName = ((0, pd.i)(this, Td), (0, pd.i)(this, Ed, void 0)), this.metadata = ((0, pd.i)(this, cd), (0, pd.i)(this, hd, null)), this._internalMetadata = (0, pd.i)(this, rd), this.reservedDataStore = null, this._hasAlpha = (0, pd.i)(this, ud, !1), this._getAlphaFromRGB = ((0, pd.i)(this, td), (0, pd.i)(this, Vd, !1)), this.level = ((0, pd.i)(this, zd), (0, pd.i)(this, Hd, 1)), this._coordinatesIndex = ((0, pd.i)(this, wd), (0, pd.i)(this, Ad, 0)), this.optimizeUVAllocation = ((0, pd.i)(this, dJ), (0, pd.i)(this, JJ, !0)), this._coordinatesMode = ((0, pd.i)(this, kJ), (0, pd.i)(this, pJ, 0)), this.wrapR = ((0, pd.i)(this, NJ), (0, pd.i)(this, WJ, 1)), this.anisotropicFilteringLevel = ((0, pd.i)(this, PJ), (0, pd.i)(this, ZJ, dd.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, pd.i)(this, gJ), !1), this._gammaSpace = !0, this.invertZ = (0, pd.i)(this, CJ, !1), this.lodLevelInAlpha = ((0, pd.i)(this, KJ), (0, pd.i)(this, oJ, !1)), this._dominantDirection = ((0, pd.i)(this, lJ), null), this.isRenderTarget = (0, pd.i)(this, QJ, !1), this._prefiltered = ((0, pd.i)(this, LJ), !1), this._forceSerialize = !1, this.animations = [], this.Zm = new Wd.e, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, Jd ? dd._IsScene(Jd) ? this._scene = Jd : this._engine = Jd : this._scene = Zd.d.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.eL()), this._texture = kd, this._uid = null
+        constructor(FQ) {
+          let wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, LQ.l)(this, zQ), (0, LQ.l)(this, lQ, void 0)), this.name = ((0, LQ.l)(this, jQ), (0, LQ.l)(this, aQ, void 0)), this.displayName = ((0, LQ.l)(this, XQ), (0, LQ.l)(this, fQ, void 0)), this.metadata = ((0, LQ.l)(this, VQ), (0, LQ.l)(this, hQ, null)), this._internalMetadata = (0, LQ.l)(this, JQ), this.reservedDataStore = null, this._hasAlpha = (0, LQ.l)(this, EQ, !1), this._getAlphaFromRGB = ((0, LQ.l)(this, nQ), (0, LQ.l)(this, gQ, !1)), this.level = ((0, LQ.l)(this, PQ), (0, LQ.l)(this, ZQ, 1)), this._coordinatesIndex = ((0, LQ.l)(this, yQ), (0, LQ.l)(this, BQ, 0)), this.optimizeUVAllocation = ((0, LQ.l)(this, dQ), (0, LQ.l)(this, QF, !0)), this._coordinatesMode = ((0, LQ.l)(this, FF), (0, LQ.l)(this, wF, 0)), this.wrapR = ((0, LQ.l)(this, LF), (0, LQ.l)(this, qF, 1)), this.anisotropicFilteringLevel = ((0, LQ.l)(this, oF), (0, LQ.l)(this, DF, QQ.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, LQ.l)(this, kF), !1), this._gammaSpace = !0, this.invertZ = (0, LQ.l)(this, vF, !1), this.lodLevelInAlpha = ((0, LQ.l)(this, mF), (0, LQ.l)(this, uF, !1)), this._dominantDirection = ((0, LQ.l)(this, HF), null), this.isRenderTarget = (0, LQ.l)(this, bF, !1), this._prefiltered = ((0, LQ.l)(this, YF), !1), this._forceSerialize = !1, this.animations = [], this.zN = new oQ.e, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, FQ ? QQ._IsScene(FQ) ? this._scene = FQ : this._engine = FQ : this._scene = kQ.d.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.Wx()), this._texture = wQ, this._uid = null
         }
-        Wm() {
+        iN() {
           return this._scene
         }
         _getEngine() {
           return this._engine
         }
         getTextureMatrix() {
-          return Pd.b.IdentityReadOnly
+          return DQ.c.IdentityReadOnly
         }
         getReflectionTextureMatrix() {
-          return Pd.b.IdentityReadOnly
+          return DQ.c.IdentityReadOnly
         }
         getRefractionTextureMatrix() {
           return this.getReflectionTextureMatrix()
@@ -272,18 +272,18 @@ export const modules = {
         isReadyOrNotBlocking() {
           return !this.isBlocking || this.isReady() || this.loadingError
         }
-        scale(dd) {}
+        scale(QQ) {}
         get canRescale() {
           return !1
         }
-        _getFromCache(dd, Jd, kd, pd, Nd, Wd) {
-          const Pd = this._getEngine();
-          if (!Pd) return null;
-          const Zd = Pd._getUseSRGBBuffer(!!Nd, Jd),
-            gd = Pd.getLoadedTexturesCache();
-          for (let Cd = 0; Cd < gd.length; Cd++) {
-            const Pd = gd[Cd];
-            if ((void 0 === Nd || Zd === Pd._useSRGBBuffer) && (void 0 === pd || pd === Pd.invertY) && Pd.url === dd && Pd.generateMipMaps === !Jd && (!kd || kd === Pd.samplingMode) && (void 0 === Wd || Wd === Pd.isCube)) return Pd.incrementReferences(), Pd
+        _getFromCache(QQ, FQ, wQ, LQ, qQ, oQ) {
+          const DQ = this._getEngine();
+          if (!DQ) return null;
+          const kQ = DQ._getUseSRGBBuffer(!!qQ, FQ),
+            vQ = DQ.getLoadedTexturesCache();
+          for (let mQ = 0; mQ < vQ.length; mQ++) {
+            const DQ = vQ[mQ];
+            if ((void 0 === qQ || kQ === DQ._useSRGBBuffer) && (void 0 === LQ || LQ === DQ.invertY) && DQ.url === QQ && DQ.generateMipMaps === !FQ && (!wQ || wQ === DQ.samplingMode) && (void 0 === oQ || oQ === DQ.isCube)) return DQ.incrementReferences(), DQ
           }
           return null
         }
@@ -298,48 +298,48 @@ export const modules = {
           return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
         }
         _markAllSubMeshesAsTexturesDirty() {
-          const dd = this.Wm();
-          dd && dd.markAllMaterialsAsDirty(1)
+          const QQ = this.iN();
+          QQ && QQ.markAllMaterialsAsDirty(1)
         }
         readPixels() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-            Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            pd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-            Nd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-            Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-            Pd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
-            Zd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
-            gd = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            LQ = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            qQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            DQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            kQ = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            vQ = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
           if (!this._texture) return null;
-          const Cd = this._getEngine();
-          if (!Cd) return null;
-          const Kd = this.getSize();
-          let od = Kd.width,
-            ld = Kd.height;
-          0 !== Jd && (od /= Math.pow(2, Jd), ld /= Math.pow(2, Jd), od = Math.round(od), ld = Math.round(ld)), Zd = Math.min(od, Zd), gd = Math.min(ld, gd);
+          const mQ = this._getEngine();
+          if (!mQ) return null;
+          const uQ = this.getSize();
+          let HQ = uQ.width,
+            bQ = uQ.height;
+          0 !== FQ && (HQ /= Math.pow(2, FQ), bQ /= Math.pow(2, FQ), HQ = Math.round(HQ), bQ = Math.round(bQ)), kQ = Math.min(HQ, kQ), vQ = Math.min(bQ, vQ);
           try {
-            return this._texture.isCube || this._texture.is2DArray ? Cd._readTexturePixels(this._texture, Zd, gd, dd, Jd, kd, pd, Nd, Wd, Pd) : Cd._readTexturePixels(this._texture, Zd, gd, -1, Jd, kd, pd, Nd, Wd, Pd)
-          } catch (Qd) {
+            return this._texture.isCube || this._texture.is2DArray ? mQ._readTexturePixels(this._texture, kQ, vQ, QQ, FQ, wQ, LQ, qQ, oQ, DQ) : mQ._readTexturePixels(this._texture, kQ, vQ, -1, FQ, wQ, LQ, qQ, oQ, DQ)
+          } catch (YQ) {
             return null
           }
         }
         _readPixelsSync() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-            Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            pd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-            Nd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            LQ = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            qQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
           if (!this._texture) return null;
-          const Wd = this.getSize();
-          let Pd = Wd.width,
-            Zd = Wd.height;
-          const gd = this._getEngine();
-          if (!gd) return null;
-          0 != Jd && (Pd /= Math.pow(2, Jd), Zd /= Math.pow(2, Jd), Pd = Math.round(Pd), Zd = Math.round(Zd));
+          const oQ = this.getSize();
+          let DQ = oQ.width,
+            kQ = oQ.height;
+          const vQ = this._getEngine();
+          if (!vQ) return null;
+          0 != FQ && (DQ /= Math.pow(2, FQ), kQ /= Math.pow(2, FQ), DQ = Math.round(DQ), kQ = Math.round(kQ));
           try {
-            return this._texture.isCube ? gd._readTexturePixelsSync(this._texture, Pd, Zd, dd, Jd, kd, pd, Nd) : gd._readTexturePixelsSync(this._texture, Pd, Zd, -1, Jd, kd, pd, Nd)
-          } catch (Cd) {
+            return this._texture.isCube ? vQ._readTexturePixelsSync(this._texture, DQ, kQ, QQ, FQ, wQ, LQ, qQ) : vQ._readTexturePixelsSync(this._texture, DQ, kQ, -1, FQ, wQ, LQ, qQ)
+          } catch (mQ) {
             return null
           }
         }
@@ -355,438 +355,438 @@ export const modules = {
         dispose() {
           if (this._scene) {
             this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
-            const dd = this._scene.textures.indexOf(this);
-            if (dd >= 0 && this._scene.textures.splice(dd, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
-              const dd = this._parentContainer.textures.indexOf(this);
-              dd > -1 && this._parentContainer.textures.splice(dd, 1), this._parentContainer = null
+            const QQ = this._scene.textures.indexOf(this);
+            if (QQ >= 0 && this._scene.textures.splice(QQ, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const QQ = this._parentContainer.textures.indexOf(this);
+              QQ > -1 && this._parentContainer.textures.splice(QQ, 1), this._parentContainer = null
             }
           }
-          this.Zm.notifyObservers(this), this.Zm.clear(), this.metadata = null, super.dispose()
+          this.zN.notifyObservers(this), this.zN.clear(), this.metadata = null, super.dispose()
         }
         serialize() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (!this.name && !dd) return null;
-          const Jd = ld.c.Serialize(this);
-          return ld.c.AppendSerializedAnimations(this, Jd), Jd
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !QQ) return null;
+          const FQ = bQ.c.Serialize(this);
+          return bQ.c.AppendSerializedAnimations(this, FQ), FQ
         }
-        static WhenAllReady(dd, Jd) {
-          let kd = dd.length;
-          if (0 !== kd)
-            for (let pd = 0; pd < dd.length; pd++) {
-              const Nd = dd[pd];
-              if (Nd.isReady()) 0 === --kd && Jd();
+        static WhenAllReady(QQ, FQ) {
+          let wQ = QQ.length;
+          if (0 !== wQ)
+            for (let LQ = 0; LQ < QQ.length; LQ++) {
+              const qQ = QQ[LQ];
+              if (qQ.isReady()) 0 === --wQ && FQ();
               else {
-                const dd = Nd.onLoadObservable;
-                dd ? dd.addOnce((() => {
-                  0 === --kd && Jd()
-                })) : 0 === --kd && Jd()
+                const QQ = qQ.onLoadObservable;
+                QQ ? QQ.addOnce((() => {
+                  0 === --wQ && FQ()
+                })) : 0 === --wQ && FQ()
               }
-            } else Jd()
+            } else FQ()
         }
-        static _IsScene(dd) {
-          return "Scene" === dd.getClassName()
+        static _IsScene(QQ) {
+          return "Scene" === QQ.getClassName()
         }
       }, (() => {
-        const Wd = "function" === typeof Symbol && Symbol.metadata ? Object.create(fd[Symbol.metadata] ?? null) : void 0;
-        Jd = [(0, Nd.H)()], kd = [(0, Nd.H)()], Cd = [(0, Nd.H)()], od = [(0, Nd.H)()], Qd = [(0, Nd.H)("hasAlpha")], Ld = [(0, Nd.H)("getAlphaFromRGB")], Od = [(0, Nd.H)()], ed = [(0, Nd.H)("coordinatesIndex")], Rd = [(0, Nd.H)()], Id = [(0, Nd.H)("coordinatesMode")], Gd = [(0, Nd.H)()], vd = [(0, Nd.H)()], xd = [(0, Nd.H)()], qd = [(0, Nd.H)()], Bd = [(0, Nd.H)()], sd = [(0, Nd.H)()], ad = [(0, Nd.H)()], Md = [(0, Nd.H)()], Fd = [(0, Nd.H)()], Yd = [(0, Nd.H)()], md = [(0, Nd.H)()], bd = [(0, Nd.H)()], Sd = [(0, Nd.H)()], jd = [(0, Nd.y)()], Xd = [(0, Nd.H)()], (0, pd.h)(dd, null, Gd, {
+        const oQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(KQ[Symbol.metadata] ?? null) : void 0;
+        FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], mQ = [(0, qQ.I)()], HQ = [(0, qQ.I)()], YQ = [(0, qQ.I)("hasAlpha")], xQ = [(0, qQ.I)("getAlphaFromRGB")], AQ = [(0, qQ.I)()], tQ = [(0, qQ.I)("coordinatesIndex")], eQ = [(0, qQ.I)()], MQ = [(0, qQ.I)("coordinatesMode")], GQ = [(0, qQ.I)()], pQ = [(0, qQ.I)()], cQ = [(0, qQ.I)()], CQ = [(0, qQ.I)()], SQ = [(0, qQ.I)()], iQ = [(0, qQ.I)()], WQ = [(0, qQ.I)()], RQ = [(0, qQ.I)()], OQ = [(0, qQ.I)()], sQ = [(0, qQ.I)()], rQ = [(0, qQ.I)()], IQ = [(0, qQ.I)()], UQ = [(0, qQ.I)()], NQ = [(0, qQ.z)()], TQ = [(0, qQ.I)()], (0, LQ.i)(QQ, null, GQ, {
           kind: "getter",
           name: "wrapU",
           static: !1,
           private: !1,
           access: {
-            has: dd => "wrapU" in dd,
-            get: dd => dd.wrapU
+            has: QQ => "wrapU" in QQ,
+            get: QQ => QQ.wrapU
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, vd, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, pQ, {
           kind: "getter",
           name: "wrapV",
           static: !1,
           private: !1,
           access: {
-            has: dd => "wrapV" in dd,
-            get: dd => dd.wrapV
+            has: QQ => "wrapV" in QQ,
+            get: QQ => QQ.wrapV
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, Bd, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, SQ, {
           kind: "getter",
           name: "isCube",
           static: !1,
           private: !1,
           access: {
-            has: dd => "isCube" in dd,
-            get: dd => dd.isCube
+            has: QQ => "isCube" in QQ,
+            get: QQ => QQ.isCube
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, sd, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, iQ, {
           kind: "getter",
           name: "is3D",
           static: !1,
           private: !1,
           access: {
-            has: dd => "is3D" in dd,
-            get: dd => dd.is3D
+            has: QQ => "is3D" in QQ,
+            get: QQ => QQ.is3D
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, ad, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, WQ, {
           kind: "getter",
           name: "is2DArray",
           static: !1,
           private: !1,
           access: {
-            has: dd => "is2DArray" in dd,
-            get: dd => dd.is2DArray
+            has: QQ => "is2DArray" in QQ,
+            get: QQ => QQ.is2DArray
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, Md, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, RQ, {
           kind: "getter",
           name: "gammaSpace",
           static: !1,
           private: !1,
           access: {
-            has: dd => "gammaSpace" in dd,
-            get: dd => dd.gammaSpace
+            has: QQ => "gammaSpace" in QQ,
+            get: QQ => QQ.gammaSpace
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, md, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, rQ, {
           kind: "getter",
           name: "lodGenerationOffset",
           static: !1,
           private: !1,
           access: {
-            has: dd => "lodGenerationOffset" in dd,
-            get: dd => dd.lodGenerationOffset
+            has: QQ => "lodGenerationOffset" in QQ,
+            get: QQ => QQ.lodGenerationOffset
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, bd, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, IQ, {
           kind: "getter",
           name: "lodGenerationScale",
           static: !1,
           private: !1,
           access: {
-            has: dd => "lodGenerationScale" in dd,
-            get: dd => dd.lodGenerationScale
+            has: QQ => "lodGenerationScale" in QQ,
+            get: QQ => QQ.lodGenerationScale
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, Sd, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, UQ, {
           kind: "getter",
           name: "linearSpecularLOD",
           static: !1,
           private: !1,
           access: {
-            has: dd => "linearSpecularLOD" in dd,
-            get: dd => dd.linearSpecularLOD
+            has: QQ => "linearSpecularLOD" in QQ,
+            get: QQ => QQ.linearSpecularLOD
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(dd, null, jd, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(QQ, null, NQ, {
           kind: "getter",
           name: "irradianceTexture",
           static: !1,
           private: !1,
           access: {
-            has: dd => "irradianceTexture" in dd,
-            get: dd => dd.irradianceTexture
+            has: QQ => "irradianceTexture" in QQ,
+            get: QQ => QQ.irradianceTexture
           },
-          metadata: Wd
-        }, null, nd), (0, pd.h)(null, null, Jd, {
+          metadata: oQ
+        }, null, zQ), (0, LQ.i)(null, null, FQ, {
           kind: "field",
           name: "uniqueId",
           static: !1,
           private: !1,
           access: {
-            has: dd => "uniqueId" in dd,
-            get: dd => dd.uniqueId,
-            set: (dd, Jd) => {
-              dd.uniqueId = Jd
+            has: QQ => "uniqueId" in QQ,
+            get: QQ => QQ.uniqueId,
+            set: (QQ, FQ) => {
+              QQ.uniqueId = FQ
             }
           },
-          metadata: Wd
-        }, Ud, yd), (0, pd.h)(null, null, kd, {
+          metadata: oQ
+        }, lQ, jQ), (0, LQ.i)(null, null, wQ, {
           kind: "field",
           name: "name",
           static: !1,
           private: !1,
           access: {
-            has: dd => "name" in dd,
-            get: dd => dd.name,
-            set: (dd, Jd) => {
-              dd.name = Jd
+            has: QQ => "name" in QQ,
+            get: QQ => QQ.name,
+            set: (QQ, FQ) => {
+              QQ.name = FQ
             }
           },
-          metadata: Wd
-        }, Dd, Td), (0, pd.h)(null, null, Cd, {
+          metadata: oQ
+        }, aQ, XQ), (0, LQ.i)(null, null, mQ, {
           kind: "field",
           name: "displayName",
           static: !1,
           private: !1,
           access: {
-            has: dd => "displayName" in dd,
-            get: dd => dd.displayName,
-            set: (dd, Jd) => {
-              dd.displayName = Jd
+            has: QQ => "displayName" in QQ,
+            get: QQ => QQ.displayName,
+            set: (QQ, FQ) => {
+              QQ.displayName = FQ
             }
           },
-          metadata: Wd
-        }, Ed, cd), (0, pd.h)(null, null, od, {
+          metadata: oQ
+        }, fQ, VQ), (0, LQ.i)(null, null, HQ, {
           kind: "field",
           name: "metadata",
           static: !1,
           private: !1,
           access: {
-            has: dd => "metadata" in dd,
-            get: dd => dd.metadata,
-            set: (dd, Jd) => {
-              dd.metadata = Jd
+            has: QQ => "metadata" in QQ,
+            get: QQ => QQ.metadata,
+            set: (QQ, FQ) => {
+              QQ.metadata = FQ
             }
           },
-          metadata: Wd
-        }, hd, rd), (0, pd.h)(null, null, Qd, {
+          metadata: oQ
+        }, hQ, JQ), (0, LQ.i)(null, null, YQ, {
           kind: "field",
           name: "_hasAlpha",
           static: !1,
           private: !1,
           access: {
-            has: dd => "_hasAlpha" in dd,
-            get: dd => dd._hasAlpha,
-            set: (dd, Jd) => {
-              dd._hasAlpha = Jd
+            has: QQ => "_hasAlpha" in QQ,
+            get: QQ => QQ._hasAlpha,
+            set: (QQ, FQ) => {
+              QQ._hasAlpha = FQ
             }
           },
-          metadata: Wd
-        }, ud, td), (0, pd.h)(null, null, Ld, {
+          metadata: oQ
+        }, EQ, nQ), (0, LQ.i)(null, null, xQ, {
           kind: "field",
           name: "_getAlphaFromRGB",
           static: !1,
           private: !1,
           access: {
-            has: dd => "_getAlphaFromRGB" in dd,
-            get: dd => dd._getAlphaFromRGB,
-            set: (dd, Jd) => {
-              dd._getAlphaFromRGB = Jd
+            has: QQ => "_getAlphaFromRGB" in QQ,
+            get: QQ => QQ._getAlphaFromRGB,
+            set: (QQ, FQ) => {
+              QQ._getAlphaFromRGB = FQ
             }
           },
-          metadata: Wd
-        }, Vd, zd), (0, pd.h)(null, null, Od, {
+          metadata: oQ
+        }, gQ, PQ), (0, LQ.i)(null, null, AQ, {
           kind: "field",
           name: "level",
           static: !1,
           private: !1,
           access: {
-            has: dd => "level" in dd,
-            get: dd => dd.level,
-            set: (dd, Jd) => {
-              dd.level = Jd
+            has: QQ => "level" in QQ,
+            get: QQ => QQ.level,
+            set: (QQ, FQ) => {
+              QQ.level = FQ
             }
           },
-          metadata: Wd
-        }, Hd, wd), (0, pd.h)(null, null, ed, {
+          metadata: oQ
+        }, ZQ, yQ), (0, LQ.i)(null, null, tQ, {
           kind: "field",
           name: "_coordinatesIndex",
           static: !1,
           private: !1,
           access: {
-            has: dd => "_coordinatesIndex" in dd,
-            get: dd => dd._coordinatesIndex,
-            set: (dd, Jd) => {
-              dd._coordinatesIndex = Jd
+            has: QQ => "_coordinatesIndex" in QQ,
+            get: QQ => QQ._coordinatesIndex,
+            set: (QQ, FQ) => {
+              QQ._coordinatesIndex = FQ
             }
           },
-          metadata: Wd
-        }, Ad, dJ), (0, pd.h)(null, null, Rd, {
+          metadata: oQ
+        }, BQ, dQ), (0, LQ.i)(null, null, eQ, {
           kind: "field",
           name: "optimizeUVAllocation",
           static: !1,
           private: !1,
           access: {
-            has: dd => "optimizeUVAllocation" in dd,
-            get: dd => dd.optimizeUVAllocation,
-            set: (dd, Jd) => {
-              dd.optimizeUVAllocation = Jd
+            has: QQ => "optimizeUVAllocation" in QQ,
+            get: QQ => QQ.optimizeUVAllocation,
+            set: (QQ, FQ) => {
+              QQ.optimizeUVAllocation = FQ
             }
           },
-          metadata: Wd
-        }, JJ, kJ), (0, pd.h)(null, null, Id, {
+          metadata: oQ
+        }, QF, FF), (0, LQ.i)(null, null, MQ, {
           kind: "field",
           name: "_coordinatesMode",
           static: !1,
           private: !1,
           access: {
-            has: dd => "_coordinatesMode" in dd,
-            get: dd => dd._coordinatesMode,
-            set: (dd, Jd) => {
-              dd._coordinatesMode = Jd
+            has: QQ => "_coordinatesMode" in QQ,
+            get: QQ => QQ._coordinatesMode,
+            set: (QQ, FQ) => {
+              QQ._coordinatesMode = FQ
             }
           },
-          metadata: Wd
-        }, pJ, NJ), (0, pd.h)(null, null, xd, {
+          metadata: oQ
+        }, wF, LF), (0, LQ.i)(null, null, cQ, {
           kind: "field",
           name: "wrapR",
           static: !1,
           private: !1,
           access: {
-            has: dd => "wrapR" in dd,
-            get: dd => dd.wrapR,
-            set: (dd, Jd) => {
-              dd.wrapR = Jd
+            has: QQ => "wrapR" in QQ,
+            get: QQ => QQ.wrapR,
+            set: (QQ, FQ) => {
+              QQ.wrapR = FQ
             }
           },
-          metadata: Wd
-        }, WJ, PJ), (0, pd.h)(null, null, qd, {
+          metadata: oQ
+        }, qF, oF), (0, LQ.i)(null, null, CQ, {
           kind: "field",
           name: "anisotropicFilteringLevel",
           static: !1,
           private: !1,
           access: {
-            has: dd => "anisotropicFilteringLevel" in dd,
-            get: dd => dd.anisotropicFilteringLevel,
-            set: (dd, Jd) => {
-              dd.anisotropicFilteringLevel = Jd
+            has: QQ => "anisotropicFilteringLevel" in QQ,
+            get: QQ => QQ.anisotropicFilteringLevel,
+            set: (QQ, FQ) => {
+              QQ.anisotropicFilteringLevel = FQ
             }
           },
-          metadata: Wd
-        }, ZJ, gJ), (0, pd.h)(null, null, Fd, {
+          metadata: oQ
+        }, DF, kF), (0, LQ.i)(null, null, OQ, {
           kind: "field",
           name: "invertZ",
           static: !1,
           private: !1,
           access: {
-            has: dd => "invertZ" in dd,
-            get: dd => dd.invertZ,
-            set: (dd, Jd) => {
-              dd.invertZ = Jd
+            has: QQ => "invertZ" in QQ,
+            get: QQ => QQ.invertZ,
+            set: (QQ, FQ) => {
+              QQ.invertZ = FQ
             }
           },
-          metadata: Wd
-        }, CJ, KJ), (0, pd.h)(null, null, Yd, {
+          metadata: oQ
+        }, vF, mF), (0, LQ.i)(null, null, sQ, {
           kind: "field",
           name: "lodLevelInAlpha",
           static: !1,
           private: !1,
           access: {
-            has: dd => "lodLevelInAlpha" in dd,
-            get: dd => dd.lodLevelInAlpha,
-            set: (dd, Jd) => {
-              dd.lodLevelInAlpha = Jd
+            has: QQ => "lodLevelInAlpha" in QQ,
+            get: QQ => QQ.lodLevelInAlpha,
+            set: (QQ, FQ) => {
+              QQ.lodLevelInAlpha = FQ
             }
           },
-          metadata: Wd
-        }, oJ, lJ), (0, pd.h)(null, null, Xd, {
+          metadata: oQ
+        }, uF, HF), (0, LQ.i)(null, null, TQ, {
           kind: "field",
           name: "isRenderTarget",
           static: !1,
           private: !1,
           access: {
-            has: dd => "isRenderTarget" in dd,
-            get: dd => dd.isRenderTarget,
-            set: (dd, Jd) => {
-              dd.isRenderTarget = Jd
+            has: QQ => "isRenderTarget" in QQ,
+            get: QQ => QQ.isRenderTarget,
+            set: (QQ, FQ) => {
+              QQ.isRenderTarget = FQ
             }
           },
-          metadata: Wd
-        }, QJ, LJ), Wd && Object.defineProperty(dd, Symbol.metadata, {
+          metadata: oQ
+        }, bF, YF), oQ && Object.defineProperty(QQ, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Wd
+          value: oQ
         })
-      })(), dd.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, dd
+      })(), QQ.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, QQ
     })();
-    (od = Ld.prototype).forceSphericalPolynomialsRecompute ?? (od.forceSphericalPolynomialsRecompute = (0, Qd.j)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(Ld.prototype, "sphericalPolynomial") || Object.defineProperty(Ld.prototype, "sphericalPolynomial", (0, Qd.g)("BaseTexture", "sphericalPolynomial"))
+    (HQ = xQ.prototype).forceSphericalPolynomialsRecompute ?? (HQ.forceSphericalPolynomialsRecompute = (0, YQ.g)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(xQ.prototype, "sphericalPolynomial") || Object.defineProperty(xQ.prototype, "sphericalPolynomial", (0, YQ.e)("BaseTexture", "sphericalPolynomial"))
   },
-  40471: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => xd,
-      c: () => Gd
+  39897: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => cQ,
+      e: () => GQ
     });
-    var pd = kd(39964),
-      Nd = kd(39966),
-      Wd = kd(37280),
-      Pd = kd(37251),
-      Zd = kd(39957),
-      gd = kd(37303),
-      Cd = kd(39860),
-      Kd = kd(39866),
-      od = kd(40072),
-      ld = kd(37969),
-      Qd = kd(40023);
+    var LQ = wQ(39402),
+      qQ = wQ(39409),
+      oQ = wQ(36722),
+      DQ = wQ(36696),
+      kQ = wQ(39397),
+      vQ = wQ(36741),
+      mQ = wQ(39277),
+      uQ = wQ(39289),
+      HQ = wQ(39512),
+      bQ = wQ(37324),
+      YQ = wQ(39468);
 
-    function Ld(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const pd = Jd.width,
-        Nd = Jd.height;
-      if (dd instanceof Float32Array) {
-        let Jd = dd.byteLength / dd.BYTES_PER_ELEMENT;
-        const kd = new Uint8Array(Jd);
-        for (; --Jd >= 0;) {
-          let pd = dd[Jd];
-          pd < 0 ? pd = 0 : pd > 1 && (pd = 1), kd[Jd] = 255 * pd
+    function xQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const LQ = FQ.width,
+        qQ = FQ.height;
+      if (QQ instanceof Float32Array) {
+        let FQ = QQ.byteLength / QQ.BYTES_PER_ELEMENT;
+        const wQ = new Uint8Array(FQ);
+        for (; --FQ >= 0;) {
+          let LQ = QQ[FQ];
+          LQ < 0 ? LQ = 0 : LQ > 1 && (LQ = 1), wQ[FQ] = 255 * LQ
         }
-        dd = kd
+        QQ = wQ
       }
-      const Wd = document.createElement("canvas");
-      Wd.width = pd, Wd.height = Nd;
-      const Pd = Wd.getContext("2d");
-      if (!Pd) return null;
-      const Zd = Pd.createImageData(pd, Nd);
-      if (Zd.data.set(dd), Pd.putImageData(Zd, 0, 0), kd) {
-        const dd = document.createElement("canvas");
-        dd.width = pd, dd.height = Nd;
-        const Jd = dd.getContext("2d");
-        return Jd ? (Jd.translate(0, Nd), Jd.scale(1, -1), Jd.drawImage(Wd, 0, 0), dd.toDataURL("image/png")) : null
+      const oQ = document.createElement("canvas");
+      oQ.width = LQ, oQ.height = qQ;
+      const DQ = oQ.getContext("2d");
+      if (!DQ) return null;
+      const kQ = DQ.createImageData(LQ, qQ);
+      if (kQ.data.set(QQ), DQ.putImageData(kQ, 0, 0), wQ) {
+        const QQ = document.createElement("canvas");
+        QQ.width = LQ, QQ.height = qQ;
+        const FQ = QQ.getContext("2d");
+        return FQ ? (FQ.translate(0, qQ), FQ.scale(1, -1), FQ.drawImage(oQ, 0, 0), QQ.toDataURL("image/png")) : null
       }
-      return Wd.toDataURL("image/png")
+      return oQ.toDataURL("image/png")
     }
 
-    function Od(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const pd = dd.getInternalTexture();
-      if (!pd) return null;
-      const Nd = dd._readPixelsSync(Jd, kd);
-      return Nd ? Ld(Nd, dd.getSize(), pd.invertY) : null
+    function AQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const LQ = QQ.getInternalTexture();
+      if (!LQ) return null;
+      const qQ = QQ._readPixelsSync(FQ, wQ);
+      return qQ ? xQ(qQ, QQ.getSize(), LQ.invertY) : null
     }
-    async function ed(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const pd = dd.getInternalTexture();
-      if (!pd) return null;
-      const Nd = await dd.readPixels(Jd, kd);
-      return Nd ? Ld(Nd, dd.getSize(), pd.invertY) : null
+    async function tQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const LQ = QQ.getInternalTexture();
+      if (!LQ) return null;
+      const qQ = await QQ.readPixels(FQ, wQ);
+      return qQ ? xQ(qQ, QQ.getSize(), LQ.invertY) : null
     }
-    var Rd = kd(40419),
-      Id = kd(39983);
-    let Gd = (() => {
-        var dd;
-        let Jd, kd, Ld, Gd, vd, xd, qd, Bd, sd, ad, Md, Fd, Yd, md = Zd.b,
-          bd = [],
-          Sd = [],
-          jd = [],
-          Xd = [],
-          fd = [],
-          nd = [],
-          Ud = [],
-          yd = [],
-          Dd = [],
-          Td = [],
-          Ed = [],
-          cd = [],
-          hd = [],
-          rd = [],
-          ud = [],
-          td = [],
-          Vd = [],
-          zd = [],
-          Hd = [],
-          wd = [],
-          Ad = [],
-          dJ = [],
-          JJ = [],
-          kJ = [],
-          pJ = [];
-        return dd = class extends md {
-          static _CreateVideoTexture(Jd, kd, pd) {
-            arguments.length > 5 && void 0 !== arguments[5] || dd.TRILINEAR_SAMPLINGMODE;
-            throw (0, Cd.n)("VideoTexture")
+    var eQ = wQ(39852),
+      MQ = wQ(39426);
+    let GQ = (() => {
+        var QQ;
+        let FQ, wQ, xQ, GQ, pQ, cQ, CQ, SQ, iQ, WQ, RQ, OQ, sQ, rQ = kQ.b,
+          IQ = [],
+          UQ = [],
+          NQ = [],
+          TQ = [],
+          KQ = [],
+          zQ = [],
+          lQ = [],
+          jQ = [],
+          aQ = [],
+          XQ = [],
+          fQ = [],
+          VQ = [],
+          hQ = [],
+          JQ = [],
+          EQ = [],
+          nQ = [],
+          gQ = [],
+          PQ = [],
+          ZQ = [],
+          yQ = [],
+          BQ = [],
+          dQ = [],
+          QF = [],
+          FF = [],
+          wF = [];
+        return QQ = class extends rQ {
+          static _CreateVideoTexture(FQ, wQ, LQ) {
+            arguments.length > 5 && void 0 !== arguments[5] || QQ.TRILINEAR_SAMPLINGMODE;
+            throw (0, mQ.k)("VideoTexture")
           }
           get noMipmap() {
             return this._noMipmap
@@ -794,8 +794,8 @@ export const modules = {
           get mimeType() {
             return this._mimeType
           }
-          set isBlocking(dd) {
-            this._isBlocking = dd
+          set isBlocking(QQ) {
+            this._isBlocking = QQ
           }
           get isBlocking() {
             return this._isBlocking
@@ -803,109 +803,109 @@ export const modules = {
           get invertY() {
             return this._invertY
           }
-          constructor(Jd, kd, Nd, Pd) {
-            let Zd, gd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : dd.TRILINEAR_SAMPLINGMODE,
-              Cd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              od = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              ld = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              Qd = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              Ld = arguments.length > 9 ? arguments[9] : void 0,
-              Od = arguments.length > 10 ? arguments[10] : void 0,
-              ed = arguments.length > 11 ? arguments[11] : void 0,
-              Id = arguments.length > 12 ? arguments[12] : void 0,
-              Gd = arguments.length > 13 ? arguments[13] : void 0;
-            super(kd), this.url = ((0, pd.i)(this, bd), (0, pd.i)(this, Sd, null)), this.uOffset = ((0, pd.i)(this, jd), (0, pd.i)(this, Xd, 0)), this.vOffset = ((0, pd.i)(this, fd), (0, pd.i)(this, nd, 0)), this.uScale = ((0, pd.i)(this, Ud), (0, pd.i)(this, yd, 1)), this.vScale = ((0, pd.i)(this, Dd), (0, pd.i)(this, Td, 1)), this.uAng = ((0, pd.i)(this, Ed), (0, pd.i)(this, cd, 0)), this.vAng = ((0, pd.i)(this, hd), (0, pd.i)(this, rd, 0)), this.wAng = ((0, pd.i)(this, ud), (0, pd.i)(this, td, 0)), this.uRotationCenter = ((0, pd.i)(this, Vd), (0, pd.i)(this, zd, .5)), this.vRotationCenter = ((0, pd.i)(this, Hd), (0, pd.i)(this, wd, .5)), this.wRotationCenter = ((0, pd.i)(this, Ad), (0, pd.i)(this, dJ, .5)), this.homogeneousRotationInUVTransform = ((0, pd.i)(this, JJ), (0, pd.i)(this, kJ, !1)), this.inspectableCustomProperties = ((0, pd.i)(this, pJ), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new Wd.e, this._isBlocking = !0, this.name = Jd || "", this.url = Jd;
-            let vd = !1,
-              xd = null,
-              qd = !0;
-            "object" === typeof Nd && null !== Nd ? (Zd = Nd.noMipmap ?? !1, Pd = Nd.invertY ?? !Rd.d, gd = Nd.samplingMode ?? dd.TRILINEAR_SAMPLINGMODE, Cd = Nd.onLoad ?? null, od = Nd.onError ?? null, ld = Nd.buffer ?? null, Qd = Nd.deleteBuffer ?? !1, Ld = Nd.format, Od = Nd.mimeType, ed = Nd.loaderOptions, Id = Nd.creationFlags, vd = Nd.useSRGBBuffer ?? !1, xd = Nd.internalTexture ?? null, qd = Nd.gammaSpace ?? qd, Gd = Nd.forcedExtension ?? Gd) : Zd = !!Nd, this._gammaSpace = qd, this._noMipmap = Zd, this._invertY = void 0 === Pd ? !Rd.d : Pd, this._initialSamplingMode = gd, this._buffer = ld, this._deleteBuffer = Qd, this._mimeType = Od, this._loaderOptions = ed, this._creationFlags = Id, this._useSRGBBuffer = vd, this._forcedExtension = Gd, void 0 !== Ld && (this._format = Ld);
-            const Bd = this.Wm(),
-              sd = this._getEngine();
-            if (!sd) return;
-            sd.onBeforeTextureInitObservable.notifyObservers(this);
-            const ad = () => {
-                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), Cd && Cd(), !this.isBlocking && Bd && Bd.resetCachedMaterial()
+          constructor(FQ, wQ, qQ, DQ) {
+            let kQ, vQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : QQ.TRILINEAR_SAMPLINGMODE,
+              mQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              HQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              bQ = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              YQ = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              xQ = arguments.length > 9 ? arguments[9] : void 0,
+              AQ = arguments.length > 10 ? arguments[10] : void 0,
+              tQ = arguments.length > 11 ? arguments[11] : void 0,
+              MQ = arguments.length > 12 ? arguments[12] : void 0,
+              GQ = arguments.length > 13 ? arguments[13] : void 0;
+            super(wQ), this.url = ((0, LQ.l)(this, IQ), (0, LQ.l)(this, UQ, null)), this.uOffset = ((0, LQ.l)(this, NQ), (0, LQ.l)(this, TQ, 0)), this.vOffset = ((0, LQ.l)(this, KQ), (0, LQ.l)(this, zQ, 0)), this.uScale = ((0, LQ.l)(this, lQ), (0, LQ.l)(this, jQ, 1)), this.vScale = ((0, LQ.l)(this, aQ), (0, LQ.l)(this, XQ, 1)), this.uAng = ((0, LQ.l)(this, fQ), (0, LQ.l)(this, VQ, 0)), this.vAng = ((0, LQ.l)(this, hQ), (0, LQ.l)(this, JQ, 0)), this.wAng = ((0, LQ.l)(this, EQ), (0, LQ.l)(this, nQ, 0)), this.uRotationCenter = ((0, LQ.l)(this, gQ), (0, LQ.l)(this, PQ, .5)), this.vRotationCenter = ((0, LQ.l)(this, ZQ), (0, LQ.l)(this, yQ, .5)), this.wRotationCenter = ((0, LQ.l)(this, BQ), (0, LQ.l)(this, dQ, .5)), this.homogeneousRotationInUVTransform = ((0, LQ.l)(this, QF), (0, LQ.l)(this, FF, !1)), this.inspectableCustomProperties = ((0, LQ.l)(this, wF), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new oQ.e, this._isBlocking = !0, this.name = FQ || "", this.url = FQ;
+            let pQ = !1,
+              cQ = null,
+              CQ = !0;
+            "object" === typeof qQ && null !== qQ ? (kQ = qQ.noMipmap ?? !1, DQ = qQ.invertY ?? !eQ.d, vQ = qQ.samplingMode ?? QQ.TRILINEAR_SAMPLINGMODE, mQ = qQ.onLoad ?? null, HQ = qQ.onError ?? null, bQ = qQ.buffer ?? null, YQ = qQ.deleteBuffer ?? !1, xQ = qQ.format, AQ = qQ.mimeType, tQ = qQ.loaderOptions, MQ = qQ.creationFlags, pQ = qQ.useSRGBBuffer ?? !1, cQ = qQ.internalTexture ?? null, CQ = qQ.gammaSpace ?? CQ, GQ = qQ.forcedExtension ?? GQ) : kQ = !!qQ, this._gammaSpace = CQ, this._noMipmap = kQ, this._invertY = void 0 === DQ ? !eQ.d : DQ, this._initialSamplingMode = vQ, this._buffer = bQ, this._deleteBuffer = YQ, this._mimeType = AQ, this._loaderOptions = tQ, this._creationFlags = MQ, this._useSRGBBuffer = pQ, this._forcedExtension = GQ, void 0 !== xQ && (this._format = xQ);
+            const SQ = this.iN(),
+              iQ = this._getEngine();
+            if (!iQ) return;
+            iQ.onBeforeTextureInitObservable.notifyObservers(this);
+            const WQ = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), mQ && mQ(), !this.isBlocking && SQ && SQ.resetCachedMaterial()
               },
-              Md = (Jd, kd) => {
+              RQ = (FQ, wQ) => {
                 this._loadingError = !0, this._errorObject = {
-                  message: Jd,
-                  exception: kd
-                }, od && od(Jd, kd), dd.OnTextureLoadErrorObservable.notifyObservers(this)
+                  message: FQ,
+                  exception: wQ
+                }, HQ && HQ(FQ, wQ), QQ.OnTextureLoadErrorObservable.notifyObservers(this)
               };
-            if (!this.url && !xd) return this._delayedOnLoad = ad, void(this._delayedOnError = Md);
-            if (this._texture = xd ?? this._getFromCache(this.url, Zd, gd, this._invertY, vd, this.isCube), this._texture)
-              if (this._texture.isReady) Kd.d.SetImmediate((() => ad()));
+            if (!this.url && !cQ) return this._delayedOnLoad = WQ, void(this._delayedOnError = RQ);
+            if (this._texture = cQ ?? this._getFromCache(this.url, kQ, vQ, this._invertY, pQ, this.isCube), this._texture)
+              if (this._texture.isReady) uQ.d.SetImmediate((() => WQ()));
               else {
-                const dd = this._texture.onLoadedObservable.add(ad);
-                this._texture.onErrorObservable.add((Jd => {
-                  Md(Jd.message, Jd.exception), this._texture?.onLoadedObservable.remove(dd)
+                const QQ = this._texture.onLoadedObservable.add(WQ);
+                this._texture.onErrorObservable.add((FQ => {
+                  RQ(FQ.message, FQ.exception), this._texture?.onLoadedObservable.remove(QQ)
                 }))
               }
-            else if (Bd && Bd.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = ad, this._delayedOnError = Md;
+            else if (SQ && SQ.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = WQ, this._delayedOnError = RQ;
             else {
               try {
-                this._texture = sd.createTexture(this.url, Zd, this._invertY, Bd, gd, ad, Md, this._buffer, void 0, this._format, this._forcedExtension, Od, ed, Id, vd)
-              } catch (Fd) {
-                throw Md("error loading", Fd), Fd
+                this._texture = iQ.createTexture(this.url, kQ, this._invertY, SQ, vQ, WQ, RQ, this._buffer, void 0, this._format, this._forcedExtension, AQ, tQ, MQ, pQ)
+              } catch (OQ) {
+                throw RQ("error loading", OQ), OQ
               }
-              Qd && (this._buffer = null)
+              YQ && (this._buffer = null)
             }
           }
-          updateURL(dd) {
-            let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              kd = arguments.length > 2 ? arguments[2] : void 0,
-              pd = arguments.length > 3 ? arguments[3] : void 0;
-            this.url && (this.releaseInternalTexture(), this.Wm().markAllMaterialsAsDirty(1, (dd => dd.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = dd), this.url = dd, this._buffer = Jd, this._forcedExtension = pd, this.delayLoadState = 4;
-            const Nd = this._delayedOnLoad;
+          updateURL(QQ) {
+            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              wQ = arguments.length > 2 ? arguments[2] : void 0,
+              LQ = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.iN().markAllMaterialsAsDirty(1, (QQ => QQ.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = QQ), this.url = QQ, this._buffer = FQ, this._forcedExtension = LQ, this.delayLoadState = 4;
+            const qQ = this._delayedOnLoad;
             this._delayedOnLoad = () => {
-              Nd ? Nd() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), kd && kd()
+              qQ ? qQ() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), wQ && wQ()
             }, this.delayLoad()
           }
           delayLoad() {
             if (4 !== this.delayLoadState) return;
-            const dd = this.Wm();
-            if (!dd) return;
-            let Jd = this.url;
-            !Jd && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (Jd = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(Jd, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? Kd.d.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = dd.eL().createTexture(Jd, this._noMipmap, this._invertY, dd, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+            const QQ = this.iN();
+            if (!QQ) return;
+            let FQ = this.url;
+            !FQ && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (FQ = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(FQ, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? uQ.d.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = QQ.Wx().createTexture(FQ, this._noMipmap, this._invertY, QQ, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
           }
-          _prepareRowForTextureGeneration(dd, Jd, kd, pd) {
-            dd *= this._cachedUScale, Jd *= this._cachedVScale, dd -= this.uRotationCenter * this._cachedUScale, Jd -= this.vRotationCenter * this._cachedVScale, kd -= this.wRotationCenter, Pd.n.TransformCoordinatesFromFloatsToRef(dd, Jd, kd, this._rowGenerationMatrix, pd), pd.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, pd.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, pd.z += this.wRotationCenter
+          _prepareRowForTextureGeneration(QQ, FQ, wQ, LQ) {
+            QQ *= this._cachedUScale, FQ *= this._cachedVScale, QQ -= this.uRotationCenter * this._cachedUScale, FQ -= this.vRotationCenter * this._cachedVScale, wQ -= this.wRotationCenter, DQ.p.TransformCoordinatesFromFloatsToRef(QQ, FQ, wQ, this._rowGenerationMatrix, LQ), LQ.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, LQ.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, LQ.z += this.wRotationCenter
           }
           getTextureMatrix() {
-            let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * dd === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
-            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * dd, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = Pd.b.Zero(), this._rowGenerationMatrix = new Pd.b, this._t0 = Pd.n.Zero(), this._t1 = Pd.n.Zero(), this._t2 = Pd.n.Zero()), Pd.b.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (Pd.b.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, Pd.h.Matrix[0]), Pd.b.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, Pd.h.Matrix[1]), Pd.b.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, Pd.h.Matrix[2]), Pd.b.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, Pd.h.Matrix[3]), Pd.h.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Pd.h.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Pd.h.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Pd.h.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.hpd(this._t0), this._t2.hpd(this._t0), Pd.b.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
-            const Jd = this.Wm();
-            if (!Jd) return this._cachedTextureMatrix;
-            const kd = this._cachedIdentity3x2;
-            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && kd !== this._cachedIdentity3x2 && Jd.markAllMaterialsAsDirty(1, (dd => dd.hasTexture(this))), this._cachedTextureMatrix
+            let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * QQ === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * QQ, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = DQ.c.Zero(), this._rowGenerationMatrix = new DQ.c, this._t0 = DQ.p.Zero(), this._t1 = DQ.p.Zero(), this._t2 = DQ.p.Zero()), DQ.c.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (DQ.c.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, DQ.k.Matrix[0]), DQ.c.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, DQ.k.Matrix[1]), DQ.c.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, DQ.k.Matrix[2]), DQ.c.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, DQ.k.Matrix[3]), DQ.k.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(DQ.k.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(DQ.k.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(DQ.k.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.gLQ(this._t0), this._t2.gLQ(this._t0), DQ.c.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const FQ = this.iN();
+            if (!FQ) return this._cachedTextureMatrix;
+            const wQ = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && wQ !== this._cachedIdentity3x2 && FQ.markAllMaterialsAsDirty(1, (QQ => QQ.hasTexture(this))), this._cachedTextureMatrix
           }
           getReflectionTextureMatrix() {
-            const Jd = this.Wm();
-            if (!Jd) return this._cachedReflectionTextureMatrix;
+            const FQ = this.iN();
+            if (!FQ) return this._cachedReflectionTextureMatrix;
             if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
-              if (this.coordinatesMode !== dd.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
-              if (this._cachedReflectionProjectionMatrixId === Jd.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+              if (this.coordinatesMode !== QQ.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === FQ.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
             }
-            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = Pd.b.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = Pd.b.Zero());
-            const kd = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = DQ.c.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = DQ.c.Zero());
+            const wQ = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
             switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
-              case dd.PLANAR_MODE:
-                Pd.b.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+              case QQ.PLANAR_MODE:
+                DQ.c.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
                 break;
-              case dd.PROJECTION_MODE: {
-                Pd.b.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
-                const dd = Jd.getProjectionMatrix();
-                this._cachedReflectionProjectionMatrixId = dd.updateFlag, dd.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+              case QQ.PROJECTION_MODE: {
+                DQ.c.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const QQ = FQ.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = QQ.updateFlag, QQ.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
                 break
               }
               default:
-                Pd.b.IdentityToRef(this._cachedReflectionTextureMatrix)
+                DQ.c.IdentityToRef(this._cachedReflectionTextureMatrix)
             }
-            return kd && Jd.markAllMaterialsAsDirty(1, (dd => dd.hasTexture(this))), this._cachedReflectionTextureMatrix
+            return wQ && FQ.markAllMaterialsAsDirty(1, (QQ => QQ.hasTexture(this))), this._cachedReflectionTextureMatrix
           }
           clone() {
-            const Jd = {
+            const FQ = {
               noMipmap: this._noMipmap,
               invertY: this._invertY,
               samplingMode: this.samplingMode,
@@ -919,20 +919,20 @@ export const modules = {
               creationFlags: this._creationFlags,
               useSRGBBuffer: this._useSRGBBuffer
             };
-            return Id.c.Clone((() => new dd(this._texture ? this._texture.url : null, this.Wm(), Jd)), this)
+            return MQ.c.Clone((() => new QQ(this._texture ? this._texture.url : null, this.iN(), FQ)), this)
           }
           serialize() {
-            const Jd = this.name;
-            dd.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
-            const kd = super.serialize(dd._SerializeInternalTextureUniqueId);
-            if (!kd) return null;
-            if (dd.SerializeBuffers || dd.ForceSerializeBuffers)
-              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) kd.base64String = this._buffer, kd.name = kd.name.replace("data:", "");
+            const FQ = this.name;
+            QQ.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const wQ = super.serialize(QQ._SerializeInternalTextureUniqueId);
+            if (!wQ) return null;
+            if (QQ.SerializeBuffers || QQ.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) wQ.base64String = this._buffer, wQ.name = wQ.name.replace("data:", "");
               else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
-              const dd = this.mimeType || "image/png";
-              kd.base64String = `data:${dd};base64,${(0,Qd.j)(this._buffer)}`
-            } else(dd.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (kd.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? Od(this) : ed(this));
-            return kd.invertY = this._invertY, kd.samplingMode = this.samplingMode, kd._creationFlags = this._creationFlags, kd._useSRGBBuffer = this._useSRGBBuffer, dd._SerializeInternalTextureUniqueId && (kd.internalTextureUniqueId = this._texture?.uniqueId), kd.internalTextureLabel = this._texture?.label, kd.noMipmap = this._noMipmap, this.name = Jd, kd
+              const QQ = this.mimeType || "image/png";
+              wQ.base64String = `data:${QQ};base64,${(0,YQ.i)(this._buffer)}`
+            } else(QQ.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (wQ.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? AQ(this) : tQ(this));
+            return wQ.invertY = this._invertY, wQ.samplingMode = this.samplingMode, wQ._creationFlags = this._creationFlags, wQ._useSRGBBuffer = this._useSRGBBuffer, QQ._SerializeInternalTextureUniqueId && (wQ.internalTextureUniqueId = this._texture?.uniqueId), wQ.internalTextureLabel = this._texture?.label, wQ.noMipmap = this._noMipmap, this.name = FQ, wQ
           }
           getClassName() {
             return "Texture"
@@ -940,304 +940,304 @@ export const modules = {
           dispose() {
             super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
           }
-          static Parse(Jd, kd, pd) {
-            if (Jd.customType) {
-              const dd = od.e.Instantiate(Jd.customType).Parse(Jd, kd, pd);
-              return Jd.samplingMode && dd.updateSamplingMode && dd._samplingMode && dd._samplingMode !== Jd.samplingMode && dd.updateSamplingMode(Jd.samplingMode), dd
+          static Parse(FQ, wQ, LQ) {
+            if (FQ.customType) {
+              const QQ = HQ.e.Instantiate(FQ.customType).Parse(FQ, wQ, LQ);
+              return FQ.samplingMode && QQ.updateSamplingMode && QQ._samplingMode && QQ._samplingMode !== FQ.samplingMode && QQ.updateSamplingMode(FQ.samplingMode), QQ
             }
-            if (Jd.isCube && !Jd.isRenderTarget) return dd._CubeTextureParser(Jd, kd, pd);
-            const Nd = void 0 !== Jd.internalTextureUniqueId;
-            if (!Jd.name && !Jd.isRenderTarget && !Nd) return null;
-            let Wd;
-            if (Nd) {
-              const dd = kd.eL().getLoadedTexturesCache();
-              for (const kd of dd)
-                if (kd.uniqueId === Jd.internalTextureUniqueId) {
-                  Wd = kd;
+            if (FQ.isCube && !FQ.isRenderTarget) return QQ._CubeTextureParser(FQ, wQ, LQ);
+            const qQ = void 0 !== FQ.internalTextureUniqueId;
+            if (!FQ.name && !FQ.isRenderTarget && !qQ) return null;
+            let oQ;
+            if (qQ) {
+              const QQ = wQ.Wx().getLoadedTexturesCache();
+              for (const wQ of QQ)
+                if (wQ.uniqueId === FQ.internalTextureUniqueId) {
+                  oQ = wQ;
                   break
                 }
             }
-            const Pd = dd => {
-              if (dd && dd._texture && (dd._texture._cachedWrapU = null, dd._texture._cachedWrapV = null, dd._texture._cachedWrapR = null), Jd.samplingMode) {
-                const kd = Jd.samplingMode;
-                dd && dd.samplingMode !== kd && dd.updateSamplingMode(kd)
+            const DQ = QQ => {
+              if (QQ && QQ._texture && (QQ._texture._cachedWrapU = null, QQ._texture._cachedWrapV = null, QQ._texture._cachedWrapR = null), FQ.samplingMode) {
+                const wQ = FQ.samplingMode;
+                QQ && QQ.samplingMode !== wQ && QQ.updateSamplingMode(wQ)
               }
-              if (dd && Jd.animations)
-                for (let kd = 0; kd < Jd.animations.length; kd++) {
-                  const pd = Jd.animations[kd],
-                    Nd = (0, gd.e)("BABYLON.Animation");
-                  Nd && dd.animations.push(Nd.Parse(pd))
+              if (QQ && FQ.animations)
+                for (let wQ = 0; wQ < FQ.animations.length; wQ++) {
+                  const LQ = FQ.animations[wQ],
+                    qQ = (0, vQ.b)("BABYLON.Animation");
+                  qQ && QQ.animations.push(qQ.Parse(LQ))
                 }
-              dd && dd._texture && (Nd && !Wd && dd._texture._setUniqueId(Jd.internalTextureUniqueId), dd._texture.label = Jd.internalTextureLabel)
+              QQ && QQ._texture && (qQ && !oQ && QQ._texture._setUniqueId(FQ.internalTextureUniqueId), QQ._texture.label = FQ.internalTextureLabel)
             };
-            return Id.c.Parse((() => {
-              let Nd = !0;
-              if (Jd.noMipmap && (Nd = !1), Jd.mirrorPlane) {
-                const pd = dd._CreateMirror(Jd.name, Jd.renderTargetSize, kd, Nd);
-                return pd._waitingRenderList = Jd.renderList, pd.mirrorPlane = ld.c.FromArray(Jd.mirrorPlane), Pd(pd), pd
+            return MQ.c.Parse((() => {
+              let qQ = !0;
+              if (FQ.noMipmap && (qQ = !1), FQ.mirrorPlane) {
+                const LQ = QQ._CreateMirror(FQ.name, FQ.renderTargetSize, wQ, qQ);
+                return LQ._waitingRenderList = FQ.renderList, LQ.mirrorPlane = bQ.d.FromArray(FQ.mirrorPlane), DQ(LQ), LQ
               }
-              if (Jd.isRenderTarget && !Jd.base64String) {
-                let pd = null;
-                if (Jd.isCube) {
-                  if (kd.reflectionProbes)
-                    for (let dd = 0; dd < kd.reflectionProbes.length; dd++) {
-                      const pd = kd.reflectionProbes[dd];
-                      if (pd.name === Jd.name) return pd.cubeTexture
+              if (FQ.isRenderTarget && !FQ.base64String) {
+                let LQ = null;
+                if (FQ.isCube) {
+                  if (wQ.reflectionProbes)
+                    for (let QQ = 0; QQ < wQ.reflectionProbes.length; QQ++) {
+                      const LQ = wQ.reflectionProbes[QQ];
+                      if (LQ.name === FQ.name) return LQ.cubeTexture
                     }
-                } else pd = dd._CreateRenderTargetTexture(Jd.name, Jd.renderTargetSize, kd, Nd, Jd._creationFlags ?? 0), pd._waitingRenderList = Jd.renderList;
-                return Pd(pd), pd
+                } else LQ = QQ._CreateRenderTargetTexture(FQ.name, FQ.renderTargetSize, wQ, qQ, FQ._creationFlags ?? 0), LQ._waitingRenderList = FQ.renderList;
+                return DQ(LQ), LQ
               }
-              if (Jd.isVideo) {
-                const Wd = dd._CreateVideoTexture(pd + (Jd.url || Jd.name), pd + (Jd.src || Jd.url), kd, Nd, Jd.invertY, Jd.samplingMode, Jd.settings || {});
-                return Pd(Wd), Wd
+              if (FQ.isVideo) {
+                const oQ = QQ._CreateVideoTexture(LQ + (FQ.url || FQ.name), LQ + (FQ.src || FQ.url), wQ, qQ, FQ.invertY, FQ.samplingMode, FQ.settings || {});
+                return DQ(oQ), oQ
               } {
-                let Zd;
-                if ("string" === typeof Jd.base64String && Jd.base64String && !Wd) {
-                  const pd = {
-                      buffer: Jd.base64String,
-                      noMipmap: !Nd,
-                      invertY: Jd.invertY,
-                      samplingMode: Jd.samplingMode,
-                      useSRGBBuffer: Jd._useSRGBBuffer ?? !1,
-                      creationFlags: Jd._creationFlags ?? 0,
+                let kQ;
+                if ("string" === typeof FQ.base64String && FQ.base64String && !oQ) {
+                  const LQ = {
+                      buffer: FQ.base64String,
+                      noMipmap: !qQ,
+                      invertY: FQ.invertY,
+                      samplingMode: FQ.samplingMode,
+                      useSRGBBuffer: FQ._useSRGBBuffer ?? !1,
+                      creationFlags: FQ._creationFlags ?? 0,
                       onLoad: () => {
-                        Pd(Zd)
+                        DQ(kQ)
                       }
                     },
-                    Wd = Jd.base64String,
-                    gd = Wd.startsWith("data:") ? Wd.substring(5) : Wd;
-                  Zd = dd.CreateFromBase64String("", gd, kd, pd), Zd.name = Jd.name
+                    oQ = FQ.base64String,
+                    vQ = oQ.startsWith("data:") ? oQ.substring(5) : oQ;
+                  kQ = QQ.CreateFromBase64String("", vQ, wQ, LQ), kQ.name = FQ.name
                 } else {
-                  let gd;
-                  gd = Jd.name && (Jd.name.indexOf("://") > 0 || Jd.name.startsWith("data:")) ? Jd.name : pd + Jd.name, Jd.url && (Jd.url.startsWith("data:") || dd.UseSerializedUrlIfAny) && (gd = Jd.url);
-                  const Cd = {
-                    noMipmap: !Nd,
-                    invertY: Jd.invertY,
-                    samplingMode: Jd.samplingMode,
-                    useSRGBBuffer: Jd._useSRGBBuffer ?? !1,
-                    creationFlags: Jd._creationFlags ?? 0,
+                  let vQ;
+                  vQ = FQ.name && (FQ.name.indexOf("://") > 0 || FQ.name.startsWith("data:")) ? FQ.name : LQ + FQ.name, FQ.url && (FQ.url.startsWith("data:") || QQ.UseSerializedUrlIfAny) && (vQ = FQ.url);
+                  const mQ = {
+                    noMipmap: !qQ,
+                    invertY: FQ.invertY,
+                    samplingMode: FQ.samplingMode,
+                    useSRGBBuffer: FQ._useSRGBBuffer ?? !1,
+                    creationFlags: FQ._creationFlags ?? 0,
                     onLoad: () => {
-                      Pd(Zd)
+                      DQ(kQ)
                     },
-                    internalTexture: Wd
+                    internalTexture: oQ
                   };
-                  Zd = new dd(gd, kd, Cd)
+                  kQ = new QQ(vQ, wQ, mQ)
                 }
-                return Zd
+                return kQ
               }
-            }), Jd, kd)
+            }), FQ, wQ)
           }
-          static CreateFromBase64String(Jd, kd, pd, Nd, Wd) {
-            let Pd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : dd.TRILINEAR_SAMPLINGMODE;
-            return new dd("data:" + kd, pd, Nd, Wd, Pd, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, Jd, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
+          static CreateFromBase64String(FQ, wQ, LQ, qQ, oQ) {
+            let DQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : QQ.TRILINEAR_SAMPLINGMODE;
+            return new QQ("data:" + wQ, LQ, qQ, oQ, DQ, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, FQ, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
           }
-          static LoadFromDataString(Jd, kd, pd) {
-            let Nd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              Wd = arguments.length > 4 ? arguments[4] : void 0,
-              Pd = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-              Zd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : dd.TRILINEAR_SAMPLINGMODE,
-              gd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              Cd = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
-              Kd = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
-              od = arguments.length > 10 ? arguments[10] : void 0,
-              ld = arguments.length > 11 ? arguments[11] : void 0;
-            return "data:" !== Jd.substring(0, 5) && (Jd = "data:" + Jd), new dd(Jd, pd, Wd, Pd, Zd, gd, Cd, kd, Nd, Kd, void 0, void 0, od, ld)
+          static LoadFromDataString(FQ, wQ, LQ) {
+            let qQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              oQ = arguments.length > 4 ? arguments[4] : void 0,
+              DQ = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              kQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : QQ.TRILINEAR_SAMPLINGMODE,
+              vQ = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              mQ = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              uQ = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              HQ = arguments.length > 10 ? arguments[10] : void 0,
+              bQ = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== FQ.substring(0, 5) && (FQ = "data:" + FQ), new QQ(FQ, LQ, oQ, DQ, kQ, vQ, mQ, wQ, qQ, uQ, void 0, void 0, HQ, bQ)
           }
         }, (() => {
-          const Wd = "function" === typeof Symbol && Symbol.metadata ? Object.create(md[Symbol.metadata] ?? null) : void 0;
-          Jd = [(0, Nd.H)()], kd = [(0, Nd.H)()], Ld = [(0, Nd.H)()], Gd = [(0, Nd.H)()], vd = [(0, Nd.H)()], xd = [(0, Nd.H)()], qd = [(0, Nd.H)()], Bd = [(0, Nd.H)()], sd = [(0, Nd.H)()], ad = [(0, Nd.H)()], Md = [(0, Nd.H)()], Fd = [(0, Nd.H)()], Yd = [(0, Nd.H)()], (0, pd.h)(dd, null, Yd, {
+          const oQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(rQ[Symbol.metadata] ?? null) : void 0;
+          FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], xQ = [(0, qQ.I)()], GQ = [(0, qQ.I)()], pQ = [(0, qQ.I)()], cQ = [(0, qQ.I)()], CQ = [(0, qQ.I)()], SQ = [(0, qQ.I)()], iQ = [(0, qQ.I)()], WQ = [(0, qQ.I)()], RQ = [(0, qQ.I)()], OQ = [(0, qQ.I)()], sQ = [(0, qQ.I)()], (0, LQ.i)(QQ, null, sQ, {
             kind: "getter",
             name: "isBlocking",
             static: !1,
             private: !1,
             access: {
-              has: dd => "isBlocking" in dd,
-              get: dd => dd.isBlocking
+              has: QQ => "isBlocking" in QQ,
+              get: QQ => QQ.isBlocking
             },
-            metadata: Wd
-          }, null, bd), (0, pd.h)(null, null, Jd, {
+            metadata: oQ
+          }, null, IQ), (0, LQ.i)(null, null, FQ, {
             kind: "field",
             name: "url",
             static: !1,
             private: !1,
             access: {
-              has: dd => "url" in dd,
-              get: dd => dd.url,
-              set: (dd, Jd) => {
-                dd.url = Jd
+              has: QQ => "url" in QQ,
+              get: QQ => QQ.url,
+              set: (QQ, FQ) => {
+                QQ.url = FQ
               }
             },
-            metadata: Wd
-          }, Sd, jd), (0, pd.h)(null, null, kd, {
+            metadata: oQ
+          }, UQ, NQ), (0, LQ.i)(null, null, wQ, {
             kind: "field",
             name: "uOffset",
             static: !1,
             private: !1,
             access: {
-              has: dd => "uOffset" in dd,
-              get: dd => dd.uOffset,
-              set: (dd, Jd) => {
-                dd.uOffset = Jd
+              has: QQ => "uOffset" in QQ,
+              get: QQ => QQ.uOffset,
+              set: (QQ, FQ) => {
+                QQ.uOffset = FQ
               }
             },
-            metadata: Wd
-          }, Xd, fd), (0, pd.h)(null, null, Ld, {
+            metadata: oQ
+          }, TQ, KQ), (0, LQ.i)(null, null, xQ, {
             kind: "field",
             name: "vOffset",
             static: !1,
             private: !1,
             access: {
-              has: dd => "vOffset" in dd,
-              get: dd => dd.vOffset,
-              set: (dd, Jd) => {
-                dd.vOffset = Jd
+              has: QQ => "vOffset" in QQ,
+              get: QQ => QQ.vOffset,
+              set: (QQ, FQ) => {
+                QQ.vOffset = FQ
               }
             },
-            metadata: Wd
-          }, nd, Ud), (0, pd.h)(null, null, Gd, {
+            metadata: oQ
+          }, zQ, lQ), (0, LQ.i)(null, null, GQ, {
             kind: "field",
             name: "uScale",
             static: !1,
             private: !1,
             access: {
-              has: dd => "uScale" in dd,
-              get: dd => dd.uScale,
-              set: (dd, Jd) => {
-                dd.uScale = Jd
+              has: QQ => "uScale" in QQ,
+              get: QQ => QQ.uScale,
+              set: (QQ, FQ) => {
+                QQ.uScale = FQ
               }
             },
-            metadata: Wd
-          }, yd, Dd), (0, pd.h)(null, null, vd, {
+            metadata: oQ
+          }, jQ, aQ), (0, LQ.i)(null, null, pQ, {
             kind: "field",
             name: "vScale",
             static: !1,
             private: !1,
             access: {
-              has: dd => "vScale" in dd,
-              get: dd => dd.vScale,
-              set: (dd, Jd) => {
-                dd.vScale = Jd
+              has: QQ => "vScale" in QQ,
+              get: QQ => QQ.vScale,
+              set: (QQ, FQ) => {
+                QQ.vScale = FQ
               }
             },
-            metadata: Wd
-          }, Td, Ed), (0, pd.h)(null, null, xd, {
+            metadata: oQ
+          }, XQ, fQ), (0, LQ.i)(null, null, cQ, {
             kind: "field",
             name: "uAng",
             static: !1,
             private: !1,
             access: {
-              has: dd => "uAng" in dd,
-              get: dd => dd.uAng,
-              set: (dd, Jd) => {
-                dd.uAng = Jd
+              has: QQ => "uAng" in QQ,
+              get: QQ => QQ.uAng,
+              set: (QQ, FQ) => {
+                QQ.uAng = FQ
               }
             },
-            metadata: Wd
-          }, cd, hd), (0, pd.h)(null, null, qd, {
+            metadata: oQ
+          }, VQ, hQ), (0, LQ.i)(null, null, CQ, {
             kind: "field",
             name: "vAng",
             static: !1,
             private: !1,
             access: {
-              has: dd => "vAng" in dd,
-              get: dd => dd.vAng,
-              set: (dd, Jd) => {
-                dd.vAng = Jd
+              has: QQ => "vAng" in QQ,
+              get: QQ => QQ.vAng,
+              set: (QQ, FQ) => {
+                QQ.vAng = FQ
               }
             },
-            metadata: Wd
-          }, rd, ud), (0, pd.h)(null, null, Bd, {
+            metadata: oQ
+          }, JQ, EQ), (0, LQ.i)(null, null, SQ, {
             kind: "field",
             name: "wAng",
             static: !1,
             private: !1,
             access: {
-              has: dd => "wAng" in dd,
-              get: dd => dd.wAng,
-              set: (dd, Jd) => {
-                dd.wAng = Jd
+              has: QQ => "wAng" in QQ,
+              get: QQ => QQ.wAng,
+              set: (QQ, FQ) => {
+                QQ.wAng = FQ
               }
             },
-            metadata: Wd
-          }, td, Vd), (0, pd.h)(null, null, sd, {
+            metadata: oQ
+          }, nQ, gQ), (0, LQ.i)(null, null, iQ, {
             kind: "field",
             name: "uRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: dd => "uRotationCenter" in dd,
-              get: dd => dd.uRotationCenter,
-              set: (dd, Jd) => {
-                dd.uRotationCenter = Jd
+              has: QQ => "uRotationCenter" in QQ,
+              get: QQ => QQ.uRotationCenter,
+              set: (QQ, FQ) => {
+                QQ.uRotationCenter = FQ
               }
             },
-            metadata: Wd
-          }, zd, Hd), (0, pd.h)(null, null, ad, {
+            metadata: oQ
+          }, PQ, ZQ), (0, LQ.i)(null, null, WQ, {
             kind: "field",
             name: "vRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: dd => "vRotationCenter" in dd,
-              get: dd => dd.vRotationCenter,
-              set: (dd, Jd) => {
-                dd.vRotationCenter = Jd
+              has: QQ => "vRotationCenter" in QQ,
+              get: QQ => QQ.vRotationCenter,
+              set: (QQ, FQ) => {
+                QQ.vRotationCenter = FQ
               }
             },
-            metadata: Wd
-          }, wd, Ad), (0, pd.h)(null, null, Md, {
+            metadata: oQ
+          }, yQ, BQ), (0, LQ.i)(null, null, RQ, {
             kind: "field",
             name: "wRotationCenter",
             static: !1,
             private: !1,
             access: {
-              has: dd => "wRotationCenter" in dd,
-              get: dd => dd.wRotationCenter,
-              set: (dd, Jd) => {
-                dd.wRotationCenter = Jd
+              has: QQ => "wRotationCenter" in QQ,
+              get: QQ => QQ.wRotationCenter,
+              set: (QQ, FQ) => {
+                QQ.wRotationCenter = FQ
               }
             },
-            metadata: Wd
-          }, dJ, JJ), (0, pd.h)(null, null, Fd, {
+            metadata: oQ
+          }, dQ, QF), (0, LQ.i)(null, null, OQ, {
             kind: "field",
             name: "homogeneousRotationInUVTransform",
             static: !1,
             private: !1,
             access: {
-              has: dd => "homogeneousRotationInUVTransform" in dd,
-              get: dd => dd.homogeneousRotationInUVTransform,
-              set: (dd, Jd) => {
-                dd.homogeneousRotationInUVTransform = Jd
+              has: QQ => "homogeneousRotationInUVTransform" in QQ,
+              get: QQ => QQ.homogeneousRotationInUVTransform,
+              set: (QQ, FQ) => {
+                QQ.homogeneousRotationInUVTransform = FQ
               }
             },
-            metadata: Wd
-          }, kJ, pJ), Wd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: oQ
+          }, FF, wF), oQ && Object.defineProperty(QQ, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Wd
+            value: oQ
           })
-        })(), dd.SerializeBuffers = !0, dd.ForceSerializeBuffers = !1, dd.OnTextureLoadErrorObservable = new Wd.e, dd._SerializeInternalTextureUniqueId = !1, dd._CubeTextureParser = (dd, Jd, kd) => {
-          throw (0, Cd.n)("CubeTexture")
-        }, dd._CreateMirror = (dd, Jd, kd, pd) => {
-          throw (0, Cd.n)("MirrorTexture")
-        }, dd._CreateRenderTargetTexture = (dd, Jd, kd, pd, Nd) => {
-          throw (0, Cd.n)("RenderTargetTexture")
-        }, dd.NEAREST_SAMPLINGMODE = 1, dd.NEAREST_NEAREST_MIPLINEAR = 8, dd.BILINEAR_SAMPLINGMODE = 2, dd.LINEAR_LINEAR_MIPNEAREST = 11, dd.TRILINEAR_SAMPLINGMODE = 3, dd.LINEAR_LINEAR_MIPLINEAR = 3, dd.NEAREST_NEAREST_MIPNEAREST = 4, dd.NEAREST_LINEAR_MIPNEAREST = 5, dd.NEAREST_LINEAR_MIPLINEAR = 6, dd.NEAREST_LINEAR = 7, dd.NEAREST_NEAREST = 1, dd.LINEAR_NEAREST_MIPNEAREST = 9, dd.LINEAR_NEAREST_MIPLINEAR = 10, dd.LINEAR_LINEAR = 2, dd.LINEAR_NEAREST = 12, dd.EXPLICIT_MODE = 0, dd.SPHERICAL_MODE = 1, dd.PLANAR_MODE = 2, dd.CUBIC_MODE = 3, dd.PROJECTION_MODE = 4, dd.SKYBOX_MODE = 5, dd.INVCUBIC_MODE = 6, dd.EQUIRECTANGULAR_MODE = 7, dd.FIXED_EQUIRECTANGULAR_MODE = 8, dd.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, dd.CLAMP_ADDRESSMODE = 0, dd.WRAP_ADDRESSMODE = 1, dd.MIRROR_ADDRESSMODE = 2, dd.UseSerializedUrlIfAny = !1, dd
+        })(), QQ.SerializeBuffers = !0, QQ.ForceSerializeBuffers = !1, QQ.OnTextureLoadErrorObservable = new oQ.e, QQ._SerializeInternalTextureUniqueId = !1, QQ._CubeTextureParser = (QQ, FQ, wQ) => {
+          throw (0, mQ.k)("CubeTexture")
+        }, QQ._CreateMirror = (QQ, FQ, wQ, LQ) => {
+          throw (0, mQ.k)("MirrorTexture")
+        }, QQ._CreateRenderTargetTexture = (QQ, FQ, wQ, LQ, qQ) => {
+          throw (0, mQ.k)("RenderTargetTexture")
+        }, QQ.NEAREST_SAMPLINGMODE = 1, QQ.NEAREST_NEAREST_MIPLINEAR = 8, QQ.BILINEAR_SAMPLINGMODE = 2, QQ.LINEAR_LINEAR_MIPNEAREST = 11, QQ.TRILINEAR_SAMPLINGMODE = 3, QQ.LINEAR_LINEAR_MIPLINEAR = 3, QQ.NEAREST_NEAREST_MIPNEAREST = 4, QQ.NEAREST_LINEAR_MIPNEAREST = 5, QQ.NEAREST_LINEAR_MIPLINEAR = 6, QQ.NEAREST_LINEAR = 7, QQ.NEAREST_NEAREST = 1, QQ.LINEAR_NEAREST_MIPNEAREST = 9, QQ.LINEAR_NEAREST_MIPLINEAR = 10, QQ.LINEAR_LINEAR = 2, QQ.LINEAR_NEAREST = 12, QQ.EXPLICIT_MODE = 0, QQ.SPHERICAL_MODE = 1, QQ.PLANAR_MODE = 2, QQ.CUBIC_MODE = 3, QQ.PROJECTION_MODE = 4, QQ.SKYBOX_MODE = 5, QQ.INVCUBIC_MODE = 6, QQ.EQUIRECTANGULAR_MODE = 7, QQ.FIXED_EQUIRECTANGULAR_MODE = 8, QQ.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, QQ.CLAMP_ADDRESSMODE = 0, QQ.WRAP_ADDRESSMODE = 1, QQ.MIRROR_ADDRESSMODE = 2, QQ.UseSerializedUrlIfAny = !1, QQ
       })(),
-      vd = !1;
+      pQ = !1;
 
-    function xd() {
-      vd || (vd = !0, (0, gd.h)("BABYLON.Texture", Gd), Id.c._TextureParser = Gd.Parse)
+    function cQ() {
+      pQ || (pQ = !0, (0, vQ.e)("BABYLON.Texture", GQ), MQ.c._TextureParser = GQ.Parse)
     }
   },
-  39981: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd
+  39418: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => LQ
     });
-    class pd {
-      constructor(dd, Jd) {
-        this.width = dd, this.height = Jd
+    class LQ {
+      constructor(QQ, FQ) {
+        this.width = QQ, this.height = FQ
       }
       toString() {
         return `{W: ${this.width}, H: ${this.height}}`
@@ -1246,49 +1246,49 @@ export const modules = {
         return "Size"
       }
       getHashCode() {
-        let dd = 0 | this.width;
-        return dd = 397 * dd ^ this.height, dd
+        let QQ = 0 | this.width;
+        return QQ = 397 * QQ ^ this.height, QQ
       }
-      Fs(dd) {
-        this.width = dd.width, this.height = dd.height
+      Qs(QQ) {
+        this.width = QQ.width, this.height = QQ.height
       }
-      kdd(dd, Jd) {
-        return this.width = dd, this.height = Jd, this
+      vQQ(QQ, FQ) {
+        return this.width = QQ, this.height = FQ, this
       }
-      set(dd, Jd) {
-        return this.kdd(dd, Jd)
+      set(QQ, FQ) {
+        return this.vQQ(QQ, FQ)
       }
-      multiplyByFloats(dd, Jd) {
-        return new pd(this.width * dd, this.height * Jd)
+      multiplyByFloats(QQ, FQ) {
+        return new LQ(this.width * QQ, this.height * FQ)
       }
       clone() {
-        return new pd(this.width, this.height)
+        return new LQ(this.width, this.height)
       }
-      equals(dd) {
-        return !!dd && (this.width === dd.width && this.height === dd.height)
+      equals(QQ) {
+        return !!QQ && (this.width === QQ.width && this.height === QQ.height)
       }
       get surface() {
         return this.width * this.height
       }
       static Zero() {
-        return new pd(0, 0)
+        return new LQ(0, 0)
       }
-      add(dd) {
-        return new pd(this.width + dd.width, this.height + dd.height)
+      add(QQ) {
+        return new LQ(this.width + QQ.width, this.height + QQ.height)
       }
-      subtract(dd) {
-        return new pd(this.width - dd.width, this.height - dd.height)
+      subtract(QQ) {
+        return new LQ(this.width - QQ.width, this.height - QQ.height)
       }
-      scale(dd) {
-        return new pd(this.width * dd, this.height * dd)
+      scale(QQ) {
+        return new LQ(this.width * QQ, this.height * QQ)
       }
-      static Lerp(dd, Jd, kd) {
-        const Nd = dd.width + (Jd.width - dd.width) * kd,
-          Wd = dd.height + (Jd.height - dd.height) * kd;
-        return new pd(Nd, Wd)
+      static Lerp(QQ, FQ, wQ) {
+        const qQ = QQ.width + (FQ.width - QQ.width) * wQ,
+          oQ = QQ.height + (FQ.height - QQ.height) * wQ;
+        return new LQ(qQ, oQ)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

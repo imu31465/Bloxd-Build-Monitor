@@ -1,115 +1,115 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  36458: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Zd,
-      f: () => Cd,
-      h: () => Pd,
-      j: () => od
+  35943: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => kQ,
+      e: () => mQ,
+      h: () => DQ,
+      k: () => HQ
     });
-    var pd = kd(36448),
-      Nd = kd(10);
-    const Wd = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    var LQ = wQ(35929),
+      qQ = wQ(5);
+    const oQ = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
 
-    function Pd(dd) {
-      if (dd instanceof WebAssembly.RuntimeError) return !0;
-      const Jd = dd instanceof Error ? dd.stack : void 0;
-      return "string" === typeof Jd && Wd.test(Jd)
+    function DQ(QQ) {
+      if (QQ instanceof WebAssembly.RuntimeError) return !0;
+      const FQ = QQ instanceof Error ? QQ.stack : void 0;
+      return "string" === typeof FQ && oQ.test(FQ)
     }
 
-    function Zd(dd, Jd, kd) {
-      var Nd;
-      const Pd = dd instanceof Error ? dd.name : "thrown",
-        Zd = (dd instanceof Error && null !== (Nd = dd.stack) && void 0 !== Nd ? Nd : "").split("\n").filter((dd => Wd.test(dd))).slice(0, 8).map((dd => dd.trim())),
-        gd = null === Jd ? "wasm memory unknown" : `wasm memory ${Math.round(Jd/2**20)} MB`,
-        Cd = null === kd.panic ? "" : `, panic: ${(0,pd.g)(kd.panic)}`,
-        Kd = `${Pd}: ${dd instanceof Error?dd.message:String(dd)}`;
-      return `${(0,pd.k)(kd.kind,kd.refusedBytes)} ${Kd} (${gd})${Cd}${Zd.length>0?` | ${Zd.join(" < ")}`:""}`
+    function kQ(QQ, FQ, wQ) {
+      var qQ;
+      const DQ = QQ instanceof Error ? QQ.name : "thrown",
+        kQ = (QQ instanceof Error && null !== (qQ = QQ.stack) && void 0 !== qQ ? qQ : "").split("\n").filter((QQ => oQ.test(QQ))).slice(0, 8).map((QQ => QQ.trim())),
+        vQ = null === FQ ? "wasm memory unknown" : `wasm memory ${Math.round(FQ/2**20)} MB`,
+        mQ = null === wQ.panic ? "" : `, panic: ${(0,LQ.k)(wQ.panic)}`,
+        uQ = `${DQ}: ${QQ instanceof Error?QQ.message:String(QQ)}`;
+      return `${(0,LQ.o)(wQ.kind,wQ.refusedBytes)} ${uQ} (${vQ})${mQ}${kQ.length>0?` | ${kQ.join(" < ")}`:""}`
     }
-    const gd = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
+    const vQ = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
 
-    function Cd(dd) {
-      var Jd;
-      let kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(dd instanceof Error) || !gd.test(dd.message)) return {};
-      if (!("detached" in kd)) return {
+    function mQ(QQ) {
+      var FQ;
+      let wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(QQ instanceof Error) || !vQ.test(QQ.message)) return {};
+      if (!("detached" in wQ)) return {
         arrayBufferDetached: "absent"
       };
       return {
-        arrayBufferDetached: (0, Nd.Y)(null === (Jd = (0, Nd.R)(kd, "detached")) || void 0 === Jd ? void 0 : Jd.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
+        arrayBufferDetached: (0, qQ.P)(null === (FQ = (0, qQ.K)(wQ, "detached")) || void 0 === FQ ? void 0 : FQ.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
       }
     }
-    const Kd = 500;
+    const uQ = 500;
 
-    function od(dd) {
-      let Jd = "[object Object]";
+    function HQ(QQ) {
+      let FQ = "[object Object]";
       try {
-        Jd = String(dd)
+        FQ = String(QQ)
       } catch {}
-      if ("[object Object]" !== Jd) return Jd;
+      if ("[object Object]" !== FQ) return FQ;
       try {
-        var kd, pd;
-        return null !== (kd = null === (pd = JSON.stringify(dd)) || void 0 === pd ? void 0 : pd.slice(0, Kd)) && void 0 !== kd ? kd : Jd
+        var wQ, LQ;
+        return null !== (wQ = null === (LQ = JSON.stringify(QQ)) || void 0 === LQ ? void 0 : LQ.slice(0, uQ)) && void 0 !== wQ ? wQ : FQ
       } catch {
-        return Jd
+        return FQ
       }
     }
   },
-  36480: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => zd,
-      d: () => dJ,
-      g: () => wd,
-      h: () => Vd
+  35962: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => PQ,
+      d: () => dQ,
+      h: () => yQ,
+      l: () => gQ
     });
-    var pd = kd(2761),
-      Nd = kd(2781),
-      Wd = kd(6483),
-      Pd = kd(4563),
-      Zd = kd(2776),
-      gd = kd(2770);
-    const Cd = "bloxd-wasmDownloaded",
-      Kd = 12;
+    var LQ = wQ(2809),
+      qQ = wQ(2820),
+      oQ = wQ(6446),
+      DQ = wQ(4540),
+      kQ = wQ(2813),
+      vQ = wQ(2811);
+    const mQ = "bloxd-wasmDownloaded",
+      uQ = 12;
 
-    function od(dd) {
-      return dd.pathname.slice(dd.pathname.lastIndexOf("/") + 1)
+    function HQ(QQ) {
+      return QQ.pathname.slice(QQ.pathname.lastIndexOf("/") + 1)
     }
 
-    function ld() {
+    function bQ() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const dd = JSON.parse(localStorage.getItem(Cd) ?? "[]");
-        return Array.isArray(dd) ? dd.filter((dd => "string" === typeof dd)) : []
-      } catch (dd) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", dd), null
+        const QQ = JSON.parse(localStorage.getItem(mQ) ?? "[]");
+        return Array.isArray(QQ) ? QQ.filter((QQ => "string" === typeof QQ)) : []
+      } catch (QQ) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", QQ), null
       }
     }
-    const Qd = Reflect.apply,
-      Ld = "undefined" === typeof Worker ? void 0 : Worker,
-      Od = Ld?.prototype.postMessage,
-      ed = Ld?.prototype.terminate,
-      Rd = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      Id = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      Gd = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      vd = function() {
+    const YQ = Reflect.apply,
+      xQ = "undefined" === typeof Worker ? void 0 : Worker,
+      AQ = xQ?.prototype.postMessage,
+      tQ = xQ?.prototype.terminate,
+      eQ = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      MQ = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      GQ = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      pQ = function() {
         try {
-          return (0, Pd.m)(Ld, "Worker", !0) && (0, Pd.m)(Od, "postMessage") && (0, Pd.m)(ed, "terminate") && (0, Pd.m)(Gd, "buffer") && void 0 !== Rd && void 0 !== Id
+          return (0, DQ.g)(xQ, "Worker", !0) && (0, DQ.g)(AQ, "postMessage") && (0, DQ.g)(tQ, "terminate") && (0, DQ.g)(GQ, "buffer") && void 0 !== eQ && void 0 !== MQ
         } catch {
           return !1
         }
       }();
-    let xd = !1;
+    let cQ = !1;
 
-    function qd() {
-      return vd && !xd
+    function CQ() {
+      return pQ && !cQ
     }
-    class Bd {
+    class SQ {
       worker = null;
       failed = !1;
       constructor() {
-        if (qd()) try {
-          this.worker = ad(), Qd(Rd, this.worker, ["error", () => {
+        if (CQ()) try {
+          this.worker = WQ(), YQ(eQ, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -117,125 +117,125 @@ export const modules = {
         }
       }
       take() {
-        const dd = this.worker;
-        if (this.worker = null, null !== dd && this.failed) throw Qd(ed, dd, []), new Error("it did not run");
-        return dd
+        const QQ = this.worker;
+        if (this.worker = null, null !== QQ && this.failed) throw YQ(tQ, QQ, []), new Error("it did not run");
+        return QQ
       }
       stop() {
-        const dd = this.worker;
-        this.worker = null, null !== dd && Qd(ed, dd, [])
+        const QQ = this.worker;
+        this.worker = null, null !== QQ && YQ(tQ, QQ, [])
       }
     }
-    class sd {
+    class iQ {
       decoded;
       worker;
       reject;
-      constructor(dd, Jd, kd, pd, Wd) {
+      constructor(QQ, FQ, wQ, LQ, oQ) {
         try {
-          this.worker = Wd?.take() ?? ad()
-        } catch (Cd) {
-          throw xd = !0, new Error(`The zstd decoder's worker did not start: ${(0,Zd.e)(Cd)}`)
+          this.worker = oQ?.take() ?? WQ()
+        } catch (mQ) {
+          throw cQ = !0, new Error(`The zstd decoder's worker did not start: ${(0,kQ.d)(mQ)}`)
         }
-        const Pd = this.worker;
-        this.decoded = (0, Nd.h)(((Jd, Nd) => {
-          this.reject = Nd;
-          const Wd = (dd, Jd) => {
-            Qd(Rd, Pd, [dd, Jd])
+        const DQ = this.worker;
+        this.decoded = (0, qQ.h)(((FQ, qQ) => {
+          this.reject = qQ;
+          const oQ = (QQ, FQ) => {
+            YQ(eQ, DQ, [QQ, FQ])
           };
-          Wd("message", (dd => {
-            pd();
+          oQ("message", (QQ => {
+            LQ();
             try {
-              const pd = Qd(Id, dd, []);
-              if (!0 === pd) Jd();
+              const LQ = YQ(MQ, QQ, []);
+              if (!0 === LQ) FQ();
               else {
-                if ("string" === typeof pd) throw pd.startsWith(Zd.d) && (xd = !0), new Error(pd);
-                kd(pd, Qd(gd.s, pd, []))
+                if ("string" === typeof LQ) throw LQ.startsWith(kQ.b) && (cQ = !0), new Error(LQ);
+                wQ(LQ, YQ(vQ.C, LQ, []))
               }
-            } catch (Cd) {
-              Nd(Cd)
+            } catch (mQ) {
+              qQ(mQ)
             }
-          })), Wd("error", (() => {
-            xd = !0, Nd(new Error("The zstd decoder's worker did not run"))
-          })), Wd("messageerror", (() => {
-            Nd(new Error(`${dd}'s decoder sent a piece that could not be read`))
+          })), oQ("error", (() => {
+            cQ = !0, qQ(new Error("The zstd decoder's worker did not run"))
+          })), oQ("messageerror", (() => {
+            qQ(new Error(`${QQ}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, gd.T)(this.decoded), Qd(Od, Pd, [
-          [dd, Jd]
+        })), (0, vQ.hb)(this.decoded), YQ(AQ, DQ, [
+          [QQ, FQ]
         ])
       }
-      push(dd) {
-        Qd(Od, this.worker, [dd, [Qd(Gd, dd, [])]])
+      push(QQ) {
+        YQ(AQ, this.worker, [QQ, [YQ(GQ, QQ, [])]])
       }
       end() {
-        Qd(Od, this.worker, [null])
+        YQ(AQ, this.worker, [null])
       }
       markWorkerFailed() {
-        xd = !0
+        cQ = !0
       }
-      fail(dd) {
-        this.reject(dd), this.terminate()
+      fail(QQ) {
+        this.reject(QQ), this.terminate()
       }
       terminate() {
-        Qd(ed, this.worker, [])
+        YQ(tQ, this.worker, [])
       }
     }
 
-    function ad() {
-      if (globalThis.Worker !== Ld) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(kd.p + kd.u(65), kd.b), {
+    function WQ() {
+      if (globalThis.Worker !== xQ) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(wQ.p + wQ.u(65), wQ.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const Md = Reflect.apply,
-      Fd = ArrayBuffer,
-      Yd = "undefined" === typeof Response ? void 0 : Response,
-      md = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      bd = function() {
-        let dd;
-        void 0 !== md && new md({
+    const RQ = Reflect.apply,
+      OQ = ArrayBuffer,
+      sQ = "undefined" === typeof Response ? void 0 : Response,
+      rQ = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      IQ = function() {
+        let QQ;
+        void 0 !== rQ && new rQ({
           __proto__: null,
-          start(Jd) {
+          start(FQ) {
             const {
-              enqueue: kd,
-              close: pd,
-              error: Nd
-            } = Object.getPrototypeOf(Jd);
-            dd = {
-              enqueue: kd,
-              close: pd,
-              error: Nd
+              enqueue: wQ,
+              close: LQ,
+              error: qQ
+            } = Object.getPrototypeOf(FQ);
+            QQ = {
+              enqueue: wQ,
+              close: LQ,
+              error: qQ
             }
           }
         }, {
           __proto__: null
         });
-        return dd
+        return QQ
       }(),
-      Sd = function() {
+      UQ = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== bd && (0, Pd.m)(Yd, "Response", !0) && (0, Pd.m)(md, "ReadableStream", !0) && (0, Pd.m)(bd.enqueue, "enqueue") && (0, Pd.m)(bd.close, "close") && (0, Pd.m)(bd.error, "error") && (0, Pd.m)(gd.V, "body") && (0, Pd.m)(gd.K, "getReader") && (0, Pd.m)(gd.U, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== IQ && (0, DQ.g)(sQ, "Response", !0) && (0, DQ.g)(rQ, "ReadableStream", !0) && (0, DQ.g)(IQ.enqueue, "enqueue") && (0, DQ.g)(IQ.close, "close") && (0, DQ.g)(IQ.error, "error") && (0, DQ.g)(vQ.mb, "body") && (0, DQ.g)(vQ.$, "getReader") && (0, DQ.g)(vQ.jb, "read")
         } catch {
           return !1
         }
       }();
-    async function jd(dd, Jd, kd, pd, Wd, Pd, Cd) {
-      const Kd = new Fd(Jd),
+    async function NQ(QQ, FQ, wQ, LQ, oQ, DQ, mQ) {
+      const uQ = new OQ(FQ),
         {
-          controller: od,
-          compiled: ld
-        } = function(dd) {
+          controller: HQ,
+          compiled: bQ
+        } = function(QQ) {
           try {
-            let dd;
-            const Jd = new md({
+            let QQ;
+            const FQ = new rQ({
                 __proto__: null,
-                start(Jd) {
-                  dd = Jd
+                start(FQ) {
+                  QQ = FQ
                 }
               }, {
                 __proto__: null
               }),
-              kd = new Yd(Jd, {
+              wQ = new sQ(FQ, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -243,395 +243,395 @@ export const modules = {
                 }
               });
             return {
-              controller: dd,
-              compiled: (0, gd.T)((0, gd.x)((0, gd.db)(kd)))
+              controller: QQ,
+              compiled: (0, vQ.hb)((0, vQ.J)((0, vQ.wb)(wQ)))
             }
-          } catch (Jd) {
-            throw new Error(`${dd} could not be streamed into a compile: ${(0,Zd.e)(Jd)}`)
+          } catch (FQ) {
+            throw new Error(`${QQ} could not be streamed into a compile: ${(0,kQ.d)(FQ)}`)
           }
-        }(dd),
+        }(QQ),
         {
-          enqueue: Qd,
-          close: Ld,
-          error: Od
-        } = bd,
-        ed = dd => {
+          enqueue: YQ,
+          close: xQ,
+          error: AQ
+        } = IQ,
+        tQ = QQ => {
           try {
-            Md(Od, od, [dd])
+            RQ(AQ, HQ, [QQ])
           } catch {}
         };
-      let Rd = 0;
-      const Id = (kd, pd) => {
-        if (Rd + pd > Jd) throw new Error(`${dd} decoded past its module's ${Jd} bytes`);
-        Md(gd.Y, new gd.k(Kd), [new gd.k(kd), Rd]);
+      let eQ = 0;
+      const MQ = (wQ, LQ) => {
+        if (eQ + LQ > FQ) throw new Error(`${QQ} decoded past its module's ${FQ} bytes`);
+        RQ(vQ.qb, new vQ.p(uQ), [new vQ.p(wQ), eQ]);
         try {
-          Md(Qd, od, [new gd.k(Kd, Rd, pd)])
+          RQ(YQ, HQ, [new vQ.p(uQ, eQ, LQ)])
         } catch {}
-        Rd += pd
+        eQ += LQ
       };
-      let Gd, vd;
+      let GQ, pQ;
       try {
-        Gd = new sd(dd, Jd, Id, pd, Cd)
-      } catch (ad) {
-        throw ed(ad), ad
+        GQ = new iQ(QQ, FQ, MQ, LQ, mQ)
+      } catch (WQ) {
+        throw tQ(WQ), WQ
       }
-      const xd = dd => {
-        Gd.fail(dd), void 0 !== vd && Xd(vd)
+      const cQ = QQ => {
+        GQ.fail(QQ), void 0 !== pQ && TQ(pQ)
       };
-      let qd = !1;
-      kd.addEventListener("abort", (() => {
-        qd && Gd.markWorkerFailed(), xd(new Error(`${dd} stalled`))
+      let CQ = !1;
+      wQ.addEventListener("abort", (() => {
+        CQ && GQ.markWorkerFailed(), cQ(new Error(`${QQ} stalled`))
       }), {
         once: !0
-      }), (0, Nd.s)(ld, (() => {}), xd);
+      }), (0, qQ.p)(bQ, (() => {}), cQ);
       try {
-        let Pd;
+        let DQ;
         try {
-          Pd = await fetch(dd, {
-            signal: kd
+          DQ = await fetch(QQ, {
+            signal: wQ
           })
-        } catch (ad) {
-          throw new Error(`Fetching ${dd} failed: ${(0,Zd.e)(ad)}`)
+        } catch (WQ) {
+          throw new Error(`Fetching ${QQ} failed: ${(0,kQ.d)(WQ)}`)
         }
         const {
-          ok: Cd,
-          status: Kd,
-          body: od
-        } = function(dd, Jd) {
+          ok: mQ,
+          status: uQ,
+          body: HQ
+        } = function(QQ, FQ) {
           try {
             const {
-              ok: dd,
-              status: kd
-            } = Jd;
+              ok: QQ,
+              status: wQ
+            } = FQ;
             return {
-              ok: dd,
-              status: kd,
-              body: Md(gd.V, Jd, [])
+              ok: QQ,
+              status: wQ,
+              body: RQ(vQ.mb, FQ, [])
             }
           } catch {
-            throw new Error(`${dd} came in a response a page script made`)
+            throw new Error(`${QQ} came in a response a page script made`)
           }
-        }(dd, Pd);
-        if (!Cd) throw new Error(`Fetching ${dd} failed: HTTP ${Kd}`);
-        pd();
-        const ld = Md(gd.K, od, []);
-        vd = ld;
-        const Qd = () => {
-          Xd(ld)
+        }(QQ, DQ);
+        if (!mQ) throw new Error(`Fetching ${QQ} failed: HTTP ${uQ}`);
+        LQ();
+        const bQ = RQ(vQ.$, HQ, []);
+        pQ = bQ;
+        const YQ = () => {
+          TQ(bQ)
         };
-        for ((0, Nd.s)(Gd.decoded, Qd, Qd);;) {
-          let Jd;
+        for ((0, qQ.p)(GQ.decoded, YQ, YQ);;) {
+          let FQ;
           try {
-            Jd = await Md(gd.U, ld, [])
-          } catch (ad) {
-            throw new Error(`Downloading ${dd} failed: ${(0,Zd.e)(ad)}`)
+            FQ = await RQ(vQ.jb, bQ, [])
+          } catch (WQ) {
+            throw new Error(`Downloading ${QQ} failed: ${(0,kQ.d)(WQ)}`)
           }
-          if (Jd.done) break;
-          pd(), Gd.push(Jd.value)
+          if (FQ.done) break;
+          LQ(), GQ.push(FQ.value)
         }
-        if (qd = !0, Gd.end(), await Gd.decoded, Wd(), Rd !== Jd) throw new Error(`${dd} ended before its module did`)
-      } catch (ad) {
-        throw ed(ad), xd(ad), ad
+        if (CQ = !0, GQ.end(), await GQ.decoded, oQ(), eQ !== FQ) throw new Error(`${QQ} ended before its module did`)
+      } catch (WQ) {
+        throw tQ(WQ), cQ(WQ), WQ
       }
-      Gd.terminate();
+      GQ.terminate();
       try {
-        Md(Ld, od, [])
+        RQ(xQ, HQ, [])
       } catch {}
-      const Bd = await ld;
-      return void 0 !== Pd && await (0, gd.v)(dd, new gd.k(Kd), {
-        sha256: Pd.sha256,
+      const SQ = await bQ;
+      return void 0 !== DQ && await (0, vQ.F)(QQ, new vQ.p(uQ), {
+        sha256: DQ.sha256,
         onMismatch: () => {}
-      }), Bd
+      }), SQ
     }
 
-    function Xd(dd) {
+    function TQ(QQ) {
       try {
-        (0, gd.T)(dd.cancel())
+        (0, vQ.hb)(QQ.cancel())
       } catch {}
     }
-    const fd = ".zst.bin",
-      nd = 1e3;
-    let Ud = null;
+    const KQ = ".zst.bin",
+      zQ = 1e3;
+    let lQ = null;
 
-    function yd(dd) {
-      return Ud ??= function() {
-        const dd = new Map,
-          Jd = "bloxd_wasm_webgpu:5005524,bloxd_wasm_webgl:5369180,bloxd_wasm_webgl1:4769475,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3671383";
-        for (const kd of Jd?.split(",") ?? []) {
-          const [Jd = "", pd] = kd.split(":"), Nd = Number(pd);
-          Number.isInteger(Nd) && Nd > 0 && dd.set(Jd, Nd)
+    function jQ(QQ) {
+      return lQ ??= function() {
+        const QQ = new Map,
+          FQ = "bloxd_wasm_webgpu:5006327,bloxd_wasm_webgl:5369983,bloxd_wasm_webgl1:4770278,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3672186";
+        for (const wQ of FQ?.split(",") ?? []) {
+          const [FQ = "", LQ] = wQ.split(":"), qQ = Number(LQ);
+          Number.isInteger(qQ) && qQ > 0 && QQ.set(FQ, qQ)
         }
-        return dd
-      }(), Ud.get(dd)
+        return QQ
+      }(), lQ.get(QQ)
     }
-    async function Dd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const pd = yd(dd.name);
-      if (void 0 === pd) return Td(await Ed(dd, Jd, kd), "cold-wasm");
-      const Wd = Sd ? new Bd : null;
-      let Pd;
+    async function aQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const LQ = jQ(QQ.name);
+      if (void 0 === LQ) return XQ(await fQ(QQ, FQ, wQ), "cold-wasm");
+      const oQ = UQ ? new SQ : null;
+      let DQ;
       try {
-        if (Cd = dd.url(), ld()?.includes(od(Cd)) && await async function(dd) {
-            const Jd = new AbortController;
-            let kd;
-            const pd = (0, Nd.h)((dd => {
-              kd = setTimeout((() => {
-                Jd.abort(), dd(null)
-              }), nd)
+        if (mQ = QQ.url(), bQ()?.includes(HQ(mQ)) && await async function(QQ) {
+            const FQ = new AbortController;
+            let wQ;
+            const LQ = (0, qQ.h)((QQ => {
+              wQ = setTimeout((() => {
+                FQ.abort(), QQ(null)
+              }), zQ)
             }));
             try {
-              const kd = fetch(dd.href, {
+              const wQ = fetch(QQ.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: Jd.signal
+                  signal: FQ.signal
                 }),
-                Wd = await (0, Nd.r)([kd, pd]);
-              return !!Wd?.ok && ((0, gd.T)(Wd.body.cancel()), !0)
+                oQ = await (0, qQ.n)([wQ, LQ]);
+              return !!oQ?.ok && ((0, vQ.hb)(oQ.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(kd)
+              clearTimeout(wQ)
             }
-          }(dd.url())) return Wd?.stop(), await async function(dd, Jd, kd, pd) {
-          let Nd = !1;
-          const Wd = kd && {
-            sha256: kd.sha256,
+          }(QQ.url())) return oQ?.stop(), await async function(QQ, FQ, wQ, LQ) {
+          let qQ = !1;
+          const oQ = wQ && {
+            sha256: wQ.sha256,
             onMismatch: () => {
-              Nd = !0
+              qQ = !0
             }
           };
           try {
-            return Td(await Ed(dd, Wd, pd), "warm")
-          } catch (Pd) {
-            const pd = await cd(dd, Jd, kd, null);
-            if (null === pd) throw Nd && kd.onMismatch(), Pd;
-            return console.warn(`${dd.url().href} from the HTTP cache failed: ${(0,Zd.e)(Pd)}: loaded its copy instead`), Td(pd, Nd ? "warm-refused" : "warm-broken")
+            return XQ(await fQ(QQ, oQ, LQ), "warm")
+          } catch (DQ) {
+            const LQ = await VQ(QQ, FQ, wQ, null);
+            if (null === LQ) throw qQ && wQ.onMismatch(), DQ;
+            return console.warn(`${QQ.url().href} from the HTTP cache failed: ${(0,kQ.d)(DQ)}: loaded its copy instead`), XQ(LQ, qQ ? "warm-refused" : "warm-broken")
           }
-        }(dd, pd, Jd, kd);
-        Pd = await cd(dd, pd, Jd, Wd)
+        }(QQ, LQ, FQ, wQ);
+        DQ = await VQ(QQ, LQ, FQ, oQ)
       } finally {
-        Wd?.stop()
+        oQ?.stop()
       }
-      var Cd;
-      return null !== Pd ? Td(Pd, "cold-worker") : Td(await Ed(dd, Jd, kd), "cold-wasm")
+      var mQ;
+      return null !== DQ ? XQ(DQ, "cold-worker") : XQ(await fQ(QQ, FQ, wQ), "cold-wasm")
     }
 
-    function Td(dd, Jd) {
+    function XQ(QQ, FQ) {
       return {
         __proto__: null,
-        module: dd,
-        path: Jd
+        module: QQ,
+        path: FQ
       }
     }
 
-    function Ed(dd, Jd, kd) {
-      return void 0 === yd(dd.name) ? (0, gd.B)(dd.url(), Jd, kd) : (0, gd.B)(dd.url(), Jd, {
-        ...kd,
+    function fQ(QQ, FQ, wQ) {
+      return void 0 === jQ(QQ.name) ? (0, vQ.R)(QQ.url(), FQ, wQ) : (0, vQ.R)(QQ.url(), FQ, {
+        ...wQ,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(dd) {
-            const Jd = ld();
-            if (null === Jd) return;
-            const kd = od(dd),
-              pd = Jd.filter((dd => dd !== kd));
-            pd.push(kd);
+          ! function(QQ) {
+            const FQ = bQ();
+            if (null === FQ) return;
+            const wQ = HQ(QQ),
+              LQ = FQ.filter((QQ => QQ !== wQ));
+            LQ.push(wQ);
             try {
-              localStorage.setItem(Cd, JSON.stringify(pd.slice(-Kd)))
-            } catch (Nd) {
-              console.warn(`Bloxd wasm: ${kd} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Nd)
+              localStorage.setItem(mQ, JSON.stringify(LQ.slice(-uQ)))
+            } catch (qQ) {
+              console.warn(`Bloxd wasm: ${wQ} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, qQ)
             }
-          }(dd.url()), kd.onDownloaded?.()
+          }(QQ.url()), wQ.onDownloaded?.()
         }
       })
     }
-    async function cd(dd, Jd, kd, pd) {
-      if (!Sd || !qd()) return null;
-      const Nd = dd.url(),
-        Wd = `${Nd.href}${fd}`;
+    async function VQ(QQ, FQ, wQ, LQ) {
+      if (!UQ || !CQ()) return null;
+      const qQ = QQ.url(),
+        oQ = `${qQ.href}${KQ}`;
       try {
-        return await (0, gd.$)(Wd, ((dd, Nd, Pd) => jd(Wd, Jd, dd, Nd, Pd, kd, pd)))
-      } catch (Pd) {
-        return console.warn(`${(0,Zd.e)(Pd)}: loading ${Nd.href} instead`), null
+        return await (0, vQ.ub)(oQ, ((QQ, qQ, DQ) => NQ(oQ, FQ, QQ, qQ, DQ, wQ, LQ)))
+      } catch (DQ) {
+        return console.warn(`${(0,kQ.d)(DQ)}: loading ${qQ.href} instead`), null
       }
     }
-    let hd = null,
-      rd = !1;
-    const ud = new Map,
-      td = new Map;
+    let hQ = null,
+      JQ = !1;
+    const EQ = new Map,
+      nQ = new Map;
 
-    function Vd(dd, Jd, kd) {
-      return null === hd ? hd = Hd(dd, Jd) : dd !== hd.build ? console.warn(`Bloxd wasm: ${dd.name} was asked for after ${hd.build.name} started loading, which this thread keeps`) : Jd.name !== hd.workers.name && console.warn(`Bloxd wasm: ${Jd.name} was asked for workers after ${hd.workers.name}, which this thread keeps`), kd?.reloadFailedDownload && !rd && (0, pd.U)() && (rd = !0, hd = Hd(hd.build, hd.workers)), hd.loaded
+    function gQ(QQ, FQ, wQ) {
+      return null === hQ ? hQ = ZQ(QQ, FQ) : QQ !== hQ.build ? console.warn(`Bloxd wasm: ${QQ.name} was asked for after ${hQ.build.name} started loading, which this thread keeps`) : FQ.name !== hQ.workers.name && console.warn(`Bloxd wasm: ${FQ.name} was asked for workers after ${hQ.workers.name}, which this thread keeps`), wQ?.reloadFailedDownload && !JQ && (0, LQ.R)() && (JQ = !0, hQ = ZQ(hQ.build, hQ.workers)), hQ.loaded
     }
 
-    function zd(dd, Jd) {
-      if (null !== hd) return (0, Nd.e)([]);
-      const kd = dd.filter((dd => !ud.has(dd.name))).map((dd => {
-        const kd = new AbortController,
-          pd = {
-            compiled: Ed(dd, (0, Wd.e)(dd.name), {
-              priority: Jd,
-              CJ: kd.signal,
+    function PQ(QQ, FQ) {
+      if (null !== hQ) return (0, qQ.e)([]);
+      const wQ = QQ.filter((QQ => !EQ.has(QQ.name))).map((QQ => {
+        const wQ = new AbortController,
+          LQ = {
+            compiled: fQ(QQ, (0, oQ.e)(QQ.name), {
+              priority: FQ,
+              wF: wQ.signal,
               onDownloaded: () => {
-                pd.downloaded = !0
+                LQ.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  pd.downloaded = !1, null !== hd && kd.abort()
+                  LQ.downloaded = !1, null !== hQ && wQ.abort()
                 }
               }
             }),
-            cancel: kd,
+            cancel: wQ,
             downloaded: !1
           };
-        return ud.set(dd.name, pd), (0, Nd.h)((Jd => {
-          (0, Nd.s)(pd.compiled, (() => {
-            pd.downloaded = !0, Jd()
-          }), (pd => {
-            kd.signal.aborted || console.warn(`Bloxd wasm: ${dd.name}'s compile ahead of the load failed: the load compiles it afresh`, pd), Jd()
+        return EQ.set(QQ.name, LQ), (0, qQ.h)((FQ => {
+          (0, qQ.p)(LQ.compiled, (() => {
+            LQ.downloaded = !0, FQ()
+          }), (LQ => {
+            wQ.signal.aborted || console.warn(`Bloxd wasm: ${QQ.name}'s compile ahead of the load failed: the load compiles it afresh`, LQ), FQ()
           }))
         }))
       }));
-      return (0, Nd.e)(kd)
+      return (0, qQ.e)(wQ)
     }
 
-    function Hd(dd, Jd) {
-      const kd = (0, pd.F)((async () => {
-        (0, Pd.H)(), td.clear();
-        const kd = Ad(dd),
-          pd = Jd.name === dd.name ? kd : Ad(Jd);
+    function ZQ(QQ, FQ) {
+      const wQ = (0, LQ.E)((async () => {
+        (0, DQ.q)(), nQ.clear();
+        const wQ = BQ(QQ),
+          LQ = FQ.name === QQ.name ? wQ : BQ(FQ);
         for (const {
-            cancel: dd
+            cancel: QQ
           }
-          of ud.values()) dd.abort();
-        ud.clear(), await (0, Nd.e)([kd, pd]);
-        const Wd = await kd,
-          Zd = await pd;
-        return (0, Pd.H)(), {
-          module: Wd,
-          workerModule: Zd
+          of EQ.values()) QQ.abort();
+        EQ.clear(), await (0, qQ.e)([wQ, LQ]);
+        const oQ = await wQ,
+          kQ = await LQ;
+        return (0, DQ.q)(), {
+          module: oQ,
+          workerModule: kQ
         }
-      }), dd);
+      }), QQ);
       return {
-        build: dd,
-        workers: Jd,
-        loaded: kd
+        build: QQ,
+        workers: FQ,
+        loaded: wQ
       }
     }
 
-    function wd(dd) {
-      return td.get(dd)
+    function yQ(QQ) {
+      return nQ.get(QQ)
     }
 
-    function Ad(dd) {
-      const Jd = performance.now(),
-        kd = ud.get(dd.name);
-      ud.delete(dd.name);
-      const pd = !0 === kd?.downloaded ? kd : void 0;
-      return void 0 !== kd && void 0 === pd && kd.cancel.abort(), (0, Nd.h)(((kd, Wd) => {
-        const Pd = (pd, Nd) => {
-            td.set(dd.name, {
-              path: Nd,
-              ms: performance.now() - Jd
-            }), kd(pd)
+    function BQ(QQ) {
+      const FQ = performance.now(),
+        wQ = EQ.get(QQ.name);
+      EQ.delete(QQ.name);
+      const LQ = !0 === wQ?.downloaded ? wQ : void 0;
+      return void 0 !== wQ && void 0 === LQ && wQ.cancel.abort(), (0, qQ.h)(((wQ, oQ) => {
+        const DQ = (LQ, qQ) => {
+            nQ.set(QQ.name, {
+              path: qQ,
+              ms: performance.now() - FQ
+            }), wQ(LQ)
           },
-          Zd = () => {
-            (0, Nd.s)(JJ(dd), (dd => {
+          kQ = () => {
+            (0, qQ.p)(QF(QQ), (QQ => {
               let {
-                module: Jd,
-                path: kd
-              } = dd;
-              Pd(Jd, kd)
-            }), Wd)
+                module: FQ,
+                path: wQ
+              } = QQ;
+              DQ(FQ, wQ)
+            }), oQ)
           };
-        void 0 === pd ? Zd() : (0, Nd.s)(pd.compiled, (dd => {
-          Pd(dd, "ahead")
-        }), Zd)
+        void 0 === LQ ? kQ() : (0, qQ.p)(LQ.compiled, (QQ => {
+          DQ(QQ, "ahead")
+        }), kQ)
       }))
     }
-    async function dJ(dd, Jd) {
+    async function dQ(QQ, FQ) {
       const {
-        module: kd
-      } = await JJ(dd, {
-        retries: Jd
+        module: wQ
+      } = await QF(QQ, {
+        retries: FQ
       });
-      return kd
+      return wQ
     }
-    async function JJ(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await Dd(dd, (0, Wd.e)(dd.name), Jd)
+    async function QF(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await aQ(QQ, (0, oQ.e)(QQ.name), FQ)
     }
   },
-  6483: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Pd
+  6446: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => DQ
     });
-    var pd = kd(2770);
-    const Nd = {
-      bloxd_wasm: () => "67c6401d5811eb7b9cff2814a29f966a9dd1ab923e175fa19497af26b4502816",
-      bloxd_wasm_client: () => "6258b24df63176123d93f549bb48f56da442317b3a5ee1b22458e2637caf578d",
-      bloxd_wasm_workers: () => "be7c28fa29cbecc24e19062f2c6bc0a5894a203c3dda65452eccc860e930d821",
-      bloxd_wasm_models: () => "6bdd581d4d0becff3e95b66a27a1a5da4e04f924bcd5bc0dd36e885168896016",
-      bloxd_wasm_webgpu: () => "7696327997962eac9535a5b8094b153b4298d06883723f642562040590146af1",
-      bloxd_wasm_webgl: () => "8873dc66cf374a905034792d179a1bc9e3d8a0d5138b511825a78d7a954240d0",
-      bloxd_wasm_webgl1: () => "8397ed5ce5c8ac7579e7003101c4f8c9a1ce8368296cd2e41ac9a9b90beb7a65",
-      bloxd_wasm_replay: () => "d71b023241834dbfc2db6804be33469db924450506350004c541b0b754121656",
-      bloxd_wasm_recorder: () => "f2e9b9c8ae12c235b86b64a44b272450d96f214d5d6982878bbf330e3339f352",
-      bloxd_wasm_anim: () => "3c8d34a5af00d244cdef6e97addab208455d3fad6df89d6004ea567630021fe8",
-      bloxd_wasm_textures: () => "dfcd6892e79c79af74dba72d92f489620c1624d3bfcd825b670886933b48749c",
-      bloxd_wasm_shader_pack: () => "ca7501d2ff0cccb80272a18641201d2ce4e4b1e9ec5a5ceca284d9a4fa45907f"
+    var LQ = wQ(2811);
+    const qQ = {
+      bloxd_wasm: () => "1dd71b260cf77c239728051b861ab33f1bc93c07cb4fd28db7884da2815d9fb7",
+      bloxd_wasm_client: () => "3cfdd659c2eb8b6808b191f6b866ba4e169bdaee4701af255db5568969af1bb7",
+      bloxd_wasm_workers: () => "e767134c25f99ed90bec9c0af92587618ddb83193667d16121760ce713ad3288",
+      bloxd_wasm_models: () => "7efbd9cd4bdaa31a2b1cc79e297121e9fc854705c550b2f59e1da981f144f4cb",
+      bloxd_wasm_webgpu: () => "5a2823876f9d5f8660104cc25ddeb02c3ddbc283e88525fa31e6d0deaa802210",
+      bloxd_wasm_webgl: () => "08bd13fedb12bff9b9605ef44db652dccf2f7dcf60a963258385b5f773a6f220",
+      bloxd_wasm_webgl1: () => "d6f63b1aa81b972a9480431e3334c89fc0648b9790fe3b5c8ff72a4945814f45",
+      bloxd_wasm_replay: () => "225276b91dfdf588b8a1477982fd12458f6ce65cfbaf6a782c82ab32d22513fb",
+      bloxd_wasm_recorder: () => "5fccb956d97b8d65d45cf6afb9a7042d1e4e4bad858c8aa1ec94da37e97ec72f",
+      bloxd_wasm_anim: () => "3f5071fcbbd4cd73afc810a4abff7c2f49f86a8638003d25fa9521ff9c12ae28",
+      bloxd_wasm_textures: () => "f13f878b8e801e1b7391eae5c539ceb75b7c99a88018bdad896fe7b520427f2f",
+      bloxd_wasm_shader_pack: () => "e521fc18804ece0348d56f2c73e39ef69fee01e1ad9f9c53d92bd0fdbf472492"
     };
-    var Wd = kd(4563);
+    var oQ = wQ(4540);
 
-    function Pd(dd) {
-      const Jd = Object.prototype.hasOwnProperty.call(Nd, dd) ? Nd[dd]() : void 0;
-      if (void 0 !== Jd) return {
-        sha256: Jd,
-        onMismatch: Wd.G
+    function DQ(QQ) {
+      const FQ = Object.prototype.hasOwnProperty.call(qQ, QQ) ? qQ[QQ]() : void 0;
+      if (void 0 !== FQ) return {
+        sha256: FQ,
+        onMismatch: oQ.o
       };
-      throw new pd.f(`${dd} has no release digest, so this build refuses it`)
+      throw new LQ.j(`${QQ} has no release digest, so this build refuses it`)
     }
   },
-  36448: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd,
-      f: () => Wd,
-      g: () => gd,
-      h: () => Pd,
-      k: () => Nd
+  35929: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => LQ,
+      g: () => oQ,
+      k: () => vQ,
+      m: () => DQ,
+      o: () => qQ
     });
-    const pd = /^alloc_failed (\d+) bytes$/;
+    const LQ = /^alloc_failed (\d+) bytes$/;
 
-    function Nd(dd, Jd) {
-      return Wd(dd, Jd) ? `trap=alloc_failed ${Jd} bytes` : `trap=${dd}`
+    function qQ(QQ, FQ) {
+      return oQ(QQ, FQ) ? `trap=alloc_failed ${FQ} bytes` : `trap=${QQ}`
     }
 
-    function Wd(dd, Jd) {
-      return "unreachable" === dd && Jd > 0
+    function oQ(QQ, FQ) {
+      return "unreachable" === QQ && FQ > 0
     }
 
-    function Pd(dd, Jd, kd) {
-      const pd = function(dd) {
-        return dd instanceof WebAssembly.RuntimeError ? /unreachable/i.test(dd.message) ? "unreachable" : /out of bounds/i.test(dd.message) ? "out_of_bounds" : "runtime_error" : (dd instanceof RangeError || dd instanceof Error && "InternalError" === dd.name) && /call stack|recursion/i.test(dd.message) ? "stack_overflow" : "js_error"
-      }(dd);
-      if ("unreachable" !== pd) return {
-        kind: pd,
+    function DQ(QQ, FQ, wQ) {
+      const LQ = function(QQ) {
+        return QQ instanceof WebAssembly.RuntimeError ? /unreachable/i.test(QQ.message) ? "unreachable" : /out of bounds/i.test(QQ.message) ? "out_of_bounds" : "runtime_error" : (QQ instanceof RangeError || QQ instanceof Error && "InternalError" === QQ.name) && /call stack|recursion/i.test(QQ.message) ? "stack_overflow" : "js_error"
+      }(QQ);
+      if ("unreachable" !== LQ) return {
+        kind: LQ,
         panic: null,
         refusedBytes: 0
       };
-      const Nd = Jd(),
-        Wd = kd();
+      const qQ = FQ(),
+        oQ = wQ();
       return {
-        kind: pd,
-        panic: Wd > 0 ? null : Nd,
-        refusedBytes: Wd
+        kind: LQ,
+        panic: oQ > 0 ? null : qQ,
+        refusedBytes: oQ
       }
     }
-    const Zd = 300;
+    const kQ = 300;
 
-    function gd(dd) {
-      return dd.replace(/\s*\n\s*/g, " / ").slice(0, Zd)
+    function vQ(QQ) {
+      return QQ.replace(/\s*\n\s*/g, " / ").slice(0, kQ)
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

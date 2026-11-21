@@ -16,21 +16,21 @@ Each report is updated in place on every build and links directly to immutable G
 
 | Environment | Checked at (JST) | Build | Main bundle |
 |---|---|---|---|
-| bloxd.io | 2026-11-21T09:59:33+09:00 | x17cru.159bd7ce | `bundles/bloxd.io/main.js` · 2.87 MB · `7432f7c540c0…` |
-| preprod.bloxd.io | 2026-11-21T10:00:10+09:00 | bbb6l5.0244a119 | `bundles/preprod.bloxd.io/main.js` · 2.81 MB · `2bcea8aa5ef1…` |
-| staging.bloxd.io | 2026-11-21T10:00:10+09:00 | x17cru.159bd7ce | `bundles/staging.bloxd.io/main.js` · 2.87 MB · `7432f7c540c0…` |
+| bloxd.io | 2026-11-21T12:06:22+09:00 | bqoxjr.2558012f | `bundles/bloxd.io/main.js` · 2.87 MB · `1f0cbd33c01c…` |
+| preprod.bloxd.io | 2026-11-21T12:06:48+09:00 | bbb6l5.0244a119 | `bundles/preprod.bloxd.io/main.js` · 2.81 MB · `2bcea8aa5ef1…` |
+| staging.bloxd.io | 2026-11-21T12:06:48+09:00 | bqoxjr.2558012f | `bundles/staging.bloxd.io/main.js` · 2.87 MB · `1f0cbd33c01c…` |
 
 ## Main bundle details
 
-- **bloxd.io** — source: https://bloxd.io/static/js/x17cru.main.159bd7ce.js
-  - file: `bundles/bloxd.io/main.js` · 3,009,269 bytes (2.87 MB)
-  - sha256: `7432f7c540c08728905f1de5b600e939e6bc597fa0a49e7053d3810f7deb568e`
-  - archived build files: 435 (45.20 MB total, full manifest in `.monitor-state.json`)
+- **bloxd.io** — source: https://bloxd.io/static/js/bqoxjr.main.2558012f.js
+  - file: `bundles/bloxd.io/main.js` · 3,012,830 bytes (2.87 MB)
+  - sha256: `1f0cbd33c01c889bea13bbaf0293d54122b0c9eb07d49232f34e7c9993cbea85`
+  - archived build files: 435 (45.17 MB total, full manifest in `.monitor-state.json`)
 - **preprod.bloxd.io** — source: https://preprod.bloxd.io/static/js/bbb6l5.main.0244a119.js
   - file: `bundles/preprod.bloxd.io/main.js` · 2,941,950 bytes (2.81 MB)
   - sha256: `2bcea8aa5ef1004dc1ba864857b4160ef0c66841673a7c10f7e58402158abdaa`
   - archived build files: 435 (45.13 MB total, full manifest in `.monitor-state.json`)
-- **staging.bloxd.io** — source: https://staging.bloxd.io/static/js/x17cru.main.159bd7ce.js
-  - file: `bundles/staging.bloxd.io/main.js` · 3,009,269 bytes (2.87 MB)
-  - sha256: `7432f7c540c08728905f1de5b600e939e6bc597fa0a49e7053d3810f7deb568e`
-  - archived build files: 435 (45.20 MB total, full manifest in `.monitor-state.json`)
+- **staging.bloxd.io** — source: https://staging.bloxd.io/static/js/bqoxjr.main.2558012f.js
+  - file: `bundles/staging.bloxd.io/main.js` · 3,012,830 bytes (2.87 MB)
+  - sha256: `1f0cbd33c01c889bea13bbaf0293d54122b0c9eb07d49232f34e7c9993cbea85`
+  - archived build files: 435 (45.17 MB total, full manifest in `.monitor-state.json`)

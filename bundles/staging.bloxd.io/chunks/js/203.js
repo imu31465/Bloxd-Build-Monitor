@@ -1,330 +1,330 @@
 export const id = 203;
 export const ids = [203];
 export const modules = {
-  36430: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      WasmTextureWorker: () => Id
+  35911: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      WasmTextureWorker: () => MQ
     });
-    var pd = kd(597),
-      Nd = kd(3042),
-      Wd = kd(36432),
-      Pd = kd.n(Wd);
+    var LQ = wQ(609),
+      qQ = wQ(3067),
+      oQ = wQ(35914),
+      DQ = wQ.n(oQ);
 
-    function Zd() {
-      return Pd()('(()=>{var dd={d:(Jd,kd)=>{for(var pd in kd)dd.o(kd,pd)&&!dd.o(Jd,pd)&&Object.defineProperty(Jd,pd,{enumerable:!0,get:kd[pd]})},o:(dd,Jd)=>Object.prototype.hasOwnProperty.call(dd,Jd),r:dd=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(dd,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(dd,"__esModule",{value:!0})}},Jd={};dd.r(Jd),dd.d(Jd,{ed:()=>kd,hK:()=>pd,default:()=>md,initSync:()=>Yd,rK:()=>Nd});class kd{__destroy_into_raw(){const dd=this.__wbg_ptr;return this.__wbg_ptr=0,Pd.unregister(this),dd}free(){const dd=this.__destroy_into_raw();ad.RvE8(dd,0)}ad(dd){const Jd=function(dd,Jd){const kd=Jd(1*dd.length,1)>>>0;return Ld().set(dd,kd/1),Md=dd.length,kd}(dd,ad.fIyq),kd=Md;return ad.RwKG(this.__wbg_ptr,Jd,kd)>>>0}md(){const dd=ad.a6wG(this.__wbg_ptr);var Jd=Zd(dd[0],dd[1]).slice();return ad.nAXx(dd[0],4*dd[1],4),Jd}nd(){let dd,Jd;try{const kd=ad.FibD(this.__wbg_ptr);return dd=kd[0],Jd=kd[1],Kd(kd[0],kd[1])}finally{ad.nAXx(dd,Jd,1)}}dk(){return ad.cnEV(this.__wbg_ptr)>>>0}op(){return ad.x9Ws(this.__wbg_ptr)>>>0}dg(){let dd,Jd;try{const kd=ad.XwZe(this.__wbg_ptr);return dd=kd[0],Jd=kd[1],Kd(kd[0],kd[1])}finally{ad.nAXx(dd,Jd,1)}}GC(){const dd=ad.SkLW(this.__wbg_ptr);var Jd=Zd(dd[0],dd[1]).slice();return ad.nAXx(dd[0],4*dd[1],4),Jd}do(){const dd=ad.sT8n(this.__wbg_ptr);var Jd,kd,pd=(Jd=dd[0],kd=dd[1],Jd>>>=0,Cd().subarray(Jd/8,Jd/8+kd)).slice();return ad.nAXx(dd[0],8*dd[1],8),pd}So(){return ad.GdY3(this.__wbg_ptr)>>>0}uO(dd){const Jd=ad.oedv(this.__wbg_ptr,dd);if(Jd[1])throw Gd(Jd[0])}tO(){ad.Zmol(this.__wbg_ptr)}zO(){ad.xCJs(this.__wbg_ptr)}TO(){const dd=ad.tYNO(this.__wbg_ptr);if(dd[1])throw Gd(dd[0])}wO(){return ad.xIU8(this.__wbg_ptr)>>>0}VO(){const dd=ad.pHNt(this.__wbg_ptr);if(dd[1])throw Gd(dd[0])}AO(dd,Jd){const kd=ad.ggXG(this.__wbg_ptr,dd,Jd);if(kd[1])throw Gd(kd[0])}de(dd){let Jd,kd;try{const Wd=ad.gyPJ(this.__wbg_ptr,dd);var pd=Wd[0],Nd=Wd[1];if(Wd[3])throw pd=0,Nd=0,Gd(Wd[2]);return Jd=pd,kd=Nd,Kd(pd,Nd)}finally{ad.nAXx(Jd,kd,1)}}Je(dd){return ad.qld3(this.__wbg_ptr,dd)>>>0}ke(dd){return ad.J9fZ(this.__wbg_ptr,dd)>>>0}To(){const dd=ad.PFOl(this.__wbg_ptr);var Jd=Zd(dd[0],dd[1]).slice();return ad.nAXx(dd[0],4*dd[1],4),Jd}pe(){return 0!==ad.F9KW(this.__wbg_ptr)}constructor(dd,Jd,kd,pd,Nd,Wd){const Zd=Id(dd,ad.fIyq,ad.l5wA),gd=Md,Kd=Rd(Jd,ad.fIyq),od=Md,ld=function(dd,Jd){const kd=Jd(8*dd.length,8)>>>0;return Cd().set(dd,kd/8),Md=dd.length,kd}(kd,ad.fIyq),Qd=Md,Ld=Rd(pd,ad.fIyq),Od=Md,ed=Rd(Nd,ad.fIyq),vd=Md,xd=ad.dEm9(Zd,gd,Kd,od,ld,Qd,Ld,Od,ed,vd,Wd);if(xd[2])throw Gd(xd[1]);return this.__wbg_ptr=xd[0],Pd.register(this,this.__wbg_ptr,this),this}Ne(){let dd,Jd;try{const kd=ad.eRWB(this.__wbg_ptr);return dd=kd[0],Jd=kd[1],Kd(kd[0],kd[1])}finally{ad.nAXx(dd,Jd,1)}}We(dd,Jd){const kd=Id(dd,ad.fIyq,ad.l5wA),pd=Md,Nd=Rd(Jd,ad.fIyq),Wd=Md,Pd=ad.QpUv(this.__wbg_ptr,kd,pd,Nd,Wd);if(Pd[1])throw Gd(Pd[0])}Pe(){return ad.g33g(this.__wbg_ptr)>>>0}Ze(){return ad.Caj1(this.__wbg_ptr)>>>0}HO(){return ad.zx9I(this.__wbg_ptr)>>>0}co(){return ad.Ru7h(this.__wbg_ptr)>>>0}warnings(){let dd,Jd;try{const kd=ad.HI05(this.__wbg_ptr);return dd=kd[0],Jd=kd[1],Kd(kd[0],kd[1])}finally{ad.nAXx(dd,Jd,1)}}}function pd(dd,Jd){const kd=Id(dd,ad.fIyq,ad.l5wA),pd=Md,Nd=ad.aUFU(kd,pd,Jd);if(Nd[1])throw Gd(Nd[0])}function Nd(){ad.hzFk()}function Wd(){return{__proto__:null,jEh1:{__proto__:null,obzu:function(dd,Jd){return function(dd){ed===Od.length&&Od.push(Od.length+1);const Jd=ed;return ed=Od[Jd],Od[Jd]=dd,Jd}(Error(Kd(dd,Jd)))},pcET:function(dd,Jd){throw new Error(Kd(dd,Jd))},u0lA:function(dd,Jd){console.error(Kd(dd,Jd))}}}}Symbol.dispose&&(kd.prototype[Symbol.dispose]=kd.prototype.free);const Pd="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((dd=>ad.RvE8(dd,1)));function Zd(dd,Jd){return dd>>>=0,ld().subarray(dd/4,dd/4+Jd)}let gd=null;function Cd(){return null!==gd&&0!==gd.byteLength||(gd=new Float64Array(ad.memory.buffer)),gd}function Kd(dd,Jd){return function(dd,Jd){qd+=Jd,qd>=xd&&(vd=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),vd.decode(),qd=Jd);return vd.decode(Ld().subarray(dd,dd+Jd))}(dd>>>0,Jd)}let od=null;function ld(){return null!==od&&0!==od.byteLength||(od=new Uint32Array(ad.memory.buffer)),od}let Qd=null;function Ld(){return null!==Qd&&0!==Qd.byteLength||(Qd=new Uint8Array(ad.memory.buffer)),Qd}let Od=new Array(1024).fill(void 0);Od.push(void 0,null,!0,!1);let ed=Od.length;function Rd(dd,Jd){const kd=Jd(4*dd.length,4)>>>0;return ld().set(dd,kd/4),Md=dd.length,kd}function Id(dd,Jd,kd){if(void 0===kd){const kd=Bd.encode(dd),pd=Jd(kd.length,1)>>>0;return Ld().subarray(pd,pd+kd.length).set(kd),Md=kd.length,pd}let pd=dd.length,Nd=Jd(pd,1)>>>0;const Wd=Ld();let Pd=0;for(;Pd<pd;Pd++){const Jd=dd.charCodeAt(Pd);if(Jd>127)break;Wd[Nd+Pd]=Jd}if(Pd!==pd){0!==Pd&&(dd=dd.slice(Pd)),Nd=kd(Nd,pd,pd=Pd+3*dd.length,1)>>>0;const Jd=Ld().subarray(Nd+Pd,Nd+pd);Pd+=Bd.encodeInto(dd,Jd).written,Nd=kd(Nd,pd,Pd,1)>>>0}return Md=Pd,Nd}function Gd(dd){const Jd=function(dd){return Od[dd]}(dd);return function(dd){dd<1028||(Od[dd]=ed,ed=dd)}(dd),Jd}let vd=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});vd.decode();const xd=2146435072;let qd=0;const Bd=new TextEncoder;"encodeInto"in Bd||(Bd.encodeInto=function(dd,Jd){const kd=Bd.encode(dd);return Jd.set(kd),{read:dd.length,written:kd.length}});let sd,id,ad,Md=0;function Fd(dd,Jd){return id=dd,ad=dd.exports,sd=Jd,gd=null,od=null,Qd=null,ad.CleN(),ad}function Yd(dd){if(void 0!==ad)return ad;void 0!==dd&&(Object.getPrototypeOf(dd)===Object.prototype?({module:dd}=dd):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const Jd=Wd();dd instanceof WebAssembly.Module||(dd=new WebAssembly.Module(dd));return Fd(new WebAssembly.Instance(dd,Jd),dd)}async function md(dd){if(void 0!==ad)return ad;void 0!==dd&&(Object.getPrototypeOf(dd)===Object.prototype?({module_or_path:dd}=dd):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const Jd=Wd();("string"===typeof dd||"function"===typeof Request&&dd instanceof Request||"function"===typeof URL&&dd instanceof URL)&&(dd=fetch(dd));const{instance:kd,module:pd}=await async function(dd,Jd){if("function"===typeof Response&&dd instanceof Response){if(!dd.ok)throw new Error(`failed to fetch Wasm: ${dd.status} ${dd.statusText} fetching \'${dd.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(dd,Jd)}catch(kd){if(!function(dd){switch(dd){case"basic":case"cors":case"default":return!0}return!1}(dd.type)||"application/wasm"===dd.headers.get("Content-Type"))throw kd;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",kd)}const pd=await dd.arrayBuffer();return await WebAssembly.instantiate(pd,Jd)}{const kd=await WebAssembly.instantiate(dd,Jd);return kd instanceof WebAssembly.Instance?{instance:kd,module:dd}:kd}}(await dd,Jd);return Fd(kd,pd)}let bd=null,Sd=null;function jd(dd){if(null!==Sd)throw Sd;if(null===bd)try{const{memory:kd}=Yd({module:dd});bd={wasm:Jd,memory:kd}}catch(kd){throw Sd=function(dd,Jd){return new Error(`${dd}: ${Jd instanceof Error?`${Jd.name}: ${Jd.message}`:String(Jd)}`,{cause:Jd})}("instantiate",kd),Sd}return bd}function Xd(dd){return dd instanceof Error?dd.message:String(dd)}const fd=0,nd=1,Ud=2,yd=3,Dd=4;Error;function Td(dd){return`the texture module didn\'t load (${Xd(dd)})`}function Ed(dd){return""===dd?[]:dd.split("\\0")}const cd=self;let hd=null,rd=null,ud=fd,td=0;function Vd(dd){const Jd=performance.now();var kd,pd;(dd!==ud||Jd-td>=1e3)&&(ud=dd,td=Jd,cd.postMessage({type:"progress",stage:dd,wasmBytes:null!==(kd=null===(pd=rd)||void 0===pd?void 0:pd.buffer.byteLength)&&void 0!==kd?kd:0}))}const{FileReaderSync:zd}=self;function Hd(dd){return(new zd).readAsDataURL(new Blob([dd],{type:"image/png"}))}function wd(dd,Jd){cd.postMessage({type:"sheet",sheet:dd,pixels:Jd},[Jd.buffer])}function Ad(dd){let Jd;Vd(nd);try{Jd=jd(dd.module)}catch(Pd){return void cd.postMessage({type:"failed",reason:Td(Pd),moduleLoad:!0})}rd=Jd.memory,Vd(Ud);const{assets:kd,layerCap:pd,warnings:Nd,generator:Wd}=function(dd,Jd,kd,pd,Nd,Wd,Pd){var Zd;const{wasm:gd,memory:Cd}=dd,{strings:Kd,blocks:od,numbers:ld,index:Qd,armour:Ld}=Jd,Od=new gd.ed(Kd,od,ld,Qd,Ld,kd),ed=pd.sources.map((dd=>(null===Wd||void 0===Wd||Wd(Ud),Od.ad(dd)))),Rd=new Uint32Array(2*pd.sourceOfName.length);for(const[Md,Fd]of pd.sourceOfName.entries())Rd[2*Md]=Md,Rd[2*Md+1]=ed[Fd];Od.We(pd.names,Rd),null===Wd||void 0===Wd||Wd(yd),Od.AO(Nd,null!==(Zd=null===Pd||void 0===Pd?void 0:Pd.layers)&&void 0!==Zd?Zd:0),null===Wd||void 0===Wd||Wd(Dd);const Id={};for(const[Md,Fd]of Ed(Od.Ne()).entries())null===Wd||void 0===Wd||Wd(Dd),Id[Fd]=Od.de(Md);const Gd={},vd=Od.md(),xd=new Map;for(const[Md,Fd]of Ed(Od.nd()).entries()){const dd=vd[Md];xd.has(dd)||(null===Wd||void 0===Wd||Wd(Dd),xd.set(dd,Od.de(dd))),Gd[Fd]=xd.get(dd)}Od.tO();const qd=Array.from(Od.To()),Bd=[],sd=[],id=(dd,Jd)=>new Uint8ClampedArray(Cd.buffer,dd,Jd).slice();if(Pd){for(let dd=0;dd<qd.length;dd++)null===Wd||void 0===Wd||Wd(Dd),Od.uO(dd),Od.TO(),Bd.push(Pd.dataUrl(new Uint8Array(Cd.buffer,Od.HO(),Od.Ze()))),Pd.onSheet(dd,id(Od.co(),Od.Pe()));Od.zO()}const ad=Od.wO();for(let Md=ad;Md<ad+Od.op();Md++)null===Wd||void 0===Wd||Wd(Dd),Bd.push(Od.de(Md)),sd.push(id(Od.ke(Md),Od.Je(Md)));return{assets:{rotatedBlockTextures:Id,animatedBlockTextures:Gd,blockAtlasArr:Bd,blockAtlasPixels:sd,armourAtlas:Od.de(Od.dk()),imagesPerAtlas:qd,blockAtlasWidth:Od.So()},layerCap:Od.pe()?Nd:0,warnings:Od.warnings(),generator:Od}}(Jd,dd.inputs,dd.isDefaultPack,{sources:dd.sources,names:dd.names,sourceOfName:dd.sourceOfName},dd.maxLayerWidth,Vd,dd.sheetLayers>0?{layers:dd.sheetLayers,onSheet:wd,dataUrl:Hd}:void 0);hd=Wd,cd.postMessage({type:"required",assets:kd,layerCap:pd,warnings:Nd},kd.blockAtlasPixels.map((dd=>dd.buffer)))}self.onmessageerror=()=>{cd.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=dd=>{let{data:Jd}=dd;try{"required"===Jd.type?Ad(Jd):function(){if(!hd)throw new Error("No required assets to follow");const{colours:dd,warnings:Jd}=function(dd){return dd.VO(),{colours:{blocks:dd.dg(),counts:dd.GC(),values:dd.do()},warnings:dd.warnings()}}(hd);cd.postMessage({type:"optional",...dd,warnings:Jd},[dd.counts.buffer,dd.values.buffer])}()}catch(kd){const dd=Xd(kd),Jd=kd instanceof WebAssembly.RuntimeError?`wasm trapped (${dd})`:dd;cd.postMessage({type:"failed",reason:Jd,stack:kd instanceof Error?kd.stack:void 0})}}})();', "Worker", void 0, kd.p + "generation.worker.639a37a3.worker.js")
+    function kQ() {
+      return DQ()('(()=>{var QQ={d:(FQ,wQ)=>{for(var LQ in wQ)QQ.o(wQ,LQ)&&!QQ.o(FQ,LQ)&&Object.defineProperty(FQ,LQ,{enumerable:!0,get:wQ[LQ]})},o:(QQ,FQ)=>Object.prototype.hasOwnProperty.call(QQ,FQ),r:QQ=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(QQ,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(QQ,"__esModule",{value:!0})}},FQ={};QQ.r(FQ),QQ.d(FQ,{xF:()=>wQ,FH:()=>LQ,default:()=>IQ,initSync:()=>rQ,wH:()=>qQ});class wQ{__destroy_into_raw(){const QQ=this.__wbg_ptr;return this.__wbg_ptr=0,DQ.unregister(this),QQ}free(){const QQ=this.__destroy_into_raw();RQ.WT3h(QQ,0)}co(QQ){const FQ=function(QQ,FQ){const wQ=FQ(1*QQ.length,1)>>>0;return xQ().set(QQ,wQ/1),OQ=QQ.length,wQ}(QQ,RQ.v8Rj),wQ=OQ;return RQ.bEPD(this.__wbg_ptr,FQ,wQ)>>>0}So(){const QQ=RQ.l89M(this.__wbg_ptr);var FQ=kQ(QQ[0],QQ[1]).slice();return RQ.VTcg(QQ[0],4*QQ[1],4),FQ}To(){let QQ,FQ;try{const wQ=RQ.PQFP(this.__wbg_ptr);return QQ=wQ[0],FQ=wQ[1],uQ(wQ[0],wQ[1])}finally{RQ.VTcg(QQ,FQ,1)}}do(){return RQ.ppwI(this.__wbg_ptr)>>>0}ID(){return RQ.qtz0(this.__wbg_ptr)>>>0}dk(){let QQ,FQ;try{const wQ=RQ.fNX9(this.__wbg_ptr);return QQ=wQ[0],FQ=wQ[1],uQ(wQ[0],wQ[1])}finally{RQ.VTcg(QQ,FQ,1)}}su(){const QQ=RQ.Oqdl(this.__wbg_ptr);var FQ=kQ(QQ[0],QQ[1]).slice();return RQ.VTcg(QQ[0],4*QQ[1],4),FQ}mb(){const QQ=RQ.gYRm(this.__wbg_ptr);var FQ,wQ,LQ=(FQ=QQ[0],wQ=QQ[1],FQ>>>=0,mQ().subarray(FQ/8,FQ/8+wQ)).slice();return RQ.VTcg(QQ[0],8*QQ[1],8),LQ}ox(){return RQ.LXJE(this.__wbg_ptr)>>>0}Lt(QQ){const FQ=RQ.I9Ut(this.__wbg_ptr,QQ);if(FQ[1])throw GQ(FQ[0])}qt(){RQ.ubyR(this.__wbg_ptr)}Dt(){RQ.RFUu(this.__wbg_ptr)}wt(){const QQ=RQ.oqq4(this.__wbg_ptr);if(QQ[1])throw GQ(QQ[0])}vt(){return RQ.uQXu(this.__wbg_ptr)>>>0}ot(){const QQ=RQ.HKFN(this.__wbg_ptr);if(QQ[1])throw GQ(QQ[0])}ut(QQ,FQ){const wQ=RQ.GxgU(this.__wbg_ptr,QQ,FQ);if(wQ[1])throw GQ(wQ[0])}Ht(QQ){let FQ,wQ;try{const oQ=RQ.Bvak(this.__wbg_ptr,QQ);var LQ=oQ[0],qQ=oQ[1];if(oQ[3])throw LQ=0,qQ=0,GQ(oQ[2]);return FQ=LQ,wQ=qQ,uQ(LQ,qQ)}finally{RQ.VTcg(FQ,wQ,1)}}bt(QQ){return RQ.FPa9(this.__wbg_ptr,QQ)>>>0}Yt(QQ){return RQ.iNjB(this.__wbg_ptr,QQ)>>>0}ux(){const QQ=RQ.v1Fc(this.__wbg_ptr);var FQ=kQ(QQ[0],QQ[1]).slice();return RQ.VTcg(QQ[0],4*QQ[1],4),FQ}xt(){return 0!==RQ.erJI(this.__wbg_ptr)}constructor(QQ,FQ,wQ,LQ,qQ,oQ){const kQ=MQ(QQ,RQ.v8Rj,RQ.WUBj),vQ=OQ,uQ=eQ(FQ,RQ.v8Rj),HQ=OQ,bQ=function(QQ,FQ){const wQ=FQ(8*QQ.length,8)>>>0;return mQ().set(QQ,wQ/8),OQ=QQ.length,wQ}(wQ,RQ.v8Rj),YQ=OQ,xQ=eQ(LQ,RQ.v8Rj),AQ=OQ,tQ=eQ(qQ,RQ.v8Rj),pQ=OQ,cQ=RQ.d1CB(kQ,vQ,uQ,HQ,bQ,YQ,xQ,AQ,tQ,pQ,oQ);if(cQ[2])throw GQ(cQ[1]);return this.__wbg_ptr=cQ[0],DQ.register(this,this.__wbg_ptr,this),this}At(){let QQ,FQ;try{const wQ=RQ.Hwlc(this.__wbg_ptr);return QQ=wQ[0],FQ=wQ[1],uQ(wQ[0],wQ[1])}finally{RQ.VTcg(QQ,FQ,1)}}tt(QQ,FQ){const wQ=MQ(QQ,RQ.v8Rj,RQ.WUBj),LQ=OQ,qQ=eQ(FQ,RQ.v8Rj),oQ=OQ,DQ=RQ.GeKe(this.__wbg_ptr,wQ,LQ,qQ,oQ);if(DQ[1])throw GQ(DQ[0])}et(){return RQ.DqfK(this.__wbg_ptr)>>>0}Mt(){return RQ.p7tO(this.__wbg_ptr)>>>0}kt(){return RQ.vkHt(this.__wbg_ptr)>>>0}xx(){return RQ.Krls(this.__wbg_ptr)>>>0}warnings(){let QQ,FQ;try{const wQ=RQ.jP2q(this.__wbg_ptr);return QQ=wQ[0],FQ=wQ[1],uQ(wQ[0],wQ[1])}finally{RQ.VTcg(QQ,FQ,1)}}}function LQ(QQ,FQ){const wQ=MQ(QQ,RQ.v8Rj,RQ.WUBj),LQ=OQ,qQ=RQ.v3tB(wQ,LQ,FQ);if(qQ[1])throw GQ(qQ[0])}function qQ(){RQ.SYDD()}function oQ(){return{__proto__:null,rGix:{__proto__:null,WxK2:function(QQ,FQ){return function(QQ){tQ===AQ.length&&AQ.push(AQ.length+1);const FQ=tQ;return tQ=AQ[FQ],AQ[FQ]=QQ,FQ}(Error(uQ(QQ,FQ)))},TRqr:function(QQ,FQ){throw new Error(uQ(QQ,FQ))},OEhl:function(QQ,FQ){console.error(uQ(QQ,FQ))}}}}Symbol.dispose&&(wQ.prototype[Symbol.dispose]=wQ.prototype.free);const DQ="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((QQ=>RQ.WT3h(QQ,1)));function kQ(QQ,FQ){return QQ>>>=0,bQ().subarray(QQ/4,QQ/4+FQ)}let vQ=null;function mQ(){return null!==vQ&&0!==vQ.byteLength||(vQ=new Float64Array(RQ.memory.buffer)),vQ}function uQ(QQ,FQ){return function(QQ,FQ){CQ+=FQ,CQ>=cQ&&(pQ=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),pQ.decode(),CQ=FQ);return pQ.decode(xQ().subarray(QQ,QQ+FQ))}(QQ>>>0,FQ)}let HQ=null;function bQ(){return null!==HQ&&0!==HQ.byteLength||(HQ=new Uint32Array(RQ.memory.buffer)),HQ}let YQ=null;function xQ(){return null!==YQ&&0!==YQ.byteLength||(YQ=new Uint8Array(RQ.memory.buffer)),YQ}let AQ=new Array(1024).fill(void 0);AQ.push(void 0,null,!0,!1);let tQ=AQ.length;function eQ(QQ,FQ){const wQ=FQ(4*QQ.length,4)>>>0;return bQ().set(QQ,wQ/4),OQ=QQ.length,wQ}function MQ(QQ,FQ,wQ){if(void 0===wQ){const wQ=SQ.encode(QQ),LQ=FQ(wQ.length,1)>>>0;return xQ().subarray(LQ,LQ+wQ.length).set(wQ),OQ=wQ.length,LQ}let LQ=QQ.length,qQ=FQ(LQ,1)>>>0;const oQ=xQ();let DQ=0;for(;DQ<LQ;DQ++){const FQ=QQ.charCodeAt(DQ);if(FQ>127)break;oQ[qQ+DQ]=FQ}if(DQ!==LQ){0!==DQ&&(QQ=QQ.slice(DQ)),qQ=wQ(qQ,LQ,LQ=DQ+3*QQ.length,1)>>>0;const FQ=xQ().subarray(qQ+DQ,qQ+LQ);DQ+=SQ.encodeInto(QQ,FQ).written,qQ=wQ(qQ,LQ,DQ,1)>>>0}return OQ=DQ,qQ}function GQ(QQ){const FQ=function(QQ){return AQ[QQ]}(QQ);return function(QQ){QQ<1028||(AQ[QQ]=tQ,tQ=QQ)}(QQ),FQ}let pQ=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});pQ.decode();const cQ=2146435072;let CQ=0;const SQ=new TextEncoder;"encodeInto"in SQ||(SQ.encodeInto=function(QQ,FQ){const wQ=SQ.encode(QQ);return FQ.set(wQ),{read:QQ.length,written:wQ.length}});let iQ,WQ,RQ,OQ=0;function sQ(QQ,FQ){return WQ=QQ,RQ=QQ.exports,iQ=FQ,vQ=null,HQ=null,YQ=null,RQ.Qg3t(),RQ}function rQ(QQ){if(void 0!==RQ)return RQ;void 0!==QQ&&(Object.getPrototypeOf(QQ)===Object.prototype?({module:QQ}=QQ):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const FQ=oQ();QQ instanceof WebAssembly.Module||(QQ=new WebAssembly.Module(QQ));return sQ(new WebAssembly.Instance(QQ,FQ),QQ)}async function IQ(QQ){if(void 0!==RQ)return RQ;void 0!==QQ&&(Object.getPrototypeOf(QQ)===Object.prototype?({module_or_path:QQ}=QQ):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const FQ=oQ();("string"===typeof QQ||"function"===typeof Request&&QQ instanceof Request||"function"===typeof URL&&QQ instanceof URL)&&(QQ=fetch(QQ));const{instance:wQ,module:LQ}=await async function(QQ,FQ){if("function"===typeof Response&&QQ instanceof Response){if(!QQ.ok)throw new Error(`failed to fetch Wasm: ${QQ.status} ${QQ.statusText} fetching \'${QQ.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(QQ,FQ)}catch(wQ){if(!function(QQ){switch(QQ){case"basic":case"cors":case"default":return!0}return!1}(QQ.type)||"application/wasm"===QQ.headers.get("Content-Type"))throw wQ;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",wQ)}const LQ=await QQ.arrayBuffer();return await WebAssembly.instantiate(LQ,FQ)}{const wQ=await WebAssembly.instantiate(QQ,FQ);return wQ instanceof WebAssembly.Instance?{instance:wQ,module:QQ}:wQ}}(await QQ,FQ);return sQ(wQ,LQ)}let UQ=null,NQ=null;function TQ(QQ){if(null!==NQ)throw NQ;if(null===UQ)try{const{memory:wQ}=rQ({module:QQ});UQ={wasm:FQ,memory:wQ}}catch(wQ){throw NQ=function(QQ,FQ){return new Error(`${QQ}: ${FQ instanceof Error?`${FQ.name}: ${FQ.message}`:String(FQ)}`,{cause:FQ})}("instantiate",wQ),NQ}return UQ}function KQ(QQ){return QQ instanceof Error?QQ.message:String(QQ)}const zQ=0,lQ=1,jQ=2,aQ=3,XQ=4;Error;function fQ(QQ){return`the texture module didn\'t load (${KQ(QQ)})`}function VQ(QQ){return""===QQ?[]:QQ.split("\\0")}const hQ=self;let JQ=null,EQ=null,nQ=zQ,gQ=0;function PQ(QQ){const FQ=performance.now();var wQ,LQ;(QQ!==nQ||FQ-gQ>=1e3)&&(nQ=QQ,gQ=FQ,hQ.postMessage({type:"progress",stage:QQ,wasmBytes:null!==(wQ=null===(LQ=EQ)||void 0===LQ?void 0:LQ.buffer.byteLength)&&void 0!==wQ?wQ:0}))}const{FileReaderSync:ZQ}=self;function yQ(QQ){return(new ZQ).readAsDataURL(new Blob([QQ],{type:"image/png"}))}function BQ(QQ,FQ){hQ.postMessage({type:"sheet",sheet:QQ,pixels:FQ},[FQ.buffer])}function dQ(QQ){let FQ;PQ(lQ);try{FQ=TQ(QQ.module)}catch(DQ){return void hQ.postMessage({type:"failed",reason:fQ(DQ),moduleLoad:!0})}EQ=FQ.memory,PQ(jQ);const{assets:wQ,layerCap:LQ,warnings:qQ,generator:oQ}=function(QQ,FQ,wQ,LQ,qQ,oQ,DQ){var kQ;const{wasm:vQ,memory:mQ}=QQ,{strings:uQ,blocks:HQ,numbers:bQ,index:YQ,armour:xQ}=FQ,AQ=new vQ.xF(uQ,HQ,bQ,YQ,xQ,wQ),tQ=LQ.sources.map((QQ=>(null===oQ||void 0===oQ||oQ(jQ),AQ.co(QQ)))),eQ=new Uint32Array(2*LQ.sourceOfName.length);for(const[OQ,sQ]of LQ.sourceOfName.entries())eQ[2*OQ]=OQ,eQ[2*OQ+1]=tQ[sQ];AQ.tt(LQ.names,eQ),null===oQ||void 0===oQ||oQ(aQ),AQ.ut(qQ,null!==(kQ=null===DQ||void 0===DQ?void 0:DQ.layers)&&void 0!==kQ?kQ:0),null===oQ||void 0===oQ||oQ(XQ);const MQ={};for(const[OQ,sQ]of VQ(AQ.At()).entries())null===oQ||void 0===oQ||oQ(XQ),MQ[sQ]=AQ.Ht(OQ);const GQ={},pQ=AQ.So(),cQ=new Map;for(const[OQ,sQ]of VQ(AQ.To()).entries()){const QQ=pQ[OQ];cQ.has(QQ)||(null===oQ||void 0===oQ||oQ(XQ),cQ.set(QQ,AQ.Ht(QQ))),GQ[sQ]=cQ.get(QQ)}AQ.qt();const CQ=Array.from(AQ.ux()),SQ=[],iQ=[],WQ=(QQ,FQ)=>new Uint8ClampedArray(mQ.buffer,QQ,FQ).slice();if(DQ){for(let QQ=0;QQ<CQ.length;QQ++)null===oQ||void 0===oQ||oQ(XQ),AQ.Lt(QQ),AQ.wt(),SQ.push(DQ.dataUrl(new Uint8Array(mQ.buffer,AQ.kt(),AQ.Mt()))),DQ.onSheet(QQ,WQ(AQ.xx(),AQ.et()));AQ.Dt()}const RQ=AQ.vt();for(let OQ=RQ;OQ<RQ+AQ.ID();OQ++)null===oQ||void 0===oQ||oQ(XQ),SQ.push(AQ.Ht(OQ)),iQ.push(WQ(AQ.Yt(OQ),AQ.bt(OQ)));return{assets:{rotatedBlockTextures:MQ,animatedBlockTextures:GQ,blockAtlasArr:SQ,blockAtlasPixels:iQ,armourAtlas:AQ.Ht(AQ.do()),imagesPerAtlas:CQ,blockAtlasWidth:AQ.ox()},layerCap:AQ.xt()?qQ:0,warnings:AQ.warnings(),generator:AQ}}(FQ,QQ.inputs,QQ.isDefaultPack,{sources:QQ.sources,names:QQ.names,sourceOfName:QQ.sourceOfName},QQ.maxLayerWidth,PQ,QQ.sheetLayers>0?{layers:QQ.sheetLayers,onSheet:BQ,dataUrl:yQ}:void 0);JQ=oQ,hQ.postMessage({type:"required",assets:wQ,layerCap:LQ,warnings:qQ},wQ.blockAtlasPixels.map((QQ=>QQ.buffer)))}self.onmessageerror=()=>{hQ.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=QQ=>{let{data:FQ}=QQ;try{"required"===FQ.type?dQ(FQ):function(){if(!JQ)throw new Error("No required assets to follow");const{colours:QQ,warnings:FQ}=function(QQ){return QQ.ot(),{colours:{blocks:QQ.dk(),counts:QQ.su(),values:QQ.mb()},warnings:QQ.warnings()}}(JQ);hQ.postMessage({type:"optional",...QQ,warnings:FQ},[QQ.counts.buffer,QQ.values.buffer])}()}catch(wQ){const QQ=KQ(wQ),FQ=wQ instanceof WebAssembly.RuntimeError?`wasm trapped (${QQ})`:QQ;hQ.postMessage({type:"failed",reason:FQ,stack:wQ instanceof Error?wQ.stack:void 0})}}})();', "Worker", void 0, wQ.p + "generation.worker.738f0aae.worker.js")
     }
-    var gd = kd(36441),
-      Cd = kd(3079),
-      Kd = kd(3095),
-      od = kd(3086),
-      ld = kd(3057);
+    var vQ = wQ(35917),
+      mQ = wQ(3110),
+      uQ = wQ(3126),
+      HQ = wQ(3121),
+      bQ = wQ(3086);
 
-    function Qd(dd) {
-      return "" === dd ? [] : dd.split("\0")
-    }
-
-    function Ld(dd) {
-      if ("" !== dd)
-        for (const Jd of dd.split("\n")) console.error(Jd)
+    function YQ(QQ) {
+      return "" === QQ ? [] : QQ.split("\0")
     }
 
-    function Od(dd, Jd) {
-      return async function(dd, Jd) {
-        const kd = Object.keys(dd),
-          pd = [],
-          Nd = new Map,
-          Wd = new Uint32Array(kd.length);
-        for (const [Pd, Zd] of kd.entries()) {
+    function xQ(QQ) {
+      if ("" !== QQ)
+        for (const FQ of QQ.split("\n")) console.error(FQ)
+    }
+
+    function AQ(QQ, FQ) {
+      return async function(QQ, FQ) {
+        const wQ = Object.keys(QQ),
+          LQ = [],
+          qQ = new Map,
+          oQ = new Uint32Array(wQ.length);
+        for (const [DQ, kQ] of wQ.entries()) {
           const {
-            url: Jd
-          } = dd[Zd];
-          Nd.has(Jd) || (Nd.set(Jd, pd.length), pd.push(Jd)), Wd[Pd] = Nd.get(Jd)
+            url: FQ
+          } = QQ[kQ];
+          qQ.has(FQ) || (qQ.set(FQ, LQ.length), LQ.push(FQ)), oQ[DQ] = qQ.get(FQ)
         }
         return {
-          sources: await Jd(pd),
-          names: kd.join("\0"),
-          sourceOfName: Wd
+          sources: await FQ(LQ),
+          names: wQ.join("\0"),
+          sourceOfName: oQ
         }
-      }(dd, (async dd => {
-        const kd = await async function(dd, Jd) {
-          const kd = new AbortController,
-            pd = () => {
-              kd.abort()
+      }(QQ, (async QQ => {
+        const wQ = await async function(QQ, FQ) {
+          const wQ = new AbortController,
+            LQ = () => {
+              wQ.abort()
             };
-          Jd.addEventListener("abort", pd);
+          FQ.addEventListener("abort", LQ);
           try {
-            const Jd = await Promise.all(dd.map((async dd => {
+            const FQ = await Promise.all(QQ.map((async QQ => {
               try {
-                const Jd = await fetch(dd, {
-                  signal: kd.signal
+                const FQ = await fetch(QQ, {
+                  signal: wQ.signal
                 });
-                if (!Jd.ok) throw new Error(`HTTP ${Jd.status}`);
-                return [dd, await Jd.blob()]
-              } catch (Jd) {
-                throw kd.abort(), new Kd.k(Kd.h.Fetch, `fetching ${dd} failed: ${(0,od.b)(Jd)}`)
+                if (!FQ.ok) throw new Error(`HTTP ${FQ.status}`);
+                return [QQ, await FQ.blob()]
+              } catch (FQ) {
+                throw wQ.abort(), new uQ.p(uQ.l.Fetch, `fetching ${QQ} failed: ${(0,HQ.e)(FQ)}`)
               }
             })));
-            return new Map(Jd)
+            return new Map(FQ)
           } finally {
-            Jd.removeEventListener("abort", pd)
+            FQ.removeEventListener("abort", LQ)
           }
-        }(dd.filter((dd => !dd.startsWith("data:"))), Jd);
-        return Promise.all(dd.map((dd => {
-          var Jd;
-          return (0, ld.d)(null !== (Jd = kd.get(dd)) && void 0 !== Jd ? Jd : dd)
+        }(QQ.filter((QQ => !QQ.startsWith("data:"))), FQ);
+        return Promise.all(QQ.map((QQ => {
+          var FQ;
+          return (0, bQ.f)(null !== (FQ = wQ.get(QQ)) && void 0 !== FQ ? FQ : QQ)
         })))
       }))
     }
 
-    function ed(dd, Jd) {
-      let kd;
-      return dd instanceof Kd.k ? kd = dd : (kd = new Kd.k(Jd ? Kd.h.Optional : Kd.h.Error, (0, od.b)(dd)), dd instanceof Error && (kd.stack = `${kd.name}: ${kd.message}\n${dd.stack}`)), kd.code !== Kd.h.Fetch && kd.code !== Kd.h.Error && (0, Cd.e)(kd.message), kd
+    function tQ(QQ, FQ) {
+      let wQ;
+      return QQ instanceof uQ.p ? wQ = QQ : (wQ = new uQ.p(FQ ? uQ.l.Optional : uQ.l.Error, (0, HQ.e)(QQ)), QQ instanceof Error && (wQ.stack = `${wQ.name}: ${wQ.message}\n${QQ.stack}`)), wQ.code !== uQ.l.Fetch && wQ.code !== uQ.l.Error && (0, mQ.d)(wQ.message), wQ
     }
 
-    function Rd(dd) {
-      return dd.message ? new Error(`the texture worker failed: ${dd.message}`) : new Kd.k(Kd.h.Load, "the texture worker failed to start")
+    function eQ(QQ) {
+      return QQ.message ? new Error(`the texture worker failed: ${QQ.message}`) : new uQ.p(uQ.l.Load, "the texture worker failed to start")
     }
-    class Id {
-      constructor(dd) {
-        this.worker = dd, this.failure = void 0, this.abandonStep = null, dd.addEventListener("error", (dd => {
-          dd.preventDefault(), this.failure ??= Rd(dd)
+    class MQ {
+      constructor(QQ) {
+        this.worker = QQ, this.failure = void 0, this.abandonStep = null, QQ.addEventListener("error", (QQ => {
+          QQ.preventDefault(), this.failure ??= eQ(QQ)
         }))
       }
-      static async generateRequired(dd, Jd, kd, Wd) {
-        let Pd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Kd.b,
-          Cd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const ld = (0, gd.i)();
-        if (null !== ld) throw ed(new Kd.k(Kd.h.Load, ld), !1);
-        let Qd;
-        const Rd = new AbortController;
+      static async generateRequired(QQ, FQ, wQ, oQ) {
+        let DQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : uQ.e,
+          mQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const bQ = (0, vQ.k)();
+        if (null !== bQ) throw tQ(new uQ.p(uQ.l.Load, bQ), !1);
+        let YQ;
+        const eQ = new AbortController;
         try {
-          Qd = new Id(function() {
+          YQ = new MQ(function() {
             try {
-              return new Zd
-            } catch (dd) {
-              throw new Kd.k(Kd.h.Load, `the texture worker failed to start: ${(0,od.b)(dd)}`)
+              return new kQ
+            } catch (QQ) {
+              throw new uQ.p(uQ.l.Load, `the texture worker failed to start: ${(0,HQ.e)(QQ)}`)
             }
           }());
-          const ld = (0, gd.d)().catch((dd => {
-              throw new Kd.k(Kd.h.Load, function(dd) {
-                return `the texture module didn't load (${(0,od.b)(dd)})`
-              }(dd))
+          const bQ = (0, vQ.b)().catch((QQ => {
+              throw new uQ.p(uQ.l.Load, function(QQ) {
+                return `the texture module didn't load (${(0,HQ.e)(QQ)})`
+              }(QQ))
             })),
-            ed = (async () => {
-              const Wd = function(dd, Jd, kd) {
-                const pd = [],
-                  Nd = new Map,
-                  Wd = dd => {
-                    let Jd = Nd.get(dd);
-                    return void 0 === Jd && (Jd = pd.length, pd.push(dd), Nd.set(dd, Jd)), Jd
+            tQ = (async () => {
+              const oQ = function(QQ, FQ, wQ) {
+                const LQ = [],
+                  qQ = new Map,
+                  oQ = QQ => {
+                    let FQ = qQ.get(QQ);
+                    return void 0 === FQ && (FQ = LQ.length, LQ.push(QQ), qQ.set(QQ, FQ)), FQ
                   },
-                  Pd = [],
-                  Zd = [],
-                  gd = new Map,
-                  Cd = (dd, Jd) => {
-                    const kd = "object" === typeof dd && null !== dd && "animTextures" in dd ? dd.animTextures : void 0;
-                    if (!Array.isArray(kd) || !kd.every((dd => "string" === typeof dd))) throw new Error(`Block ${Jd} has textureInfo the encoding doesn't cover`);
-                    Pd.push(kd.length, ...kd.map(Wd))
+                  DQ = [],
+                  kQ = [],
+                  vQ = new Map,
+                  mQ = (QQ, FQ) => {
+                    const wQ = "object" === typeof QQ && null !== QQ && "animTextures" in QQ ? QQ.animTextures : void 0;
+                    if (!Array.isArray(wQ) || !wQ.every((QQ => "string" === typeof QQ))) throw new Error(`Block ${FQ} has textureInfo the encoding doesn't cover`);
+                    DQ.push(wQ.length, ...wQ.map(oQ))
                   };
-                let Kd = 0;
-                for (const Qd in dd) {
-                  const Jd = dd[Qd];
-                  Pd.push(Wd(Qd));
-                  const kd = (Jd.transTex ? 1 : 0) | (Jd.dQ ? 2 : 0) | (Jd.particlesIgnoreBlack ? 4 : 0),
-                    pd = "string" === typeof Jd.itemTexture ? Wd(Jd.itemTexture) : 4294967295,
-                    Nd = `${kd},${pd}`,
-                    od = Jd.textureInfo,
-                    ld = gd.get(od);
-                  if ((null === ld || void 0 === ld ? void 0 : ld.fields) !== Nd)
-                    if (gd.set(od, {
-                        entry: Kd++,
-                        fields: Nd
-                      }), Pd.push(1, kd, pd), "string" === typeof od) Pd.push(1, Wd(od));
-                    else if (Array.isArray(od)) {
-                    Pd.push(3, od.length);
-                    for (const dd of od) "string" === typeof dd ? Pd.push(0, Wd(dd)) : "number" === typeof dd ? (Pd.push(2, Zd.length), Zd.push(dd)) : (Pd.push(1), Cd(dd, Qd))
-                  } else od ? (Pd.push(2), Cd(od, Qd)) : Pd.push(0);
-                  else Pd.push(0, ld.entry), Kd++
+                let uQ = 0;
+                for (const YQ in QQ) {
+                  const FQ = QQ[YQ];
+                  DQ.push(oQ(YQ));
+                  const wQ = (FQ.transTex ? 1 : 0) | (FQ.wY ? 2 : 0) | (FQ.particlesIgnoreBlack ? 4 : 0),
+                    LQ = "string" === typeof FQ.itemTexture ? oQ(FQ.itemTexture) : 4294967295,
+                    qQ = `${wQ},${LQ}`,
+                    HQ = FQ.textureInfo,
+                    bQ = vQ.get(HQ);
+                  if ((null === bQ || void 0 === bQ ? void 0 : bQ.fields) !== qQ)
+                    if (vQ.set(HQ, {
+                        entry: uQ++,
+                        fields: qQ
+                      }), DQ.push(1, wQ, LQ), "string" === typeof HQ) DQ.push(1, oQ(HQ));
+                    else if (Array.isArray(HQ)) {
+                    DQ.push(3, HQ.length);
+                    for (const QQ of HQ) "string" === typeof QQ ? DQ.push(0, oQ(QQ)) : "number" === typeof QQ ? (DQ.push(2, kQ.length), kQ.push(QQ)) : (DQ.push(1), mQ(QQ, YQ))
+                  } else HQ ? (DQ.push(2), mQ(HQ, YQ)) : DQ.push(0);
+                  else DQ.push(0, bQ.entry), uQ++
                 }
-                const od = [];
-                for (const Qd in Jd) od.push(Wd(Qd), Jd[Qd]);
-                const ld = new Uint32Array(kd.map(Wd));
+                const HQ = [];
+                for (const YQ in FQ) HQ.push(oQ(YQ), FQ[YQ]);
+                const bQ = new Uint32Array(wQ.map(oQ));
                 return {
-                  strings: pd.join("\0"),
-                  blocks: new Uint32Array(Pd),
-                  numbers: new Float64Array(Zd),
-                  index: new Uint32Array(od),
-                  armour: ld
+                  strings: LQ.join("\0"),
+                  blocks: new Uint32Array(DQ),
+                  numbers: new Float64Array(kQ),
+                  index: new Uint32Array(HQ),
+                  armour: bQ
                 }
-              }(dd, Jd, pd.f.map(Nd.h));
+              }(QQ, FQ, LQ.f.map(qQ.i));
               return {
-                inputs: Wd,
-                sources: await Od(kd, Rd.signal)
+                inputs: oQ,
+                sources: await AQ(wQ, eQ.signal)
               }
             })(),
-            [Gd, {
-              inputs: vd,
-              sources: xd
-            }] = await Promise.all([ld, ed]),
-            qd = [vd.blocks.buffer, vd.numbers.buffer, vd.index.buffer, vd.armour.buffer, xd.sourceOfName.buffer];
-          for (const dd of xd.sources) qd.push(dd.buffer);
-          const Bd = [],
+            [GQ, {
+              inputs: pQ,
+              sources: cQ
+            }] = await Promise.all([bQ, tQ]),
+            CQ = [pQ.blocks.buffer, pQ.numbers.buffer, pQ.index.buffer, pQ.armour.buffer, cQ.sourceOfName.buffer];
+          for (const QQ of cQ.sources) CQ.push(QQ.buffer);
+          const SQ = [],
             {
-              assets: sd,
-              layerCap: ad,
-              warnings: Md
-            } = await Qd.request({
+              assets: iQ,
+              layerCap: WQ,
+              warnings: RQ
+            } = await YQ.request({
               type: "required",
-              module: Gd,
-              inputs: vd,
-              isDefaultPack: Wd,
-              maxLayerWidth: Pd,
-              sheetLayers: Cd,
-              ...xd
-            }, qd, ((dd, Jd) => {
-              Bd[dd] = Jd
+              module: GQ,
+              inputs: pQ,
+              isDefaultPack: oQ,
+              maxLayerWidth: DQ,
+              sheetLayers: mQ,
+              ...cQ
+            }, CQ, ((QQ, FQ) => {
+              SQ[QQ] = FQ
             }));
-          return Cd > 0 && (sd.blockAtlasPixels = function(dd, Jd) {
-            const kd = [];
-            for (let pd = 0; pd < Jd; pd++) {
-              const Nd = dd[pd];
-              if (void 0 === Nd) throw new Error(`the texture worker's sheet ${pd} of ${Jd} didn't arrive`);
-              kd.push(Nd)
+          return mQ > 0 && (iQ.blockAtlasPixels = function(QQ, FQ) {
+            const wQ = [];
+            for (let LQ = 0; LQ < FQ; LQ++) {
+              const qQ = QQ[LQ];
+              if (void 0 === qQ) throw new Error(`the texture worker's sheet ${LQ} of ${FQ} didn't arrive`);
+              wQ.push(qQ)
             }
-            return kd
-          }(Bd, sd.imagesPerAtlas.length)), Ld(Md), {
-            assets: sd,
-            layerCap: ad,
-            worker: Qd
+            return wQ
+          }(SQ, iQ.imagesPerAtlas.length)), xQ(RQ), {
+            assets: iQ,
+            layerCap: WQ,
+            worker: YQ
           }
-        } catch (vd) {
-          var Gd;
-          throw Rd.abort(), null === (Gd = Qd) || void 0 === Gd || Gd.terminate(), ed(vd, !1)
+        } catch (pQ) {
+          var GQ;
+          throw eQ.abort(), null === (GQ = YQ) || void 0 === GQ || GQ.terminate(), tQ(pQ, !1)
         }
       }
       async generateOptional() {
-        let dd;
+        let QQ;
         try {
-          dd = await this.request({
+          QQ = await this.request({
             type: "optional"
           }, [])
-        } catch (Jd) {
-          throw ed(Jd, !0)
+        } catch (FQ) {
+          throw tQ(FQ, !0)
         } finally {
           this.terminate()
         }
-        return Ld(dd.warnings),
-          function(dd) {
+        return xQ(QQ.warnings),
+          function(QQ) {
             let {
-              blocks: Jd,
-              counts: kd,
-              values: pd
-            } = dd;
-            const Nd = {};
-            let Wd = 0;
-            for (const [Pd, Zd] of Qd(Jd).entries()) {
-              const dd = [];
-              for (let Jd = 0; Jd < kd[Pd]; Jd++, Wd += 3) dd.push([pd[Wd], pd[Wd + 1], pd[Wd + 2]]);
-              Nd[Zd] = dd
+              blocks: FQ,
+              counts: wQ,
+              values: LQ
+            } = QQ;
+            const qQ = {};
+            let oQ = 0;
+            for (const [DQ, kQ] of YQ(FQ).entries()) {
+              const QQ = [];
+              for (let FQ = 0; FQ < wQ[DQ]; FQ++, oQ += 3) QQ.push([LQ[oQ], LQ[oQ + 1], LQ[oQ + 2]]);
+              qQ[kQ] = QQ
             }
-            return Nd
-          }(dd)
+            return qQ
+          }(QQ)
       }
       terminate() {
-        var dd;
-        this.worker.terminate(), null === (dd = this.abandonStep) || void 0 === dd || dd.call(this)
+        var QQ;
+        this.worker.terminate(), null === (QQ = this.abandonStep) || void 0 === QQ || QQ.call(this)
       }
-      request(dd, Jd, kd) {
-        return new Promise(((pd, Nd) => {
-          if (void 0 !== this.failure) return void Nd(this.failure);
-          let Wd = Kd.o.None,
-            Pd = 0,
-            Zd = null;
-          const gd = () => {
-            var dd;
-            null === (dd = Zd) || void 0 === dd || dd.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+      request(QQ, FQ, wQ) {
+        return new Promise(((LQ, qQ) => {
+          if (void 0 !== this.failure) return void qQ(this.failure);
+          let oQ = uQ.t.None,
+            DQ = 0,
+            kQ = null;
+          const vQ = () => {
+            var QQ;
+            null === (QQ = kQ) || void 0 === QQ || QQ.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            gd(), Nd(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = Jd => {
+            vQ(), qQ(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = FQ => {
             let {
-              data: Cd
-            } = Jd;
-            var od;
-            if ("progress" === Cd.type) return Wd = Cd.stage, Pd = Cd.wasmBytes, void(null === (od = Zd) || void 0 === od || od.restart(Wd === Kd.o.Generating ? Kd.c : Kd.d));
-            "sheet" === Cd.type && kd ? kd(Cd.sheet, Cd.pixels) : (gd(), "failed" === Cd.type ? Nd(Cd.moduleLoad ? new Kd.k(Kd.h.Load, Cd.reason) : function(dd, Jd) {
+              data: mQ
+            } = FQ;
+            var HQ;
+            if ("progress" === mQ.type) return oQ = mQ.stage, DQ = mQ.wasmBytes, void(null === (HQ = kQ) || void 0 === HQ || HQ.restart(oQ === uQ.t.Generating ? uQ.g : uQ.j));
+            "sheet" === mQ.type && wQ ? wQ(mQ.sheet, mQ.pixels) : (vQ(), "failed" === mQ.type ? qQ(mQ.moduleLoad ? new uQ.p(uQ.l.Load, mQ.reason) : function(QQ, FQ) {
               let {
-                reason: kd,
-                stack: pd
-              } = dd;
-              const Nd = new Error(Gd(kd, Jd));
-              void 0 !== pd && (Nd.stack = pd);
-              return Nd
-            }(Cd, Pd)) : Cd.type !== dd.type ? Nd(new Error(`the texture worker answered ${Cd.type} to ${dd.type}`)) : pd(Cd))
-          }, this.worker.onerror = dd => {
-            gd(), Nd(Rd(dd))
+                reason: wQ,
+                stack: LQ
+              } = QQ;
+              const qQ = new Error(GQ(wQ, FQ));
+              void 0 !== LQ && (qQ.stack = LQ);
+              return qQ
+            }(mQ, DQ)) : mQ.type !== QQ.type ? qQ(new Error(`the texture worker answered ${mQ.type} to ${QQ.type}`)) : LQ(mQ))
+          }, this.worker.onerror = QQ => {
+            vQ(), qQ(eQ(QQ))
           }, this.worker.onmessageerror = () => {
-            gd(), Nd(new Error("the texture worker's answer couldn't be read"))
+            vQ(), qQ(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(dd, Jd), Zd = (0, Kd.q)((() => {
-              gd();
-              const Jd = new Kd.k("required" === dd.type ? `${Kd.h.Stalled}${Wd}` : Kd.h.Optional, Gd("the texture worker stopped responding", Pd));
-              Nd(Jd)
+            this.worker.postMessage(QQ, FQ), kQ = (0, uQ.u)((() => {
+              vQ();
+              const FQ = new uQ.p("required" === QQ.type ? `${uQ.l.Stalled}${oQ}` : uQ.l.Optional, GQ("the texture worker stopped responding", DQ));
+              qQ(FQ)
             }))
-          } catch (Cd) {
-            gd(), Nd(Cd)
+          } catch (mQ) {
+            vQ(), qQ(mQ)
           }
         }))
       }
     }
 
-    function Gd(dd, Jd) {
-      return Jd > 0 ? `${dd}, its module's memory ${Math.round(Jd/2**20)} MiB` : dd
+    function GQ(QQ, FQ) {
+      return FQ > 0 ? `${QQ}, its module's memory ${Math.round(FQ/2**20)} MiB` : QQ
     }
   },
-  36453: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => pd,
-      f: () => Nd,
-      j: () => Wd,
-      l: () => Pd
+  35938: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => LQ,
+      h: () => qQ,
+      i: () => oQ,
+      l: () => DQ
     });
-    const pd = 1024,
-      Nd = 1024 * pd;
+    const LQ = 1024,
+      qQ = 1024 * LQ;
 
-    function Wd(dd) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, dd / Nd)))
+    function oQ(QQ) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, QQ / qQ)))
     }
 
-    function Pd(dd) {
-      return (dd / Nd).toFixed(1)
+    function DQ(QQ) {
+      return (QQ / qQ).toFixed(1)
     }
   },
-  36432: dd => {
-    dd.exports = function(dd, Jd, kd, pd) {
-      var Nd = self || window;
+  35914: QQ => {
+    QQ.exports = function(QQ, FQ, wQ, LQ) {
+      var qQ = self || window;
       try {
         try {
-          var Wd;
+          var oQ;
           try {
-            Wd = new Nd.Blob([dd])
-          } catch (Cd) {
-            (Wd = new(Nd.BlobBuilder || Nd.WebKitBlobBuilder || Nd.MozBlobBuilder || Nd.MSBlobBuilder)).append(dd), Wd = Wd.getBlob()
+            oQ = new qQ.Blob([QQ])
+          } catch (mQ) {
+            (oQ = new(qQ.BlobBuilder || qQ.WebKitBlobBuilder || qQ.MozBlobBuilder || qQ.MSBlobBuilder)).append(QQ), oQ = oQ.getBlob()
           }
-          var Pd = Nd.URL || Nd.webkitURL,
-            Zd = Pd.createObjectURL(Wd),
-            gd = new Nd[Jd](Zd, kd);
-          return Pd.revokeObjectURL(Zd), gd
-        } catch (Cd) {
-          return new Nd[Jd]("data:application/javascript,".concat(encodeURIComponent(dd)), kd)
+          var DQ = qQ.URL || qQ.webkitURL,
+            kQ = DQ.createObjectURL(oQ),
+            vQ = new qQ[FQ](kQ, wQ);
+          return DQ.revokeObjectURL(kQ), vQ
+        } catch (mQ) {
+          return new qQ[FQ]("data:application/javascript,".concat(encodeURIComponent(QQ)), wQ)
         }
-      } catch (Cd) {
-        if (!pd) throw Error("Inline worker is not supported");
-        return new Nd[Jd](pd, kd)
+      } catch (mQ) {
+        if (!LQ) throw Error("Inline worker is not supported");
+        return new qQ[FQ](LQ, wQ)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

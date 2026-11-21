@@ -1,19 +1,19 @@
 export const id = 365;
 export const ids = [365];
 export const modules = {
-  61182: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      passPixelShader: () => Pd
+  60956: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      passPixelShader: () => DQ
     });
-    var pd = kd(39829);
-    const Nd = "passPixelShader",
-      Wd = "varying vec2 vUV;uniform sampler2D textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=texture2D(textureSampler,vUV);}";
-    pd.c.ShadersStore[Nd] || (pd.c.ShadersStore[Nd] = Wd);
-    const Pd = {
-      name: Nd,
-      shader: Wd
+    var LQ = wQ(39251);
+    const qQ = "passPixelShader",
+      oQ = "varying vec2 vUV;uniform sampler2D textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=texture2D(textureSampler,vUV);}";
+    LQ.c.ShadersStore[qQ] || (LQ.c.ShadersStore[qQ] = oQ);
+    const DQ = {
+      name: qQ,
+      shader: oQ
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

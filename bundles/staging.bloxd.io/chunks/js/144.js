@@ -1,67 +1,67 @@
 export const id = 144;
 export const ids = [144];
 export const modules = {
-  7967: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      GameDistributionSdkAdaptor: () => Wd
+  7908: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      GameDistributionSdkAdaptor: () => oQ
     });
-    var pd = kd(1341),
-      Nd = kd(1195);
-    class Wd extends pd.d {
-      constructor(dd) {
-        super(), this.setOnEndCb = dd, this.name = "gamedistribution"
+    var LQ = wQ(1335),
+      qQ = wQ(1196);
+    class oQ extends LQ.b {
+      constructor(QQ) {
+        super(), this.setOnEndCb = QQ, this.name = "gamedistribution"
       }
       static async setup() {
-        let dd;
-        let Jd;
+        let QQ;
+        let FQ;
         return window.GD_OPTIONS = {
           gameId: "b35b336d21654aa5a378480d13ed7225",
-          onEvent: kd => {
-            const pd = () => {
-              Jd && (window.adCompleteSoResume(), Jd = !1), dd && (dd(), dd = null)
+          onEvent: wQ => {
+            const LQ = () => {
+              FQ && (window.adCompleteSoResume(), FQ = !1), QQ && (QQ(), QQ = null)
             };
-            switch (kd.name) {
+            switch (wQ.name) {
               case "SDK_GAME_START":
-                console.log("Gamedis SDK_GAME_START"), Jd = !1, dd ? (dd(), dd = null, window.adCompleteSoResume()) : console.error("onEndCb is not defined during SDK_GAME_START for gamedis sdk. Probably means error happened before.");
+                console.log("Gamedis SDK_GAME_START"), FQ = !1, QQ ? (QQ(), QQ = null, window.adCompleteSoResume()) : console.error("onEndCb is not defined during SDK_GAME_START for gamedis sdk. Probably means error happened before.");
                 break;
               case "SDK_GAME_PAUSE":
                 console.log("Gamedis SDK_GAME_PAUSE"), window.adStartSoPause(null, {
                   preventMovement: !0
-                }), Jd = !0;
+                }), FQ = !0;
                 break;
               case "SDK_ERROR":
-                console.error("Gamedis SDK_ERROR fired"), pd();
+                console.error("Gamedis SDK_ERROR fired"), LQ();
                 break;
               case "SDK_GDPR_TRACKING":
               case "SDK_GDPR_TARGETING":
               default:
                 break;
               case "AD_ERROR":
-                console.error("Gamedis AD_ERROR fired"), pd();
+                console.error("Gamedis AD_ERROR fired"), LQ();
                 break;
               case "AD_IS_ALREADY_RUNNING":
-                console.error("Gamedis AD_IS_ALREADY_RUNNING fired"), pd();
+                console.error("Gamedis AD_IS_ALREADY_RUNNING fired"), LQ();
                 break;
               case "DISPLAYAD_ERROR":
-                console.error("Gamedis DISPLAYAD_ERROR fired"), console.error(kd)
+                console.error("Gamedis DISPLAYAD_ERROR fired"), console.error(wQ)
             }
           }
-        }, await (0, Nd.c)("https://html5.api.gamedistribution.com/main.min.js", {
+        }, await (0, qQ.e)("https://html5.api.gamedistribution.com/main.min.js", {
           id: "gamedistribution-jssdk"
-        }), new Wd((Jd => {
-          dd = Jd
+        }), new oQ((FQ => {
+          QQ = FQ
         }))
       }
-      playVideoAd(dd, Jd) {
-        this.setOnEndCb(dd), console.log("Requesting gamedis preroll"), window.gdsdk.showAd()
+      playVideoAd(QQ, FQ) {
+        this.setOnEndCb(QQ), console.log("Requesting gamedis preroll"), window.gdsdk.showAd()
       }
-      renderBanner(dd) {
-        console.log("Getting new gamedis banners"), void 0 !== window.gdsdk.AdType.Display ? (console.log("requesting gamedis banner into", document.getElementById(dd.divId)), console.log("Params to window.gdsdk.showAd", window.gdsdk.AdType.Display, dd.divId), window.gdsdk.showAd(window.gdsdk.AdType.Display, {
-          containerId: dd.divId
-        }).then((() => console.info("showAd(window.gdsdk.AdType.Display) resolved."))).catch((dd => console.info(dd)))) : console.error("window.gdsdk.AdType.Display is undefined")
+      renderBanner(QQ) {
+        console.log("Getting new gamedis banners"), void 0 !== window.gdsdk.AdType.Display ? (console.log("requesting gamedis banner into", document.getElementById(QQ.divId)), console.log("Params to window.gdsdk.showAd", window.gdsdk.AdType.Display, QQ.divId), window.gdsdk.showAd(window.gdsdk.AdType.Display, {
+          containerId: QQ.divId
+        }).then((() => console.info("showAd(window.gdsdk.AdType.Display) resolved."))).catch((QQ => console.info(QQ)))) : console.error("window.gdsdk.AdType.Display is undefined")
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,240 +1,240 @@
-/*! For license information please see x17cru.214.e259c26d.chunk.js.LICENSE.txt */
+/*! For license information please see bqoxjr.214.f99eb3b3.chunk.js.LICENSE.txt */
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  39678: (dd, Jd, kd) => {
-    dd.exports = Nd;
-    var pd = kd(325);
+  39090: (QQ, FQ, wQ) => {
+    QQ.exports = qQ;
+    var LQ = wQ(334);
 
-    function Nd(dd, Jd) {
-      if (!(this instanceof Nd)) return new Nd(dd, Jd);
-      var kd = pd.create();
-      pd.add(kd, dd, Jd), this.base = pd.min(pd.create(), dd, kd), this.vec = pd.clone(Jd), this.max = pd.max(pd.create(), dd, kd), this.mag = pd.length(this.vec)
+    function qQ(QQ, FQ) {
+      if (!(this instanceof qQ)) return new qQ(QQ, FQ);
+      var wQ = LQ.create();
+      LQ.add(wQ, QQ, FQ), this.base = LQ.min(LQ.create(), QQ, wQ), this.vec = LQ.clone(FQ), this.max = LQ.max(LQ.create(), QQ, wQ), this.mag = LQ.length(this.vec)
     }
-    var Wd = Nd.prototype;
-    Wd.width = function() {
+    var oQ = qQ.prototype;
+    oQ.width = function() {
       return this.vec[0]
-    }, Wd.height = function() {
+    }, oQ.height = function() {
       return this.vec[1]
-    }, Wd.depth = function() {
+    }, oQ.depth = function() {
       return this.vec[2]
-    }, Wd.x0 = function() {
+    }, oQ.x0 = function() {
       return this.base[0]
-    }, Wd.y0 = function() {
+    }, oQ.y0 = function() {
       return this.base[1]
-    }, Wd.z0 = function() {
+    }, oQ.z0 = function() {
       return this.base[2]
-    }, Wd.x1 = function() {
+    }, oQ.x1 = function() {
       return this.max[0]
-    }, Wd.y1 = function() {
+    }, oQ.y1 = function() {
       return this.max[1]
-    }, Wd.z1 = function() {
+    }, oQ.z1 = function() {
       return this.max[2]
-    }, Wd.translate = function(dd) {
-      return pd.add(this.max, this.max, dd), pd.add(this.base, this.base, dd), this
-    }, Wd.setPosition = function(dd) {
-      return pd.add(this.max, dd, this.vec), pd.copy(this.base, dd), this
-    }, Wd.expand = function(dd) {
-      var Jd = pd.create(),
-        kd = pd.create();
-      return pd.max(Jd, dd.max, this.max), pd.min(kd, dd.base, this.base), pd.subtract(Jd, Jd, kd), new Nd(kd, Jd)
-    }, Wd.intersects = function(dd) {
-      return !(dd.base[0] > this.max[0]) && (!(dd.base[1] > this.max[1]) && (!(dd.base[2] > this.max[2]) && (!(dd.max[0] < this.base[0]) && (!(dd.max[1] < this.base[1]) && !(dd.max[2] < this.base[2])))))
-    }, Wd.touches = function(dd) {
-      var Jd = this.union(dd);
-      return null !== Jd && (0 == Jd.width() || 0 == Jd.height() || 0 == Jd.depth())
-    }, Wd.union = function(dd) {
-      if (!this.intersects(dd)) return null;
-      var Jd = Math.max(dd.base[0], this.base[0]),
-        kd = Math.max(dd.base[1], this.base[1]),
-        pd = Math.max(dd.base[2], this.base[2]);
-      return new Nd([Jd, kd, pd], [Math.min(dd.max[0], this.max[0]) - Jd, Math.min(dd.max[1], this.max[1]) - kd, Math.min(dd.max[2], this.max[2]) - pd])
+    }, oQ.translate = function(QQ) {
+      return LQ.add(this.max, this.max, QQ), LQ.add(this.base, this.base, QQ), this
+    }, oQ.setPosition = function(QQ) {
+      return LQ.add(this.max, QQ, this.vec), LQ.copy(this.base, QQ), this
+    }, oQ.expand = function(QQ) {
+      var FQ = LQ.create(),
+        wQ = LQ.create();
+      return LQ.max(FQ, QQ.max, this.max), LQ.min(wQ, QQ.base, this.base), LQ.subtract(FQ, FQ, wQ), new qQ(wQ, FQ)
+    }, oQ.intersects = function(QQ) {
+      return !(QQ.base[0] > this.max[0]) && (!(QQ.base[1] > this.max[1]) && (!(QQ.base[2] > this.max[2]) && (!(QQ.max[0] < this.base[0]) && (!(QQ.max[1] < this.base[1]) && !(QQ.max[2] < this.base[2])))))
+    }, oQ.touches = function(QQ) {
+      var FQ = this.union(QQ);
+      return null !== FQ && (0 == FQ.width() || 0 == FQ.height() || 0 == FQ.depth())
+    }, oQ.union = function(QQ) {
+      if (!this.intersects(QQ)) return null;
+      var FQ = Math.max(QQ.base[0], this.base[0]),
+        wQ = Math.max(QQ.base[1], this.base[1]),
+        LQ = Math.max(QQ.base[2], this.base[2]);
+      return new qQ([FQ, wQ, LQ], [Math.min(QQ.max[0], this.max[0]) - FQ, Math.min(QQ.max[1], this.max[1]) - wQ, Math.min(QQ.max[2], this.max[2]) - LQ])
     }
   },
-  39675: dd => {
-    dd.exports = function(dd, Jd, kd, pd, Nd, Wd) {
-      var Pd = +Jd[0],
-        Zd = +Jd[1],
-        gd = +Jd[2],
-        Cd = +kd[0],
-        Kd = +kd[1],
-        od = +kd[2],
-        ld = Math.sqrt(Cd * Cd + Kd * Kd + od * od);
-      if (0 === ld) throw new Error("Can't raycast along a zero vector");
-      return function(dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd) {
-        for (var Kd = 0, od = Math.floor, ld = 0 | od(Jd), Qd = 0 | od(kd), Ld = 0 | od(pd), Od = Nd > 0 ? 1 : -1, ed = Wd > 0 ? 1 : -1, Rd = Pd > 0 ? 1 : -1, Id = Math.abs(1 / Nd), Gd = Math.abs(1 / Wd), vd = Math.abs(1 / Pd), xd = Id < 1 / 0 ? Id * (Od > 0 ? ld + 1 - Jd : Jd - ld) : 1 / 0, qd = Gd < 1 / 0 ? Gd * (ed > 0 ? Qd + 1 - kd : kd - Qd) : 1 / 0, Bd = vd < 1 / 0 ? vd * (Rd > 0 ? Ld + 1 - pd : pd - Ld) : 1 / 0, sd = -1; Kd <= Zd;) {
-          var ad = dd(ld, Qd, Ld);
-          if (ad) return gd && (gd[0] = Jd + Kd * Nd, gd[1] = kd + Kd * Wd, gd[2] = pd + Kd * Pd), Cd && (Cd[0] = Cd[1] = Cd[2] = 0, 0 === sd && (Cd[0] = -Od), 1 === sd && (Cd[1] = -ed), 2 === sd && (Cd[2] = -Rd)), ad;
-          xd < qd ? xd < Bd ? (ld += Od, Kd = xd, xd += Id, sd = 0) : (Ld += Rd, Kd = Bd, Bd += vd, sd = 2) : qd < Bd ? (Qd += ed, Kd = qd, qd += Gd, sd = 1) : (Ld += Rd, Kd = Bd, Bd += vd, sd = 2)
+  39087: QQ => {
+    QQ.exports = function(QQ, FQ, wQ, LQ, qQ, oQ) {
+      var DQ = +FQ[0],
+        kQ = +FQ[1],
+        vQ = +FQ[2],
+        mQ = +wQ[0],
+        uQ = +wQ[1],
+        HQ = +wQ[2],
+        bQ = Math.sqrt(mQ * mQ + uQ * uQ + HQ * HQ);
+      if (0 === bQ) throw new Error("Can't raycast along a zero vector");
+      return function(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ) {
+        for (var uQ = 0, HQ = Math.floor, bQ = 0 | HQ(FQ), YQ = 0 | HQ(wQ), xQ = 0 | HQ(LQ), AQ = qQ > 0 ? 1 : -1, tQ = oQ > 0 ? 1 : -1, eQ = DQ > 0 ? 1 : -1, MQ = Math.abs(1 / qQ), GQ = Math.abs(1 / oQ), pQ = Math.abs(1 / DQ), cQ = MQ < 1 / 0 ? MQ * (AQ > 0 ? bQ + 1 - FQ : FQ - bQ) : 1 / 0, CQ = GQ < 1 / 0 ? GQ * (tQ > 0 ? YQ + 1 - wQ : wQ - YQ) : 1 / 0, SQ = pQ < 1 / 0 ? pQ * (eQ > 0 ? xQ + 1 - LQ : LQ - xQ) : 1 / 0, iQ = -1; uQ <= kQ;) {
+          var WQ = QQ(bQ, YQ, xQ);
+          if (WQ) return vQ && (vQ[0] = FQ + uQ * qQ, vQ[1] = wQ + uQ * oQ, vQ[2] = LQ + uQ * DQ), mQ && (mQ[0] = mQ[1] = mQ[2] = 0, 0 === iQ && (mQ[0] = -AQ), 1 === iQ && (mQ[1] = -tQ), 2 === iQ && (mQ[2] = -eQ)), WQ;
+          cQ < CQ ? cQ < SQ ? (bQ += AQ, uQ = cQ, cQ += MQ, iQ = 0) : (xQ += eQ, uQ = SQ, SQ += pQ, iQ = 2) : CQ < SQ ? (YQ += tQ, uQ = CQ, CQ += GQ, iQ = 1) : (xQ += eQ, uQ = SQ, SQ += pQ, iQ = 2)
         }
-        return gd && (gd[0] = Jd + Kd * Nd, gd[1] = kd + Kd * Wd, gd[2] = pd + Kd * Pd), Cd && (Cd[0] = Cd[1] = Cd[2] = 0), 0
-      }(dd, Pd, Zd, gd, Cd /= ld, Kd /= ld, od /= ld, pd = "undefined" === typeof pd ? 64 : +pd, Nd, Wd)
+        return vQ && (vQ[0] = FQ + uQ * qQ, vQ[1] = wQ + uQ * oQ, vQ[2] = LQ + uQ * DQ), mQ && (mQ[0] = mQ[1] = mQ[2] = 0), 0
+      }(QQ, DQ, kQ, vQ, mQ /= bQ, uQ /= bQ, HQ /= bQ, LQ = "undefined" === typeof LQ ? 64 : +LQ, qQ, oQ)
     }
   },
-  39254: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Zd,
-      d: () => Wd
+  38645: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => kQ,
+      f: () => oQ
     });
-    var pd = kd(3946);
-    let Nd = null;
+    var LQ = wQ(3965);
+    let qQ = null;
 
-    function Wd(dd) {
-      return null !== Nd && dd === Nd
+    function oQ(QQ) {
+      return null !== qQ && QQ === qQ
     }
 
-    function Pd() {
-      this.Qr = !1, this.stopPropagation = !1, this.Vr = !1, this.disabled = !1
+    function DQ() {
+      this.KJ = !1, this.stopPropagation = !1, this.aJ = !1, this.disabled = !1
     }
-    class Zd {
-      constructor(dd, Jd) {
+    class kQ {
+      constructor(QQ, FQ) {
         this.version = "0.7.0";
-        var kd = Object.assign({}, new Pd, Jd || {});
-        this.element = dd || document, this.Qr = !!kd.Qr, this.stopPropagation = !!kd.stopPropagation, this.Vr = !!kd.Vr, this.disabled = !!kd.disabled, this.filterEvents = (dd, Jd) => !0, this.ignoreEvent = dd => !1, this.down = new pd.EventEmitter, this.up = new pd.EventEmitter, this.state = {}, this.ku = {
+        var wQ = Object.assign({}, new DQ, FQ || {});
+        this.element = QQ || document, this.KJ = !!wQ.KJ, this.stopPropagation = !!wQ.stopPropagation, this.aJ = !!wQ.aJ, this.disabled = !!wQ.disabled, this.filterEvents = (QQ, FQ) => !0, this.ignoreEvent = QQ => !1, this.down = new LQ.EventEmitter, this.up = new LQ.EventEmitter, this.state = {}, this.gJ = {
           dx: 0,
           dy: 0,
-          xJd: 0,
-          qJd: 0,
-          BJd: 0
+          pFQ: 0,
+          cFQ: 0,
+          CFQ: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? Cd(this) : document.addEventListener("DOMContentLoaded", (dd => {
-          Cd(this)
+        }, "loading" !== document.readyState ? mQ(this) : document.addEventListener("DOMContentLoaded", (QQ => {
+          mQ(this)
         }), {
           once: !0
         })
       }
-      bind(dd) {
-        for (var Jd = arguments.length, kd = new Array(Jd > 1 ? Jd - 1 : 0), pd = 1; pd < Jd; pd++) kd[pd - 1] = arguments[pd];
-        kd.forEach((Jd => {
-          var kd = this._keyBindmap[Jd] || [];
-          kd.includes(dd) || (kd.push(dd), this._keyBindmap[Jd] = kd)
-        })), this.state[dd] = !!this.state[dd], this.pressCount[dd] = this.pressCount[dd] || 0, this.releaseCount[dd] = this.releaseCount[dd] || 0
+      bind(QQ) {
+        for (var FQ = arguments.length, wQ = new Array(FQ > 1 ? FQ - 1 : 0), LQ = 1; LQ < FQ; LQ++) wQ[LQ - 1] = arguments[LQ];
+        wQ.forEach((FQ => {
+          var wQ = this._keyBindmap[FQ] || [];
+          wQ.includes(QQ) || (wQ.push(QQ), this._keyBindmap[FQ] = wQ)
+        })), this.state[QQ] = !!this.state[QQ], this.pressCount[QQ] = this.pressCount[QQ] || 0, this.releaseCount[QQ] = this.releaseCount[QQ] || 0
       }
-      unbind(dd) {
-        for (var Jd in this._keyBindmap) {
-          var kd = this._keyBindmap[Jd],
-            pd = kd.indexOf(dd);
-          pd > -1 && kd.splice(pd, 1)
+      unbind(QQ) {
+        for (var FQ in this._keyBindmap) {
+          var wQ = this._keyBindmap[FQ],
+            LQ = wQ.indexOf(QQ);
+          LQ > -1 && wQ.splice(LQ, 1)
         }
       }
       getBindings() {
-        var dd = {};
-        for (var Jd in this._keyBindmap) {
-          this._keyBindmap[Jd].forEach((kd => {
-            dd[kd] = dd[kd] || [], dd[kd].push(Jd)
+        var QQ = {};
+        for (var FQ in this._keyBindmap) {
+          this._keyBindmap[FQ].forEach((wQ => {
+            QQ[wQ] = QQ[wQ] || [], QQ[wQ].push(FQ)
           }))
         }
-        return dd
+        return QQ
       }
-      Do() {
-        gd(this.ku), gd(this.pressCount), gd(this.releaseCount)
+      fH() {
+        vQ(this.gJ), vQ(this.pressCount), vQ(this.releaseCount)
       }
     }
 
-    function gd(dd) {
-      for (var Jd in dd) dd[Jd] = 0
+    function vQ(QQ) {
+      for (var FQ in QQ) QQ[FQ] = 0
     }
 
-    function Cd(dd) {
-      window.addEventListener("keydown", ed.bind(null, dd, !0), !1), window.addEventListener("keyup", ed.bind(null, dd, !1), !1);
-      var Jd = {
+    function mQ(QQ) {
+      window.addEventListener("keydown", tQ.bind(null, QQ, !0), !1), window.addEventListener("keyup", tQ.bind(null, QQ, !1), !1);
+      var FQ = {
         passive: !0
       };
-      dd.element.addEventListener("touchstart", Qd.bind(void 0, dd), {
+      QQ.element.addEventListener("touchstart", YQ.bind(void 0, QQ), {
         passive: !1
-      }), dd.element.addEventListener("touchend", Od.bind(void 0, dd), Jd), dd.element.addEventListener("mousedown", Rd.bind(null, dd, !0), Jd), window.document.addEventListener("mouseup", Rd.bind(null, dd, !1), Jd), dd.element.addEventListener("touchmove", Id.bind(null, dd), Jd), dd.element.addEventListener("mousemove", Id.bind(null, dd), Jd), window.PointerEvent, dd.element.addEventListener("wheel", Gd.bind(null, dd), Jd), dd.element.addEventListener("contextmenu", vd.bind(null, dd), !1), window.addEventListener("blur", Bd.bind(null, dd), !1)
+      }), QQ.element.addEventListener("touchend", AQ.bind(void 0, QQ), FQ), QQ.element.addEventListener("mousedown", eQ.bind(null, QQ, !0), FQ), window.document.addEventListener("mouseup", eQ.bind(null, QQ, !1), FQ), QQ.element.addEventListener("touchmove", MQ.bind(null, QQ), FQ), QQ.element.addEventListener("mousemove", MQ.bind(null, QQ), FQ), window.PointerEvent, QQ.element.addEventListener("wheel", GQ.bind(null, QQ), FQ), QQ.element.addEventListener("contextmenu", pQ.bind(null, QQ), !1), window.addEventListener("blur", SQ.bind(null, QQ), !1)
     }
-    var Kd = 0,
-      od = 0,
-      ld = null;
+    var uQ = 0,
+      HQ = 0,
+      bQ = null;
 
-    function Qd(dd, Jd) {
-      Jd.preventDefault(), Ld(Jd)
+    function YQ(QQ, FQ) {
+      FQ.preventDefault(), xQ(FQ)
     }
 
-    function Ld(dd) {
-      let Jd = !1;
-      for (let kd = 0; kd < dd.touches.length; ++kd)
-        if (dd.touches[kd].identifier === ld) {
-          Jd = !0;
+    function xQ(QQ) {
+      let FQ = !1;
+      for (let wQ = 0; wQ < QQ.touches.length; ++wQ)
+        if (QQ.touches[wQ].identifier === bQ) {
+          FQ = !0;
           break
-        } if (!Jd) {
-        const Jd = dd.changedTouches[0];
-        Kd = Jd.clientX, od = Jd.clientY, ld = Jd.identifier
+        } if (!FQ) {
+        const FQ = QQ.changedTouches[0];
+        uQ = FQ.clientX, HQ = FQ.clientY, bQ = FQ.identifier
       }
     }
 
-    function Od(dd, Jd) {
-      for (var kd = Jd.changedTouches, pd = 0; pd < kd.length; ++pd) kd[pd].identifier === ld && (ld = null)
+    function AQ(QQ, FQ) {
+      for (var wQ = FQ.changedTouches, LQ = 0; LQ < wQ.length; ++LQ) wQ[LQ].identifier === bQ && (bQ = null)
     }
 
-    function ed(dd, Jd, kd) {
-      if (!dd.ignoreEvent(kd)) try {
-        sd(dd, kd), Jd && kd.isTrusted && !kd.repeat && dd._keyStates[kd.code] && ad(dd, kd.code)
+    function tQ(QQ, FQ, wQ) {
+      if (!QQ.ignoreEvent(wQ)) try {
+        iQ(QQ, wQ), FQ && wQ.isTrusted && !wQ.repeat && QQ._keyStates[wQ.code] && WQ(QQ, wQ.code)
       } finally {
-        Md(kd.code, Jd, dd, kd)
+        RQ(wQ.code, FQ, QQ, wQ)
       }
     }
 
-    function Rd(dd, Jd, kd) {
-      if (!dd.ignoreEvent(kd)) try {
-        sd(dd, kd)
+    function eQ(QQ, FQ, wQ) {
+      if (!QQ.ignoreEvent(wQ)) try {
+        iQ(QQ, wQ)
       } finally {
-        ! function(dd, Jd, kd) {
-          if ("pointerId" in kd)
-            if (Jd) {
-              if (null !== dd._touches.currID) return;
-              dd._touches.currID = kd.pointerId
+        ! function(QQ, FQ, wQ) {
+          if ("pointerId" in wQ)
+            if (FQ) {
+              if (null !== QQ._touches.currID) return;
+              QQ._touches.currID = wQ.pointerId
             } else {
-              if (dd._touches.currID !== kd.pointerId) return;
-              dd._touches.currID = null
-            } var pd = "button" in kd ? kd.button + 1 : 1;
-          Md("Mouse" + pd, Jd, dd, kd)
-        }(dd, Jd, kd)
+              if (QQ._touches.currID !== wQ.pointerId) return;
+              QQ._touches.currID = null
+            } var LQ = "button" in wQ ? wQ.button + 1 : 1;
+          RQ("Mouse" + LQ, FQ, QQ, wQ)
+        }(QQ, FQ, wQ)
       }
     }
 
-    function Id(dd, Jd) {
-      var kd = Jd.movementX || Jd.mozMovementX || 0,
-        pd = Jd.movementY || Jd.mozMovementY || 0;
-      if (Jd.touches && 0 === (kd | pd)) {
-        var Nd = function(dd) {
-          Ld(dd);
-          for (let Jd = 0; Jd < dd.changedTouches.length; ++Jd)
-            if (dd.changedTouches[Jd].identifier == ld) {
-              const kd = dd.changedTouches[Jd],
-                pd = [kd.clientX - Kd, kd.clientY - od];
-              return Kd = kd.clientX, od = kd.clientY, pd
-            } return console.error(`Did not find touch id ${ld}`), [0, 0]
-        }(Jd);
-        kd = Nd[0], pd = Nd[1]
+    function MQ(QQ, FQ) {
+      var wQ = FQ.movementX || FQ.mozMovementX || 0,
+        LQ = FQ.movementY || FQ.mozMovementY || 0;
+      if (FQ.touches && 0 === (wQ | LQ)) {
+        var qQ = function(QQ) {
+          xQ(QQ);
+          for (let FQ = 0; FQ < QQ.changedTouches.length; ++FQ)
+            if (QQ.changedTouches[FQ].identifier == bQ) {
+              const wQ = QQ.changedTouches[FQ],
+                LQ = [wQ.clientX - uQ, wQ.clientY - HQ];
+              return uQ = wQ.clientX, HQ = wQ.clientY, LQ
+            } return console.error(`Did not find touch id ${bQ}`), [0, 0]
+        }(FQ);
+        wQ = qQ[0], LQ = qQ[1]
       }
-      dd.ku.dx += kd, dd.ku.dy += pd
+      QQ.gJ.dx += wQ, QQ.gJ.dy += LQ
     }
 
-    function Gd(dd, Jd) {
-      sd(dd, Jd);
-      var kd = 1;
-      switch (Jd.deltaMode) {
+    function GQ(QQ, FQ) {
+      iQ(QQ, FQ);
+      var wQ = 1;
+      switch (FQ.deltaMode) {
         case 0:
-          kd = 1;
+          wQ = 1;
           break;
         case 1:
-          kd = 12;
+          wQ = 12;
           break;
         case 2:
-          kd = dd.element.clientHeight || window.innerHeight
+          wQ = QQ.element.clientHeight || window.innerHeight
       }
-      dd.ku.xJd += (Jd.deltaX || 0) * kd, dd.ku.qJd += (Jd.deltaY || 0) * kd, dd.ku.BJd += (Jd.deltaZ || 0) * kd
+      QQ.gJ.pFQ += (FQ.deltaX || 0) * wQ, QQ.gJ.cFQ += (FQ.deltaY || 0) * wQ, QQ.gJ.CFQ += (FQ.deltaZ || 0) * wQ
     }
 
-    function vd(dd, Jd) {
-      if (!dd.Vr) return Jd.preventDefault(), !1
+    function pQ(QQ, FQ) {
+      if (!QQ.aJ) return FQ.preventDefault(), !1
     }
-    var xd = {
+    var cQ = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function qd(dd, Jd) {
-      return !!dd[xd[Jd]] || ("AltRight" === Jd || "ControlLeft" === Jd) && "function" === typeof dd.getModifierState && !0 === dd.getModifierState("AltGraph")
+    function CQ(QQ, FQ) {
+      return !!QQ[cQ[FQ]] || ("AltRight" === FQ || "ControlLeft" === FQ) && "function" === typeof QQ.getModifierState && !0 === QQ.getModifierState("AltGraph")
     }
 
-    function Bd(dd, Jd) {
-      for (var kd in dd._modifiersHeldThroughBlur = {}, xd) dd._keyStates[kd] && (dd._modifiersHeldThroughBlur[kd] = !0);
-      Jd && Jd.isTrusted && function() {
+    function SQ(QQ, FQ) {
+      for (var wQ in QQ._modifiersHeldThroughBlur = {}, cQ) QQ._keyStates[wQ] && (QQ._modifiersHeldThroughBlur[wQ] = !0);
+      FQ && FQ.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (dd) {
+        } catch (QQ) {
           return !0
         }
-      }() && (clearTimeout(dd._blurRelease), dd._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(QQ._blurRelease), QQ._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var Jd in dd._modifiersHeldThroughBlur = {}, dd._keyStates) dd._keyStates[Jd] && !/^Mouse\d/.test(Jd) && ad(dd, Jd)
+          for (var FQ in QQ._modifiersHeldThroughBlur = {}, QQ._keyStates) QQ._keyStates[FQ] && !/^Mouse\d/.test(FQ) && WQ(QQ, FQ)
       }), 0))
     }
 
-    function sd(dd, Jd) {
-      var kd = dd._modifiersHeldThroughBlur;
-      if (kd && Jd.isTrusted && document.hasFocus())
-        for (var pd in kd) delete kd[pd], dd._keyStates[pd] && pd !== Jd.code && (qd(Jd, pd) || ad(dd, pd))
+    function iQ(QQ, FQ) {
+      var wQ = QQ._modifiersHeldThroughBlur;
+      if (wQ && FQ.isTrusted && document.hasFocus())
+        for (var LQ in wQ) delete wQ[LQ], QQ._keyStates[LQ] && LQ !== FQ.code && (CQ(FQ, LQ) || WQ(QQ, LQ))
     }
 
-    function ad(dd, Jd) {
-      const kd = {
-          code: Jd,
+    function WQ(QQ, FQ) {
+      const wQ = {
+          code: FQ,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        pd = Nd;
-      Nd = kd;
+        LQ = qQ;
+      qQ = wQ;
       try {
-        Md(Jd, !1, dd, kd)
+        RQ(FQ, !1, QQ, wQ)
       } finally {
-        Nd = pd
+        qQ = LQ
       }
     }
 
-    function Md(dd, Jd, kd, pd) {
-      var Nd = kd._keyBindmap[dd];
-      Nd && (Fd(kd._keyStates[dd], Jd) && (kd._keyStates[dd] = Jd, Nd.forEach((dd => {
-        (!kd.filterEvents || kd.filterEvents(pd, dd)) && function(dd, Jd, kd, pd) {
-          var Nd = Jd ? kd.pressCount : kd.releaseCount;
-          Nd[dd] = (Nd[dd] || 0) + 1;
-          var Wd = kd._bindPressCount[dd] || 0;
-          (Wd += Jd ? 1 : -1) < 0 && (Wd = 0);
-          kd._bindPressCount[dd] = Wd;
-          var Pd = kd.state[dd];
-          if (Fd(Pd, Wd)) {
-            kd.state[dd] = Wd > 0;
-            var Zd = Jd ? kd.down : kd.up;
-            kd.disabled || Zd.emit(dd, pd)
+    function RQ(QQ, FQ, wQ, LQ) {
+      var qQ = wQ._keyBindmap[QQ];
+      qQ && (OQ(wQ._keyStates[QQ], FQ) && (wQ._keyStates[QQ] = FQ, qQ.forEach((QQ => {
+        (!wQ.filterEvents || wQ.filterEvents(LQ, QQ)) && function(QQ, FQ, wQ, LQ) {
+          var qQ = FQ ? wQ.pressCount : wQ.releaseCount;
+          qQ[QQ] = (qQ[QQ] || 0) + 1;
+          var oQ = wQ._bindPressCount[QQ] || 0;
+          (oQ += FQ ? 1 : -1) < 0 && (oQ = 0);
+          wQ._bindPressCount[QQ] = oQ;
+          var DQ = wQ.state[QQ];
+          if (OQ(DQ, oQ)) {
+            wQ.state[QQ] = oQ > 0;
+            var kQ = FQ ? wQ.down : wQ.up;
+            wQ.disabled || kQ.emit(QQ, LQ)
           }
-        }(dd, Jd, kd, pd)
-      }))), "button" in pd || (kd.Qr && !pd.defaultPrevented && pd.preventDefault(), kd.stopPropagation && pd.stopPropagation()))
+        }(QQ, FQ, wQ, LQ)
+      }))), "button" in LQ || (wQ.KJ && !LQ.defaultPrevented && LQ.preventDefault(), wQ.stopPropagation && LQ.stopPropagation()))
     }
 
-    function Fd(dd, Jd) {
-      return dd ? !Jd : Jd
+    function OQ(QQ, FQ) {
+      return QQ ? !FQ : FQ
     }
   },
-  36706: (dd, Jd) => {
-    function kd(dd) {
-      if (dd && "object" === typeof dd) {
-        var Jd = dd.which || dd.keyCode || dd.charCode;
-        Jd && (dd = Jd)
+  36166: (QQ, FQ) => {
+    function wQ(QQ) {
+      if (QQ && "object" === typeof QQ) {
+        var FQ = QQ.which || QQ.keyCode || QQ.charCode;
+        FQ && (QQ = FQ)
       }
-      if ("number" === typeof dd) return Pd[dd];
-      var kd, Wd = String(dd);
-      return (kd = pd[Wd.toLowerCase()]) ? kd : (kd = Nd[Wd.toLowerCase()]) || (1 === Wd.length ? Wd.charCodeAt(0) : void 0)
+      if ("number" === typeof QQ) return DQ[QQ];
+      var wQ, oQ = String(QQ);
+      return (wQ = LQ[oQ.toLowerCase()]) ? wQ : (wQ = qQ[oQ.toLowerCase()]) || (1 === oQ.length ? oQ.charCodeAt(0) : void 0)
     }
-    kd.isEventKey = function(dd, Jd) {
-      if (dd && "object" === typeof dd) {
-        var kd = dd.which || dd.keyCode || dd.charCode;
-        if (null === kd || void 0 === kd) return !1;
-        if ("string" === typeof Jd) {
-          var Wd;
-          if (Wd = pd[Jd.toLowerCase()]) return Wd === kd;
-          if (Wd = Nd[Jd.toLowerCase()]) return Wd === kd
-        } else if ("number" === typeof Jd) return Jd === kd;
+    wQ.isEventKey = function(QQ, FQ) {
+      if (QQ && "object" === typeof QQ) {
+        var wQ = QQ.which || QQ.keyCode || QQ.charCode;
+        if (null === wQ || void 0 === wQ) return !1;
+        if ("string" === typeof FQ) {
+          var oQ;
+          if (oQ = LQ[FQ.toLowerCase()]) return oQ === wQ;
+          if (oQ = qQ[FQ.toLowerCase()]) return oQ === wQ
+        } else if ("number" === typeof FQ) return FQ === wQ;
         return !1
       }
     };
-    var pd = (Jd = dd.exports = kd).code = Jd.codes = {
+    var LQ = (FQ = QQ.exports = wQ).code = FQ.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      Nd = Jd.aliases = {
+      qQ = FQ.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Wd = 97; Wd < 123; Wd++) pd[String.fromCharCode(Wd)] = Wd - 32;
-    for (var Wd = 48; Wd < 58; Wd++) pd[Wd - 48] = Wd;
-    for (Wd = 1; Wd < 13; Wd++) pd["f" + Wd] = Wd + 111;
-    for (Wd = 0; Wd < 10; Wd++) pd["numpad " + Wd] = Wd + 96;
-    var Pd = Jd.names = Jd.title = {};
-    for (Wd in pd) Pd[pd[Wd]] = Wd;
-    for (var Zd in Nd) pd[Zd] = Nd[Zd]
+    for (oQ = 97; oQ < 123; oQ++) LQ[String.fromCharCode(oQ)] = oQ - 32;
+    for (var oQ = 48; oQ < 58; oQ++) LQ[oQ - 48] = oQ;
+    for (oQ = 1; oQ < 13; oQ++) LQ["f" + oQ] = oQ + 111;
+    for (oQ = 0; oQ < 10; oQ++) LQ["numpad " + oQ] = oQ + 96;
+    var DQ = FQ.names = FQ.title = {};
+    for (oQ in LQ) DQ[LQ[oQ]] = oQ;
+    for (var kQ in qQ) LQ[kQ] = qQ[kQ]
   },
-  39665: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => pd
+  39075: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => LQ
     });
-    class pd {
+    class LQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.Iy = !1, this.Gy = !1, this.AY = 30, this.rU = 0, this.vy = 100, this.ve = !1, this.fullscreen = !1, this.mI = function(dd) {}, this.Fy = function(dd, Jd, kd) {}, this.Uy = function() {}, this.xI = function() {}, this.Sy = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(dd) {}, this._data = new Nd(Jd),
-          function(dd) {
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.Gl = !1, this.Rl = !1, this.mN = 30, this.hK = 0, this.Ul = 100, this.Kt = !1, this.fullscreen = !1, this.nG = function(QQ) {}, this.Tl = function(QQ, FQ, wQ) {}, this.Bl = function() {}, this.aG = function() {}, this.Kl = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(QQ) {}, this._data = new qQ(FQ),
+          function(QQ) {
             if ("loading" === document.readyState) {
-              var Jd = () => {
-                document.removeEventListener("readystatechange", Jd), dd()
+              var FQ = () => {
+                document.removeEventListener("readystatechange", FQ), QQ()
               };
-              document.addEventListener("readystatechange", Jd)
-            } else setTimeout(dd, 0)
+              document.addEventListener("readystatechange", FQ)
+            } else setTimeout(QQ, 0)
           }((() => {
-            ! function(dd) {
-              var Jd = dd._data,
-                kd = Jd.nowObject.now();
-              Jd.lastTickStarted = kd, Jd.lastFrameStarted = kd, Jd.lastRenderStarted = kd, Jd.frameCB = () => function(dd) {
-                var Jd = dd._data;
-                requestAnimationFrame(Jd.frameCB), Zd(dd);
-                var kd = Jd.nowObject.now(),
-                  pd = kd - Jd.lastFrameStarted;
-                if (Jd.lastFrameStarted = kd, dd.rU > 0) {
-                  Jd.renderAccum += pd;
-                  var Nd = 1e3 / dd.rU;
-                  if (Jd.renderAccum < Nd) return;
-                  Jd.renderAccum -= Nd, Jd.renderAccum > Nd && (Jd.renderAccum = Nd)
+            ! function(QQ) {
+              var FQ = QQ._data,
+                wQ = FQ.nowObject.now();
+              FQ.lastTickStarted = wQ, FQ.lastFrameStarted = wQ, FQ.lastRenderStarted = wQ, FQ.frameCB = () => function(QQ) {
+                var FQ = QQ._data;
+                requestAnimationFrame(FQ.frameCB), kQ(QQ);
+                var wQ = FQ.nowObject.now(),
+                  LQ = wQ - FQ.lastFrameStarted;
+                if (FQ.lastFrameStarted = wQ, QQ.hK > 0) {
+                  FQ.renderAccum += LQ;
+                  var qQ = 1e3 / QQ.hK;
+                  if (FQ.renderAccum < qQ) return;
+                  FQ.renderAccum -= qQ, FQ.renderAccum > qQ && (FQ.renderAccum = qQ)
                 }
-                var Wd = kd - Jd.lastRenderStarted;
-                Jd.lastRenderStarted = kd;
-                var Pd = 1e3 / dd.AY,
-                  gd = (kd - Jd.lastTickStarted) / Pd;
-                gd < 0 && (gd = 0);
-                dd.Fy(Wd, gd, Pd), setTimeout(Zd, 0, dd, !0)
-              }(dd), Jd.intervalCB = () => Zd(dd), requestAnimationFrame(Jd.frameCB), Jd.pollTime > 0 && (Jd.intervalID = setInterval(Jd.intervalCB, Math.max(Jd.pollTime, 1e3 / dd.AY / 2)))
+                var oQ = wQ - FQ.lastRenderStarted;
+                FQ.lastRenderStarted = wQ;
+                var DQ = 1e3 / QQ.mN,
+                  vQ = (wQ - FQ.lastTickStarted) / DQ;
+                vQ < 0 && (vQ = 0);
+                QQ.Tl(oQ, vQ, DQ), setTimeout(kQ, 0, QQ, !0)
+              }(QQ), FQ.intervalCB = () => kQ(QQ), requestAnimationFrame(FQ.frameCB), FQ.pollTime > 0 && (FQ.intervalID = setInterval(FQ.intervalCB, Math.max(FQ.pollTime, 1e3 / QQ.mN / 2)))
             }(this),
-            function(dd, Jd) {
-              if (!Jd) return;
-              var kd = !1,
-                pd = !1,
-                Nd = dd => {
-                  if (!!dd !== (kd = Jd === document.pointerLockElement))
-                    if (dd) {
-                      var pd = Jd.requestPointerLock();
-                      pd && pd.catch && pd.catch((dd => {}))
+            function(QQ, FQ) {
+              if (!FQ) return;
+              var wQ = !1,
+                LQ = !1,
+                qQ = QQ => {
+                  if (!!QQ !== (wQ = FQ === document.pointerLockElement))
+                    if (QQ) {
+                      var LQ = FQ.requestPointerLock();
+                      LQ && LQ.catch && LQ.catch((QQ => {}))
                     } else document.exitPointerLock()
                 },
-                Wd = dd => {
-                  !!dd !== (pd = Jd === document.fullscreenElement) && (dd ? Jd.requestFullscreen ? Jd.requestFullscreen() : Jd.webkitRequestFullscreen && Jd.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                oQ = QQ => {
+                  !!QQ !== (LQ = FQ === document.fullscreenElement) && (QQ ? FQ.requestFullscreen ? FQ.requestFullscreen() : FQ.webkitRequestFullscreen && FQ.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (pd => {
-                kd = Jd === document.pointerLockElement, dd.Sy(kd)
-              })), document.addEventListener("fullscreenchange", (kd => {
-                pd = Jd === document.fullscreenElement, dd.onFullscreenChanged(pd)
-              })), document.addEventListener("pointerlockerror", (pd => {
-                kd = Jd === document.pointerLockElement, dd.onPointerLockError(pd)
-              })), Object.defineProperty(dd, "ve", {
-                get: () => kd,
-                set: Nd
-              }), Object.defineProperty(dd, "fullscreen", {
-                get: () => pd,
-                set: Wd
-              }), Jd.addEventListener("click", (Jd => {
-                dd.Iy && Nd(!0), dd.Gy && Wd(!0)
+              document.addEventListener("pointerlockchange", (LQ => {
+                wQ = FQ === document.pointerLockElement, QQ.Kl(wQ)
+              })), document.addEventListener("fullscreenchange", (wQ => {
+                LQ = FQ === document.fullscreenElement, QQ.onFullscreenChanged(LQ)
+              })), document.addEventListener("pointerlockerror", (LQ => {
+                wQ = FQ === document.pointerLockElement, QQ.onPointerLockError(LQ)
+              })), Object.defineProperty(QQ, "Kt", {
+                get: () => wQ,
+                set: qQ
+              }), Object.defineProperty(QQ, "fullscreen", {
+                get: () => LQ,
+                set: oQ
+              }), FQ.addEventListener("click", (FQ => {
+                QQ.Gl && qQ(!0), QQ.Rl && oQ(!0)
               }));
-              var Pd = () => dd.xI();
+              var DQ = () => QQ.aG();
               if (window.ResizeObserver) {
-                new ResizeObserver(Pd).observe(Jd)
-              } else window.addEventListener("resize", Pd)
-            }(this, dd), this.Uy()
+                new ResizeObserver(DQ).observe(FQ)
+              } else window.addEventListener("resize", DQ)
+            }(this, QQ), this.Bl()
           }))
       }
     }
 
-    function Nd() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = dd, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function qQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = QQ, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var Wd = 3,
-      Pd = 20;
+    var oQ = 3,
+      DQ = 20;
 
-    function Zd(dd) {
-      for (var Jd = dd._data, kd = 1e3 / dd.AY, pd = Jd.nowObject.now() + Pd, Nd = 0; Jd.nowObject.now() >= Jd.lastTickStarted + kd && Jd.nowObject.now() < pd && ++Nd <= Wd;) dd.mI(kd), Jd.lastTickStarted += kd;
-      var Zd = 5 * (kd + 5),
-        gd = Jd.nowObject.now();
-      if (gd - Jd.lastTickStarted > Zd)
-        for (; gd >= Jd.lastTickStarted + kd;) Jd.lastTickStarted += kd
+    function kQ(QQ) {
+      for (var FQ = QQ._data, wQ = 1e3 / QQ.mN, LQ = FQ.nowObject.now() + DQ, qQ = 0; FQ.nowObject.now() >= FQ.lastTickStarted + wQ && FQ.nowObject.now() < LQ && ++qQ <= oQ;) QQ.nG(wQ), FQ.lastTickStarted += wQ;
+      var kQ = 5 * (wQ + 5),
+        vQ = FQ.nowObject.now();
+      if (vQ - FQ.lastTickStarted > kQ)
+        for (; vQ >= FQ.lastTickStarted + wQ;) FQ.lastTickStarted += wQ
     }
   },
-  36870: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Pd
+  36322: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => DQ
     });
-    var pd = kd(56);
-    const Nd = pd.useLayoutEffect;
-    const Wd = function(dd) {
-      var Jd = (0, pd.useRef)(dd);
-      return Nd((function() {
-        Jd.current = dd
-      })), Jd
+    var LQ = wQ(53);
+    const qQ = LQ.useLayoutEffect;
+    const oQ = function(QQ) {
+      var FQ = (0, LQ.useRef)(QQ);
+      return qQ((function() {
+        FQ.current = QQ
+      })), FQ
     };
-    var Pd = function(dd) {
-      var Jd = Wd(dd);
-      (0, pd.useEffect)((function() {
-        var dd = function(dd) {
-          var kd;
-          if (null != Jd.current && (kd = Jd.current(dd)), dd.defaultPrevented && (dd.returnValue = ""), "string" === typeof kd) return dd.returnValue = kd, kd
+    var DQ = function(QQ) {
+      var FQ = oQ(QQ);
+      (0, LQ.useEffect)((function() {
+        var QQ = function(QQ) {
+          var wQ;
+          if (null != FQ.current && (wQ = FQ.current(QQ)), QQ.defaultPrevented && (QQ.returnValue = ""), "string" === typeof wQ) return QQ.returnValue = wQ, wQ
         };
-        return window.addEventListener("beforeunload", dd),
+        return window.addEventListener("beforeunload", QQ),
           function() {
-            window.removeEventListener("beforeunload", dd)
+            window.removeEventListener("beforeunload", QQ)
           }
       }), [])
     }
   },
-  36760: dd => {
-    var Jd, kd = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      pd = /OS X/.test(kd),
-      Nd = /Opera/.test(kd),
-      Wd = !/like Gecko/.test(kd) && !Nd,
-      Pd = dd.exports = {
-        0: pd ? "<menu>" : "<UNK>",
+  36218: QQ => {
+    var FQ, wQ = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      LQ = /OS X/.test(wQ),
+      qQ = /Opera/.test(wQ),
+      oQ = !/like Gecko/.test(wQ) && !qQ,
+      DQ = QQ.exports = {
+        0: LQ ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: pd ? "<meta>" : "<menu>",
+        93: LQ ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: pd && Wd ? "-" : "<volume-mute>",
+        173: LQ && oQ ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: Nd ? "`" : "<unicode>",
+        231: qQ ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (Jd = 58; Jd < 65; ++Jd) Pd[Jd] = String.fromCharCode(Jd);
-    for (Jd = 48; Jd < 58; ++Jd) Pd[Jd] = Jd - 48 + "";
-    for (Jd = 65; Jd < 91; ++Jd) Pd[Jd] = String.fromCharCode(Jd);
-    for (Jd = 96; Jd < 106; ++Jd) Pd[Jd] = "<num-" + (Jd - 96) + ">";
-    for (Jd = 112; Jd < 136; ++Jd) Pd[Jd] = "F" + (Jd - 111)
+    for (FQ = 58; FQ < 65; ++FQ) DQ[FQ] = String.fromCharCode(FQ);
+    for (FQ = 48; FQ < 58; ++FQ) DQ[FQ] = FQ - 48 + "";
+    for (FQ = 65; FQ < 91; ++FQ) DQ[FQ] = String.fromCharCode(FQ);
+    for (FQ = 96; FQ < 106; ++FQ) DQ[FQ] = "<num-" + (FQ - 96) + ">";
+    for (FQ = 112; FQ < 136; ++FQ) DQ[FQ] = "F" + (FQ - 111)
   },
-  39188: (dd, Jd, kd) => {
-    function pd(dd, Jd, kd, pd, Nd) {
-      var Wd = {};
-      return Object.keys(pd).forEach((function(dd) {
-        Wd[dd] = pd[dd]
-      })), Wd.enumerable = !!Wd.enumerable, Wd.configurable = !!Wd.configurable, ("value" in Wd || Wd.initializer) && (Wd.writable = !0), Wd = kd.slice().reverse().reduce((function(kd, pd) {
-        return pd(dd, Jd, kd) || kd
-      }), Wd), Nd && void 0 !== Wd.initializer && (Wd.value = Wd.initializer ? Wd.initializer.call(Nd) : void 0, Wd.initializer = void 0), void 0 === Wd.initializer && (Object.defineProperty(dd, Jd, Wd), Wd = null), Wd
+  38582: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ, wQ, LQ, qQ) {
+      var oQ = {};
+      return Object.keys(LQ).forEach((function(QQ) {
+        oQ[QQ] = LQ[QQ]
+      })), oQ.enumerable = !!oQ.enumerable, oQ.configurable = !!oQ.configurable, ("value" in oQ || oQ.initializer) && (oQ.writable = !0), oQ = wQ.slice().reverse().reduce((function(wQ, LQ) {
+        return LQ(QQ, FQ, wQ) || wQ
+      }), oQ), qQ && void 0 !== oQ.initializer && (oQ.value = oQ.initializer ? oQ.initializer.call(qQ) : void 0, oQ.initializer = void 0), void 0 === oQ.initializer && (Object.defineProperty(QQ, FQ, oQ), oQ = null), oQ
     }
-    kd.d(Jd, {
-      d: () => pd
+    wQ.d(FQ, {
+      c: () => LQ
     })
   },
-  39184: (dd, Jd, kd) => {
-    function pd(dd, Jd, kd, pd) {
-      kd && Object.defineProperty(dd, Jd, {
-        enumerable: kd.enumerable,
-        configurable: kd.configurable,
-        writable: kd.writable,
-        value: kd.initializer ? kd.initializer.call(pd) : void 0
+  38579: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ, wQ, LQ) {
+      wQ && Object.defineProperty(QQ, FQ, {
+        enumerable: wQ.enumerable,
+        configurable: wQ.configurable,
+        writable: wQ.writable,
+        value: wQ.initializer ? wQ.initializer.call(LQ) : void 0
       })
     }
-    kd.d(Jd, {
-      b: () => pd
+    wQ.d(FQ, {
+      e: () => LQ
     })
   },
-  38806: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Wd
+  38200: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => oQ
     });
-    var pd = kd(38812);
-    const Nd = (dd, Jd, kd) => dd ? dd.getClassName && "Mesh" === dd.getClassName() ? null : !dd.getClassName || "SubMesh" !== dd.getClassName() && "PhysicsBody" !== dd.getClassName() ? dd.clone ? dd.clone() : Array.isArray(dd) ? dd.slice() : kd && "object" === typeof dd ? {
-      ...dd
-    } : null : dd.clone(Jd) : null;
-    class Wd {
-      static DeepCopy(dd, Jd, kd, Wd) {
-        let Pd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Zd = function(dd) {
-          const Jd = [];
+    var LQ = wQ(38203);
+    const qQ = (QQ, FQ, wQ) => QQ ? QQ.getClassName && "Mesh" === QQ.getClassName() ? null : !QQ.getClassName || "SubMesh" !== QQ.getClassName() && "PhysicsBody" !== QQ.getClassName() ? QQ.clone ? QQ.clone() : Array.isArray(QQ) ? QQ.slice() : wQ && "object" === typeof QQ ? {
+      ...QQ
+    } : null : QQ.clone(FQ) : null;
+    class oQ {
+      static DeepCopy(QQ, FQ, wQ, oQ) {
+        let DQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const kQ = function(QQ) {
+          const FQ = [];
           do {
-            const kd = Object.getOwnPropertyNames(dd);
-            for (const dd of kd) - 1 === Jd.indexOf(dd) && Jd.push(dd)
-          } while (dd = Object.getPrototypeOf(dd));
-          return Jd
-        }(dd);
-        for (const Cd of Zd) {
-          if ("_" === Cd[0] && (!Wd || -1 === Wd.indexOf(Cd))) continue;
-          if (Cd.endsWith("Observable")) continue;
-          if (kd && -1 !== kd.indexOf(Cd)) continue;
-          const Zd = dd[Cd],
-            Kd = typeof Zd;
-          if ("function" !== Kd) try {
-            if ("object" === Kd)
-              if (Zd instanceof Uint8Array) Jd[Cd] = Uint8Array.from(Zd);
-              else if (Zd instanceof Array) {
-              if (Jd[Cd] = [], Zd.length > 0)
-                if ("object" == typeof Zd[0])
-                  for (let dd = 0; dd < Zd.length; dd++) {
-                    const kd = Nd(Zd[dd], Jd, Pd); - 1 === Jd[Cd].indexOf(kd) && Jd[Cd].push(kd)
-                  } else Jd[Cd] = Zd.slice(0)
-            } else Jd[Cd] = Nd(Zd, Jd, Pd);
-            else Jd[Cd] = Zd
-          } catch (gd) {
-            pd.c.Warn(gd.message)
+            const wQ = Object.getOwnPropertyNames(QQ);
+            for (const QQ of wQ) - 1 === FQ.indexOf(QQ) && FQ.push(QQ)
+          } while (QQ = Object.getPrototypeOf(QQ));
+          return FQ
+        }(QQ);
+        for (const mQ of kQ) {
+          if ("_" === mQ[0] && (!oQ || -1 === oQ.indexOf(mQ))) continue;
+          if (mQ.endsWith("Observable")) continue;
+          if (wQ && -1 !== wQ.indexOf(mQ)) continue;
+          const kQ = QQ[mQ],
+            uQ = typeof kQ;
+          if ("function" !== uQ) try {
+            if ("object" === uQ)
+              if (kQ instanceof Uint8Array) FQ[mQ] = Uint8Array.from(kQ);
+              else if (kQ instanceof Array) {
+              if (FQ[mQ] = [], kQ.length > 0)
+                if ("object" == typeof kQ[0])
+                  for (let QQ = 0; QQ < kQ.length; QQ++) {
+                    const wQ = qQ(kQ[QQ], FQ, DQ); - 1 === FQ[mQ].indexOf(wQ) && FQ[mQ].push(wQ)
+                  } else FQ[mQ] = kQ.slice(0)
+            } else FQ[mQ] = qQ(kQ, FQ, DQ);
+            else FQ[mQ] = kQ
+          } catch (vQ) {
+            LQ.c.Warn(vQ.message)
           }
         }
       }
     }
   },
-  38835: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Nd,
-      f: () => Wd,
-      h: () => Pd,
-      k: () => Zd
+  38236: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => qQ,
+      f: () => oQ,
+      j: () => DQ,
+      k: () => kQ
     });
-    var pd = kd(37443);
-    class Nd {
-      constructor(dd, Jd, kd) {
-        this.gradient = dd, this.color1 = Jd, this.color2 = kd
+    var LQ = wQ(36873);
+    class qQ {
+      constructor(QQ, FQ, wQ) {
+        this.gradient = QQ, this.color1 = FQ, this.color2 = wQ
       }
-      getColorToRef(dd) {
-        this.color2 ? pd.g.LerpToRef(this.color1, this.color2, Math.random(), dd) : dd.Fs(this.color1)
-      }
-    }
-    class Wd {
-      constructor(dd, Jd) {
-        this.gradient = dd, this.color = Jd
+      getColorToRef(QQ) {
+        this.color2 ? LQ.e.LerpToRef(this.color1, this.color2, Math.random(), QQ) : QQ.Qs(this.color1)
       }
     }
-    class Pd {
-      constructor(dd, Jd, kd) {
-        this.gradient = dd, this.factor1 = Jd, this.factor2 = kd
+    class oQ {
+      constructor(QQ, FQ) {
+        this.gradient = QQ, this.color = FQ
+      }
+    }
+    class DQ {
+      constructor(QQ, FQ, wQ) {
+        this.gradient = QQ, this.factor1 = FQ, this.factor2 = wQ
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class Zd {
-      static GetCurrentGradient(dd, Jd, kd) {
-        if (Jd[0].gradient > dd) return void kd(Jd[0], Jd[0], 1);
-        for (let Nd = 0; Nd < Jd.length - 1; Nd++) {
-          const pd = Jd[Nd],
-            Wd = Jd[Nd + 1];
-          if (dd >= pd.gradient && dd <= Wd.gradient) {
-            return void kd(pd, Wd, (dd - pd.gradient) / (Wd.gradient - pd.gradient))
+    class kQ {
+      static GetCurrentGradient(QQ, FQ, wQ) {
+        if (FQ[0].gradient > QQ) return void wQ(FQ[0], FQ[0], 1);
+        for (let qQ = 0; qQ < FQ.length - 1; qQ++) {
+          const LQ = FQ[qQ],
+            oQ = FQ[qQ + 1];
+          if (QQ >= LQ.gradient && QQ <= oQ.gradient) {
+            return void wQ(LQ, oQ, (QQ - LQ.gradient) / (oQ.gradient - LQ.gradient))
           }
         }
-        const pd = Jd.length - 1;
-        kd(Jd[pd], Jd[pd], 1)
+        const LQ = FQ.length - 1;
+        wQ(FQ[LQ], FQ[LQ], 1)
       }
     }
   },
-  38812: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => pd
+  38203: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => LQ
     });
-    class pd {
-      static _CheckLimit(dd, Jd) {
-        let kd = pd._LogLimitOutputs[dd];
-        return kd ? kd.current++ : (kd = {
-          limit: Jd,
+    class LQ {
+      static _CheckLimit(QQ, FQ) {
+        let wQ = LQ._LogLimitOutputs[QQ];
+        return wQ ? wQ.current++ : (wQ = {
+          limit: FQ,
           current: 1
-        }, pd._LogLimitOutputs[dd] = kd), kd.current <= kd.limit
+        }, LQ._LogLimitOutputs[QQ] = wQ), wQ.current <= wQ.limit
       }
-      static _GenerateLimitMessage(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const kd = pd._LogLimitOutputs[dd];
-        if (!kd || !pd.MessageLimitReached) return;
-        const Nd = this._Levels[Jd];
-        kd.current === kd.limit && pd[Nd.name](pd.MessageLimitReached.replace(/%LIMIT%/g, "" + kd.limit).replace(/%TYPE%/g, Nd.name ?? ""))
+      static _GenerateLimitMessage(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const wQ = LQ._LogLimitOutputs[QQ];
+        if (!wQ || !LQ.MessageLimitReached) return;
+        const qQ = this._Levels[FQ];
+        wQ.current === wQ.limit && LQ[qQ.name](LQ.MessageLimitReached.replace(/%LIMIT%/g, "" + wQ.limit).replace(/%TYPE%/g, qQ.name ?? ""))
       }
-      static _AddLogEntry(dd) {
-        pd._LogCache = dd + pd._LogCache, pd.OnNewCacheEntry && pd.OnNewCacheEntry(dd)
+      static _AddLogEntry(QQ) {
+        LQ._LogCache = QQ + LQ._LogCache, LQ.OnNewCacheEntry && LQ.OnNewCacheEntry(QQ)
       }
-      static _FormatMessage(dd) {
-        const Jd = dd => dd < 10 ? "0" + dd : "" + dd,
-          kd = new Date;
-        return "[" + Jd(kd.getHours()) + ":" + Jd(kd.getMinutes()) + ":" + Jd(kd.getSeconds()) + "]: " + dd
+      static _FormatMessage(QQ) {
+        const FQ = QQ => QQ < 10 ? "0" + QQ : "" + QQ,
+          wQ = new Date;
+        return "[" + FQ(wQ.getHours()) + ":" + FQ(wQ.getMinutes()) + ":" + FQ(wQ.getSeconds()) + "]: " + QQ
       }
-      static _LogDisabled(dd, Jd) {}
+      static _LogDisabled(QQ, FQ) {}
       static _LogEnabled() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 ? arguments[1] : void 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        const Nd = Array.isArray(Jd) ? Jd[0] : Jd;
-        if (void 0 !== kd && !pd._CheckLimit(Nd, kd)) return;
-        const Wd = pd._FormatMessage(Nd),
-          Pd = this._Levels[dd],
-          Zd = Array.isArray(Jd) ? Jd.slice(1) : [];
-        Pd.logFunc && Pd.logFunc("BJS - " + Wd, ...Zd);
-        const gd = `<div style='color:${Pd.color}'>${Wd}</div><br>`;
-        pd._AddLogEntry(gd), pd._GenerateLimitMessage(Nd, dd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 ? arguments[1] : void 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        const qQ = Array.isArray(FQ) ? FQ[0] : FQ;
+        if (void 0 !== wQ && !LQ._CheckLimit(qQ, wQ)) return;
+        const oQ = LQ._FormatMessage(qQ),
+          DQ = this._Levels[QQ],
+          kQ = Array.isArray(FQ) ? FQ.slice(1) : [];
+        DQ.logFunc && DQ.logFunc("BJS - " + oQ, ...kQ);
+        const vQ = `<div style='color:${DQ.color}'>${oQ}</div><br>`;
+        LQ._AddLogEntry(vQ), LQ._GenerateLimitMessage(qQ, QQ)
       }
       static get LogCache() {
-        return pd._LogCache
+        return LQ._LogCache
       }
       static ClearLogCache() {
-        pd._LogCache = "", pd._LogLimitOutputs = {}, pd.errorsCount = 0
+        LQ._LogCache = "", LQ._LogLimitOutputs = {}, LQ.errorsCount = 0
       }
-      static set LogLevels(dd) {
-        pd.Log = pd._LogDisabled, pd.Warn = pd._LogDisabled, pd.Error = pd._LogDisabled;
-        const Jd = [pd.MessageLogLevel, pd.WarningLogLevel, pd.ErrorLogLevel];
-        for (const kd of Jd)
-          if ((dd & kd) === kd) {
-            const dd = this._Levels[kd];
-            pd[dd.name] = pd._LogEnabled.bind(pd, kd)
+      static set LogLevels(QQ) {
+        LQ.Log = LQ._LogDisabled, LQ.Warn = LQ._LogDisabled, LQ.Error = LQ._LogDisabled;
+        const FQ = [LQ.MessageLogLevel, LQ.WarningLogLevel, LQ.ErrorLogLevel];
+        for (const wQ of FQ)
+          if ((QQ & wQ) === wQ) {
+            const QQ = this._Levels[wQ];
+            LQ[QQ.name] = LQ._LogEnabled.bind(LQ, wQ)
           }
       }
     }
-    pd.NoneLogLevel = 0, pd.MessageLogLevel = 1, pd.WarningLogLevel = 2, pd.ErrorLogLevel = 4, pd.AllLogLevel = 7, pd.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", pd._LogCache = "", pd._LogLimitOutputs = {}, pd._Levels = [{}, {
+    LQ.NoneLogLevel = 0, LQ.MessageLogLevel = 1, LQ.WarningLogLevel = 2, LQ.ErrorLogLevel = 4, LQ.AllLogLevel = 7, LQ.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", LQ._LogCache = "", LQ._LogLimitOutputs = {}, LQ._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], pd.errorsCount = 0, pd.Log = pd._LogEnabled.bind(pd, pd.MessageLogLevel), pd.Warn = pd._LogEnabled.bind(pd, pd.WarningLogLevel), pd.Error = pd._LogEnabled.bind(pd, pd.ErrorLogLevel)
+    }], LQ.errorsCount = 0, LQ.Log = LQ._LogEnabled.bind(LQ, LQ.MessageLogLevel), LQ.Warn = LQ._LogEnabled.bind(LQ, LQ.WarningLogLevel), LQ.Error = LQ._LogEnabled.bind(LQ, LQ.ErrorLogLevel)
   },
-  38844: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Pd
+  38244: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => DQ
     });
-    var pd = kd(37251),
-      Nd = kd(37289),
-      Wd = kd(38806);
-    class Pd {
+    var LQ = wQ(36696),
+      qQ = wQ(36729),
+      oQ = wQ(38200);
+    class DQ {
       constructor() {
-        this.direction1 = new pd.n(0, 1, 0), this.direction2 = new pd.n(0, 1, 0), this.minEmitBox = new pd.n(-.5, -.5, -.5), this.maxEmitBox = new pd.n(.5, .5, .5)
+        this.direction1 = new LQ.p(0, 1, 0), this.direction2 = new LQ.p(0, 1, 0), this.minEmitBox = new LQ.p(-.5, -.5, -.5), this.maxEmitBox = new LQ.p(.5, .5, .5)
       }
-      startDirectionFunction(dd, Jd, kd, Wd) {
-        const Pd = (0, Nd.RandomRange)(this.direction1.x, this.direction2.x),
-          Zd = (0, Nd.RandomRange)(this.direction1.y, this.direction2.y),
-          gd = (0, Nd.RandomRange)(this.direction1.z, this.direction2.z);
-        if (Wd) return Jd.x = Pd, Jd.y = Zd, void(Jd.z = gd);
-        pd.n.TransformNormalFromFloatsToRef(Pd, Zd, gd, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, oQ) {
+        const DQ = (0, qQ.RandomRange)(this.direction1.x, this.direction2.x),
+          kQ = (0, qQ.RandomRange)(this.direction1.y, this.direction2.y),
+          vQ = (0, qQ.RandomRange)(this.direction1.z, this.direction2.z);
+        if (oQ) return FQ.x = DQ, FQ.y = kQ, void(FQ.z = vQ);
+        LQ.p.TransformNormalFromFloatsToRef(DQ, kQ, vQ, QQ, FQ)
       }
-      startPositionFunction(dd, Jd, kd, Wd) {
-        const Pd = (0, Nd.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          Zd = (0, Nd.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          gd = (0, Nd.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (Wd) return Jd.x = Pd, Jd.y = Zd, void(Jd.z = gd);
-        pd.n.TransformCoordinatesFromFloatsToRef(Pd, Zd, gd, dd, Jd)
+      startPositionFunction(QQ, FQ, wQ, oQ) {
+        const DQ = (0, qQ.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          kQ = (0, qQ.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          vQ = (0, qQ.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (oQ) return FQ.x = DQ, FQ.y = kQ, void(FQ.z = vQ);
+        LQ.p.TransformCoordinatesFromFloatsToRef(DQ, kQ, vQ, QQ, FQ)
       }
       clone() {
-        const dd = new Pd;
-        return Wd.c.DeepCopy(this, dd), dd
+        const QQ = new DQ;
+        return oQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setVector3("direction1", this.direction1), dd.setVector3("direction2", this.direction2), dd.setVector3("minEmitBox", this.minEmitBox), dd.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(QQ) {
+        QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2), QQ.setVector3("minEmitBox", this.minEmitBox), QQ.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("direction1", 3), dd.addUniform("direction2", 3), dd.addUniform("minEmitBox", 3), dd.addUniform("maxEmitBox", 3)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3), QQ.addUniform("minEmitBox", 3), QQ.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const dd = {};
-        return dd.type = this.getClassName(), dd.direction1 = this.direction1.spd(), dd.direction2 = this.direction2.spd(), dd.minEmitBox = this.minEmitBox.spd(), dd.maxEmitBox = this.maxEmitBox.spd(), dd
+        const QQ = {};
+        return QQ.type = this.getClassName(), QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ.minEmitBox = this.minEmitBox.RLQ(), QQ.maxEmitBox = this.maxEmitBox.RLQ(), QQ
       }
-      parse(dd) {
-        pd.n.FromArrayToRef(dd.direction1, 0, this.direction1), pd.n.FromArrayToRef(dd.direction2, 0, this.direction2), pd.n.FromArrayToRef(dd.minEmitBox, 0, this.minEmitBox), pd.n.FromArrayToRef(dd.maxEmitBox, 0, this.maxEmitBox)
+      parse(QQ) {
+        LQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), LQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2), LQ.p.FromArrayToRef(QQ.minEmitBox, 0, this.minEmitBox), LQ.p.FromArrayToRef(QQ.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  38801: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Zd,
-      d: () => Pd
+  38192: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => kQ,
+      e: () => DQ
     });
-    var pd = kd(37251),
-      Nd = kd(37289),
-      Wd = kd(38806);
-    class Pd {
+    var LQ = wQ(36696),
+      qQ = wQ(36729),
+      oQ = wQ(38200);
+    class DQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Nd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = dd, this.height = Jd, this.radiusRange = kd, this.directionRandomizer = Nd, this._tempVector = pd.n.Zero()
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = QQ, this.height = FQ, this.radiusRange = wQ, this.directionRandomizer = qQ, this._tempVector = LQ.p.Zero()
       }
-      startDirectionFunction(dd, Jd, kd, Wd, Pd) {
-        kd.position.subtractToRef(dd.getTranslation(), this._tempVector), this._tempVector.normalize(), pd.n.TransformNormalToRef(this._tempVector, Pd, this._tempVector);
-        const Zd = (0, Nd.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let gd = Math.atan2(this._tempVector.x, this._tempVector.z);
-        gd += (0, Nd.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = Zd, this._tempVector.x = Math.sin(gd), this._tempVector.z = Math.cos(gd), this._tempVector.normalize(), Wd ? Jd.Fs(this._tempVector) : pd.n.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, oQ, DQ) {
+        wQ.position.subtractToRef(QQ.getTranslation(), this._tempVector), this._tempVector.normalize(), LQ.p.TransformNormalToRef(this._tempVector, DQ, this._tempVector);
+        const kQ = (0, qQ.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let vQ = Math.atan2(this._tempVector.x, this._tempVector.z);
+        vQ += (0, qQ.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = kQ, this._tempVector.x = Math.sin(vQ), this._tempVector.z = Math.cos(vQ), this._tempVector.normalize(), oQ ? FQ.Qs(this._tempVector) : LQ.p.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, QQ, FQ)
       }
-      startPositionFunction(dd, Jd, kd, Wd) {
-        const Pd = (0, Nd.RandomRange)(-this.height / 2, this.height / 2),
-          Zd = (0, Nd.RandomRange)(0, 2 * Math.PI),
-          gd = (0, Nd.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          Cd = Math.sqrt(gd) * this.radius,
-          Kd = Cd * Math.cos(Zd),
-          od = Cd * Math.sin(Zd);
-        Wd ? Jd.kdd(Kd, Pd, od) : pd.n.TransformCoordinatesFromFloatsToRef(Kd, Pd, od, dd, Jd)
+      startPositionFunction(QQ, FQ, wQ, oQ) {
+        const DQ = (0, qQ.RandomRange)(-this.height / 2, this.height / 2),
+          kQ = (0, qQ.RandomRange)(0, 2 * Math.PI),
+          vQ = (0, qQ.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          mQ = Math.sqrt(vQ) * this.radius,
+          uQ = mQ * Math.cos(kQ),
+          HQ = mQ * Math.sin(kQ);
+        oQ ? FQ.vQQ(uQ, DQ, HQ) : LQ.p.TransformCoordinatesFromFloatsToRef(uQ, DQ, HQ, QQ, FQ)
       }
       clone() {
-        const dd = new Pd(this.radius, this.directionRandomizer);
-        return Wd.c.DeepCopy(this, dd), dd
+        const QQ = new DQ(this.radius, this.directionRandomizer);
+        return oQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setFloat("radius", this.radius), dd.setFloat("height", this.height), dd.setFloat("radiusRange", this.radiusRange), dd.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(QQ) {
+        QQ.setFloat("radius", this.radius), QQ.setFloat("height", this.height), QQ.setFloat("radiusRange", this.radiusRange), QQ.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("radius", 1), dd.addUniform("height", 1), dd.addUniform("radiusRange", 1), dd.addUniform("directionRandomizer", 1)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("radius", 1), QQ.addUniform("height", 1), QQ.addUniform("radiusRange", 1), QQ.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const dd = {};
-        return dd.type = this.getClassName(), dd.radius = this.radius, dd.height = this.height, dd.radiusRange = this.radiusRange, dd.directionRandomizer = this.directionRandomizer, dd
+        const QQ = {};
+        return QQ.type = this.getClassName(), QQ.radius = this.radius, QQ.height = this.height, QQ.radiusRange = this.radiusRange, QQ.directionRandomizer = this.directionRandomizer, QQ
       }
-      parse(dd) {
-        this.radius = dd.radius, this.height = dd.height, this.radiusRange = dd.radiusRange, this.directionRandomizer = dd.directionRandomizer
+      parse(QQ) {
+        this.radius = QQ.radius, this.height = QQ.height, this.radiusRange = QQ.radiusRange, this.directionRandomizer = QQ.directionRandomizer
       }
     }
-    class Zd extends Pd {
+    class kQ extends DQ {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Nd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new pd.n(0, 1, 0),
-          Wd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new pd.n(0, 1, 0);
-        super(dd, Jd, kd), this.direction1 = Nd, this.direction2 = Wd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new LQ.p(0, 1, 0),
+          oQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new LQ.p(0, 1, 0);
+        super(QQ, FQ, wQ), this.direction1 = qQ, this.direction2 = oQ
       }
-      startDirectionFunction(dd, Jd, kd, Wd) {
-        const Pd = (0, Nd.RandomRange)(this.direction1.x, this.direction2.x),
-          Zd = (0, Nd.RandomRange)(this.direction1.y, this.direction2.y),
-          gd = (0, Nd.RandomRange)(this.direction1.z, this.direction2.z);
-        Wd ? Jd.kdd(Pd, Zd, gd) : pd.n.TransformNormalFromFloatsToRef(Pd, Zd, gd, dd, Jd)
+      startDirectionFunction(QQ, FQ, wQ, oQ) {
+        const DQ = (0, qQ.RandomRange)(this.direction1.x, this.direction2.x),
+          kQ = (0, qQ.RandomRange)(this.direction1.y, this.direction2.y),
+          vQ = (0, qQ.RandomRange)(this.direction1.z, this.direction2.z);
+        oQ ? FQ.vQQ(DQ, kQ, vQ) : LQ.p.TransformNormalFromFloatsToRef(DQ, kQ, vQ, QQ, FQ)
       }
       clone() {
-        const dd = new Zd(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return Wd.c.DeepCopy(this, dd), dd
+        const QQ = new kQ(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return oQ.b.DeepCopy(this, QQ), QQ
       }
-      applyToShader(dd) {
-        dd.setFloat("radius", this.radius), dd.setFloat("height", this.height), dd.setFloat("radiusRange", this.radiusRange), dd.setVector3("direction1", this.direction1), dd.setVector3("direction2", this.direction2)
+      applyToShader(QQ) {
+        QQ.setFloat("radius", this.radius), QQ.setFloat("height", this.height), QQ.setFloat("radiusRange", this.radiusRange), QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(dd) {
-        dd.addUniform("radius", 1), dd.addUniform("height", 1), dd.addUniform("radiusRange", 1), dd.addUniform("direction1", 3), dd.addUniform("direction2", 3)
+      buildUniformLayout(QQ) {
+        QQ.addUniform("radius", 1), QQ.addUniform("height", 1), QQ.addUniform("radiusRange", 1), QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const dd = super.serialize();
-        return dd.direction1 = this.direction1.spd(), dd.direction2 = this.direction2.spd(), dd
+        const QQ = super.serialize();
+        return QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ
       }
-      parse(dd) {
-        super.parse(dd), pd.n.FromArrayToRef(dd.direction1, 0, this.direction1), pd.n.FromArrayToRef(dd.direction2, 0, this.direction2)
+      parse(QQ) {
+        super.parse(QQ), LQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), LQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2)
       }
     }
   },
-  38939: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => od
+  38321: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => HQ
     });
-    const pd = .5 * (Math.sqrt(3) - 1),
-      Nd = (3 - Math.sqrt(3)) / 6,
-      Wd = 1 / 3,
-      Pd = 1 / 6,
-      Zd = (Math.sqrt(5) - 1) / 4,
-      gd = (5 - Math.sqrt(5)) / 20,
-      Cd = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      Kd = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const od = class {
+    const LQ = .5 * (Math.sqrt(3) - 1),
+      qQ = (3 - Math.sqrt(3)) / 6,
+      oQ = 1 / 3,
+      DQ = 1 / 6,
+      kQ = (Math.sqrt(5) - 1) / 4,
+      vQ = (5 - Math.sqrt(5)) / 20,
+      mQ = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      uQ = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const HQ = class {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const Jd = "function" == typeof dd ? dd : function(dd) {
-          let Jd = 0,
-            kd = 0,
-            pd = 0,
-            Nd = 1;
-          const Wd = function() {
-            let dd = 4022871197;
-            return function(Jd) {
-              Jd = Jd.toString();
-              for (let kd = 0; kd < Jd.length; kd++) {
-                dd += Jd.charCodeAt(kd);
-                let pd = .02519603282416938 * dd;
-                dd = pd >>> 0, pd -= dd, pd *= dd, dd = pd >>> 0, pd -= dd, dd += 4294967296 * pd
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const FQ = "function" == typeof QQ ? QQ : function(QQ) {
+          let FQ = 0,
+            wQ = 0,
+            LQ = 0,
+            qQ = 1;
+          const oQ = function() {
+            let QQ = 4022871197;
+            return function(FQ) {
+              FQ = FQ.toString();
+              for (let wQ = 0; wQ < FQ.length; wQ++) {
+                QQ += FQ.charCodeAt(wQ);
+                let LQ = .02519603282416938 * QQ;
+                QQ = LQ >>> 0, LQ -= QQ, LQ *= QQ, QQ = LQ >>> 0, LQ -= QQ, QQ += 4294967296 * LQ
               }
-              return 2.3283064365386963e-10 * (dd >>> 0)
+              return 2.3283064365386963e-10 * (QQ >>> 0)
             }
           }();
-          Jd = Wd(" "), kd = Wd(" "), pd = Wd(" "), Jd -= Wd(dd), Jd < 0 && (Jd += 1);
-          kd -= Wd(dd), kd < 0 && (kd += 1);
-          pd -= Wd(dd), pd < 0 && (pd += 1);
+          FQ = oQ(" "), wQ = oQ(" "), LQ = oQ(" "), FQ -= oQ(QQ), FQ < 0 && (FQ += 1);
+          wQ -= oQ(QQ), wQ < 0 && (wQ += 1);
+          LQ -= oQ(QQ), LQ < 0 && (LQ += 1);
           return function() {
-            const dd = 2091639 * Jd + 2.3283064365386963e-10 * Nd;
-            return Jd = kd, kd = pd, pd = dd - (Nd = 0 | dd)
+            const QQ = 2091639 * FQ + 2.3283064365386963e-10 * qQ;
+            return FQ = wQ, wQ = LQ, LQ = QQ - (qQ = 0 | QQ)
           }
-        }(dd);
-        this.p = function(dd) {
-          const Jd = new Uint8Array(256);
-          for (let kd = 0; kd < 256; kd++) Jd[kd] = kd;
-          for (let kd = 0; kd < 255; kd++) {
-            const pd = kd + ~~(dd() * (256 - kd)),
-              Nd = Jd[kd];
-            Jd[kd] = Jd[pd], Jd[pd] = Nd
+        }(QQ);
+        this.p = function(QQ) {
+          const FQ = new Uint8Array(256);
+          for (let wQ = 0; wQ < 256; wQ++) FQ[wQ] = wQ;
+          for (let wQ = 0; wQ < 255; wQ++) {
+            const LQ = wQ + ~~(QQ() * (256 - wQ)),
+              qQ = FQ[wQ];
+            FQ[wQ] = FQ[LQ], FQ[LQ] = qQ
           }
-          return Jd
-        }(Jd), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let kd = 0; kd < 512; kd++) this.perm[kd] = this.p[255 & kd], this.permMod12[kd] = this.perm[kd] % 12
+          return FQ
+        }(FQ), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let wQ = 0; wQ < 512; wQ++) this.perm[wQ] = this.p[255 & wQ], this.permMod12[wQ] = this.perm[wQ] % 12
       }
-      noise2D(dd, Jd) {
-        const kd = this.permMod12,
-          Wd = this.perm;
-        let Pd = 0,
-          Zd = 0,
-          gd = 0;
-        const Kd = (dd + Jd) * pd,
-          od = Math.floor(dd + Kd),
-          ld = Math.floor(Jd + Kd),
-          Qd = (od + ld) * Nd,
-          Ld = dd - (od - Qd),
-          Od = Jd - (ld - Qd);
-        let ed, Rd;
-        Ld > Od ? (ed = 1, Rd = 0) : (ed = 0, Rd = 1);
-        const Id = Ld - ed + Nd,
-          Gd = Od - Rd + Nd,
-          vd = Ld - 1 + 2 * Nd,
-          xd = Od - 1 + 2 * Nd,
-          qd = 255 & od,
-          Bd = 255 & ld;
-        let sd = .5 - Ld * Ld - Od * Od;
-        if (sd >= 0) {
-          const dd = 3 * kd[qd + Wd[Bd]];
-          sd *= sd, Pd = sd * sd * (Cd[dd] * Ld + Cd[dd + 1] * Od)
+      noise2D(QQ, FQ) {
+        const wQ = this.permMod12,
+          oQ = this.perm;
+        let DQ = 0,
+          kQ = 0,
+          vQ = 0;
+        const uQ = (QQ + FQ) * LQ,
+          HQ = Math.floor(QQ + uQ),
+          bQ = Math.floor(FQ + uQ),
+          YQ = (HQ + bQ) * qQ,
+          xQ = QQ - (HQ - YQ),
+          AQ = FQ - (bQ - YQ);
+        let tQ, eQ;
+        xQ > AQ ? (tQ = 1, eQ = 0) : (tQ = 0, eQ = 1);
+        const MQ = xQ - tQ + qQ,
+          GQ = AQ - eQ + qQ,
+          pQ = xQ - 1 + 2 * qQ,
+          cQ = AQ - 1 + 2 * qQ,
+          CQ = 255 & HQ,
+          SQ = 255 & bQ;
+        let iQ = .5 - xQ * xQ - AQ * AQ;
+        if (iQ >= 0) {
+          const QQ = 3 * wQ[CQ + oQ[SQ]];
+          iQ *= iQ, DQ = iQ * iQ * (mQ[QQ] * xQ + mQ[QQ + 1] * AQ)
         }
-        let ad = .5 - Id * Id - Gd * Gd;
-        if (ad >= 0) {
-          const dd = 3 * kd[qd + ed + Wd[Bd + Rd]];
-          ad *= ad, Zd = ad * ad * (Cd[dd] * Id + Cd[dd + 1] * Gd)
+        let WQ = .5 - MQ * MQ - GQ * GQ;
+        if (WQ >= 0) {
+          const QQ = 3 * wQ[CQ + tQ + oQ[SQ + eQ]];
+          WQ *= WQ, kQ = WQ * WQ * (mQ[QQ] * MQ + mQ[QQ + 1] * GQ)
         }
-        let Md = .5 - vd * vd - xd * xd;
-        if (Md >= 0) {
-          const dd = 3 * kd[qd + 1 + Wd[Bd + 1]];
-          Md *= Md, gd = Md * Md * (Cd[dd] * vd + Cd[dd + 1] * xd)
+        let RQ = .5 - pQ * pQ - cQ * cQ;
+        if (RQ >= 0) {
+          const QQ = 3 * wQ[CQ + 1 + oQ[SQ + 1]];
+          RQ *= RQ, vQ = RQ * RQ * (mQ[QQ] * pQ + mQ[QQ + 1] * cQ)
         }
-        return 70 * (Pd + Zd + gd)
+        return 70 * (DQ + kQ + vQ)
       }
-      noise3D(dd, Jd, kd) {
-        const pd = this.permMod12,
-          Nd = this.perm;
-        let Zd, gd, Kd, od;
-        const ld = (dd + Jd + kd) * Wd,
-          Qd = Math.floor(dd + ld),
-          Ld = Math.floor(Jd + ld),
-          Od = Math.floor(kd + ld),
-          ed = (Qd + Ld + Od) * Pd,
-          Rd = dd - (Qd - ed),
-          Id = Jd - (Ld - ed),
-          Gd = kd - (Od - ed);
-        let vd, xd, qd, Bd, sd, ad;
-        Rd >= Id ? Id >= Gd ? (vd = 1, xd = 0, qd = 0, Bd = 1, sd = 1, ad = 0) : Rd >= Gd ? (vd = 1, xd = 0, qd = 0, Bd = 1, sd = 0, ad = 1) : (vd = 0, xd = 0, qd = 1, Bd = 1, sd = 0, ad = 1) : Id < Gd ? (vd = 0, xd = 0, qd = 1, Bd = 0, sd = 1, ad = 1) : Rd < Gd ? (vd = 0, xd = 1, qd = 0, Bd = 0, sd = 1, ad = 1) : (vd = 0, xd = 1, qd = 0, Bd = 1, sd = 1, ad = 0);
-        const Md = Rd - vd + Pd,
-          Fd = Id - xd + Pd,
-          Yd = Gd - qd + Pd,
-          md = Rd - Bd + 2 * Pd,
-          bd = Id - sd + 2 * Pd,
-          Sd = Gd - ad + 2 * Pd,
-          jd = Rd - 1 + .5,
-          Xd = Id - 1 + .5,
-          fd = Gd - 1 + .5,
-          nd = 255 & Qd,
-          Ud = 255 & Ld,
-          yd = 255 & Od;
-        let Dd = .6 - Rd * Rd - Id * Id - Gd * Gd;
-        if (Dd < 0) Zd = 0;
+      noise3D(QQ, FQ, wQ) {
+        const LQ = this.permMod12,
+          qQ = this.perm;
+        let kQ, vQ, uQ, HQ;
+        const bQ = (QQ + FQ + wQ) * oQ,
+          YQ = Math.floor(QQ + bQ),
+          xQ = Math.floor(FQ + bQ),
+          AQ = Math.floor(wQ + bQ),
+          tQ = (YQ + xQ + AQ) * DQ,
+          eQ = QQ - (YQ - tQ),
+          MQ = FQ - (xQ - tQ),
+          GQ = wQ - (AQ - tQ);
+        let pQ, cQ, CQ, SQ, iQ, WQ;
+        eQ >= MQ ? MQ >= GQ ? (pQ = 1, cQ = 0, CQ = 0, SQ = 1, iQ = 1, WQ = 0) : eQ >= GQ ? (pQ = 1, cQ = 0, CQ = 0, SQ = 1, iQ = 0, WQ = 1) : (pQ = 0, cQ = 0, CQ = 1, SQ = 1, iQ = 0, WQ = 1) : MQ < GQ ? (pQ = 0, cQ = 0, CQ = 1, SQ = 0, iQ = 1, WQ = 1) : eQ < GQ ? (pQ = 0, cQ = 1, CQ = 0, SQ = 0, iQ = 1, WQ = 1) : (pQ = 0, cQ = 1, CQ = 0, SQ = 1, iQ = 1, WQ = 0);
+        const RQ = eQ - pQ + DQ,
+          OQ = MQ - cQ + DQ,
+          sQ = GQ - CQ + DQ,
+          rQ = eQ - SQ + 2 * DQ,
+          IQ = MQ - iQ + 2 * DQ,
+          UQ = GQ - WQ + 2 * DQ,
+          NQ = eQ - 1 + .5,
+          TQ = MQ - 1 + .5,
+          KQ = GQ - 1 + .5,
+          zQ = 255 & YQ,
+          lQ = 255 & xQ,
+          jQ = 255 & AQ;
+        let aQ = .6 - eQ * eQ - MQ * MQ - GQ * GQ;
+        if (aQ < 0) kQ = 0;
         else {
-          const dd = 3 * pd[nd + Nd[Ud + Nd[yd]]];
-          Dd *= Dd, Zd = Dd * Dd * (Cd[dd] * Rd + Cd[dd + 1] * Id + Cd[dd + 2] * Gd)
+          const QQ = 3 * LQ[zQ + qQ[lQ + qQ[jQ]]];
+          aQ *= aQ, kQ = aQ * aQ * (mQ[QQ] * eQ + mQ[QQ + 1] * MQ + mQ[QQ + 2] * GQ)
         }
-        let Td = .6 - Md * Md - Fd * Fd - Yd * Yd;
-        if (Td < 0) gd = 0;
+        let XQ = .6 - RQ * RQ - OQ * OQ - sQ * sQ;
+        if (XQ < 0) vQ = 0;
         else {
-          const dd = 3 * pd[nd + vd + Nd[Ud + xd + Nd[yd + qd]]];
-          Td *= Td, gd = Td * Td * (Cd[dd] * Md + Cd[dd + 1] * Fd + Cd[dd + 2] * Yd)
+          const QQ = 3 * LQ[zQ + pQ + qQ[lQ + cQ + qQ[jQ + CQ]]];
+          XQ *= XQ, vQ = XQ * XQ * (mQ[QQ] * RQ + mQ[QQ + 1] * OQ + mQ[QQ + 2] * sQ)
         }
-        let Ed = .6 - md * md - bd * bd - Sd * Sd;
-        if (Ed < 0) Kd = 0;
+        let fQ = .6 - rQ * rQ - IQ * IQ - UQ * UQ;
+        if (fQ < 0) uQ = 0;
         else {
-          const dd = 3 * pd[nd + Bd + Nd[Ud + sd + Nd[yd + ad]]];
-          Ed *= Ed, Kd = Ed * Ed * (Cd[dd] * md + Cd[dd + 1] * bd + Cd[dd + 2] * Sd)
+          const QQ = 3 * LQ[zQ + SQ + qQ[lQ + iQ + qQ[jQ + WQ]]];
+          fQ *= fQ, uQ = fQ * fQ * (mQ[QQ] * rQ + mQ[QQ + 1] * IQ + mQ[QQ + 2] * UQ)
         }
-        let cd = .6 - jd * jd - Xd * Xd - fd * fd;
-        if (cd < 0) od = 0;
+        let VQ = .6 - NQ * NQ - TQ * TQ - KQ * KQ;
+        if (VQ < 0) HQ = 0;
         else {
-          const dd = 3 * pd[nd + 1 + Nd[Ud + 1 + Nd[yd + 1]]];
-          cd *= cd, od = cd * cd * (Cd[dd] * jd + Cd[dd + 1] * Xd + Cd[dd + 2] * fd)
+          const QQ = 3 * LQ[zQ + 1 + qQ[lQ + 1 + qQ[jQ + 1]]];
+          VQ *= VQ, HQ = VQ * VQ * (mQ[QQ] * NQ + mQ[QQ + 1] * TQ + mQ[QQ + 2] * KQ)
         }
-        return 32 * (Zd + gd + Kd + od)
+        return 32 * (kQ + vQ + uQ + HQ)
       }
-      noise4D(dd, Jd, kd, pd) {
-        const Nd = this.perm;
-        let Wd, Pd, Cd, od, ld;
-        const Qd = (dd + Jd + kd + pd) * Zd,
-          Ld = Math.floor(dd + Qd),
-          Od = Math.floor(Jd + Qd),
-          ed = Math.floor(kd + Qd),
-          Rd = Math.floor(pd + Qd),
-          Id = (Ld + Od + ed + Rd) * gd,
-          Gd = dd - (Ld - Id),
-          vd = Jd - (Od - Id),
-          xd = kd - (ed - Id),
-          qd = pd - (Rd - Id);
-        let Bd = 0,
-          sd = 0,
-          ad = 0,
-          Md = 0;
-        Gd > vd ? Bd++ : sd++, Gd > xd ? Bd++ : ad++, Gd > qd ? Bd++ : Md++, vd > xd ? sd++ : ad++, vd > qd ? sd++ : Md++, xd > qd ? ad++ : Md++;
-        const Fd = Bd >= 3 ? 1 : 0,
-          Yd = sd >= 3 ? 1 : 0,
-          md = ad >= 3 ? 1 : 0,
-          bd = Md >= 3 ? 1 : 0,
-          Sd = Bd >= 2 ? 1 : 0,
-          jd = sd >= 2 ? 1 : 0,
-          Xd = ad >= 2 ? 1 : 0,
-          fd = Md >= 2 ? 1 : 0,
-          nd = Bd >= 1 ? 1 : 0,
-          Ud = sd >= 1 ? 1 : 0,
-          yd = ad >= 1 ? 1 : 0,
-          Dd = Md >= 1 ? 1 : 0,
-          Td = Gd - Fd + gd,
-          Ed = vd - Yd + gd,
-          cd = xd - md + gd,
-          hd = qd - bd + gd,
-          rd = Gd - Sd + 2 * gd,
-          ud = vd - jd + 2 * gd,
-          td = xd - Xd + 2 * gd,
-          Vd = qd - fd + 2 * gd,
-          zd = Gd - nd + 3 * gd,
-          Hd = vd - Ud + 3 * gd,
-          wd = xd - yd + 3 * gd,
-          Ad = qd - Dd + 3 * gd,
-          dJ = Gd - 1 + 4 * gd,
-          JJ = vd - 1 + 4 * gd,
-          kJ = xd - 1 + 4 * gd,
-          pJ = qd - 1 + 4 * gd,
-          NJ = 255 & Ld,
-          WJ = 255 & Od,
-          PJ = 255 & ed,
-          ZJ = 255 & Rd;
-        let gJ = .6 - Gd * Gd - vd * vd - xd * xd - qd * qd;
-        if (gJ < 0) Wd = 0;
+      noise4D(QQ, FQ, wQ, LQ) {
+        const qQ = this.perm;
+        let oQ, DQ, mQ, HQ, bQ;
+        const YQ = (QQ + FQ + wQ + LQ) * kQ,
+          xQ = Math.floor(QQ + YQ),
+          AQ = Math.floor(FQ + YQ),
+          tQ = Math.floor(wQ + YQ),
+          eQ = Math.floor(LQ + YQ),
+          MQ = (xQ + AQ + tQ + eQ) * vQ,
+          GQ = QQ - (xQ - MQ),
+          pQ = FQ - (AQ - MQ),
+          cQ = wQ - (tQ - MQ),
+          CQ = LQ - (eQ - MQ);
+        let SQ = 0,
+          iQ = 0,
+          WQ = 0,
+          RQ = 0;
+        GQ > pQ ? SQ++ : iQ++, GQ > cQ ? SQ++ : WQ++, GQ > CQ ? SQ++ : RQ++, pQ > cQ ? iQ++ : WQ++, pQ > CQ ? iQ++ : RQ++, cQ > CQ ? WQ++ : RQ++;
+        const OQ = SQ >= 3 ? 1 : 0,
+          sQ = iQ >= 3 ? 1 : 0,
+          rQ = WQ >= 3 ? 1 : 0,
+          IQ = RQ >= 3 ? 1 : 0,
+          UQ = SQ >= 2 ? 1 : 0,
+          NQ = iQ >= 2 ? 1 : 0,
+          TQ = WQ >= 2 ? 1 : 0,
+          KQ = RQ >= 2 ? 1 : 0,
+          zQ = SQ >= 1 ? 1 : 0,
+          lQ = iQ >= 1 ? 1 : 0,
+          jQ = WQ >= 1 ? 1 : 0,
+          aQ = RQ >= 1 ? 1 : 0,
+          XQ = GQ - OQ + vQ,
+          fQ = pQ - sQ + vQ,
+          VQ = cQ - rQ + vQ,
+          hQ = CQ - IQ + vQ,
+          JQ = GQ - UQ + 2 * vQ,
+          EQ = pQ - NQ + 2 * vQ,
+          nQ = cQ - TQ + 2 * vQ,
+          gQ = CQ - KQ + 2 * vQ,
+          PQ = GQ - zQ + 3 * vQ,
+          ZQ = pQ - lQ + 3 * vQ,
+          yQ = cQ - jQ + 3 * vQ,
+          BQ = CQ - aQ + 3 * vQ,
+          dQ = GQ - 1 + 4 * vQ,
+          QF = pQ - 1 + 4 * vQ,
+          FF = cQ - 1 + 4 * vQ,
+          wF = CQ - 1 + 4 * vQ,
+          LF = 255 & xQ,
+          qF = 255 & AQ,
+          oF = 255 & tQ,
+          DF = 255 & eQ;
+        let kF = .6 - GQ * GQ - pQ * pQ - cQ * cQ - CQ * CQ;
+        if (kF < 0) oQ = 0;
         else {
-          const dd = Nd[NJ + Nd[WJ + Nd[PJ + Nd[ZJ]]]] % 32 * 4;
-          gJ *= gJ, Wd = gJ * gJ * (Kd[dd] * Gd + Kd[dd + 1] * vd + Kd[dd + 2] * xd + Kd[dd + 3] * qd)
+          const QQ = qQ[LF + qQ[qF + qQ[oF + qQ[DF]]]] % 32 * 4;
+          kF *= kF, oQ = kF * kF * (uQ[QQ] * GQ + uQ[QQ + 1] * pQ + uQ[QQ + 2] * cQ + uQ[QQ + 3] * CQ)
         }
-        let CJ = .6 - Td * Td - Ed * Ed - cd * cd - hd * hd;
-        if (CJ < 0) Pd = 0;
+        let vF = .6 - XQ * XQ - fQ * fQ - VQ * VQ - hQ * hQ;
+        if (vF < 0) DQ = 0;
         else {
-          const dd = Nd[NJ + Fd + Nd[WJ + Yd + Nd[PJ + md + Nd[ZJ + bd]]]] % 32 * 4;
-          CJ *= CJ, Pd = CJ * CJ * (Kd[dd] * Td + Kd[dd + 1] * Ed + Kd[dd + 2] * cd + Kd[dd + 3] * hd)
+          const QQ = qQ[LF + OQ + qQ[qF + sQ + qQ[oF + rQ + qQ[DF + IQ]]]] % 32 * 4;
+          vF *= vF, DQ = vF * vF * (uQ[QQ] * XQ + uQ[QQ + 1] * fQ + uQ[QQ + 2] * VQ + uQ[QQ + 3] * hQ)
         }
-        let KJ = .6 - rd * rd - ud * ud - td * td - Vd * Vd;
-        if (KJ < 0) Cd = 0;
+        let mF = .6 - JQ * JQ - EQ * EQ - nQ * nQ - gQ * gQ;
+        if (mF < 0) mQ = 0;
         else {
-          const dd = Nd[NJ + Sd + Nd[WJ + jd + Nd[PJ + Xd + Nd[ZJ + fd]]]] % 32 * 4;
-          KJ *= KJ, Cd = KJ * KJ * (Kd[dd] * rd + Kd[dd + 1] * ud + Kd[dd + 2] * td + Kd[dd + 3] * Vd)
+          const QQ = qQ[LF + UQ + qQ[qF + NQ + qQ[oF + TQ + qQ[DF + KQ]]]] % 32 * 4;
+          mF *= mF, mQ = mF * mF * (uQ[QQ] * JQ + uQ[QQ + 1] * EQ + uQ[QQ + 2] * nQ + uQ[QQ + 3] * gQ)
         }
-        let oJ = .6 - zd * zd - Hd * Hd - wd * wd - Ad * Ad;
-        if (oJ < 0) od = 0;
+        let uF = .6 - PQ * PQ - ZQ * ZQ - yQ * yQ - BQ * BQ;
+        if (uF < 0) HQ = 0;
         else {
-          const dd = Nd[NJ + nd + Nd[WJ + Ud + Nd[PJ + yd + Nd[ZJ + Dd]]]] % 32 * 4;
-          oJ *= oJ, od = oJ * oJ * (Kd[dd] * zd + Kd[dd + 1] * Hd + Kd[dd + 2] * wd + Kd[dd + 3] * Ad)
+          const QQ = qQ[LF + zQ + qQ[qF + lQ + qQ[oF + jQ + qQ[DF + aQ]]]] % 32 * 4;
+          uF *= uF, HQ = uF * uF * (uQ[QQ] * PQ + uQ[QQ + 1] * ZQ + uQ[QQ + 2] * yQ + uQ[QQ + 3] * BQ)
         }
-        let lJ = .6 - dJ * dJ - JJ * JJ - kJ * kJ - pJ * pJ;
-        if (lJ < 0) ld = 0;
+        let HF = .6 - dQ * dQ - QF * QF - FF * FF - wF * wF;
+        if (HF < 0) bQ = 0;
         else {
-          const dd = Nd[NJ + 1 + Nd[WJ + 1 + Nd[PJ + 1 + Nd[ZJ + 1]]]] % 32 * 4;
-          lJ *= lJ, ld = lJ * lJ * (Kd[dd] * dJ + Kd[dd + 1] * JJ + Kd[dd + 2] * kJ + Kd[dd + 3] * pJ)
+          const QQ = qQ[LF + 1 + qQ[qF + 1 + qQ[oF + 1 + qQ[DF + 1]]]] % 32 * 4;
+          HF *= HF, bQ = HF * HF * (uQ[QQ] * dQ + uQ[QQ + 1] * QF + uQ[QQ + 2] * FF + uQ[QQ + 3] * wF)
         }
-        return 27 * (Wd + Pd + Cd + od + ld)
+        return 27 * (oQ + DQ + mQ + HQ + bQ)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

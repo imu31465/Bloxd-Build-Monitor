@@ -1,30 +1,30 @@
 export const id = 52;
 export const ids = [52];
 export const modules = {
-  43264: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      startPageTexturePackFeed: () => Pd
+  42765: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      startPageTexturePackFeed: () => DQ
     });
-    var pd = kd(1220),
-      Nd = kd(33),
-      Wd = kd(43253);
+    var LQ = wQ(1213),
+      qQ = wQ(27),
+      oQ = wQ(42750);
 
-    function Pd(dd, Jd) {
-      const kd = new Wd.e({
-        store: Nd.f,
-        warn: dd,
-        oneShot: Jd,
-        fetchLatest: async dd => {
-          const Jd = await fetch(`${pd.clientSideServerUrls.texturePackUrl}/${dd}.json`, {
+    function DQ(QQ, FQ) {
+      const wQ = new oQ.e({
+        store: qQ.h,
+        warn: QQ,
+        oneShot: FQ,
+        fetchLatest: async QQ => {
+          const FQ = await fetch(`${LQ.clientSideServerUrls.texturePackUrl}/${QQ}.json`, {
             cache: "reload"
           });
-          if (!Jd.ok) throw new Error(`fetching texture pack ${dd} answered HTTP ${Jd.status}`);
-          return await Jd.json()
+          if (!FQ.ok) throw new Error(`fetching texture pack ${QQ} answered HTTP ${FQ.status}`);
+          return await FQ.json()
         }
       });
-      return (0, Wd.i)(kd), kd
+      return (0, oQ.g)(wQ), wQ
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

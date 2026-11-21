@@ -1,36 +1,36 @@
 export const id = 199;
 export const ids = [199];
 export const modules = {
-  40477: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      FORMER_BLOCK_IMAGE_NAMES: () => pd.b,
-      textureAnimationData: () => Nd.x,
-      textureNameToIndex: () => Nd.z
+  39913: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      FORMER_BLOCK_IMAGE_NAMES: () => LQ.b,
+      textureAnimationData: () => qQ.t,
+      textureNameToIndex: () => qQ.v
     });
-    var pd = kd(38861),
-      Nd = kd(9331)
+    var LQ = wQ(38251),
+      qQ = wQ(9195)
   },
-  9422: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Nd,
-      h: () => Wd
+  9289: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => qQ,
+      i: () => oQ
     });
-    var pd = kd(9383);
-    const Nd = "Air",
-      Wd = Object.freeze(new pd.f(Nd, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var LQ = wQ(9252);
+    const qQ = "Air",
+      oQ = Object.freeze(new LQ.g(qQ, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38861: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => pd,
-      c: () => Nd
+  38251: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => LQ,
+      d: () => qQ
     });
-    const pd = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((dd => [dd, `${dd}_block`])));
+    const LQ = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((QQ => [QQ, `${QQ}_block`])));
 
-    function Nd(dd) {
-      var Jd;
-      return null !== (Jd = pd.get(dd)) && void 0 !== Jd ? Jd : dd
+    function qQ(QQ) {
+      var FQ;
+      return null !== (FQ = LQ.get(QQ)) && void 0 !== FQ ? FQ : QQ
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

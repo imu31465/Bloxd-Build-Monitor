@@ -1,66 +1,66 @@
 export const id = 284;
 export const ids = [284];
 export const modules = {
-  41261: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      default: () => uJ
+  40679: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      default: () => EF
     });
-    var pd = kd(41267),
-      Nd = kd(41321),
-      Wd = kd(41324),
-      Pd = kd(56),
-      Zd = kd(72),
-      gd = kd(41340),
-      Cd = kd(41347),
-      Kd = kd(4636),
-      od = kd(41351),
-      ld = kd(1904),
-      Qd = kd(41359),
-      Ld = kd(41373),
-      Od = kd.n(Ld),
-      ed = kd(41330),
-      Rd = kd(41337),
-      Id = kd(1359),
-      Gd = kd(37030),
-      vd = kd(1260),
-      xd = kd(37041),
-      qd = kd(36919),
-      Bd = kd(1459),
-      sd = kd(610),
-      ad = kd(1266),
-      Md = kd(41424),
-      Fd = kd(41273),
-      Yd = kd(41282),
-      md = kd(1932),
-      bd = kd(3624),
-      Sd = kd(29),
-      jd = kd(1147);
-    const Xd = 1e4,
-      fd = 250,
-      nd = 250;
-    var Ud = kd(41303);
-    const yd = 50,
-      Dd = 100;
-    const Td = 2e3,
-      Ed = Fd.C.define(),
-      cd = Fd.C.define(),
-      hd = Fd.C.define();
-    class rd extends Yd.s {
-      constructor(dd, Jd, kd) {
-        super(), this.colour = dd, this.playerName = Jd, this.showName = kd
+    var LQ = wQ(40688),
+      qQ = wQ(40732),
+      oQ = wQ(40736),
+      DQ = wQ(53),
+      kQ = wQ(71),
+      vQ = wQ(40759),
+      mQ = wQ(40764),
+      uQ = wQ(4610),
+      HQ = wQ(40770),
+      bQ = wQ(1873),
+      YQ = wQ(40778),
+      xQ = wQ(40792),
+      AQ = wQ.n(xQ),
+      tQ = wQ(40743),
+      eQ = wQ(40751),
+      MQ = wQ(1348),
+      GQ = wQ(36472),
+      pQ = wQ(1254),
+      cQ = wQ(36483),
+      CQ = wQ(36378),
+      SQ = wQ(1447),
+      iQ = wQ(619),
+      WQ = wQ(1257),
+      RQ = wQ(40846),
+      OQ = wQ(40695),
+      sQ = wQ(40702),
+      rQ = wQ(1897),
+      IQ = wQ(3621),
+      UQ = wQ(22),
+      NQ = wQ(1147);
+    const TQ = 1e4,
+      KQ = 250,
+      zQ = 250;
+    var lQ = wQ(40718);
+    const jQ = 50,
+      aQ = 100;
+    const XQ = 2e3,
+      fQ = OQ.H.define(),
+      VQ = OQ.H.define(),
+      hQ = OQ.H.define();
+    class JQ extends sQ.l {
+      constructor(QQ, FQ, wQ) {
+        super(), this.colour = QQ, this.playerName = FQ, this.showName = wQ
       }
       toDOM() {
-        const dd = document.createElement("span");
-        dd.className = "cm-remote-cursor-wrapper", dd.style.borderLeftColor = this.colour;
-        const Jd = document.createElement("span");
-        if (Jd.className = "cm-remote-cursor", Jd.style.borderLeftColor = this.colour, dd.appendChild(Jd), this.showName) {
-          const Jd = document.createElement("span");
-          Jd.className = "cm-remote-cursor-name", Jd.style.backgroundColor = this.colour, Jd.textContent = this.playerName, dd.appendChild(Jd)
+        const QQ = document.createElement("span");
+        QQ.className = "cm-remote-cursor-wrapper", QQ.style.borderLeftColor = this.colour;
+        const FQ = document.createElement("span");
+        if (FQ.className = "cm-remote-cursor", FQ.style.borderLeftColor = this.colour, QQ.appendChild(FQ), this.showName) {
+          const FQ = document.createElement("span");
+          FQ.className = "cm-remote-cursor-name", FQ.style.backgroundColor = this.colour, FQ.textContent = this.playerName, QQ.appendChild(FQ)
         }
-        return dd
+        return QQ
       }
-      eq(dd) {
-        return this.colour === dd.colour && this.playerName === dd.playerName && this.showName === dd.showName
+      eq(QQ) {
+        return this.colour === QQ.colour && this.playerName === QQ.playerName && this.showName === QQ.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function ud(dd, Jd) {
-      const kd = [],
-        pd = [];
-      for (const [, Pd] of dd) {
-        const dd = Jd - Pd.lastMoved < Td;
-        if (kd.push({
-            pos: Pd.head,
-            decoration: Yd.b.widget({
-              widget: new rd(Pd.colour, Pd.playerName, dd),
+    function EQ(QQ, FQ) {
+      const wQ = [],
+        LQ = [];
+      for (const [, DQ] of QQ) {
+        const QQ = FQ - DQ.lastMoved < XQ;
+        if (wQ.push({
+            pos: DQ.head,
+            decoration: sQ.c.widget({
+              widget: new JQ(DQ.colour, DQ.playerName, QQ),
               side: 1
             })
-          }), Pd.anchor !== Pd.head) {
-          const dd = Math.min(Pd.anchor, Pd.head),
-            Jd = Math.max(Pd.anchor, Pd.head);
-          pd.push({
-            from: dd,
-            to: Jd,
-            decoration: Yd.b.mark({
+          }), DQ.anchor !== DQ.head) {
+          const QQ = Math.min(DQ.anchor, DQ.head),
+            FQ = Math.max(DQ.anchor, DQ.head);
+          LQ.push({
+            from: QQ,
+            to: FQ,
+            decoration: sQ.c.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${Pd.colour}33`
+                style: `background-color: ${DQ.colour}33`
               }
             })
           })
         }
       }
-      const Nd = new Fd.v,
-        Wd = [];
-      for (const Pd of kd) Wd.push({
+      const qQ = new OQ.z,
+        oQ = [];
+      for (const DQ of wQ) oQ.push({
         bias: 1,
-        deco: Pd.decoration,
-        from: Pd.pos,
-        to: Pd.pos
+        deco: DQ.decoration,
+        from: DQ.pos,
+        to: DQ.pos
       });
-      for (const Pd of pd) Wd.push({
+      for (const DQ of LQ) oQ.push({
         bias: 0,
-        deco: Pd.decoration,
-        from: Pd.from,
-        to: Pd.to
+        deco: DQ.decoration,
+        from: DQ.from,
+        to: DQ.to
       });
-      Wd.sort(((dd, Jd) => dd.from - Jd.from || dd.deco.startSide - Jd.deco.startSide || dd.bias - Jd.bias));
-      for (const Pd of Wd) Nd.add(Pd.from, Pd.to, Pd.deco);
-      return Nd.finish()
+      oQ.sort(((QQ, FQ) => QQ.from - FQ.from || QQ.deco.startSide - FQ.deco.startSide || QQ.bias - FQ.bias));
+      for (const DQ of oQ) qQ.add(DQ.from, DQ.to, DQ.deco);
+      return qQ.finish()
     }
-    const td = Fd.E.define({
+    const nQ = OQ.L.define({
       create: () => ({
         cursors: new Map,
-        RW: Yd.b.none
+        qo: sQ.c.none
       }),
-      update(dd, Jd) {
-        let kd = dd.cursors,
-          pd = !1;
-        if (Jd.docChanged) {
-          const dd = new Map;
-          for (const [pd, Nd] of kd) dd.set(pd, {
-            ...Nd,
-            anchor: Jd.changes.mapPos(Nd.anchor, 1),
-            head: Jd.changes.mapPos(Nd.head, 1)
+      update(QQ, FQ) {
+        let wQ = QQ.cursors,
+          LQ = !1;
+        if (FQ.docChanged) {
+          const QQ = new Map;
+          for (const [LQ, qQ] of wQ) QQ.set(LQ, {
+            ...qQ,
+            anchor: FQ.changes.mapPos(qQ.anchor, 1),
+            head: FQ.changes.mapPos(qQ.head, 1)
           });
-          kd = dd, pd = !0
+          wQ = QQ, LQ = !0
         }
-        for (const Nd of Jd.effects)
-          if (Nd.is(Ed)) {
-            if (!Number.isInteger(Nd.value.anchor) || !Number.isInteger(Nd.value.head)) {
-              console.warn(`Code Editor: ignored player ${Nd.value.playerId}'s cursor at ${Nd.value.anchor}-${Nd.value.head}`);
+        for (const qQ of FQ.effects)
+          if (qQ.is(fQ)) {
+            if (!Number.isInteger(qQ.value.anchor) || !Number.isInteger(qQ.value.head)) {
+              console.warn(`Code Editor: ignored player ${qQ.value.playerId}'s cursor at ${qQ.value.anchor}-${qQ.value.head}`);
               continue
             }
-            const Wd = Jd.state.doc.length,
-              Pd = {
-                ...Nd.value,
-                anchor: Math.min(Nd.value.anchor, Wd),
-                head: Math.min(Nd.value.head, Wd)
+            const oQ = FQ.state.doc.length,
+              DQ = {
+                ...qQ.value,
+                anchor: Math.min(qQ.value.anchor, oQ),
+                head: Math.min(qQ.value.head, oQ)
               };
-            kd === dd.cursors && (kd = new Map(kd)), kd.set(Pd.playerId, Pd), pd = !0
-          } else Nd.is(cd) ? kd.has(Nd.value) && (kd === dd.cursors && (kd = new Map(kd)), kd.delete(Nd.value), pd = !0) : Nd.is(hd) && (pd = !0);
-        return pd ? {
-          cursors: kd,
-          RW: ud(kd, Date.now())
-        } : dd
+            wQ === QQ.cursors && (wQ = new Map(wQ)), wQ.set(DQ.playerId, DQ), LQ = !0
+          } else qQ.is(VQ) ? wQ.has(qQ.value) && (wQ === QQ.cursors && (wQ = new Map(wQ)), wQ.delete(qQ.value), LQ = !0) : qQ.is(hQ) && (LQ = !0);
+        return LQ ? {
+          cursors: wQ,
+          qo: EQ(wQ, Date.now())
+        } : QQ
       },
-      provide: dd => Yd.i.RW.from(dd, (dd => dd.RW))
+      provide: QQ => sQ.f.qo.from(QQ, (QQ => QQ.qo))
     });
-    const Vd = Fd.C.define(),
-      zd = Yd.b.mark({
+    const gQ = OQ.H.define(),
+      PQ = sQ.c.mark({
         class: "CodeInsertFlash"
       }),
-      Hd = Fd.E.define({
-        create: () => Yd.b.none,
-        update(dd, Jd) {
-          let kd = dd.map(Jd.changes);
-          for (const pd of Jd.effects) pd.is(Vd) && (kd = pd.value ? Yd.b.set(zd.range(pd.value.from, pd.value.to)) : Yd.b.none);
-          return kd
+      ZQ = OQ.L.define({
+        create: () => sQ.c.none,
+        update(QQ, FQ) {
+          let wQ = QQ.map(FQ.changes);
+          for (const LQ of FQ.effects) LQ.is(gQ) && (wQ = LQ.value ? sQ.c.set(PQ.range(LQ.value.from, LQ.value.to)) : sQ.c.none);
+          return wQ
         },
-        provide: dd => Yd.i.RW.from(dd)
+        provide: QQ => sQ.f.qo.from(QQ)
       }),
-      wd = Fd.E.define({
+      yQ = OQ.L.define({
         create: () => !1,
-        update: (dd, Jd) => dd || void 0 !== Jd.annotation(Fd.J.userEvent) && !Jd.annotation(Fd.J.remote)
+        update: (QQ, FQ) => QQ || void 0 !== FQ.annotation(OQ.S.userEvent) && !FQ.annotation(OQ.S.remote)
       }),
-      Ad = [Hd, wd];
+      BQ = [ZQ, yQ];
 
-    function dJ(dd) {
-      return dd.field(wd)
+    function dQ(QQ) {
+      return QQ.field(yQ)
     }
-    const JJ = 3e4;
+    const QF = 3e4;
 
-    function kJ(dd, Jd) {
-      const kd = (0, Pd.useRef)(null);
-      (0, Pd.useEffect)((() => {
-        var dd;
-        (null === (dd = kd.current) || void 0 === dd ? void 0 : dd.path) !== Jd && (kd.current = null)
-      }), [Jd]);
-      const pd = dd => {
-        var pd;
-        const Nd = kd.current;
-        if (null === dd || void 0 === dd || !dd.dom.isConnected || !Nd || Nd.path !== Jd) return;
-        kd.current = null;
+    function FF(QQ, FQ) {
+      const wQ = (0, DQ.useRef)(null);
+      (0, DQ.useEffect)((() => {
+        var QQ;
+        (null === (QQ = wQ.current) || void 0 === QQ ? void 0 : QQ.path) !== FQ && (wQ.current = null)
+      }), [FQ]);
+      const LQ = QQ => {
+        var LQ;
+        const qQ = wQ.current;
+        if (null === QQ || void 0 === QQ || !QQ.dom.isConnected || !qQ || qQ.path !== FQ) return;
+        wQ.current = null;
         const {
-          qQ: Pd
-        } = Nd;
-        if (Pd && null !== Pd.text && performance.now() - Pd.at < JJ) {
-          const Jd = function(dd, Jd) {
-            if (dd === Jd) return null;
-            const kd = Math.min(dd.length, Jd.length);
-            let pd = 0;
-            for (; pd < kd && dd[pd] === Jd[pd];) pd++;
-            let Nd = 0;
-            for (; Nd < kd - pd && dd[dd.length - 1 - Nd] === Jd[Jd.length - 1 - Nd];) Nd++;
+          iY: DQ
+        } = qQ;
+        if (DQ && null !== DQ.text && performance.now() - DQ.at < QF) {
+          const FQ = function(QQ, FQ) {
+            if (QQ === FQ) return null;
+            const wQ = Math.min(QQ.length, FQ.length);
+            let LQ = 0;
+            for (; LQ < wQ && QQ[LQ] === FQ[LQ];) LQ++;
+            let qQ = 0;
+            for (; qQ < wQ - LQ && QQ[QQ.length - 1 - qQ] === FQ[FQ.length - 1 - qQ];) qQ++;
             return {
-              from: pd,
-              to: dd.length - Nd,
-              insert: Jd.slice(pd, Jd.length - Nd)
+              from: LQ,
+              to: QQ.length - qQ,
+              insert: FQ.slice(LQ, FQ.length - qQ)
             }
-          }(dd.state.doc.toString(), Pd.text);
-          null !== Jd && dd.dispatch({
-            changes: Jd,
-            userEvent: Pd.placed ? "input" : void 0
+          }(QQ.state.doc.toString(), DQ.text);
+          null !== FQ && QQ.dispatch({
+            changes: FQ,
+            userEvent: DQ.placed ? "input" : void 0
           })
         }
         const {
-          doc: Zd
-        } = dd.state, gd = Zd.line(Math.min(Math.max(Nd.line, 1), Zd.lines)), Cd = gd.from + Math.min(null !== (pd = Nd.column) && void 0 !== pd ? pd : 0, gd.length);
-        dd.dispatch({
+          doc: kQ
+        } = QQ.state, vQ = kQ.line(Math.min(Math.max(qQ.line, 1), kQ.lines)), mQ = vQ.from + Math.min(null !== (LQ = qQ.column) && void 0 !== LQ ? LQ : 0, vQ.length);
+        QQ.dispatch({
           selection: {
-            anchor: Cd
+            anchor: mQ
           },
-          effects: Wd.b.scrollIntoView(Cd, {
+          effects: oQ.d.scrollIntoView(mQ, {
             y: "center"
           }),
-          userEvent: null !== Pd && void 0 !== Pd && Pd.placed ? "select" : void 0
-        }), !1 !== (null === Pd || void 0 === Pd ? void 0 : Pd.focused) && dd.focus()
+          userEvent: null !== DQ && void 0 !== DQ && DQ.placed ? "select" : void 0
+        }), !1 !== (null === DQ || void 0 === DQ ? void 0 : DQ.focused) && QQ.focus()
       };
-      return (0, Bd.h)("CodeEditorGoToLine", (Jd => {
-        kd.current = Jd, pd(dd.current)
-      })), (0, Bd.h)("CodeEditorKeepEdits", (() => {
-        const pd = dd.current;
-        if (null === pd || !pd.dom.isConnected || null === Jd) return;
+      return (0, SQ.g)("CodeEditorGoToLine", (FQ => {
+        wQ.current = FQ, LQ(QQ.current)
+      })), (0, SQ.g)("CodeEditorKeepEdits", (() => {
+        const LQ = QQ.current;
+        if (null === LQ || !LQ.dom.isConnected || null === FQ) return;
         const {
-          doc: Nd,
-          selection: Wd
-        } = pd.state, {
-          head: Pd
-        } = Wd.main, Zd = Nd.lineAt(Pd), gd = {
-          text: (0, Md.h)(pd.state).length > 0 ? Nd.toString() : null,
+          doc: qQ,
+          selection: oQ
+        } = LQ.state, {
+          head: DQ
+        } = oQ.main, kQ = qQ.lineAt(DQ), vQ = {
+          text: (0, RQ.h)(LQ.state).length > 0 ? qQ.toString() : null,
           at: performance.now(),
-          focused: pd.hasFocus,
-          placed: dJ(pd.state)
+          focused: LQ.hasFocus,
+          placed: dQ(LQ.state)
         };
-        kd.current = {
-          path: Jd,
-          line: Zd.number,
-          column: Pd - Zd.from,
-          qQ: gd
+        wQ.current = {
+          path: FQ,
+          line: kQ.number,
+          column: DQ - kQ.from,
+          iY: vQ
         }
-      })), dd => {
-        var Nd;
-        const Wd = kd.current;
-        !1 === (null === Wd || void 0 === Wd || null === (Nd = Wd.qQ) || void 0 === Nd ? void 0 : Nd.focused) && Wd.path === Jd || dd.focus(), pd(dd)
+      })), QQ => {
+        var qQ;
+        const oQ = wQ.current;
+        !1 === (null === oQ || void 0 === oQ || null === (qQ = oQ.iY) || void 0 === qQ ? void 0 : qQ.focused) && oQ.path === FQ || QQ.focus(), LQ(QQ)
       }
     }
-    var pJ = kd(4195),
-      NJ = kd(1211);
+    var wF = wQ(4226),
+      LF = wQ(1207);
 
-    function WJ(dd, Jd) {
+    function qF(QQ, FQ) {
       const {
-        t: kd
-      } = (0, NJ.B)();
-      (0, Bd.h)("CodeEditorInsertText", (pd => {
+        t: wQ
+      } = (0, LF.y)();
+      (0, SQ.g)("CodeEditorInsertText", (LQ => {
         let {
-          text: Nd,
-          focus: Wd
-        } = pd;
-        const Pd = dd.current,
-          Zd = null !== Pd && void 0 !== Pd && Pd.dom.isConnected ? function(dd, Jd) {
-            if (!dJ(dd)) return null;
+          text: qQ,
+          focus: oQ
+        } = LQ;
+        const DQ = QQ.current,
+          kQ = null !== DQ && void 0 !== DQ && DQ.dom.isConnected ? function(QQ, FQ) {
+            if (!dQ(QQ)) return null;
             const {
-              from: kd,
-              to: pd
-            } = dd.selection.main, Nd = kd + Jd.length;
+              from: wQ,
+              to: LQ
+            } = QQ.selection.main, qQ = wQ + FQ.length;
             return {
               changes: {
-                from: kd,
-                to: pd,
-                insert: Jd
+                from: wQ,
+                to: LQ,
+                insert: FQ
               },
               selection: {
-                anchor: Nd
+                anchor: qQ
               },
-              effects: [Yd.i.scrollIntoView(Nd, {
+              effects: [sQ.f.scrollIntoView(qQ, {
                 y: "center"
-              }), Vd.of({
-                from: kd,
-                to: Nd
+              }), gQ.of({
+                from: wQ,
+                to: qQ
               })],
               userEvent: "input"
             }
-          }(Pd.state, Nd) : null;
-        null !== Pd && null !== Zd ? (Pd.dispatch(Zd), Wd && Pd.focus(), setTimeout((() => {
-          Pd.dom.isConnected && Pd.dispatch({
-            effects: Vd.of(null)
+          }(DQ.state, qQ) : null;
+        null !== DQ && null !== kQ ? (DQ.dispatch(kQ), oQ && DQ.focus(), setTimeout((() => {
+          DQ.dom.isConnected && DQ.dispatch({
+            effects: gQ.of(null)
           })
-        }), 1500)) : (0, pJ.d)(Nd).then((() => {
-          Jd({
-            message: kd("codeEditorWorld:pickCopied", {
-              coords: Nd
+        }), 1500)) : (0, wF.d)(qQ).then((() => {
+          FQ({
+            message: wQ("codeEditorWorld:pickCopied", {
+              coords: qQ
             }),
             type: "success"
           })
-        }), (dd => {
-          console.error("Pick could not copy the coordinates", dd), Jd({
-            message: kd("codeEditorWorld:pickPlaceCursor", {
-              coords: Nd
+        }), (QQ => {
+          console.error("Pick could not copy the coordinates", QQ), FQ({
+            message: wQ("codeEditorWorld:pickPlaceCursor", {
+              coords: qQ
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var PJ = kd(41314);
-    const ZJ = "#e45649",
-      gJ = "#383a42",
-      CJ = "#696c77",
-      KJ = "#986801",
-      oJ = "#e5e5e6",
-      lJ = "#fafafa",
-      QJ = "#eaeaeb",
-      LJ = "#526fff",
-      OJ = Yd.i.theme({
+    var oF = wQ(40727);
+    const DF = "#e45649",
+      kF = "#383a42",
+      vF = "#696c77",
+      mF = "#986801",
+      uF = "#e5e5e6",
+      HF = "#fafafa",
+      bF = "#eaeaeb",
+      YF = "#526fff",
+      xF = sQ.f.theme({
         "&": {
-          color: gJ,
-          backgroundColor: lJ
+          color: kF,
+          backgroundColor: HF
         },
         ".cm-content": {
-          caretColor: LJ
+          caretColor: YF
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: LJ
+          borderLeftColor: YF
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: gJ
+          color: kF
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: lJ,
-          color: CJ,
+          backgroundColor: HF,
+          color: vF,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: oJ
+          backgroundColor: uF
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: QJ
+          backgroundColor: bF
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: QJ,
-          borderBottomColor: QJ
+          borderTopColor: bF,
+          borderBottomColor: bF
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: oJ,
-            color: gJ
+            backgroundColor: uF,
+            color: kF
           }
         }
       }, {
         dark: !1
       }),
-      eJ = Ud.c.define([{
-        tag: PJ.m.keyword,
+      AF = lQ.c.define([{
+        tag: oF.q.keyword,
         color: "#a626a4"
       }, {
-        tag: [PJ.m.name, PJ.m.deleted, PJ.m.character, PJ.m.propertyName, PJ.m.macroName],
-        color: ZJ
+        tag: [oF.q.name, oF.q.deleted, oF.q.character, oF.q.propertyName, oF.q.macroName],
+        color: DF
       }, {
-        tag: [PJ.m.function(PJ.m.variableName), PJ.m.labelName],
+        tag: [oF.q.function(oF.q.variableName), oF.q.labelName],
         color: "#4078f2"
       }, {
-        tag: [PJ.m.color, PJ.m.constant(PJ.m.name), PJ.m.standard(PJ.m.name)],
-        color: KJ
+        tag: [oF.q.color, oF.q.constant(oF.q.name), oF.q.standard(oF.q.name)],
+        color: mF
       }, {
-        tag: [PJ.m.definition(PJ.m.name), PJ.m.separator],
-        color: gJ
+        tag: [oF.q.definition(oF.q.name), oF.q.separator],
+        color: kF
       }, {
-        tag: [PJ.m.typeName, PJ.m.className, PJ.m.number, PJ.m.changed, PJ.m.annotation, PJ.m.modifier, PJ.m.self, PJ.m.namespace],
+        tag: [oF.q.typeName, oF.q.className, oF.q.number, oF.q.changed, oF.q.annotation, oF.q.modifier, oF.q.self, oF.q.namespace],
         color: "#c18401"
       }, {
-        tag: [PJ.m.operator, PJ.m.operatorKeyword, PJ.m.url, PJ.m.escape, PJ.m.regexp, PJ.m.link, PJ.m.special(PJ.m.string)],
+        tag: [oF.q.operator, oF.q.operatorKeyword, oF.q.url, oF.q.escape, oF.q.regexp, oF.q.link, oF.q.special(oF.q.string)],
         color: "#0184bc"
       }, {
-        tag: [PJ.m.meta, PJ.m.comment],
-        color: CJ
+        tag: [oF.q.meta, oF.q.comment],
+        color: vF
       }, {
-        tag: PJ.m.strong,
+        tag: oF.q.strong,
         fontWeight: "bold"
       }, {
-        tag: PJ.m.emphasis,
+        tag: oF.q.emphasis,
         fontStyle: "italic"
       }, {
-        tag: PJ.m.strikethrough,
+        tag: oF.q.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: PJ.m.link,
-        color: CJ,
+        tag: oF.q.link,
+        color: vF,
         textDecoration: "underline"
       }, {
-        tag: PJ.m.heading,
+        tag: oF.q.heading,
         fontWeight: "bold",
-        color: ZJ
+        color: DF
       }, {
-        tag: [PJ.m.atom, PJ.m.bool, PJ.m.special(PJ.m.variableName)],
-        color: KJ
+        tag: [oF.q.atom, oF.q.bool, oF.q.special(oF.q.variableName)],
+        color: mF
       }, {
-        tag: [PJ.m.processingInstruction, PJ.m.string, PJ.m.inserted],
+        tag: [oF.q.processingInstruction, oF.q.string, oF.q.inserted],
         color: "#50a14f"
       }, {
-        tag: PJ.m.invalid,
+        tag: oF.q.invalid,
         color: "#000000"
       }]),
-      RJ = [OJ, (0, Ud.db)(eJ)];
-    var IJ = kd(37080),
-      GJ = kd(41432);
-    const vJ = Wd.h.define(),
-      xJ = Wd.i.define({
+      tF = [xF, (0, lQ.ib)(AF)];
+    var eF = wQ(36535),
+      MF = wQ(40855);
+    const GF = oQ.h.define(),
+      pF = oQ.l.define({
         create: () => !1,
-        update(dd, Jd) {
-          for (const kd of Jd.effects) kd.is(vJ) && (dd = kd.value);
-          return dd
+        update(QQ, FQ) {
+          for (const wQ of FQ.effects) wQ.is(GF) && (QQ = wQ.value);
+          return QQ
         }
       }),
-      qJ = [{
+      cF = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function BJ(dd, Jd) {
-      return [xJ, Wd.m.fromClass(class {
-        constructor(dd) {
-          this.view = dd, this.onDown = dd => {
-            const Jd = dd.target instanceof Element && null !== dd.target.closest(".cm-tooltip");
-            0 !== dd.button || Jd || this.view.state.field(xJ) || this.view.dispatch({
-              effects: vJ.of(!0)
+    function CF(QQ, FQ) {
+      return [pF, oQ.n.fromClass(class {
+        constructor(QQ) {
+          this.view = QQ, this.onDown = QQ => {
+            const FQ = QQ.target instanceof Element && null !== QQ.target.closest(".cm-tooltip");
+            0 !== QQ.button || FQ || this.view.state.field(pF) || this.view.dispatch({
+              effects: GF.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(xJ) && this.view.dispatch({
-              effects: vJ.of(!1)
+            this.view.state.field(pF) && this.view.dispatch({
+              effects: GF.of(!1)
             })
-          }, dd.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, QQ.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), Wd.v.compute(["selection", xJ], (kd => function(dd, Jd, kd) {
-        const pd = dd.selection.main;
-        return pd.empty || dd.field(xJ) || dd.sliceDoc(pd.from, pd.to).trim().length < 2 ? null : {
-          pos: pd.from,
+      }), oQ.w.compute(["selection", pF], (wQ => function(QQ, FQ, wQ) {
+        const LQ = QQ.selection.main;
+        return LQ.empty || QQ.field(pF) || QQ.sliceDoc(LQ.from, LQ.to).trim().length < 2 ? null : {
+          pos: LQ.from,
           above: !0,
-          create: dd => {
-            const pd = document.createElement("div");
-            pd.className = "CodeSelectionActions", pd.setAttribute("role", "toolbar"), pd.setAttribute("aria-label", "AI Helper: picked code");
+          create: QQ => {
+            const LQ = document.createElement("div");
+            LQ.className = "CodeSelectionActions", LQ.setAttribute("role", "toolbar"), LQ.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: Nd,
-                label: Wd
+                action: qQ,
+                label: oQ
               }
-              of qJ) {
-              if (!kd && "explain" !== Nd) continue;
-              const Pd = document.createElement("button");
-              Pd.type = "button", Pd.textContent = Wd, "change" !== Nd && (Pd.title = GJ.c, Pd.dataset.asksAi = "true"), Pd.addEventListener("mousedown", (dd => {
-                dd.preventDefault()
-              })), Pd.addEventListener("click", (() => {
-                const kd = dd.state.selection.main;
-                if (kd.empty) return;
-                const pd = {
-                  action: Nd,
-                  path: Jd,
-                  fromLine: dd.state.doc.lineAt(kd.from).number,
-                  toLine: dd.state.doc.lineAt(kd.to > kd.from && dd.state.doc.lineAt(kd.to).from === kd.to ? kd.to - 1 : kd.to).number,
-                  text: dd.state.sliceDoc(kd.from, kd.to)
+              of cF) {
+              if (!wQ && "explain" !== qQ) continue;
+              const DQ = document.createElement("button");
+              DQ.type = "button", DQ.textContent = oQ, "change" !== qQ && (DQ.title = MF.e, DQ.dataset.asksAi = "true"), DQ.addEventListener("mousedown", (QQ => {
+                QQ.preventDefault()
+              })), DQ.addEventListener("click", (() => {
+                const wQ = QQ.state.selection.main;
+                if (wQ.empty) return;
+                const LQ = {
+                  action: qQ,
+                  path: FQ,
+                  fromLine: QQ.state.doc.lineAt(wQ.from).number,
+                  toLine: QQ.state.doc.lineAt(wQ.to > wQ.from && QQ.state.doc.lineAt(wQ.to).from === wQ.to ? wQ.to - 1 : wQ.to).number,
+                  text: QQ.state.sliceDoc(wQ.from, wQ.to)
                 };
-                Sd.j.nO("WorldCodeAiSelection", pd), dd.dispatch({
+                UQ.l.GA("WorldCodeAiSelection", LQ), QQ.dispatch({
                   selection: {
-                    anchor: kd.to
+                    anchor: wQ.to
                   }
                 })
-              })), pd.appendChild(Pd)
+              })), LQ.appendChild(DQ)
             }
             return {
-              dom: pd
+              dom: LQ
             }
           }
         }
-      }(kd, dd, Jd)))]
+      }(wQ, QQ, FQ)))]
     }
-    var sJ = kd(1103);
-    const iJ = new Set(["(", "{", "[", "<"]),
-      aJ = new Set([")", "}", "]", ">"]),
-      MJ = {
+    var SF = wQ(1107);
+    const iF = new Set(["(", "{", "[", "<"]),
+      WF = new Set([")", "}", "]", ">"]),
+      RF = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function FJ(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function OF(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function kd(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const pd = [];
-        for (const Nd of dd) {
-          let dd;
-          dd = "punctuation" === Nd.kind ? MJ.text : "parameterName" === Nd.kind ? MJ.parameterName : Jd, pd.push({
-            str: Nd.text,
+      function wQ(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const LQ = [];
+        for (const qQ of QQ) {
+          let QQ;
+          QQ = "punctuation" === qQ.kind ? RF.text : "parameterName" === qQ.kind ? RF.parameterName : FQ, LQ.push({
+            str: qQ.text,
             style: {
-              color: dd,
-              opacity: kd ? .5 : void 0
+              color: QQ,
+              opacity: wQ ? .5 : void 0
             }
           })
         }
-        return pd
+        return LQ
       }
-      const pd = [];
-      if (pd.push(...kd(dd.prefixDisplayParts, MJ.text)), dd.parameters.length > 0) {
-        pd.push("\n");
-        for (let Nd = 0; Nd < dd.parameters.length; Nd++) {
-          const Wd = dd.parameters[Nd];
-          pd.push("\t"), pd.push(...kd(Wd.displayParts, MJ.parameter, null !== Jd && Nd !== Jd)), pd.push("\n")
+      const LQ = [];
+      if (LQ.push(...wQ(QQ.prefixDisplayParts, RF.text)), QQ.parameters.length > 0) {
+        LQ.push("\n");
+        for (let qQ = 0; qQ < QQ.parameters.length; qQ++) {
+          const oQ = QQ.parameters[qQ];
+          LQ.push("\t"), LQ.push(...wQ(oQ.displayParts, RF.parameter, null !== FQ && qQ !== FQ)), LQ.push("\n")
         }
       }
-      return pd.push(...kd(dd.suffixDisplayParts, MJ.suffix)), dd.documentation && (pd.push("\n\n"), pd.push(...kd(dd.documentation, MJ.docs))), pd
+      return LQ.push(...wQ(QQ.suffixDisplayParts, RF.suffix)), QQ.documentation && (LQ.push("\n\n"), LQ.push(...wQ(QQ.documentation, RF.docs))), LQ
     }
-    var YJ = function(dd) {
-      return dd[dd.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", dd[dd.DuplicateIdentifier = 2300] = "DuplicateIdentifier", dd
-    }(YJ || {});
-    const mJ = new Set([YJ.DuplicateIdentifier]),
-      bJ = new Set([YJ.VariableDefinedElsewhere]),
-      SJ = new Set([]),
-      jJ = "/index.js";
+    var sF = function(QQ) {
+      return QQ[QQ.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", QQ[QQ.DuplicateIdentifier = 2300] = "DuplicateIdentifier", QQ
+    }(sF || {});
+    const rF = new Set([sF.DuplicateIdentifier]),
+      IF = new Set([sF.VariableDefinedElsewhere]),
+      UF = new Set([]),
+      NF = "/index.js";
 
-    function XJ(dd) {
-      return "/" + dd
-    }
-
-    function fJ(dd, Jd, kd) {
-      dd.getSourceFile(Jd) && dd.deleteFile(Jd), dd.createFile(Jd, kd)
+    function TF(QQ) {
+      return "/" + QQ
     }
 
-    function nJ(dd) {
-      return !!dd && ((0, xd.n)(dd) || (0, xd.j)(dd))
+    function KF(QQ, FQ, wQ) {
+      QQ.getSourceFile(FQ) && QQ.deleteFile(FQ), QQ.createFile(FQ, wQ)
     }
 
-    function UJ(dd, Jd, kd) {
+    function zF(QQ) {
+      return !!QQ && ((0, cQ.o)(QQ) || (0, cQ.n)(QQ))
+    }
+
+    function lF(QQ, FQ, wQ) {
       return () => {
-        let pd = [...Jd.languageService.getSemanticDiagnostics(kd), ...Jd.languageService.getSyntacticDiagnostics(kd)];
-        return pd = pd.filter((dd => !(0, sd.I)(dd.start) && !(0, sd.I)(dd.length) && !mJ.has(dd.code))), dd || (pd = pd.filter((dd => !bJ.has(dd.code)))), pd.map((dd => ({
-          from: dd.start,
-          to: dd.start + dd.length,
-          message: "string" === typeof dd.messageText ? dd.messageText : dd.messageText.messageText,
-          severity: SJ.has(dd.code) ? "warning" : "error"
+        let LQ = [...FQ.languageService.getSemanticDiagnostics(wQ), ...FQ.languageService.getSyntacticDiagnostics(wQ)];
+        return LQ = LQ.filter((QQ => !(0, iQ.F)(QQ.start) && !(0, iQ.F)(QQ.length) && !rF.has(QQ.code))), QQ || (LQ = LQ.filter((QQ => !IF.has(QQ.code)))), LQ.map((QQ => ({
+          from: QQ.start,
+          to: QQ.start + QQ.length,
+          message: "string" === typeof QQ.messageText ? QQ.messageText : QQ.messageText.messageText,
+          severity: UF.has(QQ.code) ? "warning" : "error"
         })))
       }
     }
 
-    function yJ(dd, Jd) {
-      return kd => {
-        var pd, Nd;
-        const Wd = dd.languageService.getCompletionsAtPosition(Jd, kd.pos, {});
-        if (!Wd) return {
-          from: kd.pos,
+    function jF(QQ, FQ) {
+      return wQ => {
+        var LQ, qQ;
+        const oQ = QQ.languageService.getCompletionsAtPosition(FQ, wQ.pos, {});
+        if (!oQ) return {
+          from: wQ.pos,
           options: []
         };
-        let Pd = null !== (pd = null === (Nd = Wd.optionalReplacementSpan) || void 0 === Nd ? void 0 : Nd.start) && void 0 !== pd ? pd : kd.pos;
-        if (!Wd.optionalReplacementSpan) {
-          const dd = kd.state.doc.sliceString(0, kd.pos);
-          for (; Pd > 0 && /[\w$]/.test(dd[Pd - 1]);) Pd--
+        let DQ = null !== (LQ = null === (qQ = oQ.optionalReplacementSpan) || void 0 === qQ ? void 0 : qQ.start) && void 0 !== LQ ? LQ : wQ.pos;
+        if (!oQ.optionalReplacementSpan) {
+          const QQ = wQ.state.doc.sliceString(0, wQ.pos);
+          for (; DQ > 0 && /[\w$]/.test(QQ[DQ - 1]);) DQ--
         }
-        return Wd.entries = Wd.entries.filter((dd => dd.kind !== Od().ScriptElementKind.warning)), {
-          from: Pd,
-          options: Wd.entries.map((pd => {
-            var Nd, Wd, Zd, gd;
-            const Cd = dd.languageService.getCompletionEntryDetails(Jd, kd.pos, pd.name, {}, pd.source, {}, pd.data),
-              Kd = null !== (Nd = null === (Wd = pd.replacementSpan) || void 0 === Wd ? void 0 : Wd.start) && void 0 !== Nd ? Nd : Pd,
-              od = pd.replacementSpan ? pd.replacementSpan.start + pd.replacementSpan.length : kd.pos,
-              ld = null !== (Zd = pd.insertText) && void 0 !== Zd ? Zd : pd.name;
+        return oQ.entries = oQ.entries.filter((QQ => QQ.kind !== AQ().ScriptElementKind.warning)), {
+          from: DQ,
+          options: oQ.entries.map((LQ => {
+            var qQ, oQ, kQ, vQ;
+            const mQ = QQ.languageService.getCompletionEntryDetails(FQ, wQ.pos, LQ.name, {}, LQ.source, {}, LQ.data),
+              uQ = null !== (qQ = null === (oQ = LQ.replacementSpan) || void 0 === oQ ? void 0 : oQ.start) && void 0 !== qQ ? qQ : DQ,
+              HQ = LQ.replacementSpan ? LQ.replacementSpan.start + LQ.replacementSpan.length : wQ.pos,
+              bQ = null !== (kQ = LQ.insertText) && void 0 !== kQ ? kQ : LQ.name;
             return {
-              label: pd.name,
-              detail: null === Cd || void 0 === Cd ? void 0 : Cd.displayParts.map((dd => dd.text)).join(""),
-              info: null === Cd || void 0 === Cd || null === (gd = Cd.documentation) || void 0 === gd ? void 0 : gd.map((dd => dd.text)).join(""),
-              apply: dd => {
-                dd.dispatch({
+              label: LQ.name,
+              detail: null === mQ || void 0 === mQ ? void 0 : mQ.displayParts.map((QQ => QQ.text)).join(""),
+              info: null === mQ || void 0 === mQ || null === (vQ = mQ.documentation) || void 0 === vQ ? void 0 : vQ.map((QQ => QQ.text)).join(""),
+              apply: QQ => {
+                QQ.dispatch({
                   changes: {
-                    from: Kd,
-                    to: od,
-                    insert: ld
+                    from: uQ,
+                    to: HQ,
+                    insert: bQ
                   },
                   selection: {
-                    anchor: Kd + ld.length
+                    anchor: uQ + bQ.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function DJ(dd) {
-      return Jd => {
-        const kd = document.createElement("div");
-        kd.className = "CodeEditorTooltip";
-        let pd = !1;
+    function aF(QQ) {
+      return FQ => {
+        const wQ = document.createElement("div");
+        wQ.className = "CodeEditorTooltip";
+        let LQ = !1;
         return queueMicrotask((() => {
-          pd || (Zd.render((0, sJ.jsx)(ld.c, {
-            text: dd
-          }), kd), Jd.requestMeasure())
+          LQ || (kQ.render((0, SF.jsx)(bQ.e, {
+            text: QQ
+          }), wQ), FQ.requestMeasure())
         })), {
-          dom: kd,
+          dom: wQ,
           destroy() {
-            pd = !0, queueMicrotask((() => {
-              Zd.unmountComponentAtNode(kd)
+            LQ = !0, queueMicrotask((() => {
+              kQ.unmountComponentAtNode(wQ)
             }))
           }
         }
       }
     }
 
-    function TJ(dd, Jd, kd) {
-      return pd => {
-        var Nd;
-        if (!Jd) return [];
-        const Wd = null === (Nd = pd.selection.UO[0]) || void 0 === Nd ? void 0 : Nd.head;
-        if (void 0 === Wd) return [];
-        const Pd = dd.languageService.getSignatureHelpItems(kd, Wd, {});
-        if (!Pd || !Pd.items.length) return [];
-        const Zd = Pd.applicableSpan.start - Pd.items[0].prefixDisplayParts.map((dd => dd.text)).join("").length,
-          gd = Pd.applicableSpan.start,
-          Cd = pd.doc.lineAt(Wd),
-          Kd = Cd.from,
-          od = Math.min(Cd.to, Wd);
-        let ld, Qd;
-        return Zd < Kd ? (ld = Kd, Qd = od) : (ld = Zd, Qd = gd), [{
-          pos: ld,
-          end: Qd,
+    function XF(QQ, FQ, wQ) {
+      return LQ => {
+        var qQ;
+        if (!FQ) return [];
+        const oQ = null === (qQ = LQ.selection.PA[0]) || void 0 === qQ ? void 0 : qQ.head;
+        if (void 0 === oQ) return [];
+        const DQ = QQ.languageService.getSignatureHelpItems(wQ, oQ, {});
+        if (!DQ || !DQ.items.length) return [];
+        const kQ = DQ.applicableSpan.start - DQ.items[0].prefixDisplayParts.map((QQ => QQ.text)).join("").length,
+          vQ = DQ.applicableSpan.start,
+          mQ = LQ.doc.lineAt(oQ),
+          uQ = mQ.from,
+          HQ = Math.min(mQ.to, oQ);
+        let bQ, YQ;
+        return kQ < uQ ? (bQ = uQ, YQ = HQ) : (bQ = kQ, YQ = vQ), [{
+          pos: bQ,
+          end: YQ,
           above: !1,
-          create: DJ(FJ(Pd.items[0], Pd.argumentIndex))
+          create: aF(OF(DQ.items[0], DQ.argumentIndex))
         }]
       }
     }
 
-    function EJ(dd, Jd) {
-      return (kd, pd, Nd) => {
-        const Wd = dd.languageService.getQuickInfoAtPosition(Jd, pd);
-        if (!Wd) return [];
-        const Pd = Wd.textSpan.start,
-          Zd = Wd.textSpan.start + Wd.textSpan.length;
-        if (pd < Pd || pd >= Zd) return [];
-        if (Wd.kind === Od().ScriptElementKind.memberFunctionElement || Wd.kind === Od().ScriptElementKind.variableElement && "declare" === Wd.kindModifiers) {
-          const dd = Wd.displayParts.findIndex((dd => "space" === dd.kind)); - 1 !== dd && (Wd.displayParts = Wd.displayParts.slice(dd));
-          const Jd = {
+    function fF(QQ, FQ) {
+      return (wQ, LQ, qQ) => {
+        const oQ = QQ.languageService.getQuickInfoAtPosition(FQ, LQ);
+        if (!oQ) return [];
+        const DQ = oQ.textSpan.start,
+          kQ = oQ.textSpan.start + oQ.textSpan.length;
+        if (LQ < DQ || LQ >= kQ) return [];
+        if (oQ.kind === AQ().ScriptElementKind.memberFunctionElement || oQ.kind === AQ().ScriptElementKind.variableElement && "declare" === oQ.kindModifiers) {
+          const QQ = oQ.displayParts.findIndex((QQ => "space" === QQ.kind)); - 1 !== QQ && (oQ.displayParts = oQ.displayParts.slice(QQ));
+          const FQ = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            kd = Wd.displayParts.findIndex((dd => "punctuation" === dd.kind && "(" === dd.text)); - 1 !== kd && (Jd.prefixDisplayParts = Wd.displayParts.slice(0, kd + 1), Wd.displayParts = Wd.displayParts.slice(kd + 1));
-          const pd = Wd.displayParts.findLastIndex((dd => "punctuation" === dd.kind && ")" === dd.text)); - 1 !== pd && (Jd.suffixDisplayParts = Wd.displayParts.slice(pd), Wd.displayParts = Wd.displayParts.slice(0, pd));
-          let Nd = 0,
-            gd = [];
-          for (const Pd of Wd.displayParts)
-            if (iJ.has(Pd.text) ? Nd++ : aJ.has(Pd.text) && Nd--, "lineBreak" !== Pd.kind) {
-              if ("space" === Pd.kind) {
-                if (0 === gd.length) continue;
-                gd.push({
+            wQ = oQ.displayParts.findIndex((QQ => "punctuation" === QQ.kind && "(" === QQ.text)); - 1 !== wQ && (FQ.prefixDisplayParts = oQ.displayParts.slice(0, wQ + 1), oQ.displayParts = oQ.displayParts.slice(wQ + 1));
+          const LQ = oQ.displayParts.findLastIndex((QQ => "punctuation" === QQ.kind && ")" === QQ.text)); - 1 !== LQ && (FQ.suffixDisplayParts = oQ.displayParts.slice(LQ), oQ.displayParts = oQ.displayParts.slice(0, LQ));
+          let qQ = 0,
+            vQ = [];
+          for (const DQ of oQ.displayParts)
+            if (iF.has(DQ.text) ? qQ++ : WF.has(DQ.text) && qQ--, "lineBreak" !== DQ.kind) {
+              if ("space" === DQ.kind) {
+                if (0 === vQ.length) continue;
+                vQ.push({
                   kind: "space",
                   text: " "
                 })
-              } else gd.push(Pd);
-              0 === Nd && "," === Pd.text && (Jd.parameters.push({
-                displayParts: gd
-              }), gd = [])
-            } return gd.length > 0 && Jd.parameters.push({
-            displayParts: gd
-          }), Jd.documentation = Wd.documentation, [{
-            pos: Pd,
-            end: Zd,
+              } else vQ.push(DQ);
+              0 === qQ && "," === DQ.text && (FQ.parameters.push({
+                displayParts: vQ
+              }), vQ = [])
+            } return vQ.length > 0 && FQ.parameters.push({
+            displayParts: vQ
+          }), FQ.documentation = oQ.documentation, [{
+            pos: DQ,
+            end: kQ,
             above: !0,
-            create: DJ(FJ(Jd))
+            create: aF(OF(FQ))
           }]
         }
-        const gd = [];
-        for (const dd of Wd.displayParts) gd.push({
-          str: dd.text,
+        const vQ = [];
+        for (const QQ of oQ.displayParts) vQ.push({
+          str: QQ.text,
           style: {
-            color: MJ.text
+            color: RF.text
           }
         });
-        if (Wd.documentation) {
-          gd.push("\n\n");
-          for (const dd of Wd.documentation) gd.push({
-            str: dd.text,
+        if (oQ.documentation) {
+          vQ.push("\n\n");
+          for (const QQ of oQ.documentation) vQ.push({
+            str: QQ.text,
             style: {
-              color: MJ.docs
+              color: RF.docs
             }
           })
         }
         return [{
-          pos: Pd,
-          end: Zd,
+          pos: DQ,
+          end: kQ,
           above: !0,
-          create: DJ(gd)
+          create: aF(vQ)
         }]
       }
     }
-    const cJ = {
+    const VF = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: Od().SemicolonPreference.Insert
+      semicolons: AQ().SemicolonPreference.Insert
     };
-    const hJ = Wd.h.define(),
-      rJ = {
+    const hF = oQ.h.define(),
+      JF = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function uJ(dd) {
+    function EF(QQ) {
       let {
-        isLobbyCode: Jd,
-        code: kd,
-        onChange: Zd,
-        canEditCode: ld,
-        setTemporaryMessage: Ld,
-        close: sd,
-        showTooltips: rd,
-        lightMode: ud,
-        collabState: Vd,
-        onRemoteDocChange: zd,
-        files: Hd,
-        activePath: wd,
-        pluginName: dJ,
-        pluginFile: JJ,
-        pluginSource: pJ,
-        setActiveDocReplacer: NJ,
-        showAiHints: PJ,
-        canAiChangeCode: ZJ = ld
-      } = dd;
-      const [gJ, CJ] = (0, Pd.useState)(null), KJ = null === Vd || void 0 === Vd ? void 0 : Vd.version, oJ = null === Vd || void 0 === Vd ? void 0 : Vd.clientID, lJ = (0, Pd.useRef)({
-        isLobbyCode: Jd,
-        files: Hd,
-        code: kd,
-        activePath: wd
-      }), QJ = (0, Pd.useRef)(zd);
-      QJ.current = zd;
-      const LJ = (0, Pd.useRef)(null),
-        OJ = (0, Pd.useRef)(Vd);
-      OJ.current = Vd;
-      const eJ = (0, Pd.useRef)(null),
-        GJ = (0, Pd.useRef)(null),
-        vJ = (0, Pd.useRef)(null),
-        xJ = (0, Pd.useRef)(sd);
-      xJ.current = sd;
-      const qJ = (0, Pd.useRef)(kd);
-      qJ.current = kd;
-      const iJ = (0, Pd.useRef)(pJ);
-      iJ.current = pJ;
-      const aJ = function(dd, Jd, kd, pd) {
-        return kd ? `/plugin-preview/${kd}/${null!==pd&&void 0!==pd?pd:"index.ts"}` : dd ? XJ(null !== Jd && void 0 !== Jd ? Jd : vd.h) : jJ
-      }(Jd, wd, dJ, JJ);
-      (0, Pd.useEffect)((() => {
+        isLobbyCode: FQ,
+        code: wQ,
+        onChange: kQ,
+        canEditCode: bQ,
+        setTemporaryMessage: xQ,
+        close: iQ,
+        showTooltips: JQ,
+        lightMode: EQ,
+        collabState: gQ,
+        onRemoteDocChange: PQ,
+        files: ZQ,
+        activePath: yQ,
+        pluginName: dQ,
+        pluginFile: QF,
+        pluginSource: wF,
+        setActiveDocReplacer: LF,
+        showAiHints: oF,
+        canAiChangeCode: DF = bQ
+      } = QQ;
+      const [kF, vF] = (0, DQ.useState)(null), mF = null === gQ || void 0 === gQ ? void 0 : gQ.version, uF = null === gQ || void 0 === gQ ? void 0 : gQ.clientID, HF = (0, DQ.useRef)({
+        isLobbyCode: FQ,
+        files: ZQ,
+        code: wQ,
+        activePath: yQ
+      }), bF = (0, DQ.useRef)(PQ);
+      bF.current = PQ;
+      const YF = (0, DQ.useRef)(null),
+        xF = (0, DQ.useRef)(gQ);
+      xF.current = gQ;
+      const AF = (0, DQ.useRef)(null),
+        MF = (0, DQ.useRef)(null),
+        GF = (0, DQ.useRef)(null),
+        pF = (0, DQ.useRef)(iQ);
+      pF.current = iQ;
+      const cF = (0, DQ.useRef)(wQ);
+      cF.current = wQ;
+      const iF = (0, DQ.useRef)(wF);
+      iF.current = wF;
+      const WF = function(QQ, FQ, wQ, LQ) {
+        return wQ ? `/plugin-preview/${wQ}/${null!==LQ&&void 0!==LQ?LQ:"index.ts"}` : QQ ? TF(null !== FQ && void 0 !== FQ ? FQ : pQ.i) : NF
+      }(FQ, yQ, dQ, QF);
+      (0, DQ.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: dd,
-            files: Jd,
-            code: kd,
-            activePath: pd
-          } = lJ.current, Nd = {
+            isLobbyCode: QQ,
+            files: FQ,
+            code: wQ,
+            activePath: LQ
+          } = HF.current, qQ = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: Od().ModuleKind.ESNext,
-            moduleResolution: Od().ModuleResolutionKind.Bundler,
-            target: Od().ScriptTarget.ES2015,
+            module: AQ().ModuleKind.ESNext,
+            moduleResolution: AQ().ModuleResolutionKind.Bundler,
+            target: AQ().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(Gd.g).map((dd => [dd.specifier, [dd.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(GQ.e).map((QQ => [QQ.specifier, [QQ.typesVfsPath]])))
             }
-          }, Wd = new Map, Pd = [];
-          if (dd) {
-            const dd = null !== Jd && void 0 !== Jd ? Jd : {
-              [vd.h]: kd || "\n"
+          }, oQ = new Map, DQ = [];
+          if (QQ) {
+            const QQ = null !== FQ && void 0 !== FQ ? FQ : {
+              [pQ.i]: wQ || "\n"
             };
-            for (const [Jd, kd] of Object.entries(dd)) {
-              const dd = XJ(Jd);
-              Wd.set(dd, kd || "\n"), Pd.push(dd)
+            for (const [FQ, wQ] of Object.entries(QQ)) {
+              const QQ = TF(FQ);
+              oQ.set(QQ, wQ || "\n"), DQ.push(QQ)
             }
-            const Nd = XJ(null !== pd && void 0 !== pd ? pd : vd.h);
-            Wd.has(Nd) ? Wd.set(Nd, kd || "\n") : (Wd.set(Nd, kd || "\n"), Pd.push(Nd)), Wd.set("/node_modules/@bloxd/index.d.ts", Kd.default), Pd.push("/node_modules/@bloxd/index.d.ts");
-            for (const Jd of Object.values(Gd.g)) {
-              Wd.set(Jd.typesVfsPath, Jd.types), Pd.push(Jd.typesVfsPath);
-              for (const [dd, kd] of Object.entries(Jd.files)) {
-                const pd = `/plugin-preview/${Jd.name}/${dd}`;
-                Wd.set(pd, kd || "\n"), Pd.push(pd)
+            const qQ = TF(null !== LQ && void 0 !== LQ ? LQ : pQ.i);
+            oQ.has(qQ) ? oQ.set(qQ, wQ || "\n") : (oQ.set(qQ, wQ || "\n"), DQ.push(qQ)), oQ.set("/node_modules/@bloxd/index.d.ts", uQ.default), DQ.push("/node_modules/@bloxd/index.d.ts");
+            for (const FQ of Object.values(GQ.e)) {
+              oQ.set(FQ.typesVfsPath, FQ.types), DQ.push(FQ.typesVfsPath);
+              for (const [QQ, wQ] of Object.entries(FQ.files)) {
+                const LQ = `/plugin-preview/${FQ.name}/${QQ}`;
+                oQ.set(LQ, wQ || "\n"), DQ.push(LQ)
               }
             }
-          } else Wd.set(jJ, kd || "\n"), Pd.push(jJ);
-          Wd.set("/globals.d.ts", dd ? Cd.b : gd.b), Wd.set("/lib.d.ts", od.c), Pd.push("/globals.d.ts", "/lib.d.ts");
-          const Zd = Qd.b(Wd),
-            ld = Qd.d(Zd, Pd, Od(), Nd);
-          CJ({
-            yO: ld,
-            fsMap: Wd
+          } else oQ.set(NF, wQ || "\n"), DQ.push(NF);
+          oQ.set("/globals.d.ts", QQ ? mQ.b : vQ.d), oQ.set("/lib.d.ts", HQ.c), DQ.push("/globals.d.ts", "/lib.d.ts");
+          const kQ = YQ.d(oQ),
+            bQ = YQ.h(kQ, DQ, AQ(), qQ);
+          vF({
+            ZA: bQ,
+            fsMap: oQ
           })
         }()
-      }), []), (0, Pd.useEffect)((() => {
-        var dd, pd;
-        if (!gJ || !Jd) return;
+      }), []), (0, DQ.useEffect)((() => {
+        var QQ, LQ;
+        if (!kF || !FQ) return;
         const {
-          yO: Nd,
-          fsMap: Wd
-        } = gJ;
-        if (function(dd, Jd, kd) {
-            const pd = new Set;
-            for (const [Nd, Wd] of Object.entries(kd)) {
-              const kd = XJ(Nd);
-              pd.add(kd);
-              const Pd = Wd || "\n";
-              Jd.get(kd) !== Pd && (Jd.set(kd, Pd), fJ(dd, kd, Pd))
+          ZA: qQ,
+          fsMap: oQ
+        } = kF;
+        if (function(QQ, FQ, wQ) {
+            const LQ = new Set;
+            for (const [qQ, oQ] of Object.entries(wQ)) {
+              const wQ = TF(qQ);
+              LQ.add(wQ);
+              const DQ = oQ || "\n";
+              FQ.get(wQ) !== DQ && (FQ.set(wQ, DQ), KF(QQ, wQ, DQ))
             }
-            for (const Nd of [...Jd.keys()]) "/globals.d.ts" === Nd || "/lib.d.ts" === Nd || Nd.startsWith("/node_modules/") || Nd.startsWith("/plugin-preview/") || pd.has(Nd) || (Jd.delete(Nd), dd.getSourceFile(Nd) && dd.deleteFile(Nd))
-          }(Nd, Wd, null !== Hd && void 0 !== Hd ? Hd : {
-            [vd.h]: kd || "\n"
-          }), dJ) return void fJ(Nd, aJ, pJ || "\n");
-        const Pd = null !== (dd = null === (pd = LJ.current) || void 0 === pd ? void 0 : pd.state.doc.toString()) && void 0 !== dd ? dd : kd;
-        fJ(Nd, aJ, Pd || "\n")
-      }), [Hd, wd, gJ, dJ, pJ, aJ, kd, Jd]), (0, Pd.useEffect)((() => {
-        if (!gJ) return;
+            for (const qQ of [...FQ.keys()]) "/globals.d.ts" === qQ || "/lib.d.ts" === qQ || qQ.startsWith("/node_modules/") || qQ.startsWith("/plugin-preview/") || LQ.has(qQ) || (FQ.delete(qQ), QQ.getSourceFile(qQ) && QQ.deleteFile(qQ))
+          }(qQ, oQ, null !== ZQ && void 0 !== ZQ ? ZQ : {
+            [pQ.i]: wQ || "\n"
+          }), dQ) return void KF(qQ, WF, wF || "\n");
+        const DQ = null !== (QQ = null === (LQ = YF.current) || void 0 === LQ ? void 0 : LQ.state.doc.toString()) && void 0 !== QQ ? QQ : wQ;
+        KF(qQ, WF, DQ || "\n")
+      }), [ZQ, yQ, kF, dQ, wF, WF, wQ, FQ]), (0, DQ.useEffect)((() => {
+        if (!kF) return;
         const {
-          yO: dd
-        } = gJ;
-        fJ(dd, aJ, (dJ ? pJ : kd) || "\n")
-      }), [kd, dJ, pJ, aJ, gJ]), (0, Pd.useEffect)((() => () => {
-        GJ.current && (GJ.current(), GJ.current = null)
-      }), []), (0, Pd.useEffect)((() => (NJ(((dd, Jd) => {
-        if (dJ) return !1;
-        const kd = LJ.current,
-          pd = OJ.current,
-          Nd = pd ? (0, xd.v)(pd.docKey) : null;
-        if (!kd || !pd || eJ.current !== pd.clientID || dd !== Nd) return !1;
-        const Wd = kd.state.doc.toString();
-        return Wd !== Jd && kd.dispatch({
+          ZA: QQ
+        } = kF;
+        KF(QQ, WF, (dQ ? wF : wQ) || "\n")
+      }), [wQ, dQ, wF, WF, kF]), (0, DQ.useEffect)((() => () => {
+        MF.current && (MF.current(), MF.current = null)
+      }), []), (0, DQ.useEffect)((() => (LF(((QQ, FQ) => {
+        if (dQ) return !1;
+        const wQ = YF.current,
+          LQ = xF.current,
+          qQ = LQ ? (0, cQ.w)(LQ.docKey) : null;
+        if (!wQ || !LQ || AF.current !== LQ.clientID || QQ !== qQ) return !1;
+        const oQ = wQ.state.doc.toString();
+        return oQ !== FQ && wQ.dispatch({
           changes: {
             from: 0,
-            to: Wd.length,
-            insert: Jd
+            to: oQ.length,
+            insert: FQ
           }
         }), !0
       })), () => {
-        LJ.current = null, eJ.current = null, NJ(null)
-      })), [NJ, dJ]);
-      const MJ = Jd ? dJ ? null : null !== wd && void 0 !== wd ? wd : vd.h : IJ.c,
-        FJ = kJ(LJ, MJ);
-      WJ(LJ, Ld), (0, Bd.h)("FormatCode", (() => {
-        if (!gJ || !LJ.current || dJ) return;
+        YF.current = null, AF.current = null, LF(null)
+      })), [LF, dQ]);
+      const RF = FQ ? dQ ? null : null !== yQ && void 0 !== yQ ? yQ : pQ.i : eF.e,
+        OF = FF(YF, RF);
+      qF(YF, xQ), (0, SQ.g)("FormatCode", (() => {
+        if (!kF || !YF.current || dQ) return;
         const {
-          yO: dd,
-          fsMap: kd
-        } = gJ, pd = dd.getSourceFile(aJ).getFullText();
-        let Nd = 0;
-        if (Jd && Hd)
-          for (const [Jd, Zd] of Object.entries(Hd)) Jd !== (null !== wd && void 0 !== wd ? wd : vd.h) && (Nd += Zd.length);
-        const Wd = function(dd, Jd, kd, pd, Nd) {
-          const Wd = dd.languageService.getFormattingEditsForDocument(pd, cJ);
-          if (!Wd.length) return ad.b.error("Code is already formatted.");
-          Wd.sort(((dd, Jd) => Jd.span.start - dd.span.start));
-          let Pd = dd.getSourceFile(pd).getFullText();
-          for (const Zd of Wd) Pd = Pd.slice(0, Zd.span.start) + Zd.ZK + Pd.slice(Zd.span.start + Zd.span.length);
-          return Pd !== (kd ? (0, qd.l)(Pd, Nd) : (0, qd.i)(Pd)) ? ad.b.error("Formatting the code will go beyond the character limit.") : ad.b.value(Pd)
-        }(dd, 0, Jd, aJ, Nd);
-        if (Wd.isError()) return void Ld({
-          message: Wd.asError().message,
+          ZA: QQ,
+          fsMap: wQ
+        } = kF, LQ = QQ.getSourceFile(WF).getFullText();
+        let qQ = 0;
+        if (FQ && ZQ)
+          for (const [FQ, kQ] of Object.entries(ZQ)) FQ !== (null !== yQ && void 0 !== yQ ? yQ : pQ.i) && (qQ += kQ.length);
+        const oQ = function(QQ, FQ, wQ, LQ, qQ) {
+          const oQ = QQ.languageService.getFormattingEditsForDocument(LQ, VF);
+          if (!oQ.length) return WQ.d.error("Code is already formatted.");
+          oQ.sort(((QQ, FQ) => FQ.span.start - QQ.span.start));
+          let DQ = QQ.getSourceFile(LQ).getFullText();
+          for (const kQ of oQ) DQ = DQ.slice(0, kQ.span.start) + kQ.tu + DQ.slice(kQ.span.start + kQ.span.length);
+          return DQ !== (wQ ? (0, CQ.l)(DQ, qQ) : (0, CQ.i)(DQ)) ? WQ.d.error("Formatting the code will go beyond the character limit.") : WQ.d.value(DQ)
+        }(QQ, 0, FQ, WF, qQ);
+        if (oQ.isError()) return void xQ({
+          message: oQ.asError().message,
           type: "warning"
         });
-        const Pd = Wd.getValue();
-        Pd && (LJ.current.dispatch({
+        const DQ = oQ.getValue();
+        DQ && (YF.current.dispatch({
           changes: {
             from: 0,
-            to: pd.length,
-            insert: Pd
+            to: LQ.length,
+            insert: DQ
           },
           selection: {
-            anchor: Pd.length
+            anchor: DQ.length
           }
-        }), fJ(dd, aJ, Pd), Zd(Pd))
+        }), KF(QQ, WF, DQ), kQ(DQ))
       }));
-      const YJ = (0, Pd.useMemo)((() => {
-        if (!gJ) return [];
+      const sF = (0, DQ.useMemo)((() => {
+        if (!kF) return [];
         const {
-          yO: dd,
-          fsMap: kd
-        } = gJ;
-        ! function(dd, Jd, kd, pd) {
-          if (dd.getSourceFile(kd)) return;
-          const Nd = pd || "\n";
-          Jd.set(kd, Nd), dd.createFile(kd, Nd)
-        }(dd, kd, aJ, (dJ ? iJ.current : qJ.current) || "\n");
-        const Pd = Jd && nJ(dJ ? null !== JJ && void 0 !== JJ ? JJ : "index.ts" : wd),
-          Zd = [(0, Nd.d)({
+          ZA: QQ,
+          fsMap: wQ
+        } = kF;
+        ! function(QQ, FQ, wQ, LQ) {
+          if (QQ.getSourceFile(wQ)) return;
+          const qQ = LQ || "\n";
+          FQ.set(wQ, qQ), QQ.createFile(wQ, qQ)
+        }(QQ, wQ, WF, (dQ ? iF.current : cF.current) || "\n");
+        const DQ = FQ && zF(dQ ? null !== QF && void 0 !== QF ? QF : "index.ts" : yQ),
+          kQ = [(0, qQ.c)({
             jsx: !1,
-            typescript: Pd
-          }), Wd.d.highest(Wd.b.domEventHandlers({
-            keydown: dd => "Escape" === dd.key ? (xJ.current(), dd.stopPropagation(), !0) : (dd.stopPropagation(), !1)
-          })), (0, pd.c)({
-            override: [yJ(dd, aJ)]
-          }), Yd.p.fromClass(class {
-            constructor(dd) {
-              this.view = dd, this.timeout = null, this.scheduleParse()
+            typescript: DQ
+          }), oQ.g.highest(oQ.d.domEventHandlers({
+            keydown: QQ => "Escape" === QQ.key ? (pF.current(), QQ.stopPropagation(), !0) : (QQ.stopPropagation(), !1)
+          })), (0, LQ.c)({
+            override: [jF(QQ, WF)]
+          }), sQ.h.fromClass(class {
+            constructor(QQ) {
+              this.view = QQ, this.timeout = null, this.scheduleParse()
             }
-            update(dd) {
-              (dd.docChanged || dd.viewportChanged) && this.scheduleParse()
+            update(QQ) {
+              (QQ.docChanged || QQ.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const dd = this.view.viewport.to;
-                (0, Ud.eb)(this.view.state, dd) || (0, Ud.J)(this.view, dd, yd) || this.scheduleParse()
-              }), Dd))
+                const QQ = this.view.viewport.to;
+                (0, lQ.kb)(this.view.state, QQ) || (0, lQ.O)(this.view, QQ, jQ) || this.scheduleParse()
+              }), aQ))
             }
-          }), ...Ad, Wd.b.lineWrapping, Wd.i.define({
-            create: TJ(dd, rd, aJ),
-            update(Jd, kd) {
-              const pd = kd.effects.some((dd => dd.is(hJ)));
-              return kd.docChanged || kd.selection || pd ? (fJ(dd, aJ, kd.state.doc.toString() || " "), TJ(dd, rd, aJ)(kd.state)) : Jd
+          }), ...BQ, oQ.d.lineWrapping, oQ.l.define({
+            create: XF(QQ, JQ, WF),
+            update(FQ, wQ) {
+              const LQ = wQ.effects.some((QQ => QQ.is(hF)));
+              return wQ.docChanged || wQ.selection || LQ ? (KF(QQ, WF, wQ.state.doc.toString() || " "), XF(QQ, JQ, WF)(wQ.state)) : FQ
             },
-            provide: dd => Wd.v.computeN([dd], (Jd => Jd.field(dd)))
-          }), (0, Wd.u)(EJ(dd, aJ)), (0, Rd.g)(UJ(Jd, dd, aJ)), Wd.m.fromClass(class {
-            constructor(dd) {
-              this.view = dd, this.searchPanel = null
+            provide: QQ => oQ.w.computeN([QQ], (FQ => FQ.field(QQ)))
+          }), (0, oQ.u)(fF(QQ, WF)), (0, eQ.g)(lF(FQ, QQ, WF)), oQ.n.fromClass(class {
+            constructor(QQ) {
+              this.view = QQ, this.searchPanel = null
             }
-            update(dd) {
-              const Jd = dd.view.dom.querySelector(".cm-search");
-              if (Jd !== this.searchPanel) {
-                if (this.searchPanel = Jd, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (dd => {
-                  "Escape" === dd.key && (0, ed.d)(this.view), dd.stopPropagation()
+            update(QQ) {
+              const FQ = QQ.view.dom.querySelector(".cm-search");
+              if (FQ !== this.searchPanel) {
+                if (this.searchPanel = FQ, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (QQ => {
+                  "Escape" === QQ.key && (0, tQ.e)(this.view), QQ.stopPropagation()
                 }))
               }
             }
           })];
-        PJ && !dJ && Zd.push(BJ(Jd ? null !== wd && void 0 !== wd ? wd : vd.h : IJ.c, ZJ));
-        const gd = OJ.current;
-        if (gd && !dJ) {
-          Zd.push(... function(dd, Jd, kd, pd, Nd) {
-            let Wd = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const Pd = (0, xd.v)(kd),
-              Zd = Yd.p.fromClass(class {
-                constructor(dd) {
-                  this.view = dd, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = Sd.j.subscribe("codeCollab", (dd => {
-                    dd.docKey === Pd && dd.type === xd.d.Updates && (dd.updates ? this.applyUpdates(dd.updates) : this.pull())
+        oF && !dQ && kQ.push(CF(FQ ? null !== yQ && void 0 !== yQ ? yQ : pQ.i : eF.e, DF));
+        const vQ = xF.current;
+        if (vQ && !dQ) {
+          kQ.push(... function(QQ, FQ, wQ, LQ, qQ) {
+            let oQ = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const DQ = (0, cQ.w)(wQ),
+              kQ = sQ.h.fromClass(class {
+                constructor(QQ) {
+                  this.view = QQ, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = UQ.l.subscribe("codeCollab", (QQ => {
+                    QQ.docKey === DQ && QQ.type === cQ.h.Updates && (QQ.updates ? this.applyUpdates(QQ.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(dd) {
-                  const Jd = JSON.parse(dd).map((dd => ({
-                    clientID: dd.clientID,
-                    changes: Fd.ChangeSet.fromJSON(dd.changes)
+                applyUpdates(QQ) {
+                  const FQ = JSON.parse(QQ).map((QQ => ({
+                    clientID: QQ.clientID,
+                    changes: OQ.ChangeSet.fromJSON(QQ.changes)
                   })));
-                  Jd.length > 0 && (this.view.dispatch((0, Md.g)(this.view.state, Jd)), Nd && Nd(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  FQ.length > 0 && (this.view.dispatch((0, RQ.d)(this.view.state, FQ)), qQ && qQ(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(dd) {
-                  Wd && (dd.docChanged && this.push(), this.sendCursor())
+                update(QQ) {
+                  oQ && (QQ.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const dd = (0, Md.h)(this.view.state);
-                  if (this.pushing || !dd.length) return;
-                  const Jd = Date.now() - this.lastPushTime;
-                  if (Jd < nd) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const QQ = (0, RQ.h)(this.view.state);
+                  if (this.pushing || !QQ.length) return;
+                  const FQ = Date.now() - this.lastPushTime;
+                  if (FQ < zQ) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), nd - Jd)));
+                  }), zQ - FQ)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), Xd);
-                  const kd = (0, Md.f)(this.view.state),
-                    Nd = dd.map((dd => ({
-                      clientID: dd.clientID,
-                      changes: dd.changes.toJSON()
+                  }), TQ);
+                  const wQ = (0, RQ.c)(this.view.state),
+                    qQ = QQ.map((QQ => ({
+                      clientID: QQ.clientID,
+                      changes: QQ.changes.toJSON()
                     }))),
-                    Wd = JSON.stringify(Nd);
-                  Wd.length <= xd.e ? md.gameBridge.send("sendCodeCollab", {
-                    SJ: xd.c.Push,
-                    jJ: Pd,
-                    XJ: kd,
-                    UJ: Wd
-                  }) : (0, jd.postJsonWithMetricsCookiesAndJsonResponse)(`${pd.gsUrl}/code/collab-push`, bd.r["collab-push"].toBuffer({
-                    gameNameWithVariation: pd.gameNameWithVariation,
-                    lobbyName: pd.lobbyName,
-                    docKey: Pd,
-                    version: kd,
-                    updates: Wd
+                    oQ = JSON.stringify(qQ);
+                  oQ.length <= cQ.k ? rQ.gameBridge.send("sendCodeCollab", {
+                    RF: cQ.d.Push,
+                    OF: DQ,
+                    sF: wQ,
+                    UF: oQ
+                  }) : (0, NQ.postJsonWithMetricsCookiesAndJsonResponse)(`${LQ.gsUrl}/code/collab-push`, IQ.m["collab-push"].toBuffer({
+                    gameNameWithVariation: LQ.gameNameWithVariation,
+                    lobbyName: LQ.lobbyName,
+                    docKey: DQ,
+                    version: wQ,
+                    updates: oQ
                   }), {
                     retries: 0
-                  }).catch((dd => {
-                    console.error("[CodeCollab] HTTP push failed", dd)
+                  }).catch((QQ => {
+                    console.error("[CodeCollab] HTTP push failed", QQ)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const dd = (0, Md.f)(this.view.state);
-                  (0, jd.postJsonWithMetricsCookiesAndJsonResponse)(`${pd.gsUrl}/code/collab-pull`, bd.r["collab-pull"].toBuffer({
-                    gameNameWithVariation: pd.gameNameWithVariation,
-                    lobbyName: pd.lobbyName,
-                    docKey: Pd,
-                    fromVersion: dd
+                  const QQ = (0, RQ.c)(this.view.state);
+                  (0, NQ.postJsonWithMetricsCookiesAndJsonResponse)(`${LQ.gsUrl}/code/collab-pull`, IQ.m["collab-pull"].toBuffer({
+                    gameNameWithVariation: LQ.gameNameWithVariation,
+                    lobbyName: LQ.lobbyName,
+                    docKey: DQ,
+                    fromVersion: QQ
                   }), {
                     retries: 1
-                  }).then((dd => {
-                    this.destroyed || (dd.fullDoc ? Sd.j.nO("codeCollabRejoin", {
-                      docKey: Pd,
-                      doc: dd.fullDoc,
-                      version: dd.version
-                    }) : this.applyUpdates(dd.updates))
-                  })).catch((dd => {
-                    console.error("[CodeCollab] Pull failed", dd)
+                  }).then((QQ => {
+                    this.destroyed || (QQ.fullDoc ? UQ.l.GA("codeCollabRejoin", {
+                      docKey: DQ,
+                      doc: QQ.fullDoc,
+                      version: QQ.version
+                    }) : this.applyUpdates(QQ.updates))
+                  })).catch((QQ => {
+                    console.error("[CodeCollab] Pull failed", QQ)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const dd = Date.now();
-                  if (dd - this.lastCursorSent < fd) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const QQ = Date.now();
+                  if (QQ - this.lastCursorSent < KQ) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), fd)));
-                  this.lastCursorSent = dd;
-                  const Jd = this.view.state.selection.main;
-                  md.gameBridge.send("sendCodeCollab", {
-                    SJ: xd.c.Cursor,
-                    jJ: Pd,
-                    EJ: Jd.anchor,
-                    cJ: Jd.head
+                  }), KQ)));
+                  this.lastCursorSent = QQ;
+                  const FQ = this.view.state.selection.main;
+                  rQ.gameBridge.send("sendCodeCollab", {
+                    RF: cQ.d.Cursor,
+                    OF: DQ,
+                    zF: FQ.anchor,
+                    lF: FQ.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, Sd.j.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, UQ.l.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, Md.e)({
-              startVersion: dd,
-              clientID: Jd
-            }), Zd]
-          }(KJ, oJ, gd.docKey, gd.httpConfig, (dd => {
-            var Jd;
-            null === (Jd = QJ.current) || void 0 === Jd || Jd.call(QJ, dd)
-          }), ld));
-          const dd = function(dd, Jd) {
-            const kd = (0, xd.v)(dd);
+            return [(0, RQ.b)({
+              startVersion: QQ,
+              clientID: FQ
+            }), kQ]
+          }(mF, uF, vQ.docKey, vQ.httpConfig, (QQ => {
+            var FQ;
+            null === (FQ = bF.current) || void 0 === FQ || FQ.call(bF, QQ)
+          }), bQ));
+          const QQ = function(QQ, FQ) {
+            const wQ = (0, cQ.w)(QQ);
             return {
-              extensions: [td],
-              connect(dd) {
-                if (Jd) {
-                  const kd = Jd.map((dd => Ed.of({
-                    playerId: dd.playerId,
-                    playerName: dd.playerName,
-                    colour: dd.colour,
-                    anchor: dd.anchor,
-                    head: dd.head,
+              extensions: [nQ],
+              connect(QQ) {
+                if (FQ) {
+                  const wQ = FQ.map((QQ => fQ.of({
+                    playerId: QQ.playerId,
+                    playerName: QQ.playerName,
+                    colour: QQ.colour,
+                    anchor: QQ.anchor,
+                    head: QQ.head,
                     lastMoved: Date.now()
                   })));
-                  kd.length > 0 && dd.dispatch({
-                    effects: kd
+                  wQ.length > 0 && QQ.dispatch({
+                    effects: wQ
                   })
                 }
-                const pd = Sd.j.subscribe("codeCollab", (Jd => {
-                    if (Jd.docKey === kd)
-                      if (Jd.type === xd.d.RemoteCursor) dd.dispatch({
-                        effects: Ed.of({
-                          playerId: Jd.playerId,
-                          playerName: Jd.playerName,
-                          colour: Jd.colour,
-                          anchor: Jd.anchor,
-                          head: Jd.head,
+                const LQ = UQ.l.subscribe("codeCollab", (FQ => {
+                    if (FQ.docKey === wQ)
+                      if (FQ.type === cQ.h.RemoteCursor) QQ.dispatch({
+                        effects: fQ.of({
+                          playerId: FQ.playerId,
+                          playerName: FQ.playerName,
+                          colour: FQ.colour,
+                          anchor: FQ.anchor,
+                          head: FQ.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (Jd.type === xd.d.Presence) {
-                      const kd = JSON.parse(Jd.peers),
-                        pd = new Set(kd.map((dd => dd.playerId))),
-                        Nd = dd.state.field(td),
-                        Wd = [];
-                      for (const [dd] of Nd.cursors) pd.has(dd) || Wd.push(cd.of(dd));
-                      Wd.length > 0 && dd.dispatch({
-                        effects: Wd
+                      else if (FQ.type === cQ.h.Presence) {
+                      const wQ = JSON.parse(FQ.peers),
+                        LQ = new Set(wQ.map((QQ => QQ.playerId))),
+                        qQ = QQ.state.field(nQ),
+                        oQ = [];
+                      for (const [QQ] of qQ.cursors) LQ.has(QQ) || oQ.push(VQ.of(QQ));
+                      oQ.length > 0 && QQ.dispatch({
+                        effects: oQ
                       })
                     }
                   })),
-                  Nd = setInterval((() => {
-                    dd.dom.isConnected ? dd.dispatch({
-                      effects: hd.of(Date.now())
-                    }) : clearInterval(Nd)
-                  }), Td);
+                  qQ = setInterval((() => {
+                    QQ.dom.isConnected ? QQ.dispatch({
+                      effects: hQ.of(Date.now())
+                    }) : clearInterval(qQ)
+                  }), XQ);
                 return () => {
-                  Sd.j.unsubscribe(pd), clearInterval(Nd)
+                  UQ.l.unsubscribe(LQ), clearInterval(qQ)
                 }
               }
             }
-          }(gd.docKey, gd.existingCursors);
-          Zd.push(...dd.extensions), vJ.current = dd.connect
-        } else vJ.current = null;
-        return Zd
-      }), [Jd, gJ, rd, KJ, oJ, aJ, wd, dJ, JJ, ld, PJ, ZJ]);
-      if (!gJ || !Vd && !dJ) return (0, sJ.jsx)("div", {
+          }(vQ.docKey, vQ.existingCursors);
+          kQ.push(...QQ.extensions), GF.current = QQ.connect
+        } else GF.current = null;
+        return kQ
+      }), [FQ, kF, JQ, mF, uF, WF, yQ, dQ, QF, bQ, oF, DF]);
+      if (!kF || !gQ && !dQ) return (0, SF.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, sJ.jsx)(Id.b, {})
+        children: (0, SF.jsx)(MQ.c, {})
       });
-      const mJ = dJ ? `plugin-${dJ}-${null!==JJ&&void 0!==JJ?JJ:"index.ts"}` : Vd ? `collab-${Vd.clientID}` : `local-${Jd}`;
-      return (0, sJ.jsx)(Wd.q, {
-        value: dJ ? null !== pJ && void 0 !== pJ ? pJ : "" : kd,
-        onChange: Zd,
-        extensions: YJ,
+      const rF = dQ ? `plugin-${dQ}-${null!==QF&&void 0!==QF?QF:"index.ts"}` : gQ ? `collab-${gQ.clientID}` : `local-${FQ}`;
+      return (0, SF.jsx)(oQ.q, {
+        value: dQ ? null !== wF && void 0 !== wF ? wF : "" : wQ,
+        onChange: kQ,
+        extensions: sF,
         className: "CodeEditorContent",
-        theme: ud ? RJ : "dark",
-        editable: ld && !dJ,
-        basicSetup: rJ,
-        onCreateEditor: dd => {
-          var Jd;
-          LJ.current = dd, eJ.current = null !== (Jd = null === Vd || void 0 === Vd ? void 0 : Vd.clientID) && void 0 !== Jd ? Jd : null, FJ(dd), GJ.current && GJ.current(), vJ.current && (GJ.current = vJ.current(dd))
+        theme: EQ ? tF : "dark",
+        editable: bQ && !dQ,
+        basicSetup: JF,
+        onCreateEditor: QQ => {
+          var FQ;
+          YF.current = QQ, AF.current = null !== (FQ = null === gQ || void 0 === gQ ? void 0 : gQ.clientID) && void 0 !== FQ ? FQ : null, OF(QQ), MF.current && MF.current(), GF.current && (MF.current = GF.current(QQ))
         }
-      }, mJ)
+      }, rF)
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

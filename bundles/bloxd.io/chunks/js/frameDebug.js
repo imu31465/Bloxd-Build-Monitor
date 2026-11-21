@@ -1,68 +1,68 @@
 export const id = 33;
 export const ids = [33];
 export const modules = {
-  9098: (dd, Jd, kd) => {
-    function pd(dd, Jd) {
-      return 0 === dd.length ? 0 : dd[Math.min(dd.length - 1, Math.floor(Jd * dd.length))]
+  8968: (QQ, FQ, wQ) => {
+    function LQ(QQ, FQ) {
+      return 0 === QQ.length ? 0 : QQ[Math.min(QQ.length - 1, Math.floor(FQ * QQ.length))]
     }
 
-    function Nd(dd) {
-      return dd.toFixed(1)
+    function qQ(QQ) {
+      return QQ.toFixed(1)
     }
-    kd.d(Jd, {
-      c: () => Nd,
-      e: () => pd
+    wQ.d(FQ, {
+      c: () => qQ,
+      g: () => LQ
     })
   },
-  9094: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      FIRST_SUMMARIES_FOR_MS: () => Od,
-      FIRST_SUMMARY_MS: () => Ld,
-      FrameDebugLog: () => Bd,
-      OUTLIER_BURST: () => Rd,
-      OUTLIER_MS: () => ed,
-      OUTLIER_REFILL_MS: () => Id,
-      SUMMARY_MS: () => Qd,
-      startFrameDebug: () => ad
+  8960: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      FIRST_SUMMARIES_FOR_MS: () => AQ,
+      FIRST_SUMMARY_MS: () => xQ,
+      FrameDebugLog: () => SQ,
+      OUTLIER_BURST: () => eQ,
+      OUTLIER_MS: () => tQ,
+      OUTLIER_REFILL_MS: () => MQ,
+      SUMMARY_MS: () => YQ,
+      startFrameDebug: () => WQ
     });
-    var pd = kd(4688),
-      Nd = kd(4673),
-      Wd = kd(9098),
-      Pd = kd(2704),
-      Zd = kd(1093),
-      gd = kd(2834);
-    class Cd {
+    var LQ = wQ(4638),
+      qQ = wQ(4626),
+      oQ = wQ(8968),
+      DQ = wQ(2753),
+      kQ = wQ(1095),
+      vQ = wQ(2883);
+    class mQ {
       constructor() {
-        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = dd => {
-          const Jd = dd;
-          this.add(Jd.startTime, Jd.duration, Jd.blockingDuration, (0, Zd.p)(Jd))
-        }, this.onLongTask = dd => {
-          this.add(dd.startTime, dd.duration, 0, 0)
-        }, null !== (0, gd.e)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, gd.e)("longtask", this.onLongTask) ? "longtask" : null
+        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = QQ => {
+          const FQ = QQ;
+          this.add(FQ.startTime, FQ.duration, FQ.blockingDuration, (0, kQ.o)(FQ))
+        }, this.onLongTask = QQ => {
+          this.add(QQ.startTime, QQ.duration, 0, 0)
+        }, null !== (0, vQ.c)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, vQ.c)("longtask", this.onLongTask) ? "longtask" : null
       }
-      add(dd, Jd, kd, pd) {
-        this.entries.set([dd, Jd, kd, pd], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
+      add(QQ, FQ, wQ, LQ) {
+        this.entries.set([QQ, FQ, wQ, LQ], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
       }
-      describe(dd, Jd) {
+      describe(QQ, FQ) {
         if (null === this.kind) return "long tasks n/a";
-        let kd = 0,
-          pd = 0,
-          Nd = 0,
-          Wd = 0;
-        for (let Zd = 0; Zd < this.size; Zd++) {
-          const Pd = 4 * Zd,
-            gd = this.entries[Pd] + this.entries[Pd + 1];
-          gd > dd && gd <= Jd + 2 && (kd++, pd += this.entries[Pd + 1], Nd += this.entries[Pd + 2], Wd += this.entries[Pd + 3])
+        let wQ = 0,
+          LQ = 0,
+          qQ = 0,
+          oQ = 0;
+        for (let kQ = 0; kQ < this.size; kQ++) {
+          const DQ = 4 * kQ,
+            vQ = this.entries[DQ] + this.entries[DQ + 1];
+          vQ > QQ && vQ <= FQ + 2 && (wQ++, LQ += this.entries[DQ + 1], qQ += this.entries[DQ + 2], oQ += this.entries[DQ + 3])
         }
-        const Pd = "loaf" === this.kind && kd > 0 ? ` (blocking ${Nd.toFixed(0)}, script ${Wd.toFixed(0)})` : "";
-        return `${kd} ${this.kind} ${pd.toFixed(0)} ms${Pd}`
+        const DQ = "loaf" === this.kind && wQ > 0 ? ` (blocking ${qQ.toFixed(0)}, script ${oQ.toFixed(0)})` : "";
+        return `${wQ} ${this.kind} ${LQ.toFixed(0)} ms${DQ}`
       }
     }
 
-    function Kd(dd, Jd) {
-      return Jd < 0 || dd < Jd ? dd : dd - Jd
+    function uQ(QQ, FQ) {
+      return FQ < 0 || QQ < FQ ? QQ : QQ - FQ
     }
-    class od {
+    class HQ {
       constructor() {
         this.source = null, this.now = {
           chunksReceived: -1,
@@ -84,10 +84,10 @@ export const modules = {
           workersRetired: -1
         }, this.lastMs = 0, this.visibilityChanges = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      setSource(dd) {
-        this.source = dd
+      setSource(QQ) {
+        this.source = QQ
       }
-      start(dd) {
+      start(QQ) {
         this.before = {
           chunksReceived: -1,
           chunksCancelled: -1,
@@ -97,120 +97,120 @@ export const modules = {
           jobsInFlight: -1,
           workersLive: -1,
           workersRetired: -1
-        }, this.lastMs = dd
+        }, this.lastMs = QQ
       }
-      visibilityChanged(dd) {
-        this.visibilityChanges++, document.hidden ? this.hiddenSinceMs = dd : this.hiddenSinceMs >= 0 && (this.hiddenMs += dd - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      visibilityChanged(QQ) {
+        this.visibilityChanges++, document.hidden ? this.hiddenSinceMs = QQ : this.hiddenSinceMs >= 0 && (this.hiddenMs += QQ - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      take(dd) {
-        var Jd;
-        const kd = [];
-        if (!0 === (null === (Jd = this.source) || void 0 === Jd ? void 0 : Jd.call(this, this.now)) && (pd = this.now, Nd = this.before, pd.chunksReceived !== Nd.chunksReceived || pd.chunksCancelled !== Nd.chunksCancelled || pd.chunksStored !== Nd.chunksStored || pd.jobsSent !== Nd.jobsSent || pd.jobsDone !== Nd.jobsDone || pd.jobsInFlight !== Nd.jobsInFlight || pd.workersLive !== Nd.workersLive || pd.workersRetired !== Nd.workersRetired)) {
-          kd.push(function(dd, Jd) {
-            const kd = [`chunks +${Kd(dd.chunksReceived,Jd.chunksReceived)} got`, `+${Kd(dd.chunksCancelled,Jd.chunksCancelled)} cancelled`];
-            dd.chunksStored >= 0 && kd.push(`${dd.chunksStored} stored`);
-            const pd = `jobs +${Kd(dd.jobsSent,Jd.jobsSent)} sent, +${Kd(dd.jobsDone,Jd.jobsDone)} done, ${dd.jobsInFlight} in flight`;
-            return `${kd.join(", ")}; ${pd}; workers ${dd.workersLive} live, ${dd.workersRetired} retired`
+      take(QQ) {
+        var FQ;
+        const wQ = [];
+        if (!0 === (null === (FQ = this.source) || void 0 === FQ ? void 0 : FQ.call(this, this.now)) && (LQ = this.now, qQ = this.before, LQ.chunksReceived !== qQ.chunksReceived || LQ.chunksCancelled !== qQ.chunksCancelled || LQ.chunksStored !== qQ.chunksStored || LQ.jobsSent !== qQ.jobsSent || LQ.jobsDone !== qQ.jobsDone || LQ.jobsInFlight !== qQ.jobsInFlight || LQ.workersLive !== qQ.workersLive || LQ.workersRetired !== qQ.workersRetired)) {
+          wQ.push(function(QQ, FQ) {
+            const wQ = [`chunks +${uQ(QQ.chunksReceived,FQ.chunksReceived)} got`, `+${uQ(QQ.chunksCancelled,FQ.chunksCancelled)} cancelled`];
+            QQ.chunksStored >= 0 && wQ.push(`${QQ.chunksStored} stored`);
+            const LQ = `jobs +${uQ(QQ.jobsSent,FQ.jobsSent)} sent, +${uQ(QQ.jobsDone,FQ.jobsDone)} done, ${QQ.jobsInFlight} in flight`;
+            return `${wQ.join(", ")}; ${LQ}; workers ${QQ.workersLive} live, ${QQ.workersRetired} retired`
           }(this.now, this.before));
-          const dd = this.before;
-          this.before = this.now, this.now = dd
+          const QQ = this.before;
+          this.before = this.now, this.now = QQ
         }
-        var pd, Nd;
-        if (this.hiddenSinceMs >= 0 && (this.hiddenMs += dd - this.hiddenSinceMs, this.hiddenSinceMs = dd), (this.visibilityChanges > 0 || this.hiddenMs > 0) && (kd.push(`hidden ${this.visibilityChanges} changes, ${Math.round(this.hiddenMs)} ms`), this.visibilityChanges = 0, this.hiddenMs = 0), 0 === kd.length) return null;
-        const Wd = `load ${Math.round((dd-this.lastMs)/1e3)}s: ${kd.join("; ")}`;
-        return this.lastMs = dd, Wd
+        var LQ, qQ;
+        if (this.hiddenSinceMs >= 0 && (this.hiddenMs += QQ - this.hiddenSinceMs, this.hiddenSinceMs = QQ), (this.visibilityChanges > 0 || this.hiddenMs > 0) && (wQ.push(`hidden ${this.visibilityChanges} changes, ${Math.round(this.hiddenMs)} ms`), this.visibilityChanges = 0, this.hiddenMs = 0), 0 === wQ.length) return null;
+        const oQ = `load ${Math.round((QQ-this.lastMs)/1e3)}s: ${wQ.join("; ")}`;
+        return this.lastMs = QQ, oQ
       }
     }
-    class ld {
+    class bQ {
       constructor() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.run = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
       drawn() {
         this.run = 0
       }
-      add(dd, Jd, kd) {
-        this.count++, "paced" === dd ? this.paced++ : "skipped" === dd && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = Jd, this.longestAhead = kd)
+      add(QQ, FQ, wQ) {
+        this.count++, "paced" === QQ ? this.paced++ : "skipped" === QQ && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = FQ, this.longestAhead = wQ)
       }
       describe() {
         if (0 === this.count) return "0 undrawn";
-        const dd = this.count - this.paced - this.skipped;
-        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${dd} other, longest ${this.longest} in ${(0,Wd.c)(this.longestMs)} ms at ${this.longestAhead} ahead`
+        const QQ = this.count - this.paced - this.skipped;
+        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${QQ} other, longest ${this.longest} in ${(0,oQ.c)(this.longestMs)} ms at ${this.longestAhead} ahead`
       }
       reset() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
     }
-    const Qd = 2e4,
-      Ld = 5e3,
-      Od = 6e4,
-      ed = 250,
-      Rd = 10,
-      Id = 6e4,
-      Gd = 8192;
+    const YQ = 2e4,
+      xQ = 5e3,
+      AQ = 6e4,
+      tQ = 250,
+      eQ = 10,
+      MQ = 6e4,
+      GQ = 8192;
 
-    function vd(dd) {
-      return dd.mainMs = 0, dd.renderMs = 0, dd.ticks = 0, dd.tickMs = 0, dd.rafs = 0, dd.pendingBefore = -1, dd.pendingMax = -1, dd.pendingAfter = -1, dd
+    function pQ(QQ) {
+      return QQ.mainMs = 0, QQ.renderMs = 0, QQ.ticks = 0, QQ.tickMs = 0, QQ.rafs = 0, QQ.pendingBefore = -1, QQ.pendingMax = -1, QQ.pendingAfter = -1, QQ
     }
 
-    function xd() {
-      return vd({})
+    function cQ() {
+      return pQ({})
     }
-    class qd {
+    class CQ {
       constructor() {
-        this.intervals = new Float64Array(Gd), this.totals = xd(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new ld, this.shown = 0, this.dropped = 0
+        this.intervals = new Float64Array(GQ), this.totals = cQ(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new bQ, this.shown = 0, this.dropped = 0
       }
       reset() {
-        vd(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
+        pQ(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
       }
     }
-    class Bd {
+    class SQ {
       constructor() {
-        this.longTasks = new Cd, this.summary = new qd, this.current = xd(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = Rd, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new od, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
+        this.longTasks = new mQ, this.summary = new CQ, this.current = cQ(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = eQ, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new HQ, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
           this.restart(), this.loadLine.visibilityChanged(performance.now())
         }, this.restart = () => {
           this.lastDrawnStartMs = -1
         }, this.animationFrame = () => {
           this.current.rafs++
-        }, this.wasmFrame = (dd, Jd, kd, Nd, Wd, Pd) => {
-          this.ahead = dd.headerWord(pd.B.Pacing) & pd.X.AheadMask, this.frame(Jd, kd, Nd, Wd, dd.headerWord(pd.B.RenderUs) / 1e3, dd.headerWord(pd.B.TicksRun), Pd, dd.headerWord(pd.B.RenderPending))
-        }, this.wasmPeekPaced = dd => {
-          const Jd = performance.now();
-          this.frame(Jd, Jd, "paced", dd, 0, 0, 0, this.lastPending)
-        }, this.jsFrame = (dd, Jd, kd) => {
-          this.frame(dd, Jd, "drawn", kd, Jd - dd, 0, 0, -1)
-        }, this.jsTick = dd => {
-          this.current.mainMs += dd, this.current.ticks++, this.current.tickMs += dd
+        }, this.wasmFrame = (QQ, FQ, wQ, qQ, oQ, DQ) => {
+          this.ahead = QQ.headerWord(LQ.F.Pacing) & LQ.ab.AheadMask, this.frame(FQ, wQ, qQ, oQ, QQ.headerWord(LQ.F.RenderUs) / 1e3, QQ.headerWord(LQ.F.TicksRun), DQ, QQ.headerWord(LQ.F.RenderPending))
+        }, this.wasmPeekPaced = QQ => {
+          const FQ = performance.now();
+          this.frame(FQ, FQ, "paced", QQ, 0, 0, 0, this.lastPending)
+        }, this.jsFrame = (QQ, FQ, wQ) => {
+          this.frame(QQ, FQ, "drawn", wQ, FQ - QQ, 0, 0, -1)
+        }, this.jsTick = QQ => {
+          this.current.mainMs += QQ, this.current.ticks++, this.current.tickMs += QQ
         }, this.logOutliers = () => {
           this.outlierTimer = null;
-          const dd = performance.now();
-          let Jd = 0;
-          for (const kd of this.waiting) {
-            if (kd.dueMs > dd) {
-              this.waiting[Jd++] = kd;
+          const QQ = performance.now();
+          let FQ = 0;
+          for (const wQ of this.waiting) {
+            if (wQ.dueMs > QQ) {
+              this.waiting[FQ++] = wQ;
               continue
             }
-            const pd = [`long frame ${(0,Wd.c)(kd.intervalMs)} ms ending at ${(0,Wd.c)(kd.endMs)} ms: main ${(0,Wd.c)(kd.mainMs)} (render ${(0,Wd.c)(kd.renderMs)}, ${kd.ticks} ticks ${(0,Wd.c)(kd.tickMs)}), outside ${(0,Wd.c)(kd.intervalMs-kd.mainMs)}`, `${kd.rafs} rafs`];
-            kd.pendingBefore >= 0 && pd.push(`pending ${kd.pendingBefore} -> ${kd.pendingAfter} (max ${kd.pendingMax})`), pd.push(this.longTasks.describe(kd.endMs - kd.intervalMs, kd.endMs)), (0, Pd.h)("frame", pd.join("; "))
+            const LQ = [`long frame ${(0,oQ.c)(wQ.intervalMs)} ms ending at ${(0,oQ.c)(wQ.endMs)} ms: main ${(0,oQ.c)(wQ.mainMs)} (render ${(0,oQ.c)(wQ.renderMs)}, ${wQ.ticks} ticks ${(0,oQ.c)(wQ.tickMs)}), outside ${(0,oQ.c)(wQ.intervalMs-wQ.mainMs)}`, `${wQ.rafs} rafs`];
+            wQ.pendingBefore >= 0 && LQ.push(`pending ${wQ.pendingBefore} -> ${wQ.pendingAfter} (max ${wQ.pendingMax})`), LQ.push(this.longTasks.describe(wQ.endMs - wQ.intervalMs, wQ.endMs)), (0, DQ.m)("frame", LQ.join("; "))
           }
-          this.waiting.length = Jd, Jd > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - dd))
+          this.waiting.length = FQ, FQ > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - QQ))
         }, this.flush = () => {
           this.flushTimer = null;
-          const dd = performance.now(),
-            Jd = Math.round((dd - this.lastFlushMs) / 1e3);
-          this.lastFlushMs = dd, this.scheduleFlush();
-          if (this.logSummary(Jd) || this.inGameSinceFlush) {
-            const Jd = this.loadLine.take(dd);
-            null !== Jd && (0, Pd.h)("frame", Jd)
+          const QQ = performance.now(),
+            FQ = Math.round((QQ - this.lastFlushMs) / 1e3);
+          this.lastFlushMs = QQ, this.scheduleFlush();
+          if (this.logSummary(FQ) || this.inGameSinceFlush) {
+            const FQ = this.loadLine.take(QQ);
+            null !== FQ && (0, DQ.m)("frame", FQ)
           }
           this.inGameSinceFlush = !1, this.summary.reset()
         }, document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      start(dd, Jd) {
-        var kd;
-        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, Pd.h)("frame", `start: ${dd} client, ${Jd}, dpr ${window.devicePixelRatio}, long tasks ${null!==(kd=this.longTasks.kind)&&void 0!==kd?kd:"n/a"}; a summary each ${Qd/1e3} s in game (${Ld/1e3} s for the first ${Od/1e3} s), outliers over ${ed} ms`)
+      start(QQ, FQ) {
+        var wQ;
+        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, DQ.m)("frame", `start: ${QQ} client, ${FQ}, dpr ${window.devicePixelRatio}, long tasks ${null!==(wQ=this.longTasks.kind)&&void 0!==wQ?wQ:"n/a"}; a summary each ${YQ/1e3} s in game (${xQ/1e3} s for the first ${AQ/1e3} s), outliers over ${tQ} ms`)
       }
-      setLoadCounts(dd) {
-        this.loadLine.setSource(dd)
+      setLoadCounts(QQ) {
+        this.loadLine.setSource(QQ)
       }
       joined() {
         this.startedMs = performance.now(), this.scheduleFlush()
@@ -220,95 +220,95 @@ export const modules = {
       }
       scheduleFlush() {
         null !== this.flushTimer && clearTimeout(this.flushTimer);
-        const dd = performance.now() - this.startedMs < Od;
-        this.flushTimer = setTimeout(this.flush, dd ? Ld : Qd)
+        const QQ = performance.now() - this.startedMs < AQ;
+        this.flushTimer = setTimeout(this.flush, QQ ? xQ : YQ)
       }
-      frame(dd, Jd, kd, pd, Wd, Pd, Zd, gd) {
-        if (!pd) return this.restart(), void(this.lastPending = gd);
-        const Cd = this.current;
-        (0, Nd.b)(kd) ? (this.lastDrawnStartMs >= 0 && (Cd.pendingAfter = this.lastPending, this.closeInterval(dd - this.lastDrawnStartMs, dd)), this.lastDrawnStartMs = dd, vd(Cd).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(kd, Jd - this.lastDrawnStartMs, this.ahead), Cd.mainMs += Jd - dd, Cd.renderMs += Wd, Cd.ticks += Pd, Cd.tickMs += Zd, Cd.pendingMax = Math.max(Cd.pendingMax, gd), this.lastPending = gd, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, gd)
+      frame(QQ, FQ, wQ, LQ, oQ, DQ, kQ, vQ) {
+        if (!LQ) return this.restart(), void(this.lastPending = vQ);
+        const mQ = this.current;
+        (0, qQ.c)(wQ) ? (this.lastDrawnStartMs >= 0 && (mQ.pendingAfter = this.lastPending, this.closeInterval(QQ - this.lastDrawnStartMs, QQ)), this.lastDrawnStartMs = QQ, pQ(mQ).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(wQ, FQ - this.lastDrawnStartMs, this.ahead), mQ.mainMs += FQ - QQ, mQ.renderMs += oQ, mQ.ticks += DQ, mQ.tickMs += kQ, mQ.pendingMax = Math.max(mQ.pendingMax, vQ), this.lastPending = vQ, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, vQ)
       }
-      closeInterval(dd, Jd) {
-        const kd = this.summary,
-          pd = this.current;
-        kd.frames < Gd && (kd.intervals[kd.frames] = dd), kd.frames++, kd.maxMs = Math.max(kd.maxMs, dd);
-        const Nd = kd.totals;
-        Nd.mainMs += pd.mainMs, Nd.renderMs += pd.renderMs, Nd.ticks += pd.ticks, Nd.tickMs += pd.tickMs, Nd.rafs += pd.rafs, dd > 50 && kd.slow++, dd > ed && this.outlier(dd, Jd)
+      closeInterval(QQ, FQ) {
+        const wQ = this.summary,
+          LQ = this.current;
+        wQ.frames < GQ && (wQ.intervals[wQ.frames] = QQ), wQ.frames++, wQ.maxMs = Math.max(wQ.maxMs, QQ);
+        const qQ = wQ.totals;
+        qQ.mainMs += LQ.mainMs, qQ.renderMs += LQ.renderMs, qQ.ticks += LQ.ticks, qQ.tickMs += LQ.tickMs, qQ.rafs += LQ.rafs, QQ > 50 && wQ.slow++, QQ > tQ && this.outlier(QQ, FQ)
       }
-      outlier(dd, Jd) {
-        const kd = Math.floor((Jd - this.lastRefillMs) / Id);
-        kd > 0 && (this.tokens = Math.min(Rd, this.tokens + kd), this.lastRefillMs += kd * Id), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
+      outlier(QQ, FQ) {
+        const wQ = Math.floor((FQ - this.lastRefillMs) / MQ);
+        wQ > 0 && (this.tokens = Math.min(eQ, this.tokens + wQ), this.lastRefillMs += wQ * MQ), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
           ...this.current,
-          endMs: Jd,
-          intervalMs: dd,
+          endMs: FQ,
+          intervalMs: QQ,
           dueMs: performance.now() + 1e3
         }), this.outlierTimer ??= setTimeout(this.logOutliers, 1e3)) : this.summary.dropped++
       }
-      logSummary(dd) {
-        const Jd = this.summary,
-          kd = Jd.totals;
-        if (0 === Jd.frames) return Jd.undrawn.count > 0 && (0, Pd.h)("frame", `${dd}s: no frames drawn, ${Jd.undrawn.describe()}; pending max ${kd.pendingMax}`), Jd.undrawn.count > 0;
-        const pd = Jd.intervals.subarray(0, Math.min(Jd.frames, Gd)).sort(),
-          Nd = [`${Jd.frames} frames, median ${(0,Wd.c)((0,Wd.e)(pd,.5))} p95 ${(0,Wd.c)((0,Wd.e)(pd,.95))} max ${(0,Wd.c)(Jd.maxMs)} ms, ${Jd.slow} over 50, ${Jd.shown+Jd.dropped} over ${ed}`, `${kd.rafs} rafs, ${Jd.undrawn.describe()}`, `main ${(0,Wd.c)(kd.mainMs)} ms (render ${(0,Wd.c)(kd.renderMs)}, ${kd.ticks} ticks ${(0,Wd.c)(kd.tickMs)})`];
-        return kd.pendingMax >= 0 && Nd.push(`pending max ${kd.pendingMax}`), this.ahead >= 0 && Nd.push(`${this.ahead} frames ahead`), Nd.push(`outliers ${Jd.shown} logged, ${Jd.dropped} dropped`), (0, Pd.h)("frame", `${dd}s: ${Nd.join("; ")}`), !0
+      logSummary(QQ) {
+        const FQ = this.summary,
+          wQ = FQ.totals;
+        if (0 === FQ.frames) return FQ.undrawn.count > 0 && (0, DQ.m)("frame", `${QQ}s: no frames drawn, ${FQ.undrawn.describe()}; pending max ${wQ.pendingMax}`), FQ.undrawn.count > 0;
+        const LQ = FQ.intervals.subarray(0, Math.min(FQ.frames, GQ)).sort(),
+          qQ = [`${FQ.frames} frames, median ${(0,oQ.c)((0,oQ.g)(LQ,.5))} p95 ${(0,oQ.c)((0,oQ.g)(LQ,.95))} max ${(0,oQ.c)(FQ.maxMs)} ms, ${FQ.slow} over 50, ${FQ.shown+FQ.dropped} over ${tQ}`, `${wQ.rafs} rafs, ${FQ.undrawn.describe()}`, `main ${(0,oQ.c)(wQ.mainMs)} ms (render ${(0,oQ.c)(wQ.renderMs)}, ${wQ.ticks} ticks ${(0,oQ.c)(wQ.tickMs)})`];
+        return wQ.pendingMax >= 0 && qQ.push(`pending max ${wQ.pendingMax}`), this.ahead >= 0 && qQ.push(`${this.ahead} frames ahead`), qQ.push(`outliers ${FQ.shown} logged, ${FQ.dropped} dropped`), (0, DQ.m)("frame", `${QQ}s: ${qQ.join("; ")}`), !0
       }
     }
-    let sd = null;
+    let iQ = null;
 
-    function ad(dd, Jd) {
-      return sd ??= new Bd, sd.start(dd, Jd), sd
+    function WQ(QQ, FQ) {
+      return iQ ??= new SQ, iQ.start(QQ, FQ), iQ
     }
   },
-  4688: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      B: () => Wd,
-      Db: () => sd,
-      Eb: () => Bd,
-      F: () => ed,
-      Gb: () => jd,
-      Hb: () => Td,
-      I: () => Vd,
-      L: () => Kd,
-      Lb: () => fd,
-      M: () => od,
-      Ob: () => Ud,
-      P: () => Cd,
-      Qb: () => yd,
-      Sb: () => xd,
-      T: () => Rd,
-      Tb: () => qd,
-      Vb: () => cd,
-      X: () => gd,
-      Yb: () => Nd,
-      Z: () => Ld,
-      ab: () => Qd,
-      ac: () => td,
-      b: () => ud,
-      bb: () => ad,
-      d: () => rd,
-      eb: () => Fd,
-      gb: () => Yd,
-      h: () => ld,
-      ib: () => Md,
-      jb: () => md,
-      kb: () => Ed,
-      l: () => vd,
-      o: () => hd,
-      ob: () => Dd,
-      p: () => Gd,
-      q: () => Id,
-      sb: () => nd,
-      tb: () => bd,
-      u: () => Pd,
-      vb: () => Xd,
-      w: () => Zd,
-      xb: () => Sd,
-      y: () => pd,
-      zb: () => Od
+  4638: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      Ab: () => zQ,
+      B: () => LQ,
+      Eb: () => IQ,
+      F: () => oQ,
+      I: () => tQ,
+      Ib: () => TQ,
+      L: () => gQ,
+      Lb: () => UQ,
+      Nb: () => AQ,
+      O: () => uQ,
+      Q: () => HQ,
+      Qb: () => iQ,
+      U: () => mQ,
+      Ub: () => SQ,
+      Vb: () => NQ,
+      Y: () => eQ,
+      Zb: () => XQ,
+      ab: () => vQ,
+      bc: () => KQ,
+      cc: () => lQ,
+      db: () => xQ,
+      dc: () => jQ,
+      e: () => EQ,
+      eb: () => YQ,
+      fc: () => cQ,
+      h: () => JQ,
+      hb: () => WQ,
+      i: () => bQ,
+      jc: () => CQ,
+      l: () => pQ,
+      lb: () => OQ,
+      mc: () => VQ,
+      n: () => hQ,
+      nc: () => qQ,
+      ob: () => sQ,
+      pb: () => RQ,
+      qb: () => rQ,
+      r: () => GQ,
+      rc: () => nQ,
+      ub: () => fQ,
+      v: () => MQ,
+      wb: () => aQ,
+      x: () => DQ,
+      z: () => kQ
     });
-    const pd = 32,
-      Nd = 33.333333333333336,
-      Wd = {
+    const LQ = 32,
+      qQ = 33.333333333333336,
+      oQ = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -342,18 +342,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Pd = {
+      DQ = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Zd = {
+      kQ = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      gd = {
+      vQ = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -361,15 +361,15 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Cd = {
+      mQ = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Kd = 7,
-      od = {
+      uQ = 7,
+      HQ = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -378,13 +378,13 @@ export const modules = {
         WorkersLive: 5,
         WorkersRetired: 6
       },
-      ld = {
+      bQ = {
         Look: 0,
         Remesh: 1
       },
-      Qd = 8,
-      Ld = 1,
-      Od = {
+      YQ = 8,
+      xQ = 1,
+      AQ = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -393,7 +393,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      ed = {
+      tQ = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -421,12 +421,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Rd = {
+      eQ = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      Id = {
+      MQ = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -478,7 +478,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Gd = {
+      GQ = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -488,10 +488,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      vd = 4,
-      xd = 4,
-      qd = 65535,
-      Bd = {
+      pQ = 4,
+      cQ = 4,
+      CQ = 65535,
+      SQ = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -504,7 +504,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      sd = {
+      iQ = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -512,12 +512,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      ad = 88,
-      Md = 0,
-      Fd = 24,
-      Yd = 48,
-      md = 80,
-      bd = {
+      WQ = 88,
+      RQ = 0,
+      OQ = 24,
+      sQ = 48,
+      rQ = 80,
+      IQ = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -528,18 +528,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Sd = {
+      UQ = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      jd = {
+      NQ = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Xd = {
+      TQ = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -557,34 +557,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      fd = {
+      KQ = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      nd = 65535,
-      Ud = {
+      zQ = 65535,
+      lQ = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      yd = {
+      jQ = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      Dd = 2,
-      Td = {
+      aQ = 2,
+      XQ = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Ed = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      cd = {
+      fQ = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      VQ = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -596,7 +596,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      hd = {
+      hQ = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -623,7 +623,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      rd = {
+      JQ = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -781,8 +781,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      ud = 8,
-      td = {
+      EQ = 8,
+      nQ = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -807,141 +807,141 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      Vd = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      gQ = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4680: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      $b: () => xd,
-      A: () => Pd,
-      Ab: () => JJ,
-      B: () => Sd,
-      Bc: () => pd.ib,
-      Bd: () => pd.Tb,
-      C: () => LJ,
-      Cc: () => pd.jb,
-      Eb: () => pJ,
-      F: () => wd,
-      Fc: () => pd.sb,
-      Fd: () => pd.Yb,
-      G: () => pd.d,
-      Gd: () => Wd,
-      Hc: () => OJ,
-      Ib: () => pd.M,
-      Id: () => ed,
-      J: () => Cd,
-      Kc: () => oJ,
-      L: () => pd.h,
-      Lb: () => Nd.g,
-      Ld: () => CJ,
-      Md: () => Dd,
-      Nb: () => sd,
-      Nc: () => WJ,
-      O: () => dJ,
-      Pd: () => Ed,
-      Qc: () => pd.tb,
-      Rb: () => Ud,
-      S: () => pd.l,
-      Sd: () => yd,
-      U: () => zd,
-      Uc: () => pd.vb,
-      Vb: () => md,
-      Wc: () => pd.xb,
-      Wd: () => rd,
-      X: () => pd.q,
-      Xb: () => Fd,
-      Zb: () => pd.T,
-      _: () => pd.u,
-      _b: () => bd,
-      _c: () => Ad,
-      ab: () => pd.w,
-      b: () => kJ,
-      bd: () => pd.Db,
-      be: () => cd,
-      c: () => Od,
-      cc: () => ZJ,
-      db: () => od,
-      de: () => td,
-      ed: () => pd.Eb,
-      fe: () => ud,
-      g: () => Ld,
-      gb: () => Id,
-      gc: () => Gd,
-      ge: () => gJ,
-      h: () => KJ,
-      ib: () => pd.y,
-      ic: () => lJ,
-      id: () => pd.Gb,
-      ie: () => eJ,
-      j: () => ad,
-      jb: () => pd.B,
-      ke: () => vd,
-      lc: () => Nd.l,
-      ld: () => pd.Lb,
-      m: () => Bd,
-      nb: () => Td,
-      ne: () => Vd,
-      oe: () => fd,
-      pc: () => Rd,
-      pd: () => pd.Ob,
-      q: () => pd.b,
-      qe: () => Xd,
-      rb: () => PJ,
-      rc: () => NJ,
-      sd: () => pd.Qb,
-      tb: () => Kd,
-      td: () => Md,
-      te: () => jd,
-      u: () => QJ,
-      ub: () => pd.F,
-      uc: () => pd.bb,
-      vb: () => hd,
-      ve: () => gd,
-      w: () => Yd,
-      xb: () => Hd,
-      xc: () => pd.eb,
-      xd: () => pd.Sb,
-      xe: () => nd,
-      yb: () => pd.L,
-      ye: () => RJ,
-      zc: () => pd.gb,
-      ze: () => Qd
+  4632: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      $: () => XQ,
+      $b: () => qQ.k,
+      $c: () => LQ.fc,
+      Ab: () => rQ,
+      Ac: () => LQ.Eb,
+      Ad: () => kF,
+      B: () => yQ,
+      Cc: () => LQ.Ib,
+      D: () => LQ.h,
+      Db: () => OQ,
+      Dd: () => AF,
+      G: () => mQ,
+      Gc: () => LQ.Lb,
+      H: () => LQ.i,
+      Hb: () => LQ.Y,
+      Hd: () => pQ,
+      I: () => dQ,
+      Ic: () => BQ,
+      J: () => LQ.l,
+      Kc: () => LQ.Qb,
+      Kd: () => gQ,
+      L: () => PQ,
+      Lb: () => IQ,
+      Ld: () => KQ,
+      O: () => LQ.v,
+      Ob: () => cQ,
+      Oc: () => LQ.Ub,
+      Pc: () => LQ.Vb,
+      Pd: () => TQ,
+      Q: () => LQ.x,
+      Qc: () => LQ.bc,
+      Qd: () => NQ,
+      R: () => LQ.z,
+      Rb: () => DF,
+      S: () => HQ,
+      Sc: () => LQ.cc,
+      T: () => MQ,
+      U: () => LQ.B,
+      Uc: () => LQ.dc,
+      Ud: () => vQ,
+      Vb: () => GQ,
+      Xc: () => RQ,
+      Y: () => LQ.F,
+      Yd: () => zQ,
+      Zb: () => HF,
+      Zd: () => tF,
+      ab: () => oF,
+      ad: () => LQ.jc,
+      ae: () => YQ,
+      b: () => FF,
+      bb: () => uQ,
+      bd: () => LQ.nc,
+      c: () => AQ,
+      cc: () => eQ,
+      cd: () => oQ,
+      d: () => xQ,
+      dc: () => LF,
+      e: () => mF,
+      ed: () => tQ,
+      fb: () => LQ.I,
+      fc: () => LQ.hb,
+      gd: () => vF,
+      h: () => WQ,
+      hb: () => hQ,
+      hc: () => LQ.lb,
+      hd: () => aQ,
+      ib: () => ZQ,
+      id: () => fQ,
+      jb: () => LQ.O,
+      jc: () => LQ.ob,
+      jd: () => jQ,
+      kb: () => QF,
+      l: () => SQ,
+      m: () => LQ.e,
+      mc: () => LQ.pb,
+      md: () => JQ,
+      n: () => bF,
+      nb: () => wF,
+      oc: () => LQ.qb,
+      pb: () => LQ.Q,
+      q: () => sQ,
+      qd: () => VQ,
+      rb: () => qQ.g,
+      sb: () => iQ,
+      sc: () => LQ.Ab,
+      t: () => DQ,
+      tc: () => xF,
+      td: () => nQ,
+      v: () => UQ,
+      vc: () => uF,
+      wb: () => lQ,
+      wd: () => EQ,
+      xc: () => qF,
+      z: () => YF
     });
-    var pd = kd(4688),
-      Nd = kd(2337);
-    const Wd = Math.round(1e3 / pd.Yb),
-      Pd = 4,
-      Zd = 2;
+    var LQ = wQ(4638),
+      qQ = wQ(2313);
+    const oQ = Math.round(1e3 / LQ.nc),
+      DQ = 4,
+      kQ = 2;
 
-    function gd() {
-      return crypto.getRandomValues(new Uint32Array(Zd))
+    function vQ() {
+      return crypto.getRandomValues(new Uint32Array(kQ))
     }
-    const Cd = {
+    const mQ = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      Kd = 16,
-      od = {
+      uQ = 16,
+      HQ = {
         Draws: 1,
         NetAll: 2
       },
-      ld = {
+      bQ = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function Qd(dd) {
-      return (dd.nametagsHidden ? qd.NametagsHidden : 0) | (dd.crouchToggle ? qd.CrouchToggle : 0) | (dd.bhopDisabled ? qd.BhopDisabled : 0) | (dd.disableBobbing ? qd.DisableBobbing : 0) | (dd.ezTowering ? qd.EzTowering : 0) | (dd.ezBridging ? qd.EzBridging : 0) | (dd.showChunkBorders ? qd.ShowChunkBorders : 0)
+    function YQ(QQ) {
+      return (QQ.nametagsHidden ? CQ.NametagsHidden : 0) | (QQ.crouchToggle ? CQ.CrouchToggle : 0) | (QQ.bhopDisabled ? CQ.BhopDisabled : 0) | (QQ.disableBobbing ? CQ.DisableBobbing : 0) | (QQ.ezTowering ? CQ.EzTowering : 0) | (QQ.ezBridging ? CQ.EzBridging : 0) | (QQ.showChunkBorders ? CQ.ShowChunkBorders : 0)
     }
-    const Ld = {
+    const xQ = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      Od = {
+      AQ = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -949,7 +949,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      ed = {
+      tQ = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -958,7 +958,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      Rd = {
+      eQ = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -967,20 +967,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      Id = 5,
-      Gd = 4294967295;
+      MQ = 5,
+      GQ = 4294967295;
 
-    function vd(dd) {
-      return (dd.showFog ? ld.ShowFog : 0) | (dd.lighting ? ld.Lighting : 0) | (dd.chunkFade ? ld.ChunkFade : 0)
+    function pQ(QQ) {
+      return (QQ.showFog ? bQ.ShowFog : 0) | (QQ.lighting ? bQ.Lighting : 0) | (QQ.chunkFade ? bQ.ChunkFade : 0)
     }
-    const xd = {
+    const cQ = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      qd = {
+      CQ = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -990,50 +990,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      Bd = {
+      SQ = {
         Release: 1,
         KeepTouches: 2
       },
-      sd = {
+      iQ = {
         Point: 1,
         Stamped: 2
       },
-      ad = {
+      WQ = {
         Add: 1,
         Clear: 2
       },
-      Md = 1,
-      Fd = 8,
-      Yd = 16777215,
-      md = 4,
-      bd = {
+      RQ = 1,
+      OQ = 8,
+      sQ = 16777215,
+      rQ = 4,
+      IQ = {
         Resume: 1
       },
-      Sd = {
+      UQ = {
         Held: 1
       };
 
-    function jd(dd, Jd) {
-      return (dd | Jd << 8) >>> 0
+    function NQ(QQ, FQ) {
+      return (QQ | FQ << 8) >>> 0
     }
 
-    function Xd(dd) {
-      return 255 & dd
+    function TQ(QQ) {
+      return 255 & QQ
     }
 
-    function fd(dd) {
-      return dd >>> 8
+    function KQ(QQ) {
+      return QQ >>> 8
     }
 
-    function nd(dd) {
-      return dd + 3 & -4
+    function zQ(QQ) {
+      return QQ + 3 & -4
     }
-    const Ud = 16777216,
-      yd = 20;
-    const Dd = 8,
-      Td = 8,
-      Ed = 16777216,
-      cd = {
+    const lQ = 16777216,
+      jQ = 20;
+    const aQ = 8,
+      XQ = 8,
+      fQ = 16777216,
+      VQ = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1041,19 +1041,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      hd = {
+      hQ = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      rd = 16,
-      ud = {
+      JQ = 16,
+      EQ = {
         Lost: 0,
         Gone: 1
       },
-      td = {
+      nQ = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1061,18 +1061,18 @@ export const modules = {
         Retire: 5
       };
 
-    function Vd(dd) {
-      return dd === td.WorldgenSeed || dd === td.Generate
+    function gQ(QQ) {
+      return QQ === nQ.WorldgenSeed || QQ === nQ.Generate
     }
-    const zd = 4,
-      Hd = 99,
-      wd = {
+    const PQ = 4,
+      ZQ = 99,
+      yQ = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      Ad = {
+      BQ = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1080,45 +1080,45 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      dJ = {
+      dQ = {
         FRAMES: 65535,
         RESTORE_UNHELD: 65536,
         LINKS_RUNNING: 1 << 17
       },
-      JJ = 12,
-      kJ = 16,
-      pJ = 4,
-      NJ = 12,
-      WJ = {
+      QF = 12,
+      FF = 16,
+      wF = 4,
+      LF = 12,
+      qF = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      PJ = 4,
-      ZJ = 8,
-      gJ = 8,
-      CJ = {
+      oF = 4,
+      DF = 8,
+      kF = 8,
+      vF = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      KJ = {
+      mF = {
         Crit: 1,
         HitSelf: 2
       },
-      oJ = {
+      uF = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      lJ = {
+      HF = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      QJ = 12,
-      LJ = {
+      bF = 12,
+      YF = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1127,56 +1127,56 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      OJ = 67108864;
+      xF = 67108864;
 
-    function eJ(dd) {
-      for (const [Jd, kd] of Object.entries(pd.d))
-        if (kd === dd) return Jd;
-      return `Unknown${dd}`
+    function AF(QQ) {
+      for (const [FQ, wQ] of Object.entries(LQ.h))
+        if (wQ === QQ) return FQ;
+      return `Unknown${QQ}`
     }
 
-    function RJ(dd) {
+    function tF(QQ) {
       return {
-        status: dd[pd.B.Status],
-        lastError: dd[pd.B.LastError],
-        lastErrorDetail: dd[pd.B.LastErrorDetail],
-        errorCount: dd[pd.B.ErrorCount],
-        frameIndex: dd[pd.B.FrameIndex],
-        tickIndex: dd[pd.B.TickIndex],
-        renderPending: dd[pd.B.RenderPending],
-        firstView: dd[pd.B.FirstView],
-        chunksCancelled: dd[pd.B.ChunksCancelled]
+        status: QQ[LQ.F.Status],
+        lastError: QQ[LQ.F.LastError],
+        lastErrorDetail: QQ[LQ.F.LastErrorDetail],
+        errorCount: QQ[LQ.F.ErrorCount],
+        frameIndex: QQ[LQ.F.FrameIndex],
+        tickIndex: QQ[LQ.F.TickIndex],
+        renderPending: QQ[LQ.F.RenderPending],
+        firstView: QQ[LQ.F.FirstView],
+        chunksCancelled: QQ[LQ.F.ChunksCancelled]
       }
     }
   },
-  4673: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => Pd,
-      f: () => Wd,
-      h: () => Nd
+  4626: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => DQ,
+      e: () => oQ,
+      h: () => qQ
     });
-    var pd = kd(4680);
+    var LQ = wQ(4632);
 
-    function Nd(dd) {
-      return "none" !== dd
+    function qQ(QQ) {
+      return "none" !== QQ
     }
 
-    function Wd(dd, Jd) {
-      if (!dd) return "none";
-      switch (Jd) {
-        case pd.ab.Drawn:
+    function oQ(QQ, FQ) {
+      if (!QQ) return "none";
+      switch (FQ) {
+        case LQ.R.Drawn:
           return "drawn";
-        case pd.ab.Paced:
+        case LQ.R.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function Pd(dd) {
-      return "drawn" === dd
+    function DQ(QQ) {
+      return "drawn" === QQ
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

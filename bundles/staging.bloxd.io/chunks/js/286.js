@@ -1,181 +1,181 @@
 export const id = 286;
 export const ids = [286];
 export const modules = {
-  41273: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => GJ,
-      e: () => Sd,
-      ChangeSet: () => jd,
-      i: () => mJ,
-      k: () => Ed,
-      l: () => XJ,
-      o: () => rd,
-      s: () => bd,
-      t: () => WJ,
-      x: () => EJ,
-      v: () => cJ,
-      A: () => nJ,
-      C: () => qJ,
-      E: () => Ad,
-      I: () => Od,
-      J: () => BJ,
-      K: () => Md,
-      O: () => Yd,
-      R: () => fJ,
-      V: () => Jk,
-      X: () => ad,
-      Z: () => kk,
-      _: () => Fd
+  40695: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => MF,
+      e: () => UQ,
+      ChangeSet: () => NQ,
+      h: () => rF,
+      j: () => fQ,
+      n: () => TF,
+      r: () => JQ,
+      t: () => IQ,
+      w: () => qF,
+      B: () => fF,
+      z: () => VF,
+      D: () => zF,
+      H: () => cF,
+      L: () => BQ,
+      P: () => AQ,
+      S: () => CF,
+      T: () => RQ,
+      U: () => sQ,
+      W: () => KF,
+      X: () => Qw,
+      $: () => WQ,
+      db: () => Fw,
+      eb: () => OQ
     });
-    let pd = [],
-      Nd = [];
+    let LQ = [],
+      qQ = [];
 
-    function Wd(dd) {
-      if (dd < 768) return !1;
-      for (let Jd = 0, kd = pd.length;;) {
-        let Wd = Jd + kd >> 1;
-        if (dd < pd[Wd]) kd = Wd;
+    function oQ(QQ) {
+      if (QQ < 768) return !1;
+      for (let FQ = 0, wQ = LQ.length;;) {
+        let oQ = FQ + wQ >> 1;
+        if (QQ < LQ[oQ]) wQ = oQ;
         else {
-          if (!(dd >= Nd[Wd])) return !0;
-          Jd = Wd + 1
+          if (!(QQ >= qQ[oQ])) return !0;
+          FQ = oQ + 1
         }
-        if (Jd == kd) return !1
+        if (FQ == wQ) return !1
       }
     }
 
-    function Pd(dd) {
-      return dd >= 127462 && dd <= 127487
+    function DQ(QQ) {
+      return QQ >= 127462 && QQ <= 127487
     }(() => {
-      let dd = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((dd => dd ? parseInt(dd, 36) : 1));
-      for (let Jd = 0, kd = 0; Jd < dd.length; Jd++)(Jd % 2 ? Nd : pd).push(kd += dd[Jd])
+      let QQ = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((QQ => QQ ? parseInt(QQ, 36) : 1));
+      for (let FQ = 0, wQ = 0; FQ < QQ.length; FQ++)(FQ % 2 ? qQ : LQ).push(wQ += QQ[FQ])
     })();
-    const Zd = 8205;
+    const kQ = 8205;
 
-    function gd(dd, Jd) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Cd : Kd)(dd, Jd, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function vQ(QQ, FQ) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? mQ : uQ)(QQ, FQ, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function Cd(dd, Jd, kd) {
-      if (Jd == dd.length) return Jd;
-      Jd && ld(dd.charCodeAt(Jd)) && Qd(dd.charCodeAt(Jd - 1)) && Jd--;
-      let pd = od(dd, Jd);
-      for (Jd += Ld(pd); Jd < dd.length;) {
-        let Nd = od(dd, Jd);
-        if (pd == Zd || Nd == Zd || kd && Wd(Nd)) Jd += Ld(Nd), pd = Nd;
+    function mQ(QQ, FQ, wQ) {
+      if (FQ == QQ.length) return FQ;
+      FQ && bQ(QQ.charCodeAt(FQ)) && YQ(QQ.charCodeAt(FQ - 1)) && FQ--;
+      let LQ = HQ(QQ, FQ);
+      for (FQ += xQ(LQ); FQ < QQ.length;) {
+        let qQ = HQ(QQ, FQ);
+        if (LQ == kQ || qQ == kQ || wQ && oQ(qQ)) FQ += xQ(qQ), LQ = qQ;
         else {
-          if (!Pd(Nd)) break;
+          if (!DQ(qQ)) break;
           {
-            let kd = 0,
-              pd = Jd - 2;
-            for (; pd >= 0 && Pd(od(dd, pd));) kd++, pd -= 2;
-            if (kd % 2 == 0) break;
-            Jd += 2
+            let wQ = 0,
+              LQ = FQ - 2;
+            for (; LQ >= 0 && DQ(HQ(QQ, LQ));) wQ++, LQ -= 2;
+            if (wQ % 2 == 0) break;
+            FQ += 2
           }
         }
       }
-      return Jd
+      return FQ
     }
 
-    function Kd(dd, Jd, kd) {
-      for (; Jd > 0;) {
-        let pd = Cd(dd, Jd - 2, kd);
-        if (pd < Jd) return pd;
-        Jd--
+    function uQ(QQ, FQ, wQ) {
+      for (; FQ > 0;) {
+        let LQ = mQ(QQ, FQ - 2, wQ);
+        if (LQ < FQ) return LQ;
+        FQ--
       }
       return 0
     }
 
-    function od(dd, Jd) {
-      let kd = dd.charCodeAt(Jd);
-      if (!Qd(kd) || Jd + 1 == dd.length) return kd;
-      let pd = dd.charCodeAt(Jd + 1);
-      return ld(pd) ? pd - 56320 + (kd - 55296 << 10) + 65536 : kd
+    function HQ(QQ, FQ) {
+      let wQ = QQ.charCodeAt(FQ);
+      if (!YQ(wQ) || FQ + 1 == QQ.length) return wQ;
+      let LQ = QQ.charCodeAt(FQ + 1);
+      return bQ(LQ) ? LQ - 56320 + (wQ - 55296 << 10) + 65536 : wQ
     }
 
-    function ld(dd) {
-      return dd >= 56320 && dd < 57344
+    function bQ(QQ) {
+      return QQ >= 56320 && QQ < 57344
     }
 
-    function Qd(dd) {
-      return dd >= 55296 && dd < 56320
+    function YQ(QQ) {
+      return QQ >= 55296 && QQ < 56320
     }
 
-    function Ld(dd) {
-      return dd < 65536 ? 1 : 2
+    function xQ(QQ) {
+      return QQ < 65536 ? 1 : 2
     }
-    class Od {
-      lineAt(dd) {
-        if (dd < 0 || dd > this.length) throw new RangeError(`Invalid position ${dd} in document of length ${this.length}`);
-        return this.lineInner(dd, !1, 1, 0)
+    class AQ {
+      lineAt(QQ) {
+        if (QQ < 0 || QQ > this.length) throw new RangeError(`Invalid position ${QQ} in document of length ${this.length}`);
+        return this.lineInner(QQ, !1, 1, 0)
       }
-      line(dd) {
-        if (dd < 1 || dd > this.lines) throw new RangeError(`Invalid line number ${dd} in ${this.lines}-line document`);
-        return this.lineInner(dd, !0, 1, 0)
+      line(QQ) {
+        if (QQ < 1 || QQ > this.lines) throw new RangeError(`Invalid line number ${QQ} in ${this.lines}-line document`);
+        return this.lineInner(QQ, !0, 1, 0)
       }
-      replace(dd, Jd, kd) {
-        [dd, Jd] = sd(this, dd, Jd);
-        let pd = [];
-        return this.decompose(0, dd, pd, 2), kd.length && kd.decompose(0, kd.length, pd, 3), this.decompose(Jd, this.length, pd, 1), Rd.from(pd, this.length - (Jd - dd) + kd.length)
+      replace(QQ, FQ, wQ) {
+        [QQ, FQ] = iQ(this, QQ, FQ);
+        let LQ = [];
+        return this.decompose(0, QQ, LQ, 2), wQ.length && wQ.decompose(0, wQ.length, LQ, 3), this.decompose(FQ, this.length, LQ, 1), eQ.from(LQ, this.length - (FQ - QQ) + wQ.length)
       }
-      append(dd) {
-        return this.replace(this.length, this.length, dd)
+      append(QQ) {
+        return this.replace(this.length, this.length, QQ)
       }
-      slice(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [dd, Jd] = sd(this, dd, Jd);
-        let kd = [];
-        return this.decompose(dd, Jd, kd, 0), Rd.from(kd, Jd - dd)
+      slice(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [QQ, FQ] = iQ(this, QQ, FQ);
+        let wQ = [];
+        return this.decompose(QQ, FQ, wQ, 0), eQ.from(wQ, FQ - QQ)
       }
-      eq(dd) {
-        if (dd == this) return !0;
-        if (dd.length != this.length || dd.lines != this.lines) return !1;
-        let Jd = this.scanIdentical(dd, 1),
-          kd = this.length - this.scanIdentical(dd, -1),
-          pd = new vd(this),
-          Nd = new vd(dd);
-        for (let Wd = Jd, Pd = Jd;;) {
-          if (pd.next(Wd), Nd.next(Wd), Wd = 0, pd.lineBreak != Nd.lineBreak || pd.done != Nd.done || pd.value != Nd.value) return !1;
-          if (Pd += pd.value.length, pd.done || Pd >= kd) return !0
+      eq(QQ) {
+        if (QQ == this) return !0;
+        if (QQ.length != this.length || QQ.lines != this.lines) return !1;
+        let FQ = this.scanIdentical(QQ, 1),
+          wQ = this.length - this.scanIdentical(QQ, -1),
+          LQ = new pQ(this),
+          qQ = new pQ(QQ);
+        for (let oQ = FQ, DQ = FQ;;) {
+          if (LQ.next(oQ), qQ.next(oQ), oQ = 0, LQ.lineBreak != qQ.lineBreak || LQ.done != qQ.done || LQ.value != qQ.value) return !1;
+          if (DQ += LQ.value.length, LQ.done || DQ >= wQ) return !0
         }
       }
       iter() {
-        return new vd(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new pQ(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new xd(this, dd, Jd)
+      iterRange(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new cQ(this, QQ, FQ)
       }
-      iterLines(dd, Jd) {
-        let kd;
-        if (null == dd) kd = this.iter();
+      iterLines(QQ, FQ) {
+        let wQ;
+        if (null == QQ) wQ = this.iter();
         else {
-          null == Jd && (Jd = this.lines + 1);
-          let pd = this.line(dd).from;
-          kd = this.iterRange(pd, Math.max(pd, Jd == this.lines + 1 ? this.length : Jd <= 1 ? 0 : this.line(Jd - 1).to))
+          null == FQ && (FQ = this.lines + 1);
+          let LQ = this.line(QQ).from;
+          wQ = this.iterRange(LQ, Math.max(LQ, FQ == this.lines + 1 ? this.length : FQ <= 1 ? 0 : this.line(FQ - 1).to))
         }
-        return new qd(kd)
+        return new CQ(wQ)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let dd = [];
-        return this.flatten(dd), dd
+        let QQ = [];
+        return this.flatten(QQ), QQ
       }
       constructor() {}
-      static of (dd) {
-        if (0 == dd.length) throw new RangeError("A document must have at least one line");
-        return 1 != dd.length || dd[0] ? dd.length <= 32 ? new ed(dd) : Rd.from(ed.split(dd, [])) : Od.empty
+      static of (QQ) {
+        if (0 == QQ.length) throw new RangeError("A document must have at least one line");
+        return 1 != QQ.length || QQ[0] ? QQ.length <= 32 ? new tQ(QQ) : eQ.from(tQ.split(QQ, [])) : AQ.empty
       }
     }
-    class ed extends Od {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(dd) {
-          let Jd = -1;
-          for (let kd of dd) Jd += kd.length + 1;
-          return Jd
-        }(dd);
-        super(), this.text = dd, this.length = Jd
+    class tQ extends AQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(QQ) {
+          let FQ = -1;
+          for (let wQ of QQ) FQ += wQ.length + 1;
+          return FQ
+        }(QQ);
+        super(), this.text = QQ, this.length = FQ
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(dd, Jd, kd, pd) {
-        for (let Nd = 0;; Nd++) {
-          let Wd = this.text[Nd],
-            Pd = pd + Wd.length;
-          if ((Jd ? kd : Pd) >= dd) return new Bd(pd, Pd, kd, Wd);
-          pd = Pd + 1, kd++
+      lineInner(QQ, FQ, wQ, LQ) {
+        for (let qQ = 0;; qQ++) {
+          let oQ = this.text[qQ],
+            DQ = LQ + oQ.length;
+          if ((FQ ? wQ : DQ) >= QQ) return new SQ(LQ, DQ, wQ, oQ);
+          LQ = DQ + 1, wQ++
         }
       }
-      decompose(dd, Jd, kd, pd) {
-        let Nd = dd <= 0 && Jd >= this.length ? this : new ed(Gd(this.text, dd, Jd), Math.min(Jd, this.length) - Math.max(0, dd));
-        if (1 & pd) {
-          let dd = kd.pop(),
-            Jd = Id(Nd.text, dd.text.slice(), 0, Nd.length);
-          if (Jd.length <= 32) kd.push(new ed(Jd, dd.length + Nd.length));
+      decompose(QQ, FQ, wQ, LQ) {
+        let qQ = QQ <= 0 && FQ >= this.length ? this : new tQ(GQ(this.text, QQ, FQ), Math.min(FQ, this.length) - Math.max(0, QQ));
+        if (1 & LQ) {
+          let QQ = wQ.pop(),
+            FQ = MQ(qQ.text, QQ.text.slice(), 0, qQ.length);
+          if (FQ.length <= 32) wQ.push(new tQ(FQ, QQ.length + qQ.length));
           else {
-            let dd = Jd.length >> 1;
-            kd.push(new ed(Jd.slice(0, dd)), new ed(Jd.slice(dd)))
+            let QQ = FQ.length >> 1;
+            wQ.push(new tQ(FQ.slice(0, QQ)), new tQ(FQ.slice(QQ)))
           }
-        } else kd.push(Nd)
+        } else wQ.push(qQ)
       }
-      replace(dd, Jd, kd) {
-        if (!(kd instanceof ed)) return super.replace(dd, Jd, kd);
-        [dd, Jd] = sd(this, dd, Jd);
-        let pd = Id(this.text, Id(kd.text, Gd(this.text, 0, dd)), Jd),
-          Nd = this.length + kd.length - (Jd - dd);
-        return pd.length <= 32 ? new ed(pd, Nd) : Rd.from(ed.split(pd, []), Nd)
+      replace(QQ, FQ, wQ) {
+        if (!(wQ instanceof tQ)) return super.replace(QQ, FQ, wQ);
+        [QQ, FQ] = iQ(this, QQ, FQ);
+        let LQ = MQ(this.text, MQ(wQ.text, GQ(this.text, 0, QQ)), FQ),
+          qQ = this.length + wQ.length - (FQ - QQ);
+        return LQ.length <= 32 ? new tQ(LQ, qQ) : eQ.from(tQ.split(LQ, []), qQ)
       }
-      sliceString(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [dd, Jd] = sd(this, dd, Jd);
-        let pd = "";
-        for (let Nd = 0, Wd = 0; Nd <= Jd && Wd < this.text.length; Wd++) {
-          let Pd = this.text[Wd],
-            Zd = Nd + Pd.length;
-          Nd > dd && Wd && (pd += kd), dd < Zd && Jd > Nd && (pd += Pd.slice(Math.max(0, dd - Nd), Jd - Nd)), Nd = Zd + 1
+      sliceString(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [QQ, FQ] = iQ(this, QQ, FQ);
+        let LQ = "";
+        for (let qQ = 0, oQ = 0; qQ <= FQ && oQ < this.text.length; oQ++) {
+          let DQ = this.text[oQ],
+            kQ = qQ + DQ.length;
+          qQ > QQ && oQ && (LQ += wQ), QQ < kQ && FQ > qQ && (LQ += DQ.slice(Math.max(0, QQ - qQ), FQ - qQ)), qQ = kQ + 1
         }
-        return pd
+        return LQ
       }
-      flatten(dd) {
-        for (let Jd of this.text) dd.push(Jd)
+      flatten(QQ) {
+        for (let FQ of this.text) QQ.push(FQ)
       }
       scanIdentical() {
         return 0
       }
-      static split(dd, Jd) {
-        let kd = [],
-          pd = -1;
-        for (let Nd of dd) kd.push(Nd), pd += Nd.length + 1, 32 == kd.length && (Jd.push(new ed(kd, pd)), kd = [], pd = -1);
-        return pd > -1 && Jd.push(new ed(kd, pd)), Jd
+      static split(QQ, FQ) {
+        let wQ = [],
+          LQ = -1;
+        for (let qQ of QQ) wQ.push(qQ), LQ += qQ.length + 1, 32 == wQ.length && (FQ.push(new tQ(wQ, LQ)), wQ = [], LQ = -1);
+        return LQ > -1 && FQ.push(new tQ(wQ, LQ)), FQ
       }
     }
-    class Rd extends Od {
-      constructor(dd, Jd) {
-        super(), this.children = dd, this.length = Jd, this.lines = 0;
-        for (let kd of dd) this.lines += kd.lines
+    class eQ extends AQ {
+      constructor(QQ, FQ) {
+        super(), this.children = QQ, this.length = FQ, this.lines = 0;
+        for (let wQ of QQ) this.lines += wQ.lines
       }
-      lineInner(dd, Jd, kd, pd) {
-        for (let Nd = 0;; Nd++) {
-          let Wd = this.children[Nd],
-            Pd = pd + Wd.length,
-            Zd = kd + Wd.lines - 1;
-          if ((Jd ? Zd : Pd) >= dd) return Wd.lineInner(dd, Jd, kd, pd);
-          pd = Pd + 1, kd = Zd + 1
+      lineInner(QQ, FQ, wQ, LQ) {
+        for (let qQ = 0;; qQ++) {
+          let oQ = this.children[qQ],
+            DQ = LQ + oQ.length,
+            kQ = wQ + oQ.lines - 1;
+          if ((FQ ? kQ : DQ) >= QQ) return oQ.lineInner(QQ, FQ, wQ, LQ);
+          LQ = DQ + 1, wQ = kQ + 1
         }
       }
-      decompose(dd, Jd, kd, pd) {
-        for (let Nd = 0, Wd = 0; Wd <= Jd && Nd < this.children.length; Nd++) {
-          let Pd = this.children[Nd],
-            Zd = Wd + Pd.length;
-          if (dd <= Zd && Jd >= Wd) {
-            let Nd = pd & ((Wd <= dd ? 1 : 0) | (Zd >= Jd ? 2 : 0));
-            Wd >= dd && Zd <= Jd && !Nd ? kd.push(Pd) : Pd.decompose(dd - Wd, Jd - Wd, kd, Nd)
+      decompose(QQ, FQ, wQ, LQ) {
+        for (let qQ = 0, oQ = 0; oQ <= FQ && qQ < this.children.length; qQ++) {
+          let DQ = this.children[qQ],
+            kQ = oQ + DQ.length;
+          if (QQ <= kQ && FQ >= oQ) {
+            let qQ = LQ & ((oQ <= QQ ? 1 : 0) | (kQ >= FQ ? 2 : 0));
+            oQ >= QQ && kQ <= FQ && !qQ ? wQ.push(DQ) : DQ.decompose(QQ - oQ, FQ - oQ, wQ, qQ)
           }
-          Wd = Zd + 1
+          oQ = kQ + 1
         }
       }
-      replace(dd, Jd, kd) {
-        if ([dd, Jd] = sd(this, dd, Jd), kd.lines < this.lines)
-          for (let pd = 0, Nd = 0; pd < this.children.length; pd++) {
-            let Wd = this.children[pd],
-              Pd = Nd + Wd.length;
-            if (dd >= Nd && Jd <= Pd) {
-              let Zd = Wd.replace(dd - Nd, Jd - Nd, kd),
-                gd = this.lines - Wd.lines + Zd.lines;
-              if (Zd.lines < gd >> 4 && Zd.lines > gd >> 6) {
-                let Nd = this.children.slice();
-                return Nd[pd] = Zd, new Rd(Nd, this.length - (Jd - dd) + kd.length)
+      replace(QQ, FQ, wQ) {
+        if ([QQ, FQ] = iQ(this, QQ, FQ), wQ.lines < this.lines)
+          for (let LQ = 0, qQ = 0; LQ < this.children.length; LQ++) {
+            let oQ = this.children[LQ],
+              DQ = qQ + oQ.length;
+            if (QQ >= qQ && FQ <= DQ) {
+              let kQ = oQ.replace(QQ - qQ, FQ - qQ, wQ),
+                vQ = this.lines - oQ.lines + kQ.lines;
+              if (kQ.lines < vQ >> 4 && kQ.lines > vQ >> 6) {
+                let qQ = this.children.slice();
+                return qQ[LQ] = kQ, new eQ(qQ, this.length - (FQ - QQ) + wQ.length)
               }
-              return super.replace(Nd, Pd, Zd)
+              return super.replace(qQ, DQ, kQ)
             }
-            Nd = Pd + 1
+            qQ = DQ + 1
           }
-        return super.replace(dd, Jd, kd)
+        return super.replace(QQ, FQ, wQ)
       }
-      sliceString(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [dd, Jd] = sd(this, dd, Jd);
-        let pd = "";
-        for (let Nd = 0, Wd = 0; Nd < this.children.length && Wd <= Jd; Nd++) {
-          let Pd = this.children[Nd],
-            Zd = Wd + Pd.length;
-          Wd > dd && Nd && (pd += kd), dd < Zd && Jd > Wd && (pd += Pd.sliceString(dd - Wd, Jd - Wd, kd)), Wd = Zd + 1
+      sliceString(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [QQ, FQ] = iQ(this, QQ, FQ);
+        let LQ = "";
+        for (let qQ = 0, oQ = 0; qQ < this.children.length && oQ <= FQ; qQ++) {
+          let DQ = this.children[qQ],
+            kQ = oQ + DQ.length;
+          oQ > QQ && qQ && (LQ += wQ), QQ < kQ && FQ > oQ && (LQ += DQ.sliceString(QQ - oQ, FQ - oQ, wQ)), oQ = kQ + 1
         }
-        return pd
+        return LQ
       }
-      flatten(dd) {
-        for (let Jd of this.children) Jd.flatten(dd)
+      flatten(QQ) {
+        for (let FQ of this.children) FQ.flatten(QQ)
       }
-      scanIdentical(dd, Jd) {
-        if (!(dd instanceof Rd)) return 0;
-        let kd = 0,
-          [pd, Nd, Wd, Pd] = Jd > 0 ? [0, 0, this.children.length, dd.children.length] : [this.children.length - 1, dd.children.length - 1, -1, -1];
-        for (;; pd += Jd, Nd += Jd) {
-          if (pd == Wd || Nd == Pd) return kd;
-          let Zd = this.children[pd],
-            gd = dd.children[Nd];
-          if (Zd != gd) return kd + Zd.scanIdentical(gd, Jd);
-          kd += Zd.length + 1
+      scanIdentical(QQ, FQ) {
+        if (!(QQ instanceof eQ)) return 0;
+        let wQ = 0,
+          [LQ, qQ, oQ, DQ] = FQ > 0 ? [0, 0, this.children.length, QQ.children.length] : [this.children.length - 1, QQ.children.length - 1, -1, -1];
+        for (;; LQ += FQ, qQ += FQ) {
+          if (LQ == oQ || qQ == DQ) return wQ;
+          let kQ = this.children[LQ],
+            vQ = QQ.children[qQ];
+          if (kQ != vQ) return wQ + kQ.scanIdentical(vQ, FQ);
+          wQ += kQ.length + 1
         }
       }
-      static from(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd.reduce(((dd, Jd) => dd + Jd.length + 1), -1),
-          kd = 0;
-        for (let ld of dd) kd += ld.lines;
-        if (kd < 32) {
-          let kd = [];
-          for (let Jd of dd) Jd.flatten(kd);
-          return new ed(kd, Jd)
+      static from(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QQ.reduce(((QQ, FQ) => QQ + FQ.length + 1), -1),
+          wQ = 0;
+        for (let bQ of QQ) wQ += bQ.lines;
+        if (wQ < 32) {
+          let wQ = [];
+          for (let FQ of QQ) FQ.flatten(wQ);
+          return new tQ(wQ, FQ)
         }
-        let pd = Math.max(32, kd >> 5),
-          Nd = pd << 1,
-          Wd = pd >> 1,
-          Pd = [],
-          Zd = 0,
-          gd = -1,
-          Cd = [];
+        let LQ = Math.max(32, wQ >> 5),
+          qQ = LQ << 1,
+          oQ = LQ >> 1,
+          DQ = [],
+          kQ = 0,
+          vQ = -1,
+          mQ = [];
 
-        function Kd(dd) {
-          let Jd;
-          if (dd.lines > Nd && dd instanceof Rd)
-            for (let kd of dd.children) Kd(kd);
-          else dd.lines > Wd && (Zd > Wd || !Zd) ? (od(), Pd.push(dd)) : dd instanceof ed && Zd && (Jd = Cd[Cd.length - 1]) instanceof ed && dd.lines + Jd.lines <= 32 ? (Zd += dd.lines, gd += dd.length + 1, Cd[Cd.length - 1] = new ed(Jd.text.concat(dd.text), Jd.length + 1 + dd.length)) : (Zd + dd.lines > pd && od(), Zd += dd.lines, gd += dd.length + 1, Cd.push(dd))
+        function uQ(QQ) {
+          let FQ;
+          if (QQ.lines > qQ && QQ instanceof eQ)
+            for (let wQ of QQ.children) uQ(wQ);
+          else QQ.lines > oQ && (kQ > oQ || !kQ) ? (HQ(), DQ.push(QQ)) : QQ instanceof tQ && kQ && (FQ = mQ[mQ.length - 1]) instanceof tQ && QQ.lines + FQ.lines <= 32 ? (kQ += QQ.lines, vQ += QQ.length + 1, mQ[mQ.length - 1] = new tQ(FQ.text.concat(QQ.text), FQ.length + 1 + QQ.length)) : (kQ + QQ.lines > LQ && HQ(), kQ += QQ.lines, vQ += QQ.length + 1, mQ.push(QQ))
         }
 
-        function od() {
-          0 != Zd && (Pd.push(1 == Cd.length ? Cd[0] : Rd.from(Cd, gd)), gd = -1, Zd = Cd.length = 0)
+        function HQ() {
+          0 != kQ && (DQ.push(1 == mQ.length ? mQ[0] : eQ.from(mQ, vQ)), vQ = -1, kQ = mQ.length = 0)
         }
-        for (let ld of dd) Kd(ld);
-        return od(), 1 == Pd.length ? Pd[0] : new Rd(Pd, Jd)
+        for (let bQ of QQ) uQ(bQ);
+        return HQ(), 1 == DQ.length ? DQ[0] : new eQ(DQ, FQ)
       }
     }
 
-    function Id(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let Nd = 0, Wd = 0, Pd = !0; Wd < dd.length && Nd <= pd; Wd++) {
-        let Zd = dd[Wd],
-          gd = Nd + Zd.length;
-        gd >= kd && (gd > pd && (Zd = Zd.slice(0, pd - Nd)), Nd < kd && (Zd = Zd.slice(kd - Nd)), Pd ? (Jd[Jd.length - 1] += Zd, Pd = !1) : Jd.push(Zd)), Nd = gd + 1
+    function MQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let qQ = 0, oQ = 0, DQ = !0; oQ < QQ.length && qQ <= LQ; oQ++) {
+        let kQ = QQ[oQ],
+          vQ = qQ + kQ.length;
+        vQ >= wQ && (vQ > LQ && (kQ = kQ.slice(0, LQ - qQ)), qQ < wQ && (kQ = kQ.slice(wQ - qQ)), DQ ? (FQ[FQ.length - 1] += kQ, DQ = !1) : FQ.push(kQ)), qQ = vQ + 1
       }
-      return Jd
+      return FQ
     }
 
-    function Gd(dd, Jd, kd) {
-      return Id(dd, [""], Jd, kd)
+    function GQ(QQ, FQ, wQ) {
+      return MQ(QQ, [""], FQ, wQ)
     }
-    Od.empty = new ed([""], 0);
-    class vd {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = Jd, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [dd], this.offsets = [Jd > 0 ? 1 : (dd instanceof ed ? dd.text.length : dd.children.length) << 1]
+    AQ.empty = new tQ([""], 0);
+    class pQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = FQ, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [QQ], this.offsets = [FQ > 0 ? 1 : (QQ instanceof tQ ? QQ.text.length : QQ.children.length) << 1]
       }
-      nextInner(dd, Jd) {
+      nextInner(QQ, FQ) {
         for (this.done = this.lineBreak = !1;;) {
-          let kd = this.nodes.length - 1,
-            pd = this.nodes[kd],
-            Nd = this.offsets[kd],
-            Wd = Nd >> 1,
-            Pd = pd instanceof ed ? pd.text.length : pd.children.length;
-          if (Wd == (Jd > 0 ? Pd : 0)) {
-            if (0 == kd) return this.done = !0, this.value = "", this;
-            Jd > 0 && this.offsets[kd - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & Nd) == (Jd > 0 ? 0 : 1)) {
-            if (this.offsets[kd] += Jd, 0 == dd) return this.lineBreak = !0, this.value = "\n", this;
-            dd--
-          } else if (pd instanceof ed) {
-            let Nd = pd.text[Wd + (Jd < 0 ? -1 : 0)];
-            if (this.offsets[kd] += Jd, Nd.length > Math.max(0, dd)) return this.value = 0 == dd ? Nd : Jd > 0 ? Nd.slice(dd) : Nd.slice(0, Nd.length - dd), this;
-            dd -= Nd.length
+          let wQ = this.nodes.length - 1,
+            LQ = this.nodes[wQ],
+            qQ = this.offsets[wQ],
+            oQ = qQ >> 1,
+            DQ = LQ instanceof tQ ? LQ.text.length : LQ.children.length;
+          if (oQ == (FQ > 0 ? DQ : 0)) {
+            if (0 == wQ) return this.done = !0, this.value = "", this;
+            FQ > 0 && this.offsets[wQ - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & qQ) == (FQ > 0 ? 0 : 1)) {
+            if (this.offsets[wQ] += FQ, 0 == QQ) return this.lineBreak = !0, this.value = "\n", this;
+            QQ--
+          } else if (LQ instanceof tQ) {
+            let qQ = LQ.text[oQ + (FQ < 0 ? -1 : 0)];
+            if (this.offsets[wQ] += FQ, qQ.length > Math.max(0, QQ)) return this.value = 0 == QQ ? qQ : FQ > 0 ? qQ.slice(QQ) : qQ.slice(0, qQ.length - QQ), this;
+            QQ -= qQ.length
           } else {
-            let Nd = pd.children[Wd + (Jd < 0 ? -1 : 0)];
-            dd > Nd.length ? (dd -= Nd.length, this.offsets[kd] += Jd) : (Jd < 0 && this.offsets[kd]--, this.nodes.push(Nd), this.offsets.push(Jd > 0 ? 1 : (Nd instanceof ed ? Nd.text.length : Nd.children.length) << 1))
+            let qQ = LQ.children[oQ + (FQ < 0 ? -1 : 0)];
+            QQ > qQ.length ? (QQ -= qQ.length, this.offsets[wQ] += FQ) : (FQ < 0 && this.offsets[wQ]--, this.nodes.push(qQ), this.offsets.push(FQ > 0 ? 1 : (qQ instanceof tQ ? qQ.text.length : qQ.children.length) << 1))
           }
         }
       }
       next() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return dd < 0 && (this.nextInner(-dd, -this.dir), dd = this.value.length), this.nextInner(dd, this.dir)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return QQ < 0 && (this.nextInner(-QQ, -this.dir), QQ = this.value.length), this.nextInner(QQ, this.dir)
       }
     }
-    class xd {
-      constructor(dd, Jd, kd) {
-        this.value = "", this.done = !1, this.cursor = new vd(dd, Jd > kd ? -1 : 1), this.pos = Jd > kd ? dd.length : 0, this.from = Math.min(Jd, kd), this.to = Math.max(Jd, kd)
+    class cQ {
+      constructor(QQ, FQ, wQ) {
+        this.value = "", this.done = !1, this.cursor = new pQ(QQ, FQ > wQ ? -1 : 1), this.pos = FQ > wQ ? QQ.length : 0, this.from = Math.min(FQ, wQ), this.to = Math.max(FQ, wQ)
       }
-      nextInner(dd, Jd) {
-        if (Jd < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        dd += Math.max(0, Jd < 0 ? this.pos - this.to : this.from - this.pos);
-        let kd = Jd < 0 ? this.pos - this.from : this.to - this.pos;
-        dd > kd && (dd = kd), kd -= dd;
+      nextInner(QQ, FQ) {
+        if (FQ < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        QQ += Math.max(0, FQ < 0 ? this.pos - this.to : this.from - this.pos);
+        let wQ = FQ < 0 ? this.pos - this.from : this.to - this.pos;
+        QQ > wQ && (QQ = wQ), wQ -= QQ;
         let {
-          value: pd
-        } = this.cursor.next(dd);
-        return this.pos += (pd.length + dd) * Jd, this.value = pd.length <= kd ? pd : Jd < 0 ? pd.slice(pd.length - kd) : pd.slice(0, kd), this.done = !this.value, this
+          value: LQ
+        } = this.cursor.next(QQ);
+        return this.pos += (LQ.length + QQ) * FQ, this.value = LQ.length <= wQ ? LQ : FQ < 0 ? LQ.slice(LQ.length - wQ) : LQ.slice(0, wQ), this.done = !this.value, this
       }
       next() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return dd < 0 ? dd = Math.max(dd, this.from - this.pos) : dd > 0 && (dd = Math.min(dd, this.to - this.pos)), this.nextInner(dd, this.cursor.dir)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return QQ < 0 ? QQ = Math.max(QQ, this.from - this.pos) : QQ > 0 && (QQ = Math.min(QQ, this.to - this.pos)), this.nextInner(QQ, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class qd {
-      constructor(dd) {
-        this.inner = dd, this.afterBreak = !0, this.value = "", this.done = !1
+    class CQ {
+      constructor(QQ) {
+        this.inner = QQ, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: Jd,
-            lineBreak: kd,
-            value: pd
-          } = this.inner.next(dd);
-        return Jd && this.afterBreak ? (this.value = "", this.afterBreak = !1) : Jd ? (this.done = !0, this.value = "") : kd ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = pd, this.afterBreak = !1), this
+            done: FQ,
+            lineBreak: wQ,
+            value: LQ
+          } = this.inner.next(QQ);
+        return FQ && this.afterBreak ? (this.value = "", this.afterBreak = !1) : FQ ? (this.done = !0, this.value = "") : wQ ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = LQ, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (Od.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (AQ.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, vd.prototype[Symbol.iterator] = xd.prototype[Symbol.iterator] = qd.prototype[Symbol.iterator] = function() {
+    }, pQ.prototype[Symbol.iterator] = cQ.prototype[Symbol.iterator] = CQ.prototype[Symbol.iterator] = function() {
       return this
     });
-    class Bd {
-      constructor(dd, Jd, kd, pd) {
-        this.from = dd, this.to = Jd, this.number = kd, this.text = pd
+    class SQ {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.from = QQ, this.to = FQ, this.number = wQ, this.text = LQ
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function sd(dd, Jd, kd) {
-      return [Jd = Math.max(0, Math.min(dd.length, Jd)), Math.max(Jd, Math.min(dd.length, kd))]
+    function iQ(QQ, FQ, wQ) {
+      return [FQ = Math.max(0, Math.min(QQ.length, FQ)), Math.max(FQ, Math.min(QQ.length, wQ))]
     }
 
-    function ad(dd, Jd) {
-      return gd(dd, Jd, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function WQ(QQ, FQ) {
+      return vQ(QQ, FQ, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function Md(dd, Jd) {
-      let kd = dd.charCodeAt(Jd);
-      if (!((pd = kd) >= 55296 && pd < 56320) || Jd + 1 == dd.length) return kd;
-      var pd;
-      let Nd = dd.charCodeAt(Jd + 1);
-      return function(dd) {
-        return dd >= 56320 && dd < 57344
-      }(Nd) ? Nd - 56320 + (kd - 55296 << 10) + 65536 : kd
+    function RQ(QQ, FQ) {
+      let wQ = QQ.charCodeAt(FQ);
+      if (!((LQ = wQ) >= 55296 && LQ < 56320) || FQ + 1 == QQ.length) return wQ;
+      var LQ;
+      let qQ = QQ.charCodeAt(FQ + 1);
+      return function(QQ) {
+        return QQ >= 56320 && QQ < 57344
+      }(qQ) ? qQ - 56320 + (wQ - 55296 << 10) + 65536 : wQ
     }
 
-    function Fd(dd) {
-      return dd <= 65535 ? String.fromCharCode(dd) : (dd -= 65536, String.fromCharCode(55296 + (dd >> 10), 56320 + (1023 & dd)))
+    function OQ(QQ) {
+      return QQ <= 65535 ? String.fromCharCode(QQ) : (QQ -= 65536, String.fromCharCode(55296 + (QQ >> 10), 56320 + (1023 & QQ)))
     }
 
-    function Yd(dd) {
-      return dd < 65536 ? 1 : 2
+    function sQ(QQ) {
+      return QQ < 65536 ? 1 : 2
     }
-    const md = /\r\n?|\n/;
-    var bd = function(dd) {
-      return dd[dd.Simple = 0] = "Simple", dd[dd.TrackDel = 1] = "TrackDel", dd[dd.TrackBefore = 2] = "TrackBefore", dd[dd.TrackAfter = 3] = "TrackAfter", dd
-    }(bd || (bd = {}));
-    class Sd {
-      constructor(dd) {
-        this.sections = dd
+    const rQ = /\r\n?|\n/;
+    var IQ = function(QQ) {
+      return QQ[QQ.Simple = 0] = "Simple", QQ[QQ.TrackDel = 1] = "TrackDel", QQ[QQ.TrackBefore = 2] = "TrackBefore", QQ[QQ.TrackAfter = 3] = "TrackAfter", QQ
+    }(IQ || (IQ = {}));
+    class UQ {
+      constructor(QQ) {
+        this.sections = QQ
       }
       get length() {
-        let dd = 0;
-        for (let Jd = 0; Jd < this.sections.length; Jd += 2) dd += this.sections[Jd];
-        return dd
+        let QQ = 0;
+        for (let FQ = 0; FQ < this.sections.length; FQ += 2) QQ += this.sections[FQ];
+        return QQ
       }
       get newLength() {
-        let dd = 0;
-        for (let Jd = 0; Jd < this.sections.length; Jd += 2) {
-          let kd = this.sections[Jd + 1];
-          dd += kd < 0 ? this.sections[Jd] : kd
+        let QQ = 0;
+        for (let FQ = 0; FQ < this.sections.length; FQ += 2) {
+          let wQ = this.sections[FQ + 1];
+          QQ += wQ < 0 ? this.sections[FQ] : wQ
         }
-        return dd
+        return QQ
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(dd) {
-        for (let Jd = 0, kd = 0, pd = 0; Jd < this.sections.length;) {
-          let Nd = this.sections[Jd++],
-            Wd = this.sections[Jd++];
-          Wd < 0 ? (dd(kd, pd, Nd), pd += Nd) : pd += Wd, kd += Nd
+      iterGaps(QQ) {
+        for (let FQ = 0, wQ = 0, LQ = 0; FQ < this.sections.length;) {
+          let qQ = this.sections[FQ++],
+            oQ = this.sections[FQ++];
+          oQ < 0 ? (QQ(wQ, LQ, qQ), LQ += qQ) : LQ += oQ, wQ += qQ
         }
       }
-      iterChangedRanges(dd) {
-        nd(this, dd, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(QQ) {
+        zQ(this, QQ, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let dd = [];
-        for (let Jd = 0; Jd < this.sections.length;) {
-          let kd = this.sections[Jd++],
-            pd = this.sections[Jd++];
-          pd < 0 ? dd.push(kd, pd) : dd.push(pd, kd)
+        let QQ = [];
+        for (let FQ = 0; FQ < this.sections.length;) {
+          let wQ = this.sections[FQ++],
+            LQ = this.sections[FQ++];
+          LQ < 0 ? QQ.push(wQ, LQ) : QQ.push(LQ, wQ)
         }
-        return new Sd(dd)
+        return new UQ(QQ)
       }
-      composeDesc(dd) {
-        return this.empty ? dd : dd.empty ? this : yd(this, dd)
+      composeDesc(QQ) {
+        return this.empty ? QQ : QQ.empty ? this : jQ(this, QQ)
       }
-      mapDesc(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return dd.empty ? this : Ud(this, dd, Jd)
+      mapDesc(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return QQ.empty ? this : lQ(this, QQ, FQ)
       }
-      mapPos(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bd.Simple,
-          pd = 0,
-          Nd = 0;
-        for (let Wd = 0; Wd < this.sections.length;) {
-          let Pd = this.sections[Wd++],
-            Zd = this.sections[Wd++],
-            gd = pd + Pd;
-          if (Zd < 0) {
-            if (gd > dd) return Nd + (dd - pd);
-            Nd += Pd
+      mapPos(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : IQ.Simple,
+          LQ = 0,
+          qQ = 0;
+        for (let oQ = 0; oQ < this.sections.length;) {
+          let DQ = this.sections[oQ++],
+            kQ = this.sections[oQ++],
+            vQ = LQ + DQ;
+          if (kQ < 0) {
+            if (vQ > QQ) return qQ + (QQ - LQ);
+            qQ += DQ
           } else {
-            if (kd != bd.Simple && gd >= dd && (kd == bd.TrackDel && pd < dd && gd > dd || kd == bd.TrackBefore && pd < dd || kd == bd.TrackAfter && gd > dd)) return null;
-            if (gd > dd || gd == dd && Jd < 0 && !Pd) return dd == pd || Jd < 0 ? Nd : Nd + Zd;
-            Nd += Zd
+            if (wQ != IQ.Simple && vQ >= QQ && (wQ == IQ.TrackDel && LQ < QQ && vQ > QQ || wQ == IQ.TrackBefore && LQ < QQ || wQ == IQ.TrackAfter && vQ > QQ)) return null;
+            if (vQ > QQ || vQ == QQ && FQ < 0 && !DQ) return QQ == LQ || FQ < 0 ? qQ : qQ + kQ;
+            qQ += kQ
           }
-          pd = gd
+          LQ = vQ
         }
-        if (dd > pd) throw new RangeError(`Position ${dd} is out of range for changeset of length ${pd}`);
-        return Nd
+        if (QQ > LQ) throw new RangeError(`Position ${QQ} is out of range for changeset of length ${LQ}`);
+        return qQ
       }
-      touchesRange(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd;
-        for (let kd = 0, pd = 0; kd < this.sections.length && pd <= Jd;) {
-          let Nd = pd + this.sections[kd++];
-          if (this.sections[kd++] >= 0 && pd <= Jd && Nd >= dd) return !(pd < dd && Nd > Jd) || "cover";
-          pd = Nd
+      touchesRange(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QQ;
+        for (let wQ = 0, LQ = 0; wQ < this.sections.length && LQ <= FQ;) {
+          let qQ = LQ + this.sections[wQ++];
+          if (this.sections[wQ++] >= 0 && LQ <= FQ && qQ >= QQ) return !(LQ < QQ && qQ > FQ) || "cover";
+          LQ = qQ
         }
         return !1
       }
       toString() {
-        let dd = "";
-        for (let Jd = 0; Jd < this.sections.length;) {
-          let kd = this.sections[Jd++],
-            pd = this.sections[Jd++];
-          dd += (dd ? " " : "") + kd + (pd >= 0 ? ":" + pd : "")
+        let QQ = "";
+        for (let FQ = 0; FQ < this.sections.length;) {
+          let wQ = this.sections[FQ++],
+            LQ = this.sections[FQ++];
+          QQ += (QQ ? " " : "") + wQ + (LQ >= 0 ? ":" + LQ : "")
         }
-        return dd
+        return QQ
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(dd) {
-        if (!Array.isArray(dd) || dd.length % 2 || dd.some((dd => "number" != typeof dd))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new Sd(dd)
+      static fromJSON(QQ) {
+        if (!Array.isArray(QQ) || QQ.length % 2 || QQ.some((QQ => "number" != typeof QQ))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new UQ(QQ)
       }
-      static create(dd) {
-        return new Sd(dd)
+      static create(QQ) {
+        return new UQ(QQ)
       }
     }
-    class jd extends Sd {
-      constructor(dd, Jd) {
-        super(dd), this.inserted = Jd
+    class NQ extends UQ {
+      constructor(QQ, FQ) {
+        super(QQ), this.inserted = FQ
       }
-      apply(dd) {
-        if (this.length != dd.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return nd(this, ((Jd, kd, pd, Nd, Wd) => dd = dd.replace(pd, pd + (kd - Jd), Wd)), !1), dd
+      apply(QQ) {
+        if (this.length != QQ.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return zQ(this, ((FQ, wQ, LQ, qQ, oQ) => QQ = QQ.replace(LQ, LQ + (wQ - FQ), oQ)), !1), QQ
       }
-      mapDesc(dd) {
-        return Ud(this, dd, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(QQ) {
+        return lQ(this, QQ, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(dd) {
-        let Jd = this.sections.slice(),
-          kd = [];
-        for (let pd = 0, Nd = 0; pd < Jd.length; pd += 2) {
-          let Wd = Jd[pd],
-            Pd = Jd[pd + 1];
-          if (Pd >= 0) {
-            Jd[pd] = Pd, Jd[pd + 1] = Wd;
-            let Zd = pd >> 1;
-            for (; kd.length < Zd;) kd.push(Od.empty);
-            kd.push(Wd ? dd.slice(Nd, Nd + Wd) : Od.empty)
+      invert(QQ) {
+        let FQ = this.sections.slice(),
+          wQ = [];
+        for (let LQ = 0, qQ = 0; LQ < FQ.length; LQ += 2) {
+          let oQ = FQ[LQ],
+            DQ = FQ[LQ + 1];
+          if (DQ >= 0) {
+            FQ[LQ] = DQ, FQ[LQ + 1] = oQ;
+            let kQ = LQ >> 1;
+            for (; wQ.length < kQ;) wQ.push(AQ.empty);
+            wQ.push(oQ ? QQ.slice(qQ, qQ + oQ) : AQ.empty)
           }
-          Nd += Wd
+          qQ += oQ
         }
-        return new jd(Jd, kd)
+        return new NQ(FQ, wQ)
       }
-      compose(dd) {
-        return this.empty ? dd : dd.empty ? this : yd(this, dd, !0)
+      compose(QQ) {
+        return this.empty ? QQ : QQ.empty ? this : jQ(this, QQ, !0)
       }
-      map(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return dd.empty ? this : Ud(this, dd, Jd, !0)
+      map(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return QQ.empty ? this : lQ(this, QQ, FQ, !0)
       }
-      iterChanges(dd) {
-        nd(this, dd, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(QQ) {
+        zQ(this, QQ, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return Sd.create(this.sections)
+        return UQ.create(this.sections)
       }
-      filter(dd) {
-        let Jd = [],
-          kd = [],
-          pd = [],
-          Nd = new Dd(this);
-        dd: for (let Wd = 0, Pd = 0;;) {
-          let Zd = Wd == dd.length ? 1e9 : dd[Wd++];
-          for (; Pd < Zd || Pd == Zd && 0 == Nd.len;) {
-            if (Nd.done) break dd;
-            let dd = Math.min(Nd.len, Zd - Pd);
-            Xd(pd, dd, -1);
-            let Wd = -1 == Nd.ins ? -1 : 0 == Nd.off ? Nd.ins : 0;
-            Xd(Jd, dd, Wd), Wd > 0 && fd(kd, Jd, Nd.text), Nd.forward(dd), Pd += dd
+      filter(QQ) {
+        let FQ = [],
+          wQ = [],
+          LQ = [],
+          qQ = new aQ(this);
+        QQ: for (let oQ = 0, DQ = 0;;) {
+          let kQ = oQ == QQ.length ? 1e9 : QQ[oQ++];
+          for (; DQ < kQ || DQ == kQ && 0 == qQ.len;) {
+            if (qQ.done) break QQ;
+            let QQ = Math.min(qQ.len, kQ - DQ);
+            TQ(LQ, QQ, -1);
+            let oQ = -1 == qQ.ins ? -1 : 0 == qQ.off ? qQ.ins : 0;
+            TQ(FQ, QQ, oQ), oQ > 0 && KQ(wQ, FQ, qQ.text), qQ.forward(QQ), DQ += QQ
           }
-          let gd = dd[Wd++];
-          for (; Pd < gd;) {
-            if (Nd.done) break dd;
-            let dd = Math.min(Nd.len, gd - Pd);
-            Xd(Jd, dd, -1), Xd(pd, dd, -1 == Nd.ins ? -1 : 0 == Nd.off ? Nd.ins : 0), Nd.forward(dd), Pd += dd
+          let vQ = QQ[oQ++];
+          for (; DQ < vQ;) {
+            if (qQ.done) break QQ;
+            let QQ = Math.min(qQ.len, vQ - DQ);
+            TQ(FQ, QQ, -1), TQ(LQ, QQ, -1 == qQ.ins ? -1 : 0 == qQ.off ? qQ.ins : 0), qQ.forward(QQ), DQ += QQ
           }
         }
         return {
-          changes: new jd(Jd, kd),
-          filtered: Sd.create(pd)
+          changes: new NQ(FQ, wQ),
+          filtered: UQ.create(LQ)
         }
       }
       toJSON() {
-        let dd = [];
-        for (let Jd = 0; Jd < this.sections.length; Jd += 2) {
-          let kd = this.sections[Jd],
-            pd = this.sections[Jd + 1];
-          pd < 0 ? dd.push(kd) : 0 == pd ? dd.push([kd]) : dd.push([kd].concat(this.inserted[Jd >> 1].toJSON()))
+        let QQ = [];
+        for (let FQ = 0; FQ < this.sections.length; FQ += 2) {
+          let wQ = this.sections[FQ],
+            LQ = this.sections[FQ + 1];
+          LQ < 0 ? QQ.push(wQ) : 0 == LQ ? QQ.push([wQ]) : QQ.push([wQ].concat(this.inserted[FQ >> 1].toJSON()))
         }
-        return dd
+        return QQ
       }
-      static of (dd, Jd, kd) {
-        let pd = [],
-          Nd = [],
-          Wd = 0,
-          Pd = null;
+      static of (QQ, FQ, wQ) {
+        let LQ = [],
+          qQ = [],
+          oQ = 0,
+          DQ = null;
 
-        function Zd() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !pd.length) return;
-          Wd < Jd && Xd(pd, Jd - Wd, -1);
-          let dd = new jd(pd, Nd);
-          Pd = Pd ? Pd.compose(dd.map(Pd)) : dd, pd = [], Nd = [], Wd = 0
+        function kQ() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !LQ.length) return;
+          oQ < FQ && TQ(LQ, FQ - oQ, -1);
+          let QQ = new NQ(LQ, qQ);
+          DQ = DQ ? DQ.compose(QQ.map(DQ)) : QQ, LQ = [], qQ = [], oQ = 0
         }
-        return function dd(gd) {
-          if (Array.isArray(gd))
-            for (let Jd of gd) dd(Jd);
-          else if (gd instanceof jd) {
-            if (gd.length != Jd) throw new RangeError(`Mismatched change set length (got ${gd.length}, expected ${Jd})`);
-            Zd(), Pd = Pd ? Pd.compose(gd.map(Pd)) : gd
+        return function QQ(vQ) {
+          if (Array.isArray(vQ))
+            for (let FQ of vQ) QQ(FQ);
+          else if (vQ instanceof NQ) {
+            if (vQ.length != FQ) throw new RangeError(`Mismatched change set length (got ${vQ.length}, expected ${FQ})`);
+            kQ(), DQ = DQ ? DQ.compose(vQ.map(DQ)) : vQ
           } else {
             let {
-              from: dd,
-              to: Pd = dd,
-              insert: Cd
-            } = gd;
-            if (dd > Pd || dd < 0 || Pd > Jd) throw new RangeError(`Invalid change range ${dd} to ${Pd} (in doc of length ${Jd})`);
-            let Kd = Cd ? "string" == typeof Cd ? Od.of(Cd.split(kd || md)) : Cd : Od.empty,
-              od = Kd.length;
-            if (dd == Pd && 0 == od) return;
-            dd < Wd && Zd(), dd > Wd && Xd(pd, dd - Wd, -1), Xd(pd, Pd - dd, od), fd(Nd, pd, Kd), Wd = Pd
+              from: QQ,
+              to: DQ = QQ,
+              insert: mQ
+            } = vQ;
+            if (QQ > DQ || QQ < 0 || DQ > FQ) throw new RangeError(`Invalid change range ${QQ} to ${DQ} (in doc of length ${FQ})`);
+            let uQ = mQ ? "string" == typeof mQ ? AQ.of(mQ.split(wQ || rQ)) : mQ : AQ.empty,
+              HQ = uQ.length;
+            if (QQ == DQ && 0 == HQ) return;
+            QQ < oQ && kQ(), QQ > oQ && TQ(LQ, QQ - oQ, -1), TQ(LQ, DQ - QQ, HQ), KQ(qQ, LQ, uQ), oQ = DQ
           }
-        }(dd), Zd(!Pd), Pd
+        }(QQ), kQ(!DQ), DQ
       }
-      static empty(dd) {
-        return new jd(dd ? [dd, -1] : [], [])
+      static empty(QQ) {
+        return new NQ(QQ ? [QQ, -1] : [], [])
       }
-      static fromJSON(dd) {
-        if (!Array.isArray(dd)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let Jd = [],
-          kd = [];
-        for (let pd = 0; pd < dd.length; pd++) {
-          let Nd = dd[pd];
-          if ("number" == typeof Nd) Jd.push(Nd, -1);
+      static fromJSON(QQ) {
+        if (!Array.isArray(QQ)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let FQ = [],
+          wQ = [];
+        for (let LQ = 0; LQ < QQ.length; LQ++) {
+          let qQ = QQ[LQ];
+          if ("number" == typeof qQ) FQ.push(qQ, -1);
           else {
-            if (!Array.isArray(Nd) || "number" != typeof Nd[0] || Nd.some(((dd, Jd) => Jd && "string" != typeof dd))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == Nd.length) Jd.push(Nd[0], 0);
+            if (!Array.isArray(qQ) || "number" != typeof qQ[0] || qQ.some(((QQ, FQ) => FQ && "string" != typeof QQ))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == qQ.length) FQ.push(qQ[0], 0);
             else {
-              for (; kd.length < pd;) kd.push(Od.empty);
-              kd[pd] = Od.of(Nd.slice(1)), Jd.push(Nd[0], kd[pd].length)
+              for (; wQ.length < LQ;) wQ.push(AQ.empty);
+              wQ[LQ] = AQ.of(qQ.slice(1)), FQ.push(qQ[0], wQ[LQ].length)
             }
           }
         }
-        return new jd(Jd, kd)
+        return new NQ(FQ, wQ)
       }
-      static createSet(dd, Jd) {
-        return new jd(dd, Jd)
+      static createSet(QQ, FQ) {
+        return new NQ(QQ, FQ)
       }
     }
 
-    function Xd(dd, Jd, kd) {
-      let pd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == Jd && kd <= 0) return;
-      let Nd = dd.length - 2;
-      Nd >= 0 && kd <= 0 && kd == dd[Nd + 1] ? dd[Nd] += Jd : Nd >= 0 && 0 == Jd && 0 == dd[Nd] ? dd[Nd + 1] += kd : pd ? (dd[Nd] += Jd, dd[Nd + 1] += kd) : dd.push(Jd, kd)
+    function TQ(QQ, FQ, wQ) {
+      let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == FQ && wQ <= 0) return;
+      let qQ = QQ.length - 2;
+      qQ >= 0 && wQ <= 0 && wQ == QQ[qQ + 1] ? QQ[qQ] += FQ : qQ >= 0 && 0 == FQ && 0 == QQ[qQ] ? QQ[qQ + 1] += wQ : LQ ? (QQ[qQ] += FQ, QQ[qQ + 1] += wQ) : QQ.push(FQ, wQ)
     }
 
-    function fd(dd, Jd, kd) {
-      if (0 == kd.length) return;
-      let pd = Jd.length - 2 >> 1;
-      if (pd < dd.length) dd[dd.length - 1] = dd[dd.length - 1].append(kd);
+    function KQ(QQ, FQ, wQ) {
+      if (0 == wQ.length) return;
+      let LQ = FQ.length - 2 >> 1;
+      if (LQ < QQ.length) QQ[QQ.length - 1] = QQ[QQ.length - 1].append(wQ);
       else {
-        for (; dd.length < pd;) dd.push(Od.empty);
-        dd.push(kd)
+        for (; QQ.length < LQ;) QQ.push(AQ.empty);
+        QQ.push(wQ)
       }
     }
 
-    function nd(dd, Jd, kd) {
-      let pd = dd.inserted;
-      for (let Nd = 0, Wd = 0, Pd = 0; Pd < dd.sections.length;) {
-        let Zd = dd.sections[Pd++],
-          gd = dd.sections[Pd++];
-        if (gd < 0) Nd += Zd, Wd += Zd;
+    function zQ(QQ, FQ, wQ) {
+      let LQ = QQ.inserted;
+      for (let qQ = 0, oQ = 0, DQ = 0; DQ < QQ.sections.length;) {
+        let kQ = QQ.sections[DQ++],
+          vQ = QQ.sections[DQ++];
+        if (vQ < 0) qQ += kQ, oQ += kQ;
         else {
-          let Cd = Nd,
-            Kd = Wd,
-            od = Od.empty;
-          for (; Cd += Zd, Kd += gd, gd && pd && (od = od.append(pd[Pd - 2 >> 1])), !(kd || Pd == dd.sections.length || dd.sections[Pd + 1] < 0);) Zd = dd.sections[Pd++], gd = dd.sections[Pd++];
-          Jd(Nd, Cd, Wd, Kd, od), Nd = Cd, Wd = Kd
+          let mQ = qQ,
+            uQ = oQ,
+            HQ = AQ.empty;
+          for (; mQ += kQ, uQ += vQ, vQ && LQ && (HQ = HQ.append(LQ[DQ - 2 >> 1])), !(wQ || DQ == QQ.sections.length || QQ.sections[DQ + 1] < 0);) kQ = QQ.sections[DQ++], vQ = QQ.sections[DQ++];
+          FQ(qQ, mQ, oQ, uQ, HQ), qQ = mQ, oQ = uQ
         }
       }
     }
 
-    function Ud(dd, Jd, kd) {
-      let pd = [],
-        Nd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        Wd = new Dd(dd),
-        Pd = new Dd(Jd),
-        Zd = 0;
-      for (let gd = -1;;) {
-        if (++Zd > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (Wd.done && Pd.len || Pd.done && Wd.len) throw new Error("Mismatched change set lengths");
-        if (-1 == Wd.ins && -1 == Pd.ins) {
-          let dd = Math.min(Wd.len, Pd.len);
-          Xd(pd, dd, -1), Wd.forward(dd), Pd.forward(dd)
-        } else if (Pd.ins >= 0 && (Wd.ins < 0 || gd == Wd.i || 0 == Wd.off && (Pd.len < Wd.len || Pd.len == Wd.len && !kd))) {
-          let dd = Pd.len;
-          for (Xd(pd, Pd.ins, -1); dd;) {
-            if (++Zd > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let Jd = Math.min(Wd.len, dd);
-            Wd.ins >= 0 && gd < Wd.i && Wd.len <= Jd && (Xd(pd, 0, Wd.ins), Nd && fd(Nd, pd, Wd.text), gd = Wd.i), Wd.forward(Jd), dd -= Jd
+    function lQ(QQ, FQ, wQ) {
+      let LQ = [],
+        qQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        oQ = new aQ(QQ),
+        DQ = new aQ(FQ),
+        kQ = 0;
+      for (let vQ = -1;;) {
+        if (++kQ > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (oQ.done && DQ.len || DQ.done && oQ.len) throw new Error("Mismatched change set lengths");
+        if (-1 == oQ.ins && -1 == DQ.ins) {
+          let QQ = Math.min(oQ.len, DQ.len);
+          TQ(LQ, QQ, -1), oQ.forward(QQ), DQ.forward(QQ)
+        } else if (DQ.ins >= 0 && (oQ.ins < 0 || vQ == oQ.i || 0 == oQ.off && (DQ.len < oQ.len || DQ.len == oQ.len && !wQ))) {
+          let QQ = DQ.len;
+          for (TQ(LQ, DQ.ins, -1); QQ;) {
+            if (++kQ > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let FQ = Math.min(oQ.len, QQ);
+            oQ.ins >= 0 && vQ < oQ.i && oQ.len <= FQ && (TQ(LQ, 0, oQ.ins), qQ && KQ(qQ, LQ, oQ.text), vQ = oQ.i), oQ.forward(FQ), QQ -= FQ
           }
-          Pd.next()
+          DQ.next()
         } else {
-          if (!(Wd.ins >= 0)) {
-            if (Wd.done && Pd.done) return Nd ? jd.createSet(pd, Nd) : Sd.create(pd);
+          if (!(oQ.ins >= 0)) {
+            if (oQ.done && DQ.done) return qQ ? NQ.createSet(LQ, qQ) : UQ.create(LQ);
             throw new Error("Mismatched change set lengths")
           } {
-            let dd = 0,
-              Jd = Wd.len;
-            for (; Jd;) {
-              if (++Zd > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == Pd.ins) {
-                let kd = Math.min(Jd, Pd.len);
-                dd += kd, Jd -= kd, Pd.forward(kd)
+            let QQ = 0,
+              FQ = oQ.len;
+            for (; FQ;) {
+              if (++kQ > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == DQ.ins) {
+                let wQ = Math.min(FQ, DQ.len);
+                QQ += wQ, FQ -= wQ, DQ.forward(wQ)
               } else {
-                if (!(0 == Pd.ins && Pd.len < Jd)) break;
-                Jd -= Pd.len, Pd.next()
+                if (!(0 == DQ.ins && DQ.len < FQ)) break;
+                FQ -= DQ.len, DQ.next()
               }
             }
-            Xd(pd, dd, gd < Wd.i ? Wd.ins : 0), Nd && gd < Wd.i && fd(Nd, pd, Wd.text), gd = Wd.i, Wd.forward(Wd.len - Jd)
+            TQ(LQ, QQ, vQ < oQ.i ? oQ.ins : 0), qQ && vQ < oQ.i && KQ(qQ, LQ, oQ.text), vQ = oQ.i, oQ.forward(oQ.len - FQ)
           }
         }
       }
     }
 
-    function yd(dd, Jd) {
-      let kd = [],
-        pd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        Nd = new Dd(dd),
-        Wd = new Dd(Jd),
-        Pd = 0;
-      for (let Zd = !1;;) {
-        if (++Pd > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (Nd.done && Wd.done) return pd ? jd.createSet(kd, pd) : Sd.create(kd);
-        if (0 == Nd.ins) Xd(kd, Nd.len, 0, Zd), Nd.next();
-        else if (0 != Wd.len || Wd.done) {
-          if (Nd.done || Wd.done) throw new Error("Mismatched change set lengths");
+    function jQ(QQ, FQ) {
+      let wQ = [],
+        LQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        qQ = new aQ(QQ),
+        oQ = new aQ(FQ),
+        DQ = 0;
+      for (let kQ = !1;;) {
+        if (++DQ > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (qQ.done && oQ.done) return LQ ? NQ.createSet(wQ, LQ) : UQ.create(wQ);
+        if (0 == qQ.ins) TQ(wQ, qQ.len, 0, kQ), qQ.next();
+        else if (0 != oQ.len || oQ.done) {
+          if (qQ.done || oQ.done) throw new Error("Mismatched change set lengths");
           {
-            let dd = Math.min(Nd.len2, Wd.len),
-              Jd = kd.length;
-            if (-1 == Nd.ins) {
-              let Jd = -1 == Wd.ins ? -1 : Wd.off ? 0 : Wd.ins;
-              Xd(kd, dd, Jd, Zd), pd && Jd && fd(pd, kd, Wd.text)
-            } else - 1 == Wd.ins ? (Xd(kd, Nd.off ? 0 : Nd.len, dd, Zd), pd && fd(pd, kd, Nd.textBit(dd))) : (Xd(kd, Nd.off ? 0 : Nd.len, Wd.off ? 0 : Wd.ins, Zd), pd && !Wd.off && fd(pd, kd, Wd.text));
-            Zd = (Nd.ins > dd || Wd.ins >= 0 && Wd.len > dd) && (Zd || kd.length > Jd), Nd.forward2(dd), Wd.forward(dd)
+            let QQ = Math.min(qQ.len2, oQ.len),
+              FQ = wQ.length;
+            if (-1 == qQ.ins) {
+              let FQ = -1 == oQ.ins ? -1 : oQ.off ? 0 : oQ.ins;
+              TQ(wQ, QQ, FQ, kQ), LQ && FQ && KQ(LQ, wQ, oQ.text)
+            } else - 1 == oQ.ins ? (TQ(wQ, qQ.off ? 0 : qQ.len, QQ, kQ), LQ && KQ(LQ, wQ, qQ.textBit(QQ))) : (TQ(wQ, qQ.off ? 0 : qQ.len, oQ.off ? 0 : oQ.ins, kQ), LQ && !oQ.off && KQ(LQ, wQ, oQ.text));
+            kQ = (qQ.ins > QQ || oQ.ins >= 0 && oQ.len > QQ) && (kQ || wQ.length > FQ), qQ.forward2(QQ), oQ.forward(QQ)
           }
-        } else Xd(kd, 0, Wd.ins, Zd), pd && fd(pd, kd, Wd.text), Wd.next()
+        } else TQ(wQ, 0, oQ.ins, kQ), LQ && KQ(LQ, wQ, oQ.text), oQ.next()
       }
     }
-    class Dd {
-      constructor(dd) {
-        this.set = dd, this.i = 0, this.next()
+    class aQ {
+      constructor(QQ) {
+        this.set = QQ, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: dd
+          sections: QQ
         } = this.set;
-        this.i < dd.length ? (this.len = dd[this.i++], this.ins = dd[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < QQ.length ? (this.len = QQ[this.i++], this.ins = QQ[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: dd
-        } = this.set, Jd = this.i - 2 >> 1;
-        return Jd >= dd.length ? Od.empty : dd[Jd]
+          inserted: QQ
+        } = this.set, FQ = this.i - 2 >> 1;
+        return FQ >= QQ.length ? AQ.empty : QQ[FQ]
       }
-      textBit(dd) {
+      textBit(QQ) {
         let {
-          inserted: Jd
-        } = this.set, kd = this.i - 2 >> 1;
-        return kd >= Jd.length && !dd ? Od.empty : Jd[kd].slice(this.off, null == dd ? void 0 : this.off + dd)
+          inserted: FQ
+        } = this.set, wQ = this.i - 2 >> 1;
+        return wQ >= FQ.length && !QQ ? AQ.empty : FQ[wQ].slice(this.off, null == QQ ? void 0 : this.off + QQ)
       }
-      forward(dd) {
-        dd == this.len ? this.next() : (this.len -= dd, this.off += dd)
+      forward(QQ) {
+        QQ == this.len ? this.next() : (this.len -= QQ, this.off += QQ)
       }
-      forward2(dd) {
-        -1 == this.ins ? this.forward(dd) : dd == this.ins ? this.next() : (this.ins -= dd, this.off += dd)
+      forward2(QQ) {
+        -1 == this.ins ? this.forward(QQ) : QQ == this.ins ? this.next() : (this.ins -= QQ, this.off += QQ)
       }
     }
-    class Td {
-      constructor(dd, Jd, kd) {
-        this.from = dd, this.to = Jd, this.flags = kd
+    class XQ {
+      constructor(QQ, FQ, wQ) {
+        this.from = QQ, this.to = FQ, this.flags = wQ
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let dd = 7 & this.flags;
-        return 7 == dd ? null : dd
+        let QQ = 7 & this.flags;
+        return 7 == QQ ? null : QQ
       }
       get goalColumn() {
-        let dd = this.flags >> 6;
-        return 16777215 == dd ? void 0 : dd
+        let QQ = this.flags >> 6;
+        return 16777215 == QQ ? void 0 : QQ
       }
-      map(dd) {
-        let Jd, kd, pd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? Jd = kd = dd.mapPos(this.from, pd) : (Jd = dd.mapPos(this.from, 1), kd = dd.mapPos(this.to, -1)), Jd == this.from && kd == this.to ? this : new Td(Jd, kd, this.flags)
+      map(QQ) {
+        let FQ, wQ, LQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? FQ = wQ = QQ.mapPos(this.from, LQ) : (FQ = QQ.mapPos(this.from, 1), wQ = QQ.mapPos(this.to, -1)), FQ == this.from && wQ == this.to ? this : new XQ(FQ, wQ, this.flags)
       }
-      extend(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (dd <= this.anchor && Jd >= this.anchor) return Ed.range(dd, Jd, void 0, void 0, kd);
-        let pd = Math.abs(dd - this.anchor) > Math.abs(Jd - this.anchor) ? dd : Jd;
-        return Ed.range(this.anchor, pd, void 0, void 0, kd)
+      extend(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QQ,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (QQ <= this.anchor && FQ >= this.anchor) return fQ.range(QQ, FQ, void 0, void 0, wQ);
+        let LQ = Math.abs(QQ - this.anchor) > Math.abs(FQ - this.anchor) ? QQ : FQ;
+        return fQ.range(this.anchor, LQ, void 0, void 0, wQ)
       }
-      eq(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == dd.anchor && this.head == dd.head && this.goalColumn == dd.goalColumn && (!Jd || !this.empty || this.assoc == dd.assoc)
+      eq(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == QQ.anchor && this.head == QQ.head && this.goalColumn == QQ.goalColumn && (!FQ || !this.empty || this.assoc == QQ.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(dd) {
-        if (!dd || "number" != typeof dd.anchor || "number" != typeof dd.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return Ed.range(dd.anchor, dd.head)
+      static fromJSON(QQ) {
+        if (!QQ || "number" != typeof QQ.anchor || "number" != typeof QQ.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return fQ.range(QQ.anchor, QQ.head)
       }
-      static create(dd, Jd, kd) {
-        return new Td(dd, Jd, kd)
+      static create(QQ, FQ, wQ) {
+        return new XQ(QQ, FQ, wQ)
       }
     }
-    class Ed {
-      constructor(dd, Jd) {
-        this.UO = dd, this.mainIndex = Jd
+    class fQ {
+      constructor(QQ, FQ) {
+        this.PA = QQ, this.mainIndex = FQ
       }
-      map(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return dd.empty ? this : Ed.create(this.UO.map((kd => kd.map(dd, Jd))), this.mainIndex)
+      map(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return QQ.empty ? this : fQ.create(this.PA.map((wQ => wQ.map(QQ, FQ))), this.mainIndex)
       }
-      eq(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.UO.length != dd.UO.length || this.mainIndex != dd.mainIndex) return !1;
-        for (let kd = 0; kd < this.UO.length; kd++)
-          if (!this.UO[kd].eq(dd.UO[kd], Jd)) return !1;
+      eq(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.PA.length != QQ.PA.length || this.mainIndex != QQ.mainIndex) return !1;
+        for (let wQ = 0; wQ < this.PA.length; wQ++)
+          if (!this.PA[wQ].eq(QQ.PA[wQ], FQ)) return !1;
         return !0
       }
       get main() {
-        return this.UO[this.mainIndex]
+        return this.PA[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.UO.length ? this : new Ed([this.main], 0)
+        return 1 == this.PA.length ? this : new fQ([this.main], 0)
       }
-      addRange(dd) {
-        let Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return Ed.create([dd].concat(this.UO), Jd ? 0 : this.mainIndex + 1)
+      addRange(QQ) {
+        let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return fQ.create([QQ].concat(this.PA), FQ ? 0 : this.mainIndex + 1)
       }
-      replaceRange(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          kd = this.UO.slice();
-        return kd[Jd] = dd, Ed.create(kd, this.mainIndex)
+      replaceRange(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          wQ = this.PA.slice();
+        return wQ[FQ] = QQ, fQ.create(wQ, this.mainIndex)
       }
       toJSON() {
         return {
-          UO: this.UO.map((dd => dd.toJSON())),
+          PA: this.PA.map((QQ => QQ.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(dd) {
-        if (!dd || !Array.isArray(dd.UO) || "number" != typeof dd.main || dd.main >= dd.UO.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new Ed(dd.UO.map((dd => Td.fromJSON(dd))), dd.main)
+      static fromJSON(QQ) {
+        if (!QQ || !Array.isArray(QQ.PA) || "number" != typeof QQ.main || QQ.main >= QQ.PA.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new fQ(QQ.PA.map((QQ => XQ.fromJSON(QQ))), QQ.main)
       }
-      static single(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd;
-        return new Ed([Ed.range(dd, Jd)], 0)
+      static single(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QQ;
+        return new fQ([fQ.range(QQ, FQ)], 0)
       }
-      static create(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == dd.length) throw new RangeError("A selection needs at least one range");
-        for (let kd = 0, pd = 0; pd < dd.length; pd++) {
-          let Nd = dd[pd];
-          if (Nd.empty ? Nd.from <= kd : Nd.from < kd) return Ed.normalized(dd.slice(), Jd);
-          kd = Nd.to
+      static create(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == QQ.length) throw new RangeError("A selection needs at least one range");
+        for (let wQ = 0, LQ = 0; LQ < QQ.length; LQ++) {
+          let qQ = QQ[LQ];
+          if (qQ.empty ? qQ.from <= wQ : qQ.from < wQ) return fQ.normalized(QQ.slice(), FQ);
+          wQ = qQ.to
         }
-        return new Ed(dd, Jd)
+        return new fQ(QQ, FQ)
       }
-      static cursor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = arguments.length > 2 ? arguments[2] : void 0,
-          pd = arguments.length > 3 ? arguments[3] : void 0;
-        return Td.create(dd, dd, (0 == Jd ? 0 : Jd < 0 ? 8 : 16) | (null == kd ? 7 : Math.min(6, kd)) | (null !== pd && void 0 !== pd ? pd : 16777215) << 6)
+      static cursor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = arguments.length > 2 ? arguments[2] : void 0,
+          LQ = arguments.length > 3 ? arguments[3] : void 0;
+        return XQ.create(QQ, QQ, (0 == FQ ? 0 : FQ < 0 ? 8 : 16) | (null == wQ ? 7 : Math.min(6, wQ)) | (null !== LQ && void 0 !== LQ ? LQ : 16777215) << 6)
       }
-      static range(dd, Jd, kd, pd, Nd) {
-        let Wd = (null !== kd && void 0 !== kd ? kd : 16777215) << 6 | (null == pd ? 7 : Math.min(6, pd));
-        return Nd || dd == Jd || (Nd = Jd < dd ? 1 : -1), Jd < dd ? Td.create(Jd, dd, 48 | Wd) : Td.create(dd, Jd, (Nd ? Nd < 0 ? 8 : 16 : 0) | Wd)
+      static range(QQ, FQ, wQ, LQ, qQ) {
+        let oQ = (null !== wQ && void 0 !== wQ ? wQ : 16777215) << 6 | (null == LQ ? 7 : Math.min(6, LQ));
+        return qQ || QQ == FQ || (qQ = FQ < QQ ? 1 : -1), FQ < QQ ? XQ.create(FQ, QQ, 48 | oQ) : XQ.create(QQ, FQ, (qQ ? qQ < 0 ? 8 : 16 : 0) | oQ)
       }
-      static normalized(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          kd = dd[Jd];
-        dd.sort(((dd, Jd) => dd.from - Jd.from)), Jd = dd.indexOf(kd);
-        for (let pd = 1; pd < dd.length; pd++) {
-          let kd = dd[pd],
-            Nd = dd[pd - 1];
-          if (kd.empty ? kd.from <= Nd.to : kd.from < Nd.to) {
-            let Wd = Nd.from,
-              Pd = Math.max(kd.to, Nd.to);
-            pd <= Jd && Jd--, dd.splice(--pd, 2, kd.anchor > kd.head ? Ed.range(Pd, Wd) : Ed.range(Wd, Pd))
+      static normalized(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wQ = QQ[FQ];
+        QQ.sort(((QQ, FQ) => QQ.from - FQ.from)), FQ = QQ.indexOf(wQ);
+        for (let LQ = 1; LQ < QQ.length; LQ++) {
+          let wQ = QQ[LQ],
+            qQ = QQ[LQ - 1];
+          if (wQ.empty ? wQ.from <= qQ.to : wQ.from < qQ.to) {
+            let oQ = qQ.from,
+              DQ = Math.max(wQ.to, qQ.to);
+            LQ <= FQ && FQ--, QQ.splice(--LQ, 2, wQ.anchor > wQ.head ? fQ.range(DQ, oQ) : fQ.range(oQ, DQ))
           }
         }
-        return new Ed(dd, Jd)
+        return new fQ(QQ, FQ)
       }
     }
 
-    function cd(dd, Jd) {
-      for (let kd of dd.UO)
-        if (kd.to > Jd) throw new RangeError("Selection points outside of document")
+    function VQ(QQ, FQ) {
+      for (let wQ of QQ.PA)
+        if (wQ.to > FQ) throw new RangeError("Selection points outside of document")
     }
-    let hd = 0;
-    class rd {
-      constructor(dd, Jd, kd, pd, Nd) {
-        this.combine = dd, this.compareInput = Jd, this.compare = kd, this.isStatic = pd, this.id = hd++, this.default = dd([]), this.extensions = "function" == typeof Nd ? Nd(this) : Nd
+    let hQ = 0;
+    class JQ {
+      constructor(QQ, FQ, wQ, LQ, qQ) {
+        this.combine = QQ, this.compareInput = FQ, this.compare = wQ, this.isStatic = LQ, this.id = hQ++, this.default = QQ([]), this.extensions = "function" == typeof qQ ? qQ(this) : qQ
       }
       get reader() {
         return this
       }
       static define() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new rd(dd.combine || (dd => dd), dd.compareInput || ((dd, Jd) => dd === Jd), dd.compare || (dd.combine ? (dd, Jd) => dd === Jd : ud), !!dd.static, dd.enables)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new JQ(QQ.combine || (QQ => QQ), QQ.compareInput || ((QQ, FQ) => QQ === FQ), QQ.compare || (QQ.combine ? (QQ, FQ) => QQ === FQ : EQ), !!QQ.static, QQ.enables)
       }
-      of(dd) {
-        return new td([], this, 0, dd)
+      of(QQ) {
+        return new nQ([], this, 0, QQ)
       }
-      compute(dd, Jd) {
+      compute(QQ, FQ) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new td(dd, this, 1, Jd)
+        return new nQ(QQ, this, 1, FQ)
       }
-      computeN(dd, Jd) {
+      computeN(QQ, FQ) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new td(dd, this, 2, Jd)
+        return new nQ(QQ, this, 2, FQ)
       }
-      from(dd, Jd) {
-        return Jd || (Jd = dd => dd), this.compute([dd], (kd => Jd(kd.field(dd))))
+      from(QQ, FQ) {
+        return FQ || (FQ = QQ => QQ), this.compute([QQ], (wQ => FQ(wQ.field(QQ))))
       }
     }
 
-    function ud(dd, Jd) {
-      return dd == Jd || dd.length == Jd.length && dd.every(((dd, kd) => dd === Jd[kd]))
+    function EQ(QQ, FQ) {
+      return QQ == FQ || QQ.length == FQ.length && QQ.every(((QQ, wQ) => QQ === FQ[wQ]))
     }
-    class td {
-      constructor(dd, Jd, kd, pd) {
-        this.dependencies = dd, this.facet = Jd, this.type = kd, this.value = pd, this.id = hd++
+    class nQ {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.dependencies = QQ, this.facet = FQ, this.type = wQ, this.value = LQ, this.id = hQ++
       }
-      dynamicSlot(dd) {
-        var Jd;
-        let kd = this.value,
-          pd = this.facet.compareInput,
-          Nd = this.id,
-          Wd = dd[Nd] >> 1,
-          Pd = 2 == this.type,
-          Zd = !1,
-          gd = !1,
-          Cd = [];
-        for (let Kd of this.dependencies) "doc" == Kd ? Zd = !0 : "selection" == Kd ? gd = !0 : 0 == (1 & (null !== (Jd = dd[Kd.id]) && void 0 !== Jd ? Jd : 1)) && Cd.push(dd[Kd.id]);
+      dynamicSlot(QQ) {
+        var FQ;
+        let wQ = this.value,
+          LQ = this.facet.compareInput,
+          qQ = this.id,
+          oQ = QQ[qQ] >> 1,
+          DQ = 2 == this.type,
+          kQ = !1,
+          vQ = !1,
+          mQ = [];
+        for (let uQ of this.dependencies) "doc" == uQ ? kQ = !0 : "selection" == uQ ? vQ = !0 : 0 == (1 & (null !== (FQ = QQ[uQ.id]) && void 0 !== FQ ? FQ : 1)) && mQ.push(QQ[uQ.id]);
         return {
-          create: dd => (dd.values[Wd] = kd(dd), 1),
-          update(dd, Jd) {
-            if (Zd && Jd.docChanged || gd && (Jd.docChanged || Jd.selection) || zd(dd, Cd)) {
-              let Jd = kd(dd);
-              if (Pd ? !Vd(Jd, dd.values[Wd], pd) : !pd(Jd, dd.values[Wd])) return dd.values[Wd] = Jd, 1
+          create: QQ => (QQ.values[oQ] = wQ(QQ), 1),
+          update(QQ, FQ) {
+            if (kQ && FQ.docChanged || vQ && (FQ.docChanged || FQ.selection) || PQ(QQ, mQ)) {
+              let FQ = wQ(QQ);
+              if (DQ ? !gQ(FQ, QQ.values[oQ], LQ) : !LQ(FQ, QQ.values[oQ])) return QQ.values[oQ] = FQ, 1
             }
             return 0
           },
-          reconfigure: (dd, Jd) => {
-            let Zd, gd = Jd.config.address[Nd];
-            if (null != gd) {
-              let Nd = oJ(Jd, gd);
-              if (this.dependencies.every((kd => kd instanceof rd ? Jd.facet(kd) === dd.facet(kd) : !(kd instanceof Ad) || Jd.field(kd, !1) == dd.field(kd, !1))) || (Pd ? Vd(Zd = kd(dd), Nd, pd) : pd(Zd = kd(dd), Nd))) return dd.values[Wd] = Nd, 0
-            } else Zd = kd(dd);
-            return dd.values[Wd] = Zd, 1
+          reconfigure: (QQ, FQ) => {
+            let kQ, vQ = FQ.config.address[qQ];
+            if (null != vQ) {
+              let qQ = uF(FQ, vQ);
+              if (this.dependencies.every((wQ => wQ instanceof JQ ? FQ.facet(wQ) === QQ.facet(wQ) : !(wQ instanceof BQ) || FQ.field(wQ, !1) == QQ.field(wQ, !1))) || (DQ ? gQ(kQ = wQ(QQ), qQ, LQ) : LQ(kQ = wQ(QQ), qQ))) return QQ.values[oQ] = qQ, 0
+            } else kQ = wQ(QQ);
+            return QQ.values[oQ] = kQ, 1
           }
         }
       }
     }
 
-    function Vd(dd, Jd, kd) {
-      if (dd.length != Jd.length) return !1;
-      for (let pd = 0; pd < dd.length; pd++)
-        if (!kd(dd[pd], Jd[pd])) return !1;
+    function gQ(QQ, FQ, wQ) {
+      if (QQ.length != FQ.length) return !1;
+      for (let LQ = 0; LQ < QQ.length; LQ++)
+        if (!wQ(QQ[LQ], FQ[LQ])) return !1;
       return !0
     }
 
-    function zd(dd, Jd) {
-      let kd = !1;
-      for (let pd of Jd) 1 & KJ(dd, pd) && (kd = !0);
-      return kd
+    function PQ(QQ, FQ) {
+      let wQ = !1;
+      for (let LQ of FQ) 1 & mF(QQ, LQ) && (wQ = !0);
+      return wQ
     }
 
-    function Hd(dd, Jd, kd) {
-      let pd = kd.map((Jd => dd[Jd.id])),
-        Nd = kd.map((dd => dd.type)),
-        Wd = pd.filter((dd => !(1 & dd))),
-        Pd = dd[Jd.id] >> 1;
+    function ZQ(QQ, FQ, wQ) {
+      let LQ = wQ.map((FQ => QQ[FQ.id])),
+        qQ = wQ.map((QQ => QQ.type)),
+        oQ = LQ.filter((QQ => !(1 & QQ))),
+        DQ = QQ[FQ.id] >> 1;
 
-      function Zd(dd) {
-        let kd = [];
-        for (let Jd = 0; Jd < pd.length; Jd++) {
-          let Wd = oJ(dd, pd[Jd]);
-          if (2 == Nd[Jd])
-            for (let dd of Wd) kd.push(dd);
-          else kd.push(Wd)
+      function kQ(QQ) {
+        let wQ = [];
+        for (let FQ = 0; FQ < LQ.length; FQ++) {
+          let oQ = uF(QQ, LQ[FQ]);
+          if (2 == qQ[FQ])
+            for (let QQ of oQ) wQ.push(QQ);
+          else wQ.push(oQ)
         }
-        return Jd.combine(kd)
+        return FQ.combine(wQ)
       }
       return {
-        create(dd) {
-          for (let Jd of pd) KJ(dd, Jd);
-          return dd.values[Pd] = Zd(dd), 1
+        create(QQ) {
+          for (let FQ of LQ) mF(QQ, FQ);
+          return QQ.values[DQ] = kQ(QQ), 1
         },
-        update(dd, kd) {
-          if (!zd(dd, Wd)) return 0;
-          let pd = Zd(dd);
-          return Jd.compare(pd, dd.values[Pd]) ? 0 : (dd.values[Pd] = pd, 1)
+        update(QQ, wQ) {
+          if (!PQ(QQ, oQ)) return 0;
+          let LQ = kQ(QQ);
+          return FQ.compare(LQ, QQ.values[DQ]) ? 0 : (QQ.values[DQ] = LQ, 1)
         },
-        reconfigure(dd, Nd) {
-          let Wd = zd(dd, pd),
-            gd = Nd.config.facets[Jd.id],
-            Cd = Nd.facet(Jd);
-          if (gd && !Wd && ud(kd, gd)) return dd.values[Pd] = Cd, 0;
-          let Kd = Zd(dd);
-          return Jd.compare(Kd, Cd) ? (dd.values[Pd] = Cd, 0) : (dd.values[Pd] = Kd, 1)
+        reconfigure(QQ, qQ) {
+          let oQ = PQ(QQ, LQ),
+            vQ = qQ.config.facets[FQ.id],
+            mQ = qQ.facet(FQ);
+          if (vQ && !oQ && EQ(wQ, vQ)) return QQ.values[DQ] = mQ, 0;
+          let uQ = kQ(QQ);
+          return FQ.compare(uQ, mQ) ? (QQ.values[DQ] = mQ, 0) : (QQ.values[DQ] = uQ, 1)
         }
       }
     }
-    const wd = rd.define({
+    const yQ = JQ.define({
       static: !0
     });
-    class Ad {
-      constructor(dd, Jd, kd, pd, Nd) {
-        this.id = dd, this.createF = Jd, this.updateF = kd, this.compareF = pd, this.spec = Nd, this.provides = void 0
+    class BQ {
+      constructor(QQ, FQ, wQ, LQ, qQ) {
+        this.id = QQ, this.createF = FQ, this.updateF = wQ, this.compareF = LQ, this.spec = qQ, this.provides = void 0
       }
-      static define(dd) {
-        let Jd = new Ad(hd++, dd.create, dd.update, dd.compare || ((dd, Jd) => dd === Jd), dd);
-        return dd.provide && (Jd.provides = dd.provide(Jd)), Jd
+      static define(QQ) {
+        let FQ = new BQ(hQ++, QQ.create, QQ.update, QQ.compare || ((QQ, FQ) => QQ === FQ), QQ);
+        return QQ.provide && (FQ.provides = QQ.provide(FQ)), FQ
       }
-      create(dd) {
-        let Jd = dd.facet(wd).find((dd => dd.field == this));
-        return ((null === Jd || void 0 === Jd ? void 0 : Jd.create) || this.createF)(dd)
+      create(QQ) {
+        let FQ = QQ.facet(yQ).find((QQ => QQ.field == this));
+        return ((null === FQ || void 0 === FQ ? void 0 : FQ.create) || this.createF)(QQ)
       }
-      slot(dd) {
-        let Jd = dd[this.id] >> 1;
+      slot(QQ) {
+        let FQ = QQ[this.id] >> 1;
         return {
-          create: dd => (dd.values[Jd] = this.create(dd), 1),
-          update: (dd, kd) => {
-            let pd = dd.values[Jd],
-              Nd = this.updateF(pd, kd);
-            return this.compareF(pd, Nd) ? 0 : (dd.values[Jd] = Nd, 1)
+          create: QQ => (QQ.values[FQ] = this.create(QQ), 1),
+          update: (QQ, wQ) => {
+            let LQ = QQ.values[FQ],
+              qQ = this.updateF(LQ, wQ);
+            return this.compareF(LQ, qQ) ? 0 : (QQ.values[FQ] = qQ, 1)
           },
-          reconfigure: (dd, kd) => {
-            let pd, Nd = dd.facet(wd),
-              Wd = kd.facet(wd);
-            return (pd = Nd.find((dd => dd.field == this))) && pd != Wd.find((dd => dd.field == this)) ? (dd.values[Jd] = pd.create(dd), 1) : null != kd.config.address[this.id] ? (dd.values[Jd] = kd.field(this), 0) : (dd.values[Jd] = this.create(dd), 1)
+          reconfigure: (QQ, wQ) => {
+            let LQ, qQ = QQ.facet(yQ),
+              oQ = wQ.facet(yQ);
+            return (LQ = qQ.find((QQ => QQ.field == this))) && LQ != oQ.find((QQ => QQ.field == this)) ? (QQ.values[FQ] = LQ.create(QQ), 1) : null != wQ.config.address[this.id] ? (QQ.values[FQ] = wQ.field(this), 0) : (QQ.values[FQ] = this.create(QQ), 1)
           }
         }
       }
-      init(dd) {
-        return [this, wd.of({
+      init(QQ) {
+        return [this, yQ.of({
           field: this,
-          create: dd
+          create: QQ
         })]
       }
       get extension() {
         return this
       }
     }
-    const dJ = 4,
-      JJ = 3,
-      kJ = 2,
-      pJ = 1;
+    const dQ = 4,
+      QF = 3,
+      FF = 2,
+      wF = 1;
 
-    function NJ(dd) {
-      return Jd => new PJ(Jd, dd)
+    function LF(QQ) {
+      return FQ => new oF(FQ, QQ)
     }
-    const WJ = {
-      highest: NJ(0),
-      high: NJ(pJ),
-      default: NJ(kJ),
-      low: NJ(JJ),
-      lowest: NJ(dJ)
+    const qF = {
+      highest: LF(0),
+      high: LF(wF),
+      default: LF(FF),
+      low: LF(QF),
+      lowest: LF(dQ)
     };
-    class PJ {
-      constructor(dd, Jd) {
-        this.inner = dd, this.prec = Jd
+    class oF {
+      constructor(QQ, FQ) {
+        this.inner = QQ, this.prec = FQ
       }
     }
-    class ZJ {
-      of(dd) {
-        return new gJ(this, dd)
+    class DF {
+      of(QQ) {
+        return new kF(this, QQ)
       }
-      reconfigure(dd) {
-        return ZJ.reconfigure.of({
+      reconfigure(QQ) {
+        return DF.reconfigure.of({
           compartment: this,
-          extension: dd
+          extension: QQ
         })
       }
-      get(dd) {
-        return dd.config.compartments.get(this)
+      get(QQ) {
+        return QQ.config.compartments.get(this)
       }
     }
-    class gJ {
-      constructor(dd, Jd) {
-        this.compartment = dd, this.inner = Jd
+    class kF {
+      constructor(QQ, FQ) {
+        this.compartment = QQ, this.inner = FQ
       }
     }
-    class CJ {
-      constructor(dd, Jd, kd, pd, Nd, Wd) {
-        for (this.base = dd, this.compartments = Jd, this.dynamicSlots = kd, this.address = pd, this.staticValues = Nd, this.facets = Wd, this.statusTemplate = []; this.statusTemplate.length < kd.length;) this.statusTemplate.push(0)
+    class vF {
+      constructor(QQ, FQ, wQ, LQ, qQ, oQ) {
+        for (this.base = QQ, this.compartments = FQ, this.dynamicSlots = wQ, this.address = LQ, this.staticValues = qQ, this.facets = oQ, this.statusTemplate = []; this.statusTemplate.length < wQ.length;) this.statusTemplate.push(0)
       }
-      staticFacet(dd) {
-        let Jd = this.address[dd.id];
-        return null == Jd ? dd.default : this.staticValues[Jd >> 1]
+      staticFacet(QQ) {
+        let FQ = this.address[QQ.id];
+        return null == FQ ? QQ.default : this.staticValues[FQ >> 1]
       }
-      static resolve(dd, Jd, kd) {
-        let pd = [],
-          Nd = Object.create(null),
-          Wd = new Map;
-        for (let od of function(dd, Jd, kd) {
-            let pd = [
+      static resolve(QQ, FQ, wQ) {
+        let LQ = [],
+          qQ = Object.create(null),
+          oQ = new Map;
+        for (let HQ of function(QQ, FQ, wQ) {
+            let LQ = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              Nd = new Map;
+              qQ = new Map;
 
-            function Wd(dd, Pd) {
-              let Zd = Nd.get(dd);
-              if (null != Zd) {
-                if (Zd <= Pd) return;
-                let Jd = pd[Zd].indexOf(dd);
-                Jd > -1 && pd[Zd].splice(Jd, 1), dd instanceof gJ && kd.delete(dd.compartment)
+            function oQ(QQ, DQ) {
+              let kQ = qQ.get(QQ);
+              if (null != kQ) {
+                if (kQ <= DQ) return;
+                let FQ = LQ[kQ].indexOf(QQ);
+                FQ > -1 && LQ[kQ].splice(FQ, 1), QQ instanceof kF && wQ.delete(QQ.compartment)
               }
-              if (Nd.set(dd, Pd), Array.isArray(dd))
-                for (let Jd of dd) Wd(Jd, Pd);
-              else if (dd instanceof gJ) {
-                if (kd.has(dd.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let pd = Jd.get(dd.compartment) || dd.inner;
-                kd.set(dd.compartment, pd), Wd(pd, Pd)
-              } else if (dd instanceof PJ) Wd(dd.inner, dd.prec);
-              else if (dd instanceof Ad) pd[Pd].push(dd), dd.provides && Wd(dd.provides, Pd);
-              else if (dd instanceof td) pd[Pd].push(dd), dd.facet.extensions && Wd(dd.facet.extensions, kJ);
+              if (qQ.set(QQ, DQ), Array.isArray(QQ))
+                for (let FQ of QQ) oQ(FQ, DQ);
+              else if (QQ instanceof kF) {
+                if (wQ.has(QQ.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let LQ = FQ.get(QQ.compartment) || QQ.inner;
+                wQ.set(QQ.compartment, LQ), oQ(LQ, DQ)
+              } else if (QQ instanceof oF) oQ(QQ.inner, QQ.prec);
+              else if (QQ instanceof BQ) LQ[DQ].push(QQ), QQ.provides && oQ(QQ.provides, DQ);
+              else if (QQ instanceof nQ) LQ[DQ].push(QQ), QQ.facet.extensions && oQ(QQ.facet.extensions, FF);
               else {
-                let Jd = dd.extension;
-                if (!Jd) throw new Error(`Unrecognized extension value in extension set (${dd}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                Wd(Jd, Pd)
+                let FQ = QQ.extension;
+                if (!FQ) throw new Error(`Unrecognized extension value in extension set (${QQ}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                oQ(FQ, DQ)
               }
             }
-            return Wd(dd, kJ), pd.reduce(((dd, Jd) => dd.concat(Jd)))
-          }(dd, Jd, Wd)) od instanceof Ad ? pd.push(od) : (Nd[od.facet.id] || (Nd[od.facet.id] = [])).push(od);
-        let Pd = Object.create(null),
-          Zd = [],
-          gd = [];
-        for (let od of pd) Pd[od.id] = gd.length << 1, gd.push((dd => od.slot(dd)));
-        let Cd = null === kd || void 0 === kd ? void 0 : kd.config.facets;
-        for (let od in Nd) {
-          let dd = Nd[od],
-            Jd = dd[0].facet,
-            pd = Cd && Cd[od] || [];
-          if (dd.every((dd => 0 == dd.type)))
-            if (Pd[Jd.id] = Zd.length << 1 | 1, ud(pd, dd)) Zd.push(kd.facet(Jd));
+            return oQ(QQ, FF), LQ.reduce(((QQ, FQ) => QQ.concat(FQ)))
+          }(QQ, FQ, oQ)) HQ instanceof BQ ? LQ.push(HQ) : (qQ[HQ.facet.id] || (qQ[HQ.facet.id] = [])).push(HQ);
+        let DQ = Object.create(null),
+          kQ = [],
+          vQ = [];
+        for (let HQ of LQ) DQ[HQ.id] = vQ.length << 1, vQ.push((QQ => HQ.slot(QQ)));
+        let mQ = null === wQ || void 0 === wQ ? void 0 : wQ.config.facets;
+        for (let HQ in qQ) {
+          let QQ = qQ[HQ],
+            FQ = QQ[0].facet,
+            LQ = mQ && mQ[HQ] || [];
+          if (QQ.every((QQ => 0 == QQ.type)))
+            if (DQ[FQ.id] = kQ.length << 1 | 1, EQ(LQ, QQ)) kQ.push(wQ.facet(FQ));
             else {
-              let pd = Jd.combine(dd.map((dd => dd.value)));
-              Zd.push(kd && Jd.compare(pd, kd.facet(Jd)) ? kd.facet(Jd) : pd)
+              let LQ = FQ.combine(QQ.map((QQ => QQ.value)));
+              kQ.push(wQ && FQ.compare(LQ, wQ.facet(FQ)) ? wQ.facet(FQ) : LQ)
             }
           else {
-            for (let Jd of dd) 0 == Jd.type ? (Pd[Jd.id] = Zd.length << 1 | 1, Zd.push(Jd.value)) : (Pd[Jd.id] = gd.length << 1, gd.push((dd => Jd.dynamicSlot(dd))));
-            Pd[Jd.id] = gd.length << 1, gd.push((kd => Hd(kd, Jd, dd)))
+            for (let FQ of QQ) 0 == FQ.type ? (DQ[FQ.id] = kQ.length << 1 | 1, kQ.push(FQ.value)) : (DQ[FQ.id] = vQ.length << 1, vQ.push((QQ => FQ.dynamicSlot(QQ))));
+            DQ[FQ.id] = vQ.length << 1, vQ.push((wQ => ZQ(wQ, FQ, QQ)))
           }
         }
-        let Kd = gd.map((dd => dd(Pd)));
-        return new CJ(dd, Wd, Kd, Pd, Zd, Nd)
+        let uQ = vQ.map((QQ => QQ(DQ)));
+        return new vF(QQ, oQ, uQ, DQ, kQ, qQ)
       }
     }
 
-    function KJ(dd, Jd) {
-      if (1 & Jd) return 2;
-      let kd = Jd >> 1,
-        pd = dd.status[kd];
-      if (4 == pd) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & pd) return pd;
-      dd.status[kd] = 4;
-      let Nd = dd.computeSlot(dd, dd.config.dynamicSlots[kd]);
-      return dd.status[kd] = 2 | Nd
+    function mF(QQ, FQ) {
+      if (1 & FQ) return 2;
+      let wQ = FQ >> 1,
+        LQ = QQ.status[wQ];
+      if (4 == LQ) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & LQ) return LQ;
+      QQ.status[wQ] = 4;
+      let qQ = QQ.computeSlot(QQ, QQ.config.dynamicSlots[wQ]);
+      return QQ.status[wQ] = 2 | qQ
     }
 
-    function oJ(dd, Jd) {
-      return 1 & Jd ? dd.config.staticValues[Jd >> 1] : dd.values[Jd >> 1]
+    function uF(QQ, FQ) {
+      return 1 & FQ ? QQ.config.staticValues[FQ >> 1] : QQ.values[FQ >> 1]
     }
-    const lJ = rd.define(),
-      QJ = rd.define({
-        combine: dd => dd.some((dd => dd)),
+    const HF = JQ.define(),
+      bF = JQ.define({
+        combine: QQ => QQ.some((QQ => QQ)),
         static: !0
       }),
-      LJ = rd.define({
-        combine: dd => dd.length ? dd[0] : void 0,
+      YF = JQ.define({
+        combine: QQ => QQ.length ? QQ[0] : void 0,
         static: !0
       }),
-      OJ = rd.define(),
-      eJ = rd.define(),
-      RJ = rd.define(),
-      IJ = rd.define({
-        combine: dd => !!dd.length && dd[0]
+      xF = JQ.define(),
+      AF = JQ.define(),
+      tF = JQ.define(),
+      eF = JQ.define({
+        combine: QQ => !!QQ.length && QQ[0]
       });
-    class GJ {
-      constructor(dd, Jd) {
-        this.type = dd, this.value = Jd
+    class MF {
+      constructor(QQ, FQ) {
+        this.type = QQ, this.value = FQ
       }
       static define() {
-        return new vJ
+        return new GF
       }
     }
-    class vJ {
-      of(dd) {
-        return new GJ(this, dd)
+    class GF {
+      of(QQ) {
+        return new MF(this, QQ)
       }
     }
-    class xJ {
-      constructor(dd) {
-        this.map = dd
+    class pF {
+      constructor(QQ) {
+        this.map = QQ
       }
-      of(dd) {
-        return new qJ(this, dd)
+      of(QQ) {
+        return new cF(this, QQ)
       }
     }
-    class qJ {
-      constructor(dd, Jd) {
-        this.type = dd, this.value = Jd
+    class cF {
+      constructor(QQ, FQ) {
+        this.type = QQ, this.value = FQ
       }
-      map(dd) {
-        let Jd = this.type.map(this.value, dd);
-        return void 0 === Jd ? void 0 : Jd == this.value ? this : new qJ(this.type, Jd)
+      map(QQ) {
+        let FQ = this.type.map(this.value, QQ);
+        return void 0 === FQ ? void 0 : FQ == this.value ? this : new cF(this.type, FQ)
       }
-      is(dd) {
-        return this.type == dd
+      is(QQ) {
+        return this.type == QQ
       }
       static define() {
-        return new xJ((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (dd => dd))
+        return new pF((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (QQ => QQ))
       }
-      static mapEffects(dd, Jd) {
-        if (!dd.length) return dd;
-        let kd = [];
-        for (let pd of dd) {
-          let dd = pd.map(Jd);
-          dd && kd.push(dd)
+      static mapEffects(QQ, FQ) {
+        if (!QQ.length) return QQ;
+        let wQ = [];
+        for (let LQ of QQ) {
+          let QQ = LQ.map(FQ);
+          QQ && wQ.push(QQ)
         }
-        return kd
+        return wQ
       }
     }
-    qJ.reconfigure = qJ.define(), qJ.appendConfig = qJ.define();
-    class BJ {
-      constructor(dd, Jd, kd, pd, Nd, Wd) {
-        this.startState = dd, this.changes = Jd, this.selection = kd, this.effects = pd, this.annotations = Nd, this.scrollIntoView = Wd, this._doc = null, this._state = null, kd && cd(kd, Jd.newLength), Nd.some((dd => dd.type == BJ.time)) || (this.annotations = Nd.concat(BJ.time.of(Date.now())))
+    cF.reconfigure = cF.define(), cF.appendConfig = cF.define();
+    class CF {
+      constructor(QQ, FQ, wQ, LQ, qQ, oQ) {
+        this.startState = QQ, this.changes = FQ, this.selection = wQ, this.effects = LQ, this.annotations = qQ, this.scrollIntoView = oQ, this._doc = null, this._state = null, wQ && VQ(wQ, FQ.newLength), qQ.some((QQ => QQ.type == CF.time)) || (this.annotations = qQ.concat(CF.time.of(Date.now())))
       }
-      static create(dd, Jd, kd, pd, Nd, Wd) {
-        return new BJ(dd, Jd, kd, pd, Nd, Wd)
+      static create(QQ, FQ, wQ, LQ, qQ, oQ) {
+        return new CF(QQ, FQ, wQ, LQ, qQ, oQ)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(dd) {
-        for (let Jd of this.annotations)
-          if (Jd.type == dd) return Jd.value
+      annotation(QQ) {
+        for (let FQ of this.annotations)
+          if (FQ.type == QQ) return FQ.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(dd) {
-        let Jd = this.annotation(BJ.userEvent);
-        return !(!Jd || !(Jd == dd || Jd.length > dd.length && Jd.slice(0, dd.length) == dd && "." == Jd[dd.length]))
+      isUserEvent(QQ) {
+        let FQ = this.annotation(CF.userEvent);
+        return !(!FQ || !(FQ == QQ || FQ.length > QQ.length && FQ.slice(0, QQ.length) == QQ && "." == FQ[QQ.length]))
       }
     }
 
-    function sJ(dd, Jd) {
-      let kd = [];
-      for (let pd = 0, Nd = 0;;) {
-        let Wd, Pd;
-        if (pd < dd.length && (Nd == Jd.length || Jd[Nd] >= dd[pd])) Wd = dd[pd++], Pd = dd[pd++];
+    function SF(QQ, FQ) {
+      let wQ = [];
+      for (let LQ = 0, qQ = 0;;) {
+        let oQ, DQ;
+        if (LQ < QQ.length && (qQ == FQ.length || FQ[qQ] >= QQ[LQ])) oQ = QQ[LQ++], DQ = QQ[LQ++];
         else {
-          if (!(Nd < Jd.length)) return kd;
-          Wd = Jd[Nd++], Pd = Jd[Nd++]
-        }!kd.length || kd[kd.length - 1] < Wd ? kd.push(Wd, Pd) : kd[kd.length - 1] < Pd && (kd[kd.length - 1] = Pd)
+          if (!(qQ < FQ.length)) return wQ;
+          oQ = FQ[qQ++], DQ = FQ[qQ++]
+        }!wQ.length || wQ[wQ.length - 1] < oQ ? wQ.push(oQ, DQ) : wQ[wQ.length - 1] < DQ && (wQ[wQ.length - 1] = DQ)
       }
     }
 
-    function iJ(dd, Jd, kd) {
-      var pd;
-      let Nd, Wd, Pd;
-      return kd ? (Nd = Jd.changes, Wd = jd.empty(Jd.changes.length), Pd = dd.changes.compose(Jd.changes)) : (Nd = Jd.changes.map(dd.changes), Wd = dd.changes.mapDesc(Jd.changes, !0), Pd = dd.changes.compose(Nd)), {
-        changes: Pd,
-        selection: Jd.selection ? Jd.selection.map(Wd) : null === (pd = dd.selection) || void 0 === pd ? void 0 : pd.map(Nd),
-        effects: qJ.mapEffects(dd.effects, Nd).concat(qJ.mapEffects(Jd.effects, Wd)),
-        annotations: dd.annotations.length ? dd.annotations.concat(Jd.annotations) : Jd.annotations,
-        scrollIntoView: dd.scrollIntoView || Jd.scrollIntoView
+    function iF(QQ, FQ, wQ) {
+      var LQ;
+      let qQ, oQ, DQ;
+      return wQ ? (qQ = FQ.changes, oQ = NQ.empty(FQ.changes.length), DQ = QQ.changes.compose(FQ.changes)) : (qQ = FQ.changes.map(QQ.changes), oQ = QQ.changes.mapDesc(FQ.changes, !0), DQ = QQ.changes.compose(qQ)), {
+        changes: DQ,
+        selection: FQ.selection ? FQ.selection.map(oQ) : null === (LQ = QQ.selection) || void 0 === LQ ? void 0 : LQ.map(qQ),
+        effects: cF.mapEffects(QQ.effects, qQ).concat(cF.mapEffects(FQ.effects, oQ)),
+        annotations: QQ.annotations.length ? QQ.annotations.concat(FQ.annotations) : FQ.annotations,
+        scrollIntoView: QQ.scrollIntoView || FQ.scrollIntoView
       }
     }
 
-    function aJ(dd, Jd, kd) {
-      let pd = Jd.selection,
-        Nd = YJ(Jd.annotations);
-      return Jd.userEvent && (Nd = Nd.concat(BJ.userEvent.of(Jd.userEvent))), {
-        changes: Jd.changes instanceof jd ? Jd.changes : jd.of(Jd.changes || [], kd, dd.facet(LJ)),
-        selection: pd && (pd instanceof Ed ? pd : Ed.single(pd.anchor, pd.head)),
-        effects: YJ(Jd.effects),
-        annotations: Nd,
-        scrollIntoView: !!Jd.scrollIntoView
+    function WF(QQ, FQ, wQ) {
+      let LQ = FQ.selection,
+        qQ = sF(FQ.annotations);
+      return FQ.userEvent && (qQ = qQ.concat(CF.userEvent.of(FQ.userEvent))), {
+        changes: FQ.changes instanceof NQ ? FQ.changes : NQ.of(FQ.changes || [], wQ, QQ.facet(YF)),
+        selection: LQ && (LQ instanceof fQ ? LQ : fQ.single(LQ.anchor, LQ.head)),
+        effects: sF(FQ.effects),
+        annotations: qQ,
+        scrollIntoView: !!FQ.scrollIntoView
       }
     }
 
-    function MJ(dd, Jd, kd) {
-      let pd = aJ(dd, Jd.length ? Jd[0] : {}, dd.doc.length);
-      Jd.length && !1 === Jd[0].filter && (kd = !1);
-      for (let Wd = 1; Wd < Jd.length; Wd++) {
-        !1 === Jd[Wd].filter && (kd = !1);
-        let Nd = !!Jd[Wd].sequential;
-        pd = iJ(pd, aJ(dd, Jd[Wd], Nd ? pd.changes.newLength : dd.doc.length), Nd)
+    function RF(QQ, FQ, wQ) {
+      let LQ = WF(QQ, FQ.length ? FQ[0] : {}, QQ.doc.length);
+      FQ.length && !1 === FQ[0].filter && (wQ = !1);
+      for (let oQ = 1; oQ < FQ.length; oQ++) {
+        !1 === FQ[oQ].filter && (wQ = !1);
+        let qQ = !!FQ[oQ].sequential;
+        LQ = iF(LQ, WF(QQ, FQ[oQ], qQ ? LQ.changes.newLength : QQ.doc.length), qQ)
       }
-      let Nd = BJ.create(dd, pd.changes, pd.selection, pd.effects, pd.annotations, pd.scrollIntoView);
-      return function(dd) {
-        let Jd = dd.startState,
-          kd = Jd.facet(RJ),
-          pd = dd;
-        for (let Nd = kd.length - 1; Nd >= 0; Nd--) {
-          let Wd = kd[Nd](dd);
-          Wd && Object.keys(Wd).length && (pd = iJ(pd, aJ(Jd, Wd, dd.changes.newLength), !0))
+      let qQ = CF.create(QQ, LQ.changes, LQ.selection, LQ.effects, LQ.annotations, LQ.scrollIntoView);
+      return function(QQ) {
+        let FQ = QQ.startState,
+          wQ = FQ.facet(tF),
+          LQ = QQ;
+        for (let qQ = wQ.length - 1; qQ >= 0; qQ--) {
+          let oQ = wQ[qQ](QQ);
+          oQ && Object.keys(oQ).length && (LQ = iF(LQ, WF(FQ, oQ, QQ.changes.newLength), !0))
         }
-        return pd == dd ? dd : BJ.create(Jd, dd.changes, dd.selection, pd.effects, pd.annotations, pd.scrollIntoView)
-      }(kd ? function(dd) {
-        let Jd = dd.startState,
-          kd = !0;
-        for (let Nd of Jd.facet(OJ)) {
-          let Jd = Nd(dd);
-          if (!1 === Jd) {
-            kd = !1;
+        return LQ == QQ ? QQ : CF.create(FQ, QQ.changes, QQ.selection, LQ.effects, LQ.annotations, LQ.scrollIntoView)
+      }(wQ ? function(QQ) {
+        let FQ = QQ.startState,
+          wQ = !0;
+        for (let qQ of FQ.facet(xF)) {
+          let FQ = qQ(QQ);
+          if (!1 === FQ) {
+            wQ = !1;
             break
           }
-          Array.isArray(Jd) && (kd = !0 === kd ? Jd : sJ(kd, Jd))
+          Array.isArray(FQ) && (wQ = !0 === wQ ? FQ : SF(wQ, FQ))
         }
-        if (!0 !== kd) {
-          let pd, Nd;
-          if (!1 === kd) Nd = dd.changes.invertedDesc, pd = jd.empty(Jd.doc.length);
+        if (!0 !== wQ) {
+          let LQ, qQ;
+          if (!1 === wQ) qQ = QQ.changes.invertedDesc, LQ = NQ.empty(FQ.doc.length);
           else {
-            let Jd = dd.changes.filter(kd);
-            pd = Jd.changes, Nd = Jd.filtered.mapDesc(Jd.changes).invertedDesc
+            let FQ = QQ.changes.filter(wQ);
+            LQ = FQ.changes, qQ = FQ.filtered.mapDesc(FQ.changes).invertedDesc
           }
-          dd = BJ.create(Jd, pd, dd.selection && dd.selection.map(Nd), qJ.mapEffects(dd.effects, Nd), dd.annotations, dd.scrollIntoView)
+          QQ = CF.create(FQ, LQ, QQ.selection && QQ.selection.map(qQ), cF.mapEffects(QQ.effects, qQ), QQ.annotations, QQ.scrollIntoView)
         }
-        let pd = Jd.facet(eJ);
-        for (let Nd = pd.length - 1; Nd >= 0; Nd--) {
-          let kd = pd[Nd](dd);
-          dd = kd instanceof BJ ? kd : Array.isArray(kd) && 1 == kd.length && kd[0] instanceof BJ ? kd[0] : MJ(Jd, YJ(kd), !1)
+        let LQ = FQ.facet(AF);
+        for (let qQ = LQ.length - 1; qQ >= 0; qQ--) {
+          let wQ = LQ[qQ](QQ);
+          QQ = wQ instanceof CF ? wQ : Array.isArray(wQ) && 1 == wQ.length && wQ[0] instanceof CF ? wQ[0] : RF(FQ, sF(wQ), !1)
         }
-        return dd
-      }(Nd) : Nd)
+        return QQ
+      }(qQ) : qQ)
     }
-    BJ.time = GJ.define(), BJ.userEvent = GJ.define(), BJ.addToHistory = GJ.define(), BJ.remote = GJ.define();
-    const FJ = [];
+    CF.time = MF.define(), CF.userEvent = MF.define(), CF.addToHistory = MF.define(), CF.remote = MF.define();
+    const OF = [];
 
-    function YJ(dd) {
-      return null == dd ? FJ : Array.isArray(dd) ? dd : [dd]
+    function sF(QQ) {
+      return null == QQ ? OF : Array.isArray(QQ) ? QQ : [QQ]
     }
-    var mJ = function(dd) {
-      return dd[dd.Word = 0] = "Word", dd[dd.Space = 1] = "Space", dd[dd.Other = 2] = "Other", dd
-    }(mJ || (mJ = {}));
-    const bJ = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let SJ;
+    var rF = function(QQ) {
+      return QQ[QQ.Word = 0] = "Word", QQ[QQ.Space = 1] = "Space", QQ[QQ.Other = 2] = "Other", QQ
+    }(rF || (rF = {}));
+    const IF = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let UF;
     try {
-      SJ = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (pk) {}
+      UF = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (ww) {}
 
-    function jJ(dd) {
-      return Jd => {
-        if (!/\S/.test(Jd)) return mJ.Space;
-        if (function(dd) {
-            if (SJ) return SJ.test(dd);
-            for (let Jd = 0; Jd < dd.length; Jd++) {
-              let kd = dd[Jd];
-              if (/\w/.test(kd) || kd > "\x80" && (kd.toUpperCase() != kd.toLowerCase() || bJ.test(kd))) return !0
+    function NF(QQ) {
+      return FQ => {
+        if (!/\S/.test(FQ)) return rF.Space;
+        if (function(QQ) {
+            if (UF) return UF.test(QQ);
+            for (let FQ = 0; FQ < QQ.length; FQ++) {
+              let wQ = QQ[FQ];
+              if (/\w/.test(wQ) || wQ > "\x80" && (wQ.toUpperCase() != wQ.toLowerCase() || IF.test(wQ))) return !0
             }
             return !1
-          }(Jd)) return mJ.Word;
-        for (let kd = 0; kd < dd.length; kd++)
-          if (Jd.indexOf(dd[kd]) > -1) return mJ.Word;
-        return mJ.Other
+          }(FQ)) return rF.Word;
+        for (let wQ = 0; wQ < QQ.length; wQ++)
+          if (FQ.indexOf(QQ[wQ]) > -1) return rF.Word;
+        return rF.Other
       }
     }
-    class XJ {
-      constructor(dd, Jd, kd, pd, Nd, Wd) {
-        this.config = dd, this.doc = Jd, this.selection = kd, this.values = pd, this.status = dd.statusTemplate.slice(), this.computeSlot = Nd, Wd && (Wd._state = this);
-        for (let Pd = 0; Pd < this.config.dynamicSlots.length; Pd++) KJ(this, Pd << 1);
+    class TF {
+      constructor(QQ, FQ, wQ, LQ, qQ, oQ) {
+        this.config = QQ, this.doc = FQ, this.selection = wQ, this.values = LQ, this.status = QQ.statusTemplate.slice(), this.computeSlot = qQ, oQ && (oQ._state = this);
+        for (let DQ = 0; DQ < this.config.dynamicSlots.length; DQ++) mF(this, DQ << 1);
         this.computeSlot = null
       }
-      field(dd) {
-        let Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          kd = this.config.address[dd.id];
-        if (null != kd) return KJ(this, kd), oJ(this, kd);
-        if (Jd) throw new RangeError("Field is not present in this state")
+      field(QQ) {
+        let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          wQ = this.config.address[QQ.id];
+        if (null != wQ) return mF(this, wQ), uF(this, wQ);
+        if (FQ) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
-        return MJ(this, Jd, !0)
+        for (var QQ = arguments.length, FQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) FQ[wQ] = arguments[wQ];
+        return RF(this, FQ, !0)
       }
-      applyTransaction(dd) {
-        let Jd, kd = this.config,
+      applyTransaction(QQ) {
+        let FQ, wQ = this.config,
           {
-            base: pd,
-            compartments: Nd
-          } = kd;
-        for (let Pd of dd.effects) Pd.is(ZJ.reconfigure) ? (kd && (Nd = new Map, kd.compartments.forEach(((dd, Jd) => Nd.set(Jd, dd))), kd = null), Nd.set(Pd.value.compartment, Pd.value.extension)) : Pd.is(qJ.reconfigure) ? (kd = null, pd = Pd.value) : Pd.is(qJ.appendConfig) && (kd = null, pd = YJ(pd).concat(Pd.value));
-        if (kd) Jd = dd.startState.values.slice();
+            base: LQ,
+            compartments: qQ
+          } = wQ;
+        for (let DQ of QQ.effects) DQ.is(DF.reconfigure) ? (wQ && (qQ = new Map, wQ.compartments.forEach(((QQ, FQ) => qQ.set(FQ, QQ))), wQ = null), qQ.set(DQ.value.compartment, DQ.value.extension)) : DQ.is(cF.reconfigure) ? (wQ = null, LQ = DQ.value) : DQ.is(cF.appendConfig) && (wQ = null, LQ = sF(LQ).concat(DQ.value));
+        if (wQ) FQ = QQ.startState.values.slice();
         else {
-          kd = CJ.resolve(pd, Nd, this), Jd = new XJ(kd, this.doc, this.selection, kd.dynamicSlots.map((() => null)), ((dd, Jd) => Jd.reconfigure(dd, this)), null).values
+          wQ = vF.resolve(LQ, qQ, this), FQ = new TF(wQ, this.doc, this.selection, wQ.dynamicSlots.map((() => null)), ((QQ, FQ) => FQ.reconfigure(QQ, this)), null).values
         }
-        let Wd = dd.startState.facet(QJ) ? dd.newSelection : dd.newSelection.asSingle();
-        new XJ(kd, dd.newDoc, Wd, Jd, ((Jd, kd) => kd.update(Jd, dd)), dd)
+        let oQ = QQ.startState.facet(bF) ? QQ.newSelection : QQ.newSelection.asSingle();
+        new TF(wQ, QQ.newDoc, oQ, FQ, ((FQ, wQ) => wQ.update(FQ, QQ)), QQ)
       }
-      replaceSelection(dd) {
-        return "string" == typeof dd && (dd = this.toText(dd)), this.changeByRange((Jd => ({
+      replaceSelection(QQ) {
+        return "string" == typeof QQ && (QQ = this.toText(QQ)), this.changeByRange((FQ => ({
           changes: {
-            from: Jd.from,
-            to: Jd.to,
-            insert: dd
+            from: FQ.from,
+            to: FQ.to,
+            insert: QQ
           },
-          range: Ed.cursor(Jd.from + dd.length)
+          range: fQ.cursor(FQ.from + QQ.length)
         })))
       }
-      changeByRange(dd) {
-        let Jd = this.selection,
-          kd = dd(Jd.UO[0]),
-          pd = this.changes(kd.changes),
-          Nd = [kd.range],
-          Wd = YJ(kd.effects);
-        for (let Pd = 1; Pd < Jd.UO.length; Pd++) {
-          let kd = dd(Jd.UO[Pd]),
-            Zd = this.changes(kd.changes),
-            gd = Zd.map(pd);
-          for (let dd = 0; dd < Pd; dd++) Nd[dd] = Nd[dd].map(gd);
-          let Cd = pd.mapDesc(Zd, !0);
-          Nd.push(kd.range.map(Cd)), pd = pd.compose(gd), Wd = qJ.mapEffects(Wd, gd).concat(qJ.mapEffects(YJ(kd.effects), Cd))
+      changeByRange(QQ) {
+        let FQ = this.selection,
+          wQ = QQ(FQ.PA[0]),
+          LQ = this.changes(wQ.changes),
+          qQ = [wQ.range],
+          oQ = sF(wQ.effects);
+        for (let DQ = 1; DQ < FQ.PA.length; DQ++) {
+          let wQ = QQ(FQ.PA[DQ]),
+            kQ = this.changes(wQ.changes),
+            vQ = kQ.map(LQ);
+          for (let QQ = 0; QQ < DQ; QQ++) qQ[QQ] = qQ[QQ].map(vQ);
+          let mQ = LQ.mapDesc(kQ, !0);
+          qQ.push(wQ.range.map(mQ)), LQ = LQ.compose(vQ), oQ = cF.mapEffects(oQ, vQ).concat(cF.mapEffects(sF(wQ.effects), mQ))
         }
         return {
-          changes: pd,
-          selection: Ed.create(Nd, Jd.mainIndex),
-          effects: Wd
+          changes: LQ,
+          selection: fQ.create(qQ, FQ.mainIndex),
+          effects: oQ
         }
       }
       changes() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return dd instanceof jd ? dd : jd.of(dd, this.doc.length, this.facet(XJ.lineSeparator))
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return QQ instanceof NQ ? QQ : NQ.of(QQ, this.doc.length, this.facet(TF.lineSeparator))
       }
-      toText(dd) {
-        return Od.of(dd.split(this.facet(XJ.lineSeparator) || md))
+      toText(QQ) {
+        return AQ.of(QQ.split(this.facet(TF.lineSeparator) || rQ))
       }
       sliceDoc() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(dd, Jd, this.lineBreak)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(QQ, FQ, this.lineBreak)
       }
-      facet(dd) {
-        let Jd = this.config.address[dd.id];
-        return null == Jd ? dd.default : (KJ(this, Jd), oJ(this, Jd))
+      facet(QQ) {
+        let FQ = this.config.address[QQ.id];
+        return null == FQ ? QQ.default : (mF(this, FQ), uF(this, FQ))
       }
-      toJSON(dd) {
-        let Jd = {
+      toJSON(QQ) {
+        let FQ = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (dd)
-          for (let kd in dd) {
-            let pd = dd[kd];
-            pd instanceof Ad && null != this.config.address[pd.id] && (Jd[kd] = pd.spec.toJSON(this.field(dd[kd]), this))
+        if (QQ)
+          for (let wQ in QQ) {
+            let LQ = QQ[wQ];
+            LQ instanceof BQ && null != this.config.address[LQ.id] && (FQ[wQ] = LQ.spec.toJSON(this.field(QQ[wQ]), this))
           }
-        return Jd
+        return FQ
       }
-      static fromJSON(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          kd = arguments.length > 2 ? arguments[2] : void 0;
-        if (!dd || "string" != typeof dd.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let pd = [];
-        if (kd)
-          for (let Nd in kd)
-            if (Object.prototype.hasOwnProperty.call(dd, Nd)) {
-              let Jd = kd[Nd],
-                Wd = dd[Nd];
-              pd.push(Jd.init((dd => Jd.spec.fromJSON(Wd, dd))))
-            } return XJ.create({
-          doc: dd.doc,
-          selection: Ed.fromJSON(dd.selection),
-          extensions: Jd.extensions ? pd.concat([Jd.extensions]) : pd
+      static fromJSON(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          wQ = arguments.length > 2 ? arguments[2] : void 0;
+        if (!QQ || "string" != typeof QQ.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let LQ = [];
+        if (wQ)
+          for (let qQ in wQ)
+            if (Object.prototype.hasOwnProperty.call(QQ, qQ)) {
+              let FQ = wQ[qQ],
+                oQ = QQ[qQ];
+              LQ.push(FQ.init((QQ => FQ.spec.fromJSON(oQ, QQ))))
+            } return TF.create({
+          doc: QQ.doc,
+          selection: fQ.fromJSON(QQ.selection),
+          extensions: FQ.extensions ? LQ.concat([FQ.extensions]) : LQ
         })
       }
       static create() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          Jd = CJ.resolve(dd.extensions || [], new Map),
-          kd = dd.doc instanceof Od ? dd.doc : Od.of((dd.doc || "").split(Jd.staticFacet(XJ.lineSeparator) || md)),
-          pd = dd.selection ? dd.selection instanceof Ed ? dd.selection : Ed.single(dd.selection.anchor, dd.selection.head) : Ed.single(0);
-        return cd(pd, kd.length), Jd.staticFacet(QJ) || (pd = pd.asSingle()), new XJ(Jd, kd, pd, Jd.dynamicSlots.map((() => null)), ((dd, Jd) => Jd.create(dd)), null)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          FQ = vF.resolve(QQ.extensions || [], new Map),
+          wQ = QQ.doc instanceof AQ ? QQ.doc : AQ.of((QQ.doc || "").split(FQ.staticFacet(TF.lineSeparator) || rQ)),
+          LQ = QQ.selection ? QQ.selection instanceof fQ ? QQ.selection : fQ.single(QQ.selection.anchor, QQ.selection.head) : fQ.single(0);
+        return VQ(LQ, wQ.length), FQ.staticFacet(bF) || (LQ = LQ.asSingle()), new TF(FQ, wQ, LQ, FQ.dynamicSlots.map((() => null)), ((QQ, FQ) => FQ.create(QQ)), null)
       }
       get tabSize() {
-        return this.facet(XJ.tabSize)
+        return this.facet(TF.tabSize)
       }
       get lineBreak() {
-        return this.facet(XJ.lineSeparator) || "\n"
+        return this.facet(TF.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(IJ)
+        return this.facet(eF)
       }
-      phrase(dd) {
-        for (var Jd = arguments.length, kd = new Array(Jd > 1 ? Jd - 1 : 0), pd = 1; pd < Jd; pd++) kd[pd - 1] = arguments[pd];
-        for (let Nd of this.facet(XJ.phrases))
-          if (Object.prototype.hasOwnProperty.call(Nd, dd)) {
-            dd = Nd[dd];
+      phrase(QQ) {
+        for (var FQ = arguments.length, wQ = new Array(FQ > 1 ? FQ - 1 : 0), LQ = 1; LQ < FQ; LQ++) wQ[LQ - 1] = arguments[LQ];
+        for (let qQ of this.facet(TF.phrases))
+          if (Object.prototype.hasOwnProperty.call(qQ, QQ)) {
+            QQ = qQ[QQ];
             break
-          } return kd.length && (dd = dd.replace(/\$(\$|\d*)/g, ((dd, Jd) => {
-          if ("$" == Jd) return "$";
-          let pd = +(Jd || 1);
-          return !pd || pd > kd.length ? dd : kd[pd - 1]
-        }))), dd
+          } return wQ.length && (QQ = QQ.replace(/\$(\$|\d*)/g, ((QQ, FQ) => {
+          if ("$" == FQ) return "$";
+          let LQ = +(FQ || 1);
+          return !LQ || LQ > wQ.length ? QQ : wQ[LQ - 1]
+        }))), QQ
       }
-      languageDataAt(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          pd = [];
-        for (let Nd of this.facet(lJ))
-          for (let Wd of Nd(this, Jd, kd)) Object.prototype.hasOwnProperty.call(Wd, dd) && pd.push(Wd[dd]);
-        return pd
+      languageDataAt(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          LQ = [];
+        for (let qQ of this.facet(HF))
+          for (let oQ of qQ(this, FQ, wQ)) Object.prototype.hasOwnProperty.call(oQ, QQ) && LQ.push(oQ[QQ]);
+        return LQ
       }
-      charCategorizer(dd) {
-        let Jd = this.languageDataAt("wordChars", dd);
-        return jJ(Jd.length ? Jd[0] : "")
+      charCategorizer(QQ) {
+        let FQ = this.languageDataAt("wordChars", QQ);
+        return NF(FQ.length ? FQ[0] : "")
       }
-      wordAt(dd) {
+      wordAt(QQ) {
         let {
-          text: Jd,
-          from: kd,
-          length: pd
-        } = this.doc.lineAt(dd), Nd = this.charCategorizer(dd), Wd = dd - kd, Pd = dd - kd;
-        for (; Wd > 0;) {
-          let dd = ad(Jd, Wd, !1);
-          if (Nd(Jd.slice(dd, Wd)) != mJ.Word) break;
-          Wd = dd
+          text: FQ,
+          from: wQ,
+          length: LQ
+        } = this.doc.lineAt(QQ), qQ = this.charCategorizer(QQ), oQ = QQ - wQ, DQ = QQ - wQ;
+        for (; oQ > 0;) {
+          let QQ = WQ(FQ, oQ, !1);
+          if (qQ(FQ.slice(QQ, oQ)) != rF.Word) break;
+          oQ = QQ
         }
-        for (; Pd < pd;) {
-          let dd = ad(Jd, Pd);
-          if (Nd(Jd.slice(Pd, dd)) != mJ.Word) break;
-          Pd = dd
+        for (; DQ < LQ;) {
+          let QQ = WQ(FQ, DQ);
+          if (qQ(FQ.slice(DQ, QQ)) != rF.Word) break;
+          DQ = QQ
         }
-        return Wd == Pd ? null : Ed.range(Wd + kd, Pd + kd)
+        return oQ == DQ ? null : fQ.range(oQ + wQ, DQ + wQ)
       }
     }
 
-    function fJ(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        pd = {};
-      for (let Nd of dd)
-        for (let dd of Object.keys(Nd)) {
-          let Jd = Nd[dd],
-            Wd = pd[dd];
-          if (void 0 === Wd) pd[dd] = Jd;
-          else if (Wd === Jd || void 0 === Jd);
+    function KF(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        LQ = {};
+      for (let qQ of QQ)
+        for (let QQ of Object.keys(qQ)) {
+          let FQ = qQ[QQ],
+            oQ = LQ[QQ];
+          if (void 0 === oQ) LQ[QQ] = FQ;
+          else if (oQ === FQ || void 0 === FQ);
           else {
-            if (!Object.hasOwnProperty.call(kd, dd)) throw new Error("Config merge conflict for field " + dd);
-            pd[dd] = kd[dd](Wd, Jd)
+            if (!Object.hasOwnProperty.call(wQ, QQ)) throw new Error("Config merge conflict for field " + QQ);
+            LQ[QQ] = wQ[QQ](oQ, FQ)
           }
         }
-      for (let Nd in Jd) void 0 === pd[Nd] && (pd[Nd] = Jd[Nd]);
-      return pd
+      for (let qQ in FQ) void 0 === LQ[qQ] && (LQ[qQ] = FQ[qQ]);
+      return LQ
     }
-    XJ.allowMultipleSelections = QJ, XJ.tabSize = rd.define({
-      combine: dd => dd.length ? dd[0] : 4
-    }), XJ.lineSeparator = LJ, XJ.readOnly = IJ, XJ.phrases = rd.define({
-      compare(dd, Jd) {
-        let kd = Object.keys(dd),
-          pd = Object.keys(Jd);
-        return kd.length == pd.length && kd.every((kd => dd[kd] == Jd[kd]))
+    TF.allowMultipleSelections = bF, TF.tabSize = JQ.define({
+      combine: QQ => QQ.length ? QQ[0] : 4
+    }), TF.lineSeparator = YF, TF.readOnly = eF, TF.phrases = JQ.define({
+      compare(QQ, FQ) {
+        let wQ = Object.keys(QQ),
+          LQ = Object.keys(FQ);
+        return wQ.length == LQ.length && wQ.every((wQ => QQ[wQ] == FQ[wQ]))
       }
-    }), XJ.languageData = lJ, XJ.changeFilter = OJ, XJ.transactionFilter = eJ, XJ.transactionExtender = RJ, ZJ.reconfigure = qJ.define();
-    class nJ {
-      eq(dd) {
-        return this == dd
+    }), TF.languageData = HF, TF.changeFilter = xF, TF.transactionFilter = AF, TF.transactionExtender = tF, DF.reconfigure = cF.define();
+    class zF {
+      eq(QQ) {
+        return this == QQ
       }
-      range(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd;
-        return yJ.create(dd, Jd, this)
-      }
-    }
-
-    function UJ(dd, Jd) {
-      return dd == Jd || dd.constructor == Jd.constructor && dd.eq(Jd)
-    }
-    nJ.prototype.startSide = nJ.prototype.endSide = 0, nJ.prototype.point = !1, nJ.prototype.mapMode = bd.TrackDel;
-    class yJ {
-      constructor(dd, Jd, kd) {
-        this.from = dd, this.to = Jd, this.value = kd
-      }
-      static create(dd, Jd, kd) {
-        return new yJ(dd, Jd, kd)
+      range(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : QQ;
+        return jF.create(QQ, FQ, this)
       }
     }
 
-    function DJ(dd, Jd) {
-      return dd.from - Jd.from || dd.value.startSide - Jd.value.startSide
+    function lF(QQ, FQ) {
+      return QQ == FQ || QQ.constructor == FQ.constructor && QQ.eq(FQ)
     }
-    class TJ {
-      constructor(dd, Jd, kd, pd) {
-        this.from = dd, this.to = Jd, this.value = kd, this.mpd = pd
+    zF.prototype.startSide = zF.prototype.endSide = 0, zF.prototype.point = !1, zF.prototype.mapMode = IQ.TrackDel;
+    class jF {
+      constructor(QQ, FQ, wQ) {
+        this.from = QQ, this.to = FQ, this.value = wQ
+      }
+      static create(QQ, FQ, wQ) {
+        return new jF(QQ, FQ, wQ)
+      }
+    }
+
+    function aF(QQ, FQ) {
+      return QQ.from - FQ.from || QQ.value.startSide - FQ.value.startSide
+    }
+    class XF {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.from = QQ, this.to = FQ, this.value = wQ, this.NLQ = LQ
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Nd = kd ? this.to : this.from;
-        for (let Wd = pd, Pd = Nd.length;;) {
-          if (Wd == Pd) return Wd;
-          let pd = Wd + Pd >> 1,
-            Zd = Nd[pd] - dd || (kd ? this.value[pd].endSide : this.value[pd].startSide) - Jd;
-          if (pd == Wd) return Zd >= 0 ? Wd : Pd;
-          Zd >= 0 ? Pd = pd : Wd = pd + 1
+      findIndex(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          qQ = wQ ? this.to : this.from;
+        for (let oQ = LQ, DQ = qQ.length;;) {
+          if (oQ == DQ) return oQ;
+          let LQ = oQ + DQ >> 1,
+            kQ = qQ[LQ] - QQ || (wQ ? this.value[LQ].endSide : this.value[LQ].startSide) - FQ;
+          if (LQ == oQ) return kQ >= 0 ? oQ : DQ;
+          kQ >= 0 ? DQ = LQ : oQ = LQ + 1
         }
       }
-      between(dd, Jd, kd, pd) {
-        for (let Nd = this.findIndex(Jd, -1e9, !0), Wd = this.findIndex(kd, 1e9, !1, Nd); Nd < Wd; Nd++)
-          if (!1 === pd(this.from[Nd] + dd, this.to[Nd] + dd, this.value[Nd])) return !1
+      between(QQ, FQ, wQ, LQ) {
+        for (let qQ = this.findIndex(FQ, -1e9, !0), oQ = this.findIndex(wQ, 1e9, !1, qQ); qQ < oQ; qQ++)
+          if (!1 === LQ(this.from[qQ] + QQ, this.to[qQ] + QQ, this.value[qQ])) return !1
       }
-      map(dd, Jd) {
-        let kd = [],
-          pd = [],
-          Nd = [],
-          Wd = -1,
-          Pd = -1;
-        for (let Zd = 0; Zd < this.value.length; Zd++) {
-          let gd, Cd, Kd = this.value[Zd],
-            od = this.from[Zd] + dd,
-            ld = this.to[Zd] + dd;
-          if (od == ld) {
-            let dd = Jd.mapPos(od, Kd.startSide, Kd.mapMode);
-            if (null == dd) continue;
-            if (gd = Cd = dd, Kd.startSide != Kd.endSide && (Cd = Jd.mapPos(od, Kd.endSide), Cd < gd)) continue
-          } else if (gd = Jd.mapPos(od, Kd.startSide), Cd = Jd.mapPos(ld, Kd.endSide), gd > Cd || gd == Cd && Kd.startSide > 0 && Kd.endSide <= 0) continue;
-          (Cd - gd || Kd.endSide - Kd.startSide) < 0 || (Wd < 0 && (Wd = gd), Kd.point && (Pd = Math.max(Pd, Cd - gd)), kd.push(Kd), pd.push(gd - Wd), Nd.push(Cd - Wd))
+      map(QQ, FQ) {
+        let wQ = [],
+          LQ = [],
+          qQ = [],
+          oQ = -1,
+          DQ = -1;
+        for (let kQ = 0; kQ < this.value.length; kQ++) {
+          let vQ, mQ, uQ = this.value[kQ],
+            HQ = this.from[kQ] + QQ,
+            bQ = this.to[kQ] + QQ;
+          if (HQ == bQ) {
+            let QQ = FQ.mapPos(HQ, uQ.startSide, uQ.mapMode);
+            if (null == QQ) continue;
+            if (vQ = mQ = QQ, uQ.startSide != uQ.endSide && (mQ = FQ.mapPos(HQ, uQ.endSide), mQ < vQ)) continue
+          } else if (vQ = FQ.mapPos(HQ, uQ.startSide), mQ = FQ.mapPos(bQ, uQ.endSide), vQ > mQ || vQ == mQ && uQ.startSide > 0 && uQ.endSide <= 0) continue;
+          (mQ - vQ || uQ.endSide - uQ.startSide) < 0 || (oQ < 0 && (oQ = vQ), uQ.point && (DQ = Math.max(DQ, mQ - vQ)), wQ.push(uQ), LQ.push(vQ - oQ), qQ.push(mQ - oQ))
         }
         return {
-          mapped: kd.length ? new TJ(pd, Nd, kd, Pd) : null,
-          pos: Wd
+          mapped: wQ.length ? new XF(LQ, qQ, wQ, DQ) : null,
+          pos: oQ
         }
       }
     }
-    class EJ {
-      constructor(dd, Jd, kd, pd) {
-        this.chunkPos = dd, this.chunk = Jd, this.nextLayer = kd, this.mpd = pd
+    class fF {
+      constructor(QQ, FQ, wQ, LQ) {
+        this.chunkPos = QQ, this.chunk = FQ, this.nextLayer = wQ, this.NLQ = LQ
       }
-      static create(dd, Jd, kd, pd) {
-        return new EJ(dd, Jd, kd, pd)
+      static create(QQ, FQ, wQ, LQ) {
+        return new fF(QQ, FQ, wQ, LQ)
       }
       get length() {
-        let dd = this.chunk.length - 1;
-        return dd < 0 ? 0 : Math.max(this.chunkEnd(dd), this.nextLayer.length)
+        let QQ = this.chunk.length - 1;
+        return QQ < 0 ? 0 : Math.max(this.chunkEnd(QQ), this.nextLayer.length)
       }
       get size() {
-        if (this.VQ) return 0;
-        let dd = this.nextLayer.size;
-        for (let Jd of this.chunk) dd += Jd.value.length;
-        return dd
+        if (this.BY) return 0;
+        let QQ = this.nextLayer.size;
+        for (let FQ of this.chunk) QQ += FQ.value.length;
+        return QQ
       }
-      chunkEnd(dd) {
-        return this.chunkPos[dd] + this.chunk[dd].length
+      chunkEnd(QQ) {
+        return this.chunkPos[QQ] + this.chunk[QQ].length
       }
-      update(dd) {
+      update(QQ) {
         let {
-          add: Jd = [],
-          sort: kd = !1,
-          filterFrom: pd = 0,
-          filterTo: Nd = this.length
-        } = dd, Wd = dd.filter;
-        if (0 == Jd.length && !Wd) return this;
-        if (kd && (Jd = Jd.slice().sort(DJ)), this.VQ) return Jd.length ? EJ.of(Jd) : this;
-        let Pd = new rJ(this, null, -1).goto(0),
-          Zd = 0,
-          gd = [],
-          Cd = new cJ;
-        for (; Pd.value || Zd < Jd.length;)
-          if (Zd < Jd.length && (Pd.from - Jd[Zd].from || Pd.startSide - Jd[Zd].value.startSide) >= 0) {
-            let dd = Jd[Zd++];
-            Cd.addInner(dd.from, dd.to, dd.value) || gd.push(dd)
-          } else 1 == Pd.rangeIndex && Pd.chunkIndex < this.chunk.length && (Zd == Jd.length || this.chunkEnd(Pd.chunkIndex) < Jd[Zd].from) && (!Wd || pd > this.chunkEnd(Pd.chunkIndex) || Nd < this.chunkPos[Pd.chunkIndex]) && Cd.addChunk(this.chunkPos[Pd.chunkIndex], this.chunk[Pd.chunkIndex]) ? Pd.nextChunk() : ((!Wd || pd > Pd.to || Nd < Pd.from || Wd(Pd.from, Pd.to, Pd.value)) && (Cd.addInner(Pd.from, Pd.to, Pd.value) || gd.push(yJ.create(Pd.from, Pd.to, Pd.value))), Pd.next());
-        return Cd.finishInner(this.nextLayer.VQ && !gd.length ? EJ.empty : this.nextLayer.update({
-          add: gd,
-          filter: Wd,
-          filterFrom: pd,
-          filterTo: Nd
+          add: FQ = [],
+          sort: wQ = !1,
+          filterFrom: LQ = 0,
+          filterTo: qQ = this.length
+        } = QQ, oQ = QQ.filter;
+        if (0 == FQ.length && !oQ) return this;
+        if (wQ && (FQ = FQ.slice().sort(aF)), this.BY) return FQ.length ? fF.of(FQ) : this;
+        let DQ = new JF(this, null, -1).goto(0),
+          kQ = 0,
+          vQ = [],
+          mQ = new VF;
+        for (; DQ.value || kQ < FQ.length;)
+          if (kQ < FQ.length && (DQ.from - FQ[kQ].from || DQ.startSide - FQ[kQ].value.startSide) >= 0) {
+            let QQ = FQ[kQ++];
+            mQ.addInner(QQ.from, QQ.to, QQ.value) || vQ.push(QQ)
+          } else 1 == DQ.rangeIndex && DQ.chunkIndex < this.chunk.length && (kQ == FQ.length || this.chunkEnd(DQ.chunkIndex) < FQ[kQ].from) && (!oQ || LQ > this.chunkEnd(DQ.chunkIndex) || qQ < this.chunkPos[DQ.chunkIndex]) && mQ.addChunk(this.chunkPos[DQ.chunkIndex], this.chunk[DQ.chunkIndex]) ? DQ.nextChunk() : ((!oQ || LQ > DQ.to || qQ < DQ.from || oQ(DQ.from, DQ.to, DQ.value)) && (mQ.addInner(DQ.from, DQ.to, DQ.value) || vQ.push(jF.create(DQ.from, DQ.to, DQ.value))), DQ.next());
+        return mQ.finishInner(this.nextLayer.BY && !vQ.length ? fF.empty : this.nextLayer.update({
+          add: vQ,
+          filter: oQ,
+          filterFrom: LQ,
+          filterTo: qQ
         }))
       }
-      map(dd) {
-        if (dd.empty || this.VQ) return this;
-        let Jd = [],
-          kd = [],
-          pd = -1;
-        for (let Wd = 0; Wd < this.chunk.length; Wd++) {
-          let Nd = this.chunkPos[Wd],
-            Pd = this.chunk[Wd],
-            Zd = dd.touchesRange(Nd, Nd + Pd.length);
-          if (!1 === Zd) pd = Math.max(pd, Pd.mpd), Jd.push(Pd), kd.push(dd.mapPos(Nd));
-          else if (!0 === Zd) {
+      map(QQ) {
+        if (QQ.empty || this.BY) return this;
+        let FQ = [],
+          wQ = [],
+          LQ = -1;
+        for (let oQ = 0; oQ < this.chunk.length; oQ++) {
+          let qQ = this.chunkPos[oQ],
+            DQ = this.chunk[oQ],
+            kQ = QQ.touchesRange(qQ, qQ + DQ.length);
+          if (!1 === kQ) LQ = Math.max(LQ, DQ.NLQ), FQ.push(DQ), wQ.push(QQ.mapPos(qQ));
+          else if (!0 === kQ) {
             let {
-              mapped: Wd,
-              pos: Zd
-            } = Pd.map(Nd, dd);
-            Wd && (pd = Math.max(pd, Wd.mpd), Jd.push(Wd), kd.push(Zd))
+              mapped: oQ,
+              pos: kQ
+            } = DQ.map(qQ, QQ);
+            oQ && (LQ = Math.max(LQ, oQ.NLQ), FQ.push(oQ), wQ.push(kQ))
           }
         }
-        let Nd = this.nextLayer.map(dd);
-        return 0 == Jd.length ? Nd : new EJ(kd, Jd, Nd || EJ.empty, pd)
+        let qQ = this.nextLayer.map(QQ);
+        return 0 == FQ.length ? qQ : new fF(wQ, FQ, qQ || fF.empty, LQ)
       }
-      between(dd, Jd, kd) {
-        if (!this.VQ) {
-          for (let pd = 0; pd < this.chunk.length; pd++) {
-            let Nd = this.chunkPos[pd],
-              Wd = this.chunk[pd];
-            if (Jd >= Nd && dd <= Nd + Wd.length && !1 === Wd.between(Nd, dd - Nd, Jd - Nd, kd)) return
+      between(QQ, FQ, wQ) {
+        if (!this.BY) {
+          for (let LQ = 0; LQ < this.chunk.length; LQ++) {
+            let qQ = this.chunkPos[LQ],
+              oQ = this.chunk[LQ];
+            if (FQ >= qQ && QQ <= qQ + oQ.length && !1 === oQ.between(qQ, QQ - qQ, FQ - qQ, wQ)) return
           }
-          this.nextLayer.between(dd, Jd, kd)
+          this.nextLayer.between(QQ, FQ, wQ)
         }
       }
       iter() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return uJ.from([this]).goto(dd)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return EF.from([this]).goto(QQ)
       }
-      get VQ() {
+      get BY() {
         return this.nextLayer == this
       }
-      static iter(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return uJ.from(dd).goto(Jd)
+      static iter(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return EF.from(QQ).goto(FQ)
       }
-      static compare(dd, Jd, kd, pd) {
-        let Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          Wd = dd.filter((dd => dd.mpd > 0 || !dd.VQ && dd.mpd >= Nd)),
-          Pd = Jd.filter((dd => dd.mpd > 0 || !dd.VQ && dd.mpd >= Nd)),
-          Zd = hJ(Wd, Pd, kd),
-          gd = new VJ(Wd, Zd, Nd),
-          Cd = new VJ(Pd, Zd, Nd);
-        kd.iterGaps(((dd, Jd, kd) => zJ(gd, dd, Cd, Jd, kd, pd))), kd.empty && 0 == kd.length && zJ(gd, 0, Cd, 0, 0, pd)
+      static compare(QQ, FQ, wQ, LQ) {
+        let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          oQ = QQ.filter((QQ => QQ.NLQ > 0 || !QQ.BY && QQ.NLQ >= qQ)),
+          DQ = FQ.filter((QQ => QQ.NLQ > 0 || !QQ.BY && QQ.NLQ >= qQ)),
+          kQ = hF(oQ, DQ, wQ),
+          vQ = new gF(oQ, kQ, qQ),
+          mQ = new gF(DQ, kQ, qQ);
+        wQ.iterGaps(((QQ, FQ, wQ) => PF(vQ, QQ, mQ, FQ, wQ, LQ))), wQ.empty && 0 == wQ.length && PF(vQ, 0, mQ, 0, 0, LQ)
       }
-      static eq(dd, Jd) {
-        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          pd = arguments.length > 3 ? arguments[3] : void 0;
-        null == pd && (pd = 999999999);
-        let Nd = dd.filter((dd => !dd.VQ && Jd.indexOf(dd) < 0)),
-          Wd = Jd.filter((Jd => !Jd.VQ && dd.indexOf(Jd) < 0));
-        if (Nd.length != Wd.length) return !1;
-        if (!Nd.length) return !0;
-        let Pd = hJ(Nd, Wd),
-          Zd = new VJ(Nd, Pd, 0).goto(kd),
-          gd = new VJ(Wd, Pd, 0).goto(kd);
+      static eq(QQ, FQ) {
+        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          LQ = arguments.length > 3 ? arguments[3] : void 0;
+        null == LQ && (LQ = 999999999);
+        let qQ = QQ.filter((QQ => !QQ.BY && FQ.indexOf(QQ) < 0)),
+          oQ = FQ.filter((FQ => !FQ.BY && QQ.indexOf(FQ) < 0));
+        if (qQ.length != oQ.length) return !1;
+        if (!qQ.length) return !0;
+        let DQ = hF(qQ, oQ),
+          kQ = new gF(qQ, DQ, 0).goto(wQ),
+          vQ = new gF(oQ, DQ, 0).goto(wQ);
         for (;;) {
-          if (Zd.to != gd.to || !HJ(Zd.active, gd.active) || Zd.point && (!gd.point || !UJ(Zd.point, gd.point))) return !1;
-          if (Zd.to > pd) return !0;
-          Zd.next(), gd.next()
+          if (kQ.to != vQ.to || !ZF(kQ.active, vQ.active) || kQ.point && (!vQ.point || !lF(kQ.point, vQ.point))) return !1;
+          if (kQ.to > LQ) return !0;
+          kQ.next(), vQ.next()
         }
       }
-      static spans(dd, Jd, kd, pd) {
-        let Nd = new VJ(dd, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(Jd),
-          Wd = Jd,
-          Pd = Nd.openStart;
+      static spans(QQ, FQ, wQ, LQ) {
+        let qQ = new gF(QQ, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(FQ),
+          oQ = FQ,
+          DQ = qQ.openStart;
         for (;;) {
-          let dd = Math.min(Nd.to, kd);
-          if (Nd.point) {
-            let kd = Nd.activeForPoint(Nd.to),
-              Zd = Nd.pointFrom < Jd ? kd.length + 1 : Nd.point.startSide < 0 ? kd.length : Math.min(kd.length, Pd);
-            pd.point(Wd, dd, Nd.point, kd, Zd, Nd.pointRank), Pd = Math.min(Nd.openEnd(dd), kd.length)
-          } else dd > Wd && (pd.span(Wd, dd, Nd.active, Pd), Pd = Nd.openEnd(dd));
-          if (Nd.to > kd) return Pd + (Nd.point && Nd.to > kd ? 1 : 0);
-          Wd = Nd.to, Nd.next()
+          let QQ = Math.min(qQ.to, wQ);
+          if (qQ.point) {
+            let wQ = qQ.activeForPoint(qQ.to),
+              kQ = qQ.pointFrom < FQ ? wQ.length + 1 : qQ.point.startSide < 0 ? wQ.length : Math.min(wQ.length, DQ);
+            LQ.point(oQ, QQ, qQ.point, wQ, kQ, qQ.pointRank), DQ = Math.min(qQ.openEnd(QQ), wQ.length)
+          } else QQ > oQ && (LQ.span(oQ, QQ, qQ.active, DQ), DQ = qQ.openEnd(QQ));
+          if (qQ.to > wQ) return DQ + (qQ.point && qQ.to > wQ ? 1 : 0);
+          oQ = qQ.to, qQ.next()
         }
       }
-      static of (dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          kd = new cJ;
-        for (let pd of dd instanceof yJ ? [dd] : Jd ? function(dd) {
-            if (dd.length > 1)
-              for (let Jd = dd[0], kd = 1; kd < dd.length; kd++) {
-                let pd = dd[kd];
-                if (DJ(Jd, pd) > 0) return dd.slice().sort(DJ);
-                Jd = pd
+      static of (QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wQ = new VF;
+        for (let LQ of QQ instanceof jF ? [QQ] : FQ ? function(QQ) {
+            if (QQ.length > 1)
+              for (let FQ = QQ[0], wQ = 1; wQ < QQ.length; wQ++) {
+                let LQ = QQ[wQ];
+                if (aF(FQ, LQ) > 0) return QQ.slice().sort(aF);
+                FQ = LQ
               }
-            return dd
-          }(dd) : dd) kd.add(pd.from, pd.to, pd.value);
-        return kd.finish()
+            return QQ
+          }(QQ) : QQ) wQ.add(LQ.from, LQ.to, LQ.value);
+        return wQ.finish()
       }
-      static join(dd) {
-        if (!dd.length) return EJ.empty;
-        let Jd = dd[dd.length - 1];
-        for (let kd = dd.length - 2; kd >= 0; kd--)
-          for (let pd = dd[kd]; pd != EJ.empty; pd = pd.nextLayer) Jd = new EJ(pd.chunkPos, pd.chunk, Jd, Math.max(pd.mpd, Jd.mpd));
-        return Jd
+      static join(QQ) {
+        if (!QQ.length) return fF.empty;
+        let FQ = QQ[QQ.length - 1];
+        for (let wQ = QQ.length - 2; wQ >= 0; wQ--)
+          for (let LQ = QQ[wQ]; LQ != fF.empty; LQ = LQ.nextLayer) FQ = new fF(LQ.chunkPos, LQ.chunk, FQ, Math.max(LQ.NLQ, FQ.NLQ));
+        return FQ
       }
     }
-    EJ.empty = new EJ([], [], null, -1), EJ.empty.nextLayer = EJ.empty;
-    class cJ {
-      finishChunk(dd) {
-        this.chunks.push(new TJ(this.from, this.to, this.value, this.mpd)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.mpd), this.mpd = -1, dd && (this.from = [], this.to = [], this.value = [])
+    fF.empty = new fF([], [], null, -1), fF.empty.nextLayer = fF.empty;
+    class VF {
+      finishChunk(QQ) {
+        this.chunks.push(new XF(this.from, this.to, this.value, this.NLQ)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.NLQ), this.NLQ = -1, QQ && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.mpd = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.NLQ = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(dd, Jd, kd) {
-        this.addInner(dd, Jd, kd) || (this.nextLayer || (this.nextLayer = new cJ)).add(dd, Jd, kd)
+      add(QQ, FQ, wQ) {
+        this.addInner(QQ, FQ, wQ) || (this.nextLayer || (this.nextLayer = new VF)).add(QQ, FQ, wQ)
       }
-      addInner(dd, Jd, kd) {
-        let pd = dd - this.lastTo || kd.startSide - this.last.endSide;
-        if (pd <= 0 && (dd - this.lastFrom || kd.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(pd < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = dd), this.from.push(dd - this.chunkStart), this.to.push(Jd - this.chunkStart), this.last = kd, this.lastFrom = dd, this.lastTo = Jd, this.value.push(kd), kd.point && (this.mpd = Math.max(this.mpd, Jd - dd)), !0)
+      addInner(QQ, FQ, wQ) {
+        let LQ = QQ - this.lastTo || wQ.startSide - this.last.endSide;
+        if (LQ <= 0 && (QQ - this.lastFrom || wQ.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(LQ < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = QQ), this.from.push(QQ - this.chunkStart), this.to.push(FQ - this.chunkStart), this.last = wQ, this.lastFrom = QQ, this.lastTo = FQ, this.value.push(wQ), wQ.point && (this.NLQ = Math.max(this.NLQ, FQ - QQ)), !0)
       }
-      addChunk(dd, Jd) {
-        if ((dd - this.lastTo || Jd.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, Jd.mpd), this.chunks.push(Jd), this.chunkPos.push(dd);
-        let kd = Jd.value.length - 1;
-        return this.last = Jd.value[kd], this.lastFrom = Jd.from[kd] + dd, this.lastTo = Jd.to[kd] + dd, !0
+      addChunk(QQ, FQ) {
+        if ((QQ - this.lastTo || FQ.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, FQ.NLQ), this.chunks.push(FQ), this.chunkPos.push(QQ);
+        let wQ = FQ.value.length - 1;
+        return this.last = FQ.value[wQ], this.lastFrom = FQ.from[wQ] + QQ, this.lastTo = FQ.to[wQ] + QQ, !0
       }
       finish() {
-        return this.finishInner(EJ.empty)
+        return this.finishInner(fF.empty)
       }
-      finishInner(dd) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return dd;
-        let Jd = EJ.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(dd) : dd, this.setMaxPoint);
-        return this.from = null, Jd
+      finishInner(QQ) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return QQ;
+        let FQ = fF.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(QQ) : QQ, this.setMaxPoint);
+        return this.from = null, FQ
       }
     }
 
-    function hJ(dd, Jd, kd) {
-      let pd = new Map;
-      for (let Wd of dd)
-        for (let dd = 0; dd < Wd.chunk.length; dd++) Wd.chunk[dd].mpd <= 0 && pd.set(Wd.chunk[dd], Wd.chunkPos[dd]);
-      let Nd = new Set;
-      for (let Wd of Jd)
-        for (let dd = 0; dd < Wd.chunk.length; dd++) {
-          let Jd = pd.get(Wd.chunk[dd]);
-          null == Jd || (kd ? kd.mapPos(Jd) : Jd) != Wd.chunkPos[dd] || (null === kd || void 0 === kd ? void 0 : kd.touchesRange(Jd, Jd + Wd.chunk[dd].length)) || Nd.add(Wd.chunk[dd])
+    function hF(QQ, FQ, wQ) {
+      let LQ = new Map;
+      for (let oQ of QQ)
+        for (let QQ = 0; QQ < oQ.chunk.length; QQ++) oQ.chunk[QQ].NLQ <= 0 && LQ.set(oQ.chunk[QQ], oQ.chunkPos[QQ]);
+      let qQ = new Set;
+      for (let oQ of FQ)
+        for (let QQ = 0; QQ < oQ.chunk.length; QQ++) {
+          let FQ = LQ.get(oQ.chunk[QQ]);
+          null == FQ || (wQ ? wQ.mapPos(FQ) : FQ) != oQ.chunkPos[QQ] || (null === wQ || void 0 === wQ ? void 0 : wQ.touchesRange(FQ, FQ + oQ.chunk[QQ].length)) || qQ.add(oQ.chunk[QQ])
         }
-      return Nd
+      return qQ
     }
-    class rJ {
-      constructor(dd, Jd, kd) {
-        let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = dd, this.skip = Jd, this.bpd = kd, this.rank = pd
+    class JF {
+      constructor(QQ, FQ, wQ) {
+        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = QQ, this.skip = FQ, this.TLQ = wQ, this.rank = LQ
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(dd, Jd, !1), this
+      goto(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(QQ, FQ, !1), this
       }
-      gotoInner(dd, Jd, kd) {
+      gotoInner(QQ, FQ, wQ) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let Jd = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(Jd) || this.layer.chunkEnd(this.chunkIndex) < dd || Jd.mpd < this.bpd)) break;
-          this.chunkIndex++, kd = !1
+          let FQ = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(FQ) || this.layer.chunkEnd(this.chunkIndex) < QQ || FQ.NLQ < this.TLQ)) break;
+          this.chunkIndex++, wQ = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let pd = this.layer.chunk[this.chunkIndex].findIndex(dd - this.layer.chunkPos[this.chunkIndex], Jd, !0);
-          (!kd || this.rangeIndex < pd) && this.setRangeIndex(pd)
+          let LQ = this.layer.chunk[this.chunkIndex].findIndex(QQ - this.layer.chunkPos[this.chunkIndex], FQ, !0);
+          (!wQ || this.rangeIndex < LQ) && this.setRangeIndex(LQ)
         }
         this.next()
       }
-      forward(dd, Jd) {
-        (this.to - dd || this.endSide - Jd) < 0 && this.gotoInner(dd, Jd, !0)
+      forward(QQ, FQ) {
+        (this.to - QQ || this.endSide - FQ) < 0 && this.gotoInner(QQ, FQ, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let dd = this.layer.chunkPos[this.chunkIndex],
-              Jd = this.layer.chunk[this.chunkIndex],
-              kd = dd + Jd.from[this.rangeIndex];
-            if (this.from = kd, this.to = dd + Jd.to[this.rangeIndex], this.value = Jd.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.bpd < 0 || this.value.point && this.to - this.from >= this.bpd) break
+            let QQ = this.layer.chunkPos[this.chunkIndex],
+              FQ = this.layer.chunk[this.chunkIndex],
+              wQ = QQ + FQ.from[this.rangeIndex];
+            if (this.from = wQ, this.to = QQ + FQ.to[this.rangeIndex], this.value = FQ.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.TLQ < 0 || this.value.point && this.to - this.from >= this.TLQ) break
           }
         }
       }
-      setRangeIndex(dd) {
-        if (dd == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(QQ) {
+        if (QQ == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = dd
+        } else this.rangeIndex = QQ
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(dd) {
-        return this.from - dd.from || this.startSide - dd.startSide || this.rank - dd.rank || this.to - dd.to || this.endSide - dd.endSide
+      compare(QQ) {
+        return this.from - QQ.from || this.startSide - QQ.startSide || this.rank - QQ.rank || this.to - QQ.to || this.endSide - QQ.endSide
       }
     }
-    class uJ {
-      constructor(dd) {
-        this.heap = dd
+    class EF {
+      constructor(QQ) {
+        this.heap = QQ
       }
-      static from(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          pd = [];
-        for (let Nd = 0; Nd < dd.length; Nd++)
-          for (let Wd = dd[Nd]; !Wd.VQ; Wd = Wd.nextLayer) Wd.mpd >= kd && pd.push(new rJ(Wd, Jd, kd, Nd));
-        return 1 == pd.length ? pd[0] : new uJ(pd)
+      static from(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          LQ = [];
+        for (let qQ = 0; qQ < QQ.length; qQ++)
+          for (let oQ = QQ[qQ]; !oQ.BY; oQ = oQ.nextLayer) oQ.NLQ >= wQ && LQ.push(new JF(oQ, FQ, wQ, qQ));
+        return 1 == LQ.length ? LQ[0] : new EF(LQ)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let kd of this.heap) kd.goto(dd, Jd);
-        for (let kd = this.heap.length >> 1; kd >= 0; kd--) tJ(this.heap, kd);
+      goto(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let wQ of this.heap) wQ.goto(QQ, FQ);
+        for (let wQ = this.heap.length >> 1; wQ >= 0; wQ--) nF(this.heap, wQ);
         return this.next(), this
       }
-      forward(dd, Jd) {
-        for (let kd of this.heap) kd.forward(dd, Jd);
-        for (let kd = this.heap.length >> 1; kd >= 0; kd--) tJ(this.heap, kd);
-        (this.to - dd || this.value.endSide - Jd) < 0 && this.next()
+      forward(QQ, FQ) {
+        for (let wQ of this.heap) wQ.forward(QQ, FQ);
+        for (let wQ = this.heap.length >> 1; wQ >= 0; wQ--) nF(this.heap, wQ);
+        (this.to - QQ || this.value.endSide - FQ) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let dd = this.heap[0];
-          this.from = dd.from, this.to = dd.to, this.value = dd.value, this.rank = dd.rank, dd.value && dd.next(), tJ(this.heap, 0)
+          let QQ = this.heap[0];
+          this.from = QQ.from, this.to = QQ.to, this.value = QQ.value, this.rank = QQ.rank, QQ.value && QQ.next(), nF(this.heap, 0)
         }
       }
     }
 
-    function tJ(dd, Jd) {
-      for (let kd = dd[Jd];;) {
-        let pd = 1 + (Jd << 1);
-        if (pd >= dd.length) break;
-        let Nd = dd[pd];
-        if (pd + 1 < dd.length && Nd.compare(dd[pd + 1]) >= 0 && (Nd = dd[pd + 1], pd++), kd.compare(Nd) < 0) break;
-        dd[pd] = kd, dd[Jd] = Nd, Jd = pd
+    function nF(QQ, FQ) {
+      for (let wQ = QQ[FQ];;) {
+        let LQ = 1 + (FQ << 1);
+        if (LQ >= QQ.length) break;
+        let qQ = QQ[LQ];
+        if (LQ + 1 < QQ.length && qQ.compare(QQ[LQ + 1]) >= 0 && (qQ = QQ[LQ + 1], LQ++), wQ.compare(qQ) < 0) break;
+        QQ[LQ] = wQ, QQ[FQ] = qQ, FQ = LQ
       }
     }
-    class VJ {
-      constructor(dd, Jd, kd) {
-        this.bpd = kd, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = uJ.from(dd, Jd, kd)
+    class gF {
+      constructor(QQ, FQ, wQ) {
+        this.TLQ = wQ, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = EF.from(QQ, FQ, wQ)
       }
-      goto(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(dd, Jd), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = dd, this.endSide = Jd, this.openStart = -1, this.next(), this
+      goto(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(QQ, FQ), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = QQ, this.endSide = FQ, this.openStart = -1, this.next(), this
       }
-      forward(dd, Jd) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - dd || this.active[this.minActive].endSide - Jd) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(dd, Jd)
+      forward(QQ, FQ) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - QQ || this.active[this.minActive].endSide - FQ) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(QQ, FQ)
       }
-      removeActive(dd) {
-        wJ(this.active, dd), wJ(this.activeTo, dd), wJ(this.activeRank, dd), this.minActive = dk(this.active, this.activeTo)
+      removeActive(QQ) {
+        yF(this.active, QQ), yF(this.activeTo, QQ), yF(this.activeRank, QQ), this.minActive = dF(this.active, this.activeTo)
       }
-      addActive(dd) {
-        let Jd = 0,
+      addActive(QQ) {
+        let FQ = 0,
           {
-            value: kd,
-            to: pd,
-            rank: Nd
+            value: wQ,
+            to: LQ,
+            rank: qQ
           } = this.cursor;
-        for (; Jd < this.activeRank.length && (Nd - this.activeRank[Jd] || pd - this.activeTo[Jd]) > 0;) Jd++;
-        AJ(this.active, Jd, kd), AJ(this.activeTo, Jd, pd), AJ(this.activeRank, Jd, Nd), dd && AJ(dd, Jd, this.cursor.from), this.minActive = dk(this.active, this.activeTo)
+        for (; FQ < this.activeRank.length && (qQ - this.activeRank[FQ] || LQ - this.activeTo[FQ]) > 0;) FQ++;
+        BF(this.active, FQ, wQ), BF(this.activeTo, FQ, LQ), BF(this.activeRank, FQ, qQ), QQ && BF(QQ, FQ, this.cursor.from), this.minActive = dF(this.active, this.activeTo)
       }
       next() {
-        let dd = this.to,
-          Jd = this.point;
+        let QQ = this.to,
+          FQ = this.point;
         this.point = null;
-        let kd = this.openStart < 0 ? [] : null;
+        let wQ = this.openStart < 0 ? [] : null;
         for (;;) {
-          let pd = this.minActive;
-          if (pd > -1 && (this.activeTo[pd] - this.cursor.from || this.active[pd].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[pd] > dd) {
-              this.to = this.activeTo[pd], this.endSide = this.active[pd].endSide;
+          let LQ = this.minActive;
+          if (LQ > -1 && (this.activeTo[LQ] - this.cursor.from || this.active[LQ].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[LQ] > QQ) {
+              this.to = this.activeTo[LQ], this.endSide = this.active[LQ].endSide;
               break
             }
-            this.removeActive(pd), kd && wJ(kd, pd)
+            this.removeActive(LQ), wQ && yF(wQ, LQ)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > dd) {
+            if (this.cursor.from > QQ) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let dd = this.cursor.value;
-              if (dd.point) {
-                if (!(Jd && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = dd, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = dd.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let QQ = this.cursor.value;
+              if (QQ.point) {
+                if (!(FQ && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = QQ, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = QQ.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(kd), this.cursor.next()
+              } else this.addActive(wQ), this.cursor.next()
             }
           }
         }
-        if (kd) {
+        if (wQ) {
           this.openStart = 0;
-          for (let Jd = kd.length - 1; Jd >= 0 && kd[Jd] < dd; Jd--) this.openStart++
+          for (let FQ = wQ.length - 1; FQ >= 0 && wQ[FQ] < QQ; FQ--) this.openStart++
         }
       }
-      activeForPoint(dd) {
+      activeForPoint(QQ) {
         if (!this.active.length) return this.active;
-        let Jd = [];
-        for (let kd = this.active.length - 1; kd >= 0 && !(this.activeRank[kd] < this.pointRank); kd--)(this.activeTo[kd] > dd || this.activeTo[kd] == dd && this.active[kd].endSide >= this.point.endSide) && Jd.push(this.active[kd]);
-        return Jd.reverse()
+        let FQ = [];
+        for (let wQ = this.active.length - 1; wQ >= 0 && !(this.activeRank[wQ] < this.pointRank); wQ--)(this.activeTo[wQ] > QQ || this.activeTo[wQ] == QQ && this.active[wQ].endSide >= this.point.endSide) && FQ.push(this.active[wQ]);
+        return FQ.reverse()
       }
-      openEnd(dd) {
-        let Jd = 0;
-        for (let kd = this.activeTo.length - 1; kd >= 0 && this.activeTo[kd] > dd; kd--) Jd++;
-        return Jd
-      }
-    }
-
-    function zJ(dd, Jd, kd, pd, Nd, Wd) {
-      dd.goto(Jd), kd.goto(pd);
-      let Pd = pd + Nd,
-        Zd = pd,
-        gd = pd - Jd,
-        Cd = !!Wd.boundChange;
-      for (let Kd = !1;;) {
-        let Jd = dd.to + gd - kd.to,
-          pd = Jd || dd.endSide - kd.endSide,
-          Nd = pd < 0 ? dd.to + gd : kd.to,
-          od = Math.min(Nd, Pd);
-        if (dd.point || kd.point ? (dd.point && kd.point && UJ(dd.point, kd.point) && HJ(dd.activeForPoint(dd.to), kd.activeForPoint(kd.to)) || Wd.comparePoint(Zd, od, dd.point, kd.point), Kd = !1) : (Kd && Wd.boundChange(Zd), od > Zd && !HJ(dd.active, kd.active) && Wd.compareRange(Zd, od, dd.active, kd.active), Cd && od < Pd && (Jd || dd.openEnd(Nd) != kd.openEnd(Nd)) && (Kd = !0)), Nd > Pd) break;
-        Zd = Nd, pd <= 0 && dd.next(), pd >= 0 && kd.next()
+      openEnd(QQ) {
+        let FQ = 0;
+        for (let wQ = this.activeTo.length - 1; wQ >= 0 && this.activeTo[wQ] > QQ; wQ--) FQ++;
+        return FQ
       }
     }
 
-    function HJ(dd, Jd) {
-      if (dd.length != Jd.length) return !1;
-      for (let kd = 0; kd < dd.length; kd++)
-        if (dd[kd] != Jd[kd] && !UJ(dd[kd], Jd[kd])) return !1;
+    function PF(QQ, FQ, wQ, LQ, qQ, oQ) {
+      QQ.goto(FQ), wQ.goto(LQ);
+      let DQ = LQ + qQ,
+        kQ = LQ,
+        vQ = LQ - FQ,
+        mQ = !!oQ.boundChange;
+      for (let uQ = !1;;) {
+        let FQ = QQ.to + vQ - wQ.to,
+          LQ = FQ || QQ.endSide - wQ.endSide,
+          qQ = LQ < 0 ? QQ.to + vQ : wQ.to,
+          HQ = Math.min(qQ, DQ);
+        if (QQ.point || wQ.point ? (QQ.point && wQ.point && lF(QQ.point, wQ.point) && ZF(QQ.activeForPoint(QQ.to), wQ.activeForPoint(wQ.to)) || oQ.comparePoint(kQ, HQ, QQ.point, wQ.point), uQ = !1) : (uQ && oQ.boundChange(kQ), HQ > kQ && !ZF(QQ.active, wQ.active) && oQ.compareRange(kQ, HQ, QQ.active, wQ.active), mQ && HQ < DQ && (FQ || QQ.openEnd(qQ) != wQ.openEnd(qQ)) && (uQ = !0)), qQ > DQ) break;
+        kQ = qQ, LQ <= 0 && QQ.next(), LQ >= 0 && wQ.next()
+      }
+    }
+
+    function ZF(QQ, FQ) {
+      if (QQ.length != FQ.length) return !1;
+      for (let wQ = 0; wQ < QQ.length; wQ++)
+        if (QQ[wQ] != FQ[wQ] && !lF(QQ[wQ], FQ[wQ])) return !1;
       return !0
     }
 
-    function wJ(dd, Jd) {
-      for (let kd = Jd, pd = dd.length - 1; kd < pd; kd++) dd[kd] = dd[kd + 1];
-      dd.pop()
+    function yF(QQ, FQ) {
+      for (let wQ = FQ, LQ = QQ.length - 1; wQ < LQ; wQ++) QQ[wQ] = QQ[wQ + 1];
+      QQ.pop()
     }
 
-    function AJ(dd, Jd, kd) {
-      for (let pd = dd.length - 1; pd >= Jd; pd--) dd[pd + 1] = dd[pd];
-      dd[Jd] = kd
+    function BF(QQ, FQ, wQ) {
+      for (let LQ = QQ.length - 1; LQ >= FQ; LQ--) QQ[LQ + 1] = QQ[LQ];
+      QQ[FQ] = wQ
     }
 
-    function dk(dd, Jd) {
-      let kd = -1,
-        pd = 1e9;
-      for (let Nd = 0; Nd < Jd.length; Nd++)(Jd[Nd] - pd || dd[Nd].endSide - dd[kd].endSide) < 0 && (kd = Nd, pd = Jd[Nd]);
-      return kd
+    function dF(QQ, FQ) {
+      let wQ = -1,
+        LQ = 1e9;
+      for (let qQ = 0; qQ < FQ.length; qQ++)(FQ[qQ] - LQ || QQ[qQ].endSide - QQ[wQ].endSide) < 0 && (wQ = qQ, LQ = FQ[qQ]);
+      return wQ
     }
 
-    function Jk(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dd.length,
-        pd = 0;
-      for (let Nd = 0; Nd < kd && Nd < dd.length;) 9 == dd.charCodeAt(Nd) ? (pd += Jd - pd % Jd, Nd++) : (pd++, Nd = ad(dd, Nd));
-      return pd
+    function Qw(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : QQ.length,
+        LQ = 0;
+      for (let qQ = 0; qQ < wQ && qQ < QQ.length;) 9 == QQ.charCodeAt(qQ) ? (LQ += FQ - LQ % FQ, qQ++) : (LQ++, qQ = WQ(QQ, qQ));
+      return LQ
     }
 
-    function kk(dd, Jd, kd, pd) {
-      for (let Nd = 0, Wd = 0;;) {
-        if (Wd >= Jd) return Nd;
-        if (Nd == dd.length) break;
-        Wd += 9 == dd.charCodeAt(Nd) ? kd - Wd % kd : 1, Nd = ad(dd, Nd)
+    function Fw(QQ, FQ, wQ, LQ) {
+      for (let qQ = 0, oQ = 0;;) {
+        if (oQ >= FQ) return qQ;
+        if (qQ == QQ.length) break;
+        oQ += 9 == QQ.charCodeAt(qQ) ? wQ - oQ % wQ : 1, qQ = WQ(QQ, qQ)
       }
-      return !0 === pd ? -1 : dd.length
+      return !0 === LQ ? -1 : QQ.length
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

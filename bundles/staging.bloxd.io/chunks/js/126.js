@@ -1,13 +1,13 @@
 export const id = 126;
 export const ids = [126, 128, 131];
 export const modules = {
-  6459: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => Pd
+  6422: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => DQ
     });
-    var pd = kd(6464),
-      Nd = kd(1103);
-    const Wd = {
+    var LQ = wQ(6427),
+      qQ = wQ(1107);
+    const oQ = {
       strict: "shaderPack:variantStrict",
       nonStrict: "shaderPack:variantNonStrict",
       terrain: "shaderPack:variantTerrain",
@@ -15,549 +15,549 @@ export const modules = {
       model: "shaderPack:variantModel"
     };
 
-    function Pd(dd) {
+    function DQ(QQ) {
       let {
-        diagnostics: Jd,
-        more: kd = 0,
-        t: Pd
-      } = dd;
-      return (0, Nd.jsxs)("ul", {
+        diagnostics: FQ,
+        more: wQ = 0,
+        t: DQ
+      } = QQ;
+      return (0, qQ.jsxs)("ul", {
         className: "ShaderPackDiagnostics",
-        children: [Jd.map(((dd, Jd) => {
-          const kd = (0, pd.g)(dd),
-            Zd = function(dd, Jd) {
-              const kd = (0, pd.e)(null !== dd && void 0 !== dd ? dd : []);
-              if (0 === kd.length) return null;
-              return kd.map((dd => dd.map((dd => Jd(Wd[dd]))).join(", "))).join("; ")
-            }(dd.variants, Pd);
-          return (0, Nd.jsxs)("li", {
-            children: [kd && (0, Nd.jsx)("span", {
+        children: [FQ.map(((QQ, FQ) => {
+          const wQ = (0, LQ.h)(QQ),
+            kQ = function(QQ, FQ) {
+              const wQ = (0, LQ.e)(null !== QQ && void 0 !== QQ ? QQ : []);
+              if (0 === wQ.length) return null;
+              return wQ.map((QQ => QQ.map((QQ => FQ(oQ[QQ]))).join(", "))).join("; ")
+            }(QQ.variants, DQ);
+          return (0, qQ.jsxs)("li", {
+            children: [wQ && (0, qQ.jsx)("span", {
               className: "ShaderPackDiagnosticLocation",
-              children: kd
-            }), dd.message, Zd && (0, Nd.jsx)("span", {
+              children: wQ
+            }), QQ.message, kQ && (0, qQ.jsx)("span", {
               className: "ShaderPackDiagnosticVariants",
-              children: Pd("shaderPack:onlyIn", {
-                variants: Zd
+              children: DQ("shaderPack:onlyIn", {
+                variants: kQ
               })
             })]
-          }, Jd)
-        })), kd > 0 && (0, Nd.jsx)("li", {
-          children: Pd("shaderPack:moreErrors", {
-            count: String(kd)
+          }, FQ)
+        })), wQ > 0 && (0, qQ.jsx)("li", {
+          children: DQ("shaderPack:moreErrors", {
+            count: String(wQ)
           })
         })]
       })
     }
   },
-  6472: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => cd,
-      h: () => hd
+  6435: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => VQ,
+      g: () => hQ
     });
-    var pd = kd(56),
-      Nd = kd(1044),
-      Wd = kd.n(Nd),
-      Pd = kd(4841),
-      Zd = kd(1359),
-      gd = kd(1059),
-      Cd = kd(1461),
-      Kd = kd(1211),
-      od = kd(95),
-      ld = kd(6457),
-      Qd = kd(6466);
-    class Ld extends Error {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        super(dd, arguments.length > 2 ? arguments[2] : void 0), this.translationKey = dd, this.params = Jd
+    var LQ = wQ(53),
+      qQ = wQ(1070),
+      oQ = wQ.n(qQ),
+      DQ = wQ(4794),
+      kQ = wQ(1348),
+      vQ = wQ(1079),
+      mQ = wQ(1451),
+      uQ = wQ(1207),
+      HQ = wQ(96),
+      bQ = wQ(6414),
+      YQ = wQ(6429);
+    class xQ extends Error {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        super(QQ, arguments.length > 2 ? arguments[2] : void 0), this.translationKey = QQ, this.params = FQ
       }
     }
-    const Od = 1024,
-      ed = 101010256,
-      Rd = 33639248,
-      Id = 67324752,
-      Gd = 22,
-      vd = 46,
-      xd = 30,
-      qd = 65535,
-      Bd = 65535,
-      sd = 4294967295,
-      ad = 0,
-      Md = 8,
-      Fd = new TextDecoder;
+    const AQ = 1024,
+      tQ = 101010256,
+      eQ = 33639248,
+      MQ = 67324752,
+      GQ = 22,
+      pQ = 46,
+      cQ = 30,
+      CQ = 65535,
+      SQ = 65535,
+      iQ = 4294967295,
+      WQ = 0,
+      RQ = 8,
+      OQ = new TextDecoder;
 
-    function Yd(dd) {
-      const Jd = new DataView(dd.buffer, dd.byteOffset, dd.byteLength),
-        kd = function(dd) {
-          const Jd = dd.byteLength - Gd;
-          for (let kd = Jd; kd >= Math.max(0, Jd - qd); kd--)
-            if (dd.getUint32(kd, !0) === ed && kd + Gd + dd.getUint16(kd + 20, !0) <= dd.byteLength) return kd;
-          throw new Ld("shaderPack:loadNotZip")
-        }(Jd),
-        pd = Jd.getUint16(kd + 8, !0),
-        Nd = Jd.getUint16(kd + 10, !0),
-        Wd = Jd.getUint32(kd + 12, !0),
-        Pd = Jd.getUint32(kd + 16, !0);
-      if (Nd === Bd || Wd === sd || Pd === sd) throw jd();
-      if (0 !== Jd.getUint16(kd + 4, !0) || 0 !== Jd.getUint16(kd + 6, !0) || pd !== Nd) throw new Ld("shaderPack:loadSplitZip");
-      if (Nd > Od) throw new Ld("shaderPack:loadTooManyZipEntries", {
-        count: String(Od)
+    function sQ(QQ) {
+      const FQ = new DataView(QQ.buffer, QQ.byteOffset, QQ.byteLength),
+        wQ = function(QQ) {
+          const FQ = QQ.byteLength - GQ;
+          for (let wQ = FQ; wQ >= Math.max(0, FQ - CQ); wQ--)
+            if (QQ.getUint32(wQ, !0) === tQ && wQ + GQ + QQ.getUint16(wQ + 20, !0) <= QQ.byteLength) return wQ;
+          throw new xQ("shaderPack:loadNotZip")
+        }(FQ),
+        LQ = FQ.getUint16(wQ + 8, !0),
+        qQ = FQ.getUint16(wQ + 10, !0),
+        oQ = FQ.getUint32(wQ + 12, !0),
+        DQ = FQ.getUint32(wQ + 16, !0);
+      if (qQ === SQ || oQ === iQ || DQ === iQ) throw NQ();
+      if (0 !== FQ.getUint16(wQ + 4, !0) || 0 !== FQ.getUint16(wQ + 6, !0) || LQ !== qQ) throw new xQ("shaderPack:loadSplitZip");
+      if (qQ > AQ) throw new xQ("shaderPack:loadTooManyZipEntries", {
+        count: String(AQ)
       });
-      const Zd = Pd + Wd;
-      if (Zd > kd) throw Sd();
-      const gd = [];
-      let Cd = Pd;
-      for (let Kd = 0; Kd < Nd; Kd++) {
-        if (Cd + vd > Zd || Jd.getUint32(Cd, !0) !== Rd) throw Sd();
-        const kd = Jd.getUint16(Cd + 8, !0),
-          pd = Jd.getUint16(Cd + 10, !0),
-          Nd = Jd.getUint32(Cd + 20, !0),
-          Wd = Jd.getUint32(Cd + 24, !0),
-          Kd = Jd.getUint16(Cd + 28, !0),
-          od = Jd.getUint16(Cd + 30, !0),
-          ld = Jd.getUint16(Cd + 32, !0),
-          Qd = Jd.getUint32(Cd + 42, !0),
-          Ld = Cd + vd;
-        if (Cd = Ld + Kd + od + ld, Cd > Zd) throw Sd();
-        if (Nd === sd || Wd === sd || Qd === sd) throw jd();
-        const Od = Fd.decode(dd.subarray(Ld, Ld + Kd)).replace(/\\/g, "/");
-        Od.endsWith("/") || gd.push({
-          path: Od,
-          method: pd,
-          encrypted: 0 !== (1 & kd),
-          compressedSize: Nd,
-          dataOffset: bd(Jd, Qd, Nd, Pd)
+      const kQ = DQ + oQ;
+      if (kQ > wQ) throw UQ();
+      const vQ = [];
+      let mQ = DQ;
+      for (let uQ = 0; uQ < qQ; uQ++) {
+        if (mQ + pQ > kQ || FQ.getUint32(mQ, !0) !== eQ) throw UQ();
+        const wQ = FQ.getUint16(mQ + 8, !0),
+          LQ = FQ.getUint16(mQ + 10, !0),
+          qQ = FQ.getUint32(mQ + 20, !0),
+          oQ = FQ.getUint32(mQ + 24, !0),
+          uQ = FQ.getUint16(mQ + 28, !0),
+          HQ = FQ.getUint16(mQ + 30, !0),
+          bQ = FQ.getUint16(mQ + 32, !0),
+          YQ = FQ.getUint32(mQ + 42, !0),
+          xQ = mQ + pQ;
+        if (mQ = xQ + uQ + HQ + bQ, mQ > kQ) throw UQ();
+        if (qQ === iQ || oQ === iQ || YQ === iQ) throw NQ();
+        const AQ = OQ.decode(QQ.subarray(xQ, xQ + uQ)).replace(/\\/g, "/");
+        AQ.endsWith("/") || vQ.push({
+          path: AQ,
+          method: LQ,
+          encrypted: 0 !== (1 & wQ),
+          compressedSize: qQ,
+          dataOffset: IQ(FQ, YQ, qQ, DQ)
         })
       }
-      return gd
+      return vQ
     }
-    async function md(dd, Jd, kd) {
-      if (Jd.encrypted) throw new Ld("shaderPack:loadEncrypted", {
-        path: Jd.path
+    async function rQ(QQ, FQ, wQ) {
+      if (FQ.encrypted) throw new xQ("shaderPack:loadEncrypted", {
+        path: FQ.path
       });
-      if (Jd.method === ad) return Jd.compressedSize > kd ? null : dd.subarray(Jd.dataOffset, Jd.dataOffset + Jd.compressedSize);
-      if (Jd.method === Md) return async function(dd, Jd, kd) {
-        const pd = new Blob([dd]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader(),
-          Nd = [];
-        let Wd = 0;
+      if (FQ.method === WQ) return FQ.compressedSize > wQ ? null : QQ.subarray(FQ.dataOffset, FQ.dataOffset + FQ.compressedSize);
+      if (FQ.method === RQ) return async function(QQ, FQ, wQ) {
+        const LQ = new Blob([QQ]).stream().pipeThrough(new DecompressionStream("deflate-raw")).getReader(),
+          qQ = [];
+        let oQ = 0;
         try {
           for (;;) {
             const {
-              done: dd,
-              value: kd
-            } = await pd.read();
-            if (dd) break;
-            if (Wd += kd.byteLength, Wd > Jd) return await pd.cancel(), null;
-            Nd.push(kd)
+              done: QQ,
+              value: wQ
+            } = await LQ.read();
+            if (QQ) break;
+            if (oQ += wQ.byteLength, oQ > FQ) return await LQ.cancel(), null;
+            qQ.push(wQ)
           }
-        } catch (gd) {
-          throw new Ld("shaderPack:loadDecompressFailed", {
-            path: kd
+        } catch (vQ) {
+          throw new xQ("shaderPack:loadDecompressFailed", {
+            path: wQ
           }, {
-            cause: gd
+            cause: vQ
           })
         }
-        const Pd = new Uint8Array(Wd);
-        let Zd = 0;
-        for (const Cd of Nd) Pd.set(Cd, Zd), Zd += Cd.byteLength;
-        return Pd
-      }(dd.slice(Jd.dataOffset, Jd.dataOffset + Jd.compressedSize), kd, Jd.path);
-      throw new Ld("shaderPack:loadUnsupportedCompression", {
-        path: Jd.path,
-        method: String(Jd.method)
+        const DQ = new Uint8Array(oQ);
+        let kQ = 0;
+        for (const mQ of qQ) DQ.set(mQ, kQ), kQ += mQ.byteLength;
+        return DQ
+      }(QQ.slice(FQ.dataOffset, FQ.dataOffset + FQ.compressedSize), wQ, FQ.path);
+      throw new xQ("shaderPack:loadUnsupportedCompression", {
+        path: FQ.path,
+        method: String(FQ.method)
       })
     }
 
-    function bd(dd, Jd, kd, pd) {
-      if (Jd + xd > pd || dd.getUint32(Jd, !0) !== Id) throw Sd();
-      const Nd = Jd + xd + dd.getUint16(Jd + 26, !0) + dd.getUint16(Jd + 28, !0);
-      if (Nd + kd > pd) throw Sd();
-      return Nd
+    function IQ(QQ, FQ, wQ, LQ) {
+      if (FQ + cQ > LQ || QQ.getUint32(FQ, !0) !== MQ) throw UQ();
+      const qQ = FQ + cQ + QQ.getUint16(FQ + 26, !0) + QQ.getUint16(FQ + 28, !0);
+      if (qQ + wQ > LQ) throw UQ();
+      return qQ
     }
 
-    function Sd() {
-      return new Ld("shaderPack:loadZipDamaged")
+    function UQ() {
+      return new xQ("shaderPack:loadZipDamaged")
     }
 
-    function jd() {
-      return new Ld("shaderPack:loadZip64")
+    function NQ() {
+      return new xQ("shaderPack:loadZip64")
     }
-    const Xd = 33554432,
-      fd = 65536;
-    async function nd(dd) {
-      if (1 === dd.length && dd[0].name.toLowerCase().endsWith(".zip")) {
-        const Jd = dd[0];
-        if (Jd.size > Xd) throw new Ld("shaderPack:loadZipTooBig", {
-          megabytes: String(Xd / 1048576)
+    const TQ = 33554432,
+      KQ = 65536;
+    async function zQ(QQ) {
+      if (1 === QQ.length && QQ[0].name.toLowerCase().endsWith(".zip")) {
+        const FQ = QQ[0];
+        if (FQ.size > TQ) throw new xQ("shaderPack:loadZipTooBig", {
+          megabytes: String(TQ / 1048576)
         });
-        return async function(dd) {
-          return Ud(Yd(dd).map((Jd => ({
-            path: Jd.path,
-            read: kd => md(dd, Jd, kd)
+        return async function(QQ) {
+          return lQ(sQ(QQ).map((FQ => ({
+            path: FQ.path,
+            read: wQ => rQ(QQ, FQ, wQ)
           }))))
-        }(new Uint8Array(await Jd.arrayBuffer()))
+        }(new Uint8Array(await FQ.arrayBuffer()))
       }
-      return Ud(dd.map((dd => ({
-        path: yd(dd),
-        read: Jd => async function(dd, Jd) {
-          return dd.size > Jd ? null : new Uint8Array(await dd.arrayBuffer())
-        }(dd, Jd)
+      return lQ(QQ.map((QQ => ({
+        path: jQ(QQ),
+        read: FQ => async function(QQ, FQ) {
+          return QQ.size > FQ ? null : new Uint8Array(await QQ.arrayBuffer())
+        }(QQ, FQ)
       }))))
     }
-    async function Ud(dd) {
-      const Jd = function(dd) {
-          const Jd = dd.length > 0 ? dd[0].path.indexOf("/") : -1;
-          if (-1 === Jd) return dd;
-          const kd = dd[0].path.slice(0, Jd + 1);
-          if (!dd.every((dd => dd.path.startsWith(kd)))) return dd;
-          return dd.map((dd => ({
-            ...dd,
-            path: dd.path.slice(kd.length)
+    async function lQ(QQ) {
+      const FQ = function(QQ) {
+          const FQ = QQ.length > 0 ? QQ[0].path.indexOf("/") : -1;
+          if (-1 === FQ) return QQ;
+          const wQ = QQ[0].path.slice(0, FQ + 1);
+          if (!QQ.every((QQ => QQ.path.startsWith(wQ)))) return QQ;
+          return QQ.map((QQ => ({
+            ...QQ,
+            path: QQ.path.slice(wQ.length)
           })))
-        }(dd.filter((dd => ! function(dd) {
-          const Jd = dd.split("/"),
-            kd = Jd[Jd.length - 1];
-          return Jd.includes("__MACOSX") || kd.startsWith("._") || ".DS_Store" === kd
-        }(dd.path)))),
-        kd = Jd.filter((dd => "pack.json" === dd.path.toLowerCase()));
-      if (0 === kd.length) throw new Ld("shaderPack:loadNoManifest");
-      if (kd.length > 1) throw new Ld("shaderPack:loadDuplicateManifest");
-      const pd = kd[0],
-        Nd = await pd.read(fd);
-      if (null === Nd) throw new Ld("shaderPack:loadManifestTooBig", {
-        kilobytes: String(fd / 1024)
+        }(QQ.filter((QQ => ! function(QQ) {
+          const FQ = QQ.split("/"),
+            wQ = FQ[FQ.length - 1];
+          return FQ.includes("__MACOSX") || wQ.startsWith("._") || ".DS_Store" === wQ
+        }(QQ.path)))),
+        wQ = FQ.filter((QQ => "pack.json" === QQ.path.toLowerCase()));
+      if (0 === wQ.length) throw new xQ("shaderPack:loadNoManifest");
+      if (wQ.length > 1) throw new xQ("shaderPack:loadDuplicateManifest");
+      const LQ = wQ[0],
+        qQ = await LQ.read(KQ);
+      if (null === qQ) throw new xQ("shaderPack:loadManifestTooBig", {
+        kilobytes: String(KQ / 1024)
       });
-      const Wd = function(dd) {
-          let Jd;
+      const oQ = function(QQ) {
+          let FQ;
           try {
-            Jd = JSON.parse(dd)
-          } catch (Zd) {
-            throw new Ld("shaderPack:loadManifestNotJson", {
-              error: Zd.message
+            FQ = JSON.parse(QQ)
+          } catch (kQ) {
+            throw new xQ("shaderPack:loadManifestNotJson", {
+              error: kQ.message
             }, {
-              cause: Zd
+              cause: kQ
             })
           }
-          if ("object" !== typeof Jd || null === Jd || Array.isArray(Jd)) throw new Ld("shaderPack:loadManifestNotObject");
+          if ("object" !== typeof FQ || null === FQ || Array.isArray(FQ)) throw new xQ("shaderPack:loadManifestNotObject");
           const {
-            apiVersion: kd,
-            name: pd,
-            author: Nd,
-            description: Wd,
-            keepCircleShadows: Pd
-          } = Jd;
-          if (void 0 === kd) throw new Ld("shaderPack:loadNoApiVersion", {
-            version: String(Qd.e)
+            apiVersion: wQ,
+            name: LQ,
+            author: qQ,
+            description: oQ,
+            keepCircleShadows: DQ
+          } = FQ;
+          if (void 0 === wQ) throw new xQ("shaderPack:loadNoApiVersion", {
+            version: String(YQ.e)
           });
-          if (!(0, Qd.m)(kd)) throw new Ld("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(kd),
-            version: String(Qd.e)
+          if (!(0, YQ.m)(wQ)) throw new xQ("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(wQ),
+            version: String(YQ.e)
           });
-          if ("string" !== typeof pd || "" === pd.trim()) throw new Ld("shaderPack:loadNoName");
-          if (void 0 !== Nd && null !== Nd && "string" !== typeof Nd) throw new Ld("shaderPack:loadAuthorNotString");
-          if (void 0 !== Wd && null !== Wd && "string" !== typeof Wd) throw new Ld("shaderPack:loadDescriptionNotString");
-          if (void 0 !== Pd && "boolean" !== typeof Pd) throw new Ld("shaderPack:loadKeepCircleShadowsNotBoolean");
+          if ("string" !== typeof LQ || "" === LQ.trim()) throw new xQ("shaderPack:loadNoName");
+          if (void 0 !== qQ && null !== qQ && "string" !== typeof qQ) throw new xQ("shaderPack:loadAuthorNotString");
+          if (void 0 !== oQ && null !== oQ && "string" !== typeof oQ) throw new xQ("shaderPack:loadDescriptionNotString");
+          if (void 0 !== DQ && "boolean" !== typeof DQ) throw new xQ("shaderPack:loadKeepCircleShadowsNotBoolean");
           return {
-            apiVersion: kd,
-            name: pd,
-            author: "string" === typeof Nd ? Nd : null,
-            description: "string" === typeof Wd && "" !== Wd.trim() ? Wd : null,
-            keepCircleShadows: !0 === Pd
+            apiVersion: wQ,
+            name: LQ,
+            author: "string" === typeof qQ ? qQ : null,
+            description: "string" === typeof oQ && "" !== oQ.trim() ? oQ : null,
+            keepCircleShadows: !0 === DQ
           }
-        }(Dd(Nd, pd.path)),
-        Pd = Jd.filter((dd => dd.path.toLowerCase().endsWith(".wgsl"))).sort(((dd, Jd) => (0, ld.r)(dd.path, Jd.path)));
-      if (0 === Pd.length) throw new Ld("shaderPack:loadNoWgsl");
-      if (Pd.length > ld.d) throw new Ld("shaderPack:loadTooManyWgsl", {
-        count: String(ld.d)
+        }(aQ(qQ, LQ.path)),
+        DQ = FQ.filter((QQ => QQ.path.toLowerCase().endsWith(".wgsl"))).sort(((QQ, FQ) => (0, bQ.k)(QQ.path, FQ.path)));
+      if (0 === DQ.length) throw new xQ("shaderPack:loadNoWgsl");
+      if (DQ.length > bQ.b) throw new xQ("shaderPack:loadTooManyWgsl", {
+        count: String(bQ.b)
       });
-      const Zd = Pd.find(((dd, Jd) => Jd > 0 && dd.path === Pd[Jd - 1].path));
-      if (Zd) throw new Ld("shaderPack:loadDuplicatePath", {
-        path: Zd.path
+      const kQ = DQ.find(((QQ, FQ) => FQ > 0 && QQ.path === DQ[FQ - 1].path));
+      if (kQ) throw new xQ("shaderPack:loadDuplicatePath", {
+        path: kQ.path
       });
-      const gd = [];
-      let Cd = ld.h;
-      for (const Kd of Pd) {
-        const dd = await Kd.read(Cd);
-        if (null === dd) throw new Ld("shaderPack:loadSourceTooBig", {
-          kilobytes: String(ld.h / 1024)
+      const vQ = [];
+      let mQ = bQ.f;
+      for (const uQ of DQ) {
+        const QQ = await uQ.read(mQ);
+        if (null === QQ) throw new xQ("shaderPack:loadSourceTooBig", {
+          kilobytes: String(bQ.f / 1024)
         });
-        Cd -= dd.byteLength, gd.push({
-          path: Kd.path,
-          source: Dd(dd, Kd.path)
+        mQ -= QQ.byteLength, vQ.push({
+          path: uQ.path,
+          source: aQ(QQ, uQ.path)
         })
       }
       return {
-        manifest: Wd,
-        files: gd
+        manifest: oQ,
+        files: vQ
       }
     }
 
-    function yd(dd) {
-      return (dd.webkitRelativePath || dd.path || dd.name).replace(/^\.?\//, "")
+    function jQ(QQ) {
+      return (QQ.webkitRelativePath || QQ.path || QQ.name).replace(/^\.?\//, "")
     }
 
-    function Dd(dd, Jd) {
+    function aQ(QQ, FQ) {
       try {
         return new TextDecoder("utf-8", {
           fatal: !0
-        }).decode(dd)
-      } catch (kd) {
-        throw new Ld("shaderPack:loadNotUtf8", {
-          path: Jd
+        }).decode(QQ)
+      } catch (wQ) {
+        throw new xQ("shaderPack:loadNotUtf8", {
+          path: FQ
         }, {
-          cause: kd
+          cause: wQ
         })
       }
     }
-    var Td = kd(6464),
-      Ed = kd(1103);
+    var XQ = wQ(6427),
+      fQ = wQ(1107);
 
-    function cd(dd) {
+    function VQ(QQ) {
       let {
-        busy: Jd,
-        disabled: kd,
-        onFiles: Nd
-      } = dd;
+        busy: FQ,
+        disabled: wQ,
+        onFiles: qQ
+      } = QQ;
       const {
-        t: ld
-      } = (0, Kd.B)(), Qd = (0, pd.useRef)(null), Ld = !(0, od.isMobile)(), {
-        getRootProps: Od,
-        getInputProps: ed,
-        isDragActive: Rd,
-        open: Id
-      } = (0, Pd.c)({
-        onDrop: Nd,
+        t: bQ
+      } = (0, uQ.y)(), YQ = (0, LQ.useRef)(null), xQ = !(0, HQ.isMobile)(), {
+        getRootProps: AQ,
+        getInputProps: tQ,
+        isDragActive: eQ,
+        open: MQ
+      } = (0, DQ.b)({
+        onDrop: qQ,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: kd
+        disabled: wQ
       });
-      return (0, Ed.jsxs)("div", {
-        ...Od({
-          className: Wd()("ShaderPackDropZone", {
-            ActiveDrag: Rd,
-            Disabled: kd
+      return (0, fQ.jsxs)("div", {
+        ...AQ({
+          className: oQ()("ShaderPackDropZone", {
+            ActiveDrag: eQ,
+            Disabled: wQ
           })
         }),
-        children: [(0, Ed.jsx)("input", {
-          ...ed({
+        children: [(0, fQ.jsx)("input", {
+          ...tQ({
             webkitdirectory: "true"
           })
-        }), (0, Ed.jsx)("input", {
-          ref: Qd,
+        }), (0, fQ.jsx)("input", {
+          ref: YQ,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(dd) {
-            const Jd = Array.from(dd.target.files);
-            dd.target.value = "", Nd(Jd)
+          onChange: function(QQ) {
+            const FQ = Array.from(QQ.target.files);
+            QQ.target.value = "", qQ(FQ)
           }
-        }), Jd && (0, Ed.jsx)(Zd.b, {}), !Jd && (0, Ed.jsxs)(Ed.Fragment, {
-          children: [(0, Ed.jsx)("div", {
+        }), FQ && (0, fQ.jsx)(kQ.c, {}), !FQ && (0, fQ.jsxs)(fQ.Fragment, {
+          children: [(0, fQ.jsx)("div", {
             className: "ShaderPackDropZoneIcon",
-            children: (0, Ed.jsx)(gd.e, {
+            children: (0, fQ.jsx)(vQ.c, {
               name: "up-from-bracket"
             })
-          }), (0, Ed.jsx)("div", {
+          }), (0, fQ.jsx)("div", {
             className: "ShaderPackDropZoneInstructions",
-            children: ld(Ld ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, Ed.jsxs)("div", {
+            children: bQ(xQ ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, fQ.jsxs)("div", {
             className: "ShaderPackDropZoneButtons",
             "data-pad-mouse-only": !0,
-            children: [Ld && (0, Ed.jsx)(Cd.d, {
-              disabled: kd,
-              onClick: Id,
-              children: ld("shaderPack:chooseFolder")
-            }), (0, Ed.jsx)(Cd.d, {
-              disabled: kd,
+            children: [xQ && (0, fQ.jsx)(mQ.f, {
+              disabled: wQ,
+              onClick: MQ,
+              children: bQ("shaderPack:chooseFolder")
+            }), (0, fQ.jsx)(mQ.f, {
+              disabled: wQ,
               onClick: () => {
-                Qd.current.click()
+                YQ.current.click()
               },
-              children: ld("shaderPack:chooseZip")
+              children: bQ("shaderPack:chooseZip")
             })]
           })]
         })]
       })
     }
 
-    function hd(dd) {
+    function hQ(QQ) {
       const {
-        t: Jd
-      } = (0, Kd.B)(), [kd, Nd] = (0, pd.useState)(!1), [Wd, Pd] = (0, pd.useState)(null), Zd = (0, pd.useRef)(!1);
+        t: FQ
+      } = (0, uQ.y)(), [wQ, qQ] = (0, LQ.useState)(!1), [oQ, DQ] = (0, LQ.useState)(null), kQ = (0, LQ.useRef)(!1);
       return {
-        loading: kd,
-        error: Wd,
-        setError: Pd,
-        onFiles: async function(kd) {
-          if (!Zd.current) {
-            Zd.current = !0, Nd(!0), Pd(null);
+        loading: wQ,
+        error: oQ,
+        setError: DQ,
+        onFiles: async function(wQ) {
+          if (!kQ.current) {
+            kQ.current = !0, qQ(!0), DQ(null);
             try {
-              await dd(await nd(kd))
-            } catch (pd) {
-              pd instanceof Ld ? Pd((0, Td.j)(Jd, pd.translationKey, pd.params)) : (console.error("Failed to load the shader pack", pd), Pd(Jd("shaderPack:unexpectedError")))
+              await QQ(await zQ(wQ))
+            } catch (LQ) {
+              LQ instanceof xQ ? DQ((0, XQ.k)(FQ, LQ.translationKey, LQ.params)) : (console.error("Failed to load the shader pack", LQ), DQ(FQ("shaderPack:unexpectedError")))
             } finally {
-              Zd.current = !1, Nd(!1)
+              kQ.current = !1, qQ(!1)
             }
           }
         }
       }
     }
   },
-  6464: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Zd,
-      g: () => Pd,
-      j: () => Wd
+  6427: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => kQ,
+      h: () => DQ,
+      k: () => oQ
     });
-    var pd = kd(6466);
-    const Nd = [dd => dd.strict ? "strict" : "nonStrict", dd => dd.program];
+    var LQ = wQ(6429);
+    const qQ = [QQ => QQ.strict ? "strict" : "nonStrict", QQ => QQ.program];
 
-    function Wd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const pd = {};
-      for (const Nd in kd) pd[Nd] = `\0${Nd}\0`;
-      return dd(Jd, pd).replace(/\0(\w+)\0/g, ((dd, Jd) => kd[Jd]))
+    function oQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const LQ = {};
+      for (const qQ in wQ) LQ[qQ] = `\0${qQ}\0`;
+      return QQ(FQ, LQ).replace(/\0(\w+)\0/g, ((QQ, FQ) => wQ[FQ]))
     }
 
-    function Pd(dd) {
-      return null === dd.file ? null : dd.line > 0 ? `${dd.file}:${dd.line}` : dd.file
+    function DQ(QQ) {
+      return null === QQ.file ? null : QQ.line > 0 ? `${QQ.file}:${QQ.line}` : QQ.file
     }
 
-    function Zd(dd) {
-      const Jd = new Map(dd.map((dd => [gd(dd).join("."), dd])));
-      if (0 === Jd.size) return [];
-      const kd = Kd([...Jd.values()]);
-      return 0 === kd[0].length ? [] : kd
+    function kQ(QQ) {
+      const FQ = new Map(QQ.map((QQ => [vQ(QQ).join("."), QQ])));
+      if (0 === FQ.size) return [];
+      const wQ = uQ([...FQ.values()]);
+      return 0 === wQ[0].length ? [] : wQ
     }
 
-    function gd(dd) {
-      return Nd.map((Jd => Jd(dd)))
+    function vQ(QQ) {
+      return qQ.map((FQ => FQ(QQ)))
     }
-    const Cd = Nd.map((dd => new Set(pd.i.map(dd)).size));
+    const mQ = qQ.map((QQ => new Set(LQ.i.map(QQ)).size));
 
-    function Kd(dd) {
-      const Jd = Nd.map((Jd => new Set(dd.map(Jd)))),
-        kd = Jd.reduce(((dd, Jd) => dd * Jd.size), 1),
-        pd = Jd.every(((dd, Jd) => 1 === dd.size || dd.size === Cd[Jd]));
-      if (kd === dd.length && pd) return [Nd.filter(((dd, kd) => 1 === Jd[kd].size)).map((Jd => Jd(dd[0])))];
-      let Wd = null;
-      for (let Pd = 0; Pd < Nd.length; Pd++) {
-        if (1 === Jd[Pd].size) continue;
-        const kd = od(dd, Nd[Pd]).flatMap(Kd);
-        (null === Wd || kd.length < Wd.length) && (Wd = kd)
+    function uQ(QQ) {
+      const FQ = qQ.map((FQ => new Set(QQ.map(FQ)))),
+        wQ = FQ.reduce(((QQ, FQ) => QQ * FQ.size), 1),
+        LQ = FQ.every(((QQ, FQ) => 1 === QQ.size || QQ.size === mQ[FQ]));
+      if (wQ === QQ.length && LQ) return [qQ.filter(((QQ, wQ) => 1 === FQ[wQ].size)).map((FQ => FQ(QQ[0])))];
+      let oQ = null;
+      for (let DQ = 0; DQ < qQ.length; DQ++) {
+        if (1 === FQ[DQ].size) continue;
+        const wQ = HQ(QQ, qQ[DQ]).flatMap(uQ);
+        (null === oQ || wQ.length < oQ.length) && (oQ = wQ)
       }
-      return Wd
+      return oQ
     }
 
-    function od(dd, Jd) {
-      const kd = new Map;
-      for (const Nd of dd) {
-        var pd;
-        const dd = Jd(Nd);
-        kd.set(dd, [...null !== (pd = kd.get(dd)) && void 0 !== pd ? pd : [], Nd])
+    function HQ(QQ, FQ) {
+      const wQ = new Map;
+      for (const qQ of QQ) {
+        var LQ;
+        const QQ = FQ(qQ);
+        wQ.set(QQ, [...null !== (LQ = wQ.get(QQ)) && void 0 !== LQ ? LQ : [], qQ])
       }
-      return [...kd.values()]
+      return [...wQ.values()]
     }
   },
-  6466: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => pd.l,
-      i: () => Nd,
-      m: () => pd.t
+  6429: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => LQ.h,
+      i: () => qQ,
+      m: () => LQ.m
     });
-    var pd = kd(6457);
-    const Nd = [!1, !0].flatMap((dd => ["terrain", "liquid", "model"].map((Jd => ({
-      strict: dd,
-      program: Jd
+    var LQ = wQ(6414);
+    const qQ = [!1, !0].flatMap((QQ => ["terrain", "liquid", "model"].map((FQ => ({
+      strict: QQ,
+      program: FQ
     })))))
   },
-  6526: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      forgetShaderPackActiveHint: () => Yd,
-      isOtherApiVersion: () => sd,
-      isShaderPackActive: () => vd,
-      isShaderPackChangePending: () => Bd,
-      markShaderPackChangePending: () => qd,
-      pageShaderPackValidationVersion: () => ad,
-      reconcileStoredShaderPackHint: () => Fd,
-      removeShaderPack: () => Gd,
-      replaceShaderPack: () => ed,
-      saveShaderPack: () => Od,
-      shaderPackNeedsCheck: () => Md,
-      storedPackOutcome: () => xd,
-      storedShaderPackFiles: () => ld,
-      toStoredShaderPack: () => od
+  6481: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      forgetShaderPackActiveHint: () => sQ,
+      isOtherApiVersion: () => iQ,
+      isShaderPackActive: () => pQ,
+      isShaderPackChangePending: () => SQ,
+      markShaderPackChangePending: () => CQ,
+      pageShaderPackValidationVersion: () => WQ,
+      reconcileStoredShaderPackHint: () => OQ,
+      removeShaderPack: () => GQ,
+      replaceShaderPack: () => tQ,
+      saveShaderPack: () => AQ,
+      shaderPackNeedsCheck: () => RQ,
+      storedPackOutcome: () => cQ,
+      storedShaderPackFiles: () => bQ,
+      toStoredShaderPack: () => HQ
     });
-    var pd = kd(6457),
-      Nd = kd(6466),
-      Wd = kd(33),
-      Pd = kd(3282),
-      Zd = kd(6534),
-      gd = kd(6496);
-    const Cd = "shaderPackChangePending";
-    let Kd = null;
+    var LQ = wQ(6414),
+      qQ = wQ(6429),
+      oQ = wQ(27),
+      DQ = wQ(3318),
+      kQ = wQ(6485),
+      vQ = wQ(6460);
+    const mQ = "shaderPackChangePending";
+    let uQ = null;
 
-    function od(dd, Jd, kd) {
+    function HQ(QQ, FQ, wQ) {
       return {
-        manifest: dd.manifest,
-        files: (0, pd.v)(dd.files),
-        validation: Jd,
-        ...kd && {
-          listing: kd
+        manifest: QQ.manifest,
+        files: (0, LQ.r)(QQ.files),
+        validation: FQ,
+        ...wQ && {
+          listing: wQ
         }
       }
     }
 
-    function ld(dd) {
-      return Object.keys(dd.files).map((Jd => ({
-        path: Jd,
-        source: dd.files[Jd]
+    function bQ(QQ) {
+      return Object.keys(QQ.files).map((FQ => ({
+        path: FQ,
+        source: QQ.files[FQ]
       })))
     }
-    let Qd = Promise.resolve();
+    let YQ = Promise.resolve();
 
-    function Ld(dd) {
-      const Jd = Qd.then(dd);
-      return Qd = Jd.catch((() => {})), Jd
-    }
-
-    function Od(dd, Jd) {
-      return Ld((() => Rd(dd, Jd)))
+    function xQ(QQ) {
+      const FQ = YQ.then(QQ);
+      return YQ = FQ.catch((() => {})), FQ
     }
 
-    function ed(dd, Jd, kd) {
-      return Ld((async () => JSON.stringify(await (0, Zd.g)()) === JSON.stringify(dd) && (null === Jd ? (await Id(), !0) : Rd(Jd, kd))))
-    }
-    async function Rd(dd, Jd) {
-      const kd = await Wd.f.setItem(Zd.c, dd);
-      return kd && md(dd, Jd), kd
-    }
-    async function Id() {
-      await Wd.f.removeItem(Zd.c), Wd.i.removeItem(Pd.b)
+    function AQ(QQ, FQ) {
+      return xQ((() => eQ(QQ, FQ)))
     }
 
-    function Gd() {
-      return Ld(Id)
+    function tQ(QQ, FQ, wQ) {
+      return xQ((async () => JSON.stringify(await (0, kQ.f)()) === JSON.stringify(QQ) && (null === FQ ? (await MQ(), !0) : eQ(FQ, wQ))))
+    }
+    async function eQ(QQ, FQ) {
+      const wQ = await oQ.h.setItem(kQ.d, QQ);
+      return wQ && rQ(QQ, FQ), wQ
+    }
+    async function MQ() {
+      await oQ.h.removeItem(kQ.d), oQ.i.removeItem(DQ.d)
     }
 
-    function vd(dd, Jd) {
-      return "active" === xd(dd, Jd).kind
+    function GQ() {
+      return xQ(MQ)
     }
 
-    function xd(dd, Jd) {
-      var kd;
-      return null === dd ? {
+    function pQ(QQ, FQ) {
+      return "active" === cQ(QQ, FQ).kind
+    }
+
+    function cQ(QQ, FQ) {
+      var wQ;
+      return null === QQ ? {
         kind: "none",
         reason: "nothingStored"
-      } : sd(dd) ? {
+      } : iQ(QQ) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (kd = dd.validation) || void 0 === kd ? void 0 : kd.ok) || dd.validation.fromRecheck ? null === Jd ? {
+      } : !1 !== (null === (wQ = QQ.validation) || void 0 === wQ ? void 0 : wQ.ok) || QQ.validation.fromRecheck ? null === FQ ? {
         kind: "none",
         reason: "noCompiler"
-      } : Md(dd, Jd) ? {
+      } : RQ(QQ, FQ) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : dd.validation.ok ? {
+      } : QQ.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -568,326 +568,326 @@ export const modules = {
       }
     }
 
-    function qd() {
-      Wd.k.setItem(Cd, performance.timeOrigin)
+    function CQ() {
+      oQ.m.setItem(mQ, performance.timeOrigin)
     }
 
-    function Bd() {
-      return Wd.k.getItem(Cd) === performance.timeOrigin
+    function SQ() {
+      return oQ.m.getItem(mQ) === performance.timeOrigin
     }
 
-    function sd(dd) {
-      return !(0, Nd.m)(dd.manifest.apiVersion)
+    function iQ(QQ) {
+      return !(0, qQ.m)(QQ.manifest.apiVersion)
     }
 
-    function ad(dd) {
-      return Kd ??= dd.rY((0, gd.shaderPackTextures)()), Kd
+    function WQ(QQ) {
+      return uQ ??= QQ.kN((0, vQ.shaderPackTextures)()), uQ
     }
 
-    function Md(dd, Jd) {
-      var kd;
-      return (null === (kd = dd.validation) || void 0 === kd ? void 0 : kd.headerVersion) !== ad(Jd)
+    function RQ(QQ, FQ) {
+      var wQ;
+      return (null === (wQ = QQ.validation) || void 0 === wQ ? void 0 : wQ.headerVersion) !== WQ(FQ)
     }
 
-    function Fd(dd) {
-      return Ld((async () => {
-        md(await (0, Zd.g)(!0), dd)
+    function OQ(QQ) {
+      return xQ((async () => {
+        rQ(await (0, kQ.f)(!0), QQ)
       }))
     }
 
-    function Yd() {
-      return Ld((async () => {
-        Wd.i.removeItem(Pd.b)
+    function sQ() {
+      return xQ((async () => {
+        oQ.i.removeItem(DQ.d)
       }))
     }
 
-    function md(dd, Jd) {
-      vd(dd, Jd) ? Wd.i.setItem(Pd.b, !0) : Wd.i.removeItem(Pd.b)
+    function rQ(QQ, FQ) {
+      pQ(QQ, FQ) ? oQ.i.setItem(DQ.d, !0) : oQ.i.removeItem(DQ.d)
     }
   },
-  6496: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      loadShaderPackTextures: () => Pd,
-      shaderPackTextures: () => Zd
+  6460: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      loadShaderPackTextures: () => DQ,
+      shaderPackTextures: () => kQ
     });
-    var pd = kd(6457);
-    let Nd = null,
-      Wd = null;
+    var LQ = wQ(6414);
+    let qQ = null,
+      oQ = null;
 
-    function Pd() {
-      return Wd ??= Promise.all([kd.e(70), kd.e(199)]).then((() => kd(40477))).then((dd => {
+    function DQ() {
+      return oQ ??= Promise.all([wQ.e(70), wQ.e(199)]).then((() => wQ(39913))).then((QQ => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Jd,
-          textureNameToIndex: kd,
-          textureAnimationData: Wd
-        } = dd;
-        return Nd ??= (0, pd.o)(kd, Wd, Jd), Nd
-      })), Wd
+          FORMER_BLOCK_IMAGE_NAMES: FQ,
+          textureNameToIndex: wQ,
+          textureAnimationData: oQ
+        } = QQ;
+        return qQ ??= (0, LQ.i)(wQ, oQ, FQ), qQ
+      })), oQ
     }
 
-    function Zd() {
-      if (null === Nd) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Nd
+    function kQ() {
+      if (null === qQ) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return qQ
     }
   },
-  6522: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => gd,
-      f: () => Zd
+  6476: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => vQ,
+      f: () => kQ
     });
-    var pd = kd(6526),
-      Nd = kd(6496),
-      Wd = kd(111);
-    const Pd = 100;
-    async function Zd(dd, Jd) {
-      var kd;
-      let pd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (kd = navigator.gpu) && void 0 !== kd ? kd : null;
-      const Pd = dd.Kdd(Jd, (0, Nd.shaderPackTextures)());
-      if (Pd.errors.length > 0) return Cd(dd, Pd.errors, Pd.offInStrict);
-      const Zd = await async function(dd) {
-        if (!dd) return null;
+    var LQ = wQ(6481),
+      qQ = wQ(6460),
+      oQ = wQ(118);
+    const DQ = 100;
+    async function kQ(QQ, FQ) {
+      var wQ;
+      let LQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (wQ = navigator.gpu) && void 0 !== wQ ? wQ : null;
+      const DQ = QQ.tQQ(FQ, (0, qQ.shaderPackTextures)());
+      if (DQ.errors.length > 0) return mQ(QQ, DQ.errors, DQ.offInStrict);
+      const kQ = await async function(QQ) {
+        if (!QQ) return null;
         try {
-          const Jd = await (0, Wd.p)(dd);
-          return Jd ? await Jd.requestDevice() : null
-        } catch (Jd) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Jd), null
+          const FQ = await (0, oQ.w)(QQ);
+          return FQ ? await FQ.requestDevice() : null
+        } catch (FQ) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", FQ), null
         }
-      }(pd);
-      if (!Zd) return null;
-      let gd = !1;
-      Zd.lost.then((() => {
-        gd = !0
+      }(LQ);
+      if (!kQ) return null;
+      let vQ = !1;
+      kQ.lost.then((() => {
+        vQ = !0
       }));
       try {
-        const Jd = await Promise.all(Pd.validationModules.map((Jd => async function(dd, Jd, kd) {
-          Jd.pushErrorScope("validation");
-          const pd = Jd.createShaderModule({
-              code: kd.code
+        const FQ = await Promise.all(DQ.validationModules.map((FQ => async function(QQ, FQ, wQ) {
+          FQ.pushErrorScope("validation");
+          const LQ = FQ.createShaderModule({
+              code: wQ.code
             }),
-            Nd = Jd.popErrorScope(),
+            qQ = FQ.popErrorScope(),
             {
-              messages: Wd
-            } = await pd.getCompilationInfo(),
-            Pd = Wd.filter((dd => "error" === dd.type)).map((Jd => dd.mapValidationMessage(kd, Jd))),
-            Zd = await Nd;
-          Zd && 0 === Pd.length && Pd.push({
+              messages: oQ
+            } = await LQ.getCompilationInfo(),
+            DQ = oQ.filter((QQ => "error" === QQ.type)).map((FQ => QQ.mapValidationMessage(wQ, FQ))),
+            kQ = await qQ;
+          kQ && 0 === DQ.length && DQ.push({
             file: null,
             line: 0,
-            message: Zd.message,
-            variants: [kd.key]
+            message: kQ.message,
+            variants: [wQ.key]
           });
-          return Pd
-        }(dd, Zd, Jd))));
-        return gd ? null : Cd(dd, dd.gpd(Jd.flat()), Pd.offInStrict)
-      } catch (Kd) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", Kd), null
+          return DQ
+        }(QQ, kQ, FQ))));
+        return vQ ? null : mQ(QQ, QQ.uLQ(FQ.flat()), DQ.offInStrict)
+      } catch (uQ) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", uQ), null
       } finally {
-        Zd.destroy()
+        kQ.destroy()
       }
     }
-    async function gd(dd, Jd) {
-      var kd;
-      if (!(0, pd.shaderPackNeedsCheck)(dd, Jd) || (0, pd.isOtherApiVersion)(dd)) return dd;
-      const Nd = await Zd(Jd, (0, pd.storedShaderPackFiles)(dd));
-      if (!Nd) return dd;
-      const Wd = !1 === (null === (kd = dd.validation) || void 0 === kd ? void 0 : kd.ok) && !dd.validation.fromRecheck,
-        Pd = {
-          ...dd,
-          validation: Wd ? Nd : {
-            ...Nd,
+    async function vQ(QQ, FQ) {
+      var wQ;
+      if (!(0, LQ.shaderPackNeedsCheck)(QQ, FQ) || (0, LQ.isOtherApiVersion)(QQ)) return QQ;
+      const qQ = await kQ(FQ, (0, LQ.storedShaderPackFiles)(QQ));
+      if (!qQ) return QQ;
+      const oQ = !1 === (null === (wQ = QQ.validation) || void 0 === wQ ? void 0 : wQ.ok) && !QQ.validation.fromRecheck,
+        DQ = {
+          ...QQ,
+          validation: oQ ? qQ : {
+            ...qQ,
             fromRecheck: !0
           }
         };
-      return await (0, pd.replaceShaderPack)(dd, Pd, Jd) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), Pd
+      return await (0, LQ.replaceShaderPack)(QQ, DQ, FQ) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), DQ
     }
 
-    function Cd(dd, Jd, kd) {
+    function mQ(QQ, FQ, wQ) {
       return {
-        headerVersion: (0, pd.pageShaderPackValidationVersion)(dd),
-        ok: 0 === Jd.length,
-        errors: Jd.slice(0, Pd),
-        moreErrors: Math.max(0, Jd.length - Pd),
-        offInStrict: kd
+        headerVersion: (0, LQ.pageShaderPackValidationVersion)(QQ),
+        ok: 0 === FQ.length,
+        errors: FQ.slice(0, DQ),
+        moreErrors: Math.max(0, FQ.length - DQ),
+        offInStrict: wQ
       }
     }
   },
-  6457: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Pd,
-      h: () => Wd,
-      l: () => pd,
-      o: () => Ld,
-      r: () => Kd,
-      t: () => Nd,
-      u: () => gd,
-      v: () => Cd,
-      w: () => od
+  6414: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => DQ,
+      f: () => oQ,
+      h: () => LQ,
+      i: () => xQ,
+      k: () => uQ,
+      m: () => qQ,
+      p: () => vQ,
+      r: () => mQ,
+      v: () => HQ
     });
-    const pd = 5;
+    const LQ = 5;
 
-    function Nd(dd) {
-      return dd === pd
+    function qQ(QQ) {
+      return QQ === LQ
     }
-    const Wd = 262144,
-      Pd = 256,
-      Zd = 256;
+    const oQ = 262144,
+      DQ = 256,
+      kQ = 256;
 
-    function gd(dd) {
-      if ("object" !== typeof dd || null === dd || Array.isArray(dd)) return "The pack has no files.";
-      const Jd = [];
-      for (const [kd, pd] of Object.entries(dd)) {
-        if ("string" !== typeof pd) return `${kd} isn't text.`;
-        Jd.push({
-          path: kd,
-          source: pd
+    function vQ(QQ) {
+      if ("object" !== typeof QQ || null === QQ || Array.isArray(QQ)) return "The pack has no files.";
+      const FQ = [];
+      for (const [wQ, LQ] of Object.entries(QQ)) {
+        if ("string" !== typeof LQ) return `${wQ} isn't text.`;
+        FQ.push({
+          path: wQ,
+          source: LQ
         })
       }
-      return Jd.sort(((dd, Jd) => Kd(dd.path, Jd.path))),
-        function(dd) {
-          if (0 === dd.length) return "The pack has no .wgsl files.";
-          if (dd.length > Pd) return `The pack has more than ${Pd} .wgsl files.`;
-          const Jd = new Set;
+      return FQ.sort(((QQ, FQ) => uQ(QQ.path, FQ.path))),
+        function(QQ) {
+          if (0 === QQ.length) return "The pack has no .wgsl files.";
+          if (QQ.length > DQ) return `The pack has more than ${DQ} .wgsl files.`;
+          const FQ = new Set;
           for (const {
-              path: kd
+              path: wQ
             }
-            of dd) {
-            const dd = ld(kd);
-            if (null !== dd) return dd;
-            if (Jd.has(kd)) return `The pack has two files at ${kd}.`;
-            Jd.add(kd)
+            of QQ) {
+            const QQ = bQ(wQ);
+            if (null !== QQ) return QQ;
+            if (FQ.has(wQ)) return `The pack has two files at ${wQ}.`;
+            FQ.add(wQ)
           }
-          return od(dd) > Wd ? `The pack's .wgsl files are over ${Wd/1024} KB in total.` : null
-        }(Jd) ?? Jd
+          return HQ(QQ) > oQ ? `The pack's .wgsl files are over ${oQ/1024} KB in total.` : null
+        }(FQ) ?? FQ
     }
 
-    function Cd(dd) {
-      const Jd = {};
-      for (const kd of dd) Jd[kd.path] = kd.source;
-      return Jd
+    function mQ(QQ) {
+      const FQ = {};
+      for (const wQ of QQ) FQ[wQ.path] = wQ.source;
+      return FQ
     }
 
-    function Kd(dd, Jd) {
-      return dd < Jd ? -1 : dd > Jd ? 1 : 0
+    function uQ(QQ, FQ) {
+      return QQ < FQ ? -1 : QQ > FQ ? 1 : 0
     }
 
-    function od(dd) {
-      const Jd = new TextEncoder;
-      let kd = 0;
+    function HQ(QQ) {
+      const FQ = new TextEncoder;
+      let wQ = 0;
       for (const {
-          source: pd
+          source: LQ
         }
-        of dd) kd += Jd.encode(pd).byteLength;
-      return kd
+        of QQ) wQ += FQ.encode(LQ).byteLength;
+      return wQ
     }
 
-    function ld(dd) {
-      if (!dd.toLowerCase().endsWith(".wgsl")) return `${dd} isn't a .wgsl file.`;
-      if (dd.length > Zd) return `A file path is over ${Zd} characters.`;
-      if (dd.includes("\\") || /[\u0000-\u001f]/.test(dd)) return `${dd} isn't a valid file path.`;
-      return dd.split("/").some((dd => "" === dd || "." === dd || ".." === dd)) ? `${dd} isn't a valid file path.` : null
+    function bQ(QQ) {
+      if (!QQ.toLowerCase().endsWith(".wgsl")) return `${QQ} isn't a .wgsl file.`;
+      if (QQ.length > kQ) return `A file path is over ${kQ} characters.`;
+      if (QQ.includes("\\") || /[\u0000-\u001f]/.test(QQ)) return `${QQ} isn't a valid file path.`;
+      return QQ.split("/").some((QQ => "" === QQ || "." === QQ || ".." === QQ)) ? `${QQ} isn't a valid file path.` : null
     }
-    const Qd = /^(.*)\[rot\[([1-4])$/;
+    const YQ = /^(.*)\[rot\[([1-4])$/;
 
-    function Ld(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const pd = new Map;
-      Jd.forEach(((dd, Jd) => {
+    function xQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const LQ = new Map;
+      FQ.forEach(((QQ, FQ) => {
         let {
-          numAnimStates: kd,
-          animStartIdx: Nd
-        } = dd;
-        for (let Wd = 1; Wd < kd; Wd++) pd.set(Nd + Wd - 1, Jd)
+          numAnimStates: wQ,
+          animStartIdx: qQ
+        } = QQ;
+        for (let oQ = 1; oQ < wQ; oQ++) LQ.set(qQ + oQ - 1, FQ)
       }));
-      const Nd = Object.entries(dd),
-        Wd = new Map;
-      for (const [Od, ed] of Nd) {
-        const dd = Qd.exec(Od);
-        "1" === dd?.[2] && Wd.set(dd[1], ed + 1)
+      const qQ = Object.entries(QQ),
+        oQ = new Map;
+      for (const [AQ, tQ] of qQ) {
+        const QQ = YQ.exec(AQ);
+        "1" === QQ?.[2] && oQ.set(QQ[1], tQ + 1)
       }
-      const Pd = dd => {
-          const Jd = Qd.exec(dd);
-          return Jd && Wd.has(Jd[1]) ? {
-            root: Jd[1],
-            rotation: Number(Jd[2]) - 1
+      const DQ = QQ => {
+          const FQ = YQ.exec(QQ);
+          return FQ && oQ.has(FQ[1]) ? {
+            root: FQ[1],
+            rotation: Number(FQ[2]) - 1
           } : null
         },
-        Zd = new Set(Nd.map((dd => {
-          let [Jd] = dd;
-          return Pd(Jd)?.root ?? Jd
+        kQ = new Set(qQ.map((QQ => {
+          let [FQ] = QQ;
+          return DQ(FQ)?.root ?? FQ
         }))),
-        gd = (dd, kd) => {
-          const pd = dd.replace(/_?0$/, "");
-          return (Jd[kd]?.numAnimStates ?? 0) > 1 && !Zd.has(pd) ? pd : dd
+        vQ = (QQ, wQ) => {
+          const LQ = QQ.replace(/_?0$/, "");
+          return (FQ[wQ]?.numAnimStates ?? 0) > 1 && !kQ.has(LQ) ? LQ : QQ
         },
-        Cd = new Map;
-      for (const [Qd, Od] of Nd) Cd.set(Od, gd(Pd(Qd)?.root ?? Qd, Od));
-      const Kd = Nd.reduce(((dd, Jd) => {
-          let [, kd] = Jd;
-          return Math.max(dd, kd + 1)
+        mQ = new Map;
+      for (const [YQ, AQ] of qQ) mQ.set(AQ, vQ(DQ(YQ)?.root ?? YQ, AQ));
+      const uQ = qQ.reduce(((QQ, FQ) => {
+          let [, wQ] = FQ;
+          return Math.max(QQ, wQ + 1)
         }), 0),
-        od = Array.from({
-          length: Kd
-        }, ((dd, Jd) => ({
-          id: Jd + 1,
+        HQ = Array.from({
+          length: uQ
+        }, ((QQ, FQ) => ({
+          id: FQ + 1,
           rotation: 0
         }))),
-        ld = new Map,
-        Ld = new Map;
-      for (const [Qd, Od] of Nd) {
-        const dd = Pd(Qd),
-          Jd = pd.get(Od);
-        if (void 0 !== Jd) {
-          const kd = Cd.get(Jd);
-          Ld.set(Qd, {
-            name: Qd,
-            texture: kd,
+        bQ = new Map,
+        xQ = new Map;
+      for (const [YQ, AQ] of qQ) {
+        const QQ = DQ(YQ),
+          FQ = LQ.get(AQ);
+        if (void 0 !== FQ) {
+          const wQ = mQ.get(FQ);
+          xQ.set(YQ, {
+            name: YQ,
+            texture: wQ,
             kind: "frame"
-          }), dd && !Ld.has(dd.root) && Ld.set(dd.root, {
-            name: dd.root,
-            texture: kd,
+          }), QQ && !xQ.has(QQ.root) && xQ.set(QQ.root, {
+            name: QQ.root,
+            texture: wQ,
             kind: "frame"
           });
           continue
         }
-        const kd = Cd.get(Od),
-          Nd = dd?.root ?? Qd;
-        if (kd !== Nd && Ld.set(Nd, {
-            name: Nd,
-            texture: kd,
+        const wQ = mQ.get(AQ),
+          qQ = QQ?.root ?? YQ;
+        if (wQ !== qQ && xQ.set(qQ, {
+            name: qQ,
+            texture: wQ,
             kind: "frame"
-          }), dd) {
-          const Jd = Wd.get(dd.root);
-          od[Od] = {
-            id: Jd,
-            rotation: dd.rotation
-          }, ld.set(kd, Jd), Ld.set(Qd, {
-            name: Qd,
-            texture: kd,
+          }), QQ) {
+          const FQ = oQ.get(QQ.root);
+          HQ[AQ] = {
+            id: FQ,
+            rotation: QQ.rotation
+          }, bQ.set(wQ, FQ), xQ.set(YQ, {
+            name: YQ,
+            texture: wQ,
             kind: "rotation"
           })
-        } else ld.set(kd, Od + 1)
+        } else bQ.set(wQ, AQ + 1)
       }
-      for (const Qd of ld.keys()) Ld.delete(Qd);
-      for (const [Qd, Od] of kd) {
-        const dd = ld.get(Od);
-        void 0 === dd || ld.has(Qd) || (ld.set(Qd, dd), Ld.delete(Qd))
+      for (const YQ of bQ.keys()) xQ.delete(YQ);
+      for (const [YQ, AQ] of wQ) {
+        const QQ = bQ.get(AQ);
+        void 0 === QQ || bQ.has(YQ) || (bQ.set(YQ, QQ), xQ.delete(YQ))
       }
       return {
-        named: [...ld].sort(((dd, Jd) => {
-          let [kd] = dd, [pd] = Jd;
-          return kd < pd ? -1 : kd > pd ? 1 : 0
-        })).map((dd => {
-          let [Jd, kd] = dd;
+        named: [...bQ].sort(((QQ, FQ) => {
+          let [wQ] = QQ, [LQ] = FQ;
+          return wQ < LQ ? -1 : wQ > LQ ? 1 : 0
+        })).map((QQ => {
+          let [FQ, wQ] = QQ;
           return {
-            name: Jd,
-            id: kd
+            name: FQ,
+            id: wQ
           }
         })),
-        aliases: [...Ld.values()],
-        layers: od
+        aliases: [...xQ.values()],
+        layers: HQ
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

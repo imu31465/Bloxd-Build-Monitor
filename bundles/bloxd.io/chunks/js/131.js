@@ -1,208 +1,208 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  6496: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      loadShaderPackTextures: () => Pd,
-      shaderPackTextures: () => Zd
+  6460: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      loadShaderPackTextures: () => DQ,
+      shaderPackTextures: () => kQ
     });
-    var pd = kd(6457);
-    let Nd = null,
-      Wd = null;
+    var LQ = wQ(6414);
+    let qQ = null,
+      oQ = null;
 
-    function Pd() {
-      return Wd ??= Promise.all([kd.e(70), kd.e(199)]).then((() => kd(40477))).then((dd => {
+    function DQ() {
+      return oQ ??= Promise.all([wQ.e(70), wQ.e(199)]).then((() => wQ(39913))).then((QQ => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Jd,
-          textureNameToIndex: kd,
-          textureAnimationData: Wd
-        } = dd;
-        return Nd ??= (0, pd.o)(kd, Wd, Jd), Nd
-      })), Wd
+          FORMER_BLOCK_IMAGE_NAMES: FQ,
+          textureNameToIndex: wQ,
+          textureAnimationData: oQ
+        } = QQ;
+        return qQ ??= (0, LQ.i)(wQ, oQ, FQ), qQ
+      })), oQ
     }
 
-    function Zd() {
-      if (null === Nd) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Nd
+    function kQ() {
+      if (null === qQ) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return qQ
     }
   },
-  6457: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Pd,
-      h: () => Wd,
-      l: () => pd,
-      o: () => Ld,
-      r: () => Kd,
-      t: () => Nd,
-      u: () => gd,
-      v: () => Cd,
-      w: () => od
+  6414: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => DQ,
+      f: () => oQ,
+      h: () => LQ,
+      i: () => xQ,
+      k: () => uQ,
+      m: () => qQ,
+      p: () => vQ,
+      r: () => mQ,
+      v: () => HQ
     });
-    const pd = 5;
+    const LQ = 5;
 
-    function Nd(dd) {
-      return dd === pd
+    function qQ(QQ) {
+      return QQ === LQ
     }
-    const Wd = 262144,
-      Pd = 256,
-      Zd = 256;
+    const oQ = 262144,
+      DQ = 256,
+      kQ = 256;
 
-    function gd(dd) {
-      if ("object" !== typeof dd || null === dd || Array.isArray(dd)) return "The pack has no files.";
-      const Jd = [];
-      for (const [kd, pd] of Object.entries(dd)) {
-        if ("string" !== typeof pd) return `${kd} isn't text.`;
-        Jd.push({
-          path: kd,
-          source: pd
+    function vQ(QQ) {
+      if ("object" !== typeof QQ || null === QQ || Array.isArray(QQ)) return "The pack has no files.";
+      const FQ = [];
+      for (const [wQ, LQ] of Object.entries(QQ)) {
+        if ("string" !== typeof LQ) return `${wQ} isn't text.`;
+        FQ.push({
+          path: wQ,
+          source: LQ
         })
       }
-      return Jd.sort(((dd, Jd) => Kd(dd.path, Jd.path))),
-        function(dd) {
-          if (0 === dd.length) return "The pack has no .wgsl files.";
-          if (dd.length > Pd) return `The pack has more than ${Pd} .wgsl files.`;
-          const Jd = new Set;
+      return FQ.sort(((QQ, FQ) => uQ(QQ.path, FQ.path))),
+        function(QQ) {
+          if (0 === QQ.length) return "The pack has no .wgsl files.";
+          if (QQ.length > DQ) return `The pack has more than ${DQ} .wgsl files.`;
+          const FQ = new Set;
           for (const {
-              path: kd
+              path: wQ
             }
-            of dd) {
-            const dd = ld(kd);
-            if (null !== dd) return dd;
-            if (Jd.has(kd)) return `The pack has two files at ${kd}.`;
-            Jd.add(kd)
+            of QQ) {
+            const QQ = bQ(wQ);
+            if (null !== QQ) return QQ;
+            if (FQ.has(wQ)) return `The pack has two files at ${wQ}.`;
+            FQ.add(wQ)
           }
-          return od(dd) > Wd ? `The pack's .wgsl files are over ${Wd/1024} KB in total.` : null
-        }(Jd) ?? Jd
+          return HQ(QQ) > oQ ? `The pack's .wgsl files are over ${oQ/1024} KB in total.` : null
+        }(FQ) ?? FQ
     }
 
-    function Cd(dd) {
-      const Jd = {};
-      for (const kd of dd) Jd[kd.path] = kd.source;
-      return Jd
+    function mQ(QQ) {
+      const FQ = {};
+      for (const wQ of QQ) FQ[wQ.path] = wQ.source;
+      return FQ
     }
 
-    function Kd(dd, Jd) {
-      return dd < Jd ? -1 : dd > Jd ? 1 : 0
+    function uQ(QQ, FQ) {
+      return QQ < FQ ? -1 : QQ > FQ ? 1 : 0
     }
 
-    function od(dd) {
-      const Jd = new TextEncoder;
-      let kd = 0;
+    function HQ(QQ) {
+      const FQ = new TextEncoder;
+      let wQ = 0;
       for (const {
-          source: pd
+          source: LQ
         }
-        of dd) kd += Jd.encode(pd).byteLength;
-      return kd
+        of QQ) wQ += FQ.encode(LQ).byteLength;
+      return wQ
     }
 
-    function ld(dd) {
-      if (!dd.toLowerCase().endsWith(".wgsl")) return `${dd} isn't a .wgsl file.`;
-      if (dd.length > Zd) return `A file path is over ${Zd} characters.`;
-      if (dd.includes("\\") || /[\u0000-\u001f]/.test(dd)) return `${dd} isn't a valid file path.`;
-      return dd.split("/").some((dd => "" === dd || "." === dd || ".." === dd)) ? `${dd} isn't a valid file path.` : null
+    function bQ(QQ) {
+      if (!QQ.toLowerCase().endsWith(".wgsl")) return `${QQ} isn't a .wgsl file.`;
+      if (QQ.length > kQ) return `A file path is over ${kQ} characters.`;
+      if (QQ.includes("\\") || /[\u0000-\u001f]/.test(QQ)) return `${QQ} isn't a valid file path.`;
+      return QQ.split("/").some((QQ => "" === QQ || "." === QQ || ".." === QQ)) ? `${QQ} isn't a valid file path.` : null
     }
-    const Qd = /^(.*)\[rot\[([1-4])$/;
+    const YQ = /^(.*)\[rot\[([1-4])$/;
 
-    function Ld(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const pd = new Map;
-      Jd.forEach(((dd, Jd) => {
+    function xQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const LQ = new Map;
+      FQ.forEach(((QQ, FQ) => {
         let {
-          numAnimStates: kd,
-          animStartIdx: Nd
-        } = dd;
-        for (let Wd = 1; Wd < kd; Wd++) pd.set(Nd + Wd - 1, Jd)
+          numAnimStates: wQ,
+          animStartIdx: qQ
+        } = QQ;
+        for (let oQ = 1; oQ < wQ; oQ++) LQ.set(qQ + oQ - 1, FQ)
       }));
-      const Nd = Object.entries(dd),
-        Wd = new Map;
-      for (const [Od, ed] of Nd) {
-        const dd = Qd.exec(Od);
-        "1" === dd?.[2] && Wd.set(dd[1], ed + 1)
+      const qQ = Object.entries(QQ),
+        oQ = new Map;
+      for (const [AQ, tQ] of qQ) {
+        const QQ = YQ.exec(AQ);
+        "1" === QQ?.[2] && oQ.set(QQ[1], tQ + 1)
       }
-      const Pd = dd => {
-          const Jd = Qd.exec(dd);
-          return Jd && Wd.has(Jd[1]) ? {
-            root: Jd[1],
-            rotation: Number(Jd[2]) - 1
+      const DQ = QQ => {
+          const FQ = YQ.exec(QQ);
+          return FQ && oQ.has(FQ[1]) ? {
+            root: FQ[1],
+            rotation: Number(FQ[2]) - 1
           } : null
         },
-        Zd = new Set(Nd.map((dd => {
-          let [Jd] = dd;
-          return Pd(Jd)?.root ?? Jd
+        kQ = new Set(qQ.map((QQ => {
+          let [FQ] = QQ;
+          return DQ(FQ)?.root ?? FQ
         }))),
-        gd = (dd, kd) => {
-          const pd = dd.replace(/_?0$/, "");
-          return (Jd[kd]?.numAnimStates ?? 0) > 1 && !Zd.has(pd) ? pd : dd
+        vQ = (QQ, wQ) => {
+          const LQ = QQ.replace(/_?0$/, "");
+          return (FQ[wQ]?.numAnimStates ?? 0) > 1 && !kQ.has(LQ) ? LQ : QQ
         },
-        Cd = new Map;
-      for (const [Qd, Od] of Nd) Cd.set(Od, gd(Pd(Qd)?.root ?? Qd, Od));
-      const Kd = Nd.reduce(((dd, Jd) => {
-          let [, kd] = Jd;
-          return Math.max(dd, kd + 1)
+        mQ = new Map;
+      for (const [YQ, AQ] of qQ) mQ.set(AQ, vQ(DQ(YQ)?.root ?? YQ, AQ));
+      const uQ = qQ.reduce(((QQ, FQ) => {
+          let [, wQ] = FQ;
+          return Math.max(QQ, wQ + 1)
         }), 0),
-        od = Array.from({
-          length: Kd
-        }, ((dd, Jd) => ({
-          id: Jd + 1,
+        HQ = Array.from({
+          length: uQ
+        }, ((QQ, FQ) => ({
+          id: FQ + 1,
           rotation: 0
         }))),
-        ld = new Map,
-        Ld = new Map;
-      for (const [Qd, Od] of Nd) {
-        const dd = Pd(Qd),
-          Jd = pd.get(Od);
-        if (void 0 !== Jd) {
-          const kd = Cd.get(Jd);
-          Ld.set(Qd, {
-            name: Qd,
-            texture: kd,
+        bQ = new Map,
+        xQ = new Map;
+      for (const [YQ, AQ] of qQ) {
+        const QQ = DQ(YQ),
+          FQ = LQ.get(AQ);
+        if (void 0 !== FQ) {
+          const wQ = mQ.get(FQ);
+          xQ.set(YQ, {
+            name: YQ,
+            texture: wQ,
             kind: "frame"
-          }), dd && !Ld.has(dd.root) && Ld.set(dd.root, {
-            name: dd.root,
-            texture: kd,
+          }), QQ && !xQ.has(QQ.root) && xQ.set(QQ.root, {
+            name: QQ.root,
+            texture: wQ,
             kind: "frame"
           });
           continue
         }
-        const kd = Cd.get(Od),
-          Nd = dd?.root ?? Qd;
-        if (kd !== Nd && Ld.set(Nd, {
-            name: Nd,
-            texture: kd,
+        const wQ = mQ.get(AQ),
+          qQ = QQ?.root ?? YQ;
+        if (wQ !== qQ && xQ.set(qQ, {
+            name: qQ,
+            texture: wQ,
             kind: "frame"
-          }), dd) {
-          const Jd = Wd.get(dd.root);
-          od[Od] = {
-            id: Jd,
-            rotation: dd.rotation
-          }, ld.set(kd, Jd), Ld.set(Qd, {
-            name: Qd,
-            texture: kd,
+          }), QQ) {
+          const FQ = oQ.get(QQ.root);
+          HQ[AQ] = {
+            id: FQ,
+            rotation: QQ.rotation
+          }, bQ.set(wQ, FQ), xQ.set(YQ, {
+            name: YQ,
+            texture: wQ,
             kind: "rotation"
           })
-        } else ld.set(kd, Od + 1)
+        } else bQ.set(wQ, AQ + 1)
       }
-      for (const Qd of ld.keys()) Ld.delete(Qd);
-      for (const [Qd, Od] of kd) {
-        const dd = ld.get(Od);
-        void 0 === dd || ld.has(Qd) || (ld.set(Qd, dd), Ld.delete(Qd))
+      for (const YQ of bQ.keys()) xQ.delete(YQ);
+      for (const [YQ, AQ] of wQ) {
+        const QQ = bQ.get(AQ);
+        void 0 === QQ || bQ.has(YQ) || (bQ.set(YQ, QQ), xQ.delete(YQ))
       }
       return {
-        named: [...ld].sort(((dd, Jd) => {
-          let [kd] = dd, [pd] = Jd;
-          return kd < pd ? -1 : kd > pd ? 1 : 0
-        })).map((dd => {
-          let [Jd, kd] = dd;
+        named: [...bQ].sort(((QQ, FQ) => {
+          let [wQ] = QQ, [LQ] = FQ;
+          return wQ < LQ ? -1 : wQ > LQ ? 1 : 0
+        })).map((QQ => {
+          let [FQ, wQ] = QQ;
           return {
-            name: Jd,
-            id: kd
+            name: FQ,
+            id: wQ
           }
         })),
-        aliases: [...Ld.values()],
-        layers: od
+        aliases: [...xQ.values()],
+        layers: HQ
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

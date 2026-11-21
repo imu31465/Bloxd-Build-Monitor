@@ -1,197 +1,197 @@
 export const id = 386;
 export const ids = [386];
 export const modules = {
-  61618: (dd, Jd, kd) => {
-    kd.r(Jd), kd.d(Jd, {
-      rebuildScenePbrPipelines: () => Zd,
-      rebuildSceneRenderables: () => gd
+  61402: (QQ, FQ, wQ) => {
+    wQ.r(FQ), wQ.d(FQ, {
+      rebuildScenePbrPipelines: () => kQ,
+      rebuildSceneRenderables: () => vQ
     });
-    var pd = kd(41690),
-      Nd = (dd, Jd) => dd.order - Jd.order,
-      Wd = 8,
-      Pd = dd => gd(dd);
-    async function Zd(dd) {
-      let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await Cd(dd, "pbr", Jd)
+    var LQ = wQ(41129),
+      qQ = (QQ, FQ) => QQ.order - FQ.order,
+      oQ = 8,
+      DQ = QQ => vQ(QQ);
+    async function kQ(QQ) {
+      let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await mQ(QQ, "pbr", FQ)
     }
-    async function gd(dd) {
-      await Cd(dd, void 0, !1)
+    async function vQ(QQ) {
+      await mQ(QQ, void 0, !1)
     }
-    async function Cd(dd, Jd, Zd) {
-      const gd = dd;
-      if (!gd._built && !Zd) return;
-      const Cd = gd._lightListVersion ?? 0,
-        Kd = gd.surface.engine,
-        od = dd => {
-          gd._z ? dd.forEach((dd => dd())) : (0, pd.c)(Kd, (() => dd.forEach((dd => dd()))))
+    async function mQ(QQ, FQ, kQ) {
+      const vQ = QQ;
+      if (!vQ._built && !kQ) return;
+      const mQ = vQ._lightListVersion ?? 0,
+        uQ = vQ.surface.engine,
+        HQ = QQ => {
+          vQ._z ? QQ.forEach((QQ => QQ())) : (0, LQ.e)(uQ, (() => QQ.forEach((QQ => QQ()))))
         };
-      let ld = !1,
-        Qd = !1,
-        Ld = !1,
-        Od = !1;
+      let bQ = !1,
+        YQ = !1,
+        xQ = !1,
+        AQ = !1;
       try {
-        for (let dd = 1;; dd++) {
-          if (void 0 !== Jd) {
-            await ed();
+        for (let QQ = 1;; QQ++) {
+          if (void 0 !== FQ) {
+            await tQ();
             break
           }
-          if (Id(gd), await ed(), !Rd(gd)) break;
-          if (dd >= Wd) {
-            gd._rebuildHook = Pd, Od = !0, Qd = !0;
+          if (MQ(vQ), await tQ(), !eQ(vQ)) break;
+          if (QQ >= oQ) {
+            vQ._rebuildHook = DQ, AQ = !0, YQ = !0;
             break
           }
         }
-        Ld = !0
+        xQ = !0
       } finally {
-        if (ld && (gd._renderables.sort(Nd), gd._renderableVersion++, gd._materialEpoch++, gd._built && gd._frameGraph.build()), void 0 === Jd && Ld && !Qd && (gd._lightListVersion ?? 0) === Cd) {
-          const dd = gd._pendingTopologyRetirements?.splice(0);
-          dd?.length && od(dd), Od || (gd._rebuildHook = void 0)
+        if (bQ && (vQ._renderables.sort(qQ), vQ._renderableVersion++, vQ._materialEpoch++, vQ._built && vQ._frameGraph.build()), void 0 === FQ && xQ && !YQ && (vQ._lightListVersion ?? 0) === mQ) {
+          const QQ = vQ._pendingTopologyRetirements?.splice(0);
+          QQ?.length && HQ(QQ), AQ || (vQ._rebuildHook = void 0)
         }
       }
-      async function ed() {
-        for (const [dd, pd] of gd._groups) {
-          if (void 0 !== Jd && dd._materialFamily !== Jd) continue;
-          if (0 === pd.length) {
-            (pd.o || pd.r) && (Gd(dd, pd), ld = !0);
+      async function tQ() {
+        for (const [QQ, LQ] of vQ._groups) {
+          if (void 0 !== FQ && QQ._materialFamily !== FQ) continue;
+          if (0 === LQ.length) {
+            (LQ.o || LQ.r) && (GQ(QQ, LQ), bQ = !0);
             continue
           }
-          const Nd = gd._runtimeBuilds;
-          await (Nd?.wait(pd));
-          let Wd = !1;
-          const Zd = async () => {
-            const Jd = gd._runtimeBuilds,
-              kd = [...pd].filter((Jd => gd.meshes.includes(Jd) && Jd.material?._buildGroup === dd));
-            if (0 === kd.length) return void Gd(dd, pd);
-            const Pd = !!pd.r,
-              Zd = gd._disposables.length,
-              Cd = new Map,
-              Kd = new Map(kd.map((dd => [dd, dd.material])));
-            for (const dd of kd) {
-              const kd = gd._meshDisposables.get(dd);
-              kd && (Cd.set(dd, kd), gd._meshDisposables.delete(dd), Jd?.holdPendingDisposers(dd, kd))
+          const qQ = vQ._runtimeBuilds;
+          await (qQ?.wait(LQ));
+          let oQ = !1;
+          const kQ = async () => {
+            const FQ = vQ._runtimeBuilds,
+              wQ = [...LQ].filter((FQ => vQ.meshes.includes(FQ) && FQ.material?._buildGroup === QQ));
+            if (0 === wQ.length) return void GQ(QQ, LQ);
+            const DQ = !!LQ.r,
+              kQ = vQ._disposables.length,
+              mQ = new Map,
+              uQ = new Map(wQ.map((QQ => [QQ, QQ.material])));
+            for (const QQ of wQ) {
+              const wQ = vQ._meshDisposables.get(QQ);
+              wQ && (mQ.set(QQ, wQ), vQ._meshDisposables.delete(QQ), FQ?.holdPendingDisposers(QQ, wQ))
             }
-            let ld, Qd;
-            gd._p = dd => (Qd = dd, !0);
+            let bQ, YQ;
+            vQ._p = QQ => (YQ = QQ, !0);
             try {
-              ld = await dd(gd, kd)
-            } catch (qd) {
-              Qd?.[1]();
-              for (const Nd of kd) {
-                const kd = Cd.get(Nd),
-                  Wd = gd._meshDisposables.get(Nd);
-                if (Wd && Wd !== kd)
-                  for (const dd of Wd) dd();
-                const Pd = gd.meshes.includes(Nd) && Nd.material === Kd.get(Nd) && Nd.material?._buildGroup === dd && pd.includes(Nd);
-                kd && Pd ? gd._meshDisposables.set(Nd, kd) : (gd._meshDisposables.delete(Nd), kd && od(kd)), kd && Jd?.releasePendingDisposers(Nd, kd)
+              bQ = await QQ(vQ, wQ)
+            } catch (CQ) {
+              YQ?.[1]();
+              for (const qQ of wQ) {
+                const wQ = mQ.get(qQ),
+                  oQ = vQ._meshDisposables.get(qQ);
+                if (oQ && oQ !== wQ)
+                  for (const QQ of oQ) QQ();
+                const DQ = vQ.meshes.includes(qQ) && qQ.material === uQ.get(qQ) && qQ.material?._buildGroup === QQ && LQ.includes(qQ);
+                wQ && DQ ? vQ._meshDisposables.set(qQ, wQ) : (vQ._meshDisposables.delete(qQ), wQ && HQ(wQ)), wQ && FQ?.releasePendingDisposers(qQ, wQ)
               }
-              throw qd
+              throw CQ
             } finally {
-              delete gd._p
+              delete vQ._p
             }
-            if (gd._z || Nd?._d()) {
-              Qd?.[1]();
-              for (const Jd of kd) {
-                const dd = gd._meshDisposables.get(Jd),
-                  kd = Cd.get(Jd);
-                if (dd && dd !== kd)
-                  for (const Jd of dd) Jd();
-                gd._meshDisposables.delete(Jd)
+            if (vQ._z || qQ?._d()) {
+              YQ?.[1]();
+              for (const FQ of wQ) {
+                const QQ = vQ._meshDisposables.get(FQ),
+                  wQ = mQ.get(FQ);
+                if (QQ && QQ !== wQ)
+                  for (const FQ of QQ) FQ();
+                vQ._meshDisposables.delete(FQ)
               }
-              for (const Jd of gd._disposables.splice(0)) Jd();
-              const dd = [...Cd.values()].flat();
-              od(dd);
-              for (const [kd, pd] of Cd) Jd?.releasePendingDisposers(kd, pd);
+              for (const FQ of vQ._disposables.splice(0)) FQ();
+              const QQ = [...mQ.values()].flat();
+              HQ(QQ);
+              for (const [wQ, LQ] of mQ) FQ?.releasePendingDisposers(wQ, LQ);
               return
             }
-            Qd?.[0](), dd._rebuildSingle = ld.rebuildSingle, pd.r = gd._runtimeBuilds?.base(dd, ld.rebuildSingle) ?? ld.rebuildSingle, "pbr" === dd._materialFamily && ld._G && (pd._w = null), Pd && vd(gd, Zd);
-            const Ld = new Set(kd.filter((Jd => gd.meshes.includes(Jd) && Jd.material === Kd.get(Jd) && Jd.material?._buildGroup === dd && pd.includes(Jd))));
-            if (Ld.size !== kd.length && ld.renderables.some((dd => !dd.mesh))) {
-              for (const dd of kd) {
-                const kd = gd._meshDisposables.get(dd),
-                  pd = Cd.get(dd);
-                if (kd && kd !== pd)
-                  for (const dd of kd) dd();
-                pd && gd.meshes.includes(dd) ? gd._meshDisposables.set(dd, pd) : (gd._meshDisposables.delete(dd), pd && od(pd)), pd && Jd?.releasePendingDisposers(dd, pd)
+            YQ?.[0](), QQ._rebuildSingle = bQ.rebuildSingle, LQ.r = vQ._runtimeBuilds?.base(QQ, bQ.rebuildSingle) ?? bQ.rebuildSingle, "pbr" === QQ._materialFamily && bQ._G && (LQ._w = null), DQ && pQ(vQ, kQ);
+            const xQ = new Set(wQ.filter((FQ => vQ.meshes.includes(FQ) && FQ.material === uQ.get(FQ) && FQ.material?._buildGroup === QQ && LQ.includes(FQ))));
+            if (xQ.size !== wQ.length && bQ.renderables.some((QQ => !QQ.mesh))) {
+              for (const QQ of wQ) {
+                const wQ = vQ._meshDisposables.get(QQ),
+                  LQ = mQ.get(QQ);
+                if (wQ && wQ !== LQ)
+                  for (const QQ of wQ) QQ();
+                LQ && vQ.meshes.includes(QQ) ? vQ._meshDisposables.set(QQ, LQ) : (vQ._meshDisposables.delete(QQ), LQ && HQ(LQ)), LQ && FQ?.releasePendingDisposers(QQ, LQ)
               }
-              return void(Wd = !0)
+              return void(oQ = !0)
             }
-            const Od = new Set;
-            for (const dd of kd)
-              if (Ld.has(dd)) Od.add(dd.material), gd._runtimeBuilds?.reset(dd);
+            const AQ = new Set;
+            for (const QQ of wQ)
+              if (xQ.has(QQ)) AQ.add(QQ.material), vQ._runtimeBuilds?.reset(QQ);
               else {
-                const kd = Cd.get(dd),
-                  pd = gd._meshDisposables.get(dd);
-                if (pd && pd !== kd)
-                  for (const dd of pd) dd();
-                kd && gd.meshes.includes(dd) ? (gd._meshDisposables.set(dd, kd), Cd.delete(dd), Jd?.releasePendingDisposers(dd, kd)) : gd._meshDisposables.delete(dd)
-              } for (const dd of Od) dd._csmGen = (dd._csmGen ?? 0) + 1;
-            const ed = pd.o,
-              Rd = ed?.length ? new Set(ed) : null;
-            for (let dd = gd._renderables.length - 1; dd >= 0; dd--) {
-              const Jd = gd._renderables[dd];
-              (Ld.has(Jd.mesh) || Rd?.has(Jd)) && gd._renderables.splice(dd, 1)
+                const wQ = mQ.get(QQ),
+                  LQ = vQ._meshDisposables.get(QQ);
+                if (LQ && LQ !== wQ)
+                  for (const QQ of LQ) QQ();
+                wQ && vQ.meshes.includes(QQ) ? (vQ._meshDisposables.set(QQ, wQ), mQ.delete(QQ), FQ?.releasePendingDisposers(QQ, wQ)) : vQ._meshDisposables.delete(QQ)
+              } for (const QQ of AQ) QQ._csmGen = (QQ._csmGen ?? 0) + 1;
+            const tQ = LQ.o,
+              eQ = tQ?.length ? new Set(tQ) : null;
+            for (let QQ = vQ._renderables.length - 1; QQ >= 0; QQ--) {
+              const FQ = vQ._renderables[QQ];
+              (xQ.has(FQ.mesh) || eQ?.has(FQ)) && vQ._renderables.splice(QQ, 1)
             }
-            const Id = ld.renderables.filter((dd => !dd.mesh || Ld.has(dd.mesh)));
-            gd._renderables.push(...Id), pd.o = Id;
-            const xd = [...Cd.values()].flat();
-            od(xd);
-            for (const [dd, pd] of Cd) Jd?.releasePendingDisposers(dd, pd)
+            const MQ = bQ.renderables.filter((QQ => !QQ.mesh || xQ.has(QQ.mesh)));
+            vQ._renderables.push(...MQ), LQ.o = MQ;
+            const cQ = [...mQ.values()].flat();
+            HQ(cQ);
+            for (const [QQ, LQ] of mQ) FQ?.releasePendingDisposers(QQ, LQ)
           }, {
-            X: Cd
-          } = await Promise.resolve().then((() => kd(60981))), Kd = 3;
-          for (let Jd = 1;; Jd++) {
-            if (Wd = !1, await Cd(gd, dd, Zd), gd._z || Nd?._d()) return void(Qd = !0);
-            if (!Wd) break;
-            if (Jd >= Kd) {
-              Gd(dd, pd), gd._rebuildHook = Pd, Od = !0, Qd = !0;
+            X: mQ
+          } = await Promise.resolve().then((() => wQ(60749))), uQ = 3;
+          for (let FQ = 1;; FQ++) {
+            if (oQ = !1, await mQ(vQ, QQ, kQ), vQ._z || qQ?._d()) return void(YQ = !0);
+            if (!oQ) break;
+            if (FQ >= uQ) {
+              GQ(QQ, LQ), vQ._rebuildHook = DQ, AQ = !0, YQ = !0;
               break
             }
           }
-          Wd ? ld = !0 : ld = !0
+          oQ ? bQ = !0 : bQ = !0
         }
       }
 
-      function Rd(dd) {
-        for (const Jd of dd.meshes) {
-          const kd = Jd.material?._buildGroup;
-          if (kd && !dd._groups.get(kd)?.includes(Jd)) return !0
+      function eQ(QQ) {
+        for (const FQ of QQ.meshes) {
+          const wQ = FQ.material?._buildGroup;
+          if (wQ && !QQ._groups.get(wQ)?.includes(FQ)) return !0
         }
         return !1
       }
 
-      function Id(dd) {
-        const Jd = new Map;
-        for (const kd of dd.meshes) {
-          const dd = kd.material?._buildGroup;
-          if (!dd) continue;
-          const pd = Jd.get(dd);
-          pd ? pd.push(kd) : Jd.set(dd, [kd])
+      function MQ(QQ) {
+        const FQ = new Map;
+        for (const wQ of QQ.meshes) {
+          const QQ = wQ.material?._buildGroup;
+          if (!QQ) continue;
+          const LQ = FQ.get(QQ);
+          LQ ? LQ.push(wQ) : FQ.set(QQ, [wQ])
         }
-        for (const [kd, pd] of dd._groups) {
-          const dd = Jd.get(kd) ?? [];
-          (pd.length !== dd.length || dd.some(((dd, Jd) => pd[Jd] !== dd))) && (pd.length = 0, pd.push(...dd)), Jd.delete(kd)
+        for (const [wQ, LQ] of QQ._groups) {
+          const QQ = FQ.get(wQ) ?? [];
+          (LQ.length !== QQ.length || QQ.some(((QQ, FQ) => LQ[FQ] !== QQ))) && (LQ.length = 0, LQ.push(...QQ)), FQ.delete(wQ)
         }
-        for (const [kd, pd] of Jd) {
-          const Jd = pd;
-          dd._groups.set(kd, Jd)
+        for (const [wQ, LQ] of FQ) {
+          const FQ = LQ;
+          QQ._groups.set(wQ, FQ)
         }
       }
 
-      function Gd(dd, Jd) {
-        const kd = Jd.o;
-        if (kd?.length) {
-          const dd = new Set(kd);
-          for (let Jd = gd._renderables.length - 1; Jd >= 0; Jd--) dd.has(gd._renderables[Jd]) && gd._renderables.splice(Jd, 1)
+      function GQ(QQ, FQ) {
+        const wQ = FQ.o;
+        if (wQ?.length) {
+          const QQ = new Set(wQ);
+          for (let FQ = vQ._renderables.length - 1; FQ >= 0; FQ--) QQ.has(vQ._renderables[FQ]) && vQ._renderables.splice(FQ, 1)
         }
-        Jd.o = void 0, Jd.r = void 0, gd._runtimeBuilds?.dropBase(dd), gd._rebuildHook = Pd, Od = !0
+        FQ.o = void 0, FQ.r = void 0, vQ._runtimeBuilds?.dropBase(QQ), vQ._rebuildHook = DQ, AQ = !0
       }
 
-      function vd(dd, Jd) {
-        const kd = new Set(dd._disposables.slice(0, Jd));
-        for (let pd = dd._disposables.length - 1; pd >= Jd; pd--) kd.has(dd._disposables[pd]) && dd._disposables.splice(pd, 1)
+      function pQ(QQ, FQ) {
+        const wQ = new Set(QQ._disposables.slice(0, FQ));
+        for (let LQ = QQ._disposables.length - 1; LQ >= FQ; LQ--) wQ.has(QQ._disposables[LQ]) && QQ._disposables.splice(LQ, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

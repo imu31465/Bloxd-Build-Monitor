@@ -1,83 +1,83 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  40032: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => ld,
-      e: () => od,
-      h: () => gd,
-      l: () => Qd,
-      o: () => Cd,
-      q: () => Zd,
-      t: () => Kd
+  39470: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => bQ,
+      f: () => HQ,
+      j: () => vQ,
+      l: () => YQ,
+      n: () => mQ,
+      q: () => kQ,
+      u: () => uQ
     });
-    var pd = kd(38812),
-      Nd = kd(40037);
+    var LQ = wQ(38203),
+      qQ = wQ(39475);
 
-    function Wd(dd, Jd, kd, pd) {
-      switch (Jd) {
+    function oQ(QQ, FQ, wQ, LQ) {
+      switch (FQ) {
         case 5120: {
-          let Jd = dd.getInt8(kd);
-          return pd && (Jd = Math.max(Jd / 127, -1)), Jd
+          let FQ = QQ.getInt8(wQ);
+          return LQ && (FQ = Math.max(FQ / 127, -1)), FQ
         }
         case 5121: {
-          let Jd = dd.getUint8(kd);
-          return pd && (Jd /= 255), Jd
+          let FQ = QQ.getUint8(wQ);
+          return LQ && (FQ /= 255), FQ
         }
         case 5122: {
-          let Jd = dd.getInt16(kd, !0);
-          return pd && (Jd = Math.max(Jd / 32767, -1)), Jd
+          let FQ = QQ.getInt16(wQ, !0);
+          return LQ && (FQ = Math.max(FQ / 32767, -1)), FQ
         }
         case 5123: {
-          let Jd = dd.getUint16(kd, !0);
-          return pd && (Jd /= 65535), Jd
+          let FQ = QQ.getUint16(wQ, !0);
+          return LQ && (FQ /= 65535), FQ
         }
         case 5131:
-          return (0, Nd.e)(dd.getUint16(kd, !0));
+          return (0, qQ.d)(QQ.getUint16(wQ, !0));
         case 5124:
-          return dd.getInt32(kd, !0);
+          return QQ.getInt32(wQ, !0);
         case 5125:
-          return dd.getUint32(kd, !0);
+          return QQ.getUint32(wQ, !0);
         case 5126:
-          return dd.getFloat32(kd, !0);
+          return QQ.getFloat32(wQ, !0);
         default:
-          throw new Error(`Invalid component type ${Jd}`)
+          throw new Error(`Invalid component type ${FQ}`)
       }
     }
 
-    function Pd(dd, Jd, kd, pd, Wd) {
-      switch (Jd) {
+    function DQ(QQ, FQ, wQ, LQ, oQ) {
+      switch (FQ) {
         case 5120:
-          pd && (Wd = Math.round(127 * Wd)), dd.setInt8(kd, Wd);
+          LQ && (oQ = Math.round(127 * oQ)), QQ.setInt8(wQ, oQ);
           break;
         case 5121:
-          pd && (Wd = Math.round(255 * Wd)), dd.setUint8(kd, Wd);
+          LQ && (oQ = Math.round(255 * oQ)), QQ.setUint8(wQ, oQ);
           break;
         case 5122:
-          pd && (Wd = Math.round(32767 * Wd)), dd.setInt16(kd, Wd, !0);
+          LQ && (oQ = Math.round(32767 * oQ)), QQ.setInt16(wQ, oQ, !0);
           break;
         case 5123:
-          pd && (Wd = Math.round(65535 * Wd)), dd.setUint16(kd, Wd, !0);
+          LQ && (oQ = Math.round(65535 * oQ)), QQ.setUint16(wQ, oQ, !0);
           break;
         case 5131:
-          dd.setUint16(kd, (0, Nd.l)(Wd), !0);
+          QQ.setUint16(wQ, (0, qQ.j)(oQ), !0);
           break;
         case 5124:
-          dd.setInt32(kd, Wd, !0);
+          QQ.setInt32(wQ, oQ, !0);
           break;
         case 5125:
-          dd.setUint32(kd, Wd, !0);
+          QQ.setUint32(wQ, oQ, !0);
           break;
         case 5126:
-          dd.setFloat32(kd, Wd, !0);
+          QQ.setFloat32(wQ, oQ, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${Jd}`)
+          throw new Error(`Invalid component type ${FQ}`)
       }
     }
 
-    function Zd(dd) {
-      switch (dd) {
+    function kQ(QQ) {
+      switch (QQ) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${dd}'`)
+          throw new Error(`Invalid type '${QQ}'`)
       }
     }
 
-    function gd(dd, Jd, kd, pd, Nd, gd, Cd, Kd) {
-      const od = new Array(pd),
-        ld = new Array(pd);
-      if (dd instanceof Array) {
-        let Nd = Jd / 4;
-        const Wd = kd / 4;
-        for (let Jd = 0; Jd < gd; Jd += pd) {
-          for (let Jd = 0; Jd < pd; Jd++) od[Jd] = ld[Jd] = dd[Nd + Jd];
-          Kd(ld, Jd);
-          for (let Jd = 0; Jd < pd; Jd++) od[Jd] !== ld[Jd] && (dd[Nd + Jd] = ld[Jd]);
-          Nd += Wd
+    function vQ(QQ, FQ, wQ, LQ, qQ, vQ, mQ, uQ) {
+      const HQ = new Array(LQ),
+        bQ = new Array(LQ);
+      if (QQ instanceof Array) {
+        let qQ = FQ / 4;
+        const oQ = wQ / 4;
+        for (let FQ = 0; FQ < vQ; FQ += LQ) {
+          for (let FQ = 0; FQ < LQ; FQ++) HQ[FQ] = bQ[FQ] = QQ[qQ + FQ];
+          uQ(bQ, FQ);
+          for (let FQ = 0; FQ < LQ; FQ++) HQ[FQ] !== bQ[FQ] && (QQ[qQ + FQ] = bQ[FQ]);
+          qQ += oQ
         }
       } else {
-        const Qd = ArrayBuffer.isView(dd) ? new DataView(dd.buffer, dd.byteOffset, dd.byteLength) : new DataView(dd),
-          Ld = Zd(Nd);
-        for (let dd = 0; dd < gd; dd += pd) {
-          for (let dd = 0, kd = Jd; dd < pd; dd++, kd += Ld) od[dd] = ld[dd] = Wd(Qd, Nd, kd, Cd);
-          Kd(ld, dd);
-          for (let dd = 0, kd = Jd; dd < pd; dd++, kd += Ld) od[dd] !== ld[dd] && Pd(Qd, Nd, kd, Cd, ld[dd]);
-          Jd += kd
+        const YQ = ArrayBuffer.isView(QQ) ? new DataView(QQ.buffer, QQ.byteOffset, QQ.byteLength) : new DataView(QQ),
+          xQ = kQ(qQ);
+        for (let QQ = 0; QQ < vQ; QQ += LQ) {
+          for (let QQ = 0, wQ = FQ; QQ < LQ; QQ++, wQ += xQ) HQ[QQ] = bQ[QQ] = oQ(YQ, qQ, wQ, mQ);
+          uQ(bQ, QQ);
+          for (let QQ = 0, wQ = FQ; QQ < LQ; QQ++, wQ += xQ) HQ[QQ] !== bQ[QQ] && DQ(YQ, qQ, wQ, mQ, bQ[QQ]);
+          FQ += wQ
         }
       }
     }
 
-    function Cd(dd, Jd, kd, Nd, Wd, Pd, Cd, Kd) {
-      const od = Jd * Zd(kd),
-        ld = Cd * Jd;
-      if (5126 !== kd || Wd !== od) {
-        const pd = new Float32Array(ld);
-        return gd(dd, Nd, Wd, Jd, kd, ld, Pd, ((dd, kd) => {
-          for (let Nd = 0; Nd < Jd; Nd++) pd[kd + Nd] = dd[Nd]
-        })), pd
+    function mQ(QQ, FQ, wQ, qQ, oQ, DQ, mQ, uQ) {
+      const HQ = FQ * kQ(wQ),
+        bQ = mQ * FQ;
+      if (5126 !== wQ || oQ !== HQ) {
+        const LQ = new Float32Array(bQ);
+        return vQ(QQ, qQ, oQ, FQ, wQ, bQ, DQ, ((QQ, wQ) => {
+          for (let qQ = 0; qQ < FQ; qQ++) LQ[wQ + qQ] = QQ[qQ]
+        })), LQ
       }
-      if (!(dd instanceof Array || dd instanceof Float32Array) || 0 !== Nd || dd.length !== ld) {
-        if (dd instanceof Array) {
-          const Jd = Nd / 4;
-          return dd.slice(Jd, Jd + ld)
+      if (!(QQ instanceof Array || QQ instanceof Float32Array) || 0 !== qQ || QQ.length !== bQ) {
+        if (QQ instanceof Array) {
+          const FQ = qQ / 4;
+          return QQ.slice(FQ, FQ + bQ)
         }
-        if (ArrayBuffer.isView(dd)) {
-          const Jd = dd.byteOffset + Nd;
-          return 0 !== (3 & Jd) && (pd.c.Warn("Float array must be aligned to 4-bytes border"), Kd = !0), Kd ? new Float32Array(dd.buffer.slice(Jd, Jd + ld * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(dd.buffer, Jd, ld)
+        if (ArrayBuffer.isView(QQ)) {
+          const FQ = QQ.byteOffset + qQ;
+          return 0 !== (3 & FQ) && (LQ.c.Warn("Float array must be aligned to 4-bytes border"), uQ = !0), uQ ? new Float32Array(QQ.buffer.slice(FQ, FQ + bQ * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(QQ.buffer, FQ, bQ)
         }
-        return new Float32Array(dd, Nd, ld)
+        return new Float32Array(QQ, qQ, bQ)
       }
-      return Kd ? dd.slice() : dd
+      return uQ ? QQ.slice() : QQ
     }
 
-    function Kd(dd, Jd, kd, Nd, Wd, Pd, Cd) {
-      const Kd = Zd(kd),
-        od = function(dd) {
-          switch (dd) {
+    function uQ(QQ, FQ, wQ, qQ, oQ, DQ, mQ) {
+      const uQ = kQ(wQ),
+        HQ = function(QQ) {
+          switch (QQ) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${dd}'`)
+              throw new Error(`Invalid component type '${QQ}'`)
           }
-        }(kd),
-        ld = Pd * Jd;
-      if (Array.isArray(dd)) {
-        if (0 !== (3 & Nd) || 0 !== (3 & Wd)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const pd = Nd / 4,
-          Zd = Wd / 4;
-        if (pd + (Pd - 1) * Zd + Jd > dd.length) throw new Error("Last accessed index is out of bounds.");
-        if (Zd < Jd) throw new Error("Data stride cannot be smaller than the component size.");
-        if (Zd !== Jd) {
-          const pd = new od(ld);
-          return gd(dd, Nd, Wd, Jd, kd, ld, !1, ((dd, kd) => {
-            for (let Nd = 0; Nd < Jd; Nd++) pd[kd + Nd] = dd[Nd]
-          })), pd
+        }(wQ),
+        bQ = DQ * FQ;
+      if (Array.isArray(QQ)) {
+        if (0 !== (3 & qQ) || 0 !== (3 & oQ)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const LQ = qQ / 4,
+          kQ = oQ / 4;
+        if (LQ + (DQ - 1) * kQ + FQ > QQ.length) throw new Error("Last accessed index is out of bounds.");
+        if (kQ < FQ) throw new Error("Data stride cannot be smaller than the component size.");
+        if (kQ !== FQ) {
+          const LQ = new HQ(bQ);
+          return vQ(QQ, qQ, oQ, FQ, wQ, bQ, !1, ((QQ, wQ) => {
+            for (let qQ = 0; qQ < FQ; qQ++) LQ[wQ + qQ] = QQ[qQ]
+          })), LQ
         }
-        return new od(dd.slice(pd, pd + ld))
+        return new HQ(QQ.slice(LQ, LQ + bQ))
       }
-      let Qd, Ld = Nd;
-      ArrayBuffer.isView(dd) ? (Qd = dd.buffer, Ld += dd.byteOffset) : Qd = dd;
-      if (Ld + (Pd - 1) * Wd + Jd * Kd > Qd.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const Od = Jd * Kd;
-      if (Wd < Od) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (Wd !== Od) {
-        const dd = new od(ld),
-          kd = new Uint8Array(Qd, Ld),
-          pd = new Uint8Array(dd.buffer),
-          Nd = Jd * Kd;
-        for (let Jd = 0, Zd = 0, gd = 0; Jd < Pd; Jd++, Zd += Wd, gd += Nd) pd.set(kd.subarray(Zd, Zd + Nd), gd);
-        return dd
+      let YQ, xQ = qQ;
+      ArrayBuffer.isView(QQ) ? (YQ = QQ.buffer, xQ += QQ.byteOffset) : YQ = QQ;
+      if (xQ + (DQ - 1) * oQ + FQ * uQ > YQ.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const AQ = FQ * uQ;
+      if (oQ < AQ) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (oQ !== AQ) {
+        const QQ = new HQ(bQ),
+          wQ = new Uint8Array(YQ, xQ),
+          LQ = new Uint8Array(QQ.buffer),
+          qQ = FQ * uQ;
+        for (let FQ = 0, kQ = 0, vQ = 0; FQ < DQ; FQ++, kQ += oQ, vQ += qQ) LQ.set(wQ.subarray(kQ, kQ + qQ), vQ);
+        return QQ
       }
-      return 1 !== Kd && 0 !== (Ld & Kd - 1) && (pd.c.Warn("Array must be aligned to border of element size. Data will be copied."), Cd = !0), Cd ? new od(Qd.slice(Ld, Ld + ld * Kd)) : new od(Qd, Ld, ld)
+      return 1 !== uQ && 0 !== (xQ & uQ - 1) && (LQ.c.Warn("Array must be aligned to border of element size. Data will be copied."), mQ = !0), mQ ? new HQ(YQ.slice(xQ, xQ + bQ * uQ)) : new HQ(YQ, xQ, bQ)
     }
 
-    function od(dd, Jd, kd, Nd, Wd, Pd, Cd, Kd) {
-      const od = Jd * Zd(kd),
-        ld = Cd * Jd;
-      if (Kd.length !== ld) throw new Error("Output length is not valid");
-      if (5126 === kd && Wd === od)
-        if (dd instanceof Array) {
-          const Jd = Nd / 4;
-          Kd.set(dd, Jd)
-        } else if (ArrayBuffer.isView(dd)) {
-        const Jd = dd.byteOffset + Nd;
-        if (0 !== (3 & Jd)) return pd.c.Warn("Float array must be aligned to 4-bytes border"), void Kd.set(new Float32Array(dd.buffer.slice(Jd, Jd + ld * Float32Array.BYTES_PER_ELEMENT)));
-        const kd = new Float32Array(dd.buffer, Jd, ld);
-        Kd.set(kd)
+    function HQ(QQ, FQ, wQ, qQ, oQ, DQ, mQ, uQ) {
+      const HQ = FQ * kQ(wQ),
+        bQ = mQ * FQ;
+      if (uQ.length !== bQ) throw new Error("Output length is not valid");
+      if (5126 === wQ && oQ === HQ)
+        if (QQ instanceof Array) {
+          const FQ = qQ / 4;
+          uQ.set(QQ, FQ)
+        } else if (ArrayBuffer.isView(QQ)) {
+        const FQ = QQ.byteOffset + qQ;
+        if (0 !== (3 & FQ)) return LQ.c.Warn("Float array must be aligned to 4-bytes border"), void uQ.set(new Float32Array(QQ.buffer.slice(FQ, FQ + bQ * Float32Array.BYTES_PER_ELEMENT)));
+        const wQ = new Float32Array(QQ.buffer, FQ, bQ);
+        uQ.set(wQ)
       } else {
-        const Jd = new Float32Array(dd, Nd, ld);
-        Kd.set(Jd)
-      } else gd(dd, Nd, Wd, Jd, kd, ld, Pd, ((dd, kd) => {
-        for (let pd = 0; pd < Jd; pd++) Kd[kd + pd] = dd[pd]
+        const FQ = new Float32Array(QQ, qQ, bQ);
+        uQ.set(FQ)
+      } else vQ(QQ, qQ, oQ, FQ, wQ, bQ, DQ, ((QQ, wQ) => {
+        for (let LQ = 0; LQ < FQ; LQ++) uQ[wQ + LQ] = QQ[LQ]
       }))
     }
 
-    function ld(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(dd)) {
-        for (let Nd = 0; Nd < Jd; Nd++)
-          if (dd[kd + Nd] - pd > 65535) return !0;
+    function bQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(QQ)) {
+        for (let qQ = 0; qQ < FQ; qQ++)
+          if (QQ[wQ + qQ] - LQ > 65535) return !0;
         return !1
       }
-      return 4 === dd.BYTES_PER_ELEMENT
+      return 4 === QQ.BYTES_PER_ELEMENT
     }
 
-    function Qd(dd) {
-      const Jd = dd.buffer;
-      if (Jd instanceof ArrayBuffer) return dd;
-      const kd = new ArrayBuffer(dd.byteLength);
-      return new Uint8Array(kd).set(new Uint8Array(Jd, dd.byteOffset, dd.byteLength)), kd
+    function YQ(QQ) {
+      const FQ = QQ.buffer;
+      if (FQ instanceof ArrayBuffer) return QQ;
+      const wQ = new ArrayBuffer(QQ.byteLength);
+      return new Uint8Array(wQ).set(new Uint8Array(FQ, QQ.byteOffset, QQ.byteLength)), wQ
     }
   },
-  39862: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => sd,
-      h: () => qd,
-      l: () => Bd,
-      i: () => Sd,
-      m: () => jd
+  39282: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => iQ,
+      f: () => CQ,
+      i: () => SQ,
+      h: () => UQ,
+      j: () => NQ
     });
-    class pd {
+    class LQ {
       constructor() {
         this.children = []
       }
-      isValid(dd) {
+      isValid(QQ) {
         return !0
       }
-      process(dd, Jd, kd) {
-        let pd = "";
+      process(QQ, FQ, wQ) {
+        let LQ = "";
         if (this.line) {
-          let kd = this.line;
-          const Nd = Jd.processor;
-          if (Nd) {
-            Nd.lineProcessor && (kd = Nd.lineProcessor(kd, Jd.isFragment, Jd.processingContext));
-            const pd = Jd.processor?.attributeKeywordName ?? "attribute",
-              Wd = Jd.isFragment && Jd.processor?.varyingFragmentKeywordName ? Jd.processor?.varyingFragmentKeywordName : !Jd.isFragment && Jd.processor?.varyingVertexKeywordName ? Jd.processor?.varyingVertexKeywordName : "varying";
-            if (!Jd.isFragment && Nd.attributeProcessor && this.line.startsWith(pd)) kd = Nd.attributeProcessor(this.line, dd, Jd.processingContext);
-            else if (Nd.varyingProcessor && (Nd.varyingCheck?.(this.line, Jd.isFragment) || !Nd.varyingCheck && this.line.startsWith(Wd))) kd = Nd.varyingProcessor(this.line, Jd.isFragment, dd, Jd.processingContext);
-            else if (Nd.uniformProcessor && Nd.uniformRegexp && Nd.uniformRegexp.test(this.line)) Jd.lookForClosingBracketForUniformBuffer || (kd = Nd.uniformProcessor(this.line, Jd.isFragment, dd, Jd.processingContext));
-            else if (Nd.uniformBufferProcessor && Nd.uniformBufferRegexp && Nd.uniformBufferRegexp.test(this.line)) Jd.lookForClosingBracketForUniformBuffer || (kd = Nd.uniformBufferProcessor(this.line, Jd.isFragment, Jd.processingContext), Jd.lookForClosingBracketForUniformBuffer = !0);
-            else if (Nd.textureProcessor && Nd.textureRegexp && Nd.textureRegexp.test(this.line)) kd = Nd.textureProcessor(this.line, Jd.isFragment, dd, Jd.processingContext);
-            else if ((Nd.uniformProcessor || Nd.uniformBufferProcessor) && this.line.startsWith("uniform") && !Jd.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? Nd.uniformProcessor && (kd = Nd.uniformProcessor(this.line, Jd.isFragment, dd, Jd.processingContext)) : Nd.uniformBufferProcessor && (kd = Nd.uniformBufferProcessor(this.line, Jd.isFragment, Jd.processingContext), Jd.lookForClosingBracketForUniformBuffer = !0)
+          let wQ = this.line;
+          const qQ = FQ.processor;
+          if (qQ) {
+            qQ.lineProcessor && (wQ = qQ.lineProcessor(wQ, FQ.isFragment, FQ.processingContext));
+            const LQ = FQ.processor?.attributeKeywordName ?? "attribute",
+              oQ = FQ.isFragment && FQ.processor?.varyingFragmentKeywordName ? FQ.processor?.varyingFragmentKeywordName : !FQ.isFragment && FQ.processor?.varyingVertexKeywordName ? FQ.processor?.varyingVertexKeywordName : "varying";
+            if (!FQ.isFragment && qQ.attributeProcessor && this.line.startsWith(LQ)) wQ = qQ.attributeProcessor(this.line, QQ, FQ.processingContext);
+            else if (qQ.varyingProcessor && (qQ.varyingCheck?.(this.line, FQ.isFragment) || !qQ.varyingCheck && this.line.startsWith(oQ))) wQ = qQ.varyingProcessor(this.line, FQ.isFragment, QQ, FQ.processingContext);
+            else if (qQ.uniformProcessor && qQ.uniformRegexp && qQ.uniformRegexp.test(this.line)) FQ.lookForClosingBracketForUniformBuffer || (wQ = qQ.uniformProcessor(this.line, FQ.isFragment, QQ, FQ.processingContext));
+            else if (qQ.uniformBufferProcessor && qQ.uniformBufferRegexp && qQ.uniformBufferRegexp.test(this.line)) FQ.lookForClosingBracketForUniformBuffer || (wQ = qQ.uniformBufferProcessor(this.line, FQ.isFragment, FQ.processingContext), FQ.lookForClosingBracketForUniformBuffer = !0);
+            else if (qQ.textureProcessor && qQ.textureRegexp && qQ.textureRegexp.test(this.line)) wQ = qQ.textureProcessor(this.line, FQ.isFragment, QQ, FQ.processingContext);
+            else if ((qQ.uniformProcessor || qQ.uniformBufferProcessor) && this.line.startsWith("uniform") && !FQ.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? qQ.uniformProcessor && (wQ = qQ.uniformProcessor(this.line, FQ.isFragment, QQ, FQ.processingContext)) : qQ.uniformBufferProcessor && (wQ = qQ.uniformBufferProcessor(this.line, FQ.isFragment, FQ.processingContext), FQ.lookForClosingBracketForUniformBuffer = !0)
             }
-            Jd.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Jd.lookForClosingBracketForUniformBuffer = !1, Nd.endOfUniformBufferProcessor && (kd = Nd.endOfUniformBufferProcessor(this.line, Jd.isFragment, Jd.processingContext)))
+            FQ.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (FQ.lookForClosingBracketForUniformBuffer = !1, qQ.endOfUniformBufferProcessor && (wQ = qQ.endOfUniformBufferProcessor(this.line, FQ.isFragment, FQ.processingContext)))
           }
-          pd += kd + "\n"
+          LQ += wQ + "\n"
         }
-        for (const Nd of this.children) pd += Nd.process(dd, Jd, kd);
-        return this.additionalDefineKey && (dd[this.additionalDefineKey] = this.additionalDefineValue || "true", kd[this.additionalDefineKey] = dd[this.additionalDefineKey]), pd
+        for (const qQ of this.children) LQ += qQ.process(QQ, FQ, wQ);
+        return this.additionalDefineKey && (QQ[this.additionalDefineKey] = this.additionalDefineValue || "true", wQ[this.additionalDefineKey] = QQ[this.additionalDefineKey]), LQ
       }
     }
-    class Nd {
+    class qQ {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(dd) {
+      set lines(QQ) {
         this._lines.length = 0;
-        for (const Jd of dd) {
-          if (!Jd || "\r" === Jd) continue;
-          if ("#" === Jd[0]) {
-            this._lines.push(Jd);
+        for (const FQ of QQ) {
+          if (!FQ || "\r" === FQ) continue;
+          if ("#" === FQ[0]) {
+            this._lines.push(FQ);
             continue
           }
-          const dd = Jd.trim();
-          if (!dd) continue;
-          if (dd.startsWith("//")) {
-            this._lines.push(Jd);
+          const QQ = FQ.trim();
+          if (!QQ) continue;
+          if (QQ.startsWith("//")) {
+            this._lines.push(FQ);
             continue
           }
-          const kd = dd.indexOf(";");
-          if (-1 === kd) this._lines.push(dd);
-          else if (kd === dd.length - 1) dd.length > 1 && this._lines.push(dd);
+          const wQ = QQ.indexOf(";");
+          if (-1 === wQ) this._lines.push(QQ);
+          else if (wQ === QQ.length - 1) QQ.length > 1 && this._lines.push(QQ);
           else {
-            const dd = Jd.split(";");
-            for (let Jd = 0; Jd < dd.length; Jd++) {
-              let kd = dd[Jd];
-              kd && (kd = kd.trim(), kd && this._lines.push(kd + (Jd !== dd.length - 1 ? ";" : "")))
+            const QQ = FQ.split(";");
+            for (let FQ = 0; FQ < QQ.length; FQ++) {
+              let wQ = QQ[FQ];
+              wQ && (wQ = wQ.trim(), wQ && this._lines.push(wQ + (FQ !== QQ.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class Wd extends pd {
-      process(dd, Jd, kd) {
-        for (let pd = 0; pd < this.children.length; pd++) {
-          const Nd = this.children[pd];
-          if (Nd.isValid(dd)) return Nd.process(dd, Jd, kd)
+    class oQ extends LQ {
+      process(QQ, FQ, wQ) {
+        for (let LQ = 0; LQ < this.children.length; LQ++) {
+          const qQ = this.children[LQ];
+          if (qQ.isValid(QQ)) return qQ.process(QQ, FQ, wQ)
         }
         return ""
       }
     }
-    class Pd extends pd {
-      isValid(dd) {
-        return this.testExpression.isTrue(dd)
+    class DQ extends LQ {
+      isValid(QQ) {
+        return this.testExpression.isTrue(QQ)
       }
     }
-    class Zd {
-      isTrue(dd) {
+    class kQ {
+      isTrue(QQ) {
         return !0
       }
-      static postfixToInfix(dd) {
-        const Jd = [];
-        for (const kd of dd)
-          if (void 0 === Zd._OperatorPriority[kd]) Jd.push(kd);
+      static postfixToInfix(QQ) {
+        const FQ = [];
+        for (const wQ of QQ)
+          if (void 0 === kQ._OperatorPriority[wQ]) FQ.push(wQ);
           else {
-            const dd = Jd[Jd.length - 1],
-              pd = Jd[Jd.length - 2];
-            Jd.length -= 2, Jd.push(`(${pd}${kd}${dd})`)
-          } return Jd[Jd.length - 1]
+            const QQ = FQ[FQ.length - 1],
+              LQ = FQ[FQ.length - 2];
+            FQ.length -= 2, FQ.push(`(${LQ}${wQ}${QQ})`)
+          } return FQ[FQ.length - 1]
       }
-      static infixToPostfix(dd) {
-        const Jd = Zd._InfixToPostfixCache.get(dd);
-        if (Jd) return Jd.accessTime = Date.now(), Jd.result;
-        if (!dd.includes("&&") && !dd.includes("||") && !dd.includes(")") && !dd.includes("(")) return [dd];
-        const kd = [];
-        let pd = -1;
-        const Nd = () => {
-            Kd = Kd.trim(), "" !== Kd && (kd.push(Kd), Kd = "")
+      static infixToPostfix(QQ) {
+        const FQ = kQ._InfixToPostfixCache.get(QQ);
+        if (FQ) return FQ.accessTime = Date.now(), FQ.result;
+        if (!QQ.includes("&&") && !QQ.includes("||") && !QQ.includes(")") && !QQ.includes("(")) return [QQ];
+        const wQ = [];
+        let LQ = -1;
+        const qQ = () => {
+            uQ = uQ.trim(), "" !== uQ && (wQ.push(uQ), uQ = "")
           },
-          Wd = dd => {
-            pd < Zd._Stack.length - 1 && (Zd._Stack[++pd] = dd)
+          oQ = QQ => {
+            LQ < kQ._Stack.length - 1 && (kQ._Stack[++LQ] = QQ)
           },
-          Pd = () => Zd._Stack[pd],
-          gd = () => -1 === pd ? "!!INVALID EXPRESSION!!" : Zd._Stack[pd--];
-        let Cd = 0,
-          Kd = "";
-        for (; Cd < dd.length;) {
-          const Jd = dd.charAt(Cd),
-            od = Cd < dd.length - 1 ? dd.substring(Cd, 2 + Cd) : "";
-          if ("(" === Jd) Kd = "", Wd(Jd);
-          else if (")" === Jd) {
-            for (Nd(); - 1 !== pd && "(" !== Pd();) kd.push(gd());
-            gd()
-          } else if (Zd._OperatorPriority[od] > 1) {
-            for (Nd(); - 1 !== pd && Zd._OperatorPriority[Pd()] >= Zd._OperatorPriority[od];) kd.push(gd());
-            Wd(od), Cd++
-          } else Kd += Jd;
-          Cd++
+          DQ = () => kQ._Stack[LQ],
+          vQ = () => -1 === LQ ? "!!INVALID EXPRESSION!!" : kQ._Stack[LQ--];
+        let mQ = 0,
+          uQ = "";
+        for (; mQ < QQ.length;) {
+          const FQ = QQ.charAt(mQ),
+            HQ = mQ < QQ.length - 1 ? QQ.substring(mQ, 2 + mQ) : "";
+          if ("(" === FQ) uQ = "", oQ(FQ);
+          else if (")" === FQ) {
+            for (qQ(); - 1 !== LQ && "(" !== DQ();) wQ.push(vQ());
+            vQ()
+          } else if (kQ._OperatorPriority[HQ] > 1) {
+            for (qQ(); - 1 !== LQ && kQ._OperatorPriority[DQ()] >= kQ._OperatorPriority[HQ];) wQ.push(vQ());
+            oQ(HQ), mQ++
+          } else uQ += FQ;
+          mQ++
         }
-        for (Nd(); - 1 !== pd;) "(" === Pd() ? gd() : kd.push(gd());
-        return Zd._InfixToPostfixCache.size >= Zd.InfixToPostfixCacheLimitSize && Zd.ClearCache(), Zd._InfixToPostfixCache.set(dd, {
-          result: kd,
+        for (qQ(); - 1 !== LQ;) "(" === DQ() ? vQ() : wQ.push(vQ());
+        return kQ._InfixToPostfixCache.size >= kQ.InfixToPostfixCacheLimitSize && kQ.ClearCache(), kQ._InfixToPostfixCache.set(QQ, {
+          result: wQ,
           accessTime: Date.now()
-        }), kd
+        }), wQ
       }
       static ClearCache() {
-        const dd = Array.from(Zd._InfixToPostfixCache.entries()).sort(((dd, Jd) => dd[1].accessTime - Jd[1].accessTime));
-        for (let Jd = 0; Jd < Zd.InfixToPostfixCacheCleanupSize; Jd++) Zd._InfixToPostfixCache.delete(dd[Jd][0])
+        const QQ = Array.from(kQ._InfixToPostfixCache.entries()).sort(((QQ, FQ) => QQ[1].accessTime - FQ[1].accessTime));
+        for (let FQ = 0; FQ < kQ.InfixToPostfixCacheCleanupSize; FQ++) kQ._InfixToPostfixCache.delete(QQ[FQ][0])
       }
     }
-    Zd.InfixToPostfixCacheLimitSize = 5e4, Zd.InfixToPostfixCacheCleanupSize = 25e3, Zd._InfixToPostfixCache = new Map, Zd._OperatorPriority = {
+    kQ.InfixToPostfixCacheLimitSize = 5e4, kQ.InfixToPostfixCacheCleanupSize = 25e3, kQ._InfixToPostfixCache = new Map, kQ._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, Zd._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class gd extends Zd {
-      constructor(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = dd, this.not = Jd
+    }, kQ._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class vQ extends kQ {
+      constructor(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = QQ, this.not = FQ
       }
-      isTrue(dd) {
-        let Jd = void 0 !== dd[this.define];
-        return this.not && (Jd = !Jd), Jd
-      }
-    }
-    class Cd extends Zd {
-      isTrue(dd) {
-        return this.leftOperand.isTrue(dd) || this.rightOperand.isTrue(dd)
+      isTrue(QQ) {
+        let FQ = void 0 !== QQ[this.define];
+        return this.not && (FQ = !FQ), FQ
       }
     }
-    class Kd extends Zd {
-      isTrue(dd) {
-        return this.leftOperand.isTrue(dd) && this.rightOperand.isTrue(dd)
+    class mQ extends kQ {
+      isTrue(QQ) {
+        return this.leftOperand.isTrue(QQ) || this.rightOperand.isTrue(QQ)
       }
     }
-    class od extends Zd {
-      constructor(dd, Jd, kd) {
-        super(), this.define = dd, this.operand = Jd, this.testValue = kd
+    class uQ extends kQ {
+      isTrue(QQ) {
+        return this.leftOperand.isTrue(QQ) && this.rightOperand.isTrue(QQ)
+      }
+    }
+    class HQ extends kQ {
+      constructor(QQ, FQ, wQ) {
+        super(), this.define = QQ, this.operand = FQ, this.testValue = wQ
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(dd) {
-        let Jd = !1;
-        const kd = parseInt(void 0 != dd[this.define] ? dd[this.define] : this.define),
-          pd = parseInt(void 0 != dd[this.testValue] ? dd[this.testValue] : this.testValue);
-        if (isNaN(kd) || isNaN(pd)) return !1;
+      isTrue(QQ) {
+        let FQ = !1;
+        const wQ = parseInt(void 0 != QQ[this.define] ? QQ[this.define] : this.define),
+          LQ = parseInt(void 0 != QQ[this.testValue] ? QQ[this.testValue] : this.testValue);
+        if (isNaN(wQ) || isNaN(LQ)) return !1;
         switch (this.operand) {
           case ">":
-            Jd = kd > pd;
+            FQ = wQ > LQ;
             break;
           case "<":
-            Jd = kd < pd;
+            FQ = wQ < LQ;
             break;
           case "<=":
-            Jd = kd <= pd;
+            FQ = wQ <= LQ;
             break;
           case ">=":
-            Jd = kd >= pd;
+            FQ = wQ >= LQ;
             break;
           case "==":
-            Jd = kd === pd;
+            FQ = wQ === LQ;
             break;
           case "!=":
-            Jd = kd !== pd
+            FQ = wQ !== LQ
         }
-        return Jd
+        return FQ
       }
     }
-    var ld = kd(39860),
-      Qd = kd(39851);
-    const Ld = /defined\s*?\((.+?)\)/g,
-      Od = /defined\s*?\[(.+?)\]/g,
-      ed = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      Rd = /__decl__/,
-      Id = /light\{X\}.(\w*)/g,
-      Gd = /\{X\}/g,
-      vd = [],
-      xd = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var bQ = wQ(39277),
+      YQ = wQ(39274);
+    const xQ = /defined\s*?\((.+?)\)/g,
+      AQ = /defined\s*?\[(.+?)\]/g,
+      tQ = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      eQ = /__decl__/,
+      MQ = /light\{X\}.(\w*)/g,
+      GQ = /\{X\}/g,
+      pQ = [],
+      cQ = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function qd(dd) {
-      dd.processor && dd.processor.initializeShaders && dd.processor.initializeShaders(dd.processingContext)
+    function CQ(QQ) {
+      QQ.processor && QQ.processor.initializeShaders && QQ.processor.initializeShaders(QQ.processingContext)
     }
 
-    function Bd(dd, Jd, kd, pd) {
-      Jd.processor?.preProcessShaderCode && (dd = Jd.processor.preProcessShaderCode(dd, Jd.isFragment)), Sd(dd, Jd, (dd => {
-        Jd.processCodeAfterIncludes && (dd = Jd.processCodeAfterIncludes(Jd.isFragment ? "fragment" : "vertex", dd, Jd.defines));
-        const Nd = function(dd, Jd, kd) {
-          let pd = function(dd, Jd) {
-            if (Jd.processor?.noPrecision) return dd;
-            const kd = Jd.shouldUseHighPrecisionShader; - 1 === dd.indexOf("precision highp float") ? dd = kd ? "precision highp float;\n" + dd : "precision mediump float;\n" + dd : kd || (dd = dd.replace("precision highp float", "precision mediump float"));
-            return dd
-          }(dd, Jd);
-          if (!Jd.processor) return pd;
-          if (0 === Jd.processor.shaderLanguage && -1 !== pd.indexOf("#version 3") && (pd = pd.replace("#version 300 es", ""), !Jd.processor.parseGLES3)) return pd;
-          const Nd = Jd.defines,
-            Wd = bd(Jd, kd);
-          Jd.processor.preProcessor && (pd = Jd.processor.preProcessor(pd, Nd, Wd, Jd.isFragment, Jd.processingContext));
-          const Pd = {};
-          pd = md(pd, Wd, Jd, Pd), Jd.processor.postProcessor && (pd = Jd.processor.postProcessor(pd, Nd, Jd.isFragment, Jd.processingContext, kd ? {
-            drawBuffersExtensionDisabled: !kd.getCaps().drawBuffersExtension
-          } : {}, Wd, Pd));
-          kd?._features.needShaderCodeInlining && (pd = kd.inlineShaderCode(pd));
-          return pd
-        }(dd, Jd, pd);
-        kd(Nd, dd)
+    function SQ(QQ, FQ, wQ, LQ) {
+      FQ.processor?.preProcessShaderCode && (QQ = FQ.processor.preProcessShaderCode(QQ, FQ.isFragment)), UQ(QQ, FQ, (QQ => {
+        FQ.processCodeAfterIncludes && (QQ = FQ.processCodeAfterIncludes(FQ.isFragment ? "fragment" : "vertex", QQ, FQ.defines));
+        const qQ = function(QQ, FQ, wQ) {
+          let LQ = function(QQ, FQ) {
+            if (FQ.processor?.noPrecision) return QQ;
+            const wQ = FQ.shouldUseHighPrecisionShader; - 1 === QQ.indexOf("precision highp float") ? QQ = wQ ? "precision highp float;\n" + QQ : "precision mediump float;\n" + QQ : wQ || (QQ = QQ.replace("precision highp float", "precision mediump float"));
+            return QQ
+          }(QQ, FQ);
+          if (!FQ.processor) return LQ;
+          if (0 === FQ.processor.shaderLanguage && -1 !== LQ.indexOf("#version 3") && (LQ = LQ.replace("#version 300 es", ""), !FQ.processor.parseGLES3)) return LQ;
+          const qQ = FQ.defines,
+            oQ = IQ(FQ, wQ);
+          FQ.processor.preProcessor && (LQ = FQ.processor.preProcessor(LQ, qQ, oQ, FQ.isFragment, FQ.processingContext));
+          const DQ = {};
+          LQ = rQ(LQ, oQ, FQ, DQ), FQ.processor.postProcessor && (LQ = FQ.processor.postProcessor(LQ, qQ, FQ.isFragment, FQ.processingContext, wQ ? {
+            drawBuffersExtensionDisabled: !wQ.getCaps().drawBuffersExtension
+          } : {}, oQ, DQ));
+          wQ?._features.needShaderCodeInlining && (LQ = wQ.inlineShaderCode(LQ));
+          return LQ
+        }(QQ, FQ, LQ);
+        wQ(qQ, QQ)
       }))
     }
 
-    function sd(dd, Jd, kd) {
-      return kd.processor && kd.processor.finalizeShaders ? kd.processor.finalizeShaders(dd, Jd, kd.processingContext) : {
-        vertexCode: dd,
-        fragmentCode: Jd
+    function iQ(QQ, FQ, wQ) {
+      return wQ.processor && wQ.processor.finalizeShaders ? wQ.processor.finalizeShaders(QQ, FQ, wQ.processingContext) : {
+        vertexCode: QQ,
+        fragmentCode: FQ
       }
     }
 
-    function ad(dd) {
-      const Jd = /defined\((.+)\)/.exec(dd);
-      if (Jd && Jd.length) return new gd(Jd[1].trim(), "!" === dd[0]);
-      const kd = ["==", "!=", ">=", "<=", "<", ">"];
-      let pd = "",
-        Nd = 0;
-      for (pd of kd)
-        if (Nd = dd.indexOf(pd), Nd > -1) break;
-      if (-1 === Nd) return new gd(dd);
-      const Wd = dd.substring(0, Nd).trim(),
-        Pd = dd.substring(Nd + pd.length).trim();
-      return new od(Wd, pd, Pd)
+    function WQ(QQ) {
+      const FQ = /defined\((.+)\)/.exec(QQ);
+      if (FQ && FQ.length) return new vQ(FQ[1].trim(), "!" === QQ[0]);
+      const wQ = ["==", "!=", ">=", "<=", "<", ">"];
+      let LQ = "",
+        qQ = 0;
+      for (LQ of wQ)
+        if (qQ = QQ.indexOf(LQ), qQ > -1) break;
+      if (-1 === qQ) return new vQ(QQ);
+      const oQ = QQ.substring(0, qQ).trim(),
+        DQ = QQ.substring(qQ + LQ.length).trim();
+      return new HQ(oQ, LQ, DQ)
     }
 
-    function Md(dd, Jd) {
-      const kd = new Pd,
-        pd = dd.substring(0, Jd);
-      let Nd = dd.substring(Jd);
-      return Nd = Nd.substring(0, (Nd.indexOf("//") + 1 || Nd.length + 1) - 1).trim(), kd.testExpression = "#ifdef" === pd ? new gd(Nd) : "#ifndef" === pd ? new gd(Nd, !0) : function(dd) {
-        dd = dd.replace(Ld, "defined[$1]");
-        const Jd = Zd.infixToPostfix(dd),
-          kd = [];
-        for (const Nd of Jd)
-          if ("||" !== Nd && "&&" !== Nd) kd.push(Nd);
-          else if (kd.length >= 2) {
-          let dd = kd[kd.length - 1],
-            Jd = kd[kd.length - 2];
-          kd.length -= 2;
-          const pd = "&&" == Nd ? new Kd : new Cd;
-          "string" === typeof dd && (dd = dd.replace(Od, "defined($1)")), "string" === typeof Jd && (Jd = Jd.replace(Od, "defined($1)")), pd.leftOperand = "string" === typeof Jd ? ad(Jd) : Jd, pd.rightOperand = "string" === typeof dd ? ad(dd) : dd, kd.push(pd)
+    function RQ(QQ, FQ) {
+      const wQ = new DQ,
+        LQ = QQ.substring(0, FQ);
+      let qQ = QQ.substring(FQ);
+      return qQ = qQ.substring(0, (qQ.indexOf("//") + 1 || qQ.length + 1) - 1).trim(), wQ.testExpression = "#ifdef" === LQ ? new vQ(qQ) : "#ifndef" === LQ ? new vQ(qQ, !0) : function(QQ) {
+        QQ = QQ.replace(xQ, "defined[$1]");
+        const FQ = kQ.infixToPostfix(QQ),
+          wQ = [];
+        for (const qQ of FQ)
+          if ("||" !== qQ && "&&" !== qQ) wQ.push(qQ);
+          else if (wQ.length >= 2) {
+          let QQ = wQ[wQ.length - 1],
+            FQ = wQ[wQ.length - 2];
+          wQ.length -= 2;
+          const LQ = "&&" == qQ ? new uQ : new mQ;
+          "string" === typeof QQ && (QQ = QQ.replace(AQ, "defined($1)")), "string" === typeof FQ && (FQ = FQ.replace(AQ, "defined($1)")), LQ.leftOperand = "string" === typeof FQ ? WQ(FQ) : FQ, LQ.rightOperand = "string" === typeof QQ ? WQ(QQ) : QQ, wQ.push(LQ)
         }
-        let pd = kd[kd.length - 1];
-        return "string" === typeof pd && (pd = pd.replace(Od, "defined($1)")), "string" === typeof pd ? ad(pd) : pd
-      }(Nd), kd
+        let LQ = wQ[wQ.length - 1];
+        return "string" === typeof LQ && (LQ = LQ.replace(AQ, "defined($1)")), "string" === typeof LQ ? WQ(LQ) : LQ
+      }(qQ), wQ
     }
 
-    function Fd(dd, Jd, kd, Nd) {
-      let Wd;
-      for (; Yd(dd, kd, Nd);) {
-        Wd = dd.currentLine;
-        const Pd = Wd.substring(0, 5).toLowerCase();
-        if ("#else" === Pd) {
-          const kd = new pd;
-          return Jd.children.push(kd), void Yd(dd, kd, Nd)
+    function OQ(QQ, FQ, wQ, qQ) {
+      let oQ;
+      for (; sQ(QQ, wQ, qQ);) {
+        oQ = QQ.currentLine;
+        const DQ = oQ.substring(0, 5).toLowerCase();
+        if ("#else" === DQ) {
+          const wQ = new LQ;
+          return FQ.children.push(wQ), void sQ(QQ, wQ, qQ)
         }
-        if ("#elif" === Pd) {
-          const dd = Md(Wd, 5);
-          Jd.children.push(dd), kd = dd
+        if ("#elif" === DQ) {
+          const QQ = RQ(oQ, 5);
+          FQ.children.push(QQ), wQ = QQ
         }
       }
     }
 
-    function Yd(dd, Jd, kd) {
-      for (; dd.canRead;) {
-        dd.lineIndex++;
-        const Nd = dd.currentLine;
-        if (Nd.indexOf("#") >= 0) {
-          const pd = xd.exec(Nd);
-          if (pd && pd.length) {
-            switch (pd[0]) {
+    function sQ(QQ, FQ, wQ) {
+      for (; QQ.canRead;) {
+        QQ.lineIndex++;
+        const qQ = QQ.currentLine;
+        if (qQ.indexOf("#") >= 0) {
+          const LQ = cQ.exec(qQ);
+          if (LQ && LQ.length) {
+            switch (LQ[0]) {
               case "#ifdef": {
-                const pd = new Wd;
-                Jd.children.push(pd);
-                const Pd = Md(Nd, 6);
-                pd.children.push(Pd), Fd(dd, pd, Pd, kd);
+                const LQ = new oQ;
+                FQ.children.push(LQ);
+                const DQ = RQ(qQ, 6);
+                LQ.children.push(DQ), OQ(QQ, LQ, DQ, wQ);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const pd = new Wd;
-                Jd.children.push(pd);
-                const Pd = Md(Nd, 7);
-                pd.children.push(Pd), Fd(dd, pd, Pd, kd);
+                const LQ = new oQ;
+                FQ.children.push(LQ);
+                const DQ = RQ(qQ, 7);
+                LQ.children.push(DQ), OQ(QQ, LQ, DQ, wQ);
                 break
               }
               case "#if": {
-                const pd = new Wd,
-                  Pd = Md(Nd, 3);
-                Jd.children.push(pd), pd.children.push(Pd), Fd(dd, pd, Pd, kd);
+                const LQ = new oQ,
+                  DQ = RQ(qQ, 3);
+                FQ.children.push(LQ), LQ.children.push(DQ), OQ(QQ, LQ, DQ, wQ);
                 break
               }
             }
             continue
           }
         }
-        const Pd = new pd;
-        if (Pd.line = Nd, Jd.children.push(Pd), "#" === Nd[0] && "d" === Nd[1]) {
-          const dd = Nd.replace(";", "").split(" ");
-          Pd.additionalDefineKey = dd[1], 3 === dd.length && (Pd.additionalDefineValue = dd[2])
+        const DQ = new LQ;
+        if (DQ.line = qQ, FQ.children.push(DQ), "#" === qQ[0] && "d" === qQ[1]) {
+          const QQ = qQ.replace(";", "").split(" ");
+          DQ.additionalDefineKey = QQ[1], 3 === QQ.length && (DQ.additionalDefineValue = QQ[2])
         }
       }
       return !1
     }
 
-    function md(dd, Jd, kd, Wd) {
-      const Pd = new pd,
-        Zd = new Nd;
-      return Zd.lineIndex = -1, Zd.lines = dd.split("\n"), Yd(Zd, Pd, Wd), Pd.process(Jd, kd, Wd)
+    function rQ(QQ, FQ, wQ, oQ) {
+      const DQ = new LQ,
+        kQ = new qQ;
+      return kQ.lineIndex = -1, kQ.lines = QQ.split("\n"), sQ(kQ, DQ, oQ), DQ.process(FQ, wQ, oQ)
     }
 
-    function bd(dd, Jd) {
-      const kd = dd.defines,
-        pd = {};
-      for (const Nd of kd) {
-        const dd = Nd.replace("#define", "").replace(";", "").trim().split(" ");
-        pd[dd[0]] = dd.length > 1 ? dd[1] : ""
+    function IQ(QQ, FQ) {
+      const wQ = QQ.defines,
+        LQ = {};
+      for (const qQ of wQ) {
+        const QQ = qQ.replace("#define", "").replace(";", "").trim().split(" ");
+        LQ[QQ[0]] = QQ.length > 1 ? QQ[1] : ""
       }
-      return 0 === dd.processor?.shaderLanguage && (pd.GL_ES = "true"), pd.__VERSION__ = dd.version, pd[dd.platformName] = "true", (0, Qd.k)(pd, Jd?.isNDCHalfZRange, Jd?.vpd, Jd?.useExactSrgbConversions), pd
+      return 0 === QQ.processor?.shaderLanguage && (LQ.GL_ES = "true"), LQ.__VERSION__ = QQ.version, LQ[QQ.platformName] = "true", (0, YQ.j)(LQ, FQ?.isNDCHalfZRange, FQ?.SLQ, FQ?.useExactSrgbConversions), LQ
     }
 
-    function Sd(dd, Jd, kd) {
-      let pd;
-      for (vd.length = 0; null !== (pd = ed.exec(dd));) vd.push(pd);
-      let Nd = [dd],
-        Wd = !1;
-      for (const Zd of vd) {
-        let dd = Zd[1];
-        if (-1 !== dd.indexOf("__decl__") && (dd = dd.replace(Rd, ""), Jd.supportsUniformBuffers && (dd = dd.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), dd += "Declaration"), !Jd.includesShadersStore[dd]) {
-          const pd = Jd.shadersRepository + "ShadersInclude/" + dd + ".fx";
-          return void jd.loadFile(pd, (pd => {
-            Jd.includesShadersStore[dd] = pd, Sd(Nd.join(""), Jd, kd)
+    function UQ(QQ, FQ, wQ) {
+      let LQ;
+      for (pQ.length = 0; null !== (LQ = tQ.exec(QQ));) pQ.push(LQ);
+      let qQ = [QQ],
+        oQ = !1;
+      for (const kQ of pQ) {
+        let QQ = kQ[1];
+        if (-1 !== QQ.indexOf("__decl__") && (QQ = QQ.replace(eQ, ""), FQ.supportsUniformBuffers && (QQ = QQ.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), QQ += "Declaration"), !FQ.includesShadersStore[QQ]) {
+          const LQ = FQ.shadersRepository + "ShadersInclude/" + QQ + ".fx";
+          return void NQ.loadFile(LQ, (LQ => {
+            FQ.includesShadersStore[QQ] = LQ, UQ(qQ.join(""), FQ, wQ)
           }))
         } {
-          let kd = Jd.includesShadersStore[dd];
-          if (Zd[2]) {
-            const dd = Zd[3].split(",");
-            for (let Jd = 0; Jd < dd.length; Jd += 2) {
-              const pd = new RegExp(dd[Jd], "g"),
-                Nd = dd[Jd + 1];
-              kd = kd.replace(pd, Nd)
+          let wQ = FQ.includesShadersStore[QQ];
+          if (kQ[2]) {
+            const QQ = kQ[3].split(",");
+            for (let FQ = 0; FQ < QQ.length; FQ += 2) {
+              const LQ = new RegExp(QQ[FQ], "g"),
+                qQ = QQ[FQ + 1];
+              wQ = wQ.replace(LQ, qQ)
             }
           }
-          if (Zd[4]) {
-            const dd = Zd[5];
-            if (-1 !== dd.indexOf("..")) {
-              const pd = dd.split(".."),
-                Nd = parseInt(pd[0]);
-              let Wd = parseInt(pd[1]),
-                Pd = kd.slice(0);
-              kd = "", isNaN(Wd) && (Wd = Jd.indexParameters[pd[1]]);
-              for (let dd = Nd; dd < Wd; dd++) Jd.supportsUniformBuffers || (Pd = Pd.replace(Id, ((dd, Jd) => Jd + "{X}"))), kd += Pd.replace(Gd, dd.toString()) + "\n"
-            } else Jd.supportsUniformBuffers || (kd = kd.replace(Id, ((dd, Jd) => Jd + "{X}"))), kd = kd.replace(Gd, dd)
+          if (kQ[4]) {
+            const QQ = kQ[5];
+            if (-1 !== QQ.indexOf("..")) {
+              const LQ = QQ.split(".."),
+                qQ = parseInt(LQ[0]);
+              let oQ = parseInt(LQ[1]),
+                DQ = wQ.slice(0);
+              wQ = "", isNaN(oQ) && (oQ = FQ.indexParameters[LQ[1]]);
+              for (let QQ = qQ; QQ < oQ; QQ++) FQ.supportsUniformBuffers || (DQ = DQ.replace(MQ, ((QQ, FQ) => FQ + "{X}"))), wQ += DQ.replace(GQ, QQ.toString()) + "\n"
+            } else FQ.supportsUniformBuffers || (wQ = wQ.replace(MQ, ((QQ, FQ) => FQ + "{X}"))), wQ = wQ.replace(GQ, QQ)
           }
-          const pd = [];
-          for (const dd of Nd) {
-            const Jd = dd.split(Zd[0]);
-            for (let dd = 0; dd < Jd.length - 1; dd++) pd.push(Jd[dd]), pd.push(kd);
-            pd.push(Jd[Jd.length - 1])
+          const LQ = [];
+          for (const QQ of qQ) {
+            const FQ = QQ.split(kQ[0]);
+            for (let QQ = 0; QQ < FQ.length - 1; QQ++) LQ.push(FQ[QQ]), LQ.push(wQ);
+            LQ.push(FQ[FQ.length - 1])
           }
-          Nd = pd, Wd = Wd || kd.indexOf("#include<") >= 0 || kd.indexOf("#include <") >= 0
+          qQ = LQ, oQ = oQ || wQ.indexOf("#include<") >= 0 || wQ.indexOf("#include <") >= 0
         }
       }
-      vd.length = 0;
-      const Pd = Nd.join("");
-      Wd ? Sd(Pd.toString(), Jd, kd) : kd(Pd)
+      pQ.length = 0;
+      const DQ = qQ.join("");
+      oQ ? UQ(DQ.toString(), FQ, wQ) : wQ(DQ)
     }
-    const jd = {
-      loadFile: (dd, Jd, kd, pd, Nd, Wd) => {
-        throw (0, ld.n)("FileTools")
+    const NQ = {
+      loadFile: (QQ, FQ, wQ, LQ, qQ, oQ) => {
+        throw (0, bQ.k)("FileTools")
       }
     }
   },
-  39851: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Nd,
-      h: () => Wd,
-      k: () => Zd,
-      m: () => Pd,
-      o: () => gd
+  39274: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => qQ,
+      g: () => oQ,
+      j: () => kQ,
+      k: () => DQ,
+      m: () => vQ
     });
-    var pd = kd(39860);
-    const Nd = {};
+    var LQ = wQ(39277);
+    const qQ = {};
 
-    function Wd(dd, Jd) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Jd ? Jd + "\n" : "") + dd
+    function oQ(QQ, FQ) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (FQ ? FQ + "\n" : "") + QQ
     }
 
-    function Pd(dd, Jd, kd, Wd, Pd, Zd, gd) {
-      const Cd = gd || Nd.loadFile;
-      if (!Cd) throw (0, pd.n)("FileTools");
-      return Cd(dd, Jd, kd, Wd, Pd, Zd)
+    function DQ(QQ, FQ, wQ, oQ, DQ, kQ, vQ) {
+      const mQ = vQ || qQ.loadFile;
+      if (!mQ) throw (0, LQ.k)("FileTools");
+      return mQ(QQ, FQ, wQ, oQ, DQ, kQ)
     }
 
-    function Zd(dd, Jd, kd, pd) {
-      if (dd) return Jd ? dd.IS_NDC_HALF_ZRANGE = "" : delete dd.IS_NDC_HALF_ZRANGE, kd ? dd.USE_REVERSE_DEPTHBUFFER = "" : delete dd.USE_REVERSE_DEPTHBUFFER, void(pd ? dd.USE_EXACT_SRGB_CONVERSIONS = "" : delete dd.USE_EXACT_SRGB_CONVERSIONS);
+    function kQ(QQ, FQ, wQ, LQ) {
+      if (QQ) return FQ ? QQ.IS_NDC_HALF_ZRANGE = "" : delete QQ.IS_NDC_HALF_ZRANGE, wQ ? QQ.USE_REVERSE_DEPTHBUFFER = "" : delete QQ.USE_REVERSE_DEPTHBUFFER, void(LQ ? QQ.USE_EXACT_SRGB_CONVERSIONS = "" : delete QQ.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let dd = "";
-        return Jd && (dd += "#define IS_NDC_HALF_ZRANGE"), kd && (dd && (dd += "\n"), dd += "#define USE_REVERSE_DEPTHBUFFER"), pd && (dd && (dd += "\n"), dd += "#define USE_EXACT_SRGB_CONVERSIONS"), dd
+        let QQ = "";
+        return FQ && (QQ += "#define IS_NDC_HALF_ZRANGE"), wQ && (QQ && (QQ += "\n"), QQ += "#define USE_REVERSE_DEPTHBUFFER"), LQ && (QQ && (QQ += "\n"), QQ += "#define USE_EXACT_SRGB_CONVERSIONS"), QQ
       }
     }
 
-    function gd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        pd = arguments.length > 3 ? arguments[3] : void 0;
-      switch (dd) {
+    function vQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        LQ = arguments.length > 3 ? arguments[3] : void 0;
+      switch (QQ) {
         case 3: {
-          const dd = new Int8Array(Jd);
-          return pd && dd.set(new Int8Array(pd)), dd
+          const QQ = new Int8Array(FQ);
+          return LQ && QQ.set(new Int8Array(LQ)), QQ
         }
         case 0: {
-          const dd = new Uint8Array(Jd);
-          return pd && dd.set(new Uint8Array(pd)), dd
+          const QQ = new Uint8Array(FQ);
+          return LQ && QQ.set(new Uint8Array(LQ)), QQ
         }
         case 4: {
-          const dd = "number" !== typeof Jd ? new Int16Array(Jd) : new Int16Array(kd ? Jd / 2 : Jd);
-          return pd && dd.set(new Int16Array(pd)), dd
+          const QQ = "number" !== typeof FQ ? new Int16Array(FQ) : new Int16Array(wQ ? FQ / 2 : FQ);
+          return LQ && QQ.set(new Int16Array(LQ)), QQ
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const dd = "number" !== typeof Jd ? new Uint16Array(Jd) : new Uint16Array(kd ? Jd / 2 : Jd);
-          return pd && dd.set(new Uint16Array(pd)), dd
+          const QQ = "number" !== typeof FQ ? new Uint16Array(FQ) : new Uint16Array(wQ ? FQ / 2 : FQ);
+          return LQ && QQ.set(new Uint16Array(LQ)), QQ
         }
         case 6: {
-          const dd = "number" !== typeof Jd ? new Int32Array(Jd) : new Int32Array(kd ? Jd / 4 : Jd);
-          return pd && dd.set(new Int32Array(pd)), dd
+          const QQ = "number" !== typeof FQ ? new Int32Array(FQ) : new Int32Array(wQ ? FQ / 4 : FQ);
+          return LQ && QQ.set(new Int32Array(LQ)), QQ
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const dd = "number" !== typeof Jd ? new Uint32Array(Jd) : new Uint32Array(kd ? Jd / 4 : Jd);
-          return pd && dd.set(new Uint32Array(pd)), dd
+          const QQ = "number" !== typeof FQ ? new Uint32Array(FQ) : new Uint32Array(wQ ? FQ / 4 : FQ);
+          return LQ && QQ.set(new Uint32Array(LQ)), QQ
         }
         case 1: {
-          const dd = "number" !== typeof Jd ? new Float32Array(Jd) : new Float32Array(kd ? Jd / 4 : Jd);
-          return pd && dd.set(new Float32Array(pd)), dd
+          const QQ = "number" !== typeof FQ ? new Float32Array(FQ) : new Float32Array(wQ ? FQ / 4 : FQ);
+          return LQ && QQ.set(new Float32Array(LQ)), QQ
         }
       }
-      const Nd = new Uint8Array(Jd);
-      return pd && Nd.set(new Uint8Array(pd)), Nd
+      const qQ = new Uint8Array(FQ);
+      return LQ && qQ.set(new Uint8Array(LQ)), qQ
     }
   },
-  39860: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Cd,
-      g: () => Kd,
-      j: () => gd,
-      n: () => Nd
+  39277: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      b: () => mQ,
+      e: () => uQ,
+      g: () => vQ,
+      k: () => qQ
     });
-    const pd = {};
+    const LQ = {};
 
-    function Nd(dd) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !pd[dd]) return pd[dd] = !0, `${dd} needs to be imported before as it contains a side-effect required by your code.`
+    function qQ(QQ) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !LQ[QQ]) return LQ[QQ] = !0, `${QQ} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const Wd = {};
-    let Pd = !1,
-      Zd = 0;
+    const oQ = {};
+    let DQ = !1,
+      kQ = 0;
 
-    function gd(dd, Jd) {
-      let kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const pd = function() {
-        if ((kd || Pd) && 0 === Zd) {
-          const kd = `${dd}.${Jd}`;
-          Wd[kd] || (Wd[kd] = !0, console.warn(`[Babylon.js] ${kd}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function vQ(QQ, FQ) {
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const LQ = function() {
+        if ((wQ || DQ) && 0 === kQ) {
+          const wQ = `${QQ}.${FQ}`;
+          oQ[wQ] || (oQ[wQ] = !0, console.warn(`[Babylon.js] ${wQ}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return pd.__isSideEffectStub = !0, pd
+      return LQ.__isSideEffectStub = !0, LQ
     }
 
-    function Cd(dd) {
-      return !!dd && !dd.__isSideEffectStub
+    function mQ(QQ) {
+      return !!QQ && !QQ.__isSideEffectStub
     }
 
-    function Kd(dd, Jd) {
+    function uQ(QQ, FQ) {
       return {
         get() {},
-        set(dd) {
-          Object.defineProperty(this, Jd, {
-            value: dd,
+        set(QQ) {
+          Object.defineProperty(this, FQ, {
+            value: QQ,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  39840: (dd, Jd, kd) => {
-    function pd() {
+  39264: (QQ, FQ, wQ) => {
+    function LQ() {
       return "undefined" !== typeof window
     }
 
-    function Nd() {
+    function qQ() {
       return "undefined" !== typeof navigator
     }
 
-    function Wd() {
+    function oQ() {
       return "undefined" !== typeof document
     }
 
-    function Pd(dd) {
-      let Jd = "",
-        kd = dd.firstChild;
-      for (; kd;) 3 === kd.nodeType && (Jd += kd.textContent), kd = kd.nextSibling;
-      return Jd
+    function DQ(QQ) {
+      let FQ = "",
+        wQ = QQ.firstChild;
+      for (; wQ;) 3 === wQ.nodeType && (FQ += wQ.textContent), wQ = wQ.nextSibling;
+      return FQ
     }
-    kd.d(Jd, {
-      d: () => Pd,
-      f: () => Wd,
-      j: () => Nd,
-      l: () => pd
+    wQ.d(FQ, {
+      b: () => DQ,
+      c: () => oQ,
+      f: () => qQ,
+      g: () => LQ
     })
   },
-  40014: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => pd,
-      e: () => Nd,
-      i: () => Wd
+  39461: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      c: () => LQ,
+      f: () => qQ,
+      i: () => oQ
     });
-    class pd extends Error {}
-    pd._setPrototypeOf = Object.setPrototypeOf || ((dd, Jd) => (dd.__proto__ = Jd, dd));
-    const Nd = {
+    class LQ extends Error {}
+    LQ._setPrototypeOf = Object.setPrototypeOf || ((QQ, FQ) => (QQ.__proto__ = FQ, QQ));
+    const qQ = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class Wd extends pd {
-      constructor(dd, Jd, kd) {
-        super(dd), this.errorCode = Jd, this.innerError = kd, this.name = "RuntimeError", pd._setPrototypeOf(this, Wd.prototype)
+    class oQ extends LQ {
+      constructor(QQ, FQ, wQ) {
+        super(QQ), this.errorCode = FQ, this.innerError = wQ, this.name = "RuntimeError", LQ._setPrototypeOf(this, oQ.prototype)
       }
     }
   },
-  40007: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      c: () => bd,
-      g: () => Gd,
-      i: () => Md,
-      j: () => Yd,
-      n: () => sd,
-      r: () => qd,
-      s: () => Bd,
-      w: () => nd,
-      x: () => ad,
-      y: () => vd
+  39448: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => IQ,
+      f: () => GQ,
+      h: () => RQ,
+      l: () => sQ,
+      m: () => iQ,
+      p: () => CQ,
+      r: () => SQ,
+      t: () => zQ,
+      u: () => WQ,
+      v: () => pQ
     });
-    var pd = kd(40010),
-      Nd = kd(39840),
-      Wd = kd(37280);
-    class Pd {}
-    Pd.FilesToLoad = {};
-    var Zd = kd(40014),
-      gd = kd(40023),
-      Cd = kd(37277),
-      Kd = kd(39851),
-      od = kd(39862),
-      ld = kd(38812),
-      Qd = kd(39866),
-      Ld = kd(40032);
-    const Od = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class ed extends Zd.i {
-      constructor(dd, Jd) {
-        super(dd, Zd.e.LoadFileError), this.name = "LoadFileError", Zd.b._setPrototypeOf(this, ed.prototype), Jd instanceof pd.b ? this.request = Jd : this.file = Jd
+    var LQ = wQ(39455),
+      qQ = wQ(39264),
+      oQ = wQ(36722);
+    class DQ {}
+    DQ.FilesToLoad = {};
+    var kQ = wQ(39461),
+      vQ = wQ(39468),
+      mQ = wQ(36720),
+      uQ = wQ(39274),
+      HQ = wQ(39282),
+      bQ = wQ(38203),
+      YQ = wQ(39289),
+      xQ = wQ(39470);
+    const AQ = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class tQ extends kQ.i {
+      constructor(QQ, FQ) {
+        super(QQ, kQ.f.LoadFileError), this.name = "LoadFileError", kQ.c._setPrototypeOf(this, tQ.prototype), FQ instanceof LQ.e ? this.request = FQ : this.file = FQ
       }
     }
-    class Rd extends Zd.i {
-      constructor(dd, Jd) {
-        super(dd, Zd.e.RequestFileError), this.request = Jd, this.name = "RequestFileError", Zd.b._setPrototypeOf(this, Rd.prototype)
+    class eQ extends kQ.i {
+      constructor(QQ, FQ) {
+        super(QQ, kQ.f.RequestFileError), this.request = FQ, this.name = "RequestFileError", kQ.c._setPrototypeOf(this, eQ.prototype)
       }
     }
-    class Id extends Zd.i {
-      constructor(dd, Jd) {
-        super(dd, Zd.e.ReadFileError), this.file = Jd, this.name = "ReadFileError", Zd.b._setPrototypeOf(this, Id.prototype)
+    class MQ extends kQ.i {
+      constructor(QQ, FQ) {
+        super(QQ, kQ.f.ReadFileError), this.file = FQ, this.name = "ReadFileError", kQ.c._setPrototypeOf(this, MQ.prototype)
       }
     }
-    const Gd = {
+    const GQ = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (kd, pd, Nd) => 0 !== pd.status || Nd >= dd || -1 !== kd.indexOf("file:") ? -1 : Math.pow(2, Nd) * Jd
+            let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (wQ, LQ, qQ) => 0 !== LQ.status || qQ >= QQ || -1 !== wQ.indexOf("file:") ? -1 : Math.pow(2, qQ) * FQ
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: dd => dd,
+        PreprocessUrl: QQ => QQ,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: dd => dd,
-        CleanUrl: dd => dd = dd.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: QQ => QQ,
+        CleanUrl: QQ => QQ = QQ.replace(/#/gm, "%23")
       },
-      vd = (dd, Jd) => {
-        if ((!dd || 0 !== dd.indexOf("data:")) && Gd.CorsBehavior)
-          if ("string" === typeof Gd.CorsBehavior || Gd.CorsBehavior instanceof String) Jd.crossOrigin = Gd.CorsBehavior;
+      pQ = (QQ, FQ) => {
+        if ((!QQ || 0 !== QQ.indexOf("data:")) && GQ.CorsBehavior)
+          if ("string" === typeof GQ.CorsBehavior || GQ.CorsBehavior instanceof String) FQ.crossOrigin = GQ.CorsBehavior;
           else {
-            const kd = Gd.CorsBehavior(dd);
-            kd && (Jd.crossOrigin = kd)
+            const wQ = GQ.CorsBehavior(QQ);
+            wQ && (FQ.crossOrigin = wQ)
           }
       },
-      xd = {
+      cQ = {
         getRequiredSize: null
       },
-      qd = function(dd, Jd, kd, Nd) {
-        let Wd, Zd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          Kd = arguments.length > 5 ? arguments[5] : void 0,
-          od = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Cd.d.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !od?._features.forceBitmapOverHTMLImageElement) return kd("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (od?._features.forceBitmapOverHTMLImageElement && "string" !== typeof dd && "undefined" !== typeof Blob) {
-          let pd;
-          if (dd instanceof Blob) pd = dd;
+      CQ = function(QQ, FQ, wQ, qQ) {
+        let oQ, kQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          uQ = arguments.length > 5 ? arguments[5] : void 0,
+          HQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mQ.d.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !HQ?._features.forceBitmapOverHTMLImageElement) return wQ("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (HQ?._features.forceBitmapOverHTMLImageElement && "string" !== typeof QQ && "undefined" !== typeof Blob) {
+          let LQ;
+          if (QQ instanceof Blob) LQ = QQ;
           else {
-            const Jd = dd instanceof ArrayBuffer ? dd : (0, Ld.l)(dd);
-            pd = new Blob([Jd], {
-              type: Zd
+            const FQ = QQ instanceof ArrayBuffer ? QQ : (0, xQ.l)(QQ);
+            LQ = new Blob([FQ], {
+              type: kQ
             })
           }
-          return od.createImageBitmap(pd, {
+          return HQ.createImageBitmap(LQ, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Kd
-          }).then(Jd).catch((Jd => {
-            kd && kd("Error while trying to load image: " + dd, Jd)
+            ...uQ
+          }).then(FQ).catch((FQ => {
+            wQ && wQ("Error while trying to load image: " + QQ, FQ)
           })), null
         }
-        let ld = !1;
-        if (dd instanceof ArrayBuffer || ArrayBuffer.isView(dd))
+        let bQ = !1;
+        if (QQ instanceof ArrayBuffer || ArrayBuffer.isView(QQ))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let Jd;
-            Jd = dd instanceof ArrayBuffer ? dd : (0, Ld.l)(dd), Wd = URL.createObjectURL(new Blob([Jd], {
-              type: Zd
-            })), ld = !0
-          } else Wd = `data:${Zd};base64,` + (0, gd.j)(dd);
-        else dd instanceof Blob ? (Wd = URL.createObjectURL(dd), ld = !0) : (Wd = Gd.CleanUrl(dd), Wd = Gd.PreprocessUrl(Wd));
-        const Qd = Jd => {
-          if (kd) {
-            const pd = Wd || dd.toString();
-            kd(`Error while trying to load image: ${0===pd.indexOf("http")||pd.length<=128?pd:pd.slice(0,128)+"..."}`, Jd)
+            let FQ;
+            FQ = QQ instanceof ArrayBuffer ? QQ : (0, xQ.l)(QQ), oQ = URL.createObjectURL(new Blob([FQ], {
+              type: kQ
+            })), bQ = !0
+          } else oQ = `data:${kQ};base64,` + (0, vQ.i)(QQ);
+        else QQ instanceof Blob ? (oQ = URL.createObjectURL(QQ), bQ = !0) : (oQ = GQ.CleanUrl(QQ), oQ = GQ.PreprocessUrl(oQ));
+        const YQ = FQ => {
+          if (wQ) {
+            const LQ = oQ || QQ.toString();
+            wQ(`Error while trying to load image: ${0===LQ.indexOf("http")||LQ.length<=128?LQ:LQ.slice(0,128)+"..."}`, FQ)
           }
         };
-        if (od?._features.forceBitmapOverHTMLImageElement) return sd(Wd, (pd => {
-          od.createImageBitmap(new Blob([pd], {
-            type: Zd
+        if (HQ?._features.forceBitmapOverHTMLImageElement) return iQ(oQ, (LQ => {
+          HQ.createImageBitmap(new Blob([LQ], {
+            type: kQ
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Kd
-          }).then((dd => {
-            Jd(dd), ld && URL.revokeObjectURL(Wd)
-          })).catch((Jd => {
-            kd && kd("Error while trying to load image: " + dd, Jd)
+            ...uQ
+          }).then((QQ => {
+            FQ(QQ), bQ && URL.revokeObjectURL(oQ)
+          })).catch((FQ => {
+            wQ && wQ("Error while trying to load image: " + QQ, FQ)
           }))
-        }), void 0, Nd || void 0, !0, ((dd, Jd) => {
-          Qd(Jd)
+        }), void 0, qQ || void 0, !0, ((QQ, FQ) => {
+          YQ(FQ)
         })), null;
-        const Od = new Image;
-        if (xd.getRequiredSize) {
-          const Jd = xd.getRequiredSize(dd);
-          Jd.width && (Od.width = Jd.width), Jd.height && (Od.height = Jd.height)
+        const AQ = new Image;
+        if (cQ.getRequiredSize) {
+          const FQ = cQ.getRequiredSize(QQ);
+          FQ.width && (AQ.width = FQ.width), FQ.height && (AQ.height = FQ.height)
         }
-        vd(Wd, Od);
-        const ed = [],
-          Rd = () => {
-            for (const dd of ed) dd.target.removeEventListener(dd.name, dd.handler);
-            ed.length = 0
+        pQ(oQ, AQ);
+        const tQ = [],
+          eQ = () => {
+            for (const QQ of tQ) QQ.target.removeEventListener(QQ.name, QQ.handler);
+            tQ.length = 0
           };
-        ed.push({
-          target: Od,
+        tQ.push({
+          target: AQ,
           name: "load",
           handler: () => {
-            Rd(), Jd(Od), ld && Od.src && URL.revokeObjectURL(Od.src)
+            eQ(), FQ(AQ), bQ && AQ.src && URL.revokeObjectURL(AQ.src)
           }
-        }), ed.push({
-          target: Od,
+        }), tQ.push({
+          target: AQ,
           name: "error",
-          handler: dd => {
-            Rd(), Qd(dd), ld && Od.src && URL.revokeObjectURL(Od.src)
+          handler: QQ => {
+            eQ(), YQ(QQ), bQ && AQ.src && URL.revokeObjectURL(AQ.src)
           }
-        }), ed.push({
+        }), tQ.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: dd => {
-            if (dd.blockedURI !== Od.src || "TQ" === dd.disposition) return;
-            Rd();
-            const Jd = new Error(`CSP violation of policy ${dd.effectiveDirective} ${dd.blockedURI}. Current policy is ${dd.originalPolicy}`);
-            Cd.d.UseFallbackTexture = !1, Qd(Jd), ld && Od.src && URL.revokeObjectURL(Od.src), Od.src = ""
+          handler: QQ => {
+            if (QQ.blockedURI !== AQ.src || "hY" === QQ.disposition) return;
+            eQ();
+            const FQ = new Error(`CSP violation of policy ${QQ.effectiveDirective} ${QQ.blockedURI}. Current policy is ${QQ.originalPolicy}`);
+            mQ.d.UseFallbackTexture = !1, YQ(FQ), bQ && AQ.src && URL.revokeObjectURL(AQ.src), AQ.src = ""
           }
         }), (() => {
-          for (const dd of ed) dd.target.addEventListener(dd.name, dd.handler)
+          for (const QQ of tQ) QQ.target.addEventListener(QQ.name, QQ.handler)
         })();
-        const Id = "blob:" === Wd.substring(0, 5),
-          qd = "data:" === Wd.substring(0, 5),
-          Bd = () => {
-            Id || qd || !pd.b.IsCustomRequestAvailable ? Od.src = Wd : sd(Wd, ((dd, Jd, kd) => {
-              const pd = new Blob([dd], {
-                  type: !Zd && kd ? kd : Zd
+        const MQ = "blob:" === oQ.substring(0, 5),
+          CQ = "data:" === oQ.substring(0, 5),
+          SQ = () => {
+            MQ || CQ || !LQ.e.IsCustomRequestAvailable ? AQ.src = oQ : iQ(oQ, ((QQ, FQ, wQ) => {
+              const LQ = new Blob([QQ], {
+                  type: !kQ && wQ ? wQ : kQ
                 }),
-                Nd = URL.createObjectURL(pd);
-              ld = !0, Od.src = Nd
-            }), void 0, Nd || void 0, !0, ((dd, Jd) => {
-              Qd(Jd)
+                qQ = URL.createObjectURL(LQ);
+              bQ = !0, AQ.src = qQ
+            }), void 0, qQ || void 0, !0, ((QQ, FQ) => {
+              YQ(FQ)
             }))
           },
-          ad = () => {
-            Nd && Nd.loadImage(Wd, Od)
+          WQ = () => {
+            qQ && qQ.loadImage(oQ, AQ)
           };
-        if (!Id && !qd && Nd && Nd.enableTexturesOffline) Nd.open(ad, Bd);
+        if (!MQ && !CQ && qQ && qQ.enableTexturesOffline) qQ.open(WQ, SQ);
         else {
-          if (-1 !== Wd.indexOf("file:")) {
-            const dd = decodeURIComponent(Wd.substring(5).toLowerCase());
-            if (Pd.FilesToLoad[dd] && "undefined" !== typeof URL) {
+          if (-1 !== oQ.indexOf("file:")) {
+            const QQ = decodeURIComponent(oQ.substring(5).toLowerCase());
+            if (DQ.FilesToLoad[QQ] && "undefined" !== typeof URL) {
               try {
-                let Jd;
+                let FQ;
                 try {
-                  Jd = URL.createObjectURL(Pd.FilesToLoad[dd])
-                } catch (Md) {
-                  Jd = URL.createObjectURL(Pd.FilesToLoad[dd])
+                  FQ = URL.createObjectURL(DQ.FilesToLoad[QQ])
+                } catch (RQ) {
+                  FQ = URL.createObjectURL(DQ.FilesToLoad[QQ])
                 }
-                Od.src = Jd, ld = !0
-              } catch (Fd) {
-                Od.src = ""
+                AQ.src = FQ, bQ = !0
+              } catch (OQ) {
+                AQ.src = ""
               }
-              return Od
+              return AQ
             }
           }
-          Bd()
+          SQ()
         }
-        return Od
+        return AQ
       },
-      Bd = (dd, Jd, kd, pd, Nd) => {
-        const Pd = new FileReader,
-          Zd = {
-            onCompleteObservable: new Wd.e,
-            abort: () => Pd.abort()
+      SQ = (QQ, FQ, wQ, LQ, qQ) => {
+        const DQ = new FileReader,
+          kQ = {
+            onCompleteObservable: new oQ.e,
+            abort: () => DQ.abort()
           };
-        return Pd.onloadend = () => Zd.onCompleteObservable.notifyObservers(Zd), Nd && (Pd.onerror = () => {
-          Nd(new Id(`Unable to read ${dd.name}`, dd))
-        }), Pd.onload = dd => {
-          Jd(dd.target.result)
-        }, kd && (Pd.onprogress = kd), pd ? Pd.readAsArrayBuffer(dd) : Pd.readAsText(dd), Zd
+        return DQ.onloadend = () => kQ.onCompleteObservable.notifyObservers(kQ), qQ && (DQ.onerror = () => {
+          qQ(new MQ(`Unable to read ${QQ.name}`, QQ))
+        }), DQ.onload = QQ => {
+          FQ(QQ.target.result)
+        }, wQ && (DQ.onprogress = wQ), LQ ? DQ.readAsArrayBuffer(QQ) : DQ.readAsText(QQ), kQ
       },
-      sd = (dd, Jd, kd, pd, Nd, gd, Cd) => {
-        if (dd.name) return Bd(dd, Jd, kd, Nd, gd ? dd => {
-          gd(void 0, dd)
+      iQ = (QQ, FQ, wQ, LQ, qQ, vQ, mQ) => {
+        if (QQ.name) return SQ(QQ, FQ, wQ, qQ, vQ ? QQ => {
+          vQ(void 0, QQ)
         } : void 0);
-        const Kd = dd;
-        if (-1 !== Kd.indexOf("file:")) {
-          let dd = decodeURIComponent(Kd.substring(5).toLowerCase());
-          0 === dd.indexOf("./") && (dd = dd.substring(2));
-          const pd = Pd.FilesToLoad[dd];
-          if (pd) return Bd(pd, Jd, kd, Nd, gd ? dd => gd(void 0, new ed(dd.message, dd.file)) : void 0)
+        const uQ = QQ;
+        if (-1 !== uQ.indexOf("file:")) {
+          let QQ = decodeURIComponent(uQ.substring(5).toLowerCase());
+          0 === QQ.indexOf("./") && (QQ = QQ.substring(2));
+          const LQ = DQ.FilesToLoad[QQ];
+          if (LQ) return SQ(LQ, FQ, wQ, qQ, vQ ? QQ => vQ(void 0, new tQ(QQ.message, QQ.file)) : void 0)
         }
         const {
-          match: od,
-          type: Ld
-        } = md(Kd);
-        if (od) {
-          const dd = {
-            onCompleteObservable: new Wd.e,
+          match: HQ,
+          type: xQ
+        } = rQ(uQ);
+        if (HQ) {
+          const QQ = {
+            onCompleteObservable: new oQ.e,
             abort: () => () => {}
           };
           try {
-            const dd = Nd ? bd(Kd) : Sd(Kd);
-            Jd(dd, void 0, Ld)
-          } catch (Zd) {
-            gd ? gd(void 0, Zd) : ld.c.Error(Zd.message || "Failed to parse the Data URL")
+            const QQ = qQ ? IQ(uQ) : UQ(uQ);
+            FQ(QQ, void 0, xQ)
+          } catch (kQ) {
+            vQ ? vQ(void 0, kQ) : bQ.c.Error(kQ.message || "Failed to parse the Data URL")
           }
-          return Qd.d.SetImmediate((() => {
-            dd.onCompleteObservable.notifyObservers(dd)
-          })), dd
+          return YQ.d.SetImmediate((() => {
+            QQ.onCompleteObservable.notifyObservers(QQ)
+          })), QQ
         }
-        return ad(Kd, ((dd, kd) => {
-          Jd(dd, kd?.responseURL, kd?.getResponseHeader("content-type"))
-        }), kd, pd, Nd, gd ? dd => {
-          gd(dd.request, new ed(dd.message, dd.request))
-        } : void 0, Cd)
+        return WQ(uQ, ((QQ, wQ) => {
+          FQ(QQ, wQ?.responseURL, wQ?.getResponseHeader("content-type"))
+        }), wQ, LQ, qQ, vQ ? QQ => {
+          vQ(QQ.request, new tQ(QQ.message, QQ.request))
+        } : void 0, mQ)
       },
-      ad = (dd, Jd, kd, Pd, Zd, gd, Kd) => {
-        null !== Pd && (Pd ?? (Pd = Cd.d.LastCreatedScene?.offlineProvider)), dd = Gd.CleanUrl(dd), dd = Gd.PreprocessUrl(dd);
-        const od = Gd.BaseUrl + dd;
-        let Qd = !1;
-        const Ld = {
-            onCompleteObservable: new Wd.e,
-            abort: () => Qd = !0
+      WQ = (QQ, FQ, wQ, DQ, kQ, vQ, uQ) => {
+        null !== DQ && (DQ ?? (DQ = mQ.d.LastCreatedScene?.offlineProvider)), QQ = GQ.CleanUrl(QQ), QQ = GQ.PreprocessUrl(QQ);
+        const HQ = GQ.BaseUrl + QQ;
+        let YQ = !1;
+        const xQ = {
+            onCompleteObservable: new oQ.e,
+            abort: () => YQ = !0
           },
-          Od = () => {
-            let dd, Wd = new pd.b,
-              Pd = null;
-            const Cd = () => {
-              Wd && (kd && Wd.removeEventListener("progress", kd), dd && Wd.removeEventListener("readystatechange", dd), Wd.removeEventListener("loadend", Od))
+          AQ = () => {
+            let QQ, oQ = new LQ.e,
+              DQ = null;
+            const mQ = () => {
+              oQ && (wQ && oQ.removeEventListener("progress", wQ), QQ && oQ.removeEventListener("readystatechange", QQ), oQ.removeEventListener("loadend", AQ))
             };
-            let Od = () => {
-              Cd(), Ld.onCompleteObservable.notifyObservers(Ld), Ld.onCompleteObservable.clear(), kd = void 0, dd = null, Od = null, gd = void 0, Kd = void 0, Jd = void 0
+            let AQ = () => {
+              mQ(), xQ.onCompleteObservable.notifyObservers(xQ), xQ.onCompleteObservable.clear(), wQ = void 0, QQ = null, AQ = null, vQ = void 0, uQ = void 0, FQ = void 0
             };
-            Ld.abort = () => {
-              Qd = !0, Od && Od(), Wd && Wd.readyState !== (XMLHttpRequest.DONE || 4) && Wd.abort(), null !== Pd && (clearTimeout(Pd), Pd = null), Wd = null
+            xQ.abort = () => {
+              YQ = !0, AQ && AQ(), oQ && oQ.readyState !== (XMLHttpRequest.DONE || 4) && oQ.abort(), null !== DQ && (clearTimeout(DQ), DQ = null), oQ = null
             };
-            const ed = dd => {
-                const Jd = dd.message || "Unknown error";
-                gd && Wd ? gd(new Rd(Jd, Wd)) : ld.c.Error(Jd)
+            const tQ = QQ => {
+                const FQ = QQ.message || "Unknown error";
+                vQ && oQ ? vQ(new eQ(FQ, oQ)) : bQ.c.Error(FQ)
               },
-              Id = ld => {
-                if (Wd) {
-                  if (Wd.open("GET", od), Kd) try {
-                    Kd(Wd)
-                  } catch (Ld) {
-                    return void ed(Ld)
+              MQ = bQ => {
+                if (oQ) {
+                  if (oQ.open("GET", HQ), uQ) try {
+                    uQ(oQ)
+                  } catch (xQ) {
+                    return void tQ(xQ)
                   }
-                  Zd && (Wd.responseType = "arraybuffer"), kd && Wd.addEventListener("progress", kd), Od && Wd.addEventListener("loadend", Od), dd = () => {
-                    if (!Qd && Wd && Wd.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (dd && Wd.removeEventListener("readystatechange", dd), Wd.status >= 200 && Wd.status < 300 || 0 === Wd.status && (!(0, Nd.l)() || Fd())) {
-                        const dd = Zd ? Wd.response : Wd.responseText;
-                        if (null !== dd) {
+                  kQ && (oQ.responseType = "arraybuffer"), wQ && oQ.addEventListener("progress", wQ), AQ && oQ.addEventListener("loadend", AQ), QQ = () => {
+                    if (!YQ && oQ && oQ.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (QQ && oQ.removeEventListener("readystatechange", QQ), oQ.status >= 200 && oQ.status < 300 || 0 === oQ.status && (!(0, qQ.g)() || OQ())) {
+                        const QQ = kQ ? oQ.response : oQ.responseText;
+                        if (null !== QQ) {
                           try {
-                            Jd && Jd(dd, Wd)
-                          } catch (Ld) {
-                            ed(Ld)
+                            FQ && FQ(QQ, oQ)
+                          } catch (xQ) {
+                            tQ(xQ)
                           }
                           return
                         }
                       }
-                      const kd = Gd.DefaultRetryStrategy;
-                      if (kd) {
-                        const dd = kd(od, Wd, ld);
-                        if (-1 !== dd) return Cd(), Wd = new pd.b, void(Pd = setTimeout((() => Id(ld + 1)), dd))
+                      const wQ = GQ.DefaultRetryStrategy;
+                      if (wQ) {
+                        const QQ = wQ(HQ, oQ, bQ);
+                        if (-1 !== QQ) return mQ(), oQ = new LQ.e, void(DQ = setTimeout((() => MQ(bQ + 1)), QQ))
                       }
-                      const Kd = new Rd("Error status: " + Wd.status + " " + Wd.statusText + " - Unable to load " + od, Wd);
-                      gd && gd(Kd)
+                      const uQ = new eQ("Error status: " + oQ.status + " " + oQ.statusText + " - Unable to load " + HQ, oQ);
+                      vQ && vQ(uQ)
                     }
-                  }, Wd.addEventListener("readystatechange", dd), Wd.send()
+                  }, oQ.addEventListener("readystatechange", QQ), oQ.send()
                 }
               };
-            Id(0)
+            MQ(0)
           };
-        if (Pd && Pd.enableSceneOffline && !dd.startsWith("blob:")) {
-          const pd = dd => {
-              dd && dd.status > 400 ? gd && gd(dd) : Od()
+        if (DQ && DQ.enableSceneOffline && !QQ.startsWith("blob:")) {
+          const LQ = QQ => {
+              QQ && QQ.status > 400 ? vQ && vQ(QQ) : AQ()
             },
-            Nd = () => {
-              Pd && Pd.loadFile(Gd.BaseUrl + dd, (dd => {
-                !Qd && Jd && Jd(dd), Ld.onCompleteObservable.notifyObservers(Ld)
-              }), kd ? dd => {
-                !Qd && kd && kd(dd)
-              } : void 0, pd, Zd)
+            qQ = () => {
+              DQ && DQ.loadFile(GQ.BaseUrl + QQ, (QQ => {
+                !YQ && FQ && FQ(QQ), xQ.onCompleteObservable.notifyObservers(xQ)
+              }), wQ ? QQ => {
+                !YQ && wQ && wQ(QQ)
+              } : void 0, LQ, kQ)
             };
-          Pd.open(Nd, pd)
-        } else Od();
-        return Ld
+          DQ.open(qQ, LQ)
+        } else AQ();
+        return xQ
       },
-      Md = dd => {
+      RQ = QQ => {
         const {
-          match: Jd,
-          type: kd
-        } = md(dd);
-        if (Jd) return kd || void 0;
-        const pd = dd.lastIndexOf(".");
-        switch (dd.substring(pd + 1).toLowerCase()) {
+          match: FQ,
+          type: wQ
+        } = rQ(QQ);
+        if (FQ) return wQ || void 0;
+        const LQ = QQ.lastIndexOf(".");
+        switch (QQ.substring(LQ + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "hY":
+          case "oN":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      Fd = () => "undefined" !== typeof location && "file:" === location.protocol,
-      Yd = dd => Od.test(dd),
-      md = dd => {
-        const Jd = Od.exec(dd);
-        if (null === Jd || 0 === Jd.length) return {
+      OQ = () => "undefined" !== typeof location && "file:" === location.protocol,
+      sQ = QQ => AQ.test(QQ),
+      rQ = QQ => {
+        const FQ = AQ.exec(QQ);
+        if (null === FQ || 0 === FQ.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: Jd[0].replace("data:", "").replace(";base64,", "")
+          type: FQ[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function bd(dd) {
-      return (0, gd.e)(dd.split(",")[1])
+    function IQ(QQ) {
+      return (0, vQ.e)(QQ.split(",")[1])
     }
-    const Sd = dd => (0, gd.f)(dd.split(",")[1]);
-    let jd;
-    const Xd = (dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd) => {
-      jd = {
-        DecodeBase64UrlToBinary: dd,
-        DecodeBase64UrlToString: Jd,
-        DefaultRetryStrategy: kd.DefaultRetryStrategy,
-        BaseUrl: kd.BaseUrl,
-        CorsBehavior: kd.CorsBehavior,
-        PreprocessUrl: kd.PreprocessUrl,
-        IsBase64DataUrl: pd,
-        IsFileURL: Nd,
-        LoadFile: Wd,
-        LoadImage: Pd,
-        ReadFile: Zd,
-        RequestFile: gd,
-        SetCorsBehavior: Cd
-      }, Object.defineProperty(jd, "DefaultRetryStrategy", {
+    const UQ = QQ => (0, vQ.f)(QQ.split(",")[1]);
+    let NQ;
+    const TQ = (QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ) => {
+      NQ = {
+        DecodeBase64UrlToBinary: QQ,
+        DecodeBase64UrlToString: FQ,
+        DefaultRetryStrategy: wQ.DefaultRetryStrategy,
+        BaseUrl: wQ.BaseUrl,
+        CorsBehavior: wQ.CorsBehavior,
+        PreprocessUrl: wQ.PreprocessUrl,
+        IsBase64DataUrl: LQ,
+        IsFileURL: qQ,
+        LoadFile: oQ,
+        LoadImage: DQ,
+        ReadFile: kQ,
+        RequestFile: vQ,
+        SetCorsBehavior: mQ
+      }, Object.defineProperty(NQ, "DefaultRetryStrategy", {
         get: function() {
-          return kd.DefaultRetryStrategy
+          return wQ.DefaultRetryStrategy
         },
-        set: function(dd) {
-          kd.DefaultRetryStrategy = dd
+        set: function(QQ) {
+          wQ.DefaultRetryStrategy = QQ
         }
-      }), Object.defineProperty(jd, "BaseUrl", {
+      }), Object.defineProperty(NQ, "BaseUrl", {
         get: function() {
-          return kd.BaseUrl
+          return wQ.BaseUrl
         },
-        set: function(dd) {
-          kd.BaseUrl = dd
+        set: function(QQ) {
+          wQ.BaseUrl = QQ
         }
-      }), Object.defineProperty(jd, "PreprocessUrl", {
+      }), Object.defineProperty(NQ, "PreprocessUrl", {
         get: function() {
-          return kd.PreprocessUrl
+          return wQ.PreprocessUrl
         },
-        set: function(dd) {
-          kd.PreprocessUrl = dd
+        set: function(QQ) {
+          wQ.PreprocessUrl = QQ
         }
-      }), Object.defineProperty(jd, "CorsBehavior", {
+      }), Object.defineProperty(NQ, "CorsBehavior", {
         get: function() {
-          return kd.CorsBehavior
+          return wQ.CorsBehavior
         },
-        set: function(dd) {
-          kd.CorsBehavior = dd
+        set: function(QQ) {
+          wQ.CorsBehavior = QQ
         }
       })
     };
-    let fd = !1;
+    let KQ = !1;
 
-    function nd() {
-      fd || (fd = !0, Xd(bd, Sd, Gd, Yd, Fd, sd, qd, Bd, ad, vd), Kd.d.loadFile = sd, Kd.d.loadImage = qd, od.m.loadFile = sd)
+    function zQ() {
+      KQ || (KQ = !0, TQ(IQ, UQ, GQ, sQ, OQ, iQ, CQ, SQ, WQ, pQ), uQ.e.loadFile = iQ, uQ.e.loadImage = CQ, HQ.j.loadFile = iQ)
     }
   },
-  40037: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Zd,
-      h: () => Wd,
-      l: () => Pd
+  39475: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => kQ,
+      g: () => oQ,
+      j: () => DQ
     });
-    let pd = null;
+    let LQ = null;
 
-    function Nd() {
-      if (pd) return pd;
-      const dd = new ArrayBuffer(4),
-        Jd = new Float32Array(dd),
-        kd = new Uint32Array(dd),
-        Nd = new Uint32Array(512),
-        Wd = new Uint32Array(512);
-      for (let pd = 0; pd < 256; ++pd) {
-        const dd = pd - 127;
-        dd < -24 ? (Nd[pd] = 0, Nd[256 | pd] = 32768, Wd[pd] = 24, Wd[256 | pd] = 24) : dd < -14 ? (Nd[pd] = 1024 >> -dd - 14, Nd[256 | pd] = 1024 >> -dd - 14 | 32768, Wd[pd] = -dd - 1, Wd[256 | pd] = -dd - 1) : dd <= 15 ? (Nd[pd] = dd + 15 << 10, Nd[256 | pd] = dd + 15 << 10 | 32768, Wd[pd] = 13, Wd[256 | pd] = 13) : dd < 128 ? (Nd[pd] = 31744, Nd[256 | pd] = 64512, Wd[pd] = 24, Wd[256 | pd] = 24) : (Nd[pd] = 31744, Nd[256 | pd] = 64512, Wd[pd] = 13, Wd[256 | pd] = 13)
+    function qQ() {
+      if (LQ) return LQ;
+      const QQ = new ArrayBuffer(4),
+        FQ = new Float32Array(QQ),
+        wQ = new Uint32Array(QQ),
+        qQ = new Uint32Array(512),
+        oQ = new Uint32Array(512);
+      for (let LQ = 0; LQ < 256; ++LQ) {
+        const QQ = LQ - 127;
+        QQ < -24 ? (qQ[LQ] = 0, qQ[256 | LQ] = 32768, oQ[LQ] = 24, oQ[256 | LQ] = 24) : QQ < -14 ? (qQ[LQ] = 1024 >> -QQ - 14, qQ[256 | LQ] = 1024 >> -QQ - 14 | 32768, oQ[LQ] = -QQ - 1, oQ[256 | LQ] = -QQ - 1) : QQ <= 15 ? (qQ[LQ] = QQ + 15 << 10, qQ[256 | LQ] = QQ + 15 << 10 | 32768, oQ[LQ] = 13, oQ[256 | LQ] = 13) : QQ < 128 ? (qQ[LQ] = 31744, qQ[256 | LQ] = 64512, oQ[LQ] = 24, oQ[256 | LQ] = 24) : (qQ[LQ] = 31744, qQ[256 | LQ] = 64512, oQ[LQ] = 13, oQ[256 | LQ] = 13)
       }
-      const Pd = new Uint32Array(2048),
-        Zd = new Uint32Array(64),
-        gd = new Uint32Array(64);
-      for (let pd = 1; pd < 1024; ++pd) {
-        let dd = pd << 13,
-          Jd = 0;
-        for (; 0 === (8388608 & dd);) dd <<= 1, Jd -= 8388608;
-        dd &= -8388609, Jd += 947912704, Pd[pd] = dd | Jd
+      const DQ = new Uint32Array(2048),
+        kQ = new Uint32Array(64),
+        vQ = new Uint32Array(64);
+      for (let LQ = 1; LQ < 1024; ++LQ) {
+        let QQ = LQ << 13,
+          FQ = 0;
+        for (; 0 === (8388608 & QQ);) QQ <<= 1, FQ -= 8388608;
+        QQ &= -8388609, FQ += 947912704, DQ[LQ] = QQ | FQ
       }
-      for (let pd = 1024; pd < 2048; ++pd) Pd[pd] = 939524096 + (pd - 1024 << 13);
-      for (let pd = 1; pd < 31; ++pd) Zd[pd] = pd << 23;
-      Zd[31] = 1199570944, Zd[32] = 2147483648;
-      for (let pd = 33; pd < 63; ++pd) Zd[pd] = 2147483648 + (pd - 32 << 23);
-      Zd[63] = 3347054592;
-      for (let pd = 1; pd < 64; ++pd) 32 !== pd && (gd[pd] = 1024);
-      return pd = {
-        floatView: Jd,
-        uint32View: kd,
-        baseTable: Nd,
-        shiftTable: Wd,
-        mantissaTable: Pd,
-        exponentTable: Zd,
-        offsetTable: gd
-      }, pd
+      for (let LQ = 1024; LQ < 2048; ++LQ) DQ[LQ] = 939524096 + (LQ - 1024 << 13);
+      for (let LQ = 1; LQ < 31; ++LQ) kQ[LQ] = LQ << 23;
+      kQ[31] = 1199570944, kQ[32] = 2147483648;
+      for (let LQ = 33; LQ < 63; ++LQ) kQ[LQ] = 2147483648 + (LQ - 32 << 23);
+      kQ[63] = 3347054592;
+      for (let LQ = 1; LQ < 64; ++LQ) 32 !== LQ && (vQ[LQ] = 1024);
+      return LQ = {
+        floatView: FQ,
+        uint32View: wQ,
+        baseTable: qQ,
+        shiftTable: oQ,
+        mantissaTable: DQ,
+        exponentTable: kQ,
+        offsetTable: vQ
+      }, LQ
     }
-    const Wd = 65504;
+    const oQ = 65504;
 
-    function Pd(dd) {
-      const Jd = Nd();
-      Jd.floatView[0] = dd;
-      const kd = Jd.uint32View[0],
-        pd = kd >> 23 & 511;
-      return Jd.baseTable[pd] + ((8388607 & kd) >> Jd.shiftTable[pd])
+    function DQ(QQ) {
+      const FQ = qQ();
+      FQ.floatView[0] = QQ;
+      const wQ = FQ.uint32View[0],
+        LQ = wQ >> 23 & 511;
+      return FQ.baseTable[LQ] + ((8388607 & wQ) >> FQ.shiftTable[LQ])
     }
 
-    function Zd(dd) {
-      const Jd = Nd();
-      return Jd.uint32View[0] = Jd.mantissaTable[Jd.offsetTable[dd >> 10] + (1023 & dd)] + Jd.exponentTable[dd >> 10], Jd.floatView[0]
+    function kQ(QQ) {
+      const FQ = qQ();
+      return FQ.uint32View[0] = FQ.mantissaTable[FQ.offsetTable[QQ >> 10] + (1023 & QQ)] + FQ.exponentTable[QQ >> 10], FQ.floatView[0]
     }
   },
-  40023: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      e: () => Wd,
-      f: () => Nd,
-      j: () => pd
+  39468: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => oQ,
+      f: () => qQ,
+      i: () => LQ
     });
-    const pd = dd => {
-        const Jd = ArrayBuffer.isView(dd) ? new Uint8Array(dd.buffer, dd.byteOffset, dd.byteLength) : new Uint8Array(dd);
-        return "function" === typeof Jd.toBase64 ? Jd.toBase64() : function(dd) {
-          const Jd = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let kd, pd, Nd, Wd, Pd, Zd, gd, Cd = "",
-            Kd = 0;
-          for (; Kd < dd.length;) kd = dd[Kd++], pd = Kd < dd.length ? dd[Kd++] : Number.NaN, Nd = Kd < dd.length ? dd[Kd++] : Number.NaN, Wd = kd >> 2, Pd = (3 & kd) << 4 | pd >> 4, Zd = (15 & pd) << 2 | Nd >> 6, gd = 63 & Nd, isNaN(pd) ? Zd = gd = 64 : isNaN(Nd) && (gd = 64), Cd += Jd.charAt(Wd) + Jd.charAt(Pd) + Jd.charAt(Zd) + Jd.charAt(gd);
-          return Cd
-        }(Jd)
+    const LQ = QQ => {
+        const FQ = ArrayBuffer.isView(QQ) ? new Uint8Array(QQ.buffer, QQ.byteOffset, QQ.byteLength) : new Uint8Array(QQ);
+        return "function" === typeof FQ.toBase64 ? FQ.toBase64() : function(QQ) {
+          const FQ = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ = "",
+            uQ = 0;
+          for (; uQ < QQ.length;) wQ = QQ[uQ++], LQ = uQ < QQ.length ? QQ[uQ++] : Number.NaN, qQ = uQ < QQ.length ? QQ[uQ++] : Number.NaN, oQ = wQ >> 2, DQ = (3 & wQ) << 4 | LQ >> 4, kQ = (15 & LQ) << 2 | qQ >> 6, vQ = 63 & qQ, isNaN(LQ) ? kQ = vQ = 64 : isNaN(qQ) && (vQ = 64), mQ += FQ.charAt(oQ) + FQ.charAt(DQ) + FQ.charAt(kQ) + FQ.charAt(vQ);
+          return mQ
+        }(FQ)
       },
-      Nd = dd => atob(dd),
-      Wd = dd => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(dd).buffer : function(dd) {
-        const Jd = Nd(dd),
-          kd = Jd.length,
-          pd = new Uint8Array(new ArrayBuffer(kd));
-        for (let Nd = 0; Nd < kd; Nd++) pd[Nd] = Jd.charCodeAt(Nd);
-        return pd.buffer
-      }(dd)
+      qQ = QQ => atob(QQ),
+      oQ = QQ => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(QQ).buffer : function(QQ) {
+        const FQ = qQ(QQ),
+          wQ = FQ.length,
+          LQ = new Uint8Array(new ArrayBuffer(wQ));
+        for (let qQ = 0; qQ < wQ; qQ++) LQ[qQ] = FQ.charCodeAt(qQ);
+        return LQ.buffer
+      }(QQ)
   },
-  39866: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      d: () => Nd,
-      f: () => Pd
+  39289: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      d: () => qQ,
+      e: () => DQ
     });
-    let pd = [];
-    class Nd {
-      static SetImmediate(dd) {
-        0 === pd.length && setTimeout((() => {
-          const dd = pd;
-          pd = [];
-          for (const Jd of dd) Jd()
-        }), 1), pd.push(dd)
+    let LQ = [];
+    class qQ {
+      static SetImmediate(QQ) {
+        0 === LQ.length && setTimeout((() => {
+          const QQ = LQ;
+          LQ = [];
+          for (const FQ of QQ) FQ()
+        }), 1), LQ.push(QQ)
       }
     }
 
-    function Wd(dd, Jd, kd) {
+    function oQ(QQ, FQ, wQ) {
       try {
-        if (dd()) return Jd(), !0
-      } catch (pd) {
-        return kd?.(pd), !0
+        if (QQ()) return FQ(), !0
+      } catch (LQ) {
+        return wQ?.(LQ), !0
       }
       return !1
     }
-    const Pd = function(dd, Jd, kd) {
-      let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        Nd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        Pd = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Wd(dd, Jd, kd)) return null;
-      const Zd = setInterval((() => {
-        Wd(dd, Jd, kd) ? clearInterval(Zd) : (Nd -= pd, Nd < 0 && (clearInterval(Zd), kd?.(new Error("Operation timed out after maximum retries. " + (Pd || "")), !0)))
-      }), pd);
-      return () => clearInterval(Zd)
+    const DQ = function(QQ, FQ, wQ) {
+      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        DQ = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && oQ(QQ, FQ, wQ)) return null;
+      const kQ = setInterval((() => {
+        oQ(QQ, FQ, wQ) ? clearInterval(kQ) : (qQ -= LQ, qQ < 0 && (clearInterval(kQ), wQ?.(new Error("Operation timed out after maximum retries. " + (DQ || "")), !0)))
+      }), LQ);
+      return () => clearInterval(kQ)
     }
   },
-  40010: (dd, Jd, kd) => {
-    kd.d(Jd, {
-      b: () => pd
+  39455: (QQ, FQ, wQ) => {
+    wQ.d(FQ, {
+      e: () => LQ
     });
-    class pd {
+    class LQ {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(pd.CustomRequestHeaders).length > 0 || pd.CustomRequestModifiers.length > 0
+        return Object.keys(LQ.CustomRequestHeaders).length > 0 || LQ.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(dd) {
-        return dd = (dd = dd.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(QQ) {
+        return QQ = (QQ = QQ.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(dd) {
-        return pd.SkipRequestModificationForBabylonCDN && (dd.includes("preview.babylonjs.com") || dd.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(QQ) {
+        return LQ.SkipRequestModificationForBabylonCDN && (QQ.includes("preview.babylonjs.com") || QQ.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(dd) {
-        const Jd = {
+      static _CollectCustomizations(QQ) {
+        const FQ = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (pd._ShouldSkipRequestModifications(dd)) return {
-          url: dd,
-          headers: Jd
+        if (LQ._ShouldSkipRequestModifications(QQ)) return {
+          url: QQ,
+          headers: FQ
         };
-        for (const Nd in pd.CustomRequestHeaders) {
-          const dd = pd.CustomRequestHeaders[Nd];
-          dd && (Jd[Nd] = dd)
+        for (const qQ in LQ.CustomRequestHeaders) {
+          const QQ = LQ.CustomRequestHeaders[qQ];
+          QQ && (FQ[qQ] = QQ)
         }
-        const kd = {
-          setRequestHeader: (dd, kd) => {
-            Jd[dd] = kd
+        const wQ = {
+          setRequestHeader: (QQ, wQ) => {
+            FQ[QQ] = wQ
           }
         };
-        for (const Nd of pd.CustomRequestModifiers) {
-          if (pd._ShouldSkipRequestModifications(dd)) break;
-          const Jd = Nd(kd, dd);
-          "string" === typeof Jd && (dd = Jd)
+        for (const qQ of LQ.CustomRequestModifiers) {
+          if (LQ._ShouldSkipRequestModifications(QQ)) break;
+          const FQ = qQ(wQ, QQ);
+          "string" === typeof FQ && (QQ = FQ)
         }
         return {
-          url: dd,
-          headers: Jd
+          url: QQ,
+          headers: FQ
         }
       }
-      static async FetchAsync(dd) {
-        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const kd = Jd.method ?? "GET";
+      static async FetchAsync(QQ) {
+        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const wQ = FQ.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: Nd,
-            headers: Wd
-          } = pd._CollectCustomizations(pd._CleanUrl(dd), Jd.headers ?? {});
-          return await fetch(Nd, {
-            method: kd,
-            headers: Wd,
-            body: Jd.body ?? void 0
+            url: qQ,
+            headers: oQ
+          } = LQ._CollectCustomizations(LQ._CleanUrl(QQ), FQ.headers ?? {});
+          return await fetch(qQ, {
+            method: wQ,
+            headers: oQ,
+            body: FQ.body ?? void 0
           })
         }
-        return await new Promise(((Nd, Wd) => {
-          const Pd = new pd;
-          Pd.responseType = "arraybuffer", Pd.addEventListener("readystatechange", (() => {
-            if (4 === Pd.readyState)
-              if (Pd.status >= 200 && Pd.status < 300) {
-                const dd = "undefined" !== typeof Headers ? new Headers : void 0,
-                  Jd = Pd.getResponseHeader("Content-Type");
-                Jd && dd && dd.set("Content-Type", Jd), "undefined" !== typeof Response ? Nd(new Response(Pd.response, {
-                  status: Pd.status,
-                  statusText: Pd.statusText,
-                  headers: dd
-                })) : Nd({
+        return await new Promise(((qQ, oQ) => {
+          const DQ = new LQ;
+          DQ.responseType = "arraybuffer", DQ.addEventListener("readystatechange", (() => {
+            if (4 === DQ.readyState)
+              if (DQ.status >= 200 && DQ.status < 300) {
+                const QQ = "undefined" !== typeof Headers ? new Headers : void 0,
+                  FQ = DQ.getResponseHeader("Content-Type");
+                FQ && QQ && QQ.set("Content-Type", FQ), "undefined" !== typeof Response ? qQ(new Response(DQ.response, {
+                  status: DQ.status,
+                  statusText: DQ.statusText,
+                  headers: QQ
+                })) : qQ({
                   ok: !0,
-                  status: Pd.status,
-                  statusText: Pd.statusText,
+                  status: DQ.status,
+                  statusText: DQ.statusText,
                   headers: {
-                    get: dd => Pd.getResponseHeader(dd)
+                    get: QQ => DQ.getResponseHeader(QQ)
                   },
-                  arrayBuffer: async () => await Promise.resolve(Pd.response)
+                  arrayBuffer: async () => await Promise.resolve(DQ.response)
                 })
-              } else Wd(new Error(`HTTP ${Pd.status} loading '${Pd.requestURL}': ${Pd.statusText}`))
-          })), Pd.open(kd, dd, Jd.headers), Pd.send(Jd.body ?? null)
+              } else oQ(new Error(`HTTP ${DQ.status} loading '${DQ.requestURL}': ${DQ.statusText}`))
+          })), DQ.open(wQ, QQ, FQ.headers), DQ.send(FQ.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(dd) {
-        this._xhr.onprogress = dd
+      set onprogress(QQ) {
+        this._xhr.onprogress = QQ
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(dd) {
-        this._xhr.responseType = dd
+      set responseType(QQ) {
+        this._xhr.responseType = QQ
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(dd) {
-        this._xhr.timeout = dd
+      set timeout(QQ) {
+        this._xhr.timeout = QQ
       }
-      addEventListener(dd, Jd, kd) {
-        this._xhr.addEventListener(dd, Jd, kd)
+      addEventListener(QQ, FQ, wQ) {
+        this._xhr.addEventListener(QQ, FQ, wQ)
       }
-      removeEventListener(dd, Jd, kd) {
-        this._xhr.removeEventListener(dd, Jd, kd)
+      removeEventListener(QQ, FQ, wQ) {
+        this._xhr.removeEventListener(QQ, FQ, wQ)
       }
       abort() {
         this._xhr.abort()
       }
-      send(dd) {
-        this._xhr.send(dd)
+      send(QQ) {
+        this._xhr.send(QQ)
       }
-      open(dd, Jd, kd) {
+      open(QQ, FQ, wQ) {
         const {
-          url: Nd,
-          headers: Wd
-        } = pd._CollectCustomizations(Jd, kd);
-        this._requestURL = pd._CleanUrl(Nd), this._xhr.open(dd, this._requestURL, !0);
-        for (const pd in Wd) this._xhr.setRequestHeader(pd, Wd[pd])
+          url: qQ,
+          headers: oQ
+        } = LQ._CollectCustomizations(FQ, wQ);
+        this._requestURL = LQ._CleanUrl(qQ), this._xhr.open(QQ, this._requestURL, !0);
+        for (const LQ in oQ) this._xhr.setRequestHeader(LQ, oQ[LQ])
       }
-      setRequestHeader(dd, Jd) {
-        this._xhr.setRequestHeader(dd, Jd)
+      setRequestHeader(QQ, FQ) {
+        this._xhr.setRequestHeader(QQ, FQ)
       }
-      getResponseHeader(dd) {
-        return this._xhr.getResponseHeader(dd)
+      getResponseHeader(QQ) {
+        return this._xhr.getResponseHeader(QQ)
       }
     }
-    pd.CustomRequestHeaders = {}, pd.CustomRequestModifiers = new Array, pd.SkipRequestModificationForBabylonCDN = !0
+    LQ.CustomRequestHeaders = {}, LQ.CustomRequestModifiers = new Array, LQ.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const QQ in modules) Object.freeze(modules[QQ]);
