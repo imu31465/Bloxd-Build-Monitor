@@ -1,0 +1,1613 @@
+{
+ "context": {
+  "module": "bloxd_wasm_shader_pack_bg",
+  "environment": "bloxd.io",
+  "build": "bqoxjr.2558012f",
+  "url": "https://bloxd.io/static/media/bloxd_wasm_shader_pack_bg.80d86b93e0b28b1ed3da.wasm",
+  "sha256": "e521fc18804ece0348d56f2c73e39ef69fee01e1ad9f9c53d92bd0fdbf472492",
+  "analyzed_at": "2026-11-21T12:37:12+09:00",
+  "referenced_by": "132.js"
+ },
+ "facts": {
+  "schema": 1,
+  "header": {
+   "version": 1,
+   "size": 304132
+  },
+  "sections": [
+   {
+    "id": 1,
+    "name": "type",
+    "bytes": 317,
+    "count": 38
+   },
+   {
+    "id": 2,
+    "name": "import",
+    "bytes": 121,
+    "count": 10
+   },
+   {
+    "id": 3,
+    "name": "function",
+    "bytes": 267,
+    "count": 265
+   },
+   {
+    "id": 4,
+    "name": "table",
+    "bytes": 5,
+    "count": 1
+   },
+   {
+    "id": 5,
+    "name": "memory",
+    "bytes": 3,
+    "count": 1
+   },
+   {
+    "id": 6,
+    "name": "global",
+    "bytes": 25,
+    "count": 3
+   },
+   {
+    "id": 7,
+    "name": "export",
+    "bytes": 232,
+    "count": 29
+   },
+   {
+    "id": 9,
+    "name": "element",
+    "bytes": 185,
+    "count": 1
+   },
+   {
+    "id": 12,
+    "name": "datacount",
+    "bytes": 1
+   },
+   {
+    "id": 10,
+    "name": "code",
+    "bytes": 257031,
+    "count": 265
+   },
+   {
+    "id": 11,
+    "name": "data",
+    "bytes": 45876,
+    "count": 121
+   },
+   {
+    "id": 0,
+    "name": "custom:name",
+    "bytes": 29
+   }
+  ],
+  "types": {
+   "count": 38,
+   "error": null,
+   "sample": [
+    "(i32 i32) -> (i32)",
+    "(i32 i32) -> ()",
+    "(i32 i32 i32) -> ()",
+    "(i32) -> ()",
+    "(i32 i32 i32) -> (i32)",
+    "() -> (i32 i32)",
+    "(i32 i32 i32 i32) -> ()",
+    "() -> ()",
+    "(i32 i32 i32 i32 i32) -> ()",
+    "(i32 i32 i32 i32) -> (i32)",
+    "(i32 i32 i32) -> (i64)",
+    "(i32) -> (i32 i32)",
+    "(i32) -> (i32)",
+    "(i32 i32 i32 i32 i32 i32) -> ()",
+    "(i32 i32 i32 i32 i32 i32 i32) -> ()",
+    "(i64 i64 i32) -> (i64)",
+    "() -> (i32 i32 i32 i32)",
+    "(i32 i32 i32 i32 i32 i32 i32 i32) -> ()",
+    "(i32 i32 i32 i32 i32 i32) -> (i32)",
+    "(i32 i32 i32 i32 i32) -> (i32)",
+    "(i32) -> (i32 i32 i32 i32)",
+    "(i32 i32) -> (f64)",
+    "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> ()",
+    "(i64 i64 i32 i32) -> (i64)",
+    "(i32 i32 i32 i32 i32 i32 i32 i32 i32) -> ()",
+    "(i32 i32 i32 f64 i32 i32) -> ()",
+    "(i32 i32 i32 f32 i32 i32) -> ()",
+    "(i32 i32 i32 i64 i32 i32) -> ()",
+    "(i32 i64 i64 i32) -> ()",
+    "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)",
+    "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)",
+    "(i32 i32 f64 f64 i32 i32) -> (i32 i32 i32 i32)",
+    "(i32 i32 i32 i32) -> (i32 i32 i32 i32)",
+    "(i32 i32 f64 i32 i32) -> ()",
+    "(i32 i32 f32 i32 i32) -> ()",
+    "(i32 i32 i64 i32 i32) -> ()",
+    "() -> (i32)",
+    "() -> (i32 i32 i32)"
+   ],
+   "param_result_summary": {
+    "(i32 i32) -> (i32)": 1,
+    "(i32 i32) -> ()": 1,
+    "(i32 i32 i32) -> ()": 1,
+    "(i32) -> ()": 1,
+    "(i32 i32 i32) -> (i32)": 1,
+    "() -> (i32 i32)": 1,
+    "(i32 i32 i32 i32) -> ()": 1,
+    "() -> ()": 1,
+    "(i32 i32 i32 i32 i32) -> ()": 1,
+    "(i32 i32 i32 i32) -> (i32)": 1,
+    "(i32 i32 i32) -> (i64)": 1,
+    "(i32) -> (i32 i32)": 1
+   }
+  },
+  "imports": [
+   {
+    "module": "IlkP",
+    "name": "pdZl",
+    "kind": "func",
+    "index": 0,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "module": "IlkP",
+    "name": "MEWy",
+    "kind": "func",
+    "index": 1,
+    "type": "(i32) -> ()"
+   },
+   {
+    "module": "IlkP",
+    "name": "VZuK",
+    "kind": "func",
+    "index": 2,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "module": "IlkP",
+    "name": "COza",
+    "kind": "func",
+    "index": 3,
+    "type": "(i32 i32) -> (f64)"
+   },
+   {
+    "module": "IlkP",
+    "name": "YD60",
+    "kind": "func",
+    "index": 4,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "module": "IlkP",
+    "name": "CzgM",
+    "kind": "func",
+    "index": 5,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "module": "IlkP",
+    "name": "V2Ln",
+    "kind": "func",
+    "index": 6,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "module": "IlkP",
+    "name": "h9k8",
+    "kind": "func",
+    "index": 7,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "module": "IlkP",
+    "name": "hidU",
+    "kind": "func",
+    "index": 8,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "module": "IlkP",
+    "name": "ptXh",
+    "kind": "func",
+    "index": 9,
+    "type": "(i32 i32) -> (i32)"
+   }
+  ],
+  "exports": [
+   {
+    "name": "C8vF",
+    "kind": "func",
+    "index": 190,
+    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)"
+   },
+   {
+    "name": "nUd3",
+    "kind": "func",
+    "index": 219,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "UZ7I",
+    "kind": "func",
+    "index": 217,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "memory",
+    "kind": "memory",
+    "index": 0,
+    "type": ""
+   },
+   {
+    "name": "Vic3",
+    "kind": "func",
+    "index": 146,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "name": "WlK4",
+    "kind": "func",
+    "index": 201,
+    "type": "(i32 i32 i32 i32) -> (i32 i32 i32 i32)"
+   },
+   {
+    "name": "RMhz",
+    "kind": "func",
+    "index": 244,
+    "type": "(i32 i32 i32) -> ()"
+   },
+   {
+    "name": "TtDk",
+    "kind": "func",
+    "index": 222,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "SBBP",
+    "kind": "func",
+    "index": 209,
+    "type": "(i32) -> (i32 i32 i32 i32)"
+   },
+   {
+    "name": "Q9nT",
+    "kind": "func",
+    "index": 223,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "PsFT",
+    "kind": "func",
+    "index": 273,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "OR0q",
+    "kind": "func",
+    "index": 200,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "gWJe",
+    "kind": "func",
+    "index": 208,
+    "type": "(i32) -> (i32 i32 i32 i32)"
+   },
+   {
+    "name": "mfHo",
+    "kind": "global",
+    "index": 1,
+    "type": ""
+   },
+   {
+    "name": "rLDd",
+    "kind": "func",
+    "index": 221,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "urPZ",
+    "kind": "func",
+    "index": 227,
+    "type": "() -> (i32 i32)"
+   },
+   {
+    "name": "ggNU",
+    "kind": "func",
+    "index": 198,
+    "type": "(i32 i32 f64 f64 i32 i32) -> (i32 i32 i32 i32)"
+   },
+   {
+    "name": "VL0J",
+    "kind": "func",
+    "index": 215,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "F2Nn",
+    "kind": "func",
+    "index": 270,
+    "type": "() -> ()"
+   },
+   {
+    "name": "uagC",
+    "kind": "func",
+    "index": 202,
+    "type": "(i32 i32 i32 i32) -> (i32)"
+   },
+   {
+    "name": "p5cv",
+    "kind": "func",
+    "index": 216,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "n8Va",
+    "kind": "func",
+    "index": 270,
+    "type": "() -> ()"
+   },
+   {
+    "name": "YbmF",
+    "kind": "func",
+    "index": 193,
+    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)"
+   },
+   {
+    "name": "RggB",
+    "kind": "func",
+    "index": 218,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "dNiy",
+    "kind": "func",
+    "index": 220,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "pTce",
+    "kind": "func",
+    "index": 228,
+    "type": "() -> (i32 i32)"
+   },
+   {
+    "name": "LQwb",
+    "kind": "global",
+    "index": 2,
+    "type": ""
+   },
+   {
+    "name": "njPp",
+    "kind": "func",
+    "index": 226,
+    "type": "() -> (i32 i32)"
+   },
+   {
+    "name": "gzXe",
+    "kind": "func",
+    "index": 225,
+    "type": "() -> (i32 i32)"
+   }
+  ],
+  "globals": [
+   {
+    "index": 0,
+    "type": "i32",
+    "mutable": true,
+    "init": "i32.const 1048576"
+   },
+   {
+    "index": 1,
+    "type": "i32",
+    "mutable": false,
+    "init": "i32.const 1097728"
+   },
+   {
+    "index": 2,
+    "type": "i32",
+    "mutable": false,
+    "init": "i32.const 1098308"
+   }
+  ],
+  "memories": [
+   {
+    "min": 17,
+    "max": null,
+    "shared": false,
+    "index64": false
+   }
+  ],
+  "tables": [
+   {
+    "min": 95,
+    "max": 95,
+    "shared": false,
+    "index64": false,
+    "element": "funcref"
+   }
+  ],
+  "start": null,
+  "elements": {
+   "segments": 1,
+   "entries": 94,
+   "modes": {
+    "active/funcidx": 1
+   }
+  },
+  "data": {
+   "segments": 121,
+   "bytes": 44881,
+   "details": [
+    {
+     "mode": 0,
+     "offset": "i32.const 1048576",
+     "bytes": 6287
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1054872",
+     "bytes": 139
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1055020",
+     "bytes": 271
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1055304",
+     "bytes": 20253
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1075568",
+     "bytes": 25
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1075608",
+     "bytes": 21
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1075644",
+     "bytes": 57
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1075716",
+     "bytes": 21
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1075752",
+     "bytes": 3372
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1079140",
+     "bytes": 40
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1079192",
+     "bytes": 25
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1079231",
+     "bytes": 8
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1079250",
+     "bytes": 177
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1079504",
+     "bytes": 132
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1079652",
+     "bytes": 40
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1079704",
+     "bytes": 25
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1079743",
+     "bytes": 196
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1080016",
+     "bytes": 23
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1081320",
+     "bytes": 1
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1081416",
+     "bytes": 6
+    }
+   ],
+   "declared_segments": 121
+  },
+  "functions": {
+   "imported": 10,
+   "defined": 265,
+   "code_bytes": 256592,
+   "locals_total": 1865,
+   "scan_ok": 265,
+   "scan_degraded": 0,
+   "instruction_count": 127325,
+   "simd_ops": 0,
+   "named": 0,
+   "size_histogram": {
+    "<= 32": 49,
+    "<= 64": 18,
+    "<= 128": 27,
+    "<= 256": 28,
+    "<= 512": 67,
+    "<= 1024": 36,
+    "<= 2048": 15,
+    "<= 4096": 14,
+    "<= 8192": 5,
+    "<= 16384": 5,
+    "> 16384": 1
+   },
+   "top_by_size": [
+    {
+     "index": 0,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 24,
+     "body_bytes": 9636,
+     "instructions": 5162,
+     "top_opcodes": "local.get\u00d71194, i32.const\u00d7998, local.set\u00d7538, i32.add\u00d7280, end\u00d7258",
+     "calls": [
+      137,
+      60,
+      60,
+      60,
+      60,
+      10,
+      119,
+      194,
+      23,
+      97,
+      97,
+      51,
+      51,
+      60,
+      60,
+      259
+     ],
+     "degraded": false
+    },
+    {
+     "index": 1,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 25,
+     "body_bytes": 9120,
+     "instructions": 4881,
+     "top_opcodes": "local.get\u00d71117, i32.const\u00d7931, local.set\u00d7521, end\u00d7255, i32.and\u00d7236",
+     "calls": [
+      142,
+      60,
+      60,
+      60,
+      60,
+      11,
+      119,
+      194,
+      22,
+      115,
+      115,
+      115,
+      115,
+      111,
+      115,
+      115
+     ],
+     "degraded": false
+    },
+    {
+     "index": 2,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 25,
+     "body_bytes": 9068,
+     "instructions": 4863,
+     "top_opcodes": "local.get\u00d71115, i32.const\u00d7931, local.set\u00d7521, end\u00d7255, i32.and\u00d7236",
+     "calls": [
+      141,
+      60,
+      60,
+      60,
+      60,
+      12,
+      119,
+      194,
+      21,
+      114,
+      114,
+      114,
+      114,
+      110,
+      114,
+      114
+     ],
+     "degraded": false
+    },
+    {
+     "index": 3,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32) -> ()",
+     "locals": 54,
+     "body_bytes": 8946,
+     "instructions": 4688,
+     "top_opcodes": "local.get\u00d71854, local.tee\u00d7608, select\u00d7392, i32.const\u00d7289, i32.load\u00d7194",
+     "calls": [
+      130,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      13,
+      188,
+      188
+     ],
+     "degraded": false
+    },
+    {
+     "index": 4,
+     "name": null,
+     "type": "() -> ()",
+     "locals": 43,
+     "body_bytes": 8637,
+     "instructions": 4099,
+     "top_opcodes": "local.get\u00d71080, i32.const\u00d7656, local.set\u00d7232, end\u00d7223, i32.add\u00d7201",
+     "calls": [
+      239,
+      131,
+      42,
+      33,
+      177,
+      98,
+      239,
+      120,
+      188,
+      44,
+      239,
+      240,
+      65,
+      188,
+      188,
+      188
+     ],
+     "degraded": false
+    },
+    {
+     "index": 5,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 28,
+     "body_bytes": 6150,
+     "instructions": 3172,
+     "top_opcodes": "local.get\u00d7886, i32.const\u00d7451, local.set\u00d7291, end\u00d7164, i32.add\u00d7120",
+     "calls": [
+      66,
+      188,
+      60,
+      188,
+      60,
+      188,
+      60,
+      188,
+      60,
+      188,
+      15,
+      194,
+      188,
+      119,
+      18,
+      38
+     ],
+     "degraded": false
+    },
+    {
+     "index": 6,
+     "name": null,
+     "type": "(i32 i32 i32 i32) -> ()",
+     "locals": 22,
+     "body_bytes": 5609,
+     "instructions": 2763,
+     "top_opcodes": "local.get\u00d7684, i32.const\u00d7482, i32.add\u00d7158, br_if\u00d7157, end\u00d7156",
+     "calls": [
+      98,
+      185,
+      185,
+      248,
+      120,
+      120,
+      239,
+      240,
+      99,
+      99,
+      99,
+      177,
+      163,
+      120,
+      120,
+      120
+     ],
+     "degraded": false
+    },
+    {
+     "index": 7,
+     "name": null,
+     "type": "(i32) -> (i32)",
+     "locals": 10,
+     "body_bytes": 4929,
+     "instructions": 2157,
+     "top_opcodes": "local.get\u00d7505, i32.const\u00d7449, i32.store\u00d7204, local.tee\u00d7154, i32.load\u00d7105",
+     "calls": [
+      116,
+      104,
+      116,
+      116
+     ],
+     "degraded": false
+    },
+    {
+     "index": 8,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 28,
+     "body_bytes": 3169,
+     "instructions": 1696,
+     "top_opcodes": "local.get\u00d7424, i32.const\u00d7284, local.set\u00d7145, end\u00d787, i32.add\u00d785",
+     "calls": [
+      188,
+      60,
+      188,
+      60,
+      188,
+      60,
+      15,
+      15,
+      15,
+      188,
+      188,
+      15
+     ],
+     "degraded": false
+    },
+    {
+     "index": 9,
+     "name": null,
+     "type": "(i32 i32 i32) -> ()",
+     "locals": 23,
+     "body_bytes": 4241,
+     "instructions": 2242,
+     "top_opcodes": "local.get\u00d7562, i32.const\u00d7444, i32.add\u00d7106, end\u00d798, local.set\u00d792",
+     "calls": [
+      239,
+      109,
+      143,
+      144,
+      134,
+      109,
+      143,
+      144,
+      134,
+      248,
+      248,
+      156,
+      156,
+      156,
+      156,
+      156
+     ],
+     "degraded": false
+    },
+    {
+     "index": 10,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 31,
+     "body_bytes": 3096,
+     "instructions": 1575,
+     "top_opcodes": "local.get\u00d7410, i32.const\u00d7154, local.tee\u00d794, local.set\u00d790, i32.add\u00d786",
+     "calls": [
+      239,
+      239,
+      184,
+      160,
+      47,
+      47,
+      240,
+      151,
+      239,
+      177,
+      88,
+      151,
+      151,
+      88,
+      151,
+      187
+     ],
+     "degraded": false
+    },
+    {
+     "index": 11,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 28,
+     "body_bytes": 2629,
+     "instructions": 1426,
+     "top_opcodes": "local.get\u00d7340, i32.const\u00d7251, local.set\u00d7134, end\u00d774, local.tee\u00d771",
+     "calls": [
+      60,
+      60,
+      60,
+      12,
+      12,
+      12,
+      12
+     ],
+     "degraded": false
+    },
+    {
+     "index": 12,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 28,
+     "body_bytes": 2626,
+     "instructions": 1424,
+     "top_opcodes": "local.get\u00d7340, i32.const\u00d7249, local.set\u00d7133, end\u00d774, local.tee\u00d773",
+     "calls": [
+      60,
+      60,
+      60,
+      11,
+      11,
+      11,
+      11
+     ],
+     "degraded": false
+    },
+    {
+     "index": 13,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 28,
+     "body_bytes": 2567,
+     "instructions": 1402,
+     "top_opcodes": "local.get\u00d7332, i32.const\u00d7257, local.set\u00d7136, end\u00d773, i32.add\u00d769",
+     "calls": [
+      60,
+      60,
+      60,
+      10,
+      10,
+      10,
+      10
+     ],
+     "degraded": false
+    },
+    {
+     "index": 14,
+     "name": null,
+     "type": "(i32 i32 i32) -> ()",
+     "locals": 3,
+     "body_bytes": 2687,
+     "instructions": 1215,
+     "top_opcodes": "i64.const\u00d7308, local.get\u00d7184, i64.or\u00d7133, i64.and\u00d7116, i64.shl\u00d776",
+     "calls": [],
+     "degraded": false
+    },
+    {
+     "index": 15,
+     "name": null,
+     "type": "(i32 i32) -> (i32)",
+     "locals": 2,
+     "body_bytes": 2645,
+     "instructions": 1213,
+     "top_opcodes": "i64.const\u00d7308, local.get\u00d7180, i64.or\u00d7133, i64.and\u00d7116, i64.shl\u00d776",
+     "calls": [],
+     "degraded": false
+    },
+    {
+     "index": 16,
+     "name": null,
+     "type": "() -> ()",
+     "locals": 20,
+     "body_bytes": 2167,
+     "instructions": 991,
+     "top_opcodes": "local.get\u00d7267, i32.const\u00d7168, i32.load\u00d772, call\u00d760, local.tee\u00d757",
+     "calls": [
+      239,
+      239,
+      14,
+      57,
+      16,
+      177,
+      44,
+      177,
+      177,
+      57,
+      177,
+      177,
+      177,
+      57,
+      177,
+      177
+     ],
+     "degraded": false
+    },
+    {
+     "index": 17,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 13,
+     "body_bytes": 2754,
+     "instructions": 1426,
+     "top_opcodes": "local.get\u00d7396, i32.const\u00d7209, local.set\u00d7106, i32.add\u00d795, local.tee\u00d780",
+     "calls": [
+      239,
+      188,
+      151,
+      189,
+      239,
+      125,
+      170,
+      151,
+      187,
+      240,
+      240,
+      240,
+      187,
+      177,
+      177,
+      188
+     ],
+     "degraded": false
+    },
+    {
+     "index": 18,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 12,
+     "body_bytes": 1743,
+     "instructions": 833,
+     "top_opcodes": "local.get\u00d7262, i32.const\u00d7100, local.set\u00d755, i32.add\u00d752, i32.load\u00d750",
+     "calls": [
+      68,
+      239,
+      68,
+      151,
+      68,
+      139,
+      177,
+      177,
+      177,
+      139,
+      239,
+      240,
+      177,
+      177,
+      99,
+      99
+     ],
+     "degraded": false
+    },
+    {
+     "index": 19,
+     "name": null,
+     "type": "(i32 i32 i32) -> ()",
+     "locals": 28,
+     "body_bytes": 3486,
+     "instructions": 1722,
+     "top_opcodes": "local.get\u00d7473, i32.const\u00d7195, local.tee\u00d7107, i32.add\u00d793, local.set\u00d785",
+     "calls": [
+      160,
+      71,
+      188,
+      188,
+      188,
+      237,
+      55,
+      237,
+      239,
+      233,
+      237,
+      71,
+      177,
+      184,
+      184,
+      172
+     ],
+     "degraded": false
+    },
+    {
+     "index": 21,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 19,
+     "body_bytes": 1621,
+     "instructions": 757,
+     "top_opcodes": "local.get\u00d7186, i32.const\u00d791, local.tee\u00d747, i32.load\u00d742, i32.add\u00d742",
+     "calls": [
+      160,
+      160,
+      67,
+      83,
+      188,
+      184,
+      74,
+      239,
+      169,
+      170,
+      177,
+      266,
+      187,
+      67,
+      83,
+      45
+     ],
+     "degraded": false
+    },
+    {
+     "index": 22,
+     "name": null,
+     "type": "(i32 i32 i32 i32) -> ()",
+     "locals": 16,
+     "body_bytes": 1823,
+     "instructions": 939,
+     "top_opcodes": "local.get\u00d7260, i32.const\u00d7105, i32.add\u00d756, local.set\u00d756, end\u00d750",
+     "calls": [
+      8,
+      262,
+      30,
+      187,
+      187,
+      2,
+      3,
+      3,
+      3,
+      3,
+      99,
+      177,
+      248
+     ],
+     "degraded": false
+    },
+    {
+     "index": 30,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 27,
+     "body_bytes": 2061,
+     "instructions": 1051,
+     "top_opcodes": "local.get\u00d7231, i32.const\u00d7175, local.set\u00d782, i32.add\u00d760, local.tee\u00d757",
+     "calls": [
+      237,
+      55,
+      237,
+      239,
+      233,
+      237,
+      177,
+      188
+     ],
+     "degraded": false
+    },
+    {
+     "index": 43,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 25,
+     "body_bytes": 1718,
+     "instructions": 848,
+     "top_opcodes": "local.get\u00d7208, i32.const\u00d7139, local.set\u00d779, local.tee\u00d743, end\u00d742",
+     "calls": [
+      239,
+      151,
+      239,
+      22,
+      177,
+      22,
+      240,
+      60,
+      240,
+      239,
+      99,
+      177,
+      240
+     ],
+     "degraded": false
+    },
+    {
+     "index": 60,
+     "name": null,
+     "type": "(i32 i32 i32) -> ()",
+     "locals": 5,
+     "body_bytes": 2108,
+     "instructions": 1015,
+     "top_opcodes": "i32.const\u00d7210, local.get\u00d7207, local.tee\u00d766, i32.add\u00d747, local.set\u00d744",
+     "calls": [],
+     "degraded": false
+    },
+    {
+     "index": 180,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)",
+     "locals": 104,
+     "body_bytes": 66226,
+     "instructions": 31616,
+     "top_opcodes": "local.get\u00d78373, i32.const\u00d74250, local.set\u00d71765, local.tee\u00d71752, i32.add\u00d71731",
+     "calls": [
+      239,
+      8,
+      1,
+      44,
+      239,
+      240,
+      177,
+      44,
+      240,
+      177,
+      262,
+      240,
+      58,
+      1,
+      177,
+      58
+     ],
+     "degraded": false
+    },
+    {
+     "index": 183,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)",
+     "locals": 27,
+     "body_bytes": 3164,
+     "instructions": 1516,
+     "top_opcodes": "local.get\u00d7473, i32.const\u00d7190, local.set\u00d796, i32.store\u00d782, end\u00d780",
+     "calls": [
+      117,
+      239,
+      117,
+      151,
+      117,
+      177,
+      177,
+      1,
+      177,
+      1,
+      177,
+      58,
+      177,
+      177,
+      99,
+      177
+     ],
+     "degraded": false
+    },
+    {
+     "index": 188,
+     "name": null,
+     "type": "(i32 i32 f64 f64 i32 i32) -> (i32 i32 i32 i32)",
+     "locals": 30,
+     "body_bytes": 3118,
+     "instructions": 1545,
+     "top_opcodes": "local.get\u00d7433, i32.const\u00d7188, local.set\u00d793, end\u00d791, i32.load\u00d770",
+     "calls": [
+      264,
+      263,
+      99,
+      99,
+      99,
+      32,
+      32,
+      177,
+      239,
+      185,
+      185,
+      248,
+      248,
+      85,
+      188,
+      151
+     ],
+     "degraded": false
+    },
+    {
+     "index": 191,
+     "name": null,
+     "type": "(i32 i32 i32 i32) -> (i32 i32 i32 i32)",
+     "locals": 24,
+     "body_bytes": 1901,
+     "instructions": 949,
+     "top_opcodes": "local.get\u00d7257, i32.const\u00d7151, local.set\u00d773, end\u00d749, i32.add\u00d742",
+     "calls": [
+      58,
+      28,
+      6,
+      177,
+      239,
+      99,
+      239,
+      23,
+      177,
+      23,
+      240,
+      60,
+      26,
+      57,
+      105,
+      99
+     ],
+     "degraded": false
+    },
+    {
+     "index": 218,
+     "name": null,
+     "type": "() -> (i32 i32)",
+     "locals": 36,
+     "body_bytes": 5650,
+     "instructions": 2555,
+     "top_opcodes": "local.get\u00d7773, i32.const\u00d7353, local.set\u00d7138, i32.add\u00d7129, end\u00d7126",
+     "calls": [
+      131,
+      76,
+      120,
+      248,
+      239,
+      99,
+      247,
+      37,
+      177,
+      239,
+      99,
+      239,
+      240,
+      99,
+      151,
+      177
+     ],
+     "degraded": false
+    }
+   ]
+  },
+  "opcodes": {
+   "local.get": 33484,
+   "i32.const": 18367,
+   "local.set": 7721,
+   "local.tee": 6719,
+   "i32.add": 6339,
+   "end": 6189,
+   "i32.load": 4928,
+   "br_if": 3600,
+   "i32.store": 2863,
+   "block": 2617,
+   "if": 2534,
+   "call": 2270,
+   "i32.and": 2268,
+   "i64.const": 2235,
+   "br": 2080,
+   "i32.sub": 1975,
+   "i32.shl": 1508,
+   "i64.store": 1350,
+   "i64.load": 1260,
+   "i32.or": 1259,
+   "i32.eqz": 1078,
+   "i32.eq": 1013,
+   "i32.load8_u": 993,
+   "select": 913,
+   "loop": 773,
+   "i32.ne": 765,
+   "i32.lt_u": 763,
+   "i64.xor": 583,
+   "i32.mul": 541,
+   "i64.and": 541,
+   "i64.or": 510,
+   "i32.shr_u": 508,
+   "unreachable": 474,
+   "i32.le_u": 468,
+   "i32.store8": 381,
+   "i32.gt_u": 378,
+   "global.set": 369,
+   "i64.rotl": 364,
+   "i32.ge_u": 322,
+   "i32.load8_s": 312
+  },
+  "custom": {
+   "sections": [
+    {
+     "name": "name",
+     "bytes": 24
+    }
+   ],
+   "module_name": "4eabbc7d441aa5d9.1190",
+   "producers": {}
+  },
+  "strings": [
+   {
+    "len": 716,
+    "text": "BloxdSurfaceEach textureId has a name: bloxdTextureId followed by its texture pack filename, e.g. bloxdTextureIdGrassTop for grass_top.png. For animated textures,skip the frame number, e.g. bloxdTextu"
+   },
+   {
+    "len": 546,
+    "text": "terrainmodelsundefinedDefined for liquids, enabling bloxdOpaqueBehind().Defined for liquids and non-strict games.Defined in strict games, which enforce visibility.bloxdFragmentBlockPositionbloxdShadow"
+   },
+   {
+    "len": 455,
+    "text": "Packs can't declare names starting with bloxd, other than the hook functions bloxd<Terrain|Liquid|Model><Vertex|Surface|Light>.WGSL names can't start with two underscores._ can only be the target of a"
+   },
+   {
+    "len": 430,
+    "text": "A line starting with # must be #define, #ifdef, #ifndef, #else or #endif.defineifdefifndefelseendifThis #ifdef or #ifndef already has an #else.#define takes only a flag name; values use const.Names st"
+   },
+   {
+    "len": 390,
+    "text": "pack_var<private> bloxdValidationP: vec4f;    let p = bloxdValidationP;@vertexfn bloxdValidateVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {    let p = vec4f(f32(i));    return ve"
+   },
+   {
+    "len": 299,
+    "text": "Sunlight or moonlight reaching this fragment: 0 in shadow, 1 lit. Blocks,players, mobs and items cast shadows. Fades to 0 as the sun or moon sets, oras the face turns away from it. 1 on flags.emissive"
+   },
+   {
+    "len": 268,
+    "text": "called `Option::unwrap()` on a `None` value0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777"
+   },
+   {
+    "len": 224,
+    "text": "Using a fragment's position and normal, identify the block's world position.Terrain looks half a block behind the face, and models 1/64 behind. Wherethat point is inside a placed block model's own blo"
+   },
+   {
+    "len": 202,
+    "text": "BloxdOpaqueBehindLike bloxdShadow, but at a point between the camera (t = 0) and thisfragment (t = 1), e.g. for light shafts. Only blocks cast these shadows,blurred to whole blocks. t is clamped to 0-"
+   },
+   {
+    "len": 189,
+    "text": "bloxdTerrainVertexbloxdTerrainSurfacebloxdTerrainLightbloxdLiquidVertexbloxdLiquidSurfacebloxdLiquidLightbloxdModelVertexbloxdModelSurfacebloxdModelLightbloxdDefaultSurfacebloxdDefaultLight"
+   },
+   {
+    "len": 187,
+    "text": "pathsourcetexture namealias namealias texturelineNumlinePosmessagemessage typeterrainwatermodelsskylightingmovesGeometryanimatedsceneDepthsunShadowsstrictdiagnostic filediagnostic message"
+   },
+   {
+    "len": 147,
+    "text": ", BLOXD_LIGHTING was removed in apiVersion 5; test bloxdLit() in code instead.This conditional isn't closed with #endif before the end of the file."
+   },
+   {
+    "len": 146,
+    "text": "array contains a value of the wrong typenull pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rust"
+   },
+   {
+    "len": 131,
+    "text": ". Texture names are the file names texture packs use, as in bloxdTextureIdGrassTop for grass_top.png; BLOCK_TEXTURES.md lists them."
+   },
+   {
+    "len": 120,
+    "text": "w directly, since the shader pack API adds fields to it over time; start from a bloxdDefault* function or copy an input."
+   },
+   {
+    "len": 119,
+    "text": "${SHADER_PACK_API_VERSION}${SHADER_PACK_INPUTS_VAR}bloxdPackInputsThis comment isn't closed before the end of the file."
+   },
+   {
+    "len": 117,
+    "text": "555555555555555555555555555555555555555555555555555555555555555555555555555555555551555555554555555555585555555555555"
+   },
+   {
+    "len": 114,
+    "text": "q can only be a function's parameter or return type, the type of an initialised let or var, or a ptr's store type."
+   },
+   {
+    "len": 111,
+    "text": "n: the engine binds every texture and sampler. Surface and light hooks can read atlas textures with bloxdTexel."
+   },
+   {
+    "len": 111,
+    "text": "    alias break case const const_assert continue continuing default diagnostic discard else enable false fn for"
+   },
+   {
+    "len": 110,
+    "text": "    faceForward firstLeadingBit firstTrailingBit floor fma fract frexp insertBits inverseSqrt ldexp length log"
+   },
+   {
+    "len": 110,
+    "text": "    atomicLoad atomicStore atomicAdd atomicSub atomicMax atomicMin atomicAnd atomicOr atomicXor atomicExchange"
+   },
+   {
+    "len": 110,
+    "text": "    subgroupExclusiveMul subgroupInclusiveMul subgroupOr subgroupShuffle subgroupShuffleDown subgroupShuffleUp"
+   },
+   {
+    "len": 110,
+    "text": "    NULL Self abstract active alignas alignof as asm asm_fragment async attribute auto await become cast catch"
+   },
+   {
+    "len": 110,
+    "text": "    class co_await co_return co_yield coherent column_major common compile compile_fragment concept const_cast"
+   },
+   {
+    "len": 109,
+    "text": "    texture_1d texture_2d texture_2d_array texture_3d texture_cube texture_cube_array texture_multisampled_2d"
+   },
+   {
+    "len": 109,
+    "text": "    log2 max min mix modf normalize pow quantizeToF16 radians reflect refract reverseBits round saturate sign"
+   },
+   {
+    "len": 109,
+    "text": "    consteval constexpr constinit crate debugger decltype delete demote demote_to_helper do dynamic_cast enum"
+   },
+   {
+    "len": 109,
+    "text": "    mediump meta mod module move mut mutable namespace new nil noexcept noinline nointerpolation non_coherent"
+   },
+   {
+    "len": 108,
+    "text": "    countTrailingZeros cross degrees determinant distance dot dot4I8Packed dot4U8Packed exp exp2 extractBits"
+   },
+   {
+    "len": 108,
+    "text": "    subgroupAdd subgroupExclusiveAdd subgroupInclusiveAdd subgroupAll subgroupAnd subgroupAny subgroupBallot"
+   },
+   {
+    "len": 108,
+    "text": "    groupshared highp impl implements import inline instanceof interface layout lowp macro macro_rules match"
+   },
+   {
+    "len": 108,
+    "text": "    noncoherent noperspective null nullptr of operator package packoffset partition pass patch pixelfragment"
+   },
+   {
+    "len": 106,
+    "text": "    precise precision premerge priv protected pub public readonly ref regardless register reinterpret_cast"
+   },
+   {
+    "len": 106,
+    "text": "    subroutine super target template this thread_local throw trait try type typedef typeid typename typeof"
+   },
+   {
+    "len": 105,
+    "text": "    explicit export extends extern external fallthrough filter final finally friend from fxgroup get goto"
+   },
+   {
+    "len": 104,
+    "text": "    union unless unorm unsafe unsized use using varying virtual volatile wgsl where with writeonly yield"
+   },
+   {
+    "len": 103,
+    "text": "    rgba8unorm rgba8snorm rgba8uint rgba8sint rgba16unorm rgba16snorm rgba16uint rgba16sint rgba16float"
+   },
+   {
+    "len": 103,
+    "text": "    pack4x8snorm pack4x8unorm pack4xI8 pack4xU8 pack4xI8Clamp pack4xU8Clamp pack2x16snorm pack2x16unorm"
+   },
+   {
+    "len": 103,
+    "text": "// The Bloxd shader pack API, apiVersion ${SHADER_PACK_API_VERSION}. Read-only, prepended to all packs."
+   },
+   {
+    "len": 102,
+    "text": "    textureDimensions textureGather textureGatherCompare textureLoad textureNumLayers textureNumLevels"
+   },
+   {
+    "len": 102,
+    "text": "    require resource restrict self set shared sizeof smooth snorm static static_assert static_cast std"
+   },
+   {
+    "len": 101,
+    "text": "    r32uint r32sint r32float rg32uint rg32sint rg32float rgba32uint rgba32sint rgba32float bgra8unorm"
+   },
+   {
+    "len": 101,
+    "text": "    pack2x16float unpack4x8snorm unpack4x8unorm unpack4xI8 unpack4xU8 unpack2x16snorm unpack2x16unorm"
+   },
+   {
+    "len": 101,
+    "text": "pvec4u(p)vec3u(p.xyz)vec2u(p.xy)u32(p.x)vec4i(p)vec3i(p.xyz)vec2i(p.xy)i32(p.x)p.xyzp.xyp.xp.x > 0.0+"
+   },
+   {
+    "len": 100,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.106/src/futures/jspi.rs"
+   },
+   {
+    "len": 100,
+    "text": "    textureNumSamples textureSample textureSampleBias textureSampleCompare textureSampleCompareLevel"
+   },
+   {
+    "len": 99,
+    "text": "position: vec3f, normal: vec3ft: f32textureId: u32, uv: vec2f, mipLevel: f32vec4fmipLevel: f32vec2u"
+   },
+   {
+    "len": 97,
+    "text": "    abs acos acosh asin asinh atan atan2 atanh ceil clamp cos cosh countLeadingZeros countOneBits"
+   },
+   {
+    "len": 95,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/shared/smallsort.rs"
+   },
+   {
+    "len": 95,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/stable/quicksort.rs"
+   },
+   {
+    "len": 94,
+    "text": "    subgroupBroadcast subgroupBroadcastFirst subgroupElect subgroupMax subgroupMin subgroupMul"
+   },
+   {
+    "len": 93,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs"
+   },
+   {
+    "len": 93,
+    "text": "\\' isn't declared. Packs can use their own names, and names from WGSL or the shader pack API."
+   },
+   {
+    "len": 90,
+    "text": "    vec2 vec3 vec4 vec2f vec3f vec4f vec2h vec3h vec4h vec2i vec3i vec4i vec2u vec3u vec4u"
+   },
+   {
+    "len": 89,
+    "text": "pack.wgsl// Every hook here returns its engine default. Modify the return values to start"
+   },
+   {
+    "len": 88,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/unicode/unicode_data.rs"
+   },
+   {
+    "len": 87,
+    "text": "    texture_depth_2d texture_depth_2d_array texture_depth_cube texture_depth_cube_array"
+   },
+   {
+    "len": 86,
+    "text": "a formatting trait implementation returned an error when the underlying stream did not"
+   },
+   {
+    "len": 85,
+    "text": "    texture_storage_1d texture_storage_2d texture_storage_2d_array texture_storage_3d"
+   }
+  ],
+  "parse_errors": [],
+  "function_names": {}
+ },
+ "history": [
+  {
+   "build": "bqoxjr.2558012f",
+   "at": "2026-11-21T12:37:12+09:00",
+   "size": 304132,
+   "sha256": "e521fc18804ece03",
+   "functions": 265,
+   "exports": 29,
+   "imports": 10
+  }
+ ]
+}

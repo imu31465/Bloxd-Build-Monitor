@@ -1,0 +1,1629 @@
+{
+ "context": {
+  "module": "bloxd_wasm_textures_bg",
+  "environment": "staging.bloxd.io",
+  "build": "bqoxjr.2558012f",
+  "url": "https://staging.bloxd.io/static/media/bloxd_wasm_textures_bg.61b5ac2f80ff09b15c5a.wasm",
+  "sha256": "f13f878b8e801e1b7391eae5c539ceb75b7c99a88018bdad896fe7b520427f2f",
+  "analyzed_at": "2026-11-21T12:37:19+09:00",
+  "referenced_by": "206.js"
+ },
+ "facts": {
+  "schema": 1,
+  "header": {
+   "version": 1,
+   "size": 226666
+  },
+  "sections": [
+   {
+    "id": 1,
+    "name": "type",
+    "bytes": 227,
+    "count": 29
+   },
+   {
+    "id": 2,
+    "name": "import",
+    "bytes": 37,
+    "count": 3
+   },
+   {
+    "id": 3,
+    "name": "function",
+    "bytes": 297,
+    "count": 295
+   },
+   {
+    "id": 4,
+    "name": "table",
+    "bytes": 5,
+    "count": 1
+   },
+   {
+    "id": 5,
+    "name": "memory",
+    "bytes": 3,
+    "count": 1
+   },
+   {
+    "id": 6,
+    "name": "global",
+    "bytes": 25,
+    "count": 3
+   },
+   {
+    "id": 7,
+    "name": "export",
+    "bytes": 309,
+    "count": 39
+   },
+   {
+    "id": 9,
+    "name": "element",
+    "bytes": 212,
+    "count": 1
+   },
+   {
+    "id": 12,
+    "name": "datacount",
+    "bytes": 1
+   },
+   {
+    "id": 10,
+    "name": "code",
+    "bytes": 204398,
+    "count": 295
+   },
+   {
+    "id": 11,
+    "name": "data",
+    "bytes": 21083,
+    "count": 20
+   },
+   {
+    "id": 0,
+    "name": "custom:name",
+    "bytes": 29
+   }
+  ],
+  "types": {
+   "count": 29,
+   "error": null,
+   "sample": [
+    "(i32 i32 i32) -> (i32)",
+    "(i32 i32) -> (i32)",
+    "(i32 i32) -> ()",
+    "(i32) -> ()",
+    "(i32 i32 i32) -> ()",
+    "(i32 i32 i32 i32 i32) -> ()",
+    "(i32 i32 i32 i32 i32 i32) -> ()",
+    "(i32) -> (i32)",
+    "() -> (i32 i32)",
+    "(i32 i32 i32 i32) -> ()",
+    "(i32 i32 i32) -> (i64)",
+    "(i32) -> (i32 i32)",
+    "() -> ()",
+    "(i64 i64 i32) -> (i64)",
+    "(i32 i32 i32 i32) -> (i32)",
+    "(i32 i32 i32 i32 i32 i32 i32) -> ()",
+    "(i32 i32 i32 i32 i32) -> (i32)",
+    "(i32 i32 i32) -> (i32 i32)",
+    "(i32 i32 i32 i32 i32 i32 i32 i32) -> ()",
+    "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)",
+    "(i32 i32 i32 i32 i32 i32) -> (i32)",
+    "(i64 i64 i32 i32) -> (i64)",
+    "(i32 i64 i64) -> ()",
+    "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)",
+    "(i32 i32) -> (i32 i32 i32 i32)",
+    "(i32 i32 i32 i32 i32) -> (i32 i32)",
+    "(i32 i32) -> (i32 i32)",
+    "() -> (i32 i32 i32)",
+    "() -> (i32 i32 i32 i32)"
+   ],
+   "param_result_summary": {
+    "(i32 i32 i32) -> (i32)": 1,
+    "(i32 i32) -> (i32)": 1,
+    "(i32 i32) -> ()": 1,
+    "(i32) -> ()": 1,
+    "(i32 i32 i32) -> ()": 1,
+    "(i32 i32 i32 i32 i32) -> ()": 1,
+    "(i32 i32 i32 i32 i32 i32) -> ()": 1,
+    "(i32) -> (i32)": 1,
+    "() -> (i32 i32)": 1,
+    "(i32 i32 i32 i32) -> ()": 1,
+    "(i32 i32 i32) -> (i64)": 1,
+    "(i32) -> (i32 i32)": 1
+   }
+  },
+  "imports": [
+   {
+    "module": "rGix",
+    "name": "OEhl",
+    "kind": "func",
+    "index": 0,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "module": "rGix",
+    "name": "TRqr",
+    "kind": "func",
+    "index": 1,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "module": "rGix",
+    "name": "WxK2",
+    "kind": "func",
+    "index": 2,
+    "type": "(i32 i32) -> (i32)"
+   }
+  ],
+  "exports": [
+   {
+    "name": "jP2q",
+    "kind": "func",
+    "index": 239,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "qtz0",
+    "kind": "func",
+    "index": 167,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "Qg3t",
+    "kind": "func",
+    "index": 293,
+    "type": "() -> ()"
+   },
+   {
+    "name": "GeKe",
+    "kind": "func",
+    "index": 219,
+    "type": "(i32 i32 i32 i32 i32) -> (i32 i32)"
+   },
+   {
+    "name": "cyQG",
+    "kind": "global",
+    "index": 2,
+    "type": ""
+   },
+   {
+    "name": "erJI",
+    "kind": "func",
+    "index": 152,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "Oqdl",
+    "kind": "func",
+    "index": 237,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "l89M",
+    "kind": "func",
+    "index": 233,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "bEPD",
+    "kind": "func",
+    "index": 127,
+    "type": "(i32 i32 i32) -> (i32)"
+   },
+   {
+    "name": "Krls",
+    "kind": "func",
+    "index": 185,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "PQFP",
+    "kind": "func",
+    "index": 232,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "memory",
+    "kind": "memory",
+    "index": 0,
+    "type": ""
+   },
+   {
+    "name": "p7tO",
+    "kind": "func",
+    "index": 183,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "WUBj",
+    "kind": "func",
+    "index": 211,
+    "type": "(i32 i32 i32 i32) -> (i32)"
+   },
+   {
+    "name": "DqfK",
+    "kind": "func",
+    "index": 182,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "Hwlc",
+    "kind": "func",
+    "index": 231,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "WT3h",
+    "kind": "func",
+    "index": 135,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "name": "oqq4",
+    "kind": "func",
+    "index": 230,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "FPa9",
+    "kind": "func",
+    "index": 128,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "rgDR",
+    "kind": "global",
+    "index": 1,
+    "type": ""
+   },
+   {
+    "name": "uQXu",
+    "kind": "func",
+    "index": 157,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "ppwI",
+    "kind": "func",
+    "index": 159,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "I9Ut",
+    "kind": "func",
+    "index": 228,
+    "type": "(i32 i32) -> (i32 i32)"
+   },
+   {
+    "name": "d1CB",
+    "kind": "func",
+    "index": 198,
+    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)"
+   },
+   {
+    "name": "VTcg",
+    "kind": "func",
+    "index": 254,
+    "type": "(i32 i32 i32) -> ()"
+   },
+   {
+    "name": "v8Rj",
+    "kind": "func",
+    "index": 208,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "GxgU",
+    "kind": "func",
+    "index": 226,
+    "type": "(i32 i32 i32) -> (i32 i32)"
+   },
+   {
+    "name": "iNjB",
+    "kind": "func",
+    "index": 129,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "v3tB",
+    "kind": "func",
+    "index": 227,
+    "type": "(i32 i32 i32) -> (i32 i32)"
+   },
+   {
+    "name": "SYDD",
+    "kind": "func",
+    "index": 293,
+    "type": "() -> ()"
+   },
+   {
+    "name": "LXJE",
+    "kind": "func",
+    "index": 168,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "RFUu",
+    "kind": "func",
+    "index": 109,
+    "type": "(i32) -> ()"
+   },
+   {
+    "name": "ubyR",
+    "kind": "func",
+    "index": 95,
+    "type": "(i32) -> ()"
+   },
+   {
+    "name": "gYRm",
+    "kind": "func",
+    "index": 238,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "v1Fc",
+    "kind": "func",
+    "index": 234,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "Bvak",
+    "kind": "func",
+    "index": 215,
+    "type": "(i32 i32) -> (i32 i32 i32 i32)"
+   },
+   {
+    "name": "fNX9",
+    "kind": "func",
+    "index": 236,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "HKFN",
+    "kind": "func",
+    "index": 235,
+    "type": "(i32) -> (i32 i32)"
+   },
+   {
+    "name": "vkHt",
+    "kind": "func",
+    "index": 184,
+    "type": "(i32) -> (i32)"
+   }
+  ],
+  "globals": [
+   {
+    "index": 0,
+    "type": "i32",
+    "mutable": true,
+    "init": "i32.const 1048576"
+   },
+   {
+    "index": 1,
+    "type": "i32",
+    "mutable": false,
+    "init": "i32.const 1069908"
+   },
+   {
+    "index": 2,
+    "type": "i32",
+    "mutable": false,
+    "init": "i32.const 1070396"
+   }
+  ],
+  "memories": [
+   {
+    "min": 17,
+    "max": null,
+    "shared": false,
+    "index64": false
+   }
+  ],
+  "tables": [
+   {
+    "min": 114,
+    "max": 114,
+    "shared": false,
+    "index64": false,
+    "element": "funcref"
+   }
+  ],
+  "start": null,
+  "elements": {
+   "segments": 1,
+   "entries": 113,
+   "modes": {
+    "active/funcidx": 1
+   }
+  },
+  "data": {
+   "segments": 20,
+   "bytes": 20912,
+   "details": [
+    {
+     "mode": 0,
+     "offset": "i32.const 1048576",
+     "bytes": 5043
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1053632",
+     "bytes": 553
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1054196",
+     "bytes": 85
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1054292",
+     "bytes": 77
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1054380",
+     "bytes": 295
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1054692",
+     "bytes": 2729
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1057432",
+     "bytes": 1749
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1059192",
+     "bytes": 13
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1059216",
+     "bytes": 3329
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1062556",
+     "bytes": 5077
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1067644",
+     "bytes": 128
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1067801",
+     "bytes": 8
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1067856",
+     "bytes": 1
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1067894",
+     "bytes": 1
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1067921",
+     "bytes": 1
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1068017",
+     "bytes": 1339
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1069422",
+     "bytes": 51
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1069484",
+     "bytes": 423
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1069908",
+     "bytes": 1
+    },
+    {
+     "mode": 0,
+     "offset": "i32.const 1070366",
+     "bytes": 9
+    }
+   ],
+   "declared_segments": 20
+  },
+  "functions": {
+   "imported": 3,
+   "defined": 295,
+   "code_bytes": 203923,
+   "locals_total": 1693,
+   "scan_ok": 295,
+   "scan_degraded": 0,
+   "instruction_count": 99059,
+   "simd_ops": 0,
+   "named": 0,
+   "size_histogram": {
+    "<= 32": 50,
+    "<= 64": 30,
+    "<= 128": 39,
+    "<= 256": 41,
+    "<= 512": 67,
+    "<= 1024": 36,
+    "<= 2048": 17,
+    "<= 4096": 6,
+    "<= 8192": 6,
+    "<= 16384": 1,
+    "> 16384": 2
+   },
+   "top_by_size": [
+    {
+     "index": 0,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 20,
+     "body_bytes": 19288,
+     "instructions": 9074,
+     "top_opcodes": "local.get\u00d72247, i32.const\u00d71482, end\u00d7474, local.set\u00d7415, br_if\u00d7385",
+     "calls": [
+      106,
+      4,
+      249,
+      131,
+      174,
+      174,
+      174,
+      174,
+      249,
+      174,
+      249,
+      174,
+      148,
+      148,
+      148,
+      148
+     ],
+     "degraded": false
+    },
+    {
+     "index": 1,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 37,
+     "body_bytes": 10066,
+     "instructions": 5070,
+     "top_opcodes": "local.get\u00d71501, i32.const\u00d7694, local.tee\u00d7271, i32.add\u00d7246, end\u00d7226",
+     "calls": [
+      100,
+      251,
+      203,
+      100,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      100,
+      188,
+      188,
+      188,
+      188,
+      251
+     ],
+     "degraded": false
+    },
+    {
+     "index": 2,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 20,
+     "body_bytes": 8012,
+     "instructions": 4355,
+     "top_opcodes": "local.get\u00d71091, i32.const\u00d7672, local.tee\u00d7598, i32.add\u00d7406, i32.load8_u\u00d7200",
+     "calls": [],
+     "degraded": false
+    },
+    {
+     "index": 3,
+     "name": null,
+     "type": "(i32) -> (i32)",
+     "locals": 10,
+     "body_bytes": 4929,
+     "instructions": 2157,
+     "top_opcodes": "local.get\u00d7505, i32.const\u00d7449, i32.store\u00d7204, local.tee\u00d7154, i32.load\u00d7105",
+     "calls": [
+      94,
+      83,
+      94,
+      94
+     ],
+     "degraded": false
+    },
+    {
+     "index": 4,
+     "name": null,
+     "type": "(i32 i32 i32) -> ()",
+     "locals": 28,
+     "body_bytes": 4049,
+     "instructions": 2016,
+     "top_opcodes": "local.get\u00d7547, i32.const\u00d7297, local.tee\u00d7127, i32.add\u00d7117, local.set\u00d790",
+     "calls": [
+      249,
+      142,
+      82,
+      142,
+      142,
+      142,
+      192,
+      192,
+      192,
+      250,
+      199,
+      203,
+      34,
+      100,
+      142,
+      142
+     ],
+     "degraded": false
+    },
+    {
+     "index": 5,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 26,
+     "body_bytes": 3781,
+     "instructions": 1983,
+     "top_opcodes": "local.get\u00d7502, local.tee\u00d7165, i32.const\u00d7161, i64.const\u00d7136, local.set\u00d7112",
+     "calls": [
+      156,
+      96,
+      59,
+      59,
+      186,
+      20,
+      96,
+      29,
+      190,
+      29,
+      190,
+      174,
+      29,
+      59,
+      69,
+      190
+     ],
+     "degraded": false
+    },
+    {
+     "index": 6,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)",
+     "locals": 27,
+     "body_bytes": 3460,
+     "instructions": 1798,
+     "top_opcodes": "local.get\u00d7465, i32.const\u00d7304, local.set\u00d7157, i32.add\u00d7109, local.tee\u00d793",
+     "calls": [
+      188,
+      271,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      188,
+      100,
+      199,
+      188
+     ],
+     "degraded": false
+    },
+    {
+     "index": 7,
+     "name": null,
+     "type": "(i32 i32 i32) -> ()",
+     "locals": 23,
+     "body_bytes": 1853,
+     "instructions": 970,
+     "top_opcodes": "local.get\u00d7269, local.tee\u00d790, i32.const\u00d764, i64.const\u00d757, local.set\u00d742",
+     "calls": [
+      122,
+      59,
+      174,
+      186,
+      20,
+      174,
+      122,
+      29,
+      190,
+      174,
+      122,
+      59,
+      174
+     ],
+     "degraded": false
+    },
+    {
+     "index": 8,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32) -> ()",
+     "locals": 17,
+     "body_bytes": 4202,
+     "instructions": 2026,
+     "top_opcodes": "local.get\u00d7602, i32.const\u00d7250, end\u00d7121, i32.load\u00d7109, local.tee\u00d7107",
+     "calls": [
+      251,
+      251,
+      100,
+      100,
+      142,
+      142,
+      13,
+      251,
+      100,
+      5,
+      174,
+      188,
+      100,
+      148,
+      100,
+      5
+     ],
+     "degraded": false
+    },
+    {
+     "index": 9,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 10,
+     "body_bytes": 1959,
+     "instructions": 924,
+     "top_opcodes": "local.get\u00d7296, i32.const\u00d7110, i32.load\u00d768, local.tee\u00d753, i32.store\u00d750",
+     "calls": [
+      15,
+      15,
+      191,
+      249,
+      107,
+      15,
+      190,
+      107,
+      250,
+      12,
+      174,
+      191,
+      174,
+      191,
+      178,
+      174
+     ],
+     "degraded": false
+    },
+    {
+     "index": 10,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32) -> ()",
+     "locals": 19,
+     "body_bytes": 1513,
+     "instructions": 727,
+     "top_opcodes": "local.get\u00d7247, i32.const\u00d773, end\u00d741, i32.load\u00d734, local.set\u00d729",
+     "calls": [
+      271,
+      3,
+      106,
+      139,
+      3,
+      100,
+      250,
+      4,
+      106,
+      100,
+      100,
+      148,
+      100,
+      100
+     ],
+     "degraded": false
+    },
+    {
+     "index": 11,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 15,
+     "body_bytes": 1350,
+     "instructions": 673,
+     "top_opcodes": "local.get\u00d7187, i32.const\u00d786, i32.add\u00d740, local.tee\u00d740, i32.load\u00d740",
+     "calls": [
+      174,
+      174,
+      186,
+      249,
+      178,
+      78,
+      249,
+      78,
+      142,
+      174,
+      174,
+      174,
+      174,
+      287,
+      250
+     ],
+     "degraded": false
+    },
+    {
+     "index": 12,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 32,
+     "body_bytes": 6991,
+     "instructions": 3333,
+     "top_opcodes": "local.get\u00d7983, i32.const\u00d7368, local.set\u00d7163, end\u00d7162, i32.add\u00d7158",
+     "calls": [
+      190,
+      214,
+      163,
+      174,
+      191,
+      90,
+      140,
+      187,
+      187,
+      158,
+      138,
+      160,
+      90,
+      17,
+      78,
+      143
+     ],
+     "degraded": false
+    },
+    {
+     "index": 13,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 18,
+     "body_bytes": 1246,
+     "instructions": 589,
+     "top_opcodes": "local.get\u00d7187, i32.const\u00d753, local.set\u00d732, i64.store\u00d732, i64.load\u00d730",
+     "calls": [
+      78,
+      174,
+      178,
+      178,
+      249,
+      178,
+      249,
+      178,
+      249,
+      178,
+      178,
+      250,
+      250,
+      250
+     ],
+     "degraded": false
+    },
+    {
+     "index": 14,
+     "name": null,
+     "type": "(i32 i32 i32) -> ()",
+     "locals": 12,
+     "body_bytes": 1953,
+     "instructions": 876,
+     "top_opcodes": "local.get\u00d7218, i32.const\u00d7147, local.set\u00d739, i64.const\u00d739, i32.store\u00d738",
+     "calls": [
+      131,
+      249,
+      249,
+      287,
+      250,
+      13,
+      251,
+      43,
+      249,
+      250,
+      99,
+      19,
+      271,
+      271,
+      143,
+      117
+     ],
+     "degraded": false
+    },
+    {
+     "index": 16,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 17,
+     "body_bytes": 2007,
+     "instructions": 1002,
+     "top_opcodes": "local.get\u00d7243, i32.const\u00d7177, local.set\u00d782, local.tee\u00d745, end\u00d738",
+     "calls": [
+      13,
+      272,
+      199,
+      171,
+      272,
+      272,
+      174,
+      99,
+      272,
+      271
+     ],
+     "degraded": false
+    },
+    {
+     "index": 18,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 9,
+     "body_bytes": 1124,
+     "instructions": 511,
+     "top_opcodes": "local.get\u00d7155, i32.const\u00d761, i32.store\u00d736, i32.load\u00d734, i32.add\u00d724",
+     "calls": [
+      249,
+      249,
+      249,
+      249,
+      48,
+      78,
+      78,
+      250,
+      78,
+      174,
+      250
+     ],
+     "degraded": false
+    },
+    {
+     "index": 21,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32) -> ()",
+     "locals": 27,
+     "body_bytes": 1887,
+     "instructions": 949,
+     "top_opcodes": "local.get\u00d7237, i32.const\u00d7121, local.tee\u00d768, i32.add\u00d757, local.set\u00d748",
+     "calls": [
+      100,
+      244,
+      38,
+      244,
+      249,
+      240,
+      244,
+      174,
+      139,
+      250,
+      174
+     ],
+     "degraded": false
+    },
+    {
+     "index": 34,
+     "name": null,
+     "type": "(i32 i32 i32 i32) -> ()",
+     "locals": 13,
+     "body_bytes": 1148,
+     "instructions": 569,
+     "top_opcodes": "local.get\u00d7156, i32.const\u00d766, i32.add\u00d746, local.tee\u00d741, local.set\u00d734",
+     "calls": [],
+     "degraded": false
+    },
+    {
+     "index": 36,
+     "name": null,
+     "type": "(i32 i32 i32 i32) -> ()",
+     "locals": 23,
+     "body_bytes": 1733,
+     "instructions": 831,
+     "top_opcodes": "local.get\u00d7238, i32.const\u00d784, local.tee\u00d746, i64.load\u00d746, i32.add\u00d745",
+     "calls": [
+      67,
+      244,
+      37,
+      244,
+      249,
+      240,
+      244,
+      67,
+      174,
+      190,
+      174
+     ],
+     "degraded": false
+    },
+    {
+     "index": 41,
+     "name": null,
+     "type": "(i32 i32) -> ()",
+     "locals": 20,
+     "body_bytes": 1140,
+     "instructions": 532,
+     "top_opcodes": "local.get\u00d7144, i32.const\u00d763, local.tee\u00d729, i32.load\u00d729, i32.add\u00d728",
+     "calls": [
+      156,
+      29,
+      61,
+      156,
+      77,
+      77,
+      20,
+      68,
+      190,
+      61,
+      174,
+      174
+     ],
+     "degraded": false
+    },
+    {
+     "index": 60,
+     "name": null,
+     "type": "(i32 i32) -> (i32)",
+     "locals": 10,
+     "body_bytes": 1128,
+     "instructions": 533,
+     "top_opcodes": "local.get\u00d7116, i32.const\u00d7102, local.tee\u00d732, i32.add\u00d727, local.set\u00d725",
+     "calls": [
+      56
+     ],
+     "degraded": false
+    },
+    {
+     "index": 195,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)",
+     "locals": 25,
+     "body_bytes": 6465,
+     "instructions": 2889,
+     "top_opcodes": "local.get\u00d7884, i32.const\u00d7399, i32.store\u00d7171, i32.load\u00d7145, i32.add\u00d7144",
+     "calls": [
+      92,
+      249,
+      249,
+      249,
+      249,
+      249,
+      249,
+      249,
+      249,
+      78,
+      78,
+      249,
+      249,
+      78,
+      249,
+      250
+     ],
+     "degraded": false
+    },
+    {
+     "index": 212,
+     "name": null,
+     "type": "(i32 i32) -> (i32 i32 i32 i32)",
+     "locals": 14,
+     "body_bytes": 1303,
+     "instructions": 630,
+     "top_opcodes": "local.get\u00d7170, i32.const\u00d791, i32.store\u00d740, local.set\u00d732, end\u00d730",
+     "calls": [
+      279,
+      278,
+      91,
+      249,
+      7,
+      174,
+      250,
+      249,
+      18,
+      18,
+      18,
+      174,
+      249,
+      250,
+      250,
+      223
+     ],
+     "degraded": false
+    },
+    {
+     "index": 216,
+     "name": null,
+     "type": "(i32 i32 i32 i32 i32) -> (i32 i32)",
+     "locals": 36,
+     "body_bytes": 2726,
+     "instructions": 1306,
+     "top_opcodes": "local.get\u00d7354, i32.const\u00d7162, local.set\u00d773, local.tee\u00d768, i32.add\u00d768",
+     "calls": [
+      279,
+      278,
+      92,
+      249,
+      250,
+      156,
+      249,
+      67,
+      244,
+      38,
+      244,
+      249,
+      240,
+      244,
+      67,
+      174
+     ],
+     "degraded": false
+    },
+    {
+     "index": 223,
+     "name": null,
+     "type": "(i32 i32 i32) -> (i32 i32)",
+     "locals": 60,
+     "body_bytes": 26652,
+     "instructions": 12791,
+     "top_opcodes": "local.get\u00d73787, i32.const\u00d71489, local.tee\u00d7782, i32.load\u00d7693, i32.add\u00d7669",
+     "calls": [
+      279,
+      278,
+      199,
+      64,
+      136,
+      174,
+      174,
+      156,
+      20,
+      122,
+      52,
+      249,
+      250,
+      249,
+      39,
+      144
+     ],
+     "degraded": false
+    },
+    {
+     "index": 225,
+     "name": null,
+     "type": "(i32 i32) -> (i32 i32)",
+     "locals": 21,
+     "body_bytes": 2405,
+     "instructions": 1085,
+     "top_opcodes": "local.get\u00d7360, i32.const\u00d7112, i32.load\u00d777, local.set\u00d755, i32.store\u00d752",
+     "calls": [
+      279,
+      278,
+      65,
+      249,
+      138,
+      138,
+      173,
+      93,
+      174,
+      93,
+      81,
+      44,
+      86,
+      193,
+      209,
+      176
+     ],
+     "degraded": false
+    },
+    {
+     "index": 232,
+     "name": null,
+     "type": "(i32) -> (i32 i32)",
+     "locals": 54,
+     "body_bytes": 8142,
+     "instructions": 3824,
+     "top_opcodes": "local.get\u00d71057, i32.const\u00d7469, local.set\u00d7207, i32.add\u00d7203, i32.load\u00d7190",
+     "calls": [
+      279,
+      278,
+      65,
+      249,
+      156,
+      25,
+      68,
+      25,
+      190,
+      250,
+      44,
+      93,
+      174,
+      156,
+      156,
+      156
+     ],
+     "degraded": false
+    },
+    {
+     "index": 236,
+     "name": null,
+     "type": "(i32) -> (i32 i32)",
+     "locals": 18,
+     "body_bytes": 1360,
+     "instructions": 655,
+     "top_opcodes": "local.get\u00d7176, i32.const\u00d797, i32.add\u00d744, end\u00d735, local.tee\u00d733",
+     "calls": [
+      279,
+      278,
+      249,
+      56,
+      56,
+      56,
+      200,
+      249,
+      142,
+      174,
+      174,
+      250,
+      175,
+      250,
+      199,
+      199
+     ],
+     "degraded": false
+    },
+    {
+     "index": 279,
+     "name": null,
+     "type": "(i32 i32) -> (i32)",
+     "locals": 2,
+     "body_bytes": 2231,
+     "instructions": 961,
+     "top_opcodes": "local.get\u00d7256, i32.const\u00d7161, i32.add\u00d795, i32.load\u00d784, end\u00d746",
+     "calls": [
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56,
+      56
+     ],
+     "degraded": false
+    }
+   ]
+  },
+  "opcodes": {
+   "local.get": 27217,
+   "i32.const": 13373,
+   "local.tee": 5578,
+   "i32.add": 4948,
+   "end": 4602,
+   "local.set": 4586,
+   "i32.load": 4223,
+   "i32.store": 3016,
+   "br_if": 2671,
+   "block": 2165,
+   "call": 1867,
+   "i32.sub": 1864,
+   "i64.const": 1754,
+   "if": 1655,
+   "i64.store": 1484,
+   "br": 1484,
+   "i64.load": 1311,
+   "i32.and": 1294,
+   "i32.eqz": 1006,
+   "i32.store8": 842,
+   "i32.load8_u": 809,
+   "i32.ne": 672,
+   "i32.shl": 624,
+   "unreachable": 564,
+   "i32.shr_u": 556,
+   "select": 554,
+   "i32.eq": 502,
+   "loop": 487,
+   "i32.lt_u": 462,
+   "global.set": 403,
+   "i64.xor": 384,
+   "i64.extend_i32_u": 361,
+   "i32.gt_u": 336,
+   "i64.and": 313,
+   "i64.shr_u": 300,
+   "i32.wrap_i64": 297,
+   "i32.mul": 270,
+   "i32.xor": 260,
+   "i64.rotl": 251,
+   "i64.add": 243
+  },
+  "custom": {
+   "sections": [
+    {
+     "name": "name",
+     "bytes": 24
+    }
+   ],
+   "module_name": "c8974c2869358f75.1150",
+   "producers": {}
+  },
+  "strings": [
+   {
+    "len": 1040,
+    "text": "entity not foundpermission deniedconnection refusedconnection resethost unreachablenetwork unreachableconnection abortednot connectedaddress in useaddress not availablenetwork downbroken pipeentity al"
+   },
+   {
+    "len": 1017,
+    "text": "criticalprivatereservedsafecopylimits are exceededBadZlibHeaderInsufficientInputInvalidBlockTypeInvalidUncompressedBlockLengthInvalidHlitInvalidHdistInvalidCodeLengthRepeatBadCodeLengthHuffmanTreeBadL"
+   },
+   {
+    "len": 181,
+    "text": "Errornull pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rustchunk size must be non-zeroassertion failed: self.filled >= old_filled"
+   },
+   {
+    "len": 174,
+    "text": "Utf8Errorvalid_up_toerror_lenNoneSomeEnd of image has been reachedA fatal decoding error has been encounted earlierGrayscaleRgbIndexedGrayscaleAlphaRgbaOneTwoFourEightSixteen"
+   },
+   {
+    "len": 124,
+    "text": "resources aren't name and source pairsdata:image/png;base64,ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+   },
+   {
+    "len": 110,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/unfiltering_buffer.rs"
+   },
+   {
+    "len": 109,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/transform/palette.rs"
+   },
+   {
+    "len": 104,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/read_decoder.rs"
+   },
+   {
+    "len": 101,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/transform.rs"
+   },
+   {
+    "len": 98,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/decompress.rs"
+   },
+   {
+    "len": 98,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/stream.rs"
+   },
+   {
+    "len": 97,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/text_metadata.rs"
+   },
+   {
+    "len": 96,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/compress.rs"
+   },
+   {
+    "len": 96,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/zlib.rs"
+   },
+   {
+    "len": 95,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/fdeflate-0.3.7/src/huffman.rs"
+   },
+   {
+    "len": 95,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/mod.rs"
+   },
+   {
+    "len": 93,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs"
+   },
+   {
+    "len": 91,
+    "text": "some block atlas indices are missingthere are no block atlas texturesOneTwoFourEightSixteen"
+   },
+   {
+    "len": 90,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/common.rs"
+   },
+   {
+    "len": 89,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/iter/adapters/step_by.rs"
+   },
+   {
+    "len": 89,
+    "text": "/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/adam7.rs"
+   },
+   {
+    "len": 86,
+    "text": "a formatting trait implementation returned an error when the underlying stream did not"
+   },
+   {
+    "len": 84,
+    "text": "assertion failed: (8 / bit_depth as usize * channels).saturating_mul(input.len()) >="
+   },
+   {
+    "len": 81,
+    "text": "internal error: entered unreachable code: Not a possible byte rounded pixel width"
+   },
+   {
+    "len": 80,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/raw_vec/mod.rs"
+   },
+   {
+    "len": 79,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/index.rs"
+   },
+   {
+    "len": 78,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/iter.rs"
+   },
+   {
+    "len": 76,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/panicking.rs"
+   },
+   {
+    "len": 75,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/string.rs"
+   },
+   {
+    "len": 72,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/fmt.rs"
+   },
+   {
+    "len": 72,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/str.rs"
+   },
+   {
+    "len": 65,
+    "text": "assertion failed: self.subframe.current_interlace_info.is_none()="
+   },
+   {
+    "len": 63,
+    "text": ">. It must be greater than zero and less than the sample depth "
+   },
+   {
+    "len": 63,
+    "text": "attempted to take ownership of Rust value while it was borrowed"
+   },
+   {
+    "len": 63,
+    "text": "assertion failed: self.unfiltering_buffer.remaining_bytes() > 0"
+   },
+   {
+    "len": 62,
+    "text": "=internal error: entered unreachable code: Unrecognized chunk "
+   },
+   {
+    "len": 62,
+    "text": "= pixels with alpha from 1 to 9, too faint to see: make them 0"
+   },
+   {
+    "len": 61,
+    "text": "chunk size must be non-zerogenerate_required hasn't succeeded"
+   },
+   {
+    "len": 55,
+    "text": "6's colour textureInfo doesn't start with three numbers"
+   },
+   {
+    "len": 55,
+    "text": "a Display implementation returned an error unexpectedly"
+   },
+   {
+    "len": 55,
+    "text": "    0x0123456789ABCDEFfalsetrueRefCell already borrowed"
+   },
+   {
+    "len": 54,
+    "text": "crates/texture-assets/src/generator/average_colours.rs"
+   },
+   {
+    "len": 53,
+    "text": "attempt to join into collection with len > usize::MAX"
+   },
+   {
+    "len": 53,
+    "text": "assertion failed: matches!(bit_depth, 1 | 2 | 4 | 8)\""
+   },
+   {
+    "len": 53,
+    "text": "cannot modify the panic hook from a panicking thread7"
+   },
+   {
+    "len": 49,
+    "text": "assertion failed: discard_size <= self.availabled"
+   },
+   {
+    "len": 49,
+    "text": "assertion failed: output_position <= output.len()"
+   },
+   {
+    "len": 48,
+    "text": "crates/texture-assets/src/generator/resources.rs"
+   },
+   {
+    "len": 48,
+    "text": "no sourcethe blocks end mid-entrydata:,mid > len"
+   },
+   {
+    "len": 46,
+    "text": "assertion failed: psize >= size + min_overhead"
+   },
+   {
+    "len": 46,
+    "text": "assertion failed: psize <= size + max_overhead"
+   },
+   {
+    "len": 45,
+    "text": "crates/texture-assets/src/generator/stages.rs"
+   },
+   {
+    "len": 45,
+    "text": "textureNameToIndex isn't name and index pairs"
+   },
+   {
+    "len": 44,
+    "text": "+Invalid color/depth combination in header: "
+   },
+   {
+    "len": 44,
+    "text": "+\" doesn't rotate by a whole number of turns"
+   },
+   {
+    "len": 44,
+    "text": "+) does not match destination slice length ("
+   },
+   {
+    "len": 43,
+    "text": "* must appear between PLTE and IDAT chunks."
+   },
+   {
+    "len": 43,
+    "text": "assertion failed: self.remaining_frames > 0"
+   },
+   {
+    "len": 42,
+    "text": ") px, so its block has no particle colours"
+   },
+   {
+    "len": 42,
+    "text": "crates/bloxd-wasm-shared/src/debug_trap.rs"
+   }
+  ],
+  "parse_errors": [],
+  "function_names": {}
+ },
+ "history": [
+  {
+   "build": "bqoxjr.2558012f",
+   "at": "2026-11-21T12:37:19+09:00",
+   "size": 226666,
+   "sha256": "f13f878b8e801e1b",
+   "functions": 295,
+   "exports": 39,
+   "imports": 3
+  }
+ ]
+}

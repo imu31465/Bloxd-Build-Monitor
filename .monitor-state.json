@@ -4,7 +4,7 @@
     "build_name": "bqoxjr",
     "asset_hash": "2558012f",
     "build_url": "https://bloxd.io/static/js/bqoxjr.main.2558012f.js",
-    "checked_at": "2026-11-21T12:06:22+09:00",
+    "checked_at": "2026-11-21T12:37:10+09:00",
     "storage_version": 2,
     "bundle_path": "bundles/bloxd.io/main.js",
     "bundle_sha256": "1f0cbd33c01c889bea13bbaf0293d54122b0c9eb07d49232f34e7c9993cbea85",
@@ -3929,14 +3929,287 @@
         "source_url": "https://bloxd.io/static/js/bqoxjr.main.2558012f.js"
       }
     ],
-    "beautified": true
+    "beautified": true,
+    "wasm": {
+      "checked_at": "2026-11-21T12:37:12+09:00",
+      "modules": {
+        "bloxd_wasm_anim_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_anim_bg.eeed96dc31eb415f614d.wasm",
+          "filename": "bloxd_wasm_anim_bg.eeed96dc31eb415f614d.wasm",
+          "cdn_hash": "eeed96dc31eb415f614d",
+          "sha256": "3f5071fcbbd4cd73afc810a4abff7c2f49f86a8638003d25fa9521ff9c12ae28",
+          "size": 415766,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_anim_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_anim_bg.facts.json",
+          "summary": {
+            "functions": 258,
+            "imported_functions": 5,
+            "exports": 10,
+            "imports": 5,
+            "code_bytes": 256664,
+            "data_bytes": 157622,
+            "module_id": "93b76df53933052f.821"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_bg.80cf7a9d2c5f9fd62bf3.wasm",
+          "filename": "bloxd_wasm_bg.80cf7a9d2c5f9fd62bf3.wasm",
+          "cdn_hash": "80cf7a9d2c5f9fd62bf3",
+          "sha256": "1dd71b260cf77c239728051b861ab33f1bc93c07cb4fd28db7884da2815d9fb7",
+          "size": 335733,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_bg.facts.json",
+          "summary": {
+            "functions": 369,
+            "imported_functions": 6,
+            "exports": 158,
+            "imports": 6,
+            "code_bytes": 318720,
+            "data_bytes": 13709,
+            "module_id": "d82fc2f36a68119e.2444"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_models_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_models_bg.593d3d487912d0f5515a.wasm",
+          "filename": "bloxd_wasm_models_bg.593d3d487912d0f5515a.wasm",
+          "cdn_hash": "593d3d487912d0f5515a",
+          "sha256": "7efbd9cd4bdaa31a2b1cc79e297121e9fc854705c550b2f59e1da981f144f4cb",
+          "size": 311680,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_models_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_models_bg.facts.json",
+          "summary": {
+            "functions": 220,
+            "imported_functions": 27,
+            "exports": 23,
+            "imports": 27,
+            "code_bytes": 249657,
+            "data_bytes": 58888,
+            "module_id": "d3f4b9596f903f17.1165"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_recorder_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_recorder_bg.2be24ef9f180b6336dbf.wasm",
+          "filename": "bloxd_wasm_recorder_bg.2be24ef9f180b6336dbf.wasm",
+          "cdn_hash": "2be24ef9f180b6336dbf",
+          "sha256": "5fccb956d97b8d65d45cf6afb9a7042d1e4e4bad858c8aa1ec94da37e97ec72f",
+          "size": 193925,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_recorder_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_recorder_bg.facts.json",
+          "summary": {
+            "functions": 424,
+            "imported_functions": 5,
+            "exports": 26,
+            "imports": 5,
+            "code_bytes": 183469,
+            "data_bytes": 8385,
+            "module_id": "387729553894f11e.1078"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_replay_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_replay_bg.6817b8cd52234e0f59f4.wasm",
+          "filename": "bloxd_wasm_replay_bg.6817b8cd52234e0f59f4.wasm",
+          "cdn_hash": "6817b8cd52234e0f59f4",
+          "sha256": "225276b91dfdf588b8a1477982fd12458f6ce65cfbaf6a782c82ab32d22513fb",
+          "size": 354518,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_replay_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_replay_bg.facts.json",
+          "summary": {
+            "functions": 359,
+            "imported_functions": 5,
+            "exports": 34,
+            "imports": 5,
+            "code_bytes": 344967,
+            "data_bytes": 7442,
+            "module_id": "317b70a5892beea7.1124"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_shader_pack_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_shader_pack_bg.80d86b93e0b28b1ed3da.wasm",
+          "filename": "bloxd_wasm_shader_pack_bg.80d86b93e0b28b1ed3da.wasm",
+          "cdn_hash": "80d86b93e0b28b1ed3da",
+          "sha256": "e521fc18804ece0348d56f2c73e39ef69fee01e1ad9f9c53d92bd0fdbf472492",
+          "size": 304132,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_shader_pack_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_shader_pack_bg.facts.json",
+          "summary": {
+            "functions": 265,
+            "imported_functions": 10,
+            "exports": 29,
+            "imports": 10,
+            "code_bytes": 256592,
+            "data_bytes": 44881,
+            "module_id": "4eabbc7d441aa5d9.1190"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_textures_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_textures_bg.61b5ac2f80ff09b15c5a.wasm",
+          "filename": "bloxd_wasm_textures_bg.61b5ac2f80ff09b15c5a.wasm",
+          "cdn_hash": "61b5ac2f80ff09b15c5a",
+          "sha256": "f13f878b8e801e1b7391eae5c539ceb75b7c99a88018bdad896fe7b520427f2f",
+          "size": 226666,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_textures_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_textures_bg.facts.json",
+          "summary": {
+            "functions": 295,
+            "imported_functions": 3,
+            "exports": 39,
+            "imports": 3,
+            "code_bytes": 203923,
+            "data_bytes": 20912,
+            "module_id": "c8974c2869358f75.1150"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgl1_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_webgl1_bg.0a1ff5ac6d57c0e5bbc5.wasm",
+          "filename": "bloxd_wasm_webgl1_bg.0a1ff5ac6d57c0e5bbc5.wasm",
+          "cdn_hash": "0a1ff5ac6d57c0e5bbc5",
+          "sha256": "d6f63b1aa81b972a9480431e3334c89fc0648b9790fe3b5c8ff72a4945814f45",
+          "size": 4770278,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_webgl1_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_webgl1_bg.facts.json",
+          "summary": {
+            "functions": 2822,
+            "imported_functions": 281,
+            "exports": 154,
+            "imports": 281,
+            "code_bytes": 3937811,
+            "data_bytes": 788708,
+            "module_id": "c9aac24a9ae7bc4a.10478"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgl_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_webgl_bg.2c49ab306999061a81b8.wasm",
+          "filename": "bloxd_wasm_webgl_bg.2c49ab306999061a81b8.wasm",
+          "cdn_hash": "2c49ab306999061a81b8",
+          "sha256": "08bd13fedb12bff9b9605ef44db652dccf2f7dcf60a963258385b5f773a6f220",
+          "size": 5369983,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_webgl_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_webgl_bg.facts.json",
+          "summary": {
+            "functions": 2860,
+            "imported_functions": 299,
+            "exports": 154,
+            "imports": 299,
+            "code_bytes": 3974644,
+            "data_bytes": 1348638,
+            "module_id": "d5a3fa870604c824.10797"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgpu_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_webgpu_bg.5b4b5f10cf8f9c7f6b4e.wasm",
+          "filename": "bloxd_wasm_webgpu_bg.5b4b5f10cf8f9c7f6b4e.wasm",
+          "cdn_hash": "5b4b5f10cf8f9c7f6b4e",
+          "sha256": "5a2823876f9d5f8660104cc25ddeb02c3ddbc283e88525fa31e6d0deaa802210",
+          "size": 5006327,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_webgpu_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_webgpu_bg.facts.json",
+          "summary": {
+            "functions": 2878,
+            "imported_functions": 390,
+            "exports": 157,
+            "imports": 390,
+            "code_bytes": 3973532,
+            "data_bytes": 988050,
+            "module_id": "c81ddc18fc64f5e6.12057"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "bloxd_wasm_workers_bg": {
+          "url": "https://bloxd.io/static/media/bloxd_wasm_workers_bg.bbb759863ba8f8a8aa47.wasm",
+          "filename": "bloxd_wasm_workers_bg.bbb759863ba8f8a8aa47.wasm",
+          "cdn_hash": "bbb759863ba8f8a8aa47",
+          "sha256": "e767134c25f99ed90bec9c0af92587618ddb83193667d16121760ce713ad3288",
+          "size": 196044,
+          "report_path": "wasm/bloxd.io/bloxd_wasm_workers_bg.md",
+          "facts_path": "wasm/bloxd.io/bloxd_wasm_workers_bg.facts.json",
+          "summary": {
+            "functions": 165,
+            "imported_functions": 5,
+            "exports": 33,
+            "imports": 5,
+            "code_bytes": 184550,
+            "data_bytes": 10335,
+            "module_id": "f95acdaa2089e0df.777"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        },
+        "draco_decoder_gltf_v2_1": {
+          "url": "https://bloxd.io/static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm",
+          "filename": "draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm",
+          "cdn_hash": "1207caa8c6e38dc2aa04",
+          "sha256": "833427ade1455b6c7ba2a84e44c426f32a47c7f6117b4e17d2136a8d4815728b",
+          "size": 188782,
+          "report_path": "wasm/bloxd.io/draco_decoder_gltf_v2_1.md",
+          "facts_path": "wasm/bloxd.io/draco_decoder_gltf_v2_1.facts.json",
+          "summary": {
+            "functions": 421,
+            "imported_functions": 5,
+            "exports": 148,
+            "imports": 5,
+            "code_bytes": 175896,
+            "data_bytes": 10296,
+            "module_id": ""
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:12+09:00",
+          "error": null
+        }
+      },
+      "changed": [
+        "bloxd_wasm_anim_bg",
+        "bloxd_wasm_bg",
+        "bloxd_wasm_models_bg",
+        "bloxd_wasm_recorder_bg",
+        "bloxd_wasm_replay_bg",
+        "bloxd_wasm_shader_pack_bg",
+        "bloxd_wasm_textures_bg",
+        "bloxd_wasm_webgl1_bg",
+        "bloxd_wasm_webgl_bg",
+        "bloxd_wasm_webgpu_bg",
+        "bloxd_wasm_workers_bg",
+        "draco_decoder_gltf_v2_1"
+      ],
+      "removed": [],
+      "errors": []
+    }
   },
   "preprod.bloxd.io": {
     "build": "bbb6l5.0244a119",
     "build_name": "bbb6l5",
     "asset_hash": "0244a119",
     "build_url": "https://preprod.bloxd.io/static/js/bbb6l5.main.0244a119.js",
-    "checked_at": "2026-11-21T12:06:48+09:00",
+    "checked_at": "2026-11-21T12:37:11+09:00",
     "storage_version": 2,
     "bundle_path": "bundles/preprod.bloxd.io/main.js",
     "bundle_sha256": "2bcea8aa5ef1004dc1ba864857b4160ef0c66841673a7c10f7e58402158abdaa",
@@ -7861,14 +8134,287 @@
         "source_url": "https://preprod.bloxd.io/static/js/bbb6l5.main.0244a119.js"
       }
     ],
-    "beautified": true
+    "beautified": true,
+    "wasm": {
+      "checked_at": "2026-11-21T12:37:15+09:00",
+      "modules": {
+        "bloxd_wasm_anim_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_anim_bg.e877f14ffbaecd066601.wasm",
+          "filename": "bloxd_wasm_anim_bg.e877f14ffbaecd066601.wasm",
+          "cdn_hash": "e877f14ffbaecd066601",
+          "sha256": "11dd5bcc2c7323ae0a5b9e4cd8b8c81d457a9ea85d6e339c6454ed1bb80a27c4",
+          "size": 415766,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_anim_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_anim_bg.facts.json",
+          "summary": {
+            "functions": 258,
+            "imported_functions": 5,
+            "exports": 10,
+            "imports": 5,
+            "code_bytes": 256664,
+            "data_bytes": 157622,
+            "module_id": "f4f099776fbc89e4.821"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_bg.567100f455f46cbfa6a7.wasm",
+          "filename": "bloxd_wasm_bg.567100f455f46cbfa6a7.wasm",
+          "cdn_hash": "567100f455f46cbfa6a7",
+          "sha256": "6d78896f037d6c3dd2ec91f53e012efc14d4c7478e36fc57749ae14be1df3096",
+          "size": 335733,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_bg.facts.json",
+          "summary": {
+            "functions": 369,
+            "imported_functions": 6,
+            "exports": 158,
+            "imports": 6,
+            "code_bytes": 318720,
+            "data_bytes": 13709,
+            "module_id": "2652fad3f39ee143.2444"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_models_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_models_bg.273d3ef33ab63e5ae007.wasm",
+          "filename": "bloxd_wasm_models_bg.273d3ef33ab63e5ae007.wasm",
+          "cdn_hash": "273d3ef33ab63e5ae007",
+          "sha256": "9dd9f9fb8ff600ad7045604d8a17da38690a8b012f1e8b7f578a1a671baf7185",
+          "size": 311680,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_models_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_models_bg.facts.json",
+          "summary": {
+            "functions": 220,
+            "imported_functions": 27,
+            "exports": 23,
+            "imports": 27,
+            "code_bytes": 249657,
+            "data_bytes": 58888,
+            "module_id": "001a780057e9571f.1165"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_recorder_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_recorder_bg.3117481d82752fd072e8.wasm",
+          "filename": "bloxd_wasm_recorder_bg.3117481d82752fd072e8.wasm",
+          "cdn_hash": "3117481d82752fd072e8",
+          "sha256": "166b4da1bfa19d1d90b1f2d66b23de17c858096a88eb92fe87a8c9e58f77c3bb",
+          "size": 193925,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_recorder_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_recorder_bg.facts.json",
+          "summary": {
+            "functions": 424,
+            "imported_functions": 5,
+            "exports": 26,
+            "imports": 5,
+            "code_bytes": 183469,
+            "data_bytes": 8385,
+            "module_id": "73ccd62ace38f2ff.1078"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_replay_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_replay_bg.70b4068ae185c9fabaff.wasm",
+          "filename": "bloxd_wasm_replay_bg.70b4068ae185c9fabaff.wasm",
+          "cdn_hash": "70b4068ae185c9fabaff",
+          "sha256": "f8132694ecb3c07d332a67ad7dab19d035d58dc2cea1ddbf2ca6dc7ec556cd0c",
+          "size": 354518,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_replay_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_replay_bg.facts.json",
+          "summary": {
+            "functions": 359,
+            "imported_functions": 5,
+            "exports": 34,
+            "imports": 5,
+            "code_bytes": 344967,
+            "data_bytes": 7442,
+            "module_id": "5455518245614472.1124"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_shader_pack_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_shader_pack_bg.85a99b3f49b7ce9ed7dc.wasm",
+          "filename": "bloxd_wasm_shader_pack_bg.85a99b3f49b7ce9ed7dc.wasm",
+          "cdn_hash": "85a99b3f49b7ce9ed7dc",
+          "sha256": "dfb97693642c8a1ee7219f62c2557fcfb1c20ef622361f5b18389c544478cae6",
+          "size": 304132,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_shader_pack_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_shader_pack_bg.facts.json",
+          "summary": {
+            "functions": 265,
+            "imported_functions": 10,
+            "exports": 29,
+            "imports": 10,
+            "code_bytes": 256592,
+            "data_bytes": 44881,
+            "module_id": "65e239fdf18cdf28.1190"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_textures_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_textures_bg.6d9847a3dd7a203a52fe.wasm",
+          "filename": "bloxd_wasm_textures_bg.6d9847a3dd7a203a52fe.wasm",
+          "cdn_hash": "6d9847a3dd7a203a52fe",
+          "sha256": "2ba4917ae218104948db870865715dacd8571878aedd4fece740312291892fac",
+          "size": 226666,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_textures_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_textures_bg.facts.json",
+          "summary": {
+            "functions": 295,
+            "imported_functions": 3,
+            "exports": 39,
+            "imports": 3,
+            "code_bytes": 203923,
+            "data_bytes": 20912,
+            "module_id": "8b711868e5e3ec91.1150"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgl1_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_webgl1_bg.08ef41c0dde7a04d377d.wasm",
+          "filename": "bloxd_wasm_webgl1_bg.08ef41c0dde7a04d377d.wasm",
+          "cdn_hash": "08ef41c0dde7a04d377d",
+          "sha256": "3cb76bb92c5501eb795864d943ed2c567c8b5ff7777cd5f2c08b0940197979c9",
+          "size": 4769492,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_webgl1_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_webgl1_bg.facts.json",
+          "summary": {
+            "functions": 2822,
+            "imported_functions": 281,
+            "exports": 154,
+            "imports": 281,
+            "code_bytes": 3937025,
+            "data_bytes": 788708,
+            "module_id": "1cd0b3dfff0a59b7.10478"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgl_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_webgl_bg.27a0dc9e59c84764d00e.wasm",
+          "filename": "bloxd_wasm_webgl_bg.27a0dc9e59c84764d00e.wasm",
+          "cdn_hash": "27a0dc9e59c84764d00e",
+          "sha256": "a5cefc5390d0e4cf10eab192e6d4403fc337fb14cfe0e3164c3430a7c721595d",
+          "size": 5368803,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_webgl_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_webgl_bg.facts.json",
+          "summary": {
+            "functions": 2859,
+            "imported_functions": 299,
+            "exports": 154,
+            "imports": 299,
+            "code_bytes": 3973490,
+            "data_bytes": 1348615,
+            "module_id": "cdaf671bdfeeb0f5.10796"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgpu_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_webgpu_bg.c06f463a9498d81676ed.wasm",
+          "filename": "bloxd_wasm_webgpu_bg.c06f463a9498d81676ed.wasm",
+          "cdn_hash": "c06f463a9498d81676ed",
+          "sha256": "72b5e9034b38cfcfd84eb4e4b1607ea3fedbb7078518766dd27ac431c9922848",
+          "size": 5005524,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_webgpu_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_webgpu_bg.facts.json",
+          "summary": {
+            "functions": 2878,
+            "imported_functions": 390,
+            "exports": 157,
+            "imports": 390,
+            "code_bytes": 3972729,
+            "data_bytes": 988050,
+            "module_id": "9fa0b7ff56f989f9.12057"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "bloxd_wasm_workers_bg": {
+          "url": "https://preprod.bloxd.io/static/media/bloxd_wasm_workers_bg.b1eeed671303ca766c1e.wasm",
+          "filename": "bloxd_wasm_workers_bg.b1eeed671303ca766c1e.wasm",
+          "cdn_hash": "b1eeed671303ca766c1e",
+          "sha256": "9fa00e1e679c4b317e391d15a0e20bcce764b10ac53881c003b3245b86db6cf5",
+          "size": 196044,
+          "report_path": "wasm/preprod.bloxd.io/bloxd_wasm_workers_bg.md",
+          "facts_path": "wasm/preprod.bloxd.io/bloxd_wasm_workers_bg.facts.json",
+          "summary": {
+            "functions": 165,
+            "imported_functions": 5,
+            "exports": 33,
+            "imports": 5,
+            "code_bytes": 184550,
+            "data_bytes": 10335,
+            "module_id": "8a41c09ff97e0601.777"
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        },
+        "draco_decoder_gltf_v2_1": {
+          "url": "https://preprod.bloxd.io/static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm",
+          "filename": "draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm",
+          "cdn_hash": "1207caa8c6e38dc2aa04",
+          "sha256": "833427ade1455b6c7ba2a84e44c426f32a47c7f6117b4e17d2136a8d4815728b",
+          "size": 188782,
+          "report_path": "wasm/preprod.bloxd.io/draco_decoder_gltf_v2_1.md",
+          "facts_path": "wasm/preprod.bloxd.io/draco_decoder_gltf_v2_1.facts.json",
+          "summary": {
+            "functions": 421,
+            "imported_functions": 5,
+            "exports": 148,
+            "imports": 5,
+            "code_bytes": 175896,
+            "data_bytes": 10296,
+            "module_id": ""
+          },
+          "last_changed_build": "bbb6l5.0244a119",
+          "last_changed_at": "2026-11-21T12:37:15+09:00",
+          "error": null
+        }
+      },
+      "changed": [
+        "bloxd_wasm_anim_bg",
+        "bloxd_wasm_bg",
+        "bloxd_wasm_models_bg",
+        "bloxd_wasm_recorder_bg",
+        "bloxd_wasm_replay_bg",
+        "bloxd_wasm_shader_pack_bg",
+        "bloxd_wasm_textures_bg",
+        "bloxd_wasm_webgl1_bg",
+        "bloxd_wasm_webgl_bg",
+        "bloxd_wasm_webgpu_bg",
+        "bloxd_wasm_workers_bg",
+        "draco_decoder_gltf_v2_1"
+      ],
+      "removed": [],
+      "errors": []
+    }
   },
   "staging.bloxd.io": {
     "build": "bqoxjr.2558012f",
     "build_name": "bqoxjr",
     "asset_hash": "2558012f",
     "build_url": "https://staging.bloxd.io/static/js/bqoxjr.main.2558012f.js",
-    "checked_at": "2026-11-21T12:06:48+09:00",
+    "checked_at": "2026-11-21T12:37:12+09:00",
     "storage_version": 2,
     "bundle_path": "bundles/staging.bloxd.io/main.js",
     "bundle_sha256": "1f0cbd33c01c889bea13bbaf0293d54122b0c9eb07d49232f34e7c9993cbea85",
@@ -11793,6 +12339,279 @@
         "source_url": "https://staging.bloxd.io/static/js/bqoxjr.main.2558012f.js"
       }
     ],
-    "beautified": true
+    "beautified": true,
+    "wasm": {
+      "checked_at": "2026-11-21T12:37:19+09:00",
+      "modules": {
+        "bloxd_wasm_anim_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_anim_bg.eeed96dc31eb415f614d.wasm",
+          "filename": "bloxd_wasm_anim_bg.eeed96dc31eb415f614d.wasm",
+          "cdn_hash": "eeed96dc31eb415f614d",
+          "sha256": "3f5071fcbbd4cd73afc810a4abff7c2f49f86a8638003d25fa9521ff9c12ae28",
+          "size": 415766,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_anim_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_anim_bg.facts.json",
+          "summary": {
+            "functions": 258,
+            "imported_functions": 5,
+            "exports": 10,
+            "imports": 5,
+            "code_bytes": 256664,
+            "data_bytes": 157622,
+            "module_id": "93b76df53933052f.821"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_bg.80cf7a9d2c5f9fd62bf3.wasm",
+          "filename": "bloxd_wasm_bg.80cf7a9d2c5f9fd62bf3.wasm",
+          "cdn_hash": "80cf7a9d2c5f9fd62bf3",
+          "sha256": "1dd71b260cf77c239728051b861ab33f1bc93c07cb4fd28db7884da2815d9fb7",
+          "size": 335733,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_bg.facts.json",
+          "summary": {
+            "functions": 369,
+            "imported_functions": 6,
+            "exports": 158,
+            "imports": 6,
+            "code_bytes": 318720,
+            "data_bytes": 13709,
+            "module_id": "d82fc2f36a68119e.2444"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_models_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.593d3d487912d0f5515a.wasm",
+          "filename": "bloxd_wasm_models_bg.593d3d487912d0f5515a.wasm",
+          "cdn_hash": "593d3d487912d0f5515a",
+          "sha256": "7efbd9cd4bdaa31a2b1cc79e297121e9fc854705c550b2f59e1da981f144f4cb",
+          "size": 311680,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_models_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_models_bg.facts.json",
+          "summary": {
+            "functions": 220,
+            "imported_functions": 27,
+            "exports": 23,
+            "imports": 27,
+            "code_bytes": 249657,
+            "data_bytes": 58888,
+            "module_id": "d3f4b9596f903f17.1165"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_recorder_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_recorder_bg.2be24ef9f180b6336dbf.wasm",
+          "filename": "bloxd_wasm_recorder_bg.2be24ef9f180b6336dbf.wasm",
+          "cdn_hash": "2be24ef9f180b6336dbf",
+          "sha256": "5fccb956d97b8d65d45cf6afb9a7042d1e4e4bad858c8aa1ec94da37e97ec72f",
+          "size": 193925,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_recorder_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_recorder_bg.facts.json",
+          "summary": {
+            "functions": 424,
+            "imported_functions": 5,
+            "exports": 26,
+            "imports": 5,
+            "code_bytes": 183469,
+            "data_bytes": 8385,
+            "module_id": "387729553894f11e.1078"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_replay_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_replay_bg.6817b8cd52234e0f59f4.wasm",
+          "filename": "bloxd_wasm_replay_bg.6817b8cd52234e0f59f4.wasm",
+          "cdn_hash": "6817b8cd52234e0f59f4",
+          "sha256": "225276b91dfdf588b8a1477982fd12458f6ce65cfbaf6a782c82ab32d22513fb",
+          "size": 354518,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_replay_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_replay_bg.facts.json",
+          "summary": {
+            "functions": 359,
+            "imported_functions": 5,
+            "exports": 34,
+            "imports": 5,
+            "code_bytes": 344967,
+            "data_bytes": 7442,
+            "module_id": "317b70a5892beea7.1124"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_shader_pack_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_shader_pack_bg.80d86b93e0b28b1ed3da.wasm",
+          "filename": "bloxd_wasm_shader_pack_bg.80d86b93e0b28b1ed3da.wasm",
+          "cdn_hash": "80d86b93e0b28b1ed3da",
+          "sha256": "e521fc18804ece0348d56f2c73e39ef69fee01e1ad9f9c53d92bd0fdbf472492",
+          "size": 304132,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_shader_pack_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_shader_pack_bg.facts.json",
+          "summary": {
+            "functions": 265,
+            "imported_functions": 10,
+            "exports": 29,
+            "imports": 10,
+            "code_bytes": 256592,
+            "data_bytes": 44881,
+            "module_id": "4eabbc7d441aa5d9.1190"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_textures_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_textures_bg.61b5ac2f80ff09b15c5a.wasm",
+          "filename": "bloxd_wasm_textures_bg.61b5ac2f80ff09b15c5a.wasm",
+          "cdn_hash": "61b5ac2f80ff09b15c5a",
+          "sha256": "f13f878b8e801e1b7391eae5c539ceb75b7c99a88018bdad896fe7b520427f2f",
+          "size": 226666,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_textures_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_textures_bg.facts.json",
+          "summary": {
+            "functions": 295,
+            "imported_functions": 3,
+            "exports": 39,
+            "imports": 3,
+            "code_bytes": 203923,
+            "data_bytes": 20912,
+            "module_id": "c8974c2869358f75.1150"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgl1_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_webgl1_bg.0a1ff5ac6d57c0e5bbc5.wasm",
+          "filename": "bloxd_wasm_webgl1_bg.0a1ff5ac6d57c0e5bbc5.wasm",
+          "cdn_hash": "0a1ff5ac6d57c0e5bbc5",
+          "sha256": "d6f63b1aa81b972a9480431e3334c89fc0648b9790fe3b5c8ff72a4945814f45",
+          "size": 4770278,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_webgl1_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_webgl1_bg.facts.json",
+          "summary": {
+            "functions": 2822,
+            "imported_functions": 281,
+            "exports": 154,
+            "imports": 281,
+            "code_bytes": 3937811,
+            "data_bytes": 788708,
+            "module_id": "c9aac24a9ae7bc4a.10478"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgl_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_webgl_bg.2c49ab306999061a81b8.wasm",
+          "filename": "bloxd_wasm_webgl_bg.2c49ab306999061a81b8.wasm",
+          "cdn_hash": "2c49ab306999061a81b8",
+          "sha256": "08bd13fedb12bff9b9605ef44db652dccf2f7dcf60a963258385b5f773a6f220",
+          "size": 5369983,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_webgl_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_webgl_bg.facts.json",
+          "summary": {
+            "functions": 2860,
+            "imported_functions": 299,
+            "exports": 154,
+            "imports": 299,
+            "code_bytes": 3974644,
+            "data_bytes": 1348638,
+            "module_id": "d5a3fa870604c824.10797"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_webgpu_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_webgpu_bg.5b4b5f10cf8f9c7f6b4e.wasm",
+          "filename": "bloxd_wasm_webgpu_bg.5b4b5f10cf8f9c7f6b4e.wasm",
+          "cdn_hash": "5b4b5f10cf8f9c7f6b4e",
+          "sha256": "5a2823876f9d5f8660104cc25ddeb02c3ddbc283e88525fa31e6d0deaa802210",
+          "size": 5006327,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_webgpu_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_webgpu_bg.facts.json",
+          "summary": {
+            "functions": 2878,
+            "imported_functions": 390,
+            "exports": 157,
+            "imports": 390,
+            "code_bytes": 3973532,
+            "data_bytes": 988050,
+            "module_id": "c81ddc18fc64f5e6.12057"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "bloxd_wasm_workers_bg": {
+          "url": "https://staging.bloxd.io/static/media/bloxd_wasm_workers_bg.bbb759863ba8f8a8aa47.wasm",
+          "filename": "bloxd_wasm_workers_bg.bbb759863ba8f8a8aa47.wasm",
+          "cdn_hash": "bbb759863ba8f8a8aa47",
+          "sha256": "e767134c25f99ed90bec9c0af92587618ddb83193667d16121760ce713ad3288",
+          "size": 196044,
+          "report_path": "wasm/staging.bloxd.io/bloxd_wasm_workers_bg.md",
+          "facts_path": "wasm/staging.bloxd.io/bloxd_wasm_workers_bg.facts.json",
+          "summary": {
+            "functions": 165,
+            "imported_functions": 5,
+            "exports": 33,
+            "imports": 5,
+            "code_bytes": 184550,
+            "data_bytes": 10335,
+            "module_id": "f95acdaa2089e0df.777"
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        },
+        "draco_decoder_gltf_v2_1": {
+          "url": "https://staging.bloxd.io/static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm",
+          "filename": "draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm",
+          "cdn_hash": "1207caa8c6e38dc2aa04",
+          "sha256": "833427ade1455b6c7ba2a84e44c426f32a47c7f6117b4e17d2136a8d4815728b",
+          "size": 188782,
+          "report_path": "wasm/staging.bloxd.io/draco_decoder_gltf_v2_1.md",
+          "facts_path": "wasm/staging.bloxd.io/draco_decoder_gltf_v2_1.facts.json",
+          "summary": {
+            "functions": 421,
+            "imported_functions": 5,
+            "exports": 148,
+            "imports": 5,
+            "code_bytes": 175896,
+            "data_bytes": 10296,
+            "module_id": ""
+          },
+          "last_changed_build": "bqoxjr.2558012f",
+          "last_changed_at": "2026-11-21T12:37:19+09:00",
+          "error": null
+        }
+      },
+      "changed": [
+        "bloxd_wasm_anim_bg",
+        "bloxd_wasm_bg",
+        "bloxd_wasm_models_bg",
+        "bloxd_wasm_recorder_bg",
+        "bloxd_wasm_replay_bg",
+        "bloxd_wasm_shader_pack_bg",
+        "bloxd_wasm_textures_bg",
+        "bloxd_wasm_webgl1_bg",
+        "bloxd_wasm_webgl_bg",
+        "bloxd_wasm_webgpu_bg",
+        "bloxd_wasm_workers_bg",
+        "draco_decoder_gltf_v2_1"
+      ],
+      "removed": [],
+      "errors": []
+    }
   }
 }
