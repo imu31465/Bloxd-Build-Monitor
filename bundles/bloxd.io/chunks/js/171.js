@@ -1,43 +1,37 @@
 export const id = 171;
 export const ids = [171];
 export const modules = {
-  8768: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8793: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["The world is ending, and the only way out is up. Bloxd Build a Factory is the original factory mode on Bloxd. You automate a factory, build a rocket and launch it to escape before time runs out. It's a race against everyone else in your world, the fastest launches go top of the leaderboard, and you don't need to install anything first.", "The world resets every 6 hours, so every session is a brand new race to the stars. Want a factory that keeps going forever? Have a look at the Persistent world or Build a Factory 2."],
-      howToPlay: ["Place your first Chest (or bed) and you'll get an Auto Miner and, in public lobbies, a Protector. Craft some Pipes and hook the Auto Miner up to the Chest. Open the Auto Miner, put some Coal in to fuel it, and now it mines for you.", "Next up, craft an Extractor Pipe and an Auto Crafter. Connect a Chest to the Auto Crafter with the Extractor Pipe and it'll turn your resources into new items by itself. As things grow, add Auto Harvesters for crops and Solar Panels with Wire for power. Splitter, Filter and Merger Pipes send items exactly where they need to go.", "Then place your Rocket Ship and upgrade it one stage at a time using whatever your factory makes. When it's ready, launch it, escape the dying world and set your time. Upgrades are cheaper in the resetting world, so a full rocket fits into one session.", "In the Persistent world, nothing resets. You launch rockets to reach the Moon, mine Lunite there and build faster Lunite machines."],
-      features: ["Factory Automation with a Rocket Race at the End", "Auto Miners, Auto Crafters and Auto Harvesters", "Pipes, Extractor, Splitter, Filter and Merger Pipes", "Solar Panels and Wire for Power", "Leaderboard for Best Launch Time and Rocket Stage", "Fresh World Every 6 Hours", "Persistent World with Moon Trips and Lunite Machines", "Step-by-Step Tutorial for New Players"],
-      tips: ["Follow the tutorial and you'll have your first Auto Miner running in no time", "Keep your Auto Miners topped up with Coal so they never stop", "Use Extractor Pipes to feed Chests into your Auto Crafters", "Filter and Splitter Pipes sort items into the right machines", "Leave about 50 blocks of open air above your Solar Panels", "Upgrade your rocket as soon as you can afford the next stage", 'Keep an eye on the "World resets in" timer and plan your launch before it runs out', "In the Persistent world each chunk holds up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters, so spread your factory out", "Mine Lunite on the Moon to craft Lunite machines that run 1.5\xd7 faster"],
-      similarGames: ["buildAFactory2", "skyblock", "oneBlock", "classic_survival"],
+    const Dk = {
+      whatIs: ["Your own little slice of the world to shape, share and show off. Bloxd Plots gives every player their own plot in a shared creative world. Each plot starts out completely blank, so you can build whatever you like with whoever you like. It's different from the open world of Bloxd Creative because your plot really is yours. Only you and the players you add can change it."],
+      howToPlay: ["Join Plots and claim a plot. Each one is a 91\xd791 block build area, with 5-block-wide roads between the plots. There's no height limit, so build as tall as you dare. You're in creative mode, which means no health to worry about and nothing stopping you from building.", "Want to build with friends? Add them to your plot and they can build with you, or use Go To Shared Plot to visit plots they've shared with you. You can own up to 5 plots and hop between them. Tp To Plot takes you to any plot in the world if you know its coordinates. Change at least 500 blocks and your plot is saved for good."],
+      features: ["Your Own 91\xd791 Plot to Build On", "Own Up to 5 Plots", "No Height Limit", "Add Friends to Build Together", "Teleport to Any Plot with Coordinates", "Plots Saved Forever Once You've Built Enough", "Spawn Mobs on Your Own Plot"],
+      tips: ["Get to 500 changed blocks quickly, because unsaved plots can be reset", "Add Player to Plot lets a friend build with you", "If you don't want someone editing anymore, use Remove Player from Plot", "Starting something new? Get New Plot gives you a fresh one without losing your old build", "Use Tp To Plot to check out other players' plots for ideas", "Keep your build inside the plot edges, since you can't place blocks on the roads", "Place spawner blocks if you want mobs on your plot"],
+      similarGames: ["classic_creative", "greenville", "classic", "parkourPlace"],
       faq: [{
-        question: "What is Bloxd Build a Factory?",
-        answer: "A factory automation race. You automate your factory, build a rocket and try to escape the dying world as fast as you can."
+        question: "What is Bloxd Plots?",
+        answer: "A building mode where you get your own 91\xd791 plot and can build anything you like in creative mode."
       }, {
-        question: "How do you build a rocket in Bloxd Build a Factory?",
-        answer: "Place your Rocket Ship from your inventory, then feed it resources from your factory to upgrade it stage by stage. Once it's finished, launch it to beat the game."
+        question: "How do I save my plot in Bloxd Plots?",
+        answer: "Change at least 500 blocks on it. From then on your plot is saved permanently. Plots that haven't been saved yet can be reset."
       }, {
-        question: "What's the goal in Build a Factory?",
-        answer: "Launch a rocket and escape the dying world. Your final time gets saved, and the quickest launches end up on the leaderboard."
+        question: "How do I build with friends in Bloxd Plots?",
+        answer: "Use Add Player to Plot to give a friend access. They can find it with Go To Shared Plot, and you can remove them whenever you want."
       }, {
-        question: "How often does the Build a Factory world reset?",
-        answer: "Every 6 hours. After you launch, you can jump into another lobby and play again, or hang around until your world resets."
+        question: "Can other players break my build?",
+        answer: "No. Only you and the players you've added can change blocks on your plot. Changed your mind about someone? Use Remove Player from Plot."
       }, {
-        question: "What is the Persistent world in Build a Factory?",
-        answer: "It's a Build a Factory world that never resets. You can build up to 5 Auto Miners, 5 Auto Crafters and 5 Auto Harvesters per chunk, and you launch rockets to climb the leaderboard and reach the Moon."
+        question: "How big is a plot in Bloxd Plots?",
+        answer: "Each plot is a 91\xd791 block build area with no height limit. Roads 5 blocks wide run between them."
       }, {
-        question: "How do you get to the Moon in Build a Factory?",
-        answer: "In the Persistent world, launch a rocket. You'll land on the Moon, where you can mine Lunite. No rocket to get back? Open the shop to return home."
-      }, {
-        question: "What does Lunite do?",
-        answer: "You use it to craft Lunite Auto Miners, Auto Crafters and Auto Harvesters. They run 1.5\xd7 faster, and the Lunite Auto Crafter and Auto Harvester can sometimes give you extra items."
-      }, {
-        question: "What's the difference between Build a Factory and Build a Factory 2?",
-        answer: "Build a Factory is a race to launch a rocket in a shared world that resets. In Build a Factory 2 you get your own floating factory island that you grow at your own pace."
+        question: "How many plots can one player own?",
+        answer: "Up to 5 each."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

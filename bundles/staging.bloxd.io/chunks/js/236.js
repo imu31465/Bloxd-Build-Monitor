@@ -1,650 +1,261 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  37593: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => mQ,
-      f: () => LQ,
-      i: () => kQ,
-      m: () => qQ,
-      p: () => DQ,
-      t: () => oQ
+  37365: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => fk
     });
-    const LQ = 1.001,
-      qQ = .501,
-      oQ = .025,
-      DQ = .75,
-      kQ = .08,
-      vQ = 4;
-
-    function mQ() {
-      const QQ = qQ,
-        FQ = oQ,
-        wQ = QQ - FQ / 2,
-        LQ = (2 * QQ - 2 * FQ) / (2 * vQ - 1),
-        DQ = [];
-      for (const qQ of [-wQ, wQ])
-        for (const oQ of [-wQ, wQ])
-          for (let wQ = 0; wQ < vQ; wQ++) {
-            const kQ = -QQ + FQ + LQ * (2 * wQ + .5);
-            DQ.push([LQ, FQ, FQ, kQ, qQ, oQ]), DQ.push([FQ, LQ, FQ, qQ, kQ, oQ]), DQ.push([FQ, FQ, LQ, qQ, oQ, kQ])
+    var Dk = ik(37372);
+    class fk {
+      static GetPlanes(kk) {
+        const ek = [];
+        for (let ik = 0; ik < 6; ik++) ek.push(new Dk.c(0, 0, 0, 0));
+        return fk.GetPlanesToRef(kk, ek), ek
+      }
+      static GetNearPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[2], ek.normal.y = ik[7] + ik[6], ek.normal.z = ik[11] + ik[10], ek.d = ik[15] + ik[14], ek.normalize()
+      }
+      static GetFarPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[2], ek.normal.y = ik[7] - ik[6], ek.normal.z = ik[11] - ik[10], ek.d = ik[15] - ik[14], ek.normalize()
+      }
+      static GetLeftPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[0], ek.normal.y = ik[7] + ik[4], ek.normal.z = ik[11] + ik[8], ek.d = ik[15] + ik[12], ek.normalize()
+      }
+      static GetRightPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[0], ek.normal.y = ik[7] - ik[4], ek.normal.z = ik[11] - ik[8], ek.d = ik[15] - ik[12], ek.normalize()
+      }
+      static GetTopPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[1], ek.normal.y = ik[7] - ik[5], ek.normal.z = ik[11] - ik[9], ek.d = ik[15] - ik[13], ek.normalize()
+      }
+      static GetBottomPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[1], ek.normal.y = ik[7] + ik[5], ek.normal.z = ik[11] + ik[9], ek.d = ik[15] + ik[13], ek.normalize()
+      }
+      static GetPlanesToRef(kk, ek) {
+        fk.GetNearPlaneToRef(kk, ek[0]), fk.GetFarPlaneToRef(kk, ek[1]), fk.GetLeftPlaneToRef(kk, ek[2]), fk.GetRightPlaneToRef(kk, ek[3]), fk.GetTopPlaneToRef(kk, ek[4]), fk.GetBottomPlaneToRef(kk, ek[5])
+      }
+      static IsPointInFrustum(kk, ek) {
+        for (let ik = 0; ik < 6; ik++)
+          if (ek[ik].dotCoordinate(kk) < 0) return !1;
+        return !0
+      }
+    }
+  },
+  37372: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => fk
+    });
+    var Dk = ik(36698);
+    class fk {
+      constructor(kk, ek, ik, fk) {
+        this.normal = new Dk.o(kk, ek, ik), this.d = fk
+      }
+      Tik() {
+        return [this.normal.x, this.normal.y, this.normal.z, this.d]
+      }
+      clone() {
+        return new fk(this.normal.x, this.normal.y, this.normal.z, this.d)
+      }
+      getClassName() {
+        return "Plane"
+      }
+      getHashCode() {
+        let kk = this.normal.getHashCode();
+        return kk = 397 * kk ^ this.d, kk
+      }
+      normalize() {
+        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let ek = 0;
+        return 0 !== kk && (ek = 1 / kk), this.normal.x *= ek, this.normal.y *= ek, this.normal.z *= ek, this.d *= ek, this
+      }
+      transform(kk) {
+        const ek = fk._TmpMatrix;
+        kk.invertToRef(ek);
+        const ik = ek.m,
+          Dk = this.normal.x,
+          Sk = this.normal.y,
+          bk = this.normal.z,
+          rk = this.d,
+          Pk = Dk * ik[0] + Sk * ik[1] + bk * ik[2] + rk * ik[3],
+          mk = Dk * ik[4] + Sk * ik[5] + bk * ik[6] + rk * ik[7],
+          Mk = Dk * ik[8] + Sk * ik[9] + bk * ik[10] + rk * ik[11],
+          Kk = Dk * ik[12] + Sk * ik[13] + bk * ik[14] + rk * ik[15];
+        return new fk(Pk, mk, Mk, Kk)
+      }
+      dotCoordinate(kk) {
+        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
+      }
+      copyFromPoints(kk, ek, ik) {
+        const Dk = ek.x - kk.x,
+          fk = ek.y - kk.y,
+          Sk = ek.z - kk.z,
+          bk = ik.x - kk.x,
+          rk = ik.y - kk.y,
+          Pk = ik.z - kk.z,
+          mk = fk * Pk - Sk * rk,
+          Mk = Sk * bk - Dk * Pk,
+          Kk = Dk * rk - fk * bk,
+          xk = Math.sqrt(mk * mk + Mk * Mk + Kk * Kk);
+        let nk;
+        return nk = 0 !== xk ? 1 / xk : 0, this.normal.x = mk * nk, this.normal.y = Mk * nk, this.normal.z = Kk * nk, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
+      }
+      isFrontFacingTo(kk, ek) {
+        return Dk.o.Dot(this.normal, kk) <= ek
+      }
+      signedDistanceTo(kk) {
+        return Dk.o.Dot(kk, this.normal) + this.d
+      }
+      static FromArray(kk) {
+        return new fk(kk[0], kk[1], kk[2], kk[3])
+      }
+      static FromPoints(kk, ek, ik) {
+        const Dk = new fk(0, 0, 0, 0);
+        return Dk.copyFromPoints(kk, ek, ik), Dk
+      }
+      static FromPositionAndNormal(kk, ek) {
+        const ik = new fk(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(kk, ek, ik)
+      }
+      static FromPositionAndNormalToRef(kk, ek, ik) {
+        return ik.normal.Fs(ek), ik.normal.normalize(), ik.d = -kk.dot(ik.normal), ik
+      }
+      static SignedDistanceToPlaneFromPositionAndNormal(kk, ek, ik) {
+        const fk = -(ek.x * kk.x + ek.y * kk.y + ek.z * kk.z);
+        return Dk.o.Dot(ik, ek) + fk
+      }
+    }
+    fk._TmpMatrix = Dk.b.Identity()
+  },
+  38265: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk
+    });
+    var Dk = ik(38272);
+    const fk = (kk, ek, ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(ek) : null;
+    class Sk {
+      static DeepCopy(kk, ek, ik, Sk) {
+        let bk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const rk = function(kk) {
+          const ek = [];
+          do {
+            const ik = Object.getOwnPropertyNames(kk);
+            for (const kk of ik) - 1 === ek.indexOf(kk) && ek.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return ek
+        }(kk);
+        for (const mk of rk) {
+          if ("_" === mk[0] && (!Sk || -1 === Sk.indexOf(mk))) continue;
+          if (mk.endsWith("Observable")) continue;
+          if (ik && -1 !== ik.indexOf(mk)) continue;
+          const rk = kk[mk],
+            Mk = typeof rk;
+          if ("function" !== Mk) try {
+            if ("object" === Mk)
+              if (rk instanceof Uint8Array) ek[mk] = Uint8Array.from(rk);
+              else if (rk instanceof Array) {
+              if (ek[mk] = [], rk.length > 0)
+                if ("object" == typeof rk[0])
+                  for (let kk = 0; kk < rk.length; kk++) {
+                    const ik = fk(rk[kk], ek, bk); - 1 === ek[mk].indexOf(ik) && ek[mk].push(ik)
+                  } else ek[mk] = rk.slice(0)
+            } else ek[mk] = fk(rk, ek, bk);
+            else ek[mk] = rk
+          } catch (Pk) {
+            Dk.b.Warn(Pk.message)
           }
-      for (const qQ of [-wQ, wQ])
-        for (const QQ of [-wQ, wQ])
-          for (const LQ of [-wQ, wQ]) DQ.push([FQ, FQ, FQ, qQ, QQ, LQ]);
-      return DQ
+        }
+      }
     }
   },
-  37955: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      B: () => CQ,
-      E: () => iQ,
-      G: () => cQ,
-      K: () => pQ,
-      M: () => bQ,
-      O: () => AQ,
-      S: () => eQ,
-      U: () => qQ,
-      d: () => uQ,
-      h: () => vQ,
-      i: () => GQ,
-      k: () => mQ,
-      l: () => kQ,
-      o: () => DQ,
-      s: () => oQ,
-      v: () => SQ,
-      x: () => YQ
-    });
-    var LQ = wQ(9284);
-
-    function qQ(QQ) {
-      return Math.floor(QQ).toLocaleString("en-US")
-    }
-    const oQ = 2e3,
-      DQ = .005,
-      kQ = .001,
-      vQ = 2,
-      mQ = "Fluid Tank",
-      uQ = "Coolant Mixer",
-      HQ = 144;
-
-    function bQ(QQ) {
-      const FQ = QQ.split("|")[0];
-      return (0, LQ.l)(FQ) ? FQ === LQ.e ? "cryo" : "water" : null
-    }
-    const YQ = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 1, 0],
-        [0, -1, 0],
-        [0, 0, 1],
-        [0, 0, -1]
-      ],
-      xQ = 63;
-
-    function AQ(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const wQ = FQ ? function(QQ, FQ, wQ) {
-        const LQ = YQ.findIndex((LQ => {
-          let [qQ, oQ, DQ] = LQ;
-          return qQ === QQ && oQ === FQ && DQ === wQ
-        }));
-        return LQ < 0 ? 0 : 1 << LQ
-      }(FQ[0], FQ[1], FQ[2]) : 0;
-      return "maker" === QQ ? {
-        kind: QQ,
-        faces: wQ
-      } : "user" === QQ ? {
-        kind: QQ,
-        faces: xQ & ~wQ
-      } : {
-        kind: QQ,
-        faces: xQ
-      }
-    }
-
-    function tQ(QQ) {
-      return "pipe" === QQ || "tank" === QQ || "maker" === QQ
-    }
-
-    function eQ(QQ, FQ, wQ) {
-      return 0 !== (QQ.faces & 1 << wQ) && 0 !== (FQ.faces & 1 << (1 ^ wQ)) && (tQ(QQ.kind) || tQ(FQ.kind))
-    }
-    const MQ = (QQ, FQ, wQ, LQ) => ({
-        input: QQ,
-        inputAmount: LQ,
-        output: FQ,
-        outputAmount: wQ
-      }),
-      GQ = {
-        Condenser: {
-          kind: "Condenser",
-          opMs: 2e3,
-          inputSlot: null,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [],
-          powerPerOp: 60,
-          fluidMade: 12,
-          couplable: !0,
-          couplerSlot: 0
-        },
-        Centrifuge: {
-          kind: "Centrifuge",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [MQ("Uranium Grit", "Uranium Pellet", 1, 12), MQ("Spent Pellet", "Plutonium Pellet", 1, 4)],
-          powerPerOp: 600,
-          waterPerOp: 24
-        },
-        Synthesizer: {
-          kind: "Synthesizer",
-          opMs: 6e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [1, 2, 3],
-          recipes: [],
-          powerPerOp: 120,
-          waterPerOp: 12,
-          synth: !0
-        },
-        "Coolant Mixer": {
-          kind: "Coolant Mixer",
-          opMs: 12e3,
-          inputSlot: 0,
-          fuelSlot: null,
-          outputSlots: [],
-          recipes: [MQ("Biomass", "", 0, 1)],
-          powerPerOp: 720,
-          waterPerOp: 144,
-          cryoMade: HQ,
-          couplable: !0,
-          couplerSlot: 1
-        }
-      };
-
-    function pQ(QQ, FQ) {
-      return 1e3 * (null !== FQ && void 0 !== FQ ? FQ : 0) / QQ.opMs
-    }
-
-    function cQ(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const wQ = pQ(GQ["Coolant Mixer"], HQ) * FQ;
-      return QQ <= 0 ? 0 : Math.ceil(QQ / wQ - 1e-9)
-    }
-    const CQ = "baf2Water",
-      SQ = "baf2waterclose",
-      iQ = "baf2wateropen"
-  },
-  37944: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => NQ,
-      g: () => TQ
-    });
-    var LQ = wQ(9195),
-      qQ = wQ(9238);
-    const oQ = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1],
-      [0, 1, 0],
-      [0, -1, 0]
-    ];
-    var DQ = wQ(9258),
-      kQ = wQ(37768),
-      vQ = wQ(9252);
-    const mQ = {
-      1: [0, -1],
-      2: [-1, 0],
-      3: [0, 1],
-      4: [1, 0]
-    };
-
-    function uQ(QQ) {
-      let [FQ, wQ] = QQ;
-      return [-wQ, FQ]
-    }
-
-    function HQ(QQ, FQ) {
-      return QQ[0] === FQ[0] && QQ[1] === FQ[1]
-    }
-
-    function bQ(QQ, FQ) {
-      return QQ[0] * FQ[0] + QQ[1] * FQ[1] === 0
-    }
-    const YQ = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-    var xQ = wQ(9280);
-
-    function AQ(QQ, FQ, wQ, LQ, qQ) {
-      return FQ < xQ.p || FQ >= xQ.p + xQ.r || Math.floor(QQ / xQ.x) === Math.floor(LQ / xQ.x) && Math.floor(wQ / xQ.x) === Math.floor(qQ / xQ.x)
-    }
-    const tQ = "Splitter",
-      eQ = "Sorting Gate",
-      MQ = new Set(xQ.M),
-      GQ = new Set([...xQ.M, "Belt Loader", "Fast Loader", eQ]),
-      pQ = new Set(xQ.v),
-      cQ = [
-        [1, 0, 0],
-        [-1, 0, 0],
-        [0, 0, 1],
-        [0, 0, -1],
-        [0, 1, 0],
-        [0, -1, 0]
-      ];
-
-    function CQ(QQ) {
-      var FQ, wQ;
-      return null !== (FQ = null === (wQ = LQ.h[QQ]) || void 0 === wQ ? void 0 : wQ.meta.rootName) && void 0 !== FQ ? FQ : ""
-    }
-
-    function SQ(QQ) {
-      return CQ(QQ) === xQ.h && (0, xQ.W)(LQ.h[QQ].name)
-    }
-    var iQ = wQ(9246),
-      WQ = wQ(9268);
-    const RQ = [
-      [1, 0, 0],
-      [-1, 0, 0],
-      [0, 0, 1],
-      [0, 0, -1]
-    ];
-
-    function OQ(QQ) {
-      var FQ, wQ;
-      const qQ = null === (FQ = LQ.h[QQ]) || void 0 === FQ ? void 0 : FQ.meta;
-      return (null === qQ || void 0 === qQ ? void 0 : qQ.rootName) !== WQ.k ? null : {
-        rot: null !== (wQ = qQ.rot) && void 0 !== wQ ? wQ : 1,
-        half: (0, WQ.d)(qQ.rootName, qQ.metaStr)
-      }
-    }
-
-    function sQ(QQ, FQ, wQ, LQ) {
-      return OQ(QQ(FQ, wQ, LQ))
-    }
-
-    function rQ(QQ, FQ, wQ, LQ, qQ) {
-      let {
-        rot: oQ,
-        half: DQ
-      } = qQ;
-      const [kQ, vQ] = (0, WQ.i)(oQ, DQ), mQ = sQ(QQ, FQ + kQ, wQ, LQ + vQ);
-      return null !== mQ && mQ.rot === oQ && mQ.half === WQ.m[DQ]
-    }
-    var IQ = wQ(37950);
-    const UQ = [new class {
-      constructor() {
-        this.reshapeOffsets = YQ
-      }
-      handles(QQ) {
-        var FQ;
-        return "Stairs" === (null === (FQ = LQ.h[QQ]) || void 0 === FQ ? void 0 : FQ.model)
-      }
-      affects(QQ) {
-        return this.handles(QQ)
-      }
-      shape(QQ, FQ, wQ, qQ, oQ) {
-        const DQ = this.stairsOf(oQ),
-          kQ = this.cornerAt(QQ, FQ, wQ, qQ, DQ),
-          mQ = DQ.half === vQ.c.top ? "top" : "bot";
-        return (0, LQ.j)(`${LQ.h[oQ].meta.rootName}|meta|rot${DQ.rot}|${mQ}${null===kQ?"":`|${kQ}`}`)
-      }
-      stairsOf(QQ) {
-        const {
-          rot: FQ,
-          halfblockPlacement: wQ
-        } = LQ.h[QQ].meta;
-        return {
-          rot: FQ,
-          half: wQ
-        }
-      }
-      stairsAt(QQ, FQ, wQ, LQ) {
-        const qQ = QQ(FQ, wQ, LQ);
-        return this.handles(qQ) ? this.stairsOf(qQ) : null
-      }
-      cornerAt(QQ, FQ, wQ, LQ, qQ) {
-        let {
-          rot: oQ,
-          half: DQ
-        } = qQ;
-        const kQ = mQ[oQ],
-          vQ = qQ => {
-            let [kQ, vQ] = qQ;
-            const mQ = this.stairsAt(QQ, FQ + kQ, wQ, LQ + vQ);
-            return null !== mQ && mQ.rot === oQ && mQ.half === DQ
-          },
-          YQ = this.stairsAt(QQ, FQ + kQ[0], wQ, LQ + kQ[1]);
-        if (null !== YQ && YQ.half === DQ) {
-          const QQ = mQ[YQ.rot];
-          if (bQ(kQ, QQ) && !vQ([-QQ[0], -QQ[1]])) return HQ(QQ, uQ(kQ)) ? "outerLeft" : "outerRight"
-        }
-        const xQ = this.stairsAt(QQ, FQ - kQ[0], wQ, LQ - kQ[1]);
-        if (null !== xQ && xQ.half === DQ) {
-          const QQ = mQ[xQ.rot];
-          if (bQ(kQ, QQ) && !vQ(QQ)) return HQ(QQ, uQ(kQ)) ? "innerLeft" : "innerRight"
-        }
-        return null
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = oQ, this.rootIds = new Set(qQ.i.map((QQ => (0, LQ.j)(QQ))))
-      }
-      handles(QQ) {
-        var FQ;
-        const wQ = null === (FQ = LQ.h[QQ]) || void 0 === FQ ? void 0 : FQ.meta;
-        return void 0 !== wQ && this.rootIds.has(wQ.rootId)
-      }
-      affects(QQ) {
-        return this.handles(QQ)
-      }
-      placedBy(QQ) {
-        return LQ.h[QQ].meta.rootName === qQ.r ? null : qQ.r
-      }
-      shape(QQ, FQ, wQ, oQ, DQ) {
-        const {
-          rootId: kQ,
-          rootName: vQ,
-          rot: mQ
-        } = LQ.h[DQ].meta;
-        let uQ = 0;
-        return qQ.z[mQ].forEach(((qQ, DQ) => {
-          var vQ;
-          let [HQ, bQ, YQ] = qQ;
-          const xQ = null === (vQ = LQ.h[QQ(FQ + HQ, wQ + bQ, oQ + YQ)]) || void 0 === vQ ? void 0 : vQ.meta;
-          (null === xQ || void 0 === xQ ? void 0 : xQ.rootId) === kQ && xQ.rot === mQ && (uQ |= 1 << DQ)
-        })), (0, LQ.j)((0, qQ.h)(vQ, mQ, uQ))
-      }
-    }, ...DQ.d.map((QQ => new kQ.e(QQ))), new class {
-      constructor() {
-        this.reshapeOffsets = cQ
-      }
-      handles(QQ) {
-        const FQ = CQ(QQ);
-        return MQ.has(FQ) || FQ === xQ.h
-      }
-      affects(QQ) {
-        const FQ = CQ(QQ);
-        return GQ.has(FQ) || pQ.has(FQ) || FQ === tQ || FQ === xQ.h || void 0 !== xQ.b[FQ]
-      }
-      shape(QQ, FQ, wQ, qQ, oQ, DQ) {
-        const {
-          rootName: kQ,
-          rot: vQ
-        } = LQ.h[oQ].meta;
-        return kQ === xQ.h ? DQ ? oQ : function(QQ, FQ, wQ, qQ, oQ) {
-          const [DQ, kQ] = xQ.e[oQ - 1];
-          for (let vQ = 1; vQ <= xQ.I; vQ++) {
-            const [mQ, uQ] = [FQ - DQ * vQ, qQ - kQ * vQ], HQ = QQ(mQ, wQ, uQ);
-            if (CQ(HQ) === xQ.h && LQ.h[HQ].meta.rot === oQ && AQ(FQ, wQ, qQ, mQ, uQ)) return (0, LQ.j)((0, xQ.eb)(oQ, !SQ(HQ)))
-          }
-          return (0, LQ.j)((0, xQ.eb)(oQ, !1))
-        }(QQ, FQ, wQ, qQ, vQ) : (0, LQ.j)((0, xQ.P)(kQ, vQ, function(QQ, FQ, wQ, qQ, oQ) {
-          const [DQ, kQ] = xQ.e[oQ - 1], vQ = (oQ, vQ) => function(QQ, FQ, wQ, qQ, oQ) {
-            var DQ;
-            const kQ = null === (DQ = LQ.h[QQ]) || void 0 === DQ ? void 0 : DQ.meta;
-            if (!kQ) return !1;
-            const vQ = kQ.rootName,
-              mQ = GQ.has(vQ) || SQ(QQ);
-            if (!mQ && !pQ.has(vQ) && vQ !== tQ) return !1;
-            const [uQ, HQ] = xQ.e[kQ.rot - 1];
-            return mQ ? uQ === -FQ && HQ === -wQ : pQ.has(vQ) ? uQ === FQ && HQ === wQ : (0, xQ.bb)(LQ.h[QQ].name, uQ, HQ).some((QQ => {
-              let [LQ, qQ] = QQ;
-              return LQ === -FQ && qQ === -wQ
-            })) && !(qQ === FQ && oQ === wQ)
-          }(QQ(FQ + oQ, wQ, qQ + vQ), oQ, vQ, DQ, kQ), mQ = QQ(FQ - DQ, wQ, qQ - kQ), uQ = CQ(mQ) === tQ && LQ.h[mQ].meta.rot === oQ, HQ = 1 === xQ.b[CQ(QQ(FQ, wQ - 1, qQ))] || -1 === xQ.b[CQ(QQ(FQ, wQ + 1, qQ))];
-          if (HQ || uQ || function(QQ, FQ, wQ) {
-              if (CQ(QQ) !== eQ) return !1;
-              const [qQ, oQ] = xQ.e[LQ.h[QQ].meta.rot - 1], [DQ, kQ] = (0, xQ.R)(LQ.h[QQ].name, qQ, oQ);
-              return FQ === DQ && wQ === kQ
-            }(mQ, DQ, kQ) || vQ(-DQ, -kQ)) return null;
-          const bQ = vQ(-kQ, DQ),
-            YQ = vQ(kQ, -DQ);
-          if (bQ === YQ) return null;
-          return bQ ? "turnLeft" : "turnRight"
-        }(QQ, FQ, wQ, qQ, vQ)))
-      }
-    }, new class {
-      constructor() {
-        this.reshapeOffsets = RQ, this.rootId = (0, LQ.j)(WQ.k)
-      }
-      handles(QQ) {
-        var FQ;
-        return (null === (FQ = LQ.h[QQ]) || void 0 === FQ ? void 0 : FQ.meta.rootId) === this.rootId
-      }
-      affects(QQ) {
-        return this.handles(QQ)
-      }
-      shape(QQ, FQ, wQ, qQ, oQ, DQ) {
-        const kQ = OQ(oQ);
-        return (0, LQ.j)((vQ = kQ.rot, null !== (mQ = DQ ? this.reshapedHalf(QQ, FQ, wQ, qQ, kQ) : this.placedHalf(QQ, FQ, wQ, qQ, kQ.rot)) ? (0, WQ.c)(WQ.k, vQ, mQ) : 1 === vQ ? WQ.k : `${WQ.k}|meta|rot${vQ}`));
-        var vQ, mQ
-      }
-      placedHalf(QQ, FQ, wQ, LQ, qQ) {
-        const [oQ, DQ] = iQ.e[qQ];
-        for (const [kQ, vQ] of [
-            ["right", 1],
-            ["left", -1]
-          ]) {
-          const mQ = FQ + vQ * oQ,
-            uQ = LQ + vQ * DQ,
-            HQ = sQ(QQ, mQ, wQ, uQ);
-          if (null !== HQ && HQ.rot === qQ && (null === HQ.half || !rQ(QQ, mQ, wQ, uQ, HQ))) return kQ
-        }
-        return null
-      }
-      reshapedHalf(QQ, FQ, wQ, LQ, qQ) {
-        if (null !== qQ.half && rQ(QQ, FQ, wQ, LQ, qQ)) return qQ.half;
-        for (const oQ of ["right", "left"]) {
-          const [DQ, kQ] = (0, WQ.i)(qQ.rot, oQ), vQ = sQ(QQ, FQ + DQ, wQ, LQ + kQ);
-          if (null !== vQ && vQ.rot === qQ.rot && vQ.half === WQ.m[oQ]) return oQ
-        }
-        return null
-      }
-    }, new IQ.d];
-
-    function NQ(QQ, FQ, wQ, LQ, qQ) {
-      let oQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const DQ of UQ)
-        if (DQ.handles(qQ)) return DQ.shape(QQ, FQ, wQ, LQ, qQ, oQ);
-      return qQ
-    }
-
-    function TQ(QQ) {
-      for (const LQ of UQ) {
-        var FQ, wQ;
-        if (LQ.handles(QQ)) return null !== (FQ = null === (wQ = LQ.placedBy) || void 0 === wQ ? void 0 : wQ.call(LQ, QQ)) && void 0 !== FQ ? FQ : null
-      }
-      return null
-    }
-  },
-  37950: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => WQ,
-      f: () => pQ,
-      g: () => GQ
-    });
-    var LQ = wQ(9195),
-      qQ = wQ(9222),
-      oQ = wQ(9284),
-      DQ = wQ(37955),
-      kQ = wQ(9280);
-    const vQ = (0, DQ.O)("pipe"),
-      mQ = (0, DQ.O)("tank"),
-      uQ = (0, DQ.O)("port"),
-      HQ = "Reactor Port";
-
-    function bQ(QQ, FQ, wQ) {
-      const LQ = new Set([oQ.g, oQ.e, HQ, ...FQ, ...wQ, ...QQ ? [DQ.k] : []]);
-      return {
-        makers: new Set(FQ),
-        roots: LQ
-      }
-    }
-    const YQ = {
-        water: bQ(!0, ["Condenser"], ["Centrifuge", "Synthesizer", DQ.d]),
-        cryo: bQ(!1, [DQ.d], [])
-      },
-      xQ = new Set([...YQ.water.roots, ...YQ.cryo.roots]),
-      AQ = {
-        nx: [-1, 0, 0],
-        ny: [0, -1, 0],
-        nz: [0, 0, -1],
-        px: [1, 0, 0],
-        py: [0, 1, 0],
-        pz: [0, 0, 1]
-      },
-      tQ = qQ.f.map((QQ => AQ[QQ])),
-      eQ = tQ.map((QQ => {
-        let [FQ, wQ, LQ] = QQ;
-        return DQ.x.findIndex((QQ => {
-          let [qQ, oQ, DQ] = QQ;
-          return qQ === FQ && oQ === wQ && DQ === LQ
-        }))
-      }));
-
-    function MQ(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const wQ = LQ.h[QQ],
-        qQ = null === wQ || void 0 === wQ ? void 0 : wQ.meta.rootName,
-        bQ = YQ[FQ];
-      if (!qQ || !bQ.roots.has(qQ)) return null;
-      if ((0, oQ.l)(qQ)) return (0, DQ.M)(wQ.name) === FQ ? vQ : null;
-      if (qQ === DQ.k) return mQ;
-      if (qQ === HQ) return wQ.name.endsWith("|Water") ? uQ : null;
-      const [xQ, AQ] = kQ.e[(wQ.meta.rot || 1) - 1];
-      return (0, DQ.O)(bQ.makers.has(qQ) ? "maker" : "user", [-xQ, 0, -AQ])
-    }
-
-    function GQ(QQ, FQ, wQ, qQ) {
-      let oQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
-      const {
-        makers: kQ
-      } = YQ[oQ];
-      return tQ.some(((mQ, uQ) => {
-        var HQ, bQ;
-        let [YQ, xQ, AQ] = mQ;
-        const tQ = QQ(FQ + YQ, wQ + xQ, qQ + AQ),
-          GQ = MQ(tQ, oQ);
-        return null !== GQ && kQ.has(null !== (HQ = null === (bQ = LQ.h[tQ]) || void 0 === bQ ? void 0 : bQ.meta.rootName) && void 0 !== HQ ? HQ : "") && !(0, DQ.S)(vQ, GQ, eQ[uQ])
+  37497: (kk, ek, ik) => {
+    function Dk() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
+        const ek = 16 * Math.random() | 0;
+        return ("x" === kk ? ek : 3 & ek | 8).toString(16)
       }))
     }
-
-    function pQ(QQ) {
-      const FQ = LQ.h[QQ];
-      return FQ ? (0, DQ.M)(FQ.name) : null
-    }
-    let cQ = null;
-
-    function CQ(QQ) {
-      if (!cQ) {
-        cQ = new Map;
-        for (const QQ of ["water", "cryo"])
-          for (let FQ = 0; FQ < 64; FQ++)
-            for (const wQ of [!1, !0]) cQ.set((0, oQ.n)(QQ, FQ, wQ), {
-              wY: QQ,
-              mask: FQ,
-              full: wQ
-            })
-      }
-      return cQ.get(QQ)
-    }
-    const SQ = new Map(Array.from({
-      length: oQ.j + 1
-    }, ((QQ, FQ) => [(0, oQ.o)(FQ), FQ])));
-
-    function iQ(QQ, FQ, wQ, qQ, oQ, DQ) {
-      return tQ.some(((kQ, vQ) => {
-        var mQ, uQ, HQ;
-        let [bQ, YQ, xQ] = kQ;
-        if (0 === (DQ >> vQ & 1)) return !1;
-        const AQ = null !== (mQ = null === (uQ = LQ.h[QQ(FQ + bQ, wQ + YQ, qQ + xQ)]) || void 0 === uQ ? void 0 : uQ.name) && void 0 !== mQ ? mQ : "",
-          tQ = CQ(AQ);
-        return tQ ? tQ.wY === oQ && tQ.full : (null !== (HQ = function(QQ) {
-          var FQ;
-          return null !== (FQ = SQ.get(QQ)) && void 0 !== FQ ? FQ : null
-        }(AQ)) && void 0 !== HQ ? HQ : 0) > 0
-      }))
-    }
-    class WQ {
-      constructor() {
-        this.reshapeOffsets = tQ
-      }
-      handles(QQ) {
-        return null !== pQ(QQ)
-      }
-      affects(QQ) {
-        var FQ, wQ;
-        return xQ.has(null !== (FQ = null === (wQ = LQ.h[QQ]) || void 0 === wQ ? void 0 : wQ.meta.rootName) && void 0 !== FQ ? FQ : "")
-      }
-      placedBy(QQ) {
-        var FQ;
-        return (null === (FQ = LQ.h[QQ]) || void 0 === FQ ? void 0 : FQ.meta.rootName) === oQ.e ? oQ.g : null
-      }
-      shape(QQ, FQ, wQ, qQ, kQ, mQ) {
-        var uQ, HQ, bQ;
-        const YQ = null !== (uQ = null === (HQ = LQ.h[kQ]) || void 0 === HQ ? void 0 : HQ.name) && void 0 !== uQ ? uQ : "",
-          xQ = mQ || YQ !== oQ.g ? null !== (bQ = (0, DQ.M)(YQ)) && void 0 !== bQ ? bQ : "water" : function(QQ, FQ, wQ, LQ) {
-            return tQ.some(((qQ, oQ) => {
-              let [kQ, mQ, uQ] = qQ;
-              const HQ = MQ(QQ(FQ + kQ, wQ + mQ, LQ + uQ), "cryo");
-              return null !== HQ && "port" !== HQ.kind && (0, DQ.S)(vQ, HQ, eQ[oQ])
-            })) ? "cryo" : "water"
-          }(QQ, FQ, wQ, qQ),
-          AQ = function(QQ, FQ, wQ, LQ) {
-            let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              oQ = 0;
-            return tQ.forEach(((kQ, mQ) => {
-              let [uQ, HQ, bQ] = kQ;
-              const YQ = MQ(QQ(FQ + uQ, wQ + HQ, LQ + bQ), qQ);
-              YQ && (0, DQ.S)(vQ, YQ, eQ[mQ]) && (oQ |= 1 << mQ)
-            })), oQ
-          }(QQ, FQ, wQ, qQ, xQ),
-          GQ = mQ ? function(QQ) {
-            var FQ;
-            return !0 === (null === (FQ = CQ(QQ)) || void 0 === FQ ? void 0 : FQ.full)
-          }(YQ) : iQ(QQ, FQ, wQ, qQ, xQ, AQ);
-        return (0, LQ.j)((0, oQ.n)(xQ, AQ, GQ))
-      }
-    }
+    ik.d(ek, {
+      b: () => Dk
+    })
   },
-  37723: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => LQ,
-      e: () => oQ
+  38272: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Dk
     });
-    const LQ = ["Chest", "Loot Chest", "Moonstone Chest"],
-      qQ = [{
-        name: "Workbench",
-        exactMatch: !0
-      }, {
-        name: "Furnace",
-        exactMatch: !0
-      }, {
-        name: "Artisan Bench",
-        exactMatch: !0
-      }, {
-        name: "Potion Table",
-        exactMatch: !0
-      }, {
-        name: "Salvaging Table",
-        exactMatch: !0
-      }, {
-        name: "Enchanting Table",
-        exactMatch: !1
-      }];
-
-    function oQ(QQ) {
-      return qQ.find((FQ => FQ.exactMatch ? QQ === FQ.name : QQ.includes(FQ.name)))
+    class Dk {
+      static _CheckLimit(kk, ek) {
+        let ik = Dk._LogLimitOutputs[kk];
+        return ik ? ik.current++ : (ik = {
+          limit: ek,
+          current: 1
+        }, Dk._LogLimitOutputs[kk] = ik), ik.current <= ik.limit
+      }
+      static _GenerateLimitMessage(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ik = Dk._LogLimitOutputs[kk];
+        if (!ik || !Dk.MessageLimitReached) return;
+        const fk = this._Levels[ek];
+        ik.current === ik.limit && Dk[fk.name](Dk.MessageLimitReached.replace(/%LIMIT%/g, "" + ik.limit).replace(/%TYPE%/g, fk.name ?? ""))
+      }
+      static _AddLogEntry(kk) {
+        Dk._LogCache = kk + Dk._LogCache, Dk.OnNewCacheEntry && Dk.OnNewCacheEntry(kk)
+      }
+      static _FormatMessage(kk) {
+        const ek = kk => kk < 10 ? "0" + kk : "" + kk,
+          ik = new Date;
+        return "[" + ek(ik.getHours()) + ":" + ek(ik.getMinutes()) + ":" + ek(ik.getSeconds()) + "]: " + kk
+      }
+      static _LogDisabled(kk, ek) {}
+      static _LogEnabled() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ek = arguments.length > 1 ? arguments[1] : void 0,
+          ik = arguments.length > 2 ? arguments[2] : void 0;
+        const fk = Array.isArray(ek) ? ek[0] : ek;
+        if (void 0 !== ik && !Dk._CheckLimit(fk, ik)) return;
+        const Sk = Dk._FormatMessage(fk),
+          bk = this._Levels[kk],
+          rk = Array.isArray(ek) ? ek.slice(1) : [];
+        bk.logFunc && bk.logFunc("BJS - " + Sk, ...rk);
+        const Pk = `<div style='color:${bk.color}'>${Sk}</div><br>`;
+        Dk._AddLogEntry(Pk), Dk._GenerateLimitMessage(fk, kk)
+      }
+      static get LogCache() {
+        return Dk._LogCache
+      }
+      static ClearLogCache() {
+        Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk.errorsCount = 0
+      }
+      static set LogLevels(kk) {
+        Dk.Log = Dk._LogDisabled, Dk.Warn = Dk._LogDisabled, Dk.Error = Dk._LogDisabled;
+        const ek = [Dk.MessageLogLevel, Dk.WarningLogLevel, Dk.ErrorLogLevel];
+        for (const ik of ek)
+          if ((kk & ik) === ik) {
+            const kk = this._Levels[ik];
+            Dk[kk.name] = Dk._LogEnabled.bind(Dk, ik)
+          }
+      }
     }
+    Dk.NoneLogLevel = 0, Dk.MessageLogLevel = 1, Dk.WarningLogLevel = 2, Dk.ErrorLogLevel = 4, Dk.AllLogLevel = 7, Dk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Dk.errorsCount = 0, Dk.Log = Dk._LogEnabled.bind(Dk, Dk.MessageLogLevel), Dk.Warn = Dk._LogEnabled.bind(Dk, Dk.WarningLogLevel), Dk.Error = Dk._LogEnabled.bind(Dk, Dk.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

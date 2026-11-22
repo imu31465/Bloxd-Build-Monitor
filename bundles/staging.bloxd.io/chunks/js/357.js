@@ -1,19 +1,62 @@
 export const id = 357;
 export const ids = [357];
 export const modules = {
-  60891: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      postprocessVertexShaderWGSL: () => DQ
+  60752: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      applyLightFoOffset: () => bk,
+      getFloatingOriginOffset: () => fk,
+      lightFoVersion: () => Sk,
+      wrapRenderableForFO: () => rk
     });
-    var LQ = wQ(39251);
-    const qQ = "postprocessVertexShader",
-      oQ = "attribute position: vec2<f32>;uniform scale: vec2<f32>;varying vUV: vec2<f32>;const madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.vUV=(vertexInputs.position*madd+madd)*uniforms.scale;vertexOutputs.position=vec4(vertexInputs.position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
-    LQ.c.ShadersStoreWGSL[qQ] || (LQ.c.ShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(41309);
+
+    function fk(kk) {
+      const ek = kk.camera;
+      if (!ek) return {
+        x: 0,
+        y: 0,
+        z: 0
+      };
+      const ik = ek.worldMatrix;
+      return {
+        x: ik[12],
+        y: ik[13],
+        z: ik[14]
+      }
+    }
+
+    function Sk(kk) {
+      return kk.camera ? kk.camera.worldMatrixVersion : 0
+    }
+
+    function bk(kk, ek) {
+      const ik = ek.camera?.worldMatrix;
+      if (!ik) return;
+      const fk = ik[12],
+        Sk = ik[13],
+        bk = ik[14];
+      let rk = 0;
+      for (const Pk of ek.lights) {
+        if (rk >= Dk.b) break;
+        if (!Pk._writeLightUbo) continue;
+        const ek = 4 + 16 * rk,
+          ik = kk[ek + 3];
+        if (0 === ik || 2 === ik) {
+          const ik = Pk.worldMatrix;
+          kk[ek] = ik[12] - fk, kk[ek + 1] = ik[13] - Sk, kk[ek + 2] = ik[14] - bk
+        }
+        rk++
+      }
+    }
+
+    function rk(kk, ek, ik) {
+      let Dk = -1;
+      return () => {
+        const fk = ek.camera ? ek.camera.worldMatrixVersion : -1;
+        fk !== Dk && (ik(), Dk = fk), kk()
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

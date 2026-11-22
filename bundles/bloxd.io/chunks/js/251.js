@@ -1,884 +1,617 @@
 export const id = 251;
 export const ids = [251];
 export const modules = {
-  39690: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => bQ
+  39666: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Sk
     });
-    var LQ = wQ(39402),
-      qQ = wQ(39409),
-      oQ = wQ(36696),
-      DQ = wQ(36873),
-      kQ = wQ(39650),
-      vQ = wQ(39550),
-      mQ = wQ(36741),
-      uQ = wQ(39623),
-      HQ = wQ(39426);
-    let bQ = (() => {
-      var QQ, FQ;
-      let wQ, bQ, YQ, xQ, AQ, tQ, eQ, MQ, GQ, pQ, cQ, CQ, SQ, iQ = kQ.c,
-        WQ = [],
-        RQ = [],
-        OQ = [],
-        sQ = [],
-        rQ = [],
-        IQ = [],
-        UQ = [],
-        NQ = [],
-        TQ = [],
-        KQ = [],
-        zQ = [],
-        lQ = [],
-        jQ = [],
-        aQ = [],
-        XQ = [],
-        fQ = [],
-        VQ = [],
-        hQ = [],
-        JQ = [],
-        EQ = [],
-        nQ = [];
-      return QQ = class extends iQ {
-        get range() {
-          return this._range
-        }
-        set range(QQ) {
-          this._range = QQ, this._inverseSquaredRange = 1 / (this.range * this.range)
-        }
-        get intensityMode() {
-          return this._intensityMode
-        }
-        set intensityMode(QQ) {
-          this._intensityMode = QQ, this._computePhotometricScale()
-        }
-        get radius() {
-          return this._radius
-        }
-        set radius(QQ) {
-          this._radius = QQ, this._computePhotometricScale()
-        }
-        get renderPriority() {
-          return (0, LQ.c)(this, FQ, "f")
-        }
-        set renderPriority(QQ) {
-          (0, LQ.f)(this, FQ, QQ, "f")
-        }
-        get shadowEnabled() {
-          return this._shadowEnabled
-        }
-        set shadowEnabled(QQ) {
-          this._shadowEnabled !== QQ && (this._shadowEnabled = QQ, this._markMeshesAsLightDirty())
-        }
-        get includedOnlyMeshes() {
-          return this._includedOnlyMeshes
-        }
-        set includedOnlyMeshes(QQ) {
-          this._includedOnlyMeshes = QQ, this._hookArrayForIncludedOnly(QQ)
-        }
-        get excludedMeshes() {
-          return this._excludedMeshes
-        }
-        set excludedMeshes(QQ) {
-          this._excludedMeshes = QQ, this._hookArrayForExcluded(QQ)
-        }
-        get excludeWithLayerMask() {
-          return this._excludeWithLayerMask
-        }
-        set excludeWithLayerMask(QQ) {
-          this._excludeWithLayerMask = QQ, this._resyncMeshes()
-        }
-        get includeOnlyWithLayerMask() {
-          return this._includeOnlyWithLayerMask
-        }
-        set includeOnlyWithLayerMask(QQ) {
-          this._includeOnlyWithLayerMask = QQ, this._resyncMeshes()
-        }
-        get lightmapMode() {
-          return this._lightmapMode
-        }
-        set lightmapMode(QQ) {
-          this._lightmapMode !== QQ && (this._lightmapMode = QQ, this._markMeshesAsLightDirty())
-        }
-        getViewMatrix(QQ) {
-          return null
-        }
-        getProjectionMatrix(QQ, FQ) {
-          return null
-        }
-        constructor(wQ, qQ, oQ) {
-          super(wQ, qQ, !1), this.diffuse = ((0, LQ.l)(this, WQ), (0, LQ.l)(this, RQ, new DQ.b(1, 1, 1))), this.specular = ((0, LQ.l)(this, OQ), (0, LQ.l)(this, sQ, new DQ.b(1, 1, 1))), this.falloffType = ((0, LQ.l)(this, rQ), (0, LQ.l)(this, IQ, QQ.FALLOFF_DEFAULT)), this.intensity = ((0, LQ.l)(this, UQ), (0, LQ.l)(this, NQ, 1)), this._range = ((0, LQ.l)(this, TQ), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = QQ.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, LQ.l)(this, KQ, void 0), FQ.set(this, ((0, LQ.l)(this, zQ), (0, LQ.l)(this, lQ, 0))), this._shadowEnabled = ((0, LQ.l)(this, jQ), (0, LQ.l)(this, aQ, !0)), this._includedOnlyMeshes = (0, LQ.l)(this, XQ), this._excludeWithLayerMask = (0, LQ.l)(this, fQ, 0), this._includeOnlyWithLayerMask = ((0, LQ.l)(this, VQ), (0, LQ.l)(this, hQ, 0)), this._lightmapMode = ((0, LQ.l)(this, JQ), (0, LQ.l)(this, EQ, 0)), this._shadowGenerators = ((0, LQ.l)(this, nQ), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, oQ || this.iN().addLight(this), this._uniformBuffer = new vQ.d(this.iN().Wx(), void 0, void 0, wQ), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], oQ || this._resyncMeshes()
-        }
-        transferTexturesToEffect(QQ, FQ) {
-          return this
-        }
-        _bindLight(QQ, FQ, wQ, LQ) {
-          let qQ = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const oQ = QQ.toString();
-          let kQ = !1;
-          if (this._uniformBuffer.bindToEffect(wQ, "Light" + oQ), this._renderId !== FQ.getRenderId() || this._lastUseSpecular !== LQ || !this._uniformBuffer.useUbo) {
-            this._renderId = FQ.getRenderId(), this._lastUseSpecular = LQ;
-            const QQ = this.getScaledIntensity();
-            this.transferToEffect(wQ, oQ), this.diffuse.scaleToRef(QQ, DQ.i.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", DQ.i.Color3[0], this.range, oQ), LQ && (this.specular.scaleToRef(QQ, DQ.i.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", DQ.i.Color3[1], this.radius, oQ)), kQ = !0
-          }
-          if (this.transferTexturesToEffect(wQ, oQ), FQ.shadowsEnabled && this.shadowEnabled && qQ) {
-            const QQ = this.getShadowGenerator(FQ.activeCamera) ?? this.getShadowGenerator();
-            QQ && (QQ.bindShadowLight(oQ, wQ), kQ = !0)
-          }
-          kQ ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
-        }
-        getClassName() {
-          return "Light"
-        }
-        toString(QQ) {
-          let FQ = "Name: " + this.name;
-          if (FQ += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
-            for (let wQ = 0; wQ < this.animations.length; wQ++) FQ += ", animation[0]: " + this.animations[wQ].toString(QQ);
-          return FQ
-        }
-        _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.vW() || this._resyncMeshes()
-        }
-        Qr(QQ) {
-          super.Qr(QQ), this._resyncMeshes()
-        }
-        getShadowGenerator() {
-          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return null === this._shadowGenerators ? null : this._shadowGenerators.get(QQ) ?? null
-        }
-        getShadowGenerators() {
-          return this._shadowGenerators
-        }
-        getAbsolutePosition() {
-          return oQ.p.Zero()
-        }
-        canAffectMesh(QQ) {
-          return !QQ || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(QQ)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(QQ)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & QQ.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & QQ.layerMask)))
-        }
-        dispose(QQ) {
-          let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._shadowGenerators) {
-            const QQ = this._shadowGenerators.values();
-            for (let FQ = QQ.next(); !0 !== FQ.done; FQ = QQ.next()) {
-              FQ.value.dispose()
-            }
-            this._shadowGenerators = null
-          }
-          if (this.iN().stopAnimation(this), this._parentContainer) {
-            const QQ = this._parentContainer.lights.indexOf(this);
-            QQ > -1 && this._parentContainer.lights.splice(QQ, 1), this._parentContainer = null
-          }
-          for (const wQ of this.iN().meshes) wQ._removeLightSource(this, !0);
-          this._uniformBuffer.dispose(), this.iN().removeLight(this), super.dispose(QQ, FQ)
-        }
-        getTypeID() {
-          return 0
-        }
-        getScaledIntensity() {
-          return this._photometricScale * this.intensity
-        }
-        clone(FQ) {
-          let wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const LQ = QQ.GetConstructorFromName(this.getTypeID(), FQ, this.iN());
-          if (!LQ) return null;
-          const qQ = HQ.c.Clone(LQ, this);
-          return FQ && (qQ.name = FQ), wQ && (qQ.parent = wQ), qQ.Qr(this.isEnabled()), this.onClonedObservable.notifyObservers(qQ), qQ
-        }
-        serialize() {
-          const QQ = HQ.c.Serialize(this);
-          if (QQ.uniqueId = this.uniqueId, QQ.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(QQ), this.excludedMeshes.length > 0) {
-            QQ.excludedMeshesIds = [];
-            for (const FQ of this.excludedMeshes) QQ.excludedMeshesIds.push(FQ.id)
-          }
-          if (this.includedOnlyMeshes.length > 0) {
-            QQ.includedOnlyMeshesIds = [];
-            for (const FQ of this.includedOnlyMeshes) QQ.includedOnlyMeshesIds.push(FQ.id)
-          }
-          return HQ.c.AppendSerializedAnimations(this, QQ), QQ.PA = this.serializeAnimationRanges(), QQ.isEnabled = this.isEnabled(), QQ
-        }
-        static GetConstructorFromName(QQ, FQ, wQ) {
-          const LQ = kQ.c.Construct("Light_Type_" + QQ, FQ, wQ);
-          return LQ || null
-        }
-        static Parse(FQ, wQ) {
-          let LQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const qQ = QQ.GetConstructorFromName(FQ.type, FQ.name, wQ);
-          if (!qQ) return null;
-          const oQ = HQ.c.Parse(qQ, FQ, wQ, LQ);
-          if (FQ.excludedMeshesIds && (oQ._excludedMeshesIds = FQ.excludedMeshesIds), FQ.includedOnlyMeshesIds && (oQ._includedOnlyMeshesIds = FQ.includedOnlyMeshesIds), void 0 !== FQ.parentId && (oQ._waitingParentId = FQ.parentId), void 0 !== FQ.parentInstanceIndex && (oQ._waitingParentInstanceIndex = FQ.parentInstanceIndex), void 0 !== FQ.falloffType && (oQ.falloffType = FQ.falloffType), void 0 !== FQ.lightmapMode && (oQ.lightmapMode = FQ.lightmapMode), FQ.animations) {
-            for (let QQ = 0; QQ < FQ.animations.length; QQ++) {
-              const wQ = FQ.animations[QQ],
-                LQ = (0, mQ.b)("BABYLON.Animation");
-              LQ && oQ.animations.push(LQ.Parse(wQ))
-            }
-            kQ.c.ParseAnimationRanges(oQ, FQ, wQ)
-          }
-          return FQ.autoAnimate && wQ.beginAnimation(oQ, FQ.autoAnimateFrom, FQ.autoAnimateTo, FQ.autoAnimateLoop, FQ.autoAnimateSpeed || 1), void 0 !== FQ.isEnabled && oQ.Qr(FQ.isEnabled), oQ._onParsed(FQ, wQ, LQ), oQ
-        }
-        _onParsed(QQ, FQ) {}
-        _hookArrayForExcluded(QQ) {
-          var FQ = this;
-          const wQ = QQ.push;
-          QQ.push = function() {
-            for (var LQ = arguments.length, qQ = new Array(LQ), oQ = 0; oQ < LQ; oQ++) qQ[oQ] = arguments[oQ];
-            const DQ = wQ.apply(QQ, qQ);
-            if (FQ._clusteredContainer) return DQ;
-            for (const QQ of qQ) QQ._resyncLightSource(FQ);
-            return DQ
-          };
-          const LQ = QQ.splice;
-          QQ.splice = (FQ, wQ) => {
-            const qQ = LQ.call(QQ, FQ, wQ ?? QQ.length);
-            if (this._clusteredContainer) return qQ;
-            for (const QQ of qQ) QQ._resyncLightSource(this);
-            return qQ
-          }, this._resyncMeshes()
-        }
-        _hookArrayForIncludedOnly(QQ) {
-          var FQ = this;
-          const wQ = QQ.push;
-          QQ.push = function() {
-            for (var LQ = arguments.length, qQ = new Array(LQ), oQ = 0; oQ < LQ; oQ++) qQ[oQ] = arguments[oQ];
-            const DQ = wQ.apply(QQ, qQ);
-            return FQ._resyncMeshes(), DQ
-          };
-          const LQ = QQ.splice;
-          QQ.splice = (FQ, wQ) => {
-            const qQ = LQ.call(QQ, FQ, wQ ?? QQ.length);
-            return this._resyncMeshes(), qQ
-          }, this._resyncMeshes()
-        }
-        _resyncMeshes() {
-          if (!this._clusteredContainer)
-            for (const QQ of this.iN().meshes) QQ._resyncLightSource(this)
-        }
-        _markMeshesAsLightDirty() {
-          for (const QQ of this.iN().meshes) - 1 !== QQ.lightSources.indexOf(this) && QQ._markSubMeshesAsLightDirty()
-        }
-        _computePhotometricScale() {
-          this._photometricScale = this._getPhotometricScale(), this.iN().resetCachedMaterial()
-        }
-        _getPhotometricScale() {
-          let FQ = 0;
-          const wQ = this.getTypeID();
-          let LQ = this.intensityMode;
-          switch (LQ === QQ.INTENSITYMODE_AUTOMATIC && (LQ = wQ === QQ.LIGHTTYPEID_DIRECTIONALLIGHT ? QQ.INTENSITYMODE_ILLUMINANCE : QQ.INTENSITYMODE_LUMINOUSINTENSITY), wQ) {
-            case QQ.LIGHTTYPEID_POINTLIGHT:
-            case QQ.LIGHTTYPEID_SPOTLIGHT:
-              switch (LQ) {
-                case QQ.INTENSITYMODE_LUMINOUSPOWER:
-                  FQ = 1 / (4 * Math.PI);
-                  break;
-                case QQ.INTENSITYMODE_LUMINOUSINTENSITY:
-                  FQ = 1;
-                  break;
-                case QQ.INTENSITYMODE_LUMINANCE:
-                  FQ = this.radius * this.radius
-              }
-              break;
-            case QQ.LIGHTTYPEID_DIRECTIONALLIGHT:
-              switch (LQ) {
-                case QQ.INTENSITYMODE_ILLUMINANCE:
-                  FQ = 1;
-                  break;
-                case QQ.INTENSITYMODE_LUMINANCE: {
-                  let QQ = this.radius;
-                  QQ = Math.max(QQ, .001);
-                  FQ = 2 * Math.PI * (1 - Math.cos(QQ));
-                  break
-                }
-              }
-              break;
-            case QQ.LIGHTTYPEID_HEMISPHERICLIGHT:
-            case QQ.LIGHTTYPEID_RECT_AREALIGHT:
-              FQ = 1
-          }
-          return FQ
-        }
-        _reorderLightsInScene() {
-          const QQ = this.iN();
-          0 != this._renderPriority && (QQ.requireLightSorting = !0), this.iN().sortLightsByPriority()
-        }
-        areLightTexturesReady() {
-          return !0
-        }
-        _isReady() {
-          return !0
-        }
-      }, FQ = new WeakMap, (() => {
-        const FQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(iQ[Symbol.metadata] ?? null) : void 0;
-        wQ = [(0, qQ.m)()], bQ = [(0, qQ.m)()], YQ = [(0, qQ.I)()], xQ = [(0, qQ.I)()], AQ = [(0, qQ.I)()], tQ = [(0, qQ.I)()], eQ = [(0, qQ.I)()], MQ = [(0, qQ.I)()], GQ = [(0, qQ.e)("_reorderLightsInScene")], pQ = [(0, qQ.I)("shadowEnabled")], cQ = [(0, qQ.I)("excludeWithLayerMask")], CQ = [(0, qQ.I)("includeOnlyWithLayerMask")], SQ = [(0, qQ.I)("lightmapMode")], (0, LQ.i)(QQ, null, AQ, {
-          kind: "getter",
-          name: "range",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "range" in QQ,
-            get: QQ => QQ.range
-          },
-          metadata: FQ
-        }, null, WQ), (0, LQ.i)(QQ, null, tQ, {
-          kind: "getter",
-          name: "intensityMode",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "intensityMode" in QQ,
-            get: QQ => QQ.intensityMode
-          },
-          metadata: FQ
-        }, null, WQ), (0, LQ.i)(QQ, null, eQ, {
-          kind: "getter",
-          name: "radius",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "radius" in QQ,
-            get: QQ => QQ.radius
-          },
-          metadata: FQ
-        }, null, WQ), (0, LQ.i)(QQ, null, GQ, {
-          kind: "accessor",
-          name: "renderPriority",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "renderPriority" in QQ,
-            get: QQ => QQ.renderPriority,
-            set: (QQ, FQ) => {
-              QQ.renderPriority = FQ
-            }
-          },
-          metadata: FQ
-        }, lQ, jQ), (0, LQ.i)(null, null, wQ, {
-          kind: "field",
-          name: "diffuse",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "diffuse" in QQ,
-            get: QQ => QQ.diffuse,
-            set: (QQ, FQ) => {
-              QQ.diffuse = FQ
-            }
-          },
-          metadata: FQ
-        }, RQ, OQ), (0, LQ.i)(null, null, bQ, {
-          kind: "field",
-          name: "specular",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "specular" in QQ,
-            get: QQ => QQ.specular,
-            set: (QQ, FQ) => {
-              QQ.specular = FQ
-            }
-          },
-          metadata: FQ
-        }, sQ, rQ), (0, LQ.i)(null, null, YQ, {
-          kind: "field",
-          name: "falloffType",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "falloffType" in QQ,
-            get: QQ => QQ.falloffType,
-            set: (QQ, FQ) => {
-              QQ.falloffType = FQ
-            }
-          },
-          metadata: FQ
-        }, IQ, UQ), (0, LQ.i)(null, null, xQ, {
-          kind: "field",
-          name: "intensity",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "intensity" in QQ,
-            get: QQ => QQ.intensity,
-            set: (QQ, FQ) => {
-              QQ.intensity = FQ
-            }
-          },
-          metadata: FQ
-        }, NQ, TQ), (0, LQ.i)(null, null, MQ, {
-          kind: "field",
-          name: "_renderPriority",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "_renderPriority" in QQ,
-            get: QQ => QQ._renderPriority,
-            set: (QQ, FQ) => {
-              QQ._renderPriority = FQ
-            }
-          },
-          metadata: FQ
-        }, KQ, zQ), (0, LQ.i)(null, null, pQ, {
-          kind: "field",
-          name: "_shadowEnabled",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "_shadowEnabled" in QQ,
-            get: QQ => QQ._shadowEnabled,
-            set: (QQ, FQ) => {
-              QQ._shadowEnabled = FQ
-            }
-          },
-          metadata: FQ
-        }, aQ, XQ), (0, LQ.i)(null, null, cQ, {
-          kind: "field",
-          name: "_excludeWithLayerMask",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "_excludeWithLayerMask" in QQ,
-            get: QQ => QQ._excludeWithLayerMask,
-            set: (QQ, FQ) => {
-              QQ._excludeWithLayerMask = FQ
-            }
-          },
-          metadata: FQ
-        }, fQ, VQ), (0, LQ.i)(null, null, CQ, {
-          kind: "field",
-          name: "_includeOnlyWithLayerMask",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "_includeOnlyWithLayerMask" in QQ,
-            get: QQ => QQ._includeOnlyWithLayerMask,
-            set: (QQ, FQ) => {
-              QQ._includeOnlyWithLayerMask = FQ
-            }
-          },
-          metadata: FQ
-        }, hQ, JQ), (0, LQ.i)(null, null, SQ, {
-          kind: "field",
-          name: "_lightmapMode",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "_lightmapMode" in QQ,
-            get: QQ => QQ._lightmapMode,
-            set: (QQ, FQ) => {
-              QQ._lightmapMode = FQ
-            }
-          },
-          metadata: FQ
-        }, EQ, nQ), FQ && Object.defineProperty(QQ, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: FQ
-        })
-      })(), QQ.FALLOFF_DEFAULT = uQ.c.FALLOFF_DEFAULT, QQ.FALLOFF_PHYSICAL = uQ.c.FALLOFF_PHYSICAL, QQ.FALLOFF_GLTF = uQ.c.FALLOFF_GLTF, QQ.FALLOFF_STANDARD = uQ.c.FALLOFF_STANDARD, QQ.LIGHTMAP_DEFAULT = uQ.c.LIGHTMAP_DEFAULT, QQ.LIGHTMAP_SPECULAR = uQ.c.LIGHTMAP_SPECULAR, QQ.LIGHTMAP_SHADOWSONLY = uQ.c.LIGHTMAP_SHADOWSONLY, QQ.INTENSITYMODE_AUTOMATIC = uQ.c.INTENSITYMODE_AUTOMATIC, QQ.INTENSITYMODE_LUMINOUSPOWER = uQ.c.INTENSITYMODE_LUMINOUSPOWER, QQ.INTENSITYMODE_LUMINOUSINTENSITY = uQ.c.INTENSITYMODE_LUMINOUSINTENSITY, QQ.INTENSITYMODE_ILLUMINANCE = uQ.c.INTENSITYMODE_ILLUMINANCE, QQ.INTENSITYMODE_LUMINANCE = uQ.c.INTENSITYMODE_LUMINANCE, QQ.LIGHTTYPEID_POINTLIGHT = uQ.c.LIGHTTYPEID_POINTLIGHT, QQ.LIGHTTYPEID_DIRECTIONALLIGHT = uQ.c.LIGHTTYPEID_DIRECTIONALLIGHT, QQ.LIGHTTYPEID_SPOTLIGHT = uQ.c.LIGHTTYPEID_SPOTLIGHT, QQ.LIGHTTYPEID_HEMISPHERICLIGHT = uQ.c.LIGHTTYPEID_HEMISPHERICLIGHT, QQ.LIGHTTYPEID_RECT_AREALIGHT = uQ.c.LIGHTTYPEID_RECT_AREALIGHT, QQ
-    })()
-  },
-  39650: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => HQ
-    });
-    var LQ = wQ(39402),
-      qQ = wQ(36696),
-      oQ = wQ(39409),
-      DQ = wQ(36722),
-      kQ = wQ(36720),
-      vQ = wQ(39277),
-      mQ = wQ(39426);
-    class uQ {
-      constructor() {
-        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new DQ.e, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new DQ.e, this._inheritVisibility = !1, this._isVisible = !0
+    var Dk = ik(38272),
+      fk = ik(36734);
+    class Sk {
+      static Instantiate(kk) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[kk]) return this.RegisteredExternalClasses[kk];
+        const ek = (0, fk.d)(kk);
+        if (ek) return ek;
+        Dk.b.Warn(kk + " not found, you may have missed an import.");
+        const ik = kk.split(".");
+        let Sk = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let Dk = 0, fk = ik.length; Dk < fk; Dk++) Sk = Sk[ik[Dk]];
+        return "function" !== typeof Sk ? null : Sk
       }
     }
-    let HQ = (() => {
-      var QQ;
-      let FQ, wQ, HQ, bQ, YQ, xQ = [],
-        AQ = [],
-        tQ = [],
-        eQ = [],
-        MQ = [],
-        GQ = [],
-        pQ = [],
-        cQ = [],
-        CQ = [],
-        SQ = [];
-      return QQ = class {
-        static AddNodeConstructor(QQ, FQ) {
-          this._NodeConstructors[QQ] = FQ
+    Sk.RegisteredExternalClasses = {}
+  },
+  39470: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => fk
+    });
+    var Dk = ik(39429);
+    class fk {
+      static get Now() {
+        return (0, Dk.i)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+      }
+    }
+  },
+  39501: (kk, ek, ik) => {
+    function Dk(kk) {
+      let ek = 1;
+      do {
+        ek *= 2
+      } while (ek < kk);
+      return ek === kk
+    }
+
+    function fk(kk, ek, ik) {
+      return kk * (1 - ik) + ek * ik
+    }
+
+    function Sk(kk) {
+      const ek = bk(kk),
+        ik = rk(kk);
+      return ek - kk > kk - ik ? ik : ek
+    }
+
+    function bk(kk) {
+      return kk--, kk |= kk >> 1, kk |= kk >> 2, kk |= kk >> 4, kk |= kk >> 8, kk |= kk >> 16, ++kk
+    }
+
+    function rk(kk) {
+      return kk |= kk >> 1, kk |= kk >> 2, kk |= kk >> 4, kk |= kk >> 8, (kk |= kk >> 16) - (kk >> 1)
+    }
+
+    function Pk(kk, ek) {
+      let ik;
+      switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
+        case 1:
+          ik = rk(kk);
+          break;
+        case 2:
+          ik = Sk(kk);
+          break;
+        default:
+          ik = bk(kk)
+      }
+      return Math.min(ik, ek)
+    }
+    ik.d(ek, {
+      d: () => rk,
+      g: () => Pk,
+      j: () => Dk,
+      l: () => fk,
+      p: () => Sk
+    })
+  },
+  39662: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => yk,
+      g: () => Lk,
+      i: () => lk,
+      l: () => pk
+    });
+    var Dk, fk = ik(36726),
+      Sk = ik(39429),
+      bk = ik(38272),
+      rk = ik(38265),
+      Pk = ik(39470),
+      mk = ik(39447),
+      Mk = ik(39612),
+      Kk = ik(36722),
+      xk = ik(39607),
+      nk = ik(39458),
+      Uk = ik(39666),
+      Hk = ik(37497),
+      wk = ik(39501);
+    class lk {
+      static get BaseUrl() {
+        return xk.e.BaseUrl
+      }
+      static set BaseUrl(kk) {
+        xk.e.BaseUrl = kk
+      }
+      static get CleanUrl() {
+        return xk.e.CleanUrl
+      }
+      static set CleanUrl(kk) {
+        xk.e.CleanUrl = kk
+      }
+      static IsAbsoluteUrl(kk) {
+        return 0 === kk.indexOf("//") || -1 !== kk.indexOf("://") && (-1 !== kk.indexOf(".") && (-1 !== kk.indexOf("/") && (!(kk.indexOf(":") > kk.indexOf("/")) && (kk.indexOf("://") < kk.indexOf(".") || (0 === kk.indexOf("data:") || 0 === kk.indexOf("blob:"))))))
+      }
+      static set ScriptBaseUrl(kk) {
+        xk.e.ScriptBaseUrl = kk
+      }
+      static get ScriptBaseUrl() {
+        return xk.e.ScriptBaseUrl
+      }
+      static set CDNBaseUrl(kk) {
+        Dk.ScriptBaseUrl = kk, Dk.AssetBaseUrl = kk
+      }
+      static set ScriptPreprocessUrl(kk) {
+        xk.e.ScriptPreprocessUrl = kk
+      }
+      static get ScriptPreprocessUrl() {
+        return xk.e.ScriptPreprocessUrl
+      }
+      static get DefaultRetryStrategy() {
+        return xk.e.DefaultRetryStrategy
+      }
+      static set DefaultRetryStrategy(kk) {
+        xk.e.DefaultRetryStrategy = kk
+      }
+      static get CorsBehavior() {
+        return xk.e.CorsBehavior
+      }
+      static set CorsBehavior(kk) {
+        xk.e.CorsBehavior = kk
+      }
+      static get UseFallbackTexture() {
+        return Kk.e.UseFallbackTexture
+      }
+      static set UseFallbackTexture(kk) {
+        Kk.e.UseFallbackTexture = kk
+      }
+      static get RegisteredExternalClasses() {
+        return Uk.d.RegisteredExternalClasses
+      }
+      static set RegisteredExternalClasses(kk) {
+        Uk.d.RegisteredExternalClasses = kk
+      }
+      static get fallbackTexture() {
+        return Kk.e.FallbackTexture
+      }
+      static set fallbackTexture(kk) {
+        Kk.e.FallbackTexture = kk
+      }
+      static FetchToRef(kk, ek, ik, Dk, fk, Sk) {
+        const bk = 4 * ((Math.abs(kk) * ik % ik | 0) + (Math.abs(ek) * Dk % Dk | 0) * ik);
+        Sk.r = fk[bk] / 255, Sk.g = fk[bk + 1] / 255, Sk.b = fk[bk + 2] / 255, Sk.a = fk[bk + 3] / 255
+      }
+      static Mix(kk, ek, ik) {
+        return 0
+      }
+      static Instantiate(kk) {
+        return Uk.d.Instantiate(kk)
+      }
+      static SetImmediate(kk) {
+        nk.e.SetImmediate(kk)
+      }
+      static IsExponentOfTwo(kk) {
+        return !0
+      }
+      static FloatRound(kk) {
+        return Math.fround(kk)
+      }
+      static GetFilename(kk) {
+        const ek = kk.lastIndexOf("/");
+        return ek < 0 ? kk : kk.substring(ek + 1)
+      }
+      static GetFolderPath(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ik = kk.lastIndexOf("/");
+        return ik < 0 ? ek ? kk : "" : kk.substring(0, ik + 1)
+      }
+      static ToDegrees(kk) {
+        return 180 * kk / Math.PI
+      }
+      static ToRadians(kk) {
+        return kk * Math.PI / 180
+      }
+      static SmoothAngleChange(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const Dk = this.ToRadians(kk),
+          fk = this.ToRadians(ek);
+        return this.ToDegrees(Math.atan2((1 - ik) * Math.sin(fk) + ik * Math.sin(Dk), (1 - ik) * Math.cos(fk) + ik * Math.cos(Dk)))
+      }
+      static MakeArray(kk, ek) {
+        return !0 === ek || void 0 !== kk && null != kk ? Array.isArray(kk) ? kk : [kk] : null
+      }
+      static GetPointerPrefix(kk) {
+        return (0, Sk.i)() && !window.PointerEvent ? "mouse" : "pointer"
+      }
+      static SetCorsBehavior(kk, ek) {
+        (0, xk.w)(kk, ek)
+      }
+      static SetReferrerPolicyBehavior(kk, ek) {
+        ek.referrerPolicy = kk
+      }
+      static get PreprocessUrl() {
+        return xk.e.PreprocessUrl
+      }
+      static set PreprocessUrl(kk) {
+        xk.e.PreprocessUrl = kk
+      }
+      static LoadImage(kk, ek, ik, Dk, fk, Sk) {
+        return (0, xk.o)(kk, ek, ik, Dk, fk, Sk)
+      }
+      static LoadFile(kk, ek, ik, Dk, fk, Sk) {
+        return (0, xk.k)(kk, ek, ik, Dk, fk, Sk)
+      }
+      static async LoadFileAsync(kk) {
+        let ek = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((ik, Dk) => {
+          (0, xk.k)(kk, (kk => {
+            ik(kk)
+          }), void 0, void 0, ek, ((kk, ek) => {
+            Dk(ek)
+          }))
+        }))
+      }
+      static GetAssetUrl(kk) {
+        if (!kk) return "";
+        if (Dk.AssetBaseUrl && kk.startsWith(Dk._DefaultAssetsUrl)) {
+          const ek = Dk.AssetBaseUrl.endsWith("/") ? Dk.AssetBaseUrl.slice(0, -1) : Dk.AssetBaseUrl;
+          return kk.replace(Dk._DefaultAssetsUrl, ek)
         }
-        static Construct(QQ, FQ, wQ, LQ) {
-          const qQ = this._NodeConstructors[QQ];
-          return qQ ? qQ(FQ, wQ, LQ) : null
+        return kk
+      }
+      static GetBabylonScriptURL(kk, ek) {
+        if (!kk) return "";
+        if (kk.startsWith(Dk._DefaultCdnUrl))
+          if (Dk.ScriptBaseUrl) {
+            const ek = Dk.ScriptBaseUrl.endsWith("/") ? Dk.ScriptBaseUrl.slice(0, -1) : Dk.ScriptBaseUrl;
+            kk = kk.replace(Dk._DefaultCdnUrl, ek)
+          } else if (Dk._CdnVersion) {
+          const ek = `${Dk._DefaultCdnUrl}/v${Dk._CdnVersion}`;
+          kk.startsWith(ek) || (kk = kk.replace(Dk._DefaultCdnUrl, ek))
         }
-        set accessibilityTag(QQ) {
-          this._accessibilityTag = QQ, this.onAccessibilityTagChangedObservable.notifyObservers(QQ)
-        }
-        get accessibilityTag() {
-          return this._accessibilityTag
-        }
-        get doNotSerialize() {
-          return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
-        }
-        set doNotSerialize(QQ) {
-          this._nodeDataStorage._doNotSerialize = QQ
-        }
-        vW() {
-          return this._nodeDataStorage._isDisposed
-        }
-        set parent(QQ) {
-          if (this._parentNode === QQ) return;
-          const FQ = this._parentNode;
-          if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
-            const FQ = this._parentNode._children.indexOf(this); - 1 !== FQ && this._parentNode._children.splice(FQ, 1), QQ || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+        return kk = Dk.ScriptPreprocessUrl(kk), ek && !Dk.IsAbsoluteUrl(kk) && (kk = Dk.GetAbsoluteUrl(kk)), kk
+      }
+      static LoadBabylonScript(kk, ek, ik, fk) {
+        kk = Dk.GetBabylonScriptURL(kk), Dk.LoadScript(kk, ek, ik)
+      }
+      static async LoadBabylonScriptAsync(kk) {
+        return kk = Dk.GetBabylonScriptURL(kk), await Dk.LoadScriptAsync(kk)
+      }
+      static _LoadScriptNative(kk, ek, ik, fk) {
+        if (_native) {
+          if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
+            const kk = "Loading a script as an ES module is not supported in Babylon Native";
+            return void ik?.(kk, new Error(kk))
           }
-          this._parentNode = QQ, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), FQ || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
-        }
-        get parent() {
-          return this._parentNode
-        }
-        get inheritVisibility() {
-          return this._nodeDataStorage._inheritVisibility
-        }
-        set inheritVisibility(QQ) {
-          this._nodeDataStorage._inheritVisibility = QQ
-        }
-        get isVisible() {
-          return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
-        }
-        set isVisible(QQ) {
-          this._nodeDataStorage._isVisible = QQ
-        }
-        _serializeAsParent(QQ) {
-          QQ.parentId = this.uniqueId
-        }
-        _addToSceneRootNodes() {
-          -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
-        }
-        _removeFromSceneRootNodes() {
-          if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
-            const QQ = this._scene.rootNodes,
-              FQ = QQ.length - 1;
-            QQ[this._nodeDataStorage._sceneRootNodesIndex] = QQ[FQ], QQ[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
-          }
-        }
-        get animationPropertiesOverride() {
-          return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
-        }
-        set animationPropertiesOverride(QQ) {
-          this._animationPropertiesOverride = QQ
-        }
-        getClassName() {
-          return "Node"
-        }
-        set onDispose(QQ) {
-          this._onDisposeObserver && this.zN.remove(this._onDisposeObserver), this._onDisposeObserver = this.zN.add(QQ)
-        }
-        get onEnabledStateChangedObservable() {
-          return this._nodeDataStorage._onEnabledStateChangedObservable
-        }
-        get onEffectiveEnabledStateChangedObservable() {
-          var QQ;
-          return (QQ = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (QQ._onEffectiveEnabledStateChangedObservable = new DQ.e)
-        }
-        get onClonedObservable() {
-          return this._nodeDataStorage._onClonedObservable
-        }
-        constructor(QQ) {
-          let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            wQ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          this._isDirty = !1, this._nodeDataStorage = new uQ, this.name = (0, LQ.l)(this, xQ, void 0), this.id = ((0, LQ.l)(this, AQ), (0, LQ.l)(this, tQ, void 0)), this.uniqueId = ((0, LQ.l)(this, eQ), (0, LQ.l)(this, MQ, void 0)), this.state = ((0, LQ.l)(this, GQ), (0, LQ.l)(this, pQ, "")), this.metadata = ((0, LQ.l)(this, cQ), (0, LQ.l)(this, CQ, null)), this._internalMetadata = (0, LQ.l)(this, SQ), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new DQ.e, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = qQ.c.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.zN = new DQ.e, this._onDisposeObserver = null, this._behaviors = new Array, this.name = QQ, this.id = QQ, this._scene = FQ || kQ.d.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), wQ && this._addToSceneRootNodes()
-        }
-        iN() {
-          return this._scene
-        }
-        Wx() {
-          return this._scene.Wx()
-        }
-        addBehavior(QQ) {
-          let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return -1 !== this._behaviors.indexOf(QQ) || (QQ.init(), this._scene.isLoading && !FQ ? this._scene.onDataLoadedObservable.addOnce((() => {
-            this._behaviors.includes(QQ) && QQ.attach(this)
-          })) : QQ.attach(this), this._behaviors.push(QQ)), this
-        }
-        removeBehavior(QQ) {
-          const FQ = this._behaviors.indexOf(QQ);
-          return -1 === FQ || (this._behaviors.splice(FQ, 1), QQ.detach()), this
-        }
-        get behaviors() {
-          return this._behaviors
-        }
-        getBehaviorByName(QQ) {
-          for (const FQ of this._behaviors)
-            if (FQ.name === QQ) return FQ;
-          return null
-        }
-        getWorldMatrix() {
-          return this._currentRenderId !== this._scene.getRenderId() && this.computeWorldMatrix(), this._worldMatrix
-        }
-        _getWorldMatrixDeterminant() {
-          return this._worldMatrixDeterminantIsDirty && (this._worldMatrixDeterminantIsDirty = !1, this._worldMatrixDeterminant = this._worldMatrix.determinant()), this._worldMatrixDeterminant
-        }
-        get worldMatrixFromCache() {
-          return this._worldMatrix
-        }
-        _initCache() {
-          this._cache = {}
-        }
-        updateCache(QQ) {
-          !QQ && this.isSynchronized() || this._updateCache()
-        }
-        _getActionManagerForTrigger(QQ) {
-          return this.parent ? this.parent._getActionManagerForTrigger(QQ, !1) : null
-        }
-        _updateCache(QQ) {}
-        _isSynchronized() {
-          return !0
-        }
-        _markSyncedWithParent() {
-          this._parentNode && (this._parentUpdateId = this._parentNode._childUpdateId)
-        }
-        isSynchronizedWithParent() {
-          return !this._parentNode || !this._parentNode._isDirty && this._parentUpdateId === this._parentNode._childUpdateId && this._parentNode.isSynchronized()
-        }
-        isSynchronized() {
-          return !(this._parentNode && !this.isSynchronizedWithParent()) && this._isSynchronized()
-        }
-        isReady() {
-          return this._nodeDataStorage._isReady
-        }
-        dFQ(QQ) {
-          return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
-        }
-        isEnabled() {
-          return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
-        }
-        _hasEffectiveEnabledStateObservers() {
-          const QQ = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
-          return !!QQ && QQ.hasObservers()
-        }
-        _syncParentEnabledState() {
-          const QQ = this._hasEffectiveEnabledStateObservers(),
-            FQ = QQ ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
-            for (const wQ of this._children) wQ._syncParentEnabledState();
-          if (QQ) {
-            const QQ = this.isEnabled();
-            QQ !== FQ && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(QQ)
-          }
-        }
-        Qr(QQ) {
-          if (this._nodeDataStorage._isEnabled === QQ) return;
-          const FQ = this._hasEffectiveEnabledStateObservers(),
-            wQ = FQ ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isEnabled = QQ, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(QQ), FQ) {
-            const QQ = this.isEnabled();
-            QQ !== wQ && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(QQ)
-          }
-        }
-        isDescendantOf(QQ) {
-          return !!this.parent && (this.parent === QQ || this.parent.isDescendantOf(QQ))
-        }
-        _getDescendants(QQ) {
-          let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            wQ = arguments.length > 2 ? arguments[2] : void 0;
-          if (this._children)
-            for (let LQ = 0; LQ < this._children.length; LQ++) {
-              const qQ = this._children[LQ];
-              wQ && !wQ(qQ) || QQ.push(qQ), FQ || qQ._getDescendants(QQ, !1, wQ)
+          Dk.LoadFile(kk, (kk => {
+            try {
+              Function(kk).apply(null), ek && ek()
+            } catch (Dk) {
+              ik && ik("LoadScript Error", Dk)
             }
+          }), void 0, void 0, !1, ((kk, ek) => {
+            ik && ik("LoadScript Error", ek)
+          }))
         }
-        getDescendants(QQ, FQ) {
-          const wQ = [];
-          return this._getDescendants(wQ, QQ, FQ), wQ
-        }
-        getChildMeshes(QQ, FQ) {
-          const wQ = [];
-          return this._getDescendants(wQ, QQ, (QQ => (!FQ || FQ(QQ)) && void 0 !== QQ.cullingStrategy)), wQ
-        }
-        getChildren(QQ) {
-          let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this.getDescendants(FQ, QQ)
-        }
-        _setReady(QQ) {
-          QQ !== this._nodeDataStorage._isReady && (QQ ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
-        }
-        getAnimationByName(QQ) {
-          for (let FQ = 0; FQ < this.animations.length; FQ++) {
-            const wQ = this.animations[FQ];
-            if (wQ.name === QQ) return wQ
+      }
+      static _LoadScriptWeb(kk, ek, ik, Dk) {
+        let fk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if ("function" === typeof importScripts) {
+          try {
+            importScripts(kk), ek && ek()
+          } catch (Pk) {
+            ik?.(`Unable to load script '${kk}' in worker`, Pk)
           }
-          return null
+          return
         }
-        createAnimationRange(FQ, wQ, LQ) {
-          if (!this._ranges[FQ]) {
-            this._ranges[FQ] = QQ._AnimationRangeFactory(FQ, wQ, LQ);
-            for (let QQ = 0, qQ = this.animations.length; QQ < qQ; QQ++) this.animations[QQ] && this.animations[QQ].createRange(FQ, wQ, LQ)
+        if (!(0, Sk.i)()) return void ik?.(`Cannot load script '${kk}' outside of a window or a worker`);
+        const bk = document.getElementsByTagName("head")[0],
+          rk = document.createElement("script");
+        fk ? (rk.setAttribute("type", "module"), rk.innerText = kk) : (rk.setAttribute("type", "text/javascript"), rk.setAttribute("src", kk)), Dk && (rk.id = Dk), rk.onload = () => {
+          ek && ek()
+        }, rk.onerror = ek => {
+          ik && ik(`Unable to load script '${kk}'`, ek)
+        }, bk.appendChild(rk)
+      }
+      static async LoadScriptAsync(kk, ek) {
+        return await new Promise(((ik, Dk) => {
+          this.LoadScript(kk, (() => {
+            ik()
+          }), ((kk, ek) => {
+            Dk(ek || new Error(kk))
+          }), ek)
+        }))
+      }
+      static ReadFileAsDataURL(kk, ek, ik) {
+        const Dk = new FileReader,
+          Sk = {
+            onCompleteObservable: new fk.c,
+            abort: () => Dk.abort()
+          };
+        return Dk.onloadend = () => {
+          Sk.onCompleteObservable.notifyObservers(Sk)
+        }, Dk.onload = kk => {
+          ek(kk.target.result)
+        }, Dk.onprogress = ik, Dk.readAsDataURL(kk), Sk
+      }
+      static ReadFile(kk, ek, ik, Dk, fk) {
+        return (0, xk.q)(kk, ek, ik, Dk, fk)
+      }
+      static FileAsURL(kk) {
+        const ek = new Blob([kk]);
+        return window.URL.createObjectURL(ek)
+      }
+      static Format(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return kk.toFixed(ek)
+      }
+      static DeepCopy(kk, ek, ik, Dk) {
+        rk.c.DeepCopy(kk, ek, ik, Dk)
+      }
+      static IsEmpty(kk) {
+        for (const ek in kk)
+          if (Object.prototype.hasOwnProperty.call(kk, ek)) return !1;
+        return !0
+      }
+      static RegisterTopRootEvents(kk, ek) {
+        for (let Dk = 0; Dk < ek.length; Dk++) {
+          const fk = ek[Dk];
+          kk.addEventListener(fk.name, fk.handler, !1);
+          try {
+            window.parent && window.parent.addEventListener(fk.name, fk.handler, !1)
+          } catch (ik) {}
+        }
+      }
+      static UnregisterTopRootEvents(kk, ek) {
+        for (let Dk = 0; Dk < ek.length; Dk++) {
+          const fk = ek[Dk];
+          kk.removeEventListener(fk.name, fk.handler);
+          try {
+            kk.parent && kk.parent.removeEventListener(fk.name, fk.handler)
+          } catch (ik) {}
+        }
+      }
+      static async DumpFramebuffer(kk, ek, ik, Dk) {
+        throw (0, mk.k)("DumpTools")
+      }
+      static DumpData(kk, ek, ik, Dk) {
+        throw (0, mk.k)("DumpTools")
+      }
+      static async DumpDataAsync(kk, ek, ik) {
+        throw (0, mk.k)("DumpTools")
+      }
+      static _IsOffScreenCanvas(kk) {
+        return void 0 !== kk.convertToBlob
+      }
+      static ToBlob(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          fk = arguments.length > 3 ? arguments[3] : void 0;
+        Dk._IsOffScreenCanvas(kk) || kk.toBlob || (kk.toBlob = function(kk, ek, ik) {
+          setTimeout((() => {
+            const Dk = atob(this.toDataURL(ek, ik).split(",")[1]),
+              fk = Dk.length,
+              Sk = new Uint8Array(fk);
+            for (let kk = 0; kk < fk; kk++) Sk[kk] = Dk.charCodeAt(kk);
+            kk(new Blob([Sk]))
+          }))
+        }), Dk._IsOffScreenCanvas(kk) ? kk.convertToBlob({
+          type: ik,
+          quality: fk
+        }).then((kk => ek(kk))) : kk.toBlob((function(kk) {
+          ek(kk)
+        }), ik, fk)
+      }
+      static DownloadBlob(kk, ek) {
+        if ("download" in document.createElement("a")) {
+          if (!ek) {
+            const kk = new Date;
+            ek = "screenshot_" + ((kk.getFullYear() + "-" + (kk.getMonth() + 1)).slice(2) + "-" + kk.getDate() + "_" + kk.getHours() + "-" + ("0" + kk.getMinutes()).slice(-2)) + ".png"
           }
+          Dk.Download(kk, ek)
+        } else if (kk && "undefined" !== typeof URL) {
+          const ek = URL.createObjectURL(kk),
+            ik = window.open("");
+          if (!ik) return;
+          const Dk = ik.document.createElement("img");
+          Dk.onload = function() {
+            URL.revokeObjectURL(ek)
+          }, Dk.src = ek, ik.document.body.appendChild(Dk)
         }
-        deleteAnimationRange(QQ) {
-          let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          for (let wQ = 0, LQ = this.animations.length; wQ < LQ; wQ++) this.animations[wQ] && this.animations[wQ].deleteRange(QQ, FQ);
-          this._ranges[QQ] = null
-        }
-        getAnimationRange(QQ) {
-          return this._ranges[QQ] || null
-        }
-        clone(FQ, wQ, LQ) {
-          const qQ = mQ.c.Clone((() => new QQ(FQ, this.iN())), this);
-          if (wQ && (qQ.parent = wQ), !LQ) {
-            const QQ = this.getDescendants(!0);
-            for (let wQ = 0; wQ < QQ.length; wQ++) {
-              const LQ = QQ[wQ];
-              LQ.clone(FQ + "." + LQ.name, qQ)
-            }
+      }
+      static EncodeScreenshotCanvasData(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          fk = arguments.length > 3 ? arguments[3] : void 0,
+          Sk = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof fk && ek) {
+          if (ek) {
+            if (Dk._IsOffScreenCanvas(kk)) return void kk.convertToBlob({
+              type: ik,
+              quality: Sk
+            }).then((kk => {
+              const ik = new FileReader;
+              ik.readAsDataURL(kk), ik.onloadend = () => {
+                const kk = ik.result;
+                ek(kk)
+              }
+            }));
+            const fk = kk.toDataURL(ik, Sk);
+            ek(fk)
           }
-          return qQ
+        } else this.ToBlob(kk, (function(kk) {
+          kk && Dk.DownloadBlob(kk, fk), ek && ek("")
+        }), ik, Sk)
+      }
+      static Download(kk, ek) {
+        if ("undefined" === typeof URL) return;
+        const ik = window.URL.createObjectURL(kk),
+          Dk = document.createElement("a");
+        document.body.appendChild(Dk), Dk.style.display = "none", Dk.href = ik, Dk.download = ek, Dk.addEventListener("click", (() => {
+          Dk.parentElement && Dk.parentElement.removeChild(Dk)
+        })), Dk.click(), window.URL.revokeObjectURL(ik)
+      }
+      static BackCompatCameraNoPreventDefault(kk) {
+        return "boolean" === typeof kk[0] ? kk[0] : "boolean" === typeof kk[1] && kk[1]
+      }
+      static CreateScreenshot(kk, ek, ik, Dk) {
+        throw (0, mk.k)("ScreenshotTools")
+      }
+      static async CreateScreenshotAsync(kk, ek, ik) {
+        throw (0, mk.k)("ScreenshotTools")
+      }
+      static CreateScreenshotUsingRenderTarget(kk, ek, ik, Dk) {
+        throw (0, mk.k)("ScreenshotTools")
+      }
+      static async CreateScreenshotUsingRenderTargetAsync(kk, ek, ik) {
+        throw (0, mk.k)("ScreenshotTools")
+      }
+      static RandomId() {
+        return (0, Hk.b)()
+      }
+      static IsBase64(kk) {
+        return (0, xk.h)(kk)
+      }
+      static DecodeBase64(kk) {
+        return (0, xk.d)(kk)
+      }
+      static get errorsCount() {
+        return bk.b.errorsCount
+      }
+      static Log(kk) {
+        bk.b.Log(kk)
+      }
+      static Warn(kk) {
+        bk.b.Warn(kk)
+      }
+      static Error(kk) {
+        bk.b.Error(kk)
+      }
+      static get LogCache() {
+        return bk.b.LogCache
+      }
+      static ClearLogCache() {
+        bk.b.ClearLogCache()
+      }
+      static set LogLevels(kk) {
+        bk.b.LogLevels = kk
+      }
+      static set PerformanceLogLevel(kk) {
+        (kk & Dk.PerformanceUserMarkLogLevel) !== Dk.PerformanceUserMarkLogLevel ? (kk & Dk.PerformanceConsoleLogLevel) !== Dk.PerformanceConsoleLogLevel ? (Dk.StartPerformanceCounter = Dk._StartPerformanceCounterDisabled, Dk.EndPerformanceCounter = Dk._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), Dk.StartPerformanceCounter = Dk._StartMarkNative, Dk.EndPerformanceCounter = Dk._EndMarkNative) : (Dk.StartPerformanceCounter = Dk._StartPerformanceConsole, Dk.EndPerformanceCounter = Dk._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), Dk.StartPerformanceCounter = Dk._StartMarkNative, Dk.EndPerformanceCounter = Dk._EndMarkNative) : (Dk.StartPerformanceCounter = Dk._StartUserMark, Dk.EndPerformanceCounter = Dk._EndUserMark)
+      }
+      static _StartPerformanceCounterDisabled(kk, ek) {}
+      static _EndPerformanceCounterDisabled(kk, ek) {}
+      static _StartUserMark(kk) {
+        let ek = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!Dk._Performance) {
+          if (!(0, Sk.i)()) return;
+          Dk._Performance = window.performance
         }
-        getAnimationRanges() {
-          const QQ = [];
-          let FQ;
-          for (FQ in this._ranges) QQ.push(this._ranges[FQ]);
-          return QQ
-        }
-        beginAnimation(QQ, FQ, wQ, LQ) {
-          const qQ = this.getAnimationRange(QQ);
-          return qQ ? this._scene.beginAnimation(this, qQ.from, qQ.to, FQ, wQ, LQ) : null
-        }
-        serializeAnimationRanges() {
-          const QQ = [];
-          for (const FQ in this._ranges) {
-            const wQ = this._ranges[FQ];
-            if (!wQ) continue;
-            const LQ = {};
-            LQ.name = FQ, LQ.from = wQ.from, LQ.to = wQ.to, QQ.push(LQ)
+        ek && Dk._Performance.mark && Dk._Performance.mark(kk + "-Begin")
+      }
+      static _EndUserMark(kk) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && Dk._Performance.mark && (Dk._Performance.mark(kk + "-End"), Dk._Performance.measure(kk, kk + "-Begin", kk + "-End"))
+      }
+      static _StartPerformanceConsole(kk) {
+        let ek = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        ek && (Dk._StartUserMark(kk, ek), console.time && console.time(kk))
+      }
+      static _EndPerformanceConsole(kk) {
+        let ek = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        ek && (Dk._EndUserMark(kk, ek), console.timeEnd(kk))
+      }
+      static _StartMarkNative(kk) {
+        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
+          if (Dk._NativePerformanceCounterHandles.has(kk)) Dk.Warn(`Performance counter with name ${kk} is already started.`);
+          else {
+            const ek = _native.startPerformanceCounter(kk);
+            Dk._NativePerformanceCounterHandles.set(kk, ek)
           }
-          return QQ
+      }
+      static _EndMarkNative(kk) {
+        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
+          const ek = Dk._NativePerformanceCounterHandles.get(kk);
+          ek ? (_native.endPerformanceCounter(ek), Dk._NativePerformanceCounterHandles.delete(kk)) : Dk.Warn(`Performance counter with name ${kk} was not started.`)
         }
-        computeWorldMatrix(QQ) {
-          return this._worldMatrix || (this._worldMatrix = qQ.c.Identity()), this._worldMatrix
-        }
-        dispose(QQ) {
-          let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._nodeDataStorage._isDisposed = !0, !QQ) {
-            const wQ = this.getDescendants(!0);
-            for (const LQ of wQ) LQ.dispose(QQ, FQ)
+      }
+      static get Now() {
+        return Pk.d.Now
+      }
+      static GetClassName(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ik = null;
+        if (!ek && kk.getClassName) ik = kk.getClassName();
+        else {
+          if (kk instanceof Object) {
+            ik = (ek ? kk : Object.getPrototypeOf(kk)).constructor.__bjsclassName__
           }
-          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.zN.notifyObservers(this), this.zN.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
-          for (const wQ of this._behaviors) wQ.detach();
-          this._behaviors.length = 0, this.metadata = null
+          ik || (ik = typeof kk)
         }
-        static ParseAnimationRanges(QQ, FQ, wQ) {
-          if (FQ.PA)
-            for (let LQ = 0; LQ < FQ.PA.length; LQ++) {
-              const wQ = FQ.PA[LQ];
-              QQ.createAnimationRange(wQ.name, wQ.from, wQ.to)
-            }
-        }
-        getHierarchyBoundingVectors() {
-          let QQ, FQ, wQ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            LQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          this.iN().incrementRenderId(), this.computeWorldMatrix(!0);
-          const oQ = this;
-          if (oQ.sK && oQ.lC) {
-            const wQ = oQ.sK();
-            QQ = wQ.boundingBox.minimumWorld.clone(), FQ = wQ.boundingBox.maximumWorld.clone()
-          } else QQ = new qQ.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), FQ = new qQ.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-          if (wQ) {
-            const wQ = this.getDescendants(!1);
-            for (const oQ of wQ) {
-              const wQ = oQ;
-              if (wQ.computeWorldMatrix(!0), LQ && !LQ(wQ)) continue;
-              if (!wQ.sK || 0 === wQ.getTotalVertices()) continue;
-              const DQ = wQ.sK().boundingBox,
-                kQ = DQ.minimumWorld,
-                vQ = DQ.maximumWorld;
-              qQ.p.CheckExtends(kQ, QQ, FQ), qQ.p.CheckExtends(vQ, QQ, FQ)
-            }
+        return ik
+      }
+      static First(kk, ek) {
+        for (const ik of kk)
+          if (ek(ik)) return ik;
+        return null
+      }
+      static getFullClassName(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ik = null,
+          Dk = null;
+        if (!ek && kk.getClassName) ik = kk.getClassName();
+        else {
+          if (kk instanceof Object) {
+            const fk = ek ? kk : Object.getPrototypeOf(kk);
+            ik = fk.constructor.__bjsclassName__, Dk = fk.constructor.__bjsmoduleName__
           }
-          return {
-            min: QQ,
-            max: FQ
-          }
+          ik || (ik = typeof kk)
         }
-      }, (() => {
-        const qQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        FQ = [(0, oQ.I)()], wQ = [(0, oQ.I)()], HQ = [(0, oQ.I)()], bQ = [(0, oQ.I)()], YQ = [(0, oQ.I)()], (0, LQ.i)(null, null, FQ, {
-          kind: "field",
-          name: "name",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "name" in QQ,
-            get: QQ => QQ.name,
-            set: (QQ, FQ) => {
-              QQ.name = FQ
+        return ik ? (null != Dk ? Dk + "." : "") + ik : null
+      }
+      static async DelayAsync(kk) {
+        await new Promise((ek => {
+          setTimeout((() => {
+            ek()
+          }), kk)
+        }))
+      }
+      static IsSafari() {
+        return !!(0, Sk.f)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+      }
+    }
+
+    function pk(kk, ek) {
+      return ik => {
+        ik.__bjsclassName__ = kk, ik.__bjsmoduleName__ = null != ek ? ek : null
+      }
+    }
+    Dk = lk, lk.AssetBaseUrl = "", lk.UseCustomRequestHeaders = !1, lk.CustomRequestHeaders = Mk.d.CustomRequestHeaders, lk.GetDOMTextContent = Sk.c, lk._DefaultCdnUrl = "https://cdn.babylonjs.com", lk._CdnVersion = "9.28.0", lk._DefaultAssetsUrl = "https://assets.babylonjs.com/core", lk.LoadScript = "undefined" === typeof _native ? Dk._LoadScriptWeb : Dk._LoadScriptNative, lk.GetAbsoluteUrl = "object" === typeof document ? kk => {
+      const ek = document.createElement("a");
+      return ek.href = kk, ek.href
+    } : "function" === typeof URL && "object" === typeof location ? kk => new URL(kk, location.origin).href : () => {
+      throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
+    }, lk.NoneLogLevel = bk.b.NoneLogLevel, lk.MessageLogLevel = bk.b.MessageLogLevel, lk.WarningLogLevel = bk.b.WarningLogLevel, lk.ErrorLogLevel = bk.b.ErrorLogLevel, lk.AllLogLevel = bk.b.AllLogLevel, lk.IsWindowObjectExist = Sk.i, lk.PerformanceNoneLogLevel = 0, lk.PerformanceUserMarkLogLevel = 1, lk.PerformanceConsoleLogLevel = 2, lk._NativePerformanceCounterHandles = new Map, lk.StartPerformanceCounter = Dk._StartPerformanceCounterDisabled, lk.EndPerformanceCounter = Dk._EndPerformanceCounterDisabled;
+    class yk {
+      constructor(kk, ek, ik) {
+        let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = kk, this.index = Dk - 1, this._done = !1, this._fn = ek, this._successCallback = ik
+      }
+      executeNext() {
+        this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
+      }
+      breakLoop() {
+        this._done = !0, this._successCallback()
+      }
+      static Run(kk, ek, ik) {
+        const Dk = new yk(kk, ek, ik, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return Dk.executeNext(), Dk
+      }
+      static SyncAsyncForLoop(kk, ek, ik, Dk, fk) {
+        let Sk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return yk.Run(Math.ceil(kk / ek), (Dk => {
+          fk && fk() ? Dk.breakLoop() : setTimeout((() => {
+            for (let Sk = 0; Sk < ek; ++Sk) {
+              const bk = Dk.index * ek + Sk;
+              if (bk >= kk) break;
+              if (ik(bk), fk && fk()) {
+                Dk.breakLoop();
+                break
+              }
             }
-          },
-          metadata: qQ
-        }, xQ, AQ), (0, LQ.i)(null, null, wQ, {
-          kind: "field",
-          name: "id",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "id" in QQ,
-            get: QQ => QQ.id,
-            set: (QQ, FQ) => {
-              QQ.id = FQ
-            }
-          },
-          metadata: qQ
-        }, tQ, eQ), (0, LQ.i)(null, null, HQ, {
-          kind: "field",
-          name: "uniqueId",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "uniqueId" in QQ,
-            get: QQ => QQ.uniqueId,
-            set: (QQ, FQ) => {
-              QQ.uniqueId = FQ
-            }
-          },
-          metadata: qQ
-        }, MQ, GQ), (0, LQ.i)(null, null, bQ, {
-          kind: "field",
-          name: "state",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "state" in QQ,
-            get: QQ => QQ.state,
-            set: (QQ, FQ) => {
-              QQ.state = FQ
-            }
-          },
-          metadata: qQ
-        }, pQ, cQ), (0, LQ.i)(null, null, YQ, {
-          kind: "field",
-          name: "metadata",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "metadata" in QQ,
-            get: QQ => QQ.metadata,
-            set: (QQ, FQ) => {
-              QQ.metadata = FQ
-            }
-          },
-          metadata: qQ
-        }, CQ, SQ), qQ && Object.defineProperty(QQ, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: qQ
-        })
-      })(), QQ._AnimationRangeFactory = (QQ, FQ, wQ) => {
-        throw (0, vQ.k)("AnimationRange")
-      }, QQ._NodeConstructors = {}, QQ
-    })()
+            Dk.executeNext()
+          }), Sk)
+        }), Dk)
+      }
+    }
+    let Yk = !1;
+
+    function Lk() {
+      Yk || (Yk = !0, lk.Mix = wk.l, lk.IsExponentOfTwo = wk.j, Kk.e.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,105 +1,95 @@
 export const id = 320;
 export const ids = [320];
 export const modules = {
-  41428: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
+  41471: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => bk
     });
-    var LQ = wQ(39251);
-    const qQ = "clipPlaneVertex",
-      oQ = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(39412);
+    ik(41462), ik(41467);
+    const fk = "defaultUboDeclaration",
+      Sk = "layout(std140,column_major) uniform;uniform Material\n{vec4 diffuseLeftColor;vec4 diffuseRightColor;vec4 opacityParts;vec4 reflectionLeftColor;vec4 reflectionRightColor;vec4 refractionLeftColor;vec4 refractionRightColor;vec4 emissiveLeftColor;vec4 emissiveRightColor;vec2 vDiffuseInfos;vec2 vAmbientInfos;vec2 vOpacityInfos;vec2 vEmissiveInfos;vec2 vLightmapInfos;vec2 vSpecularInfos;vec3 vBumpInfos;mat4 diffuseMatrix;mat4 ambientMatrix;mat4 opacityMatrix;mat4 emissiveMatrix;mat4 lightmapMatrix;mat4 specularMatrix;mat4 bumpMatrix;vec2 vTangentSpaceParams;float pointSize;float alphaCutOff;mat4 refractionMatrix;vec4 vRefractionInfos;vec3 vRefractionPosition;vec3 vRefractionSize;vec4 vSpecularColor;vec3 vEmissiveColor;vec4 vDiffuseColor;vec3 vAmbientColor;vec4 cameraInfo;vec4 vTextureRepetitionHexTilingParams;vec2 vReflectionInfos;mat4 reflectionMatrix;vec3 vReflectionPosition;vec3 vReflectionSize;\n#define ADDITIONAL_UBO_DECLARATION\n};\n#include<sceneUboDeclaration>\n#include<meshUboDeclaration>\n";
+    Dk.d.IncludesShadersStore[fk] || (Dk.d.IncludesShadersStore[fk] = Sk);
+    const bk = {
+      name: fk,
+      shader: Sk
     }
   },
-  41343: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
+  41633: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      defaultPixelShader: () => ke
     });
-    var LQ = wQ(39251);
-    const qQ = "clipPlaneVertexDeclaration",
-      oQ = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41431: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "fogVertex",
-      oQ = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41347: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "fogVertexDeclaration",
-      oQ = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41368: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "logDepthDeclaration",
-      oQ = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41449: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "logDepthVertex",
-      oQ = "#ifdef LOGARITHMICDEPTH\nvFragmentDepth=1.0+gl_Position.w;gl_Position.z=log2(max(0.000001,vFragmentDepth))*logarithmicDepthConstant;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  60684: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      particlesVertexShader: () => YQ
-    });
-    var LQ = wQ(39251),
-      qQ = wQ(41343),
-      oQ = wQ(41347),
-      DQ = wQ(41368),
-      kQ = wQ(41428),
-      vQ = wQ(41431),
-      mQ = wQ(41449);
-    const uQ = "particlesVertexShader",
-      HQ = "attribute vec3 position;attribute vec4 color;attribute float angle;attribute vec2 size;\n#ifdef ANIMATESHEET\nattribute float cellIndex;\n#endif\n#ifndef BILLBOARD\nattribute vec3 direction;\n#endif\n#ifdef BILLBOARDSTRETCHED\nattribute vec3 direction;\n#endif\n#ifdef RAMPGRADIENT\nattribute vec4 remapData;\n#endif\nattribute vec2 offset;uniform mat4 view;uniform mat4 projection;uniform vec2 translationPivot;\n#ifdef PREPASS\nuniform vec2 cameraInfo;\n#if defined(LOCAL) && defined(PREPASS_LOCAL_POSITION)\nuniform mat4 inverseEmitterWM;uniform vec3 geometryWorldOffset;\n#endif\n#ifdef PREPASS_POSITION\nvarying vec3 vGeometryPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvarying vec3 vGeometryNormalW;\n#endif\n#ifdef PREPASS_NORMAL\nvarying vec3 vGeometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvarying vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying float vNormViewDepth;\n#endif\n#endif\n#ifdef ANIMATESHEET\nuniform vec3 particlesInfos; \n#endif\nvarying vec2 vUV;varying vec4 vColor;\n#ifdef POSITIONW_AS_VARYING\nvarying vec3 vPositionW;\n#endif\n#ifdef RAMPGRADIENT\nvarying vec4 remapRanges;\n#endif\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\nuniform mat4 invView;\n#endif\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<logDepthDeclaration>\n#ifdef BILLBOARD\nuniform vec3 eyePosition;\n#endif\nvec3 rotate(vec3 yaxis,vec3 rotatedCorner) {vec3 xaxis=normalize(cross(vec3(0.,1.0,0.),yaxis));vec3 zaxis=normalize(cross(yaxis,xaxis));vec3 row0=vec3(xaxis.x,xaxis.y,xaxis.z);vec3 row1=vec3(yaxis.x,yaxis.y,yaxis.z);vec3 row2=vec3(zaxis.x,zaxis.y,zaxis.z);mat3 rotMatrix= mat3(row0,row1,row2);vec3 alignedCorner=rotMatrix*rotatedCorner;return position+alignedCorner;}\n#ifdef BILLBOARDSTRETCHED\nvec3 rotateAlign(vec3 toCamera,vec3 rotatedCorner) {vec3 normalizedToCamera=normalize(toCamera);vec3 normalizedCrossDirToCamera=normalize(cross(normalize(direction),normalizedToCamera));vec3 row0=vec3(normalizedCrossDirToCamera.x,normalizedCrossDirToCamera.y,normalizedCrossDirToCamera.z);vec3 row2=vec3(normalizedToCamera.x,normalizedToCamera.y,normalizedToCamera.z);\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvec3 row1=normalize(direction);\n#else\nvec3 crossProduct=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));vec3 row1=vec3(crossProduct.x,crossProduct.y,crossProduct.z);\n#endif\nmat3 rotMatrix= mat3(row0,row1,row2);vec3 alignedCorner=rotMatrix*rotatedCorner;return position+alignedCorner;}\nvec3 stretchedNormal(vec3 toCamera,vec3 stretchDirection) {vec3 normalizedToCamera=normalize(toCamera);vec3 normalizedCrossDirToCamera=normalize(cross(normalize(stretchDirection),normalizedToCamera));\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvec3 row1=normalize(stretchDirection);\n#else\nvec3 row1=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));\n#endif\nreturn normalize(cross(normalizedCrossDirToCamera,row1));}\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvec2 cornerPos;\n#ifndef POSITIONW_AS_VARYING\nvec3 vPositionW;\n#endif\n#ifdef PREPASS\nvec3 geometryNormalW;\n#endif\ncornerPos=(vec2(offset.x-0.5,offset.y -0.5)-translationPivot)*size;\n#ifdef BILLBOARD\nvec3 rotatedCorner;\n#ifdef BILLBOARDY\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.z=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.y=0.;rotatedCorner.xz+=translationPivot;vec3 yaxis=position-eyePosition;yaxis.y=0.;vPositionW=rotate(normalize(yaxis),rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=normalize(yaxis);\n#endif\nvec3 viewPos=(view*vec4(vPositionW,1.0)).xyz;\n#elif defined(BILLBOARDSTRETCHED)\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.y=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.z=0.;rotatedCorner.xy+=translationPivot;vec3 toCamera=position-eyePosition;vPositionW=rotateAlign(toCamera,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=stretchedNormal(toCamera,direction);\n#endif\nvec3 viewPos=(view*vec4(vPositionW,1.0)).xyz;\n#else\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.y=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.z=0.;rotatedCorner.xy+=translationPivot;vec3 viewPos=(view*vec4(position,1.0)).xyz+rotatedCorner;vPositionW=(invView*vec4(viewPos,1)).xyz;\n#ifdef PREPASS\ngeometryNormalW=normalize((invView*vec4(0.0,0.0,1.0,0.0)).xyz);\n#endif\n#endif\n#ifdef RAMPGRADIENT\nremapRanges=remapData;\n#endif\ngl_Position=projection*vec4(viewPos,1.0);\n#else\nvec3 rotatedCorner;rotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.z=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.y=0.;rotatedCorner.xz+=translationPivot;vec3 yaxis=normalize(direction);vPositionW=rotate(yaxis,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=yaxis;\n#endif\ngl_Position=projection*view*vec4(vPositionW,1.0);\n#endif\nvColor=color;\n#ifdef ANIMATESHEET\nfloat rowOffset=floor(cellIndex*particlesInfos.z);float columnOffset=cellIndex-rowOffset/particlesInfos.z;vec2 uvScale=particlesInfos.xy;vec2 uvOffset=vec2(offset.x ,1.0-offset.y);vUV=(uvOffset+vec2(columnOffset,rowOffset))*uvScale;\n#else\nvUV=offset;\n#endif\n#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6) || defined(FOG)\nvec4 worldPos=vec4(vPositionW,1.0);\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<logDepthVertex>\n#ifdef PREPASS\nvec4 geometryViewPosition=view*vec4(vPositionW,1.0);\n#if defined(PREPASS_NORMAL) || defined(PREPASS_WORLD_NORMAL)\nvec3 geometryNormalV=normalize((view*vec4(geometryNormalW,0.0)).xyz);vec3 geometryViewDirection=projection[3][3]==0.0 ? geometryViewPosition.xyz : vec3(0.0,0.0,geometryViewPosition.z);if (dot(geometryNormalV,geometryViewDirection)>0.0) {geometryNormalV=-geometryNormalV;geometryNormalW=-geometryNormalW;}\n#endif\n#ifdef PREPASS_POSITION\nvGeometryPositionW=vPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvGeometryNormalW=normalize(geometryNormalW);\n#endif\n#ifdef PREPASS_NORMAL\nvGeometryNormalV=geometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\n#ifdef LOCAL\nvec3 geometryRenderPosition=vPositionW;\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\ngeometryRenderPosition=position+(invView*vec4(rotatedCorner,0.0)).xyz;\n#endif\nvPosition=(inverseEmitterWM*vec4(geometryRenderPosition-geometryWorldOffset,1.0)).xyz;\n#else\nvPosition=vPositionW;\n#endif\n#endif\n#ifdef PREPASS_DEPTH\nvViewPos=geometryViewPosition.xyz;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvNormViewDepth=(geometryViewPosition.z-cameraInfo.x)/(cameraInfo.y-cameraInfo.x);\n#endif\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    LQ.c.ShadersStore[uQ] || (LQ.c.ShadersStore[uQ] = HQ);
-    const bQ = [qQ.c, oQ.e, DQ.c, kQ.e, vQ.b, mQ.c];
-    for (const xQ of bQ) LQ.c.IncludesShadersStore[xQ.name] || (LQ.c.IncludesShadersStore[xQ.name] = xQ.shader);
-    const YQ = {
-      name: uQ,
-      shader: HQ
+    var Dk = ik(39412),
+      fk = ik(41636);
+    const Sk = "defaultFragmentDeclaration",
+      bk = "uniform vec4 vEyePosition;uniform vec4 vDiffuseColor;uniform vec4 vSpecularColor;uniform vec3 vEmissiveColor;uniform vec3 vAmbientColor;uniform float visibility;\n#ifdef DIFFUSE\nuniform vec2 vDiffuseInfos;\n#endif\n#ifdef AMBIENT\nuniform vec2 vAmbientInfos;\n#endif\n#ifdef OPACITY \nuniform vec2 vOpacityInfos;\n#endif\n#ifdef EMISSIVE\nuniform vec2 vEmissiveInfos;\n#endif\n#ifdef LIGHTMAP\nuniform vec2 vLightmapInfos;\n#endif\n#ifdef BUMP\nuniform vec3 vBumpInfos;uniform vec2 vTangentSpaceParams;\n#endif\n#ifdef ALPHATEST\nuniform float alphaCutOff;\n#endif\n#if defined(REFLECTIONMAP_SPHERICAL) || defined(REFLECTIONMAP_PROJECTION) || defined(REFRACTION) || defined(PREPASS)\nuniform mat4 view;\n#endif\n#ifdef REFRACTION\nuniform vec4 vRefractionInfos;\n#ifndef REFRACTIONMAP_3D\nuniform mat4 refractionMatrix;\n#endif\n#ifdef REFRACTIONFRESNEL\nuniform vec4 refractionLeftColor;uniform vec4 refractionRightColor;\n#endif\n#if defined(USE_LOCAL_REFRACTIONMAP_CUBIC) && defined(REFRACTIONMAP_3D)\nuniform vec3 vRefractionPosition;uniform vec3 vRefractionSize; \n#endif\n#endif\n#if defined(SPECULAR) && defined(SPECULARTERM)\nuniform vec2 vSpecularInfos;\n#endif\n#ifdef DIFFUSEFRESNEL\nuniform vec4 diffuseLeftColor;uniform vec4 diffuseRightColor;\n#endif\n#ifdef OPACITYFRESNEL\nuniform vec4 opacityParts;\n#endif\n#ifdef EMISSIVEFRESNEL\nuniform vec4 emissiveLeftColor;uniform vec4 emissiveRightColor;\n#endif\n#if defined(REFLECTION) || (defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED))\nuniform vec2 vReflectionInfos;\n#if defined(REFLECTIONMAP_PLANAR) || defined(REFLECTIONMAP_CUBIC) || defined(REFLECTIONMAP_PROJECTION) || defined(REFLECTIONMAP_EQUIRECTANGULAR) || defined(REFLECTIONMAP_SPHERICAL) || defined(REFLECTIONMAP_SKYBOX)\nuniform mat4 reflectionMatrix;\n#endif\n#ifndef REFLECTIONMAP_SKYBOX\n#if defined(USE_LOCAL_REFLECTIONMAP_CUBIC) && defined(REFLECTIONMAP_CUBIC)\nuniform vec3 vReflectionPosition;uniform vec3 vReflectionSize; \n#endif\n#endif\n#ifdef REFLECTIONFRESNEL\nuniform vec4 reflectionLeftColor;uniform vec4 reflectionRightColor;\n#endif\n#endif\n#ifdef DETAIL\nuniform vec4 vDetailInfos;\n#endif\n#include<decalFragmentDeclaration>\n#if TEXTURE_REPETITION_MODE>0\nuniform vec4 vTextureRepetitionHexTilingParams;\n#endif\n#define ADDITIONAL_FRAGMENT_DECLARATION\n";
+    Dk.d.IncludesShadersStore[Sk] || (Dk.d.IncludesShadersStore[Sk] = bk);
+    const rk = {
+      name: Sk,
+      shader: bk
+    };
+    var Pk = ik(41462),
+      mk = ik(41467),
+      Mk = ik(41471),
+      Kk = ik(41639),
+      xk = ik(41644),
+      nk = ik(41653),
+      Uk = ik(41513),
+      Hk = ik(41479),
+      wk = ik(41659),
+      lk = ik(41665),
+      pk = ik(41671),
+      yk = ik(41675);
+    const Yk = "lightsFragmentFunctions",
+      Lk = "struct lightingInfo\n{vec3 diffuse;\n#ifdef SPECULARTERM\nvec3 specular;\n#endif\n#ifdef NDOTL\nfloat ndl;\n#endif\n};lightingInfo computeLighting(vec3 viewDirectionW,vec3 vNormal,vec4 lightData,vec3 diffuseColor,vec3 specularColor,float range,float glossiness) {lightingInfo result;vec3 lightVectorW;float attenuation=1.0;if (lightData.w==0.)\n{vec3 direction=lightData.xyz-vPositionW;attenuation=max(0.,1.0-length(direction)/range);lightVectorW=normalize(direction);}\nelse\n{lightVectorW=normalize(-lightData.xyz);}\nfloat ndl=max(0.,dot(vNormal,lightVectorW));\n#ifdef NDOTL\nresult.ndl=ndl;\n#endif\nresult.diffuse=ndl*diffuseColor*attenuation;\n#ifdef SPECULARTERM\nvec3 angleW=normalize(viewDirectionW+lightVectorW);float specComp=max(0.,dot(vNormal,angleW));specComp=pow(specComp,max(1.,glossiness));result.specular=specComp*specularColor*attenuation;\n#endif\nreturn result;}\nfloat getAttenuation(float cosAngle,float exponent) {return max(0.,pow(cosAngle,exponent));}\nfloat getIESAttenuation(float cosAngle,sampler2D iesLightSampler) {float angle=acos(cosAngle)/PI;return texture2D(iesLightSampler,vec2(angle,0.)).r;}\nlightingInfo basicSpotLighting(vec3 viewDirectionW,vec3 lightVectorW,vec3 vNormal,float attenuation,vec3 diffuseColor,vec3 specularColor,float glossiness) {lightingInfo result; \nfloat ndl=max(0.,dot(vNormal,lightVectorW));\n#ifdef NDOTL\nresult.ndl=ndl;\n#endif\nresult.diffuse=ndl*diffuseColor*attenuation;\n#ifdef SPECULARTERM\nvec3 angleW=normalize(viewDirectionW+lightVectorW);float specComp=max(0.,dot(vNormal,angleW));specComp=pow(specComp,max(1.,glossiness));result.specular=specComp*specularColor*attenuation;\n#endif\nreturn result;}\nlightingInfo computeIESSpotLighting(vec3 viewDirectionW,vec3 vNormal,vec4 lightData,vec4 lightDirection,vec3 diffuseColor,vec3 specularColor,float range,float glossiness,sampler2D iesLightSampler) { \nvec3 direction=lightData.xyz-vPositionW;vec3 lightVectorW=normalize(direction);float attenuation=max(0.,1.0-length(direction)/range);float dotProduct=dot(lightDirection.xyz,-lightVectorW);float cosAngle=max(0.,dotProduct);if (cosAngle>=lightDirection.w)\n{ \nattenuation*=getIESAttenuation(dotProduct,iesLightSampler);return basicSpotLighting(viewDirectionW,lightVectorW,vNormal,attenuation,diffuseColor,specularColor,glossiness);}\nlightingInfo result;result.diffuse=vec3(0.);\n#ifdef SPECULARTERM\nresult.specular=vec3(0.);\n#endif\n#ifdef NDOTL\nresult.ndl=0.;\n#endif\nreturn result;}\nlightingInfo computeSpotLighting(vec3 viewDirectionW,vec3 vNormal,vec4 lightData,vec4 lightDirection,vec3 diffuseColor,vec3 specularColor,float range,float glossiness) {vec3 direction=lightData.xyz-vPositionW;vec3 lightVectorW=normalize(direction);float attenuation=max(0.,1.0-length(direction)/range);float cosAngle=max(0.,dot(lightDirection.xyz,-lightVectorW));if (cosAngle>=lightDirection.w)\n{ \nattenuation*=getAttenuation(cosAngle,lightData.w);return basicSpotLighting(viewDirectionW,lightVectorW,vNormal,attenuation,diffuseColor,specularColor,glossiness);}\nlightingInfo result;result.diffuse=vec3(0.);\n#ifdef SPECULARTERM\nresult.specular=vec3(0.);\n#endif\n#ifdef NDOTL\nresult.ndl=0.;\n#endif\nreturn result;}\nlightingInfo computeHemisphericLighting(vec3 viewDirectionW,vec3 vNormal,vec4 lightData,vec3 diffuseColor,vec3 specularColor,vec3 groundColor,float glossiness) {lightingInfo result;float ndl=dot(vNormal,lightData.xyz)*0.5+0.5;\n#ifdef NDOTL\nresult.ndl=ndl;\n#endif\nresult.diffuse=mix(groundColor,diffuseColor,ndl);\n#ifdef SPECULARTERM\nvec3 angleW=normalize(viewDirectionW+lightData.xyz);float specComp=max(0.,dot(vNormal,angleW));specComp=pow(specComp,max(1.,glossiness));result.specular=specComp*specularColor;\n#endif\nreturn result;}\n#define inline\nvec3 computeProjectionTextureDiffuseLighting(sampler2D projectionLightSampler,mat4 textureProjectionMatrix,vec3 posW){vec4 strq=textureProjectionMatrix*vec4(posW,1.0);strq/=strq.w;vec3 textureColor=texture2D(projectionLightSampler,strq.xy).rgb;return textureColor;}\n#if defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\n#include<ltcHelperFunctions>\nuniform sampler2D areaLightsLTC1Sampler;uniform sampler2D areaLightsLTC2Sampler;\n#define inline\nlightingInfo computeAreaLighting(sampler2D ltc1,sampler2D ltc2,vec3 viewDirectionW,vec3 vNormal,vec3 vPosition,vec3 lightPosition,vec3 halfWidth,vec3 halfHeight,vec3 diffuseColor,vec3 specularColor,float roughness) \n{lightingInfo result;areaLightData data=computeAreaLightSpecularDiffuseFresnel(ltc1,ltc2,viewDirectionW,vNormal,vPosition,lightPosition,halfWidth,halfHeight,roughness);\n#ifdef SPECULARTERM\nvec3 fresnel=( specularColor*data.Fresnel.x+( vec3( 1.0 )-specularColor )*data.Fresnel.y );result.specular+=specularColor*fresnel*data.Specular;\n#endif\nresult.diffuse+=diffuseColor*data.Diffuse;return result;}\nlightingInfo computeAreaLightingWithTexture(sampler2D ltc1,sampler2D ltc2,sampler2D emissionTexture,vec3 viewDirectionW,vec3 vNormal,vec3 vPosition,vec3 lightPosition,vec3 halfWidth,vec3 halfHeight,vec3 diffuseColor,vec3 specularColor,float roughness) \n{lightingInfo result;areaLightData data=computeAreaLightSpecularDiffuseFresnelWithEmission(ltc1,ltc2,emissionTexture,viewDirectionW,vNormal,vPosition,lightPosition,halfWidth,halfHeight,roughness);\n#ifdef SPECULARTERM\nvec3 fresnel=( specularColor*data.Fresnel.x+( vec3( 1.0 )-specularColor )*data.Fresnel.y );result.specular+=specularColor*fresnel*data.Specular;\n#endif\nresult.diffuse+=diffuseColor*data.Diffuse;return result;}\n#endif\n#if defined(CLUSTLIGHT_BATCH) && CLUSTLIGHT_BATCH>0\n#include<clusteredLightingFunctions>\n#define inline\nlightingInfo computeClusteredLighting(\nsampler2D lightDataTexture,\nsampler2D tileMaskTexture,\nvec3 viewDirectionW,\nvec3 vNormal,\nvec4 lightData,\nivec2 sliceRange,\nfloat glossiness\n) {lightingInfo result;ivec2 tilePosition=ivec2(gl_FragCoord.xy*lightData.xy);int maskHeight=int(lightData.z);tilePosition.y=min(tilePosition.y,maskHeight-1);ivec2 batchRange=sliceRange/CLUSTLIGHT_BATCH;int batchOffset=batchRange.x*CLUSTLIGHT_BATCH;tilePosition.y+=maskHeight*batchRange.x;for (int i=batchRange.x; i<=batchRange.y; i+=1) {uint mask=uint(texelFetch(tileMaskTexture,tilePosition,0).r);tilePosition.y+=maskHeight;int maskOffset=max(sliceRange.x-batchOffset,0);int maskWidth=min(sliceRange.y-batchOffset+1,CLUSTLIGHT_BATCH);mask=extractBits(mask,maskOffset,maskWidth);while (mask != 0u) {uint bit=mask & -mask;mask ^= bit;int position=onlyBitPosition(bit);ClusteredLight light=getClusteredLight(lightDataTexture,batchOffset+maskOffset+position);lightingInfo info;if (light.vLightDirection.w<0.0) {info=computeLighting(viewDirectionW,vNormal,light.vLightData,light.vLightDiffuse.rgb,light.vLightSpecular.rgb,light.vLightDiffuse.a,glossiness);} else {info=computeSpotLighting(viewDirectionW,vNormal,light.vLightData,light.vLightDirection,light.vLightDiffuse.rgb,light.vLightSpecular.rgb,light.vLightDiffuse.a,glossiness);}\nresult.diffuse+=info.diffuse;\n#ifdef SPECULARTERM\nresult.specular+=info.specular;\n#endif\n}\nbatchOffset+=CLUSTLIGHT_BATCH;}\nreturn result;}\n#endif\n";
+    Dk.d.IncludesShadersStore[Yk] || (Dk.d.IncludesShadersStore[Yk] = Lk);
+    const Ck = {
+      name: Yk,
+      shader: Lk
+    };
+    var Ak = ik(41677),
+      jk = ik(41681);
+    const sk = "fresnelFunction",
+      dk = "#ifdef FRESNEL\nfloat computeFresnelTerm(vec3 viewDirection,vec3 worldNormal,float bias,float power)\n{float fresnelTerm=pow(bias+abs(dot(viewDirection,worldNormal)),power);return clamp(fresnelTerm,0.,1.);}\n#endif\n";
+    Dk.d.IncludesShadersStore[sk] || (Dk.d.IncludesShadersStore[sk] = dk);
+    const Vk = {
+      name: sk,
+      shader: dk
+    };
+    var Fk = ik(41685),
+      uk = ik(41694),
+      qk = ik(41700),
+      Ik = ik(41702),
+      zk = ik(41704),
+      Qk = ik(41710),
+      vk = ik(41718),
+      Ek = ik(41555),
+      hk = ik(41724),
+      ak = ik(41733),
+      Wk = ik(41737),
+      tk = ik(41745);
+    const Xk = "defaultFragmentAlpha",
+      Bk = "#ifdef OPACITY\nvec4 opacityMap=TEXRD(opacitySampler,vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap.rgb=opacityMap.rgb*vec3(0.3,0.59,0.11);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=vColor.a;\n#endif\n#ifdef OPACITYFRESNEL\nfloat opacityFresnelTerm=computeFresnelTerm(viewDirectionW,normalW,opacityParts.z,opacityParts.w);alpha+=opacityParts.x*(1.0-opacityFresnelTerm)+opacityFresnelTerm*opacityParts.y;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<alphaCutOff)\ndiscard;\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\n";
+    Dk.d.IncludesShadersStore[Xk] || (Dk.d.IncludesShadersStore[Xk] = Bk);
+    const ck = {
+      name: Xk,
+      shader: Bk
+    };
+    var Tk = ik(41750),
+      Zk = ik(41753),
+      Ok = ik(41756),
+      gk = ik(41760),
+      Gk = ik(41769);
+    const Nk = "defaultPixelShader",
+      Rk = "#define CUSTOM_FRAGMENT_EXTENSION\n#include<__decl__defaultFragment>\n#if defined(BUMP) || !defined(NORMAL)\n#extension GL_OES_standard_derivatives : enable\n#endif\n#include<prePassDeclaration>[SCENE_MRT_COUNT]\n#include<oitDeclaration>\n#define CUSTOM_FRAGMENT_BEGIN\n#ifdef LOGARITHMICDEPTH\n#extension GL_EXT_frag_depth : enable\n#endif\nvarying vec3 vPositionW;\n#ifdef NORMAL\nvarying vec3 vNormalW;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vec4 vColor;\n#endif\n#if defined(CLUSTLIGHT_BATCH) && CLUSTLIGHT_BATCH>0\nvarying float vViewDepth;\n#endif\n#include<mainUVVaryingDeclaration>[1..7]\n#include<helperFunctions>\n#include<__decl__lightFragment>[0..maxSimultaneousLights]\n#include<lightsFragmentFunctions>\n#include<shadowsFragmentFunctions>\n#include<samplerFragmentDeclaration>(_DEFINENAME_,DIFFUSE,_VARYINGNAME_,Diffuse,_SAMPLERNAME_,diffuse)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,AMBIENT,_VARYINGNAME_,Ambient,_SAMPLERNAME_,ambient)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,OPACITY,_VARYINGNAME_,Opacity,_SAMPLERNAME_,opacity)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,EMISSIVE,_VARYINGNAME_,Emissive,_SAMPLERNAME_,emissive)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,LIGHTMAP,_VARYINGNAME_,Lightmap,_SAMPLERNAME_,lightmap)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,DECAL,_VARYINGNAME_,Decal,_SAMPLERNAME_,decal)\n#ifdef REFRACTION\n#ifdef REFRACTIONMAP_3D\nuniform samplerCube refractionCubeSampler;\n#else\nuniform sampler2D refraction2DSampler;\n#endif\n#endif\n#if defined(SPECULARTERM)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,SPECULAR,_VARYINGNAME_,Specular,_SAMPLERNAME_,specular)\n#endif\n#include<fresnelFunction>\n#ifdef REFLECTION\n#ifdef REFLECTIONMAP_3D\nuniform samplerCube reflectionCubeSampler;\n#else\nuniform sampler2D reflection2DSampler;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vec3 vPositionUVW;\n#else\n#if defined(REFLECTIONMAP_EQUIRECTANGULAR_FIXED) || defined(REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED)\nvarying vec3 vDirectionW;\n#endif\n#endif\n#include<reflectionFunction>\n#endif\n#include<imageProcessingDeclaration>\n#include<imageProcessingFunctions>\n#include<textureRepetitionFunctions>\n#include<bumpFragmentMainFunctions>\n#include<bumpFragmentFunctions>\n#include<clipPlaneFragmentDeclaration>\n#include<logDepthDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\nvec3 viewDirectionW=normalize(vEyePosition.xyz-vPositionW);vec4 baseColor=vec4(1.,1.,1.,1.);vec3 diffuseColor=vDiffuseColor.rgb;float alpha=vDiffuseColor.a;\n#ifdef NORMAL\nvec3 normalW=normalize(vNormalW);\n#else\nvec3 normalW=normalize(cross(dFdx(vPositionW),dFdy(vPositionW)))*vEyePosition.w;\n#endif\n#include<bumpFragment>\n#ifdef TWOSIDEDLIGHTING\nnormalW=gl_FrontFacing ? normalW : -normalW;\n#endif\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<alphaCutOff)\ndiscard;\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor.rgb*=vDiffuseInfos.y;\n#endif\n#if defined(DECAL) && !defined(DECAL_AFTER_DETAIL)\nvec4 decalColor=texture2D(decalSampler,vDecalUV+uvOffset);\n#include<decalFragment>(surfaceAlbedo,baseColor,GAMMADECAL,_GAMMADECAL_NOTUSED_)\n#endif\n#ifdef DEPTHPREPASS\n#include<defaultFragmentAlpha>\n#endif\n#include<depthPrePass>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor.rgb*=vColor.rgb;\n#endif\n#ifdef DETAIL\nbaseColor.rgb=baseColor.rgb*2.0*mix(0.5,detailColor.r,vDetailInfos.y);\n#endif\n#if defined(DECAL) && defined(DECAL_AFTER_DETAIL)\nvec4 decalColor=texture2D(decalSampler,vDecalUV+uvOffset);\n#include<decalFragment>(surfaceAlbedo,baseColor,GAMMADECAL,_GAMMADECAL_NOTUSED_)\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvec3 baseAmbientColor=vec3(1.,1.,1.);\n#ifdef AMBIENT\nbaseAmbientColor=TEXRD(ambientSampler,vAmbientUV+uvOffset).rgb*vAmbientInfos.y;\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nfloat glossiness=vSpecularColor.a;vec3 specularColor=vSpecularColor.rgb;\n#ifdef SPECULARTERM\n#ifdef SPECULAR\nvec4 specularMapColor=TEXRD(specularSampler,vSpecularUV+uvOffset);specularColor=specularMapColor.rgb;\n#ifdef GLOSSINESS\nglossiness=glossiness*specularMapColor.a;\n#endif\n#endif\n#endif\nvec3 diffuseBase=vec3(0.,0.,0.);lightingInfo info;\n#ifdef SPECULARTERM\nvec3 specularBase=vec3(0.,0.,0.);\n#endif\nfloat shadow=1.;float aggShadow=0.;float numLights=0.;\n#ifdef LIGHTMAP\nvec4 lightmapColor=TEXRD(lightmapSampler,vLightmapUV+uvOffset);\n#ifdef RGBDLIGHTMAP\nlightmapColor.rgb=fromRGBD(lightmapColor);\n#endif\nlightmapColor.rgb*=vLightmapInfos.y;\n#endif\n#include<lightFragment>[0..maxSimultaneousLights]\naggShadow=aggShadow/numLights;vec4 refractionColor=vec4(0.,0.,0.,1.);\n#ifdef REFRACTION\nvec3 refractionVector=normalize(refract(-viewDirectionW,normalW,vRefractionInfos.y));\n#ifdef REFRACTIONMAP_3D\n#ifdef USE_LOCAL_REFRACTIONMAP_CUBIC\nrefractionVector=parallaxCorrectNormal(vPositionW,refractionVector,vRefractionSize,vRefractionPosition);\n#endif\nrefractionVector.y=refractionVector.y*vRefractionInfos.w;vec4 refractionLookup=textureCube(refractionCubeSampler,refractionVector);if (dot(refractionVector,viewDirectionW)<1.0) {refractionColor=refractionLookup;}\n#else\nvec3 vRefractionUVW=vec3(refractionMatrix*(view*vec4(vPositionW+refractionVector*vRefractionInfos.z,1.0)));vec2 refractionCoords=vRefractionUVW.xy/vRefractionUVW.z;refractionCoords.y=1.0-refractionCoords.y;refractionColor=texture2D(refraction2DSampler,refractionCoords);\n#endif\n#ifdef RGBDREFRACTION\nrefractionColor.rgb=fromRGBD(refractionColor);\n#endif\n#ifdef IS_REFRACTION_LINEAR\nrefractionColor.rgb=toGammaSpace(refractionColor.rgb);\n#endif\nrefractionColor.rgb*=vRefractionInfos.x;\n#endif\nvec4 reflectionColor=vec4(0.,0.,0.,1.);\n#ifdef REFLECTION\nvec3 vReflectionUVW=computeReflectionCoords(vec4(vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW.z*=-1.0;\n#endif\n#ifdef REFLECTIONMAP_3D\n#ifdef ROUGHNESS\nfloat bias=vReflectionInfos.y;\n#ifdef SPECULARTERM\n#ifdef SPECULAR\n#ifdef GLOSSINESS\nbias*=(1.0-specularMapColor.a);\n#endif\n#endif\n#endif\nreflectionColor=textureCube(reflectionCubeSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureCube(reflectionCubeSampler,vReflectionUVW);\n#endif\n#else\nvec2 coords=vReflectionUVW.xy;\n#ifdef REFLECTIONMAP_PROJECTION\ncoords/=vReflectionUVW.z;\n#endif\ncoords.y=1.0-coords.y;reflectionColor=texture2D(reflection2DSampler,coords);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor.rgb=fromRGBD(reflectionColor);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor.rgb=toGammaSpace(reflectionColor.rgb);\n#endif\nreflectionColor.rgb*=vReflectionInfos.x;\n#ifdef REFLECTIONFRESNEL\nfloat reflectionFresnelTerm=computeFresnelTerm(viewDirectionW,normalW,reflectionRightColor.a,reflectionLeftColor.a);\n#ifdef REFLECTIONFRESNELFROMSPECULAR\n#ifdef SPECULARTERM\nreflectionColor.rgb*=specularColor.rgb*(1.0-reflectionFresnelTerm)+reflectionFresnelTerm*reflectionRightColor.rgb;\n#else\nreflectionColor.rgb*=reflectionLeftColor.rgb*(1.0-reflectionFresnelTerm)+reflectionFresnelTerm*reflectionRightColor.rgb;\n#endif\n#else\nreflectionColor.rgb*=reflectionLeftColor.rgb*(1.0-reflectionFresnelTerm)+reflectionFresnelTerm*reflectionRightColor.rgb;\n#endif\n#endif\n#endif\n#ifdef REFRACTIONFRESNEL\nfloat refractionFresnelTerm=computeFresnelTerm(viewDirectionW,normalW,refractionRightColor.a,refractionLeftColor.a);refractionColor.rgb*=refractionLeftColor.rgb*(1.0-refractionFresnelTerm)+refractionFresnelTerm*refractionRightColor.rgb;\n#endif\n#ifndef DEPTHPREPASS\n#include<defaultFragmentAlpha>\n#endif\nvec3 emissiveColor=vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,vEmissiveUV+uvOffset).rgb*vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEFRESNEL\nfloat emissiveFresnelTerm=computeFresnelTerm(viewDirectionW,normalW,emissiveRightColor.a,emissiveLeftColor.a);emissiveColor*=emissiveLeftColor.rgb*(1.0-emissiveFresnelTerm)+emissiveFresnelTerm*emissiveRightColor.rgb;\n#endif\n#ifdef DIFFUSEFRESNEL\nfloat diffuseFresnelTerm=computeFresnelTerm(viewDirectionW,normalW,diffuseRightColor.a,diffuseLeftColor.a);diffuseBase*=diffuseLeftColor.rgb*(1.0-diffuseFresnelTerm)+diffuseFresnelTerm*diffuseRightColor.rgb;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvec3 finalDiffuse=clamp(diffuseBase*diffuseColor+vAmbientColor,0.0,1.0)*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvec3 finalDiffuse=clamp((diffuseBase+emissiveColor)*diffuseColor+vAmbientColor,0.0,1.0)*baseColor.rgb;\n#else\nvec3 finalDiffuse=clamp(diffuseBase*diffuseColor+emissiveColor+vAmbientColor,0.0,1.0)*baseColor.rgb;\n#endif\n#endif\n#ifdef SPECULARTERM\nvec3 finalSpecular=specularBase*specularColor;\n#ifdef SPECULAROVERALPHA\nalpha=clamp(alpha+dot(finalSpecular,vec3(0.3,0.59,0.11)),0.,1.);\n#endif\n#else\nvec3 finalSpecular=vec3(0.0);\n#endif\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb,vec3(0.3,0.59,0.11)),0.,1.);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvec4 color=vec4(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,0.0,1.0),alpha);\n#else\nvec4 color=vec4(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#ifdef LIGHTMAP\n#ifndef LIGHTMAPEXCLUDED\n#ifdef USELIGHTMAPASSHADOWMAP\ncolor.rgb*=lightmapColor.rgb;\n#else\ncolor.rgb+=lightmapColor.rgb;\n#endif\n#endif\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor.rgb=max(color.rgb,0.);\n#include<logDepthFragment>\n#include<fogFragment>\n#ifdef IMAGEPROCESSINGPOSTPROCESS\ncolor.rgb=toLinearSpace(color.rgb);\n#else\n#ifdef IMAGEPROCESSING\ncolor.rgb=toLinearSpace(color.rgb);color=applyImageProcessing(color);\n#endif\n#endif\ncolor.a*=visibility;\n#ifdef PREMULTIPLYALPHA\ncolor.rgb*=color.a;\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\n#ifdef PREPASS\n#if SCENE_MRT_COUNT>0\n#ifdef ALPHATEST\nfloat writeGeometryInfo=1.0;\n#else\nfloat writeGeometryInfo=color.a>0.4 ? 1.0 : 0.0;\n#endif\n#ifdef PREPASS_COLOR\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_COLOR_INDEX,color); \n#endif\n#ifdef PREPASS_POSITION\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_POSITION_INDEX,vec4(vPositionW,writeGeometryInfo));\n#endif\n#ifdef PREPASS_OBJECT_ID\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_OBJECT_ID_INDEX,encodeObjectId(objectId)*writeGeometryInfo);\n#endif\n#ifdef PREPASS_MESH_BLEND_TAG\nmeshBlendTagOutput=writeGeometryInfo>0.0 ? uvec4(uint(meshBlendTag),0u,0u,0u) : uvec4(0u);\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_LOCAL_POSITION_INDEX,vec4(vPosition,writeGeometryInfo));\n#endif\n#if defined(PREPASS_VELOCITY)\nvec2 a=(vCurrentPosition.xy/vCurrentPosition.w)*0.5+0.5;vec2 b=(vPreviousPosition.xy/vPreviousPosition.w)*0.5+0.5;vec2 velocity=abs(a-b);velocity=vec2(pow(velocity.x,1.0/3.0),pow(velocity.y,1.0/3.0))*sign(a-b)*0.5+0.5;WRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_VELOCITY_INDEX,vec4(velocity,0.0,writeGeometryInfo));\n#elif defined(PREPASS_VELOCITY_LINEAR)\nvec2 velocity=vec2(0.5)*((vPreviousPosition.xy/vPreviousPosition.w)-(vCurrentPosition.xy/vCurrentPosition.w));WRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_VELOCITY_LINEAR_INDEX,vec4(velocity,0.0,writeGeometryInfo));\n#endif\n#ifdef PREPASS_IRRADIANCE\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_IRRADIANCE_INDEX,vec4(0.0,0.0,0.0,writeGeometryInfo)); \n#endif\n#ifdef PREPASS_DEPTH\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_DEPTH_INDEX,vec4(vViewPos.z,0.0,0.0,writeGeometryInfo)); \n#endif\n#ifdef PREPASS_SCREENSPACE_DEPTH\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_SCREENSPACE_DEPTH_INDEX,vec4(gl_FragCoord.z,0.0,0.0,writeGeometryInfo));\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_NORMALIZED_VIEW_DEPTH_INDEX,vec4(vNormViewDepth,0.0,0.0,writeGeometryInfo));\n#endif\n#ifdef PREPASS_NORMAL\n#ifdef PREPASS_NORMAL_WORLDSPACE\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_NORMAL_INDEX,vec4(normalW,writeGeometryInfo));\n#else\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_NORMAL_INDEX,vec4(normalize((view*vec4(normalW,0.0)).rgb),writeGeometryInfo));\n#endif\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_WORLD_NORMAL_INDEX,vec4(normalW*0.5+0.5,writeGeometryInfo));\n#endif\n#ifdef PREPASS_ALBEDO\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_ALBEDO_INDEX,vec4(baseColor.rgb,writeGeometryInfo));\n#endif\n#ifdef PREPASS_ALBEDO_SQRT\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_ALBEDO_SQRT_INDEX,vec4(sqrt(baseColor.rgb),writeGeometryInfo));\n#endif\n#ifdef PREPASS_REFLECTIVITY\n#if defined(SPECULAR)\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_REFLECTIVITY_INDEX,vec4(toLinearSpace(specularMapColor))*writeGeometryInfo); \n#else\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_REFLECTIVITY_INDEX,vec4(toLinearSpace(specularColor),1.0)*writeGeometryInfo);\n#endif\n#endif\n#endif\n#endif\n#if !defined(PREPASS) || defined(WEBGL2)\ngl_FragColor=color;\n#endif\n#include<oitFragment>\n#if ORDER_INDEPENDENT_TRANSPARENCY\nif (fragDepth==nearestDepth) {frontColor.rgb+=color.rgb*color.a*alphaMultiplier;frontColor.a=1.0-alphaMultiplier*(1.0-color.a);} else {backColor+=color;}\n#endif\n#define CUSTOM_FRAGMENT_MAIN_END\n}\n";
+    Dk.d.ShadersStore[Nk] || (Dk.d.ShadersStore[Nk] = Rk);
+    const Jk = [fk.d, rk, Pk.d, mk.d, Mk.d, Kk.e, xk.d, nk.d, Uk.d, Hk.d, wk.d, lk.e, pk.b, yk.b, Ck, Ak.b, jk.b, Vk, Fk.b, uk.c, qk.e, Ik.e, zk.d, Qk.d, vk.d, Ek.b, hk.e, ak.c, Wk.b, tk.c, ck, Tk.b, Zk.e, Ok.c, gk.d, Gk.b];
+    for (const ee of Jk) Dk.d.IncludesShadersStore[ee.name] || (Dk.d.IncludesShadersStore[ee.name] = ee.shader);
+    const ke = {
+      name: Nk,
+      shader: Rk
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

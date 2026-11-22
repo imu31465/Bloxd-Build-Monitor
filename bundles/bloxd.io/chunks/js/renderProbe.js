@@ -1,17 +1,17 @@
-export const id = 49;
-export const ids = [49];
+export const id = 50;
+export const ids = [50];
 export const modules = {
-  42729: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      startRenderProbe: () => HQ
+  50557: (kk, ek, ik) => {
+    ik.d(ek, {
+      startRenderProbe: () => Kk
     });
-    var LQ = wQ(626),
-      qQ = wQ(4251),
-      oQ = wQ(2753),
-      DQ = wQ(4352);
-    const kQ = 1e3,
-      vQ = 36e5,
-      mQ = [{
+    var Dk = ik(600),
+      fk = ik(4349),
+      Sk = ik(2752),
+      bk = ik(4449);
+    const rk = 1e3,
+      Pk = 36e5,
+      mk = [{
         field: "decodeProbe",
         name: "decode probe"
       }, {
@@ -19,32 +19,32 @@ export const modules = {
         name: "particle probe"
       }];
 
-    function uQ(QQ, FQ, wQ) {
-      var qQ, oQ;
-      return `${QQ}; ${wQ?`os ${wQ.os}, gpu ${null!==(qQ=wQ.gpuFamily)&&void 0!==qQ?qQ:"unknown"} ${null!==(oQ=wQ.gpuModel)&&void 0!==oQ?oQ:"unknown"}`:"device unknown"}, version ${LQ.b}; ${FQ}`
+    function Mk(kk, ek, ik) {
+      var fk, Sk;
+      return `${kk}; ${ik?`os ${ik.os}, gpu ${null!==(fk=ik.gpuFamily)&&void 0!==fk?fk:"unknown"} ${null!==(Sk=ik.gpuModel)&&void 0!==Sk?Sk:"unknown"}`:"device unknown"}, version ${Dk.c}; ${ek}`
     }
 
-    function HQ(QQ) {
-      var FQ;
-      const wQ = null !== (FQ = null === QQ || void 0 === QQ ? void 0 : QQ.backend) && void 0 !== FQ ? FQ : "none";
-      if ("webgl" !== wQ) {
-        const QQ = (0, DQ.h)();
+    function Kk(kk) {
+      var ek;
+      const ik = null !== (ek = null === kk || void 0 === kk ? void 0 : kk.backend) && void 0 !== ek ? ek : "none";
+      if ("webgl" !== ik) {
+        const kk = (0, bk.h)();
         for (const {
-            field: FQ
+            field: ek
           }
-          of mQ) delete QQ[FQ];
-        return void(0, oQ.m)("renderprobe", `decode and particle probes not run: the renderer is ${wQ}, and they read WebGL2's draws`)
+          of mk) delete kk[ek];
+        return void(0, Sk.l)("renderprobe", `decode and particle probes not run: the renderer is ${ik}, and they read WebGL2's draws`)
       }
-      const LQ = (0, DQ.h)();
+      const Dk = (0, bk.h)();
       for (const {
-          field: HQ,
-          name: bQ
+          field: Kk,
+          name: xk
         }
-        of mQ)(0, DQ.j)(LQ, HQ, ["1", "pending"], vQ, kQ).then((QQ => {
-        void 0 !== QQ && (0, oQ.m)("renderprobe", uQ(bQ, QQ, (0, qQ.d)(!1)))
+        of mk)(0, bk.i)(Dk, Kk, ["1", "pending"], Pk, rk).then((kk => {
+        void 0 !== kk && (0, Sk.l)("renderprobe", Mk(xk, kk, (0, fk.d)(!1)))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

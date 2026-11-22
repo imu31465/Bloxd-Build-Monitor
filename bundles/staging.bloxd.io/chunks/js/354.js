@@ -1,29 +1,33 @@
 export const id = 354;
 export const ids = [354];
 export const modules = {
-  60738: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ) {
-      for (const wQ of QQ._frameGraph._tasks)
-        if (wQ?._config && wQ._colorAttachment && (wQ._config.rt === FQ.scRT || wQ._config.rst === FQ.scRT)) return wQ
-    }
+  60701: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      WorldCodeAiDeepSeekNotice: () => bk,
+      deepSeekPrivacyPolicyUrl: () => Sk
+    });
+    var Dk = ik(1172),
+      fk = ik(1066);
+    const Sk = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html";
 
-    function qQ(QQ, FQ) {
-      const wQ = QQ._renderingContexts[QQ._renderingContexts.length - 1];
-      if (!wQ?._frameGraph) return;
-      const qQ = LQ(FQ, QQ);
-      if (!qQ) return;
-      if (1 === QQ.msaaSamples) return void(qQ._config.clr = !1);
-      const oQ = qQ.enabled;
-      qQ._config.clr = !0, qQ.enabled = !1, FQ._beforeRender.unshift((() => {
-        const FQ = LQ(wQ, QQ),
-          DQ = FQ?._config.rst === QQ.scRT && FQ._config.rt._colorView;
-        qQ.enabled = !!DQ && oQ, qQ._config.clr = !DQ, DQ && (qQ._colorAttachment.view = DQ)
-      }))
+    function bk() {
+      const {
+        t: kk
+      } = (0, Dk.D)();
+      return (0, fk.jsxs)(fk.Fragment, {
+        children: [kk("superBotXd:deepSeekNotice"), " ", (0, fk.jsxs)("a", {
+          className: "WorldCodeAiDeepSeekPolicyLink",
+          href: Sk,
+          target: "_blank",
+          rel: "noreferrer noopener",
+          children: [kk("superBotXd:deepSeekPrivacyPolicy"), " ", (0, fk.jsx)("span", {
+            "aria-hidden": "true",
+            children: "\u2197"
+          })]
+        })]
+      })
     }
-    wQ.r(FQ), wQ.d(FQ, {
-      configureSwapchainOverlayScene: () => qQ
-    })
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

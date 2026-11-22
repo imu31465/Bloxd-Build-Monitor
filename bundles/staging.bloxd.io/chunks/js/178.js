@@ -1,40 +1,37 @@
 export const id = 178;
 export const ids = [178];
 export const modules = {
-  8817: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8842: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["Don't get infected... or do. Bloxd Infection is a humans vs zombies game where the virus spreads fast and anyone could end up against you. As a human you're racing through obstacles to escape. As a zombie you're part of the horde trying to stop them getting away."],
-      howToPlay: ["Everyone starts out human. After 15 seconds, 3 players turn into the first zombies. Humans follow the arrows and get through the obstacles before the zombies catch up. If a zombie takes you down, that's it, you're infected and on the zombie team now.", "Humans earn points by taking down zombies and shooting the diamonds hidden around the map. Spend those points to unlock the next section and buy guns at gun stations. Be the very last human alive and you'll get a Minigun. Zombies just need to hunt down every human before they escape."],
-      features: ["Up to 18 Players per Match", "Play as Humans or Zombies", "9 Human Kits, Including Veteran, Medic, Scout and Bombardier", "5 Zombie Kits, Including Sprinter, Tank, Puker and Bomber", "Unlock New Sections and Buy Guns with Points", "5 Maps: Hospital, Bunker, Subway, Airport and Farm", "Awards for First Kill, Final Kill and Last Human Alive"],
-      tips: ["Stick together as humans. Zombies find it much harder to pick you off", "Shoot the diamonds for extra points. They'll come back after a while", "Grab a gun at a gun station as soon as you can afford one", "The Medic kit lets you heal yourself and your teammates", "Playing zombie? Try the Sprinter to catch humans fast", "Last human alive? Make that Minigun count"],
-      similarGames: ["murderMystery", "containmentBreach", "shooting", "hideseek"],
+    const Dk = {
+      whatIs: ["A string of unique islands, a mysterious land and 114 fish just waiting to be caught. Bloxd Fishing is a relaxing fishing simulator where you explore, catch fish and slowly uncover the secrets of the islands. Take it at your own pace. It's free, there's nothing to install, and you can be fishing in seconds."],
+      howToPlay: ["Cast your line and wait for a bite. When something bites, a catch minigame kicks in. Some fish need a well-timed click, while others use a progress bar or a gravity bar. Win the minigame and the fish is yours. Every fish has its own weight and rarity, going from Common all the way up to Mythic. Sell your catches for coins and spend them on better rods, boats and potions.", "There are 5 islands to explore: Sunhaven, Gloomtide, Eldermire, Embertide and Frostfell. Each one has its own fishing spots, like the Moonpool, Draugr Bay, The Abyss and Embertide Volcano. Unlock new islands with your coins and use the shop to hop between them. Every fish you catch goes in your Bestiary, and you can show off your favourite on your nametag. Keep an eye out for luck events too. They boost your chances of a rare catch for a while."],
+      features: ["5 Islands and Lots of Fishing Spots to Explore", "114 Fish Species to Catch", "7 Rarities, from Common to Mythic", "3 Different Catch Minigames", "16 Fishing Rods, from the Rusty Rod to the Mythic Rod", "Boats, plus Luck Potions in Four Strengths", "A Bestiary to Complete", "Show Off Your Best Fish on Your Nametag", "Random Luck Events"],
+      tips: ["Sell your early catches and save up for a better rod", "Check the rod shops on each island for new rods", "Some spots don't allow every rod, so check before you cast", "Drink a Luck Potion before you fish if you're after rare catches", "Wait untill a luck event to give yourself the best shot at a Mythic", "Your Bestiary shows you which fish you're still missing", "Get a boat if you want to head out on the water"],
+      similarGames: ["greenville", "skyblock", "oneBlock", "classic"],
       faq: [{
-        question: "What is Bloxd Infection?",
-        answer: "A humans vs zombies mode for up to 18 players. Humans try to escape through maps full of obstacles, and zombies try to infect everyone before they do."
+        question: "What is Bloxd Fishing?",
+        answer: "A relaxing fishing game. You explore 5 islands, win catch minigames to reel in fish and fill your Bestiary with rare species."
       }, {
-        question: "How does the infection spread in Bloxd Infection?",
-        answer: "Humans follow the arrows and get past the obstacles while zombies chase them. Anyone a zombie takes down becomes a zombie too."
+        question: "How many fish are in Bloxd Fishing?",
+        answer: "114 fish species, spread across 5 islands, in 7 rarities from Common to Mythic."
       }, {
-        question: "How do humans win?",
-        answer: "Get through all the obstacles and escape before you're infected."
+        question: "How do I catch Mythic fish in Bloxd Fishing?",
+        answer: "Use a better rod, drink a Luck Potion and fish during luck events. Then cross your fingers!"
       }, {
-        question: "How do zombies win?",
-        answer: "By infecting every human before they escape."
+        question: "Where can I get better rods?",
+        answer: "Sell your fish for coins, then buy new rods from the rod shops on the islands."
       }, {
-        question: "How are points earned?",
-        answer: "Humans get 100 points for taking down a zombie and 25 for an assist, plus extra for shooting diamonds."
+        question: "How do I travel between islands?",
+        answer: "You start on Sunhaven. Spend coins to unlock Gloomtide, Eldermire, Embertide and Frostfell, and once an island's unlocked, use the shop to travel there."
       }, {
-        question: "What kits are in Bloxd Infection?",
-        answer: "Humans can pick kits like Veteran, who starts with an AK-47, or Scout, who has a sniper rifle. On the zombie side there's Puker, who can puke acid, and Tank, who has more health. Win awards to earn gold for the kit shop."
-      }, {
-        question: "What's the player limit in Infection?",
-        answer: "18 players per match."
+        question: "What are the catch minigames?",
+        answer: "There are three: a timed click, a progress bar and a gravity bar. Each fish uses one of them."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

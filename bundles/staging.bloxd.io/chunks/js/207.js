@@ -1,1232 +1,312 @@
 export const id = 207;
-export const ids = [207, 208];
+export const ids = [207];
 export const modules = {
-  35924: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => qQ,
-      reportCappedWasmFailure: () => kQ,
-      reportUncappedWasmFailure: () => DQ,
-      reportWasmFailure: () => oQ
+  35812: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      WasmTextureWorker: () => pk
     });
-    var LQ = wQ(2860);
-    const qQ = LQ.b - 4;
+    var Dk = ik(585),
+      fk = ik(3163),
+      Sk = ik(35819),
+      bk = ik.n(Sk);
 
-    function oQ(QQ, FQ, wQ) {
-      (0, LQ.f)(QQ, FQ, wQ, !1)
+    function rk() {
+      return bk()('(()=>{var kk={d:(ek,ik)=>{for(var Dk in ik)kk.o(ik,Dk)&&!kk.o(ek,Dk)&&Object.defineProperty(ek,Dk,{enumerable:!0,get:ik[Dk]})},o:(kk,ek)=>Object.prototype.hasOwnProperty.call(kk,ek),r:kk=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(kk,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(kk,"__esModule",{value:!0})}},ek={};kk.r(ek),kk.d(ek,{dk:()=>ik,lK:()=>Dk,default:()=>qk,initSync:()=>uk,pK:()=>fk});class ik{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,bk.unregister(this),kk}free(){const kk=this.__destroy_into_raw();dk.cPpM(kk,0)}re(kk){const ek=function(kk,ek){const ik=ek(1*kk.length,1)>>>0;return Uk().set(kk,ik/1),Vk=kk.length,ik}(kk,dk.kMIM),ik=Vk;return dk.sW1S(this.__wbg_ptr,ek,ik)>>>0}me(){const kk=dk.QOW1(this.__wbg_ptr);var ek=rk(kk[0],kk[1]).slice();return dk.EUJG(kk[0],4*kk[1],4),ek}we(){let kk,ek;try{const ik=dk.oqY4(this.__wbg_ptr);return kk=ik[0],ek=ik[1],Mk(ik[0],ik[1])}finally{dk.EUJG(kk,ek,1)}}We(){return dk.BPhk(this.__wbg_ptr)>>>0}di(){return dk.kX3M(this.__wbg_ptr)>>>0}ID(){let kk,ek;try{const ik=dk.f9Gw(this.__wbg_ptr);return kk=ik[0],ek=ik[1],Mk(ik[0],ik[1])}finally{dk.EUJG(kk,ek,1)}}If(){const kk=dk.j4pN(this.__wbg_ptr);var ek=rk(kk[0],kk[1]).slice();return dk.EUJG(kk[0],4*kk[1],4),ek}TS(){const kk=dk.WEQq(this.__wbg_ptr);var ek,ik,Dk=(ek=kk[0],ik=kk[1],ek>>>=0,mk().subarray(ek/8,ek/8+ik)).slice();return dk.EUJG(kk[0],8*kk[1],8),Dk}mb(){return dk.dNY3(this.__wbg_ptr)>>>0}ox(kk){const ek=dk.dguH(this.__wbg_ptr,kk);if(ek[1])throw yk(ek[0])}wn(){dk.Dy3Z(this.__wbg_ptr)}In(){dk.IwTy(this.__wbg_ptr)}ux(){const kk=dk.lhSO(this.__wbg_ptr);if(kk[1])throw yk(kk[0])}jw(){return dk.Sum5(this.__wbg_ptr)>>>0}un(){const kk=dk.kZ6p(this.__wbg_ptr);if(kk[1])throw yk(kk[0])}sw(kk,ek){const ik=dk.sk2T(this.__wbg_ptr,kk,ek);if(ik[1])throw yk(ik[0])}dw(kk){let ek,ik;try{const Sk=dk.gi2K(this.__wbg_ptr,kk);var Dk=Sk[0],fk=Sk[1];if(Sk[3])throw Dk=0,fk=0,yk(Sk[2]);return ek=Dk,ik=fk,Mk(Dk,fk)}finally{dk.EUJG(ek,ik,1)}}Vw(kk){return dk.B2MV(this.__wbg_ptr,kk)>>>0}Fw(kk){return dk.EukR(this.__wbg_ptr,kk)>>>0}cr(){const kk=dk.oz20(this.__wbg_ptr);var ek=rk(kk[0],kk[1]).slice();return dk.EUJG(kk[0],4*kk[1],4),ek}uw(){return 0!==dk.F0hk(this.__wbg_ptr)}constructor(kk,ek,ik,Dk,fk,Sk){const rk=pk(kk,dk.kMIM,dk.nrDT),Pk=Vk,Mk=lk(ek,dk.kMIM),Kk=Vk,xk=function(kk,ek){const ik=ek(8*kk.length,8)>>>0;return mk().set(kk,ik/8),Vk=kk.length,ik}(ik,dk.kMIM),nk=Vk,Uk=lk(Dk,dk.kMIM),Hk=Vk,wk=lk(fk,dk.kMIM),Yk=Vk,Lk=dk.zvQv(rk,Pk,Mk,Kk,xk,nk,Uk,Hk,wk,Yk,Sk);if(Lk[2])throw yk(Lk[1]);return this.__wbg_ptr=Lk[0],bk.register(this,this.__wbg_ptr,this),this}qw(){let kk,ek;try{const ik=dk.tHxI(this.__wbg_ptr);return kk=ik[0],ek=ik[1],Mk(ik[0],ik[1])}finally{dk.EUJG(kk,ek,1)}}Iw(kk,ek){const ik=pk(kk,dk.kMIM,dk.nrDT),Dk=Vk,fk=lk(ek,dk.kMIM),Sk=Vk,bk=dk.Y0Eo(this.__wbg_ptr,ik,Dk,fk,Sk);if(bk[1])throw yk(bk[0])}zw(){return dk.UI4X(this.__wbg_ptr)>>>0}Qw(){return dk.IDOC(this.__wbg_ptr)>>>0}On(){return dk.Ol5u(this.__wbg_ptr)>>>0}xx(){return dk.GEwo(this.__wbg_ptr)>>>0}warnings(){let kk,ek;try{const ik=dk.fIk1(this.__wbg_ptr);return kk=ik[0],ek=ik[1],Mk(ik[0],ik[1])}finally{dk.EUJG(kk,ek,1)}}}function Dk(kk,ek){const ik=pk(kk,dk.kMIM,dk.nrDT),Dk=Vk,fk=dk.uVuI(ik,Dk,ek);if(fk[1])throw yk(fk[0])}function fk(){dk.sir0()}function Sk(){return{__proto__:null,MdkO:{__proto__:null,KWRR:function(kk,ek){return function(kk){wk===Hk.length&&Hk.push(Hk.length+1);const ek=wk;return wk=Hk[ek],Hk[ek]=kk,ek}(Error(Mk(kk,ek)))},pqjK:function(kk,ek){throw new Error(Mk(kk,ek))},pP0d:function(kk,ek){console.error(Mk(kk,ek))}}}}Symbol.dispose&&(ik.prototype[Symbol.dispose]=ik.prototype.free);const bk="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>dk.cPpM(kk,1)));function rk(kk,ek){return kk>>>=0,xk().subarray(kk/4,kk/4+ek)}let Pk=null;function mk(){return null!==Pk&&0!==Pk.byteLength||(Pk=new Float64Array(dk.memory.buffer)),Pk}function Mk(kk,ek){return function(kk,ek){Ck+=ek,Ck>=Lk&&(Yk=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),Yk.decode(),Ck=ek);return Yk.decode(Uk().subarray(kk,kk+ek))}(kk>>>0,ek)}let Kk=null;function xk(){return null!==Kk&&0!==Kk.byteLength||(Kk=new Uint32Array(dk.memory.buffer)),Kk}let nk=null;function Uk(){return null!==nk&&0!==nk.byteLength||(nk=new Uint8Array(dk.memory.buffer)),nk}let Hk=new Array(1024).fill(void 0);Hk.push(void 0,null,!0,!1);let wk=Hk.length;function lk(kk,ek){const ik=ek(4*kk.length,4)>>>0;return xk().set(kk,ik/4),Vk=kk.length,ik}function pk(kk,ek,ik){if(void 0===ik){const ik=Ak.encode(kk),Dk=ek(ik.length,1)>>>0;return Uk().subarray(Dk,Dk+ik.length).set(ik),Vk=ik.length,Dk}let Dk=kk.length,fk=ek(Dk,1)>>>0;const Sk=Uk();let bk=0;for(;bk<Dk;bk++){const ek=kk.charCodeAt(bk);if(ek>127)break;Sk[fk+bk]=ek}if(bk!==Dk){0!==bk&&(kk=kk.slice(bk)),fk=ik(fk,Dk,Dk=bk+3*kk.length,1)>>>0;const ek=Uk().subarray(fk+bk,fk+Dk);bk+=Ak.encodeInto(kk,ek).written,fk=ik(fk,Dk,bk,1)>>>0}return Vk=bk,fk}function yk(kk){const ek=function(kk){return Hk[kk]}(kk);return function(kk){kk<1028||(Hk[kk]=wk,wk=kk)}(kk),ek}let Yk=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});Yk.decode();const Lk=2146435072;let Ck=0;const Ak=new TextEncoder;"encodeInto"in Ak||(Ak.encodeInto=function(kk,ek){const ik=Ak.encode(kk);return ek.set(ik),{read:kk.length,written:ik.length}});let jk,sk,dk,Vk=0;function Fk(kk,ek){return sk=kk,dk=kk.exports,jk=ek,Pk=null,Kk=null,nk=null,dk.wQpu(),dk}function uk(kk){if(void 0!==dk)return dk;void 0!==kk&&(Object.getPrototypeOf(kk)===Object.prototype?({module:kk}=kk):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const ek=Sk();kk instanceof WebAssembly.Module||(kk=new WebAssembly.Module(kk));return Fk(new WebAssembly.Instance(kk,ek),kk)}async function qk(kk){if(void 0!==dk)return dk;void 0!==kk&&(Object.getPrototypeOf(kk)===Object.prototype?({module_or_path:kk}=kk):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const ek=Sk();("string"===typeof kk||"function"===typeof Request&&kk instanceof Request||"function"===typeof URL&&kk instanceof URL)&&(kk=fetch(kk));const{instance:ik,module:Dk}=await async function(kk,ek){if("function"===typeof Response&&kk instanceof Response){if(!kk.ok)throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching \'${kk.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(kk,ek)}catch(ik){if(!function(kk){switch(kk){case"basic":case"cors":case"default":return!0}return!1}(kk.type)||"application/wasm"===kk.headers.get("Content-Type"))throw ik;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",ik)}const Dk=await kk.arrayBuffer();return await WebAssembly.instantiate(Dk,ek)}{const ik=await WebAssembly.instantiate(kk,ek);return ik instanceof WebAssembly.Instance?{instance:ik,module:kk}:ik}}(await kk,ek);return Fk(ik,Dk)}let Ik=null,zk=null;function Qk(kk){if(null!==zk)throw zk;if(null===Ik)try{const{memory:ik}=uk({module:kk});Ik={wasm:ek,memory:ik}}catch(ik){throw zk=function(kk,ek){return new Error(`${kk}: ${ek instanceof Error?`${ek.name}: ${ek.message}`:String(ek)}`,{cause:ek})}("instantiate",ik),zk}return Ik}function vk(kk){return kk instanceof Error?kk.message:String(kk)}const Ek=0,hk=1,ak=2,Wk=3,tk=4;Error;function Xk(kk){return`the texture module didn\'t load (${vk(kk)})`}function Bk(kk){return""===kk?[]:kk.split("\\0")}const ck=self;let Tk=null,Zk=null,Ok=Ek,gk=0;function Gk(kk){const ek=performance.now();var ik,Dk;(kk!==Ok||ek-gk>=1e3)&&(Ok=kk,gk=ek,ck.postMessage({type:"progress",stage:kk,wasmBytes:null!==(ik=null===(Dk=Zk)||void 0===Dk?void 0:Dk.buffer.byteLength)&&void 0!==ik?ik:0}))}const{FileReaderSync:Nk}=self;function Rk(kk){return(new Nk).readAsDataURL(new Blob([kk],{type:"image/png"}))}function Jk(kk,ek){ck.postMessage({type:"sheet",sheet:kk,pixels:ek},[ek.buffer])}function ke(kk){let ek;Gk(hk);try{ek=Qk(kk.module)}catch(bk){return void ck.postMessage({type:"failed",reason:Xk(bk),moduleLoad:!0})}Zk=ek.memory,Gk(ak);const{assets:ik,layerCap:Dk,warnings:fk,generator:Sk}=function(kk,ek,ik,Dk,fk,Sk,bk){var rk;const{wasm:Pk,memory:mk}=kk,{strings:Mk,blocks:Kk,numbers:xk,index:nk,armour:Uk}=ek,Hk=new Pk.dk(Mk,Kk,xk,nk,Uk,ik),wk=Dk.sources.map((kk=>(null===Sk||void 0===Sk||Sk(ak),Hk.re(kk)))),lk=new Uint32Array(2*Dk.sourceOfName.length);for(const[Vk,Fk]of Dk.sourceOfName.entries())lk[2*Vk]=Vk,lk[2*Vk+1]=wk[Fk];Hk.Iw(Dk.names,lk),null===Sk||void 0===Sk||Sk(Wk),Hk.sw(fk,null!==(rk=null===bk||void 0===bk?void 0:bk.layers)&&void 0!==rk?rk:0),null===Sk||void 0===Sk||Sk(tk);const pk={};for(const[Vk,Fk]of Bk(Hk.qw()).entries())null===Sk||void 0===Sk||Sk(tk),pk[Fk]=Hk.dw(Vk);const yk={},Yk=Hk.me(),Lk=new Map;for(const[Vk,Fk]of Bk(Hk.we()).entries()){const kk=Yk[Vk];Lk.has(kk)||(null===Sk||void 0===Sk||Sk(tk),Lk.set(kk,Hk.dw(kk))),yk[Fk]=Lk.get(kk)}Hk.wn();const Ck=Array.from(Hk.cr()),Ak=[],jk=[],sk=(kk,ek)=>new Uint8ClampedArray(mk.buffer,kk,ek).slice();if(bk){for(let kk=0;kk<Ck.length;kk++)null===Sk||void 0===Sk||Sk(tk),Hk.ox(kk),Hk.ux(),Ak.push(bk.dataUrl(new Uint8Array(mk.buffer,Hk.On(),Hk.Qw()))),bk.onSheet(kk,sk(Hk.xx(),Hk.zw()));Hk.In()}const dk=Hk.jw();for(let Vk=dk;Vk<dk+Hk.di();Vk++)null===Sk||void 0===Sk||Sk(tk),Ak.push(Hk.dw(Vk)),jk.push(sk(Hk.Fw(Vk),Hk.Vw(Vk)));return{assets:{rotatedBlockTextures:pk,animatedBlockTextures:yk,blockAtlasArr:Ak,blockAtlasPixels:jk,armourAtlas:Hk.dw(Hk.We()),imagesPerAtlas:Ck,blockAtlasWidth:Hk.mb()},layerCap:Hk.uw()?fk:0,warnings:Hk.warnings(),generator:Hk}}(ek,kk.inputs,kk.isDefaultPack,{sources:kk.sources,names:kk.names,sourceOfName:kk.sourceOfName},kk.maxLayerWidth,Gk,kk.sheetLayers>0?{layers:kk.sheetLayers,onSheet:Jk,dataUrl:Rk}:void 0);Tk=Sk,ck.postMessage({type:"required",assets:ik,layerCap:Dk,warnings:fk},ik.blockAtlasPixels.map((kk=>kk.buffer)))}self.onmessageerror=()=>{ck.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=kk=>{let{data:ek}=kk;try{"required"===ek.type?ke(ek):function(){if(!Tk)throw new Error("No required assets to follow");const{colours:kk,warnings:ek}=function(kk){return kk.un(),{colours:{blocks:kk.ID(),counts:kk.If(),values:kk.TS()},warnings:kk.warnings()}}(Tk);ck.postMessage({type:"optional",...kk,warnings:ek},[kk.counts.buffer,kk.values.buffer])}()}catch(ik){const kk=vk(ik),ek=ik instanceof WebAssembly.RuntimeError?`wasm trapped (${kk})`:kk;ck.postMessage({type:"failed",reason:ek,stack:ik instanceof Error?ik.stack:void 0})}}})();', "Worker", void 0, ik.p + "generation.worker.538e8434.worker.js")
+    }
+    var Pk = ik(35822),
+      mk = ik(3190),
+      Mk = ik(3206),
+      Kk = ik(3198),
+      xk = ik(3171);
+
+    function nk(kk) {
+      return "" === kk ? [] : kk.split("\0")
     }
 
-    function DQ(QQ, FQ, wQ) {
-      (0, LQ.f)(QQ, FQ, wQ, !1, 1 / 0)
+    function Uk(kk) {
+      if ("" !== kk)
+        for (const ek of kk.split("\n")) console.error(ek)
     }
 
-    function kQ(QQ, FQ, wQ) {
-      (0, LQ.f)(QQ, FQ, wQ, !1, qQ)
-    }
-  },
-  35917: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => cQ,
-      f: () => iQ,
-      i: () => WQ,
-      k: () => CQ
-    });
-    var LQ = wQ(35946),
-      qQ = wQ(2809),
-      oQ = wQ(35958),
-      DQ = wQ(2811),
-      kQ = wQ(35924),
-      vQ = wQ(2852),
-      mQ = wQ(3115),
-      uQ = wQ(3110),
-      HQ = wQ(35929),
-      bQ = wQ(2860),
-      YQ = wQ(35938),
-      xQ = wQ(35943),
-      AQ = wQ(3583);
-    let tQ = !1;
-    const eQ = 40;
-    var MQ = wQ(685);
-    const GQ = "bloxdWasmFailureReported";
-
-    function pQ() {
-      return "undefined" === typeof WebAssembly
-    }
-
-    function cQ() {
-      return (0, LQ.f)()
-    }
-
-    function CQ() {
-      if (pQ()) return "this browser has no WebAssembly";
-      const QQ = (0, qQ.p)();
-      return "compile" === QQ || "instantiate" === QQ ? `the core wasm didn't load here (${(0,qQ.j)()})` : null
-    }
-    async function SQ(QQ) {
-      return await (0, oQ.c)(oQ.b, void 0, QQ)
-    }
-
-    function iQ() {
-      pQ() || (0, MQ.d)((() => {
-        SQ()
+    function Hk(kk, ek) {
+      return async function(kk, ek) {
+        const ik = Object.keys(kk),
+          Dk = [],
+          fk = new Map,
+          Sk = new Uint32Array(ik.length);
+        for (const [bk, rk] of ik.entries()) {
+          const {
+            url: ek
+          } = kk[rk];
+          fk.has(ek) || (fk.set(ek, Dk.length), Dk.push(ek)), Sk[bk] = fk.get(ek)
+        }
+        return {
+          sources: await ek(Dk),
+          names: ik.join("\0"),
+          sourceOfName: Sk
+        }
+      }(kk, (async kk => {
+        const ik = await async function(kk, ek) {
+          const ik = new AbortController,
+            Dk = () => {
+              ik.abort()
+            };
+          ek.addEventListener("abort", Dk);
+          try {
+            const ek = await Promise.all(kk.map((async kk => {
+              try {
+                const ek = await fetch(kk, {
+                  signal: ik.signal
+                });
+                if (!ek.ok) throw new Error(`HTTP ${ek.status}`);
+                return [kk, await ek.blob()]
+              } catch (ek) {
+                throw ik.abort(), new Mk.i(Mk.g.Fetch, `fetching ${kk} failed: ${(0,Kk.g)(ek)}`)
+              }
+            })));
+            return new Map(ek)
+          } finally {
+            ek.removeEventListener("abort", Dk)
+          }
+        }(kk.filter((kk => !kk.startsWith("data:"))), ek);
+        return Promise.all(kk.map((kk => {
+          var ek;
+          return (0, xk.f)(null !== (ek = ik.get(kk)) && void 0 !== ek ? ek : kk)
+        })))
       }))
     }
 
-    function WQ() {
-      if (pQ()) return async () => ((0, vQ.j)("unsupported", 0), RQ("unsupported", "This browser has no WebAssembly"), !1);
-      const QQ = {
-        reloadFailedDownload: !0
-      };
-      return SQ(QQ), async () => {
-        var FQ;
-        const wQ = performance.now();
-        await SQ(QQ);
-        const LQ = (performance.now() - wQ) / 1e3;
-        if ((0, qQ.I)()) return (0, vQ.j)("ready", LQ), tQ || (tQ = !0, (0, qQ.O)((() => {
-          if ("call" !== (0, qQ.p)()) return;
-          const QQ = (0, qQ.n)(),
-            FQ = (0, HQ.m)(QQ, qQ.D, qQ.U),
-            wQ = (0, qQ.t)().buffer.byteLength,
-            LQ = (0, HQ.g)(FQ.kind, FQ.refusedBytes),
-            oQ = LQ ? "alloc_failed" : FQ.kind,
-            DQ = (0, YQ.i)(wQ),
-            kQ = LQ ? `_r${Math.floor(Math.log2(FQ.refusedBytes))}` : "",
-            vQ = (0, AQ.c)();
-          null === vQ && console.warn("A JS client wasm call turned wasm off without naming its site: call markWasmFailedAt, not markBloxdWasmFailed");
-          const mQ = new Error((0, xQ.b)(QQ, wQ, FQ));
-          if (QQ instanceof Error && void 0 !== QQ.stack) {
-            const FQ = QQ.stack.split("\n"),
-              wQ = FQ.length > eQ ? [...FQ.slice(0, eQ / 2), ...FQ.slice(-eQ / 2)] : FQ;
-            mQ.stack = wQ.join("\n")
-          }(0, bQ.f)("wasm_load", mQ, `wasm_call_${oQ}_${null!==vQ&&void 0!==vQ?vQ:"unnamed"}_m${DQ}${kQ}`)
-        }))), (0, DQ.bb)(oQ.b.url()) && (0, kQ.reportCappedWasmFailure)("wasm_load", mQ.c.message, mQ.c.code), !0;
-        const MQ = uQ.b[null !== (FQ = (0, qQ.p)()) && void 0 !== FQ ? FQ : "call"];
-        return (0, vQ.j)(MQ, LQ), RQ(MQ, (0, qQ.j)()), !1
-      }
+    function wk(kk, ek) {
+      let ik;
+      return kk instanceof Mk.i ? ik = kk : (ik = new Mk.i(ek ? Mk.g.Optional : Mk.g.Error, (0, Kk.g)(kk)), kk instanceof Error && (ik.stack = `${ik.name}: ${ik.message}\n${kk.stack}`)), ik.code !== Mk.g.Fetch && ik.code !== Mk.g.Error && (0, mk.e)(ik.message), ik
     }
 
-    function RQ(QQ, FQ) {
-      (0, uQ.f)(GQ, `Bloxd wasm ${QQ}, so the game can't start: ${FQ}`, FQ, QQ)
+    function lk(kk) {
+      return kk.message ? new Error(`the texture worker failed: ${kk.message}`) : new Mk.i(Mk.g.Load, "the texture worker failed to start")
     }
-  },
-  35965: (QQ, FQ, wQ) => {
-    QQ.exports = wQ.p + "static/media/bloxd_wasm_bg.80cf7a9d2c5f9fd62bf3.wasm"
-  },
-  35956: (QQ, FQ, wQ) => {
-    QQ.exports = wQ.p + "static/media/bloxd_wasm_textures_bg.61b5ac2f80ff09b15c5a.wasm"
-  },
-  35958: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => OF,
-      c: () => sF,
-      e: () => rF
-    });
-    var LQ = {};
-    wQ.r(LQ), wQ.d(LQ, {
-      Vu: () => qQ,
-      EnvelopeKind: () => oQ,
-      hu: () => DQ,
-      PhysicsEngine: () => kQ,
-      Ju: () => vQ,
-      Eu: () => mQ,
-      nu: () => uQ,
-      gu: () => HQ,
-      Pu: () => bQ,
-      Zu: () => YQ,
-      yu: () => xQ,
-      Bu: () => AQ,
-      QH: () => tQ,
-      FH: () => eQ,
-      default: () => iF,
-      initSync: () => SF,
-      wH: () => MQ,
-      LH: () => GQ,
-      qH: () => pQ,
-      oH: () => cQ,
-      DH: () => CQ,
-      kH: () => SQ,
-      vH: () => iQ,
-      mH: () => WQ,
-      uH: () => RQ,
-      HH: () => OQ,
-      bH: () => sQ,
-      YH: () => rQ,
-      xH: () => IQ,
-      AH: () => UQ,
-      tH: () => NQ
-    });
-    class qQ {
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, KQ.unregister(this), QQ
+    class pk {
+      constructor(kk) {
+        this.worker = kk, this.failure = void 0, this.abandonStep = null, kk.addEventListener("error", (kk => {
+          kk.preventDefault(), this.failure ??= lk(kk)
+        }))
       }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        pF.VuCs(QQ, 0)
-      }
-      eH() {
-        const QQ = pF.kdUB(this.__wbg_ptr);
-        if (QQ[2]) throw YF(QQ[1]);
-        return QQ[0] >>> 0
-      }
-      MH() {
-        return pF.gvvz(this.__wbg_ptr) >>> 0
-      }
-      constructor() {
-        const QQ = pF.ory2();
-        return this.__wbg_ptr = QQ, KQ.register(this, this.__wbg_ptr, this), this
-      }
-      GH() {
-        return pF.XgRn(this.__wbg_ptr) >>> 0
-      }
-      pH(QQ) {
-        const FQ = pF.ZVL8(this.__wbg_ptr, QQ);
-        if (FQ[2]) throw YF(FQ[1]);
-        return FQ[0] >>> 0
-      }
-      cH(QQ) {
-        const FQ = pF.dxMK(this.__wbg_ptr, QQ);
-        if (FQ[2]) throw YF(FQ[1]);
-        return FQ[0] >>> 0
-      }
-    }
-    Symbol.dispose && (qQ.prototype[Symbol.dispose] = qQ.prototype.free);
-    const oQ = Object.freeze({
-      Js: 0,
-      0: "Js",
-      Error: 1,
-      1: "Error",
-      LeaveRoom: 2,
-      2: "LeaveRoom",
-      RoomState: 3,
-      3: "RoomState",
-      RoomStatePatch: 4,
-      4: "RoomStatePatch",
-      RoomDataNone: 5,
-      5: "RoomDataNone",
-      RoomDataBin: 6,
-      6: "RoomDataBin",
-      RoomDataBytes: 7,
-      7: "RoomDataBytes",
-      Ignored: 8,
-      8: "Ignored",
-      StringType: 16,
-      16: "StringType"
-    });
-    class DQ {
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, zQ.unregister(this), QQ
-      }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        pF.QpT8(QQ, 0)
-      }
-      iH(QQ, FQ) {
-        const wQ = pF.XXHg(this.__wbg_ptr, QQ, FQ);
-        if (wQ[2]) throw YF(wQ[1]);
-        return wQ[0] >>> 0
-      }
-      WH(QQ) {
-        const FQ = pF.qieB(this.__wbg_ptr, QQ);
-        if (FQ[2]) throw YF(FQ[1]);
-        return FQ[0] >>> 0
-      }
-      RH() {
-        pF.Fk5B(this.__wbg_ptr)
-      }
-      static OH() {
-        return pF.WmHV() >>> 0
-      }
-      sH() {
-        return pF.T1w5(this.__wbg_ptr) >>> 0
-      }
-      rH() {
-        const QQ = pF.bLbW(this.__wbg_ptr);
-        return 0 === QQ[0] ? void 0 : QQ[1]
-      }
-      IH() {
-        return pF.pDor(this.__wbg_ptr) >>> 0
-      }
-      UH() {
-        return pF.Y9PT(this.__wbg_ptr) >>> 0
-      }
-      static SH() {
-        return pF.TiXL() >>> 0
-      }
-      constructor() {
-        const QQ = pF.qEm7();
-        return this.__wbg_ptr = QQ, zQ.register(this, this.__wbg_ptr, this), this
-      }
-      NH() {
-        return pF.f6v9(this.__wbg_ptr) >>> 0
-      }
-      TH() {
-        return pF.XgwW(this.__wbg_ptr) >>> 0
-      }
-      KH() {
-        return pF.Bz40(this.__wbg_ptr) >>> 0
-      }
-      CH(QQ) {
-        return pF.IzRe(this.__wbg_ptr, QQ) >>> 0
-      }
-      reserve(QQ, FQ) {
-        const wQ = pF.B9bW(this.__wbg_ptr, QQ, FQ);
-        if (wQ[1]) throw YF(wQ[0])
-      }
-      jH(QQ, FQ) {
-        const wQ = mF(QQ, pF.QDi7),
-          LQ = cF;
-        pF.KHFz(this.__wbg_ptr, wQ, LQ, FQ)
-      }
-      text() {
-        let QQ, FQ;
+      static async generateRequired(kk, ek, ik, Sk) {
+        let bk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Mk.b,
+          mk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const xk = (0, Pk.l)();
+        if (null !== xk) throw wk(new Mk.i(Mk.g.Load, xk), !1);
+        let nk;
+        const lk = new AbortController;
         try {
-          const wQ = pF.vzEs(this.__wbg_ptr);
-          return QQ = wQ[0], FQ = wQ[1], BQ(wQ[0], wQ[1])
-        } finally {
-          pF.yQdd(QQ, FQ, 1)
-        }
-      }
-    }
-    Symbol.dispose && (DQ.prototype[Symbol.dispose] = DQ.prototype.free);
-    class kQ {
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, lQ.unregister(this), QQ
-      }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        pF.samZ(QQ, 0)
-      }
-      XH(QQ, FQ) {
-        JQ(FQ, qQ);
-        const wQ = pF.canJ(this.__wbg_ptr, QQ, FQ.__wbg_ptr);
-        if (wQ[2]) throw YF(wQ[1]);
-        return wQ[0] >>> 0
-      }
-      VH() {
-        const QQ = pF.P3PO(this.__wbg_ptr);
-        if (QQ[1]) throw YF(QQ[0])
-      }
-      gH(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, mQ, uQ, HQ) {
-        JQ(QQ, vQ);
-        const bQ = pF.kO0N(this.__wbg_ptr, QQ.__wbg_ptr, FQ, wQ, LQ, qQ, oQ, DQ, kQ, mQ, uQ, HQ);
-        if (bQ[2]) throw YF(bQ[1]);
-        return bQ[0]
-      }
-      PH() {
-        const QQ = pF.DgpY(this.__wbg_ptr);
-        var FQ = EQ(QQ[0], QQ[1]).slice();
-        return pF.yQdd(QQ[0], 8 * QQ[1], 8), FQ
-      }
-      ZH() {
-        return pF.OEtS(this.__wbg_ptr) >>> 0
-      }
-      yH() {
-        return pF.p0n4(this.__wbg_ptr) >>> 0
-      }
-      BH() {
-        return pF.VPwo(this.__wbg_ptr) >>> 0
-      }
-      constructor(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ) {
-        const vQ = pF.fVFf(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ);
-        if (vQ[2]) throw YF(vQ[1]);
-        return this.__wbg_ptr = vQ[0], lQ.register(this, this.__wbg_ptr, this), this
-      }
-      Fb(QQ) {
-        JQ(QQ, qQ);
-        const FQ = pF.YpzH(this.__wbg_ptr, QQ.__wbg_ptr);
-        if (FQ[2]) throw YF(FQ[1]);
-        return FQ[0] >>> 0
-      }
-      Lb(QQ) {
-        const FQ = pF.XkLJ(this.__wbg_ptr, QQ);
-        if (FQ[1]) throw YF(FQ[0])
-      }
-      qb() {
-        return pF.E0em(this.__wbg_ptr) >>> 0
-      }
-      resume(QQ, FQ) {
-        JQ(QQ, vQ), JQ(FQ, qQ);
-        const wQ = pF.irUX(this.__wbg_ptr, QQ.__wbg_ptr, FQ.__wbg_ptr);
-        if (wQ[2]) throw YF(wQ[1]);
-        return wQ[0] >>> 0
-      }
-      Hb(QQ) {
-        const FQ = pF.pYO0(this.__wbg_ptr, QQ);
-        if (FQ[1]) throw YF(FQ[0])
-      }
-      xb(QQ, FQ) {
-        JQ(FQ, qQ);
-        const wQ = pF.xlmr(this.__wbg_ptr, QQ, FQ.__wbg_ptr);
-        if (wQ[1]) throw YF(wQ[0])
-      }
-      eb(QQ) {
-        const FQ = HF(QQ, pF.QDi7),
-          wQ = cF,
-          LQ = pF.VfdY(this.__wbg_ptr, FQ, wQ);
-        if (LQ[1]) throw YF(LQ[0])
-      }
-      JH(QQ, FQ, wQ, LQ, qQ, oQ) {
-        const DQ = pF.zIPD(this.__wbg_ptr, QQ, FQ, wQ, LQ, qQ, oQ);
-        if (DQ[1]) throw YF(DQ[0])
-      }
-      EH(QQ, FQ, wQ, LQ) {
-        const qQ = mF(QQ, pF.QDi7),
-          oQ = cF,
-          DQ = HF(FQ, pF.QDi7),
-          kQ = cF,
-          vQ = HF(wQ, pF.QDi7),
-          mQ = cF,
-          uQ = HF(LQ, pF.QDi7),
-          HQ = cF,
-          bQ = pF.uTan(this.__wbg_ptr, qQ, oQ, DQ, kQ, vQ, mQ, uQ, HQ);
-        if (bQ[1]) throw YF(bQ[0])
-      }
-      Gb(QQ, FQ) {
-        JQ(FQ, qQ);
-        const wQ = pF.wMX5(this.__wbg_ptr, QQ, FQ.__wbg_ptr);
-        if (wQ[1]) throw YF(wQ[0])
-      }
-      Qb(QQ, FQ, wQ) {
-        const LQ = pF.qPts(this.__wbg_ptr, QQ, FQ, wQ);
-        if (LQ[1]) throw YF(LQ[0])
-      }
-      cb(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, mQ, uQ) {
-        JQ(QQ, vQ);
-        return pF.i11V(this.__wbg_ptr, QQ.__wbg_ptr, FQ, wQ, LQ, qQ, oQ, DQ, kQ, mQ, uQ)
-      }
-    }
-    Symbol.dispose && (kQ.prototype[Symbol.dispose] = kQ.prototype.free);
-    class vQ {
-      static __wrap(QQ) {
-        const FQ = Object.create(vQ.prototype);
-        return FQ.__wbg_ptr = QQ, jQ.register(FQ, FQ.__wbg_ptr, FQ), FQ
-      }
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, jQ.unregister(this), QQ
-      }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        pF.y0I1(QQ, 0)
-      }
-      ib(QQ) {
-        const FQ = pF.D7O4(this.__wbg_ptr, QQ);
-        if (FQ[2]) throw YF(FQ[1]);
-        return FQ[0] >>> 0
-      }
-      Wb(QQ, FQ, wQ) {
-        return pF.tM5x(this.__wbg_ptr, QQ, FQ, wQ)
-      }
-      Rb(QQ, FQ, wQ) {
-        return pF.uM97(this.__wbg_ptr, QQ, FQ, wQ) >>> 0
-      }
-      Ob(QQ, FQ, wQ, LQ) {
-        return 0 !== pF.s7px(this.__wbg_ptr, QQ, FQ, wQ, LQ)
-      }
-      sb() {
-        pF.vydX(this.__wbg_ptr)
-      }
-      Ib(QQ) {
-        const FQ = pF.OVdz(this.__wbg_ptr, QQ);
-        if (FQ[3]) throw YF(FQ[2]);
-        var wQ = gQ(FQ[0], FQ[1]).slice();
-        return pF.yQdd(FQ[0], 1 * FQ[1], 1), wQ
-      }
-      evict(QQ, FQ) {
-        return pF.wB06(this.__wbg_ptr, QQ, FQ) >>> 0
-      }
-      Ub() {
-        pF.Orjr(this.__wbg_ptr)
-      }
-      Nb(QQ, FQ, wQ) {
-        pF.dVZu(this.__wbg_ptr, QQ, FQ, wQ)
-      }
-      Tb(QQ) {
-        const FQ = pF.XxGK(this.__wbg_ptr, QQ);
-        if (FQ[1]) throw YF(FQ[0])
-      }
-      Kb() {
-        return pF.JuOL(this.__wbg_ptr) >>> 0
-      }
-      zb() {
-        return pF.cdSH(this.__wbg_ptr) >>> 0
-      }
-      lb(QQ, FQ, wQ) {
-        pF.KKCa(this.__wbg_ptr, QQ, FQ, wQ)
-      }
-      jb(QQ, FQ, wQ) {
-        pF.y2gi(this.__wbg_ptr, QQ, FQ, wQ)
-      }
-      ab() {
-        return pF.oO66(this.__wbg_ptr) >>> 0
-      }
-      Xb() {
-        return pF.plIP(this.__wbg_ptr) >>> 0
-      }
-      constructor() {
-        const QQ = pF.BxnL();
-        return this.__wbg_ptr = QQ, jQ.register(this, this.__wbg_ptr, this), this
-      }
-      static fb() {
-        const QQ = pF.LUBn();
-        return vQ.__wrap(QQ)
-      }
-      Vb() {
-        return pF.ZTsO(this.__wbg_ptr) >>> 0
-      }
-      hb() {
-        return pF.bwbU(this.__wbg_ptr) >>> 0
-      }
-      Jb(QQ, FQ, wQ, LQ) {
-        const qQ = pF.Tt31(this.__wbg_ptr, QQ, FQ, wQ, LQ);
-        if (qQ[1]) throw YF(qQ[0])
-      }
-      Eb() {
-        return pF.uMiS(this.__wbg_ptr) >>> 0
-      }
-      nb() {
-        return pF.XTPB(this.__wbg_ptr) >>> 0
-      }
-      gb(QQ, FQ, wQ, LQ) {
-        pF.kl62(this.__wbg_ptr, QQ, FQ, wQ, LQ)
-      }
-      Pb(QQ) {
-        pF.sJFq(this.__wbg_ptr, QQ)
-      }
-      yb(QQ, FQ, wQ, LQ, qQ) {
-        const oQ = uF(FQ, pF.QDi7),
-          DQ = cF,
-          kQ = mF(wQ, pF.QDi7),
-          vQ = cF,
-          mQ = HF(LQ, pF.QDi7),
-          uQ = cF,
-          HQ = pF.ARO7(this.__wbg_ptr, QQ, oQ, DQ, kQ, vQ, mQ, uQ, qQ);
-        if (HQ[1]) throw YF(HQ[0])
-      }
-      Zb(QQ, FQ, wQ, LQ) {
-        const qQ = uF(QQ, pF.QDi7),
-          oQ = cF,
-          DQ = mF(FQ, pF.QDi7),
-          kQ = cF,
-          vQ = HF(wQ, pF.QDi7),
-          mQ = cF,
-          uQ = uF(LQ, pF.QDi7),
-          HQ = cF,
-          bQ = pF.O9eE(this.__wbg_ptr, qQ, oQ, DQ, kQ, vQ, mQ, uQ, HQ);
-        if (bQ[1]) throw YF(bQ[0])
-      }
-      qY(QQ) {
-        const FQ = uF(QQ, pF.QDi7),
-          wQ = cF,
-          LQ = pF.fvaj(this.__wbg_ptr, FQ, wQ);
-        if (LQ[1]) throw YF(LQ[0])
-      }
-      oY() {
-        return pF.zWaa(this.__wbg_ptr) >>> 0
-      }
-      DY(QQ) {
-        const FQ = pF.nqSc(this.__wbg_ptr, QQ);
-        if (FQ[2]) throw YF(FQ[1]);
-        return FQ[0] >>> 0
-      }
-      steer() {
-        return pF.n0yP(this.__wbg_ptr) >>> 0
-      }
-      kY() {
-        const QQ = pF.vtLz(this.__wbg_ptr);
-        var FQ = EQ(QQ[0], QQ[1]).slice();
-        return pF.yQdd(QQ[0], 8 * QQ[1], 8), FQ
-      }
-      vY() {
-        return pF.WNX5(this.__wbg_ptr) >>> 0
-      }
-      Db() {
-        const QQ = pF.e2Mo(this.__wbg_ptr);
-        var FQ, wQ, LQ = (FQ = QQ[0], wQ = QQ[1], FQ >>>= 0, (null !== yQ && 0 !== yQ.byteLength || (yQ = new Int32Array(pF.memory.buffer)), yQ).subarray(FQ / 4, FQ / 4 + wQ)).slice();
-        return pF.yQdd(QQ[0], 4 * QQ[1], 4), LQ
-      }
-    }
-    Symbol.dispose && (vQ.prototype[Symbol.dispose] = vQ.prototype.free);
-    class mQ {
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, aQ.unregister(this), QQ
-      }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        pF.UjQi(QQ, 0)
-      }
-      mY(QQ) {
-        const FQ = mF(QQ, pF.QDi7),
-          wQ = cF,
-          LQ = pF.xo5R(this.__wbg_ptr, FQ, wQ);
-        if (LQ[1]) throw YF(LQ[0])
-      }
-      uY() {
-        return pF.O2C6(this.__wbg_ptr) >>> 0
-      }
-      HY() {
-        return pF.by2H(this.__wbg_ptr) >>> 0
-      }
-      constructor() {
-        const QQ = pF.aIfd();
-        return this.__wbg_ptr = QQ, aQ.register(this, this.__wbg_ptr, this), this
-      }
-      run(QQ, FQ) {
-        JQ(QQ, vQ);
-        const wQ = pF.V9Vp(this.__wbg_ptr, QQ.__wbg_ptr, FQ);
-        if (wQ[2]) throw YF(wQ[1]);
-        return wQ[0] >>> 0
-      }
-      bY(QQ) {
-        const FQ = mF(QQ, pF.QDi7),
-          wQ = cF;
-        pF.ctg3(this.__wbg_ptr, FQ, wQ)
-      }
-      YY(QQ) {
-        const FQ = mF(QQ, pF.QDi7),
-          wQ = cF;
-        pF.gbxH(this.__wbg_ptr, FQ, wQ)
-      }
-    }
-    Symbol.dispose && (mQ.prototype[Symbol.dispose] = mQ.prototype.free);
-    class uQ {
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, XQ.unregister(this), QQ
-      }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        pF.Rfko(QQ, 0)
-      }
-      AY(QQ, FQ) {
-        const wQ = uF(QQ, pF.QDi7),
-          LQ = cF;
-        return pF.WZ8d(this.__wbg_ptr, wQ, LQ, FQ) >>> 0
-      }
-      tY(QQ, FQ, wQ) {
-        JQ(QQ, vQ);
-        const LQ = uF(wQ, pF.QDi7),
-          qQ = cF,
-          oQ = pF.J2PA(this.__wbg_ptr, QQ.__wbg_ptr, FQ, LQ, qQ);
-        if (oQ[2]) throw YF(oQ[1]);
-        return oQ[0] >>> 0
-      }
-      xY(QQ) {
-        return pF.WNCB(this.__wbg_ptr, QQ) >>> 0
-      }
-      constructor() {
-        const QQ = pF.Te51();
-        return this.__wbg_ptr = QQ, XQ.register(this, this.__wbg_ptr, this), this
-      }
-      scan(QQ, FQ) {
-        JQ(QQ, vQ);
-        const wQ = pF.ZrTg(this.__wbg_ptr, QQ.__wbg_ptr, FQ);
-        if (wQ[2]) throw YF(wQ[1]);
-        return wQ[0] >>> 0
-      }
-      GY(QQ) {
-        const FQ = uF(QQ, pF.QDi7),
-          wQ = cF;
-        pF.XxVF(this.__wbg_ptr, FQ, wQ)
-      }
-      MY() {
-        return pF.zqsn(this.__wbg_ptr) >>> 0
-      }
-      eY() {
-        return pF.uWGx(this.__wbg_ptr) >>> 0
-      }
-    }
-    Symbol.dispose && (uQ.prototype[Symbol.dispose] = uQ.prototype.free);
-    class HQ {
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, fQ.unregister(this), QQ
-      }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        pF.c3rs(QQ, 0)
-      }
-      cY(QQ) {
-        const FQ = pF.C5Rc(this.__wbg_ptr, QQ);
-        if (FQ[2]) throw YF(FQ[1]);
-        return FQ[0] >>> 0
-      }
-      compute(QQ, FQ, wQ, LQ) {
-        var qQ = kF(LQ) ? 0 : bF(LQ, pF.QDi7, pF.faz4),
-          oQ = cF;
-        const DQ = pF.RolW(this.__wbg_ptr, QQ, kF(FQ) ? Number.MAX_SAFE_INTEGER : FQ | 0, wQ, qQ, oQ);
-        if (DQ[2]) throw YF(DQ[1]);
-        return DQ[0] >>> 0
-      }
-      SY(QQ) {
-        const FQ = bF(QQ, pF.QDi7, pF.faz4),
-          wQ = cF;
-        pF.PesK(this.__wbg_ptr, FQ, wQ)
-      }
-      WY() {
-        return pF.Xiwb(this.__wbg_ptr)
-      }
-      RY(QQ) {
-        return pF.E3HQ(this.__wbg_ptr, QQ) >>> 0
-      }
-      OY() {
-        return pF.nx5d(this.__wbg_ptr) >>> 0
-      }
-      sY() {
-        return pF.CDIt(this.__wbg_ptr) >>> 0
-      }
-      rY(QQ, FQ) {
-        const wQ = pF.Dlat(this.__wbg_ptr, QQ, FQ);
-        if (wQ[1]) throw YF(wQ[0])
-      }
-      IY() {
-        return pF.CpFc(this.__wbg_ptr) >>> 0
-      }
-      UY() {
-        return pF.uaLb(this.__wbg_ptr) >>> 0
-      }
-      NY() {
-        return pF.SwfB(this.__wbg_ptr) >>> 0
-      }
-      CY(QQ, FQ, wQ) {
-        const LQ = mF(QQ, pF.QDi7),
-          qQ = cF,
-          oQ = mF(FQ, pF.QDi7),
-          DQ = cF,
-          kQ = pF.nG0b(this.__wbg_ptr, LQ, qQ, oQ, DQ, wQ);
-        if (kQ[1]) throw YF(kQ[0])
-      }
-      KY() {
-        return pF.d9B6(this.__wbg_ptr) >>> 0
-      }
-      mesh(QQ, FQ, wQ, LQ, qQ) {
-        const oQ = pF.WcpF(this.__wbg_ptr, QQ, FQ, wQ, LQ, qQ);
-        if (oQ[2]) throw YF(oQ[1]);
-        return oQ[0] >>> 0
-      }
-      constructor(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ, uQ, HQ, bQ, YQ, xQ, AQ, tQ, eQ, MQ, GQ) {
-        const pQ = vF(QQ, pF.QDi7),
-          cQ = cF,
-          CQ = HF(FQ, pF.QDi7),
-          SQ = cF,
-          iQ = mF(wQ, pF.QDi7),
-          WQ = cF,
-          RQ = uF(LQ, pF.QDi7),
-          OQ = cF,
-          sQ = uF(qQ, pF.QDi7),
-          rQ = cF,
-          IQ = mF(oQ, pF.QDi7),
-          UQ = cF,
-          NQ = mF(DQ, pF.QDi7),
-          TQ = cF,
-          KQ = HF(kQ, pF.QDi7),
-          zQ = cF,
-          lQ = HF(vQ, pF.QDi7),
-          jQ = cF,
-          aQ = uF(mQ, pF.QDi7),
-          XQ = cF;
-        var VQ = kF(uQ) ? 0 : vF(uQ, pF.QDi7),
-          hQ = cF;
-        const JQ = mF(HQ, pF.QDi7),
-          EQ = cF,
-          nQ = uF(bQ, pF.QDi7),
-          gQ = cF;
-        var PQ = kF(YQ) ? 0 : uF(YQ, pF.QDi7),
-          ZQ = cF;
-        const yQ = HF(xQ, pF.QDi7),
-          BQ = cF,
-          dQ = pF.bqZi(pQ, cQ, CQ, SQ, iQ, WQ, RQ, OQ, sQ, rQ, IQ, UQ, NQ, TQ, KQ, zQ, lQ, jQ, aQ, XQ, VQ, hQ, JQ, EQ, nQ, gQ, PQ, ZQ, yQ, BQ, AQ, tQ, eQ, MQ, GQ);
-        if (dQ[2]) throw YF(dQ[1]);
-        return this.__wbg_ptr = dQ[0], fQ.register(this, this.__wbg_ptr, this), this
-      }
-      TY(QQ, FQ) {
-        const wQ = mF(QQ, pF.QDi7),
-          LQ = cF,
-          qQ = pF.rKA3(this.__wbg_ptr, wQ, LQ, FQ);
-        if (qQ[3]) throw YF(qQ[2]);
-        var oQ = gQ(qQ[0], qQ[1]).slice();
-        return pF.yQdd(qQ[0], 1 * qQ[1], 1), oQ
-      }
-      zY(QQ) {
-        pF.TMwT(this.__wbg_ptr, kF(QQ) ? 16777215 : QQ)
-      }
-      lY(QQ) {
-        return pF.E7ud(this.__wbg_ptr, QQ) >>> 0
-      }
-      aY() {
-        return pF.sOFB(this.__wbg_ptr) >>> 0
-      }
-      jY() {
-        const QQ = pF.L0jX(this.__wbg_ptr);
-        if (QQ[2]) throw YF(QQ[1]);
-        return 0 !== QQ[0]
-      }
-      XY() {
-        return pF.zw63(this.__wbg_ptr) >>> 0
-      }
-      fY() {
-        return pF.gkip(this.__wbg_ptr) >>> 0
-      }
-    }
-    Symbol.dispose && (HQ.prototype[Symbol.dispose] = HQ.prototype.free);
-    class bQ {
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, VQ.unregister(this), QQ
-      }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        pF.nRhE(QQ, 0)
-      }
-      compute(QQ, FQ, wQ, LQ) {
-        var qQ = kF(LQ) ? 0 : bF(LQ, pF.QDi7, pF.faz4),
-          oQ = cF;
-        const DQ = pF.WIj2(this.__wbg_ptr, QQ, kF(FQ) ? Number.MAX_SAFE_INTEGER : FQ | 0, wQ, qQ, oQ);
-        if (DQ[2]) throw YF(DQ[1]);
-        return DQ[0] >>> 0
-      }
-      SY(QQ) {
-        const FQ = bF(QQ, pF.QDi7, pF.faz4),
-          wQ = cF;
-        pF.YVS4(this.__wbg_ptr, FQ, wQ)
-      }
-      UY() {
-        return pF.v1XL(this.__wbg_ptr) >>> 0
-      }
-      NY() {
-        return pF.kmBv(this.__wbg_ptr) >>> 0
-      }
-      VY(QQ) {
-        const FQ = pF.H7kO(this.__wbg_ptr, QQ);
-        if (FQ[2]) throw YF(FQ[1]);
-        return FQ[0] >>> 0
-      }
-      constructor(QQ, FQ, wQ, LQ, qQ, oQ) {
-        const DQ = vF(QQ, pF.QDi7),
-          kQ = cF,
-          vQ = HF(FQ, pF.QDi7),
-          mQ = cF,
-          uQ = mF(wQ, pF.QDi7),
-          HQ = cF,
-          bQ = uF(LQ, pF.QDi7),
-          YQ = cF,
-          xQ = pF.u1dw(DQ, kQ, vQ, mQ, uQ, HQ, bQ, YQ, qQ, oQ);
-        if (xQ[2]) throw YF(xQ[1]);
-        return this.__wbg_ptr = xQ[0], VQ.register(this, this.__wbg_ptr, this), this
-      }
-      aY() {
-        return pF.pDez(this.__wbg_ptr) >>> 0
-      }
-      jY() {
-        const QQ = pF.IIBx(this.__wbg_ptr);
-        if (QQ[2]) throw YF(QQ[1]);
-        return 0 !== QQ[0]
-      }
-      XY() {
-        return pF.IAK1(this.__wbg_ptr) >>> 0
-      }
-    }
-
-    function YQ() {
-      const QQ = pF.Zh6E();
-      var FQ = nQ(QQ[0], QQ[1]).slice();
-      return pF.yQdd(QQ[0], 4 * QQ[1], 4), FQ
-    }
-
-    function xQ(QQ, FQ) {
-      let wQ, LQ;
-      try {
-        const qQ = vF(QQ, pF.QDi7),
-          oQ = cF,
-          DQ = bF(FQ, pF.QDi7, pF.faz4),
-          kQ = cF,
-          vQ = pF.rPfG(qQ, oQ, DQ, kQ);
-        return wQ = vQ[0], LQ = vQ[1], BQ(vQ[0], vQ[1])
-      } finally {
-        pF.yQdd(wQ, LQ, 1)
-      }
-    }
-
-    function AQ() {
-      const QQ = pF.ymIA();
-      var FQ = nQ(QQ[0], QQ[1]).slice();
-      return pF.yQdd(QQ[0], 4 * QQ[1], 4), FQ
-    }
-
-    function tQ(QQ) {
-      return 0 !== pF.gYT2(QQ)
-    }
-
-    function eQ(QQ, FQ) {
-      const wQ = bF(QQ, pF.QDi7, pF.faz4),
-        LQ = cF,
-        qQ = pF.kfwW(wQ, LQ, FQ);
-      if (qQ[1]) throw YF(qQ[0])
-    }
-
-    function MQ() {
-      pF.nzeI()
-    }
-
-    function GQ() {
-      return pF.IEvF() >>> 0
-    }
-
-    function pQ(QQ) {
-      return 0 !== pF.bpsQ(QQ)
-    }
-
-    function cQ(QQ) {
-      return 0 !== pF.qUVd(QQ)
-    }
-
-    function CQ(QQ) {
-      pF.rLzz(QQ)
-    }
-
-    function SQ() {
-      return pF.ck2d() >>> 0
-    }
-
-    function iQ() {
-      return pF.K9V8() >>> 0
-    }
-
-    function WQ() {
-      return 0 !== pF.Ga2p()
-    }
-
-    function RQ() {
-      const QQ = pF.RcHc();
-      var FQ = nQ(QQ[0], QQ[1]).slice();
-      return pF.yQdd(QQ[0], 4 * QQ[1], 4), FQ
-    }
-
-    function OQ() {
-      const QQ = pF.WdY0();
-      var FQ = nQ(QQ[0], QQ[1]).slice();
-      return pF.yQdd(QQ[0], 4 * QQ[1], 4), FQ
-    }
-
-    function sQ() {
-      const QQ = pF.tvK3();
-      var FQ = nQ(QQ[0], QQ[1]).slice();
-      return pF.yQdd(QQ[0], 4 * QQ[1], 4), FQ
-    }
-
-    function rQ() {
-      return pF.yNds() >>> 0
-    }
-
-    function IQ() {
-      pF.ooSo()
-    }
-
-    function UQ() {
-      let QQ, FQ;
-      try {
-        const wQ = pF.G4rd();
-        return QQ = wQ[0], FQ = wQ[1], BQ(wQ[0], wQ[1])
-      } finally {
-        pF.yQdd(QQ, FQ, 1)
-      }
-    }
-
-    function NQ(QQ) {
-      pF.C26r(hQ(QQ))
-    }
-
-    function TQ() {
-      return {
-        __proto__: null,
-        yAdS: {
-          __proto__: null,
-          Tz4p: function(QQ, FQ) {
-            return hQ(Error(BQ(QQ, FQ)))
-          },
-          OWEB: function(QQ, FQ) {
-            throw new Error(BQ(QQ, FQ))
-          },
-          ZdN9: function(QQ) {
-            qF(QQ).call()
-          },
-          nt5i: function(QQ, FQ) {
-            console.error(BQ(QQ, FQ))
-          },
-          RAJ3: function() {
-            return performance.now()
-          },
-          Zc2r: function(QQ) {
-            YF(QQ)
-          }
-        }
-      }
-    }
-    Symbol.dispose && (bQ.prototype[Symbol.dispose] = bQ.prototype.free);
-    const KQ = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((QQ => pF.VuCs(QQ, 1))),
-      zQ = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((QQ => pF.QpT8(QQ, 1))),
-      lQ = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((QQ => pF.samZ(QQ, 1))),
-      jQ = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((QQ => pF.y0I1(QQ, 1))),
-      aQ = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((QQ => pF.UjQi(QQ, 1))),
-      XQ = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((QQ => pF.Rfko(QQ, 1))),
-      fQ = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((QQ => pF.c3rs(QQ, 1))),
-      VQ = "undefined" === typeof FinalizationRegistry ? {
-        register: () => {},
-        unregister: () => {}
-      } : new FinalizationRegistry((QQ => pF.nRhE(QQ, 1)));
-
-    function hQ(QQ) {
-      DF === oF.length && oF.push(oF.length + 1);
-      const FQ = DF;
-      return DF = oF[FQ], oF[FQ] = QQ, FQ
-    }
-
-    function JQ(QQ, FQ) {
-      if (!(QQ instanceof FQ)) throw new Error(`expected instance of ${FQ.name}`)
-    }
-
-    function EQ(QQ, FQ) {
-      return QQ >>>= 0, ZQ().subarray(QQ / 8, QQ / 8 + FQ)
-    }
-
-    function nQ(QQ, FQ) {
-      return QQ >>>= 0, FF().subarray(QQ / 4, QQ / 4 + FQ)
-    }
-
-    function gQ(QQ, FQ) {
-      return QQ >>>= 0, LF().subarray(QQ / 1, QQ / 1 + FQ)
-    }
-    let PQ = null;
-
-    function ZQ() {
-      return null !== PQ && 0 !== PQ.byteLength || (PQ = new Float64Array(pF.memory.buffer)), PQ
-    }
-    let yQ = null;
-
-    function BQ(QQ, FQ) {
-      return function(QQ, FQ) {
-        tF += FQ, tF >= AF && (xF = new TextDecoder("utf-8", {
-          ignoreBOM: !0,
-          fatal: !0
-        }), xF.decode(), tF = FQ);
-        return xF.decode(LF().subarray(QQ, QQ + FQ))
-      }(QQ >>> 0, FQ)
-    }
-    let dQ = null;
-    let QF = null;
-
-    function FF() {
-      return null !== QF && 0 !== QF.byteLength || (QF = new Uint32Array(pF.memory.buffer)), QF
-    }
-    let wF = null;
-
-    function LF() {
-      return null !== wF && 0 !== wF.byteLength || (wF = new Uint8Array(pF.memory.buffer)), wF
-    }
-
-    function qF(QQ) {
-      return oF[QQ]
-    }
-    let oF = new Array(1024).fill(void 0);
-    oF.push(void 0, null, !0, !1);
-    let DF = oF.length;
-
-    function kF(QQ) {
-      return void 0 === QQ || null === QQ
-    }
-
-    function vF(QQ, FQ) {
-      const wQ = FQ(2 * QQ.length, 2) >>> 0;
-      return (null !== dQ && 0 !== dQ.byteLength || (dQ = new Uint16Array(pF.memory.buffer)), dQ).set(QQ, wQ / 2), cF = QQ.length, wQ
-    }
-
-    function mF(QQ, FQ) {
-      const wQ = FQ(4 * QQ.length, 4) >>> 0;
-      return FF().set(QQ, wQ / 4), cF = QQ.length, wQ
-    }
-
-    function uF(QQ, FQ) {
-      const wQ = FQ(1 * QQ.length, 1) >>> 0;
-      return LF().set(QQ, wQ / 1), cF = QQ.length, wQ
-    }
-
-    function HF(QQ, FQ) {
-      const wQ = FQ(8 * QQ.length, 8) >>> 0;
-      return ZQ().set(QQ, wQ / 8), cF = QQ.length, wQ
-    }
-
-    function bF(QQ, FQ, wQ) {
-      if (void 0 === wQ) {
-        const wQ = eF.encode(QQ),
-          LQ = FQ(wQ.length, 1) >>> 0;
-        return LF().subarray(LQ, LQ + wQ.length).set(wQ), cF = wQ.length, LQ
-      }
-      let LQ = QQ.length,
-        qQ = FQ(LQ, 1) >>> 0;
-      const oQ = LF();
-      let DQ = 0;
-      for (; DQ < LQ; DQ++) {
-        const FQ = QQ.charCodeAt(DQ);
-        if (FQ > 127) break;
-        oQ[qQ + DQ] = FQ
-      }
-      if (DQ !== LQ) {
-        0 !== DQ && (QQ = QQ.slice(DQ)), qQ = wQ(qQ, LQ, LQ = DQ + 3 * QQ.length, 1) >>> 0;
-        const FQ = LF().subarray(qQ + DQ, qQ + LQ);
-        DQ += eF.encodeInto(QQ, FQ).written, qQ = wQ(qQ, LQ, DQ, 1) >>> 0
-      }
-      return cF = DQ, qQ
-    }
-
-    function YF(QQ) {
-      const FQ = qF(QQ);
-      return function(QQ) {
-        QQ < 1028 || (oF[QQ] = DF, DF = QQ)
-      }(QQ), FQ
-    }
-    let xF = new TextDecoder("utf-8", {
-      ignoreBOM: !0,
-      fatal: !0
-    });
-    xF.decode();
-    const AF = 2146435072;
-    let tF = 0;
-    const eF = new TextEncoder;
-    "encodeInto" in eF || (eF.encodeInto = function(QQ, FQ) {
-      const wQ = eF.encode(QQ);
-      return FQ.set(wQ), {
-        read: QQ.length,
-        written: wQ.length
-      }
-    });
-    let MF, GF, pF, cF = 0;
-
-    function CF(QQ, FQ) {
-      return GF = QQ, pF = QQ.exports, MF = FQ, PQ = null, yQ = null, dQ = null, QF = null, wF = null, pF.mm7T(), pF
-    }
-
-    function SF(QQ) {
-      if (void 0 !== pF) return pF;
-      void 0 !== QQ && (Object.getPrototypeOf(QQ) === Object.prototype ? ({
-        module: QQ
-      } = QQ) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const FQ = TQ();
-      QQ instanceof WebAssembly.Module || (QQ = new WebAssembly.Module(QQ));
-      return CF(new WebAssembly.Instance(QQ, FQ), QQ)
-    }
-    async function iF(QQ) {
-      if (void 0 !== pF) return pF;
-      void 0 !== QQ && (Object.getPrototypeOf(QQ) === Object.prototype ? ({
-        module_or_path: QQ
-      } = QQ) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const FQ = TQ();
-      ("string" === typeof QQ || "function" === typeof Request && QQ instanceof Request || "function" === typeof URL && QQ instanceof URL) && (QQ = fetch(QQ));
-      const {
-        instance: wQ,
-        module: LQ
-      } = await async function(QQ, FQ) {
-        if ("function" === typeof Response && QQ instanceof Response) {
-          if (!QQ.ok) throw new Error(`failed to fetch Wasm: ${QQ.status} ${QQ.statusText} fetching '${QQ.url}'`);
-          if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(QQ, FQ)
-          } catch (wQ) {
-            if (! function(QQ) {
-                switch (QQ) {
-                  case "basic":
-                  case "cors":
-                  case "default":
-                    return !0
+          nk = new pk(function() {
+            try {
+              return new rk
+            } catch (kk) {
+              throw new Mk.i(Mk.g.Load, `the texture worker failed to start: ${(0,Kk.g)(kk)}`)
+            }
+          }());
+          const xk = (0, Pk.c)().catch((kk => {
+              throw new Mk.i(Mk.g.Load, function(kk) {
+                return `the texture module didn't load (${(0,Kk.g)(kk)})`
+              }(kk))
+            })),
+            wk = (async () => {
+              const Sk = function(kk, ek, ik) {
+                const Dk = [],
+                  fk = new Map,
+                  Sk = kk => {
+                    let ek = fk.get(kk);
+                    return void 0 === ek && (ek = Dk.length, Dk.push(kk), fk.set(kk, ek)), ek
+                  },
+                  bk = [],
+                  rk = [],
+                  Pk = new Map,
+                  mk = (kk, ek) => {
+                    const ik = "object" === typeof kk && null !== kk && "animTextures" in kk ? kk.animTextures : void 0;
+                    if (!Array.isArray(ik) || !ik.every((kk => "string" === typeof kk))) throw new Error(`Block ${ek} has textureInfo the encoding doesn't cover`);
+                    bk.push(ik.length, ...ik.map(Sk))
+                  };
+                let Mk = 0;
+                for (const nk in kk) {
+                  const ek = kk[nk];
+                  bk.push(Sk(nk));
+                  const ik = (ek.transTex ? 1 : 0) | (ek.qn ? 2 : 0) | (ek.particlesIgnoreBlack ? 4 : 0),
+                    Dk = "string" === typeof ek.itemTexture ? Sk(ek.itemTexture) : 4294967295,
+                    fk = `${ik},${Dk}`,
+                    Kk = ek.textureInfo,
+                    xk = Pk.get(Kk);
+                  if ((null === xk || void 0 === xk ? void 0 : xk.fields) !== fk)
+                    if (Pk.set(Kk, {
+                        entry: Mk++,
+                        fields: fk
+                      }), bk.push(1, ik, Dk), "string" === typeof Kk) bk.push(1, Sk(Kk));
+                    else if (Array.isArray(Kk)) {
+                    bk.push(3, Kk.length);
+                    for (const kk of Kk) "string" === typeof kk ? bk.push(0, Sk(kk)) : "number" === typeof kk ? (bk.push(2, rk.length), rk.push(kk)) : (bk.push(1), mk(kk, nk))
+                  } else Kk ? (bk.push(2), mk(Kk, nk)) : bk.push(0);
+                  else bk.push(0, xk.entry), Mk++
                 }
-                return !1
-              }(QQ.type) || "application/wasm" === QQ.headers.get("Content-Type")) throw wQ;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", wQ)
+                const Kk = [];
+                for (const nk in ek) Kk.push(Sk(nk), ek[nk]);
+                const xk = new Uint32Array(ik.map(Sk));
+                return {
+                  strings: Dk.join("\0"),
+                  blocks: new Uint32Array(bk),
+                  numbers: new Float64Array(rk),
+                  index: new Uint32Array(Kk),
+                  armour: xk
+                }
+              }(kk, ek, Dk.f.map(fk.l));
+              return {
+                inputs: Sk,
+                sources: await Hk(ik, lk.signal)
+              }
+            })(),
+            [yk, {
+              inputs: Yk,
+              sources: Lk
+            }] = await Promise.all([xk, wk]),
+            Ck = [Yk.blocks.buffer, Yk.numbers.buffer, Yk.index.buffer, Yk.armour.buffer, Lk.sourceOfName.buffer];
+          for (const kk of Lk.sources) Ck.push(kk.buffer);
+          const Ak = [],
+            {
+              assets: jk,
+              layerCap: sk,
+              warnings: dk
+            } = await nk.request({
+              type: "required",
+              module: yk,
+              inputs: Yk,
+              isDefaultPack: Sk,
+              maxLayerWidth: bk,
+              sheetLayers: mk,
+              ...Lk
+            }, Ck, ((kk, ek) => {
+              Ak[kk] = ek
+            }));
+          return mk > 0 && (jk.blockAtlasPixels = function(kk, ek) {
+            const ik = [];
+            for (let Dk = 0; Dk < ek; Dk++) {
+              const fk = kk[Dk];
+              if (void 0 === fk) throw new Error(`the texture worker's sheet ${Dk} of ${ek} didn't arrive`);
+              ik.push(fk)
+            }
+            return ik
+          }(Ak, jk.imagesPerAtlas.length)), Uk(dk), {
+            assets: jk,
+            layerCap: sk,
+            worker: nk
           }
-          const LQ = await QQ.arrayBuffer();
-          return await WebAssembly.instantiate(LQ, FQ)
-        } {
-          const wQ = await WebAssembly.instantiate(QQ, FQ);
-          return wQ instanceof WebAssembly.Instance ? {
-            instance: wQ,
-            module: QQ
-          } : wQ
+        } catch (Yk) {
+          var yk;
+          throw lk.abort(), null === (yk = nk) || void 0 === yk || yk.terminate(), wk(Yk, !1)
         }
-      }(await QQ, FQ);
-      return CF(wQ, LQ)
+      }
+      async generateOptional() {
+        let kk;
+        try {
+          kk = await this.request({
+            type: "optional"
+          }, [])
+        } catch (ek) {
+          throw wk(ek, !0)
+        } finally {
+          this.terminate()
+        }
+        return Uk(kk.warnings),
+          function(kk) {
+            let {
+              blocks: ek,
+              counts: ik,
+              values: Dk
+            } = kk;
+            const fk = {};
+            let Sk = 0;
+            for (const [bk, rk] of nk(ek).entries()) {
+              const kk = [];
+              for (let ek = 0; ek < ik[bk]; ek++, Sk += 3) kk.push([Dk[Sk], Dk[Sk + 1], Dk[Sk + 2]]);
+              fk[rk] = kk
+            }
+            return fk
+          }(kk)
+      }
+      terminate() {
+        var kk;
+        this.worker.terminate(), null === (kk = this.abandonStep) || void 0 === kk || kk.call(this)
+      }
+      request(kk, ek, ik) {
+        return new Promise(((Dk, fk) => {
+          if (void 0 !== this.failure) return void fk(this.failure);
+          let Sk = Mk.j.None,
+            bk = 0,
+            rk = null;
+          const Pk = () => {
+            var kk;
+            null === (kk = rk) || void 0 === kk || kk.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+          };
+          this.abandonStep = () => {
+            Pk(), fk(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = ek => {
+            let {
+              data: mk
+            } = ek;
+            var Kk;
+            if ("progress" === mk.type) return Sk = mk.stage, bk = mk.wasmBytes, void(null === (Kk = rk) || void 0 === Kk || Kk.restart(Sk === Mk.j.Generating ? Mk.d : Mk.f));
+            "sheet" === mk.type && ik ? ik(mk.sheet, mk.pixels) : (Pk(), "failed" === mk.type ? fk(mk.moduleLoad ? new Mk.i(Mk.g.Load, mk.reason) : function(kk, ek) {
+              let {
+                reason: ik,
+                stack: Dk
+              } = kk;
+              const fk = new Error(yk(ik, ek));
+              void 0 !== Dk && (fk.stack = Dk);
+              return fk
+            }(mk, bk)) : mk.type !== kk.type ? fk(new Error(`the texture worker answered ${mk.type} to ${kk.type}`)) : Dk(mk))
+          }, this.worker.onerror = kk => {
+            Pk(), fk(lk(kk))
+          }, this.worker.onmessageerror = () => {
+            Pk(), fk(new Error("the texture worker's answer couldn't be read"))
+          };
+          try {
+            this.worker.postMessage(kk, ek), rk = (0, Mk.k)((() => {
+              Pk();
+              const ek = new Mk.i("required" === kk.type ? `${Mk.g.Stalled}${Sk}` : Mk.g.Optional, yk("the texture worker stopped responding", bk));
+              fk(ek)
+            }))
+          } catch (mk) {
+            Pk(), fk(mk)
+          }
+        }))
+      }
     }
-    var WF = wQ(2809),
-      RF = wQ(35962);
-    const OF = {
-      name: WF.e,
-      url: () => new wQ.U(wQ(35965)),
-      init: iF,
-      bindings: LQ
-    };
 
-    function sF() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : OF,
-        FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : OF,
-        wQ = arguments.length > 2 ? arguments[2] : void 0;
-      return (0, RF.l)(QQ, FQ, wQ)
-    }
-
-    function rF(QQ) {
-      return (0, WF.F)((() => QQ), LQ, OF)
+    function yk(kk, ek) {
+      return ek > 0 ? `${kk}, its module's memory ${Math.round(ek/2**20)} MiB` : kk
     }
   },
-  35951: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ) {
-      return new Error(`${QQ}: ${FQ instanceof Error?`${FQ.name}: ${FQ.message}`:String(FQ)}`, {
-        cause: FQ
-      })
-    }
-    wQ.d(FQ, {
-      b: () => LQ
-    })
-  },
-  35946: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ,
-      f: () => vQ
-    });
-    var LQ = wQ(2811),
-      qQ = wQ(6446),
-      oQ = wQ(35951);
-
-    function DQ() {
-      return new URL(new wQ.U(wQ(35956)).href, globalThis.location?.href).href
-    }
-    let kQ = null;
-
-    function vQ() {
-      return kQ ??= (async () => (0, LQ.R)(new URL(DQ()), (0, qQ.e)("bloxd_wasm_textures")))().catch((QQ => {
-        throw (0, oQ.b)((0, LQ.X)(QQ), QQ)
-      })), kQ
+  35819: kk => {
+    kk.exports = function(kk, ek, ik, Dk) {
+      var fk = self || window;
+      try {
+        try {
+          var Sk;
+          try {
+            Sk = new fk.Blob([kk])
+          } catch (mk) {
+            (Sk = new(fk.BlobBuilder || fk.WebKitBlobBuilder || fk.MozBlobBuilder || fk.MSBlobBuilder)).append(kk), Sk = Sk.getBlob()
+          }
+          var bk = fk.URL || fk.webkitURL,
+            rk = bk.createObjectURL(Sk),
+            Pk = new fk[ek](rk, ik);
+          return bk.revokeObjectURL(rk), Pk
+        } catch (mk) {
+          return new fk[ek]("data:application/javascript,".concat(encodeURIComponent(kk)), ik)
+        }
+      } catch (mk) {
+        if (!Dk) throw Error("Inline worker is not supported");
+        return new fk[ek](Dk, ik)
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

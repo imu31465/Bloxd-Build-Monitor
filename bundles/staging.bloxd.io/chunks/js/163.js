@@ -1,46 +1,43 @@
 export const id = 163;
 export const ids = [163];
 export const modules = {
-  8724: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8754: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["All the fun of survival with none of the stress. Bloxd Peaceful Survival is a calm sandbox where you explore a shared block world with other players. You mine, gather, craft and build, and there are no hostile mobs, no PvP and no health bar. Basically it's Survival with the danger turned off."],
-      howToPlay: ["Spawn into the shared world and start collecting resources. Chop some trees, mine for ores, craft better tools and get building on your dream base. Only passive animals spawn, and they've got so little health you can beat them with your fist. Health is switched off for everyone, so nothing can hurt you. Not even other players.", "Build well away from spawn, because the blocks near it reset every few hours. Craft Protectors from diamonds so other players can't break your builds or open your chests. New to Bloxd? Peaceful's a great place to learn mining, crafting and building before you try Survival."],
-      features: ["No Hostile Mobs, No PvP and No Health Bar", "Shared Multiplayer World to Explore with Friends", "Mining, Crafting and Base Building", "Protect Your Land and Chests with Protectors", "Relaxing and Great for New Players and Builders"],
-      tips: ["Pick a spot to build 200+ blocks out, where blocks don't reset every few hours", "Craft a Protector from diamonds to keep your builds and chests safe", "Don't bother with a sword. Passive animals are weak enough to beat with your fist", "Just starting out? Practise mining, crafting and building here before you try Survival", "Fancy some danger and a health bar? Give Survival a go"],
-      similarGames: ["classic_survival", "classic_survivalDayNight", "classic_creative", "skyblock", "oneBlock"],
+    const Dk = {
+      whatIs: ["In Bloxd Skywars, everyone starts on their own island in the sky. Only one player is still there at the end. Loot your chests for weapons, armour and blocks, bridge over to your rivals and knock them into the void. It's free-for-all PvP for up to 12 players, and the last one standing takes the win."],
+      howToPlay: ["Each match starts with you in a glass cage on your own island. The cage opens after about 3 seconds, and you can't use items while you're stuck inside. Once you're out, loot your island's chests quickly, because your gear is split between them. Then build a bridge and go after everyone else.", "Chests refill every 2.5 minutes. When \"Chests replenished.\" pops up in chat, it's worth heading back for more loot. After 7 minutes, or as soon as only two players are left, everyone still alive gets a compass pointing at the nearest player. There's nowhere left to hide at that point. Fall into the void and you're out.", "You get Gold for every kill and 20 Gold for a win. Spend Gold and Gems in the shop on new Skywars kits and perks."],
+      features: ["Free-for-All Matches for Up to 12 Players", "Around 30 Kits, from Archer and Builder to Ghost, Sniper, Catapult and Salmon", "Killstreak Perks You Can Buy and Upgrade, like Bridger, Leech and Inferno", "Chests That Refill Every 2.5 Minutes", "A Compass That Tracks the Nearest Player After 7 Minutes or When Two Remain", "Match Modifiers like Lucky Mode, Lifesteal, Explosives Frenzy and Knockback Knockout", "10 Maps: Jungle, Castle, Ice, Bricks, Street, Chess, Food, Aqueduct, Mushroom Land and Warehouse", "Leaderboards"],
+      tips: ["Open every chest on your island before you leave, since your gear is spread across them", "Take your time bridging. One wrong step and you're in the void", "When the chests refill, try to get back to them before your rivals do", "Fight near the edges and use knockback to push enemies off the map", "More kills means more Gold, so you'll unlock new kits faster", "Try kits that suit how you play: Builder for bridging, Archer for range or Tank for armour", "Choose perks to match your style too, like Rusher for speed at the start or Leech for health after kills"],
+      similarGames: ["bedwars", "luckyTowers", "skyIslands"],
       faq: [{
-        question: "What is Bloxd Peaceful?",
-        answer: "It's Bloxd's no-danger survival mode. You explore, build and gather in a shared block world, with no hostile mobs and no health bar."
+        question: "What is Bloxd Skywars?",
+        answer: "It's a PvP mode on Bloxd.io where every player starts on a floating island. You loot chests, bridge across to your rivals and try to be the last one standing."
       }, {
-        question: "Can you die in Bloxd Peaceful?",
-        answer: "No. There's no health bar, so mobs and other players can't hurt you."
+        question: "How do you win in Skywars?",
+        answer: "Be the last player alive. Knock everyone else out, or push them off their islands into the void. Winning gets you 20 Gold."
       }, {
-        question: "Is there PvP in Bloxd Peaceful?",
-        answer: "There isn't. Players can't attack each other in Peaceful."
+        question: "Can I play Skywars in my browser?",
+        answer: "Yep. Bloxd.io Skywars runs right in your browser, so you can jump into a match without installing anything."
       }, {
-        question: "Are there mobs in Bloxd Peaceful?",
-        answer: "Only passive animals. None of them can attack you, and you can beat them with your fist."
+        question: "What are the best Skywars kits?",
+        answer: "Honestly, it depends how you like to play. Sniper has a one-shot crossbow and Catapult can knock enemies off the map. Ghost can turn invisible, and Builder starts with extra blocks for bridging. You unlock more kits with Gold and Gems."
       }, {
-        question: "What's the difference between Peaceful and Survival in Bloxd?",
-        answer: "The world works the same way, with the same mining, crafting and building. Survival has hostile mobs, PvP and a health bar. Peaceful takes all of that away so you can explore and build without worrying."
+        question: "What do perks do in Bloxd Skywars?",
+        answer: "Perks give you bonuses while you play. Maniac gives you more damage after kills, Bridger gives you a chance to get placed blocks back and Leech heals you after kills. You can upgrade them to make them stronger."
       }, {
-        question: "Is Bloxd Peaceful good for beginners?",
-        answer: "Definitely. It's a safe place to learn the basics. If you die early on in Survival, the game will even offer to move you over to Peaceful."
+        question: "How do I get Gold in Skywars?",
+        answer: "Every kill earns Gold, and you get an extra 20 Gold for winning a match."
       }, {
-        question: "Can I play Bloxd Peaceful with friends?",
-        answer: "Yes. Everyone's in the same shared world, so you can meet up and build together."
+        question: "How many players fit in one Skywars match?",
+        answer: "Up to 12 players fight it out in each free-for-all match."
       }, {
-        question: "How do I keep my builds safe in Peaceful?",
-        answer: "Blocks near spawn reset every few hours, so build outside that area (a message shows when you cross its edge). Then put down a Protector and other players won't be able to break your builds or open your chests."
-      }, {
-        question: "How do I save my progress in Bloxd Peaceful?",
-        answer: "Sign in to an account. If you don't, your progress can be lost when your browser's cookies get cleared."
+        question: "What does the compass do in Skywars?",
+        answer: "After 7 minutes, or once only two players are left, everyone still alive gets a compass that points to the nearest player."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

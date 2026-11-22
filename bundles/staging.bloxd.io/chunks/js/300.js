@@ -1,105 +1,112 @@
 export const id = 300;
 export const ids = [300];
 export const modules = {
-  41175: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      _IESTextureLoader: () => kQ
+  41055: (kk, ek, ik) => {
+    ik.d(ek, {
+      ensureLocalBloxdTypes: () => lk
     });
-    var LQ = wQ(36729);
+    var Dk = ik(4707),
+      fk = ik(40950),
+      Sk = ik(40945),
+      bk = ik(36446),
+      rk = ik(36454),
+      Pk = ik(36475);
+    const mk = JSON.stringify({
+      name: "@bloxd",
+      types: "index.d.ts"
+    }, null, "\t") + "\n";
 
-    function qQ(QQ) {
-      return QQ.split(" ").filter((QQ => "" !== QQ)).map((QQ => parseFloat(QQ)))
+    function Mk(kk) {
+      return kk.replace(/^\//, "")
     }
 
-    function oQ(QQ, FQ, wQ) {
-      for (; wQ.length !== FQ;) {
-        const FQ = qQ(QQ.lines[QQ.index++]);
-        wQ.push(...FQ)
+    function Kk(kk) {
+      return Mk((0, rk.s)(kk.name, "")).replace(/\/$/, "")
+    }
+
+    function xk(kk) {
+      return kk.typesVfsPath.slice(kk.typesVfsPath.lastIndexOf("/") + 1)
+    }
+
+    function nk(kk) {
+      return JSON.stringify({
+        name: kk.specifier,
+        types: xk(kk)
+      }, null, "\t") + "\n"
+    }
+    async function Uk(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+      const ik = [];
+      for await (const [Dk, fk] of kk.entries()) {
+        const kk = ek ? `${ek}/${Dk}` : Dk;
+        "directory" !== fk.kind ? ik.push(kk) : ik.push(...await Uk(fk, kk))
+      }
+      return ik
+    }
+    async function Hk(kk, ek, ik) {
+      const Dk = Kk(ek),
+        fk = await (0, Pk.h)(kk, Dk);
+      if (!fk) return;
+      const Sk = new Set([xk(ek), "package.json"]);
+      if (ik)
+        for (const Pk of Object.keys(ek.files)) Sk.add(Pk);
+      const bk = await Uk(fk),
+        rk = new Set;
+      for (const Kk of bk) {
+        if (Sk.has(Kk)) continue;
+        await (0, Pk.y)(kk, `${Dk}/${Kk}`);
+        const ek = Kk.split("/");
+        for (let kk = 1; kk < ek.length; kk++) rk.add(ek.slice(0, kk).join("/"))
+      }
+      const mk = [...rk].sort(((kk, ek) => ek.split("/").length - kk.split("/").length));
+      for (const Kk of mk) try {
+        await (0, Pk.y)(kk, `${Dk}/${Kk}`)
+      } catch (Mk) {
+        if (Mk instanceof DOMException && "InvalidModificationError" === Mk.name) continue;
+        throw Mk
       }
     }
 
-    function DQ(QQ, FQ, wQ) {
-      let qQ = 0,
-        oQ = 0,
-        DQ = 0,
-        kQ = 0,
-        vQ = 0,
-        mQ = 0;
-      for (let LQ = 0; LQ < QQ.numberOfHorizontalAngles - 1; LQ++)
-        if (wQ < QQ.horizontalAngles[LQ + 1] || LQ === QQ.numberOfHorizontalAngles - 2) {
-          oQ = LQ, DQ = QQ.horizontalAngles[LQ], kQ = QQ.horizontalAngles[LQ + 1];
-          break
-        } for (let LQ = 0; LQ < QQ.numberOfVerticalAngles - 1; LQ++)
-        if (FQ < QQ.verticalAngles[LQ + 1] || LQ === QQ.numberOfVerticalAngles - 2) {
-          qQ = LQ, vQ = QQ.verticalAngles[LQ], mQ = QQ.verticalAngles[LQ + 1];
-          break
-        } const uQ = kQ - DQ,
-        HQ = mQ - vQ;
-      if (0 === HQ) return 0;
-      const bQ = 0 === uQ ? 0 : (wQ - DQ) / uQ,
-        YQ = (FQ - vQ) / HQ,
-        xQ = 0 === uQ ? oQ : oQ + 1,
-        AQ = (0, LQ.Lerp)(QQ.candelaValues[oQ][qQ], QQ.candelaValues[xQ][qQ], bQ),
-        tQ = (0, LQ.Lerp)(QQ.candelaValues[oQ][qQ + 1], QQ.candelaValues[xQ][qQ + 1], bQ);
-      return (0, LQ.Lerp)(AQ, tQ, YQ)
+    function wk(kk) {
+      const ek = {
+        "@bloxd": ["./node_modules/@bloxd/index.d.ts"]
+      };
+      for (const Dk of Object.values(bk.g)) ek[Dk.specifier] = [`.${Dk.typesVfsPath}`];
+      const ik = [];
+      for (const Dk of kk)
+        for (const kk of Object.keys(Dk.files)) ik.push(Mk((0, rk.s)(Dk.name, kk)));
+      return JSON.stringify({
+        compilerOptions: {
+          allowJs: !0,
+          checkJs: !1,
+          strict: !1,
+          module: "ESNext",
+          moduleResolution: "bundler",
+          target: "ES2015",
+          noEmit: !0,
+          noLib: !0,
+          skipLibCheck: !0,
+          baseUrl: ".",
+          paths: ek
+        },
+        include: ["./**/*.ts", "./**/*.js", "./**/*.d.ts"],
+        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...ik]
+      }, null, "\t") + "\n"
     }
-    class kQ {
-      constructor() {
-        this.supportCascades = !1
-      }
-      loadCubeData() {
-        throw ".ies not supported in Cube."
-      }
-      loadData(QQ, FQ, wQ) {
-        const LQ = function(QQ) {
-          const FQ = {
-              lines: new TextDecoder("utf-8").decode(QQ).split("\n"),
-              index: 0
-            },
-            wQ = {
-              version: FQ.lines[0],
-              candelaValues: [],
-              horizontalAngles: [],
-              verticalAngles: [],
-              numberOfHorizontalAngles: 0,
-              numberOfVerticalAngles: 0
-            };
-          for (FQ.index = 1; FQ.lines.length > 0 && !FQ.lines[FQ.index].includes("TILT=");) FQ.index++;
-          FQ.lines[FQ.index].includes("INCLUDE"), FQ.index++;
-          const LQ = qQ(FQ.lines[FQ.index++]);
-          wQ.numberOfLights = LQ[0], wQ.lumensPerLamp = LQ[1], wQ.numberOfVerticalAngles = LQ[3], wQ.numberOfHorizontalAngles = LQ[4], wQ.photometricType = LQ[5], wQ.unitsType = LQ[6], wQ.width = LQ[7], wQ.length = LQ[8], wQ.height = LQ[9], FQ.index++;
-          for (let qQ = 0; qQ < wQ.numberOfHorizontalAngles; qQ++) wQ.candelaValues[qQ] = [];
-          oQ(FQ, wQ.numberOfVerticalAngles, wQ.verticalAngles), oQ(FQ, wQ.numberOfHorizontalAngles, wQ.horizontalAngles);
-          for (let qQ = 0; qQ < wQ.numberOfHorizontalAngles; qQ++) oQ(FQ, wQ.numberOfVerticalAngles, wQ.candelaValues[qQ]);
-          let kQ = -1;
-          for (let qQ = 0; qQ < wQ.numberOfHorizontalAngles; qQ++)
-            for (let QQ = 0; QQ < wQ.numberOfVerticalAngles; QQ++) kQ = Math.max(kQ, wQ.candelaValues[qQ][QQ]);
-          if (kQ > 0)
-            for (let qQ = 0; qQ < wQ.numberOfHorizontalAngles; qQ++)
-              for (let QQ = 0; QQ < wQ.numberOfVerticalAngles; QQ++) wQ.candelaValues[qQ][QQ] /= kQ;
-          const vQ = 180,
-            mQ = 360,
-            uQ = new Float32Array(64800),
-            HQ = wQ.horizontalAngles[0],
-            bQ = wQ.horizontalAngles[wQ.numberOfHorizontalAngles - 1];
-          for (let qQ = 0; qQ < 64800; qQ++) {
-            let QQ = qQ % mQ;
-            const FQ = Math.floor(qQ / mQ);
-            bQ - HQ !== 0 && (QQ < HQ || QQ >= bQ) && (QQ %= 2 * bQ, QQ > bQ && (QQ = 2 * bQ - QQ)), uQ[FQ + QQ * vQ] = DQ(wQ, FQ, QQ)
-          }
-          return {
-            width: 180,
-            height: 1,
-            data: uQ
-          }
-        }(new Uint8Array(QQ.buffer, QQ.byteOffset, QQ.byteLength));
-        wQ(LQ.width, LQ.height, !!FQ.useMipMaps, !1, (() => {
-          const QQ = FQ.Wx();
-          FQ.type = 1, FQ.format = 6, FQ._gammaSpace = !1, QQ._uploadDataToTextureDirectly(FQ, LQ.data)
-        }))
-      }
+    async function lk(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+      const ik = new Set(ek.map((kk => kk.name))),
+        xk = Object.values(bk.g).flatMap((ek => {
+          const Dk = Mk(ek.typesVfsPath),
+            fk = `${Kk(ek)}/package.json`;
+          return [...ik.has(ek.name) ? Object.entries(ek.files).map((ik => {
+            let [Dk, fk] = ik;
+            return (0, Pk.J)(kk, Mk((0, rk.s)(ek.name, Dk)), fk)
+          })) : [], (0, Pk.J)(kk, Dk, ek.types), (0, Pk.J)(kk, fk, nk(ek))]
+        }));
+      await Promise.all([(0, Pk.J)(kk, "node_modules/@bloxd/index.d.ts", Dk.default), (0, Pk.J)(kk, "node_modules/@bloxd/globals.d.ts", Sk.e), (0, Pk.J)(kk, "node_modules/@bloxd/lib.d.ts", fk.d), (0, Pk.J)(kk, "node_modules/@bloxd/package.json", mk), (0, Pk.J)(kk, "tsconfig.json", wk(ek)), ...xk]), await Promise.all(Object.values(bk.g).map((ek => Hk(kk, ek, ik.has(ek.name)))))
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

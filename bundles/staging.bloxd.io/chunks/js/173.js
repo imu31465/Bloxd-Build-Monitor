@@ -1,37 +1,40 @@
 export const id = 173;
 export const ids = [173];
 export const modules = {
-  8782: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8810: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["Build a home, earn some gold and take life at your own pace. Bloxd Greenville is a chill social sandbox and life sim set in a laid-back town. You work jobs, play mini-games and hang out with other players, and there's no rush to do any of it."],
-      howToPlay: ["Press B to pick your starting house, then take the portal to the Town Square and start earning gold. Choose a job. You could help customers at the Market, smash blocks and buildings in Demolition, dig for minerals in Mining, or try Woodcutting and Farming. Jobs level up the more you work them, so your earnings grow over time.", "Spend your gold in the shop on new houses like the Castle, Treehouse, Hobbit Hole or Japanese House. Or grab an Empty Plot and build a house of your own. You can also unlock fast travel, buy flower and wool packs, and sell the stuff you collect. Keep your mood up by resting in your bed, because a happy player earns alot more. Once your home's ready, throw a party and invite everyone over."],
-      features: ["Unlock and Switch Between Houses and Plots", "Build Your Own House on an Empty Plot", "5 Jobs to Level Up: Market, Demolition, Mining, Woodcutting and Farming", "PvP Arena and Spleef Mini-Games", "Unlock Fast Travel to Get Around Quickly", "Host Parties and Choose Who Can Visit", "Turn On PvP or Build a Parkour Course at Home"],
-      tips: ["Rest in your bed when your mood drops. Low mood means lower earnings.", "A better bed means bigger earnings, so upgrade it when you can", "Sell the items you collect in the shop for extra gold", "In Mining, head back up to sell when your backpack's full", "Some minerals need a higher Mining level, so keep levelling", "Use the booster in Demolition to multi-jump up tall buildings", "Spleef needs at least 2 players, so bring a mate", "Building a parkour course? Light blue wool is the start, yellow is a checkpoint, orange is the finish and red eliminates players"],
-      similarGames: ["plots", "classic_creative", "fishing", "classic"],
+    const Dk = {
+      whatIs: ["One block, floating in the sky, with a nametag that says \"I'm your One Block, break me!\" That's how every Bloxd One Block island starts. Break it and it comes straight back as something new, so you keep getting blocks, items and chests. Survive up there, unlock new phases, and slowly turn your tiny island into an empire."],
+      howToPlay: ["Break your One Block. Then break it again. And again. The more blocks you mine, the more phases you unlock, from the Forest and Plains right up to the Volcano and the Moon. Each phase changes what your block turns into, so there's always something new popping up. Once every phase is unlocked, you can switch between them whenever you like.", "To get going, collect 3 Gold Coins from chests. Then bridge over to the portal island nearby and walk into your portal. It takes you to One Village, the Hub. There you can spend coins in the shops, leave them with Bling Bling the banker, do daily and weekly quests and upgrade the guilds. When you're done, type /home or use a portal to head back to your island."],
+      features: ["17 Phases to Unlock, from Forest to the Moon", "Super Mining, Super Digging and Mega Chop Skills", "One Village Hub with Shops, a Bank and Treasure Chests", "Daily and Weekly Quests", "Painter's, Monster Hunter's and Farmer's Guilds", "Chat Events like Trivia, Unscramble and Type the Fastest", "Crops, a Rotating Trader and Double Drop Chance", "Gold Portal Skins for Saving Coins", "Visit Friends' Islands and Keep Multiple Island Saves"],
+      tips: ["Open every chest you find. That's where your Gold Coins come from.", "Put your coins in the bank, where your balance stays safe forever.", "Save 1,000, 50,000 or 1,000,000 coins in the bank to unlock gold portal skins.", "Level up your skills, then right click to use them. They've got a cooldown, so pick your moment.", "Use Mega Chop on trees to find way more chests.", "Only switch on Allow Edit for people you trust. Anyone with it can take your blocks.", "Lost? Type /home and you'll be straight back on your island."],
+      similarGames: ["skyblock", "skyIslands", "classic_survival"],
       faq: [{
-        question: "What is Bloxd Greenville?",
-        answer: "A town life sim where you build a home, earn gold from jobs and play mini-games with other players."
+        question: "What is Bloxd One Block?",
+        answer: "A sky challenge where you start on a single floating block. Break it to get new blocks, items and chests, unlock phases and grow your island into an empire."
       }, {
-        question: "How do I earn gold in Greenville?",
-        answer: "Work jobs like Market, Demolition, Mining, Woodcutting and Farming, eliminate players in the Arena and Spleef, and sell what you collect. Keep your mood up as well, because low mood cuts your earnings."
+        question: "Is Bloxd One Block a skyblock game?",
+        answer: "Sort of. You start with one block in the sky and build everything from there. Bloxd Skyblock is a different mode, though: that one's an RPG with skills, quests and dungeons, while One Block is all about breaking your block to unlock 17 phases."
       }, {
-        question: "Can I build my own house in Greenville?",
-        answer: "Yes! Pick one of the ready-made houses in the shop, or unlock an Empty Plot and build from scratch."
+        question: "How many phases are in Bloxd One Block?",
+        answer: "17, from Forest and Plains through Ocean, Desert and Dungeon to the Volcano and the Moon. Mine enough blocks to unlock each one. When you've got them all, you can change phase."
       }, {
-        question: "How do I change my house in Bloxd Greenville?",
-        answer: "Unlock new houses in the Houses section of the shop, then switch to whichever one you like."
+        question: "How do I get to the Hub in One Block?",
+        answer: "Grab 3 Gold Coins from chests, bridge over to the portal island nearby and walk into your portal. Type /home to come back."
       }, {
-        question: "Can my friends visit my house?",
-        answer: "Sure. Turn on Allow Entry, add friends to your whitelist, or host a party to invite everyone over. You also get to choose who's allowed to edit your home."
+        question: "Where do One Block coins come from?",
+        answer: "Chests from your One Block and the Hub treasure chests, daily and weekly quests, or watching an ad for coins."
       }, {
-        question: "Which mini-games are in Greenville?",
-        answer: "Spleef, where you try to make every other player fall, and the Arena, where you battle other players in PvP. Both pay out gold."
+        question: "How do I open my portal in One Block?",
+        answer: "Type /open in chat. You can also add visitors in your island access settings, even if your portal is closed."
+      }, {
+        question: "Can I have more than one island?",
+        answer: "Yes. The Island Manager lets you create new islands, rename them, load another save or delete one, up to a maximum number of islands."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

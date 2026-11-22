@@ -1,43 +1,49 @@
 export const id = 179;
 export const ids = [179];
 export const modules = {
-  8820: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8849: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["Trust no one. In Bloxd Murder Mystery friends go quiet, roles stay secret and every round turns into a guessing game full of twists and close calls. It's a social deduction game for up to 12 players. Can you work out who the Murderer is before it's too late?"],
-      howToPlay: ["When a round starts, everyone gets a secret role. Most of you will be Innocents, and your job is simply to stay alive as long as you can. One player is the Detective and gets a gun to find and stop the Murderer. And one player is the Murderer. They get their weapon after a short countdown and have to take out everyone else.", "Innocents can collect 10 Moonstone from around the map to get a gun of their own. If the Detective gets taken out, their gun drops and someone else can pick it up. Guns have a 5-second cooldown, so make each shot count. Careful as the Detective, though. Shoot an innocent player and you're out too. Stop the Murderer or survive until the 4-minute timer runs out, and then you'll find out who it really was."],
-      features: ["Up to 12 Players per Round", "Three Secret Roles: Innocent, Detective and Murderer", "Collect Moonstone to Earn a Gun", "4 Maps That Change Every Round: Mansion, Laboratory, Dinosaur and Water Park", "Map Secrets like Trapdoors, Poisoned Water, Reactor Doors and Moonstone Rings", "Please the Dino to Reveal a Role or Win a Gun", "Earn Gold to Unlock Murderer Weapons and Funny Death Messages", "Daily and Weekly Quests", "Track Your Wins as Detective and Murderer"],
-      tips: ["As an Innocent, keep moving and pick up Moonstone whenever you can", "Watch how people act. The Murderer will be trying to blend in", "As the Detective, only shoot when you're sure", "If the Detective goes down, grab that dropped gun", "As the Murderer, catch players on their own when nobody's looking", "Every map has secrets, so explore them for an edge"],
-      similarGames: ["hideseek", "infection", "horrorHotel", "ninetyNineNights"],
+    const Dk = {
+      whatIs: ["Sharp aim and quick feet are what separate top frag from instant respawn. Bloxd Cube Warfare is a fast, free block FPS where the firefights don't stop. You can play Free-For-All, Team Deathmatch or Gun Game, and you'll unlock over 15 guns along the way. If you'd rather have objectives, kits and vehicles in big 12v12 battles, have a look at Frontline."],
+      howToPlay: ["Join a match and vote on the map. In Free-For-All it's every player for themselves. Team Deathmatch puts you on a side, and your team has to outscore the other one. Rounds last 10 minutes. Get taken down and you'll respawn with 8 seconds of invincibility, though your killstreak resets.", "Keep taking down opponents without going down yourself and you'll build killstreaks. They reward you across 3 tiers with things like extra health, more damage, faster movement or free blocks. New guns unlock in the shop. There are pistols, SMGs, shotguns, sniper rifles and LMGs, and you can take any of them into Teams or FFA. Gun Game has its own queue. Every elimination swaps your weapon for the next one, and to win you need a final takedown with the sword.", "Some matches throw in a twist. In Collect Diamonds you gather diamonds to win. Explosives keeps handing you explosives, and each takedown gets you more."],
+      features: ["Free-For-All, Team Deathmatch and Gun Game", "Over 15 Guns, Including the AK-47, AWP, Deagle, Striker-12 and GPMG", "Killstreak Rewards Across 3 Tiers", "Place Blocks for Cover with Killstreak Rewards", "Match Modifiers: Collect Diamonds and Explosives", "Maps Including Snowbase, Sienna, Cabins and More, with Map Voting", "Leaderboards and Player Stats"],
+      tips: ["Keep moving. Standing still makes you an easy target", "Go for headshots, especially once you've got the Goodaimer killstreak", "Use those 8 seconds of respawn invincibility to get back into position", "Stay alive to keep your killstreak going, because it resets when you're taken down", "Place blocks for cover, but remember every map has a build height limit", "In Collect Diamonds, shoot the diamonds around the map so they drop, then grab them", "Try every gun in Gun Game before you unlock your favourite in the shop"],
+      similarGames: ["frontline", "classic_survivalGuns", "infection", "skywars"],
       faq: [{
-        question: "What is Bloxd Murder Mystery?",
-        answer: "A social deduction mode. One player is secretly the Murderer, one is the Detective, and everyone else tries to survive and work out who the Murderer is."
+        question: "What is Cube Warfare?",
+        answer: "A fast block shooter with 10-minute rounds, killstreak rewards and over 15 guns to unlock."
       }, {
-        question: "What are the roles in Murder Mystery?",
-        answer: "Innocents try to stay alive. The Detective tries to find and stop the Murderer. The Murderer tries to take out every other player."
+        question: "What modes are in Cube Warfare?",
+        answer: "Free-For-All, Team Deathmatch and Gun Game. You'll be in Free-For-All by default."
       }, {
-        question: "Who wins a round of Murder Mystery?",
-        answer: "If the Murderer takes out all the Innocents, they win. Everyone else wins by stopping the Murderer or surviving until the 4-minute timer runs out."
+        question: "How does team deathmatch work in Cube Warfare?",
+        answer: "Pick Team Deathmatch and work with your team to outscore the other side before the 10-minute round is up."
       }, {
-        question: "How do I get a gun?",
-        answer: "Collect 10 Moonstone, or pick up the Detective's gun if it's been dropped. On the Dinosaur map the dino might hand you one too."
+        question: "What is Gun Game in Bloxd Cube Warfare?",
+        answer: "It's a mode with its own queue. Each elimination upgrades your weapon, and a final takedown with the sword wins it."
       }, {
-        question: "How long is a round?",
-        answer: "4 minutes."
+        question: "How do I unlock new guns in Cube Warfare?",
+        answer: "Through the shop. Once they're unlocked you can take them into Free-For-All or Team Deathmatch, and Gun Game lets you try the lot."
       }, {
-        question: "How many people do you need to play Murder Mystery?",
-        answer: "You need at least 2 to start, and a round can hold up to 12."
+        question: "How many guns are in Cube Warfare?",
+        answer: "Over 15. That includes the AK-47, AWP, M16, MP40, SKAR, Deagle and Striker-12."
       }, {
-        question: "Can I play Murder Mystery with friends?",
-        answer: "Yes. Jump into the same game and see which of you spots the Murderer first."
+        question: "What are killstreaks in Cube Warfare?",
+        answer: "Rewards for taking down opponents without being eliminated, like Healthup, Hitem, Speedy and Autoblocks. There are 3 tiers, and your streak resets when you go down."
       }, {
-        question: "How do I earn gold?",
-        answer: "Survive, collect Moonstone, stop the Murderer or win as the Murderer. Rewards only kick in when there are at least 5 players in the game."
+        question: "What is Collect Diamonds?",
+        answer: "A match modifier for Free-For-All and Team Deathmatch. You need 30 diamonds to win in FFA, or 100 as a team. When someone's taken down they drop all their diamonds, so you can steal theirs. Shoot the diamonds placed around the map and they'll drop too. Those respawn every 15 seconds."
+      }, {
+        question: "What is the Explosives modifier?",
+        answer: "You keep getting explosives all match, and every takedown gives you more."
+      }, {
+        question: "What maps are in Cube Warfare?",
+        answer: "Snowbase, Sienna and Cabins, among others. You get to vote for the next one."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

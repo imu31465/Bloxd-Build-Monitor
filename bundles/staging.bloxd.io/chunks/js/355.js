@@ -1,79 +1,39 @@
 export const id = 355;
 export const ids = [355];
 export const modules = {
-  60743: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      createShadowTask: () => oQ
+  60719: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      particlesPixelShader: () => Lk
     });
-    var LQ = null;
-
-    function qQ(QQ) {
-      return LQ?.get(QQ)
-    }
-
-    function oQ(QQ, FQ) {
-      const wQ = new Set;
-      0;
-      const LQ = {
-        name: "EY",
-        engine: QQ,
-        lA: FQ,
-        _passes: [],
-        async _preload() {
-          const QQ = [];
-          for (const wQ of FQ.lights) {
-            const FQ = wQ.shadowGenerator,
-              LQ = FQ ? qQ(FQ) : null;
-            FQ?._preloadShadowTask && LQ && QQ.push(DQ(FQ, LQ))
-          }
-          await Promise.all(QQ)
-        },
-        record() {
-          LQ._passes.length = 0;
-          for (const LQ of FQ.lights) {
-            const oQ = LQ.shadowGenerator,
-              DQ = oQ ? qQ(oQ) : null;
-            if (oQ?._ensureShadowTaskState && DQ && !oQ._preloadPending) {
-              wQ.add(oQ);
-              const LQ = oQ._ensureShadowTaskState(QQ, FQ, DQ),
-                qQ = FQ._renderableVersion;
-              LQ._task.record(), LQ._recordedVersion = qQ
-            }
-          }
-        },
-        execute() {
-          let LQ = 0;
-          for (const oQ of FQ.lights) {
-            const DQ = oQ.shadowGenerator,
-              kQ = DQ ? qQ(DQ) : null;
-            if (DQ?._ensureShadowTaskState && DQ._renderShadowMap && kQ && !DQ._preloadPending) {
-              wQ.add(DQ);
-              const qQ = DQ._shadowTaskState ?? null,
-                oQ = DQ._ensureShadowTaskState(QQ, FQ, kQ);
-              if (oQ !== qQ || oQ._recordedVersion !== FQ._renderableVersion) {
-                const QQ = FQ._renderableVersion;
-                oQ._task.record(), oQ._recordedVersion = QQ
-              }
-              LQ += DQ._renderShadowMap(QQ, oQ)
-            }
-          }
-          return LQ
-        },
-        dispose() {
-          LQ._passes.length = 0;
-          for (const QQ of wQ) {
-            const FQ = QQ._shadowTaskState;
-            FQ && (FQ._task.dispose(), QQ._shadowTaskState = void 0)
-          }
-          wQ.clear()
-        }
-      };
-      return LQ
-    }
-    async function DQ(QQ, FQ) {
-      QQ._preloadPending = FQ, await (QQ._preloadShadowTask?.(FQ)), QQ._preloadPending === FQ && (QQ._preloadPending = void 0)
+    var Dk = ik(39412),
+      fk = ik(41639),
+      Sk = ik(41644),
+      bk = ik(41718),
+      rk = ik(41694),
+      Pk = ik(41555),
+      mk = ik(41479),
+      Mk = ik(41700),
+      Kk = ik(41724),
+      xk = ik(41733),
+      nk = ik(41756),
+      Uk = ik(41760);
+    const Hk = "geometryRenderingFragment",
+      wk = "#ifdef PREPASS\n#if SCENE_MRT_COUNT>0\nfloat geometryCoverage=geometryColor.a>0.4 ? 1.0 : 0.0;\n#ifdef PREPASS_COLOR\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_COLOR_INDEX,geometryColor);\n#endif\n#ifdef PREPASS_POSITION\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_POSITION_INDEX,vec4(geometryPositionW,geometryCoverage));\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_LOCAL_POSITION_INDEX,vec4(geometryPositionL,geometryCoverage));\n#endif\n#ifdef PREPASS_DEPTH\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_DEPTH_INDEX,vec4(geometryViewDepth,0.0,0.0,geometryCoverage));\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_NORMALIZED_VIEW_DEPTH_INDEX,vec4(geometryNormalizedViewDepth,0.0,0.0,geometryCoverage));\n#endif\n#ifdef PREPASS_SCREENSPACE_DEPTH\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_SCREENSPACE_DEPTH_INDEX,vec4(gl_FragCoord.z,0.0,0.0,geometryCoverage));\n#endif\n#ifdef PREPASS_NORMAL\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_NORMAL_INDEX,vec4(geometryNormalV,geometryCoverage));\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_WORLD_NORMAL_INDEX,vec4(geometryNormalW*0.5+0.5,geometryCoverage));\n#endif\n#ifdef PREPASS_ALBEDO\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_ALBEDO_INDEX,vec4(geometryAlbedo,geometryCoverage));\n#endif\n#ifdef PREPASS_ALBEDO_SQRT\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_ALBEDO_SQRT_INDEX,vec4(sqrt(max(geometryAlbedo,vec3(0.0))),geometryCoverage));\n#endif\n#ifdef PREPASS_REFLECTIVITY\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_REFLECTIVITY_INDEX,vec4(0.0,0.0,0.0,geometryCoverage));\n#endif\n#ifdef PREPASS_IRRADIANCE\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_IRRADIANCE_INDEX,vec4(0.0,0.0,0.0,geometryCoverage));\n#endif\n#ifdef PREPASS_IRRADIANCE_LEGACY\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_IRRADIANCE_LEGACY_INDEX,vec4(0.0));\n#endif\n#if defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)\n#ifdef PREPASS_VELOCITY_ZERO\nvec2 geometryMotion=vec2(0.0);\n#else\nvec2 geometryMotion=0.5*(geometryCurrentPosition.xy/geometryCurrentPosition.w-geometryPreviousPosition.xy/geometryPreviousPosition.w);\n#endif\n#ifdef PREPASS_VELOCITY\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_VELOCITY_INDEX,vec4(pow(abs(geometryMotion),vec2(1.0/3.0))*sign(geometryMotion)*0.5+0.5,0.0,geometryCoverage));\n#endif\n#ifdef PREPASS_VELOCITY_LINEAR\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_VELOCITY_LINEAR_INDEX,vec4(-geometryMotion,0.0,geometryCoverage));\n#endif\n#endif\n#ifdef PREPASS_OBJECT_ID\nWRITE_GEOMETRY_FRAGMENT_OUTPUT(PREPASS_OBJECT_ID_INDEX,encodeObjectId(objectId)*geometryCoverage);\n#endif\n#ifdef PREPASS_MESH_BLEND_TAG\nmeshBlendTagOutput=geometryCoverage>0.0 ? uvec4(uint(meshBlendTag),0u,0u,0u) : uvec4(0u);\n#endif\n#endif\n#endif\n";
+    Dk.d.IncludesShadersStore[Hk] || (Dk.d.IncludesShadersStore[Hk] = wk);
+    const lk = {
+        name: Hk,
+        shader: wk
+      },
+      pk = "particlesPixelShader",
+      yk = "#ifdef LOGARITHMICDEPTH\n#extension GL_EXT_frag_depth : enable\n#endif\nvarying vec2 vUV;varying vec4 vColor;uniform vec4 textureMask;uniform sampler2D diffuseSampler;\n#ifdef PREPASS\nuniform float geometryZeroAlphaDiscard;\n#ifdef PREPASS_POSITION\nvarying vec3 vGeometryPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvarying vec3 vGeometryNormalW;\n#endif\n#ifdef PREPASS_NORMAL\nvarying vec3 vGeometryNormalV;\n#endif\n#endif\n#define PREPASS_VELOCITY_ZERO\n#include<prePassDeclaration>[SCENE_MRT_COUNT]\n#include<clipPlaneFragmentDeclaration>\n#include<imageProcessingDeclaration>\n#include<logDepthDeclaration>\n#include<helperFunctions>\n#include<imageProcessingFunctions>\n#ifdef RAMPGRADIENT\nvarying vec4 remapRanges;uniform sampler2D rampSampler;\n#endif\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\nvec4 textureColor=texture2D(diffuseSampler,vUV);vec4 baseColor=(textureColor*textureMask+(vec4(1.,1.,1.,1.)-textureMask))*vColor;\n#ifdef PREPASS\nvec3 geometryAlbedo=toLinearSpace(baseColor.rgb);\n#endif\n#ifdef RAMPGRADIENT\nfloat alpha=baseColor.a;float remappedColorIndex=clamp((alpha-remapRanges.x)/remapRanges.y,0.0,1.0);vec4 rampColor=texture2D(rampSampler,vec2(1.0-remappedColorIndex,0.));baseColor.rgb*=rampColor.rgb;float finalAlpha=baseColor.a;baseColor.a=clamp((alpha*rampColor.a-remapRanges.z)/remapRanges.w,0.0,1.0);\n#endif\n#ifdef BLENDMULTIPLYMODE\nfloat sourceAlpha=vColor.a*textureColor.a;baseColor.rgb=baseColor.rgb*sourceAlpha+vec3(1.0)*(1.0-sourceAlpha);\n#endif\n#include<logDepthFragment>\n#include<fogFragment>(color,baseColor)\n#ifdef IMAGEPROCESSINGPOSTPROCESS\nbaseColor.rgb=toLinearSpace(baseColor.rgb);\n#else\n#ifdef IMAGEPROCESSING\nbaseColor.rgb=toLinearSpace(baseColor.rgb);baseColor=applyImageProcessing(baseColor);\n#endif\n#endif\ngl_FragColor=baseColor;\n#ifdef PREPASS\nvec4 geometryColor=gl_FragColor;if (geometryColor.a<=0.0 && geometryZeroAlphaDiscard>0.0) {discard;}\n#ifdef PREPASS_POSITION\nvec3 geometryPositionW=vGeometryPositionW;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvec3 geometryPositionL=vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nfloat geometryViewDepth=vViewPos.z;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nfloat geometryNormalizedViewDepth=vNormViewDepth;\n#endif\n#ifdef PREPASS_NORMAL\nvec3 geometryNormalV=normalize(vGeometryNormalV);\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvec3 geometryNormalW=normalize(vGeometryNormalW);\n#endif\n#include<geometryRenderingFragment>\n#endif\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
+    Dk.d.ShadersStore[pk] || (Dk.d.ShadersStore[pk] = yk);
+    const Yk = [fk.e, Sk.d, bk.d, rk.c, Pk.b, mk.d, Mk.e, Kk.e, xk.c, nk.c, Uk.d, lk];
+    for (const Ck of Yk) Dk.d.IncludesShadersStore[Ck.name] || (Dk.d.IncludesShadersStore[Ck.name] = Ck.shader);
+    const Lk = {
+      name: pk,
+      shader: yk
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,227 +1,239 @@
 export const id = 45;
 export const ids = [45];
 export const modules = {
-  42738: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      MAX_LAYER_WIDTH: () => mQ,
-      PackTextures: () => MQ,
-      deviceMaxLayerWidth: () => uQ,
-      layerWidthFor: () => YQ,
-      packFileUrl: () => xQ,
-      packFilesOf: () => eQ,
-      packTerrainSources: () => AQ,
-      webgl1GridColumns: () => HQ,
-      webgl1LayerWidth: () => bQ
+  50562: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      MAX_LAYER_WIDTH: () => mk,
+      PackTextures: () => pk,
+      deviceMaxLayerWidth: () => Mk,
+      layerWidthFor: () => nk,
+      packFileUrl: () => Uk,
+      packFilesOf: () => lk,
+      packTerrainSources: () => Hk,
+      webgl1GridColumns: () => Kk,
+      webgl1LayerWidth: () => xk
     });
-    var LQ = wQ(3009),
-      qQ = wQ(40224),
-      oQ = wQ(40411),
-      DQ = wQ(42741),
-      kQ = wQ(40399),
-      vQ = wQ(42750);
-    const mQ = {
+    var Dk = ik(3082),
+      fk = ik(40300),
+      Sk = ik(40407),
+      bk = ik(50568),
+      rk = ik(40397),
+      Pk = ik(50577);
+    const mk = {
       webgpu: 128,
       webgl: 128,
       webgl1: 64
     };
 
-    function uQ(QQ) {
-      return (0, LQ.b)() ? Math.min(mQ[QQ], 64) : mQ[QQ]
+    function Mk(kk) {
+      return (0, Dk.c)() ? Math.min(mk[kk], 64) : mk[kk]
     }
 
-    function HQ(QQ) {
-      const FQ = Math.ceil(Math.log2(Math.max(1, QQ)));
-      return 2 ** Math.ceil(FQ / 2)
+    function Kk(kk) {
+      const ek = Math.ceil(Math.log2(Math.max(1, kk)));
+      return 2 ** Math.ceil(ek / 2)
     }
 
-    function bQ(QQ, FQ, wQ) {
-      const LQ = null !== wQ && wQ > 0 ? wQ : qQ.b.limits.MAX_TEXTURE_SIZE;
-      return YQ(Math.max(1, Math.floor(LQ / HQ(FQ))), QQ)
+    function xk(kk, ek, ik) {
+      const Dk = null !== ik && ik > 0 ? ik : fk.c.limits.MAX_TEXTURE_SIZE;
+      return nk(Math.max(1, Math.floor(Dk / Kk(ek))), kk)
     }
 
-    function YQ(QQ, FQ) {
-      let wQ = 1;
-      for (; 2 * wQ <= Math.min(QQ, FQ);) wQ *= 2;
-      return wQ
+    function nk(kk, ek) {
+      let ik = 1;
+      for (; 2 * ik <= Math.min(kk, ek);) ik *= 2;
+      return ik
     }
 
-    function xQ(QQ, FQ) {
-      return "string" !== typeof QQ || "" === QQ ? null : "player" === FQ || (0, DQ.d)(QQ) ? QQ : null
+    function Uk(kk, ek) {
+      return "string" !== typeof kk || "" === kk ? null : "player" === ek || (0, bk.d)(kk) ? kk : null
     }
-    async function AQ(QQ, FQ, LQ) {
-      const qQ = await wQ.e(202).then((() => wQ(33928))),
+    async function Hk(kk, ek, Dk) {
+      const fk = await ik.e(206).then((() => ik(33856))),
         {
-          sheetLayout: DQ,
-          sheetWidth: vQ
-        } = QQ;
-      if (vQ > FQ) throw new Error(`the pack's atlas is ${vQ} px wide, not within ${FQ} px`);
-      if (!(DQ.length === qQ.imagesPerAtlas.length && DQ.every(((QQ, FQ) => QQ === qQ.imagesPerAtlas[FQ])))) {
-        const QQ = `the pack's atlas is sheets of ${DQ.join(", ")} layers, the built atlas's ${qQ.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
-        if (DQ.length < qQ.imagesPerAtlas.length) throw new Error(QQ);
-        console.warn(QQ)
+          sheetLayout: bk,
+          sheetWidth: Pk
+        } = kk;
+      if (Pk > ek) throw new Error(`the pack's atlas is ${Pk} px wide, not within ${ek} px`);
+      if (!(bk.length === fk.imagesPerAtlas.length && bk.every(((kk, ek) => kk === fk.imagesPerAtlas[ek])))) {
+        const kk = `the pack's atlas is sheets of ${bk.join(", ")} layers, the built atlas's ${fk.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
+        if (bk.length < fk.imagesPerAtlas.length) throw new Error(kk);
+        console.warn(kk)
       }
       return {
         atlasSheets: [],
-        heldUntil: QQ.heldUntil,
-        texture: FQ => {
-          var wQ, DQ, kQ;
-          return null !== (wQ = null !== (DQ = null !== (kQ = xQ(QQ.terrain.texture(FQ), LQ)) && void 0 !== kQ ? kQ : qQ.animatedBlockTextures[FQ]) && void 0 !== DQ ? DQ : qQ.rotatedBlockTextures[FQ]) && void 0 !== wQ ? wQ : function(QQ, FQ, wQ) {
-            var LQ, qQ;
-            const DQ = null !== (LQ = oQ.e[QQ]) && void 0 !== LQ ? LQ : null;
-            return null === DQ ? null : null !== (qQ = xQ(FQ.texture(QQ), wQ)) && void 0 !== qQ ? qQ : DQ
-          }(FQ, QQ, LQ)
+        heldUntil: kk.heldUntil,
+        texture: ek => {
+          var ik, bk, rk;
+          return null !== (ik = null !== (bk = null !== (rk = Uk(kk.terrain.texture(ek), Dk)) && void 0 !== rk ? rk : fk.animatedBlockTextures[ek]) && void 0 !== bk ? bk : fk.rotatedBlockTextures[ek]) && void 0 !== ik ? ik : function(kk, ek, ik) {
+            var Dk, fk;
+            const bk = null !== (Dk = Sk.c[kk]) && void 0 !== Dk ? Dk : null;
+            return null === bk ? null : null !== (fk = Uk(ek.texture(kk), ik)) && void 0 !== fk ? fk : bk
+          }(ek, kk, Dk)
         },
-        decoded: FQ => {
-          const wQ = (0, kQ.h)(FQ);
-          return null === wQ ? null : (async FQ => {
-            const wQ = QQ.sheetPixels.at(FQ);
-            if (wQ) {
-              QQ.sheetPixels[FQ] = null;
-              const LQ = vQ > 0 ? wQ.byteLength / (4 * vQ) : 0;
+        decoded: ek => {
+          const ik = (0, rk.j)(ek);
+          return null === ik ? null : (async ek => {
+            const ik = kk.sheetPixels.at(ek);
+            if (ik) {
+              kk.sheetPixels[ek] = null;
+              const Dk = Pk > 0 ? ik.byteLength / (4 * Pk) : 0;
               return {
-                width: vQ,
-                height: LQ,
-                pixels: new Uint8Array(wQ.buffer, wQ.byteOffset, wQ.byteLength)
+                width: Pk,
+                height: Dk,
+                pixels: new Uint8Array(ik.buffer, ik.byteOffset, ik.byteLength)
               }
             }
-            const qQ = QQ.terrain.atlasSheets.at(FQ);
-            if (void 0 === qQ) throw new Error(`the pack has no atlas sheet ${FQ}`);
-            const oQ = xQ(qQ, LQ);
-            if (null === oQ) throw new Error(`the pack's atlas sheet ${FQ} isn't a pack file`);
-            return (0, kQ.o)(oQ)
-          })(wQ)
+            const fk = kk.terrain.atlasSheets.at(ek);
+            if (void 0 === fk) throw new Error(`the pack has no atlas sheet ${ek}`);
+            const Sk = Uk(fk, Dk);
+            if (null === Sk) throw new Error(`the pack's atlas sheet ${ek} isn't a pack file`);
+            return (0, rk.o)(Sk)
+          })(ik)
         }
       }
     }
-    const tQ = new WeakMap;
+    const wk = new WeakMap;
 
-    function eQ(QQ, FQ) {
-      if (null === QQ) return null;
-      let wQ = tQ.get(QQ);
-      void 0 === wQ && (wQ = {}, tQ.set(QQ, wQ));
-      const LQ = wQ[FQ];
-      if (void 0 !== LQ) return LQ;
+    function lk(kk, ek) {
+      if (null === kk) return null;
+      let ik = wk.get(kk);
+      void 0 === ik && (ik = {}, wk.set(kk, ik));
+      const Dk = ik[ek];
+      if (void 0 !== Dk) return Dk;
       const {
-        armourAtlasUrl: qQ,
-        texture: oQ,
-        model: DQ
-      } = QQ, kQ = {
-        armourAtlasUrl: () => xQ(qQ, FQ),
-        textureUrl: QQ => xQ(oQ(QQ), FQ),
-        modelUrl: QQ => xQ(DQ(QQ), FQ)
+        armourAtlasUrl: fk,
+        texture: Sk,
+        model: bk
+      } = kk, rk = {
+        armourAtlasUrl: () => Uk(fk, ek),
+        textureUrl: kk => Uk(Sk(kk), ek),
+        modelUrl: kk => Uk(bk(kk), ek)
       };
-      return wQ[FQ] = kQ, kQ
+      return ik[ek] = rk, rk
     }
-    class MQ {
-      constructor(QQ) {
-        this.host = QQ, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
+    class pk {
+      constructor(kk) {
+        this.host = kk, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
       }
       maxLayerWidth() {
-        return this.maxWidth ??= (async (QQ, FQ, LQ) => {
+        return this.maxWidth ??= (async (kk, ek, Dk) => {
           const {
-            backend: qQ
-          } = this.host, oQ = uQ(qQ);
-          if ("webgl1" !== qQ) return oQ;
-          const [DQ, kQ] = await Promise.all([wQ.e(202).then((() => wQ(33928))), null !== (QQ = null === (FQ = (LQ = this.host).maxTextureSize) || void 0 === FQ ? void 0 : FQ.call(LQ)) && void 0 !== QQ ? QQ : null]);
-          return bQ(oQ, DQ.imagesPerAtlas.length * Math.max(0, ...DQ.imagesPerAtlas), kQ)
-        })().catch((QQ => {
-          throw this.maxWidth = null, QQ
+            backend: fk
+          } = this.host, Sk = Mk(fk);
+          if ("webgl1" !== fk) return Sk;
+          const [bk, rk] = await Promise.all([ik.e(206).then((() => ik(33856))), null !== (kk = null === (ek = (Dk = this.host).maxTextureSize) || void 0 === ek ? void 0 : ek.call(Dk)) && void 0 !== kk ? kk : null]);
+          return xk(Sk, bk.imagesPerAtlas.length * Math.max(0, ...bk.imagesPerAtlas), rk)
+        })().catch((kk => {
+          throw this.maxWidth = null, kk
         })), this.maxWidth
       }
       files() {
-        return eQ(this.assets, this.owner)
+        return lk(this.assets, this.owner)
       }
       start() {
-        const QQ = this.host.feed.subscribe((QQ => {
-          const FQ = ++this.latest;
-          this.host.settling(), this.assetsFor(QQ).then((wQ => this.apply(FQ, wQ, QQ).catch((QQ => {
-            this.host.warn("the texture pack landed, but reloading what it overrides failed", QQ)
-          }))), (wQ => {
-            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", wQ), this.settled(FQ, QQ, null, !0)
+        let kk = null;
+        const ek = this.host.feed.subscribe((ek => {
+          const ik = ++this.latest,
+            Dk = null !== ek.gameSource ? "game" : null !== kk && null !== kk.gameSource ? "join" : "page";
+          kk = ek, this.host.settling(), this.assetsFor(ek).then((kk => this.apply(ik, kk, ek, Dk).catch((kk => {
+            this.host.warn("the texture pack landed, but reloading what it overrides failed", kk)
+          }))), (kk => {
+            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", kk), this.settled(ik, ek, null, {
+              error: kk,
+              source: Dk
+            })
           }))
         }));
         return () => {
-          QQ(), this.latest++, this.ended = !0
+          ek(), this.latest++, this.ended = !0
         }
       }
-      async apply(QQ, FQ, wQ) {
+      async apply(kk, ek, ik, Dk) {
         const {
-          host: LQ
+          host: fk
         } = this;
-        if (QQ !== this.latest || LQ.stopped()) return;
-        const qQ = (0, DQ.i)(wQ);
-        if (this.texturesIn(FQ, qQ) && 0 === this.swapping) return void this.settled(QQ, wQ, eQ(FQ, qQ));
-        let oQ;
+        if (kk !== this.latest || fk.stopped()) return;
+        const Sk = (0, bk.j)(ik);
+        if (this.texturesIn(ek, Sk) && 0 === this.swapping) return void this.settled(kk, ik, lk(ek, Sk));
+        let Pk;
         this.swapping++;
+        let mk = null;
         try {
-          oQ = await LQ.terrain.swap((QQ => {
-            var FQ;
-            LQ.warn(`texture pack texture ${null!==(FQ=QQ.name)&&void 0!==FQ?FQ:"(all)"} failed`, QQ.error)
-          }), (async () => LQ.sourcesOf ? LQ.sourcesOf(FQ) : null === FQ ? (0, kQ.l)() : AQ(FQ, await this.maxLayerWidth(), qQ)), {
-            wholeAtlas: null !== FQ,
-            wanted: () => QQ === this.latest
+          Pk = await fk.terrain.swap((kk => {
+            var ek;
+            fk.warn(`texture pack texture ${null!==(ek=kk.name)&&void 0!==ek?ek:"(all)"} failed`, kk.error), null !== kk.name && null === (0, rk.j)(kk.name) || (mk = kk.error)
+          }), (async () => fk.sourcesOf ? fk.sourcesOf(ek) : null === ek ? (0, rk.l)() : Hk(ek, await this.maxLayerWidth(), Sk)), {
+            wholeAtlas: null !== ek,
+            wanted: () => kk === this.latest
           })
-        } catch (vQ) {
-          return LQ.warn("the texture pack's swap failed: the textures in stay", vQ), void this.settled(QQ, wQ, null, !0)
+        } catch (Mk) {
+          return fk.warn("the texture pack's swap failed: the textures in stay", Mk), void this.settled(kk, ik, null, {
+            error: Mk,
+            source: Dk
+          })
         } finally {
           this.swapping--
         }
-        if (!0 !== oQ || this.ended) this.settled(QQ, wQ, null, !0);
+        if (!0 !== Pk || this.ended) this.settled(kk, ik, null, {
+          error: mk,
+          source: Dk
+        });
         else {
-          LQ.landed(), this.assets = FQ, this.owner = qQ;
+          fk.landed(), this.assets = ek, this.owner = Sk;
           try {
-            LQ.packSwapped()
+            fk.packSwapped()
           } finally {
-            this.settled(QQ, wQ, this.files())
+            this.settled(kk, ik, this.files())
           }
         }
       }
-      async assetsFor(QQ) {
-        var FQ;
-        return (null !== (FQ = this.host.assetsOf) && void 0 !== FQ ? FQ : vQ.k)(QQ, await this.maxLayerWidth())
+      async assetsFor(kk) {
+        var ek;
+        return (null !== (ek = this.host.assetsOf) && void 0 !== ek ? ek : Pk.h)(kk, await this.maxLayerWidth())
       }
-      texturesIn(QQ, FQ) {
-        return QQ === this.assets && (null === QQ || FQ === this.owner)
+      texturesIn(kk, ek) {
+        return kk === this.assets && (null === kk || ek === this.owner)
       }
-      settled(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        QQ !== this.latest || this.ended || this.host.stopped() || this.host.settled(FQ, wQ, LQ)
+      settled(kk, ek, ik) {
+        let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        kk !== this.latest || this.ended || this.host.stopped() || this.host.settled(ek, ik, Dk)
       }
     }
   },
-  42759: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      followPagePackFiles: () => oQ
+  50582: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      followPagePackFiles: () => Sk
     });
-    var LQ = wQ(42738),
-      qQ = wQ(42750);
+    var Dk = ik(50562),
+      fk = ik(50577);
 
-    function oQ(QQ, FQ, wQ, oQ, DQ) {
-      let kQ, vQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : QQ => (0, qQ.k)(QQ, (0, LQ.deviceMaxLayerWidth)(wQ)),
-        mQ = 0,
-        uQ = null;
-      const HQ = () => {
-          if (null === uQ || null !== uQ.gameSource && !FQ.showsPage()) return;
-          const wQ = null === uQ.gameSource ? uQ : QQ.playerState();
-          if (wQ.pack === kQ) return;
-          kQ = wQ.pack;
-          const qQ = ++mQ;
-          vQ(wQ).then((QQ => {
-            qQ === mQ && oQ((0, LQ.packFilesOf)(QQ, "player"))
-          }), (QQ => {
-            qQ === mQ && (kQ = void 0), DQ("the texture pack's files couldn't be had for the previews: the files in stay", QQ)
+    function Sk(kk, ek, ik, Sk, bk) {
+      let rk, Pk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : kk => (0, fk.h)(kk, (0, Dk.deviceMaxLayerWidth)(ik)),
+        mk = 0,
+        Mk = null;
+      const Kk = () => {
+          if (null === Mk || null !== Mk.gameSource && !ek.showsPage()) return;
+          const ik = null === Mk.gameSource ? Mk : kk.playerState();
+          if (ik.pack === rk) return;
+          rk = ik.pack;
+          const fk = ++mk;
+          Pk(ik).then((kk => {
+            fk === mk && Sk((0, Dk.packFilesOf)(kk, "player"))
+          }), (kk => {
+            fk === mk && (rk = void 0), bk("the texture pack's files couldn't be had for the previews: the files in stay", kk)
           }))
         },
-        bQ = QQ.subscribe((QQ => {
-          uQ = QQ, HQ()
+        xk = kk.subscribe((kk => {
+          Mk = kk, Kk()
         })),
-        YQ = QQ.onPlayerPackChange(HQ),
-        xQ = FQ.onPageShown(HQ);
+        nk = kk.onPlayerPackChange(Kk),
+        Uk = ek.onPageShown(Kk);
       return () => {
-        bQ(), YQ(), xQ(), mQ++
+        xk(), nk(), Uk(), mk++
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,757 +1,506 @@
 export const id = 132;
-export const ids = [132];
+export const ids = [132, 135, 136];
 export const modules = {
-  6438: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      loadPageShaderPackCompiler: () => bF
+  6436: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => bk
     });
-    var LQ = {};
-    wQ.r(LQ), wQ.d(LQ, {
-      RqQ: () => qQ,
-      tQQ: () => oQ,
-      default: () => JQ,
-      OqQ: () => DQ,
-      sqQ: () => kQ,
-      initSync: () => hQ,
-      wH: () => vQ,
-      uLQ: () => mQ,
-      rqQ: () => uQ,
-      IqQ: () => HQ,
-      vN: () => bQ,
-      UqQ: () => YQ,
-      kN: () => xQ,
-      NqQ: () => AQ
-    });
-    class qQ {
-      static __wrap(QQ) {
-        const FQ = Object.create(qQ.prototype);
-        return FQ.__wbg_ptr = QQ, eQ.register(FQ, FQ.__wbg_ptr, FQ), FQ
-      }
-      __destroy_into_raw() {
-        const QQ = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, eQ.unregister(this), QQ
-      }
-      free() {
-        const QQ = this.__destroy_into_raw();
-        XQ.Vic3(QQ, 0)
-      }
-      get errorsJson() {
-        let QQ, FQ;
-        try {
-          const wQ = XQ.VL0J(this.__wbg_ptr);
-          return QQ = wQ[0], FQ = wQ[1], SQ(wQ[0], wQ[1])
-        } finally {
-          XQ.RMhz(QQ, FQ, 1)
-        }
-      }
-      get features() {
-        const QQ = XQ.Q9nT(this.__wbg_ptr);
-        var FQ = GQ(QQ[0], QQ[1]);
-        return XQ.RMhz(QQ[0], 4 * QQ[1], 4), FQ
-      }
-      get hooks() {
-        const QQ = XQ.rLDd(this.__wbg_ptr);
-        var FQ = pQ(QQ[0], QQ[1]).slice();
-        return XQ.RMhz(QQ[0], 1 * QQ[1], 1), FQ
-      }
-      mapValidationMessage(QQ, FQ, wQ, LQ, qQ) {
-        let oQ, DQ;
-        try {
-          const mQ = XQ.ggNU(this.__wbg_ptr, QQ, FQ, wQ, MQ(LQ), MQ(qQ));
-          var kQ = mQ[0],
-            vQ = mQ[1];
-          if (mQ[3]) throw kQ = 0, vQ = 0, NQ(mQ[2]);
-          return oQ = kQ, DQ = vQ, SQ(kQ, vQ)
-        } finally {
-          XQ.RMhz(oQ, DQ, 1)
-        }
-      }
-      get moduleCodes() {
-        const QQ = XQ.p5cv(this.__wbg_ptr);
-        var FQ = GQ(QQ[0], QQ[1]);
-        return XQ.RMhz(QQ[0], 4 * QQ[1], 4), FQ
-      }
-      get offInStrictJson() {
-        let QQ, FQ;
-        try {
-          const wQ = XQ.RggB(this.__wbg_ptr);
-          return QQ = wQ[0], FQ = wQ[1], SQ(wQ[0], wQ[1])
-        } finally {
-          XQ.RMhz(QQ, FQ, 1)
-        }
-      }
-      get reads() {
-        const QQ = XQ.TtDk(this.__wbg_ptr);
-        var FQ = GQ(QQ[0], QQ[1]);
-        return XQ.RMhz(QQ[0], 4 * QQ[1], 4), FQ
-      }
-      get validationModuleCodes() {
-        const QQ = XQ.dNiy(this.__wbg_ptr);
-        var FQ = GQ(QQ[0], QQ[1]);
-        return XQ.RMhz(QQ[0], 4 * QQ[1], 4), FQ
-      }
-      get validationModuleKeys() {
-        const QQ = XQ.nUd3(this.__wbg_ptr);
-        var FQ = pQ(QQ[0], QQ[1]).slice();
-        return XQ.RMhz(QQ[0], 1 * QQ[1], 1), FQ
-      }
-      get variantFlags() {
-        const QQ = XQ.UZ7I(this.__wbg_ptr);
-        var FQ = pQ(QQ[0], QQ[1]).slice();
-        return XQ.RMhz(QQ[0], 1 * QQ[1], 1), FQ
-      }
-    }
-
-    function oQ(QQ, FQ, wQ, LQ, oQ, DQ, kQ) {
-      const vQ = UQ(QQ, XQ.OR0q),
-        mQ = fQ,
-        uQ = UQ(FQ, XQ.OR0q),
-        HQ = fQ,
-        bQ = UQ(wQ, XQ.OR0q),
-        YQ = fQ,
-        xQ = IQ(LQ, XQ.OR0q),
-        AQ = fQ,
-        tQ = UQ(oQ, XQ.OR0q),
-        eQ = fQ,
-        MQ = UQ(DQ, XQ.OR0q),
-        GQ = fQ,
-        pQ = UQ(kQ, XQ.OR0q),
-        cQ = fQ,
-        CQ = XQ.C8vF(vQ, mQ, uQ, HQ, bQ, YQ, xQ, AQ, tQ, eQ, MQ, GQ, pQ, cQ);
-      if (CQ[2]) throw NQ(CQ[1]);
-      return qQ.__wrap(CQ[0])
-    }
-
-    function DQ() {
-      const QQ = XQ.njPp();
-      var FQ = GQ(QQ[0], QQ[1]);
-      return XQ.RMhz(QQ[0], 4 * QQ[1], 4), FQ
-    }
-
-    function kQ() {
-      const QQ = XQ.urPZ();
-      var FQ = GQ(QQ[0], QQ[1]);
-      return XQ.RMhz(QQ[0], 4 * QQ[1], 4), FQ
-    }
-
-    function vQ() {
-      XQ.n8Va()
-    }
-
-    function mQ(QQ, FQ, wQ, LQ, qQ) {
-      let oQ, DQ;
-      try {
-        const mQ = UQ(QQ, XQ.OR0q),
-          uQ = fQ,
-          HQ = IQ(FQ, XQ.OR0q),
-          bQ = fQ,
-          YQ = UQ(wQ, XQ.OR0q),
-          xQ = fQ,
-          AQ = IQ(LQ, XQ.OR0q),
-          tQ = fQ,
-          eQ = function(QQ, FQ) {
-            const wQ = FQ(1 * QQ.length, 1) >>> 0;
-            return RQ().set(QQ, wQ / 1), fQ = QQ.length, wQ
-          }(qQ, XQ.OR0q),
-          MQ = fQ,
-          GQ = XQ.YbmF(mQ, uQ, HQ, bQ, YQ, xQ, AQ, tQ, eQ, MQ);
-        var kQ = GQ[0],
-          vQ = GQ[1];
-        if (GQ[3]) throw kQ = 0, vQ = 0, NQ(GQ[2]);
-        return oQ = kQ, DQ = vQ, SQ(kQ, vQ)
-      } finally {
-        XQ.RMhz(oQ, DQ, 1)
-      }
-    }
-
-    function uQ() {
-      let QQ, FQ;
-      try {
-        const wQ = XQ.pTce();
-        return QQ = wQ[0], FQ = wQ[1], SQ(wQ[0], wQ[1])
-      } finally {
-        XQ.RMhz(QQ, FQ, 1)
-      }
-    }
-
-    function HQ(QQ) {
-      let FQ, wQ;
-      try {
-        const oQ = XQ.gWJe(QQ);
-        var LQ = oQ[0],
-          qQ = oQ[1];
-        if (oQ[3]) throw LQ = 0, qQ = 0, NQ(oQ[2]);
-        return FQ = LQ, wQ = qQ, SQ(LQ, qQ)
-      } finally {
-        XQ.RMhz(FQ, wQ, 1)
-      }
-    }
-
-    function bQ() {
-      return XQ.PsFT() >>> 0
-    }
-
-    function YQ() {
-      let QQ, FQ;
-      try {
-        const wQ = XQ.gzXe();
-        return QQ = wQ[0], FQ = wQ[1], SQ(wQ[0], wQ[1])
-      } finally {
-        XQ.RMhz(QQ, FQ, 1)
-      }
-    }
-
-    function xQ(QQ, FQ) {
-      let wQ, LQ;
-      try {
-        const DQ = UQ(QQ, XQ.OR0q),
-          kQ = fQ,
-          vQ = IQ(FQ, XQ.OR0q),
-          mQ = fQ,
-          uQ = XQ.WlK4(DQ, kQ, vQ, mQ);
-        var qQ = uQ[0],
-          oQ = uQ[1];
-        if (uQ[3]) throw qQ = 0, oQ = 0, NQ(uQ[2]);
-        return wQ = qQ, LQ = oQ, SQ(qQ, oQ)
-      } finally {
-        XQ.RMhz(wQ, LQ, 1)
-      }
-    }
-
-    function AQ(QQ) {
-      let FQ, wQ;
-      try {
-        const oQ = XQ.SBBP(MQ(QQ));
-        var LQ = oQ[0],
-          qQ = oQ[1];
-        if (oQ[3]) throw LQ = 0, qQ = 0, NQ(oQ[2]);
-        return FQ = LQ, wQ = qQ, SQ(LQ, qQ)
-      } finally {
-        XQ.RMhz(FQ, wQ, 1)
-      }
-    }
-
-    function tQ() {
-      return {
-        __proto__: null,
-        IlkP: {
-          __proto__: null,
-          V2Ln: function(QQ, FQ) {
-            return MQ(Error(SQ(QQ, FQ)))
-          },
-          CzgM: function(QQ) {
-            return null === OQ(QQ)
-          },
-          h9k8: function(QQ) {
-            return "string" === typeof OQ(QQ)
-          },
-          hidU: function(QQ, FQ) {
-            const wQ = OQ(FQ),
-              LQ = "string" === typeof wQ ? wQ : void 0;
-            var qQ, oQ = void 0 === (qQ = LQ) || null === qQ ? 0 : function(QQ, FQ, wQ) {
-                if (void 0 === wQ) {
-                  const wQ = lQ.encode(QQ),
-                    LQ = FQ(wQ.length, 1) >>> 0;
-                  return RQ().subarray(LQ, LQ + wQ.length).set(wQ), fQ = wQ.length, LQ
-                }
-                let LQ = QQ.length,
-                  qQ = FQ(LQ, 1) >>> 0;
-                const oQ = RQ();
-                let DQ = 0;
-                for (; DQ < LQ; DQ++) {
-                  const FQ = QQ.charCodeAt(DQ);
-                  if (FQ > 127) break;
-                  oQ[qQ + DQ] = FQ
-                }
-                if (DQ !== LQ) {
-                  0 !== DQ && (QQ = QQ.slice(DQ)), qQ = wQ(qQ, LQ, LQ = DQ + 3 * QQ.length, 1) >>> 0;
-                  const FQ = RQ().subarray(qQ + DQ, qQ + LQ);
-                  DQ += lQ.encodeInto(QQ, FQ).written, qQ = wQ(qQ, LQ, DQ, 1) >>> 0
-                }
-                return fQ = DQ, qQ
-              }(LQ, XQ.OR0q, XQ.uagC),
-              DQ = fQ;
-            CQ().setInt32(QQ + 4, DQ, !0), CQ().setInt32(QQ + 0, oQ, !0)
-          },
-          YD60: function(QQ, FQ) {
-            throw new Error(SQ(QQ, FQ))
-          },
-          COza: function(QQ, FQ) {
-            return OQ(QQ).charCodeAt(FQ >>> 0)
-          },
-          pdZl: function(QQ, FQ) {
-            console.error(SQ(QQ, FQ))
-          },
-          VZuK: function(QQ) {
-            return OQ(QQ).length
-          },
-          ptXh: function(QQ, FQ) {
-            return MQ(SQ(QQ, FQ))
-          },
-          MEWy: function(QQ) {
-            NQ(QQ)
-          }
-        }
-      }
-    }
-    Symbol.dispose && (qQ.prototype[Symbol.dispose] = qQ.prototype.free);
-    const eQ = "undefined" === typeof FinalizationRegistry ? {
-      register: () => {},
-      unregister: () => {}
-    } : new FinalizationRegistry((QQ => XQ.Vic3(QQ, 1)));
-
-    function MQ(QQ) {
-      rQ === sQ.length && sQ.push(sQ.length + 1);
-      const FQ = rQ;
-      return rQ = sQ[FQ], sQ[FQ] = QQ, FQ
-    }
-
-    function GQ(QQ, FQ) {
-      QQ >>>= 0;
-      const wQ = CQ(),
-        LQ = [];
-      for (let qQ = QQ; qQ < QQ + 4 * FQ; qQ += 4) LQ.push(NQ(wQ.getUint32(qQ, !0)));
-      return LQ
-    }
-
-    function pQ(QQ, FQ) {
-      return QQ >>>= 0, RQ().subarray(QQ / 1, QQ / 1 + FQ)
-    }
-    let cQ = null;
-
-    function CQ() {
-      return (null === cQ || !0 === cQ.buffer.detached || void 0 === cQ.buffer.detached && cQ.buffer !== XQ.memory.buffer) && (cQ = new DataView(XQ.memory.buffer)), cQ
-    }
-
-    function SQ(QQ, FQ) {
-      return function(QQ, FQ) {
-        zQ += FQ, zQ >= KQ && (TQ = new TextDecoder("utf-8", {
-          ignoreBOM: !0,
-          fatal: !0
-        }), TQ.decode(), zQ = FQ);
-        return TQ.decode(RQ().subarray(QQ, QQ + FQ))
-      }(QQ >>> 0, FQ)
-    }
-    let iQ = null;
-    let WQ = null;
-
-    function RQ() {
-      return null !== WQ && 0 !== WQ.byteLength || (WQ = new Uint8Array(XQ.memory.buffer)), WQ
-    }
-
-    function OQ(QQ) {
-      return sQ[QQ]
-    }
-    let sQ = new Array(1024).fill(void 0);
-    sQ.push(void 0, null, !0, !1);
-    let rQ = sQ.length;
-
-    function IQ(QQ, FQ) {
-      const wQ = FQ(4 * QQ.length, 4) >>> 0;
-      return (null !== iQ && 0 !== iQ.byteLength || (iQ = new Uint32Array(XQ.memory.buffer)), iQ).set(QQ, wQ / 4), fQ = QQ.length, wQ
-    }
-
-    function UQ(QQ, FQ) {
-      const wQ = FQ(4 * QQ.length, 4) >>> 0,
-        LQ = CQ();
-      for (let qQ = 0; qQ < QQ.length; qQ++) LQ.setUint32(wQ + 4 * qQ, MQ(QQ[qQ]), !0);
-      return fQ = QQ.length, wQ
-    }
-
-    function NQ(QQ) {
-      const FQ = OQ(QQ);
-      return function(QQ) {
-        QQ < 1028 || (sQ[QQ] = rQ, rQ = QQ)
-      }(QQ), FQ
-    }
-    let TQ = new TextDecoder("utf-8", {
-      ignoreBOM: !0,
-      fatal: !0
-    });
-    TQ.decode();
-    const KQ = 2146435072;
-    let zQ = 0;
-    const lQ = new TextEncoder;
-    "encodeInto" in lQ || (lQ.encodeInto = function(QQ, FQ) {
-      const wQ = lQ.encode(QQ);
-      return FQ.set(wQ), {
-        read: QQ.length,
-        written: wQ.length
-      }
-    });
-    let jQ, aQ, XQ, fQ = 0;
-
-    function VQ(QQ, FQ) {
-      return aQ = QQ, XQ = QQ.exports, jQ = FQ, cQ = null, iQ = null, WQ = null, XQ.F2Nn(), XQ
-    }
-
-    function hQ(QQ) {
-      if (void 0 !== XQ) return XQ;
-      void 0 !== QQ && (Object.getPrototypeOf(QQ) === Object.prototype ? ({
-        module: QQ
-      } = QQ) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const FQ = tQ();
-      QQ instanceof WebAssembly.Module || (QQ = new WebAssembly.Module(QQ));
-      return VQ(new WebAssembly.Instance(QQ, FQ), QQ)
-    }
-    async function JQ(QQ) {
-      if (void 0 !== XQ) return XQ;
-      void 0 !== QQ && (Object.getPrototypeOf(QQ) === Object.prototype ? ({
-        module_or_path: QQ
-      } = QQ) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const FQ = tQ();
-      ("string" === typeof QQ || "function" === typeof Request && QQ instanceof Request || "function" === typeof URL && QQ instanceof URL) && (QQ = fetch(QQ));
-      const {
-        instance: wQ,
-        module: LQ
-      } = await async function(QQ, FQ) {
-        if ("function" === typeof Response && QQ instanceof Response) {
-          if (!QQ.ok) throw new Error(`failed to fetch Wasm: ${QQ.status} ${QQ.statusText} fetching '${QQ.url}'`);
-          if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(QQ, FQ)
-          } catch (wQ) {
-            if (! function(QQ) {
-                switch (QQ) {
-                  case "basic":
-                  case "cors":
-                  case "default":
-                    return !0
-                }
-                return !1
-              }(QQ.type) || "application/wasm" === QQ.headers.get("Content-Type")) throw wQ;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", wQ)
-          }
-          const LQ = await QQ.arrayBuffer();
-          return await WebAssembly.instantiate(LQ, FQ)
-        } {
-          const wQ = await WebAssembly.instantiate(QQ, FQ);
-          return wQ instanceof WebAssembly.Instance ? {
-            instance: wQ,
-            module: QQ
-          } : wQ
-        }
-      }(await QQ, FQ);
-      return VQ(wQ, LQ)
-    }
-    var EQ = wQ(2811),
-      nQ = wQ(6446);
-    class gQ extends Error {
-      stage;
-      constructor(QQ, FQ) {
-        super((0, EQ.N)(QQ, FQ), {
-          cause: FQ
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = QQ
-      }
-    }
-    let PQ = null,
-      ZQ = null;
-
-    function yQ() {
-      return PQ ? Promise.resolve(PQ) : (ZQ || (ZQ = async function() {
-        let QQ;
-        try {
-          QQ = await (0, EQ.R)(new wQ.U(wQ(6453)), (0, nQ.e)("bloxd_wasm_shader_pack"))
-        } catch (FQ) {
-          throw new gQ((0, EQ.X)(FQ), FQ)
-        }
-        try {
-          await JQ({
-            module_or_path: QQ
-          })
-        } catch (FQ) {
-          throw new gQ("instantiate", FQ)
-        }
-        return PQ = LQ, PQ
-      }(), ZQ.then(void 0, (() => {
-        ZQ = null
-      }))), ZQ)
-    }
-    var BQ = wQ(6467);
-
-    function dQ(QQ) {
-      let [FQ, wQ, LQ, qQ] = QQ;
-      const oQ = {
-        file: FQ,
-        line: wQ,
-        message: LQ
-      };
-      return qQ && (oQ.variants = qQ.map(BQ.l)), oQ
-    }
-
-    function QF(QQ) {
-      return JSON.parse(QQ).map(dQ)
-    }
-
-    function FF(QQ, FQ) {
-      if (!Number.isInteger(QQ) || QQ < 0 || QQ > 4294967295) throw new Error(`${FQ} ${QQ} is not a whole number from 0 to 4294967295`);
-      return QQ
-    }
-
-    function wF(QQ) {
-      return [QQ.named.map((QQ => QQ.name)), Uint32Array.from(QQ.named, (QQ => FF(QQ.id, "Texture ID")))]
-    }
-    const LF = new WeakMap;
-    const qF = new WeakMap,
-      oF = new WeakSet;
-
-    function DF(QQ, FQ) {
-      if (oF.has(QQ)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
-      try {
-        return FQ()
-      } catch (wQ) {
-        throw wQ instanceof WebAssembly.RuntimeError && oF.add(QQ), wQ
-      }
-    }
-
-    function kF(QQ) {
-      let FQ = qF.get(QQ);
-      if (!FQ) {
-        let wQ, LQ;
-        FQ = {
-          tQQ: (FQ, wQ) => DF(QQ, (() => function(QQ, FQ, wQ) {
-            const LQ = QQ.tQQ(FQ.map((QQ => QQ.path)), FQ.map((QQ => QQ.source)), ...wF(wQ), wQ.aliases.map((QQ => QQ.name)), wQ.aliases.map((QQ => QQ.texture)), wQ.aliases.map((QQ => QQ.kind)));
-            let qQ = !1;
-            try {
-              const QQ = LQ.validationModuleCodes,
-                FQ = Array.from(LQ.validationModuleKeys, ((FQ, wQ) => ({
-                  key: (0, BQ.l)(FQ),
-                  code: QQ[wQ]
-                }))),
-                wQ = {
-                  errors: QF(LQ.errorsJson),
-                  offInStrict: QF(LQ.offInStrictJson),
-                  variants: (0, BQ.g)(LQ),
-                  validationModules: FQ,
-                  features: LQ.features
-                };
-              return FQ.forEach(((QQ, FQ) => {
-                LF.set(QQ, {
-                  pack: LQ,
-                  index: FQ
-                })
-              })), qQ = FQ.length > 0, wQ
-            } finally {
-              qQ || LQ.free()
-            }
-          }(QQ, FQ, wQ))),
-          mapValidationMessage: (FQ, wQ) => {
-            const LQ = LF.get(FQ);
-            if (!LQ) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return dQ(JSON.parse(DF(QQ, (() => LQ.pack.mapValidationMessage(LQ.index, wQ.lineNum, wQ.linePos, wQ.message, wQ.type)))))
-          },
-          uLQ: FQ => DF(QQ, (() => function(QQ, FQ) {
-            const wQ = new Int32Array(FQ.length),
-              LQ = [];
-            return FQ.forEach(((QQ, FQ) => {
-              wQ[FQ] = QQ.variants ? QQ.variants.length : -1;
-              for (const wQ of QQ.variants ?? []) LQ.push((0, BQ.k)(wQ))
-            })), QF(QQ.uLQ(FQ.map((QQ => QQ.file)), Uint32Array.from(FQ, (QQ => FF(QQ.line, "Diagnostic line"))), FQ.map((QQ => QQ.message)), wQ, Uint8Array.from(LQ)))
-          }(QQ, FQ))),
-          kN: FQ => DF(QQ, (() => QQ.kN(...wF(FQ)))),
-          get SHADER_PACK_HEADER_VERSION() {
-            return wQ ??= DF(QQ, (() => QQ.UqQ())), wQ
-          },
-          get DEFAULT_SHADER_PACK_FILES() {
-            return LQ ??= DF(QQ, (() => {
-              const FQ = QQ.sqQ();
-              return QQ.OqQ().map(((QQ, wQ) => ({
-                path: QQ,
-                source: FQ[wQ]
-              })))
-            })), LQ
-          },
-          NqQ: FQ => DF(QQ, (() => QQ.NqQ(FQ))),
-          resolveHeader: FQ => DF(QQ, (() => QQ.IqQ((0, BQ.k)(FQ)))),
-          rqQ: () => DF(QQ, (() => QQ.rqQ()))
-        }, qF.set(QQ, FQ)
-      }
-      return FQ
-    }
-    var vF = wQ(3110),
-      mF = wQ(6460);
-    const uF = "bloxdShaderPackWasmFailureReported";
-    let HF = null;
-
-    function bF() {
-      return HF ??= async function() {
-        if ("undefined" === typeof WebAssembly) return YF("unsupported", "This browser has no WebAssembly"), null;
-        const QQ = (0, mF.loadShaderPackTextures)().then((() => !0), (QQ => (console.error("Could not load the shader pack textures, so shader packs can't run", QQ), !1)));
-        try {
-          const FQ = await async function() {
-            let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yQ;
-            return kF(await QQ())
-          }();
-          return await QQ ? FQ : null
-        } catch (FQ) {
-          const QQ = FQ instanceof Error ? FQ.message : String(FQ);
-          return YF(vF.b[FQ instanceof gQ ? FQ.stage : "instantiate"], QQ), null
-        }
-      }(), HF
-    }
-
-    function YF(QQ, FQ) {
-      (0, vF.f)(uF, `Shader pack wasm ${QQ}, so shader packs can't run: ${FQ}`, FQ, `shader_pack_${QQ}`)
-    }
-  },
-  6453: (QQ, FQ, wQ) => {
-    QQ.exports = wQ.p + "static/media/bloxd_wasm_shader_pack_bg.80d86b93e0b28b1ed3da.wasm"
-  },
-  6446: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(2811);
-    const qQ = {
-      bloxd_wasm: () => "1dd71b260cf77c239728051b861ab33f1bc93c07cb4fd28db7884da2815d9fb7",
-      bloxd_wasm_client: () => "3cfdd659c2eb8b6808b191f6b866ba4e169bdaee4701af255db5568969af1bb7",
-      bloxd_wasm_workers: () => "e767134c25f99ed90bec9c0af92587618ddb83193667d16121760ce713ad3288",
-      bloxd_wasm_models: () => "7efbd9cd4bdaa31a2b1cc79e297121e9fc854705c550b2f59e1da981f144f4cb",
-      bloxd_wasm_webgpu: () => "5a2823876f9d5f8660104cc25ddeb02c3ddbc283e88525fa31e6d0deaa802210",
-      bloxd_wasm_webgl: () => "08bd13fedb12bff9b9605ef44db652dccf2f7dcf60a963258385b5f773a6f220",
-      bloxd_wasm_webgl1: () => "d6f63b1aa81b972a9480431e3334c89fc0648b9790fe3b5c8ff72a4945814f45",
-      bloxd_wasm_replay: () => "225276b91dfdf588b8a1477982fd12458f6ce65cfbaf6a782c82ab32d22513fb",
-      bloxd_wasm_recorder: () => "5fccb956d97b8d65d45cf6afb9a7042d1e4e4bad858c8aa1ec94da37e97ec72f",
-      bloxd_wasm_anim: () => "3f5071fcbbd4cd73afc810a4abff7c2f49f86a8638003d25fa9521ff9c12ae28",
-      bloxd_wasm_textures: () => "f13f878b8e801e1b7391eae5c539ceb75b7c99a88018bdad896fe7b520427f2f",
-      bloxd_wasm_shader_pack: () => "e521fc18804ece0348d56f2c73e39ef69fee01e1ad9f9c53d92bd0fdbf472492"
+    var Dk = ik(4959),
+      fk = ik(1066);
+    const Sk = {
+      strict: "shaderPack:variantStrict",
+      nonStrict: "shaderPack:variantNonStrict",
+      terrain: "shaderPack:variantTerrain",
+      liquid: "shaderPack:variantLiquid",
+      model: "shaderPack:variantModel"
     };
-    var oQ = wQ(4540);
 
-    function DQ(QQ) {
-      const FQ = Object.prototype.hasOwnProperty.call(qQ, QQ) ? qQ[QQ]() : void 0;
-      if (void 0 !== FQ) return {
-        sha256: FQ,
-        onMismatch: oQ.o
-      };
-      throw new LQ.j(`${QQ} has no release digest, so this build refuses it`)
+    function bk(kk) {
+      let {
+        diagnostics: ek,
+        more: ik = 0,
+        t: bk
+      } = kk;
+      return (0, fk.jsxs)("ul", {
+        className: "ShaderPackDiagnostics",
+        children: [ek.map(((kk, ek) => {
+          const ik = (0, Dk.g)(kk),
+            rk = function(kk, ek) {
+              const ik = (0, Dk.c)(null !== kk && void 0 !== kk ? kk : []);
+              if (0 === ik.length) return null;
+              return ik.map((kk => kk.map((kk => ek(Sk[kk]))).join(", "))).join("; ")
+            }(kk.variants, bk);
+          return (0, fk.jsxs)("li", {
+            children: [ik && (0, fk.jsx)("span", {
+              className: "ShaderPackDiagnosticLocation",
+              children: ik
+            }), kk.message, rk && (0, fk.jsx)("span", {
+              className: "ShaderPackDiagnosticVariants",
+              children: bk("shaderPack:onlyIn", {
+                variants: rk
+              })
+            })]
+          }, ek)
+        })), ik > 0 && (0, fk.jsx)("li", {
+          children: bk("shaderPack:moreErrors", {
+            count: String(ik)
+          })
+        })]
+      })
     }
   },
-  6467: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => pQ,
-      g: () => cQ,
-      k: () => MQ,
-      l: () => eQ
+  6445: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => Ck,
+      i: () => Ak
     });
-    var LQ = wQ(6470);
-    const qQ = 6,
-      oQ = 3,
-      DQ = 1,
-      kQ = 2,
-      vQ = 4,
-      mQ = 8,
-      uQ = 16,
-      HQ = 32,
-      bQ = 64,
-      YQ = 128,
-      xQ = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
-
-    function AQ(QQ) {
-      if (!QQ) return 0;
-      const FQ = xQ.indexOf(QQ);
-      if (FQ <= 0) throw new Error(`"${QQ}" is not a shader pack hook function`);
-      return FQ
+    var Dk = ik(60),
+      fk = ik(1021),
+      Sk = ik.n(fk),
+      bk = ik(4888),
+      rk = ik(1327),
+      Pk = ik(1033),
+      mk = ik(1172),
+      Mk = ik(4965),
+      Kk = ik(4961),
+      xk = ik(3131);
+    const nk = 33554432,
+      Uk = 1024,
+      Hk = 65536;
+    async function wk(kk) {
+      const ek = (0, xk.l)(kk);
+      if (ek) {
+        if (ek.size > nk) throw new xk.c("shaderPack:loadZipTooBig", {
+          megabytes: String(nk / 1048576)
+        });
+        return async function(kk) {
+          return lk((0, xk.g)(kk, Uk).map((ek => ({
+            path: ek.path,
+            read: ik => (0, xk.j)(kk, ek, ik)
+          }))))
+        }(new Uint8Array(await ek.arrayBuffer()))
+      }
+      return lk(kk.map((kk => ({
+        path: (0, xk.i)(kk),
+        read: ek => async function(kk, ek) {
+          return kk.size > ek ? null : new Uint8Array(await kk.arrayBuffer())
+        }(kk, ek)
+      }))))
     }
-
-    function tQ(QQ) {
-      if (0 === QQ) return null;
-      const FQ = xQ[QQ];
-      if (void 0 === FQ) throw new Error(`${QQ} is not a shader pack hook function id`);
-      return FQ
-    }
-
-    function eQ(QQ) {
-      const FQ = LQ.d.length;
+    async function lk(kk) {
+      const ek = function(kk) {
+          const ek = kk.length > 0 ? kk[0].path.indexOf("/") : -1;
+          if (-1 === ek) return kk;
+          const ik = kk[0].path.slice(0, ek + 1);
+          if (!kk.every((kk => kk.path.startsWith(ik)))) return kk;
+          return kk.map((kk => ({
+            ...kk,
+            path: kk.path.slice(ik.length)
+          })))
+        }(kk.filter((kk => !(0, xk.e)(kk.path)))),
+        ik = ek.filter((kk => "pack.json" === kk.path.toLowerCase()));
+      if (0 === ik.length) throw new xk.c("shaderPack:loadNoManifest");
+      if (ik.length > 1) throw new xk.c("shaderPack:loadDuplicateManifest");
+      const Dk = ik[0],
+        fk = await Dk.read(Hk);
+      if (null === fk) throw new xk.c("shaderPack:loadManifestTooBig", {
+        kilobytes: String(Hk / 1024)
+      });
+      const Sk = function(kk) {
+          let ek;
+          try {
+            ek = JSON.parse(kk)
+          } catch (rk) {
+            throw new xk.c("shaderPack:loadManifestNotJson", {
+              error: rk.message
+            }, {
+              cause: rk
+            })
+          }
+          if ("object" !== typeof ek || null === ek || Array.isArray(ek)) throw new xk.c("shaderPack:loadManifestNotObject");
+          const {
+            apiVersion: ik,
+            name: Dk,
+            author: fk,
+            description: Sk,
+            keepCircleShadows: bk
+          } = ek;
+          if (void 0 === ik) throw new xk.c("shaderPack:loadNoApiVersion", {
+            version: String(Kk.c)
+          });
+          if (!(0, Kk.g)(ik)) throw new xk.c("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(ik),
+            version: String(Kk.c)
+          });
+          if ("string" !== typeof Dk || "" === Dk.trim()) throw new xk.c("shaderPack:loadNoName");
+          if (void 0 !== fk && null !== fk && "string" !== typeof fk) throw new xk.c("shaderPack:loadAuthorNotString");
+          if (void 0 !== Sk && null !== Sk && "string" !== typeof Sk) throw new xk.c("shaderPack:loadDescriptionNotString");
+          if (void 0 !== bk && "boolean" !== typeof bk) throw new xk.c("shaderPack:loadKeepCircleShadowsNotBoolean");
+          return {
+            apiVersion: ik,
+            name: Dk,
+            author: "string" === typeof fk ? fk : null,
+            description: "string" === typeof Sk && "" !== Sk.trim() ? Sk : null,
+            keepCircleShadows: !0 === bk
+          }
+        }(pk(fk, Dk.path)),
+        bk = ek.filter((kk => kk.path.toLowerCase().endsWith(".wgsl"))).sort(((kk, ek) => (0, Mk.i)(kk.path, ek.path)));
+      if (0 === bk.length) throw new xk.c("shaderPack:loadNoWgsl");
+      if (bk.length > Mk.b) throw new xk.c("shaderPack:loadTooManyWgsl", {
+        count: String(Mk.b)
+      });
+      const rk = bk.find(((kk, ek) => ek > 0 && kk.path === bk[ek - 1].path));
+      if (rk) throw new xk.c("shaderPack:loadDuplicatePath", {
+        path: rk.path
+      });
+      const Pk = [];
+      let mk = Mk.c;
+      for (const Kk of bk) {
+        const kk = await Kk.read(mk);
+        if (null === kk) throw new xk.c("shaderPack:loadSourceTooBig", {
+          kilobytes: String(Mk.c / 1024)
+        });
+        mk -= kk.byteLength, Pk.push({
+          path: Kk.path,
+          source: pk(kk, Kk.path)
+        })
+      }
       return {
-        strict: QQ >= FQ,
-        program: LQ.d[QQ % FQ]
+        manifest: Sk,
+        files: Pk
       }
     }
 
-    function MQ(QQ) {
-      return Number(QQ.strict) * LQ.d.length + LQ.d.indexOf(QQ.program)
-    }
-
-    function GQ(QQ) {
-      return "" === QQ ? [] : QQ.split(" ")
-    }
-
-    function pQ(QQ) {
-      const FQ = {
-        variantFlags: new Uint8Array(qQ),
-        hooks: new Uint8Array(qQ * oQ),
-        moduleCodes: Array(qQ).fill(""),
-        reads: Array(2 * qQ).fill("")
-      };
-      for (const wQ of QQ) {
-        const QQ = MQ(wQ.key),
-          LQ = (QQ, FQ) => null === wQ.hooks.surface || wQ.reads.fragment.includes(QQ) ? 0 : FQ;
-        FQ.variantFlags[QQ] = (wQ.sceneDepth ? DQ : 0) | (wQ.movesVertices ? kQ : 0) | (wQ.sunShadow ? vQ : 0) | (wQ.airShadow ? mQ : 0) | (wQ.discards ? uQ : 0) | LQ("localPosition", HQ) | LQ("enchantSpeed", bQ) | LQ("enchantTier", YQ), FQ.hooks[QQ * oQ] = AQ(wQ.hooks.vertex), FQ.hooks[QQ * oQ + 1] = AQ(wQ.hooks.surface), FQ.hooks[QQ * oQ + 2] = AQ(wQ.hooks.light), FQ.moduleCodes[QQ] = wQ.moduleCode, FQ.reads[2 * QQ] = wQ.reads.vertex.join(" "), FQ.reads[2 * QQ + 1] = wQ.reads.fragment.join(" ")
+    function pk(kk, ek) {
+      try {
+        return new TextDecoder("utf-8", {
+          fatal: !0
+        }).decode(kk)
+      } catch (ik) {
+        throw new xk.c("shaderPack:loadNotUtf8", {
+          path: ek
+        }, {
+          cause: ik
+        })
       }
-      return FQ
     }
+    var yk = ik(4959),
+      Yk = ik(4970),
+      Lk = ik(1066);
 
-    function cQ(QQ) {
+    function Ck(kk) {
+      let {
+        busy: ek,
+        disabled: ik,
+        onFiles: Dk
+      } = kk;
       const {
-        hooks: FQ,
-        moduleCodes: wQ,
-        reads: LQ
-      } = QQ;
-      return Array.from(QQ.variantFlags, ((QQ, qQ) => {
-        const HQ = qQ * oQ;
-        return {
-          key: eQ(qQ),
-          hooks: {
-            vertex: tQ(FQ[HQ]),
-            surface: tQ(FQ[HQ + 1]),
-            light: tQ(FQ[HQ + 2])
-          },
-          moduleCode: wQ[qQ],
-          sceneDepth: 0 !== (QQ & DQ),
-          sunShadow: 0 !== (QQ & vQ),
-          airShadow: 0 !== (QQ & mQ),
-          movesVertices: 0 !== (QQ & kQ),
-          discards: 0 !== (QQ & uQ),
-          reads: {
-            vertex: GQ(LQ[2 * qQ]),
-            fragment: GQ(LQ[2 * qQ + 1])
+        t: fk
+      } = (0, mk.D)(), {
+        getRootProps: Mk,
+        getInputProps: Kk,
+        isDragActive: xk,
+        open: nk
+      } = (0, bk.e)({
+        onDrop: Dk,
+        noClick: !0,
+        noKeyboard: !0,
+        useFsAccessApi: !1,
+        disabled: ik
+      });
+      return (0, Lk.jsxs)("div", {
+        ...Mk({
+          className: Sk()("ShaderPackDropZone", {
+            ActiveDrag: xk,
+            Disabled: ik
+          })
+        }),
+        children: [(0, Lk.jsx)("input", {
+          ...Kk({
+            webkitdirectory: "true"
+          })
+        }), ek && (0, Lk.jsx)(rk.d, {}), !ek && (0, Lk.jsxs)(Lk.Fragment, {
+          children: [(0, Lk.jsx)("div", {
+            className: "ShaderPackDropZoneIcon",
+            children: (0, Lk.jsx)(Pk.d, {
+              name: "up-from-bracket"
+            })
+          }), (0, Lk.jsx)("div", {
+            className: "ShaderPackDropZoneInstructions",
+            children: fk((0, Yk.e)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, Lk.jsx)(Yk.d, {
+            disabled: ik,
+            openFolderPicker: nk,
+            onFiles: Dk
+          })]
+        })]
+      })
+    }
+
+    function Ak(kk) {
+      const {
+        t: ek
+      } = (0, mk.D)(), [ik, fk] = (0, Dk.useState)(!1), [Sk, bk] = (0, Dk.useState)(null), rk = (0, Dk.useRef)(!1);
+      return {
+        loading: ik,
+        error: Sk,
+        setError: bk,
+        onFiles: async function(ik) {
+          if (!rk.current) {
+            rk.current = !0, fk(!0), bk(null);
+            try {
+              await kk(await wk(ik))
+            } catch (Dk) {
+              Dk instanceof xk.c ? bk((0, yk.j)(ek, Dk.translationKey, Dk.params)) : (console.error("Failed to load the shader pack", Dk), bk(ek("shaderPack:unexpectedError")))
+            } finally {
+              rk.current = !1, fk(!1)
+            }
           }
         }
+      }
+    }
+  },
+  6498: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      forgetShaderPackActiveHint: () => Fk,
+      isOtherApiVersion: () => jk,
+      isShaderPackActive: () => Yk,
+      isShaderPackChangePending: () => Ak,
+      markShaderPackChangePending: () => Ck,
+      pageShaderPackValidationVersion: () => sk,
+      reconcileStoredShaderPackHint: () => Vk,
+      removeShaderPack: () => yk,
+      replaceShaderPack: () => wk,
+      saveShaderPack: () => Hk,
+      shaderPackNeedsCheck: () => dk,
+      storedPackOutcome: () => Lk,
+      storedShaderPackFiles: () => xk,
+      toStoredShaderPack: () => Kk
+    });
+    var Dk = ik(4965),
+      fk = ik(4961),
+      Sk = ik(38),
+      bk = ik(3419),
+      rk = ik(6505),
+      Pk = ik(6477);
+    const mk = "shaderPackChangePending";
+    let Mk = null;
+
+    function Kk(kk, ek, ik) {
+      return {
+        manifest: kk.manifest,
+        files: (0, Dk.t)(kk.files),
+        validation: ek,
+        ...ik && {
+          listing: ik
+        }
+      }
+    }
+
+    function xk(kk) {
+      return Object.keys(kk.files).map((ek => ({
+        path: ek,
+        source: kk.files[ek]
+      })))
+    }
+    let nk = Promise.resolve();
+
+    function Uk(kk) {
+      const ek = nk.then(kk);
+      return nk = ek.catch((() => {})), ek
+    }
+
+    function Hk(kk, ek) {
+      return Uk((() => lk(kk, ek)))
+    }
+
+    function wk(kk, ek, ik) {
+      return Uk((async () => JSON.stringify(await (0, rk.f)()) === JSON.stringify(kk) && (null === ek ? (await pk(), !0) : lk(ek, ik))))
+    }
+    async function lk(kk, ek) {
+      const ik = await Sk.e.setItem(rk.c, kk);
+      return ik && uk(kk, ek), ik
+    }
+    async function pk() {
+      await Sk.e.removeItem(rk.c), Sk.f.removeItem(bk.e)
+    }
+
+    function yk() {
+      return Uk(pk)
+    }
+
+    function Yk(kk, ek) {
+      return "active" === Lk(kk, ek).kind
+    }
+
+    function Lk(kk, ek) {
+      var ik;
+      return null === kk ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : jk(kk) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (ik = kk.validation) || void 0 === ik ? void 0 : ik.ok) || kk.validation.fromRecheck ? null === ek ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : dk(kk, ek) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : kk.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function Ck() {
+      Sk.g.setItem(mk, performance.timeOrigin)
+    }
+
+    function Ak() {
+      return Sk.g.getItem(mk) === performance.timeOrigin
+    }
+
+    function jk(kk) {
+      return !(0, fk.g)(kk.manifest.apiVersion)
+    }
+
+    function sk(kk) {
+      return Mk ??= kk.jF((0, Pk.shaderPackTextures)()), Mk
+    }
+
+    function dk(kk, ek) {
+      var ik;
+      return (null === (ik = kk.validation) || void 0 === ik ? void 0 : ik.headerVersion) !== sk(ek)
+    }
+
+    function Vk(kk) {
+      return Uk((async () => {
+        uk(await (0, rk.f)(!0), kk)
       }))
     }
+
+    function Fk() {
+      return Uk((async () => {
+        Sk.f.removeItem(bk.e)
+      }))
+    }
+
+    function uk(kk, ek) {
+      Yk(kk, ek) ? Sk.f.setItem(bk.e, !0) : Sk.f.removeItem(bk.e)
+    }
   },
-  6470: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => LQ,
-      h: () => DQ,
-      l: () => kQ,
-      m: () => qQ,
-      o: () => oQ
+  6477: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      loadShaderPackTextures: () => bk,
+      shaderPackTextures: () => rk
     });
-    const LQ = ["terrain", "liquid", "model"];
+    var Dk = ik(4965);
+    let fk = null,
+      Sk = null;
 
-    function qQ() {
-      const QQ = [];
-      for (const FQ of [!1, !0])
-        for (const wQ of LQ) QQ.push({
-          strict: FQ,
-          program: wQ
-        });
-      return QQ
+    function bk() {
+      return Sk ??= Promise.all([ik.e(72), ik.e(190)]).then((() => ik(40060))).then((kk => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: ek,
+          textureNameToIndex: ik,
+          textureAnimationData: Sk
+        } = kk;
+        return fk ??= (0, Dk.h)(ik, Sk, ek), fk
+      })), Sk
     }
 
-    function oQ(QQ) {
-      return `${QQ.strict?"strict":"allow"}.${QQ.program}`
+    function rk() {
+      if (null === fk) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return fk
+    }
+  },
+  6493: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Pk,
+      c: () => rk
+    });
+    var Dk = ik(6498),
+      fk = ik(6477),
+      Sk = ik(115);
+    const bk = 100;
+    async function rk(kk, ek) {
+      var ik;
+      let Dk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ik = navigator.gpu) && void 0 !== ik ? ik : null;
+      const bk = kk.B5(ek, (0, fk.shaderPackTextures)());
+      if (bk.errors.length > 0) return mk(kk, bk.errors, bk.offInStrict);
+      const rk = await async function(kk) {
+        if (!kk) return null;
+        try {
+          const ek = await (0, Sk.t)(kk);
+          return ek ? await ek.requestDevice() : null
+        } catch (ek) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", ek), null
+        }
+      }(Dk);
+      if (!rk) return null;
+      let Pk = !1;
+      rk.lost.then((() => {
+        Pk = !0
+      }));
+      try {
+        const ek = await Promise.all(bk.validationModules.map((ek => async function(kk, ek, ik) {
+          ek.pushErrorScope("validation");
+          const Dk = ek.createShaderModule({
+              code: ik.code
+            }),
+            fk = ek.popErrorScope(),
+            {
+              messages: Sk
+            } = await Dk.getCompilationInfo(),
+            bk = Sk.filter((kk => "error" === kk.type)).map((ek => kk.mapValidationMessage(ik, ek))),
+            rk = await fk;
+          rk && 0 === bk.length && bk.push({
+            file: null,
+            line: 0,
+            message: rk.message,
+            variants: [ik.key]
+          });
+          return bk
+        }(kk, rk, ek))));
+        return Pk ? null : mk(kk, kk.uik(ek.flat()), bk.offInStrict)
+      } catch (Mk) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", Mk), null
+      } finally {
+        rk.destroy()
+      }
+    }
+    async function Pk(kk, ek) {
+      var ik;
+      if (!(0, Dk.shaderPackNeedsCheck)(kk, ek) || (0, Dk.isOtherApiVersion)(kk)) return kk;
+      const fk = await rk(ek, (0, Dk.storedShaderPackFiles)(kk));
+      if (!fk) return kk;
+      const Sk = !1 === (null === (ik = kk.validation) || void 0 === ik ? void 0 : ik.ok) && !kk.validation.fromRecheck,
+        bk = {
+          ...kk,
+          validation: Sk ? fk : {
+            ...fk,
+            fromRecheck: !0
+          }
+        };
+      return await (0, Dk.replaceShaderPack)(kk, bk, ek) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), bk
     }
 
-    function DQ(QQ) {
-      return !QQ.hooks.vertex && !QQ.hooks.surface && !QQ.hooks.light
-    }
-
-    function kQ(QQ, FQ) {
-      return "off" !== FQ && (null === QQ || QQ.some((QQ => QQ.key.strict === ("strict" === FQ) && !DQ(QQ))))
+    function mk(kk, ek, ik) {
+      return {
+        headerVersion: (0, Dk.pageShaderPackValidationVersion)(kk),
+        ok: 0 === ek.length,
+        errors: ek.slice(0, bk),
+        moreErrors: Math.max(0, ek.length - bk),
+        offInStrict: ik
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

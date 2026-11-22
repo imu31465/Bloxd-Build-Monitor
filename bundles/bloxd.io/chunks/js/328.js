@@ -1,231 +1,105 @@
 export const id = 328;
 export const ids = [328];
 export const modules = {
-  41741: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
+  41606: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => bk
     });
-    var LQ = wQ(39251);
-    const qQ = "bakedVertexAnimation",
-      oQ = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\nlet VATStartFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.x;let VATEndFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.y;let VATOffsetFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.z;let VATSpeed: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.w;\n#else\nlet VATStartFrame: f32=uniforms.bakedVertexAnimationSettings.x;let VATEndFrame: f32=uniforms.bakedVertexAnimationSettings.y;let VATOffsetFrame: f32=uniforms.bakedVertexAnimationSettings.z;let VATSpeed: f32=uniforms.bakedVertexAnimationSettings.w;\n#endif\nlet totalFrames: f32=VATEndFrame-VATStartFrame+1.0;let time: f32=uniforms.bakedVertexAnimationTime*VATSpeed/totalFrames;let frameCorrection: f32=select(1.0,0.0,time<1.0);let numOfFrames: f32=totalFrames-frameCorrection;var VATFrameNum: f32=fract(time)*numOfFrames;VATFrameNum=(VATFrameNum+VATOffsetFrame) % numOfFrames;VATFrameNum=floor(VATFrameNum);VATFrameNum=VATFrameNum+VATStartFrame+frameCorrection;var VATInfluence : mat4x4<f32>;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[0],VATFrameNum)*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[1],VATFrameNum)*vertexInputs.matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[2],VATFrameNum)*vertexInputs.matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[3],VATFrameNum)*vertexInputs.matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[0],VATFrameNum)*vertexInputs.matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[1],VATFrameNum)*vertexInputs.matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[2],VATFrameNum)*vertexInputs.matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[3],VATFrameNum)*vertexInputs.matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(39412);
+    const fk = "clipPlaneVertex",
+      Sk = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
+    Dk.d.IncludesShadersStore[fk] || (Dk.d.IncludesShadersStore[fk] = Sk);
+    const bk = {
+      name: fk,
+      shader: Sk
     }
   },
-  41650: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
+  41522: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => bk
     });
-    var LQ = wQ(39251);
-    const qQ = "bakedVertexAnimationDeclaration",
-      oQ = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform bakedVertexAnimationTime: f32;uniform bakedVertexAnimationSettings: vec4<f32>;var bakedVertexAnimationTexture : texture_2d<f32>;\n#ifdef INSTANCES\nattribute bakedVertexAnimationSettingsInstanced : vec4<f32>;\n#endif\nfn readMatrixFromRawSamplerVAT(smp : texture_2d<f32>,index : f32,frame : f32)->mat4x4<f32>\n{let offset=i32(index)*4;let frameUV=i32(frame);let m0=textureLoad(smp,vec2<i32>(offset+0,frameUV),0);let m1=textureLoad(smp,vec2<i32>(offset+1,frameUV),0);let m2=textureLoad(smp,vec2<i32>(offset+2,frameUV),0);let m3=textureLoad(smp,vec2<i32>(offset+3,frameUV),0);return mat4x4<f32>(m0,m1,m2,m3);}\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(39412);
+    const fk = "clipPlaneVertexDeclaration",
+      Sk = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
+    Dk.d.IncludesShadersStore[fk] || (Dk.d.IncludesShadersStore[fk] = Sk);
+    const bk = {
+      name: fk,
+      shader: Sk
     }
   },
-  41646: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
+  41608: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => bk
     });
-    var LQ = wQ(39251);
-    const qQ = "bonesDeclaration",
-      oQ = "#if NUM_BONE_INFLUENCERS>0\n#ifndef USE_VERTEX_PULLING\nattribute matricesIndices : vec4f;attribute matricesWeights : vec4f;\n#if NUM_BONE_INFLUENCERS>4\nattribute matricesIndicesExtra : vec4f;attribute matricesWeightsExtra : vec4f;\n#endif\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nvar boneSampler : texture_2d<f32>;uniform boneTextureInfo : vec2f;\n#else\nuniform mBones : array<mat4x4f,BonesPerMesh>;\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mPreviousBones : array<mat4x4f,BonesPerMesh>;\n#endif\n#ifdef BONETEXTURE\nfn readMatrixFromRawSampler(smp : texture_2d<f32>,index : f32)->mat4x4f\n{let offset=i32(index)*4; \nlet textureWidth=i32(uniforms.boneTextureInfo.x);let y=offset/textureWidth;let x=offset % textureWidth;let m0=textureLoad(smp,vec2<i32>(x+0,y),0);let m1=textureLoad(smp,vec2<i32>(x+1,y),0);let m2=textureLoad(smp,vec2<i32>(x+2,y),0);let m3=textureLoad(smp,vec2<i32>(x+3,y),0);return mat4x4f(m0,m1,m2,m3);}\n#endif\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(39412);
+    const fk = "fogVertex",
+      Sk = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
+    Dk.d.IncludesShadersStore[fk] || (Dk.d.IncludesShadersStore[fk] = Sk);
+    const bk = {
+      name: fk,
+      shader: Sk
     }
   },
-  41733: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
+  41524: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => bk
     });
-    var LQ = wQ(39251);
-    const qQ = "bonesVertex",
-      oQ = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nvar influence : mat4x4<f32>;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[0])*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[1])*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[2])*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[3])*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[0])*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[1])*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[2])*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[3])*vertexInputs.matricesWeightsExtra[3];\n#endif \n#else \ninfluence=uniforms.mBones[i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif \n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(39412);
+    const fk = "fogVertexDeclaration",
+      Sk = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
+    Dk.d.IncludesShadersStore[fk] || (Dk.d.IncludesShadersStore[fk] = Sk);
+    const bk = {
+      name: fk,
+      shader: Sk
     }
   },
-  41760: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
+  41555: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => bk
     });
-    var LQ = wQ(39251);
-    const qQ = "bumpVertex",
-      oQ = "#if defined(BUMP) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nvar tbnNormal: vec3f=normalize(normalUpdated);var tbnTangent: vec3f=normalize(tangentUpdated.xyz);var tbnBitangent: vec3f=cross(tbnNormal,tbnTangent)*tangentUpdated.w;var matTemp= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz)* mat3x3f(tbnTangent,tbnBitangent,tbnNormal);vertexOutputs.vTBN0=matTemp[0];vertexOutputs.vTBN1=matTemp[1];vertexOutputs.vTBN2=matTemp[2];\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(39412);
+    const fk = "logDepthDeclaration",
+      Sk = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
+    Dk.d.IncludesShadersStore[fk] || (Dk.d.IncludesShadersStore[fk] = Sk);
+    const bk = {
+      name: fk,
+      shader: Sk
     }
   },
-  41764: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
+  41624: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => bk
     });
-    var LQ = wQ(39251);
-    const qQ = "clipPlaneVertex",
-      oQ = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(39412);
+    const fk = "logDepthVertex",
+      Sk = "#ifdef LOGARITHMICDEPTH\nvFragmentDepth=1.0+gl_Position.w;gl_Position.z=log2(max(0.000001,vFragmentDepth))*logarithmicDepthConstant;\n#endif\n";
+    Dk.d.IncludesShadersStore[fk] || (Dk.d.IncludesShadersStore[fk] = Sk);
+    const bk = {
+      name: fk,
+      shader: Sk
     }
   },
-  41682: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => DQ
+  60711: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      particlesVertexShader: () => nk
     });
-    var LQ = wQ(39251);
-    const qQ = "clipPlaneVertexDeclaration",
-      oQ = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  61125: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "harmonicsFunctions",
-      oQ = "#ifdef USESPHERICALFROMREFLECTIONMAP\n#ifdef SPHERICAL_HARMONICS\nfn computeEnvironmentIrradiance(normal: vec3f)->vec3f {return uniforms.vSphericalL00\n+ uniforms.vSphericalL1_1*(normal.y)\n+ uniforms.vSphericalL10*(normal.z)\n+ uniforms.vSphericalL11*(normal.x)\n+ uniforms.vSphericalL2_2*(normal.y*normal.x)\n+ uniforms.vSphericalL2_1*(normal.y*normal.z)\n+ uniforms.vSphericalL20*((3.0*normal.z*normal.z)-1.0)\n+ uniforms.vSphericalL21*(normal.z*normal.x)\n+ uniforms.vSphericalL22*(normal.x*normal.x-(normal.y*normal.y));}\n#else\nfn computeEnvironmentIrradiance(normal: vec3f)->vec3f {var Nx: f32=normal.x;var Ny: f32=normal.y;var Nz: f32=normal.z;var C1: vec3f=uniforms.vSphericalZZ.rgb;var Cx: vec3f=uniforms.vSphericalX.rgb;var Cy: vec3f=uniforms.vSphericalY.rgb;var Cz: vec3f=uniforms.vSphericalZ.rgb;var Cxx_zz: vec3f=uniforms.vSphericalXX_ZZ.rgb;var Cyy_zz: vec3f=uniforms.vSphericalYY_ZZ.rgb;var Cxy: vec3f=uniforms.vSphericalXY.rgb;var Cyz: vec3f=uniforms.vSphericalYZ.rgb;var Czx: vec3f=uniforms.vSphericalZX.rgb;var a1: vec3f=Cyy_zz*Ny+Cy;var a2: vec3f=Cyz*Nz+a1;var b1: vec3f=Czx*Nz+Cx;var b2: vec3f=Cxy*Ny+b1;var b3: vec3f=Cxx_zz*Nx+b2;var t1: vec3f=Cz *Nz+C1;var t2: vec3f=a2 *Ny+t1;var t3: vec3f=b3 *Nx+t2;return t3;}\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41653: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "instancesDeclaration",
-      oQ = "#ifdef INSTANCES\nattribute world0 : vec4<f32>;attribute world1 : vec4<f32>;attribute world2 : vec4<f32>;attribute world3 : vec4<f32>;\n#ifdef INSTANCESCOLOR\nattribute instanceColor : vec4<f32>;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute previousWorld0 : vec4<f32>;attribute previousWorld1 : vec4<f32>;attribute previousWorld2 : vec4<f32>;attribute previousWorld3 : vec4<f32>;\n#ifdef THIN_INSTANCES\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41727: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "instancesVertex",
-      oQ = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=mat4x4<f32>(\nvertexInputs.previousWorld0,vertexInputs.previousWorld1,\nvertexInputs.previousWorld2,vertexInputs.previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\n#if !defined(WORLD_UBO)\nfinalWorld=uniforms.world*finalWorld;\n#else\nfinalWorld=mesh.world*finalWorld;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=uniforms.previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nvar finalWorld=uniforms.world;\n#else\nvar finalWorld=mesh.world;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=uniforms.previousWorld;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41721: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "morphTargetsVertex",
-      oQ = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (var i=0; i<NUM_MORPH_INFLUENCERS; i=i+1) {if (f32(i)>=uniforms.morphTargetCount) {break;}\n#ifdef USE_VERTEX_PULLING\nvertexID=f32(vpVertexIndex)*uniforms.morphTargetTextureInfo.x;\n#else\nvertexID=f32(vertexInputs.vertexIndex)*uniforms.morphTargetTextureInfo.x;\n#endif\n#ifdef MORPHTARGETS_POSITION\n#ifdef USE_VERTEX_PULLING\npositionUpdated=positionUpdated+(readVector3FromRawSampler(i,vertexID)-vp_basePosition)*uniforms.morphTargetInfluences[i];\n#else\npositionUpdated=positionUpdated+(readVector3FromRawSampler(i,vertexID)-vertexInputs.position)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\n#ifdef USE_VERTEX_PULLING\nnormalUpdated=normalUpdated+(readVector3FromRawSampler(i,vertexID) -vp_baseNormal)*uniforms.morphTargetInfluences[i];\n#else\nnormalUpdated=normalUpdated+(readVector3FromRawSampler(i,vertexID) -vertexInputs.normal)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_UV\n#ifdef USE_VERTEX_PULLING\nuvUpdated=uvUpdated+(readVector3FromRawSampler(i,vertexID).xy-vp_baseUV)*uniforms.morphTargetInfluences[i];\n#else\nuvUpdated=uvUpdated+(readVector3FromRawSampler(i,vertexID).xy-vertexInputs.uv)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\n#ifdef USE_VERTEX_PULLING\ntangentUpdated=vec4f(tangentUpdated.xyz+(readVector3FromRawSampler(i,vertexID) -vp_baseTangent.xyz)*uniforms.morphTargetInfluences[i],tangentUpdated.a);\n#else\ntangentUpdated=vec4f(tangentUpdated.xyz+(readVector3FromRawSampler(i,vertexID) -vertexInputs.tangent.xyz)*uniforms.morphTargetInfluences[i],tangentUpdated.a);\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\n#ifdef USE_VERTEX_PULLING\nuv2Updated=uv2Updated+(readVector3FromRawSampler(i,vertexID).xy-vp_baseUV2)*uniforms.morphTargetInfluences[i];\n#else\nuv2Updated=uv2Updated+(readVector3FromRawSampler(i,vertexID).xy-vertexInputs.uv2)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETS_COLOR\n#ifdef USE_VERTEX_PULLING\ncolorUpdated=colorUpdated+(readVector4FromRawSampler(i,vertexID)-vp_baseColor)*uniforms.morphTargetInfluences[i];\n#else\ncolorUpdated=colorUpdated+(readVector4FromRawSampler(i,vertexID)-vertexInputs.color)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\n#ifdef USE_VERTEX_PULLING\npositionUpdated=positionUpdated+(vertexInputs.position{X}-vp_basePosition)*uniforms.morphTargetInfluences[{X}];\n#else\npositionUpdated=positionUpdated+(vertexInputs.position{X}-vertexInputs.position)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_NORMAL\n#ifdef USE_VERTEX_PULLING\nnormalUpdated=normalUpdated+(vertexInputs.normal{X}-vp_baseNormal)*uniforms.morphTargetInfluences[{X}];\n#else\nnormalUpdated=normalUpdated+(vertexInputs.normal{X}-vertexInputs.normal)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_TANGENT\n#ifdef USE_VERTEX_PULLING\ntangentUpdated=vec4f(tangentUpdated.xyz+(vertexInputs.tangent{X}-vp_baseTangent.xyz)*uniforms.morphTargetInfluences[{X}],tangentUpdated.a);\n#else\ntangentUpdated=vec4f(tangentUpdated.xyz+(vertexInputs.tangent{X}-vertexInputs.tangent.xyz)*uniforms.morphTargetInfluences[{X}],tangentUpdated.a);\n#endif\n#endif\n#ifdef MORPHTARGETS_UV\n#ifdef USE_VERTEX_PULLING\nuvUpdated=uvUpdated+(vertexInputs.uv_{X}-vp_baseUV)*uniforms.morphTargetInfluences[{X}];\n#else\nuvUpdated=uvUpdated+(vertexInputs.uv_{X}-vertexInputs.uv)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_UV2\n#ifdef USE_VERTEX_PULLING\nuv2Updated=uv2Updated+(vertexInputs.uv2_{X}-vp_baseUV2)*uniforms.morphTargetInfluences[{X}];\n#else\nuv2Updated=uv2Updated+(vertexInputs.uv2_{X}-vertexInputs.uv2)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_COLOR\n#ifdef USE_VERTEX_PULLING\ncolorUpdated=colorUpdated+(vertexInputs.color{X}-vp_baseColor)*uniforms.morphTargetInfluences[{X}];\n#else\ncolorUpdated=colorUpdated+(vertexInputs.color{X}-vertexInputs.color)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41700: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "morphTargetsVertexDeclaration",
-      oQ = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute position{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute normal{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute tangent{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_UV\nattribute uv_{X} : vec2<f32>;\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute uv2_{X} : vec2<f32>;\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute color{X} : vec4<f32>;\n#endif\n#elif {X}==0\nuniform morphTargetCount: f32;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41719: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "morphTargetsVertexGlobal",
-      oQ = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nvar vertexID : f32;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41694: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "morphTargetsVertexGlobalDeclaration",
-      oQ = "#ifdef MORPHTARGETS\nuniform morphTargetInfluences : array<f32,NUM_MORPH_INFLUENCERS>;\n#ifdef MORPHTARGETS_TEXTURE \nuniform morphTargetTextureIndices : array<f32,NUM_MORPH_INFLUENCERS>;uniform morphTargetTextureInfo : vec3<f32>;var morphTargets : texture_2d_array<f32>;fn readVector3FromRawSampler(targetIndex : i32,vertexIndex : f32)->vec3<f32>\n{ \nlet textureWidth: i32=i32(uniforms.morphTargetTextureInfo.y);let y: i32=i32(vertexIndex)/textureWidth;let x: i32=i32(vertexIndex) % textureWidth;return textureLoad(morphTargets,vec2i(x,y),i32(uniforms.morphTargetTextureIndices[targetIndex]),0).xyz;}\nfn readVector4FromRawSampler(targetIndex : i32,vertexIndex : f32)->vec4<f32>\n{ \nlet textureWidth: i32=i32(uniforms.morphTargetTextureInfo.y); \nlet y: i32=i32(vertexIndex)/textureWidth;let x: i32=i32(vertexIndex) % textureWidth;return textureLoad(morphTargets,vec2i(x,y),i32(uniforms.morphTargetTextureIndices[targetIndex]),0);}\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41616: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "sceneUboDeclaration",
-      oQ = "struct Scene {viewProjection : mat4x4<f32>,\n#ifdef MULTIVIEW\nviewProjectionR : mat4x4<f32>,\n#endif \nview : mat4x4<f32>,\nprojection : mat4x4<f32>,\nvEyePosition : vec4<f32>,\ninverseProjection : mat4x4<f32>,};\n#define SCENE_UBO\nvar<uniform> scene : Scene;\n";
-    LQ.c.IncludesShadersStoreWGSL[qQ] || (LQ.c.IncludesShadersStoreWGSL[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  61329: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      geometryVertexShaderWGSL: () => CQ
-    });
-    var LQ = wQ(39251),
-      qQ = wQ(41646),
-      oQ = wQ(41650),
-      DQ = wQ(41694),
-      kQ = wQ(41700),
-      vQ = wQ(41653),
-      mQ = wQ(41616),
-      uQ = wQ(41682),
-      HQ = wQ(61125),
-      bQ = wQ(41719),
-      YQ = wQ(41721),
-      xQ = wQ(41727),
-      AQ = wQ(41733),
-      tQ = wQ(41741),
-      eQ = wQ(41764),
-      MQ = wQ(41760);
-    const GQ = "geometryVertexShader",
-      pQ = "#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<morphTargetsVertexGlobalDeclaration>\n#include<morphTargetsVertexDeclaration>[0..maxSimultaneousMorphTargets]\n#include<instancesDeclaration>\n#include<sceneUboDeclaration>\n#include<clipPlaneVertexDeclaration>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\nuniform reflectionMatrix: mat4x4f;uniform vReflectionInfos: vec2f;uniform vReflectionColor: vec3f;\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvarying vEnvironmentIrradiance: vec3f;\n#ifdef SPHERICAL_HARMONICS\nuniform vSphericalL00: vec3f;uniform vSphericalL1_1: vec3f;uniform vSphericalL10: vec3f;uniform vSphericalL11: vec3f;uniform vSphericalL2_2: vec3f;uniform vSphericalL2_1: vec3f;uniform vSphericalL20: vec3f;uniform vSphericalL21: vec3f;uniform vSphericalL22: vec3f;\n#else\nuniform vSphericalX: vec3f;uniform vSphericalY: vec3f;uniform vSphericalZ: vec3f;uniform vSphericalXX_ZZ: vec3f;uniform vSphericalYY_ZZ: vec3f;uniform vSphericalZZ: vec3f;uniform vSphericalXY: vec3f;uniform vSphericalYZ: vec3f;uniform vSphericalZX: vec3f;\n#endif\n#include<harmonicsFunctions>\n#endif\n#endif\n#endif\nattribute position : vec3<f32>;\n#ifdef HAS_NORMAL_ATTRIBUTE\nattribute normal: vec3f;\n#endif\n#ifdef NEED_UV\nvarying vUV: vec2f;\n#ifdef ALPHATEST\nuniform diffuseMatrix: mat4x4f;\n#endif\n#ifdef BUMP\nuniform bumpMatrix: mat4x4f;varying vBumpUV: vec2f;\n#endif\n#ifdef REFLECTIVITY\nuniform reflectivityMatrix: mat4x4f;uniform albedoMatrix: mat4x4f;varying vReflectivityUV: vec2f;varying vAlbedoUV: vec2f;\n#endif\n#ifdef METALLIC_TEXTURE\nvarying vMetallicUV: vec2f;uniform metallicMatrix: mat4x4f;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nvarying vRoughnessUV: vec2f;uniform roughnessMatrix: mat4x4f;\n#endif\n#ifdef SUBSURFACE_WEIGHT\nvarying vSubsurfaceWeightUV: vec2f;uniform subsurfaceWeightMatrix: mat4x4f;\n#endif\n#ifdef TRANSMISSION_WEIGHT\nvarying vTransmissionWeightUV: vec2f;uniform transmissionWeightMatrix: mat4x4f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#endif\n#ifdef BUMP\nvarying vWorldView0: vec4f;varying vWorldView1: vec4f;varying vWorldView2: vec4f;varying vWorldView3: vec4f;\n#endif\n#ifdef BUMP\nvarying vNormalW: vec3f;\n#else\nvarying vNormalV: vec3f;\n#endif\nvarying vViewPos: vec4f;\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvarying vPositionW: vec3f;\n#endif\n#if defined(VELOCITY) || defined(VELOCITY_LINEAR)\nuniform previousViewProjection: mat4x4f;varying vCurrentPosition: vec4f;varying vPreviousPosition: vec4f;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {var positionUpdated: vec3f=vertexInputs.position;\n#ifdef HAS_NORMAL_ATTRIBUTE\nvar normalUpdated: vec3f=vertexInputs.normal;\n#else\nvar normalUpdated: vec3f=vec3f(0.0,0.0,0.0);\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#include<morphTargetsVertexGlobal>\n#include<morphTargetsVertex>[0..maxSimultaneousMorphTargets]\n#include<instancesVertex>\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && !defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=scene.viewProjection*finalWorld*vec4f(positionUpdated,1.0);vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld* vec4f(positionUpdated,1.0);\n#endif\n#include<bonesVertex>\n#include<bakedVertexAnimation>\nvar worldPos: vec4f= vec4f(finalWorld* vec4f(positionUpdated,1.0));\n#ifdef BUMP\nlet vWorldView=scene.view*finalWorld;vertexOutputs.vWorldView0=vWorldView[0];vertexOutputs.vWorldView1=vWorldView[1];vertexOutputs.vWorldView2=vWorldView[2];vertexOutputs.vWorldView3=vWorldView[3];let normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);vertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#else\n#ifdef NORMAL_WORLDSPACE\nvertexOutputs.vNormalV=normalize((finalWorld* vec4f(normalUpdated,0.0)).xyz);\n#else\nvertexOutputs.vNormalV=normalize(((scene.view*finalWorld)* vec4f(normalUpdated,0.0)).xyz);\n#endif\n#endif\nvertexOutputs.vViewPos=scene.view*worldPos;\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvertexOutputs.vCurrentPosition=scene.viewProjection*finalWorld* vec4f(positionUpdated,1.0);\n#if NUM_BONE_INFLUENCERS>0\nvar previousInfluence: mat4x4f;previousInfluence=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif\nvertexOutputs.vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld*previousInfluence* vec4f(positionUpdated,1.0);\n#else\nvertexOutputs.vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld* vec4f(positionUpdated,1.0);\n#endif\n#endif\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvertexOutputs.vPositionW=worldPos.xyz/worldPos.w;\n#endif\nvertexOutputs.position=scene.viewProjection*finalWorld* vec4f(positionUpdated,1.0);\n#include<clipPlaneVertex>\n#ifdef NEED_UV\n#ifdef UV1\n#if defined(ALPHATEST) && defined(ALPHATEST_UV1)\nvertexOutputs.vUV=(uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#else\nvertexOutputs.vUV=uvUpdated;\n#endif\n#ifdef BUMP_UV1\nvertexOutputs.vBumpUV=(uniforms.bumpMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#ifdef REFLECTIVITY_UV1\nvertexOutputs.vReflectivityUV=(uniforms.reflectivityMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#else\n#ifdef METALLIC_UV1\nvertexOutputs.vMetallicUV=(uniforms.metallicMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#ifdef ROUGHNESS_UV1\nvertexOutputs.vRoughnessUV=(uniforms.roughnessMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#endif\n#ifdef ALBEDO_UV1\nvertexOutputs.vAlbedoUV=(uniforms.albedoMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV1\nvertexOutputs.vSubsurfaceWeightUV=(uniforms.subsurfaceWeightMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#ifdef TRANSMISSION_WEIGHT_UV1\nvertexOutputs.vTransmissionWeightUV=(uniforms.transmissionWeightMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#endif\n#ifdef UV2\n#if defined(ALPHATEST) && defined(ALPHATEST_UV2)\nvertexOutputs.vUV=(uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#else\nvertexOutputs.vUV=uv2Updated;\n#endif\n#ifdef BUMP_UV2\nvertexOutputs.vBumpUV=(uniforms.bumpMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#ifdef REFLECTIVITY_UV2\nvertexOutputs.vReflectivityUV=(uniforms.reflectivityMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#else\n#ifdef METALLIC_UV2\nvertexOutputs.vMetallicUV=(uniforms.metallicMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#ifdef ROUGHNESS_UV2\nvertexOutputs.vRoughnessUV=(uniforms.roughnessMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#endif\n#ifdef ALBEDO_UV2\nvertexOutputs.vAlbedoUV=(uniforms.albedoMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV2\nvertexOutputs.vSubsurfaceWeightUV=(uniforms.subsurfaceWeightMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#ifdef TRANSMISSION_WEIGHT_UV2\nvertexOutputs.vTransmissionWeightUV=(uniforms.transmissionWeightMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#endif\n#endif\n#include<bumpVertex>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvar reflectionVector: vec3f=(uniforms.reflectionMatrix*vec4f(normalUpdated,0.0)).xyz;\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0f;\n#endif\nvertexOutputs.vEnvironmentIrradiance=computeEnvironmentIrradiance(reflectionVector)*uniforms.vReflectionInfos.x;\n#endif\n#endif\n#endif\n}\n";
-    LQ.c.ShadersStoreWGSL[GQ] || (LQ.c.ShadersStoreWGSL[GQ] = pQ);
-    const cQ = [qQ.b, oQ.b, DQ.b, kQ.c, vQ.e, mQ.c, uQ.d, HQ.e, bQ.b, YQ.e, xQ.e, AQ.b, tQ.b, eQ.e, MQ.b];
-    for (const SQ of cQ) LQ.c.IncludesShadersStoreWGSL[SQ.name] || (LQ.c.IncludesShadersStoreWGSL[SQ.name] = SQ.shader);
-    const CQ = {
-      name: GQ,
-      shader: pQ
+    var Dk = ik(39412),
+      fk = ik(41522),
+      Sk = ik(41524),
+      bk = ik(41555),
+      rk = ik(41606),
+      Pk = ik(41608),
+      mk = ik(41624);
+    const Mk = "particlesVertexShader",
+      Kk = "attribute vec3 position;attribute vec4 color;attribute float angle;attribute vec2 size;\n#ifdef ANIMATESHEET\nattribute float cellIndex;\n#endif\n#ifndef BILLBOARD\nattribute vec3 direction;\n#endif\n#ifdef BILLBOARDSTRETCHED\nattribute vec3 direction;\n#endif\n#ifdef RAMPGRADIENT\nattribute vec4 remapData;\n#endif\nattribute vec2 offset;uniform mat4 view;uniform mat4 projection;uniform vec2 translationPivot;\n#ifdef PREPASS\nuniform vec2 cameraInfo;\n#if defined(LOCAL) && defined(PREPASS_LOCAL_POSITION)\nuniform mat4 inverseEmitterWM;uniform vec3 geometryWorldOffset;\n#endif\n#ifdef PREPASS_POSITION\nvarying vec3 vGeometryPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvarying vec3 vGeometryNormalW;\n#endif\n#ifdef PREPASS_NORMAL\nvarying vec3 vGeometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvarying vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying float vNormViewDepth;\n#endif\n#endif\n#ifdef ANIMATESHEET\nuniform vec3 particlesInfos; \n#endif\nvarying vec2 vUV;varying vec4 vColor;\n#ifdef POSITIONW_AS_VARYING\nvarying vec3 vPositionW;\n#endif\n#ifdef RAMPGRADIENT\nvarying vec4 remapRanges;\n#endif\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\nuniform mat4 invView;\n#endif\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#include<logDepthDeclaration>\n#ifdef BILLBOARD\nuniform vec3 eyePosition;\n#endif\nvec3 rotate(vec3 yaxis,vec3 rotatedCorner) {vec3 xaxis=normalize(cross(vec3(0.,1.0,0.),yaxis));vec3 zaxis=normalize(cross(yaxis,xaxis));vec3 row0=vec3(xaxis.x,xaxis.y,xaxis.z);vec3 row1=vec3(yaxis.x,yaxis.y,yaxis.z);vec3 row2=vec3(zaxis.x,zaxis.y,zaxis.z);mat3 rotMatrix= mat3(row0,row1,row2);vec3 alignedCorner=rotMatrix*rotatedCorner;return position+alignedCorner;}\n#ifdef BILLBOARDSTRETCHED\nvec3 rotateAlign(vec3 toCamera,vec3 rotatedCorner) {vec3 normalizedToCamera=normalize(toCamera);vec3 normalizedCrossDirToCamera=normalize(cross(normalize(direction),normalizedToCamera));vec3 row0=vec3(normalizedCrossDirToCamera.x,normalizedCrossDirToCamera.y,normalizedCrossDirToCamera.z);vec3 row2=vec3(normalizedToCamera.x,normalizedToCamera.y,normalizedToCamera.z);\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvec3 row1=normalize(direction);\n#else\nvec3 crossProduct=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));vec3 row1=vec3(crossProduct.x,crossProduct.y,crossProduct.z);\n#endif\nmat3 rotMatrix= mat3(row0,row1,row2);vec3 alignedCorner=rotMatrix*rotatedCorner;return position+alignedCorner;}\nvec3 stretchedNormal(vec3 toCamera,vec3 stretchDirection) {vec3 normalizedToCamera=normalize(toCamera);vec3 normalizedCrossDirToCamera=normalize(cross(normalize(stretchDirection),normalizedToCamera));\n#ifdef BILLBOARDSTRETCHED_LOCAL\nvec3 row1=normalize(stretchDirection);\n#else\nvec3 row1=normalize(cross(normalizedToCamera,normalizedCrossDirToCamera));\n#endif\nreturn normalize(cross(normalizedCrossDirToCamera,row1));}\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvec2 cornerPos;\n#ifndef POSITIONW_AS_VARYING\nvec3 vPositionW;\n#endif\n#ifdef PREPASS\nvec3 geometryNormalW;\n#endif\ncornerPos=(vec2(offset.x-0.5,offset.y -0.5)-translationPivot)*size;\n#ifdef BILLBOARD\nvec3 rotatedCorner;\n#ifdef BILLBOARDY\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.z=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.y=0.;rotatedCorner.xz+=translationPivot;vec3 yaxis=position-eyePosition;yaxis.y=0.;vPositionW=rotate(normalize(yaxis),rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=normalize(yaxis);\n#endif\nvec3 viewPos=(view*vec4(vPositionW,1.0)).xyz;\n#elif defined(BILLBOARDSTRETCHED)\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.y=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.z=0.;rotatedCorner.xy+=translationPivot;vec3 toCamera=position-eyePosition;vPositionW=rotateAlign(toCamera,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=stretchedNormal(toCamera,direction);\n#endif\nvec3 viewPos=(view*vec4(vPositionW,1.0)).xyz;\n#else\nrotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.y=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.z=0.;rotatedCorner.xy+=translationPivot;vec3 viewPos=(view*vec4(position,1.0)).xyz+rotatedCorner;vPositionW=(invView*vec4(viewPos,1)).xyz;\n#ifdef PREPASS\ngeometryNormalW=normalize((invView*vec4(0.0,0.0,1.0,0.0)).xyz);\n#endif\n#endif\n#ifdef RAMPGRADIENT\nremapRanges=remapData;\n#endif\ngl_Position=projection*vec4(viewPos,1.0);\n#else\nvec3 rotatedCorner;rotatedCorner.x=cornerPos.x*cos(angle)-cornerPos.y*sin(angle);rotatedCorner.z=cornerPos.x*sin(angle)+cornerPos.y*cos(angle);rotatedCorner.y=0.;rotatedCorner.xz+=translationPivot;vec3 yaxis=normalize(direction);vPositionW=rotate(yaxis,rotatedCorner);\n#ifdef PREPASS\ngeometryNormalW=yaxis;\n#endif\ngl_Position=projection*view*vec4(vPositionW,1.0);\n#endif\nvColor=color;\n#ifdef ANIMATESHEET\nfloat rowOffset=floor(cellIndex*particlesInfos.z);float columnOffset=cellIndex-rowOffset/particlesInfos.z;vec2 uvScale=particlesInfos.xy;vec2 uvOffset=vec2(offset.x ,1.0-offset.y);vUV=(uvOffset+vec2(columnOffset,rowOffset))*uvScale;\n#else\nvUV=offset;\n#endif\n#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6) || defined(FOG)\nvec4 worldPos=vec4(vPositionW,1.0);\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<logDepthVertex>\n#ifdef PREPASS\nvec4 geometryViewPosition=view*vec4(vPositionW,1.0);\n#if defined(PREPASS_NORMAL) || defined(PREPASS_WORLD_NORMAL)\nvec3 geometryNormalV=normalize((view*vec4(geometryNormalW,0.0)).xyz);vec3 geometryViewDirection=projection[3][3]==0.0 ? geometryViewPosition.xyz : vec3(0.0,0.0,geometryViewPosition.z);if (dot(geometryNormalV,geometryViewDirection)>0.0) {geometryNormalV=-geometryNormalV;geometryNormalW=-geometryNormalW;}\n#endif\n#ifdef PREPASS_POSITION\nvGeometryPositionW=vPositionW;\n#endif\n#ifdef PREPASS_WORLD_NORMAL\nvGeometryNormalW=normalize(geometryNormalW);\n#endif\n#ifdef PREPASS_NORMAL\nvGeometryNormalV=geometryNormalV;\n#endif\n#ifdef PREPASS_LOCAL_POSITION\n#ifdef LOCAL\nvec3 geometryRenderPosition=vPositionW;\n#if defined(BILLBOARD) && !defined(BILLBOARDY) && !defined(BILLBOARDSTRETCHED)\ngeometryRenderPosition=position+(invView*vec4(rotatedCorner,0.0)).xyz;\n#endif\nvPosition=(inverseEmitterWM*vec4(geometryRenderPosition-geometryWorldOffset,1.0)).xyz;\n#else\nvPosition=vPositionW;\n#endif\n#endif\n#ifdef PREPASS_DEPTH\nvViewPos=geometryViewPosition.xyz;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvNormViewDepth=(geometryViewPosition.z-cameraInfo.x)/(cameraInfo.y-cameraInfo.x);\n#endif\n#endif\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Dk.d.ShadersStore[Mk] || (Dk.d.ShadersStore[Mk] = Kk);
+    const xk = [fk.e, Sk.e, bk.b, rk.c, Pk.b, mk.b];
+    for (const Uk of xk) Dk.d.IncludesShadersStore[Uk.name] || (Dk.d.IncludesShadersStore[Uk.name] = Uk.shader);
+    const nk = {
+      name: Mk,
+      shader: Kk
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

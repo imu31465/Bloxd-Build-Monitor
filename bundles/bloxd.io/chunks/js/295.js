@@ -1,4409 +1,7363 @@
 export const id = 295;
 export const ids = [295];
 export const modules = {
-  41021: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => oQ
+  40950: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Dk
     });
-    var LQ = wQ(39518),
-      qQ = wQ(41027);
-    class oQ {
-      constructor(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2;
-        this.maxDepth = wQ, this.fLQ = [], this._maxBlockCapacity = FQ || 64, this._selectionContent = new LQ.b(1024), this._creationFunc = QQ
-      }
-      update(QQ, FQ, wQ) {
-        qQ.e._CreateBlocks(QQ, FQ, wQ, this._maxBlockCapacity, 0, this.maxDepth, this, this._creationFunc)
-      }
-      sLQ(QQ) {
-        for (let FQ = 0; FQ < this.blocks.length; FQ++) {
-          this.blocks[FQ].addEntry(QQ)
-        }
-      }
-      yN(QQ) {
-        for (let FQ = 0; FQ < this.blocks.length; FQ++) {
-          this.blocks[FQ].removeEntry(QQ)
-        }
-      }
-      select(QQ, FQ) {
-        this._selectionContent.reset();
-        for (let wQ = 0; wQ < this.blocks.length; wQ++) {
-          this.blocks[wQ].select(QQ, this._selectionContent, FQ)
-        }
-        return FQ ? this._selectionContent.concat(this.fLQ) : this._selectionContent.concatWithNoDuplicate(this.fLQ), this._selectionContent
-      }
-      intersects(QQ, FQ, wQ) {
-        this._selectionContent.reset();
-        for (let LQ = 0; LQ < this.blocks.length; LQ++) {
-          this.blocks[LQ].intersects(QQ, FQ, this._selectionContent, wQ)
-        }
-        return wQ ? this._selectionContent.concat(this.fLQ) : this._selectionContent.concatWithNoDuplicate(this.fLQ), this._selectionContent
-      }
-      intersectsRay(QQ) {
-        this._selectionContent.reset();
-        for (let FQ = 0; FQ < this.blocks.length; FQ++) {
-          this.blocks[FQ].intersectsRay(QQ, this._selectionContent)
-        }
-        return this._selectionContent.concatWithNoDuplicate(this.fLQ), this._selectionContent
-      }
-    }
-    oQ.CreationFuncForMeshes = (QQ, FQ) => {
-      const wQ = QQ.sK();
-      !QQ.isBlocked && wQ.boundingBox.intersectsMinMax(FQ.TLQ, FQ.NLQ) && FQ.entries.push(QQ)
-    }, oQ.CreationFuncForSubMeshes = (QQ, FQ) => {
-      QQ.sK().boundingBox.intersectsMinMax(FQ.TLQ, FQ.NLQ) && FQ.entries.push(QQ)
-    }
-  },
-  41027: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => oQ
-    });
-    var LQ = wQ(36696),
-      qQ = wQ(39736);
-    class oQ {
-      constructor(QQ, FQ, wQ, LQ, qQ, oQ) {
-        this.entries = [], this.hLQ = new Array, this._capacity = wQ, this._depth = LQ, this._maxDepth = qQ, this._creationFunc = oQ, this._minPoint = QQ, this._maxPoint = FQ, this.hLQ.push(QQ.clone()), this.hLQ.push(FQ.clone()), this.hLQ.push(QQ.clone()), this.hLQ[2].x = FQ.x, this.hLQ.push(QQ.clone()), this.hLQ[3].y = FQ.y, this.hLQ.push(QQ.clone()), this.hLQ[4].z = FQ.z, this.hLQ.push(FQ.clone()), this.hLQ[5].z = QQ.z, this.hLQ.push(FQ.clone()), this.hLQ[6].x = QQ.x, this.hLQ.push(FQ.clone()), this.hLQ[7].y = QQ.y
-      }
-      get MH() {
-        return this._capacity
-      }
-      get TLQ() {
-        return this._minPoint
-      }
-      get NLQ() {
-        return this._maxPoint
-      }
-      addEntry(QQ) {
-        if (this.blocks)
-          for (let FQ = 0; FQ < this.blocks.length; FQ++) {
-            this.blocks[FQ].addEntry(QQ)
-          } else this._creationFunc(QQ, this), this.entries.length > this.MH && this._depth < this._maxDepth && this.createInnerBlocks()
-      }
-      removeEntry(QQ) {
-        if (this.blocks) {
-          for (let FQ = 0; FQ < this.blocks.length; FQ++) {
-            this.blocks[FQ].removeEntry(QQ)
-          }
-          return
-        }
-        const FQ = this.entries.indexOf(QQ);
-        FQ > -1 && this.entries.splice(FQ, 1)
-      }
-      addEntries(QQ) {
-        for (let FQ = 0; FQ < QQ.length; FQ++) {
-          const wQ = QQ[FQ];
-          this.addEntry(wQ)
-        }
-      }
-      select(QQ, FQ, wQ) {
-        if (qQ.e.IsInFrustum(this.hLQ, QQ)) {
-          if (this.blocks) {
-            for (let LQ = 0; LQ < this.blocks.length; LQ++) {
-              this.blocks[LQ].select(QQ, FQ, wQ)
-            }
-            return
-          }
-          wQ ? FQ.concat(this.entries) : FQ.concatWithNoDuplicate(this.entries)
-        }
-      }
-      intersects(QQ, FQ, wQ, LQ) {
-        if (qQ.e.IntersectsSphere(this._minPoint, this._maxPoint, QQ, FQ)) {
-          if (this.blocks) {
-            for (let qQ = 0; qQ < this.blocks.length; qQ++) {
-              this.blocks[qQ].intersects(QQ, FQ, wQ, LQ)
-            }
-            return
-          }
-          LQ ? wQ.concat(this.entries) : wQ.concatWithNoDuplicate(this.entries)
-        }
-      }
-      intersectsRay(QQ, FQ) {
-        if (QQ.intersectsBoxMinMax(this._minPoint, this._maxPoint)) {
-          if (this.blocks) {
-            for (let wQ = 0; wQ < this.blocks.length; wQ++) {
-              this.blocks[wQ].intersectsRay(QQ, FQ)
-            }
-            return
-          }
-          FQ.concatWithNoDuplicate(this.entries)
-        }
-      }
-      createInnerBlocks() {
-        oQ._CreateBlocks(this._minPoint, this._maxPoint, this.entries, this._capacity, this._depth, this._maxDepth, this, this._creationFunc), this.entries.splice(0)
-      }
-      static _CreateBlocks(QQ, FQ, wQ, qQ, DQ, kQ, vQ, mQ) {
-        vQ.blocks = new Array;
-        const uQ = new LQ.p((FQ.x - QQ.x) / 2, (FQ.y - QQ.y) / 2, (FQ.z - QQ.z) / 2);
-        for (let LQ = 0; LQ < 2; LQ++)
-          for (let FQ = 0; FQ < 2; FQ++)
-            for (let HQ = 0; HQ < 2; HQ++) {
-              const bQ = QQ.add(uQ.multiplyByFloats(LQ, FQ, HQ)),
-                YQ = QQ.add(uQ.multiplyByFloats(LQ + 1, FQ + 1, HQ + 1)),
-                xQ = new oQ(bQ, YQ, qQ, DQ + 1, kQ, mQ);
-              xQ.addEntries(wQ), vQ.blocks.push(xQ)
-            }
-      }
-    }
-  },
-  41033: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => uQ
-    });
-    var LQ = wQ(39496),
-      qQ = wQ(36696),
-      oQ = wQ(39855),
-      DQ = wQ(40972),
-      kQ = wQ(39589),
-      vQ = wQ(36720),
-      mQ = wQ(41021);
-    class uQ {
-      constructor(QQ) {
-        this.name = kQ.b.NAME_OCTREE, this.checksIsEnabled = !0, this._tempRay = new DQ.A(qQ.p.Zero(), new qQ.p(1, 1, 1)), (QQ = QQ || vQ.d.LastCreatedScene) && (this.lA = QQ, this.lA.getActiveMeshCandidates = () => this.getActiveMeshCandidates(), this.lA.getActiveSubMeshCandidates = QQ => this.getActiveSubMeshCandidates(QQ), this.lA.getCollidingSubMeshCandidates = (QQ, FQ) => this.getCollidingSubMeshCandidates(QQ, FQ), this.lA.getIntersectingSubMeshCandidates = (QQ, FQ) => this.getIntersectingSubMeshCandidates(QQ, FQ))
-      }
-      register() {
-        this.lA.onMeshRemovedObservable.add((QQ => {
-          const FQ = this.lA.selectionOctree;
-          if (void 0 !== FQ && null !== FQ) {
-            const wQ = FQ.fLQ.indexOf(QQ); - 1 !== wQ && FQ.fLQ.splice(wQ, 1)
-          }
-        })), this.lA.onMeshImportedObservable.add((QQ => {
-          const FQ = this.lA.selectionOctree;
-          void 0 !== FQ && null !== FQ && FQ.sLQ(QQ)
-        }))
-      }
-      getActiveMeshCandidates() {
-        return this.lA.ZLQ?.select(this.lA.frustumPlanes) || this.lA._getDefaultMeshCandidates()
-      }
-      getActiveSubMeshCandidates(QQ) {
-        if (QQ._submeshesOctree && QQ.useOctreeForRenderingSelection) {
-          return QQ._submeshesOctree.select(this.lA.frustumPlanes)
-        }
-        return this.lA._getDefaultSubMeshCandidates(QQ)
-      }
-      getIntersectingSubMeshCandidates(QQ, FQ) {
-        if (QQ._submeshesOctree && QQ.useOctreeForPicking) {
-          DQ.A.TransformToRef(FQ, QQ.getWorldMatrix(), this._tempRay);
-          return QQ._submeshesOctree.intersectsRay(this._tempRay)
-        }
-        return this.lA._getDefaultSubMeshCandidates(QQ)
-      }
-      getCollidingSubMeshCandidates(QQ, FQ) {
-        if (QQ._submeshesOctree && QQ.useOctreeForCollisions) {
-          const wQ = FQ._velocityWorldLength + Math.max(FQ._radius.x, FQ._radius.y, FQ._radius.z);
-          return QQ._submeshesOctree.intersects(FQ._basePointWorld, wQ)
-        }
-        return this.lA._getDefaultSubMeshCandidates(QQ)
-      }
-      rebuild() {}
-      dispose() {}
-    }
-    let HQ = !1;
-    HQ || (HQ = !0, LQ.e.prototype.createOrUpdateSelectionOctree = function() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
-        FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2,
-        wQ = this._getComponent(kQ.b.NAME_OCTREE);
-      wQ || (wQ = new uQ(this), this.HLQ(wQ)), this.ZLQ || (this.ZLQ = new mQ.e(mQ.e.CreationFuncForMeshes, QQ, FQ));
-      const LQ = this.getWorldExtends();
-      return this.ZLQ.update(LQ.min, LQ.max, this.meshes), this.ZLQ
-    }, Object.defineProperty(LQ.e.prototype, "selectionOctree", {
-      get: function() {
-        return this.ZLQ
-      },
-      enumerable: !0,
-      configurable: !0
-    }), oQ.c.prototype.createOrUpdateSubmeshesOctree = function() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
-        FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const wQ = this.iN();
-      let LQ = wQ._getComponent(kQ.b.NAME_OCTREE);
-      LQ || (LQ = new uQ(wQ), wQ.HLQ(LQ)), this._submeshesOctree || (this._submeshesOctree = new mQ.e(mQ.e.CreationFuncForSubMeshes, QQ, FQ)), this.computeWorldMatrix(!0);
-      const qQ = this.sK().boundingBox;
-      return this._submeshesOctree.update(qQ.minimumWorld, qQ.maximumWorld, this.lC), this._submeshesOctree
-    })
-  },
-  40972: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      A: () => HQ,
-      e: () => rQ,
-      g: () => AQ,
-      i: () => xQ,
-      k: () => YQ,
-      l: () => OQ,
-      o: () => RQ,
-      r: () => SQ,
-      s: () => WQ,
-      w: () => iQ
-    });
-    var LQ = wQ(36705),
-      qQ = wQ(36696),
-      oQ = wQ(36709),
-      DQ = wQ(39729),
-      kQ = wQ(39552),
-      vQ = wQ(36720),
-      mQ = wQ(39617);
-    const uQ = {
-      internalPickerForMesh: void 0
+    const Dk = String.raw`interface Map<K, V> {
+    clear(): void;
+    /**
+     * @returns true if an element in the Map existed and has been removed, or false if the element does not exist.
+     */
+    delete(key: K): boolean;
+    /**
+     * Executes a provided function once per each key/value pair in the Map, in insertion order.
+     */
+    forEach(callbackfn: (value: V, key: K, map: Map<K, V>) => void, thisArg?: any): void;
+    /**
+     * Returns a specified element from the Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map.
+     * @returns Returns the element associated with the specified key. If no element is associated with the specified key, undefined is returned.
+     */
+    get(key: K): V | undefined;
+    /**
+     * @returns boolean indicating whether an element with the specified key exists or not.
+     */
+    has(key: K): boolean;
+    /**
+     * Adds a new element with a specified key and value to the Map. If an element with the same key already exists, the element will be updated.
+     */
+    set(key: K, value: V): this;
+    /**
+     * @returns the number of elements in the Map.
+     */
+    readonly size: number;
+}
+
+interface MapConstructor {
+    new (): Map<any, any>;
+    new <K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>;
+    readonly prototype: Map<any, any>;
+}
+
+interface Set<T> {
+    /**
+     * Appends a new element with a specified value to the end of the Set.
+     */
+    add(value: T): this;
+
+    clear(): void;
+    /**
+     * Removes a specified value from the Set.
+     * @returns Returns true if an element in the Set existed and has been removed, or false if the element does not exist.
+     */
+    delete(value: T): boolean;
+    /**
+     * Executes a provided function once per each value in the Set object, in insertion order.
+     */
+    forEach(callbackfn: (value: T, value2: T, set: Set<T>) => void, thisArg?: any): void;
+    /**
+     * @returns a boolean indicating whether an element with the specified value exists in the Set or not.
+     */
+    has(value: T): boolean;
+    /**
+     * @returns the number of (unique) elements in Set.
+     */
+    readonly size: number;
+}
+
+interface SetConstructor {
+    new <T = any>(values?: readonly T[] | null): Set<T>;
+    readonly prototype: Set<any>;
+}
+
+declare var Map: MapConstructor;
+
+declare var Set: SetConstructor;
+
+interface Array<T> {
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find<S extends T>(predicate: (value: T, index: number, obj: T[]) => value is S, thisArg?: any): S | undefined;
+    find(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): T | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: T, index: number, obj: T[]) => unknown, thisArg?: any): number;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: T, start?: number, end?: number): this;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions & Intl.DateTimeFormatOptions): string;
+}
+
+interface ArrayConstructor {
+    /**
+     * Creates an array from an array-like object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from<T>(arrayLike: ArrayLike<T>): T[];
+
+    /**
+     * Creates an array from an iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T, U>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any): U[];
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of<T>(...items: T[]): T[];
+}
+
+interface Function {
+    /**
+     * Returns the name of the function. Function names are read-only and can not be changed.
+     */
+    readonly name: string;
+}
+
+interface Math {
+    /**
+     * Returns the number of leading zero bits in the 32-bit binary representation of a number.
+     * @param x A numeric expression.
+     */
+    clz32(x: number): number;
+
+    /**
+     * Returns the result of 32-bit multiplication of two numbers.
+     * @param x First number
+     * @param y Second number
+     */
+    imul(x: number, y: number): number;
+
+    /**
+     * Returns the sign of the x, indicating whether x is positive, negative or zero.
+     * @param x The numeric expression to test
+     */
+    sign(x: number): number;
+
+    /**
+     * Returns the base 10 logarithm of a number.
+     * @param x A numeric expression.
+     */
+    log10(x: number): number;
+
+    /**
+     * Returns the base 2 logarithm of a number.
+     * @param x A numeric expression.
+     */
+    log2(x: number): number;
+
+    /**
+     * Returns the natural logarithm of 1 + x.
+     * @param x A numeric expression.
+     */
+    log1p(x: number): number;
+
+    /**
+     * Returns the result of (e^x - 1), which is an implementation-dependent approximation to
+     * subtracting 1 from the exponential function of x (e raised to the power of x, where e
+     * is the base of the natural logarithms).
+     * @param x A numeric expression.
+     */
+    expm1(x: number): number;
+
+    /**
+     * Returns the hyperbolic cosine of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    cosh(x: number): number;
+
+    /**
+     * Returns the hyperbolic sine of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    sinh(x: number): number;
+
+    /**
+     * Returns the hyperbolic tangent of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    tanh(x: number): number;
+
+    /**
+     * Returns the inverse hyperbolic cosine of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    acosh(x: number): number;
+
+    /**
+     * Returns the inverse hyperbolic sine of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    asinh(x: number): number;
+
+    /**
+     * Returns the inverse hyperbolic tangent of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    atanh(x: number): number;
+
+    /**
+     * Returns the square root of the sum of squares of its arguments.
+     * @param values Values to compute the square root for.
+     *     If no arguments are passed, the result is +0.
+     *     If there is only one argument, the result is the absolute value.
+     *     If any argument is +Infinity or -Infinity, the result is +Infinity.
+     *     If any argument is NaN, the result is NaN.
+     *     If all arguments are either +0 or −0, the result is +0.
+     */
+    hypot(...values: number[]): number;
+
+    /**
+     * Returns the integral part of the a numeric expression, x, removing any fractional digits.
+     * If x is already an integer, the result is x.
+     * @param x A numeric expression.
+     */
+    trunc(x: number): number;
+
+    /**
+     * Returns the nearest single precision float representation of a number.
+     * @param x A numeric expression.
+     */
+    fround(x: number): number;
+
+    /**
+     * Returns an implementation-dependent approximation to the cube root of number.
+     * @param x A numeric expression.
+     */
+    cbrt(x: number): number;
+}
+
+interface NumberConstructor {
+    /**
+     * The value of Number.EPSILON is the difference between 1 and the smallest value greater than 1
+     * that is representable as a Number value, which is approximately:
+     * 2.2204460492503130808472633361816 x 10‍−‍16.
+     */
+    readonly EPSILON: number;
+
+    /**
+     * Returns true if passed value is finite.
+     * Unlike the global isFinite, Number.isFinite doesn't forcibly convert the parameter to a
+     * number. Only finite values of the type number, result in true.
+     * @param number A numeric value.
+     */
+    isFinite(number: unknown): boolean;
+
+    /**
+     * Returns true if the value passed is an integer, false otherwise.
+     * @param number A numeric value.
+     */
+    isInteger(number: unknown): boolean;
+
+    /**
+     * Returns a Boolean value that indicates whether a value is the reserved value NaN (not a
+     * number). Unlike the global isNaN(), Number.isNaN() doesn't forcefully convert the parameter
+     * to a number. Only values of the type number, that are also NaN, result in true.
+     * @param number A numeric value.
+     */
+    isNaN(number: unknown): boolean;
+
+    /**
+     * Returns true if the value passed is a safe integer.
+     * @param number A numeric value.
+     */
+    isSafeInteger(number: unknown): boolean;
+
+    /**
+     * The value of the largest integer n such that n and n + 1 are both exactly representable as
+     * a Number value.
+     * The value of Number.MAX_SAFE_INTEGER is 9007199254740991 2^53 − 1.
+     */
+    readonly MAX_SAFE_INTEGER: number;
+
+    /**
+     * The value of the smallest integer n such that n and n − 1 are both exactly representable as
+     * a Number value.
+     * The value of Number.MIN_SAFE_INTEGER is −9007199254740991 (−(2^53 − 1)).
+     */
+    readonly MIN_SAFE_INTEGER: number;
+
+    /**
+     * Converts a string to a floating-point number.
+     * @param string A string that contains a floating-point number.
+     */
+    parseFloat(string: string): number;
+
+    /**
+     * Converts A string to an integer.
+     * @param string A string to convert into a number.
+     * @param radix A value between 2 and 36 that specifies the base of the number in \`string\`.
+     * If this argument is not supplied, strings with a prefix of '0x' are considered hexadecimal.
+     * All other strings are considered decimal.
+     */
+    parseInt(string: string, radix?: number): number;
+}
+
+interface ObjectConstructor {
+    /**
+     * Copy the values of all of the enumerable own properties from one or more source objects to a
+     * target object. Returns the target object.
+     * @param target The target object to copy to.
+     * @param source The source object from which to copy properties.
+     */
+    assign<T extends {}, U>(target: T, source: U): T & U;
+
+    /**
+     * Copy the values of all of the enumerable own properties from one or more source objects to a
+     * target object. Returns the target object.
+     * @param target The target object to copy to.
+     * @param source1 The first source object from which to copy properties.
+     * @param source2 The second source object from which to copy properties.
+     */
+    assign<T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V;
+
+    /**
+     * Copy the values of all of the enumerable own properties from one or more source objects to a
+     * target object. Returns the target object.
+     * @param target The target object to copy to.
+     * @param source1 The first source object from which to copy properties.
+     * @param source2 The second source object from which to copy properties.
+     * @param source3 The third source object from which to copy properties.
+     */
+    assign<T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & U & V & W;
+
+    /**
+     * Copy the values of all of the enumerable own properties from one or more source objects to a
+     * target object. Returns the target object.
+     * @param target The target object to copy to.
+     * @param sources One or more source objects from which to copy properties
+     */
+    assign(target: object, ...sources: any[]): any;
+
+    /**
+     * Returns an array of all symbol properties found directly on object o.
+     * @param o Object to retrieve the symbols from.
+     */
+    getOwnPropertySymbols(o: any): symbol[];
+
+    /**
+     * Returns the names of the enumerable string properties and methods of an object.
+     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+     */
+    keys(o: {}): string[];
+
+    /**
+     * Returns true if the values are the same value, false otherwise.
+     * @param value1 The first value.
+     * @param value2 The second value.
+     */
+    is(value1: any, value2: any): boolean;
+
+    /**
+     * Sets the prototype of a specified object o to object proto or null. Returns the object o.
+     * @param o The object to change its prototype.
+     * @param proto The value of the new prototype or null.
+     */
+    setPrototypeOf(o: any, proto: object | null): any;
+}
+
+interface ReadonlyArray<T> {
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find<S extends T>(predicate: (value: T, index: number, obj: readonly T[]) => value is S, thisArg?: any): S | undefined;
+    find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): T | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg?: any): number;
+
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions & Intl.DateTimeFormatOptions): string;
+}
+
+interface RegExp {
+    /**
+     * Returns a string indicating the flags of the regular expression in question. This field is read-only.
+     * The characters in this string are sequenced and concatenated in the following order:
+     *
+     *    - "g" for global
+     *    - "i" for ignoreCase
+     *    - "m" for multiline
+     *    - "u" for unicode
+     *    - "y" for sticky
+     *
+     * If no flags are set, the value is the empty string.
+     */
+    readonly flags: string;
+
+    /**
+     * Returns a Boolean value indicating the state of the sticky flag (y) used with a regular
+     * expression. Default is false. Read-only.
+     */
+    readonly sticky: boolean;
+
+    /**
+     * Returns a Boolean value indicating the state of the Unicode flag (u) used with a regular
+     * expression. Default is false. Read-only.
+     */
+    readonly unicode: boolean;
+}
+
+interface RegExpConstructor {
+    new (pattern: RegExp | string, flags?: string): RegExp;
+    (pattern: RegExp | string, flags?: string): RegExp;
+}
+
+interface String {
+    /**
+     * Returns a nonnegative integer Number less than 1114112 (0x110000) that is the code point
+     * value of the UTF-16 encoded code point starting at the string element at position pos in
+     * the String resulting from converting this object to a String.
+     * If there is no element at that position, the result is undefined.
+     * If a valid UTF-16 surrogate pair does not begin at pos, the result is the code unit at pos.
+     */
+    codePointAt(pos: number): number | undefined;
+
+    /**
+     * Returns true if searchString appears as a substring of the result of converting this
+     * object to a String, at one or more positions that are
+     * greater than or equal to position; otherwise, returns false.
+     * @param searchString search string
+     * @param position If position is undefined, 0 is assumed, so as to search all of the String.
+     */
+    includes(searchString: string, position?: number): boolean;
+
+    /**
+     * Returns true if the sequence of elements of searchString converted to a String is the
+     * same as the corresponding elements of this object (converted to a String) starting at
+     * endPosition – length(this). Otherwise returns false.
+     */
+    endsWith(searchString: string, endPosition?: number): boolean;
+
+    /**
+     * Returns the String value result of normalizing the string into the normalization form
+     * named by form as specified in Unicode Standard Annex #15, Unicode Normalization Forms.
+     * @param form Applicable values: "NFC", "NFD", "NFKC", or "NFKD", If not specified default
+     * is "NFC"
+     */
+    normalize(form: "NFC" | "NFD" | "NFKC" | "NFKD"): string;
+
+    /**
+     * Returns the String value result of normalizing the string into the normalization form
+     * named by form as specified in Unicode Standard Annex #15, Unicode Normalization Forms.
+     * @param form Applicable values: "NFC", "NFD", "NFKC", or "NFKD", If not specified default
+     * is "NFC"
+     */
+    normalize(form?: string): string;
+
+    /**
+     * Returns a String value that is made from count copies appended together. If count is 0,
+     * the empty string is returned.
+     * @param count number of copies to append
+     */
+    repeat(count: number): string;
+
+    /**
+     * Returns true if the sequence of elements of searchString converted to a String is the
+     * same as the corresponding elements of this object (converted to a String) starting at
+     * position. Otherwise returns false.
+     */
+    startsWith(searchString: string, position?: number): boolean;
+
+    /**
+     * Returns an \`<a>\` HTML anchor element and sets the name attribute to the text value
+     * @deprecated A legacy feature for browser compatibility
+     * @param name
+     */
+    anchor(name: string): string;
+
+    /**
+     * Returns a \`<big>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    big(): string;
+
+    /**
+     * Returns a \`<blink>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    blink(): string;
+
+    /**
+     * Returns a \`<b>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    bold(): string;
+
+    /**
+     * Returns a \`<tt>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    fixed(): string;
+
+    /**
+     * Returns a \`<font>\` HTML element and sets the color attribute value
+     * @deprecated A legacy feature for browser compatibility
+     */
+    fontcolor(color: string): string;
+
+    /**
+     * Returns a \`<font>\` HTML element and sets the size attribute value
+     * @deprecated A legacy feature for browser compatibility
+     */
+    fontsize(size: number): string;
+
+    /**
+     * Returns a \`<font>\` HTML element and sets the size attribute value
+     * @deprecated A legacy feature for browser compatibility
+     */
+    fontsize(size: string): string;
+
+    /**
+     * Returns an \`<i>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    italics(): string;
+
+    /**
+     * Returns an \`<a>\` HTML element and sets the href attribute value
+     * @deprecated A legacy feature for browser compatibility
+     */
+    link(url: string): string;
+
+    /**
+     * Returns a \`<small>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    small(): string;
+
+    /**
+     * Returns a \`<strike>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    strike(): string;
+
+    /**
+     * Returns a \`<sub>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    sub(): string;
+
+    /**
+     * Returns a \`<sup>\` HTML element
+     * @deprecated A legacy feature for browser compatibility
+     */
+    sup(): string;
+}
+
+interface StringConstructor {
+    /**
+     * Return the String value whose elements are, in order, the elements in the List elements.
+     * If length is 0, the empty string is returned.
+     */
+    fromCodePoint(...codePoints: number[]): string;
+
+    /**
+     * String.raw is usually used as a tag function of a Tagged Template String. When called as
+     * such, the first argument will be a well formed template call site object and the rest
+     * parameter will contain the substitution values. It can also be called directly, for example,
+     * to interleave strings and values from your own tag function, and in this case the only thing
+     * it needs from the first argument is the raw property.
+     * @param template A well-formed template string call site representation.
+     * @param substitutions A set of substitution values.
+     */
+    raw(template: { raw: readonly string[] | ArrayLike<string>; }, ...substitutions: any[]): string;
+}
+
+interface Int8Array<TArrayBuffer extends ArrayBufferLike> {
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+interface Uint8Array<TArrayBuffer extends ArrayBufferLike> {
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+interface Int16Array<TArrayBuffer extends ArrayBufferLike> {
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+interface Uint16Array<TArrayBuffer extends ArrayBufferLike> {
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+interface Int32Array<TArrayBuffer extends ArrayBufferLike> {
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+interface Uint32Array<TArrayBuffer extends ArrayBufferLike> {
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+interface Float32Array<TArrayBuffer extends ArrayBufferLike> {
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+interface Float64Array<TArrayBuffer extends ArrayBufferLike> {
+    toLocaleString(locales: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+interface Generator<T = unknown, TReturn = any, TNext = any> extends IteratorObject<T, TReturn, TNext> {
+    // NOTE: 'next' is defined using a tuple to ensure we report the correct assignability errors in all places.
+    next(...[value]: [] | [TNext]): IteratorResult<T, TReturn>;
+    return(value: TReturn): IteratorResult<T, TReturn>;
+    throw(e: any): IteratorResult<T, TReturn>;
+    [Symbol.iterator](): Generator<T, TReturn, TNext>;
+}
+
+interface GeneratorFunction {
+    /**
+     * Creates a new Generator object.
+     * @param args A list of arguments the function accepts.
+     */
+    new (...args: any[]): Generator;
+    /**
+     * Creates a new Generator object.
+     * @param args A list of arguments the function accepts.
+     */
+    (...args: any[]): Generator;
+    /**
+     * The length of the arguments.
+     */
+    readonly length: number;
+    /**
+     * Returns the name of the function.
+     */
+    readonly name: string;
+    /**
+     * A reference to the prototype.
+     */
+    readonly prototype: Generator;
+}
+
+interface GeneratorFunctionConstructor {
+    /**
+     * Creates a new Generator function.
+     * @param args A list of arguments the function accepts.
+     */
+    new (...args: string[]): GeneratorFunction;
+    /**
+     * Creates a new Generator function.
+     * @param args A list of arguments the function accepts.
+     */
+    (...args: string[]): GeneratorFunction;
+    /**
+     * The length of the arguments.
+     */
+    readonly length: number;
+    /**
+     * Returns the name of the function.
+     */
+    readonly name: string;
+    /**
+     * A reference to the prototype.
+     */
+    readonly prototype: GeneratorFunction;
+}
+
+interface SymbolConstructor {
+    /**
+     * A method that returns the default iterator for an object. Called by the semantics of the
+     * for-of statement.
+     */
+    readonly iterator: unique symbol;
+}
+
+interface IteratorYieldResult<TYield> {
+    done?: false;
+    value: TYield;
+}
+
+interface IteratorReturnResult<TReturn> {
+    done: true;
+    value: TReturn;
+}
+
+interface Iterator<T, TReturn = any, TNext = any> {
+    // NOTE: 'next' is defined using a tuple to ensure we report the correct assignability errors in all places.
+    next(...[value]: [] | [TNext]): IteratorResult<T, TReturn>;
+    return?(value?: TReturn): IteratorResult<T, TReturn>;
+    throw?(e?: any): IteratorResult<T, TReturn>;
+}
+
+interface Iterable<T, TReturn = any, TNext = any> {
+    [Symbol.iterator](): Iterator<T, TReturn, TNext>;
+}
+
+/**
+ * Describes a user-defined {@link Iterator} that is also iterable.
+ */
+interface IterableIterator<T, TReturn = any, TNext = any> extends Iterator<T, TReturn, TNext> {
+    [Symbol.iterator](): IterableIterator<T, TReturn, TNext>;
+}
+
+/**
+ * Describes an {@link Iterator} produced by the runtime that inherits from the intrinsic \`Iterator.prototype\`.
+ */
+interface IteratorObject<T, TReturn = unknown, TNext = unknown> extends Iterator<T, TReturn, TNext> {
+    [Symbol.iterator](): IteratorObject<T, TReturn, TNext>;
+}
+
+interface ArrayIterator<T> extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+    [Symbol.iterator](): ArrayIterator<T>;
+}
+
+interface Array<T> {
+    /** Iterator */
+    [Symbol.iterator](): ArrayIterator<T>;
+
+    /**
+     * Returns an iterable of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, T]>;
+
+    /**
+     * Returns an iterable of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an iterable of values in the array
+     */
+    values(): ArrayIterator<T>;
+}
+
+interface ArrayConstructor {
+    /**
+     * Creates an array from an iterable object.
+     * @param iterable An iterable object to convert to an array.
+     */
+    from<T>(iterable: Iterable<T> | ArrayLike<T>): T[];
+
+    /**
+     * Creates an array from an iterable object.
+     * @param iterable An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T, U>(iterable: Iterable<T> | ArrayLike<T>, mapfn: (v: T, k: number) => U, thisArg?: any): U[];
+}
+
+interface ReadonlyArray<T> {
+    /** Iterator of values in the array. */
+    [Symbol.iterator](): ArrayIterator<T>;
+
+    /**
+     * Returns an iterable of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, T]>;
+
+    /**
+     * Returns an iterable of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an iterable of values in the array
+     */
+    values(): ArrayIterator<T>;
+}
+
+interface IArguments {
+    /** Iterator */
+    [Symbol.iterator](): ArrayIterator<any>;
+}
+
+interface MapIterator<T> extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+    [Symbol.iterator](): MapIterator<T>;
+}
+
+interface Map<K, V> {
+    /** Returns an iterable of entries in the map. */
+    [Symbol.iterator](): MapIterator<[K, V]>;
+
+    /**
+     * Returns an iterable of key, value pairs for every entry in the map.
+     */
+    entries(): MapIterator<[K, V]>;
+
+    /**
+     * Returns an iterable of keys in the map
+     */
+    keys(): MapIterator<K>;
+
+    /**
+     * Returns an iterable of values in the map
+     */
+    values(): MapIterator<V>;
+}
+
+interface MapConstructor {
+    new (): Map<any, any>;
+    new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>;
+}
+
+interface SetIterator<T> extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+    [Symbol.iterator](): SetIterator<T>;
+}
+
+interface Set<T> {
+    /** Iterates over values in the set. */
+    [Symbol.iterator](): SetIterator<T>;
+
+    /**
+     * Returns an iterable of [v,v] pairs for every value \`v\` in the set.
+     */
+    entries(): SetIterator<[T, T]>;
+
+    /**
+     * Despite its name, returns an iterable of the values in the set.
+     */
+    keys(): SetIterator<T>;
+
+    /**
+     * Returns an iterable of values in the set.
+     */
+    values(): SetIterator<T>;
+}
+
+interface SetConstructor {
+    new <T>(iterable?: Iterable<T> | null): Set<T>;
+}
+
+interface StringIterator<T> extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+    [Symbol.iterator](): StringIterator<T>;
+}
+
+interface String {
+    /** Iterator */
+    [Symbol.iterator](): StringIterator<string>;
+}
+
+interface Int8Array<TArrayBuffer extends ArrayBufferLike> {
+    [Symbol.iterator](): ArrayIterator<number>;
+
+    /**
+     * Returns an array of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, number]>;
+
+    /**
+     * Returns an list of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an list of values in the array
+     */
+    values(): ArrayIterator<number>;
+}
+
+interface Int8ArrayConstructor {
+    new (elements: Iterable<number>): Int8Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     */
+    from(elements: Iterable<number>): Int8Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(elements: Iterable<T>, mapfn?: (v: T, k: number) => number, thisArg?: any): Int8Array<ArrayBuffer>;
+}
+
+interface Uint8Array<TArrayBuffer extends ArrayBufferLike> {
+    [Symbol.iterator](): ArrayIterator<number>;
+
+    /**
+     * Returns an array of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, number]>;
+
+    /**
+     * Returns an list of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an list of values in the array
+     */
+    values(): ArrayIterator<number>;
+}
+
+interface Uint8ArrayConstructor {
+    new (elements: Iterable<number>): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     */
+    from(elements: Iterable<number>): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(elements: Iterable<T>, mapfn?: (v: T, k: number) => number, thisArg?: any): Uint8Array<ArrayBuffer>;
+}
+
+interface Int16Array<TArrayBuffer extends ArrayBufferLike> {
+    [Symbol.iterator](): ArrayIterator<number>;
+    /**
+     * Returns an array of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, number]>;
+
+    /**
+     * Returns an list of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an list of values in the array
+     */
+    values(): ArrayIterator<number>;
+}
+
+interface Int16ArrayConstructor {
+    new (elements: Iterable<number>): Int16Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     */
+    from(elements: Iterable<number>): Int16Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(elements: Iterable<T>, mapfn?: (v: T, k: number) => number, thisArg?: any): Int16Array<ArrayBuffer>;
+}
+
+interface Uint16Array<TArrayBuffer extends ArrayBufferLike> {
+    [Symbol.iterator](): ArrayIterator<number>;
+
+    /**
+     * Returns an array of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, number]>;
+
+    /**
+     * Returns an list of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an list of values in the array
+     */
+    values(): ArrayIterator<number>;
+}
+
+interface Uint16ArrayConstructor {
+    new (elements: Iterable<number>): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     */
+    from(elements: Iterable<number>): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(elements: Iterable<T>, mapfn?: (v: T, k: number) => number, thisArg?: any): Uint16Array<ArrayBuffer>;
+}
+
+interface Int32Array<TArrayBuffer extends ArrayBufferLike> {
+    [Symbol.iterator](): ArrayIterator<number>;
+
+    /**
+     * Returns an array of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, number]>;
+
+    /**
+     * Returns an list of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an list of values in the array
+     */
+    values(): ArrayIterator<number>;
+}
+
+interface Int32ArrayConstructor {
+    new (elements: Iterable<number>): Int32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     */
+    from(elements: Iterable<number>): Int32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(elements: Iterable<T>, mapfn?: (v: T, k: number) => number, thisArg?: any): Int32Array<ArrayBuffer>;
+}
+
+interface Uint32Array<TArrayBuffer extends ArrayBufferLike> {
+    [Symbol.iterator](): ArrayIterator<number>;
+
+    /**
+     * Returns an array of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, number]>;
+
+    /**
+     * Returns an list of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an list of values in the array
+     */
+    values(): ArrayIterator<number>;
+}
+
+interface Uint32ArrayConstructor {
+    new (elements: Iterable<number>): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     */
+    from(elements: Iterable<number>): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(elements: Iterable<T>, mapfn?: (v: T, k: number) => number, thisArg?: any): Uint32Array<ArrayBuffer>;
+}
+
+interface Float32Array<TArrayBuffer extends ArrayBufferLike> {
+    [Symbol.iterator](): ArrayIterator<number>;
+
+    /**
+     * Returns an array of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, number]>;
+
+    /**
+     * Returns an list of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an list of values in the array
+     */
+    values(): ArrayIterator<number>;
+}
+
+interface Float32ArrayConstructor {
+    new (elements: Iterable<number>): Float32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     */
+    from(elements: Iterable<number>): Float32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(elements: Iterable<T>, mapfn?: (v: T, k: number) => number, thisArg?: any): Float32Array<ArrayBuffer>;
+}
+
+interface Float64Array<TArrayBuffer extends ArrayBufferLike> {
+    [Symbol.iterator](): ArrayIterator<number>;
+
+    /**
+     * Returns an array of key, value pairs for every entry in the array
+     */
+    entries(): ArrayIterator<[number, number]>;
+
+    /**
+     * Returns an list of keys in the array
+     */
+    keys(): ArrayIterator<number>;
+
+    /**
+     * Returns an list of values in the array
+     */
+    values(): ArrayIterator<number>;
+}
+
+interface Float64ArrayConstructor {
+    new (elements: Iterable<number>): Float64Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     */
+    from(elements: Iterable<number>): Float64Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param elements An iterable object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(elements: Iterable<T>, mapfn?: (v: T, k: number) => number, thisArg?: any): Float64Array<ArrayBuffer>;
+}
+
+type IteratorResult<T, TReturn = any> = IteratorYieldResult<T> | IteratorReturnResult<TReturn>;
+
+/**
+ * Defines the \`TReturn\` type used for built-in iterators produced by \`Array\`, \`Map\`, \`Set\`, and others.
+ * This is \`undefined\` when \`strictBuiltInIteratorReturn\` is \`true\`; otherwise, this is \`any\`.
+ */
+type BuiltinIteratorReturn = intrinsic;
+
+interface ProxyHandler<T extends object> {
+    /**
+     * A trap method for a function call.
+     * @param target The original callable object which is being proxied.
+     */
+    apply?(target: T, thisArg: any, argArray: any[]): any;
+
+    /**
+     * A trap for the \`new\` operator.
+     * @param target The original object which is being proxied.
+     * @param newTarget The constructor that was originally called.
+     */
+    construct?(target: T, argArray: any[], newTarget: Function): object;
+
+    /**
+     * A trap for \`Object.defineProperty()\`.
+     * @param target The original object which is being proxied.
+     * @returns A \`Boolean\` indicating whether or not the property has been defined.
+     */
+    defineProperty?(target: T, property: string | symbol, attributes: PropertyDescriptor): boolean;
+
+    /**
+     * A trap for the \`delete\` operator.
+     * @param target The original object which is being proxied.
+     * @param p The name or \`Symbol\` of the property to delete.
+     * @returns A \`Boolean\` indicating whether or not the property was deleted.
+     */
+    deleteProperty?(target: T, p: string | symbol): boolean;
+
+    /**
+     * A trap for getting a property value.
+     * @param target The original object which is being proxied.
+     * @param p The name or \`Symbol\` of the property to get.
+     * @param receiver The proxy or an object that inherits from the proxy.
+     */
+    get?(target: T, p: string | symbol, receiver: any): any;
+
+    /**
+     * A trap for \`Object.getOwnPropertyDescriptor()\`.
+     * @param target The original object which is being proxied.
+     * @param p The name of the property whose description should be retrieved.
+     */
+    getOwnPropertyDescriptor?(target: T, p: string | symbol): PropertyDescriptor | undefined;
+
+    /**
+     * A trap for the \`[[GetPrototypeOf]]\` internal method.
+     * @param target The original object which is being proxied.
+     */
+    getPrototypeOf?(target: T): object | null;
+
+    /**
+     * A trap for the \`in\` operator.
+     * @param target The original object which is being proxied.
+     * @param p The name or \`Symbol\` of the property to check for existence.
+     */
+    has?(target: T, p: string | symbol): boolean;
+
+    /**
+     * A trap for \`Object.isExtensible()\`.
+     * @param target The original object which is being proxied.
+     */
+    isExtensible?(target: T): boolean;
+
+    /**
+     * A trap for \`Reflect.ownKeys()\`.
+     * @param target The original object which is being proxied.
+     */
+    ownKeys?(target: T): ArrayLike<string | symbol>;
+
+    /**
+     * A trap for \`Object.preventExtensions()\`.
+     * @param target The original object which is being proxied.
+     */
+    preventExtensions?(target: T): boolean;
+
+    /**
+     * A trap for setting a property value.
+     * @param target The original object which is being proxied.
+     * @param p The name or \`Symbol\` of the property to set.
+     * @param receiver The object to which the assignment was originally directed.
+     * @returns A \`Boolean\` indicating whether or not the property was set.
+     */
+    set?(target: T, p: string | symbol, newValue: any, receiver: any): boolean;
+
+    /**
+     * A trap for \`Object.setPrototypeOf()\`.
+     * @param target The original object which is being proxied.
+     * @param newPrototype The object's new prototype or \`null\`.
+     */
+    setPrototypeOf?(target: T, v: object | null): boolean;
+}
+
+interface ProxyConstructor {
+    /**
+     * Creates a revocable Proxy object.
+     * @param target A target object to wrap with Proxy.
+     * @param handler An object whose properties define the behavior of Proxy when an operation is attempted on it.
+     */
+    revocable<T extends object>(target: T, handler: ProxyHandler<T>): { proxy: T; revoke: () => void; };
+
+    /**
+     * Creates a Proxy object. The Proxy object allows you to create an object that can be used in place of the
+     * original object, but which may redefine fundamental Object operations like getting, setting, and defining
+     * properties. Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs.
+     * @param target A target object to wrap with Proxy.
+     * @param handler An object whose properties define the behavior of Proxy when an operation is attempted on it.
+     */
+    new <T extends object>(target: T, handler: ProxyHandler<T>): T;
+}
+
+declare var Proxy: ProxyConstructor;
+
+interface SymbolConstructor {
+    /**
+     * A reference to the prototype.
+     */
+    readonly prototype: Symbol;
+
+    /**
+     * Returns a new unique Symbol value.
+     * @param  description Description of the new Symbol object.
+     */
+    (description?: string | number): symbol;
+
+    /**
+     * Returns a Symbol object from the global symbol registry matching the given key if found.
+     * Otherwise, returns a new symbol with this key.
+     * @param key key to search for.
+     */
+    for(key: string): symbol;
+
+    /**
+     * Returns a key from the global symbol registry matching the given Symbol if found.
+     * Otherwise, returns a undefined.
+     * @param sym Symbol to find the key for.
+     */
+    keyFor(sym: symbol): string | undefined;
+}
+
+declare var Symbol: SymbolConstructor;
+
+interface SymbolConstructor {
+    /**
+     * A method that determines if a constructor object recognizes an object as one of the
+     * constructor’s instances. Called by the semantics of the instanceof operator.
+     */
+    readonly hasInstance: unique symbol;
+
+    /**
+     * A Boolean value that if true indicates that an object should flatten to its array elements
+     * by Array.prototype.concat.
+     */
+    readonly isConcatSpreadable: unique symbol;
+
+    /**
+     * A regular expression method that matches the regular expression against a string. Called
+     * by the String.prototype.match method.
+     */
+    readonly match: unique symbol;
+
+    /**
+     * A regular expression method that replaces matched substrings of a string. Called by the
+     * String.prototype.replace method.
+     */
+    readonly replace: unique symbol;
+
+    /**
+     * A regular expression method that returns the index within a string that matches the
+     * regular expression. Called by the String.prototype.search method.
+     */
+    readonly search: unique symbol;
+
+    /**
+     * A function valued property that is the constructor function that is used to create
+     * derived objects.
+     */
+    readonly species: unique symbol;
+
+    /**
+     * A regular expression method that splits a string at the indices that match the regular
+     * expression. Called by the String.prototype.split method.
+     */
+    readonly split: unique symbol;
+
+    /**
+     * A method that converts an object to a corresponding primitive value.
+     * Called by the ToPrimitive abstract operation.
+     */
+    readonly toPrimitive: unique symbol;
+
+    /**
+     * A String value that is used in the creation of the default string description of an object.
+     * Called by the built-in method Object.prototype.toString.
+     */
+    readonly toStringTag: unique symbol;
+
+    /**
+     * An Object whose truthy properties are properties that are excluded from the 'with'
+     * environment bindings of the associated objects.
+     */
+    readonly unscopables: unique symbol;
+}
+
+interface Symbol {
+    /**
+     * Converts a Symbol object to a symbol.
+     */
+    [Symbol.toPrimitive](hint: string): symbol;
+
+    readonly [Symbol.toStringTag]: string;
+}
+
+interface Array<T> {
+    /**
+     * Is an object whose properties have the value 'true'
+     * when they will be absent when used in a 'with' statement.
+     */
+    readonly [Symbol.unscopables]: {
+        [K in keyof any[]]?: boolean;
     };
-    class HQ {
-      constructor(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Number.MAX_VALUE,
-          qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : LQ.b;
-        this.origin = QQ, this.direction = FQ, this.length = wQ, this.epsilon = qQ
-      }
-      clone() {
-        return new HQ(this.origin.clone(), this.direction.clone(), this.length)
-      }
-      intersectsBoxMinMax(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const LQ = HQ._TmpVector3[0].vQQ(QQ.x - wQ, QQ.y - wQ, QQ.z - wQ),
-          qQ = HQ._TmpVector3[1].vQQ(FQ.x + wQ, FQ.y + wQ, FQ.z + wQ);
-        let oQ, DQ, kQ, vQ, mQ = 0,
-          uQ = Number.MAX_VALUE;
-        if (Math.abs(this.direction.x) < 1e-7) {
-          if (this.origin.x < LQ.x || this.origin.x > qQ.x) return !1
-        } else if (oQ = 1 / this.direction.x, DQ = (LQ.x - this.origin.x) * oQ, kQ = (qQ.x - this.origin.x) * oQ, kQ === -1 / 0 && (kQ = 1 / 0), DQ > kQ && (vQ = DQ, DQ = kQ, kQ = vQ), mQ = Math.max(DQ, mQ), uQ = Math.min(kQ, uQ), mQ > uQ) return !1;
-        if (Math.abs(this.direction.y) < 1e-7) {
-          if (this.origin.y < LQ.y || this.origin.y > qQ.y) return !1
-        } else if (oQ = 1 / this.direction.y, DQ = (LQ.y - this.origin.y) * oQ, kQ = (qQ.y - this.origin.y) * oQ, kQ === -1 / 0 && (kQ = 1 / 0), DQ > kQ && (vQ = DQ, DQ = kQ, kQ = vQ), mQ = Math.max(DQ, mQ), uQ = Math.min(kQ, uQ), mQ > uQ) return !1;
-        if (Math.abs(this.direction.z) < 1e-7) {
-          if (this.origin.z < LQ.z || this.origin.z > qQ.z) return !1
-        } else if (oQ = 1 / this.direction.z, DQ = (LQ.z - this.origin.z) * oQ, kQ = (qQ.z - this.origin.z) * oQ, kQ === -1 / 0 && (kQ = 1 / 0), DQ > kQ && (vQ = DQ, DQ = kQ, kQ = vQ), mQ = Math.max(DQ, mQ), uQ = Math.min(kQ, uQ), mQ > uQ) return !1;
-        return !0
-      }
-      intersectsBox(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.intersectsBoxMinMax(QQ.minimum, QQ.maximum, FQ)
-      }
-      intersectsSphere(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const wQ = QQ.center.x - this.origin.x,
-          LQ = QQ.center.y - this.origin.y,
-          qQ = QQ.center.z - this.origin.z,
-          oQ = wQ * wQ + LQ * LQ + qQ * qQ,
-          DQ = QQ.radius + FQ,
-          kQ = DQ * DQ;
-        if (oQ <= kQ) return !0;
-        const vQ = wQ * this.direction.x + LQ * this.direction.y + qQ * this.direction.z;
-        if (vQ < 0) return !1;
-        return oQ - vQ * vQ <= kQ
-      }
-      intersectsTriangle(QQ, FQ, wQ) {
-        const LQ = HQ._TmpVector3[0],
-          oQ = HQ._TmpVector3[1],
-          kQ = HQ._TmpVector3[2],
-          vQ = HQ._TmpVector3[3],
-          mQ = HQ._TmpVector3[4];
-        FQ.subtractToRef(QQ, LQ), wQ.subtractToRef(QQ, oQ), qQ.p.CrossToRef(this.direction, oQ, kQ);
-        const uQ = qQ.p.Dot(LQ, kQ);
-        if (0 === uQ) return null;
-        const bQ = 1 / uQ;
-        this.origin.subtractToRef(QQ, vQ);
-        const YQ = qQ.p.Dot(vQ, kQ) * bQ;
-        if (YQ < -this.epsilon || YQ > 1 + this.epsilon) return null;
-        qQ.p.CrossToRef(vQ, LQ, mQ);
-        const xQ = qQ.p.Dot(this.direction, mQ) * bQ;
-        if (xQ < -this.epsilon || YQ + xQ > 1 + this.epsilon) return null;
-        const AQ = qQ.p.Dot(oQ, mQ) * bQ;
-        return AQ > this.length || AQ < 0 ? null : new DQ.c(1 - YQ - xQ, YQ, AQ)
-      }
-      intersectsPlane(QQ) {
-        let FQ;
-        const wQ = qQ.p.Dot(QQ.normal, this.direction);
-        if (Math.abs(wQ) < 9.99999997475243e-7) return null;
-        {
-          const LQ = qQ.p.Dot(QQ.normal, this.origin);
-          return FQ = (-QQ.d - LQ) / wQ, FQ < 0 ? FQ < -9.99999997475243e-7 ? null : 0 : FQ
-        }
-      }
-      intersectsAxis(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        switch (QQ) {
-          case "y": {
-            const QQ = (this.origin.y - FQ) / this.direction.y;
-            return QQ > 0 ? null : new qQ.p(this.origin.x + this.direction.x * -QQ, FQ, this.origin.z + this.direction.z * -QQ)
-          }
-          case "x": {
-            const QQ = (this.origin.x - FQ) / this.direction.x;
-            return QQ > 0 ? null : new qQ.p(FQ, this.origin.y + this.direction.y * -QQ, this.origin.z + this.direction.z * -QQ)
-          }
-          case "z": {
-            const QQ = (this.origin.z - FQ) / this.direction.z;
-            return QQ > 0 ? null : new qQ.p(this.origin.x + this.direction.x * -QQ, this.origin.y + this.direction.y * -QQ, FQ)
-          }
-          default:
-            return null
-        }
-      }
-      YqQ(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          oQ = arguments.length > 4 ? arguments[4] : void 0,
-          DQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const kQ = qQ.k.Matrix[0];
-        return QQ.getWorldMatrix().invertToRef(kQ), this._tmpRay ? HQ.TransformToRef(this, kQ, this._tmpRay) : this._tmpRay = HQ.Transform(this, kQ), QQ.intersects(this._tmpRay, FQ, wQ, LQ, oQ, DQ)
-      }
-      intersectsMeshes(QQ, FQ, wQ) {
-        wQ ? wQ.length = 0 : wQ = [];
-        for (let LQ = 0; LQ < QQ.length; LQ++) {
-          const qQ = this.YqQ(QQ[LQ], FQ);
-          qQ.hit && wQ.push(qQ)
-        }
-        return wQ.sort(this._comparePickingInfo), wQ
-      }
-      _comparePickingInfo(QQ, FQ) {
-        return QQ.distance < FQ.distance ? -1 : QQ.distance > FQ.distance ? 1 : 0
-      }
-      intersectionSegment(QQ, FQ, wQ) {
-        const LQ = this.origin,
-          oQ = qQ.k.Ox[0],
-          DQ = qQ.k.Ox[1],
-          kQ = qQ.k.Ox[2],
-          vQ = qQ.k.Ox[3];
-        FQ.subtractToRef(QQ, oQ), this.direction.scaleToRef(HQ._Rayl, kQ), LQ.addToRef(kQ, DQ), QQ.subtractToRef(LQ, vQ);
-        const mQ = qQ.p.Dot(oQ, oQ),
-          uQ = qQ.p.Dot(oQ, kQ),
-          bQ = qQ.p.Dot(kQ, kQ),
-          YQ = qQ.p.Dot(oQ, vQ),
-          xQ = qQ.p.Dot(kQ, vQ),
-          AQ = mQ * bQ - uQ * uQ;
-        let tQ, eQ, MQ = AQ,
-          GQ = AQ;
-        AQ < HQ._Smallnum ? (tQ = 0, MQ = 1, eQ = xQ, GQ = bQ) : (tQ = uQ * xQ - bQ * YQ, eQ = mQ * xQ - uQ * YQ, tQ < 0 ? (tQ = 0, eQ = xQ, GQ = bQ) : tQ > MQ && (tQ = MQ, eQ = xQ + uQ, GQ = bQ)), eQ < 0 ? (eQ = 0, -YQ < 0 ? tQ = 0 : -YQ > mQ ? tQ = MQ : (tQ = -YQ, MQ = mQ)) : eQ > GQ && (eQ = GQ, -YQ + uQ < 0 ? tQ = 0 : -YQ + uQ > mQ ? tQ = MQ : (tQ = -YQ + uQ, MQ = mQ));
-        const pQ = Math.abs(tQ) < HQ._Smallnum ? 0 : tQ / MQ,
-          cQ = Math.abs(eQ) < HQ._Smallnum ? 0 : eQ / GQ,
-          CQ = qQ.k.Ox[4];
-        kQ.scaleToRef(cQ, CQ);
-        const SQ = qQ.k.Ox[5];
-        oQ.scaleToRef(pQ, SQ), SQ.addInPlace(vQ);
-        const iQ = qQ.k.Ox[6];
-        SQ.subtractToRef(CQ, iQ);
-        return cQ > 0 && cQ <= this.length && iQ.lengthSquared() < wQ * wQ ? SQ.length() : -1
-      }
-      update(QQ, FQ, wQ, LQ, oQ, DQ, kQ) {
-        if (arguments.length > 7 && void 0 !== arguments[7] && arguments[7]) {
-          HQ._RayDistant || (HQ._RayDistant = HQ.Zero()), HQ._RayDistant.unprojectRayToRef(QQ, FQ, wQ, LQ, qQ.c.IdentityReadOnly, DQ, kQ);
-          const vQ = qQ.k.Matrix[0];
-          oQ.invertToRef(vQ), HQ.TransformToRef(HQ._RayDistant, vQ, this)
-        } else this.unprojectRayToRef(QQ, FQ, wQ, LQ, oQ, DQ, kQ);
-        return this
-      }
-      static Zero() {
-        return new HQ(qQ.p.Zero(), qQ.p.Zero())
-      }
-      static CreateNew(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
-        return HQ.Zero().update(QQ, FQ, wQ, LQ, qQ, oQ, DQ)
-      }
-      static CreateNewFromTo(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qQ.c.IdentityReadOnly;
-        const LQ = new HQ(new qQ.p(0, 0, 0), new qQ.p(0, 0, 0));
-        return HQ.CreateFromToToRef(QQ, FQ, LQ, wQ)
-      }
-      static CreateFromToToRef(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : qQ.c.IdentityReadOnly;
-        wQ.origin.Qs(QQ);
-        const oQ = FQ.subtractToRef(QQ, wQ.direction),
-          DQ = Math.sqrt(oQ.x * oQ.x + oQ.y * oQ.y + oQ.z * oQ.z);
-        return wQ.length = DQ, wQ.direction.normalize(), HQ.TransformToRef(wQ, LQ, wQ)
-      }
-      static Transform(QQ, FQ) {
-        const wQ = new HQ(new qQ.p(0, 0, 0), new qQ.p(0, 0, 0));
-        return HQ.TransformToRef(QQ, FQ, wQ), wQ
-      }
-      static TransformToRef(QQ, FQ, wQ) {
-        qQ.p.TransformCoordinatesToRef(QQ.origin, FQ, wQ.origin), qQ.p.TransformNormalToRef(QQ.direction, FQ, wQ.direction), wQ.length = QQ.length, wQ.epsilon = QQ.epsilon;
-        const LQ = wQ.direction,
-          oQ = LQ.length();
-        if (0 !== oQ && 1 !== oQ) {
-          const QQ = 1 / oQ;
-          LQ.x *= QQ, LQ.y *= QQ, LQ.z *= QQ, wQ.length *= oQ
-        }
-        return wQ
-      }
-      unprojectRayToRef(QQ, FQ, wQ, LQ, oQ, DQ, kQ) {
-        const mQ = qQ.k.Matrix[0];
-        oQ.multiplyToRef(DQ, mQ), mQ.multiplyToRef(kQ, mQ), mQ.invert();
-        const uQ = vQ.d.LastCreatedEngine,
-          HQ = qQ.k.Ox[0];
-        HQ.x = QQ / wQ * 2 - 1, HQ.y = -(FQ / LQ * 2 - 1), HQ.z = uQ?.SLQ ? 1 : uQ?.isNDCHalfZRange ? 0 : -1;
-        const bQ = qQ.k.Ox[1].vQQ(HQ.x, HQ.y, 1 - 1e-8),
-          YQ = qQ.k.Ox[2],
-          xQ = qQ.k.Ox[3];
-        qQ.p.TransformCoordinatesToRef(HQ, mQ, YQ), qQ.p.TransformCoordinatesToRef(bQ, mQ, xQ), this.origin.Qs(YQ), xQ.subtractToRef(YQ, this.direction), this.direction.normalize()
-      }
-    }
+}
 
-    function bQ(QQ, FQ, wQ, LQ, qQ) {
-      let oQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      const DQ = HQ.Zero();
-      return YQ(QQ, FQ, wQ, LQ, DQ, qQ, oQ), DQ
-    }
+interface ReadonlyArray<T> {
+    /**
+     * Is an object whose properties have the value 'true'
+     * when they will be absent when used in a 'with' statement.
+     */
+    readonly [Symbol.unscopables]: {
+        [K in keyof readonly any[]]?: boolean;
+    };
+}
 
-    function YQ(QQ, FQ, wQ, LQ, oQ, DQ) {
-      let kQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        vQ = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-      const mQ = QQ.Wx();
-      if (!DQ && !(DQ = QQ.activeCamera) && !(DQ = QQ.cameraToUseForPointers)) return QQ;
-      const uQ = DQ.viewport,
-        HQ = mQ.getRenderHeight(),
-        {
-          x: bQ,
-          y: YQ,
-          width: xQ,
-          height: AQ
-        } = uQ.toGlobal(mQ.getRenderWidth(), HQ),
-        tQ = 1 / mQ.getHardwareScalingLevel();
-      return FQ = FQ * tQ - bQ, wQ = wQ * tQ - (HQ - YQ - AQ), oQ.update(FQ, wQ, xQ, AQ, LQ || qQ.c.IdentityReadOnly, kQ ? qQ.c.IdentityReadOnly : DQ.getViewMatrix(), DQ.getProjectionMatrix(), vQ), QQ
-    }
+interface Map<K, V> {
+    readonly [Symbol.toStringTag]: string;
+}
 
-    function xQ(QQ, FQ, wQ, LQ) {
-      const qQ = HQ.Zero();
-      return AQ(QQ, FQ, wQ, qQ, LQ), qQ
-    }
+interface Set<T> {
+    readonly [Symbol.toStringTag]: string;
+}
 
-    function AQ(QQ, FQ, wQ, LQ, oQ) {
-      if (!kQ.d) return QQ;
-      const DQ = QQ.Wx();
-      if (!oQ && !(oQ = QQ.activeCamera) && !(oQ = QQ.cameraToUseForPointers)) throw new Error("Active camera not set");
-      const vQ = oQ.viewport,
-        mQ = DQ.getRenderHeight(),
-        {
-          x: uQ,
-          y: HQ,
-          width: bQ,
-          height: YQ
-        } = vQ.toGlobal(DQ.getRenderWidth(), mQ),
-        xQ = qQ.c.Identity(),
-        AQ = 1 / DQ.getHardwareScalingLevel();
-      return FQ = FQ * AQ - uQ, wQ = wQ * AQ - (mQ - HQ - YQ), LQ.update(FQ, wQ, bQ, YQ, xQ, xQ, oQ.getProjectionMatrix()), QQ
-    }
+interface JSON {
+    readonly [Symbol.toStringTag]: string;
+}
 
-    function tQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ) {
-      return eQ(QQ, wQ, LQ, FQ(LQ, wQ.enableDistantPicking), qQ, oQ, DQ, kQ)
-    }
+interface Function {
+    /**
+     * Determines whether the given value inherits from this function if this function was used
+     * as a constructor function.
+     *
+     * A constructor function can control which objects are recognized as its instances by
+     * 'instanceof' by overriding this method.
+     */
+    [Symbol.hasInstance](value: any): boolean;
+}
 
-    function eQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ) {
-      const vQ = FQ.intersects(LQ, qQ, DQ, oQ, wQ, kQ);
-      return vQ && vQ.hit ? !qQ && null != QQ && vQ.distance >= QQ.distance ? null : vQ : null
-    }
+interface GeneratorFunction {
+    readonly [Symbol.toStringTag]: string;
+}
 
-    function MQ(QQ, FQ) {
-      return "InstancedLinesMesh" === QQ || "LinesMesh" === QQ ? FQ.intersectionThreshold : 0
-    }
+interface Math {
+    readonly [Symbol.toStringTag]: string;
+}
 
-    function GQ(QQ) {
-      const FQ = QQ.getClassName();
-      if ("GreasedLineMesh" === FQ) return {
-        rawBoundingInfo: null,
-        intersectionThreshold: 0
-      };
-      const wQ = QQ.rawBoundingInfo;
-      return {
-        rawBoundingInfo: wQ,
-        intersectionThreshold: wQ ? MQ(FQ, QQ) : 0
-      }
-    }
+interface RegExp {
+    /**
+     * Matches a string with this regular expression, and returns an array containing the results of
+     * that search.
+     * @param string A string to search within.
+     */
+    [Symbol.match](string: string): RegExpMatchArray | null;
 
-    function pQ(QQ, FQ, wQ, LQ, qQ) {
-      const oQ = QQ(wQ, FQ.enableDistantPicking);
-      return oQ.intersectsSphere(LQ.BLQ, qQ) && oQ.intersectsBox(LQ.boundingBox, qQ) ? oQ : null
-    }
+    /**
+     * Replaces text in a string, using this regular expression.
+     * @param string A String object or string literal whose contents matching against
+     *               this regular expression will be replaced
+     * @param replaceValue A String object or string literal containing the text to replace for every
+     *                     successful match of this regular expression.
+     */
+    [Symbol.replace](string: string, replaceValue: string): string;
 
-    function cQ(QQ, FQ, wQ, LQ, oQ, DQ) {
-      let vQ = null;
-      const mQ = !!(QQ.activeCameras && QQ.activeCameras.length > 1 && QQ.cameraToUseForPointers !== QQ.activeCamera),
-        HQ = QQ.cameraToUseForPointers || QQ.activeCamera,
-        bQ = uQ.internalPickerForMesh || tQ,
-        YQ = bQ === tQ;
-      for (let kQ = 0; kQ < QQ.meshes.length; kQ++) {
-        const uQ = QQ.meshes[kQ];
-        if (wQ) {
-          if (!wQ(uQ, -1)) continue
-        } else if (!uQ.isEnabled() || !uQ.isVisible || !uQ.aA) continue;
-        const xQ = mQ && uQ.isWorldMatrixCameraDependent(),
-          AQ = uQ.computeWorldMatrix(xQ, HQ);
-        if (uQ.hasThinInstances && uQ.hFQ) {
-          const QQ = bQ(vQ, FQ, uQ, AQ, !0, !0, DQ);
-          if (QQ) {
-            if (oQ) return QQ;
-            const {
-              rawBoundingInfo: kQ,
-              intersectionThreshold: mQ
-            } = GQ(uQ), HQ = uQ._thinInstanceDataStorage.matrixData;
-            if (HQ) {
-              const QQ = qQ.k.Matrix[0],
-                xQ = qQ.k.Matrix[1],
-                tQ = Math.min(uQ.o4, HQ.length >> 4);
-              for (let MQ = 0; MQ < tQ; MQ++) {
-                if (wQ && !wQ(uQ, MQ)) continue;
-                qQ.c.FromArrayToRef(HQ, MQ << 4, QQ), QQ.multiplyToRef(AQ, xQ);
-                const tQ = YQ && kQ ? pQ(FQ, uQ, xQ, kQ, mQ) : null;
-                if (YQ && kQ && !tQ) continue;
-                const GQ = YQ && tQ ? eQ(vQ, uQ, xQ, tQ, LQ, oQ, DQ, !0) : bQ(vQ, FQ, uQ, xQ, LQ, oQ, DQ, !0);
-                if (GQ && (vQ = GQ, vQ.thinInstanceIndex = MQ, LQ)) return vQ
-              }
-            }
-          }
-        } else {
-          const QQ = bQ(vQ, FQ, uQ, AQ, LQ, oQ, DQ);
-          if (QQ && (vQ = QQ, LQ)) return vQ
-        }
-      }
-      return vQ || new kQ.d
-    }
+    /**
+     * Replaces text in a string, using this regular expression.
+     * @param string A String object or string literal whose contents matching against
+     *               this regular expression will be replaced
+     * @param replacer A function that returns the replacement text.
+     */
+    [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string;
 
-    function CQ(QQ, FQ, wQ, LQ) {
-      if (!kQ.d) return null;
-      const oQ = [],
-        DQ = !!(QQ.activeCameras && QQ.activeCameras.length > 1 && QQ.cameraToUseForPointers !== QQ.activeCamera),
-        vQ = QQ.cameraToUseForPointers || QQ.activeCamera,
-        mQ = uQ.internalPickerForMesh || tQ,
-        HQ = mQ === tQ;
-      for (let kQ = 0; kQ < QQ.meshes.length; kQ++) {
-        const uQ = QQ.meshes[kQ];
-        if (wQ) {
-          if (!wQ(uQ, -1)) continue
-        } else if (!uQ.isEnabled() || !uQ.isVisible || !uQ.aA) continue;
-        const bQ = DQ && uQ.isWorldMatrixCameraDependent(),
-          YQ = uQ.computeWorldMatrix(bQ, vQ);
-        if (uQ.hasThinInstances && uQ.hFQ) {
-          if (mQ(null, FQ, uQ, YQ, !0, !0, LQ)) {
-            const {
-              rawBoundingInfo: QQ,
-              intersectionThreshold: DQ
-            } = GQ(uQ), kQ = uQ._thinInstanceDataStorage.matrixData;
-            if (kQ) {
-              const vQ = qQ.k.Matrix[0],
-                bQ = qQ.k.Matrix[1],
-                xQ = Math.min(uQ.o4, kQ.length >> 4);
-              for (let AQ = 0; AQ < xQ; AQ++) {
-                if (wQ && !wQ(uQ, AQ)) continue;
-                qQ.c.FromArrayToRef(kQ, AQ << 4, vQ), vQ.multiplyToRef(YQ, bQ);
-                const xQ = HQ && QQ ? pQ(FQ, uQ, bQ, QQ, DQ) : null;
-                if (HQ && QQ && !xQ) continue;
-                const tQ = HQ && xQ ? eQ(null, uQ, bQ, xQ, !1, !1, LQ, !0) : mQ(null, FQ, uQ, bQ, !1, !1, LQ, !0);
-                tQ && (tQ.thinInstanceIndex = AQ, oQ.push(tQ))
-              }
-            }
-          }
-        } else {
-          const QQ = mQ(null, FQ, uQ, YQ, !1, !1, LQ);
-          QQ && oQ.push(QQ)
-        }
-      }
-      return oQ
-    }
+    /**
+     * Finds the position beginning first substring match in a regular expression search
+     * using this regular expression.
+     *
+     * @param string The string to search within.
+     */
+    [Symbol.search](string: string): number;
 
-    function SQ(QQ, FQ, wQ, LQ, oQ, DQ) {
-      if (!kQ.d) return null;
-      const vQ = cQ(QQ, (LQ => (QQ._tempPickingRay || (QQ._tempPickingRay = HQ.Zero()), YQ(QQ, FQ, wQ, LQ, QQ._tempPickingRay, DQ || null), QQ._tempPickingRay)), LQ, oQ, !0);
-      return vQ && (vQ.ray = bQ(QQ, FQ, wQ, qQ.c.Identity(), DQ || null)), vQ
-    }
+    /**
+     * Returns an array of substrings that were delimited by strings in the original input that
+     * match against this regular expression.
+     *
+     * If the regular expression contains capturing parentheses, then each time this
+     * regular expression matches, the results (including any undefined results) of the
+     * capturing parentheses are spliced.
+     *
+     * @param string string value to split
+     * @param limit if not undefined, the output array is truncated so that it contains no more
+     * than 'limit' elements.
+     */
+    [Symbol.split](string: string, limit?: number): string[];
+}
 
-    function iQ(QQ, FQ, wQ, LQ, oQ, DQ, kQ) {
-      const vQ = cQ(QQ, ((LQ, qQ) => (QQ._tempPickingRay || (QQ._tempPickingRay = HQ.Zero()), YQ(QQ, FQ, wQ, LQ, QQ._tempPickingRay, DQ || null, !1, qQ), QQ._tempPickingRay)), LQ, oQ, !1, kQ);
-      return vQ && (vQ.ray = bQ(QQ, FQ, wQ, qQ.c.Identity(), DQ || null)), vQ
-    }
+interface RegExpConstructor {
+    readonly [Symbol.species]: RegExpConstructor;
+}
 
-    function WQ(QQ, FQ, wQ, LQ, oQ) {
-      const DQ = cQ(QQ, (wQ => (QQ._pickWithRayInverseMatrix || (QQ._pickWithRayInverseMatrix = qQ.c.Identity()), wQ.invertToRef(QQ._pickWithRayInverseMatrix), QQ._cachedRayForTransform || (QQ._cachedRayForTransform = HQ.Zero()), HQ.TransformToRef(FQ, QQ._pickWithRayInverseMatrix, QQ._cachedRayForTransform), QQ._cachedRayForTransform)), wQ, LQ, !1, oQ);
-      return DQ && (DQ.ray = FQ), DQ
-    }
+interface String {
+    /**
+     * Matches a string or an object that supports being matched against, and returns an array
+     * containing the results of that search, or null if no matches are found.
+     * @param matcher An object that supports being matched against.
+     */
+    match(matcher: { [Symbol.match](string: string): RegExpMatchArray | null; }): RegExpMatchArray | null;
 
-    function RQ(QQ, FQ, wQ, LQ, qQ, oQ) {
-      return CQ(QQ, (LQ => bQ(QQ, FQ, wQ, LQ, qQ || null)), LQ, oQ)
-    }
+    /**
+     * Passes a string and {@linkcode replaceValue} to the \`[Symbol.replace]\` method on {@linkcode searchValue}. This method is expected to implement its own replacement algorithm.
+     * @param searchValue An object that supports searching for and replacing matches within a string.
+     * @param replaceValue The replacement text.
+     */
+    replace(searchValue: { [Symbol.replace](string: string, replaceValue: string): string; }, replaceValue: string): string;
 
-    function OQ(QQ, FQ, wQ, LQ) {
-      return CQ(QQ, (wQ => (QQ._pickWithRayInverseMatrix || (QQ._pickWithRayInverseMatrix = qQ.c.Identity()), wQ.invertToRef(QQ._pickWithRayInverseMatrix), QQ._cachedRayForTransform || (QQ._cachedRayForTransform = HQ.Zero()), HQ.TransformToRef(FQ, QQ._pickWithRayInverseMatrix, QQ._cachedRayForTransform), QQ._cachedRayForTransform)), wQ, LQ)
-    }
+    /**
+     * Replaces text in a string, using an object that supports replacement within a string.
+     * @param searchValue A object can search for and replace matches within a string.
+     * @param replacer A function that returns the replacement text.
+     */
+    replace(searchValue: { [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) => string): string; }, replacer: (substring: string, ...args: any[]) => string): string;
 
-    function sQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100,
-        LQ = arguments.length > 3 ? arguments[3] : void 0,
-        oQ = arguments.length > 4 ? arguments[4] : void 0;
-      LQ || (LQ = QQ.getWorldMatrix()), FQ.length = wQ, oQ ? FQ.origin.Qs(oQ) : FQ.origin.Qs(QQ.position);
-      const DQ = qQ.k.Ox[2];
-      DQ.set(0, 0, QQ._scene.useRightHandedSystem ? -1 : 1);
-      const kQ = qQ.k.Ox[3];
-      return qQ.p.TransformNormalToRef(DQ, LQ, kQ), qQ.p.NormalizeToRef(kQ, FQ.direction), FQ
-    }
+    /**
+     * Finds the first substring match in a regular expression search.
+     * @param searcher An object which supports searching within a string.
+     */
+    search(searcher: { [Symbol.search](string: string): number; }): number;
 
-    function rQ(QQ, FQ) {
-      FQ && (FQ.prototype.getForwardRay = function() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 100,
-          FQ = arguments.length > 1 ? arguments[1] : void 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        return sQ(this, new HQ(qQ.p.Zero(), qQ.p.Zero(), QQ), QQ, FQ, wQ)
-      }, FQ.prototype.getForwardRayToRef = function(QQ) {
-        return sQ(this, QQ, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100, arguments.length > 2 ? arguments[2] : void 0, arguments.length > 3 ? arguments[3] : void 0)
-      }), QQ && (mQ.c._IsPickingAvailable = !0, QQ.prototype.createPickingRay = function(QQ, FQ, wQ, LQ) {
-        return bQ(this, QQ, FQ, wQ, LQ, arguments.length > 4 && void 0 !== arguments[4] && arguments[4])
-      })
-    }
-    HQ._TmpVector3 = (0, oQ.b)(6, qQ.p.Zero), HQ._RayDistant = HQ.Zero(), HQ._Smallnum = 1e-8, HQ._Rayl = 1e9
+    /**
+     * Split a string into substrings using the specified separator and return them as an array.
+     * @param splitter An object that can split a string.
+     * @param limit A value used to limit the number of elements returned in the array.
+     */
+    split(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[];
+}
+
+interface ArrayBuffer {
+    readonly [Symbol.toStringTag]: "ArrayBuffer";
+}
+
+interface Int8Array<TArrayBuffer extends ArrayBufferLike> {
+    readonly [Symbol.toStringTag]: "Int8Array";
+}
+
+interface Uint8Array<TArrayBuffer extends ArrayBufferLike> {
+    readonly [Symbol.toStringTag]: "Uint8Array";
+}
+
+interface Int16Array<TArrayBuffer extends ArrayBufferLike> {
+    readonly [Symbol.toStringTag]: "Int16Array";
+}
+
+interface Uint16Array<TArrayBuffer extends ArrayBufferLike> {
+    readonly [Symbol.toStringTag]: "Uint16Array";
+}
+
+interface Int32Array<TArrayBuffer extends ArrayBufferLike> {
+    readonly [Symbol.toStringTag]: "Int32Array";
+}
+
+interface Uint32Array<TArrayBuffer extends ArrayBufferLike> {
+    readonly [Symbol.toStringTag]: "Uint32Array";
+}
+
+interface Float32Array<TArrayBuffer extends ArrayBufferLike> {
+    readonly [Symbol.toStringTag]: "Float32Array";
+}
+
+interface Float64Array<TArrayBuffer extends ArrayBufferLike> {
+    readonly [Symbol.toStringTag]: "Float64Array";
+}
+
+interface ArrayConstructor {
+    readonly [Symbol.species]: ArrayConstructor;
+}
+
+interface MapConstructor {
+    readonly [Symbol.species]: MapConstructor;
+}
+
+interface SetConstructor {
+    readonly [Symbol.species]: SetConstructor;
+}
+
+interface ArrayBufferConstructor {
+    readonly [Symbol.species]: ArrayBufferConstructor;
+}
+
+interface Array<T> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: T, fromIndex?: number): boolean;
+}
+
+interface ReadonlyArray<T> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: T, fromIndex?: number): boolean;
+}
+
+interface Int8Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: number, fromIndex?: number): boolean;
+}
+
+interface Uint8Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: number, fromIndex?: number): boolean;
+}
+
+interface Int16Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: number, fromIndex?: number): boolean;
+}
+
+interface Uint16Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: number, fromIndex?: number): boolean;
+}
+
+interface Int32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: number, fromIndex?: number): boolean;
+}
+
+interface Uint32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: number, fromIndex?: number): boolean;
+}
+
+interface Float32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: number, fromIndex?: number): boolean;
+}
+
+interface Float64Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Determines whether an array includes a certain element, returning true or false as appropriate.
+     * @param searchElement The element to search for.
+     * @param fromIndex The position in this array at which to begin searching for searchElement.
+     */
+    includes(searchElement: number, fromIndex?: number): boolean;
+}
+
+interface ArrayBufferConstructor {
+    new (): ArrayBuffer;
+}
+
+interface ObjectConstructor {
+    /**
+     * Returns an array of values of the enumerable own properties of an object
+     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+     */
+    values<T>(o: { [s: string]: T; } | ArrayLike<T>): T[];
+
+    /**
+     * Returns an array of values of the enumerable own properties of an object
+     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+     */
+    values(o: {}): any[];
+
+    /**
+     * Returns an array of key/values of the enumerable own properties of an object
+     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+     */
+    entries<T>(o: { [s: string]: T; } | ArrayLike<T>): [string, T][];
+
+    /**
+     * Returns an array of key/values of the enumerable own properties of an object
+     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+     */
+    entries(o: {}): [string, any][];
+
+    /**
+     * Returns an object containing all own property descriptors of an object
+     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+     */
+    getOwnPropertyDescriptors<T>(o: T): { [P in keyof T]: TypedPropertyDescriptor<T[P]>; } & { [x: string]: PropertyDescriptor; };
+}
+
+interface ArrayBufferTypes {
+    SharedArrayBuffer: SharedArrayBuffer;
+}
+
+interface String {
+    /**
+     * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.
+     * The padding is applied from the start (left) of the current string.
+     *
+     * @param maxLength The length of the resulting string once the current string has been padded.
+     *        If this parameter is smaller than the current string's length, the current string will be returned as it is.
+     *
+     * @param fillString The string to pad the current string with.
+     *        If this string is too long, it will be truncated and the left-most part will be applied.
+     *        The default value for this parameter is " " (U+0020).
+     */
+    padStart(maxLength: number, fillString?: string): string;
+
+    /**
+     * Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.
+     * The padding is applied from the end (right) of the current string.
+     *
+     * @param maxLength The length of the resulting string once the current string has been padded.
+     *        If this parameter is smaller than the current string's length, the current string will be returned as it is.
+     *
+     * @param fillString The string to pad the current string with.
+     *        If this string is too long, it will be truncated and the left-most part will be applied.
+     *        The default value for this parameter is " " (U+0020).
+     */
+    padEnd(maxLength: number, fillString?: string): string;
+}
+
+interface Int8ArrayConstructor {
+    new (): Int8Array<ArrayBuffer>;
+}
+
+interface Uint8ArrayConstructor {
+    new (): Uint8Array<ArrayBuffer>;
+}
+
+interface Int16ArrayConstructor {
+    new (): Int16Array<ArrayBuffer>;
+}
+
+interface Uint16ArrayConstructor {
+    new (): Uint16Array<ArrayBuffer>;
+}
+
+interface Int32ArrayConstructor {
+    new (): Int32Array<ArrayBuffer>;
+}
+
+interface Uint32ArrayConstructor {
+    new (): Uint32Array<ArrayBuffer>;
+}
+
+interface Float32ArrayConstructor {
+    new (): Float32Array<ArrayBuffer>;
+}
+
+interface Float64ArrayConstructor {
+    new (): Float64Array<ArrayBuffer>;
+}
+
+interface RegExpMatchArray {
+    groups?: {
+        [key: string]: string;
+    };
+}
+
+interface RegExpExecArray {
+    groups?: {
+        [key: string]: string;
+    };
+}
+
+interface RegExp {
+    /**
+     * Returns a Boolean value indicating the state of the dotAll flag (s) used with a regular expression.
+     * Default is false. Read-only.
+     */
+    readonly dotAll: boolean;
+}
+
+interface ReadonlyArray<T> {
+    /**
+     * Calls a defined callback function on each element of an array. Then, flattens the result into
+     * a new array.
+     * This is identical to a map followed by flat with depth 1.
+     *
+     * @param callback A function that accepts up to three arguments. The flatMap method calls the
+     * callback function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callback function. If
+     * thisArg is omitted, undefined is used as the this value.
+     */
+    flatMap<U, This = undefined>(
+        callback: (this: This, value: T, index: number, array: T[]) => U | ReadonlyArray<U>,
+        thisArg?: This,
+    ): U[];
+
+    /**
+     * Returns a new array with all sub-array elements concatenated into it recursively up to the
+     * specified depth.
+     *
+     * @param depth The maximum recursion depth
+     */
+    flat<A, D extends number = 1>(
+        this: A,
+        depth?: D,
+    ): FlatArray<A, D>[];
+}
+
+interface Array<T> {
+    /**
+     * Calls a defined callback function on each element of an array. Then, flattens the result into
+     * a new array.
+     * This is identical to a map followed by flat with depth 1.
+     *
+     * @param callback A function that accepts up to three arguments. The flatMap method calls the
+     * callback function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callback function. If
+     * thisArg is omitted, undefined is used as the this value.
+     */
+    flatMap<U, This = undefined>(
+        callback: (this: This, value: T, index: number, array: T[]) => U | ReadonlyArray<U>,
+        thisArg?: This,
+    ): U[];
+
+    /**
+     * Returns a new array with all sub-array elements concatenated into it recursively up to the
+     * specified depth.
+     *
+     * @param depth The maximum recursion depth
+     */
+    flat<A, D extends number = 1>(
+        this: A,
+        depth?: D,
+    ): FlatArray<A, D>[];
+}
+
+interface ObjectConstructor {
+    /**
+     * Returns an object created by key-value entries for properties and methods
+     * @param entries An iterable object that contains key-value entries for properties and methods.
+     */
+    fromEntries<T = any>(entries: Iterable<readonly [PropertyKey, T]>): { [k: string]: T; };
+
+    /**
+     * Returns an object created by key-value entries for properties and methods
+     * @param entries An iterable object that contains key-value entries for properties and methods.
+     */
+    fromEntries(entries: Iterable<readonly any[]>): any;
+}
+
+interface String {
+    /** Removes the trailing white space and line terminator characters from a string. */
+    trimEnd(): string;
+
+    /** Removes the leading white space and line terminator characters from a string. */
+    trimStart(): string;
+
+    /**
+     * Removes the leading white space and line terminator characters from a string.
+     * @deprecated A legacy feature for browser compatibility. Use \`trimStart\` instead
+     */
+    trimLeft(): string;
+
+    /**
+     * Removes the trailing white space and line terminator characters from a string.
+     * @deprecated A legacy feature for browser compatibility. Use \`trimEnd\` instead
+     */
+    trimRight(): string;
+}
+
+interface Symbol {
+    /**
+     * Expose the [[Description]] internal slot of a symbol directly.
+     */
+    readonly description: string | undefined;
+}
+
+interface Number {
+    /**
+     * Converts a number to a string by using the current or specified locale.
+     * @param locales A locale string, array of locale strings, Intl.Locale object, or array of Intl.Locale objects that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+     * @param options An object that contains one or more properties that specify comparison options.
+     */
+    toLocaleString(locales?: Intl.LocalesArgument, options?: Intl.NumberFormatOptions): string;
+}
+
+interface String {
+    /**
+     * Matches a string with a regular expression, and returns an iterable of matches
+     * containing the results of that search.
+     * @param regexp A variable name or string literal containing the regular expression pattern and flags.
+     */
+    matchAll(regexp: RegExp): RegExpStringIterator<RegExpExecArray>;
+
+    /** Converts all alphabetic characters to lowercase, taking into account the host environment's current locale. */
+    toLocaleLowerCase(locales?: Intl.LocalesArgument): string;
+
+    /** Returns a string where all alphabetic characters have been converted to uppercase, taking into account the host environment's current locale. */
+    toLocaleUpperCase(locales?: Intl.LocalesArgument): string;
+
+    /**
+     * Determines whether two strings are equivalent in the current or specified locale.
+     * @param that String to compare to target string
+     * @param locales A locale string or array of locale strings that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used. This parameter must conform to BCP 47 standards; see the Intl.Collator object for details.
+     * @param options An object that contains one or more properties that specify comparison options. see the Intl.Collator object for details.
+     */
+    localeCompare(that: string, locales?: Intl.LocalesArgument, options?: Intl.CollatorOptions): number;
+}
+
+interface SymbolConstructor {
+    /**
+     * A regular expression method that matches the regular expression against a string. Called
+     * by the String.prototype.matchAll method.
+     */
+    readonly matchAll: unique symbol;
+}
+
+interface RegExpStringIterator<T> extends IteratorObject<T, BuiltinIteratorReturn, unknown> {
+    [Symbol.iterator](): RegExpStringIterator<T>;
+}
+
+interface RegExp {
+    /**
+     * Matches a string with this regular expression, and returns an iterable of matches
+     * containing the results of that search.
+     * @param string A string to search within.
+     */
+    [Symbol.matchAll](str: string): RegExpStringIterator<RegExpMatchArray>;
+}
+
+interface String {
+    /**
+     * Replace all instances of a substring in a string, using a regular expression or search string.
+     * @param searchValue A string to search for.
+     * @param replaceValue A string containing the text to replace for every successful match of searchValue in this string.
+     */
+    replaceAll(searchValue: string | RegExp, replaceValue: string): string;
+
+    /**
+     * Replace all instances of a substring in a string, using a regular expression or search string.
+     * @param searchValue A string to search for.
+     * @param replacer A function that returns the replacement text.
+     */
+    replaceAll(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string;
+}
+
+interface Array<T> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): T | undefined;
+}
+
+interface ReadonlyArray<T> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): T | undefined;
+}
+
+interface Int8Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): number | undefined;
+}
+
+interface Uint8Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): number | undefined;
+}
+
+interface Int16Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): number | undefined;
+}
+
+interface Uint16Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): number | undefined;
+}
+
+interface Int32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): number | undefined;
+}
+
+interface Uint32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): number | undefined;
+}
+
+interface Float32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): number | undefined;
+}
+
+interface Float64Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the item located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): number | undefined;
+}
+
+interface Error {
+    cause?: unknown;
+}
+
+interface ErrorConstructor {
+    new (message?: string, options?: ErrorOptions): Error;
+    (message?: string, options?: ErrorOptions): Error;
+}
+
+interface ObjectConstructor {
+    /**
+     * Determines whether an object has a property with the specified name.
+     * @param o An object.
+     * @param v A property name.
+     */
+    hasOwn(o: object, v: PropertyKey): boolean;
+}
+
+interface RegExpMatchArray {
+    indices?: RegExpIndicesArray;
+}
+
+interface RegExpExecArray {
+    indices?: RegExpIndicesArray;
+}
+
+interface RegExp {
+    /**
+     * Returns a Boolean value indicating the state of the hasIndices flag (d) used with a regular expression.
+     * Default is false. Read-only.
+     */
+    readonly hasIndices: boolean;
+}
+
+interface String {
+    /**
+     * Returns a new String consisting of the single UTF-16 code unit located at the specified index.
+     * @param index The zero-based index of the desired code unit. A negative index will count back from the last item.
+     */
+    at(index: number): string | undefined;
+}
+
+interface Array<T> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S | undefined;
+    findLast(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): number;
+
+    /**
+     * Returns a copy of an array with its elements reversed.
+     */
+    toReversed(): T[];
+
+    /**
+     * Returns a copy of an array with its elements sorted.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending, UTF-16 code unit order.
+     * \`\`\`ts
+     * [11, 2, 22, 1].toSorted((a, b) => a - b) // [1, 2, 11, 22]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: T, b: T) => number): T[];
+
+    /**
+     * Copies an array and removes elements and, if necessary, inserts new elements in their place. Returns the copied array.
+     * @param start The zero-based location in the array from which to start removing elements.
+     * @param deleteCount The number of elements to remove.
+     * @param items Elements to insert into the copied array in place of the deleted elements.
+     * @returns The copied array.
+     */
+    toSpliced(start: number, deleteCount: number, ...items: T[]): T[];
+
+    /**
+     * Copies an array and removes elements while returning the remaining elements.
+     * @param start The zero-based location in the array from which to start removing elements.
+     * @param deleteCount The number of elements to remove.
+     * @returns A copy of the original array with the remaining elements.
+     */
+    toSpliced(start: number, deleteCount?: number): T[];
+
+    /**
+     * Copies an array, then overwrites the value at the provided index with the
+     * given value. If the index is negative, then it replaces from the end
+     * of the array.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to write into the copied array.
+     * @returns The copied array with the updated value.
+     */
+    with(index: number, value: T): T[];
+}
+
+interface ReadonlyArray<T> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends T>(
+        predicate: (value: T, index: number, array: readonly T[]) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (value: T, index: number, array: readonly T[]) => unknown,
+        thisArg?: any,
+    ): T | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (value: T, index: number, array: readonly T[]) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copied array with all of its elements reversed.
+     */
+    toReversed(): T[];
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending, UTF-16 code unit order.
+     * \`\`\`ts
+     * [11, 2, 22, 1].toSorted((a, b) => a - b) // [1, 2, 11, 22]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: T, b: T) => number): T[];
+
+    /**
+     * Copies an array and removes elements while, if necessary, inserting new elements in their place, returning the remaining elements.
+     * @param start The zero-based location in the array from which to start removing elements.
+     * @param deleteCount The number of elements to remove.
+     * @param items Elements to insert into the copied array in place of the deleted elements.
+     * @returns A copy of the original array with the remaining elements.
+     */
+    toSpliced(start: number, deleteCount: number, ...items: T[]): T[];
+
+    /**
+     * Copies an array and removes elements while returning the remaining elements.
+     * @param start The zero-based location in the array from which to start removing elements.
+     * @param deleteCount The number of elements to remove.
+     * @returns A copy of the original array with the remaining elements.
+     */
+    toSpliced(start: number, deleteCount?: number): T[];
+
+    /**
+     * Copies an array, then overwrites the value at the provided index with the
+     * given value. If the index is negative, then it replaces from the end
+     * of the array
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: T): T[];
+}
+
+interface Int8Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends number>(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (value: number, index: number, array: this) => unknown,
+        thisArg?: any,
+    ): number | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (value: number, index: number, array: this) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copy with the elements in reverse order.
+     */
+    toReversed(): Int8Array<ArrayBuffer>;
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * const myNums = Int8Array.from([11, 2, 22, 1]);
+     * myNums.toSorted((a, b) => a - b) // Int8Array(4) [1, 2, 11, 22]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: number, b: number) => number): Int8Array<ArrayBuffer>;
+
+    /**
+     * Copies the array and inserts the given number at the provided index.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: number): Int8Array<ArrayBuffer>;
+}
+
+interface Uint8Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends number>(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (value: number, index: number, array: this) => unknown,
+        thisArg?: any,
+    ): number | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (value: number, index: number, array: this) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copy with the elements in reverse order.
+     */
+    toReversed(): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * const myNums = Uint8Array.from([11, 2, 22, 1]);
+     * myNums.toSorted((a, b) => a - b) // Uint8Array(4) [1, 2, 11, 22]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: number, b: number) => number): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Copies the array and inserts the given number at the provided index.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: number): Uint8Array<ArrayBuffer>;
+}
+
+interface Int16Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends number>(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (value: number, index: number, array: this) => unknown,
+        thisArg?: any,
+    ): number | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (value: number, index: number, array: this) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copy with the elements in reverse order.
+     */
+    toReversed(): Int16Array<ArrayBuffer>;
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * const myNums = Int16Array.from([11, 2, -22, 1]);
+     * myNums.toSorted((a, b) => a - b) // Int16Array(4) [-22, 1, 2, 11]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: number, b: number) => number): Int16Array<ArrayBuffer>;
+
+    /**
+     * Copies the array and inserts the given number at the provided index.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: number): Int16Array<ArrayBuffer>;
+}
+
+interface Uint16Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends number>(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => unknown,
+        thisArg?: any,
+    ): number | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copy with the elements in reverse order.
+     */
+    toReversed(): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * const myNums = Uint16Array.from([11, 2, 22, 1]);
+     * myNums.toSorted((a, b) => a - b) // Uint16Array(4) [1, 2, 11, 22]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: number, b: number) => number): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Copies the array and inserts the given number at the provided index.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: number): Uint16Array<ArrayBuffer>;
+}
+
+interface Int32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends number>(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (value: number, index: number, array: this) => unknown,
+        thisArg?: any,
+    ): number | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (value: number, index: number, array: this) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copy with the elements in reverse order.
+     */
+    toReversed(): Int32Array<ArrayBuffer>;
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * const myNums = Int32Array.from([11, 2, -22, 1]);
+     * myNums.toSorted((a, b) => a - b) // Int32Array(4) [-22, 1, 2, 11]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: number, b: number) => number): Int32Array<ArrayBuffer>;
+
+    /**
+     * Copies the array and inserts the given number at the provided index.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: number): Int32Array<ArrayBuffer>;
+}
+
+interface Uint32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends number>(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => unknown,
+        thisArg?: any,
+    ): number | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copy with the elements in reverse order.
+     */
+    toReversed(): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * const myNums = Uint32Array.from([11, 2, 22, 1]);
+     * myNums.toSorted((a, b) => a - b) // Uint32Array(4) [1, 2, 11, 22]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: number, b: number) => number): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Copies the array and inserts the given number at the provided index.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: number): Uint32Array<ArrayBuffer>;
+}
+
+interface Float32Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends number>(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => unknown,
+        thisArg?: any,
+    ): number | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copy with the elements in reverse order.
+     */
+    toReversed(): Float32Array<ArrayBuffer>;
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * const myNums = Float32Array.from([11.25, 2, -22.5, 1]);
+     * myNums.toSorted((a, b) => a - b) // Float32Array(4) [-22.5, 1, 2, 11.5]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: number, b: number) => number): Float32Array<ArrayBuffer>;
+
+    /**
+     * Copies the array and inserts the given number at the provided index.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: number): Float32Array<ArrayBuffer>;
+}
+
+interface Float64Array<TArrayBuffer extends ArrayBufferLike> {
+    /**
+     * Returns the value of the last element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate findLast calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found, findLast
+     * immediately returns that element value. Otherwise, findLast returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLast<S extends number>(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => value is S,
+        thisArg?: any,
+    ): S | undefined;
+    findLast(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => unknown,
+        thisArg?: any,
+    ): number | undefined;
+
+    /**
+     * Returns the index of the last element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate findLastIndex calls predicate once for each element of the array, in descending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findLastIndex immediately returns that element index. Otherwise, findLastIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findLastIndex(
+        predicate: (
+            value: number,
+            index: number,
+            array: this,
+        ) => unknown,
+        thisArg?: any,
+    ): number;
+
+    /**
+     * Copies the array and returns the copy with the elements in reverse order.
+     */
+    toReversed(): Float64Array<ArrayBuffer>;
+
+    /**
+     * Copies and sorts the array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * const myNums = Float64Array.from([11.25, 2, -22.5, 1]);
+     * myNums.toSorted((a, b) => a - b) // Float64Array(4) [-22.5, 1, 2, 11.5]
+     * \`\`\`
+     */
+    toSorted(compareFn?: (a: number, b: number) => number): Float64Array<ArrayBuffer>;
+
+    /**
+     * Copies the array and inserts the given number at the provided index.
+     * @param index The index of the value to overwrite. If the index is
+     * negative, then it replaces from the end of the array.
+     * @param value The value to insert into the copied array.
+     * @returns A copy of the original array with the inserted value.
+     */
+    with(index: number, value: number): Float64Array<ArrayBuffer>;
+}
+
+interface ArrayBuffer {
+    /**
+     * If this ArrayBuffer is resizable, returns the maximum byte length given during construction; returns the byte length if not.
+     *
+     * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/maxByteLength)
+     */
+    get maxByteLength(): number;
+
+    /**
+     * Returns true if this ArrayBuffer can be resized.
+     *
+     * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resizable)
+     */
+    get resizable(): boolean;
+
+    /**
+     * Resizes the ArrayBuffer to the specified size (in bytes).
+     *
+     * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/resize)
+     */
+    resize(newByteLength?: number): void;
+
+    /**
+     * Returns a boolean indicating whether or not this buffer has been detached (transferred).
+     *
+     * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached)
+     */
+    get detached(): boolean;
+
+    /**
+     * Creates a new ArrayBuffer with the same byte content as this buffer, then detaches this buffer.
+     *
+     * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transfer)
+     */
+    transfer(newByteLength?: number): ArrayBuffer;
+
+    /**
+     * Creates a new non-resizable ArrayBuffer with the same byte content as this buffer, then detaches this buffer.
+     *
+     * [MDN](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transferToFixedLength)
+     */
+    transferToFixedLength(newByteLength?: number): ArrayBuffer;
+}
+
+interface ArrayBufferConstructor {
+    new (byteLength: number, options?: { maxByteLength?: number; }): ArrayBuffer;
+}
+
+interface MapConstructor {
+    /**
+     * Groups members of an iterable according to the return value of the passed callback.
+     * @param items An iterable.
+     * @param keySelector A callback which will be invoked for each item in items.
+     */
+    groupBy<K, T>(
+        items: Iterable<T>,
+        keySelector: (item: T, index: number) => K,
+    ): Map<K, T[]>;
+}
+
+interface ObjectConstructor {
+    /**
+     * Groups members of an iterable according to the return value of the passed callback.
+     * @param items An iterable.
+     * @param keySelector A callback which will be invoked for each item in items.
+     */
+    groupBy<K extends PropertyKey, T>(
+        items: Iterable<T>,
+        keySelector: (item: T, index: number) => K,
+    ): Partial<Record<K, T[]>>;
+}
+
+interface RegExp {
+    /**
+     * Returns a Boolean value indicating the state of the unicodeSets flag (v) used with a regular expression.
+     * Default is false. Read-only.
+     */
+    readonly unicodeSets: boolean;
+}
+
+interface String {
+    /**
+     * Returns true if all leading surrogates and trailing surrogates appear paired and in order.
+     */
+    isWellFormed(): boolean;
+
+    /**
+     * Returns a string where all lone or out-of-order surrogates have been replaced by the Unicode replacement character (U+FFFD).
+     */
+    toWellFormed(): string;
+}
+
+interface Symbol {
+    /** Returns a string representation of an object. */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): symbol;
+}
+
+interface PropertyDescriptor {
+    configurable?: boolean;
+    enumerable?: boolean;
+    value?: any;
+    writable?: boolean;
+    get?(): any;
+    set?(v: any): void;
+}
+
+interface Object {
+    /** The initial value of Object.prototype.constructor is the standard built-in Object constructor. */
+    constructor: Function;
+
+    /** Returns a string representation of an object. */
+    toString(): string;
+
+    /** Returns a date converted to a string using the current locale. */
+    toLocaleString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): Object;
+
+    /**
+     * Determines whether an object has a property with the specified name.
+     * @param v A property name.
+     */
+    hasOwnProperty(v: PropertyKey): boolean;
+
+    /**
+     * Determines whether an object exists in another object's prototype chain.
+     * @param v Another object whose prototype chain is to be checked.
+     */
+    isPrototypeOf(v: Object): boolean;
+
+    /**
+     * Determines whether a specified property is enumerable.
+     * @param v A property name.
+     */
+    propertyIsEnumerable(v: PropertyKey): boolean;
+}
+
+interface ObjectConstructor {
+    new (value?: any): Object;
+    (): any;
+    (value: any): any;
+
+    /** A reference to the prototype for a class of objects. */
+    readonly prototype: Object;
+
+    /**
+     * Returns the prototype of an object.
+     * @param o The object that references the prototype.
+     */
+    getPrototypeOf(o: any): any;
+
+    /**
+     * Gets the own property descriptor of the specified object.
+     * An own property descriptor is one that is defined directly on the object and is not inherited from the object's prototype.
+     * @param o Object that contains the property.
+     * @param p Name of the property.
+     */
+    getOwnPropertyDescriptor(o: any, p: PropertyKey): PropertyDescriptor | undefined;
+
+    /**
+     * Returns the names of the own properties of an object. The own properties of an object are those that are defined directly
+     * on that object, and are not inherited from the object's prototype. The properties of an object include both fields (objects) and functions.
+     * @param o Object that contains the own properties.
+     */
+    getOwnPropertyNames(o: any): string[];
+
+    /**
+     * Creates an object that has the specified prototype or that has null prototype.
+     * @param o Object to use as a prototype. May be null.
+     */
+    create(o: object | null): any;
+
+    /**
+     * Creates an object that has the specified prototype, and that optionally contains specified properties.
+     * @param o Object to use as a prototype. May be null
+     * @param properties JavaScript object that contains one or more property descriptors.
+     */
+    create(o: object | null, properties: PropertyDescriptorMap & ThisType<any>): any;
+
+    /**
+     * Adds a property to an object, or modifies attributes of an existing property.
+     * @param o Object on which to add or modify the property. This can be a native JavaScript object (that is, a user-defined object or a built in object) or a DOM object.
+     * @param p The property name.
+     * @param attributes Descriptor for the property. It can be for a data property or an accessor property.
+     */
+    defineProperty<T>(o: T, p: PropertyKey, attributes: PropertyDescriptor & ThisType<any>): T;
+
+    /**
+     * Adds one or more properties to an object, and/or modifies attributes of existing properties.
+     * @param o Object on which to add or modify the properties. This can be a native JavaScript object or a DOM object.
+     * @param properties JavaScript object that contains one or more descriptor objects. Each descriptor object describes a data property or an accessor property.
+     */
+    defineProperties<T>(o: T, properties: PropertyDescriptorMap & ThisType<any>): T;
+
+    /**
+     * Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
+     * @param o Object on which to lock the attributes.
+     */
+    seal<T>(o: T): T;
+
+    /**
+     * Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+     * @param f Object on which to lock the attributes.
+     */
+    freeze<T extends Function>(f: T): T;
+
+    /**
+     * Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+     * @param o Object on which to lock the attributes.
+     */
+    freeze<T extends { [idx: string]: U | null | undefined | object; }, U extends string | bigint | number | boolean | symbol>(o: T): Readonly<T>;
+
+    /**
+     * Prevents the modification of existing property attributes and values, and prevents the addition of new properties.
+     * @param o Object on which to lock the attributes.
+     */
+    freeze<T>(o: T): Readonly<T>;
+
+    /**
+     * Prevents the addition of new properties to an object.
+     * @param o Object to make non-extensible.
+     */
+    preventExtensions<T>(o: T): T;
+
+    /**
+     * Returns true if existing property attributes cannot be modified in an object and new properties cannot be added to the object.
+     * @param o Object to test.
+     */
+    isSealed(o: any): boolean;
+
+    /**
+     * Returns true if existing property attributes and values cannot be modified in an object, and new properties cannot be added to the object.
+     * @param o Object to test.
+     */
+    isFrozen(o: any): boolean;
+
+    /**
+     * Returns a value that indicates whether new properties can be added to an object.
+     * @param o Object to test.
+     */
+    isExtensible(o: any): boolean;
+
+    /**
+     * Returns the names of the enumerable string properties and methods of an object.
+     * @param o Object that contains the properties and methods. This can be an object that you created or an existing Document Object Model (DOM) object.
+     */
+    keys(o: object): string[];
+}
+
+/**
+ * Creates a new function.
+ */
+interface Function {
+    /**
+     * Calls the function, substituting the specified object for the this value of the function, and the specified array for the arguments of the function.
+     * @param thisArg The object to be used as the this object.
+     * @param argArray A set of arguments to be passed to the function.
+     */
+    apply(this: Function, thisArg: any, argArray?: any): any;
+
+    /**
+     * Calls a method of an object, substituting another object for the current object.
+     * @param thisArg The object to be used as the current object.
+     * @param argArray A list of arguments to be passed to the method.
+     */
+    call(this: Function, thisArg: any, ...argArray: any[]): any;
+
+    /**
+     * For a given function, creates a bound function that has the same body as the original function.
+     * The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+     * @param thisArg An object to which the this keyword can refer inside the new function.
+     * @param argArray A list of arguments to be passed to the new function.
+     */
+    bind(this: Function, thisArg: any, ...argArray: any[]): any;
+
+    /** Returns a string representation of a function. */
+    toString(): string;
+
+    prototype: any;
+    readonly length: number;
+
+    // Non-standard extensions
+    arguments: any;
+    caller: Function;
+}
+
+interface FunctionConstructor {
+    /**
+     * Creates a new function.
+     * @param args A list of arguments the function accepts.
+     */
+    new (...args: string[]): Function;
+    (...args: string[]): Function;
+    readonly prototype: Function;
+}
+
+interface CallableFunction extends Function {
+    /**
+     * Calls the function with the specified object as the this value and the elements of specified array as the arguments.
+     * @param thisArg The object to be used as the this object.
+     */
+    apply<T, R>(this: (this: T) => R, thisArg: T): R;
+
+    /**
+     * Calls the function with the specified object as the this value and the elements of specified array as the arguments.
+     * @param thisArg The object to be used as the this object.
+     * @param args An array of argument values to be passed to the function.
+     */
+    apply<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, args: A): R;
+
+    /**
+     * Calls the function with the specified object as the this value and the specified rest arguments as the arguments.
+     * @param thisArg The object to be used as the this object.
+     * @param args Argument values to be passed to the function.
+     */
+    call<T, A extends any[], R>(this: (this: T, ...args: A) => R, thisArg: T, ...args: A): R;
+
+    /**
+     * For a given function, creates a bound function that has the same body as the original function.
+     * The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+     * @param thisArg The object to be used as the this object.
+     */
+    bind<T>(this: T, thisArg: ThisParameterType<T>): OmitThisParameter<T>;
+
+    /**
+     * For a given function, creates a bound function that has the same body as the original function.
+     * The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+     * @param thisArg The object to be used as the this object.
+     * @param args Arguments to bind to the parameters of the function.
+     */
+    bind<T, A extends any[], B extends any[], R>(this: (this: T, ...args: [...A, ...B]) => R, thisArg: T, ...args: A): (...args: B) => R;
+}
+
+interface NewableFunction extends Function {
+    /**
+     * Calls the function with the specified object as the this value and the elements of specified array as the arguments.
+     * @param thisArg The object to be used as the this object.
+     */
+    apply<T>(this: new () => T, thisArg: T): void;
+    /**
+     * Calls the function with the specified object as the this value and the elements of specified array as the arguments.
+     * @param thisArg The object to be used as the this object.
+     * @param args An array of argument values to be passed to the function.
+     */
+    apply<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, args: A): void;
+
+    /**
+     * Calls the function with the specified object as the this value and the specified rest arguments as the arguments.
+     * @param thisArg The object to be used as the this object.
+     * @param args Argument values to be passed to the function.
+     */
+    call<T, A extends any[]>(this: new (...args: A) => T, thisArg: T, ...args: A): void;
+
+    /**
+     * For a given function, creates a bound function that has the same body as the original function.
+     * The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+     * @param thisArg The object to be used as the this object.
+     */
+    bind<T>(this: T, thisArg: any): T;
+
+    /**
+     * For a given function, creates a bound function that has the same body as the original function.
+     * The this object of the bound function is associated with the specified object, and has the specified initial parameters.
+     * @param thisArg The object to be used as the this object.
+     * @param args Arguments to bind to the parameters of the function.
+     */
+    bind<A extends any[], B extends any[], R>(this: new (...args: [...A, ...B]) => R, thisArg: any, ...args: A): new (...args: B) => R;
+}
+
+interface IArguments {
+    [index: number]: any;
+    length: number;
+    callee: Function;
+}
+
+interface String {
+    /** Returns a string representation of a string. */
+    toString(): string;
+
+    /**
+     * Returns the character at the specified index.
+     * @param pos The zero-based index of the desired character.
+     */
+    charAt(pos: number): string;
+
+    /**
+     * Returns the Unicode value of the character at the specified location.
+     * @param index The zero-based index of the desired character. If there is no character at the specified index, NaN is returned.
+     */
+    charCodeAt(index: number): number;
+
+    /**
+     * Returns a string that contains the concatenation of two or more strings.
+     * @param strings The strings to append to the end of the string.
+     */
+    concat(...strings: string[]): string;
+
+    /**
+     * Returns the position of the first occurrence of a substring.
+     * @param searchString The substring to search for in the string
+     * @param position The index at which to begin searching the String object. If omitted, search starts at the beginning of the string.
+     */
+    indexOf(searchString: string, position?: number): number;
+
+    /**
+     * Returns the last occurrence of a substring in the string.
+     * @param searchString The substring to search for.
+     * @param position The index at which to begin searching. If omitted, the search begins at the end of the string.
+     */
+    lastIndexOf(searchString: string, position?: number): number;
+
+    /**
+     * Determines whether two strings are equivalent in the current locale.
+     * @param that String to compare to target string
+     */
+    localeCompare(that: string): number;
+
+    /**
+     * Matches a string with a regular expression, and returns an array containing the results of that search.
+     * @param regexp A variable name or string literal containing the regular expression pattern and flags.
+     */
+    match(regexp: string | RegExp): RegExpMatchArray | null;
+
+    /**
+     * Replaces text in a string, using a regular expression or search string.
+     * @param searchValue A string or regular expression to search for.
+     * @param replaceValue A string containing the text to replace. When the {@linkcode searchValue} is a \`RegExp\`, all matches are replaced if the \`g\` flag is set (or only those matches at the beginning, if the \`y\` flag is also present). Otherwise, only the first match of {@linkcode searchValue} is replaced.
+     */
+    replace(searchValue: string | RegExp, replaceValue: string): string;
+
+    /**
+     * Replaces text in a string, using a regular expression or search string.
+     * @param searchValue A string to search for.
+     * @param replacer A function that returns the replacement text.
+     */
+    replace(searchValue: string | RegExp, replacer: (substring: string, ...args: any[]) => string): string;
+
+    /**
+     * Finds the first substring match in a regular expression search.
+     * @param regexp The regular expression pattern and applicable flags.
+     */
+    search(regexp: string | RegExp): number;
+
+    /**
+     * Returns a section of a string.
+     * @param start The index to the beginning of the specified portion of stringObj.
+     * @param end The index to the end of the specified portion of stringObj. The substring includes the characters up to, but not including, the character indicated by end.
+     * If this value is not specified, the substring continues to the end of stringObj.
+     */
+    slice(start?: number, end?: number): string;
+
+    /**
+     * Split a string into substrings using the specified separator and return them as an array.
+     * @param separator A string that identifies character or characters to use in separating the string. If omitted, a single-element array containing the entire string is returned.
+     * @param limit A value used to limit the number of elements returned in the array.
+     */
+    split(separator: string | RegExp, limit?: number): string[];
+
+    /**
+     * Returns the substring at the specified location within a String object.
+     * @param start The zero-based index number indicating the beginning of the substring.
+     * @param end Zero-based index number indicating the end of the substring. The substring includes the characters up to, but not including, the character indicated by end.
+     * If end is omitted, the characters from start through the end of the original string are returned.
+     */
+    substring(start: number, end?: number): string;
+
+    /** Converts all the alphabetic characters in a string to lowercase. */
+    toLowerCase(): string;
+
+    /** Converts all alphabetic characters to lowercase, taking into account the host environment's current locale. */
+    toLocaleLowerCase(locales?: string | string[]): string;
+
+    /** Converts all the alphabetic characters in a string to uppercase. */
+    toUpperCase(): string;
+
+    /** Returns a string where all alphabetic characters have been converted to uppercase, taking into account the host environment's current locale. */
+    toLocaleUpperCase(locales?: string | string[]): string;
+
+    /** Removes the leading and trailing white space and line terminator characters from a string. */
+    trim(): string;
+
+    /** Returns the length of a String object. */
+    readonly length: number;
+
+    // IE extensions
+    /**
+     * Gets a substring beginning at the specified location and having the specified length.
+     * @deprecated A legacy feature for browser compatibility
+     * @param from The starting position of the desired substring. The index of the first character in the string is zero.
+     * @param length The number of characters to include in the returned substring.
+     */
+    substr(from: number, length?: number): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): string;
+
+    readonly [index: number]: string;
+}
+
+interface StringConstructor {
+    new (value?: any): String;
+    (value?: any): string;
+    readonly prototype: String;
+    fromCharCode(...codes: number[]): string;
+}
+
+interface Boolean {
+    /** Returns the primitive value of the specified object. */
+    valueOf(): boolean;
+}
+
+interface BooleanConstructor {
+    new (value?: any): Boolean;
+    <T>(value?: T): boolean;
+    readonly prototype: Boolean;
+}
+
+interface Number {
+    /**
+     * Returns a string representation of an object.
+     * @param radix Specifies a radix for converting numeric values to strings. This value is only used for numbers.
+     */
+    toString(radix?: number): string;
+
+    /**
+     * Returns a string representing a number in fixed-point notation.
+     * @param fractionDigits Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
+     */
+    toFixed(fractionDigits?: number): string;
+
+    /**
+     * Returns a string containing a number represented in exponential notation.
+     * @param fractionDigits Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
+     */
+    toExponential(fractionDigits?: number): string;
+
+    /**
+     * Returns a string containing a number represented either in exponential or fixed-point notation with a specified number of digits.
+     * @param precision Number of significant digits. Must be in the range 1 - 21, inclusive.
+     */
+    toPrecision(precision?: number): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): number;
+}
+
+interface NumberConstructor {
+    new (value?: any): Number;
+    (value?: any): number;
+    readonly prototype: Number;
+
+    /** The largest number that can be represented in JavaScript. Equal to approximately 1.79E+308. */
+    readonly MAX_VALUE: number;
+
+    /** The closest number to zero that can be represented in JavaScript. Equal to approximately 5.00E-324. */
+    readonly MIN_VALUE: number;
+
+    /**
+     * A value that is not a number.
+     * In equality comparisons, NaN does not equal any value, including itself. To test whether a value is equivalent to NaN, use the isNaN function.
+     */
+    readonly NaN: number;
+
+    /**
+     * A value that is less than the largest negative number that can be represented in JavaScript.
+     * JavaScript displays NEGATIVE_INFINITY values as -infinity.
+     */
+    readonly NEGATIVE_INFINITY: number;
+
+    /**
+     * A value greater than the largest number that can be represented in JavaScript.
+     * JavaScript displays POSITIVE_INFINITY values as infinity.
+     */
+    readonly POSITIVE_INFINITY: number;
+}
+
+interface Math {
+    /** The mathematical constant e. This is Euler's number, the base of natural logarithms. */
+    readonly E: number;
+    /** The natural logarithm of 10. */
+    readonly LN10: number;
+    /** The natural logarithm of 2. */
+    readonly LN2: number;
+    /** The base-2 logarithm of e. */
+    readonly LOG2E: number;
+    /** The base-10 logarithm of e. */
+    readonly LOG10E: number;
+    /** Pi. This is the ratio of the circumference of a circle to its diameter. */
+    readonly PI: number;
+    /** The square root of 0.5, or, equivalently, one divided by the square root of 2. */
+    readonly SQRT1_2: number;
+    /** The square root of 2. */
+    readonly SQRT2: number;
+    /**
+     * Returns the absolute value of a number (the value without regard to whether it is positive or negative).
+     * For example, the absolute value of -5 is the same as the absolute value of 5.
+     * @param x A numeric expression for which the absolute value is needed.
+     */
+    abs(x: number): number;
+    /**
+     * Returns the arc cosine (or inverse cosine) of a number.
+     * @param x A numeric expression.
+     */
+    acos(x: number): number;
+    /**
+     * Returns the arcsine of a number.
+     * @param x A numeric expression.
+     */
+    asin(x: number): number;
+    /**
+     * Returns the arctangent of a number.
+     * @param x A numeric expression for which the arctangent is needed.
+     */
+    atan(x: number): number;
+    /**
+     * Returns the angle (in radians) between the X axis and the line going through both the origin and the given point.
+     * @param y A numeric expression representing the cartesian y-coordinate.
+     * @param x A numeric expression representing the cartesian x-coordinate.
+     */
+    atan2(y: number, x: number): number;
+    /**
+     * Returns the smallest integer greater than or equal to its numeric argument.
+     * @param x A numeric expression.
+     */
+    ceil(x: number): number;
+    /**
+     * Returns the cosine of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    cos(x: number): number;
+    /**
+     * Returns e (the base of natural logarithms) raised to a power.
+     * @param x A numeric expression representing the power of e.
+     */
+    exp(x: number): number;
+    /**
+     * Returns the greatest integer less than or equal to its numeric argument.
+     * @param x A numeric expression.
+     */
+    floor(x: number): number;
+    /**
+     * Returns the natural logarithm (base e) of a number.
+     * @param x A numeric expression.
+     */
+    log(x: number): number;
+    /**
+     * Returns the larger of a set of supplied numeric expressions.
+     * @param values Numeric expressions to be evaluated.
+     */
+    max(...values: number[]): number;
+    /**
+     * Returns the smaller of a set of supplied numeric expressions.
+     * @param values Numeric expressions to be evaluated.
+     */
+    min(...values: number[]): number;
+    /**
+     * Returns the value of a base expression taken to a specified power.
+     * @param x The base value of the expression.
+     * @param y The exponent value of the expression.
+     */
+    pow(x: number, y: number): number;
+    /** Returns a pseudorandom number between 0 and 1. */
+    random(): number;
+    /**
+     * Returns a supplied numeric expression rounded to the nearest integer.
+     * @param x The value to be rounded to the nearest integer.
+     */
+    round(x: number): number;
+    /**
+     * Returns the sine of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    sin(x: number): number;
+    /**
+     * Returns the square root of a number.
+     * @param x A numeric expression.
+     */
+    sqrt(x: number): number;
+    /**
+     * Returns the tangent of a number.
+     * @param x A numeric expression that contains an angle measured in radians.
+     */
+    tan(x: number): number;
+}
+
+interface RegExpMatchArray extends Array<string> {
+    /**
+     * The index of the search at which the result was found.
+     */
+    index?: number;
+    /**
+     * A copy of the search string.
+     */
+    input?: string;
+    /**
+     * The first match. This will always be present because \`null\` will be returned if there are no matches.
+     */
+    0: string;
+}
+
+interface RegExpExecArray extends Array<string> {
+    /**
+     * The index of the search at which the result was found.
+     */
+    index: number;
+    /**
+     * A copy of the search string.
+     */
+    input: string;
+    /**
+     * The first match. This will always be present because \`null\` will be returned if there are no matches.
+     */
+    0: string;
+}
+
+interface RegExp {
+    /**
+     * Executes a search on a string using a regular expression pattern, and returns an array containing the results of that search.
+     * @param string The String object or string literal on which to perform the search.
+     */
+    exec(string: string): RegExpExecArray | null;
+
+    /**
+     * Returns a Boolean value that indicates whether or not a pattern exists in a searched string.
+     * @param string String on which to perform the search.
+     */
+    test(string: string): boolean;
+
+    /** Returns a copy of the text of the regular expression pattern. Read-only. The regExp argument is a Regular expression object. It can be a variable name or a literal. */
+    readonly source: string;
+
+    /** Returns a Boolean value indicating the state of the global flag (g) used with a regular expression. Default is false. Read-only. */
+    readonly global: boolean;
+
+    /** Returns a Boolean value indicating the state of the ignoreCase flag (i) used with a regular expression. Default is false. Read-only. */
+    readonly ignoreCase: boolean;
+
+    /** Returns a Boolean value indicating the state of the multiline flag (m) used with a regular expression. Default is false. Read-only. */
+    readonly multiline: boolean;
+
+    lastIndex: number;
+
+    // Non-standard extensions
+    /** @deprecated A legacy feature for browser compatibility */
+    compile(pattern: string, flags?: string): this;
+}
+
+interface RegExpConstructor {
+    new (pattern: RegExp | string): RegExp;
+    new (pattern: string, flags?: string): RegExp;
+    (pattern: RegExp | string): RegExp;
+    (pattern: string, flags?: string): RegExp;
+    readonly "prototype": RegExp;
+
+    // Non-standard extensions
+    /** @deprecated A legacy feature for browser compatibility */
+    "$1": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$2": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$3": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$4": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$5": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$6": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$7": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$8": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$9": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "input": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$_": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "lastMatch": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$&": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "lastParen": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$+": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "leftContext": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$\`": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "rightContext": string;
+    /** @deprecated A legacy feature for browser compatibility */
+    "$'": string;
+}
+
+interface Error {
+    name: string;
+    message: string;
+    stack?: string;
+}
+
+interface ErrorConstructor {
+    new (message?: string): Error;
+    (message?: string): Error;
+    readonly prototype: Error;
+}
+
+interface JSON {
+    /**
+     * Converts a JavaScript Object Notation (JSON) string into an object.
+     * @param text A valid JSON string.
+     * @param reviver A function that transforms the results. This function is called for each member of the object.
+     * If a member contains nested objects, the nested objects are transformed before the parent object is.
+     * @throws {SyntaxError} If \`text\` is not valid JSON.
+     */
+    parse(text: string, reviver?: (this: any, key: string, value: any) => any): any;
+    /**
+     * Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+     * @param value A JavaScript value, usually an object or array, to be converted.
+     * @param replacer A function that transforms the results.
+     * @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
+     * @throws {TypeError} If a circular reference or a BigInt value is found.
+     */
+    stringify(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string;
+    /**
+     * Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
+     * @param value A JavaScript value, usually an object or array, to be converted.
+     * @param replacer An array of strings and numbers that acts as an approved list for selecting the object properties that will be stringified.
+     * @param space Adds indentation, white space, and line break characters to the return-value JSON text to make it easier to read.
+     * @throws {TypeError} If a circular reference or a BigInt value is found.
+     */
+    stringify(value: any, replacer?: (number | string)[] | null, space?: string | number): string;
+}
+
+interface ReadonlyArray<T> {
+    /**
+     * Gets the length of the array. This is a number one higher than the highest element defined in an array.
+     */
+    readonly length: number;
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+    /**
+     * Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
+     */
+    toLocaleString(): string;
+    /**
+     * Combines two or more arrays.
+     * @param items Additional items to add to the end of array1.
+     */
+    concat(...items: ConcatArray<T>[]): T[];
+    /**
+     * Combines two or more arrays.
+     * @param items Additional items to add to the end of array1.
+     */
+    concat(...items: (T | ConcatArray<T>)[]): T[];
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): T[];
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
+     */
+    indexOf(searchElement: T, fromIndex?: number): number;
+    /**
+     * Returns the index of the last occurrence of a specified value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at the last index in the array.
+     */
+    lastIndexOf(searchElement: T, fromIndex?: number): number;
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every<S extends T>(predicate: (value: T, index: number, array: readonly T[]) => value is S, thisArg?: any): this is readonly S[];
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: T, index: number, array: readonly T[]) => unknown, thisArg?: any): boolean;
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: T, index: number, array: readonly T[]) => unknown, thisArg?: any): boolean;
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: T, index: number, array: readonly T[]) => void, thisArg?: any): void;
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+     */
+    map<U>(callbackfn: (value: T, index: number, array: readonly T[]) => U, thisArg?: any): U[];
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+     */
+    filter<S extends T>(predicate: (value: T, index: number, array: readonly T[]) => value is S, thisArg?: any): S[];
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: T, index: number, array: readonly T[]) => unknown, thisArg?: any): T[];
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) => T): T;
+    reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) => T, initialValue: T): T;
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: readonly T[]) => U, initialValue: U): U;
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) => T): T;
+    reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) => T, initialValue: T): T;
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: readonly T[]) => U, initialValue: U): U;
+
+    readonly [n: number]: T;
+}
+
+interface ConcatArray<T> {
+    readonly length: number;
+    readonly [n: number]: T;
+    join(separator?: string): string;
+    slice(start?: number, end?: number): T[];
+}
+
+interface Array<T> {
+    /**
+     * Gets or sets the length of the array. This is a number one higher than the highest index in the array.
+     */
+    length: number;
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+    /**
+     * Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
+     */
+    toLocaleString(): string;
+    /**
+     * Removes the last element from an array and returns it.
+     * If the array is empty, undefined is returned and the array is not modified.
+     */
+    pop(): T | undefined;
+    /**
+     * Appends new elements to the end of an array, and returns the new length of the array.
+     * @param items New elements to add to the array.
+     */
+    push(...items: T[]): number;
+    /**
+     * Combines two or more arrays.
+     * This method returns a new array without modifying any existing arrays.
+     * @param items Additional arrays and/or items to add to the end of the array.
+     */
+    concat(...items: ConcatArray<T>[]): T[];
+    /**
+     * Combines two or more arrays.
+     * This method returns a new array without modifying any existing arrays.
+     * @param items Additional arrays and/or items to add to the end of the array.
+     */
+    concat(...items: (T | ConcatArray<T>)[]): T[];
+    /**
+     * Adds all the elements of an array into a string, separated by the specified separator string.
+     * @param separator A string used to separate one element of the array from the next in the resulting string. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+    /**
+     * Reverses the elements in an array in place.
+     * This method mutates the array and returns a reference to the same array.
+     */
+    reverse(): T[];
+    /**
+     * Removes the first element from an array and returns it.
+     * If the array is empty, undefined is returned and the array is not modified.
+     */
+    shift(): T | undefined;
+    /**
+     * Returns a copy of a section of an array.
+     * For both start and end, a negative index can be used to indicate an offset from the end of the array.
+     * For example, -2 refers to the second to last element of the array.
+     * @param start The beginning index of the specified portion of the array.
+     * If start is undefined, then the slice begins at index 0.
+     * @param end The end index of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     * If end is undefined, then the slice extends to the end of the array.
+     */
+    slice(start?: number, end?: number): T[];
+    /**
+     * Sorts an array in place.
+     * This method mutates the array and returns a reference to the same array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending, UTF-16 code unit order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: T, b: T) => number): this;
+    /**
+     * Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+     * @param start The zero-based location in the array from which to start removing elements.
+     * @param deleteCount The number of elements to remove. Omitting this argument will remove all elements from the start
+     * paramater location to end of the array. If value of this argument is either a negative number, zero, undefined, or a type
+     * that cannot be converted to an integer, the function will evaluate the argument as zero and not remove any elements.
+     * @returns An array containing the elements that were deleted.
+     */
+    splice(start: number, deleteCount?: number): T[];
+    /**
+     * Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+     * @param start The zero-based location in the array from which to start removing elements.
+     * @param deleteCount The number of elements to remove. If value of this argument is either a negative number, zero,
+     * undefined, or a type that cannot be converted to an integer, the function will evaluate the argument as zero and
+     * not remove any elements.
+     * @param items Elements to insert into the array in place of the deleted elements.
+     * @returns An array containing the elements that were deleted.
+     */
+    splice(start: number, deleteCount: number, ...items: T[]): T[];
+    /**
+     * Inserts new elements at the start of an array, and returns the new length of the array.
+     * @param items Elements to insert at the start of the array.
+     */
+    unshift(...items: T[]): number;
+    /**
+     * Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
+     */
+    indexOf(searchElement: T, fromIndex?: number): number;
+    /**
+     * Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin searching backward. If fromIndex is omitted, the search starts at the last index in the array.
+     */
+    lastIndexOf(searchElement: T, fromIndex?: number): number;
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): this is S[];
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: T, index: number, array: T[]) => void, thisArg?: any): void;
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
+     */
+    map<U>(callbackfn: (value: T, index: number, array: T[]) => U, thisArg?: any): U[];
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+     */
+    filter<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): S[];
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): T[];
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T;
+    reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T;
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initialValue: U): U;
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T): T;
+    reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: T[]) => T, initialValue: T): T;
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: T[]) => U, initialValue: U): U;
+
+    [n: number]: T;
+}
+
+interface ArrayConstructor {
+    new (arrayLength?: number): any[];
+    new <T>(arrayLength: number): T[];
+    new <T>(...items: T[]): T[];
+    (arrayLength?: number): any[];
+    <T>(arrayLength: number): T[];
+    <T>(...items: T[]): T[];
+    isArray(arg: any): arg is any[];
+    readonly prototype: any[];
+}
+
+interface ArrayLike<T> {
+    readonly length: number;
+    readonly [n: number]: T;
+}
+
+/**
+ * Represents a raw buffer of binary data, which is used to store data for the
+ * different typed arrays. ArrayBuffers cannot be read from or written to directly,
+ * but can be passed to a typed array or DataView Object to interpret the raw
+ * buffer as needed.
+ */
+interface ArrayBuffer {
+    /**
+     * Read-only. The length of the ArrayBuffer (in bytes).
+     */
+    readonly byteLength: number;
+
+    /**
+     * Returns a section of an ArrayBuffer.
+     */
+    slice(begin?: number, end?: number): ArrayBuffer;
+}
+
+/**
+ * Allowed ArrayBuffer types for the buffer of an ArrayBufferView and related Typed Arrays.
+ */
+interface ArrayBufferTypes {
+    ArrayBuffer: ArrayBuffer;
+}
+
+interface ArrayBufferConstructor {
+    readonly prototype: ArrayBuffer;
+    new (byteLength: number): ArrayBuffer;
+    isView(arg: any): arg is ArrayBufferView;
+}
+
+interface ArrayBufferView<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+}
+
+/**
+ * A typed array of 8-bit integer values. The contents are initialized to 0. If the requested
+ * number of bytes could not be allocated an exception is raised.
+ */
+interface Int8Array<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: number, start?: number, end?: number): this;
+
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls
+     * the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: number, index: number, array: this) => any, thisArg?: any): Int8Array<ArrayBuffer>;
+
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number;
+
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: number, index: number, array: this) => void, thisArg?: any): void;
+
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    indexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the
+     * resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+
+    /**
+     * Returns the index of the last occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    lastIndexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * The length of the array.
+     */
+    readonly length: number;
+
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that
+     * contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    map(callbackfn: (value: number, index: number, array: this) => number, thisArg?: any): Int8Array<ArrayBuffer>;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an
+     * argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Reverses the elements in an Array.
+     */
+    reverse(): this;
+
+    /**
+     * Sets a value or an array of values.
+     * @param array A typed or untyped array of values to set.
+     * @param offset The index in the current array at which the values are to be written.
+     */
+    set(array: ArrayLike<number>, offset?: number): void;
+
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): Int8Array<ArrayBuffer>;
+
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Sorts an array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if first argument is less than second argument, zero if they're equal and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: number, b: number) => number): this;
+
+    /**
+     * Gets a new Int8Array view of the ArrayBuffer store for this array, referencing the elements
+     * at begin, inclusive, up to end, exclusive.
+     * @param begin The index of the beginning of the array.
+     * @param end The index of the end of the array.
+     */
+    subarray(begin?: number, end?: number): Int8Array<TArrayBuffer>;
+
+    /**
+     * Converts a number to a string by using the current locale.
+     */
+    toLocaleString(): string;
+
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): this;
+
+    [index: number]: number;
+}
+
+interface Int8ArrayConstructor {
+    readonly prototype: Int8Array<ArrayBufferLike>;
+    new (length: number): Int8Array<ArrayBuffer>;
+    new (array: ArrayLike<number>): Int8Array<ArrayBuffer>;
+    new <TArrayBuffer extends ArrayBufferLike = ArrayBuffer>(buffer: TArrayBuffer, byteOffset?: number, length?: number): Int8Array<TArrayBuffer>;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Int8Array<ArrayBuffer>;
+    new (array: ArrayLike<number> | ArrayBuffer): Int8Array<ArrayBuffer>;
+
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of(...items: number[]): Int8Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from(arrayLike: ArrayLike<number>): Int8Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Int8Array<ArrayBuffer>;
+}
+
+/**
+ * A typed array of 8-bit unsigned integer values. The contents are initialized to 0. If the
+ * requested number of bytes could not be allocated an exception is raised.
+ */
+interface Uint8Array<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: number, start?: number, end?: number): this;
+
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls
+     * the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: number, index: number, array: this) => any, thisArg?: any): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number;
+
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: number, index: number, array: this) => void, thisArg?: any): void;
+
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    indexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the
+     * resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+
+    /**
+     * Returns the index of the last occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    lastIndexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * The length of the array.
+     */
+    readonly length: number;
+
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that
+     * contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    map(callbackfn: (value: number, index: number, array: this) => number, thisArg?: any): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an
+     * argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Reverses the elements in an Array.
+     */
+    reverse(): this;
+
+    /**
+     * Sets a value or an array of values.
+     * @param array A typed or untyped array of values to set.
+     * @param offset The index in the current array at which the values are to be written.
+     */
+    set(array: ArrayLike<number>, offset?: number): void;
+
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Sorts an array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if first argument is less than second argument, zero if they're equal and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: number, b: number) => number): this;
+
+    /**
+     * Gets a new Uint8Array view of the ArrayBuffer store for this array, referencing the elements
+     * at begin, inclusive, up to end, exclusive.
+     * @param begin The index of the beginning of the array.
+     * @param end The index of the end of the array.
+     */
+    subarray(begin?: number, end?: number): Uint8Array<TArrayBuffer>;
+
+    /**
+     * Converts a number to a string by using the current locale.
+     */
+    toLocaleString(): string;
+
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): this;
+
+    [index: number]: number;
+}
+
+interface Uint8ArrayConstructor {
+    readonly prototype: Uint8Array<ArrayBufferLike>;
+    new (length: number): Uint8Array<ArrayBuffer>;
+    new (array: ArrayLike<number>): Uint8Array<ArrayBuffer>;
+    new <TArrayBuffer extends ArrayBufferLike = ArrayBuffer>(buffer: TArrayBuffer, byteOffset?: number, length?: number): Uint8Array<TArrayBuffer>;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Uint8Array<ArrayBuffer>;
+    new (array: ArrayLike<number> | ArrayBuffer): Uint8Array<ArrayBuffer>;
+
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of(...items: number[]): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from(arrayLike: ArrayLike<number>): Uint8Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint8Array<ArrayBuffer>;
+}
+
+/**
+ * A typed array of 16-bit signed integer values. The contents are initialized to 0. If the
+ * requested number of bytes could not be allocated an exception is raised.
+ */
+interface Int16Array<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: number, start?: number, end?: number): this;
+
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls
+     * the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: number, index: number, array: this) => any, thisArg?: any): Int16Array<ArrayBuffer>;
+
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number;
+
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: number, index: number, array: this) => void, thisArg?: any): void;
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    indexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the
+     * resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+
+    /**
+     * Returns the index of the last occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    lastIndexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * The length of the array.
+     */
+    readonly length: number;
+
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that
+     * contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    map(callbackfn: (value: number, index: number, array: this) => number, thisArg?: any): Int16Array<ArrayBuffer>;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an
+     * argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Reverses the elements in an Array.
+     */
+    reverse(): this;
+
+    /**
+     * Sets a value or an array of values.
+     * @param array A typed or untyped array of values to set.
+     * @param offset The index in the current array at which the values are to be written.
+     */
+    set(array: ArrayLike<number>, offset?: number): void;
+
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): Int16Array<ArrayBuffer>;
+
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Sorts an array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if first argument is less than second argument, zero if they're equal and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: number, b: number) => number): this;
+
+    /**
+     * Gets a new Int16Array view of the ArrayBuffer store for this array, referencing the elements
+     * at begin, inclusive, up to end, exclusive.
+     * @param begin The index of the beginning of the array.
+     * @param end The index of the end of the array.
+     */
+    subarray(begin?: number, end?: number): Int16Array<TArrayBuffer>;
+
+    /**
+     * Converts a number to a string by using the current locale.
+     */
+    toLocaleString(): string;
+
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): this;
+
+    [index: number]: number;
+}
+
+interface Int16ArrayConstructor {
+    readonly prototype: Int16Array<ArrayBufferLike>;
+    new (length: number): Int16Array<ArrayBuffer>;
+    new (array: ArrayLike<number>): Int16Array<ArrayBuffer>;
+    new <TArrayBuffer extends ArrayBufferLike = ArrayBuffer>(buffer: TArrayBuffer, byteOffset?: number, length?: number): Int16Array<TArrayBuffer>;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Int16Array<ArrayBuffer>;
+    new (array: ArrayLike<number> | ArrayBuffer): Int16Array<ArrayBuffer>;
+
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of(...items: number[]): Int16Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from(arrayLike: ArrayLike<number>): Int16Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Int16Array<ArrayBuffer>;
+}
+
+/**
+ * A typed array of 16-bit unsigned integer values. The contents are initialized to 0. If the
+ * requested number of bytes could not be allocated an exception is raised.
+ */
+interface Uint16Array<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: number, start?: number, end?: number): this;
+
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls
+     * the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: number, index: number, array: this) => any, thisArg?: any): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number;
+
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: number, index: number, array: this) => void, thisArg?: any): void;
+
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    indexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the
+     * resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+
+    /**
+     * Returns the index of the last occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    lastIndexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * The length of the array.
+     */
+    readonly length: number;
+
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that
+     * contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    map(callbackfn: (value: number, index: number, array: this) => number, thisArg?: any): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an
+     * argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Reverses the elements in an Array.
+     */
+    reverse(): this;
+
+    /**
+     * Sets a value or an array of values.
+     * @param array A typed or untyped array of values to set.
+     * @param offset The index in the current array at which the values are to be written.
+     */
+    set(array: ArrayLike<number>, offset?: number): void;
+
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Sorts an array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if first argument is less than second argument, zero if they're equal and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: number, b: number) => number): this;
+
+    /**
+     * Gets a new Uint16Array view of the ArrayBuffer store for this array, referencing the elements
+     * at begin, inclusive, up to end, exclusive.
+     * @param begin The index of the beginning of the array.
+     * @param end The index of the end of the array.
+     */
+    subarray(begin?: number, end?: number): Uint16Array<TArrayBuffer>;
+
+    /**
+     * Converts a number to a string by using the current locale.
+     */
+    toLocaleString(): string;
+
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): this;
+
+    [index: number]: number;
+}
+
+interface Uint16ArrayConstructor {
+    readonly prototype: Uint16Array<ArrayBufferLike>;
+    new (length: number): Uint16Array<ArrayBuffer>;
+    new (array: ArrayLike<number>): Uint16Array<ArrayBuffer>;
+    new <TArrayBuffer extends ArrayBufferLike = ArrayBuffer>(buffer: TArrayBuffer, byteOffset?: number, length?: number): Uint16Array<TArrayBuffer>;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Uint16Array<ArrayBuffer>;
+    new (array: ArrayLike<number> | ArrayBuffer): Uint16Array<ArrayBuffer>;
+
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of(...items: number[]): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from(arrayLike: ArrayLike<number>): Uint16Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint16Array<ArrayBuffer>;
+}
+
+/**
+ * A typed array of 32-bit signed integer values. The contents are initialized to 0. If the
+ * requested number of bytes could not be allocated an exception is raised.
+ */
+interface Int32Array<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: number, start?: number, end?: number): this;
+
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls
+     * the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: number, index: number, array: this) => any, thisArg?: any): Int32Array<ArrayBuffer>;
+
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number;
+
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: number, index: number, array: this) => void, thisArg?: any): void;
+
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    indexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the
+     * resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+
+    /**
+     * Returns the index of the last occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    lastIndexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * The length of the array.
+     */
+    readonly length: number;
+
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that
+     * contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    map(callbackfn: (value: number, index: number, array: this) => number, thisArg?: any): Int32Array<ArrayBuffer>;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an
+     * argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Reverses the elements in an Array.
+     */
+    reverse(): this;
+
+    /**
+     * Sets a value or an array of values.
+     * @param array A typed or untyped array of values to set.
+     * @param offset The index in the current array at which the values are to be written.
+     */
+    set(array: ArrayLike<number>, offset?: number): void;
+
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): Int32Array<ArrayBuffer>;
+
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Sorts an array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if first argument is less than second argument, zero if they're equal and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: number, b: number) => number): this;
+
+    /**
+     * Gets a new Int32Array view of the ArrayBuffer store for this array, referencing the elements
+     * at begin, inclusive, up to end, exclusive.
+     * @param begin The index of the beginning of the array.
+     * @param end The index of the end of the array.
+     */
+    subarray(begin?: number, end?: number): Int32Array<TArrayBuffer>;
+
+    /**
+     * Converts a number to a string by using the current locale.
+     */
+    toLocaleString(): string;
+
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): this;
+
+    [index: number]: number;
+}
+
+interface Int32ArrayConstructor {
+    readonly prototype: Int32Array<ArrayBufferLike>;
+    new (length: number): Int32Array<ArrayBuffer>;
+    new (array: ArrayLike<number>): Int32Array<ArrayBuffer>;
+    new <TArrayBuffer extends ArrayBufferLike = ArrayBuffer>(buffer: TArrayBuffer, byteOffset?: number, length?: number): Int32Array<TArrayBuffer>;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Int32Array<ArrayBuffer>;
+    new (array: ArrayLike<number> | ArrayBuffer): Int32Array<ArrayBuffer>;
+
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of(...items: number[]): Int32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from(arrayLike: ArrayLike<number>): Int32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Int32Array<ArrayBuffer>;
+}
+
+/**
+ * A typed array of 32-bit unsigned integer values. The contents are initialized to 0. If the
+ * requested number of bytes could not be allocated an exception is raised.
+ */
+interface Uint32Array<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: number, start?: number, end?: number): this;
+
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls
+     * the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: number, index: number, array: this) => any, thisArg?: any): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number;
+
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: number, index: number, array: this) => void, thisArg?: any): void;
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    indexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the
+     * resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+
+    /**
+     * Returns the index of the last occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    lastIndexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * The length of the array.
+     */
+    readonly length: number;
+
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that
+     * contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    map(callbackfn: (value: number, index: number, array: this) => number, thisArg?: any): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an
+     * argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Reverses the elements in an Array.
+     */
+    reverse(): this;
+
+    /**
+     * Sets a value or an array of values.
+     * @param array A typed or untyped array of values to set.
+     * @param offset The index in the current array at which the values are to be written.
+     */
+    set(array: ArrayLike<number>, offset?: number): void;
+
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Sorts an array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if first argument is less than second argument, zero if they're equal and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: number, b: number) => number): this;
+
+    /**
+     * Gets a new Uint32Array view of the ArrayBuffer store for this array, referencing the elements
+     * at begin, inclusive, up to end, exclusive.
+     * @param begin The index of the beginning of the array.
+     * @param end The index of the end of the array.
+     */
+    subarray(begin?: number, end?: number): Uint32Array<TArrayBuffer>;
+
+    /**
+     * Converts a number to a string by using the current locale.
+     */
+    toLocaleString(): string;
+
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): this;
+
+    [index: number]: number;
+}
+
+interface Uint32ArrayConstructor {
+    readonly prototype: Uint32Array<ArrayBufferLike>;
+    new (length: number): Uint32Array<ArrayBuffer>;
+    new (array: ArrayLike<number>): Uint32Array<ArrayBuffer>;
+    new <TArrayBuffer extends ArrayBufferLike = ArrayBuffer>(buffer: TArrayBuffer, byteOffset?: number, length?: number): Uint32Array<TArrayBuffer>;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Uint32Array<ArrayBuffer>;
+    new (array: ArrayLike<number> | ArrayBuffer): Uint32Array<ArrayBuffer>;
+
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of(...items: number[]): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from(arrayLike: ArrayLike<number>): Uint32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Uint32Array<ArrayBuffer>;
+}
+
+/**
+ * A typed array of 32-bit float values. The contents are initialized to 0. If the requested number
+ * of bytes could not be allocated an exception is raised.
+ */
+interface Float32Array<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: number, start?: number, end?: number): this;
+
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls
+     * the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: number, index: number, array: this) => any, thisArg?: any): Float32Array<ArrayBuffer>;
+
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number;
+
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: number, index: number, array: this) => void, thisArg?: any): void;
+
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    indexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the
+     * resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+
+    /**
+     * Returns the index of the last occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    lastIndexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * The length of the array.
+     */
+    readonly length: number;
+
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that
+     * contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    map(callbackfn: (value: number, index: number, array: this) => number, thisArg?: any): Float32Array<ArrayBuffer>;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an
+     * argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Reverses the elements in an Array.
+     */
+    reverse(): this;
+
+    /**
+     * Sets a value or an array of values.
+     * @param array A typed or untyped array of values to set.
+     * @param offset The index in the current array at which the values are to be written.
+     */
+    set(array: ArrayLike<number>, offset?: number): void;
+
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): Float32Array<ArrayBuffer>;
+
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Sorts an array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if first argument is less than second argument, zero if they're equal and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: number, b: number) => number): this;
+
+    /**
+     * Gets a new Float32Array view of the ArrayBuffer store for this array, referencing the elements
+     * at begin, inclusive, up to end, exclusive.
+     * @param begin The index of the beginning of the array.
+     * @param end The index of the end of the array.
+     */
+    subarray(begin?: number, end?: number): Float32Array<TArrayBuffer>;
+
+    /**
+     * Converts a number to a string by using the current locale.
+     */
+    toLocaleString(): string;
+
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): this;
+
+    [index: number]: number;
+}
+
+interface Float32ArrayConstructor {
+    readonly prototype: Float32Array<ArrayBufferLike>;
+    new (length: number): Float32Array<ArrayBuffer>;
+    new (array: ArrayLike<number>): Float32Array<ArrayBuffer>;
+    new <TArrayBuffer extends ArrayBufferLike = ArrayBuffer>(buffer: TArrayBuffer, byteOffset?: number, length?: number): Float32Array<TArrayBuffer>;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Float32Array<ArrayBuffer>;
+    new (array: ArrayLike<number> | ArrayBuffer): Float32Array<ArrayBuffer>;
+
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of(...items: number[]): Float32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from(arrayLike: ArrayLike<number>): Float32Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Float32Array<ArrayBuffer>;
+}
+
+/**
+ * A typed array of 64-bit float values. The contents are initialized to 0. If the requested
+ * number of bytes could not be allocated an exception is raised.
+ */
+interface Float64Array<TArrayBuffer extends ArrayBufferLike = ArrayBufferLike> {
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * The ArrayBuffer instance referenced by the array.
+     */
+    readonly buffer: TArrayBuffer;
+
+    /**
+     * The length in bytes of the array.
+     */
+    readonly byteLength: number;
+
+    /**
+     * The offset in bytes of the array.
+     */
+    readonly byteOffset: number;
+
+    /**
+     * Returns the this object after copying a section of the array identified by start and end
+     * to the same array starting at position target
+     * @param target If target is negative, it is treated as length+target where length is the
+     * length of the array.
+     * @param start If start is negative, it is treated as length+start. If end is negative, it
+     * is treated as length+end.
+     * @param end If not specified, length of the this object is used as its default value.
+     */
+    copyWithin(target: number, start: number, end?: number): this;
+
+    /**
+     * Determines whether all the members of an array satisfy the specified test.
+     * @param predicate A function that accepts up to three arguments. The every method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value false, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    every(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Changes all array elements from \`start\` to \`end\` index to a static \`value\` and returns the modified array
+     * @param value value to fill array section with
+     * @param start index to start filling the array at. If start is negative, it is treated as
+     * length+start where length is the length of the array.
+     * @param end index to stop filling the array at. If end is negative, it is treated as
+     * length+end.
+     */
+    fill(value: number, start?: number, end?: number): this;
+
+    /**
+     * Returns the elements of an array that meet the condition specified in a callback function.
+     * @param predicate A function that accepts up to three arguments. The filter method calls
+     * the predicate function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    filter(predicate: (value: number, index: number, array: this) => any, thisArg?: any): Float64Array<ArrayBuffer>;
+
+    /**
+     * Returns the value of the first element in the array where predicate is true, and undefined
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found, find
+     * immediately returns that element value. Otherwise, find returns undefined.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    find(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number | undefined;
+
+    /**
+     * Returns the index of the first element in the array where predicate is true, and -1
+     * otherwise.
+     * @param predicate find calls predicate once for each element of the array, in ascending
+     * order, until it finds one where predicate returns true. If such an element is found,
+     * findIndex immediately returns that element index. Otherwise, findIndex returns -1.
+     * @param thisArg If provided, it will be used as the this value for each invocation of
+     * predicate. If it is not provided, undefined is used instead.
+     */
+    findIndex(predicate: (value: number, index: number, obj: this) => boolean, thisArg?: any): number;
+
+    /**
+     * Performs the specified action for each element in an array.
+     * @param callbackfn A function that accepts up to three arguments. forEach calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    forEach(callbackfn: (value: number, index: number, array: this) => void, thisArg?: any): void;
+
+    /**
+     * Returns the index of the first occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    indexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * Adds all the elements of an array separated by the specified separator string.
+     * @param separator A string used to separate one element of an array from the next in the
+     * resulting String. If omitted, the array elements are separated with a comma.
+     */
+    join(separator?: string): string;
+
+    /**
+     * Returns the index of the last occurrence of a value in an array.
+     * @param searchElement The value to locate in the array.
+     * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the
+     * search starts at index 0.
+     */
+    lastIndexOf(searchElement: number, fromIndex?: number): number;
+
+    /**
+     * The length of the array.
+     */
+    readonly length: number;
+
+    /**
+     * Calls a defined callback function on each element of an array, and returns an array that
+     * contains the results.
+     * @param callbackfn A function that accepts up to three arguments. The map method calls the
+     * callbackfn function one time for each element in the array.
+     * @param thisArg An object to which the this keyword can refer in the callbackfn function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    map(callbackfn: (value: number, index: number, array: this) => number, thisArg?: any): Float64Array<ArrayBuffer>;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array. The return value of
+     * the callback function is the accumulated result, and is provided as an argument in the next
+     * call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduce method calls the
+     * callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduce<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an
+     * argument instead of an array value.
+     */
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number): number;
+    reduceRight(callbackfn: (previousValue: number, currentValue: number, currentIndex: number, array: this) => number, initialValue: number): number;
+
+    /**
+     * Calls the specified callback function for all the elements in an array, in descending order.
+     * The return value of the callback function is the accumulated result, and is provided as an
+     * argument in the next call to the callback function.
+     * @param callbackfn A function that accepts up to four arguments. The reduceRight method calls
+     * the callbackfn function one time for each element in the array.
+     * @param initialValue If initialValue is specified, it is used as the initial value to start
+     * the accumulation. The first call to the callbackfn function provides this value as an argument
+     * instead of an array value.
+     */
+    reduceRight<U>(callbackfn: (previousValue: U, currentValue: number, currentIndex: number, array: this) => U, initialValue: U): U;
+
+    /**
+     * Reverses the elements in an Array.
+     */
+    reverse(): this;
+
+    /**
+     * Sets a value or an array of values.
+     * @param array A typed or untyped array of values to set.
+     * @param offset The index in the current array at which the values are to be written.
+     */
+    set(array: ArrayLike<number>, offset?: number): void;
+
+    /**
+     * Returns a section of an array.
+     * @param start The beginning of the specified portion of the array.
+     * @param end The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
+     */
+    slice(start?: number, end?: number): Float64Array<ArrayBuffer>;
+
+    /**
+     * Determines whether the specified callback function returns true for any element of an array.
+     * @param predicate A function that accepts up to three arguments. The some method calls
+     * the predicate function for each element in the array until the predicate returns a value
+     * which is coercible to the Boolean value true, or until the end of the array.
+     * @param thisArg An object to which the this keyword can refer in the predicate function.
+     * If thisArg is omitted, undefined is used as the this value.
+     */
+    some(predicate: (value: number, index: number, array: this) => unknown, thisArg?: any): boolean;
+
+    /**
+     * Sorts an array.
+     * @param compareFn Function used to determine the order of the elements. It is expected to return
+     * a negative value if first argument is less than second argument, zero if they're equal and a positive
+     * value otherwise. If omitted, the elements are sorted in ascending order.
+     * \`\`\`ts
+     * [11,2,22,1].sort((a, b) => a - b)
+     * \`\`\`
+     */
+    sort(compareFn?: (a: number, b: number) => number): this;
+
+    /**
+     * Gets a new Float64Array view of the ArrayBuffer store for this array, referencing the elements
+     * at begin, inclusive, up to end, exclusive.
+     * @param begin The index of the beginning of the array.
+     * @param end The index of the end of the array.
+     */
+    subarray(begin?: number, end?: number): Float64Array<TArrayBuffer>;
+
+    /**
+     * Converts a number to a string by using the current locale.
+     */
+    toLocaleString(): string;
+
+    /**
+     * Returns a string representation of an array.
+     */
+    toString(): string;
+
+    /** Returns the primitive value of the specified object. */
+    valueOf(): this;
+
+    [index: number]: number;
+}
+
+interface Float64ArrayConstructor {
+    readonly prototype: Float64Array<ArrayBufferLike>;
+    new (length: number): Float64Array<ArrayBuffer>;
+    new (array: ArrayLike<number>): Float64Array<ArrayBuffer>;
+    new <TArrayBuffer extends ArrayBufferLike = ArrayBuffer>(buffer: TArrayBuffer, byteOffset?: number, length?: number): Float64Array<TArrayBuffer>;
+    new (buffer: ArrayBuffer, byteOffset?: number, length?: number): Float64Array<ArrayBuffer>;
+    new (array: ArrayLike<number> | ArrayBuffer): Float64Array<ArrayBuffer>;
+
+    /**
+     * The size in bytes of each element in the array.
+     */
+    readonly BYTES_PER_ELEMENT: number;
+
+    /**
+     * Returns a new array from a set of elements.
+     * @param items A set of elements to include in the new array object.
+     */
+    of(...items: number[]): Float64Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     */
+    from(arrayLike: ArrayLike<number>): Float64Array<ArrayBuffer>;
+
+    /**
+     * Creates an array from an array-like or iterable object.
+     * @param arrayLike An array-like object to convert to an array.
+     * @param mapfn A mapping function to call on every element of the array.
+     * @param thisArg Value of 'this' used to invoke the mapfn.
+     */
+    from<T>(arrayLike: ArrayLike<T>, mapfn: (v: T, k: number) => number, thisArg?: any): Float64Array<ArrayBuffer>;
+}
+
+interface String {
+    /**
+     * Determines whether two strings are equivalent in the current or specified locale.
+     * @param that String to compare to target string
+     * @param locales A locale string or array of locale strings that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used. This parameter must conform to BCP 47 standards; see the Intl.Collator object for details.
+     * @param options An object that contains one or more properties that specify comparison options. see the Intl.Collator object for details.
+     */
+    localeCompare(that: string, locales?: string | string[], options?: Intl.CollatorOptions): number;
+}
+
+interface Number {
+    /**
+     * Converts a number to a string by using the current or specified locale.
+     * @param locales A locale string or array of locale strings that contain one or more language or locale tags. If you include more than one locale string, list them in descending order of priority so that the first entry is the preferred locale. If you omit this parameter, the default locale of the JavaScript runtime is used.
+     * @param options An object that contains one or more properties that specify comparison options.
+     */
+    toLocaleString(locales?: string | string[], options?: Intl.NumberFormatOptions): string;
+}
+
+declare type PropertyKey = string | number | symbol;
+
+/**
+ * Extracts the type of the 'this' parameter of a function type, or 'unknown' if the function type has no 'this' parameter.
+ */
+type ThisParameterType<T> = T extends (this: infer U, ...args: never) => any ? U : unknown;
+
+/**
+ * Removes the 'this' parameter from a function type.
+ */
+type OmitThisParameter<T> = unknown extends ThisParameterType<T> ? T : T extends (...args: infer A) => infer R ? (...args: A) => R : T;
+
+/**
+ * Make all properties in T optional
+ */
+type Partial<T> = {
+    [P in keyof T]?: T[P];
+};
+
+/**
+ * Make all properties in T required
+ */
+type Required<T> = {
+    [P in keyof T]-?: T[P];
+};
+
+/**
+ * Make all properties in T readonly
+ */
+type Readonly<T> = {
+    readonly [P in keyof T]: T[P];
+};
+
+/**
+ * From T, pick a set of properties whose keys are in the union K
+ */
+type Pick<T, K extends keyof T> = {
+    [P in K]: T[P];
+};
+
+/**
+ * Construct a type with a set of properties K of type T
+ */
+type Record<K extends keyof any, T> = {
+    [P in K]: T;
+};
+
+/**
+ * Exclude from T those types that are assignable to U
+ */
+type Exclude<T, U> = T extends U ? never : T;
+
+/**
+ * Extract from T those types that are assignable to U
+ */
+type Extract<T, U> = T extends U ? T : never;
+
+/**
+ * Construct a type with the properties of T except for those in type K.
+ */
+type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
+
+type ArrayBufferLike = ArrayBufferTypes[keyof ArrayBufferTypes];
+
+declare var NaN: number;
+
+declare var Infinity: number;
+
+/**
+ * Provides functionality common to all JavaScript objects.
+ */
+declare var Object: ObjectConstructor;
+
+declare var Function: FunctionConstructor;
+
+/**
+ * Allows manipulation and formatting of text strings and determination and location of substrings within strings.
+ */
+declare var String: StringConstructor;
+
+declare var Boolean: BooleanConstructor;
+
+/** An object that represents a number of any kind. All JavaScript numbers are 64-bit floating-point numbers. */
+declare var Number: NumberConstructor;
+
+/** An intrinsic object that provides basic mathematics functionality and constants. */
+declare var Math: Math;
+
+declare var RegExp: RegExpConstructor;
+
+declare var Error: ErrorConstructor;
+
+/**
+ * An intrinsic object that provides functions to convert JavaScript values to and from the JavaScript Object Notation (JSON) format.
+ */
+declare var JSON: JSON;
+
+declare var Array: ArrayConstructor;
+
+declare var ArrayBuffer: ArrayBufferConstructor;
+
+declare var Int8Array: Int8ArrayConstructor;
+
+declare var Uint8Array: Uint8ArrayConstructor;
+
+declare var Int16Array: Int16ArrayConstructor;
+
+declare var Uint16Array: Uint16ArrayConstructor;
+
+declare var Int32Array: Int32ArrayConstructor;
+
+declare var Uint32Array: Uint32ArrayConstructor;
+
+declare var Float32Array: Float32ArrayConstructor;
+
+declare var Float64Array: Float64ArrayConstructor;
+
+/**
+ * Evaluates JavaScript code and executes it.
+ * @param x A String value that contains valid JavaScript code.
+ */
+declare function eval(x: string): any;
+
+interface ErrorConstructor {
+    /**
+     * Indicates whether the argument provided is a built-in Error instance or not.
+     */
+    isError(error: unknown): error is Error;
+}
+
+interface Math {
+    /**
+     * Returns the nearest half precision float representation of a number.
+     * @param x A numeric expression.
+     */
+    f16round(x: number): number;
+}`
   },
-  40970: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => oQ.A
+  40945: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => Dk
     });
-    var LQ = wQ(39496),
-      qQ = wQ(39642),
-      oQ = wQ(40972);
-    let DQ = !1;
-    DQ || (DQ = !0, (0, oQ.e)(LQ.e, qQ.e), LQ.e.prototype.createPickingRayToRef = function(QQ, FQ, wQ, LQ, qQ) {
-      let DQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        kQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return (0, oQ.k)(this, QQ, FQ, wQ, LQ, qQ, DQ, kQ)
-    }, LQ.e.prototype.createPickingRayInCameraSpace = function(QQ, FQ, wQ) {
-      return (0, oQ.i)(this, QQ, FQ, wQ)
-    }, LQ.e.prototype.createPickingRayInCameraSpaceToRef = function(QQ, FQ, wQ, LQ) {
-      return (0, oQ.g)(this, QQ, FQ, wQ, LQ)
-    }, LQ.e.prototype.pickWithBoundingInfo = function(QQ, FQ, wQ, LQ, qQ) {
-      return (0, oQ.r)(this, QQ, FQ, wQ, LQ, qQ)
-    }, LQ.e.prototype.Vb = function(QQ, FQ, wQ, LQ, qQ, DQ) {
-      let kQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return (0, oQ.w)(this, QQ, FQ, wQ, LQ, qQ, DQ, kQ)
-    }, LQ.e.prototype.pickWithRay = function(QQ, FQ, wQ, LQ) {
-      return (0, oQ.s)(this, QQ, FQ, wQ, LQ)
-    }, LQ.e.prototype.multiPick = function(QQ, FQ, wQ, LQ, qQ) {
-      return (0, oQ.o)(this, QQ, FQ, wQ, LQ, qQ)
-    }, LQ.e.prototype.multiPickWithRay = function(QQ, FQ, wQ) {
-      return (0, oQ.l)(this, QQ, FQ, wQ)
-    })
-  },
-  40981: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => uQ
-    });
-    var LQ = wQ(39402),
-      qQ = wQ(39409),
-      oQ = wQ(36696),
-      DQ = wQ(39690),
-      kQ = wQ(40986),
-      vQ = wQ(39650),
-      mQ = wQ(36741);
-    let uQ = (() => {
-        var QQ;
-        let FQ, wQ, vQ, mQ, uQ, HQ, bQ, YQ, xQ = kQ.b,
-          AQ = [],
-          tQ = [],
-          eQ = [],
-          MQ = [],
-          GQ = [],
-          pQ = [],
-          cQ = [],
-          CQ = [],
-          SQ = [],
-          iQ = [],
-          WQ = [],
-          RQ = [],
-          OQ = [];
-        return QQ = class extends xQ {
-          get shadowFrustumSize() {
-            return this._shadowFrustumSize
-          }
-          set shadowFrustumSize(QQ) {
-            this._shadowFrustumSize = QQ, this.forceProjectionMatrixCompute()
-          }
-          get shadowOrthoScale() {
-            return this._shadowOrthoScale
-          }
-          set shadowOrthoScale(QQ) {
-            this._shadowOrthoScale = QQ, this.forceProjectionMatrixCompute()
-          }
-          get orthoLeft() {
-            return this._orthoLeft
-          }
-          set orthoLeft(QQ) {
-            this._orthoLeft = QQ
-          }
-          get orthoRight() {
-            return this._orthoRight
-          }
-          set orthoRight(QQ) {
-            this._orthoRight = QQ
-          }
-          get orthoTop() {
-            return this._orthoTop
-          }
-          set orthoTop(QQ) {
-            this._orthoTop = QQ
-          }
-          get orthoBottom() {
-            return this._orthoBottom
-          }
-          set orthoBottom(QQ) {
-            this._orthoBottom = QQ
-          }
-          constructor(QQ, FQ, wQ, qQ) {
-            super(QQ, wQ, qQ), this._shadowFrustumSize = ((0, LQ.l)(this, AQ), 0), this._shadowOrthoScale = .1, this.autoUpdateExtends = (0, LQ.l)(this, tQ, !0), this.autoCalcShadowZBounds = ((0, LQ.l)(this, eQ), (0, LQ.l)(this, MQ, !1)), this._orthoLeft = ((0, LQ.l)(this, GQ), (0, LQ.l)(this, pQ, Number.MAX_VALUE)), this._orthoRight = ((0, LQ.l)(this, cQ), (0, LQ.l)(this, CQ, Number.MIN_VALUE)), this._orthoTop = ((0, LQ.l)(this, SQ), (0, LQ.l)(this, iQ, Number.MIN_VALUE)), this._orthoBottom = ((0, LQ.l)(this, WQ), (0, LQ.l)(this, RQ, Number.MAX_VALUE)), (0, LQ.l)(this, OQ), this.position = FQ.scale(-1), this.direction = FQ
-          }
-          getClassName() {
-            return "DirectionalLight"
-          }
-          getTypeID() {
-            return DQ.c.LIGHTTYPEID_DIRECTIONALLIGHT
-          }
-          _setDefaultShadowProjectionMatrix(QQ, FQ, wQ) {
-            this.shadowFrustumSize > 0 ? this._setDefaultFixedFrustumShadowProjectionMatrix(QQ) : this._setDefaultAutoExtendShadowProjectionMatrix(QQ, FQ, wQ)
-          }
-          _setDefaultFixedFrustumShadowProjectionMatrix(QQ) {
-            const FQ = this.iN().activeCamera;
-            oQ.c.OrthoLHToRef(this.shadowFrustumSize, this.shadowFrustumSize, void 0 !== this.shadowMinZ ? this.shadowMinZ : FQ ? FQ.minZ : 0, void 0 !== this.shadowMaxZ ? this.shadowMaxZ : FQ ? FQ.maxZ : 1e4, QQ, this.iN().Wx().isNDCHalfZRange)
-          }
-          _setDefaultAutoExtendShadowProjectionMatrix(QQ, FQ, wQ) {
-            const LQ = this.iN().activeCamera;
-            if (this.autoUpdateExtends || this._orthoLeft === Number.MAX_VALUE) {
-              const QQ = oQ.p.Zero();
-              this._orthoLeft = Number.MAX_VALUE, this._orthoRight = -Number.MAX_VALUE, this._orthoTop = -Number.MAX_VALUE, this._orthoBottom = Number.MAX_VALUE;
-              let LQ = Number.MAX_VALUE,
-                qQ = -Number.MAX_VALUE;
-              for (let DQ = 0; DQ < wQ.length; DQ++) {
-                const kQ = wQ[DQ];
-                if (!kQ) continue;
-                const vQ = kQ.sK().boundingBox;
-                for (let wQ = 0; wQ < vQ.vectorsWorld.length; wQ++) oQ.p.TransformCoordinatesToRef(vQ.vectorsWorld[wQ], FQ, QQ), QQ.x < this._orthoLeft && (this._orthoLeft = QQ.x), QQ.y < this._orthoBottom && (this._orthoBottom = QQ.y), QQ.x > this._orthoRight && (this._orthoRight = QQ.x), QQ.y > this._orthoTop && (this._orthoTop = QQ.y), this.autoCalcShadowZBounds && (QQ.z < LQ && (LQ = QQ.z), QQ.z > qQ && (qQ = QQ.z))
-              }
-              this.autoCalcShadowZBounds && (this._shadowMinZ = LQ, this._shadowMaxZ = qQ)
-            }
-            const qQ = this._orthoRight - this._orthoLeft,
-              DQ = this._orthoTop - this._orthoBottom,
-              kQ = void 0 !== this.shadowMinZ ? this.shadowMinZ : LQ?.minZ || 0,
-              vQ = void 0 !== this.shadowMaxZ ? this.shadowMaxZ : LQ?.maxZ || 1e4,
-              mQ = this.iN().Wx().SLQ;
-            oQ.c.OrthoOffCenterLHToRef(this._orthoLeft - qQ * this.shadowOrthoScale, this._orthoRight + qQ * this.shadowOrthoScale, this._orthoBottom - DQ * this.shadowOrthoScale, this._orthoTop + DQ * this.shadowOrthoScale, mQ ? vQ : kQ, mQ ? kQ : vQ, QQ, this.iN().Wx().isNDCHalfZRange)
-          }
-          _buildUniformLayout() {
-            this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
-          }
-          transferToEffect(QQ, FQ) {
-            return this.computeTransformedInformation() ? (this._uniformBuffer.updateFloat4("vLightData", this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z, 1, FQ), this) : (this._uniformBuffer.updateFloat4("vLightData", this.direction.x, this.direction.y, this.direction.z, 1, FQ), this)
-          }
-          transferToNodeMaterialEffect(QQ, FQ) {
-            return this.computeTransformedInformation() ? (QQ.setFloat3(FQ, this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z), this) : (QQ.setFloat3(FQ, this.direction.x, this.direction.y, this.direction.z), this)
-          }
-          getDepthMinZ(QQ) {
-            const FQ = this._scene.Wx();
-            return !FQ.SLQ && FQ.isNDCHalfZRange ? 0 : 1
-          }
-          getDepthMaxZ(QQ) {
-            const FQ = this._scene.Wx();
-            return FQ.SLQ && FQ.isNDCHalfZRange ? 0 : 1
-          }
-          prepareLightSpecificDefines(QQ, FQ) {
-            QQ["DIRLIGHT" + FQ] = !0
-          }
-        }, (() => {
-          const oQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(xQ[Symbol.metadata] ?? null) : void 0;
-          FQ = [(0, qQ.I)()], wQ = [(0, qQ.I)()], vQ = [(0, qQ.I)()], mQ = [(0, qQ.I)()], uQ = [(0, qQ.I)("orthoLeft")], HQ = [(0, qQ.I)("orthoRight")], bQ = [(0, qQ.I)("orthoTop")], YQ = [(0, qQ.I)("orthoBottom")], (0, LQ.i)(QQ, null, FQ, {
-            kind: "getter",
-            name: "shadowFrustumSize",
-            static: !1,
-            private: !1,
-            access: {
-              has: QQ => "shadowFrustumSize" in QQ,
-              get: QQ => QQ.shadowFrustumSize
-            },
-            metadata: oQ
-          }, null, AQ), (0, LQ.i)(QQ, null, wQ, {
-            kind: "getter",
-            name: "shadowOrthoScale",
-            static: !1,
-            private: !1,
-            access: {
-              has: QQ => "shadowOrthoScale" in QQ,
-              get: QQ => QQ.shadowOrthoScale
-            },
-            metadata: oQ
-          }, null, AQ), (0, LQ.i)(null, null, vQ, {
-            kind: "field",
-            name: "autoUpdateExtends",
-            static: !1,
-            private: !1,
-            access: {
-              has: QQ => "autoUpdateExtends" in QQ,
-              get: QQ => QQ.autoUpdateExtends,
-              set: (QQ, FQ) => {
-                QQ.autoUpdateExtends = FQ
-              }
-            },
-            metadata: oQ
-          }, tQ, eQ), (0, LQ.i)(null, null, mQ, {
-            kind: "field",
-            name: "autoCalcShadowZBounds",
-            static: !1,
-            private: !1,
-            access: {
-              has: QQ => "autoCalcShadowZBounds" in QQ,
-              get: QQ => QQ.autoCalcShadowZBounds,
-              set: (QQ, FQ) => {
-                QQ.autoCalcShadowZBounds = FQ
-              }
-            },
-            metadata: oQ
-          }, MQ, GQ), (0, LQ.i)(null, null, uQ, {
-            kind: "field",
-            name: "_orthoLeft",
-            static: !1,
-            private: !1,
-            access: {
-              has: QQ => "_orthoLeft" in QQ,
-              get: QQ => QQ._orthoLeft,
-              set: (QQ, FQ) => {
-                QQ._orthoLeft = FQ
-              }
-            },
-            metadata: oQ
-          }, pQ, cQ), (0, LQ.i)(null, null, HQ, {
-            kind: "field",
-            name: "_orthoRight",
-            static: !1,
-            private: !1,
-            access: {
-              has: QQ => "_orthoRight" in QQ,
-              get: QQ => QQ._orthoRight,
-              set: (QQ, FQ) => {
-                QQ._orthoRight = FQ
-              }
-            },
-            metadata: oQ
-          }, CQ, SQ), (0, LQ.i)(null, null, bQ, {
-            kind: "field",
-            name: "_orthoTop",
-            static: !1,
-            private: !1,
-            access: {
-              has: QQ => "_orthoTop" in QQ,
-              get: QQ => QQ._orthoTop,
-              set: (QQ, FQ) => {
-                QQ._orthoTop = FQ
-              }
-            },
-            metadata: oQ
-          }, iQ, WQ), (0, LQ.i)(null, null, YQ, {
-            kind: "field",
-            name: "_orthoBottom",
-            static: !1,
-            private: !1,
-            access: {
-              has: QQ => "_orthoBottom" in QQ,
-              get: QQ => QQ._orthoBottom,
-              set: (QQ, FQ) => {
-                QQ._orthoBottom = FQ
-              }
-            },
-            metadata: oQ
-          }, RQ, OQ), oQ && Object.defineProperty(QQ, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: oQ
-          })
-        })(), QQ
-      })(),
-      HQ = !1;
-    HQ || (HQ = !0, vQ.c.AddNodeConstructor("Light_Type_1", ((QQ, FQ) => () => new uQ(QQ, oQ.p.Zero(), FQ))), (0, mQ.e)("BABYLON.DirectionalLight", uQ))
-  },
-  40992: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => EF
-    });
-    var LQ = wQ(38236),
-      qQ = wQ(36722),
-      oQ = wQ(36696),
-      DQ = wQ(39561),
-      kQ = wQ(40998),
-      vQ = wQ(36720),
-      mQ = wQ(39708),
-      uQ = wQ(36873),
-      HQ = wQ(38244),
-      bQ = wQ(38200),
-      YQ = wQ(36729);
-    class xQ {
-      constructor() {
-        this.direction1 = new oQ.p(0, 1, 0), this.direction2 = new oQ.p(0, 1, 0)
-      }
-      startDirectionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = (0, YQ.RandomRange)(this.direction1.x, this.direction2.x),
-          DQ = (0, YQ.RandomRange)(this.direction1.y, this.direction2.y),
-          kQ = (0, YQ.RandomRange)(this.direction1.z, this.direction2.z);
-        LQ ? FQ.vQQ(qQ, DQ, kQ) : oQ.p.TransformNormalFromFloatsToRef(qQ, DQ, kQ, QQ, FQ)
-      }
-      startPositionFunction(QQ, FQ, wQ, LQ) {
-        LQ ? FQ.vQQ(0, 0, 0) : oQ.p.TransformCoordinatesFromFloatsToRef(0, 0, 0, QQ, FQ)
-      }
-      clone() {
-        const QQ = new xQ;
-        return bQ.b.DeepCopy(this, QQ), QQ
-      }
-      applyToShader(QQ) {
-        QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
-      }
-      buildUniformLayout(QQ) {
-        QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
-      }
-      getEffectDefines() {
-        return "#define POINTEMITTER"
-      }
-      getClassName() {
-        return "PointParticleEmitter"
-      }
-      serialize() {
-        const QQ = {};
-        return QQ.type = this.getClassName(), QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ
-      }
-      parse(QQ) {
-        oQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), oQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2)
-      }
-    }
-    class AQ {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.radius = QQ, this.radiusRange = FQ, this.directionRandomizer = wQ
-      }
-      startDirectionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = wQ.position.subtract(QQ.getTranslation()).normalize(),
-          DQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
-          kQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
-          vQ = (0, YQ.RandomRange)(0, this.directionRandomizer);
-        qQ.x += DQ, qQ.y += kQ, qQ.z += vQ, qQ.normalize(), LQ ? FQ.Qs(qQ) : oQ.p.TransformNormalFromFloatsToRef(qQ.x, qQ.y, qQ.z, QQ, FQ)
-      }
-      startPositionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = this.radius - (0, YQ.RandomRange)(0, this.radius * this.radiusRange),
-          DQ = (0, YQ.RandomRange)(0, 1),
-          kQ = (0, YQ.RandomRange)(0, 2 * Math.PI),
-          vQ = Math.acos(2 * DQ - 1),
-          mQ = qQ * Math.cos(kQ) * Math.sin(vQ),
-          uQ = qQ * Math.cos(vQ),
-          HQ = qQ * Math.sin(kQ) * Math.sin(vQ);
-        LQ ? FQ.vQQ(mQ, Math.abs(uQ), HQ) : oQ.p.TransformCoordinatesFromFloatsToRef(mQ, Math.abs(uQ), HQ, QQ, FQ)
-      }
-      clone() {
-        const QQ = new AQ(this.radius, this.directionRandomizer);
-        return bQ.b.DeepCopy(this, QQ), QQ
-      }
-      applyToShader(QQ) {
-        QQ.setFloat("radius", this.radius), QQ.setFloat("radiusRange", this.radiusRange), QQ.setFloat("directionRandomizer", this.directionRandomizer)
-      }
-      buildUniformLayout(QQ) {
-        QQ.addUniform("radius", 1), QQ.addUniform("radiusRange", 1), QQ.addUniform("directionRandomizer", 1)
-      }
-      getEffectDefines() {
-        return "#define HEMISPHERICEMITTER"
-      }
-      getClassName() {
-        return "HemisphericParticleEmitter"
-      }
-      serialize() {
-        const QQ = {};
-        return QQ.type = this.getClassName(), QQ.radius = this.radius, QQ.radiusRange = this.radiusRange, QQ.directionRandomizer = this.directionRandomizer, QQ
-      }
-      parse(QQ) {
-        this.radius = QQ.radius, this.radiusRange = QQ.radiusRange, this.directionRandomizer = QQ.directionRandomizer
-      }
-    }
-    class tQ {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.radius = QQ, this.radiusRange = FQ, this.directionRandomizer = wQ
-      }
-      startDirectionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = wQ.position.subtract(QQ.getTranslation()).normalize(),
-          DQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
-          kQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
-          vQ = (0, YQ.RandomRange)(0, this.directionRandomizer);
-        qQ.x += DQ, qQ.y += kQ, qQ.z += vQ, qQ.normalize(), LQ ? FQ.Qs(qQ) : oQ.p.TransformNormalFromFloatsToRef(qQ.x, qQ.y, qQ.z, QQ, FQ)
-      }
-      startPositionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = this.radius - (0, YQ.RandomRange)(0, this.radius * this.radiusRange),
-          DQ = (0, YQ.RandomRange)(0, 1),
-          kQ = (0, YQ.RandomRange)(0, 2 * Math.PI),
-          vQ = Math.acos(2 * DQ - 1),
-          mQ = qQ * Math.cos(kQ) * Math.sin(vQ),
-          uQ = qQ * Math.cos(vQ),
-          HQ = qQ * Math.sin(kQ) * Math.sin(vQ);
-        LQ ? FQ.vQQ(mQ, uQ, HQ) : oQ.p.TransformCoordinatesFromFloatsToRef(mQ, uQ, HQ, QQ, FQ)
-      }
-      clone() {
-        const QQ = new tQ(this.radius, this.directionRandomizer);
-        return bQ.b.DeepCopy(this, QQ), QQ
-      }
-      applyToShader(QQ) {
-        QQ.setFloat("radius", this.radius), QQ.setFloat("radiusRange", this.radiusRange), QQ.setFloat("directionRandomizer", this.directionRandomizer)
-      }
-      buildUniformLayout(QQ) {
-        QQ.addUniform("radius", 1), QQ.addUniform("radiusRange", 1), QQ.addUniform("directionRandomizer", 1)
-      }
-      getEffectDefines() {
-        return "#define SPHEREEMITTER"
-      }
-      getClassName() {
-        return "SphereParticleEmitter"
-      }
-      serialize() {
-        const QQ = {};
-        return QQ.type = this.getClassName(), QQ.radius = this.radius, QQ.radiusRange = this.radiusRange, QQ.directionRandomizer = this.directionRandomizer, QQ
-      }
-      parse(QQ) {
-        this.radius = QQ.radius, this.radiusRange = QQ.radiusRange, this.directionRandomizer = QQ.directionRandomizer
-      }
-    }
-    class eQ extends tQ {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new oQ.p(0, 1, 0),
-          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0);
-        super(QQ), this.direction1 = FQ, this.direction2 = wQ
-      }
-      startDirectionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = (0, YQ.RandomRange)(this.direction1.x, this.direction2.x),
-          DQ = (0, YQ.RandomRange)(this.direction1.y, this.direction2.y),
-          kQ = (0, YQ.RandomRange)(this.direction1.z, this.direction2.z);
-        LQ ? FQ.vQQ(qQ, DQ, kQ) : oQ.p.TransformNormalFromFloatsToRef(qQ, DQ, kQ, QQ, FQ)
-      }
-      clone() {
-        const QQ = new eQ(this.radius, this.direction1, this.direction2);
-        return bQ.b.DeepCopy(this, QQ), QQ
-      }
-      applyToShader(QQ) {
-        QQ.setFloat("radius", this.radius), QQ.setFloat("radiusRange", this.radiusRange), QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
-      }
-      buildUniformLayout(QQ) {
-        QQ.addUniform("radius", 1), QQ.addUniform("radiusRange", 1), QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
-      }
-      getEffectDefines() {
-        return "#define SPHEREEMITTER\n#define DIRECTEDSPHEREEMITTER"
-      }
-      getClassName() {
-        return "SphereDirectedParticleEmitter"
-      }
-      serialize() {
-        const QQ = super.serialize();
-        return QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ
-      }
-      parse(QQ) {
-        super.parse(QQ), oQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), oQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2)
-      }
-    }
-    var MQ = wQ(38192);
-    class GQ {
-      get radius() {
-        return this._radius
-      }
-      set radius(QQ) {
-        this._radius = QQ, this._buildHeight()
-      }
-      get angle() {
-        return this._angle
-      }
-      set angle(QQ) {
-        this._angle = QQ, this._buildHeight()
-      }
-      _buildHeight() {
-        0 !== this._angle ? this._height = this._radius / Math.tan(this._angle / 2) : this._height = 1
-      }
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
-          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.directionRandomizer = wQ, this.radiusRange = 1, this.heightRange = 1, this.emitFromSpawnPointOnly = !1, this.angle = FQ, this.radius = QQ
-      }
-      startDirectionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = wQ.position.subtract(QQ.getTranslation()).normalize(),
-          DQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
-          kQ = (0, YQ.RandomRange)(0, this.directionRandomizer),
-          vQ = (0, YQ.RandomRange)(0, this.directionRandomizer);
-        qQ.x += DQ, qQ.y += kQ, qQ.z += vQ, qQ.normalize(), LQ ? FQ.Qs(qQ) : oQ.p.TransformNormalFromFloatsToRef(qQ.x, qQ.y, qQ.z, QQ, FQ)
-      }
-      startPositionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = (0, YQ.RandomRange)(0, 2 * Math.PI);
-        let DQ;
-        this.emitFromSpawnPointOnly ? DQ = 1e-4 : (DQ = (0, YQ.RandomRange)(0, this.heightRange), DQ = 1 - DQ * DQ);
-        let kQ = this._radius - (0, YQ.RandomRange)(0, this._radius * this.radiusRange);
-        kQ *= DQ;
-        const vQ = kQ * Math.sin(qQ),
-          mQ = kQ * Math.cos(qQ),
-          uQ = DQ * this._height;
-        if (LQ) return FQ.x = vQ, FQ.y = uQ, void(FQ.z = mQ);
-        oQ.p.TransformCoordinatesFromFloatsToRef(vQ, uQ, mQ, QQ, FQ)
-      }
-      clone() {
-        const QQ = new GQ(this._radius, this._angle, this.directionRandomizer);
-        return bQ.b.DeepCopy(this, QQ), QQ
-      }
-      applyToShader(QQ) {
-        QQ.setFloat2("radius", this._radius, this.radiusRange), QQ.setFloat("coneAngle", this._angle), QQ.setFloat2("height", this._height, this.heightRange), QQ.setFloat("directionRandomizer", this.directionRandomizer)
-      }
-      buildUniformLayout(QQ) {
-        QQ.addUniform("radius", 2), QQ.addUniform("coneAngle", 1), QQ.addUniform("height", 2), QQ.addUniform("directionRandomizer", 1)
-      }
-      getEffectDefines() {
-        let QQ = "#define CONEEMITTER";
-        return this.emitFromSpawnPointOnly && (QQ += "\n#define CONEEMITTERSPAWNPOINT"), QQ
-      }
-      getClassName() {
-        return "ConeParticleEmitter"
-      }
-      serialize() {
-        const QQ = {};
-        return QQ.type = this.getClassName(), QQ.radius = this._radius, QQ.angle = this._angle, QQ.directionRandomizer = this.directionRandomizer, QQ.radiusRange = this.radiusRange, QQ.heightRange = this.heightRange, QQ.emitFromSpawnPointOnly = this.emitFromSpawnPointOnly, QQ
-      }
-      parse(QQ) {
-        this.radius = QQ.radius, this.angle = QQ.angle, this.directionRandomizer = QQ.directionRandomizer, this.radiusRange = void 0 !== QQ.radiusRange ? QQ.radiusRange : 1, this.heightRange = void 0 !== QQ.heightRange ? QQ.heightRange : 1, this.emitFromSpawnPointOnly = void 0 !== QQ.emitFromSpawnPointOnly && QQ.emitFromSpawnPointOnly
-      }
-    }
-    class pQ extends GQ {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
-          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0),
-          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0);
-        super(QQ, FQ), this.direction1 = wQ, this.direction2 = LQ
-      }
-      startDirectionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = (0, YQ.RandomRange)(this.direction1.x, this.direction2.x),
-          DQ = (0, YQ.RandomRange)(this.direction1.y, this.direction2.y),
-          kQ = (0, YQ.RandomRange)(this.direction1.z, this.direction2.z);
-        LQ ? FQ.vQQ(qQ, DQ, kQ) : oQ.p.TransformNormalFromFloatsToRef(qQ, DQ, kQ, QQ, FQ)
-      }
-      clone() {
-        const QQ = new pQ(this.radius, this.angle, this.direction1, this.direction2);
-        return bQ.b.DeepCopy(this, QQ), QQ
-      }
-      applyToShader(QQ) {
-        super.applyToShader(QQ), QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
-      }
-      buildUniformLayout(QQ) {
-        super.buildUniformLayout(QQ), QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
-      }
-      getEffectDefines() {
-        return "#define CONEEMITTER\n#define DIRECTEDCONEEMITTER"
-      }
-      getClassName() {
-        return "ConeDirectedParticleEmitter"
-      }
-      serialize() {
-        const QQ = super.serialize();
-        return QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ
-      }
-      parse(QQ) {
-        super.parse(QQ), oQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), oQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2)
-      }
-    }
-    class cQ {
-      get mesh() {
-        return this._mesh
-      }
-      set mesh(QQ) {
-        this._mesh !== QQ && (this._mesh = QQ, QQ ? (this._indices = QQ.OLQ(), this._positions = QQ.getVerticesData(DQ.h.PositionKind), this._normals = QQ.getVerticesData(DQ.h.NormalKind)) : (this._indices = null, this._positions = null, this._normals = null))
-      }
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this._indices = null, this._positions = null, this._normals = null, this._storedNormal = oQ.p.Zero(), this._mesh = null, this.direction1 = new oQ.p(0, 1, 0), this.direction2 = new oQ.p(0, 1, 0), this.useMeshNormalsForDirection = !0, this.mesh = QQ
-      }
-      startDirectionFunction(QQ, FQ, wQ, LQ) {
-        if (this.useMeshNormalsForDirection && this._normals) return void oQ.p.TransformNormalToRef(this._storedNormal, QQ, FQ);
-        const qQ = (0, YQ.RandomRange)(this.direction1.x, this.direction2.x),
-          DQ = (0, YQ.RandomRange)(this.direction1.y, this.direction2.y),
-          kQ = (0, YQ.RandomRange)(this.direction1.z, this.direction2.z);
-        LQ ? FQ.vQQ(qQ, DQ, kQ) : oQ.p.TransformNormalFromFloatsToRef(qQ, DQ, kQ, QQ, FQ)
-      }
-      startPositionFunction(QQ, FQ, wQ, LQ) {
-        if (!this._indices || !this._positions) return;
-        const qQ = 3 * (Math.random() * (this._indices.length / 3) | 0),
-          DQ = Math.random(),
-          kQ = Math.random() * (1 - DQ),
-          vQ = 1 - DQ - kQ,
-          mQ = this._indices[qQ],
-          uQ = this._indices[qQ + 1],
-          HQ = this._indices[qQ + 2],
-          bQ = oQ.k.Ox[0],
-          YQ = oQ.k.Ox[1],
-          xQ = oQ.k.Ox[2],
-          AQ = oQ.k.Ox[3];
-        oQ.p.FromArrayToRef(this._positions, 3 * mQ, bQ), oQ.p.FromArrayToRef(this._positions, 3 * uQ, YQ), oQ.p.FromArrayToRef(this._positions, 3 * HQ, xQ), AQ.x = DQ * bQ.x + kQ * YQ.x + vQ * xQ.x, AQ.y = DQ * bQ.y + kQ * YQ.y + vQ * xQ.y, AQ.z = DQ * bQ.z + kQ * YQ.z + vQ * xQ.z, LQ ? FQ.vQQ(AQ.x, AQ.y, AQ.z) : oQ.p.TransformCoordinatesFromFloatsToRef(AQ.x, AQ.y, AQ.z, QQ, FQ), this.useMeshNormalsForDirection && this._normals && (oQ.p.FromArrayToRef(this._normals, 3 * mQ, bQ), oQ.p.FromArrayToRef(this._normals, 3 * uQ, YQ), oQ.p.FromArrayToRef(this._normals, 3 * HQ, xQ), this._storedNormal.x = DQ * bQ.x + kQ * YQ.x + vQ * xQ.x, this._storedNormal.y = DQ * bQ.y + kQ * YQ.y + vQ * xQ.y, this._storedNormal.z = DQ * bQ.z + kQ * YQ.z + vQ * xQ.z)
-      }
-      clone() {
-        const QQ = new cQ(this.mesh);
-        return bQ.b.DeepCopy(this, QQ), QQ
-      }
-      applyToShader(QQ) {
-        QQ.setVector3("direction1", this.direction1), QQ.setVector3("direction2", this.direction2)
-      }
-      buildUniformLayout(QQ) {
-        QQ.addUniform("direction1", 3), QQ.addUniform("direction2", 3)
-      }
-      getEffectDefines() {
-        return ""
-      }
-      getClassName() {
-        return "MeshParticleEmitter"
-      }
-      serialize() {
-        const QQ = {};
-        return QQ.type = this.getClassName(), QQ.direction1 = this.direction1.RLQ(), QQ.direction2 = this.direction2.RLQ(), QQ.meshId = this.mesh?.id, QQ.useMeshNormalsForDirection = this.useMeshNormalsForDirection, QQ
-      }
-      parse(QQ, FQ) {
-        oQ.p.FromArrayToRef(QQ.direction1, 0, this.direction1), oQ.p.FromArrayToRef(QQ.direction2, 0, this.direction2), QQ.meshId && FQ && (this.mesh = FQ.getLastMeshById(QQ.meshId)), this.useMeshNormalsForDirection = QQ.useMeshNormalsForDirection
-      }
-    }
-    class CQ {
-      get targetStopDuration() {
-        return this._targetStopDuration
-      }
-      set targetStopDuration(QQ) {
-        this._targetStopDuration !== QQ && (this._targetStopDuration = QQ)
-      }
-      get isNodeGenerated() {
-        return !1
-      }
-      get noiseTexture() {
-        return this._noiseTexture
-      }
-      set noiseTexture(QQ) {
-        this._noiseTexture !== QQ && (this._noiseTexture = QQ, this._reset())
-      }
-      get attractors() {
-        return this._attractors.slice(0)
-      }
-      addAttractor(QQ) {
-        this._attractors.push(QQ)
-      }
-      removeAttractor(QQ) {
-        const FQ = this._attractors.indexOf(QQ); - 1 !== FQ && this._attractors.splice(FQ, 1)
-      }
-      get _isAnimationSheetEnabled() {
-        return this._animationSheetEnabled
-      }
-      set _isAnimationSheetEnabled(QQ) {
-        this._animationSheetEnabled !== QQ && (this._animationSheetEnabled = QQ)
-      }
-      get isAnimationSheetEnabled() {
-        return this._isAnimationSheetEnabled
-      }
-      set isAnimationSheetEnabled(QQ) {
-        this._isAnimationSheetEnabled != QQ && (this._isAnimationSheetEnabled = QQ, this._reset())
-      }
-      get useLogarithmicDepth() {
-        return this._useLogarithmicDepth
-      }
-      set useLogarithmicDepth(QQ) {
-        this._useLogarithmicDepth = QQ && this.iN().Wx().getCaps().fragmentDepthSupported
-      }
-      iN() {
-        return this._scene
-      }
-      _hasTargetStopDurationDependantGradient() {
-        return this._startSizeGradients && this._startSizeGradients.length > 0 || this._emitRateGradients && this._emitRateGradients.length > 0 || this._lifeTimeGradients && this._lifeTimeGradients.length > 0
-      }
-      _setEngineBasedOnBlendMode(QQ) {
-        switch (QQ) {
-          case CQ.BLENDMODE_MULTIPLYADD:
-            return;
-          case CQ.BLENDMODE_ADD:
-            QQ = 1;
-            break;
-          case CQ.BLENDMODE_ONEONE:
-            QQ = 6;
-            break;
-          case CQ.BLENDMODE_STANDARD:
-            QQ = 2;
-            break;
-          case CQ.BLENDMODE_MULTIPLY:
-            QQ = 4;
-            break;
-          case CQ.BLENDMODE_SUBTRACT:
-            QQ = 3
-        }
-        this._engine.setAlphaMode(QQ)
-      }
-      getDragGradients() {
-        return this._dragGradients
-      }
-      getLimitVelocityGradients() {
-        return this._limitVelocityGradients
-      }
-      getColorGradients() {
-        return this._colorGradients
-      }
-      getSizeGradients() {
-        return this._sizeGradients
-      }
-      getColorRemapGradients() {
-        return this._colorRemapGradients
-      }
-      getAlphaRemapGradients() {
-        return this._alphaRemapGradients
-      }
-      getLifeTimeGradients() {
-        return this._lifeTimeGradients
-      }
-      getAngularSpeedGradients() {
-        return this._angularSpeedGradients
-      }
-      getVelocityGradients() {
-        return this._velocityGradients
-      }
-      getStartSizeGradients() {
-        return this._startSizeGradients
-      }
-      getEmitRateGradients() {
-        return this._emitRateGradients
-      }
-      addEmitRateGradient(QQ, FQ, wQ) {
-        return this._emitRateGradients || (this._emitRateGradients = []), this._addFactorGradient(this._emitRateGradients, QQ, FQ, wQ), this
-      }
-      removeEmitRateGradient(QQ) {
-        return this._removeFactorGradient(this._emitRateGradients, QQ), this
-      }
-      get direction1() {
-        return this.particleEmitterType.direction1 ? this.particleEmitterType.direction1 : oQ.p.Zero()
-      }
-      set direction1(QQ) {
-        this.particleEmitterType.direction1 && (this.particleEmitterType.direction1 = QQ)
-      }
-      get direction2() {
-        return this.particleEmitterType.direction2 ? this.particleEmitterType.direction2 : oQ.p.Zero()
-      }
-      set direction2(QQ) {
-        this.particleEmitterType.direction2 && (this.particleEmitterType.direction2 = QQ)
-      }
-      get minEmitBox() {
-        return this.particleEmitterType.minEmitBox ? this.particleEmitterType.minEmitBox : oQ.p.Zero()
-      }
-      set minEmitBox(QQ) {
-        this.particleEmitterType.minEmitBox && (this.particleEmitterType.minEmitBox = QQ)
-      }
-      get maxEmitBox() {
-        return this.particleEmitterType.maxEmitBox ? this.particleEmitterType.maxEmitBox : oQ.p.Zero()
-      }
-      set maxEmitBox(QQ) {
-        this.particleEmitterType.maxEmitBox && (this.particleEmitterType.maxEmitBox = QQ)
-      }
-      get billboardMode() {
-        return this._billboardMode
-      }
-      set billboardMode(QQ) {
-        this._billboardMode !== QQ && (this._billboardMode = QQ, this._reset())
-      }
-      get isBillboardBased() {
-        return this._isBillboardBased
-      }
-      set isBillboardBased(QQ) {
-        this._isBillboardBased !== QQ && (this._isBillboardBased = QQ, this._reset())
-      }
-      get imageProcessingConfiguration() {
-        return this._imageProcessingConfiguration
-      }
-      set imageProcessingConfiguration(QQ) {
-        this._attachImageProcessingConfiguration(QQ)
-      }
-      _attachImageProcessingConfiguration(QQ) {
-        QQ !== this._imageProcessingConfiguration && (!QQ && this._scene ? this._imageProcessingConfiguration = this._scene.imageProcessingConfiguration : this._imageProcessingConfiguration = QQ)
-      }
-      _reset() {}
-      _addFactorGradient(QQ, FQ, wQ, qQ) {
-        const oQ = new LQ.j(FQ, wQ, qQ);
-        QQ.push(oQ), QQ.sort(((QQ, FQ) => QQ.gradient < FQ.gradient ? -1 : QQ.gradient > FQ.gradient ? 1 : 0))
-      }
-      _removeFactorGradient(QQ, FQ) {
-        if (!QQ) return;
-        let wQ = 0;
-        for (const LQ of QQ) {
-          if (LQ.gradient === FQ) {
-            QQ.splice(wQ, 1);
-            break
-          }
-          wQ++
-        }
-      }
-      _removeGradientAndTexture(QQ, FQ, wQ) {
-        if (!FQ) return this;
-        let LQ = 0;
-        for (const qQ of FQ) {
-          if (qQ.gradient === QQ) {
-            FQ.splice(LQ, 1);
-            break
-          }
-          LQ++
-        }
-        return wQ && wQ.dispose(), this
-      }
-      constructor(QQ) {
-        this.animations = [], this.renderingGroupId = 0, this.emitter = oQ.p.Zero(), this.emitRate = 10, this.manualEmitCount = -1, this.updateSpeed = .01, this._targetStopDuration = 0, this.disposeOnStop = !1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minSize = 1, this.maxSize = 1, this.minScaleX = 1, this.maxScaleX = 1, this.minScaleY = 1, this.maxScaleY = 1, this.minInitialRotation = 0, this.maxInitialRotation = 0, this.minAngularSpeed = 0, this.maxAngularSpeed = 0, this.layerMask = 268435455, this.customShader = null, this.preventAutoStart = !1, this.applyFog = !1, this._wasDispatched = !1, this._rootUrl = "", this.noiseStrength = new oQ.p(10, 10, 10), this._attractors = [], this.onAnimationEnd = null, this.blendMode = CQ.BLENDMODE_ONEONE, this.forceDepthWrite = !1, this.preWarmCycles = 0, this.preWarmStepOffset = 1, this.spriteCellChangeSpeed = 1, this.startSpriteCellID = 0, this.endSpriteCellID = 0, this.spriteCellWidth = 0, this.spriteCellHeight = 0, this.spriteCellLoop = !0, this.spriteRandomStartCell = !1, this.translationPivot = new oQ.n(0, 0), this._animationSheetEnabled = !1, this.beginAnimationOnStart = !1, this.beginAnimationFrom = 0, this.beginAnimationTo = 60, this.beginAnimationLoop = !1, this.worldOffset = new oQ.p(0, 0, 0), this._useLogarithmicDepth = !1, this.gravity = oQ.p.Zero(), this._colorGradients = null, this._sizeGradients = null, this._lifeTimeGradients = null, this._angularSpeedGradients = null, this._velocityGradients = null, this._limitVelocityGradients = null, this._dragGradients = null, this._emitRateGradients = null, this._startSizeGradients = null, this._rampGradients = null, this._colorRemapGradients = null, this._alphaRemapGradients = null, this.startDelay = 0, this.limitVelocityDamping = .4, this.color1 = new uQ.e(1, 1, 1, 1), this.color2 = new uQ.e(1, 1, 1, 1), this.colorDead = new uQ.e(0, 0, 0, 1), this.textureMask = new uQ.e(1, 1, 1, 1), this._isSubEmitter = !1, this._billboardMode = 7, this._isBillboardBased = !0, this._imageProcessingConfigurationDefines = new mQ.b, this.id = QQ, this.name = QQ
-      }
-      createPointEmitter(QQ, FQ) {
-        const wQ = function(QQ, FQ) {
-          const wQ = new xQ;
-          return wQ.direction1 = QQ, wQ.direction2 = FQ, wQ
-        }(QQ, FQ);
-        return this.particleEmitterType = wQ, wQ
-      }
-      createHemisphericEmitter() {
-        const QQ = function() {
-          return new AQ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1);
-        return this.particleEmitterType = QQ, QQ
-      }
-      createSphereEmitter() {
-        const QQ = function() {
-          return new tQ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1);
-        return this.particleEmitterType = QQ, QQ
-      }
-      createDirectedSphereEmitter() {
-        const QQ = function() {
-          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new oQ.p(0, 1, 0),
-            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0);
-          return new eQ(QQ, FQ, wQ)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new oQ.p(0, 1, 0), arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0));
-        return this.particleEmitterType = QQ, QQ
-      }
-      createCylinderEmitter() {
-        const QQ = function() {
-          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-          return new MQ.e(QQ, FQ, wQ, LQ)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return this.particleEmitterType = QQ, QQ
-      }
-      createDirectedCylinderEmitter() {
-        const QQ = function() {
-          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0),
-            qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new oQ.p(0, 1, 0);
-          return new MQ.d(QQ, FQ, wQ, LQ, qQ)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0), arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new oQ.p(0, 1, 0));
-        return this.particleEmitterType = QQ, QQ
-      }
-      createConeEmitter() {
-        const QQ = function() {
-          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4;
-          return new GQ(QQ, FQ)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4);
-        return this.particleEmitterType = QQ, QQ
-      }
-      createDirectedConeEmitter() {
-        const QQ = function() {
-          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4,
-            wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0),
-            LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0);
-          return new pQ(QQ, FQ, wQ, LQ)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new oQ.p(0, 1, 0), arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new oQ.p(0, 1, 0));
-        return this.particleEmitterType = QQ, QQ
-      }
-      createBoxEmitter(QQ, FQ, wQ, LQ) {
-        const qQ = new HQ.d;
-        return this.particleEmitterType = qQ, this.direction1 = QQ, this.direction2 = FQ, this.minEmitBox = wQ, this.maxEmitBox = LQ, qQ
-      }
-      createMeshEmitter() {
-        const QQ = function() {
-          return new cQ(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null);
-        return this.particleEmitterType = QQ, QQ
-      }
-    }
-    CQ.BLENDMODE_ONEONE = 0, CQ.BLENDMODE_STANDARD = 1, CQ.BLENDMODE_ADD = 2, CQ.BLENDMODE_MULTIPLY = 3, CQ.BLENDMODE_MULTIPLYADD = 4, CQ.BLENDMODE_SUBTRACT = -1;
-    class SQ {
-      constructor() {
-        this.attachedSubEmitters = null, this.currentColor1 = new uQ.e(0, 0, 0, 0), this.currentColor2 = new uQ.e(0, 0, 0, 0), this.currentSize1 = 0, this.currentSize2 = 0, this.currentAngularSpeed1 = 0, this.currentAngularSpeed2 = 0, this.currentVelocity1 = 0, this.currentVelocity2 = 0, this.scaledDirection = oQ.p.Zero(), this.currentLimitVelocity1 = 0, this.currentLimitVelocity2 = 0, this.currentDrag1 = 0, this.currentDrag2 = 0
-      }
-      reset() {
-        this.currentColorGradient = null, this.currentSizeGradient = null, this.currentAngularSpeedGradient = null, this.currentVelocityGradient = null, this.currentLimitVelocityGradient = null, this.currentDragGradient = null, this.randomCellOffset = void 0, this.randomNoiseCoordinates1 = null, this.randomNoiseCoordinates2 = null
-      }
-    }
-    class iQ {
-      constructor(QQ) {
-        this.particleSystem = QQ, this.position = oQ.p.Zero(), this.direction = oQ.p.Zero(), this.color = new uQ.e(0, 0, 0, 0), this.colorStep = new uQ.e(0, 0, 0, 0), this.initialColor = new uQ.e(0, 0, 0, 0), this.colorDead = new uQ.e(0, 0, 0, 0), this.lifeTime = 1, this.age = 0, this.size = 0, this.scale = new oQ.n(1, 1), this.angle = 0, this.angularSpeed = 0, this.cellIndex = 0, this.metadata = null, this._properties = new SQ, this.id = iQ._Count++, this.particleSystem.isAnimationSheetEnabled && this._updateCellInfoFromSystem()
-      }
-      _updateCellInfoFromSystem() {
-        this.cellIndex = this.particleSystem.startSpriteCellID
-      }
-      updateCellIndex() {
-        let QQ = this.age,
-          FQ = this.particleSystem.spriteCellChangeSpeed;
-        this.particleSystem.spriteRandomStartCell && (void 0 === this._properties.randomCellOffset && (this._properties.randomCellOffset = Math.random() * this.lifeTime), 0 === FQ ? (FQ = 1, QQ = this._properties.randomCellOffset) : QQ += this._properties.randomCellOffset);
-        const wQ = this._properties.initialEndSpriteCellId - this._properties.initialStartSpriteCellId + 1;
-        let LQ;
-        LQ = this._properties.initialSpriteCellLoop ? (0, YQ.Clamp)(QQ * FQ % this.lifeTime / this.lifeTime) : (0, YQ.Clamp)(QQ * FQ / this.lifeTime), this.cellIndex = this._properties.initialStartSpriteCellId + LQ * wQ | 0
-      }
-      _inheritParticleInfoToSubEmitter(QQ) {
-        if (QQ.particleSystem.emitter.position) {
-          const FQ = QQ.particleSystem.emitter;
-          if (FQ.position.Qs(this.position), QQ.inheritDirection) {
-            const QQ = oQ.k.Ox[0];
-            this.direction.normalizeToRef(QQ), FQ.setDirection(QQ, 0, Math.PI / 2)
-          }
-        } else {
-          QQ.particleSystem.emitter.Qs(this.position)
-        }
-        this.direction.scaleToRef(QQ.inheritedVelocityAmount / 2, oQ.k.Ox[0]), QQ.particleSystem._inheritedVelocityOffset.Qs(oQ.k.Ox[0])
-      }
-      _inheritParticleInfoToSubEmitters() {
-        if (this._properties.attachedSubEmitters && this._properties.attachedSubEmitters.length > 0)
-          for (const QQ of this._properties.attachedSubEmitters) this._inheritParticleInfoToSubEmitter(QQ)
-      }
-      _reset() {
-        this._properties.onReset && this._properties.onReset(), this.age = 0, this.id = iQ._Count++, this._properties.reset(), this.metadata = null, this.cellIndex = this.particleSystem.startSpriteCellID
-      }
-      copyTo(QQ) {
-        QQ.position.Qs(this.position), this._properties.initialDirection ? QQ._properties.initialDirection ? QQ._properties.initialDirection.Qs(this._properties.initialDirection) : QQ._properties.initialDirection = this._properties.initialDirection.clone() : QQ._properties.initialDirection = null, QQ.direction.Qs(this.direction), this._properties.localPosition && (QQ._properties.localPosition ? QQ._properties.localPosition.Qs(this._properties.localPosition) : QQ._properties.localPosition = this._properties.localPosition.clone()), QQ.color.Qs(this.color), QQ.colorStep.Qs(this.colorStep), QQ.initialColor.Qs(this.initialColor), QQ.colorDead.Qs(this.colorDead), QQ.lifeTime = this.lifeTime, QQ.age = this.age, QQ._properties.randomCellOffset = this._properties.randomCellOffset, QQ.size = this.size, QQ.scale.Qs(this.scale), QQ.angle = this.angle, QQ.angularSpeed = this.angularSpeed, QQ.particleSystem = this.particleSystem, QQ.cellIndex = this.cellIndex, QQ.id = this.id, QQ._properties.attachedSubEmitters = this._properties.attachedSubEmitters, this._properties.currentColorGradient && (QQ._properties.currentColorGradient = this._properties.currentColorGradient, QQ._properties.currentColor1.Qs(this._properties.currentColor1), QQ._properties.currentColor2.Qs(this._properties.currentColor2)), this._properties.currentSizeGradient && (QQ._properties.currentSizeGradient = this._properties.currentSizeGradient, QQ._properties.currentSize1 = this._properties.currentSize1, QQ._properties.currentSize2 = this._properties.currentSize2), this._properties.currentAngularSpeedGradient && (QQ._properties.currentAngularSpeedGradient = this._properties.currentAngularSpeedGradient, QQ._properties.currentAngularSpeed1 = this._properties.currentAngularSpeed1, QQ._properties.currentAngularSpeed2 = this._properties.currentAngularSpeed2), this._properties.currentVelocityGradient && (QQ._properties.currentVelocityGradient = this._properties.currentVelocityGradient, QQ._properties.currentVelocity1 = this._properties.currentVelocity1, QQ._properties.currentVelocity2 = this._properties.currentVelocity2), this._properties.currentLimitVelocityGradient && (QQ._properties.currentLimitVelocityGradient = this._properties.currentLimitVelocityGradient, QQ._properties.currentLimitVelocity1 = this._properties.currentLimitVelocity1, QQ._properties.currentLimitVelocity2 = this._properties.currentLimitVelocity2), this._properties.currentDragGradient && (QQ._properties.currentDragGradient = this._properties.currentDragGradient, QQ._properties.currentDrag1 = this._properties.currentDrag1, QQ._properties.currentDrag2 = this._properties.currentDrag2), this.particleSystem.isAnimationSheetEnabled && (QQ._properties.initialStartSpriteCellId = this._properties.initialStartSpriteCellId, QQ._properties.initialEndSpriteCellId = this._properties.initialEndSpriteCellId, QQ._properties.initialSpriteCellLoop = this._properties.initialSpriteCellLoop), this.particleSystem.useRampGradients && (QQ.remapData && this.remapData ? QQ.remapData.Qs(this.remapData) : QQ.remapData = new oQ.t(0, 0, 0, 0)), this._properties.randomNoiseCoordinates1 && this._properties.randomNoiseCoordinates2 && (QQ._properties.randomNoiseCoordinates1 && QQ._properties.randomNoiseCoordinates2 ? (QQ._properties.randomNoiseCoordinates1.Qs(this._properties.randomNoiseCoordinates1), QQ._properties.randomNoiseCoordinates2.Qs(this._properties.randomNoiseCoordinates2)) : (QQ._properties.randomNoiseCoordinates1 = this._properties.randomNoiseCoordinates1.clone(), QQ._properties.randomNoiseCoordinates2 = this._properties.randomNoiseCoordinates2.clone())), QQ.metadata = this.metadata
-      }
-    }
-    iQ._Count = 0;
-    var WQ = wQ(40506);
-    class RQ {
-      get currentFrame() {
-        return this._currentFrame
-      }
-      get _evaluatedFrom() {
-        return this._playbackFrom
-      }
-      get _evaluatedTo() {
-        return this._playbackTo
-      }
-      get _evaluatedProgress() {
-        return this._playbackProgress
-      }
-      get _evaluatedSyncRoot() {
-        return this._playbackSyncRoot
-      }
-      get _evaluatedJump() {
-        return this._playbackJumped
-      }
-      get weight() {
-        return this._weight
-      }
-      get currentValue() {
-        return this._currentValue
-      }
-      get targetPath() {
-        return this._targetPath
-      }
-      get target() {
-        return this._currentActiveTarget
-      }
-      get isAdditive() {
-        return this._host && this._host.isAdditive
-      }
-      constructor(QQ, FQ, wQ, LQ) {
-        if (this._events = new Array, this._currentFrame = 0, this._originalValue = new Array, this._originalBlendValue = null, this._offsetsCache = {}, this._highLimitsCache = {}, this._stopped = !1, this._blendingFactor = 0, this._currentValue = null, this._currentActiveTarget = null, this._directTarget = null, this._targetPath = "", this._weight = 1, this._absoluteFrameOffset = 0, this._previousElapsedTime = 0, this._yoyoDirection = 1, this._previousAbsoluteFrame = 0, this._playbackFrom = 0, this._playbackTo = 0, this._playbackFrames = 0, this._playbackProgress = 0, this._playbackSyncRoot = null, this._playbackJumped = !1, this._playbackSyncMasterPlayed = 0, this._playbackSyncMasterFrame = 0, this._targetIsArray = !1, this._coreRuntimeAnimation = null, this._animation = FQ, this.K8 = QQ, this._scene = wQ, this._host = LQ, this._activeTargets = [], FQ._runtimeAnimations.push(this), this._animationState = {
-            key: 0,
-            repeatCount: 0,
-            xQ: this._getCorrectLoopMode()
-          }, this._animation.dataType === WQ.d.ANIMATIONTYPE_MATRIX && (this._animationState.workValue = oQ.c.Zero()), this._keys = this._animation.getKeys(), this._minFrame = this._keys[0].frame, this._maxFrame = this._keys[this._keys.length - 1].frame, 0 !== this._minFrame) {
-          const QQ = {
-            frame: 0,
-            value: this._keys[0].value
-          };
-          this._keys.splice(0, 0, QQ)
-        }
-        if (this.K8 instanceof Array) {
-          let QQ = 0;
-          for (const FQ of this.K8) this._preparePath(FQ, QQ), this._getOriginalValues(QQ), QQ++;
-          this._targetIsArray = !0
-        } else this._preparePath(this.K8), this._getOriginalValues(), this._targetIsArray = !1, this._directTarget = this._activeTargets[0];
-        const qQ = FQ.getEvents();
-        if (qQ && qQ.length > 0)
-          for (const oQ of qQ) this._events.push(oQ._clone());
-        this._enableBlending = QQ && QQ.animationPropertiesOverride ? QQ.animationPropertiesOverride.enableBlending : this._animation.enableBlending
-      }
-      _preparePath(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const wQ = this._animation.targetPropertyPath;
-        if (wQ.length > 1) {
-          let LQ = QQ;
-          for (let QQ = 0; QQ < wQ.length - 1; QQ++) {
-            const FQ = wQ[QQ];
-            if (LQ = LQ[FQ], void 0 === LQ) throw new Error(`Invalid property (${FQ}) in property path (${wQ.join(".")})`)
-          }
-          this._targetPath = wQ[wQ.length - 1], this._activeTargets[FQ] = LQ
-        } else this._targetPath = wQ[0], this._activeTargets[FQ] = QQ;
-        if (void 0 === this._activeTargets[FQ][this._targetPath]) throw new Error(`Invalid property (${this._targetPath}) in property path (${wQ.join(".")})`)
-      }
-      get animation() {
-        return this._animation
-      }
-      reset() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0])
-          if (this.K8 instanceof Array) {
-            let QQ = 0;
-            for (const FQ of this.K8) void 0 !== this._originalValue[QQ] && this._setValue(FQ, this._activeTargets[QQ], this._originalValue[QQ], -1, QQ), QQ++
-          } else void 0 !== this._originalValue[0] && this._setValue(this.K8, this._directTarget, this._originalValue[0], -1, 0);
-        this._offsetsCache = {}, this._highLimitsCache = {}, this._currentFrame = 0, this._blendingFactor = 0;
-        for (let QQ = 0; QQ < this._events.length; QQ++) this._events[QQ].isDone = !1
-      }
-      isStopped() {
-        return this._stopped
-      }
-      dispose() {
-        const QQ = this._animation.runtimeAnimations.indexOf(this);
-        QQ > -1 && this._animation.runtimeAnimations.splice(QQ, 1)
-      }
-      setValue(QQ, FQ) {
-        if (this._targetIsArray)
-          for (let wQ = 0; wQ < this.K8.length; wQ++) {
-            const LQ = this.K8[wQ];
-            this._setValue(LQ, this._activeTargets[wQ], QQ, FQ, wQ)
-          } else this._setValue(this.K8, this._directTarget, QQ, FQ, 0)
-      }
-      _getOriginalValues() {
-        let QQ, FQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        const wQ = this._activeTargets[FQ];
-        if (WQ.d.InheritOriginalValueFromActiveAnimations) {
-          const QQ = this._scene._activeAnimatables;
-          for (let LQ = 0; LQ < QQ.length; LQ++) {
-            const qQ = QQ[LQ]._runtimeAnimations;
-            for (let QQ = 0; QQ < qQ.length; QQ++) {
-              const LQ = qQ[QQ];
-              if (LQ !== this && LQ._targetPath === this._targetPath)
-                for (let QQ = 0; QQ < LQ._activeTargets.length; QQ++)
-                  if (LQ._activeTargets[QQ] === wQ && void 0 !== LQ._originalValue[QQ]) return void(LQ._originalValue[QQ] && LQ._originalValue[QQ].clone ? this._originalValue[FQ] = LQ._originalValue[QQ].clone() : this._originalValue[FQ] = LQ._originalValue[QQ])
-            }
-          }
-        }
-        QQ = wQ.getLocalMatrix && "_matrix" === this._targetPath ? wQ.getLocalMatrix() : wQ[this._targetPath], QQ && QQ.clone ? this._originalValue[FQ] = QQ.clone() : this._originalValue[FQ] = QQ
-      }
-      _registerTargetForLateAnimationBinding(QQ, FQ) {
-        const wQ = QQ.target;
-        this._scene._registeredForLateAnimationBindings.pushNoDuplicate(wQ), wQ._lateAnimationHolders || (wQ._lateAnimationHolders = {}), wQ._lateAnimationHolders[QQ.targetPath] || (wQ._lateAnimationHolders[QQ.targetPath] = {
-          totalWeight: 0,
-          totalAdditiveWeight: 0,
-          animations: [],
-          additiveAnimations: [],
-          originalValue: FQ
-        }), QQ.isAdditive ? (wQ._lateAnimationHolders[QQ.targetPath].additiveAnimations.push(QQ), wQ._lateAnimationHolders[QQ.targetPath].totalAdditiveWeight += QQ.weight) : (wQ._lateAnimationHolders[QQ.targetPath].animations.push(QQ), wQ._lateAnimationHolders[QQ.targetPath].totalWeight += QQ.weight)
-      }
-      _setValue(QQ, FQ, wQ, LQ, qQ) {
-        const DQ = this._scene._animationWrites,
-          kQ = this._scene._animationWriteCount++;
-        let vQ = DQ[kQ];
-        if (vQ || (vQ = DQ[kQ] = {
-            runtimeAnimation: this,
-            target: QQ,
-            weight: LQ,
-            additive: !1,
-            blendingFactor: 1,
-            Ft: !1
-          }), vQ.runtimeAnimation = this, vQ.target = QQ, vQ.weight = LQ, vQ.additive = this.isAdditive, vQ.Ft = !1, this._currentActiveTarget = FQ, this._weight = LQ, this._enableBlending && this._blendingFactor <= 1) {
-          if (!this._originalBlendValue) {
-            const QQ = FQ[this._targetPath];
-            QQ.clone ? this._originalBlendValue = QQ.clone() : this._originalBlendValue = QQ
-          }
-          this._originalBlendValue.m ? WQ.d.AllowMatrixDecomposeForInterpolation ? this._currentValue ? oQ.c.DecomposeLerpToRef(this._originalBlendValue, wQ, this._blendingFactor, this._currentValue) : this._currentValue = oQ.c.DecomposeLerp(this._originalBlendValue, wQ, this._blendingFactor) : this._currentValue ? oQ.c.LerpToRef(this._originalBlendValue, wQ, this._blendingFactor, this._currentValue) : this._currentValue = oQ.c.Lerp(this._originalBlendValue, wQ, this._blendingFactor) : this._currentValue = WQ.d._UniversalLerp(this._originalBlendValue, wQ, this._blendingFactor);
-          const LQ = QQ && QQ.animationPropertiesOverride ? QQ.animationPropertiesOverride.blendingSpeed : this._animation.blendingSpeed;
-          vQ.blendingFactor = this._blendingFactor, this._blendingFactor += LQ
-        } else vQ.blendingFactor = 1, this._currentValue ? this._currentValue.Qs ? this._currentValue.Qs(wQ) : this._currentValue = wQ : this._currentValue = wQ?.clone ? wQ.clone() : wQ; - 1 !== LQ ? this._registerTargetForLateAnimationBinding(this, this._originalValue[qQ]) : this._animationState.xQ === WQ.d.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT ? this._currentValue.addToRef ? this._currentValue.addToRef(this._originalValue[qQ], FQ[this._targetPath]) : FQ[this._targetPath] = this._originalValue[qQ] + this._currentValue : FQ[this._targetPath] = this._currentValue, QQ.dFQ && QQ.dFQ(this._animation.targetProperty)
-      }
-      _getCorrectLoopMode() {
-        if (this.K8 && this.K8.animationPropertiesOverride) {
-          return "MorphTarget" === this.K8.getClassName?.() && null == this.K8._animationPropertiesOverride ? this._animation.xQ : this.K8.animationPropertiesOverride.xQ
-        }
-        return this._animation.xQ
-      }
-      goToFrame(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        const wQ = this._animation.getKeys();
-        QQ < wQ[0].frame ? QQ = wQ[0].frame : QQ > wQ[wQ.length - 1].frame && (QQ = wQ[wQ.length - 1].frame);
-        const LQ = this._events;
-        if (LQ.length)
-          for (let oQ = 0; oQ < LQ.length; oQ++) LQ[oQ].onlyOnce || (LQ[oQ].isDone = LQ[oQ].frame < QQ);
-        this._currentFrame = QQ;
-        const qQ = this._animation._interpolate(QQ, this._animationState);
-        this.setValue(qQ, FQ)
-      }
-      _prepareForSpeedRatioChange(QQ) {
-        const FQ = this._previousElapsedTime * (this._animation.framePerSecond * QQ) / 1e3;
-        this._absoluteFrameOffset = this._previousAbsoluteFrame - FQ
-      }
-      animate(QQ, FQ, wQ, LQ, qQ) {
-        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : -1;
-        const DQ = this._animation,
-          kQ = DQ.targetPropertyPath;
-        if (!kQ || kQ.length < 1) return this._stopped = !0, !1;
-        let vQ, mQ = !0;
-        const uQ = this._events;
-        let HQ;
-        if (this._coreRuntimeAnimation) HQ = wQ - FQ, vQ = this._coreRuntimeAnimation.currentFrame, this._currentFrame = vQ, this._animationState.repeatCount = this._coreRuntimeAnimation._animationState.repeatCount, this._animationState.highLimitValue = this._coreRuntimeAnimation._animationState.highLimitValue, this._animationState.offsetValue = this._coreRuntimeAnimation._animationState.offsetValue, this._playbackFrom = this._coreRuntimeAnimation._playbackFrom, this._playbackTo = this._coreRuntimeAnimation._playbackTo, this._playbackFrames = this._coreRuntimeAnimation._playbackFrames, this._playbackProgress = this._coreRuntimeAnimation._playbackProgress, this._playbackJumped = this._coreRuntimeAnimation._playbackJumped, this._playbackSyncRoot = this._coreRuntimeAnimation._playbackSyncRoot;
-        else {
-          let oQ;
-          (FQ < this._minFrame || FQ > this._maxFrame) && (FQ = this._minFrame), (wQ < this._minFrame || wQ > this._maxFrame) && (wQ = this._maxFrame), HQ = wQ - FQ;
-          let kQ = QQ * (DQ.framePerSecond * qQ) / 1e3 + this._absoluteFrameOffset,
-            bQ = 0,
-            YQ = !1;
-          const xQ = LQ && this._animationState.xQ === WQ.d.ANIMATIONLOOPMODE_YOYO;
-          if (xQ) {
-            const QQ = (kQ - FQ) / HQ,
-              wQ = Math.sin(QQ * Math.PI);
-            kQ = Math.abs(wQ) * HQ + FQ;
-            const LQ = wQ >= 0 ? 1 : -1;
-            this._yoyoDirection !== LQ && (YQ = !0), this._yoyoDirection = LQ
-          }
-          if (this._previousElapsedTime = QQ, this._previousAbsoluteFrame = kQ, !LQ && wQ >= FQ && (kQ >= HQ && qQ > 0 || kQ <= 0 && qQ < 0)) mQ = !1, bQ = DQ.evaluate(wQ);
-          else if (!LQ && FQ >= wQ && (kQ <= HQ && qQ < 0 || kQ >= 0 && qQ > 0)) mQ = !1, bQ = DQ.evaluate(FQ);
-          else if (this._animationState.xQ !== WQ.d.ANIMATIONLOOPMODE_CYCLE) {
-            const QQ = wQ.toString() + FQ.toString();
-            if (!this._offsetsCache[QQ]) {
-              this._animationState.repeatCount = 0, this._animationState.xQ = WQ.d.ANIMATIONLOOPMODE_CYCLE;
-              const LQ = DQ._interpolate(FQ, this._animationState),
-                qQ = DQ._interpolate(wQ, this._animationState);
-              switch (this._animationState.xQ = this._getCorrectLoopMode(), DQ.dataType) {
-                case WQ.d.ANIMATIONTYPE_FLOAT:
-                  this._offsetsCache[QQ] = qQ - LQ;
-                  break;
-                case WQ.d.ANIMATIONTYPE_QUATERNION:
-                case WQ.d.ANIMATIONTYPE_VECTOR3:
-                case WQ.d.ANIMATIONTYPE_VECTOR2:
-                case WQ.d.ANIMATIONTYPE_SIZE:
-                case WQ.d.ANIMATIONTYPE_COLOR3:
-                case WQ.d.ANIMATIONTYPE_COLOR4:
-                  this._offsetsCache[QQ] = qQ.subtract(LQ)
-              }
-              this._highLimitsCache[QQ] = qQ
-            }
-            bQ = this._highLimitsCache[QQ], oQ = this._offsetsCache[QQ]
-          }
-          if (void 0 === oQ) switch (DQ.dataType) {
-            case WQ.d.ANIMATIONTYPE_FLOAT:
-              oQ = 0;
-              break;
-            case WQ.d.ANIMATIONTYPE_QUATERNION:
-              oQ = WQ.q;
-              break;
-            case WQ.d.ANIMATIONTYPE_VECTOR3:
-              oQ = WQ.A;
-              break;
-            case WQ.d.ANIMATIONTYPE_VECTOR2:
-              oQ = WQ.w;
-              break;
-            case WQ.d.ANIMATIONTYPE_SIZE:
-              oQ = WQ.u;
-              break;
-            case WQ.d.ANIMATIONTYPE_COLOR3:
-              oQ = WQ.l;
-              break;
-            case WQ.d.ANIMATIONTYPE_COLOR4:
-              oQ = WQ.p
-          }
-          const AQ = this._host ? this._host.syncRoot : null;
-          let tQ, eQ = this._playbackFrames,
-            MQ = !1;
-          if (AQ) {
-            const QQ = AQ.toFrame - AQ.fromFrame,
-              wQ = AQ.masterFrame,
-              LQ = (wQ - AQ.fromFrame) / QQ;
-            vQ = FQ + HQ * LQ;
-            const qQ = AQ.getAnimations()[0];
-            if (qQ && 0 !== QQ) {
-              const QQ = HQ * LQ,
-                FQ = qQ._playbackTo - qQ._playbackFrom;
-              if (0 !== FQ && qQ._playbackFrom <= AQ.fromFrame && qQ._playbackTo >= AQ.toFrame) {
-                eQ = HQ * Math.round((qQ._playbackFrames - (qQ._currentFrame - qQ._playbackFrom)) / FQ) + QQ
-              } else MQ = (wQ - this._playbackSyncMasterFrame) * (qQ._playbackFrames - this._playbackSyncMasterPlayed) < 0, eQ = QQ;
-              MQ = MQ || qQ._playbackJumped, this._playbackSyncMasterPlayed = qQ._playbackFrames, this._playbackSyncMasterFrame = wQ
-            }
-          } else vQ = kQ > 0 && FQ > wQ || kQ < 0 && FQ < wQ ? mQ && 0 !== HQ ? wQ + kQ % HQ : FQ : mQ && 0 !== HQ ? FQ + kQ % HQ : wQ;
-          if (!xQ && (qQ > 0 && this.currentFrame > vQ || qQ < 0 && this.currentFrame < vQ) || xQ && YQ) {
-            this._onLoop();
-            for (let QQ = 0; QQ < uQ.length; QQ++) uQ[QQ].onlyOnce || (uQ[QQ].isDone = !1);
-            this._animationState.key = qQ > 0 ? 0 : DQ.getKeys().length - 1
-          }
-          if (this._currentFrame = vQ, this._animationState.repeatCount = 0 === HQ ? 0 : kQ / HQ | 0, this._animationState.highLimitValue = bQ, this._animationState.offsetValue = oQ, this._playbackFrom = FQ, this._playbackTo = wQ, this._playbackJumped = MQ, this._playbackSyncRoot = AQ, AQ) tQ = eQ;
-          else if (mQ) tQ = xQ ? vQ === FQ && kQ === wQ ? HQ : vQ - FQ : kQ;
-          else {
-            const QQ = 0 !== HQ ? Math.floor(this._playbackFrames / HQ) : 0;
-            tQ = (vQ === wQ ? QQ + 1 : QQ) * HQ
-          }
-          this._playbackFrames = tQ, this._playbackProgress = this._animationState.xQ === WQ.d.ANIMATIONLOOPMODE_CONSTANT && this._animationState.repeatCount > 0 ? HQ : tQ
-        }
-        const bQ = DQ._interpolate(vQ, this._animationState);
-        if (this.setValue(bQ, oQ), uQ.length)
-          for (let YQ = 0; YQ < uQ.length; YQ++)
-            if (HQ >= 0 && vQ >= uQ[YQ].frame && uQ[YQ].frame >= FQ || HQ < 0 && vQ <= uQ[YQ].frame && uQ[YQ].frame <= FQ) {
-              const QQ = uQ[YQ];
-              QQ.isDone || (QQ.onlyOnce && (uQ.splice(YQ, 1), YQ--), QQ.isDone = !0, QQ.action(vQ))
-            } return mQ || (this._stopped = !0), mQ
-      }
-    }
-    var OQ = wQ(39303);
-    class sQ {
-      get syncRoot() {
-        return this._syncRoot
-      }
-      get masterFrame() {
-        return 0 === this._runtimeAnimations.length ? 0 : this._runtimeAnimations[0].currentFrame
-      }
-      get weight() {
-        return this._weight
-      }
-      set weight(QQ) {
-        this._weight = -1 !== QQ ? Math.min(Math.max(QQ, 0), 1) : -1
-      }
-      get speedRatio() {
-        return this._speedRatio
-      }
-      set speedRatio(QQ) {
-        for (let FQ = 0; FQ < this._runtimeAnimations.length; FQ++) {
-          this._runtimeAnimations[FQ]._prepareForSpeedRatioChange(QQ)
-        }
-        this._speedRatio = QQ, null !== this._goToFrame && this.goToFrame(this._goToFrame)
-      }
-      get elapsedTime() {
-        return null === this._localDelayOffset ? 0 : this._scene._animationTime - this._localDelayOffset
-      }
-      constructor(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 100,
-          oQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          DQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          kQ = arguments.length > 6 ? arguments[6] : void 0,
-          vQ = arguments.length > 7 ? arguments[7] : void 0,
-          mQ = arguments.length > 8 ? arguments[8] : void 0,
-          uQ = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-          HQ = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0;
-        this.target = FQ, this.fromFrame = wQ, this.toFrame = LQ, this.loopAnimation = oQ, this.onAnimationEnd = kQ, this.onAnimationLoop = mQ, this.isAdditive = uQ, this.playOrder = HQ, this._localDelayOffset = null, this._pausedDelay = null, this._manualJumpDelay = null, this._runtimeAnimations = new Array, this.WC = !1, this._speedRatio = 1, this._weight = -1, this._previousWeight = -1, this._syncRoot = null, this._frameToSyncFromJump = null, this._goToFrame = null, this.disposeOnEnd = !0, this.animationStarted = !1, this.onAnimationEndObservable = new qQ.e, this.onAnimationLoopObservable = new qQ.e, this._scene = QQ, vQ && this.appendAnimations(FQ, vQ), this._speedRatio = DQ, QQ._activeAnimatables.push(this)
-      }
-      syncWith(QQ) {
-        if (this._syncRoot = QQ, QQ) {
-          const QQ = this._scene._activeAnimatables.indexOf(this);
-          QQ > -1 && (this._scene._activeAnimatables.splice(QQ, 1), this._scene._activeAnimatables.push(this))
-        }
-        return this
-      }
-      getAnimations() {
-        return this._runtimeAnimations
-      }
-      appendAnimations(QQ, FQ) {
-        for (let wQ = 0; wQ < FQ.length; wQ++) {
-          const LQ = FQ[wQ],
-            qQ = new RQ(QQ, LQ, this._scene, this);
-          qQ._onLoop = () => {
-            this.onAnimationLoopObservable.notifyObservers(this), this.onAnimationLoop && this.onAnimationLoop()
-          }, this._runtimeAnimations.push(qQ)
-        }
-      }
-      getAnimationByTargetProperty(QQ) {
-        const FQ = this._runtimeAnimations;
-        for (let wQ = 0; wQ < FQ.length; wQ++)
-          if (FQ[wQ].animation.targetProperty === QQ) return FQ[wQ].animation;
-        return null
-      }
-      getRuntimeAnimationByTargetProperty(QQ) {
-        const FQ = this._runtimeAnimations;
-        for (let wQ = 0; wQ < FQ.length; wQ++)
-          if (FQ[wQ].animation.targetProperty === QQ) return FQ[wQ];
-        return null
-      }
-      reset() {
-        const QQ = this._runtimeAnimations;
-        for (let FQ = 0; FQ < QQ.length; FQ++) QQ[FQ].reset(!0);
-        this._localDelayOffset = null, this._pausedDelay = null
-      }
-      enableBlending(QQ) {
-        const FQ = this._runtimeAnimations;
-        for (let wQ = 0; wQ < FQ.length; wQ++) FQ[wQ].animation.enableBlending = !0, FQ[wQ].animation.blendingSpeed = QQ
-      }
-      disableBlending() {
-        const QQ = this._runtimeAnimations;
-        for (let FQ = 0; FQ < QQ.length; FQ++) QQ[FQ].animation.enableBlending = !1
-      }
-      goToFrame(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const wQ = this._runtimeAnimations;
-        if (wQ[0]) {
-          const FQ = wQ[0].animation.framePerSecond;
-          this._frameToSyncFromJump = this._frameToSyncFromJump ?? wQ[0].currentFrame;
-          const LQ = 0 === this.speedRatio ? 0 : (QQ - this._frameToSyncFromJump) / FQ * 1e3 / this.speedRatio;
-          this._manualJumpDelay = -LQ
-        }
-        for (let LQ = 0; LQ < wQ.length; LQ++) wQ[LQ].goToFrame(QQ, FQ ? this._weight : -1);
-        this._goToFrame = QQ
-      }
-      get paused() {
-        return this.WC
-      }
-      pause() {
-        this.WC || (this.WC = !0)
-      }
-      restart() {
-        this.WC = !1
-      }
-      _raiseOnAnimationEnd() {
-        this.onAnimationEnd && this.onAnimationEnd(), this.onAnimationEndObservable.notifyObservers(this)
-      }
-      stop(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (QQ || FQ) {
-          const qQ = this._scene._activeAnimatables.indexOf(this);
-          if (qQ > -1) {
-            const oQ = this._runtimeAnimations;
-            for (let wQ = oQ.length - 1; wQ >= 0; wQ--) {
-              const LQ = oQ[wQ];
-              QQ && LQ.animation.name != QQ || (FQ && !FQ(LQ.target) || (LQ.dispose(), oQ.splice(wQ, 1)))
-            }
-            0 == oQ.length && (wQ || this._scene._activeAnimatables.splice(qQ, 1), LQ || this._raiseOnAnimationEnd())
-          }
-        } else {
-          const QQ = this._scene._activeAnimatables.indexOf(this);
-          if (QQ > -1) {
-            wQ || this._scene._activeAnimatables.splice(QQ, 1);
-            const FQ = this._runtimeAnimations;
-            for (let QQ = 0; QQ < FQ.length; QQ++) FQ[QQ].dispose();
-            this._runtimeAnimations.length = 0, LQ || this._raiseOnAnimationEnd()
-          }
-        }
-      }
-      async waitAsync() {
-        return await new Promise((QQ => {
-          this.onAnimationEndObservable.add((() => {
-            QQ(this)
-          }), void 0, void 0, this, !0)
-        }))
-      }
-      _animate(QQ) {
-        if (this.WC) return this.animationStarted = !1, null === this._pausedDelay && (this._pausedDelay = QQ), !0;
-        if (null === this._localDelayOffset ? (this._localDelayOffset = QQ, this._pausedDelay = null) : null !== this._pausedDelay && (this._localDelayOffset += QQ - this._pausedDelay, this._pausedDelay = null), null !== this._manualJumpDelay && (this._localDelayOffset += this.speedRatio < 0 ? -this._manualJumpDelay : this._manualJumpDelay, this._manualJumpDelay = null, this._frameToSyncFromJump = null), this._goToFrame = null, !sQ.ProcessPausedAnimatables && 0 === this._weight && 0 === this._previousWeight) return !0;
-        this._previousWeight = this._weight;
-        let FQ = !1;
-        const wQ = this._runtimeAnimations;
-        let LQ;
-        for (LQ = 0; LQ < wQ.length; LQ++) {
-          const qQ = wQ[LQ].animate(QQ - this._localDelayOffset, this.fromFrame, this.toFrame, this.loopAnimation, this._speedRatio, this._weight);
-          FQ = FQ || qQ
-        }
-        if (this.animationStarted = FQ, !FQ) {
-          if (this.disposeOnEnd)
-            for (LQ = this._scene._activeAnimatables.indexOf(this), this._scene._activeAnimatables.splice(LQ, 1), LQ = 0; LQ < wQ.length; LQ++) wQ[LQ].dispose();
-          this._raiseOnAnimationEnd(), this.disposeOnEnd && (this.onAnimationEnd = null, this.onAnimationLoop = null, this.onAnimationLoopObservable.clear(), this.onAnimationEndObservable.clear())
-        }
-        return FQ
-      }
-    }
+    const Dk = String.raw`import type {
+	GameApi,
+	Console,
+	EntityId,
+	Pos,
+	LifeformId,
+	PlayerId,
+	PlayerDbId,
+	LifeformBodyPart,
+	PlayerAttemptDamageOtherPlayerOpts,
+	HittingSoundOverride,
+	DamageCause,
+	ItemName,
+	EnchantmentAttributes,
+	EnchantmentPerk,
+	EnchantmentTier,
+	CustomTextStyling,
+	TranslatedText,
+	EntityName,
+	Rank,
+	StyledIcon,
+	FontSize,
+	StyledText,
+	TextStyle,
+	ProgressBar,
+	StyledKeyBinding,
+	NoaAction,
+	ClientOption,
+	EarthSkyBox,
+	Vec3,
+	LobbyLeaderboardInfo,
+	TextWithDisplayOptions,
+	CustomButtonsType,
+	CustomButtonType,
+	HeaderChip,
+	DialogueText,
+	SpeechVoice,
+	SpeechVoicePreset,
+	SpeechSynth,
+	SpeechSynthWaveform,
+	SpeechIntonation,
+	GunshotOrigin,
+	CameraSettings,
+	DefaultCameraSettings,
+	FixedCameraSettings,
+	FollowCameraSettings,
+	PathCameraSettings,
+	FrameCameraSettings,
+	CameraSettingsBase,
+	CameraEasing,
+	CameraTransition,
+	CameraPlayerFacing,
+	CameraPlayerLook,
+	CameraTarget,
+	CameraOffsetSpace,
+	CameraPathKeyframe,
+	ShopCategoryKey,
+	ShopItemKey,
+	ShopItem,
+	ShopItemUserInput,
+	SmpShopItemMeta,
+	SmpListingFeeRule,
+	SchematicId,
+	ShopItemBadgeType,
+	ShopCategoryConfig,
+	SmpShopCategoryKind,
+	OtherEntitySetting,
+	EntityMeshScalingMap,
+	EntityNamedNode,
+	PlayerMeshNamedNode,
+	LobbyLeaderboardValues,
+	ChatTags,
+	NameTagInfo,
+	RankInfo,
+	HealthbarInfo,
+	NameTagBorder,
+	HealthbarDisplay,
+	HealthbarColourGradient,
+	NameTagBorderStyle,
+	NameTagBorderTarget,
+	MultilineTextBox,
+	TempParticleSystemOpts,
+	ParticlePresetOpts,
+	ParticleSystemOpts,
+	VelocityGradient,
+	TimeColorGradient,
+	RandomColorGradient,
+	ParticlePresetId,
+	AnimationSchema,
+	BlockbenchAnimationSchema,
+	LoopModeSchema,
+	AnimationTimelineSchema,
+	KeyframeSchema,
+	LerpPointSchema,
+	Point,
+	LerpModeSchema,
+	BlockbenchLoopModeSchema,
+	BlockbenchAnimationTimelineSchema,
+	TimestampString,
+	BlockbenchAnimationFrameSchema,
+	BlockbenchLerpModeSchema,
+	NodeSkeletonAnimationSchema,
+	NodeName,
+	NodeAnimationSchema,
+	BlockbenchBonesAnimationSchema,
+	BlockbenchBoneAnimationSchema,
+	MobId,
+	MobDbId,
+	BlockName,
+	BlockId,
+	WorldBlockChangedInfo,
+	WorldBlockChangedCause,
+	GameChunk,
+	PersistedExtraInfo,
+	StairsCorner,
+	MobType,
+	ItemAttributes,
+	ItemDropOptions,
+	AudioEntityOpts,
+	AnimParams,
+	HarvestType,
+	BlockMetadataModelType,
+	SpecialToolDrop,
+	RecursiveReadonly,
+	Primitive,
+	SoundType,
+	GunStatsOverride,
+	GunMetadata,
+	NonOverridableStats,
+	GunCategory,
+	WeaponComboInfo,
+	AnyMetadataItem,
+	CustomItemStat,
+	InvenItem,
+	RecipesForItem,
+	EntityType,
+	NetworkedEntityType,
+	LifeformType,
+	ThrowableItem,
+	MobHerdId,
+	MobSpawnOpts,
+	MobVariation,
+	MobSetting,
+	MobSettings,
+	MobItemDrop,
+	MobBurstAttackInfo,
+	MobArmour,
+	MobWarpTargetSpecialAttackInfo,
+	MobCombatTetherCombatInfo,
+	MobEvadeInfo,
+	MobChargeSpecialAttackInfo,
+	MobTameInfo,
+	MobPetInfo,
+	MobHealthRegenSettings,
+	MobBridgeInfo,
+	MobSlideInfo,
+	MobJumpInfo,
+	MobRandomFacingInfo,
+	ArmourPart,
+	MobArmourPiece,
+	TempMobParticleOpts,
+	MobParticleOpts,
+	MeshParticleSystemOpts,
+	CommonMeshEntityOpts,
+	PlayerPose,
+	ItemNameWithEffects,
+	LevelUpBonuses,
+	EffectOpts,
+	PotionEffect,
+	MobFeedLevelUpLevels,
+	MobLevelUpBonus,
+	MobFeedLevel,
+	InclusiveRange,
+	Bounds,
+	MutableBounds,
+	MobAiState,
+	MobAiStateParams,
+	MobWorldView,
+	MobAiStateOptions,
+	MeshEntityType,
+	MeshEntityOpts,
+	MeshEntityPhysicsOpts,
+	BlockNameOrId,
+	Cosmetics,
+	LeaderboardMeshOpts,
+	CosmeticType,
+	CosmeticName,
+	QTEType,
+	QTEClientParameters,
+	QTEParametersForType,
+	QTEDefinitions,
+	ProgressBarQteParams,
+	ProgressBarQteState,
+	TimedClickQteParams,
+	TimedClickQteState,
+	GravityBarQteParams,
+	GravityBarQteState,
+	PrecisionBarQteParams,
+	PrecisionBarQteState,
+	RhythmClickQteParams,
+	RhythmClickQteState,
+	QTERequestId,
+	UiRequestId,
+	IngameIconName,
+	InbuiltEffectInfo,
+	PlayerPhysicsState,
+	PhysicsTier,
+	PhysicsTiers,
+	VehicleSeat,
+	SettableVehicleSetting,
+	SettableVehicleSettingValue,
+	VehicleSetting,
+	BlockVehicleSetting,
+	ResolvedPhysicsSettings,
+	ByBlockRecordKey,
+	DefaultPhysicsTypeSettings,
+	AllPhysicsSettings,
+	ImpactCameraShakeOpts,
+	SteeringOpts,
+	FluidSkipOpts,
+	AirborneModeOpts,
+	AirborneMovementOpts,
+	FallSpeedLimitOpts,
+	HeadingAirborneMovement,
+	CameraDirectionAirborneMovement,
+	PerBlockVehicleSetting,
+	VehicleSettingValue,
+	BlockVehicleSettingValue,
+	PerBlockVehicleSettingValue,
+	MeshEntityVehicleType,
+	VehicleSpawnOpts,
+	AngleDir,
+	BlockRaycastResult,
+	MeshParticleSystemUpdates,
+	MeshParticleSystemUpdate,
+	UgcCurrencyInfo,
+	UserCallbacks,
+	WorldGamemode,
+	QueuedCommandId,
+	QueuedStatusString,
+	UiRequestClientParameters,
+	MultiBlockInfo,
+	DamageInfo,
+	BoughtShopItem,
+	OnPlayerChatObjectResponse,
+	ChatMessageObject,
+	FishingAttemptOptions,
+	_TypeOf,
+	ItemMetaInfo,
+	BlockMetadataItem,
+	NonBlockMetadataItem,
+	LoadedChunk,
+	Song,
+	ParticleSystemBlendMode,
+	HalfblockPlacement,
+	WalkThroughType,
+	LobbyType,
+	PhysicsType,
+	BoatTier,
+	GliderTier,
+	BalloonTier,
+	SleepingTier,
+	CarTier,
+	MovementType,
+	ExplosionType,
+	ClientOptions,
+	OtherEntitySettings,
+} from "@bloxd"
 
-    function rQ(QQ) {
-      if (0 === QQ.totalWeight && 0 === QQ.totalAdditiveWeight) return QQ.originalValue;
-      let FQ = 1;
-      const wQ = oQ.k.Ox[0],
-        LQ = oQ.k.Ox[1],
-        qQ = oQ.k.Quaternion[0];
-      let DQ = 0;
-      const kQ = QQ.animations[0],
-        vQ = QQ.originalValue;
-      let mQ, uQ = !1;
-      if (QQ.totalWeight < 1) mQ = 1 - QQ.totalWeight, vQ.decompose(LQ, qQ, wQ);
-      else {
-        if (DQ = 1, FQ = QQ.totalWeight, mQ = kQ.weight / FQ, 1 == mQ) {
-          if (!QQ.totalAdditiveWeight) return kQ.currentValue;
-          uQ = !0
-        }
-        kQ.currentValue.decompose(LQ, qQ, wQ)
-      }
-      if (!uQ) {
-        LQ.scaleInPlace(mQ), wQ.scaleInPlace(mQ), qQ.scaleInPlace(mQ);
-        for (let kQ = DQ; kQ < QQ.animations.length; kQ++) {
-          const DQ = QQ.animations[kQ];
-          if (0 === DQ.weight) continue;
-          mQ = DQ.weight / FQ;
-          const vQ = oQ.k.Ox[2],
-            uQ = oQ.k.Ox[3],
-            HQ = oQ.k.Quaternion[1];
-          DQ.currentValue.decompose(uQ, HQ, vQ), uQ.scaleAndAddToRef(mQ, LQ), HQ.scaleAndAddToRef(oQ.e.Dot(qQ, HQ) > 0 ? mQ : -mQ, qQ), vQ.scaleAndAddToRef(mQ, wQ)
-        }
-        qQ.normalize()
-      }
-      for (let bQ = 0; bQ < QQ.additiveAnimations.length; bQ++) {
-        const FQ = QQ.additiveAnimations[bQ];
-        if (0 === FQ.weight) continue;
-        const DQ = oQ.k.Ox[2],
-          kQ = oQ.k.Ox[3],
-          vQ = oQ.k.Quaternion[1];
-        FQ.currentValue.decompose(kQ, vQ, DQ), kQ.multiplyToRef(LQ, kQ), oQ.p.LerpToRef(LQ, kQ, FQ.weight, LQ), qQ.multiplyToRef(vQ, vQ), oQ.e.SlerpToRef(qQ, vQ, FQ.weight, qQ), DQ.scaleAndAddToRef(FQ.weight, wQ)
-      }
-      const HQ = kQ ? kQ._animationState.workValue : oQ.k.Matrix[0].clone();
-      return oQ.c.ComposeToRef(LQ, qQ, wQ, HQ), HQ
-    }
+declare global {
+	/** The ID of the player running the code.
+	 *
+	 * Lobby code usually has nobody running it, so this is null.
+	 */
+	const myId: string | null
+	/** The position of the code block or press to code board */
+	const thisPos: [number, number, number]
+	/** The owner of the current custom lobby */
+	const lobbyOwnerId: string | null
+	const console: Console
+	/** Game API */
+	const api: GameApi
 
-    function IQ(QQ, FQ) {
-      if (0 === QQ.totalWeight && 0 === QQ.totalAdditiveWeight) return FQ;
-      const wQ = QQ.animations[0],
-        LQ = QQ.originalValue;
-      let qQ = FQ;
-      if (0 === QQ.totalWeight && QQ.totalAdditiveWeight > 0) qQ.Qs(LQ);
-      else if (1 === QQ.animations.length) {
-        if (oQ.e.SlerpToRef(LQ, wQ.currentValue, Math.min(1, QQ.totalWeight), qQ), 0 === QQ.totalAdditiveWeight) return qQ
-      } else if (QQ.animations.length > 1) {
-        let wQ, DQ, kQ = 1;
-        if (QQ.totalWeight < 1) {
-          const FQ = 1 - QQ.totalWeight;
-          wQ = [], DQ = [], wQ.push(LQ), DQ.push(FQ)
-        } else {
-          if (2 === QQ.animations.length && (oQ.e.SlerpToRef(QQ.animations[0].currentValue, QQ.animations[1].currentValue, QQ.animations[1].weight / QQ.totalWeight, FQ), 0 === QQ.totalAdditiveWeight)) return FQ;
-          wQ = [], DQ = [], kQ = QQ.totalWeight
-        }
-        for (let FQ = 0; FQ < QQ.animations.length; FQ++) {
-          const LQ = QQ.animations[FQ];
-          wQ.push(LQ.currentValue), DQ.push(LQ.weight / kQ)
-        }
-        let vQ = 0;
-        for (let QQ = 0; QQ < wQ.length;) QQ ? (vQ += DQ[QQ], oQ.e.SlerpToRef(qQ, wQ[QQ], DQ[QQ] / vQ, qQ), QQ++) : (oQ.e.SlerpToRef(wQ[QQ], wQ[QQ + 1], DQ[QQ + 1] / (DQ[QQ] + DQ[QQ + 1]), FQ), qQ = FQ, vQ = DQ[QQ] + DQ[QQ + 1], QQ += 2)
-      }
-      for (let DQ = 0; DQ < QQ.additiveAnimations.length; DQ++) {
-        const FQ = QQ.additiveAnimations[DQ];
-        0 !== FQ.weight && (qQ.multiplyToRef(FQ.currentValue, oQ.k.Quaternion[0]), oQ.e.SlerpToRef(qQ, oQ.k.Quaternion[0], FQ.weight, qQ))
-      }
-      return qQ
-    }
+	/**
+	 * Called every tick, 20 times per second
+	 * @param ms - The fixed timestep, can be used as "milliseconds since last tick"
+	 */
+	var tick: (ms: number) => void
 
-    function UQ(QQ, FQ) {
-      FQ && (FQ.prototype.copyAnimationRange = function(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        0 === this.animations.length && (this.animations.push(new WQ.d(this.name, "_matrix", QQ.animations[0].framePerSecond, WQ.d.ANIMATIONTYPE_MATRIX, 0)), this.animations[0].setKeys([]));
-        const oQ = QQ.animations[0].getRange(FQ);
-        if (!oQ) return !1;
-        const DQ = oQ.from,
-          kQ = oQ.to,
-          vQ = QQ.animations[0].getKeys(),
-          mQ = QQ.length,
-          uQ = QQ.getParent(),
-          HQ = this.getParent(),
-          bQ = LQ && uQ && mQ && this.length && mQ !== this.length,
-          YQ = bQ && HQ && uQ ? HQ.length / uQ.length : 1,
-          xQ = LQ && !HQ && qQ && (1 !== qQ.x || 1 !== qQ.y || 1 !== qQ.z),
-          AQ = this.animations[0].getKeys();
-        let tQ, eQ, MQ;
-        for (let GQ = 0, pQ = vQ.length; GQ < pQ; GQ++) tQ = vQ[GQ], tQ.frame >= DQ && tQ.frame <= kQ && (LQ ? (MQ = tQ.value.clone(), bQ ? (eQ = MQ.getTranslation(), MQ.setTranslation(eQ.scaleInPlace(YQ))) : xQ && qQ ? (eQ = MQ.getTranslation(), MQ.setTranslation(eQ.multiplyInPlace(qQ))) : MQ = tQ.value) : MQ = tQ.value, AQ.push({
-          frame: tQ.frame + wQ,
-          value: MQ
-        }));
-        return this.animations[0].createRange(FQ, DQ + wQ, kQ + wQ), !0
-      }), QQ && (QQ.prototype._animate = function(QQ) {
-        const FQ = this._animationWrites,
-          wQ = this._animationWriteCount;
-        let LQ = 0;
-        for (let oQ = this._animationStepWriteCount; oQ < wQ; oQ++) {
-          const QQ = FQ[oQ];
-          QQ.Ft && -1 === QQ.weight || (QQ.Ft = !0, FQ[oQ] = FQ[LQ], FQ[LQ] = QQ, LQ++)
-        }
-        for (let oQ = LQ; oQ < wQ; oQ++) {
-          const QQ = FQ[oQ];
-          QQ.runtimeAnimation = null, QQ.target = null
-        }
-        if (this._animationWriteCount = LQ, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, !this.animationsEnabled) return;
-        const qQ = OQ.e.Now;
-        if (!this._animationTimeLast) {
-          if (this._pendingData.length > 0) return;
-          this._animationTimeLast = qQ
-        }
-        this.deltaTime = void 0 !== QQ ? QQ : this.useConstantAnimationDeltaTime ? 16 : (qQ - this._animationTimeLast) * this.animationTimeScale, this._animationTimeLast = qQ;
-        const DQ = this._activeAnimatables;
-        if (0 === DQ.length) return;
-        this._animationTime += this.deltaTime;
-        const kQ = this._animationTime;
-        this._animationStepEvaluated = !0;
-        for (let oQ = 0; oQ < DQ.length; oQ++) {
-          const QQ = DQ[oQ];
-          !QQ._animate(kQ) && QQ.disposeOnEnd && oQ--
-        }! function(QQ) {
-          if (QQ._registeredForLateAnimationBindings.length) {
-            for (let FQ = 0; FQ < QQ._registeredForLateAnimationBindings.length; FQ++) {
-              const wQ = QQ._registeredForLateAnimationBindings.data[FQ];
-              for (const QQ in wQ._lateAnimationHolders) {
-                const FQ = wQ._lateAnimationHolders[QQ],
-                  LQ = FQ.animations[0],
-                  qQ = FQ.originalValue;
-                if (void 0 === qQ || null === qQ) continue;
-                const DQ = WQ.d.AllowMatrixDecomposeForInterpolation && qQ.m;
-                let kQ = wQ[QQ];
-                if (DQ) kQ = rQ(FQ);
-                else if (void 0 !== qQ.w) kQ = IQ(FQ, kQ || oQ.e.Identity());
-                else {
-                  let QQ = 0,
-                    wQ = 1;
-                  const oQ = LQ && LQ._animationState.xQ === WQ.d.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT;
-                  if (FQ.totalWeight < 1) kQ = oQ ? qQ.clone ? qQ.clone() : qQ : LQ && qQ.scale ? qQ.scale(1 - FQ.totalWeight) : LQ ? qQ * (1 - FQ.totalWeight) : qQ.clone ? qQ.clone() : qQ;
-                  else if (LQ) {
-                    wQ = FQ.totalWeight;
-                    const DQ = LQ.weight / wQ;
-                    kQ = 1 !== DQ ? LQ.currentValue.scale ? LQ.currentValue.scale(DQ) : LQ.currentValue * DQ : (FQ.animations.length > 1 || FQ.additiveAnimations.length > 0) && LQ.currentValue.clone ? LQ.currentValue.clone() : LQ.currentValue, oQ && (kQ.addToRef ? kQ.addToRef(qQ, kQ) : kQ += qQ), QQ = 1
-                  }
-                  for (let LQ = QQ; LQ < FQ.animations.length; LQ++) {
-                    const QQ = FQ.animations[LQ],
-                      qQ = QQ.weight / wQ;
-                    qQ && (QQ.currentValue.scaleAndAddToRef ? QQ.currentValue.scaleAndAddToRef(qQ, kQ) : kQ += QQ.currentValue * qQ)
-                  }
-                  for (let LQ = 0; LQ < FQ.additiveAnimations.length; LQ++) {
-                    const QQ = FQ.additiveAnimations[LQ],
-                      wQ = QQ.weight;
-                    wQ && (QQ.currentValue.scaleAndAddToRef ? QQ.currentValue.scaleAndAddToRef(wQ, kQ) : kQ += QQ.currentValue * wQ)
-                  }
-                }
-                wQ[QQ] = kQ
-              }
-              wQ._lateAnimationHolders = {}
-            }
-            QQ._registeredForLateAnimationBindings.reset()
-          }
-        }(this), this._animationStepWriteCount = this._animationWriteCount
-      }, QQ.prototype.sortActiveAnimatables = function() {
-        this._activeAnimatables.sort(((QQ, FQ) => QQ.playOrder - FQ.playOrder))
-      }, QQ.prototype.beginWeightedAnimation = function(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          qQ = arguments.length > 4 ? arguments[4] : void 0,
-          oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          DQ = arguments.length > 6 ? arguments[6] : void 0,
-          kQ = arguments.length > 7 ? arguments[7] : void 0,
-          vQ = arguments.length > 8 ? arguments[8] : void 0,
-          mQ = arguments.length > 9 ? arguments[9] : void 0,
-          uQ = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        const HQ = this.beginAnimation(QQ, FQ, wQ, qQ, oQ, DQ, kQ, !1, vQ, mQ, uQ);
-        return HQ.weight = LQ, HQ
-      }, QQ.prototype.beginAnimation = function(QQ, FQ, wQ, LQ) {
-        let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-          oQ = arguments.length > 5 ? arguments[5] : void 0,
-          DQ = arguments.length > 6 ? arguments[6] : void 0,
-          kQ = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          vQ = arguments.length > 8 ? arguments[8] : void 0,
-          mQ = arguments.length > 9 ? arguments[9] : void 0,
-          uQ = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        if (qQ < 0) {
-          const QQ = FQ;
-          FQ = wQ, wQ = QQ, qQ = -qQ
-        }
-        FQ > wQ && (qQ = -qQ), kQ && this.stopAnimation(QQ, void 0, vQ), DQ || (DQ = new sQ(this, QQ, FQ, wQ, LQ, qQ, oQ, void 0, mQ, uQ));
-        const HQ = !vQ || vQ(QQ);
-        if (QQ.animations && HQ && DQ.appendAnimations(QQ, QQ.animations), QQ.getAnimatables) {
-          const uQ = QQ.getAnimatables();
-          for (let QQ = 0; QQ < uQ.length; QQ++) this.beginAnimation(uQ[QQ], FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ)
-        }
-        return DQ.reset(), DQ
-      }, QQ.prototype.beginHierarchyAnimation = function(QQ, FQ, wQ, LQ, qQ) {
-        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          DQ = arguments.length > 6 ? arguments[6] : void 0,
-          kQ = arguments.length > 7 ? arguments[7] : void 0,
-          vQ = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          mQ = arguments.length > 9 ? arguments[9] : void 0,
-          uQ = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
-        const HQ = QQ.getDescendants(FQ),
-          bQ = [];
-        bQ.push(this.beginAnimation(QQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ, void 0, uQ));
-        for (const YQ of HQ) bQ.push(this.beginAnimation(YQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ, void 0, uQ));
-        return bQ
-      }, QQ.prototype.beginDirectAnimation = function(QQ, FQ, wQ, LQ, qQ) {
-        let oQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1;
-        if (oQ < 0) {
-          const QQ = wQ;
-          wQ = LQ, LQ = QQ, oQ = -oQ
-        }
-        wQ > LQ && (oQ = -oQ);
-        return new sQ(this, QQ, wQ, LQ, qQ, oQ, arguments.length > 6 ? arguments[6] : void 0, FQ, arguments.length > 7 ? arguments[7] : void 0, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
-      }, QQ.prototype.beginDirectHierarchyAnimation = function(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ) {
-        let mQ = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
-        const uQ = QQ.getDescendants(FQ),
-          HQ = [];
-        HQ.push(this.beginDirectAnimation(QQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ));
-        for (const bQ of uQ) HQ.push(this.beginDirectAnimation(bQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ));
-        return HQ
-      }, QQ.prototype.getAnimatableByTarget = function(QQ) {
-        for (let FQ = 0; FQ < this._activeAnimatables.length; FQ++)
-          if (this._activeAnimatables[FQ].target === QQ) return this._activeAnimatables[FQ];
-        return null
-      }, QQ.prototype.getAllAnimatablesByTarget = function(QQ) {
-        const FQ = [];
-        for (let wQ = 0; wQ < this._activeAnimatables.length; wQ++) this._activeAnimatables[wQ].target === QQ && FQ.push(this._activeAnimatables[wQ]);
-        return FQ
-      }, QQ.prototype.stopAnimation = function(QQ, FQ, wQ) {
-        const LQ = this.getAllAnimatablesByTarget(QQ);
-        for (const qQ of LQ) qQ.stop(FQ, wQ)
-      }, QQ.prototype.stopAllAnimations = function() {
-        if (this._activeAnimatables) {
-          for (let QQ = 0; QQ < this._activeAnimatables.length; QQ++) this._activeAnimatables[QQ].stop(void 0, void 0, !0);
-          this._activeAnimatables.length = 0
-        }
-        for (const QQ of this.animationGroups) QQ.stop()
-      })
-    }
-    sQ.ProcessPausedAnimatables = !1;
-    var NQ, TQ = wQ(36709),
-      KQ = wQ(39650),
-      zQ = wQ(39277);
-    class lQ extends KQ.c {
-      get _matrix() {
-        return this._compose(), this._localMatrix
-      }
-      set _matrix(QQ) {
-        (QQ.updateFlag !== this._localMatrix.updateFlag || this._needToCompose) && (this._needToCompose = !1, this._localMatrix.Qs(QQ), this._markAsDirtyAndDecompose())
-      }
-      constructor(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          DQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          kQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        super(QQ, FQ.iN(), !1), this.name = QQ, this.children = [], this.animations = [], this._index = null, this._scalingDeterminant = 1, this._needToDecompose = !0, this._needToCompose = !1, this._linkedTransformNode = null, this._waitingTransformNodeId = null, this._waitingTransformNodeUniqueId = null, this._skeleton = FQ, this._localMatrix = LQ?.clone() ?? oQ.c.Identity(), this._restMatrix = qQ ?? this._localMatrix.clone(), this._bindMatrix = DQ ?? this._localMatrix.clone(), this._index = kQ, this._absoluteMatrix = new oQ.c, this._absoluteBindMatrix = new oQ.c, this._absoluteInverseBindMatrix = new oQ.c, this._finalMatrix = new oQ.c, FQ.bones.push(this), this.setParent(wQ, !1), this._updateAbsoluteBindMatrices()
-      }
-      getClassName() {
-        return "Bone"
-      }
-      getSkeleton() {
-        return this._skeleton
-      }
-      get parent() {
-        return this._parentNode
-      }
-      getParent() {
-        return this.parent
-      }
-      getChildren() {
-        return this.children
-      }
-      getIndex() {
-        return null === this._index ? this.getSkeleton().bones.indexOf(this) : this._index
-      }
-      set parent(QQ) {
-        this.setParent(QQ)
-      }
-      setParent(QQ) {
-        let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (this.parent !== QQ) {
-          if (this.parent) {
-            const QQ = this.parent.children.indexOf(this); - 1 !== QQ && this.parent.children.splice(QQ, 1)
-          }
-          this._parentNode = QQ, this.parent && this.parent.children.push(this), FQ && this._updateAbsoluteBindMatrices(), this.dFQ()
-        }
-      }
-      getLocalMatrix() {
-        return this._compose(), this._localMatrix
-      }
-      getBindMatrix() {
-        return this._bindMatrix
-      }
-      getBaseMatrix() {
-        return this.getBindMatrix()
-      }
-      getRestMatrix() {
-        return this._restMatrix
-      }
-      getRestPose() {
-        return this.getRestMatrix()
-      }
-      setRestMatrix(QQ) {
-        this._restMatrix.Qs(QQ)
-      }
-      setRestPose(QQ) {
-        this.setRestMatrix(QQ)
-      }
-      getBindPose() {
-        return this.getBindMatrix()
-      }
-      setBindMatrix(QQ) {
-        this.Y5(QQ)
-      }
-      setBindPose(QQ) {
-        this.setBindMatrix(QQ)
-      }
-      getFinalMatrix() {
-        return this._finalMatrix
-      }
-      getWorldMatrix() {
-        return this.getFinalMatrix()
-      }
-      returnToRest() {
-        if (this._linkedTransformNode) {
-          const QQ = oQ.k.Ox[0],
-            FQ = oQ.k.Quaternion[0],
-            wQ = oQ.k.Ox[1];
-          this.getRestMatrix().decompose(QQ, FQ, wQ), this._linkedTransformNode.position.Qs(wQ), this._linkedTransformNode.rotationQuaternion = this._linkedTransformNode.rotationQuaternion ?? oQ.e.Identity(), this._linkedTransformNode.rotationQuaternion.Qs(FQ), this._linkedTransformNode.ck.Qs(QQ)
-        } else this._matrix = this._restMatrix
-      }
-      getAbsoluteInverseBindMatrix() {
-        return this._absoluteInverseBindMatrix
-      }
-      getInvertedAbsoluteTransform() {
-        return this.getAbsoluteInverseBindMatrix()
-      }
-      getAbsoluteMatrix() {
-        return this._skeleton.computeAbsoluteMatrices(), this._absoluteMatrix
-      }
-      getAbsoluteTransform() {
-        return this.getAbsoluteMatrix()
-      }
-      linkTransformNode(QQ) {
-        this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode--, this._linkedTransformNode = QQ, this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode++
-      }
-      getTransformNode() {
-        return this._linkedTransformNode
-      }
-      get position() {
-        return this._decompose(), this.xFQ
-      }
-      set position(QQ) {
-        this._decompose(), this.xFQ.Qs(QQ), this._markAsDirtyAndCompose()
-      }
-      get rotation() {
-        return this.getRotation()
-      }
-      set rotation(QQ) {
-        this.setRotation(QQ)
-      }
-      get rotationQuaternion() {
-        return this._decompose(), this._localRotation
-      }
-      set rotationQuaternion(QQ) {
-        this.setRotationQuaternion(QQ)
-      }
-      get ck() {
-        return this.getScale()
-      }
-      set ck(QQ) {
-        this.setScale(QQ)
-      }
-      get animationPropertiesOverride() {
-        return this._skeleton.animationPropertiesOverride
-      }
-      _decompose() {
-        this._needToDecompose && (this._needToDecompose = !1, this._localScaling || (this._localScaling = oQ.p.Zero(), this._localRotation = oQ.e.Zero(), this.xFQ = oQ.p.Zero()), this._localMatrix.decompose(this._localScaling, this._localRotation, this.xFQ))
-      }
-      _compose() {
-        this._needToCompose && (this._localScaling ? (this._needToCompose = !1, oQ.c.ComposeToRef(this._localScaling, this._localRotation, this.xFQ, this._localMatrix)) : this._needToCompose = !1)
-      }
-      Y5(QQ) {
-        let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          wQ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this._bindMatrix.Qs(QQ), FQ && this._updateAbsoluteBindMatrices(), wQ ? this._matrix = QQ : this.dFQ()
-      }
-      _updateAbsoluteBindMatrices(QQ) {
-        let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (QQ || (QQ = this._bindMatrix), this.parent ? QQ.multiplyToRef(this.parent._absoluteBindMatrix, this._absoluteBindMatrix) : this._absoluteBindMatrix.Qs(QQ), this._absoluteBindMatrix.invertToRef(this._absoluteInverseBindMatrix), FQ)
-          for (let wQ = 0; wQ < this.children.length; wQ++) this.children[wQ]._updateAbsoluteBindMatrices();
-        this._scalingDeterminant = this._absoluteBindMatrix.determinant() < 0 ? -1 : 1
-      }
-      dFQ() {
-        return this._currentRenderId++, this._childUpdateId++, this._skeleton._markAsDirty(), this
-      }
-      _markAsDirtyAndCompose() {
-        this.dFQ(), this._needToCompose = !0
-      }
-      _markAsDirtyAndDecompose() {
-        this.dFQ(), this._needToDecompose = !0
-      }
-      _updatePosition(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0,
-          LQ = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const qQ = this.getLocalMatrix();
-        if (0 == FQ) LQ ? (qQ.addAtIndex(12, QQ.x), qQ.addAtIndex(13, QQ.y), qQ.addAtIndex(14, QQ.z)) : qQ.setTranslationFromFloats(QQ.x, QQ.y, QQ.z);
-        else {
-          const FQ = lQ._TmpMats[0],
-            DQ = lQ._TmpVecs[0];
-          this.parent ? (FQ.Qs(this.parent.getAbsoluteMatrix()), wQ && FQ.multiplyToRef(wQ.getWorldMatrix(), FQ)) : oQ.c.IdentityToRef(FQ), LQ && FQ.setTranslationFromFloats(0, 0, 0), FQ.invert(), oQ.p.TransformCoordinatesToRef(QQ, FQ, DQ), LQ ? (qQ.addAtIndex(12, DQ.x), qQ.addAtIndex(13, DQ.y), qQ.addAtIndex(14, DQ.z)) : qQ.setTranslationFromFloats(DQ.x, DQ.y, DQ.z)
-        }
-        this._markAsDirtyAndDecompose()
-      }
-      translate(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        this._updatePosition(QQ, FQ, wQ, !0)
-      }
-      setPosition(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        this._updatePosition(QQ, FQ, wQ, !1)
-      }
-      setAbsolutePosition(QQ, FQ) {
-        this.setPosition(QQ, 1, FQ)
-      }
-      scale(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const qQ = this.getLocalMatrix(),
-          DQ = lQ._TmpMats[0];
-        oQ.c.ScalingToRef(QQ, FQ, wQ, DQ), DQ.multiplyToRef(qQ, qQ), DQ.invert();
-        for (const oQ of this.children) {
-          const LQ = oQ.getLocalMatrix();
-          LQ.multiplyToRef(DQ, LQ), LQ.multiplyAtIndex(12, QQ), LQ.multiplyAtIndex(13, FQ), LQ.multiplyAtIndex(14, wQ), oQ._markAsDirtyAndDecompose()
-        }
-        if (this._markAsDirtyAndDecompose(), LQ)
-          for (const oQ of this.children) oQ.scale(QQ, FQ, wQ, LQ)
-      }
-      setScale(QQ) {
-        this._decompose(), this._localScaling.Qs(QQ), this._markAsDirtyAndCompose()
-      }
-      getScale() {
-        return this._decompose(), this._localScaling
-      }
-      getScaleToRef(QQ) {
-        this._decompose(), QQ.Qs(this._localScaling)
-      }
-      setYawPitchRoll(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          qQ = arguments.length > 4 ? arguments[4] : void 0;
-        if (0 === LQ) {
-          const DQ = lQ._TmpQuat;
-          return oQ.e.RotationYawPitchRollToRef(QQ, FQ, wQ, DQ), void this.setRotationQuaternion(DQ, LQ, qQ)
-        }
-        const DQ = lQ._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(DQ, qQ)) return;
-        const kQ = lQ._TmpMats[1];
-        oQ.c.RotationYawPitchRollToRef(QQ, FQ, wQ, kQ), DQ.multiplyToRef(kQ, kQ), this._rotateWithMatrix(kQ, LQ, qQ)
-      }
-      rotate(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          LQ = arguments.length > 3 ? arguments[3] : void 0;
-        const qQ = lQ._TmpMats[0];
-        qQ.setTranslationFromFloats(0, 0, 0), oQ.c.RotationAxisToRef(QQ, FQ, qQ), this._rotateWithMatrix(qQ, wQ, LQ)
-      }
-      setAxisAngle(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          LQ = arguments.length > 3 ? arguments[3] : void 0;
-        if (0 === wQ) {
-          const qQ = lQ._TmpQuat;
-          return oQ.e.RotationAxisToRef(QQ, FQ, qQ), void this.setRotationQuaternion(qQ, wQ, LQ)
-        }
-        const qQ = lQ._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(qQ, LQ)) return;
-        const DQ = lQ._TmpMats[1];
-        oQ.c.RotationAxisToRef(QQ, FQ, DQ), qQ.multiplyToRef(DQ, DQ), this._rotateWithMatrix(DQ, wQ, LQ)
-      }
-      setRotation(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        this.setYawPitchRoll(QQ.y, QQ.x, QQ.z, FQ, wQ)
-      }
-      setRotationQuaternion(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 === FQ) return this._decompose(), this._localRotation.Qs(QQ), void this._markAsDirtyAndCompose();
-        const LQ = lQ._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(LQ, wQ)) return;
-        const qQ = lQ._TmpMats[1];
-        oQ.c.FromQuaternionToRef(QQ, qQ), LQ.multiplyToRef(qQ, qQ), this._rotateWithMatrix(qQ, FQ, wQ)
-      }
-      setRotationMatrix(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 === FQ) {
-          const LQ = lQ._TmpQuat;
-          return oQ.e.FromRotationMatrixToRef(QQ, LQ), void this.setRotationQuaternion(LQ, FQ, wQ)
-        }
-        const LQ = lQ._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(LQ, wQ)) return;
-        const qQ = lQ._TmpMats[1];
-        qQ.Qs(QQ), LQ.multiplyToRef(QQ, qQ), this._rotateWithMatrix(qQ, FQ, wQ)
-      }
-      _rotateWithMatrix(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        const LQ = this.getLocalMatrix(),
-          qQ = LQ.m[12],
-          oQ = LQ.m[13],
-          DQ = LQ.m[14],
-          kQ = this.getParent(),
-          vQ = lQ._TmpMats[3],
-          mQ = lQ._TmpMats[4];
-        kQ && 1 == FQ ? (wQ ? (vQ.Qs(wQ.getWorldMatrix()), kQ.getAbsoluteMatrix().multiplyToRef(vQ, vQ)) : vQ.Qs(kQ.getAbsoluteMatrix()), mQ.Qs(vQ), mQ.invert(), LQ.multiplyToRef(vQ, LQ), LQ.multiplyToRef(QQ, LQ), LQ.multiplyToRef(mQ, LQ)) : 1 == FQ && wQ ? (vQ.Qs(wQ.getWorldMatrix()), mQ.Qs(vQ), mQ.invert(), LQ.multiplyToRef(vQ, LQ), LQ.multiplyToRef(QQ, LQ), LQ.multiplyToRef(mQ, LQ)) : LQ.multiplyToRef(QQ, LQ), LQ.setTranslationFromFloats(qQ, oQ, DQ), this._markAsDirtyAndDecompose()
-      }
-      _getAbsoluteInverseMatrixUnscaledToRef(QQ, FQ) {
-        const wQ = lQ._TmpMats[2];
-        return QQ.Qs(this.getAbsoluteMatrix()), FQ ? (QQ.multiplyToRef(FQ.getWorldMatrix(), QQ), oQ.c.ScalingToRef(FQ.ck.x, FQ.ck.y, FQ.ck.z, wQ)) : oQ.c.IdentityToRef(wQ), QQ.invert(), !isNaN(QQ.m[0]) && (wQ.multiplyAtIndex(0, this._scalingDeterminant), QQ.multiplyToRef(wQ, QQ), !0)
-      }
-      Qp() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const wQ = oQ.p.Zero();
-        return this.getPositionToRef(QQ, FQ, wQ), wQ
-      }
-      getPositionToRef() {
-        let QQ = arguments.length > 1 ? arguments[1] : void 0,
-          FQ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) {
-          const QQ = this.getLocalMatrix();
-          FQ.x = QQ.m[12], FQ.y = QQ.m[13], FQ.z = QQ.m[14]
-        } else {
-          const wQ = lQ._TmpMats[0].Qs(this.getAbsoluteMatrix());
-          QQ && wQ.multiplyToRef(QQ.getWorldMatrix(), wQ), FQ.x = wQ.m[12], FQ.y = wQ.m[13], FQ.z = wQ.m[14]
-        }
-      }
-      getAbsolutePosition() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        const FQ = oQ.p.Zero();
-        return this.getPositionToRef(1, QQ, FQ), FQ
-      }
-      getAbsolutePositionToRef(QQ, FQ) {
-        this.getPositionToRef(1, QQ, FQ)
-      }
-      computeAbsoluteMatrices() {
-        if (this._compose(), this.parent) this._localMatrix.multiplyToRef(this.parent._absoluteMatrix, this._absoluteMatrix);
-        else {
-          this._absoluteMatrix.Qs(this._localMatrix);
-          const QQ = this._skeleton.getPoseMatrix();
-          QQ && this._absoluteMatrix.multiplyToRef(QQ, this._absoluteMatrix)
-        }
-        const QQ = this.children,
-          FQ = QQ.length;
-        for (let wQ = 0; wQ < FQ; wQ++) QQ[wQ].computeAbsoluteMatrices()
-      }
-      computeAbsoluteTransforms() {
-        this.computeAbsoluteMatrices()
-      }
-      Py(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const wQ = oQ.p.Zero();
-        return this.getDirectionToRef(QQ, FQ, wQ), wQ
-      }
-      getDirectionToRef(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        const LQ = lQ._TmpMats[0].Qs(this.getAbsoluteMatrix());
-        FQ && LQ.multiplyToRef(FQ.getWorldMatrix(), LQ), oQ.p.TransformNormalToRef(QQ, LQ, wQ), wQ.normalize()
-      }
-      getRotation() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const wQ = oQ.p.Zero();
-        return this.getRotationToRef(QQ, FQ, wQ), wQ
-      }
-      getRotationToRef() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        const LQ = lQ._TmpQuat;
-        this.getRotationQuaternionToRef(QQ, FQ, LQ), LQ.toEulerAnglesToRef(wQ)
-      }
-      getRotationQuaternion() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const wQ = oQ.e.Identity();
-        return this.getRotationQuaternionToRef(QQ, FQ, wQ), wQ
-      }
-      getRotationQuaternionToRef() {
-        let QQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          FQ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this._decompose(), FQ.Qs(this._localRotation);
-        else {
-          const wQ = lQ._TmpMats[0],
-            LQ = this.getAbsoluteMatrix();
-          QQ ? LQ.multiplyToRef(QQ.getWorldMatrix(), wQ) : wQ.Qs(LQ), wQ.multiplyAtIndex(0, this._scalingDeterminant), wQ.multiplyAtIndex(1, this._scalingDeterminant), wQ.multiplyAtIndex(2, this._scalingDeterminant), wQ.decompose(void 0, FQ, void 0)
-        }
-      }
-      getRotationMatrix() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 ? arguments[1] : void 0;
-        const wQ = oQ.c.Identity();
-        return this.getRotationMatrixToRef(QQ, FQ, wQ), wQ
-      }
-      getRotationMatrixToRef() {
-        let QQ = arguments.length > 1 ? arguments[1] : void 0,
-          FQ = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this.getLocalMatrix().getRotationMatrixToRef(FQ);
-        else {
-          const wQ = lQ._TmpMats[0],
-            LQ = this.getAbsoluteMatrix();
-          QQ ? LQ.multiplyToRef(QQ.getWorldMatrix(), wQ) : wQ.Qs(LQ), wQ.multiplyAtIndex(0, this._scalingDeterminant), wQ.multiplyAtIndex(1, this._scalingDeterminant), wQ.multiplyAtIndex(2, this._scalingDeterminant), wQ.getRotationMatrixToRef(FQ)
-        }
-      }
-      getAbsolutePositionFromLocal(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const wQ = oQ.p.Zero();
-        return this.getAbsolutePositionFromLocalToRef(QQ, FQ, wQ), wQ
-      }
-      getAbsolutePositionFromLocalToRef(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        const LQ = lQ._TmpMats[0].Qs(this.getAbsoluteMatrix());
-        FQ && LQ.multiplyToRef(FQ.getWorldMatrix(), LQ), oQ.p.TransformCoordinatesToRef(QQ, LQ, wQ)
-      }
-      getLocalPositionFromAbsolute(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const wQ = oQ.p.Zero();
-        return this.getLocalPositionFromAbsoluteToRef(QQ, FQ, wQ), wQ
-      }
-      getLocalPositionFromAbsoluteToRef(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        const LQ = lQ._TmpMats[0].Qs(this.getAbsoluteMatrix());
-        FQ && LQ.multiplyToRef(FQ.getWorldMatrix(), LQ), LQ.invert(), oQ.p.TransformCoordinatesToRef(QQ, LQ, wQ)
-      }
-      setCurrentPoseAsRest() {
-        this.setRestMatrix(this.getLocalMatrix())
-      }
-      dispose() {
-        this._linkedTransformNode = null;
-        const QQ = this._skeleton.bones.indexOf(this);
-        if (-1 !== QQ && this._skeleton.bones.splice(QQ, 1), this._parentNode && this._parentNode.children) {
-          const QQ = this._parentNode.children,
-            FQ = QQ.indexOf(this); - 1 !== FQ && QQ.splice(FQ, 1)
-        }
-        super.dispose()
-      }
-    }
-    lQ._TmpVecs = (0, TQ.b)(2, oQ.p.Zero), lQ._TmpQuat = oQ.e.Identity(), lQ._TmpMats = (0, TQ.b)(5, oQ.c.Identity), (NQ = lQ.prototype).copyAnimationRange ?? (NQ.copyAnimationRange = (0, zQ.g)("Bone", "copyAnimationRange"));
-    var jQ = wQ(39496);
-    let aQ = !1;
-    var XQ = wQ(39367),
-      fQ = wQ(39748),
-      VQ = wQ(39754),
-      hQ = wQ(39752),
-      JQ = wQ(39542);
+	/**
+	 * Called when the lobby is shutting down
+	 * @param serverIsShuttingDown - Whether the server is shutting down
+	 */
+	var onClose: (serverIsShuttingDown: boolean) => void
 
-    function EQ(QQ, FQ) {
-      const wQ = (0, YQ.RandomRange)(0, 1);
-      uQ.e.LerpToRef(FQ.color1, FQ.color2, wQ, QQ.color)
-    }
+	/**
+	 * Called when a player joins the lobby. A player shown an ad as they join holds their place in the lobby during it, but only joins, and is only in getPlayerIds, once it ends, unless the game turns that off (api.setJoinsWaitForAds)
+	 * @param playerId - The id of the player that joined
+	 * @param fromGameReset - Whether this call is from a game reset (used by SessionBasedGame)
+	 */
+	var onPlayerJoin: (playerId: string, fromGameReset: boolean) => void
 
-    function nQ(QQ, FQ) {
-      FQ.colorDead.subtractToRef(QQ.color, FQ._colorDiff), FQ._colorDiff.scaleToRef(1 / QQ.lifeTime, QQ.colorStep)
-    }
+	/**
+	 * Called when a player leaves the lobby
+	 * @param playerId - The id of the player that left
+	 * @param serverIsShuttingDown - Whether the server is shutting down
+	 */
+	var onPlayerLeave: (playerId: string, serverIsShuttingDown: boolean) => void
 
-    function gQ(QQ, FQ) {
-      QQ._properties.currentColorGradient = FQ._colorGradients[0], QQ._properties.currentColorGradient.getColorToRef(QQ.color), QQ._properties.currentColor1.Qs(QQ.color), FQ._colorGradients.length > 1 ? FQ._colorGradients[1].getColorToRef(QQ._properties.currentColor2) : QQ._properties.currentColor2.Qs(QQ.color)
-    }
+	/**
+	 * Called when a player jumps
+	 * @param playerId - The id of the player that jumped
+	 */
+	var onPlayerJump: (playerId: string) => void
 
-    function PQ(QQ, FQ) {
-      const wQ = FQ._colorGradients;
-      LQ.k.GetCurrentGradient(FQ._ratio, wQ, ((FQ, wQ, LQ) => {
-        FQ !== QQ._properties.currentColorGradient && (QQ._properties.currentColor1.Qs(QQ._properties.currentColor2), wQ.getColorToRef(QQ._properties.currentColor2), QQ._properties.currentColorGradient = FQ), uQ.e.LerpToRef(QQ._properties.currentColor1, QQ._properties.currentColor2, LQ, QQ.color), QQ.color.a < 0 && (QQ.color.a = 0)
-      }))
-    }
+	/**
+	 * Called when a player requests to respawn.
+	 * Optionally return the respawn location. Defaults to [0, 0, 0].
+	 * Return true to handle yourself (good for async,
+	 * but be careful that the player isn't at the place they died,
+	 * as they could pick up their old items or hit the player they were fighting).
+	 * @param playerId - The id of the player that requested to respawn
+	 */
+	var onRespawnRequest: (playerId: string) => true | void | number[]
 
-    function ZQ(QQ, FQ) {
-      QQ.colorStep.scaleToRef(FQ._scaledUpdateSpeed, FQ._scaledColorStep), QQ.color.addInPlace(FQ._scaledColorStep), QQ.color.a < 0 && (QQ.color.a = 0)
-    }
+	/**
+	 * Called when a player sends a command
+	 * Return true when the command was handled. Return nothing for any other: any value, false too, stops the game's own commands (e.g. /spawn) running.
+	 * A message world code sends while handling the command that ends with the player's name and then the command, its arguments or what follows its first argument, e.g. "[Whisper] Bob: hi" for "msg Alice hi", counts as their chat, as for onPlayerChat. So does one holding their name and, anywhere, what follows the first argument when that is two or more words and 8+ characters, e.g. "hi there - Bob".
+	 * @param playerId - The id of the player that sent the command
+	 * @param command - The command that the player sent
+	 */
+	var playerCommand: (playerId: string, command: string) => boolean
 
-    function yQ(QQ, FQ) {
-      LQ.k.GetCurrentGradient(FQ._ratio, FQ._angularSpeedGradients, ((FQ, wQ, LQ) => {
-        FQ !== QQ._properties.currentAngularSpeedGradient && (QQ._properties.currentAngularSpeed1 = QQ._properties.currentAngularSpeed2, QQ._properties.currentAngularSpeed2 = wQ.getFactor(), QQ._properties.currentAngularSpeedGradient = FQ), QQ.angularSpeed = (0, YQ.Lerp)(QQ._properties.currentAngularSpeed1, QQ._properties.currentAngularSpeed2, LQ)
-      }))
-    }
+	/**
+	 * Called when a player sends a chat message
+	 * Return false or null to prevent the broadcast of the message.
+	 * Return a string or CustomTextStyling to add a prefix to message.
+	 * Return for most flexibility: an object where keys are playerIds -
+	 * the value for a playerId being false means that player won't receive the message. Every player needs a key: one left out doesn't receive it either, so give the players who should see it {} (or a prefixContent).
+	 * Otherwise playerId values should be an object with (optional) keys
+	 * prefixContent and chatContent to modify the prefix and the chat.
+	 * CustomTextStyling[] prefixContent is expected, e.g. [["prefix"]] or [[{ str: "prefix" }]]. A colour goes inside style: [[{ str: "[Red]", style: { color: "red" } }]]; any other key makes the whole return value invalid, and the message goes to everyone.
+	 * World code is not permitted to specify chatContent, it will be ignored.
+	 * A message world code sends while handling the chat that shows the player's name and their message, e.g. "Bob: hi" or "hi there - Bob", counts as their chat: players who ignore them don't get it, and others can report it. Text of two or more words and 8+ characters can sit anywhere in it; shorter text must end it, straight after the name.
+	 * @param playerId - The id of the player that sent the message
+	 * @param chatMessage - The message that the player sent
+	 * @param channelName - The name of the channel that the message was sent in
+	 */
+	var onPlayerChat: (playerId: PlayerId, chatMessage: string, channelName?: string) => boolean | void | ChatTags | OnPlayerChatObjectResponse
 
-    function BQ(QQ, FQ) {
-      QQ.angle += QQ.angularSpeed * FQ._scaledUpdateSpeed
-    }
+	/**
+	 * Called before a player changes a block.
+	 * Return "preventChange" to stop it. Then onPlayerChangeBlock will not run.
+	 * Growing EZ placements validate at request time and again at completion; keep validation free of rewards or charges.
+	 * When placing, fromBlock is Air, or the slab a matching slab completes. When breaking, toBlock is Air.
+	 */
+	var onPlayerAttemptChangeBlock: (playerId: PlayerId, x: number, y: number, z: number, fromBlock: BlockName, toBlock: BlockName, droppedItem: BlockName | null, fromBlockInfo: MultiBlockInfo, toBlockInfo: MultiBlockInfo) => void | "preventChange"
 
-    function dQ(QQ, FQ) {
-      FQ.particleEmitterType.startDirectionFunction(FQ._emitterWorldMatrix, QQ.direction, QQ, FQ.isLocal, FQ._emitterInverseWorldMatrix)
-    }
+	/**
+	 * In World Code, called once after all attempt callbacks allow a player block change, before the block is set.
+	 * The current block and its data are still available. Return "preventChange" to cancel the request.
+	 * Return "preventDrop" to stop the engine item drop, or [x, y, z] to set its position.
+	 * Drop returns do not skip built-in validation or change notifications; any "preventDrop" takes precedence over a position.
+	 * A block written here with api.setBlock is preserved, with normal drops/inventory charges unless the request is cancelled.
+	 * Cancellation does not undo your own script effects. Built-in change effects run after this callback.
+	 * For growing EZ placements this runs at request time only; completion validates again without repeating this callback.
+	 * Writing the target yourself completes that EZ request immediately, without delayed growth or a growth refund.
+	 * Native games/plugins receive uninterrupted before-commit notifications and must veto in onPlayerAttemptChangeBlock.
+	 * When placing, fromBlock is Air, or the slab a matching slab completes. When breaking, toBlock is Air.
+	 */
+	var onPlayerChangeBlock: (playerId: PlayerId, x: number, y: number, z: number, fromBlock: BlockName, toBlock: BlockName, droppedItem: BlockName | null, fromBlockInfo: MultiBlockInfo, toBlockInfo: MultiBlockInfo, dropsPrevented: boolean) => void | "preventChange" | "preventDrop" | [number, number, number]
 
-    function QF(QQ, FQ) {
-      FQ.startDirectionFunction(FQ._emitterWorldMatrix, QQ.direction, QQ, FQ.isLocal)
-    }
+	/**
+	 * Called when a player drops an item
+	 * Return "preventDrop" to prevent the player from dropping the item at all.
+	 * Return "allowButNoDroppedItemCreated" to allow discarding items without dropping them.
+	 */
+	var onPlayerDropItem: (playerId: PlayerId, x: number, y: number, z: number, itemName: ItemName, itemAmount: number, fromIdx: number) => void | "preventDrop" | "allowButNoDroppedItemCreated"
 
-    function FF(QQ, FQ) {
-      QQ._properties.currentVelocityGradient = FQ._velocityGradients[0], QQ._properties.currentVelocity1 = QQ._properties.currentVelocityGradient.getFactor(), FQ._velocityGradients.length > 1 ? QQ._properties.currentVelocity2 = FQ._velocityGradients[1].getFactor() : QQ._properties.currentVelocity2 = QQ._properties.currentVelocity1
-    }
+	/**
+	 * Called when a player picks up an item
+	 * @param playerId - The id of the player that picked up the item
+	 * @param itemName - The name of the item that was picked up
+	 * @param itemAmount - The amount of the item that was picked up
+	 * @param itemEntityId - The entityId of the item that was picked up
+	 */
+	var onPlayerPickedUpItem: (playerId: PlayerId, itemName: string, itemAmount: number, itemEntityId: EntityId) => void
 
-    function wF(QQ, FQ) {
-      QQ._properties.currentLimitVelocityGradient = FQ._limitVelocityGradients[0], QQ._properties.currentLimitVelocity1 = QQ._properties.currentLimitVelocityGradient.getFactor(), FQ._limitVelocityGradients.length > 1 ? QQ._properties.currentLimitVelocity2 = FQ._limitVelocityGradients[1].getFactor() : QQ._properties.currentLimitVelocity2 = QQ._properties.currentLimitVelocity1
-    }
+	/**
+	 * Called when a player selects a different inventory slot.
+	 * This will be called eventually when you have already set the slot using
+	 * api.setSelectedInventorySlotI so be careful not to cause an infinite loop doing this.
+	 * @param playerId - The id of the player that selected the inventory slot
+	 * @param slotIndex - The index of the inventory slot that was selected
+	 */
+	var onPlayerSelectInventorySlot: (playerId: PlayerId, slotIndex: number) => void
 
-    function LF(QQ, FQ) {
-      LQ.k.GetCurrentGradient(FQ._ratio, FQ._velocityGradients, ((FQ, wQ, LQ) => {
-        FQ !== QQ._properties.currentVelocityGradient && (QQ._properties.currentVelocity1 = QQ._properties.currentVelocity2, QQ._properties.currentVelocity2 = wQ.getFactor(), QQ._properties.currentVelocityGradient = FQ), QQ._properties.directionScale *= (0, YQ.Lerp)(QQ._properties.currentVelocity1, QQ._properties.currentVelocity2, LQ)
-      }))
-    }
+	/**
+	 * Called when a player stands on a block
+	 * @param playerId - The id of the player that stood on the block
+	 * @param x - The x coordinate of the block that was stood on
+	 * @param y - The y coordinate of the block that was stood on
+	 * @param z - The z coordinate of the block that was stood on
+	 * @param blockName - The name of the block that was stood on
+	 */
+	var onBlockStand: (playerId: PlayerId, x: number, y: number, z: number, blockName: BlockName) => void
 
-    function qF(QQ, FQ) {
-      LQ.k.GetCurrentGradient(FQ._ratio, FQ._limitVelocityGradients, ((wQ, LQ, qQ) => {
-        wQ !== QQ._properties.currentLimitVelocityGradient && (QQ._properties.currentLimitVelocity1 = QQ._properties.currentLimitVelocity2, QQ._properties.currentLimitVelocity2 = LQ.getFactor(), QQ._properties.currentLimitVelocityGradient = wQ);
-        const oQ = (0, YQ.Lerp)(QQ._properties.currentLimitVelocity1, QQ._properties.currentLimitVelocity2, qQ);
-        QQ.direction.length() > oQ && QQ.direction.scaleInPlace(FQ.limitVelocityDamping)
-      }))
-    }
+	/**
+	 * Called when a player enters a block. Only called once per block until the player leaves the block.
+	 * @param playerId - The id of the player that entered the block
+	 * @param x - The x coordinate of the block that was entered
+	 * @param y - The y coordinate of the block that was entered
+	 * @param z - The z coordinate of the block that was entered
+	 * @param blockName - The name of the block that was entered
+	 */
+	var onBlockStandStart: (playerId: PlayerId, x: number, y: number, z: number, blockName: BlockName) => void
 
-    function oF(QQ) {
-      QQ.direction.scaleToRef(QQ._properties.directionScale, QQ._properties.scaledDirection)
-    }
+	/**
+	 * Called when a player leaves a block. Stepping from one block onto another calls onBlockStandStart for the new block first and onBlockStandStop for the old one after it, so check blockName (or x, y, z) before undoing what onBlockStandStart did, or stepping onto the block you care about cancels it at once.
+	 * @param playerId - The id of the player that left the block
+	 * @param x - The x coordinate of the block that was left
+	 * @param y - The y coordinate of the block that was left
+	 * @param z - The z coordinate of the block that was left
+	 * @param blockName - The name of the block that was left
+	 */
+	var onBlockStandStop: (playerId: PlayerId, x: number, y: number, z: number, blockName: BlockName) => void
 
-    function DF(QQ, FQ) {
-      FQ.particleEmitterType.startPositionFunction(FQ._emitterWorldMatrix, QQ.position, QQ, FQ.isLocal)
-    }
+	/**
+	 * Called when a player attempts to craft an item
+	 * Return "preventCraft" to prevent a craft from happening
+	 * @param playerId - The id of the player that is attempting to craft the item
+	 * @param itemName - The name of the item that is being crafted
+	 * @param craftingIdx - The index of the used recipe in the item's recipe list
+	 * @param craftTimes - The number of times the craft recipe is used at once (e.g. shift held while crafting)
+	 */
+	var onPlayerAttemptCraft: (playerId: PlayerId, itemName: string, craftingIdx: number, craftTimes: number) => void | "preventCraft"
 
-    function kF(QQ, FQ) {
-      FQ.startPositionFunction(FQ._emitterWorldMatrix, QQ.position, QQ, FQ.isLocal)
-    }
+	/**
+	 * Called when a player crafts an item
+	 * @param playerId - The id of the player that crafted the item
+	 * @param itemName - The name of the item that was crafted
+	 * @param craftingIdx - The index of the used recipe in the item's recipe list
+	 * @param recipe - The recipe that was used to craft the item
+	 * @param craftTimes - The number of times the craft recipe is used at once (e.g. shift held while crafting)
+	 */
+	var onPlayerCraft: (playerId: PlayerId, itemName: string, craftingIdx: number, recipe: RecipesForItem[number], craftTimes: number) => void
 
-    function vF(QQ, FQ) {
-      QQ._properties.localPosition ? QQ._properties.localPosition.Qs(QQ.position) : QQ._properties.localPosition = QQ.position.clone(), oQ.p.TransformCoordinatesToRef(QQ._properties.localPosition, FQ._emitterWorldMatrix, QQ.position)
-    }
+	/**
+	 * Called when a player attempts to open a chest
+	 * Return "preventOpen" to prevent the player from opening the chest
+	 */
+	var onPlayerAttemptOpenChest: (playerId: PlayerId, x: number, y: number, z: number, isMoonstoneChest: boolean, isIronChest: boolean) => void | "preventOpen"
 
-    function mF(QQ, FQ) {
-      FQ.isLocal && QQ._properties.localPosition ? (QQ._properties.localPosition.addInPlace(QQ._properties.scaledDirection), oQ.p.TransformCoordinatesToRef(QQ._properties.localPosition, FQ._emitterWorldMatrix, QQ.position)) : QQ.position.addInPlace(QQ._properties.scaledDirection)
-    }
+	/**
+	 * Called when a player opens a chest
+	 */
+	var onPlayerOpenedChest: (playerId: PlayerId, x: number, y: number, z: number, isMoonstoneChest: boolean, isIronChest: boolean) => void
 
-    function uF(QQ, FQ) {
-      QQ._properties.currentDragGradient = FQ._dragGradients[0], QQ._properties.currentDrag1 = QQ._properties.currentDragGradient.getFactor(), FQ._dragGradients.length > 1 ? QQ._properties.currentDrag2 = FQ._dragGradients[1].getFactor() : QQ._properties.currentDrag2 = QQ._properties.currentDrag1
-    }
+	/**
+	 * Called when a player moves an item out of their inventory
+	 * Return "preventChange" to prevent the movement
+	 */
+	var onPlayerMoveItemOutOfInventory: (playerId: PlayerId, itemName: string, itemAmount: number, fromIdx: number, movementType: string) => void | "preventChange"
 
-    function HF(QQ, FQ) {
-      LQ.k.GetCurrentGradient(FQ._ratio, FQ._dragGradients, ((FQ, wQ, LQ) => {
-        FQ !== QQ._properties.currentDragGradient && (QQ._properties.currentDrag1 = QQ._properties.currentDrag2, QQ._properties.currentDrag2 = wQ.getFactor(), QQ._properties.currentDragGradient = FQ);
-        const qQ = (0, YQ.Lerp)(QQ._properties.currentDrag1, QQ._properties.currentDrag2, LQ);
-        QQ._properties.scaledDirection.scaleInPlace(1 - qQ)
-      }))
-    }
+	/**
+	 * Called for all types of inventory item movement.
+	 * Certain methods of moving item can result in splitting a stack
+	 * into multiple slots. (e.g. shift-click).
+	 * toStartIdx and toEndIdx provide the min and max idxs moved into.
+	 * Return "preventChange" to prevent item movement.
+	 */
+	var onPlayerMoveInvenItem: (playerId: PlayerId, fromIdx: number, toStartIdx: number, toEndIdx: number, amt: number) => void | "preventChange"
 
-    function bF(QQ, FQ) {
-      QQ._properties.randomNoiseCoordinates1 && QQ._properties.randomNoiseCoordinates2 ? (QQ._properties.randomNoiseCoordinates1.vQQ(Math.random(), Math.random(), Math.random()), QQ._properties.randomNoiseCoordinates2.vQQ(Math.random(), Math.random(), Math.random())) : (QQ._properties.randomNoiseCoordinates1 = new oQ.p(Math.random(), Math.random(), Math.random()), QQ._properties.randomNoiseCoordinates2 = new oQ.p(Math.random(), Math.random(), Math.random()))
-    }
+	/**
+	 * Called when a player moves an item into an index within a range of inventory slots
+	 * Return "preventChange" to prevent the movement
+	 */
+	var onPlayerMoveItemIntoIdxs: (playerId: PlayerId, start: number, end: number, moveIdx: number, itemAmount: number) => void | "preventChange"
 
-    function YF(QQ, FQ) {
-      const wQ = FQ._noiseTextureData,
-        LQ = FQ._noiseTextureSize;
-      if (wQ && LQ && QQ._properties.randomNoiseCoordinates1 && QQ._properties.randomNoiseCoordinates2) {
-        const qQ = FQ._fetchR(QQ._properties.randomNoiseCoordinates1.x, QQ._properties.randomNoiseCoordinates1.y, LQ.width, LQ.height, wQ),
-          DQ = FQ._fetchR(QQ._properties.randomNoiseCoordinates1.z, QQ._properties.randomNoiseCoordinates2.x, LQ.width, LQ.height, wQ),
-          kQ = FQ._fetchR(QQ._properties.randomNoiseCoordinates2.y, QQ._properties.randomNoiseCoordinates2.z, LQ.width, LQ.height, wQ),
-          vQ = oQ.k.Ox[0],
-          mQ = oQ.k.Ox[1];
-        vQ.vQQ((2 * qQ - 1) * FQ.noiseStrength.x, (2 * DQ - 1) * FQ.noiseStrength.y, (2 * kQ - 1) * FQ.noiseStrength.z), vQ.scaleToRef(FQ._tempScaledUpdateSpeed, mQ), QQ.direction.addInPlace(mQ)
-      }
-    }
+	/**
+	 * Return "preventChange" to prevent the swap
+	 * @param playerId - The id of the player swapping the inventory slots
+	 * @param i - The index of the first slot
+	 * @param j - The index of the second slot
+	 */
+	var onPlayerSwapInvenSlots: (playerId: PlayerId, i: number, j: number) => void | "preventChange"
 
-    function xF(QQ, FQ) {
-      FQ.gravity.scaleToRef(FQ._tempScaledUpdateSpeed, FQ._scaledGravity), QQ.direction.addInPlace(FQ._scaledGravity)
-    }
+	/**
+	 * Return "preventChange" to prevent the movement
+	 * @param playerId - The id of the player moving the item
+	 * @param i - The index of the first slot
+	 * @param j - The index of the second slot
+	 * @param amt - The amount of the item being moved
+	 */
+	var onPlayerMoveInvenItemWithAmt: (playerId: PlayerId, i: number, j: number, amt: number) => void | "preventChange"
 
-    function AF(QQ, FQ) {
-      QQ.size = (0, YQ.RandomRange)(FQ.minSize, FQ.maxSize), QQ.scale.vQQ((0, YQ.RandomRange)(FQ.minScaleX, FQ.maxScaleX), (0, YQ.RandomRange)(FQ.minScaleY, FQ.maxScaleY))
-    }
+	/**
+	 * Called when player alt actions (right click on pc).
+	 * The co-ordinates will be undefined if there is no targeted block (and block will be "Air")
+	 * Some actions can be prevented by returning "preventAction",
+	 * but this may not work as well for certain actions which the game client predicts to succeed -
+	 * test it to see if it works for your use case, feel free to report any broken ones.
+	 */
+	var onPlayerAttemptAltAction: (playerId: PlayerId, x: number, y: number, z: number, block: BlockName, targetEId: EntityId | null) => void | "preventAction"
 
-    function tF(QQ, FQ) {
-      QQ._properties.currentSizeGradient = FQ._sizeGradients[0], QQ._properties.currentSize1 = QQ._properties.currentSizeGradient.getFactor(), QQ.size = QQ._properties.currentSize1, FQ._sizeGradients.length > 1 ? QQ._properties.currentSize2 = FQ._sizeGradients[1].getFactor() : QQ._properties.currentSize2 = QQ._properties.currentSize1, QQ.scale.vQQ((0, YQ.RandomRange)(FQ.minScaleX, FQ.maxScaleX), (0, YQ.RandomRange)(FQ.minScaleY, FQ.maxScaleY))
-    }
+	/**
+	 * Called when player completes an alt action. Right click, the interact bind (E by default) and a mobile tap all arrive here; a left click does not, so this is the callback to use for anything a player should have to choose to do rather than trigger by swinging.
+	 * Keeps firing while the input is held, roughly every 50-150ms. That is harmless for anything idempotent, but an interaction that grants an item, charges a currency or advances a conversation has to swallow the repeats itself - open shops with toggle off, and debounce the rest per player.
+	 * The co-ordinates will be undefined if there is no targeted block (and block will be "Air")
+	 */
+	var onPlayerAltAction: (playerId: PlayerId, x: number, y: number, z: number, block: BlockName, targetEId: EntityId | null) => void
 
-    function eF(QQ, FQ) {
-      const wQ = FQ._actualFrame / FQ.targetStopDuration;
-      LQ.k.GetCurrentGradient(wQ, FQ._startSizeGradients, ((wQ, LQ, qQ) => {
-        wQ !== FQ._currentStartSizeGradient && (FQ._currentStartSize1 = FQ._currentStartSize2, FQ._currentStartSize2 = LQ.getFactor(), FQ._currentStartSizeGradient = wQ);
-        const oQ = (0, YQ.Lerp)(FQ._currentStartSize1, FQ._currentStartSize2, qQ);
-        QQ.scale.scaleInPlace(oQ)
-      }))
-    }
+	/**
+	 * Called when a player clicks
+	 * Don't have important functionality depending on wasAltClick,
+	 * as it'll always be false for touchscreen players.
+	 */
+	var onPlayerClick: (playerId: PlayerId, wasAltClick: boolean, x: number, y: number, z: number, block: BlockName, targetEId: EntityId | null) => void
 
-    function MF(QQ, FQ) {
-      LQ.k.GetCurrentGradient(FQ._ratio, FQ._sizeGradients, ((FQ, wQ, LQ) => {
-        FQ !== QQ._properties.currentSizeGradient && (QQ._properties.currentSize1 = QQ._properties.currentSize2, QQ._properties.currentSize2 = wQ.getFactor(), QQ._properties.currentSizeGradient = FQ), QQ.size = (0, YQ.Lerp)(QQ._properties.currentSize1, QQ._properties.currentSize2, LQ)
-      }))
-    }
+	/**
+	 * Called when a player releases a click (mouse-up on desktop, touch-end on mobile).
+	 * Fires for both primary and secondary click releases.
+	 * Keep in mind wasAltClick will always be false for touchscreen players.
+	 */
+	var onPlayerClickUp: (playerId: PlayerId, wasAltClick: boolean, x: number, y: number, z: number, block: BlockName, targetEId: EntityId | null) => void
 
-    function GF(QQ, FQ) {
-      QQ.remapData = new oQ.t(0, 1, 0, 1)
-    }
+	/**
+	 * Called when a client option is updated
+	 * @param playerId - The id of the player whose option was updated
+	 * @param option - The option that was updated
+	 * @param value - The new value of the option, always null for custom code
+	 */
+	var onClientOptionUpdated: (playerId: PlayerId, option: ClientOption, value: any) => void
 
-    function pF(QQ, FQ) {
-      FQ._colorRemapGradients && FQ._colorRemapGradients.length > 0 && LQ.k.GetCurrentGradient(FQ._ratio, FQ._colorRemapGradients, ((FQ, wQ, LQ) => {
-        const qQ = (0, YQ.Lerp)(FQ.factor1, wQ.factor1, LQ),
-          oQ = (0, YQ.Lerp)(FQ.factor2, wQ.factor2, LQ);
-        QQ.remapData.x = qQ, QQ.remapData.y = oQ - qQ
-      })), FQ._alphaRemapGradients && FQ._alphaRemapGradients.length > 0 && LQ.k.GetCurrentGradient(FQ._ratio, FQ._alphaRemapGradients, ((FQ, wQ, LQ) => {
-        const qQ = (0, YQ.Lerp)(FQ.factor1, wQ.factor1, LQ),
-          oQ = (0, YQ.Lerp)(FQ.factor2, wQ.factor2, LQ);
-        QQ.remapData.z = qQ, QQ.remapData.w = oQ - qQ
-      }))
-    }
+	/**
+	 * Called when a mob setting is updated
+	 * @param mobId - The id of the mob whose setting was updated
+	 * @param setting - The setting that was updated
+	 * @param value - The new value of the setting
+	 */
+	var onMobSettingUpdated: (mobId: MobId, setting: MobSetting, value: any) => void
 
-    function cF(QQ, FQ) {
-      const wQ = (0, YQ.Clamp)(FQ._actualFrame / FQ.targetStopDuration);
-      LQ.k.GetCurrentGradient(wQ, FQ._lifeTimeGradients, ((FQ, LQ) => {
-        const qQ = FQ,
-          oQ = LQ,
-          DQ = qQ.getFactor(),
-          kQ = oQ.getFactor(),
-          vQ = (wQ - qQ.gradient) / (oQ.gradient - qQ.gradient);
-        QQ.lifeTime = (0, YQ.Lerp)(DQ, kQ, vQ)
-      })), FQ._emitPower = (0, YQ.RandomRange)(FQ.minEmitPower, FQ.maxEmitPower)
-    }
+	/**
+	 * Called when a player's inventory is updated
+	 * @param playerId - The id of the player whose inventory was updated
+	 */
+	var onInventoryUpdated: (playerId: PlayerId) => void
 
-    function CF(QQ, FQ) {
-      QQ.lifeTime = (0, YQ.RandomRange)(FQ.minLifeTime, FQ.maxLifeTime), FQ._emitPower = (0, YQ.RandomRange)(FQ.minEmitPower, FQ.maxEmitPower)
-    }
+	/**
+	 * Called when a chest is updated by a player
+	 * x, y, z, will be null if isMoonstoneChest is true
+	 */
+	var onChestUpdated: (initiatorEId: PlayerId, isMoonstoneChest: boolean, x: number | null, y: number | null, z: number | null) => void
 
-    function SF(QQ, FQ) {
-      0 === FQ._emitPower ? (QQ._properties.initialDirection ? QQ._properties.initialDirection.Qs(QQ.direction) : QQ._properties.initialDirection = QQ.direction.clone(), QQ.direction.set(0, 0, 0)) : (QQ._properties.initialDirection = null, QQ.direction.scaleInPlace(FQ._emitPower)), QQ.direction.addInPlace(FQ._inheritedVelocityOffset)
-    }
+	/**
+	 * Called before the world changes a block.
+	 * Return "preventChange" to stop it. Then onWorldChangeBlock will not run.
+	 */
+	var onWorldAttemptChangeBlock: (x: number, y: number, z: number, fromBlock: BlockName, toBlock: BlockName, initiatorDbId: string | null, extraInfo: WorldBlockChangedInfo) => void | "preventChange"
 
-    function iF(QQ, FQ) {
-      QQ.angularSpeed = (0, YQ.RandomRange)(FQ.minAngularSpeed, FQ.maxAngularSpeed), QQ.angle = (0, YQ.RandomRange)(FQ.minInitialRotation, FQ.maxInitialRotation)
-    }
+	/**
+	 * In World Code, called after all attempt callbacks allow a world block change, before the block is set.
+	 * Read the old block/data here; return "preventChange" to cancel the request, or "preventDrop" to stop its engine item drop.
+	 * Drop prevention does not skip built-in validation or change notifications.
+	 * Blocks/data written here are preserved. Cancelling the original request does not undo your script effects.
+	 * Native games/plugins receive uninterrupted before-commit notifications and must veto in onWorldAttemptChangeBlock.
+	 * initiatorDbId is null for game code, such as a growing sapling.
+	 */
+	var onWorldChangeBlock: (x: number, y: number, z: number, fromBlock: BlockName, toBlock: BlockName, initiatorDbId: string | null, extraInfo: WorldBlockChangedInfo, dropsPrevented: boolean) => void | "preventChange" | "preventDrop"
 
-    function WF(QQ, FQ) {
-      QQ._properties.currentAngularSpeedGradient = FQ._angularSpeedGradients[0], QQ.angularSpeed = QQ._properties.currentAngularSpeedGradient.getFactor(), QQ._properties.currentAngularSpeed1 = QQ.angularSpeed, FQ._angularSpeedGradients.length > 1 ? QQ._properties.currentAngularSpeed2 = FQ._angularSpeedGradients[1].getFactor() : QQ._properties.currentAngularSpeed2 = QQ._properties.currentAngularSpeed1, QQ.angle = (0, YQ.RandomRange)(FQ.minInitialRotation, FQ.maxInitialRotation)
-    }
+	/**
+	 * Called when a mesh entity is created
+	 * @param eId - The id of the mesh entity
+	 * @param type - The type of mesh entity
+	 * @param initiatorId - The id of the entity that created the mesh entity, if any
+	 */
+	var onCreateBloxdMeshEntity: (eId: EntityId, type: string, initiatorId: EntityId | null) => void
 
-    function RF(QQ, FQ) {
-      QQ._properties.initialStartSpriteCellId = FQ.startSpriteCellID, QQ._properties.initialEndSpriteCellId = FQ.endSpriteCellID, QQ._properties.initialSpriteCellLoop = FQ.spriteCellLoop
-    }
+	/**
+	 * Called when a entity collides with another entity
+	 * @param eId - The id of the entity
+	 * @param otherEId - The id of the other entity
+	 */
+	var onEntityCollision: (eId: EntityId, otherEId: EntityId) => void
 
-    function OF(QQ, FQ) {
-      QQ.previousItem = FQ.previousItem, QQ.nextItem = FQ, FQ.previousItem && (FQ.previousItem.nextItem = QQ), FQ.previousItem = QQ
-    }
+	/**
+	 * Called when a player attempts to spawn a mob, e.g. using a spawn orb.
+	 * Return "preventSpawn" to prevent the mob from spawning.
+	 */
+	var onPlayerAttemptSpawnMob: (playerId: PlayerId, mobType: MobType, x: number, y: number, z: number) => void | "preventSpawn"
 
-    function sF(QQ, FQ) {
-      QQ.previousItem = FQ, QQ.nextItem = FQ.nextItem, FQ.nextItem && (FQ.nextItem.previousItem = QQ), FQ.nextItem = QQ
-    }
+	/**
+	 * Called when the world attempts to spawn a mob.
+	 * Return "preventSpawn" to prevent the mob from spawning.
+	 * @param mobType - The type of mob
+	 * @param x - The potential x coordinate of the mob
+	 * @param y - The potential y coordinate of the mob
+	 * @param z - The potential z coordinate of the mob
+	 */
+	var onWorldAttemptSpawnMob: (mobType: MobType, x: number, y: number, z: number) => void | "preventSpawn"
 
-    function rF(QQ) {
-      QQ.previousItem && (QQ.previousItem.nextItem = QQ.nextItem), QQ.nextItem && (QQ.nextItem.previousItem = QQ.previousItem)
-    }
-    var IF = wQ(39796);
-    class UF extends CQ {
-      get startDirectionFunction() {
-        return this._startDirectionFunction
-      }
-      set startDirectionFunction(QQ) {
-        this._startDirectionFunction !== QQ && (this._startDirectionFunction = QQ, this._directionCreation.process = QQ ? QF : dQ)
-      }
-      get startPositionFunction() {
-        return this._startPositionFunction
-      }
-      set startPositionFunction(QQ) {
-        this._startPositionFunction !== QQ && (this._startPositionFunction = QQ, this._positionCreation.process = QQ ? kF : DF)
-      }
-      set onDispose(QQ) {
-        this._onDisposeObserver && this.zN.remove(this._onDisposeObserver), this._onDisposeObserver = this.zN.add(QQ)
-      }
-      get vW() {
-        return this._isDisposed
-      }
-      get useRampGradients() {
-        return this._useRampGradients
-      }
-      set useRampGradients(QQ) {
-        this._useRampGradients !== QQ && (this._useRampGradients = QQ, this._resetEffect(), QQ ? (this._rampCreation = {
-          process: GF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._rampCreation, this._colorDeadCreation), this._gravityProcessing && (this._remapGradientProcessing = {
-          process: pF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._remapGradientProcessing, this._gravityProcessing))) : (rF(this._rampCreation), rF(this._remapGradientProcessing)))
-      }
-      get isLocal() {
-        return this._isLocal
-      }
-      set isLocal(QQ) {
-        this._isLocal !== QQ && (this._isLocal = QQ, QQ ? (this._isLocalCreation = {
-          process: vF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._isLocalCreation, this._positionCreation)) : rF(this._isLocalCreation))
-      }
-      get particles() {
-        return this._particles
-      }
-      get shaderLanguage() {
-        return this._shaderLanguage
-      }
-      get _isAnimationSheetEnabled() {
-        return this._animationSheetEnabled
-      }
-      set _isAnimationSheetEnabled(QQ) {
-        this._animationSheetEnabled !== QQ && (this._animationSheetEnabled = QQ, QQ ? (this._sheetCreation = {
-          process: RF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._sheetCreation, this._colorDeadCreation)) : rF(this._sheetCreation), this._reset())
-      }
-      getActiveCount() {
-        return this._particles.length
-      }
-      getClassName() {
-        return "ParticleSystem"
-      }
-      isStopping() {
-        return this._stopped && this.isAlive()
-      }
-      getCustomEffect() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._customWrappers[QQ]?.effect ?? this._customWrappers[0].effect
-      }
-      _getCustomDrawWrapper() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._customWrappers[QQ] ?? this._customWrappers[0]
-      }
-      setCustomEffect(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this._customWrappers[FQ] = new fQ.d(this._engine), this._customWrappers[FQ].effect = QQ, this._customWrappers[FQ].drawContext && (this._customWrappers[FQ].drawContext.useInstancing = this._useInstancing)
-      }
-      get onBeforeDrawParticlesObservable() {
-        return this._onBeforeDrawParticlesObservable || (this._onBeforeDrawParticlesObservable = new qQ.e), this._onBeforeDrawParticlesObservable
-      }
-      get vertexShaderName() {
-        return "particles"
-      }
-      get vertexBuffers() {
-        return this._vertexBuffers
-      }
-      get indexBuffer() {
-        return this._indexBuffer
-      }
-      get noiseTexture() {
-        return this._noiseTexture
-      }
-      set noiseTexture(QQ) {
-        if (this.noiseTexture !== QQ) {
-          if (this._noiseTexture = QQ, !QQ) return rF(this._noiseCreation), void rF(this._noiseProcessing);
-          this._noiseCreation = {
-            process: bF,
-            previousItem: null,
-            nextItem: null
-          }, sF(this._noiseCreation, this._colorDeadCreation), this._noiseProcessing = {
-            process: YF,
-            previousItem: null,
-            nextItem: null
-          }, sF(this._noiseProcessing, this._positionProcessing)
-        }
-      }
-      constructor(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          DQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          kQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : .01,
-          mQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        aQ || (aQ = !0, UQ(jQ.e, lQ)), (0, XQ.b)(), super(QQ), this._emitterInverseWorldMatrix = oQ.c.Identity(), this._startDirectionFunction = null, this._startPositionFunction = null, this._inheritedVelocityOffset = new oQ.p, this.zN = new qQ.e, this.onStoppedObservable = new qQ.e, this.onStartedObservable = new qQ.e, this._noiseTextureSize = null, this._noiseTextureData = null, this._particles = new Array, this._stockParticles = new Array, this._newPartsExcess = 0, this._vertexBuffers = {}, this._renderPassObserver = null, this._scaledColorStep = new uQ.e(0, 0, 0, 0), this._colorDiff = new uQ.e(0, 0, 0, 0), this._scaledGravity = oQ.p.Zero(), this._currentRenderId = -1, this._useInstancing = !1, this._useFixedCapacityForSnapshot = !1, this._fixedCapacityHighWaterMark = 0, this._isDisposed = !1, this._started = !1, this._stopped = !1, this._actualFrame = 0, this._currentEmitRate1 = 0, this._currentEmitRate2 = 0, this._currentStartSize1 = 0, this._currentStartSize2 = 0, this.updateInAnimate = !0, this._rawTextureWidth = 256, this._useRampGradients = !1, this._updateQueueStart = null, this._startSizeCreation = null, this._createQueueStart = null, this._isLocal = !1, this.isGPU = !1, this._shaderLanguage = 0, this._onBeforeDrawParticlesObservable = null, this._emitFromParticle = QQ => {}, this.recycleParticle = QQ => {
-          const FQ = this._particles.pop();
-          FQ !== QQ && FQ.copyTo(QQ), FQ.metadata = null, this._stockParticles.push(FQ)
-        }, this._createParticle = () => {
-          let QQ;
-          return 0 !== this._stockParticles.length ? (QQ = this._stockParticles.pop(), QQ._reset()) : QQ = new iQ(this), this._prepareParticle(QQ), QQ
-        }, this.paused = !1, this._shadersLoaded = !1, this._capacity = FQ, this._epsilon = kQ, wQ && "Scene" !== wQ.getClassName() ? (this._engine = wQ, this.defaultProjectionMatrix = oQ.c.PerspectiveFovLH(.8, 1, .1, 100, this._engine.isNDCHalfZRange)) : (this._scene = wQ || vQ.d.LastCreatedScene, this._engine = this._scene.Wx(), this.uniqueId = this._scene.getUniqueId(), this.layerMask = this._scene.defaultRenderableLayerMask, this._scene.fC.push(this)), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._initShaderSourceAsync(), this._lifeTimeCreation = {
-          process: CF,
-          previousItem: null,
-          nextItem: null
-        }, this._positionCreation = {
-          process: DF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._positionCreation, this._lifeTimeCreation), this._directionCreation = {
-          process: dQ,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._directionCreation, this._positionCreation), this._emitPowerCreation = {
-          process: SF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._emitPowerCreation, this._directionCreation), this._sizeCreation = {
-          process: AF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._sizeCreation, this._emitPowerCreation), this._angleCreation = {
-          process: iF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._angleCreation, this._sizeCreation), this._colorCreation = {
-          process: EQ,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._colorCreation, this._angleCreation), this._colorDeadCreation = {
-          process: nQ,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._colorDeadCreation, this._colorCreation), this._createQueueStart = this._lifeTimeCreation, mQ || (this._colorProcessing = {
-          process: ZQ,
-          previousItem: null,
-          nextItem: null
-        }, this._angularSpeedProcessing = {
-          process: BQ,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._angularSpeedProcessing, this._colorProcessing), this._directionProcessing = {
-          process: oF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._directionProcessing, this._angularSpeedProcessing), this._positionProcessing = {
-          process: mF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._positionProcessing, this._directionProcessing), this._gravityProcessing = {
-          process: xF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._gravityProcessing, this._positionProcessing), this._updateQueueStart = this._colorProcessing), this._isAnimationSheetEnabled = DQ, this._attachImageProcessingConfiguration(null), this._customWrappers = {
-          0: new fQ.d(this._engine)
-        }, this._customWrappers[0].effect = LQ, this._drawWrappers = [], this._useInstancing = this._engine.getCaps().instancedArrays, this._createIndexBuffer(), this._createVertexBuffers(), this.particleEmitterType = new HQ.d, this.updateFunction = QQ => {
-          this.noiseTexture && (this._noiseTextureSize = this.noiseTexture.getSize(), this.noiseTexture.getContent()?.then((QQ => {
-            this._noiseTextureData = QQ
-          })));
-          const FQ = QQ === this._particles;
-          for (let wQ = 0; wQ < QQ.length; wQ++) {
-            const LQ = QQ[wQ];
-            this._tempScaledUpdateSpeed = this._scaledUpdateSpeed;
-            const qQ = LQ.age;
-            if (LQ.age += this._tempScaledUpdateSpeed, LQ.age > LQ.lifeTime) {
-              const QQ = LQ.age - qQ,
-                FQ = LQ.lifeTime - qQ;
-              this._tempScaledUpdateSpeed = FQ * this._tempScaledUpdateSpeed / QQ, LQ.age = LQ.lifeTime
-            }
-            this._ratio = LQ.age / LQ.lifeTime, LQ._properties.directionScale = this._tempScaledUpdateSpeed;
-            let oQ = this._updateQueueStart;
-            for (; oQ;) oQ.process(LQ, this), oQ = oQ.nextItem;
-            if (this._isAnimationSheetEnabled && !mQ && LQ.updateCellIndex(), LQ._inheritParticleInfoToSubEmitters(), LQ.age >= LQ.lifeTime) {
-              if (this._emitFromParticle(LQ), LQ._properties.attachedSubEmitters) {
-                for (const QQ of LQ._properties.attachedSubEmitters) QQ.particleSystem.disposeOnStop = !0, QQ.particleSystem.stop();
-                LQ._properties.attachedSubEmitters = null
-              }
-              this.recycleParticle(LQ), FQ && wQ--
-            } else;
-          }
-        }
-      }
-      serialize(QQ) {
-        throw new Error("Method not implemented.")
-      }
-      clone(QQ, FQ) {
-        throw new Error("Method not implemented.")
-      }
-      _syncLifeTimeCreation() {
-        this.targetStopDuration && this._lifeTimeGradients && this._lifeTimeGradients.length > 0 ? this._lifeTimeCreation.process = cF : this._lifeTimeCreation.process = CF
-      }
-      _syncStartSizeCreation() {
-        this._startSizeGradients && this._startSizeGradients[0] && this.targetStopDuration ? this._startSizeCreation || (this._startSizeCreation = {
-          process: eF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._startSizeCreation, this._sizeCreation)) : this._startSizeCreation && (rF(this._startSizeCreation), this._startSizeCreation = null)
-      }
-      get targetStopDuration() {
-        return this._targetStopDuration
-      }
-      set targetStopDuration(QQ) {
-        this.targetStopDuration !== QQ && (this._targetStopDuration = QQ, this._syncLifeTimeCreation(), this._syncStartSizeCreation())
-      }
-      addLifeTimeGradient(QQ, FQ, wQ) {
-        return this._lifeTimeGradients || (this._lifeTimeGradients = []), this._addFactorGradient(this._lifeTimeGradients, QQ, FQ, wQ), this._syncLifeTimeCreation(), this
-      }
-      removeLifeTimeGradient(QQ) {
-        return this._removeFactorGradient(this._lifeTimeGradients, QQ), this._syncLifeTimeCreation(), this
-      }
-      addSizeGradient(QQ, FQ, wQ) {
-        return this._sizeGradients || (this._sizeGradients = []), 0 === this._sizeGradients.length && (this._sizeCreation.process = tF, this._sizeGradientProcessing = {
-          process: MF,
-          previousItem: null,
-          nextItem: null
-        }, OF(this._sizeGradientProcessing, this._gravityProcessing)), this._addFactorGradient(this._sizeGradients, QQ, FQ, wQ), this
-      }
-      removeSizeGradient(QQ) {
-        return this._removeFactorGradient(this._sizeGradients, QQ), 0 === this._sizeGradients?.length && (rF(this._sizeGradientProcessing), this._sizeCreation.process = AF), this
-      }
-      addColorRemapGradient(QQ, FQ, wQ) {
-        return this._colorRemapGradients || (this._colorRemapGradients = []), this._addFactorGradient(this._colorRemapGradients, QQ, FQ, wQ), this
-      }
-      removeColorRemapGradient(QQ) {
-        return this._removeFactorGradient(this._colorRemapGradients, QQ), this
-      }
-      addAlphaRemapGradient(QQ, FQ, wQ) {
-        return this._alphaRemapGradients || (this._alphaRemapGradients = []), this._addFactorGradient(this._alphaRemapGradients, QQ, FQ, wQ), this
-      }
-      removeAlphaRemapGradient(QQ) {
-        return this._removeFactorGradient(this._alphaRemapGradients, QQ), this
-      }
-      addAngularSpeedGradient(QQ, FQ, wQ) {
-        return this._angularSpeedGradients || (this._angularSpeedGradients = []), 0 === this._angularSpeedGradients.length && (this._angleCreation.process = WF, this._angularSpeedGradientProcessing = {
-          process: yQ,
-          previousItem: null,
-          nextItem: null
-        }, OF(this._angularSpeedGradientProcessing, this._angularSpeedProcessing)), this._addFactorGradient(this._angularSpeedGradients, QQ, FQ, wQ), this
-      }
-      removeAngularSpeedGradient(QQ) {
-        return this._removeFactorGradient(this._angularSpeedGradients, QQ), 0 === this._angularSpeedGradients?.length && (this._angleCreation.process = iF, rF(this._angularSpeedGradientProcessing)), this
-      }
-      addVelocityGradient(QQ, FQ, wQ) {
-        return this._velocityGradients || (this._velocityGradients = []), 0 === this._velocityGradients.length && (this._velocityCreation = {
-          process: FF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._velocityCreation, this._angleCreation), this._velocityGradientProcessing = {
-          process: LF,
-          previousItem: null,
-          nextItem: null
-        }, OF(this._velocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._velocityGradients, QQ, FQ, wQ), this
-      }
-      removeVelocityGradient(QQ) {
-        return this._removeFactorGradient(this._velocityGradients, QQ), 0 === this._velocityGradients?.length && (rF(this._velocityCreation), rF(this._velocityGradientProcessing)), this
-      }
-      addLimitVelocityGradient(QQ, FQ, wQ) {
-        return this._limitVelocityGradients || (this._limitVelocityGradients = []), 0 === this._limitVelocityGradients.length && (this._limitVelocityCreation = {
-          process: wF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._limitVelocityCreation, this._angleCreation), this._limitVelocityGradientProcessing = {
-          process: qF,
-          previousItem: null,
-          nextItem: null
-        }, sF(this._limitVelocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._limitVelocityGradients, QQ, FQ, wQ), this
-      }
-      removeLimitVelocityGradient(QQ) {
-        return this._removeFactorGradient(this._limitVelocityGradients, QQ), 0 === this._limitVelocityGradients?.length && (rF(this._limitVelocityCreation), rF(this._limitVelocityGradientProcessing)), this
-      }
-      addDragGradient(QQ, FQ, wQ) {
-        return this._dragGradients || (this._dragGradients = []), 0 === this._dragGradients.length && (this._dragCreation = {
-          process: uF,
-          previousItem: null,
-          nextItem: null
-        }, OF(this._dragCreation, this._colorDeadCreation), this._dragGradientProcessing = {
-          process: HF,
-          previousItem: null,
-          nextItem: null
-        }, OF(this._dragGradientProcessing, this._positionProcessing)), this._addFactorGradient(this._dragGradients, QQ, FQ, wQ), this
-      }
-      removeDragGradient(QQ) {
-        return this._removeFactorGradient(this._dragGradients, QQ), 0 === this._dragGradients?.length && (rF(this._dragCreation), rF(this._dragGradientProcessing)), this
-      }
-      addStartSizeGradient(QQ, FQ, wQ) {
-        return this._startSizeGradients || (this._startSizeGradients = []), this._addFactorGradient(this._startSizeGradients, QQ, FQ, wQ), this._syncStartSizeCreation(), this
-      }
-      removeStartSizeGradient(QQ) {
-        return this._removeFactorGradient(this._startSizeGradients, QQ), this._syncStartSizeCreation(), this
-      }
-      _createRampGradientTexture() {
-        if (!this._rampGradients || !this._rampGradients.length || this._rampGradientsTexture || !this._scene) return;
-        const QQ = new Uint8Array(4 * this._rawTextureWidth),
-          FQ = uQ.i.Color3[0];
-        for (let wQ = 0; wQ < this._rawTextureWidth; wQ++) {
-          const qQ = wQ / this._rawTextureWidth;
-          LQ.k.GetCurrentGradient(qQ, this._rampGradients, ((LQ, qQ, oQ) => {
-            uQ.b.LerpToRef(LQ.color, qQ.color, oQ, FQ), QQ[4 * wQ] = 255 * FQ.r, QQ[4 * wQ + 1] = 255 * FQ.g, QQ[4 * wQ + 2] = 255 * FQ.b, QQ[4 * wQ + 3] = 255
-          }))
-        }
-        this._rampGradientsTexture = kQ.c.CreateRGBATexture(QQ, this._rawTextureWidth, 1, this._scene, !1, !1, 1)
-      }
-      getRampGradients() {
-        return this._rampGradients
-      }
-      forceRefreshGradients() {
-        this._syncRampGradientTexture()
-      }
-      _syncRampGradientTexture() {
-        this._rampGradients && (this._rampGradients.sort(((QQ, FQ) => QQ.gradient < FQ.gradient ? -1 : QQ.gradient > FQ.gradient ? 1 : 0)), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._createRampGradientTexture())
-      }
-      addRampGradient(QQ, FQ) {
-        this._rampGradients || (this._rampGradients = []);
-        const wQ = new LQ.f(QQ, FQ);
-        return this._rampGradients.push(wQ), this._syncRampGradientTexture(), this
-      }
-      removeRampGradient(QQ) {
-        return this._removeGradientAndTexture(QQ, this._rampGradients, this._rampGradientsTexture), this._rampGradientsTexture = null, this._rampGradients && this._rampGradients.length > 0 && this._createRampGradientTexture(), this
-      }
-      addColorGradient(QQ, FQ, wQ) {
-        this._colorGradients || (this._colorGradients = []), 0 === this._colorGradients.length && (this._colorCreation.process = gQ, this._colorProcessing.process = PQ);
-        const qQ = new LQ.e(QQ, FQ, wQ);
-        return this._colorGradients.push(qQ), this._colorGradients.sort(((QQ, FQ) => QQ.gradient < FQ.gradient ? -1 : QQ.gradient > FQ.gradient ? 1 : 0)), this
-      }
-      removeColorGradient(QQ) {
-        if (!this._colorGradients) return this;
-        let FQ = 0;
-        for (const wQ of this._colorGradients) {
-          if (wQ.gradient === QQ) {
-            this._colorGradients.splice(FQ, 1);
-            break
-          }
-          FQ++
-        }
-        return 0 === this._colorGradients.length && (this._colorCreation.process = EQ, this._colorProcessing.process = ZQ), this
-      }
-      resetDrawCache() {
-        if (this._drawWrappers) {
-          for (const QQ of this._drawWrappers)
-            if (QQ)
-              for (const FQ of QQ) FQ?.dispose();
-          this._drawWrappers = []
-        }
-      }
-      _fetchR(QQ, FQ, wQ, LQ, qQ) {
-        return qQ[4 * (((QQ = .5 * Math.abs(QQ) + .5) * wQ % wQ | 0) + ((FQ = .5 * Math.abs(FQ) + .5) * LQ % LQ | 0) * wQ)] / 255
-      }
-      _reset() {
-        this._resetEffect()
-      }
-      _resetEffect() {
-        this._vertexBuffer && (this._vertexBuffer.dispose(), this._vertexBuffer = null), this._spriteBuffer && (this._spriteBuffer.dispose(), this._spriteBuffer = null), this._vertexArrayObject && (this._engine.releaseVertexArrayObject(this._vertexArrayObject), this._vertexArrayObject = null), this._createVertexBuffers()
-      }
-      _createVertexBuffers() {
-        this._vertexBufferSize = this._useInstancing ? 10 : 12, this._isAnimationSheetEnabled && (this._vertexBufferSize += 1), this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexBufferSize += 3), this._useRampGradients && (this._vertexBufferSize += 4);
-        const QQ = this._engine,
-          FQ = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
-        this._vertexData = new Float32Array(this._capacity * FQ), this._vertexBuffer = new DQ.c(QQ, this._vertexData, !0, FQ);
-        let wQ = 0;
-        const LQ = this._vertexBuffer.createVertexBuffer(DQ.h.PositionKind, wQ, 3, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers[DQ.h.PositionKind] = LQ, wQ += 3;
-        const qQ = this._vertexBuffer.createVertexBuffer(DQ.h.ColorKind, wQ, 4, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers[DQ.h.ColorKind] = qQ, wQ += 4;
-        const oQ = this._vertexBuffer.createVertexBuffer("angle", wQ, 1, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers.angle = oQ, wQ += 1;
-        const kQ = this._vertexBuffer.createVertexBuffer("size", wQ, 2, this._vertexBufferSize, this._useInstancing);
-        if (this._vertexBuffers.size = kQ, wQ += 2, this._isAnimationSheetEnabled) {
-          const QQ = this._vertexBuffer.createVertexBuffer("cellIndex", wQ, 1, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.cellIndex = QQ, wQ += 1
-        }
-        if (!this._isBillboardBased || 8 === this.billboardMode || 9 === this.billboardMode) {
-          const QQ = this._vertexBuffer.createVertexBuffer("direction", wQ, 3, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.direction = QQ, wQ += 3
-        }
-        if (this._useRampGradients) {
-          const QQ = this._vertexBuffer.createVertexBuffer("remapData", wQ, 4, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.remapData = QQ, wQ += 4
-        }
-        let vQ;
-        if (this._useInstancing) {
-          const FQ = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
-          this._spriteBuffer = new DQ.c(QQ, FQ, !1, 2), vQ = this._spriteBuffer.createVertexBuffer("offset", 0, 2)
-        } else vQ = this._vertexBuffer.createVertexBuffer("offset", wQ, 2, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers.offset = vQ, this.resetDrawCache()
-      }
-      _createIndexBuffer() {
-        if (this._useInstancing) return void(this._linesIndexBufferUseInstancing = this._engine.createIndexBuffer(new Uint32Array([0, 1, 1, 3, 3, 2, 2, 0, 0, 3])));
-        const QQ = [],
-          FQ = [];
-        let wQ = 0;
-        for (let LQ = 0; LQ < this._capacity; LQ++) QQ.push(wQ), QQ.push(wQ + 1), QQ.push(wQ + 2), QQ.push(wQ), QQ.push(wQ + 2), QQ.push(wQ + 3), FQ.push(wQ, wQ + 1, wQ + 1, wQ + 2, wQ + 2, wQ + 3, wQ + 3, wQ, wQ, wQ + 3), wQ += 4;
-        this._indexBuffer = this._engine.createIndexBuffer(QQ), this._linesIndexBuffer = this._engine.createIndexBuffer(FQ)
-      }
-      getCapacity() {
-        return this._capacity
-      }
-      isAlive() {
-        return this._alive
-      }
-      isStarted() {
-        return this._started
-      }
-      _preStart() {}
-      start() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
-        if (!this.targetStopDuration && this._hasTargetStopDurationDependantGradient()) throw "Particle system started with a targetStopDuration dependant gradient (eg. startSizeGradients) but no targetStopDuration set";
-        if (QQ) return this.startDelay = QQ, void setTimeout((() => {
-          this.start(0)
-        }), QQ);
-        if (this._started = !0, this._stopped = !1, this._actualFrame = 0, this._preStart(), this._emitRateGradients && (this._emitRateGradients.length > 0 && (this._currentEmitRateGradient = this._emitRateGradients[0], this._currentEmitRate1 = this._currentEmitRateGradient.getFactor(), this._currentEmitRate2 = this._currentEmitRate1), this._emitRateGradients.length > 1 && (this._currentEmitRate2 = this._emitRateGradients[1].getFactor())), this._startSizeGradients && (this._startSizeGradients.length > 0 && (this._currentStartSizeGradient = this._startSizeGradients[0], this._currentStartSize1 = this._currentStartSizeGradient.getFactor(), this._currentStartSize2 = this._currentStartSize1), this._startSizeGradients.length > 1 && (this._currentStartSize2 = this._startSizeGradients[1].getFactor())), this.preWarmCycles) {
-          -1 !== this.emitter?.getClassName().indexOf("Mesh") && this.emitter.computeWorldMatrix(!0), this._scene?.updateTransformMatrix();
-          const QQ = this.noiseTexture;
-          if (QQ && QQ.onGeneratedObservable) QQ.onGeneratedObservable.addOnce((() => {
-            setTimeout((() => {
-              for (let FQ = 0; FQ < this.preWarmCycles; FQ++) this.animate(!0), QQ.render()
-            }))
-          }));
-          else
-            for (let FQ = 0; FQ < this.preWarmCycles; FQ++) this.animate(!0)
-        }
-        this.beginAnimationOnStart && this.animations && this.animations.length > 0 && this._scene && this._scene.beginAnimation(this, this.beginAnimationFrom, this.beginAnimationTo, this.beginAnimationLoop), this.onStartedObservable.notifyObservers(this)
-      }
-      stop() {
-        let QQ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this._stopped || (this.onStoppedObservable.notifyObservers(this), this._stopped = !0, this._postStop(QQ))
-      }
-      _postStop(QQ) {}
-      reset() {
-        this._stockParticles.length = 0, this._particles.length = 0
-      }
-      _appendParticleVertex(QQ, FQ, wQ, LQ) {
-        let qQ = QQ * this._vertexBufferSize;
-        const DQ = oQ.k.Ox[0].Qs(this._scene?.floatingOriginOffset || oQ.p.ZeroReadOnly);
-        if (this._vertexData[qQ++] = FQ.position.x + this.worldOffset.x - DQ.x, this._vertexData[qQ++] = FQ.position.y + this.worldOffset.y - DQ.y, this._vertexData[qQ++] = FQ.position.z + this.worldOffset.z - DQ.z, this._vertexData[qQ++] = FQ.color.r, this._vertexData[qQ++] = FQ.color.g, this._vertexData[qQ++] = FQ.color.b, this._vertexData[qQ++] = FQ.color.a, this._vertexData[qQ++] = FQ.angle, this._vertexData[qQ++] = FQ.scale.x * FQ.size, this._vertexData[qQ++] = FQ.scale.y * FQ.size, this._isAnimationSheetEnabled && (this._vertexData[qQ++] = FQ.cellIndex), this._isBillboardBased) 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexData[qQ++] = FQ.direction.x, this._vertexData[qQ++] = FQ.direction.y, this._vertexData[qQ++] = FQ.direction.z);
-        else if (FQ._properties.initialDirection) {
-          let QQ = FQ._properties.initialDirection;
-          this.isLocal && (oQ.p.TransformNormalToRef(QQ, this._emitterWorldMatrix, oQ.k.Ox[0]), QQ = oQ.k.Ox[0]), 0 === QQ.x && 0 === QQ.z && (QQ.x = .001), this._vertexData[qQ++] = QQ.x, this._vertexData[qQ++] = QQ.y, this._vertexData[qQ++] = QQ.z
-        } else {
-          let QQ = FQ.direction;
-          this.isLocal && (oQ.p.TransformNormalToRef(QQ, this._emitterWorldMatrix, oQ.k.Ox[0]), QQ = oQ.k.Ox[0]), 0 === QQ.x && 0 === QQ.z && (QQ.x = .001), this._vertexData[qQ++] = QQ.x, this._vertexData[qQ++] = QQ.y, this._vertexData[qQ++] = QQ.z
-        }
-        this._useRampGradients && FQ.remapData && (this._vertexData[qQ++] = FQ.remapData.x, this._vertexData[qQ++] = FQ.remapData.y, this._vertexData[qQ++] = FQ.remapData.z, this._vertexData[qQ++] = FQ.remapData.w), this._useInstancing || (this._isAnimationSheetEnabled && (0 === wQ ? wQ = this._epsilon : 1 === wQ && (wQ = 1 - this._epsilon), 0 === LQ ? LQ = this._epsilon : 1 === LQ && (LQ = 1 - this._epsilon)), this._vertexData[qQ++] = wQ, this._vertexData[qQ] = LQ)
-      }
-      _prepareParticle(QQ) {}
-      _createNewOnes(QQ) {
-        let FQ;
-        for (let wQ = 0; wQ < QQ && this._particles.length !== this._capacity; wQ++) {
-          FQ = this._createParticle(), this._particles.push(FQ);
-          let QQ = this._createQueueStart;
-          for (; QQ;) QQ.process(FQ, this), QQ = QQ.nextItem;
-          FQ._inheritParticleInfoToSubEmitters()
-        }
-      }
-      _update(QQ) {
-        if (this._alive = this._particles.length > 0, this.emitter.position) {
-          const QQ = this.emitter;
-          this._emitterWorldMatrix = QQ.getWorldMatrix()
-        } else {
-          const QQ = this.emitter;
-          this._emitterWorldMatrix = oQ.c.Translation(QQ.x, QQ.y, QQ.z)
-        }
-        this._emitterWorldMatrix.invertToRef(this._emitterInverseWorldMatrix), this.updateFunction(this._particles), this._createNewOnes(QQ)
-      }
-      static _GetAttributeNamesOrOptions() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const LQ = [DQ.h.PositionKind, DQ.h.ColorKind, "angle", "offset", "size"];
-        return QQ && LQ.push("cellIndex"), FQ || LQ.push("direction"), wQ && LQ.push("remapData"), LQ
-      }
-      static _GetEffectCreationOptions() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const LQ = ["invView", "view", "projection", "textureMask", "translationPivot", "eyePosition"];
-        return (0, VQ.d)(LQ), QQ && LQ.push("particlesInfos"), FQ && LQ.push("logarithmicDepthConstant"), wQ && (LQ.push("vFogInfos"), LQ.push("vFogColor")), LQ
-      }
-      fillDefines(QQ, FQ) {
-        let wQ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        if (this._scene && ((0, VQ.o)(this, this._scene, QQ), this.applyFog && this._scene.fogEnabled && 0 !== this._scene.fogMode && QQ.push("#define FOG")), this._isAnimationSheetEnabled && QQ.push("#define ANIMATESHEET"), this.useLogarithmicDepth && QQ.push("#define LOGARITHMICDEPTH"), FQ === CQ.BLENDMODE_MULTIPLY && QQ.push("#define BLENDMULTIPLYMODE"), this.isLocal && QQ.push("#define LOCAL"), this._useRampGradients && QQ.push("#define RAMPGRADIENT"), this._isBillboardBased) switch (QQ.push("#define BILLBOARD"), this.billboardMode) {
-          case 2:
-            QQ.push("#define BILLBOARDY");
-            break;
-          case 8:
-          case 9:
-            QQ.push("#define BILLBOARDSTRETCHED"), 9 === this.billboardMode && QQ.push("#define BILLBOARDSTRETCHED_LOCAL");
-            break;
-          case 7:
-            QQ.push("#define BILLBOARDMODE_ALL")
-        }
-        wQ && this._imageProcessingConfiguration && (this._imageProcessingConfiguration.prepareDefines(this._imageProcessingConfigurationDefines), QQ.push(this._imageProcessingConfigurationDefines.toString()))
-      }
-      fillUniformsAttributesAndSamplerNames(QQ, FQ, wQ) {
-        FQ.push(...UF._GetAttributeNamesOrOptions(this._isAnimationSheetEnabled, this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode, this._useRampGradients)), QQ.push(...UF._GetEffectCreationOptions(this._isAnimationSheetEnabled, this.useLogarithmicDepth, this.applyFog)), wQ.push("diffuseSampler", "rampSampler"), this._imageProcessingConfiguration && ((0, JQ.e)(QQ, this._imageProcessingConfigurationDefines), (0, JQ.c)(wQ, this._imageProcessingConfigurationDefines))
-      }
-      _getWrapper(QQ) {
-        var FQ;
-        const wQ = this._getCustomDrawWrapper(QQ);
-        if (wQ?.effect) return wQ;
-        const LQ = [];
-        this.fillDefines(LQ, QQ);
-        const oQ = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
-          DQ = IF.b._PrepareStringDefines(oQ, LQ),
-          kQ = DQ ? IF.b.GetConfiguration(oQ) : void 0;
-        let vQ = this._drawWrappers[oQ];
-        vQ || (vQ = this._drawWrappers[oQ] = [], 0 === oQ || this._renderPassObserver || (this._renderPassObserver = ((FQ = this._engine)._onReleaseRenderPassObservable ?? (FQ._onReleaseRenderPassObservable = new qQ.e)).add((QQ => {
-          const FQ = this._drawWrappers[QQ];
-          if (FQ) {
-            for (const QQ of FQ) QQ?.dispose();
-            delete this._drawWrappers[QQ]
-          }
-        }))));
-        let mQ = vQ[QQ];
-        mQ || (mQ = new fQ.d(this._engine), mQ.drawContext && (mQ.drawContext.useInstancing = this._useInstancing), vQ[QQ] = mQ);
-        const uQ = LQ.join("\n");
-        if (mQ.defines !== uQ) {
-          const QQ = [],
-            FQ = [],
-            wQ = [];
-          this.fillUniformsAttributesAndSamplerNames(FQ, QQ, wQ), DQ && (FQ.push("cameraInfo", "objectId", "meshBlendTag", "geometryZeroAlphaDiscard"), this.isLocal && void 0 !== kQ?.defines.PREPASS_LOCAL_POSITION_INDEX && FQ.push("inverseEmitterWM", "geometryWorldOffset")), mQ.setEffect(this._engine.createEffect("particles", {
-            attributes: QQ,
-            uniformsNames: FQ,
-            samplers: wQ,
-            defines: uQ,
-            shaderLanguage: this._shaderLanguage,
-            multiTarget: DQ,
-            indexParameters: DQ ? {
-              buffersCount: kQ?._mrtCount ?? 0
-            } : void 0
-          }, this._engine), uQ)
-        }
-        return mQ
-      }
-      _bindGeometryRendering(QQ) {
-        const FQ = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
-          wQ = IF.b.GetConfiguration(FQ);
-        if (!wQ?._defines) return;
-        QQ.setFloat("objectId", 0), QQ.setInt("meshBlendTag", 0);
-        const LQ = this._scene?.activeCamera;
-        if (QQ.setFloat2("cameraInfo", LQ?.minZ ?? 0, LQ?.maxZ ?? 1), this.isLocal && void 0 !== wQ.defines.PREPASS_LOCAL_POSITION_INDEX) {
-          QQ.setMatrix("inverseEmitterWM", this._emitterInverseWorldMatrix);
-          const FQ = this.worldOffset.subtractToRef(this._scene?.floatingOriginOffset || oQ.p.ZeroReadOnly, oQ.k.Ox[0]);
-          QQ.setVector3("geometryWorldOffset", FQ)
-        }
-      }
-      animate() {
-        let QQ, FQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (this._started && !this.paused) {
-          if (!FQ && this._scene) {
-            if (!this.isReady()) return;
-            if (this._currentRenderId === this._scene.getFrameId()) return;
-            this._currentRenderId = this._scene.getFrameId()
-          }
-          if (this._scaledUpdateSpeed = this.updateSpeed * (FQ ? this.preWarmStepOffset : this._scene?.getAnimationRatio() || 1), this.manualEmitCount > -1) QQ = this.manualEmitCount, this._newPartsExcess = 0, this.manualEmitCount = 0;
-          else {
-            const FQ = this._calculateEmitRate();
-            QQ = FQ * this._scaledUpdateSpeed | 0, this._newPartsExcess += FQ * this._scaledUpdateSpeed - QQ
-          }
-          if (this._newPartsExcess > 1 && (QQ += this._newPartsExcess | 0, this._newPartsExcess -= this._newPartsExcess | 0), this._alive = !1, this._stopped ? QQ = 0 : (this._actualFrame += this._scaledUpdateSpeed, this.targetStopDuration && this._actualFrame >= this.targetStopDuration && this.stop()), this._update(QQ), this._stopped && (this._alive || (this._started = !1, this.onAnimationEnd && this.onAnimationEnd(), this.disposeOnStop && this._scene && this._scene._toBeDisposed.push(this))), !FQ) {
-            let QQ = 0;
-            for (let FQ = 0; FQ < this._particles.length; FQ++) {
-              const wQ = this._particles[FQ];
-              this._appendParticleVertices(QQ, wQ), QQ += this._useInstancing ? 1 : 4
-            }
-            if (this._vertexBuffer)
-              if (this._useFixedCapacityForSnapshot) {
-                const QQ = this._vertexBufferSize * (this._useInstancing ? 1 : 4),
-                  FQ = this._particles.length;
-                FQ < this._fixedCapacityHighWaterMark && this._vertexData.fill(0, FQ * QQ, this._fixedCapacityHighWaterMark * QQ), this._fixedCapacityHighWaterMark = FQ, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
-              } else this._vertexBuffer.updateDirectly(this._vertexData, 0, this._particles.length)
-          }
-          0 === this.manualEmitCount && this.disposeOnStop && this.stop()
-        }
-      }
-      _initFixedCapacitySnapshotData() {
-        return !this._useFixedCapacityForSnapshot && (this._useFixedCapacityForSnapshot = !0, this._vertexData.fill(0), this._fixedCapacityHighWaterMark = 0, this._vertexBuffer?.updateDirectly(this._vertexData, 0, this._capacity), !0)
-      }
-      _clearFixedCapacitySnapshotData() {
-        if (!this._useFixedCapacityForSnapshot || !this._vertexBuffer || 0 === this._fixedCapacityHighWaterMark) return;
-        const QQ = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
-        this._vertexData.fill(0, 0, this._fixedCapacityHighWaterMark * QQ), this._fixedCapacityHighWaterMark = 0, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
-      }
-      _calculateEmitRate() {
-        let QQ = this.emitRate;
-        if (this._emitRateGradients && this._emitRateGradients.length > 0 && this.targetStopDuration) {
-          const FQ = this._actualFrame / this.targetStopDuration;
-          LQ.k.GetCurrentGradient(FQ, this._emitRateGradients, ((FQ, wQ, LQ) => {
-            FQ !== this._currentEmitRateGradient && (this._currentEmitRate1 = this._currentEmitRate2, this._currentEmitRate2 = wQ.getFactor(), this._currentEmitRateGradient = FQ), QQ = (0, YQ.Lerp)(this._currentEmitRate1, this._currentEmitRate2, LQ)
-          }))
-        }
-        return QQ
-      }
-      _appendParticleVertices(QQ, FQ) {
-        this._appendParticleVertex(QQ++, FQ, 0, 0), this._useInstancing || (this._appendParticleVertex(QQ++, FQ, 1, 0), this._appendParticleVertex(QQ++, FQ, 1, 1), this._appendParticleVertex(QQ, FQ, 0, 1))
-      }
-      rebuild() {
-        this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._createIndexBuffer(), this._spriteBuffer?._rebuild(), this._createVertexBuffers(), this.resetDrawCache()
-      }
-      async _initShaderSourceAsync() {
-        this._engine.isWebGPU && !UF.ForceGLSL ? (this._shaderLanguage = 1, await Promise.all([wQ.e(337).then((() => wQ(60676))), wQ.e(331).then((() => wQ(60680)))])) : await Promise.all([wQ.e(320).then((() => wQ(60684))), Promise.all([wQ.e(313), wQ.e(349)]).then((() => wQ(60691)))]), this._shadersLoaded = !0
-      }
-      isReady() {
-        if (!this._shadersLoaded) return !1;
-        if (!this.emitter || this._imageProcessingConfiguration && !this._imageProcessingConfiguration.isReady() || !this.particleTexture || !this.particleTexture.isReady()) return !1;
-        if (this.blendMode !== CQ.BLENDMODE_MULTIPLYADD) {
-          if (!this._getWrapper(this.blendMode).effect.isReady()) return !1
-        } else {
-          if (!this._getWrapper(CQ.BLENDMODE_MULTIPLY).effect.isReady()) return !1;
-          if (!this._getWrapper(CQ.BLENDMODE_ADD).effect.isReady()) return !1
-        }
-        return !0
-      }
-      _render(QQ) {
-        const FQ = this._getWrapper(QQ),
-          wQ = FQ.effect,
-          LQ = this._engine;
-        LQ.enableEffect(FQ);
-        const qQ = this.defaultViewMatrix ?? this._scene.getViewMatrix();
-        wQ.setTexture("diffuseSampler", this.particleTexture), wQ.setMatrix("view", qQ);
-        const DQ = this.defaultProjectionMatrix ?? this._scene.getProjectionMatrix();
-        if (wQ.setMatrix("projection", DQ), this._isAnimationSheetEnabled && this.particleTexture) {
-          const QQ = this.particleTexture.getBaseSize();
-          wQ.setFloat3("particlesInfos", this.spriteCellWidth / QQ.width, this.spriteCellHeight / QQ.height, this.spriteCellWidth / QQ.width)
-        }
-        if (wQ.setVector2("translationPivot", this.translationPivot), wQ.setFloat4("textureMask", this.textureMask.r, this.textureMask.g, this.textureMask.b, this.textureMask.a), this._isBillboardBased && this._scene) {
-          const QQ = this._scene.activeCamera;
-          wQ.setVector3("eyePosition", QQ.globalPosition)
-        }
-        this._rampGradientsTexture && (this._rampGradients && this._rampGradients.length || (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), wQ.setTexture("rampSampler", this._rampGradientsTexture));
-        const kQ = wQ.defines;
-        this._scene && ((0, VQ.h)(wQ, this, this._scene), this.applyFog && (0, hQ.g)(this._scene, void 0, wQ)), kQ.indexOf("#define BILLBOARDMODE_ALL") >= 0 && (qQ.invertToRef(oQ.k.Matrix[0]), wQ.setMatrix("invView", oQ.k.Matrix[0])), wQ._multiTarget && this._bindGeometryRendering(wQ), void 0 !== this._vertexArrayObject ? this._scene?.forceWireframe ? LQ.bindBuffers(this._vertexBuffers, this._linesIndexBufferUseInstancing, wQ) : (this._vertexArrayObject || (this._vertexArrayObject = this._engine.recordVertexArrayObject(this._vertexBuffers, this._indexBuffer, wQ)), this._engine.bindVertexArrayObject(this._vertexArrayObject, this._indexBuffer)) : this._indexBuffer ? LQ.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBuffer : this._indexBuffer, wQ) : LQ.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBufferUseInstancing : null, wQ), this.useLogarithmicDepth && this._scene && (0, hQ.r)(kQ, wQ, this._scene), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(wQ), this._setEngineBasedOnBlendMode(QQ), wQ._multiTarget && IF.b._BindZeroAlphaDiscard(LQ, wQ);
-        let vQ = !1;
-        try {
-          IF.b._BindAttachmentsForEffect(LQ, wQ) && (this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.notifyObservers(wQ), this._useInstancing ? this._scene?.forceWireframe ? LQ.drawElementsType(6, 0, 10, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : LQ.drawArraysType(7, 0, 4, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : this._scene?.forceWireframe ? LQ.drawElementsType(1, 0, 10 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)) : LQ.drawElementsType(0, 0, 6 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)), vQ = !0)
-        } finally {
-          IF.b._RestoreAttachments(LQ)
-        }
-        return vQ ? this._particles.length : 0
-      }
-      render() {
-        if (!this.isReady() || !this._particles.length && !this._useFixedCapacityForSnapshot) return 0;
-        const QQ = this._engine;
-        let FQ;
-        return QQ.setState && (QQ.setState(!1), this.forceDepthWrite && QQ.setDepthWrite(!0)), FQ = this.blendMode === CQ.BLENDMODE_MULTIPLYADD ? this._render(CQ.BLENDMODE_MULTIPLY) + this._render(CQ.BLENDMODE_ADD) : this._render(this.blendMode), this._engine.unbindInstanceAttributes(), this._engine.setAlphaMode(0), FQ
-      }
-      _onDispose() {}
-      dispose() {
-        let QQ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this._engine._onReleaseRenderPassObservable?.remove(this._renderPassObserver), this._renderPassObserver = null, this.resetDrawCache(), this._vertexBuffer && (this._vertexBuffer.dispose(), this._vertexBuffer = null), this._spriteBuffer && (this._spriteBuffer.dispose(), this._spriteBuffer = null), this._indexBuffer && (this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null), this._linesIndexBuffer && (this._engine._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null), this._linesIndexBufferUseInstancing && (this._engine._releaseBuffer(this._linesIndexBufferUseInstancing), this._linesIndexBufferUseInstancing = null), this._vertexArrayObject && (this._engine.releaseVertexArrayObject(this._vertexArrayObject), this._vertexArrayObject = null), QQ && this.particleTexture && (this.particleTexture.dispose(), this.particleTexture = null), QQ && this.noiseTexture && (this.noiseTexture.dispose(), this.noiseTexture = null), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._onDispose(FQ, wQ), this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.clear(), this._scene) {
-          const QQ = this._scene.fC.indexOf(this);
-          QQ > -1 && this._scene.fC.splice(QQ, 1), this._scene._activeParticleSystems.dispose()
-        }
-        this.zN.notifyObservers(this), this.zN.clear(), this.onStoppedObservable.clear(), this.onStartedObservable.clear(), this.reset(), this._isDisposed = !0
-      }
-    }
-    UF.ForceGLSL = !1;
-    var NF, TF = wQ(36741);
-    ! function(QQ) {
-      QQ[QQ.ATTACHED = 0] = "ATTACHED", QQ[QQ.END = 1] = "END"
-    }(NF || (NF = {}));
-    class KF {
-      constructor(QQ) {
-        if (this.particleSystem = QQ, this.type = 1, this.inheritDirection = !1, this.inheritedVelocityAmount = 0, !QQ.emitter || !QQ.emitter.dispose) {
-          const FQ = (0, TF.b)("BABYLON.AbstractMesh");
-          QQ.emitter = new FQ("SubemitterSystemEmitter", QQ.iN()), QQ._disposeEmitterOnDispose = !0
-        }
-      }
-      clone() {
-        let QQ = this.particleSystem.emitter;
-        if (QQ) {
-          if (QQ instanceof oQ.p) QQ = QQ.clone();
-          else if (-1 !== QQ.getClassName().indexOf("Mesh")) {
-            QQ = new((0, TF.b)("BABYLON.Mesh"))("", QQ.iN()), QQ.isVisible = !1
-          }
-        } else QQ = new oQ.p;
-        const FQ = new KF(this.particleSystem.clone(this.particleSystem.name, QQ));
-        return FQ.particleSystem.name += "Clone", FQ.type = this.type, FQ.inheritDirection = this.inheritDirection, FQ.inheritedVelocityAmount = this.inheritedVelocityAmount, FQ.particleSystem._disposeEmitterOnDispose = !0, FQ.particleSystem.disposeOnStop = !0, FQ
-      }
-      serialize() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const FQ = {};
-        return FQ.type = this.type, FQ.inheritDirection = this.inheritDirection, FQ.inheritedVelocityAmount = this.inheritedVelocityAmount, FQ.particleSystem = this.particleSystem.serialize(QQ), FQ
-      }
-      static _ParseParticleSystem(QQ, FQ, wQ) {
-        throw (0, zQ.k)("ParseParticle")
-      }
-      static Parse(QQ, FQ, wQ) {
-        const LQ = QQ.particleSystem,
-          qQ = new KF(KF._ParseParticleSystem(LQ, FQ, wQ, !0));
-        return qQ.type = QQ.type, qQ.inheritDirection = QQ.inheritDirection, qQ.inheritedVelocityAmount = QQ.inheritedVelocityAmount, qQ.particleSystem._isSubEmitter = !0, qQ
-      }
-      dispose() {
-        this.particleSystem.dispose()
-      }
-    }
-    var zF = wQ(39295),
-      lF = wQ(39426);
-    const jF = () => {};
-    class aF {
-      constructor() {
-        this.particlePositionGenerator = jF, this.particleDestinationGenerator = jF, this.particleDirectionGenerator = jF
-      }
-      startDirectionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = oQ.k.Ox[0];
-        if (this.particleDirectionGenerator && this.particleDirectionGenerator !== jF) this.particleDirectionGenerator(-1, wQ, qQ);
-        else if (this.particleDestinationGenerator && this.particleDestinationGenerator !== jF) {
-          this.particleDestinationGenerator(-1, wQ, qQ);
-          const QQ = oQ.k.Ox[1];
-          qQ.subtractToRef(wQ.position, QQ), QQ.scaleToRef(1 / wQ.lifeTime, qQ)
-        } else qQ.set(0, 0, 0);
-        LQ ? FQ.Qs(qQ) : oQ.p.TransformNormalToRef(qQ, QQ, FQ)
-      }
-      startPositionFunction(QQ, FQ, wQ, LQ) {
-        const qQ = oQ.k.Ox[0];
-        this.particlePositionGenerator && this.particlePositionGenerator !== jF ? this.particlePositionGenerator(-1, wQ, qQ) : qQ.set(0, 0, 0), LQ ? FQ.Qs(qQ) : oQ.p.TransformCoordinatesToRef(qQ, QQ, FQ)
-      }
-      clone() {
-        const QQ = new aF;
-        return bQ.b.DeepCopy(this, QQ), QQ
-      }
-      applyToShader(QQ) {}
-      buildUniformLayout(QQ) {}
-      getEffectDefines() {
-        return "#define CUSTOMEMITTER"
-      }
-      getClassName() {
-        return "CustomParticleEmitter"
-      }
-      serialize() {
-        const QQ = {};
-        return QQ.type = this.getClassName(), QQ.particlePositionGenerator = this.particlePositionGenerator, QQ.particleDestinationGenerator = this.particleDestinationGenerator, QQ
-      }
-      parse(QQ) {
-        QQ.particlePositionGenerator && (this.particlePositionGenerator = QQ.particlePositionGenerator), QQ.particleDestinationGenerator && (this.particleDestinationGenerator = QQ.particleDestinationGenerator)
-      }
-    }
-    const XF = oQ.p.Zero(),
-      fF = oQ.p.Zero(),
-      VF = oQ.p.Zero();
-    class hF {
-      constructor() {
-        this.strength = 0, this.position = oQ.p.Zero()
-      }
-      _processParticle(QQ, FQ) {
-        this.position.subtractToRef(QQ.position, XF);
-        const wQ = XF.lengthSquared() + 1;
-        XF.normalize().scaleToRef(this.strength / wQ, fF), fF.scaleToRef(FQ._tempScaledUpdateSpeed, VF), QQ.direction.addInPlace(VF)
-      }
-      serialize() {
-        return {
-          position: this.position.RLQ(),
-          strength: this.strength
-        }
-      }
-    }
-    const JF = ["level", "hasAlpha", "getAlphaFromRGB", "gammaSpace", "coordinatesIndex", "coordinatesMode", "wrapU", "wrapV", "wrapR", "anisotropicFilteringLevel", "uOffset", "vOffset", "uScale", "vScale", "uAng", "vAng", "wAng", "uRotationCenter", "vRotationCenter", "wRotationCenter"];
-    class EF extends UF {
-      constructor() {
-        super(...arguments), this._disposeEmitterOnDispose = !1, this.doNotSerialize = !1, this.canStart = () => !0, this._flowMap = null, this._flowMapUpdate = null, this._source = null, this._blockReference = 0, this.flowMapStrength = 1, this._attractorUpdate = null, this.metadata = null, this._emitFromParticle = QQ => {
-          if (!this._subEmitters || 0 === this._subEmitters.length) return;
-          const FQ = Math.floor(Math.random() * this._subEmitters.length);
-          for (const wQ of this._subEmitters[FQ])
-            if (1 === wQ.type) {
-              const FQ = wQ.clone();
-              QQ._inheritParticleInfoToSubEmitter(FQ), FQ.particleSystem._rootParticleSystem = this, this.activeSubSystems.push(FQ.particleSystem), FQ.particleSystem.start()
-            }
-        }
-      }
-      get source() {
-        return this._source
-      }
-      get isNodeGenerated() {
-        return null !== this._source
-      }
-      get flowMap() {
-        return this._flowMap
-      }
-      set flowMap(QQ) {
-        this._flowMap !== QQ && (this._flowMap = QQ, this._flowMapUpdate && (rF(this._flowMapUpdate), this._flowMapUpdate = null), QQ && (this._flowMapUpdate = {
-          process: QQ => {
-            const FQ = this.iN()?.getTransformMatrix();
-            this._flowMap._processParticle(QQ, this.flowMapStrength * this._tempScaledUpdateSpeed, FQ)
-          },
-          previousItem: null,
-          nextItem: null
-        }, sF(this._flowMapUpdate, this._directionProcessing)))
-      }
-      addAttractor(QQ) {
-        super.addAttractor(QQ), 1 === this._attractors.length && (this._attractorUpdate = {
-          process: QQ => {
-            for (const FQ of this._attractors) FQ._processParticle(QQ, this)
-          },
-          previousItem: null,
-          nextItem: null
-        }, sF(this._attractorUpdate, this._directionProcessing))
-      }
-      removeAttractor(QQ) {
-        super.removeAttractor(QQ), 0 === this._attractors.length && this._attractorUpdate && rF(this._attractorUpdate)
-      }
-      start() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
-        this.canStart() && super.start(QQ)
-      }
-      _prepareSubEmitterInternalArray() {
-        if (this._subEmitters = new Array, this.subEmitters)
-          for (const QQ of this.subEmitters) QQ instanceof EF ? this._subEmitters.push([new KF(QQ)]) : QQ instanceof KF ? this._subEmitters.push([QQ]) : QQ instanceof Array && this._subEmitters.push(QQ)
-      }
-      _stopSubEmitters() {
-        if (this.activeSubSystems) {
-          for (const QQ of this.activeSubSystems) QQ.stop(!0);
-          this.activeSubSystems = []
-        }
-      }
-      _removeFromRoot() {
-        if (!this._rootParticleSystem) return;
-        const QQ = this._rootParticleSystem.activeSubSystems.indexOf(this); - 1 !== QQ && this._rootParticleSystem.activeSubSystems.splice(QQ, 1), this._rootParticleSystem = null
-      }
-      _preStart() {
-        this._prepareSubEmitterInternalArray(), this._subEmitters && 0 != this._subEmitters.length && (this.activeSubSystems = [])
-      }
-      _postStop(QQ) {
-        QQ && this._stopSubEmitters()
-      }
-      _prepareParticle(QQ) {
-        if (this._subEmitters && this._subEmitters.length > 0) {
-          const FQ = this._subEmitters[Math.floor(Math.random() * this._subEmitters.length)];
-          QQ._properties.attachedSubEmitters = [];
-          for (const wQ of FQ)
-            if (0 === wQ.type) {
-              const FQ = wQ.clone();
-              QQ._properties.attachedSubEmitters.push(FQ), FQ.particleSystem.start()
-            }
-        }
-      }
-      _onDispose() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this._removeFromRoot(), this.subEmitters && !this._subEmitters && this._prepareSubEmitterInternalArray(), QQ && this.particles)
-          for (const wQ of this.particles)
-            if (wQ._properties.attachedSubEmitters)
-              for (let QQ = wQ._properties.attachedSubEmitters.length - 1; QQ >= 0; QQ -= 1) wQ._properties.attachedSubEmitters[QQ].dispose();
-        if (FQ && this.activeSubSystems)
-          for (let wQ = this.activeSubSystems.length - 1; wQ >= 0; wQ -= 1) this.activeSubSystems[wQ].dispose();
-        if (this._subEmitters && this._subEmitters.length) {
-          for (let QQ = 0; QQ < this._subEmitters.length; QQ++)
-            for (const FQ of this._subEmitters[QQ]) FQ.dispose();
-          this._subEmitters = [], this.subEmitters = []
-        }
-        this._disposeEmitterOnDispose && this.emitter && this.emitter.dispose && this.emitter.dispose(!0)
-      }
-      static _Parse(QQ, FQ, wQ, LQ) {
-        let qQ;
-        qQ = wQ instanceof zF.e ? null : wQ;
-        const DQ = (0, TF.b)("BABYLON.Texture");
-        if (DQ && qQ)
-          if (QQ.texture) FQ.particleTexture = DQ.Parse(QQ.texture, qQ, LQ);
-          else if (QQ.textureName) {
-          const wQ = QQ.textureSettings;
-          if (FQ.particleTexture = new DQ(LQ + QQ.textureName, qQ, !1, void 0 === QQ.invertY || QQ.invertY, wQ ? wQ.samplingMode : void 0), FQ.particleTexture.name = QQ.textureName, wQ) {
-            const QQ = FQ.particleTexture;
-            for (const FQ of JF) void 0 !== wQ[FQ] && (QQ[FQ] = wQ[FQ])
-          }
-        }
-        if (QQ.emitterId || 0 === QQ.emitterId || void 0 !== QQ.emitter ? (QQ.emitterId || 0 === QQ.emitterId) && qQ ? (FQ.emitter = qQ.getLastMeshById(QQ.emitterId), FQ.emitter || (FQ.emitter = oQ.p.Zero())) : FQ.emitter = oQ.p.FromArray(QQ.emitter) : FQ.emitter = oQ.p.Zero(), FQ.isLocal = !!QQ.isLocal, void 0 !== QQ.renderingGroupId && (FQ.renderingGroupId = QQ.renderingGroupId), void 0 !== QQ.isBillboardBased && (FQ.isBillboardBased = QQ.isBillboardBased), void 0 !== QQ.billboardMode && (FQ.billboardMode = QQ.billboardMode), void 0 !== QQ.useLogarithmicDepth && (FQ.useLogarithmicDepth = QQ.useLogarithmicDepth), QQ.animations) {
-          for (let wQ = 0; wQ < QQ.animations.length; wQ++) {
-            const LQ = QQ.animations[wQ],
-              qQ = (0, TF.b)("BABYLON.Animation");
-            qQ && FQ.animations.push(qQ.Parse(LQ))
-          }
-          FQ.beginAnimationOnStart = QQ.beginAnimationOnStart, FQ.beginAnimationFrom = QQ.beginAnimationFrom, FQ.beginAnimationTo = QQ.beginAnimationTo, FQ.beginAnimationLoop = QQ.beginAnimationLoop
-        }
-        if (QQ.autoAnimate && qQ && qQ.beginAnimation(FQ, QQ.autoAnimateFrom, QQ.autoAnimateTo, QQ.autoAnimateLoop, QQ.autoAnimateSpeed || 1), FQ.startDelay = 0 | QQ.startDelay, FQ.minAngularSpeed = QQ.minAngularSpeed, FQ.maxAngularSpeed = QQ.maxAngularSpeed, FQ.minSize = QQ.minSize, FQ.maxSize = QQ.maxSize, QQ.minScaleX && (FQ.minScaleX = QQ.minScaleX, FQ.maxScaleX = QQ.maxScaleX, FQ.minScaleY = QQ.minScaleY, FQ.maxScaleY = QQ.maxScaleY), void 0 !== QQ.preWarmCycles && (FQ.preWarmCycles = QQ.preWarmCycles, FQ.preWarmStepOffset = QQ.preWarmStepOffset), void 0 !== QQ.minInitialRotation && (FQ.minInitialRotation = QQ.minInitialRotation, FQ.maxInitialRotation = QQ.maxInitialRotation), FQ.minLifeTime = QQ.minLifeTime, FQ.maxLifeTime = QQ.maxLifeTime, FQ.minEmitPower = QQ.minEmitPower, FQ.maxEmitPower = QQ.maxEmitPower, FQ.emitRate = QQ.emitRate, FQ.gravity = oQ.p.FromArray(QQ.gravity), QQ.noiseStrength && (FQ.noiseStrength = oQ.p.FromArray(QQ.noiseStrength)), FQ.color1 = uQ.e.FromArray(QQ.color1), FQ.color2 = uQ.e.FromArray(QQ.color2), FQ.colorDead = uQ.e.FromArray(QQ.colorDead), FQ.updateSpeed = QQ.updateSpeed, FQ.targetStopDuration = QQ.targetStopDuration, FQ.blendMode = QQ.blendMode, QQ.colorGradients)
-          for (const oQ of QQ.colorGradients) FQ.addColorGradient(oQ.gradient, uQ.e.FromArray(oQ.color1), oQ.color2 ? uQ.e.FromArray(oQ.color2) : void 0);
-        if (QQ.rampGradients) {
-          for (const wQ of QQ.rampGradients) FQ.addRampGradient(wQ.gradient, uQ.b.FromArray(wQ.color));
-          FQ.useRampGradients = QQ.useRampGradients
-        }
-        if (QQ.colorRemapGradients)
-          for (const oQ of QQ.colorRemapGradients) FQ.addColorRemapGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.alphaRemapGradients)
-          for (const oQ of QQ.alphaRemapGradients) FQ.addAlphaRemapGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.sizeGradients)
-          for (const oQ of QQ.sizeGradients) FQ.addSizeGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.angularSpeedGradients)
-          for (const oQ of QQ.angularSpeedGradients) FQ.addAngularSpeedGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.velocityGradients)
-          for (const oQ of QQ.velocityGradients) FQ.addVelocityGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.dragGradients)
-          for (const oQ of QQ.dragGradients) FQ.addDragGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.emitRateGradients)
-          for (const oQ of QQ.emitRateGradients) FQ.addEmitRateGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.startSizeGradients)
-          for (const oQ of QQ.startSizeGradients) FQ.addStartSizeGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.lifeTimeGradients)
-          for (const oQ of QQ.lifeTimeGradients) FQ.addLifeTimeGradient(oQ.gradient, void 0 !== oQ.factor1 ? oQ.factor1 : oQ.factor, oQ.factor2);
-        if (QQ.limitVelocityGradients) {
-          for (const wQ of QQ.limitVelocityGradients) FQ.addLimitVelocityGradient(wQ.gradient, void 0 !== wQ.factor1 ? wQ.factor1 : wQ.factor, wQ.factor2);
-          FQ.limitVelocityDamping = QQ.limitVelocityDamping
-        }
-        if (QQ.noiseTexture && qQ) {
-          const wQ = (0, TF.b)("BABYLON.ProceduralTexture");
-          FQ.noiseTexture = wQ.Parse(QQ.noiseTexture, qQ, LQ)
-        }
-        let kQ;
-        if (QQ.particleEmitterType) {
-          switch (QQ.particleEmitterType.type) {
-            case "SphereParticleEmitter":
-              kQ = new tQ;
-              break;
-            case "SphereDirectedParticleEmitter":
-              kQ = new eQ;
-              break;
-            case "ConeEmitter":
-            case "ConeParticleEmitter":
-              kQ = new GQ;
-              break;
-            case "ConeDirectedParticleEmitter":
-              kQ = new pQ;
-              break;
-            case "CylinderParticleEmitter":
-              kQ = new MQ.e;
-              break;
-            case "CylinderDirectedParticleEmitter":
-              kQ = new MQ.d;
-              break;
-            case "HemisphericParticleEmitter":
-              kQ = new AQ;
-              break;
-            case "PointParticleEmitter":
-              kQ = new xQ;
-              break;
-            case "MeshParticleEmitter":
-              kQ = new cQ;
-              break;
-            case "CustomParticleEmitter":
-              kQ = new aF;
-              break;
-            default:
-              kQ = new HQ.d
-          }
-          kQ.parse(QQ.particleEmitterType, qQ)
-        } else kQ = new HQ.d, kQ.parse(QQ, qQ);
-        FQ.particleEmitterType = kQ, FQ.startSpriteCellID = QQ.startSpriteCellID, FQ.endSpriteCellID = QQ.endSpriteCellID, FQ.spriteCellLoop = QQ.spriteCellLoop ?? !0, FQ.spriteCellWidth = QQ.spriteCellWidth, FQ.spriteCellHeight = QQ.spriteCellHeight, FQ.spriteCellChangeSpeed = QQ.spriteCellChangeSpeed, FQ.spriteRandomStartCell = QQ.spriteRandomStartCell, FQ.disposeOnStop = QQ.disposeOnStop ?? !1, FQ.manualEmitCount = QQ.manualEmitCount ?? -1
-      }
-      static Parse(QQ, FQ, wQ) {
-        let LQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          qQ = arguments.length > 4 ? arguments[4] : void 0;
-        const DQ = QQ.name;
-        let kQ, vQ, mQ = null,
-          HQ = null;
-        if (FQ instanceof zF.e ? kQ = FQ : (vQ = FQ, kQ = vQ.Wx()), QQ.customShader && (0, zQ.b)(kQ.createEffectForParticles)) {
-          HQ = QQ.customShader;
-          const FQ = HQ.shaderOptions.defines.length > 0 ? HQ.shaderOptions.defines.join("\n") : "";
-          mQ = kQ.createEffectForParticles(HQ.shaderPath.fragmentElement, HQ.shaderOptions.uniforms, HQ.shaderOptions.samplers, FQ)
-        }
-        const bQ = new EF(DQ, qQ || QQ.MH, FQ, mQ, QQ.isAnimationSheetEnabled);
-        if (bQ.customShader = HQ, bQ._rootUrl = wQ, QQ.id && (bQ.id = QQ.id), QQ.subEmitters) {
-          bQ.subEmitters = [];
-          for (const LQ of QQ.subEmitters) {
-            const QQ = [];
-            for (const qQ of LQ) QQ.push(KF.Parse(qQ, FQ, wQ));
-            bQ.subEmitters.push(QQ)
-          }
-        }
-        if (QQ.attractors)
-          for (const uQ of QQ.attractors) {
-            const QQ = new hF;
-            QQ.position = oQ.p.FromArray(uQ.position), QQ.strength = uQ.strength, bQ.addAttractor(QQ)
-          }
-        return EF._Parse(QQ, bQ, FQ, wQ), QQ.textureMask && (bQ.textureMask = uQ.e.FromArray(QQ.textureMask)), QQ.worldOffset && (bQ.worldOffset = oQ.p.FromArray(QQ.worldOffset)), QQ.preventAutoStart && (bQ.preventAutoStart = QQ.preventAutoStart), QQ.metadata && (bQ.metadata = QQ.metadata), LQ || bQ.preventAutoStart || bQ.start(), bQ
-      }
-      serialize() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const FQ = {};
-        if (EF._Serialize(FQ, this, QQ), FQ.textureMask = this.textureMask.RLQ(), FQ.customShader = this.customShader, FQ.preventAutoStart = this.preventAutoStart, FQ.worldOffset = this.worldOffset.RLQ(), this.metadata && (FQ.metadata = this.metadata), this.subEmitters) {
-          FQ.subEmitters = [], this._subEmitters || this._prepareSubEmitterInternalArray();
-          for (const wQ of this._subEmitters) {
-            const LQ = [];
-            for (const FQ of wQ) FQ.particleSystem.doNotSerialize || LQ.push(FQ.serialize(QQ));
-            FQ.subEmitters.push(LQ)
-          }
-        }
-        if (this._attractors && this._attractors.length) {
-          FQ.attractors = [];
-          for (const QQ of this._attractors) FQ.attractors.push(QQ.serialize())
-        }
-        return FQ
-      }
-      static _Serialize(QQ, FQ, wQ) {
-        if (QQ.name = FQ.name, QQ.id = FQ.id, QQ.MH = FQ.getCapacity(), QQ.disposeOnStop = FQ.disposeOnStop, QQ.manualEmitCount = FQ.manualEmitCount, FQ.emitter.position) {
-          const wQ = FQ.emitter;
-          QQ.emitterId = wQ.id
-        } else {
-          const wQ = FQ.emitter;
-          QQ.emitter = wQ.RLQ()
-        }
-        if (FQ.particleEmitterType && (QQ.particleEmitterType = FQ.particleEmitterType.serialize()), FQ.particleTexture)
-          if (wQ) QQ.texture = FQ.particleTexture.serialize();
-          else {
-            const wQ = FQ.particleTexture;
-            QQ.textureName = FQ.particleTexture.name, QQ.invertY = !!wQ._invertY;
-            const LQ = {};
-            for (const QQ of JF) LQ[QQ] = wQ[QQ];
-            LQ.samplingMode = wQ.samplingMode, QQ.textureSettings = LQ
-          } QQ.isLocal = FQ.isLocal, lF.c.AppendSerializedAnimations(FQ, QQ), QQ.beginAnimationOnStart = FQ.beginAnimationOnStart, QQ.beginAnimationFrom = FQ.beginAnimationFrom, QQ.beginAnimationTo = FQ.beginAnimationTo, QQ.beginAnimationLoop = FQ.beginAnimationLoop, QQ.startDelay = FQ.startDelay, QQ.renderingGroupId = FQ.renderingGroupId, QQ.isBillboardBased = FQ.isBillboardBased, QQ.billboardMode = FQ.billboardMode, QQ.minAngularSpeed = FQ.minAngularSpeed, QQ.maxAngularSpeed = FQ.maxAngularSpeed, QQ.minSize = FQ.minSize, QQ.maxSize = FQ.maxSize, QQ.minScaleX = FQ.minScaleX, QQ.maxScaleX = FQ.maxScaleX, QQ.minScaleY = FQ.minScaleY, QQ.maxScaleY = FQ.maxScaleY, QQ.minEmitPower = FQ.minEmitPower, QQ.maxEmitPower = FQ.maxEmitPower, QQ.minLifeTime = FQ.minLifeTime, QQ.maxLifeTime = FQ.maxLifeTime, QQ.emitRate = FQ.emitRate, QQ.gravity = FQ.gravity.RLQ(), QQ.noiseStrength = FQ.noiseStrength.RLQ(), QQ.color1 = FQ.color1.RLQ(), QQ.color2 = FQ.color2.RLQ(), QQ.colorDead = FQ.colorDead.RLQ(), QQ.updateSpeed = FQ.updateSpeed, QQ.targetStopDuration = FQ.targetStopDuration, QQ.blendMode = FQ.blendMode, QQ.preWarmCycles = FQ.preWarmCycles, QQ.preWarmStepOffset = FQ.preWarmStepOffset, QQ.minInitialRotation = FQ.minInitialRotation, QQ.maxInitialRotation = FQ.maxInitialRotation, QQ.startSpriteCellID = FQ.startSpriteCellID, QQ.spriteCellLoop = FQ.spriteCellLoop, QQ.endSpriteCellID = FQ.endSpriteCellID, QQ.spriteCellChangeSpeed = FQ.spriteCellChangeSpeed, QQ.spriteCellWidth = FQ.spriteCellWidth, QQ.spriteCellHeight = FQ.spriteCellHeight, QQ.spriteRandomStartCell = FQ.spriteRandomStartCell, QQ.isAnimationSheetEnabled = FQ.isAnimationSheetEnabled, QQ.useLogarithmicDepth = FQ.useLogarithmicDepth;
-        const LQ = FQ.getColorGradients();
-        if (LQ) {
-          QQ.colorGradients = [];
-          for (const FQ of LQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              color1: FQ.color1.RLQ()
-            };
-            FQ.color2 ? wQ.color2 = FQ.color2.RLQ() : wQ.color2 = FQ.color1.RLQ(), QQ.colorGradients.push(wQ)
-          }
-        }
-        const qQ = FQ.getRampGradients();
-        if (qQ) {
-          QQ.rampGradients = [];
-          for (const FQ of qQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              color: FQ.color.RLQ()
-            };
-            QQ.rampGradients.push(wQ)
-          }
-          QQ.useRampGradients = FQ.useRampGradients
-        }
-        const oQ = FQ.getColorRemapGradients();
-        if (oQ) {
-          QQ.colorRemapGradients = [];
-          for (const FQ of oQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.colorRemapGradients.push(wQ)
-          }
-        }
-        const DQ = FQ.getAlphaRemapGradients();
-        if (DQ) {
-          QQ.alphaRemapGradients = [];
-          for (const FQ of DQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.alphaRemapGradients.push(wQ)
-          }
-        }
-        const kQ = FQ.getSizeGradients();
-        if (kQ) {
-          QQ.sizeGradients = [];
-          for (const FQ of kQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.sizeGradients.push(wQ)
-          }
-        }
-        const vQ = FQ.getAngularSpeedGradients();
-        if (vQ) {
-          QQ.angularSpeedGradients = [];
-          for (const FQ of vQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.angularSpeedGradients.push(wQ)
-          }
-        }
-        const mQ = FQ.getVelocityGradients();
-        if (mQ) {
-          QQ.velocityGradients = [];
-          for (const FQ of mQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.velocityGradients.push(wQ)
-          }
-        }
-        const uQ = FQ.getDragGradients();
-        if (uQ) {
-          QQ.dragGradients = [];
-          for (const FQ of uQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.dragGradients.push(wQ)
-          }
-        }
-        const HQ = FQ.getEmitRateGradients();
-        if (HQ) {
-          QQ.emitRateGradients = [];
-          for (const FQ of HQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.emitRateGradients.push(wQ)
-          }
-        }
-        const bQ = FQ.getStartSizeGradients();
-        if (bQ) {
-          QQ.startSizeGradients = [];
-          for (const FQ of bQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.startSizeGradients.push(wQ)
-          }
-        }
-        const YQ = FQ.getLifeTimeGradients();
-        if (YQ) {
-          QQ.lifeTimeGradients = [];
-          for (const FQ of YQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.lifeTimeGradients.push(wQ)
-          }
-        }
-        const xQ = FQ.getLimitVelocityGradients();
-        if (xQ) {
-          QQ.limitVelocityGradients = [];
-          for (const FQ of xQ) {
-            const wQ = {
-              gradient: FQ.gradient,
-              factor1: FQ.factor1
-            };
-            void 0 !== FQ.factor2 ? wQ.factor2 = FQ.factor2 : wQ.factor2 = FQ.factor1, QQ.limitVelocityGradients.push(wQ)
-          }
-          QQ.limitVelocityDamping = FQ.limitVelocityDamping
-        }
-        FQ.noiseTexture && (QQ.noiseTexture = FQ.noiseTexture.serialize())
-      }
-      clone(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const LQ = {
-          ...this._customWrappers
-        };
-        let qQ = null;
-        const oQ = this._engine;
-        if ((0, zQ.b)(oQ.createEffectForParticles) && null != this.customShader) {
-          qQ = this.customShader;
-          const QQ = qQ.shaderOptions.defines.length > 0 ? qQ.shaderOptions.defines.join("\n") : "",
-            FQ = oQ.createEffectForParticles(qQ.shaderPath.fragmentElement, qQ.shaderOptions.uniforms, qQ.shaderOptions.samplers, QQ);
-          LQ[0] ? LQ[0].effect = FQ : this.setCustomEffect(FQ, 0)
-        }
-        const DQ = this.serialize(wQ),
-          kQ = !1 === wQ && this.particleTexture ? this.particleTexture.clone() : null;
-        kQ && (DQ.textureName = void 0);
-        const vQ = EF.Parse(DQ, this._scene || this._engine, this._rootUrl);
-        return vQ.name = QQ, vQ.customShader = qQ, vQ._customWrappers = LQ, kQ && (vQ.particleTexture = kQ), void 0 === FQ && (FQ = this.emitter), this.noiseTexture && (vQ.noiseTexture = this.noiseTexture.clone()), vQ.emitter = FQ, this.preventAutoStart || vQ.start(), vQ
-      }
-    }
-    EF.BILLBOARDMODE_Y = 2, EF.BILLBOARDMODE_ALL = 7, EF.BILLBOARDMODE_STRETCHED = 8, EF.BILLBOARDMODE_STRETCHED_LOCAL = 9;
-    let nF = !1;
-    nF || (nF = !0, KF._ParseParticleSystem = EF.Parse)
-  },
-  41048: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      SkyMaterial: () => GQ,
-      _MaxColorValueForRenderTarget: () => MQ
-    });
-    var LQ = wQ(39402),
-      qQ = wQ(39409),
-      oQ = wQ(39426),
-      DQ = wQ(36688),
-      kQ = wQ(39711),
-      vQ = wQ(39768),
-      mQ = wQ(41005),
-      uQ = wQ(40554),
-      HQ = wQ(39491),
-      bQ = wQ(36741),
-      YQ = wQ(39790),
-      xQ = wQ(39770),
-      AQ = wQ(39754),
-      tQ = wQ(39752);
-    class eQ extends kQ.c {
-      constructor() {
-        super(), this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.POINTSIZE = !1, this.FOG = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.SKIPFINALCOLORCLAMP = !1, this.DITHER = !1, this.LOGARITHMICDEPTH = !1, this.SKY_RAW_HDR_OUTPUT = !1, this.rebuild()
-      }
-    }
+	/**
+	 * Called when a mob is spawned by a player
+	 */
+	var onPlayerSpawnMob: (playerId: PlayerId, mobId: MobId, mobType: MobType, x: number, y: number, z: number, mobHerdId: MobHerdId, playSoundOnSpawn: boolean) => void
 
-    function MQ(QQ) {
-      switch (QQ) {
-        case mQ.d.TEXTURETYPE_HALF_FLOAT:
-          return 65504;
-        case mQ.d.TEXTURETYPE_FLOAT:
-          return 3e38;
-        default:
-          return 1
-      }
-    }
-    let GQ = (() => {
-      var QQ;
-      let FQ, kQ, mQ, bQ, GQ, pQ, cQ, CQ, SQ, iQ, WQ, RQ, OQ, sQ, rQ, IQ = vQ.e,
-        UQ = [],
-        NQ = [],
-        TQ = [],
-        KQ = [],
-        zQ = [],
-        lQ = [],
-        jQ = [],
-        aQ = [],
-        XQ = [],
-        fQ = [],
-        VQ = [],
-        hQ = [],
-        JQ = [],
-        EQ = [],
-        nQ = [],
-        gQ = [],
-        PQ = [],
-        ZQ = [],
-        yQ = [],
-        BQ = [],
-        dQ = [],
-        QF = [],
-        FF = [],
-        wF = [],
-        LF = [],
-        qF = [],
-        oF = [],
-        DF = [],
-        kF = [],
-        vF = [];
-      return QQ = class extends IQ {
-        constructor(QQ, FQ) {
-          super(QQ, FQ, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.luminance = (0, LQ.l)(this, UQ, 1), this.turbidity = ((0, LQ.l)(this, NQ), (0, LQ.l)(this, TQ, 10)), this.rayleigh = ((0, LQ.l)(this, KQ), (0, LQ.l)(this, zQ, 2)), this.mieCoefficient = ((0, LQ.l)(this, lQ), (0, LQ.l)(this, jQ, .005)), this.mieDirectionalG = ((0, LQ.l)(this, aQ), (0, LQ.l)(this, XQ, .8)), this.distance = ((0, LQ.l)(this, fQ), (0, LQ.l)(this, VQ, 500)), this.inclination = ((0, LQ.l)(this, hQ), (0, LQ.l)(this, JQ, .49)), this.azimuth = ((0, LQ.l)(this, EQ), (0, LQ.l)(this, nQ, .25)), this.sunPosition = ((0, LQ.l)(this, gQ), (0, LQ.l)(this, PQ, new DQ.Ox(0, 100, 0))), this.useSunPosition = ((0, LQ.l)(this, ZQ), (0, LQ.l)(this, yQ, !1)), this.cameraOffset = ((0, LQ.l)(this, BQ), (0, LQ.l)(this, dQ, DQ.Ox.Zero())), this.up = ((0, LQ.l)(this, QF), (0, LQ.l)(this, FF, DQ.Ox.Up())), this.dithering = ((0, LQ.l)(this, wF), (0, LQ.l)(this, LF, !1)), this.rawHdrOutput = ((0, LQ.l)(this, qF), (0, LQ.l)(this, oF, !1)), this.cloudiness = ((0, LQ.l)(this, DF), (0, LQ.l)(this, kF, 0)), this._cameraPosition = ((0, LQ.l)(this, vF), DQ.Ox.Zero()), this._skyOrientation = new DQ.Quaternion
-        }
-        needAlphaBlending() {
-          return this.alpha < 1
-        }
-        needAlphaTesting() {
-          return !1
-        }
-        getAlphaTestTexture() {
-          return null
-        }
-        isReadyForSubMesh(FQ, wQ) {
-          const LQ = wQ._drawWrapper;
-          if (this.isFrozen && LQ.effect && LQ._wasPreviouslyReady) return !0;
-          wQ.materialDefines || (wQ.materialDefines = new eQ);
-          const qQ = wQ.materialDefines,
-            oQ = this.iN();
-          if (this._isReadyForSubMesh(wQ)) return !0;
-          if ((0, tQ.Y)(FQ, oQ, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, !1, qQ, void 0, void 0, void 0, this._isVertexOutputInvariant), (0, tQ.N)(FQ, qQ, !0, !1), qQ.IMAGEPROCESSINGPOSTPROCESS !== oQ.imageProcessingConfiguration.applyByPostProcess && qQ.markAsMiscDirty(), qQ.DITHER !== this.dithering && qQ.markAsMiscDirty(), qQ.SKY_RAW_HDR_OUTPUT !== this.rawHdrOutput && qQ.markAsMiscDirty(), qQ.isDirty) {
-            qQ.markAsProcessed(), oQ.resetCachedMaterial();
-            const FQ = new xQ.d;
-            qQ.FOG && FQ.addFallback(1, "FOG"), qQ.IMAGEPROCESSINGPOSTPROCESS = oQ.imageProcessingConfiguration.applyByPostProcess, qQ.DITHER = this.dithering, qQ.SKY_RAW_HDR_OUTPUT = this.rawHdrOutput;
-            const LQ = [uQ.d.PositionKind];
-            qQ.VERTEXCOLOR && LQ.push(uQ.d.ColorKind);
-            const DQ = "sky",
-              kQ = ["world", "viewProjection", "view", "vFogInfos", "vFogColor", "logarithmicDepthConstant", "pointSize", "luminance", "turbidity", "rayleigh", "mieCoefficient", "mieDirectionalG", "sunPosition", "cameraPosition", "cameraOffset", "up", "cloudiness", "maxColorValue"];
-            (0, AQ.d)(kQ);
-            const vQ = qQ.toString();
-            wQ.setEffect(oQ.Wx().createEffect(DQ, {
-              attributes: LQ,
-              uniformsNames: kQ,
-              uniformBuffersNames: [],
-              samplers: [],
-              defines: vQ,
-              fallbacks: FQ,
-              onCompiled: this.onCompiled,
-              onError: this.onError,
-              shaderLanguage: this._shaderLanguage,
-              extraInitializationsAsync: QQ._ShaderLoader.getLoadCallback(this._shaderLanguage)
-            }, oQ.Wx()), qQ, this._materialContext)
-          }
-          return !(!wQ.effect || !wQ.effect.isReady()) && (qQ._renderId = oQ.getRenderId(), LQ._wasPreviouslyReady = !0, !0)
-        }
-        bindForSubMesh(QQ, FQ, wQ) {
-          const LQ = this.iN(),
-            qQ = wQ.materialDefines;
-          if (!qQ) return;
-          const oQ = wQ.effect;
-          if (!oQ) return;
-          this._activeEffect = oQ, this.bindOnlyWorldMatrix(QQ), this._activeEffect.setMatrix("viewProjection", LQ.getTransformMatrix()), this._mustRebind(LQ, oQ, wQ) && ((0, AQ.h)(oQ, this, LQ), this.pointsCloud && this._activeEffect.setFloat("pointSize", this.pointSize), this._useLogarithmicDepth && (0, tQ.r)(qQ, oQ, LQ)), LQ.fogEnabled && FQ.applyFog && LQ.fogMode !== HQ.d.FOGMODE_NONE && this._activeEffect.setMatrix("view", LQ.getViewMatrix()), (0, tQ.g)(LQ, FQ, this._activeEffect, this.rawHdrOutput);
-          const kQ = LQ.activeCamera;
-          if (kQ) {
-            const QQ = kQ.getWorldMatrix();
-            this._cameraPosition.x = QQ.m[12], this._cameraPosition.y = QQ.m[13], this._cameraPosition.z = QQ.m[14], this._activeEffect.setVector3("cameraPosition", DQ.TmpVectors.Ox[0].Qs(this._cameraPosition).gLQ(LQ.floatingOriginOffset))
-          }
-          if (this._activeEffect.setVector3("cameraOffset", this.cameraOffset), this._activeEffect.setVector3("up", this.up), (this.rawHdrOutput || this.luminance > 0) && this._activeEffect.setFloat("luminance", this.luminance), this._activeEffect.setFloat("turbidity", this.turbidity), this._activeEffect.setFloat("rayleigh", this.rayleigh), this._activeEffect.setFloat("mieCoefficient", this.mieCoefficient), this._activeEffect.setFloat("mieDirectionalG", this.mieDirectionalG), this._activeEffect.setFloat("cloudiness", this.cloudiness), this.rawHdrOutput) {
-            const QQ = LQ.Wx()._currentRenderTarget;
-            this._activeEffect.setFloat("maxColorValue", MQ(QQ?.texture?.type))
-          }
-          if (!this.useSunPosition) {
-            const QQ = Math.PI * (this.inclination - .5),
-              FQ = 2 * Math.PI * (this.azimuth - .5);
-            this.sunPosition.x = this.distance * Math.cos(FQ) * Math.cos(QQ), this.sunPosition.y = this.distance * Math.sin(-QQ), this.sunPosition.z = this.distance * Math.sin(FQ) * Math.cos(QQ), DQ.Quaternion.FromUnitVectorsToRef(DQ.Ox.UpReadOnly, this.up, this._skyOrientation), this.sunPosition.rotateByQuaternionToRef(this._skyOrientation, this.sunPosition)
-          }
-          this._activeEffect.setVector3("sunPosition", this.sunPosition), this._afterBind(FQ, this._activeEffect, wQ)
-        }
-        getAnimatables() {
-          return []
-        }
-        dispose(QQ) {
-          super.dispose(QQ)
-        }
-        clone(FQ) {
-          return oQ.c.Clone((() => new QQ(FQ, this.iN())), this)
-        }
-        serialize() {
-          const QQ = super.serialize();
-          return QQ.customType = "BABYLON.SkyMaterial", QQ
-        }
-        getClassName() {
-          return "SkyMaterial"
-        }
-        static Parse(FQ, wQ, LQ) {
-          return oQ.c.Parse((() => new QQ(FQ.name, wQ)), FQ, wQ, LQ)
-        }
-      }, (() => {
-        const wQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(IQ[Symbol.metadata] ?? null) : void 0;
-        FQ = [(0, qQ.I)()], kQ = [(0, qQ.I)()], mQ = [(0, qQ.I)()], bQ = [(0, qQ.I)()], GQ = [(0, qQ.I)()], pQ = [(0, qQ.I)()], cQ = [(0, qQ.I)()], CQ = [(0, qQ.I)()], SQ = [(0, qQ.F)()], iQ = [(0, qQ.I)()], WQ = [(0, qQ.F)()], RQ = [(0, qQ.F)()], OQ = [(0, qQ.I)()], sQ = [(0, qQ.I)()], rQ = [(0, qQ.I)()], (0, LQ.i)(null, null, FQ, {
-          kind: "field",
-          name: "luminance",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "luminance" in QQ,
-            get: QQ => QQ.luminance,
-            set: (QQ, FQ) => {
-              QQ.luminance = FQ
-            }
-          },
-          metadata: wQ
-        }, UQ, NQ), (0, LQ.i)(null, null, kQ, {
-          kind: "field",
-          name: "turbidity",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "turbidity" in QQ,
-            get: QQ => QQ.turbidity,
-            set: (QQ, FQ) => {
-              QQ.turbidity = FQ
-            }
-          },
-          metadata: wQ
-        }, TQ, KQ), (0, LQ.i)(null, null, mQ, {
-          kind: "field",
-          name: "rayleigh",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "rayleigh" in QQ,
-            get: QQ => QQ.rayleigh,
-            set: (QQ, FQ) => {
-              QQ.rayleigh = FQ
-            }
-          },
-          metadata: wQ
-        }, zQ, lQ), (0, LQ.i)(null, null, bQ, {
-          kind: "field",
-          name: "mieCoefficient",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "mieCoefficient" in QQ,
-            get: QQ => QQ.mieCoefficient,
-            set: (QQ, FQ) => {
-              QQ.mieCoefficient = FQ
-            }
-          },
-          metadata: wQ
-        }, jQ, aQ), (0, LQ.i)(null, null, GQ, {
-          kind: "field",
-          name: "mieDirectionalG",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "mieDirectionalG" in QQ,
-            get: QQ => QQ.mieDirectionalG,
-            set: (QQ, FQ) => {
-              QQ.mieDirectionalG = FQ
-            }
-          },
-          metadata: wQ
-        }, XQ, fQ), (0, LQ.i)(null, null, pQ, {
-          kind: "field",
-          name: "distance",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "distance" in QQ,
-            get: QQ => QQ.distance,
-            set: (QQ, FQ) => {
-              QQ.distance = FQ
-            }
-          },
-          metadata: wQ
-        }, VQ, hQ), (0, LQ.i)(null, null, cQ, {
-          kind: "field",
-          name: "inclination",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "inclination" in QQ,
-            get: QQ => QQ.inclination,
-            set: (QQ, FQ) => {
-              QQ.inclination = FQ
-            }
-          },
-          metadata: wQ
-        }, JQ, EQ), (0, LQ.i)(null, null, CQ, {
-          kind: "field",
-          name: "azimuth",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "azimuth" in QQ,
-            get: QQ => QQ.azimuth,
-            set: (QQ, FQ) => {
-              QQ.azimuth = FQ
-            }
-          },
-          metadata: wQ
-        }, nQ, gQ), (0, LQ.i)(null, null, SQ, {
-          kind: "field",
-          name: "sunPosition",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "sunPosition" in QQ,
-            get: QQ => QQ.sunPosition,
-            set: (QQ, FQ) => {
-              QQ.sunPosition = FQ
-            }
-          },
-          metadata: wQ
-        }, PQ, ZQ), (0, LQ.i)(null, null, iQ, {
-          kind: "field",
-          name: "useSunPosition",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "useSunPosition" in QQ,
-            get: QQ => QQ.useSunPosition,
-            set: (QQ, FQ) => {
-              QQ.useSunPosition = FQ
-            }
-          },
-          metadata: wQ
-        }, yQ, BQ), (0, LQ.i)(null, null, WQ, {
-          kind: "field",
-          name: "cameraOffset",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "cameraOffset" in QQ,
-            get: QQ => QQ.cameraOffset,
-            set: (QQ, FQ) => {
-              QQ.cameraOffset = FQ
-            }
-          },
-          metadata: wQ
-        }, dQ, QF), (0, LQ.i)(null, null, RQ, {
-          kind: "field",
-          name: "up",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "up" in QQ,
-            get: QQ => QQ.up,
-            set: (QQ, FQ) => {
-              QQ.up = FQ
-            }
-          },
-          metadata: wQ
-        }, FF, wF), (0, LQ.i)(null, null, OQ, {
-          kind: "field",
-          name: "dithering",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "dithering" in QQ,
-            get: QQ => QQ.dithering,
-            set: (QQ, FQ) => {
-              QQ.dithering = FQ
-            }
-          },
-          metadata: wQ
-        }, LF, qF), (0, LQ.i)(null, null, sQ, {
-          kind: "field",
-          name: "rawHdrOutput",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "rawHdrOutput" in QQ,
-            get: QQ => QQ.rawHdrOutput,
-            set: (QQ, FQ) => {
-              QQ.rawHdrOutput = FQ
-            }
-          },
-          metadata: wQ
-        }, oF, DF), (0, LQ.i)(null, null, rQ, {
-          kind: "field",
-          name: "cloudiness",
-          static: !1,
-          private: !1,
-          access: {
-            has: QQ => "cloudiness" in QQ,
-            get: QQ => QQ.cloudiness,
-            set: (QQ, FQ) => {
-              QQ.cloudiness = FQ
-            }
-          },
-          metadata: wQ
-        }, kF, vF), wQ && Object.defineProperty(QQ, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: wQ
-        })
-      })(), QQ._ShaderLoader = new YQ.b((() => [wQ.e(321).then((() => wQ(60695))), wQ.e(314).then((() => wQ(60699)))]), (() => [wQ.e(338).then((() => wQ(60704))), wQ.e(332).then((() => wQ(60709)))])), QQ
-    })();
-    (0, bQ.e)("BABYLON.SkyMaterial", GQ)
+	/**
+	 * Called when a mob is spawned by the world
+	 */
+	var onWorldSpawnMob: (mobId: MobId, mobType: MobType, x: number, y: number, z: number, mobHerdId: MobHerdId, playSoundOnSpawn: boolean) => void
+
+	/**
+	 * Called when the world tries to despawn a mob, e.g. one far from every player. Not called when a mob is killed: use onMobDespawned for that.
+	 * Return "preventDespawn" to prevent the mob from despawning.
+	 * @param mobId - The id of the mob despawned
+	 */
+	var onWorldAttemptDespawnMob: (mobId: MobId) => void | "preventDespawn"
+
+	/**
+	 * Called when a mob is gone for any reason: killed, despawned by the world, or removed by code. Use it to know when mobs you spawned are dead.
+	 * @param mobId - The id of the mob despawned
+	 */
+	var onMobDespawned: (mobId: MobId) => void
+
+	/**
+	 * Called when a vehicle is spawned on a player's behalf.
+	 * Return "preventSpawn" to prevent the vehicle from spawning.
+	 */
+	var onPlayerAttemptSpawnVehicle: (playerId: PlayerId, vehicleType: MeshEntityVehicleType, x: number, y: number, z: number) => void | "preventSpawn"
+
+	/**
+	 * Called when the world attempts to spawn a vehicle.
+	 * Return "preventSpawn" to prevent the vehicle from spawning.
+	 * @param vehicleType - The type of vehicle
+	 * @param x - The potential x coordinate of the vehicle
+	 * @param y - The potential y coordinate of the vehicle
+	 * @param z - The potential z coordinate of the vehicle
+	 */
+	var onWorldAttemptSpawnVehicle: (vehicleType: MeshEntityVehicleType, x: number, y: number, z: number) => void | "preventSpawn"
+
+	/**
+	 * Called when a vehicle is spawned by a player, e.g. by placing a boat
+	 */
+	var onPlayerSpawnVehicle: (playerId: PlayerId, vehicleEId: EntityId, vehicleType: MeshEntityVehicleType, x: number, y: number, z: number) => void
+
+	/**
+	 * Called when a vehicle is spawned by the world
+	 */
+	var onWorldSpawnVehicle: (vehicleEId: EntityId, vehicleType: MeshEntityVehicleType, x: number, y: number, z: number) => void
+
+	/**
+	 * Called when a vehicle is despawned
+	 * @param vehicleEId - The id of the vehicle despawned
+	 * @param vehicleType - The type of vehicle despawned
+	 */
+	var onVehicleDespawned: (vehicleEId: EntityId, vehicleType: MeshEntityVehicleType) => void
+
+	/**
+	 * Called when any non-player entity is deleted, after any type specific callback such as "onMobDespawned".
+	 * Not called when an item drop is picked up or expires, or when a throwable expires or hits something.
+	 * @param eId - The id of the entity deleted
+	 * @param entityType - What the entity was: for a mob, its mob type (e.g. "Draugr Zombie"), never "mob"; "Item" for an item drop
+	 */
+	var onEntityDeleted: (eId: EntityId, entityType: EntityType) => void
+
+	/**
+	 * Called when a player attacks another player
+	 * @param playerId - The id of the player attacking
+	 */
+	var onPlayerAttack: (playerId: string) => void
+
+	/**
+	 * Called when a player is damaging another player
+	 * Return "preventDamage" to prevent damage
+	 * Return number to change damage dealt to that amount
+	 * Sometimes the damager will have left the game (e.g. spikes placer);
+	 * in this case, attackingPlayer will be the damagedPlayer,
+	 * but we pass damagerDbId for use cases where it's important.
+	 */
+	var onPlayerDamagingOtherPlayer: (attackingPlayer: PlayerId, damagedPlayer: PlayerId, damageDealt: number, withItem: string, bodyPartHit: LifeformBodyPart, damagerDbId: PlayerDbId, damageInfo: DamageInfo) => number | void | "preventDamage"
+
+	/**
+	 * Called when a player is damaging a mob
+	 * Return "preventDamage" to prevent damage
+	 * Return number to change damage dealt to that amount
+	 */
+	var onPlayerDamagingMob: (playerId: PlayerId, mobId: MobId, damageDealt: number, withItem: string, damagerDbId: PlayerDbId, damageInfo: DamageInfo) => number | void | "preventDamage"
+
+	/**
+	 * Called when a mob is damaging a player
+	 * Return "preventDamage" to prevent damage
+	 * Return number to change damage dealt to that amount
+	 * @param attackingMob the id of the mob damaging the player
+	 * @param damagedPlayer the id of the player being damaged
+	 * @param damageDealt the amount of damage dealt
+	 * @param withItem the item used to attack
+	 * @param damageInfo what dealt the hit: a melee swing, an explosion, a projectile, etc.
+	 */
+	var onMobDamagingPlayer: (attackingMob: MobId, damagedPlayer: PlayerId, damageDealt: number, withItem: string, damageInfo: DamageInfo) => number | void | "preventDamage"
+
+	/**
+	 * Called when a mob is damaging another mob
+	 * Return "preventDamage" to prevent damage
+	 * Return number to change damage dealt to that amount
+	 * @param attackingMob the id of the mob attacking
+	 * @param damagedMob the id of the mob being damaged
+	 * @param damageDealt the amount of damage dealt
+	 * @param withItem the item used to attack
+	 * @param damageInfo what dealt the hit: a melee swing, an explosion, a projectile, etc.
+	 */
+	var onMobDamagingOtherMob: (attackingMob: MobId, damagedMob: MobId, damageDealt: number, withItem: string, damageInfo: DamageInfo) => number | void | "preventDamage"
+
+	/**
+	 * Called when a player is about to be killed
+	 * Return "preventDeath" to prevent the player from being killed
+	 * @param killedPlayer - The id of the player being killed
+	 * @param attackingLifeform - The optional id of the lifeform attacking the player
+	 */
+	var onAttemptKillPlayer: (killedPlayer: PlayerId, attackingLifeform?: LifeformId) => void | "preventDeath"
+
+	/**
+	 * Called when a player kills another player
+	 * Return "keepInventory" to not drop the player's inventory
+	 * @param attackingPlayer - The id of the player attacking
+	 * @param killedPlayer - The id of the player killed
+	 * @param damageDealt - The amount of damage dealt
+	 * @param withItem - The item used to attack
+	 */
+	var onPlayerKilledOtherPlayer: (attackingPlayer: string, killedPlayer: string, damageDealt: number, withItem: string) => void | "keepInventory"
+
+	/**
+	 * Called when a mob kills a player
+	 * Return "keepInventory" to not drop the player's inventory
+	 * @param attackingMob - The id of the mob attacking
+	 * @param killedPlayer - The id of the player killed
+	 * @param damageDealt - The amount of damage dealt
+	 * @param withItem - The item used to attack
+	 */
+	var onMobKilledPlayer: (attackingMob: any, killedPlayer: any, damageDealt: any, withItem: any) => void | "keepInventory"
+
+	/**
+	 * Called when a player kills a mob
+	 * Return "preventDrop" to prevent the mob from dropping items
+	 */
+	var onPlayerKilledMob: (playerId: PlayerId, mobId: MobId, damageDealt: number, withItem: string) => void | "preventDrop"
+
+	/**
+	 * Called when a mob kills another mob
+	 * Return "preventDrop" to prevent the mob from dropping items
+	 * @param attackingMob - The id of the mob attacking
+	 * @param killedMob - The id of the mob killed
+	 * @param damageDealt - The amount of damage dealt
+	 * @param withItem - The item used to attack
+	 */
+	var onMobKilledOtherMob: (attackingMob: MobId, killedMob: MobId, damageDealt: number, withItem: string) => void | "preventDrop"
+
+	/**
+	 * Called when a player is affected by a new potion effect
+	 * @param initiatorId - The id of the player who initiated the potion effect
+	 * @param targetId - The id of the player who has started being affected
+	 * @param effectName - The name of the potion effect
+	 */
+	var onPlayerPotionEffect: (initiatorId: string, targetId: string, effectName: "Damage" | "Speed" | "Damage Reduction" | "Invisible" | "Jump Boost" | "Knockback" | "Poisoned" | "Slowness" | "Weakness" | "Cleansed" | "Instant Damage" | "Health Regen" | "Healing Pulse" | "Instant Health" | "Haste" | "Shield" | "Double Jump" | "Heat Resistance" | "Thief" | "X-Ray Vision" | "Mining Yield" | "Brain Rot" | "Aura" | "Wall Climbing" | "Air Walk" | "Pickpocketer" | "Lifesteal" | "Bounciness" | "Blindness" | "Poopy" | "Glowing" | "Night Vision") => void | "preventEffect"
+
+	/**
+	 * Called when a player is damaging a mesh entity
+	 */
+	var onPlayerDamagingMeshEntity: (playerId: PlayerId, damagedId: EntityId, damageDealt: number, withItem: string) => void
+
+	/**
+	 * Called when a player breaks a mesh entity
+	 * @param playerId - The id of the player breaking the mesh entity
+	 * @param entityId - The id of the mesh entity being broken
+	 */
+	var onPlayerBreakMeshEntity: (playerId: PlayerId, entityId: EntityId) => void
+
+	/**
+	 * Called when a player uses a throwable item
+	 */
+	var onPlayerUsedThrowable: (playerId: PlayerId, throwableName: ThrowableItem, thrownEntityId: EntityId) => void
+
+	/**
+	 * Called when a player's thrown projectile hits the terrain
+	 */
+	var onPlayerThrowableHitTerrain: (playerId: PlayerId, throwableName: ThrowableItem, thrownEntityId: EntityId) => void
+
+	/**
+	 * Set client option \`touchscreenActionButton\` to take effect
+	 * Called when a player presses the touchscreen action button
+	 * Called for both touchDown and touchUp
+	 * @param playerId - The id of the player pressing the touchscreen action button
+	 * @param touchDown - Whether the touchscreen action button was pressed or released
+	 */
+	var onTouchscreenActionButton: (playerId: PlayerId, touchDown: boolean) => void
+
+	/**
+	 * Called when a player claims a task
+	 * @param playerId - The id of the player claiming the task
+	 * @param taskId - The id of the task being claimed
+	 * @param isPromoTask - Whether the task is a promo task
+	 * @param claimedRewards - The rewards claimed by the player
+	 */
+	var onTaskClaimed: (playerId: string, taskId: any, isPromoTask: any, claimedRewards: any) => any
+
+	/**
+	 * Called when a chunk is first loaded
+	 * API Methods that modify the chunk like setBlock cannot be used here to make
+	 * persisted changes, and will introduce client-server desync most cases,
+	 * but might have some creative uses if you know what you're doing.
+	 * For most use cases, consider using another callback e.g. tick.
+	 * @param chunkId - The id of the chunk being loaded
+	 * @param chunk - The chunk being loaded, which can be modified by this callback
+	 * For world code callbacks this value will always be null.
+	 * @param wasPersistedChunk - Whether the chunk was persisted
+	 */
+	var onChunkLoaded: (chunkId: string, chunk: LoadedChunk, wasPersistedChunk: boolean) => void
+
+	/**
+	 * Called when a player requests a chunk
+	 */
+	var onPlayerRequestChunk: (playerId: PlayerId, chunkX: number, chunkY: number, chunkZ: number, chunkId: string) => void
+
+	/**
+	 * Called when an item drop is created
+	 */
+	var onItemDropCreated: (itemEId: EntityId, itemName: string, itemAmount: number, x: number, y: number, z: number) => void
+
+	/**
+	 * Called when a player starts charging an item
+	 * @param playerId - The id of the player charging the item
+	 * @param itemName - The name of the item being charged
+	 */
+	var onPlayerStartChargingItem: (playerId: PlayerId, itemName: string) => void | "preventCharge"
+
+	/**
+	 * Called when a player finishes charging an item
+	 */
+	var onPlayerFinishChargingItem: (playerId: PlayerId, used: boolean, itemName: string, duration: number) => void
+
+	/**
+	 * Called once when a fishing hook first enters water. Coordinates are the bob's position at water entry.
+	 * Return "preventFish" to cancel, or { caughtItemName?, biteDelayMs?, qte? } to select the fish and override the rod's bite delay
+	 * and nine-second timed-click QTE. Default delays are Rusty 7–9 seconds, Sturdy 5–7, and Carbon/other rods 2–4.
+	 * The selected fish is fixed for the attempt; omitting caughtItemName uses the engine's default fish selection.
+	 */
+	var onPlayerAttemptFish: (playerId: PlayerId, rodName: string, x: number, y: number, z: number) => void | FishingAttemptOptions | "preventFish"
+
+	/**
+	 * Called after the fishing QTE succeeds and the bob/session have been removed.
+	 * Coordinates are the fishing position captured at water entry. caughtItemName is the item selected for the attempt.
+	 * Returning nothing gives one of that item, or drops it if the inventory is full.
+	 * Return "preventDrop" to suppress the default reward and award custom catches here instead.
+	 * Return "preventItemGrant" to deliver the item yourself while keeping the default catch effects.
+	 */
+	var onPlayerSucceededFishCatch: (playerId: PlayerId, rodName: string, x: number, y: number, z: number, caughtItemName: ItemName) => void | "preventDrop" | "preventItemGrant"
+
+	/**
+	 * Called after the fishing QTE fails or its time window expires, after removing the bob/session.
+	 * Coordinates are the fishing position captured at water entry. Retracting, switching rods, dying, and leaving cancel silently.
+	 * caughtItemName is the item selected for the failed attempt; no reward is given.
+	 */
+	var onPlayerFailedFishCatch: (playerId: PlayerId, rodName: string, x: number, y: number, z: number, caughtItemName: ItemName) => void
+
+	
+	var onPlayerFinishQTE: (playerId: PlayerId, qteId: QTERequestId, result: boolean) => void
+
+	/**
+	 * Called when a player opens or closes the shop menu
+	 * @param playerId - The id of the player whose shop menu changed
+	 * @param isOpen - Whether the shop menu is now open
+	 */
+	var onPlayerToggledShopMenu: (playerId: PlayerId, isOpen: boolean) => void
+
+	/** Called after a player plays an emote from the emote wheel. */
+	var onPlayerPlayedEmote: (playerId: PlayerId, emoteId: string) => void
+
+	/**
+	 * Called when a player enters a vehicle
+	 * @param playerId - The id of the player that entered the vehicle
+	 * @param vehicleType - The type of the vehicle
+	 * @param vehicleEId - The id of the vehicle
+	 */
+	var onPlayerEnteredVehicle: (playerId: PlayerId, vehicleType: MeshEntityVehicleType, vehicleEId: EntityId) => void
+
+	/**
+	 * Called when a player exits a vehicle
+	 * @param playerId - The id of the player that exited the vehicle
+	 * @param vehicleType - The type of the vehicle
+	 * @param vehicleEId - The id of the vehicle
+	 */
+	var onPlayerExitedVehicle: (playerId: PlayerId, vehicleType: MeshEntityVehicleType, vehicleEId: EntityId) => void
+
+	/**
+	 * Called after a player successfully buys a shop item
+	 * @param playerId - The id of the player that bought the item
+	 * @param categoryKey - The shop category key
+	 * @param itemKey - The shop item key
+	 * @param item - The resolved shop item (with per-player overrides applied, internal properties stripped)
+	 * @param userInput - The user input provided, if the item has a userInput config
+	 */
+	var onPlayerBoughtShopItem: (playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey, item: BoughtShopItem, userInput?: string) => void
+
+	/**
+	 * Called when a player presses a custom button
+	 * @param playerId - The id of the player pressing the button
+	 * @param buttonId - The id of the button pressed
+	 */
+	var onPlayerPressedButton: (playerId: PlayerId, buttonId: string) => void
+
+	/**
+	 * Called when a player releases a custom button
+	 * @param playerId - The id of the player releasing the button
+	 * @param buttonId - The id of the button released
+	 */
+	var onPlayerReleasedButton: (playerId: PlayerId, buttonId: string) => void
+
+	/**
+	 * Called when a player responds to a UI request.
+	 *
+	 * @param playerId - The id of the player responding to the UI request.
+	 * @param id - The id of the UI request.
+	 * @param response - The response to the UI request.
+	 */
+	var onUiRequestResponded: (playerId: PlayerId, id: UiRequestId, response: boolean) => void
+
+	/**
+	 * Called every so often.
+	 * You should save custom db values/s3 objects here.
+	 * Persisted items ARE saved on graceful shutdown (e.g. uncaught error, update, etc),
+	 * but this helps prevent large data-loss on non-graceful shutdowns.
+	 */
+	var doPeriodicSave: () => void
+
+	/** Load another world-code file by relative path (./ or ../).
+	 * Does not work at runtime - Code is bundled before being run.
+	 * index.js/index.ts cannot be required: they hold the callbacks the engine runs.
+	 * No typing is available for the required file — use \`import\` and \`export\` syntax for full typing support.
+	 */
+	function require(id: string): any
+}
+
+export {}
+`
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,37 +1,46 @@
 export const id = 167;
 export const ids = [167];
 export const modules = {
-  8745: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8771: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["Your own little slice of the world to shape, share and show off. Bloxd Plots gives every player their own plot in a shared creative world. Each plot starts out completely blank, so you can build whatever you like with whoever you like. It's different from the open world of Bloxd Creative because your plot really is yours. Only you and the players you add can change it."],
-      howToPlay: ["Join Plots and claim a plot. Each one is a 91\xd791 block build area, with 5-block-wide roads between the plots. There's no height limit, so build as tall as you dare. You're in creative mode, which means no health to worry about and nothing stopping you from building.", "Want to build with friends? Add them to your plot and they can build with you, or use Go To Shared Plot to visit plots they've shared with you. You can own up to 5 plots and hop between them. Tp To Plot takes you to any plot in the world if you know its coordinates. Change at least 500 blocks and your plot is saved for good."],
-      features: ["Your Own 91\xd791 Plot to Build On", "Own Up to 5 Plots", "No Height Limit", "Add Friends to Build Together", "Teleport to Any Plot with Coordinates", "Plots Saved Forever Once You've Built Enough", "Spawn Mobs on Your Own Plot"],
-      tips: ["Get to 500 changed blocks quickly, because unsaved plots can be reset", "Add Player to Plot lets a friend build with you", "If you don't want someone editing anymore, use Remove Player from Plot", "Starting something new? Get New Plot gives you a fresh one without losing your old build", "Use Tp To Plot to check out other players' plots for ideas", "Keep your build inside the plot edges, since you can't place blocks on the roads", "Place spawner blocks if you want mobs on your plot"],
-      similarGames: ["classic_creative", "greenville", "classic", "parkourPlace"],
+    const Dk = {
+      whatIs: ["All the fun of survival with none of the stress. Bloxd Peaceful Survival is a calm sandbox where you explore a shared block world with other players. You mine, gather, craft and build, and there are no hostile mobs, no PvP and no health bar. Basically it's Survival with the danger turned off."],
+      howToPlay: ["Spawn into the shared world and start collecting resources. Chop some trees, mine for ores, craft better tools and get building on your dream base. Only passive animals spawn, and they've got so little health you can beat them with your fist. Health is switched off for everyone, so nothing can hurt you. Not even other players.", "Build well away from spawn, because the blocks near it reset every few hours. Craft Protectors from diamonds so other players can't break your builds or open your chests. New to Bloxd? Peaceful's a great place to learn mining, crafting and building before you try Survival."],
+      features: ["No Hostile Mobs, No PvP and No Health Bar", "Shared Multiplayer World to Explore with Friends", "Mining, Crafting and Base Building", "Protect Your Land and Chests with Protectors", "Relaxing and Great for New Players and Builders"],
+      tips: ["Pick a spot to build 200+ blocks out, where blocks don't reset every few hours", "Craft a Protector from diamonds to keep your builds and chests safe", "Don't bother with a sword. Passive animals are weak enough to beat with your fist", "Just starting out? Practise mining, crafting and building here before you try Survival", "Fancy some danger and a health bar? Give Survival a go"],
+      similarGames: ["classic_survival", "classic_survivalDayNight", "classic_creative", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Bloxd Plots?",
-        answer: "A building mode where you get your own 91\xd791 plot and can build anything you like in creative mode."
+        question: "What is Bloxd Peaceful?",
+        answer: "It's Bloxd's no-danger survival mode. You explore, build and gather in a shared block world, with no hostile mobs and no health bar."
       }, {
-        question: "How do I save my plot in Bloxd Plots?",
-        answer: "Change at least 500 blocks on it. From then on your plot is saved permanently. Plots that haven't been saved yet can be reset."
+        question: "Can you die in Bloxd Peaceful?",
+        answer: "No. There's no health bar, so mobs and other players can't hurt you."
       }, {
-        question: "How do I build with friends in Bloxd Plots?",
-        answer: "Use Add Player to Plot to give a friend access. They can find it with Go To Shared Plot, and you can remove them whenever you want."
+        question: "Is there PvP in Bloxd Peaceful?",
+        answer: "There isn't. Players can't attack each other in Peaceful."
       }, {
-        question: "Can other players break my build?",
-        answer: "No. Only you and the players you've added can change blocks on your plot. Changed your mind about someone? Use Remove Player from Plot."
+        question: "Are there mobs in Bloxd Peaceful?",
+        answer: "Only passive animals. None of them can attack you, and you can beat them with your fist."
       }, {
-        question: "How big is a plot in Bloxd Plots?",
-        answer: "Each plot is a 91\xd791 block build area with no height limit. Roads 5 blocks wide run between them."
+        question: "What's the difference between Peaceful and Survival in Bloxd?",
+        answer: "The world works the same way, with the same mining, crafting and building. Survival has hostile mobs, PvP and a health bar. Peaceful takes all of that away so you can explore and build without worrying."
       }, {
-        question: "How many plots can one player own?",
-        answer: "Up to 5 each."
+        question: "Is Bloxd Peaceful good for beginners?",
+        answer: "Definitely. It's a safe place to learn the basics. If you die early on in Survival, the game will even offer to move you over to Peaceful."
+      }, {
+        question: "Can I play Bloxd Peaceful with friends?",
+        answer: "Yes. Everyone's in the same shared world, so you can meet up and build together."
+      }, {
+        question: "How do I keep my builds safe in Peaceful?",
+        answer: "Blocks near spawn reset every few hours, so build outside that area (a message shows when you cross its edge). Then put down a Protector and other players won't be able to break your builds or open your chests."
+      }, {
+        question: "How do I save my progress in Bloxd Peaceful?",
+        answer: "Sign in to an account. If you don't, your progress can be lost when your browser's cookies get cleared."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

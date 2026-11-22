@@ -1,1512 +1,701 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  39470: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => bQ,
-      f: () => HQ,
-      j: () => vQ,
-      l: () => YQ,
-      n: () => mQ,
-      q: () => kQ,
-      u: () => uQ
+  39374: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      default: () => gk
     });
-    var LQ = wQ(38203),
-      qQ = wQ(39475);
+    ik(6310);
+    var Dk = ik(60),
+      fk = ik(39377),
+      Sk = ik(39651),
+      bk = ik(39774),
+      rk = ik(39813),
+      Pk = ik(39829),
+      mk = ik(36868),
+      Mk = ik(36690),
+      Kk = ik(39995),
+      xk = ik(40029),
+      nk = (ik(40055), ik(1207)),
+      Uk = ik(189),
+      Hk = ik(1172),
+      wk = ik(22),
+      lk = ik(2683),
+      pk = ik(1410),
+      yk = ik(1033),
+      Yk = ik(6306),
+      Lk = ik(6316),
+      Ck = ik(4394),
+      Ak = ik(1066);
+    const jk = 1.2,
+      sk = .2,
+      dk = .0066 * Math.PI / 180,
+      Vk = new Set(["Escape", "KeyG"]),
+      Fk = {
+        ArrowLeft: -1,
+        ArrowRight: 1
+      },
+      uk = "ArrowUp",
+      qk = new Set([...Object.keys(Fk), uk, "ArrowDown"]),
+      Ik = 32,
+      zk = 1,
+      Qk = 10,
+      vk = "F4",
+      Ek = "Period",
+      hk = Math.PI / 2 - .001,
+      ak = Math.PI / 6,
+      Wk = Math.PI / 6,
+      tk = 1.08,
+      Xk = [{
+        name: "X",
+        direction: [1, 0, 0],
+        colour: "#e5534b"
+      }, {
+        name: "Y",
+        direction: [0, 1, 0],
+        colour: "#57ab5a"
+      }, {
+        name: "Z",
+        direction: [0, 0, 1],
+        colour: "#539bf5"
+      }],
+      Bk = 24,
+      ck = 7,
+      Tk = 4,
+      Zk = .01,
+      Ok = 4;
 
-    function oQ(QQ, FQ, wQ, LQ) {
-      switch (FQ) {
-        case 5120: {
-          let FQ = QQ.getInt8(wQ);
-          return LQ && (FQ = Math.max(FQ / 127, -1)), FQ
-        }
-        case 5121: {
-          let FQ = QQ.getUint8(wQ);
-          return LQ && (FQ /= 255), FQ
-        }
-        case 5122: {
-          let FQ = QQ.getInt16(wQ, !0);
-          return LQ && (FQ = Math.max(FQ / 32767, -1)), FQ
-        }
-        case 5123: {
-          let FQ = QQ.getUint16(wQ, !0);
-          return LQ && (FQ /= 65535), FQ
-        }
-        case 5131:
-          return (0, qQ.d)(QQ.getUint16(wQ, !0));
-        case 5124:
-          return QQ.getInt32(wQ, !0);
-        case 5125:
-          return QQ.getUint32(wQ, !0);
-        case 5126:
-          return QQ.getFloat32(wQ, !0);
-        default:
-          throw new Error(`Invalid component type ${FQ}`)
-      }
-    }
-
-    function DQ(QQ, FQ, wQ, LQ, oQ) {
-      switch (FQ) {
-        case 5120:
-          LQ && (oQ = Math.round(127 * oQ)), QQ.setInt8(wQ, oQ);
-          break;
-        case 5121:
-          LQ && (oQ = Math.round(255 * oQ)), QQ.setUint8(wQ, oQ);
-          break;
-        case 5122:
-          LQ && (oQ = Math.round(32767 * oQ)), QQ.setInt16(wQ, oQ, !0);
-          break;
-        case 5123:
-          LQ && (oQ = Math.round(65535 * oQ)), QQ.setUint16(wQ, oQ, !0);
-          break;
-        case 5131:
-          QQ.setUint16(wQ, (0, qQ.j)(oQ), !0);
-          break;
-        case 5124:
-          QQ.setInt32(wQ, oQ, !0);
-          break;
-        case 5125:
-          QQ.setUint32(wQ, oQ, !0);
-          break;
-        case 5126:
-          QQ.setFloat32(wQ, oQ, !0);
-          break;
-        default:
-          throw new Error(`Invalid component type ${FQ}`)
-      }
-    }
-
-    function kQ(QQ) {
-      switch (QQ) {
-        case 5120:
-        case 5121:
-          return 1;
-        case 5122:
-        case 5123:
-        case 5131:
-          return 2;
-        case 5124:
-        case 5125:
-        case 5126:
-          return 4;
-        default:
-          throw new Error(`Invalid type '${QQ}'`)
-      }
-    }
-
-    function vQ(QQ, FQ, wQ, LQ, qQ, vQ, mQ, uQ) {
-      const HQ = new Array(LQ),
-        bQ = new Array(LQ);
-      if (QQ instanceof Array) {
-        let qQ = FQ / 4;
-        const oQ = wQ / 4;
-        for (let FQ = 0; FQ < vQ; FQ += LQ) {
-          for (let FQ = 0; FQ < LQ; FQ++) HQ[FQ] = bQ[FQ] = QQ[qQ + FQ];
-          uQ(bQ, FQ);
-          for (let FQ = 0; FQ < LQ; FQ++) HQ[FQ] !== bQ[FQ] && (QQ[qQ + FQ] = bQ[FQ]);
-          qQ += oQ
-        }
-      } else {
-        const YQ = ArrayBuffer.isView(QQ) ? new DataView(QQ.buffer, QQ.byteOffset, QQ.byteLength) : new DataView(QQ),
-          xQ = kQ(qQ);
-        for (let QQ = 0; QQ < vQ; QQ += LQ) {
-          for (let QQ = 0, wQ = FQ; QQ < LQ; QQ++, wQ += xQ) HQ[QQ] = bQ[QQ] = oQ(YQ, qQ, wQ, mQ);
-          uQ(bQ, QQ);
-          for (let QQ = 0, wQ = FQ; QQ < LQ; QQ++, wQ += xQ) HQ[QQ] !== bQ[QQ] && DQ(YQ, qQ, wQ, mQ, bQ[QQ]);
-          FQ += wQ
-        }
-      }
-    }
-
-    function mQ(QQ, FQ, wQ, qQ, oQ, DQ, mQ, uQ) {
-      const HQ = FQ * kQ(wQ),
-        bQ = mQ * FQ;
-      if (5126 !== wQ || oQ !== HQ) {
-        const LQ = new Float32Array(bQ);
-        return vQ(QQ, qQ, oQ, FQ, wQ, bQ, DQ, ((QQ, wQ) => {
-          for (let qQ = 0; qQ < FQ; qQ++) LQ[wQ + qQ] = QQ[qQ]
-        })), LQ
-      }
-      if (!(QQ instanceof Array || QQ instanceof Float32Array) || 0 !== qQ || QQ.length !== bQ) {
-        if (QQ instanceof Array) {
-          const FQ = qQ / 4;
-          return QQ.slice(FQ, FQ + bQ)
-        }
-        if (ArrayBuffer.isView(QQ)) {
-          const FQ = QQ.byteOffset + qQ;
-          return 0 !== (3 & FQ) && (LQ.c.Warn("Float array must be aligned to 4-bytes border"), uQ = !0), uQ ? new Float32Array(QQ.buffer.slice(FQ, FQ + bQ * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(QQ.buffer, FQ, bQ)
-        }
-        return new Float32Array(QQ, qQ, bQ)
-      }
-      return uQ ? QQ.slice() : QQ
-    }
-
-    function uQ(QQ, FQ, wQ, qQ, oQ, DQ, mQ) {
-      const uQ = kQ(wQ),
-        HQ = function(QQ) {
-          switch (QQ) {
-            case 5120:
-              return Int8Array;
-            case 5121:
-              return Uint8Array;
-            case 5122:
-              return Int16Array;
-            case 5123:
-            case 5131:
-              return Uint16Array;
-            case 5124:
-              return Int32Array;
-            case 5125:
-              return Uint32Array;
-            case 5126:
-              return Float32Array;
-            default:
-              throw new Error(`Invalid component type '${QQ}'`)
-          }
-        }(wQ),
-        bQ = DQ * FQ;
-      if (Array.isArray(QQ)) {
-        if (0 !== (3 & qQ) || 0 !== (3 & oQ)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const LQ = qQ / 4,
-          kQ = oQ / 4;
-        if (LQ + (DQ - 1) * kQ + FQ > QQ.length) throw new Error("Last accessed index is out of bounds.");
-        if (kQ < FQ) throw new Error("Data stride cannot be smaller than the component size.");
-        if (kQ !== FQ) {
-          const LQ = new HQ(bQ);
-          return vQ(QQ, qQ, oQ, FQ, wQ, bQ, !1, ((QQ, wQ) => {
-            for (let qQ = 0; qQ < FQ; qQ++) LQ[wQ + qQ] = QQ[qQ]
-          })), LQ
-        }
-        return new HQ(QQ.slice(LQ, LQ + bQ))
-      }
-      let YQ, xQ = qQ;
-      ArrayBuffer.isView(QQ) ? (YQ = QQ.buffer, xQ += QQ.byteOffset) : YQ = QQ;
-      if (xQ + (DQ - 1) * oQ + FQ * uQ > YQ.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const AQ = FQ * uQ;
-      if (oQ < AQ) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (oQ !== AQ) {
-        const QQ = new HQ(bQ),
-          wQ = new Uint8Array(YQ, xQ),
-          LQ = new Uint8Array(QQ.buffer),
-          qQ = FQ * uQ;
-        for (let FQ = 0, kQ = 0, vQ = 0; FQ < DQ; FQ++, kQ += oQ, vQ += qQ) LQ.set(wQ.subarray(kQ, kQ + qQ), vQ);
-        return QQ
-      }
-      return 1 !== uQ && 0 !== (xQ & uQ - 1) && (LQ.c.Warn("Array must be aligned to border of element size. Data will be copied."), mQ = !0), mQ ? new HQ(YQ.slice(xQ, xQ + bQ * uQ)) : new HQ(YQ, xQ, bQ)
-    }
-
-    function HQ(QQ, FQ, wQ, qQ, oQ, DQ, mQ, uQ) {
-      const HQ = FQ * kQ(wQ),
-        bQ = mQ * FQ;
-      if (uQ.length !== bQ) throw new Error("Output length is not valid");
-      if (5126 === wQ && oQ === HQ)
-        if (QQ instanceof Array) {
-          const FQ = qQ / 4;
-          uQ.set(QQ, FQ)
-        } else if (ArrayBuffer.isView(QQ)) {
-        const FQ = QQ.byteOffset + qQ;
-        if (0 !== (3 & FQ)) return LQ.c.Warn("Float array must be aligned to 4-bytes border"), void uQ.set(new Float32Array(QQ.buffer.slice(FQ, FQ + bQ * Float32Array.BYTES_PER_ELEMENT)));
-        const wQ = new Float32Array(QQ.buffer, FQ, bQ);
-        uQ.set(wQ)
-      } else {
-        const FQ = new Float32Array(QQ, qQ, bQ);
-        uQ.set(FQ)
-      } else vQ(QQ, qQ, oQ, FQ, wQ, bQ, DQ, ((QQ, wQ) => {
-        for (let LQ = 0; LQ < FQ; LQ++) uQ[wQ + LQ] = QQ[LQ]
-      }))
-    }
-
-    function bQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(QQ)) {
-        for (let qQ = 0; qQ < FQ; qQ++)
-          if (QQ[wQ + qQ] - LQ > 65535) return !0;
-        return !1
-      }
-      return 4 === QQ.BYTES_PER_ELEMENT
-    }
-
-    function YQ(QQ) {
-      const FQ = QQ.buffer;
-      if (FQ instanceof ArrayBuffer) return QQ;
-      const wQ = new ArrayBuffer(QQ.byteLength);
-      return new Uint8Array(wQ).set(new Uint8Array(FQ, QQ.byteOffset, QQ.byteLength)), wQ
-    }
-  },
-  39282: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => iQ,
-      f: () => CQ,
-      i: () => SQ,
-      h: () => UQ,
-      j: () => NQ
-    });
-    class LQ {
-      constructor() {
-        this.children = []
-      }
-      isValid(QQ) {
-        return !0
-      }
-      process(QQ, FQ, wQ) {
-        let LQ = "";
-        if (this.line) {
-          let wQ = this.line;
-          const qQ = FQ.processor;
-          if (qQ) {
-            qQ.lineProcessor && (wQ = qQ.lineProcessor(wQ, FQ.isFragment, FQ.processingContext));
-            const LQ = FQ.processor?.attributeKeywordName ?? "attribute",
-              oQ = FQ.isFragment && FQ.processor?.varyingFragmentKeywordName ? FQ.processor?.varyingFragmentKeywordName : !FQ.isFragment && FQ.processor?.varyingVertexKeywordName ? FQ.processor?.varyingVertexKeywordName : "varying";
-            if (!FQ.isFragment && qQ.attributeProcessor && this.line.startsWith(LQ)) wQ = qQ.attributeProcessor(this.line, QQ, FQ.processingContext);
-            else if (qQ.varyingProcessor && (qQ.varyingCheck?.(this.line, FQ.isFragment) || !qQ.varyingCheck && this.line.startsWith(oQ))) wQ = qQ.varyingProcessor(this.line, FQ.isFragment, QQ, FQ.processingContext);
-            else if (qQ.uniformProcessor && qQ.uniformRegexp && qQ.uniformRegexp.test(this.line)) FQ.lookForClosingBracketForUniformBuffer || (wQ = qQ.uniformProcessor(this.line, FQ.isFragment, QQ, FQ.processingContext));
-            else if (qQ.uniformBufferProcessor && qQ.uniformBufferRegexp && qQ.uniformBufferRegexp.test(this.line)) FQ.lookForClosingBracketForUniformBuffer || (wQ = qQ.uniformBufferProcessor(this.line, FQ.isFragment, FQ.processingContext), FQ.lookForClosingBracketForUniformBuffer = !0);
-            else if (qQ.textureProcessor && qQ.textureRegexp && qQ.textureRegexp.test(this.line)) wQ = qQ.textureProcessor(this.line, FQ.isFragment, QQ, FQ.processingContext);
-            else if ((qQ.uniformProcessor || qQ.uniformBufferProcessor) && this.line.startsWith("uniform") && !FQ.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? qQ.uniformProcessor && (wQ = qQ.uniformProcessor(this.line, FQ.isFragment, QQ, FQ.processingContext)) : qQ.uniformBufferProcessor && (wQ = qQ.uniformBufferProcessor(this.line, FQ.isFragment, FQ.processingContext), FQ.lookForClosingBracketForUniformBuffer = !0)
-            }
-            FQ.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (FQ.lookForClosingBracketForUniformBuffer = !1, qQ.endOfUniformBufferProcessor && (wQ = qQ.endOfUniformBufferProcessor(this.line, FQ.isFragment, FQ.processingContext)))
-          }
-          LQ += wQ + "\n"
-        }
-        for (const qQ of this.children) LQ += qQ.process(QQ, FQ, wQ);
-        return this.additionalDefineKey && (QQ[this.additionalDefineKey] = this.additionalDefineValue || "true", wQ[this.additionalDefineKey] = QQ[this.additionalDefineKey]), LQ
-      }
-    }
-    class qQ {
-      constructor() {
-        this._lines = []
-      }
-      get currentLine() {
-        return this._lines[this.lineIndex]
-      }
-      get canRead() {
-        return this.lineIndex < this._lines.length - 1
-      }
-      set lines(QQ) {
-        this._lines.length = 0;
-        for (const FQ of QQ) {
-          if (!FQ || "\r" === FQ) continue;
-          if ("#" === FQ[0]) {
-            this._lines.push(FQ);
-            continue
-          }
-          const QQ = FQ.trim();
-          if (!QQ) continue;
-          if (QQ.startsWith("//")) {
-            this._lines.push(FQ);
-            continue
-          }
-          const wQ = QQ.indexOf(";");
-          if (-1 === wQ) this._lines.push(QQ);
-          else if (wQ === QQ.length - 1) QQ.length > 1 && this._lines.push(QQ);
-          else {
-            const QQ = FQ.split(";");
-            for (let FQ = 0; FQ < QQ.length; FQ++) {
-              let wQ = QQ[FQ];
-              wQ && (wQ = wQ.trim(), wQ && this._lines.push(wQ + (FQ !== QQ.length - 1 ? ";" : "")))
+    function gk(kk) {
+      let {
+        heatmap: ek,
+        scale: ik,
+        fullyOpaqueFrom: zk,
+        bounds: ak,
+        fitBounds: Wk,
+        schematic: tk,
+        controls: Xk,
+        onStepTime: Bk,
+        onShowAllTime: ck,
+        onTogglePlaying: Tk,
+        getReadout: Ok = null
+      } = kk;
+      const {
+        t: gk
+      } = (0, Hk.D)(), {
+        clientEscMenuOptions: be
+      } = (0, wk.n)(["clientEscMenuOptions"]), me = (0, Dk.useRef)(null), Me = (0, Dk.useRef)(null), Ke = (0, Dk.useRef)(null), xe = (0, lk.c)(me), [ne, Ue] = (0, Dk.useState)(!1), [He, we] = (0, Dk.useState)(!1), [le, pe] = (0, Dk.useState)(!0), ye = (0, Dk.useRef)(!1), [Ye, Le] = (0, Dk.useState)(!1), Ce = He || !le && Ye, [Ae, je] = (0, Dk.useState)(!1), [se, de] = (0, Dk.useState)(!0), [Ve, Fe] = (0, Dk.useState)(null), ue = ak.min, [qe, Ie] = (0, Dk.useState)(ue);
+      qe[0] === ue[0] && qe[1] === ue[1] && qe[2] === ue[2] || (Ie(ue), null !== Ve && Fe({
+        ...Ve,
+        position: re(Ve.position, re(qe, Pe(ue, -1)))
+      }));
+      const ze = (0, Dk.useMemo)((() => function(kk) {
+          return [kk.max[0] - kk.min[0] + 1, kk.max[1] - kk.min[1] + 1, kk.max[2] - kk.min[2] + 1]
+        }(ak)), [ak]),
+        Qe = (0, Dk.useMemo)((() => function(kk, ek) {
+          const ik = [],
+            Dk = [];
+          for (const [fk, Sk] of Object.entries(kk.frequencies)) {
+            const kk = Number(fk);
+            for (const [fk, bk] of Object.entries(Sk)) {
+              const Sk = Number(fk);
+              for (const [fk, rk] of Object.entries(bk)) rk <= 0 || (ik.push(kk - ek[0], Sk - ek[1], Number(fk) - ek[2]), Dk.push(rk))
             }
           }
-        }
-      }
-    }
-    class oQ extends LQ {
-      process(QQ, FQ, wQ) {
-        for (let LQ = 0; LQ < this.children.length; LQ++) {
-          const qQ = this.children[LQ];
-          if (qQ.isValid(QQ)) return qQ.process(QQ, FQ, wQ)
-        }
-        return ""
-      }
-    }
-    class DQ extends LQ {
-      isValid(QQ) {
-        return this.testExpression.isTrue(QQ)
-      }
-    }
-    class kQ {
-      isTrue(QQ) {
-        return !0
-      }
-      static postfixToInfix(QQ) {
-        const FQ = [];
-        for (const wQ of QQ)
-          if (void 0 === kQ._OperatorPriority[wQ]) FQ.push(wQ);
-          else {
-            const QQ = FQ[FQ.length - 1],
-              LQ = FQ[FQ.length - 2];
-            FQ.length -= 2, FQ.push(`(${LQ}${wQ}${QQ})`)
-          } return FQ[FQ.length - 1]
-      }
-      static infixToPostfix(QQ) {
-        const FQ = kQ._InfixToPostfixCache.get(QQ);
-        if (FQ) return FQ.accessTime = Date.now(), FQ.result;
-        if (!QQ.includes("&&") && !QQ.includes("||") && !QQ.includes(")") && !QQ.includes("(")) return [QQ];
-        const wQ = [];
-        let LQ = -1;
-        const qQ = () => {
-            uQ = uQ.trim(), "" !== uQ && (wQ.push(uQ), uQ = "")
-          },
-          oQ = QQ => {
-            LQ < kQ._Stack.length - 1 && (kQ._Stack[++LQ] = QQ)
-          },
-          DQ = () => kQ._Stack[LQ],
-          vQ = () => -1 === LQ ? "!!INVALID EXPRESSION!!" : kQ._Stack[LQ--];
-        let mQ = 0,
-          uQ = "";
-        for (; mQ < QQ.length;) {
-          const FQ = QQ.charAt(mQ),
-            HQ = mQ < QQ.length - 1 ? QQ.substring(mQ, 2 + mQ) : "";
-          if ("(" === FQ) uQ = "", oQ(FQ);
-          else if (")" === FQ) {
-            for (qQ(); - 1 !== LQ && "(" !== DQ();) wQ.push(vQ());
-            vQ()
-          } else if (kQ._OperatorPriority[HQ] > 1) {
-            for (qQ(); - 1 !== LQ && kQ._OperatorPriority[DQ()] >= kQ._OperatorPriority[HQ];) wQ.push(vQ());
-            oQ(HQ), mQ++
-          } else uQ += FQ;
-          mQ++
-        }
-        for (qQ(); - 1 !== LQ;) "(" === DQ() ? vQ() : wQ.push(vQ());
-        return kQ._InfixToPostfixCache.size >= kQ.InfixToPostfixCacheLimitSize && kQ.ClearCache(), kQ._InfixToPostfixCache.set(QQ, {
-          result: wQ,
-          accessTime: Date.now()
-        }), wQ
-      }
-      static ClearCache() {
-        const QQ = Array.from(kQ._InfixToPostfixCache.entries()).sort(((QQ, FQ) => QQ[1].accessTime - FQ[1].accessTime));
-        for (let FQ = 0; FQ < kQ.InfixToPostfixCacheCleanupSize; FQ++) kQ._InfixToPostfixCache.delete(QQ[FQ][0])
-      }
-    }
-    kQ.InfixToPostfixCacheLimitSize = 5e4, kQ.InfixToPostfixCacheCleanupSize = 25e3, kQ._InfixToPostfixCache = new Map, kQ._OperatorPriority = {
-      ")": 0,
-      "(": 1,
-      "||": 2,
-      "&&": 3
-    }, kQ._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class vQ extends kQ {
-      constructor(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = QQ, this.not = FQ
-      }
-      isTrue(QQ) {
-        let FQ = void 0 !== QQ[this.define];
-        return this.not && (FQ = !FQ), FQ
-      }
-    }
-    class mQ extends kQ {
-      isTrue(QQ) {
-        return this.leftOperand.isTrue(QQ) || this.rightOperand.isTrue(QQ)
-      }
-    }
-    class uQ extends kQ {
-      isTrue(QQ) {
-        return this.leftOperand.isTrue(QQ) && this.rightOperand.isTrue(QQ)
-      }
-    }
-    class HQ extends kQ {
-      constructor(QQ, FQ, wQ) {
-        super(), this.define = QQ, this.operand = FQ, this.testValue = wQ
-      }
-      toString() {
-        return `${this.define} ${this.operand} ${this.testValue}`
-      }
-      isTrue(QQ) {
-        let FQ = !1;
-        const wQ = parseInt(void 0 != QQ[this.define] ? QQ[this.define] : this.define),
-          LQ = parseInt(void 0 != QQ[this.testValue] ? QQ[this.testValue] : this.testValue);
-        if (isNaN(wQ) || isNaN(LQ)) return !1;
-        switch (this.operand) {
-          case ">":
-            FQ = wQ > LQ;
-            break;
-          case "<":
-            FQ = wQ < LQ;
-            break;
-          case "<=":
-            FQ = wQ <= LQ;
-            break;
-          case ">=":
-            FQ = wQ >= LQ;
-            break;
-          case "==":
-            FQ = wQ === LQ;
-            break;
-          case "!=":
-            FQ = wQ !== LQ
-        }
-        return FQ
-      }
-    }
-    var bQ = wQ(39277),
-      YQ = wQ(39274);
-    const xQ = /defined\s*?\((.+?)\)/g,
-      AQ = /defined\s*?\[(.+?)\]/g,
-      tQ = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      eQ = /__decl__/,
-      MQ = /light\{X\}.(\w*)/g,
-      GQ = /\{X\}/g,
-      pQ = [],
-      cQ = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
-
-    function CQ(QQ) {
-      QQ.processor && QQ.processor.initializeShaders && QQ.processor.initializeShaders(QQ.processingContext)
-    }
-
-    function SQ(QQ, FQ, wQ, LQ) {
-      FQ.processor?.preProcessShaderCode && (QQ = FQ.processor.preProcessShaderCode(QQ, FQ.isFragment)), UQ(QQ, FQ, (QQ => {
-        FQ.processCodeAfterIncludes && (QQ = FQ.processCodeAfterIncludes(FQ.isFragment ? "fragment" : "vertex", QQ, FQ.defines));
-        const qQ = function(QQ, FQ, wQ) {
-          let LQ = function(QQ, FQ) {
-            if (FQ.processor?.noPrecision) return QQ;
-            const wQ = FQ.shouldUseHighPrecisionShader; - 1 === QQ.indexOf("precision highp float") ? QQ = wQ ? "precision highp float;\n" + QQ : "precision mediump float;\n" + QQ : wQ || (QQ = QQ.replace("precision highp float", "precision mediump float"));
-            return QQ
-          }(QQ, FQ);
-          if (!FQ.processor) return LQ;
-          if (0 === FQ.processor.shaderLanguage && -1 !== LQ.indexOf("#version 3") && (LQ = LQ.replace("#version 300 es", ""), !FQ.processor.parseGLES3)) return LQ;
-          const qQ = FQ.defines,
-            oQ = IQ(FQ, wQ);
-          FQ.processor.preProcessor && (LQ = FQ.processor.preProcessor(LQ, qQ, oQ, FQ.isFragment, FQ.processingContext));
-          const DQ = {};
-          LQ = rQ(LQ, oQ, FQ, DQ), FQ.processor.postProcessor && (LQ = FQ.processor.postProcessor(LQ, qQ, FQ.isFragment, FQ.processingContext, wQ ? {
-            drawBuffersExtensionDisabled: !wQ.getCaps().drawBuffersExtension
-          } : {}, oQ, DQ));
-          wQ?._features.needShaderCodeInlining && (LQ = wQ.inlineShaderCode(LQ));
-          return LQ
-        }(QQ, FQ, LQ);
-        wQ(qQ, QQ)
-      }))
-    }
-
-    function iQ(QQ, FQ, wQ) {
-      return wQ.processor && wQ.processor.finalizeShaders ? wQ.processor.finalizeShaders(QQ, FQ, wQ.processingContext) : {
-        vertexCode: QQ,
-        fragmentCode: FQ
-      }
-    }
-
-    function WQ(QQ) {
-      const FQ = /defined\((.+)\)/.exec(QQ);
-      if (FQ && FQ.length) return new vQ(FQ[1].trim(), "!" === QQ[0]);
-      const wQ = ["==", "!=", ">=", "<=", "<", ">"];
-      let LQ = "",
-        qQ = 0;
-      for (LQ of wQ)
-        if (qQ = QQ.indexOf(LQ), qQ > -1) break;
-      if (-1 === qQ) return new vQ(QQ);
-      const oQ = QQ.substring(0, qQ).trim(),
-        DQ = QQ.substring(qQ + LQ.length).trim();
-      return new HQ(oQ, LQ, DQ)
-    }
-
-    function RQ(QQ, FQ) {
-      const wQ = new DQ,
-        LQ = QQ.substring(0, FQ);
-      let qQ = QQ.substring(FQ);
-      return qQ = qQ.substring(0, (qQ.indexOf("//") + 1 || qQ.length + 1) - 1).trim(), wQ.testExpression = "#ifdef" === LQ ? new vQ(qQ) : "#ifndef" === LQ ? new vQ(qQ, !0) : function(QQ) {
-        QQ = QQ.replace(xQ, "defined[$1]");
-        const FQ = kQ.infixToPostfix(QQ),
-          wQ = [];
-        for (const qQ of FQ)
-          if ("||" !== qQ && "&&" !== qQ) wQ.push(qQ);
-          else if (wQ.length >= 2) {
-          let QQ = wQ[wQ.length - 1],
-            FQ = wQ[wQ.length - 2];
-          wQ.length -= 2;
-          const LQ = "&&" == qQ ? new uQ : new mQ;
-          "string" === typeof QQ && (QQ = QQ.replace(AQ, "defined($1)")), "string" === typeof FQ && (FQ = FQ.replace(AQ, "defined($1)")), LQ.leftOperand = "string" === typeof FQ ? WQ(FQ) : FQ, LQ.rightOperand = "string" === typeof QQ ? WQ(QQ) : QQ, wQ.push(LQ)
-        }
-        let LQ = wQ[wQ.length - 1];
-        return "string" === typeof LQ && (LQ = LQ.replace(AQ, "defined($1)")), "string" === typeof LQ ? WQ(LQ) : LQ
-      }(qQ), wQ
-    }
-
-    function OQ(QQ, FQ, wQ, qQ) {
-      let oQ;
-      for (; sQ(QQ, wQ, qQ);) {
-        oQ = QQ.currentLine;
-        const DQ = oQ.substring(0, 5).toLowerCase();
-        if ("#else" === DQ) {
-          const wQ = new LQ;
-          return FQ.children.push(wQ), void sQ(QQ, wQ, qQ)
-        }
-        if ("#elif" === DQ) {
-          const QQ = RQ(oQ, 5);
-          FQ.children.push(QQ), wQ = QQ
-        }
-      }
-    }
-
-    function sQ(QQ, FQ, wQ) {
-      for (; QQ.canRead;) {
-        QQ.lineIndex++;
-        const qQ = QQ.currentLine;
-        if (qQ.indexOf("#") >= 0) {
-          const LQ = cQ.exec(qQ);
-          if (LQ && LQ.length) {
-            switch (LQ[0]) {
-              case "#ifdef": {
-                const LQ = new oQ;
-                FQ.children.push(LQ);
-                const DQ = RQ(qQ, 6);
-                LQ.children.push(DQ), OQ(QQ, LQ, DQ, wQ);
-                break
-              }
-              case "#else":
-              case "#elif":
-                return !0;
-              case "#endif":
-                return !1;
-              case "#ifndef": {
-                const LQ = new oQ;
-                FQ.children.push(LQ);
-                const DQ = RQ(qQ, 7);
-                LQ.children.push(DQ), OQ(QQ, LQ, DQ, wQ);
-                break
-              }
-              case "#if": {
-                const LQ = new oQ,
-                  DQ = RQ(qQ, 3);
-                FQ.children.push(LQ), LQ.children.push(DQ), OQ(QQ, LQ, DQ, wQ);
-                break
-              }
-            }
-            continue
+          return {
+            positions: Int32Array.from(ik),
+            values: Float64Array.from(Dk),
+            count: Dk.length
           }
-        }
-        const DQ = new LQ;
-        if (DQ.line = qQ, FQ.children.push(DQ), "#" === qQ[0] && "d" === qQ[1]) {
-          const QQ = qQ.replace(";", "").split(" ");
-          DQ.additionalDefineKey = QQ[1], 3 === QQ.length && (DQ.additionalDefineValue = QQ[2])
-        }
-      }
-      return !1
-    }
-
-    function rQ(QQ, FQ, wQ, oQ) {
-      const DQ = new LQ,
-        kQ = new qQ;
-      return kQ.lineIndex = -1, kQ.lines = QQ.split("\n"), sQ(kQ, DQ, oQ), DQ.process(FQ, wQ, oQ)
-    }
-
-    function IQ(QQ, FQ) {
-      const wQ = QQ.defines,
-        LQ = {};
-      for (const qQ of wQ) {
-        const QQ = qQ.replace("#define", "").replace(";", "").trim().split(" ");
-        LQ[QQ[0]] = QQ.length > 1 ? QQ[1] : ""
-      }
-      return 0 === QQ.processor?.shaderLanguage && (LQ.GL_ES = "true"), LQ.__VERSION__ = QQ.version, LQ[QQ.platformName] = "true", (0, YQ.j)(LQ, FQ?.isNDCHalfZRange, FQ?.SLQ, FQ?.useExactSrgbConversions), LQ
-    }
-
-    function UQ(QQ, FQ, wQ) {
-      let LQ;
-      for (pQ.length = 0; null !== (LQ = tQ.exec(QQ));) pQ.push(LQ);
-      let qQ = [QQ],
-        oQ = !1;
-      for (const kQ of pQ) {
-        let QQ = kQ[1];
-        if (-1 !== QQ.indexOf("__decl__") && (QQ = QQ.replace(eQ, ""), FQ.supportsUniformBuffers && (QQ = QQ.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), QQ += "Declaration"), !FQ.includesShadersStore[QQ]) {
-          const LQ = FQ.shadersRepository + "ShadersInclude/" + QQ + ".fx";
-          return void NQ.loadFile(LQ, (LQ => {
-            FQ.includesShadersStore[QQ] = LQ, UQ(qQ.join(""), FQ, wQ)
-          }))
-        } {
-          let wQ = FQ.includesShadersStore[QQ];
-          if (kQ[2]) {
-            const QQ = kQ[3].split(",");
-            for (let FQ = 0; FQ < QQ.length; FQ += 2) {
-              const LQ = new RegExp(QQ[FQ], "g"),
-                qQ = QQ[FQ + 1];
-              wQ = wQ.replace(LQ, qQ)
-            }
+        }(ek, ue)), [ek, ue]),
+        ve = jk * be.cameraFOV / 100,
+        Ee = xe.height > 0 ? xe.width / xe.height : 1,
+        he = (0, Dk.useMemo)((() => function(kk, ek) {
+          return {
+            min: [kk.min[0] - ek[0], kk.min[1] - ek[1], kk.min[2] - ek[2]],
+            max: [kk.max[0] - ek[0] + 1, kk.max[1] - ek[1] + 1, kk.max[2] - ek[2] + 1]
           }
-          if (kQ[4]) {
-            const QQ = kQ[5];
-            if (-1 !== QQ.indexOf("..")) {
-              const LQ = QQ.split(".."),
-                qQ = parseInt(LQ[0]);
-              let oQ = parseInt(LQ[1]),
-                DQ = wQ.slice(0);
-              wQ = "", isNaN(oQ) && (oQ = FQ.indexParameters[LQ[1]]);
-              for (let QQ = qQ; QQ < oQ; QQ++) FQ.supportsUniformBuffers || (DQ = DQ.replace(MQ, ((QQ, FQ) => FQ + "{X}"))), wQ += DQ.replace(GQ, QQ.toString()) + "\n"
-            } else FQ.supportsUniformBuffers || (wQ = wQ.replace(MQ, ((QQ, FQ) => FQ + "{X}"))), wQ = wQ.replace(GQ, QQ)
-          }
-          const LQ = [];
-          for (const QQ of qQ) {
-            const FQ = QQ.split(kQ[0]);
-            for (let QQ = 0; QQ < FQ.length - 1; QQ++) LQ.push(FQ[QQ]), LQ.push(wQ);
-            LQ.push(FQ[FQ.length - 1])
-          }
-          qQ = LQ, oQ = oQ || wQ.indexOf("#include<") >= 0 || wQ.indexOf("#include <") >= 0
-        }
-      }
-      pQ.length = 0;
-      const DQ = qQ.join("");
-      oQ ? UQ(DQ.toString(), FQ, wQ) : wQ(DQ)
-    }
-    const NQ = {
-      loadFile: (QQ, FQ, wQ, LQ, qQ, oQ) => {
-        throw (0, bQ.k)("FileTools")
-      }
-    }
-  },
-  39274: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => qQ,
-      g: () => oQ,
-      j: () => kQ,
-      k: () => DQ,
-      m: () => vQ
-    });
-    var LQ = wQ(39277);
-    const qQ = {};
-
-    function oQ(QQ, FQ) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (FQ ? FQ + "\n" : "") + QQ
-    }
-
-    function DQ(QQ, FQ, wQ, oQ, DQ, kQ, vQ) {
-      const mQ = vQ || qQ.loadFile;
-      if (!mQ) throw (0, LQ.k)("FileTools");
-      return mQ(QQ, FQ, wQ, oQ, DQ, kQ)
-    }
-
-    function kQ(QQ, FQ, wQ, LQ) {
-      if (QQ) return FQ ? QQ.IS_NDC_HALF_ZRANGE = "" : delete QQ.IS_NDC_HALF_ZRANGE, wQ ? QQ.USE_REVERSE_DEPTHBUFFER = "" : delete QQ.USE_REVERSE_DEPTHBUFFER, void(LQ ? QQ.USE_EXACT_SRGB_CONVERSIONS = "" : delete QQ.USE_EXACT_SRGB_CONVERSIONS);
-      {
-        let QQ = "";
-        return FQ && (QQ += "#define IS_NDC_HALF_ZRANGE"), wQ && (QQ && (QQ += "\n"), QQ += "#define USE_REVERSE_DEPTHBUFFER"), LQ && (QQ && (QQ += "\n"), QQ += "#define USE_EXACT_SRGB_CONVERSIONS"), QQ
-      }
-    }
-
-    function vQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        LQ = arguments.length > 3 ? arguments[3] : void 0;
-      switch (QQ) {
-        case 3: {
-          const QQ = new Int8Array(FQ);
-          return LQ && QQ.set(new Int8Array(LQ)), QQ
-        }
-        case 0: {
-          const QQ = new Uint8Array(FQ);
-          return LQ && QQ.set(new Uint8Array(LQ)), QQ
-        }
-        case 4: {
-          const QQ = "number" !== typeof FQ ? new Int16Array(FQ) : new Int16Array(wQ ? FQ / 2 : FQ);
-          return LQ && QQ.set(new Int16Array(LQ)), QQ
-        }
-        case 5:
-        case 8:
-        case 9:
-        case 10:
-        case 2: {
-          const QQ = "number" !== typeof FQ ? new Uint16Array(FQ) : new Uint16Array(wQ ? FQ / 2 : FQ);
-          return LQ && QQ.set(new Uint16Array(LQ)), QQ
-        }
-        case 6: {
-          const QQ = "number" !== typeof FQ ? new Int32Array(FQ) : new Int32Array(wQ ? FQ / 4 : FQ);
-          return LQ && QQ.set(new Int32Array(LQ)), QQ
-        }
-        case 7:
-        case 11:
-        case 12:
-        case 13:
-        case 14:
-        case 15: {
-          const QQ = "number" !== typeof FQ ? new Uint32Array(FQ) : new Uint32Array(wQ ? FQ / 4 : FQ);
-          return LQ && QQ.set(new Uint32Array(LQ)), QQ
-        }
-        case 1: {
-          const QQ = "number" !== typeof FQ ? new Float32Array(FQ) : new Float32Array(wQ ? FQ / 4 : FQ);
-          return LQ && QQ.set(new Float32Array(LQ)), QQ
-        }
-      }
-      const qQ = new Uint8Array(FQ);
-      return LQ && qQ.set(new Uint8Array(LQ)), qQ
-    }
-  },
-  39277: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => mQ,
-      e: () => uQ,
-      g: () => vQ,
-      k: () => qQ
-    });
-    const LQ = {};
-
-    function qQ(QQ) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !LQ[QQ]) return LQ[QQ] = !0, `${QQ} needs to be imported before as it contains a side-effect required by your code.`
-    }
-    const oQ = {};
-    let DQ = !1,
-      kQ = 0;
-
-    function vQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const LQ = function() {
-        if ((wQ || DQ) && 0 === kQ) {
-          const wQ = `${QQ}.${FQ}`;
-          oQ[wQ] || (oQ[wQ] = !0, console.warn(`[Babylon.js] ${wQ}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
-        }
+        }(Wk, ue)), [Wk, ue]),
+        ae = De(he, Ee, ve),
+        We = null !== Ve && void 0 !== Ve ? Ve : ae,
+        te = (0, Dk.useRef)({
+          fittedView: ae,
+          fieldOfView: ve,
+          mouseSensitivity: be.mouseSensitivity,
+          canLock: le
+        });
+      te.current = {
+        fittedView: ae,
+        fieldOfView: ve,
+        mouseSensitivity: be.mouseSensitivity,
+        canLock: le
       };
-      return LQ.__isSideEffectStub = !0, LQ
-    }
-
-    function mQ(QQ) {
-      return !!QQ && !QQ.__isSideEffectStub
-    }
-
-    function uQ(QQ, FQ) {
-      return {
-        get() {},
-        set(QQ) {
-          Object.defineProperty(this, FQ, {
-            value: QQ,
-            writable: !0,
-            configurable: !0,
-            enumerable: !0
-          })
-        },
-        configurable: !0,
-        enumerable: !0
-      }
-    }
-  },
-  39264: (QQ, FQ, wQ) => {
-    function LQ() {
-      return "undefined" !== typeof window
-    }
-
-    function qQ() {
-      return "undefined" !== typeof navigator
-    }
-
-    function oQ() {
-      return "undefined" !== typeof document
-    }
-
-    function DQ(QQ) {
-      let FQ = "",
-        wQ = QQ.firstChild;
-      for (; wQ;) 3 === wQ.nodeType && (FQ += wQ.textContent), wQ = wQ.nextSibling;
-      return FQ
-    }
-    wQ.d(FQ, {
-      b: () => DQ,
-      c: () => oQ,
-      f: () => qQ,
-      g: () => LQ
-    })
-  },
-  39461: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => LQ,
-      f: () => qQ,
-      i: () => oQ
-    });
-    class LQ extends Error {}
-    LQ._setPrototypeOf = Object.setPrototypeOf || ((QQ, FQ) => (QQ.__proto__ = FQ, QQ));
-    const qQ = {
-      MeshInvalidPositionsError: 0,
-      UnsupportedTextureError: 1e3,
-      GLTFLoaderUnexpectedMagicError: 2e3,
-      SceneLoaderError: 3e3,
-      LoadFileError: 4e3,
-      RequestFileError: 4001,
-      ReadFileError: 4002
-    };
-    class oQ extends LQ {
-      constructor(QQ, FQ, wQ) {
-        super(QQ), this.errorCode = FQ, this.innerError = wQ, this.name = "RuntimeError", LQ._setPrototypeOf(this, oQ.prototype)
-      }
-    }
-  },
-  39448: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => IQ,
-      f: () => GQ,
-      h: () => RQ,
-      l: () => sQ,
-      m: () => iQ,
-      p: () => CQ,
-      r: () => SQ,
-      t: () => zQ,
-      u: () => WQ,
-      v: () => pQ
-    });
-    var LQ = wQ(39455),
-      qQ = wQ(39264),
-      oQ = wQ(36722);
-    class DQ {}
-    DQ.FilesToLoad = {};
-    var kQ = wQ(39461),
-      vQ = wQ(39468),
-      mQ = wQ(36720),
-      uQ = wQ(39274),
-      HQ = wQ(39282),
-      bQ = wQ(38203),
-      YQ = wQ(39289),
-      xQ = wQ(39470);
-    const AQ = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class tQ extends kQ.i {
-      constructor(QQ, FQ) {
-        super(QQ, kQ.f.LoadFileError), this.name = "LoadFileError", kQ.c._setPrototypeOf(this, tQ.prototype), FQ instanceof LQ.e ? this.request = FQ : this.file = FQ
-      }
-    }
-    class eQ extends kQ.i {
-      constructor(QQ, FQ) {
-        super(QQ, kQ.f.RequestFileError), this.request = FQ, this.name = "RequestFileError", kQ.c._setPrototypeOf(this, eQ.prototype)
-      }
-    }
-    class MQ extends kQ.i {
-      constructor(QQ, FQ) {
-        super(QQ, kQ.f.ReadFileError), this.file = FQ, this.name = "ReadFileError", kQ.c._setPrototypeOf(this, MQ.prototype)
-      }
-    }
-    const GQ = {
-        DefaultRetryStrategy: class {
-          static ExponentialBackoff() {
-            let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (wQ, LQ, qQ) => 0 !== LQ.status || qQ >= QQ || -1 !== wQ.indexOf("file:") ? -1 : Math.pow(2, qQ) * FQ
-          }
-        }.ExponentialBackoff(),
-        BaseUrl: "",
-        CorsBehavior: "anonymous",
-        PreprocessUrl: QQ => QQ,
-        ScriptBaseUrl: "",
-        ScriptPreprocessUrl: QQ => QQ,
-        CleanUrl: QQ => QQ = QQ.replace(/#/gm, "%23")
-      },
-      pQ = (QQ, FQ) => {
-        if ((!QQ || 0 !== QQ.indexOf("data:")) && GQ.CorsBehavior)
-          if ("string" === typeof GQ.CorsBehavior || GQ.CorsBehavior instanceof String) FQ.crossOrigin = GQ.CorsBehavior;
-          else {
-            const wQ = GQ.CorsBehavior(QQ);
-            wQ && (FQ.crossOrigin = wQ)
-          }
-      },
-      cQ = {
-        getRequiredSize: null
-      },
-      CQ = function(QQ, FQ, wQ, qQ) {
-        let oQ, kQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          uQ = arguments.length > 5 ? arguments[5] : void 0,
-          HQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mQ.d.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !HQ?._features.forceBitmapOverHTMLImageElement) return wQ("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (HQ?._features.forceBitmapOverHTMLImageElement && "string" !== typeof QQ && "undefined" !== typeof Blob) {
-          let LQ;
-          if (QQ instanceof Blob) LQ = QQ;
-          else {
-            const FQ = QQ instanceof ArrayBuffer ? QQ : (0, xQ.l)(QQ);
-            LQ = new Blob([FQ], {
-              type: kQ
-            })
-          }
-          return HQ.createImageBitmap(LQ, {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none",
-            ...uQ
-          }).then(FQ).catch((FQ => {
-            wQ && wQ("Error while trying to load image: " + QQ, FQ)
-          })), null
-        }
-        let bQ = !1;
-        if (QQ instanceof ArrayBuffer || ArrayBuffer.isView(QQ))
-          if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let FQ;
-            FQ = QQ instanceof ArrayBuffer ? QQ : (0, xQ.l)(QQ), oQ = URL.createObjectURL(new Blob([FQ], {
-              type: kQ
-            })), bQ = !0
-          } else oQ = `data:${kQ};base64,` + (0, vQ.i)(QQ);
-        else QQ instanceof Blob ? (oQ = URL.createObjectURL(QQ), bQ = !0) : (oQ = GQ.CleanUrl(QQ), oQ = GQ.PreprocessUrl(oQ));
-        const YQ = FQ => {
-          if (wQ) {
-            const LQ = oQ || QQ.toString();
-            wQ(`Error while trying to load image: ${0===LQ.indexOf("http")||LQ.length<=128?LQ:LQ.slice(0,128)+"..."}`, FQ)
-          }
-        };
-        if (HQ?._features.forceBitmapOverHTMLImageElement) return iQ(oQ, (LQ => {
-          HQ.createImageBitmap(new Blob([LQ], {
-            type: kQ
-          }), {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none",
-            ...uQ
-          }).then((QQ => {
-            FQ(QQ), bQ && URL.revokeObjectURL(oQ)
-          })).catch((FQ => {
-            wQ && wQ("Error while trying to load image: " + QQ, FQ)
-          }))
-        }), void 0, qQ || void 0, !0, ((QQ, FQ) => {
-          YQ(FQ)
-        })), null;
-        const AQ = new Image;
-        if (cQ.getRequiredSize) {
-          const FQ = cQ.getRequiredSize(QQ);
-          FQ.width && (AQ.width = FQ.width), FQ.height && (AQ.height = FQ.height)
-        }
-        pQ(oQ, AQ);
-        const tQ = [],
-          eQ = () => {
-            for (const QQ of tQ) QQ.target.removeEventListener(QQ.name, QQ.handler);
-            tQ.length = 0
-          };
-        tQ.push({
-          target: AQ,
-          name: "load",
-          handler: () => {
-            eQ(), FQ(AQ), bQ && AQ.src && URL.revokeObjectURL(AQ.src)
-          }
-        }), tQ.push({
-          target: AQ,
-          name: "error",
-          handler: QQ => {
-            eQ(), YQ(QQ), bQ && AQ.src && URL.revokeObjectURL(AQ.src)
-          }
-        }), tQ.push({
-          target: document,
-          name: "securitypolicyviolation",
-          handler: QQ => {
-            if (QQ.blockedURI !== AQ.src || "hY" === QQ.disposition) return;
-            eQ();
-            const FQ = new Error(`CSP violation of policy ${QQ.effectiveDirective} ${QQ.blockedURI}. Current policy is ${QQ.originalPolicy}`);
-            mQ.d.UseFallbackTexture = !1, YQ(FQ), bQ && AQ.src && URL.revokeObjectURL(AQ.src), AQ.src = ""
-          }
-        }), (() => {
-          for (const QQ of tQ) QQ.target.addEventListener(QQ.name, QQ.handler)
-        })();
-        const MQ = "blob:" === oQ.substring(0, 5),
-          CQ = "data:" === oQ.substring(0, 5),
-          SQ = () => {
-            MQ || CQ || !LQ.e.IsCustomRequestAvailable ? AQ.src = oQ : iQ(oQ, ((QQ, FQ, wQ) => {
-              const LQ = new Blob([QQ], {
-                  type: !kQ && wQ ? wQ : kQ
-                }),
-                qQ = URL.createObjectURL(LQ);
-              bQ = !0, AQ.src = qQ
-            }), void 0, qQ || void 0, !0, ((QQ, FQ) => {
-              YQ(FQ)
-            }))
-          },
-          WQ = () => {
-            qQ && qQ.loadImage(oQ, AQ)
-          };
-        if (!MQ && !CQ && qQ && qQ.enableTexturesOffline) qQ.open(WQ, SQ);
-        else {
-          if (-1 !== oQ.indexOf("file:")) {
-            const QQ = decodeURIComponent(oQ.substring(5).toLowerCase());
-            if (DQ.FilesToLoad[QQ] && "undefined" !== typeof URL) {
-              try {
-                let FQ;
-                try {
-                  FQ = URL.createObjectURL(DQ.FilesToLoad[QQ])
-                } catch (RQ) {
-                  FQ = URL.createObjectURL(DQ.FilesToLoad[QQ])
-                }
-                AQ.src = FQ, bQ = !0
-              } catch (OQ) {
-                AQ.src = ""
-              }
-              return AQ
-            }
-          }
-          SQ()
-        }
-        return AQ
-      },
-      SQ = (QQ, FQ, wQ, LQ, qQ) => {
-        const DQ = new FileReader,
-          kQ = {
-            onCompleteObservable: new oQ.e,
-            abort: () => DQ.abort()
-          };
-        return DQ.onloadend = () => kQ.onCompleteObservable.notifyObservers(kQ), qQ && (DQ.onerror = () => {
-          qQ(new MQ(`Unable to read ${QQ.name}`, QQ))
-        }), DQ.onload = QQ => {
-          FQ(QQ.target.result)
-        }, wQ && (DQ.onprogress = wQ), LQ ? DQ.readAsArrayBuffer(QQ) : DQ.readAsText(QQ), kQ
-      },
-      iQ = (QQ, FQ, wQ, LQ, qQ, vQ, mQ) => {
-        if (QQ.name) return SQ(QQ, FQ, wQ, qQ, vQ ? QQ => {
-          vQ(void 0, QQ)
-        } : void 0);
-        const uQ = QQ;
-        if (-1 !== uQ.indexOf("file:")) {
-          let QQ = decodeURIComponent(uQ.substring(5).toLowerCase());
-          0 === QQ.indexOf("./") && (QQ = QQ.substring(2));
-          const LQ = DQ.FilesToLoad[QQ];
-          if (LQ) return SQ(LQ, FQ, wQ, qQ, vQ ? QQ => vQ(void 0, new tQ(QQ.message, QQ.file)) : void 0)
-        }
-        const {
-          match: HQ,
-          type: xQ
-        } = rQ(uQ);
-        if (HQ) {
-          const QQ = {
-            onCompleteObservable: new oQ.e,
-            abort: () => () => {}
-          };
-          try {
-            const QQ = qQ ? IQ(uQ) : UQ(uQ);
-            FQ(QQ, void 0, xQ)
-          } catch (kQ) {
-            vQ ? vQ(void 0, kQ) : bQ.c.Error(kQ.message || "Failed to parse the Data URL")
-          }
-          return YQ.d.SetImmediate((() => {
-            QQ.onCompleteObservable.notifyObservers(QQ)
-          })), QQ
-        }
-        return WQ(uQ, ((QQ, wQ) => {
-          FQ(QQ, wQ?.responseURL, wQ?.getResponseHeader("content-type"))
-        }), wQ, LQ, qQ, vQ ? QQ => {
-          vQ(QQ.request, new tQ(QQ.message, QQ.request))
-        } : void 0, mQ)
-      },
-      WQ = (QQ, FQ, wQ, DQ, kQ, vQ, uQ) => {
-        null !== DQ && (DQ ?? (DQ = mQ.d.LastCreatedScene?.offlineProvider)), QQ = GQ.CleanUrl(QQ), QQ = GQ.PreprocessUrl(QQ);
-        const HQ = GQ.BaseUrl + QQ;
-        let YQ = !1;
-        const xQ = {
-            onCompleteObservable: new oQ.e,
-            abort: () => YQ = !0
-          },
-          AQ = () => {
-            let QQ, oQ = new LQ.e,
-              DQ = null;
-            const mQ = () => {
-              oQ && (wQ && oQ.removeEventListener("progress", wQ), QQ && oQ.removeEventListener("readystatechange", QQ), oQ.removeEventListener("loadend", AQ))
-            };
-            let AQ = () => {
-              mQ(), xQ.onCompleteObservable.notifyObservers(xQ), xQ.onCompleteObservable.clear(), wQ = void 0, QQ = null, AQ = null, vQ = void 0, uQ = void 0, FQ = void 0
-            };
-            xQ.abort = () => {
-              YQ = !0, AQ && AQ(), oQ && oQ.readyState !== (XMLHttpRequest.DONE || 4) && oQ.abort(), null !== DQ && (clearTimeout(DQ), DQ = null), oQ = null
-            };
-            const tQ = QQ => {
-                const FQ = QQ.message || "Unknown error";
-                vQ && oQ ? vQ(new eQ(FQ, oQ)) : bQ.c.Error(FQ)
-              },
-              MQ = bQ => {
-                if (oQ) {
-                  if (oQ.open("GET", HQ), uQ) try {
-                    uQ(oQ)
-                  } catch (xQ) {
-                    return void tQ(xQ)
-                  }
-                  kQ && (oQ.responseType = "arraybuffer"), wQ && oQ.addEventListener("progress", wQ), AQ && oQ.addEventListener("loadend", AQ), QQ = () => {
-                    if (!YQ && oQ && oQ.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (QQ && oQ.removeEventListener("readystatechange", QQ), oQ.status >= 200 && oQ.status < 300 || 0 === oQ.status && (!(0, qQ.g)() || OQ())) {
-                        const QQ = kQ ? oQ.response : oQ.responseText;
-                        if (null !== QQ) {
-                          try {
-                            FQ && FQ(QQ, oQ)
-                          } catch (xQ) {
-                            tQ(xQ)
-                          }
-                          return
-                        }
-                      }
-                      const wQ = GQ.DefaultRetryStrategy;
-                      if (wQ) {
-                        const QQ = wQ(HQ, oQ, bQ);
-                        if (-1 !== QQ) return mQ(), oQ = new LQ.e, void(DQ = setTimeout((() => MQ(bQ + 1)), QQ))
-                      }
-                      const uQ = new eQ("Error status: " + oQ.status + " " + oQ.statusText + " - Unable to load " + HQ, oQ);
-                      vQ && vQ(uQ)
-                    }
-                  }, oQ.addEventListener("readystatechange", QQ), oQ.send()
-                }
-              };
-            MQ(0)
-          };
-        if (DQ && DQ.enableSceneOffline && !QQ.startsWith("blob:")) {
-          const LQ = QQ => {
-              QQ && QQ.status > 400 ? vQ && vQ(QQ) : AQ()
+      const Xe = (0, Dk.useMemo)((() => {
+          if (!Ce) return null;
+          const kk = (kk, ik, Dk) => {
+              var fk, Sk, bk;
+              return null !== (fk = null === (Sk = ek.frequencies[kk + ue[0]]) || void 0 === Sk || null === (bk = Sk[ik + ue[1]]) || void 0 === bk ? void 0 : bk[Dk + ue[2]]) && void 0 !== fk ? fk : 0
             },
-            qQ = () => {
-              DQ && DQ.loadFile(GQ.BaseUrl + QQ, (QQ => {
-                !YQ && FQ && FQ(QQ), xQ.onCompleteObservable.notifyObservers(xQ)
-              }), wQ ? QQ => {
-                !YQ && wQ && wQ(QQ)
-              } : void 0, LQ, kQ)
-            };
-          DQ.open(qQ, LQ)
-        } else AQ();
-        return xQ
-      },
-      RQ = QQ => {
-        const {
-          match: FQ,
-          type: wQ
-        } = rQ(QQ);
-        if (FQ) return wQ || void 0;
-        const LQ = QQ.lastIndexOf(".");
-        switch (QQ.substring(LQ + 1).toLowerCase()) {
-          case "glb":
-            return "model/gltf-binary";
-          case "bin":
-            return "application/octet-stream";
-          case "oN":
-            return "model/gltf+json";
-          case "jpg":
-          case "jpeg":
-            return "image/jpeg";
-          case "png":
-            return "image/png";
-          case "webp":
-            return "image/webp";
-          case "ktx":
-            return "image/ktx";
-          case "ktx2":
-            return "image/ktx2";
-          case "avif":
-            return "image/avif";
-          default:
-            return
-        }
-      },
-      OQ = () => "undefined" !== typeof location && "file:" === location.protocol,
-      sQ = QQ => AQ.test(QQ),
-      rQ = QQ => {
-        const FQ = AQ.exec(QQ);
-        if (null === FQ || 0 === FQ.length) return {
-          match: !1,
-          type: ""
-        };
-        return {
-          match: !0,
-          type: FQ[0].replace("data:", "").replace(";base64,", "")
-        }
-      };
-
-    function IQ(QQ) {
-      return (0, vQ.e)(QQ.split(",")[1])
-    }
-    const UQ = QQ => (0, vQ.f)(QQ.split(",")[1]);
-    let NQ;
-    const TQ = (QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ) => {
-      NQ = {
-        DecodeBase64UrlToBinary: QQ,
-        DecodeBase64UrlToString: FQ,
-        DefaultRetryStrategy: wQ.DefaultRetryStrategy,
-        BaseUrl: wQ.BaseUrl,
-        CorsBehavior: wQ.CorsBehavior,
-        PreprocessUrl: wQ.PreprocessUrl,
-        IsBase64DataUrl: LQ,
-        IsFileURL: qQ,
-        LoadFile: oQ,
-        LoadImage: DQ,
-        ReadFile: kQ,
-        RequestFile: vQ,
-        SetCorsBehavior: mQ
-      }, Object.defineProperty(NQ, "DefaultRetryStrategy", {
-        get: function() {
-          return wQ.DefaultRetryStrategy
-        },
-        set: function(QQ) {
-          wQ.DefaultRetryStrategy = QQ
-        }
-      }), Object.defineProperty(NQ, "BaseUrl", {
-        get: function() {
-          return wQ.BaseUrl
-        },
-        set: function(QQ) {
-          wQ.BaseUrl = QQ
-        }
-      }), Object.defineProperty(NQ, "PreprocessUrl", {
-        get: function() {
-          return wQ.PreprocessUrl
-        },
-        set: function(QQ) {
-          wQ.PreprocessUrl = QQ
-        }
-      }), Object.defineProperty(NQ, "CorsBehavior", {
-        get: function() {
-          return wQ.CorsBehavior
-        },
-        set: function(QQ) {
-          wQ.CorsBehavior = QQ
-        }
-      })
-    };
-    let KQ = !1;
-
-    function zQ() {
-      KQ || (KQ = !0, TQ(IQ, UQ, GQ, sQ, OQ, iQ, CQ, SQ, WQ, pQ), uQ.e.loadFile = iQ, uQ.e.loadImage = CQ, HQ.j.loadFile = iQ)
-    }
-  },
-  39475: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => kQ,
-      g: () => oQ,
-      j: () => DQ
-    });
-    let LQ = null;
-
-    function qQ() {
-      if (LQ) return LQ;
-      const QQ = new ArrayBuffer(4),
-        FQ = new Float32Array(QQ),
-        wQ = new Uint32Array(QQ),
-        qQ = new Uint32Array(512),
-        oQ = new Uint32Array(512);
-      for (let LQ = 0; LQ < 256; ++LQ) {
-        const QQ = LQ - 127;
-        QQ < -24 ? (qQ[LQ] = 0, qQ[256 | LQ] = 32768, oQ[LQ] = 24, oQ[256 | LQ] = 24) : QQ < -14 ? (qQ[LQ] = 1024 >> -QQ - 14, qQ[256 | LQ] = 1024 >> -QQ - 14 | 32768, oQ[LQ] = -QQ - 1, oQ[256 | LQ] = -QQ - 1) : QQ <= 15 ? (qQ[LQ] = QQ + 15 << 10, qQ[256 | LQ] = QQ + 15 << 10 | 32768, oQ[LQ] = 13, oQ[256 | LQ] = 13) : QQ < 128 ? (qQ[LQ] = 31744, qQ[256 | LQ] = 64512, oQ[LQ] = 24, oQ[256 | LQ] = 24) : (qQ[LQ] = 31744, qQ[256 | LQ] = 64512, oQ[LQ] = 13, oQ[256 | LQ] = 13)
-      }
-      const DQ = new Uint32Array(2048),
-        kQ = new Uint32Array(64),
-        vQ = new Uint32Array(64);
-      for (let LQ = 1; LQ < 1024; ++LQ) {
-        let QQ = LQ << 13,
-          FQ = 0;
-        for (; 0 === (8388608 & QQ);) QQ <<= 1, FQ -= 8388608;
-        QQ &= -8388609, FQ += 947912704, DQ[LQ] = QQ | FQ
-      }
-      for (let LQ = 1024; LQ < 2048; ++LQ) DQ[LQ] = 939524096 + (LQ - 1024 << 13);
-      for (let LQ = 1; LQ < 31; ++LQ) kQ[LQ] = LQ << 23;
-      kQ[31] = 1199570944, kQ[32] = 2147483648;
-      for (let LQ = 33; LQ < 63; ++LQ) kQ[LQ] = 2147483648 + (LQ - 32 << 23);
-      kQ[63] = 3347054592;
-      for (let LQ = 1; LQ < 64; ++LQ) 32 !== LQ && (vQ[LQ] = 1024);
-      return LQ = {
-        floatView: FQ,
-        uint32View: wQ,
-        baseTable: qQ,
-        shiftTable: oQ,
-        mantissaTable: DQ,
-        exponentTable: kQ,
-        offsetTable: vQ
-      }, LQ
-    }
-    const oQ = 65504;
-
-    function DQ(QQ) {
-      const FQ = qQ();
-      FQ.floatView[0] = QQ;
-      const wQ = FQ.uint32View[0],
-        LQ = wQ >> 23 & 511;
-      return FQ.baseTable[LQ] + ((8388607 & wQ) >> FQ.shiftTable[LQ])
-    }
-
-    function kQ(QQ) {
-      const FQ = qQ();
-      return FQ.uint32View[0] = FQ.mantissaTable[FQ.offsetTable[QQ >> 10] + (1023 & QQ)] + FQ.exponentTable[QQ >> 10], FQ.floatView[0]
-    }
-  },
-  39468: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => oQ,
-      f: () => qQ,
-      i: () => LQ
-    });
-    const LQ = QQ => {
-        const FQ = ArrayBuffer.isView(QQ) ? new Uint8Array(QQ.buffer, QQ.byteOffset, QQ.byteLength) : new Uint8Array(QQ);
-        return "function" === typeof FQ.toBase64 ? FQ.toBase64() : function(QQ) {
-          const FQ = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ = "",
-            uQ = 0;
-          for (; uQ < QQ.length;) wQ = QQ[uQ++], LQ = uQ < QQ.length ? QQ[uQ++] : Number.NaN, qQ = uQ < QQ.length ? QQ[uQ++] : Number.NaN, oQ = wQ >> 2, DQ = (3 & wQ) << 4 | LQ >> 4, kQ = (15 & LQ) << 2 | qQ >> 6, vQ = 63 & qQ, isNaN(LQ) ? kQ = vQ = 64 : isNaN(qQ) && (vQ = 64), mQ += FQ.charAt(oQ) + FQ.charAt(DQ) + FQ.charAt(kQ) + FQ.charAt(vQ);
-          return mQ
-        }(FQ)
-      },
-      qQ = QQ => atob(QQ),
-      oQ = QQ => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(QQ).buffer : function(QQ) {
-        const FQ = qQ(QQ),
-          wQ = FQ.length,
-          LQ = new Uint8Array(new ArrayBuffer(wQ));
-        for (let qQ = 0; qQ < wQ; qQ++) LQ[qQ] = FQ.charCodeAt(qQ);
-        return LQ.buffer
-      }(QQ)
-  },
-  39289: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => qQ,
-      e: () => DQ
-    });
-    let LQ = [];
-    class qQ {
-      static SetImmediate(QQ) {
-        0 === LQ.length && setTimeout((() => {
-          const QQ = LQ;
-          LQ = [];
-          for (const FQ of QQ) FQ()
-        }), 1), LQ.push(QQ)
-      }
-    }
-
-    function oQ(QQ, FQ, wQ) {
-      try {
-        if (QQ()) return FQ(), !0
-      } catch (LQ) {
-        return wQ?.(LQ), !0
-      }
-      return !1
-    }
-    const DQ = function(QQ, FQ, wQ) {
-      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        DQ = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && oQ(QQ, FQ, wQ)) return null;
-      const kQ = setInterval((() => {
-        oQ(QQ, FQ, wQ) ? clearInterval(kQ) : (qQ -= LQ, qQ < 0 && (clearInterval(kQ), wQ?.(new Error("Operation timed out after maximum retries. " + (DQ || "")), !0)))
-      }), LQ);
-      return () => clearInterval(kQ)
-    }
-  },
-  39455: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => LQ
-    });
-    class LQ {
-      constructor() {
-        this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
-      }
-      static get IsCustomRequestAvailable() {
-        return Object.keys(LQ.CustomRequestHeaders).length > 0 || LQ.CustomRequestModifiers.length > 0
-      }
-      static _CleanUrl(QQ) {
-        return QQ = (QQ = QQ.replace("file:http:", "http:")).replace("file:https:", "https:")
-      }
-      static _ShouldSkipRequestModifications(QQ) {
-        return LQ.SkipRequestModificationForBabylonCDN && (QQ.includes("preview.babylonjs.com") || QQ.includes("cdn.babylonjs.com"))
-      }
-      static _CollectCustomizations(QQ) {
-        const FQ = {
-          ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
-        };
-        if (LQ._ShouldSkipRequestModifications(QQ)) return {
-          url: QQ,
-          headers: FQ
-        };
-        for (const qQ in LQ.CustomRequestHeaders) {
-          const QQ = LQ.CustomRequestHeaders[qQ];
-          QQ && (FQ[qQ] = QQ)
-        }
-        const wQ = {
-          setRequestHeader: (QQ, wQ) => {
-            FQ[QQ] = wQ
+            Dk = function(kk, ek, ik, Dk) {
+              let fk = 0,
+                Sk = 1 / 0;
+              for (const Kk of [0, 1, 2]) {
+                if (0 === ek[Kk]) {
+                  if (kk[Kk] < 0 || kk[Kk] > ik[Kk]) return null;
+                  continue
+                }
+                const Dk = (0 - kk[Kk]) / ek[Kk],
+                  bk = (ik[Kk] - kk[Kk]) / ek[Kk];
+                fk = Math.max(fk, Math.min(Dk, bk)), Sk = Math.min(Sk, Math.max(Dk, bk))
+              }
+              if (fk > Sk) return null;
+              const bk = [0, 1, 2].map((Dk => Math.min(ik[Dk] - 1, Math.max(0, Math.floor(kk[Dk] + ek[Dk] * fk))))),
+                rk = [0, 1, 2].map((kk => Math.sign(ek[kk]))),
+                Pk = [0, 1, 2].map((ik => {
+                  if (0 === rk[ik]) return 1 / 0;
+                  return ((rk[ik] > 0 ? bk[ik] + 1 : bk[ik]) - kk[ik]) / ek[ik]
+                })),
+                mk = [0, 1, 2].map((kk => 0 === rk[kk] ? 1 / 0 : Math.abs(1 / ek[kk])));
+              let Mk = null;
+              for (;;) {
+                const kk = Dk(bk[0], bk[1], bk[2]);
+                if (kk >= 1) return bk;
+                kk > 0 && (Mk = [bk[0], bk[1], bk[2]]);
+                const ek = Pk[0] < Pk[1] ? Pk[0] < Pk[2] ? 0 : 2 : Pk[1] < Pk[2] ? 1 : 2;
+                if (Pk[ek] > Sk) return Mk;
+                if (bk[ek] += rk[ek], Pk[ek] += mk[ek], bk[ek] < 0 || bk[ek] >= ik[ek]) return Mk
+              }
+            }(We.position, ee(We), ze, ((ek, Dk, fk) => (0, Yk.z)(kk(ek, Dk, fk), ik, zk)));
+          return null === Dk ? null : {
+            x: Dk[0] + ue[0],
+            y: Dk[1] + ue[1],
+            z: Dk[2] + ue[2],
+            value: kk(Dk[0], Dk[1], Dk[2])
           }
-        };
-        for (const qQ of LQ.CustomRequestModifiers) {
-          if (LQ._ShouldSkipRequestModifications(QQ)) break;
-          const FQ = qQ(wQ, QQ);
-          "string" === typeof FQ && (QQ = FQ)
+        }), [Ce, ek, ue, We, ze, ik, zk]),
+        {
+          keyHandlers: Be
+        } = (0, Lk.e)({
+          isEnabled: Ce,
+          claimedKeyCodes: qk,
+          qx: kk => {
+            Fe((ek => function(kk, ek) {
+              const ik = [Math.sin(kk.heading), 0, Math.cos(kk.heading)],
+                Dk = re(re(Pe(ik, ek.forward), Pe(ie(kk.heading), ek.right)), [0, ek.up, 0]);
+              return {
+                ...kk,
+                position: re(kk.position, Dk)
+              }
+            }(null !== ek && void 0 !== ek ? ek : te.current.fittedView, kk)))
+          },
+          onZoomChange: je
+        });
+      (0, Dk.useEffect)((() => {
+        const kk = Me.current;
+        if (!kk) return;
+        let ek;
+        try {
+          ek = function(kk, ek) {
+            const ik = new fk.d(kk, !0, {
+                stencil: !1
+              }, !0),
+              Dk = new Sk.d(ik),
+              [nk, Uk, Hk] = Yk.R;
+            Dk.clearColor = new mk.e(nk / 255, Uk / 255, Hk / 255, 1);
+            const wk = new bk.d("Heatmap3DCamera", Mk.eH.Zero(), Dk);
+            wk.fov = ek, wk.minZ = .05;
+            const lk = new rk.c("Heatmap3DLight", new Mk.eH(.4, 1, -.6), Dk);
+            lk.diffuse = mk.Color3.White(), lk.groundColor = mk.Color3.Black(), lk.specular = mk.Color3.Black();
+            const pk = new Pk.StandardMaterial("Heatmap3DCellMaterial", Dk);
+            pk.diffuseColor = new mk.Color3(.4, .4, .4), pk.emissiveColor = new mk.Color3(.62, .62, .62), pk.specularColor = mk.Color3.Black();
+            const yk = (0, Kk.e)("Heatmap3DCells", {
+              size: 1
+            }, Dk);
+            yk.material = pk, yk.Pw = !1, yk.kH = !0, yk.isVisible = !1;
+            const Lk = (0, Kk.e)("Heatmap3DTranslucentCells", {
+              size: 1
+            }, Dk);
+            Lk.material = pk, Lk.hasVertexAlpha = !0, Lk.Pw = !1, Lk.kH = !0, Lk.isVisible = !1;
+            const Ck = new Pk.StandardMaterial("Heatmap3DSchematicMaterial", Dk);
+            Ck.diffuseColor = new mk.Color3(.6, .6, .6), Ck.emissiveColor = new mk.Color3(.4, .4, .4), Ck.specularColor = mk.Color3.Black();
+            const Ak = (0, Kk.e)("Heatmap3DSchematicBlocks", {
+              size: 1
+            }, Dk);
+            Ak.material = Ck, Ak.Pw = !1, Ak.kH = !0, Ak.isVisible = !1;
+            const jk = (0, xk.b)("Heatmap3DTarget", {
+              lines: ke([-.52, -.52, -.52], [.52, .52, .52])
+            }, Dk);
+            return jk.color = new mk.Color3(.06, .14, .23), jk.renderingGroupId = 1, jk.Pw = !1, jk.isVisible = !1, {
+              engine: ik,
+              bw: Dk,
+              camera: wk,
+              cells: yk,
+              translucentCells: Lk,
+              translucent: {
+                ci: new Float32Array(0),
+                colours: new Float32Array(0),
+                count: 0
+              },
+              translucentSortedFrom: null,
+              schematicBlocks: Ak,
+              targetOutline: jk,
+              chunkGrid: null,
+              chunkGridCentre: null,
+              chunkGridOrigin: null,
+              targetFieldOfView: ek,
+              needsRender: !0
+            }
+          }(kk, te.current.fieldOfView)
+        } catch (ik) {
+          return console.error("Failed to start the 3D heatmap", ik), void Ue(!0)
         }
-        return {
-          url: QQ,
-          headers: FQ
+        return Ke.current = ek, ek.engine.runRenderLoop((() => {
+          const kk = ek.camera;
+          kk.fov !== ek.targetFieldOfView && (kk.fov += (ek.targetFieldOfView - kk.fov) * (kk.fov > ek.targetFieldOfView ? .3 : .2), Math.abs(ek.targetFieldOfView - kk.fov) < 5e-4 && (kk.fov = ek.targetFieldOfView), ek.needsRender = !0), ek.needsRender && (ek.bw.render(), ek.needsRender = !ek.bw.isReady() || !ek.engine.areAllEffectsReady())
+        })), () => {
+          Ke.current = null, ek.engine.dispose()
         }
-      }
-      static async FetchAsync(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const wQ = FQ.method ?? "GET";
-        if ("undefined" !== typeof fetch) {
+      }), []), (0, Dk.useEffect)((() => {
+        const kk = Me.current;
+        if (!kk) return;
+        const ek = () => {
+            ye.current = !1, we(document.pointerLockElement === kk)
+          },
+          ik = () => {
+            ye.current && (ye.current = !1, pe(!1))
+          },
+          Dk = ek => {
+            const ik = !te.current.canLock && document.activeElement === kk && 0 !== (1 & ek.buttons);
+            if (document.pointerLockElement !== kk && !ik) return;
+            const Dk = te.current.mouseSensitivity * dk;
+            Fe((kk => function(kk, ek, ik) {
+              const Dk = 2 * Math.PI;
+              return {
+                ...kk,
+                heading: ((kk.heading + ek) % Dk + Dk) % Dk,
+                pitch: Math.max(-hk, Math.min(hk, kk.pitch + ik))
+              }
+            }(null !== kk && void 0 !== kk ? kk : te.current.fittedView, ek.movementX * Dk, ek.movementY * Dk)))
+          };
+        return document.addEventListener("pointerlockchange", ek), document.addEventListener("pointerlockerror", ik), document.addEventListener("pointermove", Dk), () => {
+          document.removeEventListener("pointerlockchange", ek), document.removeEventListener("pointerlockerror", ik), document.removeEventListener("pointermove", Dk), document.pointerLockElement === kk && (0, Ck.d)()
+        }
+      }), []), (0, Dk.useEffect)((() => {
+        const kk = Ke.current;
+        null !== kk && 0 !== xe.width && 0 !== xe.height && (kk.engine.resize(), kk.needsRender = !0)
+      }), [xe.width, xe.height]), (0, Dk.useEffect)((() => {
+        const kk = Ke.current;
+        null !== kk && (kk.targetFieldOfView = ve * (Ae ? sk : 1))
+      }), [ve, Ae]), (0, Dk.useEffect)((() => {
+        const kk = Ke.current;
+        null !== kk && function(kk, ek, ik, Dk) {
+          const fk = [],
+            Sk = [],
+            bk = [],
+            rk = [];
+          for (let Pk = 0; Pk < ek.count; Pk++) {
+            const kk = ek.values[Pk],
+              mk = (0, Yk.z)(kk, ik, Dk);
+            if (mk <= 0) continue;
+            const [Mk, Kk, xk] = (0, Yk.r)((0, Yk.K)(kk, ik)), nk = mk >= 1;
+            (nk ? fk : bk).push(ek.positions[3 * Pk] + .5, ek.positions[3 * Pk + 1] + .5, ek.positions[3 * Pk + 2] + .5), (nk ? Sk : rk).push(Mk / 255, Kk / 255, xk / 255, mk)
+          }
+          Rk(kk.cells, Float32Array.from(fk), Float32Array.from(Sk), Sk.length / 4), kk.translucent = {
+            ci: Float32Array.from(bk),
+            colours: Float32Array.from(rk),
+            count: rk.length / 4
+          }, kk.translucentSortedFrom = null, Jk(kk), kk.needsRender = !0
+        }(kk, Qe, ik, zk)
+      }), [Qe, ik, zk]), (0, Dk.useEffect)((() => {
+        const kk = Ke.current;
+        null !== kk && function(kk, ek) {
+          kk.chunkGridOrigin = ek, kk.chunkGridCentre = null, Nk(kk)
+        }(kk, ak.min)
+      }), [ak]), (0, Dk.useEffect)((() => {
+        const kk = Ke.current;
+        null !== kk && function(kk, ek, ik) {
+          const Dk = [],
+            fk = [];
+          if (null !== ek) {
+            const {
+              positions: kk,
+              colours: Sk,
+              count: bk
+            } = ek.surface;
+            for (let ek = 0; ek < bk; ek++) {
+              const bk = [kk[3 * ek], kk[3 * ek + 1], kk[3 * ek + 2]];
+              [0, 1, 2].every((kk => bk[kk] >= ik.min[kk] - Ik && bk[kk] <= ik.max[kk] + Ik)) && (Dk.push(bk[0] - ik.min[0] + .5, bk[1] - ik.min[1] + .5, bk[2] - ik.min[2] + .5), fk.push(Sk[3 * ek] / 255, Sk[3 * ek + 1] / 255, Sk[3 * ek + 2] / 255, 1))
+            }
+          }
+          Rk(kk.schematicBlocks, Float32Array.from(Dk), Float32Array.from(fk), fk.length / 4), kk.needsRender = !0
+        }(kk, tk, ak)
+      }), [tk, ak]), (0, Dk.useEffect)((() => {
+        const kk = Ke.current;
+        null !== kk && null !== kk.chunkGrid && (kk.chunkGrid.isVisible = se, kk.needsRender = !0)
+      }), [se, ak]), (0, Dk.useEffect)((() => {
+        const kk = Ke.current;
+        null !== kk && function(kk, ek, ik) {
           const {
-            url: qQ,
-            headers: oQ
-          } = LQ._CollectCustomizations(LQ._CleanUrl(QQ), FQ.headers ?? {});
-          return await fetch(qQ, {
-            method: wQ,
-            headers: oQ,
-            body: FQ.body ?? void 0
-          })
+            camera: Dk
+          } = kk;
+          Dk.position.set(ek.position[0], ek.position[1], ek.position[2]), Dk.rotation.set(ek.pitch, ek.heading, 0);
+          const fk = (Qk + 1) * Uk.g.oU * Math.sqrt(3);
+          Dk.maxZ = Math.max(fk, Math.hypot(...re(ek.position, Pe(Se({
+            min: [0, 0, 0],
+            max: ik
+          }), -1))) + 2 * Math.hypot(...ik)), Nk(kk), Jk(kk), kk.needsRender = !0
+        }(kk, We, ze)
+      }), [We, ze]), (0, Dk.useEffect)((() => {
+        const kk = Ke.current;
+        null !== kk && (kk.targetOutline.isVisible = null !== Xe, null !== Xe && kk.targetOutline.position.set(Xe.x - ue[0] + .5, Xe.y - ue[1] + .5, Xe.z - ue[2] + .5), kk.needsRender = !0)
+      }), [Xe, ue]);
+      return (0, Ak.jsxs)("div", {
+        className: "StudioHeatmapMap StudioHeatmap3D",
+        ref: me,
+        children: [(0, Ak.jsx)("canvas", {
+          className: "StudioHeatmapMapCanvas",
+          ref: Me,
+          style: {
+            width: `${xe.width}px`,
+            height: `${xe.height}px`
+          },
+          tabIndex: 0,
+          "aria-label": gk("3D heatmap"),
+          onClick: () => {
+            const kk = Me.current;
+            if (null === kk) return;
+            if (kk.focus({
+                preventScroll: !0
+              }), He || !le) return;
+            const ek = kk.requestPointerLock();
+            ek instanceof Promise ? ek.catch((kk => {
+              kk instanceof DOMException && ("WrongDocumentError" === kk.name || "NotSupportedError" === kk.name) && pe(!1)
+            })) : ye.current = !0
+          },
+          ...Be,
+          onKeyDown: kk => {
+            if (Ce && Vk.has(kk.code)) return kk.preventDefault(), void(() => {
+              const kk = Me.current;
+              null !== kk && document.pointerLockElement === kk ? (0, Ck.d)() : null === kk || void 0 === kk || kk.blur()
+            })();
+            const ek = Fk[kk.code];
+            return Ce && void 0 !== ek ? (kk.preventDefault(), void Bk(ek)) : Ce && (0, Lk.b)("replayPlayPause", kk.code) && !(0, Lk.b)("Zoom", kk.code) ? (kk.preventDefault(), void(kk.repeat || Tk())) : Ce && kk.code === uk ? (kk.preventDefault(), void ck()) : Ce && kk.code === Ek ? (kk.preventDefault(), void Fe(null)) : Ce && kk.code === vk ? (kk.preventDefault(), void de((kk => !kk))) : void Be.onKeyDown(kk)
+          },
+          onFocus: () => {
+            Le(!0)
+          },
+          onBlur: () => {
+            Le(!1), Be.onBlur()
+          }
+        }), ne && (0, Ak.jsx)("div", {
+          className: "StudioHeatmap3DUnavailable SmallTextLight",
+          children: gk("3D view isn't available in this browser.")
+        }), Ce && (0, Ak.jsx)("div", {
+          className: "StudioHeatmap3DCrosshair"
+        }), (0, Ak.jsx)("div", {
+          className: "StudioHeatmap3DCoordinates SmallTextLight",
+          children: We.position.map(((kk, ek) => (kk + ue[ek]).toFixed(2))).join(" ")
+        }), se && (0, Ak.jsx)(Gk, {
+          heading: We.heading,
+          pitch: We.pitch,
+          onViewFrom: kk => {
+            const ek = Pe(kk, -1),
+              ik = 0 === ek[1] ? {
+                heading: Math.atan2(ek[0], ek[2]),
+                pitch: 0
+              } : {
+                heading: We.heading,
+                pitch: ek[1] < 0 ? hk : -hk
+              };
+            Fe(De(he, Ee, ve, ik))
+          },
+          onTurn: (kk, ek) => {
+            Fe((ik => function(kk, ek, ik, Dk) {
+              return fe(kk, ek, {
+                heading: kk.heading + ik * Zk,
+                pitch: Math.max(-hk, Math.min(hk, kk.pitch + Dk * Zk))
+              })
+            }(null !== ik && void 0 !== ik ? ik : te.current.fittedView, Se(he), kk, ek)))
+          },
+          onFlip: () => {
+            Fe((kk => function(kk, ek) {
+              return fe(kk, ek, {
+                heading: kk.heading + Math.PI,
+                pitch: -kk.pitch
+              })
+            }(null !== kk && void 0 !== kk ? kk : te.current.fittedView, Se(he))))
+          }
+        }), null !== Xe && (0, Ak.jsx)("div", {
+          className: "StudioHeatmapMapReadout SmallTextLight",
+          children: null === Ok ? gk("studio:heatmapBlockReadout", {
+            x: Xe.x,
+            y: Xe.y,
+            z: Xe.z,
+            count: (0, nk.Q)(Xe.value)
+          }) : Ok(Xe.x, Xe.y, Xe.z, Xe.value)
+        }), (0, Ak.jsxs)("div", {
+          className: "StudioHeatmapMapControls",
+          children: [Xk, (0, Ak.jsx)(pk.X, {
+            active: null === Ve,
+            onClick: () => {
+              Fe(null)
+            },
+            children: (0, Ak.jsx)(yk.d, {
+              name: "eye"
+            })
+          })]
+        })]
+      })
+    }
+
+    function Gk(kk) {
+      let {
+        heading: ek,
+        pitch: ik,
+        onViewFrom: fk,
+        onTurn: Sk,
+        onFlip: bk
+      } = kk;
+      const {
+        t: rk
+      } = (0, Hk.D)(), Pk = (0, Dk.useRef)(null), mk = ee({
+        heading: ek,
+        pitch: ik
+      }), Mk = ie(ek), Kk = Me(mk, Mk), xk = Bk + ck + 2, nk = Xk.flatMap((kk => [1, -1].map((ek => {
+        const ik = Pe(kk.direction, ek);
+        return {
+          ...kk,
+          sign: ek,
+          direction: ik,
+          endX: xk + me(ik, Mk) * Bk,
+          endY: xk - me(ik, Kk) * Bk,
+          depth: me(ik, mk)
         }
-        return await new Promise(((qQ, oQ) => {
-          const DQ = new LQ;
-          DQ.responseType = "arraybuffer", DQ.addEventListener("readystatechange", (() => {
-            if (4 === DQ.readyState)
-              if (DQ.status >= 200 && DQ.status < 300) {
-                const QQ = "undefined" !== typeof Headers ? new Headers : void 0,
-                  FQ = DQ.getResponseHeader("Content-Type");
-                FQ && QQ && QQ.set("Content-Type", FQ), "undefined" !== typeof Response ? qQ(new Response(DQ.response, {
-                  status: DQ.status,
-                  statusText: DQ.statusText,
-                  headers: QQ
-                })) : qQ({
-                  ok: !0,
-                  status: DQ.status,
-                  statusText: DQ.statusText,
-                  headers: {
-                    get: QQ => DQ.getResponseHeader(QQ)
-                  },
-                  arrayBuffer: async () => await Promise.resolve(DQ.response)
-                })
-              } else oQ(new Error(`HTTP ${DQ.status} loading '${DQ.requestURL}': ${DQ.statusText}`))
-          })), DQ.open(wQ, QQ, FQ.headers), DQ.send(FQ.body ?? null)
-        }))
+      })))).sort(((kk, ek) => ek.depth - kk.depth));
+      return (0, Ak.jsxs)("svg", {
+        className: "StudioHeatmap3DGizmo",
+        width: 2 * xk,
+        height: 2 * xk,
+        "aria-hidden": !0,
+        onPointerDown: kk => {
+          var ek, ik;
+          kk.currentTarget.setPointerCapture(kk.pointerId);
+          const Dk = kk.target,
+            fk = Dk.getAttribute("data-end");
+          Pk.current = {
+            pointerId: kk.pointerId,
+            x: kk.clientX,
+            y: kk.clientY,
+            travel: 0,
+            side: null === fk ? null : null !== (ek = null === (ik = nk[Number(fk)]) || void 0 === ik ? void 0 : ik.direction) && void 0 !== ek ? ek : null,
+            isOnMiddle: Dk.hasAttribute("data-middle")
+          }
+        },
+        onPointerMove: kk => {
+          const ek = Pk.current;
+          if (null === ek || ek.pointerId !== kk.pointerId) return;
+          const ik = kk.clientX - ek.x,
+            Dk = kk.clientY - ek.y;
+          ek.x = kk.clientX, ek.y = kk.clientY, ek.travel += Math.abs(ik) + Math.abs(Dk), ek.travel >= Ok && Sk(ik, Dk)
+        },
+        onPointerUp: kk => {
+          const ek = Pk.current;
+          Pk.current = null, null === ek || ek.pointerId !== kk.pointerId || ek.travel >= Ok || (null !== ek.side ? fk(ek.side) : ek.isOnMiddle && bk())
+        },
+        onPointerCancel: () => {
+          Pk.current = null
+        },
+        children: [nk.map(((kk, ek) => {
+          const ik = kk.sign > 0;
+          return (0, Ak.jsxs)("g", {
+            children: [(0, Ak.jsx)("line", {
+              x1: xk,
+              y1: xk,
+              x2: kk.endX,
+              y2: kk.endY,
+              stroke: kk.colour,
+              strokeOpacity: ik ? 1 : .5,
+              strokeWidth: 2,
+              strokeLinecap: "round"
+            }), (0, Ak.jsx)("circle", {
+              className: "StudioHeatmap3DGizmoEnd",
+              "data-end": ek,
+              cx: kk.endX,
+              cy: kk.endY,
+              r: ik ? ck : ck - 1,
+              fill: kk.colour,
+              fillOpacity: ik ? 1 : .3,
+              stroke: kk.colour,
+              strokeWidth: ik ? 0 : 1.5,
+              children: (0, Ak.jsx)("title", {
+                children: `${rk("View from")} ${ik?"+":"\u2212"}${kk.name}`
+              })
+            }), ik && (0, Ak.jsx)("text", {
+              pointerEvents: "none",
+              x: kk.endX,
+              y: kk.endY,
+              fill: "#151515",
+              fontSize: 9,
+              fontWeight: "bold",
+              textAnchor: "middle",
+              dominantBaseline: "central",
+              children: kk.name
+            })]
+          }, `${ik?"+":"-"}${kk.name}`)
+        })), (0, Ak.jsx)("circle", {
+          className: "StudioHeatmap3DGizmoEnd",
+          "data-middle": !0,
+          cx: xk,
+          cy: xk,
+          r: Tk,
+          fill: "#d0d0d0",
+          fillOpacity: .85,
+          children: (0, Ak.jsx)("title", {
+            children: rk("View from the opposite side")
+          })
+        })]
+      })
+    }
+
+    function Nk(kk) {
+      var ek, ik, Dk;
+      const {
+        chunkGridOrigin: fk,
+        camera: Sk
+      } = kk;
+      if (null === fk) return;
+      const bk = [Sk.position.x, Sk.position.y, Sk.position.z],
+        rk = [0, 2].map((kk => Math.floor((bk[kk] + fk[kk]) / Uk.g.oU))),
+        Pk = kk.chunkGridCentre;
+      if (null !== Pk && Pk.every(((kk, ek) => kk === rk[ek]))) return;
+      const Kk = null === (ek = null === (ik = kk.chunkGrid) || void 0 === ik ? void 0 : ik.isVisible) || void 0 === ek || ek;
+      null === (Dk = kk.chunkGrid) || void 0 === Dk || Dk.dispose();
+      const [nk, Hk] = [0, 2].map(((kk, ek) => {
+        const ik = [];
+        for (let Dk = rk[ek] - Qk; Dk <= rk[ek] + Qk + 1; Dk++) ik.push(Dk * Uk.g.oU - fk[kk]);
+        return ik
+      })), wk = -fk[1], lk = [];
+      for (const mk of Hk) lk.push([new Mk.eH(nk[0], wk, mk), new Mk.eH(nk[nk.length - 1], wk, mk)]);
+      for (const mk of nk) lk.push([new Mk.eH(mk, wk, Hk[0]), new Mk.eH(mk, wk, Hk[Hk.length - 1])]);
+      const pk = (0, xk.b)("Heatmap3DChunkGrid", {
+        lines: lk
+      }, kk.bw);
+      pk.color = new mk.Color3(.45, .6, .78), pk.Pw = !1, pk.isVisible = Kk, kk.chunkGrid = pk, kk.chunkGridCentre = rk, kk.needsRender = !0
+    }
+
+    function Rk(kk, ek, ik, Dk) {
+      kk.i6("matrix", function(kk, ek) {
+        const ik = new Float32Array(16 * ek);
+        for (let Dk = 0; Dk < ek; Dk++) {
+          const ek = 16 * Dk;
+          ik[ek] = 1, ik[ek + 5] = 1, ik[ek + 10] = 1, ik[ek + 12] = kk[3 * Dk], ik[ek + 13] = kk[3 * Dk + 1], ik[ek + 14] = kk[3 * Dk + 2], ik[ek + 15] = 1
+        }
+        return ik
+      }(ek, Dk), 16, !0), kk.i6("color", ik, 4, !0), kk.isVisible = Dk > 0
+    }
+
+    function Jk(kk) {
+      const {
+        camera: ek,
+        translucent: ik
+      } = kk, Dk = [ek.position.x, ek.position.y, ek.position.z], fk = kk.translucentSortedFrom;
+      if (null !== fk && Math.hypot(Dk[0] - fk[0], Dk[1] - fk[1], Dk[2] - fk[2]) < zk) return;
+      kk.translucentSortedFrom = Dk;
+      const Sk = new Float64Array(ik.count),
+        bk = new Uint32Array(ik.count);
+      for (let mk = 0; mk < ik.count; mk++) {
+        const kk = ik.ci[3 * mk] - Dk[0],
+          ek = ik.ci[3 * mk + 1] - Dk[1],
+          fk = ik.ci[3 * mk + 2] - Dk[2];
+        Sk[mk] = kk * kk + ek * ek + fk * fk, bk[mk] = mk
       }
-      get requestURL() {
-        return this._requestURL
-      }
-      get onprogress() {
-        return this._xhr.onprogress
-      }
-      set onprogress(QQ) {
-        this._xhr.onprogress = QQ
-      }
-      get readyState() {
-        return this._xhr.readyState
-      }
-      get status() {
-        return this._xhr.status
-      }
-      get statusText() {
-        return this._xhr.statusText
-      }
-      get response() {
-        return this._xhr.response
-      }
-      get responseURL() {
-        return this._xhr.responseURL
-      }
-      get responseText() {
-        return this._xhr.responseText
-      }
-      get responseType() {
-        return this._xhr.responseType
-      }
-      set responseType(QQ) {
-        this._xhr.responseType = QQ
-      }
-      get timeout() {
-        return this._xhr.timeout
-      }
-      set timeout(QQ) {
-        this._xhr.timeout = QQ
-      }
-      addEventListener(QQ, FQ, wQ) {
-        this._xhr.addEventListener(QQ, FQ, wQ)
-      }
-      removeEventListener(QQ, FQ, wQ) {
-        this._xhr.removeEventListener(QQ, FQ, wQ)
-      }
-      abort() {
-        this._xhr.abort()
-      }
-      send(QQ) {
-        this._xhr.send(QQ)
-      }
-      open(QQ, FQ, wQ) {
-        const {
-          url: qQ,
-          headers: oQ
-        } = LQ._CollectCustomizations(FQ, wQ);
-        this._requestURL = LQ._CleanUrl(qQ), this._xhr.open(QQ, this._requestURL, !0);
-        for (const LQ in oQ) this._xhr.setRequestHeader(LQ, oQ[LQ])
-      }
-      setRequestHeader(QQ, FQ) {
-        this._xhr.setRequestHeader(QQ, FQ)
-      }
-      getResponseHeader(QQ) {
-        return this._xhr.getResponseHeader(QQ)
+      bk.sort(((kk, ek) => Sk[ek] - Sk[kk]));
+      const rk = new Float32Array(3 * ik.count),
+        Pk = new Float32Array(4 * ik.count);
+      bk.forEach(((kk, ek) => {
+        rk.set(ik.ci.subarray(3 * kk, 3 * kk + 3), 3 * ek), Pk.set(ik.colours.subarray(4 * kk, 4 * kk + 4), 4 * ek)
+      })), Rk(kk.translucentCells, rk, Pk, ik.count), kk.needsRender = !0
+    }
+
+    function ke(kk, ek) {
+      const ik = (ik, Dk, fk) => new Mk.eH(0 === ik ? kk[0] : ek[0], 0 === Dk ? kk[1] : ek[1], 0 === fk ? kk[2] : ek[2]),
+        Dk = [];
+      for (const fk of [0, 1])
+        for (const kk of [0, 1]) Dk.push([ik(0, fk, kk), ik(1, fk, kk)], [ik(fk, 0, kk), ik(fk, 1, kk)], [ik(fk, kk, 0), ik(fk, kk, 1)]);
+      return Dk
+    }
+
+    function ee(kk) {
+      return [Math.sin(kk.heading) * Math.cos(kk.pitch), -Math.sin(kk.pitch), Math.cos(kk.heading) * Math.cos(kk.pitch)]
+    }
+
+    function ie(kk) {
+      return [Math.cos(kk), 0, -Math.sin(kk)]
+    }
+
+    function De(kk, ek, ik) {
+      let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: ak,
+        pitch: Wk
+      };
+      const fk = [kk.max[0] - kk.min[0], kk.max[1] - kk.min[1], kk.max[2] - kk.min[2]],
+        Sk = ee(Dk),
+        bk = ie(Dk.heading),
+        rk = Me(Sk, bk),
+        Pk = Math.tan(ik / 2),
+        mk = Pk * ek;
+      let Mk = 1;
+      for (const Kk of [-fk[0] / 2, fk[0] / 2])
+        for (const kk of [-fk[1] / 2, fk[1] / 2])
+          for (const ek of [-fk[2] / 2, fk[2] / 2]) {
+            const ik = [Kk, kk, ek],
+              Dk = me(ik, Sk);
+            Mk = Math.max(Mk, Math.abs(me(ik, bk)) / mk - Dk, Math.abs(me(ik, rk)) / Pk - Dk)
+          }
+      return {
+        position: re([kk.min[0] + fk[0] / 2, kk.min[1] + fk[1] / 2, kk.min[2] + fk[2] / 2], Pe(Sk, -Mk * tk)),
+        heading: Dk.heading,
+        pitch: Dk.pitch
       }
     }
-    LQ.CustomRequestHeaders = {}, LQ.CustomRequestModifiers = new Array, LQ.SkipRequestModificationForBabylonCDN = !0
+
+    function fe(kk, ek, ik) {
+      const Dk = be(kk),
+        fk = be(ik),
+        Sk = re(kk.position, Pe(ek, -1)),
+        bk = [0, 1, 2].reduce(((kk, ek) => re(kk, Pe(fk[ek], me(Sk, Dk[ek])))), [0, 0, 0]);
+      return {
+        position: re(ek, bk),
+        heading: ik.heading,
+        pitch: ik.pitch
+      }
+    }
+
+    function Se(kk) {
+      return Pe(re(kk.min, kk.max), .5)
+    }
+
+    function be(kk) {
+      const ek = ee(kk),
+        ik = ie(kk.heading);
+      return [ek, ik, Me(ek, ik)]
+    }
+
+    function re(kk, ek) {
+      return [kk[0] + ek[0], kk[1] + ek[1], kk[2] + ek[2]]
+    }
+
+    function Pe(kk, ek) {
+      return [kk[0] * ek, kk[1] * ek, kk[2] * ek]
+    }
+
+    function me(kk, ek) {
+      return kk[0] * ek[0] + kk[1] * ek[1] + kk[2] * ek[2]
+    }
+
+    function Me(kk, ek) {
+      return [kk[1] * ek[2] - kk[2] * ek[1], kk[2] * ek[0] - kk[0] * ek[2], kk[0] * ek[1] - kk[1] * ek[0]]
+    }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

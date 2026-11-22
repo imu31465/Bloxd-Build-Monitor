@@ -1,4045 +1,1130 @@
 export const id = 235;
-export const ids = [235];
+export const ids = [235, 236];
 export const modules = {
-  37359: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => HQ,
-      h: () => DQ
+  39818: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Mk,
+      c: () => xk
     });
-    var LQ = wQ(9222),
-      qQ = wQ(9195),
-      oQ = wQ(317);
-    const DQ = {
-      "Maple Door": {
-        positions: [{
-          block: "Maple Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot1|open": {
-        positions: [{
-          block: "Maple Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot2|closed": {
-        positions: [{
-          block: "Maple Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot2|open": {
-        positions: [{
-          block: "Maple Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot3|closed": {
-        positions: [{
-          block: "Maple Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot3|open": {
-        positions: [{
-          block: "Maple Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot4|closed": {
-        positions: [{
-          block: "Maple Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Maple Door|meta|rot4|open": {
-        positions: [{
-          block: "Maple Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Maple Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door": {
-        positions: [{
-          block: "Pine Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot1|open": {
-        positions: [{
-          block: "Pine Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot2|closed": {
-        positions: [{
-          block: "Pine Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot2|open": {
-        positions: [{
-          block: "Pine Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot3|closed": {
-        positions: [{
-          block: "Pine Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot3|open": {
-        positions: [{
-          block: "Pine Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot4|closed": {
-        positions: [{
-          block: "Pine Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pine Door|meta|rot4|open": {
-        positions: [{
-          block: "Pine Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pine Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door": {
-        positions: [{
-          block: "Plum Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot1|open": {
-        positions: [{
-          block: "Plum Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot2|closed": {
-        positions: [{
-          block: "Plum Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot2|open": {
-        positions: [{
-          block: "Plum Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot3|closed": {
-        positions: [{
-          block: "Plum Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot3|open": {
-        positions: [{
-          block: "Plum Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot4|closed": {
-        positions: [{
-          block: "Plum Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Plum Door|meta|rot4|open": {
-        positions: [{
-          block: "Plum Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Plum Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door": {
-        positions: [{
-          block: "Cedar Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot1|open": {
-        positions: [{
-          block: "Cedar Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot2|closed": {
-        positions: [{
-          block: "Cedar Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot2|open": {
-        positions: [{
-          block: "Cedar Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot3|closed": {
-        positions: [{
-          block: "Cedar Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot3|open": {
-        positions: [{
-          block: "Cedar Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot4|closed": {
-        positions: [{
-          block: "Cedar Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cedar Door|meta|rot4|open": {
-        positions: [{
-          block: "Cedar Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cedar Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door": {
-        positions: [{
-          block: "Aspen Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot1|open": {
-        positions: [{
-          block: "Aspen Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot2|closed": {
-        positions: [{
-          block: "Aspen Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot2|open": {
-        positions: [{
-          block: "Aspen Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot3|closed": {
-        positions: [{
-          block: "Aspen Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot3|open": {
-        positions: [{
-          block: "Aspen Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot4|closed": {
-        positions: [{
-          block: "Aspen Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Aspen Door|meta|rot4|open": {
-        positions: [{
-          block: "Aspen Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Aspen Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door": {
-        positions: [{
-          block: "Jungle Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot1|open": {
-        positions: [{
-          block: "Jungle Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot2|closed": {
-        positions: [{
-          block: "Jungle Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot2|open": {
-        positions: [{
-          block: "Jungle Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot3|closed": {
-        positions: [{
-          block: "Jungle Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot3|open": {
-        positions: [{
-          block: "Jungle Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot4|closed": {
-        positions: [{
-          block: "Jungle Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Door|meta|rot4|open": {
-        positions: [{
-          block: "Jungle Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Jungle Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door": {
-        positions: [{
-          block: "Palm Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot1|open": {
-        positions: [{
-          block: "Palm Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot2|closed": {
-        positions: [{
-          block: "Palm Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot2|open": {
-        positions: [{
-          block: "Palm Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot3|closed": {
-        positions: [{
-          block: "Palm Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot3|open": {
-        positions: [{
-          block: "Palm Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot4|closed": {
-        positions: [{
-          block: "Palm Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Palm Door|meta|rot4|open": {
-        positions: [{
-          block: "Palm Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Palm Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door": {
-        positions: [{
-          block: "Pear Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot1|open": {
-        positions: [{
-          block: "Pear Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot2|closed": {
-        positions: [{
-          block: "Pear Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot2|open": {
-        positions: [{
-          block: "Pear Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot3|closed": {
-        positions: [{
-          block: "Pear Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot3|open": {
-        positions: [{
-          block: "Pear Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot4|closed": {
-        positions: [{
-          block: "Pear Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Pear Door|meta|rot4|open": {
-        positions: [{
-          block: "Pear Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pear Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door": {
-        positions: [{
-          block: "Cherry Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot1|open": {
-        positions: [{
-          block: "Cherry Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot2|closed": {
-        positions: [{
-          block: "Cherry Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot2|open": {
-        positions: [{
-          block: "Cherry Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot3|closed": {
-        positions: [{
-          block: "Cherry Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot3|open": {
-        positions: [{
-          block: "Cherry Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot4|closed": {
-        positions: [{
-          block: "Cherry Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Cherry Door|meta|rot4|open": {
-        positions: [{
-          block: "Cherry Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cherry Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door": {
-        positions: [{
-          block: "Spectral Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot1|open": {
-        positions: [{
-          block: "Spectral Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot2|closed": {
-        positions: [{
-          block: "Spectral Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot2|open": {
-        positions: [{
-          block: "Spectral Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot3|closed": {
-        positions: [{
-          block: "Spectral Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot3|open": {
-        positions: [{
-          block: "Spectral Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot4|closed": {
-        positions: [{
-          block: "Spectral Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Spectral Door|meta|rot4|open": {
-        positions: [{
-          block: "Spectral Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Spectral Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door": {
-        positions: [{
-          block: "Mango Door",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot1|open": {
-        positions: [{
-          block: "Mango Door|meta|rot1|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot1|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot2|closed": {
-        positions: [{
-          block: "Mango Door|meta|rot2|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot2|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot2|open": {
-        positions: [{
-          block: "Mango Door|meta|rot2|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot2|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot3|closed": {
-        positions: [{
-          block: "Mango Door|meta|rot3|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot3|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot3|open": {
-        positions: [{
-          block: "Mango Door|meta|rot3|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot3|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot4|closed": {
-        positions: [{
-          block: "Mango Door|meta|rot4|closed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot4|closed",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Mango Door|meta|rot4|open": {
-        positions: [{
-          block: "Mango Door|meta|rot4|open",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Mango Door Top|meta|rot4|open",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "White Bed": {
-        positions: [{
-          block: "White Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "White Bed|meta|rot2": {
-        positions: [{
-          block: "White Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "White Bed|meta|rot3": {
-        positions: [{
-          block: "White Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "White Bed|meta|rot4": {
-        positions: [{
-          block: "White Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Orange Bed": {
-        positions: [{
-          block: "Orange Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Orange Bed|meta|rot2": {
-        positions: [{
-          block: "Orange Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Orange Bed|meta|rot3": {
-        positions: [{
-          block: "Orange Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Orange Bed|meta|rot4": {
-        positions: [{
-          block: "Orange Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Magenta Bed": {
-        positions: [{
-          block: "Magenta Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Magenta Bed|meta|rot2": {
-        positions: [{
-          block: "Magenta Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Magenta Bed|meta|rot3": {
-        positions: [{
-          block: "Magenta Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Magenta Bed|meta|rot4": {
-        positions: [{
-          block: "Magenta Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Blue Bed": {
-        positions: [{
-          block: "Light Blue Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Light Blue Bed|meta|rot2": {
-        positions: [{
-          block: "Light Blue Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Blue Bed|meta|rot3": {
-        positions: [{
-          block: "Light Blue Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Light Blue Bed|meta|rot4": {
-        positions: [{
-          block: "Light Blue Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Yellow Bed": {
-        positions: [{
-          block: "Yellow Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Yellow Bed|meta|rot2": {
-        positions: [{
-          block: "Yellow Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Yellow Bed|meta|rot3": {
-        positions: [{
-          block: "Yellow Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Yellow Bed|meta|rot4": {
-        positions: [{
-          block: "Yellow Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Lime Bed": {
-        positions: [{
-          block: "Lime Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Lime Bed|meta|rot2": {
-        positions: [{
-          block: "Lime Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Lime Bed|meta|rot3": {
-        positions: [{
-          block: "Lime Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Lime Bed|meta|rot4": {
-        positions: [{
-          block: "Lime Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Pink Bed": {
-        positions: [{
-          block: "Pink Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Pink Bed|meta|rot2": {
-        positions: [{
-          block: "Pink Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Pink Bed|meta|rot3": {
-        positions: [{
-          block: "Pink Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Pink Bed|meta|rot4": {
-        positions: [{
-          block: "Pink Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Gray Bed": {
-        positions: [{
-          block: "Gray Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Gray Bed|meta|rot2": {
-        positions: [{
-          block: "Gray Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Gray Bed|meta|rot3": {
-        positions: [{
-          block: "Gray Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Gray Bed|meta|rot4": {
-        positions: [{
-          block: "Gray Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Gray Bed": {
-        positions: [{
-          block: "Light Gray Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Light Gray Bed|meta|rot2": {
-        positions: [{
-          block: "Light Gray Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Gray Bed|meta|rot3": {
-        positions: [{
-          block: "Light Gray Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Light Gray Bed|meta|rot4": {
-        positions: [{
-          block: "Light Gray Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Cyan Bed": {
-        positions: [{
-          block: "Cyan Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Cyan Bed|meta|rot2": {
-        positions: [{
-          block: "Cyan Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Cyan Bed|meta|rot3": {
-        positions: [{
-          block: "Cyan Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Cyan Bed|meta|rot4": {
-        positions: [{
-          block: "Cyan Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Purple Bed": {
-        positions: [{
-          block: "Purple Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Purple Bed|meta|rot2": {
-        positions: [{
-          block: "Purple Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Purple Bed|meta|rot3": {
-        positions: [{
-          block: "Purple Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Purple Bed|meta|rot4": {
-        positions: [{
-          block: "Purple Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Blue Bed": {
-        positions: [{
-          block: "Blue Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Blue Bed|meta|rot2": {
-        positions: [{
-          block: "Blue Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Blue Bed|meta|rot3": {
-        positions: [{
-          block: "Blue Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Blue Bed|meta|rot4": {
-        positions: [{
-          block: "Blue Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Brown Bed": {
-        positions: [{
-          block: "Brown Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Brown Bed|meta|rot2": {
-        positions: [{
-          block: "Brown Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Brown Bed|meta|rot3": {
-        positions: [{
-          block: "Brown Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Brown Bed|meta|rot4": {
-        positions: [{
-          block: "Brown Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Green Bed": {
-        positions: [{
-          block: "Green Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Green Bed|meta|rot2": {
-        positions: [{
-          block: "Green Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Green Bed|meta|rot3": {
-        positions: [{
-          block: "Green Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Green Bed|meta|rot4": {
-        positions: [{
-          block: "Green Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Red Bed": {
-        positions: [{
-          block: "Red Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Red Bed|meta|rot2": {
-        positions: [{
-          block: "Red Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Red Bed|meta|rot3": {
-        positions: [{
-          block: "Red Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Red Bed|meta|rot4": {
-        positions: [{
-          block: "Red Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Black Bed": {
-        positions: [{
-          block: "Black Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Black Bed|meta|rot2": {
-        positions: [{
-          block: "Black Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Black Bed|meta|rot3": {
-        positions: [{
-          block: "Black Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Black Bed|meta|rot4": {
-        positions: [{
-          block: "Black Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Tall Grass": {
-        positions: [{
-          block: "Tall Grass",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "Tall Grass|Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Jungle Tall Grass": {
-        positions: [{
-          block: "Jungle Tall Grass",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "Jungle Tall Grass|Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "White Strongbed": {
-        positions: [{
-          block: "White Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "White Strongbed|meta|rot2": {
-        positions: [{
-          block: "White Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "White Strongbed|meta|rot3": {
-        positions: [{
-          block: "White Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "White Strongbed|meta|rot4": {
-        positions: [{
-          block: "White Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_White Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Orange Strongbed": {
-        positions: [{
-          block: "Orange Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Orange Strongbed|meta|rot2": {
-        positions: [{
-          block: "Orange Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Orange Strongbed|meta|rot3": {
-        positions: [{
-          block: "Orange Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Orange Strongbed|meta|rot4": {
-        positions: [{
-          block: "Orange Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Orange Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Magenta Strongbed": {
-        positions: [{
-          block: "Magenta Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Magenta Strongbed|meta|rot2": {
-        positions: [{
-          block: "Magenta Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Magenta Strongbed|meta|rot3": {
-        positions: [{
-          block: "Magenta Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Magenta Strongbed|meta|rot4": {
-        positions: [{
-          block: "Magenta Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Magenta Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Blue Strongbed": {
-        positions: [{
-          block: "Light Blue Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Light Blue Strongbed|meta|rot2": {
-        positions: [{
-          block: "Light Blue Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Blue Strongbed|meta|rot3": {
-        positions: [{
-          block: "Light Blue Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Light Blue Strongbed|meta|rot4": {
-        positions: [{
-          block: "Light Blue Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Blue Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Yellow Strongbed": {
-        positions: [{
-          block: "Yellow Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Yellow Strongbed|meta|rot2": {
-        positions: [{
-          block: "Yellow Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Yellow Strongbed|meta|rot3": {
-        positions: [{
-          block: "Yellow Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Yellow Strongbed|meta|rot4": {
-        positions: [{
-          block: "Yellow Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Yellow Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Lime Strongbed": {
-        positions: [{
-          block: "Lime Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Lime Strongbed|meta|rot2": {
-        positions: [{
-          block: "Lime Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Lime Strongbed|meta|rot3": {
-        positions: [{
-          block: "Lime Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Lime Strongbed|meta|rot4": {
-        positions: [{
-          block: "Lime Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Lime Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Pink Strongbed": {
-        positions: [{
-          block: "Pink Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Pink Strongbed|meta|rot2": {
-        positions: [{
-          block: "Pink Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Pink Strongbed|meta|rot3": {
-        positions: [{
-          block: "Pink Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Pink Strongbed|meta|rot4": {
-        positions: [{
-          block: "Pink Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Pink Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Gray Strongbed": {
-        positions: [{
-          block: "Gray Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Gray Strongbed|meta|rot2": {
-        positions: [{
-          block: "Gray Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Gray Strongbed|meta|rot3": {
-        positions: [{
-          block: "Gray Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Gray Strongbed|meta|rot4": {
-        positions: [{
-          block: "Gray Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Gray Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Gray Strongbed": {
-        positions: [{
-          block: "Light Gray Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Light Gray Strongbed|meta|rot2": {
-        positions: [{
-          block: "Light Gray Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Light Gray Strongbed|meta|rot3": {
-        positions: [{
-          block: "Light Gray Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Light Gray Strongbed|meta|rot4": {
-        positions: [{
-          block: "Light Gray Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Light Gray Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Cyan Strongbed": {
-        positions: [{
-          block: "Cyan Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Cyan Strongbed|meta|rot2": {
-        positions: [{
-          block: "Cyan Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Cyan Strongbed|meta|rot3": {
-        positions: [{
-          block: "Cyan Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Cyan Strongbed|meta|rot4": {
-        positions: [{
-          block: "Cyan Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Cyan Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Purple Strongbed": {
-        positions: [{
-          block: "Purple Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Purple Strongbed|meta|rot2": {
-        positions: [{
-          block: "Purple Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Purple Strongbed|meta|rot3": {
-        positions: [{
-          block: "Purple Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Purple Strongbed|meta|rot4": {
-        positions: [{
-          block: "Purple Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Purple Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Blue Strongbed": {
-        positions: [{
-          block: "Blue Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Blue Strongbed|meta|rot2": {
-        positions: [{
-          block: "Blue Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Blue Strongbed|meta|rot3": {
-        positions: [{
-          block: "Blue Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Blue Strongbed|meta|rot4": {
-        positions: [{
-          block: "Blue Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Blue Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Brown Strongbed": {
-        positions: [{
-          block: "Brown Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Brown Strongbed|meta|rot2": {
-        positions: [{
-          block: "Brown Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Brown Strongbed|meta|rot3": {
-        positions: [{
-          block: "Brown Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Brown Strongbed|meta|rot4": {
-        positions: [{
-          block: "Brown Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Brown Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Green Strongbed": {
-        positions: [{
-          block: "Green Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Green Strongbed|meta|rot2": {
-        positions: [{
-          block: "Green Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Green Strongbed|meta|rot3": {
-        positions: [{
-          block: "Green Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Green Strongbed|meta|rot4": {
-        positions: [{
-          block: "Green Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Green Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Red Strongbed": {
-        positions: [{
-          block: "Red Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Red Strongbed|meta|rot2": {
-        positions: [{
-          block: "Red Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Red Strongbed|meta|rot3": {
-        positions: [{
-          block: "Red Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Red Strongbed|meta|rot4": {
-        positions: [{
-          block: "Red Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Red Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Black Strongbed": {
-        positions: [{
-          block: "Black Strongbed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Strongbed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Black Strongbed|meta|rot2": {
-        positions: [{
-          block: "Black Strongbed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Strongbed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Black Strongbed|meta|rot3": {
-        positions: [{
-          block: "Black Strongbed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Strongbed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Black Strongbed|meta|rot4": {
-        positions: [{
-          block: "Black Strongbed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Black Strongbed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Leaf Bed": {
-        positions: [{
-          block: "Leaf Bed",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Leaf Bed Head",
-          x: 0,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Leaf Bed|meta|rot2": {
-        positions: [{
-          block: "Leaf Bed|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Leaf Bed Head|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Leaf Bed|meta|rot3": {
-        positions: [{
-          block: "Leaf Bed|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Leaf Bed Head|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Leaf Bed|meta|rot4": {
-        positions: [{
-          block: "Leaf Bed|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Leaf Bed Head|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Vending Machine": {
-        positions: [{
-          block: "Vending Machine",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Vending Machine Top",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Vending Machine|meta|rot2": {
-        positions: [{
-          block: "Vending Machine|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Vending Machine Top|meta|rot2",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Vending Machine|meta|rot3": {
-        positions: [{
-          block: "Vending Machine|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Vending Machine Top|meta|rot3",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      "Vending Machine|meta|rot4": {
-        positions: [{
-          block: "Vending Machine|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Vending Machine Top|meta|rot4",
-          x: 0,
-          y: 1,
-          z: 0
-        }]
-      },
-      ...kQ("White"),
-      ...kQ("Orange"),
-      ...kQ("Magenta"),
-      ...kQ("Light Blue"),
-      ...kQ("Yellow"),
-      ...kQ("Lime"),
-      ...kQ("Pink"),
-      ...kQ("Gray"),
-      ...kQ("Light Gray"),
-      ...kQ("Cyan"),
-      ...kQ("Purple"),
-      ...kQ("Blue"),
-      ...kQ("Brown"),
-      ...kQ("Green"),
-      ...kQ("Red"),
-      ...kQ("Black"),
-      ...kQ("Draugr"),
-      ...kQ("Skull"),
-      ...kQ("Rainbow"),
-      ...vQ("Sheep"),
-      ...vQ("Cow"),
-      ...vQ("Pig"),
-      ...vQ("Horse"),
-      ...vQ("Camel"),
-      ...vQ("Wolf"),
-      ...vQ("Deer"),
-      ...vQ("Wildcat"),
-      ...mQ("Radar"),
-      ...mQ("Inactive Radar"),
-      ...mQ("Active Radar"),
-      ...uQ("Magenta"),
-      ...uQ("Light Gray"),
-      ...uQ("Red"),
-      ...uQ("White"),
-      ...uQ("Orange"),
-      ...uQ("Light Blue"),
-      ...uQ("Yellow"),
-      ...uQ("Lime"),
-      ...uQ("Pink"),
-      ...uQ("Gray"),
-      ...uQ("Cyan"),
-      ...uQ("Purple"),
-      ...uQ("Blue"),
-      ...uQ("Brown"),
-      ...uQ("Green"),
-      ...uQ("Black"),
-      "Auto Miner": {
-        positions: [{
-          block: "Auto Miner",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Auto Miner Body",
-          x: 0,
-          y: 1,
-          z: -1
-        }, {
-          block: "_Auto Miner Drill Front",
-          x: 0,
-          y: 1,
-          z: -2
-        }, {
-          block: "_Auto Miner Drill Back",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Foot Front",
-          x: 0,
-          y: 0,
-          z: -2
-        }]
-      },
-      "Auto Miner|meta|rot2": {
-        positions: [{
-          block: "Auto Miner|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Auto Miner Body|meta|rot2",
-          x: -1,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Drill Front|meta|rot2",
-          x: -2,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Drill Back|meta|rot2",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Foot Front|meta|rot2",
-          x: -2,
-          y: 0,
-          z: 0
-        }]
-      },
-      "Auto Miner|meta|rot3": {
-        positions: [{
-          block: "Auto Miner|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Auto Miner Body|meta|rot3",
-          x: 0,
-          y: 1,
-          z: 1
-        }, {
-          block: "_Auto Miner Drill Front|meta|rot3",
-          x: 0,
-          y: 1,
-          z: 2
-        }, {
-          block: "_Auto Miner Drill Back|meta|rot3",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Foot Front|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 2
-        }]
-      },
-      "Auto Miner|meta|rot4": {
-        positions: [{
-          block: "Auto Miner|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Auto Miner Body|meta|rot4",
-          x: 1,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Drill Front|meta|rot4",
-          x: 2,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Drill Back|meta|rot4",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Auto Miner Foot Front|meta|rot4",
-          x: 2,
-          y: 0,
-          z: 0
-        }]
-      },
-      ... function() {
-        const QQ = "Lunite Auto Miner";
-        return {
-          [QQ]: {
-            positions: [{
-              block: QQ,
-              x: 0,
-              y: 0,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Body",
-              x: 0,
-              y: 1,
-              z: -1
-            }, {
-              block: "_Lunite Auto Miner Drill Front",
-              x: 0,
-              y: 1,
-              z: -2
-            }, {
-              block: "_Lunite Auto Miner Drill Back",
-              x: 0,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Foot Front",
-              x: 0,
-              y: 0,
-              z: -2
-            }]
-          },
-          [`${QQ}|meta|rot2`]: {
-            positions: [{
-              block: `${QQ}|meta|rot2`,
-              x: 0,
-              y: 0,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Body|meta|rot2",
-              x: -1,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Drill Front|meta|rot2",
-              x: -2,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Drill Back|meta|rot2",
-              x: 0,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Foot Front|meta|rot2",
-              x: -2,
-              y: 0,
-              z: 0
-            }]
-          },
-          [`${QQ}|meta|rot3`]: {
-            positions: [{
-              block: `${QQ}|meta|rot3`,
-              x: 0,
-              y: 0,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Body|meta|rot3",
-              x: 0,
-              y: 1,
-              z: 1
-            }, {
-              block: "_Lunite Auto Miner Drill Front|meta|rot3",
-              x: 0,
-              y: 1,
-              z: 2
-            }, {
-              block: "_Lunite Auto Miner Drill Back|meta|rot3",
-              x: 0,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Foot Front|meta|rot3",
-              x: 0,
-              y: 0,
-              z: 2
-            }]
-          },
-          [`${QQ}|meta|rot4`]: {
-            positions: [{
-              block: `${QQ}|meta|rot4`,
-              x: 0,
-              y: 0,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Body|meta|rot4",
-              x: 1,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Drill Front|meta|rot4",
-              x: 2,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Drill Back|meta|rot4",
-              x: 0,
-              y: 1,
-              z: 0
-            }, {
-              block: "_Lunite Auto Miner Foot Front|meta|rot4",
-              x: 2,
-              y: 0,
-              z: 0
-            }]
+    var Dk = ik(39566),
+      fk = ik(39570),
+      Sk = ik(36698),
+      bk = ik(36874),
+      rk = ik(39822),
+      Pk = ik(39787),
+      mk = ik(36734);
+    let Mk = (() => {
+        var kk;
+        let ek, ik, Pk = rk.d,
+          mk = [],
+          Mk = [],
+          Kk = [],
+          xk = [];
+        return kk = class extends Pk {
+          constructor(kk, ek, ik, fk) {
+            super(kk, ik, fk), this.groundColor = (0, Dk.e)(this, mk, new bk.e(0, 0, 0)), this.direction = ((0, Dk.e)(this, Mk), (0, Dk.e)(this, Kk, void 0)), (0, Dk.e)(this, xk), this.direction = ek || Sk.o.Up()
           }
-        }
-      }(),
-      ... function() {
-        const QQ = {
-            1: QQ => ({
-              x: 0,
-              z: QQ
-            }),
-            2: QQ => ({
-              x: QQ,
-              z: 0
-            }),
-            3: QQ => ({
-              x: 0,
-              z: -QQ
-            }),
-            4: QQ => ({
-              x: -QQ,
-              z: 0
-            })
-          },
-          FQ = {};
-        for (let wQ = 1; wQ <= 4; wQ++) {
-          const qQ = 1 === wQ ? "" : `|meta|rot${wQ}`;
-          FQ[`${LQ.d[0].block}${qQ}`] = {
-            positions: LQ.d.map((FQ => {
-              let {
-                block: LQ,
-                y: oQ,
-                z: DQ
-              } = FQ;
-              return {
-                block: `${LQ}${qQ}`,
-                y: oQ,
-                ...QQ[wQ](DQ)
+          _buildUniformLayout() {
+            this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
+          }
+          getClassName() {
+            return "HemisphericLight"
+          }
+          setDirectionToTarget(kk) {
+            return this.direction = Sk.o.Normalize(kk.subtract(Sk.o.Zero())), this.direction
+          }
+          getShadowGenerator() {
+            return null
+          }
+          transferToEffect(kk, ek) {
+            const ik = Sk.o.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", ik.x, ik.y, ik.z, 0, ek), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), ek), this
+          }
+          transferToNodeMaterialEffect(kk, ek) {
+            const ik = Sk.o.Normalize(this.direction);
+            return kk.setFloat3(ek, ik.x, ik.y, ik.z), this
+          }
+          computeWorldMatrix() {
+            return this._worldMatrix || (this._worldMatrix = Sk.b.Identity()), this._worldMatrix
+          }
+          getTypeID() {
+            return rk.d.LIGHTTYPEID_HEMISPHERICLIGHT
+          }
+          prepareLightSpecificDefines(kk, ek) {
+            kk["HEMILIGHT" + ek] = !0
+          }
+        }, (() => {
+          const Sk = "function" === typeof Symbol && Symbol.metadata ? Object.create(Pk[Symbol.metadata] ?? null) : void 0;
+          ek = [(0, fk.k)()], ik = [(0, fk.F)()], (0, Dk.d)(null, null, ek, {
+            kind: "field",
+            name: "groundColor",
+            static: !1,
+            private: !1,
+            access: {
+              has: kk => "groundColor" in kk,
+              get: kk => kk.groundColor,
+              set: (kk, ek) => {
+                kk.groundColor = ek
               }
-            }))
-          }
-        }
-        return FQ
-      }(),
-      ... function() {
-        const QQ = {};
-        for (let FQ = 1; FQ <= LQ.m; FQ++) {
-          const wQ = (0, LQ.Zb)(FQ),
-            qQ = LQ.p[FQ - 1],
-            oQ = [{
-              block: wQ,
-              x: 0,
-              y: 0,
-              z: 0
-            }];
-          for (const QQ of LQ.i)
-            for (let FQ = 1; FQ <= qQ; FQ++) {
-              if ("southwest" === QQ && 1 === FQ) continue;
-              const {
-                x: wQ,
-                z: qQ
-              } = LQ.k[QQ];
-              oQ.push({
-                block: (0, LQ.Xb)(QQ, FQ),
-                x: wQ,
-                y: FQ - 1,
-                z: qQ
-              })
-            }
-          QQ[wQ] = {
-            positions: oQ
-          }
-        }
-        return QQ
-      }(),
-      "Solar Panel": {
-        positions: [{
-          block: "Solar Panel",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel SE",
-          x: 1,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel NW",
-          x: 0,
-          y: 0,
-          z: -1
-        }, {
-          block: "_Solar Panel NE",
-          x: 1,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Solar Panel|meta|rot2": {
-        positions: [{
-          block: "Solar Panel|meta|rot2",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel SE|meta|rot2",
-          x: 0,
-          y: 0,
-          z: -1
-        }, {
-          block: "_Solar Panel NW|meta|rot2",
-          x: -1,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel NE|meta|rot2",
-          x: -1,
-          y: 0,
-          z: -1
-        }]
-      },
-      "Solar Panel|meta|rot3": {
-        positions: [{
-          block: "Solar Panel|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel SE|meta|rot3",
-          x: -1,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel NW|meta|rot3",
-          x: 0,
-          y: 0,
-          z: 1
-        }, {
-          block: "_Solar Panel NE|meta|rot3",
-          x: -1,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Solar Panel|meta|rot4": {
-        positions: [{
-          block: "Solar Panel|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel SE|meta|rot4",
-          x: 0,
-          y: 0,
-          z: 1
-        }, {
-          block: "_Solar Panel NW|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Solar Panel NE|meta|rot4",
-          x: 1,
-          y: 0,
-          z: 1
-        }]
-      },
-      "Homestead Core": {
-        positions: [{
-          block: "Homestead Core",
-          x: 0,
-          y: 0,
-          z: 0
-        }, {
-          block: "_Homestead Core Mid",
-          x: 0,
-          y: 1,
-          z: 0
-        }, {
-          block: "_Homestead Core Top",
-          x: 0,
-          y: 2,
-          z: 0
-        }]
-      }
-    };
+            },
+            metadata: Sk
+          }, mk, Mk), (0, Dk.d)(null, null, ik, {
+            kind: "field",
+            name: "direction",
+            static: !1,
+            private: !1,
+            access: {
+              has: kk => "direction" in kk,
+              get: kk => kk.direction,
+              set: (kk, ek) => {
+                kk.direction = ek
+              }
+            },
+            metadata: Sk
+          }, Kk, xk), Sk && Object.defineProperty(kk, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: Sk
+          })
+        })(), kk
+      })(),
+      Kk = !1;
 
-    function kQ(QQ) {
-      return {
-        [`${QQ} Banner`]: {
-          positions: [{
-            block: `${QQ} Banner`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot1|bot`,
-            x: 0,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot2|bot`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot2|bot`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot2|bot`,
-            x: 0,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot3|bot`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot3|bot`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot3|bot`,
-            x: 0,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot4|bot`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot4|bot`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot4|bot`,
-            x: 0,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot1|side`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot1|side`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot1|side`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot2|side`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot2|side`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot2|side`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot3|side`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot3|side`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot3|side`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot4|side`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot4|side`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot4|side`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot1|top`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot1|top`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot2|top`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot2|top`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot2|top`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot3|top`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot3|top`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot3|top`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        },
-        [`${QQ} Banner|meta|rot4|top`]: {
-          positions: [{
-            block: `${QQ} Banner|meta|rot4|top`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${QQ} Banner Flag|meta|rot4|top`,
-            x: 0,
-            y: -1,
-            z: 0
-          }]
-        }
-      }
+    function xk() {
+      Kk || (Kk = !0, Pk.b.AddNodeConstructor("Light_Type_3", ((kk, ek) => () => new Mk(kk, Sk.o.Zero(), ek))), (0, mk.h)("BABYLON.HemisphericLight", Mk))
     }
-
-    function vQ(QQ) {
-      const FQ = (0, oQ.Xb)(QQ);
-      return {
-        [FQ]: {
-          positions: [{
-            block: FQ,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${FQ} Top Left`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${FQ} Top Right`,
-            x: -1,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${FQ} Bottom Right`,
-            x: -1,
-            y: 0,
-            z: 0
-          }]
-        },
-        [`${FQ}|meta|rot2`]: {
-          positions: [{
-            block: `${FQ}|meta|rot2`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${FQ} Top Left|meta|rot2`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${FQ} Top Right|meta|rot2`,
-            x: 0,
-            y: 1,
-            z: 1
-          }, {
-            block: `_${FQ} Bottom Right|meta|rot2`,
-            x: 0,
-            y: 0,
-            z: 1
-          }]
-        },
-        [`${FQ}|meta|rot3`]: {
-          positions: [{
-            block: `${FQ}|meta|rot3`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${FQ} Top Left|meta|rot3`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${FQ} Top Right|meta|rot3`,
-            x: 1,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${FQ} Bottom Right|meta|rot3`,
-            x: 1,
-            y: 0,
-            z: 0
-          }]
-        },
-        [`${FQ}|meta|rot4`]: {
-          positions: [{
-            block: `${FQ}|meta|rot4`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_${FQ} Top Left|meta|rot4`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_${FQ} Top Right|meta|rot4`,
-            x: 0,
-            y: 1,
-            z: -1
-          }, {
-            block: `_${FQ} Bottom Right|meta|rot4`,
-            x: 0,
-            y: 0,
-            z: -1
-          }]
-        }
-      }
-    }
-
-    function mQ(QQ) {
-      const FQ = `_${QQ} Back`,
-        wQ = `_${QQ} Dish`;
-      return {
-        [QQ]: {
-          positions: [{
-            block: QQ,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: FQ,
-            x: 0,
-            y: 0,
-            z: -1
-          }, {
-            block: wQ,
-            x: 0,
-            y: 1,
-            z: -1
-          }]
-        },
-        [`${QQ}|meta|rot2`]: {
-          positions: [{
-            block: `${QQ}|meta|rot2`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `${FQ}|meta|rot2`,
-            x: -1,
-            y: 0,
-            z: 0
-          }, {
-            block: `${wQ}|meta|rot2`,
-            x: -1,
-            y: 1,
-            z: 0
-          }]
-        },
-        [`${QQ}|meta|rot3`]: {
-          positions: [{
-            block: `${QQ}|meta|rot3`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `${FQ}|meta|rot3`,
-            x: 0,
-            y: 0,
-            z: 1
-          }, {
-            block: `${wQ}|meta|rot3`,
-            x: 0,
-            y: 1,
-            z: 1
-          }]
-        },
-        [`${QQ}|meta|rot4`]: {
-          positions: [{
-            block: `${QQ}|meta|rot4`,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `${FQ}|meta|rot4`,
-            x: 1,
-            y: 0,
-            z: 0
-          }, {
-            block: `${wQ}|meta|rot4`,
-            x: 1,
-            y: 1,
-            z: 0
-          }]
-        }
-      }
-    }
-
-    function uQ(QQ) {
-      const FQ = `Small ${QQ} Pod`;
-      return {
-        [FQ]: {
-          positions: [{
-            block: FQ,
-            x: 0,
-            y: 0,
-            z: 0
-          }, {
-            block: `_Small ${QQ} Pod Mid`,
-            x: 0,
-            y: 1,
-            z: 0
-          }, {
-            block: `_Small ${QQ} Pod Top`,
-            x: 0,
-            y: 2,
-            z: 0
-          }]
-        }
-      }
-    }
-    for (const bQ in DQ) {
-      for (const QQ of DQ[bQ].positions)
-        if (QQ.id = qQ.h[QQ.block].id, bQ === QQ.block && (0 !== QQ.x || 0 !== QQ.y || 0 !== QQ.z)) throw new Error(`Multiblock "${bQ}" has main block "${QQ.block}" at non-origin position (${QQ.x}, ${QQ.y}, ${QQ.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      DQ[qQ.h[bQ].id] = DQ[bQ]
-    }
-    const HQ = {};
-    for (const bQ in DQ)
-      for (const {
-          block: QQ,
-          x: FQ,
-          y: wQ,
-          z: LQ
-        }
-        of DQ[bQ].positions) {
-        const oQ = {
-          mainMultiblock: bQ,
-          compX: FQ,
-          compY: wQ,
-          compZ: LQ
-        };
-        HQ[QQ] = oQ, HQ[qQ.h[QQ].id] = oQ
-      }
   },
-  37768: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => vQ,
-      h: () => kQ
+  37365: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => fk
     });
-    var LQ = wQ(9195),
-      qQ = wQ(9258),
-      oQ = wQ(9264);
-    const DQ = qQ.s.map((QQ => {
-      let {
-        dx: FQ,
-        dz: wQ
-      } = QQ;
-      return [FQ, 0, wQ]
-    }));
-
-    function kQ(QQ) {
-      const FQ = LQ.h[QQ];
-      return !!FQ && QQ !== LQ.c && !FQ.model && !FQ.wY && !1 !== FQ.solid && !FQ.yA
-    }
-    class vQ {
-      constructor(QQ) {
-        this.model = QQ, this.reshapeOffsets = [...DQ, [0, -1, 0]]
+    var Dk = ik(37372);
+    class fk {
+      static GetPlanes(kk) {
+        const ek = [];
+        for (let ik = 0; ik < 6; ik++) ek.push(new Dk.c(0, 0, 0, 0));
+        return fk.GetPlanesToRef(kk, ek), ek
       }
-      handles(QQ) {
-        const FQ = LQ.h[QQ];
-        return (null === FQ || void 0 === FQ ? void 0 : FQ.model) === this.model && void 0 !== FQ.attachedTop
+      static GetNearPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[2], ek.normal.y = ik[7] + ik[6], ek.normal.z = ik[11] + ik[10], ek.d = ik[15] + ik[14], ek.normalize()
       }
-      affects(QQ) {
-        return this.handles(QQ) || kQ(QQ) || (0, oQ.x)(LQ.h[QQ])
+      static GetFarPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[2], ek.normal.y = ik[7] - ik[6], ek.normal.z = ik[11] - ik[10], ek.d = ik[15] - ik[14], ek.normalize()
       }
-      shape(QQ, FQ, wQ, DQ, vQ) {
-        let mQ = this.handles(QQ(FQ, wQ + 1, DQ)) ? qQ.k : 0;
-        return qQ.s.forEach(((vQ, uQ) => {
-          let {
-            dx: HQ,
-            dz: bQ
-          } = vQ;
-          const YQ = QQ(FQ + HQ, wQ, DQ + bQ);
-          (this.handles(YQ) || kQ(YQ) || function(QQ, FQ) {
-            const wQ = LQ.h[QQ];
-            return (0, oQ.x)(wQ) && (0, oQ.r)(wQ.meta.rot) === (0 !== qQ.s[FQ].dx)
-          }(YQ, uQ)) && (mQ |= 1 << uQ)
-        })), (0, LQ.j)((0, qQ.l)(LQ.h[vQ].meta.rootName, mQ))
+      static GetLeftPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[0], ek.normal.y = ik[7] + ik[4], ek.normal.z = ik[11] + ik[8], ek.d = ik[15] + ik[12], ek.normalize()
+      }
+      static GetRightPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[0], ek.normal.y = ik[7] - ik[4], ek.normal.z = ik[11] - ik[8], ek.d = ik[15] - ik[12], ek.normalize()
+      }
+      static GetTopPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[1], ek.normal.y = ik[7] - ik[5], ek.normal.z = ik[11] - ik[9], ek.d = ik[15] - ik[13], ek.normalize()
+      }
+      static GetBottomPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[1], ek.normal.y = ik[7] + ik[5], ek.normal.z = ik[11] + ik[9], ek.d = ik[15] + ik[13], ek.normalize()
+      }
+      static GetPlanesToRef(kk, ek) {
+        fk.GetNearPlaneToRef(kk, ek[0]), fk.GetFarPlaneToRef(kk, ek[1]), fk.GetLeftPlaneToRef(kk, ek[2]), fk.GetRightPlaneToRef(kk, ek[3]), fk.GetTopPlaneToRef(kk, ek[4]), fk.GetBottomPlaneToRef(kk, ek[5])
+      }
+      static IsPointInFrustum(kk, ek) {
+        for (let ik = 0; ik < 6; ik++)
+          if (ek[ik].dotCoordinate(kk) < 0) return !1;
+        return !0
       }
     }
   },
-  37548: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ) {
-      var wQ;
-      FQ || (FQ = {});
-      const LQ = null !== (wQ = FQ.customAttributes) && void 0 !== wQ ? wQ : {};
-      var qQ, oQ, DQ;
-      "Gun" === (null === QQ || void 0 === QQ ? void 0 : QQ.type) && (LQ.shotsLeft = null !== (qQ = null !== (oQ = LQ.shotsLeft) && void 0 !== oQ ? oQ : null === (DQ = LQ.gunStats) || void 0 === DQ ? void 0 : DQ.clipSize) && void 0 !== qQ ? qQ : QQ.clipSize);
-      if (LQ.enchantmentTier && (LQ.enchantmentTier = LQ.enchantmentTier.toString()), LQ.enchantments)
-        for (const HQ in LQ.enchantments) {
-          const QQ = LQ.enchantments[HQ];
-          if ("number" !== typeof QQ) {
-            const FQ = parseInt(QQ);
-            isNaN(FQ) || FQ < 0 ? LQ.enchantments[HQ] = void 0 : LQ.enchantments[HQ] = FQ > 1e9 ? 1e9 : FQ
-          }
-        }
-      if (LQ.enchantmentData)
-        for (const HQ in LQ.enchantmentData) {
-          const QQ = LQ.enchantmentData[HQ];
-          if (!QQ) continue;
-          if ("object" !== typeof QQ) {
-            LQ.enchantmentData[HQ] = void 0;
-            continue
-          }
-          const FQ = QQ.icon,
-            wQ = QQ.description;
-          var kQ, vQ, mQ, uQ;
-          if ("string" !== typeof FQ) LQ.enchantmentData[HQ].icon = null !== (kQ = null === FQ || void 0 === FQ || null === (vQ = FQ.toString) || void 0 === vQ ? void 0 : vQ.call(FQ)) && void 0 !== kQ ? kQ : void 0;
-          if ("string" !== typeof wQ) LQ.enchantmentData[HQ].description = null !== (mQ = null === wQ || void 0 === wQ || null === (uQ = wQ.toString) || void 0 === uQ ? void 0 : uQ.call(wQ)) && void 0 !== mQ ? mQ : void 0
-        }
-      return FQ.customAttributes = LQ, FQ
+  37372: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => fk
+    });
+    var Dk = ik(36698);
+    class fk {
+      constructor(kk, ek, ik, fk) {
+        this.normal = new Dk.o(kk, ek, ik), this.d = fk
+      }
+      Tik() {
+        return [this.normal.x, this.normal.y, this.normal.z, this.d]
+      }
+      clone() {
+        return new fk(this.normal.x, this.normal.y, this.normal.z, this.d)
+      }
+      getClassName() {
+        return "Plane"
+      }
+      getHashCode() {
+        let kk = this.normal.getHashCode();
+        return kk = 397 * kk ^ this.d, kk
+      }
+      normalize() {
+        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let ek = 0;
+        return 0 !== kk && (ek = 1 / kk), this.normal.x *= ek, this.normal.y *= ek, this.normal.z *= ek, this.d *= ek, this
+      }
+      transform(kk) {
+        const ek = fk._TmpMatrix;
+        kk.invertToRef(ek);
+        const ik = ek.m,
+          Dk = this.normal.x,
+          Sk = this.normal.y,
+          bk = this.normal.z,
+          rk = this.d,
+          Pk = Dk * ik[0] + Sk * ik[1] + bk * ik[2] + rk * ik[3],
+          mk = Dk * ik[4] + Sk * ik[5] + bk * ik[6] + rk * ik[7],
+          Mk = Dk * ik[8] + Sk * ik[9] + bk * ik[10] + rk * ik[11],
+          Kk = Dk * ik[12] + Sk * ik[13] + bk * ik[14] + rk * ik[15];
+        return new fk(Pk, mk, Mk, Kk)
+      }
+      dotCoordinate(kk) {
+        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
+      }
+      copyFromPoints(kk, ek, ik) {
+        const Dk = ek.x - kk.x,
+          fk = ek.y - kk.y,
+          Sk = ek.z - kk.z,
+          bk = ik.x - kk.x,
+          rk = ik.y - kk.y,
+          Pk = ik.z - kk.z,
+          mk = fk * Pk - Sk * rk,
+          Mk = Sk * bk - Dk * Pk,
+          Kk = Dk * rk - fk * bk,
+          xk = Math.sqrt(mk * mk + Mk * Mk + Kk * Kk);
+        let nk;
+        return nk = 0 !== xk ? 1 / xk : 0, this.normal.x = mk * nk, this.normal.y = Mk * nk, this.normal.z = Kk * nk, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
+      }
+      isFrontFacingTo(kk, ek) {
+        return Dk.o.Dot(this.normal, kk) <= ek
+      }
+      signedDistanceTo(kk) {
+        return Dk.o.Dot(kk, this.normal) + this.d
+      }
+      static FromArray(kk) {
+        return new fk(kk[0], kk[1], kk[2], kk[3])
+      }
+      static FromPoints(kk, ek, ik) {
+        const Dk = new fk(0, 0, 0, 0);
+        return Dk.copyFromPoints(kk, ek, ik), Dk
+      }
+      static FromPositionAndNormal(kk, ek) {
+        const ik = new fk(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(kk, ek, ik)
+      }
+      static FromPositionAndNormalToRef(kk, ek, ik) {
+        return ik.normal.Fs(ek), ik.normal.normalize(), ik.d = -kk.dot(ik.normal), ik
+      }
+      static SignedDistanceToPlaneFromPositionAndNormal(kk, ek, ik) {
+        const fk = -(ek.x * kk.x + ek.y * kk.y + ek.z * kk.z);
+        return Dk.o.Dot(ik, ek) + fk
+      }
     }
-    wQ.d(FQ, {
-      e: () => LQ
+    fk._TmpMatrix = Dk.b.Identity()
+  },
+  37679: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Dk
+    });
+    class Dk {
+      constructor(kk, ek, ik, Dk) {
+        this.x = kk, this.y = ek, this.width = ik, this.height = Dk
+      }
+      toGlobal(kk, ek) {
+        return new Dk(this.x * kk, this.y * ek, this.width * kk, this.height * ek)
+      }
+      toGlobalToRef(kk, ek, ik) {
+        return ik.x = this.x * kk, ik.y = this.y * ek, ik.width = this.width * kk, ik.height = this.height * ek, this
+      }
+      clone() {
+        return new Dk(this.x, this.y, this.width, this.height)
+      }
+    }
+  },
+  38265: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk
+    });
+    var Dk = ik(38272);
+    const fk = (kk, ek, ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(ek) : null;
+    class Sk {
+      static DeepCopy(kk, ek, ik, Sk) {
+        let bk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const rk = function(kk) {
+          const ek = [];
+          do {
+            const ik = Object.getOwnPropertyNames(kk);
+            for (const kk of ik) - 1 === ek.indexOf(kk) && ek.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return ek
+        }(kk);
+        for (const mk of rk) {
+          if ("_" === mk[0] && (!Sk || -1 === Sk.indexOf(mk))) continue;
+          if (mk.endsWith("Observable")) continue;
+          if (ik && -1 !== ik.indexOf(mk)) continue;
+          const rk = kk[mk],
+            Mk = typeof rk;
+          if ("function" !== Mk) try {
+            if ("object" === Mk)
+              if (rk instanceof Uint8Array) ek[mk] = Uint8Array.from(rk);
+              else if (rk instanceof Array) {
+              if (ek[mk] = [], rk.length > 0)
+                if ("object" == typeof rk[0])
+                  for (let kk = 0; kk < rk.length; kk++) {
+                    const ik = fk(rk[kk], ek, bk); - 1 === ek[mk].indexOf(ik) && ek[mk].push(ik)
+                  } else ek[mk] = rk.slice(0)
+            } else ek[mk] = fk(rk, ek, bk);
+            else ek[mk] = rk
+          } catch (Pk) {
+            Dk.b.Warn(Pk.message)
+          }
+        }
+      }
+    }
+  },
+  37497: (kk, ek, ik) => {
+    function Dk() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
+        const ek = 16 * Math.random() | 0;
+        return ("x" === kk ? ek : 3 & ek | 8).toString(16)
+      }))
+    }
+    ik.d(ek, {
+      b: () => Dk
     })
   },
-  37761: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => SQ,
-      f: () => eQ,
-      j: () => vQ,
-      m: () => HQ,
-      n: () => iQ
+  38272: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Dk
     });
-    var LQ = wQ(9195),
-      qQ = wQ(9238),
-      oQ = wQ(37768);
-    const DQ = (0, LQ.j)("Noticeboard"),
-      kQ = (0, LQ.j)("Standing Noticeboard|meta|rot4|lrud");
-
-    function vQ(QQ) {
-      return DQ <= QQ && QQ <= kQ
-    }
-    const mQ = new Uint8Array(kQ - DQ + 1);
-    for (let WQ = DQ; WQ <= kQ; WQ++) mQ[WQ - DQ] = (0, qQ.t)(LQ.h[WQ].meta.metaStr);
-    const uQ = 64,
-      HQ = uQ * uQ,
-      [bQ, YQ, xQ, AQ] = [0, 1, 2, 3];
-
-    function tQ(QQ) {
-      var FQ, wQ;
-      return "string" === typeof(null === QQ || void 0 === QQ || null === (FQ = QQ.persisted) || void 0 === FQ || null === (wQ = FQ.shared) || void 0 === wQ ? void 0 : wQ.text)
-    }
-
-    function eQ(QQ) {
-      return tQ(QQ) && "" !== QQ.persisted.shared.text.trim()
-    }
-
-    function MQ(QQ, FQ) {
-      let [wQ, , LQ] = FQ;
-      const [oQ, , DQ] = qQ.z[QQ][YQ];
-      return wQ * oQ + LQ * DQ
-    }
-
-    function GQ(QQ, FQ, wQ) {
-      return wQ[1] - FQ[1] || MQ(QQ, FQ) - MQ(QQ, wQ)
-    }
-
-    function pQ(QQ, FQ, wQ, oQ, kQ) {
-      var vQ;
-      let uQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : QQ(FQ[0], FQ[1], FQ[2]);
-      if (!(mQ[uQ - DQ] & 1 << wQ)) return null;
-      const [HQ, bQ, YQ] = qQ.z[kQ][wQ], xQ = [FQ[0] + HQ, FQ[1] + bQ, FQ[2] + YQ], AQ = QQ(xQ[0], xQ[1], xQ[2]), tQ = null === (vQ = LQ.h[AQ]) || void 0 === vQ ? void 0 : vQ.meta;
-      return (null === tQ || void 0 === tQ ? void 0 : tQ.rootId) === oQ && tQ.rot === kQ && mQ[AQ - DQ] & 1 << (1 ^ wQ) ? xQ : null
-    }
-
-    function cQ(QQ, FQ, wQ, oQ) {
-      const DQ = QQ(FQ, wQ, oQ);
-      if (!vQ(DQ)) return null;
-      const {
-        rootId: kQ,
-        rot: mQ
-      } = LQ.h[DQ].meta, HQ = (FQ, wQ) => {
-        let LQ = FQ,
-          qQ = 1;
-        for (let oQ = pQ(QQ, LQ, wQ, kQ, mQ); oQ && qQ < uQ; oQ = pQ(QQ, LQ, wQ, kQ, mQ)) LQ = oQ, qQ++;
-        return {
-          end: LQ,
-          cells: qQ
-        }
-      }, tQ = HQ(HQ([FQ, wQ, oQ], bQ).end, xQ).end, eQ = HQ(tQ, YQ).cells, [MQ, , GQ] = qQ.z[mQ][YQ];
-      let cQ = 1;
-      QQ: for (; cQ < uQ; cQ++)
-        for (let FQ = 0; FQ < eQ; FQ++)
-          if (!pQ(QQ, [tQ[0] + MQ * FQ, tQ[1] - cQ + 1, tQ[2] + GQ * FQ], AQ, kQ, mQ)) break QQ;
-      return {
-        anchor: tQ,
-        rootId: kQ,
-        rot: mQ,
-        width: eQ,
-        height: cQ
+    class Dk {
+      static _CheckLimit(kk, ek) {
+        let ik = Dk._LogLimitOutputs[kk];
+        return ik ? ik.current++ : (ik = {
+          limit: ek,
+          current: 1
+        }, Dk._LogLimitOutputs[kk] = ik), ik.current <= ik.limit
+      }
+      static _GenerateLimitMessage(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ik = Dk._LogLimitOutputs[kk];
+        if (!ik || !Dk.MessageLimitReached) return;
+        const fk = this._Levels[ek];
+        ik.current === ik.limit && Dk[fk.name](Dk.MessageLimitReached.replace(/%LIMIT%/g, "" + ik.limit).replace(/%TYPE%/g, fk.name ?? ""))
+      }
+      static _AddLogEntry(kk) {
+        Dk._LogCache = kk + Dk._LogCache, Dk.OnNewCacheEntry && Dk.OnNewCacheEntry(kk)
+      }
+      static _FormatMessage(kk) {
+        const ek = kk => kk < 10 ? "0" + kk : "" + kk,
+          ik = new Date;
+        return "[" + ek(ik.getHours()) + ":" + ek(ik.getMinutes()) + ":" + ek(ik.getSeconds()) + "]: " + kk
+      }
+      static _LogDisabled(kk, ek) {}
+      static _LogEnabled() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ek = arguments.length > 1 ? arguments[1] : void 0,
+          ik = arguments.length > 2 ? arguments[2] : void 0;
+        const fk = Array.isArray(ek) ? ek[0] : ek;
+        if (void 0 !== ik && !Dk._CheckLimit(fk, ik)) return;
+        const Sk = Dk._FormatMessage(fk),
+          bk = this._Levels[kk],
+          rk = Array.isArray(ek) ? ek.slice(1) : [];
+        bk.logFunc && bk.logFunc("BJS - " + Sk, ...rk);
+        const Pk = `<div style='color:${bk.color}'>${Sk}</div><br>`;
+        Dk._AddLogEntry(Pk), Dk._GenerateLimitMessage(fk, kk)
+      }
+      static get LogCache() {
+        return Dk._LogCache
+      }
+      static ClearLogCache() {
+        Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk.errorsCount = 0
+      }
+      static set LogLevels(kk) {
+        Dk.Log = Dk._LogDisabled, Dk.Warn = Dk._LogDisabled, Dk.Error = Dk._LogDisabled;
+        const ek = [Dk.MessageLogLevel, Dk.WarningLogLevel, Dk.ErrorLogLevel];
+        for (const ik of ek)
+          if ((kk & ik) === ik) {
+            const kk = this._Levels[ik];
+            Dk[kk.name] = Dk._LogEnabled.bind(Dk, ik)
+          }
       }
     }
-
-    function CQ(QQ, FQ) {
-      for (const wQ of function(QQ) {
-          let {
-            anchor: FQ,
-            rot: wQ,
-            width: LQ,
-            height: oQ
-          } = QQ;
-          const [DQ, , kQ] = qQ.z[wQ][YQ], vQ = [];
-          for (let qQ = 0; qQ < oQ; qQ++)
-            for (let QQ = 0; QQ < LQ; QQ++) vQ.push([FQ[0] + DQ * QQ, FQ[1] - qQ, FQ[2] + kQ * QQ]);
-          return vQ
-        }(QQ))
-        if (tQ(FQ(wQ[0], wQ[1], wQ[2]))) return wQ;
-      return null
-    }
-
-    function SQ(QQ, FQ, wQ, qQ, oQ) {
-      const DQ = QQ(wQ, qQ, oQ);
-      if (!vQ(DQ)) return null;
-      const {
-        rootId: kQ,
-        rot: mQ
-      } = LQ.h[DQ].meta, uQ = [
-        [wQ, qQ, oQ]
-      ], bQ = new Set([uQ[0].join()]);
-      let YQ = uQ[0],
-        xQ = null;
-      for (let LQ = 0; LQ < uQ.length; LQ++) {
-        const wQ = uQ[LQ];
-        if (GQ(mQ, wQ, YQ) < 0 && (YQ = wQ), tQ(FQ(wQ[0], wQ[1], wQ[2]))) {
-          const FQ = cQ(QQ, wQ[0], wQ[1], wQ[2]);
-          (!xQ || GQ(mQ, FQ.anchor, xQ.anchor) < 0) && (xQ = FQ)
-        }
-        for (let FQ = 0; FQ < 4 && uQ.length < HQ; FQ++) {
-          const LQ = pQ(QQ, wQ, FQ, kQ, mQ);
-          LQ && !bQ.has(LQ.join()) && (bQ.add(LQ.join()), uQ.push(LQ))
-        }
-      }
-      return xQ ??= cQ(QQ, YQ[0], YQ[1], YQ[2]), {
-        cells: uQ,
-        topLeft: YQ,
-        rect: xQ,
-        textCell: CQ(xQ, FQ)
-      }
-    }
-
-    function iQ(QQ, FQ, wQ, DQ, kQ) {
-      if (null !== wQ && vQ(wQ)) {
-        const {
-          rootName: QQ,
-          rot: FQ
-        } = LQ.h[wQ].meta;
-        if (qQ.z[FQ].some((QQ => {
-            let [FQ, wQ, LQ] = QQ;
-            return FQ === DQ[0] && wQ === DQ[1] && LQ === DQ[2]
-          }))) return {
-          root: QQ,
-          rot: FQ
-        }
-      }
-      const [mQ, uQ] = qQ.o[kQ], HQ = QQ(FQ[0] - mQ, FQ[1], FQ[2] - uQ);
-      return {
-        root: (0, oQ.h)(HQ) ? qQ.E : qQ.A,
-        rot: kQ
-      }
-    }
+    Dk.NoneLogLevel = 0, Dk.MessageLogLevel = 1, Dk.WarningLogLevel = 2, Dk.ErrorLogLevel = 4, Dk.AllLogLevel = 7, Dk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Dk.errorsCount = 0, Dk.Log = Dk._LogEnabled.bind(Dk, Dk.MessageLogLevel), Dk.Warn = Dk._LogEnabled.bind(Dk, Dk.WarningLogLevel), Dk.Error = Dk._LogEnabled.bind(Dk, Dk.ErrorLogLevel)
   },
-  37777: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => oQ,
-      h: () => DQ,
-      j: () => qQ,
-      l: () => kQ
+  60658: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      CreateScreenshot: () => Ek,
+      CreateScreenshotAsync: () => hk,
+      CreateScreenshotForFrameGraphAsync: () => Xk,
+      CreateScreenshotUsingRenderTarget: () => Wk,
+      CreateScreenshotUsingRenderTargetAsync: () => tk,
+      CreateScreenshotWithResizeAsync: () => ak,
+      RegisterScreenshotTools: () => Zk,
+      ScreenshotTools: () => ck
     });
-    var LQ = wQ(325);
-    const qQ = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...wQ(617).p.map((QQ => `${QQ} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...LQ.f, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      oQ = ["Obby RPG"];
-
-    function DQ(QQ) {
-      const FQ = QQ.indexOf("|");
-      return -1 === FQ ? {
-        item: QQ,
-        clientPredictedThrower: null
-      } : {
-        item: QQ.slice(0, FQ),
-        clientPredictedThrower: QQ.slice(FQ + 1)
+    var Dk = ik(40053),
+      fk = ik(41404),
+      Sk = ik(41376),
+      bk = ik(39585),
+      rk = ik(41384),
+      Pk = ik(36722),
+      mk = ik(36698);
+    class Mk extends rk.f {
+      static _GetDefines(kk) {
+        if (!kk) return null;
+        return kk.extractDriverInfo().toLowerCase().indexOf("mali") > -1 ? "#define MALI 1\n" : null
+      }
+      _gatherImports(kk, ek) {
+        kk ? (this._webGPUReady = !0, ek.push(Promise.all([ik.e(374).then((() => ik(60897))), ik.e(375).then((() => ik(60901)))]))) : ek.push(Promise.all([ik.e(376).then((() => ik(60909))), ik.e(377).then((() => ik(60918)))]))
+      }
+      constructor(kk) {
+        const ek = {
+          ...arguments.length > 2 ? arguments[2] : void 0,
+          name: kk,
+          engine: (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null) || Pk.e.LastCreatedEngine,
+          useShaderStore: !0,
+          useAsPostProcess: !0,
+          vertexShader: Mk.VertexUrl,
+          fragmentShader: Mk.FragmentUrl,
+          uniforms: Mk.Uniforms
+        };
+        super({
+          ...ek,
+          defines: Mk._GetDefines(ek.engine)
+        }), this.texelSize = new mk.l(0, 0)
+      }
+      bind() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        super.bind(kk), this._drawWrapper.effect.setFloat2("texelSize", this.texelSize.x, this.texelSize.y)
       }
     }
-    const kQ = [...qQ, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    Mk.VertexUrl = "fxaa", Mk.FragmentUrl = "fxaa", Mk.Uniforms = ["texelSize"];
+    class Kk extends Sk.c {
+      getClassName() {
+        return "FxaaPostProcess"
+      }
+      constructor(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          fk = arguments.length > 3 ? arguments[3] : void 0,
+          Sk = arguments.length > 4 ? arguments[4] : void 0,
+          bk = arguments.length > 5 ? arguments[5] : void 0,
+          rk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0;
+        const Pk = {
+          uniforms: Mk.Uniforms,
+          size: "number" === typeof ek ? ek : void 0,
+          camera: ik,
+          samplingMode: fk || Dk.f.BILINEAR_SAMPLINGMODE,
+          engine: Sk,
+          reusable: bk,
+          textureType: rk,
+          ...ek
+        };
+        super(kk, Mk.FragmentUrl, {
+          effectWrapper: "number" !== typeof ek && ek.effectWrapper ? void 0 : new Mk(kk, Sk, Pk),
+          ...Pk
+        }), this.onApplyObservable.add((kk => {
+          this._effectWrapper.texelSize = this.texelSize
+        }))
+      }
+      static _Parse(kk, ek, ik, Dk) {
+        return bk.b.Parse((() => new Kk(kk.name, kk.options, ek, kk.renderTargetSamplingMode, ik.JU(), kk.reusable)), kk, ik, Dk)
+      }
+    }
+    var xk = ik(38272),
+      nk = ik(39662),
+      Uk = ik(41413),
+      Hk = ik(41397),
+      wk = ik(39458);
+    const lk = 0;
+    class pk {
+      constructor(kk, ek, ik) {
+        this.name = kk, this._parentTask = ek, this._context = ik, this.disabled = !1
+      }
+      setInitializeFunc(kk) {
+        this._initFunc = kk
+      }
+      setExecuteFunc(kk) {
+        this._executeFunc = kk
+      }
+      _execute() {
+        this.disabled || this._executeFunc(this._context)
+      }
+      _initialize() {
+        this._initFunc?.(this._context)
+      }
+      _isValid() {
+        return void 0 !== this._executeFunc ? null : "Execute function is not set (call setExecuteFunc to set it)"
+      }
+      _dispose() {}
+    }
+    class yk extends pk {
+      static IsObjectListPass(kk) {
+        return void 0 !== kk.setObjectList
+      }
+      get objectList() {
+        return this._objectList
+      }
+      setObjectList(kk) {
+        this._objectList = kk
+      }
+      constructor(kk, ek, ik, Dk) {
+        super(kk, ek, ik), this._engine = Dk
+      }
+      _isValid() {
+        const kk = super._isValid();
+        return kk || (void 0 !== this._objectList ? null : "Object list is not set (call setObjectList to set it)")
+      }
+    }
+    class Yk extends pk {
+      static IsRenderPass(kk) {
+        return void 0 !== kk.setRenderTarget
+      }
+      get renderTarget() {
+        return this._renderTarget
+      }
+      get renderTargetDepth() {
+        return this._renderTargetDepth
+      }
+      get frameGraphRenderTarget() {
+        return this._frameGraphRenderTarget
+      }
+      constructor(kk, ek, ik, Dk) {
+        super(kk, ek, ik), this._dependencies = new Set, this.depthReadOnly = !1, this.stencilReadOnly = !1, this._engine = Dk
+      }
+      setRenderTarget(kk) {
+        this._renderTarget = kk
+      }
+      setRenderTargetDepth(kk) {
+        this._renderTargetDepth = kk
+      }
+      addDependencies(kk) {
+        if (void 0 !== kk)
+          if (Array.isArray(kk))
+            for (const ek of kk) this._dependencies.add(ek);
+          else this._dependencies.add(kk)
+      }
+      collectDependencies(kk) {
+        const ek = this._dependencies.keys();
+        for (let ik = ek.next(); !0 !== ik.done; ik = ek.next()) kk.add(ik.value);
+        if (void 0 !== this._renderTarget)
+          if (Array.isArray(this._renderTarget))
+            for (const ik of this._renderTarget) void 0 !== ik && kk.add(ik);
+          else kk.add(this._renderTarget);
+        void 0 !== this._renderTargetDepth && kk.add(this._renderTargetDepth)
+      }
+      setOutputLayerAndFaceIndices(kk) {
+        const ek = this.frameGraphRenderTarget.renderTargetWrapper;
+        if (ek)
+          for (const ik of kk) ek.setLayerAndFaceIndex(ik.targetIndex, ik.layerIndex, ik.faceIndex)
+      }
+      _initialize() {
+        this._frameGraphRenderTarget = this._context.createRenderTarget(this.name, this._renderTarget, this._renderTargetDepth, this.depthReadOnly, this.stencilReadOnly), super._initialize()
+      }
+      _execute() {
+        this._context.bindRenderTarget(this._frameGraphRenderTarget), super._execute(), this._context.restoreDefaultFramebuffer()
+      }
+      _isValid() {
+        const kk = super._isValid();
+        return kk || (void 0 !== this._renderTarget || void 0 !== this.renderTargetDepth ? null : "Render target and render target depth cannot both be undefined.")
+      }
+      _dispose() {
+        this._frameGraphRenderTarget?.dispose()
+      }
+    }
+    var Lk = ik(36726);
+    class Ck {
+      get name() {
+        return this._name
+      }
+      set name(kk) {
+        this._name = kk
+      }
+      get disabled() {
+        return this._disabled
+      }
+      set disabled(kk) {
+        this._disabled = kk
+      }
+      get passes() {
+        return this._passes
+      }
+      get passesDisabled() {
+        return this._passesDisabled
+      }
+      getClassName() {
+        return "FrameGraphTask"
+      }
+      initAsync() {
+        return Promise.resolve()
+      }
+      isReady() {
+        return !0
+      }
+      dispose() {
+        this._reset(), this.onTexturesAllocatedObservable.clear(), this.onBeforeTaskExecute.clear(), this.onAfterTaskExecute.clear()
+      }
+      constructor(kk, ek) {
+        this._passes = [], this._passesDisabled = [], this._disabled = !1, this.onTexturesAllocatedObservable = new Lk.c, this.onBeforeTaskExecute = new Lk.c, this.onAfterTaskExecute = new Lk.c, this.name = kk, this._frameGraph = ek, this._reset()
+      }
+      _reset() {
+        for (const kk of this._passes) kk._dispose();
+        for (const kk of this._passesDisabled) kk._dispose();
+        this._passes.length = 0, this._passesDisabled.length = 0
+      }
+      _addPass(kk, ek) {
+        ek ? this._passesDisabled.push(kk) : this._passes.push(kk)
+      }
+      _checkTask() {
+        let kk, ek = null,
+          ik = null;
+        for (const rk of this._passes) {
+          const Dk = rk._isValid();
+          if (Dk) throw new Error(`Pass "${rk.name}" is not valid. ${Dk}`);
+          if (Yk.IsRenderPass(rk)) {
+            const kk = Array.isArray(rk.renderTarget) ? rk.renderTarget : [rk.renderTarget];
+            ek = [];
+            for (const ik of kk) void 0 !== ik && ek.push(this._frameGraph.textureManager.getTextureFromHandle(ik));
+            ik = void 0 !== rk.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(rk.renderTargetDepth) : null
+          } else yk.IsObjectListPass(rk) && (kk = rk.objectList)
+        }
+        let Dk, fk = null,
+          Sk = [],
+          bk = null;
+        for (const rk of this._passesDisabled) {
+          const kk = rk._isValid();
+          if (kk) throw new Error(`Pass "${rk.name}" is not valid. ${kk}`);
+          if (Yk.IsRenderPass(rk)) {
+            const kk = Array.isArray(rk.renderTarget) ? rk.renderTarget : [rk.renderTarget];
+            fk = [];
+            for (const ek of kk) void 0 !== ek && fk.push(this._frameGraph.textureManager.getTextureFromHandle(ek));
+            Sk = kk, bk = void 0 !== rk.renderTargetDepth ? this._frameGraph.textureManager.getTextureFromHandle(rk.renderTargetDepth) : null
+          } else yk.IsObjectListPass(rk) && (Dk = rk.objectList)
+        }
+        if (this._passesDisabled.length > 0) {
+          if (!this._checkSameRenderTarget(ek, fk)) {
+            let kk = !0;
+            for (const ek of Sk)
+              if (void 0 !== ek && !this._frameGraph.textureManager.isHistoryTexture(ek)) {
+                kk = !1;
+                break
+              } if (!kk) throw new Error(`The output texture of the task "${this.name}" is different when it is enabled or disabled.`)
+          }
+          if (ik !== bk && null !== bk) throw new Error(`The output depth texture of the task "${this.name}" is different when it is enabled or disabled.`);
+          if (kk !== Dk && null !== Dk) throw new Error(`The output object list of the task "${this.name}" is different when it is enabled or disabled.`)
+        }
+      }
+      _execute() {
+        const kk = this._disabled && this._passesDisabled.length > 0 ? this._passesDisabled : this._passes;
+        this.onBeforeTaskExecute.notifyObservers(this), this._frameGraph.engine._debugPushGroup?.(`${this.getClassName()} (${this.name})`);
+        try {
+          for (const ek of kk) ek._execute()
+        } finally {
+          this._frameGraph.engine._debugPopGroup?.()
+        }
+        this.onAfterTaskExecute.notifyObservers(this)
+      }
+      _initializePasses() {
+        this._frameGraph.engine._debugPushGroup?.(`${this.getClassName()} (${this.name})`);
+        try {
+          for (const kk of this._passes) kk._initialize();
+          for (const kk of this._passesDisabled) kk._initialize()
+        } finally {
+          this._frameGraph.engine._debugPopGroup?.()
+        }
+      }
+      _checkSameRenderTarget(kk, ek) {
+        if (null === kk || null === ek) return kk === ek;
+        if (kk.length !== ek.length) return !1;
+        for (let ik = 0; ik < kk.length; ik++)
+          if (kk[ik] !== ek[ik]) return !1;
+        return !0
+      }
+    }
+    class Ak extends Ck {
+      get alphaMode() {
+        return this.postProcess.alphaMode
+      }
+      set alphaMode(kk) {
+        this.postProcess.alphaMode = kk
+      }
+      get drawWrapper() {
+        return this._postProcessDrawWrapper
+      }
+      constructor(kk, ek, ik) {
+        super(kk, ek), this.sourceSamplingMode = 2, this.depthReadOnly = !1, this.stencilReadOnly = !1, this.disableColorWrite = !1, this.drawBackFace = !1, this.depthTest = !0, this.postProcess = ik, this._postProcessDrawWrapper = this.postProcess.drawWrapper, this.outputTexture = this._frameGraph.textureManager.createDanglingHandle(), this.outputDepthAttachmentTexture = this._frameGraph.textureManager.createDanglingHandle()
+      }
+      isReady() {
+        return this.postProcess.isReady()
+      }
+      getClassName() {
+        return "FrameGraphPostProcessTask"
+      }
+      record() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          ek = arguments.length > 1 ? arguments[1] : void 0,
+          ik = arguments.length > 2 ? arguments[2] : void 0;
+        if (void 0 === this.sourceTexture && void 0 === this.targetTexture) throw new Error(`FrameGraphPostProcessTask "${this.name}": sourceTexture or targetTexture is required`);
+        const Dk = void 0 !== this.sourceTexture ? this._frameGraph.textureManager.getTextureCreationOptions(this.sourceTexture) : void 0;
+        if (Dk && (Dk.options.samples = 1), this._frameGraph.textureManager.resolveDanglingHandle(this.outputTexture, this.targetTexture, this.name, Dk), void 0 !== this.depthAttachmentTexture && this._frameGraph.textureManager.resolveDanglingHandle(this.outputDepthAttachmentTexture, this.depthAttachmentTexture), Dk) {
+          const kk = this._frameGraph.textureManager.getTextureAbsoluteDimensions(Dk);
+          this._sourceWidth = kk.width, this._sourceHeight = kk.height
+        }
+        const fk = this._frameGraph.textureManager.getTextureDescription(this.outputTexture);
+        this._outputWidth = fk.size.width, this._outputHeight = fk.size.height;
+        const Sk = this._frameGraph.addRenderPass(this.name);
+        if (Sk.depthReadOnly = this.depthReadOnly, Sk.stencilReadOnly = this.stencilReadOnly, Sk.addDependencies(this.sourceTexture), Sk.setRenderTarget(this.outputTexture), Sk.setRenderTargetDepth(this.depthAttachmentTexture), Sk.setExecuteFunc((kk => {
+            kk.pushDebugGroup(`Apply post-process (${this.name})`), void 0 !== this.sourceTexture && kk.setTextureSamplingMode(this.sourceTexture, this.sourceSamplingMode), ek?.(kk), this.viewport && kk.setViewport(this.viewport), kk.applyFullScreenEffect(this._postProcessDrawWrapper, (() => {
+              void 0 !== this.sourceTexture && kk.bindTextureHandle(this._postProcessDrawWrapper.effect, "textureSampler", this.sourceTexture), ik?.(kk), this.postProcess.bind()
+            }), this.stencilState, this.disableColorWrite, this.drawBackFace, this.depthTest, void 0 !== this.viewport), kk.restoreDefaultFramebuffer(), kk.popDebugGroup()
+          })), !kk) {
+          const kk = this._frameGraph.addRenderPass(this.name + "_disabled", !0);
+          kk.depthReadOnly = this.depthReadOnly, kk.stencilReadOnly = this.stencilReadOnly, kk.addDependencies(this.sourceTexture), kk.setRenderTarget(this.outputTexture), kk.setRenderTargetDepth(this.depthAttachmentTexture), kk.setExecuteFunc((kk => {
+            void 0 !== this.sourceTexture && 0 === this.alphaMode && (this.viewport && kk.setViewport(this.viewport), kk.copyTexture(this.sourceTexture, void 0, void 0 !== this.viewport))
+          }))
+        }
+        return Sk
+      }
+      dispose() {
+        this.postProcess.dispose(), super.dispose()
+      }
+    }
+    class jk extends Ak {
+      constructor(kk, ek, ik) {
+        super(kk, ek, ik || new Mk(kk, ek.engine))
+      }
+      getClassName() {
+        return "FrameGraphFXAATask"
+      }
+      record() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          ek = arguments.length > 1 ? arguments[1] : void 0,
+          ik = arguments.length > 2 ? arguments[2] : void 0;
+        const Dk = super.record(kk, ek, ik);
+        return this.postProcess.texelSize.x = 1 / this._sourceWidth, this.postProcess.texelSize.y = 1 / this._sourceHeight, Dk
+      }
+    }
+    var sk = ik(41407);
+    class dk extends Ak {
+      constructor(kk, ek, ik) {
+        super(kk, ek, ik || new sk.h(kk, ek.engine))
+      }
+      getClassName() {
+        return "FrameGraphPassTask"
+      }
+    }
+    var Vk = ik(39653),
+      Fk = ik(39742),
+      uk = ik(39701),
+      qk = ik(39818),
+      Ik = ik(36874);
+    class zk {
+      getRenderCamera(kk) {
+        if (this._renderCamera) return this._renderCamera;
+        {
+          let ek;
+          return ek = this.originalScene.activeCameras && this.originalScene.activeCameras.length > 1 ? this.originalScene.activeCameras[this.originalScene.activeCameras.length - 1] : this.originalScene.activeCamera, kk && ek && ek.isRigCamera ? ek.rigParent : ek
+        }
+      }
+      setRenderCamera(kk) {
+        this._renderCamera = kk
+      }
+      _getSharedGizmoLight() {
+        return this._sharedGizmoLight || (this._sharedGizmoLight = new qk.b("shared gizmo light", new mk.o(0, 1, 0), this.utilityLayerScene), this._sharedGizmoLight.intensity = 2, this._sharedGizmoLight.groundColor = Ik.e.Gray()), this._sharedGizmoLight
+      }
+      static get DefaultUtilityLayer() {
+        return null == zk._DefaultUtilityLayer ? zk._CreateDefaultUtilityLayerFromScene(Pk.e.LastCreatedScene) : zk._DefaultUtilityLayer
+      }
+      static _CreateDefaultUtilityLayerFromScene(kk) {
+        return zk._DefaultUtilityLayer = new zk(kk), zk._DefaultUtilityLayer.originalScene.ZF.addOnce((() => {
+          zk._DefaultUtilityLayer = null
+        })), zk._DefaultUtilityLayer
+      }
+      static get DefaultKeepDepthUtilityLayer() {
+        return null == zk._DefaultKeepDepthUtilityLayer ? zk._CreateDefaultKeepUtilityLayerFromScene(Pk.e.LastCreatedScene) : zk._DefaultKeepDepthUtilityLayer
+      }
+      static _CreateDefaultKeepUtilityLayerFromScene(kk) {
+        return zk._DefaultKeepDepthUtilityLayer = new zk(kk), zk._DefaultKeepDepthUtilityLayer.utilityLayerScene.autoClearDepthAndStencil = !1, zk._DefaultKeepDepthUtilityLayer.originalScene.ZF.addOnce((() => {
+          zk._DefaultKeepDepthUtilityLayer = null
+        })), zk._DefaultKeepDepthUtilityLayer
+      }
+      constructor(kk) {
+        let ek = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.originalScene = kk, this.handleEvents = ek, this._pointerCaptures = {}, this._lastPointerEvents = {}, this._sharedGizmoLight = null, this._renderCamera = null, this.pickUtilitySceneFirst = !0, this.shouldRender = !0, this.onlyCheckPointerDownEvents = !0, this.processAllEvents = !1, this.pickingEnabled = !0, this.onPointerOutObservable = new Lk.c, this.utilityLayerScene = new Vk.f(kk.JU(), {
+          virtual: !0,
+          useFloatingOrigin: kk.floatingOriginMode
+        }), this.utilityLayerScene.useRightHandedSystem = kk.useRightHandedSystem, this.utilityLayerScene._allowPostProcessClearColor = !1, this.utilityLayerScene.postProcessesEnabled = !1, this.utilityLayerScene.detachControl(), ek && (this._originalPointerObserver = kk.onPrePointerObservable.add((ek => {
+          if (!this.utilityLayerScene.activeCamera) return;
+          if (!this.pickingEnabled) return;
+          if (!this.processAllEvents && ek.type !== Fk.c.POINTERMOVE && ek.type !== Fk.c.POINTERUP && ek.type !== Fk.c.POINTERDOWN && ek.type !== Fk.c.POINTERDOUBLETAP) return;
+          this.utilityLayerScene.pointerX = kk.pointerX, this.utilityLayerScene.pointerY = kk.pointerY;
+          const ik = ek.event;
+          if (kk.isPointerCaptured(ik.pointerId)) return void(this._pointerCaptures[ik.pointerId] = !1);
+          const Dk = ik => {
+              let Dk;
+              if (ek.nearInteractionPickingInfo) Dk = ek.nearInteractionPickingInfo.pickedMesh.XF() == ik ? ek.nearInteractionPickingInfo : new uk.b;
+              else if (ik !== this.utilityLayerScene && ek.originalPickingInfo) Dk = ek.originalPickingInfo;
+              else {
+                let fk = null;
+                this._renderCamera && (fk = ik._activeCamera, ik._activeCamera = this._renderCamera, ek.ray = null), Dk = ek.ray ? ik.pickWithRay(ek.ray) : ik.Un(kk.pointerX, kk.pointerY), fk && (ik._activeCamera = fk)
+              }
+              return Dk
+            },
+            fk = Dk(this.utilityLayerScene);
+          if (!ek.ray && fk && (ek.ray = fk.ray), ek.originalPickingInfo?.aimTransform && fk && (fk.aimTransform = ek.originalPickingInfo.aimTransform, fk.gripTransform = ek.originalPickingInfo.gripTransform), this.utilityLayerScene.onPrePointerObservable.notifyObservers(ek), this.onlyCheckPointerDownEvents && ek.type != Fk.c.POINTERDOWN) return ek.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new Fk.h(ek.type, ek.event, fk), ek.type), void(ek.type === Fk.c.POINTERUP && this._pointerCaptures[ik.pointerId] && (this._pointerCaptures[ik.pointerId] = !1));
+          if (this.utilityLayerScene.autoClearDepthAndStencil || this.pickUtilitySceneFirst) fk && fk.hit && (ek.skipOnPointerObservable || this.utilityLayerScene.onPointerObservable.notifyObservers(new Fk.h(ek.type, ek.event, fk), ek.type), ek.skipOnPointerObservable = !0);
+          else {
+            const ik = Dk(kk),
+              Sk = ek.event;
+            ik && fk && (0 === fk.distance && ik.pickedMesh ? this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(ik.pickedMesh) ? (this._notifyObservers(ek, ik, Sk), ek.skipOnPointerObservable = !0) : ek.type === Fk.c.POINTERDOWN ? (this._pointerCaptures[Sk.pointerId] = !0, this._notifyObservers(ek, ik, Sk)) : ek.type !== Fk.c.POINTERMOVE && ek.type !== Fk.c.POINTERUP || (this._lastPointerEvents[Sk.pointerId] && (this.onPointerOutObservable.notifyObservers(Sk.pointerId), delete this._lastPointerEvents[Sk.pointerId]), this._notifyObservers(ek, ik, Sk)) : !this._pointerCaptures[Sk.pointerId] && (fk.distance < ik.distance || 0 === ik.distance) ? (this._notifyObservers(ek, fk, Sk), ek.skipOnPointerObservable || (ek.skipOnPointerObservable = fk.distance > 0)) : !this._pointerCaptures[Sk.pointerId] && fk.distance >= ik.distance && (this.mainSceneTrackerPredicate && this.mainSceneTrackerPredicate(ik.pickedMesh) ? (this._notifyObservers(ek, ik, Sk), ek.skipOnPointerObservable = !0) : (ek.type !== Fk.c.POINTERMOVE && ek.type !== Fk.c.POINTERUP || this._lastPointerEvents[Sk.pointerId] && (this.onPointerOutObservable.notifyObservers(Sk.pointerId), delete this._lastPointerEvents[Sk.pointerId]), this._notifyObservers(ek, fk, Sk))), ek.type === Fk.c.POINTERUP && this._pointerCaptures[Sk.pointerId] && (this._pointerCaptures[Sk.pointerId] = !1))
+          }
+        })), this._originalPointerObserver && kk.onPrePointerObservable.makeObserverTopPriority(this._originalPointerObserver)), this.utilityLayerScene.autoClear = !1, ik || (this._afterRenderObserver = this.originalScene.onAfterRenderCameraObservable.add((kk => {
+          this.shouldRender && kk == this.getRenderCamera() && this.render()
+        }))), this._sceneDisposeObserver = this.originalScene.ZF.add((() => {
+          this.dispose()
+        })), this._updateCamera()
+      }
+      _notifyObservers(kk, ek, ik) {
+        kk.skipOnPointerObservable || (this.utilityLayerScene.onPointerObservable.notifyObservers(new Fk.h(kk.type, kk.event, ek), kk.type), this._lastPointerEvents[ik.pointerId] = !0)
+      }
+      render() {
+        if (this._updateCamera(), this.utilityLayerScene.activeCamera) {
+          const kk = this.utilityLayerScene.activeCamera.XF(),
+            ek = this.utilityLayerScene.activeCamera;
+          ek._scene = this.utilityLayerScene, ek.leftCamera && (ek.leftCamera._scene = this.utilityLayerScene), ek.rightCamera && (ek.rightCamera._scene = this.utilityLayerScene), this.utilityLayerScene.render(!1), ek._scene = kk, ek.leftCamera && (ek.leftCamera._scene = kk), ek.rightCamera && (ek.rightCamera._scene = kk)
+        }
+      }
+      dispose() {
+        this.onPointerOutObservable.clear(), this._afterRenderObserver && this.originalScene.onAfterRenderCameraObservable.remove(this._afterRenderObserver), this._sceneDisposeObserver && this.originalScene.ZF.remove(this._sceneDisposeObserver), this._originalPointerObserver && this.originalScene.onPrePointerObservable.remove(this._originalPointerObserver), this.utilityLayerScene.dispose()
+      }
+      _updateCamera() {
+        this.utilityLayerScene.cameraToUseForPointers = this.getRenderCamera(), this.utilityLayerScene.activeCamera = this.getRenderCamera()
+      }
+    }
+    zk._DefaultUtilityLayer = null, zk._DefaultKeepDepthUtilityLayer = null;
+    const Qk = {
+      FindMainCamera: function(kk) {
+        return kk.findMainCamera()
+      },
+      FindMainObjectRenderer: function(kk) {
+        return kk.findMainObjectRenderer()
+      },
+      CreateUtilityLayerRenderer: function(kk) {
+        let ek = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const ik = kk.bw,
+          Dk = new zk(ik, ek, !0);
+        Dk.utilityLayerScene.activeCamera = ik.activeCamera;
+        let fk = Qk.FindMainCamera(ik.frameGraph);
+        !fk && ik.cameras.length > 0 && (fk = ik.cameras[0]), fk && (Dk.setRenderCamera(fk), Dk.utilityLayerScene.activeCamera = fk);
+        const Sk = ik.onAfterRenderObservable.add((() => {
+          Dk.render()
+        }));
+        return Dk.utilityLayerScene.ZF.addOnce((() => {
+          ik.onAfterRenderObservable.remove(Sk)
+        })), Dk
+      }
+    };
+    let vk = null;
+
+    function Ek(kk, ek, ik, Dk) {
+      let fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        Sk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        bk = arguments.length > 6 ? arguments[6] : void 0,
+        rk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        Pk = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+      const {
+        height: mk,
+        width: Mk
+      } = Bk(kk, ek, ik);
+      if (!mk || !Mk) return void xk.b.Error("Invalid 'size' parameter !");
+      const Kk = ek.XF();
+      let Uk = Kk.activeCamera !== ek;
+      if (Kk.frameGraph) {
+        const kk = Qk.FindMainObjectRenderer(Kk.frameGraph);
+        kk && (Uk = kk.camera !== ek)
+      }
+      Uk ? Wk(kk, ek, ik, (kk => {
+        if (Sk) {
+          const ek = new Blob([kk]);
+          nk.i.DownloadBlob(ek), Dk && Dk("")
+        } else Dk && Dk(kk)
+      }), fk, 1, kk.getCreationOptions().antialias, void 0, void 0, void 0, void 0, bk) : kk.onEndFrameObservable.addOnce((() => {
+        vk || (vk = document.createElement("canvas")), vk.width = Mk, vk.height = mk;
+        const ek = vk.getContext("2d"),
+          ik = kk.getRenderingCanvas();
+        if (!ek || !ik) return void xk.b.Error("Failed to create screenshot. Rendering context or rendering canvas is not available.");
+        const Uk = ik.width,
+          Hk = ik.height,
+          wk = vk.width,
+          lk = vk.height,
+          pk = wk / Uk,
+          yk = lk / Hk,
+          Yk = rk ? Math.max(pk, yk) : Math.min(pk, yk),
+          Lk = Uk * Yk,
+          Ck = Hk * Yk,
+          Ak = (wk - Lk) / 2,
+          jk = (lk - Ck) / 2;
+        ek.save(), ek.fillStyle = Pk ? Kk.clearColor.toHexString() : "rgba(0, 0, 0, 0)", ek.fillRect(0, 0, Mk, mk), ek.restore(), ek.drawImage(ik, 0, 0, Uk, Hk, Ak, jk, Lk, Ck), Sk ? (nk.i.EncodeScreenshotCanvasData(vk, void 0, fk, void 0, bk), Dk && Dk("")) : nk.i.EncodeScreenshotCanvasData(vk, Dk, fk, void 0, bk)
+      }))
+    }
+    async function hk(kk, ek, ik) {
+      let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        fk = arguments.length > 4 ? arguments[4] : void 0,
+        Sk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        bk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        rk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+      return await new Promise(((Pk, mk) => {
+        Ek(kk, ek, ik, (kk => {
+          "undefined" !== typeof kk ? Pk(kk) : mk(new Error("Data is undefined"))
+        }), Dk, rk, fk, Sk, bk)
+      }))
+    }
+    async function ak(kk, ek, ik, Dk) {
+      let fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        Sk = arguments.length > 5 ? arguments[5] : void 0,
+        bk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return await new Promise((rk => {
+        Ek(kk, ek, {
+          width: ik,
+          height: Dk
+        }, (() => {
+          rk()
+        }), fk, !0, Sk, bk)
+      }))
+    }
+
+    function Wk(kk, ek, Sk, bk) {
+      let rk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "image/png",
+        Pk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+        mk = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        Mk = arguments.length > 7 ? arguments[7] : void 0,
+        nk = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        lk = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        pk = !(arguments.length > 10 && void 0 !== arguments[10]) || arguments[10],
+        yk = arguments.length > 11 ? arguments[11] : void 0,
+        Yk = arguments.length > 12 ? arguments[12] : void 0,
+        Lk = arguments.length > 13 ? arguments[13] : void 0,
+        Ck = arguments.length > 14 && void 0 !== arguments[14] ? arguments[14] : 3e4,
+        Ak = arguments.length > 15 ? arguments[15] : void 0;
+      const jk = ek.XF();
+      if (jk.frameGraph) return void Xk(jk.frameGraph, ek, Sk, rk, Pk, mk, Mk, yk, Lk, !bk).then((kk => {
+        bk && bk(kk)
+      }));
+      const {
+        height: sk,
+        width: dk,
+        finalWidth: Vk,
+        finalHeight: Fk
+      } = Bk(kk, ek, Sk), uk = {
+        width: dk,
+        height: sk
+      };
+      if (!sk || !dk) return void xk.b.Error("Invalid 'size' parameter !");
+      kk.skipFrameRender = !0;
+      const qk = kk.getRenderWidth,
+        Ik = kk.getRenderHeight;
+      kk.getRenderWidth = function() {
+        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && kk._currentRenderTarget ? kk._currentRenderTarget.width : dk
+      }, kk.getRenderHeight = function() {
+        return !(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && kk._currentRenderTarget ? kk._currentRenderTarget.height : sk
+      }, kk.onResizeObservable.hasObservers() && kk.onResizeObservable.notifyObservers(kk);
+      const zk = new fk.c("screenShot", uk, jk, !1, !1, 0, !1, Dk.f.BILINEAR_SAMPLINGMODE, void 0, lk, void 0, void 0, void 0, Pk);
+      zk.renderList = jk.meshes.slice(), zk.samples = Pk, zk.renderSprites = nk, zk.activeCamera = ek, zk.forceLayerMaskCheck = pk, Yk?.(zk);
+      const Qk = Lk || Uk.DumpData,
+        vk = () => {
+          jk.incrementRenderId(), jk.resetCachedMaterial(), (0, wk.h)((() => zk.isReadyForRendering() && ek.isReady(!0)), (() => {
+            kk.onEndFrameObservable.addOnce((() => {
+              Vk === dk && Fk === sk ? zk.readPixels(void 0, void 0, void 0, !1).then((kk => {
+                Qk(dk, sk, kk, bk, rk, Mk, !0, void 0, yk), zk.dispose()
+              })) : (kk.isWebGPU ? ik.e(370).then((() => ik(60846))) : ik.e(371).then((() => ik(60851)))).then((async () => await (0, Hk.c)("pass", zk.getInternalTexture(), jk, void 0, void 0, void 0, Vk, Fk).then((ek => {
+                kk._readTexturePixels(ek, Vk, Fk, -1, 0, null, !0, !1, 0, 0).then((kk => {
+                  Qk(Vk, Fk, kk, bk, rk, Mk, !0, void 0, yk), ek.dispose()
+                }))
+              }))))
+            })), jk.incrementRenderId(), jk.resetCachedMaterial();
+            const Dk = jk.activeCamera,
+              fk = jk.activeCameras,
+              Sk = ek.outputRenderTarget,
+              Pk = jk.spritesEnabled;
+            jk.activeCamera = ek, jk.activeCameras = null, ek.outputRenderTarget = zk, jk.spritesEnabled = nk;
+            const mk = jk.meshes;
+            jk.meshes = zk.renderList || jk.meshes;
+            try {
+              jk.render()
+            } finally {
+              jk.activeCamera = Dk, jk.activeCameras = fk, ek.outputRenderTarget = Sk, jk.spritesEnabled = Pk, jk.meshes = mk, kk.getRenderWidth = qk, kk.getRenderHeight = Ik, kk.onResizeObservable.hasObservers() && kk.onResizeObservable.notifyObservers(kk), ek.getProjectionMatrix(!0), kk.skipFrameRender = !1
+            }
+          }), (() => {
+            kk.skipFrameRender = !1, kk.getRenderWidth = qk, kk.getRenderHeight = Ik, Ak?.()
+          }), void 0, Ck)
+        };
+      if (mk) {
+        const kk = new Kk("antialiasing", 1, jk.activeCamera);
+        zk.addPostProcess(kk), kk.autoClear = !0, kk.onEffectCreatedObservable.addOnce((kk => {
+          kk.isReady() ? vk() : kk.onCompiled = () => {
+            vk()
+          }
+        }))
+      } else vk()
+    }
+    async function tk(kk, ek, ik) {
+      let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        Sk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        bk = arguments.length > 6 ? arguments[6] : void 0,
+        rk = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        Pk = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        mk = !(arguments.length > 9 && void 0 !== arguments[9]) || arguments[9],
+        Mk = arguments.length > 10 ? arguments[10] : void 0,
+        Kk = arguments.length > 11 ? arguments[11] : void 0,
+        xk = arguments.length > 12 ? arguments[12] : void 0;
+      return await new Promise(((nk, Uk) => {
+        Wk(kk, ek, ik, (kk => {
+          "undefined" !== typeof kk ? nk(kk) : Uk(new Error("Data is undefined"))
+        }), Dk, fk, Sk, bk, rk, Pk, mk, Mk, Kk, xk)
+      }))
+    }
+    async function Xk(kk, ek, ik) {
+      let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "image/png",
+        fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        Sk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        bk = arguments.length > 6 ? arguments[6] : void 0,
+        rk = arguments.length > 7 ? arguments[7] : void 0,
+        Pk = arguments.length > 8 ? arguments[8] : void 0,
+        mk = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        Mk = arguments.length > 10 ? arguments[10] : void 0;
+      const Kk = kk.engine,
+        xk = kk.textureManager,
+        {
+          height: nk,
+          width: Hk,
+          finalWidth: wk,
+          finalHeight: pk
+        } = Bk(Kk, ek, ik),
+        yk = {
+          width: Hk,
+          height: nk
+        },
+        Yk = Pk || Uk.DumpData,
+        Lk = kk.tasks,
+        Ck = Lk.length,
+        Ak = kk.pausedExecution,
+        sk = Kk.getCaps().parallelShaderCompile;
+      xk.setBackBufferTextures(0, 0, {
+        size: yk,
+        options: {
+          createMipMaps: !1,
+          samples: fk,
+          types: [0],
+          formats: [5],
+          useSRGBBuffers: [!1],
+          creationFlags: [0],
+          labels: ["screenshot color"]
+        },
+        sizeIsPercentage: !1
+      }, {
+        size: yk,
+        options: {
+          createMipMaps: !1,
+          samples: fk,
+          types: [0],
+          formats: [Kk.isStencilEnable ? 13 : 14],
+          useSRGBBuffers: [!1],
+          creationFlags: [0],
+          labels: ["screenshot depth"]
+        },
+        sizeIsPercentage: !1
+      });
+      let Vk = lk;
+      if (Sk) {
+        const ek = new jk("fxaa", kk);
+        ek.sourceTexture = Vk, Vk = ek.outputTexture, kk.addTask(ek)
+      }
+      if (wk !== Hk || pk !== nk) {
+        const ek = new dk("pass", kk);
+        ek.sourceTexture = Vk, ek.targetTexture = kk.textureManager.createRenderTargetTexture("pass_output", {
+          size: {
+            width: wk,
+            height: pk
+          },
+          options: {
+            createMipMaps: !1,
+            types: [0],
+            formats: [5],
+            samples: 1,
+            labels: ["screenshot_final_texture"],
+            useSRGBBuffers: [!1]
+          },
+          sizeIsPercentage: !1
+        }), Vk = ek.outputTexture, kk.addTask(ek)
+      }
+      const Fk = Qk.FindMainObjectRenderer(kk);
+      let uk = null;
+      Fk && (uk = Fk.camera, Fk.camera = ek), Kk.getCaps().parallelShaderCompile = void 0, await kk.buildAsync();
+      const qk = Mk ?? (xk.hasHistoryTextures ? 32 : 1);
+      for (let Uk = 0; Uk < qk; ++Uk) kk.execute();
+      kk.pausedExecution = !0, Kk.getCaps().parallelShaderCompile = sk;
+      for (let Uk = Ck; Uk < Lk.length; ++Uk) kk.tasks[Uk].dispose();
+      kk.tasks.length = Ck, Fk && uk && (Fk.camera = uk);
+      const Ik = kk.textureManager.getTextureFromHandle(Vk);
+      return Ik.incrementReferences(), xk.resetBackBufferTextures(), await kk.buildAsync(), kk.pausedExecution = Ak, new Promise((kk => {
+        Kk._readTexturePixels(Ik, wk, pk, -1, 0, null, !0, !1, 0, 0).then((async ek => {
+          Ik.dispose(), Yk(wk, pk, ek, mk ? void 0 : ek => kk(ek), Dk, bk, !0, void 0, rk), mk && kk(null)
+        }))
+      }))
+    }
+
+    function Bk(kk, ek, ik) {
+      let Dk = 0,
+        fk = 0,
+        Sk = 0,
+        bk = 0;
+      if ("object" === typeof ik) {
+        const rk = ik.precision ? Math.abs(ik.precision) : 1;
+        ik.width && ik.height ? (Dk = ik.height * rk, fk = ik.width * rk) : ik.width && !ik.height ? (fk = ik.width * rk, Dk = Math.round(fk / kk.getAspectRatio(ek))) : ik.height && !ik.width ? (Dk = ik.height * rk, fk = Math.round(Dk * kk.getAspectRatio(ek))) : (fk = Math.round(kk.getRenderWidth() * rk), Dk = Math.round(fk / kk.getAspectRatio(ek))), ik.finalWidth && ik.finalHeight ? (bk = ik.finalHeight, Sk = ik.finalWidth) : ik.finalWidth && !ik.finalHeight ? (Sk = ik.finalWidth, bk = Math.round(Sk / kk.getAspectRatio(ek))) : ik.finalHeight && !ik.finalWidth ? (bk = ik.finalHeight, Sk = Math.round(bk * kk.getAspectRatio(ek))) : (Sk = fk, bk = Dk)
+      } else isNaN(ik) || (Dk = ik, fk = ik, Sk = ik, bk = ik);
+      return fk && (fk = Math.floor(fk)), Dk && (Dk = Math.floor(Dk)), Sk && (Sk = Math.floor(Sk)), bk && (bk = Math.floor(bk)), {
+        height: 0 | Dk,
+        width: 0 | fk,
+        finalWidth: 0 | Sk,
+        finalHeight: 0 | bk
+      }
+    }
+    const ck = {
+      CreateScreenshot: Ek,
+      CreateScreenshotAsync: hk,
+      CreateScreenshotWithResizeAsync: ak,
+      CreateScreenshotUsingRenderTarget: Wk,
+      CreateScreenshotUsingRenderTargetAsync: tk,
+      CreateScreenshotForFrameGraphAsync: Xk
+    };
+    let Tk = !1;
+
+    function Zk() {
+      if (Tk) return;
+      Tk = !0;
+      nk.i.CreateScreenshot = Ek, nk.i.CreateScreenshotAsync = hk, nk.i.CreateScreenshotUsingRenderTarget = Wk, nk.i.CreateScreenshotUsingRenderTargetAsync = tk
+    }
+    Zk()
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

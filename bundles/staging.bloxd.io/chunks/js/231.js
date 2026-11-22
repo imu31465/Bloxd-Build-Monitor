@@ -1,559 +1,307 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  40475: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      noaDevTools: () => HQ
+  36722: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => fk
     });
-    var LQ = wQ(37129),
-      qQ = wQ(37118),
-      oQ = wQ(2676),
-      DQ = wQ(1725);
-
-    function kQ(QQ) {
-      const {
-        Zx: FQ
-      } = QQ, wQ = FQ.engine, LQ = {
-        width: wQ.getRenderWidth(),
-        height: wQ.getRenderHeight()
-      };
-      return {
-        canvas: wQ.getRenderingCanvas(),
-        maxTextureSize: wQ.getCaps().maxTextureSize,
-        drawing: () => !QQ.WC,
-        resize: (QQ, FQ) => {
-          wQ.setSize(QQ, FQ)
-        },
-        restoreSize: () => {
-          wQ.setSize(LQ.width, LQ.height), FQ.resize()
-        },
-        onFrameDrawn: FQ => (QQ.on("afterRender", FQ), () => {
-          QQ.off("afterRender", FQ)
-        })
+    var Dk = ik(36726);
+    class fk {
+      static get LastCreatedEngine() {
+        return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
+      }
+      static get LastCreatedScene() {
+        return this._LastCreatedScene
       }
     }
-    var vQ = wQ(40455),
-      mQ = wQ(8978);
-
-    function uQ(QQ, FQ) {
-      let {
-        width: mQ,
-        height: uQ,
-        colouring: HQ
-      } = FQ;
-      const bQ = "normals" === HQ,
-        YQ = "depth" === HQ;
-      return new Promise((FQ => {
-        try {
-          const xQ = (0, oQ.d)();
-          if (xQ.Zx.yx) return "screenshot" !== QQ || null !== HQ ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void FQ()) : void(0, vQ.c)(kQ(xQ), mQ, uQ).finally(FQ);
-          const AQ = xQ.Zx.engine,
-            tQ = xQ.Zx.iN(),
-            eQ = mQ,
-            MQ = uQ;
-          Promise.all([Promise.all([wQ.e(246), wQ.e(247), wQ.e(228)]).then((() => wQ(60631))), Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(248), wQ.e(251), wQ.e(302), wQ.e(232)]).then((() => wQ(60637))), Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(254), wQ.e(248), wQ.e(256), wQ.e(234)]).then((() => wQ(60642))), wQ.e(345).then((() => wQ(60647))), Promise.all([wQ.e(226), wQ.e(222)]).then((() => wQ(36688))), wQ.e(245).then((() => wQ(60652))), wQ.e(229).then((() => wQ(60660)))]).then((oQ => {
-            const {
-              CreateScreenshotUsingRenderTarget: kQ
-            } = oQ[1], {
-              ShaderMaterial: vQ
-            } = oQ[2], {
-              ShaderLanguage: mQ
-            } = oQ[3], {
-              Ox: uQ
-            } = oQ[4], {
-              registerDevtoolsShader: HQ
-            } = oQ[6], xQ = mQ.GLSL, GQ = new Map, pQ = tQ.meshes.filter((QQ => QQ.material));
-            let cQ = !1,
-              CQ = null;
-
-            function SQ() {
-              var QQ;
-              cQ && (cQ = !1, (0, LQ.f)(tQ.meshes, !1)), null === (QQ = CQ) || void 0 === QQ || QQ(), CQ = null, pQ.forEach((QQ => {
-                const FQ = GQ.get(QQ);
-                FQ && (QQ.material = FQ)
-              }))
-            }
-            if (bQ) {
-              const QQ = [],
-                FQ = [];
-              pQ.forEach((wQ => {
-                const LQ = wQ.name.toLowerCase(),
-                  qQ = wQ.sK().boundingBox.center,
-                  oQ = tQ.activeCamera.position.subtract(qQ).length();
-                LQ.includes("sky") || LQ.includes("background") || LQ.includes("environment") || oQ > 1e3 ? FQ.push(wQ) : QQ.push(wQ)
-              })), HQ("devtoolsNormal", xQ);
-              const wQ = new vQ("normalMaterial", tQ, "devtoolsNormal", {
-                attributes: ["position", "normal"],
-                uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: xQ
-              });
-              HQ("devtoolsWhite", xQ);
-              const LQ = new vQ("whiteMaterial", tQ, "devtoolsWhite", {
-                attributes: ["position"],
-                uniforms: ["worldViewProjection"],
-                shaderLanguage: xQ
-              });
-              QQ.forEach((QQ => {
-                GQ.set(QQ, QQ.material), QQ.material = wQ
-              })), FQ.forEach((QQ => {
-                GQ.set(QQ, QQ.material), QQ.material = LQ
-              }))
-            } else if (YQ) {
-              HQ("devtoolsDepth", xQ);
-              const QQ = tQ.activeCamera.position;
-              let FQ = 0,
-                wQ = 1 / 0;
-              pQ.forEach((LQ => {
-                const qQ = LQ.name.toLowerCase();
-                if (qQ.includes("sky") || qQ.includes("background") || qQ.includes("environment")) return;
-                const oQ = LQ.sK().boundingBox.center,
-                  DQ = uQ.TransformCoordinates(oQ, LQ.getWorldMatrix()),
-                  kQ = QQ.subtract(DQ).length();
-                kQ > 1e3 || (FQ = Math.max(FQ, kQ), wQ = Math.min(wQ, kQ))
-              }));
-              const LQ = FQ - wQ;
-              FQ += .1 * LQ, wQ = Math.max(0, wQ - .1 * LQ), console.log(`Depth range: min=${wQ.toFixed(2)}, max=${FQ.toFixed(2)}, range=${LQ.toFixed(2)}`), LQ < 1 && (FQ = wQ + 10);
-              const qQ = new vQ("depthMaterial", tQ, "devtoolsDepth", {
-                attributes: ["position"],
-                uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: xQ
-              });
-              qQ.setVector3("cameraPosition", QQ), qQ.setFloat("maxDepth", FQ), qQ.setFloat("minDepth", wQ), pQ.forEach((QQ => {
-                GQ.set(QQ, QQ.material), QQ.material = qQ
-              }))
-            }
-            if ((0, LQ.f)(tQ.meshes, !0), cQ = !0, "glb" === QQ && (CQ = (0, qQ.b)(tQ.meshes)), "screenshot" === QQ) {
-              let QQ = `bloxd-screenshot-${eQ}x${MQ}-${Date.now()}.png`;
-              bQ ? QQ = `bloxd-screenshot-normals-${eQ}x${MQ}-${Date.now()}.png` : YQ && (QQ = `bloxd-screenshot-depth-${eQ}x${MQ}-${Date.now()}.png`), kQ(AQ, tQ.activeCamera, {
-                width: eQ,
-                height: MQ
-              }, (function(wQ) {
-                SQ(), fetch(wQ).then((function(QQ) {
-                  return QQ.blob()
-                })).then((function(wQ) {
-                  (0, DQ.downloadBlob)(wQ, QQ), FQ()
-                })).catch((function(QQ) {
-                  console.error("Error processing screenshot:", QQ), FQ()
-                }))
-              }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), SQ(), FQ()
-              }))
-            } else {
-              let QQ = "lA";
-              bQ ? QQ = "scene-normals" : YQ && (QQ = "scene-depth"), bQ || YQ ? setTimeout((() => {
-                (async function() {
-                  const {
-                    StandardMaterial: QQ
-                  } = await Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(254), wQ.e(253), wQ.e(233)]).then((() => wQ(39692))), {
-                    Color3: FQ
-                  } = await Promise.all([wQ.e(227), wQ.e(230)]).then((() => wQ(36870))), LQ = [], qQ = [];
-                  if (pQ.forEach((QQ => {
-                      const FQ = QQ.name.toLowerCase(),
-                        wQ = QQ.sK().boundingBox.center,
-                        oQ = tQ.activeCamera.position.subtract(wQ).length();
-                      FQ.includes("sky") || FQ.includes("background") || FQ.includes("environment") || oQ > 1e3 ? qQ.push(QQ) : LQ.push(QQ)
-                    })), bQ) LQ.forEach(((wQ, LQ) => {
-                    const qQ = wQ.getVerticesData("normal");
-                    if (qQ) {
-                      const oQ = [];
-                      for (let QQ = 0; QQ < qQ.length; QQ += 3) {
-                        const FQ = Math.abs(qQ[QQ]),
-                          wQ = Math.abs(qQ[QQ + 1]),
-                          LQ = Math.abs(qQ[QQ + 2]);
-                        oQ.push(FQ, wQ, LQ, 1)
-                      }
-                      wQ.setVerticesData("color", oQ);
-                      const DQ = new QQ(`vertexColorMat_${LQ}`, tQ);
-                      DQ.disableLighting = !0, DQ.emissiveColor = new FQ(1, 1, 1), DQ.specularColor = new FQ(0, 0, 0), wQ.material = DQ
-                    }
-                  })), qQ.forEach(((wQ, LQ) => {
-                    const qQ = wQ.getVerticesData("position");
-                    if (qQ) {
-                      const oQ = [],
-                        DQ = qQ.length / 3;
-                      for (let QQ = 0; QQ < DQ; QQ++) oQ.push(1, 1, 1, 1);
-                      wQ.setVerticesData("color", oQ);
-                      const kQ = new QQ(`whiteMat_${LQ}`, tQ);
-                      kQ.disableLighting = !0, kQ.emissiveColor = new FQ(1, 1, 1), kQ.specularColor = new FQ(0, 0, 0), wQ.material = kQ
-                    }
-                  }));
-                  else if (YQ) {
-                    const wQ = tQ.activeCamera.position;
-                    let qQ = 0,
-                      oQ = 1 / 0;
-                    LQ.forEach((QQ => {
-                      const FQ = QQ.sK().boundingBox.center,
-                        LQ = uQ.TransformCoordinates(FQ, QQ.getWorldMatrix()),
-                        DQ = wQ.subtract(LQ).length();
-                      qQ = Math.max(qQ, DQ), oQ = Math.min(oQ, DQ)
-                    }));
-                    const DQ = qQ - oQ;
-                    qQ += .1 * DQ, oQ = Math.max(0, oQ - .1 * DQ), DQ < 1 && (qQ = oQ + 10), pQ.forEach(((LQ, DQ) => {
-                      const kQ = LQ.name.toLowerCase(),
-                        vQ = LQ.sK().boundingBox.center,
-                        mQ = uQ.TransformCoordinates(vQ, LQ.getWorldMatrix()),
-                        HQ = wQ.subtract(mQ).length();
-                      if (!(kQ.includes("sky") || kQ.includes("background") || kQ.includes("environment") || HQ > 1e3)) {
-                        const wQ = 1 - Math.min(Math.max((HQ - oQ) / (qQ - oQ), 0), 1),
-                          kQ = new QQ(`depthMat_${DQ}`, tQ);
-                        kQ.diffuseColor = new FQ(wQ, wQ, wQ), kQ.specularColor = new FQ(0, 0, 0), LQ.material = kQ
-                      }
-                    }))
-                  }
-                })().then((() => Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(254), wQ.e(248), wQ.e(253), wQ.e(251), wQ.e(243), wQ.e(256), wQ.e(265), wQ.e(302), wQ.e(238), wQ.e(255), wQ.e(225)]).then((() => wQ(60666))))).then((FQ => FQ.GLTF2Export.GLBAsync(tQ, QQ))).then((QQ => {
-                  SQ(), QQ.downloadFiles(), FQ()
-                })).catch((QQ => {
-                  console.error("Error exporting GLB:", QQ), SQ(), FQ()
-                }))
-              }), 100) : Promise.all([wQ.e(227), wQ.e(226), wQ.e(246), wQ.e(247), wQ.e(244), wQ.e(254), wQ.e(248), wQ.e(253), wQ.e(251), wQ.e(243), wQ.e(256), wQ.e(265), wQ.e(302), wQ.e(238), wQ.e(255), wQ.e(225)]).then((() => wQ(60666))).then((wQ => {
-                wQ.GLTF2Export.GLBAsync(tQ, QQ).then((QQ => {
-                  SQ(), QQ.downloadFiles(), FQ()
-                })).catch((QQ => {
-                  console.error("Error exporting GLB:", QQ), SQ(), FQ()
-                }))
-              })).catch((QQ => {
-                console.error("Error importing serializers:", QQ), SQ(), FQ()
-              }))
-            }
-          })).catch((QQ => {
-            console.error("Error downloading the scene:", QQ), FQ()
-          }))
-        } catch (xQ) {
-          console.error("Error taking screenshot:", xQ), FQ()
+    fk.Instances = [], fk.OnEnginesDisposedObservable = new Dk.c, fk._LastCreatedScene = null, fk.UseFallbackTexture = !0, fk.FallbackTexture = ""
+  },
+  38265: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk
+    });
+    var Dk = ik(38272);
+    const fk = (kk, ek, ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(ek) : null;
+    class Sk {
+      static DeepCopy(kk, ek, ik, Sk) {
+        let bk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const rk = function(kk) {
+          const ek = [];
+          do {
+            const ik = Object.getOwnPropertyNames(kk);
+            for (const kk of ik) - 1 === ek.indexOf(kk) && ek.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return ek
+        }(kk);
+        for (const mk of rk) {
+          if ("_" === mk[0] && (!Sk || -1 === Sk.indexOf(mk))) continue;
+          if (mk.endsWith("Observable")) continue;
+          if (ik && -1 !== ik.indexOf(mk)) continue;
+          const rk = kk[mk],
+            Mk = typeof rk;
+          if ("function" !== Mk) try {
+            if ("object" === Mk)
+              if (rk instanceof Uint8Array) ek[mk] = Uint8Array.from(rk);
+              else if (rk instanceof Array) {
+              if (ek[mk] = [], rk.length > 0)
+                if ("object" == typeof rk[0])
+                  for (let kk = 0; kk < rk.length; kk++) {
+                    const ik = fk(rk[kk], ek, bk); - 1 === ek[mk].indexOf(ik) && ek[mk].push(ik)
+                  } else ek[mk] = rk.slice(0)
+            } else ek[mk] = fk(rk, ek, bk);
+            else ek[mk] = rk
+          } catch (Pk) {
+            Dk.b.Warn(Pk.message)
+          }
         }
-      }))
-    }
-    const HQ = new class {
-      constructor() {
-        this.tools = mQ.ALL_DEV_TOOLS
-      }
-      downloadScene(QQ, FQ) {
-        return uQ(QQ, FQ)
-      }
-      async setAmbientLightIntensity(QQ) {
-        const {
-          Color3: FQ
-        } = await Promise.all([wQ.e(227), wQ.e(230)]).then((() => wQ(36870)));
-        (0, oQ.d)().Zx.iN().ambientColor = FQ.FromArray([QQ, QQ, QQ])
       }
     }
   },
-  40455: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => vQ
+  37497: (kk, ek, ik) => {
+    function Dk() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
+        const ek = 16 * Math.random() | 0;
+        return ("x" === kk ? ek : 3 & ek | 8).toString(16)
+      }))
+    }
+    ik.d(ek, {
+      b: () => Dk
+    })
+  },
+  38272: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Dk
     });
-    var LQ = wQ(1739);
-    const qQ = 33177600,
-      oQ = 3e4;
-    let DQ = !1;
-
-    function kQ(QQ, FQ, wQ) {
-      if (!QQ.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (DQ) return Promise.reject(new Error("A screenshot is already being taken"));
-      DQ = !0;
-      const LQ = function(QQ, FQ, wQ) {
-        const LQ = Math.max(1, QQ),
-          oQ = Math.max(1, FQ),
-          DQ = Math.min(1, wQ / Math.max(LQ, oQ), Math.sqrt(qQ / (LQ * oQ)));
-        return {
-          width: Math.max(1, Math.floor(LQ * DQ)),
-          height: Math.max(1, Math.floor(oQ * DQ))
-        }
-      }(FQ, wQ, QQ.maxTextureSize);
-      return QQ.resize(LQ.width, LQ.height), new Promise(((FQ, wQ) => {
-        let LQ, qQ = 2,
-          kQ = null;
-        const vQ = () => {
-          var FQ;
-          DQ = !1, null === (FQ = kQ) || void 0 === FQ || FQ(), clearTimeout(LQ), QQ.restoreSize()
+    class Dk {
+      static _CheckLimit(kk, ek) {
+        let ik = Dk._LogLimitOutputs[kk];
+        return ik ? ik.current++ : (ik = {
+          limit: ek,
+          current: 1
+        }, Dk._LogLimitOutputs[kk] = ik), ik.current <= ik.limit
+      }
+      static _GenerateLimitMessage(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ik = Dk._LogLimitOutputs[kk];
+        if (!ik || !Dk.MessageLimitReached) return;
+        const fk = this._Levels[ek];
+        ik.current === ik.limit && Dk[fk.name](Dk.MessageLimitReached.replace(/%LIMIT%/g, "" + ik.limit).replace(/%TYPE%/g, fk.name ?? ""))
+      }
+      static _AddLogEntry(kk) {
+        Dk._LogCache = kk + Dk._LogCache, Dk.OnNewCacheEntry && Dk.OnNewCacheEntry(kk)
+      }
+      static _FormatMessage(kk) {
+        const ek = kk => kk < 10 ? "0" + kk : "" + kk,
+          ik = new Date;
+        return "[" + ek(ik.getHours()) + ":" + ek(ik.getMinutes()) + ":" + ek(ik.getSeconds()) + "]: " + kk
+      }
+      static _LogDisabled(kk, ek) {}
+      static _LogEnabled() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ek = arguments.length > 1 ? arguments[1] : void 0,
+          ik = arguments.length > 2 ? arguments[2] : void 0;
+        const fk = Array.isArray(ek) ? ek[0] : ek;
+        if (void 0 !== ik && !Dk._CheckLimit(fk, ik)) return;
+        const Sk = Dk._FormatMessage(fk),
+          bk = this._Levels[kk],
+          rk = Array.isArray(ek) ? ek.slice(1) : [];
+        bk.logFunc && bk.logFunc("BJS - " + Sk, ...rk);
+        const Pk = `<div style='color:${bk.color}'>${Sk}</div><br>`;
+        Dk._AddLogEntry(Pk), Dk._GenerateLimitMessage(fk, kk)
+      }
+      static get LogCache() {
+        return Dk._LogCache
+      }
+      static ClearLogCache() {
+        Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk.errorsCount = 0
+      }
+      static set LogLevels(kk) {
+        Dk.Log = Dk._LogDisabled, Dk.Warn = Dk._LogDisabled, Dk.Error = Dk._LogDisabled;
+        const ek = [Dk.MessageLogLevel, Dk.WarningLogLevel, Dk.ErrorLogLevel];
+        for (const ik of ek)
+          if ((kk & ik) === ik) {
+            const kk = this._Levels[ik];
+            Dk[kk.name] = Dk._LogEnabled.bind(Dk, ik)
+          }
+      }
+    }
+    Dk.NoneLogLevel = 0, Dk.MessageLogLevel = 1, Dk.WarningLogLevel = 2, Dk.ErrorLogLevel = 4, Dk.AllLogLevel = 7, Dk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Dk.errorsCount = 0, Dk.Log = Dk._LogEnabled.bind(Dk, Dk.MessageLogLevel), Dk.Warn = Dk._LogEnabled.bind(Dk, Dk.WarningLogLevel), Dk.Error = Dk._LogEnabled.bind(Dk, Dk.ErrorLogLevel)
+  },
+  36726: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => bk
+    });
+    const Dk = "undefined" !== typeof WeakRef;
+    class fk {
+      constructor(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ik = arguments.length > 2 ? arguments[2] : void 0,
+          Dk = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(kk, ek, ik, Dk)
+      }
+      initialize(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ik = arguments.length > 2 ? arguments[2] : void 0,
+          Dk = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = kk, this.skipNextObservers = ek, this.target = ik, this.currentTarget = Dk, this
+      }
+    }
+    class Sk {
+      constructor(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = kk, this.mask = ek, this.scope = ik, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+      }
+      remove() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(kk)
+      }
+    }
+    class bk {
+      static FromPromise(kk, ek) {
+        const ik = new bk;
+        return kk.then((kk => {
+          ik.notifyObservers(kk)
+        })).catch((kk => {
+          if (!ek) throw kk;
+          ek.notifyObservers(kk)
+        })), ik
+      }
+      get observers() {
+        return this._observers
+      }
+      constructor(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = ek, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new fk(0), kk && (this._onObserverAdded = kk)
+      }
+      add(kk) {
+        let ek = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          ik = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!kk) return null;
+        const fk = new Sk(kk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        fk.unregisterOnNextCall = ik, ek ? this._observers.unshift(fk) : this._observers.push(fk), this._onObserverAdded && this._onObserverAdded(fk), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(fk, this._lastNotifiedValue);
+        const bk = Dk ? new WeakRef(this) : {
+          deref: () => this
         };
-        LQ = setTimeout((() => {
-          vQ(), wQ(new Error("No frame was drawn to capture"))
-        }), oQ), kQ = QQ.onFrameDrawn((() => {
-          if (qQ--, qQ > 0) return;
-          const {
-            canvas: LQ
-          } = QQ, oQ = {
-            width: LQ.width,
-            height: LQ.height
-          };
-          try {
-            LQ.toBlob((QQ => {
-              QQ ? FQ({
-                blob: QQ,
-                ...oQ
-              }) : wQ(new Error("The canvas gave no image"))
-            }), "image/png")
-          } catch (DQ) {
-            wQ(DQ)
-          } finally {
-            vQ()
-          }
-        }))
-      }))
-    }
-    async function vQ(QQ, FQ, wQ) {
-      try {
-        const qQ = await kQ(QQ, FQ, wQ);
-        (0, LQ.e)(qQ.blob, `bloxd-screenshot-${qQ.width}x${qQ.height}-${Date.now()}.png`)
-      } catch (qQ) {
-        console.error("Error taking screenshot:", qQ)
+        return fk._remove = function() {
+          let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const ek = bk.deref();
+          ek && (kk ? ek.remove(fk) : ek._remove(fk))
+        }, fk
+      }
+      addOnce(kk) {
+        return this.add(kk, void 0, void 0, void 0, !0)
+      }
+      remove(kk) {
+        if (!kk) return !1;
+        kk._remove = null;
+        return -1 !== this._observers.indexOf(kk) && (this._deferUnregister(kk), !0)
+      }
+      removeCallback(kk, ek) {
+        for (let ik = 0; ik < this._observers.length; ik++) {
+          const Dk = this._observers[ik];
+          if (!Dk._willBeUnregistered && (Dk.callback === kk && (!ek || ek === Dk.scope))) return this._deferUnregister(Dk), !0
+        }
+        return !1
+      }
+      _deferUnregister(kk) {
+        kk._willBeUnregistered || (this._numObserversMarkedAsDeleted++, kk.unregisterOnNextCall = !1, kk._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(kk)
+        }), 0))
+      }
+      _remove(kk) {
+        let ek = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!kk) return !1;
+        const ik = this._observers.indexOf(kk);
+        return -1 !== ik && (ek && this._numObserversMarkedAsDeleted--, this._observers.splice(ik, 1), !0)
+      }
+      makeObserverTopPriority(kk) {
+        this._remove(kk, !1), this._observers.unshift(kk)
+      }
+      makeObserverBottomPriority(kk) {
+        this._remove(kk, !1), this._observers.push(kk)
+      }
+      notifyObservers(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ik = arguments.length > 2 ? arguments[2] : void 0,
+          Dk = arguments.length > 3 ? arguments[3] : void 0,
+          fk = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = kk), !this._observers.length) return !0;
+        const Sk = this._eventState;
+        Sk.mask = ek, Sk.target = ik, Sk.currentTarget = Dk, Sk.skipNextObservers = !1, Sk.lastReturnValue = kk, Sk.userInfo = fk;
+        for (const bk of this._observers)
+          if (!bk._willBeUnregistered && (bk.mask & ek && (bk.unregisterOnNextCall && this._deferUnregister(bk), bk.scope ? Sk.lastReturnValue = bk.callback.apply(bk.scope, [kk, Sk]) : Sk.lastReturnValue = bk.callback(kk, Sk)), Sk.skipNextObservers)) return !1;
+        return !0
+      }
+      notifyObserver(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = ek), kk._willBeUnregistered) return;
+        const Dk = this._eventState;
+        Dk.mask = ik, Dk.skipNextObservers = !1, kk.unregisterOnNextCall && this._deferUnregister(kk), kk.callback(ek, Dk)
+      }
+      hasObservers() {
+        return this._observers.length - this._numObserversMarkedAsDeleted > 0
+      }
+      clear() {
+        for (; this._observers.length;) {
+          const kk = this._observers.pop();
+          kk && (kk._remove = null)
+        }
+        this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
+      }
+      cleanLastNotifiedState() {
+        this._hasNotified = !1, this._lastNotifiedValue = void 0
+      }
+      clone() {
+        const kk = new bk;
+        return kk._observers = this._observers.slice(0), kk
+      }
+      hasSpecificMask() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const ek of this._observers)
+          if (ek.mask & kk || ek.mask === kk) return !0;
+        return !1
       }
     }
   },
-  37129: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => mQ,
-      f: () => kQ,
-      j: () => DQ
+  60655: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      AsyncLoop: () => Dk.d,
+      RegisterTools: () => Dk.g,
+      Tools: () => Dk.i,
+      className: () => Dk.l
     });
-    var LQ = wQ(37123),
-      qQ = wQ(37134);
-    let oQ = 0;
-
-    function DQ(QQ, FQ) {
-      const wQ = QQ;
-      wQ._noaFaceGroups = null !== FQ && void 0 !== FQ ? FQ : null, wQ._noaFaceEpoch = -1, wQ._noaFaceMask = -1, wQ._noaFaceCount = -1, wQ._noaFaceMaterial = null;
-      const LQ = QQ.lC;
-      LQ && 1 === LQ.length && (LQ[0].indexStart = 0, LQ[0].indexCount = QQ.getTotalIndices())
-    }
-
-    function kQ(QQ, FQ) {
-      if (FQ) {
-        oQ++;
-        for (const FQ of QQ) {
-          const QQ = FQ._noaFaceGroups;
-          QQ && DQ(FQ, QQ)
-        }
-      } else oQ = Math.max(0, oQ - 1)
-    }
-
-    function vQ(QQ, FQ, wQ) {
-      let qQ = -1,
-        oQ = 0;
-      for (let DQ = 0; DQ < LQ.d; DQ++) {
-        const wQ = QQ[DQ],
-          kQ = QQ[DQ + 1];
-        kQ > wQ && FQ & 1 << LQ.b[DQ] && (qQ < 0 && (qQ = wQ), oQ = kQ)
-      }
-      return qQ < 0 ? (wQ[0] = 0, wQ[1] = 0, 0) : (wQ[0] = qQ, wQ[1] = oQ - qQ, oQ - qQ)
-    }
-    class mQ {
-      constructor(QQ, FQ) {
-        this.tx = QQ, this.engine = FQ, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
-      }
-      apply(QQ, FQ) {
-        if (!FQ) return;
-        const wQ = FQ.getProjectionMatrix().m,
-          DQ = 0 === oQ && 0 === wQ[15],
-          kQ = FQ.globalPosition,
-          {
-            engine: mQ
-          } = this,
-          uQ = DQ ? (0, qQ.c)(wQ, mQ.getRenderWidth(), mQ.getRenderHeight()) : 0;
-        kQ.x === this.eyeX && kQ.y === this.eyeY && kQ.z === this.eyeZ && uQ === this.focalPx && DQ === this.culling || (this.epoch++, this.eyeX = kQ.x, this.eyeY = kQ.y, this.eyeZ = kQ.z, this.focalPx = uQ, this.culling = DQ);
-        const {
-          epoch: HQ,
-          range: bQ
-        } = this, YQ = this.tx / 2, xQ = YQ * Math.sqrt(3), AQ = QQ.data, tQ = QQ.length;
-        let eQ = 0;
-        for (let oQ = 0; oQ < tQ; oQ++) {
-          const QQ = AQ[oQ],
-            FQ = QQ._noaFaceGroups;
-          if (FQ && (QQ._noaFaceEpoch !== HQ || QQ._noaFaceMaterial !== QQ.material)) {
-            QQ._noaFaceEpoch = HQ, QQ._noaFaceMaterial = QQ.material;
-            const wQ = QQ.lC,
-              oQ = wQ && 1 === wQ.length ? wQ[0] : null;
-            let mQ = -1;
-            if (DQ && oQ && (0, LQ.p)(QQ.material)) {
-              const wQ = QQ.position,
-                LQ = kQ.x - wQ.x,
-                oQ = kQ.y - wQ.y,
-                DQ = kQ.z - wQ.z,
-                vQ = LQ - YQ,
-                HQ = oQ - YQ,
-                bQ = DQ - YQ,
-                AQ = Math.sqrt(vQ * vQ + HQ * HQ + bQ * bQ) + xQ;
-              mQ = (0, qQ.l)(FQ, LQ, oQ, DQ, (0, qQ.f)(AQ, uQ))
-            }
-            if (oQ && mQ !== QQ._noaFaceMask) {
-              QQ._noaFaceMask = mQ;
-              let wQ = 0,
-                qQ = FQ[LQ.d]; - 1 !== mQ && (qQ = vQ(FQ, mQ, bQ), wQ = bQ[0]), QQ._noaFaceCount = qQ, oQ.indexStart = 6 * wQ, oQ.indexCount = 6 * qQ, oQ.setBoundingInfo(QQ.sK())
-            }
-          }
-          FQ && 0 === QQ._noaFaceCount || (AQ[eQ++] = QQ)
-        }
-        QQ.length = eQ
-      }
-    }
+    var Dk = ik(39662);
+    (0, Dk.g)()
   },
-  37118: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => vQ,
-      d: () => kQ
+  36734: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Sk,
+      h: () => fk
     });
-    const LQ = new WeakSet;
-    let qQ = 0;
-    const oQ = new Set;
+    const Dk = {};
 
-    function DQ(QQ, FQ) {
-      QQ._data = FQ
+    function fk(kk, ek) {
+      Dk[kk] = ek
     }
 
-    function kQ(QQ) {
-      var FQ, wQ;
-      (null !== (FQ = null === (wQ = QQ.getBuffer()) || void 0 === wQ ? void 0 : wQ.MH) && void 0 !== FQ ? FQ : 0) > 0 && (LQ.add(QQ), 0 === qQ ? DQ(QQ, null) : oQ.add(QQ))
-    }
-
-    function vQ(QQ) {
-      qQ++;
-      for (const wQ of function(QQ) {
-          const FQ = new Set;
-          for (const qQ of QQ) {
-            const QQ = qQ.geometry;
-            for (const qQ of Object.values(null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ.getVertexBuffers()) && void 0 !== wQ ? wQ : {})) {
-              var wQ;
-              const QQ = qQ.getWrapperBuffer();
-              LQ.has(QQ) && FQ.add(QQ)
-            }
-          }
-          return FQ
-        }(QQ)) wQ.getData() || mQ(wQ), oQ.add(wQ);
-      let FQ = !0;
-      return () => {
-        if (FQ && (FQ = !1, qQ--, 0 === qQ)) {
-          for (const QQ of oQ) DQ(QQ, null);
-          oQ.clear()
-        }
-      }
-    }
-
-    function mQ(QQ) {
-      const FQ = QQ.getBuffer();
-      if (!FQ || !(FQ.MH > 0)) return;
-      const wQ = QQ._engine,
-        LQ = new Uint8Array(FQ.MH);
-      wQ.bindArrayBuffer(FQ), wQ._gl.getBufferSubData(wQ._gl.ARRAY_BUFFER, 0, LQ), wQ._resetVertexBufferBinding(), DQ(QQ, LQ)
-    }
-  },
-  37123: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ,
-      d: () => oQ,
-      g: () => vQ,
-      k: () => LQ,
-      l: () => kQ,
-      n: () => qQ,
-      p: () => mQ
-    });
-    const LQ = 6,
-      qQ = [0, 2, 4, 1, 3, 5, 0, 2],
-      oQ = 6,
-      DQ = [1, 0, 3, 2, 5, 4];
-    for (let uQ = oQ; uQ < qQ.length; uQ++)
-      if (qQ[uQ] !== qQ[uQ - oQ]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const kQ = qQ.length + 1,
-      vQ = (() => {
-        const QQ = [];
-        for (let FQ = 0; FQ < oQ; FQ++) QQ[qQ[FQ]] = FQ;
-        return QQ
-      })();
-
-    function mQ(QQ) {
-      return !!QQ && QQ.backFaceCulling && (0 === QQ.transparencyMode || 1 === QQ.transparencyMode)
-    }
-  },
-  37134: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => kQ,
-      f: () => vQ,
-      j: () => uQ,
-      l: () => mQ,
-      p: () => xQ
-    });
-    var LQ = wQ(37123);
-    const qQ = 1 / 16,
-      oQ = 1 / 64,
-      DQ = 2048;
-    LQ.k;
-
-    function kQ(QQ, FQ, wQ) {
-      return Math.min(Math.abs(QQ[0] * FQ), Math.abs(QQ[5] * wQ)) / 2
-    }
-
-    function vQ(QQ, FQ) {
-      return qQ + oQ * QQ * QQ / FQ
-    }
-
-    function mQ(QQ, FQ, wQ, qQ, oQ) {
-      const DQ = LQ.l;
-      return uQ(QQ[DQ], QQ[DQ + 1], QQ[DQ + 2], QQ[DQ + 3], QQ[DQ + 4], QQ[DQ + 5], FQ, wQ, qQ, oQ)
-    }
-
-    function uQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ) {
-      return (DQ <= QQ - mQ ? 0 : 1) | (DQ >= FQ + mQ ? 0 : 2) | (kQ <= wQ - mQ ? 0 : 4) | (kQ >= LQ + mQ ? 0 : 8) | (vQ <= qQ - mQ ? 0 : 16) | (vQ >= oQ + mQ ? 0 : 32)
-    }
-    const HQ = (() => {
-        const QQ = [];
-        for (let FQ = 0; FQ < LQ.n.length; FQ++) {
-          let wQ = 0;
-          for (let qQ = FQ + 1; qQ <= LQ.n.length; qQ++) {
-            const oQ = 1 << LQ.n[qQ - 1];
-            if (wQ & oQ) break;
-            wQ |= oQ, QQ.push({
-              start: FQ,
-              end: qQ,
-              tF: wQ
-            })
-          }
-        }
-        return QQ
-      })(),
-      bQ = [];
-
-    function YQ(QQ, FQ) {
-      const wQ = LQ.g[FQ];
-      return QQ[wQ + 1] - QQ[wQ]
-    }
-
-    function xQ(QQ, FQ, wQ) {
-      let qQ = 0;
-      for (let DQ = 0; DQ < LQ.k; DQ++) YQ(QQ, DQ) > 0 && (qQ |= 1 << DQ);
-      if (0 === (FQ &= qQ)) return 0;
-      if (FQ === qQ) return wQ[0] = 0, wQ[1] = QQ[LQ.d], 1;
-      let oQ = null,
-        kQ = 1 / 0;
-      for (const mQ of function(QQ) {
-          let FQ = bQ[QQ];
-          if (FQ) return FQ;
-          const wQ = new Map,
-            LQ = (QQ, FQ) => {
-              const LQ = 4 * QQ + FQ.length / 2;
-              wQ.has(LQ) || wQ.set(LQ, {
-                tF: QQ,
-                windows: FQ
-              })
-            };
-          for (const oQ of HQ)
-            if ((oQ.tF & QQ) === QQ && LQ(oQ.tF, [oQ.start, oQ.end]), 0 !== (oQ.tF & QQ))
-              for (const FQ of HQ) FQ.start < oQ.end || 0 !== (oQ.tF & FQ.tF) || 0 === (FQ.tF & QQ) || ((oQ.tF | FQ.tF) & QQ) !== QQ || LQ(oQ.tF | FQ.tF, [oQ.start, oQ.end, FQ.start, FQ.end]);
-          const qQ = [...wQ.values()];
-          return FQ = qQ.filter((QQ => !qQ.some((FQ => FQ !== QQ && (FQ.tF & QQ.tF) === FQ.tF && FQ.windows.length <= QQ.windows.length)))), bQ[QQ] = FQ, FQ
-        }(FQ)) {
-        let wQ = (mQ.windows.length / 2 - 1) * DQ;
-        const vQ = mQ.tF & ~FQ & qQ;
-        for (let FQ = 0; FQ < LQ.k; FQ++) vQ & 1 << FQ && (wQ += YQ(QQ, FQ));
-        wQ < kQ && (oQ = mQ, kQ = wQ)
-      }
-      const vQ = oQ.windows;
-      for (let LQ = 0; LQ < vQ.length; LQ += 2) {
-        const FQ = QQ[vQ[LQ]];
-        wQ[LQ] = FQ, wQ[LQ + 1] = QQ[vQ[LQ + 1]] - FQ
-      }
-      return vQ.length / 2
+    function Sk(kk) {
+      return Dk[kk]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,40 +1,40 @@
 export const id = 165;
 export const ids = [165];
 export const modules = {
-  8735: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8759: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["What if the mobs had guns, and so did you? Bloxd Survival with Guns takes the classic Bloxd Survival world and adds craftable guns and armed mobs. You still mine, craft and build in a shared multiplayer world. The difference is you can also craft guns and vehicles to defend your base, explore further and take on whatever comes at you."],
-      howToPlay: ["Start off by gathering wood. Your first gun, the M1911, only takes 10 Maple Wood Planks. Mine Messy Stone, iron, gold, diamonds and moonstone to craft stronger Bloxd guns, like the AK-47, the Striker-12, the AWP and even the Minigun.", "Be careful, because the mobs are armed too. Draugr Zombies, Skeletons, Huntresses and Knights all carry guns, and so do Frost mobs and the Cave, Frost and Magma Golems. Tame animals by feeding them and they'll get guns of their own to fight alongside you. Farm pets start off small, while wild and spirit pets carry stronger guns. You can also craft cars, karts, speedboats and hovercraft to get around quickly."],
-      features: ["17 Craftable Guns, from the M1911 to the Minigun", "Armed Mobs That Fight Back", "Tame Pets That Fight with Guns", "Craftable Vehicles: Cars, Karts, Speedboats and Hovercraft", "Salvage Guns Back into Materials", "Gunfights on Top of Mining, Crafting and Base Building", "Persistent Multiplayer World"],
-      tips: ["Make an M1911 from 10 Maple Wood Planks as soon as you spawn", "Mine iron and gold early on to unlock better guns", "Feed a Sheep an Apple to tame it and get your first armed pet", "Save up Diamonds and Gold Bars for a Deagle", "Got guns you don't use anymore? Salvage them to get your materials back", "Build away from spawn, because public lobbies reset the area near it", "Put down a Protector made from diamonds to keep your base safe"],
-      similarGames: ["classic_survival", "shooting", "classic_survivalDayNight", "classic"],
+    const Dk = {
+      whatIs: ["Smash Lucky Blocks for random loot, funny surprises and some genuinely wild outcomes, then take on everyone else in a chaotic multiplayer PvP arena. In Bloxd Lucky Blocks Battlegrounds, whoever has the most kills when the arena resets wins the round. Lucky Bedwars is all about beds and Lucky Towers is about surviving on a pillar. This one's just a big arena where the Lucky Blocks never stop coming."],
+      howToPlay: ["You start in your own safe base, and nobody else can get in. Step out into the arena and a free Lucky Block lands with you every 15 seconds. Crack them open for weapons, armour, pets and surprises, then go and fight.", "Lucky Blocks, Weapon Lucky Blocks and Pet Lucky Blocks spawn on pads around the arena and come back every minute. Every 90 seconds an Ultra Lucky Block appears in the centre, and whoever grabs it first keeps it. You also get your own Ultra Lucky Block in your base every 5 minutes, and only you can see it. The arena resets every 15 minutes, and the player with the most kills wins the round. You keep your items through a reset, so you're ready to go straight away."],
+      features: ["Multiplayer Lucky Block PvP Arena", "A Free Lucky Block Every 15 Seconds", "Weapon and Pet Lucky Blocks on Pads Around the Map", "Ultra Lucky Block in the Centre Every 90 Seconds", "Your Own Ultra Lucky Block Every 5 Minutes", "Safe Personal Base Nobody Else Can Enter", "Kills Leaderboard and a New Round Every 15 Minutes"],
+      tips: ["Stay out in the arena. You don't get free Lucky Blocks while you're in your base", "The second the Ultra Lucky Block appears, head for the centre", "Open Pet Lucky Blocks for a pet that'll defend you from anyone who attacks you", "Need a breather? Go back to your base, because nobody can follow you in", "Inventory getting messy? Press F to clear it. You'll keep your armour, hotbar, arrows and firecrackers", "Pop home every 5 minutes to grab your own Ultra Lucky Block", "Watch the leaderboard on the right so you know who you need to beat"],
+      similarGames: ["luckyBedwars", "luckyTowers", "skywars", "bedwars"],
       faq: [{
-        question: "What is Bloxd Survival with Guns?",
-        answer: "It's Bloxd Survival, but with craftable guns and armed mobs. You mine, craft, build and team up or battle in a shared multiplayer world."
+        question: "What is Lucky Blocks Battlegrounds?",
+        answer: "A multiplayer lucky block PvP arena. You open Lucky Blocks for random loot, fight other players and try to end each 15-minute round with the most kills."
       }, {
-        question: "How do you make a gun in Bloxd Survival with Guns?",
-        answer: "Craft an M1911 from 10 Maple Wood Planks. Stronger guns need materials like Iron Bars, Gold Bars, Diamonds and Moonstone."
+        question: "How do you win Lucky Blocks Battlegrounds?",
+        answer: "Get the most kills before the arena resets. That happens every 15 minutes, and the top player wins the round."
       }, {
-        question: "How many guns are there in Survival with Guns?",
-        answer: "17 craftable guns, ranging from the M1911 and MP40 up to the AWP and the Minigun."
+        question: "How do I get Lucky Blocks?",
+        answer: "You get a free one every 15 seconds while you're out in the arena. More spawn on pads around the map, and there's an Ultra Lucky Block in the centre every 90 seconds."
       }, {
-        question: "Do mobs carry guns in Bloxd?",
-        answer: "They do. Each type of hostile mob carries its own guns. Draugr Skeletons have AK-47s and MP40s, for example, and Magma Golems carry a Minigun."
+        question: "What is the Ultra Lucky Block?",
+        answer: "An extra-special Lucky Block. One shows up in the middle of the arena every 90 seconds for everyone to race for, and you get your own in your base every 5 minutes as well."
       }, {
-        question: "Can my pets use guns?",
-        answer: "Yes. Tamed pets get guns and fight by your side. They won't hurt you or your other pets."
+        question: "What's inside Bloxd lucky blocks?",
+        answer: "Pretty much anything, from weapons and armour to pets and funny surprises. Weapon Lucky Blocks and Pet Lucky Blocks give you a better chance of a weapon or a pet."
       }, {
-        question: "Can I turn guns on in a private server?",
-        answer: "Yes. Private servers have a setting that turns on gun crafting and using. When it's on, mobs and pets get guns too."
+        question: "Can other players attack me in my base?",
+        answer: "Nope. Other players can't get into your base, break its blocks or open its chests."
       }, {
-        question: "How is Survival with Guns different from regular Survival?",
-        answer: "The world, mining and building all work the same. On top of that you can craft 17 guns and vehicles, mobs carry guns, and tamed pets fight alongside you with guns of their own."
+        question: "Do I lose my items when the Lucky Block Battlegrounds arena resets?",
+        answer: "No, your inventory stays with you. Everyone's kills go back to zero for the new round, though."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

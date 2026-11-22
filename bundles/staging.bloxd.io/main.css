@@ -840,6 +840,18 @@
   padding: 0 .25rem
 }
 
+@media(pointer:coarse)and (min-width:667px) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopWithStore:not(.HomeHeaderTopPortrait) .HomeHeaderAccount {
+    --home-button-gap: max(0.5rem, 44px - 3.5rem);
+    gap: var(--home-button-gap)
+  }
+
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopWithStore:not(.HomeHeaderTopPortrait) .HomeHeaderRightContainer {
+    --home-button-gap: max(var(--home-link-gap, 0.5rem), max(0.5rem, 44px - 3.5rem));
+    gap: var(--home-button-gap)
+  }
+}
+
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton {
   align-items: center;
   background: none;
@@ -870,7 +882,7 @@
 @media(pointer:coarse) {
   .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton:before {
     content: "";
-    inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
+    inset: min(0px, (100% - 44px)/2) max(var(--home-button-gap, .5rem)/-2, min(0px, (100% - 44px)/2));
     position: absolute
   }
 }
@@ -913,6 +925,25 @@
   width: .6rem
 }
 
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton:after {
+  border: max(min(4px, .15em), 2px) solid;
+  border-image: linear-gradient(90deg, #ff6b9d, #ffa64d, gold, #7dd87d, #6bb5ff, #c084fc, #ff6b9d) 1;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .svg-inline--fa path {
+  fill: url(#RainbowGradient)
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton[data-pressing] {
+  box-shadow: none;
+  filter: brightness(75%);
+  transition: none
+}
+
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .DiscordMobileHeaderRightContainer {
   padding-bottom: 1rem;
   padding-right: 3rem;
@@ -940,6 +971,11 @@
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton .ProfilePicture {
   font-size: 1.92rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton .HomeHeaderLoginBadge {
+  background-color: #ffb914;
+  right: -.25rem
 }
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .LoginButtonContainer .LoginButton {
@@ -1327,6 +1363,17 @@
   background-color: rgba(26, 31, 46, .6)
 }
 
+.MiddleScreenPopupBackground.AboveKeyboard {
+  height: var(--visible-height);
+  top: var(--visible-top)
+}
+
+.MiddleScreenPopupBackground.AboveKeyboard .MiddleScreenPopup {
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto
+}
+
 .MiddleScreenPopupBackground .MiddleScreenPopup {
   background-color: #303a59;
   border: 1px solid #0f0f0f;
@@ -1626,6 +1673,26 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
 .PromptGenericPopup .PromptGenericPopupSubtitle {
   font-size: 1.25rem;
   padding-bottom: 1rem
+}
+
+.PromptGenericPopup .PromptGenericPopupTyped {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  gap: .5rem
+}
+
+.PromptGenericPopup .PromptGenericPopupTyped .PromptGenericPopupTypedInput {
+  font-size: 1.5rem;
+  padding: .5rem
+}
+
+@media(pointer:coarse) {
+  .PromptGenericPopup .PromptGenericPopupTyped .PromptGenericPopupTypedInput {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
 }
 
 .PromptGenericPopup .PromptGenericPopupBody {
@@ -2636,8 +2703,11 @@ a {
 }
 
 .NewButton .ButtonLoadingOverlay {
+  align-items: center;
   background-color: rgba(0, 0, 0, .75);
   bottom: 0;
+  display: flex;
+  justify-content: center;
   left: 0;
   position: absolute;
   right: 0;
@@ -2645,19 +2715,21 @@ a {
   z-index: 3
 }
 
-.NewButton .ButtonLoadingOverlay,
-.SecondaryButton {
-  align-items: center;
-  display: flex;
-  justify-content: center
+.RainbowGradientDefs {
+  height: 0;
+  position: absolute;
+  width: 0
 }
 
 .SecondaryButton {
+  align-items: center;
   border: max(min(4px, .15em), 2px) solid #cfcfcf;
   border-radius: 0;
   color: #cfcfcf;
   cursor: pointer;
+  display: flex;
   gap: .3em;
+  justify-content: center;
   line-height: 1em;
   padding: .3em .6em;
   text-align: center;
@@ -2790,14 +2862,8 @@ a {
   color: #f2f2f2
 }
 
-.SecondaryButton.RainbowSecondaryButton .RainbowSecondaryButtonGradientDefs {
-  height: 0;
-  position: absolute;
-  width: 0
-}
-
 .SecondaryButton.RainbowSecondaryButton .svg-inline--fa path {
-  fill: url(#RainbowSecondaryButtonGradient)
+  fill: url(#RainbowGradient)
 }
 
 @media(hover:hover) {
@@ -3371,41 +3437,33 @@ a {
 .LoginButtonContainer .LoginButton .LoginButtonIcon {
   align-items: center;
   display: flex;
-  filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px 1px 0 black) drop-shadow(1px -1px 0 black) drop-shadow(-1px -1px 0 black) drop-shadow(1px 0 0 black) drop-shadow(0 1px 0 black) drop-shadow(-1px 0 0 black) drop-shadow(0 -1px 0 black);
   justify-content: center;
   width: 1.5em
 }
 
 .LoginButtonContainer .LoginButton .LoginButtonIcon img {
-  height: 1.1em;
-  width: 1.1em
+  --icon-width: 1.1em;
+  --icon-height: 1.1em;
+  flex: none;
+  height: calc(var(--icon-height) + 6px);
+  margin: -3px;
+  max-width: none;
+  width: calc(var(--icon-width) + 6px)
 }
 
-.LoginButtonContainer .LoginButton .LoginButtonIcon .svg-inline--fa {
-  font-size: 1.4em
+.LoginButtonContainer .LoginButton .LoginButtonIcon img.LoginIconWide {
+  --icon-width: 1.35em;
+  --icon-height: 1.2em
 }
 
-.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-user {
-  color: #2e80ee
+.LoginButtonContainer .LoginButton .LoginButtonIcon img.LoginIconApple {
+  --icon-width: 1.05em;
+  --icon-height: 1.4em
 }
 
-.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-discord {
-  color: #5865f2;
-  font-size: 1.2em
-}
-
-.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-apple {
-  color: #838383
-}
-
-.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-google-play {
-  color: #1dd06d;
-  font-size: 1.1em
-}
-
-.LoginButtonContainer .LoginButton .LoginButtonIcon .fa-gamepad-modern {
-  color: #838383;
-  font-size: 1.2em
+.LoginButtonContainer .LoginButton .LoginButtonIcon img.LoginIconGooglePlay {
+  --icon-width: 0.9625em;
+  --icon-height: 1.1em
 }
 
 .LoginButtonContainer .LoginButtonAction {
@@ -4769,6 +4827,25 @@ a {
   color: #cfcfcf;
   font-size: 1rem;
   text-align: center
+}
+
+.LoginOptionListInGame {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.LoginOptionListInGame .LoginOptionListLeave {
+  overflow: visible
+}
+
+@media(pointer:coarse) {
+  .LoginOptionListInGame .LoginOptionListLeave:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
 }
 
 .LoginOptionListButtons {
@@ -7120,10 +7197,33 @@ a {
   min-width: 0
 }
 
+@supports(overflow-x:clip) {
+  @media(pointer:coarse) {
+    .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarActionsRow:not(:empty) {
+      margin-bottom: max(0px, (44px - 2.4rem)/2 - .5rem)
+    }
+  }
+}
+
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarActionsRow .SocialBarActionButton {
   flex: 1 1;
   font-size: 1rem;
-  min-width: 0
+  min-width: 0;
+  position: relative
+}
+
+@supports(overflow-x:clip) {
+  @media(pointer:coarse) {
+    .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarActionsRow .SocialBarActionButton:before {
+      content: "";
+      inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
+      position: absolute
+    }
+
+    .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarActionsRow .SocialBarActionButton {
+      overflow-x: clip
+    }
+  }
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarActionButton {
@@ -7138,10 +7238,6 @@ a {
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap
-}
-
-.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton {
-  position: relative
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarShopButton .SocialBarShopDot {
@@ -7830,13 +7926,19 @@ a {
 }
 
 .PlayerRows {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
   min-width: 0;
   position: relative;
   width: 100%;
   z-index: 0
 }
 
-.PlayerRows,
+.PlayerRows:has(.Dropdown-root.is-open) {
+  z-index: 2
+}
+
 .PlayerRows .SocialBarFriendsLazy,
 .PlayerRows .SocialMenuFriendsLazy,
 .PlayerRows .SocialMenuRecentPlayersLazy,
@@ -12773,7 +12875,8 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   }
 }
 
-.PromptGenericPopup.ReportCard .ReportCardNote {
+.PromptGenericPopup.ReportCard .ReportCardNote,
+.PromptGenericPopup.ReportKeyBox .ReportCardNote {
   color: #fcd373;
   padding-top: 1rem
 }
@@ -14036,6 +14139,109 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   width: 100%
 }
 
+.Carousel {
+  position: relative;
+  width: 100%
+}
+
+.Carousel .CarouselTrack {
+  -webkit-overflow-scrolling: touch;
+  align-items: stretch;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: 100%
+}
+
+.Carousel .CarouselTrack.CarouselTrackFadeLeft {
+  mask-image: linear-gradient(90deg, transparent 0, #000 3rem, #000 100%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 3rem, #000 100%, transparent)
+}
+
+.Carousel .CarouselTrack::-webkit-scrollbar {
+  display: none
+}
+
+.Carousel .CarouselTrack>* {
+  flex-shrink: 0
+}
+
+.Carousel .CarouselArrow {
+  align-items: center;
+  background-color: #ffb914;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.8rem;
+  gap: .8rem;
+  height: 4rem;
+  justify-content: center;
+  min-width: 4rem;
+  opacity: .7;
+  padding: 0 1rem;
+  position: absolute;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity .2s, transform .2s;
+  z-index: 2
+}
+
+.Carousel .CarouselArrow .svg-inline--fa,
+.Carousel .CarouselArrow.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.Carousel .CarouselArrow .svg-inline--fa path:only-of-type,
+.Carousel .CarouselArrow.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+@media(hover:hover) {
+  .Carousel .CarouselArrow:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.04)
+  }
+}
+
+.Carousel .CarouselArrow.pad-focused {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.04)
+}
+
+@media(hover:none) {
+  .Carousel .CarouselArrow:active {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.04)
+  }
+}
+
+.Carousel .CarouselArrow.CarouselArrowLeft {
+  left: 1rem
+}
+
+.Carousel .CarouselArrow.CarouselArrowLeft .fa-arrow-up {
+  transform: rotate(-90deg)
+}
+
+.Carousel .CarouselArrow.CarouselArrowRight {
+  right: 1rem
+}
+
+.Carousel .CarouselArrow.CarouselArrowRight .fa-arrow-up {
+  transform: rotate(90deg)
+}
+
 .BloxdUpdateSubTitleText {
   text-align: left
 }
@@ -15092,109 +15298,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   padding: .1rem .5rem
 }
 
-.Carousel {
-  position: relative;
-  width: 100%
-}
-
-.Carousel .CarouselTrack {
-  -webkit-overflow-scrolling: touch;
-  align-items: stretch;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  width: 100%
-}
-
-.Carousel .CarouselTrack.CarouselTrackFadeLeft {
-  mask-image: linear-gradient(90deg, transparent 0, #000 3rem, #000 100%, transparent);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 3rem, #000 100%, transparent)
-}
-
-.Carousel .CarouselTrack::-webkit-scrollbar {
-  display: none
-}
-
-.Carousel .CarouselTrack>* {
-  flex-shrink: 0
-}
-
-.Carousel .CarouselArrow {
-  align-items: center;
-  background-color: #ffb914;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  font-size: 1.8rem;
-  gap: .8rem;
-  height: 4rem;
-  justify-content: center;
-  min-width: 4rem;
-  opacity: .7;
-  padding: 0 1rem;
-  position: absolute;
-  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: opacity .2s, transform .2s;
-  z-index: 2
-}
-
-.Carousel .CarouselArrow .svg-inline--fa,
-.Carousel .CarouselArrow.svg-inline--fa {
-  paint-order: stroke fill
-}
-
-.Carousel .CarouselArrow .svg-inline--fa path:only-of-type,
-.Carousel .CarouselArrow.svg-inline--fa path:only-of-type {
-  stroke: #303a59;
-  vector-effect: non-scaling-stroke;
-  stroke-width: 2px;
-  stroke-linejoin: round
-}
-
-@media(hover:hover) {
-  .Carousel .CarouselArrow:hover {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.04)
-  }
-}
-
-.Carousel .CarouselArrow.pad-focused {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.04)
-}
-
-@media(hover:none) {
-  .Carousel .CarouselArrow:active {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.04)
-  }
-}
-
-.Carousel .CarouselArrow.CarouselArrowLeft {
-  left: 1rem
-}
-
-.Carousel .CarouselArrow.CarouselArrowLeft .fa-arrow-up {
-  transform: rotate(-90deg)
-}
-
-.Carousel .CarouselArrow.CarouselArrowRight {
-  right: 1rem
-}
-
-.Carousel .CarouselArrow.CarouselArrowRight .fa-arrow-up {
-  transform: rotate(90deg)
-}
-
 .CreateCustomGamePopup {
   overflow-x: hidden;
   overflow-y: auto;
@@ -15839,6 +15942,44 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   position: relative
 }
 
+.CloseGameInformationSitckyDetector {
+  left: 0;
+  position: absolute;
+  top: 0
+}
+
+.CloseGameInformation {
+  background-color: transparent;
+  border-radius: 0;
+  display: inline-flex;
+  font-size: 2rem;
+  left: 0;
+  padding: 0 .5rem 0 .3rem;
+  position: sticky;
+  top: 0;
+  transition: background-color .2s;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: 10
+}
+
+.CloseGameInformation.CloseGameInformationSticky {
+  background-color: #303a59
+}
+
+@media(pointer:coarse) {
+  .CloseGameInformation .BackButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.CloseGameInformation .BackButton[data-pressing] {
+  color: #ffb914;
+  transition: none
+}
+
 @keyframes rainbowShimmer {
   0% {
     transform: translateX(0)
@@ -15938,44 +16079,6 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   }
 }
 
-.CloseGameInformationSitckyDetector {
-  left: 0;
-  position: absolute;
-  top: 0
-}
-
-.CloseGameInformation {
-  background-color: transparent;
-  border-radius: 0;
-  display: inline-flex;
-  font-size: 2rem;
-  left: 0;
-  padding: 0 .5rem 0 .3rem;
-  position: sticky;
-  top: 0;
-  transition: background-color .2s;
-  width: -moz-fit-content;
-  width: fit-content;
-  z-index: 10
-}
-
-.CloseGameInformation.CloseGameInformationSticky {
-  background-color: #303a59
-}
-
-@media(pointer:coarse) {
-  .CloseGameInformation .BackButton {
-    box-sizing: border-box;
-    min-height: 44px;
-    min-width: 44px
-  }
-}
-
-.CloseGameInformation .BackButton[data-pressing] {
-  color: #ffb914;
-  transition: none
-}
-
 .UpdateWaitingPage {
   align-items: center;
   background-color: #22283b;
@@ -16020,10 +16123,38 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   width: min(100%, 30rem)
 }
 
+.UpdateWaitingProgress.Sweeping .UpdateWaitingProgressFill {
+  animation: UpdateWaitingProgressSweep 1.6s ease-in-out infinite;
+  transition: none;
+  width: 30%
+}
+
+.UpdateWaitingProgress.Sweeping[data-off-screen] .UpdateWaitingProgressFill,
+html[data-app-covered] .WholeAppWrapper .UpdateWaitingProgress.Sweeping .UpdateWaitingProgressFill {
+  animation-play-state: paused
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .UpdateWaitingProgress.Sweeping .UpdateWaitingProgressFill {
+    animation: none;
+    width: 100%
+  }
+}
+
 .UpdateWaitingProgressFill {
   background-color: #ffb914;
   height: 100%;
   transition: width .25s linear
+}
+
+@keyframes UpdateWaitingProgressSweep {
+  0% {
+    transform: translateX(-100%)
+  }
+
+  to {
+    transform: translateX(333.3333333333%)
+  }
 }
 
 .UpdateWaitingGameLabel {

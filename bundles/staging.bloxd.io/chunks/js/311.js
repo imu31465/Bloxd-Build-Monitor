@@ -1,245 +1,176 @@
 export const id = 311;
 export const ids = [311];
 export const modules = {
-  41396: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => DQ
+  41426: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      _HDRTextureLoader: () => Mk
     });
-    var LQ = wQ(39251);
-    const qQ = "bakedVertexAnimation",
-      oQ = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\n#define BVASNAME bakedVertexAnimationSettingsInstanced\n#else\n#define BVASNAME bakedVertexAnimationSettings\n#endif\nfloat VATStartFrame=BVASNAME.x;float VATEndFrame=BVASNAME.y;float VATOffsetFrame=BVASNAME.z;float VATSpeed=BVASNAME.w;float totalFrames=VATEndFrame-VATStartFrame+1.0;float time=bakedVertexAnimationTime*VATSpeed/totalFrames;float frameCorrection=time<1.0 ? 0.0 : 1.0;float numOfFrames=totalFrames-frameCorrection;float VATFrameNum=fract(time)*numOfFrames;VATFrameNum=mod(VATFrameNum+VATOffsetFrame,numOfFrames);VATFrameNum=floor(VATFrameNum);VATFrameNum+=VATStartFrame+frameCorrection;mat4 VATInfluence;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[0],VATFrameNum)*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[1],VATFrameNum)*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[2],VATFrameNum)*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[3],VATFrameNum)*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[0],VATFrameNum)*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[1],VATFrameNum)*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[2],VATFrameNum)*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[3],VATFrameNum)*matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(36698);
+    class fk {
+      static ConvertPanoramaToCubemap(kk, ek, ik, Dk) {
+        let fk, Sk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          bk = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+        if (!kk) throw "ConvertPanoramaToCubemap: input cannot be null";
+        if (kk.length != ek * ik * 3) {
+          if (kk.length != ek * ik * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
+          fk = 4
+        } else fk = 3;
+        return {
+          front: this.CreateCubemapTexture(Dk, this.FACE_FRONT, kk, ek, ik, Sk, bk, fk),
+          back: this.CreateCubemapTexture(Dk, this.FACE_BACK, kk, ek, ik, Sk, bk, fk),
+          left: this.CreateCubemapTexture(Dk, this.FACE_LEFT, kk, ek, ik, Sk, bk, fk),
+          right: this.CreateCubemapTexture(Dk, this.FACE_RIGHT, kk, ek, ik, Sk, bk, fk),
+          up: this.CreateCubemapTexture(Dk, this.FACE_UP, kk, ek, ik, Sk, bk, fk),
+          down: this.CreateCubemapTexture(Dk, this.FACE_DOWN, kk, ek, ik, Sk, bk, fk),
+          size: Dk,
+          type: 1,
+          format: 4,
+          gammaSpace: !1
+        }
+      }
+      static CreateCubemapTexture(kk, ek, ik, Dk, fk, Sk, bk, rk) {
+        const Pk = new ArrayBuffer(kk * kk * 4 * 3),
+          mk = new Float32Array(Pk),
+          Mk = Sk ? Math.max(1, Math.round(Dk / 4 / kk)) : 1,
+          Kk = 1 / Mk,
+          xk = Kk * Kk,
+          nk = ek[1].subtract(ek[0]).scale(Kk / kk),
+          Uk = ek[3].subtract(ek[2]).scale(Kk / kk),
+          Hk = 1 / kk;
+        let wk = 0;
+        for (let lk = 0; lk < kk; lk++)
+          for (let Sk = 0; Sk < Mk; Sk++) {
+            let Sk = ek[0],
+              Pk = ek[2];
+            for (let ek = 0; ek < kk; ek++)
+              for (let Kk = 0; Kk < Mk; Kk++) {
+                const Mk = Pk.subtract(Sk).scale(wk).add(Sk);
+                Mk.normalize();
+                const Kk = this.CalcProjectionSpherical(Mk, ik, Dk, fk, rk, bk);
+                mk[lk * kk * 3 + 3 * ek + 0] += Kk.r * xk, mk[lk * kk * 3 + 3 * ek + 1] += Kk.g * xk, mk[lk * kk * 3 + 3 * ek + 2] += Kk.b * xk, Sk = Sk.add(nk), Pk = Pk.add(Uk)
+              }
+            wk += Hk * Kk
+          }
+        return mk
+      }
+      static CalcProjectionSpherical(kk, ek, ik, Dk, fk, Sk) {
+        let bk = Math.atan2(kk.z, kk.x);
+        const rk = Math.acos(kk.y);
+        for (; bk < -Math.PI;) bk += 2 * Math.PI;
+        for (; bk > Math.PI;) bk -= 2 * Math.PI;
+        let Pk = bk / Math.PI;
+        const mk = rk / Math.PI;
+        Pk = .5 * Pk + .5;
+        let Mk = Math.round(Pk * ik);
+        Mk < 0 ? Mk = 0 : Mk >= ik && (Mk = ik - 1);
+        let Kk = Math.round(mk * Dk);
+        Kk < 0 ? Kk = 0 : Kk >= Dk && (Kk = Dk - 1);
+        const xk = Sk ? Dk - Kk - 1 : Kk;
+        return {
+          r: ek[xk * ik * fk + Mk * fk + 0],
+          g: ek[xk * ik * fk + Mk * fk + 1],
+          b: ek[xk * ik * fk + Mk * fk + 2]
+        }
+      }
     }
-  },
-  41309: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "bakedVertexAnimationDeclaration",
-      oQ = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform float bakedVertexAnimationTime;\n#if !defined(WEBGL2) && !defined(WEBGPU)\nuniform vec2 bakedVertexAnimationTextureSizeInverted;\n#endif\nuniform vec4 bakedVertexAnimationSettings;uniform sampler2D bakedVertexAnimationTexture;\n#ifdef INSTANCES\nattribute vec4 bakedVertexAnimationSettingsInstanced;\n#endif\n#define inline\nmat4 readMatrixFromRawSamplerVAT(sampler2D smp,float index,float frame)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4;int frameUV=int(frame);vec4 m0=texelFetch(smp,ivec2(offset+0,frameUV),0);vec4 m1=texelFetch(smp,ivec2(offset+1,frameUV),0);vec4 m2=texelFetch(smp,ivec2(offset+2,frameUV),0);vec4 m3=texelFetch(smp,ivec2(offset+3,frameUV),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float frameUV=(frame+0.5)*bakedVertexAnimationTextureSizeInverted.y;float dx=bakedVertexAnimationTextureSizeInverted.x;vec4 m0=texture2D(smp,vec2(dx*(offset+0.5),frameUV));vec4 m1=texture2D(smp,vec2(dx*(offset+1.5),frameUV));vec4 m2=texture2D(smp,vec2(dx*(offset+2.5),frameUV));vec4 m3=texture2D(smp,vec2(dx*(offset+3.5),frameUV));return mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function Sk(kk, ek, ik, Dk, fk, Sk) {
+      fk > 0 ? (fk = function(kk, ek) {
+        return ek > 1023 ? kk * Math.pow(2, 1023) * Math.pow(2, ek - 1023) : ek < -1074 ? kk * Math.pow(2, -1074) * Math.pow(2, ek + 1074) : kk * Math.pow(2, ek)
+      }(1, fk - 136), kk[Sk + 0] = ek * fk, kk[Sk + 1] = ik * fk, kk[Sk + 2] = Dk * fk) : (kk[Sk + 0] = 0, kk[Sk + 1] = 0, kk[Sk + 2] = 0)
     }
-  },
-  41302: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "bonesDeclaration",
-      oQ = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function bk(kk, ek) {
+      let ik, Dk = "";
+      for (let fk = ek; fk < kk.length - ek && (ik = String.fromCharCode(kk[fk]), "\n" != ik); fk++) Dk += ik;
+      return Dk
     }
-  },
-  41387: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "bonesVertex",
-      oQ = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function rk(kk) {
+      let ek = bk(kk, 0);
+      if ("#" != ek[0] || "?" != ek[1]) throw "Bad HDR Format.";
+      let ik = !1,
+        Dk = !1,
+        fk = 0;
+      do {
+        fk += ek.length + 1, ek = bk(kk, fk), "FORMAT=32-bit_rle_rgbe" == ek ? Dk = !0 : 0 == ek.length && (ik = !0)
+      } while (!ik);
+      if (!Dk) throw "HDR Bad header format, unsupported FORMAT";
+      fk += ek.length + 1, ek = bk(kk, fk);
+      const Sk = /^-Y (.*) \+X (.*)$/g.exec(ek);
+      if (!Sk || Sk.length < 3) throw "HDR Bad header format, no size";
+      const rk = parseInt(Sk[2]),
+        Pk = parseInt(Sk[1]);
+      if (rk < 8 || rk > 32767) throw "HDR Bad header format, unsupported size";
+      return fk += ek.length + 1, {
+        height: Pk,
+        width: rk,
+        dataPosition: fk
+      }
     }
-  },
-  41424: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "bumpVertex",
-      oQ = "#if defined(BUMP) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nvec3 tbnNormal=normalize(normalUpdated);vec3 tbnTangent=normalize(tangentUpdated.xyz);vec3 tbnBitangent=cross(tbnNormal,tbnTangent)*tangentUpdated.w;vTBN=mat3(finalWorld)*mat3(tbnTangent,tbnBitangent,tbnNormal);\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function Pk(kk, ek) {
+      return function(kk, ek) {
+        let ik = ek.height;
+        const Dk = ek.width;
+        let fk, bk, rk, Pk, Mk, Kk, xk, nk, Uk = ek.dataPosition;
+        const Hk = new ArrayBuffer(4 * Dk),
+          wk = new Uint8Array(Hk),
+          lk = new ArrayBuffer(ek.width * ek.height * 4 * 3),
+          pk = new Float32Array(lk);
+        for (; ik > 0;) {
+          if (fk = kk[Uk++], bk = kk[Uk++], rk = kk[Uk++], Pk = kk[Uk++], 2 != fk || 2 != bk || 128 & rk || ek.width < 8 || ek.width > 32767) return mk(kk, ek);
+          if ((rk << 8 | Pk) != Dk) throw "HDR Bad header format, wrong scan line width";
+          for (Kk = 0, nk = 0; nk < 4; nk++)
+            for (xk = (nk + 1) * Dk; Kk < xk;)
+              if (fk = kk[Uk++], bk = kk[Uk++], fk > 128) {
+                if (Mk = fk - 128, 0 == Mk || Mk > xk - Kk) throw "HDR Bad Format, bad scanline data (run)";
+                for (; Mk-- > 0;) wk[Kk++] = bk
+              } else {
+                if (Mk = fk, 0 == Mk || Mk > xk - Kk) throw "HDR Bad Format, bad scanline data (non-run)";
+                if (wk[Kk++] = bk, --Mk > 0)
+                  for (let ek = 0; ek < Mk; ek++) wk[Kk++] = kk[Uk++]
+              } for (nk = 0; nk < Dk; nk++) fk = wk[nk], bk = wk[nk + Dk], rk = wk[nk + 2 * Dk], Pk = wk[nk + 3 * Dk], Sk(pk, fk, bk, rk, Pk, (ek.height - ik) * Dk * 3 + 3 * nk);
+          ik--
+        }
+        return pk
+      }(kk, ek)
     }
-  },
-  41428: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "clipPlaneVertex",
-      oQ = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function mk(kk, ek) {
+      let ik = ek.height;
+      const Dk = ek.width;
+      let fk, bk, rk, Pk, mk, Mk = ek.dataPosition;
+      const Kk = new ArrayBuffer(ek.width * ek.height * 4 * 3),
+        xk = new Float32Array(Kk);
+      for (; ik > 0;) {
+        for (mk = 0; mk < ek.width; mk++) fk = kk[Mk++], bk = kk[Mk++], rk = kk[Mk++], Pk = kk[Mk++], Sk(xk, fk, bk, rk, Pk, (ek.height - ik) * Dk * 3 + 3 * mk);
+        ik--
+      }
+      return xk
     }
-  },
-  41343: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "clipPlaneVertexDeclaration",
-      oQ = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  61038: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "harmonicsFunctions",
-      oQ = "#ifdef USESPHERICALFROMREFLECTIONMAP\n#ifdef SPHERICAL_HARMONICS\nvec3 computeEnvironmentIrradiance(vec3 normal) {return vSphericalL00\n+ vSphericalL1_1*(normal.y)\n+ vSphericalL10*(normal.z)\n+ vSphericalL11*(normal.x)\n+ vSphericalL2_2*(normal.y*normal.x)\n+ vSphericalL2_1*(normal.y*normal.z)\n+ vSphericalL20*((3.0*normal.z*normal.z)-1.0)\n+ vSphericalL21*(normal.z*normal.x)\n+ vSphericalL22*(normal.x*normal.x-(normal.y*normal.y));}\n#else\nvec3 computeEnvironmentIrradiance(vec3 normal) {float Nx=normal.x;float Ny=normal.y;float Nz=normal.z;vec3 C1=vSphericalZZ.rgb;vec3 Cx=vSphericalX.rgb;vec3 Cy=vSphericalY.rgb;vec3 Cz=vSphericalZ.rgb;vec3 Cxx_zz=vSphericalXX_ZZ.rgb;vec3 Cyy_zz=vSphericalYY_ZZ.rgb;vec3 Cxy=vSphericalXY.rgb;vec3 Cyz=vSphericalYZ.rgb;vec3 Czx=vSphericalZX.rgb;vec3 a1=Cyy_zz*Ny+Cy;vec3 a2=Cyz*Nz+a1;vec3 b1=Czx*Nz+Cx;vec3 b2=Cxy*Ny+b1;vec3 b3=Cxx_zz*Nx+b2;vec3 t1=Cz *Nz+C1;vec3 t2=a2 *Ny+t1;vec3 t3=b3 *Nx+t2;return t3;}\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41311: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "instancesDeclaration",
-      oQ = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41385: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "instancesVertex",
-      oQ = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41383: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "morphTargetsVertex",
-      oQ = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (int i=0; i<NUM_MORPH_INFLUENCERS; i++) {if (float(i)>=morphTargetCount) break;vertexID=float(gl_VertexID)*morphTargetTextureInfo.x;\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(readVector3FromRawSampler(i,vertexID)-position)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(readVector3FromRawSampler(i,vertexID) -normal)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(readVector3FromRawSampler(i,vertexID).xy-uv)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(readVector3FromRawSampler(i,vertexID) -tangent.xyz)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(readVector3FromRawSampler(i,vertexID).xy-uv2)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUV2S\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(readVector4FromRawSampler(i,vertexID)-color)*morphTargetInfluences[i];\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(position{X}-position)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(normal{X}-normal)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(tangent{X}-tangent.xyz)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(uv_{X}-uv)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(uv2_{X}-uv2)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(color{X}-color)*morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41364: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "morphTargetsVertexDeclaration",
-      oQ = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute vec3 position{X};\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute vec3 normal{X};\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute vec3 tangent{X};\n#endif\n#ifdef MORPHTARGETS_UV\nattribute vec2 uv_{X};\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute vec2 uv2_{X};\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute vec4 color{X};\n#endif\n#elif {X}==0\nuniform float morphTargetCount;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41376: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "morphTargetsVertexGlobal",
-      oQ = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nfloat vertexID;\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41361: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "morphTargetsVertexGlobalDeclaration",
-      oQ = "#ifdef MORPHTARGETS\nuniform float morphTargetInfluences[NUM_MORPH_INFLUENCERS];\n#ifdef MORPHTARGETS_TEXTURE \nuniform float morphTargetTextureIndices[NUM_MORPH_INFLUENCERS];uniform vec3 morphTargetTextureInfo;uniform highp sampler2DArray morphTargets;vec3 readVector3FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0).xyz;\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV).xyz;\n#endif\n}\nvec4 readVector4FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0);\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV);\n#endif\n}\n#endif\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  41280: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "sceneUboDeclaration",
-      oQ = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
-    }
-  },
-  61343: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      geometryVertexShader: () => sQ
-    });
-    var LQ = wQ(39251),
-      qQ = wQ(41302),
-      oQ = wQ(41309),
-      DQ = wQ(41361),
-      kQ = wQ(41364),
-      vQ = wQ(41311);
-    const mQ = "geometryVertexDeclaration",
-      uQ = "uniform mat4 viewProjection;uniform mat4 view;";
-    LQ.c.IncludesShadersStore[mQ] || (LQ.c.IncludesShadersStore[mQ] = uQ);
-    const HQ = {
-      name: mQ,
-      shader: uQ
-    };
-    var bQ = wQ(41280);
-    const YQ = "geometryUboDeclaration",
-      xQ = "#include<sceneUboDeclaration>\n";
-    LQ.c.IncludesShadersStore[YQ] || (LQ.c.IncludesShadersStore[YQ] = xQ);
-    const AQ = {
-      name: YQ,
-      shader: xQ
-    };
-    var tQ = wQ(41343),
-      eQ = wQ(61038),
-      MQ = wQ(41376),
-      GQ = wQ(41383),
-      pQ = wQ(41385),
-      cQ = wQ(41387),
-      CQ = wQ(41396),
-      SQ = wQ(41428),
-      iQ = wQ(41424);
-    const WQ = "geometryVertexShader",
-      RQ = "precision highp float;\n#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<morphTargetsVertexGlobalDeclaration>\n#include<morphTargetsVertexDeclaration>[0..maxSimultaneousMorphTargets]\n#include<instancesDeclaration>\n#include<__decl__geometryVertex>\n#include<clipPlaneVertexDeclaration>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\nuniform mat4 reflectionMatrix;uniform vec2 vReflectionInfos;uniform vec3 vReflectionColor;\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvarying vec3 vEnvironmentIrradiance;\n#ifdef SPHERICAL_HARMONICS\nuniform vec3 vSphericalL00;uniform vec3 vSphericalL1_1;uniform vec3 vSphericalL10;uniform vec3 vSphericalL11;uniform vec3 vSphericalL2_2;uniform vec3 vSphericalL2_1;uniform vec3 vSphericalL20;uniform vec3 vSphericalL21;uniform vec3 vSphericalL22;\n#else\nuniform vec3 vSphericalX;uniform vec3 vSphericalY;uniform vec3 vSphericalZ;uniform vec3 vSphericalXX_ZZ;uniform vec3 vSphericalYY_ZZ;uniform vec3 vSphericalZZ;uniform vec3 vSphericalXY;uniform vec3 vSphericalYZ;uniform vec3 vSphericalZX;\n#endif\n#include<harmonicsFunctions>\n#endif\n#endif\n#endif\nattribute vec3 position;\n#ifdef HAS_NORMAL_ATTRIBUTE\nattribute vec3 normal;\n#endif\n#ifdef NEED_UV\nvarying vec2 vUV;\n#ifdef ALPHATEST\nuniform mat4 diffuseMatrix;\n#endif\n#ifdef BUMP\nuniform mat4 bumpMatrix;varying vec2 vBumpUV;\n#endif\n#ifdef REFLECTIVITY\nuniform mat4 reflectivityMatrix;uniform mat4 albedoMatrix;varying vec2 vReflectivityUV;varying vec2 vAlbedoUV;\n#endif\n#ifdef METALLIC_TEXTURE\nvarying vec2 vMetallicUV;uniform mat4 metallicMatrix;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nvarying vec2 vRoughnessUV;uniform mat4 roughnessMatrix;\n#endif\n#ifdef SUBSURFACE_WEIGHT\nvarying vec2 vSubsurfaceWeightUV;uniform mat4 subsurfaceWeightMatrix;\n#endif\n#ifdef TRANSMISSION_WEIGHT\nvarying vec2 vTransmissionWeightUV;uniform mat4 transmissionWeightMatrix;\n#endif\n#ifdef UV1\nattribute vec2 uv;\n#endif\n#ifdef UV2\nattribute vec2 uv2;\n#endif\n#endif\n#ifdef BUMP\nvarying mat4 vWorldView;\n#endif\n#ifdef BUMP\nvarying vec3 vNormalW;\n#else\nvarying vec3 vNormalV;\n#endif\nvarying vec4 vViewPos;\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvarying vec3 vPositionW;\n#endif\n#if defined(VELOCITY) || defined(VELOCITY_LINEAR)\nuniform mat4 previousViewProjection;varying vec4 vCurrentPosition;varying vec4 vPreviousPosition;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void)\n{vec3 positionUpdated=position;\n#ifdef HAS_NORMAL_ATTRIBUTE\nvec3 normalUpdated=normal;\n#else\nvec3 normalUpdated=vec3(0.0,0.0,0.0);\n#endif\n#ifdef UV1\nvec2 uvUpdated=uv;\n#endif\n#ifdef UV2\nvec2 uv2Updated=uv2;\n#endif\n#include<morphTargetsVertexGlobal>\n#include<morphTargetsVertex>[0..maxSimultaneousMorphTargets]\n#include<instancesVertex>\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && !defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*finalWorld*vec4(positionUpdated,1.0);vPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#include<bonesVertex>\n#include<bakedVertexAnimation>\nvec4 worldPos=vec4(finalWorld*vec4(positionUpdated,1.0));\n#ifdef BUMP\nvWorldView=view*finalWorld;mat3 normalWorld=mat3(finalWorld);vNormalW=normalize(normalWorld*normalUpdated);\n#else\n#ifdef NORMAL_WORLDSPACE\nvNormalV=normalize(vec3(finalWorld*vec4(normalUpdated,0.0)));\n#else\nvNormalV=normalize(vec3((view*finalWorld)*vec4(normalUpdated,0.0)));\n#endif\n#endif\nvViewPos=view*worldPos;\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*finalWorld*vec4(positionUpdated,1.0);\n#if NUM_BONE_INFLUENCERS>0\nmat4 previousInfluence;previousInfluence=mPreviousBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=mPreviousBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=mPreviousBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=mPreviousBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\nvPreviousPosition=previousViewProjection*finalPreviousWorld*previousInfluence*vec4(positionUpdated,1.0);\n#else\nvPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#endif\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvPositionW=worldPos.xyz/worldPos.w;\n#endif\ngl_Position=viewProjection*finalWorld*vec4(positionUpdated,1.0);\n#include<clipPlaneVertex>\n#ifdef NEED_UV\n#ifdef UV1\n#if defined(ALPHATEST) && defined(ALPHATEST_UV1)\nvUV=vec2(diffuseMatrix*vec4(uvUpdated,1.0,0.0));\n#else\nvUV=uvUpdated;\n#endif\n#ifdef BUMP_UV1\nvBumpUV=vec2(bumpMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef REFLECTIVITY_UV1\nvReflectivityUV=vec2(reflectivityMatrix*vec4(uvUpdated,1.0,0.0));\n#else\n#ifdef METALLIC_UV1\nvMetallicUV=vec2(metallicMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef ROUGHNESS_UV1\nvRoughnessUV=vec2(roughnessMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#endif\n#ifdef ALBEDO_UV1\nvAlbedoUV=vec2(albedoMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_COLOR_UV1\nvSubsurfaceColorUV=vec2(subsurfaceColorMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV1\nvSubsurfaceWeightUV=vec2(subsurfaceWeightMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#endif\n#ifdef UV2\n#if defined(ALPHATEST) && defined(ALPHATEST_UV2)\nvUV=vec2(diffuseMatrix*vec4(uv2Updated,1.0,0.0));\n#else\nvUV=uv2Updated;\n#endif\n#ifdef BUMP_UV2\nvBumpUV=vec2(bumpMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef REFLECTIVITY_UV2\nvReflectivityUV=vec2(reflectivityMatrix*vec4(uv2Updated,1.0,0.0));\n#else\n#ifdef METALLIC_UV2\nvMetallicUV=vec2(metallicMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef ROUGHNESS_UV2\nvRoughnessUV=vec2(roughnessMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#endif\n#ifdef ALBEDO_UV2\nvAlbedoUV=vec2(albedoMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_COLOR_UV2\nvSubsurfaceColorUV=vec2(subsurfaceColorMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV2\nvSubsurfaceWeightUV=vec2(subsurfaceWeightMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#endif\n#endif\n#include<bumpVertex>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvec3 reflectionVector=vec3(reflectionMatrix*vec4(normalUpdated,0.0)).xyz;\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0;\n#endif\nvEnvironmentIrradiance=computeEnvironmentIrradiance(reflectionVector)*vReflectionInfos.x;\n#endif\n#endif\n#endif\n}\n";
-    LQ.c.ShadersStore[WQ] || (LQ.c.ShadersStore[WQ] = RQ);
-    const OQ = [qQ.d, oQ.d, DQ.e, kQ.d, vQ.c, HQ, bQ.d, AQ, tQ.c, eQ.c, MQ.e, GQ.b, pQ.d, cQ.e, CQ.d, SQ.e, iQ.e];
-    for (const rQ of OQ) LQ.c.IncludesShadersStore[rQ.name] || (LQ.c.IncludesShadersStore[rQ.name] = rQ.shader);
-    const sQ = {
-      name: WQ,
-      shader: RQ
+    fk.FACE_LEFT = [new Dk.o(-1, -1, -1), new Dk.o(1, -1, -1), new Dk.o(-1, 1, -1), new Dk.o(1, 1, -1)], fk.FACE_RIGHT = [new Dk.o(1, -1, 1), new Dk.o(-1, -1, 1), new Dk.o(1, 1, 1), new Dk.o(-1, 1, 1)], fk.FACE_FRONT = [new Dk.o(1, -1, -1), new Dk.o(1, -1, 1), new Dk.o(1, 1, -1), new Dk.o(1, 1, 1)], fk.FACE_BACK = [new Dk.o(-1, -1, 1), new Dk.o(-1, -1, -1), new Dk.o(-1, 1, 1), new Dk.o(-1, 1, -1)], fk.FACE_DOWN = [new Dk.o(1, 1, -1), new Dk.o(1, 1, 1), new Dk.o(-1, 1, -1), new Dk.o(-1, 1, 1)], fk.FACE_UP = [new Dk.o(-1, -1, -1), new Dk.o(-1, -1, 1), new Dk.o(1, -1, -1), new Dk.o(1, -1, 1)];
+    class Mk {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData() {
+        throw ".hdr not supported in Cube."
+      }
+      loadData(kk, ek, ik) {
+        const Dk = new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength),
+          fk = rk(Dk),
+          Sk = Pk(Dk, fk),
+          bk = fk.width * fk.height,
+          mk = new Float32Array(4 * bk);
+        for (let rk = 0; rk < bk; rk += 1) mk[4 * rk] = Sk[3 * rk], mk[4 * rk + 1] = Sk[3 * rk + 1], mk[4 * rk + 2] = Sk[3 * rk + 2], mk[4 * rk + 3] = 1;
+        ik(fk.width, fk.height, ek.generateMipMaps, !1, (() => {
+          const kk = ek.JU();
+          ek.type = 1, ek.format = 5, ek._gammaSpace = !1, kk._uploadDataToTextureDirectly(ek, mk)
+        }))
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

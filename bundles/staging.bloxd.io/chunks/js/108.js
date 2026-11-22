@@ -1,691 +1,803 @@
 export const id = 108;
-export const ids = [108, 125];
+export const ids = [108];
 export const modules = {
-  4806: (QQ, FQ, wQ) => {
-    var LQ = wQ(4815);
-
-    function qQ() {}
-
-    function oQ() {}
-    oQ.resetWarningCache = qQ, QQ.exports = function() {
-      function QQ(QQ, FQ, wQ, qQ, oQ, DQ) {
-        if (DQ !== LQ) {
-          var kQ = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw kQ.name = "Invariant Violation", kQ
-        }
-      }
-
-      function FQ() {
-        return QQ
-      }
-      QQ.isRequired = QQ;
-      var wQ = {
-        array: QQ,
-        bigint: QQ,
-        bool: QQ,
-        func: QQ,
-        number: QQ,
-        object: QQ,
-        string: QQ,
-        symbol: QQ,
-        any: QQ,
-        arrayOf: FQ,
-        element: QQ,
-        elementType: QQ,
-        instanceOf: FQ,
-        node: QQ,
-        objectOf: FQ,
-        oneOf: FQ,
-        oneOfType: FQ,
-        shape: FQ,
-        exact: FQ,
-        checkPropTypes: oQ,
-        resetWarningCache: qQ
-      };
-      return wQ.PropTypes = wQ, wQ
+  4937: (kk, ek, ik) => {
+    function Dk(kk) {
+      return Dk = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(kk) {
+        return typeof kk
+      } : function(kk) {
+        return kk && "function" == typeof Symbol && kk.constructor === Symbol && kk !== Symbol.prototype ? "symbol" : typeof kk
+      }, Dk(kk)
     }
-  },
-  4799: (QQ, FQ, wQ) => {
-    QQ.exports = wQ(4806)()
-  },
-  4815: QQ => {
-    QQ.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
-  },
-  6406: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      ShaderPackPublishForm: () => GQ
-    });
-    var LQ = wQ(53),
-      qQ = wQ(6374),
-      oQ = wQ(210),
-      DQ = wQ(6414),
-      kQ = wQ(1079),
-      vQ = wQ(1451),
-      mQ = wQ(1682),
-      uQ = wQ(1140),
-      HQ = wQ(6422),
-      bQ = wQ(6435),
-      YQ = wQ(1489),
-      xQ = wQ(1207),
-      AQ = wQ(6438),
-      tQ = wQ(6476),
-      eQ = wQ(6371),
-      MQ = wQ(1107);
+    Object.defineProperty(ek, "__esModule", {
+      value: !0
+    }), ek.default = void 0;
+    var fk = Kk(ik(1021)),
+      Sk = function(kk, ek) {
+        if (!ek && kk && kk.__esModule) return kk;
+        if (null === kk || "object" !== Dk(kk) && "function" !== typeof kk) return {
+          default: kk
+        };
+        var ik = Mk(ek);
+        if (ik && ik.has(kk)) return ik.get(kk);
+        var fk = {},
+          Sk = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var bk in kk)
+          if ("default" !== bk && Object.prototype.hasOwnProperty.call(kk, bk)) {
+            var rk = Sk ? Object.getOwnPropertyDescriptor(kk, bk) : null;
+            rk && (rk.get || rk.set) ? Object.defineProperty(fk, bk, rk) : fk[bk] = kk[bk]
+          } fk.default = kk, ik && ik.set(kk, fk);
+        return fk
+      }(ik(60)),
+      bk = Kk(ik(4893)),
+      rk = Kk(ik(4939)),
+      Pk = ik(4941),
+      mk = ik(1066);
 
-    function GQ(QQ) {
-      var FQ, wQ, HQ;
-      let {
-        existing: GQ,
-        onPublished: cQ
-      } = QQ;
-      const {
-        t: SQ
-      } = (0, xQ.y)(), {
-        userContext: iQ,
-        isUserContextUpdating: WQ
-      } = (0, uQ.e)(), [RQ, OQ] = (0, LQ.useState)(null), [sQ, rQ] = (0, LQ.useState)(0), [IQ, UQ] = (0, LQ.useState)(null !== (FQ = null === GQ || void 0 === GQ ? void 0 : GQ.name) && void 0 !== FQ ? FQ : ""), NQ = (0, LQ.useRef)(IQ), TQ = (0, LQ.useRef)(""), KQ = QQ => {
-        NQ.current = QQ, UQ(QQ)
-      }, [zQ, lQ] = (0, LQ.useState)(null !== (wQ = null === GQ || void 0 === GQ ? void 0 : GQ.description) && void 0 !== wQ ? wQ : ""), jQ = (0, LQ.useRef)(zQ), aQ = (0, LQ.useRef)(""), XQ = QQ => {
-        jQ.current = QQ, lQ(QQ)
-      }, [fQ, VQ] = (0, LQ.useState)(!1), {
-        loading: hQ,
-        error: JQ,
-        setError: EQ,
-        onFiles: nQ
-      } = (0, bQ.g)((async QQ => {
-        const FQ = await (0, AQ.loadPageShaderPackCompiler)();
-        if (!FQ) return void EQ(SQ("shaderPack:compilerUnavailable"));
-        const wQ = await (0, tQ.f)(FQ, QQ.files);
-        if (OQ({
-            pack: QQ,
-            validation: wQ,
-            sourceBytes: (0, DQ.v)(QQ.files)
-          }), !GQ) {
-          var LQ;
-          if ("" !== NQ.current.trim() && NQ.current !== TQ.current || (TQ.current = (0, qQ.O)(QQ.manifest.name.trim(), qQ.z), KQ(TQ.current)), "" === jQ.current.trim() || jQ.current === aQ.current) aQ.current = (0, qQ.O)((null !== (LQ = QQ.manifest.description) && void 0 !== LQ ? LQ : "").trim(), qQ.p), XQ(aQ.current);
-          rQ((QQ => QQ + 1))
-        }
-      })), gQ = !WQ && !iQ.isLoggedIn() && !oQ.d.offlineMode, PQ = IQ.trim(), ZQ = PQ.length < qQ.B, yQ = null !== RQ && !1 !== (null === (HQ = RQ.validation) || void 0 === HQ ? void 0 : HQ.ok) && !hQ && !ZQ && !gQ && !WQ;
-      return (0, MQ.jsxs)("div", {
-        className: "ShaderPackPublishForm",
-        children: [(0, MQ.jsx)("p", {
-          className: "ShaderPackPublishIntro",
-          children: GQ ? SQ("shaderPackListing:uploadIntro", {
-            minutes: String(qQ.H / 6e4)
-          }) : SQ("shaderPackListing:publishIntro")
-        }), (0, MQ.jsx)(CQ, {}), gQ && (0, MQ.jsx)("div", {
-          className: "ShaderPackPublishNote Warning",
-          children: SQ("shaderPackListing:publishNeedsLogin")
-        }), (0, MQ.jsx)(bQ.c, {
-          busy: hQ,
-          disabled: hQ || fQ,
-          onFiles: QQ => {
-            OQ(null), nQ(QQ)
-          }
-        }), RQ && (0, MQ.jsxs)("div", {
-          className: "ShaderPackPublishSummary",
-          children: [(0, MQ.jsx)("div", {
-            className: "ShaderPackPublishPackName",
-            children: RQ.pack.manifest.name
-          }), (0, MQ.jsxs)("div", {
-            className: "ShaderPackPublishPackSize",
-            children: [SQ("shaderPackListing:sizeValue", {
-              kilobytes: String((0, eQ.R)(RQ.sourceBytes))
-            }), " \xb7", " ", SQ("shaderPackListing:filesValue", {
-              files: String(RQ.pack.files.length)
-            })]
-          }), (0, MQ.jsx)(pQ, {
-            picked: RQ
-          })]
-        }), !GQ && (0, MQ.jsxs)(MQ.Fragment, {
-          children: [(0, MQ.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, MQ.jsx)("span", {
-              children: SQ("general:name")
-            }), (0, MQ.jsx)(mQ.b, {
-              className: "ShaderPackPublishInput",
-              defaultValue: IQ,
-              maxLength: qQ.z,
-              onValueChange: KQ
-            }, sQ), RQ && ZQ && (0, MQ.jsx)("span", {
-              className: "ShaderPackPublishHint",
-              children: SQ("shaderPackListing:nameTooShort", {
-                min: String(qQ.B)
-              })
-            })]
-          }), (0, MQ.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, MQ.jsx)("span", {
-              children: SQ("general:description")
-            }), (0, MQ.jsx)(mQ.b, {
-              className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: zQ,
-              maxLength: qQ.p,
-              onValueChange: XQ,
-              useTextarea: !0
-            }, sQ)]
-          })]
-        }), JQ && (0, MQ.jsx)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: JQ
-        }), (0, MQ.jsxs)(vQ.m, {
-          className: "ShaderPackPublishButton",
-          disabled: !yQ,
-          loading: fQ,
-          onClick: () => {
-            !async function() {
-              var QQ;
-              if (!RQ) return;
-              const {
-                name: FQ,
-                description: wQ
-              } = null !== GQ && void 0 !== GQ ? GQ : {
-                name: PQ,
-                description: zQ.trim()
-              }, LQ = {
-                packId: null !== (QQ = null === GQ || void 0 === GQ ? void 0 : GQ.packId) && void 0 !== QQ ? QQ : null,
-                name: FQ,
-                description: wQ,
-                apiVersion: RQ.pack.manifest.apiVersion,
-                files: (0, DQ.r)(RQ.pack.files),
-                keepCircleShadows: !0 === RQ.pack.manifest.keepCircleShadows
-              };
-              if ((new TextEncoder).encode(JSON.stringify(LQ)).byteLength > 1024 * qQ.L) EQ(SQ("shaderPackListing:publishTooBig", {
-                kilobytes: String(qQ.L)
-              }));
-              else {
-                VQ(!0), EQ(null);
-                try {
-                  cQ(await YQ.b.publishShaderPack(iQ, LQ))
-                } catch (oQ) {
-                  console.error("Failed to publish the shader pack", oQ), EQ((0, eQ.z)(oQ, SQ, "shaderPackListing:publishFailed"))
-                } finally {
-                  VQ(!1)
-                }
+    function Mk(kk) {
+      if ("function" !== typeof WeakMap) return null;
+      var ek = new WeakMap,
+        ik = new WeakMap;
+      return (Mk = function(kk) {
+        return kk ? ik : ek
+      })(kk)
+    }
+
+    function Kk(kk) {
+      return kk && kk.__esModule ? kk : {
+        default: kk
+      }
+    }
+
+    function xk(kk, ek) {
+      var ik = "undefined" !== typeof Symbol && kk[Symbol.iterator] || kk["@@iterator"];
+      if (!ik) {
+        if (Array.isArray(kk) || (ik = function(kk, ek) {
+            if (!kk) return;
+            if ("string" === typeof kk) return nk(kk, ek);
+            var ik = Object.prototype.toString.call(kk).slice(8, -1);
+            "Object" === ik && kk.constructor && (ik = kk.constructor.name);
+            if ("Map" === ik || "Set" === ik) return Array.from(kk);
+            if ("Arguments" === ik || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(ik)) return nk(kk, ek)
+          }(kk)) || ek && kk && "number" === typeof kk.length) {
+          ik && (kk = ik);
+          var Dk = 0,
+            fk = function() {};
+          return {
+            s: fk,
+            n: function() {
+              return Dk >= kk.length ? {
+                done: !0
+              } : {
+                done: !1,
+                value: kk[Dk++]
               }
-            }()
-          },
-          children: [(0, MQ.jsx)(kQ.c, {
-            name: "upload"
-          }), " ", SQ(GQ ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
-        })]
-      })
-    }
-
-    function pQ(QQ) {
-      let {
-        picked: FQ
-      } = QQ;
-      const {
-        t: wQ
-      } = (0, xQ.y)(), {
-        validation: LQ
-      } = FQ;
-      return null === LQ ? (0, MQ.jsx)("div", {
-        className: "ShaderPackPublishNote",
-        children: wQ("shaderPackListing:publishUnchecked")
-      }) : LQ.ok ? (0, MQ.jsxs)(MQ.Fragment, {
-        children: [(0, MQ.jsxs)("div", {
-          className: "ShaderPackPublishNote Ready",
-          children: [(0, MQ.jsx)(kQ.c, {
-            name: "circle-check"
-          }), " ", wQ("shaderPackListing:publishReady")]
-        }), LQ.offInStrict.length > 0 && (0, MQ.jsxs)(MQ.Fragment, {
-          children: [(0, MQ.jsxs)("div", {
-            className: "ShaderPackPublishNote Warning",
-            children: [(0, MQ.jsx)(kQ.c, {
-              name: "triangle-exclamation"
-            }), " ", wQ("shaderPack:offInStrict")]
-          }), (0, MQ.jsx)(HQ.e, {
-            diagnostics: LQ.offInStrict,
-            t: wQ
-          })]
-        })]
-      }) : (0, MQ.jsxs)(MQ.Fragment, {
-        children: [(0, MQ.jsxs)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: [(0, MQ.jsx)(kQ.c, {
-            name: "triangle-exclamation"
-          }), " ", wQ("shaderPackListing:publishHasErrors")]
-        }), (0, MQ.jsx)(HQ.e, {
-          diagnostics: LQ.errors,
-          more: LQ.moreErrors,
-          t: wQ
-        })]
-      })
-    }
-    const cQ = "\0";
-
-    function CQ() {
-      const {
-        t: QQ
-      } = (0, xQ.y)(), [FQ, wQ] = QQ("shaderPackListing:bloxdhubHelp", {
-        site: cQ
-      }).split(cQ);
-      return (0, MQ.jsxs)("p", {
-        className: "ShaderPackPublishIntro",
-        children: [FQ, (0, MQ.jsx)("a", {
-          className: "ShaderPackPublishLink",
-          href: qQ.h,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: qQ.c
-        }), wQ]
-      })
-    }
-  },
-  6397: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      default: () => uQ
-    });
-    var LQ = wQ(1503),
-      qQ = wQ(1451),
-      oQ = wQ(1207),
-      DQ = wQ(6406),
-      kQ = wQ(6382),
-      vQ = wQ(6371),
-      mQ = wQ(1107);
-
-    function uQ() {
-      const {
-        t: QQ
-      } = (0, oQ.y)(), FQ = (0, LQ.useNavigatePreserveSearch)();
-      return (0, kQ.d)(), (0, mQ.jsxs)("div", {
-        className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, mQ.jsx)("div", {
-          className: "ShaderPackPublishBack",
-          children: (0, mQ.jsx)(qQ.b, {
-            onClick: () => {
-              FQ(vQ.W)
             },
-            children: QQ("shaderPackListing:backToPacks")
-          })
-        }), (0, mQ.jsx)("h1", {
-          className: "ShaderPackPublishTitle",
-          children: QQ("shaderPackListing:publishTitle")
-        }), (0, mQ.jsx)(DQ.ShaderPackPublishForm, {
-          existing: null,
-          onPublished: QQ => {
-            FQ((0, vQ.Z)(QQ.packId), {
-              replace: !0
+            e: function(kk) {
+              throw kk
+            },
+            f: fk
+          }
+        }
+        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+      }
+      var Sk, bk = !0,
+        rk = !1;
+      return {
+        s: function() {
+          ik = ik.call(kk)
+        },
+        n: function() {
+          var kk = ik.next();
+          return bk = kk.done, kk
+        },
+        e: function(kk) {
+          rk = !0, Sk = kk
+        },
+        f: function() {
+          try {
+            bk || null == ik.return || ik.return()
+          } finally {
+            if (rk) throw Sk
+          }
+        }
+      }
+    }
+
+    function nk(kk, ek) {
+      (null == ek || ek > kk.length) && (ek = kk.length);
+      for (var ik = 0, Dk = new Array(ek); ik < ek; ik++) Dk[ik] = kk[ik];
+      return Dk
+    }
+
+    function Uk(kk, ek) {
+      for (var ik = 0; ik < ek.length; ik++) {
+        var Dk = ek[ik];
+        Dk.enumerable = Dk.enumerable || !1, Dk.configurable = !0, "value" in Dk && (Dk.writable = !0), Object.defineProperty(kk, Dk.key, Dk)
+      }
+    }
+
+    function Hk(kk, ek) {
+      return Hk = Object.setPrototypeOf || function(kk, ek) {
+        return kk.__proto__ = ek, kk
+      }, Hk(kk, ek)
+    }
+
+    function wk(kk) {
+      var ek = function() {
+        if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
+        if (Reflect.construct.sham) return !1;
+        if ("function" === typeof Proxy) return !0;
+        try {
+          return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
+        } catch (kk) {
+          return !1
+        }
+      }();
+      return function() {
+        var ik, fk = pk(kk);
+        if (ek) {
+          var Sk = pk(this).constructor;
+          ik = Reflect.construct(fk, arguments, Sk)
+        } else ik = fk.apply(this, arguments);
+        return function(kk, ek) {
+          if (ek && ("object" === Dk(ek) || "function" === typeof ek)) return ek;
+          if (void 0 !== ek) throw new TypeError("Derived constructors may only return object or undefined");
+          return lk(kk)
+        }(this, ik)
+      }
+    }
+
+    function lk(kk) {
+      if (void 0 === kk) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return kk
+    }
+
+    function pk(kk) {
+      return pk = Object.setPrototypeOf ? Object.getPrototypeOf : function(kk) {
+        return kk.__proto__ || Object.getPrototypeOf(kk)
+      }, pk(kk)
+    }
+
+    function yk(kk, ek, ik) {
+      return ek in kk ? Object.defineProperty(kk, ek, {
+        value: ik,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+      }) : kk[ek] = ik, kk
+    }
+    var Yk = {
+        orientation: {
+          horizontal: {
+            dimension: "width",
+            direction: "left",
+            reverseDirection: "right",
+            coordinate: "x"
+          },
+          vertical: {
+            dimension: "height",
+            direction: "top",
+            reverseDirection: "bottom",
+            coordinate: "y"
+          }
+        }
+      },
+      Lk = function(kk) {
+        ! function(kk, ek) {
+          if ("function" !== typeof ek && null !== ek) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(kk, "prototype", {
+            value: Object.create(ek && ek.prototype, {
+              constructor: {
+                value: kk,
+                writable: !0,
+                configurable: !0
+              }
+            }),
+            writable: !1
+          }), ek && Hk(kk, ek)
+        }(bk, kk);
+        var ek, ik, Dk, Sk = wk(bk);
+
+        function bk(kk, ek) {
+          var ik;
+          return function(kk, ek) {
+            if (!(kk instanceof ek)) throw new TypeError("Cannot call a class as a function")
+          }(this, bk), yk(lk(ik = Sk.call(this, kk, ek)), "handleFormat", (function(kk) {
+            var ek = ik.props.format;
+            return ek ? ek(kk) : kk
+          })), yk(lk(ik), "handleUpdate", (function() {
+            if (ik.slider) {
+              var kk = ik.props.orientation,
+                ek = (0, Pk.capitalize)(Yk.orientation[kk].dimension),
+                Dk = ik.slider["offset".concat(ek)],
+                fk = ik.handle["offset".concat(ek)];
+              ik.setState({
+                limit: Dk - fk,
+                grab: fk / 2
+              })
+            }
+          })), yk(lk(ik), "handleStart", (function(kk) {
+            var ek = ik.props.onChangeStart;
+            document.addEventListener("mousemove", ik.handleDrag), document.addEventListener("mouseup", ik.handleEnd), ik.setState({
+              active: !0
+            }, (function() {
+              ek && ek(kk)
+            }))
+          })), yk(lk(ik), "handleDrag", (function(kk) {
+            kk.stopPropagation();
+            var ek = ik.props.onChange,
+              Dk = kk.target,
+              fk = Dk.className,
+              Sk = Dk.classList,
+              bk = Dk.dataset;
+            if (ek && "rangeslider__labels" !== fk) {
+              var rk = ik.position(kk);
+              Sk && Sk.contains("rangeslider__label-item") && bk.value && (rk = parseFloat(bk.value)), ek && ek(rk, kk)
+            }
+          })), yk(lk(ik), "handleEnd", (function(kk) {
+            var ek = ik.props.onChangeComplete;
+            ik.setState({
+              active: !1
+            }, (function() {
+              ek && ek(kk)
+            })), document.removeEventListener("mousemove", ik.handleDrag), document.removeEventListener("mouseup", ik.handleEnd)
+          })), yk(lk(ik), "handleKeyDown", (function(kk) {
+            kk.preventDefault();
+            var ek, Dk = kk.keyCode,
+              fk = ik.props,
+              Sk = fk.value,
+              bk = fk.min,
+              rk = fk.max,
+              Pk = fk.step,
+              mk = fk.onChange;
+            switch (Dk) {
+              case 38:
+              case 39:
+                ek = Sk + Pk > rk ? rk : Sk + Pk, mk && mk(ek, kk);
+                break;
+              case 37:
+              case 40:
+                ek = Sk - Pk < bk ? bk : Sk - Pk, mk && mk(ek, kk)
+            }
+          })), yk(lk(ik), "getPositionFromValue", (function(kk) {
+            var ek = ik.state.limit,
+              Dk = ik.props,
+              fk = Dk.min,
+              Sk = (kk - fk) / (Dk.max - fk);
+            return Math.round(Sk * ek)
+          })), yk(lk(ik), "getValueFromPosition", (function(kk) {
+            var ek = ik.state.limit,
+              Dk = ik.props,
+              fk = Dk.orientation,
+              Sk = Dk.min,
+              bk = Dk.max,
+              rk = Dk.step,
+              mk = (0, Pk.clamp)(kk, 0, ek) / (ek || 1),
+              Mk = rk * Math.round(mk * (bk - Sk) / rk),
+              Kk = "horizontal" === fk ? Mk + Sk : bk - Mk;
+            return (0, Pk.clamp)(Kk, Sk, bk)
+          })), yk(lk(ik), "position", (function(kk) {
+            var ek = ik.state.grab,
+              Dk = ik.props,
+              fk = Dk.orientation,
+              Sk = Dk.reverse,
+              bk = ik.slider,
+              rk = Yk.orientation[fk].coordinate,
+              mk = Sk ? Yk.orientation[fk].reverseDirection : Yk.orientation[fk].direction,
+              Mk = "client".concat((0, Pk.capitalize)(rk)),
+              Kk = kk.touches ? kk.touches[0][Mk] : kk[Mk],
+              xk = bk.getBoundingClientRect()[mk],
+              nk = Sk ? xk - Kk - ek : Kk - xk - ek;
+            return ik.getValueFromPosition(nk)
+          })), yk(lk(ik), "coordinates", (function(kk) {
+            var ek = ik.state,
+              Dk = ek.limit,
+              fk = ek.grab,
+              Sk = ik.props.orientation,
+              bk = ik.getValueFromPosition(kk),
+              rk = ik.getPositionFromValue(bk),
+              Pk = "horizontal" === Sk ? rk + fk : rk;
+            return {
+              fill: "horizontal" === Sk ? Pk : Dk - Pk,
+              handle: Pk,
+              label: Pk
+            }
+          })), yk(lk(ik), "renderLabels", (function(kk) {
+            return (0, mk.jsx)("ul", {
+              ref: function(kk) {
+                ik.labels = kk
+              },
+              className: (0, fk.default)("rangeslider__labels"),
+              children: kk
+            })
+          })), ik.state = {
+            active: !1,
+            limit: 0,
+            grab: 0
+          }, ik
+        }
+        return ek = bk, (ik = [{
+          key: "componentDidMount",
+          value: function() {
+            this.handleUpdate(), new rk.default(this.handleUpdate).observe(this.slider)
+          }
+        }, {
+          key: "render",
+          value: function() {
+            var kk = this,
+              ek = this.props,
+              ik = ek.value,
+              Dk = ek.orientation,
+              Sk = ek.className,
+              bk = ek.tooltip,
+              rk = ek.reverse,
+              Pk = ek.labels,
+              Mk = ek.min,
+              Kk = ek.max,
+              nk = ek.handleLabel,
+              Uk = this.state.active,
+              Hk = Yk.orientation[Dk].dimension,
+              wk = rk ? Yk.orientation[Dk].reverseDirection : Yk.orientation[Dk].direction,
+              lk = this.getPositionFromValue(ik),
+              pk = this.coordinates(lk),
+              Lk = yk({}, Hk, "".concat(pk.fill, "px")),
+              Ck = yk({}, wk, "".concat(pk.handle, "px")),
+              Ak = bk && Uk,
+              jk = [],
+              sk = Object.keys(Pk);
+            if (sk.length > 0) {
+              var dk, Vk = xk(sk = sk.sort((function(kk, ek) {
+                return rk ? kk - ek : ek - kk
+              })));
+              try {
+                for (Vk.s(); !(dk = Vk.n()).done;) {
+                  var Fk = dk.value,
+                    uk = this.getPositionFromValue(Fk),
+                    qk = this.coordinates(uk),
+                    Ik = yk({}, wk, "".concat(qk.label, "px"));
+                  jk.push((0, mk.jsx)("li", {
+                    className: (0, fk.default)("rangeslider__label-item"),
+                    "data-value": Fk,
+                    onMouseDown: this.handleDrag,
+                    onTouchStart: this.handleStart,
+                    onTouchEnd: this.handleEnd,
+                    style: Ik,
+                    children: this.props.labels[Fk]
+                  }, Fk))
+                }
+              } catch (zk) {
+                Vk.e(zk)
+              } finally {
+                Vk.f()
+              }
+            }
+            return (0, mk.jsxs)("div", {
+              ref: function(ek) {
+                kk.slider = ek
+              },
+              className: (0, fk.default)("rangeslider", "rangeslider-".concat(Dk), {
+                "rangeslider-reverse": rk
+              }, Sk),
+              onMouseDown: this.handleDrag,
+              onMouseUp: this.handleEnd,
+              onTouchStart: this.handleStart,
+              onTouchEnd: this.handleEnd,
+              "aria-valuemin": Mk,
+              "aria-valuemax": Kk,
+              "aria-valuenow": ik,
+              "aria-orientation": Dk,
+              children: [(0, mk.jsx)("div", {
+                className: "rangeslider__fill",
+                style: Lk
+              }), (0, mk.jsxs)("div", {
+                ref: function(ek) {
+                  kk.handle = ek
+                },
+                className: "rangeslider__handle",
+                onMouseDown: this.handleStart,
+                onTouchMove: this.handleDrag,
+                onTouchEnd: this.handleEnd,
+                onKeyDown: this.handleKeyDown,
+                style: Ck,
+                tabIndex: 0,
+                children: [Ak && (0, mk.jsx)("div", {
+                  ref: function(ek) {
+                    kk.tooltip = ek
+                  },
+                  className: "rangeslider__handle-tooltip",
+                  children: (0, mk.jsx)("span", {
+                    children: this.handleFormat(ik)
+                  })
+                }), (0, mk.jsx)("div", {
+                  className: "rangeslider__handle-label",
+                  children: nk
+                })]
+              }), Pk && this.renderLabels(jk)]
             })
           }
-        })]
-      })
+        }]) && Uk(ek.prototype, ik), Dk && Uk(ek, Dk), Object.defineProperty(ek, "prototype", {
+          writable: !1
+        }), bk
+      }(Sk.Component);
+    yk(Lk, "propTypes", {
+      min: bk.default.number,
+      max: bk.default.number,
+      step: bk.default.number,
+      value: bk.default.number,
+      orientation: bk.default.string,
+      tooltip: bk.default.bool,
+      reverse: bk.default.bool,
+      labels: bk.default.object,
+      handleLabel: bk.default.string,
+      format: bk.default.func,
+      onChangeStart: bk.default.func,
+      onChange: bk.default.func,
+      onChangeComplete: bk.default.func
+    }), yk(Lk, "defaultProps", {
+      min: 0,
+      max: 100,
+      step: 1,
+      value: 0,
+      orientation: "horizontal",
+      tooltip: !0,
+      reverse: !1,
+      labels: {},
+      handleLabel: ""
+    });
+    var Ck = Lk;
+    ek.default = Ck
+  },
+  4935: (kk, ek, ik) => {
+    var Dk;
+    ek.e = void 0;
+    var fk = ((Dk = ik(4937)) && Dk.__esModule ? Dk : {
+      default: Dk
+    }).default;
+    ek.e = fk
+  },
+  4941: (kk, ek) => {
+    Object.defineProperty(ek, "__esModule", {
+      value: !0
+    }), ek.capitalize = function(kk) {
+      return kk.charAt(0).toUpperCase() + kk.substr(1)
+    }, ek.clamp = function(kk, ek, ik) {
+      return Math.min(Math.max(kk, ek), ik)
     }
   },
-  6382: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => bQ,
-      e: () => YQ,
-      g: () => HQ,
-      j: () => xQ
-    });
-    var LQ = wQ(53),
-      qQ = wQ(6374),
-      oQ = wQ(1489),
-      DQ = wQ(6371),
-      kQ = wQ(6386),
-      vQ = wQ(1140);
-    const mQ = "shaderPackListingView",
-      uQ = "shaderPackListingFilterOpen";
+  4902: (kk, ek, ik) => {
+    var Dk = ik(4909);
 
-    function HQ() {
-      var QQ;
-      const [FQ, wQ] = (0, kQ.b)(mQ, qQ.E[0]);
-      return [null !== (QQ = qQ.E.find((QQ => QQ === FQ))) && void 0 !== QQ ? QQ : qQ.E[0], wQ]
-    }
+    function fk() {}
 
-    function bQ() {
-      (0, LQ.useEffect)((() => () => {
-        window.location.pathname.startsWith(DQ.W) || (0, DQ.l)()
-      }), [])
-    }
-
-    function YQ() {
-      return (0, kQ.b)(uQ, !1)
-    }
-
-    function xQ() {
-      const {
-        userContext: QQ,
-        isUserContextUpdating: FQ
-      } = (0, vQ.e)(), [wQ, qQ] = (0, LQ.useState)(null), DQ = (0, LQ.useRef)(new Set);
-
-      function kQ(QQ, FQ) {
-        qQ((wQ => {
-          const LQ = new Set(wQ);
-          return FQ ? LQ.add(QQ) : LQ.delete(QQ), LQ
-        }))
-      }
-      return (0, LQ.useEffect)((() => {
-        if (FQ) return;
-        let wQ = !1;
-        return oQ.b.getFavouriteShaderPacks(QQ).then((QQ => {
-          wQ || qQ(new Set(QQ))
-        })).catch((QQ => {
-          console.error("Failed to get favourite shader packs", QQ), wQ || qQ(new Set)
-        })), () => {
-          wQ = !0
-        }
-      }), [QQ, FQ]), {
-        isFavourite: QQ => null === wQ ? null : wQ.has(QQ),
-        toggle: function(FQ) {
-          if (null === wQ || DQ.current.has(FQ)) return;
-          DQ.current.add(FQ);
-          const LQ = !wQ.has(FQ);
-          kQ(FQ, LQ), (LQ ? oQ.b.favouriteShaderPack(QQ, FQ) : oQ.b.unfavouriteShaderPack(QQ, FQ)).catch((QQ => {
-            console.error("Failed to change a favourite shader pack", QQ), kQ(FQ, !LQ)
-          })).finally((() => {
-            DQ.current.delete(FQ)
-          }))
+    function Sk() {}
+    Sk.resetWarningCache = fk, kk.exports = function() {
+      function kk(kk, ek, ik, fk, Sk, bk) {
+        if (bk !== Dk) {
+          var rk = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw rk.name = "Invariant Violation", rk
         }
       }
-    }
-  },
-  6371: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      A: () => xQ,
-      C: () => eQ,
-      G: () => OQ,
-      H: () => uQ,
-      K: () => rQ,
-      N: () => AQ,
-      R: () => jQ,
-      U: () => zQ,
-      W: () => DQ,
-      Y: () => lQ,
-      Z: () => vQ,
-      bb: () => kQ,
-      d: () => MQ,
-      fb: () => TQ,
-      g: () => WQ,
-      gb: () => KQ,
-      j: () => tQ,
-      jb: () => GQ,
-      l: () => bQ,
-      mb: () => sQ,
-      p: () => HQ,
-      q: () => IQ,
-      u: () => YQ,
-      x: () => UQ,
-      z: () => aQ
-    });
-    var LQ = wQ(6374),
-      qQ = wQ(160),
-      oQ = wQ(4409);
-    const DQ = "/shader-packs",
-      kQ = `${DQ}/publish`;
 
-    function vQ(QQ) {
-      return `${DQ}/${encodeURIComponent(QQ)}`
-    }
-    let mQ = null;
-
-    function uQ(QQ) {
-      mQ = QQ
-    }
-
-    function HQ() {
-      return mQ
-    }
-
-    function bQ() {
-      mQ = null
-    }
-
-    function YQ(QQ) {
-      return QQ.playerHasRank("developer") || QQ.playerHasRank("admin")
-    }
-    const xQ = ["terrain", "water", "models", "sunShadows", "strict"],
-      AQ = {
-        terrain: "shaderPackListing:filterTerrain",
-        water: "shaderPackListing:filterWater",
-        models: "shaderPackListing:filterModels",
-        sunShadows: "shaderPackListing:filterShadows",
-        strict: "shaderPackListing:filterAllGames"
+      function ek() {
+        return kk
+      }
+      kk.isRequired = kk;
+      var ik = {
+        array: kk,
+        bigint: kk,
+        bool: kk,
+        func: kk,
+        number: kk,
+        object: kk,
+        string: kk,
+        symbol: kk,
+        any: kk,
+        arrayOf: ek,
+        element: kk,
+        elementType: kk,
+        instanceOf: ek,
+        node: kk,
+        objectOf: ek,
+        oneOf: ek,
+        oneOfType: ek,
+        shape: ek,
+        exact: ek,
+        checkPropTypes: Sk,
+        resetWarningCache: fk
       };
-
-    function tQ(QQ, FQ) {
-      return QQ.withFeatures.includes(FQ) ? "with" : QQ.withoutFeatures.includes(FQ) ? "without" : null
+      return ik.PropTypes = ik, ik
     }
+  },
+  4893: (kk, ek, ik) => {
+    kk.exports = ik(4902)()
+  },
+  4909: kk => {
+    kk.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  },
+  4939: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      default: () => jk
+    });
+    var Dk = function() {
+        if ("undefined" !== typeof Map) return Map;
 
-    function eQ(QQ) {
-      return null === QQ ? "with" : "with" === QQ ? "without" : null
-    }
+        function kk(kk, ek) {
+          var ik = -1;
+          return kk.some((function(kk, Dk) {
+            return kk[0] === ek && (ik = Dk, !0)
+          })), ik
+        }
+        return function() {
+          function ek() {
+            this.__entries__ = []
+          }
+          return Object.defineProperty(ek.prototype, "size", {
+            get: function() {
+              return this.__entries__.length
+            },
+            enumerable: !0,
+            configurable: !0
+          }), ek.prototype.get = function(ek) {
+            var ik = kk(this.__entries__, ek),
+              Dk = this.__entries__[ik];
+            return Dk && Dk[1]
+          }, ek.prototype.set = function(ek, ik) {
+            var Dk = kk(this.__entries__, ek);
+            ~Dk ? this.__entries__[Dk][1] = ik : this.__entries__.push([ek, ik])
+          }, ek.prototype.delete = function(ek) {
+            var ik = this.__entries__,
+              Dk = kk(ik, ek);
+            ~Dk && ik.splice(Dk, 1)
+          }, ek.prototype.has = function(ek) {
+            return !!~kk(this.__entries__, ek)
+          }, ek.prototype.clear = function() {
+            this.__entries__.splice(0)
+          }, ek.prototype.forEach = function(kk, ek) {
+            void 0 === ek && (ek = null);
+            for (var ik = 0, Dk = this.__entries__; ik < Dk.length; ik++) {
+              var fk = Dk[ik];
+              kk.call(ek, fk[1], fk[0])
+            }
+          }, ek
+        }()
+      }(),
+      fk = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      Sk = "undefined" !== typeof ik.g && ik.g.Math === Math ? ik.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      bk = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(Sk) : function(kk) {
+        return setTimeout((function() {
+          return kk(Date.now())
+        }), 1e3 / 60)
+      };
+    var rk = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      Pk = "undefined" !== typeof MutationObserver,
+      mk = function() {
+        function kk() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(kk, ek) {
+            var ik = !1,
+              Dk = !1,
+              fk = 0;
 
-    function MQ(QQ) {
-      return "with" === QQ ? "only" : null === QQ ? "include" : void 0
-    }
+            function Sk() {
+              ik && (ik = !1, kk()), Dk && Pk()
+            }
 
-    function GQ(QQ, FQ) {
-      const wQ = tQ(QQ, FQ),
-        LQ = QQ => QQ.filter((QQ => QQ !== FQ));
-      return {
-        withFeatures: null === wQ ? [...QQ.withFeatures, FQ] : LQ(QQ.withFeatures),
-        withoutFeatures: "with" === wQ ? [...QQ.withoutFeatures, FQ] : LQ(QQ.withoutFeatures)
-      }
-    }
-    const pQ = "section",
-      cQ = "sort",
-      CQ = "filters",
-      SQ = "q",
-      iQ = "banned",
-      WQ = "popular",
-      RQ = "strict";
+            function rk() {
+              bk(Sk)
+            }
 
-    function OQ(QQ) {
-      var FQ, wQ, qQ;
-      const DQ = QQ.get(pQ),
-        kQ = (null !== (FQ = QQ.get(CQ)) && void 0 !== FQ ? FQ : RQ).split(","),
-        vQ = QQ.get(iQ);
-      return {
-        section: "favourites" === DQ || "mine" === DQ ? DQ : "explore",
-        sort: null !== (wQ = LQ.x.find((FQ => FQ === QQ.get(cQ)))) && void 0 !== wQ ? wQ : WQ,
-        withFeatures: xQ.filter((QQ => kQ.includes(QQ) && !kQ.includes(`-${QQ}`))),
-        withoutFeatures: xQ.filter((QQ => kQ.includes(`-${QQ}`))),
-        searchQuery: (null === (qQ = QQ.get(SQ)) || void 0 === qQ ? void 0 : qQ.slice(0, LQ.I)) || null,
-        pageNumber: (0, oQ.d)(QQ.get(oQ.b)),
-        banned: "only" === vQ ? "with" : "include" === vQ ? null : "without"
-      }
-    }
-
-    function sQ(QQ, FQ) {
-      var wQ;
-      const LQ = NQ(FQ);
-      (0, oQ.g)(QQ, pQ, "explore" === FQ.section ? null : FQ.section), (0, oQ.g)(QQ, cQ, FQ.sort === WQ ? null : FQ.sort), (0, oQ.g)(QQ, CQ, LQ === RQ ? null : LQ), (0, oQ.g)(QQ, SQ, FQ.searchQuery), (0, oQ.g)(QQ, iQ, null !== (wQ = MQ(FQ.banned)) && void 0 !== wQ ? wQ : null), (0, oQ.i)(QQ, FQ.pageNumber)
-    }
-
-    function rQ(QQ) {
-      const FQ = new URLSearchParams;
-      return sQ(FQ, {
-        section: "explore",
-        sort: WQ,
-        withFeatures: "strict" === QQ ? [QQ] : [QQ, "strict"],
-        withoutFeatures: [],
-        searchQuery: null,
-        pageNumber: 1,
-        banned: "without"
-      }), `${DQ}?${FQ.toString()}`
-    }
-
-    function IQ(QQ) {
-      return NQ(QQ) === RQ
-    }
-
-    function UQ(QQ) {
-      return null !== QQ.searchQuery || "with" === QQ.banned || NQ(QQ) !== RQ
-    }
-
-    function NQ(QQ) {
-      return xQ.flatMap((FQ => {
-        const wQ = tQ(QQ, FQ);
-        return "with" === wQ ? [FQ] : "without" === wQ ? [`-${FQ}`] : []
-      })).join(",")
-    }
-    const TQ = {
-        popular: "shaderPackListing:sortPopular",
-        updated: "shaderPackListing:sortUpdated",
-        newest: "shaderPackListing:sortNewest"
+            function Pk() {
+              var kk = Date.now();
+              if (ik) {
+                if (kk - fk < 2) return;
+                Dk = !0
+              } else ik = !0, Dk = !1, setTimeout(rk, ek);
+              fk = kk
+            }
+            return Pk
+          }(this.refresh.bind(this), 20)
+        }
+        return kk.prototype.addObserver = function(kk) {
+          ~this.observers_.indexOf(kk) || this.observers_.push(kk), this.connected_ || this.connect_()
+        }, kk.prototype.removeObserver = function(kk) {
+          var ek = this.observers_,
+            ik = ek.indexOf(kk);
+          ~ik && ek.splice(ik, 1), !ek.length && this.connected_ && this.disconnect_()
+        }, kk.prototype.refresh = function() {
+          this.updateObservers_() && this.refresh()
+        }, kk.prototype.updateObservers_ = function() {
+          var kk = this.observers_.filter((function(kk) {
+            return kk.gatherActive(), kk.hasActive()
+          }));
+          return kk.forEach((function(kk) {
+            return kk.broadcastActive()
+          })), kk.length > 0
+        }, kk.prototype.connect_ = function() {
+          fk && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), Pk ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+            attributes: !0,
+            childList: !0,
+            characterData: !0,
+            subtree: !0
+          })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
+        }, kk.prototype.disconnect_ = function() {
+          fk && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, kk.prototype.onTransitionEnd_ = function(kk) {
+          var ek = kk.propertyName,
+            ik = void 0 === ek ? "" : ek;
+          rk.some((function(kk) {
+            return !!~ik.indexOf(kk)
+          })) && this.refresh()
+        }, kk.getInstance = function() {
+          return this.instance_ || (this.instance_ = new kk), this.instance_
+        }, kk.instance_ = null, kk
+      }(),
+      Mk = function(kk, ek) {
+        for (var ik = 0, Dk = Object.keys(ek); ik < Dk.length; ik++) {
+          var fk = Dk[ik];
+          Object.defineProperty(kk, fk, {
+            value: ek[fk],
+            enumerable: !1,
+            writable: !1,
+            configurable: !0
+          })
+        }
+        return kk
       },
-      KQ = {
-        forest: "shaderPackListing:viewForest",
-        desert: "shaderPackListing:viewDesert",
-        water: "shaderPackListing:viewWater",
-        night: "shaderPackListing:viewNight",
-        cave: "shaderPackListing:viewCave"
-      };
+      Kk = function(kk) {
+        return kk && kk.ownerDocument && kk.ownerDocument.defaultView || Sk
+      },
+      xk = pk(0, 0, 0, 0);
 
-    function zQ(QQ) {
-      return Math.round(100 * Math.max(0, 1 - 1 / QQ))
+    function nk(kk) {
+      return parseFloat(kk) || 0
     }
 
-    function lQ(QQ, FQ, wQ, qQ) {
-      const oQ = [];
-      QQ.isBanned && oQ.push({
-        tone: "warning",
-        text: qQ("shaderPackListing:ownerBanned"),
-        detail: null
-      });
-      const {
-        pending: DQ
-      } = QQ;
-      if (null === QQ.brokenError || DQ && !DQ.error || oQ.push({
-          tone: "warning",
-          text: qQ("shaderPackListing:ownerBroken"),
-          detail: QQ.brokenError
-        }), null !== DQ && void 0 !== DQ && DQ.error) oQ.push({
-        tone: "warning",
-        text: qQ(FQ ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, LQ.l)(DQ.error) ? null : DQ.error
-      });
-      else if (DQ) {
-        const QQ = null === DQ.renderNotBefore ? 0 : DQ.renderNotBefore - wQ,
-          LQ = String(Math.ceil(QQ / 6e4)),
-          kQ = qQ(FQ ? QQ > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : QQ > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: LQ
-          });
-        oQ.push({
-          tone: "info",
-          text: kQ,
-          detail: null
+    function Uk(kk) {
+      for (var ek = [], ik = 1; ik < arguments.length; ik++) ek[ik - 1] = arguments[ik];
+      return ek.reduce((function(ek, ik) {
+        return ek + nk(kk["border-" + ik + "-width"])
+      }), 0)
+    }
+
+    function Hk(kk) {
+      var ek = kk.clientWidth,
+        ik = kk.clientHeight;
+      if (!ek && !ik) return xk;
+      var Dk = Kk(kk).getComputedStyle(kk),
+        fk = function(kk) {
+          for (var ek = {}, ik = 0, Dk = ["top", "right", "bottom", "left"]; ik < Dk.length; ik++) {
+            var fk = Dk[ik],
+              Sk = kk["padding-" + fk];
+            ek[fk] = nk(Sk)
+          }
+          return ek
+        }(Dk),
+        Sk = fk.left + fk.right,
+        bk = fk.top + fk.bottom,
+        rk = nk(Dk.width),
+        Pk = nk(Dk.height);
+      if ("border-box" === Dk.boxSizing && (Math.round(rk + Sk) !== ek && (rk -= Uk(Dk, "left", "right") + Sk), Math.round(Pk + bk) !== ik && (Pk -= Uk(Dk, "top", "bottom") + bk)), ! function(kk) {
+          return kk === Kk(kk).document.documentElement
+        }(kk)) {
+        var mk = Math.round(rk + Sk) - ek,
+          Mk = Math.round(Pk + bk) - ik;
+        1 !== Math.abs(mk) && (rk -= mk), 1 !== Math.abs(Mk) && (Pk -= Mk)
+      }
+      return pk(fk.left, fk.top, rk, Pk)
+    }
+    var wk = "undefined" !== typeof SVGGraphicsElement ? function(kk) {
+      return kk instanceof Kk(kk).SVGGraphicsElement
+    } : function(kk) {
+      return kk instanceof Kk(kk).SVGElement && "function" === typeof kk.getBBox
+    };
+
+    function lk(kk) {
+      return fk ? wk(kk) ? function(kk) {
+        var ek = kk.getBBox();
+        return pk(0, 0, ek.width, ek.height)
+      }(kk) : Hk(kk) : xk
+    }
+
+    function pk(kk, ek, ik, Dk) {
+      return {
+        x: kk,
+        y: ek,
+        width: ik,
+        height: Dk
+      }
+    }
+    var yk = function() {
+        function kk(kk) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = pk(0, 0, 0, 0), this.target = kk
+        }
+        return kk.prototype.isActive = function() {
+          var kk = lk(this.target);
+          return this.contentRect_ = kk, kk.width !== this.broadcastWidth || kk.height !== this.broadcastHeight
+        }, kk.prototype.broadcastRect = function() {
+          var kk = this.contentRect_;
+          return this.broadcastWidth = kk.width, this.broadcastHeight = kk.height, kk
+        }, kk
+      }(),
+      Yk = function(kk, ek) {
+        var ik = function(kk) {
+          var ek = kk.x,
+            ik = kk.y,
+            Dk = kk.width,
+            fk = kk.height,
+            Sk = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            bk = Object.create(Sk.prototype);
+          return Mk(bk, {
+            x: ek,
+            y: ik,
+            width: Dk,
+            height: fk,
+            top: ik,
+            right: ek + Dk,
+            bottom: fk + ik,
+            left: ek
+          }), bk
+        }(ek);
+        Mk(this, {
+          target: kk,
+          contentRect: ik
         })
-      }
-      return QQ.listed || oQ.push({
-        tone: "info",
-        text: qQ("shaderPackListing:ownerUnlisted"),
-        detail: null
-      }), oQ
-    }
-
-    function jQ(QQ) {
-      return Math.max(1, Math.round(QQ / 1024))
-    }
-
-    function aQ(QQ, FQ, wQ) {
-      return QQ instanceof qQ.d && QQ.errorMessageForUser ? QQ.errorMessageForUser : FQ(wQ)
-    }
-  },
-  6386: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => oQ
-    });
-    var LQ = wQ(53),
-      qQ = wQ(27);
-
-    function oQ(QQ, FQ) {
-      var wQ;
-      const [oQ, DQ] = (0, LQ.useState)(null !== (wQ = qQ.i.getItem(QQ)) && void 0 !== wQ ? wQ : FQ);
-      return [oQ, FQ => {
-        qQ.i.setItem(QQ, FQ), DQ(FQ)
-      }]
-    }
-  },
-  6485: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => qQ,
-      f: () => oQ
-    });
-    var LQ = wQ(27);
-    const qQ = "shaderPack";
-    async function oQ() {
-      var QQ;
-      let FQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (QQ = await LQ.h.getItem(qQ, FQ)) && void 0 !== QQ ? QQ : null
-    }
-  },
-  6374: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      B: () => DQ,
-      E: () => LQ,
-      H: () => bQ,
-      I: () => uQ,
-      J: () => GQ,
-      L: () => HQ,
-      O: () => mQ,
-      c: () => YQ,
-      e: () => AQ,
-      h: () => xQ,
-      l: () => MQ,
-      n: () => cQ,
-      p: () => vQ,
-      t: () => qQ,
-      u: () => pQ,
-      x: () => oQ,
-      z: () => kQ
-    });
-    const LQ = ["forest", "desert", "water", "night", "cave"];
-    const qQ = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
-        }
       },
-      oQ = ["popular", "updated", "newest"],
-      DQ = 3,
-      kQ = 32,
-      vQ = 300;
-
-    function mQ(QQ, FQ) {
-      return QQ.slice(0, FQ).replace(/[\uD800-\uDBFF]$/, "")
-    }
-    const uQ = 64,
-      HQ = 512,
-      bQ = 18e5;
-    const YQ = "Bloxdhub",
-      xQ = "https://bloxdhub.com/shaders";
-
-    function AQ(QQ) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(QQ)}`
-    }
-    const tQ = "Screenshot generation failed.",
-      eQ = "Its screenshots couldn't be generated:";
-
-    function MQ(QQ) {
-      var FQ;
-      return QQ === tQ || null !== (FQ = null === QQ || void 0 === QQ ? void 0 : QQ.startsWith(eQ)) && void 0 !== FQ && FQ
-    }
-
-    function GQ(QQ, FQ) {
-      return `shaderPacks/${QQ}/${FQ}.json`
-    }
-
-    function pQ(QQ, FQ, wQ, LQ) {
-      return null === FQ.renderId ? cQ(QQ, FQ.baselineVersion, wQ, LQ) : `${QQ}/${function(QQ,FQ,wQ,LQ){return`shaderPacks/${QQ}/${FQ}/${wQ}-${LQ}.webp`}(FQ.packId,FQ.renderId,wQ,LQ)}`
-    }
-
-    function cQ(QQ, FQ, wQ, LQ) {
-      return `${QQ}/${function(QQ,FQ,wQ){return`shaderPacks/baseline/${QQ}/${FQ}-${wQ}.webp`}(FQ,wQ,LQ)}`
-    }
+      Lk = function() {
+        function kk(kk, ek, ik) {
+          if (this.activeObservations_ = [], this.observations_ = new Dk, "function" !== typeof kk) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = kk, this.controller_ = ek, this.callbackCtx_ = ik
+        }
+        return kk.prototype.observe = function(kk) {
+          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+          if ("undefined" !== typeof Element && Element instanceof Object) {
+            if (!(kk instanceof Kk(kk).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var ek = this.observations_;
+            ek.has(kk) || (ek.set(kk, new yk(kk)), this.controller_.addObserver(this), this.controller_.refresh())
+          }
+        }, kk.prototype.unobserve = function(kk) {
+          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+          if ("undefined" !== typeof Element && Element instanceof Object) {
+            if (!(kk instanceof Kk(kk).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var ek = this.observations_;
+            ek.has(kk) && (ek.delete(kk), ek.size || this.controller_.removeObserver(this))
+          }
+        }, kk.prototype.disconnect = function() {
+          this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
+        }, kk.prototype.gatherActive = function() {
+          var kk = this;
+          this.clearActive(), this.observations_.forEach((function(ek) {
+            ek.isActive() && kk.activeObservations_.push(ek)
+          }))
+        }, kk.prototype.broadcastActive = function() {
+          if (this.hasActive()) {
+            var kk = this.callbackCtx_,
+              ek = this.activeObservations_.map((function(kk) {
+                return new Yk(kk.target, kk.broadcastRect())
+              }));
+            this.callback_.call(kk, ek, kk), this.clearActive()
+          }
+        }, kk.prototype.clearActive = function() {
+          this.activeObservations_.splice(0)
+        }, kk.prototype.hasActive = function() {
+          return this.activeObservations_.length > 0
+        }, kk
+      }(),
+      Ck = "undefined" !== typeof WeakMap ? new WeakMap : new Dk,
+      Ak = function kk(ek) {
+        if (!(this instanceof kk)) throw new TypeError("Cannot call a class as a function.");
+        if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+        var ik = mk.getInstance(),
+          Dk = new Lk(ek, ik, this);
+        Ck.set(this, Dk)
+      };
+    ["observe", "unobserve", "disconnect"].forEach((function(kk) {
+      Ak.prototype[kk] = function() {
+        var ek;
+        return (ek = Ck.get(this))[kk].apply(ek, arguments)
+      }
+    }));
+    const jk = "undefined" !== typeof Sk.ResizeObserver ? Sk.ResizeObserver : Ak
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

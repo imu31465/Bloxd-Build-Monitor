@@ -1,37 +1,40 @@
 export const id = 170;
 export const ids = [170];
 export const modules = {
-  8762: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8787: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["Claim an island, grab the loot and fight for every diamond you can get. Bloxd Sky Islands is a scored PvP match across floating islands, where you explore, mine resources and battle for diamonds and glory. Each phase brings better loot, and whoever has the highest score at the end wins. Don't let the name fool you, it isn't an island-growing game like Skyblock or One Block. There is a PvE mode, though, if you'd rather fight mobs."],
-      howToPlay: ["Place your Protector on an island to claim it. Other players can't change blocks or open chests there, and you'll always respawn on it. You only get one island at a time, but you can release it and claim another later. Then off you go to explore, mine and grab loot as it spawns on the islands.", "Every match has 4 phases. It starts with Gather, when resources and tools spawn. Arms Race comes next with bows and armour. Then Escalation adds explosives and diamond gear, and finally Chaos turns up with guns and rockets. Your score is your kills plus the diamonds you're holding (diamond blocks count as several diamonds). Get knocked out and you'll drop some of your diamonds and items, though you do get a short bit of spawn protection when you come back."],
-      features: ["Solo, Teams, Blitz and PvE Modes", "Claim Your Own Island with a Protector", "4 Phases: Gather, Arms Race, Escalation and Chaos", "Bows, Explosives, Guns, Rockets and Diamond Gear", "Loot Drops, Diamond Surges and Diamond Bounties", "Quests, Perks and Buried Treasure", "Gold, Iron and Wood Helmets for the Top 3 Next Round"],
-      tips: ["Claim an island early so you've got a safe base to respawn on", "Grab tools and resources during Gather, before the big fights kick off", "Hang on to your diamonds. They count towards your score", "Watch the loot timer and get to new drops first", "Don't camp on the diamond island while you're in the lead, or you'll get a bounty and hunters will be able to see you", "Stay for the next round and you get to pick a bonus to start with", "Stuck? Use the shop to teleport to a random island"],
-      similarGames: ["skywars", "bedwars", "skyblock", "oneBlock"],
+    const Dk = {
+      whatIs: ["Infinite blocks, custom tools and no limits on what you build. Bloxd Creative is the free building mode where you can get creating straight away. Build in a shared world with players from all over, or set up your own free build server and create with your friends online. There's no health bar and nobody can attack you, so all you have to think about is your build."],
+      howToPlay: ["Open the creative menu and grab any block or item you want. It's all sorted into categories like Building Blocks, Coloured Blocks, Nature, Decoration, Utility, Tools and Vehicles, and World Tools. Place as many as you like, fly around your build and make anything from a tiny cottage to an entire city.", "Want a completely blank canvas? Try Superflat, a world of endless flat grass that's great for big projects. In the normal Creative world, use Teleport To Fresh Land to jump to a random empty spot so nobody gets in your way. Place a Protector and other players can't change blocks or open chests in that area. If you'd like a plot of your own that's saved for good, Plots is the one to try."],
+      features: ["Infinite Blocks and Items from the Creative Menu", "Fly Freely Around Your Builds", "Superflat Worlds for Big Builds", "Teleport To Fresh Land for Uninterrupted Building", "Free Private Build Servers to Create with Friends", "Extra Tools for Server Owners, Including WorldBuilder and Code Editing", "Protectors to Keep Your Builds Safe", "No Health Bar and No Attacks from Other Players"],
+      tips: ["Teleport To Fresh Land is the quickest way to find some empty space", "In public lobbies, build away from spawn, because blocks near spawn reset every few hours", "Put down a Protector so other players can't change your build or open your chests", "Use /tp to get around fast, and type /help to see all the commands", "Saplings are limited in Creative, so plan your trees carefully", "Free cam lets you check your build from every angle", "If you want your build to stay exactly as you left it, start a private build server"],
+      similarGames: ["classic", "classic_survival", "plots", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Bloxd Sky Islands?",
-        answer: "A round-based PvP mode. You claim a floating island, gear up through four phases and battle other players for the top score."
+        question: "What is Bloxd Creative?",
+        answer: "Bloxd Creative is the creative building mode in Bloxd.io. You get infinite blocks and custom tools to build whatever you like, on your own or with friends."
       }, {
-        question: "How is the winner decided in Bloxd Sky Islands?",
-        answer: "Whoever has the highest score when time runs out. Score is your kills plus the diamonds you're holding, and in Teams the highest-scoring team takes it."
+        question: "Can you fly in Bloxd Creative?",
+        answer: "Yes, you can fly in Creative, so you can reach every bit of your build."
       }, {
-        question: "How do I claim an island in Sky Islands?",
-        answer: "Put your Protector down on an island. Nobody else can change its blocks or open its chests, and you'll always respawn there."
+        question: "What is Superflat in Bloxd?",
+        answer: "A Creative world made of endless flat grass. It gives you a clean canvas for your biggest projects."
       }, {
-        question: "Which modes does Sky Islands have?",
-        answer: "Solo, Teams, Blitz (a faster match) and PvE. In PvE your score comes from mob kills instead of player kills, so you claim an island and go after mobs."
+        question: "How do I make a free build server in Bloxd?",
+        answer: "Start your own private lobby for free and invite your friends. As the owner you also get extra tools like WorldBuilder."
       }, {
-        question: "Where do you find diamonds in Sky Islands?",
-        answer: "Mine them, grab them from loot drops and Diamond Surges, or win fights for them. Players drop some of their diamonds when they're knocked out."
+        question: "Can you use TNT in Bloxd Creative?",
+        answer: "Not in public Creative worlds. You can't take explosives from the menu or craft them, so nobody can blow up other people's builds."
       }, {
-        question: "What is a diamond bounty?",
-        answer: "If you're one of the top three scorers and you stay on the diamond island too long, you get a bounty and hunters can see you. Move to another island to get rid of it."
+        question: "Why did my build disappear in Bloxd Creative?",
+        answer: "In public lobbies, blocks near spawn reset every few hours; a message shows when you cross the edge of that area. Build further away, use Teleport To Fresh Land, or start a private build server, where nothing resets unless its owner turns on Enable Spawn Reset."
+      }, {
+        question: "What's the difference between Creative and Plots?",
+        answer: "Creative is an open shared world. You build wherever you want and guard areas with Protectors. In Plots you claim your own 91\xd791 plot that only you and the players you add can change, and it's saved for good once you've changed 500 blocks."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

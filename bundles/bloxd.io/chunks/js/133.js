@@ -1,637 +1,757 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  35943: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => kQ,
-      e: () => mQ,
-      h: () => DQ,
-      k: () => HQ
+  6451: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      loadPageShaderPackCompiler: () => ne
     });
-    var LQ = wQ(35929),
-      qQ = wQ(5);
-    const oQ = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
-
-    function DQ(QQ) {
-      if (QQ instanceof WebAssembly.RuntimeError) return !0;
-      const FQ = QQ instanceof Error ? QQ.stack : void 0;
-      return "string" === typeof FQ && oQ.test(FQ)
-    }
-
-    function kQ(QQ, FQ, wQ) {
-      var qQ;
-      const DQ = QQ instanceof Error ? QQ.name : "thrown",
-        kQ = (QQ instanceof Error && null !== (qQ = QQ.stack) && void 0 !== qQ ? qQ : "").split("\n").filter((QQ => oQ.test(QQ))).slice(0, 8).map((QQ => QQ.trim())),
-        vQ = null === FQ ? "wasm memory unknown" : `wasm memory ${Math.round(FQ/2**20)} MB`,
-        mQ = null === wQ.panic ? "" : `, panic: ${(0,LQ.k)(wQ.panic)}`,
-        uQ = `${DQ}: ${QQ instanceof Error?QQ.message:String(QQ)}`;
-      return `${(0,LQ.o)(wQ.kind,wQ.refusedBytes)} ${uQ} (${vQ})${mQ}${kQ.length>0?` | ${kQ.join(" < ")}`:""}`
-    }
-    const vQ = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
-
-    function mQ(QQ) {
-      var FQ;
-      let wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(QQ instanceof Error) || !vQ.test(QQ.message)) return {};
-      if (!("detached" in wQ)) return {
-        arrayBufferDetached: "absent"
-      };
-      return {
-        arrayBufferDetached: (0, qQ.P)(null === (FQ = (0, qQ.K)(wQ, "detached")) || void 0 === FQ ? void 0 : FQ.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
-      }
-    }
-    const uQ = 500;
-
-    function HQ(QQ) {
-      let FQ = "[object Object]";
-      try {
-        FQ = String(QQ)
-      } catch {}
-      if ("[object Object]" !== FQ) return FQ;
-      try {
-        var wQ, LQ;
-        return null !== (wQ = null === (LQ = JSON.stringify(QQ)) || void 0 === LQ ? void 0 : LQ.slice(0, uQ)) && void 0 !== wQ ? wQ : FQ
-      } catch {
-        return FQ
-      }
-    }
-  },
-  35962: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => PQ,
-      d: () => dQ,
-      h: () => yQ,
-      l: () => gQ
+    var Dk = {};
+    ik.r(Dk), ik.d(Dk, {
+      BDk: () => fk,
+      B5: () => Sk,
+      default: () => Tk,
+      cDk: () => bk,
+      TDk: () => rk,
+      initSync: () => ck,
+      pK: () => Pk,
+      uik: () => mk,
+      oDk: () => Mk,
+      ZDk: () => Kk,
+      sF: () => xk,
+      ODk: () => nk,
+      jF: () => Uk,
+      gDk: () => Hk
     });
-    var LQ = wQ(2809),
-      qQ = wQ(2820),
-      oQ = wQ(6446),
-      DQ = wQ(4540),
-      kQ = wQ(2813),
-      vQ = wQ(2811);
-    const mQ = "bloxd-wasmDownloaded",
-      uQ = 12;
-
-    function HQ(QQ) {
-      return QQ.pathname.slice(QQ.pathname.lastIndexOf("/") + 1)
-    }
-
-    function bQ() {
-      try {
-        if ("undefined" === typeof localStorage) return null;
-        const QQ = JSON.parse(localStorage.getItem(mQ) ?? "[]");
-        return Array.isArray(QQ) ? QQ.filter((QQ => "string" === typeof QQ)) : []
-      } catch (QQ) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", QQ), null
+    class fk {
+      static __wrap(kk) {
+        const ek = Object.create(fk.prototype);
+        return ek.__wbg_ptr = kk, lk.register(ek, ek.__wbg_ptr, ek), ek
       }
-    }
-    const YQ = Reflect.apply,
-      xQ = "undefined" === typeof Worker ? void 0 : Worker,
-      AQ = xQ?.prototype.postMessage,
-      tQ = xQ?.prototype.terminate,
-      eQ = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      MQ = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      GQ = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      pQ = function() {
+      __destroy_into_raw() {
+        const kk = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, lk.unregister(this), kk
+      }
+      free() {
+        const kk = this.__destroy_into_raw();
+        tk.yxVu(kk, 0)
+      }
+      get errorsJson() {
+        let kk, ek;
         try {
-          return (0, DQ.g)(xQ, "Worker", !0) && (0, DQ.g)(AQ, "postMessage") && (0, DQ.g)(tQ, "terminate") && (0, DQ.g)(GQ, "buffer") && void 0 !== eQ && void 0 !== MQ
-        } catch {
-          return !1
-        }
-      }();
-    let cQ = !1;
-
-    function CQ() {
-      return pQ && !cQ
-    }
-    class SQ {
-      worker = null;
-      failed = !1;
-      constructor() {
-        if (CQ()) try {
-          this.worker = WQ(), YQ(eQ, this.worker, ["error", () => {
-            this.failed = !0
-          }])
-        } catch {
-          this.stop()
+          const ik = tk.H18f(this.__wbg_ptr);
+          return kk = ik[0], ek = ik[1], Ak(ik[0], ik[1])
+        } finally {
+          tk.DXat(kk, ek, 1)
         }
       }
-      take() {
-        const QQ = this.worker;
-        if (this.worker = null, null !== QQ && this.failed) throw YQ(tQ, QQ, []), new Error("it did not run");
-        return QQ
+      get features() {
+        const kk = tk.S36g(this.__wbg_ptr);
+        var ek = yk(kk[0], kk[1]);
+        return tk.DXat(kk[0], 4 * kk[1], 4), ek
       }
-      stop() {
-        const QQ = this.worker;
-        this.worker = null, null !== QQ && YQ(tQ, QQ, [])
+      get hooks() {
+        const kk = tk.s4Ns(this.__wbg_ptr);
+        var ek = Yk(kk[0], kk[1]).slice();
+        return tk.DXat(kk[0], 1 * kk[1], 1), ek
       }
-    }
-    class iQ {
-      decoded;
-      worker;
-      reject;
-      constructor(QQ, FQ, wQ, LQ, oQ) {
+      mapValidationMessage(kk, ek, ik, Dk, fk) {
+        let Sk, bk;
         try {
-          this.worker = oQ?.take() ?? WQ()
-        } catch (mQ) {
-          throw cQ = !0, new Error(`The zstd decoder's worker did not start: ${(0,kQ.d)(mQ)}`)
+          const mk = tk.Ybbn(this.__wbg_ptr, kk, ek, ik, pk(Dk), pk(fk));
+          var rk = mk[0],
+            Pk = mk[1];
+          if (mk[3]) throw rk = 0, Pk = 0, zk(mk[2]);
+          return Sk = rk, bk = Pk, Ak(rk, Pk)
+        } finally {
+          tk.DXat(Sk, bk, 1)
         }
-        const DQ = this.worker;
-        this.decoded = (0, qQ.h)(((FQ, qQ) => {
-          this.reject = qQ;
-          const oQ = (QQ, FQ) => {
-            YQ(eQ, DQ, [QQ, FQ])
-          };
-          oQ("message", (QQ => {
-            LQ();
-            try {
-              const LQ = YQ(MQ, QQ, []);
-              if (!0 === LQ) FQ();
-              else {
-                if ("string" === typeof LQ) throw LQ.startsWith(kQ.b) && (cQ = !0), new Error(LQ);
-                wQ(LQ, YQ(vQ.C, LQ, []))
-              }
-            } catch (mQ) {
-              qQ(mQ)
-            }
-          })), oQ("error", (() => {
-            cQ = !0, qQ(new Error("The zstd decoder's worker did not run"))
-          })), oQ("messageerror", (() => {
-            qQ(new Error(`${QQ}'s decoder sent a piece that could not be read`))
-          }))
-        })), (0, vQ.hb)(this.decoded), YQ(AQ, DQ, [
-          [QQ, FQ]
-        ])
       }
-      push(QQ) {
-        YQ(AQ, this.worker, [QQ, [YQ(GQ, QQ, [])]])
+      get moduleCodes() {
+        const kk = tk.ypys(this.__wbg_ptr);
+        var ek = yk(kk[0], kk[1]);
+        return tk.DXat(kk[0], 4 * kk[1], 4), ek
       }
-      end() {
-        YQ(AQ, this.worker, [null])
+      get offInStrictJson() {
+        let kk, ek;
+        try {
+          const ik = tk.awsx(this.__wbg_ptr);
+          return kk = ik[0], ek = ik[1], Ak(ik[0], ik[1])
+        } finally {
+          tk.DXat(kk, ek, 1)
+        }
       }
-      markWorkerFailed() {
-        cQ = !0
+      get reads() {
+        const kk = tk.U5JA(this.__wbg_ptr);
+        var ek = yk(kk[0], kk[1]);
+        return tk.DXat(kk[0], 4 * kk[1], 4), ek
       }
-      fail(QQ) {
-        this.reject(QQ), this.terminate()
+      get validationModuleCodes() {
+        const kk = tk.CHhG(this.__wbg_ptr);
+        var ek = yk(kk[0], kk[1]);
+        return tk.DXat(kk[0], 4 * kk[1], 4), ek
       }
-      terminate() {
-        YQ(tQ, this.worker, [])
+      get validationModuleKeys() {
+        const kk = tk.N48Y(this.__wbg_ptr);
+        var ek = Yk(kk[0], kk[1]).slice();
+        return tk.DXat(kk[0], 1 * kk[1], 1), ek
+      }
+      get variantFlags() {
+        const kk = tk.htzm(this.__wbg_ptr);
+        var ek = Yk(kk[0], kk[1]).slice();
+        return tk.DXat(kk[0], 1 * kk[1], 1), ek
       }
     }
 
-    function WQ() {
-      if (globalThis.Worker !== xQ) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(wQ.p + wQ.u(65), wQ.b), {
-        name: "wasmZstdDecoder",
-        type: "module"
-      })
-    }
-    const RQ = Reflect.apply,
-      OQ = ArrayBuffer,
-      sQ = "undefined" === typeof Response ? void 0 : Response,
-      rQ = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      IQ = function() {
-        let QQ;
-        void 0 !== rQ && new rQ({
-          __proto__: null,
-          start(FQ) {
-            const {
-              enqueue: wQ,
-              close: LQ,
-              error: qQ
-            } = Object.getPrototypeOf(FQ);
-            QQ = {
-              enqueue: wQ,
-              close: LQ,
-              error: qQ
-            }
-          }
-        }, {
-          __proto__: null
-        });
-        return QQ
-      }(),
-      UQ = function() {
-        try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== IQ && (0, DQ.g)(sQ, "Response", !0) && (0, DQ.g)(rQ, "ReadableStream", !0) && (0, DQ.g)(IQ.enqueue, "enqueue") && (0, DQ.g)(IQ.close, "close") && (0, DQ.g)(IQ.error, "error") && (0, DQ.g)(vQ.mb, "body") && (0, DQ.g)(vQ.$, "getReader") && (0, DQ.g)(vQ.jb, "read")
-        } catch {
-          return !1
-        }
-      }();
-    async function NQ(QQ, FQ, wQ, LQ, oQ, DQ, mQ) {
-      const uQ = new OQ(FQ),
-        {
-          controller: HQ,
-          compiled: bQ
-        } = function(QQ) {
-          try {
-            let QQ;
-            const FQ = new rQ({
-                __proto__: null,
-                start(FQ) {
-                  QQ = FQ
-                }
-              }, {
-                __proto__: null
-              }),
-              wQ = new sQ(FQ, {
-                __proto__: null,
-                headers: {
-                  __proto__: null,
-                  "Content-Type": "application/wasm"
-                }
-              });
-            return {
-              controller: QQ,
-              compiled: (0, vQ.hb)((0, vQ.J)((0, vQ.wb)(wQ)))
-            }
-          } catch (FQ) {
-            throw new Error(`${QQ} could not be streamed into a compile: ${(0,kQ.d)(FQ)}`)
-          }
-        }(QQ),
-        {
-          enqueue: YQ,
-          close: xQ,
-          error: AQ
-        } = IQ,
-        tQ = QQ => {
-          try {
-            RQ(AQ, HQ, [QQ])
-          } catch {}
-        };
-      let eQ = 0;
-      const MQ = (wQ, LQ) => {
-        if (eQ + LQ > FQ) throw new Error(`${QQ} decoded past its module's ${FQ} bytes`);
-        RQ(vQ.qb, new vQ.p(uQ), [new vQ.p(wQ), eQ]);
-        try {
-          RQ(YQ, HQ, [new vQ.p(uQ, eQ, LQ)])
-        } catch {}
-        eQ += LQ
-      };
-      let GQ, pQ;
-      try {
-        GQ = new iQ(QQ, FQ, MQ, LQ, mQ)
-      } catch (WQ) {
-        throw tQ(WQ), WQ
-      }
-      const cQ = QQ => {
-        GQ.fail(QQ), void 0 !== pQ && TQ(pQ)
-      };
-      let CQ = !1;
-      wQ.addEventListener("abort", (() => {
-        CQ && GQ.markWorkerFailed(), cQ(new Error(`${QQ} stalled`))
-      }), {
-        once: !0
-      }), (0, qQ.p)(bQ, (() => {}), cQ);
-      try {
-        let DQ;
-        try {
-          DQ = await fetch(QQ, {
-            signal: wQ
-          })
-        } catch (WQ) {
-          throw new Error(`Fetching ${QQ} failed: ${(0,kQ.d)(WQ)}`)
-        }
-        const {
-          ok: mQ,
-          status: uQ,
-          body: HQ
-        } = function(QQ, FQ) {
-          try {
-            const {
-              ok: QQ,
-              status: wQ
-            } = FQ;
-            return {
-              ok: QQ,
-              status: wQ,
-              body: RQ(vQ.mb, FQ, [])
-            }
-          } catch {
-            throw new Error(`${QQ} came in a response a page script made`)
-          }
-        }(QQ, DQ);
-        if (!mQ) throw new Error(`Fetching ${QQ} failed: HTTP ${uQ}`);
-        LQ();
-        const bQ = RQ(vQ.$, HQ, []);
-        pQ = bQ;
-        const YQ = () => {
-          TQ(bQ)
-        };
-        for ((0, qQ.p)(GQ.decoded, YQ, YQ);;) {
-          let FQ;
-          try {
-            FQ = await RQ(vQ.jb, bQ, [])
-          } catch (WQ) {
-            throw new Error(`Downloading ${QQ} failed: ${(0,kQ.d)(WQ)}`)
-          }
-          if (FQ.done) break;
-          LQ(), GQ.push(FQ.value)
-        }
-        if (CQ = !0, GQ.end(), await GQ.decoded, oQ(), eQ !== FQ) throw new Error(`${QQ} ended before its module did`)
-      } catch (WQ) {
-        throw tQ(WQ), cQ(WQ), WQ
-      }
-      GQ.terminate();
-      try {
-        RQ(xQ, HQ, [])
-      } catch {}
-      const SQ = await bQ;
-      return void 0 !== DQ && await (0, vQ.F)(QQ, new vQ.p(uQ), {
-        sha256: DQ.sha256,
-        onMismatch: () => {}
-      }), SQ
+    function Sk(kk, ek, ik, Dk, Sk, bk, rk) {
+      const Pk = Ik(kk, tk.ohRF),
+        mk = Xk,
+        Mk = Ik(ek, tk.ohRF),
+        Kk = Xk,
+        xk = Ik(ik, tk.ohRF),
+        nk = Xk,
+        Uk = qk(Dk, tk.ohRF),
+        Hk = Xk,
+        wk = Ik(Sk, tk.ohRF),
+        lk = Xk,
+        pk = Ik(bk, tk.ohRF),
+        yk = Xk,
+        Yk = Ik(rk, tk.ohRF),
+        Lk = Xk,
+        Ck = tk.jRro(Pk, mk, Mk, Kk, xk, nk, Uk, Hk, wk, lk, pk, yk, Yk, Lk);
+      if (Ck[2]) throw zk(Ck[1]);
+      return fk.__wrap(Ck[0])
     }
 
-    function TQ(QQ) {
-      try {
-        (0, vQ.hb)(QQ.cancel())
-      } catch {}
+    function bk() {
+      const kk = tk.ef4m();
+      var ek = yk(kk[0], kk[1]);
+      return tk.DXat(kk[0], 4 * kk[1], 4), ek
     }
-    const KQ = ".zst.bin",
-      zQ = 1e3;
-    let lQ = null;
 
-    function jQ(QQ) {
-      return lQ ??= function() {
-        const QQ = new Map,
-          FQ = "bloxd_wasm_webgpu:5006327,bloxd_wasm_webgl:5369983,bloxd_wasm_webgl1:4770278,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3672186";
-        for (const wQ of FQ?.split(",") ?? []) {
-          const [FQ = "", LQ] = wQ.split(":"), qQ = Number(LQ);
-          Number.isInteger(qQ) && qQ > 0 && QQ.set(FQ, qQ)
-        }
-        return QQ
-      }(), lQ.get(QQ)
+    function rk() {
+      const kk = tk.lHky();
+      var ek = yk(kk[0], kk[1]);
+      return tk.DXat(kk[0], 4 * kk[1], 4), ek
     }
-    async function aQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const LQ = jQ(QQ.name);
-      if (void 0 === LQ) return XQ(await fQ(QQ, FQ, wQ), "cold-wasm");
-      const oQ = UQ ? new SQ : null;
-      let DQ;
+
+    function Pk() {
+      tk.JzMG()
+    }
+
+    function mk(kk, ek, ik, Dk, fk) {
+      let Sk, bk;
       try {
-        if (mQ = QQ.url(), bQ()?.includes(HQ(mQ)) && await async function(QQ) {
-            const FQ = new AbortController;
-            let wQ;
-            const LQ = (0, qQ.h)((QQ => {
-              wQ = setTimeout((() => {
-                FQ.abort(), QQ(null)
-              }), zQ)
-            }));
-            try {
-              const wQ = fetch(QQ.href, {
-                  cache: "only-if-cached",
-                  mode: "same-origin",
-                  signal: FQ.signal
-                }),
-                oQ = await (0, qQ.n)([wQ, LQ]);
-              return !!oQ?.ok && ((0, vQ.hb)(oQ.body.cancel()), !0)
-            } catch {
-              return !1
-            } finally {
-              clearTimeout(wQ)
-            }
-          }(QQ.url())) return oQ?.stop(), await async function(QQ, FQ, wQ, LQ) {
-          let qQ = !1;
-          const oQ = wQ && {
-            sha256: wQ.sha256,
-            onMismatch: () => {
-              qQ = !0
-            }
-          };
-          try {
-            return XQ(await fQ(QQ, oQ, LQ), "warm")
-          } catch (DQ) {
-            const LQ = await VQ(QQ, FQ, wQ, null);
-            if (null === LQ) throw qQ && wQ.onMismatch(), DQ;
-            return console.warn(`${QQ.url().href} from the HTTP cache failed: ${(0,kQ.d)(DQ)}: loaded its copy instead`), XQ(LQ, qQ ? "warm-refused" : "warm-broken")
-          }
-        }(QQ, LQ, FQ, wQ);
-        DQ = await VQ(QQ, LQ, FQ, oQ)
+        const mk = Ik(kk, tk.ohRF),
+          Mk = Xk,
+          Kk = qk(ek, tk.ohRF),
+          xk = Xk,
+          nk = Ik(ik, tk.ohRF),
+          Uk = Xk,
+          Hk = qk(Dk, tk.ohRF),
+          wk = Xk,
+          lk = function(kk, ek) {
+            const ik = ek(1 * kk.length, 1) >>> 0;
+            return dk().set(kk, ik / 1), Xk = kk.length, ik
+          }(fk, tk.ohRF),
+          pk = Xk,
+          yk = tk.yY7q(mk, Mk, Kk, xk, nk, Uk, Hk, wk, lk, pk);
+        var rk = yk[0],
+          Pk = yk[1];
+        if (yk[3]) throw rk = 0, Pk = 0, zk(yk[2]);
+        return Sk = rk, bk = Pk, Ak(rk, Pk)
       } finally {
-        oQ?.stop()
+        tk.DXat(Sk, bk, 1)
       }
-      var mQ;
-      return null !== DQ ? XQ(DQ, "cold-worker") : XQ(await fQ(QQ, FQ, wQ), "cold-wasm")
     }
 
-    function XQ(QQ, FQ) {
+    function Mk() {
+      let kk, ek;
+      try {
+        const ik = tk.B2tr();
+        return kk = ik[0], ek = ik[1], Ak(ik[0], ik[1])
+      } finally {
+        tk.DXat(kk, ek, 1)
+      }
+    }
+
+    function Kk(kk) {
+      let ek, ik;
+      try {
+        const Sk = tk.L0Ce(kk);
+        var Dk = Sk[0],
+          fk = Sk[1];
+        if (Sk[3]) throw Dk = 0, fk = 0, zk(Sk[2]);
+        return ek = Dk, ik = fk, Ak(Dk, fk)
+      } finally {
+        tk.DXat(ek, ik, 1)
+      }
+    }
+
+    function xk() {
+      return tk.FCRf() >>> 0
+    }
+
+    function nk() {
+      let kk, ek;
+      try {
+        const ik = tk.qO95();
+        return kk = ik[0], ek = ik[1], Ak(ik[0], ik[1])
+      } finally {
+        tk.DXat(kk, ek, 1)
+      }
+    }
+
+    function Uk(kk, ek) {
+      let ik, Dk;
+      try {
+        const bk = Ik(kk, tk.ohRF),
+          rk = Xk,
+          Pk = qk(ek, tk.ohRF),
+          mk = Xk,
+          Mk = tk.GrdO(bk, rk, Pk, mk);
+        var fk = Mk[0],
+          Sk = Mk[1];
+        if (Mk[3]) throw fk = 0, Sk = 0, zk(Mk[2]);
+        return ik = fk, Dk = Sk, Ak(fk, Sk)
+      } finally {
+        tk.DXat(ik, Dk, 1)
+      }
+    }
+
+    function Hk(kk) {
+      let ek, ik;
+      try {
+        const Sk = tk.RLBX(pk(kk));
+        var Dk = Sk[0],
+          fk = Sk[1];
+        if (Sk[3]) throw Dk = 0, fk = 0, zk(Sk[2]);
+        return ek = Dk, ik = fk, Ak(Dk, fk)
+      } finally {
+        tk.DXat(ek, ik, 1)
+      }
+    }
+
+    function wk() {
       return {
         __proto__: null,
-        module: QQ,
-        path: FQ
-      }
-    }
-
-    function fQ(QQ, FQ, wQ) {
-      return void 0 === jQ(QQ.name) ? (0, vQ.R)(QQ.url(), FQ, wQ) : (0, vQ.R)(QQ.url(), FQ, {
-        ...wQ,
-        hideThen: !0,
-        onDownloaded: () => {
-          ! function(QQ) {
-            const FQ = bQ();
-            if (null === FQ) return;
-            const wQ = HQ(QQ),
-              LQ = FQ.filter((QQ => QQ !== wQ));
-            LQ.push(wQ);
-            try {
-              localStorage.setItem(mQ, JSON.stringify(LQ.slice(-uQ)))
-            } catch (qQ) {
-              console.warn(`Bloxd wasm: ${wQ} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, qQ)
-            }
-          }(QQ.url()), wQ.onDownloaded?.()
-        }
-      })
-    }
-    async function VQ(QQ, FQ, wQ, LQ) {
-      if (!UQ || !CQ()) return null;
-      const qQ = QQ.url(),
-        oQ = `${qQ.href}${KQ}`;
-      try {
-        return await (0, vQ.ub)(oQ, ((QQ, qQ, DQ) => NQ(oQ, FQ, QQ, qQ, DQ, wQ, LQ)))
-      } catch (DQ) {
-        return console.warn(`${(0,kQ.d)(DQ)}: loading ${qQ.href} instead`), null
-      }
-    }
-    let hQ = null,
-      JQ = !1;
-    const EQ = new Map,
-      nQ = new Map;
-
-    function gQ(QQ, FQ, wQ) {
-      return null === hQ ? hQ = ZQ(QQ, FQ) : QQ !== hQ.build ? console.warn(`Bloxd wasm: ${QQ.name} was asked for after ${hQ.build.name} started loading, which this thread keeps`) : FQ.name !== hQ.workers.name && console.warn(`Bloxd wasm: ${FQ.name} was asked for workers after ${hQ.workers.name}, which this thread keeps`), wQ?.reloadFailedDownload && !JQ && (0, LQ.R)() && (JQ = !0, hQ = ZQ(hQ.build, hQ.workers)), hQ.loaded
-    }
-
-    function PQ(QQ, FQ) {
-      if (null !== hQ) return (0, qQ.e)([]);
-      const wQ = QQ.filter((QQ => !EQ.has(QQ.name))).map((QQ => {
-        const wQ = new AbortController,
-          LQ = {
-            compiled: fQ(QQ, (0, oQ.e)(QQ.name), {
-              priority: FQ,
-              wF: wQ.signal,
-              onDownloaded: () => {
-                LQ.downloaded = !0
-              },
-              retries: {
-                onRetry: () => {
-                  LQ.downloaded = !1, null !== hQ && wQ.abort()
-                }
-              }
-            }),
-            cancel: wQ,
-            downloaded: !1
-          };
-        return EQ.set(QQ.name, LQ), (0, qQ.h)((FQ => {
-          (0, qQ.p)(LQ.compiled, (() => {
-            LQ.downloaded = !0, FQ()
-          }), (LQ => {
-            wQ.signal.aborted || console.warn(`Bloxd wasm: ${QQ.name}'s compile ahead of the load failed: the load compiles it afresh`, LQ), FQ()
-          }))
-        }))
-      }));
-      return (0, qQ.e)(wQ)
-    }
-
-    function ZQ(QQ, FQ) {
-      const wQ = (0, LQ.E)((async () => {
-        (0, DQ.q)(), nQ.clear();
-        const wQ = BQ(QQ),
-          LQ = FQ.name === QQ.name ? wQ : BQ(FQ);
-        for (const {
-            cancel: QQ
-          }
-          of EQ.values()) QQ.abort();
-        EQ.clear(), await (0, qQ.e)([wQ, LQ]);
-        const oQ = await wQ,
-          kQ = await LQ;
-        return (0, DQ.q)(), {
-          module: oQ,
-          workerModule: kQ
-        }
-      }), QQ);
-      return {
-        build: QQ,
-        workers: FQ,
-        loaded: wQ
-      }
-    }
-
-    function yQ(QQ) {
-      return nQ.get(QQ)
-    }
-
-    function BQ(QQ) {
-      const FQ = performance.now(),
-        wQ = EQ.get(QQ.name);
-      EQ.delete(QQ.name);
-      const LQ = !0 === wQ?.downloaded ? wQ : void 0;
-      return void 0 !== wQ && void 0 === LQ && wQ.cancel.abort(), (0, qQ.h)(((wQ, oQ) => {
-        const DQ = (LQ, qQ) => {
-            nQ.set(QQ.name, {
-              path: qQ,
-              ms: performance.now() - FQ
-            }), wQ(LQ)
+        k3P0: {
+          __proto__: null,
+          wygH: function(kk, ek) {
+            return pk(Error(Ak(kk, ek)))
           },
-          kQ = () => {
-            (0, qQ.p)(QF(QQ), (QQ => {
-              let {
-                module: FQ,
-                path: wQ
-              } = QQ;
-              DQ(FQ, wQ)
-            }), oQ)
-          };
-        void 0 === LQ ? kQ() : (0, qQ.p)(LQ.compiled, (QQ => {
-          DQ(QQ, "ahead")
-        }), kQ)
+          Hwtb: function(kk) {
+            return null === Vk(kk)
+          },
+          Nsse: function(kk) {
+            return "string" === typeof Vk(kk)
+          },
+          fM67: function(kk, ek) {
+            const ik = Vk(ek),
+              Dk = "string" === typeof ik ? ik : void 0;
+            var fk, Sk = void 0 === (fk = Dk) || null === fk ? 0 : function(kk, ek, ik) {
+                if (void 0 === ik) {
+                  const ik = hk.encode(kk),
+                    Dk = ek(ik.length, 1) >>> 0;
+                  return dk().subarray(Dk, Dk + ik.length).set(ik), Xk = ik.length, Dk
+                }
+                let Dk = kk.length,
+                  fk = ek(Dk, 1) >>> 0;
+                const Sk = dk();
+                let bk = 0;
+                for (; bk < Dk; bk++) {
+                  const ek = kk.charCodeAt(bk);
+                  if (ek > 127) break;
+                  Sk[fk + bk] = ek
+                }
+                if (bk !== Dk) {
+                  0 !== bk && (kk = kk.slice(bk)), fk = ik(fk, Dk, Dk = bk + 3 * kk.length, 1) >>> 0;
+                  const ek = dk().subarray(fk + bk, fk + Dk);
+                  bk += hk.encodeInto(kk, ek).written, fk = ik(fk, Dk, bk, 1) >>> 0
+                }
+                return Xk = bk, fk
+              }(Dk, tk.ohRF, tk.LMB8),
+              bk = Xk;
+            Ck().setInt32(kk + 4, bk, !0), Ck().setInt32(kk + 0, Sk, !0)
+          },
+          jLqx: function(kk, ek) {
+            throw new Error(Ak(kk, ek))
+          },
+          jPUq: function(kk, ek) {
+            return Vk(kk).charCodeAt(ek >>> 0)
+          },
+          KzYk: function(kk, ek) {
+            console.error(Ak(kk, ek))
+          },
+          ehLM: function(kk) {
+            return Vk(kk).length
+          },
+          vgVU: function(kk, ek) {
+            return pk(Ak(kk, ek))
+          },
+          WNZ0: function(kk) {
+            zk(kk)
+          }
+        }
+      }
+    }
+    Symbol.dispose && (fk.prototype[Symbol.dispose] = fk.prototype.free);
+    const lk = "undefined" === typeof FinalizationRegistry ? {
+      register: () => {},
+      unregister: () => {}
+    } : new FinalizationRegistry((kk => tk.yxVu(kk, 1)));
+
+    function pk(kk) {
+      uk === Fk.length && Fk.push(Fk.length + 1);
+      const ek = uk;
+      return uk = Fk[ek], Fk[ek] = kk, ek
+    }
+
+    function yk(kk, ek) {
+      kk >>>= 0;
+      const ik = Ck(),
+        Dk = [];
+      for (let fk = kk; fk < kk + 4 * ek; fk += 4) Dk.push(zk(ik.getUint32(fk, !0)));
+      return Dk
+    }
+
+    function Yk(kk, ek) {
+      return kk >>>= 0, dk().subarray(kk / 1, kk / 1 + ek)
+    }
+    let Lk = null;
+
+    function Ck() {
+      return (null === Lk || !0 === Lk.buffer.detached || void 0 === Lk.buffer.detached && Lk.buffer !== tk.memory.buffer) && (Lk = new DataView(tk.memory.buffer)), Lk
+    }
+
+    function Ak(kk, ek) {
+      return function(kk, ek) {
+        Ek += ek, Ek >= vk && (Qk = new TextDecoder("utf-8", {
+          ignoreBOM: !0,
+          fatal: !0
+        }), Qk.decode(), Ek = ek);
+        return Qk.decode(dk().subarray(kk, kk + ek))
+      }(kk >>> 0, ek)
+    }
+    let jk = null;
+    let sk = null;
+
+    function dk() {
+      return null !== sk && 0 !== sk.byteLength || (sk = new Uint8Array(tk.memory.buffer)), sk
+    }
+
+    function Vk(kk) {
+      return Fk[kk]
+    }
+    let Fk = new Array(1024).fill(void 0);
+    Fk.push(void 0, null, !0, !1);
+    let uk = Fk.length;
+
+    function qk(kk, ek) {
+      const ik = ek(4 * kk.length, 4) >>> 0;
+      return (null !== jk && 0 !== jk.byteLength || (jk = new Uint32Array(tk.memory.buffer)), jk).set(kk, ik / 4), Xk = kk.length, ik
+    }
+
+    function Ik(kk, ek) {
+      const ik = ek(4 * kk.length, 4) >>> 0,
+        Dk = Ck();
+      for (let fk = 0; fk < kk.length; fk++) Dk.setUint32(ik + 4 * fk, pk(kk[fk]), !0);
+      return Xk = kk.length, ik
+    }
+
+    function zk(kk) {
+      const ek = Vk(kk);
+      return function(kk) {
+        kk < 1028 || (Fk[kk] = uk, uk = kk)
+      }(kk), ek
+    }
+    let Qk = new TextDecoder("utf-8", {
+      ignoreBOM: !0,
+      fatal: !0
+    });
+    Qk.decode();
+    const vk = 2146435072;
+    let Ek = 0;
+    const hk = new TextEncoder;
+    "encodeInto" in hk || (hk.encodeInto = function(kk, ek) {
+      const ik = hk.encode(kk);
+      return ek.set(ik), {
+        read: kk.length,
+        written: ik.length
+      }
+    });
+    let ak, Wk, tk, Xk = 0;
+
+    function Bk(kk, ek) {
+      return Wk = kk, tk = kk.exports, ak = ek, Lk = null, jk = null, sk = null, tk.pM8e(), tk
+    }
+
+    function ck(kk) {
+      if (void 0 !== tk) return tk;
+      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
+        module: kk
+      } = kk) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const ek = wk();
+      kk instanceof WebAssembly.Module || (kk = new WebAssembly.Module(kk));
+      return Bk(new WebAssembly.Instance(kk, ek), kk)
+    }
+    async function Tk(kk) {
+      if (void 0 !== tk) return tk;
+      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
+        module_or_path: kk
+      } = kk) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const ek = wk();
+      ("string" === typeof kk || "function" === typeof Request && kk instanceof Request || "function" === typeof URL && kk instanceof URL) && (kk = fetch(kk));
+      const {
+        instance: ik,
+        module: Dk
+      } = await async function(kk, ek) {
+        if ("function" === typeof Response && kk instanceof Response) {
+          if (!kk.ok) throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching '${kk.url}'`);
+          if ("function" === typeof WebAssembly.instantiateStreaming) try {
+            return await WebAssembly.instantiateStreaming(kk, ek)
+          } catch (ik) {
+            if (! function(kk) {
+                switch (kk) {
+                  case "basic":
+                  case "cors":
+                  case "default":
+                    return !0
+                }
+                return !1
+              }(kk.type) || "application/wasm" === kk.headers.get("Content-Type")) throw ik;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", ik)
+          }
+          const Dk = await kk.arrayBuffer();
+          return await WebAssembly.instantiate(Dk, ek)
+        } {
+          const ik = await WebAssembly.instantiate(kk, ek);
+          return ik instanceof WebAssembly.Instance ? {
+            instance: ik,
+            module: kk
+          } : ik
+        }
+      }(await kk, ek);
+      return Bk(ik, Dk)
+    }
+    var Zk = ik(2823),
+      Ok = ik(6459);
+    class gk extends Error {
+      stage;
+      constructor(kk, ek) {
+        super((0, Zk.E)(kk, ek), {
+          cause: ek
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = kk
+      }
+    }
+    let Gk = null,
+      Nk = null;
+
+    function Rk() {
+      return Gk ? Promise.resolve(Gk) : (Nk || (Nk = async function() {
+        let kk;
+        try {
+          kk = await (0, Zk.I)(new ik.U(ik(6468)), (0, Ok.d)("bloxd_wasm_shader_pack"))
+        } catch (ek) {
+          throw new gk((0, Zk.N)(ek), ek)
+        }
+        try {
+          await Tk({
+            module_or_path: kk
+          })
+        } catch (ek) {
+          throw new gk("instantiate", ek)
+        }
+        return Gk = Dk, Gk
+      }(), Nk.then(void 0, (() => {
+        Nk = null
+      }))), Nk)
+    }
+    var Jk = ik(6479);
+
+    function ke(kk) {
+      let [ek, ik, Dk, fk] = kk;
+      const Sk = {
+        file: ek,
+        line: ik,
+        message: Dk
+      };
+      return fk && (Sk.variants = fk.map(Jk.n)), Sk
+    }
+
+    function ee(kk) {
+      return JSON.parse(kk).map(ke)
+    }
+
+    function ie(kk, ek) {
+      if (!Number.isInteger(kk) || kk < 0 || kk > 4294967295) throw new Error(`${ek} ${kk} is not a whole number from 0 to 4294967295`);
+      return kk
+    }
+
+    function De(kk) {
+      return [kk.named.map((kk => kk.name)), Uint32Array.from(kk.named, (kk => ie(kk.id, "Texture ID")))]
+    }
+    const fe = new WeakMap;
+    const Se = new WeakMap,
+      be = new WeakSet;
+
+    function re(kk, ek) {
+      if (be.has(kk)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+      try {
+        return ek()
+      } catch (ik) {
+        throw ik instanceof WebAssembly.RuntimeError && be.add(kk), ik
+      }
+    }
+
+    function Pe(kk) {
+      let ek = Se.get(kk);
+      if (!ek) {
+        let ik, Dk;
+        ek = {
+          B5: (ek, ik) => re(kk, (() => function(kk, ek, ik) {
+            const Dk = kk.B5(ek.map((kk => kk.path)), ek.map((kk => kk.source)), ...De(ik), ik.aliases.map((kk => kk.name)), ik.aliases.map((kk => kk.texture)), ik.aliases.map((kk => kk.kind)));
+            let fk = !1;
+            try {
+              const kk = Dk.validationModuleCodes,
+                ek = Array.from(Dk.validationModuleKeys, ((ek, ik) => ({
+                  key: (0, Jk.n)(ek),
+                  code: kk[ik]
+                }))),
+                ik = {
+                  errors: ee(Dk.errorsJson),
+                  offInStrict: ee(Dk.offInStrictJson),
+                  variants: (0, Jk.g)(Dk),
+                  validationModules: ek,
+                  features: Dk.features
+                };
+              return ek.forEach(((kk, ek) => {
+                fe.set(kk, {
+                  pack: Dk,
+                  index: ek
+                })
+              })), fk = ek.length > 0, ik
+            } finally {
+              fk || Dk.free()
+            }
+          }(kk, ek, ik))),
+          mapValidationMessage: (ek, ik) => {
+            const Dk = fe.get(ek);
+            if (!Dk) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return ke(JSON.parse(re(kk, (() => Dk.pack.mapValidationMessage(Dk.index, ik.lineNum, ik.linePos, ik.message, ik.type)))))
+          },
+          uik: ek => re(kk, (() => function(kk, ek) {
+            const ik = new Int32Array(ek.length),
+              Dk = [];
+            return ek.forEach(((kk, ek) => {
+              ik[ek] = kk.variants ? kk.variants.length : -1;
+              for (const ik of kk.variants ?? []) Dk.push((0, Jk.j)(ik))
+            })), ee(kk.uik(ek.map((kk => kk.file)), Uint32Array.from(ek, (kk => ie(kk.line, "Diagnostic line"))), ek.map((kk => kk.message)), ik, Uint8Array.from(Dk)))
+          }(kk, ek))),
+          jF: ek => re(kk, (() => kk.jF(...De(ek)))),
+          get SHADER_PACK_HEADER_VERSION() {
+            return ik ??= re(kk, (() => kk.ODk())), ik
+          },
+          get DEFAULT_SHADER_PACK_FILES() {
+            return Dk ??= re(kk, (() => {
+              const ek = kk.TDk();
+              return kk.cDk().map(((kk, ik) => ({
+                path: kk,
+                source: ek[ik]
+              })))
+            })), Dk
+          },
+          gDk: ek => re(kk, (() => kk.gDk(ek))),
+          resolveHeader: ek => re(kk, (() => kk.ZDk((0, Jk.j)(ek)))),
+          oDk: () => re(kk, (() => kk.oDk()))
+        }, Se.set(kk, ek)
+      }
+      return ek
+    }
+    var me = ik(3190),
+      Me = ik(6477);
+    const Ke = "bloxdShaderPackWasmFailureReported";
+    let xe = null;
+
+    function ne() {
+      return xe ??= async function() {
+        if ("undefined" === typeof WebAssembly) return Ue("unsupported", "This browser has no WebAssembly"), null;
+        const kk = (0, Me.loadShaderPackTextures)().then((() => !0), (kk => (console.error("Could not load the shader pack textures, so shader packs can't run", kk), !1)));
+        try {
+          const ek = await async function() {
+            let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Rk;
+            return Pe(await kk())
+          }();
+          return await kk ? ek : null
+        } catch (ek) {
+          const kk = ek instanceof Error ? ek.message : String(ek);
+          return Ue(me.d[ek instanceof gk ? ek.stage : "instantiate"], kk), null
+        }
+      }(), xe
+    }
+
+    function Ue(kk, ek) {
+      (0, me.i)(Ke, `Shader pack wasm ${kk}, so shader packs can't run: ${ek}`, ek, `shader_pack_${kk}`)
+    }
+  },
+  6468: (kk, ek, ik) => {
+    kk.exports = ik.p + "static/media/bloxd_wasm_shader_pack_bg.0ec0aac09a9dc6e3be94.wasm"
+  },
+  6459: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => bk
+    });
+    var Dk = ik(2823);
+    const fk = {
+      bloxd_wasm: () => "295c5cd2cc27f19595e8622c000a7c41e60e485a07dbba504442890cbd24a8aa",
+      bloxd_wasm_client: () => "416b91d2a16ae728bbeca95bbffddabc8a3a7b4a34aa66d1fe6f3b3eaf78245d",
+      bloxd_wasm_workers: () => "1d7067ca0a5537d6f71a4946b88fe0f1c972f70665e18d64e4adb5d5285f18e2",
+      bloxd_wasm_models: () => "867866320707b9f1ca78d6925955f07814ec1ca44420a0c7cde5311c04365e33",
+      bloxd_wasm_webgpu: () => "9867480be13b90b64fe4abafb562dec31eaac1bd6f0fcc19b9bb76500d4fdc10",
+      bloxd_wasm_webgl: () => "9f4c0bbaef65b13dad73d1ed314d3c8b192b18cfc30179c3542f3ca03efb48fd",
+      bloxd_wasm_webgl1: () => "014507591fe08d6df7d489a19d8df0b9f54e5fadda2418f355e9f2ae9280bb00",
+      bloxd_wasm_replay: () => "03359aae307812a1ddfe49365a61deb594b3a7b4fb670fa4cb1f3ee68976c741",
+      bloxd_wasm_recorder: () => "0b07d8728842a235c0e7a2c268ef34837026080bff9775bbc59cb6b2df75da11",
+      bloxd_wasm_anim: () => "39f782ac95bb53f159aa901360aa630676baa5e6c493e3edb2871e65cc6a978c",
+      bloxd_wasm_textures: () => "ef551c40e5bb3fca12998cd42e0e4317f1aad8584357c16a578ec219fc254bcb",
+      bloxd_wasm_shader_pack: () => "9f488776af56b7975c23b43dfcad2bdc3764d5025ab085512a39009b8882a5ef"
+    };
+    var Sk = ik(4629);
+
+    function bk(kk) {
+      const ek = Object.prototype.hasOwnProperty.call(fk, kk) ? fk[kk]() : void 0;
+      if (void 0 !== ek) return {
+        sha256: ek,
+        onMismatch: Sk.s
+      };
+      throw new Dk.l(`${kk} has no release digest, so this build refuses it`)
+    }
+  },
+  6479: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Yk,
+      g: () => Lk,
+      j: () => pk,
+      n: () => lk
+    });
+    var Dk = ik(6484);
+    const fk = 6,
+      Sk = 3,
+      bk = 1,
+      rk = 2,
+      Pk = 4,
+      mk = 8,
+      Mk = 16,
+      Kk = 32,
+      xk = 64,
+      nk = 128,
+      Uk = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+
+    function Hk(kk) {
+      if (!kk) return 0;
+      const ek = Uk.indexOf(kk);
+      if (ek <= 0) throw new Error(`"${kk}" is not a shader pack hook function`);
+      return ek
+    }
+
+    function wk(kk) {
+      if (0 === kk) return null;
+      const ek = Uk[kk];
+      if (void 0 === ek) throw new Error(`${kk} is not a shader pack hook function id`);
+      return ek
+    }
+
+    function lk(kk) {
+      const ek = Dk.c.length;
+      return {
+        strict: kk >= ek,
+        program: Dk.c[kk % ek]
+      }
+    }
+
+    function pk(kk) {
+      return Number(kk.strict) * Dk.c.length + Dk.c.indexOf(kk.program)
+    }
+
+    function yk(kk) {
+      return "" === kk ? [] : kk.split(" ")
+    }
+
+    function Yk(kk) {
+      const ek = {
+        variantFlags: new Uint8Array(fk),
+        hooks: new Uint8Array(fk * Sk),
+        moduleCodes: Array(fk).fill(""),
+        reads: Array(2 * fk).fill("")
+      };
+      for (const ik of kk) {
+        const kk = pk(ik.key),
+          Dk = (kk, ek) => null === ik.hooks.surface || ik.reads.fragment.includes(kk) ? 0 : ek;
+        ek.variantFlags[kk] = (ik.sceneDepth ? bk : 0) | (ik.movesVertices ? rk : 0) | (ik.sunShadow ? Pk : 0) | (ik.airShadow ? mk : 0) | (ik.discards ? Mk : 0) | Dk("localPosition", Kk) | Dk("enchantSpeed", xk) | Dk("enchantTier", nk), ek.hooks[kk * Sk] = Hk(ik.hooks.vertex), ek.hooks[kk * Sk + 1] = Hk(ik.hooks.surface), ek.hooks[kk * Sk + 2] = Hk(ik.hooks.light), ek.moduleCodes[kk] = ik.moduleCode, ek.reads[2 * kk] = ik.reads.vertex.join(" "), ek.reads[2 * kk + 1] = ik.reads.fragment.join(" ")
+      }
+      return ek
+    }
+
+    function Lk(kk) {
+      const {
+        hooks: ek,
+        moduleCodes: ik,
+        reads: Dk
+      } = kk;
+      return Array.from(kk.variantFlags, ((kk, fk) => {
+        const Kk = fk * Sk;
+        return {
+          key: lk(fk),
+          hooks: {
+            vertex: wk(ek[Kk]),
+            surface: wk(ek[Kk + 1]),
+            light: wk(ek[Kk + 2])
+          },
+          moduleCode: ik[fk],
+          sceneDepth: 0 !== (kk & bk),
+          sunShadow: 0 !== (kk & Pk),
+          airShadow: 0 !== (kk & mk),
+          movesVertices: 0 !== (kk & rk),
+          discards: 0 !== (kk & Mk),
+          reads: {
+            vertex: yk(Dk[2 * fk]),
+            fragment: yk(Dk[2 * fk + 1])
+          }
+        }
       }))
     }
-    async function dQ(QQ, FQ) {
-      const {
-        module: wQ
-      } = await QF(QQ, {
-        retries: FQ
-      });
-      return wQ
-    }
-    async function QF(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await aQ(QQ, (0, oQ.e)(QQ.name), FQ)
-    }
   },
-  6446: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
+  6484: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Dk,
+      f: () => bk,
+      j: () => rk,
+      k: () => fk,
+      m: () => Sk
     });
-    var LQ = wQ(2811);
-    const qQ = {
-      bloxd_wasm: () => "1dd71b260cf77c239728051b861ab33f1bc93c07cb4fd28db7884da2815d9fb7",
-      bloxd_wasm_client: () => "3cfdd659c2eb8b6808b191f6b866ba4e169bdaee4701af255db5568969af1bb7",
-      bloxd_wasm_workers: () => "e767134c25f99ed90bec9c0af92587618ddb83193667d16121760ce713ad3288",
-      bloxd_wasm_models: () => "7efbd9cd4bdaa31a2b1cc79e297121e9fc854705c550b2f59e1da981f144f4cb",
-      bloxd_wasm_webgpu: () => "5a2823876f9d5f8660104cc25ddeb02c3ddbc283e88525fa31e6d0deaa802210",
-      bloxd_wasm_webgl: () => "08bd13fedb12bff9b9605ef44db652dccf2f7dcf60a963258385b5f773a6f220",
-      bloxd_wasm_webgl1: () => "d6f63b1aa81b972a9480431e3334c89fc0648b9790fe3b5c8ff72a4945814f45",
-      bloxd_wasm_replay: () => "225276b91dfdf588b8a1477982fd12458f6ce65cfbaf6a782c82ab32d22513fb",
-      bloxd_wasm_recorder: () => "5fccb956d97b8d65d45cf6afb9a7042d1e4e4bad858c8aa1ec94da37e97ec72f",
-      bloxd_wasm_anim: () => "3f5071fcbbd4cd73afc810a4abff7c2f49f86a8638003d25fa9521ff9c12ae28",
-      bloxd_wasm_textures: () => "f13f878b8e801e1b7391eae5c539ceb75b7c99a88018bdad896fe7b520427f2f",
-      bloxd_wasm_shader_pack: () => "e521fc18804ece0348d56f2c73e39ef69fee01e1ad9f9c53d92bd0fdbf472492"
-    };
-    var oQ = wQ(4540);
+    const Dk = ["terrain", "liquid", "model"];
 
-    function DQ(QQ) {
-      const FQ = Object.prototype.hasOwnProperty.call(qQ, QQ) ? qQ[QQ]() : void 0;
-      if (void 0 !== FQ) return {
-        sha256: FQ,
-        onMismatch: oQ.o
-      };
-      throw new LQ.j(`${QQ} has no release digest, so this build refuses it`)
-    }
-  },
-  35929: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => LQ,
-      g: () => oQ,
-      k: () => vQ,
-      m: () => DQ,
-      o: () => qQ
-    });
-    const LQ = /^alloc_failed (\d+) bytes$/;
-
-    function qQ(QQ, FQ) {
-      return oQ(QQ, FQ) ? `trap=alloc_failed ${FQ} bytes` : `trap=${QQ}`
+    function fk() {
+      const kk = [];
+      for (const ek of [!1, !0])
+        for (const ik of Dk) kk.push({
+          strict: ek,
+          program: ik
+        });
+      return kk
     }
 
-    function oQ(QQ, FQ) {
-      return "unreachable" === QQ && FQ > 0
+    function Sk(kk) {
+      return `${kk.strict?"strict":"allow"}.${kk.program}`
     }
 
-    function DQ(QQ, FQ, wQ) {
-      const LQ = function(QQ) {
-        return QQ instanceof WebAssembly.RuntimeError ? /unreachable/i.test(QQ.message) ? "unreachable" : /out of bounds/i.test(QQ.message) ? "out_of_bounds" : "runtime_error" : (QQ instanceof RangeError || QQ instanceof Error && "InternalError" === QQ.name) && /call stack|recursion/i.test(QQ.message) ? "stack_overflow" : "js_error"
-      }(QQ);
-      if ("unreachable" !== LQ) return {
-        kind: LQ,
-        panic: null,
-        refusedBytes: 0
-      };
-      const qQ = FQ(),
-        oQ = wQ();
-      return {
-        kind: LQ,
-        panic: oQ > 0 ? null : qQ,
-        refusedBytes: oQ
-      }
+    function bk(kk) {
+      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
     }
-    const kQ = 300;
 
-    function vQ(QQ) {
-      return QQ.replace(/\s*\n\s*/g, " / ").slice(0, kQ)
+    function rk(kk, ek) {
+      return "off" !== ek && (null === kk || kk.some((kk => kk.key.strict === ("strict" === ek) && !bk(kk))))
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,73 +1,73 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  38951: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      default: () => qQ
+  39006: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      default: () => fk
     });
-    const LQ = .4,
-      qQ = function(QQ, FQ, wQ, qQ) {
-        let oQ, {
-            localPlayerId: DQ
-          } = qQ,
-          kQ = !1,
-          vQ = null,
-          mQ = null,
-          uQ = null,
-          HQ = 1,
-          bQ = null,
-          YQ = 0,
-          xQ = 0;
+    const Dk = .4,
+      fk = function(kk, ek, ik, fk) {
+        let Sk, {
+            localPlayerId: bk
+          } = fk,
+          rk = !1,
+          Pk = null,
+          mk = null,
+          Mk = null,
+          Kk = 1,
+          xk = null,
+          nk = 0,
+          Uk = 0;
 
-        function AQ() {
-          if (bQ) {
-            const QQ = bQ;
-            QQ.fade(QQ.getVolume(), 0, 500), setTimeout((() => {
-              QQ.stop()
-            }), 500), bQ = null
+        function Hk() {
+          if (xk) {
+            const kk = xk;
+            kk.fade(kk.getVolume(), 0, 500), setTimeout((() => {
+              kk.stop()
+            }), 500), xk = null
           }
-          xQ = 0
+          Uk = 0
         }
 
-        function tQ(QQ) {
-          var FQ;
-          if (!vQ || kQ || null === mQ) return void(bQ && AQ());
-          const wQ = Date.now();
-          if (!bQ || wQ - YQ > 54e3) {
-            if (bQ) {
-              const QQ = bQ;
-              QQ.fade(QQ.getVolume(), 0, 2e3), setTimeout((() => {
-                QQ.stop()
+        function wk(kk) {
+          var ek;
+          if (!Pk || rk || null === mk) return void(xk && Hk());
+          const ik = Date.now();
+          if (!xk || ik - nk > 54e3) {
+            if (xk) {
+              const kk = xk;
+              kk.fade(kk.getVolume(), 0, 2e3), setTimeout((() => {
+                kk.stop()
               }), 2e3)
             }
-            bQ = oQ.playSound(DQ, "crowdAmbience", LQ, 1), YQ = wQ, xQ = LQ
+            xk = Sk.playSound(bk, "crowdAmbience", Dk, 1), nk = ik, Uk = Dk
           }
-          const qQ = function() {
-              if (null === mQ || null === uQ || !vQ) return 0;
-              const QQ = oQ.getPositionView(vQ);
-              if (!QQ) return 0;
-              const FQ = Math.abs(QQ[2] - mQ),
-                wQ = Math.abs(QQ[2] - uQ),
-                LQ = Math.min(FQ, wQ);
-              return Math.max(0, 1 - LQ / HQ)
+          const fk = function() {
+              if (null === mk || null === Mk || !Pk) return 0;
+              const kk = Sk.getPositionView(Pk);
+              if (!kk) return 0;
+              const ek = Math.abs(kk[2] - mk),
+                ik = Math.abs(kk[2] - Mk),
+                Dk = Math.min(ek, ik);
+              return Math.max(0, 1 - Dk / Kk)
             }(),
-            tQ = QQ / 1e3;
-          xQ += (LQ + .6 * qQ - xQ) * Math.min(1, 2 * tQ), null === (FQ = bQ) || void 0 === FQ || FQ.setRelativeVolume(xQ)
+            wk = kk / 1e3;
+          Uk += (Dk + .6 * fk - Uk) * Math.min(1, 2 * wk), null === (ek = xk) || void 0 === ek || ek.setRelativeVolume(Uk)
         }
         return {
-          onCreate: QQ => {
-            oQ = QQ
+          onCreate: kk => {
+            Sk = kk
           },
-          onReceivedMessageFromServer: (QQ, FQ) => {
-            var wQ;
-            "ballState" === QQ ? (vQ = null !== (wQ = FQ.eId) && void 0 !== wQ ? wQ : null, vQ || AQ()) : "frozen" === QQ ? kQ = FQ.frozen : "pitchInfo" === QQ && (mQ = FQ.goalZRed, uQ = FQ.goalZBlue, HQ = Math.abs(uQ - mQ) / 2)
+          onReceivedMessageFromServer: (kk, ek) => {
+            var ik;
+            "ballState" === kk ? (Pk = null !== (ik = ek.eId) && void 0 !== ik ? ik : null, Pk || Hk()) : "frozen" === kk ? rk = ek.frozen : "pitchInfo" === kk && (mk = ek.goalZRed, Mk = ek.goalZBlue, Kk = Math.abs(Mk - mk) / 2)
           },
-          fH: QQ => {
-            tQ(QQ)
+          Px: kk => {
+            wk(kk)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,30 +1,30 @@
-export const id = 47;
-export const ids = [47];
+export const id = 48;
+export const ids = [48];
 export const modules = {
-  4536: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => uQ
+  4624: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Mk
     });
-    var LQ = wQ(17),
-      qQ = wQ(22),
-      oQ = wQ(1302),
-      DQ = wQ(2753);
-    const kQ = 3e4,
-      vQ = 1e3;
+    var Dk = ik(22),
+      fk = ik(26),
+      Sk = ik(1273),
+      bk = ik(2752);
+    const rk = 3e4,
+      Pk = 1e3;
 
-    function mQ() {
-      return "visible" === document.visibilityState && "inGame" === LQ.c.get("gameState") && (0, oQ.p)()
+    function mk() {
+      return "visible" === document.visibilityState && "inGame" === Dk.b.get("gameState") && (0, Sk.w)()
     }
 
-    function uQ(QQ, FQ) {
-      (0, DQ.p)() || function(QQ, FQ, wQ) {
-        let LQ = 0;
-        const qQ = setInterval((() => {
-          FQ() && (LQ += vQ, LQ >= QQ && (clearInterval(qQ), wQ()))
-        }), vQ)
-      }(kQ, mQ, (() => {
-        FQ().then((() => {
-          QQ(`saved for the player after ${kQ/1e3} s of play`), (0, DQ.y)(), qQ.l.GA("chat", {
+    function Mk(kk, ek) {
+      (0, bk.t)() || function(kk, ek, ik) {
+        let Dk = 0;
+        const fk = setInterval((() => {
+          ek() && (Dk += Pk, Dk >= kk && (clearInterval(fk), ik()))
+        }), Pk)
+      }(rk, mk, (() => {
+        ek().then((() => {
+          kk(`saved for the player after ${rk/1e3} s of play`), (0, bk.z)(), fk.j.tm("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  4533: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      installRenderDebug: () => Hw,
-      renderDebugPlayable: () => Yw,
-      startRenderDebug: () => bw,
-      waitForDraw: () => xw
+  4622: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      installRenderDebug: () => xi,
+      renderDebugPlayable: () => Ui,
+      startRenderDebug: () => ni,
+      waitForDraw: () => Hi
     });
-    var LQ = wQ(1799),
-      qQ = wQ(4536),
-      oQ = wQ(2753);
-    const DQ = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var Dk = ik(1778),
+      fk = ik(4624),
+      Sk = ik(2752);
+    const bk = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function kQ(QQ) {
-      return 7 & QQ
+    function rk(kk) {
+      return 7 & kk
     }
 
-    function vQ(QQ) {
-      return QQ >>> 11 & 1
+    function Pk(kk) {
+      return kk >>> 11 & 1
     }
 
-    function mQ(QQ) {
-      return [1 + (QQ >>> 18 & 63), 1 + (QQ >>> 24 & 63)]
+    function mk(kk) {
+      return [1 + (kk >>> 18 & 63), 1 + (kk >>> 24 & 63)]
     }
 
-    function uQ(QQ, FQ) {
-      const [wQ, , LQ] = QQ, qQ = kQ(LQ), oQ = function(QQ, FQ, wQ) {
-        return FQ + (1 === (22 >>> QQ & 1) ? 4 - wQ : wQ) & 3
-      }(qQ, vQ(LQ), FQ), DQ = qQ >>> 1, [uQ, HQ] = mQ(wQ), bQ = 1 === oQ || 2 === oQ ? uQ : 0, YQ = oQ >= 2 ? HQ : 0, xQ = [63 & wQ, wQ >>> 6 & 63, wQ >>> 12 & 63];
-      return xQ[2 === DQ ? 0 : 2] += bQ, xQ[1 === DQ ? 0 : 1] += YQ, xQ
+    function Mk(kk, ek) {
+      const [ik, , Dk] = kk, fk = rk(Dk), Sk = function(kk, ek, ik) {
+        return ek + (1 === (22 >>> kk & 1) ? 4 - ik : ik) & 3
+      }(fk, Pk(Dk), ek), bk = fk >>> 1, [Mk, Kk] = mk(ik), xk = 1 === Sk || 2 === Sk ? Mk : 0, nk = Sk >= 2 ? Kk : 0, Uk = [63 & ik, ik >>> 6 & 63, ik >>> 12 & 63];
+      return Uk[2 === bk ? 0 : 2] += xk, Uk[1 === bk ? 0 : 1] += nk, Uk
     }
 
-    function HQ(QQ) {
-      const FQ = Math.max(...mQ(QQ[0]));
-      return 1 === FQ ? "1" : FQ <= 4 ? "2-4" : FQ <= 16 ? "5-16" : "17-64"
+    function Kk(kk) {
+      const ek = Math.max(...mk(kk[0]));
+      return 1 === ek ? "1" : ek <= 4 ? "2-4" : ek <= 16 ? "5-16" : "17-64"
     }
-    const bQ = 16;
+    const xk = 16;
 
-    function YQ(QQ) {
-      let FQ = 2166136261;
-      for (let wQ = 0; wQ < QQ.length; wQ++) FQ = Math.imul(FQ ^ QQ[wQ], 16777619);
-      return FQ >>> 0
+    function nk(kk) {
+      let ek = 2166136261;
+      for (let ik = 0; ik < kk.length; ik++) ek = Math.imul(ek ^ kk[ik], 16777619);
+      return ek >>> 0
     }
 
-    function xQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const LQ = Math.max(0, FQ - wQ),
-        qQ = Math.min(QQ.length, FQ + wQ),
-        oQ = [];
-      for (let DQ = LQ; DQ < qQ; DQ++) {
-        const wQ = QQ[DQ].toString(16).padStart(2, "0");
-        oQ.push(DQ === FQ ? `[${wQ}]` : wQ)
+    function Uk(kk, ek) {
+      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const Dk = Math.max(0, ek - ik),
+        fk = Math.min(kk.length, ek + ik),
+        Sk = [];
+      for (let bk = Dk; bk < fk; bk++) {
+        const ik = kk[bk].toString(16).padStart(2, "0");
+        Sk.push(bk === ek ? `[${ik}]` : ik)
       }
-      return oQ.join(" ")
+      return Sk.join(" ")
     }
-    const AQ = {
+    const Hk = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,437 +168,438 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      tQ = "_vs2fs_location0",
-      eQ = 0,
-      MQ = 4,
-      GQ = 6,
-      pQ = [0, 1, 2, 0, 2, 3],
-      cQ = 2048,
-      CQ = 4,
-      SQ = 256,
-      iQ = 64,
-      WQ = 268435456,
-      RQ = 65536,
-      OQ = /^#version [^\n]*\/\/ program (\S+)$/m;
+      wk = "_vs2fs_location0";
+    const lk = 0,
+      pk = 4,
+      yk = 6,
+      Yk = [0, 1, 2, 0, 2, 3],
+      Lk = 2048,
+      Ck = 4,
+      Ak = 256,
+      jk = 64,
+      sk = 268435456,
+      dk = 65536,
+      Vk = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function sQ(QQ) {
-      return null === QQ.name ? `#${QQ.id}` : `#${QQ.id} ${QQ.name}`
+    function Fk(kk) {
+      return null === kk.name ? `#${kk.id}` : `#${kk.id} ${kk.name}`
     }
-    const rQ = [],
-      IQ = new WeakMap,
-      UQ = new WeakMap,
-      NQ = {
+    const uk = [],
+      qk = new WeakMap,
+      Ik = new WeakMap,
+      zk = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let TQ = 1;
-    const KQ = new WeakMap;
+    let Qk = 1;
+    const vk = new WeakMap;
 
-    function zQ(QQ) {
-      if (null === QQ) return 0;
-      let FQ = KQ.get(QQ);
-      return void 0 === FQ && (FQ = TQ++, KQ.set(QQ, FQ)), FQ
+    function Ek(kk) {
+      if (null === kk) return 0;
+      let ek = vk.get(kk);
+      return void 0 === ek && (ek = Qk++, vk.set(kk, ek)), ek
     }
-    class lQ {
-      constructor(QQ, FQ) {
-        this.print = QQ, this.now = FQ, this.shown = 0, this.ym = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.iY = [], this.dropped = 0
+    class hk {
+      constructor(kk, ek) {
+        this.print = kk, this.now = ek, this.shown = 0, this.XM = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.fU = [], this.dropped = 0
       }
-      line(QQ) {
-        const FQ = this.now();
-        if (FQ - this.second >= 1e3 && (this.second = FQ, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.ym++, void this.store(QQ);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${QQ} (the last line here: the rest go to bloxdDebug.save())` : QQ)
+      line(kk) {
+        const ek = this.now();
+        if (ek - this.second >= 1e3 && (this.second = ek, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.XM++, void this.store(kk);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${kk} (the last line here: the rest go to bloxdDebug.save())` : kk)
       }
-      keep(QQ) {
-        this.sections++, this.store(QQ)
+      keep(kk) {
+        this.sections++, this.store(kk)
       }
-      store(QQ) {
-        this.iY.push(`${new Date(Date.now()).toISOString()} ${QQ}`), this.iY.length > 2e4 && (this.iY.shift(), this.dropped++)
+      store(kk) {
+        this.fU.push(`${new Date(Date.now()).toISOString()} ${kk}`), this.fU.length > 2e4 && (this.fU.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.ym} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.iY].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.XM} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.fU].join("\n")
       }
     }
-    let jQ = null;
+    let ak = null;
 
-    function aQ() {
-      if (null === jQ) {
-        const QQ = new lQ((QQ => {
-          (0, oQ.m)("render", QQ)
+    function Wk() {
+      if (null === ak) {
+        const kk = new hk((kk => {
+          (0, Sk.l)("render", kk)
         }), (() => performance.now()));
-        (0, oQ.i)("render", (() => QQ.dump())), jQ = QQ
+        (0, Sk.k)("render", (() => kk.dump())), ak = kk
       }
-      return jQ
+      return ak
     }
 
-    function XQ(QQ) {
-      aQ().line(QQ)
+    function tk(kk) {
+      Wk().line(kk)
     }
 
-    function fQ(QQ) {
-      aQ().keep(QQ)
+    function Xk(kk) {
+      Wk().keep(kk)
     }
 
-    function VQ(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return QQ.length <= FQ ? QQ : `${QQ.slice(0,FQ)}... (${QQ.length-FQ} more characters)`
+    function Bk(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return kk.length <= ek ? kk : `${kk.slice(0,ek)}... (${kk.length-ek} more characters)`
     }
 
-    function hQ(QQ, FQ, wQ, LQ, qQ, oQ) {
-      const DQ = NQ.pendingCheck;
-      if (null === DQ) return;
-      const kQ = "undefined" !== typeof WebGL2RenderingContext && QQ instanceof WebGL2RenderingContext,
-        vQ = {
-          gl: QQ,
-          program: wQ,
-          call: LQ,
-          PA: qQ,
-          instances: oQ,
+    function ck(kk, ek, ik, Dk, fk, Sk) {
+      const bk = zk.pendingCheck;
+      if (null === bk) return;
+      const rk = "undefined" !== typeof WebGL2RenderingContext && kk instanceof WebGL2RenderingContext,
+        Pk = {
+          gl: kk,
+          program: ik,
+          call: Dk,
+          lw: fk,
+          instances: Sk,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (DQ.draws.push(vQ), kQ) try {
-        const LQ = function(QQ) {
-          const FQ = [],
-            wQ = new Map,
-            LQ = Math.min(16, QQ.getParameter(AQ.MAX_VERTEX_ATTRIBS));
-          for (let qQ = 0; qQ < LQ; qQ++) {
-            if (!QQ.getVertexAttrib(qQ, AQ.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const LQ = QQ.getVertexAttrib(qQ, AQ.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              oQ = QQ.getVertexAttribOffset(qQ, AQ.VERTEX_ATTRIB_ARRAY_POINTER),
-              DQ = QQ.getVertexAttrib(qQ, AQ.VERTEX_ATTRIB_ARRAY_STRIDE),
-              kQ = QQ.getVertexAttrib(qQ, AQ.VERTEX_ATTRIB_ARRAY_SIZE),
-              vQ = QQ.getVertexAttrib(qQ, AQ.VERTEX_ATTRIB_ARRAY_TYPE),
-              mQ = "VERTEX_ATTRIB_ARRAY_INTEGER" in QQ && QQ.getVertexAttrib(qQ, AQ.VERTEX_ATTRIB_ARRAY_INTEGER),
-              uQ = "VERTEX_ATTRIB_ARRAY_DIVISOR" in QQ ? QQ.getVertexAttrib(qQ, AQ.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            wQ.set(qQ, {
-              buffer: LQ,
-              offset: oQ,
-              stride: DQ
-            }), FQ.push(`@${qQ} buf#${zQ(LQ)} +${oQ} stride ${DQ} ${kQ}x0x${vQ.toString(16)}${mQ?" int":""} div ${uQ}`)
+      if (bk.draws.push(Pk), rk) try {
+        const Dk = function(kk) {
+          const ek = [],
+            ik = new Map,
+            Dk = Math.min(16, kk.getParameter(Hk.MAX_VERTEX_ATTRIBS));
+          for (let fk = 0; fk < Dk; fk++) {
+            if (!kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const Dk = kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              Sk = kk.getVertexAttribOffset(fk, Hk.VERTEX_ATTRIB_ARRAY_POINTER),
+              bk = kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_STRIDE),
+              rk = kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_SIZE),
+              Pk = kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_TYPE),
+              mk = "VERTEX_ATTRIB_ARRAY_INTEGER" in kk && kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_INTEGER),
+              Mk = "VERTEX_ATTRIB_ARRAY_DIVISOR" in kk ? kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            ik.set(fk, {
+              buffer: Dk,
+              offset: Sk,
+              stride: bk
+            }), ek.push(`@${fk} buf#${Ek(Dk)} +${Sk} stride ${bk} ${rk}x0x${Pk.toString(16)}${mk?" int":""} div ${Mk}`)
           }
           return {
-            lines: FQ,
-            byLocation: wQ
+            lines: ek,
+            byLocation: ik
           }
-        }(QQ);
-        if (vQ.attributes = LQ.lines, "inst" === wQ.terrain) {
+        }(kk);
+        if (Pk.attributes = Dk.lines, "inst" === ik.terrain) {
           const {
-            group: qQ,
-            chunk: kQ
-          } = function(QQ, FQ, wQ) {
-            const LQ = FQ.get(GQ),
-              qQ = QQ.getVertexAttrib(GQ, AQ.CURRENT_VERTEX_ATTRIB),
-              oQ = LQ ? `+${LQ.offset}` : qQ ? Array.from(qQ).slice(0, 3).join(",") : "?";
-            let DQ = wQ.groups.get(oQ);
-            return void 0 === DQ && (DQ = wQ.groups.size, wQ.groups.set(oQ, DQ)), {
-              group: DQ,
-              chunk: oQ
+            group: fk,
+            chunk: rk
+          } = function(kk, ek, ik) {
+            const Dk = ek.get(yk),
+              fk = kk.getVertexAttrib(yk, Hk.CURRENT_VERTEX_ATTRIB),
+              Sk = Dk ? `+${Dk.offset}` : fk ? Array.from(fk).slice(0, 3).join(",") : "?";
+            let bk = ik.groups.get(Sk);
+            return void 0 === bk && (bk = ik.groups.size, ik.groups.set(Sk, bk)), {
+              group: bk,
+              chunk: Sk
             }
-          }(QQ, LQ.byLocation, DQ);
-          vQ.group = qQ, vQ.chunk = kQ;
-          for (const QQ of [eQ, MQ]) {
-            var mQ;
-            const FQ = null === (mQ = LQ.byLocation.get(QQ)) || void 0 === mQ ? void 0 : mQ.buffer;
-            FQ && vQ.pages.push({
+          }(kk, Dk.byLocation, bk);
+          Pk.group = fk, Pk.chunk = rk;
+          for (const kk of [lk, pk]) {
+            var mk;
+            const ek = null === (mk = Dk.byLocation.get(kk)) || void 0 === mk ? void 0 : mk.buffer;
+            ek && Pk.pages.push({
               kind: "buf",
-              buffer: FQ
+              buffer: ek
             })
-          }! function(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
-            const kQ = LQ.get(eQ),
-              vQ = DQ.parts.get(oQ);
-            if (void 0 === vQ && DQ.parts.size >= CQ) return;
-            const mQ = Math.min(qQ, iQ, SQ - (null !== vQ && void 0 !== vQ ? vQ : 0));
-            if (null === kQ || void 0 === kQ || !kQ.buffer || mQ <= 0) return;
-            const uQ = JQ(QQ, FQ, wQ);
-            if (!uQ) return;
-            const HQ = kQ.stride || 12,
-              bQ = ZQ(QQ, kQ.buffer, kQ.offset, (mQ - 1) * HQ + 12),
-              YQ = new DataView(bQ.buffer),
-              xQ = function(QQ, FQ) {
-                const wQ = function(QQ) {
-                    const FQ = dQ.get(QQ);
-                    if (void 0 !== FQ && (null === FQ || QQ.isProgram(FQ))) return FQ;
-                    NQ.inProbe = !0;
-                    let wQ = null;
+          }! function(kk, ek, ik, Dk, fk, Sk, bk) {
+            const rk = Dk.get(lk),
+              Pk = bk.parts.get(Sk);
+            if (void 0 === Pk && bk.parts.size >= Ck) return;
+            const mk = Math.min(fk, jk, Ak - (null !== Pk && void 0 !== Pk ? Pk : 0));
+            if (null === rk || void 0 === rk || !rk.buffer || mk <= 0) return;
+            const Mk = Tk(kk, ek, ik);
+            if (!Mk) return;
+            const Kk = rk.stride || 12,
+              xk = Nk(kk, rk.buffer, rk.offset, (mk - 1) * Kk + 12),
+              nk = new DataView(xk.buffer),
+              Uk = function(kk, ek) {
+                const ik = function(kk) {
+                    const ek = ke.get(kk);
+                    if (void 0 !== ek && (null === ek || kk.isProgram(ek))) return ek;
+                    zk.inProbe = !0;
+                    let ik = null;
                     try {
-                      wQ = EQ(QQ, yQ, BQ, "fed", "the record feed")
+                      ik = Zk(kk, Rk, Jk, "fed", "the record feed")
                     } finally {
-                      NQ.inProbe = !1
+                      zk.inProbe = !1
                     }
-                    return dQ.set(QQ, wQ), wQ
-                  }(QQ),
-                  LQ = wQ ? PQ(QQ, wQ, FQ, (() => {
-                    QQ.drawArraysInstanced(AQ.POINTS, 0, 1, FQ)
+                    return ke.set(kk, ik), ik
+                  }(kk),
+                  Dk = ik ? Gk(kk, ik, ek, (() => {
+                    kk.drawArraysInstanced(Hk.POINTS, 0, 1, ek)
                   }), "decode probe input (the record feed)") : null;
-                return LQ ? new Uint32Array(LQ.buffer) : null
-              }(QQ, mQ);
-            xQ || DQ.fed.failed++;
-            const tQ = PQ(QQ, uQ, 4 * mQ, (() => {
-              QQ.drawArraysInstanced(AQ.POINTS, 0, 4, mQ)
+                return Dk ? new Uint32Array(Dk.buffer) : null
+              }(kk, mk);
+            Uk || bk.fed.failed++;
+            const wk = Gk(kk, Mk, 4 * mk, (() => {
+              kk.drawArraysInstanced(Hk.POINTS, 0, 4, mk)
             }));
-            if (!tQ) return;
-            DQ.parts.set(oQ, (null !== vQ && void 0 !== vQ ? vQ : 0) + mQ);
-            for (let AQ = 0; AQ < mQ; AQ++) {
-              const QQ = AQ * HQ,
-                FQ = [YQ.getUint32(QQ, !0), YQ.getUint32(QQ + 4, !0), YQ.getUint32(QQ + 8, !0)],
-                wQ = xQ ? [xQ[3 * AQ], xQ[3 * AQ + 1], xQ[3 * AQ + 2]] : FQ;
-              xQ && (DQ.fed.records++, wQ.some(((QQ, wQ) => QQ !== FQ[wQ])) && (DQ.fed.differing++, DQ.fed.first.length < 8 && DQ.fed.first.push(`part ${oQ} instance ${AQ}: fed ${wQ.map(qF).join(" ")} buffer ${FQ.map(qF).join(" ")}`)));
-              for (let LQ = 0; LQ < 4; LQ++) {
-                const QQ = 3 * (4 * AQ + LQ);
-                DQ.vertices.push({
-                  record: wQ,
-                  slot: LQ,
-                  group: oQ,
-                  gpu: [tQ[QQ], tQ[QQ + 1], tQ[QQ + 2]]
+            if (!wk) return;
+            bk.parts.set(Sk, (null !== Pk && void 0 !== Pk ? Pk : 0) + mk);
+            for (let Hk = 0; Hk < mk; Hk++) {
+              const kk = Hk * Kk,
+                ek = [nk.getUint32(kk, !0), nk.getUint32(kk + 4, !0), nk.getUint32(kk + 8, !0)],
+                ik = Uk ? [Uk[3 * Hk], Uk[3 * Hk + 1], Uk[3 * Hk + 2]] : ek;
+              Uk && (bk.fed.records++, ik.some(((kk, ik) => kk !== ek[ik])) && (bk.fed.differing++, bk.fed.first.length < 8 && bk.fed.first.push(`part ${Sk} instance ${Hk}: fed ${ik.map(Se).join(" ")} buffer ${ek.map(Se).join(" ")}`)));
+              for (let Dk = 0; Dk < 4; Dk++) {
+                const kk = 3 * (4 * Hk + Dk);
+                bk.vertices.push({
+                  record: ik,
+                  slot: Dk,
+                  group: Sk,
+                  gpu: [wk[kk], wk[kk + 1], wk[kk + 2]]
                 })
               }
             }
-          }(QQ, FQ, wQ, LQ.byLocation, oQ, qQ, DQ)
+          }(kk, ek, ik, Dk.byLocation, Sk, fk, bk)
         } else {
-          const LQ = QF(QQ, FQ, 16),
-            oQ = QF(QQ, FQ, 8);
-          for (const QQ of [LQ, oQ]) QQ && vQ.pages.push({
+          const Dk = ee(kk, ek, 16),
+            Sk = ee(kk, ek, 8);
+          for (const kk of [Dk, Sk]) kk && Pk.pages.push({
             kind: "tex",
-            texture: QQ
+            texture: kk
           });
-          LQ && function(QQ, FQ, wQ, LQ, qQ, oQ) {
-            if (oQ.parts.size >= CQ) return;
-            const DQ = JQ(QQ, FQ, wQ);
-            if (!DQ) return;
-            let kQ = 6 * SQ;
-            const vQ = [];
-            for (const [YQ, xQ] of qQ) {
-              const QQ = Math.min(xQ, kQ, Math.max(6, 6 * Math.floor(SQ / qQ.length)));
-              QQ > 0 && (vQ.push([YQ, QQ]), kQ -= QQ)
+          Dk && function(kk, ek, ik, Dk, fk, Sk) {
+            if (Sk.parts.size >= Ck) return;
+            const bk = Tk(kk, ek, ik);
+            if (!bk) return;
+            let rk = 6 * Ak;
+            const Pk = [];
+            for (const [nk, Uk] of fk) {
+              const kk = Math.min(Uk, rk, Math.max(6, 6 * Math.floor(Ak / fk.length)));
+              kk > 0 && (Pk.push([nk, kk]), rk -= kk)
             }
-            const mQ = vQ.reduce(((QQ, FQ) => {
-                let [, wQ] = FQ;
-                return QQ + wQ
+            const mk = Pk.reduce(((kk, ek) => {
+                let [, ik] = ek;
+                return kk + ik
               }), 0),
-              uQ = PQ(QQ, DQ, mQ, (() => {
-                for (const [FQ, wQ] of vQ) QQ.drawArrays(AQ.POINTS, FQ, wQ)
+              Mk = Gk(kk, bk, mk, (() => {
+                for (const [ek, ik] of Pk) kk.drawArrays(Hk.POINTS, ek, ik)
               }));
-            if (!uQ) return;
-            let HQ = 0;
-            for (const [YQ, xQ] of vQ) {
-              const FQ = Math.floor(YQ / 6),
-                wQ = Math.floor((YQ + xQ - 1) / 6) - FQ + 1,
-                qQ = FF(QQ, LQ, cQ, FQ, wQ);
-              for (let QQ = YQ; QQ < YQ + xQ; QQ++, HQ++) {
-                var bQ;
-                const wQ = 4 * (Math.floor(QQ / 6) - FQ),
-                  LQ = [qQ[wQ], qQ[wQ + 1], qQ[wQ + 2]];
-                oQ.parts.set(qQ[wQ + 3], (null !== (bQ = oQ.parts.get(qQ[wQ + 3])) && void 0 !== bQ ? bQ : 0) + (QQ % 6 === 0 ? 1 : 0)), oQ.vertices.push({
-                  record: LQ,
-                  slot: pQ[QQ % 6],
-                  group: qQ[wQ + 3],
-                  gpu: [uQ[3 * HQ], uQ[3 * HQ + 1], uQ[3 * HQ + 2]]
+            if (!Mk) return;
+            let Kk = 0;
+            for (const [nk, Uk] of Pk) {
+              const ek = Math.floor(nk / 6),
+                ik = Math.floor((nk + Uk - 1) / 6) - ek + 1,
+                fk = ie(kk, Dk, Lk, ek, ik);
+              for (let kk = nk; kk < nk + Uk; kk++, Kk++) {
+                var xk;
+                const ik = 4 * (Math.floor(kk / 6) - ek),
+                  Dk = [fk[ik], fk[ik + 1], fk[ik + 2]];
+                Sk.parts.set(fk[ik + 3], (null !== (xk = Sk.parts.get(fk[ik + 3])) && void 0 !== xk ? xk : 0) + (kk % 6 === 0 ? 1 : 0)), Sk.vertices.push({
+                  record: Dk,
+                  slot: Yk[kk % 6],
+                  group: fk[ik + 3],
+                  gpu: [Mk[3 * Kk], Mk[3 * Kk + 1], Mk[3 * Kk + 2]]
                 })
               }
             }
-          }(QQ, FQ, wQ, LQ, qQ, DQ)
+          }(kk, ek, ik, Dk, fk, bk)
         }
-      } catch (uQ) {
-        XQ(`decode probe failed on program ${sQ(wQ)}: ${String(uQ)}`)
+      } catch (Mk) {
+        tk(`decode probe failed on program ${Fk(ik)}: ${String(Mk)}`)
       }
     }
 
-    function JQ(QQ, FQ, wQ) {
-      if (void 0 !== wQ.probe) return wQ.probe && nQ(QQ, FQ, wQ.probe), wQ.probe;
-      wQ.probe = null, NQ.inProbe = !0;
+    function Tk(kk, ek, ik) {
+      if (void 0 !== ik.probe) return ik.probe && Ok(kk, ek, ik.probe), ik.probe;
+      ik.probe = null, zk.inProbe = !0;
       try {
-        wQ.probe = function(QQ, FQ) {
-          return EQ(QQ, FQ.vertex, FQ.fragment, tQ, `program ${sQ(FQ)}'s twin`)
-        }(QQ, wQ)
+        ik.probe = function(kk, ek) {
+          return Zk(kk, (ik = ek.vertex, ik.replace(`\nvec3 ${wk} = vec3(0);\n`, `\nout vec3 ${wk};\n`)), ek.fragment, wk, `program ${Fk(ek)}'s twin`);
+          var ik
+        }(kk, ik)
       } finally {
-        NQ.inProbe = !1
+        zk.inProbe = !1
       }
-      return wQ.probe && nQ(QQ, FQ, wQ.probe), wQ.probe
+      return ik.probe && Ok(kk, ek, ik.probe), ik.probe
     }
 
-    function EQ(QQ, FQ, wQ, LQ, qQ) {
-      const oQ = [QQ.createShader(AQ.VERTEX_SHADER), QQ.createShader(AQ.FRAGMENT_SHADER)],
-        DQ = QQ.createProgram();
-      if (!DQ || !oQ[0] || !oQ[1]) return null;
-      QQ.shaderSource(oQ[0], FQ), QQ.shaderSource(oQ[1], wQ);
-      for (const vQ of oQ) QQ.compileShader(vQ), QQ.attachShader(DQ, vQ);
-      QQ.transformFeedbackVaryings(DQ, [LQ], AQ.INTERLEAVED_ATTRIBS), QQ.linkProgram(DQ);
-      for (const vQ of oQ) QQ.deleteShader(vQ);
-      var kQ;
-      return QQ.getProgramParameter(DQ, AQ.LINK_STATUS) ? DQ : (XQ(`decode probe: ${qQ} failed to link: ${VQ(null!==(kQ=QQ.getProgramInfoLog(DQ))&&void 0!==kQ?kQ:"",300)}`), QQ.deleteProgram(DQ), null)
+    function Zk(kk, ek, ik, Dk, fk) {
+      const Sk = [kk.createShader(Hk.VERTEX_SHADER), kk.createShader(Hk.FRAGMENT_SHADER)],
+        bk = kk.createProgram();
+      if (!bk || !Sk[0] || !Sk[1]) return null;
+      kk.shaderSource(Sk[0], ek), kk.shaderSource(Sk[1], ik);
+      for (const Pk of Sk) kk.compileShader(Pk), kk.attachShader(bk, Pk);
+      kk.transformFeedbackVaryings(bk, [Dk], Hk.INTERLEAVED_ATTRIBS), kk.linkProgram(bk);
+      for (const Pk of Sk) kk.deleteShader(Pk);
+      var rk;
+      return kk.getProgramParameter(bk, Hk.LINK_STATUS) ? bk : (tk(`decode probe: ${fk} failed to link: ${Bk(null!==(rk=kk.getProgramInfoLog(bk))&&void 0!==rk?rk:"",300)}`), kk.deleteProgram(bk), null)
     }
 
-    function nQ(QQ, FQ, wQ) {
-      const LQ = QQ.getProgramParameter(FQ, AQ.ACTIVE_UNIFORM_BLOCKS);
-      for (let kQ = 0; kQ < LQ; kQ++) {
-        const LQ = QQ.getActiveUniformBlockName(FQ, kQ),
-          qQ = null === LQ ? AQ.INVALID_INDEX : QQ.getUniformBlockIndex(wQ, LQ);
-        qQ !== AQ.INVALID_INDEX && QQ.uniformBlockBinding(wQ, qQ, QQ.getActiveUniformBlockParameter(FQ, kQ, AQ.UNIFORM_BLOCK_BINDING))
+    function Ok(kk, ek, ik) {
+      const Dk = kk.getProgramParameter(ek, Hk.ACTIVE_UNIFORM_BLOCKS);
+      for (let rk = 0; rk < Dk; rk++) {
+        const Dk = kk.getActiveUniformBlockName(ek, rk),
+          fk = null === Dk ? Hk.INVALID_INDEX : kk.getUniformBlockIndex(ik, Dk);
+        fk !== Hk.INVALID_INDEX && kk.uniformBlockBinding(ik, fk, kk.getActiveUniformBlockParameter(ek, rk, Hk.UNIFORM_BLOCK_BINDING))
       }
-      const qQ = QQ.getParameter(AQ.CURRENT_PROGRAM);
-      QQ.useProgram(wQ);
-      const oQ = QQ.getProgramParameter(FQ, AQ.ACTIVE_UNIFORMS),
-        DQ = QQ.getActiveUniforms(FQ, [...Array(oQ).keys()], AQ.UNIFORM_BLOCK_INDEX);
-      for (let kQ = 0; kQ < oQ; kQ++) {
-        const LQ = QQ.getActiveUniform(FQ, kQ);
-        if (!LQ || -1 !== DQ[kQ]) continue;
-        const qQ = LQ.name.replace(/\[0\]$/, "");
-        for (let oQ = 0; oQ < LQ.size; oQ++) {
-          const DQ = LQ.size > 1 ? `${qQ}[${oQ}]` : LQ.name,
-            kQ = QQ.getUniformLocation(FQ, DQ),
-            vQ = QQ.getUniformLocation(wQ, DQ);
-          kQ && vQ && gQ(QQ, vQ, LQ.type, QQ.getUniform(FQ, kQ))
+      const fk = kk.getParameter(Hk.CURRENT_PROGRAM);
+      kk.useProgram(ik);
+      const Sk = kk.getProgramParameter(ek, Hk.ACTIVE_UNIFORMS),
+        bk = kk.getActiveUniforms(ek, [...Array(Sk).keys()], Hk.UNIFORM_BLOCK_INDEX);
+      for (let rk = 0; rk < Sk; rk++) {
+        const Dk = kk.getActiveUniform(ek, rk);
+        if (!Dk || -1 !== bk[rk]) continue;
+        const fk = Dk.name.replace(/\[0\]$/, "");
+        for (let Sk = 0; Sk < Dk.size; Sk++) {
+          const bk = Dk.size > 1 ? `${fk}[${Sk}]` : Dk.name,
+            rk = kk.getUniformLocation(ek, bk),
+            Pk = kk.getUniformLocation(ik, bk);
+          rk && Pk && gk(kk, Pk, Dk.type, kk.getUniform(ek, rk))
         }
       }
-      QQ.useProgram(qQ)
+      kk.useProgram(fk)
     }
 
-    function gQ(QQ, FQ, wQ, LQ) {
-      const qQ = ArrayBuffer.isView(LQ) ? Array.from(LQ) : [Number(LQ)];
-      switch (wQ) {
-        case AQ.FLOAT:
-          return void QQ.uniform1f(FQ, qQ[0]);
-        case AQ.FLOAT_VEC2:
-          return void QQ.uniform2fv(FQ, qQ);
-        case AQ.FLOAT_VEC3:
-          return void QQ.uniform3fv(FQ, qQ);
-        case AQ.FLOAT_VEC4:
-          return void QQ.uniform4fv(FQ, qQ);
-        case AQ.FLOAT_MAT3:
-          return void QQ.uniformMatrix3fv(FQ, !1, qQ);
-        case AQ.FLOAT_MAT4:
-          return void QQ.uniformMatrix4fv(FQ, !1, qQ);
-        case AQ.UNSIGNED_INT:
-          return void QQ.uniform1ui(FQ, qQ[0]);
-        case AQ.UNSIGNED_INT_VEC2:
-          return void QQ.uniform2uiv(FQ, qQ);
-        case AQ.UNSIGNED_INT_VEC3:
-          return void QQ.uniform3uiv(FQ, qQ);
-        case AQ.UNSIGNED_INT_VEC4:
-          return void QQ.uniform4uiv(FQ, qQ);
-        case AQ.INT_VEC2:
-          return void QQ.uniform2iv(FQ, qQ);
-        case AQ.INT_VEC3:
-          return void QQ.uniform3iv(FQ, qQ);
-        case AQ.INT_VEC4:
-          return void QQ.uniform4iv(FQ, qQ);
+    function gk(kk, ek, ik, Dk) {
+      const fk = ArrayBuffer.isView(Dk) ? Array.from(Dk) : [Number(Dk)];
+      switch (ik) {
+        case Hk.FLOAT:
+          return void kk.uniform1f(ek, fk[0]);
+        case Hk.FLOAT_VEC2:
+          return void kk.uniform2fv(ek, fk);
+        case Hk.FLOAT_VEC3:
+          return void kk.uniform3fv(ek, fk);
+        case Hk.FLOAT_VEC4:
+          return void kk.uniform4fv(ek, fk);
+        case Hk.FLOAT_MAT3:
+          return void kk.uniformMatrix3fv(ek, !1, fk);
+        case Hk.FLOAT_MAT4:
+          return void kk.uniformMatrix4fv(ek, !1, fk);
+        case Hk.UNSIGNED_INT:
+          return void kk.uniform1ui(ek, fk[0]);
+        case Hk.UNSIGNED_INT_VEC2:
+          return void kk.uniform2uiv(ek, fk);
+        case Hk.UNSIGNED_INT_VEC3:
+          return void kk.uniform3uiv(ek, fk);
+        case Hk.UNSIGNED_INT_VEC4:
+          return void kk.uniform4uiv(ek, fk);
+        case Hk.INT_VEC2:
+          return void kk.uniform2iv(ek, fk);
+        case Hk.INT_VEC3:
+          return void kk.uniform3iv(ek, fk);
+        case Hk.INT_VEC4:
+          return void kk.uniform4iv(ek, fk);
         default:
-          QQ.uniform1i(FQ, qQ[0])
+          kk.uniform1i(ek, fk[0])
       }
     }
 
-    function PQ(QQ, FQ, wQ, LQ) {
-      let qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const oQ = QQ.getParameter(AQ.CURRENT_PROGRAM),
-        DQ = QQ.getParameter(AQ.TRANSFORM_FEEDBACK_BINDING),
-        kQ = QQ.getParameter(AQ.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        vQ = QQ.getParameter(AQ.COPY_READ_BUFFER_BINDING),
-        mQ = QQ.isEnabled(AQ.RASTERIZER_DISCARD),
-        uQ = QQ.createTransformFeedback(),
-        HQ = QQ.createBuffer();
-      NQ.inProbe = !0;
+    function Gk(kk, ek, ik, Dk) {
+      let fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const Sk = kk.getParameter(Hk.CURRENT_PROGRAM),
+        bk = kk.getParameter(Hk.TRANSFORM_FEEDBACK_BINDING),
+        rk = kk.getParameter(Hk.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        Pk = kk.getParameter(Hk.COPY_READ_BUFFER_BINDING),
+        mk = kk.isEnabled(Hk.RASTERIZER_DISCARD),
+        Mk = kk.createTransformFeedback(),
+        Kk = kk.createBuffer();
+      zk.inProbe = !0;
       try {
-        const oQ = QQ.getError();
-        oQ !== AQ.NO_ERROR && XQ(`GL error 0x${oQ.toString(16)} pending before the decode probe (the renderer's)`), QQ.useProgram(FQ), QQ.bindTransformFeedback(AQ.TRANSFORM_FEEDBACK, uQ), QQ.bindBuffer(AQ.TRANSFORM_FEEDBACK_BUFFER, HQ), QQ.bufferData(AQ.TRANSFORM_FEEDBACK_BUFFER, 12 * wQ, AQ.STREAM_READ), QQ.bindBufferBase(AQ.TRANSFORM_FEEDBACK_BUFFER, 0, HQ), QQ.enable(AQ.RASTERIZER_DISCARD), QQ.beginTransformFeedback(AQ.POINTS), LQ(), QQ.endTransformFeedback(), QQ.bindBufferBase(AQ.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const DQ = QQ.getError();
-        if (DQ !== AQ.NO_ERROR) return XQ(`${qQ}: GL error 0x${DQ.toString(16)} on the feedback draw`), null;
-        const kQ = new Float32Array(3 * wQ);
-        return QQ.bindBuffer(AQ.COPY_READ_BUFFER, HQ), QQ.getBufferSubData(AQ.COPY_READ_BUFFER, 0, kQ), kQ
+        const Sk = kk.getError();
+        Sk !== Hk.NO_ERROR && tk(`GL error 0x${Sk.toString(16)} pending before the decode probe (the renderer's)`), kk.useProgram(ek), kk.bindTransformFeedback(Hk.TRANSFORM_FEEDBACK, Mk), kk.bindBuffer(Hk.TRANSFORM_FEEDBACK_BUFFER, Kk), kk.bufferData(Hk.TRANSFORM_FEEDBACK_BUFFER, 12 * ik, Hk.STREAM_READ), kk.bindBufferBase(Hk.TRANSFORM_FEEDBACK_BUFFER, 0, Kk), kk.enable(Hk.RASTERIZER_DISCARD), kk.beginTransformFeedback(Hk.POINTS), Dk(), kk.endTransformFeedback(), kk.bindBufferBase(Hk.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const bk = kk.getError();
+        if (bk !== Hk.NO_ERROR) return tk(`${fk}: GL error 0x${bk.toString(16)} on the feedback draw`), null;
+        const rk = new Float32Array(3 * ik);
+        return kk.bindBuffer(Hk.COPY_READ_BUFFER, Kk), kk.getBufferSubData(Hk.COPY_READ_BUFFER, 0, rk), rk
       } finally {
-        mQ || QQ.disable(AQ.RASTERIZER_DISCARD), QQ.bindTransformFeedback(AQ.TRANSFORM_FEEDBACK, DQ), QQ.bindBuffer(AQ.TRANSFORM_FEEDBACK_BUFFER, kQ), QQ.bindBuffer(AQ.COPY_READ_BUFFER, vQ), QQ.deleteTransformFeedback(uQ), QQ.deleteBuffer(HQ), QQ.useProgram(oQ), NQ.inProbe = !1
+        mk || kk.disable(Hk.RASTERIZER_DISCARD), kk.bindTransformFeedback(Hk.TRANSFORM_FEEDBACK, bk), kk.bindBuffer(Hk.TRANSFORM_FEEDBACK_BUFFER, rk), kk.bindBuffer(Hk.COPY_READ_BUFFER, Pk), kk.deleteTransformFeedback(Mk), kk.deleteBuffer(Kk), kk.useProgram(Sk), zk.inProbe = !1
       }
     }
 
-    function ZQ(QQ, FQ, wQ, LQ) {
-      const qQ = QQ.getParameter(AQ.COPY_READ_BUFFER_BINDING),
-        oQ = new Uint8Array(LQ);
-      return QQ.bindBuffer(AQ.COPY_READ_BUFFER, FQ), QQ.getBufferSubData(AQ.COPY_READ_BUFFER, wQ, oQ), QQ.bindBuffer(AQ.COPY_READ_BUFFER, qQ), oQ
+    function Nk(kk, ek, ik, Dk) {
+      const fk = kk.getParameter(Hk.COPY_READ_BUFFER_BINDING),
+        Sk = new Uint8Array(Dk);
+      return kk.bindBuffer(Hk.COPY_READ_BUFFER, ek), kk.getBufferSubData(Hk.COPY_READ_BUFFER, ik, Sk), kk.bindBuffer(Hk.COPY_READ_BUFFER, fk), Sk
     }
-    const yQ = `#version 300 es\nlayout(location = ${eQ}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      BQ = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      dQ = new WeakMap;
+    const Rk = `#version 300 es\nlayout(location = ${lk}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      Jk = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      ke = new WeakMap;
 
-    function QF(QQ, FQ, wQ) {
-      const LQ = QQ.getProgramParameter(FQ, AQ.ACTIVE_UNIFORMS),
-        qQ = QQ.getParameter(AQ.ACTIVE_TEXTURE);
+    function ee(kk, ek, ik) {
+      const Dk = kk.getProgramParameter(ek, Hk.ACTIVE_UNIFORMS),
+        fk = kk.getParameter(Hk.ACTIVE_TEXTURE);
       try {
-        for (let qQ = 0; qQ < LQ; qQ++) {
-          const LQ = QQ.getActiveUniform(FQ, qQ);
-          if ((null === LQ || void 0 === LQ ? void 0 : LQ.type) !== AQ.UNSIGNED_INT_SAMPLER_2D) continue;
-          const oQ = QQ.getUniformLocation(FQ, LQ.name),
-            DQ = oQ ? QQ.getUniform(FQ, oQ) : -1;
-          if (DQ < 0) continue;
-          QQ.activeTexture(AQ.TEXTURE0 + DQ);
-          const kQ = QQ.getParameter(AQ.TEXTURE_BINDING_2D);
-          if (kQ && UQ.get(kQ) === wQ) return kQ
+        for (let fk = 0; fk < Dk; fk++) {
+          const Dk = kk.getActiveUniform(ek, fk);
+          if ((null === Dk || void 0 === Dk ? void 0 : Dk.type) !== Hk.UNSIGNED_INT_SAMPLER_2D) continue;
+          const Sk = kk.getUniformLocation(ek, Dk.name),
+            bk = Sk ? kk.getUniform(ek, Sk) : -1;
+          if (bk < 0) continue;
+          kk.activeTexture(Hk.TEXTURE0 + bk);
+          const rk = kk.getParameter(Hk.TEXTURE_BINDING_2D);
+          if (rk && Ik.get(rk) === ik) return rk
         }
         return null
       } finally {
-        QQ.activeTexture(qQ)
+        kk.activeTexture(fk)
       }
     }
 
-    function FF(QQ, FQ, wQ, LQ, qQ) {
-      const oQ = new Uint32Array(4 * qQ),
-        DQ = QQ.getParameter(AQ.READ_FRAMEBUFFER_BINDING),
-        kQ = QQ.createFramebuffer();
-      QQ.bindFramebuffer(AQ.READ_FRAMEBUFFER, kQ), QQ.framebufferTexture2D(AQ.READ_FRAMEBUFFER, AQ.COLOR_ATTACHMENT0, AQ.TEXTURE_2D, FQ, 0);
+    function ie(kk, ek, ik, Dk, fk) {
+      const Sk = new Uint32Array(4 * fk),
+        bk = kk.getParameter(Hk.READ_FRAMEBUFFER_BINDING),
+        rk = kk.createFramebuffer();
+      kk.bindFramebuffer(Hk.READ_FRAMEBUFFER, rk), kk.framebufferTexture2D(Hk.READ_FRAMEBUFFER, Hk.COLOR_ATTACHMENT0, Hk.TEXTURE_2D, ek, 0);
       try {
-        let FQ = 0;
-        for (; FQ < qQ;) {
-          const DQ = LQ + FQ,
-            kQ = DQ % wQ,
-            vQ = Math.min(qQ - FQ, wQ - kQ);
-          QQ.readPixels(kQ, Math.floor(DQ / wQ), vQ, 1, AQ.RGBA_INTEGER, AQ.UNSIGNED_INT, oQ.subarray(4 * FQ, 4 * (FQ + vQ))), FQ += vQ
+        let ek = 0;
+        for (; ek < fk;) {
+          const bk = Dk + ek,
+            rk = bk % ik,
+            Pk = Math.min(fk - ek, ik - rk);
+          kk.readPixels(rk, Math.floor(bk / ik), Pk, 1, Hk.RGBA_INTEGER, Hk.UNSIGNED_INT, Sk.subarray(4 * ek, 4 * (ek + Pk))), ek += Pk
         }
       } finally {
-        QQ.bindFramebuffer(AQ.READ_FRAMEBUFFER, DQ), QQ.deleteFramebuffer(kQ)
+        kk.bindFramebuffer(Hk.READ_FRAMEBUFFER, bk), kk.deleteFramebuffer(rk)
       }
-      return oQ
+      return Sk
     }
 
-    function wF(QQ, FQ, wQ) {
-      let LQ = 0,
-        qQ = 0;
-      for (let vQ = 0; vQ < FQ.bytes.length; vQ += RQ) {
-        LQ++;
-        const QQ = Math.min(vQ + RQ, FQ.bytes.length);
-        YQ(FQ.bytes.subarray(vQ, QQ)) !== YQ(wQ.subarray(vQ, QQ)) && qQ++
+    function De(kk, ek, ik) {
+      let Dk = 0,
+        fk = 0;
+      for (let Pk = 0; Pk < ek.bytes.length; Pk += dk) {
+        Dk++;
+        const kk = Math.min(Pk + dk, ek.bytes.length);
+        nk(ek.bytes.subarray(Pk, kk)) !== nk(ik.subarray(Pk, kk)) && fk++
       }
-      const oQ = `${QQ} ${FQ.bytes.length} B cpu ${YQ(FQ.bytes).toString(16)} gpu ${YQ(wQ).toString(16)}, ${qQ}/${LQ} blocks differ${FQ.missed?`, ${FQ.missed} GPU-side writes uncopied`:""}`;
-      if (0 === qQ) return oQ;
+      const Sk = `${kk} ${ek.bytes.length} B cpu ${nk(ek.bytes).toString(16)} gpu ${nk(ik).toString(16)}, ${fk}/${Dk} blocks differ${ek.missed?`, ${ek.missed} GPU-side writes uncopied`:""}`;
+      if (0 === fk) return Sk;
       const {
-        count: DQ,
-        offsets: kQ
-      } = function(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const LQ = Math.min(QQ.length, FQ.length);
-        let qQ = Math.abs(QQ.length - FQ.length);
-        const oQ = [];
-        for (let DQ = 0; DQ < LQ; DQ++) QQ[DQ] !== FQ[DQ] && (qQ++, oQ.length < wQ && oQ.push(DQ));
+        count: bk,
+        offsets: rk
+      } = function(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const Dk = Math.min(kk.length, ek.length);
+        let fk = Math.abs(kk.length - ek.length);
+        const Sk = [];
+        for (let bk = 0; bk < Dk; bk++) kk[bk] !== ek[bk] && (fk++, Sk.length < ik && Sk.push(bk));
         return {
-          count: qQ,
-          offsets: oQ
+          count: fk,
+          offsets: Sk
         }
-      }(FQ.bytes, wQ);
-      return fQ([`${oQ}: ${DQ} bytes differ`, ...kQ.map((QQ => `  +${QQ}: cpu ${xQ(FQ.bytes,QQ)} | gpu ${xQ(wQ,QQ)}`))].join("\n")), `${oQ}: ${DQ} bytes differ, first at ${kQ.join(", ")} (context in the saved file)`
+      }(ek.bytes, ik);
+      return Xk([`${Sk}: ${bk} bytes differ`, ...rk.map((kk => `  +${kk}: cpu ${Uk(ek.bytes,kk)} | gpu ${Uk(ik,kk)}`))].join("\n")), `${Sk}: ${bk} bytes differ, first at ${rk.join(", ")} (context in the saved file)`
     }
 
-    function LF(QQ) {
-      if (0 === QQ.vertices.length) return void XQ(`decode probe (${QQ.reason}): no terrain draw probed (${QQ.draws.length} seen)`);
-      const FQ = function(QQ) {
-          const FQ = new Map;
-          for (const LQ of QQ) {
-            const QQ = FQ.get(LQ.group);
-            QQ ? QQ.push(LQ) : FQ.set(LQ.group, [LQ])
+    function fe(kk) {
+      if (0 === kk.vertices.length) return void tk(`decode probe (${kk.reason}): no terrain draw probed (${kk.draws.length} seen)`);
+      const ek = function(kk) {
+          const ek = new Map;
+          for (const Dk of kk) {
+            const kk = ek.get(Dk.group);
+            kk ? kk.push(Dk) : ek.set(Dk.group, [Dk])
           }
-          const wQ = {
-            vertices: QQ.length,
+          const ik = {
+            vertices: kk.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -606,67 +607,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [LQ, qQ] of FQ) {
-            const QQ = new Map,
-              FQ = qQ.map((FQ => {
-                const wQ = uQ(FQ.record, FQ.slot),
-                  LQ = [FQ.gpu[0] - wQ[0], FQ.gpu[1] - wQ[1], FQ.gpu[2] - wQ[2]],
-                  qQ = LQ.map((QQ => Math.round(64 * QQ))).join(","),
-                  oQ = QQ.get(qQ);
-                return oQ ? oQ.count++ : QQ.set(qQ, {
+          for (const [Dk, fk] of ek) {
+            const kk = new Map,
+              ek = fk.map((ek => {
+                const ik = Mk(ek.record, ek.slot),
+                  Dk = [ek.gpu[0] - ik[0], ek.gpu[1] - ik[1], ek.gpu[2] - ik[2]],
+                  fk = Dk.map((kk => Math.round(64 * kk))).join(","),
+                  Sk = kk.get(fk);
+                return Sk ? Sk.count++ : kk.set(fk, {
                   count: 1,
-                  offset: LQ
-                }), wQ
+                  offset: Dk
+                }), ik
               }));
-            let oQ = [0, 0, 0],
-              DQ = 0;
-            for (const wQ of QQ.values()) wQ.count > DQ && (DQ = wQ.count, oQ = wQ.offset);
-            wQ.translations.set(LQ, oQ), qQ.forEach(((QQ, LQ) => {
-              var qQ;
-              const DQ = [FQ[LQ][0] + oQ[0], FQ[LQ][1] + oQ[1], FQ[LQ][2] + oQ[2]];
-              if (DQ.every(((FQ, wQ) => {
-                  return LQ = QQ.gpu[wQ], qQ = FQ, Math.abs(LQ - qQ) <= Math.max(.001, 1e-6 * Math.abs(qQ));
-                  var LQ, qQ
+            let Sk = [0, 0, 0],
+              bk = 0;
+            for (const ik of kk.values()) ik.count > bk && (bk = ik.count, Sk = ik.offset);
+            ik.translations.set(Dk, Sk), fk.forEach(((kk, Dk) => {
+              var fk;
+              const bk = [ek[Dk][0] + Sk[0], ek[Dk][1] + Sk[1], ek[Dk][2] + Sk[2]];
+              if (bk.every(((ek, ik) => {
+                  return Dk = kk.gpu[ik], fk = ek, Math.abs(Dk - fk) <= Math.max(.001, 1e-6 * Math.abs(fk));
+                  var Dk, fk
                 }))) return;
-              wQ.mismatches++, wQ.byDirection[kQ(QQ.record[2])]++, wQ.byDiagonal[vQ(QQ.record[2])]++;
-              const mQ = HQ(QQ.record);
-              wQ.byBand[mQ] = (null !== (qQ = wQ.byBand[mQ]) && void 0 !== qQ ? qQ : 0) + 1, wQ.first.length < bQ && wQ.first.push({
-                ...QQ,
-                expected: DQ
+              ik.mismatches++, ik.byDirection[rk(kk.record[2])]++, ik.byDiagonal[Pk(kk.record[2])]++;
+              const mk = Kk(kk.record);
+              ik.byBand[mk] = (null !== (fk = ik.byBand[mk]) && void 0 !== fk ? fk : 0) + 1, ik.first.length < xk && ik.first.push({
+                ...kk,
+                expected: bk
               })
             }))
           }
-          return wQ
-        }(QQ.vertices),
-        wQ = FQ.byDirection.map(((QQ, FQ) => QQ ? `${DQ[FQ]} ${QQ}` : "")).filter(Boolean).join(" "),
-        LQ = Object.entries(FQ.byBand).map((QQ => {
-          let [FQ, wQ] = QQ;
-          return `${FQ}: ${wQ}`
+          return ik
+        }(kk.vertices),
+        ik = ek.byDirection.map(((kk, ek) => kk ? `${bk[ek]} ${kk}` : "")).filter(Boolean).join(" "),
+        Dk = Object.entries(ek.byBand).map((kk => {
+          let [ek, ik] = kk;
+          return `${ek}: ${ik}`
         })).join(" ");
-      if (XQ(`decode probe (${QQ.reason}): ${FQ.mismatches}/${FQ.vertices} vertices differ from the CPU decode over ${QQ.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (FQ.mismatches ? ` by direction [${wQ}] diagonal [0: ${FQ.byDiagonal[0]} 1: ${FQ.byDiagonal[1]}] extent [${LQ}]` : "")), QQ.fed.records > 0 || QQ.fed.failed > 0) {
-        XQ(`decode probe input: ${QQ.fed.differing}/${QQ.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (QQ.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (QQ.fed.failed ? `; the feed failed on ${QQ.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const FQ of QQ.fed.first) XQ(`  ${FQ}`)
+      if (tk(`decode probe (${kk.reason}): ${ek.mismatches}/${ek.vertices} vertices differ from the CPU decode over ${kk.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (ek.mismatches ? ` by direction [${ik}] diagonal [0: ${ek.byDiagonal[0]} 1: ${ek.byDiagonal[1]}] extent [${Dk}]` : "")), kk.fed.records > 0 || kk.fed.failed > 0) {
+        tk(`decode probe input: ${kk.fed.differing}/${kk.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (kk.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (kk.fed.failed ? `; the feed failed on ${kk.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const ek of kk.fed.first) tk(`  ${ek}`)
       }
-      for (const qQ of FQ.first) {
-        const [QQ, FQ, wQ] = qQ.record;
-        XQ(`  mismatch part ${qQ.group} r0 ${QQ.toString(16)} r1 ${FQ.toString(16)} r2 ${wQ.toString(16)} slot ${qQ.slot} (${DQ[kQ(wQ)]}): expected ${qQ.expected.map(oF).join(",")} gpu ${qQ.gpu.map(oF).join(",")}`)
+      for (const fk of ek.first) {
+        const [kk, ek, ik] = fk.record;
+        tk(`  mismatch part ${fk.group} r0 ${kk.toString(16)} r1 ${ek.toString(16)} r2 ${ik.toString(16)} slot ${fk.slot} (${bk[rk(ik)]}): expected ${fk.expected.map(be).join(",")} gpu ${fk.gpu.map(be).join(",")}`)
       }
-      fQ(`decode probe translations: ${[...FQ.translations].map((QQ=>{let[FQ,wQ]=QQ;return`${FQ}: ${wQ.map(oF).join(",")}`})).join("; ")}`)
+      Xk(`decode probe translations: ${[...ek.translations].map((kk=>{let[ek,ik]=kk;return`${ek}: ${ik.map(be).join(",")}`})).join("; ")}`)
     }
 
-    function qF(QQ) {
-      return QQ.toString(16)
+    function Se(kk) {
+      return kk.toString(16)
     }
 
-    function oF(QQ) {
-      return Number.isInteger(QQ) ? String(QQ) : QQ.toFixed(3)
+    function be(kk) {
+      return Number.isInteger(kk) ? String(kk) : kk.toFixed(3)
     }
 
-    function DF(QQ) {
-      return null !== NQ.pendingCheck ? Promise.resolve() : new Promise((FQ => {
-        let wQ = !1;
-        const LQ = {
-          reason: QQ,
+    function re(kk) {
+      return null !== zk.pendingCheck ? Promise.resolve() : new Promise((ek => {
+        let ik = !1;
+        const Dk = {
+          reason: kk,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -679,85 +680,85 @@ export const modules = {
             failed: 0
           }
         };
-        NQ.pendingCheck = LQ;
-        const qQ = () => {
-            NQ.pendingCheck = null;
+        zk.pendingCheck = Dk;
+        const fk = () => {
+            zk.pendingCheck = null;
             try {
-              ! function(QQ) {
-                XQ(`draw ranges (${QQ.reason}): ${QQ.terrainDraws} terrain draws in the frame, the first ${QQ.draws.length} here`);
-                for (const FQ of QQ.draws) {
-                  const QQ = FQ.PA.slice(0, 8).map((QQ => {
-                      let [FQ, wQ] = QQ;
-                      return `${FQ}+${wQ}`
+              ! function(kk) {
+                tk(`draw ranges (${kk.reason}): ${kk.terrainDraws} terrain draws in the frame, the first ${kk.draws.length} here`);
+                for (const ek of kk.draws) {
+                  const kk = ek.lw.slice(0, 8).map((kk => {
+                      let [ek, ik] = kk;
+                      return `${ek}+${ik}`
                     })).join(" "),
-                    wQ = FQ.PA.length > 8 ? ` (+${FQ.PA.length-8} ranges)` : "";
-                  XQ(`  ${sQ(FQ.program)} ${FQ.program.terrain} ${FQ.call} ${QQ}${wQ} x${FQ.instances}${FQ.group>=0?` part ${FQ.group} chunk ${FQ.chunk}`:""} | ${FQ.attributes.join(" | ")}`)
+                    ik = ek.lw.length > 8 ? ` (+${ek.lw.length-8} ranges)` : "";
+                  tk(`  ${Fk(ek.program)} ${ek.program.terrain} ${ek.call} ${kk}${ik} x${ek.instances}${ek.group>=0?` part ${ek.group} chunk ${ek.chunk}`:""} | ${ek.attributes.join(" | ")}`)
                 }
-              }(LQ), LF(LQ);
-              LQ.draws.some((QQ => "undefined" !== typeof WebGL2RenderingContext && QQ.gl instanceof WebGL2RenderingContext)) || 0 === LQ.draws.length ? function(QQ) {
-                const FQ = [],
-                  wQ = new Map;
-                for (const LQ of QQ)
-                  if ("undefined" !== typeof WebGL2RenderingContext && LQ.gl instanceof WebGL2RenderingContext)
-                    for (const QQ of LQ.pages) wQ.set("buf" === QQ.kind ? QQ.buffer : QQ.texture, {
-                      page: QQ,
-                      gl: LQ.gl
+              }(Dk), fe(Dk);
+              Dk.draws.some((kk => "undefined" !== typeof WebGL2RenderingContext && kk.gl instanceof WebGL2RenderingContext)) || 0 === Dk.draws.length ? function(kk) {
+                const ek = [],
+                  ik = new Map;
+                for (const Dk of kk)
+                  if ("undefined" !== typeof WebGL2RenderingContext && Dk.gl instanceof WebGL2RenderingContext)
+                    for (const kk of Dk.pages) ik.set("buf" === kk.kind ? kk.buffer : kk.texture, {
+                      page: kk,
+                      gl: Dk.gl
                     });
-                for (const [LQ, {
-                    page: qQ,
-                    gl: oQ
-                  }] of wQ) {
-                  const QQ = IQ.get(LQ);
-                  if (!QQ) {
-                    FQ.push(`${qQ.kind}#${zQ(LQ)}: no CPU copy (${NQ.uncopied} pages over the copy budget)`);
+                for (const [Dk, {
+                    page: fk,
+                    gl: Sk
+                  }] of ik) {
+                  const kk = qk.get(Dk);
+                  if (!kk) {
+                    ek.push(`${fk.kind}#${Ek(Dk)}: no CPU copy (${zk.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === qQ.kind) {
-                    FQ.push(wF(`buf#${QQ.id}`, QQ, ZQ(oQ, qQ.buffer, 0, QQ.bytes.length)));
+                  if ("buf" === fk.kind) {
+                    ek.push(De(`buf#${kk.id}`, kk, Nk(Sk, fk.buffer, 0, kk.bytes.length)));
                     continue
                   }
-                  const wQ = FF(oQ, qQ.texture, QQ.width, 0, QQ.width * QQ.height),
-                    DQ = 16 === QQ.texelBytes ? new Uint8Array(wQ.buffer) : new Uint8Array(new Uint16Array(wQ).buffer);
-                  FQ.push(wF(`tex#${QQ.id} (${16===QQ.texelBytes?"records":"light"})`, QQ, DQ))
+                  const ik = ie(Sk, fk.texture, kk.width, 0, kk.width * kk.height),
+                    bk = 16 === kk.texelBytes ? new Uint8Array(ik.buffer) : new Uint8Array(new Uint16Array(ik).buffer);
+                  ek.push(De(`tex#${kk.id} (${16===kk.texelBytes?"records":"light"})`, kk, bk))
                 }
-                for (const LQ of FQ) XQ(`page readback ${LQ}`)
-              }(LQ.draws) : XQ("page readback: none on WebGL1 (no buffer readback)")
-            } catch (QQ) {
-              XQ(`check failed: ${String(QQ)}`)
+                for (const Dk of ek) tk(`page readback ${Dk}`)
+              }(Dk.draws) : tk("page readback: none on WebGL1 (no buffer readback)")
+            } catch (kk) {
+              tk(`check failed: ${String(kk)}`)
             }
-            FQ()
+            ek()
           },
-          oQ = () => {
-            if (LQ.draws.length > 0 && !wQ) return wQ = !0, void setTimeout(qQ, 0);
-            wQ || requestAnimationFrame(oQ)
+          Sk = () => {
+            if (Dk.draws.length > 0 && !ik) return ik = !0, void setTimeout(fk, 0);
+            ik || requestAnimationFrame(Sk)
           };
-        requestAnimationFrame(oQ), setTimeout((() => {
-          wQ || (wQ = !0, qQ())
+        requestAnimationFrame(Sk), setTimeout((() => {
+          ik || (ik = !0, fk())
         }), 5e3)
       }))
     }
-    var kF = wQ(4540);
-    const vF = 20,
-      mF = 24,
-      uF = Reflect.apply;
+    var Pe = ik(4629);
+    const me = 20,
+      Me = 24,
+      Ke = Reflect.apply;
 
-    function HF(QQ, FQ, wQ) {
-      if (!QQ) return;
-      const LQ = QQ[FQ];
-      if ("function" === typeof LQ) {
-        const qQ = wQ(LQ);
-        QQ[FQ] = qQ, (0, kF.m)(qQ, LQ)
+    function xe(kk, ek, ik) {
+      if (!kk) return;
+      const Dk = kk[ek];
+      if ("function" === typeof Dk) {
+        const fk = ik(Dk);
+        kk[ek] = fk, (0, Pe.r)(fk, Dk)
       }
     }
-    let bF = !1;
-    const YF = new WeakMap,
-      xF = new WeakMap,
-      AF = new WeakMap,
-      tF = {
+    let ne = !1;
+    const Ue = new WeakMap,
+      He = new WeakMap,
+      we = new WeakMap,
+      le = {
         gl: 0,
         lost: 0
       };
-    let eF = {
+    let pe = {
         inst: {
           draws: 0,
           faces: 0
@@ -771,307 +772,307 @@ export const modules = {
           faces: 0
         }
       },
-      MF = {
+      ye = {
         buffer: 0,
         texture: 0
       },
-      GF = 0;
+      Ye = 0;
 
-    function pF(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (QQ instanceof ArrayBuffer) return new Uint8Array(QQ, FQ, wQ || void 0);
-      if (!ArrayBuffer.isView(QQ)) return null;
-      const LQ = "BYTES_PER_ELEMENT" in QQ ? QQ.BYTES_PER_ELEMENT : 1,
-        qQ = QQ.byteOffset + FQ * LQ,
-        oQ = wQ ? wQ * LQ : QQ.byteLength - FQ * LQ;
-      return new Uint8Array(QQ.buffer, qQ, Math.max(0, oQ))
+    function Le(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (kk instanceof ArrayBuffer) return new Uint8Array(kk, ek, ik || void 0);
+      if (!ArrayBuffer.isView(kk)) return null;
+      const Dk = "BYTES_PER_ELEMENT" in kk ? kk.BYTES_PER_ELEMENT : 1,
+        fk = kk.byteOffset + ek * Dk,
+        Sk = ik ? ik * Dk : kk.byteLength - ek * Dk;
+      return new Uint8Array(kk.buffer, fk, Math.max(0, Sk))
     }
 
-    function cF(QQ, FQ) {
-      const wQ = function(QQ) {
-        switch (QQ) {
-          case AQ.ARRAY_BUFFER:
-            return AQ.ARRAY_BUFFER_BINDING;
-          case AQ.ELEMENT_ARRAY_BUFFER:
-            return AQ.ELEMENT_ARRAY_BUFFER_BINDING;
-          case AQ.COPY_READ_BUFFER:
-            return AQ.COPY_READ_BUFFER_BINDING;
-          case AQ.COPY_WRITE_BUFFER:
-            return AQ.COPY_WRITE_BUFFER_BINDING;
-          case AQ.UNIFORM_BUFFER:
-            return AQ.UNIFORM_BUFFER_BINDING;
-          case AQ.PIXEL_UNPACK_BUFFER:
-            return AQ.PIXEL_UNPACK_BUFFER_BINDING;
-          case AQ.TRANSFORM_FEEDBACK_BUFFER:
-            return AQ.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function Ce(kk, ek) {
+      const ik = function(kk) {
+        switch (kk) {
+          case Hk.ARRAY_BUFFER:
+            return Hk.ARRAY_BUFFER_BINDING;
+          case Hk.ELEMENT_ARRAY_BUFFER:
+            return Hk.ELEMENT_ARRAY_BUFFER_BINDING;
+          case Hk.COPY_READ_BUFFER:
+            return Hk.COPY_READ_BUFFER_BINDING;
+          case Hk.COPY_WRITE_BUFFER:
+            return Hk.COPY_WRITE_BUFFER_BINDING;
+          case Hk.UNIFORM_BUFFER:
+            return Hk.UNIFORM_BUFFER_BINDING;
+          case Hk.PIXEL_UNPACK_BUFFER:
+            return Hk.PIXEL_UNPACK_BUFFER_BINDING;
+          case Hk.TRANSFORM_FEEDBACK_BUFFER:
+            return Hk.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(FQ);
-      return wQ ? QQ.getParameter(wQ) : null
+      }(ek);
+      return ik ? kk.getParameter(ik) : null
     }
 
-    function CF(QQ) {
-      const FQ = IQ.get(QQ);
-      FQ && (NQ.shadowBytes -= FQ.bytes.length, IQ.delete(QQ))
+    function Ae(kk) {
+      const ek = qk.get(kk);
+      ek && (zk.shadowBytes -= ek.bytes.length, qk.delete(kk))
     }
 
-    function SF(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        qQ = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      CF(QQ), NQ.shadowBytes + FQ > WQ ? NQ.uncopied++ : (NQ.shadowBytes += FQ, IQ.set(QQ, {
-        id: zQ(QQ),
-        bytes: new Uint8Array(FQ),
-        width: wQ,
-        height: LQ,
-        texelBytes: qQ,
+    function je(kk, ek) {
+      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      Ae(kk), zk.shadowBytes + ek > sk ? zk.uncopied++ : (zk.shadowBytes += ek, qk.set(kk, {
+        id: Ek(kk),
+        bytes: new Uint8Array(ek),
+        width: ik,
+        height: Dk,
+        texelBytes: fk,
         missed: 0
       }))
     }
 
-    function iF(QQ, FQ) {
-      for (const wQ of ["deleteBuffer", "deleteTexture"]) HF(QQ, wQ, (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        return wQ[0] && CF(wQ[0]), uF(QQ, this, wQ)
+    function se(kk, ek) {
+      for (const ik of ["deleteBuffer", "deleteTexture"]) xe(kk, ik, (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        return ik[0] && Ae(ik[0]), Ke(kk, this, ik)
       }));
-      HF(QQ, "shaderSource", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        return wQ[0] && "string" === typeof wQ[1] && YF.set(wQ[0], wQ[1]), uF(QQ, this, wQ)
-      })), HF(QQ, "attachShader", (QQ => function() {
-        for (var FQ, wQ = arguments.length, LQ = new Array(wQ), qQ = 0; qQ < wQ; qQ++) LQ[qQ] = arguments[qQ];
-        const oQ = LQ[0],
-          DQ = null !== (FQ = xF.get(oQ)) && void 0 !== FQ ? FQ : [];
-        return DQ.push(LQ[1]), xF.set(oQ, DQ), uF(QQ, this, LQ)
-      })), HF(QQ, "linkProgram", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        const qQ = uF(QQ, this, wQ);
-        return NQ.inProbe || function(QQ, FQ) {
-          var wQ, LQ, qQ;
-          "undefined" !== typeof HTMLCanvasElement && QQ.canvas instanceof HTMLCanvasElement && function(QQ) {
-            if (IF.has(QQ)) return;
-            IF.add(QQ);
-            for (const FQ of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) QQ.addEventListener(FQ, (QQ => {
-              tF.lost < vF && (tF.lost++, XQ(`${FQ}${"statusMessage"in QQ?`: ${String(QQ.statusMessage)}`:""}`))
+      xe(kk, "shaderSource", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        return ik[0] && "string" === typeof ik[1] && Ue.set(ik[0], ik[1]), Ke(kk, this, ik)
+      })), xe(kk, "attachShader", (kk => function() {
+        for (var ek, ik = arguments.length, Dk = new Array(ik), fk = 0; fk < ik; fk++) Dk[fk] = arguments[fk];
+        const Sk = Dk[0],
+          bk = null !== (ek = He.get(Sk)) && void 0 !== ek ? ek : [];
+        return bk.push(Dk[1]), He.set(Sk, bk), Ke(kk, this, Dk)
+      })), xe(kk, "linkProgram", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        const fk = Ke(kk, this, ik);
+        return zk.inProbe || function(kk, ek) {
+          var ik, Dk, fk;
+          "undefined" !== typeof HTMLCanvasElement && kk.canvas instanceof HTMLCanvasElement && function(kk) {
+            if (Ie.has(kk)) return;
+            Ie.add(kk);
+            for (const ek of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) kk.addEventListener(ek, (kk => {
+              le.lost < me && (le.lost++, tk(`${ek}${"statusMessage"in kk?`: ${String(kk.statusMessage)}`:""}`))
             }))
-          }(QQ.canvas);
-          NQ.context ??= QQ;
-          const oQ = null !== (wQ = xF.get(FQ)) && void 0 !== wQ ? wQ : [];
-          let DQ = "",
-            kQ = "";
-          for (const uQ of oQ) {
-            var vQ;
-            const QQ = null !== (vQ = YF.get(uQ)) && void 0 !== vQ ? vQ : "";
-            /\bgl_Position\b/.test(QQ) ? DQ = QQ : kQ = QQ
+          }(kk.canvas);
+          zk.context ??= kk;
+          const Sk = null !== (ik = He.get(ek)) && void 0 !== ik ? ik : [];
+          let bk = "",
+            rk = "";
+          for (const Mk of Sk) {
+            var Pk;
+            const kk = null !== (Pk = Ue.get(Mk)) && void 0 !== Pk ? Pk : "";
+            /\bgl_Position\b/.test(kk) ? bk = kk : rk = kk
           }
-          const mQ = {
-            id: zQ(FQ),
-            name: null !== (LQ = null === (qQ = OQ.exec(DQ)) || void 0 === qQ ? void 0 : qQ[1]) && void 0 !== LQ ? LQ : null,
-            gl: QQ,
-            vertex: DQ,
-            fragment: kQ,
-            terrain: RF(DQ),
+          const mk = {
+            id: Ek(ek),
+            name: null !== (Dk = null === (fk = Vk.exec(bk)) || void 0 === fk ? void 0 : fk[1]) && void 0 !== Dk ? Dk : null,
+            gl: kk,
+            vertex: bk,
+            fragment: rk,
+            terrain: Ve(bk),
             checked: !1,
             firstDraw: !1
           };
-          if (AF.set(FQ, mQ), rQ.push([FQ, mQ]), null !== mQ.terrain) {
-            const FQ = oQ.map((FQ => {
-              var wQ;
-              return null !== (wQ = QQ.getShaderInfoLog(FQ)) && void 0 !== wQ ? wQ : ""
-            })).filter((QQ => "" !== QQ.trim()));
-            FQ.length > 0 && fQ(`program ${sQ(mQ)} (${mQ.terrain}) shader logs:\n${VQ(FQ.join("\n"))}`)
+          if (we.set(ek, mk), uk.push([ek, mk]), null !== mk.terrain) {
+            const ek = Sk.map((ek => {
+              var ik;
+              return null !== (ik = kk.getShaderInfoLog(ek)) && void 0 !== ik ? ik : ""
+            })).filter((kk => "" !== kk.trim()));
+            ek.length > 0 && Xk(`program ${Fk(mk)} (${mk.terrain}) shader logs:\n${Bk(ek.join("\n"))}`)
           }
-        }(this, wQ[0]), qQ
-      })), HF(QQ, "bufferData", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        const qQ = uF(QQ, this, wQ);
-        if (!NQ.inProbe) {
-          const QQ = cF(this, wQ[0]);
-          if (QQ) {
-            var oQ, DQ, kQ;
-            const FQ = "number" === typeof wQ[1] ? null : pF(wQ[1], null !== (oQ = wQ[3]) && void 0 !== oQ ? oQ : 0, null !== (DQ = wQ[4]) && void 0 !== DQ ? DQ : 0);
-            var vQ;
-            if (SF(QQ, "number" === typeof wQ[1] ? wQ[1] : null !== (kQ = null === FQ || void 0 === FQ ? void 0 : FQ.length) && void 0 !== kQ ? kQ : 0), FQ) null === (vQ = IQ.get(QQ)) || void 0 === vQ || vQ.bytes.set(FQ)
-          }
-        }
-        return qQ
-      })), HF(QQ, "bufferSubData", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        const qQ = uF(QQ, this, wQ);
-        if (!NQ.inProbe) {
-          var oQ, DQ;
-          const QQ = cF(this, wQ[0]),
-            FQ = QQ ? IQ.get(QQ) : void 0,
-            LQ = pF(wQ[2], null !== (oQ = wQ[3]) && void 0 !== oQ ? oQ : 0, null !== (DQ = wQ[4]) && void 0 !== DQ ? DQ : 0);
-          if (FQ && LQ) {
-            const QQ = wQ[1];
-            FQ.bytes.set(LQ.subarray(0, Math.max(0, FQ.bytes.length - QQ)), QQ), WF("buffer", FQ, QQ, LQ.length)
+        }(this, ik[0]), fk
+      })), xe(kk, "bufferData", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        const fk = Ke(kk, this, ik);
+        if (!zk.inProbe) {
+          const kk = Ce(this, ik[0]);
+          if (kk) {
+            var Sk, bk, rk;
+            const ek = "number" === typeof ik[1] ? null : Le(ik[1], null !== (Sk = ik[3]) && void 0 !== Sk ? Sk : 0, null !== (bk = ik[4]) && void 0 !== bk ? bk : 0);
+            var Pk;
+            if (je(kk, "number" === typeof ik[1] ? ik[1] : null !== (rk = null === ek || void 0 === ek ? void 0 : ek.length) && void 0 !== rk ? rk : 0), ek) null === (Pk = qk.get(kk)) || void 0 === Pk || Pk.bytes.set(ek)
           }
         }
-        return qQ
-      })), FQ && (HF(QQ, "copyBufferSubData", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        const qQ = uF(QQ, this, wQ);
-        if (!NQ.inProbe) {
-          const [QQ, FQ, LQ, qQ, oQ] = wQ, DQ = cF(this, QQ), kQ = cF(this, FQ), vQ = DQ ? IQ.get(DQ) : void 0, mQ = kQ ? IQ.get(kQ) : void 0;
-          mQ && (vQ ? mQ.bytes.set(vQ.bytes.slice(LQ, LQ + oQ), qQ) : mQ.missed++)
-        }
-        return qQ
-      })), HF(QQ, "texStorage2D", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        const qQ = uF(QQ, this, wQ),
-          [, , oQ, DQ, kQ] = wQ;
-        if (!NQ.inProbe && (oQ === AQ.RGBA32UI || oQ === AQ.RGBA16UI)) {
-          const QQ = this.getParameter(AQ.TEXTURE_BINDING_2D),
-            FQ = oQ === AQ.RGBA32UI ? 16 : 8;
-          QQ && (UQ.set(QQ, FQ), SF(QQ, DQ * kQ * FQ, DQ, kQ, FQ))
-        }
-        return qQ
-      })), HF(QQ, "texSubImage2D", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        const qQ = uF(QQ, this, wQ);
-        return !NQ.inProbe && wQ.length >= 9 && wQ[0] === AQ.TEXTURE_2D && 0 === wQ[1] && function(QQ, FQ) {
-          var wQ;
-          const LQ = QQ.getParameter(AQ.TEXTURE_BINDING_2D),
-            qQ = LQ ? IQ.get(LQ) : void 0;
-          if (!qQ) return;
-          const [, , oQ, DQ, kQ, vQ] = FQ;
-          let mQ = pF(FQ[8], null !== (wQ = FQ[9]) && void 0 !== wQ ? wQ : 0);
-          if (null === mQ && "number" === typeof FQ[8]) {
-            const wQ = cF(QQ, AQ.PIXEL_UNPACK_BUFFER),
-              LQ = wQ ? IQ.get(wQ) : void 0;
-            mQ = LQ ? LQ.bytes.subarray(FQ[8]) : null
+        return fk
+      })), xe(kk, "bufferSubData", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        const fk = Ke(kk, this, ik);
+        if (!zk.inProbe) {
+          var Sk, bk;
+          const kk = Ce(this, ik[0]),
+            ek = kk ? qk.get(kk) : void 0,
+            Dk = Le(ik[2], null !== (Sk = ik[3]) && void 0 !== Sk ? Sk : 0, null !== (bk = ik[4]) && void 0 !== bk ? bk : 0);
+          if (ek && Dk) {
+            const kk = ik[1];
+            ek.bytes.set(Dk.subarray(0, Math.max(0, ek.bytes.length - kk)), kk), de("buffer", ek, kk, Dk.length)
           }
-          if (null === mQ) return void qQ.missed++;
-          const uQ = QQ.getParameter(AQ.UNPACK_ROW_LENGTH) || kQ,
-            HQ = QQ.getParameter(AQ.UNPACK_SKIP_ROWS),
-            bQ = QQ.getParameter(AQ.UNPACK_SKIP_PIXELS),
-            YQ = qQ.texelBytes;
-          for (let xQ = 0; xQ < vQ; xQ++) {
-            const QQ = ((HQ + xQ) * uQ + bQ) * YQ,
-              FQ = ((DQ + xQ) * qQ.width + oQ) * YQ;
-            qQ.bytes.set(mQ.subarray(QQ, QQ + kQ * YQ), FQ)
+        }
+        return fk
+      })), ek && (xe(kk, "copyBufferSubData", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        const fk = Ke(kk, this, ik);
+        if (!zk.inProbe) {
+          const [kk, ek, Dk, fk, Sk] = ik, bk = Ce(this, kk), rk = Ce(this, ek), Pk = bk ? qk.get(bk) : void 0, mk = rk ? qk.get(rk) : void 0;
+          mk && (Pk ? mk.bytes.set(Pk.bytes.slice(Dk, Dk + Sk), fk) : mk.missed++)
+        }
+        return fk
+      })), xe(kk, "texStorage2D", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        const fk = Ke(kk, this, ik),
+          [, , Sk, bk, rk] = ik;
+        if (!zk.inProbe && (Sk === Hk.RGBA32UI || Sk === Hk.RGBA16UI)) {
+          const kk = this.getParameter(Hk.TEXTURE_BINDING_2D),
+            ek = Sk === Hk.RGBA32UI ? 16 : 8;
+          kk && (Ik.set(kk, ek), je(kk, bk * rk * ek, bk, rk, ek))
+        }
+        return fk
+      })), xe(kk, "texSubImage2D", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        const fk = Ke(kk, this, ik);
+        return !zk.inProbe && ik.length >= 9 && ik[0] === Hk.TEXTURE_2D && 0 === ik[1] && function(kk, ek) {
+          var ik;
+          const Dk = kk.getParameter(Hk.TEXTURE_BINDING_2D),
+            fk = Dk ? qk.get(Dk) : void 0;
+          if (!fk) return;
+          const [, , Sk, bk, rk, Pk] = ek;
+          let mk = Le(ek[8], null !== (ik = ek[9]) && void 0 !== ik ? ik : 0);
+          if (null === mk && "number" === typeof ek[8]) {
+            const ik = Ce(kk, Hk.PIXEL_UNPACK_BUFFER),
+              Dk = ik ? qk.get(ik) : void 0;
+            mk = Dk ? Dk.bytes.subarray(ek[8]) : null
           }
-          WF("texture", qQ, (DQ * qQ.width + oQ) * YQ, kQ * vQ * YQ)
-        }(this, wQ), qQ
-      })), HF(QQ, "copyTexSubImage2D", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        const qQ = wQ[0] === AQ.TEXTURE_2D ? this.getParameter(AQ.TEXTURE_BINDING_2D) : null,
-          oQ = qQ ? IQ.get(qQ) : void 0;
-        return oQ && oQ.missed++, uF(QQ, this, wQ)
+          if (null === mk) return void fk.missed++;
+          const Mk = kk.getParameter(Hk.UNPACK_ROW_LENGTH) || rk,
+            Kk = kk.getParameter(Hk.UNPACK_SKIP_ROWS),
+            xk = kk.getParameter(Hk.UNPACK_SKIP_PIXELS),
+            nk = fk.texelBytes;
+          for (let Uk = 0; Uk < Pk; Uk++) {
+            const kk = ((Kk + Uk) * Mk + xk) * nk,
+              ek = ((bk + Uk) * fk.width + Sk) * nk;
+            fk.bytes.set(mk.subarray(kk, kk + rk * nk), ek)
+          }
+          de("texture", fk, (bk * fk.width + Sk) * nk, rk * Pk * nk)
+        }(this, ik), fk
+      })), xe(kk, "copyTexSubImage2D", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        const fk = ik[0] === Hk.TEXTURE_2D ? this.getParameter(Hk.TEXTURE_BINDING_2D) : null,
+          Sk = fk ? qk.get(fk) : void 0;
+        return Sk && Sk.missed++, Ke(kk, this, ik)
       })));
-      for (const wQ of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) HF(QQ, wQ, (QQ => function() {
-        for (var FQ = arguments.length, LQ = new Array(FQ), qQ = 0; qQ < FQ; qQ++) LQ[qQ] = arguments[qQ];
-        const oQ = uF(QQ, this, LQ);
-        return NQ.inProbe || sF(this, wQ, LQ), oQ
+      for (const ik of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) xe(kk, ik, (kk => function() {
+        for (var ek = arguments.length, Dk = new Array(ek), fk = 0; fk < ek; fk++) Dk[fk] = arguments[fk];
+        const Sk = Ke(kk, this, Dk);
+        return zk.inProbe || ue(this, ik, Dk), Sk
       }));
-      HF(QQ, "getExtension", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        const qQ = uF(QQ, this, wQ);
-        return qQ && "object" === typeof qQ && function(QQ, FQ, wQ) {
-          const LQ = {
+      xe(kk, "getExtension", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        const fk = Ke(kk, this, ik);
+        return fk && "object" === typeof fk && function(kk, ek, ik) {
+          const Dk = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(FQ in LQ) || wQ.bloxdRenderDebug) return;
-          wQ.bloxdRenderDebug = !0;
-          for (const qQ of LQ[FQ]) {
-            const FQ = wQ[qQ];
-            "function" === typeof FQ && (wQ[qQ] = function() {
-              for (var LQ = arguments.length, oQ = new Array(LQ), DQ = 0; DQ < LQ; DQ++) oQ[DQ] = arguments[DQ];
-              const kQ = uF(FQ, wQ, oQ);
-              return NQ.inProbe || sF(QQ, qQ, oQ), kQ
+          if (!(ek in Dk) || ik.bloxdRenderDebug) return;
+          ik.bloxdRenderDebug = !0;
+          for (const fk of Dk[ek]) {
+            const ek = ik[fk];
+            "function" === typeof ek && (ik[fk] = function() {
+              for (var Dk = arguments.length, Sk = new Array(Dk), bk = 0; bk < Dk; bk++) Sk[bk] = arguments[bk];
+              const rk = Ke(ek, ik, Sk);
+              return zk.inProbe || ue(kk, fk, Sk), rk
             })
           }
-        }(this, wQ[0], qQ), qQ
+        }(this, ik[0], fk), fk
       }))
     }
 
-    function WF(QQ, FQ, wQ, LQ) {
-      MF[QQ] += LQ, GF < 32 && FQ.bytes.length >= 1 << 20 && (GF++, fQ(`upload ${QQ} #${FQ.id} +${wQ} ${LQ} B`))
+    function de(kk, ek, ik, Dk) {
+      ye[kk] += Dk, Ye < 32 && ek.bytes.length >= 1 << 20 && (Ye++, Xk(`upload ${kk} #${ek.id} +${ik} ${Dk} B`))
     }
 
-    function RF(QQ) {
-      if (!QQ.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(QQ) || /in uvec3 _p2vs_location0\b/.test(QQ) ? "inst" : "tex"
+    function Ve(kk) {
+      if (!kk.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(kk) || /in uvec3 _p2vs_location0\b/.test(kk) ? "inst" : "tex"
     }
 
-    function OF(QQ, FQ, wQ) {
-      var LQ;
-      if (wQ.checked) return;
-      wQ.checked = !0;
-      const qQ = QQ.getProgramParameter(FQ, AQ.LINK_STATUS),
-        oQ = (null !== (LQ = QQ.getProgramInfoLog(FQ)) && void 0 !== LQ ? LQ : "").trim();
-      var DQ;
-      null === wQ.terrain && qQ || (XQ(`program ${sQ(wQ)} ${null!==(DQ=wQ.terrain)&&void 0!==DQ?DQ:"other"} link ${qQ?"ok":"FAILED"}${oQ?`: ${VQ(oQ,300)}`:""}`), oQ && fQ(`program ${sQ(wQ)} link log:\n${VQ(oQ)}`))
+    function Fe(kk, ek, ik) {
+      var Dk;
+      if (ik.checked) return;
+      ik.checked = !0;
+      const fk = kk.getProgramParameter(ek, Hk.LINK_STATUS),
+        Sk = (null !== (Dk = kk.getProgramInfoLog(ek)) && void 0 !== Dk ? Dk : "").trim();
+      var bk;
+      null === ik.terrain && fk || (tk(`program ${Fk(ik)} ${null!==(bk=ik.terrain)&&void 0!==bk?bk:"other"} link ${fk?"ok":"FAILED"}${Sk?`: ${Bk(Sk,300)}`:""}`), Sk && Xk(`program ${Fk(ik)} link log:\n${Bk(Sk)}`))
     }
 
-    function sF(QQ, FQ, wQ) {
-      var LQ;
-      const qQ = QQ.getParameter(AQ.CURRENT_PROGRAM),
-        oQ = qQ ? AF.get(qQ) : void 0;
-      if (!qQ || !oQ) return;
-      const DQ = null !== (LQ = oQ.terrain) && void 0 !== LQ ? LQ : "other",
+    function ue(kk, ek, ik) {
+      var Dk;
+      const fk = kk.getParameter(Hk.CURRENT_PROGRAM),
+        Sk = fk ? we.get(fk) : void 0;
+      if (!fk || !Sk) return;
+      const bk = null !== (Dk = Sk.terrain) && void 0 !== Dk ? Dk : "other",
         {
-          PA: kQ,
-          instances: vQ
-        } = function(QQ, FQ) {
-          switch (QQ) {
+          lw: rk,
+          instances: Pk
+        } = function(kk, ek) {
+          switch (kk) {
             case "drawArrays":
               return {
-                PA: [
-                  [FQ[1], FQ[2]]
+                lw: [
+                  [ek[1], ek[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                PA: [
-                  [FQ[1], FQ[2]]
-                ], instances: FQ[3]
+                lw: [
+                  [ek[1], ek[2]]
+                ], instances: ek[3]
               };
             case "drawElements":
               return {
-                PA: [
-                  [0, FQ[1]]
+                lw: [
+                  [0, ek[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                PA: [
-                  [0, FQ[1]]
-                ], instances: FQ[4]
+                lw: [
+                  [0, ek[1]]
+                ], instances: ek[4]
               };
             case "multiDrawArraysWEBGL": {
-              const QQ = FQ[1],
-                wQ = FQ[3],
-                LQ = FQ[2],
-                qQ = FQ[4],
-                oQ = [];
-              for (let DQ = 0; DQ < FQ[5]; DQ++) oQ.push([QQ[LQ + DQ], wQ[qQ + DQ]]);
+              const kk = ek[1],
+                ik = ek[3],
+                Dk = ek[2],
+                fk = ek[4],
+                Sk = [];
+              for (let bk = 0; bk < ek[5]; bk++) Sk.push([kk[Dk + bk], ik[fk + bk]]);
               return {
-                PA: oQ,
+                lw: Sk,
                 instances: 1
               }
             }
             default:
               return {
-                PA: [], instances: 0
+                lw: [], instances: 0
               }
           }
-        }(FQ, wQ),
-        mQ = "inst" === oQ.terrain ? vQ : kQ.reduce(((QQ, FQ) => {
-          let [, wQ] = FQ;
-          return QQ + wQ
+        }(ek, ik),
+        mk = "inst" === Sk.terrain ? Pk : rk.reduce(((kk, ek) => {
+          let [, ik] = ek;
+          return kk + ik
         }), 0) / 6;
-      if (eF[DQ].draws++, eF[DQ].faces += mQ, null === oQ.terrain) return;
-      if (NQ.context = QQ, !oQ.firstDraw) {
-        oQ.firstDraw = !0, OF(QQ, qQ, oQ), rF || (rF = !0, XQ(function(QQ) {
-          var FQ;
-          const wQ = QQ.getParameter(AQ.DEPTH_FUNC),
-            LQ = {
+      if (pe[bk].draws++, pe[bk].faces += mk, null === Sk.terrain) return;
+      if (zk.context = kk, !Sk.firstDraw) {
+        Sk.firstDraw = !0, Fe(kk, fk, Sk), qe || (qe = !0, tk(function(kk) {
+          var ek;
+          const ik = kk.getParameter(Hk.DEPTH_FUNC),
+            Dk = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1079,319 +1080,319 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let qQ = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in QQ && QQ.getParameter(AQ.DRAW_FRAMEBUFFER_BINDING)) {
-            const FQ = QQ;
-            qQ = FQ.getFramebufferAttachmentParameter(AQ.DRAW_FRAMEBUFFER, AQ.DEPTH_ATTACHMENT, AQ.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(FQ.getFramebufferAttachmentParameter(AQ.DRAW_FRAMEBUFFER,AQ.DEPTH_ATTACHMENT,AQ.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(FQ.getFramebufferAttachmentParameter(AQ.DRAW_FRAMEBUFFER,AQ.DEPTH_ATTACHMENT,AQ.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let fk = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in kk && kk.getParameter(Hk.DRAW_FRAMEBUFFER_BINDING)) {
+            const ek = kk;
+            fk = ek.getFramebufferAttachmentParameter(Hk.DRAW_FRAMEBUFFER, Hk.DEPTH_ATTACHMENT, Hk.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(ek.getFramebufferAttachmentParameter(Hk.DRAW_FRAMEBUFFER,Hk.DEPTH_ATTACHMENT,Hk.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(ek.getFramebufferAttachmentParameter(Hk.DRAW_FRAMEBUFFER,Hk.DEPTH_ATTACHMENT,Hk.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const oQ = QQ.getParameter(AQ.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(FQ=LQ[wQ])&&void 0!==FQ?FQ:`0x${wQ.toString(16)}`} clear ${oQ}${516===wQ||518===wQ?" (reverse-Z)":""}, samples ${String(QQ.getParameter(AQ.SAMPLES))}, ${qQ}`
-        }(QQ)));
-        const wQ = QQ.getError();
-        wQ !== AQ.NO_ERROR && tF.gl < vF && (tF.gl++, XQ(`GL error 0x${wQ.toString(16)} after program ${sQ(oQ)}'s first terrain draw (${FQ})`))
+          const Sk = kk.getParameter(Hk.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(ek=Dk[ik])&&void 0!==ek?ek:`0x${ik.toString(16)}`} clear ${Sk}${516===ik||518===ik?" (reverse-Z)":""}, samples ${String(kk.getParameter(Hk.SAMPLES))}, ${fk}`
+        }(kk)));
+        const ik = kk.getError();
+        ik !== Hk.NO_ERROR && le.gl < me && (le.gl++, tk(`GL error 0x${ik.toString(16)} after program ${Fk(Sk)}'s first terrain draw (${ek})`))
       }
-      const uQ = NQ.pendingCheck;
-      null !== uQ && (uQ.terrainDraws++, uQ.draws.length < mF && hQ(QQ, qQ, oQ, FQ, kQ, vQ))
+      const Mk = zk.pendingCheck;
+      null !== Mk && (Mk.terrainDraws++, Mk.draws.length < Me && ck(kk, fk, Sk, ek, rk, Pk))
     }
-    let rF = !1;
-    const IF = new WeakSet;
-    var UF = wQ(4352),
-      NF = wQ(4544);
-    const TF = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let KF = !1;
-    const zF = new WeakSet,
-      lF = new WeakMap,
-      jF = new WeakMap,
-      aF = {
+    let qe = !1;
+    const Ie = new WeakSet;
+    var ze = ik(4449),
+      Qe = ik(4637);
+    const ve = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let Ee = !1;
+    const he = new WeakSet,
+      ae = new WeakMap,
+      We = new WeakMap,
+      te = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let XF = 0,
-      fF = !1,
-      VF = null,
-      hF = {
+    let Xe = 0,
+      Be = !1,
+      ce = null,
+      Te = {
         draws: 0,
         faces: 0
       };
 
-    function JF(QQ) {
-      const FQ = globalThis[QQ];
-      return null === FQ || void 0 === FQ ? void 0 : FQ.prototype
+    function oe(kk) {
+      const ek = globalThis[kk];
+      return null === ek || void 0 === ek ? void 0 : ek.prototype
     }
 
-    function EF(QQ) {
-      return QQ && "function" === typeof QQ[Symbol.iterator] ? [...QQ].sort().join(" ") : ""
+    function Ze(kk) {
+      return kk && "function" === typeof kk[Symbol.iterator] ? [...kk].sort().join(" ") : ""
     }
 
-    function nF(QQ, FQ) {
-      const wQ = null !== QQ && void 0 !== QQ ? QQ : {},
-        LQ = null !== FQ && void 0 !== FQ ? FQ : Object.keys(Object.getPrototypeOf(wQ)).concat(Object.keys(wQ));
-      return [...new Set(LQ)].filter((QQ => "number" === typeof wQ[QQ])).map((QQ => `${QQ} ${String(wQ[QQ])}`)).join(", ")
+    function Oe(kk, ek) {
+      const ik = null !== kk && void 0 !== kk ? kk : {},
+        Dk = null !== ek && void 0 !== ek ? ek : Object.keys(Object.getPrototypeOf(ik)).concat(Object.keys(ik));
+      return [...new Set(Dk)].filter((kk => "number" === typeof ik[kk])).map((kk => `${kk} ${String(ik[kk])}`)).join(", ")
     }
 
-    function gF(QQ, FQ) {
-      var wQ;
-      const LQ = null !== (wQ = FQ.vertex) && void 0 !== wQ ? wQ : {};
-      if (LQ.module && zF.has(LQ.module)) {
-        var qQ;
-        const wQ = String(null !== (qQ = LQ.entryPoint) && void 0 !== qQ ? qQ : "");
-        if (wQ.startsWith("vs_packed") && lF.set(QQ, wQ), !fF) {
-          var oQ, DQ, kQ, vQ, mQ;
-          fF = !0;
-          const QQ = null !== (oQ = FQ.depthStencil) && void 0 !== oQ ? oQ : {},
-            LQ = null !== (DQ = FQ.multisample) && void 0 !== DQ ? DQ : {},
-            qQ = String(null !== (kQ = QQ.depthCompare) && void 0 !== kQ ? kQ : "");
-          XQ(`WebGPU terrain pipeline ${wQ}: depth ${String(null!==(vQ=QQ.format)&&void 0!==vQ?vQ:"none")} ${qQ}${qQ.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(mQ=LQ.count)&&void 0!==mQ?mQ:1)}`)
+    function ge(kk, ek) {
+      var ik;
+      const Dk = null !== (ik = ek.vertex) && void 0 !== ik ? ik : {};
+      if (Dk.module && he.has(Dk.module)) {
+        var fk;
+        const ik = String(null !== (fk = Dk.entryPoint) && void 0 !== fk ? fk : "");
+        if (ik.startsWith("vs_packed") && ae.set(kk, ik), !Be) {
+          var Sk, bk, rk, Pk, mk;
+          Be = !0;
+          const kk = null !== (Sk = ek.depthStencil) && void 0 !== Sk ? Sk : {},
+            Dk = null !== (bk = ek.multisample) && void 0 !== bk ? bk : {},
+            fk = String(null !== (rk = kk.depthCompare) && void 0 !== rk ? rk : "");
+          tk(`WebGPU terrain pipeline ${ik}: depth ${String(null!==(Pk=kk.format)&&void 0!==Pk?Pk:"none")} ${fk}${fk.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(mk=Dk.count)&&void 0!==mk?mk:1)}`)
         }
       }
     }
 
-    function PF(QQ) {
-      HF(QQ, "setPipeline", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        return jF.set(this, wQ[0]), uF(QQ, this, wQ)
+    function Ge(kk) {
+      xe(kk, "setPipeline", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        return We.set(this, ik[0]), Ke(kk, this, ik)
       }));
-      for (const FQ of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) HF(QQ, FQ, (QQ => function() {
-        const wQ = jF.get(this),
-          LQ = wQ ? lF.get(wQ) : void 0;
-        for (var qQ = arguments.length, oQ = new Array(qQ), DQ = 0; DQ < qQ; DQ++) oQ[DQ] = arguments[DQ];
-        return void 0 !== LQ && ZF(FQ, LQ, oQ), uF(QQ, this, oQ)
+      for (const ek of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) xe(kk, ek, (kk => function() {
+        const ik = We.get(this),
+          Dk = ik ? ae.get(ik) : void 0;
+        for (var fk = arguments.length, Sk = new Array(fk), bk = 0; bk < fk; bk++) Sk[bk] = arguments[bk];
+        return void 0 !== Dk && Ne(ek, Dk, Sk), Ke(kk, this, Sk)
       }))
     }
 
-    function ZF(QQ, FQ, wQ) {
-      var LQ;
-      (hF.draws++, "draw" === QQ || "drawIndexed" === QQ) && (hF.faces += wQ[0] * (null !== (LQ = wQ[1]) && void 0 !== LQ ? LQ : 1) / 6);
-      if (null !== VF && VF.length < mF) {
-        const LQ = ("draw" === QQ ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === QQ ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((FQ, LQ) => {
-          const qQ = QQ.endsWith("Indirect") ? wQ[1] : wQ[LQ];
-          return `${FQ} ${String(null!==qQ&&void 0!==qQ?qQ:"instances"===FQ?1:0)}`
+    function Ne(kk, ek, ik) {
+      var Dk;
+      (Te.draws++, "draw" === kk || "drawIndexed" === kk) && (Te.faces += ik[0] * (null !== (Dk = ik[1]) && void 0 !== Dk ? Dk : 1) / 6);
+      if (null !== ce && ce.length < Me) {
+        const Dk = ("draw" === kk ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === kk ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((ek, Dk) => {
+          const fk = kk.endsWith("Indirect") ? ik[1] : ik[Dk];
+          return `${ek} ${String(null!==fk&&void 0!==fk?fk:"instances"===ek?1:0)}`
         }));
-        VF.push(`  ${FQ} ${QQ} ${LQ.join(" ")}`)
+        ce.push(`  ${ek} ${kk} ${Dk.join(" ")}`)
       }
     }
 
-    function yF() {
-      if (KF || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      KF = !0, HF(JF("GPU"), "requestAdapter", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        return uF(QQ, this, wQ).then((QQ => {
-          var FQ;
-          QQ ? function(QQ) {
-            var FQ;
-            const wQ = null !== (FQ = QQ.info) && void 0 !== FQ ? FQ : {};
-            XQ(`WebGPU adapter ${["vendor","architecture","device","description"].map((QQ=>{var FQ;return`${QQ} "${String(null!==(FQ=wQ[QQ])&&void 0!==FQ?FQ:"")}"`})).join(" ")}${QQ.isFallbackAdapter?" (fallback)":""}`), XQ(`WebGPU adapter features ${EF(QQ.features)}`), XQ(`WebGPU adapter limits ${nF(QQ.limits,TF)}`), fQ(`WebGPU adapter all limits ${nF(QQ.limits,null)}`)
-          }(QQ) : XQ(`WebGPU requestAdapter(${JSON.stringify(null!==(FQ=wQ[0])&&void 0!==FQ?FQ:{})}) gave none`);
-          return QQ
+    function Re() {
+      if (Ee || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      Ee = !0, xe(oe("GPU"), "requestAdapter", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        return Ke(kk, this, ik).then((kk => {
+          var ek;
+          kk ? function(kk) {
+            var ek;
+            const ik = null !== (ek = kk.info) && void 0 !== ek ? ek : {};
+            tk(`WebGPU adapter ${["vendor","architecture","device","description"].map((kk=>{var ek;return`${kk} "${String(null!==(ek=ik[kk])&&void 0!==ek?ek:"")}"`})).join(" ")}${kk.isFallbackAdapter?" (fallback)":""}`), tk(`WebGPU adapter features ${Ze(kk.features)}`), tk(`WebGPU adapter limits ${Oe(kk.limits,ve)}`), Xk(`WebGPU adapter all limits ${Oe(kk.limits,null)}`)
+          }(kk) : tk(`WebGPU requestAdapter(${JSON.stringify(null!==(ek=ik[0])&&void 0!==ek?ek:{})}) gave none`);
+          return kk
         }))
-      })), HF(JF("GPUAdapter"), "requestDevice", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        return uF(QQ, this, wQ).then((QQ => (function(QQ) {
-          XQ(`WebGPU device features ${EF(QQ.features)}`), XQ(`WebGPU device limits ${nF(QQ.limits,TF)}`), QQ.addEventListener("uncapturederror", (QQ => {
-            if (aF.uncaptured < vF) {
-              var FQ, wQ, LQ;
-              aF.uncaptured++;
-              const qQ = QQ.error;
-              XQ(`WebGPU uncaptured ${null!==(FQ=null===qQ||void 0===qQ||null===(wQ=qQ.constructor)||void 0===wQ?void 0:wQ.name)&&void 0!==FQ?FQ:"error"}: ${VQ(String(null!==(LQ=null===qQ||void 0===qQ?void 0:qQ.message)&&void 0!==LQ?LQ:""),600)}`)
+      })), xe(oe("GPUAdapter"), "requestDevice", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        return Ke(kk, this, ik).then((kk => (function(kk) {
+          tk(`WebGPU device features ${Ze(kk.features)}`), tk(`WebGPU device limits ${Oe(kk.limits,ve)}`), kk.addEventListener("uncapturederror", (kk => {
+            if (te.uncaptured < me) {
+              var ek, ik, Dk;
+              te.uncaptured++;
+              const fk = kk.error;
+              tk(`WebGPU uncaptured ${null!==(ek=null===fk||void 0===fk||null===(ik=fk.constructor)||void 0===ik?void 0:ik.name)&&void 0!==ek?ek:"error"}: ${Bk(String(null!==(Dk=null===fk||void 0===fk?void 0:fk.message)&&void 0!==Dk?Dk:""),600)}`)
             }
           }));
-          const FQ = QQ.lost;
-          null === FQ || void 0 === FQ || FQ.then((QQ => {
-            var FQ;
-            XQ(`WebGPU device lost (${String(QQ.reason)}): ${VQ(String(null!==(FQ=QQ.message)&&void 0!==FQ?FQ:""),600)}`)
+          const ek = kk.lost;
+          null === ek || void 0 === ek || ek.then((kk => {
+            var ek;
+            tk(`WebGPU device lost (${String(kk.reason)}): ${Bk(String(null!==(ek=kk.message)&&void 0!==ek?ek:""),600)}`)
           }))
-        }(QQ), QQ)), (QQ => {
-          throw XQ(`WebGPU requestDevice failed: ${String(QQ)}`), QQ
+        }(kk), kk)), (kk => {
+          throw tk(`WebGPU requestDevice failed: ${String(kk)}`), kk
         }))
       }));
-      const QQ = JF("GPUDevice");
-      HF(QQ, "createShaderModule", (QQ => function() {
-        for (var FQ, wQ, LQ = arguments.length, qQ = new Array(LQ), oQ = 0; oQ < LQ; oQ++) qQ[oQ] = arguments[oQ];
-        const DQ = uF(QQ, this, qQ);
-        return function(QQ, FQ) {
-          const wQ = FQ.includes("decodeQuad");
-          wQ && zF.add(QQ);
-          const LQ = QQ.getCompilationInfo;
-          null === LQ || void 0 === LQ || LQ.call(QQ).then((QQ => {
-            if (0 === QQ.messages.length && !wQ) return;
-            const FQ = {};
-            for (const wQ of QQ.messages) {
-              var LQ;
-              FQ[String(wQ.type)] = (null !== (LQ = FQ[String(wQ.type)]) && void 0 !== LQ ? LQ : 0) + 1
+      const kk = oe("GPUDevice");
+      xe(kk, "createShaderModule", (kk => function() {
+        for (var ek, ik, Dk = arguments.length, fk = new Array(Dk), Sk = 0; Sk < Dk; Sk++) fk[Sk] = arguments[Sk];
+        const bk = Ke(kk, this, fk);
+        return function(kk, ek) {
+          const ik = ek.includes("decodeQuad");
+          ik && he.add(kk);
+          const Dk = kk.getCompilationInfo;
+          null === Dk || void 0 === Dk || Dk.call(kk).then((kk => {
+            if (0 === kk.messages.length && !ik) return;
+            const ek = {};
+            for (const ik of kk.messages) {
+              var Dk;
+              ek[String(ik.type)] = (null !== (Dk = ek[String(ik.type)]) && void 0 !== Dk ? Dk : 0) + 1
             }
-            const qQ = QQ.messages.map((QQ => `${String(QQ.type)} ${String(QQ.lineNum)}:${String(QQ.linePos)} ${String(QQ.message)}`)).join("\n");
-            aF.compile < vF && (aF.compile++, XQ(`WebGPU ${wQ?"terrain ":""}shader module compiled: ${JSON.stringify(FQ)}${qQ?` first: ${VQ(qQ.split("\n")[0],300)}`:""}`)), qQ && fQ(`WebGPU shader module messages:\n${VQ(qQ)}`)
+            const fk = kk.messages.map((kk => `${String(kk.type)} ${String(kk.lineNum)}:${String(kk.linePos)} ${String(kk.message)}`)).join("\n");
+            te.compile < me && (te.compile++, tk(`WebGPU ${ik?"terrain ":""}shader module compiled: ${JSON.stringify(ek)}${fk?` first: ${Bk(fk.split("\n")[0],300)}`:""}`)), fk && Xk(`WebGPU shader module messages:\n${Bk(fk)}`)
           }))
-        }(DQ, String(null !== (FQ = (null !== (wQ = qQ[0]) && void 0 !== wQ ? wQ : {}).code) && void 0 !== FQ ? FQ : "")), DQ
-      })), HF(QQ, "createRenderPipeline", (QQ => function() {
-        for (var FQ, wQ = arguments.length, LQ = new Array(wQ), qQ = 0; qQ < wQ; qQ++) LQ[qQ] = arguments[qQ];
-        const oQ = uF(QQ, this, LQ);
-        return gF(oQ, null !== (FQ = LQ[0]) && void 0 !== FQ ? FQ : {}), oQ
-      })), HF(QQ, "createRenderPipelineAsync", (QQ => function() {
-        for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-        return uF(QQ, this, wQ).then((QQ => {
-          var FQ;
-          return gF(QQ, null !== (FQ = wQ[0]) && void 0 !== FQ ? FQ : {}), QQ
-        }), (QQ => {
-          var FQ;
-          throw function(QQ, FQ) {
-            var wQ, LQ, qQ;
-            if (aF.rejected >= vF) return;
-            aF.rejected++;
+        }(bk, String(null !== (ek = (null !== (ik = fk[0]) && void 0 !== ik ? ik : {}).code) && void 0 !== ek ? ek : "")), bk
+      })), xe(kk, "createRenderPipeline", (kk => function() {
+        for (var ek, ik = arguments.length, Dk = new Array(ik), fk = 0; fk < ik; fk++) Dk[fk] = arguments[fk];
+        const Sk = Ke(kk, this, Dk);
+        return ge(Sk, null !== (ek = Dk[0]) && void 0 !== ek ? ek : {}), Sk
+      })), xe(kk, "createRenderPipelineAsync", (kk => function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        return Ke(kk, this, ik).then((kk => {
+          var ek;
+          return ge(kk, null !== (ek = ik[0]) && void 0 !== ek ? ek : {}), kk
+        }), (kk => {
+          var ek;
+          throw function(kk, ek) {
+            var ik, Dk, fk;
+            if (te.rejected >= me) return;
+            te.rejected++;
             const {
-              reason: oQ,
-              message: DQ
-            } = null !== FQ && void 0 !== FQ ? FQ : {}, kQ = String(null !== (wQ = (null !== (LQ = QQ.vertex) && void 0 !== LQ ? LQ : {}).entryPoint) && void 0 !== wQ ? wQ : "");
-            XQ(`WebGPU pipeline "${String(null!==(qQ=QQ.label)&&void 0!==qQ?qQ:"")}" ${kQ} rejected (${String(null!==oQ&&void 0!==oQ?oQ:"no reason")}): ${VQ(String(null!==DQ&&void 0!==DQ?DQ:FQ),600)}`)
-          }(null !== (FQ = wQ[0]) && void 0 !== FQ ? FQ : {}, QQ), QQ
+              reason: Sk,
+              message: bk
+            } = null !== ek && void 0 !== ek ? ek : {}, rk = String(null !== (ik = (null !== (Dk = kk.vertex) && void 0 !== Dk ? Dk : {}).entryPoint) && void 0 !== ik ? ik : "");
+            tk(`WebGPU pipeline "${String(null!==(fk=kk.label)&&void 0!==fk?fk:"")}" ${rk} rejected (${String(null!==Sk&&void 0!==Sk?Sk:"no reason")}): ${Bk(String(null!==bk&&void 0!==bk?bk:ek),600)}`)
+          }(null !== (ek = ik[0]) && void 0 !== ek ? ek : {}, kk), kk
         }))
-      })), HF(JF("GPUCanvasContext"), "configure", (QQ => function() {
-        for (var FQ, wQ = arguments.length, LQ = new Array(wQ), qQ = 0; qQ < wQ; qQ++) LQ[qQ] = arguments[qQ];
-        const oQ = null !== (FQ = LQ[0]) && void 0 !== FQ ? FQ : {};
-        var DQ, kQ;
-        XF++ < 3 && XQ(`WebGPU canvas ${String(oQ.format)} ${String(null!==(DQ=oQ.colorSpace)&&void 0!==DQ?DQ:"srgb")} alpha ${String(null!==(kQ=oQ.alphaMode)&&void 0!==kQ?kQ:"opaque")}`);
-        return uF(QQ, this, LQ)
-      })), PF(JF("GPURenderPassEncoder")), PF(JF("GPURenderBundleEncoder"))
+      })), xe(oe("GPUCanvasContext"), "configure", (kk => function() {
+        for (var ek, ik = arguments.length, Dk = new Array(ik), fk = 0; fk < ik; fk++) Dk[fk] = arguments[fk];
+        const Sk = null !== (ek = Dk[0]) && void 0 !== ek ? ek : {};
+        var bk, rk;
+        Xe++ < 3 && tk(`WebGPU canvas ${String(Sk.format)} ${String(null!==(bk=Sk.colorSpace)&&void 0!==bk?bk:"srgb")} alpha ${String(null!==(rk=Sk.alphaMode)&&void 0!==rk?rk:"opaque")}`);
+        return Ke(kk, this, Dk)
+      })), Ge(oe("GPURenderPassEncoder")), Ge(oe("GPURenderBundleEncoder"))
     }
-    const BF = 1e4,
-      dF = 6e4,
-      Qw = 5e3,
-      Fw = 3e3,
-      ww = 100;
-    let Lw = null,
-      qw = !1,
-      ow = {
-        ...UF.d
+    const Je = 1e4,
+      ki = 6e4,
+      ei = 5e3,
+      ii = 3e3,
+      Di = 100;
+    let fi = null,
+      Si = !1,
+      bi = {
+        ...ze.e
       },
-      Dw = !1,
-      kw = null,
-      vw = 0,
-      mw = () => {};
-    const uw = new Promise((QQ => {
-      mw = QQ
+      ri = !1,
+      Pi = null,
+      mi = 0,
+      Mi = () => {};
+    const Ki = new Promise((kk => {
+      Mi = kk
     }));
 
-    function Hw() {
-      var QQ;
-      qw || (qw = !0, ow = Object.assign(window.bloxdRenderDebug ??= {
-        ...UF.d
+    function xi() {
+      var kk;
+      Si || (Si = !0, bi = Object.assign(window.bloxdRenderDebug ??= {
+        ...ze.e
       }, {
-        faceCull: "0" === (0, oQ.n)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (QQ = (0, oQ.n)("adrenoProbe")) && void 0 !== QQ ? QQ : ""
-      }), XQ("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), bF || "undefined" === typeof window || (bF = !0, "undefined" !== typeof WebGL2RenderingContext && iF(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && iF(WebGLRenderingContext.prototype, !1)), yF(), (0, oQ.e)("renderProbe", (() => {
-        ew("console")
-      })), Aw(), setInterval(Gw, Qw))
+        faceCull: "0" === (0, Sk.p)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (kk = (0, Sk.p)("adrenoProbe")) && void 0 !== kk ? kk : ""
+      }), tk("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), ne || "undefined" === typeof window || (ne = !0, "undefined" !== typeof WebGL2RenderingContext && se(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && se(WebGLRenderingContext.prototype, !1)), Re(), (0, Sk.e)("renderProbe", (() => {
+        yi("console")
+      })), wi(), setInterval(Li, ei))
     }
 
-    function bw(QQ) {
-      var FQ, wQ;
-      Hw(), Lw = null !== (FQ = null === QQ || void 0 === QQ ? void 0 : QQ.backend) && void 0 !== FQ ? FQ : null;
-      const LQ = `, renderer param ${null!==(wQ=(0,oQ.n)("renderer"))&&void 0!==wQ?wQ:"none"}, faceCull ${"0"===ow.faceCull?"off (whole parts)":"on"}, adrenoProbe ${ow.adrenoProbe||"none"}`;
-      XQ(`${(0,NF.c)(QQ)}${null===QQ?"":LQ}`)
+    function ni(kk) {
+      var ek, ik;
+      xi(), fi = null !== (ek = null === kk || void 0 === kk ? void 0 : kk.backend) && void 0 !== ek ? ek : null;
+      const Dk = `, renderer param ${null!==(ik=(0,Sk.p)("renderer"))&&void 0!==ik?ik:"none"}, faceCull ${"0"===bi.faceCull?"off (whole parts)":"on"}, adrenoProbe ${bi.adrenoProbe||"none"}`;
+      tk(`${(0,Qe.d)(kk)}${null===kk?"":Dk}`)
     }
 
-    function Yw() {
-      const QQ = performance.now(),
-        FQ = xw(uw, BF, dF).then((FQ => ew(`${Math.round((performance.now()-QQ)/1e3)} s after playable${FQ?"":", no terrain drawn yet"}`)));
-      (0, qQ.c)(XQ, (async () => {
-        await FQ, await kw
+    function Ui() {
+      const kk = performance.now(),
+        ek = Hi(Ki, Je, ki).then((ek => yi(`${Math.round((performance.now()-kk)/1e3)} s after playable${ek?"":", no terrain drawn yet"}`)));
+      (0, fk.c)(tk, (async () => {
+        await ek, await Pi
       }))
     }
-    async function xw(QQ, FQ, wQ) {
-      const qQ = (0, LQ.e)(wQ).then((() => !1));
-      return await (0, LQ.e)(FQ), Promise.race([QQ.then((() => !0)), qQ])
+    async function Hi(kk, ek, ik) {
+      const fk = (0, Dk.c)(ik).then((() => !1));
+      return await (0, Dk.c)(ek), Promise.race([kk.then((() => !0)), fk])
     }
 
-    function Aw() {
+    function wi() {
       requestAnimationFrame((() => {
-        vw++, Aw()
+        mi++, wi()
       }))
     }
 
-    function tw() {
-      var QQ, FQ, wQ;
-      if (Dw) return;
-      (Dw = !0, XQ(`renderer caps ${null!==(QQ=ow.caps)&&void 0!==QQ?QQ:"(not noted)"}; terrain fetch ${null!==(FQ=ow.fetch)&&void 0!==FQ?FQ:"(not noted)"}`), ow.adrenoProbe) && XQ(`adrenoProbe ${ow.adrenoProbe} asked; in force (storage fetch only): ${null!==(wQ=ow.probe)&&void 0!==wQ?wQ:"(not noted)"}`);
-      const LQ = NQ.context;
-      if (LQ) {
-        for (const QQ of function(QQ) {
-            var FQ;
-            const wQ = [],
-              LQ = QQ.getExtension("WEBGL_debug_renderer_info"),
-              qQ = LQ ? QQ.getParameter(LQ.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              oQ = LQ ? QQ.getParameter(LQ.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            wQ.push(`GL ${String(QQ.getParameter(QQ.VERSION))} | ${String(QQ.getParameter(QQ.SHADING_LANGUAGE_VERSION))} | ${String(QQ.getParameter(QQ.VENDOR))} / ${String(QQ.getParameter(QQ.RENDERER))}`), wQ.push(`GL unmasked ${qQ} / ${oQ}`);
-            const DQ = [
-              ["MAX_TEXTURE_SIZE", QQ.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", QQ.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", QQ.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", QQ.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", QQ.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", QQ.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", QQ.MAX_RENDERBUFFER_SIZE]
+    function li() {
+      var kk, ek, ik;
+      if (ri) return;
+      (ri = !0, tk(`renderer caps ${null!==(kk=bi.caps)&&void 0!==kk?kk:"(not noted)"}; terrain fetch ${null!==(ek=bi.fetch)&&void 0!==ek?ek:"(not noted)"}`), bi.adrenoProbe) && tk(`adrenoProbe ${bi.adrenoProbe} asked; in force (storage fetch only): ${null!==(ik=bi.probe)&&void 0!==ik?ik:"(not noted)"}`);
+      const Dk = zk.context;
+      if (Dk) {
+        for (const kk of function(kk) {
+            var ek;
+            const ik = [],
+              Dk = kk.getExtension("WEBGL_debug_renderer_info"),
+              fk = Dk ? kk.getParameter(Dk.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              Sk = Dk ? kk.getParameter(Dk.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            ik.push(`GL ${String(kk.getParameter(kk.VERSION))} | ${String(kk.getParameter(kk.SHADING_LANGUAGE_VERSION))} | ${String(kk.getParameter(kk.VENDOR))} / ${String(kk.getParameter(kk.RENDERER))}`), ik.push(`GL unmasked ${fk} / ${Sk}`);
+            const bk = [
+              ["MAX_TEXTURE_SIZE", kk.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", kk.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", kk.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", kk.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", kk.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", kk.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", kk.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in QQ && DQ.push(["MAX_UNIFORM_BLOCK_SIZE", QQ.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", QQ.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", QQ.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", QQ.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), wQ.push(`GL limits ${DQ.map((FQ=>{let[wQ,LQ]=FQ;return`${wQ} ${String(QQ.getParameter(LQ))}`})).join(", ")}`);
-            const kQ = (FQ, wQ) => {
-              const LQ = QQ.getShaderPrecisionFormat(FQ, QQ.HIGH_FLOAT),
-                qQ = QQ.getShaderPrecisionFormat(FQ, QQ.HIGH_INT);
-              return `${wQ} highp float ${LQ?`${LQ.rangeMin}/${LQ.rangeMax}/${LQ.precision}`:"?"} int ${qQ?`${qQ.rangeMin}/${qQ.rangeMax}/${qQ.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in kk && bk.push(["MAX_UNIFORM_BLOCK_SIZE", kk.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", kk.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", kk.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", kk.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), ik.push(`GL limits ${bk.map((ek=>{let[ik,Dk]=ek;return`${ik} ${String(kk.getParameter(Dk))}`})).join(", ")}`);
+            const rk = (ek, ik) => {
+              const Dk = kk.getShaderPrecisionFormat(ek, kk.HIGH_FLOAT),
+                fk = kk.getShaderPrecisionFormat(ek, kk.HIGH_INT);
+              return `${ik} highp float ${Dk?`${Dk.rangeMin}/${Dk.rangeMax}/${Dk.precision}`:"?"} int ${fk?`${fk.rangeMin}/${fk.rangeMax}/${fk.precision}`:"?"}`
             };
-            wQ.push(`GL precision ${kQ(QQ.VERTEX_SHADER,"VS")}, ${kQ(QQ.FRAGMENT_SHADER,"FS")}`);
-            const vQ = QQ.getContextAttributes();
-            return wQ.push(`GL context ${JSON.stringify(vQ)} drawingBuffer ${QQ.drawingBufferWidth}x${QQ.drawingBufferHeight}${"drawingBufferFormat"in QQ?` format 0x${Number(QQ.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in QQ?` ${String(QQ.drawingBufferColorSpace)}`:""}`), wQ.push(`GL extensions ${(null!==(FQ=QQ.getSupportedExtensions())&&void 0!==FQ?FQ:[]).join(" ")}`), wQ
-          }(LQ)) XQ(QQ);
+            ik.push(`GL precision ${rk(kk.VERTEX_SHADER,"VS")}, ${rk(kk.FRAGMENT_SHADER,"FS")}`);
+            const Pk = kk.getContextAttributes();
+            return ik.push(`GL context ${JSON.stringify(Pk)} drawingBuffer ${kk.drawingBufferWidth}x${kk.drawingBufferHeight}${"drawingBufferFormat"in kk?` format 0x${Number(kk.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in kk?` ${String(kk.drawingBufferColorSpace)}`:""}`), ik.push(`GL extensions ${(null!==(ek=kk.getSupportedExtensions())&&void 0!==ek?ek:[]).join(" ")}`), ik
+          }(Dk)) tk(kk);
         ! function() {
-          if (!NQ.context) return;
-          let QQ = 0,
-            FQ = 0;
-          for (const [wQ, LQ] of rQ) !LQ.gl.isContextLost() && LQ.gl.isProgram(wQ) && (FQ++, OF(LQ.gl, wQ, LQ), null !== LQ.terrain && QQ++);
-          XQ(`programs: ${FQ} live of ${rQ.length} linked, ${QQ} packed terrain; CPU page copies ${Math.round(NQ.shadowBytes/1048576)} MiB (${NQ.uncopied} over budget)`)
+          if (!zk.context) return;
+          let kk = 0,
+            ek = 0;
+          for (const [ik, Dk] of uk) !Dk.gl.isContextLost() && Dk.gl.isProgram(ik) && (ek++, Fe(Dk.gl, ik, Dk), null !== Dk.terrain && kk++);
+          tk(`programs: ${ek} live of ${uk.length} linked, ${kk} packed terrain; CPU page copies ${Math.round(zk.shadowBytes/1048576)} MiB (${zk.uncopied} over budget)`)
         }()
       }
     }
 
-    function ew(QQ) {
-      return kw ??= async function(QQ) {
-        tw(), "webgpu" === Lw ? (Mw(), "1" === ow.slotCheck && XQ("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), ow.slotCheck = "1", await
-          function(QQ) {
-            if (null !== VF) return Promise.resolve();
-            const FQ = [];
-            return VF = FQ, new Promise((wQ => {
+    function yi(kk) {
+      return Pi ??= async function(kk) {
+        li(), "webgpu" === fi ? (Yi(), "1" === bi.slotCheck && tk("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), bi.slotCheck = "1", await
+          function(kk) {
+            if (null !== ce) return Promise.resolve();
+            const ek = [];
+            return ce = ek, new Promise((ik => {
               setTimeout((() => {
-                VF = null, XQ(`WebGPU draw ranges (${QQ}): ${FQ.length} terrain draws recorded in a second (first ${mF}; bundles replay without new ones)`);
-                for (const QQ of FQ) XQ(QQ);
-                wQ()
+                ce = null, tk(`WebGPU draw ranges (${kk}): ${ek.length} terrain draws recorded in a second (first ${Me}; bundles replay without new ones)`);
+                for (const kk of ek) tk(kk);
+                ik()
               }), 1e3)
             }))
-          }(QQ), await async function() {
-            if (await (0, UF.j)(ow, "slotCheck", ["1"], Fw, ww), "1" === ow.slotCheck) return void XQ(`slot check: no answer in ${Fw} ms (only the storage fetch has one; a later answer logs on its own)`);
-            Mw()
-          }()) : await DF(QQ);
-        XQ(`check (${QQ}) done: bloxdDebug.save() downloads it all`)
-      }(QQ).catch((FQ => {
-        XQ(`check (${QQ}) failed: ${String(FQ)}`)
+          }(kk), await async function() {
+            if (await (0, ze.i)(bi, "slotCheck", ["1"], ii, Di), "1" === bi.slotCheck) return void tk(`slot check: no answer in ${ii} ms (only the storage fetch has one; a later answer logs on its own)`);
+            Yi()
+          }()) : await re(kk);
+        tk(`check (${kk}) done: bloxdDebug.save() downloads it all`)
+      }(kk).catch((ek => {
+        tk(`check (${kk}) failed: ${String(ek)}`)
       })).finally((() => {
-        kw = null
-      })), kw
+        Pi = null
+      })), Pi
     }
 
-    function Mw() {
-      void 0 !== ow.slotCheck && "1" !== ow.slotCheck && (XQ(ow.slotCheck), delete ow.slotCheck)
+    function Yi() {
+      void 0 !== bi.slotCheck && "1" !== bi.slotCheck && (tk(bi.slotCheck), delete bi.slotCheck)
     }
 
-    function Gw() {
-      const QQ = QQ => vw ? (QQ / vw).toFixed(1) : "0",
-        FQ = function() {
-          const QQ = hF;
-          return hF = {
+    function Li() {
+      const kk = kk => mi ? (kk / mi).toFixed(1) : "0",
+        ek = function() {
+          const kk = Te;
+          return Te = {
             draws: 0,
             faces: 0
-          }, QQ
+          }, kk
         }(),
-        wQ = function() {
-          const QQ = eF;
-          return eF = {
+        ik = function() {
+          const kk = pe;
+          return pe = {
             inst: {
               draws: 0,
               faces: 0
@@ -1404,30 +1405,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, QQ
+          }, kk
         }(),
-        LQ = function() {
-          const QQ = MF;
-          return MF = {
+        Dk = function() {
+          const kk = ye;
+          return ye = {
             buffer: 0,
             texture: 0
-          }, QQ
+          }, kk
         }();
-      Mw(), ("webgpu" === Lw ? FQ.draws : wQ.inst.draws + wQ.tex.draws) > 0 && mw();
-      const qQ = "webgpu" === Lw ? [`terrain ${QQ(FQ.draws)} draws ${QQ(FQ.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((QQ => wQ[QQ].draws > 0)).map((FQ => `${FQ} ${QQ(wQ[FQ].draws)} draws ${QQ(wQ[FQ].faces)} faces a frame`));
-      XQ(`${vw} frames: ${qQ.join(", ")||"no draws"}; uploaded ${Math.round(LQ.buffer/1024)} KiB to buffers, ${Math.round(LQ.texture/1024)} KiB to data textures`), vw = 0
+      Yi(), ("webgpu" === fi ? ek.draws : ik.inst.draws + ik.tex.draws) > 0 && Mi();
+      const fk = "webgpu" === fi ? [`terrain ${kk(ek.draws)} draws ${kk(ek.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((kk => ik[kk].draws > 0)).map((ek => `${ek} ${kk(ik[ek].draws)} draws ${kk(ik[ek].faces)} faces a frame`));
+      tk(`${mi} frames: ${fk.join(", ")||"no draws"}; uploaded ${Math.round(Dk.buffer/1024)} KiB to buffers, ${Math.round(Dk.texture/1024)} KiB to data textures`), mi = 0
     }
   },
-  4544: (QQ, FQ, wQ) => {
-    function LQ(QQ) {
-      if (null === QQ) return "backend: none picked (no renderer build)";
-      const FQ = QQ.adapter ? `${QQ.adapter.vendor}/${QQ.adapter.architecture}` : "none";
-      return `backend ${QQ.backend}: reason ${QQ.reason}, source ${QQ.source}, adapter ${FQ}`
+  4637: (kk, ek, ik) => {
+    function Dk(kk) {
+      if (null === kk) return "backend: none picked (no renderer build)";
+      const ek = kk.adapter ? `${kk.adapter.vendor}/${kk.adapter.architecture}` : "none";
+      return `backend ${kk.backend}: reason ${kk.reason}, source ${kk.source}, adapter ${ek}`
     }
-    wQ.d(FQ, {
-      c: () => LQ
+    ik.d(ek, {
+      d: () => Dk
     })
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

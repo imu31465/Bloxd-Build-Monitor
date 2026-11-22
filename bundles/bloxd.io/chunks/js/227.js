@@ -1,805 +1,842 @@
 export const id = 227;
-export const ids = [227];
+export const ids = [227, 233, 236];
 export const modules = {
-  36873: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => HQ,
-      e: () => bQ,
-      h: () => AQ,
-      i: () => YQ
+  39804: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => bk,
+      i: () => rk
     });
-    var LQ = wQ(36709),
-      qQ = wQ(36705),
-      oQ = wQ(36729),
-      DQ = wQ(36741);
-
-    function kQ(QQ) {
-      return Math.pow(QQ, qQ.g)
-    }
-
-    function vQ(QQ) {
-      return QQ <= .04045 ? .0773993808 * QQ : Math.pow(.947867299 * (QQ + .055), 2.4)
-    }
-
-    function mQ(QQ) {
-      return Math.pow(QQ, qQ.d)
-    }
-
-    function uQ(QQ) {
-      return QQ <= .0031308 ? 12.92 * QQ : 1.055 * Math.pow(QQ, .41666) - .055
-    }
-    class HQ {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = QQ, this.g = FQ, this.b = wQ
-      }
-      toString() {
-        return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
-      }
-      getClassName() {
-        return "Color3"
-      }
-      getHashCode() {
-        let QQ = 255 * this.r | 0;
-        return QQ = 397 * QQ ^ 255 * this.g, QQ = 397 * QQ ^ 255 * this.b, QQ
-      }
-      toArray(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return QQ[FQ] = this.r, QQ[FQ + 1] = this.g, QQ[FQ + 2] = this.b, this
-      }
-      bwQ(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return HQ.FromArrayToRef(QQ, FQ, this), this
-      }
-      toColor4() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new bQ(this.r, this.g, this.b, QQ)
-      }
-      RLQ() {
-        return [this.r, this.g, this.b]
-      }
-      toLuminance() {
-        return .3 * this.r + .59 * this.g + .11 * this.b
-      }
-      multiply(QQ) {
-        return new HQ(this.r * QQ.r, this.g * QQ.g, this.b * QQ.b)
-      }
-      multiplyToRef(QQ, FQ) {
-        return FQ.r = this.r * QQ.r, FQ.g = this.g * QQ.g, FQ.b = this.b * QQ.b, FQ
-      }
-      multiplyInPlace(QQ) {
-        return this.r *= QQ.r, this.g *= QQ.g, this.b *= QQ.b, this
-      }
-      multiplyByFloats(QQ, FQ, wQ) {
-        return new HQ(this.r * QQ, this.g * FQ, this.b * wQ)
-      }
-      divide(QQ) {
-        throw new ReferenceError("Can not divide a color")
-      }
-      divideToRef(QQ, FQ) {
-        throw new ReferenceError("Can not divide a color")
-      }
-      divideInPlace(QQ) {
-        throw new ReferenceError("Can not divide a color")
-      }
-      minimizeInPlace(QQ) {
-        return this.minimizeInPlaceFromFloats(QQ.r, QQ.g, QQ.b)
-      }
-      maximizeInPlace(QQ) {
-        return this.maximizeInPlaceFromFloats(QQ.r, QQ.g, QQ.b)
-      }
-      minimizeInPlaceFromFloats(QQ, FQ, wQ) {
-        return this.r = Math.min(QQ, this.r), this.g = Math.min(FQ, this.g), this.b = Math.min(wQ, this.b), this
-      }
-      maximizeInPlaceFromFloats(QQ, FQ, wQ) {
-        return this.r = Math.max(QQ, this.r), this.g = Math.max(FQ, this.g), this.b = Math.max(wQ, this.b), this
-      }
-      floorToRef(QQ) {
-        throw new ReferenceError("Can not floor a color")
-      }
-      floor() {
-        throw new ReferenceError("Can not floor a color")
-      }
-      fractToRef(QQ) {
-        throw new ReferenceError("Can not fract a color")
-      }
-      fract() {
-        throw new ReferenceError("Can not fract a color")
-      }
-      equals(QQ) {
-        return QQ && this.r === QQ.r && this.g === QQ.g && this.b === QQ.b
-      }
-      equalsFloats(QQ, FQ, wQ) {
-        return this.LkQ(QQ, FQ, wQ)
-      }
-      LkQ(QQ, FQ, wQ) {
-        return this.r === QQ && this.g === FQ && this.b === wQ
-      }
-      equalsWithEpsilon(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qQ.b;
-        return (0, oQ.WithinEpsilon)(this.r, QQ.r, FQ) && (0, oQ.WithinEpsilon)(this.g, QQ.g, FQ) && (0, oQ.WithinEpsilon)(this.b, QQ.b, FQ)
-      }
-      mo() {
-        throw new ReferenceError("Can not negate a color")
-      }
-      negateInPlace() {
-        throw new ReferenceError("Can not negate a color")
-      }
-      negateToRef(QQ) {
-        throw new ReferenceError("Can not negate a color")
-      }
-      scale(QQ) {
-        return new HQ(this.r * QQ, this.g * QQ, this.b * QQ)
-      }
-      scaleInPlace(QQ) {
-        return this.r *= QQ, this.g *= QQ, this.b *= QQ, this
-      }
-      scaleToRef(QQ, FQ) {
-        return FQ.r = this.r * QQ, FQ.g = this.g * QQ, FQ.b = this.b * QQ, FQ
-      }
-      scaleAndAddToRef(QQ, FQ) {
-        return FQ.r += this.r * QQ, FQ.g += this.g * QQ, FQ.b += this.b * QQ, FQ
-      }
-      clampToRef() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        return wQ.r = (0, oQ.Clamp)(this.r, QQ, FQ), wQ.g = (0, oQ.Clamp)(this.g, QQ, FQ), wQ.b = (0, oQ.Clamp)(this.b, QQ, FQ), wQ
-      }
-      add(QQ) {
-        return new HQ(this.r + QQ.r, this.g + QQ.g, this.b + QQ.b)
-      }
-      addInPlace(QQ) {
-        return this.r += QQ.r, this.g += QQ.g, this.b += QQ.b, this
-      }
-      addInPlaceFromFloats(QQ, FQ, wQ) {
-        return this.r += QQ, this.g += FQ, this.b += wQ, this
-      }
-      addToRef(QQ, FQ) {
-        return FQ.r = this.r + QQ.r, FQ.g = this.g + QQ.g, FQ.b = this.b + QQ.b, FQ
-      }
-      subtract(QQ) {
-        return new HQ(this.r - QQ.r, this.g - QQ.g, this.b - QQ.b)
-      }
-      subtractToRef(QQ, FQ) {
-        return FQ.r = this.r - QQ.r, FQ.g = this.g - QQ.g, FQ.b = this.b - QQ.b, FQ
-      }
-      gLQ(QQ) {
-        return this.r -= QQ.r, this.g -= QQ.g, this.b -= QQ.b, this
-      }
-      subtractFromFloats(QQ, FQ, wQ) {
-        return new HQ(this.r - QQ, this.g - FQ, this.b - wQ)
-      }
-      subtractFromFloatsToRef(QQ, FQ, wQ, LQ) {
-        return LQ.r = this.r - QQ, LQ.g = this.g - FQ, LQ.b = this.b - wQ, LQ
-      }
-      clone() {
-        return new HQ(this.r, this.g, this.b)
-      }
-      Qs(QQ) {
-        return this.r = QQ.r, this.g = QQ.g, this.b = QQ.b, this
-      }
-      vQQ(QQ, FQ, wQ) {
-        return this.r = QQ, this.g = FQ, this.b = wQ, this
-      }
-      set(QQ, FQ, wQ) {
-        return this.vQQ(QQ, FQ, wQ)
-      }
-      K3(QQ) {
-        return this.r = this.g = this.b = QQ, this
-      }
-      toHexString() {
-        const QQ = Math.round(255 * this.r),
-          FQ = Math.round(255 * this.g),
-          wQ = Math.round(255 * this.b);
-        return "#" + (0, oQ.ToHex)(QQ) + (0, oQ.ToHex)(FQ) + (0, oQ.ToHex)(wQ)
-      }
-      fromHexString(QQ) {
-        return "#" !== QQ.substring(0, 1) || 7 !== QQ.length || (this.r = parseInt(QQ.substring(1, 3), 16) / 255, this.g = parseInt(QQ.substring(3, 5), 16) / 255, this.b = parseInt(QQ.substring(5, 7), 16) / 255), this
-      }
-      toHSV() {
-        return this.toHSVToRef(new HQ)
-      }
-      toHSVToRef(QQ) {
-        const FQ = this.r,
-          wQ = this.g,
-          LQ = this.b,
-          qQ = Math.max(FQ, wQ, LQ),
-          oQ = Math.min(FQ, wQ, LQ);
-        let DQ = 0,
-          kQ = 0;
-        const vQ = qQ,
-          mQ = qQ - oQ;
-        return 0 !== qQ && (kQ = mQ / qQ), qQ != oQ && (qQ == FQ ? (DQ = (wQ - LQ) / mQ, wQ < LQ && (DQ += 6)) : qQ == wQ ? DQ = (LQ - FQ) / mQ + 2 : qQ == LQ && (DQ = (FQ - wQ) / mQ + 4), DQ *= 60), QQ.r = DQ, QQ.g = kQ, QQ.b = vQ, QQ
-      }
-      toLinearSpace() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const FQ = new HQ;
-        return this.toLinearSpaceToRef(FQ, QQ), FQ
-      }
-      toLinearSpaceToRef(QQ) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (QQ.r = vQ(this.r), QQ.g = vQ(this.g), QQ.b = vQ(this.b)) : (QQ.r = kQ(this.r), QQ.g = kQ(this.g), QQ.b = kQ(this.b)), this
-      }
-      toGammaSpace() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const FQ = new HQ;
-        return this.toGammaSpaceToRef(FQ, QQ), FQ
-      }
-      toGammaSpaceToRef(QQ) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (QQ.r = uQ(this.r), QQ.g = uQ(this.g), QQ.b = uQ(this.b)) : (QQ.r = mQ(this.r), QQ.g = mQ(this.g), QQ.b = mQ(this.b)), this
-      }
-      static HSVtoRGBToRef(QQ, FQ, wQ, LQ) {
-        const qQ = wQ * FQ,
-          oQ = QQ / 60,
-          DQ = qQ * (1 - Math.abs(oQ % 2 - 1));
-        let kQ = 0,
-          vQ = 0,
-          mQ = 0;
-        oQ >= 0 && oQ <= 1 ? (kQ = qQ, vQ = DQ) : oQ >= 1 && oQ <= 2 ? (kQ = DQ, vQ = qQ) : oQ >= 2 && oQ <= 3 ? (vQ = qQ, mQ = DQ) : oQ >= 3 && oQ <= 4 ? (vQ = DQ, mQ = qQ) : oQ >= 4 && oQ <= 5 ? (kQ = DQ, mQ = qQ) : oQ >= 5 && oQ <= 6 && (kQ = qQ, mQ = DQ);
-        const uQ = wQ - qQ;
-        return LQ.r = kQ + uQ, LQ.g = vQ + uQ, LQ.b = mQ + uQ, LQ
-      }
-      static FromHSV(QQ, FQ, wQ) {
-        const LQ = new HQ(0, 0, 0);
-        return HQ.HSVtoRGBToRef(QQ, FQ, wQ, LQ), LQ
-      }
-      static FromHexString(QQ) {
-        return new HQ(0, 0, 0).fromHexString(QQ)
-      }
-      static FromArray(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new HQ(QQ[FQ], QQ[FQ + 1], QQ[FQ + 2])
-      }
-      static FromArrayToRef(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        wQ.r = QQ[FQ], wQ.g = QQ[FQ + 1], wQ.b = QQ[FQ + 2]
-      }
-      static FromInts(QQ, FQ, wQ) {
-        return new HQ(QQ / 255, FQ / 255, wQ / 255)
-      }
-      static Lerp(QQ, FQ, wQ) {
-        const LQ = new HQ(0, 0, 0);
-        return HQ.LerpToRef(QQ, FQ, wQ, LQ), LQ
-      }
-      static LerpToRef(QQ, FQ, wQ, LQ) {
-        LQ.r = QQ.r + (FQ.r - QQ.r) * wQ, LQ.g = QQ.g + (FQ.g - QQ.g) * wQ, LQ.b = QQ.b + (FQ.b - QQ.b) * wQ
-      }
-      static Hermite(QQ, FQ, wQ, LQ, qQ) {
-        const oQ = qQ * qQ,
-          DQ = qQ * oQ,
-          kQ = 2 * DQ - 3 * oQ + 1,
-          vQ = -2 * DQ + 3 * oQ,
-          mQ = DQ - 2 * oQ + qQ,
-          uQ = DQ - oQ,
-          bQ = QQ.r * kQ + wQ.r * vQ + FQ.r * mQ + LQ.r * uQ,
-          YQ = QQ.g * kQ + wQ.g * vQ + FQ.g * mQ + LQ.g * uQ,
-          xQ = QQ.b * kQ + wQ.b * vQ + FQ.b * mQ + LQ.b * uQ;
-        return new HQ(bQ, YQ, xQ)
-      }
-      static Hermite1stDerivative(QQ, FQ, wQ, LQ, qQ) {
-        const oQ = HQ.Black();
-        return this.Hermite1stDerivativeToRef(QQ, FQ, wQ, LQ, qQ, oQ), oQ
-      }
-      static Hermite1stDerivativeToRef(QQ, FQ, wQ, LQ, qQ, oQ) {
-        const DQ = qQ * qQ;
-        oQ.r = 6 * (DQ - qQ) * QQ.r + (3 * DQ - 4 * qQ + 1) * FQ.r + 6 * (-DQ + qQ) * wQ.r + (3 * DQ - 2 * qQ) * LQ.r, oQ.g = 6 * (DQ - qQ) * QQ.g + (3 * DQ - 4 * qQ + 1) * FQ.g + 6 * (-DQ + qQ) * wQ.g + (3 * DQ - 2 * qQ) * LQ.g, oQ.b = 6 * (DQ - qQ) * QQ.b + (3 * DQ - 4 * qQ + 1) * FQ.b + 6 * (-DQ + qQ) * wQ.b + (3 * DQ - 2 * qQ) * LQ.b
-      }
-      static Red() {
-        return new HQ(1, 0, 0)
-      }
-      static Green() {
-        return new HQ(0, 1, 0)
-      }
-      static Blue() {
-        return new HQ(0, 0, 1)
-      }
-      static Black() {
-        return new HQ(0, 0, 0)
-      }
-      static get BlackReadOnly() {
-        return HQ._BlackReadOnly
-      }
-      static White() {
-        return new HQ(1, 1, 1)
-      }
-      static Purple() {
-        return new HQ(.5, 0, .5)
-      }
-      static Magenta() {
-        return new HQ(1, 0, 1)
-      }
-      static Yellow() {
-        return new HQ(1, 1, 0)
-      }
-      static Gray() {
-        return new HQ(.5, .5, .5)
-      }
-      static Teal() {
-        return new HQ(0, 1, 1)
-      }
-      static Random() {
-        return new HQ(Math.random(), Math.random(), Math.random())
-      }
-    }
-    HQ._V8PerformanceHack = new HQ(.5, .5, .5), HQ._BlackReadOnly = HQ.Black();
-    class bQ {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = QQ, this.g = FQ, this.b = wQ, this.a = LQ
-      }
-      RLQ() {
-        return [this.r, this.g, this.b, this.a]
-      }
-      toArray(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return QQ[FQ] = this.r, QQ[FQ + 1] = this.g, QQ[FQ + 2] = this.b, QQ[FQ + 3] = this.a, this
-      }
-      bwQ(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = QQ[FQ], this.g = QQ[FQ + 1], this.b = QQ[FQ + 2], this.a = QQ[FQ + 3], this
-      }
-      equals(QQ) {
-        return QQ && this.r === QQ.r && this.g === QQ.g && this.b === QQ.b && this.a === QQ.a
-      }
-      add(QQ) {
-        return new bQ(this.r + QQ.r, this.g + QQ.g, this.b + QQ.b, this.a + QQ.a)
-      }
-      addToRef(QQ, FQ) {
-        return FQ.r = this.r + QQ.r, FQ.g = this.g + QQ.g, FQ.b = this.b + QQ.b, FQ.a = this.a + QQ.a, FQ
-      }
-      addInPlace(QQ) {
-        return this.r += QQ.r, this.g += QQ.g, this.b += QQ.b, this.a += QQ.a, this
-      }
-      addInPlaceFromFloats(QQ, FQ, wQ, LQ) {
-        return this.r += QQ, this.g += FQ, this.b += wQ, this.a += LQ, this
-      }
-      subtract(QQ) {
-        return new bQ(this.r - QQ.r, this.g - QQ.g, this.b - QQ.b, this.a - QQ.a)
-      }
-      subtractToRef(QQ, FQ) {
-        return FQ.r = this.r - QQ.r, FQ.g = this.g - QQ.g, FQ.b = this.b - QQ.b, FQ.a = this.a - QQ.a, FQ
-      }
-      gLQ(QQ) {
-        return this.r -= QQ.r, this.g -= QQ.g, this.b -= QQ.b, this.a -= QQ.a, this
-      }
-      subtractFromFloats(QQ, FQ, wQ, LQ) {
-        return new bQ(this.r - QQ, this.g - FQ, this.b - wQ, this.a - LQ)
-      }
-      subtractFromFloatsToRef(QQ, FQ, wQ, LQ, qQ) {
-        return qQ.r = this.r - QQ, qQ.g = this.g - FQ, qQ.b = this.b - wQ, qQ.a = this.a - LQ, qQ
-      }
-      scale(QQ) {
-        return new bQ(this.r * QQ, this.g * QQ, this.b * QQ, this.a * QQ)
-      }
-      scaleInPlace(QQ) {
-        return this.r *= QQ, this.g *= QQ, this.b *= QQ, this.a *= QQ, this
-      }
-      scaleToRef(QQ, FQ) {
-        return FQ.r = this.r * QQ, FQ.g = this.g * QQ, FQ.b = this.b * QQ, FQ.a = this.a * QQ, FQ
-      }
-      scaleAndAddToRef(QQ, FQ) {
-        return FQ.r += this.r * QQ, FQ.g += this.g * QQ, FQ.b += this.b * QQ, FQ.a += this.a * QQ, FQ
-      }
-      clampToRef() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        return wQ.r = (0, oQ.Clamp)(this.r, QQ, FQ), wQ.g = (0, oQ.Clamp)(this.g, QQ, FQ), wQ.b = (0, oQ.Clamp)(this.b, QQ, FQ), wQ.a = (0, oQ.Clamp)(this.a, QQ, FQ), wQ
-      }
-      multiply(QQ) {
-        return new bQ(this.r * QQ.r, this.g * QQ.g, this.b * QQ.b, this.a * QQ.a)
-      }
-      multiplyToRef(QQ, FQ) {
-        return FQ.r = this.r * QQ.r, FQ.g = this.g * QQ.g, FQ.b = this.b * QQ.b, FQ.a = this.a * QQ.a, FQ
-      }
-      multiplyInPlace(QQ) {
-        return this.r *= QQ.r, this.g *= QQ.g, this.b *= QQ.b, this.a *= QQ.a, this
-      }
-      multiplyByFloats(QQ, FQ, wQ, LQ) {
-        return new bQ(this.r * QQ, this.g * FQ, this.b * wQ, this.a * LQ)
-      }
-      divide(QQ) {
-        throw new ReferenceError("Can not divide a color")
-      }
-      divideToRef(QQ, FQ) {
-        throw new ReferenceError("Can not divide a color")
-      }
-      divideInPlace(QQ) {
-        throw new ReferenceError("Can not divide a color")
-      }
-      minimizeInPlace(QQ) {
-        return this.r = Math.min(this.r, QQ.r), this.g = Math.min(this.g, QQ.g), this.b = Math.min(this.b, QQ.b), this.a = Math.min(this.a, QQ.a), this
-      }
-      maximizeInPlace(QQ) {
-        return this.r = Math.max(this.r, QQ.r), this.g = Math.max(this.g, QQ.g), this.b = Math.max(this.b, QQ.b), this.a = Math.max(this.a, QQ.a), this
-      }
-      minimizeInPlaceFromFloats(QQ, FQ, wQ, LQ) {
-        return this.r = Math.min(QQ, this.r), this.g = Math.min(FQ, this.g), this.b = Math.min(wQ, this.b), this.a = Math.min(LQ, this.a), this
-      }
-      maximizeInPlaceFromFloats(QQ, FQ, wQ, LQ) {
-        return this.r = Math.max(QQ, this.r), this.g = Math.max(FQ, this.g), this.b = Math.max(wQ, this.b), this.a = Math.max(LQ, this.a), this
-      }
-      floorToRef(QQ) {
-        throw new ReferenceError("Can not floor a color")
-      }
-      floor() {
-        throw new ReferenceError("Can not floor a color")
-      }
-      fractToRef(QQ) {
-        throw new ReferenceError("Can not fract a color")
-      }
-      fract() {
-        throw new ReferenceError("Can not fract a color")
-      }
-      mo() {
-        throw new ReferenceError("Can not negate a color")
-      }
-      negateInPlace() {
-        throw new ReferenceError("Can not negate a color")
-      }
-      negateToRef(QQ) {
-        throw new ReferenceError("Can not negate a color")
-      }
-      equalsWithEpsilon(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qQ.b;
-        return (0, oQ.WithinEpsilon)(this.r, QQ.r, FQ) && (0, oQ.WithinEpsilon)(this.g, QQ.g, FQ) && (0, oQ.WithinEpsilon)(this.b, QQ.b, FQ) && (0, oQ.WithinEpsilon)(this.a, QQ.a, FQ)
-      }
-      LkQ(QQ, FQ, wQ, LQ) {
-        return this.r === QQ && this.g === FQ && this.b === wQ && this.a === LQ
-      }
-      toString() {
-        return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
-      }
-      getClassName() {
-        return "Color4"
-      }
-      getHashCode() {
-        let QQ = 255 * this.r | 0;
-        return QQ = 397 * QQ ^ 255 * this.g, QQ = 397 * QQ ^ 255 * this.b, QQ = 397 * QQ ^ 255 * this.a, QQ
-      }
-      clone() {
-        return (new bQ).Qs(this)
-      }
-      Qs(QQ) {
-        return this.r = QQ.r, this.g = QQ.g, this.b = QQ.b, this.a = QQ.a, this
-      }
-      vQQ(QQ, FQ, wQ, LQ) {
-        return this.r = QQ, this.g = FQ, this.b = wQ, this.a = LQ, this
-      }
-      set(QQ, FQ, wQ, LQ) {
-        return this.vQQ(QQ, FQ, wQ, LQ)
-      }
-      K3(QQ) {
-        return this.r = this.g = this.b = this.a = QQ, this
-      }
-      toHexString() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const FQ = Math.round(255 * this.r),
-          wQ = Math.round(255 * this.g),
-          LQ = Math.round(255 * this.b);
-        if (QQ) return "#" + (0, oQ.ToHex)(FQ) + (0, oQ.ToHex)(wQ) + (0, oQ.ToHex)(LQ);
-        const qQ = Math.round(255 * this.a);
-        return "#" + (0, oQ.ToHex)(FQ) + (0, oQ.ToHex)(wQ) + (0, oQ.ToHex)(LQ) + (0, oQ.ToHex)(qQ)
-      }
-      fromHexString(QQ) {
-        return "#" !== QQ.substring(0, 1) || 9 !== QQ.length && 7 !== QQ.length || (this.r = parseInt(QQ.substring(1, 3), 16) / 255, this.g = parseInt(QQ.substring(3, 5), 16) / 255, this.b = parseInt(QQ.substring(5, 7), 16) / 255, 9 === QQ.length && (this.a = parseInt(QQ.substring(7, 9), 16) / 255)), this
-      }
-      toLinearSpace() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const FQ = new bQ;
-        return this.toLinearSpaceToRef(FQ, QQ), FQ
-      }
-      toLinearSpaceToRef(QQ) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (QQ.r = vQ(this.r), QQ.g = vQ(this.g), QQ.b = vQ(this.b)) : (QQ.r = kQ(this.r), QQ.g = kQ(this.g), QQ.b = kQ(this.b)), QQ.a = this.a, this
-      }
-      toGammaSpace() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const FQ = new bQ;
-        return this.toGammaSpaceToRef(FQ, QQ), FQ
-      }
-      toGammaSpaceToRef(QQ) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (QQ.r = uQ(this.r), QQ.g = uQ(this.g), QQ.b = uQ(this.b)) : (QQ.r = mQ(this.r), QQ.g = mQ(this.g), QQ.b = mQ(this.b)), QQ.a = this.a, this
-      }
-      static FromHexString(QQ) {
-        return "#" !== QQ.substring(0, 1) || 9 !== QQ.length && 7 !== QQ.length ? new bQ(0, 0, 0, 0) : new bQ(0, 0, 0, 1).fromHexString(QQ)
-      }
-      static Lerp(QQ, FQ, wQ) {
-        return bQ.LerpToRef(QQ, FQ, wQ, new bQ)
-      }
-      static LerpToRef(QQ, FQ, wQ, LQ) {
-        return LQ.r = QQ.r + (FQ.r - QQ.r) * wQ, LQ.g = QQ.g + (FQ.g - QQ.g) * wQ, LQ.b = QQ.b + (FQ.b - QQ.b) * wQ, LQ.a = QQ.a + (FQ.a - QQ.a) * wQ, LQ
-      }
-      static Hermite(QQ, FQ, wQ, LQ, qQ) {
-        const oQ = qQ * qQ,
-          DQ = qQ * oQ,
-          kQ = 2 * DQ - 3 * oQ + 1,
-          vQ = -2 * DQ + 3 * oQ,
-          mQ = DQ - 2 * oQ + qQ,
-          uQ = DQ - oQ,
-          HQ = QQ.r * kQ + wQ.r * vQ + FQ.r * mQ + LQ.r * uQ,
-          YQ = QQ.g * kQ + wQ.g * vQ + FQ.g * mQ + LQ.g * uQ,
-          xQ = QQ.b * kQ + wQ.b * vQ + FQ.b * mQ + LQ.b * uQ,
-          AQ = QQ.a * kQ + wQ.a * vQ + FQ.a * mQ + LQ.a * uQ;
-        return new bQ(HQ, YQ, xQ, AQ)
-      }
-      static Hermite1stDerivative(QQ, FQ, wQ, LQ, qQ) {
-        const oQ = new bQ;
-        return this.Hermite1stDerivativeToRef(QQ, FQ, wQ, LQ, qQ, oQ), oQ
-      }
-      static Hermite1stDerivativeToRef(QQ, FQ, wQ, LQ, qQ, oQ) {
-        const DQ = qQ * qQ;
-        oQ.r = 6 * (DQ - qQ) * QQ.r + (3 * DQ - 4 * qQ + 1) * FQ.r + 6 * (-DQ + qQ) * wQ.r + (3 * DQ - 2 * qQ) * LQ.r, oQ.g = 6 * (DQ - qQ) * QQ.g + (3 * DQ - 4 * qQ + 1) * FQ.g + 6 * (-DQ + qQ) * wQ.g + (3 * DQ - 2 * qQ) * LQ.g, oQ.b = 6 * (DQ - qQ) * QQ.b + (3 * DQ - 4 * qQ + 1) * FQ.b + 6 * (-DQ + qQ) * wQ.b + (3 * DQ - 2 * qQ) * LQ.b, oQ.a = 6 * (DQ - qQ) * QQ.a + (3 * DQ - 4 * qQ + 1) * FQ.a + 6 * (-DQ + qQ) * wQ.a + (3 * DQ - 2 * qQ) * LQ.a
-      }
-      static FromColor3(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new bQ(QQ.r, QQ.g, QQ.b, FQ)
-      }
-      static FromArray(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new bQ(QQ[FQ], QQ[FQ + 1], QQ[FQ + 2], QQ[FQ + 3])
-      }
-      static FromArrayToRef(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          wQ = arguments.length > 2 ? arguments[2] : void 0;
-        wQ.r = QQ[FQ], wQ.g = QQ[FQ + 1], wQ.b = QQ[FQ + 2], wQ.a = QQ[FQ + 3]
-      }
-      static FromInts(QQ, FQ, wQ, LQ) {
-        return new bQ(QQ / 255, FQ / 255, wQ / 255, LQ / 255)
-      }
-      static CheckColors4(QQ, FQ) {
-        if (QQ.length === 3 * FQ) {
-          const FQ = [];
-          for (let wQ = 0; wQ < QQ.length; wQ += 3) {
-            const LQ = wQ / 3 * 4;
-            FQ[LQ] = QQ[wQ], FQ[LQ + 1] = QQ[wQ + 1], FQ[LQ + 2] = QQ[wQ + 2], FQ[LQ + 3] = 1
+    var Dk = ik(38272),
+      fk = ik(39585),
+      Sk = ik(39782),
+      bk = {};
+    class rk {
+      constructor(kk) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = kk, this.checkInputs = () => {}
+      }
+      add(kk) {
+        const ek = kk.getSimpleName();
+        this.attached[ek] ? Dk.b.Warn("camera input of type " + ek + " already exists on camera") : (this.attached[ek] = kk, kk.camera = this.camera, kk.checkInputs && (this.checkInputs = this._addCheckInputs(kk.checkInputs.bind(kk))), this.attachedToElement && kk.attachControl(this.noPreventDefault))
+      }
+      remove(kk) {
+        for (const ek in this.attached) {
+          const ik = this.attached[ek];
+          if (ik === kk) return ik.detachControl(), ik.camera = null, delete this.attached[ek], void this.rebuildInputCheck()
+        }
+      }
+      removeByType(kk) {
+        for (const ek in this.attached) {
+          const ik = this.attached[ek];
+          ik.getClassName() === kk && (ik.detachControl(), ik.camera = null, delete this.attached[ek], this.rebuildInputCheck())
+        }
+      }
+      _addCheckInputs(kk) {
+        const ek = this.checkInputs;
+        return () => {
+          ek(), kk()
+        }
+      }
+      attachInput(kk) {
+        this.attachedToElement && kk.attachControl(this.noPreventDefault)
+      }
+      attachElement() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (!this.attachedToElement) {
+          kk = !Sk.e.ForceAttachControlToAlwaysPreventDefault && kk, this.attachedToElement = !0, this.noPreventDefault = kk;
+          for (const ek in this.attached) this.attached[ek].attachControl(kk)
+        }
+      }
+      detachElement() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const ek in this.attached) this.attached[ek].detachControl(), kk && (this.attached[ek].camera = null);
+        this.attachedToElement = !1
+      }
+      rebuildInputCheck() {
+        this.checkInputs = () => {};
+        for (const kk in this.attached) {
+          const ek = this.attached[kk];
+          ek.checkInputs && (this.checkInputs = this._addCheckInputs(ek.checkInputs.bind(ek)))
+        }
+      }
+      clear() {
+        this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
+      }
+      serialize(kk) {
+        const ek = {};
+        for (const ik in this.attached) {
+          const kk = this.attached[ik],
+            Dk = fk.b.Serialize(kk);
+          ek[kk.getClassName()] = Dk
+        }
+        kk.inputsmgr = ek
+      }
+      parse(kk) {
+        const ek = kk.inputsmgr;
+        if (ek) {
+          this.clear();
+          for (const kk in ek) {
+            const ik = bk[kk];
+            if (ik) {
+              const Dk = ek[kk],
+                Sk = fk.b.Parse((() => new ik), Dk, null);
+              this.add(Sk)
+            }
           }
-          return FQ
-        }
-        return QQ
+        } else
+          for (const ik in this.attached) {
+            const ek = bk[this.attached[ik].getClassName()];
+            if (ek) {
+              const Dk = fk.b.Parse((() => new ek), kk, null);
+              this.remove(this.attached[ik]), this.add(Dk)
+            }
+          }
       }
     }
-    bQ._V8PerformanceHack = new bQ(.5, .5, .5, .5);
-    class YQ {}
-    YQ.Color3 = (0, LQ.b)(3, HQ.Black), YQ.Color4 = (0, LQ.b)(3, (() => new bQ(0, 0, 0, 0)));
-    let xQ = !1;
-
-    function AQ() {
-      xQ || (xQ = !0, Object.defineProperties(HQ.prototype, {
-        dimension: {
-          value: [3]
-        },
-        rank: {
-          value: 1
-        }
-      }), Object.defineProperties(bQ.prototype, {
-        dimension: {
-          value: [4]
-        },
-        rank: {
-          value: 1
-        }
-      }), (0, DQ.e)("BABYLON.Color3", HQ), (0, DQ.e)("BABYLON.Color4", bQ))
-    }
   },
-  36705: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => oQ,
-      d: () => LQ,
-      g: () => qQ
+  39813: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Dk.b
     });
-    const LQ = 1 / 2.2,
-      qQ = 2.2;
-    Math.sqrt(5);
-    let oQ = .001
+    var Dk = ik(39818);
+    (0, Dk.c)()
   },
-  36729: (QQ, FQ, wQ) => {
-    function LQ(QQ) {
-      return parseInt(QQ.toString().replace(/\W/g, ""))
+  39818: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Mk,
+      c: () => xk
+    });
+    var Dk = ik(39566),
+      fk = ik(39570),
+      Sk = ik(36698),
+      bk = ik(36874),
+      rk = ik(39822),
+      Pk = ik(39787),
+      mk = ik(36734);
+    let Mk = (() => {
+        var kk;
+        let ek, ik, Pk = rk.d,
+          mk = [],
+          Mk = [],
+          Kk = [],
+          xk = [];
+        return kk = class extends Pk {
+          constructor(kk, ek, ik, fk) {
+            super(kk, ik, fk), this.groundColor = (0, Dk.e)(this, mk, new bk.e(0, 0, 0)), this.direction = ((0, Dk.e)(this, Mk), (0, Dk.e)(this, Kk, void 0)), (0, Dk.e)(this, xk), this.direction = ek || Sk.o.Up()
+          }
+          _buildUniformLayout() {
+            this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
+          }
+          getClassName() {
+            return "HemisphericLight"
+          }
+          setDirectionToTarget(kk) {
+            return this.direction = Sk.o.Normalize(kk.subtract(Sk.o.Zero())), this.direction
+          }
+          getShadowGenerator() {
+            return null
+          }
+          transferToEffect(kk, ek) {
+            const ik = Sk.o.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", ik.x, ik.y, ik.z, 0, ek), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), ek), this
+          }
+          transferToNodeMaterialEffect(kk, ek) {
+            const ik = Sk.o.Normalize(this.direction);
+            return kk.setFloat3(ek, ik.x, ik.y, ik.z), this
+          }
+          computeWorldMatrix() {
+            return this._worldMatrix || (this._worldMatrix = Sk.b.Identity()), this._worldMatrix
+          }
+          getTypeID() {
+            return rk.d.LIGHTTYPEID_HEMISPHERICLIGHT
+          }
+          prepareLightSpecificDefines(kk, ek) {
+            kk["HEMILIGHT" + ek] = !0
+          }
+        }, (() => {
+          const Sk = "function" === typeof Symbol && Symbol.metadata ? Object.create(Pk[Symbol.metadata] ?? null) : void 0;
+          ek = [(0, fk.k)()], ik = [(0, fk.F)()], (0, Dk.d)(null, null, ek, {
+            kind: "field",
+            name: "groundColor",
+            static: !1,
+            private: !1,
+            access: {
+              has: kk => "groundColor" in kk,
+              get: kk => kk.groundColor,
+              set: (kk, ek) => {
+                kk.groundColor = ek
+              }
+            },
+            metadata: Sk
+          }, mk, Mk), (0, Dk.d)(null, null, ik, {
+            kind: "field",
+            name: "direction",
+            static: !1,
+            private: !1,
+            access: {
+              has: kk => "direction" in kk,
+              get: kk => kk.direction,
+              set: (kk, ek) => {
+                kk.direction = ek
+              }
+            },
+            metadata: Sk
+          }, Kk, xk), Sk && Object.defineProperty(kk, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: Sk
+          })
+        })(), kk
+      })(),
+      Kk = !1;
+
+    function xk() {
+      Kk || (Kk = !0, Pk.b.AddNodeConstructor("Light_Type_3", ((kk, ek) => () => new Mk(kk, Sk.o.Zero(), ek))), (0, mk.h)("BABYLON.HemisphericLight", Mk))
+    }
+  },
+  36868: (kk, ek, ik) => {
+    ik.d(ek, {
+      Color3: () => Dk.e,
+      e: () => Dk.f
+    });
+    var Dk = ik(36874);
+    (0, Dk.h)()
+  },
+  37365: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => fk
+    });
+    var Dk = ik(37372);
+    class fk {
+      static GetPlanes(kk) {
+        const ek = [];
+        for (let ik = 0; ik < 6; ik++) ek.push(new Dk.c(0, 0, 0, 0));
+        return fk.GetPlanesToRef(kk, ek), ek
+      }
+      static GetNearPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[2], ek.normal.y = ik[7] + ik[6], ek.normal.z = ik[11] + ik[10], ek.d = ik[15] + ik[14], ek.normalize()
+      }
+      static GetFarPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[2], ek.normal.y = ik[7] - ik[6], ek.normal.z = ik[11] - ik[10], ek.d = ik[15] - ik[14], ek.normalize()
+      }
+      static GetLeftPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[0], ek.normal.y = ik[7] + ik[4], ek.normal.z = ik[11] + ik[8], ek.d = ik[15] + ik[12], ek.normalize()
+      }
+      static GetRightPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[0], ek.normal.y = ik[7] - ik[4], ek.normal.z = ik[11] - ik[8], ek.d = ik[15] - ik[12], ek.normalize()
+      }
+      static GetTopPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] - ik[1], ek.normal.y = ik[7] - ik[5], ek.normal.z = ik[11] - ik[9], ek.d = ik[15] - ik[13], ek.normalize()
+      }
+      static GetBottomPlaneToRef(kk, ek) {
+        const ik = kk.m;
+        ek.normal.x = ik[3] + ik[1], ek.normal.y = ik[7] + ik[5], ek.normal.z = ik[11] + ik[9], ek.d = ik[15] + ik[13], ek.normalize()
+      }
+      static GetPlanesToRef(kk, ek) {
+        fk.GetNearPlaneToRef(kk, ek[0]), fk.GetFarPlaneToRef(kk, ek[1]), fk.GetLeftPlaneToRef(kk, ek[2]), fk.GetRightPlaneToRef(kk, ek[3]), fk.GetTopPlaneToRef(kk, ek[4]), fk.GetBottomPlaneToRef(kk, ek[5])
+      }
+      static IsPointInFrustum(kk, ek) {
+        for (let ik = 0; ik < 6; ik++)
+          if (ek[ik].dotCoordinate(kk) < 0) return !1;
+        return !0
+      }
+    }
+  },
+  37372: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => fk
+    });
+    var Dk = ik(36698);
+    class fk {
+      constructor(kk, ek, ik, fk) {
+        this.normal = new Dk.o(kk, ek, ik), this.d = fk
+      }
+      Tik() {
+        return [this.normal.x, this.normal.y, this.normal.z, this.d]
+      }
+      clone() {
+        return new fk(this.normal.x, this.normal.y, this.normal.z, this.d)
+      }
+      getClassName() {
+        return "Plane"
+      }
+      getHashCode() {
+        let kk = this.normal.getHashCode();
+        return kk = 397 * kk ^ this.d, kk
+      }
+      normalize() {
+        const kk = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let ek = 0;
+        return 0 !== kk && (ek = 1 / kk), this.normal.x *= ek, this.normal.y *= ek, this.normal.z *= ek, this.d *= ek, this
+      }
+      transform(kk) {
+        const ek = fk._TmpMatrix;
+        kk.invertToRef(ek);
+        const ik = ek.m,
+          Dk = this.normal.x,
+          Sk = this.normal.y,
+          bk = this.normal.z,
+          rk = this.d,
+          Pk = Dk * ik[0] + Sk * ik[1] + bk * ik[2] + rk * ik[3],
+          mk = Dk * ik[4] + Sk * ik[5] + bk * ik[6] + rk * ik[7],
+          Mk = Dk * ik[8] + Sk * ik[9] + bk * ik[10] + rk * ik[11],
+          Kk = Dk * ik[12] + Sk * ik[13] + bk * ik[14] + rk * ik[15];
+        return new fk(Pk, mk, Mk, Kk)
+      }
+      dotCoordinate(kk) {
+        return this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z + this.d
+      }
+      copyFromPoints(kk, ek, ik) {
+        const Dk = ek.x - kk.x,
+          fk = ek.y - kk.y,
+          Sk = ek.z - kk.z,
+          bk = ik.x - kk.x,
+          rk = ik.y - kk.y,
+          Pk = ik.z - kk.z,
+          mk = fk * Pk - Sk * rk,
+          Mk = Sk * bk - Dk * Pk,
+          Kk = Dk * rk - fk * bk,
+          xk = Math.sqrt(mk * mk + Mk * Mk + Kk * Kk);
+        let nk;
+        return nk = 0 !== xk ? 1 / xk : 0, this.normal.x = mk * nk, this.normal.y = Mk * nk, this.normal.z = Kk * nk, this.d = -(this.normal.x * kk.x + this.normal.y * kk.y + this.normal.z * kk.z), this
+      }
+      isFrontFacingTo(kk, ek) {
+        return Dk.o.Dot(this.normal, kk) <= ek
+      }
+      signedDistanceTo(kk) {
+        return Dk.o.Dot(kk, this.normal) + this.d
+      }
+      static FromArray(kk) {
+        return new fk(kk[0], kk[1], kk[2], kk[3])
+      }
+      static FromPoints(kk, ek, ik) {
+        const Dk = new fk(0, 0, 0, 0);
+        return Dk.copyFromPoints(kk, ek, ik), Dk
+      }
+      static FromPositionAndNormal(kk, ek) {
+        const ik = new fk(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(kk, ek, ik)
+      }
+      static FromPositionAndNormalToRef(kk, ek, ik) {
+        return ik.normal.Fs(ek), ik.normal.normalize(), ik.d = -kk.dot(ik.normal), ik
+      }
+      static SignedDistanceToPlaneFromPositionAndNormal(kk, ek, ik) {
+        const fk = -(ek.x * kk.x + ek.y * kk.y + ek.z * kk.z);
+        return Dk.o.Dot(ik, ek) + fk
+      }
+    }
+    fk._TmpMatrix = Dk.b.Identity()
+  },
+  36690: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      Matrix: () => Dk.b,
+      Quaternion: () => Dk.c,
+      RegisterMathVector: () => Dk.g,
+      TmpVectors: () => Dk.j,
+      Vector2: () => Dk.l,
+      eH: () => Dk.o,
+      Vector4: () => Dk.p
+    });
+    var Dk = ik(36698);
+    (0, Dk.g)()
+  },
+  37679: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Dk
+    });
+    class Dk {
+      constructor(kk, ek, ik, Dk) {
+        this.x = kk, this.y = ek, this.width = ik, this.height = Dk
+      }
+      toGlobal(kk, ek) {
+        return new Dk(this.x * kk, this.y * ek, this.width * kk, this.height * ek)
+      }
+      toGlobalToRef(kk, ek, ik) {
+        return ik.x = this.x * kk, ik.y = this.y * ek, ik.width = this.width * kk, ik.height = this.height * ek, this
+      }
+      clone() {
+        return new Dk(this.x, this.y, this.width, this.height)
+      }
+    }
+  },
+  39995: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => mk
+    });
+    var Dk = ik(36698),
+      fk = ik(36874),
+      Sk = ik(39997),
+      bk = ik(40001),
+      rk = ik(40014);
+
+    function Pk(kk) {
+      let ek = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const ik = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        Sk = [],
+        Pk = kk.width || kk.size || 1,
+        mk = kk.height || kk.size || 1,
+        Mk = kk.depth || kk.size || 1,
+        Kk = kk.wrap || !1;
+      let xk = void 0 === kk.topBaseAt ? 1 : kk.topBaseAt,
+        nk = void 0 === kk.bottomBaseAt ? 0 : kk.bottomBaseAt;
+      xk = (xk + 4) % 4, nk = (nk + 4) % 4;
+      let Uk = [2, 0, 3, 1][xk],
+        Hk = [2, 0, 1, 3][nk],
+        wk = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (Kk) {
+        ek = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], wk = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+        let kk = [
+            [1, 1, 1],
+            [-1, 1, 1],
+            [-1, 1, -1],
+            [1, 1, -1]
+          ],
+          ik = [
+            [-1, -1, 1],
+            [1, -1, 1],
+            [1, -1, -1],
+            [-1, -1, -1]
+          ];
+        const Dk = [17, 18, 19, 16],
+          fk = [22, 23, 20, 21];
+        for (; Uk > 0;) kk.unshift(kk.pop()), Dk.unshift(Dk.pop()), Uk--;
+        for (; Hk > 0;) ik.unshift(ik.pop()), fk.unshift(fk.pop()), Hk--;
+        kk = kk.flat(), ik = ik.flat(), wk = wk.concat(kk).concat(ik), ek.push(Dk[0], Dk[2], Dk[3], Dk[0], Dk[1], Dk[2]), ek.push(fk[0], fk[2], fk[3], fk[0], fk[1], fk[2])
+      }
+      const lk = [Pk / 2, mk / 2, Mk / 2],
+        pk = wk.reduce(((kk, ek, ik) => kk.concat(ek * lk[ik % 3])), []),
+        yk = 0 === kk.sideOrientation ? 0 : kk.sideOrientation || bk.b.DEFAULTSIDE,
+        Yk = kk.faceUV || new Array(6),
+        Lk = kk.faceColors,
+        Ck = [];
+      for (let bk = 0; bk < 6; bk++) void 0 === Yk[bk] && (Yk[bk] = new Dk.p(0, 0, 1, 1)), Lk && void 0 === Lk[bk] && (Lk[bk] = new fk.f(1, 1, 1, 1));
+      for (let Dk = 0; Dk < 6; Dk++)
+        if (Sk.push(Yk[Dk].z, rk.e ? 1 - Yk[Dk].w : Yk[Dk].w), Sk.push(Yk[Dk].x, rk.e ? 1 - Yk[Dk].w : Yk[Dk].w), Sk.push(Yk[Dk].x, rk.e ? 1 - Yk[Dk].y : Yk[Dk].y), Sk.push(Yk[Dk].z, rk.e ? 1 - Yk[Dk].y : Yk[Dk].y), Lk)
+          for (let kk = 0; kk < 4; kk++) Ck.push(Lk[Dk].r, Lk[Dk].g, Lk[Dk].b, Lk[Dk].a);
+      bk.b._ComputeSides(yk, pk, ek, ik, Sk, kk.frontUVs, kk.backUVs);
+      const Ak = new bk.b;
+      if (Ak.indices = ek, Ak.positions = pk, Ak.normals = ik, Ak.uvs = Sk, Lk) {
+        const kk = yk === bk.b.DOUBLESIDE ? Ck.concat(Ck) : Ck;
+        Ak.colors = kk
+      }
+      return Ak
     }
 
-    function qQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(QQ - FQ) <= wQ
+    function mk(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const Dk = new Sk.e(kk, ik);
+      ek.sideOrientation = Sk.e._GetDefaultSideOrientation(ek.sideOrientation), Dk._originalBuilderSideOrientation = ek.sideOrientation;
+      return Pk(ek).applyToMesh(Dk, ek.updatable), Dk
     }
-
-    function oQ(QQ, FQ, wQ) {
-      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return QQ < FQ - LQ || QQ > wQ + LQ
-    }
-
-    function DQ(QQ, FQ) {
-      return QQ === FQ ? QQ : Math.random() * (FQ - QQ) + QQ
-    }
-
-    function kQ(QQ, FQ, wQ) {
-      return QQ + (FQ - QQ) * wQ
-    }
-
-    function vQ(QQ, FQ, wQ) {
-      let LQ = tQ(FQ - QQ, 360);
-      return LQ > 180 && (LQ -= 360), QQ + LQ * bQ(wQ)
-    }
-
-    function mQ(QQ, FQ, wQ) {
-      let LQ;
-      return LQ = QQ != FQ ? bQ((wQ - QQ) / (FQ - QQ)) : 0, LQ
-    }
-
-    function uQ(QQ, FQ, wQ, LQ, qQ) {
-      const oQ = qQ * qQ,
-        DQ = qQ * oQ;
-      return QQ * (2 * DQ - 3 * oQ + 1) + wQ * (-2 * DQ + 3 * oQ) + FQ * (DQ - 2 * oQ + qQ) + LQ * (DQ - oQ)
-    }
-
-    function HQ(QQ, FQ, wQ, LQ, qQ) {
-      const oQ = qQ * qQ;
-      return 6 * (oQ - qQ) * QQ + (3 * oQ - 4 * qQ + 1) * FQ + 6 * (-oQ + qQ) * wQ + (3 * oQ - 2 * qQ) * LQ
-    }
-
-    function bQ(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(wQ, Math.max(FQ, QQ))
-    }
-
-    function YQ(QQ) {
-      return QQ -= 2 * Math.PI * Math.floor((QQ + Math.PI) / (2 * Math.PI))
-    }
-
-    function xQ(QQ) {
-      const FQ = QQ.toString(16);
-      return QQ <= 15 ? ("0" + FQ).toUpperCase() : FQ.toUpperCase()
-    }
-
-    function AQ(QQ) {
-      if (Math.log2) return Math.floor(Math.log2(QQ));
-      if (QQ < 0) return NaN;
-      if (0 === QQ) return -1 / 0;
-      let FQ = 0;
-      if (QQ < 1) {
-        for (; QQ < 1;) FQ++, QQ *= 2;
-        FQ = -FQ
-      } else if (QQ > 1)
-        for (; QQ > 1;) FQ++, QQ = Math.floor(QQ / 2);
-      return FQ
-    }
-
-    function tQ(QQ, FQ) {
-      return QQ - Math.floor(QQ / FQ) * FQ
-    }
-
-    function eQ(QQ, FQ, wQ) {
-      return (QQ - FQ) / (wQ - FQ)
-    }
-
-    function MQ(QQ, FQ, wQ) {
-      return QQ * (wQ - FQ) + FQ
-    }
-
-    function GQ(QQ, FQ) {
-      let wQ = tQ(FQ - QQ, 360);
-      return wQ > 180 && (wQ -= 360), wQ
-    }
-
-    function pQ(QQ, FQ) {
-      const wQ = tQ(QQ, 2 * FQ);
-      return FQ - Math.abs(wQ - FQ)
-    }
-
-    function cQ(QQ, FQ, wQ) {
-      let LQ = bQ(wQ);
-      return LQ = -2 * LQ * LQ * LQ + 3 * LQ * LQ, FQ * LQ + QQ * (1 - LQ)
-    }
-
-    function CQ(QQ, FQ, wQ) {
-      let LQ;
-      return LQ = Math.abs(FQ - QQ) <= wQ ? FQ : QQ + Math.sign(FQ - QQ) * wQ, LQ
-    }
-
-    function SQ(QQ, FQ, wQ) {
-      const LQ = GQ(QQ, FQ);
-      let qQ;
-      return qQ = -wQ < LQ && LQ < wQ ? FQ : CQ(QQ, FQ = QQ + LQ, wQ), qQ
-    }
-
-    function iQ(QQ, FQ, wQ) {
-      return (QQ - FQ) / (wQ - FQ)
-    }
-
-    function WQ(QQ, FQ, wQ) {
-      return (wQ - FQ) * QQ + FQ
-    }
-
-    function RQ(QQ, FQ) {
-      const wQ = QQ % FQ;
-      return 0 === wQ ? FQ : RQ(FQ, wQ)
-    }
-    wQ.r(FQ), wQ.d(FQ, {
-      Clamp: () => bQ,
-      DeltaAngle: () => GQ,
-      Denormalize: () => MQ,
-      ExtractAsInt: () => LQ,
-      Hermite: () => uQ,
-      Hermite1stDerivative: () => HQ,
-      HighestCommonFactor: () => RQ,
-      ILog2: () => AQ,
-      InverseLerp: () => mQ,
-      Lerp: () => kQ,
-      LerpAngle: () => vQ,
-      MoveTowards: () => CQ,
-      MoveTowardsAngle: () => SQ,
-      Normalize: () => eQ,
-      NormalizeRadians: () => YQ,
-      OutsideRange: () => oQ,
-      PercentToRange: () => WQ,
-      PingPong: () => pQ,
-      RandomRange: () => DQ,
-      RangeToPercent: () => iQ,
-      Repeat: () => tQ,
-      SmoothStep: () => cQ,
-      ToHex: () => xQ,
-      WithinEpsilon: () => qQ
+    let Mk = !1;
+    Mk || (Mk = !0, bk.b.CreateBox = Pk, Sk.e.CreateBox = function(kk, ek) {
+      return mk(kk, {
+        size: ek,
+        sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
+        updatable: arguments.length > 3 ? arguments[3] : void 0
+      }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  36709: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ) {
-      const wQ = [];
-      for (let LQ = 0; LQ < QQ; ++LQ) wQ.push(FQ());
-      return wQ
-    }
-
-    function qQ(QQ, FQ) {
-      return LQ(QQ, FQ)
-    }
-    wQ.d(FQ, {
-      b: () => LQ,
-      f: () => qQ,
-      h: () => DQ
+  40029: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Kk
     });
-    const oQ = ["push", "splice", "pop", "shift", "unshift"];
+    var Dk = ik(36698),
+      fk = ik(39997),
+      Sk = ik(40001),
+      bk = ik(40038),
+      rk = ik(39708),
+      Pk = ik(38272);
 
-    function DQ(QQ, FQ) {
-      const wQ = oQ.map((wQ => function(QQ, FQ, wQ) {
-        const LQ = QQ[FQ];
-        if ("function" !== typeof LQ) return null;
-        const qQ = function() {
-          const LQ = QQ.length,
-            oQ = qQ.previous.apply(QQ, arguments);
-          return wQ(FQ, LQ), oQ
-        };
-        return LQ.next = qQ, qQ.previous = LQ, QQ[FQ] = qQ, () => {
-          const wQ = qQ.previous;
-          if (!wQ) return;
-          const LQ = qQ.next;
-          LQ ? (wQ.next = LQ, LQ.previous = wQ) : (wQ.next = void 0, QQ[FQ] = wQ), qQ.next = void 0, qQ.previous = void 0
+    function mk(kk) {
+      const ek = [],
+        ik = [],
+        Dk = kk.lines,
+        fk = kk.colors,
+        bk = [];
+      let rk = 0;
+      for (let Sk = 0; Sk < Dk.length; Sk++) {
+        const kk = Dk[Sk];
+        for (let Dk = 0; Dk < kk.length; Dk++) {
+          const {
+            x: Pk,
+            y: mk,
+            z: Mk
+          } = kk[Dk];
+          if (ik.push(Pk, mk, Mk), fk) {
+            const kk = fk[Sk],
+              {
+                r: ek,
+                g: ik,
+                b: rk,
+                a: Pk
+              } = kk[Dk];
+            bk.push(ek, ik, rk, Pk)
+          }
+          Dk > 0 && (ek.push(rk - 1), ek.push(rk)), rk++
         }
-      }(QQ, wQ, FQ)));
-      return () => {
-        for (const QQ of wQ) QQ?.()
+      }
+      const Pk = new Sk.b;
+      return Pk.indices = ek, Pk.positions = ik, fk && (Pk.colors = bk), Pk
+    }
+
+    function Mk(kk) {
+      const ek = kk.dashSize || 3,
+        ik = kk.gapSize || 1,
+        fk = kk.dashNb || 200,
+        bk = kk.points,
+        rk = [],
+        Pk = [],
+        mk = Dk.o.Zero();
+      let Mk, Kk, xk, nk = 0,
+        Uk = 0;
+      for (xk = 0; xk < bk.length - 1; xk++) bk[xk + 1].subtractToRef(bk[xk], mk), nk += mk.length();
+      const Hk = nk / fk,
+        wk = ek * Hk / (ek + ik);
+      for (xk = 0; xk < bk.length - 1; xk++) {
+        bk[xk + 1].subtractToRef(bk[xk], mk), Mk = Math.floor(mk.length() / Hk), mk.normalize();
+        for (let kk = 0; kk < Mk; kk++) Kk = Hk * kk, rk.push(bk[xk].x + Kk * mk.x, bk[xk].y + Kk * mk.y, bk[xk].z + Kk * mk.z), rk.push(bk[xk].x + (Kk + wk) * mk.x, bk[xk].y + (Kk + wk) * mk.y, bk[xk].z + (Kk + wk) * mk.z), Pk.push(Uk, Uk + 1), Uk += 2
+      }
+      const lk = new Sk.b;
+      return lk.positions = rk, lk.indices = Pk, lk
+    }
+
+    function Kk(kk, ek) {
+      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const Dk = ek.instance,
+        fk = ek.lines,
+        Sk = ek.colors;
+      if (Dk) {
+        const kk = Dk.getVerticesData(rk.e.PositionKind);
+        let ek, ik;
+        Sk && (ek = Dk.getVerticesData(rk.e.ColorKind));
+        let bk = 0,
+          Pk = 0;
+        for (let Dk = 0; Dk < fk.length; Dk++) {
+          const rk = fk[Dk];
+          for (let fk = 0; fk < rk.length; fk++) kk[bk] = rk[fk].x, kk[bk + 1] = rk[fk].y, kk[bk + 2] = rk[fk].z, Sk && ek && (ik = Sk[Dk], ek[Pk] = ik[fk].r, ek[Pk + 1] = ik[fk].g, ek[Pk + 2] = ik[fk].b, ek[Pk + 3] = ik[fk].a, Pk += 4), bk += 3
+        }
+        return Dk.updateVerticesData(rk.e.PositionKind, kk, !1, !1), Sk && ek && Dk.updateVerticesData(rk.e.ColorKind, ek, !1, !1), Dk.refreshBoundingInfo(), Dk
+      }
+      const Pk = !!Sk,
+        Mk = new bk.e(kk, ik, null, void 0, void 0, Pk, ek.useVertexAlpha, ek.material);
+      return mk(ek).applyToMesh(Mk, ek.updatable), Mk
+    }
+
+    function xk(kk, ek) {
+      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const Dk = ek.colors ? [ek.colors] : null;
+      return Kk(kk, {
+        lines: [ek.points],
+        updatable: ek.updatable,
+        instance: ek.instance,
+        colors: Dk,
+        useVertexAlpha: ek.useVertexAlpha,
+        material: ek.material
+      }, ik)
+    }
+
+    function nk(kk, ek) {
+      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const Sk = ek.points,
+        rk = ek.instance,
+        mk = ek.gapSize || 1,
+        Kk = ek.dashSize || 3;
+      if (rk) {
+        const kk = kk => {
+          const ek = Dk.o.Zero(),
+            ik = kk.length / 6;
+          let fk, bk, Pk, mk, Mk = 0,
+            Kk = 0;
+          for (Pk = 0; Pk < Sk.length - 1; Pk++) Sk[Pk + 1].subtractToRef(Sk[Pk], ek), Mk += ek.length();
+          const xk = Mk / ik,
+            nk = rk._creationDataStorage.dashSize,
+            Uk = nk * xk / (nk + rk._creationDataStorage.gapSize);
+          for (Pk = 0; Pk < Sk.length - 1; Pk++)
+            for (Sk[Pk + 1].subtractToRef(Sk[Pk], ek), fk = Math.floor(ek.length() / xk), ek.normalize(), mk = 0; mk < fk && Kk < kk.length;) bk = xk * mk, kk[Kk] = Sk[Pk].x + bk * ek.x, kk[Kk + 1] = Sk[Pk].y + bk * ek.y, kk[Kk + 2] = Sk[Pk].z + bk * ek.z, kk[Kk + 3] = Sk[Pk].x + (bk + Uk) * ek.x, kk[Kk + 4] = Sk[Pk].y + (bk + Uk) * ek.y, kk[Kk + 5] = Sk[Pk].z + (bk + Uk) * ek.z, Kk += 6, mk++;
+          for (; Kk < kk.length;) kk[Kk] = Sk[Pk].x, kk[Kk + 1] = Sk[Pk].y, kk[Kk + 2] = Sk[Pk].z, Kk += 3
+        };
+        return (ek.dashNb || ek.dashSize || ek.gapSize || ek.useVertexAlpha || ek.material) && Pk.b.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), rk.updateMeshPositions(kk, !1), rk
+      }
+      const xk = new bk.e(kk, ik, null, void 0, void 0, void 0, ek.useVertexAlpha, ek.material);
+      return Mk(ek).applyToMesh(xk, ek.updatable), xk._creationDataStorage = new fk.j, xk._creationDataStorage.dashSize = Kk, xk._creationDataStorage.gapSize = mk, xk
+    }
+    let Uk = !1;
+    Uk || (Uk = !0, Sk.b.CreateLineSystem = mk, Sk.b.CreateDashedLines = Mk, fk.e.CreateLines = function(kk, ek) {
+      return xk(kk, {
+        points: ek,
+        updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
+      }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+    }, fk.e.CreateDashedLines = function(kk, ek, ik, Dk, fk) {
+      return nk(kk, {
+        points: ek,
+        dashSize: ik,
+        gapSize: Dk,
+        dashNb: fk,
+        updatable: arguments.length > 6 ? arguments[6] : void 0,
+        instance: arguments.length > 7 ? arguments[7] : void 0
+      }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
+    })
+  },
+  40038: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => xk,
+      g: () => Hk
+    });
+    var Dk, fk, Sk = ik(36874),
+      bk = ik(39708),
+      rk = ik(39997),
+      Pk = ik(40045),
+      mk = ik(39861),
+      Mk = ik(40049),
+      Kk = ik(39447);
+    class xk extends rk.e {
+      _isShaderMaterial(kk) {
+        return !!kk && "ShaderMaterial" === kk.getClassName()
+      }
+      constructor(kk) {
+        let ek = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          Dk = arguments.length > 5 ? arguments[5] : void 0,
+          fk = arguments.length > 6 ? arguments[6] : void 0,
+          rk = arguments.length > 7 ? arguments[7] : void 0;
+        super(kk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, ek, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = Dk, this.useVertexAlpha = fk, this.color = new Sk.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, ek && (this.color = ek.color.clone(), this.alpha = ek.alpha, this.useVertexColor = ek.useVertexColor, this.useVertexAlpha = ek.useVertexAlpha), this.intersectionThreshold = .1;
+        const Pk = {
+          attributes: [bk.e.PositionKind],
+          uniforms: ["world", "viewProjection"],
+          needAlphaBlending: !0,
+          defines: [],
+          useClipPlane: null,
+          shaderLanguage: 0
+        };
+        if (this.useVertexAlpha ? Pk.defines.push("#define VERTEXALPHA") : Pk.needAlphaBlending = !1, this.useVertexColor ? (Pk.defines.push("#define VERTEXCOLOR"), Pk.attributes.push(bk.e.ColorKind)) : (Pk.uniforms.push("color"), this._color4 = new Sk.f), rk) this.material = rk;
+        else {
+          this.XF().JU().isWebGPU && !xk.ForceGLSL && (this._shaderLanguage = 1), Pk.shaderLanguage = this._shaderLanguage, Pk.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([ik.e(343).then((() => ik(42154))), ik.e(349).then((() => ik(42163)))]) : await Promise.all([ik.e(325).then((() => ik(42165))), ik.e(331).then((() => ik(42174)))])
+          };
+          const kk = new Mk.o("colorShader", this.XF(), "color", Pk, !1);
+          kk.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(kk)
+        }
+      }
+      getClassName() {
+        return "LinesMesh"
+      }
+      get material() {
+        return this._internalAbstractMeshDataInfo._material
+      }
+      set material(kk) {
+        const ek = this.material;
+        if (ek === kk) return;
+        const ik = ek && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(kk), ik && ek?.dispose()
+      }
+      _setInternalMaterial(kk) {
+        this._setMaterial(kk), this.material && (this.material.fillMode = mk.e.LineListDrawMode, this.material.disableLighting = !0)
+      }
+      get checkCollisions() {
+        return !1
+      }
+      set checkCollisions(kk) {}
+      _bind(kk, ek) {
+        if (!this._geometry) return this;
+        const ik = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(ek, ik) : this._geometry._bind(ek, ik, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+          const {
+            r: kk,
+            g: ek,
+            b: ik
+          } = this.color;
+          this._color4.set(kk, ek, ik, this.alpha), this.material.setColor4("color", this._color4)
+        }
+        return this
+      }
+      _draw(kk, ek, ik) {
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
+        const Dk = this.XF().JU();
+        return this._unIndexed ? Dk.drawArraysType(mk.e.LineListDrawMode, kk.verticesStart, kk.verticesCount, ik) : Dk.drawElementsType(mk.e.LineListDrawMode, kk.indexStart, kk.indexCount, ik), this
+      }
+      dispose(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || ek) && this.material?.dispose(!1, !1, !0), super.dispose(kk)
+      }
+      clone(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          ik = arguments.length > 2 ? arguments[2] : void 0;
+        if (ek && void 0 === ek._addToSceneRootNodes) {
+          const ik = ek;
+          return ik.source = this, new xk(kk, this.XF(), ik.parent, ik.source, ik.doNotCloneChildren)
+        }
+        return new xk(kk, this.XF(), ek, this, ik)
+      }
+      createInstance(kk) {
+        const ek = new nk(kk, this);
+        if (this.Iq) {
+          ek.Iq = {};
+          for (const kk in this.Iq) ek.Iq[kk] = this.Iq[kk]
+        }
+        return ek
+      }
+      serialize(kk) {
+        super.serialize(kk), kk.color = this.color.Tik(), kk.alpha = this.alpha
+      }
+      static Parse(kk, ek) {
+        const ik = new xk(kk.name, ek);
+        return ik.color = Sk.e.FromArray(kk.color), ik.alpha = kk.alpha, ik
+      }
+    }
+    xk.ForceGLSL = !1;
+    class nk extends Pk.b {
+      constructor(kk, ek) {
+        super(kk, ek), this.intersectionThreshold = ek.intersectionThreshold
+      }
+      getClassName() {
+        return "InstancedLinesMesh"
+      }
+    }
+    let Uk = !1;
+
+    function Hk() {
+      Uk || (Uk = !0, rk.e._LinesMeshParser = (kk, ek) => xk.Parse(kk, ek))
+    }(Dk = xk.prototype).enableEdgesRendering ?? (Dk.enableEdgesRendering = (0, Kk.i)("LinesMesh", "enableEdgesRendering")), (fk = nk.prototype).enableEdgesRendering ?? (fk.enableEdgesRendering = (0, Kk.i)("InstancedLinesMesh", "enableEdgesRendering"))
+  },
+  38265: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk
+    });
+    var Dk = ik(38272);
+    const fk = (kk, ek, ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(ek) : null;
+    class Sk {
+      static DeepCopy(kk, ek, ik, Sk) {
+        let bk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const rk = function(kk) {
+          const ek = [];
+          do {
+            const ik = Object.getOwnPropertyNames(kk);
+            for (const kk of ik) - 1 === ek.indexOf(kk) && ek.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return ek
+        }(kk);
+        for (const mk of rk) {
+          if ("_" === mk[0] && (!Sk || -1 === Sk.indexOf(mk))) continue;
+          if (mk.endsWith("Observable")) continue;
+          if (ik && -1 !== ik.indexOf(mk)) continue;
+          const rk = kk[mk],
+            Mk = typeof rk;
+          if ("function" !== Mk) try {
+            if ("object" === Mk)
+              if (rk instanceof Uint8Array) ek[mk] = Uint8Array.from(rk);
+              else if (rk instanceof Array) {
+              if (ek[mk] = [], rk.length > 0)
+                if ("object" == typeof rk[0])
+                  for (let kk = 0; kk < rk.length; kk++) {
+                    const ik = fk(rk[kk], ek, bk); - 1 === ek[mk].indexOf(ik) && ek[mk].push(ik)
+                  } else ek[mk] = rk.slice(0)
+            } else ek[mk] = fk(rk, ek, bk);
+            else ek[mk] = rk
+          } catch (Pk) {
+            Dk.b.Warn(Pk.message)
+          }
+        }
       }
     }
   },
-  36741: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => oQ,
-      e: () => qQ
+  37497: (kk, ek, ik) => {
+    function Dk() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (kk => {
+        const ek = 16 * Math.random() | 0;
+        return ("x" === kk ? ek : 3 & ek | 8).toString(16)
+      }))
+    }
+    ik.d(ek, {
+      b: () => Dk
+    })
+  },
+  38272: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Dk
     });
-    const LQ = {};
-
-    function qQ(QQ, FQ) {
-      LQ[QQ] = FQ
+    class Dk {
+      static _CheckLimit(kk, ek) {
+        let ik = Dk._LogLimitOutputs[kk];
+        return ik ? ik.current++ : (ik = {
+          limit: ek,
+          current: 1
+        }, Dk._LogLimitOutputs[kk] = ik), ik.current <= ik.limit
+      }
+      static _GenerateLimitMessage(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ik = Dk._LogLimitOutputs[kk];
+        if (!ik || !Dk.MessageLimitReached) return;
+        const fk = this._Levels[ek];
+        ik.current === ik.limit && Dk[fk.name](Dk.MessageLimitReached.replace(/%LIMIT%/g, "" + ik.limit).replace(/%TYPE%/g, fk.name ?? ""))
+      }
+      static _AddLogEntry(kk) {
+        Dk._LogCache = kk + Dk._LogCache, Dk.OnNewCacheEntry && Dk.OnNewCacheEntry(kk)
+      }
+      static _FormatMessage(kk) {
+        const ek = kk => kk < 10 ? "0" + kk : "" + kk,
+          ik = new Date;
+        return "[" + ek(ik.getHours()) + ":" + ek(ik.getMinutes()) + ":" + ek(ik.getSeconds()) + "]: " + kk
+      }
+      static _LogDisabled(kk, ek) {}
+      static _LogEnabled() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ek = arguments.length > 1 ? arguments[1] : void 0,
+          ik = arguments.length > 2 ? arguments[2] : void 0;
+        const fk = Array.isArray(ek) ? ek[0] : ek;
+        if (void 0 !== ik && !Dk._CheckLimit(fk, ik)) return;
+        const Sk = Dk._FormatMessage(fk),
+          bk = this._Levels[kk],
+          rk = Array.isArray(ek) ? ek.slice(1) : [];
+        bk.logFunc && bk.logFunc("BJS - " + Sk, ...rk);
+        const Pk = `<div style='color:${bk.color}'>${Sk}</div><br>`;
+        Dk._AddLogEntry(Pk), Dk._GenerateLimitMessage(fk, kk)
+      }
+      static get LogCache() {
+        return Dk._LogCache
+      }
+      static ClearLogCache() {
+        Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk.errorsCount = 0
+      }
+      static set LogLevels(kk) {
+        Dk.Log = Dk._LogDisabled, Dk.Warn = Dk._LogDisabled, Dk.Error = Dk._LogDisabled;
+        const ek = [Dk.MessageLogLevel, Dk.WarningLogLevel, Dk.ErrorLogLevel];
+        for (const ik of ek)
+          if ((kk & ik) === ik) {
+            const kk = this._Levels[ik];
+            Dk[kk.name] = Dk._LogEnabled.bind(Dk, ik)
+          }
+      }
     }
-
-    function oQ(QQ) {
-      return LQ[QQ]
-    }
+    Dk.NoneLogLevel = 0, Dk.MessageLogLevel = 1, Dk.WarningLogLevel = 2, Dk.ErrorLogLevel = 4, Dk.AllLogLevel = 7, Dk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Dk.errorsCount = 0, Dk.Log = Dk._LogEnabled.bind(Dk, Dk.MessageLogLevel), Dk.Warn = Dk._LogEnabled.bind(Dk, Dk.WarningLogLevel), Dk.Error = Dk._LogEnabled.bind(Dk, Dk.ErrorLogLevel)
+  },
+  39651: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Dk.f
+    });
+    var Dk = ik(39653);
+    (0, Dk.b)()
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

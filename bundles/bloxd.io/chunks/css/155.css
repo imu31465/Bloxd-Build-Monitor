@@ -1,3 +1,646 @@
+.SegmentedToggle {
+  background-color: #3c4b68;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  display: flex;
+  flex-shrink: 0
+}
+
+.SegmentedToggle .SegmentedToggleOption {
+  background: none;
+  border: none;
+  color: #cfcfcf;
+  cursor: pointer;
+  font: inherit;
+  min-width: 5.5em;
+  padding: .4em 1em;
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .SegmentedToggle .SegmentedToggleOption:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.SegmentedToggle .SegmentedToggleOption:before {
+  inset-inline: 0
+}
+
+.SegmentedToggle .SegmentedToggleOption:not(:first-child) {
+  border-left: 1px solid #0f0f0f
+}
+
+@media(hover:hover) {
+  .SegmentedToggle .SegmentedToggleOption:hover {
+    background-color: #394980;
+    color: #fff
+  }
+}
+
+.SegmentedToggle .SegmentedToggleOption.pad-focused {
+  background-color: #394980;
+  color: #fff
+}
+
+@media(hover:none) {
+  .SegmentedToggle .SegmentedToggleOption:active {
+    background-color: #394980;
+    color: #fff
+  }
+}
+
+.SegmentedToggle .SegmentedToggleOption:focus-visible {
+  outline: 2px solid #ffb914;
+  outline-offset: -2px
+}
+
+.SegmentedToggle .SegmentedToggleOption.SegmentedToggleOptionSelected {
+  background-color: #2e80ee;
+  color: #fff;
+  cursor: default
+}
+
+.ControlsContainer {
+  margin-bottom: 2rem;
+  margin-top: 2rem
+}
+
+.ControlsContainer,
+.ControlsContainer .ControlsSection {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+
+.ControlsContainer .ControlsSection .ControlsSectionHeader {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: .4rem .2rem;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+@media(hover:hover) {
+  .ControlsContainer .ControlsSection .ControlsSectionHeader:hover .ControlsSectionTitle {
+    color: #ffb914
+  }
+}
+
+.ControlsContainer .ControlsSection .ControlsSectionHeader.pad-focused .ControlsSectionTitle {
+  color: #ffb914
+}
+
+@media(hover:none) {
+  .ControlsContainer .ControlsSection .ControlsSectionHeader:active .ControlsSectionTitle {
+    color: #ffb914
+  }
+}
+
+.ControlsContainer .ControlsSection .ControlsSectionHeader .ControlsSectionTitle {
+  color: #fcd373;
+  font-size: 1.2rem;
+  transition: color .15s
+}
+
+.ControlsContainer .ControlsSection .ControlsSectionHeader .ControlsSectionChevron {
+  color: #fcd373;
+  font-size: 1.5rem;
+  transition: transform .2s
+}
+
+.ControlsContainer .ControlsSection.Collapsed .ControlsSectionHeader .ControlsSectionChevron {
+  transform: rotate(-90deg)
+}
+
+.ControlsContainer .ControlsSection .ControlsSectionRows {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+
+.ControlsContainer .ControlRow {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  overflow: hidden
+}
+
+.ControlsContainer .ControlRow.WarningBorder {
+  border: 1px solid #ffb914
+}
+
+.ControlsContainer .ControlRow .ControlRowInner {
+  align-items: flex-start;
+  display: flex;
+  padding: 1rem;
+  position: relative
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlName {
+  align-items: center;
+  display: flex;
+  justify-self: flex-start;
+  margin-top: .2rem;
+  padding-right: 2rem
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlName .ControlPadGlyph {
+  color: #f2f2f2;
+  flex-shrink: 0;
+  margin-left: .5rem
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: .5rem
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingsList {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: .5rem
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding {
+  align-items: center;
+  background-color: #22283b;
+  border: 1px solid transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: 0 .5rem;
+  pointer-events: none;
+  transition: border .2s
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.ControlBindingAdd {
+  cursor: pointer;
+  min-width: 1.8rem;
+  pointer-events: auto
+}
+
+@media(hover:hover) {
+  .ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding:hover {
+    border: 1px solid #e34f4f
+  }
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.pad-focused {
+  border: 1px solid #e34f4f
+}
+
+@media(hover:none) {
+  .ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding:active {
+    border: 1px solid #e34f4f
+  }
+}
+
+@media(hover:hover) {
+  .ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.ControlBindingAdd:hover {
+    border: 1px solid #1dd06d
+  }
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.ControlBindingAdd.pad-focused {
+  border: 1px solid #1dd06d
+}
+
+@media(hover:none) {
+  .ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding.ControlBindingAdd:active {
+    border: 1px solid #1dd06d
+  }
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding .ControlBindingRemoveIcon {
+  color: #ff8a80;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: .5rem;
+  pointer-events: auto
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBinding .ControlBindingAddIcon {
+  color: #1dd06d;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  pointer-events: auto
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput {
+  align-items: center;
+  display: flex;
+  gap: .5rem;
+  justify-content: center
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer {
+  height: 2.2rem;
+  position: relative
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer .InputOverlay {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-width: 2rem;
+  overflow-x: hidden;
+  padding: 0 .5rem;
+  pointer-events: none;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 2
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer .InputOverlay .InputOverlayPlaceholder {
+  font-size: 1rem;
+  opacity: .6
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer input {
+  background-color: #22283b;
+  border: 1px solid transparent;
+  border-radius: 0;
+  box-sizing: border-box;
+  caret-color: transparent;
+  color: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  height: 100%;
+  left: 0;
+  min-width: 3rem;
+  outline: none;
+  padding: .5rem;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transition: border .1s;
+  width: 100%;
+  z-index: 1
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer input:active,
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddInput .InputContainer input:focus {
+  border: 1px solid #ffb914;
+  outline: none
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddButton {
+  font-size: 1.1rem
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddButton .ButtonBody {
+  padding: .3rem .5rem
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingAddCancel {
+  color: #ff8a80;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0 .2rem
+}
+
+.ControlsContainer .ControlRow .ControlRowInner .ControlBindingsContainer .ControlBindingError {
+  color: #ff8a80;
+  font-size: .8rem;
+  margin-top: .2rem
+}
+
+.ControlsContainer .ControlRow .ControlRowWarning {
+  background-color: #ffb914;
+  color: #000;
+  font-size: 1rem;
+  padding: .4rem .5rem;
+  text-shadow: 0 0 0 #000
+}
+
+.ControlsContainer .ResetBindingsButton {
+  margin-top: 1rem
+}
+
+.HudLayoutSection {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+
+.HudLayoutSection .HudLayoutEntry.SettingBox {
+  align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  box-sizing: border-box;
+  color: inherit;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: 1rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-height: max(3.5rem, 48px);
+  padding: 0;
+  text-align: inherit;
+  text-align: left;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(hover:hover) {
+
+  .HudLayoutSection .HudLayoutEntry.SettingBox:hover .HudLayoutEntryChevron,
+  .HudLayoutSection .HudLayoutEntry.SettingBox:hover .HudLayoutEntryIcon,
+  .HudLayoutSection .HudLayoutEntry.SettingBox:hover .HudLayoutEntryText .HudLayoutEntryTitle {
+    color: #ffb914
+  }
+}
+
+.HudLayoutSection .HudLayoutEntry.SettingBox.pad-focused .HudLayoutEntryChevron,
+.HudLayoutSection .HudLayoutEntry.SettingBox.pad-focused .HudLayoutEntryIcon,
+.HudLayoutSection .HudLayoutEntry.SettingBox.pad-focused .HudLayoutEntryText .HudLayoutEntryTitle {
+  color: #ffb914
+}
+
+@media(hover:none) {
+
+  .HudLayoutSection .HudLayoutEntry.SettingBox:active .HudLayoutEntryChevron,
+  .HudLayoutSection .HudLayoutEntry.SettingBox:active .HudLayoutEntryIcon,
+  .HudLayoutSection .HudLayoutEntry.SettingBox:active .HudLayoutEntryText .HudLayoutEntryTitle {
+    color: #ffb914
+  }
+}
+
+.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryIcon {
+  color: #fcd373;
+  flex-shrink: 0;
+  font-size: 1.5rem
+}
+
+.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryText {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .2rem
+}
+
+.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryText .HudLayoutEntryTitle {
+  color: #fcd373;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: color .15s
+}
+
+.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryText .HudLayoutEntrySub {
+  color: #cfcfcf;
+  font-size: .85em
+}
+
+.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryChevron {
+  color: #fcd373;
+  font-size: 1.5rem;
+  transform: rotate(-90deg);
+  transition: transform .2s
+}
+
+.HudLayoutSection .HudLayoutEntry.SettingBox[aria-expanded=true] .HudLayoutEntryChevron {
+  transform: none
+}
+
+.HudLayoutSettings,
+.SettingsMenuRightInner .HudLayoutSettings {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+
+.HudLayoutSettings .HudLayoutOrientation,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutOrientation {
+  color: #cfcfcf;
+  font-size: 1rem
+}
+
+.HudLayoutSettings .HudLayoutPreviewBox,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutPreviewBox {
+  box-shadow: 0 6px 10px rgba(26, 31, 46, .6);
+  padding: .75rem;
+  position: sticky;
+  top: 0;
+  z-index: 1
+}
+
+.HudLayoutSettings .HudLayoutPreviewBox .HudLayoutFullScreenButton,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutPreviewBox .HudLayoutFullScreenButton {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 16px;
+  gap: 8px;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 40px;
+  min-width: 40px;
+  padding: 0 8px;
+  text-align: left
+}
+
+.HudLayoutSettings .HudLayoutPreviewBox .HudLayoutCornerButton,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutPreviewBox .HudLayoutCornerButton {
+  position: absolute;
+  right: .75rem;
+  top: .75rem;
+  z-index: 1
+}
+
+.HudLayoutSettings .HudLayoutPreviewBox .HudLayoutPreviewRow,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutPreviewBox .HudLayoutPreviewRow {
+  align-items: stretch;
+  display: flex;
+  gap: 12px
+}
+
+.HudLayoutSettings .HudLayoutPreviewBox .HudLayoutPreviewRow .HudLayoutSidePanel,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutPreviewBox .HudLayoutPreviewRow .HudLayoutSidePanel {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  font-size: 15px;
+  gap: 8px;
+  justify-content: flex-start;
+  min-width: 0
+}
+
+.HudLayoutSettings .HudLayoutPreviewBox .HudLayoutPreviewRow .HudLayoutSidePanel .HudQuickName,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutPreviewBox .HudLayoutPreviewRow .HudLayoutSidePanel .HudQuickName {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.HudLayoutSettings .HudLayoutPreviewBox .HudLayoutPreviewRow .HudLayoutSidePanel .SecondaryButton,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutPreviewBox .HudLayoutPreviewRow .HudLayoutSidePanel .SecondaryButton {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 15px;
+  height: 40px;
+  justify-content: center;
+  min-width: 40px;
+  padding: 0 8px
+}
+
+.HudLayoutSettings .HudSafeZoneHeader,
+.SettingsMenuRightInner .HudLayoutSettings .HudSafeZoneHeader {
+  align-items: center;
+  display: flex;
+  gap: .75rem;
+  justify-content: space-between
+}
+
+.HudLayoutSettings .HudElementNote,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementNote {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  gap: .5rem
+}
+
+.HudLayoutSettings .HudElementNote>span,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementNote>span {
+  flex-basis: 100%
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: .25rem .5rem .25rem 1rem
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox.Child,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox.Child {
+  padding-left: 2.25rem
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead {
+  align-items: center;
+  display: flex;
+  gap: .5rem
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowName,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowName {
+  align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex: 1 1;
+  font: inherit;
+  font-size: inherit;
+  gap: .5rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-height: 40px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  padding: 0;
+  text-align: inherit;
+  text-align: left;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowName .HudElementRowSize,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowName .HudElementRowSize {
+  color: #cfcfcf;
+  font-weight: 600
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowName .HudElementRowChevron,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowName .HudElementRowChevron {
+  color: #fcd373;
+  transform: rotate(-90deg);
+  transition: transform .2s
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowName[aria-expanded=true] .HudElementRowChevron,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowName[aria-expanded=true] .HudElementRowChevron {
+  transform: none
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowIcon,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowIcon {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  height: 40px;
+  justify-content: center;
+  padding: 0;
+  width: 44px
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowIcon.Placeholder,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox .HudElementRowHead .HudElementRowIcon.Placeholder {
+  visibility: hidden
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox.Open .HudElementRowHead .HudElementRowName,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox.Open .HudElementRowHead .HudElementRowName {
+  color: #ffb914
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox.Hidden .HudElementRowHead .HudElementRowName,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox.Hidden .HudElementRowHead .HudElementRowName {
+  color: #cfcfcf
+}
+
+.HudLayoutSettings .HudElementList .HudElementRow.SettingBox .SettingBox,
+.SettingsMenuRightInner .HudLayoutSettings .HudElementList .HudElementRow.SettingBox .SettingBox {
+  background-color: transparent;
+  border: none;
+  padding: 0
+}
+
+.HudLayoutSettings .HudLayoutBody,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutBody {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+
+.HudLayoutSettings .HudLayoutResetAll,
+.SettingsMenuRightInner .HudLayoutSettings .HudLayoutResetAll {
+  align-self: flex-start;
+  min-height: 44px
+}
+
 @keyframes rainbowShimmer {
   0% {
     transform: translateX(0)
@@ -97,134 +740,357 @@
   }
 }
 
-.Crosshair {
-  align-items: center;
-  color: #fff;
+.HudPreviewBox {
   display: flex;
-  font-size: 1.3rem;
-  font-weight: 900;
   justify-content: center;
-  left: 50%;
-  line-height: 1;
-  margin-top: -2px;
+  width: 100%
+}
+
+.HudPreviewBox .HudPreviewStage {
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewFrame {
+  border: 0;
+  left: 0;
   pointer-events: none;
-  position: fixed;
-  text-shadow: -1.2px 0 #000, 0 1.2px #000, 1.2px 0 #000, 0 -1.2px #000;
-  top: 50%;
-  translate: -50% -50%;
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay {
+  inset: 0;
+  position: absolute;
+  touch-action: pan-y;
   z-index: 1
 }
 
-.Crosshair.Touch {
-  font-size: max(1.3rem, 18px)
-}
-
-.GunCrosshairWrapper {
-  transition: opacity .2s
-}
-
-.GunCrosshair {
-  background-color: #fff;
-  border: 1px solid #000;
-  position: fixed;
-  transition: transform .2s ease-out;
-  z-index: 1
-}
-
-.GunCrosshairOverlayWrapper {
-  height: 104vh;
-  height: 104dvh;
-  left: 50%;
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewSafeZone {
+  border: 1px dashed #cfcfcf;
   pointer-events: none;
-  position: fixed;
-  top: 50%;
+  position: absolute
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewHandle {
+  cursor: grab;
+  position: absolute;
+  touch-action: none
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewLockBadge {
+  align-items: center;
+  background: #ffb914;
+  color: #303a59;
+  display: flex;
+  font-size: 9px;
+  height: 16px;
+  justify-content: center;
+  pointer-events: none;
+  position: absolute;
   transform: translate(-50%, -50%);
-  transition: filter .3s;
-  width: 104vw;
-  width: 104dvw;
+  width: 16px
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewCentreLine {
+  border-left: 1px dashed hsla(0, 0%, 100%, .6);
+  bottom: 0;
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 0
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewCentreLine.Shown {
+  display: block
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewCentreLine.Snapped {
+  border-left: 2px solid #ffb914;
+  margin-left: -1px
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing {
+  border: 2px solid #ffb914;
+  box-sizing: content-box;
+  margin: -5px;
+  padding: 3px;
+  pointer-events: none;
+  position: absolute
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing.Fixed {
+  border-style: dashed
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing.Overlap {
+  border-color: #e34f4f
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing.Overlap .HudPreviewRingLabel {
+  background-color: #e34f4f;
+  color: #fff
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing .HudPreviewRingLabel {
+  background-color: #ffb914;
+  color: #1a1f2e;
+  font-size: max(11px, .8rem);
+  font-weight: 800;
+  line-height: 1.3;
+  padding: 0 5px;
+  position: absolute;
+  white-space: nowrap
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing .HudPreviewRingLabel.Above {
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing .HudPreviewRingLabel.Below {
+  left: 50%;
+  top: calc(100% + 2px);
+  transform: translateX(-50%)
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing .HudPreviewRingLabel.Left {
+  right: calc(100% + 2px);
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.HudPreviewBox .HudPreviewStage .HudPreviewOverlay .HudPreviewRing .HudPreviewRingLabel.Right {
+  left: calc(100% + 2px);
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.HudFullScreenEditor {
+  background-color: #303a59;
+  inset: 0;
+  position: fixed;
+  z-index: 16
+}
+
+.HudFullScreenEditor .HudPreviewBox.Fill .HudPreviewStage {
+  border: none
+}
+
+.HudFullScreenEditor .HudFullScreenToolbar {
+  align-items: center;
+  background-color: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  display: flex;
+  font-size: 15px;
+  gap: 6px;
+  left: 50%;
+  max-width: calc(100vw - 12px);
+  padding: 5px;
+  position: absolute;
+  top: max(var(--notchTop), 6px);
+  transform: translateX(-50%);
   z-index: 2
 }
 
-.GunCrosshairOverlayWrapper .GunCrosshairOverlay {
-  background-color: #000;
-  height: 100%;
-  left: 0;
-  -webkit-mask-image: radial-gradient(circle, transparent 40%, #000 41%);
-  mask-image: radial-gradient(circle, transparent 40%, #000 41%);
-  position: absolute;
-  top: 0;
-  width: 100%
-}
-
-.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine1,
-.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine2 {
-  position: absolute
-}
-
-.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine1 {
-  border-top: 1px dashed #000;
-  height: 1px;
-  left: 0;
-  top: 50%;
-  translate: 0 -25%;
-  width: 100%
-}
-
-.GunCrosshairOverlayWrapper .GunCrosshairOverlayLine2 {
-  border-left: 1px dashed #000;
-  height: 100%;
-  left: 50%;
-  top: 0;
-  translate: -25% 0;
-  width: 1px
-}
-
-.GunCrosshairOverlayWrapper .GunCrosshairOverlayDot {
-  border: 1px solid rgba(204, 20, 20, .5);
-  border-radius: 50%;
+.HudFullScreenEditor .HudFullScreenToolbar .BlueButton,
+.HudFullScreenEditor .HudFullScreenToolbar .SecondaryButton {
+  align-items: center;
   box-sizing: border-box;
-  height: 5px;
-  left: 50%;
+  display: flex;
+  font-size: 15px;
+  height: 40px;
+  justify-content: center;
+  min-width: 40px;
+  padding: 0 8px
+}
+
+.HudFullScreenEditor .HudFullScreenToolbar .HudQuickName {
+  padding: 0 4px
+}
+
+@media(max-width:420px) {
+  .HudFullScreenEditor .HudFullScreenToolbar {
+    gap: 4px;
+    padding: 4px
+  }
+
+  .HudFullScreenEditor .HudFullScreenToolbar .BlueButton,
+  .HudFullScreenEditor .HudFullScreenToolbar .SecondaryButton {
+    height: 36px;
+    min-width: 36px;
+    padding: 0 6px
+  }
+}
+
+.HudFixJoystickButton {
+  box-sizing: border-box;
+  font-size: 16px;
+  min-height: 40px;
+  padding: 0 12px;
+  white-space: nowrap
+}
+
+.HudFullScreenToolbar>*,
+.HudFullScreenToolbar>.HudFullScreenControls>*,
+.HudLayoutSidePanel>*,
+.HudLayoutSidePanel>.HudFullScreenControls>* {
+  flex-shrink: 0
+}
+
+.HudFullScreenToolbar .HudFullScreenControls,
+.HudLayoutSidePanel .HudFullScreenControls {
+  display: contents
+}
+
+.HudFullScreenToolbar .HudQuickName,
+.HudLayoutSidePanel .HudQuickName {
+  align-items: center;
+  color: #ffb914;
+  display: flex;
+  flex-shrink: 1;
+  gap: 4px;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap
+}
+
+.HudFullScreenToolbar .HudQuickName.Overlap,
+.HudLayoutSidePanel .HudQuickName.Overlap {
+  color: #ff8a80
+}
+
+.HudFullScreenToolbar .HudQuickName .HudQuickOverlap,
+.HudLayoutSidePanel .HudQuickName .HudQuickOverlap {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.HudFullScreenToolbar .HudQuickActions,
+.HudLayoutSidePanel .HudQuickActions {
+  flex-wrap: wrap
+}
+
+.HudFullScreenToolbar .HudQuickActions,
+.HudFullScreenToolbar .HudQuickSize,
+.HudLayoutSidePanel .HudQuickActions,
+.HudLayoutSidePanel .HudQuickSize {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  max-width: 100%
+}
+
+.HudFullScreenToolbar .HudQuickActions .HudQuickSizeValue,
+.HudFullScreenToolbar .HudQuickSize .HudQuickSizeValue,
+.HudLayoutSidePanel .HudQuickActions .HudQuickSizeValue,
+.HudLayoutSidePanel .HudQuickSize .HudQuickSizeValue {
+  min-width: 3em;
+  text-align: center
+}
+
+html.HudPreviewDoc {
+  background: linear-gradient(rgba(26, 31, 46, .6), rgba(26, 31, 46, .6)), url(data:image/jpeg;base64,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) 50%/cover no-repeat;
+  height: 100%;
+  overflow: hidden
+}
+
+html.HudPreviewDoc body {
+  background: none;
+  height: 100%;
+  margin: 0;
+  overflow: hidden
+}
+
+html.HudPreviewDoc .HudPreviewGhost {
+  opacity: .35
+}
+
+html.HudPreviewDoc .TopRightIcons {
+  --parked-step: calc(max(44px, var(--row-icon-box)) + 4px);
+  position: relative
+}
+
+html.HudPreviewDoc .TopRightIcons>.TopRightIcon.HudPreviewParked {
   position: absolute;
-  top: 50%;
-  translate: -50% -50%;
-  width: 5px
-}
-
-.Crosshair.CrosshairInPreview {
-  position: absolute
-}
-
-.CrosshairShapes {
-  inset: 0;
-  pointer-events: none;
-  position: fixed;
-  z-index: 1
-}
-
-.CrosshairShapes.CrosshairInPreview {
-  position: absolute;
-  z-index: auto
-}
-
-.CrosshairShapes .CrosshairPart,
-.CrosshairShapes .CrosshairRing,
-.CrosshairShapes .CrosshairShapesOrigin,
-.CrosshairShapes .CrosshairShapesPress {
-  position: absolute
-}
-
-.CrosshairShapes .CrosshairShapesPress {
-  left: 0;
+  right: calc(100% + 4px + var(--parked)*var(--parked-step));
   top: 0
 }
 
-.CrosshairShapes.CrosshairSpreads [data-arm] {
-  transition: left .2s ease-out, top .2s ease-out
+html.HudPreviewDoc .TopRightIcons.Column>.TopRightIcon.HudPreviewParked {
+  right: 0;
+  top: calc(100% + 4px + var(--parked)*var(--parked-step))
 }
 
-.CrosshairShapes .CrosshairRing {
-  border-radius: 50%;
-  border-style: solid;
-  box-sizing: border-box
+html.HudPreviewDoc .TopRightIconsContainer .TopRightIcons.TouchInGame>.TopRightIcon.HudPreviewUnslotted.HudPreviewUnslotted {
+  height: 0;
+  min-height: 0;
+  min-width: 0;
+  position: absolute;
+  width: 0
+}
+
+html.HudPreviewDoc .HudPreviewCrosshair {
+  background: linear-gradient(#fff, #fff) 50%/2px 100% no-repeat, linear-gradient(#fff, #fff) 50%/100% 2px no-repeat;
+  height: 14px;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px
+}
+
+html.HudPreviewDoc .HudPreviewItem {
+  align-items: center;
+  color: #cfcfcf;
+  display: flex;
+  font-size: calc(var(--hotbar-slot, 4.75rem)*.4);
+  height: 100%;
+  justify-content: center;
+  width: 100%
+}
+
+html.HudPreviewDoc .TouchInteractHit.HudPreviewInteract .TouchInteractKey {
+  color: #fff
+}
+
+html.HudPreviewDoc .HudPreviewJoystickZone {
+  pointer-events: none
+}
+
+html.HudPreviewDoc .HudPreviewJoystickZone .HudPreviewJoystick {
+  --joystick-radius: max(30px, 50px * var(--preview-joystick-scale, 1));
+  --joystick-x: clamp(var(--joystick-radius), var(--notchLeft) + var(--preview-joystick-shift-left, 0px) + 90px + var(--hud-joystick-dx, 0) * 100vw, 100vw - var(--joystick-radius));
+  --joystick-y: clamp(var(--joystick-radius), 100vh - 100px - var(--preview-joystick-shift-bottom, 0px) + var(--hud-joystick-dy, 0) * 100vh, 100vh - var(--joystick-radius));
+  height: calc(var(--joystick-radius)*2);
+  transform: translate(calc(var(--joystick-x) - var(--joystick-radius)), calc(var(--joystick-y) - var(--joystick-radius)));
+  width: calc(var(--joystick-radius)*2)
+}
+
+@media(orientation:portrait) {
+  html.HudPreviewDoc .HudPreviewJoystickZone .HudPreviewJoystick {
+    --joystick-y: clamp(var(--joystick-radius), 100vh - 135px - var(--preview-joystick-shift-bottom, 0px) + var(--hud-joystick-dy, 0) * 100vh, 100vh - var(--joystick-radius))
+  }
+}
+
+html.HudPreviewDoc .HudPreviewJoystickZone .HudPreviewJoystick.Floating {
+  transform: translate(15vw, 50vh)
+}
+
+html.HudPreviewDoc .HudPreviewJoystickZone .HudPreviewJoystick .JoystickBase {
+  height: 100%;
+  width: 100%
+}
+
+html.HudPreviewDoc .HudPreviewJoystickZone .HudPreviewJoystick .JoystickKnob {
+  height: var(--joystick-radius);
+  width: var(--joystick-radius)
 }

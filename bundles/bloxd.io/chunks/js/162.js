@@ -1,43 +1,37 @@
 export const id = 162;
 export const ids = [162];
 export const modules = {
-  8716: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8747: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["Mine, craft and survive in a huge block world that keeps running even when you log off. Bloxd Survival is an online multiplayer SMP. You explore, dig for ores, craft tools and armour, and build a base alongside everyone else on the server. It's free and runs straight in your browser. Fight monsters, loot other players and protect your land, or set up your own private server. This is the full-danger version. If you'd rather build in peace, Peaceful is the calmer option."],
-      howToPlay: ["Gather some resources and craft your first tools. Then dig deeper for iron, gold, diamonds and moonstone to make better gear. Keep an eye out for mobs. Draugr Zombies, Skeletons and Knights, Frost Zombies and Skeletons, Cave Golems and Frost Golems all roam the world. You'll also run into wolves, bears, deer, gorillas, horses and camels.", "Other players can fight you, raid your chests and break your builds, so you'll want to protect your base. Craft a Protector from diamonds and other players can't change blocks or open chests in that chunk. In a tribe? A Tribe Protector shares that protection with your friends. And build well away from spawn, because the blocks near it reset every few hours."],
-      features: ["Persistent SMP Worlds That Save Your Progress", "Mining, Crafting and Base Building", "PvP, Looting and Raiding", "Land Protection with Protectors and Tribe Protectors", "Draugr, Golems, Frost Mobs and Wild Animals to Battle", "Free Private Servers with Owner Commands"],
-      tips: ["Build away from spawn, or your base will get reset", "Get a Protector crafted from diamonds as soon as you can, to keep griefers out", "Don't log out mid-fight. If you're under 80 health and a player hit you in the last 8 seconds, you'll lose your items", "Log in to an account so your progress is saved for good", "Check in on your base at least once a month, because Protectors vanish after 30 days away", "Only let players you trust into your base", "Type /help in chat to see a list of useful commands"],
-      similarGames: ["classic_smp2", "classic_survivalDayNight", "classic_survivalGuns", "survivalFactory", "skyblock", "classic"],
+    const Dk = {
+      whatIs: ["What if every sword, block and piece of armour came from a Lucky Block? Lucky Bedwars is the Bedwars mode where they do. Four teams of up to four players each get their own base and a bed to protect. Open Lucky Blocks for random weapons, armour, blocks and wild surprises, then race to break every other team's bed. You never know what you'll get, so expect lots of chaos, and every match is free to jump into from your browser."],
+      howToPlay: ["Before the match, your lobby votes on a map. You start with four Lucky Blocks. The first Basic Building and Basic Weapon blocks you open give you team wool and a weapon, so you're ready to go. Generators at your base and in the centre of the map keep the loot coming. Better armour equips itself automatically, and your compass points to the nearest enemy.", "Opening blocks, getting kills and breaking beds earns Clovers. Spend them at your Lucky Trader on the Lucky Blocks you want, or chip in 50 Clovers at a time towards team upgrades like the Bed Trap. Turn unwanted loot into Clovers in the Recycle tab. Twice a match, a random event shakes things up, and late in the game the arena starts to shrink. You can respawn as long as your bed stands, but once it's gone, dying makes you a spectator. The last team standing wins."],
+      features: ["4 Teams of up to 4 Players", "Building, Weapon, Armour and Food Lucky Blocks in Basic, Rare and Super Rarities", "Evil Lucky Blocks with Nasty Surprises", "Wild Items: Lucky Bombs, Swap Orbs, Fireballs, Iceballs, Toxin Balls and Void Nets", "Random Events: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm and Tiny Titans", "Bed Trap Team Upgrades", "4 Maps: Lucky Islands, Helicarrier, Nuclear and Turtles", "Leaderboards"],
+      tips: ["Open your four starting Lucky Blocks straight away to get wool and a weapon", "Chip in for the Bed Trap early. Evil Lucky Blocks around your bed can seal raiders in obsidian, poison them or send them home", "Save any Obsidian from Super Building blocks for your bed, because explosions can't destroy it", "Recycle loot you don't need. Anything you leave on the ground turns into Clovers after 8 seconds", "Beds can't be broken during an event, so use that time to regroup and stock up", "Stay alive until an event ends to earn bonus Clovers", "Be careful with Lucky and Unlucky Bombs, because they hit you too"],
+      similarGames: ["bedwars", "luckyTowers", "skywars"],
       faq: [{
-        question: "What is Bloxd Survival?",
-        answer: "A multiplayer survival game on Bloxd.io. You mine, craft, build and fight to survive in a shared block world that carries on while you're away."
+        question: "What is Bloxd Lucky Bedwars?",
+        answer: "It's Bedwars with a twist: all your gear comes from Lucky Blocks. Four teams of up to four players defend their beds and try to be the last team standing."
       }, {
-        question: "How do I protect my base in Bloxd Survival?",
-        answer: "Craft a Protector from diamonds and place it in your base. Other players then can't change blocks or open chests in that chunk. Tribes can use Tribe Protectors instead. Protectors disappear if you're away for more than 30 days."
+        question: "How do you play Lucky Bedwars?",
+        answer: "Open Lucky Blocks for weapons, armour and blocks, protect your bed and break the other teams' beds. You respawn while your bed stands. Without it, one death makes you a spectator."
       }, {
-        question: "Why did my build disappear?",
-        answer: "Blocks near spawn reset every few hours, so build outside that area. Private lobbies reset only if their owner turns on Enable Spawn Reset."
+        question: "How is Lucky Bedwars different from normal Bedwars?",
+        answer: "Your loot comes from Lucky Blocks, so every match is random. You earn Clovers to buy more Lucky Blocks and team upgrades, and random events change up each game."
       }, {
-        question: "Is stealing and griefing allowed in Bloxd Survival?",
-        answer: "It is. Raiding, stealing and griefing are all part of the game, so protect your chests and only share your base with people you trust."
+        question: "What are Clovers in Lucky Bedwars?",
+        answer: "Clovers are the in-game currency. Earn them by opening Lucky Blocks, getting kills, breaking beds, recycling loot and surviving events. Spend them at the Lucky Trader or on team upgrades."
       }, {
-        question: "Can I make a private server in Bloxd Survival?",
-        answer: "Yes. You can make a private server for free, invite your friends and use owner commands to run it however you like."
+        question: "What's inside Evil Lucky Blocks?",
+        answer: "Bad luck! The Bed Trap upgrade puts Evil Lucky Blocks around your bed. Anyone who opens one could get trapped in obsidian, dropped in lava, webbed, poisoned, blinded, chased by guard dogs or sent home."
       }, {
-        question: "What happens if I log out during a fight?",
-        answer: "Log out with less than 80 health within 8 seconds of being hit by a player and you'll lose your items. Get somewhere safe and heal up before you leave."
-      }, {
-        question: "Will my world still be there tomorrow?",
-        answer: "Yes. Survival worlds are persistent and keep running while you're gone. Signing in to an account keeps your progress safe even if your browser data gets cleared."
-      }, {
-        question: "Which Bloxd survival mode should I play?",
-        answer: "Survival is the classic one, with mobs, PvP and raiding. Peaceful is much calmer: no hostile mobs, no PvP and no health bar. Day & Night Survival is all about the day-night cycle and a Days Survived leaderboard. Survival with Guns adds craftable guns and armed mobs."
+        question: "What are the Lucky Bedwars events?",
+        answer: "Twice a match a random event starts: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm or Tiny Titans. You get a 30-second warning, and beds can't be broken while an event runs."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,9 +1,97 @@
 export const id = 270;
-export const ids = [270];
+export const ids = [269, 270];
 export const modules = {
-  40607: QQ => {
-    QQ.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAIFSURBVHic7ZqxTsMwEIYvKB0qWgkydOlD8QJsDIihsMDUuRsLYkAMSAyIjYFXKluHgMjgSqkE01Wpm4vj2GkJ/r+lSez/0ub+XGLXETny/Pr2U9xXSlX27/f7G/vc36ST4lycnUZWQo0DF/F/IPYVaLFYlB7P85yIiHq9HhERZVlGRESj0YiokPnValVLz9g6RgIOcA0gZYIzZ6urq/cFHOArkCljvtq5VgyHQ+vvWAYcsKsT6VW8qd41jg4c4DugniG+d6XnuW+9LXCAawD93V6HM6ZnknX6m6CeYUkfx37MCwf4CjQej4kajAZNDmL0jNfVmQjeAZHreF6na/rgHRDzFeNxuo40ntffxbuqhwOkBtvxeJ7nlCRJrb5StlzO31QPB/CGdMWkuboy5vMPen+8rexzcn5Ng8Hh1nHX8zfVe3VA2Q9r0meXbNUA29GaLa7xfbejBnBFXi7VxqeE1G7SMVn2Xal3Pb+t3vuEyFFyTEREX+ln6fZfY2ssEBqoAa7/zjJd1QfvgOAxLi54eHpZF0m2WdF+aZpW6qc3l04LGNom+Fug9nvA/fRqY38yu2vj++wc4wWQqquvFRr7BreAqYM0C6v/s9NVateAyeyu9CnQdYK/BSLTc75IG+2uCx1dCd4B6wmR4qSiUkpcqNBW+74I3gEAAAAAAAAAAAAAAATGL74wOkMuXyTTAAAAAElFTkSuQmCC","alphaCutoff":0.05,"vertices":[0.93301,0.25,0.5774,0.5,0.5,1.1547,0.93301,0.75,0,0.5,1,0.5774,0.06699,0.25,0.5774,0.5,0,0,0.06699,0.75,0,0.5,0.5,-0.5774,0.06699,0.25,0.5774,0.5,0.5,1.1547,0.5,0,0,0.93301,0.25,0.5774,0.5,0.5,-0.5774,0.93301,0.75,0,0.06699,0.75,0,0.5,1,0.5774,0.5,0,0,0.93301,0.25,0.5774,0.5,0.5,-0.5774,0.93301,0.75,0,0.5,0.5,1.1547,0.06699,0.25,0.5774,0.5,1,0.5774,0.06699,0.75,0,0.71651,0.125,0.7217,0.5,0.25,1.0104,0.71651,0.25,0.5774,0.5,0.375,0.866,0.28349,0.125,0.7217,0.5,0,0.433,0.28349,0.25,0.5774,0.5,0.125,0.2887,0.28349,0.125,0.7217,0.5,0.25,1.0104,0.5,0,0.433,0.71651,0.125,0.7217,0.5,0.125,0.2887,0.71651,0.25,0.5774,0.28349,0.25,0.5774,0.5,0.375,0.866,0.5,0,0.433,0.71651,0.125,0.7217,0.5,0.125,0.2887,0.71651,0.25,0.5774,0.5,0.25,1.0104,0.28349,0.125,0.7217,0.5,0.375,0.866,0.28349,0.25,0.5774],"uvs":[0.000244,0.250244,0.249756,0.250244,0.000244,0.499756,0.249756,0.499756,0.500244,0.250244,0.749756,0.250244,0.500244,0.499756,0.749756,0.499756,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.499756,0.999756,0.499756,0.250244,0.250244,0.499756,0.250244,0.250244,0.499756,0.499756,0.499756,0.000244,0.640869,0.124756,0.640869,0.000244,0.702881,0.124756,0.702881,0.250244,0.640869,0.374756,0.640869,0.250244,0.702881,0.374756,0.702881,0.249756,0.640381,0.125244,0.640381,0.249756,0.515869,0.125244,0.515869,0.374756,0.515869,0.250244,0.515869,0.374756,0.640381,0.250244,0.640381,0.375244,0.640869,0.499756,0.640869,0.375244,0.702881,0.499756,0.702881,0.125244,0.640869,0.249756,0.640869,0.125244,0.702881,0.249756,0.702881],"indices":[0,2,1,2,3,1,4,6,5,6,7,5,8,10,9,10,11,9,12,14,13,14,15,13,16,18,17,18,19,17,20,22,21,22,23,21,24,26,25,26,27,25,28,30,29,30,31,29,32,34,33,34,35,33,36,38,37,38,39,37,40,42,41,42,43,41,44,46,45,46,47,45],"shades":[0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85]}')
+  40641: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      gamePackSource: () => Sk
+    });
+    var Dk = ik(4915),
+      fk = ik(1459);
+
+    function Sk(kk) {
+      return {
+        packKey: async ek => (await fk.b.getGame(kk, ek, !0)).customTexturePackKey,
+        fetchPack: Dk.e
+      }
+    }
+  },
+  50545: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      fetchGuestContext: () => xk,
+      guestJoinTarget: () => yk,
+      guestJoinWithPack: () => Uk,
+      guestPackForGame: () => nk,
+      invalidateGuestTrafficCode: () => pk
+    });
+    var Dk = ik(1177),
+      fk = ik(1459),
+      Sk = ik(99),
+      bk = ik(35986),
+      rk = ik(1104),
+      Pk = ik(40326),
+      mk = ik(40641),
+      Mk = ik(40289);
+
+    function Kk() {
+      if (Sk.featureFlags.useTurnstile) throw new Pk.TurnstilePageError
+    }
+
+    function xk() {
+      return (0, rk.fetchAnonymousUserContext)().catch((kk => (console.warn("the guest context didn't load", kk), null)))
+    }
+    async function nk(kk, ek, ik, Dk) {
+      try {
+        const fk = await ik;
+        if (null === fk) return void console.warn(`the texture pack step for ${kk} has no guest context: the pack in play stays`);
+        await ek.packForGame(kk, (0, mk.gamePackSource)(fk), Dk)
+      } catch (fk) {
+        console.warn(`the texture pack step for ${kk} failed: the pack in play stays`, fk)
+      }
+    }
+    async function Uk(kk, ek, ik, Dk) {
+      Kk();
+      const fk = xk();
+      return await ik(((ek, ik) => nk(kk, ek, fk, ik))), yk(kk, ek, Dk(), await fk)
+    }
+    let Hk = null,
+      wk = null;
+    async function lk() {
+      if ((null === Hk || Hk.hasExpired()) && (wk ??= (0, rk.fetchAnonymousUserContext)().then((kk => {
+          Hk = kk
+        })).finally((() => {
+          wk = null
+        })), await wk), null === Hk) throw new Error("no guest context to post as");
+      return Hk.getMetricsCookies()
+    }
+    async function pk() {
+      var kk;
+      await (null === (kk = Hk) || void 0 === kk ? void 0 : kk.invalidateTrafficCode())
+    }
+    async function yk(kk, ek, ik) {
+      let Sk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      Kk();
+      const Pk = null !== Sk && void 0 !== Sk ? Sk : await (0, rk.fetchAnonymousUserContext)();
+      if (Hk = Pk, Pk.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const mk = await fk.b.matchmakePlayer(Pk, ek, kk, (0, bk.d)()),
+        xk = performance.now();
+      if (!("gameServerHost" in mk)) throw new Error(`matchmaking refused: ${mk.failReason}`);
+      const nk = Dk.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(mk.gameServerHost);
+      if (nk.isError()) throw new Error(`no socket URL for ${mk.gameServerHost}: ${nk.asError().message}`);
+      const Uk = {
+        endpoint: nk.getValue(),
+        gameNameWithVariation: mk.gameNameWithVariation,
+        lobbyName: mk.lobbyName
+      };
+      return {
+        target: {
+          ...await (0, Mk.i)(Pk, Uk, ik, !1),
+          postCookies: lk
+        },
+        matchedAt: xk,
+        freshMs: Mk.e
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

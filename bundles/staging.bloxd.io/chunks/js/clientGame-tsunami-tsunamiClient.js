@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  39069: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      default: () => kQ
+  39109: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      default: () => rk
     });
-    var LQ = wQ(9127);
-    const qQ = 1e3 / 3;
+    var Dk = ik(33788);
+    const fk = 1e3 / 3;
 
-    function oQ(QQ, FQ, wQ) {
-      if ("parenthetical-seconds" === FQ) return ` (${QQ}s)`;
-      const LQ = `${Math.floor(QQ/60)}:${(QQ%60).toString().padStart(2,"0")}`;
-      return wQ ? `${wQ}${LQ}` : LQ
+    function Sk(kk, ek, ik) {
+      if ("parenthetical-seconds" === ek) return ` (${kk}s)`;
+      const Dk = `${Math.floor(kk/60)}:${(kk%60).toString().padStart(2,"0")}`;
+      return ik ? `${ik}${Dk}` : Dk
     }
 
-    function DQ(QQ, FQ, wQ, qQ, oQ) {
-      var DQ;
-      const kQ = {
-        ...qQ.baseNametag
+    function bk(kk, ek, ik, fk, Sk) {
+      var bk;
+      const rk = {
+        ...fk.baseNametag
       };
-      kQ.content = [...null !== (DQ = qQ.baseNametag.content) && void 0 !== DQ ? DQ : [], {
+      rk.content = [...null !== (bk = fk.baseNametag.content) && void 0 !== bk ? bk : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,LQ.b)(oQ)}`
-      }], QQ.setOtherEntitySetting(FQ, wQ, "nameTagInfo", kQ)
+        str: `: ${(0,Dk.b)(Sk)}`
+      }], kk.setOtherEntitySetting(ek, ik, "nameTagInfo", rk)
     }
-    const kQ = function(QQ, FQ, wQ, LQ) {
-      let kQ, {
-        localPlayerId: vQ
-      } = LQ;
-      const mQ = new Map,
-        uQ = new Map;
-      let HQ = 0,
-        bQ = 0;
+    const rk = function(kk, ek, ik, Dk) {
+      let rk, {
+        localPlayerId: Pk
+      } = Dk;
+      const mk = new Map,
+        Mk = new Map;
+      let Kk = 0,
+        xk = 0;
       return {
-        onCreate: QQ => {
-          kQ = QQ
+        onCreate: kk => {
+          rk = kk
         },
-        fH: QQ => {
-          const FQ = Date.now();
-          for (const [LQ, qQ] of mQ) {
-            const QQ = Math.floor((FQ - qQ.startTime) / 1e3),
-              DQ = Math.max(0, qQ.remainingSeconds - QQ);
-            if (DQ === qQ.lastRenderedSecond) continue;
-            qQ.lastRenderedSecond = DQ;
-            const uQ = {
-                str: oQ(DQ, qQ.format, qQ.prefix),
-                style: qQ.style
+        Px: kk => {
+          const ek = Date.now();
+          for (const [Dk, fk] of mk) {
+            const kk = Math.floor((ek - fk.startTime) / 1e3),
+              bk = Math.max(0, fk.remainingSeconds - kk);
+            if (bk === fk.lastRenderedSecond) continue;
+            fk.lastRenderedSecond = bk;
+            const Mk = {
+                str: Sk(bk, fk.format, fk.prefix),
+                style: fk.style
               },
-              HQ = {
-                ...qQ.baseNametag
+              Kk = {
+                ...fk.baseNametag
               };
-            var wQ;
-            if ("content" === qQ.location) HQ.content = [...null !== (wQ = qQ.baseNametag.content) && void 0 !== wQ ? wQ : [], uQ];
-            else HQ.subtitle = [uQ];
-            kQ.setOtherEntitySetting(vQ, LQ, "nameTagInfo", HQ), DQ <= 0 && mQ.delete(LQ)
+            var ik;
+            if ("content" === fk.location) Kk.content = [...null !== (ik = fk.baseNametag.content) && void 0 !== ik ? ik : [], Mk];
+            else Kk.subtitle = [Mk];
+            rk.setOtherEntitySetting(Pk, Dk, "nameTagInfo", Kk), bk <= 0 && mk.delete(Dk)
           }
-          if (uQ.size > 0 && FQ - HQ >= qQ) {
-            HQ = FQ, bQ = (bQ + 1) % 3;
-            let QQ = 0;
-            for (const [wQ, LQ] of uQ) {
-              if (QQ++ % 3 !== bQ) continue;
-              const qQ = Math.floor((FQ - LQ.startTime) / 1e3);
-              if (qQ === LQ.lastRenderedSecond) continue;
-              LQ.lastRenderedSecond = qQ;
-              const oQ = LQ.accumulatedIncome + LQ.incomePerSecond * BigInt(qQ);
-              DQ(kQ, vQ, wQ, LQ, oQ)
+          if (Mk.size > 0 && ek - Kk >= fk) {
+            Kk = ek, xk = (xk + 1) % 3;
+            let kk = 0;
+            for (const [ik, Dk] of Mk) {
+              if (kk++ % 3 !== xk) continue;
+              const fk = Math.floor((ek - Dk.startTime) / 1e3);
+              if (fk === Dk.lastRenderedSecond) continue;
+              Dk.lastRenderedSecond = fk;
+              const Sk = Dk.accumulatedIncome + Dk.incomePerSecond * BigInt(fk);
+              bk(rk, Pk, ik, Dk, Sk)
             }
           }
         },
-        onReceivedMessageFromServer: (QQ, FQ) => {
-          if ("startCountdown" === QQ) mQ.set(FQ.eId, {
-            baseNametag: FQ.baseNametag,
-            remainingSeconds: FQ.remainingSeconds,
+        onReceivedMessageFromServer: (kk, ek) => {
+          if ("startCountdown" === kk) mk.set(ek.eId, {
+            baseNametag: ek.baseNametag,
+            remainingSeconds: ek.remainingSeconds,
             startTime: Date.now(),
-            format: FQ.format,
-            location: FQ.location,
-            prefix: FQ.prefix,
-            style: FQ.style,
+            format: ek.format,
+            location: ek.location,
+            prefix: ek.prefix,
+            style: ek.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === QQ) mQ.delete(FQ.eId);
-          else if ("startIncomeTicking" === QQ) {
-            const QQ = {
-              baseNametag: FQ.baseNametag,
-              accumulatedIncome: BigInt(FQ.accumulatedIncome),
-              incomePerSecond: BigInt(FQ.incomePerSecond),
+          else if ("stopCountdown" === kk) mk.delete(ek.eId);
+          else if ("startIncomeTicking" === kk) {
+            const kk = {
+              baseNametag: ek.baseNametag,
+              accumulatedIncome: BigInt(ek.accumulatedIncome),
+              incomePerSecond: BigInt(ek.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            uQ.set(FQ.eId, QQ), DQ(kQ, vQ, FQ.eId, QQ, QQ.accumulatedIncome)
-          } else "stopIncomeTicking" === QQ && uQ.delete(FQ.eId) && kQ.setOtherEntitySetting(vQ, FQ.eId, "nameTagInfo", {
+            Mk.set(ek.eId, kk), bk(rk, Pk, ek.eId, kk, kk.accumulatedIncome)
+          } else "stopIncomeTicking" === kk && Mk.delete(ek.eId) && rk.setOtherEntitySetting(Pk, ek.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (QQ, FQ, wQ, LQ, qQ, oQ) => {
-          if (oQ && "Mesh" === kQ.getEntityType(oQ)) {
-            const FQ = kQ.getEntityName(oQ);
-            "Upgrades" === FQ ? kQ.openShop(QQ, !1, "Upgrades") : "Items" === FQ ? kQ.openShop(QQ, !1, "Items") : "Prestige" === FQ ? kQ.openShop(QQ, !1, "Prestige") : "Collections" === FQ ? kQ.openShop(QQ, !1, "Collections") : "Base Skins" === FQ ? kQ.openShop(QQ, !1, "Base Skins") : "Gauntlet" === FQ ? kQ.openShop(QQ, !1, "Gauntlet") : "Diamond Shop" === FQ && kQ.openShop(QQ, !1, "Diamond Shop")
+        onPlayerAltAction: (kk, ek, ik, Dk, fk, Sk) => {
+          if (Sk && "Mesh" === rk.getEntityType(Sk)) {
+            const ek = rk.getEntityName(Sk);
+            "Upgrades" === ek ? rk.openShop(kk, !1, "Upgrades") : "Items" === ek ? rk.openShop(kk, !1, "Items") : "Prestige" === ek ? rk.openShop(kk, !1, "Prestige") : "Collections" === ek ? rk.openShop(kk, !1, "Collections") : "Base Skins" === ek ? rk.openShop(kk, !1, "Base Skins") : "Gauntlet" === ek ? rk.openShop(kk, !1, "Gauntlet") : "Diamond Shop" === ek && rk.openShop(kk, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  9127: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => qQ,
-      d: () => DQ
+  33788: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => fk,
+      e: () => bk
     });
-    const LQ = [{
+    const Dk = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function qQ(QQ) {
-      let FQ, wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof QQ) {
-        if (!Number.isFinite(QQ)) return "0";
-        if (Math.abs(QQ) < 100) {
-          const FQ = QQ < 0 ? "-" : "",
-            wQ = Math.abs(QQ);
-          return wQ >= 10 ? `${FQ}${wQ.toFixed(1).replace(/\.0$/,"")}` : `${FQ}${wQ.toFixed(2).replace(/\.?0+$/,"")}`
+    function fk(kk) {
+      let ek, ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof kk) {
+        if (!Number.isFinite(kk)) return "0";
+        if (Math.abs(kk) < 100) {
+          const ek = kk < 0 ? "-" : "",
+            ik = Math.abs(kk);
+          return ik >= 10 ? `${ek}${ik.toFixed(1).replace(/\.0$/,"")}` : `${ek}${ik.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        FQ = BigInt(Math.floor(QQ))
-      } else FQ = QQ;
-      const qQ = FQ < 0n ? -FQ : FQ,
-        oQ = FQ < 0n ? "-" : "",
-        DQ = qQ.toString();
-      if (DQ.length <= wQ) return `${oQ}${DQ}`;
-      const kQ = 3 * Math.floor((DQ.length - 1) / 3);
-      if (kQ < 3) return `${oQ}${DQ}`;
-      if (kQ > 3 * LQ.length) {
-        const QQ = DQ[0],
-          FQ = DQ.slice(1, 3).replace(/0+$/, "");
-        return `${oQ}${FQ?`${QQ}.${FQ}`:QQ}e${DQ.length-1}`
+        ek = BigInt(Math.floor(kk))
+      } else ek = kk;
+      const fk = ek < 0n ? -ek : ek,
+        Sk = ek < 0n ? "-" : "",
+        bk = fk.toString();
+      if (bk.length <= ik) return `${Sk}${bk}`;
+      const rk = 3 * Math.floor((bk.length - 1) / 3);
+      if (rk < 3) return `${Sk}${bk}`;
+      if (rk > 3 * Dk.length) {
+        const kk = bk[0],
+          ek = bk.slice(1, 3).replace(/0+$/, "");
+        return `${Sk}${ek?`${kk}.${ek}`:kk}e${bk.length-1}`
       }
       const {
-        threshold: vQ,
-        suffix: mQ
-      } = LQ[LQ.length - kQ / 3], uQ = qQ / vQ, HQ = Number(1000n * (qQ % vQ) / vQ), bQ = Number(uQ) + HQ / 1e3;
-      let YQ;
-      return YQ = bQ >= 100 ? Math.floor(bQ).toString() : bQ >= 10 ? bQ.toFixed(1).replace(/\.0$/, "") : bQ.toFixed(2).replace(/\.?0+$/, ""), `${oQ}${YQ}${mQ}`
+        threshold: Pk,
+        suffix: mk
+      } = Dk[Dk.length - rk / 3], Mk = fk / Pk, Kk = Number(1000n * (fk % Pk) / Pk), xk = Number(Mk) + Kk / 1e3;
+      let nk;
+      return nk = xk >= 100 ? Math.floor(xk).toString() : xk >= 10 ? xk.toFixed(1).replace(/\.0$/, "") : xk.toFixed(2).replace(/\.?0+$/, ""), `${Sk}${nk}${mk}`
     }
-    const oQ = LQ.map((QQ => {
+    const Sk = Dk.map((kk => {
       let {
-        threshold: FQ,
-        suffix: wQ
-      } = QQ;
+        threshold: ek,
+        suffix: ik
+      } = kk;
       return {
-        threshold: Number(FQ),
-        suffix: wQ
+        threshold: Number(ek),
+        suffix: ik
       }
-    })).filter((QQ => {
+    })).filter((kk => {
       let {
-        threshold: FQ
-      } = QQ;
-      return Number.isFinite(FQ)
+        threshold: ek
+      } = kk;
+      return Number.isFinite(ek)
     }));
 
-    function DQ(QQ) {
-      const FQ = Math.abs(QQ),
-        wQ = QQ < 0 ? "-" : "";
+    function bk(kk) {
+      const ek = Math.abs(kk),
+        ik = kk < 0 ? "-" : "";
       for (const {
-          threshold: LQ,
-          suffix: qQ
+          threshold: Dk,
+          suffix: fk
         }
-        of oQ)
-        if (FQ >= LQ) {
-          const QQ = FQ / LQ;
-          if (QQ >= 1e3) return `${wQ}${FQ.toExponential(2).replace("e+","e")}`;
-          let oQ;
-          return oQ = QQ >= 100 ? Math.floor(QQ).toString() : QQ >= 10 ? QQ.toFixed(1).replace(/\.0$/, "") : QQ.toFixed(2).replace(/\.?0+$/, ""), `${wQ}${oQ}${qQ}`
-        } return `${wQ}${FQ}`
+        of Sk)
+        if (ek >= Dk) {
+          const kk = ek / Dk;
+          if (kk >= 1e3) return `${ik}${ek.toExponential(2).replace("e+","e")}`;
+          let Sk;
+          return Sk = kk >= 100 ? Math.floor(kk).toString() : kk >= 10 ? kk.toFixed(1).replace(/\.0$/, "") : kk.toFixed(2).replace(/\.?0+$/, ""), `${ik}${Sk}${fk}`
+        } return `${ik}${ek}`
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

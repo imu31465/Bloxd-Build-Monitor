@@ -1,72 +1,72 @@
-export const id = 53;
-export const ids = [53];
+export const id = 55;
+export const ids = [55];
 export const modules = {
-  9157: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      announceStoredTexturePack: () => qQ.e,
-      takeOneShotTexturePack: () => LQ.h
+  33812: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      announceStoredTexturePack: () => fk.b,
+      takeOneShotTexturePack: () => Dk.j
     });
-    var LQ = wQ(9165),
-      qQ = wQ(9170)
+    var Dk = ik(33819),
+      fk = ik(33828)
   },
-  9170: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => qQ,
-      f: () => oQ
+  33828: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => fk,
+      d: () => Sk
     });
-    var LQ = wQ(3139);
+    var Dk = ik(3218);
 
-    function qQ() {
+    function fk() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const QQ = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const kk = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const FQ = new BroadcastChannel(LQ.f);
-        FQ.postMessage({
-          stored: QQ
-        }), FQ.close()
+        const ek = new BroadcastChannel(Dk.m);
+        ek.postMessage({
+          stored: kk
+        }), ek.close()
       } catch {
         return null
       }
-      return QQ
+      return kk
     }
 
-    function oQ(QQ) {
-      const FQ = "object" === typeof QQ && null !== QQ ? QQ.stored : null;
-      return "string" === typeof FQ ? FQ : null
+    function Sk(kk) {
+      const ek = "object" === typeof kk && null !== kk ? kk.stored : null;
+      return "string" === typeof ek ? ek : null
     }
   },
-  9165: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ,
-      f: () => qQ,
-      h: () => oQ
+  33819: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => bk,
+      f: () => fk,
+      j: () => Sk
     });
-    var LQ = wQ(3139);
-    async function qQ(QQ, FQ, wQ) {
-      let qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const oQ = DQ(await QQ.getItem(LQ.c, FQ));
-      if (null === oQ || qQ()) return null;
-      const kQ = await QQ.getItem(LQ.d, FQ);
-      return qQ() ? null : (await async function(QQ) {
-        await Promise.all([QQ.removeItem(LQ.c), QQ.removeItem(LQ.d)])
-      }(QQ).catch(wQ), {
-        pack: oQ,
-        source: "string" === typeof kQ ? kQ : null
+    var Dk = ik(3218);
+    async function fk(kk, ek, ik) {
+      let fk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const Sk = bk(await kk.getItem(Dk.f, ek));
+      if (null === Sk || fk()) return null;
+      const rk = await kk.getItem(Dk.i, ek);
+      return fk() ? null : (await async function(kk) {
+        await Promise.all([kk.removeItem(Dk.f), kk.removeItem(Dk.i)])
+      }(kk).catch(ik), {
+        pack: Sk,
+        source: "string" === typeof rk ? rk : null
       })
     }
 
-    function oQ(QQ) {
-      return (0, LQ.m)() ? Promise.resolve(null) : qQ(QQ, !1, (QQ => {
-        console.error("Error removing temporary texture pack: ", QQ)
-      }), LQ.m)
+    function Sk(kk) {
+      return (0, Dk.u)() ? Promise.resolve(null) : fk(kk, !1, (kk => {
+        console.error("Error removing temporary texture pack: ", kk)
+      }), Dk.u)
     }
 
-    function DQ(QQ) {
-      if ("object" !== typeof QQ || null === QQ) return null;
-      const FQ = QQ.metaData;
-      return "object" !== typeof FQ || null === FQ || "string" !== typeof FQ.id ? null : QQ
+    function bk(kk) {
+      if ("object" !== typeof kk || null === kk) return null;
+      const ek = kk.metaData;
+      return "object" !== typeof ek || null === ek || "string" !== typeof ek.id ? null : kk
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

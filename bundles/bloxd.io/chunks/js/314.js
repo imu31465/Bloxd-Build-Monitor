@@ -1,126 +1,776 @@
 export const id = 314;
 export const ids = [314];
 export const modules = {
-  41560: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
+  41444: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      ReadExrDataAsync: () => xe,
+      _ExrTextureLoader: () => Ke
     });
-    var LQ = wQ(39251);
-    const qQ = "clipPlaneFragment",
-      oQ = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+    var Dk = ik(38272),
+      fk = ik(36729),
+      Sk = ik(39628);
+    const bk = 4,
+      rk = 4,
+      Pk = 1,
+      mk = 2,
+      Mk = 8,
+      Kk = 65536,
+      xk = Kk >> 3,
+      nk = 14,
+      Uk = 65537,
+      Hk = 1 << nk,
+      wk = Hk - 1,
+      lk = 59,
+      pk = 63,
+      yk = 2 + pk - lk;
+    var Yk, Lk;
+
+    function Ck(kk, ek) {
+      const ik = new Uint8Array(kk);
+      let Dk = 0;
+      for (; 0 != ik[ek.value + Dk];) Dk += 1;
+      const fk = (new TextDecoder).decode(ik.slice(ek.value, ek.value + Dk));
+      return ek.value = ek.value + Dk + 1, fk
     }
-  },
-  41548: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "clipPlaneFragmentDeclaration",
-      oQ = "#ifdef CLIPPLANE\nvarying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nvarying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nvarying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nvarying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nvarying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nvarying float fClipDistance6;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function Ak(kk, ek) {
+      const ik = kk.getInt32(ek.value, !0);
+      return ek.value += bk, ik
     }
-  },
-  41596: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "fogFragment",
-      oQ = "#ifdef FOG\nfloat fog=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor.rgb=mix(vFogColor,color.rgb,fog);\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function jk(kk, ek) {
+      const ik = kk.getUint32(ek.value, !0);
+      return ek.value += bk, ik
     }
-  },
-  41552: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "fogFragmentDeclaration",
-      oQ = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\n#define E 2.71828\nuniform vec4 vFogInfos;uniform vec3 vFogColor;varying vec3 vFogDistance;float CalcFogFactor()\n{float fogCoeff=1.0;float fogStart=vFogInfos.y;float fogEnd=vFogInfos.z;float fogDensity=vFogInfos.w;float fogDistance=length(vFogDistance);if (FOGMODE_LINEAR==vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function sk(kk, ek) {
+      const ik = kk.getUint8(ek.value);
+      return ek.value += Pk, ik
     }
-  },
-  41300: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "helperFunctions",
-      oQ = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function dk(kk, ek) {
+      const ik = kk.getUint16(ek.value, !0);
+      return ek.value += mk, ik
     }
-  },
-  41368: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "logDepthDeclaration",
-      oQ = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function Vk(kk, ek) {
+      const ik = kk[ek.value];
+      return ek.value += Pk, ik
     }
-  },
-  41594: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "logDepthFragment",
-      oQ = "#ifdef LOGARITHMICDEPTH\ngl_FragDepthEXT=log2(vFragmentDepth)*logarithmicDepthConstant*0.5;\n#endif\n";
-    LQ.c.IncludesShadersStore[qQ] || (LQ.c.IncludesShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+
+    function Fk(kk, ek) {
+      let ik;
+      return ik = "getBigInt64" in DataView.prototype ? Number(kk.getBigInt64(ek.value, !0)) : kk.getUint32(ek.value + 4, !0) + Number(kk.getUint32(ek.value, !0) << 32), ek.value += Mk, ik
     }
-  },
-  60699: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      skyPixelShader: () => eQ
-    });
-    var LQ = wQ(39251),
-      qQ = wQ(41548),
-      oQ = wQ(41368),
-      DQ = wQ(41552),
-      kQ = wQ(41300),
-      vQ = wQ(41560),
-      mQ = wQ(41594),
-      uQ = wQ(41596);
-    const HQ = "imageProcessingCompatibility",
-      bQ = "#ifdef IMAGEPROCESSINGPOSTPROCESS\ngl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(2.2));\n#endif\n";
-    LQ.c.IncludesShadersStore[HQ] || (LQ.c.IncludesShadersStore[HQ] = bQ);
-    const YQ = {
-        name: HQ,
-        shader: bQ
-      },
-      xQ = "skyPixelShader",
-      AQ = "precision highp float;varying vec3 vPositionW;\n#ifdef VERTEXCOLOR\nvarying vec4 vColor;\n#endif\n#include<clipPlaneFragmentDeclaration>\nuniform vec3 cameraPosition;uniform vec3 cameraOffset;uniform vec3 up;uniform float luminance;uniform float turbidity;uniform float rayleigh;uniform float mieCoefficient;uniform float mieDirectionalG;uniform vec3 sunPosition;uniform float cloudiness;\n#ifdef SKY_RAW_HDR_OUTPUT\nuniform float maxColorValue;\n#endif\n#ifdef LOGARITHMICDEPTH\n#extension GL_EXT_frag_depth : enable\n#endif\n#include<logDepthDeclaration>\n#include<fogFragmentDeclaration>\nconst float e=2.71828182845904523536028747135266249775724709369995957;const float pi=3.141592653589793238462643383279502884197169;const float n=1.0003;const float N=2.545E25;const float pn=0.035;const vec3 lambda=vec3(680E-9,550E-9,450E-9);const vec3 K=vec3(0.686,0.678,0.666);const float v=4.0;const float rayleighZenithLength=8.4E3;const float mieZenithLength=1.25E3;const float EE=1000.0;const float sunAngularDiameterCos=0.999956676946448443553574619906976478926848692873900859324;const float cutoffAngle=pi/1.95;const float steepness=1.5;const float CLOUD_TAU_MAX=15.0;const float CLOUD_G=0.5;const float CLOUD_G_BACK=-0.5;const float CLOUD_BACK_WEIGHT=0.2;vec3 totalRayleigh(vec3 lambda)\n{return (8.0*pow(pi,3.0)*pow(pow(n,2.0)-1.0,2.0)*(6.0+3.0*pn))/(3.0*N*pow(lambda,vec3(4.0))*(6.0-7.0*pn));}\nvec3 simplifiedRayleigh()\n{return 0.0005/vec3(94,40,18);}\nfloat rayleighPhase(float cosTheta)\n{ \nreturn (3.0/(16.0*pi))*(1.0+pow(cosTheta,2.0));}\nvec3 totalMie(vec3 lambda,vec3 K,float T)\n{float c=(0.2*T )*10E-18;return 0.434*c*pi*pow((2.0*pi)/lambda,vec3(v-2.0))*K;}\nfloat hgPhase(float cosTheta,float g)\n{return (1.0/(4.0*pi))*((1.0-pow(g,2.0))/pow(1.0-2.0*g*cosTheta+pow(g,2.0),1.5));}\nfloat cloudPhase(float cosTheta,float gForward)\n{return mix(hgPhase(cosTheta,gForward),hgPhase(cosTheta,CLOUD_G_BACK),CLOUD_BACK_WEIGHT);}\nfloat sunIntensity(float zenithAngleCos)\n{return EE*max(0.0,1.0-exp((-(cutoffAngle-acos(zenithAngleCos))/steepness)));}\nfloat A=0.15;float B=0.50;float C=0.10;float D=0.20;float EEE=0.02;float F=0.30;float W=1000.0;vec3 Uncharted2Tonemap(vec3 x)\n{return ((x*(A*x+C*B)+D*EEE)/(x*(A*x+B)+D*F))-EEE/F;}\n#if DITHER\n#include<helperFunctions>\n#endif\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n/**\n*--------------------------------------------------------------------------------------------------\n* Sky Color\n*--------------------------------------------------------------------------------------------------\n*/\nfloat sunfade=1.0-clamp(1.0-exp((sunPosition.y/450000.0)),0.0,1.0);float rayleighCoefficient=rayleigh-(1.0*(1.0-sunfade));vec3 sunDirection=normalize(sunPosition);float sunE=sunIntensity(dot(sunDirection,up));vec3 betaR=simplifiedRayleigh()*rayleighCoefficient;vec3 betaM=totalMie(lambda,K,turbidity)*mieCoefficient;float zenithAngle=acos(max(0.0,dot(up,normalize(vPositionW-cameraPosition+cameraOffset))));float sR=rayleighZenithLength/(cos(zenithAngle)+0.15*pow(93.885-((zenithAngle*180.0)/pi),-1.253));float sM=mieZenithLength/(cos(zenithAngle)+0.15*pow(93.885-((zenithAngle*180.0)/pi),-1.253));vec3 Fex=exp(-(betaR*sR+betaM*sM));float cosTheta=dot(normalize(vPositionW-cameraPosition),sunDirection);float rPhase=rayleighPhase(cosTheta*0.5+0.5);vec3 betaRTheta=betaR*rPhase;float mPhase=hgPhase(cosTheta,mieDirectionalG);vec3 betaMTheta=betaM*mPhase;vec3 Lin=pow(sunE*((betaRTheta+betaMTheta)/(betaR+betaM))*(1.0-Fex),vec3(1.5));Lin*=mix(vec3(1.0),pow(sunE*((betaRTheta+betaMTheta)/(betaR+betaM))*Fex,vec3(1.0/2.0)),clamp(pow(1.0-dot(up,sunDirection),5.0),0.0,1.0));vec3 direction=normalize(vPositionW-cameraPosition);float theta=acos(direction.y);float phi=atan(direction.z,direction.x);vec2 uv=vec2(phi,theta)/vec2(2.0*pi,pi)+vec2(0.5,0.0);vec3 L0=vec3(0.1)*Fex;float sundiskTerm;if (cloudiness>0.0) {float cloudTau=cloudiness*CLOUD_TAU_MAX;float cloudT=exp(-cloudTau);float cloudG=CLOUD_G*cloudT;float omegaSun=2.0*pi*(1.0-sunAngularDiameterCos);float sharpDisk=smoothstep(sunAngularDiameterCos,sunAngularDiameterCos+0.00002,cosTheta);sundiskTerm=cloudT*sharpDisk+(1.0-cloudT)*omegaSun*cloudPhase(cosTheta,cloudG);} else {sundiskTerm=smoothstep(sunAngularDiameterCos,sunAngularDiameterCos+0.00002,cosTheta);}\nL0+=(sunE*19000.0*Fex)*sundiskTerm;vec3 texColor=(Lin+L0);texColor*=0.04 ;texColor+=vec3(0.0,0.001,0.0025)*0.3;\n#ifdef SKY_RAW_HDR_OUTPUT\nvec3 retColor=texColor*luminance;\n#else\nvec3 whiteScale=1.0/Uncharted2Tonemap(vec3(W));float g_fMaxLuminance=1.0;float fLumScaled=0.1/luminance;float fLumCompressed=(fLumScaled*(1.0+(fLumScaled/(g_fMaxLuminance*g_fMaxLuminance))))/(1.0+fLumScaled);float ExposureBias=fLumCompressed;vec3 curr=Uncharted2Tonemap((log2(2.0/pow(luminance,4.0)))*texColor);vec3 retColor=curr*whiteScale;\n#endif\n/**\n*--------------------------------------------------------------------------------------------------\n* Sky Color\n*--------------------------------------------------------------------------------------------------\n*/\nfloat alpha=1.0;\n#ifdef VERTEXCOLOR\nretColor.rgb*=vColor.rgb;\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=vColor.a;\n#endif\n#if DITHER\nretColor.rgb+=dither(gl_FragCoord.xy,0.5);\n#endif\n#ifdef SKY_RAW_HDR_OUTPUT\nvec4 color=vec4(clamp(retColor.rgb,0.0,maxColorValue),alpha);\n#else\nvec4 color=clamp(vec4(retColor.rgb,alpha),0.0,1.0);\n#endif\n#include<logDepthFragment>\n#include<fogFragment>\ngl_FragColor=color;\n#ifndef SKY_RAW_HDR_OUTPUT\n#include<imageProcessingCompatibility>\n#endif\n#define CUSTOM_FRAGMENT_MAIN_END\n}\n";
-    LQ.c.ShadersStore[xQ] || (LQ.c.ShadersStore[xQ] = AQ);
-    const tQ = [qQ.e, oQ.c, DQ.b, kQ.e, vQ.c, mQ.e, uQ.c, YQ];
-    for (const MQ of tQ) LQ.c.IncludesShadersStore[MQ.name] || (LQ.c.IncludesShadersStore[MQ.name] = MQ.shader);
-    const eQ = {
-      name: xQ,
-      shader: AQ
+
+    function uk(kk, ek) {
+      const ik = kk.getFloat32(ek.value, !0);
+      return ek.value += rk, ik
+    }
+
+    function qk(kk, ek) {
+      return (0, Sk.e)(dk(kk, ek))
+    }
+
+    function Ik(kk, ek) {
+      return (0, Sk.i)((0, fk.Clamp)(uk(kk, ek), -Sk.h, Sk.h))
+    }
+
+    function zk(kk, ek, ik, Dk) {
+      switch (ik) {
+        case "string":
+        case "stringvector":
+        case "iccProfile":
+          return function(kk, ek, ik) {
+            const Dk = (new TextDecoder).decode(new Uint8Array(kk).slice(ek.value, ek.value + ik));
+            return ek.value = ek.value + ik, Dk
+          }(kk.buffer, ek, Dk);
+        case "chlist":
+          return function(kk, ek, ik) {
+            const Dk = ek.value,
+              fk = [];
+            for (; ek.value < Dk + ik - 1;) {
+              const ik = Ck(kk.buffer, ek),
+                Dk = Ak(kk, ek),
+                Sk = sk(kk, ek);
+              ek.value += 3;
+              const bk = Ak(kk, ek),
+                rk = Ak(kk, ek);
+              fk.push({
+                name: ik,
+                pixelType: Dk,
+                pLinear: Sk,
+                xSampling: bk,
+                ySampling: rk
+              })
+            }
+            return ek.value += 1, fk
+          }(kk, ek, Dk);
+        case "chromaticities":
+          return function(kk, ek) {
+            return {
+              redX: uk(kk, ek),
+              redY: uk(kk, ek),
+              greenX: uk(kk, ek),
+              greenY: uk(kk, ek),
+              blueX: uk(kk, ek),
+              blueY: uk(kk, ek),
+              whiteX: uk(kk, ek),
+              whiteY: uk(kk, ek)
+            }
+          }(kk, ek);
+        case "compression":
+          return function(kk, ek) {
+            return sk(kk, ek)
+          }(kk, ek);
+        case "box2i":
+          return function(kk, ek) {
+            return {
+              xMin: Ak(kk, ek),
+              yMin: Ak(kk, ek),
+              xMax: Ak(kk, ek),
+              yMax: Ak(kk, ek)
+            }
+          }(kk, ek);
+        case "lineOrder":
+          return function(kk, ek) {
+            const ik = sk(kk, ek);
+            return Lk[ik]
+          }(kk, ek);
+        case "float":
+          return uk(kk, ek);
+        case "v2f":
+          return function(kk, ek) {
+            return [uk(kk, ek), uk(kk, ek)]
+          }(kk, ek);
+        case "v3f":
+          return function(kk, ek) {
+            return [uk(kk, ek), uk(kk, ek), uk(kk, ek)]
+          }(kk, ek);
+        case "int":
+          return Ak(kk, ek);
+        case "rational":
+          return function(kk, ek) {
+            return [Ak(kk, ek), jk(kk, ek)]
+          }(kk, ek);
+        case "timecode":
+          return function(kk, ek) {
+            return [jk(kk, ek), jk(kk, ek)]
+          }(kk, ek);
+        case "preview":
+          return ek.value += Dk, "skipped";
+        default:
+          return void(ek.value += Dk)
+      }
+    }
+
+    function Qk(kk) {
+      for (let ek = 1; ek < kk.length; ek++) {
+        const ik = kk[ek - 1] + kk[ek] - 128;
+        kk[ek] = ik
+      }
+    }
+
+    function vk(kk, ek) {
+      let ik = 0,
+        Dk = Math.floor((kk.length + 1) / 2),
+        fk = 0;
+      const Sk = kk.length - 1;
+      for (; !(fk > Sk) && (ek[fk++] = kk[ik++], !(fk > Sk));) ek[fk++] = kk[Dk++]
+    }! function(kk) {
+      kk[kk.NO_COMPRESSION = 0] = "NO_COMPRESSION", kk[kk.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", kk[kk.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", kk[kk.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", kk[kk.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", kk[kk.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(Yk || (Yk = {})),
+    function(kk) {
+      kk[kk.INCREASING_Y = 0] = "INCREASING_Y", kk[kk.DECREASING_Y = 1] = "DECREASING_Y"
+    }(Lk || (Lk = {}));
+    const Ek = 20000630;
+
+    function hk(kk, ek) {
+      if (kk.getUint32(0, !0) != Ek) throw new Error("Incorrect OpenEXR format");
+      const ik = kk.getUint8(4),
+        fk = kk.getUint8(5),
+        Sk = {
+          singleTile: !!(2 & fk),
+          longName: !!(4 & fk),
+          deepFormat: !!(8 & fk),
+          multiPart: !!(16 & fk)
+        };
+      ek.value = 8;
+      const bk = {};
+      let rk = !0;
+      for (; rk;) {
+        const ik = Ck(kk.buffer, ek);
+        if (ik) {
+          const fk = Ck(kk.buffer, ek),
+            Sk = zk(kk, ek, fk, jk(kk, ek));
+          void 0 === Sk ? Dk.b.Warn(`Unknown header attribute type ${fk}'.`) : bk[ik] = Sk
+        } else rk = !1
+      }
+      if (0 != (-5 & fk)) throw new Error("Unsupported file format");
+      return {
+        version: ik,
+        spec: Sk,
+        ...bk
+      }
+    }
+    const ak = 32768,
+      Wk = 65535;
+
+    function tk(kk, ek, ik, Dk, fk) {
+      for (; ik < kk;) ek = ek << 8 | Vk(Dk, fk), ik += 8;
+      return {
+        l: ek >> (ik -= kk) & (1 << kk) - 1,
+        c: ek,
+        lc: ik
+      }
+    }
+
+    function Xk(kk, ek, ik, Dk) {
+      return {
+        c: kk = kk << 8 | Vk(ik, Dk),
+        lc: ek += 8
+      }
+    }
+
+    function Bk(kk, ek, ik, Dk, fk, Sk, bk, rk, Pk) {
+      if (kk == ek) {
+        if (Dk < 8) {
+          const kk = Xk(ik, Dk, fk, Sk);
+          ik = kk.c, Dk = kk.lc
+        }
+        let kk = ik >> (Dk -= 8);
+        if (kk = new Uint8Array([kk])[0], rk.value + kk > Pk) return null;
+        const ek = bk[rk.value - 1];
+        for (; kk-- > 0;) bk[rk.value++] = ek
+      } else {
+        if (!(rk.value < Pk)) return null;
+        bk[rk.value++] = kk
+      }
+      return {
+        c: ik,
+        lc: Dk
+      }
+    }
+    const ck = new Array(59);
+
+    function Tk(kk, ek, ik, Dk, fk, Sk) {
+      const bk = ek;
+      let rk = 0,
+        Pk = 0;
+      for (; Dk <= fk; Dk++) {
+        if (bk.value - ek.value > ik) return;
+        let mk = tk(6, rk, Pk, kk, bk);
+        const Mk = mk.l;
+        if (rk = mk.c, Pk = mk.lc, Sk[Dk] = Mk, Mk == pk) {
+          if (bk.value - ek.value > ik) throw new Error("Error in HufUnpackEncTable");
+          mk = tk(8, rk, Pk, kk, bk);
+          let Mk = mk.l + yk;
+          if (rk = mk.c, Pk = mk.lc, Dk + Mk > fk + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; Mk--;) Sk[Dk++] = 0;
+          Dk--
+        } else if (Mk >= lk) {
+          let kk = Mk - lk + 2;
+          if (Dk + kk > fk + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; kk--;) Sk[Dk++] = 0;
+          Dk--
+        }
+      }! function(kk) {
+        for (let ik = 0; ik <= 58; ++ik) ck[ik] = 0;
+        for (let ik = 0; ik < Uk; ++ik) ck[kk[ik]] += 1;
+        let ek = 0;
+        for (let ik = 58; ik > 0; --ik) {
+          const kk = ek + ck[ik] >> 1;
+          ck[ik] = ek, ek = kk
+        }
+        for (let ik = 0; ik < Uk; ++ik) {
+          const ek = kk[ik];
+          ek > 0 && (kk[ik] = ek | ck[ek]++ << 6)
+        }
+      }(Sk)
+    }
+
+    function Zk(kk) {
+      return 63 & kk
+    }
+
+    function Ok(kk) {
+      return kk >> 6
+    }
+
+    function gk(kk, ek, ik, Dk, fk, Sk) {
+      const bk = ik.value,
+        rk = jk(ek, ik),
+        Pk = jk(ek, ik);
+      ik.value += 4;
+      const mk = jk(ek, ik);
+      if (ik.value += 4, rk < 0 || rk >= Uk || Pk < 0 || Pk >= Uk) throw new Error("Wrong HUF_ENCSIZE");
+      const Mk = new Array(Uk),
+        Kk = new Array(Hk);
+      ! function(kk) {
+        for (let ek = 0; ek < Hk; ek++) kk[ek] = {}, kk[ek].len = 0, kk[ek].lit = 0, kk[ek].p = null
+      }(Kk);
+      if (Tk(kk, ik, Dk - (ik.value - bk), rk, Pk, Mk), mk > 8 * (Dk - (ik.value - bk))) throw new Error("Wrong hufUncompress");
+      ! function(kk, ek, ik, Dk) {
+        for (; ek <= ik; ek++) {
+          const ik = Ok(kk[ek]),
+            fk = Zk(kk[ek]);
+          if (ik >> fk) throw new Error("Invalid table entry");
+          if (fk > nk) {
+            const kk = Dk[ik >> fk - nk];
+            if (kk.len) throw new Error("Invalid table entry");
+            if (kk.lit++, kk.p) {
+              const ek = kk.p;
+              kk.p = new Array(kk.lit);
+              for (let ik = 0; ik < kk.lit - 1; ++ik) kk.p[ik] = ek[ik]
+            } else kk.p = new Array(1);
+            kk.p[kk.lit - 1] = ek
+          } else if (fk) {
+            let kk = 0;
+            for (let Sk = 1 << nk - fk; Sk > 0; Sk--) {
+              const Sk = Dk[(ik << nk - fk) + kk];
+              if (Sk.len || Sk.p) throw new Error("Invalid table entry");
+              Sk.len = fk, Sk.lit = ek, kk++
+            }
+          }
+        }
+      }(Mk, rk, Pk, Kk),
+      function(kk, ek, ik, Dk, fk, Sk, bk, rk, Pk) {
+        let mk = 0,
+          Mk = 0;
+        const Kk = bk,
+          xk = Math.trunc(Dk.value + (fk + 7) / 8);
+        for (; Dk.value < xk;) {
+          let fk = Xk(mk, Mk, ik, Dk);
+          for (mk = fk.c, Mk = fk.lc; Mk >= nk;) {
+            const bk = ek[mk >> Mk - nk & wk];
+            if (bk.len) {
+              Mk -= bk.len;
+              const kk = Bk(bk.lit, Sk, mk, Mk, ik, Dk, rk, Pk, Kk);
+              kk && (mk = kk.c, Mk = kk.lc)
+            } else {
+              if (!bk.p) throw new Error("hufDecode issues");
+              let ek;
+              for (ek = 0; ek < bk.lit; ek++) {
+                const nk = Zk(kk[bk.p[ek]]);
+                for (; Mk < nk && Dk.value < xk;) fk = Xk(mk, Mk, ik, Dk), mk = fk.c, Mk = fk.lc;
+                if (Mk >= nk && Ok(kk[bk.p[ek]]) == (mk >> Mk - nk & (1 << nk) - 1)) {
+                  Mk -= nk;
+                  const kk = Bk(bk.p[ek], Sk, mk, Mk, ik, Dk, rk, Pk, Kk);
+                  kk && (mk = kk.c, Mk = kk.lc);
+                  break
+                }
+              }
+              if (ek == bk.lit) throw new Error("HufDecode issues")
+            }
+          }
+        }
+        const Uk = 8 - fk & 7;
+        for (mk >>= Uk, Mk -= Uk; Mk > 0;) {
+          const kk = ek[mk << nk - Mk & wk];
+          if (!kk.len) throw new Error("HufDecode issues");
+          {
+            Mk -= kk.len;
+            const ek = Bk(kk.lit, Sk, mk, Mk, ik, Dk, rk, Pk, Kk);
+            ek && (mk = ek.c, Mk = ek.lc)
+          }
+        }
+      }(Mk, Kk, kk, ik, mk, Pk, Sk, fk, {
+        value: 0
+      })
+    }
+
+    function Gk(kk) {
+      return 65535 & kk
+    }
+
+    function Nk(kk) {
+      const ek = Gk(kk);
+      return ek > 32767 ? ek - 65536 : ek
+    }
+
+    function Rk(kk, ek) {
+      const ik = Nk(kk),
+        Dk = Nk(ek),
+        fk = ik + (1 & Dk) + (Dk >> 1);
+      return {
+        a: fk,
+        b: fk - Dk
+      }
+    }
+
+    function Jk(kk, ek) {
+      const ik = Gk(kk),
+        Dk = Gk(ek),
+        fk = ik - (Dk >> 1) & Wk;
+      return {
+        a: Dk + fk - ak & Wk,
+        b: fk
+      }
+    }
+
+    function ke(kk, ek, ik, Dk, fk, Sk, bk) {
+      const rk = bk < 16384,
+        Pk = ik > fk ? fk : ik;
+      let mk, Mk, Kk = 1;
+      for (; Kk <= Pk;) Kk <<= 1;
+      for (Kk >>= 1, mk = Kk, Kk >>= 1; Kk >= 1;) {
+        Mk = 0;
+        const bk = Mk + Sk * (fk - mk),
+          Pk = Sk * Kk,
+          xk = Sk * mk,
+          nk = Dk * Kk,
+          Uk = Dk * mk;
+        let Hk, wk, lk, pk;
+        for (; Mk <= bk; Mk += xk) {
+          let fk = Mk;
+          const Sk = Mk + Dk * (ik - mk);
+          for (; fk <= Sk; fk += Uk) {
+            const ik = fk + nk,
+              Dk = fk + Pk,
+              Sk = Dk + nk;
+            if (rk) {
+              let bk = Rk(kk[fk + ek], kk[Dk + ek]);
+              Hk = bk.a, lk = bk.b, bk = Rk(kk[ik + ek], kk[Sk + ek]), wk = bk.a, pk = bk.b, bk = Rk(Hk, wk), kk[fk + ek] = bk.a, kk[ik + ek] = bk.b, bk = Rk(lk, pk), kk[Dk + ek] = bk.a, kk[Sk + ek] = bk.b
+            } else {
+              let bk = Jk(kk[fk + ek], kk[Dk + ek]);
+              Hk = bk.a, lk = bk.b, bk = Jk(kk[ik + ek], kk[Sk + ek]), wk = bk.a, pk = bk.b, bk = Jk(Hk, wk), kk[fk + ek] = bk.a, kk[ik + ek] = bk.b, bk = Jk(lk, pk), kk[Dk + ek] = bk.a, kk[Sk + ek] = bk.b
+            }
+          }
+          if (ik & Kk) {
+            const ik = fk + Pk;
+            let Dk;
+            Dk = rk ? Rk(kk[fk + ek], kk[ik + ek]) : Jk(kk[fk + ek], kk[ik + ek]), Hk = Dk.a, kk[ik + ek] = Dk.b, kk[fk + ek] = Hk
+          }
+        }
+        if (fk & Kk) {
+          let fk = Mk;
+          const Sk = Mk + Dk * (ik - mk);
+          for (; fk <= Sk; fk += Uk) {
+            const ik = fk + nk;
+            let Dk;
+            Dk = rk ? Rk(kk[fk + ek], kk[ik + ek]) : Jk(kk[fk + ek], kk[ik + ek]), Hk = Dk.a, kk[ik + ek] = Dk.b, kk[fk + ek] = Hk
+          }
+        }
+        mk = Kk, Kk >>= 1
+      }
+      return Mk
+    }
+
+    function ee(kk) {
+      return new DataView(kk.array.buffer, kk.offset.value, kk.size)
+    }
+
+    function ie(kk) {
+      const ek = kk.viewer.buffer.slice(kk.offset.value, kk.offset.value + kk.size),
+        ik = new Uint8Array(function(kk) {
+          let ek = kk.byteLength;
+          const ik = [];
+          let Dk = 0;
+          const fk = new DataView(kk);
+          for (; ek > 0;) {
+            const kk = fk.getInt8(Dk++);
+            if (kk < 0) {
+              const Sk = -kk;
+              ek -= Sk + 1;
+              for (let kk = 0; kk < Sk; kk++) ik.push(fk.getUint8(Dk++))
+            } else {
+              const Sk = kk;
+              ek -= 2;
+              const bk = fk.getUint8(Dk++);
+              for (let kk = 0; kk < Sk + 1; kk++) ik.push(bk)
+            }
+          }
+          return ik
+        }(ek)),
+        Dk = new Uint8Array(ik.length);
+      return Qk(ik), vk(ik, Dk), new DataView(Dk.buffer)
+    }
+
+    function De(kk) {
+      const ek = kk.array.slice(kk.offset.value, kk.offset.value + kk.size),
+        ik = fflate.unzlibSync(ek),
+        Dk = new Uint8Array(ik.length);
+      return Qk(ik), vk(ik, Dk), new DataView(Dk.buffer)
+    }
+
+    function fe(kk) {
+      const ek = kk.array.slice(kk.offset.value, kk.offset.value + kk.size),
+        ik = fflate.unzlibSync(ek),
+        Dk = kk.lines * kk.channels * kk.width,
+        fk = 1 == kk.type ? new Uint16Array(Dk) : new Uint32Array(Dk);
+      let Sk = 0,
+        bk = 0;
+      const rk = new Array(4);
+      for (let Pk = 0; Pk < kk.lines; Pk++)
+        for (let ek = 0; ek < kk.channels; ek++) {
+          let ek = 0;
+          switch (kk.type) {
+            case 1:
+              rk[0] = Sk, rk[1] = rk[0] + kk.width, Sk = rk[1] + kk.width;
+              for (let Dk = 0; Dk < kk.width; ++Dk) {
+                ek += ik[rk[0]++] << 8 | ik[rk[1]++], fk[bk] = ek, bk++
+              }
+              break;
+            case 2:
+              rk[0] = Sk, rk[1] = rk[0] + kk.width, rk[2] = rk[1] + kk.width, Sk = rk[2] + kk.width;
+              for (let Dk = 0; Dk < kk.width; ++Dk) {
+                ek += ik[rk[0]++] << 24 | ik[rk[1]++] << 16 | ik[rk[2]++] << 8, fk[bk] = ek, bk++
+              }
+          }
+        }
+      return new DataView(fk.buffer)
+    }
+
+    function Se(kk) {
+      const ek = kk.viewer,
+        ik = {
+          value: kk.offset.value
+        },
+        Dk = new Uint16Array(kk.width * kk.scanlineBlockSize * (kk.channels * kk.type)),
+        fk = new Uint8Array(xk);
+      let Sk = 0;
+      const bk = new Array(kk.channels);
+      for (let mk = 0; mk < kk.channels; mk++) bk[mk] = {}, bk[mk].start = Sk, bk[mk].end = bk[mk].start, bk[mk].nx = kk.width, bk[mk].ny = kk.lines, bk[mk].size = kk.type, Sk += bk[mk].nx * bk[mk].ny * bk[mk].size;
+      const rk = dk(ek, ik),
+        Pk = dk(ek, ik);
+      if (Pk >= xk) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (rk <= Pk)
+        for (let mk = 0; mk < Pk - rk + 1; mk++) fk[mk + rk] = sk(ek, ik);
+      const Mk = new Uint16Array(Kk),
+        nk = function(kk, ek) {
+          let ik = 0;
+          for (let fk = 0; fk < Kk; ++fk)(0 == fk || kk[fk >> 3] & 1 << (7 & fk)) && (ek[ik++] = fk);
+          const Dk = ik - 1;
+          for (; ik < Kk;) ek[ik++] = 0;
+          return Dk
+        }(fk, Mk),
+        Uk = jk(ek, ik);
+      gk(kk.array, ek, ik, Uk, Dk, Sk);
+      for (let mk = 0; mk < kk.channels; ++mk) {
+        const kk = bk[mk];
+        for (let ek = 0; ek < bk[mk].size; ++ek) ke(Dk, kk.start + ek, kk.nx, kk.size, kk.ny, kk.nx * kk.size, nk)
+      }! function(kk, ek, ik) {
+        for (let Dk = 0; Dk < ik; ++Dk) ek[Dk] = kk[ek[Dk]]
+      }(Mk, Dk, Sk);
+      let Hk = 0;
+      const wk = new Uint8Array(Dk.buffer.byteLength);
+      for (let Kk = 0; Kk < kk.lines; Kk++)
+        for (let ek = 0; ek < kk.channels; ek++) {
+          const kk = bk[ek],
+            ik = kk.nx * kk.size,
+            fk = new Uint8Array(Dk.buffer, kk.end * mk, ik * mk);
+          wk.set(fk, Hk), Hk += ik * mk, kk.end += ik
+        }
+      return new DataView(wk.buffer)
+    }
+    var be, re = ik(39662);
+    ! function(kk) {
+      kk[kk.Float = 0] = "Float", kk[kk.HalfFloat = 1] = "HalfFloat"
+    }(be || (be = {}));
+    class Pe {}
+    async function me(kk, ek, ik, Dk) {
+      const fk = {
+        size: 0,
+        viewer: ek,
+        array: new Uint8Array(ek.buffer),
+        offset: ik,
+        width: kk.dataWindow.xMax - kk.dataWindow.xMin + 1,
+        height: kk.dataWindow.yMax - kk.dataWindow.yMin + 1,
+        channels: kk.channels.length,
+        channelLineOffsets: {},
+        scanOrder: () => 0,
+        bytesPerLine: 0,
+        outLineWidth: 0,
+        lines: 0,
+        scanlineBlockSize: 0,
+        inputSize: null,
+        type: 0,
+        uncompress: null,
+        getter: () => 0,
+        format: 5,
+        outputChannels: 0,
+        decodeChannels: {},
+        blockCount: null,
+        byteArray: null,
+        linearSpace: !1,
+        textureType: 0
+      };
+      switch (kk.compression) {
+        case Yk.NO_COMPRESSION:
+          fk.lines = 1, fk.uncompress = ee;
+          break;
+        case Yk.RLE_COMPRESSION:
+          fk.lines = 1, fk.uncompress = ie;
+          break;
+        case Yk.ZIPS_COMPRESSION:
+          fk.lines = 1, fk.uncompress = De, await re.i.LoadScriptAsync(Pe.FFLATEUrl);
+          break;
+        case Yk.ZIP_COMPRESSION:
+          fk.lines = 16, fk.uncompress = De, await re.i.LoadScriptAsync(Pe.FFLATEUrl);
+          break;
+        case Yk.PIZ_COMPRESSION:
+          fk.lines = 32, fk.uncompress = Se;
+          break;
+        case Yk.PXR24_COMPRESSION:
+          fk.lines = 16, fk.uncompress = fe, await re.i.LoadScriptAsync(Pe.FFLATEUrl);
+          break;
+        default:
+          throw new Error(Yk[kk.compression] + " is unsupported")
+      }
+      fk.scanlineBlockSize = fk.lines;
+      const Sk = {};
+      for (const rk of kk.channels) switch (rk.name) {
+        case "R":
+        case "G":
+        case "B":
+        case "A":
+        case "Y":
+          Sk[rk.name] = !0, fk.type = rk.pixelType
+      }
+      let bk = !1;
+      if (Sk.R && Sk.G && Sk.B && Sk.A) fk.outputChannels = 4, fk.decodeChannels = {
+        R: 0,
+        G: 1,
+        B: 2,
+        A: 3
+      };
+      else if (Sk.R && Sk.G && Sk.B) bk = !0, fk.outputChannels = 4, fk.decodeChannels = {
+        R: 0,
+        G: 1,
+        B: 2,
+        A: 3
+      };
+      else if (Sk.R && Sk.G) fk.outputChannels = 2, fk.decodeChannels = {
+        R: 0,
+        G: 1
+      };
+      else if (Sk.R) fk.outputChannels = 1, fk.decodeChannels = {
+        R: 0
+      };
+      else {
+        if (!Sk.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        fk.outputChannels = 1, fk.decodeChannels = {
+          Y: 0
+        }
+      }
+      if (1 === fk.type) switch (Dk) {
+        case be.Float:
+          fk.getter = qk, fk.inputSize = mk;
+          break;
+        case be.HalfFloat:
+          fk.getter = dk, fk.inputSize = mk
+      } else {
+        if (2 !== fk.type) throw new Error("Unsupported pixelType " + fk.type + " for " + kk.compression);
+        switch (Dk) {
+          case be.Float:
+            fk.getter = uk, fk.inputSize = rk;
+            break;
+          case be.HalfFloat:
+            fk.getter = Ik, fk.inputSize = rk
+        }
+      }
+      fk.blockCount = fk.height / fk.scanlineBlockSize;
+      for (let rk = 0; rk < fk.blockCount; rk++) Fk(ek, ik);
+      const Pk = fk.width * fk.height * fk.outputChannels;
+      switch (Dk) {
+        case be.Float:
+          fk.byteArray = new Float32Array(Pk), fk.textureType = 1, bk && fk.byteArray.fill(1, 0, Pk);
+          break;
+        case be.HalfFloat:
+          fk.byteArray = new Uint16Array(Pk), fk.textureType = 2, bk && fk.byteArray.fill(15360, 0, Pk);
+          break;
+        default:
+          throw new Error("Unsupported type: " + Dk)
+      }
+      let Mk = 0;
+      for (const rk of kk.channels) void 0 !== fk.decodeChannels[rk.name] && (fk.channelLineOffsets[rk.name] = Mk * fk.width), Mk += 2 * rk.pixelType;
+      return fk.bytesPerLine = fk.width * Mk, fk.outLineWidth = fk.width * fk.outputChannels, "INCREASING_Y" === kk.lineOrder ? fk.scanOrder = kk => kk : fk.scanOrder = kk => fk.height - 1 - kk, 4 == fk.outputChannels ? (fk.format = 5, fk.linearSpace = !0) : (fk.format = 6, fk.linearSpace = !1), fk
+    }
+
+    function Me(kk, ek, ik, Dk) {
+      const fk = {
+        value: 0
+      };
+      for (let Sk = 0; Sk < kk.height / kk.scanlineBlockSize; Sk++) {
+        const bk = Ak(ik, Dk) - ek.dataWindow.yMin;
+        kk.size = jk(ik, Dk), kk.lines = bk + kk.scanlineBlockSize > kk.height ? kk.height - bk : kk.scanlineBlockSize;
+        const rk = kk.size < kk.lines * kk.bytesPerLine && kk.uncompress ? kk.uncompress(kk) : ee(kk);
+        Dk.value += kk.size;
+        for (let ik = 0; ik < kk.scanlineBlockSize; ik++) {
+          const Dk = Sk * kk.scanlineBlockSize,
+            bk = ik + kk.scanOrder(Dk);
+          if (bk >= kk.height) continue;
+          const Pk = ik * kk.bytesPerLine,
+            mk = (kk.height - 1 - bk) * kk.outLineWidth;
+          for (let ik = 0; ik < kk.channels; ik++) {
+            const Dk = ek.channels[ik].name,
+              Sk = kk.channelLineOffsets[Dk],
+              bk = kk.decodeChannels[Dk];
+            if (void 0 !== bk) {
+              fk.value = Pk + Sk;
+              for (let ek = 0; ek < kk.width; ek++) {
+                const ik = mk + ek * kk.outputChannels + bk;
+                kk.byteArray && (kk.byteArray[ik] = kk.getter(rk, fk))
+              }
+            }
+          }
+        }
+      }
+    }
+    Pe.DefaultOutputType = be.HalfFloat, Pe.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class Ke {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(kk, ek, ik, Dk, fk) {
+        throw ".exr not supported in Cube."
+      }
+      loadData(kk, ek, ik) {
+        const fk = new DataView(kk.buffer),
+          Sk = {
+            value: 0
+          },
+          bk = hk(fk, Sk);
+        me(bk, fk, Sk, Pe.DefaultOutputType).then((kk => {
+          Me(kk, bk, fk, Sk);
+          const Dk = bk.dataWindow.xMax - bk.dataWindow.xMin + 1,
+            rk = bk.dataWindow.yMax - bk.dataWindow.yMin + 1;
+          ik(Dk, rk, ek.generateMipMaps, !1, (() => {
+            const ik = ek.JU();
+            ek.format = bk.format, ek.type = kk.textureType, ek.invertY = !1, ek._gammaSpace = !bk.linearSpace, kk.byteArray && ik._uploadDataToTextureDirectly(ek, kk.byteArray, 0, 0, void 0, !0)
+          }))
+        })).catch((kk => {
+          Dk.b.Error("Failed to load EXR texture: ", kk)
+        }))
+      }
+    }
+    async function xe(kk) {
+      const ek = new DataView(kk),
+        ik = {
+          value: 0
+        },
+        fk = hk(ek, ik);
+      try {
+        const kk = await me(fk, ek, ik, be.Float);
+        return Me(kk, fk, ek, ik), kk.byteArray ? {
+          width: fk.dataWindow.xMax - fk.dataWindow.xMin + 1,
+          height: fk.dataWindow.yMax - fk.dataWindow.yMin + 1,
+          data: new Float32Array(kk.byteArray)
+        } : (Dk.b.Error("Failed to decode EXR data: No byte array available."), {
+          width: 0,
+          height: 0,
+          data: null
+        })
+      } catch (Sk) {
+        Dk.b.Error("Failed to load EXR data: ", Sk)
+      }
+      return {
+        width: 0,
+        height: 0,
+        data: null
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

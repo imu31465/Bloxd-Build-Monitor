@@ -1,40 +1,43 @@
 export const id = 166;
 export const ids = [166];
 export const modules = {
-  8737: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8765: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["Infinite blocks, custom tools and no limits on what you build. Bloxd Creative is the free building mode where you can get creating straight away. Build in a shared world with players from all over, or set up your own free build server and create with your friends online. There's no health bar and nobody can attack you, so all you have to think about is your build."],
-      howToPlay: ["Open the creative menu and grab any block or item you want. It's all sorted into categories like Building Blocks, Coloured Blocks, Nature, Decoration, Utility, Tools and Vehicles, and World Tools. Place as many as you like, fly around your build and make anything from a tiny cottage to an entire city.", "Want a completely blank canvas? Try Superflat, a world of endless flat grass that's great for big projects. In the normal Creative world, use Teleport To Fresh Land to jump to a random empty spot so nobody gets in your way. Place a Protector and other players can't change blocks or open chests in that area. If you'd like a plot of your own that's saved for good, Plots is the one to try."],
-      features: ["Infinite Blocks and Items from the Creative Menu", "Fly Freely Around Your Builds", "Superflat Worlds for Big Builds", "Teleport To Fresh Land for Uninterrupted Building", "Free Private Build Servers to Create with Friends", "Extra Tools for Server Owners, Including WorldBuilder and Code Editing", "Protectors to Keep Your Builds Safe", "No Health Bar and No Attacks from Other Players"],
-      tips: ["Teleport To Fresh Land is the quickest way to find some empty space", "In public lobbies, build away from spawn, because blocks near spawn reset every few hours", "Put down a Protector so other players can't change your build or open your chests", "Use /tp to get around fast, and type /help to see all the commands", "Saplings are limited in Creative, so plan your trees carefully", "Free cam lets you check your build from every angle", "If you want your build to stay exactly as you left it, start a private build server"],
-      similarGames: ["classic", "classic_survival", "plots", "skyblock", "oneBlock"],
+    const Dk = {
+      whatIs: ["Mine, craft and survive in a huge block world that keeps running even when you log off. Bloxd Survival is an online multiplayer SMP. You explore, dig for ores, craft tools and armour, and build a base alongside everyone else on the server. It's free and runs straight in your browser. Fight monsters, loot other players and protect your land, or set up your own private server. This is the full-danger version. If you'd rather build in peace, Peaceful is the calmer option."],
+      howToPlay: ["Gather some resources and craft your first tools. Then dig deeper for iron, gold, diamonds and moonstone to make better gear. Keep an eye out for mobs. Draugr Zombies, Skeletons and Knights, Frost Zombies and Skeletons, Cave Golems and Frost Golems all roam the world. You'll also run into wolves, bears, deer, gorillas, horses and camels.", "Other players can fight you, raid your chests and break your builds, so you'll want to protect your base. Craft a Protector from diamonds and other players can't change blocks or open chests in that chunk. In a tribe? A Tribe Protector shares that protection with your friends. And build well away from spawn, because the blocks near it reset every few hours."],
+      features: ["Persistent SMP Worlds That Save Your Progress", "Mining, Crafting and Base Building", "PvP, Looting and Raiding", "Land Protection with Protectors and Tribe Protectors", "Draugr, Golems, Frost Mobs and Wild Animals to Battle", "Free Private Servers with Owner Commands"],
+      tips: ["Build away from spawn, or your base will get reset", "Get a Protector crafted from diamonds as soon as you can, to keep griefers out", "Don't log out mid-fight. If you're under 80 health and a player hit you in the last 8 seconds, you'll lose your items", "Log in to an account so your progress is saved for good", "Check in on your base at least once a month, because Protectors vanish after 30 days away", "Only let players you trust into your base", "Type /help in chat to see a list of useful commands"],
+      similarGames: ["classic_smp2", "classic_survivalDayNight", "classic_survivalGuns", "survivalFactory", "skyblock", "classic"],
       faq: [{
-        question: "What is Bloxd Creative?",
-        answer: "Bloxd Creative is the creative building mode in Bloxd.io. You get infinite blocks and custom tools to build whatever you like, on your own or with friends."
+        question: "What is Bloxd Survival?",
+        answer: "A multiplayer survival game on Bloxd.io. You mine, craft, build and fight to survive in a shared block world that carries on while you're away."
       }, {
-        question: "Can you fly in Bloxd Creative?",
-        answer: "Yes, you can fly in Creative, so you can reach every bit of your build."
+        question: "How do I protect my base in Bloxd Survival?",
+        answer: "Craft a Protector from diamonds and place it in your base. Other players then can't change blocks or open chests in that chunk. Tribes can use Tribe Protectors instead. Protectors disappear if you're away for more than 30 days."
       }, {
-        question: "What is Superflat in Bloxd?",
-        answer: "A Creative world made of endless flat grass. It gives you a clean canvas for your biggest projects."
+        question: "Why did my build disappear?",
+        answer: "Blocks near spawn reset every few hours, so build outside that area. Private lobbies reset only if their owner turns on Enable Spawn Reset."
       }, {
-        question: "How do I make a free build server in Bloxd?",
-        answer: "Start your own private lobby for free and invite your friends. As the owner you also get extra tools like WorldBuilder."
+        question: "Is stealing and griefing allowed in Bloxd Survival?",
+        answer: "It is. Raiding, stealing and griefing are all part of the game, so protect your chests and only share your base with people you trust."
       }, {
-        question: "Can you use TNT in Bloxd Creative?",
-        answer: "Not in public Creative worlds. You can't take explosives from the menu or craft them, so nobody can blow up other people's builds."
+        question: "Can I make a private server in Bloxd Survival?",
+        answer: "Yes. You can make a private server for free, invite your friends and use owner commands to run it however you like."
       }, {
-        question: "Why did my build disappear in Bloxd Creative?",
-        answer: "In public lobbies, blocks near spawn reset every few hours; a message shows when you cross the edge of that area. Build further away, use Teleport To Fresh Land, or start a private build server, where nothing resets unless its owner turns on Enable Spawn Reset."
+        question: "What happens if I log out during a fight?",
+        answer: "Log out with less than 80 health within 8 seconds of being hit by a player and you'll lose your items. Get somewhere safe and heal up before you leave."
       }, {
-        question: "What's the difference between Creative and Plots?",
-        answer: "Creative is an open shared world. You build wherever you want and guard areas with Protectors. In Plots you claim your own 91\xd791 plot that only you and the players you add can change, and it's saved for good once you've changed 500 blocks."
+        question: "Will my world still be there tomorrow?",
+        answer: "Yes. Survival worlds are persistent and keep running while you're gone. Signing in to an account keeps your progress safe even if your browser data gets cleared."
+      }, {
+        question: "Which Bloxd survival mode should I play?",
+        answer: "Survival is the classic one, with mobs, PvP and raiding. Peaceful is much calmer: no hostile mobs, no PvP and no health bar. Day & Night Survival is all about the day-night cycle and a Days Survived leaderboard. Survival with Guns adds craftable guns and armed mobs."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

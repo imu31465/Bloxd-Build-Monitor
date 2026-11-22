@@ -1,1084 +1,716 @@
 export const id = 110;
 export const ids = [110];
 export const modules = {
-  4837: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => xQ,
-      f: () => GQ,
-      g: () => AQ,
-      h: () => MQ
+  8714: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      default: () => le
     });
-    var LQ = wQ(53),
-      qQ = wQ(4844),
-      oQ = wQ(4233),
-      DQ = wQ(1367),
-      kQ = wQ(4867),
-      vQ = wQ(1070),
-      mQ = wQ.n(vQ),
-      uQ = wQ(1362),
-      HQ = wQ(1725),
-      bQ = wQ(4875),
-      YQ = wQ(1107);
+    var Dk = ik(1496),
+      fk = ik(22),
+      Sk = ik(4587),
+      bk = ik(60),
+      rk = ik(1406);
+    var Pk = ik(1893),
+      mk = ik(1479),
+      Mk = ik(1333),
+      Kk = ik(1172),
+      xk = ik(165),
+      nk = ik(189),
+      Uk = ik(996),
+      Hk = ik(1005),
+      wk = ik(1207),
+      lk = ik(2351),
+      pk = ik(1459),
+      yk = ik(1104),
+      Yk = ik(8718),
+      Lk = ik(1512);
 
-    function xQ(QQ) {
-      let {
-        label: FQ,
-        onClick: wQ,
-        checked: LQ,
-        circleInfoText: qQ,
-        className: kQ,
-        disabled: vQ,
-        note: uQ
-      } = QQ;
-      return (0, YQ.jsxs)("div", {
-        "aria-disabled": vQ || void 0,
-        "data-pad-focusable": !0,
-        className: mQ()("SettingBox CheckboxContainer", {
-          [kQ]: kQ,
-          SettingBoxDisabled: vQ
-        }),
-        onClick: () => {
-          vQ || wQ(!LQ)
-        },
-        children: [(0, YQ.jsxs)("div", {
-          className: "CheckboxInputAndText",
-          children: [(0, YQ.jsx)("label", {
-            className: "CheckboxClickableLabel",
-            children: (0, YQ.jsx)(oQ.d, {
-              className: "SettingsCheckbox",
-              checked: LQ,
-              disabled: vQ,
-              onChange: () => {}
-            })
-          }), (0, YQ.jsxs)("div", {
-            className: "CheckboxText",
-            children: [FQ, qQ && (0, YQ.jsx)("span", {
-              onClick: QQ => QQ.stopPropagation(),
-              children: (0, YQ.jsx)(DQ.b, {
-                className: "SettingsTextInputCircleInfo",
-                hoverInfo: qQ
-              })
-            })]
-          })]
-        }), uQ && (0, YQ.jsx)("div", {
-          className: "SettingNote",
-          children: uQ
-        })]
-      })
-    }
-
-    function AQ(QQ) {
-      let {
-        name: FQ,
-        onChange: wQ,
-        min: qQ,
-        max: oQ,
-        step: kQ,
-        initValue: vQ,
-        circleInfoText: uQ,
-        format: HQ,
-        className: bQ,
-        padStep: xQ,
-        disabled: AQ = !1,
-        selectableMax: tQ,
-        cappedNote: MQ,
-        onChangeComplete: GQ
-      } = QQ;
-      const [pQ, cQ] = (0, LQ.useState)(vQ), CQ = (0, LQ.useRef)(vQ);
-      (0, LQ.useEffect)((() => {
-        CQ.current = vQ, cQ(vQ)
-      }), [vQ]);
-      const SQ = void 0 !== tQ && tQ < oQ,
-        iQ = SQ ? {
-          "--slider-selectable": (tQ - qQ) / (oQ - qQ)
-        } : void 0;
-      return (0, YQ.jsxs)("div", {
-        className: mQ()("SettingBox SettingsSliderDiv", {
-          [bQ]: bQ,
-          SettingBoxDisabled: AQ,
-          SliderCapped: SQ
-        }),
-        style: iQ,
-        children: [(0, YQ.jsxs)("div", {
-          className: "SliderText",
-          children: [`${FQ}: ${HQ?HQ(pQ):pQ}`, uQ && (0, YQ.jsx)(DQ.b, {
-            className: "SettingsTextInputCircleInfo",
-            hoverInfo: uQ
-          })]
-        }), (0, YQ.jsx)("div", {
-          className: "SliderDiv",
-          children: (0, YQ.jsx)(eQ, {
-            value: pQ,
-            min: qQ,
-            max: oQ,
-            step: kQ,
-            onChange: QQ => {
-              if (SQ && QQ >= tQ && pQ === tQ) return;
-              const FQ = SQ ? Math.min(QQ, tQ) : QQ;
-              CQ.current = FQ, cQ(FQ), wQ(FQ)
-            },
-            onChangeComplete: GQ && (() => {
-              GQ(CQ.current)
-            }),
-            format: HQ,
-            padStep: xQ,
-            disabled: AQ
-          })
-        }), SQ && MQ && (0, YQ.jsx)("div", {
-          className: "SettingNote",
-          children: MQ
-        })]
-      })
-    }
-    const tQ = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
-
-    function eQ(QQ) {
-      var FQ;
-      let {
-        value: wQ,
-        min: oQ,
-        max: DQ,
-        step: kQ,
-        onChange: vQ,
-        orientation: mQ,
-        reverse: uQ,
-        setIsChanging: HQ,
-        tooltip: xQ,
-        labels: AQ,
-        handleLabel: eQ,
-        format: MQ,
-        onChangeStart: GQ,
-        onChangeComplete: pQ,
-        padStep: cQ,
-        disabled: CQ = !1
-      } = QQ;
-      const SQ = (0, LQ.useRef)(null),
-        iQ = (0, LQ.useRef)(null);
-      (0, LQ.useLayoutEffect)((() => {
-        var QQ, FQ, wQ;
-        const LQ = null !== (QQ = null === (FQ = SQ.current) || void 0 === FQ ? void 0 : FQ.querySelector(".rangeslider")) && void 0 !== QQ ? QQ : null;
-        null === LQ || void 0 === LQ || LQ.setAttribute("data-pad-slider", ""), null === LQ || void 0 === LQ || LQ.setAttribute("data-pad-focusable", ""), null === LQ || void 0 === LQ || null === (wQ = LQ.querySelector(".rangeslider__handle")) || void 0 === wQ || wQ.setAttribute("data-pad-slider-handle", ""), iQ.current = LQ
-      }), []), (0, LQ.useLayoutEffect)((() => {
-        var QQ, FQ;
-        CQ ? null === (QQ = iQ.current) || void 0 === QQ || QQ.setAttribute("aria-disabled", "true") : null === (FQ = iQ.current) || void 0 === FQ || FQ.removeAttribute("aria-disabled")
-      }), [CQ]);
-      const WQ = (null !== (FQ = String(kQ).split(".")[1]) && void 0 !== FQ ? FQ : "").length,
-        RQ = QQ => {
-          const FQ = Number((Math.round((QQ - oQ) / kQ) * kQ + oQ).toFixed(WQ));
-          return Math.min(DQ, Math.max(oQ, FQ))
-        },
-        OQ = (0, LQ.useRef)(pQ);
-      OQ.current = pQ, (0, LQ.useEffect)((() => {
-        const QQ = SQ.current;
-        if (!QQ) return;
-        const FQ = QQ => {
-          var FQ;
-          tQ.has(QQ.key) && (null === (FQ = OQ.current) || void 0 === FQ || FQ.call(OQ))
-        };
-        return QQ.addEventListener("keyup", FQ), () => {
-          QQ.removeEventListener("keyup", FQ)
-        }
-      }), []);
-      const sQ = (0, LQ.useRef)(!1);
-      return (0, bQ.c)(iQ, {
-        adjust: QQ => {
-          if (CQ) return;
-          const FQ = null !== cQ && void 0 !== cQ ? cQ : Math.max(kQ, Math.round((DQ - oQ) / 20 / kQ) * kQ),
-            LQ = RQ(wQ + QQ * FQ * (uQ ? -1 : 1));
-          LQ !== wQ && (null === GQ || void 0 === GQ || GQ(), vQ(LQ), null === pQ || void 0 === pQ || pQ())
-        },
-        setFraction: QQ => {
-          if (CQ) return;
-          const FQ = RQ(oQ + (uQ ? 1 - QQ : QQ) * (DQ - oQ));
-          FQ !== wQ && (sQ.current || (sQ.current = !0, null === GQ || void 0 === GQ || GQ()), vQ(FQ))
-        },
-        endDrag: () => {
-          sQ.current && (sQ.current = !1, null === pQ || void 0 === pQ || pQ())
-        }
-      }), (0, YQ.jsx)("div", {
-        ref: SQ,
-        style: {
-          display: "contents"
-        },
-        children: (0, YQ.jsx)(qQ.b, {
-          value: wQ,
-          min: oQ,
-          max: DQ,
-          step: kQ,
-          onChange: vQ,
-          orientation: mQ,
-          reverse: uQ,
-          tooltip: xQ,
-          labels: AQ,
-          handleLabel: eQ,
-          format: MQ,
-          onChangeStart: () => {
-            null === GQ || void 0 === GQ || GQ(), null === HQ || void 0 === HQ || HQ(!0)
-          },
-          onChangeComplete: () => {
-            null === HQ || void 0 === HQ || HQ(!1), null === pQ || void 0 === pQ || pQ()
-          }
-        })
-      })
-    }
-    async function MQ() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const FQ = uQ.NotificationProvider.showPromptPopup({
-        title: "settingsMenu:reloadPagePopupTitle",
-        subtitle: "settingsMenu:reloadPagePopupSubtitle",
-        confirmText: "settingsMenu:reloadPagePopupConfirm",
-        confirmTooltip: "",
-        cancelText: "general:cancel",
-        cancelTooltip: "",
-        unlockPointerKey: QQ
-      });
-      !0 === await FQ.getResult() && (0, HQ.reloadBloxd)()
-    }
-
-    function GQ(QQ) {
-      let {
-        label: FQ,
-        options: wQ,
-        value: LQ,
-        onChange: qQ,
-        circleInfoText: oQ
-      } = QQ;
-      return (0, YQ.jsxs)("div", {
-        className: "SettingBox SegmentedSettingRow",
-        children: [(0, YQ.jsxs)("div", {
-          className: "SliderText",
-          children: [FQ, oQ && (0, YQ.jsx)(DQ.b, {
-            className: "SettingsTextInputCircleInfo",
-            hoverInfo: oQ
-          })]
-        }), (0, YQ.jsx)(kQ.c, {
-          ariaLabel: FQ,
-          options: wQ,
-          value: LQ,
-          onChange: qQ
-        })]
-      })
-    }
-  },
-  6490: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      default: () => PQ
-    });
-    var LQ = wQ(53),
-      qQ = wQ(1515),
-      oQ = wQ(6374),
-      DQ = wQ(1237),
-      kQ = wQ(317),
-      vQ = wQ(1348),
-      mQ = wQ(1503),
-      uQ = wQ(1451),
-      HQ = wQ(1367),
-      bQ = wQ(2489),
-      YQ = wQ(2633),
-      xQ = wQ(4400),
-      AQ = wQ(1140),
-      tQ = wQ(1489),
-      eQ = wQ(96),
-      MQ = wQ(1207);
-    const GQ = wQ.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var pQ = wQ(1070),
-      cQ = wQ.n(pQ),
-      CQ = wQ(1079),
-      SQ = wQ(1362),
-      iQ = wQ(6371),
-      WQ = wQ(1107);
-    const RQ = (0, LQ.lazy)((() => Promise.all([wQ.e(106), wQ.e(75), wQ.e(132), wQ.e(126), wQ.e(125)]).then((() => wQ(6406))).then((QQ => ({
-      default: QQ.ShaderPackPublishForm
-    })))));
-
-    function OQ(QQ) {
-      let {
-        details: FQ,
-        owner: wQ,
-        onChanged: qQ
-      } = QQ;
+    function Ck(kk, ek) {
+      const ik = !0 === ek.debugResult.gameRefused,
+        Dk = ik || ek.code === xk.n.REQUEST_TO_MATCHMAKING ? (0, Yk.m)(ek.message) : null;
+      if (null !== Dk) return Ak(kk, kk((0, Yk.r)(Dk)), kk(Yk.n[Dk])), !0;
+      if (ik) return async function(kk) {
+        const {
+          gameNameWithVariation: ek,
+          lobbyName: ik,
+          shownLobbyName: Dk
+        } = Pk.gameBridge.latest("connectedGame"), fk = "classic" === ek && (0, wk.D)(ik) ? Dk : await (0, lk.b)(kk, ek, ik);
+        return "" !== fk ? kk("general:cantJoinGame", {
+          game: fk
+        }) : kk("general:cantJoinThisGame")
+      }(kk).then((ik => {
+        Ak(kk, ik, ek.message)
+      })), !0;
       const {
-        t: DQ
-      } = (0, MQ.y)(), kQ = (0, mQ.useNavigatePreserveSearch)(), {
-        userContext: HQ
-      } = (0, AQ.e)(), [bQ, YQ] = (0, LQ.useState)(!1), [xQ, eQ] = (0, LQ.useState)(null), [GQ, pQ] = (0, LQ.useState)(!1), {
-        packId: OQ,
-        name: sQ,
-        description: rQ,
-        live: IQ
-      } = FQ;
-      async function UQ(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qQ;
-        YQ(!0), eQ(null);
-        try {
-          await QQ(), FQ()
-        } catch (wQ) {
-          console.error("Failed to change a shader pack", wQ), eQ((0, iQ.z)(wQ, DQ, "shaderPackListing:ownerActionFailed"))
-        } finally {
-          YQ(!1)
-        }
-      }
-      const NQ = (0, iQ.u)(HQ);
-      return (0, WQ.jsxs)("section", {
-        className: "ShaderPackOwnerPanel",
-        children: [(0, WQ.jsx)("h2", {
-          className: "ShaderPackSectionTitle",
-          children: DQ("general:manage")
-        }), (0, iQ.Y)(wQ, !(null === IQ || void 0 === IQ || !IQ.renderId), Date.now(), DQ).map((QQ => (0, WQ.jsxs)("div", {
-          className: cQ()("ShaderPackOwnerNotice", {
-            Warning: "warning" === QQ.tone
-          }),
-          children: [(0, WQ.jsx)(CQ.c, {
-            name: "warning" === QQ.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, WQ.jsxs)("div", {
-            children: [QQ.text, QQ.detail && (0, WQ.jsx)("pre", {
-              className: "ShaderPackOwnerNoticeDetail",
-              children: QQ.detail
-            })]
-          })]
-        }, QQ.text))), FQ.ban && (0, WQ.jsxs)("div", {
-          className: "ShaderPackOwnerNotice Warning",
-          children: [(0, WQ.jsx)(CQ.c, {
-            name: "ban"
-          }), (0, WQ.jsxs)("div", {
-            children: ["Banned by ", FQ.ban.byName, " on ", new Date(FQ.ban.at).toLocaleString()]
-          })]
-        }), xQ && (0, WQ.jsx)("div", {
-          className: "ShaderPackOwnerError",
-          children: xQ
-        }), (0, WQ.jsxs)("div", {
-          className: "ShaderPackOwnerActions",
-          children: [(0, WQ.jsxs)(uQ.L, {
-            disabled: bQ,
-            onClick: () => {
-              !async function() {
-                const QQ = await SQ.NotificationProvider.showInputPopup({
-                  title: "shaderPackListing:renameTitle",
-                  initialValue: sQ,
-                  maxLength: oQ.z,
-                  submitText: "general:save",
-                  validate: QQ => QQ.trim().length < oQ.B ? DQ("shaderPackListing:nameTooShort", {
-                    min: String(oQ.B)
-                  }) : null
-                }).getResult();
-                "notificationTornDown" !== QQ && "submit" === (null === QQ || void 0 === QQ ? void 0 : QQ.type) && QQ.value.trim() !== sQ && await UQ((() => tQ.b.updateShaderPack(HQ, {
-                  packId: OQ,
-                  name: QQ.value.trim()
-                })))
-              }()
-            },
-            children: [(0, WQ.jsx)(CQ.c, {
-              name: "pen"
-            }), " ", DQ("shaderPackListing:rename")]
-          }), (0, WQ.jsxs)(uQ.L, {
-            disabled: bQ,
-            onClick: () => {
-              !async function() {
-                const QQ = await SQ.NotificationProvider.showInputPopup({
-                  title: "shaderPackListing:editDescription",
-                  initialValue: rQ,
-                  maxLength: oQ.p,
-                  multiline: !0,
-                  allowEmptySubmit: !0,
-                  submitText: "general:save"
-                }).getResult();
-                "notificationTornDown" !== QQ && "submit" === (null === QQ || void 0 === QQ ? void 0 : QQ.type) && QQ.value.trim() !== rQ && await UQ((() => tQ.b.updateShaderPack(HQ, {
-                  packId: OQ,
-                  description: QQ.value.trim()
-                })))
-              }()
-            },
-            children: [(0, WQ.jsx)(CQ.c, {
-              name: "file-lines"
-            }), " ", DQ("shaderPackListing:editDescription")]
-          }), (0, WQ.jsxs)(uQ.L, {
-            disabled: bQ || wQ.isBanned && !wQ.listed,
-            onClick: () => {
-              UQ((() => tQ.b.updateShaderPack(HQ, {
-                packId: OQ,
-                listed: !wQ.listed
-              })))
-            },
-            children: [(0, WQ.jsx)(CQ.c, {
-              name: wQ.listed ? "eye-slash" : "eye"
-            }), " ", DQ(wQ.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !wQ.isBanned && (0, WQ.jsxs)(uQ.f, {
-            disabled: bQ,
-            onClick: () => {
-              pQ(!GQ)
-            },
-            children: [(0, WQ.jsx)(CQ.c, {
-              name: "upload"
-            }), " ", DQ("shaderPackListing:uploadVersion")]
-          }), (0, WQ.jsxs)(uQ.G, {
-            disabled: bQ || wQ.isBanned,
-            onClick: () => {
-              !async function() {
-                !0 === await SQ.NotificationProvider.showPromptPopup({
-                  title: "shaderPackListing:deleteTitle",
-                  subtitle: "shaderPackListing:deleteSubtitle",
-                  confirmText: "general:delete",
-                  cancelText: "general:cancel",
-                  destructive: !0
-                }).getResult() && await UQ((() => tQ.b.deleteShaderPack(HQ, OQ)), (() => {
-                  kQ(`${iQ.W}?section=mine`, {
-                    replace: !0
-                  })
-                }))
-              }()
-            },
-            children: [(0, WQ.jsx)(CQ.c, {
-              name: "trash-can"
-            }), " ", DQ("general:delete")]
-          }), NQ && (0, WQ.jsxs)(uQ.G, {
-            disabled: bQ,
-            onClick: () => {
-              UQ((() => tQ.b.setShaderPackBanned(HQ, OQ, !wQ.isBanned)))
-            },
-            children: [(0, WQ.jsx)(CQ.c, {
-              name: wQ.isBanned ? "circle-check" : "ban"
-            }), " ", wQ.isBanned ? "Unban" : "Ban"]
-          })]
-        }), GQ && (0, WQ.jsx)(LQ.Suspense, {
-          fallback: (0, WQ.jsx)(vQ.c, {}),
-          children: (0, WQ.jsx)(RQ, {
-            existing: {
-              packId: OQ,
-              name: sQ,
-              description: rQ
-            },
-            onPublished: () => {
-              pQ(!1), qQ()
-            }
-          })
-        })]
-      })
-    }
-    var sQ = wQ(71),
-      rQ = wQ(1870),
-      IQ = wQ(1295),
-      UQ = wQ(4875),
-      NQ = wQ(1213),
-      TQ = wQ(6382),
-      KQ = wQ(6377),
-      zQ = wQ(6388);
-
-    function lQ(QQ) {
-      let {
-        item: FQ
-      } = QQ;
-      const {
-        t: wQ
-      } = (0, MQ.y)(), [qQ] = (0, TQ.g)(), [DQ, kQ] = (0, LQ.useState)(qQ), [vQ, mQ] = (0, LQ.useState)(!1), [uQ, HQ] = (0, LQ.useState)(!1), {
-        s3Url: bQ
-      } = NQ.clientSideServerUrls, {
-        width: YQ,
-        height: xQ
-      } = oQ.t.large, AQ = (0, oQ.u)(bQ, FQ, DQ, "large"), {
-        renderVersion: tQ
-      } = FQ;
-      return (0, WQ.jsxs)("div", {
-        className: "ShaderPackPreviews",
-        children: [(0, WQ.jsx)(zQ.b, {
-          selected: DQ,
-          onSelect: QQ => {
-            kQ(QQ), mQ(!1)
-          },
-          imageUrl: QQ => (0, oQ.u)(bQ, FQ, QQ, "thumb")
-        }), (0, WQ.jsxs)("div", {
-          className: "ShaderPackPreviewStage",
-          children: [!vQ && (0, WQ.jsxs)("button", {
-            type: "button",
-            className: "ShaderPackPreviewMain",
-            title: null === tQ ? void 0 : wQ("shaderPackListing:fullSize"),
-            disabled: null === tQ,
-            onClick: () => {
-              HQ(!0)
-            },
-            children: [(0, WQ.jsx)("img", {
-              src: AQ,
-              width: YQ,
-              height: xQ,
-              alt: wQ(iQ.gb[DQ]),
-              draggable: !1
-            }), (0, WQ.jsx)(KQ.c, {
-              item: FQ
-            })]
-          }), !vQ && null !== tQ && (0, WQ.jsxs)(fQ, {
-            side: "Right",
-            onClick: () => {
-              mQ(!0)
-            },
-            children: [(0, WQ.jsx)(CQ.c, {
-              name: "arrows-left-right"
-            }), " ", wQ("shaderPackListing:compare")]
-          }), vQ && null !== tQ && (0, WQ.jsx)(XQ, {
-            item: FQ,
-            packUrl: AQ,
-            baselineUrl: (0, oQ.n)(bQ, tQ, DQ, "large")
-          }), vQ && (0, WQ.jsx)(fQ, {
-            side: "Left",
-            onClick: () => {
-              mQ(!1)
-            },
-            children: wQ("shaderPackListing:withPack")
-          }), vQ && (0, WQ.jsx)(fQ, {
-            side: "Right",
-            onClick: () => {
-              mQ(!1)
-            },
-            children: wQ("shaderPackListing:withoutPack")
-          })]
-        }), uQ && (0, WQ.jsx)(jQ, {
-          fullUrl: (0, oQ.u)(bQ, FQ, DQ, "full"),
-          largeUrl: AQ,
-          alt: wQ(iQ.gb[DQ]),
-          onClose: () => {
-            HQ(!1)
-          }
-        })]
-      })
-    }
-
-    function jQ(QQ) {
-      let {
-        fullUrl: FQ,
-        largeUrl: wQ,
-        alt: qQ,
-        onClose: oQ
-      } = QQ;
-      const DQ = (0, LQ.useRef)(null);
-      return (0, IQ.m)("popup", DQ, oQ), (0, LQ.useEffect)((() => {
-        function QQ(QQ) {
-          "Escape" === QQ.key && (QQ.stopPropagation(), oQ())
-        }
-        return window.addEventListener("keydown", QQ, !0), () => {
-          window.removeEventListener("keydown", QQ, !0)
-        }
-      }), [oQ]), (0, sQ.createPortal)((0, WQ.jsxs)("div", {
-        ref: DQ,
-        className: "ShaderPackFullSize",
-        onClick: oQ,
-        children: [(0, WQ.jsx)("img", {
-          className: "ShaderPackFullSizeImage",
-          src: FQ,
-          alt: qQ,
-          draggable: !1,
-          style: {
-            backgroundImage: `url(${wQ})`
-          }
-        }), (0, WQ.jsx)(uQ.j, {
-          className: "ShaderPackFullSizeClose",
-          onClick: oQ
-        })]
-      }), document.body)
-    }
-    const aQ = 5;
-
-    function XQ(QQ) {
-      let {
-        item: FQ,
-        packUrl: wQ,
-        baselineUrl: qQ
-      } = QQ;
-      const {
-        t: DQ
-      } = (0, MQ.y)(), [kQ, vQ] = (0, LQ.useState)(50), mQ = (0, LQ.useRef)(!1), uQ = (0, LQ.useRef)(null), {
-        width: HQ,
-        height: bQ
-      } = oQ.t.large;
-
-      function YQ(QQ) {
-        vQ((FQ => (0, rQ.h)(FQ + QQ, 0, 100)))
-      }
-
-      function xQ(QQ) {
-        const FQ = QQ.currentTarget.getBoundingClientRect();
-        vQ((0, rQ.h)((QQ.clientX - FQ.left) / FQ.width * 100, 0, 100))
-      }
-      return (0, UQ.c)(uQ, {
-        adjust: QQ => {
-          YQ(QQ * aQ)
-        },
-        setFraction: QQ => {
-          vQ(100 * QQ)
-        },
-        endDrag: () => {}
-      }), (0, WQ.jsxs)("div", {
-        ref: uQ,
-        className: "ShaderPackCompare",
-        "data-pad-slider": "",
-        "data-pad-focusable": "",
-        role: "slider",
-        tabIndex: 0,
-        "aria-label": DQ("shaderPackListing:compare"),
-        "aria-valuemin": 0,
-        "aria-valuemax": 100,
-        "aria-valuenow": Math.round(kQ),
-        style: {
-          "--split": `${kQ}%`
-        },
-        onKeyDown: function(QQ) {
-          const FQ = "ArrowLeft" === QQ.key ? -aQ : "ArrowRight" === QQ.key ? aQ : 0;
-          0 !== FQ && (QQ.preventDefault(), YQ(FQ))
-        },
-        onPointerDown: QQ => {
-          mQ.current = !0, QQ.currentTarget.setPointerCapture(QQ.pointerId), xQ(QQ)
-        },
-        onPointerMove: QQ => {
-          mQ.current && xQ(QQ)
-        },
-        onPointerUp: () => {
-          mQ.current = !1
-        },
-        onPointerCancel: () => {
-          mQ.current = !1
-        },
-        children: [(0, WQ.jsx)("img", {
-          className: "ShaderPackCompareBaseline",
-          src: qQ,
-          width: HQ,
-          height: bQ,
-          alt: "",
-          draggable: !1,
-          style: {
-            backgroundImage: `url(${wQ})`
-          }
-        }), (0, WQ.jsx)("div", {
-          className: "ShaderPackCompareLine"
-        }), (0, WQ.jsx)("img", {
-          className: "ShaderPackComparePack",
-          src: wQ,
-          width: HQ,
-          height: bQ,
-          alt: "",
-          draggable: !1
-        }), (0, WQ.jsx)(KQ.c, {
-          item: FQ,
-          className: "ShaderPackCompareNotice"
-        })]
-      })
-    }
-
-    function fQ(QQ) {
-      let {
-        side: FQ,
-        onClick: wQ,
-        children: LQ
-      } = QQ;
-      return (0, WQ.jsx)("button", {
-        type: "button",
-        className: `ShaderPackStageButton ${FQ}`,
-        onClick: wQ,
-        children: (0, WQ.jsx)("span", {
-          className: "ShaderPackStageButtonFace SmallTextBold",
-          children: LQ
-        })
-      })
-    }
-    var VQ = wQ(4837),
-      hQ = wQ(282),
-      JQ = wQ(6485);
-    const EQ = {
-      compiler: "shaderPack:compilerUnavailable",
-      download: "shaderPackListing:useDownloadFailed",
-      apiVersion: "shaderPackListing:useOtherApiVersion",
-      invalid: "shaderPackListing:useInvalid",
-      errors: "shaderPackListing:useFailsHere",
-      save: "shaderPack:saveFailed"
-    };
-
-    function nQ(QQ) {
-      const {
-        userContext: FQ
-      } = (0, AQ.e)(), [qQ, oQ] = (0, LQ.useState)(null), [DQ, kQ] = (0, LQ.useState)(!1), [vQ, mQ] = (0, LQ.useState)(!1), [uQ, HQ] = (0, LQ.useState)(null), bQ = null === QQ || void 0 === QQ ? void 0 : QQ.packId, YQ = null === QQ || void 0 === QQ ? void 0 : QQ.sourceHash;
-      return (0, LQ.useEffect)((() => {
-        if (kQ(!1), HQ(null), void 0 === bQ) return;
-        let QQ = !1;
-        return Promise.all([(0, eQ.hasUsableWebGpuAdapter)(), (0, JQ.f)()]).then((FQ => {
-          let [wQ, LQ] = FQ;
-          var qQ;
-          QQ || (oQ(wQ), kQ((null === LQ || void 0 === LQ || null === (qQ = LQ.listing) || void 0 === qQ ? void 0 : qQ.packId) === bQ && LQ.listing.sourceHash === YQ))
-        })).catch((FQ => {
-          console.error("Failed to check whether this shader pack can be used", FQ), QQ || oQ(!1)
-        })), () => {
-          QQ = !0
-        }
-      }), [bQ, YQ]), {
-        webGpuUsable: qQ,
-        inUse: DQ,
-        busy: vQ,
-        errorKey: uQ,
-        use: () => {
-          null !== QQ && async function(QQ) {
-            mQ(!0), HQ(null);
+        joinFailure: fk
+      } = ek.debugResult, Sk = "refused" === (null === fk || void 0 === fk ? void 0 : fk.at) ? fk.code : null;
+      return Sk === nk.c.schematicNotPublished.code ? (async function(kk, ek) {
+        const ik = (0, Uk.p)(Pk.gameBridge.latest("connectedGame").gameNameWithVariation),
+          Dk = await async function(kk) {
             try {
-              const {
-                installListedShaderPack: LQ
-              } = await Promise.all([wQ.e(75), wQ.e(132), wQ.e(127)]).then((() => wQ(39921))), qQ = await LQ({
-                packId: QQ.packId,
-                sourceHash: QQ.sourceHash,
-                name: QQ.name,
-                ownerName: QQ.ownerName,
-                description: QQ.description
-              });
-              if ("failed" === qQ.kind) return void HQ(EQ[qQ.reason]);
-              kQ(!0), tQ.b.recordShaderPackDownload(FQ, QQ.packId).catch((QQ => {
-                console.error("Failed to count a shader pack's download", QQ)
-              })), (0, VQ.h)()
-            } catch (LQ) {
-              console.error("Failed to use the shader pack", LQ), HQ("shaderPack:unexpectedError")
-            } finally {
-              mQ(!1)
+              const ek = await pk.b.getGame(await yk.userContextManager.getCurrentUserContext(), kk, !0);
+              return ek.gamePublished ? null : ek.name
+            } catch (ek) {
+              return ek instanceof xk.d && 435 === ek.httpCode || console.error(`Failed to get unpublished game ${kk}`, ek), null
             }
-          }(QQ)
-        }
-      }
+          }(ik);
+        if (null === Dk) return void Ak(kk, kk("general:cantJoinThisGame"), ek);
+        const fk = await Mk.NotificationProvider.showPromptPopup({
+          icon: "rocket-launch",
+          title: kk("studio:gameNotPublishedTitle", {
+            game: Dk
+          }),
+          confirmText: kk("studio:publishInStudio"),
+          cancelText: kk("general:cancel")
+        }).getResult();
+        !0 === fk && (0, mk.navigatePreserveSearch)((0, Lk.m)((0, Hk.d)(ik), "manage"))
+      }(kk, ek.message), !0) : Sk === nk.c.schematicBanned.code && (Ak(kk, kk("general:cantJoinThisGame"), ek.message), !0)
     }
 
-    function gQ(QQ) {
-      let {
-        packUse: FQ
-      } = QQ;
-      const {
-        t: wQ
-      } = (0, MQ.y)(), {
-        webGpuUsable: LQ,
-        inUse: qQ,
-        busy: oQ,
-        errorKey: DQ,
-        use: kQ
-      } = FQ;
-      return (0, WQ.jsxs)("div", {
-        className: "ShaderPackUse",
-        children: [(0, WQ.jsxs)(uQ.m, {
-          disabled: !0 !== LQ || qQ,
-          loading: oQ,
-          onClick: kQ,
-          children: [(0, WQ.jsx)(CQ.c, {
-            name: qQ ? "check" : "download"
-          }), " ", wQ(qQ ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === LQ && (0, WQ.jsx)("div", {
-          className: "ShaderPackUseNote",
-          children: wQ((0, hQ.g)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), DQ && (0, WQ.jsx)("div", {
-          className: "ShaderPackUseNote Error",
-          children: wQ(DQ)
-        })]
+    function Ak(kk, ek, ik) {
+      Mk.NotificationProvider.showPromptPopup({
+        icon: "lock",
+        title: ek,
+        subtitle: ik,
+        confirmText: kk("general:ok"),
+        cancelText: ""
       })
     }
+    var jk = ik(4528),
+      sk = ik(26),
+      dk = ik(1220),
+      Vk = ik(1688),
+      Fk = ik(99),
+      uk = ik(1291),
+      qk = ik(1400),
+      Ik = ik(4465),
+      zk = ik(4315),
+      Qk = ik(4287),
+      vk = ik(3206),
+      Ek = ik(1311),
+      hk = ik(741),
+      ak = ik(1212),
+      Wk = ik(3271),
+      tk = ik(3121),
+      Xk = ik(1337),
+      Bk = ik(1327),
+      ck = ik(4915),
+      Tk = ik(8723),
+      Zk = ik(2894),
+      Ok = ik(1066);
 
-    function PQ() {
-      var QQ;
+    function gk(kk) {
+      let {
+        onApply: ek,
+        onSkip: ik
+      } = kk;
       const {
-        t: FQ
-      } = (0, MQ.y)(), wQ = (0, mQ.useNavigatePreserveSearch)(), {
-        packId: oQ
-      } = (0, qQ.y)(), {
-        userContext: DQ,
-        isUserContextUpdating: kQ
-      } = (0, AQ.e)(), [HQ, bQ] = (0, LQ.useState)(null), [YQ, eQ] = (0, LQ.useState)(null), [GQ, pQ] = (0, LQ.useState)(0), cQ = (0, LQ.useRef)(0);
-
-      function CQ() {
-        var QQ;
-        null !== (QQ = (0, mQ.getPreviousLocation)()) && void 0 !== QQ && QQ.startsWith(iQ.W) ? wQ(-1) : wQ(iQ.W)
-      }(0, xQ.c)(CQ), (0, TQ.d)(), (0, LQ.useEffect)((() => {
-        if (kQ || void 0 === oQ) return;
-        const QQ = ++cQ.current;
-        eQ(null), tQ.b.getShaderPack(DQ, oQ).then((FQ => {
-          cQ.current === QQ && bQ(FQ)
-        })).catch((FQ => {
-          cQ.current === QQ && (console.error("Failed to get the shader pack", FQ), bQ(null), eQ({
-            error: FQ
-          }))
-        }))
-      }), [oQ, DQ, kQ, GQ]);
-      const SQ = () => {
-          pQ((QQ => QQ + 1))
+        t: Dk
+      } = (0, Kk.D)();
+      return (0, bk.useEffect)((() => {
+        Zk.e.skipPlayWait()
+      }), []), (0, Ok.jsx)(Xk.f, {
+        icon: "download",
+        title: "customTexturePack:downloadTitle",
+        subtitle: (0, Ok.jsxs)("div", {
+          className: "CustomTexturePackDownloaderSubtitleText",
+          children: [Dk("customTexturePack:downloadPrompt"), (0, Ok.jsx)("div", {
+            className: "CustomTexturePackDownloaderWarningText",
+            children: Dk("customTexturePack:authorWarning")
+          }), (0, Ok.jsx)("div", {
+            className: "CustomTexturePackDownloaderSecondaryText",
+            children: Dk("customTexturePack:existingPackSaved")
+          })]
+        }),
+        confirm: {
+          text: "general:apply",
+          onClick: ek
         },
-        RQ = (null === HQ || void 0 === HQ ? void 0 : HQ.packId) === oQ ? HQ : null,
-        sQ = (0, TQ.j)(),
-        rQ = nQ(null !== (QQ = null === RQ || void 0 === RQ ? void 0 : RQ.live) && void 0 !== QQ ? QQ : null),
-        IQ = null !== RQ && void 0 !== RQ && RQ.live ? (0, WQ.jsx)(ZQ, {
-          item: RQ.live,
-          favourites: sQ,
-          packUse: rQ
-        }) : null;
-      return (0, WQ.jsxs)("article", {
-        className: "ShaderPackInformation AnimFadeIn",
-        children: [(0, WQ.jsx)(uQ.b, {
-          onClick: CQ,
-          children: FQ("shaderPackListing:backToPacks")
-        }), null === RQ && null === YQ && (0, WQ.jsx)("div", {
-          className: "ShaderPackInformationMessage",
-          children: (0, WQ.jsx)(vQ.c, {})
-        }), null !== YQ && (0, WQ.jsxs)("div", {
-          className: "ShaderPackInformationMessage",
-          children: [(0, iQ.z)(YQ.error, FQ, "shaderPackListing:loadPackFailed"), (0, WQ.jsx)(uQ.f, {
-            onClick: SQ,
-            children: FQ("general:tryAgain")
-          })]
-        }), null !== RQ && null === YQ && (0, WQ.jsxs)("div", {
-          className: "ShaderPackInformationBody",
-          children: [(0, WQ.jsxs)("header", {
-            className: "ShaderPackInformationHeader",
-            children: [(0, WQ.jsx)("h1", {
-              className: "FullyFancyText",
-              children: RQ.name
-            }), IQ]
-          }), RQ.live && (0, WQ.jsx)(lQ, {
-            item: RQ.live
-          }), RQ.live && (0, WQ.jsx)(yQ, {
-            item: RQ.live,
-            ownerPreview: RQ.ownerPreview,
-            bloxdhubSlug: RQ.bloxdhubSlug,
-            actions: IQ
-          }), RQ.owner && (0, WQ.jsx)(OQ, {
-            details: RQ,
-            owner: RQ.owner,
-            onChanged: SQ
-          })]
-        })]
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: ik
+        }
       })
     }
-
-    function ZQ(QQ) {
-      let {
-        item: FQ,
-        favourites: wQ,
-        packUse: LQ
-      } = QQ;
-      const qQ = wQ.isFavourite(FQ.packId);
-      return (0, WQ.jsxs)("div", {
-        className: "ShaderPackInformationActions",
-        children: [eQ.featureFlags.settings.canUseShaderPacks && (0, WQ.jsx)(gQ, {
-          packUse: LQ
-        }), (0, WQ.jsx)(uQ.w, {
-          className: "ShaderPackInformationLike",
-          onClick: () => {
-            wQ.toggle(FQ.packId)
+    async function Gk() {
+      let kk = !1;
+      const ek = Mk.NotificationProvider.showCustomPopup({
+        body: ek => (0, Ok.jsx)(gk, {
+          onApply: () => {
+            kk = !0, ek()
           },
-          isLiked: !0 === qQ,
-          isLoading: null === qQ
-        })]
-      })
+          onSkip: ek
+        }),
+        disableExitButton: !0,
+        disablePressBackgroundToClose: !0
+      });
+      return await ek.getResult(), kk
     }
+    let Nk = {
+      wanted: !1
+    };
+    let Rk = null;
 
-    function yQ(QQ) {
-      let {
-        item: FQ,
-        ownerPreview: wQ,
-        bloxdhubSlug: LQ,
-        actions: qQ
-      } = QQ;
-      const {
-        t: kQ
-      } = (0, MQ.y)(), vQ = (0, YQ.t)(), uQ = null === LQ ? null : (0, oQ.e)(LQ);
-      return (0, WQ.jsxs)("div", {
-        className: "ShaderPackFacts",
-        children: [FQ.description && (0, WQ.jsx)("p", {
-          className: "ShaderPackDescription",
-          children: FQ.description
-        }), (0, WQ.jsxs)("div", {
-          className: "ShaderPackFeatureList",
-          children: [(null !== wQ || null !== uQ) && (0, WQ.jsx)("div", {
-            className: "ShaderPackAuthor",
-            children: null !== wQ ? (0, WQ.jsxs)(WQ.Fragment, {
-              children: [(0, WQ.jsx)(bQ.e, {
-                playerSocialPreview: wQ,
-                showLocation: !1,
-                linkToProfile: !0
-              }), null !== uQ && (0, WQ.jsx)("a", {
-                className: "ShaderPackBloxdhubLogo",
-                href: uQ,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                children: (0, WQ.jsx)("img", {
-                  src: GQ,
-                  alt: oQ.c
-                })
-              })]
-            }) : (0, WQ.jsxs)("a", {
-              className: "ShaderPackBloxdhubName",
-              href: uQ,
-              target: "_blank",
-              rel: "noopener noreferrer",
-              children: [oQ.c, (0, WQ.jsx)("img", {
-                src: GQ,
-                alt: ""
-              })]
-            })
-          }), iQ.A.filter((QQ => FQ.features.includes(QQ))).map((QQ => (0, WQ.jsx)(mQ.LinkPreserveSearch, {
-            className: "ShaderPackFeature",
-            to: (0, iQ.K)(QQ),
-            children: kQ(iQ.N[QQ])
-          }, QQ)))]
-        }), qQ, (0, WQ.jsxs)("dl", {
-          className: "ShaderPackFactList",
-          children: [(0, WQ.jsxs)("div", {
-            children: [(0, WQ.jsx)("dt", {
-              children: kQ("shaderPackListing:downloads")
-            }), (0, WQ.jsx)("dd", {
-              children: (0, DQ.W)(FQ.downloads)
-            })]
-          }), (0, WQ.jsx)(BQ, {
-            label: kQ("shaderPackListing:updated"),
-            time: FQ.listedUpdatedAt,
-            now: vQ
-          }), (0, WQ.jsx)(BQ, {
-            label: kQ("shaderPackListing:created"),
-            time: FQ.publishedAt,
-            now: vQ
-          }), null !== FQ.gpuCost && (0, WQ.jsxs)("div", {
-            children: [(0, WQ.jsx)("dt", {
-              children: kQ("shaderPackListing:lag")
-            }), (0, WQ.jsx)("dd", {
-              children: kQ("shaderPackListing:lagPercent", {
-                percent: String((0, iQ.U)(FQ.gpuCost))
-              })
-            })]
-          }), (0, WQ.jsxs)("div", {
-            children: [(0, WQ.jsx)("dt", {
-              children: kQ("shaderPackListing:size")
-            }), (0, WQ.jsx)("dd", {
-              children: kQ("shaderPackListing:sizeValue", {
-                kilobytes: String((0, iQ.R)(FQ.sourceBytes))
-              })
-            })]
-          }), (0, WQ.jsxs)("div", {
-            children: [(0, WQ.jsx)("dt", {
-              children: kQ("shaderPackListing:files")
-            }), (0, WQ.jsx)("dd", {
-              children: FQ.fileCount
-            })]
-          })]
-        })]
-      })
+    function Jk(kk) {
+      kk.setGamePackConfirm(Gk), Rk = kk
     }
+    var ke = ik(3447);
 
-    function BQ(QQ) {
+    function ee(kk) {
       let {
-        label: FQ,
-        time: wQ,
-        now: LQ
-      } = QQ;
-      const {
-        t: qQ,
-        selectedLanguage: oQ
-      } = (0, MQ.y)(), DQ = new Date(wQ);
-      let vQ = DQ.toLocaleDateString();
-      if (LQ - wQ <= 30 * kQ.j) {
-        const QQ = (0, MQ.k)(oQ.code, "shaderPackListing:timeAgo");
-        vQ = qQ("shaderPackListing:timeAgo", {
-          time: (0, kQ.db)(QQ, wQ, LQ)
-        })
+        schematicId: ek,
+        texturePackKey: ik,
+        onClose: Dk
+      } = kk;
+      const [fk, Sk] = (0, bk.useState)("prompt"), [rk, Pk] = (0, bk.useState)(null), mk = (0, ke.e)();
+
+      function Mk() {
+        Dk()
       }
-      return (0, WQ.jsx)(HQ.f, {
-        tooltipInner: DQ.toLocaleString(),
-        children: (0, WQ.jsxs)("div", {
-          children: [(0, WQ.jsx)("dt", {
-            children: FQ
-          }), (0, WQ.jsx)("dd", {
-            children: vQ
-          })]
-        })
-      })
-    }
-  },
-  4867: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => DQ
-    });
-    var LQ = wQ(1070),
-      qQ = wQ.n(LQ),
-      oQ = wQ(1107);
-
-    function DQ(QQ) {
-      let {
-        options: FQ,
-        value: wQ,
-        onChange: LQ,
-        ariaLabel: DQ,
-        className: kQ,
-        reselectable: vQ = !1,
-        keepsFocus: mQ = !1,
-        padTabs: uQ
-      } = QQ;
-      const HQ = void 0 !== uQ;
-      return (0, oQ.jsx)("div", {
-        className: qQ()("SegmentedToggle", kQ),
-        role: "group",
-        "aria-label": DQ,
-        "data-pad-tabs": uQ,
-        children: FQ.map((QQ => {
-          const FQ = QQ.value === wQ;
-          return (0, oQ.jsx)("button", {
-            type: "button",
-            "aria-pressed": FQ,
-            "data-pad-tab": HQ || void 0,
-            "data-pad-selected": HQ && FQ ? "true" : void 0,
-            "data-pad-default-focus": HQ && FQ || void 0,
-            "aria-label": QQ.ariaLabel,
-            title: QQ.ariaLabel,
-            className: qQ()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: FQ
-            }),
-            onMouseDown: mQ ? QQ => {
-              QQ.preventDefault()
-            } : void 0,
-            onClick: () => {
-              FQ && !vQ || LQ(QQ.value)
-            },
-            children: QQ.label
-          }, QQ.value)
-        }))
-      })
-    }
-  },
-  4875: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => oQ,
-      c: () => DQ
-    });
-    var LQ = wQ(53);
-    const qQ = new WeakMap,
-      oQ = QQ => {
-        var FQ;
-        const wQ = QQ.closest("[data-pad-slider]");
-        return wQ && null !== (FQ = qQ.get(wQ)) && void 0 !== FQ ? FQ : null
-      },
-      DQ = (QQ, FQ) => {
-        const wQ = (0, LQ.useRef)(FQ);
-        wQ.current = FQ, (0, LQ.useEffect)((() => {
-          if (QQ.current) return ((QQ, FQ) => (qQ.set(QQ, FQ), () => {
-            qQ.get(QQ) === FQ && qQ.delete(QQ)
-          }))(QQ.current, {
-            adjust: QQ => {
-              wQ.current.adjust(QQ)
-            },
-            setFraction: QQ => {
-              wQ.current.setFraction(QQ)
-            },
-            endDrag: () => {
-              wQ.current.endDrag()
-            }
+      return "prompt" === fk ? (0, Ok.jsx)(gk, {
+        onApply: async function() {
+          Sk("downloading");
+          try {
+            const kk = await async function(kk, ek) {
+              const ik = await (0, ck.e)(ek);
+              if (ik) return {
+                pack: ik,
+                key: ek
+              };
+              const Dk = await yk.userContextManager.getCurrentUserContext(),
+                fk = (await pk.b.getGame(Dk, kk, !0)).customTexturePackKey;
+              if (!fk) return null;
+              const Sk = await (0, ck.e)(fk);
+              if (!Sk) throw new Error("The texture pack could not be found");
+              return {
+                pack: Sk,
+                key: fk
+              }
+            }(ek, ik);
+            if (!mk.current) return;
+            if (!kk) return void Dk();
+            if ((0, Wk.n)(kk.pack)) return void Sk("refused");
+            tk.e.setFromJson(kk.pack, "customGame"), await tk.e.saveTemporaryTexturePack(kk.key), mk.current && (0, Vk.reloadBloxd)()
+          } catch (kk) {
+            Pk(kk instanceof Error ? kk.message : String(kk)), Sk("error")
+          }
+        },
+        onSkip: Mk
+      }) : "downloading" === fk ? (0, Ok.jsx)(Xk.f, {
+        icon: "download",
+        title: "customTexturePack:downloading",
+        subtitle: (0, Ok.jsx)("div", {
+          className: "CustomTexturePackDownloaderLogoLoaderContainer",
+          children: (0, Ok.jsx)(Bk.d, {
+            showFace: !0
           })
-        }), [QQ])
+        })
+      }) : "error" === fk ? (0, Ok.jsx)(Xk.f, {
+        icon: "face-worried",
+        title: "customTexturePack:errorTitle",
+        subtitle: rk,
+        confirm: {
+          text: "customTexturePack:refreshPage",
+          onClick: () => {
+            window.location.reload()
+          }
+        },
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: Mk
+        }
+      }) : "refused" === fk ? (0, Ok.jsx)(Xk.f, {
+        icon: "face-worried",
+        title: "customTexturePack:cantApplyTitle",
+        subtitle: "customTexturePack:gamePackHasExternalUrls",
+        confirm: {
+          text: "general:continue",
+          onClick: Mk
+        }
+      }) : null
+    }
+    var ie = ik(8732),
+      De = ik(4270),
+      fe = ik(1735),
+      Se = ik(2866),
+      be = ik(4279),
+      re = ik(2092),
+      Pe = ik(4616),
+      me = ik(1284),
+      Me = ik(1686),
+      Ke = ik(610),
+      xe = ik(711);
+
+    function ne() {
+      const kk = fk.b.get("clientEscMenuOptions");
+      Pk.gameBridge.send("setLookSensitivity", fk.b.get("isTouchScreen") ? (0, xe.i)(kk) : kk.mouseSensitivity)
+    }
+
+    function Ue(kk) {
+      const ek = kk.asError();
+      if (ek.debugResult.Ji || (0, Me.e)(ek.debugResult.error)) return;
+      console.log("Failed to join lobby:", ek.message);
+      const ik = "timedOut" === ek.debugResult.gameServerUnreachable;
+      (0, Se.reportClientError)("matchmake_failed", ek.message, ik ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : xk.n[ek.code]);
+      const {
+        error: Dk
+      } = ek.debugResult;
+      if (Dk instanceof vk.i && "default" !== Dk.packSource) {
+        const kk = (0, be.g)("js", "game" === Dk.packSource ? "game" : "page", (0, be.k)(Dk));
+        (0, Se.reportClientError)("texture_pack", Dk, kk)
       }
+    }
+
+    function He(kk) {
+      if (null === kk || void 0 === kk || !kk.isError()) return !1;
+      const ek = kk.asError();
+      return ek.code === xk.n.REQUEST_TO_MATCHMAKING && !(0, Me.e)(ek.debugResult.error)
+    }
+    async function we(kk, ek, ik) {
+      const Dk = (0, Pe.O)(ek);
+      async function bk(kk, ek, ik, Dk) {
+        var bk;
+        if (Dk.aborted) return null;
+        null === fk.b.get("gameEntrySource") && (0, fk.j)("directPlayUrl"), Ke.s && (0, Tk.f)().catch((() => {})), fk.b.set({
+          gameState: "findingLobby"
+        }), sk.j.tm("loadingScreenState", "loadingPage:findingLobby");
+        const rk = await yk.userContextManager.getCurrentUserContext();
+        Pk.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: ek,
+          discordContext: kk instanceof ak.c ? kk.getSerialisableParams() : null
+        }), (0, fe.g)(null !== (bk = Zk.e.playInputAt()) && void 0 !== bk ? bk : performance.now());
+        const mk = await async function(kk, ek, ik, Dk, fk) {
+          try {
+            await Sk.reqLibsLoadedPromise
+          } catch (bk) {
+            return dk.d.errorWithCode(bk.toString(), xk.n.LOAD_REQUIRED_LIBS, {
+              error: bk,
+              severity: "medium"
+            })
+          }
+          return sk.j.tm("matchmakeAndPlayStepCompleted", {
+            step: xk.n.LOAD_REQUIRED_LIBS,
+            totalSubSteps: 1
+          }), (0, Sk.matchmakeAndPlayMaybeUnloaded)(kk, ek, ik, Dk, fk)
+        }(kk, ek, ik, rk, Dk), Mk = mk.isError() ? mk.asError() : null;
+        if (Dk.aborted) return Mk && Ue(mk), Pk.gameBridge.send("leaveGame", {
+          reloadPath: null
+        }), null;
+        if (null !== Mk && void 0 !== Mk && Mk.debugResult.Ji) return console.log("Join cancelled:", Mk.message), null;
+        if (Mk) return mk;
+        const {
+          gameNameWithVariation: Kk,
+          lobbyName: nk
+        } = mk.getValue();
+        return ne(), (0, me.B)().setGameViewShown(!0), rk.recordJoin(Kk, nk), (0, uk.H)(), mk
+      }
+      return Dk && (0, fk.j)("updateRejoin"), (0, re.h)((async fk => {
+        try {
+          var Sk;
+          let rk = kk,
+            Pk = await bk(rk, ek, ik, fk);
+          for (let kk = 0; Dk && kk < Pe.m && (He(Pk) && await (0, Pe.Q)((0, Pe.v)(kk), fk)); kk++) rk = (0, Pe.z)(rk, kk + 1, "string" === typeof rk && (0, wk.I)(rk)), Pk = await bk(rk, ek, ik, fk);
+          return null !== (Sk = Pk) && void 0 !== Sk && Sk.isError() && Ue(Pk), Pk
+        } catch (rk) {
+          if ((0, Se.reportClientError)("matchmake_failed", rk, "unexpected"), Pk.gameBridge.send("leaveGame", {
+              reloadPath: fk.aborted ? null : "/"
+            }), fk.aborted) return null;
+          throw rk
+        }
+      }), (async kk => {
+        var ik;
+        if (Dk) return;
+        const fk = (0, uk.A)();
+        null !== fk && (await fk, kk.aborted) || (null !== (ik = hk.d[ek]) && void 0 !== ik && ik.playAdBeforeMatchmaking ? (Zk.e.skipPlayWait(), await new Promise((kk => {
+          (0, uk.$)((() => {
+            kk(!0)
+          }), "video_start")
+        }))) : (0, uk.$)((() => {}), "video_start"))
+      }))
+    }
+
+    function le() {
+      const {
+        t: kk
+      } = (0, Kk.D)(), ek = (0, mk.useNavigatePreserveSearch)(), ik = (0, Dk.p)(), nk = (0, Dk.y)(), Hk = (0, bk.useRef)({
+        t: kk,
+        navigate: ek
+      });
+      Hk.current = {
+        t: kk,
+        navigate: ek
+      };
+      const Yk = (0, bk.useRef)("");
+      Yk.current = ik.pathname + ik.search;
+      const {
+        gameState: Lk,
+        clientEscMenuOptions: Ak
+      } = (0, fk.n)(["gameState", "clientEscMenuOptions"]), sk = (0, bk.useRef)(null), dk = (0, bk.useRef)(!1);
+      var hk;
+      (0, re.j)(), (0, re.l)(), hk = Ke.s, (0, bk.useEffect)((() => {
+        if (!hk) return;
+        let kk = !0;
+        return (0, Tk.f)().then((ek => {
+          kk && Jk(ek)
+        })).catch((() => {})), () => {
+          var ek;
+          kk = !1, Nk.wanted = !1, null === (ek = Rk) || void 0 === ek || ek.setGamePackConfirm(null), Rk = null
+        }
+      }), [hk]), (0, bk.useEffect)((() => {
+        var kk;
+        (0, Sk.needGameClientNow)();
+        const {
+          t: ek,
+          navigate: Dk
+        } = Hk.current, bk = (0, ie.d)(nk, ik.search);
+        if (nk.lobbyName && !new URLSearchParams(ik.search).has("lobby")) return void Dk((0, Ek.d)(bk.gameNameWithVariation, bk.lobbyName), {
+          replace: !0
+        });
+        let rk = Promise.resolve({
+          shouldMatchmake: !0
+        });
+        if ("/play/discord-custom-lobby" === ik.pathname) {
+          const kk = fk.b.get("discordContext");
+          if (!kk) return void Dk("/");
+          rk = jk.d.setupDiscordLobby(kk, "classic").then((() => ({
+            shouldMatchmake: !0,
+            discordContext: kk
+          }))).catch((ek => (console.error("Failed to setup discord lobby", ek), {
+            shouldMatchmake: !1,
+            discordContext: kk
+          })))
+        } else if (!bk.gameNameWithVariation || !(0, wk.G)(bk.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${bk.gameNameWithVariation}`), void Dk(-1);
+        const Kk = sk.current;
+        if (null !== Kk && bk.gameNameWithVariation === Kk.gameNameWithVariation && bk.lobbyName === Kk.lobbyName) return;
+        if (Pk.gameBridge.latest("connectedGame").replay) return void(0, re.e)(null);
+        if ("releaseCountdown" === (null === (kk = (0, lk.d)(bk.gameNameWithVariation)) || void 0 === kk ? void 0 : kk.type)) return console.error(`Game hasn't been released yet: ${bk.gameNameWithVariation}`), void Dk(-1);
+        const Lk = dk.current;
+        dk.current = !1, (0, uk.C)(), fk.b.set({
+          gameState: "loadingScreen"
+        });
+        const Ak = function() {
+            Nk.wanted = !1;
+            const kk = {
+              wanted: !0
+            };
+            return Nk = kk, () => kk.wanted
+          }(),
+          qk = bk.gameNameWithVariation;
+        if (qk && (Ke.s || (0, Uk.j)(qk))) {
+          const kk = Ke.s ? Promise.all([(0, Tk.f)(), yk.userContextManager.getCurrentUserContext()]).then((kk => {
+            let [ek, ik] = kk;
+            if (Ak()) return Jk(ek), ek.packForGame(qk, ik, Ak)
+          })) : async function(kk) {
+            await tk.e.indexedDbValuesAreLoaded();
+            const ek = await yk.userContextManager.getCurrentUserContext(),
+              ik = (0, Uk.p)(kk);
+            let Dk;
+            try {
+              Dk = await pk.b.getGame(ek, ik, !0)
+            } catch (bk) {
+              return void console.error("Failed to get game", bk)
+            }
+            const fk = Dk.customTexturePackKey;
+            if (!fk) return void(tk.e.isUsingTemporaryTexturePack() && ((0, Vk.reloadBloxd)(), await new Promise((() => {}))));
+            if (tk.e.isUsingTemporaryTexturePack() && tk.e.getTemporaryTexturePackSource() === fk) return;
+            const Sk = Mk.NotificationProvider.showCustomPopup({
+              body: kk => (0, Ok.jsx)(ee, {
+                schematicId: ik,
+                texturePackKey: fk,
+                onClose: kk
+              }),
+              disableExitButton: !0,
+              disablePressBackgroundToClose: !0
+            });
+            await Sk.getResult()
+          }(qk), ek = rk;
+          rk = kk.catch((kk => {
+            console.error("Failed to check for custom texture pack", kk)
+          })).then((() => ek))
+        }
+        const hk = null !== sk.current;
+        sk.current = null, (0, re.e)(null);
+        const ak = () => {
+          Lk ? (0, mk.navigateToHomePage)() : (dk.current = hk, Dk(-1))
+        };
+        let Wk = !1;
+        const Xk = ik.pathname + ik.search,
+          Bk = () => !Wk && Yk.current === Xk;
+        return rk.then((kk => {
+          let {
+            shouldMatchmake: ik,
+            discordContext: Sk
+          } = kk;
+          Bk() && (ik ? we(null !== Sk && void 0 !== Sk ? Sk : bk.lobbyName, Sk ? "classic" : bk.gameNameWithVariation, bk.directJoinVmUrl).then((kk => {
+            if (null !== kk && Bk())
+              if (kk.isError()) {
+                var ik;
+                const Sk = kk.asError(),
+                  rk = null !== (ik = Sk.debugResult.severity) && void 0 !== ik ? ik : "high";
+                if ((0, Me.e)(Sk.debugResult.error)) return void Me.h.reload();
+                if (Sk.code === xk.n.SHADER_PACK) return void(0, De.d)(Sk.message, Dk);
+                const mk = fk.b.get("gameEntrySource"),
+                  Kk = Sk.code === xk.n.INITIALISE_WEBGL ? (0, zk.c)() : null,
+                  {
+                    error: nk
+                  } = Sk.debugResult;
+                let Uk;
+                if (Ck(ek, Sk)) Uk = Promise.resolve(!1);
+                else if (null !== Kk) Uk = (0, zk.g)(Kk);
+                else if (nk instanceof vk.i) Uk = (0, Qk.e)(nk);
+                else {
+                  let kk;
+                  switch (rk) {
+                    case "low":
+                      kk = "face-diagonal-mouth";
+                      break;
+                    case "medium":
+                      kk = "face-worried";
+                      break;
+                    case "high":
+                      kk = "face-dizzy"
+                  }
+                  Uk = Mk.NotificationProvider.showPromptPopup({
+                    icon: kk,
+                    title: xk.D[Sk.code],
+                    subtitle: (0, Ok.jsxs)(Ok.Fragment, {
+                      children: [Sk.debugResult.gameServerUnreachable ? ek((0, Fk.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable") : Sk.message, Sk.debugResult.error instanceof Error && (0, Ok.jsx)("div", {
+                        style: {
+                          fontSize: "0.9rem",
+                          paddingTop: "1rem"
+                        },
+                        children: (0, Ok.jsx)(Ik.c, {
+                          errorString: Sk.debugResult.error.stack
+                        })
+                      })]
+                    }),
+                    confirmText: ek("general:tryAgain"),
+                    cancelText: ek("general:cancel")
+                  }).getResult().then((kk => !0 === kk))
+                }
+                Uk.then((kk => {
+                  if (kk) {
+                    (0, fk.j)(mk);
+                    const kk = (0, Ek.d)(bk.gameNameWithVariation, bk.lobbyName);
+                    "low" === rk ? Dk(kk) : (0, Vk.reloadBloxd)(kk)
+                  }
+                })), Pk.gameBridge.send("leaveGame", {
+                  reloadPath: "/"
+                }), ak()
+              } else {
+                const {
+                  gameNameWithVariation: ek,
+                  lobbyName: ik
+                } = kk.getValue();
+                sk.current = {
+                  gameNameWithVariation: ek,
+                  lobbyName: ik
+                };
+                const fk = (0, Ek.d)(ek, ik);
+                Dk(fk, {
+                  replace: !0
+                })
+              }
+          })).catch((kk => {
+            if (!Bk()) return;
+            Mk.NotificationProvider.showPromptPopup({
+              icon: "face-dizzy",
+              title: "Unexpected Error",
+              subtitle: (0, Ok.jsxs)(Ok.Fragment, {
+                children: [ek("homePage:pleaseCopyError"), (0, Ok.jsx)("div", {
+                  style: {
+                    fontSize: "0.9rem",
+                    paddingTop: "1rem"
+                  },
+                  children: (0, Ok.jsx)(Ik.c, {
+                    errorString: kk.stack
+                  })
+                })]
+              }),
+              confirmText: ek("general:tryAgain"),
+              cancelText: ek("general:cancel")
+            }).getResult().then((kk => {
+              !0 === kk && (0, Vk.reloadBloxd)((0, Ek.d)(bk.gameNameWithVariation, bk.lobbyName))
+            })), ak()
+          })) : Dk(-1))
+        })), () => {
+          Wk = !0
+        }
+      }), [nk, ik.search, ik.pathname]), (0, bk.useEffect)((() => {
+        Ak.disableFullscreen && (0, qk.c)() ? (0, qk.f)() : !Ak.disableFullscreen && (0, qk.d)() && (0, qk.o)()
+      }), [Lk, Ak]), (0, bk.useEffect)((() => {
+        "inGame" === Lk && ne()
+      }), [Lk, Ak]), (0, bk.useEffect)((() => {
+        "inGame" !== Lk && fk.b.set({
+          openInGameMenuName: null
+        })
+      }), [Lk]);
+      const ak = function(kk) {
+        const ek = (0, fk.i)(kk),
+          [ik, Dk] = (0, bk.useState)(0),
+          [Sk, Pk] = (0, bk.useState)(!1);
+        (0, rk.c)("gameJoined", (() => {
+          (0, fk.i)(fk.b.get("gameState")) && (Dk((kk => kk + 1)), Pk(!0))
+        })), (0, bk.useEffect)((() => {
+          ek || Pk(!1)
+        }), [ek]);
+        const mk = "inGame" === kk;
+        return {
+          mounted: mk || ek && Sk,
+          shown: mk,
+          key: ik
+        }
+      }(Lk);
+      return (0, Ok.jsx)(Ok.Fragment, {
+        children: ak.mounted && (0, Ok.jsx)(Sk.InGameUi, {
+          shown: ak.shown
+        }, ak.key)
+      })
+    }
   },
-  6485: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => qQ,
-      f: () => oQ
+  4915: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => fk
     });
-    var LQ = wQ(27);
-    const qQ = "shaderPack";
-    async function oQ() {
-      var QQ;
-      let FQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (QQ = await LQ.h.getItem(qQ, FQ)) && void 0 !== QQ ? QQ : null
+    var Dk = ik(1177);
+    async function fk(kk) {
+      const ek = await fetch(`${Dk.clientSideServerUrls.s3Url}/${kk}`, {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      if (404 === ek.status || 403 === ek.status) return null;
+      if (!ek.ok) throw new Error(`Failed to download the texture pack (${ek.status})`);
+      return await ek.json()
+    }
+  },
+  8732: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => bk
+    });
+    var Dk = ik(1311),
+      fk = ik(1207),
+      Sk = ik(594);
+
+    function bk(kk) {
+      return kk = function(kk, ek) {
+        var ik;
+        const Dk = new URLSearchParams(ek),
+          fk = Dk.get("lobby"),
+          Sk = Dk.get("vm"),
+          bk = null !== (ik = fk) && void 0 !== ik ? ik : kk.lobbyName,
+          rk = null !== Sk && void 0 !== Sk ? Sk : kk.directJoinVmUrl;
+        if (bk === kk.lobbyName && rk === kk.directJoinVmUrl) return kk;
+        return {
+          ...kk,
+          lobbyName: bk,
+          directJoinVmUrl: rk
+        }
+      }(kk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), kk = function(kk) {
+        if ((0, Sk.F)(kk.directJoinVmUrl)) return kk;
+        const ek = (0, fk.ab)(kk.directJoinVmUrl);
+        null === ek && (kk.directJoinVmUrl = void 0);
+        return kk
+      }(kk = function(kk) {
+        if ((0, Sk.F)(kk.gameNameWithVariation)) return kk;
+        return kk.gameNameWithVariation = (0, Dk.n)(kk.gameNameWithVariation), kk
+      }(kk))
+    }
+  },
+  8725: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk,
+      d: () => fk
+    });
+    let Dk = !1;
+
+    function fk() {
+      Dk = !0
+    }
+
+    function Sk() {
+      return Dk
+    }
+  },
+  8723: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => nk,
+      f: () => xk,
+      h: () => Uk
+    });
+    var Dk = ik(3121),
+      fk = ik(2259),
+      Sk = ik(2095),
+      bk = ik(4575),
+      rk = ik(3456),
+      Pk = ik(8725);
+    let mk = null;
+
+    function Mk() {
+      return Promise.all([ik.e(74), ik.e(77), ik.e(89), ik.e(76), ik.e(134), ik.e(267), ik.e(160), ik.e(197), ik.e(137), ik.e(87), ik.e(268), ik.e(63)]).then((() => ik(40256)))
+    }
+
+    function Kk() {
+      Promise.all([ik.e(72), ik.e(75), ik.e(74), ik.e(73), ik.e(89), ik.e(86), ik.e(265), ik.e(191), ik.e(221), ik.e(243), ik.e(268), ik.e(46)]).then((() => ik(40591))).catch((() => {}))
+    }
+
+    function xk() {
+      return bk.c.cancelDownloadForJoin(), (0, rk.b)(), (0, fk.g)(), (0, Pk.d)(), (0, Sk.i)(), Kk(), Promise.all([ik.e(77), ik.e(89), ik.e(134), ik.e(267), ik.e(137), ik.e(58)]).then((() => ik(40634))).then((kk => {
+        let {
+          startJoinLoad: ek
+        } = kk;
+        ek()
+      }), (() => {})), mk ??= Mk().then((kk => (kk.startWasmPlay(), kk.followPageUiPack((kk => {
+        Dk.e.showGamePack(kk)
+      })), kk)), (kk => {
+        throw mk = null, kk
+      })), mk
+    }
+
+    function nk() {
+      return Kk(), ik.e(269).then((() => ik(40641))).catch((() => {})), Mk().then((() => {}))
+    }
+
+    function Uk() {
+      return Mk().then((kk => {
+        kk.startWasmPreviews(), kk.prefetchWasmPreviews()
+      }))
+    }
+  },
+  8718: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => Sk,
+      i: () => bk,
+      m: () => rk,
+      n: () => mk,
+      r: () => Pk
+    });
+    var Dk = ik(189),
+      fk = ik(4563);
+
+    function Sk(kk) {
+      return bk(kk) === Dk.c.gameOrPluginOnPlayerAuthRejected.code
+    }
+
+    function bk(kk) {
+      return "object" === typeof kk && null !== kk ? kk.code : void 0
+    }
+
+    function rk(kk) {
+      var ek;
+      return null !== (ek = Object.keys(fk.c).find((ek => fk.c[ek] === kk))) && void 0 !== ek ? ek : null
+    }
+
+    function Pk(kk) {
+      return "notWhitelisted" === kk ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    }
+    const mk = {
+      private: "customLobby:cantJoinPrivate",
+      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
+      banned: "customLobby:cantJoinBanned",
+      adminLocked: "customLobby:cantJoinAdminLocked"
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

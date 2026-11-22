@@ -1,716 +1,1043 @@
+/*! For license information please see 3lwmg.263.8c2c5304.chunk.js.LICENSE.txt */
 export const id = 263;
 export const ids = [263];
 export const modules = {
-  40407: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ, wQ) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(QQ, FQ).getContext("2d", wQ);
-      const LQ = document.createElement("canvas");
-      return LQ.width = QQ, LQ.height = FQ, LQ.getContext("2d", wQ)
-    }
-
-    function qQ(QQ, FQ) {
-      return QQ.getContext("2d", FQ)
-    }
-    wQ.d(FQ, {
-      b: () => qQ,
-      d: () => LQ
-    })
-  },
-  40338: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => GQ,
-      g: () => xQ,
-      j: () => JQ,
-      m: () => OQ,
-      n: () => rQ,
-      r: () => IQ,
-      s: () => MQ,
-      v: () => tQ,
-      x: () => eQ,
-      y: () => RQ,
-      B: () => XQ,
-      C: () => CQ,
-      G: () => zQ,
-      K: () => hQ,
-      N: () => UQ,
-      O: () => TQ
+  40106: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      getAnalytics: () => Oe,
+      getGoogleAnalyticsClientId: () => Re,
+      initializeAnalytics: () => ge,
+      isSupported: () => Ge,
+      logEvent: () => Di,
+      setAnalyticsCollectionEnabled: () => ei,
+      setConsent: () => fi,
+      setCurrentScreen: () => Ne,
+      setDefaultEventParameters: () => ii,
+      setUserId: () => Je,
+      setUserProperties: () => ki,
+      settings: () => oe
     });
-    var LQ = wQ(4632),
-      qQ = wQ(40065),
-      oQ = (wQ(40229), wQ(5));
-    class DQ {
-      constructor(QQ, FQ) {
-        this.memory = QQ, this.access = FQ, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.MH = 0, this.u32 = new oQ.i(0), this.f32 = new oQ.f(0), this.u8 = new oQ.d(0), this.dataView = new oQ.g(new ArrayBuffer(0)), this.refresh()
-      }
-      refresh() {
-        this.ptr = this.access.ptr(), this.MH = this.access.MH(), this.buffer = (0, oQ.G)(this.memory()), this.u32 = new oQ.i(this.buffer, this.ptr, this.MH >>> 2), this.f32 = new oQ.f(this.buffer, this.ptr, this.MH >>> 2), this.u8 = new oQ.d(this.buffer, this.ptr, this.MH), this.dataView = new oQ.g(this.buffer, this.ptr, this.MH)
-      }
-      ensureViews() {
-        (0, oQ.G)(this.memory()) !== this.buffer && this.refresh()
-      }
-      get view() {
-        return this.ensureViews(), this.dataView
-      }
-      room(QQ) {
-        return !!this.fits(QQ) || (this.dropped++, !1)
-      }
-      fits(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
-        this.ensureViews();
-        const wQ = FQ + QQ;
-        return wQ <= this.MH || wQ <= LQ.tc && 0 !== this.access.reserve(wQ) && (this.refresh(), wQ <= this.MH)
-      }
-      consume(QQ) {
-        const FQ = this.cursor - QQ;
-        FQ > 0 && QQ > 0 && (this.ensureViews(), this.u8.copyWithin(0, QQ, this.cursor)), this.cursor = FQ > 0 ? FQ : 0
-      }
-      writeRecord(QQ, FQ, wQ, qQ, oQ) {
-        if (!this.room(LQ.bb)) return !1;
-        const DQ = this.cursor >>> 2;
-        return this.u32[DQ] = 65535 & QQ | (65535 & FQ) << 16, this.f32[DQ + 1] = wQ, this.f32[DQ + 2] = qQ, this.u32[DQ + 3] = oQ >>> 0, this.cursor += LQ.bb, !0
-      }
-      writeOptions(QQ, FQ) {
-        const wQ = FQ.byteLength,
-          qQ = LQ.bb + (0, LQ.Yd)(wQ);
-        if (!this.fits(qQ)) return !1;
-        const oQ = this.cursor,
-          DQ = oQ >>> 2;
-        this.u32[DQ] = LQ.fb.Options, this.u32[DQ + 1] = wQ, this.u32[DQ + 2] = 0, this.u32[DQ + 3] = QQ >>> 0;
-        const kQ = oQ + LQ.bb;
-        return this.u8.set(FQ, kQ), this.u8.fill(0, kQ + wQ, oQ + qQ), this.cursor += qQ, !0
-      }
-      writeWorkerRecord(QQ, FQ, wQ, qQ, oQ, DQ) {
-        const kQ = DQ.byteLength,
-          vQ = LQ.jd + (0, LQ.Yd)(kQ);
-        if (kQ > LQ.id) return this.dropped++, !1;
-        if (!this.room(vQ)) return !1;
-        const mQ = this.cursor,
-          uQ = mQ >>> 2;
-        this.u32[uQ] = QQ >>> 0, this.u32[uQ + 1] = 65535 & FQ | (65535 & wQ) << 16, this.u32[uQ + 2] = qQ >>> 0, this.u32[uQ + 3] = oQ >>> 0, this.u32[uQ + 4] = kQ;
-        const HQ = mQ + LQ.jd;
-        return this.u8.set(DQ, HQ), this.u8.fill(0, HQ + kQ, mQ + vQ), this.cursor += vQ, !0
-      }
-      written() {
-        return this.ensureViews(), this.u8.subarray(0, this.cursor)
-      }
-      writeFrame(QQ, FQ) {
-        return this.writeNet(LQ.Hb.Frame, QQ, FQ)
-      }
-      writeOpen(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(LQ.Hb.Open, QQ, vQ(FQ))
-      }
-      writeClose(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(LQ.Hb.Close, QQ, vQ(FQ))
-      }
-      writeNet(QQ, FQ, wQ) {
-        const qQ = wQ.byteLength,
-          oQ = LQ.Db + (0, LQ.Yd)(qQ);
-        if (qQ > LQ.wb) return this.dropped++, !1;
-        if (!this.room(oQ)) return !1;
-        const DQ = this.cursor;
-        this.u32[DQ >>> 2] = qQ, this.u32[1 + (DQ >>> 2)] = (0, LQ.Qd)(QQ, FQ);
-        const kQ = DQ + LQ.Db;
-        return this.u8.set(wQ, kQ), this.u8.fill(0, kQ + qQ, DQ + oQ), this.cursor += oQ, !0
-      }
-      mY(QQ, FQ, wQ) {
-        const qQ = LQ.m + (0, LQ.Yd)(wQ);
-        if (!this.room(qQ)) return -1;
-        const oQ = this.cursor;
-        this.u32[oQ >>> 2] = 65535 & QQ | (65535 & FQ) << 16, this.u32[1 + (oQ >>> 2)] = wQ;
-        const DQ = oQ + LQ.m;
-        return this.u8.fill(0, DQ, oQ + qQ), this.cursor += qQ, DQ
-      }
-      growForCmd(QQ) {
-        return this.fits(LQ.m + (0, LQ.Yd)(QQ), 0)
-      }
-      writeCmd(QQ, FQ, wQ) {
-        const LQ = this.mY(QQ, FQ, wQ.byteLength);
-        return !(LQ < 0) && (this.u8.set(wQ, LQ), !0)
-      }
-      copyWritten(QQ, FQ) {
-        return this.ensureViews(), this.u8.slice(QQ, QQ + FQ)
-      }
-    }
-    const kQ = new oQ.d(0);
-
-    function vQ(QQ) {
-      if (0 === QQ) return kQ;
-      const FQ = new oQ.d(LQ.Ab);
-      for (let wQ = 0; wQ < LQ.Ab; wQ++) FQ[wQ] = QQ >>> 8 * wQ & 255;
-      return FQ
-    }
-    class mQ {
-      constructor(QQ, FQ) {
-        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new DQ(FQ, {
-          ptr: () => QQ.UH(),
-          MH: () => QQ.QDQ(),
-          reserve: FQ => QQ.bDQ(FQ)
-        }), this.net = new DQ(FQ, {
-          ptr: () => QQ.mDQ(),
-          MH: () => QQ.vDQ(),
-          reserve: FQ => QQ.YDQ(FQ)
-        }), this.worker = new DQ(FQ, {
-          ptr: () => QQ.zDQ(),
-          MH: () => QQ.KDQ(),
-          reserve: FQ => QQ.xDQ(FQ)
-        }), this.cmd = new DQ(FQ, {
-          ptr: () => QQ.hoQ(),
-          MH: () => QQ.foQ(),
-          reserve: FQ => QQ.VoQ(FQ)
-        })
-      }
-      reset(QQ) {
-        this.input.cursor = 0, this.worker.cursor = 0, this.cmd.consume(QQ)
-      }
-    }
-    var uQ = wQ(35943),
-      HQ = wQ(2320),
-      bQ = wQ(4626),
-      YQ = wQ(40344);
-    const xQ = "coreFrame",
-      AQ = "fatalStatus",
-      tQ = "otherCall",
-      eQ = "coreRings",
-      MQ = "netIn",
-      GQ = "abi",
-      pQ = "netOut",
-      cQ = "workerOut",
-      CQ = "worldgenHost",
-      SQ = "eventWalker",
-      iQ = "netEvent",
-      WQ = "envEvent",
-      RQ = "sharedTables",
-      OQ = "inputAction",
-      sQ = new Set([SQ, iQ, WQ, OQ, RQ]),
-      rQ = "wasmMemory",
-      IQ = "meshHost";
-
-    function UQ(QQ, FQ) {
-      QQ.forEachWorkerOut(((wQ, qQ, oQ) => {
-        if ((0, LQ.Kd)(wQ)) try {
-          var DQ;
-          null === (DQ = FQ.worldgen) || void 0 === DQ || DQ.take(wQ, oQ)
-        } catch (vQ) {
-          QQ.crash(CQ, vQ)
-        } else try {
-          var kQ;
-          null === (kQ = FQ.mesh) || void 0 === kQ || kQ.take(wQ, qQ, oQ)
-        } catch (vQ) {
-          QQ.crash(IQ, vQ)
+    var Dk = ik(40078),
+      fk = ik(40099),
+      Sk = ik(40092),
+      bk = ik(40087);
+    let rk, Pk;
+    const mk = new WeakMap,
+      Mk = new WeakMap,
+      Kk = new WeakMap,
+      xk = new WeakMap,
+      nk = new WeakMap;
+    let Uk = {
+      get(kk, ek, ik) {
+        if (kk instanceof IDBTransaction) {
+          if ("done" === ek) return Mk.get(kk);
+          if ("objectStoreNames" === ek) return kk.objectStoreNames || Kk.get(kk);
+          if ("store" === ek) return ik.objectStoreNames[1] ? void 0 : ik.objectStore(ik.objectStoreNames[0])
         }
+        return lk(kk[ek])
+      },
+      set: (kk, ek, ik) => (kk[ek] = ik, !0),
+      has: (kk, ek) => kk instanceof IDBTransaction && ("done" === ek || "store" === ek) || ek in kk
+    };
+
+    function Hk(kk) {
+      return kk !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (Pk || (Pk = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(kk) ? function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        return kk.apply(pk(this), ik), lk(mk.get(this))
+      } : function() {
+        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+        return lk(kk.apply(pk(this), ik))
+      } : function(ek) {
+        for (var ik = arguments.length, Dk = new Array(ik > 1 ? ik - 1 : 0), fk = 1; fk < ik; fk++) Dk[fk - 1] = arguments[fk];
+        const Sk = kk.call(pk(this), ek, ...Dk);
+        return Kk.set(Sk, ek.sort ? ek.sort() : [ek]), lk(Sk)
+      }
+    }
+
+    function wk(kk) {
+      return "function" === typeof kk ? Hk(kk) : (kk instanceof IDBTransaction && function(kk) {
+        if (Mk.has(kk)) return;
+        const ek = new Promise(((ek, ik) => {
+          const Dk = () => {
+              kk.removeEventListener("complete", fk), kk.removeEventListener("error", Sk), kk.removeEventListener("abort", Sk)
+            },
+            fk = () => {
+              ek(), Dk()
+            },
+            Sk = () => {
+              ik(kk.error || new DOMException("AbortError", "AbortError")), Dk()
+            };
+          kk.addEventListener("complete", fk), kk.addEventListener("error", Sk), kk.addEventListener("abort", Sk)
+        }));
+        Mk.set(kk, ek)
+      }(kk), ek = kk, (rk || (rk = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((kk => ek instanceof kk)) ? new Proxy(kk, Uk) : kk);
+      var ek
+    }
+
+    function lk(kk) {
+      if (kk instanceof IDBRequest) return function(kk) {
+        const ek = new Promise(((ek, ik) => {
+          const Dk = () => {
+              kk.removeEventListener("success", fk), kk.removeEventListener("error", Sk)
+            },
+            fk = () => {
+              ek(lk(kk.result)), Dk()
+            },
+            Sk = () => {
+              ik(kk.error), Dk()
+            };
+          kk.addEventListener("success", fk), kk.addEventListener("error", Sk)
+        }));
+        return ek.then((ek => {
+          ek instanceof IDBCursor && mk.set(ek, kk)
+        })).catch((() => {})), nk.set(ek, kk), ek
+      }(kk);
+      if (xk.has(kk)) return xk.get(kk);
+      const ek = wk(kk);
+      return ek !== kk && (xk.set(kk, ek), nk.set(ek, kk)), ek
+    }
+    const pk = kk => nk.get(kk);
+    const yk = ["get", "getKey", "getAll", "getAllKeys", "count"],
+      Yk = ["put", "add", "delete", "clear"],
+      Lk = new Map;
+
+    function Ck(kk, ek) {
+      if (!(kk instanceof IDBDatabase) || ek in kk || "string" !== typeof ek) return;
+      if (Lk.get(ek)) return Lk.get(ek);
+      const ik = ek.replace(/FromIndex$/, ""),
+        Dk = ek !== ik,
+        fk = Yk.includes(ik);
+      if (!(ik in (Dk ? IDBIndex : IDBObjectStore).prototype) || !fk && !yk.includes(ik)) return;
+      const Sk = async function(kk) {
+        const ek = this.transaction(kk, fk ? "readwrite" : "readonly");
+        let Sk = ek.store;
+        for (var bk = arguments.length, rk = new Array(bk > 1 ? bk - 1 : 0), Pk = 1; Pk < bk; Pk++) rk[Pk - 1] = arguments[Pk];
+        return Dk && (Sk = Sk.index(rk.shift())), (await Promise.all([Sk[ik](...rk), fk && ek.done]))[0]
+      };
+      return Lk.set(ek, Sk), Sk
+    }
+    Uk = (kk => ({
+      ...kk,
+      get: (ek, ik, Dk) => Ck(ek, ik) || kk.get(ek, ik, Dk),
+      has: (ek, ik) => !!Ck(ek, ik) || kk.has(ek, ik)
+    }))(Uk);
+    const Ak = "@firebase/installations",
+      jk = "0.6.4",
+      sk = 1e4,
+      dk = `w:${jk}`,
+      Vk = "FIS_v2",
+      Fk = 36e5,
+      uk = {
+        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
+        "not-registered": "Firebase Installation is not registered.",
+        "installation-not-found": "Firebase Installation not found.",
+        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
+        "app-offline": "Could not process request. Application offline.",
+        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
+      },
+      qk = new Sk.g("installations", "Installations", uk);
+
+    function Ik(kk) {
+      return kk instanceof Sk.j && kk.code.includes("request-failed")
+    }
+
+    function zk(kk) {
+      let {
+        projectId: ek
+      } = kk;
+      return `https://firebaseinstallations.googleapis.com/v1/projects/${ek}/installations`
+    }
+
+    function Qk(kk) {
+      return {
+        token: kk.token,
+        requestStatus: 2,
+        expiresIn: (ek = kk.expiresIn, Number(ek.replace("s", "000"))),
+        creationTime: Date.now()
+      };
+      var ek
+    }
+    async function vk(kk, ek) {
+      const ik = (await ek.json()).error;
+      return qk.create("request-failed", {
+        requestName: kk,
+        serverCode: ik.code,
+        serverMessage: ik.message,
+        serverStatus: ik.status
+      })
+    }
+
+    function Ek(kk) {
+      let {
+        apiKey: ek
+      } = kk;
+      return new Headers({
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "x-goog-api-key": ek
+      })
+    }
+
+    function hk(kk, ek) {
+      let {
+        refreshToken: ik
+      } = ek;
+      const Dk = Ek(kk);
+      return Dk.append("Authorization", function(kk) {
+        return `${Vk} ${kk}`
+      }(ik)), Dk
+    }
+    async function ak(kk) {
+      const ek = await kk();
+      return ek.status >= 500 && ek.status < 600 ? kk() : ek
+    }
+
+    function Wk(kk) {
+      return new Promise((ek => {
+        setTimeout(ek, kk)
       }))
     }
-    const NQ = 1048576;
+    const tk = /^[cdef][\w-]{21}$/;
 
-    function TQ(QQ, FQ) {
-      let wQ = !1;
-      const LQ = () => {
-        wQ = !1, FQ()
-      };
-      return () => {
-        !wQ && QQ.cursor >= NQ && (wQ = !0, queueMicrotask(LQ))
+    function Xk() {
+      try {
+        const kk = new Uint8Array(17);
+        (self.crypto || self.msCrypto).getRandomValues(kk), kk[0] = 112 + kk[0] % 16;
+        const ek = function(kk) {
+          const ek = (ik = kk, btoa(String.fromCharCode(...ik)).replace(/\+/g, "-").replace(/\//g, "_"));
+          var ik;
+          return ek.substr(0, 22)
+        }(kk);
+        return tk.test(ek) ? ek : ""
+      } catch (kk) {
+        return ""
       }
     }
-    const KQ = new Set([AQ, tQ, CQ, IQ]);
 
-    function zQ(QQ) {
-      return sQ.has(QQ.site) ? QQ.error instanceof WebAssembly.RuntimeError || (0, qQ.k)(QQ.error) : !KQ.has(QQ.site) && QQ.error instanceof Error
+    function Bk(kk) {
+      return `${kk.appName}!${kk.appId}`
     }
-    const lQ = "events",
-      jQ = [],
-      aQ = "debugLog",
-      XQ = "terrainTextures",
-      fQ = "sunShadowTextures",
-      VQ = new TextDecoder;
+    const ck = new Map;
 
-    function hQ(QQ, FQ) {
+    function Tk(kk, ek) {
+      const ik = Bk(kk);
+      Zk(ik, ek),
+        function(kk, ek) {
+          const ik = gk();
+          ik && ik.postMessage({
+            key: kk,
+            fid: ek
+          });
+          Gk()
+        }(ik, ek)
+    }
+
+    function Zk(kk, ek) {
+      const ik = ck.get(kk);
+      if (ik)
+        for (const Dk of ik) Dk(ek)
+    }
+    let Ok = null;
+
+    function gk() {
+      return !Ok && "BroadcastChannel" in self && (Ok = new BroadcastChannel("[Firebase] FID Change"), Ok.onmessage = kk => {
+        Zk(kk.data.key, kk.data.fid)
+      }), Ok
+    }
+
+    function Gk() {
+      0 === ck.size && Ok && (Ok.close(), Ok = null)
+    }
+    const Nk = "firebase-installations-store";
+    let Rk = null;
+
+    function Jk() {
+      return Rk || (Rk = function(kk, ek) {
+        let {
+          blocked: ik,
+          upgrade: Dk,
+          blocking: fk,
+          terminated: Sk
+        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const bk = indexedDB.open(kk, ek),
+          rk = lk(bk);
+        return Dk && bk.addEventListener("upgradeneeded", (kk => {
+          Dk(lk(bk.result), kk.oldVersion, kk.newVersion, lk(bk.transaction))
+        })), ik && bk.addEventListener("blocked", (() => ik())), rk.then((kk => {
+          Sk && kk.addEventListener("close", (() => Sk())), fk && kk.addEventListener("versionchange", (() => fk()))
+        })).catch((() => {})), rk
+      }("firebase-installations-database", 1, {
+        upgrade: (kk, ek) => {
+          if (0 === ek) kk.createObjectStore(Nk)
+        }
+      })), Rk
+    }
+    async function ke(kk, ek) {
+      const ik = Bk(kk),
+        Dk = (await Jk()).transaction(Nk, "readwrite"),
+        fk = Dk.objectStore(Nk),
+        Sk = await fk.get(ik);
+      return await fk.put(ek, ik), await Dk.done, Sk && Sk.fid === ek.fid || Tk(kk, ek.fid), ek
+    }
+    async function ee(kk) {
+      const ek = Bk(kk),
+        ik = (await Jk()).transaction(Nk, "readwrite");
+      await ik.objectStore(Nk).delete(ek), await ik.done
+    }
+    async function ie(kk, ek) {
+      const ik = Bk(kk),
+        Dk = (await Jk()).transaction(Nk, "readwrite"),
+        fk = Dk.objectStore(Nk),
+        Sk = await fk.get(ik),
+        bk = ek(Sk);
+      return void 0 === bk ? await fk.delete(ik) : await fk.put(bk, ik), await Dk.done, !bk || Sk && Sk.fid === bk.fid || Tk(kk, bk.fid), bk
+    }
+    async function De(kk) {
+      let ek;
+      const ik = await ie(kk.appConfig, (ik => {
+        const Dk = function(kk) {
+            const ek = kk || {
+              fid: Xk(),
+              registrationStatus: 0
+            };
+            return be(ek)
+          }(ik),
+          fk = function(kk, ek) {
+            if (0 === ek.registrationStatus) {
+              if (!navigator.onLine) {
+                return {
+                  installationEntry: ek,
+                  registrationPromise: Promise.reject(qk.create("app-offline"))
+                }
+              }
+              const ik = {
+                  fid: ek.fid,
+                  registrationStatus: 1,
+                  registrationTime: Date.now()
+                },
+                Dk = async function(kk, ek) {
+                  try {
+                    const ik = await async function(kk, ek) {
+                      let {
+                        appConfig: ik,
+                        heartbeatServiceProvider: Dk
+                      } = kk, {
+                        fid: fk
+                      } = ek;
+                      const Sk = zk(ik),
+                        bk = Ek(ik),
+                        rk = Dk.getImmediate({
+                          optional: !0
+                        });
+                      if (rk) {
+                        const kk = await rk.getHeartbeatsHeader();
+                        kk && bk.append("x-firebase-client", kk)
+                      }
+                      const Pk = {
+                          fid: fk,
+                          authVersion: Vk,
+                          appId: ik.appId,
+                          sdkVersion: dk
+                        },
+                        mk = {
+                          method: "POST",
+                          headers: bk,
+                          body: JSON.stringify(Pk)
+                        },
+                        Mk = await ak((() => fetch(Sk, mk)));
+                      if (Mk.ok) {
+                        const kk = await Mk.json();
+                        return {
+                          fid: kk.fid || fk,
+                          registrationStatus: 2,
+                          refreshToken: kk.refreshToken,
+                          authToken: Qk(kk.authToken)
+                        }
+                      }
+                      throw await vk("Create Installation", Mk)
+                    }(kk, ek);
+                    return ke(kk.appConfig, ik)
+                  } catch (ik) {
+                    throw Ik(ik) && 409 === ik.customData.serverCode ? await ee(kk.appConfig) : await ke(kk.appConfig, {
+                      fid: ek.fid,
+                      registrationStatus: 0
+                    }), ik
+                  }
+                }(kk, ik);
+              return {
+                installationEntry: ik,
+                registrationPromise: Dk
+              }
+            }
+            return 1 === ek.registrationStatus ? {
+              installationEntry: ek,
+              registrationPromise: fe(kk)
+            } : {
+              installationEntry: ek
+            }
+          }(kk, Dk);
+        return ek = fk.registrationPromise, fk.installationEntry
+      }));
+      return "" === ik.fid ? {
+        installationEntry: await ek
+      } : {
+        installationEntry: ik,
+        registrationPromise: ek
+      }
+    }
+    async function fe(kk) {
+      let ek = await Se(kk.appConfig);
+      for (; 1 === ek.registrationStatus;) await Wk(100), ek = await Se(kk.appConfig);
+      if (0 === ek.registrationStatus) {
+        const {
+          installationEntry: ek,
+          registrationPromise: ik
+        } = await De(kk);
+        return ik || ek
+      }
+      return ek
+    }
+
+    function Se(kk) {
+      return ie(kk, (kk => {
+        if (!kk) throw qk.create("installation-not-found");
+        return be(kk)
+      }))
+    }
+
+    function be(kk) {
+      return 1 === (ek = kk).registrationStatus && ek.registrationTime + sk < Date.now() ? {
+        fid: kk.fid,
+        registrationStatus: 0
+      } : kk;
+      var ek
+    }
+    async function re(kk, ek) {
+      let {
+        appConfig: ik,
+        heartbeatServiceProvider: Dk
+      } = kk;
+      const fk = function(kk, ek) {
+          let {
+            fid: ik
+          } = ek;
+          return `${zk(kk)}/${ik}/authTokens:generate`
+        }(ik, ek),
+        Sk = hk(ik, ek),
+        bk = Dk.getImmediate({
+          optional: !0
+        });
+      if (bk) {
+        const kk = await bk.getHeartbeatsHeader();
+        kk && Sk.append("x-firebase-client", kk)
+      }
+      const rk = {
+          installation: {
+            sdkVersion: dk,
+            appId: ik.appId
+          }
+        },
+        Pk = {
+          method: "POST",
+          headers: Sk,
+          body: JSON.stringify(rk)
+        },
+        mk = await ak((() => fetch(fk, Pk)));
+      if (mk.ok) {
+        return Qk(await mk.json())
+      }
+      throw await vk("Generate Auth Token", mk)
+    }
+    async function Pe(kk) {
+      let ek, ik = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const Dk = await ie(kk.appConfig, (Dk => {
+        if (!Me(Dk)) throw qk.create("not-registered");
+        const fk = Dk.authToken;
+        if (!ik && function(kk) {
+            return 2 === kk.requestStatus && ! function(kk) {
+              const ek = Date.now();
+              return ek < kk.creationTime || kk.creationTime + kk.expiresIn < ek + Fk
+            }(kk)
+          }(fk)) return Dk;
+        if (1 === fk.requestStatus) return ek = async function(kk, ek) {
+          let ik = await me(kk.appConfig);
+          for (; 1 === ik.authToken.requestStatus;) await Wk(100), ik = await me(kk.appConfig);
+          const Dk = ik.authToken;
+          return 0 === Dk.requestStatus ? Pe(kk, ek) : Dk
+        }(kk, ik), Dk;
+        {
+          if (!navigator.onLine) throw qk.create("app-offline");
+          const ik = function(kk) {
+            const ek = {
+              requestStatus: 1,
+              requestTime: Date.now()
+            };
+            return Object.assign(Object.assign({}, kk), {
+              authToken: ek
+            })
+          }(Dk);
+          return ek = async function(kk, ek) {
+            try {
+              const ik = await re(kk, ek),
+                Dk = Object.assign(Object.assign({}, ek), {
+                  authToken: ik
+                });
+              return await ke(kk.appConfig, Dk), ik
+            } catch (ik) {
+              if (!Ik(ik) || 401 !== ik.customData.serverCode && 404 !== ik.customData.serverCode) {
+                const ik = Object.assign(Object.assign({}, ek), {
+                  authToken: {
+                    requestStatus: 0
+                  }
+                });
+                await ke(kk.appConfig, ik)
+              } else await ee(kk.appConfig);
+              throw ik
+            }
+          }(kk, ik), ik
+        }
+      }));
+      return ek ? await ek : Dk.authToken
+    }
+
+    function me(kk) {
+      return ie(kk, (kk => {
+        if (!Me(kk)) throw qk.create("not-registered");
+        const ek = kk.authToken;
+        return 1 === (ik = ek).requestStatus && ik.requestTime + sk < Date.now() ? Object.assign(Object.assign({}, kk), {
+          authToken: {
+            requestStatus: 0
+          }
+        }) : kk;
+        var ik
+      }))
+    }
+
+    function Me(kk) {
+      return void 0 !== kk && 2 === kk.registrationStatus
+    }
+    async function Ke(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const ik = kk;
+      await async function(kk) {
+        const {
+          registrationPromise: ek
+        } = await De(kk);
+        ek && await ek
+      }(ik);
+      return (await Pe(ik, ek)).token
+    }
+
+    function xe(kk) {
+      return qk.create("missing-app-config-values", {
+        valueName: kk
+      })
+    }
+    const ne = "installations",
+      Ue = kk => {
+        const ek = kk.getProvider("app").getImmediate(),
+          ik = function(kk) {
+            if (!kk || !kk.options) throw xe("App Configuration");
+            if (!kk.name) throw xe("App Name");
+            const ek = ["projectId", "apiKey", "appId"];
+            for (const ik of ek)
+              if (!kk.options[ik]) throw xe(ik);
+            return {
+              appName: kk.name,
+              projectId: kk.options.projectId,
+              apiKey: kk.options.apiKey,
+              appId: kk.options.appId
+            }
+          }(ek);
+        return {
+          app: ek,
+          appConfig: ik,
+          heartbeatServiceProvider: (0, Dk.z)(ek, "heartbeat"),
+          _delete: () => Promise.resolve()
+        }
+      },
+      He = kk => {
+        const ek = kk.getProvider("app").getImmediate(),
+          ik = (0, Dk.z)(ek, ne).getImmediate();
+        return {
+          getId: () => async function(kk) {
+            const ek = kk,
+              {
+                installationEntry: ik,
+                registrationPromise: Dk
+              } = await De(ek);
+            return Dk ? Dk.catch(console.error) : Pe(ek).catch(console.error), ik.fid
+          }(ik),
+          getToken: kk => Ke(ik, kk)
+        }
+      };
+    (0, Dk.B)(new bk.f(ne, Ue, "PUBLIC")), (0, Dk.B)(new bk.f("installations-internal", He, "PRIVATE")), (0, Dk.N)(Ak, jk), (0, Dk.N)(Ak, jk, "esm2017");
+    const we = "analytics",
+      le = "https://www.googletagmanager.com/gtag/js",
+      pe = new fk.g("@firebase/analytics"),
+      ye = {
+        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
+        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
+        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
+        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
+        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
+        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
+        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
+        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
+        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
+        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
+        "no-client-id": 'The "client_id" field is empty.',
+        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
+      },
+      Ye = new Sk.g("analytics", "Analytics", ye);
+
+    function Le(kk) {
+      if (!kk.startsWith(le)) {
+        const ek = Ye.create("invalid-gtag-resource", {
+          gtagURL: kk
+        });
+        return pe.warn(ek.message), ""
+      }
+      return kk
+    }
+
+    function Ce(kk) {
+      return Promise.all(kk.map((kk => kk.catch((kk => kk)))))
+    }
+
+    function Ae(kk, ek) {
+      const ik = function(kk, ek) {
+          let ik;
+          return window.trustedTypes && (ik = window.trustedTypes.createPolicy(kk, ek)), ik
+        }("firebase-js-sdk-policy", {
+          createScriptURL: Le
+        }),
+        Dk = document.createElement("script"),
+        fk = `${le}?l=${kk}&id=${ek}`;
+      Dk.src = ik ? null === ik || void 0 === ik ? void 0 : ik.createScriptURL(fk) : fk, Dk.async = !0, document.head.appendChild(Dk)
+    }
+
+    function je(kk, ek, ik, Dk) {
+      return async function(fk) {
+        try {
+          for (var Sk = arguments.length, bk = new Array(Sk > 1 ? Sk - 1 : 0), rk = 1; rk < Sk; rk++) bk[rk - 1] = arguments[rk];
+          if ("event" === fk) {
+            const [Dk, fk] = bk;
+            await async function(kk, ek, ik, Dk, fk) {
+              try {
+                let Sk = [];
+                if (fk && fk.send_to) {
+                  let kk = fk.send_to;
+                  Array.isArray(kk) || (kk = [kk]);
+                  const Dk = await Ce(ik);
+                  for (const ik of kk) {
+                    const kk = Dk.find((kk => kk.measurementId === ik)),
+                      fk = kk && ek[kk.appId];
+                    if (!fk) {
+                      Sk = [];
+                      break
+                    }
+                    Sk.push(fk)
+                  }
+                }
+                0 === Sk.length && (Sk = Object.values(ek)), await Promise.all(Sk), kk("event", Dk, fk || {})
+              } catch (Sk) {
+                pe.error(Sk)
+              }
+            }(kk, ek, ik, Dk, fk)
+          } else if ("config" === fk) {
+            const [fk, Sk] = bk;
+            await async function(kk, ek, ik, Dk, fk, Sk) {
+              const bk = Dk[fk];
+              try {
+                if (bk) await ek[bk];
+                else {
+                  const kk = (await Ce(ik)).find((kk => kk.measurementId === fk));
+                  kk && await ek[kk.appId]
+                }
+              } catch (rk) {
+                pe.error(rk)
+              }
+              kk("config", fk, Sk)
+            }(kk, ek, ik, Dk, fk, Sk)
+          } else if ("consent" === fk) {
+            const [ek] = bk;
+            kk("consent", "update", ek)
+          } else if ("get" === fk) {
+            const [ek, ik, Dk] = bk;
+            kk("get", ek, ik, Dk)
+          } else if ("set" === fk) {
+            const [ek] = bk;
+            kk("set", ek)
+          } else kk(fk, ...bk)
+        } catch (Pk) {
+          pe.error(Pk)
+        }
+      }
+    }
+    const se = new class {
+      constructor() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
+        this.throttleMetadata = kk, this.intervalMillis = ek
+      }
+      getThrottleMetadata(kk) {
+        return this.throttleMetadata[kk]
+      }
+      setThrottleMetadata(kk, ek) {
+        this.throttleMetadata[kk] = ek
+      }
+      deleteThrottleMetadata(kk) {
+        delete this.throttleMetadata[kk]
+      }
+    };
+
+    function de(kk) {
+      return new Headers({
+        Accept: "application/json",
+        "x-goog-api-key": kk
+      })
+    }
+    async function Ve(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : se,
+        ik = arguments.length > 2 ? arguments[2] : void 0;
       const {
-        site: wQ,
-        error: qQ,
-        header: oQ
-      } = QQ, DQ = oQ ? (0, LQ.Dd)(oQ.lastError) : "noFrame", kQ = `CORE-${wQ===AQ?DQ:wQ}`, vQ = null === qQ || void 0 === qQ ? "" : ` ${(0,uQ.k)(qQ)}`, mQ = {
-        site: wQ,
-        wasmBuild: FQ.wasm,
-        clientVersion: FQ.client
-      };
-      return oQ && (mQ.status = String(oQ.status), mQ.lastError = DQ, mQ.lastErrorCode = String(oQ.lastError), mQ.lastErrorDetail = String(oQ.lastErrorDetail), mQ.errorCount = String(oQ.errorCount), mQ.frameIndex = String(oQ.frameIndex), mQ.tickIndex = String(oQ.tickIndex)), {
-        code: kQ,
-        message: `core ${wQ}, last error ${DQ};${vQ}`,
-        details: mQ
+        appId: Dk,
+        apiKey: fk,
+        measurementId: Sk
+      } = kk.options;
+      if (!Dk) throw Ye.create("no-app-id");
+      if (!fk) {
+        if (Sk) return {
+          measurementId: Sk,
+          appId: Dk
+        };
+        throw Ye.create("no-api-key")
+      }
+      const bk = ek.getThrottleMetadata(Dk) || {
+          backoffCount: 0,
+          throttleEndTimeMillis: Date.now()
+        },
+        rk = new ue;
+      return setTimeout((async () => {
+        rk.abort()
+      }), void 0 !== ik ? ik : 6e4), Fe({
+        appId: Dk,
+        apiKey: fk,
+        measurementId: Sk
+      }, bk, rk, ek)
+    }
+    async function Fe(kk, ek, ik) {
+      let {
+        throttleEndTimeMillis: Dk,
+        backoffCount: fk
+      } = ek, bk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : se;
+      var rk;
+      const {
+        appId: Pk,
+        measurementId: mk
+      } = kk;
+      try {
+        await
+        function(kk, ek) {
+          return new Promise(((ik, Dk) => {
+            const fk = Math.max(ek - Date.now(), 0),
+              Sk = setTimeout(ik, fk);
+            kk.addEventListener((() => {
+              clearTimeout(Sk), Dk(Ye.create("fetch-throttle", {
+                throttleEndTimeMillis: ek
+              }))
+            }))
+          }))
+        }(ik, Dk)
+      } catch (Mk) {
+        if (mk) return pe.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${mk} provided in the "measurementId" field in the local Firebase config. [${null===Mk||void 0===Mk?void 0:Mk.message}]`), {
+          appId: Pk,
+          measurementId: mk
+        };
+        throw Mk
+      }
+      try {
+        const ek = await async function(kk) {
+          var ek;
+          const {
+            appId: ik,
+            apiKey: Dk
+          } = kk, fk = {
+            method: "GET",
+            headers: de(Dk)
+          }, Sk = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", ik), bk = await fetch(Sk, fk);
+          if (200 !== bk.status && 304 !== bk.status) {
+            let kk = "";
+            try {
+              const ik = await bk.json();
+              (null === (ek = ik.error) || void 0 === ek ? void 0 : ek.message) && (kk = ik.error.message)
+            } catch (rk) {}
+            throw Ye.create("config-fetch-failed", {
+              httpStatus: bk.status,
+              responseMessage: kk
+            })
+          }
+          return bk.json()
+        }(kk);
+        return bk.deleteThrottleMetadata(Pk), ek
+      } catch (Mk) {
+        const ek = Mk;
+        if (! function(kk) {
+            if (!(kk instanceof Sk.j) || !kk.customData) return !1;
+            const ek = Number(kk.customData.httpStatus);
+            return 429 === ek || 500 === ek || 503 === ek || 504 === ek
+          }(ek)) {
+          if (bk.deleteThrottleMetadata(Pk), mk) return pe.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${mk} provided in the "measurementId" field in the local Firebase config. [${null===ek||void 0===ek?void 0:ek.message}]`), {
+            appId: Pk,
+            measurementId: mk
+          };
+          throw Mk
+        }
+        const Dk = 503 === Number(null === (rk = null === ek || void 0 === ek ? void 0 : ek.customData) || void 0 === rk ? void 0 : rk.httpStatus) ? (0, Sk.v)(fk, bk.intervalMillis, 30) : (0, Sk.v)(fk, bk.intervalMillis),
+          Kk = {
+            throttleEndTimeMillis: Date.now() + Dk,
+            backoffCount: fk + 1
+          };
+        return bk.setThrottleMetadata(Pk, Kk), pe.debug(`Calling attemptFetch again in ${Dk} millis`), Fe(kk, Kk, ik, bk)
       }
     }
-    class JQ {
-      constructor(QQ, FQ, wQ) {
-        this.core = QQ, this.memory = FQ, this.handlers = wQ, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
-          ptr: 0,
-          len: 0,
-          net: jQ,
-          netOffsets: this.netOffsets,
-          kind: "none"
-        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.rings = new mQ(QQ, FQ)
+    class ue {
+      constructor() {
+        this.listeners = []
       }
-      get netKeptFrames() {
-        return this.keptFrames
+      addEventListener(kk) {
+        this.listeners.push(kk)
       }
-      get netWrittenSinceFrame() {
-        return this.rings.net.cursor - this.netKept
+      abort() {
+        this.listeners.forEach((kk => kk()))
       }
-      hasPendingCommands() {
-        return this.rings.cmd.cursor > 0
-      }
-      framePaces(QQ) {
-        if (this.stopped || this.drawsHeld) return !1;
+    }
+    let qe, Ie;
+
+    function ze(kk) {
+      Ie = kk
+    }
+
+    function Qe(kk) {
+      qe = kk
+    }
+    async function ve(kk, ek, ik, Dk, fk, bk, rk) {
+      var Pk;
+      const mk = Ve(kk);
+      mk.then((ek => {
+        ik[ek.measurementId] = ek.appId, kk.options.measurementId && ek.measurementId !== kk.options.measurementId && pe.warn(`The measurement ID in the local Firebase config (${kk.options.measurementId}) does not match the measurement ID fetched from the server (${ek.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
+      })).catch((kk => pe.error(kk))), ek.push(mk);
+      const Mk = async function() {
+        if (!(0, Sk.cb)()) return pe.warn(Ye.create("indexeddb-unavailable", {
+          errorInfo: "IndexedDB is not available in this environment."
+        }).message), !1;
         try {
-          return this.core.yoQ(QQ)
-        } catch (FQ) {
-          return this.crash(xQ, FQ), !1
-        }
-      }
-      get isStopped() {
-        return this.stopped
-      }
-      frame(QQ, FQ) {
-        var wQ;
-        let oQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this.stopped) return !1;
-        if (!this.writePendingInput()) return !1;
-        const {
-          input: DQ,
-          net: kQ,
-          worker: vQ,
-          cmd: mQ
-        } = this.rings, uQ = kQ.cursor, HQ = FQ && !this.drawsHeld;
-        let tQ = LQ.G.Fatal;
-        const eQ = mQ.cursor;
-        let GQ = null;
-        try {
-          const FQ = (HQ ? LQ.S.Draws : 0) | (oQ ? LQ.S.NetAll : 0);
-          tQ = (0, YQ.c)((() => this.core.frame(QQ, DQ.cursor, kQ.cursor, vQ.cursor, FQ, eQ)))
-        } catch (KQ) {
-          GQ = {
-            error: KQ
-          }
-        }
-        const pQ = null === (wQ = this.gameHost) || void 0 === wQ ? void 0 : wQ.takeFault();
-        this.rings.reset(this.stopped || null !== GQ || void 0 !== pQ ? mQ.cursor : eQ);
-        const cQ = null === GQ && void 0 === pQ ? this.headerView() : null,
-          CQ = null === cQ ? null : (0, LQ.Zd)(cQ);
-        null !== CQ && (this.lastHeader = CQ);
-        const WQ = null !== CQ && tQ !== LQ.G.Fatal,
-          RQ = WQ && null !== cQ ? cQ[LQ.Y.NetInKept] : 0,
-          OQ = WQ && RQ <= uQ && RQ % 4 === 0 ? RQ : null;
-        var sQ, rQ;
-        null !== CQ && null !== OQ && tQ === LQ.G.Errors && (null === (sQ = (rQ = this.handlers).onErrors) || void 0 === sQ || sQ.call(rQ, CQ));
-        const IQ = null === OQ ? jQ : this.readEvents(uQ);
-        if (kQ.consume(uQ - (null !== OQ && void 0 !== OQ ? OQ : 0)), this.netKept = null !== OQ && void 0 !== OQ ? OQ : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== GQ) return this.crash(xQ, void 0 === pQ || pQ instanceof qQ.b ? GQ.error : pQ), !1;
-        if (void 0 !== pQ || null === CQ) return this.crashOn(xQ, pQ), !1;
-        const UQ = this.headerView()[LQ.Y.FrameDraw];
-        if (this.lastFrameKind = (0, bQ.e)(HQ, UQ), tQ === LQ.G.Fatal) return this.crash(AQ, null), !1;
-        if (null === OQ) return this.crash(MQ, `the core kept ${RQ} of ${uQ} net-in bytes`), !1;
-        if (this.eventWalker) {
-          if (this.stopped) return !1;
-          const QQ = this.frameEvents,
-            FQ = this.headerView();
-          QQ.ptr = FQ[LQ.Y.EventsPtr], QQ.len = FQ[LQ.Y.EventsLen], QQ.net = IQ, QQ.kind = this.lastFrameKind;
-          try {
-            this.eventWalker(QQ)
-          } catch (KQ) {
-            return this.crashOn(SQ, KQ), !1
-          }
-          return this.handEnvEvents()
-        }
-        for (const LQ of IQ) {
-          if (this.stopped) return !1;
-          try {
-            var NQ, TQ;
-            null === (NQ = (TQ = this.handlers).onNetEvent) || void 0 === NQ || NQ.call(TQ, LQ)
-          } catch (KQ) {
-            return this.crashOn(iQ, KQ), !1
-          }
-        }
-        return this.handEnvEvents()
-      }
-      handEnvEvents() {
-        for (const oQ of this.graceEvents) {
-          if (this.stopped) return !1;
-          try {
-            var QQ, FQ;
-            null === (QQ = (FQ = this.handlers).onReconnectGrace) || void 0 === QQ || QQ.call(FQ, oQ)
-          } catch (qQ) {
-            return this.crashOn(iQ, qQ), !1
-          }
-        }
-        for (const oQ of this.envEvents) {
-          if (this.stopped) return !1;
-          try {
-            var wQ, LQ;
-            null === (wQ = (LQ = this.handlers).onEnvEvent) || void 0 === wQ || wQ.call(LQ, oQ)
-          } catch (qQ) {
-            return this.crashOn(WQ, qQ), !1
-          }
-        }
-        return !this.stopped
-      }
-      setEventWalker(QQ) {
-        this.eventWalker = QQ
-      }
-      writePendingInput() {
-        if (this.stopped) return !1;
-        const {
-          input: QQ
-        } = this.rings;
-        try {
-          const FQ = this.unsentUiPrefs;
-          FQ && QQ.writeRecord(LQ.fb.UiPrefs, 0, FQ.nametagCutDistance, 0, (0, LQ.ae)(FQ)) && (this.unsentUiPrefs = null);
-          const wQ = this.unsentEnvPrefs;
-          wQ && QQ.writeRecord(LQ.fb.EnvPrefs, (0, LQ.Hd)(wQ), wQ.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
-          const qQ = this.unsentLookPrefs;
-          qQ && QQ.writeRecord(LQ.fb.Sensitivity, 0, qQ.mouse, qQ.touch, (0, HQ.i)(qQ.fovPercent)) && (this.unsentLookPrefs = null);
-          let oQ = 0;
-          for (const {
-              aux: LQ,
-              payload: DQ
-            }
-            of this.unsentOptions) {
-            if (!QQ.writeOptions(LQ, DQ)) {
-              if (QQ.cursor > 0) break;
-              this.optionsDropped++
-            }
-            oQ++
-          }
-          oQ > 0 && this.unsentOptions.splice(0, oQ)
-        } catch (FQ) {
-          return this.crash(eQ, FQ), !1
+          await (0, Sk.rb)()
+        } catch (kk) {
+          return pe.warn(Ye.create("indexeddb-unavailable", {
+            errorInfo: null === kk || void 0 === kk ? void 0 : kk.toString()
+          }).message), !1
         }
         return !0
+      }().then((kk => kk ? Dk.getId() : void 0)), [Kk, xk] = await Promise.all([mk, Mk]);
+      (function(kk) {
+        const ek = window.document.getElementsByTagName("script");
+        for (const ik of Object.values(ek))
+          if (ik.src && ik.src.includes(le) && ik.src.includes(kk)) return ik;
+        return null
+      })(bk) || Ae(bk, Kk.measurementId), Ie && (fk("consent", "default", Ie), ze(void 0)), fk("js", new Date);
+      const nk = null !== (Pk = null === rk || void 0 === rk ? void 0 : rk.config) && void 0 !== Pk ? Pk : {};
+      return nk.origin = "firebase", nk.update = !0, null != xk && (nk.firebase_id = xk), fk("config", Kk.measurementId, nk), qe && (fk("set", qe), Qe(void 0)), Kk.measurementId
+    }
+    class Ee {
+      constructor(kk) {
+        this.app = kk
       }
-      setHoldDraws(QQ) {
-        this.drawsHeld = QQ
+      _delete() {
+        return delete he[this.app.options.appId], Promise.resolve()
       }
-      setUiPrefs(QQ) {
-        this.unsentUiPrefs = {
-          ...QQ
-        }
-      }
-      setEnvPrefs(QQ) {
-        this.unsentEnvPrefs = {
-          ...QQ
-        }
-      }
-      setLookPrefs(QQ) {
-        this.unsentLookPrefs = {
-          ...QQ
-        }
-      }
-      queueOptions(QQ, FQ) {
-        return !this.isStopped && (FQ.byteLength > LQ.Ob.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
-          aux: QQ,
-          payload: FQ
-        }), !0))
-      }
-      setChunkCap(QQ) {
-        return this.callCore("setChunkCap", null, (FQ => FQ.pDQ(QQ)))
-      }
-      shedMemory(QQ) {
-        const FQ = this.callCore("shedMemory", null, (FQ => FQ.ODQ(QQ)));
-        return 0 === FQ ? null : FQ
-      }
-      addDistanceInUse() {
-        const QQ = this.callCore("addDistanceInUse", null, (QQ => QQ.zoQ()));
-        return 0 === QQ ? null : QQ
-      }
-      setChunkAddDistance(QQ, FQ) {
-        return this.callCore("setChunkAddDistance", !1, (wQ => wQ.GDQ(QQ, FQ)))
-      }
-      setGameHost(QQ) {
-        return this.callCore("setGameHost", !1, (FQ => (FQ.ZoQ(QQ), this.gameHost = QQ, !0)))
-      }
-      setAntiCheatProbes(QQ) {
-        return this.callCore("setAntiCheatProbes", !1, (FQ => FQ.eDQ(QQ)))
-      }
-      setAmbientOcclusion(QQ) {
-        this.callCore("setAmbientOcclusion", void 0, (FQ => {
-          FQ.tDQ(QQ)
-        }))
-      }
-      setPoseLod(QQ) {
-        this.callCore("setPoseLod", void 0, (FQ => {
-          FQ.CDQ(QQ)
-        }))
-      }
-      setDebugLog(QQ, FQ) {
-        this.callCore(aQ, void 0, (wQ => {
-          wQ.rt(QQ, FQ)
-        }))
-      }
-      takeDebugLog(QQ) {
-        return this.callCore(aQ, [], (FQ => FQ.Ut(QQ)))
-      }
-      setTextureLayers(QQ) {
-        return this.callCore("setTextureLayers", !1, (FQ => FQ.RDQ(QQ)))
-      }
-      setBlockColours(QQ) {
-        let {
-          blocks: FQ,
-          counts: wQ,
-          values: LQ
-        } = QQ;
-        return this.callCore("setBlockColours", !1, (QQ => QQ.tLQ(FQ, wQ, LQ)))
-      }
-      terrainTextureNames() {
-        return this.callCore(XQ, [], (QQ => QQ.TDQ()))
-      }
-      setTerrainTextures(QQ, FQ, wQ, LQ) {
-        return this.callCore(XQ, !1, (qQ => qQ.WDQ(QQ, wQ, FQ, LQ)))
-      }
-      setShaderPack(QQ, FQ, wQ, LQ, qQ, oQ) {
-        return this.callCore("setShaderPack", !1, (DQ => {
-          var kQ, vQ;
-          return null !== (kQ = null === (vQ = DQ.rLQ) || void 0 === vQ ? void 0 : vQ.call(DQ, QQ, FQ, wQ, LQ, qQ, oQ)) && void 0 !== kQ && kQ
-        }))
-      }
-      sunShadowWantedTextures() {
-        return this.callCore(fQ, null, (QQ => {
-          var FQ, wQ;
-          return null !== (FQ = null === (wQ = QQ.sDQ) || void 0 === wQ ? void 0 : wQ.call(QQ)) && void 0 !== FQ ? FQ : null
-        }))
-      }
-      setSunShadowTexture(QQ, FQ, wQ, LQ, qQ) {
-        this.callCore(fQ, void 0, (oQ => {
-          var DQ;
-          null === (DQ = oQ.iDQ) || void 0 === DQ || DQ.call(oQ, QQ, FQ, wQ, LQ, qQ)
-        }))
-      }
-      takeSunShadowWarnings() {
-        return this.callCore(fQ, [], (QQ => {
-          var FQ, wQ;
-          return null !== (FQ = null === (wQ = QQ.IDQ) || void 0 === wQ ? void 0 : wQ.call(QQ)) && void 0 !== FQ ? FQ : []
-        }))
-      }
-      sunShadowsHeld() {
-        return this.callCore(fQ, null, (QQ => {
-          var FQ, wQ;
-          return null !== (FQ = null === (wQ = QQ.rDQ) || void 0 === wQ ? void 0 : wQ.call(QQ)) && void 0 !== FQ ? FQ : null
-        }))
-      }
-      callCore(QQ, FQ, wQ) {
-        if (this.stopped) return FQ;
-        try {
-          return wQ(this.core)
-        } catch (LQ) {
-          return this.crash(QQ, LQ), FQ
-        }
-      }
-      readEvents(QQ) {
-        this.netOffsets.length = 0;
-        const FQ = this.headerView(),
-          wQ = FQ[LQ.Y.EventsPtr],
-          qQ = FQ[LQ.Y.EventsLen];
-        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === qQ) return jQ;
-        const oQ = [],
-          DQ = this.memory().buffer;
-        if (wQ % 4 !== 0 || wQ + qQ > DQ.byteLength) return this.crash(lQ, `events of ${qQ} bytes at ${wQ} outside ${DQ.byteLength} bytes of memory`), jQ;
-        const kQ = new DataView(DQ, wQ, qQ),
-          vQ = this.rings.net,
-          mQ = (FQ, wQ) => FQ + wQ <= QQ ? vQ.copyWritten(FQ, wQ) : null;
-        let uQ = 0;
-        for (; uQ < qQ;) {
-          const QQ = uQ + LQ.L,
-            FQ = QQ <= qQ ? kQ.getUint32(uQ, !0) : -1,
-            vQ = FQ >>> 16;
-          if (FQ < 0 || vQ > qQ - QQ) return this.crash(lQ, `event record at ${uQ} overruns its ${qQ} bytes`), jQ;
-          const WQ = 65535 & FQ,
-            RQ = FQ => kQ.getUint32(QQ + 4 * FQ, !0);
-          if (WQ === LQ.O.RawMessage) {
-            const QQ = vQ >= LQ.vc.BYTES ? 65535 & RQ(1) : -1,
-              FQ = QQ === LQ.vc.STRING_TYPE,
-              wQ = vQ === (FQ ? LQ.vc.STRING_TYPE_BYTES : LQ.vc.BYTES) ? mQ(RQ(2), RQ(3)) : null,
-              qQ = FQ && wQ ? mQ(RQ(4), RQ(5)) : null;
-            if (!wQ || FQ && !qQ) return this.crash(lQ, `RawMessage at ${uQ} of ${vQ} bytes names bytes outside net-in`), jQ;
-            this.netOffsets.push(uQ), oQ.push({
-              type: "message",
-              conn: RQ(0),
-              Om: QQ,
-              payloadKind: RQ(1) >>> 16,
-              payload: wQ,
-              stringType: qQ ? VQ.decode(qQ) : null
-            })
-          } else if (WQ === LQ.O.CoreErrors) {
-            var HQ, bQ;
-            const QQ = vQ >= 4 ? RQ(0) : -1;
-            if (QQ < 0 || QQ > LQ.B.PAIRS_MAX || vQ !== 4 * (LQ.B.FIXED_WORDS + LQ.B.PAIR_WORDS * QQ)) return this.crash(lQ, `CoreErrors at ${uQ} of ${vQ} bytes`), jQ;
-            const FQ = [];
-            for (let wQ = 0; wQ < QQ; wQ++) FQ.push({
-              code: RQ(1 + 2 * wQ),
-              detail: RQ(2 + 2 * wQ)
+    }
+    let he = {},
+      ae = [];
+    const We = {};
+    let te, Xe, Be = "dataLayer",
+      ce = "gtag",
+      Te = !1;
+
+    function oe(kk) {
+      if (Te) throw Ye.create("already-initialized");
+      kk.dataLayerName && (Be = kk.dataLayerName), kk.gtagName && (ce = kk.gtagName)
+    }
+
+    function Ze(kk, ek, ik) {
+      ! function() {
+        const kk = [];
+        if ((0, Sk.W)() && kk.push("This is a browser extension environment."), (0, Sk.n)() || kk.push("Cookies are not available."), kk.length > 0) {
+          const ek = kk.map(((kk, ek) => `(${ek+1}) ${kk}`)).join(" "),
+            ik = Ye.create("invalid-analytics-context", {
+              errorInfo: ek
             });
-            null === (HQ = (bQ = this.handlers).onCoreErrors) || void 0 === HQ || HQ.call(bQ, FQ, RQ(1 + 2 * QQ))
-          } else if (WQ === LQ.O.RenderReload) {
-            var YQ, xQ;
-            if (vQ !== LQ.Ic.BYTES) return this.crash(lQ, `RenderReload at ${uQ} of ${vQ} bytes`), jQ;
-            null === (YQ = (xQ = this.handlers).onRenderReload) || void 0 === YQ || YQ.call(xQ, RQ(0), RQ(1), RQ(2))
-          } else if (WQ === LQ.O.Images) {
-            var AQ, tQ;
-            null === (AQ = (tQ = this.handlers).onImages) || void 0 === AQ || AQ.call(tQ, new Uint8Array(DQ.slice(wQ + QQ, wQ + QQ + vQ)))
-          } else if (WQ === LQ.O.ModelRequests)
-            for (let wQ = 0; wQ < vQ >>> 2; wQ++) {
-              var eQ, MQ;
-              null === (eQ = (MQ = this.handlers).onModelRequest) || void 0 === eQ || eQ.call(MQ, RQ(wQ))
-            } else if (WQ === LQ.O.ModelTaken) {
-              var GQ, pQ;
-              if (vQ < 4) return this.crash(lQ, `ModelTaken at ${uQ} of ${vQ} bytes`), jQ;
-              const QQ = new Uint32Array((vQ >>> 2) - 1);
-              for (let FQ = 0; FQ < QQ.length; FQ++) QQ[FQ] = RQ(1 + FQ);
-              null === (GQ = (pQ = this.handlers).onModelTaken) || void 0 === GQ || GQ.call(pQ, RQ(0), QQ)
-            } else if (WQ === LQ.O.TerrainTexturesWanted) {
-            var cQ, CQ;
-            if (0 !== vQ) return this.crash(lQ, `TerrainTexturesWanted at ${uQ} of ${vQ} bytes`), jQ;
-            null === (cQ = (CQ = this.handlers).onTerrainTexturesWanted) || void 0 === cQ || cQ.call(CQ)
-          } else if (WQ === LQ.O.KeepAliveDue) {
-            var SQ, iQ;
-            if (vQ > LQ.ib) return this.crash(lQ, `KeepAliveDue at ${uQ} of ${vQ} bytes`), jQ;
-            null === (SQ = (iQ = this.handlers).onKeepAlive) || void 0 === SQ || SQ.call(iQ, new Uint8Array(DQ, wQ + QQ, vQ).slice())
-          } else if (WQ === LQ.O.ConnectionState) {
-            if (vQ !== LQ.n) return this.crash(lQ, `ConnectionState at ${uQ} of ${vQ} bytes`), jQ;
-            this.netOffsets.push(uQ), oQ.push({
-              type: "connection",
-              conn: RQ(0),
-              phase: RQ(1),
-              code: 0 | RQ(2)
-            })
-          } else if (WQ === LQ.O.EnvLighting || WQ === LQ.O.SkyImages) {
-            if (vQ !== (WQ === LQ.O.EnvLighting ? LQ.J : LQ.$c)) return this.crash(lQ, `event ${WQ} at ${uQ} of ${vQ} bytes`), jQ;
-            this.envEvents.push({
-              kind: WQ,
-              payload: new Uint8Array(DQ.slice(wQ + QQ, wQ + QQ + vQ))
-            })
-          } else if (WQ === LQ.O.ReconnectGrace) {
-            if (vQ !== LQ.dc) return this.crash(lQ, `ReconnectGrace at ${uQ} of ${vQ} bytes`), jQ;
-            const QQ = RQ(2);
-            this.graceEvents.push({
-              conn: RQ(0),
-              graceMs: RQ(1),
-              sessionBased: 0 !== (QQ & LQ.xc.SessionBased),
-              replayOffer: 0 !== (QQ & LQ.xc.ReplayOffer)
-            })
+          pe.warn(ik.message)
+        }
+      }();
+      const Dk = kk.options.appId;
+      if (!Dk) throw Ye.create("no-app-id");
+      if (!kk.options.apiKey) {
+        if (!kk.options.measurementId) throw Ye.create("no-api-key");
+        pe.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${kk.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
+      }
+      if (null != he[Dk]) throw Ye.create("already-exists", {
+        id: Dk
+      });
+      if (!Te) {
+        ! function(kk) {
+          let ek = [];
+          Array.isArray(window[kk]) ? ek = window[kk] : window[kk] = ek
+        }(Be);
+        const {
+          wrappedGtag: kk,
+          gtagCore: ek
+        } = function(kk, ek, ik, Dk, fk) {
+          let Sk = function() {
+            for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
+            window[Dk].push(arguments)
+          };
+          return window[fk] && "function" === typeof window[fk] && (Sk = window[fk]), window[fk] = je(Sk, kk, ek, ik), {
+            gtagCore: Sk,
+            wrappedGtag: window[fk]
           }
-          uQ = QQ + (0, LQ.Yd)(vQ)
-        }
-        return oQ
+        }(he, ae, We, Be, ce);
+        Xe = kk, te = ek, Te = !0
       }
-      forEachNetOut(QQ) {
-        this.forEachOut(pQ, "net-out", LQ.Y.NetOutPtr, LQ.Y.NetOutLen, LQ.Db, 0, ((FQ, wQ, qQ, oQ) => {
-          const DQ = (0, LQ.Pd)(wQ);
-          DQ === LQ.Hb.Frame ? QQ((0, LQ.Ld)(wQ), qQ) : this.crash(pQ, `net-out record at ${oQ} is kind ${DQ}, not a frame`)
-        }))
-      }
-      forEachWorkerOut(QQ) {
-        this.forEachOut(cQ, "worker-out", LQ.Y.WorkerOutPtr, LQ.Y.WorkerOutLen, LQ.hd, 4, ((FQ, wQ, qQ, oQ) => {
-          const DQ = 255 & FQ,
-            kQ = DQ === LQ.td.Init ? this.initOf(qQ, oQ) : qQ;
-          null !== kQ && QQ(DQ, FQ >>> 8 & 16777215, kQ)
-        }))
-      }
-      initOf(QQ, FQ) {
-        const wQ = this.memory().buffer;
-        if (QQ.byteLength !== LQ.$) return this.crash(cQ, `worker-out Init record at ${FQ} is ${QQ.byteLength} bytes, not a view`), null;
-        const qQ = new DataView(QQ.buffer, QQ.byteOffset, LQ.$),
-          oQ = qQ.getUint32(0, !0),
-          DQ = qQ.getUint32(4, !0);
-        return oQ + DQ > wQ.byteLength ? (this.crash(cQ, `worker-out Init record at ${FQ} names ${DQ} bytes at ${oQ} outside ${wQ.byteLength} bytes of memory`), null) : new Uint8Array(wQ, oQ, DQ)
-      }
-      forEachOut(QQ, FQ, wQ, qQ, oQ, DQ, kQ) {
-        if (this.stopped || null === this.lastHeader) return;
-        const vQ = this.headerView(),
-          mQ = vQ[wQ],
-          uQ = vQ[qQ];
-        if (0 === uQ) return;
-        const HQ = this.memory().buffer;
-        if (mQ % 4 !== 0 || mQ + uQ > HQ.byteLength) return void this.crash(QQ, `${FQ} of ${uQ} bytes at ${mQ} outside ${HQ.byteLength} bytes of memory`);
-        const bQ = new DataView(HQ, mQ, uQ);
-        let YQ = 0;
-        for (; YQ < uQ;) {
-          const wQ = YQ + oQ,
-            qQ = wQ <= uQ ? bQ.getUint32(YQ + DQ, !0) : -1;
-          if (qQ < 0 || qQ > uQ - wQ) return void this.crash(QQ, `${FQ} record at ${YQ} overruns its ${uQ} bytes`);
-          if (kQ(bQ.getUint32(YQ, !0), bQ.getUint32(YQ + 4, !0), new Uint8Array(HQ, mQ + wQ, qQ), YQ), this.stopped) return;
-          YQ = wQ + (0, LQ.Yd)(qQ)
-        }
-      }
-      forEachEvent(QQ) {
-        if (this.stopped || null === this.lastHeader) return;
-        const FQ = this.headerView(),
-          wQ = FQ[LQ.Y.EventsPtr],
-          qQ = FQ[LQ.Y.EventsLen];
-        if (0 === qQ) return;
-        const oQ = this.memory().buffer;
-        if (wQ % 4 !== 0 || wQ + qQ > oQ.byteLength) return void this.crash(lQ, `events of ${qQ} bytes at ${wQ} outside ${oQ.byteLength} bytes of memory`);
-        const DQ = new DataView(oQ, wQ, qQ);
-        let kQ = 0;
-        for (; kQ < qQ;) {
-          const FQ = kQ + LQ.L,
-            wQ = FQ <= qQ ? DQ.getUint32(kQ, !0) : -1,
-            oQ = wQ >>> 16;
-          if (wQ < 0 || oQ > qQ - FQ) return void this.crash(lQ, `event record at ${kQ} overruns its ${qQ} bytes`);
-          QQ(65535 & wQ, DQ, FQ, oQ), kQ = FQ + (0, LQ.Yd)(oQ)
-        }
-      }
-      crashOn(QQ, FQ) {
-        FQ instanceof qQ.b ? this.crash(lQ, FQ.message) : this.crash(QQ, FQ)
-      }
-      crash(QQ, FQ) {
-        this.stopped || (this.stopped = !0, this.handlers.onCrash({
-          site: QQ,
-          error: FQ,
-          header: this.lastHeader
-        }))
-      }
-      headerWord(QQ) {
-        return this.stopped || null === this.lastHeader ? 0 : this.headerView()[QQ]
-      }
-      readLoadCounts(QQ) {
-        if (this.stopped || null === this.lastHeader) return !1;
-        const FQ = this.core.st();
-        if (0 === FQ) return !1;
-        const wQ = this.memory().buffer;
-        wQ !== this.loadCountsBuffer && (this.loadCountsBuffer = wQ, this.loadCounts = new Uint32Array(wQ, FQ, LQ.jb));
-        const qQ = this.loadCounts;
-        return QQ.chunksReceived = qQ[LQ.pb.ChunksReceived], QQ.chunksCancelled = this.headerView()[LQ.Y.ChunksCancelled], QQ.chunksStored = qQ[LQ.pb.ChunksStored], QQ.jobsSent = qQ[LQ.pb.JobsSent], QQ.jobsDone = qQ[LQ.pb.JobsDone], QQ.jobsInFlight = qQ[LQ.pb.JobsInFlight], QQ.workersLive = qQ[LQ.pb.WorkersLive], QQ.workersRetired = qQ[LQ.pb.WorkersRetired], !0
-      }
-      headerView() {
-        const QQ = this.memory().buffer;
-        return QQ !== this.headerBuffer && (this.headerBuffer = QQ, this.header = new Uint32Array(QQ, this.core.uY(), LQ.U)), this.header
-      }
+      he[Dk] = ve(kk, ae, We, ek, te, Be, ik);
+      return new Ee(kk)
     }
-  },
-  40344: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => DQ,
-      c: () => oQ
-    });
-    var LQ = wQ(4540);
-    let qQ = null;
 
-    function oQ(QQ) {
-      qQ = {
-        scanned: !1
-      };
+    function Oe() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Dk.H)();
+      kk = (0, Sk.Q)(kk);
+      const ek = (0, Dk.z)(kk, we);
+      return ek.isInitialized() ? ek.getImmediate() : ge(kk)
+    }
+
+    function ge(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const ik = (0, Dk.z)(kk, we);
+      if (ik.isInitialized()) {
+        const kk = ik.getImmediate();
+        if ((0, Sk.C)(ek, ik.getOptions())) return kk;
+        throw Ye.create("already-initialized")
+      }
+      return ik.initialize({
+        options: ek
+      })
+    }
+    async function Ge() {
+      if ((0, Sk.W)()) return !1;
+      if (!(0, Sk.n)()) return !1;
+      if (!(0, Sk.cb)()) return !1;
       try {
-        return QQ()
-      } finally {
-        qQ = null
+        return await (0, Sk.rb)()
+      } catch (kk) {
+        return !1
       }
     }
 
-    function DQ() {
-      const QQ = qQ;
-      if (null === QQ) return (0, LQ.c)();
-      const FQ = (0, LQ.c)(!QQ.scanned);
-      return QQ.scanned = !0, FQ
+    function Ne(kk, ek, ik) {
+      kk = (0, Sk.Q)(kk), async function(kk, ek, ik, Dk) {
+        if (Dk && Dk.global) return kk("set", {
+          screen_name: ik
+        }), Promise.resolve();
+        kk("config", await ek, {
+          update: !0,
+          screen_name: ik
+        })
+      }(Xe, he[kk.app.options.appId], ek, ik).catch((kk => pe.error(kk)))
     }
+    async function Re(kk) {
+      return kk = (0, Sk.Q)(kk), async function(kk, ek) {
+        const ik = await ek;
+        return new Promise(((ek, Dk) => {
+          kk("get", ik, "client_id", (kk => {
+            kk || Dk(Ye.create("no-client-id")), ek(kk)
+          }))
+        }))
+      }(Xe, he[kk.app.options.appId])
+    }
+
+    function Je(kk, ek, ik) {
+      kk = (0, Sk.Q)(kk), async function(kk, ek, ik, Dk) {
+        if (Dk && Dk.global) return kk("set", {
+          user_id: ik
+        }), Promise.resolve();
+        kk("config", await ek, {
+          update: !0,
+          user_id: ik
+        })
+      }(Xe, he[kk.app.options.appId], ek, ik).catch((kk => pe.error(kk)))
+    }
+
+    function ki(kk, ek, ik) {
+      kk = (0, Sk.Q)(kk), async function(kk, ek, ik, Dk) {
+        if (Dk && Dk.global) {
+          const ek = {};
+          for (const kk of Object.keys(ik)) ek[`user_properties.${kk}`] = ik[kk];
+          return kk("set", ek), Promise.resolve()
+        }
+        kk("config", await ek, {
+          update: !0,
+          user_properties: ik
+        })
+      }(Xe, he[kk.app.options.appId], ek, ik).catch((kk => pe.error(kk)))
+    }
+
+    function ei(kk, ek) {
+      kk = (0, Sk.Q)(kk), async function(kk, ek) {
+        const ik = await kk;
+        window[`ga-disable-${ik}`] = !ek
+      }(he[kk.app.options.appId], ek).catch((kk => pe.error(kk)))
+    }
+
+    function ii(kk) {
+      Xe ? Xe("set", kk) : Qe(kk)
+    }
+
+    function Di(kk, ek, ik, Dk) {
+      kk = (0, Sk.Q)(kk), async function(kk, ek, ik, Dk, fk) {
+        if (fk && fk.global) kk("event", ik, Dk);
+        else {
+          const fk = await ek;
+          kk("event", ik, Object.assign(Object.assign({}, Dk), {
+            send_to: fk
+          }))
+        }
+      }(Xe, he[kk.app.options.appId], ek, ik, Dk).catch((kk => pe.error(kk)))
+    }
+
+    function fi(kk) {
+      Xe ? Xe("consent", "update", kk) : ze(kk)
+    }
+    const Si = "@firebase/analytics",
+      bi = "0.10.0";
+    (0, Dk.B)(new bk.f(we, ((kk, ek) => {
+      let {
+        options: ik
+      } = ek;
+      return Ze(kk.getProvider("app").getImmediate(), kk.getProvider("installations-internal").getImmediate(), ik)
+    }), "PUBLIC")), (0, Dk.B)(new bk.f("analytics-internal", (function(kk) {
+      try {
+        const ek = kk.getProvider(we).getImmediate();
+        return {
+          logEvent: (kk, ik, Dk) => Di(ek, kk, ik, Dk)
+        }
+      } catch (ek) {
+        throw Ye.create("interop-component-reg-failed", {
+          reason: ek
+        })
+      }
+    }), "PRIVATE")), (0, Dk.N)(Si, bi), (0, Dk.N)(Si, bi, "esm2017")
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

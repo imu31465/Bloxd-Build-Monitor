@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36228: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => YQ,
-      d: () => xQ,
-      g: () => bQ,
-      j: () => HQ
+  36140: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => nk,
+      h: () => Uk,
+      l: () => xk,
+      p: () => Kk
     });
-    var LQ = wQ(9094),
-      qQ = wQ(36235),
-      oQ = wQ(36238),
-      DQ = wQ(8464),
-      kQ = wQ(1447),
-      vQ = wQ(53),
-      mQ = wQ(71),
-      uQ = wQ(1107);
+    var Dk = ik(33763),
+      fk = ik(36143),
+      Sk = ik(36151),
+      bk = ik(8560),
+      rk = ik(1406),
+      Pk = ik(60),
+      mk = ik(75),
+      Mk = ik(1066);
 
-    function HQ() {
-      var QQ;
-      return (0, kQ.i)(qQ.b, (0, qQ.k)()), (0, uQ.jsx)(uQ.Fragment, {
-        children: null === (QQ = (0, qQ.k)()) || void 0 === QQ ? void 0 : QQ.content
+    function Kk() {
+      var kk;
+      return (0, rk.e)(fk.c, (0, fk.n)()), (0, Mk.jsx)(Mk.Fragment, {
+        children: null === (kk = (0, fk.n)()) || void 0 === kk ? void 0 : kk.content
       })
     }
 
-    function bQ(QQ) {
-      var FQ;
+    function xk(kk) {
+      var ek;
       let {
-        show: wQ
-      } = QQ;
-      (0, kQ.i)(qQ.b, (0, qQ.k)());
-      const mQ = null === (FQ = (0, qQ.k)()) || void 0 === FQ ? void 0 : FQ.menu;
-      return (0, vQ.useEffect)((() => {
-        var QQ;
-        wQ || (null === mQ || void 0 === mQ || null === (QQ = mQ.onClose) || void 0 === QQ || QQ.call(mQ), (0, oQ.o)())
-      }), [wQ, mQ]), (0, vQ.useEffect)((() => wQ ? (0, DQ.h)(oQ.v, oQ.g) : void 0), [wQ]), (0, uQ.jsx)(LQ.c, {
-        showing: wQ,
+        show: ik
+      } = kk;
+      (0, rk.e)(fk.c, (0, fk.n)());
+      const mk = null === (ek = (0, fk.n)()) || void 0 === ek ? void 0 : ek.menu;
+      return (0, Pk.useEffect)((() => {
+        var kk;
+        ik || (null === mk || void 0 === mk || null === (kk = mk.onClose) || void 0 === kk || kk.call(mk), (0, Sk.t)())
+      }), [ik, mk]), (0, Pk.useEffect)((() => ik ? (0, bk.f)(Sk.w, Sk.g) : void 0), [ik]), (0, Mk.jsx)(Dk.d, {
+        showing: ik,
         globallyUniqueKey: "clientGameMenu",
-        children: null === mQ || void 0 === mQ ? void 0 : mQ.content
+        children: null === mk || void 0 === mk ? void 0 : mk.content
       })
     }
 
-    function YQ(QQ) {
+    function nk(kk) {
       let {
-        placement: FQ = "bottom"
-      } = QQ;
-      return (0, uQ.jsx)("div", {
-        id: `clientGameHud-${FQ}`,
+        placement: ek = "bottom"
+      } = kk;
+      return (0, Mk.jsx)("div", {
+        id: `clientGameHud-${ek}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function xQ(QQ) {
+    function Uk(kk) {
       let {
-        children: FQ,
-        placement: wQ = "bottom"
-      } = QQ;
-      const [LQ, qQ] = (0, vQ.useState)(null);
-      return (0, vQ.useEffect)((() => {
-        qQ(document.getElementById(`clientGameHud-${wQ}`))
-      }), [wQ]), LQ ? (0, mQ.createPortal)(FQ, LQ) : null
+        children: ek,
+        placement: ik = "bottom"
+      } = kk;
+      const [Dk, fk] = (0, Pk.useState)(null);
+      return (0, Pk.useEffect)((() => {
+        fk(document.getElementById(`clientGameHud-${ik}`))
+      }), [ik]), Dk ? (0, mk.createPortal)(ek, Dk) : null
     }
   },
-  9094: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => oQ
+  33763: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Sk
     });
-    var LQ = wQ(4380),
-      qQ = wQ(4388);
+    var Dk = ik(4479),
+      fk = ik(4482);
 
-    function oQ(QQ) {
+    function Sk(kk) {
       let {
-        children: FQ,
-        showing: wQ,
-        globallyUniqueKey: oQ,
-        alwaysMountChildren: DQ = !1,
-        doGameplayStartStopOnShow: kQ = !0,
-        keepsMovement: vQ = !1
-      } = QQ;
-      return (0, qQ.d)(!0, wQ, oQ, vQ), (0, LQ.b)(kQ, wQ), wQ || DQ ? FQ : null
+        children: ek,
+        showing: ik,
+        globallyUniqueKey: Sk,
+        alwaysMountChildren: bk = !1,
+        doGameplayStartStopOnShow: rk = !0,
+        keepsMovement: Pk = !1
+      } = kk;
+      return (0, fk.c)(!0, ik, Sk, Pk), (0, Dk.c)(rk, ik), ik || bk ? ek : null
     }
   },
-  36313: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => oQ,
-      d: () => DQ,
-      f: () => kQ,
-      h: () => vQ
+  36249: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk,
+      f: () => bk,
+      i: () => rk,
+      m: () => Pk
     });
-    var LQ = wQ(53),
-      qQ = wQ(3002);
-    const oQ = 8,
-      DQ = "InGameHeaderContainer",
-      kQ = "TopRightElements";
+    var Dk = ik(60),
+      fk = ik(3079);
+    const Sk = 8,
+      bk = "InGameHeaderContainer",
+      rk = "TopRightElements";
 
-    function vQ(QQ) {
-      const [FQ] = (0, qQ.b)(), [wQ, vQ] = (0, LQ.useState)(!1);
-      return (0, LQ.useLayoutEffect)((() => {
-        if (!QQ) return;
-        const FQ = document.querySelector(`.${DQ}`),
-          wQ = document.querySelector(`.${kQ}`),
-          LQ = () => {
-            const LQ = QQ.getBoundingClientRect(),
-              qQ = FQ ? FQ.getBoundingClientRect().right : 0,
-              DQ = wQ ? wQ.getBoundingClientRect().left : window.innerWidth,
-              kQ = LQ.left < qQ + oQ,
-              mQ = LQ.right > DQ - oQ;
-            vQ(kQ || mQ)
+    function Pk(kk) {
+      const [ek] = (0, fk.c)(), [ik, Pk] = (0, Dk.useState)(!1);
+      return (0, Dk.useLayoutEffect)((() => {
+        if (!kk) return;
+        const ek = document.querySelector(`.${bk}`),
+          ik = document.querySelector(`.${rk}`),
+          Dk = () => {
+            const Dk = kk.getBoundingClientRect(),
+              fk = ek ? ek.getBoundingClientRect().right : 0,
+              bk = ik ? ik.getBoundingClientRect().left : window.innerWidth,
+              rk = Dk.left < fk + Sk,
+              mk = Dk.right > bk - Sk;
+            Pk(rk || mk)
           };
-        LQ();
-        const qQ = new ResizeObserver(LQ);
-        return qQ.observe(QQ), FQ && qQ.observe(FQ), wQ && qQ.observe(wQ), () => {
-          qQ.disconnect()
+        Dk();
+        const fk = new ResizeObserver(Dk);
+        return fk.observe(kk), ek && fk.observe(ek), ik && fk.observe(ik), () => {
+          fk.disconnect()
         }
-      }), [QQ, FQ]), wQ
+      }), [kk, ek]), ik
     }
   },
-  36308: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => qQ
+  36241: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => fk
     });
-    const LQ = [{
+    const Dk = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function qQ(QQ, FQ, wQ) {
-      const qQ = Math.abs(QQ - FQ),
-        oQ = Date.now() - wQ;
-      for (const DQ of LQ)
-        if (QQ < DQ.maxDist) return qQ >= DQ.hardUpdateDist || oQ > DQ.timeBetweenSoftChecks && qQ >= DQ.softUpdateDist;
+    function fk(kk, ek, ik) {
+      const fk = Math.abs(kk - ek),
+        Sk = Date.now() - ik;
+      for (const bk of Dk)
+        if (kk < bk.maxDist) return fk >= bk.hardUpdateDist || Sk > bk.timeBetweenSoftChecks && fk >= bk.softUpdateDist;
       return !1
     }
   },
-  8464: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => oQ,
-      h: () => qQ
+  8560: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk,
+      f: () => fk
     });
-    let LQ = null;
-    const qQ = function(QQ) {
-        const FQ = {
-          cycle: QQ,
+    let Dk = null;
+    const fk = function(kk) {
+        const ek = {
+          cycle: kk,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return LQ = FQ, () => {
-          LQ === FQ && (LQ = null)
+        return Dk = ek, () => {
+          Dk === ek && (Dk = null)
         }
       },
-      oQ = () => {
-        var QQ;
-        return null !== (QQ = LQ) && void 0 !== QQ && QQ.canCycle() ? LQ.cycle : null
+      Sk = () => {
+        var kk;
+        return null !== (kk = Dk) && void 0 !== kk && kk.canCycle() ? Dk.cycle : null
       }
   },
-  38066: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ, wQ) {
-      var LQ;
+  38111: (kk, ek, ik) => {
+    function Dk(kk, ek, ik) {
+      var Dk;
       const {
-        width: qQ,
-        height: oQ
-      } = wQ, DQ = null !== (LQ = QQ.text) && void 0 !== LQ ? LQ : QQ, kQ = (DQ.x / 100 - .5) * qQ, vQ = (DQ.y / 100 - .5) * oQ, mQ = qQ / 2 - FQ.x;
-      if (null !== QQ.text && Math.abs(kQ) <= mQ && vQ >= FQ.top - oQ / 2 && vQ <= oQ / 2 - FQ.bottom) return {
-        x: DQ.x,
-        y: DQ.y
+        width: fk,
+        height: Sk
+      } = ik, bk = null !== (Dk = kk.text) && void 0 !== Dk ? Dk : kk, rk = (bk.x / 100 - .5) * fk, Pk = (bk.y / 100 - .5) * Sk, mk = fk / 2 - ek.x;
+      if (null !== kk.text && Math.abs(rk) <= mk && Pk >= ek.top - Sk / 2 && Pk <= Sk / 2 - ek.bottom) return {
+        x: bk.x,
+        y: bk.y
       };
-      const uQ = Math.min(0 === kQ ? 1 / 0 : mQ / Math.abs(kQ), vQ > 0 ? (oQ / 2 - FQ.bottom) / vQ : vQ < 0 ? (FQ.top - oQ / 2) / vQ : 1 / 0);
-      return !Number.isFinite(uQ) || uQ < 0 ? {
+      const Mk = Math.min(0 === rk ? 1 / 0 : mk / Math.abs(rk), Pk > 0 ? (Sk / 2 - ek.bottom) / Pk : Pk < 0 ? (ek.top - Sk / 2) / Pk : 1 / 0);
+      return !Number.isFinite(Mk) || Mk < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + kQ * uQ / qQ * 100,
-        y: 50 + vQ * uQ / oQ * 100
+        x: 50 + rk * Mk / fk * 100,
+        y: 50 + Pk * Mk / Sk * 100
       }
     }
-    wQ.d(FQ, {
-      c: () => LQ
+    ik.d(ek, {
+      c: () => Dk
     })
   },
-  36238: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => oQ,
-      g: () => AQ,
-      i: () => tQ,
-      m: () => kQ,
-      n: () => bQ,
-      o: () => eQ,
-      q: () => HQ,
-      u: () => GQ,
-      v: () => xQ,
-      w: () => MQ
+  36151: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk,
+      g: () => Hk,
+      i: () => wk,
+      m: () => rk,
+      p: () => xk,
+      t: () => lk,
+      u: () => Kk,
+      v: () => yk,
+      w: () => Uk,
+      x: () => pk
     });
-    var LQ = wQ(17),
-      qQ = wQ(22);
-    const oQ = "clientGameInventoryButtonsChanged",
-      DQ = new Map;
+    var Dk = ik(22),
+      fk = ik(26);
+    const Sk = "clientGameInventoryButtonsChanged",
+      bk = new Map;
 
-    function kQ() {
-      return [...DQ.values()].sort(((QQ, FQ) => {
-        var wQ, LQ;
-        return (null !== (wQ = QQ.order) && void 0 !== wQ ? wQ : 0) - (null !== (LQ = FQ.order) && void 0 !== LQ ? LQ : 0)
+    function rk() {
+      return [...bk.values()].sort(((kk, ek) => {
+        var ik, Dk;
+        return (null !== (ik = kk.order) && void 0 !== ik ? ik : 0) - (null !== (Dk = ek.order) && void 0 !== Dk ? Dk : 0)
       }))
     }
-    let vQ = null;
+    let Pk = null;
 
-    function mQ(QQ) {
-      vQ = QQ
+    function mk(kk) {
+      Pk = kk
     }
-    let uQ = !1;
+    let Mk = !1;
 
-    function HQ(QQ) {
-      uQ = !0;
+    function Kk(kk) {
+      Mk = !0;
       try {
-        QQ.onClick()
+        kk.onClick()
       } finally {
-        uQ = !1
+        Mk = !1
       }
-      QQ.panel && "clientGame" === LQ.c.get("openInGameMenuName") && mQ(QQ.id)
+      kk.panel && "clientGame" === Dk.b.get("openInGameMenuName") && mk(kk.id)
     }
 
-    function bQ() {
-      return uQ
+    function xk() {
+      return Mk
     }
 
-    function YQ() {
-      return kQ().filter((QQ => QQ.panel && !QQ.disabled))
+    function nk() {
+      return rk().filter((kk => kk.panel && !kk.disabled))
     }
 
-    function xQ(QQ) {
-      const FQ = YQ(),
-        wQ = FQ.findIndex((QQ => QQ.id === vQ));
-      return !(wQ < 0 || FQ.length < 2) && (HQ(FQ[(wQ + QQ + FQ.length) % FQ.length]), !0)
+    function Uk(kk) {
+      const ek = nk(),
+        ik = ek.findIndex((kk => kk.id === Pk));
+      return !(ik < 0 || ek.length < 2) && (Kk(ek[(ik + kk + ek.length) % ek.length]), !0)
     }
 
-    function AQ() {
-      return null !== vQ && YQ().length > 1
+    function Hk() {
+      return null !== Pk && nk().length > 1
     }
 
-    function tQ() {
-      mQ(null)
+    function wk() {
+      mk(null)
     }
 
-    function eQ() {
-      "inventory" !== LQ.c.get("openInGameMenuName") && mQ(null)
+    function lk() {
+      "inventory" !== Dk.b.get("openInGameMenuName") && mk(null)
     }
 
-    function MQ() {
-      const QQ = vQ;
-      return mQ(null), QQ
+    function pk() {
+      const kk = Pk;
+      return mk(null), kk
     }
 
-    function GQ(QQ) {
-      return DQ.set(QQ.id, QQ), qQ.l.GA(oQ, kQ(), !0), () => {
-        DQ.get(QQ.id) === QQ && (DQ.delete(QQ.id), qQ.l.GA(oQ, kQ()))
+    function yk(kk) {
+      return bk.set(kk.id, kk), fk.j.tm(Sk, rk(), !0), () => {
+        bk.get(kk.id) === kk && (bk.delete(kk.id), fk.j.tm(Sk, rk()))
       }
     }
   },
-  36235: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => kQ,
-      f: () => tQ,
-      i: () => eQ,
-      j: () => bQ,
-      k: () => mQ,
-      o: () => AQ,
-      q: () => YQ,
-      u: () => uQ
+  36143: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => rk,
+      d: () => wk,
+      h: () => lk,
+      j: () => xk,
+      n: () => mk,
+      r: () => Hk,
+      v: () => nk,
+      z: () => Mk
     });
-    var LQ = wQ(17),
-      qQ = wQ(22),
-      oQ = wQ(1302),
-      DQ = wQ(36238);
-    const kQ = "clientGameUiChanged";
-    let vQ = null;
+    var Dk = ik(22),
+      fk = ik(26),
+      Sk = ik(1273),
+      bk = ik(36151);
+    const rk = "clientGameUiChanged";
+    let Pk = null;
 
-    function mQ() {
-      return vQ
+    function mk() {
+      return Pk
     }
 
-    function uQ(QQ, FQ) {
-      const wQ = {
-        content: QQ,
-        menu: FQ
+    function Mk(kk, ek) {
+      const ik = {
+        content: kk,
+        menu: ek
       };
-      return vQ = wQ, qQ.l.GA(kQ, vQ, !0), () => {
-        vQ === wQ && (vQ = null, xQ = !1, tQ(), qQ.l.GA(kQ, null))
+      return Pk = ik, fk.j.tm(rk, Pk, !0), () => {
+        Pk === ik && (Pk = null, Uk = !1, wk(), fk.j.tm(rk, null))
       }
     }
-    let HQ = null;
+    let Kk = null;
 
-    function bQ() {
-      return HQ
+    function xk() {
+      return Kk
     }
 
-    function YQ(QQ) {
-      return HQ = QQ, () => {
-        HQ === QQ && (HQ = null)
+    function nk(kk) {
+      return Kk = kk, () => {
+        Kk === kk && (Kk = null)
       }
     }
-    let xQ = !1;
+    let Uk = !1;
 
-    function AQ() {
-      const QQ = LQ.c.get("openInGameMenuName");
-      "clientGame" !== QQ && (xQ = "inventory" === QQ), (0, DQ.n)() || (0, DQ.i)(), (0, oQ.n)(oQ.d), LQ.c.set({
+    function Hk() {
+      const kk = Dk.b.get("openInGameMenuName");
+      "clientGame" !== kk && (Uk = "inventory" === kk), (0, bk.p)() || (0, bk.i)(), (0, Sk.s)(Sk.c), Dk.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function tQ() {
-      MQ(!1)
+    function wk() {
+      pk(!1)
     }
 
-    function eQ() {
-      MQ(xQ)
+    function lk() {
+      pk(Uk)
     }
 
-    function MQ(QQ) {
-      "clientGame" === LQ.c.get("openInGameMenuName") && LQ.c.set({
-        openInGameMenuName: QQ ? "inventory" : null
-      }), QQ || (0, DQ.i)(), xQ = !1
+    function pk(kk) {
+      "clientGame" === Dk.b.get("openInGameMenuName") && Dk.b.set({
+        openInGameMenuName: kk ? "inventory" : null
+      }), kk || (0, bk.i)(), Uk = !1
     }
   },
-  38945: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      default: () => tF
+  39003: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      default: () => le
     });
-    const LQ = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var qQ = wQ(53),
-      oQ = wQ(36235),
-      DQ = wQ(36646),
-      kQ = wQ(36242),
-      vQ = wQ(1725),
-      mQ = wQ(22);
-    const uQ = {
+    const Dk = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var fk = ik(60),
+      Sk = ik(36143),
+      bk = ik(36630),
+      rk = ik(36164),
+      Pk = ik(1688),
+      mk = ik(26);
+    const Mk = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const HQ = 32;
+    const Kk = 32;
 
-    function bQ(QQ, FQ, wQ, LQ) {
+    function xk(kk, ek, ik, Dk) {
       return {
         tag: "line",
         attrs: {
-          x1: QQ,
-          y1: FQ,
-          x2: wQ,
-          y2: LQ,
+          x1: kk,
+          y1: ek,
+          x2: ik,
+          y2: Dk,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function YQ(QQ) {
+    function nk(kk) {
       return {
         tag: "circle",
         attrs: {
-          cx: HQ,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HQ,
-          r: QQ,
+          cx: Kk,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Kk,
+          r: kk,
           class: "Fill"
         }
       }
     }
 
-    function xQ(QQ, FQ) {
+    function Uk(kk, ek) {
       return {
         tag: "path",
         attrs: {
-          d: QQ,
-          "stroke-width": FQ
+          d: kk,
+          "stroke-width": ek
         }
       }
     }
 
-    function AQ(QQ, FQ, wQ) {
+    function Hk(kk, ek, ik) {
       return {
         tag: "circle",
         attrs: {
-          cx: HQ,
-          cy: HQ,
-          r: QQ,
-          "stroke-width": FQ,
-          class: wQ
+          cx: Kk,
+          cy: Kk,
+          r: kk,
+          "stroke-width": ek,
+          class: ik
         }
       }
     }
 
-    function tQ(QQ, FQ, wQ) {
+    function wk(kk, ek, ik) {
       return {
         tag: "text",
         attrs: {
-          x: QQ,
-          y: FQ,
+          x: kk,
+          y: ek,
           class: "Fill Label"
         },
-        text: wQ
+        text: ik
       }
     }
-    const eQ = {
-      pistol: QQ => [bQ(HQ, HQ - QQ - 5, HQ, HQ - QQ), bQ(HQ - QQ - 5, HQ, HQ - QQ, HQ), bQ(HQ + QQ, HQ, HQ + QQ + 5, HQ), YQ(1.4)],
-      rifle: QQ => [bQ(HQ, HQ - QQ - 8, HQ, HQ - QQ), bQ(HQ, HQ + QQ, HQ, HQ + QQ + 8), bQ(HQ - QQ - 8, HQ, HQ - QQ, HQ), bQ(HQ + QQ, HQ, HQ + QQ + 8, HQ), YQ(1)],
-      smg: QQ => {
-        const FQ = Math.PI / 2,
-          wQ = [];
-        for (let DQ = 0; DQ < 4; DQ++) wQ.push((qQ = DQ * FQ + .35, oQ = (DQ + 1) * FQ - .35, xQ(`M${HQ+(LQ=6+QQ)*Math.cos(qQ)} ${HQ+LQ*Math.sin(qQ)} A${LQ} ${LQ} 0 0 1 ${HQ+LQ*Math.cos(oQ)} ${HQ+LQ*Math.sin(oQ)}`, 2)));
-        var LQ, qQ, oQ;
-        return [...wQ, YQ(1.4)]
+    const lk = {
+      pistol: kk => [xk(Kk, Kk - kk - 5, Kk, Kk - kk), xk(Kk - kk - 5, Kk, Kk - kk, Kk), xk(Kk + kk, Kk, Kk + kk + 5, Kk), nk(1.4)],
+      rifle: kk => [xk(Kk, Kk - kk - 8, Kk, Kk - kk), xk(Kk, Kk + kk, Kk, Kk + kk + 8), xk(Kk - kk - 8, Kk, Kk - kk, Kk), xk(Kk + kk, Kk, Kk + kk + 8, Kk), nk(1)],
+      smg: kk => {
+        const ek = Math.PI / 2,
+          ik = [];
+        for (let bk = 0; bk < 4; bk++) ik.push((fk = bk * ek + .35, Sk = (bk + 1) * ek - .35, Uk(`M${Kk+(Dk=6+kk)*Math.cos(fk)} ${Kk+Dk*Math.sin(fk)} A${Dk} ${Dk} 0 0 1 ${Kk+Dk*Math.cos(Sk)} ${Kk+Dk*Math.sin(Sk)}`, 2)));
+        var Dk, fk, Sk;
+        return [...ik, nk(1.4)]
       },
-      shotgun: QQ => [AQ(QQ, 3, "Ring Outline"), AQ(QQ, 1.5, "Ring")],
-      marksman: QQ => [xQ(`M${26-QQ/2} ${39+QQ/2} L32 33 L${38+QQ/2} ${39+QQ/2}`, 2), bQ(14 - QQ, HQ, 24 - QQ, HQ, 1.5), bQ(40 + QQ, HQ, 50 + QQ, HQ, 1.5), bQ(14 - QQ, 30, 14 - QQ, 34, 1.5), bQ(50 + QQ, 30, 50 + QQ, 34, 1.5)],
-      machineGun: QQ => {
-        const FQ = 10 + QQ,
-          wQ = [];
-        for (const [LQ, qQ] of [
+      shotgun: kk => [Hk(kk, 3, "Ring Outline"), Hk(kk, 1.5, "Ring")],
+      marksman: kk => [Uk(`M${26-kk/2} ${39+kk/2} L32 33 L${38+kk/2} ${39+kk/2}`, 2), xk(14 - kk, Kk, 24 - kk, Kk, 1.5), xk(40 + kk, Kk, 50 + kk, Kk, 1.5), xk(14 - kk, 30, 14 - kk, 34, 1.5), xk(50 + kk, 30, 50 + kk, 34, 1.5)],
+      machineGun: kk => {
+        const ek = 10 + kk,
+          ik = [];
+        for (const [Dk, fk] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) wQ.push(xQ(`M${HQ+LQ*FQ} ${HQ+qQ*(FQ-5)} L${HQ+LQ*FQ} ${HQ+qQ*FQ} L${HQ+LQ*(FQ-5)} ${HQ+qQ*FQ}`, 2));
-        return [...wQ, bQ(HQ, 28, HQ, 36, 1.5), bQ(28, HQ, 36, HQ, 1.5)]
+          ]) ik.push(Uk(`M${Kk+Dk*ek} ${Kk+fk*(ek-5)} L${Kk+Dk*ek} ${Kk+fk*ek} L${Kk+Dk*(ek-5)} ${Kk+fk*ek}`, 2));
+        return [...ik, xk(Kk, 28, Kk, 36, 1.5), xk(28, Kk, 36, Kk, 1.5)]
       },
-      launcher: () => [bQ(14, 30, 50, 30, 1.5), bQ(HQ, 24, HQ, 52, 1.5), bQ(28, 38, 36, 38, 1.5), bQ(29, 44, 35, 44, 1.5), bQ(30, 50, 34, 50, 1.5), tQ(38, 40, "100"), tQ(37, 46, "200"), YQ(1.4, 30)],
-      melee: () => [xQ("M32 26 L38 32 L32 38 L26 32 Z", 1.5), YQ(1.2)],
-      throwable: () => [YQ(1.6)]
+      launcher: () => [xk(14, 30, 50, 30, 1.5), xk(Kk, 24, Kk, 52, 1.5), xk(28, 38, 36, 38, 1.5), xk(29, 44, 35, 44, 1.5), xk(30, 50, 34, 50, 1.5), wk(38, 40, "100"), wk(37, 46, "200"), nk(1.4, 30)],
+      melee: () => [Uk("M32 26 L38 32 L32 38 L26 32 Z", 1.5), nk(1.2)],
+      throwable: () => [nk(1.6)]
     };
 
-    function MQ(QQ) {
+    function pk(kk) {
       let {
-        tag: FQ,
-        attrs: wQ,
-        text: LQ
-      } = QQ, qQ = `<${FQ}`;
-      for (const [oQ, DQ] of Object.entries(wQ)) qQ += ` ${oQ}="${DQ}"`;
-      return void 0 === LQ ? `${qQ}/>` : `${qQ}>${LQ}</${FQ}>`
+        tag: ek,
+        attrs: ik,
+        text: Dk
+      } = kk, fk = `<${ek}`;
+      for (const [Sk, bk] of Object.entries(ik)) fk += ` ${Sk}="${bk}"`;
+      return void 0 === Dk ? `${fk}/>` : `${fk}>${Dk}</${ek}>`
     }
-    class GQ {
-      constructor(QQ, FQ) {
-        this.api = QQ, this.localPlayerId = FQ, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = QQ => {
-          this.element = QQ, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, QQ && !this.enabled && (QQ.style.display = "none")
+    class yk {
+      constructor(kk, ek) {
+        this.api = kk, this.localPlayerId = ek, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = kk => {
+          this.element = kk, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, kk && !this.enabled && (kk.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, vQ.getRemInPx)()))
-        }, this.tokens = [mQ.l.subscribe("aimingOverlay", (QQ => {
-          this.sniperOverlay = "sniper" === QQ
-        })), mQ.l.subscribe("mouseState", (QQ => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Pk.getRemInPx)()))
+        }, this.tokens = [mk.j.subscribe("aimingOverlay", (kk => {
+          this.sniperOverlay = "sniper" === kk
+        })), mk.j.subscribe("mouseState", (kk => {
           let {
-            isDown: FQ
-          } = QQ;
-          this.mouseDown = FQ
+            isDown: ek
+          } = kk;
+          this.mouseDown = ek
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      Qr(QQ) {
-        QQ !== this.enabled && (this.enabled = QQ, this.drawnVisible = null, QQ || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      bV(kk) {
+        kk !== this.enabled && (this.enabled = kk, this.drawnVisible = null, kk || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(QQ, FQ) {
-        var wQ, LQ;
+      frame(kk, ek) {
+        var ik, Dk;
         if (!this.enabled) return;
         const {
-          api: qQ
-        } = this, oQ = qQ.isAlive(this.localPlayerId) && null !== (wQ = null === (LQ = qQ.owQ(this.localPlayerId)) || void 0 === LQ ? void 0 : LQ.name) && void 0 !== wQ ? wQ : null, DQ = (kQ = oQ) && uQ[kQ] || null;
-        var kQ;
-        if (this.setOwnsCrosshair(null !== DQ), !this.element) return;
-        const vQ = qQ.getHeldGunInaccuracy(),
-          mQ = null !== vQ,
-          HQ = null !== DQ && !this.sniperOverlay && qQ.isCrosshairShown();
-        if (HQ !== this.drawnVisible && (this.drawnVisible = HQ, this.element.style.display = HQ ? "block" : "none"), !HQ) return;
-        const bQ = mQ ? function(QQ) {
-            return "launcher" === QQ || "melee" === QQ || "throwable" === QQ ? "none" : "shotgun" === QQ ? "cone" : "offset"
-          }(DQ) : "none",
-          YQ = null !== vQ && void 0 !== vQ ? vQ : 0;
-        "cone" === bQ ? this.drawCone(DQ, this.coneRadiusVh(YQ, FQ) * this.gapPerVh, QQ) : (this.coneDrawn = !1, this.draw(DQ, "none" === bQ ? 2 : this.offsetGap(YQ)));
-        const xQ = !mQ && this.mouseDown;
-        xQ !== this.drawnPressed && (this.drawnPressed = xQ, this.element.classList.toggle("Pressed", xQ))
+          api: fk
+        } = this, Sk = fk.isAlive(this.localPlayerId) && null !== (ik = null === (Dk = fk.jek(this.localPlayerId)) || void 0 === Dk ? void 0 : Dk.name) && void 0 !== ik ? ik : null, bk = (rk = Sk) && Mk[rk] || null;
+        var rk;
+        if (this.setOwnsCrosshair(null !== bk), !this.element) return;
+        const Pk = fk.getHeldGunInaccuracy(),
+          mk = null !== Pk,
+          Kk = null !== bk && !this.sniperOverlay && fk.isCrosshairShown();
+        if (Kk !== this.drawnVisible && (this.drawnVisible = Kk, this.element.style.display = Kk ? "block" : "none"), !Kk) return;
+        const xk = mk ? function(kk) {
+            return "launcher" === kk || "melee" === kk || "throwable" === kk ? "none" : "shotgun" === kk ? "cone" : "offset"
+          }(bk) : "none",
+          nk = null !== Pk && void 0 !== Pk ? Pk : 0;
+        "cone" === xk ? this.drawCone(bk, this.coneRadiusVh(nk, ek) * this.gapPerVh, kk) : (this.coneDrawn = !1, this.draw(bk, "none" === xk ? 2 : this.offsetGap(nk)));
+        const Uk = !mk && this.mouseDown;
+        Uk !== this.drawnPressed && (this.drawnPressed = Uk, this.element.classList.toggle("Pressed", Uk))
       }
       dispose() {
-        for (const QQ of this.tokens) mQ.l.unsubscribe(QQ);
+        for (const kk of this.tokens) mk.j.unsubscribe(kk);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(QQ, FQ) {
-        var wQ, LQ;
-        QQ !== this.drawnFamily ? (this.drawnFamily = QQ, this.drawnGap = FQ, this.element.innerHTML = function(QQ, FQ) {
-          return `<svg viewBox="0 0 64 64">${eQ[QQ](FQ).map(MQ).join("")}</svg>`
-        }(QQ, FQ), this.shapes = Array.from(null !== (wQ = null === (LQ = this.element.firstElementChild) || void 0 === LQ ? void 0 : LQ.children) && void 0 !== wQ ? wQ : [])) : FQ !== this.drawnGap && (this.drawnGap = FQ, function(QQ, FQ, wQ) {
-          const LQ = eQ[FQ](wQ);
-          for (let qQ = 0; qQ < LQ.length; qQ++)
-            for (const [FQ, wQ] of Object.entries(LQ[qQ].attrs)) {
-              const LQ = String(wQ);
-              QQ[qQ].getAttribute(FQ) !== LQ && QQ[qQ].setAttribute(FQ, LQ)
+      draw(kk, ek) {
+        var ik, Dk;
+        kk !== this.drawnFamily ? (this.drawnFamily = kk, this.drawnGap = ek, this.element.innerHTML = function(kk, ek) {
+          return `<svg viewBox="0 0 64 64">${lk[kk](ek).map(pk).join("")}</svg>`
+        }(kk, ek), this.shapes = Array.from(null !== (ik = null === (Dk = this.element.firstElementChild) || void 0 === Dk ? void 0 : Dk.children) && void 0 !== ik ? ik : [])) : ek !== this.drawnGap && (this.drawnGap = ek, function(kk, ek, ik) {
+          const Dk = lk[ek](ik);
+          for (let fk = 0; fk < Dk.length; fk++)
+            for (const [ek, ik] of Object.entries(Dk[fk].attrs)) {
+              const Dk = String(ik);
+              kk[fk].getAttribute(ek) !== Dk && kk[fk].setAttribute(ek, Dk)
             }
-        }(this.shapes, QQ, FQ))
+        }(this.shapes, kk, ek))
       }
-      drawCone(QQ, FQ, wQ) {
-        QQ === this.drawnFamily && this.coneDrawn ? this.shownRadius += (FQ - this.shownRadius) * (1 - Math.exp(-wQ / 80)) : this.shownRadius = FQ, this.coneDrawn = !0, this.draw(QQ, Math.round(4 * this.shownRadius) / 4)
+      drawCone(kk, ek, ik) {
+        kk === this.drawnFamily && this.coneDrawn ? this.shownRadius += (ek - this.shownRadius) * (1 - Math.exp(-ik / 80)) : this.shownRadius = ek, this.coneDrawn = !0, this.draw(kk, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(QQ, FQ) {
-        if (!(FQ > 0)) return 1;
-        const wQ = QQ * DQ.i / 2;
-        return Math.max(50 * Math.tan(wQ) / FQ, 1)
+      coneRadiusVh(kk, ek) {
+        if (!(ek > 0)) return 1;
+        const ik = kk * bk.j / 2;
+        return Math.max(50 * Math.tan(ik) / ek, 1)
       }
-      offsetGap(QQ) {
-        const FQ = 2 + ((0, kQ.f)(QQ) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * FQ) / 2)
+      offsetGap(kk) {
+        const ek = 2 + ((0, rk.d)(kk) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * ek) / 2)
       }
-      setOwnsCrosshair(QQ) {
-        QQ !== this.ownsCrosshair && (this.ownsCrosshair = QQ, document.body.classList.toggle("FrontlineCustomCrosshair", QQ))
+      setOwnsCrosshair(kk) {
+        kk !== this.ownsCrosshair && (this.ownsCrosshair = kk, document.body.classList.toggle("FrontlineCustomCrosshair", kk))
       }
     }
-    const pQ = "FrontlineCustomDamage",
-      cQ = .45,
-      CQ = .2;
-    class SQ {
-      constructor(QQ, FQ) {
-        this.api = QQ, this.localPlayerId = FQ, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const Yk = "FrontlineCustomDamage",
+      Lk = .45,
+      Ck = .2;
+    class Ak {
+      constructor(kk, ek) {
+        this.api = kk, this.localPlayerId = ek, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.TQ = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = QQ => {
-          var FQ, wQ;
-          this.clearHits(), this.root = QQ, this.lowLayer = null !== (FQ = null === QQ || void 0 === QQ ? void 0 : QQ.querySelector(".FrontlineDamageLow")) && void 0 !== FQ ? FQ : null, this.arcLayer = null !== (wQ = null === QQ || void 0 === QQ ? void 0 : QQ.querySelector(".FrontlineDamageArcs")) && void 0 !== wQ ? wQ : null, this.showRoot(), this.drawLow()
-        }, this.token = mQ.l.subscribe("damagedByOtherPlayer", (QQ => {
+        }, this.maxHealth = null, this.lb = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = kk => {
+          var ek, ik;
+          this.clearHits(), this.root = kk, this.lowLayer = null !== (ek = null === kk || void 0 === kk ? void 0 : kk.querySelector(".FrontlineDamageLow")) && void 0 !== ek ? ek : null, this.arcLayer = null !== (ik = null === kk || void 0 === kk ? void 0 : kk.querySelector(".FrontlineDamageArcs")) && void 0 !== ik ? ik : null, this.showRoot(), this.drawLow()
+        }, this.token = mk.j.subscribe("damagedByOtherPlayer", (kk => {
           let {
-            direction: FQ,
-            UQ: wQ
-          } = QQ;
-          this.onHurt(FQ, wQ)
-        })), this.syncHealth(), document.body.classList.add(pQ)
+            direction: ek,
+            Ub: ik
+          } = kk;
+          this.onHurt(ek, ik)
+        })), this.syncHealth(), document.body.classList.add(Yk)
       }
-      Qr(QQ) {
-        QQ !== this.enabled && (this.enabled = QQ, document.body.classList.toggle(pQ, QQ), QQ || this.clearHits(), this.showRoot())
+      bV(kk) {
+        kk !== this.enabled && (this.enabled = kk, document.body.classList.toggle(Yk, kk), kk || this.clearHits(), this.showRoot())
       }
-      frame(QQ) {
-        this.syncHealth(), this.cameraHeading = QQ;
-        for (const FQ of this.arcs) this.drawArcAngle(FQ)
+      frame(kk) {
+        this.syncHealth(), this.cameraHeading = kk;
+        for (const ek of this.arcs) this.drawArcAngle(ek)
       }
       dispose() {
-        mQ.l.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(pQ)
+        mk.j.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Yk)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const QQ = this.api.getClientOption(this.localPlayerId, "_health"),
-          FQ = this.api.getClientOption(this.localPlayerId, "_shield"),
-          wQ = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(QQ, this.readHealth) && Object.is(FQ, this.readShield) && Object.is(wQ, this.readMaxHealth)) return;
-        if (this.readHealth = QQ, this.readShield = FQ, this.readMaxHealth = wQ, null === QQ || void 0 === QQ || !wQ) return this.lastHealthPool = null, this.maxHealth = null, this.TQ = 1, this.dead = !1, void this.drawLow();
-        const LQ = QQ + (null !== FQ && void 0 !== FQ ? FQ : 0);
-        if (null !== this.lastHealthPool && LQ < this.lastHealthPool) {
-          const QQ = performance.now(),
-            FQ = (this.lastHealthPool - LQ) / wQ;
-          this.lastDrop = QQ - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + FQ,
+        const kk = this.api.getClientOption(this.localPlayerId, "_health"),
+          ek = this.api.getClientOption(this.localPlayerId, "_shield"),
+          ik = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(kk, this.readHealth) && Object.is(ek, this.readShield) && Object.is(ik, this.readMaxHealth)) return;
+        if (this.readHealth = kk, this.readShield = ek, this.readMaxHealth = ik, null === kk || void 0 === kk || !ik) return this.lastHealthPool = null, this.maxHealth = null, this.lb = 1, this.dead = !1, void this.drawLow();
+        const Dk = kk + (null !== ek && void 0 !== ek ? ek : 0);
+        if (null !== this.lastHealthPool && Dk < this.lastHealthPool) {
+          const kk = performance.now(),
+            ek = (this.lastHealthPool - Dk) / ik;
+          this.lastDrop = kk - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + ek,
             at: this.lastDrop.at
           } : {
-            frac: FQ,
-            at: QQ
+            frac: ek,
+            at: kk
           }
         }
-        this.dead = QQ <= 0, this.dead && this.clearHits(), this.lastHealthPool = LQ, this.maxHealth = wQ, this.TQ = QQ > 0 ? QQ / wQ : 1, this.drawLow()
+        this.dead = kk <= 0, this.dead && this.clearHits(), this.lastHealthPool = Dk, this.maxHealth = ik, this.lb = kk > 0 ? kk / ik : 1, this.drawLow()
       }
-      onHurt(QQ, FQ) {
+      onHurt(kk, ek) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const wQ = Math.min(1, this.takeDamageFrac(FQ) / .3);
-        null !== QQ && this.showArc(QQ, wQ), this.flashEdge(null === QQ ? null : QQ - this.cameraHeading, .4 + .6 * wQ)
+        const ik = Math.min(1, this.takeDamageFrac(ek) / .3);
+        null !== kk && this.showArc(kk, ik), this.flashEdge(null === kk ? null : kk - this.cameraHeading, .4 + .6 * ik)
       }
-      takeDamageFrac(QQ) {
-        if (void 0 !== QQ && this.maxHealth) return QQ / this.maxHealth;
+      takeDamageFrac(kk) {
+        if (void 0 !== kk && this.maxHealth) return kk / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: FQ
+          frac: ek
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, FQ
+        }, ek
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const QQ = WQ((cQ - this.TQ) / .25),
-          FQ = WQ((CQ - this.TQ) / .15000000000000002),
-          wQ = this.TQ < cQ;
-        this.lowLayer.classList.toggle("Active", wQ), this.lowLayer.classList.toggle("Critical", this.TQ < CQ), this.lowLayer.style.opacity = String(wQ ? .55 + .3 * QQ + .15 * FQ : 0)
+        const kk = sk((Lk - this.lb) / .25),
+          ek = sk((Ck - this.lb) / .15000000000000002),
+          ik = this.lb < Lk;
+        this.lowLayer.classList.toggle("Active", ik), this.lowLayer.classList.toggle("Critical", this.lb < Ck), this.lowLayer.style.opacity = String(ik ? .55 + .3 * kk + .15 * ek : 0)
       }
-      showArc(QQ, FQ) {
-        var wQ, LQ;
+      showArc(kk, ek) {
+        var ik, Dk;
         if (!this.arcLayer) return;
-        let qQ = this.arcs.find((FQ => iQ(FQ.direction, QQ) < .6));
-        if (!qQ) {
-          const FQ = document.createElement("div");
-          FQ.className = "FrontlineDamageArc", FQ.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(FQ), qQ = {
-            element: FQ,
-            direction: QQ,
+        let fk = this.arcs.find((ek => jk(ek.direction, kk) < .6));
+        if (!fk) {
+          const ek = document.createElement("div");
+          ek.className = "FrontlineDamageArc", ek.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(ek), fk = {
+            element: ek,
+            direction: kk,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(qQ)
+          }, this.arcs.push(fk)
         }
-        qQ.direction = QQ, this.drawArcAngle(qQ);
-        const oQ = qQ.fade ? Number(getComputedStyle(qQ.element).opacity) : 0;
-        null === (wQ = qQ.fade) || void 0 === wQ || wQ.cancel(), null === (LQ = qQ.pop) || void 0 === LQ || LQ.cancel(), qQ.element.style.opacity = "1";
-        const DQ = qQ.element.animate([{
-          opacity: oQ
+        fk.direction = kk, this.drawArcAngle(fk);
+        const Sk = fk.fade ? Number(getComputedStyle(fk.element).opacity) : 0;
+        null === (ik = fk.fade) || void 0 === ik || ik.cancel(), null === (Dk = fk.pop) || void 0 === Dk || Dk.cancel(), fk.element.style.opacity = "1";
+        const bk = fk.element.animate([{
+          opacity: Sk
         }, {
           opacity: 1
         }], 144);
-        qQ.fade = DQ, qQ.pop = qQ.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * FQ
+        fk.fade = bk, fk.pop = fk.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * ek
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const kQ = qQ;
-        DQ.onfinish = () => {
-          if (kQ.fade !== DQ) return;
-          const QQ = kQ.element.animate([{
+        const rk = fk;
+        bk.onfinish = () => {
+          if (rk.fade !== bk) return;
+          const kk = rk.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          QQ.startTime = DQ.startTime, kQ.fade = QQ, QQ.onfinish = () => {
-            kQ.fade === QQ && (kQ.element.remove(), RQ(this.arcs, kQ))
+          kk.startTime = bk.startTime, rk.fade = kk, kk.onfinish = () => {
+            rk.fade === kk && (rk.element.remove(), dk(this.arcs, rk))
           }
         }
       }
-      drawArcAngle(QQ) {
-        const FQ = QQ.direction - this.cameraHeading;
-        (null === QQ.drawnAngle || Math.abs(FQ - QQ.drawnAngle) > .005) && (QQ.drawnAngle = FQ, QQ.element.style.rotate = `${FQ}rad`)
+      drawArcAngle(kk) {
+        const ek = kk.direction - this.cameraHeading;
+        (null === kk.drawnAngle || Math.abs(ek - kk.drawnAngle) > .005) && (kk.drawnAngle = ek, kk.element.style.rotate = `${ek}rad`)
       }
-      flashEdge(QQ, FQ) {
-        var wQ, LQ, qQ;
+      flashEdge(kk, ek) {
+        var ik, Dk, fk;
         if (!this.root) return;
-        let oQ = this.flashes.find((FQ => null === FQ.angle || null === QQ ? FQ.angle === QQ : iQ(FQ.angle, QQ) < .5));
-        if (!oQ) {
-          const FQ = document.createElement("div");
-          FQ.className = "FrontlineDamageFlash";
-          const wQ = FQ.appendChild(document.createElement("div"));
-          wQ.className = "FrontlineDamageFlashGlow", this.root.insertBefore(FQ, this.arcLayer), oQ = {
-            element: FQ,
-            glow: wQ,
-            angle: QQ,
+        let Sk = this.flashes.find((ek => null === ek.angle || null === kk ? ek.angle === kk : jk(ek.angle, kk) < .5));
+        if (!Sk) {
+          const ek = document.createElement("div");
+          ek.className = "FrontlineDamageFlash";
+          const ik = ek.appendChild(document.createElement("div"));
+          ik.className = "FrontlineDamageFlashGlow", this.root.insertBefore(ek, this.arcLayer), Sk = {
+            element: ek,
+            glow: ik,
+            angle: kk,
             level: 0,
             animation: null
-          }, this.flashes.push(oQ)
+          }, this.flashes.push(Sk)
         }
-        const DQ = null === (wQ = oQ.animation) || void 0 === wQ || null === (LQ = wQ.effect) || void 0 === LQ ? void 0 : LQ.getComputedTiming().progress,
-          kQ = null === DQ || void 0 === DQ ? 0 : oQ.level * (1 - DQ);
-        oQ.level = Math.min(1, Math.max(FQ, kQ + .6 * FQ)), oQ.angle = QQ;
+        const bk = null === (ik = Sk.animation) || void 0 === ik || null === (Dk = ik.effect) || void 0 === Dk ? void 0 : Dk.getComputedTiming().progress,
+          rk = null === bk || void 0 === bk ? 0 : Sk.level * (1 - bk);
+        Sk.level = Math.min(1, Math.max(ek, rk + .6 * ek)), Sk.angle = kk;
         const {
-          x: vQ,
-          y: mQ,
-          rx: uQ,
-          ry: HQ
-        } = function(QQ, FQ) {
-          const wQ = window.innerWidth,
-            LQ = window.innerHeight;
-          if (null === QQ) return {
-            x: wQ / 2,
-            y: LQ / 2,
+          x: Pk,
+          y: mk,
+          rx: Mk,
+          ry: Kk
+        } = function(kk, ek) {
+          const ik = window.innerWidth,
+            Dk = window.innerHeight;
+          if (null === kk) return {
+            x: ik / 2,
+            y: Dk / 2,
             rx: 0,
             ry: 0
           };
-          const qQ = Math.sin(QQ),
-            oQ = -Math.cos(QQ),
-            DQ = wQ / 2 / Math.max(1e-6, Math.abs(qQ)),
-            kQ = LQ / 2 / Math.max(1e-6, Math.abs(oQ)),
-            vQ = Math.min(DQ, kQ),
-            mQ = Math.round(wQ / 2 + qQ * vQ),
-            uQ = Math.round(LQ / 2 + oQ * vQ),
-            HQ = LQ / 100 * (.85 + .25 * FQ),
-            bQ = DQ <= kQ,
-            YQ = Math.round((bQ ? 30 : 74) * HQ),
-            xQ = Math.round((bQ ? 58 : 26) * HQ);
+          const fk = Math.sin(kk),
+            Sk = -Math.cos(kk),
+            bk = ik / 2 / Math.max(1e-6, Math.abs(fk)),
+            rk = Dk / 2 / Math.max(1e-6, Math.abs(Sk)),
+            Pk = Math.min(bk, rk),
+            mk = Math.round(ik / 2 + fk * Pk),
+            Mk = Math.round(Dk / 2 + Sk * Pk),
+            Kk = Dk / 100 * (.85 + .25 * ek),
+            xk = bk <= rk,
+            nk = Math.round((xk ? 30 : 74) * Kk),
+            Uk = Math.round((xk ? 58 : 26) * Kk);
           return {
-            x: mQ,
-            y: uQ,
-            rx: YQ,
-            ry: xQ
+            x: mk,
+            y: Mk,
+            rx: nk,
+            ry: Uk
           }
-        }(QQ, oQ.level), {
-          style: bQ
-        } = oQ.glow;
-        oQ.glow.classList.toggle("Everywhere", null === QQ), bQ.setProperty("--glowX", `${vQ}px`), bQ.setProperty("--glowY", `${mQ}px`), bQ.setProperty("--glowRx", `${uQ}px`), bQ.setProperty("--glowRy", `${HQ}px`), oQ.element.style.transformOrigin = `${vQ}px ${mQ}px`, null === (qQ = oQ.animation) || void 0 === qQ || qQ.cancel();
-        const YQ = oQ.element.animate([{
+        }(kk, Sk.level), {
+          style: xk
+        } = Sk.glow;
+        Sk.glow.classList.toggle("Everywhere", null === kk), xk.setProperty("--glowX", `${Pk}px`), xk.setProperty("--glowY", `${mk}px`), xk.setProperty("--glowRx", `${Mk}px`), xk.setProperty("--glowRy", `${Kk}px`), Sk.element.style.transformOrigin = `${Pk}px ${mk}px`, null === (fk = Sk.animation) || void 0 === fk || fk.cancel();
+        const nk = Sk.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: oQ.level,
+          opacity: Sk.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * oQ.level,
+          opacity: .8 * Sk.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * oQ.level
+          duration: 520 + 180 * Sk.level
         });
-        oQ.animation = YQ;
-        const xQ = oQ;
-        YQ.onfinish = () => {
-          xQ.animation === YQ && (xQ.element.remove(), RQ(this.flashes, xQ))
+        Sk.animation = nk;
+        const Uk = Sk;
+        nk.onfinish = () => {
+          Uk.animation === nk && (Uk.element.remove(), dk(this.flashes, Uk))
         }
       }
       clearHits() {
-        for (const LQ of this.arcs) {
-          var QQ, FQ;
-          null === (QQ = LQ.fade) || void 0 === QQ || QQ.cancel(), LQ.fade = null, null === (FQ = LQ.pop) || void 0 === FQ || FQ.cancel(), LQ.element.remove()
+        for (const Dk of this.arcs) {
+          var kk, ek;
+          null === (kk = Dk.fade) || void 0 === kk || kk.cancel(), Dk.fade = null, null === (ek = Dk.pop) || void 0 === ek || ek.cancel(), Dk.element.remove()
         }
         this.arcs.length = 0;
-        for (const LQ of this.flashes) {
-          var wQ;
-          null === (wQ = LQ.animation) || void 0 === wQ || wQ.cancel(), LQ.element.remove()
+        for (const Dk of this.flashes) {
+          var ik;
+          null === (ik = Dk.animation) || void 0 === ik || ik.cancel(), Dk.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function iQ(QQ, FQ) {
-      return Math.abs(Math.atan2(Math.sin(QQ - FQ), Math.cos(QQ - FQ)))
+    function jk(kk, ek) {
+      return Math.abs(Math.atan2(Math.sin(kk - ek), Math.cos(kk - ek)))
     }
 
-    function WQ(QQ) {
-      return Math.max(0, Math.min(1, QQ))
+    function sk(kk) {
+      return Math.max(0, Math.min(1, kk))
     }
 
-    function RQ(QQ, FQ) {
-      const wQ = QQ.indexOf(FQ); - 1 !== wQ && QQ.splice(wQ, 1)
+    function dk(kk, ek) {
+      const ik = kk.indexOf(ek); - 1 !== ik && kk.splice(ik, 1)
     }
-    var OQ = wQ(1070),
-      sQ = wQ.n(OQ),
-      rQ = wQ(36228),
-      IQ = wQ(36313),
-      UQ = wQ(1207),
-      NQ = wQ(1447);
-    const TQ = "frontlineHudChanged",
-      KQ = "frontlineScoreboardChanged";
-    class zQ {
+    var Vk = ik(1021),
+      Fk = ik.n(Vk),
+      uk = ik(36140),
+      qk = ik(36249),
+      Ik = ik(1172),
+      zk = ik(1406);
+    const Qk = "frontlineHudChanged",
+      vk = "frontlineScoreboardChanged";
+    class Ek {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      bx(QQ) {
-        this.wire = QQ, mQ.l.GA(TQ, QQ, !0)
+      BU(kk) {
+        this.wire = kk, mk.j.tm(Qk, kk, !0)
       }
-      receiveScoreboard(QQ) {
-        let FQ = "scoreboard" === QQ[0] ? performance.now() + QQ[5] : 0;
-        const wQ = this.scoreboard.endsAt;
-        0 !== FQ && 0 !== wQ && Math.abs(FQ - wQ) < 1e3 && (FQ = wQ), this.scoreboard = {
-          wire: QQ,
-          endsAt: FQ
-        }, mQ.l.GA(KQ, this.scoreboard, !0)
+      receiveScoreboard(kk) {
+        let ek = "scoreboard" === kk[0] ? performance.now() + kk[5] : 0;
+        const ik = this.scoreboard.endsAt;
+        0 !== ek && 0 !== ik && Math.abs(ek - ik) < 1e3 && (ek = ik), this.scoreboard = {
+          wire: kk,
+          endsAt: ek
+        }, mk.j.tm(vk, this.scoreboard, !0)
       }
     }
-    var lQ = wQ(1107);
-    const jQ = {
+    var hk = ik(1066);
+    const ak = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function aQ(QQ) {
-      const [FQ, wQ] = (0, qQ.useState)((() => (QQ - performance.now()) / 1e3));
-      return (0, qQ.useEffect)((() => {
-        if (0 === QQ) return;
-        const FQ = () => {
-          wQ((QQ - performance.now()) / 1e3)
+    function Wk(kk) {
+      const [ek, ik] = (0, fk.useState)((() => (kk - performance.now()) / 1e3));
+      return (0, fk.useEffect)((() => {
+        if (0 === kk) return;
+        const ek = () => {
+          ik((kk - performance.now()) / 1e3)
         };
-        FQ();
-        const LQ = window.setInterval(FQ, 250);
+        ek();
+        const Dk = window.setInterval(ek, 250);
         return () => {
-          window.clearInterval(LQ)
+          window.clearInterval(Dk)
         }
-      }), [QQ]), FQ
+      }), [kk]), ek
     }
 
-    function XQ(QQ) {
+    function tk(kk) {
       let {
-        className: FQ,
-        point: wQ
-      } = QQ;
-      const [LQ, qQ, oQ, DQ, kQ, vQ] = wQ;
-      return (0, lQ.jsxs)("div", {
-        className: sQ()(FQ, `Owner-${qQ||"None"}`, `Leader-${DQ||"None"}`, {
-          Contested: kQ,
-          Here: vQ
+        className: ek,
+        point: ik
+      } = kk;
+      const [Dk, fk, Sk, bk, rk, Pk] = ik;
+      return (0, hk.jsxs)("div", {
+        className: Fk()(ek, `Owner-${fk||"None"}`, `Leader-${bk||"None"}`, {
+          Contested: rk,
+          Here: Pk
         }),
-        children: [(0, lQ.jsx)("span", {
+        children: [(0, hk.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: LQ
-        }), (0, lQ.jsx)("i", {
+          children: Dk
+        }), (0, hk.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${oQ}%`
+            width: `${Sk}%`
           }
         })]
       })
     }
-    const fQ = (0, qQ.memo)((function(QQ) {
+    const Xk = (0, fk.memo)((function(kk) {
         let {
-          points: FQ,
-          markers: wQ
-        } = QQ;
+          points: ek,
+          markers: ik
+        } = kk;
         const {
-          t: LQ
-        } = (0, UQ.y)();
-        return FQ ? (0, lQ.jsx)("div", {
+          t: Dk
+        } = (0, Ik.D)();
+        return ek ? (0, hk.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: FQ.map((QQ => {
-            const [FQ, , , , , , , qQ] = QQ;
-            return (0, lQ.jsxs)("div", {
-              ref: wQ.bindMarker(FQ),
+          children: ek.map((kk => {
+            const [ek, , , , , , , fk] = kk;
+            return (0, hk.jsxs)("div", {
+              ref: ik.bindMarker(ek),
               className: "FrontlinePointMarker",
-              children: [(0, lQ.jsx)(XQ, {
+              children: [(0, hk.jsx)(tk, {
                 className: "FrontlinePointMarkerTile",
-                point: QQ
-              }), (0, lQ.jsxs)("div", {
+                point: kk
+              }), (0, hk.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [qQ && (0, lQ.jsx)("span", {
-                  className: sQ()("FrontlinePointMarkerHomeTurf", `Team-${qQ}`),
-                  children: LQ("frontlineHud:homeTurf", {
-                    team: LQ(jQ[qQ])
+                children: [fk && (0, hk.jsx)("span", {
+                  className: Fk()("FrontlinePointMarkerHomeTurf", `Team-${fk}`),
+                  children: Dk("frontlineHud:homeTurf", {
+                    team: Dk(ak[fk])
                   })
-                }), (0, lQ.jsx)("span", {
+                }), (0, hk.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, FQ)
+            }, ek)
           }))
         }) : null
       })),
-      VQ = {
+      Bk = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      hQ = {
+      ck = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function JQ(QQ) {
+    function Tk(kk) {
       let {
-        hud: FQ,
-        crosshair: wQ,
-        damage: LQ,
-        markers: qQ
-      } = QQ;
-      const oQ = (0, NQ.i)(TQ, FQ.getWire()),
-        DQ = (0, NQ.i)(KQ, FQ.getScoreboard());
-      return (0, lQ.jsxs)(lQ.Fragment, {
-        children: [(0, lQ.jsx)(EQ, {
-          damage: LQ
-        }), (0, lQ.jsx)(fQ, {
-          points: "scoreboard" === DQ.wire[0] ? DQ.wire[6] : null,
-          markers: qQ
-        }), (0, lQ.jsx)(gQ, {
-          view: DQ
-        }), (0, lQ.jsx)("div", {
+        hud: ek,
+        crosshair: ik,
+        damage: Dk,
+        markers: fk
+      } = kk;
+      const Sk = (0, zk.e)(Qk, ek.getWire()),
+        bk = (0, zk.e)(vk, ek.getScoreboard());
+      return (0, hk.jsxs)(hk.Fragment, {
+        children: [(0, hk.jsx)(Zk, {
+          damage: Dk
+        }), (0, hk.jsx)(Xk, {
+          points: "scoreboard" === bk.wire[0] ? bk.wire[6] : null,
+          markers: fk
+        }), (0, hk.jsx)(gk, {
+          view: bk
+        }), (0, hk.jsx)("div", {
           className: "FrontlineReticle",
-          ref: wQ.bindElement
-        }), (0, lQ.jsx)(rQ.d, {
-          children: (0, lQ.jsx)(nQ, {
-            wire: oQ
+          ref: ik.bindElement
+        }), (0, hk.jsx)(uk.h, {
+          children: (0, hk.jsx)(Ok, {
+            wire: Sk
           })
         })]
       })
     }
-    const EQ = (0, qQ.memo)((function(QQ) {
+    const Zk = (0, fk.memo)((function(kk) {
         let {
-          damage: FQ
-        } = QQ;
-        return (0, lQ.jsxs)("div", {
+          damage: ek
+        } = kk;
+        return (0, hk.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: FQ.bindElement,
-          children: [(0, lQ.jsx)("div", {
+          ref: ek.bindElement,
+          children: [(0, hk.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, lQ.jsx)("div", {
+            children: (0, hk.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, lQ.jsx)("div", {
+          }), (0, hk.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      nQ = (0, qQ.memo)((function(QQ) {
+      Ok = (0, fk.memo)((function(kk) {
         let {
-          wire: FQ
-        } = QQ;
+          wire: ek
+        } = kk;
         const {
-          t: wQ
-        } = (0, UQ.y)();
-        if ("capture" === FQ[0]) {
-          const [, QQ, LQ, qQ, oQ, DQ, kQ] = FQ, vQ = Math.round(qQ / 100 * 24);
-          return (0, lQ.jsxs)("div", {
-            className: sQ()("FrontlinePlate", `Status-${LQ}`, `Leader-${oQ||"None"}`),
-            children: [(0, lQ.jsx)(BQ, {}), (0, lQ.jsxs)("div", {
+          t: ik
+        } = (0, Ik.D)();
+        if ("capture" === ek[0]) {
+          const [, kk, Dk, fk, Sk, bk, rk] = ek, Pk = Math.round(fk / 100 * 24);
+          return (0, hk.jsxs)("div", {
+            className: Fk()("FrontlinePlate", `Status-${Dk}`, `Leader-${Sk||"None"}`),
+            children: [(0, hk.jsx)(Jk, {}), (0, hk.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, lQ.jsx)("span", {
+              children: [(0, hk.jsx)("span", {
                 className: "FrontlineObjective",
-                children: QQ
-              }), (0, lQ.jsxs)("div", {
+                children: kk
+              }), (0, hk.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, lQ.jsx)("div", {
+                children: [(0, hk.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: wQ("frontlineHud:objective", {
-                    point: QQ,
-                    friendly: DQ,
-                    enemy: kQ
+                  children: ik("frontlineHud:objective", {
+                    point: kk,
+                    friendly: bk,
+                    enemy: rk
                   })
-                }), (0, lQ.jsx)("div", {
+                }), (0, hk.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: wQ(VQ[LQ])
+                  children: ik(Bk[Dk])
                 })]
-              }), (0, lQ.jsxs)("span", {
+              }), (0, hk.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(qQ).padStart(3, "0"), (0, lQ.jsx)("small", {
+                children: [String(fk).padStart(3, "0"), (0, hk.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, lQ.jsx)(ZQ, {
+            }), (0, hk.jsx)(Nk, {
               segments: 24,
-              lit: vQ
+              lit: Pk
             })]
           })
         }
-        if ("alert" === FQ[0]) {
-          const [, QQ, LQ, qQ] = FQ;
-          return (0, lQ.jsxs)("div", {
-            className: sQ()("FrontlinePlate", "FrontlineAlert", `Tone-${qQ}`),
-            children: [(0, lQ.jsx)(BQ, {}), (0, lQ.jsx)("div", {
+        if ("alert" === ek[0]) {
+          const [, kk, Dk, fk] = ek;
+          return (0, hk.jsxs)("div", {
+            className: Fk()("FrontlinePlate", "FrontlineAlert", `Tone-${fk}`),
+            children: [(0, hk.jsx)(Jk, {}), (0, hk.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: wQ(hQ[QQ])
-            }), (0, lQ.jsx)("div", {
+              children: ik(ck[kk])
+            }), (0, hk.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: LQ
+              children: Dk
             })]
           })
         }
         return null
       })),
-      gQ = (0, qQ.memo)((function(QQ) {
+      gk = (0, fk.memo)((function(kk) {
         let {
-          view: FQ
-        } = QQ;
+          view: ek
+        } = kk;
         const {
-          t: wQ
-        } = (0, UQ.y)(), LQ = (0, qQ.useRef)(null), oQ = function(QQ, FQ) {
-          const [wQ, LQ] = (0, qQ.useState)(!1);
-          return (0, qQ.useLayoutEffect)((() => {
-            const FQ = QQ.current;
-            if (!FQ) return;
-            const wQ = document.querySelector(`.${IQ.d}`),
-              qQ = document.querySelector(`.${IQ.f}`),
-              oQ = () => {
-                var QQ;
-                const oQ = FQ.querySelector(".FrontlineTeamTrack"),
-                  DQ = (0, vQ.getRemInPx)(),
-                  kQ = FQ.getBoundingClientRect().width - 2 * (null !== (QQ = null === oQ || void 0 === oQ ? void 0 : oQ.getBoundingClientRect().width) && void 0 !== QQ ? QQ : 0),
-                  mQ = window.innerWidth / 2,
-                  uQ = wQ ? wQ.getBoundingClientRect().right : 0,
-                  HQ = qQ ? qQ.getBoundingClientRect().left : window.innerWidth,
-                  bQ = Math.min(mQ - uQ, HQ - mQ) - IQ.b - kQ / 2,
-                  YQ = bQ < 6 * DQ,
-                  xQ = YQ ? (window.innerWidth - kQ) / 2 - IQ.b : bQ;
-                FQ.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(xQ,14*DQ)))}px`), LQ(YQ)
+          t: ik
+        } = (0, Ik.D)(), Dk = (0, fk.useRef)(null), Sk = function(kk, ek) {
+          const [ik, Dk] = (0, fk.useState)(!1);
+          return (0, fk.useLayoutEffect)((() => {
+            const ek = kk.current;
+            if (!ek) return;
+            const ik = document.querySelector(`.${qk.f}`),
+              fk = document.querySelector(`.${qk.i}`),
+              Sk = () => {
+                var kk;
+                const Sk = ek.querySelector(".FrontlineTeamTrack"),
+                  bk = (0, Pk.getRemInPx)(),
+                  rk = ek.getBoundingClientRect().width - 2 * (null !== (kk = null === Sk || void 0 === Sk ? void 0 : Sk.getBoundingClientRect().width) && void 0 !== kk ? kk : 0),
+                  mk = window.innerWidth / 2,
+                  Mk = ik ? ik.getBoundingClientRect().right : 0,
+                  Kk = fk ? fk.getBoundingClientRect().left : window.innerWidth,
+                  xk = Math.min(mk - Mk, Kk - mk) - qk.c - rk / 2,
+                  nk = xk < 6 * bk,
+                  Uk = nk ? (window.innerWidth - rk) / 2 - qk.c : xk;
+                ek.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(Uk,14*bk)))}px`), Dk(nk)
               };
-            oQ();
-            const DQ = new ResizeObserver(oQ);
-            for (const QQ of [FQ, wQ, qQ]) QQ && DQ.observe(QQ);
-            return window.addEventListener("resize", oQ), () => {
-              DQ.disconnect(), window.removeEventListener("resize", oQ)
+            Sk();
+            const bk = new ResizeObserver(Sk);
+            for (const kk of [ek, ik, fk]) kk && bk.observe(kk);
+            return window.addEventListener("resize", Sk), () => {
+              bk.disconnect(), window.removeEventListener("resize", Sk)
             }
-          }), [QQ, FQ]), wQ
-        }(LQ, "scoreboard" === FQ.wire[0]);
-        if ("scoreboard" !== FQ.wire[0]) return null;
-        const [, DQ, kQ, mQ, uQ, , HQ] = FQ.wire, bQ = "Red" === DQ ? "Blue" : "Red";
-        return (0, lQ.jsxs)("div", {
-          className: sQ()("FrontlineScoreboardContainer", {
-            Below: oQ
+          }), [kk, ek]), ik
+        }(Dk, "scoreboard" === ek.wire[0]);
+        if ("scoreboard" !== ek.wire[0]) return null;
+        const [, bk, rk, mk, Mk, , Kk] = ek.wire, xk = "Red" === bk ? "Blue" : "Red";
+        return (0, hk.jsxs)("div", {
+          className: Fk()("FrontlineScoreboardContainer", {
+            Below: Sk
           }),
-          children: [(0, lQ.jsxs)("div", {
-            ref: LQ,
+          children: [(0, hk.jsxs)("div", {
+            ref: Dk,
             className: "FrontlineScoreboard",
-            children: [(0, lQ.jsx)(BQ, {}), (0, lQ.jsx)(PQ, {
-              team: DQ,
-              tickets: kQ,
-              goal: uQ,
+            children: [(0, hk.jsx)(Jk, {}), (0, hk.jsx)(Gk, {
+              team: bk,
+              tickets: rk,
+              goal: Mk,
               side: "Friendly"
-            }), (0, lQ.jsx)("div", {
+            }), (0, hk.jsx)("div", {
               className: "FrontlinePoints",
-              children: HQ.map((QQ => (0, lQ.jsx)(XQ, {
+              children: Kk.map((kk => (0, hk.jsx)(tk, {
                 className: "FrontlinePoint",
-                point: QQ
-              }, QQ[0])))
-            }), (0, lQ.jsx)(PQ, {
-              team: bQ,
-              tickets: mQ,
-              goal: uQ,
+                point: kk
+              }, kk[0])))
+            }), (0, hk.jsx)(Gk, {
+              team: xk,
+              tickets: mk,
+              goal: Mk,
               side: "Enemy"
             })]
-          }), (0, lQ.jsxs)("div", {
+          }), (0, hk.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, lQ.jsx)(yQ, {
-              endsAt: FQ.endsAt
-            }), (0, lQ.jsx)("div", {
+            children: [(0, hk.jsx)(Rk, {
+              endsAt: ek.endsAt
+            }), (0, hk.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: wQ("frontlineHud:ticketGoal", {
-                goal: uQ
+              children: ik("frontlineHud:ticketGoal", {
+                goal: Mk
               })
             })]
           })]
         })
       }));
 
-    function PQ(QQ) {
+    function Gk(kk) {
       let {
-        team: FQ,
-        tickets: wQ,
-        goal: LQ,
-        side: qQ
-      } = QQ;
+        team: ek,
+        tickets: ik,
+        goal: Dk,
+        side: fk
+      } = kk;
       const {
-        t: oQ
-      } = (0, UQ.y)(), DQ = String(wQ).padStart(3, "0"), kQ = DQ.search(/[1-9]/), vQ = -1 === kQ ? DQ : DQ.slice(0, kQ), mQ = Math.min(20, Math.floor(wQ / LQ * 20));
-      return (0, lQ.jsxs)("div", {
-        className: sQ()("FrontlineTeamScore", qQ, `Team-${FQ}`),
-        children: [(0, lQ.jsxs)("div", {
+        t: Sk
+      } = (0, Ik.D)(), bk = String(ik).padStart(3, "0"), rk = bk.search(/[1-9]/), Pk = -1 === rk ? bk : bk.slice(0, rk), mk = Math.min(20, Math.floor(ik / Dk * 20));
+      return (0, hk.jsxs)("div", {
+        className: Fk()("FrontlineTeamScore", fk, `Team-${ek}`),
+        children: [(0, hk.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, lQ.jsx)("span", {
+          children: [(0, hk.jsx)("span", {
             className: "Lead",
-            children: vQ
-          }), -1 !== kQ && DQ.slice(kQ)]
-        }), (0, lQ.jsxs)("div", {
+            children: Pk
+          }), -1 !== rk && bk.slice(rk)]
+        }), (0, hk.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, lQ.jsx)("div", {
+          children: [(0, hk.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: oQ(jQ[FQ])
-          }), (0, lQ.jsx)(ZQ, {
+            children: Sk(ak[ek])
+          }), (0, hk.jsx)(Nk, {
             segments: 20,
-            lit: mQ
+            lit: mk
           })]
         })]
       })
     }
 
-    function ZQ(QQ) {
+    function Nk(kk) {
       let {
-        segments: FQ,
-        lit: wQ
-      } = QQ;
-      return (0, lQ.jsx)("div", {
+        segments: ek,
+        lit: ik
+      } = kk;
+      return (0, hk.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: FQ
-        }, ((QQ, FQ) => (0, lQ.jsx)("i", {
-          className: sQ()({
-            Lit: FQ < wQ
+          length: ek
+        }, ((kk, ek) => (0, hk.jsx)("i", {
+          className: Fk()({
+            Lit: ek < ik
           })
-        }, FQ)))
+        }, ek)))
       })
     }
 
-    function yQ(QQ) {
+    function Rk(kk) {
       let {
-        endsAt: FQ
-      } = QQ;
-      const wQ = Math.max(0, Math.ceil(aQ(FQ)));
-      return (0, lQ.jsxs)("div", {
-        className: sQ()("FrontlineClock", {
-          Urgent: wQ <= 60
+        endsAt: ek
+      } = kk;
+      const ik = Math.max(0, Math.ceil(Wk(ek)));
+      return (0, hk.jsxs)("div", {
+        className: Fk()("FrontlineClock", {
+          Urgent: ik <= 60
         }),
-        children: [Math.floor(wQ / 60), ":", String(wQ % 60).padStart(2, "0")]
+        children: [Math.floor(ik / 60), ":", String(ik % 60).padStart(2, "0")]
       })
     }
 
-    function BQ() {
-      return (0, lQ.jsxs)(lQ.Fragment, {
-        children: [(0, lQ.jsx)("i", {
+    function Jk() {
+      return (0, hk.jsxs)(hk.Fragment, {
+        children: [(0, hk.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, lQ.jsx)("i", {
+        }), (0, hk.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var dQ = wQ(36308),
-      QF = wQ(1265),
-      FF = wQ(38026),
-      wF = wQ(38066);
-    class LF {
-      constructor(QQ) {
-        var FQ;
-        this.hud = QQ, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var ke = ik(36241),
+      ee = ik(1223),
+      ie = ik(38081),
+      De = ik(38111);
+    class fe {
+      constructor(kk) {
+        var ek;
+        this.hud = kk, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.kx = !1, this.aG = () => {
+        }, this.render = null, this.aU = !1, this.Ay = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.aG), null === (FQ = window.visualViewport) || void 0 === FQ || FQ.addEventListener("resize", this.aG)
+        }, window.addEventListener("resize", this.Ay), null === (ek = window.visualViewport) || void 0 === ek || ek.addEventListener("resize", this.Ay)
       }
-      bindMarker(QQ) {
-        let FQ = this.refs.get(QQ);
-        return FQ || (FQ = FQ => {
-          var wQ;
-          null === (wQ = this.markers.get(QQ)) || void 0 === wQ || wQ.stopObserving(), this.markers.delete(QQ), FQ && !this.kx && this.markers.set(QQ, this.mount(FQ))
-        }, this.refs.set(QQ, FQ)), FQ
+      bindMarker(kk) {
+        let ek = this.refs.get(kk);
+        return ek || (ek = ek => {
+          var ik;
+          null === (ik = this.markers.get(kk)) || void 0 === ik || ik.stopObserving(), this.markers.delete(kk), ek && !this.aU && this.markers.set(kk, this.mount(ek))
+        }, this.refs.set(kk, ek)), ek
       }
-      frame(QQ, FQ) {
-        this.render = QQ;
-        const wQ = this.hud.getScoreboard().wire;
-        if ("scoreboard" === wQ[0] && 0 !== this.markers.size)
-          for (const [LQ, , , , , , qQ] of wQ[6]) {
-            const QQ = this.markers.get(LQ);
-            QQ && qQ && (QQ.target ??= [0, 0, 0], QQ.target[0] = qQ[0], QQ.target[1] = qQ[1] + 2.5, QQ.target[2] = qQ[2], this.place(QQ), this.kL(QQ, FQ && Math.hypot(qQ[0] - FQ[0], qQ[1] - FQ[1], qQ[2] - FQ[2])))
+      frame(kk, ek) {
+        this.render = kk;
+        const ik = this.hud.getScoreboard().wire;
+        if ("scoreboard" === ik[0] && 0 !== this.markers.size)
+          for (const [Dk, , , , , , fk] of ik[6]) {
+            const kk = this.markers.get(Dk);
+            kk && fk && (kk.target ??= [0, 0, 0], kk.target[0] = fk[0], kk.target[1] = fk[1] + 2.5, kk.target[2] = fk[2], this.place(kk), this.RS(kk, ek && Math.hypot(fk[0] - ek[0], fk[1] - ek[1], fk[2] - ek[2])))
           }
       }
       dispose() {
-        var QQ;
-        this.kx = !0, window.removeEventListener("resize", this.aG), null === (QQ = window.visualViewport) || void 0 === QQ || QQ.removeEventListener("resize", this.aG);
-        for (const FQ of this.markers.values()) FQ.stopObserving();
+        var kk;
+        this.aU = !0, window.removeEventListener("resize", this.Ay), null === (kk = window.visualViewport) || void 0 === kk || kk.removeEventListener("resize", this.Ay);
+        for (const ek of this.markers.values()) ek.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(QQ) {
+      place(kk) {
         const {
-          render: FQ,
-          viewport: wQ
+          render: ek,
+          viewport: ik
         } = this;
-        if (!FQ || !QQ.target) return;
-        const LQ = (50 - FQ.screenBandPct.y) / 100 * wQ.height,
-          qQ = {
-            x: QQ.halfSize.width + 8,
-            top: QQ.halfSize.height + 8,
-            bottom: QQ.halfSize.height + QQ.labelsBelow + LQ
+        if (!ek || !kk.target) return;
+        const Dk = (50 - ek.screenBandPct.y) / 100 * ik.height,
+          fk = {
+            x: kk.halfSize.width + 8,
+            top: kk.halfSize.height + 8,
+            bottom: kk.halfSize.height + kk.labelsBelow + Dk
           },
-          oQ = FQ.projectWorldPosToViewport(QQ.target),
-          DQ = null !== oQ && void 0 !== oQ ? oQ : FQ.projectWorldPosToScreenPos(QQ.target),
-          kQ = (0, wF.c)({
-            x: DQ.x,
-            y: DQ.y,
-            text: oQ
-          }, qQ, wQ);
-        (0, FF.e)(QQ.root, Math.round(100 * kQ.x) / 100, Math.round(100 * kQ.y) / 100)
+          Sk = ek.projectWorldPosToViewport(kk.target),
+          bk = null !== Sk && void 0 !== Sk ? Sk : ek.projectWorldPosToScreenPos(kk.target),
+          rk = (0, De.c)({
+            x: bk.x,
+            y: bk.y,
+            text: Sk
+          }, fk, ik);
+        (0, ie.c)(kk.root, Math.round(100 * rk.x) / 100, Math.round(100 * rk.y) / 100)
       }
-      kL(QQ, FQ) {
-        if (null === FQ) return void(null !== QQ.metres && (QQ.metres = null, QQ.distance.textContent = ""));
-        const wQ = Date.now();
-        (null === QQ.metres || (0, dQ.e)(FQ, QQ.metres, QQ.metresShownAt)) && (QQ.metres = Math.round(FQ), QQ.metresShownAt = wQ, QQ.distance.textContent = (0, UQ.u)(QF.e.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(QQ.metres)
+      RS(kk, ek) {
+        if (null === ek) return void(null !== kk.metres && (kk.metres = null, kk.distance.textContent = ""));
+        const ik = Date.now();
+        (null === kk.metres || (0, ke.d)(ek, kk.metres, kk.metresShownAt)) && (kk.metres = Math.round(ek), kk.metresShownAt = ik, kk.distance.textContent = (0, Ik.x)(ee.f.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(kk.metres)
         }))
       }
-      mount(QQ) {
-        const FQ = {
-            root: QQ,
-            distance: QQ.querySelector(".FrontlinePointMarkerDistance"),
+      mount(kk) {
+        const ek = {
+            root: kk,
+            distance: kk.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          wQ = QQ.querySelector(".FrontlinePointMarkerLabels"),
-          LQ = new ResizeObserver((() => {
-            FQ.halfSize = {
-              width: Math.max(QQ.offsetWidth, wQ.offsetWidth) / 2,
-              height: QQ.offsetHeight / 2
-            }, FQ.labelsBelow = wQ.offsetTop + wQ.offsetHeight - QQ.offsetHeight, this.place(FQ)
+          ik = kk.querySelector(".FrontlinePointMarkerLabels"),
+          Dk = new ResizeObserver((() => {
+            ek.halfSize = {
+              width: Math.max(kk.offsetWidth, ik.offsetWidth) / 2,
+              height: kk.offsetHeight / 2
+            }, ek.labelsBelow = ik.offsetTop + ik.offsetHeight - kk.offsetHeight, this.place(ek)
           }));
-        return LQ.observe(QQ, {
+        return Dk.observe(kk, {
           box: "border-box"
-        }), LQ.observe(wQ, {
+        }), Dk.observe(ik, {
           box: "border-box"
-        }), FQ.stopObserving = () => {
-          LQ.disconnect()
-        }, FQ
+        }), ek.stopObserving = () => {
+          Dk.disconnect()
+        }, ek
       }
     }
-    var qF = wQ(6283),
-      oF = wQ(2511);
-    const DF = "frontlineRoundEndChanged";
-    class kF {
+    var Se = ik(6298),
+      be = ik(2567);
+    const re = "frontlineRoundEndChanged";
+    class Pe {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      bx(QQ) {
-        const FQ = "roundEnd" === QQ[0] ? performance.now() + QQ[5] : 0;
+      BU(kk) {
+        const ek = "roundEnd" === kk[0] ? performance.now() + kk[5] : 0;
         this.view = {
-          wire: QQ,
+          wire: kk,
           key: this.view.key + 1,
-          endsAt: FQ
-        }, mQ.l.GA(DF, this.view, !0)
+          endsAt: ek
+        }, mk.j.tm(re, this.view, !0)
       }
     }
-    const vF = (0, qQ.lazy)((() => (0, oF.b)(wQ.e(192).then((() => wQ(41155))), (QQ => QQ.FrontlineMvpLineup)))),
-      mF = [4800, 4e3, 3200],
-      uF = [1, 0, 2],
-      HF = {
+    const me = (0, fk.lazy)((() => (0, be.e)(ik.e(201).then((() => ik(41334))), (kk => kk.FrontlineMvpLineup)))),
+      Me = [4800, 4e3, 3200],
+      Ke = [1, 0, 2],
+      xe = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      bF = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      ne = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function YF(QQ) {
+    function Ue(kk) {
       let {
-        controller: FQ
-      } = QQ;
-      const wQ = (0, NQ.i)(DF, FQ.getView()),
-        LQ = aQ(wQ.endsAt);
-      return "roundEnd" !== wQ.wire[0] || 1e3 * LQ < -2e3 ? null : (0, lQ.jsx)(xF, {
-        wire: wQ.wire,
-        secondsLeft: Math.max(0, Math.ceil(LQ))
-      }, wQ.key)
+        controller: ek
+      } = kk;
+      const ik = (0, zk.e)(re, ek.getView()),
+        Dk = Wk(ik.endsAt);
+      return "roundEnd" !== ik.wire[0] || 1e3 * Dk < -2e3 ? null : (0, hk.jsx)(He, {
+        wire: ik.wire,
+        secondsLeft: Math.max(0, Math.ceil(Dk))
+      }, ik.key)
     }
-    const xF = (0, qQ.memo)((function(QQ) {
+    const He = (0, fk.memo)((function(kk) {
       let {
-        wire: FQ,
-        secondsLeft: wQ
-      } = QQ;
+        wire: ek,
+        secondsLeft: ik
+      } = kk;
       const {
-        t: oQ
-      } = (0, UQ.y)(), [, DQ, kQ, vQ, mQ, , uQ, HQ] = FQ, bQ = (0, qQ.useMemo)((() => uF.filter((QQ => QQ < HQ.length))), [HQ]), YQ = (0, qQ.useMemo)((() => bQ.map((QQ => {
-        const [, , , , , FQ, wQ] = HQ[QQ];
+        t: Sk
+      } = (0, Ik.D)(), [, bk, rk, Pk, mk, , Mk, Kk] = ek, xk = (0, fk.useMemo)((() => Ke.filter((kk => kk < Kk.length))), [Kk]), nk = (0, fk.useMemo)((() => xk.map((kk => {
+        const [, , , , , ek, ik] = Kk[kk];
         return {
-          cosmetics: LQ.map(((QQ, wQ) => [QQ, FQ[wQ]])),
-          size: 0 === QQ ? 1.15 : .85,
+          cosmetics: Dk.map(((kk, ik) => [kk, ek[ik]])),
+          size: 0 === kk ? 1.15 : .85,
           heldGun: {
-            name: wQ,
-            aimed: 0 === QQ
+            name: ik,
+            aimed: 0 === kk
           },
-          showAfterMs: mF[QQ]
+          showAfterMs: Me[kk]
         }
-      }))), [HQ, bQ]);
-      return (0, lQ.jsxs)("div", {
-        className: sQ()("FrontlineRoundEnd", `Result-${DQ}`),
+      }))), [Kk, xk]);
+      return (0, hk.jsxs)("div", {
+        className: Fk()("FrontlineRoundEnd", `Result-${bk}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, lQ.jsx)("div", {
+        children: [(0, hk.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, lQ.jsxs)("div", {
+        }), (0, hk.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, lQ.jsxs)("div", {
+          children: [(0, hk.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, lQ.jsx)("i", {
+            children: [(0, hk.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, lQ.jsx)("i", {
+            }), (0, hk.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (xQ = oQ(HF[DQ]), /\p{Script=Arabic}/u.test(xQ) ? [xQ] : (0, qF.b)(xQ)).map(((QQ, FQ) => (0, lQ.jsx)("span", {
+            }), (Uk = Sk(xe[bk]), /\p{Script=Arabic}/u.test(Uk) ? [Uk] : (0, Se.b)(Uk)).map(((kk, ek) => (0, hk.jsx)("span", {
               style: {
-                "--letter": FQ
+                "--letter": ek
               },
-              children: QQ
-            }, FQ)))]
-          }), (0, lQ.jsxs)("div", {
+              children: kk
+            }, ek)))]
+          }), (0, hk.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [kQ && "victory" === DQ && (0, lQ.jsx)("span", {
+            children: [rk && "victory" === bk && (0, hk.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: oQ("frontlineRoundEnd:comeback")
-            }), (0, lQ.jsxs)("span", {
+              children: Sk("frontlineRoundEnd:comeback")
+            }), (0, hk.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, lQ.jsx)("b", {
+              children: [(0, hk.jsx)("b", {
                 className: "Friendly",
-                children: vQ
-              }), " \u2013 ", (0, lQ.jsx)("b", {
+                children: Pk
+              }), " \u2013 ", (0, hk.jsx)("b", {
                 className: "Enemy",
-                children: mQ
+                children: mk
               })]
             })]
           })]
-        }), bQ.length > 0 && (0, lQ.jsxs)("div", {
+        }), xk.length > 0 && (0, hk.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": bQ.length
+            "--columns": xk.length
           },
-          children: [(0, lQ.jsx)(qQ.Suspense, {
+          children: [(0, hk.jsx)(fk.Suspense, {
             fallback: null,
-            children: (0, lQ.jsx)(vF, {
+            children: (0, hk.jsx)(me, {
               className: "FrontlineRoundEndLineup",
-              players: YQ
+              players: nk
             })
-          }), bQ.map((QQ => (0, lQ.jsx)(AF, {
-            mvp: HQ[QQ],
-            place: QQ
-          }, QQ)))]
-        }), (0, lQ.jsx)("div", {
+          }), xk.map((kk => (0, hk.jsx)(we, {
+            mvp: Kk[kk],
+            place: kk
+          }, kk)))]
+        }), (0, hk.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: oQ("frontlineRoundEnd:nextFront", {
-            map: uQ,
-            seconds: String(wQ)
+          children: Sk("frontlineRoundEnd:nextFront", {
+            map: Mk,
+            seconds: String(ik)
           })
         })]
       });
-      var xQ
+      var Uk
     }));
 
-    function AF(QQ) {
+    function we(kk) {
       let {
-        mvp: FQ,
-        place: wQ
-      } = QQ;
+        mvp: ek,
+        place: ik
+      } = kk;
       const {
-        t: LQ
-      } = (0, UQ.y)(), [qQ, oQ, DQ, kQ, vQ] = FQ, [mQ, uQ] = LQ(function(QQ, FQ) {
-        return 1 === FQ && "damage" !== QQ ? `frontlineRoundEnd:${QQ}One` : `frontlineRoundEnd:${QQ}`
-      }(DQ, kQ), {
+        t: Dk
+      } = (0, Ik.D)(), [fk, Sk, bk, rk, Pk] = ek, [mk, Mk] = Dk(function(kk, ek) {
+        return 1 === ek && "damage" !== kk ? `frontlineRoundEnd:${kk}One` : `frontlineRoundEnd:${kk}`
+      }(bk, rk), {
         name: "\0",
-        count: kQ.toLocaleString()
+        count: rk.toLocaleString()
       }).split("\0");
-      return (0, lQ.jsxs)("div", {
-        className: sQ()("FrontlineMvpCard", `Place-${wQ+1}`, `Team-${oQ}`),
+      return (0, hk.jsxs)("div", {
+        className: Fk()("FrontlineMvpCard", `Place-${ik+1}`, `Team-${Sk}`),
         style: {
-          "--revealMs": `${mF[wQ]}ms`
+          "--revealMs": `${Me[ik]}ms`
         },
-        children: [(0, lQ.jsx)("i", {
+        children: [(0, hk.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, lQ.jsx)("i", {
+        }), (0, hk.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, lQ.jsx)("div", {
+        }), (0, hk.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: LQ(bF[wQ])
-        }), (0, lQ.jsxs)("div", {
+          children: Dk(ne[ik])
+        }), (0, hk.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [mQ, (0, lQ.jsx)("span", {
+          children: [mk, (0, hk.jsx)("span", {
             className: "FrontlineMvpName",
-            children: qQ
-          }), uQ]
-        }), (0, lQ.jsx)("div", {
+            children: fk
+          }), Mk]
+        }), (0, hk.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: vQ
+          children: Pk
         })]
       })
     }
-    const tF = function(QQ, FQ, wQ, LQ) {
+    const le = function(kk, ek, ik, Dk) {
       let {
-        localPlayerId: DQ
-      } = LQ;
-      const kQ = new zQ,
-        vQ = new kF;
-      let mQ = null,
-        uQ = null,
-        HQ = null,
-        bQ = null,
-        YQ = null,
-        xQ = [!1, !1];
-      const AQ = () => {
-        var QQ, FQ;
-        const [wQ, LQ] = xQ;
-        null === (QQ = uQ) || void 0 === QQ || QQ.Qr(!wQ), null === (FQ = HQ) || void 0 === FQ || FQ.Qr(!LQ)
+        localPlayerId: bk
+      } = Dk;
+      const rk = new Ek,
+        Pk = new Pe;
+      let mk = null,
+        Mk = null,
+        Kk = null,
+        xk = null,
+        nk = null,
+        Uk = [!1, !1];
+      const Hk = () => {
+        var kk, ek;
+        const [ik, Dk] = Uk;
+        null === (kk = Mk) || void 0 === kk || kk.bV(!ik), null === (ek = Kk) || void 0 === ek || ek.bV(!Dk)
       };
       return {
-        onCreate: QQ => {
-          mQ = QQ, uQ = new GQ(QQ, DQ), HQ = new SQ(QQ, DQ), bQ = new LF(kQ), AQ(), YQ = (0, oQ.u)((0, qQ.createElement)(qQ.Fragment, null, (0, qQ.createElement)(JQ, {
-            hud: kQ,
-            crosshair: uQ,
-            damage: HQ,
-            markers: bQ
-          }), (0, qQ.createElement)(YF, {
-            controller: vQ
+        onCreate: kk => {
+          mk = kk, Mk = new yk(kk, bk), Kk = new Ak(kk, bk), xk = new fe(rk), Hk(), nk = (0, Sk.z)((0, fk.createElement)(fk.Fragment, null, (0, fk.createElement)(Tk, {
+            hud: rk,
+            crosshair: Mk,
+            damage: Kk,
+            markers: xk
+          }), (0, fk.createElement)(Ue, {
+            controller: Pk
           })))
         },
         onClose: () => {
-          var QQ, FQ, wQ, LQ;
-          null === (QQ = YQ) || void 0 === QQ || QQ(), null === (FQ = uQ) || void 0 === FQ || FQ.dispose(), uQ = null, null === (wQ = HQ) || void 0 === wQ || wQ.dispose(), HQ = null, null === (LQ = bQ) || void 0 === LQ || LQ.dispose(), bQ = null, mQ = null
+          var kk, ek, ik, Dk;
+          null === (kk = nk) || void 0 === kk || kk(), null === (ek = Mk) || void 0 === ek || ek.dispose(), Mk = null, null === (ik = Kk) || void 0 === ik || ik.dispose(), Kk = null, null === (Dk = xk) || void 0 === Dk || Dk.dispose(), xk = null, mk = null
         },
-        onAfterRender: (QQ, FQ) => {
-          var wQ, LQ, qQ, oQ;
-          null === (wQ = uQ) || void 0 === wQ || wQ.frame(QQ, FQ.tanHalfFovY), null === (LQ = HQ) || void 0 === LQ || LQ.frame(FQ.cameraHeading), null === (qQ = bQ) || void 0 === qQ || qQ.frame(FQ, null !== (oQ = mQ) && void 0 !== oQ && oQ.checkValid(DQ) ? mQ.Qp(DQ) : null)
+        onAfterRender: (kk, ek) => {
+          var ik, Dk, fk, Sk;
+          null === (ik = Mk) || void 0 === ik || ik.frame(kk, ek.tanHalfFovY), null === (Dk = Kk) || void 0 === Dk || Dk.frame(ek.cameraHeading), null === (fk = xk) || void 0 === fk || fk.frame(ek, null !== (Sk = mk) && void 0 !== Sk && Sk.checkValid(bk) ? mk.vy(bk) : null)
         },
-        onReceivedMessageFromServer: (QQ, FQ) => {
-          "frontlineHud" === QQ ? kQ.bx(FQ) : "frontlineScoreboard" === QQ ? kQ.receiveScoreboard(FQ) : "frontlineRoundEnd" === QQ ? vQ.bx(FQ) : "frontlinePrefs" === QQ && (xQ = FQ, AQ())
+        onReceivedMessageFromServer: (kk, ek) => {
+          "frontlineHud" === kk ? rk.BU(ek) : "frontlineScoreboard" === kk ? rk.receiveScoreboard(ek) : "frontlineRoundEnd" === kk ? Pk.BU(ek) : "frontlinePrefs" === kk && (Uk = ek, Hk())
         }
       }
     }
   },
-  6283: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => qQ
+  6298: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => fk
     });
-    const LQ = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const Dk = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function qQ(QQ) {
-      return null === LQ ? Array.from(QQ) : Array.from(LQ.segment(QQ), (QQ => {
+    function fk(kk) {
+      return null === Dk ? Array.from(kk) : Array.from(Dk.segment(kk), (kk => {
         let {
-          segment: FQ
-        } = QQ;
-        return FQ
+          segment: ek
+        } = kk;
+        return ek
       }))
     }
   },
-  38026: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ,
-      g: () => oQ
+  38081: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => bk,
+      g: () => Sk
     });
-    const LQ = new WeakMap;
+    const Dk = new WeakMap;
 
-    function qQ(QQ) {
-      let FQ = LQ.get(QQ);
-      return FQ || (FQ = {
-        hidden: QQ.hidden,
+    function fk(kk) {
+      let ek = Dk.get(kk);
+      return ek || (ek = {
+        hidden: kk.hidden,
         x: NaN,
         y: NaN
-      }, LQ.set(QQ, FQ)), FQ
+      }, Dk.set(kk, ek)), ek
     }
 
-    function oQ(QQ, FQ) {
-      const wQ = qQ(QQ);
-      wQ.hidden !== FQ && (wQ.hidden = FQ, QQ.hidden = FQ)
+    function Sk(kk, ek) {
+      const ik = fk(kk);
+      ik.hidden !== ek && (ik.hidden = ek, kk.hidden = ek)
     }
 
-    function DQ(QQ, FQ, wQ) {
-      const LQ = qQ(QQ);
-      LQ.x === FQ && LQ.y === wQ || (LQ.x = FQ, LQ.y = wQ, QQ.style.translate = `${FQ}vw ${wQ}vh`)
+    function bk(kk, ek, ik) {
+      const Dk = fk(kk);
+      Dk.x === ek && Dk.y === ik || (Dk.x = ek, Dk.y = ik, kk.style.translate = `${ek}vw ${ik}vh`)
     }
   },
-  36672: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => LQ
+  36668: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => Dk
     });
-    const LQ = {
+    const Dk = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

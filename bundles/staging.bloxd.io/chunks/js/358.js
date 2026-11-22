@@ -1,19 +1,27 @@
 export const id = 358;
 export const ids = [358];
 export const modules = {
-  60913: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      lod3DPixelShader: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "lod3DPixelShader",
-      oQ = "precision highp float;precision highp sampler3D;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler3D textureSampler;uniform float lod;uniform float slice;uniform int gamma;void main(void)\n{ivec3 textureCoordinates=ivec3(vUV*vec2(textureSize(textureSampler,0).xy),int(slice));gl_FragColor=texelFetch(textureSampler,textureCoordinates,int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    LQ.c.ShadersStore[qQ] || (LQ.c.ShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+  60760: (kk, ek, ik) => {
+    function Dk(kk, ek, ik, Dk, fk, Sk, bk) {
+      const rk = ek,
+        Pk = Dk,
+        mk = ik;
+      kk[mk + 0] = rk[Pk + 0], kk[mk + 1] = rk[Pk + 1], kk[mk + 2] = rk[Pk + 2], kk[mk + 3] = rk[Pk + 3], kk[mk + 4] = rk[Pk + 4], kk[mk + 5] = rk[Pk + 5], kk[mk + 6] = rk[Pk + 6], kk[mk + 7] = rk[Pk + 7], kk[mk + 8] = rk[Pk + 8], kk[mk + 9] = rk[Pk + 9], kk[mk + 10] = rk[Pk + 10], kk[mk + 11] = rk[Pk + 11], kk[mk + 12] = rk[Pk + 12] - fk, kk[mk + 13] = rk[Pk + 13] - Sk, kk[mk + 14] = rk[Pk + 14] - bk, kk[mk + 15] = rk[Pk + 15]
     }
+
+    function fk(kk) {
+      return (ek, ik, fk, Sk) => {
+        const bk = kk.camera;
+        if (!bk) return void Dk(ek, ik, fk, Sk, 0, 0, 0);
+        const rk = bk.worldMatrix;
+        Dk(ek, ik, fk, Sk, rk[12], rk[13], rk[14])
+      }
+    }
+    ik.r(ek), ik.d(ek, {
+      makePackMeshWorld: () => fk,
+      packMat4IntoF32WithOffset: () => Dk
+    })
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

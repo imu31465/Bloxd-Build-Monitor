@@ -1,456 +1,199 @@
 export const id = 94;
-export const ids = [92, 93, 94];
+export const ids = [93, 94];
 export const modules = {
-  36242: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ, wQ, LQ) {
-      return !(wQ && !QQ.aimable) && (!FQ || QQ.gun && "head" !== LQ)
-    }
-
-    function qQ(QQ) {
-      return Math.max(.1 * QQ, 1)
-    }
-
-    function oQ(QQ, FQ) {
-      return !QQ && FQ
-    }
-    wQ.d(FQ, {
-      c: () => oQ,
-      f: () => qQ,
-      j: () => LQ
-    })
-  },
-  36248: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => kQ,
-      g: () => DQ
+  35966: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      countDecodesAs: () => Kk,
+      decodedAudio: () => xk
     });
-    let LQ = null;
-    const qQ = {
-        crosshairAccuracy: [],
-        turnDamageIndicators: []
-      },
-      oQ = {
-        crosshairAccuracy: QQ => {
-          const FQ = qQ.crosshairAccuracy.at(-1);
-          FQ ? FQ.hook(QQ) : LQ = QQ
-        },
-        turnDamageIndicators: QQ => {
-          var FQ;
-          null === (FQ = qQ.turnDamageIndicators.at(-1)) || void 0 === FQ || FQ.hook(QQ)
-        }
-      };
-
-    function DQ(QQ, FQ) {
-      const wQ = {
-          hook: FQ
-        },
-        DQ = qQ[QQ];
-      if (DQ.push(wQ), "crosshairAccuracy" === QQ && null !== LQ) {
-        const QQ = LQ;
-        LQ = null, oQ.crosshairAccuracy(QQ)
-      }
-      return () => {
-        const QQ = DQ.indexOf(wQ); - 1 !== QQ && DQ.splice(QQ, 1)
-      }
-    }
-
-    function kQ() {
-      return oQ
-    }
-  },
-  36082: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      countDecodesAs: () => HQ,
-      decodedAudio: () => bQ
-    });
-    var LQ = wQ(36086),
-      qQ = wQ(4694);
-    const oQ = qQ.Howler,
-      DQ = new Map;
-    let kQ = 0;
-    const vQ = {
+    var Dk = ik(3224),
+      fk = ik(4799);
+    const Sk = fk.Howler,
+      bk = new Map;
+    let rk = 0;
+    const Pk = {
         song: 0,
         sheet: 0
       },
-      mQ = new WeakMap,
-      uQ = new WeakSet;
+      mk = new WeakMap,
+      Mk = new WeakSet;
 
-    function HQ(QQ, FQ) {
-      return mQ.set(QQ, FQ), QQ
+    function Kk(kk, ek) {
+      return mk.set(kk, ek), kk
     }
 
-    function bQ() {
+    function xk() {
       return {
-        bytes: kQ,
-        songsDecoded: vQ.song,
-        sheetsDecoded: vQ.sheet
+        bytes: rk,
+        songsDecoded: Pk.song,
+        sheetsDecoded: Pk.sheet
       }
     }
 
-    function YQ(QQ) {
-      if (uQ.has(QQ)) return;
-      uQ.add(QQ);
-      const FQ = 1 === QQ.decodeAudioData.length,
-        wQ = QQ.decodeAudioData.bind(QQ);
-      QQ.decodeAudioData = (QQ, LQ, qQ) => {
-        const uQ = QQ => {
-          const FQ = oQ._howls.filter((QQ => "loaded" !== QQ._state));
+    function nk(kk) {
+      if (Mk.has(kk)) return;
+      Mk.add(kk);
+      const ek = 1 === kk.decodeAudioData.length,
+        ik = kk.decodeAudioData.bind(kk);
+      kk.decodeAudioData = (kk, Dk, fk) => {
+        const Mk = kk => {
+          const ek = Sk._howls.filter((kk => "loaded" !== kk._state));
           try {
-            null === LQ || void 0 === LQ || LQ(QQ)
+            null === Dk || void 0 === Dk || Dk(kk)
           } finally {
-            const wQ = FQ.find((QQ => "loaded" === QQ._state));
-            void 0 !== wQ && "string" === typeof wQ._src && function(QQ, FQ, wQ) {
-              var LQ;
-              kQ += wQ - (null !== (LQ = DQ.get(FQ)) && void 0 !== LQ ? LQ : 0), DQ.set(FQ, wQ);
-              const qQ = mQ.get(QQ);
-              void 0 !== qQ && vQ[qQ]++
-            }(wQ, wQ._src, QQ.length * QQ.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const ik = ek.find((kk => "loaded" === kk._state));
+            void 0 !== ik && "string" === typeof ik._src && function(kk, ek, ik) {
+              var Dk;
+              rk += ik - (null !== (Dk = bk.get(ek)) && void 0 !== Dk ? Dk : 0), bk.set(ek, ik);
+              const fk = mk.get(kk);
+              void 0 !== fk && Pk[fk]++
+            }(ik, ik._src, kk.length * kk.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return QQ
+          return kk
         };
-        if (!FQ) return wQ(QQ, uQ, qQ);
-        const HQ = wQ(QQ).then(uQ);
-        return HQ.catch((QQ => {
-          null === qQ || void 0 === qQ || qQ(QQ)
-        })), HQ
+        if (!ek) return ik(kk, Mk, fk);
+        const Kk = ik(kk).then(Mk);
+        return Kk.catch((kk => {
+          null === fk || void 0 === fk || fk(kk)
+        })), Kk
       }
-    }(0, LQ.c)(bQ);
-    const xQ = qQ.Howl.prototype,
-      AQ = xQ.init;
-    xQ.init = function(QQ) {
-      return qQ.Howler.volume(), oQ.ctx && YQ(oQ.ctx), AQ.call(this, QQ)
+    }(0, Dk.d)(xk);
+    const Uk = fk.Howl.prototype,
+      Hk = Uk.init;
+    Uk.init = function(kk) {
+      return fk.Howler.volume(), Sk.ctx && nk(Sk.ctx), Hk.call(this, kk)
     };
-    const tQ = xQ.unload;
-    xQ.unload = function() {
-      const QQ = this._src,
-        FQ = tQ.call(this);
-      if ("string" !== typeof QQ) return FQ;
-      const wQ = DQ.get(QQ);
-      return void 0 !== wQ && function(QQ) {
-        return !oQ._howls.some((FQ => FQ._src === QQ || "string" === typeof FQ._src && QQ.indexOf(FQ._src) >= 0))
-      }(QQ) && (DQ.delete(QQ), kQ -= wQ), FQ
+    const wk = Uk.unload;
+    Uk.unload = function() {
+      const kk = this._src,
+        ek = wk.call(this);
+      if ("string" !== typeof kk) return ek;
+      const ik = bk.get(kk);
+      return void 0 !== ik && function(kk) {
+        return !Sk._howls.some((ek => ek._src === kk || "string" === typeof ek._src && kk.indexOf(ek._src) >= 0))
+      }(kk) && (bk.delete(kk), rk -= ik), ek
     }
   },
-  36086: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => oQ,
-      c: () => qQ
+  4799: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      Howl: () => fk.Howl,
+      Howler: () => fk.Howler,
+      musicOutput: () => wk,
+      readyAudioContext: () => lk
     });
-    let LQ = null;
+    var Dk, fk = ik(4804),
+      Sk = ik(3521),
+      bk = ik(4583);
+    const rk = fk.Howler;
 
-    function qQ(QQ) {
-      LQ = QQ
-    }
-
-    function oQ() {
-      return null === LQ ? null : LQ()
-    }
-  },
-  36415: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => vQ
-    });
-    var LQ = wQ(17),
-      qQ = wQ(36388),
-      oQ = wQ(4208),
-      DQ = wQ(36417),
-      kQ = wQ(4694);
-    const vQ = function(QQ) {
-      const FQ = new Set;
-      return wQ => {
-        var LQ;
-        const oQ = null === (LQ = [...qQ.b].find((QQ => {
-          let [, FQ] = QQ;
-          return FQ.includes(wQ)
-        }))) || void 0 === LQ ? void 0 : LQ[0];
-        if (void 0 === oQ || FQ.has(oQ)) return;
-        FQ.add(oQ);
-        ! function(QQ, FQ) {
-          let {
-            afterJoin: wQ,
-            joining: LQ,
-            idle: qQ,
-            fetchFile: oQ
-          } = FQ;
-          const DQ = FQ => {
-            FQ >= QQ.length || wQ((() => {
-              qQ((() => {
-                LQ() ? DQ(FQ) : oQ(QQ[FQ]).catch((() => {})).finally((() => {
-                  DQ(FQ + 1)
-                }))
-              }))
-            }))
-          };
-          DQ(0)
-        }(qQ.b.get(oQ).filter((QQ => QQ !== wQ)).flatMap((FQ => {
-          const wQ = (LQ = (0, qQ.e)(FQ).src, oQ = QQ.canPlay, LQ.find((QQ => {
-            var FQ;
-            const wQ = null === (FQ = /\.([^.]+)$/.exec(QQ.split("?", 1)[0])) || void 0 === FQ ? void 0 : FQ[1];
-            return void 0 !== wQ && oQ(wQ.toLowerCase())
-          })));
-          var LQ, oQ;
-          return void 0 === wQ ? [] : [wQ]
-        })), QQ)
-      }
-    }({
-      afterJoin: QQ => {
-        (0, oQ.c)(LQ.c.get("gameState"), QQ)
-      },
-      joining: () => (0, oQ.d)(LQ.c.get("gameState")),
-      idle: wQ(259).d,
-      fetchFile: DQ.d,
-      canPlay: QQ => !!kQ.Howler.codecs(QQ)
-    })
-  },
-  36417: (QQ, FQ, wQ) => {
-    async function LQ(QQ) {
-      const FQ = await fetch(QQ, {
-        priority: "low"
-      });
-      if (!FQ.ok) throw new Error(`Fetching ${QQ} failed: HTTP ${FQ.status}`);
-      const wQ = FQ.body.getReader();
-      for (; !(await wQ.read()).done;);
-    }
-    wQ.d(FQ, {
-      d: () => LQ
-    })
-  },
-  36390: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => qQ
-    });
-    const LQ = ["end", "stop", "playerror"];
-
-    function qQ(QQ, FQ) {
-      const wQ = () => {
-        if (function(QQ) {
-            return "loaded" === QQ.state() && !QQ.playing() && !QQ._playLock
-          }(QQ)) {
-          for (const FQ of LQ) QQ.off(FQ, wQ);
-          QQ.unload(), FQ()
-        }
-      };
-      for (const qQ of LQ) QQ.on(qQ, wQ);
-      wQ()
-    }
-  },
-  4694: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      Howl: () => qQ.Howl,
-      Howler: () => qQ.Howler,
-      musicOutput: () => xQ,
-      readyAudioContext: () => AQ
-    });
-    var LQ, qQ = wQ(4702),
-      oQ = wQ(4494);
-    const DQ = qQ.Howler;
-
-    function kQ() {
-      var QQ, FQ;
-      if (DQ.ctx || !DQ.usingWebAudio || "undefined" === typeof AudioContext || !(0, oQ.i)()) return;
-      const wQ = navigator.audioSession;
-      let LQ;
-      "auto" === (null === wQ || void 0 === wQ ? void 0 : wQ.type) && (wQ.type = "ambient");
+    function Pk() {
+      var kk, ek;
+      if (rk.ctx || !rk.usingWebAudio || "undefined" === typeof AudioContext || !(0, bk.i)()) return;
+      const ik = navigator.audioSession;
+      let Dk;
+      "auto" === (null === ik || void 0 === ik ? void 0 : ik.type) && (ik.type = "ambient");
       try {
-        LQ = new AudioContext({
+        Dk = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const qQ = LQ.createGain();
-      qQ.gain.setValueAtTime(DQ._muted ? 0 : null !== (QQ = DQ._volume) && void 0 !== QQ ? QQ : 1, LQ.currentTime), qQ.connect(LQ.destination), DQ.ctx = LQ, DQ.masterGain = qQ, null === (FQ = DQ._setup) || void 0 === FQ || FQ.call(DQ)
+      const fk = Dk.createGain();
+      fk.gain.setValueAtTime(rk._muted ? 0 : null !== (kk = rk._volume) && void 0 !== kk ? kk : 1, Dk.currentTime), fk.connect(Dk.destination), rk.ctx = Dk, rk.masterGain = fk, null === (ek = rk._setup) || void 0 === ek || ek.call(rk)
     }
-    DQ._mobileUnloaded = !0;
-    const vQ = DQ.volume.bind(qQ.Howler);
-    DQ.volume = function() {
-      return kQ(), vQ(...arguments)
+    rk._mobileUnloaded = !0;
+    const mk = rk.volume.bind(fk.Howler);
+    rk.volume = function() {
+      return Pk(), mk(...arguments)
     };
-    const mQ = DQ.mute.bind(qQ.Howler);
-    DQ.mute = QQ => (kQ(), mQ(QQ));
-    const uQ = qQ.Howl.prototype,
-      HQ = uQ.init;
-    uQ.init = function(QQ) {
-      return kQ(), HQ.call(this, QQ)
-    };
-    let bQ = 0;
-    const YQ = null === (LQ = DQ._autoSuspend) || void 0 === LQ ? void 0 : LQ.bind(qQ.Howler);
+    const Mk = rk.mute.bind(fk.Howler);
+    rk.mute = kk => (Pk(), Mk(kk));
+    const Kk = fk.Howl.prototype,
+      xk = Kk.init;
 
-    function xQ() {
-      AQ();
+    function nk() {
+      for (; rk._html5AudioPool.length < rk.html5PoolSize;) {
+        const kk = new Audio;
+        kk._unlocked = !0, rk._releaseHtml5Audio(kk)
+      }
+      for (const ek of rk._howls)
+        if (!ek._webAudio)
+          for (const ik of ek._getSoundIds()) {
+            var kk;
+            const Dk = null === (kk = ek._soundById(ik)) || void 0 === kk ? void 0 : kk._node;
+            Dk && !Dk._unlocked && (Dk._unlocked = !0, Dk.load())
+          }
+    }
+    Kk.init = function(kk) {
+      return Pk(), xk.call(this, kk)
+    }, (0, bk.i)() && (rk._unlockAudio = () => {
+      const kk = rk.ctx;
+      if (rk._audioUnlocked || !kk) return;
+      rk.autoUnlock = !1;
+      const ek = kk.createBuffer(1, 1, 22050);
+      rk._scratchBuffer = ek;
+      const ik = new AbortController;
+      let Dk = "afterPaint";
+      const fk = () => {
+          var Dk;
+          if (rk._audioUnlocked) return;
+          null === (Dk = rk._autoResume) || void 0 === Dk || Dk.call(rk);
+          const fk = kk.createBufferSource();
+          fk.buffer = ek, fk.connect(kk.destination), fk.start(0), kk.resume().catch((() => {})), fk.onended = () => {
+            fk.disconnect(0), rk._audioUnlocked = !0, ik.abort();
+            for (const kk of rk._howls) kk._emit("unlock")
+          }
+        },
+        Pk = () => {
+          nk(), fk()
+        },
+        mk = ek => {
+          if (nk(), "inTap" === Dk) {
+            if ("running" === kk.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), fk()
+          } else "afterPaint" === Dk && (Dk = "queued", (0, Sk.d)(ek.timeStamp, (() => {
+            Dk = "inTap", fk()
+          })))
+        };
+      for (const Sk of ["touchstart", "touchend"]) document.addEventListener(Sk, Pk, {
+        capture: !0,
+        signal: ik.signal
+      });
+      for (const Sk of bk.e) document.addEventListener(Sk, mk, {
+        capture: !0,
+        signal: ik.signal
+      })
+    });
+    let Uk = 0;
+    const Hk = null === (Dk = rk._autoSuspend) || void 0 === Dk ? void 0 : Dk.bind(fk.Howler);
+
+    function wk() {
+      lk();
       const {
-        ctx: QQ,
-        masterGain: FQ
-      } = DQ;
-      return QQ && FQ ? {
-        ctx: QQ,
-        destination: FQ,
-        holdAwake: QQ => {
-          var FQ, wQ;
-          (bQ += QQ ? 1 : -1, QQ) ? null === (FQ = DQ._autoResume) || void 0 === FQ || FQ.call(DQ): null === (wQ = DQ._autoSuspend) || void 0 === wQ || wQ.call(DQ)
+        ctx: kk,
+        masterGain: ek
+      } = rk;
+      return kk && ek ? {
+        ctx: kk,
+        destination: ek,
+        holdAwake: kk => {
+          var ek, ik;
+          (Uk += kk ? 1 : -1, kk) ? null === (ek = rk._autoResume) || void 0 === ek || ek.call(rk): null === (ik = rk._autoSuspend) || void 0 === ik || ik.call(rk)
         },
         wake: () => {
-          var FQ;
-          "running" !== QQ.state && (null === (FQ = DQ._autoResume) || void 0 === FQ || FQ.call(DQ), QQ.resume().catch((() => {})))
+          var ek;
+          "running" !== kk.state && (null === (ek = rk._autoResume) || void 0 === ek || ek.call(rk), kk.resume().catch((() => {})))
         }
       } : null
     }
 
-    function AQ() {
-      var QQ;
-      (DQ.volume(), DQ.ctx && DQ.autoUnlock) && (null === (QQ = DQ._unlockAudio) || void 0 === QQ || QQ.call(DQ))
+    function lk() {
+      var kk;
+      (rk.volume(), rk.ctx && rk.autoUnlock) && (null === (kk = rk._unlockAudio) || void 0 === kk || kk.call(rk))
     }
-    YQ && (DQ._autoSuspend = () => bQ > 0 ? qQ.Howler : YQ())
-  },
-  36410: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => LQ
-    });
-    const LQ = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
-  },
-  36404: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ,
-      h: () => qQ,
-      k: () => LQ
-    });
-
-    function LQ(QQ) {
-      return QQ.replace(/[_\-\s]*\d+$/, "") || QQ
-    }
-
-    function qQ(QQ, FQ, wQ) {
-      return wQ <= 0 ? 0 : QQ * wQ / Math.max(FQ, wQ)
-    }
-
-    function oQ(QQ, FQ) {
-      const wQ = QQ.getDurationMs();
-      return wQ > 0 ? QQ.loudness * Math.max(0, 1 - (FQ - QQ.startMs) / wQ) : 0
-    }
-    class DQ {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = QQ, this.maxPerGroup = FQ, this.voices = []
-      }
-      admit(QQ) {
-        if (this.voices = this.voices.filter((QQ => QQ.isAlive())), null !== QQ.group) {
-          const FQ = this.voices.filter((FQ => FQ.group === QQ.group));
-          if (FQ.length >= this.maxPerGroup && !this.dropLeastWorth(FQ, QQ)) return !1
-        }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, QQ)) && (this.voices.push(QQ), !0)
-      }
-      dropLeastWorth(QQ, FQ) {
-        let wQ = null,
-          LQ = 1 / 0;
-        for (const qQ of QQ) {
-          if (!qQ.canStop()) continue;
-          const QQ = oQ(qQ, FQ.startMs);
-          QQ < LQ && (wQ = qQ, LQ = QQ)
-        }
-        return !(!wQ || FQ.loudness < LQ) && (this.voices.splice(this.voices.indexOf(wQ), 1), wQ.stop(), !0)
-      }
-    }
-  },
-  36422: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => oQ,
-      f: () => DQ,
-      j: () => LQ
-    });
-    class LQ {
-      constructor(QQ) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = QQ
-      }
-      setMultiplierType(QQ, FQ) {
-        var wQ;
-        this.multipliers[QQ] = FQ, null === (wQ = this._onUpdate) || void 0 === wQ || wQ.call(this)
-      }
-      removeMultiplier(QQ) {
-        var FQ;
-        delete this.multipliers[QQ], null === (FQ = this._onUpdate) || void 0 === FQ || FQ.call(this)
-      }
-      getMultiplierType(QQ) {
-        return this.multipliers[QQ]
-      }
-      getTotalMultipliedVal() {
-        let QQ = 1;
-        for (const FQ in this.multipliers) QQ *= this.multipliers[FQ];
-        return QQ
-      }
-    }
-    class qQ {
-      constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = QQ
-      }
-      setBooleanType(QQ, FQ) {
-        const wQ = this._getTotalBooleanVal();
-        this.booleans[QQ] = !!FQ;
-        const LQ = this.getTotalBooleanVal();
-        var qQ;
-        LQ !== wQ && (null === (qQ = this._onUpdate) || void 0 === qQ || qQ.call(this, LQ, this.booleans));
-        return LQ
-      }
-      removeBoolean(QQ) {
-        const FQ = this._getTotalBooleanVal();
-        delete this.booleans[QQ];
-        const wQ = this._getTotalBooleanVal();
-        var LQ;
-        null !== wQ && wQ !== FQ && (null === (LQ = this._onUpdate) || void 0 === LQ || LQ.call(this, wQ, this.booleans));
-        return null !== wQ && void 0 !== wQ && wQ
-      }
-      getBooleanType(QQ) {
-        return this.booleans[QQ]
-      }
-      getTotalBooleanVal() {
-        throw new Error("This is an abstract class, use BooleanAndCombinator")
-      }
-      forceUpdate() {
-        var QQ;
-        null === (QQ = this._onUpdate) || void 0 === QQ || QQ.call(this, this.getTotalBooleanVal(), this.booleans)
-      }
-      _getTotalBooleanVal() {
-        throw new Error("This is an abstract class, use BooleanAndCombinator")
-      }
-    }
-    class oQ extends qQ {
-      getTotalBooleanVal() {
-        const QQ = this._getTotalBooleanVal();
-        if (null === QQ) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return QQ
-      }
-      _getTotalBooleanVal() {
-        let QQ = !1,
-          FQ = !0;
-        for (const wQ in this.booleans) QQ = !0, FQ &&= this.booleans[wQ];
-        return QQ ? FQ : null
-      }
-    }
-    class DQ extends qQ {
-      getTotalBooleanVal() {
-        const QQ = this._getTotalBooleanVal();
-        if (null === QQ) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return QQ
-      }
-      _getTotalBooleanVal() {
-        let QQ = !1,
-          FQ = !1;
-        for (const wQ in this.booleans) QQ = !0, FQ ||= this.booleans[wQ];
-        return QQ ? FQ : null
-      }
-    }
-  },
-  36419: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => oQ,
-      d: () => LQ,
-      h: () => qQ
-    });
-    const LQ = 15,
-      qQ = 3,
-      oQ = 30
+    Hk && (rk._autoSuspend = () => Uk > 0 ? fk.Howler : Hk())
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

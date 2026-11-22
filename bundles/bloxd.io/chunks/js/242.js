@@ -1,701 +1,412 @@
 export const id = 242;
 export const ids = [242];
 export const modules = {
-  39203: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      default: () => gQ
+  40679: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => bk,
+      e: () => Mk,
+      g: () => mk
     });
-    wQ(6300);
-    var LQ = wQ(53),
-      qQ = wQ(39211),
-      oQ = wQ(39491),
-      DQ = wQ(39625),
-      kQ = wQ(39678),
-      vQ = wQ(39692),
-      mQ = wQ(36870),
-      uQ = wQ(36688),
-      HQ = wQ(39822),
-      bQ = wQ(39872),
-      YQ = (wQ(39906), wQ(1237)),
-      xQ = wQ(201),
-      AQ = wQ(1207),
-      tQ = wQ(17),
-      eQ = wQ(2657),
-      MQ = wQ(1451),
-      GQ = wQ(1079),
-      pQ = wQ(6294),
-      cQ = wQ(6307),
-      CQ = wQ(4292),
-      SQ = wQ(1107);
-    const iQ = 1.2,
-      WQ = .2,
-      RQ = .0066 * Math.PI / 180,
-      OQ = new Set(["Escape", "KeyG"]),
-      sQ = {
-        ArrowLeft: -1,
-        ArrowRight: 1
-      },
-      rQ = "ArrowUp",
-      IQ = new Set([...Object.keys(sQ), rQ, "ArrowDown"]),
-      UQ = 32,
-      NQ = 1,
-      TQ = 10,
-      KQ = "F4",
-      zQ = "Period",
-      lQ = Math.PI / 2 - .001,
-      jQ = Math.PI / 6,
-      aQ = Math.PI / 6,
-      XQ = 1.08,
-      fQ = [{
-        name: "X",
-        direction: [1, 0, 0],
-        colour: "#e5534b"
-      }, {
-        name: "Y",
-        direction: [0, 1, 0],
-        colour: "#57ab5a"
-      }, {
-        name: "Z",
-        direction: [0, 0, 1],
-        colour: "#539bf5"
-      }],
-      VQ = 24,
-      hQ = 7,
-      JQ = 4,
-      EQ = .01,
-      nQ = 4;
-
-    function gQ(QQ) {
-      let {
-        heatmap: FQ,
-        scale: wQ,
-        fullyOpaqueFrom: NQ,
-        bounds: jQ,
-        fitBounds: aQ,
-        schematic: XQ,
-        controls: fQ,
-        onStepTime: VQ,
-        onShowAllTime: hQ,
-        onTogglePlaying: JQ,
-        getReadout: nQ = null
-      } = QQ;
-      const {
-        t: gQ
-      } = (0, AQ.y)(), {
-        clientEscMenuOptions: oF
-      } = (0, tQ.l)(["clientEscMenuOptions"]), vF = (0, LQ.useRef)(null), mF = (0, LQ.useRef)(null), uF = (0, LQ.useRef)(null), HF = (0, eQ.c)(vF), [bF, YF] = (0, LQ.useState)(!1), [xF, AF] = (0, LQ.useState)(!1), [tF, eF] = (0, LQ.useState)(!0), MF = (0, LQ.useRef)(!1), [GF, pF] = (0, LQ.useState)(!1), cF = xF || !tF && GF, [CF, SF] = (0, LQ.useState)(!1), [iF, WF] = (0, LQ.useState)(!0), [RF, OF] = (0, LQ.useState)(null), sF = jQ.min, [rF, IF] = (0, LQ.useState)(sF);
-      rF[0] === sF[0] && rF[1] === sF[1] && rF[2] === sF[2] || (IF(sF), null !== RF && OF({
-        ...RF,
-        position: DF(RF.position, DF(rF, kF(sF, -1)))
-      }));
-      const UF = (0, LQ.useMemo)((() => function(QQ) {
-          return [QQ.max[0] - QQ.min[0] + 1, QQ.max[1] - QQ.min[1] + 1, QQ.max[2] - QQ.min[2] + 1]
-        }(jQ)), [jQ]),
-        NF = (0, LQ.useMemo)((() => function(QQ, FQ) {
-          const wQ = [],
-            LQ = [];
-          for (const [qQ, oQ] of Object.entries(QQ.frequencies)) {
-            const QQ = Number(qQ);
-            for (const [qQ, DQ] of Object.entries(oQ)) {
-              const oQ = Number(qQ);
-              for (const [qQ, kQ] of Object.entries(DQ)) kQ <= 0 || (wQ.push(QQ - FQ[0], oQ - FQ[1], Number(qQ) - FQ[2]), LQ.push(kQ))
-            }
-          }
-          return {
-            positions: Int32Array.from(wQ),
-            values: Float64Array.from(LQ),
-            count: LQ.length
-          }
-        }(FQ, sF)), [FQ, sF]),
-        TF = iQ * oF.cameraFOV / 100,
-        KF = HF.height > 0 ? HF.width / HF.height : 1,
-        zF = (0, LQ.useMemo)((() => function(QQ, FQ) {
-          return {
-            min: [QQ.min[0] - FQ[0], QQ.min[1] - FQ[1], QQ.min[2] - FQ[2]],
-            max: [QQ.max[0] - FQ[0] + 1, QQ.max[1] - FQ[1] + 1, QQ.max[2] - FQ[2] + 1]
-          }
-        }(aQ, sF)), [aQ, sF]),
-        lF = wF(zF, KF, TF),
-        jF = null !== RF && void 0 !== RF ? RF : lF,
-        aF = (0, LQ.useRef)({
-          fittedView: lF,
-          fieldOfView: TF,
-          mouseSensitivity: oF.mouseSensitivity,
-          canLock: tF
-        });
-      aF.current = {
-        fittedView: lF,
-        fieldOfView: TF,
-        mouseSensitivity: oF.mouseSensitivity,
-        canLock: tF
-      };
-      const XF = (0, LQ.useMemo)((() => {
-          if (!cF) return null;
-          const QQ = (QQ, wQ, LQ) => {
-              var qQ, oQ, DQ;
-              return null !== (qQ = null === (oQ = FQ.frequencies[QQ + sF[0]]) || void 0 === oQ || null === (DQ = oQ[wQ + sF[1]]) || void 0 === DQ ? void 0 : DQ[LQ + sF[2]]) && void 0 !== qQ ? qQ : 0
-            },
-            LQ = function(QQ, FQ, wQ, LQ) {
-              let qQ = 0,
-                oQ = 1 / 0;
-              for (const HQ of [0, 1, 2]) {
-                if (0 === FQ[HQ]) {
-                  if (QQ[HQ] < 0 || QQ[HQ] > wQ[HQ]) return null;
-                  continue
-                }
-                const LQ = (0 - QQ[HQ]) / FQ[HQ],
-                  DQ = (wQ[HQ] - QQ[HQ]) / FQ[HQ];
-                qQ = Math.max(qQ, Math.min(LQ, DQ)), oQ = Math.min(oQ, Math.max(LQ, DQ))
-              }
-              if (qQ > oQ) return null;
-              const DQ = [0, 1, 2].map((LQ => Math.min(wQ[LQ] - 1, Math.max(0, Math.floor(QQ[LQ] + FQ[LQ] * qQ))))),
-                kQ = [0, 1, 2].map((QQ => Math.sign(FQ[QQ]))),
-                vQ = [0, 1, 2].map((wQ => {
-                  if (0 === kQ[wQ]) return 1 / 0;
-                  return ((kQ[wQ] > 0 ? DQ[wQ] + 1 : DQ[wQ]) - QQ[wQ]) / FQ[wQ]
-                })),
-                mQ = [0, 1, 2].map((QQ => 0 === kQ[QQ] ? 1 / 0 : Math.abs(1 / FQ[QQ])));
-              let uQ = null;
-              for (;;) {
-                const QQ = LQ(DQ[0], DQ[1], DQ[2]);
-                if (QQ >= 1) return DQ;
-                QQ > 0 && (uQ = [DQ[0], DQ[1], DQ[2]]);
-                const FQ = vQ[0] < vQ[1] ? vQ[0] < vQ[2] ? 0 : 2 : vQ[1] < vQ[2] ? 1 : 2;
-                if (vQ[FQ] > oQ) return uQ;
-                if (DQ[FQ] += kQ[FQ], vQ[FQ] += mQ[FQ], DQ[FQ] < 0 || DQ[FQ] >= wQ[FQ]) return uQ
-              }
-            }(jF.position, QF(jF), UF, ((FQ, LQ, qQ) => (0, pQ.x)(QQ(FQ, LQ, qQ), wQ, NQ)));
-          return null === LQ ? null : {
-            x: LQ[0] + sF[0],
-            y: LQ[1] + sF[1],
-            z: LQ[2] + sF[2],
-            value: QQ(LQ[0], LQ[1], LQ[2])
-          }
-        }), [cF, FQ, sF, jF, UF, wQ, NQ]),
-        {
-          keyHandlers: fF
-        } = (0, cQ.g)({
-          isEnabled: cF,
-          claimedKeyCodes: IQ,
-          kb: QQ => {
-            OF((FQ => function(QQ, FQ) {
-              const wQ = [Math.sin(QQ.heading), 0, Math.cos(QQ.heading)],
-                LQ = DF(DF(kF(wQ, FQ.forward), kF(FF(QQ.heading), FQ.right)), [0, FQ.up, 0]);
-              return {
-                ...QQ,
-                position: DF(QQ.position, LQ)
-              }
-            }(null !== FQ && void 0 !== FQ ? FQ : aF.current.fittedView, QQ)))
-          },
-          onZoomChange: SF
-        });
-      (0, LQ.useEffect)((() => {
-        const QQ = mF.current;
-        if (!QQ) return;
-        let FQ;
-        try {
-          FQ = function(QQ, FQ) {
-            const wQ = new qQ.b(QQ, !0, {
-                stencil: !1
-              }, !0),
-              LQ = new oQ.d(wQ),
-              [YQ, xQ, AQ] = pQ.S;
-            LQ.clearColor = new mQ.b(YQ / 255, xQ / 255, AQ / 255, 1);
-            const tQ = new DQ.b("Heatmap3DCamera", uQ.Ox.Zero(), LQ);
-            tQ.fov = FQ, tQ.minZ = .05;
-            const eQ = new kQ.b("Heatmap3DLight", new uQ.Ox(.4, 1, -.6), LQ);
-            eQ.diffuse = mQ.Color3.White(), eQ.groundColor = mQ.Color3.Black(), eQ.specular = mQ.Color3.Black();
-            const MQ = new vQ.StandardMaterial("Heatmap3DCellMaterial", LQ);
-            MQ.diffuseColor = new mQ.Color3(.4, .4, .4), MQ.emissiveColor = new mQ.Color3(.62, .62, .62), MQ.specularColor = mQ.Color3.Black();
-            const GQ = (0, HQ.c)("Heatmap3DCells", {
-              size: 1
-            }, LQ);
-            GQ.material = MQ, GQ.aA = !1, GQ.Rx = !0, GQ.isVisible = !1;
-            const cQ = (0, HQ.c)("Heatmap3DTranslucentCells", {
-              size: 1
-            }, LQ);
-            cQ.material = MQ, cQ.hasVertexAlpha = !0, cQ.aA = !1, cQ.Rx = !0, cQ.isVisible = !1;
-            const CQ = new vQ.StandardMaterial("Heatmap3DSchematicMaterial", LQ);
-            CQ.diffuseColor = new mQ.Color3(.6, .6, .6), CQ.emissiveColor = new mQ.Color3(.4, .4, .4), CQ.specularColor = mQ.Color3.Black();
-            const SQ = (0, HQ.c)("Heatmap3DSchematicBlocks", {
-              size: 1
-            }, LQ);
-            SQ.material = CQ, SQ.aA = !1, SQ.Rx = !0, SQ.isVisible = !1;
-            const iQ = (0, bQ.e)("Heatmap3DTarget", {
-              lines: dQ([-.52, -.52, -.52], [.52, .52, .52])
-            }, LQ);
-            return iQ.color = new mQ.Color3(.06, .14, .23), iQ.renderingGroupId = 1, iQ.aA = !1, iQ.isVisible = !1, {
-              engine: wQ,
-              lA: LQ,
-              camera: tQ,
-              cells: GQ,
-              translucentCells: cQ,
-              translucent: {
-                dv: new Float32Array(0),
-                colours: new Float32Array(0),
-                count: 0
-              },
-              translucentSortedFrom: null,
-              schematicBlocks: SQ,
-              targetOutline: iQ,
-              chunkGrid: null,
-              chunkGridCentre: null,
-              chunkGridOrigin: null,
-              targetFieldOfView: FQ,
-              needsRender: !0
-            }
-          }(QQ, aF.current.fieldOfView)
-        } catch (wQ) {
-          return console.error("Failed to start the 3D heatmap", wQ), void YF(!0)
+    var Dk, fk = ik(36729),
+      Sk = ik(36698);
+    ! function(kk) {
+      kk[kk.CW = 0] = "CW", kk[kk.CCW = 1] = "CCW"
+    }(Dk || (Dk = {}));
+    class bk {
+      static Interpolate(kk, ek, ik, Dk, fk) {
+        if (0 === kk) return 0;
+        const Sk = 1 - 3 * Dk + 3 * ek,
+          bk = 3 * Dk - 6 * ek,
+          rk = 3 * ek;
+        let Pk = kk;
+        for (let mk = 0; mk < 5; mk++) {
+          const ek = Pk * Pk;
+          Pk -= (Sk * (ek * Pk) + bk * ek + rk * Pk - kk) * (1 / (3 * Sk * ek + 2 * bk * Pk + rk)), Pk = Math.min(1, Math.max(0, Pk))
         }
-        return uF.current = FQ, FQ.engine.runRenderLoop((() => {
-          const QQ = FQ.camera;
-          QQ.fov !== FQ.targetFieldOfView && (QQ.fov += (FQ.targetFieldOfView - QQ.fov) * (QQ.fov > FQ.targetFieldOfView ? .3 : .2), Math.abs(FQ.targetFieldOfView - QQ.fov) < 5e-4 && (QQ.fov = FQ.targetFieldOfView), FQ.needsRender = !0), FQ.needsRender && (FQ.lA.render(), FQ.needsRender = !FQ.lA.isReady() || !FQ.engine.areAllEffectsReady())
-        })), () => {
-          uF.current = null, FQ.engine.dispose()
-        }
-      }), []), (0, LQ.useEffect)((() => {
-        const QQ = mF.current;
-        if (!QQ) return;
-        const FQ = () => {
-            MF.current = !1, AF(document.pointerLockElement === QQ)
-          },
-          wQ = () => {
-            MF.current && (MF.current = !1, eF(!1))
-          },
-          LQ = FQ => {
-            const wQ = !aF.current.canLock && document.activeElement === QQ && 0 !== (1 & FQ.buttons);
-            if (document.pointerLockElement !== QQ && !wQ) return;
-            const LQ = aF.current.mouseSensitivity * RQ;
-            OF((QQ => function(QQ, FQ, wQ) {
-              const LQ = 2 * Math.PI;
-              return {
-                ...QQ,
-                heading: ((QQ.heading + FQ) % LQ + LQ) % LQ,
-                pitch: Math.max(-lQ, Math.min(lQ, QQ.pitch + wQ))
-              }
-            }(null !== QQ && void 0 !== QQ ? QQ : aF.current.fittedView, FQ.movementX * LQ, FQ.movementY * LQ)))
-          };
-        return document.addEventListener("pointerlockchange", FQ), document.addEventListener("pointerlockerror", wQ), document.addEventListener("pointermove", LQ), () => {
-          document.removeEventListener("pointerlockchange", FQ), document.removeEventListener("pointerlockerror", wQ), document.removeEventListener("pointermove", LQ), document.pointerLockElement === QQ && (0, CQ.d)()
-        }
-      }), []), (0, LQ.useEffect)((() => {
-        const QQ = uF.current;
-        null !== QQ && 0 !== HF.width && 0 !== HF.height && (QQ.engine.resize(), QQ.needsRender = !0)
-      }), [HF.width, HF.height]), (0, LQ.useEffect)((() => {
-        const QQ = uF.current;
-        null !== QQ && (QQ.targetFieldOfView = TF * (CF ? WQ : 1))
-      }), [TF, CF]), (0, LQ.useEffect)((() => {
-        const QQ = uF.current;
-        null !== QQ && function(QQ, FQ, wQ, LQ) {
-          const qQ = [],
-            oQ = [],
-            DQ = [],
-            kQ = [];
-          for (let vQ = 0; vQ < FQ.count; vQ++) {
-            const QQ = FQ.values[vQ],
-              mQ = (0, pQ.x)(QQ, wQ, LQ);
-            if (mQ <= 0) continue;
-            const [uQ, HQ, bQ] = (0, pQ.r)((0, pQ.I)(QQ, wQ)), YQ = mQ >= 1;
-            (YQ ? qQ : DQ).push(FQ.positions[3 * vQ] + .5, FQ.positions[3 * vQ + 1] + .5, FQ.positions[3 * vQ + 2] + .5), (YQ ? oQ : kQ).push(uQ / 255, HQ / 255, bQ / 255, mQ)
-          }
-          yQ(QQ.cells, Float32Array.from(qQ), Float32Array.from(oQ), oQ.length / 4), QQ.translucent = {
-            dv: Float32Array.from(DQ),
-            colours: Float32Array.from(kQ),
-            count: kQ.length / 4
-          }, QQ.translucentSortedFrom = null, BQ(QQ), QQ.needsRender = !0
-        }(QQ, NF, wQ, NQ)
-      }), [NF, wQ, NQ]), (0, LQ.useEffect)((() => {
-        const QQ = uF.current;
-        null !== QQ && function(QQ, FQ) {
-          QQ.chunkGridOrigin = FQ, QQ.chunkGridCentre = null, ZQ(QQ)
-        }(QQ, jQ.min)
-      }), [jQ]), (0, LQ.useEffect)((() => {
-        const QQ = uF.current;
-        null !== QQ && function(QQ, FQ, wQ) {
-          const LQ = [],
-            qQ = [];
-          if (null !== FQ) {
-            const {
-              positions: QQ,
-              colours: oQ,
-              count: DQ
-            } = FQ.surface;
-            for (let FQ = 0; FQ < DQ; FQ++) {
-              const DQ = [QQ[3 * FQ], QQ[3 * FQ + 1], QQ[3 * FQ + 2]];
-              [0, 1, 2].every((QQ => DQ[QQ] >= wQ.min[QQ] - UQ && DQ[QQ] <= wQ.max[QQ] + UQ)) && (LQ.push(DQ[0] - wQ.min[0] + .5, DQ[1] - wQ.min[1] + .5, DQ[2] - wQ.min[2] + .5), qQ.push(oQ[3 * FQ] / 255, oQ[3 * FQ + 1] / 255, oQ[3 * FQ + 2] / 255, 1))
-            }
-          }
-          yQ(QQ.schematicBlocks, Float32Array.from(LQ), Float32Array.from(qQ), qQ.length / 4), QQ.needsRender = !0
-        }(QQ, XQ, jQ)
-      }), [XQ, jQ]), (0, LQ.useEffect)((() => {
-        const QQ = uF.current;
-        null !== QQ && null !== QQ.chunkGrid && (QQ.chunkGrid.isVisible = iF, QQ.needsRender = !0)
-      }), [iF, jQ]), (0, LQ.useEffect)((() => {
-        const QQ = uF.current;
-        null !== QQ && function(QQ, FQ, wQ) {
-          const {
-            camera: LQ
-          } = QQ;
-          LQ.position.set(FQ.position[0], FQ.position[1], FQ.position[2]), LQ.rotation.set(FQ.pitch, FQ.heading, 0);
-          const qQ = (TQ + 1) * xQ.e.tx * Math.sqrt(3);
-          LQ.maxZ = Math.max(qQ, Math.hypot(...DF(FQ.position, kF(qF({
-            min: [0, 0, 0],
-            max: wQ
-          }), -1))) + 2 * Math.hypot(...wQ)), ZQ(QQ), BQ(QQ), QQ.needsRender = !0
-        }(QQ, jF, UF)
-      }), [jF, UF]), (0, LQ.useEffect)((() => {
-        const QQ = uF.current;
-        null !== QQ && (QQ.targetOutline.isVisible = null !== XF, null !== XF && QQ.targetOutline.position.set(XF.x - sF[0] + .5, XF.y - sF[1] + .5, XF.z - sF[2] + .5), QQ.needsRender = !0)
-      }), [XF, sF]);
-      return (0, SQ.jsxs)("div", {
-        className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: vF,
-        children: [(0, SQ.jsx)("canvas", {
-          className: "StudioHeatmapMapCanvas",
-          ref: mF,
-          style: {
-            width: `${HF.width}px`,
-            height: `${HF.height}px`
-          },
-          tabIndex: 0,
-          "aria-label": gQ("3D heatmap"),
-          onClick: () => {
-            const QQ = mF.current;
-            if (null === QQ) return;
-            if (QQ.focus({
-                preventScroll: !0
-              }), xF || !tF) return;
-            const FQ = QQ.requestPointerLock();
-            FQ instanceof Promise ? FQ.catch((QQ => {
-              QQ instanceof DOMException && ("WrongDocumentError" === QQ.name || "NotSupportedError" === QQ.name) && eF(!1)
-            })) : MF.current = !0
-          },
-          ...fF,
-          onKeyDown: QQ => {
-            if (cF && OQ.has(QQ.code)) return QQ.preventDefault(), void(() => {
-              const QQ = mF.current;
-              null !== QQ && document.pointerLockElement === QQ ? (0, CQ.d)() : null === QQ || void 0 === QQ || QQ.blur()
-            })();
-            const FQ = sQ[QQ.code];
-            return cF && void 0 !== FQ ? (QQ.preventDefault(), void VQ(FQ)) : cF && (0, cQ.d)("replayPlayPause", QQ.code) && !(0, cQ.d)("Zoom", QQ.code) ? (QQ.preventDefault(), void(QQ.repeat || JQ())) : cF && QQ.code === rQ ? (QQ.preventDefault(), void hQ()) : cF && QQ.code === zQ ? (QQ.preventDefault(), void OF(null)) : cF && QQ.code === KQ ? (QQ.preventDefault(), void WF((QQ => !QQ))) : void fF.onKeyDown(QQ)
-          },
-          onFocus: () => {
-            pF(!0)
-          },
-          onBlur: () => {
-            pF(!1), fF.onBlur()
-          }
-        }), bF && (0, SQ.jsx)("div", {
-          className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: gQ("3D view isn't available in this browser.")
-        }), cF && (0, SQ.jsx)("div", {
-          className: "StudioHeatmap3DCrosshair"
-        }), (0, SQ.jsx)("div", {
-          className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: jF.position.map(((QQ, FQ) => (QQ + sF[FQ]).toFixed(2))).join(" ")
-        }), iF && (0, SQ.jsx)(PQ, {
-          heading: jF.heading,
-          pitch: jF.pitch,
-          onViewFrom: QQ => {
-            const FQ = kF(QQ, -1),
-              wQ = 0 === FQ[1] ? {
-                heading: Math.atan2(FQ[0], FQ[2]),
-                pitch: 0
-              } : {
-                heading: jF.heading,
-                pitch: FQ[1] < 0 ? lQ : -lQ
-              };
-            OF(wF(zF, KF, TF, wQ))
-          },
-          onTurn: (QQ, FQ) => {
-            OF((wQ => function(QQ, FQ, wQ, LQ) {
-              return LF(QQ, FQ, {
-                heading: QQ.heading + wQ * EQ,
-                pitch: Math.max(-lQ, Math.min(lQ, QQ.pitch + LQ * EQ))
-              })
-            }(null !== wQ && void 0 !== wQ ? wQ : aF.current.fittedView, qF(zF), QQ, FQ)))
-          },
-          onFlip: () => {
-            OF((QQ => function(QQ, FQ) {
-              return LF(QQ, FQ, {
-                heading: QQ.heading + Math.PI,
-                pitch: -QQ.pitch
-              })
-            }(null !== QQ && void 0 !== QQ ? QQ : aF.current.fittedView, qF(zF))))
-          }
-        }), null !== XF && (0, SQ.jsx)("div", {
-          className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === nQ ? gQ("studio:heatmapBlockReadout", {
-            x: XF.x,
-            y: XF.y,
-            z: XF.z,
-            count: (0, YQ.W)(XF.value)
-          }) : nQ(XF.x, XF.y, XF.z, XF.value)
-        }), (0, SQ.jsxs)("div", {
-          className: "StudioHeatmapMapControls",
-          children: [fQ, (0, SQ.jsx)(MQ.L, {
-            active: null === RF,
-            onClick: () => {
-              OF(null)
-            },
-            children: (0, SQ.jsx)(GQ.c, {
-              name: "eye"
-            })
-          })]
-        })]
-      })
-    }
-
-    function PQ(QQ) {
-      let {
-        heading: FQ,
-        pitch: wQ,
-        onViewFrom: qQ,
-        onTurn: oQ,
-        onFlip: DQ
-      } = QQ;
-      const {
-        t: kQ
-      } = (0, AQ.y)(), vQ = (0, LQ.useRef)(null), mQ = QF({
-        heading: FQ,
-        pitch: wQ
-      }), uQ = FF(FQ), HQ = mF(mQ, uQ), bQ = VQ + hQ + 2, YQ = fQ.flatMap((QQ => [1, -1].map((FQ => {
-        const wQ = kF(QQ.direction, FQ);
-        return {
-          ...QQ,
-          sign: FQ,
-          direction: wQ,
-          endX: bQ + vF(wQ, uQ) * VQ,
-          endY: bQ - vF(wQ, HQ) * VQ,
-          depth: vF(wQ, mQ)
-        }
-      })))).sort(((QQ, FQ) => FQ.depth - QQ.depth));
-      return (0, SQ.jsxs)("svg", {
-        className: "StudioHeatmap3DGizmo",
-        width: 2 * bQ,
-        height: 2 * bQ,
-        "aria-hidden": !0,
-        onPointerDown: QQ => {
-          var FQ, wQ;
-          QQ.currentTarget.setPointerCapture(QQ.pointerId);
-          const LQ = QQ.target,
-            qQ = LQ.getAttribute("data-end");
-          vQ.current = {
-            pointerId: QQ.pointerId,
-            x: QQ.clientX,
-            y: QQ.clientY,
-            travel: 0,
-            side: null === qQ ? null : null !== (FQ = null === (wQ = YQ[Number(qQ)]) || void 0 === wQ ? void 0 : wQ.direction) && void 0 !== FQ ? FQ : null,
-            isOnMiddle: LQ.hasAttribute("data-middle")
-          }
-        },
-        onPointerMove: QQ => {
-          const FQ = vQ.current;
-          if (null === FQ || FQ.pointerId !== QQ.pointerId) return;
-          const wQ = QQ.clientX - FQ.x,
-            LQ = QQ.clientY - FQ.y;
-          FQ.x = QQ.clientX, FQ.y = QQ.clientY, FQ.travel += Math.abs(wQ) + Math.abs(LQ), FQ.travel >= nQ && oQ(wQ, LQ)
-        },
-        onPointerUp: QQ => {
-          const FQ = vQ.current;
-          vQ.current = null, null === FQ || FQ.pointerId !== QQ.pointerId || FQ.travel >= nQ || (null !== FQ.side ? qQ(FQ.side) : FQ.isOnMiddle && DQ())
-        },
-        onPointerCancel: () => {
-          vQ.current = null
-        },
-        children: [YQ.map(((QQ, FQ) => {
-          const wQ = QQ.sign > 0;
-          return (0, SQ.jsxs)("g", {
-            children: [(0, SQ.jsx)("line", {
-              x1: bQ,
-              y1: bQ,
-              x2: QQ.endX,
-              y2: QQ.endY,
-              stroke: QQ.colour,
-              strokeOpacity: wQ ? 1 : .5,
-              strokeWidth: 2,
-              strokeLinecap: "round"
-            }), (0, SQ.jsx)("circle", {
-              className: "StudioHeatmap3DGizmoEnd",
-              "data-end": FQ,
-              cx: QQ.endX,
-              cy: QQ.endY,
-              r: wQ ? hQ : hQ - 1,
-              fill: QQ.colour,
-              fillOpacity: wQ ? 1 : .3,
-              stroke: QQ.colour,
-              strokeWidth: wQ ? 0 : 1.5,
-              children: (0, SQ.jsx)("title", {
-                children: `${kQ("View from")} ${wQ?"+":"\u2212"}${QQ.name}`
-              })
-            }), wQ && (0, SQ.jsx)("text", {
-              pointerEvents: "none",
-              x: QQ.endX,
-              y: QQ.endY,
-              fill: "#151515",
-              fontSize: 9,
-              fontWeight: "bold",
-              textAnchor: "middle",
-              dominantBaseline: "central",
-              children: QQ.name
-            })]
-          }, `${wQ?"+":"-"}${QQ.name}`)
-        })), (0, SQ.jsx)("circle", {
-          className: "StudioHeatmap3DGizmoEnd",
-          "data-middle": !0,
-          cx: bQ,
-          cy: bQ,
-          r: JQ,
-          fill: "#d0d0d0",
-          fillOpacity: .85,
-          children: (0, SQ.jsx)("title", {
-            children: kQ("View from the opposite side")
-          })
-        })]
-      })
-    }
-
-    function ZQ(QQ) {
-      var FQ, wQ, LQ;
-      const {
-        chunkGridOrigin: qQ,
-        camera: oQ
-      } = QQ;
-      if (null === qQ) return;
-      const DQ = [oQ.position.x, oQ.position.y, oQ.position.z],
-        kQ = [0, 2].map((QQ => Math.floor((DQ[QQ] + qQ[QQ]) / xQ.e.tx))),
-        vQ = QQ.chunkGridCentre;
-      if (null !== vQ && vQ.every(((QQ, FQ) => QQ === kQ[FQ]))) return;
-      const HQ = null === (FQ = null === (wQ = QQ.chunkGrid) || void 0 === wQ ? void 0 : wQ.isVisible) || void 0 === FQ || FQ;
-      null === (LQ = QQ.chunkGrid) || void 0 === LQ || LQ.dispose();
-      const [YQ, AQ] = [0, 2].map(((QQ, FQ) => {
-        const wQ = [];
-        for (let LQ = kQ[FQ] - TQ; LQ <= kQ[FQ] + TQ + 1; LQ++) wQ.push(LQ * xQ.e.tx - qQ[QQ]);
-        return wQ
-      })), tQ = -qQ[1], eQ = [];
-      for (const mQ of AQ) eQ.push([new uQ.Ox(YQ[0], tQ, mQ), new uQ.Ox(YQ[YQ.length - 1], tQ, mQ)]);
-      for (const mQ of YQ) eQ.push([new uQ.Ox(mQ, tQ, AQ[0]), new uQ.Ox(mQ, tQ, AQ[AQ.length - 1])]);
-      const MQ = (0, bQ.e)("Heatmap3DChunkGrid", {
-        lines: eQ
-      }, QQ.lA);
-      MQ.color = new mQ.Color3(.45, .6, .78), MQ.aA = !1, MQ.isVisible = HQ, QQ.chunkGrid = MQ, QQ.chunkGridCentre = kQ, QQ.needsRender = !0
-    }
-
-    function yQ(QQ, FQ, wQ, LQ) {
-      QQ.FQQ("matrix", function(QQ, FQ) {
-        const wQ = new Float32Array(16 * FQ);
-        for (let LQ = 0; LQ < FQ; LQ++) {
-          const FQ = 16 * LQ;
-          wQ[FQ] = 1, wQ[FQ + 5] = 1, wQ[FQ + 10] = 1, wQ[FQ + 12] = QQ[3 * LQ], wQ[FQ + 13] = QQ[3 * LQ + 1], wQ[FQ + 14] = QQ[3 * LQ + 2], wQ[FQ + 15] = 1
-        }
-        return wQ
-      }(FQ, LQ), 16, !0), QQ.FQQ("color", wQ, 4, !0), QQ.isVisible = LQ > 0
-    }
-
-    function BQ(QQ) {
-      const {
-        camera: FQ,
-        translucent: wQ
-      } = QQ, LQ = [FQ.position.x, FQ.position.y, FQ.position.z], qQ = QQ.translucentSortedFrom;
-      if (null !== qQ && Math.hypot(LQ[0] - qQ[0], LQ[1] - qQ[1], LQ[2] - qQ[2]) < NQ) return;
-      QQ.translucentSortedFrom = LQ;
-      const oQ = new Float64Array(wQ.count),
-        DQ = new Uint32Array(wQ.count);
-      for (let mQ = 0; mQ < wQ.count; mQ++) {
-        const QQ = wQ.dv[3 * mQ] - LQ[0],
-          FQ = wQ.dv[3 * mQ + 1] - LQ[1],
-          qQ = wQ.dv[3 * mQ + 2] - LQ[2];
-        oQ[mQ] = QQ * QQ + FQ * FQ + qQ * qQ, DQ[mQ] = mQ
-      }
-      DQ.sort(((QQ, FQ) => oQ[FQ] - oQ[QQ]));
-      const kQ = new Float32Array(3 * wQ.count),
-        vQ = new Float32Array(4 * wQ.count);
-      DQ.forEach(((QQ, FQ) => {
-        kQ.set(wQ.dv.subarray(3 * QQ, 3 * QQ + 3), 3 * FQ), vQ.set(wQ.colours.subarray(4 * QQ, 4 * QQ + 4), 4 * FQ)
-      })), yQ(QQ.translucentCells, kQ, vQ, wQ.count), QQ.needsRender = !0
-    }
-
-    function dQ(QQ, FQ) {
-      const wQ = (wQ, LQ, qQ) => new uQ.Ox(0 === wQ ? QQ[0] : FQ[0], 0 === LQ ? QQ[1] : FQ[1], 0 === qQ ? QQ[2] : FQ[2]),
-        LQ = [];
-      for (const qQ of [0, 1])
-        for (const QQ of [0, 1]) LQ.push([wQ(0, qQ, QQ), wQ(1, qQ, QQ)], [wQ(qQ, 0, QQ), wQ(qQ, 1, QQ)], [wQ(qQ, QQ, 0), wQ(qQ, QQ, 1)]);
-      return LQ
-    }
-
-    function QF(QQ) {
-      return [Math.sin(QQ.heading) * Math.cos(QQ.pitch), -Math.sin(QQ.pitch), Math.cos(QQ.heading) * Math.cos(QQ.pitch)]
-    }
-
-    function FF(QQ) {
-      return [Math.cos(QQ), 0, -Math.sin(QQ)]
-    }
-
-    function wF(QQ, FQ, wQ) {
-      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: jQ,
-        pitch: aQ
-      };
-      const qQ = [QQ.max[0] - QQ.min[0], QQ.max[1] - QQ.min[1], QQ.max[2] - QQ.min[2]],
-        oQ = QF(LQ),
-        DQ = FF(LQ.heading),
-        kQ = mF(oQ, DQ),
-        vQ = Math.tan(wQ / 2),
-        mQ = vQ * FQ;
-      let uQ = 1;
-      for (const HQ of [-qQ[0] / 2, qQ[0] / 2])
-        for (const QQ of [-qQ[1] / 2, qQ[1] / 2])
-          for (const FQ of [-qQ[2] / 2, qQ[2] / 2]) {
-            const wQ = [HQ, QQ, FQ],
-              LQ = vF(wQ, oQ);
-            uQ = Math.max(uQ, Math.abs(vF(wQ, DQ)) / mQ - LQ, Math.abs(vF(wQ, kQ)) / vQ - LQ)
-          }
-      return {
-        position: DF([QQ.min[0] + qQ[0] / 2, QQ.min[1] + qQ[1] / 2, QQ.min[2] + qQ[2] / 2], kF(oQ, -uQ * XQ)),
-        heading: LQ.heading,
-        pitch: LQ.pitch
+        return 3 * Math.pow(1 - Pk, 2) * Pk * ik + 3 * (1 - Pk) * Math.pow(Pk, 2) * fk + Math.pow(Pk, 3)
       }
     }
-
-    function LF(QQ, FQ, wQ) {
-      const LQ = oF(QQ),
-        qQ = oF(wQ),
-        oQ = DF(QQ.position, kF(FQ, -1)),
-        DQ = [0, 1, 2].reduce(((QQ, FQ) => DF(QQ, kF(qQ[FQ], vF(oQ, LQ[FQ])))), [0, 0, 0]);
-      return {
-        position: DF(FQ, DQ),
-        heading: wQ.heading,
-        pitch: wQ.pitch
+    class rk {
+      constructor(kk) {
+        this._radians = kk, this._radians < 0 && (this._radians += 2 * Math.PI)
+      }
+      degrees() {
+        return 180 * this._radians / Math.PI
+      }
+      radians() {
+        return this._radians
+      }
+      static BetweenTwoPoints(kk, ek) {
+        const ik = ek.subtract(kk),
+          Dk = Math.atan2(ik.y, ik.x);
+        return new rk(Dk)
+      }
+      static BetweenTwoVectors(kk, ek) {
+        let ik = kk.lengthSquared() * ek.lengthSquared();
+        if (0 === ik) return new rk(Math.PI / 2);
+        ik = Math.sqrt(ik);
+        let Dk = kk.dot(ek) / ik;
+        Dk = (0, fk.Clamp)(Dk, -1, 1);
+        const Sk = Math.acos(Dk);
+        return new rk(Sk)
+      }
+      static FromRadians(kk) {
+        return new rk(kk)
+      }
+      static FromDegrees(kk) {
+        return new rk(kk * Math.PI / 180)
       }
     }
-
-    function qF(QQ) {
-      return kF(DF(QQ.min, QQ.max), .5)
+    class Pk {
+      constructor(kk, ek, ik) {
+        this.startPoint = kk, this.midPoint = ek, this.endPoint = ik;
+        const Dk = Math.pow(ek.x, 2) + Math.pow(ek.y, 2),
+          fk = (Math.pow(kk.x, 2) + Math.pow(kk.y, 2) - Dk) / 2,
+          bk = (Dk - Math.pow(ik.x, 2) - Math.pow(ik.y, 2)) / 2,
+          Pk = (kk.x - ek.x) * (ek.y - ik.y) - (ek.x - ik.x) * (kk.y - ek.y);
+        this.centerPoint = new Sk.l((fk * (ek.y - ik.y) - bk * (kk.y - ek.y)) / Pk, ((kk.x - ek.x) * bk - (ek.x - ik.x) * fk) / Pk), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = rk.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const mk = this.startAngle.degrees();
+        let Mk = rk.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          Kk = rk.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        Mk - mk > 180 && (Mk -= 360), Mk - mk < -180 && (Mk += 360), Kk - Mk > 180 && (Kk -= 360), Kk - Mk < -180 && (Kk += 360), this.orientation = Mk - mk < 0 ? 0 : 1, this.angle = rk.FromDegrees(0 === this.orientation ? mk - Kk : Kk - mk)
+      }
     }
-
-    function oF(QQ) {
-      const FQ = QF(QQ),
-        wQ = FF(QQ.heading);
-      return [FQ, wQ, mF(FQ, wQ)]
+    class mk {
+      constructor(kk, ek) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new Sk.l(kk, ek))
+      }
+      addLineTo(kk, ek) {
+        if (this.closed) return this;
+        const ik = new Sk.l(kk, ek),
+          Dk = this._points[this._points.length - 1];
+        return this._points.push(ik), this._length += ik.subtract(Dk).length(), this
+      }
+      addArcTo(kk, ek, ik, Dk) {
+        let fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const bk = this._points[this._points.length - 1],
+          rk = new Sk.l(kk, ek),
+          mk = new Sk.l(ik, Dk),
+          Mk = new Pk(bk, rk, mk);
+        let Kk = Mk.angle.radians() / fk;
+        0 === Mk.orientation && (Kk *= -1);
+        let xk = Mk.startAngle.radians() + Kk;
+        for (let Sk = 0; Sk < fk; Sk++) {
+          const kk = Math.cos(xk) * Mk.radius + Mk.centerPoint.x,
+            ek = Math.sin(xk) * Mk.radius + Mk.centerPoint.y;
+          this.addLineTo(kk, ek), xk += Kk
+        }
+        return this
+      }
+      addQuadraticCurveTo(kk, ek, ik, Dk) {
+        let fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const Sk = (kk, ek, ik, Dk) => (1 - kk) * (1 - kk) * ek + 2 * kk * (1 - kk) * ik + kk * kk * Dk,
+          bk = this._points[this._points.length - 1];
+        for (let rk = 0; rk <= fk; rk++) {
+          const Pk = rk / fk,
+            mk = Sk(Pk, bk.x, kk, ik),
+            Mk = Sk(Pk, bk.y, ek, Dk);
+          this.addLineTo(mk, Mk)
+        }
+        return this
+      }
+      addBezierCurveTo(kk, ek, ik, Dk, fk, Sk) {
+        let bk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+        if (this.closed) return this;
+        const rk = (kk, ek, ik, Dk, fk) => (1 - kk) * (1 - kk) * (1 - kk) * ek + 3 * kk * (1 - kk) * (1 - kk) * ik + 3 * kk * kk * (1 - kk) * Dk + kk * kk * kk * fk,
+          Pk = this._points[this._points.length - 1];
+        for (let mk = 0; mk <= bk; mk++) {
+          const Mk = mk / bk,
+            Kk = rk(Mk, Pk.x, kk, ik, fk),
+            xk = rk(Mk, Pk.y, ek, Dk, Sk);
+          this.addLineTo(Kk, xk)
+        }
+        return this
+      }
+      isPointInside(kk) {
+        let ek = !1;
+        const ik = this._points.length;
+        for (let Dk = ik - 1, fk = 0; fk < ik; Dk = fk++) {
+          let ik = this._points[Dk],
+            Sk = this._points[fk],
+            bk = Sk.x - ik.x,
+            rk = Sk.y - ik.y;
+          if (Math.abs(rk) > Number.EPSILON) {
+            if (rk < 0 && (ik = this._points[fk], bk = -bk, Sk = this._points[Dk], rk = -rk), kk.y < ik.y || kk.y > Sk.y) continue;
+            if (kk.y === ik.y && kk.x === ik.x) return !0;
+            {
+              const Dk = rk * (kk.x - ik.x) - bk * (kk.y - ik.y);
+              if (0 === Dk) return !0;
+              if (Dk < 0) continue;
+              ek = !ek
+            }
+          } else {
+            if (kk.y !== ik.y) continue;
+            if (Sk.x <= kk.x && kk.x <= ik.x || ik.x <= kk.x && kk.x <= Sk.x) return !0
+          }
+        }
+        return ek
+      }
+      close() {
+        return this.closed = !0, this
+      }
+      length() {
+        let kk = this._length;
+        if (this.closed) {
+          const ek = this._points[this._points.length - 1];
+          kk += this._points[0].subtract(ek).length()
+        }
+        return kk
+      }
+      area() {
+        const kk = this._points.length;
+        let ek = 0;
+        for (let ik = kk - 1, Dk = 0; Dk < kk; ik = Dk++) ek += this._points[ik].x * this._points[Dk].y - this._points[Dk].x * this._points[ik].y;
+        return .5 * ek
+      }
+      getPoints() {
+        return this._points
+      }
+      getPointAtLengthPosition(kk) {
+        if (kk < 0 || kk > 1) return Sk.l.Zero();
+        const ek = kk * this.length();
+        let ik = 0;
+        for (let Dk = 0; Dk < this._points.length; Dk++) {
+          const kk = (Dk + 1) % this._points.length,
+            fk = this._points[Dk],
+            bk = this._points[kk].subtract(fk),
+            rk = bk.length() + ik;
+          if (ek >= ik && ek <= rk) {
+            const kk = bk.normalize(),
+              Dk = ek - ik;
+            return new Sk.l(fk.x + kk.x * Dk, fk.y + kk.y * Dk)
+          }
+          ik = rk
+        }
+        return Sk.l.Zero()
+      }
+      static StartingAt(kk, ek) {
+        return new mk(kk, ek)
+      }
     }
-
-    function DF(QQ, FQ) {
-      return [QQ[0] + FQ[0], QQ[1] + FQ[1], QQ[2] + FQ[2]]
+    class Mk {
+      static CreateQuadraticBezier(kk, ek, ik, Dk) {
+        Dk = Dk > 2 ? Dk : 3;
+        const fk = [],
+          bk = (kk, ek, ik, Dk) => (1 - kk) * (1 - kk) * ek + 2 * kk * (1 - kk) * ik + kk * kk * Dk;
+        for (let rk = 0; rk <= Dk; rk++) fk.push(new Sk.o(bk(rk / Dk, kk.x, ek.x, ik.x), bk(rk / Dk, kk.y, ek.y, ik.y), bk(rk / Dk, kk.z, ek.z, ik.z)));
+        return new Mk(fk)
+      }
+      static CreateCubicBezier(kk, ek, ik, Dk, fk) {
+        fk = fk > 3 ? fk : 4;
+        const bk = [],
+          rk = (kk, ek, ik, Dk, fk) => (1 - kk) * (1 - kk) * (1 - kk) * ek + 3 * kk * (1 - kk) * (1 - kk) * ik + 3 * kk * kk * (1 - kk) * Dk + kk * kk * kk * fk;
+        for (let Pk = 0; Pk <= fk; Pk++) bk.push(new Sk.o(rk(Pk / fk, kk.x, ek.x, ik.x, Dk.x), rk(Pk / fk, kk.y, ek.y, ik.y, Dk.y), rk(Pk / fk, kk.z, ek.z, ik.z, Dk.z)));
+        return new Mk(bk)
+      }
+      static CreateHermiteSpline(kk, ek, ik, Dk, fk) {
+        const bk = [],
+          rk = 1 / fk;
+        for (let Pk = 0; Pk <= fk; Pk++) bk.push(Sk.o.Hermite(kk, ek, ik, Dk, Pk * rk));
+        return new Mk(bk)
+      }
+      static CreateCatmullRomSpline(kk, ek, ik) {
+        const Dk = [],
+          fk = 1 / ek;
+        let bk = 0;
+        if (ik) {
+          const ik = kk.length;
+          for (let rk = 0; rk < ik; rk++) {
+            bk = 0;
+            for (let Pk = 0; Pk < ek; Pk++) Dk.push(Sk.o.CatmullRom(kk[rk % ik], kk[(rk + 1) % ik], kk[(rk + 2) % ik], kk[(rk + 3) % ik], bk)), bk += fk
+          }
+          Dk.push(Dk[0])
+        } else {
+          const ik = [];
+          ik.push(kk[0].clone()), ik.push(...kk), ik.push(kk[kk.length - 1].clone());
+          let rk = 0;
+          for (; rk < ik.length - 3; rk++) {
+            bk = 0;
+            for (let kk = 0; kk < ek; kk++) Dk.push(Sk.o.CatmullRom(ik[rk], ik[rk + 1], ik[rk + 2], ik[rk + 3], bk)), bk += fk
+          }
+          rk--, Dk.push(Sk.o.CatmullRom(ik[rk], ik[rk + 1], ik[rk + 2], ik[rk + 3], bk))
+        }
+        return new Mk(Dk)
+      }
+      static ArcThru3Points(kk, ek, ik) {
+        let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          fk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          bk = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const rk = [],
+          Pk = ek.subtract(kk),
+          mk = ik.subtract(ek),
+          Kk = kk.subtract(ik),
+          xk = Sk.o.Cross(Pk, mk),
+          nk = xk.length();
+        if (nk < Math.pow(10, -8)) return new Mk(rk);
+        const Uk = Pk.lengthSquared(),
+          Hk = mk.lengthSquared(),
+          wk = Kk.lengthSquared(),
+          lk = xk.lengthSquared(),
+          pk = .5 * Pk.length() * mk.length() * Kk.length() / nk,
+          yk = -.5 * Hk * Sk.o.Dot(Pk, Kk) / lk,
+          Yk = -.5 * wk * Sk.o.Dot(Pk, mk) / lk,
+          Lk = -.5 * Uk * Sk.o.Dot(mk, Kk) / lk,
+          Ck = kk.scale(yk).add(ek.scale(Yk)).add(ik.scale(Lk)),
+          Ak = kk.subtract(Ck).normalize(),
+          jk = Sk.o.Cross(xk, Ak).normalize();
+        if (bk) {
+          const ek = 2 * Math.PI / Dk;
+          for (let kk = 0; kk <= 2 * Math.PI; kk += ek) rk.push(Ck.add(Ak.scale(pk * Math.cos(kk)).add(jk.scale(pk * Math.sin(kk)))));
+          rk.push(kk)
+        } else {
+          const ek = 1 / Dk;
+          let Sk, bk = 0;
+          do {
+            Sk = Ck.add(Ak.scale(pk * Math.cos(bk)).add(jk.scale(pk * Math.sin(bk)))), rk.push(Sk), bk += ek
+          } while (!Sk.equalsWithEpsilon(ik, pk * ek * 1.1));
+          rk.push(ik), fk && rk.push(kk)
+        }
+        return new Mk(rk)
+      }
+      constructor(kk) {
+        this._length = 0, this._points = kk, this._length = this._computeLength(kk)
+      }
+      getPoints() {
+        return this._points
+      }
+      length() {
+        return this._length
+      }
+      continue (kk) {
+        const ek = this._points[this._points.length - 1],
+          ik = this._points.slice(),
+          Dk = kk.getPoints();
+        for (let fk = 1; fk < Dk.length; fk++) ik.push(Dk[fk].subtract(Dk[0]).add(ek));
+        return new Mk(ik)
+      }
+      _computeLength(kk) {
+        let ek = 0;
+        for (let ik = 1; ik < kk.length; ik++) ek += kk[ik].subtract(kk[ik - 1]).length();
+        return ek
+      }
     }
-
-    function kF(QQ, FQ) {
-      return [QQ[0] * FQ, QQ[1] * FQ, QQ[2] * FQ]
+  },
+  38265: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk
+    });
+    var Dk = ik(38272);
+    const fk = (kk, ek, ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(ek) : null;
+    class Sk {
+      static DeepCopy(kk, ek, ik, Sk) {
+        let bk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const rk = function(kk) {
+          const ek = [];
+          do {
+            const ik = Object.getOwnPropertyNames(kk);
+            for (const kk of ik) - 1 === ek.indexOf(kk) && ek.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return ek
+        }(kk);
+        for (const mk of rk) {
+          if ("_" === mk[0] && (!Sk || -1 === Sk.indexOf(mk))) continue;
+          if (mk.endsWith("Observable")) continue;
+          if (ik && -1 !== ik.indexOf(mk)) continue;
+          const rk = kk[mk],
+            Mk = typeof rk;
+          if ("function" !== Mk) try {
+            if ("object" === Mk)
+              if (rk instanceof Uint8Array) ek[mk] = Uint8Array.from(rk);
+              else if (rk instanceof Array) {
+              if (ek[mk] = [], rk.length > 0)
+                if ("object" == typeof rk[0])
+                  for (let kk = 0; kk < rk.length; kk++) {
+                    const ik = fk(rk[kk], ek, bk); - 1 === ek[mk].indexOf(ik) && ek[mk].push(ik)
+                  } else ek[mk] = rk.slice(0)
+            } else ek[mk] = fk(rk, ek, bk);
+            else ek[mk] = rk
+          } catch (Pk) {
+            Dk.b.Warn(Pk.message)
+          }
+        }
+      }
     }
-
-    function vF(QQ, FQ) {
-      return QQ[0] * FQ[0] + QQ[1] * FQ[1] + QQ[2] * FQ[2]
+  },
+  38272: (kk, ek, ik) => {
+    ik.d(ek, {
+      b: () => Dk
+    });
+    class Dk {
+      static _CheckLimit(kk, ek) {
+        let ik = Dk._LogLimitOutputs[kk];
+        return ik ? ik.current++ : (ik = {
+          limit: ek,
+          current: 1
+        }, Dk._LogLimitOutputs[kk] = ik), ik.current <= ik.limit
+      }
+      static _GenerateLimitMessage(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ik = Dk._LogLimitOutputs[kk];
+        if (!ik || !Dk.MessageLimitReached) return;
+        const fk = this._Levels[ek];
+        ik.current === ik.limit && Dk[fk.name](Dk.MessageLimitReached.replace(/%LIMIT%/g, "" + ik.limit).replace(/%TYPE%/g, fk.name ?? ""))
+      }
+      static _AddLogEntry(kk) {
+        Dk._LogCache = kk + Dk._LogCache, Dk.OnNewCacheEntry && Dk.OnNewCacheEntry(kk)
+      }
+      static _FormatMessage(kk) {
+        const ek = kk => kk < 10 ? "0" + kk : "" + kk,
+          ik = new Date;
+        return "[" + ek(ik.getHours()) + ":" + ek(ik.getMinutes()) + ":" + ek(ik.getSeconds()) + "]: " + kk
+      }
+      static _LogDisabled(kk, ek) {}
+      static _LogEnabled() {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ek = arguments.length > 1 ? arguments[1] : void 0,
+          ik = arguments.length > 2 ? arguments[2] : void 0;
+        const fk = Array.isArray(ek) ? ek[0] : ek;
+        if (void 0 !== ik && !Dk._CheckLimit(fk, ik)) return;
+        const Sk = Dk._FormatMessage(fk),
+          bk = this._Levels[kk],
+          rk = Array.isArray(ek) ? ek.slice(1) : [];
+        bk.logFunc && bk.logFunc("BJS - " + Sk, ...rk);
+        const Pk = `<div style='color:${bk.color}'>${Sk}</div><br>`;
+        Dk._AddLogEntry(Pk), Dk._GenerateLimitMessage(fk, kk)
+      }
+      static get LogCache() {
+        return Dk._LogCache
+      }
+      static ClearLogCache() {
+        Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk.errorsCount = 0
+      }
+      static set LogLevels(kk) {
+        Dk.Log = Dk._LogDisabled, Dk.Warn = Dk._LogDisabled, Dk.Error = Dk._LogDisabled;
+        const ek = [Dk.MessageLogLevel, Dk.WarningLogLevel, Dk.ErrorLogLevel];
+        for (const ik of ek)
+          if ((kk & ik) === ik) {
+            const kk = this._Levels[ik];
+            Dk[kk.name] = Dk._LogEnabled.bind(Dk, ik)
+          }
+      }
     }
-
-    function mF(QQ, FQ) {
-      return [QQ[1] * FQ[2] - QQ[2] * FQ[1], QQ[2] * FQ[0] - QQ[0] * FQ[2], QQ[0] * FQ[1] - QQ[1] * FQ[0]]
-    }
+    Dk.NoneLogLevel = 0, Dk.MessageLogLevel = 1, Dk.WarningLogLevel = 2, Dk.ErrorLogLevel = 4, Dk.AllLogLevel = 7, Dk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Dk._LogCache = "", Dk._LogLimitOutputs = {}, Dk._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Dk.errorsCount = 0, Dk.Log = Dk._LogEnabled.bind(Dk, Dk.MessageLogLevel), Dk.Warn = Dk._LogEnabled.bind(Dk, Dk.WarningLogLevel), Dk.Error = Dk._LogEnabled.bind(Dk, Dk.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

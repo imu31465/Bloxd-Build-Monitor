@@ -1,37 +1,37 @@
 export const id = 174;
 export const ids = [174];
 export const modules = {
-  8791: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8817: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["A string of unique islands, a mysterious land and 114 fish just waiting to be caught. Bloxd Fishing is a relaxing fishing simulator where you explore, catch fish and slowly uncover the secrets of the islands. Take it at your own pace. It's free, there's nothing to install, and you can be fishing in seconds."],
-      howToPlay: ["Cast your line and wait for a bite. When something bites, a catch minigame kicks in. Some fish need a well-timed click, while others use a progress bar or a gravity bar. Win the minigame and the fish is yours. Every fish has its own weight and rarity, going from Common all the way up to Mythic. Sell your catches for coins and spend them on better rods, boats and potions.", "There are 5 islands to explore: Sunhaven, Gloomtide, Eldermire, Embertide and Frostfell. Each one has its own fishing spots, like the Moonpool, Draugr Bay, The Abyss and Embertide Volcano. Unlock new islands with your coins and use the shop to hop between them. Every fish you catch goes in your Bestiary, and you can show off your favourite on your nametag. Keep an eye out for luck events too. They boost your chances of a rare catch for a while."],
-      features: ["5 Islands and Lots of Fishing Spots to Explore", "114 Fish Species to Catch", "7 Rarities, from Common to Mythic", "3 Different Catch Minigames", "16 Fishing Rods, from the Rusty Rod to the Mythic Rod", "Boats, plus Luck Potions in Four Strengths", "A Bestiary to Complete", "Show Off Your Best Fish on Your Nametag", "Random Luck Events"],
-      tips: ["Sell your early catches and save up for a better rod", "Check the rod shops on each island for new rods", "Some spots don't allow every rod, so check before you cast", "Drink a Luck Potion before you fish if you're after rare catches", "Wait untill a luck event to give yourself the best shot at a Mythic", "Your Bestiary shows you which fish you're still missing", "Get a boat if you want to head out on the water"],
-      similarGames: ["greenville", "skyblock", "oneBlock", "classic"],
+    const Dk = {
+      whatIs: ["Claim an island, grab the loot and fight for every diamond you can get. Bloxd Sky Islands is a scored PvP match across floating islands, where you explore, mine resources and battle for diamonds and glory. Each phase brings better loot, and whoever has the highest score at the end wins. Don't let the name fool you, it isn't an island-growing game like Skyblock or One Block. There is a PvE mode, though, if you'd rather fight mobs."],
+      howToPlay: ["Place your Protector on an island to claim it. Other players can't change blocks or open chests there, and you'll always respawn on it. You only get one island at a time, but you can release it and claim another later. Then off you go to explore, mine and grab loot as it spawns on the islands.", "Every match has 4 phases. It starts with Gather, when resources and tools spawn. Arms Race comes next with bows and armour. Then Escalation adds explosives and diamond gear, and finally Chaos turns up with guns and rockets. Your score is your kills plus the diamonds you're holding (diamond blocks count as several diamonds). Get knocked out and you'll drop some of your diamonds and items, though you do get a short bit of spawn protection when you come back."],
+      features: ["Solo, Teams, Blitz and PvE Modes", "Claim Your Own Island with a Protector", "4 Phases: Gather, Arms Race, Escalation and Chaos", "Bows, Explosives, Guns, Rockets and Diamond Gear", "Loot Drops, Diamond Surges and Diamond Bounties", "Quests, Perks and Buried Treasure", "Gold, Iron and Wood Helmets for the Top 3 Next Round"],
+      tips: ["Claim an island early so you've got a safe base to respawn on", "Grab tools and resources during Gather, before the big fights kick off", "Hang on to your diamonds. They count towards your score", "Watch the loot timer and get to new drops first", "Don't camp on the diamond island while you're in the lead, or you'll get a bounty and hunters will be able to see you", "Stay for the next round and you get to pick a bonus to start with", "Stuck? Use the shop to teleport to a random island"],
+      similarGames: ["skywars", "bedwars", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Bloxd Fishing?",
-        answer: "A relaxing fishing game. You explore 5 islands, win catch minigames to reel in fish and fill your Bestiary with rare species."
+        question: "What is Bloxd Sky Islands?",
+        answer: "A round-based PvP mode. You claim a floating island, gear up through four phases and battle other players for the top score."
       }, {
-        question: "How many fish are in Bloxd Fishing?",
-        answer: "114 fish species, spread across 5 islands, in 7 rarities from Common to Mythic."
+        question: "How is the winner decided in Bloxd Sky Islands?",
+        answer: "Whoever has the highest score when time runs out. Score is your kills plus the diamonds you're holding, and in Teams the highest-scoring team takes it."
       }, {
-        question: "How do I catch Mythic fish in Bloxd Fishing?",
-        answer: "Use a better rod, drink a Luck Potion and fish during luck events. Then cross your fingers!"
+        question: "How do I claim an island in Sky Islands?",
+        answer: "Put your Protector down on an island. Nobody else can change its blocks or open its chests, and you'll always respawn there."
       }, {
-        question: "Where can I get better rods?",
-        answer: "Sell your fish for coins, then buy new rods from the rod shops on the islands."
+        question: "Which modes does Sky Islands have?",
+        answer: "Solo, Teams, Blitz (a faster match) and PvE. In PvE your score comes from mob kills instead of player kills, so you claim an island and go after mobs."
       }, {
-        question: "How do I travel between islands?",
-        answer: "You start on Sunhaven. Spend coins to unlock Gloomtide, Eldermire, Embertide and Frostfell, and once an island's unlocked, use the shop to travel there."
+        question: "Where do you find diamonds in Sky Islands?",
+        answer: "Mine them, grab them from loot drops and Diamond Surges, or win fights for them. Players drop some of their diamonds when they're knocked out."
       }, {
-        question: "What are the catch minigames?",
-        answer: "There are three: a timed click, a progress bar and a gravity bar. Each fish uses one of them."
+        question: "What is a diamond bounty?",
+        answer: "If you're one of the top three scorers and you stay on the diamond island too long, you get a bounty and hunters can see you. Move to another island to get rid of it."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

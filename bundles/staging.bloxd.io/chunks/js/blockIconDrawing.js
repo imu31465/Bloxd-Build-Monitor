@@ -1,504 +1,505 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36033: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      drawBlockIcon: () => pQ,
-      drawBlockIconUrl: () => cQ,
-      getDrawnBlockIcon: () => GQ
+  35929: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      drawBlockIcon: () => Yk,
+      drawBlockIconUrl: () => Lk,
+      getDrawnBlockIcon: () => yk
     });
-    var LQ = wQ(36040);
-    const qQ = Math.SQRT1_2,
-      oQ = Math.sqrt(3) / 2,
-      DQ = .5,
-      kQ = {
+    var Dk = ik(35931);
+    const fk = Math.SQRT1_2,
+      Sk = Math.sqrt(3) / 2,
+      bk = .5,
+      rk = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      vQ = {
+      Pk = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      mQ = {
+      mk = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const uQ = 1e-6;
+    const Mk = 1e-6;
 
-    function HQ(QQ, FQ, wQ, LQ) {
+    function Kk(kk, ek, ik, Dk) {
       let {
-        origin: qQ,
-        across: oQ,
-        down: DQ,
-        texture: kQ,
-        rect: [vQ, mQ, HQ, bQ],
-        shade: YQ
-      } = LQ;
-      const xQ = oQ.x * DQ.y - oQ.y * DQ.x;
-      if (Math.abs(xQ) < 1e-9) return;
-      const AQ = [qQ.x, qQ.x + oQ.x, qQ.x + DQ.x, qQ.x + oQ.x + DQ.x],
-        tQ = [qQ.y, qQ.y + oQ.y, qQ.y + DQ.y, qQ.y + oQ.y + DQ.y],
-        eQ = Math.max(0, Math.floor(Math.min(...AQ))),
-        MQ = Math.min(wQ - 1, Math.ceil(Math.max(...AQ))),
-        GQ = Math.max(0, Math.floor(Math.min(...tQ))),
-        pQ = Math.min(wQ - 1, Math.ceil(Math.max(...tQ)));
-      for (let cQ = GQ; cQ <= pQ; cQ++)
-        for (let LQ = eQ; LQ <= MQ; LQ++) {
-          const AQ = LQ + .5 - qQ.x,
-            tQ = cQ + .5 - qQ.y,
-            eQ = (AQ * DQ.y - tQ * DQ.x) / xQ,
-            MQ = (oQ.x * tQ - oQ.y * AQ) / xQ;
-          if (eQ < -uQ || eQ > 1 + uQ || MQ < -uQ || MQ > 1 + uQ) continue;
-          const GQ = cQ * wQ + LQ;
-          FQ[GQ] = 1;
-          const pQ = vQ + Math.min(Math.max(eQ, 0), 1) * (HQ - vQ),
-            CQ = mQ + Math.min(Math.max(MQ, 0), 1) * (bQ - mQ),
-            SQ = Math.min(kQ.width - 1, Math.floor(pQ * kQ.width)),
-            iQ = 4 * (Math.min(kQ.height - 1, Math.floor(CQ * kQ.height)) * kQ.width + SQ),
-            WQ = kQ.pixels[iQ + 3] / 255;
-          if (0 === WQ) continue;
-          const RQ = 4 * GQ,
-            OQ = QQ[RQ + 3] / 255 * (1 - WQ),
-            sQ = WQ + OQ;
-          for (let FQ = 0; FQ < 3; FQ++) QQ[RQ + FQ] = (kQ.pixels[iQ + FQ] * YQ * WQ + QQ[RQ + FQ] * OQ) / sQ;
-          QQ[RQ + 3] = 255 * sQ
+        origin: fk,
+        across: Sk,
+        down: bk,
+        texture: rk,
+        rect: [Pk, mk, Kk, xk],
+        shade: nk
+      } = Dk;
+      const Uk = Sk.x * bk.y - Sk.y * bk.x;
+      if (Math.abs(Uk) < 1e-9) return;
+      const Hk = [fk.x, fk.x + Sk.x, fk.x + bk.x, fk.x + Sk.x + bk.x],
+        wk = [fk.y, fk.y + Sk.y, fk.y + bk.y, fk.y + Sk.y + bk.y],
+        lk = Math.max(0, Math.floor(Math.min(...Hk))),
+        pk = Math.min(ik - 1, Math.ceil(Math.max(...Hk))),
+        yk = Math.max(0, Math.floor(Math.min(...wk))),
+        Yk = Math.min(ik - 1, Math.ceil(Math.max(...wk)));
+      for (let Lk = yk; Lk <= Yk; Lk++)
+        for (let Dk = lk; Dk <= pk; Dk++) {
+          const Hk = Dk + .5 - fk.x,
+            wk = Lk + .5 - fk.y,
+            lk = (Hk * bk.y - wk * bk.x) / Uk,
+            pk = (Sk.x * wk - Sk.y * Hk) / Uk;
+          if (lk < -Mk || lk > 1 + Mk || pk < -Mk || pk > 1 + Mk) continue;
+          const yk = Lk * ik + Dk;
+          ek[yk] = 1;
+          const Yk = Pk + Math.min(Math.max(lk, 0), 1) * (Kk - Pk),
+            Ck = mk + Math.min(Math.max(pk, 0), 1) * (xk - mk),
+            Ak = Math.min(rk.width - 1, Math.floor(Yk * rk.width)),
+            jk = 4 * (Math.min(rk.height - 1, Math.floor(Ck * rk.height)) * rk.width + Ak),
+            sk = rk.pixels[jk + 3] / 255;
+          if (0 === sk) continue;
+          const dk = 4 * yk,
+            Vk = kk[dk + 3] / 255 * (1 - sk),
+            Fk = sk + Vk;
+          for (let ek = 0; ek < 3; ek++) kk[dk + ek] = (rk.pixels[jk + ek] * nk * sk + kk[dk + ek] * Vk) / Fk;
+          kk[dk + 3] = 255 * Fk
         }
     }
-    var bQ = wQ(36047);
-    const YQ = new Map,
-      xQ = new Map,
-      AQ = new Map,
-      tQ = new Map;
+    var xk = ik(35933);
+    const nk = new Map,
+      Uk = new Map,
+      Hk = new Map,
+      wk = new Map;
 
-    function eQ(QQ, FQ, wQ) {
-      return `${FQ}|${wQ}|${QQ}`
+    function lk(kk, ek, ik) {
+      return `${ek}|${ik}|${kk}`
     }
 
-    function MQ(QQ, FQ, wQ) {
-      let LQ = QQ.get(FQ);
-      return void 0 === LQ && (LQ = wQ().catch((wQ => {
-        throw QQ.delete(FQ), wQ
-      })), QQ.set(FQ, LQ)), LQ
+    function pk(kk, ek, ik) {
+      let Dk = kk.get(ek);
+      return void 0 === Dk && (Dk = ik().catch((ik => {
+        throw kk.delete(ek), ik
+      })), kk.set(ek, Dk)), Dk
     }
 
-    function GQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return xQ.get(eQ(QQ, FQ, wQ))
+    function yk(kk, ek) {
+      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Uk.get(lk(kk, ek, ik))
     }
 
-    function pQ(QQ, FQ, wQ, LQ) {
-      const qQ = eQ(QQ, FQ, wQ);
-      return MQ(YQ, qQ, (async () => {
-        const oQ = await SQ(LQ(QQ), FQ, CQ(wQ));
-        return xQ.set(qQ, oQ), oQ
+    function Yk(kk, ek, ik, Dk) {
+      const fk = lk(kk, ek, ik);
+      return pk(nk, fk, (async () => {
+        const Sk = await Ak(Dk(kk), ek, Ck(ik));
+        return Uk.set(fk, Sk), Sk
       }))
     }
 
-    function cQ(QQ, FQ, wQ, LQ) {
-      return MQ(AQ, eQ(QQ, FQ, wQ), (async () => {
-        var qQ;
-        const oQ = LQ(QQ),
-          DQ = CQ(wQ);
-        return null !== (qQ = await (0, bQ.c)(oQ, FQ, DQ)) && void 0 !== qQ ? qQ : (await SQ(oQ, FQ, DQ)).toDataURL()
+    function Lk(kk, ek, ik, Dk) {
+      return pk(Hk, lk(kk, ek, ik), (async () => {
+        var fk;
+        const Sk = Dk(kk),
+          bk = Ck(ik);
+        return null !== (fk = await (0, xk.e)(Sk, ek, bk)) && void 0 !== fk ? fk : (await Ak(Sk, ek, bk)).toDataURL()
       }))
     }
 
-    function CQ(QQ) {
-      return Math.max(1, Math.round(QQ))
+    function Ck(kk) {
+      return Math.max(1, Math.round(kk))
     }
-    async function SQ(QQ, FQ, wQ) {
+    async function Ak(kk, ek, ik) {
       let {
-        top: uQ,
-        left: bQ,
-        right: YQ,
-        itemType: xQ
-      } = QQ;
-      const [AQ, tQ, eQ] = await Promise.all([iQ(uQ), iQ(bQ), iQ(YQ)]), MQ = function(QQ, FQ, wQ, kQ) {
-        const vQ = .6 * wQ,
-          mQ = vQ * qQ,
-          uQ = vQ * qQ * DQ,
-          bQ = vQ * oQ,
-          YQ = Math.max(...FQ.boxes.map((QQ => QQ[4]))),
-          xQ = mQ / 2 + (wQ - mQ) / 2,
-          AQ = uQ + (wQ - uQ - uQ - YQ * bQ) / 2,
-          tQ = (QQ, FQ, wQ) => ({
-            x: xQ + (QQ - wQ) * mQ,
-            y: AQ - uQ + (QQ + wQ) * uQ + (YQ - FQ) * bQ
+        top: Mk,
+        left: xk,
+        right: nk,
+        itemType: Uk
+      } = kk;
+      const [Hk, wk, lk] = await Promise.all([jk(Mk), jk(xk), jk(nk)]), pk = function(kk, ek, ik, rk) {
+        const Pk = .6 * ik,
+          mk = Pk * fk,
+          Mk = Pk * fk * bk,
+          xk = Pk * Sk,
+          nk = Math.max(...ek.boxes.map((kk => kk[4]))),
+          Uk = mk / 2 + (ik - mk) / 2,
+          Hk = Mk + (ik - Mk - Mk - nk * xk) / 2,
+          wk = (kk, ek, ik) => ({
+            x: Uk + (kk - ik) * mk,
+            y: Hk - Mk + (kk + ik) * Mk + (nk - ek) * xk
           }),
-          eQ = (QQ, wQ, LQ, qQ, oQ, DQ) => ({
-            origin: QQ,
+          lk = (kk, ik, Dk, fk, Sk, bk) => ({
+            origin: kk,
             across: {
-              x: wQ.x - QQ.x,
-              y: wQ.y - QQ.y
+              x: ik.x - kk.x,
+              y: ik.y - kk.y
             },
             down: {
-              x: LQ.x - QQ.x,
-              y: LQ.y - QQ.y
+              x: Dk.x - kk.x,
+              y: Dk.y - kk.y
             },
-            texture: qQ,
-            rect: FQ.cropFaces ? oQ : [0, 0, 1, 1],
-            shade: DQ
+            texture: fk,
+            rect: ek.cropFaces ? Sk : [0, 0, 1, 1],
+            shade: bk
           }),
-          MQ = new Uint8ClampedArray(wQ * wQ * 4),
-          GQ = new Uint8Array(wQ * wQ),
-          pQ = LQ.e;
-        for (const [LQ, qQ, oQ, DQ, cQ, CQ] of FQ.boxes) {
-          const FQ = eQ(tQ(DQ, cQ, CQ), tQ(DQ, cQ, oQ), tQ(DQ, qQ, CQ), QQ.right, [1 - CQ, 1 - cQ, 1 - oQ, 1 - qQ], pQ.right),
-            kQ = eQ(tQ(LQ, cQ, CQ), tQ(DQ, cQ, CQ), tQ(LQ, qQ, CQ), QQ.left, [LQ, 1 - cQ, DQ, 1 - qQ], pQ.left),
-            vQ = eQ(tQ(LQ, cQ, oQ), tQ(DQ, cQ, oQ), tQ(LQ, cQ, CQ), QQ.top, [LQ, oQ, DQ, CQ], pQ.top);
-          for (const QQ of [FQ, kQ, vQ]) HQ(MQ, GQ, wQ, QQ)
+          pk = new Uint8ClampedArray(ik * ik * 4),
+          yk = new Uint8Array(ik * ik),
+          Yk = Dk.c;
+        for (const [Dk, fk, Sk, bk, Lk, Ck] of ek.boxes) {
+          const ek = lk(wk(bk, Lk, Ck), wk(bk, Lk, Sk), wk(bk, fk, Ck), kk.right, [1 - Ck, 1 - Lk, 1 - Sk, 1 - fk], Yk.right),
+            rk = lk(wk(Dk, Lk, Ck), wk(bk, Lk, Ck), wk(Dk, fk, Ck), kk.left, [Dk, 1 - Lk, bk, 1 - fk], Yk.left),
+            Pk = lk(wk(Dk, Lk, Sk), wk(bk, Lk, Sk), wk(Dk, Lk, Ck), kk.top, [Dk, Sk, bk, Ck], Yk.top);
+          for (const kk of [ek, rk, Pk]) Kk(pk, yk, ik, kk)
         }
-        return (0, LQ.g)(MQ, wQ, kQ, (QQ => 1 === GQ[QQ])), MQ
+        return (0, Dk.f)(pk, ik, rk, (kk => 1 === yk[kk])), pk
       }({
-        top: AQ,
-        left: tQ,
-        right: eQ
-      }, function(QQ) {
-        return "SlabBlock" === QQ ? vQ : "StairsBlock" === QQ ? mQ : kQ
-      }(xQ), FQ, wQ), GQ = document.createElement("canvas");
-      GQ.width = FQ, GQ.height = FQ;
-      const pQ = GQ.getContext("2d");
-      if (!pQ) throw new Error("Failed to get 2D context");
-      return pQ.putImageData(new ImageData(MQ, FQ, FQ), 0, 0), GQ
+        top: Hk,
+        left: wk,
+        right: lk
+      }, function(kk) {
+        return "SlabBlock" === kk ? Pk : "StairsBlock" === kk ? mk : rk
+      }(Uk), ek, ik), yk = document.createElement("canvas");
+      yk.width = ek, yk.height = ek;
+      const Yk = yk.getContext("2d");
+      if (!Yk) throw new Error("Failed to get 2D context");
+      return Yk.putImageData(new ImageData(pk, ek, ek), 0, 0), yk
     }
 
-    function iQ(QQ) {
-      return MQ(tQ, QQ, (async () => {
-        const FQ = await (0, bQ.h)(QQ),
-          wQ = document.createElement("canvas");
-        wQ.width = FQ.width, wQ.height = FQ.height;
-        const LQ = wQ.getContext("2d");
-        if (!LQ) throw new Error("Failed to get 2D context");
-        return LQ.drawImage(FQ, 0, 0), {
-          width: FQ.width,
-          height: FQ.height,
-          pixels: LQ.getImageData(0, 0, FQ.width, FQ.height).data
+    function jk(kk) {
+      return pk(wk, kk, (async () => {
+        const ek = await (0, xk.j)(kk),
+          ik = document.createElement("canvas");
+        ik.width = ek.width, ik.height = ek.height;
+        const Dk = ik.getContext("2d");
+        if (!Dk) throw new Error("Failed to get 2D context");
+        return Dk.drawImage(ek, 0, 0), {
+          width: ek.width,
+          height: ek.height,
+          pixels: Dk.getImageData(0, 0, ek.width, ek.height).data
         }
       }))
     }
   },
-  36047: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => RQ,
-      f: () => OQ,
-      h: () => GQ
+  35933: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => dk,
+      i: () => Vk,
+      j: () => yk
     });
-    var LQ = wQ(291),
-      qQ = wQ(96);
-    const oQ = new(wQ(36050).c)(new URL(wQ.p + wQ.u(3), wQ.b), {
+    var Dk = ik(284),
+      fk = ik(99);
+    const Sk = new(ik(35939).d)(new URL(ik.p + ik.u(3), ik.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var DQ = wQ(1772),
-      kQ = wQ(3080);
-    const vQ = 1e4,
-      mQ = 3e4;
-    let uQ = null,
-      HQ = null,
-      bQ = null,
-      YQ = !1,
-      xQ = 0;
-    const AQ = new Map;
-    let tQ = null;
-    const eQ = new Map,
-      MQ = new Map;
+    var bk = ik(1756),
+      rk = ik(2098);
+    const Pk = 1e4,
+      mk = 3e4;
+    let Mk = null,
+      Kk = null,
+      xk = null,
+      nk = !1,
+      Uk = 0;
+    const Hk = new Map;
+    let wk = null;
+    const lk = new Map,
+      pk = new Map;
 
-    function GQ(QQ) {
-      const FQ = new Promise(((FQ, wQ) => {
-        const LQ = new Image;
-        LQ.crossOrigin = "anonymous", LQ.fetchPriority = "high", LQ.onload = () => {
-          FQ(LQ)
-        }, LQ.onerror = () => {
-          wQ(new Error(`A block icon's texture did not load: ${QQ.slice(0,100)}`))
-        }, LQ.src = QQ
+    function yk(kk) {
+      const ek = new Promise(((ek, ik) => {
+        const Dk = new Image;
+        Dk.crossOrigin = "anonymous", Dk.fetchPriority = "high", Dk.onload = () => {
+          ek(Dk)
+        }, Dk.onerror = () => {
+          ik(new Error(`A block icon's texture did not load: ${kk.slice(0,100)}`))
+        }, Dk.src = kk
       }));
-      return (0, kQ.f)(FQ)
+      return (0, rk.c)(ek)
     }
 
-    function pQ(QQ) {
-      var FQ, wQ;
-      YQ || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${QQ}`), YQ = !0, null === (FQ = uQ) || void 0 === FQ || FQ.terminate(), uQ = null, HQ = null, eQ.clear(), MQ.clear();
-      for (const LQ of AQ.values()) LQ(null);
-      AQ.clear(), null === (wQ = tQ) || void 0 === wQ || wQ()
+    function Yk(kk) {
+      var ek, ik;
+      nk || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${kk}`), nk = !0, null === (ek = Mk) || void 0 === ek || ek.terminate(), Mk = null, Kk = null, lk.clear(), pk.clear();
+      for (const Dk of Hk.values()) Dk(null);
+      Hk.clear(), null === (ik = wk) || void 0 === ik || ik()
     }
 
-    function cQ() {
-      return bQ ??= async function() {
+    function Lk() {
+      return xk ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === LQ.e.ios_icon_worker_v1 && (0, qQ.isWebKit)()) return;
+        if ("page" === Dk.e.ios_icon_worker_v1 && (0, fk.isWebKit)()) return;
         try {
-          uQ = await async function() {
-            return await oQ.ready(), oQ.start()
+          Mk = await async function() {
+            return await Sk.ready(), Sk.start()
           }()
-        } catch (kQ) {
-          return void pQ(`did not start (${String(kQ)})`)
+        } catch (rk) {
+          return void Yk(`did not start (${String(rk)})`)
         }
-        let QQ = () => {};
-        const FQ = new Promise((FQ => {
-          QQ = FQ
+        let kk = () => {};
+        const ek = new Promise((ek => {
+          kk = ek
         }));
-        uQ.onmessage = FQ => {
+        Mk.onmessage = ek => {
           let {
-            data: wQ
-          } = FQ;
-          if ("started" === wQ.type) HQ = uQ, QQ();
-          else if ("failed" === wQ.type) pQ(`failed a draw (${wQ.message})`);
+            data: ik
+          } = ek;
+          if ("started" === ik.type) Kk = Mk, kk();
+          else if ("failed" === ik.type) Yk(`failed a draw (${ik.message})`);
           else {
-            var LQ, qQ;
-            null === (LQ = AQ.get(wQ.id)) || void 0 === LQ || LQ(wQ.url), AQ.delete(wQ.id), null === (qQ = tQ) || void 0 === qQ || qQ()
+            var Dk, fk;
+            null === (Dk = Hk.get(ik.id)) || void 0 === Dk || Dk(ik.url), Hk.delete(ik.id), null === (fk = wk) || void 0 === fk || fk()
           }
-        }, uQ.onerror = FQ => {
-          FQ.preventDefault(), pQ(`stopped (${FQ.message||"its script did not load or run"})`), QQ()
+        }, Mk.onerror = ek => {
+          ek.preventDefault(), Yk(`stopped (${ek.message||"its script did not load or run"})`), kk()
         };
-        const wQ = `did not start in ${mQ/1e3} s`;
-        await (0, DQ.l)(FQ, mQ, wQ).catch((() => {
-          pQ(wQ)
+        const ik = `did not start in ${mk/1e3} s`;
+        await (0, bk.l)(ek, mk, ik).catch((() => {
+          Yk(ik)
         }))
-      }(), bQ
+      }(), xk
     }
 
-    function CQ() {
-      if (null !== tQ || 0 === AQ.size) return;
-      const QQ = new Promise((QQ => {
-          tQ = QQ
+    function Ck() {
+      if (null !== wk || 0 === Hk.size) return;
+      const kk = new Promise((kk => {
+          wk = kk
         })),
-        FQ = `did not answer in ${vQ/1e3} s`;
-      (0, DQ.l)(QQ, vQ, FQ).then((() => {
-        tQ = null, CQ()
+        ek = `did not answer in ${Pk/1e3} s`;
+      (0, bk.l)(kk, Pk, ek).then((() => {
+        wk = null, Ck()
       }), (() => {
-        tQ = null, pQ(FQ)
+        wk = null, Yk(ek)
       }))
     }
 
-    function SQ(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      QQ.postMessage(FQ, wQ)
+    function Ak(kk, ek) {
+      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      kk.postMessage(ek, ik)
     }
 
-    function iQ(QQ, FQ, wQ, LQ) {
-      let qQ = FQ.get(wQ);
-      return void 0 === qQ && (qQ = LQ().then((async FQ => {
+    function jk(kk, ek, ik, Dk) {
+      let fk = ek.get(ik);
+      return void 0 === fk && (fk = Dk().then((async ek => {
         let {
-          image: wQ,
-          request: LQ
-        } = FQ;
+          image: ik,
+          request: Dk
+        } = ek;
         try {
-          const FQ = await createImageBitmap(wQ);
-          SQ(QQ, LQ(FQ), [FQ])
-        } catch (qQ) {
-          pQ(`could not take an image (${String(qQ)})`)
+          const ek = await createImageBitmap(ik);
+          Ak(kk, Dk(ek), [ek])
+        } catch (fk) {
+          Yk(`could not take an image (${String(fk)})`)
         }
-      })), qQ.catch((() => {
-        FQ.get(wQ) === qQ && FQ.delete(wQ)
-      })), FQ.set(wQ, qQ)), qQ
+      })), fk.catch((() => {
+        ek.get(ik) === fk && ek.delete(ik)
+      })), ek.set(ik, fk)), fk
     }
-    async function WQ(QQ, FQ) {
-      cQ();
-      const wQ = HQ;
-      if (null === wQ) return null;
-      if (await QQ(wQ), HQ !== wQ) return null;
-      const LQ = ++xQ;
-      return new Promise((QQ => {
-        AQ.set(LQ, QQ), SQ(wQ, FQ(LQ)), CQ()
+    async function sk(kk, ek) {
+      Lk();
+      const ik = Kk;
+      if (null === ik) return null;
+      if (await kk(ik), Kk !== ik) return null;
+      const Dk = ++Uk;
+      return new Promise((kk => {
+        Hk.set(Dk, kk), Ak(ik, ek(Dk)), Ck()
       }))
     }
 
-    function RQ(QQ, FQ, wQ) {
-      return WQ((FQ => Promise.all([QQ.top, QQ.left, QQ.right].map((QQ => function(QQ, FQ) {
-        return iQ(QQ, eQ, FQ, (async () => ({
-          image: await GQ(FQ),
-          request: QQ => ({
+    function dk(kk, ek, ik) {
+      return sk((ek => Promise.all([kk.top, kk.left, kk.right].map((kk => function(kk, ek) {
+        return jk(kk, lk, ek, (async () => ({
+          image: await yk(ek),
+          request: kk => ({
             type: "texture",
-            url: FQ,
-            bitmap: QQ
+            url: ek,
+            bitmap: kk
           })
         })))
-      }(FQ, QQ))))), (LQ => ({
+      }(ek, kk))))), (Dk => ({
         type: "draw",
-        id: LQ,
-        ...QQ,
-        size: FQ,
-        outlineWidth: wQ
+        id: Dk,
+        ...kk,
+        size: ek,
+        outlineWidth: ik
       })))
     }
 
-    function OQ(QQ, FQ, wQ, LQ) {
-      return WQ((wQ => function(QQ, FQ, wQ) {
-        return iQ(QQ, MQ, FQ, (async () => {
+    function Vk(kk, ek, ik, Dk) {
+      return sk((ik => function(kk, ek, ik) {
+        return jk(kk, pk, ek, (async () => {
           const {
-            texture: QQ,
-            ...LQ
-          } = await wQ();
+            texture: kk,
+            ...Dk
+          } = await ik();
           return {
-            image: await GQ(QQ),
-            request: QQ => ({
+            image: await yk(kk),
+            request: kk => ({
               type: "model",
-              name: FQ,
-              bitmap: QQ,
-              geometry: LQ
+              name: ek,
+              bitmap: kk,
+              geometry: Dk
             })
           }
         }))
-      }(wQ, QQ, FQ)), (FQ => ({
+      }(ik, kk, ek)), (ek => ({
         type: "drawModel",
-        id: FQ,
-        name: QQ,
-        size: wQ,
-        outlineWidth: LQ
+        id: ek,
+        name: kk,
+        size: ik,
+        outlineWidth: Dk
       })))
     }
   },
-  36040: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => oQ,
-      g: () => kQ,
-      h: () => DQ
+  35931: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk,
+      f: () => rk,
+      j: () => bk
     });
-    const LQ = 1 / 32,
-      qQ = [15, 15, 15],
-      oQ = {
+    const Dk = 1 / 32,
+      fk = [15, 15, 15],
+      Sk = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function DQ(QQ, FQ, wQ, qQ) {
+    function bk(kk, ek, ik, fk) {
       const {
-        vertices: oQ,
-        uvs: DQ,
-        indices: vQ,
-        shades: mQ
-      } = QQ, uQ = wQ * LQ, HQ = wQ - 2 * uQ, bQ = new Float32Array(oQ.length);
-      for (let LQ = 0; LQ < oQ.length; LQ += 3) bQ[LQ] = uQ + oQ[LQ] * HQ, bQ[LQ + 1] = uQ + oQ[LQ + 1] * HQ, bQ[LQ + 2] = oQ[LQ + 2];
-      const YQ = new Float32Array(wQ * wQ).fill(-1 / 0),
-        xQ = new Uint8ClampedArray(wQ * wQ * 4),
-        AQ = 255 * QQ.alphaCutoff;
-      for (let LQ = 0; LQ < vQ.length; LQ += 3) {
-        const [QQ, qQ, oQ] = [vQ[LQ], vQ[LQ + 1], vQ[LQ + 2]], [kQ, uQ, HQ] = [3 * QQ, 3 * qQ, 3 * oQ], [tQ, eQ, MQ, GQ, pQ, cQ] = [bQ[kQ], bQ[kQ + 1], bQ[uQ], bQ[uQ + 1], bQ[HQ], bQ[HQ + 1]], CQ = (MQ - tQ) * (cQ - eQ) - (pQ - tQ) * (GQ - eQ);
-        if (Math.abs(CQ) < 1e-9) continue;
-        const SQ = mQ[LQ / 3],
-          [iQ, WQ, RQ, OQ, sQ, rQ] = [DQ[2 * QQ], DQ[2 * QQ + 1], DQ[2 * qQ], DQ[2 * qQ + 1], DQ[2 * oQ], DQ[2 * oQ + 1]],
-          IQ = Math.max(0, Math.floor(Math.min(tQ, MQ, pQ))),
-          UQ = Math.min(wQ - 1, Math.ceil(Math.max(tQ, MQ, pQ))),
-          NQ = Math.max(0, Math.floor(Math.min(eQ, GQ, cQ))),
-          TQ = Math.min(wQ - 1, Math.ceil(Math.max(eQ, GQ, cQ)));
-        for (let LQ = NQ; LQ <= TQ; LQ++)
-          for (let QQ = IQ; QQ <= UQ; QQ++) {
-            const [qQ, oQ] = [QQ + .5, LQ + .5], DQ = ((qQ - tQ) * (cQ - eQ) - (pQ - tQ) * (oQ - eQ)) / CQ, vQ = ((MQ - tQ) * (oQ - eQ) - (qQ - tQ) * (GQ - eQ)) / CQ, mQ = 1 - DQ - vQ;
-            if (mQ < 0 || DQ < 0 || vQ < 0) continue;
-            const IQ = mQ * bQ[kQ + 2] + DQ * bQ[uQ + 2] + vQ * bQ[HQ + 2],
-              UQ = LQ * wQ + QQ;
-            if (IQ <= YQ[UQ]) continue;
-            const NQ = Math.max(0, Math.min(FQ.width - 1, Math.floor((mQ * iQ + DQ * RQ + vQ * sQ) * FQ.width))),
-              TQ = 4 * (Math.max(0, Math.min(FQ.height - 1, Math.floor((mQ * WQ + DQ * OQ + vQ * rQ) * FQ.height))) * FQ.width + NQ);
-            FQ.pixels[TQ + 3] < AQ || (YQ[UQ] = IQ, xQ[4 * UQ] = FQ.pixels[TQ] * SQ, xQ[4 * UQ + 1] = FQ.pixels[TQ + 1] * SQ, xQ[4 * UQ + 2] = FQ.pixels[TQ + 2] * SQ, xQ[4 * UQ + 3] = 255)
+        vertices: Sk,
+        uvs: bk,
+        indices: Pk,
+        shades: mk
+      } = kk, Mk = ik * Dk, Kk = ik - 2 * Mk, xk = new Float32Array(Sk.length);
+      for (let Dk = 0; Dk < Sk.length; Dk += 3) xk[Dk] = Mk + Sk[Dk] * Kk, xk[Dk + 1] = Mk + Sk[Dk + 1] * Kk, xk[Dk + 2] = Sk[Dk + 2];
+      const nk = new Float32Array(ik * ik).fill(-1 / 0),
+        Uk = new Uint8ClampedArray(ik * ik * 4),
+        Hk = 255 * kk.alphaCutoff;
+      for (let Dk = 0; Dk < Pk.length; Dk += 3) {
+        const [kk, fk, Sk] = [Pk[Dk], Pk[Dk + 1], Pk[Dk + 2]], [rk, Mk, Kk] = [3 * kk, 3 * fk, 3 * Sk], [wk, lk, pk, yk, Yk, Lk] = [xk[rk], xk[rk + 1], xk[Mk], xk[Mk + 1], xk[Kk], xk[Kk + 1]], Ck = (pk - wk) * (Lk - lk) - (Yk - wk) * (yk - lk);
+        if (Math.abs(Ck) < 1e-9) continue;
+        const Ak = mk[Dk / 3],
+          [jk, sk, dk, Vk, Fk, uk] = [bk[2 * kk], bk[2 * kk + 1], bk[2 * fk], bk[2 * fk + 1], bk[2 * Sk], bk[2 * Sk + 1]],
+          qk = Math.max(0, Math.floor(Math.min(wk, pk, Yk))),
+          Ik = Math.min(ik - 1, Math.ceil(Math.max(wk, pk, Yk))),
+          zk = Math.max(0, Math.floor(Math.min(lk, yk, Lk))),
+          Qk = Math.min(ik - 1, Math.ceil(Math.max(lk, yk, Lk)));
+        for (let Dk = zk; Dk <= Qk; Dk++)
+          for (let kk = qk; kk <= Ik; kk++) {
+            const [fk, Sk] = [kk + .5, Dk + .5], bk = ((fk - wk) * (Lk - lk) - (Yk - wk) * (Sk - lk)) / Ck, Pk = ((pk - wk) * (Sk - lk) - (fk - wk) * (yk - lk)) / Ck, mk = 1 - bk - Pk;
+            if (mk < 0 || bk < 0 || Pk < 0) continue;
+            const qk = mk * xk[rk + 2] + bk * xk[Mk + 2] + Pk * xk[Kk + 2],
+              Ik = Dk * ik + kk;
+            if (qk <= nk[Ik]) continue;
+            const zk = Math.max(0, Math.min(ek.width - 1, Math.floor((mk * jk + bk * dk + Pk * Fk) * ek.width))),
+              Qk = 4 * (Math.max(0, Math.min(ek.height - 1, Math.floor((mk * sk + bk * Vk + Pk * uk) * ek.height))) * ek.width + zk);
+            ek.pixels[Qk + 3] < Hk || (nk[Ik] = qk, Uk[4 * Ik] = ek.pixels[Qk] * Ak, Uk[4 * Ik + 1] = ek.pixels[Qk + 1] * Ak, Uk[4 * Ik + 2] = ek.pixels[Qk + 2] * Ak, Uk[4 * Ik + 3] = 255)
           }
       }
-      return kQ(xQ, wQ, qQ), xQ
+      return rk(Uk, ik, fk), Uk
     }
 
-    function kQ(QQ, FQ, wQ) {
-      let LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : FQ => 0 !== QQ[4 * FQ + 3];
-      const oQ = (QQ, wQ) => QQ < 0 || wQ < 0 || QQ >= FQ || wQ >= FQ || !LQ(wQ * FQ + QQ),
-        DQ = [];
-      for (let qQ = 0; qQ < FQ; qQ++)
-        for (let QQ = 0; QQ < FQ; QQ++)
-          if (!oQ(QQ, qQ)) QQ: for (let LQ = -wQ; LQ <= wQ; LQ++) {
-            const kQ = wQ - Math.abs(LQ);
-            for (let wQ = -kQ; wQ <= kQ; wQ++)
-              if (oQ(QQ + wQ, qQ + LQ)) {
-                DQ.push(qQ * FQ + QQ);
-                break QQ
+    function rk(kk, ek, ik) {
+      let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ek => 0 !== kk[4 * ek + 3];
+      const Sk = (kk, ik) => kk < 0 || ik < 0 || kk >= ek || ik >= ek || !Dk(ik * ek + kk),
+        bk = [];
+      for (let fk = 0; fk < ek; fk++)
+        for (let kk = 0; kk < ek; kk++)
+          if (!Sk(kk, fk)) kk: for (let Dk = -ik; Dk <= ik; Dk++) {
+            const rk = ik - Math.abs(Dk);
+            for (let ik = -rk; ik <= rk; ik++)
+              if (Sk(kk + ik, fk + Dk)) {
+                bk.push(fk * ek + kk);
+                break kk
               }
           }
-      for (const kQ of DQ) QQ.set(qQ, 4 * kQ), QQ[4 * kQ + 3] = 255
+      for (const rk of bk) kk.set(fk, 4 * rk), kk[4 * rk + 3] = 255
     }
   },
-  36050: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => qQ
+  35939: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => fk
     });
-    const LQ = {
-      wait: function(QQ) {
-        return new Promise((FQ => {
-          setTimeout(FQ, QQ)
+    const Dk = {
+      wait: function(kk) {
+        return new Promise((ek => {
+          setTimeout(ek, kk)
         }))
       },
       stallMs: 2e4
     };
-    class qQ {
-      constructor(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : LQ;
-        this.url = QQ, this.options = FQ, this.timing = wQ, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = QQ
+    class fk {
+      constructor(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Dk;
+        this.url = kk, this.options = ek, this.timing = ik, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = kk
       }
       ready() {
         if (null === this.fetched) {
-          const QQ = new AbortController;
-          this.fetchAbort = QQ, this.fetched = this.fetchWithRetries(QQ.signal).finally((() => {
-            this.fetchAbort === QQ && (this.fetchAbort = null)
-          }))
+          const kk = new AbortController;
+          this.fetchAbort = kk, this.fetched = this.fetchWithRetries(kk.signal).then((ek => (this.fetchAbort === kk && (this.fetchAbort = null), ek)))
         }
         return this.fetched
       }
       cancel() {
         null !== this.fetchAbort && (this.fetchAbort.abort(), this.fetchAbort = null, this.fetched = null)
       }
+      forgetFailedFetch() {
+        this.fetched = null
+      }
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(QQ) {
-        for (let FQ = 0;; FQ++) {
-          const wQ = new URL(this.url);
-          if (FQ > 0 && wQ.searchParams.set("cache-bust", `${Date.now()}-${FQ}`), await this.fetchWhole(wQ, QQ)) return void(this.scriptUrl = wQ);
-          if (FQ >= 3 || QQ.aborted) return;
-          if (await this.timing.wait(500 * 2 ** FQ), QQ.aborted) return
+      async fetchWithRetries(kk) {
+        for (let ek = 0;; ek++) {
+          const ik = new URL(this.url);
+          if (ek > 0 && ik.searchParams.set("cache-bust", `${Date.now()}-${ek}`), await this.fetchWhole(ik, kk)) return this.scriptUrl = ik, !0;
+          if (ek >= 3 || kk.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** ek), kk.aborted) return !1
         }
       }
-      async fetchWhole(QQ, FQ) {
-        const wQ = new AbortController;
-        let LQ;
-        const qQ = () => {
-            clearTimeout(LQ), LQ = setTimeout((() => {
-              wQ.abort()
+      async fetchWhole(kk, ek) {
+        const ik = new AbortController;
+        let Dk;
+        const fk = () => {
+            clearTimeout(Dk), Dk = setTimeout((() => {
+              ik.abort()
             }), this.timing.stallMs)
           },
-          oQ = () => {
-            wQ.abort()
+          Sk = () => {
+            ik.abort()
           };
-        FQ.addEventListener("abort", oQ, {
+        ek.addEventListener("abort", Sk, {
           once: !0
-        }), qQ();
+        }), fk();
         try {
-          var DQ;
-          const FQ = await fetch(QQ, {
-            signal: wQ.signal
+          var bk;
+          const ek = await fetch(kk, {
+            signal: ik.signal
           });
-          if (!FQ.ok) return !1;
-          const LQ = null === (DQ = FQ.body) || void 0 === DQ ? void 0 : DQ.getReader();
-          if (!LQ) return !1;
+          if (!ek.ok) return !1;
+          const Dk = null === (bk = ek.body) || void 0 === bk ? void 0 : bk.getReader();
+          if (!Dk) return !1;
           for (;;) {
             const {
-              done: QQ
-            } = await LQ.read();
-            if (QQ) return !0;
-            qQ()
+              done: kk
+            } = await Dk.read();
+            if (kk) return !0;
+            fk()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(LQ), FQ.removeEventListener("abort", oQ)
+          clearTimeout(Dk), ek.removeEventListener("abort", Sk)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

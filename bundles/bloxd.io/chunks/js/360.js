@@ -1,19 +1,29 @@
 export const id = 360;
 export const ids = [360];
 export const modules = {
-  60928: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      lodPixelShader: () => DQ
-    });
-    var LQ = wQ(39251);
-    const qQ = "lodPixelShader",
-      oQ = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler2D textureSampler;uniform float lod;uniform vec2 texSize;uniform int gamma;void main(void)\n{ivec2 textureDimensions=textureSize(textureSampler,0);gl_FragColor=texelFetch(textureSampler,ivec2(vUV*vec2(textureDimensions)),int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    LQ.c.ShadersStore[qQ] || (LQ.c.ShadersStore[qQ] = oQ);
-    const DQ = {
-      name: qQ,
-      shader: oQ
+  60772: (kk, ek, ik) => {
+    function Dk(kk, ek) {
+      for (const ik of kk._frameGraph._tasks)
+        if (ik?._config && ik._colorAttachment && (ik._config.rt === ek.scRT || ik._config.rst === ek.scRT)) return ik
     }
+
+    function fk(kk, ek) {
+      const ik = kk._renderingContexts[kk._renderingContexts.length - 1];
+      if (!ik?._frameGraph) return;
+      const fk = Dk(ek, kk);
+      if (!fk) return;
+      if (1 === kk.msaaSamples) return void(fk._config.clr = !1);
+      const Sk = fk.enabled;
+      fk._config.clr = !0, fk.enabled = !1, ek._beforeRender.unshift((() => {
+        const ek = Dk(ik, kk),
+          bk = ek?._config.rst === kk.scRT && ek._config.rt._colorView;
+        fk.enabled = !!bk && Sk, fk._config.clr = !bk, bk && (fk._colorAttachment.view = bk)
+      }))
+    }
+    ik.r(ek), ik.d(ek, {
+      configureSwapchainOverlayScene: () => fk
+    })
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

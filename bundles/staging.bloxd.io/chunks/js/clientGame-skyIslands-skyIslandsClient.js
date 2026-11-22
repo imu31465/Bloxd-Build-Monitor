@@ -1,24 +1,24 @@
 export const id = 24;
 export const ids = [24];
 export const modules = {
-  39065: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      default: () => LQ
+  39105: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      default: () => Dk
     });
-    const LQ = function() {
-      let QQ;
+    const Dk = function() {
+      let kk;
       return {
-        onCreate: FQ => {
-          QQ = FQ
+        onCreate: ek => {
+          kk = ek
         },
-        onPlayerAltAction: (FQ, wQ, LQ, qQ, oQ, DQ) => {
-          if (!DQ || "Mesh" !== QQ.getEntityType(DQ)) return;
-          const kQ = QQ.getEntityName(DQ);
-          "Perks" === kQ ? QQ.openShop(FQ, !1, "Perks") : "Returning Bonus" === kQ && QQ.openShop(FQ, !1, "Returning Player Bonus")
+        onPlayerAltAction: (ek, ik, Dk, fk, Sk, bk) => {
+          if (!bk || "Mesh" !== kk.getEntityType(bk)) return;
+          const rk = kk.getEntityName(bk);
+          "Perks" === rk ? kk.openShop(ek, !1, "Perks") : "Returning Bonus" === rk && kk.openShop(ek, !1, "Returning Player Bonus")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

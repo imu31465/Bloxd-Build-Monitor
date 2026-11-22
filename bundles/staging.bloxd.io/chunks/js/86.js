@@ -1,417 +1,556 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  40145: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      C: () => zQ,
-      E: () => rQ,
-      F: () => KQ,
-      J: () => sQ,
-      K: () => JQ,
-      N: () => hQ,
-      Q: () => UQ,
-      d: () => EQ,
-      e: () => jQ,
-      f: () => RQ,
-      i: () => nQ,
-      k: () => OQ,
-      o: () => WQ,
-      r: () => lQ,
-      v: () => IQ,
-      x: () => TQ,
-      y: () => NQ,
-      z: () => ZQ
+  4716: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Yk,
+      e: () => lk
     });
-    var LQ = wQ(1395),
-      qQ = wQ(22),
-      oQ = wQ(1302),
-      DQ = wQ(2313),
-      kQ = wQ(4657),
-      vQ = wQ(4621);
-    let mQ, uQ = !1,
-      HQ = !1,
-      bQ = !1,
-      YQ = !1;
-    const xQ = 1300,
-      AQ = 3e3;
-    let tQ = 0,
-      eQ = !1,
-      MQ = !1,
-      GQ = 0;
-    const pQ = 2;
-    let cQ = !1,
-      CQ = !1;
-    const SQ = new Set,
-      iQ = new Set;
-
-    function WQ() {
-      return uQ
-    }
-
-    function RQ() {
-      return MQ
-    }
-
-    function OQ() {
-      return CQ
-    }
-
-    function sQ() {
-      return (0, oQ.p)() && !CQ
-    }
-
-    function rQ(QQ) {
-      let FQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (QQ !== CQ) {
-        CQ = QQ;
-        for (const QQ of [...iQ]) QQ(CQ);
-        FQ && hQ()
+    var Dk = ik(1288),
+      fk = ik(26);
+    var Sk = ik(314);
+    var bk = ik(594);
+    var rk = ik(2388),
+      Pk = ik(4721),
+      mk = ik(4745),
+      Mk = ik(4752);
+    class Kk {
+      constructor(kk, ek, ik, Dk, fk, Sk) {
+        this.id = kk, this.type = ek, this.parameters = ik, this.tearDownNotification = Dk, this.onDonePromise = fk, this.resolveRequest = Sk
       }
     }
-
-    function IQ(QQ) {
-      return iQ.add(QQ), () => {
-        iQ.delete(QQ)
+    const xk = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class nk {
+      constructor(kk, ek, ik, Dk, fk, Sk) {
+        this.id = kk, this.type = ek, this.parameters = ik, this.resolveRequest = Dk, this.onDonePromise = fk, this.tearDownNotification = Sk, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const bk = lk[ek];
+        if (!bk) throw console.error(`No QTE implementation registered for type: ${ek}`), new Error(`No QTE implementation registered for type: ${ek}`);
+        this.implementation = new bk(ik, (kk => {
+          this.isCompleted = !0, this.resolveRequest(kk)
+        }), this.tearDownNotification), this.setupInputHandlers()
+      }
+      setupInputHandlers() {
+        this.mouseSub = fk.j.subscribe("QTEMouseState", (kk => {
+          let {
+            isDown: ek
+          } = kk;
+          this.isCompleted || this.implementation.handleMouseInput(ek)
+        })), this.stopInputActions = (0, mk.j)((kk => {
+          this.isCompleted || !xk.has(kk.action) && !(0, mk.f)(kk) || this.implementation.handleMouseInput(kk.down)
+        })), this.tickSub = fk.j.subscribe("noaTick", (kk => {
+          if (this.isCompleted) return;
+          const ek = kk / 1e3;
+          this.implementation.handleTick(ek)
+        })), this.stopShellTicks = (0, Pk.x)((() => {
+          this.isCompleted || this.implementation.handleTick(rk.r / 1e3)
+        }))
+      }
+      cleanup() {
+        var kk, ek;
+        this.mouseSub && (fk.j.unsubscribe(this.mouseSub), this.mouseSub = null), null === (kk = this.stopInputActions) || void 0 === kk || kk.call(this), this.stopInputActions = null, null === (ek = this.stopShellTicks) || void 0 === ek || ek.call(this), this.stopShellTicks = null, this.tickSub && (fk.j.unsubscribe(this.tickSub), this.tickSub = null)
+      }
+      async waitUntilDone() {
+        await this.onDonePromise
+      }
+      getState() {
+        return this.implementation.getState()
+      }
+      tearDown() {
+        this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
+    const Uk = new Dk.e,
+      Hk = new Map;
+    let wk = null;
+    const lk = {
+      progressBar: class {
+        constructor(kk, ek, ik) {
+          var Dk, fk, Sk, bk;
+          this.resolveRequest = ek, this.tearDownNotification = ik, this.progress = 0, this.bk = void 0, this.rk = void 0, this.Pk = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const rk = kk;
+          this.bk = null !== (Dk = rk.bk) && void 0 !== Dk ? Dk : .075, this.rk = null !== (fk = rk.rk) && void 0 !== fk ? fk : 1, this.progress = null !== (Sk = rk.Sk) && void 0 !== Sk ? Sk : 30, this.Pk = null !== (bk = rk.Pk) && void 0 !== bk && bk, this.parameters = rk
+        }
+        handleMouseInput(kk) {
+          kk && !this.isCompleted && (this.clickCount++, this.progress += this.rk, this.progress >= 100 && this.complete(!0))
+        }
+        handleTick() {
+          if (!this.isCompleted)
+            if (this.progress -= this.bk, this.Pk && this.progress <= 0) this.complete(!1);
+            else if (this.progress <= 0) this.progress = 0;
+          else if (this.progress >= 100) return void this.complete(!0)
+        }
+        complete(kk) {
+          this.isCompleted = !0, this.resolveRequest(kk)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              progress: this.progress,
+              clickCount: this.clickCount
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      timedClick: class {
+        constructor(kk, ek, ik) {
+          var Dk;
+          this.resolveRequest = ek, this.tearDownNotification = ik, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = kk, this.timeWindowMs = null !== (Dk = this.parameters.nk) && void 0 !== Dk ? Dk : 3e3, this.startTime = Date.now()
+        }
+        handleMouseInput(kk) {
+          if (!kk || this.isCompleted) return;
+          Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
+        }
+        handleTick() {
+          if (this.isCompleted) return;
+          Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
+        }
+        complete(kk) {
+          this.isCompleted = !0, this.resolveRequest(kk)
+        }
+        getState() {
+          const kk = Date.now() - this.startTime,
+            ek = Math.max(0, this.timeWindowMs - kk);
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              timeRemaining: ek,
+              nk: this.timeWindowMs
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      gravityBar: class {
+        constructor(kk, ek, ik) {
+          var Dk;
+          this.resolveRequest = ek, this.tearDownNotification = ik, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const fk = kk;
+          this.parameters = {
+            ...fk,
+            lk: Sk.c.clamp(fk.lk, .05, 1)
+          }, this.progress = null !== (Dk = fk.Sk) && void 0 !== Dk ? Dk : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+        }
+        handleMouseInput(kk) {
+          this.isMouseDown = kk
+        }
+        handleTick(kk) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(kk))
+        }
+        updateMover() {
+          this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
+          const kk = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += kk * this.parameters.yk * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+        }
+        pickNewMoverTarget() {
+          this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+        }
+        randomNumTicksUntilDirectionChange() {
+          const kk = Sk.c.clamp(1 - .7 * this.parameters.Yk, 0, 1.4);
+          return Math.floor(60 * kk + 40 * Math.random())
+        }
+        updateCatchZone() {
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.Lk : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = Sk.c.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const kk = this.parameters.lk / 2,
+            ek = kk,
+            ik = 1 - kk;
+          this.catchZonePosition <= ek ? (this.catchZonePosition = ek, this.catchZoneVelocity = 0) : this.catchZonePosition >= ik && (this.catchZonePosition = ik, this.catchZoneVelocity = 0)
+        }
+        isMoverInCatchZone() {
+          const kk = this.parameters.lk / 2;
+          return this.moverPosition >= this.catchZonePosition - kk && this.moverPosition <= this.catchZonePosition + kk
+        }
+        updateProgress(kk) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.Ck * kk : this.progress -= this.parameters.Ak * kk, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.Pk && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        }
+        complete(kk) {
+          this.isCompleted = !0, this.resolveRequest(kk)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              catchZonePosition: this.catchZonePosition,
+              lk: this.parameters.lk,
+              moverPosition: this.moverPosition,
+              progress: this.progress,
+              isCatching: this.isMoverInCatchZone()
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      precisionBar: class {
+        constructor(kk, ek, ik) {
+          var Dk, fk, bk, rk, Pk;
+          this.resolveRequest = ek, this.tearDownNotification = ik, this.startTime = void 0, this.speed = void 0, this.sk = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const mk = kk;
+          this.parameters = {
+            ...mk,
+            speed: null !== (Dk = mk.speed) && void 0 !== Dk ? Dk : .5,
+            sk: Sk.c.clamp(mk.sk, .05, 1),
+            label: null !== (fk = mk.label) && void 0 !== fk ? fk : [{
+              str: "Click when the marker is within the green zone."
+            }],
+            icon: null !== (bk = mk.icon) && void 0 !== bk ? bk : null,
+            scale: null !== (rk = mk.scale) && void 0 !== rk ? rk : 1,
+            rotation: null !== (Pk = mk.rotation) && void 0 !== Pk ? Pk : 0
+          }, this.speed = this.parameters.speed, this.sk = this.parameters.sk, this.startTime = Date.now()
+        }
+        handleMouseInput(kk) {
+          if (kk) {
+            this.updateMarkerPosition();
+            const kk = Math.abs(this.markerPosition - .5) <= this.sk / 2;
+            this.complete(kk)
+          }
+        }
+        handleTick() {
+          this.isCompleted || this.updateMarkerPosition()
+        }
+        updateMarkerPosition() {
+          const kk = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = kk <= .5 ? 2 * kk : 2 - 2 * kk
+        }
+        complete(kk) {
+          this.isCompleted = !0, this.resolveRequest(kk)
+        }
+        getState() {
+          return this.updateMarkerPosition(), {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              markerPosition: this.markerPosition
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      rhythmClick: class {
+        constructor(kk, ek, ik) {
+          this.resolveRequest = ek, this.tearDownNotification = ik, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = kk, this.shrinkStartTime = Date.now()
+        }
+        handleMouseInput(kk) {
+          if (!kk || this.isCompleted) return;
+          const ek = this.getOuterCircleProgress();
+          if (ek <= this.parameters.qk && ek >= -this.parameters.qk) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.Fk) return void this.complete(!0)
+          } else this.handleMiss();
+          this.shrinkStartTime = Date.now()
+        }
+        handleMiss() {
+          this.misses++, this.lastClickResult = !1, !(0, bk.F)(this.parameters.Ik) && this.misses > this.parameters.Ik ? this.complete(!1) : this.shrinkStartTime = Date.now()
+        }
+        handleTick() {
+          if (this.isCompleted) return;
+          this.getOuterCircleProgress() < -this.parameters.qk && this.handleMiss()
+        }
+        getOuterCircleProgress() {
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.uk
+        }
+        complete(kk) {
+          this.isCompleted = !0, this.resolveRequest(kk)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              outerCircleProgress: this.getOuterCircleProgress(),
+              successes: this.successes,
+              Fk: this.parameters.Fk,
+              misses: this.misses,
+              lastClickResult: this.lastClickResult
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      }
+    };
 
-    function UQ() {
-      (0, kQ.i)(DQ.w.Menu, (0, oQ.p)() ? 0 : DQ.w.Menu)
+    function pk() {
+      (0, Mk.j)(rk.t.Qte, wk ? rk.t.Qte : 0), wk ? fk.j.tm("qteStateUpdated", wk.getState()) : fk.j.tm("qteStateUpdated", {
+        type: null,
+        typeSpecificParameters: null,
+        isActive: !1
+      })
     }
-
-    function NQ() {
-      MQ = !1, GQ = 0, UQ(), hQ()
-    }
-
-    function TQ(QQ) {
-      return SQ.add(QQ), () => {
-        SQ.delete(QQ)
+    class yk {
+      constructor(kk, ek) {
+        this.resultPromise = kk, this.tearDownQTE = ek
+      }
+      static create(kk, ek, ik) {
+        const Dk = Promise.race([kk, ek]);
+        return new yk(Dk, ik)
+      }
+      async getResult() {
+        return await this.resultPromise
       }
     }
-
-    function KQ(QQ) {
-      HQ = !1, QQ !== uQ && (uQ = QQ, YQ = !1, clearTimeout(mQ), bQ = !uQ && cQ, uQ ? (eQ = !1, MQ = !1, GQ = 0) : sQ() && !cQ && (MQ = !0), cQ = !1, uQ && !sQ() && PQ(), yQ(), bQ && hQ())
-    }
-
-    function zQ(QQ) {
-      QQ !== eQ && (eQ = QQ, QQ || hQ())
-    }
-
-    function lQ() {
-      HQ = !1, YQ || !0 !== fQ() || (YQ = !0, clearTimeout(mQ), mQ = setTimeout(aQ, xQ))
-    }
-
-    function jQ() {
-      return (!HQ || performance.now() - tQ > AQ) && (HQ = (0, vQ.H)().lockPointer(), tQ = performance.now()), HQ
-    }
-
-    function aQ() {
-      XQ() && VQ() && jQ()
-    }
-
-    function XQ() {
-      return sQ() && !uQ && !eQ && !(0, LQ.d)()
-    }
-
-    function fQ() {
-      var QQ;
-      return "undefined" === typeof navigator || null === (QQ = navigator.userActivation) || void 0 === QQ ? void 0 : QQ.isActive
-    }
-
-    function VQ() {
-      return bQ && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== fQ()
-    }
-
-    function hQ() {
-      sQ() ? XQ() && !MQ && VQ() && jQ() : uQ && !cQ && PQ()
-    }
-
-    function JQ() {
-      MQ ? navigator.vendor.startsWith("Apple") ? gQ() : GQ = pQ : hQ()
-    }
-
-    function EQ() {
-      GQ > 0 && 0 === --GQ && gQ()
-    }
-
-    function nQ() {
-      GQ = 0
-    }
-
-    function gQ() {
-      XQ() && !0 === fQ() && jQ()
-    }
-
-    function PQ() {
-      cQ = !0, (0, vQ.H)().unlockPointer()
-    }
-
-    function ZQ() {
-      HQ = !1, bQ = !1, YQ = !1, clearTimeout(mQ), eQ = !1, MQ = !1, GQ = 0, cQ = !1;
-      const QQ = uQ;
-      uQ = !1, QQ && yQ()
-    }
-
-    function yQ() {
-      for (const QQ of [...SQ]) QQ(uQ);
-      qQ.l.GA("pointerLockUpdate", uQ)
+    class Yk {
+      static queueQTE(kk, ek, ik) {
+        let Dk, fk;
+        const Sk = new Promise((kk => {
+            Dk = kk
+          })),
+          bk = new Promise((kk => {
+            fk = () => {
+              kk("qteTornDown")
+            }
+          })),
+          rk = Promise.race([Sk, bk]).then((() => {})),
+          Pk = new Kk(kk, ek, ik, fk, rk, Dk);
+        return Hk.set(kk, Pk), Uk.enqueue(Pk), wk || this.processNextQTE(), yk.create(Sk, bk, fk)
+      }
+      static async processNextQTE() {
+        if (wk || Uk.uU()) return void(Uk.uU() && wk && (wk = null, pk()));
+        const kk = await Uk.dequeue();
+        if (!Hk.has(kk.id)) return void await this.processNextQTE();
+        Hk.delete(kk.id);
+        const ek = new nk(kk.id, kk.type, kk.parameters, kk.resolveRequest, kk.onDonePromise, kk.tearDownNotification);
+        wk = ek, pk();
+        try {
+          await ek.waitUntilDone()
+        } catch (ik) {
+          console.error("Error while waiting for QTE to resolve:", ik.stack)
+        }
+        wk === ek && (wk.cleanup(), wk = null, pk()), await this.processNextQTE()
+      }
+      static cancelQTE(kk) {
+        if (wk && wk.id === kk) return wk.tearDown(), wk = null, pk(), void this.processNextQTE();
+        const ek = Hk.get(kk);
+        ek && (Hk.delete(kk), ek.tearDownNotification())
+      }
+      static getCurrentState() {
+        return wk ? wk.getState() : {
+          type: null,
+          parameters: null,
+          state: null,
+          isActive: !1
+        }
+      }
+      static reset() {
+        wk && (wk.tearDown(), wk = null), Hk.forEach(((kk, ek) => {
+          this.cancelQTE(ek)
+        })), Uk.emptyQueue(), Hk.clear(), pk()
+      }
     }
   },
-  40108: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => bQ,
-      f: () => kQ,
-      h: () => HQ,
-      k: () => mQ,
-      l: () => DQ,
-      m: () => uQ,
-      q: () => vQ
+  4721: (kk, ek, ik) => {
+    ik.d(ek, {
+      A: () => Fk,
+      D: () => pk,
+      F: () => bk,
+      J: () => rk,
+      K: () => sk,
+      c: () => jk,
+      g: () => Yk,
+      j: () => qk,
+      l: () => uk,
+      n: () => lk,
+      q: () => Ck,
+      r: () => yk,
+      v: () => Lk,
+      x: () => dk,
+      y: () => Vk
     });
-    let LQ = null,
-      qQ = null,
-      oQ = null;
-
-    function DQ(QQ) {
-      LQ = QQ
-    }
-
-    function kQ() {
-      return LQ
-    }
-
-    function vQ(QQ) {
-      qQ = QQ
-    }
-
-    function mQ() {
-      return qQ
-    }
-
-    function uQ(QQ) {
-      oQ = QQ
-    }
-
-    function HQ() {
-      return oQ
-    }
-
-    function bQ() {
-      var QQ, FQ;
-      return !0 === (null === (QQ = qQ) || void 0 === QQ || null === (FQ = QQ.currentViewer) || void 0 === FQ ? void 0 : FQ.inPlayback)
-    }
-  },
-  4621: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      A: () => sQ,
-      B: () => MQ,
-      F: () => DQ,
-      H: () => kQ,
-      I: () => WQ,
-      d: () => iQ,
-      e: () => pQ,
-      f: () => IQ,
-      g: () => rQ,
-      k: () => eQ,
-      n: () => CQ,
-      r: () => GQ,
-      v: () => cQ,
-      x: () => RQ,
-      y: () => OQ
-    });
-    var LQ = wQ(4626);
-    const qQ = {
+    var Dk = ik(4728);
+    const fk = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let oQ = qQ;
+    let Sk = fk;
 
-    function DQ(QQ) {
-      oQ = null !== QQ && void 0 !== QQ ? QQ : qQ
+    function bk(kk) {
+      Sk = null !== kk && void 0 !== kk ? kk : fk
     }
 
-    function kQ() {
-      return oQ
+    function rk() {
+      return Sk
     }
-    const vQ = new Set,
-      mQ = new Set;
-    let uQ = -1;
-    const HQ = new Set,
-      bQ = new Set;
-    let YQ = 0,
-      xQ = 0;
-    const AQ = new Set,
-      tQ = new Set;
+    const Pk = new Set,
+      mk = new Set;
+    let Mk = -1;
+    const Kk = new Set,
+      xk = new Set;
+    let nk = 0,
+      Uk = 0;
+    const Hk = new Set,
+      wk = new Set;
 
-    function eQ(QQ) {
-      return vQ.add(QQ), () => {
-        vQ.delete(QQ)
+    function lk(kk) {
+      return Pk.add(kk), () => {
+        Pk.delete(kk)
       }
     }
 
-    function MQ(QQ, FQ) {
-      for (const LQ of vQ) try {
-        LQ(QQ)
-      } catch (wQ) {
-        FQ(wQ)
+    function pk(kk, ek) {
+      for (const Dk of Pk) try {
+        Dk(kk)
+      } catch (ik) {
+        ek(ik)
       }
     }
 
-    function GQ(QQ) {
-      return mQ.add(QQ), () => {
-        mQ.delete(QQ)
+    function yk(kk) {
+      return mk.add(kk), () => {
+        mk.delete(kk)
       }
     }
 
-    function pQ(QQ, FQ) {
-      const wQ = uQ < 0 ? 0 : QQ - uQ;
-      uQ = QQ;
-      for (const qQ of mQ) try {
-        qQ(wQ)
-      } catch (LQ) {
-        FQ(LQ)
+    function Yk(kk, ek) {
+      const ik = Mk < 0 ? 0 : kk - Mk;
+      Mk = kk;
+      for (const fk of mk) try {
+        fk(ik)
+      } catch (Dk) {
+        ek(Dk)
       }
     }
 
-    function cQ(QQ) {
-      return HQ.add(QQ), () => {
-        HQ.delete(QQ)
+    function Lk(kk) {
+      return Kk.add(kk), () => {
+        Kk.delete(kk)
       }
     }
 
-    function CQ(QQ) {
-      return bQ.add(QQ), () => {
-        bQ.delete(QQ)
+    function Ck(kk) {
+      return xk.add(kk), () => {
+        xk.delete(kk)
       }
     }
-    let SQ = 0;
+    let Ak = 0;
 
-    function iQ(QQ) {
-      SQ += QQ
+    function jk(kk) {
+      Ak += kk
     }
 
-    function WQ() {
-      const QQ = SQ;
-      return SQ = 0, QQ
+    function sk() {
+      const kk = Ak;
+      return Ak = 0, kk
     }
 
-    function RQ(QQ) {
-      return AQ.add(QQ), () => {
-        AQ.delete(QQ)
-      }
-    }
-
-    function OQ(QQ) {
-      return tQ.add(QQ), () => {
-        tQ.delete(QQ)
+    function dk(kk) {
+      return Hk.add(kk), () => {
+        Hk.delete(kk)
       }
     }
 
-    function sQ() {
-      YQ = 0, xQ = 0, uQ = -1
+    function Vk(kk) {
+      return wk.add(kk), () => {
+        wk.delete(kk)
+      }
     }
 
-    function rQ(QQ, FQ) {
-      if ("paced" === QQ) return xQ += FQ, null;
-      if ("drawn" !== QQ && "skipped" !== QQ) return null;
-      const wQ = FQ + xQ;
-      return xQ = 0, wQ
+    function Fk() {
+      nk = 0, Uk = 0, Mk = -1
     }
 
-    function IQ(QQ, FQ, wQ, qQ) {
-      const oQ = (0, LQ.h)(FQ),
-        DQ = QQ > 0 ? performance.now() : 0;
-      for (let LQ = 0; LQ < QQ; LQ++)
-        for (const QQ of AQ) try {
-          QQ()
-        } catch (kQ) {
-          qQ(kQ)
+    function uk(kk, ek) {
+      if ("paced" === kk) return Uk += ek, null;
+      if ("drawn" !== kk && "skipped" !== kk) return null;
+      const ik = ek + Uk;
+      return Uk = 0, ik
+    }
+
+    function qk(kk, ek, ik, fk) {
+      const Sk = (0, Dk.j)(ek),
+        bk = kk > 0 ? performance.now() : 0;
+      for (let Dk = 0; Dk < kk; Dk++)
+        for (const kk of Hk) try {
+          kk()
+        } catch (rk) {
+          fk(rk)
         }
-      if (QQ > 0 && iQ(performance.now() - DQ), null !== wQ) {
-        for (const QQ of HQ) try {
-          QQ(wQ)
-        } catch (kQ) {
-          qQ(kQ)
+      if (kk > 0 && jk(performance.now() - bk), null !== ik) {
+        for (const kk of Kk) try {
+          kk(ik)
+        } catch (rk) {
+          fk(rk)
         }
-        YQ += wQ
+        nk += ik
       }
-      if ("drawn" === FQ) {
-        const QQ = YQ;
-        YQ = 0;
-        for (const FQ of bQ) try {
-          FQ(QQ)
-        } catch (kQ) {
-          qQ(kQ)
+      if ("drawn" === ek) {
+        const kk = nk;
+        nk = 0;
+        for (const ek of xk) try {
+          ek(kk)
+        } catch (rk) {
+          fk(rk)
         }
       }
-      for (const LQ of tQ) try {
-        LQ(QQ, oQ)
-      } catch (kQ) {
-        qQ(kQ)
+      for (const Dk of wk) try {
+        Dk(kk, Sk)
+      } catch (rk) {
+        fk(rk)
       }
     }
   },
-  40335: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => LQ
+  4745: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Pk,
+      f: () => Sk,
+      j: () => rk
     });
-    const LQ = {
-      stop: () => LQ,
-      fade: () => LQ,
-      rate: () => LQ,
-      getVolume: () => 0,
-      getRelativeVolume: () => 0,
-      setRelativeVolume: () => LQ,
-      setPannerAttr: () => LQ,
-      setPosition: () => LQ
-    }
-  },
-  4642: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => vQ,
-      g: () => oQ,
-      j: () => kQ
-    });
-    var LQ = wQ(2313),
-      qQ = wQ(4651);
+    var Dk = ik(2388),
+      fk = ik(4750);
 
-    function oQ(QQ) {
+    function Sk(kk) {
       let {
-        action: FQ,
-        flags: wQ
-      } = QQ;
-      return "mid-fire" === FQ && 0 !== (wQ & LQ.c.AltLeftClick)
+        action: ek,
+        flags: ik
+      } = kk;
+      return "mid-fire" === ek && 0 !== (ik & Dk.d.AltLeftClick)
     }
-    const DQ = new Set;
+    const bk = new Set;
 
-    function kQ(QQ) {
-      return DQ.add(QQ), () => {
-        DQ.delete(QQ)
+    function rk(kk) {
+      return bk.add(kk), () => {
+        bk.delete(kk)
       }
     }
 
-    function vQ(QQ) {
-      const FQ = qQ.b[255 & QQ];
-      if (void 0 === FQ) return;
-      const wQ = QQ >>> 8 & 255,
-        oQ = {
-          action: FQ,
-          down: 0 !== (wQ & LQ.c.Down),
-          flags: wQ,
-          press: QQ >>> 16
+    function Pk(kk) {
+      const ek = fk.e[255 & kk];
+      if (void 0 === ek) return;
+      const ik = kk >>> 8 & 255,
+        Sk = {
+          action: ek,
+          down: 0 !== (ik & Dk.d.Down),
+          flags: ik,
+          press: kk >>> 16
         };
-      for (const LQ of DQ) LQ(oQ)
+      for (const Dk of bk) Dk(Sk)
     }
   },
-  4651: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => qQ,
-      c: () => oQ,
-      d: () => DQ,
-      f: () => LQ,
-      g: () => kQ
+  4750: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => fk,
+      g: () => Sk,
+      k: () => bk,
+      n: () => Dk,
+      q: () => rk
     });
-    const LQ = {
+    const Dk = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -608,8 +747,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      qQ = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      oQ = {
+      fk = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      Sk = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -672,331 +811,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      DQ = {
+      bk = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      kQ = [16]
+      rk = [16]
   },
-  40418: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => uQ,
-      g: () => mQ,
-      i: () => vQ
+  4752: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => rk,
+      i: () => bk,
+      j: () => mk
     });
-    var LQ = wQ(4638),
-      qQ = wQ(2313),
-      oQ = wQ(4657);
-    let DQ = !1,
-      kQ = !1;
+    var Dk = ik(2388),
+      fk = ik(2395);
+    const Sk = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function vQ(QQ) {
-      DQ = !0;
-      try {
-        QQ()
-      } finally {
-        DQ = !1
-      }
+    function bk(kk) {
+      return kk instanceof HTMLElement && (!!(kk.isContentEditable || kk instanceof HTMLTextAreaElement || kk instanceof HTMLSelectElement) || kk instanceof HTMLInputElement && !Sk.has(kk.type))
     }
 
-    function mQ(QQ, FQ) {
-      if (DQ) return !1;
-      switch (QQ) {
-        case LQ.I.MouseDown:
-        case LQ.I.MouseUp:
-        case LQ.I.TouchStart:
-        case LQ.I.TouchEnd:
-        case LQ.I.TouchCancel:
-        case LQ.I.TouchButton:
-          return !0;
-        case LQ.I.KeyDown:
-        case LQ.I.KeyUp:
-          return 0 === (FQ & qQ.g.Repeat) && !(0, oQ.g)(document.activeElement);
-        default:
-          return !1
-      }
-    }
-
-    function uQ(QQ) {
-      kQ || (kQ = !0, queueMicrotask((() => {
-        kQ = !1, QQ()
-      })))
-    }
-  },
-  4657: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => kQ,
-      g: () => DQ,
-      i: () => mQ
-    });
-    var LQ = wQ(2313),
-      qQ = wQ(2320);
-    const oQ = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
-
-    function DQ(QQ) {
-      return QQ instanceof HTMLElement && (!!(QQ.isContentEditable || QQ instanceof HTMLTextAreaElement || QQ instanceof HTMLSelectElement) || QQ instanceof HTMLInputElement && !oQ.has(QQ.type))
-    }
-
-    function kQ(QQ) {
-      let FQ = null;
-      const wQ = wQ => {
-          const qQ = DQ(wQ);
-          qQ !== FQ && (FQ = qQ, QQ(LQ.i.UiCapture, LQ.w.Keyboard, 0, 0, qQ ? LQ.w.Keyboard : 0))
+    function rk(kk) {
+      let ek = null;
+      const ik = ik => {
+          const fk = bk(ik);
+          fk !== ek && (ek = fk, kk(Dk.k.UiCapture, Dk.t.Keyboard, 0, 0, fk ? Dk.t.Keyboard : 0))
         },
-        qQ = QQ => {
-          wQ(QQ.target)
+        fk = kk => {
+          ik(kk.target)
         },
-        oQ = QQ => {
-          wQ(QQ.relatedTarget)
+        Sk = kk => {
+          ik(kk.relatedTarget)
         },
-        kQ = () => {
-          wQ(document.activeElement)
+        rk = () => {
+          ik(document.activeElement)
         },
-        vQ = {
+        Pk = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", qQ, vQ), document.addEventListener("focusout", oQ, vQ), document.addEventListener("keydown", kQ, vQ), wQ(document.activeElement), () => {
-        document.removeEventListener("focusin", qQ, vQ), document.removeEventListener("focusout", oQ, vQ), document.removeEventListener("keydown", kQ, vQ)
+      return document.addEventListener("focusin", fk, Pk), document.addEventListener("focusout", Sk, Pk), document.addEventListener("keydown", rk, Pk), ik(document.activeElement), () => {
+        document.removeEventListener("focusin", fk, Pk), document.removeEventListener("focusout", Sk, Pk), document.removeEventListener("keydown", rk, Pk)
       }
     }
-    const vQ = new Map;
+    const Pk = new Map;
 
-    function mQ(QQ, FQ) {
-      var wQ;
-      let LQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      vQ.set(LQ, (null !== (wQ = vQ.get(LQ)) && void 0 !== wQ ? wQ : 0) & ~QQ | FQ & QQ);
-      let oQ = 0;
-      for (const qQ of vQ.values()) oQ |= qQ;
-      return (0, qQ.A)(QQ, oQ & QQ)
-    }
-  },
-  40175: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => uQ,
-      c: () => vQ,
-      f: () => kQ,
-      j: () => mQ
-    });
-    var LQ = wQ(1904);
-    let qQ = null,
-      oQ = 0;
-    const DQ = new Set;
-
-    function kQ() {
-      return qQ
-    }
-
-    function vQ() {
-      return oQ
-    }
-
-    function mQ(QQ) {
-      qQ = QQ, oQ++, (0, LQ.b)();
-      for (const FQ of DQ) FQ()
-    }
-
-    function uQ(QQ) {
-      DQ.add(QQ)
-    }
-  },
-  40461: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => LQ
-    });
-    const LQ = 2e3
-  },
-  40332: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => GQ,
-      f: () => mQ,
-      j: () => tQ,
-      k: () => MQ,
-      l: () => eQ,
-      o: () => pQ
-    });
-    var LQ = wQ(17),
-      qQ = wQ(22),
-      oQ = wQ(2706),
-      DQ = wQ(1314),
-      kQ = wQ(9013),
-      vQ = wQ(2712);
-
-    function mQ() {
-      var QQ;
-      const FQ = (wQ = LQ.c.get("clientEscMenuOptions"), qQ = (0, oQ.C)(), {
-        sampleCount: wQ.antiAliasing ? 4 : 1,
-        n: (0, oQ.s)(wQ.pixelScale, qQ),
-        pixelated: (0, oQ.o)(wQ.pixelSmoothing)
-      });
-      var wQ, qQ;
-      return FQ.sampleCount > 1 && (0, kQ.c)() && (FQ.sampleCount = 1), FQ.n = null !== (QQ = (0, kQ.h)()) && void 0 !== QQ ? QQ : FQ.n, FQ
-    }
-    let uQ = null,
-      HQ = null;
-    const bQ = new Set;
-    let YQ = null;
-
-    function xQ() {
-      for (const QQ of bQ) QQ()
-    }
-
-    function AQ() {
-      if (null === uQ) {
-        const QQ = document.createElement("div");
-        QQ.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none", QQ.setAttribute("aria-hidden", "true"), document.body.append(QQ), HQ = QQ, uQ = new oQ.b(QQ, xQ)
-      }
-      return uQ
-    }
-
-    function tQ(QQ) {
-      const FQ = (0, oQ.j)(),
-        [wQ, LQ] = AQ().size(FQ);
-      return (0, oQ.g)(wQ, LQ, FQ, QQ.n)
-    }
-
-    function eQ(QQ) {
-      var FQ, wQ, LQ, qQ;
-      const kQ = (0, oQ.j)(),
-        [vQ, uQ] = AQ().size(kQ);
-      if (vQ <= 0 || uQ <= 0) return null;
-      const HQ = (0, oQ.g)(vQ, uQ, kQ, mQ().n);
-      return (0, oQ.c)(QQ, HQ), QQ.style.left = `${null!==(FQ=null===(wQ=YQ)||void 0===wQ?void 0:wQ.rect.left)&&void 0!==FQ?FQ:0}px`, QQ.style.top = `${null!==(LQ=null===(qQ=YQ)||void 0===qQ?void 0:qQ.rect.top)&&void 0!==LQ?LQ:0}px`, (0, DQ.J)(QQ.style, YQ), HQ
-    }
-
-    function MQ(QQ) {
-      YQ = QQ, AQ(), (0, DQ.E)(HQ.style, QQ, ""), xQ()
-    }
-
-    function GQ(QQ, FQ) {
-      QQ.style.imageRendering = (0, oQ.F)(FQ.pixelated)
-    }
-
-    function pQ(QQ, FQ) {
-      const wQ = (0, qQ.o)("appManagerUpdated|clientEscMenuOptions", (() => {
-          GQ(QQ, mQ()), FQ()
-        })),
-        LQ = (0, kQ.s)(FQ),
-        oQ = (0, vQ.q)(FQ);
-      return AQ(), bQ.add(FQ), () => {
-        wQ(), LQ(), oQ(), bQ.delete(FQ)
-      }
-    }
-  },
-  40465: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => DQ,
-      h: () => oQ,
-      l: () => qQ
-    });
-    let LQ = null;
-
-    function qQ(QQ) {
-      LQ = QQ
-    }
-
-    function oQ(QQ) {
-      LQ === QQ && (LQ = null)
-    }
-
-    function DQ() {
-      var QQ;
-      null === (QQ = LQ) || void 0 === QQ || QQ()
-    }
-  },
-  40430: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => qQ,
-      c: () => mQ,
-      d: () => oQ,
-      f: () => HQ,
-      i: () => uQ,
-      m: () => bQ
-    });
-    var LQ = wQ(2811);
-    class qQ extends Error {
-      constructor(QQ, FQ, wQ) {
-        super(`${"fetch"===QQ?"fetching":"decoding"} ${FQ} failed`, wQ), this.stage = QQ, this.source = FQ, this.name = "ShellImageError"
-      }
-    }
-    async function oQ(QQ) {
-      let FQ, wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : LQ.T,
-        oQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      if ("string" === typeof QQ) try {
-        FQ = await wQ(QQ)
-      } catch (DQ) {
-        throw new qQ("fetch", QQ, {
-          cause: DQ
-        })
-      } else FQ = QQ;
-      try {
-        const QQ = new Blob([FQ.slice()], {
-          type: "image/png"
-        });
-        return await createImageBitmap(QQ, {
-          premultiplyAlpha: "none",
-          colorSpaceConversion: "none",
-          imageOrientation: oQ
-        })
-      } catch (DQ) {
-        throw new qQ("decode", "string" === typeof QQ ? QQ : `${FQ.byteLength} bytes`, {
-          cause: DQ
-        })
-      }
-    }
-    let DQ = null;
-    const kQ = new Map;
-    let vQ = 1;
-
-    function mQ(QQ) {
-      if (DQ = QQ, null !== QQ) {
-        for (const [FQ, wQ] of kQ) QQ.bLQ(FQ, wQ);
-        kQ.clear()
-      }
-    }
-
-    function uQ(QQ) {
-      const FQ = vQ++;
-      return DQ ? DQ.bLQ(FQ, QQ) : kQ.set(FQ, QQ), FQ
-    }
-    async function HQ(QQ, FQ, wQ) {
-      const LQ = await oQ(QQ, FQ, wQ);
-      return {
-        id: uQ(LQ),
-        width: LQ.width,
-        height: LQ.height
-      }
-    }
-
-    function bQ(QQ) {
-      var FQ;
-      const wQ = kQ.get(QQ);
-      if (wQ) return wQ.close(), void kQ.delete(QQ);
-      null === (FQ = DQ) || void 0 === FQ || FQ.YLQ(QQ)
-    }
-  },
-  40351: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ) {
-      if (!Object.prototype.hasOwnProperty.call(QQ, FQ)) throw new TypeError("attempted to use private field on non-instance");
-      return QQ
-    }
-    wQ.d(FQ, {
-      e: () => LQ
-    })
-  },
-  40360: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => qQ
-    });
-    var LQ = 0;
-
-    function qQ(QQ) {
-      return "__private_" + LQ++ + "_" + QQ
+    function mk(kk, ek) {
+      var ik;
+      let Dk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      Pk.set(Dk, (null !== (ik = Pk.get(Dk)) && void 0 !== ik ? ik : 0) & ~kk | ek & kk);
+      let Sk = 0;
+      for (const fk of Pk.values()) Sk |= fk;
+      return (0, fk.x)(kk, Sk & kk)
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

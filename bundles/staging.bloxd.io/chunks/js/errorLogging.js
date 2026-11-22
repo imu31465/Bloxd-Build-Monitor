@@ -1,139 +1,139 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  6521: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      BaseExtension: () => Qw,
-      BaseInstrumentation: () => Fw,
-      BaseTransport: () => Bq,
-      CSPInstrumentation: () => Wq,
-      ConsoleInstrumentation: () => Nw,
-      ConsoleTransport: () => Lo,
-      EVENT_CLICK: () => GF,
-      EVENT_NAVIGATION: () => pF,
-      EVENT_ROUTE_CHANGE: () => RF,
-      EVENT_SESSION_EXTEND: () => iF,
-      EVENT_SESSION_RESUME: () => SF,
-      EVENT_SESSION_START: () => CF,
-      EVENT_VIEW_CHANGED: () => cF,
-      ErrorsInstrumentation: () => Kw,
-      FetchTransport: () => co,
-      InternalLoggerLevel: () => JF,
-      LogLevel: () => Gw,
-      MAX_SESSION_PERSISTENCE_TIME: () => vQ,
-      NavigationInstrumentation: () => fq,
-      Observable: () => Mw,
-      PerformanceInstrumentation: () => gL,
-      PersistentSessionsManager: () => lF,
-      SESSION_EXPIRATION_TIME: () => oQ,
-      SESSION_INACTIVITY_TIME: () => DQ,
-      STORAGE_KEY: () => qQ,
-      SessionInstrumentation: () => Lw,
-      TransportItemType: () => dq,
-      UserActionInstrumentation: () => iq,
-      UserActionState: () => Aq,
-      VERSION: () => ww,
-      ViewInstrumentation: () => lw,
-      VolatileSessionsManager: () => jF,
-      WebVitalsInstrumentation: () => TL,
-      allLogLevels: () => Cw,
-      browserMeta: () => gq,
-      buildStackFrame: () => qw,
-      captureMetas: () => jo,
-      createInternalLogger: () => Ro,
-      createPromiseBuffer: () => Yo,
-      createSession: () => Zq,
-      deepEqual: () => MF,
-      defaultEventDomain: () => LQ,
-      defaultExceptionType: () => Rw,
-      defaultGlobalObjectKey: () => Oo,
-      defaultInternalLoggerLevel: () => nF,
-      defaultLogLevel: () => pw,
-      faro: () => AQ,
-      genShortID: () => eF,
-      getCurrentTimestamp: () => xF,
-      getDataFromSafariExtensions: () => bw,
-      getIgnoreUrls: () => gQ,
-      getInternalFaroFromGlobalObject: () => bQ,
-      getStackFramesFromError: () => xw,
-      getTransportBody: () => wo,
-      getUrlFromResource: () => ZQ,
-      getWebInstrumentations: () => Vq,
-      globalObject: () => uQ,
-      initializeFaro: () => QD,
-      internalGlobalObjectKey: () => HQ,
-      isArray: () => rQ,
-      isBoolean: () => WQ,
-      isDomError: () => aQ,
-      isDomException: () => XQ,
-      isElement: () => VQ,
-      isElementDefined: () => fQ,
-      BY: () => nQ,
-      isError: () => lQ,
-      isErrorDefined: () => zQ,
-      isErrorEvent: () => jQ,
-      isEvent: () => KQ,
-      isEventDefined: () => TQ,
-      isFunction: () => sQ,
-      isInstanceOf: () => GQ,
-      isInt: () => iQ,
-      isInternalFaroOnGlobalObject: () => xQ,
-      isMap: () => JQ,
-      isMapDefined: () => hQ,
-      isNull: () => cQ,
-      isNumber: () => SQ,
-      isObject: () => OQ,
-      isPrimitive: () => NQ,
-      isRegExp: () => IQ,
-      isString: () => CQ,
-      isSymbol: () => RQ,
-      isSyntheticEvent: () => EQ,
-      isThenable: () => UQ,
-      isToString: () => MQ,
-      isTypeof: () => eQ,
-      isUndefined: () => pQ,
-      makeCoreConfig: () => Io,
-      noop: () => hF,
-      osMeta: () => Pq,
-      parseStacktrace: () => Aw,
-      sdkMeta: () => yq,
-      setInternalFaroOnGlobalObject: () => YQ,
-      transportItemTypeToBodyKey: () => Qo,
-      unknownString: () => zw,
-      userActionDataAttribute: () => PL,
-      userActionTimeoutDataAttribute: () => ZL
+  6534: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      BaseExtension: () => ei,
+      BaseInstrumentation: () => ii,
+      BaseTransport: () => iS,
+      CSPInstrumentation: () => Ff,
+      ConsoleInstrumentation: () => Qi,
+      ConsoleTransport: () => rS,
+      EVENT_CLICK: () => Ye,
+      EVENT_NAVIGATION: () => Le,
+      EVENT_ROUTE_CHANGE: () => Ve,
+      EVENT_SESSION_EXTEND: () => se,
+      EVENT_SESSION_RESUME: () => je,
+      EVENT_SESSION_START: () => Ae,
+      EVENT_VIEW_CHANGED: () => Ce,
+      ErrorsInstrumentation: () => Ei,
+      FetchTransport: () => sS,
+      InternalLoggerLevel: () => oe,
+      LogLevel: () => Li,
+      MAX_SESSION_PERSISTENCE_TIME: () => Pk,
+      NavigationInstrumentation: () => of,
+      Observable: () => Yi,
+      PerformanceInstrumentation: () => GD,
+      PersistentSessionsManager: () => ae,
+      SESSION_EXPIRATION_TIME: () => Sk,
+      SESSION_INACTIVITY_TIME: () => bk,
+      STORAGE_KEY: () => fk,
+      SessionInstrumentation: () => fi,
+      TransportItemType: () => DS,
+      UserActionInstrumentation: () => Vf,
+      UserActionState: () => pf,
+      VERSION: () => Di,
+      ViewInstrumentation: () => Wi,
+      VolatileSessionsManager: () => We,
+      WebVitalsInstrumentation: () => ED,
+      allLogLevels: () => Ai,
+      browserMeta: () => Rf,
+      buildStackFrame: () => Si,
+      captureMetas: () => XS,
+      createInternalLogger: () => qS,
+      createPromiseBuffer: () => lS,
+      createSession: () => kS,
+      deepEqual: () => ye,
+      defaultEventDomain: () => Dk,
+      defaultExceptionType: () => Vi,
+      defaultGlobalObjectKey: () => IS,
+      defaultInternalLoggerLevel: () => Oe,
+      defaultLogLevel: () => Ci,
+      faro: () => Hk,
+      genShortID: () => pe,
+      getCurrentTimestamp: () => He,
+      getDataFromSafariExtensions: () => ni,
+      getIgnoreUrls: () => gk,
+      getInternalFaroFromGlobalObject: () => xk,
+      getStackFramesFromError: () => Hi,
+      getTransportBody: () => bS,
+      getUrlFromResource: () => Nk,
+      getWebInstrumentations: () => Zf,
+      globalObject: () => Mk,
+      initializeFaro: () => ib,
+      internalGlobalObjectKey: () => Kk,
+      isArray: () => uk,
+      isBoolean: () => sk,
+      isDomError: () => Wk,
+      isDomException: () => tk,
+      isElement: () => Bk,
+      isElementDefined: () => Xk,
+      uU: () => Ok,
+      isError: () => hk,
+      isErrorDefined: () => Ek,
+      isErrorEvent: () => ak,
+      isEvent: () => vk,
+      isEventDefined: () => Qk,
+      isFunction: () => Fk,
+      isInstanceOf: () => yk,
+      isInt: () => jk,
+      isInternalFaroOnGlobalObject: () => Uk,
+      isMap: () => Tk,
+      isMapDefined: () => ck,
+      isNull: () => Lk,
+      isNumber: () => Ak,
+      isObject: () => Vk,
+      isPrimitive: () => zk,
+      isRegExp: () => qk,
+      isString: () => Ck,
+      isSymbol: () => dk,
+      isSyntheticEvent: () => Zk,
+      isThenable: () => Ik,
+      isToString: () => pk,
+      isTypeof: () => lk,
+      isUndefined: () => Yk,
+      makeCoreConfig: () => vS,
+      noop: () => Te,
+      osMeta: () => Jf,
+      parseStacktrace: () => wi,
+      sdkMeta: () => eS,
+      setInternalFaroOnGlobalObject: () => nk,
+      transportItemTypeToBodyKey: () => fS,
+      unknownString: () => ai,
+      userActionDataAttribute: () => ND,
+      userActionTimeoutDataAttribute: () => RD
     });
-    const LQ = "browser",
-      qQ = "com.grafana.faro.session",
-      oQ = 144e5,
-      DQ = 9e5,
-      kQ = 1e3,
-      vQ = DQ,
-      mQ = {
+    const Dk = "browser",
+      fk = "com.grafana.faro.session",
+      Sk = 144e5,
+      bk = 9e5,
+      rk = 1e3,
+      Pk = bk,
+      mk = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: vQ
+        maxSessionPersistenceTime: Pk
       };
-    const uQ = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof wQ.g ? wQ.g : "undefined" !== typeof self ? self : void 0;
-    const HQ = "_faroInternal";
+    const Mk = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof ik.g ? ik.g : "undefined" !== typeof self ? self : void 0;
+    const Kk = "_faroInternal";
 
-    function bQ() {
-      return uQ[HQ]
+    function xk() {
+      return Mk[Kk]
     }
 
-    function YQ(QQ) {
-      QQ.config.isolate ? QQ.internalLogger.debug("Skipping registering internal Faro instance on global object") : (QQ.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(uQ, HQ, {
+    function nk(kk) {
+      kk.config.isolate ? kk.internalLogger.debug("Skipping registering internal Faro instance on global object") : (kk.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(Mk, Kk, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: QQ
+        value: kk
       }))
     }
 
-    function xQ() {
-      return HQ in uQ
+    function Uk() {
+      return Kk in Mk
     }
-    let AQ = {
+    let Hk = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function tQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
-      return FQ.debug("Initializing Faro"), AQ = {
-          api: oQ,
-          config: wQ,
-          instrumentations: DQ,
-          internalLogger: FQ,
-          metas: LQ,
-          pause: qQ.pause,
-          transports: qQ,
-          unpatchedConsole: QQ,
-          unpause: qQ.unpause
-        }, YQ(AQ),
-        function(QQ) {
-          if (QQ.config.preventGlobalExposure) QQ.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function wk(kk, ek, ik, Dk, fk, Sk, bk) {
+      return ek.debug("Initializing Faro"), Hk = {
+          api: Sk,
+          config: ik,
+          instrumentations: bk,
+          internalLogger: ek,
+          metas: Dk,
+          pause: fk.pause,
+          transports: fk,
+          unpatchedConsole: kk,
+          unpause: fk.unpause
+        }, nk(Hk),
+        function(kk) {
+          if (kk.config.preventGlobalExposure) kk.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (QQ.internalLogger.debug(`Registering public faro reference in the global scope using "${QQ.config.globalObjectKey}" key`), QQ.config.globalObjectKey in uQ) return void QQ.internalLogger.warn(`Skipping global registration due to key "${QQ.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(uQ, QQ.config.globalObjectKey, {
+            if (kk.internalLogger.debug(`Registering public faro reference in the global scope using "${kk.config.globalObjectKey}" key`), kk.config.globalObjectKey in Mk) return void kk.internalLogger.warn(`Skipping global registration due to key "${kk.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(Mk, kk.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: QQ
+              value: kk
             })
           }
-        }(AQ), AQ
+        }(Hk), Hk
     }
 
-    function eQ(QQ, FQ) {
-      return typeof QQ === FQ
+    function lk(kk, ek) {
+      return typeof kk === ek
     }
 
-    function MQ(QQ, FQ) {
-      return Object.prototype.toString.call(QQ) === `[object ${FQ}]`
+    function pk(kk, ek) {
+      return Object.prototype.toString.call(kk) === `[object ${ek}]`
     }
 
-    function GQ(QQ, FQ) {
+    function yk(kk, ek) {
       try {
-        return QQ instanceof FQ
-      } catch (wQ) {
+        return kk instanceof ek
+      } catch (ik) {
         return !1
       }
     }
-    const pQ = QQ => eQ(QQ, "undefined"),
-      cQ = QQ => eQ(QQ, "null"),
-      CQ = QQ => eQ(QQ, "string"),
-      SQ = QQ => eQ(QQ, "number") && !isNaN(QQ) || eQ(QQ, "bigint"),
-      iQ = QQ => SQ(QQ) && Number.isInteger(QQ),
-      WQ = QQ => eQ(QQ, "boolean"),
-      RQ = QQ => eQ(QQ, "symbol"),
-      OQ = QQ => !cQ(QQ) && eQ(QQ, "object"),
-      sQ = QQ => eQ(QQ, "function"),
-      rQ = QQ => MQ(QQ, "Array"),
-      IQ = QQ => MQ(QQ, "RegExp"),
-      UQ = QQ => sQ(null === QQ || void 0 === QQ ? void 0 : QQ.then),
-      NQ = QQ => !OQ(QQ) && !sQ(QQ),
-      TQ = "undefined" !== typeof Event,
-      KQ = QQ => TQ && GQ(QQ, Event),
-      zQ = "undefined" !== typeof Error,
-      lQ = QQ => zQ && GQ(QQ, Error),
-      jQ = QQ => MQ(QQ, "ErrorEvent"),
-      aQ = QQ => MQ(QQ, "DOMError"),
-      XQ = QQ => MQ(QQ, "DOMException"),
-      fQ = "undefined" !== typeof Element,
-      VQ = QQ => fQ && GQ(QQ, Element),
-      hQ = "undefined" !== typeof Map,
-      JQ = QQ => hQ && GQ(QQ, Map),
-      EQ = QQ => OQ(QQ) && "nativeEvent" in QQ && "preventDefault" in QQ && "stopPropagation" in QQ;
+    const Yk = kk => lk(kk, "undefined"),
+      Lk = kk => lk(kk, "null"),
+      Ck = kk => lk(kk, "string"),
+      Ak = kk => lk(kk, "number") && !isNaN(kk) || lk(kk, "bigint"),
+      jk = kk => Ak(kk) && Number.isInteger(kk),
+      sk = kk => lk(kk, "boolean"),
+      dk = kk => lk(kk, "symbol"),
+      Vk = kk => !Lk(kk) && lk(kk, "object"),
+      Fk = kk => lk(kk, "function"),
+      uk = kk => pk(kk, "Array"),
+      qk = kk => pk(kk, "RegExp"),
+      Ik = kk => Fk(null === kk || void 0 === kk ? void 0 : kk.then),
+      zk = kk => !Vk(kk) && !Fk(kk),
+      Qk = "undefined" !== typeof Event,
+      vk = kk => Qk && yk(kk, Event),
+      Ek = "undefined" !== typeof Error,
+      hk = kk => Ek && yk(kk, Error),
+      ak = kk => pk(kk, "ErrorEvent"),
+      Wk = kk => pk(kk, "DOMError"),
+      tk = kk => pk(kk, "DOMException"),
+      Xk = "undefined" !== typeof Element,
+      Bk = kk => Xk && yk(kk, Element),
+      ck = "undefined" !== typeof Map,
+      Tk = kk => ck && yk(kk, Map),
+      Zk = kk => Vk(kk) && "nativeEvent" in kk && "preventDefault" in kk && "stopPropagation" in kk;
 
-    function nQ(QQ) {
-      return null == QQ || (rQ(QQ) || CQ(QQ) ? 0 === QQ.length : !!OQ(QQ) && 0 === Object.keys(QQ).length)
+    function Ok(kk) {
+      return null == kk || (uk(kk) || Ck(kk) ? 0 === kk.length : !!Vk(kk) && 0 === Object.keys(kk).length)
     }
 
-    function gQ() {
-      return AQ.transports.transports.flatMap((QQ => QQ.getIgnoreUrls()))
+    function gk() {
+      return Hk.transports.transports.flatMap((kk => kk.getIgnoreUrls()))
     }
 
-    function PQ() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return gQ().some((FQ => QQ && null != QQ.match(FQ)))
+    function Gk() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return gk().some((ek => kk && null != kk.match(ek)))
     }
 
-    function ZQ(QQ) {
-      return CQ(QQ) ? QQ : QQ instanceof URL ? QQ.href : !nQ(QQ) && sQ(null === QQ || void 0 === QQ ? void 0 : QQ.toString) ? QQ.toString() : void 0
+    function Nk(kk) {
+      return Ck(kk) ? kk : kk instanceof URL ? kk.href : !Ok(kk) && Fk(null === kk || void 0 === kk ? void 0 : kk.toString) ? kk.toString() : void 0
     }
-    const yQ = "sessionStorage",
-      BQ = "localStorage";
+    const Rk = "sessionStorage",
+      Jk = "localStorage";
 
-    function dQ(QQ) {
+    function ke(kk) {
       try {
-        let FQ;
-        FQ = window[QQ];
-        const wQ = "__faro_storage_test__";
-        return FQ.setItem(wQ, wQ), FQ.removeItem(wQ), !0
-      } catch (wQ) {
-        var FQ;
-        return null === (FQ = AQ.internalLogger) || void 0 === FQ || FQ.info(`Web storage of type ${QQ} is not available. Reason: ${wQ}`), !1
+        let ek;
+        ek = window[kk];
+        const ik = "__faro_storage_test__";
+        return ek.setItem(ik, ik), ek.removeItem(ik), !0
+      } catch (ik) {
+        var ek;
+        return null === (ek = Hk.internalLogger) || void 0 === ek || ek.info(`Web storage of type ${kk} is not available. Reason: ${ik}`), !1
       }
     }
 
-    function QF(QQ, FQ) {
-      return oF(FQ) ? window[FQ].getItem(QQ) : null
+    function ee(kk, ek) {
+      return be(ek) ? window[ek].getItem(kk) : null
     }
 
-    function FF(QQ, FQ, wQ) {
-      if (oF(wQ)) try {
-        window[wQ].setItem(QQ, FQ)
-      } catch (LQ) {}
+    function ie(kk, ek, ik) {
+      if (be(ik)) try {
+        window[ik].setItem(kk, ek)
+      } catch (Dk) {}
     }
 
-    function wF(QQ, FQ) {
-      oF(FQ) && window[FQ].removeItem(QQ)
+    function De(kk, ek) {
+      be(ek) && window[ek].removeItem(kk)
     }
-    const LF = dQ(BQ),
-      qF = dQ(yQ);
+    const fe = ke(Jk),
+      Se = ke(Rk);
 
-    function oF(QQ) {
-      return QQ === BQ ? LF : QQ === yQ && qF
-    }
-
-    function DF(QQ) {
-      return DF = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(QQ) {
-        return typeof QQ
-      } : function(QQ) {
-        return QQ && "function" == typeof Symbol && QQ.constructor === Symbol && QQ !== Symbol.prototype ? "symbol" : typeof QQ
-      }, DF(QQ)
+    function be(kk) {
+      return kk === Jk ? fe : kk === Rk && Se
     }
 
-    function kF(QQ) {
-      var FQ = function(QQ, FQ) {
-        if ("object" != DF(QQ) || !QQ) return QQ;
-        var wQ = QQ[Symbol.toPrimitive];
-        if (void 0 !== wQ) {
-          var LQ = wQ.call(QQ, FQ || "default");
-          if ("object" != DF(LQ)) return LQ;
+    function re(kk) {
+      return re = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(kk) {
+        return typeof kk
+      } : function(kk) {
+        return kk && "function" == typeof Symbol && kk.constructor === Symbol && kk !== Symbol.prototype ? "symbol" : typeof kk
+      }, re(kk)
+    }
+
+    function Pe(kk) {
+      var ek = function(kk, ek) {
+        if ("object" != re(kk) || !kk) return kk;
+        var ik = kk[Symbol.toPrimitive];
+        if (void 0 !== ik) {
+          var Dk = ik.call(kk, ek || "default");
+          if ("object" != re(Dk)) return Dk;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === FQ ? String : Number)(QQ)
-      }(QQ, "string");
-      return "symbol" == DF(FQ) ? FQ : FQ + ""
+        return ("string" === ek ? String : Number)(kk)
+      }(kk, "string");
+      return "symbol" == re(ek) ? ek : ek + ""
     }
 
-    function vF(QQ, FQ, wQ) {
-      return (FQ = kF(FQ)) in QQ ? Object.defineProperty(QQ, FQ, {
-        value: wQ,
+    function me(kk, ek, ik) {
+      return (ek = Pe(ek)) in kk ? Object.defineProperty(kk, ek, {
+        value: ik,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : QQ[FQ] = wQ, QQ
+      }) : kk[ek] = ik, kk
     }
 
-    function mF(QQ, FQ) {
-      var wQ = Object.keys(QQ);
+    function Me(kk, ek) {
+      var ik = Object.keys(kk);
       if (Object.getOwnPropertySymbols) {
-        var LQ = Object.getOwnPropertySymbols(QQ);
-        FQ && (LQ = LQ.filter((function(FQ) {
-          return Object.getOwnPropertyDescriptor(QQ, FQ).enumerable
-        }))), wQ.push.apply(wQ, LQ)
+        var Dk = Object.getOwnPropertySymbols(kk);
+        ek && (Dk = Dk.filter((function(ek) {
+          return Object.getOwnPropertyDescriptor(kk, ek).enumerable
+        }))), ik.push.apply(ik, Dk)
       }
-      return wQ
+      return ik
     }
 
-    function uF(QQ) {
-      for (var FQ = 1; FQ < arguments.length; FQ++) {
-        var wQ = null != arguments[FQ] ? arguments[FQ] : {};
-        FQ % 2 ? mF(Object(wQ), !0).forEach((function(FQ) {
-          vF(QQ, FQ, wQ[FQ])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(QQ, Object.getOwnPropertyDescriptors(wQ)) : mF(Object(wQ)).forEach((function(FQ) {
-          Object.defineProperty(QQ, FQ, Object.getOwnPropertyDescriptor(wQ, FQ))
+    function Ke(kk) {
+      for (var ek = 1; ek < arguments.length; ek++) {
+        var ik = null != arguments[ek] ? arguments[ek] : {};
+        ek % 2 ? Me(Object(ik), !0).forEach((function(ek) {
+          me(kk, ek, ik[ek])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(kk, Object.getOwnPropertyDescriptors(ik)) : Me(Object(ik)).forEach((function(ek) {
+          Object.defineProperty(kk, ek, Object.getOwnPropertyDescriptor(ik, ek))
         }))
       }
-      return QQ
+      return kk
     }
 
-    function HF() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AQ;
-      var FQ, wQ, LQ;
-      const qQ = QQ.config.sessionTracking,
-        oQ = null !== (FQ = null !== (wQ = null === qQ || void 0 === qQ || null === (LQ = qQ.sampler) || void 0 === LQ ? void 0 : LQ.call(qQ, {
-          metas: QQ.metas.value
-        })) && void 0 !== wQ ? wQ : null === qQ || void 0 === qQ ? void 0 : qQ.samplingRate) && void 0 !== FQ ? FQ : 1,
-        DQ = "number" === typeof oQ ? function(QQ) {
-          return Math.min(1, Math.max(0, QQ))
-        }(oQ) : 0;
-      if (!(DQ > 0)) return !1;
-      if (1 === DQ) return !0;
+    function xe() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Hk;
+      var ek, ik, Dk;
+      const fk = kk.config.sessionTracking,
+        Sk = null !== (ek = null !== (ik = null === fk || void 0 === fk || null === (Dk = fk.sampler) || void 0 === Dk ? void 0 : Dk.call(fk, {
+          metas: kk.metas.value
+        })) && void 0 !== ik ? ik : null === fk || void 0 === fk ? void 0 : fk.samplingRate) && void 0 !== ek ? ek : 1,
+        bk = "number" === typeof Sk ? function(kk) {
+          return Math.min(1, Math.max(0, kk))
+        }(Sk) : 0;
+      if (!(bk > 0)) return !1;
+      if (1 === bk) return !0;
       try {
-        const QQ = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === QQ || void 0 === QQ ? void 0 : QQ.getRandomValues)) {
-          const FQ = new Uint32Array(1);
-          return QQ.getRandomValues(FQ), FQ[0] / Math.pow(2, 32) < DQ
+        const kk = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === kk || void 0 === kk ? void 0 : kk.getRandomValues)) {
+          const ek = new Uint32Array(1);
+          return kk.getRandomValues(ek), ek[0] / Math.pow(2, 32) < bk
         }
-      } catch (kQ) {}
-      return Math.random() < DQ
+      } catch (rk) {}
+      return Math.random() < bk
     }
 
-    function bF() {
+    function ne() {
       return Date.now()
     }
 
-    function YF() {
+    function Ue() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function xF() {
+    function He() {
       return (new Date).toISOString()
     }
 
-    function AF(QQ) {
-      return new Date(QQ).toISOString()
+    function we(kk) {
+      return new Date(kk).toISOString()
     }
-    const tF = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const le = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function eF() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const FQ = new Uint32Array(QQ),
-        wQ = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === wQ || void 0 === wQ ? void 0 : wQ.getRandomValues) wQ.getRandomValues(FQ);
+    function pe() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const ek = new Uint32Array(kk),
+        ik = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === ik || void 0 === ik ? void 0 : ik.getRandomValues) ik.getRandomValues(ek);
       else
-        for (let qQ = 0; qQ < QQ; qQ++) FQ[qQ] = Math.floor(4294967296 * Math.random());
-      let LQ = "";
-      for (let qQ = 0; qQ < QQ; qQ++) LQ += tF[FQ[qQ] % 59];
-      return LQ
+        for (let fk = 0; fk < kk; fk++) ek[fk] = Math.floor(4294967296 * Math.random());
+      let Dk = "";
+      for (let fk = 0; fk < kk; fk++) Dk += le[ek[fk] % 59];
+      return Dk
     }
 
-    function MF(QQ, FQ) {
-      if (QQ === FQ) return !0;
-      if (eQ(QQ, "number") && isNaN(QQ)) return eQ(FQ, "number") && isNaN(FQ);
-      const wQ = rQ(QQ),
-        LQ = rQ(FQ);
-      if (wQ !== LQ) return !1;
-      if (wQ && LQ) {
-        const wQ = QQ.length;
-        if (wQ !== FQ.length) return !1;
-        for (let LQ = wQ; 0 !== LQ--;)
-          if (!MF(QQ[LQ], FQ[LQ])) return !1;
+    function ye(kk, ek) {
+      if (kk === ek) return !0;
+      if (lk(kk, "number") && isNaN(kk)) return lk(ek, "number") && isNaN(ek);
+      const ik = uk(kk),
+        Dk = uk(ek);
+      if (ik !== Dk) return !1;
+      if (ik && Dk) {
+        const ik = kk.length;
+        if (ik !== ek.length) return !1;
+        for (let Dk = ik; 0 !== Dk--;)
+          if (!ye(kk[Dk], ek[Dk])) return !1;
         return !0
       }
-      const qQ = OQ(QQ),
-        oQ = OQ(FQ);
-      if (qQ !== oQ) return !1;
-      if (QQ && FQ && qQ && oQ) {
-        const wQ = Object.keys(QQ),
-          LQ = Object.keys(FQ);
-        if (wQ.length !== LQ.length) return !1;
-        for (let QQ of wQ)
-          if (!LQ.includes(QQ)) return !1;
-        for (let qQ of wQ)
-          if (!MF(QQ[qQ], FQ[qQ])) return !1;
+      const fk = Vk(kk),
+        Sk = Vk(ek);
+      if (fk !== Sk) return !1;
+      if (kk && ek && fk && Sk) {
+        const ik = Object.keys(kk),
+          Dk = Object.keys(ek);
+        if (ik.length !== Dk.length) return !1;
+        for (let kk of ik)
+          if (!Dk.includes(kk)) return !1;
+        for (let fk of ik)
+          if (!ye(kk[fk], ek[fk])) return !1;
         return !0
       }
       return !1
     }
-    const GF = "click",
-      pF = "navigation",
-      cF = "view_changed",
-      CF = "session_start",
-      SF = "session_resume",
-      iF = "session_extend",
-      WF = "service_name_override",
-      RF = "route_change";
+    const Ye = "click",
+      Le = "navigation",
+      Ce = "view_changed",
+      Ae = "session_start",
+      je = "session_resume",
+      se = "session_extend",
+      de = "service_name_override",
+      Ve = "route_change";
 
-    function OF() {
+    function Fe() {
       let {
-        sessionId: QQ,
-        started: FQ,
-        lastActivity: wQ,
-        isSampled: LQ = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, qQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AQ;
-      var oQ;
-      const DQ = bF(),
-        kQ = null === (oQ = qQ.config) || void 0 === oQ || null === (oQ = oQ.sessionTracking) || void 0 === oQ ? void 0 : oQ.generateSessionId;
-      return null == QQ && (QQ = "function" === typeof kQ ? kQ() : eF()), {
-        sessionId: QQ,
-        lastActivity: null !== wQ && void 0 !== wQ ? wQ : DQ,
-        started: null !== FQ && void 0 !== FQ ? FQ : DQ,
-        isSampled: LQ
+        sessionId: kk,
+        started: ek,
+        lastActivity: ik,
+        isSampled: Dk = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hk;
+      var Sk;
+      const bk = ne(),
+        rk = null === (Sk = fk.config) || void 0 === Sk || null === (Sk = Sk.sessionTracking) || void 0 === Sk ? void 0 : Sk.generateSessionId;
+      return null == kk && (kk = "function" === typeof rk ? rk() : pe()), {
+        sessionId: kk,
+        lastActivity: null !== ik && void 0 !== ik ? ik : bk,
+        started: null !== ek && void 0 !== ek ? ek : bk,
+        isSampled: Dk
       }
     }
 
-    function sF(QQ) {
-      if (null == QQ) return !1;
-      const FQ = bF();
-      return FQ - QQ.started < 144e5 && FQ - QQ.lastActivity < DQ
+    function ue(kk) {
+      if (null == kk) return !1;
+      const ek = ne();
+      return ek - kk.started < 144e5 && ek - kk.lastActivity < bk
     }
 
-    function rF(QQ) {
+    function qe(kk) {
       let {
-        fetchUserSession: FQ,
-        storeUserSession: wQ,
-        adoptSession: LQ,
-        updateInterval: qQ = 0
-      } = QQ, kQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AQ, vQ = 0;
+        fetchUserSession: ek,
+        storeUserSession: ik,
+        adoptSession: Dk,
+        updateInterval: fk = 0
+      } = kk, rk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hk, Pk = 0;
       return function() {
         let {
-          forceSessionExtend: QQ = !1,
-          refreshActivity: mQ = !0
+          forceSessionExtend: kk = !1,
+          refreshActivity: mk = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var uQ, HQ;
-        if (!FQ || !wQ) return;
-        const bQ = bF();
-        if (!QQ && bQ < vQ && vQ - bQ <= qQ) return;
-        const YQ = kQ.config.sessionTracking,
-          xQ = null === YQ || void 0 === YQ ? void 0 : YQ.persistent;
-        if (xQ && !LF || !xQ && !qF) return;
-        const AQ = FQ();
-        if (vQ = Math.min(bQ + qQ, (null !== (uQ = null === AQ || void 0 === AQ ? void 0 : AQ.started) && void 0 !== uQ ? uQ : bQ) + oQ, (null !== (HQ = null === AQ || void 0 === AQ ? void 0 : AQ.lastActivity) && void 0 !== HQ ? HQ : bQ) + DQ), !1 === QQ && sF(AQ)) {
-          var tQ;
-          mQ && wQ(uF(uF({}, AQ), {}, {
-            lastActivity: bQ
+        var Mk, Kk;
+        if (!ek || !ik) return;
+        const xk = ne();
+        if (!kk && xk < Pk && Pk - xk <= fk) return;
+        const nk = rk.config.sessionTracking,
+          Uk = null === nk || void 0 === nk ? void 0 : nk.persistent;
+        if (Uk && !fe || !Uk && !Se) return;
+        const Hk = ek();
+        if (Pk = Math.min(xk + fk, (null !== (Mk = null === Hk || void 0 === Hk ? void 0 : Hk.started) && void 0 !== Mk ? Mk : xk) + Sk, (null !== (Kk = null === Hk || void 0 === Hk ? void 0 : Hk.lastActivity) && void 0 !== Kk ? Kk : xk) + bk), !1 === kk && ue(Hk)) {
+          var wk;
+          mk && ik(Ke(Ke({}, Hk), {}, {
+            lastActivity: xk
           }));
-          const QQ = null === (tQ = kQ.metas.value.session) || void 0 === tQ ? void 0 : tQ.id;
-          null != LQ && null != AQ.sessionMeta && AQ.sessionId !== QQ && LQ(AQ.sessionMeta)
+          const kk = null === (wk = rk.metas.value.session) || void 0 === wk ? void 0 : wk.id;
+          null != Dk && null != Hk.sessionMeta && Hk.sessionId !== kk && Dk(Hk.sessionMeta)
         } else {
-          var eQ, MQ, GQ;
-          let QQ = UF(OF({
-            isSampled: HF(kQ)
-          }, kQ), AQ, kQ);
-          vQ = bQ + qQ, wQ(QQ), null === (eQ = kQ.api) || void 0 === eQ || eQ.setSession(QQ.sessionMeta), null === YQ || void 0 === YQ || null === (MQ = YQ.onSessionChange) || void 0 === MQ || MQ.call(YQ, null !== (GQ = null === AQ || void 0 === AQ ? void 0 : AQ.sessionMeta) && void 0 !== GQ ? GQ : null, QQ.sessionMeta)
+          var lk, pk, yk;
+          let kk = ze(Fe({
+            isSampled: xe(rk)
+          }, rk), Hk, rk);
+          Pk = xk + fk, ik(kk), null === (lk = rk.api) || void 0 === lk || lk.setSession(kk.sessionMeta), null === nk || void 0 === nk || null === (pk = nk.onSessionChange) || void 0 === pk || pk.call(nk, null !== (yk = null === Hk || void 0 === Hk ? void 0 : Hk.sessionMeta) && void 0 !== yk ? yk : null, kk.sessionMeta)
         }
       }
     }
 
-    function IF(QQ) {
-      let FQ, {
-          fetchUserSession: wQ,
-          storeUserSession: LQ,
-          updateInterval: qQ = 0
-        } = QQ,
-        oQ = 0;
-      return QQ => {
-        const DQ = bF();
-        if (QQ === FQ && DQ < oQ && oQ - DQ <= qQ) return;
-        FQ = QQ, oQ = DQ + qQ;
-        const kQ = wQ();
-        (null === kQ || void 0 === kQ ? void 0 : kQ.sessionId) === QQ && sF(kQ) && LQ(uF(uF({}, kQ), {}, {
-          lastActivity: DQ
+    function Ie(kk) {
+      let ek, {
+          fetchUserSession: ik,
+          storeUserSession: Dk,
+          updateInterval: fk = 0
+        } = kk,
+        Sk = 0;
+      return kk => {
+        const bk = ne();
+        if (kk === ek && bk < Sk && Sk - bk <= fk) return;
+        ek = kk, Sk = bk + fk;
+        const rk = ik();
+        (null === rk || void 0 === rk ? void 0 : rk.sessionId) === kk && ue(rk) && Dk(Ke(Ke({}, rk), {}, {
+          lastActivity: bk
         }))
       }
     }
 
-    function UF(QQ, FQ) {
-      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : AQ;
-      var LQ, qQ, oQ, DQ, kQ, vQ;
-      const mQ = uF(uF({}, QQ), {}, {
+    function ze(kk, ek) {
+      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Hk;
+      var Dk, fk, Sk, bk, rk, Pk;
+      const mk = Ke(Ke({}, kk), {}, {
           sessionMeta: {
-            id: QQ.sessionId,
-            attributes: TF(uF(uF(uF({}, null === (LQ = wQ.config.sessionTracking) || void 0 === LQ || null === (LQ = LQ.session) || void 0 === LQ ? void 0 : LQ.attributes), null !== (qQ = null === (oQ = wQ.metas.value.session) || void 0 === oQ ? void 0 : oQ.attributes) && void 0 !== qQ ? qQ : {}), {}, {
-              isSampled: QQ.isSampled.toString()
+            id: kk.sessionId,
+            attributes: ve(Ke(Ke(Ke({}, null === (Dk = ik.config.sessionTracking) || void 0 === Dk || null === (Dk = Dk.session) || void 0 === Dk ? void 0 : Dk.attributes), null !== (fk = null === (Sk = ik.metas.value.session) || void 0 === Sk ? void 0 : Sk.attributes) && void 0 !== fk ? fk : {}), {}, {
+              isSampled: kk.isSampled.toString()
             }))
           }
         }),
-        uQ = null !== (DQ = null === (kQ = wQ.metas.value.session) || void 0 === kQ ? void 0 : kQ.overrides) && void 0 !== DQ ? DQ : null === FQ || void 0 === FQ || null === (vQ = FQ.sessionMeta) || void 0 === vQ ? void 0 : vQ.overrides;
-      nQ(uQ) || (mQ.sessionMeta.overrides = uQ);
-      const HQ = null === FQ || void 0 === FQ ? void 0 : FQ.sessionId;
-      return null != HQ && (mQ.sessionMeta.attributes.previousSession = HQ), mQ
+        Mk = null !== (bk = null === (rk = ik.metas.value.session) || void 0 === rk ? void 0 : rk.overrides) && void 0 !== bk ? bk : null === ek || void 0 === ek || null === (Pk = ek.sessionMeta) || void 0 === Pk ? void 0 : Pk.overrides;
+      Ok(Mk) || (mk.sessionMeta.overrides = Mk);
+      const Kk = null === ek || void 0 === ek ? void 0 : ek.sessionId;
+      return null != Kk && (mk.sessionMeta.attributes.previousSession = Kk), mk
     }
 
-    function NF(QQ) {
+    function Qe(kk) {
       let {
-        fetchUserSession: FQ,
-        storeUserSession: wQ
-      } = QQ, LQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : AQ, qQ = !1;
-      return function(QQ) {
-        if (qQ) return;
-        const oQ = QQ.session,
-          DQ = FQ();
-        let kQ = null === oQ || void 0 === oQ ? void 0 : oQ.id;
-        const vQ = null === oQ || void 0 === oQ ? void 0 : oQ.attributes,
-          mQ = null === oQ || void 0 === oQ ? void 0 : oQ.overrides,
-          uQ = null === DQ || void 0 === DQ ? void 0 : DQ.sessionMeta,
-          HQ = null === uQ || void 0 === uQ ? void 0 : uQ.overrides,
-          bQ = !!mQ && !MF(mQ, HQ),
-          YQ = !!vQ && !MF(vQ, null === uQ || void 0 === uQ ? void 0 : uQ.attributes);
-        if (oQ && kQ !== (null === DQ || void 0 === DQ ? void 0 : DQ.sessionId) || YQ || bQ) {
-          var xQ, AQ;
-          const QQ = null != DQ && kQ === DQ.sessionId,
-            FQ = UF(QQ ? DQ : OF({
-              sessionId: kQ,
-              isSampled: HF(LQ)
-            }, LQ), DQ, LQ),
-            oQ = null === DQ || void 0 === DQ || null === (xQ = DQ.sessionMeta) || void 0 === xQ || null === (xQ = xQ.attributes) || void 0 === xQ ? void 0 : xQ.previousSession;
-          QQ && null != oQ && oQ !== FQ.sessionId && (FQ.sessionMeta.attributes.previousSession = oQ), (null === (AQ = FQ.sessionMeta.attributes) || void 0 === AQ ? void 0 : AQ.previousSession) === FQ.sessionId && delete FQ.sessionMeta.attributes.previousSession, wQ(FQ),
-            function(QQ, FQ) {
-              let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var qQ, oQ, DQ;
-              if (!FQ) return;
-              const kQ = wQ.serviceName,
-                vQ = null !== (qQ = null !== (oQ = LQ.serviceName) && void 0 !== oQ ? oQ : null === (DQ = QQ.metas.value.app) || void 0 === DQ ? void 0 : DQ.name) && void 0 !== qQ ? qQ : "";
-              kQ && kQ !== vQ && QQ.api.pushEvent(WF, {
-                serviceName: kQ,
-                previousServiceName: vQ
+        fetchUserSession: ek,
+        storeUserSession: ik
+      } = kk, Dk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hk, fk = !1;
+      return function(kk) {
+        if (fk) return;
+        const Sk = kk.session,
+          bk = ek();
+        let rk = null === Sk || void 0 === Sk ? void 0 : Sk.id;
+        const Pk = null === Sk || void 0 === Sk ? void 0 : Sk.attributes,
+          mk = null === Sk || void 0 === Sk ? void 0 : Sk.overrides,
+          Mk = null === bk || void 0 === bk ? void 0 : bk.sessionMeta,
+          Kk = null === Mk || void 0 === Mk ? void 0 : Mk.overrides,
+          xk = !!mk && !ye(mk, Kk),
+          nk = !!Pk && !ye(Pk, null === Mk || void 0 === Mk ? void 0 : Mk.attributes);
+        if (Sk && rk !== (null === bk || void 0 === bk ? void 0 : bk.sessionId) || nk || xk) {
+          var Uk, Hk;
+          const kk = null != bk && rk === bk.sessionId,
+            ek = ze(kk ? bk : Fe({
+              sessionId: rk,
+              isSampled: xe(Dk)
+            }, Dk), bk, Dk),
+            Sk = null === bk || void 0 === bk || null === (Uk = bk.sessionMeta) || void 0 === Uk || null === (Uk = Uk.attributes) || void 0 === Uk ? void 0 : Uk.previousSession;
+          kk && null != Sk && Sk !== ek.sessionId && (ek.sessionMeta.attributes.previousSession = Sk), (null === (Hk = ek.sessionMeta.attributes) || void 0 === Hk ? void 0 : Hk.previousSession) === ek.sessionId && delete ek.sessionMeta.attributes.previousSession, ik(ek),
+            function(kk, ek) {
+              let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var fk, Sk, bk;
+              if (!ek) return;
+              const rk = ik.serviceName,
+                Pk = null !== (fk = null !== (Sk = Dk.serviceName) && void 0 !== Sk ? Sk : null === (bk = kk.metas.value.app) || void 0 === bk ? void 0 : bk.name) && void 0 !== fk ? fk : "";
+              rk && rk !== Pk && kk.api.pushEvent(de, {
+                serviceName: rk,
+                previousServiceName: Pk
               })
-            }(LQ, bQ, mQ, HQ), qQ = !0;
+            }(Dk, xk, mk, Kk), fk = !0;
           try {
-            LQ.api.setSession(FQ.sessionMeta)
+            Dk.api.setSession(ek.sessionMeta)
           } finally {
-            qQ = !1
+            fk = !1
           }
         }
       }
     }
 
-    function TF(QQ) {
-      const FQ = {};
-      for (const wQ of Object.keys(QQ)) {
-        const LQ = QQ[wQ];
-        void 0 !== LQ && (FQ[wQ] = LQ)
+    function ve(kk) {
+      const ek = {};
+      for (const ik of Object.keys(kk)) {
+        const Dk = kk[ik];
+        void 0 !== Dk && (ek[ik] = Dk)
       }
-      return FQ
+      return ek
     }
 
-    function KF() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== QQ && void 0 !== QQ ? QQ : {}, function() {
-        const QQ = new WeakSet;
-        return function(FQ, wQ) {
-          if (OQ(wQ) && null !== wQ) {
-            if (QQ.has(wQ)) return null;
-            QQ.add(wQ)
+    function Ee() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== kk && void 0 !== kk ? kk : {}, function() {
+        const kk = new WeakSet;
+        return function(ek, ik) {
+          if (Vk(ik) && null !== ik) {
+            if (kk.has(ik)) return null;
+            kk.add(ik)
           }
-          return wQ
+          return ik
         }
       }())
     }
 
-    function zF() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const FQ = {};
-      for (const [wQ, LQ] of Object.entries(QQ)) FQ[wQ] = OQ(LQ) && null !== LQ ? KF(LQ) : String(LQ);
-      return FQ
+    function he() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const ek = {};
+      for (const [ik, Dk] of Object.entries(kk)) ek[ik] = Vk(Dk) && null !== Dk ? Ee(Dk) : String(Dk);
+      return ek
     }
-    var lF = class QQ {
+    var ae = class kk {
       constructor() {
-        var FQ = this;
-        let wQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AQ;
-        this.context = wQ, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = QQ => {
+        var ek = this;
+        let ik = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Hk;
+        this.context = ik, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = kk => {
           this.adopting = !0;
           try {
-            var FQ;
-            null === (FQ = this.context.api) || void 0 === FQ || FQ.setSession(QQ)
+            var ek;
+            null === (ek = this.context.api) || void 0 === ek || ek.setSession(kk)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: QQ = !0
+            refreshActivity: kk = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return FQ.updateUserSession({
-            refreshActivity: QQ
+          return ek.updateUserSession({
+            refreshActivity: kk
           })
-        }, this.recordActivity = IF({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession,
-          updateInterval: kQ
-        }), this.updateUserSession = rF({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession,
+        }, this.recordActivity = Ie({
+          fetchUserSession: kk.fetchUserSession,
+          storeUserSession: kk.storeUserSession,
+          updateInterval: rk
+        }), this.updateUserSession = qe({
+          fetchUserSession: kk.fetchUserSession,
+          storeUserSession: kk.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: kQ
-        }, wQ), this.init()
+          updateInterval: rk
+        }, ik), this.init()
       }
       static removeUserSession() {
-        wF(qQ, QQ.storageTypeLocal)
+        De(fk, kk.storageTypeLocal)
       }
-      static storeUserSession(FQ) {
-        FF(qQ, KF(FQ), QQ.storageTypeLocal)
+      static storeUserSession(ek) {
+        ie(fk, Ee(ek), kk.storageTypeLocal)
       }
       static fetchUserSession() {
-        const FQ = QF(qQ, QQ.storageTypeLocal);
-        return FQ ? JSON.parse(FQ) : null
+        const ek = ee(fk, kk.storageTypeLocal);
+        return ek ? JSON.parse(ek) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var QQ;
+            var kk;
             this.updateSession({
               refreshActivity: !1
             });
-            const FQ = null === (QQ = this.context.api) || void 0 === QQ || null === (QQ = QQ.getSession()) || void 0 === QQ ? void 0 : QQ.id;
-            FQ && this.recordActivity(FQ)
+            const ek = null === (kk = this.context.api) || void 0 === kk || null === (kk = kk.getSession()) || void 0 === kk ? void 0 : kk.id;
+            ek && this.recordActivity(ek)
           }
-        })), this.context.metas.addListener(NF({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession
+        })), this.context.metas.addListener(Qe({
+          fetchUserSession: kk.fetchUserSession,
+          storeUserSession: kk.storeUserSession
         }, this.context))
       }
     };
-    lF.storageTypeLocal = BQ;
-    var jF = class QQ {
+    ae.storageTypeLocal = Jk;
+    var We = class kk {
       constructor() {
-        var FQ = this;
-        let wQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AQ;
-        this.context = wQ, this.isAdopting = () => !1, this.updateSession = function() {
+        var ek = this;
+        let ik = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Hk;
+        this.context = ik, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: QQ = !0
+            refreshActivity: kk = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return FQ.updateUserSession({
-            refreshActivity: QQ
+          return ek.updateUserSession({
+            refreshActivity: kk
           })
-        }, this.recordActivity = IF({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession,
-          updateInterval: kQ
-        }), this.updateUserSession = rF({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession,
-          updateInterval: kQ
-        }, wQ), this.init()
+        }, this.recordActivity = Ie({
+          fetchUserSession: kk.fetchUserSession,
+          storeUserSession: kk.storeUserSession,
+          updateInterval: rk
+        }), this.updateUserSession = qe({
+          fetchUserSession: kk.fetchUserSession,
+          storeUserSession: kk.storeUserSession,
+          updateInterval: rk
+        }, ik), this.init()
       }
       static removeUserSession() {
-        wF(qQ, QQ.storageTypeSession)
+        De(fk, kk.storageTypeSession)
       }
-      static storeUserSession(FQ) {
-        FF(qQ, KF(FQ), QQ.storageTypeSession)
+      static storeUserSession(ek) {
+        ie(fk, Ee(ek), kk.storageTypeSession)
       }
       static fetchUserSession() {
-        const FQ = QF(qQ, QQ.storageTypeSession);
-        return FQ ? JSON.parse(FQ) : null
+        const ek = ee(fk, kk.storageTypeSession);
+        return ek ? JSON.parse(ek) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var QQ;
+            var kk;
             this.updateSession({
               refreshActivity: !1
             });
-            const FQ = null === (QQ = this.context.api) || void 0 === QQ || null === (QQ = QQ.getSession()) || void 0 === QQ ? void 0 : QQ.id;
-            FQ && this.recordActivity(FQ)
+            const ek = null === (kk = this.context.api) || void 0 === kk || null === (kk = kk.getSession()) || void 0 === kk ? void 0 : kk.id;
+            ek && this.recordActivity(ek)
           }
-        })), this.context.metas.addListener(NF({
-          fetchUserSession: QQ.fetchUserSession,
-          storeUserSession: QQ.storeUserSession
+        })), this.context.metas.addListener(Qe({
+          fetchUserSession: kk.fetchUserSession,
+          storeUserSession: kk.storeUserSession
         }, this.context))
       }
     };
-    jF.storageTypeSession = yQ;
-    const aF = new WeakMap;
+    We.storageTypeSession = Rk;
+    const te = new WeakMap;
 
-    function XF(QQ) {
-      let FQ = aF.get(QQ);
-      if (!FQ) {
-        let wQ = [],
-          LQ = [];
-        FQ = {
-          addSessionUpdateListener: QQ => {
-            wQ.push(QQ)
+    function Xe(kk) {
+      let ek = te.get(kk);
+      if (!ek) {
+        let ik = [],
+          Dk = [];
+        ek = {
+          addSessionUpdateListener: kk => {
+            ik.push(kk)
           },
-          removeSessionUpdateListener: QQ => {
-            wQ = wQ.filter((FQ => FQ !== QQ))
+          removeSessionUpdateListener: kk => {
+            ik = ik.filter((ek => ek !== kk))
           },
-          notifySessionUpdate: QQ => {
-            wQ.forEach((FQ => FQ(QQ)))
+          notifySessionUpdate: kk => {
+            ik.forEach((ek => ek(kk)))
           },
-          shouldCapture: () => LQ.every((QQ => QQ())),
-          addCaptureFilter: QQ => {
-            LQ.push(QQ)
+          shouldCapture: () => Dk.every((kk => kk())),
+          addCaptureFilter: kk => {
+            Dk.push(kk)
           },
-          removeCaptureFilter: QQ => {
-            LQ = LQ.filter((FQ => FQ !== QQ))
+          removeCaptureFilter: kk => {
+            Dk = Dk.filter((ek => ek !== kk))
           }
-        }, aF.set(QQ, FQ)
+        }, te.set(kk, ek)
       }
-      return FQ
+      return ek
     }
-    var fF = class {
-      constructor(QQ, FQ, wQ) {
-        this.metas = QQ, this.transports = FQ, this.onActivate = wQ, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = QQ => {
-          var FQ, wQ, LQ;
-          const qQ = this.pending;
-          var oQ, DQ;
-          if ("overrides" === QQ.type) return void(this.pending = {
-            reset: null !== (oQ = null === qQ || void 0 === qQ ? void 0 : qQ.reset) && void 0 !== oQ && oQ,
-            inheritOverrides: null === (DQ = null === qQ || void 0 === qQ ? void 0 : qQ.inheritOverrides) || void 0 === DQ || DQ,
-            session: uF(uF({}, null === qQ || void 0 === qQ ? void 0 : qQ.session), {}, {
-              overrides: uF(uF({}, null === qQ || void 0 === qQ ? void 0 : qQ.session.overrides), QQ.overrides)
+    var Be = class {
+      constructor(kk, ek, ik) {
+        this.metas = kk, this.transports = ek, this.onActivate = ik, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = kk => {
+          var ek, ik, Dk;
+          const fk = this.pending;
+          var Sk, bk;
+          if ("overrides" === kk.type) return void(this.pending = {
+            reset: null !== (Sk = null === fk || void 0 === fk ? void 0 : fk.reset) && void 0 !== Sk && Sk,
+            inheritOverrides: null === (bk = null === fk || void 0 === fk ? void 0 : fk.inheritOverrides) || void 0 === bk || bk,
+            session: Ke(Ke({}, null === fk || void 0 === fk ? void 0 : fk.session), {}, {
+              overrides: Ke(Ke({}, null === fk || void 0 === fk ? void 0 : fk.session.overrides), kk.overrides)
             })
           });
-          const kQ = QQ.session,
-            vQ = nQ(kQ) || null != kQ && "id" in kQ && !kQ.id,
-            mQ = null !== (FQ = null === kQ || void 0 === kQ ? void 0 : kQ.overrides) && void 0 !== FQ ? FQ : null === qQ || void 0 === qQ ? void 0 : qQ.session.overrides;
+          const rk = kk.session,
+            Pk = Ok(rk) || null != rk && "id" in rk && !rk.id,
+            mk = null !== (ek = null === rk || void 0 === rk ? void 0 : rk.overrides) && void 0 !== ek ? ek : null === fk || void 0 === fk ? void 0 : fk.session.overrides;
           this.pending = {
-            reset: vQ || !(null === kQ || void 0 === kQ ? void 0 : kQ.id) && null !== (wQ = null === qQ || void 0 === qQ ? void 0 : qQ.reset) && void 0 !== wQ && wQ,
-            inheritOverrides: !(!QQ.overrides && void 0 !== (null === kQ || void 0 === kQ ? void 0 : kQ.overrides)) && (null === (LQ = null === qQ || void 0 === qQ ? void 0 : qQ.inheritOverrides) || void 0 === LQ || LQ),
+            reset: Pk || !(null === rk || void 0 === rk ? void 0 : rk.id) && null !== (ik = null === fk || void 0 === fk ? void 0 : fk.reset) && void 0 !== ik && ik,
+            inheritOverrides: !(!kk.overrides && void 0 !== (null === rk || void 0 === rk ? void 0 : rk.overrides)) && (null === (Dk = null === fk || void 0 === fk ? void 0 : fk.inheritOverrides) || void 0 === Dk || Dk),
             session: {
-              id: null === kQ || void 0 === kQ ? void 0 : kQ.id,
-              attributes: (null === kQ || void 0 === kQ ? void 0 : kQ.attributes) && uF({}, kQ.attributes),
-              overrides: QQ.overrides ? uF(uF({}, null === qQ || void 0 === qQ ? void 0 : qQ.session.overrides), QQ.overrides) : mQ && uF({}, mQ)
+              id: null === rk || void 0 === rk ? void 0 : rk.id,
+              attributes: (null === rk || void 0 === rk ? void 0 : rk.attributes) && Ke({}, rk.attributes),
+              overrides: kk.overrides ? Ke(Ke({}, null === fk || void 0 === fk ? void 0 : fk.session.overrides), kk.overrides) : mk && Ke({}, mk)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var QQ, FQ;
-        this.waiting = !0, XF(this.metas).addSessionUpdateListener(this.recordUpdate), XF(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (QQ = (FQ = this.metas).addCaptureListener) || void 0 === QQ || QQ.call(FQ, this.activate), this.activate()
+        var kk, ek;
+        this.waiting = !0, Xe(this.metas).addSessionUpdateListener(this.recordUpdate), Xe(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (kk = (ek = this.metas).addCaptureListener) || void 0 === kk || kk.call(ek, this.activate), this.activate()
       }
       destroy() {
-        var QQ, FQ;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), XF(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (QQ = (FQ = this.metas).removeCaptureListener) || void 0 === QQ || QQ.call(FQ, this.activate), XF(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var kk, ek;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), Xe(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (kk = (ek = this.metas).removeCaptureListener) || void 0 === kk || kk.call(ek, this.activate), Xe(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function VF(QQ) {
-      return (null === QQ || void 0 === QQ ? void 0 : QQ.persistent) ? lF : jF
+    function ce(kk) {
+      return (null === kk || void 0 === kk ? void 0 : kk.persistent) ? ae : We
     }
 
-    function hF() {}
-    let JF = function(QQ) {
-      return QQ[QQ.OFF = 0] = "OFF", QQ[QQ.ERROR = 1] = "ERROR", QQ[QQ.WARN = 2] = "WARN", QQ[QQ.INFO = 3] = "INFO", QQ[QQ.VERBOSE = 4] = "VERBOSE", QQ
+    function Te() {}
+    let oe = function(kk) {
+      return kk[kk.OFF = 0] = "OFF", kk[kk.ERROR = 1] = "ERROR", kk[kk.WARN = 2] = "WARN", kk[kk.INFO = 3] = "INFO", kk[kk.VERBOSE = 4] = "VERBOSE", kk
     }({});
-    const EF = {
-        debug: hF,
-        error: hF,
-        info: hF,
+    const Ze = {
+        debug: Te,
+        error: Te,
+        info: Te,
         prefix: "Faro",
-        warn: hF
+        warn: Te
       },
-      nF = 1;
+      Oe = 1;
 
-    function gF(QQ) {
-      return gF = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(QQ) {
-        return typeof QQ
-      } : function(QQ) {
-        return QQ && "function" == typeof Symbol && QQ.constructor === Symbol && QQ !== Symbol.prototype ? "symbol" : typeof QQ
-      }, gF(QQ)
+    function ge(kk) {
+      return ge = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(kk) {
+        return typeof kk
+      } : function(kk) {
+        return kk && "function" == typeof Symbol && kk.constructor === Symbol && kk !== Symbol.prototype ? "symbol" : typeof kk
+      }, ge(kk)
     }
 
-    function PF(QQ) {
-      var FQ = function(QQ, FQ) {
-        if ("object" != gF(QQ) || !QQ) return QQ;
-        var wQ = QQ[Symbol.toPrimitive];
-        if (void 0 !== wQ) {
-          var LQ = wQ.call(QQ, FQ || "default");
-          if ("object" != gF(LQ)) return LQ;
+    function Ge(kk) {
+      var ek = function(kk, ek) {
+        if ("object" != ge(kk) || !kk) return kk;
+        var ik = kk[Symbol.toPrimitive];
+        if (void 0 !== ik) {
+          var Dk = ik.call(kk, ek || "default");
+          if ("object" != ge(Dk)) return Dk;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === FQ ? String : Number)(QQ)
-      }(QQ, "string");
-      return "symbol" == gF(FQ) ? FQ : FQ + ""
+        return ("string" === ek ? String : Number)(kk)
+      }(kk, "string");
+      return "symbol" == ge(ek) ? ek : ek + ""
     }
 
-    function ZF(QQ, FQ, wQ) {
-      return (FQ = PF(FQ)) in QQ ? Object.defineProperty(QQ, FQ, {
-        value: wQ,
+    function Ne(kk, ek, ik) {
+      return (ek = Ge(ek)) in kk ? Object.defineProperty(kk, ek, {
+        value: ik,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : QQ[FQ] = wQ, QQ
+      }) : kk[ek] = ik, kk
     }
 
-    function yF(QQ, FQ) {
-      var wQ = Object.keys(QQ);
+    function Re(kk, ek) {
+      var ik = Object.keys(kk);
       if (Object.getOwnPropertySymbols) {
-        var LQ = Object.getOwnPropertySymbols(QQ);
-        FQ && (LQ = LQ.filter((function(FQ) {
-          return Object.getOwnPropertyDescriptor(QQ, FQ).enumerable
-        }))), wQ.push.apply(wQ, LQ)
+        var Dk = Object.getOwnPropertySymbols(kk);
+        ek && (Dk = Dk.filter((function(ek) {
+          return Object.getOwnPropertyDescriptor(kk, ek).enumerable
+        }))), ik.push.apply(ik, Dk)
       }
-      return wQ
+      return ik
     }
 
-    function BF(QQ) {
-      for (var FQ = 1; FQ < arguments.length; FQ++) {
-        var wQ = null != arguments[FQ] ? arguments[FQ] : {};
-        FQ % 2 ? yF(Object(wQ), !0).forEach((function(FQ) {
-          ZF(QQ, FQ, wQ[FQ])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(QQ, Object.getOwnPropertyDescriptors(wQ)) : yF(Object(wQ)).forEach((function(FQ) {
-          Object.defineProperty(QQ, FQ, Object.getOwnPropertyDescriptor(wQ, FQ))
+    function Je(kk) {
+      for (var ek = 1; ek < arguments.length; ek++) {
+        var ik = null != arguments[ek] ? arguments[ek] : {};
+        ek % 2 ? Re(Object(ik), !0).forEach((function(ek) {
+          Ne(kk, ek, ik[ek])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(kk, Object.getOwnPropertyDescriptors(ik)) : Re(Object(ik)).forEach((function(ek) {
+          Object.defineProperty(kk, ek, Object.getOwnPropertyDescriptor(ik, ek))
         }))
       }
-      return QQ
+      return kk
     }
-    const dF = BF({}, console);
-    var Qw = class {
+    const ki = Je({}, console);
+    var ei = class {
         constructor() {
-          this.unpatchedConsole = dF, this.internalLogger = EF, this.config = {}, this.metas = {}
+          this.unpatchedConsole = ki, this.internalLogger = Ze, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var QQ = arguments.length, FQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) FQ[wQ] = arguments[wQ];
-          this.internalLogger.debug(`${this.name}\n`, ...FQ)
+          for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
+          this.internalLogger.debug(`${this.name}\n`, ...ek)
         }
         logInfo() {
-          for (var QQ = arguments.length, FQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) FQ[wQ] = arguments[wQ];
-          this.internalLogger.info(`${this.name}\n`, ...FQ)
+          for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
+          this.internalLogger.info(`${this.name}\n`, ...ek)
         }
         logWarn() {
-          for (var QQ = arguments.length, FQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) FQ[wQ] = arguments[wQ];
-          this.internalLogger.warn(`${this.name}\n`, ...FQ)
+          for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
+          this.internalLogger.warn(`${this.name}\n`, ...ek)
         }
         logError() {
-          for (var QQ = arguments.length, FQ = new Array(QQ), wQ = 0; wQ < QQ; wQ++) FQ[wQ] = arguments[wQ];
-          this.internalLogger.error(`${this.name}\n`, ...FQ)
+          for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
+          this.internalLogger.error(`${this.name}\n`, ...ek)
         }
       },
-      Fw = class extends Qw {
+      ii = class extends ei {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const ww = "2.12.1";
-    var Lw = class extends Fw {
+    const Di = "2.12.1";
+    var fi = class extends ii {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = ww, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = Di, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(QQ) {
-        var FQ;
-        const wQ = QQ.session;
-        if (wQ && wQ.id !== (null === (FQ = this.notifiedSession) || void 0 === FQ ? void 0 : FQ.id)) {
-          var LQ;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = wQ);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (LQ = wQ.attributes) || void 0 === LQ ? void 0 : LQ.previousSession)) return this.api.pushEvent(iF, {}, void 0, {
+      sendSessionStartEvent(kk) {
+        var ek;
+        const ik = kk.session;
+        if (ik && ik.id !== (null === (ek = this.notifiedSession) || void 0 === ek ? void 0 : ek.id)) {
+          var Dk;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = ik);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (Dk = ik.attributes) || void 0 === Dk ? void 0 : Dk.previousSession)) return this.api.pushEvent(se, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = wQ);
-          this.notifiedSession = wQ, this.api.pushEvent(CF, {}, void 0, {
+          }), void(this.notifiedSession = ik);
+          this.notifiedSession = ik, this.api.pushEvent(Ae, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(QQ, FQ, wQ) {
-        const LQ = null === wQ || void 0 === wQ ? void 0 : wQ.session;
-        let qQ, oQ, DQ = QQ.fetchUserSession();
-        if (FQ.persistent && FQ.maxSessionPersistenceTime && DQ) {
-          const QQ = bF();
-          DQ.lastActivity < QQ - FQ.maxSessionPersistenceTime && (lF.removeUserSession(), DQ = null)
+      createInitialSession(kk, ek, ik) {
+        const Dk = null === ik || void 0 === ik ? void 0 : ik.session;
+        let fk, Sk, bk = kk.fetchUserSession();
+        if (ek.persistent && ek.maxSessionPersistenceTime && bk) {
+          const kk = ne();
+          bk.lastActivity < kk - ek.maxSessionPersistenceTime && (ae.removeUserSession(), bk = null)
         }
-        const kQ = sF(DQ);
-        if ((null === wQ || void 0 === wQ ? void 0 : wQ.reset) || !kQ || (null === LQ || void 0 === LQ ? void 0 : LQ.id) && LQ.id !== (null === DQ || void 0 === DQ ? void 0 : DQ.sessionId)) {
-          var vQ, mQ, uQ, HQ, bQ, YQ;
-          oQ = OF({
-            sessionId: (null === wQ || void 0 === wQ ? void 0 : wQ.reset) ? void 0 : null !== (vQ = null === LQ || void 0 === LQ ? void 0 : LQ.id) && void 0 !== vQ ? vQ : null === (mQ = FQ.session) || void 0 === mQ ? void 0 : mQ.id,
-            isSampled: HF(this)
+        const rk = ue(bk);
+        if ((null === ik || void 0 === ik ? void 0 : ik.reset) || !rk || (null === Dk || void 0 === Dk ? void 0 : Dk.id) && Dk.id !== (null === bk || void 0 === bk ? void 0 : bk.sessionId)) {
+          var Pk, mk, Mk, Kk, xk, nk;
+          Sk = Fe({
+            sessionId: (null === ik || void 0 === ik ? void 0 : ik.reset) ? void 0 : null !== (Pk = null === Dk || void 0 === Dk ? void 0 : Dk.id) && void 0 !== Pk ? Pk : null === (mk = ek.session) || void 0 === mk ? void 0 : mk.id,
+            isSampled: xe(this)
           }, this);
-          const QQ = oQ.sessionId,
-            xQ = wQ && kQ ? null === DQ || void 0 === DQ || null === (uQ = DQ.sessionMeta) || void 0 === uQ ? void 0 : uQ.overrides : void 0,
-            AQ = xQ ? uF(uF({}, null === (HQ = FQ.session) || void 0 === HQ ? void 0 : HQ.overrides), xQ) : null === (bQ = FQ.session) || void 0 === bQ ? void 0 : bQ.overrides;
-          oQ.sessionMeta = uF({
-            id: QQ,
-            attributes: uF({
-              isSampled: oQ.isSampled.toString()
-            }, null === (YQ = FQ.session) || void 0 === YQ ? void 0 : YQ.attributes)
-          }, AQ ? {
-            overrides: AQ
-          } : {}), qQ = CF
+          const kk = Sk.sessionId,
+            Uk = ik && rk ? null === bk || void 0 === bk || null === (Mk = bk.sessionMeta) || void 0 === Mk ? void 0 : Mk.overrides : void 0,
+            Hk = Uk ? Ke(Ke({}, null === (Kk = ek.session) || void 0 === Kk ? void 0 : Kk.overrides), Uk) : null === (xk = ek.session) || void 0 === xk ? void 0 : xk.overrides;
+          Sk.sessionMeta = Ke({
+            id: kk,
+            attributes: Ke({
+              isSampled: Sk.isSampled.toString()
+            }, null === (nk = ek.session) || void 0 === nk ? void 0 : nk.attributes)
+          }, Hk ? {
+            overrides: Hk
+          } : {}), fk = Ae
         } else {
-          var xQ, AQ;
-          const QQ = null === DQ || void 0 === DQ ? void 0 : DQ.sessionId;
-          oQ = OF({
-            sessionId: QQ,
-            isSampled: DQ.isSampled || !1,
-            started: null === DQ || void 0 === DQ ? void 0 : DQ.started
+          var Uk, Hk;
+          const kk = null === bk || void 0 === bk ? void 0 : bk.sessionId;
+          Sk = Fe({
+            sessionId: kk,
+            isSampled: bk.isSampled || !1,
+            started: null === bk || void 0 === bk ? void 0 : bk.started
           }, this);
-          const wQ = null === DQ || void 0 === DQ ? void 0 : DQ.sessionMeta,
-            LQ = uF(uF({}, null === (xQ = FQ.session) || void 0 === xQ ? void 0 : xQ.overrides), null === wQ || void 0 === wQ ? void 0 : wQ.overrides);
-          oQ.sessionMeta = uF(uF({}, FQ.session), {}, {
-            id: QQ,
-            attributes: uF(uF(uF({}, null === (AQ = FQ.session) || void 0 === AQ ? void 0 : AQ.attributes), null === wQ || void 0 === wQ ? void 0 : wQ.attributes), {}, {
-              isSampled: oQ.isSampled.toString()
+          const ik = null === bk || void 0 === bk ? void 0 : bk.sessionMeta,
+            Dk = Ke(Ke({}, null === (Uk = ek.session) || void 0 === Uk ? void 0 : Uk.overrides), null === ik || void 0 === ik ? void 0 : ik.overrides);
+          Sk.sessionMeta = Ke(Ke({}, ek.session), {}, {
+            id: kk,
+            attributes: Ke(Ke(Ke({}, null === (Hk = ek.session) || void 0 === Hk ? void 0 : Hk.attributes), null === ik || void 0 === ik ? void 0 : ik.attributes), {}, {
+              isSampled: Sk.isSampled.toString()
             }),
-            overrides: LQ
-          }), qQ = SF
+            overrides: Dk
+          }), fk = je
         }
-        var tQ;
-        if (LQ && (oQ.sessionMeta = uF(uF({}, oQ.sessionMeta), {}, {
-            attributes: uF(uF(uF({}, null === (tQ = oQ.sessionMeta) || void 0 === tQ ? void 0 : tQ.attributes), LQ.attributes), {}, {
-              isSampled: oQ.isSampled.toString()
+        var wk;
+        if (Dk && (Sk.sessionMeta = Ke(Ke({}, Sk.sessionMeta), {}, {
+            attributes: Ke(Ke(Ke({}, null === (wk = Sk.sessionMeta) || void 0 === wk ? void 0 : wk.attributes), Dk.attributes), {}, {
+              isSampled: Sk.isSampled.toString()
             })
-          }), LQ.overrides)) {
-          const QQ = (null === wQ || void 0 === wQ ? void 0 : wQ.inheritOverrides) ? uF(uF({}, oQ.sessionMeta.overrides), LQ.overrides) : LQ.overrides;
-          Object.keys(QQ).length > 0 ? oQ.sessionMeta.overrides = QQ : delete oQ.sessionMeta.overrides
+          }), Dk.overrides)) {
+          const kk = (null === ik || void 0 === ik ? void 0 : ik.inheritOverrides) ? Ke(Ke({}, Sk.sessionMeta.overrides), Dk.overrides) : Dk.overrides;
+          Object.keys(kk).length > 0 ? Sk.sessionMeta.overrides = kk : delete Sk.sessionMeta.overrides
         }
         return {
-          initialSession: oQ,
-          lifecycleType: qQ
+          initialSession: Sk,
+          lifecycleType: fk
         }
       }
-      registerBeforeSendHook(QQ) {
-        var FQ;
-        this.beforeSendHook = FQ => {
-          var wQ, LQ;
-          const qQ = null === (wQ = FQ.meta.session) || void 0 === wQ ? void 0 : wQ.id;
-          qQ && !this.transports.isPaused() && QQ(qQ);
-          const oQ = null === (LQ = FQ.meta.session) || void 0 === LQ ? void 0 : LQ.attributes;
-          if (oQ && "true" === (null === oQ || void 0 === oQ ? void 0 : oQ.isSampled)) {
-            var DQ;
-            let QQ = JSON.parse(JSON.stringify(FQ));
-            const wQ = null === (DQ = QQ.meta.session) || void 0 === DQ ? void 0 : DQ.attributes;
-            var kQ;
-            if (null === wQ || void 0 === wQ || delete wQ.isSampled, 0 === Object.keys(null !== wQ && void 0 !== wQ ? wQ : {}).length) null === (kQ = QQ.meta.session) || void 0 === kQ || delete kQ.attributes;
-            return QQ
+      registerBeforeSendHook(kk) {
+        var ek;
+        this.beforeSendHook = ek => {
+          var ik, Dk;
+          const fk = null === (ik = ek.meta.session) || void 0 === ik ? void 0 : ik.id;
+          fk && !this.transports.isPaused() && kk(fk);
+          const Sk = null === (Dk = ek.meta.session) || void 0 === Dk ? void 0 : Dk.attributes;
+          if (Sk && "true" === (null === Sk || void 0 === Sk ? void 0 : Sk.isSampled)) {
+            var bk;
+            let kk = JSON.parse(JSON.stringify(ek));
+            const ik = null === (bk = kk.meta.session) || void 0 === bk ? void 0 : bk.attributes;
+            var rk;
+            if (null === ik || void 0 === ik || delete ik.isSampled, 0 === Object.keys(null !== ik && void 0 !== ik ? ik : {}).length) null === (rk = kk.meta.session) || void 0 === rk || delete rk.attributes;
+            return kk
           }
           return null
-        }, null === (FQ = this.transports) || void 0 === FQ || FQ.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (ek = this.transports) || void 0 === ek || ek.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var QQ;
+        var kk;
         this.logDebug("init session instrumentation");
-        const FQ = document.prerendering;
-        var wQ;
-        if ((null === (QQ = this.config.sessionTracking) || void 0 === QQ ? void 0 : QQ.enabled) && (FQ || this.prerenderSession)) return null !== (wQ = this.prerenderSession) && void 0 !== wQ || (this.prerenderSession = new fF(this.metas, this.transports, (QQ => {
-          this.prerenderSession = void 0, this.initializeSession(QQ)
+        const ek = document.prerendering;
+        var ik;
+        if ((null === (kk = this.config.sessionTracking) || void 0 === kk ? void 0 : kk.enabled) && (ek || this.prerenderSession)) return null !== (ik = this.prerenderSession) && void 0 !== ik || (this.prerenderSession = new Be(this.metas, this.transports, (kk => {
+          this.prerenderSession = void 0, this.initializeSession(kk)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(QQ) {
-        const FQ = this.config.sessionTracking;
-        if (null === FQ || void 0 === FQ ? void 0 : FQ.enabled) {
-          var wQ, LQ;
-          const qQ = VF(FQ),
-            oQ = new qQ(this);
-          this.isAdoptingSession = oQ.isAdopting, this.registerBeforeSendHook(oQ.recordActivity);
+      initializeSession(kk) {
+        const ek = this.config.sessionTracking;
+        if (null === ek || void 0 === ek ? void 0 : ek.enabled) {
+          var ik, Dk;
+          const fk = ce(ek),
+            Sk = new fk(this);
+          this.isAdoptingSession = Sk.isAdopting, this.registerBeforeSendHook(Sk.recordActivity);
           const {
-            initialSession: DQ,
-            lifecycleType: kQ
-          } = this.createInitialSession(qQ, FQ, QQ);
-          qQ.storeUserSession(DQ);
-          const vQ = DQ.sessionMeta;
-          this.notifiedSession = vQ, this.api.setSession(vQ), this.captureListener = () => {
-            this.transports.isPaused() || oQ.updateSession({
+            initialSession: bk,
+            lifecycleType: rk
+          } = this.createInitialSession(fk, ek, kk);
+          fk.storeUserSession(bk);
+          const Pk = bk.sessionMeta;
+          this.notifiedSession = Pk, this.api.setSession(Pk), this.captureListener = () => {
+            this.transports.isPaused() || Sk.updateSession({
               refreshActivity: !1
             })
-          }, null === (wQ = (LQ = this.metas).addCaptureListener) || void 0 === wQ || wQ.call(LQ, this.captureListener), kQ === CF && this.api.pushEvent(CF, {}, void 0, {
+          }, null === (ik = (Dk = this.metas).addCaptureListener) || void 0 === ik || ik.call(Dk, this.captureListener), rk === Ae && this.api.pushEvent(Ae, {}, void 0, {
             skipDedupe: !0
-          }), kQ === SF && this.api.pushEvent(SF, {}, void 0, {
+          }), rk === je && this.api.pushEvent(je, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var QQ, FQ, wQ;
-        (null === (QQ = this.prerenderSession) || void 0 === QQ || QQ.destroy(), this.captureListener) && (null === (FQ = (wQ = this.metas).removeCaptureListener) || void 0 === FQ || FQ.call(wQ, this.captureListener), this.captureListener = void 0);
+        var kk, ek, ik;
+        (null === (kk = this.prerenderSession) || void 0 === kk || kk.destroy(), this.captureListener) && (null === (ek = (ik = this.metas).removeCaptureListener) || void 0 === ek || ek.call(ik, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function qw(QQ, FQ, wQ, LQ) {
-      const qQ = {
-        filename: QQ || document.location.href,
-        function: FQ || "?"
+    function Si(kk, ek, ik, Dk) {
+      const fk = {
+        filename: kk || document.location.href,
+        function: ek || "?"
       };
-      return void 0 !== wQ && (qQ.lineno = wQ), void 0 !== LQ && (qQ.colno = LQ), qQ
+      return void 0 !== ik && (fk.lineno = ik), void 0 !== Dk && (fk.colno = Dk), fk
     }
-    const ow = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      Dw = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      kw = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      vw = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      mw = "safari-extension",
-      uw = "safari-web-extension",
-      Hw = /Minified React error #\d+;/i;
+    const bi = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      ri = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      Pi = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      mi = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      Mi = "safari-extension",
+      Ki = "safari-web-extension",
+      xi = /Minified React error #\d+;/i;
 
-    function bw(QQ, FQ) {
-      const wQ = null === QQ || void 0 === QQ ? void 0 : QQ.includes(mw),
-        LQ = !wQ && (null === QQ || void 0 === QQ ? void 0 : QQ.includes("safari-web-extension"));
-      return wQ || LQ ? [(null === QQ || void 0 === QQ ? void 0 : QQ.includes("@")) ? QQ.split("@")[0] : QQ, wQ ? `${mw}:${FQ}` : `${uw}:${FQ}`] : [QQ, FQ]
+    function ni(kk, ek) {
+      const ik = null === kk || void 0 === kk ? void 0 : kk.includes(Mi),
+        Dk = !ik && (null === kk || void 0 === kk ? void 0 : kk.includes("safari-web-extension"));
+      return ik || Dk ? [(null === kk || void 0 === kk ? void 0 : kk.includes("@")) ? kk.split("@")[0] : kk, ik ? `${Mi}:${ek}` : `${Ki}:${ek}`] : [kk, ek]
     }
-    const Yw = 1024;
+    const Ui = 1024;
 
-    function xw(QQ) {
-      let FQ = [];
-      QQ.stacktrace ? FQ = QQ.stacktrace.split("\n").filter(((QQ, FQ) => FQ % 2 === 0)) : QQ.stack && (FQ = QQ.stack.split("\n"));
-      const wQ = FQ.reduce(((FQ, wQ, LQ) => {
-        if (wQ.length > Yw) return FQ;
-        let qQ, oQ, DQ, kQ, vQ;
-        if (qQ = ow.exec(wQ)) {
-          if (oQ = qQ[1], DQ = qQ[2], kQ = qQ[3], vQ = qQ[4], null === DQ || void 0 === DQ ? void 0 : DQ.startsWith("eval")) {
-            const QQ = Dw.exec(DQ);
-            QQ && (DQ = QQ[1], kQ = QQ[2], vQ = QQ[3])
+    function Hi(kk) {
+      let ek = [];
+      kk.stacktrace ? ek = kk.stacktrace.split("\n").filter(((kk, ek) => ek % 2 === 0)) : kk.stack && (ek = kk.stack.split("\n"));
+      const ik = ek.reduce(((ek, ik, Dk) => {
+        if (ik.length > Ui) return ek;
+        let fk, Sk, bk, rk, Pk;
+        if (fk = bi.exec(ik)) {
+          if (Sk = fk[1], bk = fk[2], rk = fk[3], Pk = fk[4], null === bk || void 0 === bk ? void 0 : bk.startsWith("eval")) {
+            const kk = ri.exec(bk);
+            kk && (bk = kk[1], rk = kk[2], Pk = kk[3])
           }
-          DQ = (null === DQ || void 0 === DQ ? void 0 : DQ.startsWith("address at ")) ? DQ.substring(11) : DQ, [oQ, DQ] = bw(oQ, DQ)
-        } else if (qQ = kw.exec(wQ)) {
-          if (oQ = qQ[1], DQ = qQ[3], kQ = qQ[4], vQ = qQ[5], DQ && DQ.includes(" > eval")) {
-            const QQ = vw.exec(DQ);
-            QQ && (oQ = oQ || "eval", DQ = QQ[1], kQ = QQ[2])
-          } else 0 === LQ && !vQ && SQ(QQ.columnNumber) && (vQ = String(QQ.columnNumber + 1));
-          [oQ, DQ] = bw(oQ, DQ)
+          bk = (null === bk || void 0 === bk ? void 0 : bk.startsWith("address at ")) ? bk.substring(11) : bk, [Sk, bk] = ni(Sk, bk)
+        } else if (fk = Pi.exec(ik)) {
+          if (Sk = fk[1], bk = fk[3], rk = fk[4], Pk = fk[5], bk && bk.includes(" > eval")) {
+            const kk = mi.exec(bk);
+            kk && (Sk = Sk || "eval", bk = kk[1], rk = kk[2])
+          } else 0 === Dk && !Pk && Ak(kk.columnNumber) && (Pk = String(kk.columnNumber + 1));
+          [Sk, bk] = ni(Sk, bk)
         }
-        return (DQ || oQ) && FQ.push(qw(DQ, oQ, kQ ? Number(kQ) : void 0, vQ ? Number(vQ) : void 0)), FQ
+        return (bk || Sk) && ek.push(Si(bk, Sk, rk ? Number(rk) : void 0, Pk ? Number(Pk) : void 0)), ek
       }), []);
-      return Hw.test(QQ.message) ? wQ.slice(1) : wQ
+      return xi.test(kk.message) ? ik.slice(1) : ik
     }
 
-    function Aw(QQ) {
+    function wi(kk) {
       return {
-        frames: xw(QQ)
+        frames: Hi(kk)
       }
     }
-    const tw = "http-request-start",
-      ew = "http-request-end";
-    var Mw = class QQ {
+    const li = "http-request-start",
+      yi = "http-request-end";
+    var Yi = class kk {
       constructor() {
         this.subscribers = []
       }
-      subscribe(QQ) {
-        return this.subscribers.push(QQ), {
-          unsubscribe: () => this.unsubscribe(QQ)
+      subscribe(kk) {
+        return this.subscribers.push(kk), {
+          unsubscribe: () => this.unsubscribe(kk)
         }
       }
-      unsubscribe(QQ) {
-        this.subscribers = this.subscribers.filter((FQ => FQ !== QQ))
+      unsubscribe(kk) {
+        this.subscribers = this.subscribers.filter((ek => ek !== kk))
       }
-      notify(QQ) {
-        this.subscribers.forEach((FQ => FQ(QQ)))
+      notify(kk) {
+        this.subscribers.forEach((ek => ek(kk)))
       }
       first() {
-        const FQ = new QQ,
-          wQ = QQ => {
-            FQ.notify(QQ), LQ.unsubscribe()
+        const ek = new kk,
+          ik = kk => {
+            ek.notify(kk), Dk.unsubscribe()
           },
-          LQ = this.subscribe(wQ),
-          qQ = FQ.unsubscribe.bind(FQ);
-        return this.withUnsubscribeOverride(FQ, qQ, wQ)
+          Dk = this.subscribe(ik),
+          fk = ek.unsubscribe.bind(ek);
+        return this.withUnsubscribeOverride(ek, fk, ik)
       }
-      takeWhile(FQ) {
-        const wQ = new QQ,
-          LQ = QQ => {
-            FQ(QQ) ? wQ.notify(QQ) : wQ.unsubscribe(LQ)
+      takeWhile(ek) {
+        const ik = new kk,
+          Dk = kk => {
+            ek(kk) ? ik.notify(kk) : ik.unsubscribe(Dk)
           };
-        this.subscribe(LQ);
-        const qQ = wQ.unsubscribe.bind(wQ);
-        return this.withUnsubscribeOverride(wQ, qQ, LQ)
+        this.subscribe(Dk);
+        const fk = ik.unsubscribe.bind(ik);
+        return this.withUnsubscribeOverride(ik, fk, Dk)
       }
-      filter(FQ) {
-        const wQ = new QQ,
-          LQ = QQ => {
-            FQ(QQ) && wQ.notify(QQ)
+      filter(ek) {
+        const ik = new kk,
+          Dk = kk => {
+            ek(kk) && ik.notify(kk)
           };
-        this.subscribe(LQ);
-        const qQ = wQ.unsubscribe.bind(wQ);
-        return this.withUnsubscribeOverride(wQ, qQ, LQ)
+        this.subscribe(Dk);
+        const fk = ik.unsubscribe.bind(ik);
+        return this.withUnsubscribeOverride(ik, fk, Dk)
       }
       merge() {
-        const FQ = new QQ,
-          wQ = [];
-        for (var LQ = arguments.length, qQ = new Array(LQ), oQ = 0; oQ < LQ; oQ++) qQ[oQ] = arguments[oQ];
-        qQ.forEach((QQ => {
-          const LQ = QQ.subscribe((QQ => {
-            FQ.notify(QQ)
+        const ek = new kk,
+          ik = [];
+        for (var Dk = arguments.length, fk = new Array(Dk), Sk = 0; Sk < Dk; Sk++) fk[Sk] = arguments[Sk];
+        fk.forEach((kk => {
+          const Dk = kk.subscribe((kk => {
+            ek.notify(kk)
           }));
-          wQ.push(LQ)
+          ik.push(Dk)
         }));
-        const DQ = FQ.unsubscribeAll.bind(FQ);
-        return FQ.unsubscribe = () => {
-          wQ.forEach((QQ => QQ.unsubscribe())), DQ()
-        }, FQ
+        const bk = ek.unsubscribeAll.bind(ek);
+        return ek.unsubscribe = () => {
+          ik.forEach((kk => kk.unsubscribe())), bk()
+        }, ek
       }
-      withUnsubscribeOverride(QQ, FQ, wQ) {
-        return QQ.unsubscribe = QQ => {
-          FQ(QQ), this.unsubscribe(wQ)
-        }, QQ
+      withUnsubscribeOverride(kk, ek, ik) {
+        return kk.unsubscribe = kk => {
+          ek(kk), this.unsubscribe(ik)
+        }, kk
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let Gw = function(QQ) {
-      return QQ.TRACE = "trace", QQ.DEBUG = "debug", QQ.INFO = "info", QQ.LOG = "log", QQ.WARN = "warn", QQ.ERROR = "error", QQ
+    let Li = function(kk) {
+      return kk.TRACE = "trace", kk.DEBUG = "debug", kk.INFO = "info", kk.LOG = "log", kk.WARN = "warn", kk.ERROR = "error", kk
     }({});
-    const pw = "log",
-      Cw = ["trace", "debug", "info", "log", "warn", "error"];
-    let Sw, iw = !1;
-    const Ww = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      Rw = "Error",
-      Ow = QQ => QQ.map((QQ => OQ(QQ) ? KF(QQ) : String(QQ))).join(" ");
+    const Ci = "log",
+      Ai = ["trace", "debug", "info", "log", "warn", "error"];
+    let ji, si = !1;
+    const di = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      Vi = "Error",
+      Fi = kk => kk.map((kk => Vk(kk) ? Ee(kk) : String(kk))).join(" ");
 
-    function sw(QQ) {
-      let FQ, wQ, LQ, qQ, oQ = [];
-      if (jQ(QQ) && QQ.error) FQ = QQ.error.message, wQ = QQ.error.name, oQ = xw(QQ.error);
-      else if ((LQ = aQ(QQ)) || XQ(QQ)) {
+    function ui(kk) {
+      let ek, ik, Dk, fk, Sk = [];
+      if (ak(kk) && kk.error) ek = kk.error.message, ik = kk.error.name, Sk = Hi(kk.error);
+      else if ((Dk = Wk(kk)) || tk(kk)) {
         const {
-          name: qQ,
-          message: oQ
-        } = QQ;
-        wQ = null !== qQ && void 0 !== qQ ? qQ : LQ ? "DOMError" : "DOMException", FQ = oQ ? `${wQ}: ${oQ}` : wQ
-      } else lQ(QQ) ? (wQ = QQ.name, FQ = QQ.message, oQ = xw(QQ)) : (OQ(QQ) || (qQ = KQ(QQ))) && (wQ = qQ ? QQ.constructor.name : void 0, FQ = `Non-Error exception captured with keys: ${Object.keys(QQ)}`);
-      return [FQ, wQ, oQ]
+          name: fk,
+          message: Sk
+        } = kk;
+        ik = null !== fk && void 0 !== fk ? fk : Dk ? "DOMError" : "DOMException", ek = Sk ? `${ik}: ${Sk}` : ik
+      } else hk(kk) ? (ik = kk.name, ek = kk.message, Sk = Hi(kk)) : (Vk(kk) || (fk = vk(kk))) && (ik = fk ? kk.constructor.name : void 0, ek = `Non-Error exception captured with keys: ${Object.keys(kk)}`);
+      return [ek, ik, Sk]
     }
 
-    function rw(QQ) {
-      const [FQ, wQ, LQ, qQ, oQ] = QQ;
-      let DQ, kQ, vQ = [];
-      const mQ = CQ(FQ),
-        uQ = qw(wQ, "?", LQ, qQ);
-      return oQ || !mQ ? ([DQ, kQ, vQ] = sw(null !== oQ && void 0 !== oQ ? oQ : FQ), 0 === vQ.length && (vQ = [uQ])) : mQ && ([DQ, kQ] = function(QQ) {
-        var FQ, wQ;
-        const LQ = QQ.match(Ww),
-          qQ = null !== (FQ = null === LQ || void 0 === LQ ? void 0 : LQ[1]) && void 0 !== FQ ? FQ : Rw;
-        return [null !== (wQ = null === LQ || void 0 === LQ ? void 0 : LQ[2]) && void 0 !== wQ ? wQ : QQ, qQ]
-      }(FQ), vQ = [uQ]), {
-        value: DQ,
-        type: kQ,
-        stackFrames: vQ
+    function qi(kk) {
+      const [ek, ik, Dk, fk, Sk] = kk;
+      let bk, rk, Pk = [];
+      const mk = Ck(ek),
+        Mk = Si(ik, "?", Dk, fk);
+      return Sk || !mk ? ([bk, rk, Pk] = ui(null !== Sk && void 0 !== Sk ? Sk : ek), 0 === Pk.length && (Pk = [Mk])) : mk && ([bk, rk] = function(kk) {
+        var ek, ik;
+        const Dk = kk.match(di),
+          fk = null !== (ek = null === Dk || void 0 === Dk ? void 0 : Dk[1]) && void 0 !== ek ? ek : Vi;
+        return [null !== (ik = null === Dk || void 0 === Dk ? void 0 : Dk[2]) && void 0 !== ik ? ik : kk, fk]
+      }(ek), Pk = [Mk]), {
+        value: bk,
+        type: rk,
+        stackFrames: Pk
       }
     }
 
-    function Iw(QQ, FQ) {
-      return lQ(QQ[0]) ? rw(QQ) : {
-        value: FQ(QQ)
+    function Ii(kk, ek) {
+      return hk(kk[0]) ? qi(kk) : {
+        value: ek(kk)
       }
     }
-    const Uw = QQ => QQ.map((QQ => {
+    const zi = kk => kk.map((kk => {
       try {
-        return String(QQ)
-      } catch (FQ) {
+        return String(kk)
+      } catch (ek) {
         return ""
       }
     })).join(" ");
-    var Nw = class QQ extends Fw {
+    var Qi = class kk extends ii {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = ww, this.errorSerializer = Uw
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = Di, this.errorSerializer = zi
       }
       initialize() {
-        var FQ, wQ;
-        const LQ = this.config.consoleInstrumentation,
-          qQ = (null === LQ || void 0 === LQ ? void 0 : LQ.serializeErrors) || !!(null === LQ || void 0 === LQ ? void 0 : LQ.errorSerializer);
-        this.errorSerializer = qQ ? null !== (FQ = null === LQ || void 0 === LQ ? void 0 : LQ.errorSerializer) && void 0 !== FQ ? FQ : Ow : Uw;
-        const oQ = null !== (wQ = null === LQ || void 0 === LQ ? void 0 : LQ.disabledLevels) && void 0 !== wQ ? wQ : QQ.defaultDisabledLevels,
-          DQ = function(QQ) {
-            if (Sw || (Sw = new Mw), !iw) {
-              const FQ = null !== QQ && void 0 !== QQ ? QQ : dF;
-              Cw.forEach((QQ => {
-                console[QQ] = function() {
-                  for (var wQ, LQ = arguments.length, qQ = new Array(LQ), oQ = 0; oQ < LQ; oQ++) qQ[oQ] = arguments[oQ];
-                  Sw.notify({
+        var ek, ik;
+        const Dk = this.config.consoleInstrumentation,
+          fk = (null === Dk || void 0 === Dk ? void 0 : Dk.serializeErrors) || !!(null === Dk || void 0 === Dk ? void 0 : Dk.errorSerializer);
+        this.errorSerializer = fk ? null !== (ek = null === Dk || void 0 === Dk ? void 0 : Dk.errorSerializer) && void 0 !== ek ? ek : Fi : zi;
+        const Sk = null !== (ik = null === Dk || void 0 === Dk ? void 0 : Dk.disabledLevels) && void 0 !== ik ? ik : kk.defaultDisabledLevels,
+          bk = function(kk) {
+            if (ji || (ji = new Yi), !si) {
+              const ek = null !== kk && void 0 !== kk ? kk : ki;
+              Ai.forEach((kk => {
+                console[kk] = function() {
+                  for (var ik, Dk = arguments.length, fk = new Array(Dk), Sk = 0; Sk < Dk; Sk++) fk[Sk] = arguments[Sk];
+                  ji.notify({
                     type: "console",
-                    level: QQ,
-                    args: qQ
-                  }), null === (wQ = FQ[QQ]) || void 0 === wQ || wQ.apply(console, qQ)
+                    level: kk,
+                    args: fk
+                  }), null === (ik = ek[kk]) || void 0 === ik || ik.apply(console, fk)
                 }
-              })), iw = !0
+              })), si = !0
             }
-            return Sw
+            return ji
           }(this.unpatchedConsole);
-        this.subscription = DQ.subscribe((FQ => {
+        this.subscription = bk.subscribe((ek => {
           let {
-            level: wQ,
-            args: qQ
-          } = FQ;
-          if (!oQ.includes(wQ)) try {
-            if (wQ !== Gw.ERROR || (null === LQ || void 0 === LQ ? void 0 : LQ.consoleErrorAsLog))
-              if (wQ === Gw.ERROR && (null === LQ || void 0 === LQ ? void 0 : LQ.consoleErrorAsLog)) {
+            level: ik,
+            args: fk
+          } = ek;
+          if (!Sk.includes(ik)) try {
+            if (ik !== Li.ERROR || (null === Dk || void 0 === Dk ? void 0 : Dk.consoleErrorAsLog))
+              if (ik === Li.ERROR && (null === Dk || void 0 === Dk ? void 0 : Dk.consoleErrorAsLog)) {
                 const {
-                  value: FQ,
-                  type: LQ,
-                  stackFrames: oQ
-                } = Iw(qQ, this.errorSerializer);
-                this.api.pushLog(FQ ? [QQ.consoleErrorPrefix + FQ] : qQ, {
-                  level: wQ,
+                  value: ek,
+                  type: Dk,
+                  stackFrames: Sk
+                } = Ii(fk, this.errorSerializer);
+                this.api.pushLog(ek ? [kk.consoleErrorPrefix + ek] : fk, {
+                  level: ik,
                   context: {
-                    value: null !== FQ && void 0 !== FQ ? FQ : "",
-                    type: null !== LQ && void 0 !== LQ ? LQ : "",
-                    stackFrames: (null === oQ || void 0 === oQ ? void 0 : oQ.length) ? Ow(oQ) : ""
+                    value: null !== ek && void 0 !== ek ? ek : "",
+                    type: null !== Dk && void 0 !== Dk ? Dk : "",
+                    stackFrames: (null === Sk || void 0 === Sk ? void 0 : Sk.length) ? Fi(Sk) : ""
                   }
                 })
-              } else this.api.pushLog(qQ, {
-                level: wQ
+              } else this.api.pushLog(fk, {
+                level: ik
               });
             else {
               const {
-                value: FQ,
-                type: wQ,
-                stackFrames: LQ
-              } = Iw(qQ, this.errorSerializer);
-              if (FQ && !wQ && !LQ) return void this.api.pushError(new Error(QQ.consoleErrorPrefix + FQ));
-              this.api.pushError(new Error(QQ.consoleErrorPrefix + FQ), {
-                type: wQ,
-                stackFrames: LQ
+                value: ek,
+                type: ik,
+                stackFrames: Dk
+              } = Ii(fk, this.errorSerializer);
+              if (ek && !ik && !Dk) return void this.api.pushError(new Error(kk.consoleErrorPrefix + ek));
+              this.api.pushError(new Error(kk.consoleErrorPrefix + ek), {
+                type: ik,
+                stackFrames: Dk
               })
             }
-          } catch (DQ) {
-            this.logError(DQ)
+          } catch (bk) {
+            this.logError(bk)
           }
         }))
       }
       destroy() {
-        var QQ;
-        null === (QQ = this.subscription) || void 0 === QQ || QQ.unsubscribe(), this.subscription = void 0
+        var kk;
+        null === (kk = this.subscription) || void 0 === kk || kk.unsubscribe(), this.subscription = void 0
       }
     };
-    Nw.defaultDisabledLevels = [Gw.DEBUG, Gw.TRACE, Gw.LOG], Nw.consoleErrorPrefix = "console.error: ";
-    const Tw = [];
-    var Kw = class extends Fw {
+    Qi.defaultDisabledLevels = [Li.DEBUG, Li.TRACE, Li.LOG], Qi.consoleErrorPrefix = "console.error: ";
+    const vi = [];
+    var Ei = class extends ii {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = ww
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = Di
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(QQ) {
-            const FQ = window.onerror;
+          function(kk) {
+            const ek = window.onerror;
             window.onerror = function() {
-              for (var wQ = arguments.length, LQ = new Array(wQ), qQ = 0; qQ < wQ; qQ++) LQ[qQ] = arguments[qQ];
+              for (var ik = arguments.length, Dk = new Array(ik), fk = 0; fk < ik; fk++) Dk[fk] = arguments[fk];
               try {
                 const {
-                  value: FQ,
-                  type: wQ,
-                  stackFrames: qQ
-                } = rw(LQ), oQ = LQ[4];
-                if (FQ) {
-                  const LQ = {
-                    type: wQ,
-                    stackFrames: qQ
+                  value: ek,
+                  type: ik,
+                  stackFrames: fk
+                } = qi(Dk), Sk = Dk[4];
+                if (ek) {
+                  const Dk = {
+                    type: ik,
+                    stackFrames: fk
                   };
-                  null != oQ && (LQ.originalError = oQ), QQ.pushError(new Error(FQ), LQ)
+                  null != Sk && (Dk.originalError = Sk), kk.pushError(new Error(ek), Dk)
                 }
               } finally {
-                null === FQ || void 0 === FQ || FQ.apply(window, LQ)
+                null === ek || void 0 === ek || ek.apply(window, Dk)
               }
             }
           }(this.api),
-          function(QQ) {
-            const FQ = FQ => {
-              var wQ;
-              let LQ, qQ, oQ = FQ;
-              if (oQ.reason) oQ = FQ.reason;
-              else if (null === (wQ = FQ.detail) || void 0 === wQ ? void 0 : wQ.reason) {
-                var DQ;
-                oQ = null === (DQ = FQ.detail) || void 0 === DQ ? void 0 : DQ.reason
+          function(kk) {
+            const ek = ek => {
+              var ik;
+              let Dk, fk, Sk = ek;
+              if (Sk.reason) Sk = ek.reason;
+              else if (null === (ik = ek.detail) || void 0 === ik ? void 0 : ik.reason) {
+                var bk;
+                Sk = null === (bk = ek.detail) || void 0 === bk ? void 0 : bk.reason
               }
-              let kQ = [];
-              NQ(oQ) ? (LQ = `Non-Error promise rejection captured with value: ${String(oQ)}`, qQ = "UnhandledRejection") : [LQ, qQ, kQ] = sw(oQ), LQ && QQ.pushError(new Error(LQ), {
-                type: qQ,
-                stackFrames: kQ
+              let rk = [];
+              zk(Sk) ? (Dk = `Non-Error promise rejection captured with value: ${String(Sk)}`, fk = "UnhandledRejection") : [Dk, fk, rk] = ui(Sk), Dk && kk.pushError(new Error(Dk), {
+                type: fk,
+                stackFrames: rk
               })
             };
-            window.addEventListener("unhandledrejection", FQ), Tw.push(FQ)
+            window.addEventListener("unhandledrejection", ek), vi.push(ek)
           }(this.api)
       }
     };
-    const zw = "unknown";
-    var lw = class extends Fw {
+    const ai = "unknown";
+    var Wi = class extends ii {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = ww, this.waitingForActivation = !1, this.sendViewChangedEvent = QQ => {
-          var FQ;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = Di, this.waitingForActivation = !1, this.sendViewChangedEvent = kk => {
+          var ek;
           if (this.waitingForActivation || document.prerendering) return;
-          const wQ = QQ.view;
-          if (wQ && wQ.name !== (null === (FQ = this.notifiedView) || void 0 === FQ ? void 0 : FQ.name)) {
-            var LQ, qQ, oQ;
-            const QQ = null !== (LQ = null === (qQ = this.notifiedView) || void 0 === qQ ? void 0 : qQ.name) && void 0 !== LQ ? LQ : zw;
-            this.notifiedView = wQ, this.api.pushEvent(cF, {
-              fromView: QQ,
-              toView: null !== (oQ = wQ.name) && void 0 !== oQ ? oQ : zw
+          const ik = kk.view;
+          if (ik && ik.name !== (null === (ek = this.notifiedView) || void 0 === ek ? void 0 : ek.name)) {
+            var Dk, fk, Sk;
+            const kk = null !== (Dk = null === (fk = this.notifiedView) || void 0 === fk ? void 0 : fk.name) && void 0 !== Dk ? Dk : ai;
+            this.notifiedView = ik, this.api.pushEvent(Ce, {
+              fromView: kk,
+              toView: null !== (Sk = ik.name) && void 0 !== Sk ? Sk : ai
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class jw {
+    class ti {
       t;
       o = 0;
       i = [];
-      l(QQ) {
-        if (QQ.hadRecentInput) return;
-        const FQ = this.i[0],
-          wQ = this.i.at(-1);
-        this.o && FQ && wQ && QQ.startTime - wQ.startTime < 1e3 && QQ.startTime - FQ.startTime < 5e3 ? (this.o += QQ.value, this.i.push(QQ)) : (this.o = QQ.value, this.i = [QQ]), this.t?.(QQ)
+      l(kk) {
+        if (kk.hadRecentInput) return;
+        const ek = this.i[0],
+          ik = this.i.at(-1);
+        this.o && ek && ik && kk.startTime - ik.startTime < 1e3 && kk.startTime - ek.startTime < 5e3 ? (this.o += kk.value, this.i.push(kk)) : (this.o = kk.value, this.i = [kk]), this.t?.(kk)
       }
     }
-    const aw = () => {
-        const QQ = performance.getEntriesByType("navigation")[0];
-        if (QQ && QQ.responseStart > 0 && QQ.responseStart < performance.now()) return QQ
+    const Xi = () => {
+        const kk = performance.getEntriesByType("navigation")[0];
+        if (kk && kk.responseStart > 0 && kk.responseStart < performance.now()) return kk
       },
-      Xw = QQ => {
+      Bi = kk => {
         if ("loading" === document.readyState) return "loading";
-        const FQ = aw();
-        if (FQ) {
-          if (QQ < FQ.domInteractive) return "loading";
-          if (0 === FQ.domContentLoadedEventStart || QQ < FQ.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === FQ.domComplete || QQ < FQ.domComplete) return "dom-content-loaded"
+        const ek = Xi();
+        if (ek) {
+          if (kk < ek.domInteractive) return "loading";
+          if (0 === ek.domContentLoadedEventStart || kk < ek.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === ek.domComplete || kk < ek.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      fw = QQ => {
-        const FQ = QQ.nodeName;
-        return 1 === QQ.nodeType ? FQ.toLowerCase() : FQ.toUpperCase().replace(/^#/, "")
+      ci = kk => {
+        const ek = kk.nodeName;
+        return 1 === kk.nodeType ? ek.toLowerCase() : ek.toUpperCase().replace(/^#/, "")
       },
-      Vw = QQ => {
-        let FQ = "";
+      Ti = kk => {
+        let ek = "";
         try {
-          for (; 9 !== QQ?.nodeType;) {
-            const wQ = QQ,
-              LQ = wQ.id ? "#" + wQ.id : [fw(wQ), ...Array.from(wQ.classList ?? []).sort()].join(".");
-            if (FQ.length + LQ.length > 99) return FQ || LQ;
-            if (FQ = FQ ? LQ + ">" + FQ : LQ, wQ.id) break;
-            QQ = wQ.parentNode
+          for (; 9 !== kk?.nodeType;) {
+            const ik = kk,
+              Dk = ik.id ? "#" + ik.id : [ci(ik), ...Array.from(ik.classList ?? []).sort()].join(".");
+            if (ek.length + Dk.length > 99) return ek || Dk;
+            if (ek = ek ? Dk + ">" + ek : Dk, ik.id) break;
+            kk = ik.parentNode
           }
         } catch {}
-        return FQ
+        return ek
       },
-      hw = new WeakMap;
+      oi = new WeakMap;
 
-    function Jw(QQ, FQ) {
-      let wQ = hw.get(FQ);
-      return wQ || (wQ = new WeakMap, hw.set(FQ, wQ)), wQ.get(QQ) || wQ.set(QQ, new FQ), wQ.get(QQ)
+    function Zi(kk, ek) {
+      let ik = oi.get(ek);
+      return ik || (ik = new WeakMap, oi.set(ek, ik)), ik.get(kk) || ik.set(kk, new ek), ik.get(kk)
     }
-    let Ew = -1;
-    const nw = () => Ew,
-      gw = QQ => {
-        addEventListener("pageshow", (FQ => {
-          FQ.persisted && (Ew = FQ.timeStamp, QQ(FQ))
+    let Oi = -1;
+    const gi = () => Oi,
+      Gi = kk => {
+        addEventListener("pageshow", (ek => {
+          ek.persisted && (Oi = ek.timeStamp, kk(ek))
         }), !0)
       },
-      Pw = (QQ, FQ, wQ, LQ) => {
-        let qQ, oQ;
-        return DQ => {
-          FQ.value >= 0 && (DQ || LQ) && (oQ = FQ.value - (qQ ?? 0), (oQ || void 0 === qQ) && (qQ = FQ.value, FQ.delta = oQ, FQ.rating = ((QQ, FQ) => QQ > FQ[1] ? "poor" : QQ > FQ[0] ? "needs-improvement" : "good")(FQ.value, wQ), QQ(FQ)))
+      Ni = (kk, ek, ik, Dk) => {
+        let fk, Sk;
+        return bk => {
+          ek.value >= 0 && (bk || Dk) && (Sk = ek.value - (fk ?? 0), (Sk || void 0 === fk) && (fk = ek.value, ek.delta = Sk, ek.rating = ((kk, ek) => kk > ek[1] ? "poor" : kk > ek[0] ? "needs-improvement" : "good")(ek.value, ik), kk(ek)))
         }
       },
-      Zw = QQ => {
-        requestAnimationFrame((() => requestAnimationFrame((() => QQ()))))
+      Ri = kk => {
+        requestAnimationFrame((() => requestAnimationFrame((() => kk()))))
       },
-      yw = () => aw()?.activationStart ?? 0;
-    let Bw = -1;
-    const dw = new Set,
-      QL = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      FL = QQ => {
+      Ji = () => Xi()?.activationStart ?? 0;
+    let kD = -1;
+    const eD = new Set,
+      iD = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      DD = kk => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === QQ.type)
-            for (const QQ of dw) QQ();
-          isFinite(Bw) || (Bw = "visibilitychange" === QQ.type ? QQ.timeStamp : 0, removeEventListener("prerenderingchange", FL, !0))
+          if ("visibilitychange" === kk.type)
+            for (const kk of eD) kk();
+          isFinite(kD) || (kD = "visibilitychange" === kk.type ? kk.timeStamp : 0, removeEventListener("prerenderingchange", DD, !0))
         }
       },
-      wL = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Bw = 1 / 0), Bw < 0) {
-          const QQ = yw(),
-            FQ = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((FQ => "hidden" === FQ.name && FQ.startTime >= QQ))?.startTime;
-          Bw = FQ ?? QL(), addEventListener("visibilitychange", FL, !0), addEventListener("prerenderingchange", FL, !0), gw((() => {
+      fD = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (kD = 1 / 0), kD < 0) {
+          const kk = Ji(),
+            ek = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((ek => "hidden" === ek.name && ek.startTime >= kk))?.startTime;
+          kD = ek ?? iD(), addEventListener("visibilitychange", DD, !0), addEventListener("prerenderingchange", DD, !0), Gi((() => {
             setTimeout((() => {
-              Bw = QL()
+              kD = iD()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return Bw
+            return kD
           },
-          onHidden(QQ) {
-            dw.add(QQ)
+          onHidden(kk) {
+            eD.add(kk)
           }
         }
       },
-      LL = function(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          wQ = arguments.length > 2 ? arguments[2] : void 0,
-          LQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          qQ = arguments.length > 4 ? arguments[4] : void 0,
-          oQ = arguments.length > 5 ? arguments[5] : void 0,
-          DQ = arguments.length > 6 ? arguments[6] : void 0;
-        const kQ = aw(),
-          vQ = kQ?.navigationId || 0;
-        let mQ = "navigate";
-        return wQ ? mQ = wQ : nw() >= 0 ? mQ = "back-forward-cache" : kQ && (document.prerendering || yw() > 0 ? mQ = "prerender" : document.wasDiscarded ? mQ = "restore" : kQ.type && (mQ = kQ.type.replace(/_/g, "-"))), {
-          name: QQ,
-          value: FQ,
+      SD = function(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ik = arguments.length > 2 ? arguments[2] : void 0,
+          Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          fk = arguments.length > 4 ? arguments[4] : void 0,
+          Sk = arguments.length > 5 ? arguments[5] : void 0,
+          bk = arguments.length > 6 ? arguments[6] : void 0;
+        const rk = Xi(),
+          Pk = rk?.navigationId || 0;
+        let mk = "navigate";
+        return ik ? mk = ik : gi() >= 0 ? mk = "back-forward-cache" : rk && (document.prerendering || Ji() > 0 ? mk = "prerender" : document.wasDiscarded ? mk = "restore" : rk.type && (mk = rk.type.replace(/_/g, "-"))), {
+          name: kk,
+          value: ek,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: mQ,
-          navigationId: LQ || vQ,
-          navigationInteractionId: qQ,
-          navigationURL: oQ || kQ?.name,
-          navigationStartTime: DQ || 0
+          navigationType: mk,
+          navigationId: Dk || Pk,
+          navigationInteractionId: fk,
+          navigationURL: Sk || rk?.name,
+          navigationStartTime: bk || 0
         }
       },
-      qL = function(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      bD = function(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const LQ = QQ.filter((QQ => PerformanceObserver.supportedEntryTypes.includes(QQ)));
-          if (LQ.length > 0) {
-            const QQ = new PerformanceObserver((QQ => {
+          const Dk = kk.filter((kk => PerformanceObserver.supportedEntryTypes.includes(kk)));
+          if (Dk.length > 0) {
+            const kk = new PerformanceObserver((kk => {
               queueMicrotask((() => {
-                const wQ = QQ.getEntries();
-                LQ.length > 1 && wQ.sort(((QQ, FQ) => QQ.startTime + QQ.duration - (FQ.startTime + FQ.duration))), FQ(wQ)
+                const ik = kk.getEntries();
+                Dk.length > 1 && ik.sort(((kk, ek) => kk.startTime + kk.duration - (ek.startTime + ek.duration))), ek(ik)
               }))
             }));
-            for (const FQ of LQ) QQ.observe({
-              type: FQ,
+            for (const ek of Dk) kk.observe({
+              type: ek,
               buffered: !0,
-              ...wQ
+              ...ik
             });
-            return QQ
+            return kk
           }
         } catch {}
       },
-      oL = QQ => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && QQ && QQ.reportSoftNavs,
-      DL = (QQ, FQ) => {
-        if (QQ.set(FQ.navigationId, FQ), QQ.size > 2) {
-          const FQ = QQ.keys().next().value;
-          void 0 !== FQ && QQ.delete(FQ)
+      rD = kk => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && kk && kk.reportSoftNavs,
+      PD = (kk, ek) => {
+        if (kk.set(ek.navigationId, ek), kk.size > 2) {
+          const ek = kk.keys().next().value;
+          void 0 !== ek && kk.delete(ek)
         }
       },
-      kL = QQ => {
-        let FQ = !1;
+      mD = kk => {
+        let ek = !1;
         return () => {
-          FQ || (QQ(), FQ = !0)
+          ek || (kk(), ek = !0)
         }
       };
-    class vL {
+    class MD {
       u
     }
-    const mL = QQ => {
-        document.prerendering ? addEventListener("prerenderingchange", QQ, !0) : QQ()
+    const KD = kk => {
+        document.prerendering ? addEventListener("prerenderingchange", kk, !0) : kk()
       },
-      uL = [1800, 3e3],
-      HL = function(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const wQ = oL(FQ);
-        mL((() => {
-          const LQ = Jw(FQ, vL),
-            qQ = wL();
-          let oQ, DQ = LL("FCP");
-          const kQ = qL(["paint"], (QQ => {
-            for (const FQ of QQ) "first-contentful-paint" === FQ.name && (kQ.disconnect(), FQ.startTime < qQ.firstHiddenTime && (DQ.value = Math.max(FQ.startTime - yw(), 0), DQ.entries.push(FQ), DQ.navigationId = FQ.navigationId || DQ.navigationId, oQ(!0)))
+      xD = [1800, 3e3],
+      nD = function(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ik = rD(ek);
+        KD((() => {
+          const Dk = Zi(ek, MD),
+            fk = fD();
+          let Sk, bk = SD("FCP");
+          const rk = bD(["paint"], (kk => {
+            for (const ek of kk) "first-contentful-paint" === ek.name && (rk.disconnect(), ek.startTime < fk.firstHiddenTime && (bk.value = Math.max(ek.startTime - Ji(), 0), bk.entries.push(ek), bk.navigationId = ek.navigationId || bk.navigationId, Sk(!0)))
           }));
-          kQ && (oQ = Pw(QQ, DQ, uL, FQ.reportAllChanges), gw((wQ => {
-            DQ = LL("FCP", -1, "back-forward-cache", DQ.navigationId, DQ.navigationInteractionId, DQ.navigationURL, nw()), oQ = Pw(QQ, DQ, uL, FQ.reportAllChanges), Zw((() => {
-              DQ.value = performance.now() - wQ.timeStamp, oQ(!0)
+          rk && (Sk = Ni(kk, bk, xD, ek.reportAllChanges), Gi((ik => {
+            bk = SD("FCP", -1, "back-forward-cache", bk.navigationId, bk.navigationInteractionId, bk.navigationURL, gi()), Sk = Ni(kk, bk, xD, ek.reportAllChanges), Ri((() => {
+              bk.value = performance.now() - ik.timeStamp, Sk(!0)
             }))
-          }))), wQ && qL(["soft-navigation"], (wQ => {
-            wQ.forEach((wQ => {
-              LQ.u && wQ.navigationId && DL(LQ.u, wQ);
-              const qQ = Math.max((wQ.presentationTime || wQ.paintTime || 0) - wQ.startTime, 0);
-              DQ = LL("FCP", qQ, "soft-navigation", wQ.navigationId, wQ.interactionId, wQ.name, wQ.startTime), oQ = Pw(QQ, DQ, uL, FQ.reportAllChanges), oQ(!0)
+          }))), ik && bD(["soft-navigation"], (ik => {
+            ik.forEach((ik => {
+              Dk.u && ik.navigationId && PD(Dk.u, ik);
+              const fk = Math.max((ik.presentationTime || ik.paintTime || 0) - ik.startTime, 0);
+              bk = SD("FCP", fk, "soft-navigation", ik.navigationId, ik.interactionId, ik.name, ik.startTime), Sk = Ni(kk, bk, xD, ek.reportAllChanges), Sk(!0)
             }))
-          }), FQ)
+          }), ek)
         }))
       },
-      bL = [.1, .25],
-      YL = QQ => QQ.find((QQ => 1 === QQ.node?.nodeType)) || QQ[0];
-    let xL = 0,
-      AL = 1 / 0,
-      tL = 0;
-    const eL = QQ => {
-      for (const FQ of QQ) FQ.interactionId && (AL = Math.min(AL, FQ.interactionId), tL = Math.max(tL, FQ.interactionId), xL = tL ? (tL - AL) / 7 + 1 : 0)
+      UD = [.1, .25],
+      HD = kk => kk.find((kk => 1 === kk.node?.nodeType)) || kk[0];
+    let wD = 0,
+      lD = 1 / 0,
+      pD = 0;
+    const yD = kk => {
+      for (const ek of kk) ek.interactionId && (lD = Math.min(lD, ek.interactionId), pD = Math.max(pD, ek.interactionId), wD = pD ? (pD - lD) / 7 + 1 : 0)
     };
-    let ML;
-    const GL = () => ML ? xL : performance.interactionCount ?? 0;
-    class pL {
+    let YD;
+    const LD = () => YD ? wD : performance.interactionCount ?? 0;
+    class CD {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return GL() - this.h
+        return LD() - this.h
       }
       D() {
-        this.h = GL(), this.v.length = 0, this.p.clear()
+        this.h = LD(), this.v.length = 0, this.p.clear()
       }
-      S(QQ) {
-        const FQ = this.T(),
-          wQ = Math.min(this.v.length - 1, Math.floor(FQ / 50));
-        return !FQ || -1 !== wQ || "soft-navigation" !== QQ && "back-forward-cache" !== QQ ? this.v[wQ] : {
+      S(kk) {
+        const ek = this.T(),
+          ik = Math.min(this.v.length - 1, Math.floor(ek / 50));
+        return !ek || -1 !== ik || "soft-navigation" !== kk && "back-forward-cache" !== kk ? this.v[ik] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(QQ) {
-        if (this.m?.(QQ), !QQ.interactionId) return;
-        const FQ = this.v.at(-1);
-        let wQ = this.p.get(QQ.interactionId);
-        if (wQ || this.v.length < 10 || QQ.duration > FQ.k) {
-          if (wQ ? QQ.duration > wQ.k ? (wQ.entries = [QQ], wQ.k = QQ.duration) : QQ.duration === wQ.k && QQ.startTime === wQ.entries[0].startTime && wQ.entries.push(QQ) : (wQ = {
-              id: QQ.interactionId,
-              entries: [QQ],
-              k: QQ.duration
-            }, this.p.set(wQ.id, wQ), this.v.push(wQ)), this.v.sort(((QQ, FQ) => FQ.k - QQ.k)), this.v.length > 10) {
-            const QQ = this.v.splice(10);
-            for (const FQ of QQ) this.p.delete(FQ.id)
+      l(kk) {
+        if (this.m?.(kk), !kk.interactionId) return;
+        const ek = this.v.at(-1);
+        let ik = this.p.get(kk.interactionId);
+        if (ik || this.v.length < 10 || kk.duration > ek.k) {
+          if (ik ? kk.duration > ik.k ? (ik.entries = [kk], ik.k = kk.duration) : kk.duration === ik.k && kk.startTime === ik.entries[0].startTime && ik.entries.push(kk) : (ik = {
+              id: kk.interactionId,
+              entries: [kk],
+              k: kk.duration
+            }, this.p.set(ik.id, ik), this.v.push(ik)), this.v.sort(((kk, ek) => ek.k - kk.k)), this.v.length > 10) {
+            const kk = this.v.splice(10);
+            for (const ek of kk) this.p.delete(ek.id)
           }
-          this.M?.(wQ)
+          this.M?.(ik)
         }
       }
     }
-    const cL = QQ => {
-        const FQ = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          wQ = globalThis.requestIdleCallback || setTimeout,
-          LQ = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) QQ();
+    const AD = kk => {
+        const ek = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          ik = globalThis.requestIdleCallback || setTimeout,
+          Dk = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) kk();
         else {
-          const qQ = kL(QQ);
-          let oQ = -1;
-          const DQ = () => {
-            LQ(oQ), qQ()
+          const fk = mD(kk);
+          let Sk = -1;
+          const bk = () => {
+            Dk(Sk), fk()
           };
-          addEventListener("visibilitychange", DQ, {
+          addEventListener("visibilitychange", bk, {
             once: !0,
             capture: !0
-          }), oQ = wQ((() => {
-            removeEventListener("visibilitychange", DQ, {
+          }), Sk = ik((() => {
+            removeEventListener("visibilitychange", bk, {
               capture: !0
-            }), qQ()
+            }), fk()
           }), {
-            timeout: FQ
+            timeout: ek
           })
         }
       },
-      CL = [200, 500],
-      SL = function(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const wQ = Jw(FQ = Object.assign({}, FQ), pL);
-        let LQ = [],
-          qQ = [],
-          oQ = 0;
-        const DQ = new WeakMap,
-          kQ = new WeakMap;
-        let vQ = !1;
-        const mQ = () => {
-            vQ || (vQ = !0, cL(uQ))
+      jD = [200, 500],
+      sD = function(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ik = Zi(ek = Object.assign({}, ek), CD);
+        let Dk = [],
+          fk = [],
+          Sk = 0;
+        const bk = new WeakMap,
+          rk = new WeakMap;
+        let Pk = !1;
+        const mk = () => {
+            Pk || (Pk = !0, AD(Mk))
           },
-          uQ = () => {
-            const QQ = new Set(wQ.v.map((QQ => DQ.get(QQ.entries[0])))),
-              FQ = qQ.length - 10;
-            qQ = qQ.filter(((wQ, LQ) => LQ >= FQ || QQ.has(wQ)));
-            const kQ = new Set;
-            for (const wQ of qQ) {
-              const QQ = HQ(wQ.startTime, wQ.processingEnd);
-              for (const FQ of QQ) kQ.add(FQ)
+          Mk = () => {
+            const kk = new Set(ik.v.map((kk => bk.get(kk.entries[0])))),
+              ek = fk.length - 10;
+            fk = fk.filter(((ik, Dk) => Dk >= ek || kk.has(ik)));
+            const rk = new Set;
+            for (const ik of fk) {
+              const kk = Kk(ik.startTime, ik.processingEnd);
+              for (const ek of kk) rk.add(ek)
             }
-            const mQ = LQ.length - 10;
-            LQ = LQ.filter(((QQ, FQ) => kQ.has(QQ) || FQ >= mQ && QQ.startTime > oQ)), vQ = !1
+            const mk = Dk.length - 10;
+            Dk = Dk.filter(((kk, ek) => rk.has(kk) || ek >= mk && kk.startTime > Sk)), Pk = !1
           };
-        wQ.m = QQ => {
-          const wQ = QQ.startTime + QQ.duration;
-          let LQ;
-          oQ = Math.max(oQ, QQ.processingEnd);
-          for (let oQ = qQ.length - 1; oQ >= 0; oQ--) {
-            const DQ = qQ[oQ];
-            if (Math.abs(wQ - DQ.renderTime) <= 8) {
-              LQ = DQ, LQ.startTime = Math.min(QQ.startTime, LQ.startTime), LQ.processingStart = Math.min(QQ.processingStart, LQ.processingStart), LQ.processingEnd = Math.max(QQ.processingEnd, LQ.processingEnd), FQ.includeProcessedEventEntries && LQ.entries.push(QQ);
+        ik.m = kk => {
+          const ik = kk.startTime + kk.duration;
+          let Dk;
+          Sk = Math.max(Sk, kk.processingEnd);
+          for (let Sk = fk.length - 1; Sk >= 0; Sk--) {
+            const bk = fk[Sk];
+            if (Math.abs(ik - bk.renderTime) <= 8) {
+              Dk = bk, Dk.startTime = Math.min(kk.startTime, Dk.startTime), Dk.processingStart = Math.min(kk.processingStart, Dk.processingStart), Dk.processingEnd = Math.max(kk.processingEnd, Dk.processingEnd), ek.includeProcessedEventEntries && Dk.entries.push(kk);
               break
             }
           }
-          LQ || (LQ = {
-            startTime: QQ.startTime,
-            processingStart: QQ.processingStart,
-            processingEnd: QQ.processingEnd,
-            renderTime: wQ,
-            entries: FQ.includeProcessedEventEntries ? [QQ] : []
-          }, qQ.push(LQ)), QQ.interactionId && DQ.set(QQ, LQ), mQ()
-        }, wQ.M = QQ => {
-          if (!kQ.get(QQ)) {
-            const wQ = QQ.entries.find((QQ => QQ.target))?.target;
-            if (wQ) {
-              const LQ = FQ.generateTarget?.(wQ) ?? Vw(wQ);
-              kQ.set(QQ, LQ)
+          Dk || (Dk = {
+            startTime: kk.startTime,
+            processingStart: kk.processingStart,
+            processingEnd: kk.processingEnd,
+            renderTime: ik,
+            entries: ek.includeProcessedEventEntries ? [kk] : []
+          }, fk.push(Dk)), kk.interactionId && bk.set(kk, Dk), mk()
+        }, ik.M = kk => {
+          if (!rk.get(kk)) {
+            const ik = kk.entries.find((kk => kk.target))?.target;
+            if (ik) {
+              const Dk = ek.generateTarget?.(ik) ?? Ti(ik);
+              rk.set(kk, Dk)
             } else {
-              const FQ = QQ.entries.find((QQ => QQ.targetSelector))?.targetSelector;
-              FQ && kQ.set(QQ, FQ)
+              const ek = kk.entries.find((kk => kk.targetSelector))?.targetSelector;
+              ek && rk.set(kk, ek)
             }
           }
         };
-        const HQ = (QQ, FQ) => {
-          const wQ = [];
-          for (const qQ of LQ)
-            if (!(qQ.startTime + qQ.duration < QQ)) {
-              if (qQ.startTime > FQ) break;
-              wQ.push(qQ)
-            } return wQ
+        const Kk = (kk, ek) => {
+          const ik = [];
+          for (const fk of Dk)
+            if (!(fk.startTime + fk.duration < kk)) {
+              if (fk.startTime > ek) break;
+              ik.push(fk)
+            } return ik
         };
-        qL(["long-animation-frame"], (QQ => {
-            LQ = LQ.concat(QQ), mQ()
-          }), FQ),
-          function(QQ) {
-            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        bD(["long-animation-frame"], (kk => {
+            Dk = Dk.concat(kk), mk()
+          }), ek),
+          function(kk) {
+            let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const wQ = wL();
-            mL((() => {
-              "interactionCount" in performance || ML || (ML = qL(["event"], eL, {
+            const ik = fD();
+            KD((() => {
+              "interactionCount" in performance || YD || (YD = bD(["event"], yD, {
                 durationThreshold: 0
               }));
-              let LQ, qQ = LL("INP");
-              const oQ = Jw(FQ, pL),
-                DQ = (wQ, DQ, kQ, vQ, mQ) => {
-                  oQ.D(), qQ = LL("INP", -1, wQ, DQ, kQ, vQ, mQ), LQ = Pw(QQ, qQ, CL, FQ.reportAllChanges)
+              let Dk, fk = SD("INP");
+              const Sk = Zi(ek, CD),
+                bk = (ik, bk, rk, Pk, mk) => {
+                  Sk.D(), fk = SD("INP", -1, ik, bk, rk, Pk, mk), Dk = Ni(kk, fk, jD, ek.reportAllChanges)
                 },
-                kQ = () => {
-                  const QQ = oQ.S(qQ.navigationType);
-                  QQ && QQ.k !== qQ.value && (qQ.value = QQ.k, qQ.entries = QQ.entries, LQ())
+                rk = () => {
+                  const kk = Sk.S(fk.navigationType);
+                  kk && kk.k !== fk.value && (fk.value = kk.k, fk.entries = kk.entries, Dk())
                 },
-                vQ = QQ => {
-                  kQ(), LQ(!0), DQ("soft-navigation", QQ.navigationId, QQ.interactionId, QQ.name, QQ.startTime)
+                Pk = kk => {
+                  rk(), Dk(!0), bk("soft-navigation", kk.navigationId, kk.interactionId, kk.name, kk.startTime)
                 },
-                mQ = function(QQ) {
-                  let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  cL((() => {
-                    for (const FQ of QQ) "soft-navigation" !== FQ.entryType ? oQ.l(FQ) : vQ(FQ);
-                    kQ(), FQ && LQ(!0)
+                mk = function(kk) {
+                  let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  AD((() => {
+                    for (const ek of kk) "soft-navigation" !== ek.entryType ? Sk.l(ek) : Pk(ek);
+                    rk(), ek && Dk(!0)
                   }))
                 },
-                uQ = ["event", "first-input"];
-              oL(FQ) && uQ.push("soft-navigation");
-              const HQ = qL(uQ, mQ, {
-                ...FQ,
-                durationThreshold: FQ.durationThreshold ?? 40
+                Mk = ["event", "first-input"];
+              rD(ek) && Mk.push("soft-navigation");
+              const Kk = bD(Mk, mk, {
+                ...ek,
+                durationThreshold: ek.durationThreshold ?? 40
               });
-              LQ = Pw(QQ, qQ, CL, FQ.reportAllChanges), HQ && (wQ.onHidden((() => {
-                mQ(HQ.takeRecords(), !0)
-              })), gw((() => {
-                DQ("back-forward-cache", qQ.navigationId, qQ.navigationInteractionId, qQ.navigationURL, nw())
+              Dk = Ni(kk, fk, jD, ek.reportAllChanges), Kk && (ik.onHidden((() => {
+                mk(Kk.takeRecords(), !0)
+              })), Gi((() => {
+                bk("back-forward-cache", fk.navigationId, fk.navigationInteractionId, fk.navigationURL, gi())
               })))
             }))
-          }((FQ => {
-            QQ((QQ => {
-              if (0 === QQ.entries.length) {
-                const FQ = QQ.navigationStartTime || 0,
-                  wQ = {
+          }((ek => {
+            kk((kk => {
+              if (0 === kk.entries.length) {
+                const ek = kk.navigationStartTime || 0,
+                  ik = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: QQ.value,
-                    loadState: Xw(FQ)
+                    presentationDelay: kk.value,
+                    loadState: Bi(ek)
                   };
-                return Object.assign(QQ, {
-                  attribution: wQ
+                return Object.assign(kk, {
+                  attribution: ik
                 })
               }
-              const FQ = QQ.entries[0],
-                LQ = DQ.get(FQ),
-                qQ = Math.max(LQ.processingStart, FQ.startTime),
-                oQ = Math.max(FQ.startTime + FQ.duration, qQ),
-                vQ = Math.min(LQ.processingEnd, oQ),
-                mQ = LQ.entries.sort(((QQ, FQ) => QQ.processingStart - FQ.processingStart)),
-                uQ = HQ(FQ.startTime, vQ),
-                bQ = wQ.p.get(FQ.interactionId),
-                YQ = {
-                  interactionTarget: kQ.get(bQ),
-                  interactionType: FQ.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: FQ.startTime,
-                  nextPaintTime: oQ,
-                  processedEventEntries: mQ,
-                  longAnimationFrameEntries: uQ,
-                  inputDelay: qQ - FQ.startTime,
-                  processingDuration: vQ - qQ,
-                  presentationDelay: oQ - vQ,
-                  loadState: Xw(FQ.startTime),
+              const ek = kk.entries[0],
+                Dk = bk.get(ek),
+                fk = Math.max(Dk.processingStart, ek.startTime),
+                Sk = Math.max(ek.startTime + ek.duration, fk),
+                Pk = Math.min(Dk.processingEnd, Sk),
+                mk = Dk.entries.sort(((kk, ek) => kk.processingStart - ek.processingStart)),
+                Mk = Kk(ek.startTime, Pk),
+                xk = ik.p.get(ek.interactionId),
+                nk = {
+                  interactionTarget: rk.get(xk),
+                  interactionType: ek.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: ek.startTime,
+                  nextPaintTime: Sk,
+                  processedEventEntries: mk,
+                  longAnimationFrameEntries: Mk,
+                  inputDelay: fk - ek.startTime,
+                  processingDuration: Pk - fk,
+                  presentationDelay: Sk - Pk,
+                  loadState: Bi(ek.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (QQ => {
-                const FQ = QQ.interactionTime,
-                  wQ = QQ.nextPaintTime;
-                if (!QQ.longAnimationFrameEntries?.length || !FQ || !wQ) return;
-                const LQ = QQ.inputDelay,
-                  qQ = QQ.processingDuration;
-                let oQ, DQ, kQ = 0,
-                  vQ = 0,
-                  mQ = 0,
-                  uQ = 0;
-                for (const YQ of QQ.longAnimationFrameEntries) {
-                  vQ = vQ + YQ.startTime + YQ.duration - YQ.styleAndLayoutStart;
-                  for (const QQ of YQ.scripts) {
-                    const wQ = QQ.startTime + QQ.duration;
-                    if (wQ < FQ) continue;
-                    const mQ = wQ - Math.max(FQ, QQ.startTime),
-                      HQ = QQ.duration ? mQ / QQ.duration * QQ.forcedStyleAndLayoutDuration : 0;
-                    kQ += mQ - HQ, vQ += HQ, mQ > uQ && (DQ = QQ.startTime < FQ + LQ ? "input-delay" : QQ.startTime >= FQ + LQ + qQ ? "presentation-delay" : "processing-duration", oQ = QQ, uQ = mQ)
+              return (kk => {
+                const ek = kk.interactionTime,
+                  ik = kk.nextPaintTime;
+                if (!kk.longAnimationFrameEntries?.length || !ek || !ik) return;
+                const Dk = kk.inputDelay,
+                  fk = kk.processingDuration;
+                let Sk, bk, rk = 0,
+                  Pk = 0,
+                  mk = 0,
+                  Mk = 0;
+                for (const nk of kk.longAnimationFrameEntries) {
+                  Pk = Pk + nk.startTime + nk.duration - nk.styleAndLayoutStart;
+                  for (const kk of nk.scripts) {
+                    const ik = kk.startTime + kk.duration;
+                    if (ik < ek) continue;
+                    const mk = ik - Math.max(ek, kk.startTime),
+                      Kk = kk.duration ? mk / kk.duration * kk.forcedStyleAndLayoutDuration : 0;
+                    rk += mk - Kk, Pk += Kk, mk > Mk && (bk = kk.startTime < ek + Dk ? "input-delay" : kk.startTime >= ek + Dk + fk ? "presentation-delay" : "processing-duration", Sk = kk, Mk = mk)
                   }
                 }
-                const HQ = QQ.longAnimationFrameEntries.at(-1),
-                  bQ = HQ ? HQ.startTime + HQ.duration : 0;
-                bQ >= FQ + LQ + qQ && (mQ = wQ - bQ), oQ && DQ && (QQ.longestScript = {
-                  entry: oQ,
-                  subpart: DQ,
-                  intersectingDuration: uQ
-                }), QQ.totalScriptDuration = kQ, QQ.totalStyleAndLayoutDuration = vQ, QQ.totalPaintDuration = mQ, QQ.totalUnattributedDuration = wQ - FQ - kQ - vQ - mQ
-              })(YQ), Object.assign(QQ, {
-                attribution: YQ
+                const Kk = kk.longAnimationFrameEntries.at(-1),
+                  xk = Kk ? Kk.startTime + Kk.duration : 0;
+                xk >= ek + Dk + fk && (mk = ik - xk), Sk && bk && (kk.longestScript = {
+                  entry: Sk,
+                  subpart: bk,
+                  intersectingDuration: Mk
+                }), kk.totalScriptDuration = rk, kk.totalStyleAndLayoutDuration = Pk, kk.totalPaintDuration = mk, kk.totalUnattributedDuration = ik - ek - rk - Pk - mk
+              })(nk), Object.assign(kk, {
+                attribution: nk
               })
-            })(FQ))
-          }), FQ)
+            })(ek))
+          }), ek)
       };
-    class iL {
+    class dD {
       m;
       u;
-      l(QQ) {
-        this.m?.(QQ)
+      l(kk) {
+        this.m?.(kk)
       }
     }
-    const WL = [2500, 4e3];
-    let RL = 50;
-    const OL = [];
-    qL(["resource"], (QQ => {
-      for (const FQ of QQ) OL.push(FQ), OL.length > RL && OL.shift()
+    const VD = [2500, 4e3];
+    let FD = 50;
+    const uD = [];
+    bD(["resource"], (kk => {
+      for (const ek of kk) uD.push(ek), uD.length > FD && uD.shift()
     }));
-    const sL = [800, 1800],
-      rL = QQ => {
-        document.prerendering ? mL((() => rL(QQ))) : "complete" !== document.readyState ? addEventListener("load", (() => rL(QQ)), !0) : setTimeout(QQ)
+    const qD = [800, 1800],
+      ID = kk => {
+        document.prerendering ? KD((() => ID(kk))) : "complete" !== document.readyState ? addEventListener("load", (() => ID(kk)), !0) : setTimeout(kk)
       },
-      IL = "load_state",
-      UL = "time_to_first_byte";
-    var NL = class {
-        constructor(QQ, FQ) {
-          this.corePushMeasurement = QQ, this.webVitalConfig = FQ
+      zD = "load_state",
+      QD = "time_to_first_byte";
+    var vD = class {
+        constructor(kk, ek) {
+          this.corePushMeasurement = kk, this.webVitalConfig = ek
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var QQ;
-          ! function(QQ) {
-            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const wQ = Jw(FQ = Object.assign({}, FQ), jw),
-              LQ = new WeakMap;
-            wQ.t = QQ => {
-                if (QQ?.sources?.length) {
-                  const wQ = YL(QQ.sources),
-                    qQ = wQ?.node;
-                  if (qQ) {
-                    const QQ = FQ.generateTarget?.(qQ) ?? Vw(qQ);
-                    LQ.set(wQ, QQ)
+          var kk;
+          ! function(kk) {
+            let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const ik = Zi(ek = Object.assign({}, ek), ti),
+              Dk = new WeakMap;
+            ik.t = kk => {
+                if (kk?.sources?.length) {
+                  const ik = HD(kk.sources),
+                    fk = ik?.node;
+                  if (fk) {
+                    const kk = ek.generateTarget?.(fk) ?? Ti(fk);
+                    Dk.set(ik, kk)
                   }
                 }
               },
-              function(QQ) {
-                let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const wQ = wL();
-                HL(kL((() => {
-                  let LQ, qQ = LL("CLS", 0);
-                  const oQ = Jw(FQ, jw),
-                    DQ = (wQ, DQ, kQ, vQ, mQ) => {
-                      qQ = LL("CLS", 0, wQ, DQ, kQ, vQ, mQ), oQ.o = 0, LQ = Pw(QQ, qQ, bL, FQ.reportAllChanges)
+              function(kk) {
+                let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const ik = fD();
+                nD(mD((() => {
+                  let Dk, fk = SD("CLS", 0);
+                  const Sk = Zi(ek, ti),
+                    bk = (ik, bk, rk, Pk, mk) => {
+                      fk = SD("CLS", 0, ik, bk, rk, Pk, mk), Sk.o = 0, Dk = Ni(kk, fk, UD, ek.reportAllChanges)
                     },
-                    kQ = function() {
-                      let QQ = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      oQ.o > qQ.value && (qQ.value = oQ.o, qQ.entries = oQ.i), LQ(QQ)
+                    rk = function() {
+                      let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      Sk.o > fk.value && (fk.value = Sk.o, fk.entries = Sk.i), Dk(kk)
                     },
-                    vQ = QQ => {
-                      kQ(!0), DQ("soft-navigation", QQ.navigationId, QQ.interactionId, QQ.name, QQ.startTime)
+                    Pk = kk => {
+                      rk(!0), bk("soft-navigation", kk.navigationId, kk.interactionId, kk.name, kk.startTime)
                     },
-                    mQ = QQ => {
-                      for (const FQ of QQ) "soft-navigation" !== FQ.entryType ? oQ.l(FQ) : vQ(FQ);
-                      kQ()
+                    mk = kk => {
+                      for (const ek of kk) "soft-navigation" !== ek.entryType ? Sk.l(ek) : Pk(ek);
+                      rk()
                     },
-                    uQ = ["layout-shift"];
-                  oL(FQ) && uQ.push("soft-navigation");
-                  const HQ = qL(uQ, mQ);
-                  HQ && (LQ = Pw(QQ, qQ, bL, FQ.reportAllChanges), wQ.onHidden((() => {
-                    mQ(HQ.takeRecords()), LQ(!0)
-                  })), gw((() => {
-                    DQ("back-forward-cache", qQ.navigationId, qQ.navigationInteractionId, qQ.navigationURL, nw()), Zw(LQ)
-                  })), setTimeout(LQ))
+                    Mk = ["layout-shift"];
+                  rD(ek) && Mk.push("soft-navigation");
+                  const Kk = bD(Mk, mk);
+                  Kk && (Dk = Ni(kk, fk, UD, ek.reportAllChanges), ik.onHidden((() => {
+                    mk(Kk.takeRecords()), Dk(!0)
+                  })), Gi((() => {
+                    bk("back-forward-cache", fk.navigationId, fk.navigationInteractionId, fk.navigationURL, gi()), Ri(Dk)
+                  })), setTimeout(Dk))
                 })))
-              }((FQ => {
-                QQ((QQ => {
-                  let FQ = {};
-                  if (QQ.entries.length) {
-                    const wQ = QQ.entries.reduce(((QQ, FQ) => QQ.value > FQ.value ? QQ : FQ));
-                    if (wQ?.sources?.length) {
-                      const QQ = YL(wQ.sources);
-                      QQ && (FQ = {
-                        largestShiftTarget: LQ.get(QQ),
-                        largestShiftTime: wQ.startTime,
-                        largestShiftValue: wQ.value,
-                        largestShiftSource: QQ,
-                        largestShiftEntry: wQ,
-                        loadState: Xw(wQ.startTime)
+              }((ek => {
+                kk((kk => {
+                  let ek = {};
+                  if (kk.entries.length) {
+                    const ik = kk.entries.reduce(((kk, ek) => kk.value > ek.value ? kk : ek));
+                    if (ik?.sources?.length) {
+                      const kk = HD(ik.sources);
+                      kk && (ek = {
+                        largestShiftTarget: Dk.get(kk),
+                        largestShiftTime: ik.startTime,
+                        largestShiftValue: ik.value,
+                        largestShiftSource: kk,
+                        largestShiftEntry: ik,
+                        loadState: Bi(ik.startTime)
                       })
                     }
                   }
-                  return Object.assign(QQ, {
-                    attribution: FQ
+                  return Object.assign(kk, {
+                    attribution: ek
                   })
-                })(FQ))
-              }), FQ)
-          }((QQ => {
+                })(ek))
+              }), ek)
+          }((kk => {
             const {
-              loadState: FQ,
-              largestShiftValue: wQ,
-              largestShiftTime: LQ,
-              largestShiftTarget: qQ
-            } = QQ.attribution, oQ = this.buildInitialValues(QQ);
-            this.addIfPresent(oQ, "largest_shift_value", wQ), this.addIfPresent(oQ, "largest_shift_time", LQ);
-            const DQ = this.buildInitialContext(QQ);
-            this.addIfPresent(DQ, IL, FQ), this.addIfPresent(DQ, "largest_shift_target", qQ), this.pushMeasurement(oQ, DQ)
+              loadState: ek,
+              largestShiftValue: ik,
+              largestShiftTime: Dk,
+              largestShiftTarget: fk
+            } = kk.attribution, Sk = this.buildInitialValues(kk);
+            this.addIfPresent(Sk, "largest_shift_value", ik), this.addIfPresent(Sk, "largest_shift_time", Dk);
+            const bk = this.buildInitialContext(kk);
+            this.addIfPresent(bk, zD, ek), this.addIfPresent(bk, "largest_shift_target", fk), this.pushMeasurement(Sk, bk)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (kk = this.webVitalConfig) || void 0 === kk ? void 0 : kk.reportAllChanges
           })
         }
         measureFCP() {
-          var QQ;
-          ! function(QQ) {
-            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const wQ = Jw(FQ = Object.assign({}, FQ), vL);
-            oL(FQ) && (wQ.u = new Map), HL((FQ => {
-              QQ((QQ => {
-                let FQ = {
+          var kk;
+          ! function(kk) {
+            let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const ik = Zi(ek = Object.assign({}, ek), MD);
+            rD(ek) && (ik.u = new Map), nD((ek => {
+              kk((kk => {
+                let ek = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: QQ.value,
-                  loadState: Xw(nw())
+                  firstByteToFCP: kk.value,
+                  loadState: Bi(gi())
                 };
-                if ("soft-navigation" !== QQ.navigationType) {
-                  if (QQ.entries.length) {
-                    const wQ = aw(),
-                      LQ = QQ.entries.at(-1);
-                    if (wQ) {
-                      const qQ = wQ.responseStart,
-                        oQ = wQ.activationStart || 0,
-                        DQ = Math.max(0, qQ - oQ);
-                      FQ = {
-                        timeToFirstByte: DQ,
-                        firstByteToFCP: QQ.value - DQ,
-                        loadState: Xw(QQ.entries[0].startTime),
-                        navigationEntry: wQ,
-                        fcpEntry: LQ
+                if ("soft-navigation" !== kk.navigationType) {
+                  if (kk.entries.length) {
+                    const ik = Xi(),
+                      Dk = kk.entries.at(-1);
+                    if (ik) {
+                      const fk = ik.responseStart,
+                        Sk = ik.activationStart || 0,
+                        bk = Math.max(0, fk - Sk);
+                      ek = {
+                        timeToFirstByte: bk,
+                        firstByteToFCP: kk.value - bk,
+                        loadState: Bi(kk.entries[0].startTime),
+                        navigationEntry: ik,
+                        fcpEntry: Dk
                       }
                     }
                   }
                 } else {
-                  const LQ = wQ.u?.get(QQ.navigationId);
-                  LQ && (FQ = {
+                  const Dk = ik.u?.get(kk.navigationId);
+                  Dk && (ek = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: QQ.value,
+                    firstByteToFCP: kk.value,
                     loadState: "complete",
-                    navigationEntry: LQ
+                    navigationEntry: Dk
                   })
                 }
-                return Object.assign(QQ, {
-                  attribution: FQ
+                return Object.assign(kk, {
+                  attribution: ek
                 })
-              })(FQ))
-            }), FQ)
-          }((QQ => {
+              })(ek))
+            }), ek)
+          }((kk => {
             const {
-              firstByteToFCP: FQ,
-              timeToFirstByte: wQ,
-              loadState: LQ
-            } = QQ.attribution, qQ = this.buildInitialValues(QQ);
-            this.addIfPresent(qQ, "first_byte_to_fcp", FQ), this.addIfPresent(qQ, UL, wQ);
-            const oQ = this.buildInitialContext(QQ);
-            this.addIfPresent(oQ, IL, LQ), this.pushMeasurement(qQ, oQ)
+              firstByteToFCP: ek,
+              timeToFirstByte: ik,
+              loadState: Dk
+            } = kk.attribution, fk = this.buildInitialValues(kk);
+            this.addIfPresent(fk, "first_byte_to_fcp", ek), this.addIfPresent(fk, QD, ik);
+            const Sk = this.buildInitialContext(kk);
+            this.addIfPresent(Sk, zD, Dk), this.pushMeasurement(fk, Sk)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (kk = this.webVitalConfig) || void 0 === kk ? void 0 : kk.reportAllChanges
           })
         }
         measureINP() {
-          var QQ;
-          SL((QQ => {
-            var FQ;
+          var kk;
+          sD((kk => {
+            var ek;
             const {
-              interactionTime: wQ,
-              presentationDelay: LQ,
-              inputDelay: qQ,
-              processingDuration: oQ,
-              nextPaintTime: DQ,
-              loadState: kQ,
-              interactionTarget: vQ,
-              interactionType: mQ,
-              totalScriptDuration: uQ,
-              totalStyleAndLayoutDuration: HQ,
-              totalPaintDuration: bQ,
-              totalUnattributedDuration: YQ,
-              longestScript: xQ
-            } = QQ.attribution, AQ = this.buildInitialValues(QQ);
-            this.addIfPresent(AQ, "interaction_time", wQ), this.addIfPresent(AQ, "presentation_delay", LQ), this.addIfPresent(AQ, "input_delay", qQ), this.addIfPresent(AQ, "processing_duration", oQ), this.addIfPresent(AQ, "next_paint_time", DQ), this.addNumberIfDefined(AQ, "total_script_duration", uQ), this.addNumberIfDefined(AQ, "total_style_and_layout_duration", HQ), this.addNumberIfDefined(AQ, "total_paint_duration", bQ), this.addNumberIfDefined(AQ, "total_unattributed_duration", YQ), this.addNumberIfDefined(AQ, "longest_script_intersecting_duration", null === xQ || void 0 === xQ ? void 0 : xQ.intersectingDuration);
-            const tQ = this.buildInitialContext(QQ);
-            this.addIfPresent(tQ, IL, kQ), this.addIfPresent(tQ, "interaction_target", vQ), this.addIfPresent(tQ, "interaction_type", mQ), this.addIfPresent(tQ, "longest_script_subpart", null === xQ || void 0 === xQ ? void 0 : xQ.subpart), this.addIfPresent(tQ, "longest_script_invoker_type", null === xQ || void 0 === xQ ? void 0 : xQ.entry.invokerType), (null === (FQ = this.webVitalConfig) || void 0 === FQ ? void 0 : FQ.trackAttributionSources) && (this.addIfPresent(tQ, "longest_script_invoker", null === xQ || void 0 === xQ ? void 0 : xQ.entry.invoker), this.addIfPresent(tQ, "longest_script_source_url", null === xQ || void 0 === xQ ? void 0 : xQ.entry.sourceURL), this.addIfPresent(tQ, "longest_script_source_function_name", null === xQ || void 0 === xQ ? void 0 : xQ.entry.sourceFunctionName), this.addIfPresent(tQ, "longest_script_source_char_position", void 0 !== (null === xQ || void 0 === xQ ? void 0 : xQ.entry.sourceCharPosition) ? String(xQ.entry.sourceCharPosition) : void 0)), this.pushMeasurement(AQ, tQ)
+              interactionTime: ik,
+              presentationDelay: Dk,
+              inputDelay: fk,
+              processingDuration: Sk,
+              nextPaintTime: bk,
+              loadState: rk,
+              interactionTarget: Pk,
+              interactionType: mk,
+              totalScriptDuration: Mk,
+              totalStyleAndLayoutDuration: Kk,
+              totalPaintDuration: xk,
+              totalUnattributedDuration: nk,
+              longestScript: Uk
+            } = kk.attribution, Hk = this.buildInitialValues(kk);
+            this.addIfPresent(Hk, "interaction_time", ik), this.addIfPresent(Hk, "presentation_delay", Dk), this.addIfPresent(Hk, "input_delay", fk), this.addIfPresent(Hk, "processing_duration", Sk), this.addIfPresent(Hk, "next_paint_time", bk), this.addNumberIfDefined(Hk, "total_script_duration", Mk), this.addNumberIfDefined(Hk, "total_style_and_layout_duration", Kk), this.addNumberIfDefined(Hk, "total_paint_duration", xk), this.addNumberIfDefined(Hk, "total_unattributed_duration", nk), this.addNumberIfDefined(Hk, "longest_script_intersecting_duration", null === Uk || void 0 === Uk ? void 0 : Uk.intersectingDuration);
+            const wk = this.buildInitialContext(kk);
+            this.addIfPresent(wk, zD, rk), this.addIfPresent(wk, "interaction_target", Pk), this.addIfPresent(wk, "interaction_type", mk), this.addIfPresent(wk, "longest_script_subpart", null === Uk || void 0 === Uk ? void 0 : Uk.subpart), this.addIfPresent(wk, "longest_script_invoker_type", null === Uk || void 0 === Uk ? void 0 : Uk.entry.invokerType), (null === (ek = this.webVitalConfig) || void 0 === ek ? void 0 : ek.trackAttributionSources) && (this.addIfPresent(wk, "longest_script_invoker", null === Uk || void 0 === Uk ? void 0 : Uk.entry.invoker), this.addIfPresent(wk, "longest_script_source_url", null === Uk || void 0 === Uk ? void 0 : Uk.entry.sourceURL), this.addIfPresent(wk, "longest_script_source_function_name", null === Uk || void 0 === Uk ? void 0 : Uk.entry.sourceFunctionName), this.addIfPresent(wk, "longest_script_source_char_position", void 0 !== (null === Uk || void 0 === Uk ? void 0 : Uk.entry.sourceCharPosition) ? String(Uk.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Hk, wk)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (kk = this.webVitalConfig) || void 0 === kk ? void 0 : kk.reportAllChanges
           })
         }
         measureLCP() {
-          var QQ;
-          ! function(QQ) {
-            let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (FQ = Object.assign({}, FQ)).resourceBufferSize && (RL = FQ.resourceBufferSize);
-            const wQ = Jw(FQ, iL),
-              LQ = new WeakMap;
-            oL(FQ) && (wQ.u = new Map), wQ.m = QQ => {
-                const wQ = QQ.element;
-                if (wQ) {
-                  const qQ = FQ.generateTarget?.(wQ) ?? Vw(wQ);
-                  LQ.set(QQ, qQ)
-                } else QQ.id && LQ.set(QQ, `#${QQ.id}`)
+          var kk;
+          ! function(kk) {
+            let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (ek = Object.assign({}, ek)).resourceBufferSize && (FD = ek.resourceBufferSize);
+            const ik = Zi(ek, dD),
+              Dk = new WeakMap;
+            rD(ek) && (ik.u = new Map), ik.m = kk => {
+                const ik = kk.element;
+                if (ik) {
+                  const fk = ek.generateTarget?.(ik) ?? Ti(ik);
+                  Dk.set(kk, fk)
+                } else kk.id && Dk.set(kk, `#${kk.id}`)
               },
-              function(QQ) {
-                let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  wQ = !1;
-                const LQ = oL(FQ);
-                mL((() => {
-                  let qQ, oQ = wL(),
-                    DQ = LL("LCP");
-                  const kQ = Jw(FQ, iL),
-                    vQ = (LQ, kQ, vQ, mQ, uQ) => {
-                      DQ = LL("LCP", -1, LQ, kQ, vQ, mQ, uQ), qQ = Pw(QQ, DQ, WL, FQ.reportAllChanges), wQ = !1, "soft-navigation" === LQ && (oQ = wL(!0))
+              function(kk) {
+                let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  ik = !1;
+                const Dk = rD(ek);
+                KD((() => {
+                  let fk, Sk = fD(),
+                    bk = SD("LCP");
+                  const rk = Zi(ek, dD),
+                    Pk = (Dk, rk, Pk, mk, Mk) => {
+                      bk = SD("LCP", -1, Dk, rk, Pk, mk, Mk), fk = Ni(kk, bk, VD, ek.reportAllChanges), ik = !1, "soft-navigation" === Dk && (Sk = fD(!0))
                     },
-                    mQ = QQ => {
-                      kQ.u && QQ.navigationId && DL(kQ.u, QQ), wQ || qQ(!0), vQ("soft-navigation", QQ.navigationId, QQ.interactionId, QQ.name, QQ.startTime);
-                      const FQ = QQ.getLargestInteractionContentfulPaint?.();
-                      FQ && uQ([FQ])
+                    mk = kk => {
+                      rk.u && kk.navigationId && PD(rk.u, kk), ik || fk(!0), Pk("soft-navigation", kk.navigationId, kk.interactionId, kk.name, kk.startTime);
+                      const ek = kk.getLargestInteractionContentfulPaint?.();
+                      ek && Mk([ek])
                     },
-                    uQ = QQ => {
-                      FQ.reportAllChanges || LQ || (QQ = QQ.slice(-1));
-                      for (const FQ of QQ) {
-                        if (!FQ) continue;
-                        if ("soft-navigation" === FQ.entryType) {
-                          mQ(FQ);
+                    Mk = kk => {
+                      ek.reportAllChanges || Dk || (kk = kk.slice(-1));
+                      for (const ek of kk) {
+                        if (!ek) continue;
+                        if ("soft-navigation" === ek.entryType) {
+                          mk(ek);
                           continue
                         }
-                        let QQ = 0,
-                          wQ = [],
-                          LQ = FQ.startTime;
-                        if ("largest-contentful-paint" === FQ.entryType) QQ = Math.max(FQ.startTime - yw(), 0), kQ.l(FQ), wQ = [FQ];
-                        else if ("interaction-contentful-paint" === FQ.entryType) {
-                          const qQ = FQ;
-                          if (!DQ.navigationId) continue;
-                          if ("interactionId" in qQ && qQ.interactionId != DQ.navigationInteractionId) continue;
-                          LQ = qQ.largestContentfulPaint?.renderTime || 0, QQ = Math.max(LQ - FQ.startTime, 0), qQ.largestContentfulPaint && (kQ.l(qQ.largestContentfulPaint), wQ = [qQ.largestContentfulPaint])
+                        let kk = 0,
+                          ik = [],
+                          Dk = ek.startTime;
+                        if ("largest-contentful-paint" === ek.entryType) kk = Math.max(ek.startTime - Ji(), 0), rk.l(ek), ik = [ek];
+                        else if ("interaction-contentful-paint" === ek.entryType) {
+                          const fk = ek;
+                          if (!bk.navigationId) continue;
+                          if ("interactionId" in fk && fk.interactionId != bk.navigationInteractionId) continue;
+                          Dk = fk.largestContentfulPaint?.renderTime || 0, kk = Math.max(Dk - ek.startTime, 0), fk.largestContentfulPaint && (rk.l(fk.largestContentfulPaint), ik = [fk.largestContentfulPaint])
                         }
-                        LQ < oQ.firstHiddenTime && (DQ.value = QQ, DQ.entries = wQ, qQ())
+                        Dk < Sk.firstHiddenTime && (bk.value = kk, bk.entries = ik, fk())
                       }
                     },
-                    HQ = ["largest-contentful-paint"];
-                  LQ && HQ.push("interaction-contentful-paint", "soft-navigation");
-                  const bQ = qL(HQ, uQ);
-                  if (bQ) {
-                    qQ = Pw(QQ, DQ, WL, FQ.reportAllChanges);
-                    const oQ = ["keydown", "click", "visibilitychange"],
-                      kQ = QQ => {
-                        if (QQ.isTrusted && !wQ) {
-                          const QQ = DQ.id;
-                          cL((() => {
-                            if (!wQ) {
-                              if (!LQ) {
-                                bQ.disconnect();
-                                for (const QQ of oQ) removeEventListener(QQ, kQ, {
+                    Kk = ["largest-contentful-paint"];
+                  Dk && Kk.push("interaction-contentful-paint", "soft-navigation");
+                  const xk = bD(Kk, Mk);
+                  if (xk) {
+                    fk = Ni(kk, bk, VD, ek.reportAllChanges);
+                    const Sk = ["keydown", "click", "visibilitychange"],
+                      rk = kk => {
+                        if (kk.isTrusted && !ik) {
+                          const kk = bk.id;
+                          AD((() => {
+                            if (!ik) {
+                              if (!Dk) {
+                                xk.disconnect();
+                                for (const kk of Sk) removeEventListener(kk, rk, {
                                   capture: !0
                                 })
                               }
-                              QQ === DQ.id && (wQ = !0, qQ(!0))
+                              kk === bk.id && (ik = !0, fk(!0))
                             }
                           }))
                         }
                       };
-                    for (const QQ of oQ) addEventListener(QQ, kQ, {
+                    for (const kk of Sk) addEventListener(kk, rk, {
                       capture: !0
                     });
-                    gw((LQ => {
-                      vQ("back-forward-cache", DQ.navigationId, DQ.navigationInteractionId, DQ.navigationURL, nw()), qQ = Pw(QQ, DQ, WL, FQ.reportAllChanges), Zw((() => {
-                        DQ.value = performance.now() - LQ.timeStamp, wQ = !0, qQ(!0)
+                    Gi((Dk => {
+                      Pk("back-forward-cache", bk.navigationId, bk.navigationInteractionId, bk.navigationURL, gi()), fk = Ni(kk, bk, VD, ek.reportAllChanges), Ri((() => {
+                        bk.value = performance.now() - Dk.timeStamp, ik = !0, fk(!0)
                       }))
                     }))
                   }
                 }))
-              }((FQ => {
-                QQ((QQ => {
-                  let FQ = {
+              }((ek => {
+                kk((kk => {
+                  let ek = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: QQ.value
+                    elementRenderDelay: kk.value
                   };
-                  if (QQ.entries.length) {
-                    const qQ = QQ.entries.at(-1),
-                      oQ = QQ => QQ.name === qQ.url && (QQ.requestStart || QQ.startTime) <= qQ.startTime,
-                      DQ = qQ.url && (OL.findLast(oQ) || performance.getEntriesByType("resource").findLast(oQ));
-                    let kQ;
-                    FQ.target = LQ.get(qQ), FQ.lcpEntry = qQ, qQ.url && (FQ.url = qQ.url), DQ && (FQ.lcpResourceEntry = DQ);
-                    let vQ = 0,
-                      mQ = 0;
-                    if ("soft-navigation" !== QQ.navigationType ? (kQ = aw(), vQ = kQ?.activationStart ?? 0, mQ = kQ?.responseStart ?? 0) : (vQ = QQ.navigationStartTime || 0, kQ = wQ.u?.get(QQ.navigationId)), kQ) {
-                      const wQ = Math.max(0, mQ - vQ),
-                        LQ = Math.max(wQ, DQ ? (DQ.requestStart || DQ.startTime) - vQ : 0),
-                        qQ = Math.min(QQ.value, Math.max(LQ, DQ ? DQ.responseEnd - vQ : 0));
-                      FQ = {
-                        ...FQ,
-                        timeToFirstByte: wQ,
-                        resourceLoadDelay: LQ - wQ,
-                        resourceLoadDuration: qQ - LQ,
-                        elementRenderDelay: QQ.value - qQ,
-                        navigationEntry: kQ
+                  if (kk.entries.length) {
+                    const fk = kk.entries.at(-1),
+                      Sk = kk => kk.name === fk.url && (kk.requestStart || kk.startTime) <= fk.startTime,
+                      bk = fk.url && (uD.findLast(Sk) || performance.getEntriesByType("resource").findLast(Sk));
+                    let rk;
+                    ek.target = Dk.get(fk), ek.lcpEntry = fk, fk.url && (ek.url = fk.url), bk && (ek.lcpResourceEntry = bk);
+                    let Pk = 0,
+                      mk = 0;
+                    if ("soft-navigation" !== kk.navigationType ? (rk = Xi(), Pk = rk?.activationStart ?? 0, mk = rk?.responseStart ?? 0) : (Pk = kk.navigationStartTime || 0, rk = ik.u?.get(kk.navigationId)), rk) {
+                      const ik = Math.max(0, mk - Pk),
+                        Dk = Math.max(ik, bk ? (bk.requestStart || bk.startTime) - Pk : 0),
+                        fk = Math.min(kk.value, Math.max(Dk, bk ? bk.responseEnd - Pk : 0));
+                      ek = {
+                        ...ek,
+                        timeToFirstByte: ik,
+                        resourceLoadDelay: Dk - ik,
+                        resourceLoadDuration: fk - Dk,
+                        elementRenderDelay: kk.value - fk,
+                        navigationEntry: rk
                       }
                     }
                   }
-                  return Object.assign(QQ, {
-                    attribution: FQ
+                  return Object.assign(kk, {
+                    attribution: ek
                   })
-                })(FQ))
-              }), FQ)
-          }((QQ => {
-            var FQ;
+                })(ek))
+              }), ek)
+          }((kk => {
+            var ek;
             const {
-              elementRenderDelay: wQ,
-              resourceLoadDelay: LQ,
-              resourceLoadDuration: qQ,
-              timeToFirstByte: oQ,
-              target: DQ,
-              url: kQ,
-              lcpResourceEntry: vQ
-            } = QQ.attribution, mQ = this.buildInitialValues(QQ);
-            this.addIfPresent(mQ, "element_render_delay", wQ), this.addIfPresent(mQ, "resource_load_delay", LQ), this.addIfPresent(mQ, "resource_load_duration", qQ), this.addIfPresent(mQ, UL, oQ);
-            const uQ = this.buildInitialContext(QQ);
-            this.addIfPresent(uQ, "element", DQ), (null === (FQ = this.webVitalConfig) || void 0 === FQ ? void 0 : FQ.trackAttributionSources) && (this.addIfPresent(uQ, "resource_url", kQ), this.addIfPresent(uQ, "resource_delivery_type", null === vQ || void 0 === vQ ? void 0 : vQ.deliveryType), this.addIfPresent(uQ, "resource_initiator_type", null === vQ || void 0 === vQ ? void 0 : vQ.initiatorType)), this.pushMeasurement(mQ, uQ)
+              elementRenderDelay: ik,
+              resourceLoadDelay: Dk,
+              resourceLoadDuration: fk,
+              timeToFirstByte: Sk,
+              target: bk,
+              url: rk,
+              lcpResourceEntry: Pk
+            } = kk.attribution, mk = this.buildInitialValues(kk);
+            this.addIfPresent(mk, "element_render_delay", ik), this.addIfPresent(mk, "resource_load_delay", Dk), this.addIfPresent(mk, "resource_load_duration", fk), this.addIfPresent(mk, QD, Sk);
+            const Mk = this.buildInitialContext(kk);
+            this.addIfPresent(Mk, "element", bk), (null === (ek = this.webVitalConfig) || void 0 === ek ? void 0 : ek.trackAttributionSources) && (this.addIfPresent(Mk, "resource_url", rk), this.addIfPresent(Mk, "resource_delivery_type", null === Pk || void 0 === Pk ? void 0 : Pk.deliveryType), this.addIfPresent(Mk, "resource_initiator_type", null === Pk || void 0 === Pk ? void 0 : Pk.initiatorType)), this.pushMeasurement(mk, Mk)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (kk = this.webVitalConfig) || void 0 === kk ? void 0 : kk.reportAllChanges
           })
         }
         measureTTFB() {
-          var QQ;
-          ! function(QQ) {
-            ! function(QQ) {
-              let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const wQ = oL(FQ);
-              let LQ = LL("TTFB"),
-                qQ = Pw(QQ, LQ, sL, FQ.reportAllChanges);
-              rL((() => {
-                const oQ = aw();
-                if (oQ) {
-                  const DQ = oQ.responseStart;
-                  LQ.value = Math.max(DQ - yw(), 0), LQ.entries = [oQ], qQ(!0), gw((() => {
-                    LQ = LL("TTFB", 0, "back-forward-cache", LQ.navigationId, LQ.navigationInteractionId, LQ.navigationURL, nw()), qQ = Pw(QQ, LQ, sL, FQ.reportAllChanges), qQ(!0)
-                  })), wQ && qL(["soft-navigation"], (wQ => {
-                    wQ.forEach((wQ => {
-                      wQ.navigationId && (LQ = LL("TTFB", 0, "soft-navigation", wQ.navigationId, wQ.interactionId, wQ.name, wQ.startTime), LQ.entries = [wQ], qQ = Pw(QQ, LQ, sL, FQ.reportAllChanges), qQ(!0))
+          var kk;
+          ! function(kk) {
+            ! function(kk) {
+              let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const ik = rD(ek);
+              let Dk = SD("TTFB"),
+                fk = Ni(kk, Dk, qD, ek.reportAllChanges);
+              ID((() => {
+                const Sk = Xi();
+                if (Sk) {
+                  const bk = Sk.responseStart;
+                  Dk.value = Math.max(bk - Ji(), 0), Dk.entries = [Sk], fk(!0), Gi((() => {
+                    Dk = SD("TTFB", 0, "back-forward-cache", Dk.navigationId, Dk.navigationInteractionId, Dk.navigationURL, gi()), fk = Ni(kk, Dk, qD, ek.reportAllChanges), fk(!0)
+                  })), ik && bD(["soft-navigation"], (ik => {
+                    ik.forEach((ik => {
+                      ik.navigationId && (Dk = SD("TTFB", 0, "soft-navigation", ik.navigationId, ik.interactionId, ik.name, ik.startTime), Dk.entries = [ik], fk = Ni(kk, Dk, qD, ek.reportAllChanges), fk(!0))
                     }))
-                  }), FQ)
+                  }), ek)
                 }
               }))
-            }((FQ => {
-              QQ((QQ => {
-                const FQ = QQ.entries[0];
-                let wQ = {
+            }((ek => {
+              kk((kk => {
+                const ek = kk.entries[0];
+                let ik = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: FQ
+                  navigationEntry: ek
                 };
-                if (QQ.entries.length && FQ instanceof PerformanceNavigationTiming) {
-                  const LQ = FQ.activationStart || 0,
-                    qQ = Math.max((FQ.workerStart || FQ.fetchStart || 0) - LQ, 0),
-                    oQ = Math.max(FQ.domainLookupStart - LQ, 0),
-                    DQ = Math.max(FQ.connectStart - LQ, 0),
-                    kQ = Math.max(FQ.connectEnd - LQ, 0);
-                  wQ = {
-                    waitingDuration: qQ,
-                    cacheDuration: oQ - qQ,
-                    dnsDuration: DQ - oQ,
-                    connectionDuration: kQ - DQ,
-                    requestDuration: QQ.value - kQ,
-                    navigationEntry: FQ
+                if (kk.entries.length && ek instanceof PerformanceNavigationTiming) {
+                  const Dk = ek.activationStart || 0,
+                    fk = Math.max((ek.workerStart || ek.fetchStart || 0) - Dk, 0),
+                    Sk = Math.max(ek.domainLookupStart - Dk, 0),
+                    bk = Math.max(ek.connectStart - Dk, 0),
+                    rk = Math.max(ek.connectEnd - Dk, 0);
+                  ik = {
+                    waitingDuration: fk,
+                    cacheDuration: Sk - fk,
+                    dnsDuration: bk - Sk,
+                    connectionDuration: rk - bk,
+                    requestDuration: kk.value - rk,
+                    navigationEntry: ek
                   }
                 }
-                return Object.assign(QQ, {
-                  attribution: wQ
+                return Object.assign(kk, {
+                  attribution: ik
                 })
-              })(FQ))
+              })(ek))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((QQ => {
+          }((kk => {
             const {
-              dnsDuration: FQ,
-              connectionDuration: wQ,
-              requestDuration: LQ,
-              waitingDuration: qQ,
-              cacheDuration: oQ
-            } = QQ.attribution, DQ = this.buildInitialValues(QQ);
-            this.addIfPresent(DQ, "dns_duration", FQ), this.addIfPresent(DQ, "connection_duration", wQ), this.addIfPresent(DQ, "request_duration", LQ), this.addIfPresent(DQ, "waiting_duration", qQ), this.addIfPresent(DQ, "cache_duration", oQ);
-            const kQ = this.buildInitialContext(QQ);
-            this.pushMeasurement(DQ, kQ)
+              dnsDuration: ek,
+              connectionDuration: ik,
+              requestDuration: Dk,
+              waitingDuration: fk,
+              cacheDuration: Sk
+            } = kk.attribution, bk = this.buildInitialValues(kk);
+            this.addIfPresent(bk, "dns_duration", ek), this.addIfPresent(bk, "connection_duration", ik), this.addIfPresent(bk, "request_duration", Dk), this.addIfPresent(bk, "waiting_duration", fk), this.addIfPresent(bk, "cache_duration", Sk);
+            const rk = this.buildInitialContext(kk);
+            this.pushMeasurement(bk, rk)
           }), {
-            reportAllChanges: null === (QQ = this.webVitalConfig) || void 0 === QQ ? void 0 : QQ.reportAllChanges
+            reportAllChanges: null === (kk = this.webVitalConfig) || void 0 === kk ? void 0 : kk.reportAllChanges
           })
         }
-        buildInitialValues(QQ) {
+        buildInitialValues(kk) {
           return {
-            [QQ.name.toLowerCase()]: QQ.value,
-            delta: QQ.delta
+            [kk.name.toLowerCase()]: kk.value,
+            delta: kk.delta
           }
         }
-        buildInitialContext(QQ) {
-          var FQ;
-          const wQ = null !== (FQ = QF("com.grafana.faro.lastNavigationId", yQ)) && void 0 !== FQ ? FQ : zw;
+        buildInitialContext(kk) {
+          var ek;
+          const ik = null !== (ek = ee("com.grafana.faro.lastNavigationId", Rk)) && void 0 !== ek ? ek : ai;
           return {
-            id: QQ.id,
-            rating: QQ.rating,
-            navigation_type: QQ.navigationType,
-            navigation_entry_id: wQ
+            id: kk.id,
+            rating: kk.rating,
+            navigation_type: kk.navigationType,
+            navigation_entry_id: ik
           }
         }
-        pushMeasurement(QQ, FQ) {
+        pushMeasurement(kk, ek) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: QQ
+            values: kk
           }, {
-            context: FQ
+            context: ek
           })
         }
-        addIfPresent(QQ, FQ, wQ) {
-          wQ && (QQ[FQ] = wQ)
+        addIfPresent(kk, ek, ik) {
+          ik && (kk[ek] = ik)
         }
-        addNumberIfDefined(QQ, FQ, wQ) {
-          void 0 !== wQ && (QQ[FQ] = wQ)
+        addNumberIfDefined(kk, ek, ik) {
+          void 0 !== ik && (kk[ek] = ik)
         }
       },
-      TL = class extends Fw {
+      ED = class extends ii {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = ww
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = Di
         }
         initialize() {
-          this.logDebug("Initializing"), new NL(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new vD(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const KL = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const hD = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function zL() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const FQ of QQ)
-        if ("traceparent" === FQ.name) {
-          if (!KL.test(FQ.description)) continue;
-          const [, QQ, wQ] = FQ.description.split("-");
-          if (null != QQ && null != wQ) return {
-            traceId: QQ,
-            spanId: wQ
+    function aD() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const ek of kk)
+        if ("traceparent" === ek.name) {
+          if (!hD.test(ek.description)) continue;
+          const [, kk, ik] = ek.description.split("-");
+          if (null != kk && null != ik) return {
+            traceId: kk,
+            spanId: ik
           };
           break
         }
     }
 
-    function lL(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function WD(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: wQ,
-        monoNow: LQ
-      } = FQ;
-      return Math.min(wQ, wQ - (LQ - QQ))
+        wallNow: ik,
+        monoNow: Dk
+      } = ek;
+      return Math.min(ik, ik - (Dk - kk))
     }
 
-    function jL(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [wQ, LQ] of Object.entries(FQ)) {
-        const FQ = QQ[wQ];
-        return null != FQ && (rQ(LQ) ? LQ.includes(FQ) : FQ === LQ)
+    function tD(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [ik, Dk] of Object.entries(ek)) {
+        const ek = kk[ik];
+        return null != ek && (uk(Dk) ? Dk.includes(ek) : ek === Dk)
       }
       return !0
     }
 
-    function aL(QQ) {
+    function XD(kk) {
       const {
-        connectEnd: FQ,
-        connectStart: wQ,
-        decodedBodySize: LQ,
-        domainLookupEnd: qQ,
-        domainLookupStart: oQ,
-        duration: DQ,
-        encodedBodySize: kQ,
-        fetchStart: vQ,
-        initiatorType: mQ,
-        name: uQ,
-        nextHopProtocol: HQ,
-        redirectEnd: bQ,
-        redirectStart: YQ,
-        renderBlockingStatus: xQ,
-        requestStart: AQ,
-        responseEnd: tQ,
-        responseStart: eQ,
-        responseStatus: MQ,
-        secureConnectionStart: GQ,
-        transferSize: pQ,
-        workerStart: cQ
-      } = QQ;
+        connectEnd: ek,
+        connectStart: ik,
+        decodedBodySize: Dk,
+        domainLookupEnd: fk,
+        domainLookupStart: Sk,
+        duration: bk,
+        encodedBodySize: rk,
+        fetchStart: Pk,
+        initiatorType: mk,
+        name: Mk,
+        nextHopProtocol: Kk,
+        redirectEnd: xk,
+        redirectStart: nk,
+        renderBlockingStatus: Uk,
+        requestStart: Hk,
+        responseEnd: wk,
+        responseStart: lk,
+        responseStatus: pk,
+        secureConnectionStart: yk,
+        transferSize: Yk,
+        workerStart: Lk
+      } = kk;
       return {
-        name: uQ,
-        httpHost: fL(uQ),
-        duration: VL(DQ),
-        tcpHandshakeTime: VL(FQ - wQ),
-        dnsLookupTime: VL(qQ - oQ),
-        tlsNegotiationTime: VL(FQ - GQ),
-        responseStatus: VL(MQ),
-        redirectTime: VL(bQ - YQ),
-        requestTime: VL(eQ - AQ),
-        responseTime: VL(tQ - eQ),
-        fetchTime: VL(tQ - vQ),
-        serviceWorkerTime: VL(cQ > 0 ? vQ - cQ : 0),
-        decodedBodySize: VL(LQ),
-        encodedBodySize: VL(kQ),
+        name: Mk,
+        httpHost: cD(Mk),
+        duration: TD(bk),
+        tcpHandshakeTime: TD(ek - ik),
+        dnsLookupTime: TD(fk - Sk),
+        tlsNegotiationTime: TD(ek - yk),
+        responseStatus: TD(pk),
+        redirectTime: TD(xk - nk),
+        requestTime: TD(lk - Hk),
+        responseTime: TD(wk - lk),
+        fetchTime: TD(wk - Pk),
+        serviceWorkerTime: TD(Lk > 0 ? Pk - Lk : 0),
+        decodedBodySize: TD(Dk),
+        encodedBodySize: TD(rk),
         cacheHitStatus: function() {
-          let QQ = "fullLoad";
-          0 === pQ ? LQ > 0 && (QQ = "cache") : null != MQ ? 304 === MQ && (QQ = "conditionalFetch") : kQ > 0 && pQ < kQ && (QQ = "conditionalFetch");
-          return QQ
+          let kk = "fullLoad";
+          0 === Yk ? Dk > 0 && (kk = "cache") : null != pk ? 304 === pk && (kk = "conditionalFetch") : rk > 0 && Yk < rk && (kk = "conditionalFetch");
+          return kk
         }(),
-        renderBlockingStatus: VL(xQ),
-        protocol: HQ,
-        initiatorType: mQ,
+        renderBlockingStatus: TD(Uk),
+        protocol: Kk,
+        initiatorType: mk,
         visibilityState: document.visibilityState,
-        ttfb: VL(eQ - AQ),
-        transferSize: VL(pQ)
+        ttfb: TD(lk - Hk),
+        transferSize: TD(Yk)
       }
     }
 
-    function XL(QQ) {
+    function BD(kk) {
       const {
-        activationStart: FQ,
-        domComplete: wQ,
-        domContentLoadedEventEnd: LQ,
-        domContentLoadedEventStart: qQ,
-        domInteractive: oQ,
-        fetchStart: DQ,
-        loadEventEnd: kQ,
-        loadEventStart: vQ,
-        responseStart: mQ,
-        type: uQ
-      } = QQ, HQ = function() {
-        var QQ;
-        return null != (null === (QQ = performance.timing) || void 0 === QQ ? void 0 : QQ.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: ek,
+        domComplete: ik,
+        domContentLoadedEventEnd: Dk,
+        domContentLoadedEventStart: fk,
+        domInteractive: Sk,
+        fetchStart: bk,
+        loadEventEnd: rk,
+        loadEventStart: Pk,
+        responseStart: mk,
+        type: Mk
+      } = kk, Kk = function() {
+        var kk;
+        return null != (null === (kk = performance.timing) || void 0 === kk ? void 0 : kk.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return uF(uF({}, aL(QQ)), {}, {
-        pageLoadTime: VL(wQ - DQ),
-        documentParsingTime: VL(HQ ? oQ - HQ : null),
-        domProcessingTime: VL(wQ - oQ),
-        domContentLoadHandlerTime: VL(LQ - qQ),
-        onLoadTime: VL(kQ - vQ),
-        ttfb: VL(Math.max(mQ - (null !== FQ && void 0 !== FQ ? FQ : 0), 0)),
-        type: uQ
+      return Ke(Ke({}, XD(kk)), {}, {
+        pageLoadTime: TD(ik - bk),
+        documentParsingTime: TD(Kk ? Sk - Kk : null),
+        domProcessingTime: TD(ik - Sk),
+        domContentLoadHandlerTime: TD(Dk - fk),
+        onLoadTime: TD(rk - Pk),
+        ttfb: TD(Math.max(mk - (null !== ek && void 0 !== ek ? ek : 0), 0)),
+        type: Mk
       })
     }
 
-    function fL(QQ) {
+    function cD(kk) {
       try {
-        return new URL(QQ).host || zw
-      } catch (FQ) {
-        return zw
+        return new URL(kk).host || ai
+      } catch (ek) {
+        return ai
       }
     }
 
-    function VL(QQ) {
-      return null == QQ ? zw : "number" === typeof QQ ? Math.round(QQ > 0 ? QQ : 0).toString() : QQ.toString()
+    function TD(kk) {
+      return null == kk ? ai : "number" === typeof kk ? Math.round(kk > 0 ? kk : 0).toString() : kk.toString()
     }
-    const hL = {
+    const oD = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function JL(QQ, FQ, wQ, LQ, qQ, oQ, DQ) {
+    function ZD(kk, ek, ik, Dk, fk, Sk, bk) {
       try {
-        var kQ = QQ[oQ](DQ),
-          vQ = kQ.value
-      } catch (QQ) {
-        return void wQ(QQ)
+        var rk = kk[Sk](bk),
+          Pk = rk.value
+      } catch (kk) {
+        return void ik(kk)
       }
-      kQ.done ? FQ(vQ) : Promise.resolve(vQ).then(LQ, qQ)
+      rk.done ? ek(Pk) : Promise.resolve(Pk).then(Dk, fk)
     }
 
-    function EL(QQ) {
+    function OD(kk) {
       return function() {
-        var FQ = this,
-          wQ = arguments;
-        return new Promise((function(LQ, qQ) {
-          var oQ = QQ.apply(FQ, wQ);
+        var ek = this,
+          ik = arguments;
+        return new Promise((function(Dk, fk) {
+          var Sk = kk.apply(ek, ik);
 
-          function DQ(QQ) {
-            JL(oQ, LQ, qQ, DQ, kQ, "next", QQ)
+          function bk(kk) {
+            ZD(Sk, Dk, fk, bk, rk, "next", kk)
           }
 
-          function kQ(QQ) {
-            JL(oQ, LQ, qQ, DQ, kQ, "throw", QQ)
+          function rk(kk) {
+            ZD(Sk, Dk, fk, bk, rk, "throw", kk)
           }
-          DQ(void 0)
+          bk(void 0)
         }))
       }
     }
-    const nL = new Mw;
-    var gL = class extends Fw {
+    const gD = new Yi;
+    var GD = class extends ii {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = ww
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = Di
       }
       initialize() {
-        var QQ = this;
+        var kk = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let FQ = !1;
-        const wQ = () => {
-          ! function(QQ) {
-            if ("complete" === document.readyState) QQ();
+        let ek = !1;
+        const ik = () => {
+          ! function(kk) {
+            if ("complete" === document.readyState) kk();
             else {
-              const FQ = () => {
-                "complete" === document.readyState && (QQ(), document.removeEventListener("readystatechange", FQ))
+              const ek = () => {
+                "complete" === document.readyState && (kk(), document.removeEventListener("readystatechange", ek))
               };
-              document.addEventListener("readystatechange", FQ)
+              document.addEventListener("readystatechange", ek)
             }
-          }(EL((function*() {
-            if (FQ) return;
-            const wQ = QQ.api.pushEvent,
+          }(OD((function*() {
+            if (ek) return;
+            const ik = kk.api.pushEvent,
               {
-                faroNavigationId: LQ
-              } = yield function(QQ) {
-                let FQ;
-                const wQ = new Promise((QQ => {
-                  FQ = QQ
+                faroNavigationId: Dk
+              } = yield function(kk) {
+                let ek;
+                const ik = new Promise((kk => {
+                  ek = kk
                 }));
-                return new PerformanceObserver((wQ => {
-                  var LQ;
-                  const [qQ] = wQ.getEntries();
-                  if (null == qQ || PQ(qQ.name)) return;
-                  const oQ = qQ.toJSON();
-                  let DQ = zL(null === oQ || void 0 === oQ ? void 0 : oQ.serverTiming);
-                  const kQ = null !== (LQ = QF("com.grafana.faro.lastNavigationId", yQ)) && void 0 !== LQ ? LQ : zw,
-                    vQ = uF(uF({}, XL(oQ)), {}, {
-                      faroNavigationId: eF(),
-                      faroPreviousNavigationId: kQ
+                return new PerformanceObserver((ik => {
+                  var Dk;
+                  const [fk] = ik.getEntries();
+                  if (null == fk || Gk(fk.name)) return;
+                  const Sk = fk.toJSON();
+                  let bk = aD(null === Sk || void 0 === Sk ? void 0 : Sk.serverTiming);
+                  const rk = null !== (Dk = ee("com.grafana.faro.lastNavigationId", Rk)) && void 0 !== Dk ? Dk : ai,
+                    Pk = Ke(Ke({}, BD(Sk)), {}, {
+                      faroNavigationId: pe(),
+                      faroPreviousNavigationId: rk
                     });
-                  FF("com.grafana.faro.lastNavigationId", vQ.faroNavigationId, yQ), QQ("faro.performance.navigation", vQ, void 0, {
-                    spanContext: DQ,
-                    timestampOverwriteMs: lL(oQ.startTime)
-                  }), FQ(vQ)
+                  ie("com.grafana.faro.lastNavigationId", Pk.faroNavigationId, Rk), kk("faro.performance.navigation", Pk, void 0, {
+                    spanContext: bk,
+                    timestampOverwriteMs: WD(Sk.startTime)
+                  }), ek(Pk)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), wQ
-              }(wQ);
-            FQ || null == LQ || function(QQ, FQ, wQ, LQ) {
-              const qQ = LQ.trackResources;
-              new PerformanceObserver((LQ => {
-                const oQ = LQ.getEntries(),
-                  DQ = {
+                }), ik
+              }(ik);
+            ek || null == Dk || function(kk, ek, ik, Dk) {
+              const fk = Dk.trackResources;
+              new PerformanceObserver((Dk => {
+                const Sk = Dk.getEntries(),
+                  bk = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const kQ of oQ) {
-                  if (PQ(kQ.name)) continue;
-                  null === wQ || void 0 === wQ || wQ.notify({
+                for (const rk of Sk) {
+                  if (Gk(rk.name)) continue;
+                  null === ik || void 0 === ik || ik.notify({
                     type: "resource"
                   });
-                  const LQ = kQ.toJSON();
-                  let oQ = zL(null === LQ || void 0 === LQ ? void 0 : LQ.serverTiming);
-                  (null == qQ && jL(LQ, hL) || qQ) && FQ("faro.performance.resource", uF(uF({}, aL(LQ)), {}, {
-                    faroNavigationId: QQ,
-                    faroResourceId: eF()
+                  const Dk = rk.toJSON();
+                  let Sk = aD(null === Dk || void 0 === Dk ? void 0 : Dk.serverTiming);
+                  (null == fk && tD(Dk, oD) || fk) && ek("faro.performance.resource", Ke(Ke({}, XD(Dk)), {}, {
+                    faroNavigationId: kk,
+                    faroResourceId: pe()
                   }), void 0, {
-                    spanContext: oQ,
-                    timestampOverwriteMs: lL(LQ.startTime, DQ)
+                    spanContext: Sk,
+                    timestampOverwriteMs: WD(Dk.startTime, bk)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(LQ, wQ, nL, QQ.config)
+            }(Dk, ik, gD, kk.config)
           })))
         };
         this.cancelInitialization = () => {
-          FQ = !0, document.removeEventListener("prerenderingchange", wQ)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", wQ, {
+          ek = !0, document.removeEventListener("prerenderingchange", ik)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", ik, {
           once: !0
-        }) : wQ()
+        }) : ik()
       }
       destroy() {
-        var QQ;
-        null === (QQ = this.cancelInitialization) || void 0 === QQ || QQ.call(this), this.cancelInitialization = void 0
+        var kk;
+        null === (kk = this.cancelInitialization) || void 0 === kk || kk.call(this), this.cancelInitialization = void 0
       }
     };
-    const PL = "data-faro-user-action-name",
-      ZL = PL.replace(/-name$/, "-timeout"),
-      yL = 1e3;
+    const ND = "data-faro-user-action-name",
+      RD = ND.replace(/-name$/, "-timeout"),
+      JD = 1e3;
 
-    function BL(QQ) {
-      return `data-${(QQ.startsWith("data-")?QQ.slice(5):QQ).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function kf(kk) {
+      return `data-${(kk.startsWith("data-")?kk.slice(5):kk).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function dL(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hF;
-      if (void 0 === QQ) return FQ;
-      let LQ = NaN;
+    function ef(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Te;
+      if (void 0 === kk) return ek;
+      let Dk = NaN;
       try {
-        LQ = "string" === typeof QQ && "" === QQ.trim() ? NaN : Number(QQ)
-      } catch (qQ) {}
-      return !Number.isFinite(LQ) || LQ <= 0 ? (wQ(`initialActivityTimeout must be a finite number greater than zero; using ${FQ} ms`), FQ) : LQ > 1e3 ? (wQ(`initialActivityTimeout cannot exceed ${yL} ms; clamping to the maximum`), yL) : LQ
+        Dk = "string" === typeof kk && "" === kk.trim() ? NaN : Number(kk)
+      } catch (fk) {}
+      return !Number.isFinite(Dk) || Dk <= 0 ? (ik(`initialActivityTimeout must be a finite number greater than zero; using ${ek} ms`), ek) : Dk > 1e3 ? (ik(`initialActivityTimeout cannot exceed ${JD} ms; clamping to the maximum`), JD) : Dk
     }
 
-    function Qq(QQ, FQ, wQ) {
-      return void 0 !== QQ && window.clearTimeout(QQ), window.setTimeout((() => {
-        FQ()
-      }), wQ)
+    function Df(kk, ek, ik) {
+      return void 0 !== kk && window.clearTimeout(kk), window.setTimeout((() => {
+        ek()
+      }), ik)
     }
 
-    function Fq(QQ) {
-      return QQ.type === ew
+    function ff(kk) {
+      return kk.type === yi
     }
-    let wq, Lq;
+    let Sf, bf;
 
-    function qq() {
-      return wq || (wq = new Mw), Lq || (Lq = new MutationObserver(((QQ, FQ) => {
-        wq.notify({
+    function rf() {
+      return Sf || (Sf = new Yi), bf || (bf = new MutationObserver(((kk, ek) => {
+        Sf.notify({
           type: "dom-mutation"
         })
-      })), Lq.observe(document, {
+      })), bf.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), wq
+      })), Sf
     }
-    const oq = "fetch",
-      Dq = "xhr";
-    let kq, vq, mq, uq, Hq = !1;
+    const Pf = "fetch",
+      mf = "xhr";
+    let Mf, Kf, xf, nf, Uf = !1;
 
-    function bq() {
-      if (kq) return kq;
+    function Hf() {
+      if (Mf) return Mf;
 
-      function QQ(QQ) {
-        kq.notify({
-          type: tw,
-          request: QQ
+      function kk(kk) {
+        Mf.notify({
+          type: li,
+          request: kk
         })
       }
 
-      function FQ(QQ) {
-        kq.notify({
-          type: ew,
-          request: QQ
+      function ek(kk) {
+        Mf.notify({
+          type: yi,
+          request: kk
         })
       }
-      return kq = new Mw, Hq || (! function(QQ) {
+      return Mf = new Yi, Uf || (! function(kk) {
         let {
-          onRequestEnd: FQ,
-          onRequestStart: wQ
-        } = QQ;
-        mq || (mq = window.fetch);
+          onRequestEnd: ek,
+          onRequestStart: ik
+        } = kk;
+        xf || (xf = window.fetch);
         window.fetch = function() {
-          var QQ, LQ;
-          const qQ = null !== (QQ = ZQ(arguments[0])) && void 0 !== QQ ? QQ : "",
-            oQ = PQ(qQ),
-            DQ = (null !== (LQ = arguments[1]) && void 0 !== LQ ? LQ : {}).method,
-            kQ = eF();
-          return oQ || wQ({
-            url: qQ,
-            method: DQ,
-            requestId: kQ,
-            apiType: oq
-          }), mq.apply(this, arguments).then((QQ => (oQ || FQ({
-            url: qQ,
-            method: DQ,
-            requestId: kQ,
-            apiType: oq
-          }), QQ))).catch((QQ => {
-            throw oQ || FQ({
-              url: qQ,
-              method: DQ,
-              requestId: kQ,
-              apiType: oq
-            }), QQ
+          var kk, Dk;
+          const fk = null !== (kk = Nk(arguments[0])) && void 0 !== kk ? kk : "",
+            Sk = Gk(fk),
+            bk = (null !== (Dk = arguments[1]) && void 0 !== Dk ? Dk : {}).method,
+            rk = pe();
+          return Sk || ik({
+            url: fk,
+            method: bk,
+            requestId: rk,
+            apiType: Pf
+          }), xf.apply(this, arguments).then((kk => (Sk || ek({
+            url: fk,
+            method: bk,
+            requestId: rk,
+            apiType: Pf
+          }), kk))).catch((kk => {
+            throw Sk || ek({
+              url: fk,
+              method: bk,
+              requestId: rk,
+              apiType: Pf
+            }), kk
           }))
         }
       }({
-        onRequestStart: QQ,
-        onRequestEnd: FQ
-      }), function(QQ) {
+        onRequestStart: kk,
+        onRequestEnd: ek
+      }), function(kk) {
         let {
-          onRequestStart: FQ,
-          onRequestEnd: wQ
-        } = QQ;
-        vq || (vq = XMLHttpRequest.prototype.open);
+          onRequestStart: ek,
+          onRequestEnd: ik
+        } = kk;
+        Kf || (Kf = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const QQ = arguments[1],
-            LQ = PQ(QQ),
-            qQ = arguments[0],
-            oQ = eF();
+          const kk = arguments[1],
+            Dk = Gk(kk),
+            fk = arguments[0],
+            Sk = pe();
           this.addEventListener("loadstart", (function() {
-            LQ || FQ({
-              url: QQ,
-              method: qQ,
-              requestId: oQ,
-              apiType: Dq
+            Dk || ek({
+              url: kk,
+              method: fk,
+              requestId: Sk,
+              apiType: mf
             })
           })), this.addEventListener("load", (function() {
-            LQ || wQ({
-              url: QQ,
-              method: qQ,
-              requestId: oQ,
-              apiType: Dq
+            Dk || ik({
+              url: kk,
+              method: fk,
+              requestId: Sk,
+              apiType: mf
             })
           })), this.addEventListener("error", (function() {
-            LQ || wQ({
-              url: QQ,
-              method: qQ,
-              requestId: oQ,
-              apiType: Dq
+            Dk || ik({
+              url: kk,
+              method: fk,
+              requestId: Sk,
+              apiType: mf
             })
           })), this.addEventListener("abort", (function() {
-            LQ || wQ({
-              url: QQ,
-              method: qQ,
-              requestId: oQ,
-              apiType: Dq
+            Dk || ik({
+              url: kk,
+              method: fk,
+              requestId: Sk,
+              apiType: mf
             })
-          })), vq.apply(this, arguments)
+          })), Kf.apply(this, arguments)
         }
       }({
-        onRequestStart: QQ,
-        onRequestEnd: FQ
-      }), Hq = !0), kq
+        onRequestStart: kk,
+        onRequestEnd: ek
+      }), Uf = !0), Mf
     }
-    let Yq, xq = !1;
-    let Aq = function(QQ) {
-      return QQ[QQ.Started = 0] = "Started", QQ[QQ.Halted = 1] = "Halted", QQ[QQ.Cancelled = 2] = "Cancelled", QQ[QQ.Ended = 3] = "Ended", QQ
+    let wf, lf = !1;
+    let pf = function(kk) {
+      return kk[kk.Started = 0] = "Started", kk[kk.Halted = 1] = "Halted", kk[kk.Cancelled = 2] = "Cancelled", kk[kk.Ended = 3] = "Ended", kk
     }({});
-    var tq = class {
-      constructor(QQ, FQ) {
-        let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = QQ, this.logDebug = FQ, this.initialActivityTimeout = wQ, this.http = bq(), this.dom = qq(), this.perf = (uq || (uq = new Mw), xq || (Yq = nL.subscribe((QQ => {
-          "resource" === QQ.type && uq.notify({
+    var yf = class {
+      constructor(kk, ek) {
+        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = kk, this.logDebug = ek, this.initialActivityTimeout = ik, this.http = Hf(), this.dom = rf(), this.perf = (nf || (nf = new Yi), lf || (wf = gD.subscribe((kk => {
+          "resource" === kk.type && nf.notify({
             type: "resource-entry"
           })
-        })), xq = !0), uq), this.isValid = !1, this.runningRequests = new Map
+        })), lf = !0), nf), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new Mw).merge(this.http, this.dom, this.perf).takeWhile((() => [Aq.Started, Aq.Halted].includes(this.userAction.getState()))).filter((QQ => !!(this.userAction.getState() !== Aq.Halted || Fq(QQ) && this.runningRequests.has(QQ.request.requestId)))).subscribe((QQ => {
-          (function(QQ) {
-            return QQ.type === tw
-          })(QQ) && this.runningRequests.set(QQ.request.requestId, QQ.request), Fq(QQ) && this.runningRequests.delete(QQ.request.requestId), Fq(QQ) ? this.userAction.getState() === Aq.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((QQ => [Aq.Ended, Aq.Cancelled].includes(QQ))).first().subscribe((() => this.cleanup())), this.startupTid = Qq(this.startupTid, (() => {
+        this.allMonitorsSub = (new Yi).merge(this.http, this.dom, this.perf).takeWhile((() => [pf.Started, pf.Halted].includes(this.userAction.getState()))).filter((kk => !!(this.userAction.getState() !== pf.Halted || ff(kk) && this.runningRequests.has(kk.request.requestId)))).subscribe((kk => {
+          (function(kk) {
+            return kk.type === li
+          })(kk) && this.runningRequests.set(kk.request.requestId, kk.request), ff(kk) && this.runningRequests.delete(kk.request.requestId), ff(kk) ? this.userAction.getState() === pf.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((kk => [pf.Ended, pf.Cancelled].includes(kk))).first().subscribe((() => this.cleanup())), this.startupTid = Df(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === Aq.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === pf.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === Aq.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === pf.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = Qq(this.haltTid, (() => {
-          this.userAction.getState() === Aq.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = Df(this.haltTid, (() => {
+          this.userAction.getState() === pf.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var QQ, FQ;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (QQ = this.allMonitorsSub) || void 0 === QQ || QQ.unsubscribe(), null === (FQ = this.stateSub) || void 0 === FQ || FQ.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var kk, ek;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (kk = this.allMonitorsSub) || void 0 === kk || kk.unsubscribe(), null === (ek = this.stateSub) || void 0 === ek || ek.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(QQ) {
-        void 0 !== QQ && window.clearTimeout(QQ)
+      clearTimer(kk) {
+        void 0 !== kk && window.clearTimeout(kk)
       }
     };
 
-    function eq(QQ) {
-      let FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hF;
-      var wQ;
+    function Yf(kk) {
+      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Te;
+      var ik;
       const {
-        api: LQ,
-        config: qQ,
-        internalLogger: oQ
-      } = QQ, DQ = dL(null === (wQ = qQ.userActionsInstrumentation) || void 0 === wQ ? void 0 : wQ.initialActivityTimeout, 100, FQ);
+        api: Dk,
+        config: fk,
+        internalLogger: Sk
+      } = kk, bk = ef(null === (ik = fk.userActionsInstrumentation) || void 0 === ik ? void 0 : ik.initialActivityTimeout, 100, ek);
       return {
-        processUserEvent: function(QQ) {
-          var FQ, wQ;
-          const oQ = null !== (FQ = null === (wQ = qQ.userActionsInstrumentation) || void 0 === wQ ? void 0 : wQ.dataAttributeName) && void 0 !== FQ ? FQ : PL,
-            DQ = QQ.target;
-          if (!(DQ instanceof Element)) return;
-          const kQ = function(QQ, FQ) {
-              let wQ = QQ;
-              for (; wQ;) {
-                if (wQ.hasAttribute(FQ)) return wQ;
-                wQ = wQ.parentElement
+        processUserEvent: function(kk) {
+          var ek, ik;
+          const Sk = null !== (ek = null === (ik = fk.userActionsInstrumentation) || void 0 === ik ? void 0 : ik.dataAttributeName) && void 0 !== ek ? ek : ND,
+            bk = kk.target;
+          if (!(bk instanceof Element)) return;
+          const rk = function(kk, ek) {
+              let ik = kk;
+              for (; ik;) {
+                if (ik.hasAttribute(ek)) return ik;
+                ik = ik.parentElement
               }
               return null
-            }(DQ, BL(oQ)),
-            vQ = function(QQ, FQ) {
-              if (!QQ) return;
-              const wQ = function(QQ) {
-                  return BL(QQ).slice(5).replace(/-(.)/g, ((QQ, FQ) => FQ.toUpperCase()))
-                }(FQ),
-                LQ = QQ.dataset;
-              for (const qQ in LQ)
-                if (qQ === wQ) return LQ[qQ]
-            }(kQ, oQ);
-          if (!kQ || !vQ) return;
-          const mQ = function(QQ, FQ) {
-            const wQ = QQ.getAttribute(function(QQ) {
-              const FQ = BL(QQ);
-              return FQ.endsWith("-name") ? `${FQ.slice(0,-5)}-timeout` : `${FQ}-timeout`
-            }(FQ));
-            return null === wQ ? void 0 : Number(wQ)
-          }(kQ, oQ);
-          LQ.startUserAction(vQ, {}, {
-            triggerName: QQ.type,
-            initialActivityTimeout: mQ
+            }(bk, kf(Sk)),
+            Pk = function(kk, ek) {
+              if (!kk) return;
+              const ik = function(kk) {
+                  return kf(kk).slice(5).replace(/-(.)/g, ((kk, ek) => ek.toUpperCase()))
+                }(ek),
+                Dk = kk.dataset;
+              for (const fk in Dk)
+                if (fk === ik) return Dk[fk]
+            }(rk, Sk);
+          if (!rk || !Pk) return;
+          const mk = function(kk, ek) {
+            const ik = kk.getAttribute(function(kk) {
+              const ek = kf(kk);
+              return ek.endsWith("-name") ? `${ek.slice(0,-5)}-timeout` : `${ek}-timeout`
+            }(ek));
+            return null === ik ? void 0 : Number(ik)
+          }(rk, Sk);
+          Dk.startUserAction(Pk, {}, {
+            triggerName: kk.type,
+            initialActivityTimeout: mk
           })
         },
-        processUserActionStarted: function(QQ, wQ) {
-          const LQ = QQ,
-            qQ = dL(wQ, DQ, FQ);
-          new tq(LQ, oQ.debug, qQ).attach()
+        processUserActionStarted: function(kk, ik) {
+          const Dk = kk,
+            fk = ef(ik, bk, ek);
+          new yf(Dk, Sk.debug, fk).attach()
         }
       }
     }
-    const Mq = "user_action_start",
-      Gq = {
+    const Lf = "user_action_start",
+      Cf = {
         Normal: "normal",
         Critical: "critical"
       };
-    var pq = class {
+    var Af = class {
         constructor() {
           this.buffer = []
         }
-        addItem(QQ) {
-          this.buffer.push(QQ)
+        addItem(kk) {
+          this.buffer.push(kk)
         }
-        flushBuffer(QQ) {
-          if (sQ(QQ))
-            for (const FQ of this.buffer) QQ(FQ);
+        flushBuffer(kk) {
+          if (Fk(kk))
+            for (const ek of this.buffer) kk(ek);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      cq = class extends Mw {
-        constructor(QQ) {
+      jf = class extends Yi {
+        constructor(kk) {
           let {
-            name: FQ,
-            parentId: wQ,
-            trigger: LQ,
-            transports: qQ,
-            attributes: oQ,
-            trackUserActionsExcludeItem: DQ,
-            importance: kQ = Gq.Normal,
-            pushEvent: vQ
-          } = QQ;
-          super(), this.name = FQ, this.attributes = oQ, this.id = eF(), this.trigger = LQ, this.parentId = null !== wQ && void 0 !== wQ ? wQ : this.id, this.trackUserActionsExcludeItem = DQ, this.importance = kQ, this._pushEvent = vQ, this._itemBuffer = new pq, this._transports = qQ, this._state = 0, this._start()
+            name: ek,
+            parentId: ik,
+            trigger: Dk,
+            transports: fk,
+            attributes: Sk,
+            trackUserActionsExcludeItem: bk,
+            importance: rk = Cf.Normal,
+            pushEvent: Pk
+          } = kk;
+          super(), this.name = ek, this.attributes = Sk, this.id = pe(), this.trigger = Dk, this.parentId = null !== ik && void 0 !== ik ? ik : this.id, this.trackUserActionsExcludeItem = bk, this.importance = rk, this._pushEvent = Pk, this._itemBuffer = new Af, this._transports = fk, this._state = 0, this._start()
         }
-        addItem(QQ) {
-          return 0 === this._state && (this._itemBuffer.addItem(QQ), !0)
+        addItem(kk) {
+          return 0 === this._state && (this._itemBuffer.addItem(kk), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = bF(), this._startTimeMono = YF())
+          this._state = 0, 0 === this._state && (this.startTime = ne(), this._startTimeMono = Ue())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((QQ => {
-            this._transports.execute(QQ)
+          0 === this._state && this._itemBuffer.flushBuffer((kk => {
+            this._transports.execute(kk)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const QQ = bF(),
-            FQ = YF() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((QQ => {
-            if (function(QQ, FQ) {
-                return (null === FQ || void 0 === FQ ? void 0 : FQ(QQ)) || "measurement" === QQ.type && "web-vitals" === QQ.payload.type
-              }(QQ, this.trackUserActionsExcludeItem)) return void this._transports.execute(QQ);
-            const FQ = BF(BF({}, QQ), {}, {
-              payload: BF(BF({}, QQ.payload), {}, {
+          const kk = ne(),
+            ek = Ue() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((kk => {
+            if (function(kk, ek) {
+                return (null === ek || void 0 === ek ? void 0 : ek(kk)) || "measurement" === kk.type && "web-vitals" === kk.payload.type
+              }(kk, this.trackUserActionsExcludeItem)) return void this._transports.execute(kk);
+            const ek = Je(Je({}, kk), {}, {
+              payload: Je(Je({}, kk.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(FQ)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", BF({
+            this._transports.execute(ek)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", Je({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: QQ.toString(),
-            userActionDuration: FQ.toString(),
+            userActionEndTime: kk.toString(),
+            userActionDuration: ek.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, zF(this.attributes)), void 0, {
+          }, he(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: QQ => (QQ.action = {
+            customPayloadTransformer: kk => (kk.action = {
               id: this.id,
               name: this.name
-            }, QQ)
+            }, kk)
           })
         }
         getState() {
           return this._state
         }
       };
-    const Cq = new Mw;
+    const sf = new Yi;
 
-    function Sq(QQ, FQ) {
-      return !!QQ && (0 === (null === QQ || void 0 === QQ ? void 0 : QQ.getState()) && (QQ.addItem(FQ), !0))
+    function df(kk, ek) {
+      return !!kk && (0 === (null === kk || void 0 === kk ? void 0 : kk.getState()) && (kk.addItem(ek), !0))
     }
-    var iq = class extends Fw {
+    var Vf = class extends ii {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = ww
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = Di
         }
         initialize() {
           const {
-            processUserEvent: QQ,
-            processUserActionStarted: FQ
-          } = eq(AQ, (QQ => this.logWarn(QQ)));
-          this._processUserEvent = QQ, this._processKeydown = FQ => {
-            [" ", "Enter"].includes(FQ.key) && QQ(FQ)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = Cq.subscribe((QQ => {
+            processUserEvent: kk,
+            processUserActionStarted: ek
+          } = Yf(Hk, (kk => this.logWarn(kk)));
+          this._processUserEvent = kk, this._processKeydown = ek => {
+            [" ", "Enter"].includes(ek.key) && kk(ek)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = sf.subscribe((kk => {
             let {
-              type: wQ,
-              userAction: LQ,
-              initialActivityTimeout: qQ
-            } = QQ;
-            "user_action_start" === wQ && FQ(LQ, qQ)
+              type: ik,
+              userAction: Dk,
+              initialActivityTimeout: fk
+            } = kk;
+            "user_action_start" === ik && ek(Dk, fk)
           }))
         }
         destroy() {
-          var QQ;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (QQ = this._userActionSub) || void 0 === QQ || QQ.unsubscribe()
+          var kk;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (kk = this._userActionSub) || void 0 === kk || kk.unsubscribe()
         }
       },
-      Wq = class extends Fw {
+      Ff = class extends ii {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = ww, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = Di, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(QQ) {
-          const FQ = {
-            blockedURI: QQ.blockedURI,
-            columnNumber: QQ.columnNumber,
-            disposition: QQ.disposition,
-            documentURI: QQ.documentURI,
-            effectiveDirective: QQ.effectiveDirective,
-            lineNumber: QQ.lineNumber,
-            originalPolicy: QQ.originalPolicy,
-            referrer: QQ.referrer,
-            sample: QQ.sample,
-            sourceFile: QQ.sourceFile,
-            statusCode: QQ.statusCode,
-            violatedDirective: QQ.violatedDirective
+        securitypolicyviolationHandler(kk) {
+          const ek = {
+            blockedURI: kk.blockedURI,
+            columnNumber: kk.columnNumber,
+            disposition: kk.disposition,
+            documentURI: kk.documentURI,
+            effectiveDirective: kk.effectiveDirective,
+            lineNumber: kk.lineNumber,
+            originalPolicy: kk.originalPolicy,
+            referrer: kk.referrer,
+            sample: kk.sample,
+            sourceFile: kk.sourceFile,
+            statusCode: kk.statusCode,
+            violatedDirective: kk.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", zF(FQ))
+          this.api.pushEvent("securitypolicyviolation", he(ek))
         }
       };
-    var Rq = class extends Mw {
-      constructor(QQ, FQ) {
-        var wQ, LQ, qQ, oQ;
-        super(), this._tracking = !1, this.eventsObservable = QQ, this._options = {
-          inactivityMs: null !== (wQ = null === FQ || void 0 === FQ ? void 0 : FQ.inactivityMs) && void 0 !== wQ ? wQ : 100,
-          drainTimeoutMs: null !== (LQ = null === FQ || void 0 === FQ ? void 0 : FQ.drainTimeoutMs) && void 0 !== LQ ? LQ : 1e4,
-          isOperationStart: null !== (qQ = null === FQ || void 0 === FQ ? void 0 : FQ.isOperationStart) && void 0 !== qQ ? qQ : () => {},
-          isOperationEnd: null !== (oQ = null === FQ || void 0 === FQ ? void 0 : FQ.isOperationEnd) && void 0 !== oQ ? oQ : () => {}
+    var uf = class extends Yi {
+      constructor(kk, ek) {
+        var ik, Dk, fk, Sk;
+        super(), this._tracking = !1, this.eventsObservable = kk, this._options = {
+          inactivityMs: null !== (ik = null === ek || void 0 === ek ? void 0 : ek.inactivityMs) && void 0 !== ik ? ik : 100,
+          drainTimeoutMs: null !== (Dk = null === ek || void 0 === ek ? void 0 : ek.drainTimeoutMs) && void 0 !== Dk ? Dk : 1e4,
+          isOperationStart: null !== (fk = null === ek || void 0 === ek ? void 0 : ek.isOperationStart) && void 0 !== fk ? fk : () => {},
+          isOperationEnd: null !== (Sk = null === ek || void 0 === ek ? void 0 : ek.isOperationEnd) && void 0 !== Sk ? Sk : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((QQ => {
-          var FQ;
-          this._lastEventTime = YF(), null === (FQ = this._currentEvents) || void 0 === FQ || FQ.push(QQ);
-          const wQ = this._options.isOperationStart(QQ);
-          var LQ;
-          wQ && (null === (LQ = this._activeOperations) || void 0 === LQ || LQ.set(wQ, !0));
-          const qQ = this._options.isOperationEnd(QQ);
-          var oQ;
-          qQ && (null === (oQ = this._activeOperations) || void 0 === oQ || oQ.delete(qQ));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((kk => {
+          var ek;
+          this._lastEventTime = Ue(), null === (ek = this._currentEvents) || void 0 === ek || ek.push(kk);
+          const ik = this._options.isOperationStart(kk);
+          var Dk;
+          ik && (null === (Dk = this._activeOperations) || void 0 === Dk || Dk.set(ik, !0));
+          const fk = this._options.isOperationEnd(kk);
+          var Sk;
+          fk && (null === (Sk = this._activeOperations) || void 0 === Sk || Sk.delete(fk));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = YF(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = Ue(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let QQ;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), QQ = this.hasActiveOperations() ? YF() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let kk;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), kk = this.hasActiveOperations() ? Ue() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: QQ
+          duration: kk
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = Oq(this._inactivityTid, (() => {
+        this._inactivityTid = qf(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = Oq(this._drainTid, (() => {
+        this._drainTid = qf(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(QQ) {
-        QQ && clearTimeout(QQ)
+      _clearTimer(kk) {
+        kk && clearTimeout(kk)
       }
     };
 
-    function Oq(QQ, FQ, wQ) {
-      return QQ && clearTimeout(QQ), QQ = setTimeout((() => {
-        FQ()
-      }), wQ)
+    function qf(kk, ek, ik) {
+      return kk && clearTimeout(kk), kk = setTimeout((() => {
+        ek()
+      }), ik)
     }
-    let sq;
-    const rq = new Set,
-      Iq = new Map;
-    let Uq, Nq, Tq, Kq, zq, lq, jq, aq, Xq = !1;
-    var fq = class extends Fw {
+    let If;
+    const zf = new Set,
+      Qf = new Map;
+    let vf, Ef, hf, af, Wf, tf, Xf, Bf, Tf = !1;
+    var of = class extends ii {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = ww
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = Di
       }
       initialize() {
-        const QQ = bq(),
-          FQ = qq(),
-          wQ = function() {
-            function QQ(QQ, FQ) {
-              const wQ = null !== FQ && void 0 !== FQ ? FQ : location.href;
-              wQ !== Nq && (Uq.notify({
+        const kk = Hf(),
+          ek = rf(),
+          ik = function() {
+            function kk(kk, ek) {
+              const ik = null !== ek && void 0 !== ek ? ek : location.href;
+              ik !== Ef && (vf.notify({
                 type: "url-change",
-                from: Nq,
-                to: wQ,
-                trigger: QQ
-              }), Nq = wQ)
+                from: Ef,
+                to: ik,
+                trigger: kk
+              }), Ef = ik)
             }
-            if (Uq || (Uq = new Mw, Nq = location.href), !Xq)
+            if (vf || (vf = new Yi, Ef = location.href), !Tf)
               if ("navigation" in window && "NavigateEvent" in window) {
-                jq = FQ => {
+                Xf = ek => {
                   try {
-                    const wQ = null === FQ || void 0 === FQ ? void 0 : FQ.destination;
-                    (null === wQ || void 0 === wQ ? void 0 : wQ.sameDocument) && "string" === typeof wQ.url && QQ("navigate", wQ.url)
-                  } catch (wQ) {}
-                }, window.navigation.addEventListener("navigate", jq);
-                const FQ = window.NavigateEvent;
-                FQ && FQ.prototype && "function" === typeof FQ.prototype.intercept && (aq || (aq = FQ.prototype.intercept), FQ.prototype.intercept = function(FQ) {
+                    const ik = null === ek || void 0 === ek ? void 0 : ek.destination;
+                    (null === ik || void 0 === ik ? void 0 : ik.sameDocument) && "string" === typeof ik.url && kk("navigate", ik.url)
+                  } catch (ik) {}
+                }, window.navigation.addEventListener("navigate", Xf);
+                const ek = window.NavigateEvent;
+                ek && ek.prototype && "function" === typeof ek.prototype.intercept && (Bf || (Bf = ek.prototype.intercept), ek.prototype.intercept = function(ek) {
                   try {
-                    const FQ = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      wQ = null === this || void 0 === this ? void 0 : this.destination;
-                    FQ && wQ && !1 === wQ.sameDocument && "string" === typeof wQ.url && QQ("navigate-intercept", wQ.url)
-                  } catch (wQ) {}
-                  return aq.call(this, FQ)
-                }), Xq = !0
-              } else Tq || (Tq = window.history.pushState), window.history.pushState = function() {
-                for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-                const qQ = Tq.apply(window.history, wQ);
-                return QQ("pushState"), qQ
-              }, Kq || (Kq = window.history.replaceState), window.history.replaceState = function() {
-                for (var FQ = arguments.length, wQ = new Array(FQ), LQ = 0; LQ < FQ; LQ++) wQ[LQ] = arguments[LQ];
-                const qQ = Kq.apply(window.history, wQ);
-                return QQ("replaceState"), qQ
-              }, zq = () => QQ("popstate"), lq = () => QQ("hashchange"), window.addEventListener("popstate", zq), window.addEventListener("hashchange", lq), Xq = !0;
-            return Uq
+                    const ek = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      ik = null === this || void 0 === this ? void 0 : this.destination;
+                    ek && ik && !1 === ik.sameDocument && "string" === typeof ik.url && kk("navigate-intercept", ik.url)
+                  } catch (ik) {}
+                  return Bf.call(this, ek)
+                }), Tf = !0
+              } else hf || (hf = window.history.pushState), window.history.pushState = function() {
+                for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+                const fk = hf.apply(window.history, ik);
+                return kk("pushState"), fk
+              }, af || (af = window.history.replaceState), window.history.replaceState = function() {
+                for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
+                const fk = af.apply(window.history, ik);
+                return kk("replaceState"), fk
+              }, Wf = () => kk("popstate"), tf = () => kk("hashchange"), window.addEventListener("popstate", Wf), window.addEventListener("hashchange", tf), Tf = !0;
+            return vf
           }(),
-          LQ = (qQ = ["pointerdown", "keydown"], sq || (sq = new Mw), qQ.forEach((QQ => {
-            if (!rq.has(QQ)) {
-              const FQ = () => {
-                sq.notify({
+          Dk = (fk = ["pointerdown", "keydown"], If || (If = new Yi), fk.forEach((kk => {
+            if (!zf.has(kk)) {
+              const ek = () => {
+                If.notify({
                   type: "interaction",
-                  name: QQ
+                  name: kk
                 })
               };
-              window.addEventListener(QQ, FQ), rq.add(QQ), Iq.set(QQ, FQ)
+              window.addEventListener(kk, ek), zf.add(kk), Qf.set(kk, ek)
             }
-          })), sq);
-        var qQ;
-        const oQ = new Rq((new Mw).merge(QQ, FQ, wQ), {
+          })), If);
+        var fk;
+        const Sk = new uf((new Yi).merge(kk, ek, ik), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: QQ => function(QQ) {
-            return QQ.type === tw
-          }(QQ) ? QQ.request.requestId : void 0,
-          isOperationEnd: QQ => function(QQ) {
-            return QQ.type === ew
-          }(QQ) ? QQ.request.requestId : void 0
+          isOperationStart: kk => function(kk) {
+            return kk.type === li
+          }(kk) ? kk.request.requestId : void 0,
+          isOperationEnd: kk => function(kk) {
+            return kk.type === yi
+          }(kk) ? kk.request.requestId : void 0
         });
-        oQ.filter((QQ => "tracking-ended" === QQ.message)).subscribe((QQ => {
-          var FQ, wQ;
-          if ((null === (FQ = QQ.events) || void 0 === FQ ? void 0 : FQ.some((QQ => "url-change" === QQ.type))) && (null === (wQ = QQ.events) || void 0 === wQ ? void 0 : wQ.some((QQ => "dom-mutation" === QQ.type)))) {
-            var LQ;
-            const FQ = null === (LQ = QQ.events) || void 0 === LQ ? void 0 : LQ.find((QQ => "url-change" === QQ.type));
-            AQ.api.pushEvent("faro.navigation", {
-              fromUrl: null === FQ || void 0 === FQ ? void 0 : FQ.from,
-              toUrl: null === FQ || void 0 === FQ ? void 0 : FQ.to,
+        Sk.filter((kk => "tracking-ended" === kk.message)).subscribe((kk => {
+          var ek, ik;
+          if ((null === (ek = kk.events) || void 0 === ek ? void 0 : ek.some((kk => "url-change" === kk.type))) && (null === (ik = kk.events) || void 0 === ik ? void 0 : ik.some((kk => "dom-mutation" === kk.type)))) {
+            var Dk;
+            const ek = null === (Dk = kk.events) || void 0 === Dk ? void 0 : Dk.find((kk => "url-change" === kk.type));
+            Hk.api.pushEvent("faro.navigation", {
+              fromUrl: null === ek || void 0 === ek ? void 0 : ek.from,
+              toUrl: null === ek || void 0 === ek ? void 0 : ek.to,
               sameDocument: String(!0),
-              duration: QQ.duration
+              duration: kk.duration
             })
           }
-        })), LQ.subscribe((() => {
-          oQ.startTracking()
+        })), Dk.subscribe((() => {
+          Sk.startTracking()
         }))
       }
     };
 
-    function Vq() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const FQ = [new iq, new Kw, new TL, new Lw, new lw, new fq];
-      return !1 !== QQ.enablePerformanceInstrumentation && FQ.unshift(new gL), !1 !== QQ.enableContentSecurityPolicyInstrumentation && FQ.push(new Wq), !1 !== QQ.captureConsole && FQ.push(new Nw), FQ
+    function Zf() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const ek = [new Vf, new Ei, new ED, new fi, new Wi, new of];
+      return !1 !== kk.enablePerformanceInstrumentation && ek.unshift(new GD), !1 !== kk.enableContentSecurityPolicyInstrumentation && ek.push(new Ff), !1 !== kk.captureConsole && ek.push(new Qi), ek
     }
-    var hq = wQ(6526);
-    let Jq, Eq;
+    var Of = ik(6539);
+    let gf, Gf;
 
-    function nq() {
-      const QQ = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return Jq === QQ && Eq || (Eq = new hq.UAParser(QQ).getResult(), Jq = QQ), Eq
+    function Nf() {
+      const kk = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return gf === kk && Gf || (Gf = new Of.UAParser(kk).getResult(), gf = kk), Gf
     }
-    const gq = () => {
+    const Rf = () => {
         const {
-          browser: QQ,
-          os: FQ,
-          ua: wQ
-        } = nq(), {
-          name: LQ,
-          version: qQ
-        } = QQ, {
-          name: oQ,
-          version: DQ
-        } = FQ, kQ = navigator.language, vQ = wQ.includes("Mobi"), mQ = function() {
-          if (!LQ || !qQ) return;
+          browser: kk,
+          os: ek,
+          ua: ik
+        } = Nf(), {
+          name: Dk,
+          version: fk
+        } = kk, {
+          name: Sk,
+          version: bk
+        } = ek, rk = navigator.language, Pk = ik.includes("Mobi"), mk = function() {
+          if (!Dk || !fk) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== LQ && void 0 !== LQ ? LQ : zw,
-            version: null !== qQ && void 0 !== qQ ? qQ : zw,
-            os: `${null!==oQ&&void 0!==oQ?oQ:zw} ${null!==DQ&&void 0!==DQ?DQ:zw}`,
-            userAgent: null !== wQ && void 0 !== wQ ? wQ : zw,
-            language: null !== kQ && void 0 !== kQ ? kQ : zw,
-            mobile: vQ,
-            brands: null !== mQ && void 0 !== mQ ? mQ : zw,
+            name: null !== Dk && void 0 !== Dk ? Dk : ai,
+            version: null !== fk && void 0 !== fk ? fk : ai,
+            os: `${null!==Sk&&void 0!==Sk?Sk:ai} ${null!==bk&&void 0!==bk?bk:ai}`,
+            userAgent: null !== ik && void 0 !== ik ? ik : ai,
+            language: null !== rk && void 0 !== rk ? rk : ai,
+            mobile: Pk,
+            brands: null !== mk && void 0 !== mk ? mk : ai,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      Pq = () => {
+      Jf = () => {
         const {
-          name: QQ,
-          version: FQ
-        } = nq().os;
-        if (!QQ && !FQ) return {};
-        const wQ = {};
-        return QQ && (wQ.name = QQ), FQ && (wQ.version = FQ), {
-          os: wQ
+          name: kk,
+          version: ek
+        } = Nf().os;
+        if (!kk && !ek) return {};
+        const ik = {};
+        return kk && (ik.name = kk), ek && (ik.version = ek), {
+          os: ik
         }
       };
 
-    function Zq(QQ) {
-      var FQ, wQ, LQ;
+    function kS(kk) {
+      var ek, ik, Dk;
       return {
-        id: null !== (FQ = null === (wQ = AQ.config) || void 0 === wQ || null === (wQ = wQ.sessionTracking) || void 0 === wQ || null === (LQ = wQ.generateSessionId) || void 0 === LQ ? void 0 : LQ.call(wQ)) && void 0 !== FQ ? FQ : eF(),
-        attributes: QQ
+        id: null !== (ek = null === (ik = Hk.config) || void 0 === ik || null === (ik = ik.sessionTracking) || void 0 === ik || null === (Dk = ik.generateSessionId) || void 0 === Dk ? void 0 : Dk.call(ik)) && void 0 !== ek ? ek : pe(),
+        attributes: kk
       }
     }
-    const yq = () => ({
+    const eS = () => ({
       sdk: {
         name: "faro-web",
-        version: ww
+        version: Di
       }
     });
-    var Bq = class extends Qw {
+    var iS = class extends ei {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let dq = function(QQ) {
-      return QQ.EXCEPTION = "exception", QQ.LOG = "log", QQ.MEASUREMENT = "measurement", QQ.TRACE = "trace", QQ.EVENT = "event", QQ
+    let DS = function(kk) {
+      return kk.EXCEPTION = "exception", kk.LOG = "log", kk.MEASUREMENT = "measurement", kk.TRACE = "trace", kk.EVENT = "event", kk
     }({});
-    const Qo = {
+    const fS = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function Fo(QQ, FQ) {
-      var wQ, LQ;
-      if (void 0 === FQ) return QQ;
-      if (void 0 === QQ) return {
-        resourceSpans: FQ
+    function SS(kk, ek) {
+      var ik, Dk;
+      if (void 0 === ek) return kk;
+      if (void 0 === kk) return {
+        resourceSpans: ek
       };
-      const qQ = null === (wQ = QQ.resourceSpans) || void 0 === wQ ? void 0 : wQ[0];
-      if (void 0 === qQ) return QQ;
-      const oQ = (null === qQ || void 0 === qQ ? void 0 : qQ.scopeSpans) || [],
-        DQ = (null === FQ || void 0 === FQ || null === (LQ = FQ[0]) || void 0 === LQ ? void 0 : LQ.scopeSpans) || [];
-      return BF(BF({}, QQ), {}, {
-        resourceSpans: [BF(BF({}, qQ), {}, {
-          scopeSpans: [...oQ, ...DQ]
+      const fk = null === (ik = kk.resourceSpans) || void 0 === ik ? void 0 : ik[0];
+      if (void 0 === fk) return kk;
+      const Sk = (null === fk || void 0 === fk ? void 0 : fk.scopeSpans) || [],
+        bk = (null === ek || void 0 === ek || null === (Dk = ek[0]) || void 0 === Dk ? void 0 : Dk.scopeSpans) || [];
+      return Je(Je({}, kk), {}, {
+        resourceSpans: [Je(Je({}, fk), {}, {
+          scopeSpans: [...Sk, ...bk]
         })]
       })
     }
 
-    function wo(QQ) {
-      let FQ = {
+    function bS(kk) {
+      let ek = {
         meta: {}
       };
-      return void 0 !== QQ[0] && (FQ.meta = QQ[0].meta), QQ.forEach((QQ => {
-        switch (QQ.type) {
+      return void 0 !== kk[0] && (ek.meta = kk[0].meta), kk.forEach((kk => {
+        switch (kk.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const wQ = Qo[QQ.type],
-              LQ = FQ[wQ];
-            FQ = BF(BF({}, FQ), {}, {
-              [wQ]: void 0 === LQ ? [QQ.payload] : [...LQ, QQ.payload]
+            const ik = fS[kk.type],
+              Dk = ek[ik];
+            ek = Je(Je({}, ek), {}, {
+              [ik]: void 0 === Dk ? [kk.payload] : [...Dk, kk.payload]
             });
             break
           }
           case "trace":
-            FQ = BF(BF({}, FQ), {}, {
-              traces: Fo(FQ.traces, QQ.payload.resourceSpans)
+            ek = Je(Je({}, ek), {}, {
+              traces: SS(ek.traces, kk.payload.resourceSpans)
             })
         }
-      })), FQ
+      })), ek
     }
-    var Lo = class extends Bq {
+    var rS = class extends iS {
       constructor() {
-        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = QQ, this.name = "@grafana/faro-web-sdk:transport-console", this.version = ww
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = kk, this.name = "@grafana/faro-web-sdk:transport-console", this.version = Di
       }
-      send(QQ) {
-        var FQ;
-        return this.unpatchedConsole[null !== (FQ = this.options.level) && void 0 !== FQ ? FQ : Gw.DEBUG]("New event", wo([QQ]))
+      send(kk) {
+        var ek;
+        return this.unpatchedConsole[null !== (ek = this.options.level) && void 0 !== ek ? ek : Li.DEBUG]("New event", bS([kk]))
       }
     };
-    const qo = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      oo = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      Do = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      ko = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      vo = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      mo = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const PS = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      mS = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      MS = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      KS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      xS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      nS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function uo(QQ) {
+    function US(kk) {
       let {
-        weekday: FQ,
-        day: wQ,
-        month: LQ,
-        year: qQ,
-        hour: oQ,
-        minute: DQ,
-        second: kQ
-      } = QQ;
-      if (qQ < 1900 || wQ < 1 || oQ > 23 || DQ > 59 || kQ > 60) return;
-      const vQ = 60 === kQ,
-        mQ = new Date(0);
-      return mQ.setUTCFullYear(qQ, LQ, wQ), mQ.setUTCHours(oQ, DQ, vQ ? 59 : kQ, 0), mQ.getUTCDay() === FQ && mQ.getUTCDate() === wQ && mQ.getUTCMonth() === LQ && mQ.getUTCFullYear() === qQ && mQ.getUTCHours() === oQ && mQ.getUTCMinutes() === DQ && mQ.getUTCSeconds() === (vQ ? 59 : kQ) ? mQ.getTime() + (vQ ? 1e3 : 0) : void 0
+        weekday: ek,
+        day: ik,
+        month: Dk,
+        year: fk,
+        hour: Sk,
+        minute: bk,
+        second: rk
+      } = kk;
+      if (fk < 1900 || ik < 1 || Sk > 23 || bk > 59 || rk > 60) return;
+      const Pk = 60 === rk,
+        mk = new Date(0);
+      return mk.setUTCFullYear(fk, Dk, ik), mk.setUTCHours(Sk, bk, Pk ? 59 : rk, 0), mk.getUTCDay() === ek && mk.getUTCDate() === ik && mk.getUTCMonth() === Dk && mk.getUTCFullYear() === fk && mk.getUTCHours() === Sk && mk.getUTCMinutes() === bk && mk.getUTCSeconds() === (Pk ? 59 : rk) ? mk.getTime() + (Pk ? 1e3 : 0) : void 0
     }
-    var Ho = class {
-      constructor(QQ) {
-        this.options = QQ, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var HS = class {
+      constructor(kk) {
+        this.options = kk, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var QQ = this;
+        var kk = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const FQ = this.sequence++;
-        let wQ = !1;
+        const ek = this.sequence++;
+        let ik = !1;
         return {
           deliver: function() {
-            var wQ = EL((function*(wQ) {
-              const LQ = QQ.options.getNow();
-              let qQ, oQ = 0;
+            var ik = OD((function*(ik) {
+              const Dk = kk.options.getNow();
+              let fk, Sk = 0;
               for (;;) {
-                var DQ, kQ, vQ;
-                const mQ = QQ.options.retry.maxAttempts - oQ,
-                  uQ = yield QQ.runAttempt((() => wQ(mQ, QQ.unloading)), oQ > 0);
-                if (oQ += uQ.attemptsMade, "success" === uQ.kind) return {
+                var bk, rk, Pk;
+                const mk = kk.options.retry.maxAttempts - Sk,
+                  Mk = yield kk.runAttempt((() => ik(mk, kk.unloading)), Sk > 0);
+                if (Sk += Mk.attemptsMade, "success" === Mk.kind) return {
                   kind: "success",
-                  attempts: oQ,
-                  elapsedTimeMs: QQ.options.getNow() - LQ
+                  attempts: Sk,
+                  elapsedTimeMs: kk.options.getNow() - Dk
                 };
-                if (qQ = uQ.failure, "terminal" === uQ.kind || QQ.unloading) return {
+                if (fk = Mk.failure, "terminal" === Mk.kind || kk.unloading) return {
                   kind: "terminal",
-                  attempts: oQ,
-                  elapsedTimeMs: QQ.options.getNow() - LQ,
-                  failure: qQ
+                  attempts: Sk,
+                  elapsedTimeMs: kk.options.getNow() - Dk,
+                  failure: fk
                 };
-                if (oQ >= QQ.options.retry.maxAttempts) return {
+                if (Sk >= kk.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: oQ,
-                  elapsedTimeMs: QQ.options.getNow() - LQ,
-                  failure: qQ,
+                  attempts: Sk,
+                  elapsedTimeMs: kk.options.getNow() - Dk,
+                  failure: fk,
                   reason: "retries-exhausted"
                 };
-                if (null != uQ.retryAfterMs && uQ.retryAfterMs > QQ.options.retry.maxBackoffMs) return {
+                if (null != Mk.retryAfterMs && Mk.retryAfterMs > kk.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: oQ,
-                  elapsedTimeMs: QQ.options.getNow() - LQ,
-                  failure: qQ,
+                  attempts: Sk,
+                  elapsedTimeMs: kk.options.getNow() - Dk,
+                  failure: fk,
                   reason: "retry-after-too-long"
                 };
-                const HQ = Math.min(null !== (DQ = uQ.retryAfterMs) && void 0 !== DQ ? DQ : QQ.options.retry.initialBackoffMs * Math.pow(QQ.options.retry.backoffMultiplier, oQ - 1), QQ.options.retry.maxBackoffMs);
-                if (null === (kQ = (vQ = QQ.options).onRetry) || void 0 === kQ || kQ.call(vQ, HQ, oQ + 1), yield QQ.waitForTurn(FQ, HQ)) {
-                  const FQ = QQ.options.retry.maxAttempts - oQ,
-                    qQ = yield QQ.runAttempt((() => wQ(FQ, !0)));
-                  return oQ += qQ.attemptsMade, {
-                    kind: "success" === qQ.kind ? "success" : "terminal",
-                    attempts: oQ,
-                    elapsedTimeMs: QQ.options.getNow() - LQ,
-                    failure: "success" === qQ.kind ? void 0 : qQ.failure
+                const Kk = Math.min(null !== (bk = Mk.retryAfterMs) && void 0 !== bk ? bk : kk.options.retry.initialBackoffMs * Math.pow(kk.options.retry.backoffMultiplier, Sk - 1), kk.options.retry.maxBackoffMs);
+                if (null === (rk = (Pk = kk.options).onRetry) || void 0 === rk || rk.call(Pk, Kk, Sk + 1), yield kk.waitForTurn(ek, Kk)) {
+                  const ek = kk.options.retry.maxAttempts - Sk,
+                    fk = yield kk.runAttempt((() => ik(ek, !0)));
+                  return Sk += fk.attemptsMade, {
+                    kind: "success" === fk.kind ? "success" : "terminal",
+                    attempts: Sk,
+                    elapsedTimeMs: kk.options.getNow() - Dk,
+                    failure: "success" === fk.kind ? void 0 : fk.failure
                   }
                 }
               }
             }));
-            return function(QQ) {
-              return wQ.apply(this, arguments)
+            return function(kk) {
+              return ik.apply(this, arguments)
             }
           }(),
           release: () => {
-            wQ || (wQ = !0, this.admitted--)
+            ik || (ik = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const QQ = this.waiting.splice(0);
+        const kk = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const FQ of QQ) FQ.resolve(!0);
+        for (const ek of kk) ek.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(QQ) {
-        let FQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((wQ, LQ) => {
+      runAttempt(kk) {
+        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((ik, Dk) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const FQ = () => {
+              const ek = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              QQ().then((QQ => {
-                FQ(), wQ(QQ)
-              }), (QQ => {
-                FQ(), LQ(QQ)
+              kk().then((kk => {
+                ek(), ik(kk)
+              }), (kk => {
+                ek(), Dk(kk)
               }))
             },
-            isRedelivery: FQ
+            isRedelivery: ek
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const QQ = this.options.getNow(),
-            FQ = this.attemptQueue.findIndex((FQ => {
+          const kk = this.options.getNow(),
+            ek = this.attemptQueue.findIndex((ek => {
               let {
-                isRedelivery: wQ
-              } = FQ;
-              return this.unloading || !wQ || QQ >= this.nextSendAt
+                isRedelivery: ik
+              } = ek;
+              return this.unloading || !ik || kk >= this.nextSendAt
             }));
-          if (FQ < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (ek < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - QQ)));
-          const [wQ] = this.attemptQueue.splice(FQ, 1);
-          wQ.isRedelivery && !this.unloading && (this.nextSendAt = QQ + 1), wQ.run()
+          }), Math.max(0, this.nextSendAt - kk)));
+          const [ik] = this.attemptQueue.splice(ek, 1);
+          ik.isRedelivery && !this.unloading && (this.nextSendAt = kk + 1), ik.run()
         }
       }
-      waitForTurn(QQ, FQ) {
-        const wQ = Math.min(FQ * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((FQ => {
+      waitForTurn(kk, ek) {
+        const ik = Math.min(ek * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((ek => {
           this.waiting.push({
-            sequence: QQ,
-            readyAt: this.options.getNow() + wQ,
-            resolve: FQ
-          }), this.waiting.sort(((QQ, FQ) => QQ.readyAt === FQ.readyAt ? QQ.sequence - FQ.sequence : QQ.readyAt - FQ.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: kk,
+            readyAt: this.options.getNow() + ik,
+            resolve: ek
+          }), this.waiting.sort(((kk, ek) => kk.readyAt === ek.readyAt ? kk.sequence - ek.sequence : kk.readyAt - ek.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const QQ = this.waiting[0],
-          FQ = QQ.readyAt;
+        const kk = this.waiting[0],
+          ek = kk.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const FQ = this.waiting.indexOf(QQ);
-          FQ >= 0 && this.waiting.splice(FQ, 1), QQ.resolve(!1), this.scheduleNext()
-        }), Math.max(0, FQ - this.options.getNow()))
+          const ek = this.waiting.indexOf(kk);
+          ek >= 0 && this.waiting.splice(ek, 1), kk.resolve(!1), this.scheduleNext()
+        }), Math.max(0, ek - this.options.getNow()))
       }
     };
 
-    function bo(QQ, FQ) {
-      if (null == QQ) return {};
-      var wQ, LQ, qQ = function(QQ, FQ) {
-        if (null == QQ) return {};
-        var wQ = {};
-        for (var LQ in QQ)
-          if ({}.hasOwnProperty.call(QQ, LQ)) {
-            if (FQ.includes(LQ)) continue;
-            wQ[LQ] = QQ[LQ]
-          } return wQ
-      }(QQ, FQ);
+    function wS(kk, ek) {
+      if (null == kk) return {};
+      var ik, Dk, fk = function(kk, ek) {
+        if (null == kk) return {};
+        var ik = {};
+        for (var Dk in kk)
+          if ({}.hasOwnProperty.call(kk, Dk)) {
+            if (ek.includes(Dk)) continue;
+            ik[Dk] = kk[Dk]
+          } return ik
+      }(kk, ek);
       if (Object.getOwnPropertySymbols) {
-        var oQ = Object.getOwnPropertySymbols(QQ);
-        for (LQ = 0; LQ < oQ.length; LQ++) wQ = oQ[LQ], FQ.includes(wQ) || {}.propertyIsEnumerable.call(QQ, wQ) && (qQ[wQ] = QQ[wQ])
+        var Sk = Object.getOwnPropertySymbols(kk);
+        for (Dk = 0; Dk < Sk.length; Dk++) ik = Sk[Dk], ek.includes(ik) || {}.propertyIsEnumerable.call(kk, ik) && (fk[ik] = kk[ik])
       }
-      return qQ
+      return fk
     }
 
-    function Yo(QQ) {
+    function lS(kk) {
       const {
-        size: FQ,
-        concurrency: wQ
-      } = QQ, LQ = [];
-      let qQ = 0;
-      const oQ = () => {
-        if (qQ < wQ && LQ.length) {
+        size: ek,
+        concurrency: ik
+      } = kk, Dk = [];
+      let fk = 0;
+      const Sk = () => {
+        if (fk < ik && Dk.length) {
           const {
-            producer: QQ,
-            resolve: FQ,
-            reject: wQ
-          } = LQ.shift();
-          qQ++, QQ().then((QQ => {
-            qQ--, oQ(), FQ(QQ)
-          }), (QQ => {
-            qQ--, oQ(), wQ(QQ)
+            producer: kk,
+            resolve: ek,
+            reject: ik
+          } = Dk.shift();
+          fk++, kk().then((kk => {
+            fk--, Sk(), ek(kk)
+          }), (kk => {
+            fk--, Sk(), ik(kk)
           }))
         }
       };
       return {
-        add: QQ => {
-          if (LQ.length + qQ >= FQ) throw new Error("Task buffer full");
-          return new Promise(((FQ, wQ) => {
-            LQ.push({
-              producer: QQ,
-              resolve: FQ,
-              reject: wQ
-            }), oQ()
+        add: kk => {
+          if (Dk.length + fk >= ek) throw new Error("Task buffer full");
+          return new Promise(((ek, ik) => {
+            Dk.push({
+              producer: kk,
+              resolve: ek,
+              reject: ik
+            }), Sk()
           }))
         }
       }
     }
-    const xo = ["headers"],
-      Ao = ["keepalive", "signal"],
-      to = new Set([408, 425, 429, 500, 502, 503, 504]),
-      eo = new Set([429, 503]);
-    let Mo = 0,
-      Go = 0;
-    var po = class extends Error {};
-    var co = class extends Bq {
-      constructor(QQ) {
-        var FQ, wQ, LQ, qQ, oQ, DQ, kQ, vQ, mQ, uQ, HQ, bQ, YQ, xQ, AQ, tQ, eQ;
-        super(), this.options = QQ, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = ww, this.pendingCustomSends = 0, this.getNow = null !== (FQ = QQ.getNow) && void 0 !== FQ ? FQ : Date.now, this.requestTimeoutMs = null !== (wQ = QQ.requestTimeoutMs) && void 0 !== wQ ? wQ : 1e4, this.compressionEnabled = null !== (LQ = QQ.requestCompression) && void 0 !== LQ && LQ && "undefined" !== typeof CompressionStream, QQ.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new Ho({
-          bufferSize: null !== (qQ = QQ.bufferSize) && void 0 !== qQ ? qQ : 30,
-          concurrency: null !== (oQ = QQ.concurrency) && void 0 !== oQ ? oQ : 5,
+    const pS = ["headers"],
+      yS = ["keepalive", "signal"],
+      YS = new Set([408, 425, 429, 500, 502, 503, 504]),
+      LS = new Set([429, 503]);
+    let CS = 0,
+      AS = 0;
+    var jS = class extends Error {};
+    var sS = class extends iS {
+      constructor(kk) {
+        var ek, ik, Dk, fk, Sk, bk, rk, Pk, mk, Mk, Kk, xk, nk, Uk, Hk, wk, lk;
+        super(), this.options = kk, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = Di, this.pendingCustomSends = 0, this.getNow = null !== (ek = kk.getNow) && void 0 !== ek ? ek : Date.now, this.requestTimeoutMs = null !== (ik = kk.requestTimeoutMs) && void 0 !== ik ? ik : 1e4, this.compressionEnabled = null !== (Dk = kk.requestCompression) && void 0 !== Dk && Dk && "undefined" !== typeof CompressionStream, kk.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new HS({
+          bufferSize: null !== (fk = kk.bufferSize) && void 0 !== fk ? fk : 30,
+          concurrency: null !== (Sk = kk.concurrency) && void 0 !== Sk ? Sk : 5,
           retry: {
-            maxAttempts: null !== (DQ = null === (kQ = QQ.retry) || void 0 === kQ ? void 0 : kQ.maxAttempts) && void 0 !== DQ ? DQ : 3,
-            initialBackoffMs: null !== (vQ = null !== (mQ = null === (uQ = QQ.retry) || void 0 === uQ ? void 0 : uQ.initialBackoffMs) && void 0 !== mQ ? mQ : QQ.defaultRateLimitBackoffMs) && void 0 !== vQ ? vQ : 1e3,
-            maxBackoffMs: null !== (HQ = null === (bQ = QQ.retry) || void 0 === bQ ? void 0 : bQ.maxBackoffMs) && void 0 !== HQ ? HQ : 3e4,
-            backoffMultiplier: null !== (YQ = null === (xQ = QQ.retry) || void 0 === xQ ? void 0 : xQ.backoffMultiplier) && void 0 !== YQ ? YQ : 2
+            maxAttempts: null !== (bk = null === (rk = kk.retry) || void 0 === rk ? void 0 : rk.maxAttempts) && void 0 !== bk ? bk : 3,
+            initialBackoffMs: null !== (Pk = null !== (mk = null === (Mk = kk.retry) || void 0 === Mk ? void 0 : Mk.initialBackoffMs) && void 0 !== mk ? mk : kk.defaultRateLimitBackoffMs) && void 0 !== Pk ? Pk : 1e3,
+            maxBackoffMs: null !== (Kk = null === (xk = kk.retry) || void 0 === xk ? void 0 : xk.maxBackoffMs) && void 0 !== Kk ? Kk : 3e4,
+            backoffMultiplier: null !== (nk = null === (Uk = kk.retry) || void 0 === Uk ? void 0 : Uk.backoffMultiplier) && void 0 !== nk ? nk : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (AQ = QQ.getRandom) && void 0 !== AQ ? AQ : Math.random,
-          onRetry: (QQ, FQ) => {
-            this.logDebug(`Retrying failed request after ${QQ}ms. Attempt ${FQ}.`)
+          getRandom: null !== (Hk = kk.getRandom) && void 0 !== Hk ? Hk : Math.random,
+          onRetry: (kk, ek) => {
+            this.logDebug(`Retrying failed request after ${kk}ms. Attempt ${ek}.`)
           }
-        }), this.customPromiseBuffer = Yo({
-          size: null !== (tQ = QQ.bufferSize) && void 0 !== tQ ? tQ : 30,
-          concurrency: null !== (eQ = QQ.concurrency) && void 0 !== eQ ? eQ : 5
+        }), this.customPromiseBuffer = lS({
+          size: null !== (wk = kk.bufferSize) && void 0 !== wk ? wk : 30,
+          concurrency: null !== (lk = kk.concurrency) && void 0 !== lk ? lk : 5
         }), this.defaultPromiseBuffer = {
-          add: QQ => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(QQ);
-            const FQ = this.deliveryQueue.reserve();
-            if (!FQ) throw new Error("Task buffer full");
-            return this.runBufferedTask(FQ, QQ)
+          add: kk => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(kk);
+            const ek = this.deliveryQueue.reserve();
+            if (!ek) throw new Error("Task buffer full");
+            return this.runBufferedTask(ek, kk)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (QQ => {
-          QQ.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (kk => {
+          kk.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(QQ) {
-        var FQ = this;
-        return EL((function*() {
-          const wQ = FQ.promiseBuffer;
-          if (wQ !== FQ.defaultPromiseBuffer || wQ.add !== FQ.defaultBufferAdd) {
-            FQ.pendingCustomSends++;
+      send(kk) {
+        var ek = this;
+        return OD((function*() {
+          const ik = ek.promiseBuffer;
+          if (ik !== ek.defaultPromiseBuffer || ik.add !== ek.defaultBufferAdd) {
+            ek.pendingCustomSends++;
             try {
-              yield wQ.add((() => FQ.deliver(QQ)))
-            } catch (LQ) {
-              FQ.logError("Permanent delivery failure", {
-                error: LQ,
+              yield ik.add((() => ek.deliver(kk)))
+            } catch (Dk) {
+              ek.logError("Permanent delivery failure", {
+                error: Dk,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              FQ.pendingCustomSends--
+              ek.pendingCustomSends--
             }
-          } else yield FQ.deliver(QQ)
+          } else yield ek.deliver(kk)
         }))()
       }
-      runBufferedTask(QQ, FQ) {
-        return EL((function*() {
-          let wQ;
+      runBufferedTask(kk, ek) {
+        return OD((function*() {
+          let ik;
           try {
-            return yield QQ.deliver(EL((function*() {
-              return wQ = yield FQ(), {
+            return yield kk.deliver(OD((function*() {
+              return ik = yield ek(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), wQ
+            }))), ik
           } finally {
-            QQ.release()
+            kk.release()
           }
         }))()
       }
-      deliver(QQ) {
-        var FQ = this;
-        return EL((function*() {
-          const wQ = FQ.deliveryQueue.reserve();
-          if (wQ) try {
-            const LQ = yield FQ.prepareRequest(QQ), qQ = yield wQ.deliver(((QQ, wQ) => FQ.performAttempt(LQ, QQ, wQ)));
-            "terminal" === qQ.kind && FQ.logError("retries-exhausted" === qQ.reason ? "Delivery retries exhausted" : "Permanent delivery failure", uF(uF({}, qQ.failure), {}, {
-              reason: qQ.reason,
-              attempts: qQ.attempts,
-              elapsedTimeMs: qQ.elapsedTimeMs
+      deliver(kk) {
+        var ek = this;
+        return OD((function*() {
+          const ik = ek.deliveryQueue.reserve();
+          if (ik) try {
+            const Dk = yield ek.prepareRequest(kk), fk = yield ik.deliver(((kk, ik) => ek.performAttempt(Dk, kk, ik)));
+            "terminal" === fk.kind && ek.logError("retries-exhausted" === fk.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Ke(Ke({}, fk.failure), {}, {
+              reason: fk.reason,
+              attempts: fk.attempts,
+              elapsedTimeMs: fk.elapsedTimeMs
             }))
-          } catch (LQ) {
-            FQ.logError("Permanent delivery failure", {
-              error: LQ,
+          } catch (Dk) {
+            ek.logError("Permanent delivery failure", {
+              error: Dk,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            wQ.release()
-          } else FQ.logError("Permanent delivery failure", {
+            ik.release()
+          } else ek.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var QQ;
-        return [this.options.url].concat(null !== (QQ = this.config.ignoreUrls) && void 0 !== QQ ? QQ : [])
+        var kk;
+        return [this.options.url].concat(null !== (kk = this.config.ignoreUrls) && void 0 !== kk ? kk : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(QQ) {
-        var FQ = this;
-        return EL((function*() {
-          var wQ, LQ;
-          const qQ = wo(QQ),
-            oQ = null === (wQ = qQ.meta.session) || void 0 === wQ ? void 0 : wQ.id,
-            DQ = JSON.stringify(qQ),
-            kQ = null !== (LQ = FQ.options.requestOptions) && void 0 !== LQ ? LQ : {},
+      prepareRequest(kk) {
+        var ek = this;
+        return OD((function*() {
+          var ik, Dk;
+          const fk = bS(kk),
+            Sk = null === (ik = fk.meta.session) || void 0 === ik ? void 0 : ik.id,
+            bk = JSON.stringify(fk),
+            rk = null !== (Dk = ek.options.requestOptions) && void 0 !== Dk ? Dk : {},
             {
-              headers: vQ = {}
-            } = kQ,
-            mQ = bo(kQ, xo),
+              headers: Pk = {}
+            } = rk,
+            mk = wS(rk, pS),
             {
-              keepalive: uQ,
-              signal: HQ
-            } = mQ,
-            bQ = bo(mQ, Ao),
-            YQ = {};
-          for (const [QQ, FQ] of Object.entries(vQ)) YQ[QQ] = "function" === typeof FQ ? yield FQ(): FQ;
-          let xQ = DQ,
-            AQ = function(QQ) {
-              return "undefined" === typeof TextEncoder ? QQ.length : (new TextEncoder).encode(QQ).byteLength
-            }(DQ);
-          const tQ = {};
-          return FQ.compressionEnabled && (xQ = yield FQ.compress(DQ), AQ = xQ.size, tQ["Content-Encoding"] = "gzip"), {
-            bodySize: AQ,
-            sessionId: oQ,
-            requestInit: uF({
+              keepalive: Mk,
+              signal: Kk
+            } = mk,
+            xk = wS(mk, yS),
+            nk = {};
+          for (const [kk, ek] of Object.entries(Pk)) nk[kk] = "function" === typeof ek ? yield ek(): ek;
+          let Uk = bk,
+            Hk = function(kk) {
+              return "undefined" === typeof TextEncoder ? kk.length : (new TextEncoder).encode(kk).byteLength
+            }(bk);
+          const wk = {};
+          return ek.compressionEnabled && (Uk = yield ek.compress(bk), Hk = Uk.size, wk["Content-Encoding"] = "gzip"), {
+            bodySize: Hk,
+            sessionId: Sk,
+            requestInit: Ke({
               method: "POST",
-              headers: uF(uF(uF(uF(uF({
+              headers: Ke(Ke(Ke(Ke(Ke({
                 "Content-Type": "application/json"
-              }, tQ), YQ), FQ.options.apiKey ? {
-                "x-api-key": FQ.options.apiKey
-              } : {}), oQ ? {
-                "x-faro-session-id": oQ
+              }, wk), nk), ek.options.apiKey ? {
+                "x-api-key": ek.options.apiKey
+              } : {}), Sk ? {
+                "x-faro-session-id": Sk
               } : {}), {}, {
-                "Idempotency-Key": eF(20)
+                "Idempotency-Key": pe(20)
               }),
-              body: xQ
-            }, bQ)
+              body: Uk
+            }, xk)
           }
         }))()
       }
-      performAttempt(QQ, FQ, wQ) {
-        var LQ = this;
-        return EL((function*() {
-          var qQ;
-          const oQ = null === (qQ = LQ.options.requestOptions) || void 0 === qQ ? void 0 : qQ.signal;
-          if (null === oQ || void 0 === oQ ? void 0 : oQ.aborted) return {
+      performAttempt(kk, ek, ik) {
+        var Dk = this;
+        return OD((function*() {
+          var fk;
+          const Sk = null === (fk = Dk.options.requestOptions) || void 0 === fk ? void 0 : fk.signal;
+          if (null === Sk || void 0 === Sk ? void 0 : Sk.aborted) return {
             kind: "terminal",
             failure: {
-              error: oQ.reason
+              error: Sk.reason
             },
             attemptsMade: 0
           };
-          let DQ = 0;
+          let bk = 0;
           try {
-            var kQ;
-            const qQ = yield LQ.fetchWithKeepaliveFallback(QQ.requestInit, QQ.bodySize, !!wQ || (null === (kQ = LQ.options.requestOptions) || void 0 === kQ ? void 0 : kQ.keepalive), FQ, (() => DQ++));
-            if (LQ.handleResponse(qQ, QQ.sessionId), qQ.status >= 200 && qQ.status < 300) return {
+            var rk;
+            const fk = yield Dk.fetchWithKeepaliveFallback(kk.requestInit, kk.bodySize, !!ik || (null === (rk = Dk.options.requestOptions) || void 0 === rk ? void 0 : rk.keepalive), ek, (() => bk++));
+            if (Dk.handleResponse(fk, kk.sessionId), fk.status >= 200 && fk.status < 300) return {
               kind: "success",
-              attemptsMade: DQ
+              attemptsMade: bk
             };
-            const oQ = {
-              status: qQ.status
+            const Sk = {
+              status: fk.status
             };
-            return !to.has(qQ.status) || wQ ? {
+            return !YS.has(fk.status) || ik ? {
               kind: "terminal",
-              failure: oQ,
-              attemptsMade: DQ
+              failure: Sk,
+              attemptsMade: bk
             } : {
               kind: "retry",
-              failure: oQ,
-              attemptsMade: DQ,
-              retryAfterMs: eo.has(qQ.status) ? LQ.getRetryAfterDelayMs(qQ) : void 0
+              failure: Sk,
+              attemptsMade: bk,
+              retryAfterMs: LS.has(fk.status) ? Dk.getRetryAfterDelayMs(fk) : void 0
             }
-          } catch (vQ) {
-            const QQ = {
-              error: vQ
+          } catch (Pk) {
+            const kk = {
+              error: Pk
             };
-            return (null === oQ || void 0 === oQ ? void 0 : oQ.aborted) || !LQ.isFetchNetworkError(vQ) || wQ ? {
+            return (null === Sk || void 0 === Sk ? void 0 : Sk.aborted) || !Dk.isFetchNetworkError(Pk) || ik ? {
               kind: "terminal",
-              failure: QQ,
-              attemptsMade: DQ
+              failure: kk,
+              attemptsMade: bk
             } : {
               kind: "retry",
-              failure: QQ,
-              attemptsMade: DQ
+              failure: kk,
+              attemptsMade: bk
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(QQ, FQ, wQ, LQ, qQ) {
-        var oQ = this;
-        return EL((function*() {
-          const DQ = oQ.getNow(),
-            kQ = oQ.reserveKeepalive(FQ, wQ);
+      fetchWithKeepaliveFallback(kk, ek, ik, Dk, fk) {
+        var Sk = this;
+        return OD((function*() {
+          const bk = Sk.getNow(),
+            rk = Sk.reserveKeepalive(ek, ik);
           try {
-            return yield oQ.fetchWithTimeout(uF(uF({}, QQ), {}, {
-              keepalive: kQ.keepalive
-            }), oQ.requestTimeoutMs, qQ)
-          } catch (mQ) {
-            var vQ;
-            if (kQ.keepalive && LQ > 1 && oQ.isFetchNetworkError(mQ) && !(mQ instanceof po) && !(null === (vQ = oQ.options.requestOptions) || void 0 === vQ || null === (vQ = vQ.signal) || void 0 === vQ ? void 0 : vQ.aborted)) {
-              oQ.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const FQ = oQ.requestTimeoutMs - (oQ.getNow() - DQ);
-              return oQ.fetchWithTimeout(uF(uF({}, QQ), {}, {
+            return yield Sk.fetchWithTimeout(Ke(Ke({}, kk), {}, {
+              keepalive: rk.keepalive
+            }), Sk.requestTimeoutMs, fk)
+          } catch (mk) {
+            var Pk;
+            if (rk.keepalive && Dk > 1 && Sk.isFetchNetworkError(mk) && !(mk instanceof jS) && !(null === (Pk = Sk.options.requestOptions) || void 0 === Pk || null === (Pk = Pk.signal) || void 0 === Pk ? void 0 : Pk.aborted)) {
+              Sk.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const ek = Sk.requestTimeoutMs - (Sk.getNow() - bk);
+              return Sk.fetchWithTimeout(Ke(Ke({}, kk), {}, {
                 keepalive: !1
-              }), FQ, qQ)
+              }), ek, fk)
             }
-            throw mQ
+            throw mk
           } finally {
-            kQ.release()
+            rk.release()
           }
         }))()
       }
-      fetchWithTimeout(QQ, FQ, wQ) {
-        var LQ = this;
-        return EL((function*() {
-          var qQ;
-          const oQ = null === (qQ = LQ.options.requestOptions) || void 0 === qQ ? void 0 : qQ.signal;
-          if (LQ.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return wQ(), fetch(LQ.options.url, uF(uF({}, QQ), {}, {
-            signal: oQ
+      fetchWithTimeout(kk, ek, ik) {
+        var Dk = this;
+        return OD((function*() {
+          var fk;
+          const Sk = null === (fk = Dk.options.requestOptions) || void 0 === fk ? void 0 : fk.signal;
+          if (Dk.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return ik(), fetch(Dk.options.url, Ke(Ke({}, kk), {}, {
+            signal: Sk
           }));
-          if (FQ <= 0) throw new po("Request timed out");
-          const DQ = new AbortController,
-            kQ = () => DQ.abort(null === oQ || void 0 === oQ ? void 0 : oQ.reason);
-          null === oQ || void 0 === oQ || oQ.addEventListener("abort", kQ, {
+          if (ek <= 0) throw new jS("Request timed out");
+          const bk = new AbortController,
+            rk = () => bk.abort(null === Sk || void 0 === Sk ? void 0 : Sk.reason);
+          null === Sk || void 0 === Sk || Sk.addEventListener("abort", rk, {
             once: !0
           });
-          let vQ = !1;
-          const mQ = setTimeout((() => {
-            vQ = !0, DQ.abort()
-          }), FQ);
+          let Pk = !1;
+          const mk = setTimeout((() => {
+            Pk = !0, bk.abort()
+          }), ek);
           try {
-            return wQ(), yield fetch(LQ.options.url, uF(uF({}, QQ), {}, {
-              signal: DQ.signal
+            return ik(), yield fetch(Dk.options.url, Ke(Ke({}, kk), {}, {
+              signal: bk.signal
             }))
-          } catch (uQ) {
-            if (vQ && !(null === oQ || void 0 === oQ ? void 0 : oQ.aborted)) throw new po("Request timed out");
-            throw uQ
+          } catch (Mk) {
+            if (Pk && !(null === Sk || void 0 === Sk ? void 0 : Sk.aborted)) throw new jS("Request timed out");
+            throw Mk
           } finally {
-            clearTimeout(mQ), null === oQ || void 0 === oQ || oQ.removeEventListener("abort", kQ)
+            clearTimeout(mk), null === Sk || void 0 === Sk || Sk.removeEventListener("abort", rk)
           }
         }))()
       }
-      getRetryAfterDelayMs(QQ) {
-        const FQ = QQ.headers.get("Retry-After");
-        if (!FQ) return;
-        if (/^\d+$/.test(FQ)) {
-          const QQ = 1e3 * Number(FQ);
-          return Number.isFinite(QQ) ? QQ : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(kk) {
+        const ek = kk.headers.get("Retry-After");
+        if (!ek) return;
+        if (/^\d+$/.test(ek)) {
+          const kk = 1e3 * Number(ek);
+          return Number.isFinite(kk) ? kk : Number.POSITIVE_INFINITY
         }
-        const wQ = this.getNow(),
-          LQ = function(QQ, FQ) {
-            const wQ = qo.exec(QQ);
-            if (wQ) {
-              const [, QQ, FQ, LQ, qQ, oQ, DQ, kQ] = wQ;
-              return uo({
-                weekday: ko.indexOf(QQ),
-                day: Number(FQ),
-                month: mo.indexOf(LQ),
-                year: Number(qQ),
-                hour: Number(oQ),
-                minute: Number(DQ),
-                second: Number(kQ)
+        const ik = this.getNow(),
+          Dk = function(kk, ek) {
+            const ik = PS.exec(kk);
+            if (ik) {
+              const [, kk, ek, Dk, fk, Sk, bk, rk] = ik;
+              return US({
+                weekday: KS.indexOf(kk),
+                day: Number(ek),
+                month: nS.indexOf(Dk),
+                year: Number(fk),
+                hour: Number(Sk),
+                minute: Number(bk),
+                second: Number(rk)
               })
             }
-            const LQ = oo.exec(QQ);
-            if (LQ) {
-              const [, QQ, wQ, DQ, kQ, vQ, mQ, uQ] = LQ, HQ = new Date(FQ);
-              if (Number.isNaN(HQ.getTime())) return;
-              const bQ = HQ.getUTCFullYear();
-              let YQ = 100 * Math.floor(bQ / 100) + Number(kQ);
-              YQ < bQ && (YQ += 100);
-              const xQ = mo.indexOf(DQ),
-                AQ = {
-                  month: xQ,
-                  day: Number(wQ),
-                  hour: Number(vQ),
-                  minute: Number(mQ),
-                  second: Number(uQ),
+            const Dk = mS.exec(kk);
+            if (Dk) {
+              const [, kk, ik, bk, rk, Pk, mk, Mk] = Dk, Kk = new Date(ek);
+              if (Number.isNaN(Kk.getTime())) return;
+              const xk = Kk.getUTCFullYear();
+              let nk = 100 * Math.floor(xk / 100) + Number(rk);
+              nk < xk && (nk += 100);
+              const Uk = nS.indexOf(bk),
+                Hk = {
+                  month: Uk,
+                  day: Number(ik),
+                  hour: Number(Pk),
+                  minute: Number(mk),
+                  second: Number(Mk),
                   millisecond: 0
                 },
-                tQ = {
-                  month: HQ.getUTCMonth(),
-                  day: HQ.getUTCDate(),
-                  hour: HQ.getUTCHours(),
-                  minute: HQ.getUTCMinutes(),
-                  second: HQ.getUTCSeconds(),
-                  millisecond: HQ.getUTCMilliseconds()
+                wk = {
+                  month: Kk.getUTCMonth(),
+                  day: Kk.getUTCDate(),
+                  hour: Kk.getUTCHours(),
+                  minute: Kk.getUTCMinutes(),
+                  second: Kk.getUTCSeconds(),
+                  millisecond: Kk.getUTCMilliseconds()
                 };
-              return (YQ > bQ + 50 || YQ === bQ + 50 && (oQ = tQ, ((qQ = AQ).month - oQ.month || qQ.day - oQ.day || qQ.hour - oQ.hour || qQ.minute - oQ.minute || qQ.second - oQ.second || qQ.millisecond - oQ.millisecond) > 0)) && (YQ -= 100), uo({
-                weekday: vo.indexOf(QQ),
-                day: Number(wQ),
-                month: xQ,
-                year: YQ,
-                hour: Number(vQ),
-                minute: Number(mQ),
-                second: Number(uQ)
+              return (nk > xk + 50 || nk === xk + 50 && (Sk = wk, ((fk = Hk).month - Sk.month || fk.day - Sk.day || fk.hour - Sk.hour || fk.minute - Sk.minute || fk.second - Sk.second || fk.millisecond - Sk.millisecond) > 0)) && (nk -= 100), US({
+                weekday: xS.indexOf(kk),
+                day: Number(ik),
+                month: Uk,
+                year: nk,
+                hour: Number(Pk),
+                minute: Number(mk),
+                second: Number(Mk)
               })
             }
-            var qQ, oQ;
-            const DQ = Do.exec(QQ);
-            if (!DQ) return;
-            const [, kQ, vQ, mQ, uQ, HQ, bQ, YQ, xQ] = DQ;
-            return uo({
-              weekday: ko.indexOf(kQ),
-              day: Number(null !== mQ && void 0 !== mQ ? mQ : uQ),
-              month: mo.indexOf(vQ),
-              year: Number(xQ),
-              hour: Number(HQ),
-              minute: Number(bQ),
-              second: Number(YQ)
+            var fk, Sk;
+            const bk = MS.exec(kk);
+            if (!bk) return;
+            const [, rk, Pk, mk, Mk, Kk, xk, nk, Uk] = bk;
+            return US({
+              weekday: KS.indexOf(rk),
+              day: Number(null !== mk && void 0 !== mk ? mk : Mk),
+              month: nS.indexOf(Pk),
+              year: Number(Uk),
+              hour: Number(Kk),
+              minute: Number(xk),
+              second: Number(nk)
             })
-          }(FQ, wQ);
-        return null == LQ ? void 0 : Math.max(0, LQ - wQ)
+          }(ek, ik);
+        return null == Dk ? void 0 : Math.max(0, Dk - ik)
       }
-      reserveKeepalive(QQ, FQ) {
-        if (!1 === FQ || QQ > 6e4 || Mo + QQ > 6e4 || Go >= 9) return {
+      reserveKeepalive(kk, ek) {
+        if (!1 === ek || kk > 6e4 || CS + kk > 6e4 || AS >= 9) return {
           keepalive: !1,
-          release: hF
+          release: Te
         };
-        Mo += QQ, Go++;
-        let wQ = !1;
+        CS += kk, AS++;
+        let ik = !1;
         return {
           keepalive: !0,
           release: () => {
-            wQ || (wQ = !0, Mo -= QQ, Go--)
+            ik || (ik = !0, CS -= kk, AS--)
           }
         }
       }
-      handleResponse(QQ, FQ) {
-        202 === QQ.status && "invalid" === QQ.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), FQ), QQ.text().catch(hF)
+      handleResponse(kk, ek) {
+        202 === kk.status && "invalid" === kk.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), ek), kk.text().catch(Te)
       }
-      isFetchNetworkError(QQ) {
-        return QQ instanceof TypeError || QQ instanceof po || QQ instanceof DOMException && "AbortError" === QQ.name
+      isFetchNetworkError(kk) {
+        return kk instanceof TypeError || kk instanceof jS || kk instanceof DOMException && "AbortError" === kk.name
       }
-      compress(QQ) {
-        return EL((function*() {
-          const FQ = [],
-            wQ = new ReadableStream({
-              start(FQ) {
-                FQ.enqueue((new TextEncoder).encode(QQ)), FQ.close()
+      compress(kk) {
+        return OD((function*() {
+          const ek = [],
+            ik = new ReadableStream({
+              start(ek) {
+                ek.enqueue((new TextEncoder).encode(kk)), ek.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: QQ,
-              value: LQ
-            } = yield wQ.read();
-            if (QQ) return new Blob(FQ);
-            FQ.push(LQ)
+              done: kk,
+              value: Dk
+            } = yield ik.read();
+            if (kk) return new Blob(ek);
+            ek.push(Dk)
           }
         }))()
       }
-      extendFaroSession(QQ, FQ, wQ) {
-        var LQ, qQ;
-        const oQ = QQ.sessionTracking;
-        if (!(null === oQ || void 0 === oQ ? void 0 : oQ.enabled)) return void FQ("Session expired.");
+      extendFaroSession(kk, ek, ik) {
+        var Dk, fk;
+        const Sk = kk.sessionTracking;
+        if (!(null === Sk || void 0 === Sk ? void 0 : Sk.enabled)) return void ek("Session expired.");
         const {
-          fetchUserSession: DQ,
-          storeUserSession: kQ
-        } = VF(oQ), vQ = null === (LQ = this.metas.value.session) || void 0 === LQ ? void 0 : LQ.id, mQ = null === (qQ = DQ()) || void 0 === qQ ? void 0 : qQ.sessionId;
-        wQ && wQ === vQ && wQ === mQ ? (rF({
-          fetchUserSession: DQ,
-          storeUserSession: kQ
+          fetchUserSession: bk,
+          storeUserSession: rk
+        } = ce(Sk), Pk = null === (Dk = this.metas.value.session) || void 0 === Dk ? void 0 : Dk.id, mk = null === (fk = bk()) || void 0 === fk ? void 0 : fk.sessionId;
+        ik && ik === Pk && ik === mk ? (qe({
+          fetchUserSession: bk,
+          storeUserSession: rk
         })({
           forceSessionExtend: !0
-        }), FQ("Session expired; created new session.")) : FQ("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), ek("Session expired; created new session.")) : ek("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const Co = () => {
-      const QQ = window.k6;
+    const dS = () => {
+      const kk = window.k6;
       return {
-        k6: uF({
+        k6: Ke({
           isK6Browser: !0
-        }, (null === QQ || void 0 === QQ ? void 0 : QQ.testRunId) && {
-          testRunId: null === QQ || void 0 === QQ ? void 0 : QQ.testRunId
+        }, (null === kk || void 0 === kk ? void 0 : kk.testRunId) && {
+          testRunId: null === kk || void 0 === kk ? void 0 : kk.testRunId
         })
       }
     };
-    let So, io;
+    let VS, FS;
 
-    function Wo() {
+    function uS() {
       let {
-        generatePageId: QQ,
-        initialPageMeta: FQ
+        generatePageId: kk,
+        initialPageMeta: ek
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const wQ = location.href;
-        return sQ(QQ) && So !== wQ && (So = wQ, io = QQ(location)), {
-          page: uF(uF({
-            url: wQ
-          }, io ? {
-            id: io
-          } : {}), FQ)
+        const ik = location.href;
+        return Fk(kk) && VS !== ik && (VS = ik, FS = kk(location)), {
+          page: Ke(Ke({
+            url: ik
+          }, FS ? {
+            id: FS
+          } : {}), ek)
         }
       }
     }
 
-    function Ro() {
-      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : dF,
-        FQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const wQ = EF;
-      return FQ > 0 && (wQ.error = FQ >= 1 ? function() {
-        for (var FQ = arguments.length, LQ = new Array(FQ), qQ = 0; qQ < FQ; qQ++) LQ[qQ] = arguments[qQ];
-        QQ.error(`${wQ.prefix}\n`, ...LQ)
-      } : hF, wQ.warn = FQ >= 2 ? function() {
-        for (var FQ = arguments.length, LQ = new Array(FQ), qQ = 0; qQ < FQ; qQ++) LQ[qQ] = arguments[qQ];
-        QQ.warn(`${wQ.prefix}\n`, ...LQ)
-      } : hF, wQ.info = FQ >= 3 ? function() {
-        for (var FQ = arguments.length, LQ = new Array(FQ), qQ = 0; qQ < FQ; qQ++) LQ[qQ] = arguments[qQ];
-        QQ.info(`${wQ.prefix}\n`, ...LQ)
-      } : hF, wQ.debug = FQ >= 4 ? function() {
-        for (var FQ = arguments.length, LQ = new Array(FQ), qQ = 0; qQ < FQ; qQ++) LQ[qQ] = arguments[qQ];
-        QQ.debug(`${wQ.prefix}\n`, ...LQ)
-      } : hF), wQ
+    function qS() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ki,
+        ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const ik = Ze;
+      return ek > 0 && (ik.error = ek >= 1 ? function() {
+        for (var ek = arguments.length, Dk = new Array(ek), fk = 0; fk < ek; fk++) Dk[fk] = arguments[fk];
+        kk.error(`${ik.prefix}\n`, ...Dk)
+      } : Te, ik.warn = ek >= 2 ? function() {
+        for (var ek = arguments.length, Dk = new Array(ek), fk = 0; fk < ek; fk++) Dk[fk] = arguments[fk];
+        kk.warn(`${ik.prefix}\n`, ...Dk)
+      } : Te, ik.info = ek >= 3 ? function() {
+        for (var ek = arguments.length, Dk = new Array(ek), fk = 0; fk < ek; fk++) Dk[fk] = arguments[fk];
+        kk.info(`${ik.prefix}\n`, ...Dk)
+      } : Te, ik.debug = ek >= 4 ? function() {
+        for (var ek = arguments.length, Dk = new Array(ek), fk = 0; fk < ek; fk++) Dk[fk] = arguments[fk];
+        kk.debug(`${ik.prefix}\n`, ...Dk)
+      } : Te), ik
     }
-    const Oo = "faro",
-      so = {
+    const IS = "faro",
+      zS = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      ro = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      QS = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function Io(QQ) {
-      var FQ, wQ, qQ, oQ, DQ, kQ;
-      const vQ = [],
-        uQ = Ro(QQ.unpatchedConsole, QQ.internalLoggerLevel);
-      QQ.transports ? ((QQ.url || QQ.apiKey) && uQ.error('if "transports" is defined, "url" and "apiKey" should not be defined'), vQ.push(...QQ.transports)) : QQ.url ? vQ.push(new co({
-        url: QQ.url,
-        apiKey: QQ.apiKey,
-        requestCompression: QQ.requestCompression
-      })) : uQ.error('either "url" or "transports" must be defined');
+    function vS(kk) {
+      var ek, ik, fk, Sk, bk, rk;
+      const Pk = [],
+        Mk = qS(kk.unpatchedConsole, kk.internalLoggerLevel);
+      kk.transports ? ((kk.url || kk.apiKey) && Mk.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Pk.push(...kk.transports)) : kk.url ? Pk.push(new sS({
+        url: kk.url,
+        apiKey: kk.apiKey,
+        requestCompression: kk.requestCompression
+      })) : Mk.error('either "url" or "transports" must be defined');
       const {
-        dedupe: HQ = !0,
-        eventDomain: bQ = LQ,
-        globalObjectKey: YQ = Oo,
-        instrumentations: xQ = Vq(),
-        internalLoggerLevel: AQ = nF,
-        isolate: tQ = !1,
-        logArgsSerializer: eQ = Uw,
-        metas: MQ = No(QQ),
-        paused: GQ = !1,
-        preventGlobalExposure: pQ = !1,
-        unpatchedConsole: cQ = dF,
-        url: CQ,
-        experimental: SQ
-      } = QQ, iQ = bo(QQ, ro), WQ = null !== (FQ = null === SQ || void 0 === SQ ? void 0 : SQ.trackNavigation) && void 0 !== FQ && FQ, RQ = {
-        dataAttributeName: BL(null !== (wQ = null === (qQ = QQ.userActionsInstrumentation) || void 0 === qQ ? void 0 : qQ.dataAttributeName) && void 0 !== wQ ? wQ : PL),
-        excludeItem: null === (oQ = QQ.userActionsInstrumentation) || void 0 === oQ ? void 0 : oQ.excludeItem,
-        initialActivityTimeout: dL(null === (DQ = QQ.userActionsInstrumentation) || void 0 === DQ ? void 0 : DQ.initialActivityTimeout, 100, (QQ => uQ.warn(QQ)))
+        dedupe: Kk = !0,
+        eventDomain: xk = Dk,
+        globalObjectKey: nk = IS,
+        instrumentations: Uk = Zf(),
+        internalLoggerLevel: Hk = Oe,
+        isolate: wk = !1,
+        logArgsSerializer: lk = zi,
+        metas: pk = hS(kk),
+        paused: yk = !1,
+        preventGlobalExposure: Yk = !1,
+        unpatchedConsole: Lk = ki,
+        url: Ck,
+        experimental: Ak
+      } = kk, jk = wS(kk, QS), sk = null !== (ek = null === Ak || void 0 === Ak ? void 0 : Ak.trackNavigation) && void 0 !== ek && ek, dk = {
+        dataAttributeName: kf(null !== (ik = null === (fk = kk.userActionsInstrumentation) || void 0 === fk ? void 0 : fk.dataAttributeName) && void 0 !== ik ? ik : ND),
+        excludeItem: null === (Sk = kk.userActionsInstrumentation) || void 0 === Sk ? void 0 : Sk.excludeItem,
+        initialActivityTimeout: ef(null === (bk = kk.userActionsInstrumentation) || void 0 === bk ? void 0 : bk.initialActivityTimeout, 100, (kk => Mk.warn(kk)))
       };
-      return uF(uF({}, iQ), {}, {
-        batching: uF(uF({}, so), QQ.batching),
-        dedupe: HQ,
-        globalObjectKey: YQ,
-        instrumentations: Uo(xQ, QQ),
-        internalLoggerLevel: AQ,
-        isolate: tQ,
-        logArgsSerializer: eQ,
-        metas: MQ,
-        parseStacktrace: Aw,
-        paused: GQ,
-        preventGlobalExposure: pQ,
-        transports: vQ,
-        unpatchedConsole: cQ,
-        eventDomain: bQ,
-        ignoreUrls: [...null !== (kQ = QQ.ignoreUrls) && void 0 !== kQ ? kQ : [], ...CQ ? [CQ] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: uF(uF(uF({}, mQ), QQ.sessionTracking), To({
-          trackGeolocation: QQ.trackGeolocation,
-          sessionTracking: QQ.sessionTracking
+      return Ke(Ke({}, jk), {}, {
+        batching: Ke(Ke({}, zS), kk.batching),
+        dedupe: Kk,
+        globalObjectKey: nk,
+        instrumentations: ES(Uk, kk),
+        internalLoggerLevel: Hk,
+        isolate: wk,
+        logArgsSerializer: lk,
+        metas: pk,
+        parseStacktrace: wi,
+        paused: yk,
+        preventGlobalExposure: Yk,
+        transports: Pk,
+        unpatchedConsole: Lk,
+        eventDomain: xk,
+        ignoreUrls: [...null !== (rk = kk.ignoreUrls) && void 0 !== rk ? rk : [], ...Ck ? [Ck] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: Ke(Ke(Ke({}, mk), kk.sessionTracking), aS({
+          trackGeolocation: kk.trackGeolocation,
+          sessionTracking: kk.sessionTracking
         })),
-        userActionsInstrumentation: RQ,
+        userActionsInstrumentation: dk,
         experimental: {
-          trackNavigation: WQ
+          trackNavigation: sk
         }
       })
     }
 
-    function Uo(QQ, FQ) {
+    function ES(kk, ek) {
       let {
-        experimental: wQ
-      } = FQ;
-      var LQ;
-      const qQ = null !== (LQ = null === wQ || void 0 === wQ ? void 0 : wQ.trackNavigation) && void 0 !== LQ && LQ;
-      return QQ.filter((QQ => !("@grafana/faro-web-sdk:instrumentation-navigation" === QQ.name && !qQ)))
+        experimental: ik
+      } = ek;
+      var Dk;
+      const fk = null !== (Dk = null === ik || void 0 === ik ? void 0 : ik.trackNavigation) && void 0 !== Dk && Dk;
+      return kk.filter((kk => !("@grafana/faro-web-sdk:instrumentation-navigation" === kk.name && !fk)))
     }
 
-    function No(QQ) {
-      var FQ, wQ, LQ;
+    function hS(kk) {
+      var ek, ik, Dk;
       const {
-        page: qQ,
-        generatePageId: oQ
-      } = null !== (FQ = null === QQ || void 0 === QQ ? void 0 : QQ.pageTracking) && void 0 !== FQ ? FQ : {}, DQ = [gq, Pq, Wo({
-        generatePageId: oQ,
-        initialPageMeta: qQ
-      }), ...null !== (wQ = QQ.metas) && void 0 !== wQ ? wQ : [], yq];
-      return OQ(null === (LQ = window) || void 0 === LQ ? void 0 : LQ.k6) ? [...DQ, Co] : DQ
+        page: fk,
+        generatePageId: Sk
+      } = null !== (ek = null === kk || void 0 === kk ? void 0 : kk.pageTracking) && void 0 !== ek ? ek : {}, bk = [Rf, Jf, uS({
+        generatePageId: Sk,
+        initialPageMeta: fk
+      }), ...null !== (ik = kk.metas) && void 0 !== ik ? ik : [], eS];
+      return Vk(null === (Dk = window) || void 0 === Dk ? void 0 : Dk.k6) ? [...bk, dS] : bk
     }
 
-    function To(QQ) {
+    function aS(kk) {
       let {
-        trackGeolocation: FQ,
-        sessionTracking: wQ
-      } = QQ;
-      var LQ;
-      const qQ = {};
-      return WQ(FQ) && (qQ.geoLocationTrackingEnabled = FQ), nQ(qQ) ? {} : {
-        session: uF(uF({}, null !== (LQ = null === wQ || void 0 === wQ ? void 0 : wQ.session) && void 0 !== LQ ? LQ : {}), {}, {
-          overrides: qQ
+        trackGeolocation: ek,
+        sessionTracking: ik
+      } = kk;
+      var Dk;
+      const fk = {};
+      return sk(ek) && (fk.geoLocationTrackingEnabled = ek), Ok(fk) ? {} : {
+        session: Ke(Ke({}, null !== (Dk = null === ik || void 0 === ik ? void 0 : ik.session) && void 0 !== Dk ? Dk : {}), {}, {
+          overrides: fk
         })
       }
     }
-    const Ko = new WeakSet;
+    const WS = new WeakSet;
 
-    function zo(QQ) {
-      return Ko.add(QQ), QQ
+    function tS(kk) {
+      return WS.add(kk), kk
     }
 
-    function jo(QQ, FQ) {
-      if (QQ.capture) return zo(QQ.capture(FQ));
-      const wQ = zo(QQ.value);
-      return null === FQ || void 0 === FQ || FQ(), wQ
+    function XS(kk, ek) {
+      if (kk.capture) return tS(kk.capture(ek));
+      const ik = tS(kk.value);
+      return null === ek || void 0 === ek || ek(), ik
     }
 
-    function ao(QQ) {
-      const FQ = `__faroBundleId_${QQ}`,
-        wQ = null === uQ || void 0 === uQ ? void 0 : uQ[FQ];
-      if ("string" === typeof wQ && "" !== wQ) return wQ;
-      const LQ = "undefined" !== typeof window ? window[FQ] : void 0;
-      return "string" === typeof LQ && "" !== LQ ? LQ : void 0
+    function BS(kk) {
+      const ek = `__faroBundleId_${kk}`,
+        ik = null === Mk || void 0 === Mk ? void 0 : Mk[ek];
+      if ("string" === typeof ik && "" !== ik) return ik;
+      const Dk = "undefined" !== typeof window ? window[ek] : void 0;
+      return "string" === typeof Dk && "" !== Dk ? Dk : void 0
     }
 
-    function Xo(QQ) {
-      var FQ, wQ;
-      const LQ = QQ.config.app.name,
-        qQ = LQ ? function(QQ) {
-          return null === uQ || void 0 === uQ ? void 0 : uQ[`__faroGitHash_${QQ}`]
-        }(LQ) : void 0,
-        oQ = {
+    function cS(kk) {
+      var ek, ik;
+      const Dk = kk.config.app.name,
+        fk = Dk ? function(kk) {
+          return null === Mk || void 0 === Mk ? void 0 : Mk[`__faroGitHash_${kk}`]
+        }(Dk) : void 0,
+        Sk = {
           sdk: {
-            version: ww,
+            version: Di,
             name: "faro"
           },
-          app: BF({
-            bundleId: LQ && ao(LQ)
-          }, void 0 !== qQ ? {
-            gitHash: qQ
+          app: Je({
+            bundleId: Dk && BS(Dk)
+          }, void 0 !== fk ? {
+            gitHash: fk
           } : {})
         },
-        DQ = null === (FQ = QQ.config.sessionTracking) || void 0 === FQ ? void 0 : FQ.session;
-      DQ && QQ.api.setSession(DQ), QQ.config.app && (oQ.app = BF(BF({}, QQ.config.app), oQ.app)), QQ.config.user && (oQ.user = QQ.config.user), QQ.config.view && (oQ.view = QQ.config.view), QQ.metas.add(oQ, ...null !== (wQ = QQ.config.metas) && void 0 !== wQ ? wQ : [])
+        bk = null === (ek = kk.config.sessionTracking) || void 0 === ek ? void 0 : ek.session;
+      bk && kk.api.setSession(bk), kk.config.app && (Sk.app = Je(Je({}, kk.config.app), Sk.app)), kk.config.user && (Sk.user = kk.config.user), kk.config.view && (Sk.view = kk.config.view), kk.metas.add(Sk, ...null !== (ik = kk.config.metas) && void 0 !== ik ? ik : [])
     }
-    var fo = class {
-      constructor(QQ, FQ) {
-        var wQ, LQ;
-        this.signalBuffer = [], this.itemLimit = null !== (wQ = null === FQ || void 0 === FQ ? void 0 : FQ.itemLimit) && void 0 !== wQ ? wQ : 50, this.sendTimeout = null !== (LQ = null === FQ || void 0 === FQ ? void 0 : FQ.sendTimeout) && void 0 !== LQ ? LQ : 250, this.paused = (null === FQ || void 0 === FQ ? void 0 : FQ.paused) || !1, this.sendFn = QQ, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var TS = class {
+      constructor(kk, ek) {
+        var ik, Dk;
+        this.signalBuffer = [], this.itemLimit = null !== (ik = null === ek || void 0 === ek ? void 0 : ek.itemLimit) && void 0 !== ik ? ik : 50, this.sendTimeout = null !== (Dk = null === ek || void 0 === ek ? void 0 : ek.sendTimeout) && void 0 !== Dk ? Dk : 250, this.paused = (null === ek || void 0 === ek ? void 0 : ek.paused) || !1, this.sendFn = kk, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(QQ) {
-        this.paused || (this.signalBuffer.push(QQ), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(kk) {
+        this.paused || (this.signalBuffer.push(kk), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(QQ) {
-        const FQ = new Map;
-        return QQ.forEach((QQ => {
-          const wQ = JSON.stringify(QQ.meta);
-          let LQ = FQ.get(wQ);
-          LQ = void 0 === LQ ? [QQ] : [...LQ, QQ], FQ.set(wQ, LQ)
-        })), Array.from(FQ.values())
+      groupItems(kk) {
+        const ek = new Map;
+        return kk.forEach((kk => {
+          const ik = JSON.stringify(kk.meta);
+          let Dk = ek.get(ik);
+          Dk = void 0 === Dk ? [kk] : [...Dk, kk], ek.set(ik, Dk)
+        })), Array.from(ek.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const QQ = this.signalBuffer;
+        const kk = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(QQ).forEach(this.sendFn)
-        } catch (FQ) {
-          throw this.signalBuffer = [...QQ, ...this.signalBuffer], this.trimBufferToLimit(), FQ
+          this.groupItems(kk).forEach(this.sendFn)
+        } catch (ek) {
+          throw this.signalBuffer = [...kk, ...this.signalBuffer], this.trimBufferToLimit(), ek
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function Vo(QQ, FQ, wQ, LQ) {
-      var qQ;
-      FQ.debug("Initializing transports");
-      const oQ = [];
-      let DQ = [];
-      const kQ = QQ => {
-        let FQ = QQ;
-        for (const LQ of DQ) {
-          const QQ = FQ.map(LQ).filter(Boolean);
-          if (0 === QQ.length) return [];
-          FQ = ho(QQ, wQ)
+    function oS(kk, ek, ik, Dk) {
+      var fk;
+      ek.debug("Initializing transports");
+      const Sk = [];
+      let bk = [];
+      const rk = kk => {
+        let ek = kk;
+        for (const Dk of bk) {
+          const kk = ek.map(Dk).filter(Boolean);
+          if (0 === kk.length) return [];
+          ek = ZS(kk, ik)
         }
-        return FQ
+        return ek
       };
-      let vQ;
-      (null === (qQ = wQ.batching) || void 0 === qQ ? void 0 : qQ.enabled) && (vQ = new fo((QQ => {
-        const wQ = kQ(QQ);
-        if (0 !== wQ.length)
-          for (const LQ of oQ) FQ.debug(`Transporting item using ${LQ.name}\n`, wQ), LQ.isBatched() && LQ.send(wQ)
+      let Pk;
+      (null === (fk = ik.batching) || void 0 === fk ? void 0 : fk.enabled) && (Pk = new TS((kk => {
+        const ik = rk(kk);
+        if (0 !== ik.length)
+          for (const Dk of Sk) ek.debug(`Transporting item using ${Dk.name}\n`, ik), Dk.isBatched() && Dk.send(ik)
       }), {
-        sendTimeout: wQ.batching.sendTimeout,
-        itemLimit: wQ.batching.itemLimit,
-        paused: wQ.paused
+        sendTimeout: ik.batching.sendTimeout,
+        itemLimit: ik.batching.itemLimit,
+        paused: ik.paused
       }));
       return {
         add: function() {
-          FQ.debug("Adding transports");
-          for (var qQ = arguments.length, DQ = new Array(qQ), kQ = 0; kQ < qQ; kQ++) DQ[kQ] = arguments[kQ];
-          DQ.forEach((qQ => {
-            FQ.debug(`Adding "${qQ.name}" transport`), oQ.some((QQ => QQ === qQ)) ? FQ.warn(`Transport ${qQ.name} is already added`) : (qQ.unpatchedConsole = QQ, qQ.internalLogger = FQ, qQ.config = wQ, qQ.metas = LQ, oQ.push(qQ))
+          ek.debug("Adding transports");
+          for (var fk = arguments.length, bk = new Array(fk), rk = 0; rk < fk; rk++) bk[rk] = arguments[rk];
+          bk.forEach((fk => {
+            ek.debug(`Adding "${fk.name}" transport`), Sk.some((kk => kk === fk)) ? ek.warn(`Transport ${fk.name} is already added`) : (fk.unpatchedConsole = kk, fk.internalLogger = ek, fk.config = ik, fk.metas = Dk, Sk.push(fk))
           }))
         },
         addBeforeSendHooks: function() {
-          FQ.debug("Adding beforeSendHooks\n", DQ);
-          for (var QQ = arguments.length, wQ = new Array(QQ), LQ = 0; LQ < QQ; LQ++) wQ[LQ] = arguments[LQ];
-          wQ.forEach((QQ => {
-            QQ && DQ.push(QQ)
+          ek.debug("Adding beforeSendHooks\n", bk);
+          for (var kk = arguments.length, ik = new Array(kk), Dk = 0; Dk < kk; Dk++) ik[Dk] = arguments[Dk];
+          ik.forEach((kk => {
+            kk && bk.push(kk)
           }))
         },
-        getBeforeSendHooks: () => [...DQ],
-        execute: QQ => {
-          var qQ;
-          if (!wQ.paused && XF(LQ).shouldCapture()) {
-            if (HQ = QQ.meta, !Ko.has(HQ)) {
-              var DQ, mQ, uQ;
-              const FQ = null === (DQ = LQ.value.session) || void 0 === DQ ? void 0 : DQ.id,
-                qQ = jo(LQ);
-              if (wQ.paused) return;
-              const oQ = BF({}, QQ.meta);
-              (null === (mQ = oQ.session) || void 0 === mQ ? void 0 : mQ.id) === FQ && (null === (uQ = qQ.session) || void 0 === uQ ? void 0 : uQ.id) !== FQ && (void 0 === qQ.session ? delete oQ.session : oQ.session = qQ.session), QQ = BF(BF({}, QQ), {}, {
-                meta: zo(oQ)
+        getBeforeSendHooks: () => [...bk],
+        execute: kk => {
+          var fk;
+          if (!ik.paused && Xe(Dk).shouldCapture()) {
+            if (Kk = kk.meta, !WS.has(Kk)) {
+              var bk, mk, Mk;
+              const ek = null === (bk = Dk.value.session) || void 0 === bk ? void 0 : bk.id,
+                fk = XS(Dk);
+              if (ik.paused) return;
+              const Sk = Je({}, kk.meta);
+              (null === (mk = Sk.session) || void 0 === mk ? void 0 : mk.id) === ek && (null === (Mk = fk.session) || void 0 === Mk ? void 0 : Mk.id) !== ek && (void 0 === fk.session ? delete Sk.session : Sk.session = fk.session), kk = Je(Je({}, kk), {}, {
+                meta: tS(Sk)
               })
             }
-            var HQ;
-            (null === (qQ = wQ.batching) || void 0 === qQ ? void 0 : qQ.enabled) && (null === vQ || void 0 === vQ || vQ.addItem(QQ)), (QQ => {
-              var LQ;
-              if ((null === (LQ = wQ.batching) || void 0 === LQ ? void 0 : LQ.enabled) && oQ.every((QQ => QQ.isBatched()))) return;
-              const [qQ] = kQ([QQ]);
-              if (void 0 !== qQ)
-                for (const kQ of oQ) {
-                  var DQ;
-                  FQ.debug(`Transporting item using ${kQ.name}\n`, qQ), kQ.isBatched() ? (null === (DQ = wQ.batching) || void 0 === DQ ? void 0 : DQ.enabled) || kQ.send([qQ]) : kQ.send(qQ)
+            var Kk;
+            (null === (fk = ik.batching) || void 0 === fk ? void 0 : fk.enabled) && (null === Pk || void 0 === Pk || Pk.addItem(kk)), (kk => {
+              var Dk;
+              if ((null === (Dk = ik.batching) || void 0 === Dk ? void 0 : Dk.enabled) && Sk.every((kk => kk.isBatched()))) return;
+              const [fk] = rk([kk]);
+              if (void 0 !== fk)
+                for (const rk of Sk) {
+                  var bk;
+                  ek.debug(`Transporting item using ${rk.name}\n`, fk), rk.isBatched() ? (null === (bk = ik.batching) || void 0 === bk ? void 0 : bk.enabled) || rk.send([fk]) : rk.send(fk)
                 }
-            })(QQ)
+            })(kk)
           }
         },
-        isPaused: () => wQ.paused,
+        isPaused: () => ik.paused,
         pause: () => {
-          FQ.debug("Pausing transports"), null === vQ || void 0 === vQ || vQ.pause(), wQ.paused = !0
+          ek.debug("Pausing transports"), null === Pk || void 0 === Pk || Pk.pause(), ik.paused = !0
         },
         remove: function() {
-          FQ.debug("Removing transports");
-          for (var QQ = arguments.length, wQ = new Array(QQ), LQ = 0; LQ < QQ; LQ++) wQ[LQ] = arguments[LQ];
-          wQ.forEach((QQ => {
-            FQ.debug(`Removing "${QQ.name}" transport`);
-            const wQ = oQ.indexOf(QQ); - 1 !== wQ ? oQ.splice(wQ, 1) : FQ.warn(`Transport "${QQ.name}" is not added`)
+          ek.debug("Removing transports");
+          for (var kk = arguments.length, ik = new Array(kk), Dk = 0; Dk < kk; Dk++) ik[Dk] = arguments[Dk];
+          ik.forEach((kk => {
+            ek.debug(`Removing "${kk.name}" transport`);
+            const ik = Sk.indexOf(kk); - 1 !== ik ? Sk.splice(ik, 1) : ek.warn(`Transport "${kk.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var QQ = arguments.length, wQ = new Array(QQ), LQ = 0; LQ < QQ; LQ++) wQ[LQ] = arguments[LQ];
-          FQ.debug("Removing beforeSendHooks"), DQ = DQ.filter((QQ => !wQ.includes(QQ)))
+          for (var kk = arguments.length, ik = new Array(kk), Dk = 0; Dk < kk; Dk++) ik[Dk] = arguments[Dk];
+          ek.debug("Removing beforeSendHooks"), bk = bk.filter((kk => !ik.includes(kk)))
         },
         get transports() {
-          return [...oQ]
+          return [...Sk]
         },
         unpause: () => {
-          FQ.debug("Unpausing transports"), null === vQ || void 0 === vQ || vQ.start(), wQ.paused = !1
+          ek.debug("Unpausing transports"), null === Pk || void 0 === Pk || Pk.start(), ik.paused = !1
         }
       }
     }
 
-    function ho(QQ, FQ) {
-      if (FQ.preserveOriginalError)
-        for (const wQ of QQ) "exception" === wQ.type && delete wQ.payload.originalError;
-      return QQ
+    function ZS(kk, ek) {
+      if (ek.preserveOriginalError)
+        for (const ik of kk) "exception" === ik.type && delete ik.payload.originalError;
+      return kk
     }
-    let Jo = dF;
+    let OS = ki;
 
-    function Eo(QQ) {
-      var FQ;
-      return Jo = null !== (FQ = QQ.unpatchedConsole) && void 0 !== FQ ? FQ : Jo, Jo
+    function gS(kk) {
+      var ek;
+      return OS = null !== (ek = kk.unpatchedConsole) && void 0 !== ek ? ek : OS, OS
     }
-    let no, go = EF;
+    let GS, NS = Ze;
 
-    function Po(QQ, FQ) {
-      return go = Ro(QQ, FQ.internalLoggerLevel), go
+    function RS(kk, ek) {
+      return NS = qS(kk, ek.internalLoggerLevel), NS
     }
 
-    function Zo(QQ) {
+    function JS(kk) {
       let {
-        internalLogger: FQ,
-        config: wQ,
-        metas: LQ,
-        transports: qQ,
-        tracesApi: oQ,
-        userActionsApi: DQ
-      } = QQ;
-      var kQ;
-      FQ.debug("Initializing exceptions API");
-      let vQ = null;
-      no = null !== (kQ = wQ.parseStacktrace) && void 0 !== kQ ? kQ : no;
-      const mQ = QQ => {
-          FQ.debug("Changing stacktrace parser"), no = null !== QQ && void 0 !== QQ ? QQ : no
+        internalLogger: ek,
+        config: ik,
+        metas: Dk,
+        transports: fk,
+        tracesApi: Sk,
+        userActionsApi: bk
+      } = kk;
+      var rk;
+      ek.debug("Initializing exceptions API");
+      let Pk = null;
+      GS = null !== (rk = ik.parseStacktrace) && void 0 !== rk ? rk : GS;
+      const mk = kk => {
+          ek.debug("Changing stacktrace parser"), GS = null !== kk && void 0 !== kk ? kk : GS
         },
         {
-          ignoreErrors: uQ = [],
-          preserveOriginalError: HQ
-        } = wQ;
-      return mQ(wQ.parseStacktrace), {
-        changeStacktraceParser: mQ,
-        getStacktraceParser: () => no,
-        pushError: function(QQ) {
+          ignoreErrors: Mk = [],
+          preserveOriginalError: Kk
+        } = ik;
+      return mk(ik.parseStacktrace), {
+        changeStacktraceParser: mk,
+        getStacktraceParser: () => GS,
+        pushError: function(kk) {
           let {
-            skipDedupe: kQ,
-            stackFrames: mQ,
-            type: bQ,
-            context: YQ,
-            spanContext: xQ,
-            timestampOverwriteMs: AQ,
-            originalError: tQ,
-            fingerprint: eQ,
-            fatal: MQ
+            skipDedupe: rk,
+            stackFrames: mk,
+            type: xk,
+            context: nk,
+            spanContext: Uk,
+            timestampOverwriteMs: Hk,
+            originalError: wk,
+            fingerprint: lk,
+            fatal: pk
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(QQ, FQ) {
+          if (! function(kk, ek) {
               const {
-                message: wQ,
-                name: LQ,
-                stack: qQ
-              } = FQ;
-              return oQ = QQ, DQ = wQ + " " + LQ + " " + qQ, oQ.some((QQ => CQ(QQ) ? DQ.includes(QQ) : !!DQ.match(QQ)));
-              var oQ, DQ
-            }(uQ, null !== tQ && void 0 !== tQ ? tQ : QQ)) try {
-            var GQ, pQ;
-            if (!XF(LQ).shouldCapture()) return;
-            const uQ = zF(BF(BF({}, function(QQ) {
-                let FQ = QQ.cause;
-                lQ(FQ) ? FQ = QQ.cause.toString() : null !== FQ && (OQ(QQ.cause) || rQ(QQ.cause)) ? FQ = KF(QQ.cause) : null != FQ && (FQ = QQ.cause.toString());
-                return null == FQ ? {} : {
-                  cause: FQ
+                message: ik,
+                name: Dk,
+                stack: fk
+              } = ek;
+              return Sk = kk, bk = ik + " " + Dk + " " + fk, Sk.some((kk => Ck(kk) ? bk.includes(kk) : !!bk.match(kk)));
+              var Sk, bk
+            }(Mk, null !== wk && void 0 !== wk ? wk : kk)) try {
+            var yk, Yk;
+            if (!Xe(Dk).shouldCapture()) return;
+            const Mk = he(Je(Je({}, function(kk) {
+                let ek = kk.cause;
+                hk(ek) ? ek = kk.cause.toString() : null !== ek && (Vk(kk.cause) || uk(kk.cause)) ? ek = Ee(kk.cause) : null != ek && (ek = kk.cause.toString());
+                return null == ek ? {} : {
+                  cause: ek
                 }
-              }(null !== tQ && void 0 !== tQ ? tQ : QQ)), null !== YQ && void 0 !== YQ ? YQ : {})),
-              CQ = BF(BF(BF(BF({
-                type: bQ || QQ.name || "Error",
-                value: QQ.message,
-                timestamp: AQ ? AF(AQ) : xF(),
-                trace: xQ ? {
-                  trace_id: xQ.traceId,
-                  span_id: xQ.spanId
-                } : oQ.getTraceContext()
-              }, nQ(uQ) ? {} : {
-                context: uQ
-              }), HQ ? {
-                originalError: tQ
-              } : {}), eQ ? {
-                fingerprint: eQ
-              } : {}), void 0 !== MQ ? {
-                fatal: MQ
+              }(null !== wk && void 0 !== wk ? wk : kk)), null !== nk && void 0 !== nk ? nk : {})),
+              Ck = Je(Je(Je(Je({
+                type: xk || kk.name || "Error",
+                value: kk.message,
+                timestamp: Hk ? we(Hk) : He(),
+                trace: Uk ? {
+                  trace_id: Uk.traceId,
+                  span_id: Uk.spanId
+                } : Sk.getTraceContext()
+              }, Ok(Mk) ? {} : {
+                context: Mk
+              }), Kk ? {
+                originalError: wk
+              } : {}), lk ? {
+                fingerprint: lk
+              } : {}), void 0 !== pk ? {
+                fatal: pk
               } : {});
-            mQ = null !== (GQ = mQ) && void 0 !== GQ ? GQ : QQ.stack ? null === no || void 0 === no ? void 0 : no(QQ).frames : void 0, (null === mQ || void 0 === mQ ? void 0 : mQ.length) && (CQ.stacktrace = {
-              frames: mQ
+            mk = null !== (yk = mk) && void 0 !== yk ? yk : kk.stack ? null === GS || void 0 === GS ? void 0 : GS(kk).frames : void 0, (null === mk || void 0 === mk ? void 0 : mk.length) && (Ck.stacktrace = {
+              frames: mk
             });
-            const SQ = {
-              type: CQ.type,
-              value: CQ.value,
-              stacktrace: CQ.stacktrace,
-              context: CQ.context,
-              fingerprint: CQ.fingerprint,
-              fatal: null !== (pQ = CQ.fatal) && void 0 !== pQ && pQ
+            const Ak = {
+              type: Ck.type,
+              value: Ck.value,
+              stacktrace: Ck.stacktrace,
+              context: Ck.context,
+              fingerprint: Ck.fingerprint,
+              fatal: null !== (Yk = Ck.fatal) && void 0 !== Yk && Yk
             };
-            if (!kQ && wQ.dedupe && !cQ(vQ) && MF(SQ, vQ)) return void FQ.debug("Skipping error push because it is the same as the last one\n", CQ);
-            const iQ = vQ,
-              WQ = jo(LQ);
-            if (vQ !== iQ && !kQ && wQ.dedupe && MF(SQ, vQ)) return;
-            vQ = SQ;
-            const RQ = {
-              meta: WQ,
-              payload: CQ,
+            if (!rk && ik.dedupe && !Lk(Pk) && ye(Ak, Pk)) return void ek.debug("Skipping error push because it is the same as the last one\n", Ck);
+            const jk = Pk,
+              sk = XS(Dk);
+            if (Pk !== jk && !rk && ik.dedupe && ye(Ak, Pk)) return;
+            Pk = Ak;
+            const dk = {
+              meta: sk,
+              payload: Ck,
               type: "exception"
             };
-            FQ.debug("Pushing exception\n", RQ), Sq(DQ.getActiveUserAction(), RQ) || qQ.execute(RQ)
-          } catch (SQ) {
-            FQ.error("Error pushing event", SQ)
+            ek.debug("Pushing exception\n", dk), df(bk.getActiveUserAction(), dk) || fk.execute(dk)
+          } catch (Ak) {
+            ek.error("Error pushing event", Ak)
           }
         }
       }
     }
 
-    function yo(QQ, FQ, wQ, LQ, qQ) {
-      FQ.debug("Initializing API");
-      let oQ = null;
-      const DQ = function(QQ) {
+    function kb(kk, ek, ik, Dk, fk) {
+      ek.debug("Initializing API");
+      let Sk = null;
+      const bk = function(kk) {
           let {
-            transports: FQ,
-            internalLogger: wQ,
-            config: LQ,
-            pushEvent: qQ
-          } = QQ;
-          var oQ;
-          const DQ = null === (oQ = LQ.userActionsInstrumentation) || void 0 === oQ ? void 0 : oQ.excludeItem;
-          let kQ;
-          const vQ = () => kQ;
+            transports: ek,
+            internalLogger: ik,
+            config: Dk,
+            pushEvent: fk
+          } = kk;
+          var Sk;
+          const bk = null === (Sk = Dk.userActionsInstrumentation) || void 0 === Sk ? void 0 : Sk.excludeItem;
+          let rk;
+          const Pk = () => rk;
           return {
-            startUserAction: (QQ, LQ, oQ) => {
-              if (void 0 === vQ()) {
-                const wQ = new cq({
-                  name: QQ,
-                  transports: FQ,
-                  attributes: LQ,
-                  trigger: (null === oQ || void 0 === oQ ? void 0 : oQ.triggerName) || "faroApiCall",
-                  importance: (null === oQ || void 0 === oQ ? void 0 : oQ.importance) || Gq.Normal,
-                  trackUserActionsExcludeItem: DQ,
-                  pushEvent: qQ
+            startUserAction: (kk, Dk, Sk) => {
+              if (void 0 === Pk()) {
+                const ik = new jf({
+                  name: kk,
+                  transports: ek,
+                  attributes: Dk,
+                  trigger: (null === Sk || void 0 === Sk ? void 0 : Sk.triggerName) || "faroApiCall",
+                  importance: (null === Sk || void 0 === Sk ? void 0 : Sk.importance) || Cf.Normal,
+                  trackUserActionsExcludeItem: bk,
+                  pushEvent: fk
                 });
-                return wQ.filter((QQ => [3, 2].includes(QQ))).first().subscribe((() => {
-                  kQ = void 0
-                })), Cq.notify({
-                  type: Mq,
-                  userAction: wQ,
-                  initialActivityTimeout: null === oQ || void 0 === oQ ? void 0 : oQ.initialActivityTimeout
-                }), kQ = wQ, kQ
+                return ik.filter((kk => [3, 2].includes(kk))).first().subscribe((() => {
+                  rk = void 0
+                })), sf.notify({
+                  type: Lf,
+                  userAction: ik,
+                  initialActivityTimeout: null === Sk || void 0 === Sk ? void 0 : Sk.initialActivityTimeout
+                }), rk = ik, rk
               }
-              wQ.error("Attempted to create a new user action while one is already running. This is not possible.")
+              ik.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: vQ
+            getActiveUserAction: Pk
           }
         }({
-          transports: qQ,
-          config: wQ,
-          internalLogger: FQ,
-          pushEvent: (QQ, wQ, LQ, qQ) => {
-            oQ ? oQ(QQ, wQ, LQ, qQ) : FQ.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: QQ,
-              attributes: wQ,
-              domain: LQ,
-              options: qQ
+          transports: fk,
+          config: ik,
+          internalLogger: ek,
+          pushEvent: (kk, ik, Dk, fk) => {
+            Sk ? Sk(kk, ik, Dk, fk) : ek.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: kk,
+              attributes: ik,
+              domain: Dk,
+              options: fk
             })
           }
         }),
-        kQ = function(QQ, FQ, wQ, LQ, qQ) {
-          let oQ;
-          return FQ.debug("Initializing traces API"), {
-            getOTEL: () => oQ,
+        rk = function(kk, ek, ik, Dk, fk) {
+          let Sk;
+          return ek.debug("Initializing traces API"), {
+            getOTEL: () => Sk,
             getTraceContext: () => {
-              const QQ = null === oQ || void 0 === oQ ? void 0 : oQ.trace.getSpanContext(oQ.context.active());
-              return QQ ? {
-                trace_id: QQ.traceId,
-                span_id: QQ.spanId
+              const kk = null === Sk || void 0 === Sk ? void 0 : Sk.trace.getSpanContext(Sk.context.active());
+              return kk ? {
+                trace_id: kk.traceId,
+                span_id: kk.spanId
               } : void 0
             },
-            initOTEL: (QQ, wQ) => {
-              FQ.debug("Initializing OpenTelemetry"), oQ = {
-                trace: QQ,
-                context: wQ
+            initOTEL: (kk, ik) => {
+              ek.debug("Initializing OpenTelemetry"), Sk = {
+                trace: kk,
+                context: ik
               }
             },
-            isOTELInitialized: () => !!oQ,
-            pushTraces: QQ => {
+            isOTELInitialized: () => !!Sk,
+            pushTraces: kk => {
               try {
-                if (!XF(LQ).shouldCapture()) return;
-                const wQ = {
+                if (!Xe(Dk).shouldCapture()) return;
+                const ik = {
                   type: "trace",
-                  payload: QQ,
-                  meta: jo(LQ)
+                  payload: kk,
+                  meta: XS(Dk)
                 };
-                FQ.debug("Pushing trace\n", wQ), qQ.execute(wQ)
-              } catch (wQ) {
-                FQ.error("Error pushing trace\n", wQ)
+                ek.debug("Pushing trace\n", ik), fk.execute(ik)
+              } catch (ik) {
+                ek.error("Error pushing trace\n", ik)
               }
             }
           }
-        }(0, FQ, 0, LQ, qQ),
-        vQ = {
-          unpatchedConsole: QQ,
-          internalLogger: FQ,
-          userActionsApi: DQ,
-          config: wQ,
-          metas: LQ,
-          transports: qQ,
-          tracesApi: kQ
+        }(0, ek, 0, Dk, fk),
+        Pk = {
+          unpatchedConsole: kk,
+          internalLogger: ek,
+          userActionsApi: bk,
+          config: ik,
+          metas: Dk,
+          transports: fk,
+          tracesApi: rk
         },
-        mQ = function(QQ) {
+        mk = function(kk) {
           let {
-            internalLogger: FQ,
-            config: wQ,
-            metas: LQ,
-            transports: qQ,
-            tracesApi: oQ,
-            userActionsApi: DQ
-          } = QQ, kQ = null;
+            internalLogger: ek,
+            config: ik,
+            metas: Dk,
+            transports: fk,
+            tracesApi: Sk,
+            userActionsApi: bk
+          } = kk, rk = null;
           return {
-            pushEvent: function(QQ, vQ, mQ) {
+            pushEvent: function(kk, Pk, mk) {
               let {
-                skipDedupe: uQ,
-                spanContext: HQ,
-                timestampOverwriteMs: bQ,
-                customPayloadTransformer: YQ = QQ => QQ
+                skipDedupe: Mk,
+                spanContext: Kk,
+                timestampOverwriteMs: xk,
+                customPayloadTransformer: nk = kk => kk
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!XF(LQ).shouldCapture()) return;
-                const xQ = zF(vQ),
-                  AQ = YQ({
-                    name: QQ,
-                    domain: null !== mQ && void 0 !== mQ ? mQ : wQ.eventDomain,
-                    attributes: nQ(xQ) ? void 0 : xQ,
-                    timestamp: bQ ? AF(bQ) : xF(),
-                    trace: HQ ? {
-                      trace_id: HQ.traceId,
-                      span_id: HQ.spanId
-                    } : oQ.getTraceContext()
+                if (!Xe(Dk).shouldCapture()) return;
+                const Uk = he(Pk),
+                  Hk = nk({
+                    name: kk,
+                    domain: null !== mk && void 0 !== mk ? mk : ik.eventDomain,
+                    attributes: Ok(Uk) ? void 0 : Uk,
+                    timestamp: xk ? we(xk) : He(),
+                    trace: Kk ? {
+                      trace_id: Kk.traceId,
+                      span_id: Kk.spanId
+                    } : Sk.getTraceContext()
                   }),
-                  tQ = {
-                    name: AQ.name,
-                    attributes: AQ.attributes,
-                    domain: AQ.domain
+                  wk = {
+                    name: Hk.name,
+                    attributes: Hk.attributes,
+                    domain: Hk.domain
                   };
-                if (!uQ && wQ.dedupe && !cQ(kQ) && MF(tQ, kQ)) return void FQ.debug("Skipping event push because it is the same as the last one\n", AQ);
-                const eQ = kQ,
-                  MQ = jo(LQ);
-                if (kQ !== eQ && !uQ && wQ.dedupe && MF(tQ, kQ)) return;
-                kQ = tQ;
-                const GQ = {
-                  meta: MQ,
-                  payload: AQ,
+                if (!Mk && ik.dedupe && !Lk(rk) && ye(wk, rk)) return void ek.debug("Skipping event push because it is the same as the last one\n", Hk);
+                const lk = rk,
+                  pk = XS(Dk);
+                if (rk !== lk && !Mk && ik.dedupe && ye(wk, rk)) return;
+                rk = wk;
+                const yk = {
+                  meta: pk,
+                  payload: Hk,
                   type: "event"
                 };
-                FQ.debug("Pushing event\n", GQ), Sq(DQ.getActiveUserAction(), GQ) || qQ.execute(GQ)
-              } catch (xQ) {
-                FQ.error("Error pushing event", xQ)
+                ek.debug("Pushing event\n", yk), df(bk.getActiveUserAction(), yk) || fk.execute(yk)
+              } catch (Uk) {
+                ek.error("Error pushing event", Uk)
               }
             }
           }
-        }(vQ);
-      return oQ = mQ.pushEvent, BF(BF(BF(BF(BF(BF(BF({}, kQ), Zo(vQ)), function(QQ) {
-        let FQ, wQ, LQ, qQ, {
-          internalLogger: oQ,
-          metas: DQ
-        } = QQ;
-        oQ.debug("Initializing meta API");
-        const kQ = QQ => {
-            wQ && DQ.remove(wQ), wQ = {
-              user: QQ
-            }, DQ.add(wQ)
+        }(Pk);
+      return Sk = mk.pushEvent, Je(Je(Je(Je(Je(Je(Je({}, rk), JS(Pk)), function(kk) {
+        let ek, ik, Dk, fk, {
+          internalLogger: Sk,
+          metas: bk
+        } = kk;
+        Sk.debug("Initializing meta API");
+        const rk = kk => {
+            ik && bk.remove(ik), ik = {
+              user: kk
+            }, bk.add(ik)
           },
-          vQ = (QQ, wQ) => {
-            var LQ;
-            const qQ = null === wQ || void 0 === wQ ? void 0 : wQ.overrides,
-              oQ = qQ ? {
-                overrides: BF(BF({}, null === FQ || void 0 === FQ || null === (LQ = FQ.session) || void 0 === LQ ? void 0 : LQ.overrides), qQ)
+          Pk = (kk, ik) => {
+            var Dk;
+            const fk = null === ik || void 0 === ik ? void 0 : ik.overrides,
+              Sk = fk ? {
+                overrides: Je(Je({}, null === ek || void 0 === ek || null === (Dk = ek.session) || void 0 === Dk ? void 0 : Dk.overrides), fk)
               } : {};
-            FQ && DQ.remove(FQ), FQ = {
-              session: BF(BF({}, nQ(QQ) ? void 0 : QQ), oQ)
-            }, DQ.add(FQ)
+            ek && bk.remove(ek), ek = {
+              session: Je(Je({}, Ok(kk) ? void 0 : kk), Sk)
+            }, bk.add(ek)
           },
-          mQ = (QQ, FQ) => {
-            XF(DQ).notifySessionUpdate({
+          mk = (kk, ek) => {
+            Xe(bk).notifySessionUpdate({
               type: "replace",
-              session: QQ,
-              overrides: null === FQ || void 0 === FQ ? void 0 : FQ.overrides
-            }), vQ(QQ, FQ)
+              session: kk,
+              overrides: null === ek || void 0 === ek ? void 0 : ek.overrides
+            }), Pk(kk, ek)
           },
-          uQ = () => DQ.value.session,
-          HQ = () => DQ.value.page;
+          Mk = () => bk.value.session,
+          Kk = () => bk.value.page;
         return {
-          setUser: kQ,
-          resetUser: kQ,
-          setSession: mQ,
-          resetSession: mQ,
-          getSession: uQ,
-          setView: (QQ, FQ) => {
-            var wQ;
-            if ((null === FQ || void 0 === FQ ? void 0 : FQ.overrides) && (XF(DQ).notifySessionUpdate({
+          setUser: rk,
+          resetUser: rk,
+          setSession: mk,
+          resetSession: mk,
+          getSession: Mk,
+          setView: (kk, ek) => {
+            var ik;
+            if ((null === ek || void 0 === ek ? void 0 : ek.overrides) && (Xe(bk).notifySessionUpdate({
                 type: "overrides",
-                overrides: FQ.overrides
-              }), vQ(uQ(), {
-                overrides: FQ.overrides
-              })), (null === LQ || void 0 === LQ || null === (wQ = LQ.view) || void 0 === wQ ? void 0 : wQ.name) === (null === QQ || void 0 === QQ ? void 0 : QQ.name)) return;
-            const qQ = LQ;
-            LQ = {
-              view: QQ
-            }, DQ.add(LQ), qQ && DQ.remove(qQ)
+                overrides: ek.overrides
+              }), Pk(Mk(), {
+                overrides: ek.overrides
+              })), (null === Dk || void 0 === Dk || null === (ik = Dk.view) || void 0 === ik ? void 0 : ik.name) === (null === kk || void 0 === kk ? void 0 : kk.name)) return;
+            const fk = Dk;
+            Dk = {
+              view: kk
+            }, bk.add(Dk), fk && bk.remove(fk)
           },
-          getView: () => DQ.value.view,
-          setPage: QQ => {
-            var FQ;
-            const wQ = CQ(QQ) ? BF(BF({}, null !== (FQ = null === qQ || void 0 === qQ ? void 0 : qQ.page) && void 0 !== FQ ? FQ : HQ()), {}, {
-              id: QQ
-            }) : QQ;
-            qQ && DQ.remove(qQ), qQ = {
-              page: wQ
-            }, DQ.add(qQ)
+          getView: () => bk.value.view,
+          setPage: kk => {
+            var ek;
+            const ik = Ck(kk) ? Je(Je({}, null !== (ek = null === fk || void 0 === fk ? void 0 : fk.page) && void 0 !== ek ? ek : Kk()), {}, {
+              id: kk
+            }) : kk;
+            fk && bk.remove(fk), fk = {
+              page: ik
+            }, bk.add(fk)
           },
-          getPage: HQ
+          getPage: Kk
         }
-      }(vQ)), function(QQ) {
+      }(Pk)), function(kk) {
         let {
-          internalLogger: FQ,
-          config: wQ,
-          metas: LQ,
-          transports: qQ,
-          tracesApi: oQ,
-          userActionsApi: DQ
-        } = QQ;
-        var kQ;
-        FQ.debug("Initializing logs API");
-        let vQ = null;
-        const mQ = null !== (kQ = wQ.logArgsSerializer) && void 0 !== kQ ? kQ : Uw;
+          internalLogger: ek,
+          config: ik,
+          metas: Dk,
+          transports: fk,
+          tracesApi: Sk,
+          userActionsApi: bk
+        } = kk;
+        var rk;
+        ek.debug("Initializing logs API");
+        let Pk = null;
+        const mk = null !== (rk = ik.logArgsSerializer) && void 0 !== rk ? rk : zi;
         return {
-          pushLog: function(QQ) {
+          pushLog: function(kk) {
             let {
-              context: kQ,
-              level: uQ,
-              skipDedupe: HQ,
-              spanContext: bQ,
-              timestampOverwriteMs: YQ
+              context: rk,
+              level: Mk,
+              skipDedupe: Kk,
+              spanContext: xk,
+              timestampOverwriteMs: nk
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!XF(LQ).shouldCapture()) return;
-              const xQ = zF(kQ),
-                AQ = {
-                  message: mQ(QQ),
-                  level: null !== uQ && void 0 !== uQ ? uQ : "log",
-                  context: nQ(xQ) ? void 0 : xQ,
-                  timestamp: YQ ? AF(YQ) : xF(),
-                  trace: bQ ? {
-                    trace_id: bQ.traceId,
-                    span_id: bQ.spanId
-                  } : oQ.getTraceContext()
+              if (!Xe(Dk).shouldCapture()) return;
+              const Uk = he(rk),
+                Hk = {
+                  message: mk(kk),
+                  level: null !== Mk && void 0 !== Mk ? Mk : "log",
+                  context: Ok(Uk) ? void 0 : Uk,
+                  timestamp: nk ? we(nk) : He(),
+                  trace: xk ? {
+                    trace_id: xk.traceId,
+                    span_id: xk.spanId
+                  } : Sk.getTraceContext()
                 },
-                tQ = {
-                  message: AQ.message,
-                  level: AQ.level,
-                  context: AQ.context
+                wk = {
+                  message: Hk.message,
+                  level: Hk.level,
+                  context: Hk.context
                 };
-              if (!HQ && wQ.dedupe && !cQ(vQ) && MF(tQ, vQ)) return void FQ.debug("Skipping log push because it is the same as the last one\n", AQ);
-              const eQ = vQ,
-                MQ = jo(LQ);
-              if (vQ !== eQ && !HQ && wQ.dedupe && MF(tQ, vQ)) return;
-              vQ = tQ;
-              const GQ = {
+              if (!Kk && ik.dedupe && !Lk(Pk) && ye(wk, Pk)) return void ek.debug("Skipping log push because it is the same as the last one\n", Hk);
+              const lk = Pk,
+                pk = XS(Dk);
+              if (Pk !== lk && !Kk && ik.dedupe && ye(wk, Pk)) return;
+              Pk = wk;
+              const yk = {
                 type: "log",
-                payload: AQ,
-                meta: MQ
+                payload: Hk,
+                meta: pk
               };
-              FQ.debug("Pushing log\n", GQ), Sq(DQ.getActiveUserAction(), GQ) || qQ.execute(GQ)
-            } catch (xQ) {
-              FQ.error("Error pushing log\n", xQ)
+              ek.debug("Pushing log\n", yk), df(bk.getActiveUserAction(), yk) || fk.execute(yk)
+            } catch (Uk) {
+              ek.error("Error pushing log\n", Uk)
             }
           }
         }
-      }(vQ)), function(QQ) {
+      }(Pk)), function(kk) {
         let {
-          internalLogger: FQ,
-          config: wQ,
-          metas: LQ,
-          transports: qQ,
-          tracesApi: oQ,
-          userActionsApi: DQ
-        } = QQ;
-        FQ.debug("Initializing measurements API");
-        let kQ = null;
+          internalLogger: ek,
+          config: ik,
+          metas: Dk,
+          transports: fk,
+          tracesApi: Sk,
+          userActionsApi: bk
+        } = kk;
+        ek.debug("Initializing measurements API");
+        let rk = null;
         return {
-          pushMeasurement: function(QQ) {
+          pushMeasurement: function(kk) {
             let {
-              skipDedupe: vQ,
-              context: mQ,
-              spanContext: uQ,
-              timestampOverwriteMs: HQ
+              skipDedupe: Pk,
+              context: mk,
+              spanContext: Mk,
+              timestampOverwriteMs: Kk
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!XF(LQ).shouldCapture()) return;
-              const bQ = zF(mQ),
-                YQ = BF(BF({}, QQ), {}, {
-                  trace: uQ ? {
-                    trace_id: uQ.traceId,
-                    span_id: uQ.spanId
-                  } : oQ.getTraceContext(),
-                  timestamp: HQ ? AF(HQ) : xF(),
-                  context: nQ(bQ) ? void 0 : bQ
+              if (!Xe(Dk).shouldCapture()) return;
+              const xk = he(mk),
+                nk = Je(Je({}, kk), {}, {
+                  trace: Mk ? {
+                    trace_id: Mk.traceId,
+                    span_id: Mk.spanId
+                  } : Sk.getTraceContext(),
+                  timestamp: Kk ? we(Kk) : He(),
+                  context: Ok(xk) ? void 0 : xk
                 }),
-                xQ = {
-                  type: YQ.type,
-                  values: YQ.values,
-                  context: YQ.context
+                Uk = {
+                  type: nk.type,
+                  values: nk.values,
+                  context: nk.context
                 };
-              if (!vQ && wQ.dedupe && !cQ(kQ) && MF(xQ, kQ)) return void FQ.debug("Skipping measurement push because it is the same as the last one\n", YQ);
-              const AQ = kQ,
-                tQ = jo(LQ);
-              if (kQ !== AQ && !vQ && wQ.dedupe && MF(xQ, kQ)) return;
-              kQ = xQ;
-              const eQ = {
+              if (!Pk && ik.dedupe && !Lk(rk) && ye(Uk, rk)) return void ek.debug("Skipping measurement push because it is the same as the last one\n", nk);
+              const Hk = rk,
+                wk = XS(Dk);
+              if (rk !== Hk && !Pk && ik.dedupe && ye(Uk, rk)) return;
+              rk = Uk;
+              const lk = {
                 type: "measurement",
-                payload: YQ,
-                meta: tQ
+                payload: nk,
+                meta: wk
               };
-              FQ.debug("Pushing measurement\n", eQ), Sq(DQ.getActiveUserAction(), eQ) || qQ.execute(eQ)
-            } catch (bQ) {
-              FQ.error("Error pushing measurement\n", bQ)
+              ek.debug("Pushing measurement\n", lk), df(bk.getActiveUserAction(), lk) || fk.execute(lk)
+            } catch (xk) {
+              ek.error("Error pushing measurement\n", xk)
             }
           }
         }
-      }(vQ)), mQ), DQ)
+      }(Pk)), mk), bk)
     }
 
-    function Bo(QQ) {
-      const FQ = Eo(QQ),
-        wQ = Po(FQ, QQ);
-      if (xQ() && !QQ.isolate) return void wQ.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      wQ.debug("Initializing");
-      const LQ = function(QQ, FQ) {
-          let wQ, LQ = [],
-            qQ = [],
-            oQ = [],
-            DQ = 0,
-            kQ = 0;
-          const vQ = () => LQ.reduce(((QQ, FQ) => Object.assign(QQ, sQ(FQ) ? FQ() : FQ)), {}),
-            mQ = () => {
-              if (qQ.length) {
-                const QQ = vQ();
-                qQ.forEach((FQ => FQ(QQ)))
+    function eb(kk) {
+      const ek = gS(kk),
+        ik = RS(ek, kk);
+      if (Uk() && !kk.isolate) return void ik.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      ik.debug("Initializing");
+      const Dk = function(kk, ek) {
+          let ik, Dk = [],
+            fk = [],
+            Sk = [],
+            bk = 0,
+            rk = 0;
+          const Pk = () => Dk.reduce(((kk, ek) => Object.assign(kk, Fk(ek) ? ek() : ek)), {}),
+            mk = () => {
+              if (fk.length) {
+                const kk = Pk();
+                fk.forEach((ek => ek(kk)))
               }
             };
           return {
             add: function() {
-              for (var QQ = arguments.length, wQ = new Array(QQ), qQ = 0; qQ < QQ; qQ++) wQ[qQ] = arguments[qQ];
-              FQ.debug("Adding metas\n", wQ), LQ.push(...wQ), mQ()
+              for (var kk = arguments.length, ik = new Array(kk), fk = 0; fk < kk; fk++) ik[fk] = arguments[fk];
+              ek.debug("Adding metas\n", ik), Dk.push(...ik), mk()
             },
             remove: function() {
-              for (var QQ = arguments.length, wQ = new Array(QQ), qQ = 0; qQ < QQ; qQ++) wQ[qQ] = arguments[qQ];
-              FQ.debug("Removing metas\n", wQ), LQ = LQ.filter((QQ => !wQ.includes(QQ))), mQ()
+              for (var kk = arguments.length, ik = new Array(kk), fk = 0; fk < kk; fk++) ik[fk] = arguments[fk];
+              ek.debug("Removing metas\n", ik), Dk = Dk.filter((kk => !ik.includes(kk))), mk()
             },
-            addListener: QQ => {
-              FQ.debug("Adding metas listener\n", QQ), qQ.push(QQ)
+            addListener: kk => {
+              ek.debug("Adding metas listener\n", kk), fk.push(kk)
             },
-            removeListener: QQ => {
-              FQ.debug("Removing metas listener\n", QQ), qQ = qQ.filter((FQ => FQ !== QQ))
+            removeListener: kk => {
+              ek.debug("Removing metas listener\n", kk), fk = fk.filter((ek => ek !== kk))
             },
-            capture: QQ => {
-              var FQ;
-              const LQ = void 0 !== wQ,
-                qQ = null !== (FQ = wQ) && void 0 !== FQ ? FQ : oQ;
-              LQ || (wQ = qQ, DQ = 0, kQ = qQ.length);
+            capture: kk => {
+              var ek;
+              const Dk = void 0 !== ik,
+                fk = null !== (ek = ik) && void 0 !== ek ? ek : Sk;
+              Dk || (ik = fk, bk = 0, rk = fk.length);
               try {
-                for (; DQ < kQ;) {
-                  const QQ = qQ[DQ++];
-                  null === QQ || void 0 === QQ || QQ()
+                for (; bk < rk;) {
+                  const kk = fk[bk++];
+                  null === kk || void 0 === kk || kk()
                 }
-                const FQ = zo(vQ());
-                return null === QQ || void 0 === QQ || QQ(), FQ
+                const ek = tS(Pk());
+                return null === kk || void 0 === kk || kk(), ek
               } finally {
-                LQ || (wQ = void 0)
+                Dk || (ik = void 0)
               }
             },
-            addCaptureListener: QQ => {
-              oQ.push(QQ)
+            addCaptureListener: kk => {
+              Sk.push(kk)
             },
-            removeCaptureListener: QQ => {
-              oQ = oQ.filter((FQ => FQ !== QQ))
+            removeCaptureListener: kk => {
+              Sk = Sk.filter((ek => ek !== kk))
             },
             get value() {
-              return vQ()
+              return Pk()
             }
           }
-        }(0, wQ),
-        qQ = Vo(FQ, wQ, QQ, LQ),
-        oQ = yo(FQ, wQ, QQ, LQ, qQ),
-        DQ = function(QQ, FQ, wQ, LQ, qQ, oQ) {
-          FQ.debug("Initializing instrumentations");
-          const DQ = [];
+        }(0, ik),
+        fk = oS(ek, ik, kk, Dk),
+        Sk = kb(ek, ik, kk, Dk, fk),
+        bk = function(kk, ek, ik, Dk, fk, Sk) {
+          ek.debug("Initializing instrumentations");
+          const bk = [];
           return {
             add: function() {
-              FQ.debug("Adding instrumentations");
-              for (var kQ = arguments.length, vQ = new Array(kQ), mQ = 0; mQ < kQ; mQ++) vQ[mQ] = arguments[mQ];
-              vQ.forEach((kQ => {
-                FQ.debug(`Adding "${kQ.name}" instrumentation`), DQ.some((QQ => QQ.name === kQ.name)) ? FQ.warn(`Instrumentation ${kQ.name} is already added`) : (kQ.unpatchedConsole = QQ, kQ.internalLogger = FQ, kQ.config = wQ, kQ.metas = LQ, kQ.transports = qQ, kQ.api = oQ, DQ.push(kQ), kQ.initialize())
+              ek.debug("Adding instrumentations");
+              for (var rk = arguments.length, Pk = new Array(rk), mk = 0; mk < rk; mk++) Pk[mk] = arguments[mk];
+              Pk.forEach((rk => {
+                ek.debug(`Adding "${rk.name}" instrumentation`), bk.some((kk => kk.name === rk.name)) ? ek.warn(`Instrumentation ${rk.name} is already added`) : (rk.unpatchedConsole = kk, rk.internalLogger = ek, rk.config = ik, rk.metas = Dk, rk.transports = fk, rk.api = Sk, bk.push(rk), rk.initialize())
               }))
             },
             get instrumentations() {
-              return [...DQ]
+              return [...bk]
             },
             remove: function() {
-              FQ.debug("Removing instrumentations");
-              for (var QQ = arguments.length, wQ = new Array(QQ), LQ = 0; LQ < QQ; LQ++) wQ[LQ] = arguments[LQ];
-              wQ.forEach((QQ => {
-                var wQ, LQ;
-                FQ.debug(`Removing "${QQ.name}" instrumentation`);
-                const qQ = DQ.reduce(((FQ, wQ, LQ) => null === FQ && wQ.name === QQ.name ? LQ : null), null);
-                null !== qQ ? (null === (wQ = (LQ = DQ[qQ]).destroy) || void 0 === wQ || wQ.call(LQ), DQ.splice(qQ, 1)) : FQ.warn(`Instrumentation "${QQ.name}" is not added`)
+              ek.debug("Removing instrumentations");
+              for (var kk = arguments.length, ik = new Array(kk), Dk = 0; Dk < kk; Dk++) ik[Dk] = arguments[Dk];
+              ik.forEach((kk => {
+                var ik, Dk;
+                ek.debug(`Removing "${kk.name}" instrumentation`);
+                const fk = bk.reduce(((ek, ik, Dk) => null === ek && ik.name === kk.name ? Dk : null), null);
+                null !== fk ? (null === (ik = (Dk = bk[fk]).destroy) || void 0 === ik || ik.call(Dk), bk.splice(fk, 1)) : ek.warn(`Instrumentation "${kk.name}" is not added`)
               }))
             }
           }
-        }(FQ, wQ, QQ, LQ, qQ, oQ),
-        kQ = tQ(FQ, wQ, QQ, LQ, qQ, oQ, DQ);
-      return Xo(kQ),
-        function(QQ) {
-          QQ.transports.add(...QQ.config.transports), QQ.transports.addBeforeSendHooks(QQ.config.beforeSend)
-        }(kQ),
-        function(QQ) {
-          QQ.instrumentations.add(...QQ.config.instrumentations)
-        }(kQ), kQ
+        }(ek, ik, kk, Dk, fk, Sk),
+        rk = wk(ek, ik, kk, Dk, fk, Sk, bk);
+      return cS(rk),
+        function(kk) {
+          kk.transports.add(...kk.config.transports), kk.transports.addBeforeSendHooks(kk.config.beforeSend)
+        }(rk),
+        function(kk) {
+          kk.instrumentations.add(...kk.config.instrumentations)
+        }(rk), rk
     }
 
-    function QD(QQ) {
-      const FQ = Io(QQ);
-      if (FQ) return Bo(FQ)
+    function ib(kk) {
+      const ek = vS(kk);
+      if (ek) return eb(ek)
     }
   },
-  6526: function(QQ, FQ, wQ) {
-    var LQ;
-    ! function(qQ, oQ) {
-      var DQ = "function",
-        kQ = "undefined",
-        vQ = "object",
-        mQ = "string",
-        uQ = "major",
-        HQ = "model",
-        bQ = "name",
-        YQ = "type",
-        xQ = "vendor",
-        AQ = "version",
-        tQ = "architecture",
-        eQ = "console",
-        MQ = "mobile",
-        GQ = "tablet",
-        pQ = "smarttv",
-        cQ = "wearable",
-        CQ = "embedded",
-        SQ = "Amazon",
-        iQ = "Apple",
-        WQ = "ASUS",
-        RQ = "BlackBerry",
-        OQ = "Browser",
-        sQ = "Chrome",
-        rQ = "Firefox",
-        IQ = "Google",
-        UQ = "Honor",
-        NQ = "Huawei",
-        TQ = "LG",
-        KQ = "Microsoft",
-        zQ = "Motorola",
-        lQ = "Nvidia",
-        jQ = "OnePlus",
-        aQ = "Opera",
-        XQ = "OPPO",
-        fQ = "Samsung",
-        VQ = "Sharp",
-        hQ = "Sony",
-        JQ = "Xiaomi",
-        EQ = "Zebra",
-        nQ = "Facebook",
-        gQ = "Chromium OS",
-        PQ = "Mac OS",
-        ZQ = " Browser",
-        yQ = function(QQ) {
-          for (var FQ = {}, wQ = 0; wQ < QQ.length; wQ++) FQ[QQ[wQ].toUpperCase()] = QQ[wQ];
-          return FQ
+  6539: function(kk, ek, ik) {
+    var Dk;
+    ! function(fk, Sk) {
+      var bk = "function",
+        rk = "undefined",
+        Pk = "object",
+        mk = "string",
+        Mk = "major",
+        Kk = "model",
+        xk = "name",
+        nk = "type",
+        Uk = "vendor",
+        Hk = "version",
+        wk = "architecture",
+        lk = "console",
+        pk = "mobile",
+        yk = "tablet",
+        Yk = "smarttv",
+        Lk = "wearable",
+        Ck = "embedded",
+        Ak = "Amazon",
+        jk = "Apple",
+        sk = "ASUS",
+        dk = "BlackBerry",
+        Vk = "Browser",
+        Fk = "Chrome",
+        uk = "Firefox",
+        qk = "Google",
+        Ik = "Honor",
+        zk = "Huawei",
+        Qk = "LG",
+        vk = "Microsoft",
+        Ek = "Motorola",
+        hk = "Nvidia",
+        ak = "OnePlus",
+        Wk = "Opera",
+        tk = "OPPO",
+        Xk = "Samsung",
+        Bk = "Sharp",
+        ck = "Sony",
+        Tk = "Xiaomi",
+        Zk = "Zebra",
+        Ok = "Facebook",
+        gk = "Chromium OS",
+        Gk = "Mac OS",
+        Nk = " Browser",
+        Rk = function(kk) {
+          for (var ek = {}, ik = 0; ik < kk.length; ik++) ek[kk[ik].toUpperCase()] = kk[ik];
+          return ek
         },
-        BQ = function(QQ, FQ) {
-          return typeof QQ === mQ && -1 !== dQ(FQ).indexOf(dQ(QQ))
+        Jk = function(kk, ek) {
+          return typeof kk === mk && -1 !== ke(ek).indexOf(ke(kk))
         },
-        dQ = function(QQ) {
-          return QQ.toLowerCase()
+        ke = function(kk) {
+          return kk.toLowerCase()
         },
-        QF = function(QQ, FQ) {
-          if (typeof QQ === mQ) return QQ = QQ.replace(/^\s\s*/, ""), typeof FQ === kQ ? QQ : QQ.substring(0, 500)
+        ee = function(kk, ek) {
+          if (typeof kk === mk) return kk = kk.replace(/^\s\s*/, ""), typeof ek === rk ? kk : kk.substring(0, 500)
         },
-        FF = function(QQ, FQ) {
-          for (var wQ, LQ, qQ, kQ, mQ, uQ, HQ = 0; HQ < FQ.length && !mQ;) {
-            var bQ = FQ[HQ],
-              YQ = FQ[HQ + 1];
-            for (wQ = LQ = 0; wQ < bQ.length && !mQ && bQ[wQ];)
-              if (mQ = bQ[wQ++].exec(QQ))
-                for (qQ = 0; qQ < YQ.length; qQ++) uQ = mQ[++LQ], typeof(kQ = YQ[qQ]) === vQ && kQ.length > 0 ? 2 === kQ.length ? typeof kQ[1] == DQ ? this[kQ[0]] = kQ[1].call(this, uQ) : this[kQ[0]] = kQ[1] : 3 === kQ.length ? typeof kQ[1] !== DQ || kQ[1].exec && kQ[1].test ? this[kQ[0]] = uQ ? uQ.replace(kQ[1], kQ[2]) : oQ : this[kQ[0]] = uQ ? kQ[1].call(this, uQ, kQ[2]) : oQ : 4 === kQ.length && (this[kQ[0]] = uQ ? kQ[3].call(this, uQ.replace(kQ[1], kQ[2])) : oQ) : this[kQ] = uQ || oQ;
-            HQ += 2
+        ie = function(kk, ek) {
+          for (var ik, Dk, fk, rk, mk, Mk, Kk = 0; Kk < ek.length && !mk;) {
+            var xk = ek[Kk],
+              nk = ek[Kk + 1];
+            for (ik = Dk = 0; ik < xk.length && !mk && xk[ik];)
+              if (mk = xk[ik++].exec(kk))
+                for (fk = 0; fk < nk.length; fk++) Mk = mk[++Dk], typeof(rk = nk[fk]) === Pk && rk.length > 0 ? 2 === rk.length ? typeof rk[1] == bk ? this[rk[0]] = rk[1].call(this, Mk) : this[rk[0]] = rk[1] : 3 === rk.length ? typeof rk[1] !== bk || rk[1].exec && rk[1].test ? this[rk[0]] = Mk ? Mk.replace(rk[1], rk[2]) : Sk : this[rk[0]] = Mk ? rk[1].call(this, Mk, rk[2]) : Sk : 4 === rk.length && (this[rk[0]] = Mk ? rk[3].call(this, Mk.replace(rk[1], rk[2])) : Sk) : this[rk] = Mk || Sk;
+            Kk += 2
           }
         },
-        wF = function(QQ, FQ) {
-          for (var wQ in FQ)
-            if (typeof FQ[wQ] === vQ && FQ[wQ].length > 0) {
-              for (var LQ = 0; LQ < FQ[wQ].length; LQ++)
-                if (BQ(FQ[wQ][LQ], QQ)) return "?" === wQ ? oQ : wQ
-            } else if (BQ(FQ[wQ], QQ)) return "?" === wQ ? oQ : wQ;
-          return FQ.hasOwnProperty("*") ? FQ["*"] : QQ
+        De = function(kk, ek) {
+          for (var ik in ek)
+            if (typeof ek[ik] === Pk && ek[ik].length > 0) {
+              for (var Dk = 0; Dk < ek[ik].length; Dk++)
+                if (Jk(ek[ik][Dk], kk)) return "?" === ik ? Sk : ik
+            } else if (Jk(ek[ik], kk)) return "?" === ik ? Sk : ik;
+          return ek.hasOwnProperty("*") ? ek["*"] : kk
         },
-        LF = {
+        fe = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        qF = {
+        Se = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [AQ, [bQ, "Chrome"]],
+            [Hk, [xk, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [AQ, [bQ, "Edge"]],
+            [Hk, [xk, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/opios[\/ ]+([\w\.]+)/i],
-            [AQ, [bQ, aQ + " Mini"]],
+            [Hk, [xk, Wk + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [AQ, [bQ, aQ + " GX"]],
+            [Hk, [xk, Wk + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [AQ, [bQ, aQ]],
+            [Hk, [xk, Wk]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [AQ, [bQ, "Baidu"]],
+            [Hk, [xk, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [AQ, [bQ, "Maxthon"]],
+            [Hk, [xk, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [AQ, [bQ, "Quark"]],
+            [Hk, [xk, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [AQ, [bQ, "DuckDuckGo"]],
+            [Hk, [xk, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [AQ, [bQ, "UC" + OQ]],
+            [Hk, [xk, "UC" + Vk]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [AQ, [bQ, "WeChat"]],
+            [Hk, [xk, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [AQ, [bQ, "Konqueror"]],
+            [Hk, [xk, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [AQ, [bQ, "IE"]],
+            [Hk, [xk, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [AQ, [bQ, "Yandex"]],
+            [Hk, [xk, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [AQ, [bQ, "Smart Lenovo " + OQ]],
+            [Hk, [xk, "Smart Lenovo " + Vk]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [bQ, /(.+)/, "$1 Secure " + OQ], AQ
+              [xk, /(.+)/, "$1 Secure " + Vk], Hk
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [AQ, [bQ, rQ + " Focus"]],
+            [Hk, [xk, uk + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [AQ, [bQ, aQ + " Touch"]],
+            [Hk, [xk, Wk + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [AQ, [bQ, "Coc Coc"]],
+            [Hk, [xk, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [AQ, [bQ, "Dolphin"]],
+            [Hk, [xk, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [AQ, [bQ, aQ + " Coast"]],
+            [Hk, [xk, Wk + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [AQ, [bQ, "MIUI" + ZQ]],
+            [Hk, [xk, "MIUI" + Nk]],
             [/fxios\/([\w\.-]+)/i],
-            [AQ, [bQ, rQ]],
+            [Hk, [xk, uk]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [AQ, [bQ, "360"]],
+            [Hk, [xk, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [bQ, /(.+)/, "$1Browser"], AQ
+              [xk, /(.+)/, "$1Browser"], Hk
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [bQ, /(.+)/, "$1" + ZQ], AQ
+              [xk, /(.+)/, "$1" + Nk], Hk
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [AQ, [bQ, fQ + " Internet"]],
+            [Hk, [xk, Xk + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [AQ, [bQ, "Sogou Explorer"]],
+            [Hk, [xk, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [bQ, "Sogou Mobile"], AQ
+              [xk, "Sogou Mobile"], Hk
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [bQ],
+            [xk],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [AQ, bQ],
+            [Hk, xk],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [bQ, nQ], AQ
+              [xk, Ok], Hk
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [AQ, [bQ, "GSA"]],
+            [Hk, [xk, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [AQ, [bQ, "TikTok"]],
+            [Hk, [xk, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [AQ, [bQ, sQ + " Headless"]],
+            [Hk, [xk, Fk + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [bQ, sQ + " WebView"], AQ
+              [xk, Fk + " WebView"], Hk
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [AQ, [bQ, "Android " + OQ]],
+            [Hk, [xk, "Android " + Vk]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [AQ, [bQ, "Mobile Safari"]],
+            [Hk, [xk, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [AQ, bQ],
+            [Hk, xk],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [bQ, [AQ, wF, {
+            [xk, [Hk, De, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [bQ, "Netscape"], AQ
+              [xk, "Netscape"], Hk
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [AQ, [bQ, rQ + " Reality"]],
+            [Hk, [xk, uk + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [bQ, [AQ, /_/g, "."]],
+            [xk, [Hk, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [bQ, [AQ, /master.|lts./, ""]]
+            [xk, [Hk, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [tQ, "amd64"]
+              [wk, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [tQ, "ia32"]
+              [wk, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [tQ, "arm64"]
+              [wk, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [tQ, "armhf"]
+              [wk, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [tQ, "arm"]
+              [wk, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [tQ, /ower/, "", dQ]
+              [wk, /ower/, "", ke]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [tQ, "sparc"]
+              [wk, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [tQ, dQ]
+              [wk, ke]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [HQ, [xQ, fQ],
-              [YQ, GQ]
+            [Kk, [Uk, Xk],
+              [nk, yk]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [HQ, [xQ, fQ],
-              [YQ, MQ]
+            [Kk, [Uk, Xk],
+              [nk, pk]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [HQ, [xQ, iQ],
-              [YQ, MQ]
+            [Kk, [Uk, jk],
+              [nk, pk]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [HQ, [xQ, iQ],
-              [YQ, GQ]
+            [Kk, [Uk, jk],
+              [nk, yk]
             ],
             [/(macintosh);/i],
-            [HQ, [xQ, iQ]],
+            [Kk, [Uk, jk]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [HQ, [xQ, VQ],
-              [YQ, MQ]
+            [Kk, [Uk, Bk],
+              [nk, pk]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [HQ, [xQ, UQ],
-              [YQ, GQ]
+            [Kk, [Uk, Ik],
+              [nk, yk]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [HQ, [xQ, UQ],
-              [YQ, MQ]
+            [Kk, [Uk, Ik],
+              [nk, pk]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [HQ, [xQ, NQ],
-              [YQ, GQ]
+            [Kk, [Uk, zk],
+              [nk, yk]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [HQ, [xQ, NQ],
-              [YQ, MQ]
+            [Kk, [Uk, zk],
+              [nk, pk]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [HQ, /_/g, " "],
-              [xQ, JQ],
-              [YQ, GQ]
+              [Kk, /_/g, " "],
+              [Uk, Tk],
+              [nk, yk]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [HQ, /_/g, " "],
-              [xQ, JQ],
-              [YQ, MQ]
+              [Kk, /_/g, " "],
+              [Uk, Tk],
+              [nk, pk]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [HQ, [xQ, XQ],
-              [YQ, MQ]
+            [Kk, [Uk, tk],
+              [nk, pk]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [HQ, [xQ, wF, {
+            [Kk, [Uk, De, {
                 OnePlus: ["304", "403", "203"],
-                "*": XQ
+                "*": tk
               }],
-              [YQ, GQ]
+              [nk, yk]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [HQ, [xQ, "Vivo"],
-              [YQ, MQ]
+            [Kk, [Uk, "Vivo"],
+              [nk, pk]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [HQ, [xQ, "Realme"],
-              [YQ, MQ]
+            [Kk, [Uk, "Realme"],
+              [nk, pk]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [HQ, [xQ, zQ],
-              [YQ, MQ]
+            [Kk, [Uk, Ek],
+              [nk, pk]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [HQ, [xQ, zQ],
-              [YQ, GQ]
+            [Kk, [Uk, Ek],
+              [nk, yk]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [HQ, [xQ, TQ],
-              [YQ, GQ]
+            [Kk, [Uk, Qk],
+              [nk, yk]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [HQ, [xQ, TQ],
-              [YQ, MQ]
+            [Kk, [Uk, Qk],
+              [nk, pk]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [HQ, [xQ, "Lenovo"],
-              [YQ, GQ]
+            [Kk, [Uk, "Lenovo"],
+              [nk, yk]
             ],
             [/(nokia) (t[12][01])/i],
-            [xQ, HQ, [YQ, GQ]],
+            [Uk, Kk, [nk, yk]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [HQ, /_/g, " "],
-              [YQ, MQ],
-              [xQ, "Nokia"]
+              [Kk, /_/g, " "],
+              [nk, pk],
+              [Uk, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [HQ, [xQ, IQ],
-              [YQ, GQ]
+            [Kk, [Uk, qk],
+              [nk, yk]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [HQ, [xQ, IQ],
-              [YQ, MQ]
+            [Kk, [Uk, qk],
+              [nk, pk]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [HQ, [xQ, hQ],
-              [YQ, MQ]
+            [Kk, [Uk, ck],
+              [nk, pk]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [HQ, "Xperia Tablet"],
-              [xQ, hQ],
-              [YQ, GQ]
+              [Kk, "Xperia Tablet"],
+              [Uk, ck],
+              [nk, yk]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [HQ, [xQ, jQ],
-              [YQ, MQ]
+            [Kk, [Uk, ak],
+              [nk, pk]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [HQ, [xQ, SQ],
-              [YQ, GQ]
+            [Kk, [Uk, Ak],
+              [nk, yk]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [HQ, /(.+)/g, "Fire Phone $1"],
-              [xQ, SQ],
-              [YQ, MQ]
+              [Kk, /(.+)/g, "Fire Phone $1"],
+              [Uk, Ak],
+              [nk, pk]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [HQ, xQ, [YQ, GQ]],
+            [Kk, Uk, [nk, yk]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [HQ, [xQ, RQ],
-              [YQ, MQ]
+            [Kk, [Uk, dk],
+              [nk, pk]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [HQ, [xQ, WQ],
-              [YQ, GQ]
+            [Kk, [Uk, sk],
+              [nk, yk]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [HQ, [xQ, WQ],
-              [YQ, MQ]
+            [Kk, [Uk, sk],
+              [nk, pk]
             ],
             [/(nexus 9)/i],
-            [HQ, [xQ, "HTC"],
-              [YQ, GQ]
+            [Kk, [Uk, "HTC"],
+              [nk, yk]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [xQ, [HQ, /_/g, " "],
-              [YQ, MQ]
+            [Uk, [Kk, /_/g, " "],
+              [nk, pk]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [HQ, [xQ, "TCL"],
-              [YQ, GQ]
+            [Kk, [Uk, "TCL"],
+              [nk, yk]
             ],
             [/(itel) ((\w+))/i],
             [
-              [xQ, dQ], HQ, [YQ, wF, {
+              [Uk, ke], Kk, [nk, De, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [HQ, [xQ, "Acer"],
-              [YQ, GQ]
+            [Kk, [Uk, "Acer"],
+              [nk, yk]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [HQ, [xQ, "Meizu"],
-              [YQ, MQ]
+            [Kk, [Uk, "Meizu"],
+              [nk, pk]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [HQ, [xQ, "Ulefone"],
-              [YQ, MQ]
+            [Kk, [Uk, "Ulefone"],
+              [nk, pk]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [HQ, [xQ, "Energizer"],
-              [YQ, MQ]
+            [Kk, [Uk, "Energizer"],
+              [nk, pk]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [HQ, [xQ, "Cat"],
-              [YQ, MQ]
+            [Kk, [Uk, "Cat"],
+              [nk, pk]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [HQ, [xQ, "Smartfren"],
-              [YQ, MQ]
+            [Kk, [Uk, "Smartfren"],
+              [nk, pk]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [HQ, [xQ, "Nothing"],
-              [YQ, MQ]
+            [Kk, [Uk, "Nothing"],
+              [nk, pk]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [HQ, [xQ, "Archos"],
-              [YQ, GQ]
+            [Kk, [Uk, "Archos"],
+              [nk, yk]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [HQ, [xQ, "Archos"],
-              [YQ, MQ]
+            [Kk, [Uk, "Archos"],
+              [nk, pk]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [xQ, HQ, [YQ, GQ]],
+            [Uk, Kk, [nk, yk]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [xQ, HQ, [YQ, MQ]],
+            [Uk, Kk, [nk, pk]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [xQ, HQ, [YQ, GQ]],
+            [Uk, Kk, [nk, yk]],
             [/(surface duo)/i],
-            [HQ, [xQ, KQ],
-              [YQ, GQ]
+            [Kk, [Uk, vk],
+              [nk, yk]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [HQ, [xQ, "Fairphone"],
-              [YQ, MQ]
+            [Kk, [Uk, "Fairphone"],
+              [nk, pk]
             ],
             [/(u304aa)/i],
-            [HQ, [xQ, "AT&T"],
-              [YQ, MQ]
+            [Kk, [Uk, "AT&T"],
+              [nk, pk]
             ],
             [/\bsie-(\w*)/i],
-            [HQ, [xQ, "Siemens"],
-              [YQ, MQ]
+            [Kk, [Uk, "Siemens"],
+              [nk, pk]
             ],
             [/\b(rct\w+) b/i],
-            [HQ, [xQ, "RCA"],
-              [YQ, GQ]
+            [Kk, [Uk, "RCA"],
+              [nk, yk]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [HQ, [xQ, "Dell"],
-              [YQ, GQ]
+            [Kk, [Uk, "Dell"],
+              [nk, yk]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [HQ, [xQ, "Verizon"],
-              [YQ, GQ]
+            [Kk, [Uk, "Verizon"],
+              [nk, yk]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [HQ, [xQ, "Barnes & Noble"],
-              [YQ, GQ]
+            [Kk, [Uk, "Barnes & Noble"],
+              [nk, yk]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [HQ, [xQ, "NuVision"],
-              [YQ, GQ]
+            [Kk, [Uk, "NuVision"],
+              [nk, yk]
             ],
             [/\b(k88) b/i],
-            [HQ, [xQ, "ZTE"],
-              [YQ, GQ]
+            [Kk, [Uk, "ZTE"],
+              [nk, yk]
             ],
             [/\b(nx\d{3}j) b/i],
-            [HQ, [xQ, "ZTE"],
-              [YQ, MQ]
+            [Kk, [Uk, "ZTE"],
+              [nk, pk]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [HQ, [xQ, "Swiss"],
-              [YQ, MQ]
+            [Kk, [Uk, "Swiss"],
+              [nk, pk]
             ],
             [/\b(zur\d{3}) b/i],
-            [HQ, [xQ, "Swiss"],
-              [YQ, GQ]
+            [Kk, [Uk, "Swiss"],
+              [nk, yk]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [HQ, [xQ, "Zeki"],
-              [YQ, GQ]
+            [Kk, [Uk, "Zeki"],
+              [nk, yk]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [xQ, "Dragon Touch"], HQ, [YQ, GQ]
+              [Uk, "Dragon Touch"], Kk, [nk, yk]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [HQ, [xQ, "Insignia"],
-              [YQ, GQ]
+            [Kk, [Uk, "Insignia"],
+              [nk, yk]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [HQ, [xQ, "NextBook"],
-              [YQ, GQ]
+            [Kk, [Uk, "NextBook"],
+              [nk, yk]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [xQ, "Voice"], HQ, [YQ, MQ]
+              [Uk, "Voice"], Kk, [nk, pk]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [xQ, "LvTel"], HQ, [YQ, MQ]
+              [Uk, "LvTel"], Kk, [nk, pk]
             ],
             [/\b(ph-1) /i],
-            [HQ, [xQ, "Essential"],
-              [YQ, MQ]
+            [Kk, [Uk, "Essential"],
+              [nk, pk]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [HQ, [xQ, "Envizen"],
-              [YQ, GQ]
+            [Kk, [Uk, "Envizen"],
+              [nk, yk]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [HQ, [xQ, "MachSpeed"],
-              [YQ, GQ]
+            [Kk, [Uk, "MachSpeed"],
+              [nk, yk]
             ],
             [/\btu_(1491) b/i],
-            [HQ, [xQ, "Rotor"],
-              [YQ, GQ]
+            [Kk, [Uk, "Rotor"],
+              [nk, yk]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [HQ, [xQ, lQ],
-              [YQ, GQ]
+            [Kk, [Uk, hk],
+              [nk, yk]
             ],
             [/(sprint) (\w+)/i],
-            [xQ, HQ, [YQ, MQ]],
+            [Uk, Kk, [nk, pk]],
             [/(kin\.[onetw]{3})/i],
             [
-              [HQ, /\./g, " "],
-              [xQ, KQ],
-              [YQ, MQ]
+              [Kk, /\./g, " "],
+              [Uk, vk],
+              [nk, pk]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [HQ, [xQ, EQ],
-              [YQ, GQ]
+            [Kk, [Uk, Zk],
+              [nk, yk]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [HQ, [xQ, EQ],
-              [YQ, MQ]
+            [Kk, [Uk, Zk],
+              [nk, pk]
             ],
             [/smart-tv.+(samsung)/i],
-            [xQ, [YQ, pQ]],
+            [Uk, [nk, Yk]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [HQ, /^/, "SmartTV"],
-              [xQ, fQ],
-              [YQ, pQ]
+              [Kk, /^/, "SmartTV"],
+              [Uk, Xk],
+              [nk, Yk]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [xQ, TQ],
-              [YQ, pQ]
+              [Uk, Qk],
+              [nk, Yk]
             ],
             [/(apple) ?tv/i],
-            [xQ, [HQ, iQ + " TV"],
-              [YQ, pQ]
+            [Uk, [Kk, jk + " TV"],
+              [nk, Yk]
             ],
             [/crkey/i],
             [
-              [HQ, sQ + "cast"],
-              [xQ, IQ],
-              [YQ, pQ]
+              [Kk, Fk + "cast"],
+              [Uk, qk],
+              [nk, Yk]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [HQ, [xQ, SQ],
-              [YQ, pQ]
+            [Kk, [Uk, Ak],
+              [nk, Yk]
             ],
             [/(shield \w+ tv)/i],
-            [HQ, [xQ, lQ],
-              [YQ, pQ]
+            [Kk, [Uk, hk],
+              [nk, Yk]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [HQ, [xQ, VQ],
-              [YQ, pQ]
+            [Kk, [Uk, Bk],
+              [nk, Yk]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [HQ, [xQ, hQ],
-              [YQ, pQ]
+            [Kk, [Uk, ck],
+              [nk, Yk]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [HQ, [xQ, JQ],
-              [YQ, pQ]
+            [Kk, [Uk, Tk],
+              [nk, Yk]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [xQ, HQ, [YQ, pQ]],
+            [Uk, Kk, [nk, Yk]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [xQ, QF],
-              [HQ, QF],
-              [YQ, pQ]
+              [Uk, ee],
+              [Kk, ee],
+              [nk, Yk]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [HQ, [YQ, pQ]],
+            [Kk, [nk, Yk]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [YQ, pQ]
+              [nk, Yk]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [xQ, HQ, [YQ, eQ]],
+            [Uk, Kk, [nk, lk]],
             [/droid.+; (shield)( bui|\))/i],
-            [HQ, [xQ, lQ],
-              [YQ, eQ]
+            [Kk, [Uk, hk],
+              [nk, lk]
             ],
             [/(playstation \w+)/i],
-            [HQ, [xQ, hQ],
-              [YQ, eQ]
+            [Kk, [Uk, ck],
+              [nk, lk]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [HQ, [xQ, KQ],
-              [YQ, eQ]
+            [Kk, [Uk, vk],
+              [nk, lk]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [HQ, [xQ, fQ],
-              [YQ, cQ]
+            [Kk, [Uk, Xk],
+              [nk, Lk]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [xQ, HQ, [YQ, cQ]],
+            [Uk, Kk, [nk, Lk]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [HQ, [xQ, XQ],
-              [YQ, cQ]
+            [Kk, [Uk, tk],
+              [nk, Lk]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [HQ, [xQ, iQ],
-              [YQ, cQ]
+            [Kk, [Uk, jk],
+              [nk, Lk]
             ],
             [/(opwwe\d{3})/i],
-            [HQ, [xQ, jQ],
-              [YQ, cQ]
+            [Kk, [Uk, ak],
+              [nk, Lk]
             ],
             [/(moto 360)/i],
-            [HQ, [xQ, zQ],
-              [YQ, cQ]
+            [Kk, [Uk, Ek],
+              [nk, Lk]
             ],
             [/(smartwatch 3)/i],
-            [HQ, [xQ, hQ],
-              [YQ, cQ]
+            [Kk, [Uk, ck],
+              [nk, Lk]
             ],
             [/(g watch r)/i],
-            [HQ, [xQ, TQ],
-              [YQ, cQ]
+            [Kk, [Uk, Qk],
+              [nk, Lk]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [HQ, [xQ, EQ],
-              [YQ, cQ]
+            [Kk, [Uk, Zk],
+              [nk, Lk]
             ],
             [/droid.+; (glass) \d/i],
-            [HQ, [xQ, IQ],
-              [YQ, cQ]
+            [Kk, [Uk, qk],
+              [nk, Lk]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [xQ, HQ, [YQ, cQ]],
+            [Uk, Kk, [nk, Lk]],
             [/; (quest( \d| pro)?)/i],
-            [HQ, [xQ, nQ],
-              [YQ, cQ]
+            [Kk, [Uk, Ok],
+              [nk, Lk]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [xQ, [YQ, CQ]],
+            [Uk, [nk, Ck]],
             [/(aeobc)\b/i],
-            [HQ, [xQ, SQ],
-              [YQ, CQ]
+            [Kk, [Uk, Ak],
+              [nk, Ck]
             ],
             [/(homepod).+mac os/i],
-            [HQ, [xQ, iQ],
-              [YQ, CQ]
+            [Kk, [Uk, jk],
+              [nk, Ck]
             ],
             [/windows iot/i],
             [
-              [YQ, CQ]
+              [nk, Ck]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [HQ, [YQ, MQ]],
+            [Kk, [nk, pk]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [HQ, [YQ, GQ]],
+            [Kk, [nk, yk]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [YQ, GQ]
+              [nk, yk]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [YQ, MQ]
+              [nk, pk]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [HQ, [xQ, "Generic"]]
+            [Kk, [Uk, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [AQ, [bQ, "EdgeHTML"]],
+            [Hk, [xk, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [AQ, [bQ, "Blink"]],
+            [Hk, [xk, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/ladybird\//i],
             [
-              [bQ, "LibWeb"]
+              [xk, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [AQ, bQ]
+            [Hk, xk]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [bQ, [AQ, wF, LF]],
+            [xk, [Hk, De, fe]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [AQ, wF, LF],
-              [bQ, "Windows"]
+              [Hk, De, fe],
+              [xk, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [AQ, /_/g, "."],
-              [bQ, "iOS"]
+              [Hk, /_/g, "."],
+              [xk, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [bQ, PQ],
-              [AQ, /_/g, "."]
+              [xk, Gk],
+              [Hk, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [AQ, bQ],
+            [Hk, xk],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [bQ, /(.+)/, "$1 Touch"], AQ
+              [xk, /(.+)/, "$1 Touch"], Hk
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/\(bb(10);/i],
-            [AQ, [bQ, RQ]],
+            [Hk, [xk, dk]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [AQ, [bQ, "Symbian"]],
+            [Hk, [xk, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [AQ, [bQ, rQ + " OS"]],
+            [Hk, [xk, uk + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [AQ, [bQ, "webOS"]],
+            [Hk, [xk, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [AQ, [bQ, "watchOS"]],
+            [Hk, [xk, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [AQ, [bQ, sQ + "cast"]],
+            [Hk, [xk, Fk + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [bQ, gQ], AQ
+              [xk, gk], Hk
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [bQ, AQ],
+            [xk, Hk],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [bQ, "Solaris"], AQ
+              [xk, "Solaris"], Hk
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [bQ, AQ]
+            [xk, Hk]
           ]
         },
-        oF = function(QQ, FQ) {
-          if (typeof QQ === vQ && (FQ = QQ, QQ = oQ), !(this instanceof oF)) return new oF(QQ, FQ).getResult();
-          var wQ = typeof qQ !== kQ && qQ.navigator ? qQ.navigator : oQ,
-            LQ = QQ || (wQ && wQ.userAgent ? wQ.userAgent : ""),
-            eQ = wQ && wQ.userAgentData ? wQ.userAgentData : oQ,
-            pQ = FQ ? function(QQ, FQ) {
-              var wQ = {};
-              for (var LQ in QQ) FQ[LQ] && FQ[LQ].length % 2 === 0 ? wQ[LQ] = FQ[LQ].concat(QQ[LQ]) : wQ[LQ] = QQ[LQ];
-              return wQ
-            }(qF, FQ) : qF,
-            cQ = wQ && wQ.userAgent == LQ;
+        be = function(kk, ek) {
+          if (typeof kk === Pk && (ek = kk, kk = Sk), !(this instanceof be)) return new be(kk, ek).getResult();
+          var ik = typeof fk !== rk && fk.navigator ? fk.navigator : Sk,
+            Dk = kk || (ik && ik.userAgent ? ik.userAgent : ""),
+            lk = ik && ik.userAgentData ? ik.userAgentData : Sk,
+            Yk = ek ? function(kk, ek) {
+              var ik = {};
+              for (var Dk in kk) ek[Dk] && ek[Dk].length % 2 === 0 ? ik[Dk] = ek[Dk].concat(kk[Dk]) : ik[Dk] = kk[Dk];
+              return ik
+            }(Se, ek) : Se,
+            Lk = ik && ik.userAgent == Dk;
           return this.getBrowser = function() {
-            var QQ, FQ = {};
-            return FQ[bQ] = oQ, FQ[AQ] = oQ, FF.call(FQ, LQ, pQ.browser), FQ[uQ] = typeof(QQ = FQ[AQ]) === mQ ? QQ.replace(/[^\d\.]/g, "").split(".")[0] : oQ, cQ && wQ && wQ.brave && typeof wQ.brave.isBrave == DQ && (FQ[bQ] = "Brave"), FQ
+            var kk, ek = {};
+            return ek[xk] = Sk, ek[Hk] = Sk, ie.call(ek, Dk, Yk.browser), ek[Mk] = typeof(kk = ek[Hk]) === mk ? kk.replace(/[^\d\.]/g, "").split(".")[0] : Sk, Lk && ik && ik.brave && typeof ik.brave.isBrave == bk && (ek[xk] = "Brave"), ek
           }, this.getCPU = function() {
-            var QQ = {};
-            return QQ[tQ] = oQ, FF.call(QQ, LQ, pQ.cpu), QQ
+            var kk = {};
+            return kk[wk] = Sk, ie.call(kk, Dk, Yk.cpu), kk
           }, this.getDevice = function() {
-            var QQ = {};
-            return QQ[xQ] = oQ, QQ[HQ] = oQ, QQ[YQ] = oQ, FF.call(QQ, LQ, pQ.device), cQ && !QQ[YQ] && eQ && eQ.mobile && (QQ[YQ] = MQ), cQ && "Macintosh" == QQ[HQ] && wQ && typeof wQ.standalone !== kQ && wQ.maxTouchPoints && wQ.maxTouchPoints > 2 && (QQ[HQ] = "iPad", QQ[YQ] = GQ), QQ
-          }, this.Wx = function() {
-            var QQ = {};
-            return QQ[bQ] = oQ, QQ[AQ] = oQ, FF.call(QQ, LQ, pQ.engine), QQ
+            var kk = {};
+            return kk[Uk] = Sk, kk[Kk] = Sk, kk[nk] = Sk, ie.call(kk, Dk, Yk.device), Lk && !kk[nk] && lk && lk.mobile && (kk[nk] = pk), Lk && "Macintosh" == kk[Kk] && ik && typeof ik.standalone !== rk && ik.maxTouchPoints && ik.maxTouchPoints > 2 && (kk[Kk] = "iPad", kk[nk] = yk), kk
+          }, this.JU = function() {
+            var kk = {};
+            return kk[xk] = Sk, kk[Hk] = Sk, ie.call(kk, Dk, Yk.engine), kk
           }, this.getOS = function() {
-            var QQ = {};
-            return QQ[bQ] = oQ, QQ[AQ] = oQ, FF.call(QQ, LQ, pQ.os), cQ && !QQ[bQ] && eQ && eQ.platform && "Unknown" != eQ.platform && (QQ[bQ] = eQ.platform.replace(/chrome os/i, gQ).replace(/macos/i, PQ)), QQ
+            var kk = {};
+            return kk[xk] = Sk, kk[Hk] = Sk, ie.call(kk, Dk, Yk.os), Lk && !kk[xk] && lk && lk.platform && "Unknown" != lk.platform && (kk[xk] = lk.platform.replace(/chrome os/i, gk).replace(/macos/i, Gk)), kk
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.Wx(),
+              engine: this.JU(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return LQ
-          }, this.setUA = function(QQ) {
-            return LQ = typeof QQ === mQ && QQ.length > 500 ? QF(QQ, 500) : QQ, this
-          }, this.setUA(LQ), this
+            return Dk
+          }, this.setUA = function(kk) {
+            return Dk = typeof kk === mk && kk.length > 500 ? ee(kk, 500) : kk, this
+          }, this.setUA(Dk), this
         };
-      oF.VERSION = "1.0.41", oF.BROWSER = yQ([bQ, AQ, uQ]), oF.CPU = yQ([tQ]), oF.DEVICE = yQ([HQ, xQ, YQ, eQ, MQ, pQ, GQ, cQ, CQ]), oF.ENGINE = oF.OS = yQ([bQ, AQ]), typeof FQ !== kQ ? (QQ.exports && (FQ = QQ.exports = oF), FQ.UAParser = oF) : wQ.amdO ? (LQ = function() {
-        return oF
-      }.call(FQ, wQ, FQ, QQ)) === oQ || (QQ.exports = LQ) : typeof qQ !== kQ && (qQ.UAParser = oF);
-      var DF = typeof qQ !== kQ && (qQ.jQuery || qQ.Zepto);
-      if (DF && !DF.ua) {
-        var kF = new oF;
-        DF.ua = kF.getResult(), DF.ua.get = function() {
-          return kF.getUA()
-        }, DF.ua.set = function(QQ) {
-          kF.setUA(QQ);
-          var FQ = kF.getResult();
-          for (var wQ in FQ) DF.ua[wQ] = FQ[wQ]
+      be.VERSION = "1.0.41", be.BROWSER = Rk([xk, Hk, Mk]), be.CPU = Rk([wk]), be.DEVICE = Rk([Kk, Uk, nk, lk, pk, Yk, yk, Lk, Ck]), be.ENGINE = be.OS = Rk([xk, Hk]), typeof ek !== rk ? (kk.exports && (ek = kk.exports = be), ek.UAParser = be) : ik.amdO ? (Dk = function() {
+        return be
+      }.call(ek, ik, ek, kk)) === Sk || (kk.exports = Dk) : typeof fk !== rk && (fk.UAParser = be);
+      var re = typeof fk !== rk && (fk.jQuery || fk.Zepto);
+      if (re && !re.ua) {
+        var Pe = new be;
+        re.ua = Pe.getResult(), re.ua.get = function() {
+          return Pe.getUA()
+        }, re.ua.set = function(kk) {
+          Pe.setUA(kk);
+          var ek = Pe.getResult();
+          for (var ik in ek) re.ua[ik] = ek[ik]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

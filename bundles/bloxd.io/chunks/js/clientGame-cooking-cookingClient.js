@@ -1,26 +1,26 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  38931: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      default: () => qQ
+  38993: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      default: () => fk
     });
-    const LQ = [
+    const Dk = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      qQ = function(QQ, FQ, wQ) {
-        let qQ;
+      fk = function(kk, ek, ik) {
+        let fk;
         return {
-          onCreate: QQ => {
-            qQ = QQ
+          onCreate: kk => {
+            fk = kk
           },
-          onPlayerAltAction: (QQ, FQ, wQ, oQ, DQ, kQ) => {
-            LQ.some((QQ => QQ[0] === FQ && QQ[2] === oQ)) && qQ.openShop(QQ, !1)
+          onPlayerAltAction: (kk, ek, ik, Sk, bk, rk) => {
+            Dk.some((kk => kk[0] === ek && kk[2] === Sk)) && fk.openShop(kk, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

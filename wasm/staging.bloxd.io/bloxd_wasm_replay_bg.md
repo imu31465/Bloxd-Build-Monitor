@@ -1,8 +1,17 @@
 # WASM module: `bloxd_wasm_replay_bg`
 
-> environment **staging.bloxd.io** · build `bqoxjr.2558012f` · analyzed 2026-11-21T12:37:19+09:00
-> source: https://staging.bloxd.io/static/media/bloxd_wasm_replay_bg.6817b8cd52234e0f59f4.wasm
-> 354,518 bytes (346.2 KB) · sha256 `225276b91dfdf588…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **staging.bloxd.io** · build `3lwmg.ecbaa066` · analyzed 2026-11-22T23:29:37+09:00
+> source: https://staging.bloxd.io/static/media/bloxd_wasm_replay_bg.1e8b541555095944fea4.wasm
+> 354,629 bytes (346.3 KB) · sha256 `03359aae307812a1…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+
+## Changes since the previous archived build
+
+- size 354,518 → 354,629 bytes (+111)
+- code bytes 344,967 → 345,078
+- name-section module id `317b70a5892beea7.1124` → `acb84f558cc7f7a9.1124` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- export identifiers rotated by the obfuscator: 1/34 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5`; `/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5`
+- removed embedded strings: `/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5`; `/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5`
 
 ## Overview
 
@@ -10,13 +19,13 @@
 |---|---|
 | Functions defined / imported | 359 / 5 |
 | Exports / imports | 34 / 5 |
-| Code bytes (function bodies) | 344,967 (336.9 KB) |
-| Total local variables | 2,887 |
-| Instructions (scanable bodies) | 168,524 |
+| Code bytes (function bodies) | 345,078 (337.0 KB) |
+| Total local variables | 2,888 |
+| Instructions (scanable bodies) | 168,579 |
 | Data segments / bytes | 38 / 7,442 |
 | Element segments / entries | 1 / 40 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `317b70a5892beea7.1124` |
+| name-section module id | `acb84f558cc7f7a9.1124` |
 | Sections | 12 |
 
 ## Sections
@@ -32,7 +41,7 @@
 | 7 | export | 272 | 34 |
 | 9 | element | 86 | 1 |
 | 12 | datacount | 1 | — |
-| 10 | code | 345,604 | 359 |
+| 10 | code | 345,715 | 359 |
 | 11 | data | 7,756 | 38 |
 | 0 | custom:name | 29 | — |
 
@@ -46,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `hOo0.U0kg` | func | `() -> (f64)` |
-| 1 | `hOo0.vznD` | func | `(i32 i32) -> ()` |
-| 2 | `hOo0.o88w` | func | `(i32 i32) -> ()` |
-| 3 | `hOo0.WG1V` | func | `(i32 i32) -> (i32)` |
-| 4 | `hOo0.y03V` | func | `() -> (i32)` |
+| 0 | `g0gk.CNnl` | func | `() -> (f64)` |
+| 1 | `g0gk.S83Q` | func | `(i32 i32) -> ()` |
+| 2 | `g0gk.rlxa` | func | `(i32 i32) -> ()` |
+| 3 | `g0gk.K0AA` | func | `(i32 i32) -> (i32)` |
+| 4 | `g0gk.bP3m` | func | `() -> (i32)` |
 
 ## Exports
 
@@ -58,40 +67,40 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `qtpf` | func | 234 | `(i32) -> (i32)` |
-| `XpBj` | func | 326 | `(i32 i32 i32) -> (i32 i32)` |
-| `MkIr` | func | 359 | `() -> (i32)` |
-| `kIB4` | global | 1 | `` |
-| `BHjA` | func | 362 | `() -> (i32)` |
-| `OsrM` | func | 248 | `(i32 i32 i32) -> ()` |
-| `tRF8` | func | 249 | `(i32) -> (i32)` |
-| `ZovV` | func | 254 | `(i32) -> ()` |
-| `IawZ` | func | 198 | `(i32 i32) -> ()` |
-| `Hxzv` | func | 240 | `(i32 i32) -> (i32)` |
-| `vCLj` | func | 252 | `(i32) -> ()` |
-| `Sjac` | func | 179 | `(i32 i32 i32) -> ()` |
-| `dblD` | func | 223 | `(i32 f64 f64 f64 f64 f64 f64) -> ()` |
-| `XjrD` | func | 226 | `(i32 i32) -> ()` |
+| `j4fZ` | func | 178 | `(i32 i32 i32) -> ()` |
+| `q5JU` | func | 361 | `() -> ()` |
+| `kRSN` | func | 321 | `(i32 i32) -> (i32)` |
+| `x8Jn` | func | 203 | `(i32) -> ()` |
+| `JVi6` | func | 162 | `(i32 i32 i32 i32) -> ()` |
+| `XkvA` | func | 237 | `(i32) -> (i32)` |
+| `gLTF` | func | 240 | `(i32 i32) -> (i32)` |
+| `Go0F` | func | 196 | `(i32 i32) -> ()` |
+| `FOen` | func | 326 | `(i32 i32 i32) -> (i32 i32)` |
+| `GMoQ` | func | 280 | `(i32) -> (i32)` |
+| `G4m8` | func | 201 | `(i32) -> ()` |
+| `ekDG` | func | 278 | `(i32) -> (i32)` |
+| `Edzh` | func | 181 | `(i32 f32) -> ()` |
+| `P8yO` | func | 226 | `(i32 i32) -> ()` |
+| `avZm` | func | 223 | `(i32 f64 f64 f64 f64 f64 f64) -> ()` |
+| `AwiW` | func | 234 | `(i32) -> (i32)` |
+| `SxB7` | func | 250 | `(i32 i32 i32) -> ()` |
+| `tph4` | func | 361 | `() -> ()` |
+| `TNXt` | func | 323 | `(i32 i32 i32 i32) -> (i32)` |
+| `LIME` | func | 362 | `() -> (i32)` |
+| `uO6T` | func | 248 | `(i32 i32 i32) -> ()` |
+| `cFf0` | func | 231 | `(i32 i32 f32) -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `VxAF` | global | 2 | `` |
-| `W9nU` | func | 203 | `(i32) -> ()` |
-| `WkJJ` | func | 180 | `(i32 i32 i32) -> ()` |
-| `ssx9` | func | 361 | `() -> ()` |
-| `O9fp` | func | 321 | `(i32 i32) -> (i32)` |
-| `bMko` | func | 219 | `() -> (i32)` |
-| `lO9O` | func | 253 | `(i32) -> ()` |
-| `vyNZ` | func | 361 | `() -> ()` |
-| `QSaN` | func | 323 | `(i32 i32 i32 i32) -> (i32)` |
-| `iVie` | func | 278 | `(i32) -> (i32)` |
-| `AMoe` | func | 280 | `(i32) -> (i32)` |
-| `GIAv` | func | 250 | `(i32 i32 i32) -> ()` |
-| `iZjQ` | func | 201 | `(i32) -> ()` |
-| `IYpZ` | func | 231 | `(i32 i32 f32) -> (i32)` |
-| `fZEk` | func | 304 | `(i32) -> (i32)` |
-| `cFQv` | func | 183 | `(i32 f32) -> ()` |
-| `JNLr` | func | 237 | `(i32) -> (i32)` |
-| `GbZy` | func | 163 | `(i32 i32 i32 i32) -> ()` |
-| `n7ud` | func | 245 | `(i32 i32 i32) -> ()` |
+| `jESp` | func | 177 | `(i32 i32 i32) -> ()` |
+| `DusZ` | global | 1 | `` |
+| `b6Oe` | func | 253 | `(i32) -> ()` |
+| `pZIE` | func | 359 | `() -> (i32)` |
+| `WVSP` | func | 252 | `(i32) -> ()` |
+| `o3mb` | func | 254 | `(i32) -> ()` |
+| `tgoG` | global | 2 | `` |
+| `X2On` | func | 245 | `(i32 i32 i32) -> ()` |
+| `nmFi` | func | 249 | `(i32) -> (i32)` |
+| `vCcZ` | func | 304 | `(i32) -> (i32)` |
+| `VmYm` | func | 219 | `() -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -103,7 +112,7 @@
 
 ## Functions
 
-- 359 bodies · 344,967 code bytes · avg 960 B
+- 359 bodies · 345,078 code bytes · avg 961 B
 - instruction scan: 359 bodies fully decoded, 0 degraded (unknown/extension opcodes)
 
 | Body size | Functions |
@@ -111,8 +120,8 @@
 | <= 32 bytes | 35 |
 | <= 64 bytes | 12 |
 | <= 128 bytes | 39 |
-| <= 256 bytes | 62 |
-| <= 512 bytes | 75 |
+| <= 256 bytes | 61 |
+| <= 512 bytes | 76 |
 | <= 1024 bytes | 68 |
 | <= 2048 bytes | 35 |
 | <= 4096 bytes | 18 |
@@ -151,9 +160,9 @@ Largest functions:
 | 31 | `(i32 f32 i32 i32) -> ()` | 35 | 6,161 | 2,759 | local.get×841, local.tee×281, f64.mul×242, f64.const×144, i32.const×131 |
 | 32 | `(i32 f64) -> ()` | 40 | 5,406 | 2,461 | local.get×614, i32.const×285, local.set×154, local.tee×135, i32.add×117 |
 | 106 | `(i32 i32 i32 i32 i32 i64 i32 i64 i32 f32 i32) -> ()` | 10 | 2,898 | 1,414 | local.get×293, i32.const×135, local.set×120, end×109, block×85 |
-| 226 | `(i32 i32 f32) -> (i32)` | 24 | 3,693 | 1,723 | local.get×516, i32.const×215, local.tee×96, i32.add×77, local.set×76 |
-| 243 | `(i32 i32 i32) -> ()` | 22 | 3,504 | 1,573 | local.get×492, i32.const×180, i64.store×106, i64.const×95, local.tee×83 |
-| 248 | `(i32) -> ()` | 41 | 2,984 | 1,382 | local.get×426, i32.const×190, i32.add×84, local.tee×69, local.set×66 |
+| 226 | `(i32 i32 f32) -> (i32)` | 24 | 3,695 | 1,724 | local.get×516, i32.const×216, local.tee×96, i32.add×77, local.set×76 |
+| 243 | `(i32 i32 i32) -> ()` | 22 | 3,512 | 1,577 | local.get×492, i32.const×184, i64.store×106, i64.const×95, local.tee×83 |
+| 248 | `(i32) -> ()` | 42 | 3,030 | 1,405 | local.get×433, i32.const×195, i32.add×86, local.tee×70, local.set×67 |
 
 ## Embedded strings (data segments)
 
@@ -162,9 +171,9 @@ Largest functions:
 ```
 Error000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969
 timeFractionlerpModeprepostt3_t2pointPrecomputespreGradientpostGradientdeltaanimationDurationMsloopModenodeAnimationsrotationposition
-/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/inflate/output_buffer.rs
+/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/inflate/output_buffer.rs
 Errornull pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rust
-/home/arthur/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/inflate/core.rs
+/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/inflate/core.rs
 attempt to divide by zerouser-provided comparison function does not correctly implement a total order
 MeshskyBoxfogColourOverridefogChunkDistanceOverridecameraTintfogOnSkyboxfogBlockDistanceOverride
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/shared/smallsort.rs
@@ -186,28 +195,28 @@ attempted to take ownership of Rust value while it was borrowed
 
 | opcode | count |
 |---|---:|
-| `local.get` | 49,867 |
-| `i32.const` | 19,904 |
-| `local.tee` | 10,469 |
-| `local.set` | 8,401 |
-| `i32.add` | 7,998 |
-| `i32.load` | 7,917 |
-| `end` | 7,038 |
-| `br_if` | 5,262 |
+| `local.get` | 49,876 |
+| `i32.const` | 19,938 |
+| `local.tee` | 10,470 |
+| `local.set` | 8,402 |
+| `i32.add` | 8,000 |
+| `i32.load` | 7,919 |
+| `end` | 7,039 |
+| `br_if` | 5,263 |
 | `i32.store` | 4,383 |
 | `block` | 3,345 |
-| `call` | 2,945 |
+| `call` | 2,947 |
 | `i32.sub` | 2,673 |
 | `select` | 2,582 |
-| `br` | 2,582 |
-| `if` | 2,578 |
+| `br` | 2,581 |
+| `if` | 2,579 |
 | `i64.store` | 2,503 |
 | `i64.const` | 2,392 |
 | `i64.load` | 2,365 |
-| `i32.eq` | 1,372 |
+| `i32.eq` | 1,373 |
 | `i32.load8_u` | 1,268 |
 | `i32.gt_u` | 1,250 |
-| `i32.ne` | 1,246 |
+| `i32.ne` | 1,245 |
 | `i32.shl` | 1,211 |
 | `i32.store8` | 1,162 |
 | `i32.eqz` | 1,157 |

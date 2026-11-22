@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36228: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => YQ,
-      d: () => xQ,
-      g: () => bQ,
-      j: () => HQ
+  36140: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => nk,
+      h: () => Uk,
+      l: () => xk,
+      p: () => Kk
     });
-    var LQ = wQ(9094),
-      qQ = wQ(36235),
-      oQ = wQ(36238),
-      DQ = wQ(8464),
-      kQ = wQ(1447),
-      vQ = wQ(53),
-      mQ = wQ(71),
-      uQ = wQ(1107);
+    var Dk = ik(33763),
+      fk = ik(36143),
+      Sk = ik(36151),
+      bk = ik(8560),
+      rk = ik(1406),
+      Pk = ik(60),
+      mk = ik(75),
+      Mk = ik(1066);
 
-    function HQ() {
-      var QQ;
-      return (0, kQ.i)(qQ.b, (0, qQ.k)()), (0, uQ.jsx)(uQ.Fragment, {
-        children: null === (QQ = (0, qQ.k)()) || void 0 === QQ ? void 0 : QQ.content
+    function Kk() {
+      var kk;
+      return (0, rk.e)(fk.c, (0, fk.n)()), (0, Mk.jsx)(Mk.Fragment, {
+        children: null === (kk = (0, fk.n)()) || void 0 === kk ? void 0 : kk.content
       })
     }
 
-    function bQ(QQ) {
-      var FQ;
+    function xk(kk) {
+      var ek;
       let {
-        show: wQ
-      } = QQ;
-      (0, kQ.i)(qQ.b, (0, qQ.k)());
-      const mQ = null === (FQ = (0, qQ.k)()) || void 0 === FQ ? void 0 : FQ.menu;
-      return (0, vQ.useEffect)((() => {
-        var QQ;
-        wQ || (null === mQ || void 0 === mQ || null === (QQ = mQ.onClose) || void 0 === QQ || QQ.call(mQ), (0, oQ.o)())
-      }), [wQ, mQ]), (0, vQ.useEffect)((() => wQ ? (0, DQ.h)(oQ.v, oQ.g) : void 0), [wQ]), (0, uQ.jsx)(LQ.c, {
-        showing: wQ,
+        show: ik
+      } = kk;
+      (0, rk.e)(fk.c, (0, fk.n)());
+      const mk = null === (ek = (0, fk.n)()) || void 0 === ek ? void 0 : ek.menu;
+      return (0, Pk.useEffect)((() => {
+        var kk;
+        ik || (null === mk || void 0 === mk || null === (kk = mk.onClose) || void 0 === kk || kk.call(mk), (0, Sk.t)())
+      }), [ik, mk]), (0, Pk.useEffect)((() => ik ? (0, bk.f)(Sk.w, Sk.g) : void 0), [ik]), (0, Mk.jsx)(Dk.d, {
+        showing: ik,
         globallyUniqueKey: "clientGameMenu",
-        children: null === mQ || void 0 === mQ ? void 0 : mQ.content
+        children: null === mk || void 0 === mk ? void 0 : mk.content
       })
     }
 
-    function YQ(QQ) {
+    function nk(kk) {
       let {
-        placement: FQ = "bottom"
-      } = QQ;
-      return (0, uQ.jsx)("div", {
-        id: `clientGameHud-${FQ}`,
+        placement: ek = "bottom"
+      } = kk;
+      return (0, Mk.jsx)("div", {
+        id: `clientGameHud-${ek}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function xQ(QQ) {
+    function Uk(kk) {
       let {
-        children: FQ,
-        placement: wQ = "bottom"
-      } = QQ;
-      const [LQ, qQ] = (0, vQ.useState)(null);
-      return (0, vQ.useEffect)((() => {
-        qQ(document.getElementById(`clientGameHud-${wQ}`))
-      }), [wQ]), LQ ? (0, mQ.createPortal)(FQ, LQ) : null
+        children: ek,
+        placement: ik = "bottom"
+      } = kk;
+      const [Dk, fk] = (0, Pk.useState)(null);
+      return (0, Pk.useEffect)((() => {
+        fk(document.getElementById(`clientGameHud-${ik}`))
+      }), [ik]), Dk ? (0, mk.createPortal)(ek, Dk) : null
     }
   },
-  4665: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => tQ,
-      f: () => eQ
+  4766: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => wk,
+      g: () => lk
     });
-    var LQ = wQ(1070),
-      qQ = wQ.n(LQ),
-      oQ = wQ(53),
-      DQ = wQ(1207),
-      kQ = wQ(4674),
-      vQ = wQ(1873),
-      mQ = wQ(2345),
-      uQ = wQ(4680),
-      HQ = wQ(1107);
-    const bQ = new WeakMap;
-    let YQ = 0;
+    var Dk = ik(1021),
+      fk = ik.n(Dk),
+      Sk = ik(60),
+      bk = ik(1172),
+      rk = ik(4769),
+      Pk = ik(1858),
+      mk = ik(2414),
+      Mk = ik(4778),
+      Kk = ik(1066);
+    const xk = new WeakMap;
+    let nk = 0;
 
-    function xQ(QQ) {
-      let FQ = bQ.get(QQ);
-      return void 0 === FQ && (FQ = YQ++, bQ.set(QQ, FQ)), FQ
+    function Uk(kk) {
+      let ek = xk.get(kk);
+      return void 0 === ek && (ek = nk++, xk.set(kk, ek)), ek
     }
 
-    function AQ(QQ) {
+    function Hk(kk) {
       let {
-        piece: FQ
-      } = QQ;
-      return "space" === FQ.kind ? (0, HQ.jsx)(HQ.Fragment, {
-        children: FQ.text
-      }) : (0, HQ.jsx)("span", {
+        piece: ek
+      } = kk;
+      return "space" === ek.kind ? (0, Kk.jsx)(Kk.Fragment, {
+        children: ek.text
+      }) : (0, Kk.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${FQ.delayMs}ms`
+          "--word-delay": `${ek.delayMs}ms`
         },
-        children: (0, HQ.jsx)(kQ.d, {
-          text: "icon" === FQ.kind ? `[[${FQ.icon}]]` : FQ.text
+        children: (0, Kk.jsx)(rk.e, {
+          text: "icon" === ek.kind ? `[[${ek.icon}]]` : ek.text
         })
       })
     }
 
-    function tQ(QQ) {
+    function wk(kk) {
       let {
-        display: FQ
-      } = QQ;
+        display: ek
+      } = kk;
       const {
-        selectedLanguage: wQ
-      } = (0, DQ.y)(), LQ = (0, oQ.useMemo)((() => (0, uQ.b)((0, uQ.f)(FQ).plan.pieces)), [FQ, wQ.code]);
-      return (0, HQ.jsxs)("div", {
-        className: qQ()("Dialogue", {
-          DialogueAnimateIn: !1 !== FQ.animateIn
+        selectedLanguage: ik
+      } = (0, bk.D)(), Dk = (0, Sk.useMemo)((() => (0, Mk.d)((0, Mk.f)(ek).plan.pieces)), [ek, ik.code]);
+      return (0, Kk.jsxs)("div", {
+        className: fk()("Dialogue", {
+          DialogueAnimateIn: !1 !== ek.animateIn
         }),
-        children: [FQ.speakerName && (0, HQ.jsx)(vQ.e, {
-          text: FQ.speakerName,
+        children: [ek.speakerName && (0, Kk.jsx)(Pk.e, {
+          text: ek.speakerName,
           className: "DialogueSpeaker"
-        }), (0, HQ.jsx)("p", {
+        }), (0, Kk.jsx)("p", {
           className: "DialogueLine",
-          children: LQ.map(((QQ, FQ) => 1 === QQ.length && "space" === QQ[0].kind ? QQ[0].text : (0, HQ.jsx)("span", {
+          children: Dk.map(((kk, ek) => 1 === kk.length && "space" === kk[0].kind ? kk[0].text : (0, Kk.jsx)("span", {
             className: "DialogueGlue",
-            children: QQ.map(((QQ, FQ) => (0, HQ.jsx)(AQ, {
-              piece: QQ
-            }, FQ)))
-          }, FQ)))
+            children: kk.map(((kk, ek) => (0, Kk.jsx)(Hk, {
+              piece: kk
+            }, ek)))
+          }, ek)))
         })]
       })
     }
-    const eQ = (0, oQ.memo)((function() {
-      const QQ = (0, mQ.l)("dialogue");
-      return (0, HQ.jsx)("div", {
+    const lk = (0, Sk.memo)((function() {
+      const kk = (0, mk.e)("dialogue");
+      return (0, Kk.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: QQ && (0, HQ.jsx)(tQ, {
-          display: QQ
-        }, xQ(QQ))
+        children: kk && (0, Kk.jsx)(wk, {
+          display: kk
+        }, Uk(kk))
       })
     }))
   },
-  4674: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => kQ
+  4769: (kk, ek, ik) => {
+    ik.d(ek, {
+      e: () => rk
     });
-    var LQ = wQ(53),
-      qQ = wQ(307),
-      oQ = wQ(1887),
-      DQ = wQ(1107);
+    var Dk = ik(60),
+      fk = ik(302),
+      Sk = ik(1877),
+      bk = ik(1066);
 
-    function kQ(QQ) {
+    function rk(kk) {
       let {
-        text: FQ
-      } = QQ;
-      const wQ = [];
-      let kQ = "";
-      return (0, qQ.ec)(FQ).forEach(((QQ, FQ) => {
-        if ("string" === typeof QQ || !(0, oQ.g)(QQ.icon)) return void(kQ += "string" === typeof QQ ? QQ : QQ.icon);
-        const qQ = Math.max(0, kQ.trimEnd().search(/\S{1,12}$/));
-        wQ.push((0, DQ.jsxs)(LQ.Fragment, {
-          children: [kQ.slice(0, qQ), (0, DQ.jsxs)("span", {
+        text: ek
+      } = kk;
+      const ik = [];
+      let rk = "";
+      return (0, fk.hc)(ek).forEach(((kk, ek) => {
+        if ("string" === typeof kk || !(0, Sk.e)(kk.icon)) return void(rk += "string" === typeof kk ? kk : kk.icon);
+        const fk = Math.max(0, rk.trimEnd().search(/\S{1,12}$/));
+        ik.push((0, bk.jsxs)(Dk.Fragment, {
+          children: [rk.slice(0, fk), (0, bk.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [kQ.slice(qQ), (0, DQ.jsx)("span", {
+            children: [rk.slice(fk), (0, bk.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": QQ.icon,
-              children: (0, DQ.jsx)(oQ.e, {
-                itemName: QQ.icon,
+              "aria-label": kk.icon,
+              children: (0, bk.jsx)(Sk.c, {
+                itemName: kk.icon,
                 amount: 0
               })
             })]
           })]
-        }, FQ)), kQ = ""
-      })), wQ.push(kQ), (0, DQ.jsx)(DQ.Fragment, {
-        children: wQ
+        }, ek)), rk = ""
+      })), ik.push(rk), (0, bk.jsx)(bk.Fragment, {
+        children: ik
       })
     }
   },
-  9094: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => oQ
+  33763: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Sk
     });
-    var LQ = wQ(4380),
-      qQ = wQ(4388);
+    var Dk = ik(4479),
+      fk = ik(4482);
 
-    function oQ(QQ) {
+    function Sk(kk) {
       let {
-        children: FQ,
-        showing: wQ,
-        globallyUniqueKey: oQ,
-        alwaysMountChildren: DQ = !1,
-        doGameplayStartStopOnShow: kQ = !0,
-        keepsMovement: vQ = !1
-      } = QQ;
-      return (0, qQ.d)(!0, wQ, oQ, vQ), (0, LQ.b)(kQ, wQ), wQ || DQ ? FQ : null
+        children: ek,
+        showing: ik,
+        globallyUniqueKey: Sk,
+        alwaysMountChildren: bk = !1,
+        doGameplayStartStopOnShow: rk = !0,
+        keepsMovement: Pk = !1
+      } = kk;
+      return (0, fk.c)(!0, ik, Sk, Pk), (0, Dk.c)(rk, ik), ik || bk ? ek : null
     }
   },
-  4680: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => TQ,
-      f: () => NQ
+  4778: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => Qk,
+      f: () => zk
     });
-    var LQ = wQ(4686),
-      qQ = wQ(307);
-    const oQ = 120,
-      DQ = 260,
-      kQ = 1.15,
-      vQ = 1.2,
-      mQ = 2,
-      uQ = 1.08,
-      HQ = .8,
-      bQ = .95,
-      YQ = 8,
-      xQ = "[\"')\\]\u300d\u300f\uff09]*",
-      AQ = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${xQ}$`),
-      tQ = new RegExp(`[?\uff1f]${xQ}$`),
-      eQ = new RegExp(`[!\uff01]${xQ}$`),
-      MQ = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      GQ = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      pQ = new RegExp(`[${GQ}]`),
-      cQ = new RegExp(`[${GQ}]|[^${GQ}]+`, "g"),
-      CQ = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Dk = ik(4786),
+      fk = ik(302);
+    const Sk = 120,
+      bk = 260,
+      rk = 1.15,
+      Pk = 1.2,
+      mk = 2,
+      Mk = 1.08,
+      Kk = .8,
+      xk = .95,
+      nk = 8,
+      Uk = "[\"')\\]\u300d\u300f\uff09]*",
+      Hk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Uk}$`),
+      wk = new RegExp(`[?\uff1f]${Uk}$`),
+      lk = new RegExp(`[!\uff01]${Uk}$`),
+      pk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      yk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      Yk = new RegExp(`[${yk}]`),
+      Lk = new RegExp(`[${yk}]|[^${yk}]+`, "g"),
+      Ck = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function SQ(QQ) {
-      let FQ = 2166136261;
-      for (let wQ = 0; wQ < QQ.length; wQ++) FQ ^= QQ.charCodeAt(wQ), FQ = Math.imul(FQ, 16777619);
-      return (FQ >>> 0) / 4294967295 * 2 - 1
+    function Ak(kk) {
+      let ek = 2166136261;
+      for (let ik = 0; ik < kk.length; ik++) ek ^= kk.charCodeAt(ik), ek = Math.imul(ek, 16777619);
+      return (ek >>> 0) / 4294967295 * 2 - 1
     }
 
-    function iQ(QQ) {
-      var FQ;
-      if (pQ.test(QQ)) return 1;
-      const wQ = QQ.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        LQ = wQ.replace(/[^0-9]/g, "");
-      if (LQ.length > 0 && !/\p{L}/u.test(wQ)) return Math.min(LQ.length, 4);
-      const qQ = null !== (FQ = wQ.match(CQ)) && void 0 !== FQ ? FQ : [];
-      if (0 === qQ.length) {
-        var oQ, DQ;
-        const QQ = null !== (oQ = null === (DQ = wQ.match(/\p{L}/gu)) || void 0 === DQ ? void 0 : DQ.length) && void 0 !== oQ ? oQ : 0;
-        return 0 === QQ ? 0 : Math.min(Math.max(1, Math.round(QQ / 2.5)), YQ)
+    function jk(kk) {
+      var ek;
+      if (Yk.test(kk)) return 1;
+      const ik = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Dk = ik.replace(/[^0-9]/g, "");
+      if (Dk.length > 0 && !/\p{L}/u.test(ik)) return Math.min(Dk.length, 4);
+      const fk = null !== (ek = ik.match(Ck)) && void 0 !== ek ? ek : [];
+      if (0 === fk.length) {
+        var Sk, bk;
+        const kk = null !== (Sk = null === (bk = ik.match(/\p{L}/gu)) || void 0 === bk ? void 0 : bk.length) && void 0 !== Sk ? Sk : 0;
+        return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), nk)
       }
-      const kQ = wQ.replace(/[^\p{L}]/gu, ""),
-        vQ = qQ.length > 1 && "e" === qQ.at(-1) && kQ.endsWith("e") && !kQ.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(QQ.replace(/[^\p{L}]/gu, ""));
-      return Math.min(qQ.length - (vQ ? 1 : 0), YQ)
+      const rk = ik.replace(/[^\p{L}]/gu, ""),
+        Pk = fk.length > 1 && "e" === fk.at(-1) && rk.endsWith("e") && !rk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
+      return Math.min(fk.length - (Pk ? 1 : 0), nk)
     }
 
-    function WQ(QQ) {
-      return QQ.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function sk(kk) {
+      return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function RQ(QQ) {
-      const FQ = QQ.replace(/[^\p{L}]/gu, "");
-      return FQ.length >= 2 && FQ === FQ.toUpperCase() && FQ !== FQ.toLowerCase()
+    function dk(kk) {
+      const ek = kk.replace(/[^\p{L}]/gu, "");
+      return ek.length >= 2 && ek === ek.toUpperCase() && ek !== ek.toLowerCase()
     }
 
-    function OQ(QQ, FQ) {
-      var wQ;
-      const YQ = FQ && (0, LQ.i)(FQ),
-        xQ = null !== (wQ = null === YQ || void 0 === YQ ? void 0 : YQ.syllableMs) && void 0 !== wQ ? wQ : LQ.c,
-        GQ = function(QQ) {
-          const FQ = [];
-          for (const LQ of (0, qQ.ec)(QQ))
-            if ("string" === typeof LQ)
-              for (const QQ of LQ.split(/(\s+)/)) {
-                if ("" === QQ) continue;
-                if (/^\s+$/.test(QQ)) {
-                  FQ.push({
+    function Vk(kk, ek) {
+      var ik;
+      const nk = ek && (0, Dk.i)(ek),
+        Uk = null !== (ik = null === nk || void 0 === nk ? void 0 : nk.syllableMs) && void 0 !== ik ? ik : Dk.c,
+        yk = function(kk) {
+          const ek = [];
+          for (const Dk of (0, fk.hc)(kk))
+            if ("string" === typeof Dk)
+              for (const kk of Dk.split(/(\s+)/)) {
+                if ("" === kk) continue;
+                if (/^\s+$/.test(kk)) {
+                  ek.push({
                     kind: "space",
-                    text: QQ
+                    text: kk
                   });
                   continue
                 }
-                if (!pQ.test(QQ)) {
-                  FQ.push({
+                if (!Yk.test(kk)) {
+                  ek.push({
                     kind: "word",
-                    text: QQ,
+                    text: kk,
                     delayMs: 0
                   });
                   continue
                 }
-                let LQ = !0;
-                for (const qQ of null !== (wQ = QQ.match(cQ)) && void 0 !== wQ ? wQ : []) {
-                  var wQ;
-                  const QQ = FQ.at(-1);
-                  LQ || "word" !== (null === QQ || void 0 === QQ ? void 0 : QQ.kind) || pQ.test(qQ) || /[\p{L}\p{N}]/u.test(qQ) ? (LQ || FQ.push({
+                let Dk = !0;
+                for (const fk of null !== (ik = kk.match(Lk)) && void 0 !== ik ? ik : []) {
+                  var ik;
+                  const kk = ek.at(-1);
+                  Dk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || Yk.test(fk) || /[\p{L}\p{N}]/u.test(fk) ? (Dk || ek.push({
                     kind: "space",
                     text: "\u200b"
-                  }), FQ.push({
+                  }), ek.push({
                     kind: "word",
-                    text: qQ,
+                    text: fk,
                     delayMs: 0
-                  }), LQ = !1) : QQ.text += qQ
+                  }), Dk = !1) : kk.text += fk
                 }
-              } else FQ.push({
+              } else ek.push({
                 kind: "icon",
-                text: LQ.icon,
+                text: Dk.icon,
                 delayMs: 0
               });
-          return FQ
-        }(QQ),
-        CQ = [];
-      let OQ = [];
-      for (const LQ of GQ) "space" !== LQ.kind && (OQ.push(LQ), AQ.test(LQ.text) && (CQ.push(OQ), OQ = []));
-      CQ.push(OQ);
-      const sQ = [];
-      let rQ = 0;
-      for (const LQ of CQ) {
-        var IQ, UQ;
-        const QQ = null !== (IQ = null === (UQ = LQ.at(-1)) || void 0 === UQ ? void 0 : UQ.text) && void 0 !== IQ ? IQ : "",
-          FQ = tQ.test(QQ),
-          wQ = eQ.test(QQ),
-          qQ = LQ.map((QQ => "word" === QQ.kind ? iQ(QQ.text) : 1)),
-          GQ = qQ.findLastIndex((QQ => QQ > 0));
-        for (const [tQ, eQ] of LQ.entries()) {
-          const QQ = "word" === eQ.kind,
-            LQ = qQ[tQ];
-          eQ.delayMs = rQ;
-          for (let qQ = 0; YQ && qQ < LQ; qQ++) {
+          return ek
+        }(kk),
+        Ck = [];
+      let Vk = [];
+      for (const Dk of yk) "space" !== Dk.kind && (Vk.push(Dk), Hk.test(Dk.text) && (Ck.push(Vk), Vk = []));
+      Ck.push(Vk);
+      const Fk = [];
+      let uk = 0;
+      for (const Dk of Ck) {
+        var qk, Ik;
+        const kk = null !== (qk = null === (Ik = Dk.at(-1)) || void 0 === Ik ? void 0 : Ik.text) && void 0 !== qk ? qk : "",
+          ek = wk.test(kk),
+          ik = lk.test(kk),
+          fk = Dk.map((kk => "word" === kk.kind ? jk(kk.text) : 1)),
+          yk = fk.findLastIndex((kk => kk > 0));
+        for (const [wk, lk] of Dk.entries()) {
+          const kk = "word" === lk.kind,
+            Dk = fk[wk];
+          lk.delayMs = uk;
+          for (let fk = 0; nk && fk < Dk; fk++) {
             const {
-              intonation: oQ
-            } = YQ;
-            let DQ = GQ > 0 ? -oQ.declineSemitones * (tQ / GQ) : 0;
-            DQ += SQ(`${WQ(eQ.text)}|${qQ}`) * oQ.variationSemitones;
-            const AQ = Math.min(1, oQ.variationSemitones);
-            let MQ = YQ.glideSemitones,
-              pQ = 1;
-            wQ && (DQ += oQ.exclaimLiftSemitones, pQ *= kQ), FQ && tQ === GQ && (DQ += oQ.questionRiseSemitones * (LQ > 1 ? .5 + .5 * qQ / (LQ - 1) : 1), qQ === LQ - 1 && (MQ = Math.abs(MQ) + oQ.questionRiseSemitones / 2)), QQ && RQ(eQ.text) && (DQ += mQ * AQ, pQ *= vQ), LQ > 1 && 0 === qQ && (DQ += HQ * AQ, pQ *= uQ), sQ.push({
-              atMs: rQ + qQ * xQ,
-              semitones: DQ,
-              glideSemitones: MQ,
-              durationMs: qQ < LQ - 1 ? Math.min(YQ.durationMs, xQ * bQ) : YQ.durationMs,
-              level: pQ
+              intonation: Sk
+            } = nk;
+            let bk = yk > 0 ? -Sk.declineSemitones * (wk / yk) : 0;
+            bk += Ak(`${sk(lk.text)}|${fk}`) * Sk.variationSemitones;
+            const Hk = Math.min(1, Sk.variationSemitones);
+            let pk = nk.glideSemitones,
+              Yk = 1;
+            ik && (bk += Sk.exclaimLiftSemitones, Yk *= rk), ek && wk === yk && (bk += Sk.questionRiseSemitones * (Dk > 1 ? .5 + .5 * fk / (Dk - 1) : 1), fk === Dk - 1 && (pk = Math.abs(pk) + Sk.questionRiseSemitones / 2)), kk && dk(lk.text) && (bk += mk * Hk, Yk *= Pk), Dk > 1 && 0 === fk && (bk += Kk * Hk, Yk *= Mk), Fk.push({
+              atMs: uk + fk * Uk,
+              semitones: bk,
+              glideSemitones: pk,
+              durationMs: fk < Dk - 1 ? Math.min(nk.durationMs, Uk * xk) : nk.durationMs,
+              level: Yk
             })
           }
-          rQ += LQ * xQ + (AQ.test(eQ.text) ? DQ : MQ.test(eQ.text) ? oQ : 0)
+          uk += Dk * Uk + (Hk.test(lk.text) ? bk : pk.test(lk.text) ? Sk : 0)
         }
       }
       return {
-        pieces: GQ.map((QQ => "space" === QQ.kind ? QQ : "icon" === QQ.kind ? {
+        pieces: yk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
           kind: "icon",
-          icon: QQ.text,
-          delayMs: QQ.delayMs
+          icon: kk.text,
+          delayMs: kk.delayMs
         } : {
           kind: "word",
-          text: QQ.text,
-          delayMs: QQ.delayMs
+          text: kk.text,
+          delayMs: kk.delayMs
         })),
-        blips: sQ
+        blips: Fk
       }
     }
-    var sQ = wQ(1207),
-      rQ = wQ(1265),
-      IQ = wQ(1899);
+    var Fk = ik(1172),
+      uk = ik(1223),
+      qk = ik(1895);
 
-    function UQ(QQ) {
-      if ("string" === typeof QQ) return QQ;
-      const FQ = rQ.e.get().getCurrentLanguageCode();
-      return (0, sQ.o)(FQ, QQ.translationKey, (0, sQ.m)(QQ.params, IQ.b.shown))
+    function Ik(kk) {
+      if ("string" === typeof kk) return kk;
+      const ek = uk.f.get().getCurrentLanguageCode();
+      return (0, Fk.u)(ek, kk.translationKey, (0, Fk.r)(kk.params, qk.c.shown))
     }
 
-    function NQ(QQ) {
-      const FQ = void 0 === QQ.voice ? null : (0, LQ.k)(QQ.voice),
-        wQ = FQ && (0, LQ.i)(FQ);
+    function zk(kk) {
+      const ek = void 0 === kk.voice ? null : (0, Dk.m)(kk.voice),
+        ik = ek && (0, Dk.i)(ek);
       return {
-        plan: OQ(UQ(QQ.line), wQ),
-        synth: wQ
+        plan: Vk(Ik(kk.line), ik),
+        synth: ik
       }
     }
 
-    function TQ(QQ) {
-      const FQ = [];
-      let wQ = [];
-      for (const [qQ, oQ] of QQ.entries()) {
-        var LQ;
-        "space" === oQ.kind && (" " !== oQ.text || "icon" !== (null === (LQ = QQ[qQ + 1]) || void 0 === LQ ? void 0 : LQ.kind)) ? (wQ.length > 0 && FQ.push(wQ), FQ.push([oQ]), wQ = []) : wQ.push(oQ)
+    function Qk(kk) {
+      const ek = [];
+      let ik = [];
+      for (const [fk, Sk] of kk.entries()) {
+        var Dk;
+        "space" === Sk.kind && (" " !== Sk.text || "icon" !== (null === (Dk = kk[fk + 1]) || void 0 === Dk ? void 0 : Dk.kind)) ? (ik.length > 0 && ek.push(ik), ek.push([Sk]), ik = []) : ik.push(Sk)
       }
-      return wQ.length > 0 && FQ.push(wQ), FQ
+      return ik.length > 0 && ek.push(ik), ek
     }
   },
-  8464: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => oQ,
-      h: () => qQ
+  8560: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk,
+      f: () => fk
     });
-    let LQ = null;
-    const qQ = function(QQ) {
-        const FQ = {
-          cycle: QQ,
+    let Dk = null;
+    const fk = function(kk) {
+        const ek = {
+          cycle: kk,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return LQ = FQ, () => {
-          LQ === FQ && (LQ = null)
+        return Dk = ek, () => {
+          Dk === ek && (Dk = null)
         }
       },
-      oQ = () => {
-        var QQ;
-        return null !== (QQ = LQ) && void 0 !== QQ && QQ.canCycle() ? LQ.cycle : null
+      Sk = () => {
+        var kk;
+        return null !== (kk = Dk) && void 0 !== kk && kk.canCycle() ? Dk.cycle : null
       }
   },
-  36238: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => oQ,
-      g: () => AQ,
-      i: () => tQ,
-      m: () => kQ,
-      n: () => bQ,
-      o: () => eQ,
-      q: () => HQ,
-      u: () => GQ,
-      v: () => xQ,
-      w: () => MQ
+  36151: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => Sk,
+      g: () => Hk,
+      i: () => wk,
+      m: () => rk,
+      p: () => xk,
+      t: () => lk,
+      u: () => Kk,
+      v: () => yk,
+      w: () => Uk,
+      x: () => pk
     });
-    var LQ = wQ(17),
-      qQ = wQ(22);
-    const oQ = "clientGameInventoryButtonsChanged",
-      DQ = new Map;
+    var Dk = ik(22),
+      fk = ik(26);
+    const Sk = "clientGameInventoryButtonsChanged",
+      bk = new Map;
 
-    function kQ() {
-      return [...DQ.values()].sort(((QQ, FQ) => {
-        var wQ, LQ;
-        return (null !== (wQ = QQ.order) && void 0 !== wQ ? wQ : 0) - (null !== (LQ = FQ.order) && void 0 !== LQ ? LQ : 0)
+    function rk() {
+      return [...bk.values()].sort(((kk, ek) => {
+        var ik, Dk;
+        return (null !== (ik = kk.order) && void 0 !== ik ? ik : 0) - (null !== (Dk = ek.order) && void 0 !== Dk ? Dk : 0)
       }))
     }
-    let vQ = null;
+    let Pk = null;
 
-    function mQ(QQ) {
-      vQ = QQ
+    function mk(kk) {
+      Pk = kk
     }
-    let uQ = !1;
+    let Mk = !1;
 
-    function HQ(QQ) {
-      uQ = !0;
+    function Kk(kk) {
+      Mk = !0;
       try {
-        QQ.onClick()
+        kk.onClick()
       } finally {
-        uQ = !1
+        Mk = !1
       }
-      QQ.panel && "clientGame" === LQ.c.get("openInGameMenuName") && mQ(QQ.id)
+      kk.panel && "clientGame" === Dk.b.get("openInGameMenuName") && mk(kk.id)
     }
 
-    function bQ() {
-      return uQ
+    function xk() {
+      return Mk
     }
 
-    function YQ() {
-      return kQ().filter((QQ => QQ.panel && !QQ.disabled))
+    function nk() {
+      return rk().filter((kk => kk.panel && !kk.disabled))
     }
 
-    function xQ(QQ) {
-      const FQ = YQ(),
-        wQ = FQ.findIndex((QQ => QQ.id === vQ));
-      return !(wQ < 0 || FQ.length < 2) && (HQ(FQ[(wQ + QQ + FQ.length) % FQ.length]), !0)
+    function Uk(kk) {
+      const ek = nk(),
+        ik = ek.findIndex((kk => kk.id === Pk));
+      return !(ik < 0 || ek.length < 2) && (Kk(ek[(ik + kk + ek.length) % ek.length]), !0)
     }
 
-    function AQ() {
-      return null !== vQ && YQ().length > 1
+    function Hk() {
+      return null !== Pk && nk().length > 1
     }
 
-    function tQ() {
-      mQ(null)
+    function wk() {
+      mk(null)
     }
 
-    function eQ() {
-      "inventory" !== LQ.c.get("openInGameMenuName") && mQ(null)
+    function lk() {
+      "inventory" !== Dk.b.get("openInGameMenuName") && mk(null)
     }
 
-    function MQ() {
-      const QQ = vQ;
-      return mQ(null), QQ
+    function pk() {
+      const kk = Pk;
+      return mk(null), kk
     }
 
-    function GQ(QQ) {
-      return DQ.set(QQ.id, QQ), qQ.l.GA(oQ, kQ(), !0), () => {
-        DQ.get(QQ.id) === QQ && (DQ.delete(QQ.id), qQ.l.GA(oQ, kQ()))
+    function yk(kk) {
+      return bk.set(kk.id, kk), fk.j.tm(Sk, rk(), !0), () => {
+        bk.get(kk.id) === kk && (bk.delete(kk.id), fk.j.tm(Sk, rk()))
       }
     }
   },
-  36235: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      b: () => kQ,
-      f: () => tQ,
-      i: () => eQ,
-      j: () => bQ,
-      k: () => mQ,
-      o: () => AQ,
-      q: () => YQ,
-      u: () => uQ
+  36143: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => rk,
+      d: () => wk,
+      h: () => lk,
+      j: () => xk,
+      n: () => mk,
+      r: () => Hk,
+      v: () => nk,
+      z: () => Mk
     });
-    var LQ = wQ(17),
-      qQ = wQ(22),
-      oQ = wQ(1302),
-      DQ = wQ(36238);
-    const kQ = "clientGameUiChanged";
-    let vQ = null;
+    var Dk = ik(22),
+      fk = ik(26),
+      Sk = ik(1273),
+      bk = ik(36151);
+    const rk = "clientGameUiChanged";
+    let Pk = null;
 
-    function mQ() {
-      return vQ
+    function mk() {
+      return Pk
     }
 
-    function uQ(QQ, FQ) {
-      const wQ = {
-        content: QQ,
-        menu: FQ
+    function Mk(kk, ek) {
+      const ik = {
+        content: kk,
+        menu: ek
       };
-      return vQ = wQ, qQ.l.GA(kQ, vQ, !0), () => {
-        vQ === wQ && (vQ = null, xQ = !1, tQ(), qQ.l.GA(kQ, null))
+      return Pk = ik, fk.j.tm(rk, Pk, !0), () => {
+        Pk === ik && (Pk = null, Uk = !1, wk(), fk.j.tm(rk, null))
       }
     }
-    let HQ = null;
+    let Kk = null;
 
-    function bQ() {
-      return HQ
+    function xk() {
+      return Kk
     }
 
-    function YQ(QQ) {
-      return HQ = QQ, () => {
-        HQ === QQ && (HQ = null)
+    function nk(kk) {
+      return Kk = kk, () => {
+        Kk === kk && (Kk = null)
       }
     }
-    let xQ = !1;
+    let Uk = !1;
 
-    function AQ() {
-      const QQ = LQ.c.get("openInGameMenuName");
-      "clientGame" !== QQ && (xQ = "inventory" === QQ), (0, DQ.n)() || (0, DQ.i)(), (0, oQ.n)(oQ.d), LQ.c.set({
+    function Hk() {
+      const kk = Dk.b.get("openInGameMenuName");
+      "clientGame" !== kk && (Uk = "inventory" === kk), (0, bk.p)() || (0, bk.i)(), (0, Sk.s)(Sk.c), Dk.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function tQ() {
-      MQ(!1)
+    function wk() {
+      pk(!1)
     }
 
-    function eQ() {
-      MQ(xQ)
+    function lk() {
+      pk(Uk)
     }
 
-    function MQ(QQ) {
-      "clientGame" === LQ.c.get("openInGameMenuName") && LQ.c.set({
-        openInGameMenuName: QQ ? "inventory" : null
-      }), QQ || (0, DQ.i)(), xQ = !1
+    function pk(kk) {
+      "clientGame" === Dk.b.get("openInGameMenuName") && Dk.b.set({
+        openInGameMenuName: kk ? "inventory" : null
+      }), kk || (0, bk.i)(), Uk = !1
     }
   },
-  38044: (QQ, FQ, wQ) => {
-    function LQ(QQ, FQ, wQ) {
-      const LQ = new Set,
-        qQ = new ResizeObserver(wQ),
-        oQ = () => {
-          const FQ = new Set(document.querySelectorAll(QQ));
-          let oQ = !1;
-          for (const QQ of LQ) FQ.has(QQ) || (qQ.unobserve(QQ), LQ.delete(QQ), oQ = !0);
-          for (const QQ of FQ) LQ.has(QQ) || (qQ.observe(QQ), DQ.observe(QQ, {
+  38090: (kk, ek, ik) => {
+    function Dk(kk, ek, ik) {
+      const Dk = new Set,
+        fk = new ResizeObserver(ik),
+        Sk = () => {
+          const ek = new Set(document.querySelectorAll(kk));
+          let Sk = !1;
+          for (const kk of Dk) ek.has(kk) || (fk.unobserve(kk), Dk.delete(kk), Sk = !0);
+          for (const kk of ek) Dk.has(kk) || (fk.observe(kk), bk.observe(kk, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), LQ.add(QQ));
-          oQ && wQ()
+          }), Dk.add(kk));
+          Sk && ik()
         },
-        DQ = new MutationObserver((FQ => {
-          FQ.some((QQ => "attributes" === QQ.type)) && wQ(), FQ.some((FQ => function(QQ, FQ, wQ) {
-            if ("childList" !== QQ.type) return !1;
-            for (const LQ of QQ.addedNodes)
-              if (LQ instanceof Element && (LQ.matches(FQ) || LQ.querySelector(FQ))) return !0;
-            for (const LQ of QQ.removedNodes)
-              if (LQ instanceof Element)
-                for (const QQ of wQ)
-                  if (LQ.contains(QQ)) return !0;
+        bk = new MutationObserver((ek => {
+          ek.some((kk => "attributes" === kk.type)) && ik(), ek.some((ek => function(kk, ek, ik) {
+            if ("childList" !== kk.type) return !1;
+            for (const Dk of kk.addedNodes)
+              if (Dk instanceof Element && (Dk.matches(ek) || Dk.querySelector(ek))) return !0;
+            for (const Dk of kk.removedNodes)
+              if (Dk instanceof Element)
+                for (const kk of ik)
+                  if (Dk.contains(kk)) return !0;
             return !1
-          }(FQ, QQ, LQ))) && oQ()
+          }(ek, kk, Dk))) && Sk()
         }));
-      DQ.observe(document.body, {
+      bk.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const kQ of FQ) qQ.observe(kQ);
-      return window.addEventListener("resize", wQ), oQ(), wQ(), () => {
-        qQ.disconnect(), DQ.disconnect(), window.removeEventListener("resize", wQ)
+      for (const rk of ek) fk.observe(rk);
+      return window.addEventListener("resize", ik), Sk(), ik(), () => {
+        fk.disconnect(), bk.disconnect(), window.removeEventListener("resize", ik)
       }
     }
-    wQ.d(FQ, {
-      e: () => LQ
+    ik.d(ek, {
+      d: () => Dk
     })
   },
-  8644: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => kQ,
-      f: () => vQ
+  8708: (kk, ek, ik) => {
+    ik.d(ek, {
+      d: () => rk,
+      e: () => Pk
     });
-    var LQ = wQ(17),
-      qQ = wQ(1339),
-      oQ = wQ(96);
-    const DQ = {
+    var Dk = ik(22),
+      fk = ik(1302),
+      Sk = ik(99);
+    const bk = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function kQ() {
-      return (0, oQ.isMobile)() && "function" === typeof navigator.vibrate
+    function rk() {
+      return (0, Sk.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const vQ = new class {
-      constructor(QQ) {
-        this.deps = QQ, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Pk = new class {
+      constructor(kk) {
+        this.deps = kk, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(QQ, FQ) {
-        var wQ;
+      play(kk, ek) {
+        var ik;
         if (!this.deps.enabled()) return;
-        const LQ = DQ[QQ],
-          qQ = null !== FQ && void 0 !== FQ ? FQ : LQ.pattern;
-        if (null === qQ) return void console.warn("No vibration pattern for", QQ);
-        const oQ = this.deps.now();
-        oQ - this.lastAnyAt < 40 && LQ.priority < this.playingPriority || oQ - (null !== (wQ = this.lastAt.get(QQ)) && void 0 !== wQ ? wQ : -1 / 0) < LQ.minGapMs || oQ < this.playingUntil && LQ.priority < this.playingPriority || (this.lastAt.set(QQ, oQ), this.lastAnyAt = oQ, this.playingUntil = oQ + qQ.reduce(((QQ, FQ) => QQ + FQ), 0), this.playingPriority = LQ.priority, this.deps.vibrate(qQ))
+        const Dk = bk[kk],
+          fk = null !== ek && void 0 !== ek ? ek : Dk.pattern;
+        if (null === fk) return void console.warn("No vibration pattern for", kk);
+        const Sk = this.deps.now();
+        Sk - this.lastAnyAt < 40 && Dk.priority < this.playingPriority || Sk - (null !== (ik = this.lastAt.get(kk)) && void 0 !== ik ? ik : -1 / 0) < Dk.minGapMs || Sk < this.playingUntil && Dk.priority < this.playingPriority || (this.lastAt.set(kk, Sk), this.lastAnyAt = Sk, this.playingUntil = Sk + fk.reduce(((kk, ek) => kk + ek), 0), this.playingPriority = Dk.priority, this.deps.vibrate(fk))
       }
     }({
-      vibrate: QQ => {
-        navigator.vibrate([...QQ])
+      vibrate: kk => {
+        navigator.vibrate([...kk])
       },
       now: () => performance.now(),
-      enabled: () => kQ() && LQ.c.get("isTouchScreen") && LQ.c.get("clientEscMenuOptions").vibration && !(0, qQ.e)()
+      enabled: () => rk() && Dk.b.get("isTouchScreen") && Dk.b.get("clientEscMenuOptions").vibration && !(0, fk.e)()
     })
   },
-  36768: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      d: () => kQ,
-      h: () => DQ
+  36754: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => rk,
+      g: () => bk
     });
-    var LQ = wQ(36753),
-      qQ = wQ(317),
-      oQ = wQ(1870);
+    var Dk = ik(36747),
+      fk = ik(314),
+      Sk = ik(1850);
 
-    function DQ(QQ) {
-      if ("YQ" in QQ) return CQ.createAnimationScript(QQ);
-      return new mQ(QQ).createAnimationScript()
+    function bk(kk) {
+      if ("Ii" in kk) return Ck.createAnimationScript(kk);
+      return new mk(kk).createAnimationScript()
     }
 
-    function kQ(QQ, FQ, wQ, qQ) {
-      const oQ = QQ.YQ <= 0 ? 1 : FQ + wQ * Math.max(0, qQ) / QQ.YQ;
-      return QQ.xQ === LQ.n.LoopOnLastFrame ? oQ % 1 : QQ.xQ === LQ.n.NoLoop && oQ >= 1 ? null : Math.min(1, oQ)
+    function rk(kk, ek, ik, fk) {
+      const Sk = kk.Ii <= 0 ? 1 : ek + ik * Math.max(0, fk) / kk.Ii;
+      return kk.zi === Dk.k.LoopOnLastFrame ? Sk % 1 : kk.zi === Dk.k.NoLoop && Sk >= 1 ? null : Math.min(1, Sk)
     }
-    class vQ {
-      createAnimationScript(QQ) {
+    class Pk {
+      createAnimationScript(kk) {
         const {
-          YQ: FQ,
-          loop: wQ,
-          AQ: LQ
-        } = QQ;
+          Ii: ek,
+          loop: ik,
+          Qi: Dk
+        } = kk;
         return {
-          YQ: Math.round(FQ),
-          xQ: this.createLoopMode(null !== wQ && void 0 !== wQ && wQ),
-          AQ: this.createNodeSkeletonAnimationScript(null !== LQ && void 0 !== LQ ? LQ : null)
+          Ii: Math.round(ek),
+          zi: this.createLoopMode(null !== ik && void 0 !== ik && ik),
+          Qi: this.createNodeSkeletonAnimationScript(null !== Dk && void 0 !== Dk ? Dk : null)
         }
       }
-      createLoopMode(QQ) {
-        switch (QQ) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return LQ.n.NoLoop;
+            return Dk.k.NoLoop;
           case !0:
-            return LQ.n.LoopOnLastFrame;
+            return Dk.k.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return LQ.n.HoldOnLastFrame
+            return Dk.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${QQ}`)
+        throw new Error(`Invalid loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(QQ) {
-        if (null === QQ) return null;
-        const FQ = {};
-        for (const wQ in QQ) {
-          const LQ = QQ[wQ];
-          FQ[wQ] = this.createNodeAnimationScript(LQ)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const ek = {};
+        for (const ik in kk) {
+          const Dk = kk[ik];
+          ek[ik] = this.createNodeAnimationScript(Dk)
         }
-        return FQ
+        return ek
       }
-      createNodeAnimationScript(QQ) {
+      createNodeAnimationScript(kk) {
         const {
-          timeline: FQ
-        } = QQ, wQ = FQ.filter((QQ => Number.isFinite(QQ.timeFraction)));
-        return wQ.sort(((QQ, FQ) => QQ.timeFraction - FQ.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(wQ, "rotation", bQ),
-          position: this.createTimelineFromKeyframes(wQ, "position", xQ)
+          timeline: ek
+        } = kk, ik = ek.filter((kk => Number.isFinite(kk.timeFraction)));
+        return ik.sort(((kk, ek) => kk.timeFraction - ek.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(ik, "rotation", xk),
+          position: this.createTimelineFromKeyframes(ik, "position", Uk)
         }
       }
-      createTimelineFromKeyframes(QQ, FQ, wQ) {
-        const LQ = [];
-        for (const vQ of QQ) {
-          const QQ = vQ[FQ];
-          if (QQ) {
-            const FQ = this.createAnimationFrameWithoutPrecomputes(vQ.timeFraction, QQ);
-            uQ(FQ) && LQ.push(FQ)
+      createTimelineFromKeyframes(kk, ek, ik) {
+        const Dk = [];
+        for (const Pk of kk) {
+          const kk = Pk[ek];
+          if (kk) {
+            const ek = this.createAnimationFrameWithoutPrecomputes(Pk.timeFraction, kk);
+            Mk(ek) && Dk.push(ek)
           }
         }
-        const qQ = [];
-        for (let vQ = 0; vQ < LQ.length; vQ++) {
-          var oQ, DQ, kQ;
-          const QQ = LQ[vQ],
-            FQ = null !== (oQ = LQ[vQ - 1]) && void 0 !== oQ ? oQ : QQ,
-            mQ = null !== (DQ = LQ[vQ + 1]) && void 0 !== DQ ? DQ : QQ,
-            uQ = null !== (kQ = LQ[vQ + 2]) && void 0 !== kQ ? kQ : mQ;
-          qQ.push({
-            ...QQ,
-            ...wQ(FQ.post, FQ.timeFraction, QQ.post, QQ.timeFraction, mQ.pre, mQ.timeFraction, uQ.pre, uQ.timeFraction)
+        const fk = [];
+        for (let Pk = 0; Pk < Dk.length; Pk++) {
+          var Sk, bk, rk;
+          const kk = Dk[Pk],
+            ek = null !== (Sk = Dk[Pk - 1]) && void 0 !== Sk ? Sk : kk,
+            mk = null !== (bk = Dk[Pk + 1]) && void 0 !== bk ? bk : kk,
+            Mk = null !== (rk = Dk[Pk + 2]) && void 0 !== rk ? rk : mk;
+          fk.push({
+            ...kk,
+            ...ik(ek.post, ek.timeFraction, kk.post, kk.timeFraction, mk.pre, mk.timeFraction, Mk.pre, Mk.timeFraction)
           })
         }
-        return qQ
+        return fk
       }
-      createAnimationFrameWithoutPrecomputes(QQ, FQ) {
-        let wQ, LQ, qQ = null;
-        var oQ;
-        if ("object" === typeof FQ && "point" in FQ) qQ = null !== (oQ = FQ.MQ) && void 0 !== oQ ? oQ : null, wQ = FQ.point, LQ = FQ.point;
-        else if ("object" === typeof FQ && "pre" in FQ) {
-          var DQ;
-          qQ = null !== (DQ = FQ.MQ) && void 0 !== DQ ? DQ : null, wQ = FQ.pre, LQ = FQ.post
-        } else wQ = FQ, LQ = FQ;
+      createAnimationFrameWithoutPrecomputes(kk, ek) {
+        let ik, Dk, fk = null;
+        var Sk;
+        if ("object" === typeof ek && "point" in ek) fk = null !== (Sk = ek.Wi) && void 0 !== Sk ? Sk : null, ik = ek.point, Dk = ek.point;
+        else if ("object" === typeof ek && "pre" in ek) {
+          var bk;
+          fk = null !== (bk = ek.Wi) && void 0 !== bk ? bk : null, ik = ek.pre, Dk = ek.post
+        } else ik = ek, Dk = ek;
         return {
-          timeFraction: QQ,
-          MQ: this.createLerpMode(qQ),
-          pre: wQ,
-          post: LQ
+          timeFraction: kk,
+          Wi: this.createLerpMode(fk),
+          pre: ik,
+          post: Dk
         }
       }
-      createLerpMode(QQ) {
-        return null === QQ ? LQ.j.Linear : vQ.LERP_MODE_SCHEMA_MAPPING[QQ]
+      createLerpMode(kk) {
+        return null === kk ? Dk.h.Linear : Pk.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
-    vQ.LERP_MODE_SCHEMA_MAPPING = {
-      linear: LQ.j.Linear,
-      "catmull-rom-spline": LQ.j.CatmullRomSpline
+    Pk.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Dk.h.Linear,
+      "catmull-rom-spline": Dk.h.CatmullRomSpline
     };
-    class mQ {
-      constructor(QQ) {
-        this.animationSchema = QQ
+    class mk {
+      constructor(kk) {
+        this.animationSchema = kk
       }
       createAnimationScript() {
         const {
-          animation_length: QQ,
-          loop: FQ,
-          bones: wQ
+          animation_length: kk,
+          loop: ek,
+          bones: ik
         } = this.animationSchema;
         return {
-          YQ: Math.round(1e3 * QQ),
-          xQ: this.createLoopMode(null !== FQ && void 0 !== FQ && FQ),
-          AQ: this.createNodeSkeletonAnimationScript(null !== wQ && void 0 !== wQ ? wQ : null)
+          Ii: Math.round(1e3 * kk),
+          zi: this.createLoopMode(null !== ek && void 0 !== ek && ek),
+          Qi: this.createNodeSkeletonAnimationScript(null !== ik && void 0 !== ik ? ik : null)
         }
       }
-      createLoopMode(QQ) {
-        switch (QQ) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return LQ.n.NoLoop;
+            return Dk.k.NoLoop;
           case !0:
-            return LQ.n.LoopOnLastFrame;
+            return Dk.k.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return LQ.n.HoldOnLastFrame
+            return Dk.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${QQ}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(QQ) {
-        if (null === QQ) return null;
-        const FQ = {};
-        for (const wQ in QQ) {
-          const LQ = QQ[wQ];
-          FQ[wQ] = this.createNodeAnimationScript(LQ)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const ek = {};
+        for (const ik in kk) {
+          const Dk = kk[ik];
+          ek[ik] = this.createNodeAnimationScript(Dk)
         }
-        return FQ
+        return ek
       }
-      createNodeAnimationScript(QQ) {
+      createNodeAnimationScript(kk) {
         const {
-          rotation: FQ,
-          position: wQ
-        } = QQ;
+          rotation: ek,
+          position: ik
+        } = kk;
         return {
-          rotation: this.createAnimationTimeline(null !== FQ && void 0 !== FQ ? FQ : null, tQ, bQ, !0),
-          position: this.createAnimationTimeline(null !== wQ && void 0 !== wQ ? wQ : null, MQ, xQ, !1)
+          rotation: this.createAnimationTimeline(null !== ek && void 0 !== ek ? ek : null, wk, xk, !0),
+          position: this.createAnimationTimeline(null !== ik && void 0 !== ik ? ik : null, pk, Uk, !1)
         }
       }
-      createAnimationTimeline(QQ, FQ, wQ, LQ) {
-        if (null === QQ) return [];
-        if (Array.isArray(QQ)) {
-          QQ = {
-            "0.0": QQ
+      createAnimationTimeline(kk, ek, ik, Dk) {
+        if (null === kk) return [];
+        if (Array.isArray(kk)) {
+          kk = {
+            "0.0": kk
           }
         }
-        const qQ = Object.entries(QQ).map((QQ => {
-          let [wQ, LQ] = QQ;
-          const qQ = Number(wQ) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(qQ, LQ, FQ)
-        })).filter(uQ);
-        qQ.sort(((QQ, FQ) => QQ.timeFraction - FQ.timeFraction)), LQ && function(QQ) {
-          for (let FQ = 1; FQ < QQ.length; FQ++) {
-            const wQ = QQ[FQ - 1].post,
-              LQ = QQ[FQ],
-              qQ = GQ(LQ.pre),
-              oQ = GQ(LQ.post),
-              DQ = cQ(wQ, LQ.pre);
-            cQ(wQ, qQ) < DQ && (QQ[FQ] = {
-              ...LQ,
-              pre: qQ,
-              post: oQ
+        const fk = Object.entries(kk).map((kk => {
+          let [ik, Dk] = kk;
+          const fk = Number(ik) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(fk, Dk, ek)
+        })).filter(Mk);
+        fk.sort(((kk, ek) => kk.timeFraction - ek.timeFraction)), Dk && function(kk) {
+          for (let ek = 1; ek < kk.length; ek++) {
+            const ik = kk[ek - 1].post,
+              Dk = kk[ek],
+              fk = yk(Dk.pre),
+              Sk = yk(Dk.post),
+              bk = Lk(ik, Dk.pre);
+            Lk(ik, fk) < bk && (kk[ek] = {
+              ...Dk,
+              pre: fk,
+              post: Sk
             })
           }
-        }(qQ);
-        const oQ = [];
-        for (let mQ = 0; mQ < qQ.length; mQ++) {
-          var DQ, kQ, vQ;
-          const QQ = qQ[mQ],
-            FQ = null !== (DQ = qQ[mQ - 1]) && void 0 !== DQ ? DQ : QQ,
-            LQ = null !== (kQ = qQ[mQ + 1]) && void 0 !== kQ ? kQ : QQ,
-            uQ = null !== (vQ = qQ[mQ + 2]) && void 0 !== vQ ? vQ : LQ;
-          oQ.push({
-            ...QQ,
-            ...wQ(FQ.post, FQ.timeFraction, QQ.post, QQ.timeFraction, LQ.pre, LQ.timeFraction, uQ.pre, uQ.timeFraction)
+        }(fk);
+        const Sk = [];
+        for (let mk = 0; mk < fk.length; mk++) {
+          var bk, rk, Pk;
+          const kk = fk[mk],
+            ek = null !== (bk = fk[mk - 1]) && void 0 !== bk ? bk : kk,
+            Dk = null !== (rk = fk[mk + 1]) && void 0 !== rk ? rk : kk,
+            Mk = null !== (Pk = fk[mk + 2]) && void 0 !== Pk ? Pk : Dk;
+          Sk.push({
+            ...kk,
+            ...ik(ek.post, ek.timeFraction, kk.post, kk.timeFraction, Dk.pre, Dk.timeFraction, Mk.pre, Mk.timeFraction)
           })
         }
-        return oQ
+        return Sk
       }
-      createAnimationFrameWithoutPrecomputes(QQ, FQ, wQ) {
-        let LQ, qQ, oQ = null;
-        if ("object" === typeof FQ && "post" in FQ) {
-          var DQ;
-          oQ = null !== (DQ = FQ.lerp_mode) && void 0 !== DQ ? DQ : null, qQ = AQ(FQ.post, wQ), LQ = FQ.pre ? AQ(FQ.pre, wQ) : qQ
+      createAnimationFrameWithoutPrecomputes(kk, ek, ik) {
+        let Dk, fk, Sk = null;
+        if ("object" === typeof ek && "post" in ek) {
+          var bk;
+          Sk = null !== (bk = ek.lerp_mode) && void 0 !== bk ? bk : null, fk = Hk(ek.post, ik), Dk = ek.pre ? Hk(ek.pre, ik) : fk
         } else {
-          const QQ = AQ(FQ, wQ);
-          qQ = QQ, LQ = QQ
+          const kk = Hk(ek, ik);
+          fk = kk, Dk = kk
         }
         return {
-          timeFraction: QQ,
-          MQ: this.createLerpMode(oQ),
-          pre: LQ,
-          post: qQ
+          timeFraction: kk,
+          Wi: this.createLerpMode(Sk),
+          pre: Dk,
+          post: fk
         }
       }
-      createLerpMode(QQ) {
-        return null === QQ ? LQ.j.Linear : mQ.LERP_MODE_SCHEMA_MAPPING[QQ]
+      createLerpMode(kk) {
+        return null === kk ? Dk.h.Linear : mk.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
 
-    function uQ(QQ) {
-      return Number.isFinite(QQ.timeFraction) && HQ(QQ.pre) && HQ(QQ.post)
+    function Mk(kk) {
+      return Number.isFinite(kk.timeFraction) && Kk(kk.pre) && Kk(kk.post)
     }
 
-    function HQ(QQ) {
-      return Number.isFinite(QQ[0]) && Number.isFinite(QQ[1]) && Number.isFinite(QQ[2])
+    function Kk(kk) {
+      return Number.isFinite(kk[0]) && Number.isFinite(kk[1]) && Number.isFinite(kk[2])
     }
 
-    function bQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ) {
-      const vQ = oQ - FQ,
-        mQ = oQ - LQ,
-        uQ = kQ - LQ,
-        HQ = [null, null, null];
-      for (let bQ = 0; bQ < HQ.length; bQ++) HQ[bQ] = YQ(QQ[bQ], wQ[bQ], qQ[bQ], DQ[bQ], vQ, uQ);
+    function xk(kk, ek, ik, Dk, fk, Sk, bk, rk) {
+      const Pk = Sk - ek,
+        mk = Sk - Dk,
+        Mk = rk - Dk,
+        Kk = [null, null, null];
+      for (let xk = 0; xk < Kk.length; xk++) Kk[xk] = nk(kk[xk], ik[xk], fk[xk], bk[xk], Pk, Mk);
       return {
-        GQ: mQ,
-        pQ: HQ
+        Xi: mk,
+        Bi: Kk
       }
     }
 
-    function YQ(QQ, FQ, wQ, LQ, oQ, DQ) {
+    function nk(kk, ek, ik, Dk, Sk, bk) {
       return {
-        CQ: qQ.e.computeShortestRotation(QQ, wQ) / oQ,
-        SQ: qQ.e.computeShortestRotation(FQ, LQ) / DQ,
-        delta: qQ.e.computeShortestRotation(FQ, wQ)
+        oi: fk.c.computeShortestRotation(kk, ik) / Sk,
+        Zi: fk.c.computeShortestRotation(ek, Dk) / bk,
+        delta: fk.c.computeShortestRotation(ek, ik)
       }
     }
 
-    function xQ(QQ, FQ, wQ, LQ, qQ, oQ, DQ, kQ) {
-      const vQ = oQ - FQ,
-        mQ = oQ - LQ,
-        uQ = kQ - LQ,
-        HQ = [null, null, null];
-      for (let bQ = 0; bQ < HQ.length; bQ++) HQ[bQ] = {
-        CQ: (qQ[bQ] - QQ[bQ]) / vQ,
-        SQ: (DQ[bQ] - wQ[bQ]) / uQ,
-        delta: qQ[bQ] - wQ[bQ]
+    function Uk(kk, ek, ik, Dk, fk, Sk, bk, rk) {
+      const Pk = Sk - ek,
+        mk = Sk - Dk,
+        Mk = rk - Dk,
+        Kk = [null, null, null];
+      for (let xk = 0; xk < Kk.length; xk++) Kk[xk] = {
+        oi: (fk[xk] - kk[xk]) / Pk,
+        Zi: (bk[xk] - ik[xk]) / Mk,
+        delta: fk[xk] - ik[xk]
       };
       return {
-        GQ: mQ,
-        pQ: HQ
+        Xi: mk,
+        Bi: Kk
       }
     }
 
-    function AQ(QQ, FQ) {
-      return null === FQ ? QQ : FQ(QQ)
+    function Hk(kk, ek) {
+      return null === ek ? kk : ek(kk)
     }
 
-    function tQ(QQ) {
-      const [FQ, wQ, LQ] = QQ, DQ = -(0, oQ.n)(FQ), kQ = -(0, oQ.n)(wQ), vQ = (0, oQ.n)(LQ), mQ = qQ.e.quaternionFromEulerZYX(DQ, kQ, vQ);
-      return qQ.e.eulerYXZFromQuaternion(mQ)
+    function wk(kk) {
+      const [ek, ik, Dk] = kk, bk = -(0, Sk.h)(ek), rk = -(0, Sk.h)(ik), Pk = (0, Sk.h)(Dk), mk = fk.c.quaternionFromEulerZYX(bk, rk, Pk);
+      return fk.c.eulerYXZFromQuaternion(mk)
     }
-    mQ.LERP_MODE_SCHEMA_MAPPING = {
-      linear: LQ.j.Linear,
-      catmullrom: LQ.j.CatmullRomSpline
+    mk.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Dk.h.Linear,
+      catmullrom: Dk.h.CatmullRomSpline
     };
-    const eQ = 1 / 16;
+    const lk = 1 / 16;
 
-    function MQ(QQ) {
-      return [-QQ[0] * eQ, QQ[1] * eQ, QQ[2] * eQ]
+    function pk(kk) {
+      return [-kk[0] * lk, kk[1] * lk, kk[2] * lk]
     }
 
-    function GQ(QQ) {
-      const [FQ, wQ, LQ] = QQ;
-      return [FQ >= 0 ? Math.PI - FQ : -Math.PI - FQ, pQ(wQ + Math.PI), pQ(LQ + Math.PI)]
+    function yk(kk) {
+      const [ek, ik, Dk] = kk;
+      return [ek >= 0 ? Math.PI - ek : -Math.PI - ek, Yk(ik + Math.PI), Yk(Dk + Math.PI)]
     }
 
-    function pQ(QQ) {
-      return qQ.e.mod(QQ + Math.PI, 2 * Math.PI) - Math.PI
+    function Yk(kk) {
+      return fk.c.mod(kk + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function cQ(QQ, FQ) {
-      return Math.abs(qQ.e.computeShortestRotation(QQ[0], FQ[0])) + Math.abs(qQ.e.computeShortestRotation(QQ[1], FQ[1])) + Math.abs(qQ.e.computeShortestRotation(QQ[2], FQ[2]))
+    function Lk(kk, ek) {
+      return Math.abs(fk.c.computeShortestRotation(kk[0], ek[0])) + Math.abs(fk.c.computeShortestRotation(kk[1], ek[1])) + Math.abs(fk.c.computeShortestRotation(kk[2], ek[2]))
     }
-    const CQ = new vQ
+    const Ck = new Pk
   },
-  36753: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      e: () => DQ,
-      h: () => oQ,
-      j: () => LQ,
-      n: () => qQ
+  36747: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => bk,
+      g: () => Sk,
+      h: () => Dk,
+      k: () => fk
     });
-    let LQ = function(QQ) {
-        return QQ[QQ.Linear = 0] = "Linear", QQ[QQ.CatmullRomSpline = 1] = "CatmullRomSpline", QQ
+    let Dk = function(kk) {
+        return kk[kk.Linear = 0] = "Linear", kk[kk.CatmullRomSpline = 1] = "CatmullRomSpline", kk
       }({}),
-      qQ = function(QQ) {
-        return QQ[QQ.NoLoop = 0] = "NoLoop", QQ[QQ.LoopOnLastFrame = 1] = "LoopOnLastFrame", QQ[QQ.HoldOnLastFrame = 2] = "HoldOnLastFrame", QQ
+      fk = function(kk) {
+        return kk[kk.NoLoop = 0] = "NoLoop", kk[kk.LoopOnLastFrame = 1] = "LoopOnLastFrame", kk[kk.HoldOnLastFrame = 2] = "HoldOnLastFrame", kk
       }({}),
-      oQ = function(QQ) {
-        return QQ[QQ.Movement = 0] = "Movement", QQ[QQ.Action = 1] = "Action", QQ[QQ.Emote = 2] = "Emote", QQ[QQ.Custom = 3] = "Custom", QQ
+      Sk = function(kk) {
+        return kk[kk.Movement = 0] = "Movement", kk[kk.Action = 1] = "Action", kk[kk.Emote = 2] = "Emote", kk[kk.Custom = 3] = "Custom", kk
       }({}),
-      DQ = function(QQ) {
-        return QQ[QQ.Start = 0] = "Start", QQ[QQ.Stop = 1] = "Stop", QQ
+      bk = function(kk) {
+        return kk[kk.Start = 0] = "Start", kk[kk.Stop = 1] = "Stop", kk
       }({})
   },
-  4686: (QQ, FQ, wQ) => {
-    wQ.d(FQ, {
-      c: () => qQ,
-      d: () => LQ,
-      f: () => oQ,
-      i: () => vQ,
-      k: () => DQ
+  4786: (kk, ek, ik) => {
+    ik.d(ek, {
+      c: () => fk,
+      d: () => Dk,
+      g: () => Sk,
+      i: () => Pk,
+      m: () => bk
     });
-    const LQ = ["sine", "triangle", "square", "sawtooth"],
-      qQ = 55,
-      oQ = {
+    const Dk = ["sine", "triangle", "square", "sawtooth"],
+      fk = 55,
+      Sk = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function DQ(QQ) {
-      return "string" !== typeof QQ ? QQ : Object.hasOwn(oQ, QQ) ? oQ[QQ] : null
+    function bk(kk) {
+      return "string" !== typeof kk ? kk : Object.hasOwn(Sk, kk) ? Sk[kk] : null
     }
 
-    function kQ(QQ, FQ, wQ) {
-      return Math.min(wQ, Math.max(FQ, QQ))
+    function rk(kk, ek, ik) {
+      return Math.min(ik, Math.max(ek, kk))
     }
 
-    function vQ(QQ) {
-      const FQ = kQ(QQ.durationMs, 10, 500),
-        wQ = kQ(QQ.attackMs, 0, FQ),
+    function Pk(kk) {
+      const ek = rk(kk.durationMs, 10, 500),
+        ik = rk(kk.attackMs, 0, ek),
         {
-          intonation: qQ
-        } = QQ;
+          intonation: fk
+        } = kk;
       return {
-        waveform: LQ.includes(QQ.waveform) ? QQ.waveform : "sine",
-        pitchHz: kQ(QQ.pitchHz, 20, 4e3),
-        glideSemitones: kQ(QQ.glideSemitones, -24, 24),
-        durationMs: FQ,
-        attackMs: wQ,
-        releaseMs: kQ(QQ.releaseMs, 0, FQ - wQ),
-        lowpassHz: null === QQ.lowpassHz ? null : kQ(QQ.lowpassHz, 20, 2e4),
-        volume: kQ(QQ.volume, 0, 2),
+        waveform: Dk.includes(kk.waveform) ? kk.waveform : "sine",
+        pitchHz: rk(kk.pitchHz, 20, 4e3),
+        glideSemitones: rk(kk.glideSemitones, -24, 24),
+        durationMs: ek,
+        attackMs: ik,
+        releaseMs: rk(kk.releaseMs, 0, ek - ik),
+        lowpassHz: null === kk.lowpassHz ? null : rk(kk.lowpassHz, 20, 2e4),
+        volume: rk(kk.volume, 0, 2),
         intonation: {
-          variationSemitones: kQ(qQ.variationSemitones, 0, 6),
-          declineSemitones: kQ(qQ.declineSemitones, 0, 12),
-          questionRiseSemitones: kQ(qQ.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: kQ(qQ.exclaimLiftSemitones, 0, 12)
+          variationSemitones: rk(fk.variationSemitones, 0, 6),
+          declineSemitones: rk(fk.declineSemitones, 0, 12),
+          questionRiseSemitones: rk(fk.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: rk(fk.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: kQ(QQ.syllableMs, 25, 200)
+        syllableMs: rk(kk.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

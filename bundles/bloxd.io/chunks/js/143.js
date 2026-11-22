@@ -1,212 +1,146 @@
 export const id = 143;
 export const ids = [143];
 export const modules = {
-  7904: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      BloxdMsnAccountSdk: () => HQ,
-      MsnSdkAdaptor: () => AQ,
-      msnMockIdentityStorageKey: () => vQ
+  7898: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      BloxdDiscordSDK: () => Hk,
+      DiscordLoginCancelledError: () => Uk,
+      discordPopupTimeoutMs: () => nk
     });
-    var LQ = wQ(1335),
-      qQ = wQ(1196),
-      oQ = wQ(3331),
-      DQ = wQ(619);
-    wQ(27);
-    const kQ = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js",
-      vQ = "msnMockIdentity";
-    let mQ = null;
-
-    function uQ() {
-      return mQ ??= async function() {
-        await (0, qQ.e)(kQ, {}, !1);
-        for (let QQ = 0; QQ < 50 && !window.$msstart; QQ++) await (0, DQ.J)(100)
-      }(), mQ
-    }
-    class HQ {
-      constructor() {}
-      static async setup() {
-        try {
-          await Promise.race([uQ(), (0, DQ.J)(1e4).then((() => {
-            throw new Error("Not loaded after 10000ms")
-          }))])
-        } catch (QQ) {
-          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", QQ), null
-        }
-        return window.$msstart ? new HQ : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
-      }
-      async getSignedInUser() {
-        try {
-          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, DQ.J)(1e4).then((() => {
-            throw new Error("No answer after 10000ms")
-          }))])
-        } catch (QQ) {
-          return "USER_NOT_CONSENTED" !== (null === QQ || void 0 === QQ ? void 0 : QQ.code) && console.error("Failed to get the signed-in MSN Play player:", QQ), null
-        }
-      }
-      async signIn() {
-        return null !== null ? null : await window.$msstart.signInAsync()
-      }
-    }
-    const bQ = 20,
-      YQ = {
-        top: [{
-          width: 970,
-          height: 250
-        }, {
-          width: 728,
-          height: 90
-        }, {
-          width: 320,
-          height: 50
-        }],
-        right: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }],
-        left: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }]
-      },
-      xQ = {
-        leaderboard: {
-          1: ["right", "left"],
-          5: ["top", "left"]
-        },
-        square: {
-          1: []
-        },
-        skyscraper: {
-          2: []
-        }
-      };
-    class AQ extends LQ.b {
+    var Dk = ik(165),
+      fk = ik(1212),
+      Sk = ik(1104),
+      bk = ik(1120),
+      rk = ik.n(bk),
+      Pk = ik(1177),
+      mk = ik(38),
+      Mk = ik(594),
+      Kk = ik(1333),
+      xk = ik(1181);
+    const nk = 6e5;
+    class Uk extends Error {
       constructor() {
-        super(), this.name = "msn", this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+        super(...arguments), this.name = Sk.discordLoginCancelledErrorName
       }
-      static async setup() {
-        return await uQ(), new AQ
+    }
+    class Hk {
+      constructor() {
+        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = fk.k[xk.e.clientEnvironment];
+        const kk = new URL(this.discordRedirectUrl).origin;
+        window.addEventListener("message", (ek => {
+          var ik;
+          if (ek.origin !== kk || "oauth_authentication_discord" !== (null === (ik = ek.data) || void 0 === ik ? void 0 : ik.type)) return;
+          if ("string" !== typeof ek.data.code || !ek.data.code) return void this.failPopup(new Uk("Discord authentication was cancelled on Discord"));
+          const Dk = this.popupWindowPromiseResolve;
+          this.resetPopupState(), null === Dk || void 0 === Dk || Dk(ek.data.code)
+        }))
       }
-      playVideoAd(QQ, FQ) {
-        this.playVideoOrRewarded("video", QQ, QQ)
+      resetPopupState() {
+        null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
       }
-      playRewarded(QQ, FQ) {
-        this.playVideoOrRewarded("rewarded", QQ, FQ)
+      failPopup(kk) {
+        var ek;
+        const ik = this.popupWindowPromiseReject;
+        null === (ek = this.popupWindow) || void 0 === ek || ek.close(), this.resetPopupState(), null === ik || void 0 === ik || ik(kk)
       }
-      canShowBloxdAd(QQ) {
-        for (const FQ in xQ)
-          if (QQ.adId in xQ[FQ]) return !1;
-        return !0
+      openDiscordOAuthWindow() {
+        const kk = xk.e.discordClientID;
+        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${kk}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
       }
-      async renderBanner(QQ) {
-        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,oQ.b)(QQ)}: msn placement is already showing so not requesting`);
-        const FQ = xQ[QQ.adType][QQ.adId];
-        if ((0, DQ.F)(FQ)) return void console.warn(`AD ${(0,oQ.b)(QQ)}: no msn placement is configured for this bloxd placement so not showing any ad`);
-        const wQ = [];
-        for (const LQ of FQ)
-          for (const QQ of YQ[LQ])
-            if (QQ.width <= window.innerWidth - 40 && QQ.height <= window.innerHeight - 40) {
-              const FQ = {
-                placement: LQ,
-                width: QQ.width,
-                height: QQ.height
-              };
-              if (!wQ.some((QQ => eQ(FQ, QQ)))) {
-                wQ.push(FQ);
-                break
-              }
-            } if (wQ.length > 0) {
-          console.log(`AD ${(0,oQ.b)(QQ)}: Attempting to show msn units: `, wQ);
-          const FQ = wQ.map((QQ => `${QQ.placement}:${QQ.width}x${QQ.height}`));
-          this.currentlyShowingBannerPlacement = {
-            placementId: (0, oQ.b)(QQ),
-            renderPromise: window.$msstart.showDisplayAdsAsync(FQ).then((() => {
-              console.log(`AD ${(0,oQ.b)(QQ)}: Successfully request msn banner ad`)
-            })).catch((FQ => {
-              console.log(`AD ${(0,oQ.b)(QQ)}: Error while requesting msn banner ad`, FQ)
-            }))
-          }
-        } else console.warn(`AD ${(0,oQ.b)(QQ)}: couldn't find an msn unit that fit screen size`)
+      async showDiscordAuthPrompt() {
+        return new Promise(((kk, ek) => {
+          Kk.NotificationProvider.showPromptPopup({
+            title: "Discord Login Required",
+            confirmText: "Continue",
+            confirmTooltip: "Open Discord login window",
+            cancelText: "Cancel",
+            cancelTooltip: "Cancel Discord login"
+          }).getResult().then((ik => {
+            !0 === ik ? kk() : ek(new Uk("Discord login was cancelled"))
+          })).catch(ek)
+        }))
       }
-      async clearBanner(QQ) {
-        null !== this.currentlyShowingBannerPlacement && (0, oQ.b)(QQ) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,oQ.b)(QQ)}: Attempting to clear msn banner ads for banner`, QQ), await this.clearAllBannerAds())
+      signInWithPopup() {
+        if (null !== this.popupWindowPromise) return this.popupWindowPromise;
+        const kk = new Promise(((kk, ek) => {
+          this.popupWindowPromiseResolve = kk, this.popupWindowPromiseReject = ek
+        }));
+        return this.popupWindowPromise = kk, mk.c.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
+          this.failPopup(new Error("Discord authentication timed out"))
+        }), nk), this.openPopup(kk).catch((ek => {
+          this.popupWindowPromise === kk && this.failPopup(ek instanceof Error ? ek : new Error(String(ek)))
+        })), kk
       }
-      async clearAllBannerAds() {
+      async openPopup(kk) {
+        let ek = this.openDiscordOAuthWindow();
+        if (!ek) {
+          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== kk) return;
+          ek = this.openDiscordOAuthWindow()
+        }
+        if (console.log("Discord OAuth window opened:", ek), !ek) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
+        this.popupWindow = ek;
+        const ik = window.setInterval((() => {
+          ek.closed && this.popupWindowPromise === kk && (window.clearInterval(ik), this.popupWindowCheckInterval = null, window.setTimeout((() => {
+            this.popupWindowPromise === kk && this.failPopup(new Uk("Discord authentication was cancelled - popup window was closed"))
+          }), 1e3))
+        }), 200);
+        this.popupWindowCheckInterval = ik
+      }
+      async exchangeAuthorizationCodeForAccessToken(kk, ek) {
+        const {
+          accessToken: ik,
+          refreshToken: Dk
+        } = await rk()((async () => await (0, Sk.postJsonWithMetricsCookiesAndJsonResponse)(`${Pk.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
+          authorizationCode: kk,
+          bloxdClientEnvironment: xk.e.clientEnvironment,
+          instanceId: null
+        }, {
+          retries: 0
+        }, ek.getMetricsCookies())), {
+          retries: 3
+        });
+        return console.log("Discord access token received:", Dk, this.bloxdDiscordRefreshTokenKey), mk.c.setItem(this.bloxdDiscordRefreshTokenKey, Dk), ik
+      }
+      hasCurrentUser() {
+        const kk = mk.c.getItem(this.bloxdDiscordRefreshTokenKey);
+        return !(0, Mk.F)(kk)
+      }
+      async getCurrentUser(kk) {
+        const ek = mk.c.getItem(this.bloxdDiscordRefreshTokenKey);
+        if (!ek) return null;
+        let ik;
         try {
-          if (this.isCurrentlyClearingAllBanners) return;
-          this.isCurrentlyClearingAllBanners = !0, null !== this.currentlyShowingBannerPlacement && await this.currentlyShowingBannerPlacement.renderPromise, await window.$msstart.hideDisplayAdsAsync(), console.log("AD: Successfully cleared all msn banner ads")
-        } catch (QQ) {
-          console.log("AD: Error while clearing all msn banner ads", QQ)
-        } finally {
-          this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+          const Dk = await rk()((async () => {
+            try {
+              return await (0, Sk.postJsonWithMetricsCookiesAndJsonResponse)(`${Pk.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
+                refreshToken: ek
+              }, {
+                retries: 0
+              }, kk.getMetricsCookies())
+            } catch (ik) {
+              if (wk(ik)) throw new(rk().AbortError)(ik);
+              throw ik
+            }
+          }), {
+            retries: 3
+          });
+          ik = Dk.accessToken, mk.c.setItem(this.bloxdDiscordRefreshTokenKey, Dk.refreshToken)
+        } catch (Dk) {
+          return wk(Dk) ? (mk.c.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", Dk), null)
+        }
+        return {
+          accessToken: ik
         }
       }
-      playVideoOrRewarded(QQ, FQ, wQ) {
-        const LQ = FQ => {
-          console.error(`AD: Error while playing MSN ${QQ} ad: `, FQ), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), wQ()
-        };
-        if (window.$msstart) {
-          console.log(`AD: Attempting to play MSN ${QQ} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
-          const wQ = async () => {
-            try {
-              const wQ = await window.$msstart.loadAdsAsync("rewarded" === QQ),
-                LQ = await window.$msstart.showAdsAsync(wQ.instanceId);
-              this.clearAllBannerAds(), await LQ.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${QQ} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), FQ()
-            } catch (wQ) {
-              LQ(wQ)
-            }
-          };
-          window.adStartSoPause(null, {
-            preventMovement: !0
-          }), wQ()
-        } else LQ(`AD: Can't play MSN ${QQ} ad because sdk is not loaded`)
+      signOut() {
+        this.failPopup(new Uk("Signed out of Discord during login")), mk.c.removeItem(this.bloxdDiscordRefreshTokenKey)
       }
     }
 
-    function tQ(QQ) {
-      let FQ, wQ;
-      switch (QQ.placement) {
-        case "top":
-          FQ = (window.innerWidth - QQ.width) / 2, wQ = bQ;
-          break;
-        case "right":
-          FQ = window.innerWidth - QQ.width - bQ, wQ = window.innerHeight / 2 - QQ.height / 2 - 10;
-          break;
-        case "left":
-          FQ = bQ, wQ = window.innerHeight / 2 - QQ.height / 2 - 10
-      }
-      return {
-        x1: FQ,
-        y1: wQ,
-        x2: FQ + QQ.width,
-        y2: wQ + QQ.height
-      }
-    }
-
-    function eQ(QQ, FQ) {
-      const wQ = tQ(QQ),
-        LQ = tQ(FQ);
-      return !(wQ.x2 <= LQ.x1 || LQ.x2 <= wQ.x1 || wQ.y2 <= LQ.y1 || LQ.y2 <= wQ.y1)
+    function wk(kk) {
+      return kk instanceof Dk.d && 435 === kk.httpCode
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

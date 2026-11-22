@@ -1,43 +1,37 @@
 export const id = 168;
 export const ids = [168];
 export const modules = {
-  8752: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8776: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["It all starts on one tiny island floating high in the sky. In Bloxd Skyblock, that little island becomes a full RPG. You'll level up skills, take on quests, beat dungeon bosses and trade at the auction house, and bit by bit your island turns into something special. There's nothing to install, so you can be standing on it in seconds. Fancy starting from a single block instead? Try One Block. After island PvP? That's Sky Islands."],
-      howToPlay: ["Your first quest is an easy one. Gather logs on your island, craft a bridge and cross to the portal to get to the Hub. That's where everyone hangs out. Up Dog the auctioneer runs the Open Market, so you can buy and sell items with other players there. The Banker looks after your Gold Coins, and the quest givers always have something for you to do. From the Hub, portals take you to Manor Farm, the Dungeons and Cragrock Mines (a meteor has just crashed there).", "You've got five skills to level: Foraging, Combat, Mining, Farming and Fishing. Each one goes up by doing the thing. Chop wood and pick flowers for Foraging. Beat creatures for Combat. Break ores for Mining, harvest fully grown crops for Farming and catch fish for Fishing. Every skill has a starter quest that hands you a tool to speed things up, and each Combat level adds a bit more damage. Got Gold Coins to spare? Spend them on decorative blocks in the Instant Buy shop and make your island look exactly how you want."],
-      features: ["Your Own Private Sky Island to Grow and Decorate", "5 Skills to Level Up: Foraging, Combat, Mining, Farming and Fishing", "Quests That Give You an Axe, Sword, Pickaxe, Hoe and Fishing Rod", "Explore the Hub, Manor Farm, Cragrock Mines and the Dungeons", "Timed Dungeons with Boss Fights on Easy, Medium, Hard and Insane", "Buy and Sell Items with Other Players at the Auction House", "Visit Other Players' Islands", "Daily Rewards, Streaks and Leaderboards"],
-      tips: ["Do the skill starter quests early. The tools they give you make everything faster", "Level up Combat before you go into the Dungeons, since every level adds extra damage", "Start each dungeon on Easy and work your way up to Insane", "You can only trade in the Hub, so pop over to Up Dog to sell stuff you don't need", "Play every day to keep your daily reward streak going", "Type /home to get back to your island from anywhere"],
-      similarGames: ["classic_survival", "oneBlock", "skyIslands", "survivalFactory"],
+    const Dk = {
+      whatIs: ["When the sun goes down, the monsters come out. Bloxd Day & Night Survival is a survival mode built around the clock. You mine, craft and build while it's light, then protect your base once it gets dark. Light up your world with torches and see if you can make it through the night. Choose this over regular Survival if you want torches, night-time danger and a Days Survived leaderboard to be the main event. So, how many days can you last?"],
+      howToPlay: ["Use the daylight to gather resources, craft tools and build somewhere safe. Time goes from dawn to day, then dusk to night. The game announces the time, and there's a progress bar showing how far through the cycle you are. Once dusk hits, get ready. At night it gets properly dark and only hostile mobs spawn, right on the surface. That includes the Draugr Huntress and the rare Draugr Warper.", "Torches are your best defence, because hostile mobs won't spawn near light. You get a few free torches when you first join, so stick them around your base. When morning comes, any hostile mobs still out in the sunlight start to burn. Mobs in caves or under cover are fine, though, so watch yourself underground. Sleep in a bed to skip the night, and keep surviving to climb the Days Survived leaderboard."],
+      features: ["Dawn, Day, Dusk and Night Cycle with Time Announcements", "Hostile Mobs That Spawn on the Surface at Night", "Torches to Keep Monsters Away from Your Base", "Free Torches When You First Join", "Sleep in a Bed to Skip the Night", "Days Survived and Days Played Leaderboard", "Mining, Crafting, Base Building and PvP", "Free Private Servers with Day & Night Settings"],
+      tips: ["Get torches up around your base before dusk", "Use the free torches you start with straight away", "Keep an eye on the progress bar so the night doesn't sneak up on you", "Not ready to fight? Stay inside at night", "Wait for sunrise, because monsters left out in the open start to burn", "Careful in caves. Mobs underground don't burn", "Guard your base with Protectors, which you make from diamonds", "In public lobbies, build away from spawn, since the area near spawn resets every few hours"],
+      similarGames: ["classic_survival", "classic", "classic_survivalGuns", "skyblock"],
       faq: [{
-        question: "What is Bloxd Skyblock?",
-        answer: "It's a Skyblock RPG. You grow your own private sky island, level up skills, do quests, trade at the auction house and fight dungeon bosses."
+        question: "What is Bloxd Day and Night Survival?",
+        answer: "A survival mode on Bloxd.io with a day-night cycle. You build and explore during the day, then use torches to protect your base from the monsters that come out at night."
       }, {
-        question: "How do you play Bloxd Skyblock?",
-        answer: "Gather some logs, craft a bridge and cross to the portal to reach the Hub. After that, follow the quests, level your skills and go exploring in Manor Farm, Cragrock Mines and the Dungeons."
+        question: "How do I stop monsters spawning near my base in Bloxd?",
+        answer: "Torches. Hostile mobs won't spawn near light, so light up your base and the area around it before night falls."
       }, {
-        question: "What skills are in Bloxd Skyblock?",
-        answer: "Five of them: Foraging, Combat, Mining, Farming and Fishing. You level each one just by doing it, so breaking ores levels Mining and catching fish levels Fishing."
+        question: "How do I skip the night in Day & Night Survival?",
+        answer: "Sleep in a bed. By default the night gets skipped once more than half the players are asleep. Private-server owners can change that or turn sleeping off."
       }, {
-        question: "What are the Dungeons in Bloxd Skyblock?",
-        answer: "Timed challenges like the Crumbling Crypt and the Frozen Hollow. You fight through the rooms and then face a boss, such as the Gravewarden or the Frostbound Knight. You can play each dungeon on Easy, Medium, Hard or Insane, and your best times are saved."
+        question: "What happens to monsters when the sun comes up?",
+        answer: "Hostile mobs standing in direct sunlight start to burn. Mobs in caves or under cover are safe, so stay alert if you're underground."
       }, {
-        question: "How do I trade in Bloxd Skyblock?",
-        answer: "Find Up Dog the auctioneer in the Hub and open the Open Market. That's where you buy and sell items with other players, and it only works in the Hub."
+        question: "How are Days Survived counted?",
+        answer: "One day is a full cycle of day, dusk, night and dawn. Days Survived is how many days in a row you've stayed alive, and it resets when you die. Days Played keeps going no matter what. You'll see both on the lobby leaderboard."
       }, {
-        question: "Can I visit other players' islands?",
-        answer: "You can. Type /visit and a player's name, as long as they're in the same game and their island is open. Owners pick who's allowed in, and /home brings you back to your own island."
-      }, {
-        question: "What happened at Cragrock Mines?",
-        answer: "A huge meteor crashed into it, and the dwarves who live there need your help. Take the portal from the Hub, explore the mines and dig for ores."
-      }, {
-        question: "Does my island save between sessions?",
-        answer: "Yep. Your island, skills, Gold Coins, quests and dungeon progress all save. Log in to an account so nothing gets lost if your browser data is cleared."
+        question: "Can I change the day and night settings on my own server?",
+        answer: "Yes. On your free private server you can pause the cycle, set the time, pick how many players need to sleep and turn the leaderboard on or off, plus a few other options."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);

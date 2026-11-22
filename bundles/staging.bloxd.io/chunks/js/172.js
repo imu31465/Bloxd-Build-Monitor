@@ -1,37 +1,43 @@
 export const id = 172;
 export const ids = [172];
 export const modules = {
-  8776: (QQ, FQ, wQ) => {
-    wQ.r(FQ), wQ.d(FQ, {
-      pageBody: () => LQ
+  8802: (kk, ek, ik) => {
+    ik.r(ek), ik.d(ek, {
+      pageBody: () => Dk
     });
-    const LQ = {
-      whatIs: ["Build machines on your own floating island and watch them work! That's Bloxd Build a Factory 2 in one line. You mine ore, link your machines up with conveyor belts and turn a couple of drills into a massive, fully automated factory. Never played a factory game before? Don't worry, it's easy to pick up. The original Build a Factory is a race to launch a rocket before a shared world resets. This one's about growing your own island."],
-      howToPlay: ["Use your Workbench to make a Machine Bench. Build a Burner Drill, stick it on an ore Deposit and give it fuel, and it starts mining by itself. Belt the ore into a Crusher to turn it into Grit (that's crushed ore), then into a Smelter to make bars. From there you can press bars into plates, spin Copper Bars into wire and make parts like Motors at the Parts Bench. Give your Core the parts it asks for and it moves up a tier, which unlocks better machines.", "For power you've got Generators, Solar Panels and Volt Engines. Drop down into the Wilds below your island to find rare ore, open ruin chests for Salvage and break fallen comets, then head home and build bigger. When you log off, your island pauses and picks up right where it left off when you're back."],
-      features: ["Your Own Floating Factory Island", "Conveyor Belts, Fast Belts, Splitters, Sorting Gates, Belt Lifts and Tunnels", "Drills, Crushers, Smelters, Presses, Wire Mills, Assemblers and More", "Tier Up Your Core to Unlock New Machines, Then Build the Star Spire", "Power from Generators, Solar Panels and Volt Engines", "Explore the Wilds for Rare Ore, Ruin Chests and Comets", "Fill Star Forge Orders for Deposit Seeds and Comet Cores", "Build Several Islands, Play Co-op with Friends or Visit Theirs"],
-      tips: ["Use Deposit Seeds to grow Deposits that never run out", "Crush ore into Grit before you smelt it and you'll get twice the bars", "Teach a Sorting Gate an item and it'll send that item down its own belt", "A Power Coupler makes Crushers, Smelters and Alloy Kilns twice as fast", "Belt spare items into a Storage Silo so your belts don't jam", "Carry an Ore Lens in the Wilds and it'll point you to the nearest rare ore"],
-      similarGames: ["survivalFactory", "skyblock", "oneBlock", "classic_survival"],
+    const Dk = {
+      whatIs: ["It all starts on one tiny island floating high in the sky. In Bloxd Skyblock, that little island becomes a full RPG. You'll level up skills, take on quests, beat dungeon bosses and trade at the auction house, and bit by bit your island turns into something special. There's nothing to install, so you can be standing on it in seconds. Fancy starting from a single block instead? Try One Block. After island PvP? That's Sky Islands."],
+      howToPlay: ["Your first quest is an easy one. Gather logs on your island, craft a bridge and cross to the portal to get to the Hub. That's where everyone hangs out. Up Dog the auctioneer runs the Open Market, so you can buy and sell items with other players there. The Banker looks after your Gold Coins, and the quest givers always have something for you to do. From the Hub, portals take you to Manor Farm, the Dungeons and Cragrock Mines (a meteor has just crashed there).", "You've got five skills to level: Foraging, Combat, Mining, Farming and Fishing. Each one goes up by doing the thing. Chop wood and pick flowers for Foraging. Beat creatures for Combat. Break ores for Mining, harvest fully grown crops for Farming and catch fish for Fishing. Every skill has a starter quest that hands you a tool to speed things up, and each Combat level adds a bit more damage. Got Gold Coins to spare? Spend them on decorative blocks in the Instant Buy shop and make your island look exactly how you want."],
+      features: ["Your Own Private Sky Island to Grow and Decorate", "5 Skills to Level Up: Foraging, Combat, Mining, Farming and Fishing", "Quests That Give You an Axe, Sword, Pickaxe, Hoe and Fishing Rod", "Explore the Hub, Manor Farm, Cragrock Mines and the Dungeons", "Timed Dungeons with Boss Fights on Easy, Medium, Hard and Insane", "Buy and Sell Items with Other Players at the Auction House", "Visit Other Players' Islands", "Daily Rewards, Streaks and Leaderboards"],
+      tips: ["Do the skill starter quests early. The tools they give you make everything faster", "Level up Combat before you go into the Dungeons, since every level adds extra damage", "Start each dungeon on Easy and work your way up to Insane", "You can only trade in the Hub, so pop over to Up Dog to sell stuff you don't need", "Play every day to keep your daily reward streak going", "Type /home to get back to your island from anywhere"],
+      similarGames: ["classic_survival", "oneBlock", "skyIslands", "survivalFactory"],
       faq: [{
-        question: "What is Build a Factory 2 on Bloxd?",
-        answer: "An idle factory builder. You build machines on your own floating island, connect them with conveyor belts and let them make everything for you."
+        question: "What is Bloxd Skyblock?",
+        answer: "It's a Skyblock RPG. You grow your own private sky island, level up skills, do quests, trade at the auction house and fight dungeon bosses."
       }, {
-        question: "Is Build a Factory 2 an idle factory game?",
-        answer: "Partly. Once it's set up, your factory runs by itself while you explore the Wilds or plan your next build. It pauses while you're offline and carries on where it stopped when you come back."
+        question: "How do you play Bloxd Skyblock?",
+        answer: "Gather some logs, craft a bridge and cross to the portal to reach the Hub. After that, follow the quests, level your skills and go exploring in Manor Farm, Cragrock Mines and the Dungeons."
       }, {
-        question: "How do I unlock new machines in Build a Factory 2?",
-        answer: "Tier up your Core by giving it the parts it asks for, like Motors and, later on, Logic Boards. Every new tier unlocks more machines and items."
+        question: "What skills are in Bloxd Skyblock?",
+        answer: "Five of them: Foraging, Combat, Mining, Farming and Fishing. You level each one just by doing it, so breaking ores levels Mining and catching fish levels Fishing."
       }, {
-        question: "What's the best way to power my factory?",
-        answer: "You've got a few options. Burn Coal or Charcoal in a Generator, build Solar Panels (they keep running at night at half power), or run Volt Engines on Voltite Cells for loads of power. Add Charge Vaults to store more."
+        question: "What are the Dungeons in Bloxd Skyblock?",
+        answer: "Timed challenges like the Crumbling Crypt and the Frozen Hollow. You fight through the rooms and then face a boss, such as the Gravewarden or the Frostbound Knight. You can play each dungeon on Easy, Medium, Hard or Insane, and your best times are saved."
       }, {
-        question: "What are the Wilds?",
-        answer: "The land below your island. Drop down to mine rare ore, loot ruin chests for Salvage, explore the Old Works and break fallen comets for Comet Cores."
+        question: "How do I trade in Bloxd Skyblock?",
+        answer: "Find Up Dog the auctioneer in the Hub and open the Open Market. That's where you buy and sell items with other players, and it only works in the Hub."
       }, {
-        question: "Can friends help build my factory?",
-        answer: "Definitely. Invite friends to a shared co-op island, or use /visit to have a look around other players' islands."
+        question: "Can I visit other players' islands?",
+        answer: "You can. Type /visit and a player's name, as long as they're in the same game and their island is open. Owners pick who's allowed in, and /home brings you back to your own island."
+      }, {
+        question: "What happened at Cragrock Mines?",
+        answer: "A huge meteor crashed into it, and the dwarves who live there need your help. Take the portal from the Hub, explore the mines and dig for ores."
+      }, {
+        question: "Does my island save between sessions?",
+        answer: "Yep. Your island, skills, Gold Coins, quests and dungeon progress all save. Log in to an account so nothing gets lost if your browser data is cleared."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const QQ in modules) Object.freeze(modules[QQ]);
+for (const kk in modules) Object.freeze(modules[kk]);
