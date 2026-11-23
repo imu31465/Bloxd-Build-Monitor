@@ -1,43 +1,40 @@
 export const id = 163;
 export const ids = [163];
 export const modules = {
-  8754: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      pageBody: () => Dk
+  8935: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      pageBody: () => QC
     });
-    const Dk = {
-      whatIs: ["In Bloxd Skywars, everyone starts on their own island in the sky. Only one player is still there at the end. Loot your chests for weapons, armour and blocks, bridge over to your rivals and knock them into the void. It's free-for-all PvP for up to 12 players, and the last one standing takes the win."],
-      howToPlay: ["Each match starts with you in a glass cage on your own island. The cage opens after about 3 seconds, and you can't use items while you're stuck inside. Once you're out, loot your island's chests quickly, because your gear is split between them. Then build a bridge and go after everyone else.", "Chests refill every 2.5 minutes. When \"Chests replenished.\" pops up in chat, it's worth heading back for more loot. After 7 minutes, or as soon as only two players are left, everyone still alive gets a compass pointing at the nearest player. There's nowhere left to hide at that point. Fall into the void and you're out.", "You get Gold for every kill and 20 Gold for a win. Spend Gold and Gems in the shop on new Skywars kits and perks."],
-      features: ["Free-for-All Matches for Up to 12 Players", "Around 30 Kits, from Archer and Builder to Ghost, Sniper, Catapult and Salmon", "Killstreak Perks You Can Buy and Upgrade, like Bridger, Leech and Inferno", "Chests That Refill Every 2.5 Minutes", "A Compass That Tracks the Nearest Player After 7 Minutes or When Two Remain", "Match Modifiers like Lucky Mode, Lifesteal, Explosives Frenzy and Knockback Knockout", "10 Maps: Jungle, Castle, Ice, Bricks, Street, Chess, Food, Aqueduct, Mushroom Land and Warehouse", "Leaderboards"],
-      tips: ["Open every chest on your island before you leave, since your gear is spread across them", "Take your time bridging. One wrong step and you're in the void", "When the chests refill, try to get back to them before your rivals do", "Fight near the edges and use knockback to push enemies off the map", "More kills means more Gold, so you'll unlock new kits faster", "Try kits that suit how you play: Builder for bridging, Archer for range or Tank for armour", "Choose perks to match your style too, like Rusher for speed at the start or Leech for health after kills"],
-      similarGames: ["bedwars", "luckyTowers", "skyIslands"],
+    const QC = {
+      whatIs: ["Smash Lucky Blocks for random loot, funny surprises and some genuinely wild outcomes, then take on everyone else in a chaotic multiplayer PvP arena. In Bloxd Lucky Blocks Battlegrounds, whoever has the most kills when the arena resets wins the round. Lucky Bedwars is all about beds and Lucky Towers is about surviving on a pillar. This one's just a big arena where the Lucky Blocks never stop coming."],
+      howToPlay: ["You start in your own safe base, and nobody else can get in. Step out into the arena and a free Lucky Block lands with you every 15 seconds. Crack them open for weapons, armour, pets and surprises, then go and fight.", "Lucky Blocks, Weapon Lucky Blocks and Pet Lucky Blocks spawn on pads around the arena and come back every minute. Every 90 seconds an Ultra Lucky Block appears in the centre, and whoever grabs it first keeps it. You also get your own Ultra Lucky Block in your base every 5 minutes, and only you can see it. The arena resets every 15 minutes, and the player with the most kills wins the round. You keep your items through a reset, so you're ready to go straight away."],
+      features: ["Multiplayer Lucky Block PvP Arena", "A Free Lucky Block Every 15 Seconds", "Weapon and Pet Lucky Blocks on Pads Around the Map", "Ultra Lucky Block in the Centre Every 90 Seconds", "Your Own Ultra Lucky Block Every 5 Minutes", "Safe Personal Base Nobody Else Can Enter", "Kills Leaderboard and a New Round Every 15 Minutes"],
+      tips: ["Stay out in the arena. You don't get free Lucky Blocks while you're in your base", "The second the Ultra Lucky Block appears, head for the centre", "Open Pet Lucky Blocks for a pet that'll defend you from anyone who attacks you", "Need a breather? Go back to your base, because nobody can follow you in", "Inventory getting messy? Press F to clear it. You'll keep your armour, hotbar, arrows and firecrackers", "Pop home every 5 minutes to grab your own Ultra Lucky Block", "Watch the leaderboard on the right so you know who you need to beat"],
+      similarGames: ["luckyBedwars", "luckyTowers", "skywars", "bedwars"],
       faq: [{
-        question: "What is Bloxd Skywars?",
-        answer: "It's a PvP mode on Bloxd.io where every player starts on a floating island. You loot chests, bridge across to your rivals and try to be the last one standing."
+        question: "What is Lucky Blocks Battlegrounds?",
+        answer: "A multiplayer lucky block PvP arena. You open Lucky Blocks for random loot, fight other players and try to end each 15-minute round with the most kills."
       }, {
-        question: "How do you win in Skywars?",
-        answer: "Be the last player alive. Knock everyone else out, or push them off their islands into the void. Winning gets you 20 Gold."
+        question: "How do you win Lucky Blocks Battlegrounds?",
+        answer: "Get the most kills before the arena resets. That happens every 15 minutes, and the top player wins the round."
       }, {
-        question: "Can I play Skywars in my browser?",
-        answer: "Yep. Bloxd.io Skywars runs right in your browser, so you can jump into a match without installing anything."
+        question: "How do I get Lucky Blocks?",
+        answer: "You get a free one every 15 seconds while you're out in the arena. More spawn on pads around the map, and there's an Ultra Lucky Block in the centre every 90 seconds."
       }, {
-        question: "What are the best Skywars kits?",
-        answer: "Honestly, it depends how you like to play. Sniper has a one-shot crossbow and Catapult can knock enemies off the map. Ghost can turn invisible, and Builder starts with extra blocks for bridging. You unlock more kits with Gold and Gems."
+        question: "What is the Ultra Lucky Block?",
+        answer: "An extra-special Lucky Block. One shows up in the middle of the arena every 90 seconds for everyone to race for, and you get your own in your base every 5 minutes as well."
       }, {
-        question: "What do perks do in Bloxd Skywars?",
-        answer: "Perks give you bonuses while you play. Maniac gives you more damage after kills, Bridger gives you a chance to get placed blocks back and Leech heals you after kills. You can upgrade them to make them stronger."
+        question: "What's inside Bloxd lucky blocks?",
+        answer: "Pretty much anything, from weapons and armour to pets and funny surprises. Weapon Lucky Blocks and Pet Lucky Blocks give you a better chance of a weapon or a pet."
       }, {
-        question: "How do I get Gold in Skywars?",
-        answer: "Every kill earns Gold, and you get an extra 20 Gold for winning a match."
+        question: "Can other players attack me in my base?",
+        answer: "Nope. Other players can't get into your base, break its blocks or open its chests."
       }, {
-        question: "How many players fit in one Skywars match?",
-        answer: "Up to 12 players fight it out in each free-for-all match."
-      }, {
-        question: "What does the compass do in Skywars?",
-        answer: "After 7 minutes, or once only two players are left, everyone still alive gets a compass that points to the nearest player."
+        question: "Do I lose my items when the Lucky Block Battlegrounds arena resets?",
+        answer: "No, your inventory stays with you. Everyone's kills go back to zero for the new round, though."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

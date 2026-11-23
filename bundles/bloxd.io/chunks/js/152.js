@@ -1,188 +1,115 @@
 export const id = 152;
 export const ids = [152];
 export const modules = {
-  7950: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => mk
+  8142: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => qC
     });
-    var Dk = ik(2849);
-    const fk = [1, 8, 9],
-      Sk = 5,
-      bk = 200,
-      rk = 150;
+    var QC = ZC(2909);
+    const wC = [1, 8, 9],
+      bC = 5,
+      nC = 200,
+      fC = 150;
 
-    function Pk(kk, ek) {
-      let ik = 0;
-      kk("addEventListener", 2, ((kk, bk) => {
-        if (!bk) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
-        const rk = function(kk) {
-          const ek = "useractioncomplete" === kk.eventStatus || "tcloaded" === kk.eventStatus && !!kk.tcString;
-          return kk.gdprApplies && ek ? fk.every((ek => !0 === kk.purpose.consents[ek])) : null
-        }(kk);
-        if (null === rk) return;
-        const Pk = ++ik;
-        if (!rk) return void(0, Dk.B)(!1);
-        if ("nitro" === ek) return void(0, Dk.B)(!0);
-        const mk = window.__tcfapi;
-        mk ? mk("getNonIABVendorConsents", 2, ((kk, ek) => {
-          var fk;
-          Pk === ik && (0, Dk.B)(ek && !0 === (null === (fk = kk.nonIabVendorConsents) || void 0 === fk ? void 0 : fk[Sk]))
+    function oC(CC, zC) {
+      let ZC = 0;
+      CC("addEventListener", 2, ((CC, nC) => {
+        if (!nC) return void console.warn("TCF CMP couldn't report a consent event, so our consent defaults stand");
+        const fC = function(CC) {
+          const zC = "useractioncomplete" === CC.eventStatus || "tcloaded" === CC.eventStatus && !!CC.tcString;
+          return CC.gdprApplies && zC ? wC.every((zC => !0 === CC.purpose.consents[zC])) : null
+        }(CC);
+        if (null === fC) return;
+        const oC = ++ZC;
+        if (!fC) return void(0, QC.I)(!1);
+        if ("nitro" === zC) return void(0, QC.I)(!0);
+        const qC = window.__tcfapi;
+        qC ? qC("getNonIABVendorConsents", 2, ((CC, zC) => {
+          var wC;
+          oC === ZC && (0, QC.I)(zC && !0 === (null === (wC = CC.nonIabVendorConsents) || void 0 === wC ? void 0 : wC[bC]))
         })) : console.warn("TCF CMP reported a choice but its __tcfapi is gone, so our consent defaults stand")
       }))
     }
 
-    function mk(kk) {
-      if (window.__tcfapi) return void Pk(window.__tcfapi, kk);
-      let ek = 0;
-      const ik = window.setInterval((() => {
-        ek++;
-        const Dk = window.__tcfapi;
-        Dk ? (window.clearInterval(ik), Pk(Dk, kk)) : ek >= rk && window.clearInterval(ik)
-      }), bk)
+    function qC(CC) {
+      if (window.__tcfapi) return void oC(window.__tcfapi, CC);
+      let zC = 0;
+      const ZC = window.setInterval((() => {
+        zC++;
+        const QC = window.__tcfapi;
+        QC ? (window.clearInterval(ZC), oC(QC, CC)) : zC >= fC && window.clearInterval(ZC)
+      }), nC)
     }
   },
-  7966: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      NitroSdkAdaptor: () => Pk
+  8135: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      AdinPlaySdkAdaptor: () => qC
     });
-    var Dk = ik(1298),
-      fk = ik(1163),
-      Sk = ik(7950),
-      bk = ik(2849);
-    const rk = "NitroOutstreamVideo";
-    class Pk extends Dk.e {
+    var QC = ZC(1269),
+      wC = ZC(1127),
+      bC = ZC(216),
+      nC = ZC(8142),
+      fC = ZC(2909);
+    const oC = ["CN", "VN", "IN", "PK", "ID", "EG", "BD", "SV", "DZ", "EC", "VE", "UA", "MA", "LK", "NG", "BO", "KE", "TN", "RU", "NP", "IQ", "MM", "HN", "UY", "JO", "PY", "PS", "ET", "GH", "JM", "CM", "AS", "SY", "BY", "AO", "MN", "GY", "LB", "MV", "BW", "UG"];
+    class qC extends QC.c {
       constructor() {
-        super(), this.name = "nitro", this.bannerAutoRefresh = "alwaysOn", this.videoInFlight = !1
+        super(), this.name = "adinplay", this.bannerAutoRefresh = "disableable", this.noAdCountries = oC
       }
       static async setup() {
-        return window.nitroAds = window.nitroAds || {
-          createAd: function() {
-            for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
-            return new Promise((kk => {
-              window.nitroAds.queue.push(["createAd", ek, kk])
-            }))
-          },
-          addUserToken: function() {
-            for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
-            window.nitroAds.queue.push(["addUserToken", ek])
-          },
-          queue: []
-        }, document.addEventListener("nitroAds.rendered", (kk => {
-          var ek, ik, Dk;
-          const fk = document.getElementById(null !== (ek = null === (ik = kk.detail) || void 0 === ik || null === (Dk = ik.adInfo) || void 0 === Dk ? void 0 : Dk.adUnitCode) && void 0 !== ek ? ek : "");
-          null !== fk && void 0 !== fk && fk.classList.contains("NitroBanner") && fk.classList.toggle("NitroBannerUnfilled", "blank" === kk.detail.type)
-        })), (0, bk.A)(), await (0, fk.d)("https://s.nitropay.com/ads-2842.js", {
-          "data-cfasync": "false"
-        }), (0, Sk.e)("nitro"), new Pk
+        return (0, bC.canonicaliseZonesWhenIdle)(oC), (0, fC.F)(), await (0, wC.e)("https://api.adinplay.com/libs/aiptag/pub/RBN/bloxd.io/tag.min.js"), (0, nC.b)("inMobi"), new qC
       }
-      playVideoAd(kk, ek) {
-        this.showVideoAd(kk, kk)
+      playRewarded(CC, zC) {
+        if ("undefined" !== typeof window.aiptag.adplayer) {
+          console.log("AD: Requesting AdInPlay preroll ad for rewarded placement");
+          const ZC = "video_reward";
+          window.aiptag.cmd.player.push((function() {
+            window.aiptag.adplayer.startPreRoll({
+              alias: ZC
+            })
+          })), window.adStartSoPause(CC, {
+            onFailCb: zC
+          })
+        } else console.log("AD: AIP ad lib not loaded, no rewarded ad playing"), zC()
       }
-      playRewarded(kk, ek) {
-        this.showVideoAd(kk, ek)
+      playVideoAd(CC, zC) {
+        "undefined" !== typeof window.aiptag.adplayer ? (console.log("AD: Requesting AdInPlay video ad" + (zC ? ` (alias: ${zC})` : "")), window.aiptag.cmd.player.push((function() {
+          window.aiptag.adplayer.startPreRoll({
+            alias: zC
+          })
+        })), window.adStartSoPause(CC)) : (CC(), console.error("AIP ad lib not loaded, no ad playing"))
       }
-      showVideoAd(kk, ek) {
-        if (this.videoInFlight) return console.log("AD: Nitro video already playing"), void ek();
-        const ik = document.getElementById("GenericVideoWrapper"),
-          Dk = document.getElementById("GenericVideoInner");
-        if (null === ik || null === Dk) return void ek();
-        this.videoInFlight = !0;
-        let fk = !1;
-        const Sk = document.createElement("div");
-        Sk.id = rk, Sk.className = "NitroVideoPlacement";
-        const bk = bk => {
-          if (!fk) {
-            fk = !0, clearTimeout(lk), clearInterval(wk), document.removeEventListener("nitroAds.adResult", Mk), document.removeEventListener("nitroAds.rendered", Kk), document.removeEventListener("nitroAds.complete", xk);
-            try {
-              nk.remove(), Sk.querySelectorAll("video").forEach((kk => {
-                kk.pause()
-              })), Sk.remove(), Dk.classList.remove("NitroVideo"), ik.style.display = "none"
-            } catch (rk) {
-              console.error("AD: Error tearing down Nitro video", rk)
-            } finally {
-              this.videoInFlight = !1, window.adCompleteSoResume(), bk ? kk() : ek()
-            }
-          }
-        };
-        let Pk = !1;
-        const mk = (kk, ek) => {
-            if (!Pk) {
-              if (!kk) return console.log(`AD: Nitro video not filled: ${ek}`), void bk(!1);
-              Pk = !0, clearTimeout(lk), lk = setTimeout((() => {
-                console.log("AD: Nitro video never completed"), bk(!1)
-              }), 12e4)
-            }
-          },
-          Mk = kk => {
-            var ek;
-            (null === (ek = kk.detail) || void 0 === ek ? void 0 : ek.id) === rk && mk("filled" === kk.detail.status, kk.detail.status)
-          },
-          Kk = kk => {
-            var ek, ik;
-            (null === (ek = kk.detail) || void 0 === ek || null === (ik = ek.adInfo) || void 0 === ik ? void 0 : ik.adUnitCode) === rk && mk("blank" !== kk.detail.type, kk.detail.type)
-          },
-          xk = kk => {
-            var ek;
-            (null === (ek = kk.detail) || void 0 === ek ? void 0 : ek.adUnitCode) === rk && bk(!0)
-          },
-          nk = document.createElement("button");
-        nk.className = "NitroVideoSkip", nk.disabled = !0, nk.addEventListener("click", (() => {
-          console.log("AD: Nitro video skipped"), bk(!0)
-        }));
-        let Uk = Math.ceil(15);
-        const Hk = () => {
-          if (Uk <= 0) return clearInterval(wk), nk.textContent = "Skip Ad", void(nk.disabled = !1);
-          nk.textContent = `Skip ad in ${Uk}s`, Uk--
-        };
-        Hk();
-        const wk = setInterval(Hk, 1e3);
-        let lk = setTimeout((() => {
-          console.log("AD: Nitro video got no result"), bk(!1)
-        }), 1e4);
-        document.addEventListener("nitroAds.adResult", Mk), document.addEventListener("nitroAds.rendered", Kk), document.addEventListener("nitroAds.complete", xk), Dk.appendChild(Sk), Dk.classList.add("NitroVideo"), ik.appendChild(nk), ik.style.display = "flex", window.adStartSoPause(null, {
-          preventMovement: !0
-        }), Promise.resolve(window.nitroAds.createAd(rk, {
-          format: "display",
-          outstream: "only",
-          resultTimeout: 8e3
-        })).catch((kk => {
-          console.error("AD: Nitro failed to create video", kk), bk(!1)
-        })), console.log("AD: Requested Nitro video")
-      }
-      renderBanner(kk) {
+      renderBanner(CC) {
+        if ("undefined" === typeof window.aiptag.adplayer) return void console.log("AD: User has adblock, not requesting new banners");
         const {
-          divId: ek,
-          width: ik,
-          height: Dk
-        } = kk, fk = `${ek}-nitro`;
-        let Sk = document.getElementById(fk);
-        null === Sk && (Sk = document.createElement("div"), Sk.id = fk, Sk.className = "NitroBanner", Sk.style.setProperty("--nitro-slot-width", `${ik}px`), Sk.style.setProperty("--nitro-slot-height", `${Dk}px`), document.getElementById(ek).appendChild(Sk));
-        const bk = [
-          [String(ik), String(Dk)]
-        ];
-        Promise.resolve(window.nitroAds.createAd(fk, {
-          sizes: bk
-        })).catch((kk => {
-          console.error(`AD: Nitro failed to create banner ${fk}:`, kk)
-        })), console.log(`AD: Requested Nitro banner ${fk}`)
+          divId: zC,
+          alias: ZC
+        } = CC;
+        window.aiptag.cmd.display.push((function() {
+          window.aipDisplayTag.display({
+            adUnitName: zC,
+            alias: ZC
+          })
+        })), console.log("AD: Requested aip banner", document.getElementById(CC.divId), ZC ? `(alias: ${ZC})` : "")
       }
-      displayConsentUI() {
-        var kk, ek;
-        null === (kk = (ek = window).__cmp) || void 0 === kk || kk.call(ek, "showModal")
+      clearBanner(CC) {
+        "undefined" !== typeof window.aiptag.adplayer ? (window.aiptag.cmd.display.push((function() {
+          window.aipDisplayTag.destroy(CC.divId)
+        })), console.log(`AD: Clearing aip banner ad ${CC.divId}`)) : console.log("AD: User has adblock, not requesting new banners")
       }
-      addPrivacyLinks(kk) {
-        var ek, ik, Dk, fk;
-        const Sk = document.createElement("span");
-        Sk.dataset.ccpaLink = "1";
-        const bk = document.createElement("div");
-        bk.id = "ncmp-consent-link", kk.replaceChildren(Sk, bk), null === (ek = (ik = window).__uspapi) || void 0 === ek || ek.call(ik, "addLink", 1), null === (Dk = (fk = window).__cmp) || void 0 === Dk || Dk.call(fk, "addConsentLink")
+      setBannerAutoRefreshEnabled(CC, zC) {
+        window.aiptag.cmd.display.push((function() {
+          window.aipDisplayTag.setAutoRefresh(CC.divId, zC)
+        }))
       }
       newPageSession() {
-        var kk, ek;
-        null === (kk = (ek = window.nitroAds).navigate) || void 0 === kk || kk.call(ek)
+        console.log("AD: Requesting new page session"), window.aiptag.cmd.display.push((function() {
+          window.__VM.push((function(CC, zC) {
+            zC.Instances.pageManager.newPageSession(!1)
+          }))
+        }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

@@ -1,37 +1,40 @@
 export const id = 162;
 export const ids = [162];
 export const modules = {
-  8747: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      pageBody: () => Dk
+  8929: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      pageBody: () => QC
     });
-    const Dk = {
-      whatIs: ["What if every sword, block and piece of armour came from a Lucky Block? Lucky Bedwars is the Bedwars mode where they do. Four teams of up to four players each get their own base and a bed to protect. Open Lucky Blocks for random weapons, armour, blocks and wild surprises, then race to break every other team's bed. You never know what you'll get, so expect lots of chaos, and every match is free to jump into from your browser."],
-      howToPlay: ["Before the match, your lobby votes on a map. You start with four Lucky Blocks. The first Basic Building and Basic Weapon blocks you open give you team wool and a weapon, so you're ready to go. Generators at your base and in the centre of the map keep the loot coming. Better armour equips itself automatically, and your compass points to the nearest enemy.", "Opening blocks, getting kills and breaking beds earns Clovers. Spend them at your Lucky Trader on the Lucky Blocks you want, or chip in 50 Clovers at a time towards team upgrades like the Bed Trap. Turn unwanted loot into Clovers in the Recycle tab. Twice a match, a random event shakes things up, and late in the game the arena starts to shrink. You can respawn as long as your bed stands, but once it's gone, dying makes you a spectator. The last team standing wins."],
-      features: ["4 Teams of up to 4 Players", "Building, Weapon, Armour and Food Lucky Blocks in Basic, Rare and Super Rarities", "Evil Lucky Blocks with Nasty Surprises", "Wild Items: Lucky Bombs, Swap Orbs, Fireballs, Iceballs, Toxin Balls and Void Nets", "Random Events: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm and Tiny Titans", "Bed Trap Team Upgrades", "4 Maps: Lucky Islands, Helicarrier, Nuclear and Turtles", "Leaderboards"],
-      tips: ["Open your four starting Lucky Blocks straight away to get wool and a weapon", "Chip in for the Bed Trap early. Evil Lucky Blocks around your bed can seal raiders in obsidian, poison them or send them home", "Save any Obsidian from Super Building blocks for your bed, because explosions can't destroy it", "Recycle loot you don't need. Anything you leave on the ground turns into Clovers after 8 seconds", "Beds can't be broken during an event, so use that time to regroup and stock up", "Stay alive until an event ends to earn bonus Clovers", "Be careful with Lucky and Unlucky Bombs, because they hit you too"],
-      similarGames: ["bedwars", "luckyTowers", "skywars"],
+    const QC = {
+      whatIs: ["Your gear is completely random, and only one player makes it out of the madness. Bloxd Lucky Towers is a last-player-standing PvP mode where everyone spawns on their own pillar. Rounds are quick, chaotic and pretty unpredictable. There are no Lucky Blocks to open here, which is the big difference from Lucky Blocks Battlegrounds. Your items just turn up every 3 seconds."],
+      howToPlay: ["Up to 15 players spawn on pillars spaced out across the map. You start in a glass cage for 3 seconds. After that, everyone gets a random item every 3 seconds. It could be blocks, food, a weapon, armour, a potion or something that explodes. Build bridges over to your rivals, knock them off their pillars and be the last one alive.", "Keep an eye on the announcements, because random events can flip a whole fight. A chest might drop with a guaranteed weapon and armour inside. Jump Boost lets everyone jump higher for a bit, and Double Speed makes items spawn twice as fast. During Lava Rise the ground starts creeping up beneath you. If a Bombardment is announced, get under cover fast. Holding a Respawn Totem saves you from a fall into the void. Knocked out? You can still spectate the rest of the match."],
+      features: ["Up to 15 Players per Match", "A Random Item Every 3 Seconds", "Weapons, Armour, Potions, Arrows and Explosives", "Special Items Like Updraft, SnowDash, Steal Ball, Bouncy Bomb and Chaos Potion", "Respawn Totems for an Extra Life", "Five Random Events, From Chest Drops to Bombardment", "Craft Sticks, Reinforced Pebbles, Floor Creators and More", "Maps: The OG, Desert, Icy, Space and Forest, Plus Seasonal Spooky and Holiday Maps"],
+      tips: ["Use your first few blocks to wall up your pillar", "Hang on to explosives for breaking your rivals' bridges", "If a chest drops, race for it. There's a guaranteed weapon and two pieces of armour inside", "When the ground starts rising, build upwards", "Get under cover the moment a Bombardment is announced", "Hold a Respawn Totem whenever you might fall, because it puts you back on your pillar", "The pillars on the Icy map are further apart, since jumps on ice go further"],
+      similarGames: ["skywars", "luckyBedwars", "luckyBattlegrounds", "bedwars"],
       faq: [{
-        question: "What is Bloxd Lucky Bedwars?",
-        answer: "It's Bedwars with a twist: all your gear comes from Lucky Blocks. Four teams of up to four players defend their beds and try to be the last team standing."
+        question: "What is Lucky Towers?",
+        answer: "A fast PvP mode for up to 15 players. Everyone starts on their own pillar, gets a random item every 3 seconds and fights to be the last one standing."
       }, {
-        question: "How do you play Lucky Bedwars?",
-        answer: "Open Lucky Blocks for weapons, armour and blocks, protect your bed and break the other teams' beds. You respawn while your bed stands. Without it, one death makes you a spectator."
+        question: "How do you win in Bloxd Lucky Towers?",
+        answer: "Be the last player alive. Use whatever random items you get to knock rivals off their pillars or take them out. If you're eliminated, you can spectate untill the match ends."
       }, {
-        question: "How is Lucky Bedwars different from normal Bedwars?",
-        answer: "Your loot comes from Lucky Blocks, so every match is random. You earn Clovers to buy more Lucky Blocks and team upgrades, and random events change up each game."
+        question: "How often do you get items in Lucky Towers?",
+        answer: "Every 3 seconds. During the Double Speed event they spawn twice as fast for a short while."
       }, {
-        question: "What are Clovers in Lucky Bedwars?",
-        answer: "Clovers are the in-game currency. Earn them by opening Lucky Blocks, getting kills, breaking beds, recycling loot and surviving events. Spend them at the Lucky Trader or on team upgrades."
+        question: "What items can you get in Lucky Towers?",
+        answer: "Blocks, seedlings, beds, food, potions, weapons, arrows, armour and explosives. There are special items too, like the Bouncy Bomb, Respawn Totem, Floor Creator, SnowDash, Updraft, Steal Ball, Chaos Potion and Moonstone Remote Explosive."
       }, {
-        question: "What's inside Evil Lucky Blocks?",
-        answer: "Bad luck! The Bed Trap upgrade puts Evil Lucky Blocks around your bed. Anyone who opens one could get trapped in obsidian, dropped in lava, webbed, poisoned, blinded, chased by guard dogs or sent home."
+        question: "Which random events can happen in Lucky Towers?",
+        answer: "Chest Drop, Jump Boost, Double Speed, Lava Rise and Bombardment. You'll get an announcement when each one starts."
       }, {
-        question: "What are the Lucky Bedwars events?",
-        answer: "Twice a match a random event starts: Blood Moon, Lucky Crown, Masquerade, Simon Says, Lucky Storm or Tiny Titans. You get a 30-second warning, and beds can't be broken while an event runs."
+        question: "Which maps are in Lucky Towers?",
+        answer: "The OG, Desert, Icy, Space and Forest. There's also a Spooky map in October and a Holiday map in December and January."
+      }, {
+        question: "How is Lucky Towers different from Lucky Blocks Battlegrounds?",
+        answer: "Lucky Towers is last player standing. Items arrive on their own, and once you're knocked out you spectate. Lucky Blocks Battlegrounds is a kills race in a shared arena where you open Lucky Blocks, and the top player wins when it resets."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

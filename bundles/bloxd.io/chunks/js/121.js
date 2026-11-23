@@ -1,11 +1,11 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  6333: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => Dk
+  6490: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => QC
     });
-    const Dk = {
+    const QC = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -159,7 +159,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: ik(1916).c,
+      _shopVersion: ZC(1867).c,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,
@@ -168,4 +168,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

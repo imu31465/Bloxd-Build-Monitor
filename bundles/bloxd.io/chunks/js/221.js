@@ -1,860 +1,1164 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  39200: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Dk,
-      d: () => fk
-    });
-    const Dk = "The world isn't loaded, so no blocks can be seen.",
-      fk = "The world isn't loaded, so nothing in it can be seen."
+  36521: CC => {
+    CC.exports = {
+      aliceblue: [240, 248, 255],
+      antiquewhite: [250, 235, 215],
+      aqua: [0, 255, 255],
+      aquamarine: [127, 255, 212],
+      azure: [240, 255, 255],
+      beige: [245, 245, 220],
+      bisque: [255, 228, 196],
+      black: [0, 0, 0],
+      blanchedalmond: [255, 235, 205],
+      blue: [0, 0, 255],
+      blueviolet: [138, 43, 226],
+      brown: [165, 42, 42],
+      burlywood: [222, 184, 135],
+      cadetblue: [95, 158, 160],
+      chartreuse: [127, 255, 0],
+      chocolate: [210, 105, 30],
+      coral: [255, 127, 80],
+      cornflowerblue: [100, 149, 237],
+      cornsilk: [255, 248, 220],
+      crimson: [220, 20, 60],
+      cyan: [0, 255, 255],
+      darkblue: [0, 0, 139],
+      darkcyan: [0, 139, 139],
+      darkgoldenrod: [184, 134, 11],
+      darkgray: [169, 169, 169],
+      darkgreen: [0, 100, 0],
+      darkgrey: [169, 169, 169],
+      darkkhaki: [189, 183, 107],
+      darkmagenta: [139, 0, 139],
+      darkolivegreen: [85, 107, 47],
+      darkorange: [255, 140, 0],
+      darkorchid: [153, 50, 204],
+      darkred: [139, 0, 0],
+      darksalmon: [233, 150, 122],
+      darkseagreen: [143, 188, 143],
+      darkslateblue: [72, 61, 139],
+      darkslategray: [47, 79, 79],
+      darkslategrey: [47, 79, 79],
+      darkturquoise: [0, 206, 209],
+      darkviolet: [148, 0, 211],
+      deeppink: [255, 20, 147],
+      deepskyblue: [0, 191, 255],
+      dimgray: [105, 105, 105],
+      dimgrey: [105, 105, 105],
+      dodgerblue: [30, 144, 255],
+      firebrick: [178, 34, 34],
+      floralwhite: [255, 250, 240],
+      forestgreen: [34, 139, 34],
+      fuchsia: [255, 0, 255],
+      gainsboro: [220, 220, 220],
+      ghostwhite: [248, 248, 255],
+      gold: [255, 215, 0],
+      goldenrod: [218, 165, 32],
+      gray: [128, 128, 128],
+      green: [0, 128, 0],
+      greenyellow: [173, 255, 47],
+      grey: [128, 128, 128],
+      honeydew: [240, 255, 240],
+      hotpink: [255, 105, 180],
+      indianred: [205, 92, 92],
+      indigo: [75, 0, 130],
+      ivory: [255, 255, 240],
+      khaki: [240, 230, 140],
+      lavender: [230, 230, 250],
+      lavenderblush: [255, 240, 245],
+      lawngreen: [124, 252, 0],
+      lemonchiffon: [255, 250, 205],
+      lightblue: [173, 216, 230],
+      lightcoral: [240, 128, 128],
+      lightcyan: [224, 255, 255],
+      lightgoldenrodyellow: [250, 250, 210],
+      lightgray: [211, 211, 211],
+      lightgreen: [144, 238, 144],
+      lightgrey: [211, 211, 211],
+      lightpink: [255, 182, 193],
+      lightsalmon: [255, 160, 122],
+      lightseagreen: [32, 178, 170],
+      lightskyblue: [135, 206, 250],
+      lightslategray: [119, 136, 153],
+      lightslategrey: [119, 136, 153],
+      lightsteelblue: [176, 196, 222],
+      lightyellow: [255, 255, 224],
+      lime: [0, 255, 0],
+      limegreen: [50, 205, 50],
+      linen: [250, 240, 230],
+      magenta: [255, 0, 255],
+      maroon: [128, 0, 0],
+      mediumaquamarine: [102, 205, 170],
+      mediumblue: [0, 0, 205],
+      mediumorchid: [186, 85, 211],
+      mediumpurple: [147, 112, 219],
+      mediumseagreen: [60, 179, 113],
+      mediumslateblue: [123, 104, 238],
+      mediumspringgreen: [0, 250, 154],
+      mediumturquoise: [72, 209, 204],
+      mediumvioletred: [199, 21, 133],
+      midnightblue: [25, 25, 112],
+      mintcream: [245, 255, 250],
+      mistyrose: [255, 228, 225],
+      moccasin: [255, 228, 181],
+      navajowhite: [255, 222, 173],
+      navy: [0, 0, 128],
+      oldlace: [253, 245, 230],
+      olive: [128, 128, 0],
+      olivedrab: [107, 142, 35],
+      orange: [255, 165, 0],
+      orangered: [255, 69, 0],
+      orchid: [218, 112, 214],
+      palegoldenrod: [238, 232, 170],
+      palegreen: [152, 251, 152],
+      paleturquoise: [175, 238, 238],
+      palevioletred: [219, 112, 147],
+      papayawhip: [255, 239, 213],
+      peachpuff: [255, 218, 185],
+      peru: [205, 133, 63],
+      pink: [255, 192, 203],
+      plum: [221, 160, 221],
+      powderblue: [176, 224, 230],
+      purple: [128, 0, 128],
+      rebeccapurple: [102, 51, 153],
+      red: [255, 0, 0],
+      rosybrown: [188, 143, 143],
+      royalblue: [65, 105, 225],
+      saddlebrown: [139, 69, 19],
+      salmon: [250, 128, 114],
+      sandybrown: [244, 164, 96],
+      seagreen: [46, 139, 87],
+      seashell: [255, 245, 238],
+      sienna: [160, 82, 45],
+      silver: [192, 192, 192],
+      skyblue: [135, 206, 235],
+      slateblue: [106, 90, 205],
+      slategray: [112, 128, 144],
+      slategrey: [112, 128, 144],
+      snow: [255, 250, 250],
+      springgreen: [0, 255, 127],
+      steelblue: [70, 130, 180],
+      tan: [210, 180, 140],
+      teal: [0, 128, 128],
+      thistle: [216, 191, 216],
+      tomato: [255, 99, 71],
+      turquoise: [64, 224, 208],
+      violet: [238, 130, 238],
+      wheat: [245, 222, 179],
+      white: [255, 255, 255],
+      whitesmoke: [245, 245, 245],
+      yellow: [255, 255, 0],
+      yellowgreen: [154, 205, 50]
+    }
   },
-  38676: (kk, ek, ik) => {
-    function Dk(kk) {
-      return !(!kk.lobbyLeaderboardInfo && !kk.lobbyManage)
+  36516: (CC, zC, ZC) => {
+    var QC = ZC(36521),
+      wC = ZC(36525),
+      bC = Object.hasOwnProperty,
+      nC = Object.create(null);
+    for (var fC in QC) bC.call(QC, fC) && (nC[QC[fC]] = fC);
+    var oC = CC.exports = {
+      to: {},
+      get: {}
+    };
+
+    function qC(CC, zC, ZC) {
+      return Math.min(Math.max(zC, CC), ZC)
     }
-    ik.d(ek, {
-      c: () => Dk
-    })
+
+    function FC(CC) {
+      var zC = Math.round(CC).toString(16).toUpperCase();
+      return zC.length < 2 ? "0" + zC : zC
+    }
+    oC.get = function(CC) {
+      var zC, ZC;
+      switch (CC.substring(0, 3).toLowerCase()) {
+        case "hsl":
+          zC = oC.get.hsl(CC), ZC = "hsl";
+          break;
+        case "hwb":
+          zC = oC.get.hwb(CC), ZC = "hwb";
+          break;
+        default:
+          zC = oC.get.rgb(CC), ZC = "rgb"
+      }
+      return zC ? {
+        model: ZC,
+        value: zC
+      } : null
+    }, oC.get.rgb = function(CC) {
+      if (!CC) return null;
+      var zC, ZC, wC, nC = [0, 0, 0, 1];
+      if (zC = CC.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (wC = zC[2], zC = zC[1], ZC = 0; ZC < 3; ZC++) {
+          var fC = 2 * ZC;
+          nC[ZC] = parseInt(zC.slice(fC, fC + 2), 16)
+        }
+        wC && (nC[3] = parseInt(wC, 16) / 255)
+      } else if (zC = CC.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (wC = (zC = zC[1])[3], ZC = 0; ZC < 3; ZC++) nC[ZC] = parseInt(zC[ZC] + zC[ZC], 16);
+        wC && (nC[3] = parseInt(wC + wC, 16) / 255)
+      } else if (zC = CC.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (ZC = 0; ZC < 3; ZC++) nC[ZC] = parseInt(zC[ZC + 1], 0);
+        zC[4] && (zC[5] ? nC[3] = .01 * parseFloat(zC[4]) : nC[3] = parseFloat(zC[4]))
+      } else {
+        if (!(zC = CC.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (zC = CC.match(/^(\w+)$/)) ? "transparent" === zC[1] ? [0, 0, 0, 0] : bC.call(QC, zC[1]) ? ((nC = QC[zC[1]])[3] = 1, nC) : null : null;
+        for (ZC = 0; ZC < 3; ZC++) nC[ZC] = Math.round(2.55 * parseFloat(zC[ZC + 1]));
+        zC[4] && (zC[5] ? nC[3] = .01 * parseFloat(zC[4]) : nC[3] = parseFloat(zC[4]))
+      }
+      for (ZC = 0; ZC < 3; ZC++) nC[ZC] = qC(nC[ZC], 0, 255);
+      return nC[3] = qC(nC[3], 0, 1), nC
+    }, oC.get.hsl = function(CC) {
+      if (!CC) return null;
+      var zC = CC.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (zC) {
+        var ZC = parseFloat(zC[4]);
+        return [(parseFloat(zC[1]) % 360 + 360) % 360, qC(parseFloat(zC[2]), 0, 100), qC(parseFloat(zC[3]), 0, 100), qC(isNaN(ZC) ? 1 : ZC, 0, 1)]
+      }
+      return null
+    }, oC.get.hwb = function(CC) {
+      if (!CC) return null;
+      var zC = CC.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (zC) {
+        var ZC = parseFloat(zC[4]);
+        return [(parseFloat(zC[1]) % 360 + 360) % 360, qC(parseFloat(zC[2]), 0, 100), qC(parseFloat(zC[3]), 0, 100), qC(isNaN(ZC) ? 1 : ZC, 0, 1)]
+      }
+      return null
+    }, oC.to.hex = function() {
+      var CC = wC(arguments);
+      return "#" + FC(CC[0]) + FC(CC[1]) + FC(CC[2]) + (CC[3] < 1 ? FC(Math.round(255 * CC[3])) : "")
+    }, oC.to.rgb = function() {
+      var CC = wC(arguments);
+      return CC.length < 4 || 1 === CC[3] ? "rgb(" + Math.round(CC[0]) + ", " + Math.round(CC[1]) + ", " + Math.round(CC[2]) + ")" : "rgba(" + Math.round(CC[0]) + ", " + Math.round(CC[1]) + ", " + Math.round(CC[2]) + ", " + CC[3] + ")"
+    }, oC.to.rgb.percent = function() {
+      var CC = wC(arguments),
+        zC = Math.round(CC[0] / 255 * 100),
+        ZC = Math.round(CC[1] / 255 * 100),
+        QC = Math.round(CC[2] / 255 * 100);
+      return CC.length < 4 || 1 === CC[3] ? "rgb(" + zC + "%, " + ZC + "%, " + QC + "%)" : "rgba(" + zC + "%, " + ZC + "%, " + QC + "%, " + CC[3] + ")"
+    }, oC.to.hsl = function() {
+      var CC = wC(arguments);
+      return CC.length < 4 || 1 === CC[3] ? "hsl(" + CC[0] + ", " + CC[1] + "%, " + CC[2] + "%)" : "hsla(" + CC[0] + ", " + CC[1] + "%, " + CC[2] + "%, " + CC[3] + ")"
+    }, oC.to.hwb = function() {
+      var CC = wC(arguments),
+        zC = "";
+      return CC.length >= 4 && 1 !== CC[3] && (zC = ", " + CC[3]), "hwb(" + CC[0] + ", " + CC[1] + "%, " + CC[2] + "%" + zC + ")"
+    }, oC.to.keyword = function(CC) {
+      return nC[CC.slice(0, 3)]
+    }
   },
-  36391: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => Sk,
-      d: () => fk
-    });
-    let Dk = () => null;
+  36512: (CC, zC, ZC) => {
+    const QC = ZC(36516),
+      wC = ZC(36535),
+      bC = ["keyword", "gray", "hex"],
+      nC = {};
+    for (const MC of Object.keys(wC)) nC[[...wC[MC].labels].sort().join("")] = MC;
+    const fC = {};
 
-    function fk(kk) {
-      Dk = kk
-    }
-
-    function Sk(kk, ek) {
-      return Dk(kk, ek)
-    }
-  },
-  40180: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => Hk,
-      f: () => yk,
-      g: () => pk,
-      k: () => wk
-    });
-    var Dk = ik(26),
-      fk = ik(40186),
-      Sk = ik(40165),
-      bk = ik(40191),
-      rk = ik(40172),
-      Pk = ik(40196),
-      mk = ik(40218);
-
-    function Mk(kk) {
-      var ek, ik;
-      const Dk = (0, Sk.g)();
-      return Dk ? null === (ek = (0, fk.c)(Dk.api, kk[0], kk[1], kk[2])) || void 0 === ek || null === (ik = ek.persisted) || void 0 === ik ? void 0 : ik.shared : void 0
-    }
-
-    function Kk(kk) {
-      return `${kk[0]},${kk[1]},${kk[2]}`
-    }
-    const xk = new Map;
-    let nk = null,
-      Uk = 0;
-
-    function Hk() {
-      return Uk
-    }
-
-    function wk(kk) {
-      const ek = null !== nk && nk.key === Kk(kk.pos) ? nk.type : null;
-      if (null === ek) return kk;
-      let ik = null;
-      if ("Iron" === ek) {
+    function oC(CC, zC) {
+      if (!(this instanceof oC)) return new oC(CC, zC);
+      if (zC && zC in bC && (zC = null), zC && !(zC in wC)) throw new Error("Unknown model: " + zC);
+      let ZC, qC;
+      if (null == CC) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (CC instanceof oC) this.model = CC.model, this.color = [...CC.color], this.valpha = CC.valpha;
+      else if ("string" === typeof CC) {
+        const zC = QC.get(CC);
+        if (null === zC) throw new Error("Unable to parse color from string: " + CC);
+        this.model = zC.model, qC = wC[this.model].channels, this.color = zC.value.slice(0, qC), this.valpha = "number" === typeof zC.value[qC] ? zC.value[qC] : 1
+      } else if (CC.length > 0) {
+        this.model = zC || "rgb", qC = wC[this.model].channels;
+        const ZC = Array.prototype.slice.call(CC, 0, qC);
+        this.color = NC(ZC, qC), this.valpha = "number" === typeof CC[qC] ? CC[qC] : 1
+      } else if ("number" === typeof CC) this.model = "rgb", this.color = [CC >> 16 & 255, CC >> 8 & 255, 255 & CC], this.valpha = 1;
+      else {
+        this.valpha = 1;
+        const zC = Object.keys(CC);
+        "alpha" in CC && (zC.splice(zC.indexOf("alpha"), 1), this.valpha = "number" === typeof CC.alpha ? CC.alpha : 0);
+        const QC = zC.sort().join("");
+        if (!(QC in nC)) throw new Error("Unable to parse color from object: " + JSON.stringify(CC));
+        this.model = nC[QC];
         const {
-          cachedPasskey: ek,
-          ...Dk
-        } = lk(kk.pos);
-        ik = {
-          Gb: null !== ek && void 0 !== ek ? ek : [0, 0, 0, 0],
-          ...Dk
+          labels: bC
+        } = wC[this.model], fC = [];
+        for (ZC = 0; ZC < bC.length; ZC++) fC.push(CC[bC[ZC]]);
+        this.color = NC(fC)
+      }
+      if (fC[this.model])
+        for (qC = wC[this.model].channels, ZC = 0; ZC < qC; ZC++) {
+          const CC = fC[this.model][ZC];
+          CC && (this.color[ZC] = CC(this.color[ZC]))
         }
-      }
-      return {
-        ...kk,
-        type: ek,
-        ironChest: ik
-      }
+      this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-
-    function lk(kk) {
-      const ek = Mk(kk),
-        ik = null === ek || void 0 === ek ? void 0 : ek.ownerDbId,
-        Dk = function(kk) {
-          var ek;
-          let ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Mk(kk);
-          const Dk = Kk(kk),
-            fk = xk.get(Dk);
-          return fk ? fk.lastOpened < (null !== (ek = null === ik || void 0 === ik ? void 0 : ik.passkeyLastUpdated) && void 0 !== ek ? ek : 0) ? (xk.delete(Dk), null) : [...fk.Gb] : null
-        }(kk, ek);
-      return void 0 === ik ? {
-        cachedPasskey: Dk
-      } : {
-        ownerDbId: ik,
-        cachedPasskey: Dk
-      }
-    }(0, mk.m)(bk.c, (kk => {
-      const ek = (0, Pk.i)(bk.c, kk);
-      if (!(0, Pk.e)(ek) || ek.ye) return;
-      if (Uk++, !ek.ne || null === ek.le) return void(nk = null);
-      const ik = Kk(ek.le);
-      nk = {
-        key: ik,
-        type: ek.He
-      }, null !== ek.pe && xk.set(ik, {
-        Gb: [...ek.pe],
-        lastOpened: Date.now()
-      })
-    })), (0, mk.g)((() => {
-      xk.clear(), nk = null, Uk++
-    })), (0, mk.k)((() => {
-      null !== nk && (nk = null, Uk++, Dk.j.tm("chestToggleFromServer", !1, !0))
-    }));
-    const pk = {
-        boardEditRequested: {
-          watch: kk => (0, Dk.k)("EditBoard", (ek => {
-            let {
-              pos: ik
-            } = ek;
-            if (null === ik) return void kk(null);
-            const Dk = (0, Sk.g)(),
-              fk = (0, Sk.q)();
-            Dk && fk && kk(fk.readBoardToEdit(Dk.api, Dk.chunks, ik))
-          }))
-        },
-        ironChestOpenRequested: {
-          watch: kk => (0, Dk.k)("OpenIronChest", (ek => {
-            let {
-              pos: ik
-            } = ek;
-            kk(function(kk) {
-              return {
-                pos: kk,
-                ...lk(kk)
-              }
-            }(ik))
-          }))
+    oC.prototype = {
+      toString() {
+        return this.string()
+      },
+      toJSON() {
+        return this[this.model]()
+      },
+      string(CC) {
+        let zC = this.model in QC.to ? this : this.rgb();
+        zC = zC.round("number" === typeof CC ? CC : 1);
+        const ZC = 1 === zC.valpha ? zC.color : [...zC.color, this.valpha];
+        return QC.to[zC.model](ZC)
+      },
+      percentString(CC) {
+        const zC = this.rgb().round("number" === typeof CC ? CC : 1),
+          ZC = 1 === zC.valpha ? zC.color : [...zC.color, this.valpha];
+        return QC.to.rgb.percent(ZC)
+      },
+      array() {
+        return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
+      },
+      object() {
+        const CC = {},
+          {
+            channels: zC
+          } = wC[this.model],
+          {
+            labels: ZC
+          } = wC[this.model];
+        for (let QC = 0; QC < zC; QC++) CC[ZC[QC]] = this.color[QC];
+        return 1 !== this.valpha && (CC.alpha = this.valpha), CC
+      },
+      unitArray() {
+        const CC = this.rgb().color;
+        return CC[0] /= 255, CC[1] /= 255, CC[2] /= 255, 1 !== this.valpha && CC.push(this.valpha), CC
+      },
+      unitObject() {
+        const CC = this.rgb().object();
+        return CC.r /= 255, CC.g /= 255, CC.b /= 255, 1 !== this.valpha && (CC.alpha = this.valpha), CC
+      },
+      round(CC) {
+        return CC = Math.max(CC || 0, 0), new oC([...this.color.map(qC(CC)), this.valpha], this.model)
+      },
+      alpha(CC) {
+        return void 0 !== CC ? new oC([...this.color, Math.max(0, Math.min(1, CC))], this.model) : this.valpha
+      },
+      red: FC("rgb", 0, WC(255)),
+      green: FC("rgb", 1, WC(255)),
+      blue: FC("rgb", 2, WC(255)),
+      hue: FC(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (CC => (CC % 360 + 360) % 360)),
+      saturationl: FC("hsl", 1, WC(100)),
+      lightness: FC("hsl", 2, WC(100)),
+      saturationv: FC("hsv", 1, WC(100)),
+      value: FC("hsv", 2, WC(100)),
+      chroma: FC("hcg", 1, WC(100)),
+      gray: FC("hcg", 2, WC(100)),
+      white: FC("hwb", 1, WC(100)),
+      wblack: FC("hwb", 2, WC(100)),
+      cyan: FC("cmyk", 0, WC(100)),
+      magenta: FC("cmyk", 1, WC(100)),
+      yellow: FC("cmyk", 2, WC(100)),
+      black: FC("cmyk", 3, WC(100)),
+      x: FC("xyz", 0, WC(95.047)),
+      y: FC("xyz", 1, WC(100)),
+      z: FC("xyz", 2, WC(108.833)),
+      l: FC("lab", 0, WC(100)),
+      a: FC("lab", 1),
+      b: FC("lab", 2),
+      keyword(CC) {
+        return void 0 !== CC ? new oC(CC) : wC[this.model].keyword(this.color)
+      },
+      hex(CC) {
+        return void 0 !== CC ? new oC(CC) : QC.to.hex(this.rgb().round().color)
+      },
+      hexa(CC) {
+        if (void 0 !== CC) return new oC(CC);
+        const zC = this.rgb().round().color;
+        let ZC = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === ZC.length && (ZC = "0" + ZC), QC.to.hex(zC) + ZC
+      },
+      rgbNumber() {
+        const CC = this.rgb().color;
+        return (255 & CC[0]) << 16 | (255 & CC[1]) << 8 | 255 & CC[2]
+      },
+      luminosity() {
+        const CC = this.rgb().color,
+          zC = [];
+        for (const [ZC, QC] of CC.entries()) {
+          const CC = QC / 255;
+          zC[ZC] = CC <= .04045 ? CC / 12.92 : ((CC + .055) / 1.055) ** 2.4
         }
+        return .2126 * zC[0] + .7152 * zC[1] + .0722 * zC[2]
       },
-      yk = {
-        writeOnBoard(kk) {
-          var ek;
-          let {
-            pos: ik,
-            text: Dk,
-            textSize: fk
-          } = kk;
-          null === (ek = (0, Sk.g)()) || void 0 === ek || ek.send(rk.e.UpdateBoard, (0, rk.$)({
-            kK: ik,
-            eK: Dk,
-            iK: fk
-          }))
-        },
-        writeBook(kk) {
-          var ek;
-          let {
-            pages: ik,
-            title: Dk,
-            published: fk
-          } = kk;
-          null === (ek = (0, Sk.g)()) || void 0 === ek || ek.send(rk.e.UpdateBook, (0, rk.cb)({
-            Bb: ik,
-            cb: Dk,
-            Tb: fk
-          }))
-        },
-        writeNameTag(kk) {
-          var ek;
-          null === (ek = (0, Sk.g)()) || void 0 === ek || ek.send(rk.e.UpdateNameTag, kk)
-        },
-        setCustomLobbyBlock(kk) {
-          let {
-            pos: ek,
-            blockName: ik
-          } = kk;
-          const Dk = (0, Sk.q)(),
-            fk = (0, Sk.g)();
-          Dk && fk && fk.send(rk.e.SetCustomLobbyBlock, (0, rk.M)({
-            wP: Dk.blockIdOf(ik),
-            HP: ek
-          }))
-        }
-      }
-  },
-  40230: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Pk,
-      f: () => bk,
-      g: () => rk
-    });
-    var Dk = ik(40157),
-      fk = ik(4721),
-      Sk = ik(40165);
-
-    function bk() {
-      var kk;
-      const ek = null === (kk = (0, Sk.g)()) || void 0 === kk ? void 0 : kk.api.localId;
-      return void 0 === ek || ek === Dk.Sc ? null : String(ek)
-    }
-
-    function rk(kk) {
-      const ek = (0, Sk.g)();
-      if (null !== ek) return kk(ek);
-      let ik = null;
-      const Dk = (0, fk.v)((() => {
-        const ek = (0, Sk.g)();
-        null !== ek && null === ik && (Dk(), ik = kk(ek))
-      }));
-      return () => {
-        var kk;
-        Dk(), null === (kk = ik) || void 0 === kk || kk()
-      }
-    }
-
-    function Pk(kk, ek, ik) {
-      return {
-        current: () => {
-          const ik = (0, Sk.g)();
-          return null === ik ? ek : kk(ik)()
-        },
-        watch: ek => rk((Dk => {
-          const fk = kk(Dk);
-          let Sk = fk();
-          return ek(Sk), ik((() => {
-            const kk = fk();
-            kk !== Sk && (Sk = kk, ek(kk))
-          }))
-        }))
-      }
-    }
-  },
-  40223: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => mk
-    });
-    var Dk = ik(40165),
-      fk = ik(40230),
-      Sk = ik(40238);
-
-    function bk() {
-      var kk, ek;
-      return null !== (kk = null === (ek = (0, Dk.g)()) || void 0 === ek ? void 0 : ek.itemBridgeSources) && void 0 !== kk ? kk : Sk.e
-    }
-
-    function rk(kk) {
-      return {
-        current: () => bk().states[kk].current(),
-        watch: ek => (0, fk.g)((ik => {
-          const Dk = ik.itemBridgeSources.states[kk];
-          return ek(Dk.current()), Dk.watch(ek)
-        }))
-      }
-    }
-
-    function Pk(kk) {
-      return {
-        watch: ek => (0, fk.g)((ik => ik.itemBridgeSources.events[kk].watch(ek)))
-      }
-    }
-    const mk = {
-      states: {
-        inventory: rk("inventory"),
-        hotbar: rk("hotbar"),
-        crafting: rk("crafting"),
-        heldItemAim: rk("heldItemAim")
+      contrast(CC) {
+        const zC = this.luminosity(),
+          ZC = CC.luminosity();
+        return zC > ZC ? (zC + .05) / (ZC + .05) : (ZC + .05) / (zC + .05)
       },
-      events: {
-        hotbarSlotRequested: Pk("hotbarSlotRequested"),
-        hotbarScrolled: Pk("hotbarScrolled"),
-        numberKeyPressed: Pk("numberKeyPressed"),
-        inventoryDropRequested: Pk("inventoryDropRequested"),
-        chestToggled: Pk("chestToggled"),
-        chestRefreshed: Pk("chestRefreshed"),
-        inventorySynced: Pk("inventorySynced"),
-        enchantingTableOpened: Pk("enchantingTableOpened")
+      level(CC) {
+        const zC = this.contrast(CC);
+        return zC >= 7 ? "AAA" : zC >= 4.5 ? "AA" : ""
       },
-      commands: {
-        selectHotbarSlot: kk => bk().commands.selectHotbarSlot(kk),
-        removeInventoryItem: kk => bk().commands.removeInventoryItem(kk),
-        swapInventorySlots: kk => bk().commands.swapInventorySlots(kk),
-        moveInventoryItem: kk => bk().commands.moveInventoryItem(kk),
-        quickMoveInventoryItem: kk => bk().commands.quickMoveInventoryItem(kk),
-        closeChest: kk => bk().commands.closeChest(kk),
-        focusCrafting: kk => bk().commands.focusCrafting(kk),
-        craftRecipe: kk => bk().commands.craftRecipe(kk),
-        salvageItem: kk => bk().commands.salvageItem(kk),
-        enchantItem: kk => bk().commands.enchantItem(kk)
+      isDark() {
+        const CC = this.rgb().color;
+        return (2126 * CC[0] + 7152 * CC[1] + 722 * CC[2]) / 1e4 < 128
       },
-      queries: {
-        enchantingOffer: kk => bk().queries.enchantingOffer(kk)
+      isLight() {
+        return !this.isDark()
+      },
+      Of() {
+        const CC = this.rgb();
+        for (let zC = 0; zC < 3; zC++) CC.color[zC] = 255 - CC.color[zC];
+        return CC
+      },
+      lighten(CC) {
+        const zC = this.hsl();
+        return zC.color[2] += zC.color[2] * CC, zC
+      },
+      darken(CC) {
+        const zC = this.hsl();
+        return zC.color[2] -= zC.color[2] * CC, zC
+      },
+      saturate(CC) {
+        const zC = this.hsl();
+        return zC.color[1] += zC.color[1] * CC, zC
+      },
+      desaturate(CC) {
+        const zC = this.hsl();
+        return zC.color[1] -= zC.color[1] * CC, zC
+      },
+      whiten(CC) {
+        const zC = this.hwb();
+        return zC.color[1] += zC.color[1] * CC, zC
+      },
+      blacken(CC) {
+        const zC = this.hwb();
+        return zC.color[2] += zC.color[2] * CC, zC
+      },
+      grayscale() {
+        const CC = this.rgb().color,
+          zC = .3 * CC[0] + .59 * CC[1] + .11 * CC[2];
+        return oC.rgb(zC, zC, zC)
+      },
+      fade(CC) {
+        return this.alpha(this.valpha - this.valpha * CC)
+      },
+      opaquer(CC) {
+        return this.alpha(this.valpha + this.valpha * CC)
+      },
+      rotate(CC) {
+        const zC = this.hsl();
+        let ZC = zC.color[0];
+        return ZC = (ZC + CC) % 360, ZC = ZC < 0 ? 360 + ZC : ZC, zC.color[0] = ZC, zC
+      },
+      mix(CC, zC) {
+        if (!CC || !CC.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof CC);
+        const ZC = CC.rgb(),
+          QC = this.rgb(),
+          wC = void 0 === zC ? .5 : zC,
+          bC = 2 * wC - 1,
+          nC = ZC.alpha() - QC.alpha(),
+          fC = ((bC * nC === -1 ? bC : (bC + nC) / (1 + bC * nC)) + 1) / 2,
+          qC = 1 - fC;
+        return oC.rgb(fC * ZC.red() + qC * QC.red(), fC * ZC.green() + qC * QC.green(), fC * ZC.blue() + qC * QC.blue(), ZC.alpha() * wC + QC.alpha() * (1 - wC))
       }
-    }
-  },
-  40238: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => rk
-    });
-    var Dk = ik(39200);
-
-    function fk(kk) {
-      return {
-        current: () => kk,
-        watch: () => () => {}
-      }
-    }
-
-    function Sk() {}
-    const bk = Object.freeze([0, 0, 0]),
-      rk = {
-        states: {
-          health: fk({
-            health: null,
-            maxHealth: null,
-            shield: null,
-            maxShield: null
-          }),
-          inventory: fk({
-            player: [],
-            chestOrCreative: [],
-            chest: null,
-            creative: !1,
-            selectedSlot: 0,
-            freeSlots: 0
-          }),
-          hotbar: fk({
-            items: [],
-            ammo: 0,
-            selectedSlot: null
-          }),
-          stationItems: fk({
-            enchantable: {},
-            salvageable: {}
-          }),
-          itemInfo: fk({}),
-          creativeVisibility: fk({
-            publicLobby: !1,
-            shownInGame: {}
-          }),
-          aura: fk(null),
-          heldItemAim: fk({
-            gun: !1,
-            aimable: !1,
-            chargeName: null
-          }),
-          crouching: fk(!1),
-          gliderBoostFuel: fk(0),
-          flight: fk({
-            canFly: !1,
-            flying: !1
-          }),
-          crafting: fk({
-            focus: null,
-            recipes: [],
-            detail: null
-          }),
-          players: fk({
-            ids: [],
-            byId: {},
-            localId: null
-          }),
-          lobbyLeaderboardRows: fk({}),
-          fullInventory: fk(!1),
-          crosshairTarget: fk({
-            interactPrompt: null,
-            blockText: null,
-            neededTool: null
-          }),
-          localPlayerAlive: fk(!0),
-          freeCamera: fk({
-            allowed: !1,
-            movesFly: !1
-          }),
-          replay: fk(null),
-          replayEdits: fk(null),
-          replayRecorder: fk({
-            recording: !1,
-            clipping: !1,
-            hasClipBuffer: !1,
-            seconds: 0
-          }),
-          replayVideoExporting: fk(!1)
-        },
-        events: {
-          hotbarSlotRequested: {
-            watch: () => () => {}
-          },
-          hotbarScrolled: {
-            watch: () => () => {}
-          },
-          hotbarDropRequested: {
-            watch: () => () => {}
-          },
-          inventoryDropRequested: {
-            watch: () => () => {}
-          },
-          numberKeyPressed: {
-            watch: () => () => {}
-          },
-          chestToggled: {
-            watch: () => () => {}
-          },
-          chestRefreshed: {
-            watch: () => () => {}
-          },
-          inventorySynced: {
-            watch: () => () => {}
-          },
-          enchantingTableOpened: {
-            watch: () => () => {}
-          },
-          cosmeticsUpdated: {
-            watch: () => () => {}
-          },
-          shotDamageToShow: {
-            watch: () => () => {}
-          },
-          boardEditRequested: {
-            watch: () => () => {}
-          },
-          kill: {
-            watch: () => () => {}
-          },
-          chatReceived: {
-            watch: () => () => {}
-          },
-          ironChestOpenRequested: {
-            watch: () => () => {}
-          },
-          localEffectUpdated: {
-            watch: () => () => {}
-          },
-          localPlayerAliveSet: {
-            watch: () => () => {}
-          },
-          replayUiActionRequested: {
-            watch: () => () => {}
-          },
-          replayViewerRequested: {
-            watch: () => () => {}
-          }
-        },
-        commands: {
-          selectHotbarSlot: Sk,
-          removeInventoryItem: () => !1,
-          swapInventorySlots: () => !1,
-          moveInventoryItem: () => !1,
-          quickMoveInventoryItem: () => null,
-          closeChest: Sk,
-          setInventoryOpen: Sk,
-          changeIronChestPasskey: Sk,
-          dragReplayCamera: Sk,
-          applyTemporaryThirdPerson: Sk,
-          holdEmoteWheel: Sk,
-          recordFlyingMiddleText: Sk,
-          focusCrafting: Sk,
-          craftRecipe: () => ({
-            EM: 0,
-            vr: null,
-            amountAddedToSlot: 0
-          }),
-          salvageItem: () => !1,
-          enchantItem: Sk,
-          setShopOpen: Sk,
-          buyShopItem: Sk,
-          lobbyManage: Sk,
-          sendChatMessage: Sk,
-          ignorePlayer: Sk,
-          reportPlayer: Sk,
-          reportWorldCodeChat: Sk,
-          requestDiscordReportKey: Sk,
-          reportLobbyOrGame: Sk,
-          playEmote: Sk,
-          updateMyCosmetic: Sk,
-          writeOnBoard: Sk,
-          writeBook: Sk,
-          writeNameTag: Sk,
-          setCustomLobbyBlock: Sk,
-          openIronChest: Sk,
-          sendCodeCollab: Sk,
-          clickCodeBlock: Sk,
-          bindCustomButtonKeys: Sk,
-          pressCustomButton: Sk,
-          moveReplayFreecam: Sk,
-          holdReplayFreecamVertical: Sk,
-          respawn: Sk,
-          wakeUp: Sk,
-          requestLeaderboard: Sk,
-          completeTask: Sk,
-          setServerCookie: Sk,
-          answerUiRequest: Sk,
-          chooseRewardedAd: Sk,
-          setCameraZoom: Sk,
-          setFreeCameraMovesFly: Sk,
-          setBlockHighlight: Sk,
-          setCrosshairInteractPrompt: Sk,
-          setLookSensitivity: Sk,
-          replayAction: Sk,
-          setReplayPlaying: Sk,
-          seekReplay: Sk,
-          setReplayCameraMode: Sk,
-          syncReplayCameraMode: Sk,
-          setReplayCameraKeyframe: Sk,
-          moveReplayCameraKeyframe: Sk,
-          deleteReplayCameraKeyframes: Sk,
-          setReplayPlaybackMark: Sk,
-          cropReplay: () => !1,
-          holdReplayForShaderPackFailure: Sk,
-          exportReplayVideo: Sk,
-          toggleRecording: Sk,
-          saveClip: Sk,
-          setRecorderPrefs: Sk,
-          setReplayViewerOpen: Sk
-        },
-        queries: {
-          enchantingOffer: () => ({
-            perks: [],
-            options: []
-          }),
-          worldCodeAiChunk: () => Dk.c,
-          worldCodeAiGameState: () => Dk.d
-        },
-        lookups: {
-          localPos: () => bk,
-          targetedBlockPos: () => null,
-          blockAtViewPoint: () => null,
-          momentumFrac: () => 0,
-          screenPos: () => ({
-            x: 0,
-            y: 0
-          }),
-          cameraZoom: () => 0,
-          freeCameraPos: () => null,
-          blocksStandingOn: () => [],
-          dropAhead: () => !1,
-          replayCamera: () => null,
-          leaveGameReloadsPage: () => !1,
-          codeBlockClickable: () => !1
-        }
-      }
-  },
-  40161: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => sk,
-      e: () => jk,
-      f: () => dk,
-      i: () => Ak,
-      k: () => Lk
-    });
-    var Dk = ik(38805),
-      fk = ik(1207),
-      Sk = ik(1911),
-      bk = ik(1920),
-      rk = ik(3261),
-      Pk = ik(36391),
-      mk = ik(1302),
-      Mk = ik(40165),
-      Kk = ik(4752),
-      xk = ik(2388),
-      nk = ik(40172),
-      Uk = ik(40180),
-      Hk = ik(40223);
-    let wk = null;
-
-    function lk(kk) {
-      const ek = new Map,
-        ik = ik => {
-          if ("string" !== typeof ik) return;
-          let Dk = ek.get(ik);
-          return void 0 === Dk && (Dk = kk(ik), void 0 !== Dk && ek.set(ik, Dk)), Dk
-        };
-      return new Proxy({}, {
-        get: (kk, ek) => ik(ek),
-        has: (kk, ek) => void 0 !== ik(ek)
-      })
-    }
-
-    function pk(kk) {
-      const ek = (0, rk.e)(kk);
-      return void 0 !== ek && (0, rk.h)(ek) === kk
-    }
-
-    function yk(kk) {
-      var ek;
-      const ik = null === (ek = (0, Mk.g)()) || void 0 === ek ? void 0 : ek.tables;
-      if (void 0 === ik || !pk(kk)) return;
-      const Dk = {
-          displayName: ik.getDisplayName(kk)
-        },
-        fk = ik.getItemStat(kk, "description");
-      void 0 !== fk && null !== fk && (Dk.description = fk);
+    };
+    for (const MC of Object.keys(wC)) {
+      if (bC.includes(MC)) continue;
       const {
-        rootName: Sk
-      } = ik.getMetaInfo(kk);
-      Sk !== kk && (Dk.rootName = Sk);
-      const bk = ik.getItemStat(kk, "armourReduction");
-      return void 0 !== bk && null !== bk && (Dk.armourReduction = bk), Dk
-    }(0, Mk.u)((kk => {
-      wk = kk
-    }));
-    const Yk = (0, bk.k)("DisplayName", "Description");
-
-    function Lk() {
-      return Boolean(Sk.c.get("useInventory") && Sk.c.get("useFullInventory"))
+        channels: CC
+      } = wC[MC];
+      oC.prototype[MC] = function() {
+        if (this.model === MC) return new oC(this);
+        for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
+        return zC.length > 0 ? new oC(zC, MC) : new oC([...(QC = wC[this.model][MC].raw(this.color), Array.isArray(QC) ? QC : [QC]), this.valpha], MC);
+        var QC
+      }, oC[MC] = function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        let wC = ZC[0];
+        return "number" === typeof wC && (wC = NC(ZC, CC)), new oC(wC, MC)
+      }
     }
-    let Ck = null;
-    const Ak = {
-        inventory: function() {
-          const kk = Hk.d.states.inventory;
-          let ek = null;
-          const ik = kk => {
-            var ik;
-            return null === kk.chest ? kk : ((null === (ik = ek) || void 0 === ik ? void 0 : ik.from) === kk && ek.chestVersion === (0, Uk.e)() || (ek = {
-              from: kk,
-              chestVersion: (0, Uk.e)(),
-              view: {
-                ...kk,
-                chest: (0, Uk.k)(kk.chest)
-              }
-            }), ek.view)
-          };
-          return {
-            current: () => ik(kk.current()),
-            watch: ek => kk.watch((kk => {
-              ek(ik(kk))
-            }))
-          }
-        }(),
-        crafting: Hk.d.states.crafting,
-        stationItems: {
-          current() {
-            var kk;
-            return (null === (kk = Ck) || void 0 === kk ? void 0 : kk.namesVersion) !== (0, rk.l)() && (Ck = {
-              namesVersion: (0, rk.l)(),
-              items: {
-                enchantable: lk((kk => {
-                  const ek = (0, rk.e)(kk);
-                  return void 0 !== ek && null !== wk && wk.enchantmentPerksOf(ek).length > 0 || void 0
-                })),
-                salvageable: lk((kk => !(!pk(kk) || null === (0, Pk.b)(kk)) || void 0))
-              }
-            }), Ck.items
-          },
-          watch: () => () => {}
-        },
-        itemInfo: function() {
-          let kk = null;
-          const ek = () => {
-            var ek;
-            return (null === (ek = kk) || void 0 === ek ? void 0 : ek.namesVersion) !== (0, rk.l)() && (kk = {
-              namesVersion: (0, rk.l)(),
-              infos: lk(yk)
-            }), kk.infos
-          };
-          return {
-            current: ek,
-            watch: ik => (0, bk.t)((Dk => {
-              Dk.some(Yk) && (kk = null, ik(ek()))
-            }))
-          }
-        }(),
-        creativeVisibility: (0, bk.p)((function() {
-          const kk = {};
-          for (const fk of null !== (ek = null === (ik = wk) || void 0 === ik ? void 0 : ik.creativeItemIds()) && void 0 !== ek ? ek : []) {
-            var ek, ik, bk, Pk;
-            const mk = (0, rk.h)(fk);
-            if (void 0 === mk) continue;
-            const Mk = null !== (bk = Sk.c.get((0, Dk.e)(mk, "showInCreativeInven"))) && void 0 !== bk ? bk : null === (Pk = wk) || void 0 === Pk ? void 0 : Pk.showInCreativeInvenOf(fk);
-            "boolean" === typeof Mk && (kk[mk] = Mk)
-          }
-          return {
-            publicLobby: (0, fk.I)((0, mk.c)().lobbyName),
-            shownInGame: kk
-          }
-        }), ["connectedGameChanged"], (0, bk.k)("ShowInCreativeInven")),
-        fullInventory: (0, bk.p)(Lk, [], (0, bk.o)("useInventory", "useFullInventory"))
-      },
-      jk = {
-        inventoryDropRequested: Hk.d.events.inventoryDropRequested,
-        chestToggled: Hk.d.events.chestToggled,
-        chestRefreshed: Hk.d.events.chestRefreshed,
-        inventorySynced: Hk.d.events.inventorySynced,
-        enchantingTableOpened: Hk.d.events.enchantingTableOpened
-      },
-      sk = {
-        removeInventoryItem: Hk.d.commands.removeInventoryItem,
-        swapInventorySlots: Hk.d.commands.swapInventorySlots,
-        moveInventoryItem: Hk.d.commands.moveInventoryItem,
-        quickMoveInventoryItem: Hk.d.commands.quickMoveInventoryItem,
-        closeChest: Hk.d.commands.closeChest,
-        setInventoryOpen(kk) {
-          (0, Kk.j)(xk.t.InventoryOpen, kk ? xk.t.InventoryOpen : 0)
-        },
-        focusCrafting: Hk.d.commands.focusCrafting,
-        craftRecipe: Hk.d.commands.craftRecipe,
-        salvageItem: Hk.d.commands.salvageItem,
-        enchantItem: Hk.d.commands.enchantItem,
-        changeIronChestPasskey(kk) {
-          var ek;
-          let {
-            pos: ik,
-            Gb: Dk
-          } = kk;
-          null === (ek = (0, Mk.g)()) || void 0 === ek || ek.send(nk.e.ChangeIronChestPasskey, (0, nk.h)({
-            le: ik,
-            Gb: Dk
-          }))
-        },
-        openIronChest(kk) {
-          var ek;
-          let {
-            pos: ik,
-            Gb: Dk
-          } = kk;
-          null === (ek = (0, Mk.g)()) || void 0 === ek || ek.send(nk.e.OpenIronChest, (0, nk.D)({
-            le: ik,
-            Gb: Dk
-          }))
+
+    function qC(CC) {
+      return function(zC) {
+        return function(CC, zC) {
+          return Number(CC.toFixed(zC))
+        }(zC, CC)
+      }
+    }
+
+    function FC(CC, zC, ZC) {
+      CC = Array.isArray(CC) ? CC : [CC];
+      for (const QC of CC)(fC[QC] || (fC[QC] = []))[zC] = ZC;
+      return CC = CC[0],
+        function(QC) {
+          let wC;
+          return void 0 !== QC ? (ZC && (QC = ZC(QC)), wC = this[CC](), wC.color[zC] = QC, wC) : (wC = this[CC]().color[zC], ZC && (wC = ZC(wC)), wC)
         }
+    }
+
+    function WC(CC) {
+      return function(zC) {
+        return Math.max(0, Math.min(CC, zC))
+      }
+    }
+
+    function NC(CC, zC) {
+      for (let ZC = 0; ZC < zC; ZC++) "number" !== typeof CC[ZC] && (CC[ZC] = 0);
+      return CC
+    }
+    CC.exports = oC
+  },
+  36537: (CC, zC, ZC) => {
+    const QC = ZC(36545),
+      wC = {};
+    for (const nC of Object.keys(QC)) wC[QC[nC]] = nC;
+    const bC = {
+      rgb: {
+        channels: 3,
+        labels: "rgb"
       },
-      dk = {
-        enchantingOffer: Hk.d.queries.enchantingOffer
+      hsl: {
+        channels: 3,
+        labels: "hsl"
+      },
+      hsv: {
+        channels: 3,
+        labels: "hsv"
+      },
+      hwb: {
+        channels: 3,
+        labels: "hwb"
+      },
+      cmyk: {
+        channels: 4,
+        labels: "cmyk"
+      },
+      xyz: {
+        channels: 3,
+        labels: "xyz"
+      },
+      lab: {
+        channels: 3,
+        labels: "lab"
+      },
+      lch: {
+        channels: 3,
+        labels: "lch"
+      },
+      hex: {
+        channels: 1,
+        labels: ["hex"]
+      },
+      keyword: {
+        channels: 1,
+        labels: ["keyword"]
+      },
+      ansi16: {
+        channels: 1,
+        labels: ["ansi16"]
+      },
+      ansi256: {
+        channels: 1,
+        labels: ["ansi256"]
+      },
+      hcg: {
+        channels: 3,
+        labels: ["h", "c", "g"]
+      },
+      apple: {
+        channels: 3,
+        labels: ["r16", "g16", "b16"]
+      },
+      gray: {
+        channels: 1,
+        labels: ["gray"]
       }
+    };
+    CC.exports = bC;
+    for (const nC of Object.keys(bC)) {
+      if (!("channels" in bC[nC])) throw new Error("missing channels property: " + nC);
+      if (!("labels" in bC[nC])) throw new Error("missing channel labels property: " + nC);
+      if (bC[nC].labels.length !== bC[nC].channels) throw new Error("channel and label counts mismatch: " + nC);
+      const {
+        channels: CC,
+        labels: zC
+      } = bC[nC];
+      delete bC[nC].channels, delete bC[nC].labels, Object.defineProperty(bC[nC], "channels", {
+        value: CC
+      }), Object.defineProperty(bC[nC], "labels", {
+        value: zC
+      })
+    }
+    bC.rgb.hsl = function(CC) {
+      const zC = CC[0] / 255,
+        ZC = CC[1] / 255,
+        QC = CC[2] / 255,
+        wC = Math.min(zC, ZC, QC),
+        bC = Math.max(zC, ZC, QC),
+        nC = bC - wC;
+      let fC, oC;
+      bC === wC ? fC = 0 : zC === bC ? fC = (ZC - QC) / nC : ZC === bC ? fC = 2 + (QC - zC) / nC : QC === bC && (fC = 4 + (zC - ZC) / nC), fC = Math.min(60 * fC, 360), fC < 0 && (fC += 360);
+      const qC = (wC + bC) / 2;
+      return oC = bC === wC ? 0 : qC <= .5 ? nC / (bC + wC) : nC / (2 - bC - wC), [fC, 100 * oC, 100 * qC]
+    }, bC.rgb.hsv = function(CC) {
+      let zC, ZC, QC, wC, bC;
+      const nC = CC[0] / 255,
+        fC = CC[1] / 255,
+        oC = CC[2] / 255,
+        qC = Math.max(nC, fC, oC),
+        FC = qC - Math.min(nC, fC, oC),
+        WC = function(CC) {
+          return (qC - CC) / 6 / FC + .5
+        };
+      return 0 === FC ? (wC = 0, bC = 0) : (bC = FC / qC, zC = WC(nC), ZC = WC(fC), QC = WC(oC), nC === qC ? wC = QC - ZC : fC === qC ? wC = 1 / 3 + zC - QC : oC === qC && (wC = 2 / 3 + ZC - zC), wC < 0 ? wC += 1 : wC > 1 && (wC -= 1)), [360 * wC, 100 * bC, 100 * qC]
+    }, bC.rgb.hwb = function(CC) {
+      const zC = CC[0],
+        ZC = CC[1];
+      let QC = CC[2];
+      const wC = bC.rgb.hsl(CC)[0],
+        nC = 1 / 255 * Math.min(zC, Math.min(ZC, QC));
+      return QC = 1 - 1 / 255 * Math.max(zC, Math.max(ZC, QC)), [wC, 100 * nC, 100 * QC]
+    }, bC.rgb.cmyk = function(CC) {
+      const zC = CC[0] / 255,
+        ZC = CC[1] / 255,
+        QC = CC[2] / 255,
+        wC = Math.min(1 - zC, 1 - ZC, 1 - QC);
+      return [100 * ((1 - zC - wC) / (1 - wC) || 0), 100 * ((1 - ZC - wC) / (1 - wC) || 0), 100 * ((1 - QC - wC) / (1 - wC) || 0), 100 * wC]
+    }, bC.rgb.keyword = function(CC) {
+      const zC = wC[CC];
+      if (zC) return zC;
+      let ZC, bC = 1 / 0;
+      for (const wC of Object.keys(QC)) {
+        const zC = QC[wC],
+          oC = (fC = zC, ((nC = CC)[0] - fC[0]) ** 2 + (nC[1] - fC[1]) ** 2 + (nC[2] - fC[2]) ** 2);
+        oC < bC && (bC = oC, ZC = wC)
+      }
+      var nC, fC;
+      return ZC
+    }, bC.keyword.rgb = function(CC) {
+      return QC[CC]
+    }, bC.rgb.xyz = function(CC) {
+      let zC = CC[0] / 255,
+        ZC = CC[1] / 255,
+        QC = CC[2] / 255;
+      zC = zC > .04045 ? ((zC + .055) / 1.055) ** 2.4 : zC / 12.92, ZC = ZC > .04045 ? ((ZC + .055) / 1.055) ** 2.4 : ZC / 12.92, QC = QC > .04045 ? ((QC + .055) / 1.055) ** 2.4 : QC / 12.92;
+      return [100 * (.4124 * zC + .3576 * ZC + .1805 * QC), 100 * (.2126 * zC + .7152 * ZC + .0722 * QC), 100 * (.0193 * zC + .1192 * ZC + .9505 * QC)]
+    }, bC.rgb.lab = function(CC) {
+      const zC = bC.rgb.xyz(CC);
+      let ZC = zC[0],
+        QC = zC[1],
+        wC = zC[2];
+      ZC /= 95.047, QC /= 100, wC /= 108.883, ZC = ZC > .008856 ? ZC ** (1 / 3) : 7.787 * ZC + 16 / 116, QC = QC > .008856 ? QC ** (1 / 3) : 7.787 * QC + 16 / 116, wC = wC > .008856 ? wC ** (1 / 3) : 7.787 * wC + 16 / 116;
+      return [116 * QC - 16, 500 * (ZC - QC), 200 * (QC - wC)]
+    }, bC.hsl.rgb = function(CC) {
+      const zC = CC[0] / 360,
+        ZC = CC[1] / 100,
+        QC = CC[2] / 100;
+      let wC, bC, nC;
+      if (0 === ZC) return nC = 255 * QC, [nC, nC, nC];
+      wC = QC < .5 ? QC * (1 + ZC) : QC + ZC - QC * ZC;
+      const fC = 2 * QC - wC,
+        oC = [0, 0, 0];
+      for (let qC = 0; qC < 3; qC++) bC = zC + 1 / 3 * -(qC - 1), bC < 0 && bC++, bC > 1 && bC--, nC = 6 * bC < 1 ? fC + 6 * (wC - fC) * bC : 2 * bC < 1 ? wC : 3 * bC < 2 ? fC + (wC - fC) * (2 / 3 - bC) * 6 : fC, oC[qC] = 255 * nC;
+      return oC
+    }, bC.hsl.hsv = function(CC) {
+      const zC = CC[0];
+      let ZC = CC[1] / 100,
+        QC = CC[2] / 100,
+        wC = ZC;
+      const bC = Math.max(QC, .01);
+      QC *= 2, ZC *= QC <= 1 ? QC : 2 - QC, wC *= bC <= 1 ? bC : 2 - bC;
+      return [zC, 100 * (0 === QC ? 2 * wC / (bC + wC) : 2 * ZC / (QC + ZC)), 100 * ((QC + ZC) / 2)]
+    }, bC.hsv.rgb = function(CC) {
+      const zC = CC[0] / 60,
+        ZC = CC[1] / 100;
+      let QC = CC[2] / 100;
+      const wC = Math.floor(zC) % 6,
+        bC = zC - Math.floor(zC),
+        nC = 255 * QC * (1 - ZC),
+        fC = 255 * QC * (1 - ZC * bC),
+        oC = 255 * QC * (1 - ZC * (1 - bC));
+      switch (QC *= 255, wC) {
+        case 0:
+          return [QC, oC, nC];
+        case 1:
+          return [fC, QC, nC];
+        case 2:
+          return [nC, QC, oC];
+        case 3:
+          return [nC, fC, QC];
+        case 4:
+          return [oC, nC, QC];
+        case 5:
+          return [QC, nC, fC]
+      }
+    }, bC.hsv.hsl = function(CC) {
+      const zC = CC[0],
+        ZC = CC[1] / 100,
+        QC = CC[2] / 100,
+        wC = Math.max(QC, .01);
+      let bC, nC;
+      nC = (2 - ZC) * QC;
+      const fC = (2 - ZC) * wC;
+      return bC = ZC * wC, bC /= fC <= 1 ? fC : 2 - fC, bC = bC || 0, nC /= 2, [zC, 100 * bC, 100 * nC]
+    }, bC.hwb.rgb = function(CC) {
+      const zC = CC[0] / 360;
+      let ZC = CC[1] / 100,
+        QC = CC[2] / 100;
+      const wC = ZC + QC;
+      let bC;
+      wC > 1 && (ZC /= wC, QC /= wC);
+      const nC = Math.floor(6 * zC),
+        fC = 1 - QC;
+      bC = 6 * zC - nC, 0 !== (1 & nC) && (bC = 1 - bC);
+      const oC = ZC + bC * (fC - ZC);
+      let qC, FC, WC;
+      switch (nC) {
+        default:
+        case 6:
+        case 0:
+          qC = fC, FC = oC, WC = ZC;
+          break;
+        case 1:
+          qC = oC, FC = fC, WC = ZC;
+          break;
+        case 2:
+          qC = ZC, FC = fC, WC = oC;
+          break;
+        case 3:
+          qC = ZC, FC = oC, WC = fC;
+          break;
+        case 4:
+          qC = oC, FC = ZC, WC = fC;
+          break;
+        case 5:
+          qC = fC, FC = ZC, WC = oC
+      }
+      return [255 * qC, 255 * FC, 255 * WC]
+    }, bC.cmyk.rgb = function(CC) {
+      const zC = CC[0] / 100,
+        ZC = CC[1] / 100,
+        QC = CC[2] / 100,
+        wC = CC[3] / 100;
+      return [255 * (1 - Math.min(1, zC * (1 - wC) + wC)), 255 * (1 - Math.min(1, ZC * (1 - wC) + wC)), 255 * (1 - Math.min(1, QC * (1 - wC) + wC))]
+    }, bC.xyz.rgb = function(CC) {
+      const zC = CC[0] / 100,
+        ZC = CC[1] / 100,
+        QC = CC[2] / 100;
+      let wC, bC, nC;
+      return wC = 3.2406 * zC + -1.5372 * ZC + -.4986 * QC, bC = -.9689 * zC + 1.8758 * ZC + .0415 * QC, nC = .0557 * zC + -.204 * ZC + 1.057 * QC, wC = wC > .0031308 ? 1.055 * wC ** (1 / 2.4) - .055 : 12.92 * wC, bC = bC > .0031308 ? 1.055 * bC ** (1 / 2.4) - .055 : 12.92 * bC, nC = nC > .0031308 ? 1.055 * nC ** (1 / 2.4) - .055 : 12.92 * nC, wC = Math.min(Math.max(0, wC), 1), bC = Math.min(Math.max(0, bC), 1), nC = Math.min(Math.max(0, nC), 1), [255 * wC, 255 * bC, 255 * nC]
+    }, bC.xyz.lab = function(CC) {
+      let zC = CC[0],
+        ZC = CC[1],
+        QC = CC[2];
+      zC /= 95.047, ZC /= 100, QC /= 108.883, zC = zC > .008856 ? zC ** (1 / 3) : 7.787 * zC + 16 / 116, ZC = ZC > .008856 ? ZC ** (1 / 3) : 7.787 * ZC + 16 / 116, QC = QC > .008856 ? QC ** (1 / 3) : 7.787 * QC + 16 / 116;
+      return [116 * ZC - 16, 500 * (zC - ZC), 200 * (ZC - QC)]
+    }, bC.lab.xyz = function(CC) {
+      let zC, ZC, QC;
+      ZC = (CC[0] + 16) / 116, zC = CC[1] / 500 + ZC, QC = ZC - CC[2] / 200;
+      const wC = ZC ** 3,
+        bC = zC ** 3,
+        nC = QC ** 3;
+      return ZC = wC > .008856 ? wC : (ZC - 16 / 116) / 7.787, zC = bC > .008856 ? bC : (zC - 16 / 116) / 7.787, QC = nC > .008856 ? nC : (QC - 16 / 116) / 7.787, zC *= 95.047, ZC *= 100, QC *= 108.883, [zC, ZC, QC]
+    }, bC.lab.lch = function(CC) {
+      const zC = CC[0],
+        ZC = CC[1],
+        QC = CC[2];
+      let wC;
+      wC = 360 * Math.atan2(QC, ZC) / 2 / Math.PI, wC < 0 && (wC += 360);
+      return [zC, Math.sqrt(ZC * ZC + QC * QC), wC]
+    }, bC.lch.lab = function(CC) {
+      const zC = CC[0],
+        ZC = CC[1],
+        QC = CC[2] / 360 * 2 * Math.PI;
+      return [zC, ZC * Math.cos(QC), ZC * Math.sin(QC)]
+    }, bC.rgb.ansi16 = function(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [ZC, QC, wC] = CC;
+      let nC = null === zC ? bC.rgb.hsv(CC)[2] : zC;
+      if (nC = Math.round(nC / 50), 0 === nC) return 30;
+      let fC = 30 + (Math.round(wC / 255) << 2 | Math.round(QC / 255) << 1 | Math.round(ZC / 255));
+      return 2 === nC && (fC += 60), fC
+    }, bC.hsv.ansi16 = function(CC) {
+      return bC.rgb.ansi16(bC.hsv.rgb(CC), CC[2])
+    }, bC.rgb.ansi256 = function(CC) {
+      const zC = CC[0],
+        ZC = CC[1],
+        QC = CC[2];
+      if (zC === ZC && ZC === QC) return zC < 8 ? 16 : zC > 248 ? 231 : Math.round((zC - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(zC / 255 * 5) + 6 * Math.round(ZC / 255 * 5) + Math.round(QC / 255 * 5)
+    }, bC.ansi16.rgb = function(CC) {
+      let zC = CC % 10;
+      if (0 === zC || 7 === zC) return CC > 50 && (zC += 3.5), zC = zC / 10.5 * 255, [zC, zC, zC];
+      const ZC = .5 * (1 + ~~(CC > 50));
+      return [(1 & zC) * ZC * 255, (zC >> 1 & 1) * ZC * 255, (zC >> 2 & 1) * ZC * 255]
+    }, bC.ansi256.rgb = function(CC) {
+      if (CC >= 232) {
+        const zC = 10 * (CC - 232) + 8;
+        return [zC, zC, zC]
+      }
+      let zC;
+      CC -= 16;
+      return [Math.floor(CC / 36) / 5 * 255, Math.floor((zC = CC % 36) / 6) / 5 * 255, zC % 6 / 5 * 255]
+    }, bC.rgb.hex = function(CC) {
+      const zC = (((255 & Math.round(CC[0])) << 16) + ((255 & Math.round(CC[1])) << 8) + (255 & Math.round(CC[2]))).toString(16).toUpperCase();
+      return "000000".substring(zC.length) + zC
+    }, bC.hex.rgb = function(CC) {
+      const zC = CC.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!zC) return [0, 0, 0];
+      let ZC = zC[0];
+      3 === zC[0].length && (ZC = ZC.split("").map((CC => CC + CC)).join(""));
+      const QC = parseInt(ZC, 16);
+      return [QC >> 16 & 255, QC >> 8 & 255, 255 & QC]
+    }, bC.rgb.hcg = function(CC) {
+      const zC = CC[0] / 255,
+        ZC = CC[1] / 255,
+        QC = CC[2] / 255,
+        wC = Math.max(Math.max(zC, ZC), QC),
+        bC = Math.min(Math.min(zC, ZC), QC),
+        nC = wC - bC;
+      let fC, oC;
+      return fC = nC < 1 ? bC / (1 - nC) : 0, oC = nC <= 0 ? 0 : wC === zC ? (ZC - QC) / nC % 6 : wC === ZC ? 2 + (QC - zC) / nC : 4 + (zC - ZC) / nC, oC /= 6, oC %= 1, [360 * oC, 100 * nC, 100 * fC]
+    }, bC.hsl.hcg = function(CC) {
+      const zC = CC[1] / 100,
+        ZC = CC[2] / 100,
+        QC = ZC < .5 ? 2 * zC * ZC : 2 * zC * (1 - ZC);
+      let wC = 0;
+      return QC < 1 && (wC = (ZC - .5 * QC) / (1 - QC)), [CC[0], 100 * QC, 100 * wC]
+    }, bC.hsv.hcg = function(CC) {
+      const zC = CC[1] / 100,
+        ZC = CC[2] / 100,
+        QC = zC * ZC;
+      let wC = 0;
+      return QC < 1 && (wC = (ZC - QC) / (1 - QC)), [CC[0], 100 * QC, 100 * wC]
+    }, bC.hcg.rgb = function(CC) {
+      const zC = CC[0] / 360,
+        ZC = CC[1] / 100,
+        QC = CC[2] / 100;
+      if (0 === ZC) return [255 * QC, 255 * QC, 255 * QC];
+      const wC = [0, 0, 0],
+        bC = zC % 1 * 6,
+        nC = bC % 1,
+        fC = 1 - nC;
+      let oC = 0;
+      switch (Math.floor(bC)) {
+        case 0:
+          wC[0] = 1, wC[1] = nC, wC[2] = 0;
+          break;
+        case 1:
+          wC[0] = fC, wC[1] = 1, wC[2] = 0;
+          break;
+        case 2:
+          wC[0] = 0, wC[1] = 1, wC[2] = nC;
+          break;
+        case 3:
+          wC[0] = 0, wC[1] = fC, wC[2] = 1;
+          break;
+        case 4:
+          wC[0] = nC, wC[1] = 0, wC[2] = 1;
+          break;
+        default:
+          wC[0] = 1, wC[1] = 0, wC[2] = fC
+      }
+      return oC = (1 - ZC) * QC, [255 * (ZC * wC[0] + oC), 255 * (ZC * wC[1] + oC), 255 * (ZC * wC[2] + oC)]
+    }, bC.hcg.hsv = function(CC) {
+      const zC = CC[1] / 100,
+        ZC = zC + CC[2] / 100 * (1 - zC);
+      let QC = 0;
+      return ZC > 0 && (QC = zC / ZC), [CC[0], 100 * QC, 100 * ZC]
+    }, bC.hcg.hsl = function(CC) {
+      const zC = CC[1] / 100,
+        ZC = CC[2] / 100 * (1 - zC) + .5 * zC;
+      let QC = 0;
+      return ZC > 0 && ZC < .5 ? QC = zC / (2 * ZC) : ZC >= .5 && ZC < 1 && (QC = zC / (2 * (1 - ZC))), [CC[0], 100 * QC, 100 * ZC]
+    }, bC.hcg.hwb = function(CC) {
+      const zC = CC[1] / 100,
+        ZC = zC + CC[2] / 100 * (1 - zC);
+      return [CC[0], 100 * (ZC - zC), 100 * (1 - ZC)]
+    }, bC.hwb.hcg = function(CC) {
+      const zC = CC[1] / 100,
+        ZC = 1 - CC[2] / 100,
+        QC = ZC - zC;
+      let wC = 0;
+      return QC < 1 && (wC = (ZC - QC) / (1 - QC)), [CC[0], 100 * QC, 100 * wC]
+    }, bC.apple.rgb = function(CC) {
+      return [CC[0] / 65535 * 255, CC[1] / 65535 * 255, CC[2] / 65535 * 255]
+    }, bC.rgb.apple = function(CC) {
+      return [CC[0] / 255 * 65535, CC[1] / 255 * 65535, CC[2] / 255 * 65535]
+    }, bC.gray.rgb = function(CC) {
+      return [CC[0] / 100 * 255, CC[0] / 100 * 255, CC[0] / 100 * 255]
+    }, bC.gray.hsl = function(CC) {
+      return [0, 0, CC[0]]
+    }, bC.gray.hsv = bC.gray.hsl, bC.gray.hwb = function(CC) {
+      return [0, 100, CC[0]]
+    }, bC.gray.cmyk = function(CC) {
+      return [0, 0, 0, CC[0]]
+    }, bC.gray.lab = function(CC) {
+      return [CC[0], 0, 0]
+    }, bC.gray.hex = function(CC) {
+      const zC = 255 & Math.round(CC[0] / 100 * 255),
+        ZC = ((zC << 16) + (zC << 8) + zC).toString(16).toUpperCase();
+      return "000000".substring(ZC.length) + ZC
+    }, bC.rgb.gray = function(CC) {
+      return [(CC[0] + CC[1] + CC[2]) / 3 / 255 * 100]
+    }
   },
-  40221: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Dk,
-      g: () => Mk,
-      h: () => bk,
-      k: () => fk,
-      m: () => rk,
-      n: () => mk
-    });
-    class Dk extends Error {
-      constructor() {
-        super(...arguments), this.name = "CoreCorruption"
+  36535: (CC, zC, ZC) => {
+    const QC = ZC(36537),
+      wC = ZC(36550),
+      bC = {};
+    Object.keys(QC).forEach((CC => {
+      bC[CC] = {}, Object.defineProperty(bC[CC], "channels", {
+        value: QC[CC].channels
+      }), Object.defineProperty(bC[CC], "labels", {
+        value: QC[CC].labels
+      });
+      const zC = wC(CC);
+      Object.keys(zC).forEach((ZC => {
+        const QC = zC[ZC];
+        bC[CC][ZC] = function(CC) {
+          const zC = function() {
+            for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+            const wC = ZC[0];
+            if (void 0 === wC || null === wC) return wC;
+            wC.length > 1 && (ZC = wC);
+            const bC = CC(ZC);
+            if ("object" === typeof bC)
+              for (let CC = bC.length, nC = 0; nC < CC; nC++) bC[nC] = Math.round(bC[nC]);
+            return bC
+          };
+          return "conversion" in CC && (zC.conversion = CC.conversion), zC
+        }(QC), bC[CC][ZC].raw = function(CC) {
+          const zC = function() {
+            for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+            const wC = ZC[0];
+            return void 0 === wC || null === wC ? wC : (wC.length > 1 && (ZC = wC), CC(ZC))
+          };
+          return "conversion" in CC && (zC.conversion = CC.conversion), zC
+        }(QC)
+      }))
+    })), CC.exports = bC
+  },
+  36550: (CC, zC, ZC) => {
+    const QC = ZC(36537);
+
+    function wC(CC) {
+      const zC = function() {
+          const CC = {},
+            zC = Object.keys(QC);
+          for (let ZC = zC.length, QC = 0; QC < ZC; QC++) CC[zC[QC]] = {
+            distance: -1,
+            parent: null
+          };
+          return CC
+        }(),
+        ZC = [CC];
+      for (zC[CC].distance = 0; ZC.length;) {
+        const CC = ZC.pop(),
+          wC = Object.keys(QC[CC]);
+        for (let QC = wC.length, bC = 0; bC < QC; bC++) {
+          const QC = wC[bC],
+            nC = zC[QC]; - 1 === nC.distance && (nC.distance = zC[CC].distance + 1, nC.parent = CC, ZC.unshift(QC))
+        }
+      }
+      return zC
+    }
+
+    function bC(CC, zC) {
+      return function(ZC) {
+        return zC(CC(ZC))
       }
     }
 
-    function fk(kk) {
-      return kk instanceof RangeError && /call stack/i.test(kk.message) || kk instanceof Error && "InternalError" === kk.name && /recursion/i.test(kk.message)
+    function nC(CC, zC) {
+      const ZC = [zC[CC].parent, CC];
+      let wC = QC[zC[CC].parent][CC],
+        nC = zC[CC].parent;
+      for (; zC[nC].parent;) ZC.unshift(zC[nC].parent), wC = bC(QC[zC[nC].parent][nC], wC), nC = zC[nC].parent;
+      return wC.conversion = ZC, wC
     }
-    const Sk = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
-
-    function bk(kk) {
-      var ek;
-      return kk instanceof WebAssembly.RuntimeError || kk instanceof Dk || fk(kk) && Sk.test(null !== (ek = kk.stack) && void 0 !== ek ? ek : "")
-    }
-
-    function rk(kk, ek) {
-      if (bk(kk)) throw kk;
-      console.error(ek, kk)
-    }
-
-    function Pk(kk, ek, ik, fk, Sk) {
-      if (ek % fk !== 0 || ek + ik > kk.byteLength) throw new Dk(`${Sk}: ${ik} bytes at ${ek}, ${fk}-aligned, outside ${kk.byteLength} bytes of memory`)
-    }
-
-    function mk(kk, ek, ik, Dk, fk) {
-      return 0 === ik ? null : (Pk(ek, ik, Dk * kk.BYTES_PER_ELEMENT, kk.BYTES_PER_ELEMENT, fk), new kk(ek, ik, Dk))
-    }
-
-    function Mk(kk, ek, ik, Dk, fk) {
-      return 0 === ek ? null : (Pk(kk, ek, ik, Dk, fk), new DataView(kk, ek, ik))
+    CC.exports = function(CC) {
+      const zC = wC(CC),
+        ZC = {},
+        QC = Object.keys(zC);
+      for (let wC = QC.length, bC = 0; bC < wC; bC++) {
+        const CC = QC[bC];
+        null !== zC[CC].parent && (ZC[CC] = nC(CC, zC))
+      }
+      return ZC
     }
   },
-  40165: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => Dk,
-      f: () => lk,
-      g: () => Hk,
-      h: () => wk,
-      j: () => xk,
-      m: () => nk,
-      q: () => Mk,
-      u: () => Kk,
-      w: () => Uk
-    });
-    class Dk extends Error {
-      constructor(kk) {
-        super(`the join's code did not load: ${kk instanceof Error?kk.message:String(kk)}`, {
-          cause: kk
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === kk || void 0 === kk ? void 0 : kk.request
+  36545: CC => {
+    CC.exports = {
+      aliceblue: [240, 248, 255],
+      antiquewhite: [250, 235, 215],
+      aqua: [0, 255, 255],
+      aquamarine: [127, 255, 212],
+      azure: [240, 255, 255],
+      beige: [245, 245, 220],
+      bisque: [255, 228, 196],
+      black: [0, 0, 0],
+      blanchedalmond: [255, 235, 205],
+      blue: [0, 0, 255],
+      blueviolet: [138, 43, 226],
+      brown: [165, 42, 42],
+      burlywood: [222, 184, 135],
+      cadetblue: [95, 158, 160],
+      chartreuse: [127, 255, 0],
+      chocolate: [210, 105, 30],
+      coral: [255, 127, 80],
+      cornflowerblue: [100, 149, 237],
+      cornsilk: [255, 248, 220],
+      crimson: [220, 20, 60],
+      cyan: [0, 255, 255],
+      darkblue: [0, 0, 139],
+      darkcyan: [0, 139, 139],
+      darkgoldenrod: [184, 134, 11],
+      darkgray: [169, 169, 169],
+      darkgreen: [0, 100, 0],
+      darkgrey: [169, 169, 169],
+      darkkhaki: [189, 183, 107],
+      darkmagenta: [139, 0, 139],
+      darkolivegreen: [85, 107, 47],
+      darkorange: [255, 140, 0],
+      darkorchid: [153, 50, 204],
+      darkred: [139, 0, 0],
+      darksalmon: [233, 150, 122],
+      darkseagreen: [143, 188, 143],
+      darkslateblue: [72, 61, 139],
+      darkslategray: [47, 79, 79],
+      darkslategrey: [47, 79, 79],
+      darkturquoise: [0, 206, 209],
+      darkviolet: [148, 0, 211],
+      deeppink: [255, 20, 147],
+      deepskyblue: [0, 191, 255],
+      dimgray: [105, 105, 105],
+      dimgrey: [105, 105, 105],
+      dodgerblue: [30, 144, 255],
+      firebrick: [178, 34, 34],
+      floralwhite: [255, 250, 240],
+      forestgreen: [34, 139, 34],
+      fuchsia: [255, 0, 255],
+      gainsboro: [220, 220, 220],
+      ghostwhite: [248, 248, 255],
+      gold: [255, 215, 0],
+      goldenrod: [218, 165, 32],
+      gray: [128, 128, 128],
+      green: [0, 128, 0],
+      greenyellow: [173, 255, 47],
+      grey: [128, 128, 128],
+      honeydew: [240, 255, 240],
+      hotpink: [255, 105, 180],
+      indianred: [205, 92, 92],
+      indigo: [75, 0, 130],
+      ivory: [255, 255, 240],
+      khaki: [240, 230, 140],
+      lavender: [230, 230, 250],
+      lavenderblush: [255, 240, 245],
+      lawngreen: [124, 252, 0],
+      lemonchiffon: [255, 250, 205],
+      lightblue: [173, 216, 230],
+      lightcoral: [240, 128, 128],
+      lightcyan: [224, 255, 255],
+      lightgoldenrodyellow: [250, 250, 210],
+      lightgray: [211, 211, 211],
+      lightgreen: [144, 238, 144],
+      lightgrey: [211, 211, 211],
+      lightpink: [255, 182, 193],
+      lightsalmon: [255, 160, 122],
+      lightseagreen: [32, 178, 170],
+      lightskyblue: [135, 206, 250],
+      lightslategray: [119, 136, 153],
+      lightslategrey: [119, 136, 153],
+      lightsteelblue: [176, 196, 222],
+      lightyellow: [255, 255, 224],
+      lime: [0, 255, 0],
+      limegreen: [50, 205, 50],
+      linen: [250, 240, 230],
+      magenta: [255, 0, 255],
+      maroon: [128, 0, 0],
+      mediumaquamarine: [102, 205, 170],
+      mediumblue: [0, 0, 205],
+      mediumorchid: [186, 85, 211],
+      mediumpurple: [147, 112, 219],
+      mediumseagreen: [60, 179, 113],
+      mediumslateblue: [123, 104, 238],
+      mediumspringgreen: [0, 250, 154],
+      mediumturquoise: [72, 209, 204],
+      mediumvioletred: [199, 21, 133],
+      midnightblue: [25, 25, 112],
+      mintcream: [245, 255, 250],
+      mistyrose: [255, 228, 225],
+      moccasin: [255, 228, 181],
+      navajowhite: [255, 222, 173],
+      navy: [0, 0, 128],
+      oldlace: [253, 245, 230],
+      olive: [128, 128, 0],
+      olivedrab: [107, 142, 35],
+      orange: [255, 165, 0],
+      orangered: [255, 69, 0],
+      orchid: [218, 112, 214],
+      palegoldenrod: [238, 232, 170],
+      palegreen: [152, 251, 152],
+      paleturquoise: [175, 238, 238],
+      palevioletred: [219, 112, 147],
+      papayawhip: [255, 239, 213],
+      peachpuff: [255, 218, 185],
+      peru: [205, 133, 63],
+      pink: [255, 192, 203],
+      plum: [221, 160, 221],
+      powderblue: [176, 224, 230],
+      purple: [128, 0, 128],
+      rebeccapurple: [102, 51, 153],
+      red: [255, 0, 0],
+      rosybrown: [188, 143, 143],
+      royalblue: [65, 105, 225],
+      saddlebrown: [139, 69, 19],
+      salmon: [250, 128, 114],
+      sandybrown: [244, 164, 96],
+      seagreen: [46, 139, 87],
+      seashell: [255, 245, 238],
+      sienna: [160, 82, 45],
+      silver: [192, 192, 192],
+      skyblue: [135, 206, 235],
+      slateblue: [106, 90, 205],
+      slategray: [112, 128, 144],
+      slategrey: [112, 128, 144],
+      snow: [255, 250, 250],
+      springgreen: [0, 255, 127],
+      steelblue: [70, 130, 180],
+      tan: [210, 180, 140],
+      teal: [0, 128, 128],
+      thistle: [216, 191, 216],
+      tomato: [255, 99, 71],
+      turquoise: [64, 224, 208],
+      violet: [238, 130, 238],
+      wheat: [245, 222, 179],
+      white: [255, 255, 255],
+      whitesmoke: [245, 245, 245],
+      yellow: [255, 255, 0],
+      yellowgreen: [154, 205, 50]
+    }
+  },
+  36525: (CC, zC, ZC) => {
+    var QC = ZC(36531),
+      wC = Array.prototype.concat,
+      bC = Array.prototype.slice,
+      nC = CC.exports = function(CC) {
+        for (var zC = [], ZC = 0, nC = CC.length; ZC < nC; ZC++) {
+          var fC = CC[ZC];
+          QC(fC) ? zC = wC.call(zC, bC.call(fC)) : zC.push(fC)
+        }
+        return zC
+      };
+    nC.wrap = function(CC) {
+      return function() {
+        return CC(nC(arguments))
       }
     }
-    let fk = null,
-      Sk = null,
-      bk = null;
-    const rk = [];
-    let Pk = null;
-
-    function mk(kk, ek) {
-      try {
-        kk(ek)
-      } catch (ik) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", ik)
-      }
-    }
-
-    function Mk() {
-      return Pk
-    }
-
-    function Kk(kk) {
-      rk.push(kk), null !== Pk && mk(kk, Pk)
-    }
-
-    function xk(kk) {
-      return fk ??= Promise.all([ik.e(72), ik.e(96), ik.e(219), ik.e(77), ik.e(220), ik.e(200), ik.e(95), ik.e(238), ik.e(265), ik.e(198), ik.e(267), ik.e(191), ik.e(197), ik.e(193), ik.e(141), ik.e(87), ik.e(121), ik.e(243), ik.e(56)]).then((() => ik(42177))).then((ek => {
-        ek.loadAudio(kk), Pk = ek;
-        for (const kk of rk) mk(kk, ek);
-        return ek
-      })).catch((kk => {
-        throw fk = null, kk
-      })), fk
-    }
-    async function nk(kk, ek) {
-      try {
-        const ik = await xk(kk);
-        await ik.loadClientGame(ek)
-      } catch (ik) {
-        throw new Dk(ik)
-      }
-    }
-
-    function Uk(kk, ek) {
-      Sk = {
-        running: kk,
-        shell: ek
-      }
-    }
-
-    function Hk() {
-      return bk
-    }
-    async function wk(kk) {
-      const ek = Sk;
-      if ((null === ek || void 0 === ek ? void 0 : ek.running) !== kk) throw new Error("the core's session has ended");
-      const ik = await xk(ek.shell.audio).catch((kk => {
-        throw new Dk(kk)
-      }));
-      if (null !== bk) return bk;
-      if (Sk !== ek || kk.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (bk = ik.startGameHost(kk, ek.shell), null === bk) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return bk
-    }
-
-    function lk() {
-      null !== bk && (null !== Pk ? Pk.endGameHost(bk) : bk.closeGame()), bk = null, Sk = null
+  },
+  36531: CC => {
+    CC.exports = function(CC) {
+      return !(!CC || "string" === typeof CC) && (CC instanceof Array || Array.isArray(CC) || CC.length >= 0 && (CC.splice instanceof Function || Object.getOwnPropertyDescriptor(CC, CC.length - 1) && "String" !== CC.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

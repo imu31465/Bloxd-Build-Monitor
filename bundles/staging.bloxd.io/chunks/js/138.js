@@ -1,132 +1,132 @@
 export const id = 138;
 export const ids = [138];
 export const modules = {
-  6479: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Yk,
-      g: () => Lk,
-      j: () => pk,
-      n: () => lk
+  6639: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => AC,
+      f: () => xC,
+      g: () => GC,
+      h: () => PC
     });
-    var Dk = ik(6484);
-    const fk = 6,
-      Sk = 3,
-      bk = 1,
-      rk = 2,
-      Pk = 4,
-      mk = 8,
-      Mk = 16,
-      Kk = 32,
-      xk = 64,
-      nk = 128,
-      Uk = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var QC = ZC(6646);
+    const wC = 6,
+      bC = 3,
+      nC = 1,
+      fC = 2,
+      oC = 4,
+      qC = 8,
+      FC = 16,
+      WC = 32,
+      NC = 64,
+      MC = 128,
+      gC = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Hk(kk) {
-      if (!kk) return 0;
-      const ek = Uk.indexOf(kk);
-      if (ek <= 0) throw new Error(`"${kk}" is not a shader pack hook function`);
-      return ek
+    function SC(CC) {
+      if (!CC) return 0;
+      const zC = gC.indexOf(CC);
+      if (zC <= 0) throw new Error(`"${CC}" is not a shader pack hook function`);
+      return zC
     }
 
-    function wk(kk) {
-      if (0 === kk) return null;
-      const ek = Uk[kk];
-      if (void 0 === ek) throw new Error(`${kk} is not a shader pack hook function id`);
-      return ek
+    function pC(CC) {
+      if (0 === CC) return null;
+      const zC = gC[CC];
+      if (void 0 === zC) throw new Error(`${CC} is not a shader pack hook function id`);
+      return zC
     }
 
-    function lk(kk) {
-      const ek = Dk.c.length;
+    function PC(CC) {
+      const zC = QC.e.length;
       return {
-        strict: kk >= ek,
-        program: Dk.c[kk % ek]
+        strict: CC >= zC,
+        program: QC.e[CC % zC]
       }
     }
 
-    function pk(kk) {
-      return Number(kk.strict) * Dk.c.length + Dk.c.indexOf(kk.program)
+    function GC(CC) {
+      return Number(CC.strict) * QC.e.length + QC.e.indexOf(CC.program)
     }
 
-    function yk(kk) {
-      return "" === kk ? [] : kk.split(" ")
+    function RC(CC) {
+      return "" === CC ? [] : CC.split(" ")
     }
 
-    function Yk(kk) {
-      const ek = {
-        variantFlags: new Uint8Array(fk),
-        hooks: new Uint8Array(fk * Sk),
-        moduleCodes: Array(fk).fill(""),
-        reads: Array(2 * fk).fill("")
+    function AC(CC) {
+      const zC = {
+        variantFlags: new Uint8Array(wC),
+        hooks: new Uint8Array(wC * bC),
+        moduleCodes: Array(wC).fill(""),
+        reads: Array(2 * wC).fill("")
       };
-      for (const ik of kk) {
-        const kk = pk(ik.key),
-          Dk = (kk, ek) => null === ik.hooks.surface || ik.reads.fragment.includes(kk) ? 0 : ek;
-        ek.variantFlags[kk] = (ik.sceneDepth ? bk : 0) | (ik.movesVertices ? rk : 0) | (ik.sunShadow ? Pk : 0) | (ik.airShadow ? mk : 0) | (ik.discards ? Mk : 0) | Dk("localPosition", Kk) | Dk("enchantSpeed", xk) | Dk("enchantTier", nk), ek.hooks[kk * Sk] = Hk(ik.hooks.vertex), ek.hooks[kk * Sk + 1] = Hk(ik.hooks.surface), ek.hooks[kk * Sk + 2] = Hk(ik.hooks.light), ek.moduleCodes[kk] = ik.moduleCode, ek.reads[2 * kk] = ik.reads.vertex.join(" "), ek.reads[2 * kk + 1] = ik.reads.fragment.join(" ")
+      for (const ZC of CC) {
+        const CC = GC(ZC.key),
+          QC = (CC, zC) => null === ZC.hooks.surface || ZC.reads.fragment.includes(CC) ? 0 : zC;
+        zC.variantFlags[CC] = (ZC.sceneDepth ? nC : 0) | (ZC.movesVertices ? fC : 0) | (ZC.sunShadow ? oC : 0) | (ZC.airShadow ? qC : 0) | (ZC.discards ? FC : 0) | QC("localPosition", WC) | QC("enchantSpeed", NC) | QC("enchantTier", MC), zC.hooks[CC * bC] = SC(ZC.hooks.vertex), zC.hooks[CC * bC + 1] = SC(ZC.hooks.surface), zC.hooks[CC * bC + 2] = SC(ZC.hooks.light), zC.moduleCodes[CC] = ZC.moduleCode, zC.reads[2 * CC] = ZC.reads.vertex.join(" "), zC.reads[2 * CC + 1] = ZC.reads.fragment.join(" ")
       }
-      return ek
+      return zC
     }
 
-    function Lk(kk) {
+    function xC(CC) {
       const {
-        hooks: ek,
-        moduleCodes: ik,
-        reads: Dk
-      } = kk;
-      return Array.from(kk.variantFlags, ((kk, fk) => {
-        const Kk = fk * Sk;
+        hooks: zC,
+        moduleCodes: ZC,
+        reads: QC
+      } = CC;
+      return Array.from(CC.variantFlags, ((CC, wC) => {
+        const WC = wC * bC;
         return {
-          key: lk(fk),
+          key: PC(wC),
           hooks: {
-            vertex: wk(ek[Kk]),
-            surface: wk(ek[Kk + 1]),
-            light: wk(ek[Kk + 2])
+            vertex: pC(zC[WC]),
+            surface: pC(zC[WC + 1]),
+            light: pC(zC[WC + 2])
           },
-          moduleCode: ik[fk],
-          sceneDepth: 0 !== (kk & bk),
-          sunShadow: 0 !== (kk & Pk),
-          airShadow: 0 !== (kk & mk),
-          movesVertices: 0 !== (kk & rk),
-          discards: 0 !== (kk & Mk),
+          moduleCode: ZC[wC],
+          sceneDepth: 0 !== (CC & nC),
+          sunShadow: 0 !== (CC & oC),
+          airShadow: 0 !== (CC & qC),
+          movesVertices: 0 !== (CC & fC),
+          discards: 0 !== (CC & FC),
           reads: {
-            vertex: yk(Dk[2 * fk]),
-            fragment: yk(Dk[2 * fk + 1])
+            vertex: RC(QC[2 * wC]),
+            fragment: RC(QC[2 * wC + 1])
           }
         }
       }))
     }
   },
-  40283: (kk, ek, ik) => {
-    ik.d(ek, {
-      A: () => nk,
-      C: () => Uk,
-      e: () => fk,
-      g: () => Dk,
-      h: () => xk,
-      i: () => Mk,
-      j: () => wk,
-      n: () => Sk,
-      o: () => rk,
-      s: () => Pk,
-      w: () => bk,
-      y: () => Hk
+  40534: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      A: () => nC,
+      D: () => SC,
+      E: () => MC,
+      F: () => gC,
+      d: () => wC,
+      g: () => QC,
+      k: () => NC,
+      n: () => FC,
+      r: () => pC,
+      u: () => bC,
+      w: () => fC,
+      x: () => oC
     });
-    const Dk = 3,
-      fk = 0,
-      Sk = 1,
-      bk = 2,
-      rk = {
+    const QC = 3,
+      wC = 0,
+      bC = 1,
+      nC = 2,
+      fC = {
         uniform: 3,
-        gx: 4,
+        lN: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      Pk = 10,
-      mk = "BloxdPackInputs",
-      Mk = "bloxdPackInputs",
-      Kk = [{
+      oC = 10,
+      qC = "BloxdPackInputs",
+      FC = "bloxdPackInputs",
+      WC = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      xk = 80;
+      NC = 80;
 
-    function nk() {
-      const kk = Kk.map((kk => {
+    function MC() {
+      const CC = WC.map((CC => {
         let {
-          name: ek,
-          type: ik
-        } = kk;
-        return `    ${ek}: ${ik},\n`
+          name: zC,
+          type: ZC
+        } = CC;
+        return `    ${zC}: ${ZC},\n`
       })).join("");
-      return `struct ${mk} {\n${kk}}\n@group(${Dk}) @binding(${fk}) var<uniform> ${Mk}: ${mk};\n`
+      return `struct ${qC} {\n${CC}}\n@group(${QC}) @binding(${wC}) var<uniform> ${FC}: ${qC};\n`
     }
 
-    function Uk(kk, ek) {
-      const ik = new DataView(kk, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, xk),
-        [Dk, fk, Sk, bk, rk, Pk] = Kk;
-      ik.setFloat32(Dk.offset, ek.seconds, !0), ik.setUint32(fk.offset, ek.lit ? 1 : 0, !0);
-      for (let mk = 0; mk < 3; mk++) ik.setInt32(Sk.offset + 4 * mk, ek.renderOffset[mk], !0), ik.setFloat32(bk.offset + 4 * mk, ek.Z5[mk], !0), ik.setFloat32(rk.offset + 4 * mk, ek.eyePosition[mk], !0), ik.setFloat32(Pk.offset + 4 * mk, ek.shadowDirection[mk], !0)
+    function gC(CC, zC) {
+      const ZC = new DataView(CC, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, NC),
+        [QC, wC, bC, nC, fC, oC] = WC;
+      ZC.setFloat32(QC.offset, zC.seconds, !0), ZC.setUint32(wC.offset, zC.lit ? 1 : 0, !0);
+      for (let qC = 0; qC < 3; qC++) ZC.setInt32(bC.offset + 4 * qC, zC.renderOffset[qC], !0), ZC.setFloat32(nC.offset + 4 * qC, zC.B3[qC], !0), ZC.setFloat32(fC.offset + 4 * qC, zC.eyePosition[qC], !0), ZC.setFloat32(oC.offset + 4 * qC, zC.shadowDirection[qC], !0)
     }
 
-    function Hk(kk) {
-      const ek = new Uint32Array(Math.max(1, kk.length));
-      return kk.forEach(((kk, ik) => {
+    function SC(CC) {
+      const zC = new Uint32Array(Math.max(1, CC.length));
+      return CC.forEach(((CC, ZC) => {
         let {
-          id: Dk,
-          rotation: fk
-        } = kk;
-        ek[ik] = 65535 & Dk | (3 & fk) << 16
-      })), ek
+          id: QC,
+          rotation: wC
+        } = CC;
+        zC[ZC] = 65535 & QC | (3 & wC) << 16
+      })), zC
     }
-    const wk = {
+    const pC = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6484: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Dk,
-      f: () => bk,
-      j: () => rk,
-      k: () => fk,
-      m: () => Sk
+  6646: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC,
+      i: () => nC,
+      m: () => fC,
+      n: () => wC,
+      r: () => bC
     });
-    const Dk = ["terrain", "liquid", "model"];
+    const QC = ["terrain", "liquid", "model"];
 
-    function fk() {
-      const kk = [];
-      for (const ek of [!1, !0])
-        for (const ik of Dk) kk.push({
-          strict: ek,
-          program: ik
+    function wC() {
+      const CC = [];
+      for (const zC of [!1, !0])
+        for (const ZC of QC) CC.push({
+          strict: zC,
+          program: ZC
         });
-      return kk
+      return CC
     }
 
-    function Sk(kk) {
-      return `${kk.strict?"strict":"allow"}.${kk.program}`
+    function bC(CC) {
+      return `${CC.strict?"strict":"allow"}.${CC.program}`
     }
 
-    function bk(kk) {
-      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
+    function nC(CC) {
+      return !CC.hooks.vertex && !CC.hooks.surface && !CC.hooks.light
     }
 
-    function rk(kk, ek) {
-      return "off" !== ek && (null === kk || kk.some((kk => kk.key.strict === ("strict" === ek) && !bk(kk))))
+    function fC(CC, zC) {
+      return "off" !== zC && (null === CC || CC.some((CC => CC.key.strict === ("strict" === zC) && !nC(CC))))
     }
   },
-  40848: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      SHADER_PACK_INPUTS_BINDING: () => Sk.e,
-      SHADER_PACK_INPUTS_GROUP: () => Sk.g,
-      SHADER_PACK_INPUTS_SIZE: () => Sk.h,
-      SHADER_PACK_INPUTS_VAR: () => Sk.i,
-      SHADER_PACK_MODES: () => Sk.j,
-      SHADER_PACK_PROGRAMS: () => Dk.c,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => Sk.n,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Sk.o,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Sk.s,
-      SHADER_PACK_TEXTURES_BINDING: () => Sk.w,
-      encodeTextureLayers: () => Sk.y,
-      flattenVariants: () => fk.c,
-      isVariantOff: () => Dk.f,
-      packRunsIn: () => Dk.j,
-      shaderPackInputsWgsl: () => Sk.A,
-      shaderPackVariantKeys: () => Dk.k,
-      variantKeyId: () => Dk.m,
-      writeShaderPackInputs: () => Sk.C
+  41090: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      SHADER_PACK_INPUTS_BINDING: () => bC.d,
+      SHADER_PACK_INPUTS_GROUP: () => bC.g,
+      SHADER_PACK_INPUTS_SIZE: () => bC.k,
+      SHADER_PACK_INPUTS_VAR: () => bC.n,
+      SHADER_PACK_MODES: () => bC.r,
+      SHADER_PACK_PROGRAMS: () => QC.e,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => bC.u,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => bC.w,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => bC.x,
+      SHADER_PACK_TEXTURES_BINDING: () => bC.A,
+      encodeTextureLayers: () => bC.D,
+      flattenVariants: () => wC.b,
+      isVariantOff: () => QC.i,
+      packRunsIn: () => QC.m,
+      shaderPackInputsWgsl: () => bC.E,
+      shaderPackVariantKeys: () => QC.n,
+      variantKeyId: () => QC.r,
+      writeShaderPackInputs: () => bC.F
     });
-    var Dk = ik(6484),
-      fk = ik(6479),
-      Sk = ik(40283)
+    var QC = ZC(6646),
+      wC = ZC(6639),
+      bC = ZC(40534)
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

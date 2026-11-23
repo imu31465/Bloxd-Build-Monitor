@@ -1,79 +1,79 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  4840: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => xk
+  4847: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => NC
     });
-    var Dk = ik(1021),
-      fk = ik.n(Dk),
-      Sk = ik(1033),
-      bk = ik(1327),
-      rk = ik(3456),
-      Pk = ik(131),
-      mk = ik(3487),
-      Mk = ik(3475),
-      Kk = ik(1066);
+    var QC = ZC(1002),
+      wC = ZC.n(QC),
+      bC = ZC(1013),
+      nC = ZC(1295),
+      fC = ZC(3464),
+      oC = ZC(113),
+      qC = ZC(3498),
+      FC = ZC(3487),
+      WC = ZC(1056);
 
-    function xk(kk) {
+    function NC(CC) {
       let {
-        game: ek
-      } = kk;
-      const ik = (0, Pk.m)() ? "large" : "small",
-        Dk = (0, mk.g)(ek, ik),
-        xk = (0, rk.d)(Dk),
-        nk = void 0 !== xk.blurhash;
-      return (0, Kk.jsxs)("div", {
+        game: zC
+      } = CC;
+      const ZC = (0, oC.o)() ? "large" : "small",
+        QC = (0, qC.g)(zC, ZC),
+        NC = (0, fC.e)(QC),
+        MC = void 0 !== NC.blurhash;
+      return (0, WC.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [xk.isLoading && !nk && (0, Kk.jsx)(bk.d, {
+        children: [NC.isLoading && !MC && (0, WC.jsx)(nC.d, {
           loaderType: "Secondary"
-        }), !xk.failed && (null !== xk.src || nk) && (0, Kk.jsx)("div", {
-          className: fk()("SchematicImage", Mk.k, {
-            SchematicImageFadeIn: xk.fadeIn && !nk
+        }), !NC.failed && (null !== NC.src || MC) && (0, WC.jsx)("div", {
+          className: wC()("SchematicImage", FC.k, {
+            SchematicImageFadeIn: NC.fadeIn && !MC
           }),
-          style: (0, Mk.g)(xk),
-          children: (0, Kk.jsx)(Mk.d, {
-            image: xk
+          style: (0, FC.g)(NC),
+          children: (0, WC.jsx)(FC.d, {
+            image: NC
           })
-        }), xk.failed && (0, Kk.jsx)("div", {
+        }), NC.failed && (0, WC.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Kk.jsx)(Sk.d, {
+          children: (0, WC.jsx)(bC.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6361: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      default: () => ak
+  6520: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => uC
     });
-    ik(4835);
-    var Dk = ik(60),
-      fk = ik(1021),
-      Sk = ik.n(fk),
-      bk = ik(302),
-      rk = ik(1005),
-      Pk = ik(1207),
-      mk = ik(987),
-      Mk = ik(1172),
-      Kk = ik(1459),
-      xk = ik(3501),
-      nk = ik(1095),
-      Uk = ik(4840),
-      Hk = ik(2540),
-      wk = ik(1410),
-      lk = ik(4508),
-      pk = ik(4847),
-      yk = ik(1327),
-      Yk = ik(1479),
-      Lk = ik(4505),
-      Ck = ik(2499),
-      Ak = ik(4852),
-      jk = ik(6270),
-      sk = ik(1512),
-      dk = ik(1066);
-    const Vk = [{
+    ZC(4838);
+    var QC = ZC(48),
+      wC = ZC(1002),
+      bC = ZC.n(wC),
+      nC = ZC(310),
+      fC = ZC(979),
+      oC = ZC(1169),
+      qC = ZC(964),
+      FC = ZC(1143),
+      WC = ZC(1439),
+      NC = ZC(3507),
+      MC = ZC(1076),
+      gC = ZC(4847),
+      SC = ZC(2575),
+      pC = ZC(1388),
+      PC = ZC(4503),
+      GC = ZC(4854),
+      RC = ZC(1295),
+      AC = ZC(1453),
+      xC = ZC(4496),
+      JC = ZC(2465),
+      IC = ZC(4863),
+      iC = ZC(6419),
+      vC = ZC(1477),
+      eC = ZC(1056);
+    const hC = [{
         scope: "customGames",
         title: "studio:leaderboardCustomGames"
       }, {
@@ -83,407 +83,407 @@ export const modules = {
         scope: "dormantGames",
         title: "studio:leaderboardDormantGames"
       }],
-      Fk = 25,
-      uk = "scope",
-      qk = "category",
-      Ik = "customGames";
-    const zk = 7,
-      Qk = {
+      KC = 25,
+      YC = "scope",
+      dC = "category",
+      mC = "customGames";
+    const HC = 7,
+      EC = {
         playsPerDay: null,
         avgPlaytimeMinutes: null,
         retention: null
       };
 
-    function vk(kk) {
+    function lC(CC) {
       let {
-        position: ek
-      } = kk;
-      const ik = jk.c[ek];
-      return (0, dk.jsxs)("td", {
-        className: Sk()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== ik,
-          [`StudioLeaderboardTopPosition${ek}`]: void 0 !== ik
+        position: zC
+      } = CC;
+      const ZC = iC.e[zC];
+      return (0, eC.jsxs)("td", {
+        className: bC()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== ZC,
+          [`StudioLeaderboardTopPosition${zC}`]: void 0 !== ZC
         }),
-        children: [void 0 !== ik && (0, dk.jsx)("img", {
+        children: [void 0 !== ZC && (0, eC.jsx)("img", {
           className: "StudioLeaderboardPositionItem",
-          src: ik,
+          src: ZC,
           alt: ""
-        }), ek]
+        }), zC]
       })
     }
 
-    function Ek(kk) {
+    function XC(CC) {
       let {
-        discoverability: ek
-      } = kk;
+        discoverability: zC
+      } = CC;
       const {
-        playsPerDay: ik,
-        avgPlaytimeMinutes: fk,
-        retention: Sk
-      } = null === ek ? Qk : (0, xk.k)(ek);
-      return (0, dk.jsxs)(Dk.Fragment, {
-        children: [(0, dk.jsx)("td", {
-          children: null !== ik ? (0, xk.c)(ik) : "-"
-        }), (0, dk.jsx)("td", {
-          children: null !== fk ? (0, xk.e)(fk) : "-"
-        }), (0, dk.jsx)("td", {
-          children: null !== Sk ? (0, xk.g)(Sk) : "-"
+        playsPerDay: ZC,
+        avgPlaytimeMinutes: wC,
+        retention: bC
+      } = null === zC ? EC : (0, NC.j)(zC);
+      return (0, eC.jsxs)(QC.Fragment, {
+        children: [(0, eC.jsx)("td", {
+          children: null !== ZC ? (0, NC.e)(ZC) : "-"
+        }), (0, eC.jsx)("td", {
+          children: null !== wC ? (0, NC.g)(wC) : "-"
+        }), (0, eC.jsx)("td", {
+          children: null !== bC ? (0, NC.i)(bC) : "-"
         })]
       })
     }
 
-    function hk(kk) {
+    function cC(CC) {
       let {
-        discoverability: ek
-      } = kk;
-      return (0, dk.jsx)("td", {
+        discoverability: zC
+      } = CC;
+      return (0, eC.jsx)("td", {
         className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === ek || void 0 === ek ? void 0 : ek.engagementScore) ? (0, Pk.Q)(Math.round(ek.engagementScore)) : "-"
+        children: void 0 !== (null === zC || void 0 === zC ? void 0 : zC.engagementScore) ? (0, oC.Z)(Math.round(zC.engagementScore)) : "-"
       })
     }
 
-    function ak() {
-      var kk, ek;
+    function uC() {
+      var CC, zC;
       const {
-        t: ik
-      } = (0, Mk.D)(), fk = (0, Yk.useNavigatePreserveSearch)(), {
-        userContext: Sk,
-        isUserContextUpdating: jk
-      } = (0, nk.d)(), Qk = (0, Ck.m)(), [ak, Wk] = (0, Lk.o)(), tk = (Xk = ak.get(uk), Vk.some((kk => kk.scope === Xk)) ? Xk : Ik);
-      var Xk;
-      const Bk = function(kk) {
-          return bk.T.includes(kk) ? kk : null
-        }(ak.get(qk)),
-        ck = (0, Lk.g)(ak.get(Lk.e)),
-        [Tk, Zk] = (0, Dk.useState)(null),
-        [Ok, gk] = (0, Dk.useState)(!1);
+        t: ZC
+      } = (0, FC.y)(), wC = (0, AC.useNavigatePreserveSearch)(), {
+        userContext: bC,
+        isUserContextUpdating: iC
+      } = (0, MC.e)(), EC = (0, JC.r)(), [uC, rC] = (0, xC.n)(), sC = (TC = uC.get(YC), hC.some((CC => CC.scope === TC)) ? TC : mC);
+      var TC;
+      const aC = function(CC) {
+          return nC.U.includes(CC) ? CC : null
+        }(uC.get(dC)),
+        tC = (0, xC.f)(uC.get(xC.b)),
+        [DC, jC] = (0, QC.useState)(null),
+        [yC, LC] = (0, QC.useState)(!1);
 
-      function Gk(kk) {
-        Wk((ek => {
-          (0, Lk.k)(ek, uk, kk.scope === Ik ? null : kk.scope), (0, Lk.k)(ek, qk, kk.category), (0, Lk.n)(ek, kk.page)
+      function UC(CC) {
+        rC((zC => {
+          (0, xC.i)(zC, YC, CC.scope === mC ? null : CC.scope), (0, xC.i)(zC, dC, CC.category), (0, xC.l)(zC, CC.page)
         }))
       }
-      const Nk = !jk && Sk.playerHasRank("developer"),
-        Rk = Nk && "allGames" === tk,
-        Jk = Nk && "dormantGames" === tk;
-      (0, Dk.useEffect)((() => {
-        if (jk) return;
-        let kk = !1;
-        return Zk(null), gk(!1), Kk.b.getPublishedGamePreviews(Sk, {
+      const BC = !iC && bC.playerHasRank("developer"),
+        OC = BC && "allGames" === sC,
+        kC = BC && "dormantGames" === sC;
+      (0, QC.useEffect)((() => {
+        if (iC) return;
+        let CC = !1;
+        return jC(null), LC(!1), WC.d.getPublishedGamePreviews(bC, {
           searchQuery: null,
-          pageNumber: ck,
-          pageSize: Fk,
+          pageNumber: tC,
+          pageSize: KC,
           onlyFavouriteGames: !1,
           onlyOwnedGames: !1,
           onlyApprovedGames: !1,
           schematicIdsToExclude: [],
-          gameCategories: null !== Bk ? [Bk] : [],
+          gameCategories: null !== aC ? [aC] : [],
           upAndComing: !1,
-          dormantGames: Jk,
+          dormantGames: kC,
           sortByEngagementScore: !0,
-          firstPartyGameNames: Rk ? mk.e : void 0,
+          firstPartyGameNames: OC ? qC.e : void 0,
           includeOwners: !0
-        }).then((ek => {
-          kk || Zk(ek)
-        })).catch((ek => {
-          console.error("Failed to load the studio leaderboard", ek), kk || gk(!0)
+        }).then((zC => {
+          CC || jC(zC)
+        })).catch((zC => {
+          console.error("Failed to load the studio leaderboard", zC), CC || LC(!0)
         })), () => {
-          kk = !0
+          CC = !0
         }
-      }), [jk, Rk, Jk, Bk, ck, Sk]);
-      const ke = null !== (kk = null === Tk || void 0 === Tk ? void 0 : Tk.results) && void 0 !== kk ? kk : null,
-        ee = function(kk, ek, ik) {
-          const [fk, Sk] = (0, Dk.useState)({}), bk = ik ? (null !== kk && void 0 !== kk ? kk : []).flatMap((kk => "firstPartyGame" === kk.type ? [(0, rk.h)(kk.gameNameWithVariation, !0)] : [])).join(",") : "", Pk = (0, Dk.useMemo)((() => "" === bk ? [] : bk.split(",")), [bk]);
-          return (0, Dk.useEffect)((() => {
-            if (0 === Pk.length) return void Sk({});
-            let kk = !1;
-            return Kk.b.getGamesByAnalyticsIds(ek, Pk).then((ek => {
-              kk || Sk(ek)
-            })).catch((kk => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", kk)
+      }), [iC, OC, kC, aC, tC, bC]);
+      const VC = null !== (CC = null === DC || void 0 === DC ? void 0 : DC.results) && void 0 !== CC ? CC : null,
+        Cz = function(CC, zC, ZC) {
+          const [wC, bC] = (0, QC.useState)({}), nC = ZC ? (null !== CC && void 0 !== CC ? CC : []).flatMap((CC => "firstPartyGame" === CC.type ? [(0, fC.f)(CC.gameNameWithVariation, !0)] : [])).join(",") : "", oC = (0, QC.useMemo)((() => "" === nC ? [] : nC.split(",")), [nC]);
+          return (0, QC.useEffect)((() => {
+            if (0 === oC.length) return void bC({});
+            let CC = !1;
+            return WC.d.getGamesByAnalyticsIds(zC, oC).then((zC => {
+              CC || bC(zC)
+            })).catch((CC => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", CC)
             })), () => {
-              kk = !0
+              CC = !0
             }
-          }), [Pk, ek]), fk
-        }(ke, Sk, Nk),
-        ie = null !== ke ? function(kk, ek, ik, Dk, fk) {
-          return kk.map(((kk, Sk) => {
-            var bk;
-            const Pk = Dk + Sk + 1;
-            if ("customGame" === kk.type) {
-              const ek = kk.preview;
+          }), [oC, zC]), wC
+        }(VC, bC, BC),
+        zz = null !== VC ? function(CC, zC, ZC, QC, wC) {
+          return CC.map(((CC, bC) => {
+            var nC;
+            const oC = QC + bC + 1;
+            if ("customGame" === CC.type) {
+              const zC = CC.preview;
               return {
-                key: ek.schematicId,
-                position: Pk,
-                thumbnail: (0, dk.jsx)(Uk.e, {
-                  game: ek
+                key: zC.schematicId,
+                position: oC,
+                thumbnail: (0, eC.jsx)(gC.d, {
+                  game: zC
                 }),
-                name: ek.name,
-                owner: kk.owner,
-                category: ek.gameCategory,
-                ccu: ek.ccu,
-                favourites: ek.favourites,
-                discoverability: (0, xk.n)(ek) ? ek : null,
-                url: (0, sk.m)((0, rk.d)(ek.schematicId))
+                name: zC.name,
+                owner: CC.owner,
+                category: zC.gameCategory,
+                ccu: zC.ccu,
+                favourites: zC.favourites,
+                discoverability: (0, NC.m)(zC) ? zC : null,
+                url: (0, vC.o)((0, fC.d)(zC.schematicId))
               }
             }
-            const mk = kk.gameNameWithVariation,
-              Mk = (0, rk.h)(mk, !0);
+            const qC = CC.gameNameWithVariation,
+              FC = (0, fC.f)(qC, !0);
             return {
-              key: mk,
-              position: Pk,
-              thumbnail: (0, dk.jsx)(Ak.e, {
-                game: mk
+              key: qC,
+              position: oC,
+              thumbnail: (0, eC.jsx)(IC.e, {
+                game: qC
               }),
-              name: (0, sk.j)(mk, fk),
+              name: (0, vC.n)(qC, wC),
               owner: null,
-              category: (0, sk.d)(mk),
-              ccu: (0, Ck.b)(mk, ek),
+              category: (0, vC.e)(qC),
+              ccu: (0, JC.b)(qC, zC),
               favourites: null,
-              discoverability: null !== (bk = ik[Mk]) && void 0 !== bk ? bk : null,
-              url: (0, sk.m)(Mk)
+              discoverability: null !== (nC = ZC[FC]) && void 0 !== nC ? nC : null,
+              url: (0, vC.o)(FC)
             }
           }))
-        }(ke, Qk, ee, (ck - 1) * Fk, ik) : [],
-        De = !Ok && null === Tk,
-        fe = !De && !Ok && 0 === ie.length,
-        Se = null !== (ek = null === Tk || void 0 === Tk ? void 0 : Tk.totalPages) && void 0 !== ek ? ek : 1;
-      return (0, dk.jsxs)("div", {
+        }(VC, EC, Cz, (tC - 1) * KC, ZC) : [],
+        Zz = !yC && null === DC,
+        Qz = !Zz && !yC && 0 === zz.length,
+        wz = null !== (zC = null === DC || void 0 === DC ? void 0 : DC.totalPages) && void 0 !== zC ? zC : 1;
+      return (0, eC.jsxs)("div", {
         className: "StudioPage StudioLeaderboard",
-        children: [(0, dk.jsx)("div", {
+        children: [(0, eC.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, dk.jsx)("h1", {
+          children: (0, eC.jsx)("h1", {
             className: "StudioPageTitle",
-            children: ik("studio:leaderboard")
+            children: ZC("studio:leaderboard")
           })
-        }), (0, dk.jsxs)("div", {
+        }), (0, eC.jsxs)("div", {
           className: "StudioLeaderboardBanner",
-          children: [!Jk && (0, dk.jsx)("div", {
-            children: ik("studio:leaderboardBanner")
-          }), Jk && (0, dk.jsx)("div", {
-            children: ik("studio:leaderboardDormantBanner")
-          }), (0, dk.jsx)("div", {
-            children: ik("studio:leaderboardMetricsBanner", {
-              days: zk
+          children: [!kC && (0, eC.jsx)("div", {
+            children: ZC("studio:leaderboardBanner")
+          }), kC && (0, eC.jsx)("div", {
+            children: ZC("studio:leaderboardDormantBanner")
+          }), (0, eC.jsx)("div", {
+            children: ZC("studio:leaderboardMetricsBanner", {
+              days: HC
             })
           })]
-        }), Nk && (0, dk.jsx)("div", {
+        }), BC && (0, eC.jsx)("div", {
           className: "StudioLeaderboardScopes",
-          children: Vk.map((kk => (0, dk.jsx)(wk.X, {
-            active: tk === kk.scope,
+          children: hC.map((CC => (0, eC.jsx)(pC.O, {
+            active: sC === CC.scope,
             onClick: () => {
-              Gk({
-                scope: kk.scope,
-                category: Bk,
+              UC({
+                scope: CC.scope,
+                category: aC,
                 page: 1
               })
             },
-            children: ik(kk.title)
-          }, kk.scope)))
-        }), (0, dk.jsxs)("div", {
+            children: ZC(CC.title)
+          }, CC.scope)))
+        }), (0, eC.jsxs)("div", {
           className: "StudioLeaderboardCategories",
-          children: [(0, dk.jsx)(wk.X, {
-            active: null === Bk,
+          children: [(0, eC.jsx)(pC.O, {
+            active: null === aC,
             onClick: () => {
-              Gk({
-                scope: tk,
+              UC({
+                scope: sC,
                 category: null,
                 page: 1
               })
             },
-            children: ik("studio:leaderboardAllCategories")
-          }), bk.T.map((kk => (0, dk.jsx)(wk.X, {
-            active: Bk === kk,
+            children: ZC("studio:leaderboardAllCategories")
+          }), nC.U.map((CC => (0, eC.jsx)(pC.O, {
+            active: aC === CC,
             onClick: () => {
-              Gk({
-                scope: tk,
-                category: kk,
+              UC({
+                scope: sC,
+                category: CC,
                 page: 1
               })
             },
-            children: (0, bk.gb)(kk)
-          }, kk)))]
-        }), De && (0, dk.jsx)("div", {
+            children: (0, nC.eb)(CC)
+          }, CC)))]
+        }), Zz && (0, eC.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, dk.jsx)(yk.d, {})
-        }), Ok && (0, dk.jsx)("div", {
+          children: (0, eC.jsx)(RC.d, {})
+        }), yC && (0, eC.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: ik("studio:failedToLoadLeaderboard")
-        }), fe && (0, dk.jsx)("div", {
+          children: ZC("studio:failedToLoadLeaderboard")
+        }), Qz && (0, eC.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: ik("studio:leaderboardEmpty")
-        }), !De && !Ok && !fe && (0, dk.jsx)("div", {
+          children: ZC("studio:leaderboardEmpty")
+        }), !Zz && !yC && !Qz && (0, eC.jsx)("div", {
           className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, dk.jsx)(pk.c, {
+          children: (0, eC.jsx)(GC.b, {
             className: "StudioTable",
             columns: [{
               key: "position",
               header: "#"
             }, {
               key: "game",
-              header: ik("general:game")
+              header: ZC("general:game")
             }, {
               key: "owner",
-              header: ik("general:owner")
-            }, ...null === Bk ? [{
+              header: ZC("general:owner")
+            }, ...null === aC ? [{
               key: "category",
-              header: ik("general:category")
-            }] : [], ...Nk ? [{
+              header: ZC("general:category")
+            }] : [], ...BC ? [{
               key: "engagementScore",
               header: "engagementScore"
             }] : [], {
               key: "playsPerDay",
-              header: ik("studio:leaderboardPlaysPerDay")
+              header: ZC("studio:leaderboardPlaysPerDay")
             }, {
               key: "sessionLength",
-              header: ik("studio:leaderboardSessionLength")
+              header: ZC("studio:leaderboardSessionLength")
             }, {
               key: "retention",
-              header: ik("studio:leaderboardSessionsPerPlayer")
-            }, ...Jk ? [] : [{
+              header: ZC("studio:leaderboardSessionsPerPlayer")
+            }, ...kC ? [] : [{
               key: "ccu",
-              header: ik("studio:metricCcu")
+              header: ZC("studio:metricCcu")
             }], {
               key: "favourites",
-              header: ik("general:favourites")
+              header: ZC("general:favourites")
             }],
-            rows: ie,
-            getRowKey: kk => kk.key,
-            renderRow: kk => (0, dk.jsxs)("tr", {
+            rows: zz,
+            getRowKey: CC => CC.key,
+            renderRow: CC => (0, eC.jsxs)("tr", {
               onClick: () => {
-                fk(kk.url)
+                wC(CC.url)
               },
-              children: [(0, dk.jsx)(vk, {
-                position: kk.position
-              }), (0, dk.jsx)("td", {
-                children: (0, dk.jsx)(Ak.h, {
-                  thumbnail: kk.thumbnail,
-                  name: kk.name
+              children: [(0, eC.jsx)(lC, {
+                position: CC.position
+              }), (0, eC.jsx)("td", {
+                children: (0, eC.jsx)(IC.g, {
+                  thumbnail: CC.thumbnail,
+                  name: CC.name
                 })
-              }), (0, dk.jsxs)("td", {
+              }), (0, eC.jsxs)("td", {
                 className: "StudioLeaderboardOwner",
-                children: [null === kk.owner && "-", null !== kk.owner && (0, dk.jsx)(Hk.d, {
-                  playerSocialPreview: kk.owner,
+                children: [null === CC.owner && "-", null !== CC.owner && (0, eC.jsx)(SC.f, {
+                  playerSocialPreview: CC.owner,
                   showLocation: !1,
                   opensProfileCard: !1
                 })]
-              }), null === Bk && (0, dk.jsx)("td", {
-                children: (0, bk.gb)(kk.category)
-              }), Nk && (0, dk.jsx)(hk, {
-                discoverability: kk.discoverability
-              }), (0, dk.jsx)(Ek, {
-                discoverability: kk.discoverability
-              }), !Jk && (0, dk.jsx)("td", {
-                children: null !== kk.ccu ? (0, Pk.Q)(kk.ccu) : "-"
-              }), (0, dk.jsx)("td", {
-                children: null !== kk.favourites ? (0, Pk.Q)(kk.favourites) : "-"
+              }), null === aC && (0, eC.jsx)("td", {
+                children: (0, nC.eb)(CC.category)
+              }), BC && (0, eC.jsx)(cC, {
+                discoverability: CC.discoverability
+              }), (0, eC.jsx)(XC, {
+                discoverability: CC.discoverability
+              }), !kC && (0, eC.jsx)("td", {
+                children: null !== CC.ccu ? (0, oC.Z)(CC.ccu) : "-"
+              }), (0, eC.jsx)("td", {
+                children: null !== CC.favourites ? (0, oC.Z)(CC.favourites) : "-"
               })]
             })
           })
-        }), !Ok && (0, dk.jsx)(lk.c, {
+        }), !yC && (0, eC.jsx)(PC.c, {
           className: "AnimFadeIn",
-          page: ck,
-          totalPages: Se,
-          onSetPage: kk => {
-            Gk({
-              scope: tk,
-              category: Bk,
-              page: kk
+          page: tC,
+          totalPages: wz,
+          onSetPage: CC => {
+            UC({
+              scope: sC,
+              category: aC,
+              page: CC
             })
           }
         })]
       })
     }
   },
-  4852: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => bk,
-      h: () => Sk
+  4863: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC,
+      g: () => bC
     });
-    var Dk = ik(1512),
-      fk = ik(1066);
+    var QC = ZC(1477),
+      wC = ZC(1056);
 
-    function Sk(kk) {
+    function bC(CC) {
       let {
-        thumbnail: ek,
-        name: ik
-      } = kk;
-      return (0, fk.jsxs)("div", {
+        thumbnail: zC,
+        name: ZC
+      } = CC;
+      return (0, wC.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, fk.jsx)("div", {
+        children: [(0, wC.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: ek
-        }), (0, fk.jsx)("span", {
+          children: zC
+        }), (0, wC.jsx)("span", {
           className: "StudioTableGameName",
-          children: ik
+          children: ZC
         })]
       })
     }
 
-    function bk(kk) {
+    function nC(CC) {
       let {
-        game: ek
-      } = kk;
-      return (0, fk.jsx)("img", {
+        game: zC
+      } = CC;
+      return (0, wC.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, Dk.i)(ek),
+        src: (0, QC.j)(zC),
         alt: ""
       })
     }
   },
-  6270: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Dk
+  6419: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC
     });
-    const Dk = {
-      1: ik(6273),
-      2: ik(6282),
-      3: ik(6286)
+    const QC = {
+      1: ZC(6422),
+      2: ZC(6430),
+      3: ZC(6437)
     }
   },
-  4847: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => rk
+  4854: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => fC
     });
-    var Dk = ik(60),
-      fk = ik(1021),
-      Sk = ik.n(fk),
-      bk = ik(1066);
+    var QC = ZC(48),
+      wC = ZC(1002),
+      bC = ZC.n(wC),
+      nC = ZC(1056);
 
-    function rk(kk) {
+    function fC(CC) {
       let {
-        columns: ek,
-        rows: ik,
-        getRowKey: fk,
-        renderRow: rk,
-        className: Pk
-      } = kk;
-      return (0, bk.jsxs)("table", {
-        className: Sk()("Table", Pk),
-        children: [(0, bk.jsx)("thead", {
-          children: (0, bk.jsx)("tr", {
-            children: ek.map((kk => (0, bk.jsx)("th", {
-              children: kk.header
-            }, kk.key)))
+        columns: zC,
+        rows: ZC,
+        getRowKey: wC,
+        renderRow: fC,
+        className: oC
+      } = CC;
+      return (0, nC.jsxs)("table", {
+        className: bC()("Table", oC),
+        children: [(0, nC.jsx)("thead", {
+          children: (0, nC.jsx)("tr", {
+            children: zC.map((CC => (0, nC.jsx)("th", {
+              children: CC.header
+            }, CC.key)))
           })
-        }), (0, bk.jsx)("tbody", {
-          children: ik.map((kk => (0, bk.jsx)(Dk.Fragment, {
-            children: rk(kk)
-          }, fk(kk))))
+        }), (0, nC.jsx)("tbody", {
+          children: ZC.map((CC => (0, nC.jsx)(QC.Fragment, {
+            children: fC(CC)
+          }, wC(CC))))
         })]
       })
     }
   },
-  4835: () => {},
-  6273: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  4838: () => {},
+  6422: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
   },
-  6282: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  6430: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
   },
-  6286: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
+  6437: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

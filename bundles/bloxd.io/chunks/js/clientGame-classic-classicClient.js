@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12];
 export const modules = {
-  38086: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => bk
+  38326: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => nC
     });
-    var Dk = ik(38088);
-    const fk = [0, 0, 0];
-    class Sk {
-      constructor(kk) {
-        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fk;
-        this.pool = kk, this.origin = ek, this.count = 0, this.free = []
+    var QC = ZC(38334);
+    const wC = [0, 0, 0];
+    class bC {
+      constructor(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wC;
+        this.pool = CC, this.origin = zC, this.count = 0, this.free = []
       }
       take() {
-        var kk;
-        const ek = null !== (kk = this.free.pop()) && void 0 !== kk ? kk : this.count++;
-        return ek >= this.pool.vK && this.pool.grow(Math.max(2 * this.pool.vK, ek + 1)), this.hide(ek), ek
+        var CC;
+        const zC = null !== (CC = this.free.pop()) && void 0 !== CC ? CC : this.count++;
+        return zC >= this.pool.HW && this.pool.grow(Math.max(2 * this.pool.HW, zC + 1)), this.hide(zC), zC
       }
-      release(kk) {
-        this.hide(kk), this.free.push(kk)
+      release(CC) {
+        this.hide(CC), this.free.push(CC)
       }
-      write(kk, ek, ik, fk) {
+      write(CC, zC, ZC, wC) {
         const {
-          records: Sk
+          records: bC
         } = this.pool, {
-          origin: bk
-        } = this, rk = kk * Dk.b;
-        Sk[rk] = ek - bk[0], Sk[rk + 1] = ik - bk[1], Sk[rk + 2] = fk - bk[2], Sk[rk + Dk.d] = 0, this.pool.markDirty(kk)
+          origin: nC
+        } = this, fC = CC * QC.d;
+        bC[fC] = zC - nC[0], bC[fC + 1] = ZC - nC[1], bC[fC + 2] = wC - nC[2], bC[fC + QC.g] = 0, this.pool.markDirty(CC)
       }
-      hide(kk) {
-        this.pool.records[kk * Dk.b + Dk.d] = 1, this.pool.markDirty(kk)
+      hide(CC) {
+        this.pool.records[CC * QC.d + QC.g] = 1, this.pool.markDirty(CC)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,159 +38,159 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class bk {
-      constructor(kk, ek, ik) {
-        this.api = kk, this.model = ek, this.initialCapacity = ik, this.kinds = new Map, this.origin = [0, 0, 0]
+    class nC {
+      constructor(CC, zC, ZC) {
+        this.api = CC, this.model = zC, this.initialCapacity = ZC, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(kk) {
-        let ek = this.kinds.get(kk);
-        if (void 0 === ek) {
-          const ik = this.api.createInstancePool({
+      kindOf(CC) {
+        let zC = this.kinds.get(CC);
+        if (void 0 === zC) {
+          const ZC = this.api.createInstancePool({
             ...this.model,
-            item: kk
+            item: CC
           }, this.initialCapacity);
-          null === ik || void 0 === ik || ik.setOrigin(this.origin[0], this.origin[1], this.origin[2]), ek = ik && new Sk(ik, this.origin), this.kinds.set(kk, ek)
+          null === ZC || void 0 === ZC || ZC.setOrigin(this.origin[0], this.origin[1], this.origin[2]), zC = ZC && new bC(ZC, this.origin), this.kinds.set(CC, zC)
         }
-        return ek
+        return zC
       }
-      follow(kk) {
+      follow(CC) {
         const {
-          origin: ek
+          origin: zC
         } = this;
-        if (Math.abs(kk[0] - ek[0]) <= 512 && Math.abs(kk[1] - ek[1]) <= 512 && Math.abs(kk[2] - ek[2]) <= 512) return !1;
-        ek[0] = Math.floor(kk[0]), ek[1] = Math.floor(kk[1]), ek[2] = Math.floor(kk[2]);
-        for (const ik of this.kinds.values()) null === ik || void 0 === ik || ik.pool.setOrigin(ek[0], ek[1], ek[2]);
+        if (Math.abs(CC[0] - zC[0]) <= 512 && Math.abs(CC[1] - zC[1]) <= 512 && Math.abs(CC[2] - zC[2]) <= 512) return !1;
+        zC[0] = Math.floor(CC[0]), zC[1] = Math.floor(CC[1]), zC[2] = Math.floor(CC[2]);
+        for (const ZC of this.kinds.values()) null === ZC || void 0 === ZC || ZC.pool.setOrigin(zC[0], zC[1], zC[2]);
         return !0
       }
       commit() {
-        for (const kk of this.kinds.values()) null === kk || void 0 === kk || kk.commit()
+        for (const CC of this.kinds.values()) null === CC || void 0 === CC || CC.commit()
       }
       dispose() {
-        for (const kk of this.kinds.values()) null === kk || void 0 === kk || kk.dispose();
+        for (const CC of this.kinds.values()) null === CC || void 0 === CC || CC.dispose();
         this.kinds.clear()
       }
     }
   },
-  38847: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      default: () => Kk
+  39120: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => WC
     });
-    const Dk = "Pipe",
-      fk = "Extractor Pipe",
-      Sk = (new Set([Dk, fk]), new Set([Dk, fk, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var bk = ik(38086);
-    class rk {
-      constructor(kk) {
-        this.api = kk, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new bk.e(kk, {
+    const QC = "Pipe",
+      wC = "Extractor Pipe",
+      bC = (new Set([QC, wC]), new Set([QC, wC, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var nC = ZC(38326);
+    class fC {
+      constructor(CC) {
+        this.api = CC, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new nC.c(CC, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(kk) {
-        if (kk.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${kk.id} with < 2 waypoints`);
-        const ek = this.kinds.kindOf(kk.itemName);
-        if (!ek) return void(this.unshown.has(kk.itemName) || (this.unshown.add(kk.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${kk.itemName}"`)));
-        this.remove(kk.id);
-        const ik = function(kk) {
-          return (kk.waypoints.length - 1) / 2 * 1e3
-        }(kk);
-        if (Date.now() - kk.startTimeMs > ik + 2e3) return;
-        const Dk = ek.take();
-        this.items.set(kk.id, {
-          kind: ek,
-          slot: Dk,
-          waypoints: kk.waypoints,
-          startTimeMs: kk.startTimeMs,
-          durationMs: ik
+      onSpawn(CC) {
+        if (CC.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${CC.id} with < 2 waypoints`);
+        const zC = this.kinds.kindOf(CC.itemName);
+        if (!zC) return void(this.unshown.has(CC.itemName) || (this.unshown.add(CC.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${CC.itemName}"`)));
+        this.remove(CC.id);
+        const ZC = function(CC) {
+          return (CC.waypoints.length - 1) / 2 * 1e3
+        }(CC);
+        if (Date.now() - CC.startTimeMs > ZC + 2e3) return;
+        const QC = zC.take();
+        this.items.set(CC.id, {
+          kind: zC,
+          slot: QC,
+          waypoints: CC.waypoints,
+          startTimeMs: CC.startTimeMs,
+          durationMs: ZC
         })
       }
-      onEnd(kk) {
-        this.remove(kk.id)
+      onEnd(CC) {
+        this.remove(CC.id)
       }
-      Iy() {
+      sG() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const kk = Date.now();
+        const CC = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [ek, ik] of this.items) kk - ik.startTimeMs > ik.durationMs + 2e3 ? this.remove(ek) : this.write(ik, kk);
+        for (const [zC, ZC] of this.items) CC - ZC.startTimeMs > ZC.durationMs + 2e3 ? this.remove(zC) : this.write(ZC, CC);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(kk) {
-        const ek = this.items.get(kk);
-        ek && (ek.kind.release(ek.slot), this.items.delete(kk))
+      remove(CC) {
+        const zC = this.items.get(CC);
+        zC && (zC.kind.release(zC.slot), this.items.delete(CC))
       }
-      write(kk, ek) {
-        const ik = kk.waypoints.length - 1;
-        let Dk = (ek - kk.startTimeMs) / kk.durationMs;
-        Dk < 0 ? Dk = 0 : Dk > 1 && (Dk = 1);
-        const fk = Dk * ik;
-        let Sk = Math.floor(fk);
-        Sk >= ik && (Sk = ik - 1);
-        const bk = fk - Sk,
-          [rk, Pk, mk] = kk.waypoints[Sk],
-          [Mk, Kk, xk] = kk.waypoints[Sk + 1];
-        kk.kind.write(kk.slot, rk + (Mk - rk) * bk + .5, Pk + (Kk - Pk) * bk + .5, mk + (xk - mk) * bk + .5)
+      write(CC, zC) {
+        const ZC = CC.waypoints.length - 1;
+        let QC = (zC - CC.startTimeMs) / CC.durationMs;
+        QC < 0 ? QC = 0 : QC > 1 && (QC = 1);
+        const wC = QC * ZC;
+        let bC = Math.floor(wC);
+        bC >= ZC && (bC = ZC - 1);
+        const nC = wC - bC,
+          [fC, oC, qC] = CC.waypoints[bC],
+          [FC, WC, NC] = CC.waypoints[bC + 1];
+        CC.kind.write(CC.slot, fC + (FC - fC) * nC + .5, oC + (WC - oC) * nC + .5, qC + (NC - qC) * nC + .5)
       }
     }
-    const Pk = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      mk = new Set(Pk);
-    class Mk {
+    const oC = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      qC = new Set(oC);
+    class FC {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(kk) {
-        this.api = kk, this.pipeVisualizer = new rk(kk)
+      onCreate(CC) {
+        this.api = CC, this.pipeVisualizer = new fC(CC)
       }
       onClose() {
-        var kk;
-        null === (kk = this.pipeVisualizer) || void 0 === kk || kk.dispose(), this.pipeVisualizer = null
+        var CC;
+        null === (CC = this.pipeVisualizer) || void 0 === CC || CC.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(kk, ek) {
+      onReceivedMessageFromServer(CC, zC) {
         const {
-          pipeVisualizer: ik
+          pipeVisualizer: ZC
         } = this;
-        if (ik)
-          if ("pipeItemSpawnBatch" === kk)
-            for (const Dk of ek.items) ik.onSpawn(Dk);
-          else if ("pipeItemEndBatch" === kk)
-          for (const Dk of ek.items) ik.onEnd(Dk)
+        if (ZC)
+          if ("pipeItemSpawnBatch" === CC)
+            for (const QC of zC.items) ZC.onSpawn(QC);
+          else if ("pipeItemEndBatch" === CC)
+          for (const QC of zC.items) ZC.onEnd(QC)
       }
-      Iy() {
-        var kk;
-        null === (kk = this.pipeVisualizer) || void 0 === kk || kk.Iy()
+      sG() {
+        var CC;
+        null === (CC = this.pipeVisualizer) || void 0 === CC || CC.sG()
       }
-      onPlayerAttemptAltAction(kk, ek, ik, Dk, fk, bk) {
-        var rk;
-        if (!mk.has(this.api.getMetaInfo(fk).rootName)) return;
-        const Pk = null === (rk = this.api.jek(kk)) || void 0 === rk ? void 0 : rk.name;
-        return void 0 !== Pk && Sk.has(Pk) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(CC, zC, ZC, QC, wC, nC) {
+        var fC;
+        if (!qC.has(this.api.getMetaInfo(wC).rootName)) return;
+        const oC = null === (fC = this.api.XzC(CC)) || void 0 === fC ? void 0 : fC.name;
+        return void 0 !== oC && bC.has(oC) ? "preventAction" : void 0
       }
     }
-    const Kk = function(kk, ek, ik) {
-      if ("survivalFactory" !== ik && "survivalFactoryPersistent" !== ik) {
+    const WC = function(CC, zC, ZC) {
+      if ("survivalFactory" !== ZC && "survivalFactoryPersistent" !== ZC) {
         return {}
       }
-      const Dk = new Mk;
+      const QC = new FC;
       return {
-        onCreate: kk => {
-          Dk.onCreate(kk)
+        onCreate: CC => {
+          QC.onCreate(CC)
         },
         onClose: () => {
-          Dk.onClose()
+          QC.onClose()
         },
-        onReceivedMessageFromServer: (kk, ek) => {
-          Dk.onReceivedMessageFromServer(kk, ek)
+        onReceivedMessageFromServer: (CC, zC) => {
+          QC.onReceivedMessageFromServer(CC, zC)
         },
-        Px: () => {
-          Dk.Iy()
+        ZN: () => {
+          QC.sG()
         },
-        altVetoBlocks: Pk,
-        onPlayerAttemptAltAction: (kk, ek, ik, fk, Sk, bk) => Dk.onPlayerAttemptAltAction(kk, ek, ik, fk, Sk, bk)
+        altVetoBlocks: oC,
+        onPlayerAttemptAltAction: (CC, zC, ZC, wC, bC, nC) => QC.onPlayerAttemptAltAction(CC, zC, ZC, wC, bC, nC)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

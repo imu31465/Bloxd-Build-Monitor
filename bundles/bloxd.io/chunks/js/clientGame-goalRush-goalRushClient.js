@@ -1,73 +1,73 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  39006: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      default: () => fk
+  39262: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => wC
     });
-    const Dk = .4,
-      fk = function(kk, ek, ik, fk) {
-        let Sk, {
-            localPlayerId: bk
-          } = fk,
-          rk = !1,
-          Pk = null,
-          mk = null,
-          Mk = null,
-          Kk = 1,
-          xk = null,
-          nk = 0,
-          Uk = 0;
+    const QC = .4,
+      wC = function(CC, zC, ZC, wC) {
+        let bC, {
+            localPlayerId: nC
+          } = wC,
+          fC = !1,
+          oC = null,
+          qC = null,
+          FC = null,
+          WC = 1,
+          NC = null,
+          MC = 0,
+          gC = 0;
 
-        function Hk() {
-          if (xk) {
-            const kk = xk;
-            kk.fade(kk.getVolume(), 0, 500), setTimeout((() => {
-              kk.stop()
-            }), 500), xk = null
+        function SC() {
+          if (NC) {
+            const CC = NC;
+            CC.fade(CC.getVolume(), 0, 500), setTimeout((() => {
+              CC.stop()
+            }), 500), NC = null
           }
-          Uk = 0
+          gC = 0
         }
 
-        function wk(kk) {
-          var ek;
-          if (!Pk || rk || null === mk) return void(xk && Hk());
-          const ik = Date.now();
-          if (!xk || ik - nk > 54e3) {
-            if (xk) {
-              const kk = xk;
-              kk.fade(kk.getVolume(), 0, 2e3), setTimeout((() => {
-                kk.stop()
+        function pC(CC) {
+          var zC;
+          if (!oC || fC || null === qC) return void(NC && SC());
+          const ZC = Date.now();
+          if (!NC || ZC - MC > 54e3) {
+            if (NC) {
+              const CC = NC;
+              CC.fade(CC.getVolume(), 0, 2e3), setTimeout((() => {
+                CC.stop()
               }), 2e3)
             }
-            xk = Sk.playSound(bk, "crowdAmbience", Dk, 1), nk = ik, Uk = Dk
+            NC = bC.playSound(nC, "crowdAmbience", QC, 1), MC = ZC, gC = QC
           }
-          const fk = function() {
-              if (null === mk || null === Mk || !Pk) return 0;
-              const kk = Sk.getPositionView(Pk);
-              if (!kk) return 0;
-              const ek = Math.abs(kk[2] - mk),
-                ik = Math.abs(kk[2] - Mk),
-                Dk = Math.min(ek, ik);
-              return Math.max(0, 1 - Dk / Kk)
+          const wC = function() {
+              if (null === qC || null === FC || !oC) return 0;
+              const CC = bC.getPositionView(oC);
+              if (!CC) return 0;
+              const zC = Math.abs(CC[2] - qC),
+                ZC = Math.abs(CC[2] - FC),
+                QC = Math.min(zC, ZC);
+              return Math.max(0, 1 - QC / WC)
             }(),
-            wk = kk / 1e3;
-          Uk += (Dk + .6 * fk - Uk) * Math.min(1, 2 * wk), null === (ek = xk) || void 0 === ek || ek.setRelativeVolume(Uk)
+            pC = CC / 1e3;
+          gC += (QC + .6 * wC - gC) * Math.min(1, 2 * pC), null === (zC = NC) || void 0 === zC || zC.setRelativeVolume(gC)
         }
         return {
-          onCreate: kk => {
-            Sk = kk
+          onCreate: CC => {
+            bC = CC
           },
-          onReceivedMessageFromServer: (kk, ek) => {
-            var ik;
-            "ballState" === kk ? (Pk = null !== (ik = ek.eId) && void 0 !== ik ? ik : null, Pk || Hk()) : "frozen" === kk ? rk = ek.frozen : "pitchInfo" === kk && (mk = ek.goalZRed, Mk = ek.goalZBlue, Kk = Math.abs(Mk - mk) / 2)
+          onReceivedMessageFromServer: (CC, zC) => {
+            var ZC;
+            "ballState" === CC ? (oC = null !== (ZC = zC.eId) && void 0 !== ZC ? ZC : null, oC || SC()) : "frozen" === CC ? fC = zC.frozen : "pitchInfo" === CC && (qC = zC.goalZRed, FC = zC.goalZBlue, WC = Math.abs(FC - qC) / 2)
           },
-          Px: kk => {
-            wk(kk)
+          ZN: CC => {
+            pC(CC)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

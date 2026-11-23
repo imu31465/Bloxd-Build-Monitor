@@ -1,461 +1,462 @@
 export const id = 103;
 export const ids = [103];
 export const modules = {
-  4840: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => xk
+  4847: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => NC
     });
-    var Dk = ik(1021),
-      fk = ik.n(Dk),
-      Sk = ik(1033),
-      bk = ik(1327),
-      rk = ik(3456),
-      Pk = ik(131),
-      mk = ik(3487),
-      Mk = ik(3475),
-      Kk = ik(1066);
+    var QC = ZC(1002),
+      wC = ZC.n(QC),
+      bC = ZC(1013),
+      nC = ZC(1295),
+      fC = ZC(3464),
+      oC = ZC(113),
+      qC = ZC(3498),
+      FC = ZC(3487),
+      WC = ZC(1056);
 
-    function xk(kk) {
+    function NC(CC) {
       let {
-        game: ek
-      } = kk;
-      const ik = (0, Pk.m)() ? "large" : "small",
-        Dk = (0, mk.g)(ek, ik),
-        xk = (0, rk.d)(Dk),
-        nk = void 0 !== xk.blurhash;
-      return (0, Kk.jsxs)("div", {
+        game: zC
+      } = CC;
+      const ZC = (0, oC.o)() ? "large" : "small",
+        QC = (0, qC.g)(zC, ZC),
+        NC = (0, fC.e)(QC),
+        MC = void 0 !== NC.blurhash;
+      return (0, WC.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [xk.isLoading && !nk && (0, Kk.jsx)(bk.d, {
+        children: [NC.isLoading && !MC && (0, WC.jsx)(nC.d, {
           loaderType: "Secondary"
-        }), !xk.failed && (null !== xk.src || nk) && (0, Kk.jsx)("div", {
-          className: fk()("SchematicImage", Mk.k, {
-            SchematicImageFadeIn: xk.fadeIn && !nk
+        }), !NC.failed && (null !== NC.src || MC) && (0, WC.jsx)("div", {
+          className: wC()("SchematicImage", FC.k, {
+            SchematicImageFadeIn: NC.fadeIn && !MC
           }),
-          style: (0, Mk.g)(xk),
-          children: (0, Kk.jsx)(Mk.d, {
-            image: xk
+          style: (0, FC.g)(NC),
+          children: (0, WC.jsx)(FC.d, {
+            image: NC
           })
-        }), xk.failed && (0, Kk.jsx)("div", {
+        }), NC.failed && (0, WC.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Kk.jsx)(Sk.d, {
+          children: (0, WC.jsx)(bC.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4955: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => wk
+  4985: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => pC
     });
-    var Dk = ik(60),
-      fk = ik(1021),
-      Sk = ik.n(fk),
-      bk = ik(4888),
-      rk = ik(1327),
-      Pk = ik(1172),
-      mk = ik(3128),
-      Mk = ik(3271),
-      Kk = ik(1033),
-      xk = ik(3131),
-      nk = ik(4959),
-      Uk = ik(4970),
-      Hk = ik(1066);
+    var QC = ZC(48),
+      wC = ZC(1002),
+      bC = ZC.n(wC),
+      nC = ZC(4895),
+      fC = ZC(1295),
+      oC = ZC(1143),
+      qC = ZC(3140),
+      FC = ZC(3288),
+      WC = ZC(1013),
+      NC = ZC(3142),
+      MC = ZC(4992),
+      gC = ZC(5008),
+      SC = ZC(1056);
 
-    function wk(kk) {
+    function pC(CC) {
       let {
-        folderName: ek,
-        onTexturePackUpdated: fk,
-        disabled: wk = !1,
-        maxFileSizeMb: lk,
-        packOwner: pk
-      } = kk;
+        folderName: zC,
+        onTexturePackUpdated: wC,
+        disabled: pC = !1,
+        maxFileSizeMb: PC,
+        packOwner: GC
+      } = CC;
       const {
-        t: yk
-      } = (0, Pk.D)(), [Yk, Lk] = (0, Dk.useState)(!1), [Ck, Ak] = (0, Dk.useState)(null), [jk, sk] = (0, Dk.useState)(null), dk = (0, Dk.useRef)(null);
-      async function Vk(kk) {
-        Lk(!0);
+        t: RC
+      } = (0, oC.y)(), [AC, xC] = (0, QC.useState)(!1), [JC, IC] = (0, QC.useState)(null), [iC, vC] = (0, QC.useState)(null), eC = (0, QC.useRef)(null);
+      async function hC(CC) {
+        xC(!0);
         try {
-          const ek = await (0, mk.o)(kk);
-          if ("customGame" === pk && (0, Mk.n)(ek)) return void Ak(yk(Mk.e));
-          if (void 0 !== lk) {
-            const kk = JSON.stringify(ek).length / 1048576;
-            if (kk > lk) return void Ak(yk("customTexturePack:packTooBig", {
-              size: kk.toFixed(1),
-              max: lk
+          const zC = await (0, qC.q)(CC);
+          if ("customGame" === GC && (0, FC.h)(zC)) return void IC(RC(FC.d));
+          if (void 0 !== PC) {
+            const CC = JSON.stringify(zC).length / 1048576;
+            if (CC > PC) return void IC(RC("customTexturePack:packTooBig", {
+              size: CC.toFixed(1),
+              max: PC
             }))
           }
-          Ak(null), sk(null), fk(ek), dk.current = ek,
-            function(kk, ek) {
-              const Dk = kk.modelOverrides;
-              Dk && Promise.all([ik.e(205), ik.e(204)]).then((() => ik(33831))).then((ik => {
+          IC(null), vC(null), wC(zC), eC.current = zC,
+            function(CC, zC) {
+              const QC = CC.modelOverrides;
+              QC && Promise.all([ZC.e(203), ZC.e(202)]).then((() => ZC(34221))).then((ZC => {
                 let {
-                  packDisplayName: fk,
-                  refusedPackModels: Sk,
-                  packModelSummary: bk
-                } = ik;
-                const rk = fk(kk.metaData);
-                ek(bk(rk, Sk(rk, Dk, !1)))
-              })).catch((kk => {
-                console.error("Checking the texture pack's models failed:", kk)
+                  packDisplayName: wC,
+                  refusedPackModels: bC,
+                  packModelSummary: nC
+                } = ZC;
+                const fC = wC(CC.metaData);
+                zC(nC(fC, bC(fC, QC, !1)))
+              })).catch((CC => {
+                console.error("Checking the texture pack's models failed:", CC)
               }))
-            }(ek, (kk => {
-              dk.current === ek && sk(kk)
+            }(zC, (CC => {
+              eC.current === zC && vC(CC)
             }))
-        } catch (ek) {
-          if (ek instanceof xk.c) {
-            const kk = "customTexturePack:invalidPack" !== ek.translationKey || (0, Uk.e)() ? ek.translationKey : "customTexturePack:invalidPackZip";
-            Ak((0, nk.j)(yk, kk, ek.params))
-          } else console.error("Couldn't read the texture pack", ek), Ak(yk("customTexturePack:errorTitle"))
+        } catch (zC) {
+          if (zC instanceof NC.d) {
+            const CC = "customTexturePack:invalidPack" !== zC.translationKey || (0, gC.f)() ? zC.translationKey : "customTexturePack:invalidPackZip";
+            IC((0, MC.h)(RC, CC, zC.params))
+          } else console.error("Couldn't read the texture pack", zC), IC(RC("customTexturePack:errorTitle"))
         } finally {
-          Lk(!1)
+          xC(!1)
         }
       }
       const {
-        getRootProps: Fk,
-        getInputProps: uk,
-        isDragActive: qk,
-        open: Ik
-      } = (0, bk.e)({
-        onDrop: Vk,
+        getRootProps: KC,
+        getInputProps: YC,
+        isDragActive: dC,
+        open: mC
+      } = (0, nC.d)({
+        onDrop: hC,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: wk
+        disabled: pC
       });
-      return (0, Hk.jsxs)("div", {
+      return (0, SC.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, Hk.jsxs)("div", {
+        children: [(0, SC.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [yk("settingsMenu:customTextureWarning"), ".", (0, Hk.jsx)("br", {}), yk("settingsMenu:viewDocumentation"), ":", " ", (0, Hk.jsx)("a", {
+          children: [RC("settingsMenu:customTextureWarning"), ".", (0, SC.jsx)("br", {}), RC("settingsMenu:viewDocumentation"), ":", " ", (0, SC.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), Ck && (0, Hk.jsxs)("div", {
+        }), JC && (0, SC.jsxs)("div", {
           className: "CustomTextureError",
-          children: [yk("general:error"), ": ", Ck]
-        }), jk && (0, Hk.jsx)("div", {
+          children: [RC("general:error"), ": ", JC]
+        }), iC && (0, SC.jsx)("div", {
           className: "CustomTextureError",
-          children: jk
-        }), (0, Hk.jsxs)("div", {
-          ...Fk({
-            className: Sk()("CustomTextureFolderUpload", {
-              ActiveDrag: qk,
-              Disabled: wk
+          children: iC
+        }), (0, SC.jsxs)("div", {
+          ...KC({
+            className: bC()("CustomTextureFolderUpload", {
+              ActiveDrag: dC,
+              Disabled: pC
             })
           }),
-          children: [(0, Hk.jsx)("input", {
-            ...uk({
+          children: [(0, SC.jsx)("input", {
+            ...YC({
               webkitdirectory: "true"
             })
-          }), Yk && (0, Hk.jsx)("div", {
+          }), AC && (0, SC.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, Hk.jsx)(rk.d, {})
-          }), !Yk && !qk && ek && (0, Hk.jsxs)(Hk.Fragment, {
-            children: [(0, Hk.jsx)("div", {
+            children: (0, SC.jsx)(fC.d, {})
+          }), !AC && !dC && zC && (0, SC.jsxs)(SC.Fragment, {
+            children: [(0, SC.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, Hk.jsx)(Kk.d, {
+              children: (0, SC.jsx)(WC.c, {
                 name: "folder-image"
               })
-            }), (0, Hk.jsx)("div", {
+            }), (0, SC.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: ek
+              children: zC
             })]
-          }), !Yk && (qk || !ek) && (0, Hk.jsxs)(Hk.Fragment, {
-            children: [(0, Hk.jsx)("div", {
+          }), !AC && (dC || !zC) && (0, SC.jsxs)(SC.Fragment, {
+            children: [(0, SC.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, Hk.jsx)(Kk.d, {
+              children: (0, SC.jsx)(WC.c, {
                 name: "up-from-bracket"
               })
-            }), (0, Hk.jsx)("div", {
+            }), (0, SC.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: yk((0, Uk.e)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: RC((0, gC.f)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !Yk && (0, Hk.jsx)(Uk.d, {
-            disabled: wk,
-            openFolderPicker: Ik,
-            onFiles: kk => {
-              Vk(kk)
+          }), !AC && (0, SC.jsx)(gC.b, {
+            disabled: pC,
+            openFolderPicker: mC,
+            onFiles: CC => {
+              hC(CC)
             }
           })]
         })]
       })
     }
   },
-  4970: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => mk,
-      e: () => Pk
+  5008: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => FC,
+      f: () => qC
     });
-    var Dk = ik(60),
-      fk = ik(1410),
-      Sk = ik(1172),
-      bk = ik(99),
-      rk = ik(1066);
+    var QC = ZC(48),
+      wC = ZC(1388),
+      bC = ZC(1143),
+      nC = ZC(77),
+      fC = ZC(3123),
+      oC = ZC(1056);
 
-    function Pk() {
-      return !(0, bk.isMobile)()
+    function qC() {
+      return !(0, nC.isMobile)()
     }
 
-    function mk(kk) {
+    function FC(CC) {
       let {
-        disabled: ek,
-        openFolderPicker: ik,
-        onFiles: bk
-      } = kk;
+        disabled: zC,
+        openFolderPicker: ZC,
+        onFiles: nC
+      } = CC;
       const {
-        t: mk
-      } = (0, Sk.D)(), Mk = (0, Dk.useRef)(null);
-      return (0, rk.jsxs)("div", {
+        t: FC
+      } = (0, bC.y)(), WC = (0, QC.useRef)(null);
+      return (0, oC.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, rk.jsx)("input", {
-          ref: Mk,
+        children: [(0, oC.jsx)("input", {
+          ref: WC,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(kk) {
-            const ek = Array.from(kk.target.files);
-            kk.target.value = "", bk(ek)
+          onChange: function(CC) {
+            const zC = Array.from(CC.target.files);
+            CC.target.value = "", nC(zC)
           }
-        }), Pk() && (0, rk.jsx)(fk.f, {
-          disabled: ek,
-          onClick: ik,
-          children: mk("general:chooseFolder")
-        }), (0, rk.jsx)(fk.f, {
-          disabled: ek,
+        }), qC() && (0, oC.jsx)(wC.g, {
+          disabled: zC,
+          onClick: ZC,
+          children: FC("general:chooseFolder")
+        }), (0, oC.jsx)(wC.g, {
+          disabled: zC,
           onClick: () => {
-            Mk.current.click()
+            (0, fC.c)(WC.current)
           },
-          children: mk("general:chooseZip")
+          children: FC("general:chooseZip")
         })]
       })
     }
   },
-  4926: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => Uk,
-      i: () => yk,
-      m: () => Hk,
-      q: () => pk
+  4942: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => gC,
+      e: () => RC,
+      f: () => SC,
+      h: () => GC
     });
-    var Dk = ik(60),
-      fk = ik(4935),
-      Sk = ik(4319),
-      bk = ik(1345),
-      rk = ik(4946),
-      Pk = ik(1021),
-      mk = ik.n(Pk),
-      Mk = ik(1333),
-      Kk = ik(1688),
-      xk = ik(4951),
-      nk = ik(1066);
+    var QC = ZC(48),
+      wC = ZC(4947),
+      bC = ZC(4300),
+      nC = ZC(1321),
+      fC = ZC(4971),
+      oC = ZC(1002),
+      qC = ZC.n(oC),
+      FC = ZC(1307),
+      WC = ZC(1645),
+      NC = ZC(4979),
+      MC = ZC(1056);
 
-    function Uk(kk) {
+    function gC(CC) {
       let {
-        label: ek,
-        onClick: ik,
-        checked: Dk,
-        circleInfoText: fk,
-        className: rk,
-        disabled: Pk,
-        note: Mk
-      } = kk;
-      return (0, nk.jsxs)("div", {
-        "aria-disabled": Pk || void 0,
+        label: zC,
+        onClick: ZC,
+        checked: QC,
+        circleInfoText: wC,
+        className: fC,
+        disabled: oC,
+        note: FC
+      } = CC;
+      return (0, MC.jsxs)("div", {
+        "aria-disabled": oC || void 0,
         "data-pad-focusable": !0,
-        className: mk()("SettingBox CheckboxContainer", {
-          [rk]: rk,
-          SettingBoxDisabled: Pk
+        className: qC()("SettingBox CheckboxContainer", {
+          [fC]: fC,
+          SettingBoxDisabled: oC
         }),
         onClick: () => {
-          Pk || ik(!Dk)
+          oC || ZC(!QC)
         },
-        children: [(0, nk.jsxs)("div", {
+        children: [(0, MC.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, nk.jsx)("label", {
+          children: [(0, MC.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, nk.jsx)(Sk.d, {
+            children: (0, MC.jsx)(bC.e, {
               className: "SettingsCheckbox",
-              checked: Dk,
-              disabled: Pk,
+              checked: QC,
+              disabled: oC,
               onChange: () => {}
             })
-          }), (0, nk.jsxs)("div", {
+          }), (0, MC.jsxs)("div", {
             className: "CheckboxText",
-            children: [ek, fk && (0, nk.jsx)("span", {
-              onClick: kk => kk.stopPropagation(),
-              children: (0, nk.jsx)(bk.e, {
+            children: [zC, wC && (0, MC.jsx)("span", {
+              onClick: CC => CC.stopPropagation(),
+              children: (0, MC.jsx)(nC.b, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: fk
+                hoverInfo: wC
               })
             })]
           })]
-        }), Mk && (0, nk.jsx)("div", {
+        }), FC && (0, MC.jsx)("div", {
           className: "SettingNote",
-          children: Mk
+          children: FC
         })]
       })
     }
 
-    function Hk(kk) {
+    function SC(CC) {
       let {
-        name: ek,
-        onChange: ik,
-        min: fk,
-        max: Sk,
-        step: rk,
-        initValue: Pk,
-        circleInfoText: Mk,
-        format: Kk,
-        className: xk,
-        padStep: Uk,
-        disabled: Hk = !1,
-        selectableMax: wk,
-        cappedNote: pk,
-        onChangeComplete: yk
-      } = kk;
-      const [Yk, Lk] = (0, Dk.useState)(Pk), Ck = (0, Dk.useRef)(Pk);
-      (0, Dk.useEffect)((() => {
-        Ck.current = Pk, Lk(Pk)
-      }), [Pk]);
-      const Ak = void 0 !== wk && wk < Sk,
-        jk = Ak ? {
-          "--slider-selectable": (wk - fk) / (Sk - fk)
+        name: zC,
+        onChange: ZC,
+        min: wC,
+        max: bC,
+        step: fC,
+        initValue: oC,
+        circleInfoText: FC,
+        format: WC,
+        className: NC,
+        padStep: gC,
+        disabled: SC = !1,
+        selectableMax: pC,
+        cappedNote: GC,
+        onChangeComplete: RC
+      } = CC;
+      const [AC, xC] = (0, QC.useState)(oC), JC = (0, QC.useRef)(oC);
+      (0, QC.useEffect)((() => {
+        JC.current = oC, xC(oC)
+      }), [oC]);
+      const IC = void 0 !== pC && pC < bC,
+        iC = IC ? {
+          "--slider-selectable": (pC - wC) / (bC - wC)
         } : void 0;
-      return (0, nk.jsxs)("div", {
-        className: mk()("SettingBox SettingsSliderDiv", {
-          [xk]: xk,
-          SettingBoxDisabled: Hk,
-          SliderCapped: Ak
+      return (0, MC.jsxs)("div", {
+        className: qC()("SettingBox SettingsSliderDiv", {
+          [NC]: NC,
+          SettingBoxDisabled: SC,
+          SliderCapped: IC
         }),
-        style: jk,
-        children: [(0, nk.jsxs)("div", {
+        style: iC,
+        children: [(0, MC.jsxs)("div", {
           className: "SliderText",
-          children: [`${ek}: ${Kk?Kk(Yk):Yk}`, Mk && (0, nk.jsx)(bk.e, {
+          children: [`${zC}: ${WC?WC(AC):AC}`, FC && (0, MC.jsx)(nC.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Mk
+            hoverInfo: FC
           })]
-        }), (0, nk.jsx)("div", {
+        }), (0, MC.jsx)("div", {
           className: "SliderDiv",
-          children: (0, nk.jsx)(lk, {
-            value: Yk,
-            min: fk,
-            max: Sk,
-            step: rk,
-            onChange: kk => {
-              if (Ak && kk >= wk && Yk === wk) return;
-              const ek = Ak ? Math.min(kk, wk) : kk;
-              Ck.current = ek, Lk(ek), ik(ek)
+          children: (0, MC.jsx)(PC, {
+            value: AC,
+            min: wC,
+            max: bC,
+            step: fC,
+            onChange: CC => {
+              if (IC && CC >= pC && AC === pC) return;
+              const zC = IC ? Math.min(CC, pC) : CC;
+              JC.current = zC, xC(zC), ZC(zC)
             },
-            onChangeComplete: yk && (() => {
-              yk(Ck.current)
+            onChangeComplete: RC && (() => {
+              RC(JC.current)
             }),
-            format: Kk,
-            padStep: Uk,
-            disabled: Hk
+            format: WC,
+            padStep: gC,
+            disabled: SC
           })
-        }), Ak && pk && (0, nk.jsx)("div", {
+        }), IC && GC && (0, MC.jsx)("div", {
           className: "SettingNote",
-          children: pk
+          children: GC
         })]
       })
     }
-    const wk = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const pC = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function lk(kk) {
-      var ek;
+    function PC(CC) {
+      var zC;
       let {
-        value: ik,
-        min: Sk,
-        max: bk,
-        step: rk,
-        onChange: Pk,
-        orientation: mk,
-        reverse: Mk,
-        setIsChanging: Kk,
-        tooltip: Uk,
-        labels: Hk,
-        handleLabel: lk,
-        format: pk,
-        onChangeStart: yk,
-        onChangeComplete: Yk,
-        padStep: Lk,
-        disabled: Ck = !1
-      } = kk;
-      const Ak = (0, Dk.useRef)(null),
-        jk = (0, Dk.useRef)(null);
-      (0, Dk.useLayoutEffect)((() => {
-        var kk, ek, ik;
-        const Dk = null !== (kk = null === (ek = Ak.current) || void 0 === ek ? void 0 : ek.querySelector(".rangeslider")) && void 0 !== kk ? kk : null;
-        null === Dk || void 0 === Dk || Dk.setAttribute("data-pad-slider", ""), null === Dk || void 0 === Dk || Dk.setAttribute("data-pad-focusable", ""), null === Dk || void 0 === Dk || null === (ik = Dk.querySelector(".rangeslider__handle")) || void 0 === ik || ik.setAttribute("data-pad-slider-handle", ""), jk.current = Dk
-      }), []), (0, Dk.useLayoutEffect)((() => {
-        var kk, ek;
-        Ck ? null === (kk = jk.current) || void 0 === kk || kk.setAttribute("aria-disabled", "true") : null === (ek = jk.current) || void 0 === ek || ek.removeAttribute("aria-disabled")
-      }), [Ck]);
-      const sk = (null !== (ek = String(rk).split(".")[1]) && void 0 !== ek ? ek : "").length,
-        dk = kk => {
-          const ek = Number((Math.round((kk - Sk) / rk) * rk + Sk).toFixed(sk));
-          return Math.min(bk, Math.max(Sk, ek))
+        value: ZC,
+        min: bC,
+        max: nC,
+        step: fC,
+        onChange: oC,
+        orientation: qC,
+        reverse: FC,
+        setIsChanging: WC,
+        tooltip: gC,
+        labels: SC,
+        handleLabel: PC,
+        format: GC,
+        onChangeStart: RC,
+        onChangeComplete: AC,
+        padStep: xC,
+        disabled: JC = !1
+      } = CC;
+      const IC = (0, QC.useRef)(null),
+        iC = (0, QC.useRef)(null);
+      (0, QC.useLayoutEffect)((() => {
+        var CC, zC, ZC;
+        const QC = null !== (CC = null === (zC = IC.current) || void 0 === zC ? void 0 : zC.querySelector(".rangeslider")) && void 0 !== CC ? CC : null;
+        null === QC || void 0 === QC || QC.setAttribute("data-pad-slider", ""), null === QC || void 0 === QC || QC.setAttribute("data-pad-focusable", ""), null === QC || void 0 === QC || null === (ZC = QC.querySelector(".rangeslider__handle")) || void 0 === ZC || ZC.setAttribute("data-pad-slider-handle", ""), iC.current = QC
+      }), []), (0, QC.useLayoutEffect)((() => {
+        var CC, zC;
+        JC ? null === (CC = iC.current) || void 0 === CC || CC.setAttribute("aria-disabled", "true") : null === (zC = iC.current) || void 0 === zC || zC.removeAttribute("aria-disabled")
+      }), [JC]);
+      const vC = (null !== (zC = String(fC).split(".")[1]) && void 0 !== zC ? zC : "").length,
+        eC = CC => {
+          const zC = Number((Math.round((CC - bC) / fC) * fC + bC).toFixed(vC));
+          return Math.min(nC, Math.max(bC, zC))
         },
-        Vk = (0, Dk.useRef)(Yk);
-      Vk.current = Yk, (0, Dk.useEffect)((() => {
-        const kk = Ak.current;
-        if (!kk) return;
-        const ek = kk => {
-          var ek;
-          wk.has(kk.key) && (null === (ek = Vk.current) || void 0 === ek || ek.call(Vk))
+        hC = (0, QC.useRef)(AC);
+      hC.current = AC, (0, QC.useEffect)((() => {
+        const CC = IC.current;
+        if (!CC) return;
+        const zC = CC => {
+          var zC;
+          pC.has(CC.key) && (null === (zC = hC.current) || void 0 === zC || zC.call(hC))
         };
-        return kk.addEventListener("keyup", ek), () => {
-          kk.removeEventListener("keyup", ek)
+        return CC.addEventListener("keyup", zC), () => {
+          CC.removeEventListener("keyup", zC)
         }
       }), []);
-      const Fk = (0, Dk.useRef)(!1);
-      return (0, xk.f)(jk, {
-        adjust: kk => {
-          if (Ck) return;
-          const ek = null !== Lk && void 0 !== Lk ? Lk : Math.max(rk, Math.round((bk - Sk) / 20 / rk) * rk),
-            Dk = dk(ik + kk * ek * (Mk ? -1 : 1));
-          Dk !== ik && (null === yk || void 0 === yk || yk(), Pk(Dk), null === Yk || void 0 === Yk || Yk())
+      const KC = (0, QC.useRef)(!1);
+      return (0, NC.g)(iC, {
+        adjust: CC => {
+          if (JC) return;
+          const zC = null !== xC && void 0 !== xC ? xC : Math.max(fC, Math.round((nC - bC) / 20 / fC) * fC),
+            QC = eC(ZC + CC * zC * (FC ? -1 : 1));
+          QC !== ZC && (null === RC || void 0 === RC || RC(), oC(QC), null === AC || void 0 === AC || AC())
         },
-        setFraction: kk => {
-          if (Ck) return;
-          const ek = dk(Sk + (Mk ? 1 - kk : kk) * (bk - Sk));
-          ek !== ik && (Fk.current || (Fk.current = !0, null === yk || void 0 === yk || yk()), Pk(ek))
+        setFraction: CC => {
+          if (JC) return;
+          const zC = eC(bC + (FC ? 1 - CC : CC) * (nC - bC));
+          zC !== ZC && (KC.current || (KC.current = !0, null === RC || void 0 === RC || RC()), oC(zC))
         },
         endDrag: () => {
-          Fk.current && (Fk.current = !1, null === Yk || void 0 === Yk || Yk())
+          KC.current && (KC.current = !1, null === AC || void 0 === AC || AC())
         }
-      }), (0, nk.jsx)("div", {
-        ref: Ak,
+      }), (0, MC.jsx)("div", {
+        ref: IC,
         style: {
           display: "contents"
         },
-        children: (0, nk.jsx)(fk.e, {
-          value: ik,
-          min: Sk,
-          max: bk,
-          step: rk,
-          onChange: Pk,
-          orientation: mk,
-          reverse: Mk,
-          tooltip: Uk,
-          labels: Hk,
-          handleLabel: lk,
-          format: pk,
+        children: (0, MC.jsx)(wC.b, {
+          value: ZC,
+          min: bC,
+          max: nC,
+          step: fC,
+          onChange: oC,
+          orientation: qC,
+          reverse: FC,
+          tooltip: gC,
+          labels: SC,
+          handleLabel: PC,
+          format: GC,
           onChangeStart: () => {
-            null === yk || void 0 === yk || yk(), null === Kk || void 0 === Kk || Kk(!0)
+            null === RC || void 0 === RC || RC(), null === WC || void 0 === WC || WC(!0)
           },
           onChangeComplete: () => {
-            null === Kk || void 0 === Kk || Kk(!1), null === Yk || void 0 === Yk || Yk()
+            null === WC || void 0 === WC || WC(!1), null === AC || void 0 === AC || AC()
           }
         })
       })
     }
-    async function pk() {
-      const kk = Mk.NotificationProvider.showPromptPopup({
+    async function GC() {
+      const CC = FC.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -463,75 +464,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await kk.getResult() && (0, Kk.reloadBloxd)()
+      !0 === await CC.getResult() && (0, WC.reloadBloxd)()
     }
 
-    function yk(kk) {
+    function RC(CC) {
       let {
-        label: ek,
-        options: ik,
-        value: Dk,
-        onChange: fk,
-        circleInfoText: Sk
-      } = kk;
-      return (0, nk.jsxs)("div", {
+        label: zC,
+        options: ZC,
+        value: QC,
+        onChange: wC,
+        circleInfoText: bC
+      } = CC;
+      return (0, MC.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, nk.jsxs)("div", {
+        children: [(0, MC.jsxs)("div", {
           className: "SliderText",
-          children: [ek, Sk && (0, nk.jsx)(bk.e, {
+          children: [zC, bC && (0, MC.jsx)(nC.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Sk
+            hoverInfo: bC
           })]
-        }), (0, nk.jsx)(rk.b, {
-          ariaLabel: ek,
-          options: ik,
-          value: Dk,
-          onChange: fk
+        }), (0, MC.jsx)(fC.b, {
+          ariaLabel: zC,
+          options: ZC,
+          value: QC,
+          onChange: wC
         })]
       })
     }
   },
-  4924: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => wk,
-      c: () => lk
+  4933: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => pC,
+      f: () => PC
     });
-    var Dk = ik(3128),
-      fk = ik(2107),
-      Sk = ik(60),
-      bk = ik(1021),
-      rk = ik.n(bk),
-      Pk = ik(1327),
-      mk = ik(3121),
-      Mk = ik(1333),
-      Kk = ik(4926),
-      xk = ik(4955),
-      nk = ik(610),
-      Uk = ik(4974),
-      Hk = ik(1066);
+    var QC = ZC(3140),
+      wC = ZC(2063),
+      bC = ZC(48),
+      nC = ZC(1002),
+      fC = ZC.n(nC),
+      oC = ZC(1295),
+      qC = ZC(3137),
+      FC = ZC(1307),
+      WC = ZC(4942),
+      NC = ZC(4985),
+      MC = ZC(615),
+      gC = ZC(5013),
+      SC = ZC(1056);
 
-    function wk(kk) {
-      var ek;
+    function pC(CC) {
+      var zC;
       let {
-        setApplySettingsCallback: ik
-      } = kk;
-      const [, bk] = (0, Sk.useReducer)((kk => kk + 1), 0), rk = (0, Sk.useRef)(!1), Pk = (0, Sk.useRef)(null);
+        setApplySettingsCallback: ZC
+      } = CC;
+      const [, nC] = (0, bC.useReducer)((CC => CC + 1), 0), fC = (0, bC.useRef)(!1), oC = (0, bC.useRef)(null);
 
-      function wk(kk, ek) {
-        mk.e.setFromJson(kk, "player");
-        const Dk = mk.e.saveTexturePack();
-        if (nk.s) {
-          const kk = mk.e.toJson();
-          Dk.then((ek => {
-            ek && (0, Uk.e)(kk)
+      function pC(CC, zC) {
+        qC.c.setFromJson(CC, "player");
+        const QC = qC.c.saveTexturePack();
+        if (MC.z) {
+          const CC = qC.c.toJson();
+          QC.then((zC => {
+            zC && (0, gC.c)(CC)
           }))
-        } else rk.current ||= ek, Pk.current !== mk.e.getId() || mk.e.getId() === fk.u.CUSTOM && rk.current ? ik((() => Kk.q)) : ik(null);
-        bk()
+        } else fC.current ||= zC, oC.current !== qC.c.getId() || qC.c.getId() === wC.q.CUSTOM && fC.current ? ZC((() => WC.h)) : ZC(null);
+        nC()
       }
-      async function pk(kk) {
-        if (mk.e.getId() !== kk.metaData.id) {
-          if (mk.e.getId() === fk.u.CUSTOM && mk.e.getFromFolderName()) {
-            const kk = Mk.NotificationProvider.showPromptPopup({
+      async function GC(CC) {
+        if (qC.c.getId() !== CC.metaData.id) {
+          if (qC.c.getId() === wC.q.CUSTOM && qC.c.getFromFolderName()) {
+            const CC = FC.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -540,29 +541,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await kk.getResult()) return
+            if (!0 !== await CC.getResult()) return
           }
-          wk(kk, !1)
+          pC(CC, !1)
         }
-      }(0, Sk.useEffect)((() => {
-        Pk.current = mk.e.getId()
+      }(0, bC.useEffect)((() => {
+        oC.current = qC.c.getId()
       }), []);
-      const yk = Dk.c,
-        Yk = [yk, ...Object.values(fk.u).filter((kk => kk !== yk))];
-      return (0, Hk.jsx)(Hk.Fragment, {
-        children: (0, Hk.jsxs)("div", {
+      const RC = QC.d,
+        AC = [RC, ...Object.values(wC.q).filter((CC => CC !== RC))];
+      return (0, SC.jsx)(SC.Fragment, {
+        children: (0, SC.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Hk.jsx)("div", {
+          children: [(0, SC.jsx)("div", {
             className: "TexturePackList",
-            children: Yk.map((kk => (0, Hk.jsx)(lk, {
-              id: kk,
-              isSelected: kk === mk.e.getId(),
-              setSelected: pk
-            }, kk)))
-          }), mk.e.getId() === fk.u.CUSTOM && (0, Hk.jsx)(xk.c, {
-            folderName: null !== (ek = mk.e.getFromFolderName()) && void 0 !== ek ? ek : null,
-            onTexturePackUpdated: function(kk) {
-              wk(kk, !0)
+            children: AC.map((CC => (0, SC.jsx)(PC, {
+              id: CC,
+              isSelected: CC === qC.c.getId(),
+              setSelected: GC
+            }, CC)))
+          }), qC.c.getId() === wC.q.CUSTOM && (0, SC.jsx)(NC.c, {
+            folderName: null !== (zC = qC.c.getFromFolderName()) && void 0 !== zC ? zC : null,
+            onTexturePackUpdated: function(CC) {
+              pC(CC, !0)
             },
             packOwner: "player"
           })]
@@ -570,417 +571,417 @@ export const modules = {
       })
     }
 
-    function lk(kk) {
+    function PC(CC) {
       let {
-        id: ek,
-        isSelected: ik,
-        setSelected: bk,
-        disabled: mk = !1
-      } = kk;
-      const [Mk, Kk] = (0, Sk.useState)(!0), [xk, nk] = (0, Sk.useState)(""), [Uk, wk] = (0, Sk.useState)(""), [lk, pk] = (0, Sk.useState)(""), yk = (0, Sk.useRef)({});
-      return (0, Sk.useEffect)((() => {
-        (0, Dk.l)(ek).then((kk => {
-          var ek;
-          kk && (yk.current = kk, Kk(!1), nk(yk.current.metaData.name), wk(yk.current.metaData.author), pk(null !== (ek = yk.current.metaData.previewImage) && void 0 !== ek ? ek : ""))
-        })).catch((kk => {
-          console.warn(`Failed to fetch texture pack ${ek}`, kk)
+        id: zC,
+        isSelected: ZC,
+        setSelected: nC,
+        disabled: qC = !1
+      } = CC;
+      const [FC, WC] = (0, bC.useState)(!0), [NC, MC] = (0, bC.useState)(""), [gC, pC] = (0, bC.useState)(""), [PC, GC] = (0, bC.useState)(""), RC = (0, bC.useRef)({});
+      return (0, bC.useEffect)((() => {
+        (0, QC.n)(zC).then((CC => {
+          var zC;
+          CC && (RC.current = CC, WC(!1), MC(RC.current.metaData.name), pC(RC.current.metaData.author), GC(null !== (zC = RC.current.metaData.previewImage) && void 0 !== zC ? zC : ""))
+        })).catch((CC => {
+          console.warn(`Failed to fetch texture pack ${zC}`, CC)
         }))
-      }), [ek]), (0, Hk.jsxs)("div", {
+      }), [zC]), (0, SC.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": mk || void 0,
-        className: rk()("TexturePack", {
-          Selected: ik,
-          Custom: ek === fk.u.CUSTOM,
-          Disabled: mk
+        "aria-disabled": qC || void 0,
+        className: fC()("TexturePack", {
+          Selected: ZC,
+          Custom: zC === wC.q.CUSTOM,
+          Disabled: qC
         }),
         onClick: () => {
-          Mk || mk || bk(yk.current)
+          FC || qC || nC(RC.current)
         },
-        children: [(0, Hk.jsx)("div", {
+        children: [(0, SC.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: lk ? `url(${lk})` : void 0
+            backgroundImage: PC ? `url(${PC})` : void 0
           }
-        }), Mk && (0, Hk.jsx)("div", {
+        }), FC && (0, SC.jsx)("div", {
           className: "TexturePackName",
-          children: (0, Hk.jsx)(Pk.d, {})
-        }), !Mk && xk && (0, Hk.jsx)("div", {
+          children: (0, SC.jsx)(oC.d, {})
+        }), !FC && NC && (0, SC.jsx)("div", {
           className: "TexturePackName",
-          children: xk
-        }), !Mk && Uk && (0, Hk.jsx)("div", {
+          children: NC
+        }), !FC && gC && (0, SC.jsx)("div", {
           className: "TexturePackAuthor",
-          children: Uk
+          children: gC
         })]
       })
     }
   },
-  4959: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => rk,
-      g: () => bk,
-      j: () => Sk
+  4992: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => fC,
+      g: () => nC,
+      h: () => bC
     });
-    var Dk = ik(4961);
-    const fk = [kk => kk.strict ? "strict" : "nonStrict", kk => kk.program];
+    var QC = ZC(4998);
+    const wC = [CC => CC.strict ? "strict" : "nonStrict", CC => CC.program];
 
-    function Sk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Dk = {};
-      for (const fk in ik) Dk[fk] = `\0${fk}\0`;
-      return kk(ek, Dk).replace(/\0(\w+)\0/g, ((kk, ek) => ik[ek]))
+    function bC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const QC = {};
+      for (const wC in ZC) QC[wC] = `\0${wC}\0`;
+      return CC(zC, QC).replace(/\0(\w+)\0/g, ((CC, zC) => ZC[zC]))
     }
 
-    function bk(kk) {
-      return null === kk.file ? null : kk.line > 0 ? `${kk.file}:${kk.line}` : kk.file
+    function nC(CC) {
+      return null === CC.file ? null : CC.line > 0 ? `${CC.file}:${CC.line}` : CC.file
     }
 
-    function rk(kk) {
-      const ek = new Map(kk.map((kk => [Pk(kk).join("."), kk])));
-      if (0 === ek.size) return [];
-      const ik = Mk([...ek.values()]);
-      return 0 === ik[0].length ? [] : ik
+    function fC(CC) {
+      const zC = new Map(CC.map((CC => [oC(CC).join("."), CC])));
+      if (0 === zC.size) return [];
+      const ZC = FC([...zC.values()]);
+      return 0 === ZC[0].length ? [] : ZC
     }
 
-    function Pk(kk) {
-      return fk.map((ek => ek(kk)))
+    function oC(CC) {
+      return wC.map((zC => zC(CC)))
     }
-    const mk = fk.map((kk => new Set(Dk.e.map(kk)).size));
+    const qC = wC.map((CC => new Set(QC.f.map(CC)).size));
 
-    function Mk(kk) {
-      const ek = fk.map((ek => new Set(kk.map(ek)))),
-        ik = ek.reduce(((kk, ek) => kk * ek.size), 1),
-        Dk = ek.every(((kk, ek) => 1 === kk.size || kk.size === mk[ek]));
-      if (ik === kk.length && Dk) return [fk.filter(((kk, ik) => 1 === ek[ik].size)).map((ek => ek(kk[0])))];
-      let Sk = null;
-      for (let bk = 0; bk < fk.length; bk++) {
-        if (1 === ek[bk].size) continue;
-        const ik = Kk(kk, fk[bk]).flatMap(Mk);
-        (null === Sk || ik.length < Sk.length) && (Sk = ik)
+    function FC(CC) {
+      const zC = wC.map((zC => new Set(CC.map(zC)))),
+        ZC = zC.reduce(((CC, zC) => CC * zC.size), 1),
+        QC = zC.every(((CC, zC) => 1 === CC.size || CC.size === qC[zC]));
+      if (ZC === CC.length && QC) return [wC.filter(((CC, ZC) => 1 === zC[ZC].size)).map((zC => zC(CC[0])))];
+      let bC = null;
+      for (let nC = 0; nC < wC.length; nC++) {
+        if (1 === zC[nC].size) continue;
+        const ZC = WC(CC, wC[nC]).flatMap(FC);
+        (null === bC || ZC.length < bC.length) && (bC = ZC)
       }
-      return Sk
+      return bC
     }
 
-    function Kk(kk, ek) {
-      const ik = new Map;
-      for (const fk of kk) {
-        var Dk;
-        const kk = ek(fk);
-        ik.set(kk, [...null !== (Dk = ik.get(kk)) && void 0 !== Dk ? Dk : [], fk])
+    function WC(CC, zC) {
+      const ZC = new Map;
+      for (const wC of CC) {
+        var QC;
+        const CC = zC(wC);
+        ZC.set(CC, [...null !== (QC = ZC.get(CC)) && void 0 !== QC ? QC : [], wC])
       }
-      return [...ik.values()]
+      return [...ZC.values()]
     }
   },
-  4946: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => bk
+  4971: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => nC
     });
-    var Dk = ik(1021),
-      fk = ik.n(Dk),
-      Sk = ik(1066);
+    var QC = ZC(1002),
+      wC = ZC.n(QC),
+      bC = ZC(1056);
 
-    function bk(kk) {
+    function nC(CC) {
       let {
-        options: ek,
-        value: ik,
-        onChange: Dk,
-        ariaLabel: bk,
-        className: rk,
-        reselectable: Pk = !1,
-        keepsFocus: mk = !1,
-        padTabs: Mk
-      } = kk;
-      const Kk = void 0 !== Mk;
-      return (0, Sk.jsx)("div", {
-        className: fk()("SegmentedToggle", rk),
+        options: zC,
+        value: ZC,
+        onChange: QC,
+        ariaLabel: nC,
+        className: fC,
+        reselectable: oC = !1,
+        keepsFocus: qC = !1,
+        padTabs: FC
+      } = CC;
+      const WC = void 0 !== FC;
+      return (0, bC.jsx)("div", {
+        className: wC()("SegmentedToggle", fC),
         role: "group",
-        "aria-label": bk,
-        "data-pad-tabs": Mk,
-        children: ek.map((kk => {
-          const ek = kk.value === ik;
-          return (0, Sk.jsx)("button", {
+        "aria-label": nC,
+        "data-pad-tabs": FC,
+        children: zC.map((CC => {
+          const zC = CC.value === ZC;
+          return (0, bC.jsx)("button", {
             type: "button",
-            "aria-pressed": ek,
-            "data-pad-tab": Kk || void 0,
-            "data-pad-selected": Kk && ek ? "true" : void 0,
-            "data-pad-default-focus": Kk && ek || void 0,
-            "aria-label": kk.ariaLabel,
-            title: kk.ariaLabel,
-            className: fk()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: ek
+            "aria-pressed": zC,
+            "data-pad-tab": WC || void 0,
+            "data-pad-selected": WC && zC ? "true" : void 0,
+            "data-pad-default-focus": WC && zC || void 0,
+            "aria-label": CC.ariaLabel,
+            title: CC.ariaLabel,
+            className: wC()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: zC
             }),
-            onMouseDown: mk ? kk => {
-              kk.preventDefault()
+            onMouseDown: qC ? CC => {
+              CC.preventDefault()
             } : void 0,
             onClick: () => {
-              ek && !Pk || Dk(kk.value)
+              zC && !oC || QC(CC.value)
             },
-            children: kk.label
-          }, kk.value)
+            children: CC.label
+          }, CC.value)
         }))
       })
     }
   },
-  4951: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Sk,
-      f: () => bk
+  4979: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => bC,
+      g: () => nC
     });
-    var Dk = ik(60);
-    const fk = new WeakMap,
-      Sk = kk => {
-        var ek;
-        const ik = kk.closest("[data-pad-slider]");
-        return ik && null !== (ek = fk.get(ik)) && void 0 !== ek ? ek : null
+    var QC = ZC(48);
+    const wC = new WeakMap,
+      bC = CC => {
+        var zC;
+        const ZC = CC.closest("[data-pad-slider]");
+        return ZC && null !== (zC = wC.get(ZC)) && void 0 !== zC ? zC : null
       },
-      bk = (kk, ek) => {
-        const ik = (0, Dk.useRef)(ek);
-        ik.current = ek, (0, Dk.useEffect)((() => {
-          if (kk.current) return ((kk, ek) => (fk.set(kk, ek), () => {
-            fk.get(kk) === ek && fk.delete(kk)
-          }))(kk.current, {
-            adjust: kk => {
-              ik.current.adjust(kk)
+      nC = (CC, zC) => {
+        const ZC = (0, QC.useRef)(zC);
+        ZC.current = zC, (0, QC.useEffect)((() => {
+          if (CC.current) return ((CC, zC) => (wC.set(CC, zC), () => {
+            wC.get(CC) === zC && wC.delete(CC)
+          }))(CC.current, {
+            adjust: CC => {
+              ZC.current.adjust(CC)
             },
-            setFraction: kk => {
-              ik.current.setFraction(kk)
+            setFraction: CC => {
+              ZC.current.setFraction(CC)
             },
             endDrag: () => {
-              ik.current.endDrag()
+              ZC.current.endDrag()
             }
           })
-        }), [kk])
+        }), [CC])
       }
   },
-  4961: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Dk.g,
-      e: () => fk,
-      g: () => Dk.l
+  4998: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => QC.j,
+      f: () => wC,
+      i: () => QC.q
     });
-    var Dk = ik(4965);
-    const fk = [!1, !0].flatMap((kk => ["terrain", "liquid", "model"].map((ek => ({
-      strict: kk,
-      program: ek
+    var QC = ZC(5002);
+    const wC = [!1, !0].flatMap((CC => ["terrain", "liquid", "model"].map((zC => ({
+      strict: CC,
+      program: zC
     })))))
   },
-  4977: (kk, ek, ik) => {
-    function Dk(kk, ek) {
-      return fk(kk, ek)
+  5021: (CC, zC, ZC) => {
+    function QC(CC, zC) {
+      return wC(CC, zC)
     }
 
-    function fk(kk, ek) {
-      if (kk === ek) return !0;
-      if ("object" !== typeof kk || "object" !== typeof ek || null === kk || null === ek || Array.isArray(kk) !== Array.isArray(ek)) return !1;
-      const ik = kk,
-        Dk = ek,
-        Sk = Object.keys(ik);
-      return Sk.length === Object.keys(Dk).length && Sk.every((kk => Object.prototype.hasOwnProperty.call(Dk, kk) && fk(ik[kk], Dk[kk])))
+    function wC(CC, zC) {
+      if (CC === zC) return !0;
+      if ("object" !== typeof CC || "object" !== typeof zC || null === CC || null === zC || Array.isArray(CC) !== Array.isArray(zC)) return !1;
+      const ZC = CC,
+        QC = zC,
+        bC = Object.keys(ZC);
+      return bC.length === Object.keys(QC).length && bC.every((CC => Object.prototype.hasOwnProperty.call(QC, CC) && wC(ZC[CC], QC[CC])))
     }
-    ik.d(ek, {
-      e: () => Dk
+    ZC.d(zC, {
+      b: () => QC
     })
   },
-  4974: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => bk,
-      i: () => rk
+  5013: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => nC,
+      d: () => fC
     });
-    var Dk = ik(2107),
-      fk = ik(4977);
-    let Sk = null;
+    var QC = ZC(2063),
+      wC = ZC(5021);
+    let bC = null;
 
-    function bk(kk) {
-      Sk = {
-        pack: kk.metaData.id === Dk.d ? null : kk
+    function nC(CC) {
+      bC = {
+        pack: CC.metaData.id === QC.c ? null : CC
       }
     }
 
-    function rk(kk) {
-      return !(null === Sk || !(0, fk.e)(Sk.pack, kk)) && (Sk = null, !0)
+    function fC(CC) {
+      return !(null === bC || !(0, wC.b)(bC.pack, CC)) && (bC = null, !0)
     }
   },
-  4965: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => rk,
-      c: () => bk,
-      g: () => Dk,
-      h: () => Hk,
-      i: () => Kk,
-      l: () => fk,
-      p: () => Sk,
-      r: () => mk,
-      t: () => Mk,
-      u: () => xk
+  5002: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => fC,
+      g: () => nC,
+      j: () => QC,
+      k: () => SC,
+      m: () => WC,
+      q: () => wC,
+      r: () => bC,
+      s: () => qC,
+      w: () => FC,
+      y: () => NC
     });
-    const Dk = 5;
+    const QC = 5;
 
-    function fk(kk) {
-      return kk === Dk
+    function wC(CC) {
+      return CC === QC
     }
 
-    function Sk(kk) {
-      return [...kk.features]
+    function bC(CC) {
+      return [...CC.features]
     }
-    const bk = 262144,
-      rk = 256,
-      Pk = 256;
+    const nC = 262144,
+      fC = 256,
+      oC = 256;
 
-    function mk(kk) {
-      if ("object" !== typeof kk || null === kk || Array.isArray(kk)) return "The pack has no files.";
-      const ek = [];
-      for (const [ik, Dk] of Object.entries(kk)) {
-        if ("string" !== typeof Dk) return `${ik} isn't text.`;
-        ek.push({
-          path: ik,
-          source: Dk
+    function qC(CC) {
+      if ("object" !== typeof CC || null === CC || Array.isArray(CC)) return "The pack has no files.";
+      const zC = [];
+      for (const [ZC, QC] of Object.entries(CC)) {
+        if ("string" !== typeof QC) return `${ZC} isn't text.`;
+        zC.push({
+          path: ZC,
+          source: QC
         })
       }
-      return ek.sort(((kk, ek) => Kk(kk.path, ek.path))),
-        function(kk) {
-          if (0 === kk.length) return "The pack has no .wgsl files.";
-          if (kk.length > rk) return `The pack has more than ${rk} .wgsl files.`;
-          const ek = new Set;
+      return zC.sort(((CC, zC) => WC(CC.path, zC.path))),
+        function(CC) {
+          if (0 === CC.length) return "The pack has no .wgsl files.";
+          if (CC.length > fC) return `The pack has more than ${fC} .wgsl files.`;
+          const zC = new Set;
           for (const {
-              path: ik
+              path: ZC
             }
-            of kk) {
-            const kk = nk(ik);
-            if (null !== kk) return kk;
-            if (ek.has(ik)) return `The pack has two files at ${ik}.`;
-            ek.add(ik)
+            of CC) {
+            const CC = MC(ZC);
+            if (null !== CC) return CC;
+            if (zC.has(ZC)) return `The pack has two files at ${ZC}.`;
+            zC.add(ZC)
           }
-          return xk(kk) > bk ? `The pack's .wgsl files are over ${bk/1024} KB in total.` : null
-        }(ek) ?? ek
+          return NC(CC) > nC ? `The pack's .wgsl files are over ${nC/1024} KB in total.` : null
+        }(zC) ?? zC
     }
 
-    function Mk(kk) {
-      const ek = {};
-      for (const ik of kk) ek[ik.path] = ik.source;
-      return ek
+    function FC(CC) {
+      const zC = {};
+      for (const ZC of CC) zC[ZC.path] = ZC.source;
+      return zC
     }
 
-    function Kk(kk, ek) {
-      return kk < ek ? -1 : kk > ek ? 1 : 0
+    function WC(CC, zC) {
+      return CC < zC ? -1 : CC > zC ? 1 : 0
     }
 
-    function xk(kk) {
-      const ek = new TextEncoder;
-      let ik = 0;
+    function NC(CC) {
+      const zC = new TextEncoder;
+      let ZC = 0;
       for (const {
-          source: Dk
+          source: QC
         }
-        of kk) ik += ek.encode(Dk).byteLength;
-      return ik
+        of CC) ZC += zC.encode(QC).byteLength;
+      return ZC
     }
 
-    function nk(kk) {
-      if (!kk.toLowerCase().endsWith(".wgsl")) return `${kk} isn't a .wgsl file.`;
-      if (kk.length > Pk) return `A file path is over ${Pk} characters.`;
-      if (kk.includes("\\") || /[\u0000-\u001f]/.test(kk)) return `${kk} isn't a valid file path.`;
-      return kk.split("/").some((kk => "" === kk || "." === kk || ".." === kk)) ? `${kk} isn't a valid file path.` : null
+    function MC(CC) {
+      if (!CC.toLowerCase().endsWith(".wgsl")) return `${CC} isn't a .wgsl file.`;
+      if (CC.length > oC) return `A file path is over ${oC} characters.`;
+      if (CC.includes("\\") || /[\u0000-\u001f]/.test(CC)) return `${CC} isn't a valid file path.`;
+      return CC.split("/").some((CC => "" === CC || "." === CC || ".." === CC)) ? `${CC} isn't a valid file path.` : null
     }
-    const Uk = /^(.*)\[rot\[([1-4])$/;
+    const gC = /^(.*)\[rot\[([1-4])$/;
 
-    function Hk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Dk = new Map;
-      ek.forEach(((kk, ek) => {
+    function SC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const QC = new Map;
+      zC.forEach(((CC, zC) => {
         let {
-          numAnimStates: ik,
-          animStartIdx: fk
-        } = kk;
-        for (let Sk = 1; Sk < ik; Sk++) Dk.set(fk + Sk - 1, ek)
+          numAnimStates: ZC,
+          animStartIdx: wC
+        } = CC;
+        for (let bC = 1; bC < ZC; bC++) QC.set(wC + bC - 1, zC)
       }));
-      const fk = Object.entries(kk),
-        Sk = new Map;
-      for (const [Hk, wk] of fk) {
-        const kk = Uk.exec(Hk);
-        "1" === kk?.[2] && Sk.set(kk[1], wk + 1)
+      const wC = Object.entries(CC),
+        bC = new Map;
+      for (const [SC, pC] of wC) {
+        const CC = gC.exec(SC);
+        "1" === CC?.[2] && bC.set(CC[1], pC + 1)
       }
-      const bk = kk => {
-          const ek = Uk.exec(kk);
-          return ek && Sk.has(ek[1]) ? {
-            root: ek[1],
-            rotation: Number(ek[2]) - 1
+      const nC = CC => {
+          const zC = gC.exec(CC);
+          return zC && bC.has(zC[1]) ? {
+            root: zC[1],
+            rotation: Number(zC[2]) - 1
           } : null
         },
-        rk = new Set(fk.map((kk => {
-          let [ek] = kk;
-          return bk(ek)?.root ?? ek
+        fC = new Set(wC.map((CC => {
+          let [zC] = CC;
+          return nC(zC)?.root ?? zC
         }))),
-        Pk = (kk, ik) => {
-          const Dk = kk.replace(/_?0$/, "");
-          return (ek[ik]?.numAnimStates ?? 0) > 1 && !rk.has(Dk) ? Dk : kk
+        oC = (CC, ZC) => {
+          const QC = CC.replace(/_?0$/, "");
+          return (zC[ZC]?.numAnimStates ?? 0) > 1 && !fC.has(QC) ? QC : CC
         },
-        mk = new Map;
-      for (const [Uk, Hk] of fk) mk.set(Hk, Pk(bk(Uk)?.root ?? Uk, Hk));
-      const Mk = fk.reduce(((kk, ek) => {
-          let [, ik] = ek;
-          return Math.max(kk, ik + 1)
+        qC = new Map;
+      for (const [gC, SC] of wC) qC.set(SC, oC(nC(gC)?.root ?? gC, SC));
+      const FC = wC.reduce(((CC, zC) => {
+          let [, ZC] = zC;
+          return Math.max(CC, ZC + 1)
         }), 0),
-        Kk = Array.from({
-          length: Mk
-        }, ((kk, ek) => ({
-          id: ek + 1,
+        WC = Array.from({
+          length: FC
+        }, ((CC, zC) => ({
+          id: zC + 1,
           rotation: 0
         }))),
-        xk = new Map,
-        nk = new Map;
-      for (const [Uk, Hk] of fk) {
-        const kk = bk(Uk),
-          ek = Dk.get(Hk);
-        if (void 0 !== ek) {
-          const ik = mk.get(ek);
-          nk.set(Uk, {
-            name: Uk,
-            texture: ik,
+        NC = new Map,
+        MC = new Map;
+      for (const [gC, SC] of wC) {
+        const CC = nC(gC),
+          zC = QC.get(SC);
+        if (void 0 !== zC) {
+          const ZC = qC.get(zC);
+          MC.set(gC, {
+            name: gC,
+            texture: ZC,
             kind: "frame"
-          }), kk && !nk.has(kk.root) && nk.set(kk.root, {
-            name: kk.root,
-            texture: ik,
+          }), CC && !MC.has(CC.root) && MC.set(CC.root, {
+            name: CC.root,
+            texture: ZC,
             kind: "frame"
           });
           continue
         }
-        const ik = mk.get(Hk),
-          fk = kk?.root ?? Uk;
-        if (ik !== fk && nk.set(fk, {
-            name: fk,
-            texture: ik,
+        const ZC = qC.get(SC),
+          wC = CC?.root ?? gC;
+        if (ZC !== wC && MC.set(wC, {
+            name: wC,
+            texture: ZC,
             kind: "frame"
-          }), kk) {
-          const ek = Sk.get(kk.root);
-          Kk[Hk] = {
-            id: ek,
-            rotation: kk.rotation
-          }, xk.set(ik, ek), nk.set(Uk, {
-            name: Uk,
-            texture: ik,
+          }), CC) {
+          const zC = bC.get(CC.root);
+          WC[SC] = {
+            id: zC,
+            rotation: CC.rotation
+          }, NC.set(ZC, zC), MC.set(gC, {
+            name: gC,
+            texture: ZC,
             kind: "rotation"
           })
-        } else xk.set(ik, Hk + 1)
+        } else NC.set(ZC, SC + 1)
       }
-      for (const Uk of xk.keys()) nk.delete(Uk);
-      for (const [Uk, Hk] of ik) {
-        const kk = xk.get(Hk);
-        void 0 === kk || xk.has(Uk) || (xk.set(Uk, kk), nk.delete(Uk))
+      for (const gC of NC.keys()) MC.delete(gC);
+      for (const [gC, SC] of ZC) {
+        const CC = NC.get(SC);
+        void 0 === CC || NC.has(gC) || (NC.set(gC, CC), MC.delete(gC))
       }
       return {
-        named: [...xk].sort(((kk, ek) => {
-          let [ik] = kk, [Dk] = ek;
-          return ik < Dk ? -1 : ik > Dk ? 1 : 0
-        })).map((kk => {
-          let [ek, ik] = kk;
+        named: [...NC].sort(((CC, zC) => {
+          let [ZC] = CC, [QC] = zC;
+          return ZC < QC ? -1 : ZC > QC ? 1 : 0
+        })).map((CC => {
+          let [zC, ZC] = CC;
           return {
-            name: ek,
-            id: ik
+            name: zC,
+            id: ZC
           }
         })),
-        aliases: [...nk.values()],
-        layers: Kk
+        aliases: [...MC.values()],
+        layers: WC
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

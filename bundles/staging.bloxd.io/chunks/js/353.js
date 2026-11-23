@@ -1,30 +1,19 @@
 export const id = 353;
 export const ids = [353];
 export const modules = {
-  60696: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      WorldCodeAiOutOfUsage: () => Sk
+  60938: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      postprocessVertexShader: () => nC
     });
-    var Dk = ik(1410),
-      fk = ik(1066);
-
-    function Sk(kk) {
-      let {
-        onGetSuperRank: ek
-      } = kk;
-      return (0, fk.jsxs)("div", {
-        className: "WorldCodeAiOutOfUsage",
-        children: [(0, fk.jsx)("p", {
-          className: "WorldCodeAiOutOfUsageText",
-          children: "You don't have any Super Bot.xd usage left - use Bot.xd or get Super Rank for more usage!"
-        }), (0, fk.jsx)(Dk.r, {
-          className: "WorldCodeAiOutOfUsageButton",
-          onClick: ek,
-          children: "Get Super Rank"
-        })]
-      })
+    var QC = ZC(39674);
+    const wC = "postprocessVertexShader",
+      bC = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    QC.b.ShadersStore[wC] || (QC.b.ShadersStore[wC] = bC);
+    const nC = {
+      name: wC,
+      shader: bC
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

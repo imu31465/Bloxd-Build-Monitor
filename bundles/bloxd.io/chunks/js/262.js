@@ -1,1237 +1,2652 @@
-/*! For license information please see 3lwmg.262.7392bd6d.chunk.js.LICENSE.txt */
 export const id = 262;
 export const ids = [262];
 export const modules = {
-  40092: (kk, ek, ik) => {
-    ik.d(ek, {
-      $: () => pk,
-      C: () => dk,
-      G: () => qk,
-      H: () => Kk,
-      J: () => Mk,
-      N: () => xk,
-      Q: () => tk,
-      T: () => Uk,
-      W: () => wk,
-      _: () => sk,
-      cb: () => yk,
-      d: () => nk,
-      g: () => Ak,
-      gb: () => Hk,
-      j: () => Ck,
-      kb: () => lk,
-      mb: () => uk,
-      n: () => Lk,
-      o: () => rk,
-      qb: () => Fk,
-      r: () => bk,
-      rb: () => Yk,
-      v: () => Wk,
-      y: () => Ik
+  40123: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => QC
     });
-    const Dk = function(kk) {
-        const ek = [];
-        let ik = 0;
-        for (let Dk = 0; Dk < kk.length; Dk++) {
-          let fk = kk.charCodeAt(Dk);
-          fk < 128 ? ek[ik++] = fk : fk < 2048 ? (ek[ik++] = fk >> 6 | 192, ek[ik++] = 63 & fk | 128) : 55296 === (64512 & fk) && Dk + 1 < kk.length && 56320 === (64512 & kk.charCodeAt(Dk + 1)) ? (fk = 65536 + ((1023 & fk) << 10) + (1023 & kk.charCodeAt(++Dk)), ek[ik++] = fk >> 18 | 240, ek[ik++] = fk >> 12 & 63 | 128, ek[ik++] = fk >> 6 & 63 | 128, ek[ik++] = 63 & fk | 128) : (ek[ik++] = fk >> 12 | 224, ek[ik++] = fk >> 6 & 63 | 128, ek[ik++] = 63 & fk | 128)
-        }
-        return ek
-      },
-      fk = {
-        byteToCharMap_: null,
-        charToByteMap_: null,
-        byteToCharMapWebSafe_: null,
-        charToByteMapWebSafe_: null,
-        ENCODED_VALS_BASE: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
-        get ENCODED_VALS() {
-          return this.ENCODED_VALS_BASE + "+/="
-        },
-        get ENCODED_VALS_WEBSAFE() {
-          return this.ENCODED_VALS_BASE + "-_."
-        },
-        HAS_NATIVE_SUPPORT: "function" === typeof atob,
-        encodeByteArray(kk, ek) {
-          if (!Array.isArray(kk)) throw Error("encodeByteArray takes an array as a parameter");
-          this.init_();
-          const ik = ek ? this.byteToCharMapWebSafe_ : this.byteToCharMap_,
-            Dk = [];
-          for (let fk = 0; fk < kk.length; fk += 3) {
-            const ek = kk[fk],
-              Sk = fk + 1 < kk.length,
-              bk = Sk ? kk[fk + 1] : 0,
-              rk = fk + 2 < kk.length,
-              Pk = rk ? kk[fk + 2] : 0,
-              mk = ek >> 2,
-              Mk = (3 & ek) << 4 | bk >> 4;
-            let Kk = (15 & bk) << 2 | Pk >> 6,
-              xk = 63 & Pk;
-            rk || (xk = 64, Sk || (Kk = 64)), Dk.push(ik[mk], ik[Mk], ik[Kk], ik[xk])
-          }
-          return Dk.join("")
-        },
-        encodeString(kk, ek) {
-          return this.HAS_NATIVE_SUPPORT && !ek ? btoa(kk) : this.encodeByteArray(Dk(kk), ek)
-        },
-        decodeString(kk, ek) {
-          return this.HAS_NATIVE_SUPPORT && !ek ? atob(kk) : function(kk) {
-            const ek = [];
-            let ik = 0,
-              Dk = 0;
-            for (; ik < kk.length;) {
-              const fk = kk[ik++];
-              if (fk < 128) ek[Dk++] = String.fromCharCode(fk);
-              else if (fk > 191 && fk < 224) {
-                const Sk = kk[ik++];
-                ek[Dk++] = String.fromCharCode((31 & fk) << 6 | 63 & Sk)
-              } else if (fk > 239 && fk < 365) {
-                const Sk = ((7 & fk) << 18 | (63 & kk[ik++]) << 12 | (63 & kk[ik++]) << 6 | 63 & kk[ik++]) - 65536;
-                ek[Dk++] = String.fromCharCode(55296 + (Sk >> 10)), ek[Dk++] = String.fromCharCode(56320 + (1023 & Sk))
-              } else {
-                const Sk = kk[ik++],
-                  bk = kk[ik++];
-                ek[Dk++] = String.fromCharCode((15 & fk) << 12 | (63 & Sk) << 6 | 63 & bk)
-              }
-            }
-            return ek.join("")
-          }(this.decodeStringToByteArray(kk, ek))
-        },
-        decodeStringToByteArray(kk, ek) {
-          this.init_();
-          const ik = ek ? this.charToByteMapWebSafe_ : this.charToByteMap_,
-            Dk = [];
-          for (let fk = 0; fk < kk.length;) {
-            const ek = ik[kk.charAt(fk++)],
-              bk = fk < kk.length ? ik[kk.charAt(fk)] : 0;
-            ++fk;
-            const rk = fk < kk.length ? ik[kk.charAt(fk)] : 64;
-            ++fk;
-            const Pk = fk < kk.length ? ik[kk.charAt(fk)] : 64;
-            if (++fk, null == ek || null == bk || null == rk || null == Pk) throw new Sk;
-            const mk = ek << 2 | bk >> 4;
-            if (Dk.push(mk), 64 !== rk) {
-              const kk = bk << 4 & 240 | rk >> 2;
-              if (Dk.push(kk), 64 !== Pk) {
-                const kk = rk << 6 & 192 | Pk;
-                Dk.push(kk)
-              }
-            }
-          }
-          return Dk
-        },
-        init_() {
-          if (!this.byteToCharMap_) {
-            this.byteToCharMap_ = {}, this.charToByteMap_ = {}, this.byteToCharMapWebSafe_ = {}, this.charToByteMapWebSafe_ = {};
-            for (let kk = 0; kk < this.ENCODED_VALS.length; kk++) this.byteToCharMap_[kk] = this.ENCODED_VALS.charAt(kk), this.charToByteMap_[this.byteToCharMap_[kk]] = kk, this.byteToCharMapWebSafe_[kk] = this.ENCODED_VALS_WEBSAFE.charAt(kk), this.charToByteMapWebSafe_[this.byteToCharMapWebSafe_[kk]] = kk, kk >= this.ENCODED_VALS_BASE.length && (this.charToByteMap_[this.ENCODED_VALS_WEBSAFE.charAt(kk)] = kk, this.charToByteMapWebSafe_[this.ENCODED_VALS.charAt(kk)] = kk)
-          }
-        }
-      };
-    class Sk extends Error {
-      constructor() {
-        super(...arguments), this.name = "DecodeBase64StringError"
+    class QC {
+      constructor(CC, zC, ZC) {
+        this.bu = CC, this.bv = zC, this.distance = ZC, this.faceId = 0, this.subMeshId = 0, this._internalSubMeshId = 0
       }
-    }
-    const bk = function(kk) {
-        return function(kk) {
-          const ek = Dk(kk);
-          return fk.encodeByteArray(ek, !0)
-        }(kk).replace(/\./g, "")
-      },
-      rk = function(kk) {
-        try {
-          return fk.decodeString(kk, !0)
-        } catch (ek) {
-          console.error("base64Decode failed: ", ek)
-        }
-        return null
-      };
-    const Pk = () => function() {
-        if ("undefined" !== typeof self) return self;
-        if ("undefined" !== typeof window) return window;
-        if ("undefined" !== typeof ik.g) return ik.g;
-        throw new Error("Unable to locate global object.")
-      }().__FIREBASE_DEFAULTS__,
-      mk = () => {
-        try {
-          return Pk() || (() => {
-            if ("undefined" === typeof process) return
-          })() || (() => {
-            if ("undefined" === typeof document) return;
-            let kk;
-            try {
-              kk = document.cookie.match(/__FIREBASE_DEFAULTS__=([^;]+)/)
-            } catch (ik) {
-              return
-            }
-            const ek = kk && rk(kk[1]);
-            return ek && JSON.parse(ek)
-          })()
-        } catch (kk) {
-          return void console.info(`Unable to get __FIREBASE_DEFAULTS__ due to: ${kk}`)
-        }
-      },
-      Mk = kk => {
-        var ek, ik;
-        return null === (ik = null === (ek = mk()) || void 0 === ek ? void 0 : ek.emulatorHosts) || void 0 === ik ? void 0 : ik[kk]
-      },
-      Kk = () => {
-        var kk;
-        return null === (kk = mk()) || void 0 === kk ? void 0 : kk.config
-      },
-      xk = kk => {
-        var ek;
-        return null === (ek = mk()) || void 0 === ek ? void 0 : ek[`_${kk}`]
-      };
-    class nk {
-      constructor() {
-        this.reject = () => {}, this.resolve = () => {}, this.promise = new Promise(((kk, ek) => {
-          this.resolve = kk, this.reject = ek
-        }))
-      }
-      wrapCallback(kk) {
-        return (ek, ik) => {
-          ek ? this.reject(ek) : this.resolve(ik), "function" === typeof kk && (this.promise.catch((() => {})), 1 === kk.length ? kk(ek) : kk(ek, ik))
-        }
-      }
-    }
-
-    function Uk() {
-      return "undefined" !== typeof navigator && "string" === typeof navigator.userAgent ? navigator.userAgent : ""
-    }
-
-    function Hk() {
-      return "undefined" !== typeof window && !!(window.cordova || window.phonegap || window.PhoneGap) && /ios|iphone|ipod|ipad|android|blackberry|iemobile/i.test(Uk())
-    }
-
-    function wk() {
-      const kk = "object" === typeof chrome ? chrome.runtime : "object" === typeof browser ? browser.runtime : void 0;
-      return "object" === typeof kk && void 0 !== kk.id
-    }
-
-    function lk() {
-      return "object" === typeof navigator && "ReactNative" === navigator.product
-    }
-
-    function pk() {
-      const kk = Uk();
-      return kk.indexOf("MSIE ") >= 0 || kk.indexOf("Trident/") >= 0
-    }
-
-    function yk() {
-      try {
-        return "object" === typeof indexedDB
-      } catch (kk) {
-        return !1
-      }
-    }
-
-    function Yk() {
-      return new Promise(((kk, ek) => {
-        try {
-          let ik = !0;
-          const Dk = "validate-browser-context-for-indexeddb-analytics-module",
-            fk = self.indexedDB.open(Dk);
-          fk.onsuccess = () => {
-            fk.result.close(), ik || self.indexedDB.deleteDatabase(Dk), kk(!0)
-          }, fk.onupgradeneeded = () => {
-            ik = !1
-          }, fk.onerror = () => {
-            var kk;
-            ek((null === (kk = fk.error) || void 0 === kk ? void 0 : kk.message) || "")
-          }
-        } catch (ik) {
-          ek(ik)
-        }
-      }))
-    }
-
-    function Lk() {
-      return !("undefined" === typeof navigator || !navigator.cookieEnabled)
-    }
-    class Ck extends Error {
-      constructor(kk, ek, ik) {
-        super(ek), this.code = kk, this.customData = ik, this.name = "FirebaseError", Object.setPrototypeOf(this, Ck.prototype), Error.captureStackTrace && Error.captureStackTrace(this, Ak.prototype.create)
-      }
-    }
-    class Ak {
-      constructor(kk, ek, ik) {
-        this.service = kk, this.serviceName = ek, this.errors = ik
-      }
-      create(kk) {
-        const ek = (arguments.length <= 1 ? void 0 : arguments[1]) || {},
-          ik = `${this.service}/${kk}`,
-          Dk = this.errors[kk],
-          fk = Dk ? function(kk, ek) {
-            return kk.replace(jk, ((kk, ik) => {
-              const Dk = ek[ik];
-              return null != Dk ? String(Dk) : `<${ik}?>`
-            }))
-          }(Dk, ek) : "Error",
-          Sk = `${this.serviceName}: ${fk} (${ik}).`;
-        return new Ck(ik, Sk, ek)
-      }
-    }
-    const jk = /\{\$([^}]+)}/g;
-
-    function sk(kk) {
-      for (const ek in kk)
-        if (Object.prototype.hasOwnProperty.call(kk, ek)) return !1;
-      return !0
-    }
-
-    function dk(kk, ek) {
-      if (kk === ek) return !0;
-      const ik = Object.keys(kk),
-        Dk = Object.keys(ek);
-      for (const fk of ik) {
-        if (!Dk.includes(fk)) return !1;
-        const ik = kk[fk],
-          Sk = ek[fk];
-        if (Vk(ik) && Vk(Sk)) {
-          if (!dk(ik, Sk)) return !1
-        } else if (ik !== Sk) return !1
-      }
-      for (const fk of Dk)
-        if (!ik.includes(fk)) return !1;
-      return !0
-    }
-
-    function Vk(kk) {
-      return null !== kk && "object" === typeof kk
-    }
-
-    function Fk(kk) {
-      const ek = [];
-      for (const [ik, Dk] of Object.entries(kk)) Array.isArray(Dk) ? Dk.forEach((kk => {
-        ek.push(encodeURIComponent(ik) + "=" + encodeURIComponent(kk))
-      })) : ek.push(encodeURIComponent(ik) + "=" + encodeURIComponent(Dk));
-      return ek.length ? "&" + ek.join("&") : ""
-    }
-
-    function uk(kk) {
-      const ek = {};
-      return kk.replace(/^\?/, "").split("&").forEach((kk => {
-        if (kk) {
-          const [ik, Dk] = kk.split("=");
-          ek[decodeURIComponent(ik)] = decodeURIComponent(Dk)
-        }
-      })), ek
-    }
-
-    function qk(kk) {
-      const ek = kk.indexOf("?");
-      if (!ek) return "";
-      const ik = kk.indexOf("#", ek);
-      return kk.substring(ek, ik > 0 ? ik : void 0)
-    }
-
-    function Ik(kk, ek) {
-      const ik = new zk(kk, ek);
-      return ik.subscribe.bind(ik)
-    }
-    class zk {
-      constructor(kk, ek) {
-        this.observers = [], this.unsubscribes = [], this.observerCount = 0, this.task = Promise.resolve(), this.finalized = !1, this.onNoObservers = ek, this.task.then((() => {
-          kk(this)
-        })).catch((kk => {
-          this.error(kk)
-        }))
-      }
-      next(kk) {
-        this.forEachObserver((ek => {
-          ek.next(kk)
-        }))
-      }
-      error(kk) {
-        this.forEachObserver((ek => {
-          ek.error(kk)
-        })), this.close(kk)
-      }
-      complete() {
-        this.forEachObserver((kk => {
-          kk.complete()
-        })), this.close()
-      }
-      subscribe(kk, ek, ik) {
-        let Dk;
-        if (void 0 === kk && void 0 === ek && void 0 === ik) throw new Error("Missing Observer.");
-        Dk = function(kk, ek) {
-          if ("object" !== typeof kk || null === kk) return !1;
-          for (const ik of ek)
-            if (ik in kk && "function" === typeof kk[ik]) return !0;
-          return !1
-        }(kk, ["next", "error", "complete"]) ? kk : {
-          next: kk,
-          error: ek,
-          complete: ik
-        }, void 0 === Dk.next && (Dk.next = Qk), void 0 === Dk.error && (Dk.error = Qk), void 0 === Dk.complete && (Dk.complete = Qk);
-        const fk = this.unsubscribeOne.bind(this, this.observers.length);
-        return this.finalized && this.task.then((() => {
-          try {
-            this.finalError ? Dk.error(this.finalError) : Dk.complete()
-          } catch (kk) {}
-        })), this.observers.push(Dk), fk
-      }
-      unsubscribeOne(kk) {
-        void 0 !== this.observers && void 0 !== this.observers[kk] && (delete this.observers[kk], this.observerCount -= 1, 0 === this.observerCount && void 0 !== this.onNoObservers && this.onNoObservers(this))
-      }
-      forEachObserver(kk) {
-        if (!this.finalized)
-          for (let ek = 0; ek < this.observers.length; ek++) this.sendOne(ek, kk)
-      }
-      sendOne(kk, ek) {
-        this.task.then((() => {
-          if (void 0 !== this.observers && void 0 !== this.observers[kk]) try {
-            ek(this.observers[kk])
-          } catch (ik) {
-            "undefined" !== typeof console && console.error && console.error(ik)
-          }
-        }))
-      }
-      close(kk) {
-        this.finalized || (this.finalized = !0, void 0 !== kk && (this.finalError = kk), this.task.then((() => {
-          this.observers = void 0, this.onNoObservers = void 0
-        })))
-      }
-    }
-
-    function Qk() {}
-    const vk = 1e3,
-      Ek = 2,
-      hk = 144e5,
-      ak = .5;
-
-    function Wk(kk) {
-      let ek = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ek;
-      const ik = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vk) * Math.pow(ek, kk),
-        Dk = Math.round(ak * ik * (Math.random() - .5) * 2);
-      return Math.min(hk, ik + Dk)
-    }
-
-    function tk(kk) {
-      return kk && kk._delegate ? kk._delegate : kk
     }
   },
-  40078: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => Sk.j,
-      f: () => xe,
-      j: () => Jk,
-      l: () => De,
-      n: () => fe,
-      q: () => ee,
-      r: () => Pe,
-      v: () => ie,
-      z: () => be,
-      B: () => Se,
-      D: () => re,
-      E: () => we,
-      H: () => Ue,
-      F: () => He,
-      K: () => ne,
-      M: () => pe,
-      N: () => le,
-      O: () => ye
+  40136: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => nC
     });
-    var Dk = ik(40087),
-      fk = ik(40099),
-      Sk = ik(40092);
-    let bk, rk;
-    const Pk = new WeakMap,
-      mk = new WeakMap,
-      Mk = new WeakMap,
-      Kk = new WeakMap,
-      xk = new WeakMap;
-    let nk = {
-      get(kk, ek, ik) {
-        if (kk instanceof IDBTransaction) {
-          if ("done" === ek) return mk.get(kk);
-          if ("objectStoreNames" === ek) return kk.objectStoreNames || Mk.get(kk);
-          if ("store" === ek) return ik.objectStoreNames[1] ? void 0 : ik.objectStore(ik.objectStoreNames[0])
-        }
-        return wk(kk[ek])
-      },
-      set: (kk, ek, ik) => (kk[ek] = ik, !0),
-      has: (kk, ek) => kk instanceof IDBTransaction && ("done" === ek || "store" === ek) || ek in kk
-    };
-
-    function Uk(kk) {
-      return kk !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (rk || (rk = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(kk) ? function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        return kk.apply(lk(this), ik), wk(Pk.get(this))
-      } : function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        return wk(kk.apply(lk(this), ik))
-      } : function(ek) {
-        for (var ik = arguments.length, Dk = new Array(ik > 1 ? ik - 1 : 0), fk = 1; fk < ik; fk++) Dk[fk - 1] = arguments[fk];
-        const Sk = kk.call(lk(this), ek, ...Dk);
-        return Mk.set(Sk, ek.sort ? ek.sort() : [ek]), wk(Sk)
+    var QC = ZC(36971),
+      wC = ZC(36963),
+      bC = ZC(36968);
+    class nC {
+      constructor(CC, zC, ZC) {
+        this.vectors = (0, QC.d)(8, wC.r.Zero), this.center = wC.r.Zero(), this.centerWorld = wC.r.Zero(), this.extendSize = wC.r.Zero(), this.extendSizeWorld = wC.r.Zero(), this.directions = (0, QC.d)(3, wC.r.Zero), this.vectorsWorld = (0, QC.d)(8, wC.r.Zero), this.minimumWorld = wC.r.Zero(), this.maximumWorld = wC.r.Zero(), this.minimum = wC.r.Zero(), this.maximum = wC.r.Zero(), this._drawWrapperFront = null, this._drawWrapperBack = null, this.reConstruct(CC, zC, ZC)
       }
-    }
-
-    function Hk(kk) {
-      return "function" === typeof kk ? Uk(kk) : (kk instanceof IDBTransaction && function(kk) {
-        if (mk.has(kk)) return;
-        const ek = new Promise(((ek, ik) => {
-          const Dk = () => {
-              kk.removeEventListener("complete", fk), kk.removeEventListener("error", Sk), kk.removeEventListener("abort", Sk)
-            },
-            fk = () => {
-              ek(), Dk()
-            },
-            Sk = () => {
-              ik(kk.error || new DOMException("AbortError", "AbortError")), Dk()
-            };
-          kk.addEventListener("complete", fk), kk.addEventListener("error", Sk), kk.addEventListener("abort", Sk)
-        }));
-        mk.set(kk, ek)
-      }(kk), ek = kk, (bk || (bk = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((kk => ek instanceof kk)) ? new Proxy(kk, nk) : kk);
-      var ek
-    }
-
-    function wk(kk) {
-      if (kk instanceof IDBRequest) return function(kk) {
-        const ek = new Promise(((ek, ik) => {
-          const Dk = () => {
-              kk.removeEventListener("success", fk), kk.removeEventListener("error", Sk)
-            },
-            fk = () => {
-              ek(wk(kk.result)), Dk()
-            },
-            Sk = () => {
-              ik(kk.error), Dk()
-            };
-          kk.addEventListener("success", fk), kk.addEventListener("error", Sk)
-        }));
-        return ek.then((ek => {
-          ek instanceof IDBCursor && Pk.set(ek, kk)
-        })).catch((() => {})), xk.set(ek, kk), ek
-      }(kk);
-      if (Kk.has(kk)) return Kk.get(kk);
-      const ek = Hk(kk);
-      return ek !== kk && (Kk.set(kk, ek), xk.set(ek, kk)), ek
-    }
-    const lk = kk => xk.get(kk);
-    const pk = ["get", "getKey", "getAll", "getAllKeys", "count"],
-      yk = ["put", "add", "delete", "clear"],
-      Yk = new Map;
-
-    function Lk(kk, ek) {
-      if (!(kk instanceof IDBDatabase) || ek in kk || "string" !== typeof ek) return;
-      if (Yk.get(ek)) return Yk.get(ek);
-      const ik = ek.replace(/FromIndex$/, ""),
-        Dk = ek !== ik,
-        fk = yk.includes(ik);
-      if (!(ik in (Dk ? IDBIndex : IDBObjectStore).prototype) || !fk && !pk.includes(ik)) return;
-      const Sk = async function(kk) {
-        const ek = this.transaction(kk, fk ? "readwrite" : "readonly");
-        let Sk = ek.store;
-        for (var bk = arguments.length, rk = new Array(bk > 1 ? bk - 1 : 0), Pk = 1; Pk < bk; Pk++) rk[Pk - 1] = arguments[Pk];
-        return Dk && (Sk = Sk.index(rk.shift())), (await Promise.all([Sk[ik](...rk), fk && ek.done]))[0]
-      };
-      return Yk.set(ek, Sk), Sk
-    }
-    nk = (kk => ({
-      ...kk,
-      get: (ek, ik, Dk) => Lk(ek, ik) || kk.get(ek, ik, Dk),
-      has: (ek, ik) => !!Lk(ek, ik) || kk.has(ek, ik)
-    }))(nk);
-    class Ck {
-      constructor(kk) {
-        this.container = kk
+      reConstruct(CC, zC, ZC) {
+        const QC = CC.x,
+          bC = CC.y,
+          nC = CC.z,
+          fC = zC.x,
+          oC = zC.y,
+          qC = zC.z,
+          FC = this.vectors;
+        this.minimum.L_(QC, bC, nC), this.maximum.L_(fC, oC, qC), FC[0].L_(QC, bC, nC), FC[1].L_(fC, oC, qC), FC[2].L_(fC, bC, nC), FC[3].L_(QC, oC, nC), FC[4].L_(QC, bC, qC), FC[5].L_(fC, oC, nC), FC[6].L_(QC, oC, qC), FC[7].L_(fC, bC, qC), zC.addToRef(CC, this.center).scaleInPlace(.5), zC.subtractToRef(CC, this.extendSize).scaleInPlace(.5), this._worldMatrix = ZC || wC.b.IdentityReadOnly, this._update(this._worldMatrix)
       }
-      getPlatformInfoString() {
-        return this.container.getProviders().map((kk => {
-          if (function(kk) {
-              const ek = kk.getComponent();
-              return "VERSION" === (null === ek || void 0 === ek ? void 0 : ek.type)
-            }(kk)) {
-            const ek = kk.getImmediate();
-            return `${ek.library}/${ek.version}`
+      scale(CC) {
+        const zC = nC._TmpVector3,
+          ZC = this.maximum.subtractToRef(this.minimum, zC[0]),
+          QC = ZC.length();
+        ZC.normalizeFromLength(QC);
+        const wC = QC * CC,
+          bC = ZC.scaleInPlace(.5 * wC),
+          fC = this.center.subtractToRef(bC, zC[1]),
+          oC = this.center.addToRef(bC, zC[2]);
+        return this.reConstruct(fC, oC, this._worldMatrix), this
+      }
+      getWorldMatrix() {
+        return this._worldMatrix
+      }
+      _update(CC) {
+        const zC = this.minimumWorld,
+          ZC = this.maximumWorld,
+          QC = this.directions,
+          bC = this.vectorsWorld,
+          nC = this.vectors;
+        if (CC.isIdentity()) {
+          zC.Av(this.minimum), ZC.Av(this.maximum);
+          for (let CC = 0; CC < 8; ++CC) bC[CC].Av(nC[CC]);
+          this.extendSizeWorld.Av(this.extendSize), this.centerWorld.Av(this.center)
+        } else {
+          zC.Q_(Number.MAX_VALUE), ZC.Q_(-Number.MAX_VALUE);
+          for (let QC = 0; QC < 8; ++QC) {
+            const fC = bC[QC];
+            wC.r.TransformCoordinatesToRef(nC[QC], CC, fC), zC.minimizeInPlace(fC), ZC.maximizeInPlace(fC)
           }
-          return null
-        })).filter((kk => kk)).join(" ")
-      }
-    }
-    const Ak = "@firebase/app",
-      jk = "0.9.13",
-      sk = new fk.g("@firebase/app"),
-      dk = "@firebase/app-compat",
-      Vk = "@firebase/analytics-compat",
-      Fk = "@firebase/analytics",
-      uk = "@firebase/app-check-compat",
-      qk = "@firebase/app-check",
-      Ik = "@firebase/auth",
-      zk = "@firebase/auth-compat",
-      Qk = "@firebase/database",
-      vk = "@firebase/database-compat",
-      Ek = "@firebase/functions",
-      hk = "@firebase/functions-compat",
-      ak = "@firebase/installations",
-      Wk = "@firebase/installations-compat",
-      tk = "@firebase/messaging",
-      Xk = "@firebase/messaging-compat",
-      Bk = "@firebase/performance",
-      ck = "@firebase/performance-compat",
-      Tk = "@firebase/remote-config",
-      Zk = "@firebase/remote-config-compat",
-      Ok = "@firebase/storage",
-      gk = "@firebase/storage-compat",
-      Gk = "@firebase/firestore",
-      Nk = "@firebase/firestore-compat",
-      Rk = "firebase",
-      Jk = "[DEFAULT]",
-      ke = {
-        [Ak]: "fire-core",
-        [dk]: "fire-core-compat",
-        [Fk]: "fire-analytics",
-        [Vk]: "fire-analytics-compat",
-        [qk]: "fire-app-check",
-        [uk]: "fire-app-check-compat",
-        [Ik]: "fire-auth",
-        [zk]: "fire-auth-compat",
-        [Qk]: "fire-rtdb",
-        [vk]: "fire-rtdb-compat",
-        [Ek]: "fire-fn",
-        [hk]: "fire-fn-compat",
-        [ak]: "fire-iid",
-        [Wk]: "fire-iid-compat",
-        [tk]: "fire-fcm",
-        [Xk]: "fire-fcm-compat",
-        [Bk]: "fire-perf",
-        [ck]: "fire-perf-compat",
-        [Tk]: "fire-rc",
-        [Zk]: "fire-rc-compat",
-        [Ok]: "fire-gcs",
-        [gk]: "fire-gcs-compat",
-        [Gk]: "fire-fst",
-        [Nk]: "fire-fst-compat",
-        "fire-js": "fire-js",
-        [Rk]: "fire-js-all"
-      },
-      ee = new Map,
-      ie = new Map;
-
-    function De(kk, ek) {
-      try {
-        kk.container.wq(ek)
-      } catch (ik) {
-        sk.debug(`Component ${ek.name} failed to register with FirebaseApp ${kk.name}`, ik)
-      }
-    }
-
-    function fe(kk, ek) {
-      kk.container.addOrOverwriteComponent(ek)
-    }
-
-    function Se(kk) {
-      const ek = kk.name;
-      if (ie.has(ek)) return sk.debug(`There were multiple attempts to register component ${ek}.`), !1;
-      ie.set(ek, kk);
-      for (const ik of ee.values()) De(ik, kk);
-      return !0
-    }
-
-    function be(kk, ek) {
-      const ik = kk.container.getProvider("heartbeat").getImmediate({
-        optional: !0
-      });
-      return ik && ik.triggerHeartbeat(), kk.container.getProvider(ek)
-    }
-
-    function re(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Jk;
-      be(kk, ek).clearInstance(ik)
-    }
-
-    function Pe() {
-      ie.clear()
-    }
-    const me = {
-        "no-app": "No Firebase App '{$appName}' has been created - call initializeApp() first",
-        "bad-app-name": "Illegal App name: '{$appName}",
-        "duplicate-app": "Firebase App named '{$appName}' already exists with different options or config",
-        "app-deleted": "Firebase App named '{$appName}' already deleted",
-        "no-options": "Need to provide options, when not being deployed to hosting via source.",
-        "invalid-app-argument": "firebase.{$appName}() takes either no argument or a Firebase App instance.",
-        "invalid-log-argument": "First argument to `onLog` must be null or a function.",
-        "idb-open": "Error thrown when opening IndexedDB. Original error: {$originalErrorMessage}.",
-        "idb-get": "Error thrown when reading from IndexedDB. Original error: {$originalErrorMessage}.",
-        "idb-set": "Error thrown when writing to IndexedDB. Original error: {$originalErrorMessage}.",
-        "idb-delete": "Error thrown when deleting from IndexedDB. Original error: {$originalErrorMessage}."
-      },
-      Me = new Sk.g("app", "Firebase", me);
-    class Ke {
-      constructor(kk, ek, ik) {
-        this._isDeleted = !1, this._options = Object.assign({}, kk), this._config = Object.assign({}, ek), this._name = ek.name, this._automaticDataCollectionEnabled = ek.automaticDataCollectionEnabled, this._container = ik, this.container.wq(new Dk.f("app", (() => this), "PUBLIC"))
-      }
-      get automaticDataCollectionEnabled() {
-        return this.checkDestroyed(), this._automaticDataCollectionEnabled
-      }
-      set automaticDataCollectionEnabled(kk) {
-        this.checkDestroyed(), this._automaticDataCollectionEnabled = kk
-      }
-      get name() {
-        return this.checkDestroyed(), this._name
-      }
-      get options() {
-        return this.checkDestroyed(), this._options
-      }
-      get config() {
-        return this.checkDestroyed(), this._config
-      }
-      get container() {
-        return this._container
-      }
-      get isDeleted() {
-        return this._isDeleted
-      }
-      set isDeleted(kk) {
-        this._isDeleted = kk
-      }
-      checkDestroyed() {
-        if (this.isDeleted) throw Me.create("app-deleted", {
-          appName: this._name
-        })
-      }
-    }
-    const xe = "9.23.0";
-
-    function ne(kk) {
-      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        ik = kk;
-      if ("object" !== typeof ek) {
-        ek = {
-          name: ek
+          ZC.subtractToRef(zC, this.extendSizeWorld).scaleInPlace(.5), ZC.addToRef(zC, this.centerWorld).scaleInPlace(.5)
         }
+        wC.r.FromArrayToRef(CC.m, 0, QC[0]), wC.r.FromArrayToRef(CC.m, 4, QC[1]), wC.r.FromArrayToRef(CC.m, 8, QC[2]), this._worldMatrix = CC
       }
-      const fk = Object.assign({
-          name: Jk,
-          automaticDataCollectionEnabled: !1
-        }, ek),
-        bk = fk.name;
-      if ("string" !== typeof bk || !bk) throw Me.create("bad-app-name", {
-        appName: String(bk)
-      });
-      if (ik || (ik = (0, Sk.H)()), !ik) throw Me.create("no-options");
-      const rk = ee.get(bk);
-      if (rk) {
-        if ((0, Sk.C)(ik, rk.options) && (0, Sk.C)(fk, rk.config)) return rk;
-        throw Me.create("duplicate-app", {
-          appName: bk
-        })
+      isInFrustum(CC) {
+        return nC.IsInFrustum(this.vectorsWorld, CC)
       }
-      const Pk = new Dk.c(bk);
-      for (const Dk of ie.values()) Pk.wq(Dk);
-      const mk = new Ke(ik, fk, Pk);
-      return ee.set(bk, mk), mk
-    }
-
-    function Ue() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Jk;
-      const ek = ee.get(kk);
-      if (!ek && kk === Jk && (0, Sk.H)()) return ne();
-      if (!ek) throw Me.create("no-app", {
-        appName: kk
-      });
-      return ek
-    }
-
-    function He() {
-      return Array.from(ee.values())
-    }
-    async function we(kk) {
-      const ek = kk.name;
-      ee.has(ek) && (ee.delete(ek), await Promise.all(kk.container.getProviders().map((kk => kk.delete()))), kk.isDeleted = !0)
-    }
-
-    function le(kk, ek, ik) {
-      var fk;
-      let Sk = null !== (fk = ke[kk]) && void 0 !== fk ? fk : kk;
-      ik && (Sk += `-${ik}`);
-      const bk = Sk.match(/\s|\//),
-        rk = ek.match(/\s|\//);
-      if (bk || rk) {
-        const kk = [`Unable to register library "${Sk}" with version "${ek}":`];
-        return bk && kk.push(`library name "${Sk}" contains illegal characters (whitespace or "/")`), bk && rk && kk.push("and"), rk && kk.push(`version name "${ek}" contains illegal characters (whitespace or "/")`), void sk.warn(kk.join(" "))
+      isCompletelyInFrustum(CC) {
+        return nC.IsCompletelyInFrustum(this.vectorsWorld, CC)
       }
-      Se(new Dk.f(`${Sk}-version`, (() => ({
-        library: Sk,
-        version: ek
-      })), "VERSION"))
-    }
-
-    function pe(kk, ek) {
-      if (null !== kk && "function" !== typeof kk) throw Me.create("invalid-log-argument");
-      (0, fk.k)(kk, ek)
-    }
-
-    function ye(kk) {
-      (0, fk.h)(kk)
-    }
-    const Ye = "firebase-heartbeat-store";
-    let Le = null;
-
-    function Ce() {
-      return Le || (Le = function(kk, ek) {
-        let {
-          blocked: ik,
-          upgrade: Dk,
-          blocking: fk,
-          terminated: Sk
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const bk = indexedDB.open(kk, ek),
-          rk = wk(bk);
-        return Dk && bk.addEventListener("upgradeneeded", (kk => {
-          Dk(wk(bk.result), kk.oldVersion, kk.newVersion, wk(bk.transaction), kk)
-        })), ik && bk.addEventListener("blocked", (kk => ik(kk.oldVersion, kk.newVersion, kk))), rk.then((kk => {
-          Sk && kk.addEventListener("close", (() => Sk())), fk && kk.addEventListener("versionchange", (kk => fk(kk.oldVersion, kk.newVersion, kk)))
-        })).catch((() => {})), rk
-      }("firebase-heartbeat-database", 1, {
-        upgrade: (kk, ek) => {
-          if (0 === ek) kk.createObjectStore(Ye)
+      intersectsPoint(CC) {
+        const zC = this.minimumWorld,
+          ZC = this.maximumWorld,
+          QC = zC.x,
+          wC = zC.y,
+          nC = zC.z,
+          fC = ZC.x,
+          oC = ZC.y,
+          qC = ZC.z,
+          FC = CC.x,
+          WC = CC.y,
+          NC = CC.z,
+          MC = -bC.e;
+        return !(fC - FC < MC || MC > FC - QC) && (!(oC - WC < MC || MC > WC - wC) && !(qC - NC < MC || MC > NC - nC))
+      }
+      intersectsSphere(CC) {
+        return nC.IntersectsSphere(this.minimumWorld, this.maximumWorld, CC.centerWorld, CC.radiusWorld)
+      }
+      intersectsMinMax(CC, zC) {
+        const ZC = this.minimumWorld,
+          QC = this.maximumWorld,
+          wC = ZC.x,
+          bC = ZC.y,
+          nC = ZC.z,
+          fC = QC.x,
+          oC = QC.y,
+          qC = QC.z,
+          FC = CC.x,
+          WC = CC.y,
+          NC = CC.z,
+          MC = zC.x,
+          gC = zC.y,
+          SC = zC.z;
+        return !(fC < FC || wC > MC) && (!(oC < WC || bC > gC) && !(qC < NC || nC > SC))
+      }
+      dispose() {
+        this._drawWrapperFront?.dispose(), this._drawWrapperBack?.dispose()
+      }
+      static Intersects(CC, zC) {
+        return CC.intersectsMinMax(zC.minimumWorld, zC.maximumWorld)
+      }
+      static IntersectsSphere(CC, zC, ZC, QC) {
+        const bC = nC._TmpVector3[0];
+        wC.r.ClampToRef(ZC, CC, zC, bC);
+        return wC.r.DistanceSquared(ZC, bC) <= QC * QC
+      }
+      static IsCompletelyInFrustum(CC, zC) {
+        for (let ZC = 0; ZC < 6; ++ZC) {
+          const QC = zC[ZC];
+          for (let zC = 0; zC < 8; ++zC)
+            if (QC.dotCoordinate(CC[zC]) < 0) return !1
         }
-      }).catch((kk => {
-        throw Me.create("idb-open", {
-          originalErrorMessage: kk.message
-        })
-      }))), Le
+        return !0
+      }
+      static IsInFrustum(CC, zC) {
+        for (let ZC = 0; ZC < 6; ++ZC) {
+          let QC = !0;
+          const wC = zC[ZC];
+          for (let zC = 0; zC < 8; ++zC)
+            if (wC.dotCoordinate(CC[zC]) >= 0) {
+              QC = !1;
+              break
+            } if (QC) return !1
+        }
+        return !0
+      }
     }
-    async function Ae(kk, ek) {
-      try {
-        const ik = (await Ce()).transaction(Ye, "readwrite"),
-          Dk = ik.objectStore(Ye);
-        await Dk.put(ek, je(kk)), await ik.done
-      } catch (ik) {
-        if (ik instanceof Sk.j) sk.warn(ik.message);
+    nC._TmpVector3 = (0, QC.d)(3, wC.r.Zero)
+  },
+  40127: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => WC
+    });
+    var QC = ZC(36971),
+      wC = ZC(36963),
+      bC = ZC(40136);
+    class nC {
+      constructor(CC, zC, ZC) {
+        this.center = wC.r.Zero(), this.centerWorld = wC.r.Zero(), this.minimum = wC.r.Zero(), this.maximum = wC.r.Zero(), this.reConstruct(CC, zC, ZC)
+      }
+      reConstruct(CC, zC, ZC) {
+        this.minimum.Av(CC), this.maximum.Av(zC);
+        const QC = wC.r.Distance(CC, zC);
+        zC.addToRef(CC, this.center).scaleInPlace(.5), this.radius = .5 * QC, this._update(ZC || wC.b.IdentityReadOnly)
+      }
+      scale(CC) {
+        const zC = nC._TmpVector3,
+          ZC = this.maximum.subtractToRef(this.minimum, zC[0]),
+          QC = ZC.length();
+        ZC.normalizeFromLength(QC);
+        const wC = QC * CC,
+          bC = ZC.scaleInPlace(.5 * wC),
+          fC = this.center.subtractToRef(bC, zC[1]),
+          oC = this.center.addToRef(bC, zC[2]);
+        return this.reConstruct(fC, oC, this._worldMatrix), this
+      }
+      getWorldMatrix() {
+        return this._worldMatrix
+      }
+      _update(CC) {
+        if (CC.isIdentity()) this.centerWorld.Av(this.center), this.radiusWorld = this.radius;
         else {
-          const kk = Me.create("idb-set", {
-            originalErrorMessage: null === ik || void 0 === ik ? void 0 : ik.message
-          });
-          sk.warn(kk.message)
+          wC.r.TransformCoordinatesToRef(this.center, CC, this.centerWorld);
+          const zC = nC._TmpVector3[0];
+          wC.r.TransformNormalFromFloatsToRef(1, 1, 1, CC, zC), this.radiusWorld = Math.max(Math.abs(zC.x), Math.abs(zC.y), Math.abs(zC.z)) * this.radius
         }
       }
+      isInFrustum(CC) {
+        const zC = this.centerWorld,
+          ZC = this.radiusWorld;
+        for (let QC = 0; QC < 6; QC++)
+          if (CC[QC].dotCoordinate(zC) <= -ZC) return !1;
+        return !0
+      }
+      isCenterInFrustum(CC) {
+        const zC = this.centerWorld;
+        for (let ZC = 0; ZC < 6; ZC++)
+          if (CC[ZC].dotCoordinate(zC) < 0) return !1;
+        return !0
+      }
+      intersectsPoint(CC) {
+        const zC = wC.r.DistanceSquared(this.centerWorld, CC);
+        return !(this.radiusWorld * this.radiusWorld < zC)
+      }
+      static Intersects(CC, zC) {
+        const ZC = wC.r.DistanceSquared(CC.centerWorld, zC.centerWorld),
+          QC = CC.radiusWorld + zC.radiusWorld;
+        return !(QC * QC < ZC)
+      }
+      static CreateFromCenterAndRadius(CC, zC, ZC) {
+        this._TmpVector3[0].Av(CC), this._TmpVector3[1].L_(0, 0, zC), this._TmpVector3[2].Av(CC), this._TmpVector3[0].addInPlace(this._TmpVector3[1]), this._TmpVector3[2].RQC(this._TmpVector3[1]);
+        const QC = new nC(this._TmpVector3[0], this._TmpVector3[2]);
+        return QC._worldMatrix = ZC || wC.b.Identity(), QC
+      }
+    }
+    nC._TmpVector3 = (0, QC.d)(3, wC.r.Zero);
+    const fC = {
+        min: 0,
+        max: 0
+      },
+      oC = {
+        min: 0,
+        max: 0
+      },
+      qC = (CC, zC, ZC) => {
+        const QC = wC.r.Dot(zC.centerWorld, CC),
+          bC = Math.abs(wC.r.Dot(zC.directions[0], CC)) * zC.extendSize.x + Math.abs(wC.r.Dot(zC.directions[1], CC)) * zC.extendSize.y + Math.abs(wC.r.Dot(zC.directions[2], CC)) * zC.extendSize.z;
+        ZC.min = QC - bC, ZC.max = QC + bC
+      },
+      FC = (CC, zC, ZC) => (qC(CC, zC, fC), qC(CC, ZC, oC), !(fC.min > oC.max || oC.min > fC.max));
+    class WC {
+      constructor(CC, zC, ZC) {
+        this._isLocked = !1, this.boundingBox = new bC.b(CC, zC, ZC), this.IQC = new nC(CC, zC, ZC)
+      }
+      reConstruct(CC, zC, ZC) {
+        this.boundingBox.reConstruct(CC, zC, ZC), this.IQC.reConstruct(CC, zC, ZC)
+      }
+      get minimum() {
+        return this.boundingBox.minimum
+      }
+      get maximum() {
+        return this.boundingBox.maximum
+      }
+      get isLocked() {
+        return this._isLocked
+      }
+      set isLocked(CC) {
+        this._isLocked = CC
+      }
+      update(CC) {
+        this._isLocked || (this.boundingBox._update(CC), this.IQC._update(CC))
+      }
+      centerOn(CC, zC) {
+        const ZC = WC._TmpVector3[0].Av(CC).RQC(zC),
+          QC = WC._TmpVector3[1].Av(CC).addInPlace(zC);
+        return this.boundingBox.reConstruct(ZC, QC, this.boundingBox.getWorldMatrix()), this.IQC.reConstruct(ZC, QC, this.boundingBox.getWorldMatrix()), this
+      }
+      encapsulate(CC) {
+        const zC = wC.r.Minimize(this.minimum, CC),
+          ZC = wC.r.Maximize(this.maximum, CC);
+        return this.reConstruct(zC, ZC, this.boundingBox.getWorldMatrix()), this
+      }
+      encapsulateBoundingInfo(CC) {
+        const zC = wC.j.Matrix[0];
+        this.boundingBox.getWorldMatrix().invertToRef(zC);
+        const ZC = wC.j.Eg[0];
+        return wC.r.TransformCoordinatesToRef(CC.boundingBox.minimumWorld, zC, ZC), this.encapsulate(ZC), wC.r.TransformCoordinatesToRef(CC.boundingBox.maximumWorld, zC, ZC), this.encapsulate(ZC), this
+      }
+      scale(CC) {
+        return this.boundingBox.scale(CC), this.IQC.scale(CC), this
+      }
+      isInFrustum(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if ((2 === zC || 3 === zC) && this.IQC.isCenterInFrustum(CC)) return !0;
+        if (!this.IQC.isInFrustum(CC)) return !1;
+        return !(1 !== zC && 3 !== zC) || this.boundingBox.isInFrustum(CC)
+      }
+      get diagonalLength() {
+        const CC = this.boundingBox;
+        return CC.maximumWorld.subtractToRef(CC.minimumWorld, WC._TmpVector3[0]).length()
+      }
+      isCompletelyInFrustum(CC) {
+        return this.boundingBox.isCompletelyInFrustum(CC)
+      }
+      _checkCollision(CC) {
+        return CC._canDoCollision(this.IQC.centerWorld, this.IQC.radiusWorld, this.boundingBox.minimumWorld, this.boundingBox.maximumWorld)
+      }
+      intersectsPoint(CC) {
+        return !!this.IQC.centerWorld && (!!this.IQC.intersectsPoint(CC) && !!this.boundingBox.intersectsPoint(CC))
+      }
+      intersects(CC, zC) {
+        if (!nC.Intersects(this.IQC, CC.IQC)) return !1;
+        if (!bC.b.Intersects(this.boundingBox, CC.boundingBox)) return !1;
+        if (!zC) return !0;
+        const ZC = this.boundingBox,
+          QC = CC.boundingBox;
+        return !!FC(ZC.directions[0], ZC, QC) && (!!FC(ZC.directions[1], ZC, QC) && (!!FC(ZC.directions[2], ZC, QC) && (!!FC(QC.directions[0], ZC, QC) && (!!FC(QC.directions[1], ZC, QC) && (!!FC(QC.directions[2], ZC, QC) && (!!FC(wC.r.Cross(ZC.directions[0], QC.directions[0]), ZC, QC) && (!!FC(wC.r.Cross(ZC.directions[0], QC.directions[1]), ZC, QC) && (!!FC(wC.r.Cross(ZC.directions[0], QC.directions[2]), ZC, QC) && (!!FC(wC.r.Cross(ZC.directions[1], QC.directions[0]), ZC, QC) && (!!FC(wC.r.Cross(ZC.directions[1], QC.directions[1]), ZC, QC) && (!!FC(wC.r.Cross(ZC.directions[1], QC.directions[2]), ZC, QC) && (!!FC(wC.r.Cross(ZC.directions[2], QC.directions[0]), ZC, QC) && (!!FC(wC.r.Cross(ZC.directions[2], QC.directions[1]), ZC, QC) && !!FC(wC.r.Cross(ZC.directions[2], QC.directions[2]), ZC, QC))))))))))))))
+      }
+    }
+    WC._TmpVector3 = (0, QC.d)(2, wC.r.Zero)
+  },
+  40157: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => bC,
+      g: () => oC,
+      i: () => fC,
+      l: () => nC
+    });
+    var QC = ZC(39969),
+      wC = ZC(36963);
+
+    function bC(CC) {
+      -1 === CC.indexOf("vClipPlane") && CC.push("vClipPlane"), -1 === CC.indexOf("vClipPlane2") && CC.push("vClipPlane2"), -1 === CC.indexOf("vClipPlane3") && CC.push("vClipPlane3"), -1 === CC.indexOf("vClipPlane4") && CC.push("vClipPlane4"), -1 === CC.indexOf("vClipPlane5") && CC.push("vClipPlane5"), -1 === CC.indexOf("vClipPlane6") && CC.push("vClipPlane6")
     }
 
-    function je(kk) {
-      return `${kk.name}!${kk.options.appId}`
+    function nC(CC, zC, ZC) {
+      const QC = !!(CC.clipPlane ?? zC.clipPlane),
+        wC = !!(CC.clipPlane2 ?? zC.clipPlane2),
+        bC = !!(CC.clipPlane3 ?? zC.clipPlane3),
+        nC = !!(CC.clipPlane4 ?? zC.clipPlane4),
+        fC = !!(CC.clipPlane5 ?? zC.clipPlane5),
+        oC = !!(CC.clipPlane6 ?? zC.clipPlane6);
+      QC && ZC.push("#define CLIPPLANE"), wC && ZC.push("#define CLIPPLANE2"), bC && ZC.push("#define CLIPPLANE3"), nC && ZC.push("#define CLIPPLANE4"), fC && ZC.push("#define CLIPPLANE5"), oC && ZC.push("#define CLIPPLANE6")
     }
-    class se {
-      constructor(kk) {
-        this.container = kk, this._heartbeatsCache = null;
-        const ek = this.container.getProvider("app").getImmediate();
-        this.aH = new Ve(ek), this._heartbeatsCachePromise = this.aH.read().then((kk => (this._heartbeatsCache = kk, kk)))
+
+    function fC(CC, zC, ZC) {
+      let QC = !1;
+      const wC = !!(CC.clipPlane ?? zC.clipPlane),
+        bC = !!(CC.clipPlane2 ?? zC.clipPlane2),
+        nC = !!(CC.clipPlane3 ?? zC.clipPlane3),
+        fC = !!(CC.clipPlane4 ?? zC.clipPlane4),
+        oC = !!(CC.clipPlane5 ?? zC.clipPlane5),
+        qC = !!(CC.clipPlane6 ?? zC.clipPlane6);
+      return ZC.CLIPPLANE !== wC && (ZC.CLIPPLANE = wC, QC = !0), ZC.CLIPPLANE2 !== bC && (ZC.CLIPPLANE2 = bC, QC = !0), ZC.CLIPPLANE3 !== nC && (ZC.CLIPPLANE3 = nC, QC = !0), ZC.CLIPPLANE4 !== fC && (ZC.CLIPPLANE4 = fC, QC = !0), ZC.CLIPPLANE5 !== oC && (ZC.CLIPPLANE5 = oC, QC = !0), ZC.CLIPPLANE6 !== qC && (ZC.CLIPPLANE6 = qC, QC = !0), QC
+    }
+
+    function oC(CC, zC, ZC) {
+      let QC = zC.clipPlane ?? ZC.clipPlane;
+      qC(CC, "vClipPlane", QC), QC = zC.clipPlane2 ?? ZC.clipPlane2, qC(CC, "vClipPlane2", QC), QC = zC.clipPlane3 ?? ZC.clipPlane3, qC(CC, "vClipPlane3", QC), QC = zC.clipPlane4 ?? ZC.clipPlane4, qC(CC, "vClipPlane4", QC), QC = zC.clipPlane5 ?? ZC.clipPlane5, qC(CC, "vClipPlane5", QC), QC = zC.clipPlane6 ?? ZC.clipPlane6, qC(CC, "vClipPlane6", QC)
+    }
+
+    function qC(CC, zC, ZC) {
+      if (ZC) {
+        const bC = QC.b.Km()?.floatingOriginOffset || wC.r.ZeroReadOnly;
+        CC.setFloat4(zC, ZC.normal.x, ZC.normal.y, ZC.normal.z, ZC.d + wC.r.Dot(ZC.normal, bC))
       }
-      async triggerHeartbeat() {
-        const kk = this.container.getProvider("platform-logger").getImmediate().getPlatformInfoString(),
-          ek = de();
-        if (null === this._heartbeatsCache && (this._heartbeatsCache = await this._heartbeatsCachePromise), this._heartbeatsCache.lastSentHeartbeatDate !== ek && !this._heartbeatsCache.heartbeats.some((kk => kk.date === ek))) return this._heartbeatsCache.heartbeats.push({
-          date: ek,
-          agent: kk
-        }), this._heartbeatsCache.heartbeats = this._heartbeatsCache.heartbeats.filter((kk => {
-          const ek = new Date(kk.date).valueOf();
-          return Date.now() - ek <= 2592e6
-        })), this.aH.overwrite(this._heartbeatsCache)
+    }
+  },
+  40175: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => QC
+    });
+    class QC {
+      constructor() {
+        this._defines = {}, this._currentRank = 32, this._maxRank = -1, this._mesh = null
       }
-      async getHeartbeatsHeader() {
-        if (null === this._heartbeatsCache && await this._heartbeatsCachePromise, null === this._heartbeatsCache || 0 === this._heartbeatsCache.heartbeats.length) return "";
-        const kk = de(),
-          {
-            heartbeatsToSend: ek,
-            unsentEntries: ik
-          } = function(kk) {
-            let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1024;
-            const ik = [];
-            let Dk = kk.slice();
-            for (const fk of kk) {
-              const kk = ik.find((kk => kk.agent === fk.agent));
-              if (kk) {
-                if (kk.dates.push(fk.date), Fe(ik) > ek) {
-                  kk.dates.pop();
-                  break
+      unBindMesh() {
+        this._mesh = null
+      }
+      addFallback(CC, zC) {
+        this._defines[CC] || (CC < this._currentRank && (this._currentRank = CC), CC > this._maxRank && (this._maxRank = CC), this._defines[CC] = new Array), this._defines[CC].push(zC)
+      }
+      addCPUSkinningFallback(CC, zC) {
+        this._mesh = zC, CC < this._currentRank && (this._currentRank = CC), CC > this._maxRank && (this._maxRank = CC)
+      }
+      get hasMoreFallbacks() {
+        return this._currentRank <= this._maxRank
+      }
+      reduce(CC, zC) {
+        if (this._mesh && this._mesh.computeBonesUsingShaders && this._mesh.numBoneInfluencers > 0) {
+          this._mesh.computeBonesUsingShaders = !1, CC = CC.replace("#define NUM_BONE_INFLUENCERS " + this._mesh.numBoneInfluencers, "#define NUM_BONE_INFLUENCERS 0"), zC._bonesComputationForcedToCPU = !0;
+          const ZC = this._mesh.Km();
+          for (let CC = 0; CC < ZC.meshes.length; CC++) {
+            const QC = ZC.meshes[CC];
+            if (QC.material) {
+              if (QC.computeBonesUsingShaders && 0 !== QC.numBoneInfluencers)
+                if (QC.material.getEffect() === zC) QC.computeBonesUsingShaders = !1;
+                else if (QC.Zx)
+                for (const CC of QC.Zx) {
+                  if (CC.effect === zC) {
+                    QC.computeBonesUsingShaders = !1;
+                    break
+                  }
                 }
-              } else if (ik.push({
-                  agent: fk.agent,
-                  dates: [fk.date]
-                }), Fe(ik) > ek) {
-                ik.pop();
-                break
-              }
-              Dk = Dk.slice(1)
-            }
-            return {
-              heartbeatsToSend: ik,
-              unsentEntries: Dk
-            }
-          }(this._heartbeatsCache.heartbeats),
-          Dk = (0, Sk.r)(JSON.stringify({
-            version: 2,
-            heartbeats: ek
-          }));
-        return this._heartbeatsCache.lastSentHeartbeatDate = kk, ik.length > 0 ? (this._heartbeatsCache.heartbeats = ik, await this.aH.overwrite(this._heartbeatsCache)) : (this._heartbeatsCache.heartbeats = [], this.aH.overwrite(this._heartbeatsCache)), Dk
-      }
-    }
-
-    function de() {
-      return (new Date).toISOString().substring(0, 10)
-    }
-    class Ve {
-      constructor(kk) {
-        this.app = kk, this._canUseIndexedDBPromise = this.runIndexedDBEnvironmentCheck()
-      }
-      async runIndexedDBEnvironmentCheck() {
-        return !!(0, Sk.cb)() && (0, Sk.rb)().then((() => !0)).catch((() => !1))
-      }
-      async read() {
-        if (await this._canUseIndexedDBPromise) {
-          return await async function(kk) {
-            try {
-              const ek = await Ce();
-              return await ek.transaction(Ye).objectStore(Ye).get(je(kk))
-            } catch (ek) {
-              if (ek instanceof Sk.j) sk.warn(ek.message);
-              else {
-                const kk = Me.create("idb-get", {
-                  originalErrorMessage: null === ek || void 0 === ek ? void 0 : ek.message
-                });
-                sk.warn(kk.message)
-              }
-            }
-          }(this.app) || {
-            heartbeats: []
+            } else !this._mesh.material && QC.computeBonesUsingShaders && QC.numBoneInfluencers > 0 && (QC.computeBonesUsingShaders = !1)
           }
+        } else {
+          const zC = this._defines[this._currentRank];
+          if (zC)
+            for (let ZC = 0; ZC < zC.length; ZC++) CC = CC.replace("#define " + zC[ZC], "");
+          this._currentRank++
         }
-        return {
-          heartbeats: []
-        }
-      }
-      async overwrite(kk) {
-        var ek;
-        if (await this._canUseIndexedDBPromise) {
-          const ik = await this.read();
-          return Ae(this.app, {
-            lastSentHeartbeatDate: null !== (ek = kk.lastSentHeartbeatDate) && void 0 !== ek ? ek : ik.lastSentHeartbeatDate,
-            heartbeats: kk.heartbeats
-          })
-        }
-      }
-      async add(kk) {
-        var ek;
-        if (await this._canUseIndexedDBPromise) {
-          const ik = await this.read();
-          return Ae(this.app, {
-            lastSentHeartbeatDate: null !== (ek = kk.lastSentHeartbeatDate) && void 0 !== ek ? ek : ik.lastSentHeartbeatDate,
-            heartbeats: [...ik.heartbeats, ...kk.heartbeats]
-          })
-        }
-      }
-    }
-
-    function Fe(kk) {
-      return (0, Sk.r)(JSON.stringify({
-        version: 2,
-        heartbeats: kk
-      })).length
-    }
-    var ue;
-    ue = "", Se(new Dk.f("platform-logger", (kk => new Ck(kk)), "PRIVATE")), Se(new Dk.f("heartbeat", (kk => new se(kk)), "PRIVATE")), le(Ak, jk, ue), le(Ak, jk, "esm2017"), le("fire-js", "")
-  },
-  40087: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => rk,
-      f: () => fk
-    });
-    var Dk = ik(40092);
-    class fk {
-      constructor(kk, ek, ik) {
-        this.name = kk, this.instanceFactory = ek, this.type = ik, this.multipleInstances = !1, this.serviceProps = {}, this.instantiationMode = "LAZY", this.onInstanceCreated = null
-      }
-      setInstantiationMode(kk) {
-        return this.instantiationMode = kk, this
-      }
-      setMultipleInstances(kk) {
-        return this.multipleInstances = kk, this
-      }
-      setServiceProps(kk) {
-        return this.serviceProps = kk, this
-      }
-      setInstanceCreatedCallback(kk) {
-        return this.onInstanceCreated = kk, this
-      }
-    }
-    const Sk = "[DEFAULT]";
-    class bk {
-      constructor(kk, ek) {
-        this.name = kk, this.container = ek, this.component = null, this.instances = new Map, this.instancesDeferred = new Map, this.instancesOptions = new Map, this.onInitCallbacks = new Map
-      }
-      get(kk) {
-        const ek = this.normalizeInstanceIdentifier(kk);
-        if (!this.instancesDeferred.has(ek)) {
-          const kk = new Dk.d;
-          if (this.instancesDeferred.set(ek, kk), this.isInitialized(ek) || this.shouldAutoInitialize()) try {
-            const ik = this.getOrInitializeService({
-              instanceIdentifier: ek
-            });
-            ik && kk.resolve(ik)
-          } catch (ik) {}
-        }
-        return this.instancesDeferred.get(ek).promise
-      }
-      getImmediate(kk) {
-        var ek;
-        const ik = this.normalizeInstanceIdentifier(null === kk || void 0 === kk ? void 0 : kk.identifier),
-          Dk = null !== (ek = null === kk || void 0 === kk ? void 0 : kk.optional) && void 0 !== ek && ek;
-        if (!this.isInitialized(ik) && !this.shouldAutoInitialize()) {
-          if (Dk) return null;
-          throw Error(`Service ${this.name} is not available`)
-        }
-        try {
-          return this.getOrInitializeService({
-            instanceIdentifier: ik
-          })
-        } catch (fk) {
-          if (Dk) return null;
-          throw fk
-        }
-      }
-      getComponent() {
-        return this.component
-      }
-      setComponent(kk) {
-        if (kk.name !== this.name) throw Error(`Mismatching Component ${kk.name} for Provider ${this.name}.`);
-        if (this.component) throw Error(`Component for ${this.name} has already been provided`);
-        if (this.component = kk, this.shouldAutoInitialize()) {
-          if (function(kk) {
-              return "EAGER" === kk.instantiationMode
-            }(kk)) try {
-            this.getOrInitializeService({
-              instanceIdentifier: Sk
-            })
-          } catch (ek) {}
-          for (const [kk, ik] of this.instancesDeferred.entries()) {
-            const Dk = this.normalizeInstanceIdentifier(kk);
-            try {
-              const kk = this.getOrInitializeService({
-                instanceIdentifier: Dk
-              });
-              ik.resolve(kk)
-            } catch (ek) {}
-          }
-        }
-      }
-      clearInstance() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sk;
-        this.instancesDeferred.delete(kk), this.instancesOptions.delete(kk), this.instances.delete(kk)
-      }
-      async delete() {
-        const kk = Array.from(this.instances.values());
-        await Promise.all([...kk.filter((kk => "INTERNAL" in kk)).map((kk => kk.INTERNAL.delete())), ...kk.filter((kk => "_delete" in kk)).map((kk => kk._delete()))])
-      }
-      isComponentSet() {
-        return null != this.component
-      }
-      isInitialized() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sk;
-        return this.instances.has(kk)
-      }
-      getOptions() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sk;
-        return this.instancesOptions.get(kk) || {}
-      }
-      initialize() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const {
-          options: ek = {}
-        } = kk, ik = this.normalizeInstanceIdentifier(kk.instanceIdentifier);
-        if (this.isInitialized(ik)) throw Error(`${this.name}(${ik}) has already been initialized`);
-        if (!this.isComponentSet()) throw Error(`Component ${this.name} has not been registered yet`);
-        const Dk = this.getOrInitializeService({
-          instanceIdentifier: ik,
-          options: ek
-        });
-        for (const [fk, Sk] of this.instancesDeferred.entries()) {
-          ik === this.normalizeInstanceIdentifier(fk) && Sk.resolve(Dk)
-        }
-        return Dk
-      }
-      Av(kk, ek) {
-        var ik;
-        const Dk = this.normalizeInstanceIdentifier(ek),
-          fk = null !== (ik = this.onInitCallbacks.get(Dk)) && void 0 !== ik ? ik : new Set;
-        fk.add(kk), this.onInitCallbacks.set(Dk, fk);
-        const Sk = this.instances.get(Dk);
-        return Sk && kk(Sk, Dk), () => {
-          fk.delete(kk)
-        }
-      }
-      invokeOnInitCallbacks(kk, ek) {
-        const ik = this.onInitCallbacks.get(ek);
-        if (ik)
-          for (const fk of ik) try {
-            fk(kk, ek)
-          } catch (Dk) {}
-      }
-      getOrInitializeService(kk) {
-        let {
-          instanceIdentifier: ek,
-          options: ik = {}
-        } = kk, Dk = this.instances.get(ek);
-        if (!Dk && this.component && (Dk = this.component.instanceFactory(this.container, {
-            instanceIdentifier: (fk = ek, fk === Sk ? void 0 : fk),
-            options: ik
-          }), this.instances.set(ek, Dk), this.instancesOptions.set(ek, ik), this.invokeOnInitCallbacks(Dk, ek), this.component.onInstanceCreated)) try {
-          this.component.onInstanceCreated(this.container, ek, Dk)
-        } catch (bk) {}
-        var fk;
-        return Dk || null
-      }
-      normalizeInstanceIdentifier() {
-        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sk;
-        return this.component ? this.component.multipleInstances ? kk : Sk : kk
-      }
-      shouldAutoInitialize() {
-        return !!this.component && "EXPLICIT" !== this.component.instantiationMode
-      }
-    }
-    class rk {
-      constructor(kk) {
-        this.name = kk, this.providers = new Map
-      }
-      wq(kk) {
-        const ek = this.getProvider(kk.name);
-        if (ek.isComponentSet()) throw new Error(`Component ${kk.name} has already been registered with ${this.name}`);
-        ek.setComponent(kk)
-      }
-      addOrOverwriteComponent(kk) {
-        this.getProvider(kk.name).isComponentSet() && this.providers.delete(kk.name), this.wq(kk)
-      }
-      getProvider(kk) {
-        if (this.providers.has(kk)) return this.providers.get(kk);
-        const ek = new bk(kk, this);
-        return this.providers.set(kk, ek), ek
-      }
-      getProviders() {
-        return Array.from(this.providers.values())
+        return CC
       }
     }
   },
-  40099: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => fk,
-      g: () => mk,
-      h: () => Mk,
-      k: () => Kk
+  40110: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => GC
     });
-    const Dk = [];
-    var fk;
-    ! function(kk) {
-      kk[kk.DEBUG = 0] = "DEBUG", kk[kk.VERBOSE = 1] = "VERBOSE", kk[kk.INFO = 2] = "INFO", kk[kk.WARN = 3] = "WARN", kk[kk.ERROR = 4] = "ERROR", kk[kk.SILENT = 5] = "SILENT"
-    }(fk || (fk = {}));
-    const Sk = {
-        debug: fk.DEBUG,
-        verbose: fk.VERBOSE,
-        info: fk.INFO,
-        warn: fk.WARN,
-        error: fk.ERROR,
-        silent: fk.SILENT
+    var QC = ZC(39811),
+      wC = ZC(39818),
+      bC = ZC(39913),
+      nC = ZC(36987),
+      fC = ZC(36985),
+      oC = ZC(40119),
+      qC = ZC(39950),
+      FC = ZC(38507),
+      WC = ZC(37596),
+      NC = ZC(40148),
+      MC = ZC(39842);
+    let gC = (() => {
+      var CC;
+      let zC, ZC, bC, nC, fC, oC, qC, FC, WC, NC, gC, SC, pC = [];
+      return CC = class {
+        constructor() {
+          this._func = (0, QC.n)(this, pC), this.reset()
+        }
+        reset() {
+          this.enabled = !1, this.mask = 255, this.funcRef = 1, this.funcMask = 255, this.func = 519, this.opStencilFail = 7680, this.opDepthFail = 7680, this.opStencilDepthPass = 7681, this.backFunc = 519, this.backOpStencilFail = 7680, this.backOpDepthFail = 7680, this.backOpStencilDepthPass = 7681
+        }
+        get func() {
+          return this._func
+        }
+        set func(CC) {
+          this._func = CC
+        }
+        get backFunc() {
+          return this._backFunc
+        }
+        set backFunc(CC) {
+          this._backFunc = CC
+        }
+        get funcRef() {
+          return this._funcRef
+        }
+        set funcRef(CC) {
+          this._funcRef = CC
+        }
+        get funcMask() {
+          return this._funcMask
+        }
+        set funcMask(CC) {
+          this._funcMask = CC
+        }
+        get opStencilFail() {
+          return this._opStencilFail
+        }
+        set opStencilFail(CC) {
+          this._opStencilFail = CC
+        }
+        get opDepthFail() {
+          return this._opDepthFail
+        }
+        set opDepthFail(CC) {
+          this._opDepthFail = CC
+        }
+        get opStencilDepthPass() {
+          return this._opStencilDepthPass
+        }
+        set opStencilDepthPass(CC) {
+          this._opStencilDepthPass = CC
+        }
+        get backOpStencilFail() {
+          return this._backOpStencilFail
+        }
+        set backOpStencilFail(CC) {
+          this._backOpStencilFail = CC
+        }
+        get backOpDepthFail() {
+          return this._backOpDepthFail
+        }
+        set backOpDepthFail(CC) {
+          this._backOpDepthFail = CC
+        }
+        get backOpStencilDepthPass() {
+          return this._backOpStencilDepthPass
+        }
+        set backOpStencilDepthPass(CC) {
+          this._backOpStencilDepthPass = CC
+        }
+        get mask() {
+          return this._mask
+        }
+        set mask(CC) {
+          this._mask = CC
+        }
+        get enabled() {
+          return this._enabled
+        }
+        set enabled(CC) {
+          this._enabled = CC
+        }
+        getClassName() {
+          return "MaterialStencilState"
+        }
+        copyTo(CC) {
+          MC.d.Clone((() => CC), this)
+        }
+        serialize() {
+          return MC.d.Serialize(this)
+        }
+        parse(CC, zC, ZC) {
+          MC.d.Parse((() => this), CC, zC, ZC)
+        }
+      }, (() => {
+        const MC = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        zC = [(0, wC.M)()], ZC = [(0, wC.M)()], bC = [(0, wC.M)()], nC = [(0, wC.M)()], fC = [(0, wC.M)()], oC = [(0, wC.M)()], qC = [(0, wC.M)()], FC = [(0, wC.M)()], WC = [(0, wC.M)()], NC = [(0, wC.M)()], gC = [(0, wC.M)()], SC = [(0, wC.M)()], (0, QC.j)(CC, null, zC, {
+          kind: "getter",
+          name: "func",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "func" in CC,
+            get: CC => CC.func
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, ZC, {
+          kind: "getter",
+          name: "backFunc",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "backFunc" in CC,
+            get: CC => CC.backFunc
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, bC, {
+          kind: "getter",
+          name: "funcRef",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "funcRef" in CC,
+            get: CC => CC.funcRef
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, nC, {
+          kind: "getter",
+          name: "funcMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "funcMask" in CC,
+            get: CC => CC.funcMask
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, fC, {
+          kind: "getter",
+          name: "opStencilFail",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "opStencilFail" in CC,
+            get: CC => CC.opStencilFail
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, oC, {
+          kind: "getter",
+          name: "opDepthFail",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "opDepthFail" in CC,
+            get: CC => CC.opDepthFail
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, qC, {
+          kind: "getter",
+          name: "opStencilDepthPass",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "opStencilDepthPass" in CC,
+            get: CC => CC.opStencilDepthPass
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, FC, {
+          kind: "getter",
+          name: "backOpStencilFail",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "backOpStencilFail" in CC,
+            get: CC => CC.backOpStencilFail
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, WC, {
+          kind: "getter",
+          name: "backOpDepthFail",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "backOpDepthFail" in CC,
+            get: CC => CC.backOpDepthFail
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, NC, {
+          kind: "getter",
+          name: "backOpStencilDepthPass",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "backOpStencilDepthPass" in CC,
+            get: CC => CC.backOpStencilDepthPass
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, gC, {
+          kind: "getter",
+          name: "mask",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "mask" in CC,
+            get: CC => CC.mask
+          },
+          metadata: MC
+        }, null, pC), (0, QC.j)(CC, null, SC, {
+          kind: "getter",
+          name: "enabled",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "enabled" in CC,
+            get: CC => CC.enabled
+          },
+          metadata: MC
+        }, null, pC), MC && Object.defineProperty(CC, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: MC
+        })
+      })(), CC
+    })();
+    var SC = ZC(40151),
+      pC = ZC(39738),
+      PC = ZC(39694);
+    let GC = (() => {
+      var CC;
+      let zC, ZC, PC, GC, RC, AC, xC, JC, IC, iC, vC, eC, hC, KC, YC, dC, mC, HC, EC, lC, XC, cC, uC, rC, sC, TC, aC, tC, DC, jC = [],
+        yC = [],
+        LC = [],
+        UC = [],
+        BC = [],
+        OC = [],
+        kC = [],
+        VC = [],
+        Cz = [],
+        zz = [],
+        Zz = [],
+        Qz = [],
+        wz = [],
+        bz = [],
+        nz = [],
+        fz = [],
+        oz = [],
+        qz = [],
+        Fz = [],
+        Wz = [],
+        Nz = [],
+        Mz = [],
+        gz = [],
+        Sz = [],
+        pz = [],
+        Pz = [],
+        Gz = [],
+        Rz = [],
+        Az = [],
+        xz = [],
+        Jz = [],
+        Iz = [],
+        iz = [],
+        vz = [],
+        ez = [],
+        hz = [],
+        Kz = [],
+        Yz = [],
+        dz = [],
+        mz = [],
+        Hz = [],
+        Ez = [],
+        lz = [],
+        Xz = [],
+        cz = [],
+        uz = [],
+        rz = [],
+        sz = [],
+        Tz = [],
+        az = [],
+        tz = [];
+      return CC = class {
+        get useVertexPulling() {
+          return this._useVertexPulling
+        }
+        set useVertexPulling(zC) {
+          this._useVertexPulling !== zC && (this._useVertexPulling = zC, this.YzC(CC.MiscDirtyFlag))
+        }
+        get _supportGlowLayer() {
+          return !1
+        }
+        set _glowModeEnabled(CC) {}
+        get shaderLanguage() {
+          return this._shaderLanguage
+        }
+        get canRenderToMRT() {
+          return !1
+        }
+        set alpha(zC) {
+          if (this._alpha === zC) return;
+          const ZC = this._alpha;
+          this._alpha = zC, 1 !== ZC && 1 !== zC || this.YzC(CC.MiscDirtyFlag + CC.PrePassDirtyFlag)
+        }
+        get alpha() {
+          return this._alpha
+        }
+        set backFaceCulling(zC) {
+          this._backFaceCulling !== zC && (this._backFaceCulling = zC, this.YzC(CC.TextureDirtyFlag))
+        }
+        get backFaceCulling() {
+          return this._backFaceCulling
+        }
+        set textureRepetitionMode(zC) {
+          const ZC = Math.max(0, Math.min(0 | zC, 4));
+          this._textureRepetitionMode !== ZC && (this._textureRepetitionMode = ZC, this.YzC(CC.TextureDirtyFlag))
+        }
+        get textureRepetitionMode() {
+          return this._textureRepetitionMode
+        }
+        set cullBackFaces(zC) {
+          this._cullBackFaces !== zC && (this._cullBackFaces = zC, this.YzC(CC.TextureDirtyFlag))
+        }
+        get cullBackFaces() {
+          return this._cullBackFaces
+        }
+        get blockDirtyMechanism() {
+          return this._blockDirtyMechanism
+        }
+        set blockDirtyMechanism(CC) {
+          this._blockDirtyMechanism !== CC && (this._blockDirtyMechanism = CC, CC || this.markDirty())
+        }
+        atomicMaterialsUpdate(CC) {
+          this.blockDirtyMechanism = !0;
+          try {
+            CC(this)
+          } finally {
+            this.blockDirtyMechanism = !1
+          }
+        }
+        get hasRenderTargetTextures() {
+          return this._eventInfo.hasRenderTargetTextures = !1, this._callbackPluginEventHasRenderTargetTextures(this._eventInfo), this._eventInfo.hasRenderTargetTextures
+        }
+        set onDispose(CC) {
+          this._onDisposeObserver && this.Tm.remove(this._onDisposeObserver), this._onDisposeObserver = this.Tm.add(CC)
+        }
+        get onBindObservable() {
+          return this._onBindObservable || (this._onBindObservable = new nC.d), this._onBindObservable
+        }
+        set onBind(CC) {
+          this._onBindObserver && this.onBindObservable.remove(this._onBindObserver), this._onBindObserver = this.onBindObservable.add(CC)
+        }
+        get onUnBindObservable() {
+          return this._onUnBindObservable || (this._onUnBindObservable = new nC.d), this._onUnBindObservable
+        }
+        get onEffectCreatedObservable() {
+          return this._onEffectCreatedObservable || (this._onEffectCreatedObservable = new nC.d), this._onEffectCreatedObservable
+        }
+        set alphaMode(CC) {
+          this._alphaMode[0] = CC
+        }
+        get alphaMode() {
+          return this._alphaMode[0]
+        }
+        get alphaModes() {
+          return this._alphaMode
+        }
+        setAlphaMode(zC) {
+          let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          this._alphaMode[ZC] !== zC && (this._alphaMode[ZC] = zC, this.YzC(CC.TextureDirtyFlag))
+        }
+        set needDepthPrePass(CC) {
+          this._needDepthPrePass !== CC && (this._needDepthPrePass = CC, this._needDepthPrePass && (this.checkReadyOnEveryCall = !0))
+        }
+        get needDepthPrePass() {
+          return this._needDepthPrePass
+        }
+        get isPrePassCapable() {
+          return !1
+        }
+        set fogEnabled(zC) {
+          this._fogEnabled !== zC && (this._fogEnabled = zC, this.YzC(CC.MiscDirtyFlag))
+        }
+        get fogEnabled() {
+          return this._fogEnabled
+        }
+        get wireframe() {
+          switch (this._fillMode) {
+            case CC.WireFrameFillMode:
+            case CC.LineListDrawMode:
+            case CC.LineLoopDrawMode:
+            case CC.LineStripDrawMode:
+              return !0
+          }
+          return this._scene.forceWireframe
+        }
+        set wireframe(zC) {
+          this.fillMode = zC ? CC.WireFrameFillMode : CC.TriangleFillMode
+        }
+        get pointsCloud() {
+          switch (this._fillMode) {
+            case CC.PointFillMode:
+            case CC.PointListDrawMode:
+              return !0
+          }
+          return this._scene.forcePointsCloud
+        }
+        set pointsCloud(zC) {
+          this.fillMode = zC ? CC.PointFillMode : CC.TriangleFillMode
+        }
+        get fillMode() {
+          return this._fillMode
+        }
+        set fillMode(zC) {
+          this._fillMode !== zC && (this._fillMode = zC, this.YzC(CC.MiscDirtyFlag))
+        }
+        get useLogarithmicDepth() {
+          return this._useLogarithmicDepth
+        }
+        set useLogarithmicDepth(CC) {
+          const zC = this.Km().mg().getCaps().fragmentDepthSupported;
+          CC && !zC && FC.c.Warn("Logarithmic depth has been requested for a material on a device that doesn't support it."), this._useLogarithmicDepth = CC && zC, this._markAllSubMeshesAsMiscDirty()
+        }
+        get isVertexOutputInvariant() {
+          return this._isVertexOutputInvariant
+        }
+        set isVertexOutputInvariant(CC) {
+          this._isVertexOutputInvariant !== CC && (this._isVertexOutputInvariant = CC, this._markAllSubMeshesAsMiscDirty())
+        }
+        _getDrawWrapper() {
+          return this._drawWrapper
+        }
+        _setDrawWrapper(CC) {
+          this._drawWrapper = CC
+        }
+        constructor(zC, ZC, wC) {
+          let oC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          this.customShaderNameResolve = (0, QC.n)(this, jC), this.shadowDepthWrapper = null, this.allowShaderHotSwapping = !0, this._shaderLanguage = 0, this._forceGLSL = !1, this._useVertexPulling = !1, this.id = (0, QC.n)(this, yC, void 0), this.uniqueId = ((0, QC.n)(this, LC), (0, QC.n)(this, UC, void 0)), this._loadedUniqueId = (0, QC.n)(this, BC), this.name = (0, QC.n)(this, OC, void 0), this.metadata = ((0, QC.n)(this, kC), (0, QC.n)(this, VC, null)), this._internalMetadata = (0, QC.n)(this, Cz), this.reservedDataStore = null, this.checkReadyOnEveryCall = (0, QC.n)(this, zz, !1), this.checkReadyOnlyOnce = ((0, QC.n)(this, Zz), (0, QC.n)(this, Qz, !1)), this.state = ((0, QC.n)(this, wz), (0, QC.n)(this, bz, "")), this._alpha = ((0, QC.n)(this, nz), (0, QC.n)(this, fz, 1)), this.inspectableCustomProperties = (0, QC.n)(this, oz), this._backFaceCulling = (0, QC.n)(this, qz, !0), this._textureRepetitionMode = ((0, QC.n)(this, Fz), (0, QC.n)(this, Wz, 0)), this.textureRepetitionHexTilingParams = ((0, QC.n)(this, Nz), (0, QC.n)(this, Mz, [1, .6, 7, .5])), this._cullBackFaces = ((0, QC.n)(this, gz), (0, QC.n)(this, Sz, !0)), this._blockDirtyMechanism = ((0, QC.n)(this, pz), !1), this.sideOrientation = (0, QC.n)(this, Pz, null), this.onCompiled = ((0, QC.n)(this, Gz), null), this.onError = null, this.getRenderTargetTextures = null, this.doNotSerialize = !1, this._storeEffectOnSubMeshes = !1, this.animations = null, this.Tm = new nC.d, this._onDisposeObserver = null, this._onUnBindObservable = null, this._onBindObserver = null, this._alphaMode = (0, QC.n)(this, Rz, [2]), this._needDepthPrePass = ((0, QC.n)(this, Az), (0, QC.n)(this, xz, !1)), this.disableDepthWrite = ((0, QC.n)(this, Jz), (0, QC.n)(this, Iz, !1)), this.disableColorWrite = ((0, QC.n)(this, iz), (0, QC.n)(this, vz, !1)), this.forceDepthWrite = ((0, QC.n)(this, ez), (0, QC.n)(this, hz, !1)), this.depthFunction = ((0, QC.n)(this, Kz), (0, QC.n)(this, Yz, 0)), this.separateCullingPass = ((0, QC.n)(this, dz), (0, QC.n)(this, mz, !1)), this._fogEnabled = ((0, QC.n)(this, Hz), (0, QC.n)(this, Ez, !0)), this.pointSize = ((0, QC.n)(this, lz), (0, QC.n)(this, Xz, 1)), this.zOffset = ((0, QC.n)(this, cz), (0, QC.n)(this, uz, 0)), this.zOffsetUnits = ((0, QC.n)(this, rz), (0, QC.n)(this, sz, 0)), this.clipPlane = (0, QC.n)(this, Tz), this.stencil = new gC, this._isVertexOutputInvariant = (0, QC.n)(this, az, CC.ForceVertexOutputInvariant), this._materialContext = (0, QC.n)(this, tz), this._useUBO = !1, this._fillMode = CC.TriangleFillMode, this._cachedDepthWriteState = !1, this._cachedColorWriteState = !1, this._cachedDepthFunctionState = 0, this._indexInSceneMaterialArray = -1, this.meshMap = null, this._parentContainer = null, this._uniformBufferLayoutBuilt = !1, this._eventInfo = {}, this._callbackPluginEventGeneric = () => {}, this._callbackPluginEventIsReadyForSubMesh = () => {}, this._callbackPluginEventPrepareDefines = () => {}, this._callbackPluginEventPrepareDefinesBeforeAttributes = () => {}, this._callbackPluginEventHardBindForSubMesh = () => {}, this._callbackPluginEventBindForSubMesh = () => {}, this._callbackPluginEventHasRenderTargetTextures = () => {}, this._callbackPluginEventFillRenderTargetTextures = () => {}, this._transparencyMode = null, this.name = zC;
+          const FC = ZC || fC.c.LastCreatedScene;
+          FC && (this._scene = FC, this._dirtyCallbacks = {}, this._forceGLSL = oC, this._dirtyCallbacks[1] = this._markAllSubMeshesAsTexturesDirty.bind(this), this._dirtyCallbacks[2] = this._markAllSubMeshesAsLightsDirty.bind(this), this._dirtyCallbacks[4] = this._markAllSubMeshesAsFresnelDirty.bind(this), this._dirtyCallbacks[8] = this._markAllSubMeshesAsAttributesDirty.bind(this), this._dirtyCallbacks[16] = this._markAllSubMeshesAsMiscDirty.bind(this), this._dirtyCallbacks[32] = this._markAllSubMeshesAsPrePassDirty.bind(this), this._dirtyCallbacks[127] = this._markAllSubMeshesAsAllDirty.bind(this), this.id = zC || bC.g.RandomId(), this.uniqueId = this._scene.getUniqueId(), this._materialContext = this._scene.mg().createMaterialContext(), this._drawWrapper = new NC.d(this._scene.mg(), !1), this._drawWrapper.materialContext = this._materialContext, this._uniformBuffer = new qC.c(this._scene.mg(), void 0, void 0, zC), this._useUBO = this.Km().mg().supportsUniformBuffers, this._createUniformBuffer(), wC || this._scene.addMaterial(this), this._scene.useMaterialMeshMap && (this.meshMap = {}), CC.OnEventObservable.notifyObservers(this, 1))
+        }
+        _createUniformBuffer() {
+          const CC = this.Km().mg();
+          this._uniformBuffer?.dispose(), CC.isWebGPU && !this._forceGLSL ? (this._uniformBuffer = new qC.c(CC, void 0, void 0, this.name, !0), this._shaderLanguage = 1) : this._uniformBuffer = new qC.c(this._scene.mg(), void 0, void 0, this.name), this._uniformBufferLayoutBuilt = !1
+        }
+        toString(CC) {
+          return "Name: " + this.name
+        }
+        getClassName() {
+          return "Material"
+        }
+        get _isMaterial() {
+          return !0
+        }
+        get isFrozen() {
+          return this.checkReadyOnlyOnce
+        }
+        freeze() {
+          this.markDirty(), this.checkReadyOnlyOnce = !0
+        }
+        unfreeze() {
+          this.markDirty(), this.checkReadyOnlyOnce = !1
+        }
+        isReady(CC, zC) {
+          return !0
+        }
+        isReadyForSubMesh(CC, zC, ZC) {
+          const QC = zC.materialDefines;
+          return !!QC && (this._eventInfo.isReadyForSubMesh = !0, this._eventInfo.defines = QC, this._callbackPluginEventIsReadyForSubMesh(this._eventInfo), this._eventInfo.isReadyForSubMesh)
+        }
+        getEffect() {
+          return this._drawWrapper.effect
+        }
+        Km() {
+          return this._scene
+        }
+        _getEffectiveOrientation(CC) {
+          return null !== this.sideOrientation ? this.sideOrientation : CC.sideOrientation
+        }
+        get transparencyMode() {
+          return this._transparencyMode
+        }
+        set transparencyMode(CC) {
+          this._transparencyMode = CC
+        }
+        get _hasTransparencyMode() {
+          return null != this._transparencyMode
+        }
+        get _transparencyModeIsBlend() {
+          return this._transparencyMode === CC.MATERIAL_ALPHABLEND || this._transparencyMode === CC.MATERIAL_ALPHATESTANDBLEND
+        }
+        get _transparencyModeIsTest() {
+          return this._transparencyMode === CC.MATERIAL_ALPHATEST || this._transparencyMode === CC.MATERIAL_ALPHATESTANDBLEND
+        }
+        get _disableAlphaBlending() {
+          return this._transparencyMode === CC.MATERIAL_OPAQUE || this._transparencyMode === CC.MATERIAL_ALPHATEST
+        }
+        needAlphaBlending() {
+          return this._hasTransparencyMode ? this._transparencyModeIsBlend : !this._disableAlphaBlending && this.alpha < 1
+        }
+        needAlphaBlendingForMesh(CC) {
+          return this._hasTransparencyMode ? this._transparencyModeIsBlend : CC.visibility < 1 || !this._disableAlphaBlending && (CC.hasVertexAlpha || this.needAlphaBlending())
+        }
+        needAlphaTesting() {
+          return !!this._hasTransparencyMode && this._transparencyModeIsTest
+        }
+        needAlphaTestingForMesh(CC) {
+          return this._hasTransparencyMode ? this._transparencyModeIsTest : !this.needAlphaBlendingForMesh(CC) && this.needAlphaTesting()
+        }
+        getAlphaTestTexture() {
+          return null
+        }
+        markDirty() {
+          let zC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const ZC = this.Km().meshes;
+          for (const CC of ZC)
+            if (CC.Zx)
+              for (const ZC of CC.Zx)
+                if (ZC.cg() === this)
+                  for (const CC of ZC._drawWrappers) CC && this._materialContext === CC.materialContext && (CC._wasPreviouslyReady = !1, CC._wasPreviouslyUsingInstances = null, CC._forceRebindOnNextCall = zC);
+          zC && this.YzC(CC.AllDirtyFlag)
+        }
+        _preBind(zC) {
+          let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const QC = this._scene.mg(),
+            wC = (null == ZC ? this.sideOrientation : ZC) === CC.ClockWiseSideOrientation,
+            bC = zC || this._getDrawWrapper();
+          return (0, pC.c)(bC) && bC.materialContext && (bC.materialContext.useVertexPulling = this.useVertexPulling), QC.enableEffect(bC), QC.setState(this.backFaceCulling, this.zOffset, !1, wC, this._scene._mirroredCameraPosition ? !this.cullBackFaces : this.cullBackFaces, this.stencil, this.zOffsetUnits), wC
+        }
+        bind(CC, zC) {}
+        buildUniformLayout() {
+          const CC = this._uniformBuffer;
+          this._eventInfo.ubo = CC, this._callbackPluginEventGeneric(8, this._eventInfo), CC.create(), this._uniformBufferLayoutBuilt = !0
+        }
+        bindForSubMesh(CC, zC, ZC) {
+          const QC = ZC._drawWrapper;
+          this._eventInfo.subMesh = ZC, this._callbackPluginEventBindForSubMesh(this._eventInfo), QC._forceRebindOnNextCall = !1
+        }
+        bindOnlyWorldMatrix(CC) {}
+        bindView(CC) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : CC.setMatrix("view", this.Km().getViewMatrix())
+        }
+        bindViewProjection(CC) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : (CC.setMatrix("viewProjection", this.Km().getTransformMatrix()), CC.setMatrix("projection", this.Km().getProjectionMatrix()), CC.setMatrix("inverseProjection", this.Km().getInverseProjectionMatrix()))
+        }
+        bindEyePosition(CC, zC) {
+          this._useUBO ? this._needToBindSceneUbo = !0 : this._scene.bindEyePosition(CC, zC)
+        }
+        _afterBind(CC) {
+          let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          if (this._scene._cachedMaterial = this, this._needToBindSceneUbo && zC && (this._needToBindSceneUbo = !1, (0, SC.x)(zC, this.Km().getSceneUniformBuffer()), this._scene.finalizeSceneUbo()), this._scene._cachedVisibility = CC ? CC.visibility : 1, this._onBindObservable && CC && this._onBindObservable.notifyObservers(CC), this.disableDepthWrite) {
+            const CC = this._scene.mg();
+            this._cachedDepthWriteState = CC.getDepthWrite(), CC.setDepthWrite(!1)
+          }
+          if (this.disableColorWrite) {
+            const CC = this._scene.mg();
+            this._cachedColorWriteState = CC.getColorWrite(), CC.setColorWrite(!1)
+          }
+          if (0 !== this.depthFunction) {
+            const CC = this._scene.mg();
+            this._cachedDepthFunctionState = CC.getDepthFunction() || 0, CC.setDepthFunction(this.depthFunction)
+          }
+        }
+        unbind() {
+          if (this._scene.getSceneUniformBuffer().unbindEffect(), this._onUnBindObservable && this._onUnBindObservable.notifyObservers(this), 0 !== this.depthFunction) {
+            this._scene.mg().setDepthFunction(this._cachedDepthFunctionState)
+          }
+          if (this.disableDepthWrite) {
+            this._scene.mg().setDepthWrite(this._cachedDepthWriteState)
+          }
+          if (this.disableColorWrite) {
+            this._scene.mg().setColorWrite(this._cachedColorWriteState)
+          }
+        }
+        getAnimatables() {
+          return this._eventInfo.animatables = [], this._callbackPluginEventGeneric(256, this._eventInfo), this._eventInfo.animatables
+        }
+        getActiveTextures() {
+          return this._eventInfo.activeTextures = [], this._callbackPluginEventGeneric(512, this._eventInfo), this._eventInfo.activeTextures
+        }
+        hasTexture(CC) {
+          return this._eventInfo.hasTexture = !1, this._eventInfo.texture = CC, this._callbackPluginEventGeneric(1024, this._eventInfo), this._eventInfo.hasTexture
+        }
+        clone(CC) {
+          return null
+        }
+        _clonePlugins(zC, ZC) {
+          const QC = {};
+          if (this._serializePlugins(QC), CC._ParsePlugins(QC, zC, this._scene, ZC), this.pluginManager)
+            for (const CC of this.pluginManager._plugins) {
+              const ZC = zC.pluginManager.getPlugin(CC.name);
+              ZC && CC.copyTo(ZC)
+            }
+        }
+        getBindedMeshes() {
+          if (this.meshMap) {
+            const CC = [];
+            for (const zC in this.meshMap) {
+              const ZC = this.meshMap[zC];
+              ZC && CC.push(ZC)
+            }
+            return CC
+          }
+          return this._scene.meshes.filter((CC => CC.material === this))
+        }
+        forceCompilation(CC, zC, ZC, QC) {
+          const wC = {
+              clipPlane: !1,
+              useInstances: !1,
+              ...ZC
+            },
+            bC = this.Km(),
+            nC = this.allowShaderHotSwapping;
+          this.allowShaderHotSwapping = !1;
+          const fC = () => {
+            if (!this._scene || !this._scene.mg()) return;
+            const ZC = bC.clipPlane;
+            if (wC.clipPlane && (bC.clipPlane = new WC.d(0, 0, 0, 1)), this._storeEffectOnSubMeshes) {
+              let ZC = !0,
+                bC = null;
+              if (CC.Zx) {
+                const zC = new oC.d(0, 0, 0, 0, 0, CC, void 0, !1, !1);
+                zC.materialDefines && (zC.materialDefines._renderId = -1), this.isReadyForSubMesh(CC, zC, wC.useInstances) || (zC.effect && zC.effect.getCompilationError() && zC.effect.allFallbacksProcessed() ? bC = zC.effect.getCompilationError() : (ZC = !1, setTimeout(fC, 16)))
+              }
+              ZC && (this.allowShaderHotSwapping = nC, bC && QC && QC(bC), zC && zC(this))
+            } else this.isReady() ? (this.allowShaderHotSwapping = nC, zC && zC(this)) : setTimeout(fC, 16);
+            wC.clipPlane && (bC.clipPlane = ZC)
+          };
+          fC()
+        }
+        async forceCompilationAsync(CC, zC) {
+          return await new Promise(((ZC, QC) => {
+            this.forceCompilation(CC, (() => {
+              ZC()
+            }), zC, (CC => {
+              QC(CC)
+            }))
+          }))
+        }
+        YzC(zC) {
+          this.Km().blockMaterialDirtyMechanism || this._blockDirtyMechanism || (CC._DirtyCallbackArray.length = 0, zC & CC.ImageProcessingDirtyFlag && CC._DirtyCallbackArray.push(CC._ImageProcessingDirtyCallBack), zC & CC.TextureDirtyFlag && CC._DirtyCallbackArray.push(CC._TextureDirtyCallBack), zC & CC.LightDirtyFlag && CC._DirtyCallbackArray.push(CC._LightsDirtyCallBack), zC & CC.FresnelDirtyFlag && CC._DirtyCallbackArray.push(CC._FresnelDirtyCallBack), zC & CC.AttributesDirtyFlag && CC._DirtyCallbackArray.push(CC._AttributeDirtyCallBack), zC & CC.MiscDirtyFlag && CC._DirtyCallbackArray.push(CC._MiscDirtyCallBack), zC & CC.PrePassDirtyFlag && CC._DirtyCallbackArray.push(CC._PrePassDirtyCallBack), CC._DirtyCallbackArray.length && this._markAllSubMeshesAsDirty(CC._RunDirtyCallBacks), this.Km().resetCachedMaterial())
+        }
+        resetDrawCache() {
+          const CC = this.Km().meshes;
+          for (const zC of CC)
+            if (zC.Zx)
+              for (const CC of zC.Zx) CC.cg() === this && CC.resetDrawCache()
+        }
+        _markAllSubMeshesAsDirty(CC) {
+          const zC = this.Km();
+          if (zC.blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
+          const ZC = zC.meshes;
+          for (const QC of ZC)
+            if (QC.Zx)
+              for (const ZC of QC.Zx) {
+                if ((ZC.cg() || (zC._hasDefaultMaterial ? zC.defaultMaterial : null)) === this)
+                  for (const zC of ZC._drawWrappers) zC && zC.defines && zC.defines.markAllAsDirty && this._materialContext === zC.materialContext && CC(zC.defines)
+              }
+        }
+        _markScenePrePassDirty() {
+          if (this.Km().blockMaterialDirtyMechanism || this._blockDirtyMechanism) return;
+          const CC = this.Km().enablePrePassRenderer();
+          CC && CC.YzC()
+        }
+        _markAllSubMeshesAsAllDirty() {
+          this._markAllSubMeshesAsDirty(CC._AllDirtyCallBack)
+        }
+        _markAllSubMeshesAsImageProcessingDirty() {
+          this._markAllSubMeshesAsDirty(CC._ImageProcessingDirtyCallBack)
+        }
+        _markAllSubMeshesAsTexturesDirty() {
+          this._markAllSubMeshesAsDirty(CC._TextureDirtyCallBack)
+        }
+        _markAllSubMeshesAsFresnelDirty() {
+          this._markAllSubMeshesAsDirty(CC._FresnelDirtyCallBack)
+        }
+        _markAllSubMeshesAsFresnelAndMiscDirty() {
+          this._markAllSubMeshesAsDirty(CC._FresnelAndMiscDirtyCallBack)
+        }
+        _markAllSubMeshesAsLightsDirty() {
+          this._markAllSubMeshesAsDirty(CC._LightsDirtyCallBack)
+        }
+        _markAllSubMeshesAsAttributesDirty() {
+          this._markAllSubMeshesAsDirty(CC._AttributeDirtyCallBack)
+        }
+        _markAllSubMeshesAsMiscDirty() {
+          this._markAllSubMeshesAsDirty(CC._MiscDirtyCallBack)
+        }
+        _markAllSubMeshesAsPrePassDirty() {
+          this._markAllSubMeshesAsDirty(CC._PrePassDirtyCallBack)
+        }
+        _markAllSubMeshesAsTexturesAndMiscDirty() {
+          this._markAllSubMeshesAsDirty(CC._TextureAndMiscDirtyCallBack)
+        }
+        _checkScenePerformancePriority() {
+          if (0 !== this._scene.performancePriority) {
+            this.checkReadyOnlyOnce = !0;
+            const CC = this._scene.onScenePerformancePriorityChangedObservable.addOnce((() => {
+              this.checkReadyOnlyOnce = !1
+            }));
+            this.Tm.add((() => {
+              this._scene.onScenePerformancePriorityChangedObservable.remove(CC)
+            }))
+          }
+        }
+        setPrePassRenderer(CC) {
+          return !1
+        }
+        dispose(CC, zC, ZC) {
+          const QC = this.Km();
+          if (QC.stopAnimation(this), QC.freeProcessedMaterials(), QC.removeMaterial(this), this._eventInfo.forceDisposeTextures = zC, this._callbackPluginEventGeneric(2, this._eventInfo), this._parentContainer) {
+            const CC = this._parentContainer.materials.indexOf(this);
+            CC > -1 && this._parentContainer.materials.splice(CC, 1), this._parentContainer = null
+          }
+          if (!0 !== ZC)
+            if (this.meshMap)
+              for (const wC in this.meshMap) {
+                const CC = this.meshMap[wC];
+                this._disposeMeshResources(CC)
+              } else {
+                const CC = QC.meshes;
+                for (const zC of CC) this._disposeMeshResources(zC)
+              }
+          this._uniformBuffer.dispose(), this._drawWrapper.effect && (this._storeEffectOnSubMeshes || this._drawWrapper.effect.dispose(), this._drawWrapper.effect = null), this.metadata = null, this.Tm.notifyObservers(this), this.Tm.clear(), this._onBindObservable && this._onBindObservable.clear(), this._onUnBindObservable && this._onUnBindObservable.clear(), this._onEffectCreatedObservable && this._onEffectCreatedObservable.clear(), this._eventInfo && (this._eventInfo = {})
+        }
+        _disposeMeshResources(CC) {
+          if (!CC) return;
+          const zC = CC.geometry,
+            ZC = CC._internalAbstractMeshDataInfo._materialForRenderPass;
+          if (this._storeEffectOnSubMeshes) {
+            if (CC.Zx && ZC)
+              for (const QC of CC.Zx) {
+                const CC = QC._drawWrappers;
+                for (let wC = 0; wC < CC.length; wC++) {
+                  const bC = CC[wC]?.effect;
+                  if (!bC) continue;
+                  ZC[wC] === this && (zC?._releaseVertexArrayObject(bC), QC._removeDrawWrapper(wC, !0, !0))
+                }
+              }
+          } else zC?._releaseVertexArrayObject(this._drawWrapper.effect);
+          CC.material !== this || CC.LQC || (CC.material = null)
+        }
+        serialize() {
+          const CC = MC.d.Serialize(this);
+          return CC.stencil = this.stencil.serialize(), CC.uniqueId = this.uniqueId, this._serializePlugins(CC), CC
+        }
+        _serializePlugins(CC) {
+          if (CC.plugins = {}, this.pluginManager)
+            for (const zC of this.pluginManager._plugins) zC.doNotSerialize || (CC.plugins[zC.getClassName()] = zC.serialize())
+        }
+        static ParseAlphaMode(CC, zC) {
+          void 0 !== CC._alphaMode ? zC._alphaMode = Array.isArray(CC._alphaMode) ? [...CC._alphaMode] : [CC._alphaMode] : void 0 !== CC.alphaMode ? zC._alphaMode = Array.isArray(CC.alphaMode) ? [...CC.alphaMode] : [CC.alphaMode] : zC._alphaMode = [2]
+        }
+        static Parse(zC, ZC, QC) {
+          if (zC.customType) {
+            if ("BABYLON.PBRMaterial" === zC.customType && zC.overloadedAlbedo && (zC.customType = "BABYLON.LegacyPBRMaterial", !BABYLON.LegacyPBRMaterial)) return FC.c.Error("Your scene is trying to load a legacy version of the PBRMaterial, please, include it from the materials library."), null
+          } else zC.customType = "BABYLON.StandardMaterial";
+          const wC = bC.g.Instantiate(zC.customType).Parse(zC, ZC, QC);
+          return wC._loadedUniqueId = zC.uniqueId, CC.ParseAlphaMode(zC, wC), wC
+        }
+        static _ParsePlugins(CC, zC, ZC, QC) {
+          if (CC.plugins)
+            for (const wC in CC.plugins) {
+              const nC = CC.plugins[wC];
+              let fC = zC.pluginManager?.getPlugin(nC.name);
+              if (!fC) {
+                const CC = bC.g.Instantiate("BABYLON." + wC);
+                CC && (fC = new CC(zC))
+              }
+              fC?.parse(nC, ZC, QC)
+            }
+        }
+      }, (() => {
+        const bC = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        zC = [(0, wC.M)()], ZC = [(0, wC.M)()], PC = [(0, wC.M)()], GC = [(0, wC.M)()], RC = [(0, wC.M)()], AC = [(0, wC.M)()], xC = [(0, wC.M)()], JC = [(0, wC.M)("alpha")], IC = [(0, wC.M)("backFaceCulling")], iC = [(0, wC.M)("textureRepetitionMode")], vC = [(0, wC.M)("textureRepetitionHexTilingParams")], eC = [(0, wC.M)("cullBackFaces")], hC = [(0, wC.M)()], KC = [(0, wC.M)()], YC = [(0, wC.M)()], dC = [(0, wC.M)()], mC = [(0, wC.M)()], HC = [(0, wC.M)()], EC = [(0, wC.M)()], lC = [(0, wC.M)()], XC = [(0, wC.M)("fogEnabled")], cC = [(0, wC.M)()], uC = [(0, wC.M)()], rC = [(0, wC.M)()], sC = [(0, wC.M)()], TC = [(0, wC.M)()], aC = [(0, wC.M)()], tC = [(0, wC.M)()], DC = [(0, wC.M)()], (0, QC.j)(CC, null, sC, {
+          kind: "getter",
+          name: "pointsCloud",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "pointsCloud" in CC,
+            get: CC => CC.pointsCloud
+          },
+          metadata: bC
+        }, null, jC), (0, QC.j)(CC, null, TC, {
+          kind: "getter",
+          name: "fillMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "fillMode" in CC,
+            get: CC => CC.fillMode
+          },
+          metadata: bC
+        }, null, jC), (0, QC.j)(CC, null, aC, {
+          kind: "getter",
+          name: "useLogarithmicDepth",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "useLogarithmicDepth" in CC,
+            get: CC => CC.useLogarithmicDepth
+          },
+          metadata: bC
+        }, null, jC), (0, QC.j)(CC, null, DC, {
+          kind: "getter",
+          name: "transparencyMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "transparencyMode" in CC,
+            get: CC => CC.transparencyMode
+          },
+          metadata: bC
+        }, null, jC), (0, QC.j)(null, null, zC, {
+          kind: "field",
+          name: "id",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "id" in CC,
+            get: CC => CC.id,
+            set: (CC, zC) => {
+              CC.id = zC
+            }
+          },
+          metadata: bC
+        }, yC, LC), (0, QC.j)(null, null, ZC, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "uniqueId" in CC,
+            get: CC => CC.uniqueId,
+            set: (CC, zC) => {
+              CC.uniqueId = zC
+            }
+          },
+          metadata: bC
+        }, UC, BC), (0, QC.j)(null, null, PC, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "name" in CC,
+            get: CC => CC.name,
+            set: (CC, zC) => {
+              CC.name = zC
+            }
+          },
+          metadata: bC
+        }, OC, kC), (0, QC.j)(null, null, GC, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "metadata" in CC,
+            get: CC => CC.metadata,
+            set: (CC, zC) => {
+              CC.metadata = zC
+            }
+          },
+          metadata: bC
+        }, VC, Cz), (0, QC.j)(null, null, RC, {
+          kind: "field",
+          name: "checkReadyOnEveryCall",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "checkReadyOnEveryCall" in CC,
+            get: CC => CC.checkReadyOnEveryCall,
+            set: (CC, zC) => {
+              CC.checkReadyOnEveryCall = zC
+            }
+          },
+          metadata: bC
+        }, zz, Zz), (0, QC.j)(null, null, AC, {
+          kind: "field",
+          name: "checkReadyOnlyOnce",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "checkReadyOnlyOnce" in CC,
+            get: CC => CC.checkReadyOnlyOnce,
+            set: (CC, zC) => {
+              CC.checkReadyOnlyOnce = zC
+            }
+          },
+          metadata: bC
+        }, Qz, wz), (0, QC.j)(null, null, xC, {
+          kind: "field",
+          name: "state",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "state" in CC,
+            get: CC => CC.state,
+            set: (CC, zC) => {
+              CC.state = zC
+            }
+          },
+          metadata: bC
+        }, bz, nz), (0, QC.j)(null, null, JC, {
+          kind: "field",
+          name: "_alpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_alpha" in CC,
+            get: CC => CC._alpha,
+            set: (CC, zC) => {
+              CC._alpha = zC
+            }
+          },
+          metadata: bC
+        }, fz, oz), (0, QC.j)(null, null, IC, {
+          kind: "field",
+          name: "_backFaceCulling",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_backFaceCulling" in CC,
+            get: CC => CC._backFaceCulling,
+            set: (CC, zC) => {
+              CC._backFaceCulling = zC
+            }
+          },
+          metadata: bC
+        }, qz, Fz), (0, QC.j)(null, null, iC, {
+          kind: "field",
+          name: "_textureRepetitionMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_textureRepetitionMode" in CC,
+            get: CC => CC._textureRepetitionMode,
+            set: (CC, zC) => {
+              CC._textureRepetitionMode = zC
+            }
+          },
+          metadata: bC
+        }, Wz, Nz), (0, QC.j)(null, null, vC, {
+          kind: "field",
+          name: "textureRepetitionHexTilingParams",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "textureRepetitionHexTilingParams" in CC,
+            get: CC => CC.textureRepetitionHexTilingParams,
+            set: (CC, zC) => {
+              CC.textureRepetitionHexTilingParams = zC
+            }
+          },
+          metadata: bC
+        }, Mz, gz), (0, QC.j)(null, null, eC, {
+          kind: "field",
+          name: "_cullBackFaces",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_cullBackFaces" in CC,
+            get: CC => CC._cullBackFaces,
+            set: (CC, zC) => {
+              CC._cullBackFaces = zC
+            }
+          },
+          metadata: bC
+        }, Sz, pz), (0, QC.j)(null, null, hC, {
+          kind: "field",
+          name: "sideOrientation",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "sideOrientation" in CC,
+            get: CC => CC.sideOrientation,
+            set: (CC, zC) => {
+              CC.sideOrientation = zC
+            }
+          },
+          metadata: bC
+        }, Pz, Gz), (0, QC.j)(null, null, KC, {
+          kind: "field",
+          name: "_alphaMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_alphaMode" in CC,
+            get: CC => CC._alphaMode,
+            set: (CC, zC) => {
+              CC._alphaMode = zC
+            }
+          },
+          metadata: bC
+        }, Rz, Az), (0, QC.j)(null, null, YC, {
+          kind: "field",
+          name: "_needDepthPrePass",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_needDepthPrePass" in CC,
+            get: CC => CC._needDepthPrePass,
+            set: (CC, zC) => {
+              CC._needDepthPrePass = zC
+            }
+          },
+          metadata: bC
+        }, xz, Jz), (0, QC.j)(null, null, dC, {
+          kind: "field",
+          name: "disableDepthWrite",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "disableDepthWrite" in CC,
+            get: CC => CC.disableDepthWrite,
+            set: (CC, zC) => {
+              CC.disableDepthWrite = zC
+            }
+          },
+          metadata: bC
+        }, Iz, iz), (0, QC.j)(null, null, mC, {
+          kind: "field",
+          name: "disableColorWrite",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "disableColorWrite" in CC,
+            get: CC => CC.disableColorWrite,
+            set: (CC, zC) => {
+              CC.disableColorWrite = zC
+            }
+          },
+          metadata: bC
+        }, vz, ez), (0, QC.j)(null, null, HC, {
+          kind: "field",
+          name: "forceDepthWrite",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "forceDepthWrite" in CC,
+            get: CC => CC.forceDepthWrite,
+            set: (CC, zC) => {
+              CC.forceDepthWrite = zC
+            }
+          },
+          metadata: bC
+        }, hz, Kz), (0, QC.j)(null, null, EC, {
+          kind: "field",
+          name: "depthFunction",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "depthFunction" in CC,
+            get: CC => CC.depthFunction,
+            set: (CC, zC) => {
+              CC.depthFunction = zC
+            }
+          },
+          metadata: bC
+        }, Yz, dz), (0, QC.j)(null, null, lC, {
+          kind: "field",
+          name: "separateCullingPass",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "separateCullingPass" in CC,
+            get: CC => CC.separateCullingPass,
+            set: (CC, zC) => {
+              CC.separateCullingPass = zC
+            }
+          },
+          metadata: bC
+        }, mz, Hz), (0, QC.j)(null, null, XC, {
+          kind: "field",
+          name: "_fogEnabled",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_fogEnabled" in CC,
+            get: CC => CC._fogEnabled,
+            set: (CC, zC) => {
+              CC._fogEnabled = zC
+            }
+          },
+          metadata: bC
+        }, Ez, lz), (0, QC.j)(null, null, cC, {
+          kind: "field",
+          name: "pointSize",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "pointSize" in CC,
+            get: CC => CC.pointSize,
+            set: (CC, zC) => {
+              CC.pointSize = zC
+            }
+          },
+          metadata: bC
+        }, Xz, cz), (0, QC.j)(null, null, uC, {
+          kind: "field",
+          name: "zOffset",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "zOffset" in CC,
+            get: CC => CC.zOffset,
+            set: (CC, zC) => {
+              CC.zOffset = zC
+            }
+          },
+          metadata: bC
+        }, uz, rz), (0, QC.j)(null, null, rC, {
+          kind: "field",
+          name: "zOffsetUnits",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "zOffsetUnits" in CC,
+            get: CC => CC.zOffsetUnits,
+            set: (CC, zC) => {
+              CC.zOffsetUnits = zC
+            }
+          },
+          metadata: bC
+        }, sz, Tz), (0, QC.j)(null, null, tC, {
+          kind: "field",
+          name: "_isVertexOutputInvariant",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_isVertexOutputInvariant" in CC,
+            get: CC => CC._isVertexOutputInvariant,
+            set: (CC, zC) => {
+              CC._isVertexOutputInvariant = zC
+            }
+          },
+          metadata: bC
+        }, az, tz), bC && Object.defineProperty(CC, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: bC
+        })
+      })(), CC.TriangleFillMode = 0, CC.WireFrameFillMode = 1, CC.PointFillMode = 2, CC.PointListDrawMode = 3, CC.LineListDrawMode = 4, CC.LineLoopDrawMode = 5, CC.LineStripDrawMode = 6, CC.TriangleStripDrawMode = 7, CC.TriangleFanDrawMode = 8, CC.ClockWiseSideOrientation = 0, CC.CounterClockWiseSideOrientation = 1, CC.ImageProcessingDirtyFlag = 64, CC.TextureDirtyFlag = 1, CC.LightDirtyFlag = 2, CC.FresnelDirtyFlag = 4, CC.AttributesDirtyFlag = 8, CC.MiscDirtyFlag = 16, CC.PrePassDirtyFlag = 32, CC.AllDirtyFlag = 127, CC.MATERIAL_OPAQUE = 0, CC.MATERIAL_ALPHATEST = 1, CC.MATERIAL_ALPHABLEND = 2, CC.MATERIAL_ALPHATESTANDBLEND = 3, CC.MATERIAL_NORMALBLENDMETHOD_WHITEOUT = 0, CC.MATERIAL_NORMALBLENDMETHOD_RNM = 1, CC.LIGHTFALLOFF_PHYSICAL = 0, CC.LIGHTFALLOFF_GLTF = 1, CC.LIGHTFALLOFF_STANDARD = 2, CC.OnEventObservable = new nC.d, CC.ForceVertexOutputInvariant = !1, CC._AllDirtyCallBack = CC => CC.markAllAsDirty(), CC._ImageProcessingDirtyCallBack = CC => CC.markAsImageProcessingDirty(), CC._TextureDirtyCallBack = CC => CC.markAsTexturesDirty(), CC._FresnelDirtyCallBack = CC => CC.markAsFresnelDirty(), CC._MiscDirtyCallBack = CC => CC.markAsMiscDirty(), CC._PrePassDirtyCallBack = CC => CC.markAsPrePassDirty(), CC._LightsDirtyCallBack = CC => CC.markAsLightDirty(), CC._AttributeDirtyCallBack = CC => CC.markAsAttributesDirty(), CC._FresnelAndMiscDirtyCallBack = zC => {
+        CC._FresnelDirtyCallBack(zC), CC._MiscDirtyCallBack(zC)
+      }, CC._TextureAndMiscDirtyCallBack = zC => {
+        CC._TextureDirtyCallBack(zC), CC._MiscDirtyCallBack(zC)
+      }, CC._DirtyCallbackArray = [], CC._RunDirtyCallBacks = zC => {
+        for (const ZC of CC._DirtyCallbackArray) ZC(zC)
+      }, CC
+    })();
+    Object.getOwnPropertyDescriptor(GC.prototype, "pluginManager") || Object.defineProperty(GC.prototype, "pluginManager", (0, PC.d)("Material", "pluginManager"))
+  },
+  40162: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => wC
+    });
+    var QC = ZC(39721);
+    class wC {
+      static get DiffuseTextureEnabled() {
+        return this._DiffuseTextureEnabled
+      }
+      static set DiffuseTextureEnabled(CC) {
+        this._DiffuseTextureEnabled !== CC && (this._DiffuseTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get BaseWeightTextureEnabled() {
+        return this._BaseWeightTextureEnabled
+      }
+      static set BaseWeightTextureEnabled(CC) {
+        this._BaseWeightTextureEnabled !== CC && (this._BaseWeightTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get BaseDiffuseRoughnessTextureEnabled() {
+        return this._BaseDiffuseRoughnessTextureEnabled
+      }
+      static set BaseDiffuseRoughnessTextureEnabled(CC) {
+        this._BaseDiffuseRoughnessTextureEnabled !== CC && (this._BaseDiffuseRoughnessTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get DetailTextureEnabled() {
+        return this._DetailTextureEnabled
+      }
+      static set DetailTextureEnabled(CC) {
+        this._DetailTextureEnabled !== CC && (this._DetailTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get DecalMapEnabled() {
+        return this._DecalMapEnabled
+      }
+      static set DecalMapEnabled(CC) {
+        this._DecalMapEnabled !== CC && (this._DecalMapEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get AmbientTextureEnabled() {
+        return this._AmbientTextureEnabled
+      }
+      static set AmbientTextureEnabled(CC) {
+        this._AmbientTextureEnabled !== CC && (this._AmbientTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get OpacityTextureEnabled() {
+        return this._OpacityTextureEnabled
+      }
+      static set OpacityTextureEnabled(CC) {
+        this._OpacityTextureEnabled !== CC && (this._OpacityTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get ReflectionTextureEnabled() {
+        return this._ReflectionTextureEnabled
+      }
+      static set ReflectionTextureEnabled(CC) {
+        this._ReflectionTextureEnabled !== CC && (this._ReflectionTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get EmissiveTextureEnabled() {
+        return this._EmissiveTextureEnabled
+      }
+      static set EmissiveTextureEnabled(CC) {
+        this._EmissiveTextureEnabled !== CC && (this._EmissiveTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get SpecularTextureEnabled() {
+        return this._SpecularTextureEnabled
+      }
+      static set SpecularTextureEnabled(CC) {
+        this._SpecularTextureEnabled !== CC && (this._SpecularTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get BumpTextureEnabled() {
+        return this._BumpTextureEnabled
+      }
+      static set BumpTextureEnabled(CC) {
+        this._BumpTextureEnabled !== CC && (this._BumpTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get LightmapTextureEnabled() {
+        return this._LightmapTextureEnabled
+      }
+      static set LightmapTextureEnabled(CC) {
+        this._LightmapTextureEnabled !== CC && (this._LightmapTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get RefractionTextureEnabled() {
+        return this._RefractionTextureEnabled
+      }
+      static set RefractionTextureEnabled(CC) {
+        this._RefractionTextureEnabled !== CC && (this._RefractionTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get ColorGradingTextureEnabled() {
+        return this._ColorGradingTextureEnabled
+      }
+      static set ColorGradingTextureEnabled(CC) {
+        this._ColorGradingTextureEnabled !== CC && (this._ColorGradingTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get FresnelEnabled() {
+        return this._FresnelEnabled
+      }
+      static set FresnelEnabled(CC) {
+        this._FresnelEnabled !== CC && (this._FresnelEnabled = CC, QC.b.MarkAllMaterialsAsDirty(4))
+      }
+      static get ClearCoatTextureEnabled() {
+        return this._ClearCoatTextureEnabled
+      }
+      static set ClearCoatTextureEnabled(CC) {
+        this._ClearCoatTextureEnabled !== CC && (this._ClearCoatTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get ClearCoatBumpTextureEnabled() {
+        return this._ClearCoatBumpTextureEnabled
+      }
+      static set ClearCoatBumpTextureEnabled(CC) {
+        this._ClearCoatBumpTextureEnabled !== CC && (this._ClearCoatBumpTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get ClearCoatTintTextureEnabled() {
+        return this._ClearCoatTintTextureEnabled
+      }
+      static set ClearCoatTintTextureEnabled(CC) {
+        this._ClearCoatTintTextureEnabled !== CC && (this._ClearCoatTintTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get SheenTextureEnabled() {
+        return this._SheenTextureEnabled
+      }
+      static set SheenTextureEnabled(CC) {
+        this._SheenTextureEnabled !== CC && (this._SheenTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get AnisotropicTextureEnabled() {
+        return this._AnisotropicTextureEnabled
+      }
+      static set AnisotropicTextureEnabled(CC) {
+        this._AnisotropicTextureEnabled !== CC && (this._AnisotropicTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get ThicknessTextureEnabled() {
+        return this._ThicknessTextureEnabled
+      }
+      static set ThicknessTextureEnabled(CC) {
+        this._ThicknessTextureEnabled !== CC && (this._ThicknessTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get RefractionIntensityTextureEnabled() {
+        return this._ThicknessTextureEnabled
+      }
+      static set RefractionIntensityTextureEnabled(CC) {
+        this._RefractionIntensityTextureEnabled !== CC && (this._RefractionIntensityTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get TranslucencyIntensityTextureEnabled() {
+        return this._TranslucencyIntensityTextureEnabled
+      }
+      static set TranslucencyIntensityTextureEnabled(CC) {
+        this._TranslucencyIntensityTextureEnabled !== CC && (this._TranslucencyIntensityTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get TranslucencyColorTextureEnabled() {
+        return this._TranslucencyColorTextureEnabled
+      }
+      static set TranslucencyColorTextureEnabled(CC) {
+        this._TranslucencyColorTextureEnabled !== CC && (this._TranslucencyColorTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+      static get IridescenceTextureEnabled() {
+        return this._IridescenceTextureEnabled
+      }
+      static set IridescenceTextureEnabled(CC) {
+        this._IridescenceTextureEnabled !== CC && (this._IridescenceTextureEnabled = CC, QC.b.MarkAllMaterialsAsDirty(1))
+      }
+    }
+    wC._DiffuseTextureEnabled = !0, wC._BaseWeightTextureEnabled = !0, wC._BaseDiffuseRoughnessTextureEnabled = !0, wC._DetailTextureEnabled = !0, wC._DecalMapEnabled = !0, wC._AmbientTextureEnabled = !0, wC._OpacityTextureEnabled = !0, wC._ReflectionTextureEnabled = !0, wC._EmissiveTextureEnabled = !0, wC._SpecularTextureEnabled = !0, wC._BumpTextureEnabled = !0, wC._LightmapTextureEnabled = !0, wC._RefractionTextureEnabled = !0, wC._ColorGradingTextureEnabled = !0, wC._FresnelEnabled = !0, wC._ClearCoatTextureEnabled = !0, wC._ClearCoatBumpTextureEnabled = !0, wC._ClearCoatTintTextureEnabled = !0, wC._SheenTextureEnabled = !0, wC._AnisotropicTextureEnabled = !0, wC._ThicknessTextureEnabled = !0, wC._RefractionIntensityTextureEnabled = !0, wC._TranslucencyIntensityTextureEnabled = !0, wC._TranslucencyColorTextureEnabled = !0, wC._IridescenceTextureEnabled = !0
+  },
+  40151: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      Ab: () => gC,
+      B: () => AC,
+      F: () => YC,
+      J: () => xC,
+      K: () => hC,
+      N: () => KC,
+      Q: () => MC,
+      T: () => NC,
+      X: () => TC,
+      Z: () => XC,
+      ab: () => EC,
+      d: () => mC,
+      db: () => HC,
+      f: () => JC,
+      gb: () => RC,
+      h: () => WC,
+      ib: () => dC,
+      j: () => PC,
+      lb: () => aC,
+      n: () => GC,
+      nb: () => tC,
+      q: () => eC,
+      qb: () => DC,
+      t: () => oC,
+      u: () => SC,
+      ub: () => UC,
+      wb: () => yC,
+      x: () => pC,
+      xb: () => LC
+    });
+    var QC = ZC(38507),
+      wC = ZC(36985),
+      bC = ZC(40022),
+      nC = ZC(40157),
+      fC = ZC(40162);
+
+    function oC(CC, zC, ZC) {
+      if (!CC || CC.LOGARITHMICDEPTH || CC.indexOf && CC.indexOf("LOGARITHMICDEPTH") >= 0) {
+        const CC = ZC.activeCamera;
+        1 === CC.mode && QC.c.Error("Logarithmic depth is not compatible with orthographic cameras!", 20), zC.setFloat("logarithmicDepthConstant", 2 / (Math.log(CC.maxZ + 1) / Math.LN2))
+      }
+    }
+    const qC = {
+        r: 0,
+        g: 0,
+        b: 0
       },
-      bk = fk.INFO,
-      rk = {
-        [fk.DEBUG]: "log",
-        [fk.VERBOSE]: "log",
-        [fk.INFO]: "info",
-        [fk.WARN]: "warn",
-        [fk.ERROR]: "error"
-      },
-      Pk = function(kk, ek) {
-        if (ek < kk.logLevel) return;
-        const ik = (new Date).toISOString(),
-          Dk = rk[ek];
-        if (!Dk) throw new Error(`Attempted to log a message with an invalid logType (value: ${ek})`);
-        for (var fk = arguments.length, Sk = new Array(fk > 2 ? fk - 2 : 0), bk = 2; bk < fk; bk++) Sk[bk - 2] = arguments[bk];
-        console[Dk](`[${ik}]  ${kk.name}:`, ...Sk)
+      FC = {
+        NUM_MORPH_INFLUENCERS: 0,
+        NORMAL: !1,
+        TANGENT: !1,
+        UV: !1,
+        UV2: !1,
+        COLOR: !1
       };
-    class mk {
-      constructor(kk) {
-        this.name = kk, this._logLevel = bk, this._logHandler = Pk, this._userLogHandler = null, Dk.push(this)
-      }
-      get logLevel() {
-        return this._logLevel
-      }
-      set logLevel(kk) {
-        if (!(kk in fk)) throw new TypeError(`Invalid value "${kk}" assigned to \`logLevel\``);
-        this._logLevel = kk
-      }
-      setLogLevel(kk) {
-        this._logLevel = "string" === typeof kk ? Sk[kk] : kk
-      }
-      get logHandler() {
-        return this._logHandler
-      }
-      set logHandler(kk) {
-        if ("function" !== typeof kk) throw new TypeError("Value assigned to `logHandler` must be a function");
-        this._logHandler = kk
-      }
-      get userLogHandler() {
-        return this._userLogHandler
-      }
-      set userLogHandler(kk) {
-        this._userLogHandler = kk
-      }
-      debug() {
-        for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
-        this._userLogHandler && this._userLogHandler(this, fk.DEBUG, ...ek), this._logHandler(this, fk.DEBUG, ...ek)
-      }
-      log() {
-        for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
-        this._userLogHandler && this._userLogHandler(this, fk.VERBOSE, ...ek), this._logHandler(this, fk.VERBOSE, ...ek)
-      }
-      info() {
-        for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
-        this._userLogHandler && this._userLogHandler(this, fk.INFO, ...ek), this._logHandler(this, fk.INFO, ...ek)
-      }
-      warn() {
-        for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
-        this._userLogHandler && this._userLogHandler(this, fk.WARN, ...ek), this._logHandler(this, fk.WARN, ...ek)
-      }
-      error() {
-        for (var kk = arguments.length, ek = new Array(kk), ik = 0; ik < kk; ik++) ek[ik] = arguments[ik];
-        this._userLogHandler && this._userLogHandler(this, fk.ERROR, ...ek), this._logHandler(this, fk.ERROR, ...ek)
+
+    function WC(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      ZC && CC.fogEnabled && (!zC || zC.applyFog) && 0 !== CC.fogMode && (ZC.setFloat4("vFogInfos", CC.fogMode, CC.fogStart, CC.fogEnd, CC.fogDensity), QC ? (CC.fogColor.toLinearSpaceToRef(qC, CC.mg().useExactSrgbConversions), ZC.setColor3("vFogColor", qC)) : ZC.setColor3("vFogColor", CC.fogColor))
+    }
+
+    function NC(CC, zC, ZC, QC, wC, bC, nC, fC, oC, qC) {
+      const WC = CC.numMaxInfluencers || CC.numInfluencers;
+      return WC <= 0 ? 0 : (zC.push("#define MORPHTARGETS"), CC.hasPositions && zC.push("#define MORPHTARGETTEXTURE_HASPOSITIONS"), CC.hasNormals && zC.push("#define MORPHTARGETTEXTURE_HASNORMALS"), CC.hasTangents && zC.push("#define MORPHTARGETTEXTURE_HASTANGENTS"), CC.hasUVs && zC.push("#define MORPHTARGETTEXTURE_HASUVS"), CC.hasUV2s && zC.push("#define MORPHTARGETTEXTURE_HASUV2S"), CC.hasColors && zC.push("#define MORPHTARGETTEXTURE_HASCOLORS"), CC.supportsPositions && wC && zC.push("#define MORPHTARGETS_POSITION"), CC.supportsNormals && bC && zC.push("#define MORPHTARGETS_NORMAL"), CC.supportsTangents && nC && zC.push("#define MORPHTARGETS_TANGENT"), CC.supportsUVs && fC && zC.push("#define MORPHTARGETS_UV"), CC.supportsUV2s && oC && zC.push("#define MORPHTARGETS_UV2"), CC.supportsColors && qC && zC.push("#define MORPHTARGETS_COLOR"), zC.push("#define NUM_MORPH_INFLUENCERS " + WC), CC.isUsingTextureForTargets && zC.push("#define MORPHTARGETS_TEXTURE"), FC.NUM_MORPH_INFLUENCERS = WC, FC.NORMAL = bC, FC.TANGENT = nC, FC.UV = fC, FC.UV2 = oC, FC.COLOR = qC, MC(ZC, QC, FC, wC), WC)
+    }
+
+    function MC(CC, zC, ZC) {
+      let bC = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const nC = ZC.NUM_MORPH_INFLUENCERS;
+      if (nC > 0 && wC.c.LastCreatedEngine) {
+        const fC = wC.c.LastCreatedEngine.getCaps().maxVertexAttribs,
+          oC = zC.morphTargetManager;
+        if (oC?.isUsingTextureForTargets) return;
+        const qC = oC && oC.supportsPositions && bC,
+          FC = oC && oC.supportsNormals && ZC.NORMAL,
+          WC = oC && oC.supportsTangents && ZC.TANGENT,
+          NC = oC && oC.supportsUVs && ZC.UV1,
+          MC = oC && oC.supportsUV2s && ZC.UV2,
+          gC = oC && oC.supportsColors && ZC.VERTEXCOLOR;
+        for (let ZC = 0; ZC < nC; ZC++) qC && CC.push("position" + ZC), FC && CC.push("normal" + ZC), WC && CC.push("tangent" + ZC), NC && CC.push("uv_" + ZC), MC && CC.push("uv2_" + ZC), gC && CC.push("color" + ZC), CC.length > fC && QC.c.Error("Cannot add more vertex attributes for mesh " + zC.name)
       }
     }
 
-    function Mk(kk) {
-      Dk.forEach((ek => {
-        ek.setLogLevel(kk)
+    function gC(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      CC.push("world0"), CC.push("world1"), CC.push("world2"), CC.push("world3"), zC && (CC.push("previousWorld0"), CC.push("previousWorld1"), CC.push("previousWorld2"), CC.push("previousWorld3"))
+    }
+
+    function SC(CC, zC) {
+      const ZC = CC.morphTargetManager;
+      CC && ZC && zC.setFloatArray("morphTargetInfluences", ZC.influences)
+    }
+
+    function pC(CC, zC) {
+      zC.bindToEffect(CC, "Scene")
+    }
+
+    function PC(CC, zC, ZC, QC) {
+      let wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        bC = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        nC = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        oC = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        qC = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        FC = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+        WC = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+        NC = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : 0;
+      if (CC.texturesEnabled && wC && fC.b.ReflectionTextureEnabled) {
+        if (ZC.x_("reflectionMatrix", wC.getReflectionTextureMatrix()), ZC.updateFloat2("vReflectionInfos", wC.level * CC.iblIntensity, NC), oC && wC.boundingBoxSize) {
+          const CC = wC;
+          ZC.updateVector3("vReflectionPosition", CC.boundingBoxPosition), ZC.updateVector3("vReflectionSize", CC.boundingBoxSize)
+        }
+        if (bC) {
+          const CC = wC.getSize().width;
+          ZC.updateFloat2("vReflectionFilteringInfo", CC, Math.log2(CC))
+        }
+        if (FC && !zC.USEIRRADIANCEMAP) {
+          const CC = wC.sphericalPolynomial;
+          if (zC.USESPHERICALFROMREFLECTIONMAP && CC)
+            if (zC.SPHERICAL_HARMONICS) {
+              const zC = CC.preScaledHarmonics;
+              ZC.updateVector3("vSphericalL00", zC.l00), ZC.updateVector3("vSphericalL1_1", zC.l1_1), ZC.updateVector3("vSphericalL10", zC.l10), ZC.updateVector3("vSphericalL11", zC.l11), ZC.updateVector3("vSphericalL2_2", zC.l2_2), ZC.updateVector3("vSphericalL2_1", zC.l2_1), ZC.updateVector3("vSphericalL20", zC.l20), ZC.updateVector3("vSphericalL21", zC.l21), ZC.updateVector3("vSphericalL22", zC.l22)
+            } else ZC.updateFloat3("vSphericalX", CC.x.x, CC.x.y, CC.x.z), ZC.updateFloat3("vSphericalY", CC.y.x, CC.y.y, CC.y.z), ZC.updateFloat3("vSphericalZ", CC.z.x, CC.z.y, CC.z.z), ZC.updateFloat3("vSphericalXX_ZZ", CC.xx.x - CC.zz.x, CC.xx.y - CC.zz.y, CC.xx.z - CC.zz.z), ZC.updateFloat3("vSphericalYY_ZZ", CC.yy.x - CC.zz.x, CC.yy.y - CC.zz.y, CC.yy.z - CC.zz.z), ZC.updateFloat3("vSphericalZZ", CC.zz.x, CC.zz.y, CC.zz.z), ZC.updateFloat3("vSphericalXY", CC.xy.x, CC.xy.y, CC.xy.z), ZC.updateFloat3("vSphericalYZ", CC.yz.x, CC.yz.y, CC.yz.z), ZC.updateFloat3("vSphericalZX", CC.zx.x, CC.zx.y, CC.zx.z)
+        } else qC && zC.USEIRRADIANCEMAP && zC.USE_IRRADIANCE_DOMINANT_DIRECTION && wC.irradianceTexture && ZC.updateVector3("vReflectionDominantDirection", wC.irradianceTexture._dominantDirection);
+        nC && ZC.updateFloat3("vReflectionMicrosurfaceInfos", wC.getSize().width, wC.lodGenerationScale, wC.lodGenerationOffset)
+      }
+      WC && ZC.updateColor3("vReflectionColor", QC)
+    }
+
+    function GC(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+        wC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      if (QC && fC.b.ReflectionTextureEnabled) {
+        zC.LODBASEDMICROSFURACE ? ZC.setTexture("reflectionSampler", QC) : (ZC.setTexture("reflectionSampler", QC._lodTextureMid || QC), ZC.setTexture("reflectionSamplerLow", QC._lodTextureLow || QC), ZC.setTexture("reflectionSamplerHigh", QC._lodTextureHigh || QC)), zC.USEIRRADIANCEMAP && ZC.setTexture("irradianceSampler", QC.irradianceTexture);
+        const bC = CC.iblCdfGenerator;
+        wC && bC && ZC.setTexture("icdfSampler", bC.getIcdfTexture())
+      }
+    }
+
+    function RC(CC, zC, ZC) {
+      zC._needUVs = !0, zC[ZC] = !0, CC.optimizeUVAllocation && CC.getTextureMatrix().isIdentityAs3x2() ? (zC[ZC + "DIRECTUV"] = CC.coordinatesIndex + 1, zC["MAINUV" + (CC.coordinatesIndex + 1)] = !0) : zC[ZC + "DIRECTUV"] = 0
+    }
+
+    function AC(CC, zC, ZC) {
+      const QC = CC.getTextureMatrix();
+      zC.x_(ZC + "Matrix", QC)
+    }
+
+    function xC(CC, zC, ZC) {
+      ZC.BAKED_VERTEX_ANIMATION_TEXTURE && ZC.INSTANCES && CC.push("bakedVertexAnimationSettingsInstanced")
+    }
+
+    function JC(CC, zC, ZC) {
+      var QC;
+      if (zC && CC && (CC.computeBonesUsingShaders && zC._bonesComputationForcedToCPU && (CC.computeBonesUsingShaders = !1), CC.useBones && CC.computeBonesUsingShaders && CC.skeleton)) {
+        const wC = CC.skeleton;
+        if (wC.isUsingTextureForMatrices && zC.getUniformIndex("boneTextureInfo") > -1) {
+          const ZC = wC.getTransformMatrixTexture(CC);
+          zC.setTexture("boneSampler", ZC), zC.setFloat2("boneTextureInfo", wC._textureWidth, wC._textureHeight)
+        } else {
+          const bC = wC.getTransformMatrices(CC);
+          bC && (zC.setMatrices("mBones", bC), ZC && CC.Km().prePassRenderer && CC.Km().prePassRenderer.getIndex(2) && (ZC.previousBones[CC.uniqueId] || (ZC.previousBones[CC.uniqueId] = bC.slice()), zC.setMatrices("mPreviousBones", ZC.previousBones[CC.uniqueId]), QC = bC, ZC.previousBones[CC.uniqueId].set(QC)))
+        }
+      }
+    }
+
+    function IC(CC, zC, ZC, QC, wC) {
+      let bC = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+      CC._bindLight(zC, ZC, QC, wC, bC)
+    }
+    const iC = 4,
+      vC = new WeakMap;
+
+    function eC(CC, zC, ZC, QC) {
+      let wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4;
+      const bC = Math.min(zC.lightSources.length, wC);
+      for (let nC = 0; nC < bC; nC++) {
+        IC(zC.lightSources[nC], nC, CC, ZC, "boolean" === typeof QC ? QC : QC.SPECULARTERM, zC.receiveShadows)
+      }
+    }
+
+    function hC(CC, zC, ZC, QC) {
+      ZC.NUM_BONE_INFLUENCERS > 0 && (QC.addCPUSkinningFallback(0, zC), CC.push("matricesIndices"), CC.push("matricesWeights"), ZC.NUM_BONE_INFLUENCERS > 4 && (CC.push("matricesIndicesExtra"), CC.push("matricesWeightsExtra")))
+    }
+
+    function KC(CC, zC) {
+      (zC.INSTANCES || zC.THIN_INSTANCES) && gC(CC, !!zC.PREPASS_VELOCITY), zC.INSTANCESCOLOR && CC.push("instanceColor")
+    }
+
+    function YC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+        QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        wC = 0;
+      for (let bC = 0; bC < ZC && CC["LIGHT" + bC]; bC++) bC > 0 && (wC = QC + bC, zC.addFallback(wC, "LIGHT" + bC)), CC.SHADOWS || (CC["SHADOW" + bC] && zC.addFallback(QC, "SHADOW" + bC), CC["SHADOWPCF" + bC] && zC.addFallback(QC, "SHADOWPCF" + bC), CC["SHADOWPCSS" + bC] && zC.addFallback(QC, "SHADOWPCSS" + bC), CC["SHADOWPOISSON" + bC] && zC.addFallback(QC, "SHADOWPOISSON" + bC), CC["SHADOWESM" + bC] && zC.addFallback(QC, "SHADOWESM" + bC), CC["SHADOWCLOSEESM" + bC] && zC.addFallback(QC, "SHADOWCLOSEESM" + bC));
+      return wC
+    }
+
+    function dC(CC, zC, ZC, QC, wC, bC, nC) {
+      let fC = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        oC = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        qC = arguments.length > 9 ? arguments[9] : void 0,
+        FC = arguments.length > 10 ? arguments[10] : void 0;
+      if (nC._areMiscDirty) {
+        nC.LOGARITHMICDEPTH = ZC, nC.POINTSIZE = QC, nC.FOG = wC && function(CC, zC) {
+          return zC.fogEnabled && CC.applyFog && 0 !== zC.fogMode
+        }(CC, zC), nC.NONUNIFORMSCALING = CC.nonUniformScaling, nC.ALPHATEST = bC, nC.DECAL_AFTER_DETAIL = fC, nC.USE_VERTEX_PULLING = oC, nC.RIGHT_HANDED = zC.useRightHandedSystem;
+        const WC = oC ? qC?.geometry?.getIndexBuffer() : null,
+          NC = !!qC && qC.isUnIndexed;
+        nC.VERTEX_PULLING_USE_INDEX_BUFFER = !!WC && !NC, nC.VERTEX_PULLING_INDEX_BUFFER_32BITS = !(!WC || NC) && WC.is32Bits, nC.VERTEXOUTPUT_INVARIANT = !!FC
+      }
+    }
+
+    function mC(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (!CC.lightsEnabled || QC) return !0;
+      const wC = zC.lightSources,
+        bC = Math.min(wC.length, ZC);
+      for (let nC = 0; nC < bC; nC++)
+        if (!wC[nC].areLightTexturesReady()) return !1;
+      return !0
+    }
+
+    function HC(CC, zC, ZC, wC) {
+      let bC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 4,
+        nC = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!ZC._areLightsDirty) return ZC._needNormals;
+      const fC = bC;
+      bC = function(CC, zC) {
+        const ZC = CC.mg().getCaps().maxUniformBuffersPerShaderStage;
+        if (null == ZC) return zC;
+        const QC = Math.max(ZC - iC, 1);
+        return Math.min(zC, QC)
+      }(CC, bC);
+      let oC = 0;
+      const qC = {
+        needNormals: ZC._needNormals,
+        needRebuild: !1,
+        lightmapMode: !1,
+        shadowEnabled: !1,
+        specularEnabled: !1
+      };
+      if (CC.lightsEnabled && !nC) {
+        zC.lightSources.length > bC && bC < fC && function(CC, zC, ZC, wC) {
+          let bC = vC.get(CC);
+          bC || (bC = new Set, vC.set(CC, bC)), bC.has(wC) || (bC.add(wC), QC.c.Warn(`maxSimultaneousLights is ${zC} but this engine supports at most ${ZC} simultaneous lights. Each light declares its own uniform buffer in the vertex shader, so the ${wC} lights affecting this mesh plus the scene, mesh, material and leftover buffers would need ${wC+iC} uniform buffers, over the device limit of ${CC.getCaps().maxUniformBuffersPerShaderStage} per shader stage. The light count has been clamped to ${ZC}, so the extra lights will not contribute to the render. Set maxSimultaneousLights to ${ZC} or less to silence this warning.`))
+        }(CC.mg(), fC, bC, Math.min(zC.lightSources.length, fC));
+        for (const QC of zC.lightSources)
+          if (lC(CC, zC, QC, oC, ZC, wC, qC), oC++, oC === bC) break
+      }
+      ZC.SPECULARTERM = qC.specularEnabled, ZC.SHADOWS = qC.shadowEnabled;
+      const FC = Math.max(bC, ZC.MAXLIGHTCOUNT || 0);
+      for (let QC = oC; QC < FC; QC++) void 0 !== ZC["LIGHT" + QC] && (ZC["LIGHT" + QC] = !1, ZC["HEMILIGHT" + QC] = !1, ZC["POINTLIGHT" + QC] = !1, ZC["DIRLIGHT" + QC] = !1, ZC["SPOTLIGHT" + QC] = !1, ZC["AREALIGHT" + QC] = !1, ZC["CLUSTLIGHT" + QC] = !1, ZC["SHADOW" + QC] = !1, ZC["SHADOWCSM" + QC] = !1, ZC["SHADOWCSMDEBUG" + QC] = !1, ZC["SHADOWCSMNUM_CASCADES" + QC] = !1, ZC["SHADOWCSMUSESHADOWMAXZ" + QC] = !1, ZC["SHADOWCSMNOBLEND" + QC] = !1, ZC["SHADOWCSM_RIGHTHANDED" + QC] = !1, ZC["SHADOWPCF" + QC] = !1, ZC["SHADOWPCSS" + QC] = !1, ZC["SHADOWPOISSON" + QC] = !1, ZC["SHADOWESM" + QC] = !1, ZC["SHADOWCLOSEESM" + QC] = !1, ZC["SHADOWCUBE" + QC] = !1, ZC["SHADOWLOWQUALITY" + QC] = !1, ZC["SHADOWMEDIUMQUALITY" + QC] = !1);
+      ZC.LIGHTCOUNT = oC, ZC.MAXLIGHTCOUNT = bC;
+      const WC = CC.mg().getCaps();
+      return void 0 === ZC.SHADOWFLOAT && (qC.needRebuild = !0), ZC.SHADOWFLOAT = qC.shadowEnabled && (WC.textureFloatRender && WC.textureFloatLinearFiltering || WC.textureHalfFloatRender && WC.textureHalfFloatLinearFiltering), ZC.LIGHTMAPEXCLUDED = qC.lightmapMode, qC.needRebuild && ZC.rebuild(), qC.needNormals
+    }
+
+    function EC(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 8,
+        bC = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (zC && fC.b.ReflectionTextureEnabled) {
+        if (!zC.isReadyOrNotBlocking()) return !1;
+        ZC._needNormals = !0, ZC.REFLECTION = !0, ZC.GAMMAREFLECTION = zC.gammaSpace, ZC.RGBDREFLECTION = zC.isRGBD, ZC.LODINREFLECTIONALPHA = zC.lodLevelInAlpha, ZC.LINEARSPECULARREFLECTION = zC.linearSpecularLOD, ZC.USEIRRADIANCEMAP = !1, ZC.LODBASEDMICROSFURACE = CC.mg().getCaps().textureLOD;
+        const nC = CC.mg();
+        switch (QC && wC > 0 ? (ZC.NUM_SAMPLES = "" + wC, nC._features.needTypeSuffixInShaderConstants && (ZC.NUM_SAMPLES = ZC.NUM_SAMPLES + "u"), ZC.REALTIME_FILTERING = !0, CC.iblCdfGenerator && (ZC.IBL_CDF_FILTERING = !0)) : ZC.REALTIME_FILTERING = !1, ZC.INVERTCUBICMAP = 6 === zC.coordinatesMode, ZC.REFLECTIONMAP_3D = zC.isCube, ZC.REFLECTIONMAP_OPPOSITEZ = ZC.REFLECTIONMAP_3D && CC.useRightHandedSystem ? !zC.invertZ : zC.invertZ, ZC.REFLECTIONMAP_CUBIC = !1, ZC.REFLECTIONMAP_EXPLICIT = !1, ZC.REFLECTIONMAP_PLANAR = !1, ZC.REFLECTIONMAP_PROJECTION = !1, ZC.REFLECTIONMAP_SKYBOX = !1, ZC.REFLECTIONMAP_SPHERICAL = !1, ZC.REFLECTIONMAP_EQUIRECTANGULAR = !1, ZC.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, ZC.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, zC.coordinatesMode) {
+          case 0:
+            ZC.REFLECTIONMAP_EXPLICIT = !0;
+            break;
+          case 2:
+            ZC.REFLECTIONMAP_PLANAR = !0;
+            break;
+          case 4:
+            ZC.REFLECTIONMAP_PROJECTION = !0;
+            break;
+          case 5:
+            ZC.REFLECTIONMAP_SKYBOX = !0;
+            break;
+          case 1:
+            ZC.REFLECTIONMAP_SPHERICAL = !0;
+            break;
+          case 7:
+            ZC.REFLECTIONMAP_EQUIRECTANGULAR = !0;
+            break;
+          case 8:
+            ZC.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !0;
+            break;
+          case 9:
+            ZC.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !0;
+            break;
+          default:
+            ZC.REFLECTIONMAP_CUBIC = !0, ZC.USE_LOCAL_REFLECTIONMAP_CUBIC = !!zC.boundingBoxSize
+        }
+        5 !== zC.coordinatesMode && (zC.irradianceTexture ? (ZC.USEIRRADIANCEMAP = !0, ZC.USESPHERICALFROMREFLECTIONMAP = !1, ZC.USESPHERICALINVERTEX = !1, zC.irradianceTexture._dominantDirection ? ZC.USE_IRRADIANCE_DOMINANT_DIRECTION = !0 : ZC.USE_IRRADIANCE_DOMINANT_DIRECTION = !1) : zC.isCube && (ZC.USESPHERICALFROMREFLECTIONMAP = !0, ZC.USEIRRADIANCEMAP = !1, ZC.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, ZC.USESPHERICALINVERTEX = bC))
+      } else ZC.REFLECTION = !1, ZC.REFLECTIONMAP_3D = !1, ZC.REFLECTIONMAP_SPHERICAL = !1, ZC.REFLECTIONMAP_PLANAR = !1, ZC.REFLECTIONMAP_CUBIC = !1, ZC.USE_LOCAL_REFLECTIONMAP_CUBIC = !1, ZC.REFLECTIONMAP_PROJECTION = !1, ZC.REFLECTIONMAP_SKYBOX = !1, ZC.REFLECTIONMAP_EXPLICIT = !1, ZC.REFLECTIONMAP_EQUIRECTANGULAR = !1, ZC.REFLECTIONMAP_EQUIRECTANGULAR_FIXED = !1, ZC.REFLECTIONMAP_MIRROREDEQUIRECTANGULAR_FIXED = !1, ZC.INVERTCUBICMAP = !1, ZC.USESPHERICALFROMREFLECTIONMAP = !1, ZC.USEIRRADIANCEMAP = !1, ZC.USE_IRRADIANCE_DOMINANT_DIRECTION = !1, ZC.USESPHERICALINVERTEX = !1, ZC.REFLECTIONMAP_OPPOSITEZ = !1, ZC.LODINREFLECTIONALPHA = !1, ZC.GAMMAREFLECTION = !1, ZC.RGBDREFLECTION = !1, ZC.LINEARSPECULARREFLECTION = !1;
+      return !0
+    }
+
+    function lC(CC, zC, ZC, QC, wC, nC, fC) {
+      switch (fC.needNormals = !0, void 0 === wC["LIGHT" + QC] && (fC.needRebuild = !0), wC["LIGHT" + QC] = !0, wC["SPOTLIGHT" + QC] = !1, wC["HEMILIGHT" + QC] = !1, wC["POINTLIGHT" + QC] = !1, wC["DIRLIGHT" + QC] = !1, wC["AREALIGHT" + QC] = !1, wC["CLUSTLIGHT" + QC] = !1, ZC.prepareLightSpecificDefines(wC, QC), wC["LIGHT_FALLOFF_PHYSICAL" + QC] = !1, wC["LIGHT_FALLOFF_GLTF" + QC] = !1, wC["LIGHT_FALLOFF_STANDARD" + QC] = !1, ZC.falloffType) {
+        case bC.c.FALLOFF_GLTF:
+          wC["LIGHT_FALLOFF_GLTF" + QC] = !0;
+          break;
+        case bC.c.FALLOFF_PHYSICAL:
+          wC["LIGHT_FALLOFF_PHYSICAL" + QC] = !0;
+          break;
+        case bC.c.FALLOFF_STANDARD:
+          wC["LIGHT_FALLOFF_STANDARD" + QC] = !0
+      }
+      if (nC && !ZC.specular.equalsFloats(0, 0, 0) && (fC.specularEnabled = !0), wC["SHADOW" + QC] = !1, wC["SHADOWCSM" + QC] = !1, wC["SHADOWCSMDEBUG" + QC] = !1, wC["SHADOWCSMNUM_CASCADES" + QC] = !1, wC["SHADOWCSMUSESHADOWMAXZ" + QC] = !1, wC["SHADOWCSMNOBLEND" + QC] = !1, wC["SHADOWCSM_RIGHTHANDED" + QC] = !1, wC["SHADOWPCF" + QC] = !1, wC["SHADOWPCSS" + QC] = !1, wC["SHADOWPOISSON" + QC] = !1, wC["SHADOWESM" + QC] = !1, wC["SHADOWCLOSEESM" + QC] = !1, wC["SHADOWCUBE" + QC] = !1, wC["SHADOWLOWQUALITY" + QC] = !1, wC["SHADOWMEDIUMQUALITY" + QC] = !1, zC && zC.receiveShadows && CC.shadowsEnabled && ZC.shadowEnabled) {
+        const zC = ZC.getShadowGenerator(CC.activeCamera) ?? ZC.getShadowGenerator();
+        if (zC) {
+          const CC = zC.getShadowMap();
+          CC && CC.renderList && CC.renderList.length > 0 && (fC.shadowEnabled = !0, zC.prepareDefines(wC, QC))
+        }
+      }
+      ZC.lightmapMode != bC.c.LIGHTMAP_DEFAULT ? (fC.lightmapMode = !0, wC["LIGHTMAPEXCLUDED" + QC] = !0, wC["LIGHTMAPNOSPECULAR" + QC] = ZC.lightmapMode == bC.c.LIGHTMAP_SHADOWSONLY) : (wC["LIGHTMAPEXCLUDED" + QC] = !1, wC["LIGHTMAPNOSPECULAR" + QC] = !1)
+    }
+
+    function XC(CC, zC, ZC, QC, wC) {
+      let bC = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+        fC = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        oC = function(CC, zC) {
+          let ZC = !1;
+          if (CC.activeCamera) {
+            const QC = zC.CAMERA_ORTHOGRAPHIC ? 1 : 0,
+              wC = zC.CAMERA_PERSPECTIVE ? 1 : 0,
+              bC = 1 === CC.activeCamera.mode ? 1 : 0,
+              nC = 0 === CC.activeCamera.mode ? 1 : 0;
+            (QC ^ bC || wC ^ nC) && (zC.CAMERA_ORTHOGRAPHIC = 1 === bC, zC.CAMERA_PERSPECTIVE = 1 === nC, ZC = !0)
+          }
+          return ZC
+        }(CC, QC);
+      !1 !== bC && (oC = (0, nC.i)(ZC, CC, QC)), QC.DEPTHPREPASS !== !zC.getColorWrite() && (QC.DEPTHPREPASS = !QC.DEPTHPREPASS, oC = !0), QC.INSTANCES !== wC && (QC.INSTANCES = wC, oC = !0), QC.THIN_INSTANCES !== fC && (QC.THIN_INSTANCES = fC, oC = !0), oC && QC.markAsUnprocessed()
+    }
+    const cC = 40,
+      uC = 64,
+      rC = new WeakMap,
+      sC = new WeakSet;
+
+    function TC(CC, zC, ZC, wC) {
+      let bC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        nC = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+        fC = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      if (!zC._areAttributesDirty && zC._needNormals === zC._normals && zC._needUVs === zC._uvs) return !1;
+      zC._normals = zC._needNormals, zC._uvs = zC._needUVs, zC.NORMAL = zC._needNormals && CC.isVerticesDataPresent("normal"), zC._needNormals && CC.isVerticesDataPresent("tangent") && (zC.TANGENT = !0);
+      for (let QC = 1; QC <= 6; ++QC) zC["UV" + QC] = !!zC._needUVs && CC.isVerticesDataPresent(`uv${1===QC?"":QC}`);
+      if (ZC) {
+        const ZC = CC.useVertexColors && CC.isVerticesDataPresent("color");
+        zC.VERTEXCOLOR = ZC, zC.VERTEXALPHA = CC.hasVertexAlpha && ZC && nC
+      }
+      return CC.isVerticesDataPresent("instanceColor") && (CC.yQC || CC.hasThinInstances) && (zC.INSTANCESCOLOR = !0), wC && function(CC, zC) {
+        if (CC.useBones && CC.computeBonesUsingShaders && CC.skeleton) {
+          zC.NUM_BONE_INFLUENCERS = CC.numBoneInfluencers;
+          const ZC = void 0 !== zC.BONETEXTURE;
+          if (CC.skeleton.isUsingTextureForMatrices && ZC) zC.BONETEXTURE = !0;
+          else {
+            zC.BonesPerMesh = CC.skeleton.bones.length + 1, zC.BONETEXTURE = !ZC && void 0;
+            const wC = CC.Km(),
+              bC = wC.prePassRenderer;
+            if (bC && bC.enabled) {
+              const ZC = -1 === bC.excludedSkinnedMesh.indexOf(CC);
+              zC.BONES_VELOCITY_ENABLED = ZC
+            }
+            const nC = !0 === zC.MULTIVIEW,
+              fC = 2 * zC.BonesPerMesh + (nC ? 1 : 0);
+            if (rC.get(CC.skeleton) !== fC) {
+              rC.set(CC.skeleton, fC);
+              const ZC = wC.mg().getCaps().maxVertexUniformVectors;
+              if (ZC && !sC.has(CC.skeleton)) {
+                const wC = 4 * zC.BonesPerMesh,
+                  bC = nC ? uC : cC,
+                  fC = Math.max(ZC - bC, 0);
+                (wC > fC || nC && 3 * wC > ZC) && (sC.add(CC.skeleton), QC.c.Warn(`Skeleton "${CC.skeleton.name}": ${CC.skeleton.bones.length} bones stored as vertex uniforms use ${wC} of ~${fC} usable uniform vectors${nC?" (multiview)":""} on a device reporting ${ZC}. This can exceed the GPU vertex-uniform limit and make the mesh silently fail to render. Set skeleton.useTextureToStoreBoneMatrices = true to store bone matrices in a texture.`))
+              }
+            }
+          }
+        } else zC.NUM_BONE_INFLUENCERS = 0, zC.BonesPerMesh = 0, void 0 !== zC.BONETEXTURE && (zC.BONETEXTURE = !1)
+      }(CC, zC), bC && function(CC, zC) {
+        const ZC = CC.morphTargetManager;
+        ZC ? (zC.MORPHTARGETS_UV = ZC.supportsUVs && zC.UV1, zC.MORPHTARGETS_UV2 = ZC.supportsUV2s && zC.UV2, zC.MORPHTARGETS_TANGENT = ZC.supportsTangents && zC.TANGENT, zC.MORPHTARGETS_NORMAL = ZC.supportsNormals && zC.NORMAL, zC.MORPHTARGETS_POSITION = ZC.supportsPositions, zC.MORPHTARGETS_COLOR = ZC.supportsColors, zC.MORPHTARGETTEXTURE_HASUVS = ZC.hasUVs, zC.MORPHTARGETTEXTURE_HASUV2S = ZC.hasUV2s, zC.MORPHTARGETTEXTURE_HASTANGENTS = ZC.hasTangents, zC.MORPHTARGETTEXTURE_HASNORMALS = ZC.hasNormals, zC.MORPHTARGETTEXTURE_HASPOSITIONS = ZC.hasPositions, zC.MORPHTARGETTEXTURE_HASCOLORS = ZC.hasColors, zC.NUM_MORPH_INFLUENCERS = ZC.numMaxInfluencers || ZC.numInfluencers, zC.MORPHTARGETS = zC.NUM_MORPH_INFLUENCERS > 0, zC.MORPHTARGETS_TEXTURE = ZC.isUsingTextureForTargets) : (zC.MORPHTARGETS_UV = !1, zC.MORPHTARGETS_UV2 = !1, zC.MORPHTARGETS_TANGENT = !1, zC.MORPHTARGETS_NORMAL = !1, zC.MORPHTARGETS_POSITION = !1, zC.MORPHTARGETS_COLOR = !1, zC.MORPHTARGETTEXTURE_HASUVS = !1, zC.MORPHTARGETTEXTURE_HASUV2S = !1, zC.MORPHTARGETTEXTURE_HASTANGENTS = !1, zC.MORPHTARGETTEXTURE_HASNORMALS = !1, zC.MORPHTARGETTEXTURE_HASPOSITIONS = !1, zC.MORPHTARGETTEXTURE_HAS_COLORS = !1, zC.MORPHTARGETS = !1, zC.NUM_MORPH_INFLUENCERS = 0)
+      }(CC, zC), fC && function(CC, zC) {
+        const ZC = CC.bakedVertexAnimationManager;
+        zC.BAKED_VERTEX_ANIMATION_TEXTURE = !(!ZC || !ZC.isEnabled)
+      }(CC, zC), !0
+    }
+
+    function aC(CC, zC) {
+      if (CC.activeCamera) {
+        const ZC = zC.MULTIVIEW;
+        zC.MULTIVIEW = null !== CC.activeCamera.outputRenderTarget && CC.activeCamera.outputRenderTarget.getViewCount() > 1, zC.MULTIVIEW != ZC && zC.markAsUnprocessed()
+      }
+    }
+
+    function tC(CC, zC, ZC) {
+      const QC = zC.ORDER_INDEPENDENT_TRANSPARENCY,
+        wC = zC.ORDER_INDEPENDENT_TRANSPARENCY_16BITS;
+      zC.ORDER_INDEPENDENT_TRANSPARENCY = CC.useOrderIndependentTransparency && ZC, zC.ORDER_INDEPENDENT_TRANSPARENCY_16BITS = !CC.mg().getCaps().textureFloatLinearFiltering, QC === zC.ORDER_INDEPENDENT_TRANSPARENCY && wC === zC.ORDER_INDEPENDENT_TRANSPARENCY_16BITS || zC.markAsUnprocessed()
+    }
+
+    function DC(CC, zC, ZC) {
+      const QC = zC.PREPASS;
+      if (!zC._arePrePassDirty) return;
+      const wC = [{
+        type: 1,
+        define: "PREPASS_POSITION",
+        index: "PREPASS_POSITION_INDEX"
+      }, {
+        type: 9,
+        define: "PREPASS_LOCAL_POSITION",
+        index: "PREPASS_LOCAL_POSITION_INDEX"
+      }, {
+        type: 2,
+        define: "PREPASS_VELOCITY",
+        index: "PREPASS_VELOCITY_INDEX"
+      }, {
+        type: 11,
+        define: "PREPASS_VELOCITY_LINEAR",
+        index: "PREPASS_VELOCITY_LINEAR_INDEX"
+      }, {
+        type: 3,
+        define: "PREPASS_REFLECTIVITY",
+        index: "PREPASS_REFLECTIVITY_INDEX"
+      }, {
+        type: 0,
+        define: "PREPASS_IRRADIANCE_LEGACY",
+        index: "PREPASS_IRRADIANCE_LEGACY_INDEX"
+      }, {
+        type: 7,
+        define: "PREPASS_ALBEDO_SQRT",
+        index: "PREPASS_ALBEDO_SQRT_INDEX"
+      }, {
+        type: 5,
+        define: "PREPASS_DEPTH",
+        index: "PREPASS_DEPTH_INDEX"
+      }, {
+        type: 10,
+        define: "PREPASS_SCREENSPACE_DEPTH",
+        index: "PREPASS_SCREENSPACE_DEPTH_INDEX"
+      }, {
+        type: 6,
+        define: "PREPASS_NORMAL",
+        index: "PREPASS_NORMAL_INDEX"
+      }, {
+        type: 8,
+        define: "PREPASS_WORLD_NORMAL",
+        index: "PREPASS_WORLD_NORMAL_INDEX"
+      }, {
+        type: 14,
+        define: "PREPASS_IRRADIANCE",
+        index: "PREPASS_IRRADIANCE_INDEX"
+      }];
+      if (CC.prePassRenderer && CC.prePassRenderer.enabled && ZC) {
+        zC.PREPASS = !0, zC.SCENE_MRT_COUNT = CC.prePassRenderer.mrtCount, zC.PREPASS_NORMAL_WORLDSPACE = CC.prePassRenderer.generateNormalsInWorldSpace, zC.PREPASS_COLOR = !0, zC.PREPASS_COLOR_INDEX = 0;
+        for (let ZC = 0; ZC < wC.length; ZC++) {
+          const QC = CC.prePassRenderer.getIndex(wC[ZC].type); - 1 !== QC ? (zC[wC[ZC].define] = !0, zC[wC[ZC].index] = QC) : zC[wC[ZC].define] = !1
+        }
+      } else {
+        zC.PREPASS = !1;
+        for (let CC = 0; CC < wC.length; CC++) zC[wC[CC].define] = !1
+      }
+      zC.PREPASS != QC && (zC.markAsUnprocessed(), zC.markAsImageProcessingDirty())
+    }
+
+    function jC(CC, zC, ZC, QC) {
+      let wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+        bC = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        nC = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        fC = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+        oC = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+        qC = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
+      wC && wC.push("Light" + CC), bC || (zC.push("vLightData" + CC, "vLightDiffuse" + CC, "vLightSpecular" + CC, "vLightDirection" + CC, "vLightWidth" + CC, "vLightHeight" + CC, "vLightFalloff" + CC, "vLightGround" + CC, "vSliceData" + CC, "vSliceRanges" + CC, "lightMatrix" + CC, "shadowsInfo" + CC, "depthValues" + CC), ZC.push("shadowTexture" + CC), ZC.push("depthTexture" + CC), zC.push("viewFrustumZ" + CC, "cascadeBlendFactor" + CC, "lightSizeUVCorrection" + CC, "depthCorrection" + CC, "penumbraDarkness" + CC, "frustumLengths" + CC), QC && (ZC.push("projectionLightTexture" + CC), zC.push("textureProjectionMatrix" + CC)), nC && ZC.push("iesLightTexture" + CC), oC && ZC.push("rectAreaLightEmissionTexture" + CC), fC && (ZC.push("lightDataTexture" + CC), qC || ZC.push("tileMaskTexture" + CC)))
+    }
+
+    function yC(CC, zC, ZC) {
+      const QC = ["vReflectionMicrosurfaceInfos", "vReflectionDominantDirection", "reflectionMatrix", "vReflectionInfos", "vReflectionPosition", "vReflectionSize", "vReflectionColor", "vReflectionFilteringInfo"];
+      ZC && QC.push("vSphericalX", "vSphericalY", "vSphericalZ", "vSphericalXX_ZZ", "vSphericalYY_ZZ", "vSphericalZZ", "vSphericalXY", "vSphericalYZ", "vSphericalZX", "vSphericalL00", "vSphericalL1_1", "vSphericalL10", "vSphericalL11", "vSphericalL2_2", "vSphericalL2_1", "vSphericalL20", "vSphericalL21", "vSphericalL22"), CC.push(...QC);
+      zC.push("reflectionSampler", "reflectionSamplerLow", "reflectionSamplerHigh", "irradianceSampler", "icdfSampler")
+    }
+
+    function LC(CC, zC, ZC) {
+      let QC, wC, bC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 4,
+        nC = null;
+      if (CC.uniformsNames) {
+        const fC = CC;
+        QC = fC.uniformsNames, wC = fC.uniformBuffersNames, zC = fC.samplers, ZC = fC.defines, bC = fC.maxSimultaneousLights || 0, nC = fC.shaderLanguage ?? null
+      } else QC = CC, zC || (zC = []);
+      for (let fC = 0; fC < bC && ZC["LIGHT" + fC]; fC++) jC(fC, QC, zC, ZC["PROJECTEDLIGHTTEXTURE" + fC], wC, !1, ZC["IESLIGHTTEXTURE" + fC], ZC["CLUSTLIGHT" + fC], ZC["RECTAREALIGHTEMISSIONTEXTURE" + fC], 1 === nC);
+      ZC.NUM_MORPH_INFLUENCERS && (QC.push("morphTargetInfluences"), QC.push("morphTargetCount")), ZC.BAKED_VERTEX_ANIMATION_TEXTURE && (QC.push("bakedVertexAnimationSettings"), QC.push("bakedVertexAnimationTextureSizeInverted"), QC.push("bakedVertexAnimationTime"), zC.push("bakedVertexAnimationTexture"))
+    }
+
+    function UC(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        ZC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        QC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        wC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        bC = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      CC.addUniform("vReflectionInfos", 2), CC.addUniform("reflectionMatrix", 16), zC && CC.addUniform("vReflectionMicrosurfaceInfos", 3), ZC && (CC.addUniform("vReflectionPosition", 3), CC.addUniform("vReflectionSize", 3)), QC && (CC.addUniform("vReflectionFilteringInfo", 2), CC.addUniform("vReflectionDominantDirection", 3)), bC && CC.addUniform("vReflectionColor", 3), wC && (CC.addUniform("vSphericalL00", 3), CC.addUniform("vSphericalL1_1", 3), CC.addUniform("vSphericalL10", 3), CC.addUniform("vSphericalL11", 3), CC.addUniform("vSphericalL2_2", 3), CC.addUniform("vSphericalL2_1", 3), CC.addUniform("vSphericalL20", 3), CC.addUniform("vSphericalL21", 3), CC.addUniform("vSphericalL22", 3), CC.addUniform("vSphericalX", 3), CC.addUniform("vSphericalY", 3), CC.addUniform("vSphericalZ", 3), CC.addUniform("vSphericalXX_ZZ", 3), CC.addUniform("vSphericalYY_ZZ", 3), CC.addUniform("vSphericalZZ", 3), CC.addUniform("vSphericalXY", 3), CC.addUniform("vSphericalYZ", 3), CC.addUniform("vSphericalZX", 3))
+    }
+  },
+  40167: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => bC
+    });
+    var QC = ZC(36963),
+      wC = ZC(40110);
+    class bC extends wC.d {
+      constructor(CC, zC) {
+        let ZC = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        super(CC, zC, void 0, arguments.length > 3 && void 0 !== arguments[3] && arguments[3]), this._normalMatrix = new QC.b, this._storeEffectOnSubMeshes = ZC
+      }
+      getEffect() {
+        return this._storeEffectOnSubMeshes ? this._activeEffect : super.getEffect()
+      }
+      isReady(CC, zC) {
+        return !!CC && (!this._storeEffectOnSubMeshes || (!CC.Zx || 0 === CC.Zx.length || this.isReadyForSubMesh(CC, CC.Zx[0], zC)))
+      }
+      _isReadyForSubMesh(CC) {
+        const zC = CC.materialDefines;
+        return !(this.checkReadyOnEveryCall || !CC.effect || !zC || zC._renderId !== this.Km().getRenderId())
+      }
+      bindOnlyWorldMatrix(CC) {
+        this._activeEffect.setMatrix("world", CC)
+      }
+      bindOnlyNormalMatrix(CC) {
+        this._activeEffect.setMatrix("normalMatrix", CC)
+      }
+      bind(CC, zC) {
+        zC && this.bindForSubMesh(CC, zC, zC.Zx[0])
+      }
+      _afterBind(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          ZC = arguments.length > 2 ? arguments[2] : void 0;
+        super._afterBind(CC, zC, ZC), this.Km()._cachedEffect = zC, ZC ? ZC._drawWrapper._forceRebindOnNextCall = !1 : this._drawWrapper._forceRebindOnNextCall = !1
+      }
+      _mustRebind(CC, zC, ZC) {
+        let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        return ZC._drawWrapper._forceRebindOnNextCall || CC.isCachedMaterialInvalid(this, zC, QC)
+      }
+      dispose(CC, zC, ZC) {
+        this._activeEffect = void 0, super.dispose(CC, zC, ZC)
+      }
+    }
+  },
+  40196: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => bC,
+      d: () => wC
+    });
+    const QC = new WeakMap;
+
+    function wC(CC) {
+      const zC = CC.getVertexBuffers();
+      if (!zC) return null;
+      let ZC = QC.get(CC);
+      if (ZC) {
+        let CC = !1;
+        for (const QC in zC)
+          if (!ZC.has(QC)) {
+            CC = !0;
+            break
+          } if (!CC) return ZC
+      } else ZC = new Map, QC.set(CC, ZC);
+      for (const QC in zC) {
+        const CC = zC[QC];
+        if (CC) {
+          const zC = CC.byteOffset,
+            wC = CC.byteStride,
+            bC = CC.type,
+            nC = CC.normalized;
+          ZC.set(QC, {
+            offset: zC,
+            stride: wC,
+            type: bC,
+            normalized: nC
+          })
+        }
+      }
+      return ZC
+    }
+
+    function bC(CC, zC) {
+      zC.forEach(((zC, ZC) => {
+        const QC = `vp_${ZC}_info`;
+        CC.setFloat4(QC, zC.offset, zC.stride, zC.type, zC.normalized ? 1 : 0)
       }))
     }
-
-    function Kk(kk, ek) {
-      for (const ik of Dk) {
-        let Dk = null;
-        ek && ek.level && (Dk = Sk[ek.level]), ik.userLogHandler = null === kk ? null : function(ek, ik) {
-          for (var Sk = arguments.length, bk = new Array(Sk > 2 ? Sk - 2 : 0), rk = 2; rk < Sk; rk++) bk[rk - 2] = arguments[rk];
-          const Pk = bk.map((kk => {
-            if (null == kk) return null;
-            if ("string" === typeof kk) return kk;
-            if ("number" === typeof kk || "boolean" === typeof kk) return kk.toString();
-            if (kk instanceof Error) return kk.message;
-            try {
-              return JSON.stringify(kk)
-            } catch (ek) {
-              return null
-            }
-          })).filter((kk => kk)).join(" ");
-          ik >= (null !== Dk && void 0 !== Dk ? Dk : ek.logLevel) && kk({
-            level: fk[ik].toLowerCase(),
-            message: Pk,
-            args: bk,
-            type: ek.name
-          })
+  },
+  40145: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => fC,
+      d: () => oC
+    });
+    var QC = ZC(39811),
+      wC = ZC(36963),
+      bC = ZC(39818);
+    let nC = (() => {
+      var CC;
+      let zC, ZC, wC = [];
+      return CC = class {
+        static extractMinAndMaxIndexed(CC, zC, ZC, QC, wC, bC) {
+          for (let nC = ZC; nC < ZC + QC; nC++) {
+            const ZC = 3 * zC[nC],
+              QC = CC[ZC],
+              fC = CC[ZC + 1],
+              oC = CC[ZC + 2];
+            wC.minimizeInPlaceFromFloats(QC, fC, oC), bC.maximizeInPlaceFromFloats(QC, fC, oC)
+          }
         }
+        static extractMinAndMax(CC, zC, ZC, QC, wC, bC) {
+          for (let nC = zC, fC = zC * QC; nC < zC + ZC; nC++, fC += QC) {
+            const zC = CC[fC],
+              ZC = CC[fC + 1],
+              QC = CC[fC + 2];
+            wC.minimizeInPlaceFromFloats(zC, ZC, QC), bC.maximizeInPlaceFromFloats(zC, ZC, QC)
+          }
+        }
+      }, (() => {
+        const nC = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        zC = [bC.h.filter((function() {
+          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0]) && !Array.isArray(arguments.length <= 1 ? void 0 : arguments[1])
+        }))], ZC = [bC.h.filter((function() {
+          return !Array.isArray(arguments.length <= 0 ? void 0 : arguments[0])
+        }))], (0, QC.j)(CC, null, zC, {
+          kind: "method",
+          name: "extractMinAndMaxIndexed",
+          static: !0,
+          private: !1,
+          access: {
+            has: CC => "extractMinAndMaxIndexed" in CC,
+            get: CC => CC.extractMinAndMaxIndexed
+          },
+          metadata: nC
+        }, null, wC), (0, QC.j)(CC, null, ZC, {
+          kind: "method",
+          name: "extractMinAndMax",
+          static: !0,
+          private: !1,
+          access: {
+            has: CC => "extractMinAndMax" in CC,
+            get: CC => CC.extractMinAndMax
+          },
+          metadata: nC
+        }, null, wC), nC && Object.defineProperty(CC, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: nC
+        }), (0, QC.n)(CC, wC)
+      })(), CC
+    })();
+
+    function fC(CC, zC, ZC, QC) {
+      let bC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const fC = new wC.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+        oC = new wC.r(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+      return nC.extractMinAndMaxIndexed(CC, zC, ZC, QC, fC, oC), bC && (fC.x -= fC.x * bC.x + bC.y, fC.y -= fC.y * bC.x + bC.y, fC.z -= fC.z * bC.x + bC.y, oC.x += oC.x * bC.x + bC.y, oC.y += oC.y * bC.x + bC.y, oC.z += oC.z * bC.x + bC.y), {
+        minimum: fC,
+        maximum: oC
       }
     }
+
+    function oC(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+        bC = arguments.length > 4 ? arguments[4] : void 0;
+      const fC = new wC.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
+        oC = new wC.r(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+      return bC || (bC = 3), nC.extractMinAndMax(CC, zC, ZC, bC, fC, oC), QC && (fC.x -= fC.x * QC.x + QC.y, fC.y -= fC.y * QC.x + QC.y, fC.z -= fC.z * QC.x + QC.y, oC.x += oC.x * QC.x + QC.y, oC.y += oC.y * QC.x + QC.y, oC.z += oC.z * QC.x + QC.y), {
+        minimum: fC,
+        maximum: oC
+      }
+    }
+  },
+  40119: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => FC
+    });
+    var QC, wC = ZC(39959),
+      bC = ZC(40123),
+      nC = ZC(40127),
+      fC = ZC(40145),
+      oC = ZC(40148),
+      qC = ZC(39694);
+    class FC {
+      get materialDefines() {
+        const CC = this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.defines : this._getDrawWrapper()?.defines;
+        return "string" === typeof CC ? null : CC
+      }
+      set materialDefines(CC) {
+        (this._mainDrawWrapperOverride ?? this._getDrawWrapper(void 0, !0)).defines = CC
+      }
+      _getDrawWrapper(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        CC = CC ?? this._engine.currentRenderPassId;
+        let ZC = this._drawWrappers[CC];
+        return !ZC && zC && (this._drawWrappers[CC] = ZC = new oC.d(this._mesh.Km().mg())), ZC
+      }
+      _removeDrawWrapper(CC) {
+        let zC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && this._drawWrappers[CC]?.dispose(zC), this._drawWrappers[CC] = void 0
+      }
+      get effect() {
+        return this._mainDrawWrapperOverride ? this._mainDrawWrapperOverride.effect : this._getDrawWrapper()?.effect ?? null
+      }
+      get _drawWrapper() {
+        return this._mainDrawWrapperOverride ?? this._getDrawWrapper(void 0, !0)
+      }
+      get _drawWrapperOverride() {
+        return this._mainDrawWrapperOverride
+      }
+      _setMainDrawWrapperOverride(CC) {
+        this._mainDrawWrapperOverride = CC
+      }
+      setEffect(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          ZC = arguments.length > 2 ? arguments[2] : void 0,
+          QC = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const wC = this._drawWrapper;
+        wC.setEffect(CC, zC, QC), void 0 !== ZC && (wC.materialContext = ZC), CC || (wC.defines = null, wC.materialContext = void 0)
+      }
+      resetDrawCache(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this._drawWrappers) {
+          if (void 0 !== CC) return void this._removeDrawWrapper(CC, !0, zC);
+          for (const CC of this._drawWrappers) CC?.dispose(zC)
+        }
+        this._drawWrappers = []
+      }
+      static AddToMesh(CC, zC, ZC, QC, wC, bC, nC) {
+        return new FC(CC, zC, ZC, QC, wC, bC, nC, !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7])
+      }
+      constructor(CC, zC, ZC, QC, wC, bC, nC) {
+        let fC = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          oC = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8];
+        this.materialIndex = CC, this.verticesStart = zC, this.verticesCount = ZC, this.indexStart = QC, this.indexCount = wC, this._mainDrawWrapperOverride = null, this._linesIndexCount = 0, this._linesIndexBuffer = null, this._lastColliderWorldVertices = null, this._lastColliderTransformMatrix = null, this._wasDispatched = !1, this._renderId = 0, this._alphaIndex = 0, this._distanceToCamera = 0, this._currentMaterial = null, this._mesh = bC, this._renderingMesh = nC || bC, oC && bC.Zx.push(this), this._engine = this._mesh.Km().mg(), this.resetDrawCache(), this._trianglePlanes = [], this._id = bC.Zx.length - 1, fC && (this.refreshBoundingInfo(), bC.computeWorldMatrix(!0))
+      }
+      get IsGlobal() {
+        return 0 === this.verticesStart && this.verticesCount === this._mesh.getTotalVertices() && 0 === this.indexStart && this.indexCount === this._mesh.getTotalIndices()
+      }
+      WE() {
+        return this.IsGlobal || this._mesh.hasThinInstances ? this._mesh.WE() : this._boundingInfo
+      }
+      setBoundingInfo(CC) {
+        return this._boundingInfo = CC, this
+      }
+      getMesh() {
+        return this._mesh
+      }
+      getRenderingMesh() {
+        return this._renderingMesh
+      }
+      getReplacementMesh() {
+        return this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null
+      }
+      getEffectiveMesh() {
+        const CC = this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : null;
+        return CC || this._renderingMesh
+      }
+      cg() {
+        let CC = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        const zC = this._renderingMesh.getMaterialForRenderPass(this._engine.currentRenderPassId) ?? this._renderingMesh.material;
+        if (!zC) return CC && this._mesh.Km()._hasDefaultMaterial ? this._mesh.Km().defaultMaterial : null;
+        if (this._isMultiMaterial(zC)) {
+          const CC = zC.getSubMaterial(this.materialIndex);
+          return this._currentMaterial !== CC && (this._currentMaterial = CC, this.resetDrawCache()), CC
+        }
+        return zC
+      }
+      _isMultiMaterial(CC) {
+        return void 0 !== CC.getSubMaterial
+      }
+      refreshBoundingInfo() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (this._lastColliderWorldVertices = null, this.IsGlobal || !this._renderingMesh || !this._renderingMesh.geometry) return this;
+        if (CC || (CC = this._renderingMesh.getVerticesData(wC.k.PositionKind)), !CC) return this._boundingInfo = this._mesh.WE(), this;
+        const zC = this._renderingMesh.CQC();
+        let ZC;
+        if (0 === this.indexStart && this.indexCount === zC.length) {
+          const CC = this._renderingMesh.WE();
+          ZC = {
+            minimum: CC.minimum.clone(),
+            maximum: CC.maximum.clone()
+          }
+        } else ZC = (0, fC.c)(CC, zC, this.indexStart, this.indexCount, this._renderingMesh.geometry.boundingBias);
+        return this._boundingInfo ? this._boundingInfo.reConstruct(ZC.minimum, ZC.maximum) : this._boundingInfo = new nC.d(ZC.minimum, ZC.maximum), this
+      }
+      _checkCollision(CC) {
+        return this.WE()._checkCollision(CC)
+      }
+      updateBoundingInfo(CC) {
+        let zC = this.WE();
+        return zC || (this.refreshBoundingInfo(), zC = this.WE()), zC && zC.update(CC), this
+      }
+      isInFrustum(CC) {
+        const zC = this.WE();
+        return !!zC && zC.isInFrustum(CC, this._mesh.cullingStrategy)
+      }
+      isCompletelyInFrustum(CC) {
+        const zC = this.WE();
+        return !!zC && zC.isCompletelyInFrustum(CC)
+      }
+      render(CC) {
+        return this._renderingMesh.render(this, CC, this._mesh._internalAbstractMeshDataInfo._actAsRegularMesh ? this._mesh : void 0), this
+      }
+      _getLinesIndexBuffer(CC, zC) {
+        if (!this._linesIndexBuffer) {
+          const ZC = 6 * Math.floor(this.indexCount / 3),
+            QC = this.verticesStart + this.verticesCount > 65535 ? new Uint32Array(ZC) : new Uint16Array(ZC);
+          let wC = 0;
+          if (0 === CC.length)
+            for (let CC = this.indexStart; CC < this.indexStart + this.indexCount; CC += 3) QC[wC++] = CC, QC[wC++] = CC + 1, QC[wC++] = CC + 1, QC[wC++] = CC + 2, QC[wC++] = CC + 2, QC[wC++] = CC;
+          else
+            for (let zC = this.indexStart; zC < this.indexStart + this.indexCount; zC += 3) QC[wC++] = CC[zC], QC[wC++] = CC[zC + 1], QC[wC++] = CC[zC + 1], QC[wC++] = CC[zC + 2], QC[wC++] = CC[zC + 2], QC[wC++] = CC[zC];
+          this._linesIndexBuffer = zC.createIndexBuffer(QC), this._linesIndexCount = QC.length
+        }
+        return this._linesIndexBuffer
+      }
+      canIntersects(CC) {
+        const zC = this.WE();
+        return !!zC && CC.intersectsBox(zC.boundingBox)
+      }
+      intersects(CC, zC, ZC, QC, wC) {
+        const bC = this.cg();
+        if (!bC) return null;
+        let nC = 3,
+          fC = !1;
+        switch (bC.fillMode) {
+          case 3:
+          case 5:
+          case 6:
+          case 8:
+            return null;
+          case 7:
+            nC = 1, fC = !0
+        }
+        return 4 === bC.fillMode ? ZC.length ? this._intersectLines(CC, zC, ZC, this._mesh.intersectionThreshold, QC) : this._intersectUnIndexedLines(CC, zC, ZC, this._mesh.intersectionThreshold, QC) : !ZC.length && this._mesh._unIndexed ? this._intersectUnIndexedTriangles(CC, zC, ZC, QC, wC) : this._intersectTriangles(CC, zC, ZC, nC, fC, QC, wC)
+      }
+      _intersectLines(CC, zC, ZC, QC, wC) {
+        let nC = null;
+        for (let fC = this.indexStart; fC < this.indexStart + this.indexCount; fC += 2) {
+          const oC = zC[ZC[fC]],
+            qC = zC[ZC[fC + 1]],
+            FC = CC.intersectionSegment(oC, qC, QC);
+          if (!(FC < 0) && ((wC || !nC || FC < nC.distance) && (nC = new bC.d(null, null, FC), nC.faceId = fC / 2, wC))) break
+        }
+        return nC
+      }
+      _intersectUnIndexedLines(CC, zC, ZC, QC, wC) {
+        let nC = null;
+        for (let fC = this.verticesStart; fC < this.verticesStart + this.verticesCount; fC += 2) {
+          const ZC = zC[fC],
+            oC = zC[fC + 1],
+            qC = CC.intersectionSegment(ZC, oC, QC);
+          if (!(qC < 0) && ((wC || !nC || qC < nC.distance) && (nC = new bC.d(null, null, qC), nC.faceId = fC / 2, wC))) break
+        }
+        return nC
+      }
+      _intersectTriangles(CC, zC, ZC, QC, wC, bC, nC) {
+        let fC = null,
+          oC = -1;
+        for (let qC = this.indexStart; qC < this.indexStart + this.indexCount - (3 - QC); qC += QC) {
+          oC++;
+          const QC = ZC[qC],
+            FC = ZC[qC + 1],
+            WC = ZC[qC + 2];
+          if (wC && 4294967295 === WC) {
+            qC += 2;
+            continue
+          }
+          const NC = zC[QC],
+            MC = zC[FC],
+            gC = zC[WC];
+          if (!NC || !MC || !gC) continue;
+          if (nC && !nC(NC, MC, gC, CC, QC, FC, WC)) continue;
+          const SC = CC.intersectsTriangle(NC, MC, gC);
+          if (SC) {
+            if (SC.distance < 0) continue;
+            if ((bC || !fC || SC.distance < fC.distance) && (fC = SC, fC.faceId = oC, bC)) break
+          }
+        }
+        return fC
+      }
+      _intersectUnIndexedTriangles(CC, zC, ZC, QC, wC) {
+        let bC = null;
+        for (let nC = this.verticesStart; nC < this.verticesStart + this.verticesCount; nC += 3) {
+          const ZC = zC[nC],
+            fC = zC[nC + 1],
+            oC = zC[nC + 2];
+          if (wC && !wC(ZC, fC, oC, CC, -1, -1, -1)) continue;
+          const qC = CC.intersectsTriangle(ZC, fC, oC);
+          if (qC) {
+            if (qC.distance < 0) continue;
+            if ((QC || !bC || qC.distance < bC.distance) && (bC = qC, bC.faceId = nC / 3, QC)) break
+          }
+        }
+        return bC
+      }
+      _rebuild() {
+        this._linesIndexBuffer && (this._linesIndexBuffer = null)
+      }
+      clone(CC, zC) {
+        const ZC = new FC(this.materialIndex, this.verticesStart, this.verticesCount, this.indexStart, this.indexCount, CC, zC, !1);
+        if (!this.IsGlobal) {
+          const CC = this.WE();
+          if (!CC) return ZC;
+          ZC._boundingInfo = new nC.d(CC.minimum, CC.maximum)
+        }
+        return ZC
+      }
+      dispose() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._linesIndexBuffer && (this._mesh.Km().mg()._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null);
+        const zC = this._mesh.Zx.indexOf(this);
+        this._mesh.Zx.splice(zC, 1), this.resetDrawCache(void 0, CC)
+      }
+      getClassName() {
+        return "SubMesh"
+      }
+      static CreateFromIndices(CC, zC, ZC, QC, wC) {
+        let bC = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          nC = Number.MAX_VALUE,
+          fC = -Number.MAX_VALUE;
+        const oC = (wC || QC).CQC();
+        for (let qC = zC; qC < zC + ZC; qC++) {
+          const CC = oC[qC];
+          CC < nC && (nC = CC), CC > fC && (fC = CC)
+        }
+        return new FC(CC, nC, fC - nC + 1, zC, ZC, QC, wC, bC)
+      }
+    }(QC = FC.prototype).projectToRef ?? (QC.projectToRef = (0, qC.f)("SubMesh", "projectToRef"))
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

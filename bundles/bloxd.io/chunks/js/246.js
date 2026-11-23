@@ -1,701 +1,850 @@
 export const id = 246;
 export const ids = [246];
 export const modules = {
-  39374: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      default: () => gk
+  40923: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      openMobLineupPreview: () => sC,
+      openMobPreview: () => rC,
+      openPetPreview: () => TC
     });
-    ik(6310);
-    var Dk = ik(60),
-      fk = ik(39377),
-      Sk = ik(39651),
-      bk = ik(39774),
-      rk = ik(39813),
-      Pk = ik(39829),
-      mk = ik(36868),
-      Mk = ik(36690),
-      Kk = ik(39995),
-      xk = ik(40029),
-      nk = (ik(40055), ik(1207)),
-      Uk = ik(189),
-      Hk = ik(1172),
-      wk = ik(22),
-      lk = ik(2683),
-      pk = ik(1410),
-      yk = ik(1033),
-      Yk = ik(6306),
-      Lk = ik(6316),
-      Ck = ik(4394),
-      Ak = ik(1066);
-    const jk = 1.2,
-      sk = .2,
-      dk = .0066 * Math.PI / 180,
-      Vk = new Set(["Escape", "KeyG"]),
-      Fk = {
-        ArrowLeft: -1,
-        ArrowRight: 1
-      },
-      uk = "ArrowUp",
-      qk = new Set([...Object.keys(Fk), uk, "ArrowDown"]),
-      Ik = 32,
-      zk = 1,
-      Qk = 10,
-      vk = "F4",
-      Ek = "Period",
-      hk = Math.PI / 2 - .001,
-      ak = Math.PI / 6,
-      Wk = Math.PI / 6,
-      tk = 1.08,
-      Xk = [{
-        name: "X",
-        direction: [1, 0, 0],
-        colour: "#e5534b"
-      }, {
-        name: "Y",
-        direction: [0, 1, 0],
-        colour: "#57ab5a"
-      }, {
-        name: "Z",
-        direction: [0, 0, 1],
-        colour: "#539bf5"
-      }],
-      Bk = 24,
-      ck = 7,
-      Tk = 4,
-      Zk = .01,
-      Ok = 4;
+    var QC = ZC(39635),
+      wC = ZC(39902),
+      bC = ZC(40925),
+      nC = ZC(37138),
+      fC = ZC(36961),
+      oC = ZC(40076),
+      qC = ZC(40946),
+      FC = ZC(38300),
+      WC = ZC(37032),
+      NC = ZC(37014),
+      MC = ZC(36952),
+      gC = ZC(38206),
+      SC = ZC(38201),
+      pC = ZC(37934),
+      PC = ZC(37988),
+      GC = ZC(37959),
+      RC = ZC(37609),
+      AC = ZC(2753),
+      xC = ZC(37473);
+    ZC(40948), ZC(40308), ZC(40956);
+    const JC = 22,
+      IC = 13,
+      iC = Math.PI - Math.PI / 16,
+      vC = 6,
+      eC = Math.PI / 4;
+    let hC = null;
+    const KC = {},
+      YC = new Map;
 
-    function gk(kk) {
-      let {
-        heatmap: ek,
-        scale: ik,
-        fullyOpaqueFrom: zk,
-        bounds: ak,
-        fitBounds: Wk,
-        schematic: tk,
-        controls: Xk,
-        onStepTime: Bk,
-        onShowAllTime: ck,
-        onTogglePlaying: Tk,
-        getReadout: Ok = null
-      } = kk;
-      const {
-        t: gk
-      } = (0, Hk.D)(), {
-        clientEscMenuOptions: be
-      } = (0, wk.n)(["clientEscMenuOptions"]), me = (0, Dk.useRef)(null), Me = (0, Dk.useRef)(null), Ke = (0, Dk.useRef)(null), xe = (0, lk.c)(me), [ne, Ue] = (0, Dk.useState)(!1), [He, we] = (0, Dk.useState)(!1), [le, pe] = (0, Dk.useState)(!0), ye = (0, Dk.useRef)(!1), [Ye, Le] = (0, Dk.useState)(!1), Ce = He || !le && Ye, [Ae, je] = (0, Dk.useState)(!1), [se, de] = (0, Dk.useState)(!0), [Ve, Fe] = (0, Dk.useState)(null), ue = ak.min, [qe, Ie] = (0, Dk.useState)(ue);
-      qe[0] === ue[0] && qe[1] === ue[1] && qe[2] === ue[2] || (Ie(ue), null !== Ve && Fe({
-        ...Ve,
-        position: re(Ve.position, re(qe, Pe(ue, -1)))
-      }));
-      const ze = (0, Dk.useMemo)((() => function(kk) {
-          return [kk.max[0] - kk.min[0] + 1, kk.max[1] - kk.min[1] + 1, kk.max[2] - kk.min[2] + 1]
-        }(ak)), [ak]),
-        Qe = (0, Dk.useMemo)((() => function(kk, ek) {
-          const ik = [],
-            Dk = [];
-          for (const [fk, Sk] of Object.entries(kk.frequencies)) {
-            const kk = Number(fk);
-            for (const [fk, bk] of Object.entries(Sk)) {
-              const Sk = Number(fk);
-              for (const [fk, rk] of Object.entries(bk)) rk <= 0 || (ik.push(kk - ek[0], Sk - ek[1], Number(fk) - ek[2]), Dk.push(rk))
-            }
-          }
-          return {
-            positions: Int32Array.from(ik),
-            values: Float64Array.from(Dk),
-            count: Dk.length
-          }
-        }(ek, ue)), [ek, ue]),
-        ve = jk * be.cameraFOV / 100,
-        Ee = xe.height > 0 ? xe.width / xe.height : 1,
-        he = (0, Dk.useMemo)((() => function(kk, ek) {
-          return {
-            min: [kk.min[0] - ek[0], kk.min[1] - ek[1], kk.min[2] - ek[2]],
-            max: [kk.max[0] - ek[0] + 1, kk.max[1] - ek[1] + 1, kk.max[2] - ek[2] + 1]
-          }
-        }(Wk, ue)), [Wk, ue]),
-        ae = De(he, Ee, ve),
-        We = null !== Ve && void 0 !== Ve ? Ve : ae,
-        te = (0, Dk.useRef)({
-          fittedView: ae,
-          fieldOfView: ve,
-          mouseSensitivity: be.mouseSensitivity,
-          canLock: le
-        });
-      te.current = {
-        fittedView: ae,
-        fieldOfView: ve,
-        mouseSensitivity: be.mouseSensitivity,
-        canLock: le
-      };
-      const Xe = (0, Dk.useMemo)((() => {
-          if (!Ce) return null;
-          const kk = (kk, ik, Dk) => {
-              var fk, Sk, bk;
-              return null !== (fk = null === (Sk = ek.frequencies[kk + ue[0]]) || void 0 === Sk || null === (bk = Sk[ik + ue[1]]) || void 0 === bk ? void 0 : bk[Dk + ue[2]]) && void 0 !== fk ? fk : 0
-            },
-            Dk = function(kk, ek, ik, Dk) {
-              let fk = 0,
-                Sk = 1 / 0;
-              for (const Kk of [0, 1, 2]) {
-                if (0 === ek[Kk]) {
-                  if (kk[Kk] < 0 || kk[Kk] > ik[Kk]) return null;
-                  continue
-                }
-                const Dk = (0 - kk[Kk]) / ek[Kk],
-                  bk = (ik[Kk] - kk[Kk]) / ek[Kk];
-                fk = Math.max(fk, Math.min(Dk, bk)), Sk = Math.min(Sk, Math.max(Dk, bk))
-              }
-              if (fk > Sk) return null;
-              const bk = [0, 1, 2].map((Dk => Math.min(ik[Dk] - 1, Math.max(0, Math.floor(kk[Dk] + ek[Dk] * fk))))),
-                rk = [0, 1, 2].map((kk => Math.sign(ek[kk]))),
-                Pk = [0, 1, 2].map((ik => {
-                  if (0 === rk[ik]) return 1 / 0;
-                  return ((rk[ik] > 0 ? bk[ik] + 1 : bk[ik]) - kk[ik]) / ek[ik]
-                })),
-                mk = [0, 1, 2].map((kk => 0 === rk[kk] ? 1 / 0 : Math.abs(1 / ek[kk])));
-              let Mk = null;
-              for (;;) {
-                const kk = Dk(bk[0], bk[1], bk[2]);
-                if (kk >= 1) return bk;
-                kk > 0 && (Mk = [bk[0], bk[1], bk[2]]);
-                const ek = Pk[0] < Pk[1] ? Pk[0] < Pk[2] ? 0 : 2 : Pk[1] < Pk[2] ? 1 : 2;
-                if (Pk[ek] > Sk) return Mk;
-                if (bk[ek] += rk[ek], Pk[ek] += mk[ek], bk[ek] < 0 || bk[ek] >= ik[ek]) return Mk
-              }
-            }(We.position, ee(We), ze, ((ek, Dk, fk) => (0, Yk.z)(kk(ek, Dk, fk), ik, zk)));
-          return null === Dk ? null : {
-            x: Dk[0] + ue[0],
-            y: Dk[1] + ue[1],
-            z: Dk[2] + ue[2],
-            value: kk(Dk[0], Dk[1], Dk[2])
-          }
-        }), [Ce, ek, ue, We, ze, ik, zk]),
-        {
-          keyHandlers: Be
-        } = (0, Lk.e)({
-          isEnabled: Ce,
-          claimedKeyCodes: qk,
-          qx: kk => {
-            Fe((ek => function(kk, ek) {
-              const ik = [Math.sin(kk.heading), 0, Math.cos(kk.heading)],
-                Dk = re(re(Pe(ik, ek.forward), Pe(ie(kk.heading), ek.right)), [0, ek.up, 0]);
-              return {
-                ...kk,
-                position: re(kk.position, Dk)
-              }
-            }(null !== ek && void 0 !== ek ? ek : te.current.fittedView, kk)))
-          },
-          onZoomChange: je
-        });
-      (0, Dk.useEffect)((() => {
-        const kk = Me.current;
-        if (!kk) return;
-        let ek;
-        try {
-          ek = function(kk, ek) {
-            const ik = new fk.d(kk, !0, {
-                stencil: !1
-              }, !0),
-              Dk = new Sk.d(ik),
-              [nk, Uk, Hk] = Yk.R;
-            Dk.clearColor = new mk.e(nk / 255, Uk / 255, Hk / 255, 1);
-            const wk = new bk.d("Heatmap3DCamera", Mk.eH.Zero(), Dk);
-            wk.fov = ek, wk.minZ = .05;
-            const lk = new rk.c("Heatmap3DLight", new Mk.eH(.4, 1, -.6), Dk);
-            lk.diffuse = mk.Color3.White(), lk.groundColor = mk.Color3.Black(), lk.specular = mk.Color3.Black();
-            const pk = new Pk.StandardMaterial("Heatmap3DCellMaterial", Dk);
-            pk.diffuseColor = new mk.Color3(.4, .4, .4), pk.emissiveColor = new mk.Color3(.62, .62, .62), pk.specularColor = mk.Color3.Black();
-            const yk = (0, Kk.e)("Heatmap3DCells", {
-              size: 1
-            }, Dk);
-            yk.material = pk, yk.Pw = !1, yk.kH = !0, yk.isVisible = !1;
-            const Lk = (0, Kk.e)("Heatmap3DTranslucentCells", {
-              size: 1
-            }, Dk);
-            Lk.material = pk, Lk.hasVertexAlpha = !0, Lk.Pw = !1, Lk.kH = !0, Lk.isVisible = !1;
-            const Ck = new Pk.StandardMaterial("Heatmap3DSchematicMaterial", Dk);
-            Ck.diffuseColor = new mk.Color3(.6, .6, .6), Ck.emissiveColor = new mk.Color3(.4, .4, .4), Ck.specularColor = mk.Color3.Black();
-            const Ak = (0, Kk.e)("Heatmap3DSchematicBlocks", {
-              size: 1
-            }, Dk);
-            Ak.material = Ck, Ak.Pw = !1, Ak.kH = !0, Ak.isVisible = !1;
-            const jk = (0, xk.b)("Heatmap3DTarget", {
-              lines: ke([-.52, -.52, -.52], [.52, .52, .52])
-            }, Dk);
-            return jk.color = new mk.Color3(.06, .14, .23), jk.renderingGroupId = 1, jk.Pw = !1, jk.isVisible = !1, {
-              engine: ik,
-              bw: Dk,
-              camera: wk,
-              cells: yk,
-              translucentCells: Lk,
-              translucent: {
-                ci: new Float32Array(0),
-                colours: new Float32Array(0),
-                count: 0
-              },
-              translucentSortedFrom: null,
-              schematicBlocks: Ak,
-              targetOutline: jk,
-              chunkGrid: null,
-              chunkGridCentre: null,
-              chunkGridOrigin: null,
-              targetFieldOfView: ek,
-              needsRender: !0
-            }
-          }(kk, te.current.fieldOfView)
-        } catch (ik) {
-          return console.error("Failed to start the 3D heatmap", ik), void Ue(!0)
-        }
-        return Ke.current = ek, ek.engine.runRenderLoop((() => {
-          const kk = ek.camera;
-          kk.fov !== ek.targetFieldOfView && (kk.fov += (ek.targetFieldOfView - kk.fov) * (kk.fov > ek.targetFieldOfView ? .3 : .2), Math.abs(ek.targetFieldOfView - kk.fov) < 5e-4 && (kk.fov = ek.targetFieldOfView), ek.needsRender = !0), ek.needsRender && (ek.bw.render(), ek.needsRender = !ek.bw.isReady() || !ek.engine.areAllEffectsReady())
-        })), () => {
-          Ke.current = null, ek.engine.dispose()
-        }
-      }), []), (0, Dk.useEffect)((() => {
-        const kk = Me.current;
-        if (!kk) return;
-        const ek = () => {
-            ye.current = !1, we(document.pointerLockElement === kk)
-          },
-          ik = () => {
-            ye.current && (ye.current = !1, pe(!1))
-          },
-          Dk = ek => {
-            const ik = !te.current.canLock && document.activeElement === kk && 0 !== (1 & ek.buttons);
-            if (document.pointerLockElement !== kk && !ik) return;
-            const Dk = te.current.mouseSensitivity * dk;
-            Fe((kk => function(kk, ek, ik) {
-              const Dk = 2 * Math.PI;
-              return {
-                ...kk,
-                heading: ((kk.heading + ek) % Dk + Dk) % Dk,
-                pitch: Math.max(-hk, Math.min(hk, kk.pitch + ik))
-              }
-            }(null !== kk && void 0 !== kk ? kk : te.current.fittedView, ek.movementX * Dk, ek.movementY * Dk)))
-          };
-        return document.addEventListener("pointerlockchange", ek), document.addEventListener("pointerlockerror", ik), document.addEventListener("pointermove", Dk), () => {
-          document.removeEventListener("pointerlockchange", ek), document.removeEventListener("pointerlockerror", ik), document.removeEventListener("pointermove", Dk), document.pointerLockElement === kk && (0, Ck.d)()
-        }
-      }), []), (0, Dk.useEffect)((() => {
-        const kk = Ke.current;
-        null !== kk && 0 !== xe.width && 0 !== xe.height && (kk.engine.resize(), kk.needsRender = !0)
-      }), [xe.width, xe.height]), (0, Dk.useEffect)((() => {
-        const kk = Ke.current;
-        null !== kk && (kk.targetFieldOfView = ve * (Ae ? sk : 1))
-      }), [ve, Ae]), (0, Dk.useEffect)((() => {
-        const kk = Ke.current;
-        null !== kk && function(kk, ek, ik, Dk) {
-          const fk = [],
-            Sk = [],
-            bk = [],
-            rk = [];
-          for (let Pk = 0; Pk < ek.count; Pk++) {
-            const kk = ek.values[Pk],
-              mk = (0, Yk.z)(kk, ik, Dk);
-            if (mk <= 0) continue;
-            const [Mk, Kk, xk] = (0, Yk.r)((0, Yk.K)(kk, ik)), nk = mk >= 1;
-            (nk ? fk : bk).push(ek.positions[3 * Pk] + .5, ek.positions[3 * Pk + 1] + .5, ek.positions[3 * Pk + 2] + .5), (nk ? Sk : rk).push(Mk / 255, Kk / 255, xk / 255, mk)
-          }
-          Rk(kk.cells, Float32Array.from(fk), Float32Array.from(Sk), Sk.length / 4), kk.translucent = {
-            ci: Float32Array.from(bk),
-            colours: Float32Array.from(rk),
-            count: rk.length / 4
-          }, kk.translucentSortedFrom = null, Jk(kk), kk.needsRender = !0
-        }(kk, Qe, ik, zk)
-      }), [Qe, ik, zk]), (0, Dk.useEffect)((() => {
-        const kk = Ke.current;
-        null !== kk && function(kk, ek) {
-          kk.chunkGridOrigin = ek, kk.chunkGridCentre = null, Nk(kk)
-        }(kk, ak.min)
-      }), [ak]), (0, Dk.useEffect)((() => {
-        const kk = Ke.current;
-        null !== kk && function(kk, ek, ik) {
-          const Dk = [],
-            fk = [];
-          if (null !== ek) {
-            const {
-              positions: kk,
-              colours: Sk,
-              count: bk
-            } = ek.surface;
-            for (let ek = 0; ek < bk; ek++) {
-              const bk = [kk[3 * ek], kk[3 * ek + 1], kk[3 * ek + 2]];
-              [0, 1, 2].every((kk => bk[kk] >= ik.min[kk] - Ik && bk[kk] <= ik.max[kk] + Ik)) && (Dk.push(bk[0] - ik.min[0] + .5, bk[1] - ik.min[1] + .5, bk[2] - ik.min[2] + .5), fk.push(Sk[3 * ek] / 255, Sk[3 * ek + 1] / 255, Sk[3 * ek + 2] / 255, 1))
-            }
-          }
-          Rk(kk.schematicBlocks, Float32Array.from(Dk), Float32Array.from(fk), fk.length / 4), kk.needsRender = !0
-        }(kk, tk, ak)
-      }), [tk, ak]), (0, Dk.useEffect)((() => {
-        const kk = Ke.current;
-        null !== kk && null !== kk.chunkGrid && (kk.chunkGrid.isVisible = se, kk.needsRender = !0)
-      }), [se, ak]), (0, Dk.useEffect)((() => {
-        const kk = Ke.current;
-        null !== kk && function(kk, ek, ik) {
-          const {
-            camera: Dk
-          } = kk;
-          Dk.position.set(ek.position[0], ek.position[1], ek.position[2]), Dk.rotation.set(ek.pitch, ek.heading, 0);
-          const fk = (Qk + 1) * Uk.g.oU * Math.sqrt(3);
-          Dk.maxZ = Math.max(fk, Math.hypot(...re(ek.position, Pe(Se({
-            min: [0, 0, 0],
-            max: ik
-          }), -1))) + 2 * Math.hypot(...ik)), Nk(kk), Jk(kk), kk.needsRender = !0
-        }(kk, We, ze)
-      }), [We, ze]), (0, Dk.useEffect)((() => {
-        const kk = Ke.current;
-        null !== kk && (kk.targetOutline.isVisible = null !== Xe, null !== Xe && kk.targetOutline.position.set(Xe.x - ue[0] + .5, Xe.y - ue[1] + .5, Xe.z - ue[2] + .5), kk.needsRender = !0)
-      }), [Xe, ue]);
-      return (0, Ak.jsxs)("div", {
-        className: "StudioHeatmapMap StudioHeatmap3D",
-        ref: me,
-        children: [(0, Ak.jsx)("canvas", {
-          className: "StudioHeatmapMapCanvas",
-          ref: Me,
-          style: {
-            width: `${xe.width}px`,
-            height: `${xe.height}px`
-          },
-          tabIndex: 0,
-          "aria-label": gk("3D heatmap"),
-          onClick: () => {
-            const kk = Me.current;
-            if (null === kk) return;
-            if (kk.focus({
-                preventScroll: !0
-              }), He || !le) return;
-            const ek = kk.requestPointerLock();
-            ek instanceof Promise ? ek.catch((kk => {
-              kk instanceof DOMException && ("WrongDocumentError" === kk.name || "NotSupportedError" === kk.name) && pe(!1)
-            })) : ye.current = !0
-          },
-          ...Be,
-          onKeyDown: kk => {
-            if (Ce && Vk.has(kk.code)) return kk.preventDefault(), void(() => {
-              const kk = Me.current;
-              null !== kk && document.pointerLockElement === kk ? (0, Ck.d)() : null === kk || void 0 === kk || kk.blur()
-            })();
-            const ek = Fk[kk.code];
-            return Ce && void 0 !== ek ? (kk.preventDefault(), void Bk(ek)) : Ce && (0, Lk.b)("replayPlayPause", kk.code) && !(0, Lk.b)("Zoom", kk.code) ? (kk.preventDefault(), void(kk.repeat || Tk())) : Ce && kk.code === uk ? (kk.preventDefault(), void ck()) : Ce && kk.code === Ek ? (kk.preventDefault(), void Fe(null)) : Ce && kk.code === vk ? (kk.preventDefault(), void de((kk => !kk))) : void Be.onKeyDown(kk)
-          },
-          onFocus: () => {
-            Le(!0)
-          },
-          onBlur: () => {
-            Le(!1), Be.onBlur()
-          }
-        }), ne && (0, Ak.jsx)("div", {
-          className: "StudioHeatmap3DUnavailable SmallTextLight",
-          children: gk("3D view isn't available in this browser.")
-        }), Ce && (0, Ak.jsx)("div", {
-          className: "StudioHeatmap3DCrosshair"
-        }), (0, Ak.jsx)("div", {
-          className: "StudioHeatmap3DCoordinates SmallTextLight",
-          children: We.position.map(((kk, ek) => (kk + ue[ek]).toFixed(2))).join(" ")
-        }), se && (0, Ak.jsx)(Gk, {
-          heading: We.heading,
-          pitch: We.pitch,
-          onViewFrom: kk => {
-            const ek = Pe(kk, -1),
-              ik = 0 === ek[1] ? {
-                heading: Math.atan2(ek[0], ek[2]),
-                pitch: 0
-              } : {
-                heading: We.heading,
-                pitch: ek[1] < 0 ? hk : -hk
-              };
-            Fe(De(he, Ee, ve, ik))
-          },
-          onTurn: (kk, ek) => {
-            Fe((ik => function(kk, ek, ik, Dk) {
-              return fe(kk, ek, {
-                heading: kk.heading + ik * Zk,
-                pitch: Math.max(-hk, Math.min(hk, kk.pitch + Dk * Zk))
-              })
-            }(null !== ik && void 0 !== ik ? ik : te.current.fittedView, Se(he), kk, ek)))
-          },
-          onFlip: () => {
-            Fe((kk => function(kk, ek) {
-              return fe(kk, ek, {
-                heading: kk.heading + Math.PI,
-                pitch: -kk.pitch
-              })
-            }(null !== kk && void 0 !== kk ? kk : te.current.fittedView, Se(he))))
-          }
-        }), null !== Xe && (0, Ak.jsx)("div", {
-          className: "StudioHeatmapMapReadout SmallTextLight",
-          children: null === Ok ? gk("studio:heatmapBlockReadout", {
-            x: Xe.x,
-            y: Xe.y,
-            z: Xe.z,
-            count: (0, nk.Q)(Xe.value)
-          }) : Ok(Xe.x, Xe.y, Xe.z, Xe.value)
-        }), (0, Ak.jsxs)("div", {
-          className: "StudioHeatmapMapControls",
-          children: [Xk, (0, Ak.jsx)(pk.X, {
-            active: null === Ve,
-            onClick: () => {
-              Fe(null)
-            },
-            children: (0, Ak.jsx)(yk.d, {
-              name: "eye"
-            })
-          })]
-        })]
-      })
+    function dC() {
+      if (null !== hC) return hC;
+      const CC = document.createElement("canvas");
+      CC.classList.add("MobPreviewCanvas");
+      const zC = new QC.d(CC, !0, {
+        preserveDrawingBuffer: !0
+      });
+      zC.BZC = (0, AC.e)().Vg.engine.BZC;
+      const ZC = new wC.e(zC);
+      ZC.clearColor = new nC.e(0, 0, 0, 0), ZC.ambientColor = new nC.Color3(1, 1, 1);
+      const qC = new bC.d("cp", Math.PI / 2, Math.PI / 2, JC, fC.Eg.Zero(), ZC),
+        FC = new oC.e("light", new fC.Eg(-.1, 1, -.3), ZC);
+      return FC.diffuse = new nC.Color3(1, 1, 1), FC.specular = new nC.Color3(1, 1, 1), FC.groundColor = new nC.Color3(.5, .5, .5), hC = {
+        engine: zC,
+        sS: ZC,
+        canvas: CC,
+        camera: qC
+      }, hC
     }
 
-    function Gk(kk) {
+    function mC(CC) {
+      return KC[CC] ??= (0, pC.t)(CC, dC().sS, !0).catch((zC => {
+        throw delete KC[CC], zC
+      })), KC[CC]
+    }
+
+    function HC(CC) {
+      let zC = YC.get(CC);
+      return zC || (zC = RC.x[CC].loadModel(dC().sS, !1).then((CC => (CC.IK(!1), CC)), (zC => {
+        throw YC.delete(CC), zC
+      })), YC.set(CC, zC)), zC
+    }
+
+    function EC(CC) {
+      var zC, ZC, QC;
       let {
-        heading: ek,
-        pitch: ik,
-        onViewFrom: fk,
-        onTurn: Sk,
-        onFlip: bk
-      } = kk;
+        mobType: wC,
+        variation: bC,
+        animation: nC
+      } = CC, oC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, JC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const vC = null !== (zC = null === oC || void 0 === oC ? void 0 : oC.size) && void 0 !== zC ? zC : 1,
+        eC = null !== (ZC = null === oC || void 0 === oC ? void 0 : oC.cosmetics) && void 0 !== ZC ? ZC : [],
+        hC = null !== (QC = null === oC || void 0 === oC ? void 0 : oC.Hx) && void 0 !== QC ? QC : null;
+      let KC = !1,
+        YC = null,
+        EC = null;
       const {
-        t: rk
-      } = (0, Hk.D)(), Pk = (0, Dk.useRef)(null), mk = ee({
-        heading: ek,
-        pitch: ik
-      }), Mk = ie(ek), Kk = Me(mk, Mk), xk = Bk + ck + 2, nk = Xk.flatMap((kk => [1, -1].map((ek => {
-        const ik = Pe(kk.direction, ek);
-        return {
-          ...kk,
-          sign: ek,
-          direction: ik,
-          endX: xk + me(ik, Mk) * Bk,
-          endY: xk - me(ik, Kk) * Bk,
-          depth: me(ik, mk)
-        }
-      })))).sort(((kk, ek) => ek.depth - kk.depth));
-      return (0, Ak.jsxs)("svg", {
-        className: "StudioHeatmap3DGizmo",
-        width: 2 * xk,
-        height: 2 * xk,
-        "aria-hidden": !0,
-        onPointerDown: kk => {
-          var ek, ik;
-          kk.currentTarget.setPointerCapture(kk.pointerId);
-          const Dk = kk.target,
-            fk = Dk.getAttribute("data-end");
-          Pk.current = {
-            pointerId: kk.pointerId,
-            x: kk.clientX,
-            y: kk.clientY,
-            travel: 0,
-            side: null === fk ? null : null !== (ek = null === (ik = nk[Number(fk)]) || void 0 === ik ? void 0 : ik.direction) && void 0 !== ek ? ek : null,
-            isOnMiddle: Dk.hasAttribute("data-middle")
+        engine: lC,
+        sS: XC
+      } = dC(), cC = XC.onBeforeRenderObservable.add((() => {
+        var CC;
+        null === (CC = EC) || void 0 === CC || CC.render(lC.getDeltaTime())
+      })), uC = null === hC ? null : HC(hC).catch((CC => (console.error(`Mob preview: could not load ${hC}`, CC), null)));
+      return Promise.all([mC(wC), uC]).then((CC => {
+        var zC, ZC, QC;
+        let [oC, mC] = CC;
+        if (KC) return;
+        const HC = (0, AC.e)().Vg.nH,
+          {
+            hitBoxDimensions: lC
+          } = (0, FC.e)(wC),
+          XC = IC / Math.max(lC.height, lC.width);
+        if (YC = (0, pC.l)(wC, XC * vC, !0, !0), HC.setPosition(YC, JC, -lC.height * XC / 2, 0), HC.setRotationEulerY(YC, iC), oC.meshApi instanceof GC.d && eC.length > 0)
+          for (const [wC, bC] of eC) oC.meshApi.updatePlayerCosmetic(null, YC, wC, bC, !0);
+        else oC.meshApi.updateVariation(YC, wC, null !== bC && void 0 !== bC ? bC : "default");
+        null !== hC && null !== mC && function(CC, zC, ZC, QC) {
+          var wC;
+          const bC = RC.x[CC],
+            nC = (0, gC.h)();
+          (0, gC.d)(bC, null === (wC = (0, PC.b)(ZC).meshMetadata.heldItemPositionParams) || void 0 === wC ? void 0 : wC.itemOffset, nC);
+          const oC = xC.c * nC.sq.y,
+            FC = nC.usesQuaternion ? nC.quaternion : fC.Quaternion.FromEulerVector(nC.rotation),
+            WC = new qC.c(`${zC.name}Hand`, dC().sS);
+          WC.position.Av((0, SC.b)(nC.position, FC, oC, bC.heldModelOffsetY())), WC.rotationQuaternion = FC, WC.sq.set(nC.sq.x, oC, nC.sq.z), zC.clone(`${zC.name}Held`, WC).IK(!0);
+          const NC = (0, AC.e)().Vg.nH;
+          NC.attachTransformNode(WC, QC, NC.getNamedNode(QC, "ArmRightMesh"))
+        }(hC, mC, wC, YC), HC.set(YC, "aOpacity", 1);
+        const cC = null !== (zC = (0, PC.b)(wC).meshMetadata.lifeformTypeForModelOverride) && void 0 !== zC ? zC : wC;
+        EC = new MC.AnimatorState, EC.thinInstMgr = HC, EC.WH = YC, EC.AZC = HC.OZC(YC, 0), EC.modelLifeformType = cC, EC.nodeNameAliases = null !== (ZC = null === (QC = (0, WC.b)(cC)) || void 0 === QC ? void 0 : QC.nodeNameAliases) && void 0 !== ZC ? ZC : null, EC.startAnimation(nC, NC.d.Movement)
+      })).catch((CC => {
+        console.error(`Mob preview: could not load ${wC}`, CC)
+      })), () => {
+        KC = !0, XC.onBeforeRenderObservable.remove(cC), null !== YC && (0, AC.e)().Vg.nH.delete(YC)
+      }
+    }
+
+    function lC(CC, zC) {
+      return EC({
+        mobType: "NPC",
+        variation: null,
+        animation: CC.animation
+      }, CC, zC)
+    }
+
+    function XC(CC) {
+      let {
+        mobType: zC,
+        variation: ZC,
+        metaInfo: QC,
+        tamed: wC
+      } = CC, bC = !1, nC = null, fC = 0;
+      const oC = (0, AC.e)(),
+        qC = oC.Vg.nH,
+        FC = CC => {
+          fC += eC * (CC / 1e3) % (2 * Math.PI), qC.setRotationEulerY(nC, fC)
+        };
+      return mC(zC).then((CC => {
+        if (bC) return;
+        nC = (0, pC.l)(zC, vC, !0, !0), qC.setPosition(nC, 0, -vC, 0), CC.meshApi.updateVariation(nC, zC, ZC);
+        const fC = {
+          wool: "Sheared" !== QC,
+          saddle: "Saddled" === QC,
+          antlers: "Antlers" === QC,
+          collar: wC
+        };
+        for (const [zC, ZC] of Object.entries(fC)) qC.hasGroup(nC, zC) && CC.meshApi.setMeshGroupVisibility(nC, zC, ZC);
+        qC.set(nC, "aOpacity", 1), oC.on("renderTickBegin", FC)
+      })).catch((CC => {
+        console.error(`Pet preview: could not load ${zC}`, CC)
+      })), () => {
+        bC = !0, oC.off("renderTickBegin", FC), null !== nC && qC.delete(nC)
+      }
+    }
+    class cC {
+      constructor(CC, zC) {
+        this.place = zC, this.remove = null;
+        const {
+          engine: ZC,
+          sS: QC,
+          canvas: wC
+        } = dC();
+        CC.appendChild(wC), ZC.resize(), ZC.runRenderLoop((() => {
+          QC.render()
+        }))
+      }
+      show(CC) {
+        var zC;
+        null === (zC = this.remove) || void 0 === zC || zC.call(this), this.remove = this.place(CC)
+      }
+      resize(CC, zC) {
+        const {
+          engine: ZC,
+          canvas: QC
+        } = dC();
+        QC.width = CC, QC.height = zC, ZC.resize()
+      }
+      close() {
+        var CC;
+        dC().engine.stopRenderLoop(), null === (CC = this.remove) || void 0 === CC || CC.call(this), this.remove = null
+      }
+    }
+    class uC {
+      constructor(CC) {
+        this.preview = void 0, this.view = {
+          figures: [],
+          shown: []
+        }, this.aspect = 1, this.placed = [], this.preview = new cC(CC, (() => () => {}))
+      }
+      show(CC) {
+        CC.figures !== this.view.figures && this.preload(CC.figures), this.view = CC, this.place()
+      }
+      resize(CC, zC) {
+        this.preview.resize(CC, zC), this.aspect = CC / zC, this.place()
+      }
+      close() {
+        this.preview.close();
+        for (const CC of this.placed) null === CC || void 0 === CC || CC.remove();
+        this.placed = []
+      }
+      preload(CC) {
+        const zC = () => {};
+        mC("NPC").catch(zC);
+        for (const {
+            Hx: ZC
           }
-        },
-        onPointerMove: kk => {
-          const ek = Pk.current;
-          if (null === ek || ek.pointerId !== kk.pointerId) return;
-          const ik = kk.clientX - ek.x,
-            Dk = kk.clientY - ek.y;
-          ek.x = kk.clientX, ek.y = kk.clientY, ek.travel += Math.abs(ik) + Math.abs(Dk), ek.travel >= Ok && Sk(ik, Dk)
-        },
-        onPointerUp: kk => {
-          const ek = Pk.current;
-          Pk.current = null, null === ek || ek.pointerId !== kk.pointerId || ek.travel >= Ok || (null !== ek.side ? fk(ek.side) : ek.isOnMiddle && bk())
-        },
-        onPointerCancel: () => {
-          Pk.current = null
-        },
-        children: [nk.map(((kk, ek) => {
-          const ik = kk.sign > 0;
-          return (0, Ak.jsxs)("g", {
-            children: [(0, Ak.jsx)("line", {
-              x1: xk,
-              y1: xk,
-              x2: kk.endX,
-              y2: kk.endY,
-              stroke: kk.colour,
-              strokeOpacity: ik ? 1 : .5,
-              strokeWidth: 2,
-              strokeLinecap: "round"
-            }), (0, Ak.jsx)("circle", {
-              className: "StudioHeatmap3DGizmoEnd",
-              "data-end": ek,
-              cx: kk.endX,
-              cy: kk.endY,
-              r: ik ? ck : ck - 1,
-              fill: kk.colour,
-              fillOpacity: ik ? 1 : .3,
-              stroke: kk.colour,
-              strokeWidth: ik ? 0 : 1.5,
-              children: (0, Ak.jsx)("title", {
-                children: `${rk("View from")} ${ik?"+":"\u2212"}${kk.name}`
-              })
-            }), ik && (0, Ak.jsx)("text", {
-              pointerEvents: "none",
-              x: kk.endX,
-              y: kk.endY,
-              fill: "#151515",
-              fontSize: 9,
-              fontWeight: "bold",
-              textAnchor: "middle",
-              dominantBaseline: "central",
-              children: kk.name
-            })]
-          }, `${ik?"+":"-"}${kk.name}`)
-        })), (0, Ak.jsx)("circle", {
-          className: "StudioHeatmap3DGizmoEnd",
-          "data-middle": !0,
-          cx: xk,
-          cy: xk,
-          r: Tk,
-          fill: "#d0d0d0",
-          fillOpacity: .85,
-          children: (0, Ak.jsx)("title", {
-            children: rk("View from the opposite side")
+          of CC) null !== ZC && HC(ZC).catch(zC)
+      }
+      place() {
+        const {
+          figures: CC,
+          shown: zC
+        } = this.view, ZC = CC.map(((ZC, QC) => {
+          var wC;
+          const bC = null !== (wC = this.placed[QC]) && void 0 !== wC ? wC : null;
+          if (!zC[QC]) return null === bC || void 0 === bC || bC.remove(), null;
+          const nC = (fC = (QC + .5) / CC.length, oC = this.aspect, (.5 - fC) * (2 * JC * Math.tan(dC().camera.fov / 2)) * oC);
+          var fC, oC;
+          return null !== bC && bC.figure === ZC && bC.x === nC ? bC : (null === bC || void 0 === bC || bC.remove(), {
+            figure: ZC,
+            x: nC,
+            remove: lC(ZC, nC)
           })
-        })]
+        }));
+        for (const QC of this.placed.slice(CC.length)) null === QC || void 0 === QC || QC.remove();
+        this.placed = ZC
+      }
+    }
+
+    function rC(CC) {
+      return new cC(CC, EC)
+    }
+
+    function sC(CC) {
+      return new uC(CC)
+    }
+
+    function TC(CC) {
+      return new cC(CC, XC)
+    }
+  },
+  38623: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => NC
+    });
+    var QC = ZC(37044),
+      wC = ZC(37059),
+      bC = ZC(37301),
+      nC = ZC(37061),
+      fC = ZC(37050);
+
+    function oC(CC) {
+      return `\n\t\t\t\t${(0,fC.u)(CC,"mat2","rotate",[{name:"ang",type:"float"}],`\
+      n\ t\ t\ t\ t\ t$ {
+        (0, fC.w)(CC, "float", "s", "sin(ang)")
+      }\
+      n\ t\ t\ t\ t\ t$ {
+        (0, fC.w)(CC, "float", "c", "cos(ang)")
+      }\
+      n\ t\ t\ t\ t\ treturn $ {
+        (0, fC.l)(CC, "mat2", "c", "s", "-s", "c")
+      };\
+      n\ t\ t\ t\ t`)}\n\t\t\t`
+    }
+
+    function qC(CC, zC) {
+      let ZC = (0, fC.ob)(CC, "skele" + (zC - 1));
+      for (let wC = zC - 2; wC >= 0; wC--) ZC = (0, fC.fb)(CC, `boneIdx == ${wC}`, (0, fC.ob)(CC, `skele${wC}`), ZC);
+      const QC = "bone.yz + rotate(bone.x) * pivot - pivot";
+      return `\n\t\t\t\t${(0,fC.w)(CC,"int","boneIdx",(0,fC.jb)(CC,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,fC.w)(CC,"vec3","bone",ZC)}\n\t\t\t\t${(0,fC.w)(CC,"vec2","pivot",(0,fC.l)(CC,"vec2","0.0",`${(0,fC.wb)(CC,"position")}.z`))}\n\t\t\t\t${(0,fC.S)(CC)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${QC}));`:`positionUpdated.yz += ${QC};`}\n\t\t`
+    }
+
+    function FC(CC) {
+      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,fC.l)(CC,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
+    }
+    const WC = {
+        x: 0,
+        y: 0,
+        z: 0,
+        azC(CC, zC) {
+          return this.x = CC[zC], this.y = CC[zC + 1], this.z = CC[zC + 2], this
+        }
+      },
+      NC = {
+        name: "Cape",
+        className: "CapeMaterialPlugin",
+        priority: 200,
+        defines: (CC, zC) => ({
+          ...(0, QC.b)("CAPE"),
+          BLOXD_CAPE_BONES: `${CC}`,
+          BLOXD_CAPE_MAX_Y: (0, wC.vb)(zC)
+        }),
+        getUniforms(CC) {
+          return (0, bC.d)(function(CC) {
+            const zC = [];
+            for (let ZC = 0; ZC < CC; ZC++) zC.push({
+              name: `skele${ZC}`,
+              type: "highp vec3"
+            });
+            return zC
+          }(this.skeleLen), "vertex", CC)
+        },
+        bind(CC) {
+          for (let zC = 0; zC < this.skeleLen; zC++) CC.updateVector3(`skele${zC}`, WC.azC(this.skele, 3 * zC))
+        },
+        uniformsVersion() {
+          return this.bonesVersion
+        },
+        getCustomCode(CC, zC) {
+          return "vertex" !== CC ? null : {
+            CUSTOM_VERTEX_DEFINITIONS: oC(zC),
+            CUSTOM_VERTEX_UPDATE_POSITION: qC(zC, this.skeleLen),
+            CUSTOM_VERTEX_UPDATE_NORMAL: FC(zC)
+          }
+        }
+      };
+    (0, nC.o)(NC)
+  },
+  38517: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => FC,
+      c: () => WC
+    });
+    var QC = ZC(37044),
+      wC = ZC(37301),
+      bC = ZC(37050),
+      nC = ZC(37061);
+    const fC = "bloxdTextLodBias",
+      oC = [{
+        name: fC,
+        type: "float"
+      }],
+      qC = "bloxdTextSample",
+      FC = {
+        planes: -.5,
+        boards: -.5
+      },
+      WC = {
+        name: "TextSampler",
+        className: "TextSamplerMaterialPlugin",
+        priority: 60,
+        defines: () => (0, QC.b)("TEXT_SAMPLER"),
+        getUniforms: CC => (0, wC.d)(oC, "fragment", CC),
+        bind(CC) {
+          CC.updateFloat(fC, this.lodBias)
+        },
+        uniformsVersion: () => 0,
+        getCustomCode(CC, zC) {
+          if ("fragment" !== CC) return null;
+          const ZC = (0, bC.B)(zC, `vec4 ${qC}(sampler2D s, vec2 uv, float bias)`, `fn ${qC}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
+            QC = (0, bC.B)(zC, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
+            wC = `${(0,bC.J)(zC,"vDiffuseUV")} + uvOffset`,
+            nC = (0, bC.B)(zC, `${qC}(diffuseSampler, ${wC}, ${(0,bC.ob)(zC,fC)})`, `${qC}(diffuseSampler, diffuseSamplerSampler, ${wC}, ${(0,bC.ob)(zC,fC)})`);
+          return {
+            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${ZC} {\n\t\t\t\t\t${(0,bC.w)(zC,"vec4","texel",QC)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,bC.l)(zC,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,bC.l)(zC,"vec3","0.0")}, ${(0,bC.l)(zC,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
+            [(0, bC.x)(zC)]: `baseColor = ${nC};`
+          }
+        }
+      };
+    (0, nC.o)(WC)
+  },
+  40956: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      CapeMaterialPlugin: () => AC,
+      HueTintMaterialPlugin: () => xC,
+      LifeformMaterialPlugin: () => JC,
+      OverlayMaterialPlugin: () => IC
+    });
+    var QC = ZC(40958),
+      wC = ZC(37849);
+    class bC extends((0, QC.g)(wC.e)) {}(0, QC.i)(wC.e, bC);
+    var nC = ZC(37040);
+    class fC extends((0, QC.g)(nC.f)) {}(0, QC.i)(nC.f, fC);
+    var oC = ZC(37677);
+    class qC extends((0, QC.g)(oC.d)) {}(0, QC.i)(oC.d, qC);
+    var FC = ZC(37290),
+      WC = ZC(40092),
+      NC = ZC(37285);
+    class MC extends((0, QC.g)(NC.d)) {
+      constructor(CC, zC, ZC) {
+        super(CC, zC, ZC), (0, FC.g)(CC)
+      }
+      dispose(CC) {
+        (0, FC.k)(this._material), super.dispose(CC)
+      }
+    }(0, QC.i)(NC.d, MC), (0, NC.f)({
+      disableUnusedSpecularTerm: QC.c,
+      isLightingDisabled: CC => CC instanceof WC.StandardMaterial && CC.disableLighting
+    });
+    var gC = ZC(38517);
+    class SC extends((0, QC.g)(gC.c)) {}(0, QC.i)(gC.c, SC);
+    var pC = ZC(38623),
+      PC = ZC(37149),
+      GC = ZC(37973),
+      RC = ZC(37086);
+    class AC extends((0, QC.g)(pC.e)) {}(0, QC.i)(pC.e, AC);
+    class xC extends((0, QC.g)(PC.b)) {}(0, QC.i)(PC.b, xC);
+    class JC extends((0, QC.g)(GC.q)) {}(0, QC.i)(GC.q, JC);
+    class IC extends((0, QC.g)(RC.e)) {}(0, QC.i)(RC.e, IC)
+  },
+  40958: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => TC,
+      g: () => GC,
+      i: () => LC
+    });
+    var QC = ZC(40092),
+      wC = ZC(40963),
+      bC = ZC(40994),
+      nC = ZC(40968),
+      fC = ZC(37648),
+      oC = ZC(37660),
+      qC = ZC(37666),
+      FC = ZC(37670),
+      WC = ZC(37076),
+      NC = ZC(37083),
+      MC = ZC(40970),
+      gC = ZC(37061),
+      SC = ZC(37063),
+      pC = ZC(37050);
+
+    function PC(CC, zC) {
+      return Object.assign((function(CC, ZC, QC, wC) {
+        return zC(this.featureState, CC, ZC, QC, wC)
+      }), {
+        Qg: CC
       })
     }
 
-    function Nk(kk) {
-      var ek, ik, Dk;
-      const {
-        chunkGridOrigin: fk,
-        camera: Sk
-      } = kk;
-      if (null === fk) return;
-      const bk = [Sk.position.x, Sk.position.y, Sk.position.z],
-        rk = [0, 2].map((kk => Math.floor((bk[kk] + fk[kk]) / Uk.g.oU))),
-        Pk = kk.chunkGridCentre;
-      if (null !== Pk && Pk.every(((kk, ek) => kk === rk[ek]))) return;
-      const Kk = null === (ek = null === (ik = kk.chunkGrid) || void 0 === ik ? void 0 : ik.isVisible) || void 0 === ek || ek;
-      null === (Dk = kk.chunkGrid) || void 0 === Dk || Dk.dispose();
-      const [nk, Hk] = [0, 2].map(((kk, ek) => {
-        const ik = [];
-        for (let Dk = rk[ek] - Qk; Dk <= rk[ek] + Qk + 1; Dk++) ik.push(Dk * Uk.g.oU - fk[kk]);
-        return ik
-      })), wk = -fk[1], lk = [];
-      for (const mk of Hk) lk.push([new Mk.eH(nk[0], wk, mk), new Mk.eH(nk[nk.length - 1], wk, mk)]);
-      for (const mk of nk) lk.push([new Mk.eH(mk, wk, Hk[0]), new Mk.eH(mk, wk, Hk[Hk.length - 1])]);
-      const pk = (0, xk.b)("Heatmap3DChunkGrid", {
-        lines: lk
-      }, kk.bw);
-      pk.color = new mk.Color3(.45, .6, .78), pk.Pw = !1, pk.isVisible = Kk, kk.chunkGrid = pk, kk.chunkGridCentre = rk, kk.needsRender = !0
-    }
-
-    function Rk(kk, ek, ik, Dk) {
-      kk.i6("matrix", function(kk, ek) {
-        const ik = new Float32Array(16 * ek);
-        for (let Dk = 0; Dk < ek; Dk++) {
-          const ek = 16 * Dk;
-          ik[ek] = 1, ik[ek + 5] = 1, ik[ek + 10] = 1, ik[ek + 12] = kk[3 * Dk], ik[ek + 13] = kk[3 * Dk + 1], ik[ek + 14] = kk[3 * Dk + 2], ik[ek + 15] = 1
-        }
-        return ik
-      }(ek, Dk), 16, !0), kk.i6("color", ik, 4, !0), kk.isVisible = Dk > 0
-    }
-
-    function Jk(kk) {
-      const {
-        camera: ek,
-        translucent: ik
-      } = kk, Dk = [ek.position.x, ek.position.y, ek.position.z], fk = kk.translucentSortedFrom;
-      if (null !== fk && Math.hypot(Dk[0] - fk[0], Dk[1] - fk[1], Dk[2] - fk[2]) < zk) return;
-      kk.translucentSortedFrom = Dk;
-      const Sk = new Float64Array(ik.count),
-        bk = new Uint32Array(ik.count);
-      for (let mk = 0; mk < ik.count; mk++) {
-        const kk = ik.ci[3 * mk] - Dk[0],
-          ek = ik.ci[3 * mk + 1] - Dk[1],
-          fk = ik.ci[3 * mk + 2] - Dk[2];
-        Sk[mk] = kk * kk + ek * ek + fk * fk, bk[mk] = mk
-      }
-      bk.sort(((kk, ek) => Sk[ek] - Sk[kk]));
-      const rk = new Float32Array(3 * ik.count),
-        Pk = new Float32Array(4 * ik.count);
-      bk.forEach(((kk, ek) => {
-        rk.set(ik.ci.subarray(3 * kk, 3 * kk + 3), 3 * ek), Pk.set(ik.colours.subarray(4 * kk, 4 * kk + 4), 4 * ek)
-      })), Rk(kk.translucentCells, rk, Pk, ik.count), kk.needsRender = !0
-    }
-
-    function ke(kk, ek) {
-      const ik = (ik, Dk, fk) => new Mk.eH(0 === ik ? kk[0] : ek[0], 0 === Dk ? kk[1] : ek[1], 0 === fk ? kk[2] : ek[2]),
-        Dk = [];
-      for (const fk of [0, 1])
-        for (const kk of [0, 1]) Dk.push([ik(0, fk, kk), ik(1, fk, kk)], [ik(fk, 0, kk), ik(fk, 1, kk)], [ik(fk, kk, 0), ik(fk, kk, 1)]);
-      return Dk
-    }
-
-    function ee(kk) {
-      return [Math.sin(kk.heading) * Math.cos(kk.pitch), -Math.sin(kk.pitch), Math.cos(kk.heading) * Math.cos(kk.pitch)]
-    }
-
-    function ie(kk) {
-      return [Math.cos(kk), 0, -Math.sin(kk)]
-    }
-
-    function De(kk, ek, ik) {
-      let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-        heading: ak,
-        pitch: Wk
-      };
-      const fk = [kk.max[0] - kk.min[0], kk.max[1] - kk.min[1], kk.max[2] - kk.min[2]],
-        Sk = ee(Dk),
-        bk = ie(Dk.heading),
-        rk = Me(Sk, bk),
-        Pk = Math.tan(ik / 2),
-        mk = Pk * ek;
-      let Mk = 1;
-      for (const Kk of [-fk[0] / 2, fk[0] / 2])
-        for (const kk of [-fk[1] / 2, fk[1] / 2])
-          for (const ek of [-fk[2] / 2, fk[2] / 2]) {
-            const ik = [Kk, kk, ek],
-              Dk = me(ik, Sk);
-            Mk = Math.max(Mk, Math.abs(me(ik, bk)) / mk - Dk, Math.abs(me(ik, rk)) / Pk - Dk)
+    function GC(CC) {
+      const zC = class extends MC.e {
+          constructor(zC, ZC) {
+            const QC = (0, SC.Y)(zC),
+              wC = QC && (0, SC.x)(QC, CC.name);
+            for (var bC = arguments.length, nC = new Array(bC > 2 ? bC - 2 : 0), fC = 2; fC < bC; fC++) nC[fC - 2] = arguments[fC];
+            super(zC, CC.name, CC.priority, wC ? wC.defines : CC.defines(...nC), !1), this.featureState = void 0, this.featureState = ZC, this._pluginManager._addPlugin(this), this._enable(!0), (0, SC.B)(this._material, CC, this.featureState, this._pluginDefineNames)
           }
-      return {
-        position: re([kk.min[0] + fk[0] / 2, kk.min[1] + fk[1] / 2, kk.min[2] + fk[2] / 2], Pe(Sk, -Mk * tk)),
-        heading: Dk.heading,
-        pitch: Dk.pitch
+          getClassName() {
+            return CC.className
+          }
+          isCompatible(CC) {
+            return CC === pC.e.GLSL || CC === pC.e.WGSL
+          }
+        },
+        ZC = (0, gC.l)(CC);
+      for (const [QC, wC] of Object.entries(gC.e)) {
+        const bC = CC[QC];
+        if (bC) {
+          const CC = ZC[QC];
+          Object.defineProperty(zC.prototype, wC, {
+            value: PC(bC, CC),
+            writable: !0,
+            configurable: !0
+          })
+        }
+      }
+      return zC
+    }
+    class RC extends(GC(fC.d)) {}
+    var AC = ZC(39635),
+      xC = ZC(40977);
+    const JC = new WeakMap;
+
+    function IC(CC, zC, ZC) {
+      let QC = JC.get(ZC);
+      QC || (QC = new Map, JC.set(ZC, QC));
+      const {
+        url: wC
+      } = CC;
+      let bC = QC.get(wC);
+      return bC || (bC = async function(CC, zC, ZC) {
+        var QC;
+        const {
+          width: wC,
+          height: bC
+        } = CC.getSize(), fC = Math.round(bC / wC), oC = CC.getInternalTexture(), qC = zC && zC.byteLength === wC * wC * fC * 4 ? zC : null !== (QC = iC.get(oC)) && void 0 !== QC ? QC : CC._readPixelsSync(), FC = new xC.d(qC, wC, wC, fC, AC.d.TEXTUREFORMAT_RGBA, ZC, !0, !1, nC.e.NEAREST_NEAREST_MIPLINEAR);
+        iC.has(oC) || (! function(CC, zC) {
+          const ZC = zC.createRawTexture(new Uint8Array(4), 1, 1, AC.d.TEXTUREFORMAT_RGBA, !1, !1, nC.e.NEAREST_SAMPLINGMODE);
+          CC._hardwareTexture.release(), zC.unbindAllTextures(), ZC._swapAndDie(CC, !1)
+        }(oC, ZC.mg()), iC.set(oC, qC));
+        return FC
+      }(CC, zC, ZC), QC.set(wC, bC), bC.catch((() => {
+        QC.delete(wC)
+      }))), bC
+    }
+    const iC = new WeakMap;
+    var vC = ZC(37673);
+    class eC extends(GC(oC.j)) {
+      constructor(CC, zC) {
+        super(CC, zC), zC.textures.forEach(((CC, zC) => {
+          CC.mirror.onLoadObservable.add((CC => {
+            this.setTextureArrayData(CC, zC).catch((CC => {
+              console.error(`Failed to build texture array for atlas ${zC}`, CC)
+            }))
+          }))
+        })), (0, vC.k)(zC, CC.shaderLanguage)
+      }
+      async setTextureArrayData(CC, zC) {
+        var ZC, QC;
+        const wC = this.featureState,
+          {
+            width: bC,
+            height: nC
+          } = CC.getSize(),
+          fC = wC.useWebGL2 ? await IC(CC, null !== (ZC = null === (QC = wC.sources.pixels) || void 0 === QC ? void 0 : QC[zC]) && void 0 !== ZC ? ZC : null, this._material.Km()) : null;
+        (0, vC.d)(this._material, wC, zC, fC, bC, Math.round(nC / bC), this._material.shaderLanguage)
+      }
+    }
+    var hC = ZC(40985),
+      KC = ZC(40127),
+      YC = ZC(36961),
+      dC = ZC(40988),
+      mC = ZC(40235),
+      HC = ZC(40119),
+      EC = ZC(40946),
+      lC = ZC(37432),
+      XC = ZC(40992);
+    class cC extends hC.c {
+      getData() {
+        return null
+      }
+      _rebuild() {}
+      restore() {
+        super._rebuild()
+      }
+    }
+    const uC = {
+      Mesh: dC.e,
+      TransformNode: EC.c,
+      gg: hC.c,
+      VertexBuffer: hC.f,
+      BoundingInfo: KC.d,
+      Eg: YC.Eg,
+      ArenaBuffer: cC,
+      SubMesh: HC.d,
+      VertexData: mC.e,
+      MirroredGeometry: XC.d,
+      meshFromArrays: XC.e,
+      plainMeshFromArrays: XC.f
+    };
+    (0, lC.e)(uC);
+    var rC = ZC(37290);
+    class sC extends(GC(FC.f)) {
+      constructor(CC, zC) {
+        if (super(CC, zC), CC instanceof QC.StandardMaterial && zC.dirLightCount > 0) {
+          const zC = CC,
+            ZC = zC._blockDirtyMechanism;
+          zC._blockDirtyMechanism = !0, CC.disableLighting = !0, zC._blockDirtyMechanism = ZC;
+          const QC = (0, SC.Y)(CC);
+          QC && (QC.disableLighting = !0, (0, SC.W)(QC))
+        }(0, rC.g)(CC)
+      }
+      dispose(CC) {
+        (0, rC.k)(this._material), super.dispose(CC)
       }
     }
 
-    function fe(kk, ek, ik) {
-      const Dk = be(kk),
-        fk = be(ik),
-        Sk = re(kk.position, Pe(ek, -1)),
-        bk = [0, 1, 2].reduce(((kk, ek) => re(kk, Pe(fk[ek], me(Sk, Dk[ek])))), [0, 0, 0]);
-      return {
-        position: re(ek, bk),
-        heading: ik.heading,
-        pitch: ik.pitch
+    function TC(CC, zC) {
+      if (!(zC instanceof QC.StandardMaterial) || zC.specularTexture) return;
+      const {
+        r: ZC,
+        g: wC,
+        b: bC
+      } = zC.specularColor;
+      0 === ZC && 0 === wC && 0 === bC && (CC.SPECULARTERM = !1)
+    }(0, FC.d)({
+      disableUnusedSpecularTerm: TC
+    });
+    var aC = ZC(37175),
+      tC = ZC(37450);
+    const DC = new RegExp(`^#define ${qC.e}\\s*$`, "m");
+    class jC extends(GC(qC.g)) {
+      constructor(CC, zC) {
+        super(CC, zC), this.Sg = !1, zC.ditherOnlyWhileFading && (tC.g.add(CC), this.prewarmDitherTwins(CC))
+      }
+      prewarmDitherTwins(CC) {
+        const zC = new WeakSet;
+        CC.onEffectCreatedObservable.add((ZC => {
+          let {
+            effect: QC,
+            subMesh: wC
+          } = ZC;
+          if (this.featureState.prewarmingDither || zC.has(QC)) return;
+          zC.add(QC);
+          const bC = null === wC || void 0 === wC ? void 0 : wC.getMesh();
+          bC && !DC.test(QC.defines) && CC.Km().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(bC) || zC.delete(QC)
+          }))
+        }))
+      }
+      prewarmDither(CC) {
+        if (this.Sg || CC.GJ()) return !1;
+        const zC = new HC.d(0, 0, 0, 0, 0, CC, void 0, !1, !1);
+        this.featureState.prewarmingDither = !0;
+        try {
+          this._material.isReadyForSubMesh(CC, zC)
+        } finally {
+          this.featureState.prewarmingDither = !1
+        }
+        return null !== zC.effect
+      }
+      dispose(CC) {
+        this.Sg = !0, super.dispose(CC)
+      }
+    }
+    const yC = new Map;
+
+    function LC(CC, zC) {
+      yC.set(CC, zC)
+    }
+    LC(fC.d, RC), LC(oC.j, eC), LC(qC.g, jC), LC(FC.f, sC), (0, WC.c)({
+      create: (CC, zC) => {
+        const ZC = new QC.StandardMaterial(CC.name, zC);
+        return (0, aC.u)(CC, ZC), ZC.detailMap._pluginDefineNames
+      },
+      write: (CC, zC, ZC) => {
+        (0, aC.X)(CC.mirror, zC, ZC)
+      },
+      addFeature: (CC, zC, ZC) => {
+        const QC = yC.get(zC.feature);
+        if (!QC) throw new Error(`${zC.feature.name} has no plugin class (registerPluginClass)`);
+        new QC(CC.mirror, zC.state, ...ZC)
+      },
+      texture: (CC, zC, ZC) => {
+        let {
+          url: QC,
+          noMipmap: wC,
+          invertY: bC,
+          samplingMode: fC,
+          data: oC,
+          sets: qC
+        } = ZC;
+        if (!oC) {
+          const ZC = new nC.e(QC, zC, wC, bC, fC);
+          return Object.assign(ZC, qC), void(0, NC.L)(CC, ZC)
+        }
+        const FC = {},
+          WC = new Promise(((CC, zC) => {
+            FC.onLoad = CC, FC.onError = (CC, ZC) => {
+              zC(new Error(`${oC.context}: ${(null===ZC||void 0===ZC?void 0:ZC.message)||CC||"Failed to load texture"}`))
+            }
+          })),
+          {
+            mimeType: MC,
+            bytes: gC,
+            label: SC
+          } = oC,
+          pC = {
+            noMipmap: wC,
+            invertY: !1,
+            samplingMode: fC,
+            ...FC,
+            mimeType: MC,
+            loaderOptions: void 0,
+            useSRGBBuffer: !1
+          },
+          PC = new nC.e(null, zC, pC);
+        aC.w.set(PC, WC), Object.assign(PC, qC), PC.updateURL(QC, gC);
+        const GC = PC.getInternalTexture();
+        GC && (GC.label = SC), CC.uvSet = PC.coordinatesIndex, CC.matrix.set((0, aC.P)(PC)), (0, NC.L)(CC, PC)
+      },
+      cube: (CC, zC, ZC) => {
+        let {
+          rootUrl: QC,
+          files: bC,
+          noMipmap: fC,
+          luminance: oC
+        } = ZC;
+        const {
+          samplingMode: qC
+        } = CC.sampler, FC = qC === (0, NC.y)(fC) ? null : () => {
+          (0, aC.L)(WC, qC)
+        }, WC = new wC.c(QC, zC, null, fC, bC, FC, null, (0, NC.u)(oC));
+        WC.coordinatesMode = nC.e.SKYBOX_MODE, (0, NC.L)(CC, WC)
+      },
+      canvas: (CC, zC, ZC) => {
+        let {
+          width: QC,
+          height: wC,
+          mipmaps: fC,
+          samplingMode: oC,
+          hasAlpha: qC = !1,
+          wrap: FC = nC.e.CLAMP_ADDRESSMODE
+        } = ZC;
+        const WC = new bC.d(zC, {
+          width: QC,
+          height: wC
+        }, CC, fC, oC);
+        WC.hasAlpha = qC, WC.wrapU = FC, WC.wrapV = FC;
+        const NC = (0, aC.C)(WC);
+        return (0, aC.F)(NC, WC), NC
+      }
+    })
+  },
+  40992: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => FC,
+      e: () => WC,
+      f: () => NC
+    });
+    var QC = ZC(40985),
+      wC = ZC(39882),
+      bC = ZC(40127),
+      nC = ZC(40244),
+      fC = ZC(40988),
+      oC = ZC(40235),
+      qC = ZC(37339);
+    class FC extends nC.c {
+      constructor() {
+        super(...arguments), this.model = null, this.onGeometryUpdated = (CC, zC) => {
+          this.releaseUnlessInstanced(zC)
+        }, this.onLinked = null
+      }
+      link(CC) {
+        var zC;
+        (0, qC.n)(CC), this.model = CC, null === (zC = this.onLinked) || void 0 === zC || zC.call(this, CC)
+      }
+      relink() {
+        this.release();
+        const CC = [];
+        for (const wC of Object.values(this._vertexBuffers))
+          if (!wC.getIsInstanced()) {
+            const {
+              byteOffset: zC,
+              byteStride: ZC,
+              type: QC,
+              normalized: bC
+            } = wC;
+            CC.push({
+              kind: wC.getKind(),
+              data: wC.getData(),
+              offset: zC,
+              stride: ZC,
+              components: wC.getSize(),
+              glType: QC,
+              isNormalized: bC
+            })
+          } const zC = this._indices.length ? this._indices : null,
+          {
+            minimum: ZC,
+            maximum: QC
+          } = this.extend;
+        this.link(new qC.f(CC, zC, this.getTotalVertices(), new Float64Array(ZC.VZC()), new Float64Array(QC.VZC())))
+      }
+      copy(CC) {
+        if (!this.model) return super.copy(CC);
+        const zC = new FC(CC, this.Km()),
+          ZC = this.CQC(void 0, !0);
+        ZC && zC.setIndices(ZC);
+        let nC = !1;
+        for (const bC in this._vertexBuffers) {
+          const CC = this._vertexBuffers[bC],
+            ZC = CC.getData();
+          if (!ZC) continue;
+          const fC = CC.getSize(),
+            {
+              type: oC,
+              byteOffset: qC,
+              byteStride: FC,
+              normalized: WC
+            } = CC;
+          nC ||= CC.isUpdatable();
+          const NC = CC.getIsInstanced() ? (ZC instanceof Array ? 4 * ZC.length : ZC.byteLength) / FC : this.getTotalVertices(),
+            MC = (0, wC.o)(ZC, fC, oC, qC, FC, NC, !0),
+            gC = {
+              updatable: CC.isUpdatable(),
+              stride: fC,
+              type: oC,
+              normalized: WC,
+              takeBufferOwnership: !0,
+              instanced: CC.getIsInstanced()
+            };
+          zC.setVerticesBuffer(new QC.f(this.mg(), MC, bC, gC), NC)
+        }
+        return zC._updatable = nC, zC._boundingInfo = new bC.d(this.extend.minimum, this.extend.maximum), zC.relink(), zC
+      }
+      static mergeMeshes(CC, zC, ZC, QC, wC, bC) {
+        const oC = CC[0].Km(),
+          qC = new fC.e(CC[0].name + "_merged", oC),
+          WC = new FC(nC.c.RandomId(), oC, void 0, !1, qC);
+        try {
+          if (!fC.e.MergeMeshes(CC, zC, ZC, qC, wC, bC)) return qC.dispose(), null
+        } catch (NC) {
+          throw qC.dispose(), NC
+        }
+        return WC.relink(), qC
+      }
+      removeVerticesData(CC) {
+        this.releaseUnlessInstanced(CC), super.removeVerticesData(CC)
+      }
+      dispose() {
+        this.release(), super.dispose()
+      }
+      releaseUnlessInstanced(CC) {
+        var zC;
+        CC && null !== (zC = this.getVertexBuffer(CC)) && void 0 !== zC && zC.getIsInstanced() || this.release()
+      }
+      release() {
+        this.model && ((0, qC.x)(this.model), this.model = null)
       }
     }
 
-    function Se(kk) {
-      return Pe(re(kk.min, kk.max), .5)
+    function WC(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new fC.e(CC, ZC);
+      const wC = (0, qC.j)(zC),
+        {
+          positions: bC,
+          normals: WC,
+          uvs: NC,
+          indices: MC,
+          named: gC = {}
+        } = zC,
+        SC = new oC.e;
+      SC.positions = bC, SC.normals = null !== WC && void 0 !== WC ? WC : null, SC.uvs = null !== NC && void 0 !== NC ? NC : null, SC.indices = MC;
+      const pC = new FC(nC.c.RandomId(), ZC, SC, !1, QC);
+      for (const {
+          kind: nC,
+          components: fC
+        }
+        of wC.vertexAttributes) nC in gC && QC.setVerticesData(nC, gC[nC], !1, fC);
+      return pC.link(wC), QC
     }
 
-    function be(kk) {
-      const ek = ee(kk),
-        ik = ie(kk.heading);
-      return [ek, ik, Me(ek, ik)]
-    }
-
-    function re(kk, ek) {
-      return [kk[0] + ek[0], kk[1] + ek[1], kk[2] + ek[2]]
-    }
-
-    function Pe(kk, ek) {
-      return [kk[0] * ek, kk[1] * ek, kk[2] * ek]
-    }
-
-    function me(kk, ek) {
-      return kk[0] * ek[0] + kk[1] * ek[1] + kk[2] * ek[2]
-    }
-
-    function Me(kk, ek) {
-      return [kk[1] * ek[2] - kk[2] * ek[1], kk[2] * ek[0] - kk[0] * ek[2], kk[0] * ek[1] - kk[1] * ek[0]]
+    function NC(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const wC = new fC.e(CC, ZC),
+        {
+          positions: bC,
+          normals: nC,
+          uvs: qC,
+          indices: FC
+        } = zC;
+      return Object.assign(new oC.e, {
+        positions: bC,
+        normals: nC,
+        uvs: qC,
+        indices: FC
+      }).applyToMesh(wC, QC), wC
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

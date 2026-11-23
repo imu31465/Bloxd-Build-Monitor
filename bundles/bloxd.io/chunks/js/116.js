@@ -1,213 +1,213 @@
 export const id = 116;
-export const ids = [116, 135];
+export const ids = [116, 136];
 export const modules = {
-  6477: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      loadShaderPackTextures: () => bk,
-      shaderPackTextures: () => rk
+  6630: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      loadShaderPackTextures: () => nC,
+      shaderPackTextures: () => fC
     });
-    var Dk = ik(4965);
-    let fk = null,
-      Sk = null;
+    var QC = ZC(5002);
+    let wC = null,
+      bC = null;
 
-    function bk() {
-      return Sk ??= Promise.all([ik.e(72), ik.e(190)]).then((() => ik(40060))).then((kk => {
+    function nC() {
+      return bC ??= Promise.all([ZC.e(72), ZC.e(188)]).then((() => ZC(40313))).then((CC => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: ek,
-          textureNameToIndex: ik,
-          textureAnimationData: Sk
-        } = kk;
-        return fk ??= (0, Dk.h)(ik, Sk, ek), fk
-      })), Sk
+          FORMER_BLOCK_IMAGE_NAMES: zC,
+          textureNameToIndex: ZC,
+          textureAnimationData: bC
+        } = CC;
+        return wC ??= (0, QC.k)(ZC, bC, zC), wC
+      })), bC
     }
 
-    function rk() {
-      if (null === fk) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return fk
+    function fC() {
+      if (null === wC) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return wC
     }
   },
-  4965: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => rk,
-      c: () => bk,
-      g: () => Dk,
-      h: () => Hk,
-      i: () => Kk,
-      l: () => fk,
-      p: () => Sk,
-      r: () => mk,
-      t: () => Mk,
-      u: () => xk
+  5002: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => fC,
+      g: () => nC,
+      j: () => QC,
+      k: () => SC,
+      m: () => WC,
+      q: () => wC,
+      r: () => bC,
+      s: () => qC,
+      w: () => FC,
+      y: () => NC
     });
-    const Dk = 5;
+    const QC = 5;
 
-    function fk(kk) {
-      return kk === Dk
+    function wC(CC) {
+      return CC === QC
     }
 
-    function Sk(kk) {
-      return [...kk.features]
+    function bC(CC) {
+      return [...CC.features]
     }
-    const bk = 262144,
-      rk = 256,
-      Pk = 256;
+    const nC = 262144,
+      fC = 256,
+      oC = 256;
 
-    function mk(kk) {
-      if ("object" !== typeof kk || null === kk || Array.isArray(kk)) return "The pack has no files.";
-      const ek = [];
-      for (const [ik, Dk] of Object.entries(kk)) {
-        if ("string" !== typeof Dk) return `${ik} isn't text.`;
-        ek.push({
-          path: ik,
-          source: Dk
+    function qC(CC) {
+      if ("object" !== typeof CC || null === CC || Array.isArray(CC)) return "The pack has no files.";
+      const zC = [];
+      for (const [ZC, QC] of Object.entries(CC)) {
+        if ("string" !== typeof QC) return `${ZC} isn't text.`;
+        zC.push({
+          path: ZC,
+          source: QC
         })
       }
-      return ek.sort(((kk, ek) => Kk(kk.path, ek.path))),
-        function(kk) {
-          if (0 === kk.length) return "The pack has no .wgsl files.";
-          if (kk.length > rk) return `The pack has more than ${rk} .wgsl files.`;
-          const ek = new Set;
+      return zC.sort(((CC, zC) => WC(CC.path, zC.path))),
+        function(CC) {
+          if (0 === CC.length) return "The pack has no .wgsl files.";
+          if (CC.length > fC) return `The pack has more than ${fC} .wgsl files.`;
+          const zC = new Set;
           for (const {
-              path: ik
+              path: ZC
             }
-            of kk) {
-            const kk = nk(ik);
-            if (null !== kk) return kk;
-            if (ek.has(ik)) return `The pack has two files at ${ik}.`;
-            ek.add(ik)
+            of CC) {
+            const CC = MC(ZC);
+            if (null !== CC) return CC;
+            if (zC.has(ZC)) return `The pack has two files at ${ZC}.`;
+            zC.add(ZC)
           }
-          return xk(kk) > bk ? `The pack's .wgsl files are over ${bk/1024} KB in total.` : null
-        }(ek) ?? ek
+          return NC(CC) > nC ? `The pack's .wgsl files are over ${nC/1024} KB in total.` : null
+        }(zC) ?? zC
     }
 
-    function Mk(kk) {
-      const ek = {};
-      for (const ik of kk) ek[ik.path] = ik.source;
-      return ek
+    function FC(CC) {
+      const zC = {};
+      for (const ZC of CC) zC[ZC.path] = ZC.source;
+      return zC
     }
 
-    function Kk(kk, ek) {
-      return kk < ek ? -1 : kk > ek ? 1 : 0
+    function WC(CC, zC) {
+      return CC < zC ? -1 : CC > zC ? 1 : 0
     }
 
-    function xk(kk) {
-      const ek = new TextEncoder;
-      let ik = 0;
+    function NC(CC) {
+      const zC = new TextEncoder;
+      let ZC = 0;
       for (const {
-          source: Dk
+          source: QC
         }
-        of kk) ik += ek.encode(Dk).byteLength;
-      return ik
+        of CC) ZC += zC.encode(QC).byteLength;
+      return ZC
     }
 
-    function nk(kk) {
-      if (!kk.toLowerCase().endsWith(".wgsl")) return `${kk} isn't a .wgsl file.`;
-      if (kk.length > Pk) return `A file path is over ${Pk} characters.`;
-      if (kk.includes("\\") || /[\u0000-\u001f]/.test(kk)) return `${kk} isn't a valid file path.`;
-      return kk.split("/").some((kk => "" === kk || "." === kk || ".." === kk)) ? `${kk} isn't a valid file path.` : null
+    function MC(CC) {
+      if (!CC.toLowerCase().endsWith(".wgsl")) return `${CC} isn't a .wgsl file.`;
+      if (CC.length > oC) return `A file path is over ${oC} characters.`;
+      if (CC.includes("\\") || /[\u0000-\u001f]/.test(CC)) return `${CC} isn't a valid file path.`;
+      return CC.split("/").some((CC => "" === CC || "." === CC || ".." === CC)) ? `${CC} isn't a valid file path.` : null
     }
-    const Uk = /^(.*)\[rot\[([1-4])$/;
+    const gC = /^(.*)\[rot\[([1-4])$/;
 
-    function Hk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Dk = new Map;
-      ek.forEach(((kk, ek) => {
+    function SC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const QC = new Map;
+      zC.forEach(((CC, zC) => {
         let {
-          numAnimStates: ik,
-          animStartIdx: fk
-        } = kk;
-        for (let Sk = 1; Sk < ik; Sk++) Dk.set(fk + Sk - 1, ek)
+          numAnimStates: ZC,
+          animStartIdx: wC
+        } = CC;
+        for (let bC = 1; bC < ZC; bC++) QC.set(wC + bC - 1, zC)
       }));
-      const fk = Object.entries(kk),
-        Sk = new Map;
-      for (const [Hk, wk] of fk) {
-        const kk = Uk.exec(Hk);
-        "1" === kk?.[2] && Sk.set(kk[1], wk + 1)
+      const wC = Object.entries(CC),
+        bC = new Map;
+      for (const [SC, pC] of wC) {
+        const CC = gC.exec(SC);
+        "1" === CC?.[2] && bC.set(CC[1], pC + 1)
       }
-      const bk = kk => {
-          const ek = Uk.exec(kk);
-          return ek && Sk.has(ek[1]) ? {
-            root: ek[1],
-            rotation: Number(ek[2]) - 1
+      const nC = CC => {
+          const zC = gC.exec(CC);
+          return zC && bC.has(zC[1]) ? {
+            root: zC[1],
+            rotation: Number(zC[2]) - 1
           } : null
         },
-        rk = new Set(fk.map((kk => {
-          let [ek] = kk;
-          return bk(ek)?.root ?? ek
+        fC = new Set(wC.map((CC => {
+          let [zC] = CC;
+          return nC(zC)?.root ?? zC
         }))),
-        Pk = (kk, ik) => {
-          const Dk = kk.replace(/_?0$/, "");
-          return (ek[ik]?.numAnimStates ?? 0) > 1 && !rk.has(Dk) ? Dk : kk
+        oC = (CC, ZC) => {
+          const QC = CC.replace(/_?0$/, "");
+          return (zC[ZC]?.numAnimStates ?? 0) > 1 && !fC.has(QC) ? QC : CC
         },
-        mk = new Map;
-      for (const [Uk, Hk] of fk) mk.set(Hk, Pk(bk(Uk)?.root ?? Uk, Hk));
-      const Mk = fk.reduce(((kk, ek) => {
-          let [, ik] = ek;
-          return Math.max(kk, ik + 1)
+        qC = new Map;
+      for (const [gC, SC] of wC) qC.set(SC, oC(nC(gC)?.root ?? gC, SC));
+      const FC = wC.reduce(((CC, zC) => {
+          let [, ZC] = zC;
+          return Math.max(CC, ZC + 1)
         }), 0),
-        Kk = Array.from({
-          length: Mk
-        }, ((kk, ek) => ({
-          id: ek + 1,
+        WC = Array.from({
+          length: FC
+        }, ((CC, zC) => ({
+          id: zC + 1,
           rotation: 0
         }))),
-        xk = new Map,
-        nk = new Map;
-      for (const [Uk, Hk] of fk) {
-        const kk = bk(Uk),
-          ek = Dk.get(Hk);
-        if (void 0 !== ek) {
-          const ik = mk.get(ek);
-          nk.set(Uk, {
-            name: Uk,
-            texture: ik,
+        NC = new Map,
+        MC = new Map;
+      for (const [gC, SC] of wC) {
+        const CC = nC(gC),
+          zC = QC.get(SC);
+        if (void 0 !== zC) {
+          const ZC = qC.get(zC);
+          MC.set(gC, {
+            name: gC,
+            texture: ZC,
             kind: "frame"
-          }), kk && !nk.has(kk.root) && nk.set(kk.root, {
-            name: kk.root,
-            texture: ik,
+          }), CC && !MC.has(CC.root) && MC.set(CC.root, {
+            name: CC.root,
+            texture: ZC,
             kind: "frame"
           });
           continue
         }
-        const ik = mk.get(Hk),
-          fk = kk?.root ?? Uk;
-        if (ik !== fk && nk.set(fk, {
-            name: fk,
-            texture: ik,
+        const ZC = qC.get(SC),
+          wC = CC?.root ?? gC;
+        if (ZC !== wC && MC.set(wC, {
+            name: wC,
+            texture: ZC,
             kind: "frame"
-          }), kk) {
-          const ek = Sk.get(kk.root);
-          Kk[Hk] = {
-            id: ek,
-            rotation: kk.rotation
-          }, xk.set(ik, ek), nk.set(Uk, {
-            name: Uk,
-            texture: ik,
+          }), CC) {
+          const zC = bC.get(CC.root);
+          WC[SC] = {
+            id: zC,
+            rotation: CC.rotation
+          }, NC.set(ZC, zC), MC.set(gC, {
+            name: gC,
+            texture: ZC,
             kind: "rotation"
           })
-        } else xk.set(ik, Hk + 1)
+        } else NC.set(ZC, SC + 1)
       }
-      for (const Uk of xk.keys()) nk.delete(Uk);
-      for (const [Uk, Hk] of ik) {
-        const kk = xk.get(Hk);
-        void 0 === kk || xk.has(Uk) || (xk.set(Uk, kk), nk.delete(Uk))
+      for (const gC of NC.keys()) MC.delete(gC);
+      for (const [gC, SC] of ZC) {
+        const CC = NC.get(SC);
+        void 0 === CC || NC.has(gC) || (NC.set(gC, CC), MC.delete(gC))
       }
       return {
-        named: [...xk].sort(((kk, ek) => {
-          let [ik] = kk, [Dk] = ek;
-          return ik < Dk ? -1 : ik > Dk ? 1 : 0
-        })).map((kk => {
-          let [ek, ik] = kk;
+        named: [...NC].sort(((CC, zC) => {
+          let [ZC] = CC, [QC] = zC;
+          return ZC < QC ? -1 : ZC > QC ? 1 : 0
+        })).map((CC => {
+          let [zC, ZC] = CC;
           return {
-            name: ek,
-            id: ik
+            name: zC,
+            id: ZC
           }
         })),
-        aliases: [...nk.values()],
-        layers: Kk
+        aliases: [...MC.values()],
+        layers: WC
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

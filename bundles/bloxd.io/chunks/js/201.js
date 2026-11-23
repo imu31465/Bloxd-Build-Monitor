@@ -1,645 +1,442 @@
 export const id = 201;
 export const ids = [201];
 export const modules = {
-  41088: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => Sk
+  34214: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => wC,
+      g: () => bC
     });
-    var Dk = ik(60),
-      fk = ik(2683);
+    var QC = ZC(3242);
 
-    function Sk(kk, ek, ik) {
-      const Sk = (0, Dk.useRef)(null),
-        {
-          width: bk,
-          height: rk
-        } = (0, fk.c)(kk);
-      (0, Dk.useEffect)((() => {
-        const ik = ek(kk.current);
-        return Sk.current = ik, () => {
-          ik.close(), Sk.current = null
-        }
-      }), [kk, ek]), (0, Dk.useEffect)((() => {
-        bk <= 0 || rk <= 0 || Sk.current.resize(bk, rk)
-      }), [bk, rk]), (0, Dk.useEffect)((() => {
-        Sk.current.show(ik)
-      }), [ik])
+    function wC() {
+      if ("undefined" === typeof BroadcastChannel) return null;
+      const CC = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      try {
+        const zC = new BroadcastChannel(QC.m);
+        zC.postMessage({
+          stored: CC
+        }), zC.close()
+      } catch {
+        return null
+      }
+      return CC
+    }
+
+    function bC(CC) {
+      const zC = "object" === typeof CC && null !== CC ? CC.stored : null;
+      return "string" === typeof zC ? zC : null
     }
   },
-  41093: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => xk,
-      c: () => Kk,
-      g: () => Pk
+  34210: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC,
+      i: () => wC,
+      k: () => bC
     });
-    var Dk = ik(36754),
-      fk = ik(38226);
+    var QC = ZC(3242);
+    async function wC(CC, zC, ZC) {
+      let wC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const bC = nC(await CC.getItem(QC.f, zC));
+      if (null === bC || wC()) return null;
+      const fC = await CC.getItem(QC.i, zC);
+      return wC() ? null : (await async function(CC) {
+        await Promise.all([CC.removeItem(QC.f), CC.removeItem(QC.i)])
+      }(CC).catch(ZC), {
+        pack: bC,
+        source: "string" === typeof fC ? fC : null
+      })
+    }
 
-    function Sk(kk, ek) {
-      let [ik, Dk, fk] = kk;
-      return [0, .5, 1].map((kk => ({
-        timeFraction: kk,
-        rotation: {
-          Wi: "catmull-rom-spline",
-          point: [ik, Dk, fk + (.5 === kk ? ek : 0)]
-        }
+    function bC(CC) {
+      return (0, QC.r)() ? Promise.resolve(null) : wC(CC, !1, (CC => {
+        console.error("Error removing temporary texture pack: ", CC)
+      }), QC.r)
+    }
+
+    function nC(CC) {
+      if ("object" !== typeof CC || null === CC) return null;
+      const zC = CC.metaData;
+      return "object" !== typeof zC || null === zC || "string" !== typeof zC.id ? null : CC
+    }
+  },
+  50739: (CC, zC, ZC) => {
+    function QC(CC) {
+      return null === CC.gameSource ? "player" : "customGame"
+    }
+    ZC.d(zC, {
+      b: () => bC,
+      c: () => SC,
+      g: () => gC,
+      i: () => QC
+    });
+    const wC = /^data:[\w.+/-]*;base64,[A-Za-z0-9+/]*={0,2}$/;
+
+    function bC(CC) {
+      return "" === CC || "string" === typeof CC && wC.test(CC)
+    }
+
+    function nC(CC) {
+      return "object" === typeof CC && null !== CC && ("earth" === CC.type || Object.entries(CC).every((CC => {
+        let [zC, ZC] = CC;
+        return "type" === zC || bC(ZC)
       })))
     }
+    const fC = /(?:src|image|image-set|cross-fade)\(/i,
+      oC = /url\(\s*(?:"(?<doubleQuoted>[^"]*)"|'(?<singleQuoted>[^']*)'|(?<unquoted>[^"'()\s]*))\s*\)/gi,
+      qC = /url\(/gi,
+      FC = ["https://bloxd.invalid/", "http://bloxd.invalid/"],
+      WC = new Set([...FC.map((CC => new URL(CC).origin)), "https://fonts.gstatic.com"]),
+      NC = new Set(["https://i.imgur.com/MEcjBFQ.png"]);
 
-    function bk(kk, ek, ik) {
-      return {
-        Ii: 3200,
-        loop: !0,
-        Qi: {
-          Root: {
-            timeline: [0, .5, 1].map((kk => ({
-              timeFraction: kk,
-              position: {
-                Wi: "catmull-rom-spline",
-                point: [0, .5 === kk ? .18 : 0, 0]
-              }
-            })))
-          },
-          HeadMesh: {
-            timeline: [0, .25, .75, 1].map((kk => ({
-              timeFraction: kk,
-              rotation: {
-                Wi: "catmull-rom-spline",
-                point: [0, .25 === kk ? .12 : .75 === kk ? -.12 : 0, 0]
-              }
-            })))
-          },
-          ArmLeftMesh: {
-            timeline: Sk(kk, ik)
-          },
-          ArmRightMesh: {
-            timeline: Sk(ek, -ik)
+    function MC(CC) {
+      var zC, ZC;
+      if (CC.includes("\\") || fC.test(CC)) return !0;
+      const QC = [...CC.matchAll(oC)];
+      return QC.length !== (null !== (zC = null === (ZC = CC.match(qC)) || void 0 === ZC ? void 0 : ZC.length) && void 0 !== zC ? zC : 0) || !QC.every((CC => {
+        var zC, ZC, QC;
+        let {
+          groups: wC
+        } = CC;
+        return function(CC) {
+          try {
+            return FC.every((zC => {
+              const ZC = new URL(CC, zC);
+              return "data:" === ZC.protocol || WC.has(ZC.origin) || NC.has(ZC.href)
+            }))
+          } catch {
+            return !1
           }
-        }
-      }
-    }
-    const rk = bk([0, 0, 0], [0, 0, 0], .07),
-      Pk = (0, fk.e)((0, Dk.g)(rk), "mobIdle"),
-      mk = bk([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      Mk = bk([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      Kk = (0, fk.e)((0, Dk.g)(mk), "gunReady"),
-      xk = (0, fk.e)((0, Dk.g)(Mk), "gunAimed")
-  },
-  38226: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => fk,
-      i: () => Sk
-    });
-    const Dk = new WeakMap;
-
-    function fk(kk, ek) {
-      return Dk.set(kk, ek), kk
+        }(null !== (zC = null !== (ZC = null !== (QC = null === wC || void 0 === wC ? void 0 : wC.doubleQuoted) && void 0 !== QC ? QC : null === wC || void 0 === wC ? void 0 : wC.singleQuoted) && void 0 !== ZC ? ZC : null === wC || void 0 === wC ? void 0 : wC.unquoted) && void 0 !== zC ? zC : "")
+      }))
     }
 
-    function Sk(kk) {
-      var ek;
-      return null !== (ek = Dk.get(kk)) && void 0 !== ek ? ek : null
+    function gC(CC) {
+      var zC, ZC, QC, wC, fC, oC, qC;
+      const FC = [...Object.values(null !== (zC = CC.textureOverrides) && void 0 !== zC ? zC : {}), ...Object.values(null !== (ZC = CC.modelOverrides) && void 0 !== ZC ? ZC : {})],
+        WC = [...Object.values(null !== (QC = null === (wC = CC.customCss) || void 0 === wC ? void 0 : wC.fontFaces) && void 0 !== QC ? QC : {}), ...Object.values(null !== (fC = null === (oC = CC.customCss) || void 0 === oC ? void 0 : oC.classStyles) && void 0 !== fC ? fC : {})].flatMap((CC => Object.values(null !== CC && void 0 !== CC ? CC : {})));
+      return !FC.every(bC) || !Object.values(null !== (qC = CC.skyBoxes) && void 0 !== qC ? qC : {}).every(nC) || WC.some((CC => "string" === typeof CC && MC(CC)))
     }
-  },
-  33801: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => bk,
-      e: () => fk,
-      f: () => Mk
-    });
-    var Dk = ik(1537);
 
-    function fk(kk) {
-      var ek;
-      return {
-        ...bk.store,
-        yaw: bk.store.yaw + (null !== (ek = Dk.c[kk].previewYaw) && void 0 !== ek ? ek : 0)
-      }
-    }
-    const Sk = {
-        yaw: .61 * Math.PI,
-        pitch: Math.PI / 2.05,
-        radius: 30,
-        target: [0, 0, 0]
-      },
-      bk = {
-        player: Sk,
-        store: {
-          ...Sk,
-          radius: 33,
-          target: [0, 3.9, 0]
-        }
+    function SC(CC, zC) {
+      if (null === CC || "player" === zC || !gC(CC)) return CC;
+      const ZC = {
+        ...CC
       };
+      return CC.textureOverrides && (ZC.textureOverrides = PC(CC.textureOverrides, bC, "texture")), CC.modelOverrides && (ZC.modelOverrides = PC(CC.modelOverrides, bC, "model")), CC.skyBoxes && (ZC.skyBoxes = PC(CC.skyBoxes, nC, "sky")), CC.customCss && (ZC.customCss = function(CC) {
+        const zC = CC => PC(CC, (CC => "string" === typeof CC && !MC(CC)), "CSS"),
+          {
+            fontFaces: ZC,
+            classStyles: QC
+          } = pC(CC) ? CC : {},
+          wC = {};
+        for (const [bC, nC] of Object.entries(pC(QC) ? QC : {})) wC[bC] = zC(nC);
+        return {
+          fontFaces: (Array.isArray(ZC) ? ZC : []).map(zC),
+          classStyles: wC
+        }
+      }(CC.customCss)), ZC
+    }
 
-    function rk(kk, ek) {
-      kk instanceof Promise ? kk.then(ek).catch((kk => {
-        console.error("Couldn't open the preview", kk)
-      })) : ek(kk)
+    function pC(CC) {
+      return "object" === typeof CC && null !== CC && !Array.isArray(CC)
     }
-    class Pk {
-      constructor(kk) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, rk(kk, (kk => {
-          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
-        }))
+
+    function PC(CC, zC, ZC) {
+      const QC = Object.entries(pC(CC) ? CC : {}),
+        wC = QC.filter((CC => {
+          let [, ZC] = CC;
+          return !zC(ZC)
+        }));
+      if (wC.length > 0) {
+        const CC = wC.map((CC => {
+          let [zC] = CC;
+          return zC
+        }));
+        console.warn(`Ignoring a custom game texture pack's ${ZC} files that name another site: ${CC.join(", ")}`)
       }
-      show(kk) {
-        var ek;
-        this.view = kk, null === (ek = this.opened) || void 0 === ek || ek.show(kk)
-      }
-      resize(kk, ek) {
-        var ik;
-        this.size = {
-          width: kk,
-          height: ek
-        }, null === (ik = this.opened) || void 0 === ik || ik.resize(kk, ek)
-      }
-      close() {
-        var kk;
-        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
-      }
+      return Object.fromEntries(QC.filter((CC => {
+        let [, ZC] = CC;
+        return zC(ZC)
+      })))
     }
-    class mk {
-      constructor(kk) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), rk(kk, (kk => {
-          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
-        }))
+  },
+  50746: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => gC,
+      f: () => RC,
+      g: () => GC
+    });
+    var QC = ZC(970),
+      wC = ZC(2063),
+      bC = ZC(3229),
+      nC = ZC(3242),
+      fC = ZC(34214),
+      oC = ZC(34210),
+      qC = ZC(50739),
+      FC = ZC(40820),
+      WC = ZC(40798),
+      NC = ZC(5021);
+    const MC = {
+      pack: null,
+      gameSource: null
+    };
+    class gC {
+      constructor(CC) {
+        this.host = CC, this.ready = void 0, this.state = MC, this.playerPack = null, this.onGamePack = !1, this.confirmGamePack = null, this.skippedKey = null, this.ownAnnouncements = new Set, this.listeners = new Map, this.ownListeners = new Set, this.changes = 0, this.picks = 0, this.playerPicked = !1, this.ownChanges = 0, this.Sg = !1, (0, nC.o)(), this.ready = this.readStored()
       }
-      get dev() {
-        return this.opened.dev
-      }
-      isReady() {
-        var kk, ek;
-        return null !== (kk = null === (ek = this.opened) || void 0 === ek ? void 0 : ek.isReady()) && void 0 !== kk && kk
-      }
-      setCosmetic(kk, ek) {
-        var ik;
-        null === (ik = this.opened) || void 0 === ik || ik.setCosmetic(kk, ek)
-      }
-      playEmote(kk) {
-        var ek;
-        null === (ek = this.opened) || void 0 === ek || ek.playEmote(kk)
-      }
-      setOrbit(kk) {
-        var ek;
-        null === (ek = this.opened) || void 0 === ek || ek.setOrbit(kk)
-      }
-      resetCamera() {
-        var kk;
-        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
-      }
-      async untilDrawn(kk) {
-        var ek;
-        await this.ready, await (null === (ek = this.opened) || void 0 === ek ? void 0 : ek.untilDrawn(kk))
-      }
-      resize(kk, ek) {
-        var ik;
-        this.size = {
-          width: kk,
-          height: ek
-        }, null === (ik = this.opened) || void 0 === ik || ik.resize(kk, ek)
-      }
-      close() {
-        var kk;
-        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
-      }
-    }
-    const Mk = new class {
-      constructor() {
-        this.host = null, this.makeDefault = null
-      }
-      setHost(kk) {
-        this.host = kk
-      }
-      setDefaultHost(kk) {
-        this.makeDefault = kk
+      readyWithin(CC) {
+        return Promise.race([this.ready, new Promise((zC => {
+          setTimeout(zC, CC)
+        }))])
       }
       current() {
-        if (null === this.host) {
-          if (null === this.makeDefault) throw new Error("no preview host");
-          this.host = this.makeDefault()
+        return this.state
+      }
+      playerState() {
+        return {
+          pack: this.playerPack,
+          gameSource: null
         }
-        return this.host
       }
-      openMob(kk) {
-        return new Pk(this.current().openMob(kk))
+      onPlayerPackChange(CC) {
+        return this.ownListeners.add(CC), () => {
+          this.ownListeners.delete(CC)
+        }
       }
-      openPet(kk) {
-        return new Pk(this.current().openPet(kk))
+      isUsingCustomGameTexturePack(CC) {
+        return (0, WC.f)(this.state, CC)
       }
-      openMobLineup(kk) {
-        return new Pk(this.current().openMobLineup(kk))
+      setGamePackConfirm(CC) {
+        this.confirmGamePack = CC
       }
-      openCharacter(kk, ek) {
-        return new mk(this.current().openCharacter(kk, ek))
+      subscribe(CC) {
+        return this.listeners.set(CC, null), this.ready.then((() => {
+          this.deliver(CC)
+        })), () => {
+          this.listeners.delete(CC)
+        }
       }
-    }
-  },
-  33799: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => Dk.d,
-      g: () => Dk.e,
-      h: () => Dk.f
-    });
-    var Dk = ik(33801);
-    class fk {
-      constructor(kk) {
-        this.load = kk, this.loaded = null, this.loading = null
+      async setPlayerPack(CC) {
+        const zC = pC(CC) ? null : CC;
+        this.picks++, this.playerPicked = !0, this.ownChanges++, this.setOwn(zC), this.change({
+          pack: zC,
+          gameSource: null
+        }, !1);
+        const ZC = await this.storePlayerPack(zC);
+        return ZC && this.announce(), ZC
       }
-      run(kk) {
-        return null !== this.loaded ? kk(this.loaded) : (this.loading ??= this.load().then((kk => (this.loaded = kk, kk)), (kk => {
-          throw this.loading = null, kk
-        })), this.loading.then(kk))
-      }
-    }
-    class Sk {
-      constructor() {
-        this.mobScene = new fk((() => Promise.all([ik.e(72), ik.e(230), ik.e(229), ik.e(250), ik.e(96), ik.e(251), ik.e(75), ik.e(74), ik.e(248), ik.e(73), ik.e(258), ik.e(252), ik.e(257), ik.e(255), ik.e(247), ik.e(272), ik.e(226), ik.e(242), ik.e(253), ik.e(256), ik.e(77), ik.e(188), ik.e(220), ik.e(95), ik.e(223), ik.e(238), ik.e(120), ik.e(239), ik.e(76), ik.e(119), ik.e(159)]).then((() => ik(40671))))), this.characterScene = new fk((() => Promise.all([ik.e(72), ik.e(230), ik.e(229), ik.e(250), ik.e(96), ik.e(251), ik.e(75), ik.e(74), ik.e(248), ik.e(73), ik.e(258), ik.e(252), ik.e(257), ik.e(255), ik.e(247), ik.e(272), ik.e(226), ik.e(242), ik.e(253), ik.e(256), ik.e(77), ik.e(188), ik.e(220), ik.e(95), ik.e(223), ik.e(238), ik.e(120), ik.e(239), ik.e(76), ik.e(119), ik.e(158)]).then((() => ik(40742)))))
-      }
-      openMob(kk) {
-        return this.mobScene.run((ek => ek.openMobPreview(kk)))
-      }
-      openPet(kk) {
-        return this.mobScene.run((ek => ek.openPetPreview(kk)))
-      }
-      openMobLineup(kk) {
-        return this.mobScene.run((ek => ek.openMobLineupPreview(kk)))
-      }
-      openCharacter(kk, ek) {
-        return this.characterScene.run((ik => ik.openCharacterPreview(kk, ek)))
-      }
-    }
-    Dk.f.setDefaultHost((() => new Sk))
-  },
-  41334: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      FrontlineMvpLineup: () => Kk
-    });
-    var Dk = ik(60),
-      fk = ik(1021),
-      Sk = ik.n(fk),
-      bk = ik(33799),
-      rk = ik(41093),
-      Pk = ik(41088),
-      mk = ik(1066);
-
-    function Mk(kk) {
-      return bk.h.openMobLineup(kk)
-    }
-    const Kk = (0, Dk.memo)((function(kk) {
-      let {
-        players: ek,
-        className: ik
-      } = kk;
-      const fk = (0, Dk.useRef)(null),
-        bk = (0, Dk.useMemo)((() => ek.map((kk => {
-          let {
-            cosmetics: ek,
-            size: ik,
-            heldGun: Dk
-          } = kk;
-          return {
-            cosmetics: ek,
-            size: ik,
-            JY: Dk.name,
-            animation: Dk.aimed ? rk.b : rk.c
-          }
-        }))), [ek]),
-        Kk = function(kk) {
-          const [ek, ik] = (0, Dk.useState)([]);
-          return (0, Dk.useEffect)((() => {
-            ik(kk.map((() => !1)));
-            const ek = kk.map(((kk, ek) => {
-              let {
-                showAfterMs: Dk
-              } = kk;
-              return window.setTimeout((() => {
-                ik((kk => kk.map(((kk, ik) => kk || ik === ek))))
-              }), Dk)
-            }));
-            return () => {
-              for (const kk of ek) window.clearTimeout(kk)
+      async packForGame(CC, zC, ZC) {
+        await this.readyWithin(Math.max(0, (null !== ZC && void 0 !== ZC ? ZC : performance.now() + FC.b) - performance.now()));
+        const wC = ++this.picks,
+          bC = (0, QC.i)(CC) ? (0, QC.m)(CC) : null;
+        if (null === bC) return void this.usePlayerPack();
+        let nC;
+        const fC = function(CC) {
+          let zC;
+          const ZC = new Promise(((ZC, QC) => {
+            zC = setTimeout((() => {
+              QC(new Error(`no answer in ${CC} ms`))
+            }), CC)
+          }));
+          return ZC.catch((() => {})), {
+            passed: ZC,
+            clear: () => {
+              clearTimeout(zC)
             }
-          }), [kk]), ek
-        }(ek),
-        xk = (0, Dk.useMemo)((() => ({
-          figures: bk,
-          shown: Kk
-        })), [bk, Kk]);
-      return (0, Pk.b)(fk, Mk, xk), (0, mk.jsx)("div", {
-        className: Sk()("MobPreview", ik),
-        ref: fk
-      })
-    }))
-  },
-  36754: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => rk,
-      g: () => bk
-    });
-    var Dk = ik(36747),
-      fk = ik(314),
-      Sk = ik(1850);
-
-    function bk(kk) {
-      if ("Ii" in kk) return Ck.createAnimationScript(kk);
-      return new mk(kk).createAnimationScript()
-    }
-
-    function rk(kk, ek, ik, fk) {
-      const Sk = kk.Ii <= 0 ? 1 : ek + ik * Math.max(0, fk) / kk.Ii;
-      return kk.zi === Dk.k.LoopOnLastFrame ? Sk % 1 : kk.zi === Dk.k.NoLoop && Sk >= 1 ? null : Math.min(1, Sk)
-    }
-    class Pk {
-      createAnimationScript(kk) {
+          }
+        }(2e4);
+        try {
+          const CC = await Promise.race([zC.packKey(bC), fC.passed]);
+          if (null !== CC && this.onGamePack && this.state.gameSource === CC) return;
+          if (null !== CC && CC === this.skippedKey) return void(this.Sg || this.picks !== wC || this.usePlayerPack());
+          nC = null === CC ? null : await Promise.race([SC(bC, CC, zC), fC.passed])
+        } catch (WC) {
+          const CC = !this.Sg && this.picks === wC && this.holdsOtherGamePack(bC);
+          return this.host.warn(`the texture pack of ${bC} didn't load: ${CC?"the player's own shows":"the pack in play stays"}`, WC), void(CC && this.usePlayerPack())
+        } finally {
+          fC.clear()
+        }
+        if (this.Sg || this.picks !== wC) return;
+        null !== nC && (0, qC.g)(nC.pack) && (this.host.warn(`the texture pack of ${bC} names files on other sites: the player's own shows`, null), nC = null);
+        const oC = null === nC || await this.confirmed(nC.pack, bC) ? null : nC.key;
+        this.Sg || this.picks !== wC || (null !== oC && (this.skippedKey = oC, nC = null), null === nC ? this.usePlayerPack() : (this.onGamePack = !0, this.change({
+          pack: nC.pack,
+          gameSource: nC.key
+        }, !0)))
+      }
+      endGamePack() {
+        this.picks++, this.usePlayerPack()
+      }
+      holdsOtherGamePack(CC) {
+        return this.onGamePack && "" !== this.state.gameSource && !this.isUsingCustomGameTexturePack(CC)
+      }
+      async confirmed(CC, zC) {
+        const ZC = this.confirmGamePack;
+        if (null === ZC) return !0;
+        try {
+          return await ZC(CC, zC)
+        } catch (QC) {
+          return this.host.warn(`the texture pack prompt of ${zC} failed: the pack is skipped`, QC), !1
+        }
+      }
+      async readPlayerPack() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        if (null !== CC && this.ownAnnouncements.delete(CC)) return;
+        await this.ready;
+        const zC = this.ownChanges;
+        let ZC;
+        try {
+          ZC = await this.host.store.getItem(nC.b, !0)
+        } catch (wC) {
+          return void this.host.warn("the stored texture pack didn't read again: the pack in play stays", wC)
+        }
+        if (this.Sg || this.ownChanges !== zC) return;
+        const QC = PC(ZC);
+        (0, NC.b)(QC, this.playerPack) || (this.ownChanges++, this.setOwn(QC), this.onGamePack || this.change({
+          pack: QC,
+          gameSource: null
+        }, !1))
+      }
+      joinedWithout() {
+        this.picks++
+      }
+      dispose() {
+        this.Sg = !0, this.listeners.clear()
+      }
+      async readStored() {
         const {
-          Ii: ek,
-          loop: ik,
-          Qi: Dk
-        } = kk;
-        return {
-          Ii: Math.round(ek),
-          zi: this.createLoopMode(null !== ik && void 0 !== ik && ik),
-          Qi: this.createNodeSkeletonAnimationScript(null !== Dk && void 0 !== Dk ? Dk : null)
+          store: CC,
+          warn: zC
+        } = this.host;
+        await Promise.all([!1 === this.host.oneShot ? void 0 : (0, oC.i)(CC, !0, (CC => {
+          zC("the custom game's texture pack wasn't removed from storage", CC)
+        })).then((CC => {
+          this.takeOneShot(CC)
+        }), (CC => {
+          zC("the custom game's texture pack didn't read: the player's own shows", CC)
+        })), CC.getItem(nC.b, !0).then((CC => {
+          this.takeStoredOwn(CC)
+        }), (CC => {
+          zC("the stored texture pack didn't read: the default pack shows", CC), this.takeStoredOwn(null)
+        }))]), this.update()
+      }
+      takeOneShot(CC) {
+        var zC;
+        null === CC || this.Sg || this.changes > 0 || this.picks > 0 || ((0, qC.g)(CC.pack) ? this.host.warn("the custom game's texture pack names files on other sites: the player's own shows", null) : (this.onGamePack = !0, this.state = {
+          pack: CC.pack,
+          gameSource: null !== (zC = CC.source) && void 0 !== zC ? zC : ""
+        }))
+      }
+      takeStoredOwn(CC) {
+        if (this.playerPicked || this.Sg) return;
+        if (this.ownChanges++, this.setOwn(PC(CC)), this.onGamePack) return;
+        const zC = {
+          pack: this.playerPack,
+          gameSource: null
+        };
+        0 === this.changes ? this.state = zC : this.change(zC, !1)
+      }
+      async update() {
+        const CC = this.playerPack,
+          zC = null === CC || void 0 === CC ? void 0 : CC.metaData.id;
+        if (!CC || !zC || !this.host.fetchLatest || zC === wC.c || zC === wC.q.CUSTOM) return;
+        const ZC = wC.u[zC];
+        if (void 0 === ZC || CC.metaData.version >= ZC) return;
+        let QC;
+        try {
+          QC = PC(await this.host.fetchLatest(zC))
+        } catch (bC) {
+          return void this.host.warn(`texture pack ${zC} didn't update to version ${ZC}`, bC)
+        }
+        null === QC || this.Sg || this.playerPack !== CC || (this.ownChanges++, this.setOwn(QC), this.onGamePack || this.change({
+          pack: QC,
+          gameSource: null
+        }, !1), await this.storePlayerPack(QC) && this.announce())
+      }
+      announce() {
+        const CC = (0, fC.c)();
+        null !== CC && this.ownAnnouncements.add(CC)
+      }
+      setOwn(CC) {
+        this.playerPack = CC;
+        for (const ZC of [...this.ownListeners]) try {
+          ZC()
+        } catch (zC) {
+          this.host.warn("a texture pack listener threw", zC)
         }
       }
-      createLoopMode(kk) {
-        switch (kk) {
-          case !1:
-            return Dk.k.NoLoop;
-          case !0:
-            return Dk.k.LoopOnLastFrame;
-          case "hold-on-last-frame":
-            return Dk.k.HoldOnLastFrame
-        }
-        throw new Error(`Invalid loop mode schema: ${kk}`)
+      usePlayerPack() {
+        this.onGamePack && this.change({
+          pack: this.playerPack,
+          gameSource: null
+        }, !1)
       }
-      createNodeSkeletonAnimationScript(kk) {
-        if (null === kk) return null;
-        const ek = {};
-        for (const ik in kk) {
-          const Dk = kk[ik];
-          ek[ik] = this.createNodeAnimationScript(Dk)
-        }
-        return ek
-      }
-      createNodeAnimationScript(kk) {
-        const {
-          timeline: ek
-        } = kk, ik = ek.filter((kk => Number.isFinite(kk.timeFraction)));
-        return ik.sort(((kk, ek) => kk.timeFraction - ek.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(ik, "rotation", xk),
-          position: this.createTimelineFromKeyframes(ik, "position", Uk)
+      async storePlayerPack(CC) {
+        try {
+          return null === CC ? (await this.host.store.removeItem(nC.b), !0) : await this.host.store.setItem(nC.b, CC)
+        } catch (zC) {
+          return this.host.warn("the texture pack wasn't stored: it shows until the page reloads", zC), !1
         }
       }
-      createTimelineFromKeyframes(kk, ek, ik) {
-        const Dk = [];
-        for (const Pk of kk) {
-          const kk = Pk[ek];
-          if (kk) {
-            const ek = this.createAnimationFrameWithoutPrecomputes(Pk.timeFraction, kk);
-            Mk(ek) && Dk.push(ek)
+      change(CC, zC) {
+        if (!this.Sg) {
+          this.changes++, this.onGamePack = zC, this.state = CC;
+          for (const CC of [...this.listeners.keys()]) this.deliver(CC)
+        }
+      }
+      deliver(CC) {
+        if (!this.Sg && this.listeners.has(CC) && this.listeners.get(CC) !== this.state) {
+          this.listeners.set(CC, this.state);
+          try {
+            CC(this.state)
+          } catch (zC) {
+            this.host.warn("a texture pack listener threw", zC)
           }
         }
-        const fk = [];
-        for (let Pk = 0; Pk < Dk.length; Pk++) {
-          var Sk, bk, rk;
-          const kk = Dk[Pk],
-            ek = null !== (Sk = Dk[Pk - 1]) && void 0 !== Sk ? Sk : kk,
-            mk = null !== (bk = Dk[Pk + 1]) && void 0 !== bk ? bk : kk,
-            Mk = null !== (rk = Dk[Pk + 2]) && void 0 !== rk ? rk : mk;
-          fk.push({
-            ...kk,
-            ...ik(ek.post, ek.timeFraction, kk.post, kk.timeFraction, mk.pre, mk.timeFraction, Mk.pre, Mk.timeFraction)
-          })
-        }
-        return fk
-      }
-      createAnimationFrameWithoutPrecomputes(kk, ek) {
-        let ik, Dk, fk = null;
-        var Sk;
-        if ("object" === typeof ek && "point" in ek) fk = null !== (Sk = ek.Wi) && void 0 !== Sk ? Sk : null, ik = ek.point, Dk = ek.point;
-        else if ("object" === typeof ek && "pre" in ek) {
-          var bk;
-          fk = null !== (bk = ek.Wi) && void 0 !== bk ? bk : null, ik = ek.pre, Dk = ek.post
-        } else ik = ek, Dk = ek;
-        return {
-          timeFraction: kk,
-          Wi: this.createLerpMode(fk),
-          pre: ik,
-          post: Dk
-        }
-      }
-      createLerpMode(kk) {
-        return null === kk ? Dk.h.Linear : Pk.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
-    Pk.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Dk.h.Linear,
-      "catmull-rom-spline": Dk.h.CatmullRomSpline
-    };
-    class mk {
-      constructor(kk) {
-        this.animationSchema = kk
-      }
-      createAnimationScript() {
-        const {
-          animation_length: kk,
-          loop: ek,
-          bones: ik
-        } = this.animationSchema;
-        return {
-          Ii: Math.round(1e3 * kk),
-          zi: this.createLoopMode(null !== ek && void 0 !== ek && ek),
-          Qi: this.createNodeSkeletonAnimationScript(null !== ik && void 0 !== ik ? ik : null)
-        }
-      }
-      createLoopMode(kk) {
-        switch (kk) {
-          case !1:
-            return Dk.k.NoLoop;
-          case !0:
-            return Dk.k.LoopOnLastFrame;
-          case "hold_on_last_frame":
-            return Dk.k.HoldOnLastFrame
-        }
-        throw new Error(`Invalid Blockbench loop mode schema: ${kk}`)
-      }
-      createNodeSkeletonAnimationScript(kk) {
-        if (null === kk) return null;
-        const ek = {};
-        for (const ik in kk) {
-          const Dk = kk[ik];
-          ek[ik] = this.createNodeAnimationScript(Dk)
-        }
-        return ek
-      }
-      createNodeAnimationScript(kk) {
-        const {
-          rotation: ek,
-          position: ik
-        } = kk;
-        return {
-          rotation: this.createAnimationTimeline(null !== ek && void 0 !== ek ? ek : null, wk, xk, !0),
-          position: this.createAnimationTimeline(null !== ik && void 0 !== ik ? ik : null, pk, Uk, !1)
-        }
-      }
-      createAnimationTimeline(kk, ek, ik, Dk) {
-        if (null === kk) return [];
-        if (Array.isArray(kk)) {
-          kk = {
-            "0.0": kk
-          }
-        }
-        const fk = Object.entries(kk).map((kk => {
-          let [ik, Dk] = kk;
-          const fk = Number(ik) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(fk, Dk, ek)
-        })).filter(Mk);
-        fk.sort(((kk, ek) => kk.timeFraction - ek.timeFraction)), Dk && function(kk) {
-          for (let ek = 1; ek < kk.length; ek++) {
-            const ik = kk[ek - 1].post,
-              Dk = kk[ek],
-              fk = yk(Dk.pre),
-              Sk = yk(Dk.post),
-              bk = Lk(ik, Dk.pre);
-            Lk(ik, fk) < bk && (kk[ek] = {
-              ...Dk,
-              pre: fk,
-              post: Sk
-            })
-          }
-        }(fk);
-        const Sk = [];
-        for (let mk = 0; mk < fk.length; mk++) {
-          var bk, rk, Pk;
-          const kk = fk[mk],
-            ek = null !== (bk = fk[mk - 1]) && void 0 !== bk ? bk : kk,
-            Dk = null !== (rk = fk[mk + 1]) && void 0 !== rk ? rk : kk,
-            Mk = null !== (Pk = fk[mk + 2]) && void 0 !== Pk ? Pk : Dk;
-          Sk.push({
-            ...kk,
-            ...ik(ek.post, ek.timeFraction, kk.post, kk.timeFraction, Dk.pre, Dk.timeFraction, Mk.pre, Mk.timeFraction)
-          })
-        }
-        return Sk
-      }
-      createAnimationFrameWithoutPrecomputes(kk, ek, ik) {
-        let Dk, fk, Sk = null;
-        if ("object" === typeof ek && "post" in ek) {
-          var bk;
-          Sk = null !== (bk = ek.lerp_mode) && void 0 !== bk ? bk : null, fk = Hk(ek.post, ik), Dk = ek.pre ? Hk(ek.pre, ik) : fk
-        } else {
-          const kk = Hk(ek, ik);
-          fk = kk, Dk = kk
-        }
-        return {
-          timeFraction: kk,
-          Wi: this.createLerpMode(Sk),
-          pre: Dk,
-          post: fk
-        }
-      }
-      createLerpMode(kk) {
-        return null === kk ? Dk.h.Linear : mk.LERP_MODE_SCHEMA_MAPPING[kk]
-      }
-    }
-
-    function Mk(kk) {
-      return Number.isFinite(kk.timeFraction) && Kk(kk.pre) && Kk(kk.post)
-    }
-
-    function Kk(kk) {
-      return Number.isFinite(kk[0]) && Number.isFinite(kk[1]) && Number.isFinite(kk[2])
-    }
-
-    function xk(kk, ek, ik, Dk, fk, Sk, bk, rk) {
-      const Pk = Sk - ek,
-        mk = Sk - Dk,
-        Mk = rk - Dk,
-        Kk = [null, null, null];
-      for (let xk = 0; xk < Kk.length; xk++) Kk[xk] = nk(kk[xk], ik[xk], fk[xk], bk[xk], Pk, Mk);
-      return {
-        Xi: mk,
-        Bi: Kk
-      }
-    }
-
-    function nk(kk, ek, ik, Dk, Sk, bk) {
-      return {
-        oi: fk.c.computeShortestRotation(kk, ik) / Sk,
-        Zi: fk.c.computeShortestRotation(ek, Dk) / bk,
-        delta: fk.c.computeShortestRotation(ek, ik)
-      }
-    }
-
-    function Uk(kk, ek, ik, Dk, fk, Sk, bk, rk) {
-      const Pk = Sk - ek,
-        mk = Sk - Dk,
-        Mk = rk - Dk,
-        Kk = [null, null, null];
-      for (let xk = 0; xk < Kk.length; xk++) Kk[xk] = {
-        oi: (fk[xk] - kk[xk]) / Pk,
-        Zi: (bk[xk] - ik[xk]) / Mk,
-        delta: fk[xk] - ik[xk]
+    async function SC(CC, zC, ZC) {
+      const QC = (0, oC.e)(await ZC.fetchPack(zC));
+      if (null !== QC) return {
+        pack: QC,
+        key: zC
       };
+      const wC = await ZC.packKey(CC);
+      if (null === wC) return null;
+      const bC = (0, oC.e)(await ZC.fetchPack(wC));
+      if (null === bC) throw new Error(`no texture pack at ${wC}`);
       return {
-        Xi: mk,
-        Bi: Kk
+        pack: bC,
+        key: wC
       }
     }
 
-    function Hk(kk, ek) {
-      return null === ek ? kk : ek(kk)
+    function pC(CC) {
+      return null === CC || CC.metaData.id === wC.c
     }
 
-    function wk(kk) {
-      const [ek, ik, Dk] = kk, bk = -(0, Sk.h)(ek), rk = -(0, Sk.h)(ik), Pk = (0, Sk.h)(Dk), mk = fk.c.quaternionFromEulerZYX(bk, rk, Pk);
-      return fk.c.eulerYXZFromQuaternion(mk)
+    function PC(CC) {
+      const zC = (0, oC.e)(CC);
+      return pC(zC) ? null : zC
     }
-    mk.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Dk.h.Linear,
-      catmullrom: Dk.h.CatmullRomSpline
-    };
-    const lk = 1 / 16;
-
-    function pk(kk) {
-      return [-kk[0] * lk, kk[1] * lk, kk[2] * lk]
-    }
-
-    function yk(kk) {
-      const [ek, ik, Dk] = kk;
-      return [ek >= 0 ? Math.PI - ek : -Math.PI - ek, Yk(ik + Math.PI), Yk(Dk + Math.PI)]
+    async function GC(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bC.d;
+      if (null === CC.pack) return null;
+      const {
+        packAssets: QC
+      } = await Promise.all([ZC.e(203), ZC.e(44)]).then((() => ZC(61135)));
+      return QC(CC, zC)
     }
 
-    function Yk(kk) {
-      return fk.c.mod(kk + Math.PI, 2 * Math.PI) - Math.PI
+    function RC(CC) {
+      const zC = (0, nC.t)();
+      return null === zC ? () => {} : (zC.onmessage = zC => {
+        CC.readPlayerPack((0, fC.g)(zC.data))
+      }, () => {
+        zC.close()
+      })
     }
-
-    function Lk(kk, ek) {
-      return Math.abs(fk.c.computeShortestRotation(kk[0], ek[0])) + Math.abs(fk.c.computeShortestRotation(kk[1], ek[1])) + Math.abs(fk.c.computeShortestRotation(kk[2], ek[2]))
-    }
-    const Ck = new Pk
-  },
-  36747: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => bk,
-      g: () => Sk,
-      h: () => Dk,
-      k: () => fk
-    });
-    let Dk = function(kk) {
-        return kk[kk.Linear = 0] = "Linear", kk[kk.CatmullRomSpline = 1] = "CatmullRomSpline", kk
-      }({}),
-      fk = function(kk) {
-        return kk[kk.NoLoop = 0] = "NoLoop", kk[kk.LoopOnLastFrame = 1] = "LoopOnLastFrame", kk[kk.HoldOnLastFrame = 2] = "HoldOnLastFrame", kk
-      }({}),
-      Sk = function(kk) {
-        return kk[kk.Movement = 0] = "Movement", kk[kk.Action = 1] = "Action", kk[kk.Emote = 2] = "Emote", kk[kk.Custom = 3] = "Custom", kk
-      }({}),
-      bk = function(kk) {
-        return kk[kk.Start = 0] = "Start", kk[kk.Stop = 1] = "Stop", kk
-      }({})
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

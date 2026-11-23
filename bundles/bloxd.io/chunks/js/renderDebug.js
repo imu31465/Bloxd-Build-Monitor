@@ -1,30 +1,30 @@
 export const id = 48;
 export const ids = [48];
 export const modules = {
-  4624: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Mk
+  4630: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => FC
     });
-    var Dk = ik(22),
-      fk = ik(26),
-      Sk = ik(1273),
-      bk = ik(2752);
-    const rk = 3e4,
-      Pk = 1e3;
+    var QC = ZC(20),
+      wC = ZC(28),
+      bC = ZC(1240),
+      nC = ZC(2800);
+    const fC = 3e4,
+      oC = 1e3;
 
-    function mk() {
-      return "visible" === document.visibilityState && "inGame" === Dk.b.get("gameState") && (0, Sk.w)()
+    function qC() {
+      return "visible" === document.visibilityState && "inGame" === QC.b.get("gameState") && (0, bC.x)()
     }
 
-    function Mk(kk, ek) {
-      (0, bk.t)() || function(kk, ek, ik) {
-        let Dk = 0;
-        const fk = setInterval((() => {
-          ek() && (Dk += Pk, Dk >= kk && (clearInterval(fk), ik()))
-        }), Pk)
-      }(rk, mk, (() => {
-        ek().then((() => {
-          kk(`saved for the player after ${rk/1e3} s of play`), (0, bk.z)(), fk.j.tm("chat", {
+    function FC(CC, zC) {
+      (0, nC.l)() || function(CC, zC, ZC) {
+        let QC = 0;
+        const wC = setInterval((() => {
+          zC() && (QC += oC, QC >= CC && (clearInterval(wC), ZC()))
+        }), oC)
+      }(fC, qC, (() => {
+        zC().then((() => {
+          CC(`saved for the player after ${fC/1e3} s of play`), (0, nC.t)(), wC.o.bp("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,61 +36,61 @@ export const modules = {
       }))
     }
   },
-  4622: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      installRenderDebug: () => xi,
-      renderDebugPlayable: () => Ui,
-      startRenderDebug: () => ni,
-      waitForDraw: () => Hi
+  4621: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      installRenderDebug: () => WZ,
+      renderDebugPlayable: () => MZ,
+      startRenderDebug: () => NZ,
+      waitForDraw: () => gZ
     });
-    var Dk = ik(1778),
-      fk = ik(4624),
-      Sk = ik(2752);
-    const bk = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
+    var QC = ZC(1740),
+      wC = ZC(4630),
+      bC = ZC(2800);
+    const nC = ["+x", "-x", "+y", "-y", "+z", "-z", "dir6", "dir7"];
 
-    function rk(kk) {
-      return 7 & kk
+    function fC(CC) {
+      return 7 & CC
     }
 
-    function Pk(kk) {
-      return kk >>> 11 & 1
+    function oC(CC) {
+      return CC >>> 11 & 1
     }
 
-    function mk(kk) {
-      return [1 + (kk >>> 18 & 63), 1 + (kk >>> 24 & 63)]
+    function qC(CC) {
+      return [1 + (CC >>> 18 & 63), 1 + (CC >>> 24 & 63)]
     }
 
-    function Mk(kk, ek) {
-      const [ik, , Dk] = kk, fk = rk(Dk), Sk = function(kk, ek, ik) {
-        return ek + (1 === (22 >>> kk & 1) ? 4 - ik : ik) & 3
-      }(fk, Pk(Dk), ek), bk = fk >>> 1, [Mk, Kk] = mk(ik), xk = 1 === Sk || 2 === Sk ? Mk : 0, nk = Sk >= 2 ? Kk : 0, Uk = [63 & ik, ik >>> 6 & 63, ik >>> 12 & 63];
-      return Uk[2 === bk ? 0 : 2] += xk, Uk[1 === bk ? 0 : 1] += nk, Uk
+    function FC(CC, zC) {
+      const [ZC, , QC] = CC, wC = fC(QC), bC = function(CC, zC, ZC) {
+        return zC + (1 === (22 >>> CC & 1) ? 4 - ZC : ZC) & 3
+      }(wC, oC(QC), zC), nC = wC >>> 1, [FC, WC] = qC(ZC), NC = 1 === bC || 2 === bC ? FC : 0, MC = bC >= 2 ? WC : 0, gC = [63 & ZC, ZC >>> 6 & 63, ZC >>> 12 & 63];
+      return gC[2 === nC ? 0 : 2] += NC, gC[1 === nC ? 0 : 1] += MC, gC
     }
 
-    function Kk(kk) {
-      const ek = Math.max(...mk(kk[0]));
-      return 1 === ek ? "1" : ek <= 4 ? "2-4" : ek <= 16 ? "5-16" : "17-64"
+    function WC(CC) {
+      const zC = Math.max(...qC(CC[0]));
+      return 1 === zC ? "1" : zC <= 4 ? "2-4" : zC <= 16 ? "5-16" : "17-64"
     }
-    const xk = 16;
+    const NC = 16;
 
-    function nk(kk) {
-      let ek = 2166136261;
-      for (let ik = 0; ik < kk.length; ik++) ek = Math.imul(ek ^ kk[ik], 16777619);
-      return ek >>> 0
+    function MC(CC) {
+      let zC = 2166136261;
+      for (let ZC = 0; ZC < CC.length; ZC++) zC = Math.imul(zC ^ CC[ZC], 16777619);
+      return zC >>> 0
     }
 
-    function Uk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
-      const Dk = Math.max(0, ek - ik),
-        fk = Math.min(kk.length, ek + ik),
-        Sk = [];
-      for (let bk = Dk; bk < fk; bk++) {
-        const ik = kk[bk].toString(16).padStart(2, "0");
-        Sk.push(bk === ek ? `[${ik}]` : ik)
+    function gC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 12;
+      const QC = Math.max(0, zC - ZC),
+        wC = Math.min(CC.length, zC + ZC),
+        bC = [];
+      for (let nC = QC; nC < wC; nC++) {
+        const ZC = CC[nC].toString(16).padStart(2, "0");
+        bC.push(nC === zC ? `[${ZC}]` : ZC)
       }
-      return Sk.join(" ")
+      return bC.join(" ")
     }
-    const Hk = {
+    const SC = {
         NO_ERROR: 0,
         POINTS: 0,
         ARRAY_BUFFER: 34962,
@@ -168,438 +168,438 @@ export const modules = {
         FLOAT_MAT3: 35675,
         FLOAT_MAT4: 35676
       },
-      wk = "_vs2fs_location0";
-    const lk = 0,
-      pk = 4,
-      yk = 6,
-      Yk = [0, 1, 2, 0, 2, 3],
-      Lk = 2048,
-      Ck = 4,
-      Ak = 256,
-      jk = 64,
-      sk = 268435456,
-      dk = 65536,
-      Vk = /^#version [^\n]*\/\/ program (\S+)$/m;
+      pC = "_vs2fs_location0";
+    const PC = 0,
+      GC = 4,
+      RC = 6,
+      AC = [0, 1, 2, 0, 2, 3],
+      xC = 2048,
+      JC = 4,
+      IC = 256,
+      iC = 64,
+      vC = 268435456,
+      eC = 65536,
+      hC = /^#version [^\n]*\/\/ program (\S+)$/m;
 
-    function Fk(kk) {
-      return null === kk.name ? `#${kk.id}` : `#${kk.id} ${kk.name}`
+    function KC(CC) {
+      return null === CC.name ? `#${CC.id}` : `#${CC.id} ${CC.name}`
     }
-    const uk = [],
-      qk = new WeakMap,
-      Ik = new WeakMap,
-      zk = {
+    const YC = [],
+      dC = new WeakMap,
+      mC = new WeakMap,
+      HC = {
         context: null,
         inProbe: !1,
         pendingCheck: null,
         shadowBytes: 0,
         uncopied: 0
       };
-    let Qk = 1;
-    const vk = new WeakMap;
+    let EC = 1;
+    const lC = new WeakMap;
 
-    function Ek(kk) {
-      if (null === kk) return 0;
-      let ek = vk.get(kk);
-      return void 0 === ek && (ek = Qk++, vk.set(kk, ek)), ek
+    function XC(CC) {
+      if (null === CC) return 0;
+      let zC = lC.get(CC);
+      return void 0 === zC && (zC = EC++, lC.set(CC, zC)), zC
     }
-    class hk {
-      constructor(kk, ek) {
-        this.print = kk, this.now = ek, this.shown = 0, this.XM = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.fU = [], this.dropped = 0
+    class cC {
+      constructor(CC, zC) {
+        this.print = CC, this.now = zC, this.shown = 0, this.vq = 0, this.sections = 0, this.second = -1 / 0, this.inSecond = 0, this.lM = [], this.dropped = 0
       }
-      line(kk) {
-        const ek = this.now();
-        if (ek - this.second >= 1e3 && (this.second = ek, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.XM++, void this.store(kk);
-        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${kk} (the last line here: the rest go to bloxdDebug.save())` : kk)
+      line(CC) {
+        const zC = this.now();
+        if (zC - this.second >= 1e3 && (this.second = zC, this.inSecond = 0), this.shown >= 400 || this.inSecond >= 20) return this.vq++, void this.store(CC);
+        this.shown++, this.inSecond++, this.print(400 === this.shown ? `${CC} (the last line here: the rest go to bloxdDebug.save())` : CC)
       }
-      keep(kk) {
-        this.sections++, this.store(kk)
+      keep(CC) {
+        this.sections++, this.store(CC)
       }
-      store(kk) {
-        this.fU.push(`${new Date(Date.now()).toISOString()} ${kk}`), this.fU.length > 2e4 && (this.fU.shift(), this.dropped++)
+      store(CC) {
+        this.lM.push(`${new Date(Date.now()).toISOString()} ${CC}`), this.lM.length > 2e4 && (this.lM.shift(), this.dropped++)
       }
       dump() {
-        return [`${this.shown} lines logged (above); kept here: ${this.XM} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.fU].join("\n")
+        return [`${this.shown} lines logged (above); kept here: ${this.vq} lines past the console's budget, ${this.sections} sections; ${this.dropped} oldest dropped`, ...this.lM].join("\n")
       }
     }
-    let ak = null;
+    let uC = null;
 
-    function Wk() {
-      if (null === ak) {
-        const kk = new hk((kk => {
-          (0, Sk.l)("render", kk)
+    function rC() {
+      if (null === uC) {
+        const CC = new cC((CC => {
+          (0, bC.i)("render", CC)
         }), (() => performance.now()));
-        (0, Sk.k)("render", (() => kk.dump())), ak = kk
+        (0, bC.e)("render", (() => CC.dump())), uC = CC
       }
-      return ak
+      return uC
     }
 
-    function tk(kk) {
-      Wk().line(kk)
+    function sC(CC) {
+      rC().line(CC)
     }
 
-    function Xk(kk) {
-      Wk().keep(kk)
+    function TC(CC) {
+      rC().keep(CC)
     }
 
-    function Bk(kk) {
-      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
-      return kk.length <= ek ? kk : `${kk.slice(0,ek)}... (${kk.length-ek} more characters)`
+    function aC(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4096;
+      return CC.length <= zC ? CC : `${CC.slice(0,zC)}... (${CC.length-zC} more characters)`
     }
 
-    function ck(kk, ek, ik, Dk, fk, Sk) {
-      const bk = zk.pendingCheck;
-      if (null === bk) return;
-      const rk = "undefined" !== typeof WebGL2RenderingContext && kk instanceof WebGL2RenderingContext,
-        Pk = {
-          gl: kk,
-          program: ik,
-          call: Dk,
-          lw: fk,
-          instances: Sk,
+    function tC(CC, zC, ZC, QC, wC, bC) {
+      const nC = HC.pendingCheck;
+      if (null === nC) return;
+      const fC = "undefined" !== typeof WebGL2RenderingContext && CC instanceof WebGL2RenderingContext,
+        oC = {
+          gl: CC,
+          program: ZC,
+          call: QC,
+          np: wC,
+          instances: bC,
           attributes: [],
           group: -1,
           chunk: "",
           pages: []
         };
-      if (bk.draws.push(Pk), rk) try {
-        const Dk = function(kk) {
-          const ek = [],
-            ik = new Map,
-            Dk = Math.min(16, kk.getParameter(Hk.MAX_VERTEX_ATTRIBS));
-          for (let fk = 0; fk < Dk; fk++) {
-            if (!kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
-            const Dk = kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
-              Sk = kk.getVertexAttribOffset(fk, Hk.VERTEX_ATTRIB_ARRAY_POINTER),
-              bk = kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_STRIDE),
-              rk = kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_SIZE),
-              Pk = kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_TYPE),
-              mk = "VERTEX_ATTRIB_ARRAY_INTEGER" in kk && kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_INTEGER),
-              Mk = "VERTEX_ATTRIB_ARRAY_DIVISOR" in kk ? kk.getVertexAttrib(fk, Hk.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
-            ik.set(fk, {
-              buffer: Dk,
-              offset: Sk,
-              stride: bk
-            }), ek.push(`@${fk} buf#${Ek(Dk)} +${Sk} stride ${bk} ${rk}x0x${Pk.toString(16)}${mk?" int":""} div ${Mk}`)
+      if (nC.draws.push(oC), fC) try {
+        const QC = function(CC) {
+          const zC = [],
+            ZC = new Map,
+            QC = Math.min(16, CC.getParameter(SC.MAX_VERTEX_ATTRIBS));
+          for (let wC = 0; wC < QC; wC++) {
+            if (!CC.getVertexAttrib(wC, SC.VERTEX_ATTRIB_ARRAY_ENABLED)) continue;
+            const QC = CC.getVertexAttrib(wC, SC.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING),
+              bC = CC.getVertexAttribOffset(wC, SC.VERTEX_ATTRIB_ARRAY_POINTER),
+              nC = CC.getVertexAttrib(wC, SC.VERTEX_ATTRIB_ARRAY_STRIDE),
+              fC = CC.getVertexAttrib(wC, SC.VERTEX_ATTRIB_ARRAY_SIZE),
+              oC = CC.getVertexAttrib(wC, SC.VERTEX_ATTRIB_ARRAY_TYPE),
+              qC = "VERTEX_ATTRIB_ARRAY_INTEGER" in CC && CC.getVertexAttrib(wC, SC.VERTEX_ATTRIB_ARRAY_INTEGER),
+              FC = "VERTEX_ATTRIB_ARRAY_DIVISOR" in CC ? CC.getVertexAttrib(wC, SC.VERTEX_ATTRIB_ARRAY_DIVISOR) : 0;
+            ZC.set(wC, {
+              buffer: QC,
+              offset: bC,
+              stride: nC
+            }), zC.push(`@${wC} buf#${XC(QC)} +${bC} stride ${nC} ${fC}x0x${oC.toString(16)}${qC?" int":""} div ${FC}`)
           }
           return {
-            lines: ek,
-            byLocation: ik
+            lines: zC,
+            byLocation: ZC
           }
-        }(kk);
-        if (Pk.attributes = Dk.lines, "inst" === ik.terrain) {
+        }(CC);
+        if (oC.attributes = QC.lines, "inst" === ZC.terrain) {
           const {
-            group: fk,
-            chunk: rk
-          } = function(kk, ek, ik) {
-            const Dk = ek.get(yk),
-              fk = kk.getVertexAttrib(yk, Hk.CURRENT_VERTEX_ATTRIB),
-              Sk = Dk ? `+${Dk.offset}` : fk ? Array.from(fk).slice(0, 3).join(",") : "?";
-            let bk = ik.groups.get(Sk);
-            return void 0 === bk && (bk = ik.groups.size, ik.groups.set(Sk, bk)), {
-              group: bk,
-              chunk: Sk
+            group: wC,
+            chunk: fC
+          } = function(CC, zC, ZC) {
+            const QC = zC.get(RC),
+              wC = CC.getVertexAttrib(RC, SC.CURRENT_VERTEX_ATTRIB),
+              bC = QC ? `+${QC.offset}` : wC ? Array.from(wC).slice(0, 3).join(",") : "?";
+            let nC = ZC.groups.get(bC);
+            return void 0 === nC && (nC = ZC.groups.size, ZC.groups.set(bC, nC)), {
+              group: nC,
+              chunk: bC
             }
-          }(kk, Dk.byLocation, bk);
-          Pk.group = fk, Pk.chunk = rk;
-          for (const kk of [lk, pk]) {
-            var mk;
-            const ek = null === (mk = Dk.byLocation.get(kk)) || void 0 === mk ? void 0 : mk.buffer;
-            ek && Pk.pages.push({
+          }(CC, QC.byLocation, nC);
+          oC.group = wC, oC.chunk = fC;
+          for (const CC of [PC, GC]) {
+            var qC;
+            const zC = null === (qC = QC.byLocation.get(CC)) || void 0 === qC ? void 0 : qC.buffer;
+            zC && oC.pages.push({
               kind: "buf",
-              buffer: ek
+              buffer: zC
             })
-          }! function(kk, ek, ik, Dk, fk, Sk, bk) {
-            const rk = Dk.get(lk),
-              Pk = bk.parts.get(Sk);
-            if (void 0 === Pk && bk.parts.size >= Ck) return;
-            const mk = Math.min(fk, jk, Ak - (null !== Pk && void 0 !== Pk ? Pk : 0));
-            if (null === rk || void 0 === rk || !rk.buffer || mk <= 0) return;
-            const Mk = Tk(kk, ek, ik);
-            if (!Mk) return;
-            const Kk = rk.stride || 12,
-              xk = Nk(kk, rk.buffer, rk.offset, (mk - 1) * Kk + 12),
-              nk = new DataView(xk.buffer),
-              Uk = function(kk, ek) {
-                const ik = function(kk) {
-                    const ek = ke.get(kk);
-                    if (void 0 !== ek && (null === ek || kk.isProgram(ek))) return ek;
-                    zk.inProbe = !0;
-                    let ik = null;
+          }! function(CC, zC, ZC, QC, wC, bC, nC) {
+            const fC = QC.get(PC),
+              oC = nC.parts.get(bC);
+            if (void 0 === oC && nC.parts.size >= JC) return;
+            const qC = Math.min(wC, iC, IC - (null !== oC && void 0 !== oC ? oC : 0));
+            if (null === fC || void 0 === fC || !fC.buffer || qC <= 0) return;
+            const FC = DC(CC, zC, ZC);
+            if (!FC) return;
+            const WC = fC.stride || 12,
+              NC = BC(CC, fC.buffer, fC.offset, (qC - 1) * WC + 12),
+              MC = new DataView(NC.buffer),
+              gC = function(CC, zC) {
+                const ZC = function(CC) {
+                    const zC = VC.get(CC);
+                    if (void 0 !== zC && (null === zC || CC.isProgram(zC))) return zC;
+                    HC.inProbe = !0;
+                    let ZC = null;
                     try {
-                      ik = Zk(kk, Rk, Jk, "fed", "the record feed")
+                      ZC = jC(CC, OC, kC, "fed", "the record feed")
                     } finally {
-                      zk.inProbe = !1
+                      HC.inProbe = !1
                     }
-                    return ke.set(kk, ik), ik
-                  }(kk),
-                  Dk = ik ? Gk(kk, ik, ek, (() => {
-                    kk.drawArraysInstanced(Hk.POINTS, 0, 1, ek)
+                    return VC.set(CC, ZC), ZC
+                  }(CC),
+                  QC = ZC ? UC(CC, ZC, zC, (() => {
+                    CC.drawArraysInstanced(SC.POINTS, 0, 1, zC)
                   }), "decode probe input (the record feed)") : null;
-                return Dk ? new Uint32Array(Dk.buffer) : null
-              }(kk, mk);
-            Uk || bk.fed.failed++;
-            const wk = Gk(kk, Mk, 4 * mk, (() => {
-              kk.drawArraysInstanced(Hk.POINTS, 0, 4, mk)
+                return QC ? new Uint32Array(QC.buffer) : null
+              }(CC, qC);
+            gC || nC.fed.failed++;
+            const pC = UC(CC, FC, 4 * qC, (() => {
+              CC.drawArraysInstanced(SC.POINTS, 0, 4, qC)
             }));
-            if (!wk) return;
-            bk.parts.set(Sk, (null !== Pk && void 0 !== Pk ? Pk : 0) + mk);
-            for (let Hk = 0; Hk < mk; Hk++) {
-              const kk = Hk * Kk,
-                ek = [nk.getUint32(kk, !0), nk.getUint32(kk + 4, !0), nk.getUint32(kk + 8, !0)],
-                ik = Uk ? [Uk[3 * Hk], Uk[3 * Hk + 1], Uk[3 * Hk + 2]] : ek;
-              Uk && (bk.fed.records++, ik.some(((kk, ik) => kk !== ek[ik])) && (bk.fed.differing++, bk.fed.first.length < 8 && bk.fed.first.push(`part ${Sk} instance ${Hk}: fed ${ik.map(Se).join(" ")} buffer ${ek.map(Se).join(" ")}`)));
-              for (let Dk = 0; Dk < 4; Dk++) {
-                const kk = 3 * (4 * Hk + Dk);
-                bk.vertices.push({
-                  record: ik,
-                  slot: Dk,
-                  group: Sk,
-                  gpu: [wk[kk], wk[kk + 1], wk[kk + 2]]
+            if (!pC) return;
+            nC.parts.set(bC, (null !== oC && void 0 !== oC ? oC : 0) + qC);
+            for (let SC = 0; SC < qC; SC++) {
+              const CC = SC * WC,
+                zC = [MC.getUint32(CC, !0), MC.getUint32(CC + 4, !0), MC.getUint32(CC + 8, !0)],
+                ZC = gC ? [gC[3 * SC], gC[3 * SC + 1], gC[3 * SC + 2]] : zC;
+              gC && (nC.fed.records++, ZC.some(((CC, ZC) => CC !== zC[ZC])) && (nC.fed.differing++, nC.fed.first.length < 8 && nC.fed.first.push(`part ${bC} instance ${SC}: fed ${ZC.map(wz).join(" ")} buffer ${zC.map(wz).join(" ")}`)));
+              for (let QC = 0; QC < 4; QC++) {
+                const CC = 3 * (4 * SC + QC);
+                nC.vertices.push({
+                  record: ZC,
+                  slot: QC,
+                  group: bC,
+                  gpu: [pC[CC], pC[CC + 1], pC[CC + 2]]
                 })
               }
             }
-          }(kk, ek, ik, Dk.byLocation, Sk, fk, bk)
+          }(CC, zC, ZC, QC.byLocation, bC, wC, nC)
         } else {
-          const Dk = ee(kk, ek, 16),
-            Sk = ee(kk, ek, 8);
-          for (const kk of [Dk, Sk]) kk && Pk.pages.push({
+          const QC = Cz(CC, zC, 16),
+            bC = Cz(CC, zC, 8);
+          for (const CC of [QC, bC]) CC && oC.pages.push({
             kind: "tex",
-            texture: kk
+            texture: CC
           });
-          Dk && function(kk, ek, ik, Dk, fk, Sk) {
-            if (Sk.parts.size >= Ck) return;
-            const bk = Tk(kk, ek, ik);
-            if (!bk) return;
-            let rk = 6 * Ak;
-            const Pk = [];
-            for (const [nk, Uk] of fk) {
-              const kk = Math.min(Uk, rk, Math.max(6, 6 * Math.floor(Ak / fk.length)));
-              kk > 0 && (Pk.push([nk, kk]), rk -= kk)
+          QC && function(CC, zC, ZC, QC, wC, bC) {
+            if (bC.parts.size >= JC) return;
+            const nC = DC(CC, zC, ZC);
+            if (!nC) return;
+            let fC = 6 * IC;
+            const oC = [];
+            for (const [MC, gC] of wC) {
+              const CC = Math.min(gC, fC, Math.max(6, 6 * Math.floor(IC / wC.length)));
+              CC > 0 && (oC.push([MC, CC]), fC -= CC)
             }
-            const mk = Pk.reduce(((kk, ek) => {
-                let [, ik] = ek;
-                return kk + ik
+            const qC = oC.reduce(((CC, zC) => {
+                let [, ZC] = zC;
+                return CC + ZC
               }), 0),
-              Mk = Gk(kk, bk, mk, (() => {
-                for (const [ek, ik] of Pk) kk.drawArrays(Hk.POINTS, ek, ik)
+              FC = UC(CC, nC, qC, (() => {
+                for (const [zC, ZC] of oC) CC.drawArrays(SC.POINTS, zC, ZC)
               }));
-            if (!Mk) return;
-            let Kk = 0;
-            for (const [nk, Uk] of Pk) {
-              const ek = Math.floor(nk / 6),
-                ik = Math.floor((nk + Uk - 1) / 6) - ek + 1,
-                fk = ie(kk, Dk, Lk, ek, ik);
-              for (let kk = nk; kk < nk + Uk; kk++, Kk++) {
-                var xk;
-                const ik = 4 * (Math.floor(kk / 6) - ek),
-                  Dk = [fk[ik], fk[ik + 1], fk[ik + 2]];
-                Sk.parts.set(fk[ik + 3], (null !== (xk = Sk.parts.get(fk[ik + 3])) && void 0 !== xk ? xk : 0) + (kk % 6 === 0 ? 1 : 0)), Sk.vertices.push({
-                  record: Dk,
-                  slot: Yk[kk % 6],
-                  group: fk[ik + 3],
-                  gpu: [Mk[3 * Kk], Mk[3 * Kk + 1], Mk[3 * Kk + 2]]
+            if (!FC) return;
+            let WC = 0;
+            for (const [MC, gC] of oC) {
+              const zC = Math.floor(MC / 6),
+                ZC = Math.floor((MC + gC - 1) / 6) - zC + 1,
+                wC = zz(CC, QC, xC, zC, ZC);
+              for (let CC = MC; CC < MC + gC; CC++, WC++) {
+                var NC;
+                const ZC = 4 * (Math.floor(CC / 6) - zC),
+                  QC = [wC[ZC], wC[ZC + 1], wC[ZC + 2]];
+                bC.parts.set(wC[ZC + 3], (null !== (NC = bC.parts.get(wC[ZC + 3])) && void 0 !== NC ? NC : 0) + (CC % 6 === 0 ? 1 : 0)), bC.vertices.push({
+                  record: QC,
+                  slot: AC[CC % 6],
+                  group: wC[ZC + 3],
+                  gpu: [FC[3 * WC], FC[3 * WC + 1], FC[3 * WC + 2]]
                 })
               }
             }
-          }(kk, ek, ik, Dk, fk, bk)
+          }(CC, zC, ZC, QC, wC, nC)
         }
-      } catch (Mk) {
-        tk(`decode probe failed on program ${Fk(ik)}: ${String(Mk)}`)
+      } catch (FC) {
+        sC(`decode probe failed on program ${KC(ZC)}: ${String(FC)}`)
       }
     }
 
-    function Tk(kk, ek, ik) {
-      if (void 0 !== ik.probe) return ik.probe && Ok(kk, ek, ik.probe), ik.probe;
-      ik.probe = null, zk.inProbe = !0;
+    function DC(CC, zC, ZC) {
+      if (void 0 !== ZC.probe) return ZC.probe && yC(CC, zC, ZC.probe), ZC.probe;
+      ZC.probe = null, HC.inProbe = !0;
       try {
-        ik.probe = function(kk, ek) {
-          return Zk(kk, (ik = ek.vertex, ik.replace(`\nvec3 ${wk} = vec3(0);\n`, `\nout vec3 ${wk};\n`)), ek.fragment, wk, `program ${Fk(ek)}'s twin`);
-          var ik
-        }(kk, ik)
+        ZC.probe = function(CC, zC) {
+          return jC(CC, (ZC = zC.vertex, ZC.replace(`\nvec3 ${pC} = vec3(0);\n`, `\nout vec3 ${pC};\n`)), zC.fragment, pC, `program ${KC(zC)}'s twin`);
+          var ZC
+        }(CC, ZC)
       } finally {
-        zk.inProbe = !1
+        HC.inProbe = !1
       }
-      return ik.probe && Ok(kk, ek, ik.probe), ik.probe
+      return ZC.probe && yC(CC, zC, ZC.probe), ZC.probe
     }
 
-    function Zk(kk, ek, ik, Dk, fk) {
-      const Sk = [kk.createShader(Hk.VERTEX_SHADER), kk.createShader(Hk.FRAGMENT_SHADER)],
-        bk = kk.createProgram();
-      if (!bk || !Sk[0] || !Sk[1]) return null;
-      kk.shaderSource(Sk[0], ek), kk.shaderSource(Sk[1], ik);
-      for (const Pk of Sk) kk.compileShader(Pk), kk.attachShader(bk, Pk);
-      kk.transformFeedbackVaryings(bk, [Dk], Hk.INTERLEAVED_ATTRIBS), kk.linkProgram(bk);
-      for (const Pk of Sk) kk.deleteShader(Pk);
-      var rk;
-      return kk.getProgramParameter(bk, Hk.LINK_STATUS) ? bk : (tk(`decode probe: ${fk} failed to link: ${Bk(null!==(rk=kk.getProgramInfoLog(bk))&&void 0!==rk?rk:"",300)}`), kk.deleteProgram(bk), null)
+    function jC(CC, zC, ZC, QC, wC) {
+      const bC = [CC.createShader(SC.VERTEX_SHADER), CC.createShader(SC.FRAGMENT_SHADER)],
+        nC = CC.createProgram();
+      if (!nC || !bC[0] || !bC[1]) return null;
+      CC.shaderSource(bC[0], zC), CC.shaderSource(bC[1], ZC);
+      for (const oC of bC) CC.compileShader(oC), CC.attachShader(nC, oC);
+      CC.transformFeedbackVaryings(nC, [QC], SC.INTERLEAVED_ATTRIBS), CC.linkProgram(nC);
+      for (const oC of bC) CC.deleteShader(oC);
+      var fC;
+      return CC.getProgramParameter(nC, SC.LINK_STATUS) ? nC : (sC(`decode probe: ${wC} failed to link: ${aC(null!==(fC=CC.getProgramInfoLog(nC))&&void 0!==fC?fC:"",300)}`), CC.deleteProgram(nC), null)
     }
 
-    function Ok(kk, ek, ik) {
-      const Dk = kk.getProgramParameter(ek, Hk.ACTIVE_UNIFORM_BLOCKS);
-      for (let rk = 0; rk < Dk; rk++) {
-        const Dk = kk.getActiveUniformBlockName(ek, rk),
-          fk = null === Dk ? Hk.INVALID_INDEX : kk.getUniformBlockIndex(ik, Dk);
-        fk !== Hk.INVALID_INDEX && kk.uniformBlockBinding(ik, fk, kk.getActiveUniformBlockParameter(ek, rk, Hk.UNIFORM_BLOCK_BINDING))
+    function yC(CC, zC, ZC) {
+      const QC = CC.getProgramParameter(zC, SC.ACTIVE_UNIFORM_BLOCKS);
+      for (let fC = 0; fC < QC; fC++) {
+        const QC = CC.getActiveUniformBlockName(zC, fC),
+          wC = null === QC ? SC.INVALID_INDEX : CC.getUniformBlockIndex(ZC, QC);
+        wC !== SC.INVALID_INDEX && CC.uniformBlockBinding(ZC, wC, CC.getActiveUniformBlockParameter(zC, fC, SC.UNIFORM_BLOCK_BINDING))
       }
-      const fk = kk.getParameter(Hk.CURRENT_PROGRAM);
-      kk.useProgram(ik);
-      const Sk = kk.getProgramParameter(ek, Hk.ACTIVE_UNIFORMS),
-        bk = kk.getActiveUniforms(ek, [...Array(Sk).keys()], Hk.UNIFORM_BLOCK_INDEX);
-      for (let rk = 0; rk < Sk; rk++) {
-        const Dk = kk.getActiveUniform(ek, rk);
-        if (!Dk || -1 !== bk[rk]) continue;
-        const fk = Dk.name.replace(/\[0\]$/, "");
-        for (let Sk = 0; Sk < Dk.size; Sk++) {
-          const bk = Dk.size > 1 ? `${fk}[${Sk}]` : Dk.name,
-            rk = kk.getUniformLocation(ek, bk),
-            Pk = kk.getUniformLocation(ik, bk);
-          rk && Pk && gk(kk, Pk, Dk.type, kk.getUniform(ek, rk))
+      const wC = CC.getParameter(SC.CURRENT_PROGRAM);
+      CC.useProgram(ZC);
+      const bC = CC.getProgramParameter(zC, SC.ACTIVE_UNIFORMS),
+        nC = CC.getActiveUniforms(zC, [...Array(bC).keys()], SC.UNIFORM_BLOCK_INDEX);
+      for (let fC = 0; fC < bC; fC++) {
+        const QC = CC.getActiveUniform(zC, fC);
+        if (!QC || -1 !== nC[fC]) continue;
+        const wC = QC.name.replace(/\[0\]$/, "");
+        for (let bC = 0; bC < QC.size; bC++) {
+          const nC = QC.size > 1 ? `${wC}[${bC}]` : QC.name,
+            fC = CC.getUniformLocation(zC, nC),
+            oC = CC.getUniformLocation(ZC, nC);
+          fC && oC && LC(CC, oC, QC.type, CC.getUniform(zC, fC))
         }
       }
-      kk.useProgram(fk)
+      CC.useProgram(wC)
     }
 
-    function gk(kk, ek, ik, Dk) {
-      const fk = ArrayBuffer.isView(Dk) ? Array.from(Dk) : [Number(Dk)];
-      switch (ik) {
-        case Hk.FLOAT:
-          return void kk.uniform1f(ek, fk[0]);
-        case Hk.FLOAT_VEC2:
-          return void kk.uniform2fv(ek, fk);
-        case Hk.FLOAT_VEC3:
-          return void kk.uniform3fv(ek, fk);
-        case Hk.FLOAT_VEC4:
-          return void kk.uniform4fv(ek, fk);
-        case Hk.FLOAT_MAT3:
-          return void kk.uniformMatrix3fv(ek, !1, fk);
-        case Hk.FLOAT_MAT4:
-          return void kk.uniformMatrix4fv(ek, !1, fk);
-        case Hk.UNSIGNED_INT:
-          return void kk.uniform1ui(ek, fk[0]);
-        case Hk.UNSIGNED_INT_VEC2:
-          return void kk.uniform2uiv(ek, fk);
-        case Hk.UNSIGNED_INT_VEC3:
-          return void kk.uniform3uiv(ek, fk);
-        case Hk.UNSIGNED_INT_VEC4:
-          return void kk.uniform4uiv(ek, fk);
-        case Hk.INT_VEC2:
-          return void kk.uniform2iv(ek, fk);
-        case Hk.INT_VEC3:
-          return void kk.uniform3iv(ek, fk);
-        case Hk.INT_VEC4:
-          return void kk.uniform4iv(ek, fk);
+    function LC(CC, zC, ZC, QC) {
+      const wC = ArrayBuffer.isView(QC) ? Array.from(QC) : [Number(QC)];
+      switch (ZC) {
+        case SC.FLOAT:
+          return void CC.uniform1f(zC, wC[0]);
+        case SC.FLOAT_VEC2:
+          return void CC.uniform2fv(zC, wC);
+        case SC.FLOAT_VEC3:
+          return void CC.uniform3fv(zC, wC);
+        case SC.FLOAT_VEC4:
+          return void CC.uniform4fv(zC, wC);
+        case SC.FLOAT_MAT3:
+          return void CC.uniformMatrix3fv(zC, !1, wC);
+        case SC.FLOAT_MAT4:
+          return void CC.uniformMatrix4fv(zC, !1, wC);
+        case SC.UNSIGNED_INT:
+          return void CC.uniform1ui(zC, wC[0]);
+        case SC.UNSIGNED_INT_VEC2:
+          return void CC.uniform2uiv(zC, wC);
+        case SC.UNSIGNED_INT_VEC3:
+          return void CC.uniform3uiv(zC, wC);
+        case SC.UNSIGNED_INT_VEC4:
+          return void CC.uniform4uiv(zC, wC);
+        case SC.INT_VEC2:
+          return void CC.uniform2iv(zC, wC);
+        case SC.INT_VEC3:
+          return void CC.uniform3iv(zC, wC);
+        case SC.INT_VEC4:
+          return void CC.uniform4iv(zC, wC);
         default:
-          kk.uniform1i(ek, fk[0])
+          CC.uniform1i(zC, wC[0])
       }
     }
 
-    function Gk(kk, ek, ik, Dk) {
-      let fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
-      const Sk = kk.getParameter(Hk.CURRENT_PROGRAM),
-        bk = kk.getParameter(Hk.TRANSFORM_FEEDBACK_BINDING),
-        rk = kk.getParameter(Hk.TRANSFORM_FEEDBACK_BUFFER_BINDING),
-        Pk = kk.getParameter(Hk.COPY_READ_BUFFER_BINDING),
-        mk = kk.isEnabled(Hk.RASTERIZER_DISCARD),
-        Mk = kk.createTransformFeedback(),
-        Kk = kk.createBuffer();
-      zk.inProbe = !0;
+    function UC(CC, zC, ZC, QC) {
+      let wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "decode probe";
+      const bC = CC.getParameter(SC.CURRENT_PROGRAM),
+        nC = CC.getParameter(SC.TRANSFORM_FEEDBACK_BINDING),
+        fC = CC.getParameter(SC.TRANSFORM_FEEDBACK_BUFFER_BINDING),
+        oC = CC.getParameter(SC.COPY_READ_BUFFER_BINDING),
+        qC = CC.isEnabled(SC.RASTERIZER_DISCARD),
+        FC = CC.createTransformFeedback(),
+        WC = CC.createBuffer();
+      HC.inProbe = !0;
       try {
-        const Sk = kk.getError();
-        Sk !== Hk.NO_ERROR && tk(`GL error 0x${Sk.toString(16)} pending before the decode probe (the renderer's)`), kk.useProgram(ek), kk.bindTransformFeedback(Hk.TRANSFORM_FEEDBACK, Mk), kk.bindBuffer(Hk.TRANSFORM_FEEDBACK_BUFFER, Kk), kk.bufferData(Hk.TRANSFORM_FEEDBACK_BUFFER, 12 * ik, Hk.STREAM_READ), kk.bindBufferBase(Hk.TRANSFORM_FEEDBACK_BUFFER, 0, Kk), kk.enable(Hk.RASTERIZER_DISCARD), kk.beginTransformFeedback(Hk.POINTS), Dk(), kk.endTransformFeedback(), kk.bindBufferBase(Hk.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-        const bk = kk.getError();
-        if (bk !== Hk.NO_ERROR) return tk(`${fk}: GL error 0x${bk.toString(16)} on the feedback draw`), null;
-        const rk = new Float32Array(3 * ik);
-        return kk.bindBuffer(Hk.COPY_READ_BUFFER, Kk), kk.getBufferSubData(Hk.COPY_READ_BUFFER, 0, rk), rk
+        const bC = CC.getError();
+        bC !== SC.NO_ERROR && sC(`GL error 0x${bC.toString(16)} pending before the decode probe (the renderer's)`), CC.useProgram(zC), CC.bindTransformFeedback(SC.TRANSFORM_FEEDBACK, FC), CC.bindBuffer(SC.TRANSFORM_FEEDBACK_BUFFER, WC), CC.bufferData(SC.TRANSFORM_FEEDBACK_BUFFER, 12 * ZC, SC.STREAM_READ), CC.bindBufferBase(SC.TRANSFORM_FEEDBACK_BUFFER, 0, WC), CC.enable(SC.RASTERIZER_DISCARD), CC.beginTransformFeedback(SC.POINTS), QC(), CC.endTransformFeedback(), CC.bindBufferBase(SC.TRANSFORM_FEEDBACK_BUFFER, 0, null);
+        const nC = CC.getError();
+        if (nC !== SC.NO_ERROR) return sC(`${wC}: GL error 0x${nC.toString(16)} on the feedback draw`), null;
+        const fC = new Float32Array(3 * ZC);
+        return CC.bindBuffer(SC.COPY_READ_BUFFER, WC), CC.getBufferSubData(SC.COPY_READ_BUFFER, 0, fC), fC
       } finally {
-        mk || kk.disable(Hk.RASTERIZER_DISCARD), kk.bindTransformFeedback(Hk.TRANSFORM_FEEDBACK, bk), kk.bindBuffer(Hk.TRANSFORM_FEEDBACK_BUFFER, rk), kk.bindBuffer(Hk.COPY_READ_BUFFER, Pk), kk.deleteTransformFeedback(Mk), kk.deleteBuffer(Kk), kk.useProgram(Sk), zk.inProbe = !1
+        qC || CC.disable(SC.RASTERIZER_DISCARD), CC.bindTransformFeedback(SC.TRANSFORM_FEEDBACK, nC), CC.bindBuffer(SC.TRANSFORM_FEEDBACK_BUFFER, fC), CC.bindBuffer(SC.COPY_READ_BUFFER, oC), CC.deleteTransformFeedback(FC), CC.deleteBuffer(WC), CC.useProgram(bC), HC.inProbe = !1
       }
     }
 
-    function Nk(kk, ek, ik, Dk) {
-      const fk = kk.getParameter(Hk.COPY_READ_BUFFER_BINDING),
-        Sk = new Uint8Array(Dk);
-      return kk.bindBuffer(Hk.COPY_READ_BUFFER, ek), kk.getBufferSubData(Hk.COPY_READ_BUFFER, ik, Sk), kk.bindBuffer(Hk.COPY_READ_BUFFER, fk), Sk
+    function BC(CC, zC, ZC, QC) {
+      const wC = CC.getParameter(SC.COPY_READ_BUFFER_BINDING),
+        bC = new Uint8Array(QC);
+      return CC.bindBuffer(SC.COPY_READ_BUFFER, zC), CC.getBufferSubData(SC.COPY_READ_BUFFER, ZC, bC), CC.bindBuffer(SC.COPY_READ_BUFFER, wC), bC
     }
-    const Rk = `#version 300 es\nlayout(location = ${lk}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
-      Jk = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
-      ke = new WeakMap;
+    const OC = `#version 300 es\nlayout(location = ${PC}) in uvec3 record;\nflat out uvec3 fed;\nvoid main() {\n\tfed = record;\n\tgl_Position = vec4(0.0);\n\tgl_PointSize = 1.0;\n}\n`,
+      kC = "#version 300 es\nprecision highp float;\nout vec4 color;\nvoid main() {\n\tcolor = vec4(0.0);\n}\n",
+      VC = new WeakMap;
 
-    function ee(kk, ek, ik) {
-      const Dk = kk.getProgramParameter(ek, Hk.ACTIVE_UNIFORMS),
-        fk = kk.getParameter(Hk.ACTIVE_TEXTURE);
+    function Cz(CC, zC, ZC) {
+      const QC = CC.getProgramParameter(zC, SC.ACTIVE_UNIFORMS),
+        wC = CC.getParameter(SC.ACTIVE_TEXTURE);
       try {
-        for (let fk = 0; fk < Dk; fk++) {
-          const Dk = kk.getActiveUniform(ek, fk);
-          if ((null === Dk || void 0 === Dk ? void 0 : Dk.type) !== Hk.UNSIGNED_INT_SAMPLER_2D) continue;
-          const Sk = kk.getUniformLocation(ek, Dk.name),
-            bk = Sk ? kk.getUniform(ek, Sk) : -1;
-          if (bk < 0) continue;
-          kk.activeTexture(Hk.TEXTURE0 + bk);
-          const rk = kk.getParameter(Hk.TEXTURE_BINDING_2D);
-          if (rk && Ik.get(rk) === ik) return rk
+        for (let wC = 0; wC < QC; wC++) {
+          const QC = CC.getActiveUniform(zC, wC);
+          if ((null === QC || void 0 === QC ? void 0 : QC.type) !== SC.UNSIGNED_INT_SAMPLER_2D) continue;
+          const bC = CC.getUniformLocation(zC, QC.name),
+            nC = bC ? CC.getUniform(zC, bC) : -1;
+          if (nC < 0) continue;
+          CC.activeTexture(SC.TEXTURE0 + nC);
+          const fC = CC.getParameter(SC.TEXTURE_BINDING_2D);
+          if (fC && mC.get(fC) === ZC) return fC
         }
         return null
       } finally {
-        kk.activeTexture(fk)
+        CC.activeTexture(wC)
       }
     }
 
-    function ie(kk, ek, ik, Dk, fk) {
-      const Sk = new Uint32Array(4 * fk),
-        bk = kk.getParameter(Hk.READ_FRAMEBUFFER_BINDING),
-        rk = kk.createFramebuffer();
-      kk.bindFramebuffer(Hk.READ_FRAMEBUFFER, rk), kk.framebufferTexture2D(Hk.READ_FRAMEBUFFER, Hk.COLOR_ATTACHMENT0, Hk.TEXTURE_2D, ek, 0);
+    function zz(CC, zC, ZC, QC, wC) {
+      const bC = new Uint32Array(4 * wC),
+        nC = CC.getParameter(SC.READ_FRAMEBUFFER_BINDING),
+        fC = CC.createFramebuffer();
+      CC.bindFramebuffer(SC.READ_FRAMEBUFFER, fC), CC.framebufferTexture2D(SC.READ_FRAMEBUFFER, SC.COLOR_ATTACHMENT0, SC.TEXTURE_2D, zC, 0);
       try {
-        let ek = 0;
-        for (; ek < fk;) {
-          const bk = Dk + ek,
-            rk = bk % ik,
-            Pk = Math.min(fk - ek, ik - rk);
-          kk.readPixels(rk, Math.floor(bk / ik), Pk, 1, Hk.RGBA_INTEGER, Hk.UNSIGNED_INT, Sk.subarray(4 * ek, 4 * (ek + Pk))), ek += Pk
+        let zC = 0;
+        for (; zC < wC;) {
+          const nC = QC + zC,
+            fC = nC % ZC,
+            oC = Math.min(wC - zC, ZC - fC);
+          CC.readPixels(fC, Math.floor(nC / ZC), oC, 1, SC.RGBA_INTEGER, SC.UNSIGNED_INT, bC.subarray(4 * zC, 4 * (zC + oC))), zC += oC
         }
       } finally {
-        kk.bindFramebuffer(Hk.READ_FRAMEBUFFER, bk), kk.deleteFramebuffer(rk)
+        CC.bindFramebuffer(SC.READ_FRAMEBUFFER, nC), CC.deleteFramebuffer(fC)
       }
-      return Sk
+      return bC
     }
 
-    function De(kk, ek, ik) {
-      let Dk = 0,
-        fk = 0;
-      for (let Pk = 0; Pk < ek.bytes.length; Pk += dk) {
-        Dk++;
-        const kk = Math.min(Pk + dk, ek.bytes.length);
-        nk(ek.bytes.subarray(Pk, kk)) !== nk(ik.subarray(Pk, kk)) && fk++
+    function Zz(CC, zC, ZC) {
+      let QC = 0,
+        wC = 0;
+      for (let oC = 0; oC < zC.bytes.length; oC += eC) {
+        QC++;
+        const CC = Math.min(oC + eC, zC.bytes.length);
+        MC(zC.bytes.subarray(oC, CC)) !== MC(ZC.subarray(oC, CC)) && wC++
       }
-      const Sk = `${kk} ${ek.bytes.length} B cpu ${nk(ek.bytes).toString(16)} gpu ${nk(ik).toString(16)}, ${fk}/${Dk} blocks differ${ek.missed?`, ${ek.missed} GPU-side writes uncopied`:""}`;
-      if (0 === fk) return Sk;
+      const bC = `${CC} ${zC.bytes.length} B cpu ${MC(zC.bytes).toString(16)} gpu ${MC(ZC).toString(16)}, ${wC}/${QC} blocks differ${zC.missed?`, ${zC.missed} GPU-side writes uncopied`:""}`;
+      if (0 === wC) return bC;
       const {
-        count: bk,
-        offsets: rk
-      } = function(kk, ek) {
-        let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
-        const Dk = Math.min(kk.length, ek.length);
-        let fk = Math.abs(kk.length - ek.length);
-        const Sk = [];
-        for (let bk = 0; bk < Dk; bk++) kk[bk] !== ek[bk] && (fk++, Sk.length < ik && Sk.push(bk));
+        count: nC,
+        offsets: fC
+      } = function(CC, zC) {
+        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 8;
+        const QC = Math.min(CC.length, zC.length);
+        let wC = Math.abs(CC.length - zC.length);
+        const bC = [];
+        for (let nC = 0; nC < QC; nC++) CC[nC] !== zC[nC] && (wC++, bC.length < ZC && bC.push(nC));
         return {
-          count: fk,
-          offsets: Sk
+          count: wC,
+          offsets: bC
         }
-      }(ek.bytes, ik);
-      return Xk([`${Sk}: ${bk} bytes differ`, ...rk.map((kk => `  +${kk}: cpu ${Uk(ek.bytes,kk)} | gpu ${Uk(ik,kk)}`))].join("\n")), `${Sk}: ${bk} bytes differ, first at ${rk.join(", ")} (context in the saved file)`
+      }(zC.bytes, ZC);
+      return TC([`${bC}: ${nC} bytes differ`, ...fC.map((CC => `  +${CC}: cpu ${gC(zC.bytes,CC)} | gpu ${gC(ZC,CC)}`))].join("\n")), `${bC}: ${nC} bytes differ, first at ${fC.join(", ")} (context in the saved file)`
     }
 
-    function fe(kk) {
-      if (0 === kk.vertices.length) return void tk(`decode probe (${kk.reason}): no terrain draw probed (${kk.draws.length} seen)`);
-      const ek = function(kk) {
-          const ek = new Map;
-          for (const Dk of kk) {
-            const kk = ek.get(Dk.group);
-            kk ? kk.push(Dk) : ek.set(Dk.group, [Dk])
+    function Qz(CC) {
+      if (0 === CC.vertices.length) return void sC(`decode probe (${CC.reason}): no terrain draw probed (${CC.draws.length} seen)`);
+      const zC = function(CC) {
+          const zC = new Map;
+          for (const QC of CC) {
+            const CC = zC.get(QC.group);
+            CC ? CC.push(QC) : zC.set(QC.group, [QC])
           }
-          const ik = {
-            vertices: kk.length,
+          const ZC = {
+            vertices: CC.length,
             mismatches: 0,
             byDirection: new Array(8).fill(0),
             byDiagonal: [0, 0],
@@ -607,67 +607,67 @@ export const modules = {
             translations: new Map,
             first: []
           };
-          for (const [Dk, fk] of ek) {
-            const kk = new Map,
-              ek = fk.map((ek => {
-                const ik = Mk(ek.record, ek.slot),
-                  Dk = [ek.gpu[0] - ik[0], ek.gpu[1] - ik[1], ek.gpu[2] - ik[2]],
-                  fk = Dk.map((kk => Math.round(64 * kk))).join(","),
-                  Sk = kk.get(fk);
-                return Sk ? Sk.count++ : kk.set(fk, {
+          for (const [QC, wC] of zC) {
+            const CC = new Map,
+              zC = wC.map((zC => {
+                const ZC = FC(zC.record, zC.slot),
+                  QC = [zC.gpu[0] - ZC[0], zC.gpu[1] - ZC[1], zC.gpu[2] - ZC[2]],
+                  wC = QC.map((CC => Math.round(64 * CC))).join(","),
+                  bC = CC.get(wC);
+                return bC ? bC.count++ : CC.set(wC, {
                   count: 1,
-                  offset: Dk
-                }), ik
+                  offset: QC
+                }), ZC
               }));
-            let Sk = [0, 0, 0],
-              bk = 0;
-            for (const ik of kk.values()) ik.count > bk && (bk = ik.count, Sk = ik.offset);
-            ik.translations.set(Dk, Sk), fk.forEach(((kk, Dk) => {
-              var fk;
-              const bk = [ek[Dk][0] + Sk[0], ek[Dk][1] + Sk[1], ek[Dk][2] + Sk[2]];
-              if (bk.every(((ek, ik) => {
-                  return Dk = kk.gpu[ik], fk = ek, Math.abs(Dk - fk) <= Math.max(.001, 1e-6 * Math.abs(fk));
-                  var Dk, fk
+            let bC = [0, 0, 0],
+              nC = 0;
+            for (const ZC of CC.values()) ZC.count > nC && (nC = ZC.count, bC = ZC.offset);
+            ZC.translations.set(QC, bC), wC.forEach(((CC, QC) => {
+              var wC;
+              const nC = [zC[QC][0] + bC[0], zC[QC][1] + bC[1], zC[QC][2] + bC[2]];
+              if (nC.every(((zC, ZC) => {
+                  return QC = CC.gpu[ZC], wC = zC, Math.abs(QC - wC) <= Math.max(.001, 1e-6 * Math.abs(wC));
+                  var QC, wC
                 }))) return;
-              ik.mismatches++, ik.byDirection[rk(kk.record[2])]++, ik.byDiagonal[Pk(kk.record[2])]++;
-              const mk = Kk(kk.record);
-              ik.byBand[mk] = (null !== (fk = ik.byBand[mk]) && void 0 !== fk ? fk : 0) + 1, ik.first.length < xk && ik.first.push({
-                ...kk,
-                expected: bk
+              ZC.mismatches++, ZC.byDirection[fC(CC.record[2])]++, ZC.byDiagonal[oC(CC.record[2])]++;
+              const qC = WC(CC.record);
+              ZC.byBand[qC] = (null !== (wC = ZC.byBand[qC]) && void 0 !== wC ? wC : 0) + 1, ZC.first.length < NC && ZC.first.push({
+                ...CC,
+                expected: nC
               })
             }))
           }
-          return ik
-        }(kk.vertices),
-        ik = ek.byDirection.map(((kk, ek) => kk ? `${bk[ek]} ${kk}` : "")).filter(Boolean).join(" "),
-        Dk = Object.entries(ek.byBand).map((kk => {
-          let [ek, ik] = kk;
-          return `${ek}: ${ik}`
+          return ZC
+        }(CC.vertices),
+        ZC = zC.byDirection.map(((CC, zC) => CC ? `${nC[zC]} ${CC}` : "")).filter(Boolean).join(" "),
+        QC = Object.entries(zC.byBand).map((CC => {
+          let [zC, ZC] = CC;
+          return `${zC}: ${ZC}`
         })).join(" ");
-      if (tk(`decode probe (${kk.reason}): ${ek.mismatches}/${ek.vertices} vertices differ from the CPU decode over ${kk.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (ek.mismatches ? ` by direction [${ik}] diagonal [0: ${ek.byDiagonal[0]} 1: ${ek.byDiagonal[1]}] extent [${Dk}]` : "")), kk.fed.records > 0 || kk.fed.failed > 0) {
-        tk(`decode probe input: ${kk.fed.differing}/${kk.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (kk.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (kk.fed.failed ? `; the feed failed on ${kk.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
-        for (const ek of kk.fed.first) tk(`  ${ek}`)
+      if (sC(`decode probe (${CC.reason}): ${zC.mismatches}/${zC.vertices} vertices differ from the CPU decode over ${CC.parts.size} parts, in the probe's own transform feedback draw (the frame's draws can still differ)` + (zC.mismatches ? ` by direction [${ZC}] diagonal [0: ${zC.byDiagonal[0]} 1: ${zC.byDiagonal[1]}] extent [${QC}]` : "")), CC.fed.records > 0 || CC.fed.failed > 0) {
+        sC(`decode probe input: ${CC.fed.differing}/${CC.fed.records} instanced records the vertex input fed differ from the buffer's readback` + (CC.fed.differing ? " (H2: the GPU's vertex copy differs, unless the feed's own integer pass-through is the fault)" : "") + (CC.fed.failed ? `; the feed failed on ${CC.fed.failed} draws, whose decode is held to the buffer's readback` : ""));
+        for (const zC of CC.fed.first) sC(`  ${zC}`)
       }
-      for (const fk of ek.first) {
-        const [kk, ek, ik] = fk.record;
-        tk(`  mismatch part ${fk.group} r0 ${kk.toString(16)} r1 ${ek.toString(16)} r2 ${ik.toString(16)} slot ${fk.slot} (${bk[rk(ik)]}): expected ${fk.expected.map(be).join(",")} gpu ${fk.gpu.map(be).join(",")}`)
+      for (const wC of zC.first) {
+        const [CC, zC, ZC] = wC.record;
+        sC(`  mismatch part ${wC.group} r0 ${CC.toString(16)} r1 ${zC.toString(16)} r2 ${ZC.toString(16)} slot ${wC.slot} (${nC[fC(ZC)]}): expected ${wC.expected.map(bz).join(",")} gpu ${wC.gpu.map(bz).join(",")}`)
       }
-      Xk(`decode probe translations: ${[...ek.translations].map((kk=>{let[ek,ik]=kk;return`${ek}: ${ik.map(be).join(",")}`})).join("; ")}`)
+      TC(`decode probe translations: ${[...zC.translations].map((CC=>{let[zC,ZC]=CC;return`${zC}: ${ZC.map(bz).join(",")}`})).join("; ")}`)
     }
 
-    function Se(kk) {
-      return kk.toString(16)
+    function wz(CC) {
+      return CC.toString(16)
     }
 
-    function be(kk) {
-      return Number.isInteger(kk) ? String(kk) : kk.toFixed(3)
+    function bz(CC) {
+      return Number.isInteger(CC) ? String(CC) : CC.toFixed(3)
     }
 
-    function re(kk) {
-      return null !== zk.pendingCheck ? Promise.resolve() : new Promise((ek => {
-        let ik = !1;
-        const Dk = {
-          reason: kk,
+    function nz(CC) {
+      return null !== HC.pendingCheck ? Promise.resolve() : new Promise((zC => {
+        let ZC = !1;
+        const QC = {
+          reason: CC,
           terrainDraws: 0,
           draws: [],
           vertices: [],
@@ -680,85 +680,85 @@ export const modules = {
             failed: 0
           }
         };
-        zk.pendingCheck = Dk;
-        const fk = () => {
-            zk.pendingCheck = null;
+        HC.pendingCheck = QC;
+        const wC = () => {
+            HC.pendingCheck = null;
             try {
-              ! function(kk) {
-                tk(`draw ranges (${kk.reason}): ${kk.terrainDraws} terrain draws in the frame, the first ${kk.draws.length} here`);
-                for (const ek of kk.draws) {
-                  const kk = ek.lw.slice(0, 8).map((kk => {
-                      let [ek, ik] = kk;
-                      return `${ek}+${ik}`
+              ! function(CC) {
+                sC(`draw ranges (${CC.reason}): ${CC.terrainDraws} terrain draws in the frame, the first ${CC.draws.length} here`);
+                for (const zC of CC.draws) {
+                  const CC = zC.np.slice(0, 8).map((CC => {
+                      let [zC, ZC] = CC;
+                      return `${zC}+${ZC}`
                     })).join(" "),
-                    ik = ek.lw.length > 8 ? ` (+${ek.lw.length-8} ranges)` : "";
-                  tk(`  ${Fk(ek.program)} ${ek.program.terrain} ${ek.call} ${kk}${ik} x${ek.instances}${ek.group>=0?` part ${ek.group} chunk ${ek.chunk}`:""} | ${ek.attributes.join(" | ")}`)
+                    ZC = zC.np.length > 8 ? ` (+${zC.np.length-8} ranges)` : "";
+                  sC(`  ${KC(zC.program)} ${zC.program.terrain} ${zC.call} ${CC}${ZC} x${zC.instances}${zC.group>=0?` part ${zC.group} chunk ${zC.chunk}`:""} | ${zC.attributes.join(" | ")}`)
                 }
-              }(Dk), fe(Dk);
-              Dk.draws.some((kk => "undefined" !== typeof WebGL2RenderingContext && kk.gl instanceof WebGL2RenderingContext)) || 0 === Dk.draws.length ? function(kk) {
-                const ek = [],
-                  ik = new Map;
-                for (const Dk of kk)
-                  if ("undefined" !== typeof WebGL2RenderingContext && Dk.gl instanceof WebGL2RenderingContext)
-                    for (const kk of Dk.pages) ik.set("buf" === kk.kind ? kk.buffer : kk.texture, {
-                      page: kk,
-                      gl: Dk.gl
+              }(QC), Qz(QC);
+              QC.draws.some((CC => "undefined" !== typeof WebGL2RenderingContext && CC.gl instanceof WebGL2RenderingContext)) || 0 === QC.draws.length ? function(CC) {
+                const zC = [],
+                  ZC = new Map;
+                for (const QC of CC)
+                  if ("undefined" !== typeof WebGL2RenderingContext && QC.gl instanceof WebGL2RenderingContext)
+                    for (const CC of QC.pages) ZC.set("buf" === CC.kind ? CC.buffer : CC.texture, {
+                      page: CC,
+                      gl: QC.gl
                     });
-                for (const [Dk, {
-                    page: fk,
-                    gl: Sk
-                  }] of ik) {
-                  const kk = qk.get(Dk);
-                  if (!kk) {
-                    ek.push(`${fk.kind}#${Ek(Dk)}: no CPU copy (${zk.uncopied} pages over the copy budget)`);
+                for (const [QC, {
+                    page: wC,
+                    gl: bC
+                  }] of ZC) {
+                  const CC = dC.get(QC);
+                  if (!CC) {
+                    zC.push(`${wC.kind}#${XC(QC)}: no CPU copy (${HC.uncopied} pages over the copy budget)`);
                     continue
                   }
-                  if ("buf" === fk.kind) {
-                    ek.push(De(`buf#${kk.id}`, kk, Nk(Sk, fk.buffer, 0, kk.bytes.length)));
+                  if ("buf" === wC.kind) {
+                    zC.push(Zz(`buf#${CC.id}`, CC, BC(bC, wC.buffer, 0, CC.bytes.length)));
                     continue
                   }
-                  const ik = ie(Sk, fk.texture, kk.width, 0, kk.width * kk.height),
-                    bk = 16 === kk.texelBytes ? new Uint8Array(ik.buffer) : new Uint8Array(new Uint16Array(ik).buffer);
-                  ek.push(De(`tex#${kk.id} (${16===kk.texelBytes?"records":"light"})`, kk, bk))
+                  const ZC = zz(bC, wC.texture, CC.width, 0, CC.width * CC.height),
+                    nC = 16 === CC.texelBytes ? new Uint8Array(ZC.buffer) : new Uint8Array(new Uint16Array(ZC).buffer);
+                  zC.push(Zz(`tex#${CC.id} (${16===CC.texelBytes?"records":"light"})`, CC, nC))
                 }
-                for (const Dk of ek) tk(`page readback ${Dk}`)
-              }(Dk.draws) : tk("page readback: none on WebGL1 (no buffer readback)")
-            } catch (kk) {
-              tk(`check failed: ${String(kk)}`)
+                for (const QC of zC) sC(`page readback ${QC}`)
+              }(QC.draws) : sC("page readback: none on WebGL1 (no buffer readback)")
+            } catch (CC) {
+              sC(`check failed: ${String(CC)}`)
             }
-            ek()
+            zC()
           },
-          Sk = () => {
-            if (Dk.draws.length > 0 && !ik) return ik = !0, void setTimeout(fk, 0);
-            ik || requestAnimationFrame(Sk)
+          bC = () => {
+            if (QC.draws.length > 0 && !ZC) return ZC = !0, void setTimeout(wC, 0);
+            ZC || requestAnimationFrame(bC)
           };
-        requestAnimationFrame(Sk), setTimeout((() => {
-          ik || (ik = !0, fk())
+        requestAnimationFrame(bC), setTimeout((() => {
+          ZC || (ZC = !0, wC())
         }), 5e3)
       }))
     }
-    var Pe = ik(4629);
-    const me = 20,
-      Me = 24,
-      Ke = Reflect.apply;
+    var fz = ZC(4635);
+    const oz = 20,
+      qz = 24,
+      Fz = Reflect.apply;
 
-    function xe(kk, ek, ik) {
-      if (!kk) return;
-      const Dk = kk[ek];
-      if ("function" === typeof Dk) {
-        const fk = ik(Dk);
-        kk[ek] = fk, (0, Pe.r)(fk, Dk)
+    function Wz(CC, zC, ZC) {
+      if (!CC) return;
+      const QC = CC[zC];
+      if ("function" === typeof QC) {
+        const wC = ZC(QC);
+        CC[zC] = wC, (0, fz.v)(wC, QC)
       }
     }
-    let ne = !1;
-    const Ue = new WeakMap,
-      He = new WeakMap,
-      we = new WeakMap,
-      le = {
+    let Nz = !1;
+    const Mz = new WeakMap,
+      gz = new WeakMap,
+      Sz = new WeakMap,
+      pz = {
         gl: 0,
         lost: 0
       };
-    let pe = {
+    let Pz = {
         inst: {
           draws: 0,
           faces: 0
@@ -772,307 +772,307 @@ export const modules = {
           faces: 0
         }
       },
-      ye = {
+      Gz = {
         buffer: 0,
         texture: 0
       },
-      Ye = 0;
+      Rz = 0;
 
-    function Le(kk) {
-      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      if (kk instanceof ArrayBuffer) return new Uint8Array(kk, ek, ik || void 0);
-      if (!ArrayBuffer.isView(kk)) return null;
-      const Dk = "BYTES_PER_ELEMENT" in kk ? kk.BYTES_PER_ELEMENT : 1,
-        fk = kk.byteOffset + ek * Dk,
-        Sk = ik ? ik * Dk : kk.byteLength - ek * Dk;
-      return new Uint8Array(kk.buffer, fk, Math.max(0, Sk))
+    function Az(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      if (CC instanceof ArrayBuffer) return new Uint8Array(CC, zC, ZC || void 0);
+      if (!ArrayBuffer.isView(CC)) return null;
+      const QC = "BYTES_PER_ELEMENT" in CC ? CC.BYTES_PER_ELEMENT : 1,
+        wC = CC.byteOffset + zC * QC,
+        bC = ZC ? ZC * QC : CC.byteLength - zC * QC;
+      return new Uint8Array(CC.buffer, wC, Math.max(0, bC))
     }
 
-    function Ce(kk, ek) {
-      const ik = function(kk) {
-        switch (kk) {
-          case Hk.ARRAY_BUFFER:
-            return Hk.ARRAY_BUFFER_BINDING;
-          case Hk.ELEMENT_ARRAY_BUFFER:
-            return Hk.ELEMENT_ARRAY_BUFFER_BINDING;
-          case Hk.COPY_READ_BUFFER:
-            return Hk.COPY_READ_BUFFER_BINDING;
-          case Hk.COPY_WRITE_BUFFER:
-            return Hk.COPY_WRITE_BUFFER_BINDING;
-          case Hk.UNIFORM_BUFFER:
-            return Hk.UNIFORM_BUFFER_BINDING;
-          case Hk.PIXEL_UNPACK_BUFFER:
-            return Hk.PIXEL_UNPACK_BUFFER_BINDING;
-          case Hk.TRANSFORM_FEEDBACK_BUFFER:
-            return Hk.TRANSFORM_FEEDBACK_BUFFER_BINDING;
+    function xz(CC, zC) {
+      const ZC = function(CC) {
+        switch (CC) {
+          case SC.ARRAY_BUFFER:
+            return SC.ARRAY_BUFFER_BINDING;
+          case SC.ELEMENT_ARRAY_BUFFER:
+            return SC.ELEMENT_ARRAY_BUFFER_BINDING;
+          case SC.COPY_READ_BUFFER:
+            return SC.COPY_READ_BUFFER_BINDING;
+          case SC.COPY_WRITE_BUFFER:
+            return SC.COPY_WRITE_BUFFER_BINDING;
+          case SC.UNIFORM_BUFFER:
+            return SC.UNIFORM_BUFFER_BINDING;
+          case SC.PIXEL_UNPACK_BUFFER:
+            return SC.PIXEL_UNPACK_BUFFER_BINDING;
+          case SC.TRANSFORM_FEEDBACK_BUFFER:
+            return SC.TRANSFORM_FEEDBACK_BUFFER_BINDING;
           default:
             return 0
         }
-      }(ek);
-      return ik ? kk.getParameter(ik) : null
+      }(zC);
+      return ZC ? CC.getParameter(ZC) : null
     }
 
-    function Ae(kk) {
-      const ek = qk.get(kk);
-      ek && (zk.shadowBytes -= ek.bytes.length, qk.delete(kk))
+    function Jz(CC) {
+      const zC = dC.get(CC);
+      zC && (HC.shadowBytes -= zC.bytes.length, dC.delete(CC))
     }
 
-    function je(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      Ae(kk), zk.shadowBytes + ek > sk ? zk.uncopied++ : (zk.shadowBytes += ek, qk.set(kk, {
-        id: Ek(kk),
-        bytes: new Uint8Array(ek),
-        width: ik,
-        height: Dk,
-        texelBytes: fk,
+    function Iz(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      Jz(CC), HC.shadowBytes + zC > vC ? HC.uncopied++ : (HC.shadowBytes += zC, dC.set(CC, {
+        id: XC(CC),
+        bytes: new Uint8Array(zC),
+        width: ZC,
+        height: QC,
+        texelBytes: wC,
         missed: 0
       }))
     }
 
-    function se(kk, ek) {
-      for (const ik of ["deleteBuffer", "deleteTexture"]) xe(kk, ik, (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        return ik[0] && Ae(ik[0]), Ke(kk, this, ik)
+    function iz(CC, zC) {
+      for (const ZC of ["deleteBuffer", "deleteTexture"]) Wz(CC, ZC, (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        return ZC[0] && Jz(ZC[0]), Fz(CC, this, ZC)
       }));
-      xe(kk, "shaderSource", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        return ik[0] && "string" === typeof ik[1] && Ue.set(ik[0], ik[1]), Ke(kk, this, ik)
-      })), xe(kk, "attachShader", (kk => function() {
-        for (var ek, ik = arguments.length, Dk = new Array(ik), fk = 0; fk < ik; fk++) Dk[fk] = arguments[fk];
-        const Sk = Dk[0],
-          bk = null !== (ek = He.get(Sk)) && void 0 !== ek ? ek : [];
-        return bk.push(Dk[1]), He.set(Sk, bk), Ke(kk, this, Dk)
-      })), xe(kk, "linkProgram", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        const fk = Ke(kk, this, ik);
-        return zk.inProbe || function(kk, ek) {
-          var ik, Dk, fk;
-          "undefined" !== typeof HTMLCanvasElement && kk.canvas instanceof HTMLCanvasElement && function(kk) {
-            if (Ie.has(kk)) return;
-            Ie.add(kk);
-            for (const ek of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) kk.addEventListener(ek, (kk => {
-              le.lost < me && (le.lost++, tk(`${ek}${"statusMessage"in kk?`: ${String(kk.statusMessage)}`:""}`))
+      Wz(CC, "shaderSource", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        return ZC[0] && "string" === typeof ZC[1] && Mz.set(ZC[0], ZC[1]), Fz(CC, this, ZC)
+      })), Wz(CC, "attachShader", (CC => function() {
+        for (var zC, ZC = arguments.length, QC = new Array(ZC), wC = 0; wC < ZC; wC++) QC[wC] = arguments[wC];
+        const bC = QC[0],
+          nC = null !== (zC = gz.get(bC)) && void 0 !== zC ? zC : [];
+        return nC.push(QC[1]), gz.set(bC, nC), Fz(CC, this, QC)
+      })), Wz(CC, "linkProgram", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        const wC = Fz(CC, this, ZC);
+        return HC.inProbe || function(CC, zC) {
+          var ZC, QC, wC;
+          "undefined" !== typeof HTMLCanvasElement && CC.canvas instanceof HTMLCanvasElement && function(CC) {
+            if (dz.has(CC)) return;
+            dz.add(CC);
+            for (const zC of ["webglcontextlost", "webglcontextrestored", "webglcontextcreationerror"]) CC.addEventListener(zC, (CC => {
+              pz.lost < oz && (pz.lost++, sC(`${zC}${"statusMessage"in CC?`: ${String(CC.statusMessage)}`:""}`))
             }))
-          }(kk.canvas);
-          zk.context ??= kk;
-          const Sk = null !== (ik = He.get(ek)) && void 0 !== ik ? ik : [];
-          let bk = "",
-            rk = "";
-          for (const Mk of Sk) {
-            var Pk;
-            const kk = null !== (Pk = Ue.get(Mk)) && void 0 !== Pk ? Pk : "";
-            /\bgl_Position\b/.test(kk) ? bk = kk : rk = kk
+          }(CC.canvas);
+          HC.context ??= CC;
+          const bC = null !== (ZC = gz.get(zC)) && void 0 !== ZC ? ZC : [];
+          let nC = "",
+            fC = "";
+          for (const FC of bC) {
+            var oC;
+            const CC = null !== (oC = Mz.get(FC)) && void 0 !== oC ? oC : "";
+            /\bgl_Position\b/.test(CC) ? nC = CC : fC = CC
           }
-          const mk = {
-            id: Ek(ek),
-            name: null !== (Dk = null === (fk = Vk.exec(bk)) || void 0 === fk ? void 0 : fk[1]) && void 0 !== Dk ? Dk : null,
-            gl: kk,
-            vertex: bk,
-            fragment: rk,
-            terrain: Ve(bk),
+          const qC = {
+            id: XC(zC),
+            name: null !== (QC = null === (wC = hC.exec(nC)) || void 0 === wC ? void 0 : wC[1]) && void 0 !== QC ? QC : null,
+            gl: CC,
+            vertex: nC,
+            fragment: fC,
+            terrain: ez(nC),
             checked: !1,
             firstDraw: !1
           };
-          if (we.set(ek, mk), uk.push([ek, mk]), null !== mk.terrain) {
-            const ek = Sk.map((ek => {
-              var ik;
-              return null !== (ik = kk.getShaderInfoLog(ek)) && void 0 !== ik ? ik : ""
-            })).filter((kk => "" !== kk.trim()));
-            ek.length > 0 && Xk(`program ${Fk(mk)} (${mk.terrain}) shader logs:\n${Bk(ek.join("\n"))}`)
+          if (Sz.set(zC, qC), YC.push([zC, qC]), null !== qC.terrain) {
+            const zC = bC.map((zC => {
+              var ZC;
+              return null !== (ZC = CC.getShaderInfoLog(zC)) && void 0 !== ZC ? ZC : ""
+            })).filter((CC => "" !== CC.trim()));
+            zC.length > 0 && TC(`program ${KC(qC)} (${qC.terrain}) shader logs:\n${aC(zC.join("\n"))}`)
           }
-        }(this, ik[0]), fk
-      })), xe(kk, "bufferData", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        const fk = Ke(kk, this, ik);
-        if (!zk.inProbe) {
-          const kk = Ce(this, ik[0]);
-          if (kk) {
-            var Sk, bk, rk;
-            const ek = "number" === typeof ik[1] ? null : Le(ik[1], null !== (Sk = ik[3]) && void 0 !== Sk ? Sk : 0, null !== (bk = ik[4]) && void 0 !== bk ? bk : 0);
-            var Pk;
-            if (je(kk, "number" === typeof ik[1] ? ik[1] : null !== (rk = null === ek || void 0 === ek ? void 0 : ek.length) && void 0 !== rk ? rk : 0), ek) null === (Pk = qk.get(kk)) || void 0 === Pk || Pk.bytes.set(ek)
-          }
-        }
-        return fk
-      })), xe(kk, "bufferSubData", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        const fk = Ke(kk, this, ik);
-        if (!zk.inProbe) {
-          var Sk, bk;
-          const kk = Ce(this, ik[0]),
-            ek = kk ? qk.get(kk) : void 0,
-            Dk = Le(ik[2], null !== (Sk = ik[3]) && void 0 !== Sk ? Sk : 0, null !== (bk = ik[4]) && void 0 !== bk ? bk : 0);
-          if (ek && Dk) {
-            const kk = ik[1];
-            ek.bytes.set(Dk.subarray(0, Math.max(0, ek.bytes.length - kk)), kk), de("buffer", ek, kk, Dk.length)
+        }(this, ZC[0]), wC
+      })), Wz(CC, "bufferData", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        const wC = Fz(CC, this, ZC);
+        if (!HC.inProbe) {
+          const CC = xz(this, ZC[0]);
+          if (CC) {
+            var bC, nC, fC;
+            const zC = "number" === typeof ZC[1] ? null : Az(ZC[1], null !== (bC = ZC[3]) && void 0 !== bC ? bC : 0, null !== (nC = ZC[4]) && void 0 !== nC ? nC : 0);
+            var oC;
+            if (Iz(CC, "number" === typeof ZC[1] ? ZC[1] : null !== (fC = null === zC || void 0 === zC ? void 0 : zC.length) && void 0 !== fC ? fC : 0), zC) null === (oC = dC.get(CC)) || void 0 === oC || oC.bytes.set(zC)
           }
         }
-        return fk
-      })), ek && (xe(kk, "copyBufferSubData", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        const fk = Ke(kk, this, ik);
-        if (!zk.inProbe) {
-          const [kk, ek, Dk, fk, Sk] = ik, bk = Ce(this, kk), rk = Ce(this, ek), Pk = bk ? qk.get(bk) : void 0, mk = rk ? qk.get(rk) : void 0;
-          mk && (Pk ? mk.bytes.set(Pk.bytes.slice(Dk, Dk + Sk), fk) : mk.missed++)
-        }
-        return fk
-      })), xe(kk, "texStorage2D", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        const fk = Ke(kk, this, ik),
-          [, , Sk, bk, rk] = ik;
-        if (!zk.inProbe && (Sk === Hk.RGBA32UI || Sk === Hk.RGBA16UI)) {
-          const kk = this.getParameter(Hk.TEXTURE_BINDING_2D),
-            ek = Sk === Hk.RGBA32UI ? 16 : 8;
-          kk && (Ik.set(kk, ek), je(kk, bk * rk * ek, bk, rk, ek))
-        }
-        return fk
-      })), xe(kk, "texSubImage2D", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        const fk = Ke(kk, this, ik);
-        return !zk.inProbe && ik.length >= 9 && ik[0] === Hk.TEXTURE_2D && 0 === ik[1] && function(kk, ek) {
-          var ik;
-          const Dk = kk.getParameter(Hk.TEXTURE_BINDING_2D),
-            fk = Dk ? qk.get(Dk) : void 0;
-          if (!fk) return;
-          const [, , Sk, bk, rk, Pk] = ek;
-          let mk = Le(ek[8], null !== (ik = ek[9]) && void 0 !== ik ? ik : 0);
-          if (null === mk && "number" === typeof ek[8]) {
-            const ik = Ce(kk, Hk.PIXEL_UNPACK_BUFFER),
-              Dk = ik ? qk.get(ik) : void 0;
-            mk = Dk ? Dk.bytes.subarray(ek[8]) : null
+        return wC
+      })), Wz(CC, "bufferSubData", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        const wC = Fz(CC, this, ZC);
+        if (!HC.inProbe) {
+          var bC, nC;
+          const CC = xz(this, ZC[0]),
+            zC = CC ? dC.get(CC) : void 0,
+            QC = Az(ZC[2], null !== (bC = ZC[3]) && void 0 !== bC ? bC : 0, null !== (nC = ZC[4]) && void 0 !== nC ? nC : 0);
+          if (zC && QC) {
+            const CC = ZC[1];
+            zC.bytes.set(QC.subarray(0, Math.max(0, zC.bytes.length - CC)), CC), vz("buffer", zC, CC, QC.length)
           }
-          if (null === mk) return void fk.missed++;
-          const Mk = kk.getParameter(Hk.UNPACK_ROW_LENGTH) || rk,
-            Kk = kk.getParameter(Hk.UNPACK_SKIP_ROWS),
-            xk = kk.getParameter(Hk.UNPACK_SKIP_PIXELS),
-            nk = fk.texelBytes;
-          for (let Uk = 0; Uk < Pk; Uk++) {
-            const kk = ((Kk + Uk) * Mk + xk) * nk,
-              ek = ((bk + Uk) * fk.width + Sk) * nk;
-            fk.bytes.set(mk.subarray(kk, kk + rk * nk), ek)
+        }
+        return wC
+      })), zC && (Wz(CC, "copyBufferSubData", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        const wC = Fz(CC, this, ZC);
+        if (!HC.inProbe) {
+          const [CC, zC, QC, wC, bC] = ZC, nC = xz(this, CC), fC = xz(this, zC), oC = nC ? dC.get(nC) : void 0, qC = fC ? dC.get(fC) : void 0;
+          qC && (oC ? qC.bytes.set(oC.bytes.slice(QC, QC + bC), wC) : qC.missed++)
+        }
+        return wC
+      })), Wz(CC, "texStorage2D", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        const wC = Fz(CC, this, ZC),
+          [, , bC, nC, fC] = ZC;
+        if (!HC.inProbe && (bC === SC.RGBA32UI || bC === SC.RGBA16UI)) {
+          const CC = this.getParameter(SC.TEXTURE_BINDING_2D),
+            zC = bC === SC.RGBA32UI ? 16 : 8;
+          CC && (mC.set(CC, zC), Iz(CC, nC * fC * zC, nC, fC, zC))
+        }
+        return wC
+      })), Wz(CC, "texSubImage2D", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        const wC = Fz(CC, this, ZC);
+        return !HC.inProbe && ZC.length >= 9 && ZC[0] === SC.TEXTURE_2D && 0 === ZC[1] && function(CC, zC) {
+          var ZC;
+          const QC = CC.getParameter(SC.TEXTURE_BINDING_2D),
+            wC = QC ? dC.get(QC) : void 0;
+          if (!wC) return;
+          const [, , bC, nC, fC, oC] = zC;
+          let qC = Az(zC[8], null !== (ZC = zC[9]) && void 0 !== ZC ? ZC : 0);
+          if (null === qC && "number" === typeof zC[8]) {
+            const ZC = xz(CC, SC.PIXEL_UNPACK_BUFFER),
+              QC = ZC ? dC.get(ZC) : void 0;
+            qC = QC ? QC.bytes.subarray(zC[8]) : null
           }
-          de("texture", fk, (bk * fk.width + Sk) * nk, rk * Pk * nk)
-        }(this, ik), fk
-      })), xe(kk, "copyTexSubImage2D", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        const fk = ik[0] === Hk.TEXTURE_2D ? this.getParameter(Hk.TEXTURE_BINDING_2D) : null,
-          Sk = fk ? qk.get(fk) : void 0;
-        return Sk && Sk.missed++, Ke(kk, this, ik)
+          if (null === qC) return void wC.missed++;
+          const FC = CC.getParameter(SC.UNPACK_ROW_LENGTH) || fC,
+            WC = CC.getParameter(SC.UNPACK_SKIP_ROWS),
+            NC = CC.getParameter(SC.UNPACK_SKIP_PIXELS),
+            MC = wC.texelBytes;
+          for (let gC = 0; gC < oC; gC++) {
+            const CC = ((WC + gC) * FC + NC) * MC,
+              zC = ((nC + gC) * wC.width + bC) * MC;
+            wC.bytes.set(qC.subarray(CC, CC + fC * MC), zC)
+          }
+          vz("texture", wC, (nC * wC.width + bC) * MC, fC * oC * MC)
+        }(this, ZC), wC
+      })), Wz(CC, "copyTexSubImage2D", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        const wC = ZC[0] === SC.TEXTURE_2D ? this.getParameter(SC.TEXTURE_BINDING_2D) : null,
+          bC = wC ? dC.get(wC) : void 0;
+        return bC && bC.missed++, Fz(CC, this, ZC)
       })));
-      for (const ik of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) xe(kk, ik, (kk => function() {
-        for (var ek = arguments.length, Dk = new Array(ek), fk = 0; fk < ek; fk++) Dk[fk] = arguments[fk];
-        const Sk = Ke(kk, this, Dk);
-        return zk.inProbe || ue(this, ik, Dk), Sk
+      for (const ZC of ["drawArrays", "drawElements", "drawArraysInstanced", "drawElementsInstanced"]) Wz(CC, ZC, (CC => function() {
+        for (var zC = arguments.length, QC = new Array(zC), wC = 0; wC < zC; wC++) QC[wC] = arguments[wC];
+        const bC = Fz(CC, this, QC);
+        return HC.inProbe || Kz(this, ZC, QC), bC
       }));
-      xe(kk, "getExtension", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        const fk = Ke(kk, this, ik);
-        return fk && "object" === typeof fk && function(kk, ek, ik) {
-          const Dk = {
+      Wz(CC, "getExtension", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        const wC = Fz(CC, this, ZC);
+        return wC && "object" === typeof wC && function(CC, zC, ZC) {
+          const QC = {
             WEBGL_multi_draw: ["multiDrawArraysWEBGL", "multiDrawElementsWEBGL", "multiDrawArraysInstancedWEBGL", "multiDrawElementsInstancedWEBGL"],
             ANGLE_instanced_arrays: ["drawArraysInstancedANGLE", "drawElementsInstancedANGLE"]
           };
-          if (!(ek in Dk) || ik.bloxdRenderDebug) return;
-          ik.bloxdRenderDebug = !0;
-          for (const fk of Dk[ek]) {
-            const ek = ik[fk];
-            "function" === typeof ek && (ik[fk] = function() {
-              for (var Dk = arguments.length, Sk = new Array(Dk), bk = 0; bk < Dk; bk++) Sk[bk] = arguments[bk];
-              const rk = Ke(ek, ik, Sk);
-              return zk.inProbe || ue(kk, fk, Sk), rk
+          if (!(zC in QC) || ZC.bloxdRenderDebug) return;
+          ZC.bloxdRenderDebug = !0;
+          for (const wC of QC[zC]) {
+            const zC = ZC[wC];
+            "function" === typeof zC && (ZC[wC] = function() {
+              for (var QC = arguments.length, bC = new Array(QC), nC = 0; nC < QC; nC++) bC[nC] = arguments[nC];
+              const fC = Fz(zC, ZC, bC);
+              return HC.inProbe || Kz(CC, wC, bC), fC
             })
           }
-        }(this, ik[0], fk), fk
+        }(this, ZC[0], wC), wC
       }))
     }
 
-    function de(kk, ek, ik, Dk) {
-      ye[kk] += Dk, Ye < 32 && ek.bytes.length >= 1 << 20 && (Ye++, Xk(`upload ${kk} #${ek.id} +${ik} ${Dk} B`))
+    function vz(CC, zC, ZC, QC) {
+      Gz[CC] += QC, Rz < 32 && zC.bytes.length >= 1 << 20 && (Rz++, TC(`upload ${CC} #${zC.id} +${ZC} ${QC} B`))
     }
 
-    function Ve(kk) {
-      if (!kk.includes("decodeQuad")) return null;
-      return !/^\s*#version 300 es/.test(kk) || /in uvec3 _p2vs_location0\b/.test(kk) ? "inst" : "tex"
+    function ez(CC) {
+      if (!CC.includes("decodeQuad")) return null;
+      return !/^\s*#version 300 es/.test(CC) || /in uvec3 _p2vs_location0\b/.test(CC) ? "inst" : "tex"
     }
 
-    function Fe(kk, ek, ik) {
-      var Dk;
-      if (ik.checked) return;
-      ik.checked = !0;
-      const fk = kk.getProgramParameter(ek, Hk.LINK_STATUS),
-        Sk = (null !== (Dk = kk.getProgramInfoLog(ek)) && void 0 !== Dk ? Dk : "").trim();
-      var bk;
-      null === ik.terrain && fk || (tk(`program ${Fk(ik)} ${null!==(bk=ik.terrain)&&void 0!==bk?bk:"other"} link ${fk?"ok":"FAILED"}${Sk?`: ${Bk(Sk,300)}`:""}`), Sk && Xk(`program ${Fk(ik)} link log:\n${Bk(Sk)}`))
+    function hz(CC, zC, ZC) {
+      var QC;
+      if (ZC.checked) return;
+      ZC.checked = !0;
+      const wC = CC.getProgramParameter(zC, SC.LINK_STATUS),
+        bC = (null !== (QC = CC.getProgramInfoLog(zC)) && void 0 !== QC ? QC : "").trim();
+      var nC;
+      null === ZC.terrain && wC || (sC(`program ${KC(ZC)} ${null!==(nC=ZC.terrain)&&void 0!==nC?nC:"other"} link ${wC?"ok":"FAILED"}${bC?`: ${aC(bC,300)}`:""}`), bC && TC(`program ${KC(ZC)} link log:\n${aC(bC)}`))
     }
 
-    function ue(kk, ek, ik) {
-      var Dk;
-      const fk = kk.getParameter(Hk.CURRENT_PROGRAM),
-        Sk = fk ? we.get(fk) : void 0;
-      if (!fk || !Sk) return;
-      const bk = null !== (Dk = Sk.terrain) && void 0 !== Dk ? Dk : "other",
+    function Kz(CC, zC, ZC) {
+      var QC;
+      const wC = CC.getParameter(SC.CURRENT_PROGRAM),
+        bC = wC ? Sz.get(wC) : void 0;
+      if (!wC || !bC) return;
+      const nC = null !== (QC = bC.terrain) && void 0 !== QC ? QC : "other",
         {
-          lw: rk,
-          instances: Pk
-        } = function(kk, ek) {
-          switch (kk) {
+          np: fC,
+          instances: oC
+        } = function(CC, zC) {
+          switch (CC) {
             case "drawArrays":
               return {
-                lw: [
-                  [ek[1], ek[2]]
+                np: [
+                  [zC[1], zC[2]]
                 ], instances: 1
               };
             case "drawArraysInstanced":
             case "drawArraysInstancedANGLE":
               return {
-                lw: [
-                  [ek[1], ek[2]]
-                ], instances: ek[3]
+                np: [
+                  [zC[1], zC[2]]
+                ], instances: zC[3]
               };
             case "drawElements":
               return {
-                lw: [
-                  [0, ek[1]]
+                np: [
+                  [0, zC[1]]
                 ], instances: 1
               };
             case "drawElementsInstanced":
             case "drawElementsInstancedANGLE":
               return {
-                lw: [
-                  [0, ek[1]]
-                ], instances: ek[4]
+                np: [
+                  [0, zC[1]]
+                ], instances: zC[4]
               };
             case "multiDrawArraysWEBGL": {
-              const kk = ek[1],
-                ik = ek[3],
-                Dk = ek[2],
-                fk = ek[4],
-                Sk = [];
-              for (let bk = 0; bk < ek[5]; bk++) Sk.push([kk[Dk + bk], ik[fk + bk]]);
+              const CC = zC[1],
+                ZC = zC[3],
+                QC = zC[2],
+                wC = zC[4],
+                bC = [];
+              for (let nC = 0; nC < zC[5]; nC++) bC.push([CC[QC + nC], ZC[wC + nC]]);
               return {
-                lw: Sk,
+                np: bC,
                 instances: 1
               }
             }
             default:
               return {
-                lw: [], instances: 0
+                np: [], instances: 0
               }
           }
-        }(ek, ik),
-        mk = "inst" === Sk.terrain ? Pk : rk.reduce(((kk, ek) => {
-          let [, ik] = ek;
-          return kk + ik
+        }(zC, ZC),
+        qC = "inst" === bC.terrain ? oC : fC.reduce(((CC, zC) => {
+          let [, ZC] = zC;
+          return CC + ZC
         }), 0) / 6;
-      if (pe[bk].draws++, pe[bk].faces += mk, null === Sk.terrain) return;
-      if (zk.context = kk, !Sk.firstDraw) {
-        Sk.firstDraw = !0, Fe(kk, fk, Sk), qe || (qe = !0, tk(function(kk) {
-          var ek;
-          const ik = kk.getParameter(Hk.DEPTH_FUNC),
-            Dk = {
+      if (Pz[nC].draws++, Pz[nC].faces += qC, null === bC.terrain) return;
+      if (HC.context = CC, !bC.firstDraw) {
+        bC.firstDraw = !0, hz(CC, wC, bC), Yz || (Yz = !0, sC(function(CC) {
+          var zC;
+          const ZC = CC.getParameter(SC.DEPTH_FUNC),
+            QC = {
               513: "less",
               514: "equal",
               515: "lequal",
@@ -1080,319 +1080,319 @@ export const modules = {
               518: "gequal",
               519: "always"
             };
-          let fk = "default framebuffer";
-          if ("DRAW_FRAMEBUFFER" in kk && kk.getParameter(Hk.DRAW_FRAMEBUFFER_BINDING)) {
-            const ek = kk;
-            fk = ek.getFramebufferAttachmentParameter(Hk.DRAW_FRAMEBUFFER, Hk.DEPTH_ATTACHMENT, Hk.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(ek.getFramebufferAttachmentParameter(Hk.DRAW_FRAMEBUFFER,Hk.DEPTH_ATTACHMENT,Hk.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(ek.getFramebufferAttachmentParameter(Hk.DRAW_FRAMEBUFFER,Hk.DEPTH_ATTACHMENT,Hk.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
+          let wC = "default framebuffer";
+          if ("DRAW_FRAMEBUFFER" in CC && CC.getParameter(SC.DRAW_FRAMEBUFFER_BINDING)) {
+            const zC = CC;
+            wC = zC.getFramebufferAttachmentParameter(SC.DRAW_FRAMEBUFFER, SC.DEPTH_ATTACHMENT, SC.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE) ? `depth ${String(zC.getFramebufferAttachmentParameter(SC.DRAW_FRAMEBUFFER,SC.DEPTH_ATTACHMENT,SC.FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE))} bits type 0x${Number(zC.getFramebufferAttachmentParameter(SC.DRAW_FRAMEBUFFER,SC.DEPTH_ATTACHMENT,SC.FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE)).toString(16)}` : "no depth attachment"
           }
-          const Sk = kk.getParameter(Hk.DEPTH_CLEAR_VALUE);
-          return `depth ${null!==(ek=Dk[ik])&&void 0!==ek?ek:`0x${ik.toString(16)}`} clear ${Sk}${516===ik||518===ik?" (reverse-Z)":""}, samples ${String(kk.getParameter(Hk.SAMPLES))}, ${fk}`
-        }(kk)));
-        const ik = kk.getError();
-        ik !== Hk.NO_ERROR && le.gl < me && (le.gl++, tk(`GL error 0x${ik.toString(16)} after program ${Fk(Sk)}'s first terrain draw (${ek})`))
+          const bC = CC.getParameter(SC.DEPTH_CLEAR_VALUE);
+          return `depth ${null!==(zC=QC[ZC])&&void 0!==zC?zC:`0x${ZC.toString(16)}`} clear ${bC}${516===ZC||518===ZC?" (reverse-Z)":""}, samples ${String(CC.getParameter(SC.SAMPLES))}, ${wC}`
+        }(CC)));
+        const ZC = CC.getError();
+        ZC !== SC.NO_ERROR && pz.gl < oz && (pz.gl++, sC(`GL error 0x${ZC.toString(16)} after program ${KC(bC)}'s first terrain draw (${zC})`))
       }
-      const Mk = zk.pendingCheck;
-      null !== Mk && (Mk.terrainDraws++, Mk.draws.length < Me && ck(kk, fk, Sk, ek, rk, Pk))
+      const FC = HC.pendingCheck;
+      null !== FC && (FC.terrainDraws++, FC.draws.length < qz && tC(CC, wC, bC, zC, fC, oC))
     }
-    let qe = !1;
-    const Ie = new WeakSet;
-    var ze = ik(4449),
-      Qe = ik(4637);
-    const ve = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
-    let Ee = !1;
-    const he = new WeakSet,
-      ae = new WeakMap,
-      We = new WeakMap,
-      te = {
+    let Yz = !1;
+    const dz = new WeakSet;
+    var mz = ZC(4445),
+      Hz = ZC(4640);
+    const Ez = ["maxStorageBuffersPerShaderStage", "maxStorageBufferBindingSize", "maxBufferSize", "maxUniformBufferBindingSize", "minUniformBufferOffsetAlignment", "maxTextureDimension2D", "maxTextureArrayLayers", "maxVertexBuffers", "maxVertexAttributes", "maxVertexBufferArrayStride", "maxBindGroups", "maxColorAttachmentBytesPerSample"];
+    let lz = !1;
+    const Xz = new WeakSet,
+      cz = new WeakMap,
+      uz = new WeakMap,
+      rz = {
         uncaptured: 0,
         compile: 0,
         rejected: 0
       };
-    let Xe = 0,
-      Be = !1,
-      ce = null,
-      Te = {
+    let sz = 0,
+      Tz = !1,
+      az = null,
+      tz = {
         draws: 0,
         faces: 0
       };
 
-    function oe(kk) {
-      const ek = globalThis[kk];
-      return null === ek || void 0 === ek ? void 0 : ek.prototype
+    function Dz(CC) {
+      const zC = globalThis[CC];
+      return null === zC || void 0 === zC ? void 0 : zC.prototype
     }
 
-    function Ze(kk) {
-      return kk && "function" === typeof kk[Symbol.iterator] ? [...kk].sort().join(" ") : ""
+    function jz(CC) {
+      return CC && "function" === typeof CC[Symbol.iterator] ? [...CC].sort().join(" ") : ""
     }
 
-    function Oe(kk, ek) {
-      const ik = null !== kk && void 0 !== kk ? kk : {},
-        Dk = null !== ek && void 0 !== ek ? ek : Object.keys(Object.getPrototypeOf(ik)).concat(Object.keys(ik));
-      return [...new Set(Dk)].filter((kk => "number" === typeof ik[kk])).map((kk => `${kk} ${String(ik[kk])}`)).join(", ")
+    function yz(CC, zC) {
+      const ZC = null !== CC && void 0 !== CC ? CC : {},
+        QC = null !== zC && void 0 !== zC ? zC : Object.keys(Object.getPrototypeOf(ZC)).concat(Object.keys(ZC));
+      return [...new Set(QC)].filter((CC => "number" === typeof ZC[CC])).map((CC => `${CC} ${String(ZC[CC])}`)).join(", ")
     }
 
-    function ge(kk, ek) {
-      var ik;
-      const Dk = null !== (ik = ek.vertex) && void 0 !== ik ? ik : {};
-      if (Dk.module && he.has(Dk.module)) {
-        var fk;
-        const ik = String(null !== (fk = Dk.entryPoint) && void 0 !== fk ? fk : "");
-        if (ik.startsWith("vs_packed") && ae.set(kk, ik), !Be) {
-          var Sk, bk, rk, Pk, mk;
-          Be = !0;
-          const kk = null !== (Sk = ek.depthStencil) && void 0 !== Sk ? Sk : {},
-            Dk = null !== (bk = ek.multisample) && void 0 !== bk ? bk : {},
-            fk = String(null !== (rk = kk.depthCompare) && void 0 !== rk ? rk : "");
-          tk(`WebGPU terrain pipeline ${ik}: depth ${String(null!==(Pk=kk.format)&&void 0!==Pk?Pk:"none")} ${fk}${fk.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(mk=Dk.count)&&void 0!==mk?mk:1)}`)
+    function Lz(CC, zC) {
+      var ZC;
+      const QC = null !== (ZC = zC.vertex) && void 0 !== ZC ? ZC : {};
+      if (QC.module && Xz.has(QC.module)) {
+        var wC;
+        const ZC = String(null !== (wC = QC.entryPoint) && void 0 !== wC ? wC : "");
+        if (ZC.startsWith("vs_packed") && cz.set(CC, ZC), !Tz) {
+          var bC, nC, fC, oC, qC;
+          Tz = !0;
+          const CC = null !== (bC = zC.depthStencil) && void 0 !== bC ? bC : {},
+            QC = null !== (nC = zC.multisample) && void 0 !== nC ? nC : {},
+            wC = String(null !== (fC = CC.depthCompare) && void 0 !== fC ? fC : "");
+          sC(`WebGPU terrain pipeline ${ZC}: depth ${String(null!==(oC=CC.format)&&void 0!==oC?oC:"none")} ${wC}${wC.startsWith("greater")?" (reverse-Z)":""}, MSAA ${String(null!==(qC=QC.count)&&void 0!==qC?qC:1)}`)
         }
       }
     }
 
-    function Ge(kk) {
-      xe(kk, "setPipeline", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        return We.set(this, ik[0]), Ke(kk, this, ik)
+    function Uz(CC) {
+      Wz(CC, "setPipeline", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        return uz.set(this, ZC[0]), Fz(CC, this, ZC)
       }));
-      for (const ek of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) xe(kk, ek, (kk => function() {
-        const ik = We.get(this),
-          Dk = ik ? ae.get(ik) : void 0;
-        for (var fk = arguments.length, Sk = new Array(fk), bk = 0; bk < fk; bk++) Sk[bk] = arguments[bk];
-        return void 0 !== Dk && Ne(ek, Dk, Sk), Ke(kk, this, Sk)
+      for (const zC of ["draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect"]) Wz(CC, zC, (CC => function() {
+        const ZC = uz.get(this),
+          QC = ZC ? cz.get(ZC) : void 0;
+        for (var wC = arguments.length, bC = new Array(wC), nC = 0; nC < wC; nC++) bC[nC] = arguments[nC];
+        return void 0 !== QC && Bz(zC, QC, bC), Fz(CC, this, bC)
       }))
     }
 
-    function Ne(kk, ek, ik) {
-      var Dk;
-      (Te.draws++, "draw" === kk || "drawIndexed" === kk) && (Te.faces += ik[0] * (null !== (Dk = ik[1]) && void 0 !== Dk ? Dk : 1) / 6);
-      if (null !== ce && ce.length < Me) {
-        const Dk = ("draw" === kk ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === kk ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((ek, Dk) => {
-          const fk = kk.endsWith("Indirect") ? ik[1] : ik[Dk];
-          return `${ek} ${String(null!==fk&&void 0!==fk?fk:"instances"===ek?1:0)}`
+    function Bz(CC, zC, ZC) {
+      var QC;
+      (tz.draws++, "draw" === CC || "drawIndexed" === CC) && (tz.faces += ZC[0] * (null !== (QC = ZC[1]) && void 0 !== QC ? QC : 1) / 6);
+      if (null !== az && az.length < qz) {
+        const QC = ("draw" === CC ? ["vertices", "instances", "firstVertex", "firstInstance"] : "drawIndexed" === CC ? ["indices", "instances", "firstIndex", "baseVertex", "firstInstance"] : ["indirectOffset"]).map(((zC, QC) => {
+          const wC = CC.endsWith("Indirect") ? ZC[1] : ZC[QC];
+          return `${zC} ${String(null!==wC&&void 0!==wC?wC:"instances"===zC?1:0)}`
         }));
-        ce.push(`  ${ek} ${kk} ${Dk.join(" ")}`)
+        az.push(`  ${zC} ${CC} ${QC.join(" ")}`)
       }
     }
 
-    function Re() {
-      if (Ee || "undefined" === typeof navigator || !("gpu" in navigator)) return;
-      Ee = !0, xe(oe("GPU"), "requestAdapter", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        return Ke(kk, this, ik).then((kk => {
-          var ek;
-          kk ? function(kk) {
-            var ek;
-            const ik = null !== (ek = kk.info) && void 0 !== ek ? ek : {};
-            tk(`WebGPU adapter ${["vendor","architecture","device","description"].map((kk=>{var ek;return`${kk} "${String(null!==(ek=ik[kk])&&void 0!==ek?ek:"")}"`})).join(" ")}${kk.isFallbackAdapter?" (fallback)":""}`), tk(`WebGPU adapter features ${Ze(kk.features)}`), tk(`WebGPU adapter limits ${Oe(kk.limits,ve)}`), Xk(`WebGPU adapter all limits ${Oe(kk.limits,null)}`)
-          }(kk) : tk(`WebGPU requestAdapter(${JSON.stringify(null!==(ek=ik[0])&&void 0!==ek?ek:{})}) gave none`);
-          return kk
+    function Oz() {
+      if (lz || "undefined" === typeof navigator || !("gpu" in navigator)) return;
+      lz = !0, Wz(Dz("GPU"), "requestAdapter", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        return Fz(CC, this, ZC).then((CC => {
+          var zC;
+          CC ? function(CC) {
+            var zC;
+            const ZC = null !== (zC = CC.info) && void 0 !== zC ? zC : {};
+            sC(`WebGPU adapter ${["vendor","architecture","device","description"].map((CC=>{var zC;return`${CC} "${String(null!==(zC=ZC[CC])&&void 0!==zC?zC:"")}"`})).join(" ")}${CC.isFallbackAdapter?" (fallback)":""}`), sC(`WebGPU adapter features ${jz(CC.features)}`), sC(`WebGPU adapter limits ${yz(CC.limits,Ez)}`), TC(`WebGPU adapter all limits ${yz(CC.limits,null)}`)
+          }(CC) : sC(`WebGPU requestAdapter(${JSON.stringify(null!==(zC=ZC[0])&&void 0!==zC?zC:{})}) gave none`);
+          return CC
         }))
-      })), xe(oe("GPUAdapter"), "requestDevice", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        return Ke(kk, this, ik).then((kk => (function(kk) {
-          tk(`WebGPU device features ${Ze(kk.features)}`), tk(`WebGPU device limits ${Oe(kk.limits,ve)}`), kk.addEventListener("uncapturederror", (kk => {
-            if (te.uncaptured < me) {
-              var ek, ik, Dk;
-              te.uncaptured++;
-              const fk = kk.error;
-              tk(`WebGPU uncaptured ${null!==(ek=null===fk||void 0===fk||null===(ik=fk.constructor)||void 0===ik?void 0:ik.name)&&void 0!==ek?ek:"error"}: ${Bk(String(null!==(Dk=null===fk||void 0===fk?void 0:fk.message)&&void 0!==Dk?Dk:""),600)}`)
+      })), Wz(Dz("GPUAdapter"), "requestDevice", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        return Fz(CC, this, ZC).then((CC => (function(CC) {
+          sC(`WebGPU device features ${jz(CC.features)}`), sC(`WebGPU device limits ${yz(CC.limits,Ez)}`), CC.addEventListener("uncapturederror", (CC => {
+            if (rz.uncaptured < oz) {
+              var zC, ZC, QC;
+              rz.uncaptured++;
+              const wC = CC.error;
+              sC(`WebGPU uncaptured ${null!==(zC=null===wC||void 0===wC||null===(ZC=wC.constructor)||void 0===ZC?void 0:ZC.name)&&void 0!==zC?zC:"error"}: ${aC(String(null!==(QC=null===wC||void 0===wC?void 0:wC.message)&&void 0!==QC?QC:""),600)}`)
             }
           }));
-          const ek = kk.lost;
-          null === ek || void 0 === ek || ek.then((kk => {
-            var ek;
-            tk(`WebGPU device lost (${String(kk.reason)}): ${Bk(String(null!==(ek=kk.message)&&void 0!==ek?ek:""),600)}`)
+          const zC = CC.lost;
+          null === zC || void 0 === zC || zC.then((CC => {
+            var zC;
+            sC(`WebGPU device lost (${String(CC.reason)}): ${aC(String(null!==(zC=CC.message)&&void 0!==zC?zC:""),600)}`)
           }))
-        }(kk), kk)), (kk => {
-          throw tk(`WebGPU requestDevice failed: ${String(kk)}`), kk
+        }(CC), CC)), (CC => {
+          throw sC(`WebGPU requestDevice failed: ${String(CC)}`), CC
         }))
       }));
-      const kk = oe("GPUDevice");
-      xe(kk, "createShaderModule", (kk => function() {
-        for (var ek, ik, Dk = arguments.length, fk = new Array(Dk), Sk = 0; Sk < Dk; Sk++) fk[Sk] = arguments[Sk];
-        const bk = Ke(kk, this, fk);
-        return function(kk, ek) {
-          const ik = ek.includes("decodeQuad");
-          ik && he.add(kk);
-          const Dk = kk.getCompilationInfo;
-          null === Dk || void 0 === Dk || Dk.call(kk).then((kk => {
-            if (0 === kk.messages.length && !ik) return;
-            const ek = {};
-            for (const ik of kk.messages) {
-              var Dk;
-              ek[String(ik.type)] = (null !== (Dk = ek[String(ik.type)]) && void 0 !== Dk ? Dk : 0) + 1
+      const CC = Dz("GPUDevice");
+      Wz(CC, "createShaderModule", (CC => function() {
+        for (var zC, ZC, QC = arguments.length, wC = new Array(QC), bC = 0; bC < QC; bC++) wC[bC] = arguments[bC];
+        const nC = Fz(CC, this, wC);
+        return function(CC, zC) {
+          const ZC = zC.includes("decodeQuad");
+          ZC && Xz.add(CC);
+          const QC = CC.getCompilationInfo;
+          null === QC || void 0 === QC || QC.call(CC).then((CC => {
+            if (0 === CC.messages.length && !ZC) return;
+            const zC = {};
+            for (const ZC of CC.messages) {
+              var QC;
+              zC[String(ZC.type)] = (null !== (QC = zC[String(ZC.type)]) && void 0 !== QC ? QC : 0) + 1
             }
-            const fk = kk.messages.map((kk => `${String(kk.type)} ${String(kk.lineNum)}:${String(kk.linePos)} ${String(kk.message)}`)).join("\n");
-            te.compile < me && (te.compile++, tk(`WebGPU ${ik?"terrain ":""}shader module compiled: ${JSON.stringify(ek)}${fk?` first: ${Bk(fk.split("\n")[0],300)}`:""}`)), fk && Xk(`WebGPU shader module messages:\n${Bk(fk)}`)
+            const wC = CC.messages.map((CC => `${String(CC.type)} ${String(CC.lineNum)}:${String(CC.linePos)} ${String(CC.message)}`)).join("\n");
+            rz.compile < oz && (rz.compile++, sC(`WebGPU ${ZC?"terrain ":""}shader module compiled: ${JSON.stringify(zC)}${wC?` first: ${aC(wC.split("\n")[0],300)}`:""}`)), wC && TC(`WebGPU shader module messages:\n${aC(wC)}`)
           }))
-        }(bk, String(null !== (ek = (null !== (ik = fk[0]) && void 0 !== ik ? ik : {}).code) && void 0 !== ek ? ek : "")), bk
-      })), xe(kk, "createRenderPipeline", (kk => function() {
-        for (var ek, ik = arguments.length, Dk = new Array(ik), fk = 0; fk < ik; fk++) Dk[fk] = arguments[fk];
-        const Sk = Ke(kk, this, Dk);
-        return ge(Sk, null !== (ek = Dk[0]) && void 0 !== ek ? ek : {}), Sk
-      })), xe(kk, "createRenderPipelineAsync", (kk => function() {
-        for (var ek = arguments.length, ik = new Array(ek), Dk = 0; Dk < ek; Dk++) ik[Dk] = arguments[Dk];
-        return Ke(kk, this, ik).then((kk => {
-          var ek;
-          return ge(kk, null !== (ek = ik[0]) && void 0 !== ek ? ek : {}), kk
-        }), (kk => {
-          var ek;
-          throw function(kk, ek) {
-            var ik, Dk, fk;
-            if (te.rejected >= me) return;
-            te.rejected++;
+        }(nC, String(null !== (zC = (null !== (ZC = wC[0]) && void 0 !== ZC ? ZC : {}).code) && void 0 !== zC ? zC : "")), nC
+      })), Wz(CC, "createRenderPipeline", (CC => function() {
+        for (var zC, ZC = arguments.length, QC = new Array(ZC), wC = 0; wC < ZC; wC++) QC[wC] = arguments[wC];
+        const bC = Fz(CC, this, QC);
+        return Lz(bC, null !== (zC = QC[0]) && void 0 !== zC ? zC : {}), bC
+      })), Wz(CC, "createRenderPipelineAsync", (CC => function() {
+        for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+        return Fz(CC, this, ZC).then((CC => {
+          var zC;
+          return Lz(CC, null !== (zC = ZC[0]) && void 0 !== zC ? zC : {}), CC
+        }), (CC => {
+          var zC;
+          throw function(CC, zC) {
+            var ZC, QC, wC;
+            if (rz.rejected >= oz) return;
+            rz.rejected++;
             const {
-              reason: Sk,
-              message: bk
-            } = null !== ek && void 0 !== ek ? ek : {}, rk = String(null !== (ik = (null !== (Dk = kk.vertex) && void 0 !== Dk ? Dk : {}).entryPoint) && void 0 !== ik ? ik : "");
-            tk(`WebGPU pipeline "${String(null!==(fk=kk.label)&&void 0!==fk?fk:"")}" ${rk} rejected (${String(null!==Sk&&void 0!==Sk?Sk:"no reason")}): ${Bk(String(null!==bk&&void 0!==bk?bk:ek),600)}`)
-          }(null !== (ek = ik[0]) && void 0 !== ek ? ek : {}, kk), kk
+              reason: bC,
+              message: nC
+            } = null !== zC && void 0 !== zC ? zC : {}, fC = String(null !== (ZC = (null !== (QC = CC.vertex) && void 0 !== QC ? QC : {}).entryPoint) && void 0 !== ZC ? ZC : "");
+            sC(`WebGPU pipeline "${String(null!==(wC=CC.label)&&void 0!==wC?wC:"")}" ${fC} rejected (${String(null!==bC&&void 0!==bC?bC:"no reason")}): ${aC(String(null!==nC&&void 0!==nC?nC:zC),600)}`)
+          }(null !== (zC = ZC[0]) && void 0 !== zC ? zC : {}, CC), CC
         }))
-      })), xe(oe("GPUCanvasContext"), "configure", (kk => function() {
-        for (var ek, ik = arguments.length, Dk = new Array(ik), fk = 0; fk < ik; fk++) Dk[fk] = arguments[fk];
-        const Sk = null !== (ek = Dk[0]) && void 0 !== ek ? ek : {};
-        var bk, rk;
-        Xe++ < 3 && tk(`WebGPU canvas ${String(Sk.format)} ${String(null!==(bk=Sk.colorSpace)&&void 0!==bk?bk:"srgb")} alpha ${String(null!==(rk=Sk.alphaMode)&&void 0!==rk?rk:"opaque")}`);
-        return Ke(kk, this, Dk)
-      })), Ge(oe("GPURenderPassEncoder")), Ge(oe("GPURenderBundleEncoder"))
+      })), Wz(Dz("GPUCanvasContext"), "configure", (CC => function() {
+        for (var zC, ZC = arguments.length, QC = new Array(ZC), wC = 0; wC < ZC; wC++) QC[wC] = arguments[wC];
+        const bC = null !== (zC = QC[0]) && void 0 !== zC ? zC : {};
+        var nC, fC;
+        sz++ < 3 && sC(`WebGPU canvas ${String(bC.format)} ${String(null!==(nC=bC.colorSpace)&&void 0!==nC?nC:"srgb")} alpha ${String(null!==(fC=bC.alphaMode)&&void 0!==fC?fC:"opaque")}`);
+        return Fz(CC, this, QC)
+      })), Uz(Dz("GPURenderPassEncoder")), Uz(Dz("GPURenderBundleEncoder"))
     }
-    const Je = 1e4,
-      ki = 6e4,
-      ei = 5e3,
-      ii = 3e3,
-      Di = 100;
-    let fi = null,
-      Si = !1,
-      bi = {
-        ...ze.e
+    const kz = 1e4,
+      Vz = 6e4,
+      CZ = 5e3,
+      zZ = 3e3,
+      ZZ = 100;
+    let QZ = null,
+      wZ = !1,
+      bZ = {
+        ...mz.c
       },
-      ri = !1,
-      Pi = null,
-      mi = 0,
-      Mi = () => {};
-    const Ki = new Promise((kk => {
-      Mi = kk
+      nZ = !1,
+      fZ = null,
+      oZ = 0,
+      qZ = () => {};
+    const FZ = new Promise((CC => {
+      qZ = CC
     }));
 
-    function xi() {
-      var kk;
-      Si || (Si = !0, bi = Object.assign(window.bloxdRenderDebug ??= {
-        ...ze.e
+    function WZ() {
+      var CC;
+      wZ || (wZ = !0, bZ = Object.assign(window.bloxdRenderDebug ??= {
+        ...mz.c
       }, {
-        faceCull: "0" === (0, Sk.p)("faceCull") ? "0" : "1",
-        adrenoProbe: null !== (kk = (0, Sk.p)("adrenoProbe")) && void 0 !== kk ? kk : ""
-      }), tk("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), ne || "undefined" === typeof window || (ne = !0, "undefined" !== typeof WebGL2RenderingContext && se(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && se(WebGLRenderingContext.prototype, !1)), Re(), (0, Sk.e)("renderProbe", (() => {
-        yi("console")
-      })), wi(), setInterval(Li, ei))
+        faceCull: "0" === (0, bC.j)("faceCull") ? "0" : "1",
+        adrenoProbe: null !== (CC = (0, bC.j)("adrenoProbe")) && void 0 !== CC ? CC : ""
+      }), sC("quality steps off while the topic is on (util/weakGpu.ts): no stepped MSAA or scale, no weak-GPU tier"), Nz || "undefined" === typeof window || (Nz = !0, "undefined" !== typeof WebGL2RenderingContext && iz(WebGL2RenderingContext.prototype, !0), "undefined" !== typeof WebGLRenderingContext && iz(WebGLRenderingContext.prototype, !1)), Oz(), (0, bC.b)("renderProbe", (() => {
+        PZ("console")
+      })), SZ(), setInterval(RZ, CZ))
     }
 
-    function ni(kk) {
-      var ek, ik;
-      xi(), fi = null !== (ek = null === kk || void 0 === kk ? void 0 : kk.backend) && void 0 !== ek ? ek : null;
-      const Dk = `, renderer param ${null!==(ik=(0,Sk.p)("renderer"))&&void 0!==ik?ik:"none"}, faceCull ${"0"===bi.faceCull?"off (whole parts)":"on"}, adrenoProbe ${bi.adrenoProbe||"none"}`;
-      tk(`${(0,Qe.d)(kk)}${null===kk?"":Dk}`)
+    function NZ(CC) {
+      var zC, ZC;
+      WZ(), QZ = null !== (zC = null === CC || void 0 === CC ? void 0 : CC.backend) && void 0 !== zC ? zC : null;
+      const QC = `, renderer param ${null!==(ZC=(0,bC.j)("renderer"))&&void 0!==ZC?ZC:"none"}, faceCull ${"0"===bZ.faceCull?"off (whole parts)":"on"}, adrenoProbe ${bZ.adrenoProbe||"none"}`;
+      sC(`${(0,Hz.b)(CC)}${null===CC?"":QC}`)
     }
 
-    function Ui() {
-      const kk = performance.now(),
-        ek = Hi(Ki, Je, ki).then((ek => yi(`${Math.round((performance.now()-kk)/1e3)} s after playable${ek?"":", no terrain drawn yet"}`)));
-      (0, fk.c)(tk, (async () => {
-        await ek, await Pi
+    function MZ() {
+      const CC = performance.now(),
+        zC = gZ(FZ, kz, Vz).then((zC => PZ(`${Math.round((performance.now()-CC)/1e3)} s after playable${zC?"":", no terrain drawn yet"}`)));
+      (0, wC.d)(sC, (async () => {
+        await zC, await fZ
       }))
     }
-    async function Hi(kk, ek, ik) {
-      const fk = (0, Dk.c)(ik).then((() => !1));
-      return await (0, Dk.c)(ek), Promise.race([kk.then((() => !0)), fk])
+    async function gZ(CC, zC, ZC) {
+      const wC = (0, QC.c)(ZC).then((() => !1));
+      return await (0, QC.c)(zC), Promise.race([CC.then((() => !0)), wC])
     }
 
-    function wi() {
+    function SZ() {
       requestAnimationFrame((() => {
-        mi++, wi()
+        oZ++, SZ()
       }))
     }
 
-    function li() {
-      var kk, ek, ik;
-      if (ri) return;
-      (ri = !0, tk(`renderer caps ${null!==(kk=bi.caps)&&void 0!==kk?kk:"(not noted)"}; terrain fetch ${null!==(ek=bi.fetch)&&void 0!==ek?ek:"(not noted)"}`), bi.adrenoProbe) && tk(`adrenoProbe ${bi.adrenoProbe} asked; in force (storage fetch only): ${null!==(ik=bi.probe)&&void 0!==ik?ik:"(not noted)"}`);
-      const Dk = zk.context;
-      if (Dk) {
-        for (const kk of function(kk) {
-            var ek;
-            const ik = [],
-              Dk = kk.getExtension("WEBGL_debug_renderer_info"),
-              fk = Dk ? kk.getParameter(Dk.UNMASKED_VENDOR_WEBGL) : "(masked)",
-              Sk = Dk ? kk.getParameter(Dk.UNMASKED_RENDERER_WEBGL) : "(masked)";
-            ik.push(`GL ${String(kk.getParameter(kk.VERSION))} | ${String(kk.getParameter(kk.SHADING_LANGUAGE_VERSION))} | ${String(kk.getParameter(kk.VENDOR))} / ${String(kk.getParameter(kk.RENDERER))}`), ik.push(`GL unmasked ${fk} / ${Sk}`);
-            const bk = [
-              ["MAX_TEXTURE_SIZE", kk.MAX_TEXTURE_SIZE],
-              ["MAX_VERTEX_ATTRIBS", kk.MAX_VERTEX_ATTRIBS],
-              ["MAX_VERTEX_UNIFORM_VECTORS", kk.MAX_VERTEX_UNIFORM_VECTORS],
-              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", kk.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
-              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", kk.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
-              ["MAX_VARYING_VECTORS", kk.MAX_VARYING_VECTORS],
-              ["MAX_RENDERBUFFER_SIZE", kk.MAX_RENDERBUFFER_SIZE]
+    function pZ() {
+      var CC, zC, ZC;
+      if (nZ) return;
+      (nZ = !0, sC(`renderer caps ${null!==(CC=bZ.caps)&&void 0!==CC?CC:"(not noted)"}; terrain fetch ${null!==(zC=bZ.fetch)&&void 0!==zC?zC:"(not noted)"}`), bZ.adrenoProbe) && sC(`adrenoProbe ${bZ.adrenoProbe} asked; in force (storage fetch only): ${null!==(ZC=bZ.probe)&&void 0!==ZC?ZC:"(not noted)"}`);
+      const QC = HC.context;
+      if (QC) {
+        for (const CC of function(CC) {
+            var zC;
+            const ZC = [],
+              QC = CC.getExtension("WEBGL_debug_renderer_info"),
+              wC = QC ? CC.getParameter(QC.UNMASKED_VENDOR_WEBGL) : "(masked)",
+              bC = QC ? CC.getParameter(QC.UNMASKED_RENDERER_WEBGL) : "(masked)";
+            ZC.push(`GL ${String(CC.getParameter(CC.VERSION))} | ${String(CC.getParameter(CC.SHADING_LANGUAGE_VERSION))} | ${String(CC.getParameter(CC.VENDOR))} / ${String(CC.getParameter(CC.RENDERER))}`), ZC.push(`GL unmasked ${wC} / ${bC}`);
+            const nC = [
+              ["MAX_TEXTURE_SIZE", CC.MAX_TEXTURE_SIZE],
+              ["MAX_VERTEX_ATTRIBS", CC.MAX_VERTEX_ATTRIBS],
+              ["MAX_VERTEX_UNIFORM_VECTORS", CC.MAX_VERTEX_UNIFORM_VECTORS],
+              ["MAX_VERTEX_TEXTURE_IMAGE_UNITS", CC.MAX_VERTEX_TEXTURE_IMAGE_UNITS],
+              ["MAX_COMBINED_TEXTURE_IMAGE_UNITS", CC.MAX_COMBINED_TEXTURE_IMAGE_UNITS],
+              ["MAX_VARYING_VECTORS", CC.MAX_VARYING_VECTORS],
+              ["MAX_RENDERBUFFER_SIZE", CC.MAX_RENDERBUFFER_SIZE]
             ];
-            "MAX_UNIFORM_BLOCK_SIZE" in kk && bk.push(["MAX_UNIFORM_BLOCK_SIZE", kk.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", kk.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", kk.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", kk.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), ik.push(`GL limits ${bk.map((ek=>{let[ik,Dk]=ek;return`${ik} ${String(kk.getParameter(Dk))}`})).join(", ")}`);
-            const rk = (ek, ik) => {
-              const Dk = kk.getShaderPrecisionFormat(ek, kk.HIGH_FLOAT),
-                fk = kk.getShaderPrecisionFormat(ek, kk.HIGH_INT);
-              return `${ik} highp float ${Dk?`${Dk.rangeMin}/${Dk.rangeMax}/${Dk.precision}`:"?"} int ${fk?`${fk.rangeMin}/${fk.rangeMax}/${fk.precision}`:"?"}`
+            "MAX_UNIFORM_BLOCK_SIZE" in CC && nC.push(["MAX_UNIFORM_BLOCK_SIZE", CC.MAX_UNIFORM_BLOCK_SIZE], ["MAX_VERTEX_UNIFORM_BLOCKS", CC.MAX_VERTEX_UNIFORM_BLOCKS], ["MAX_SAMPLES", CC.MAX_SAMPLES], ["MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS", CC.MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS]), ZC.push(`GL limits ${nC.map((zC=>{let[ZC,QC]=zC;return`${ZC} ${String(CC.getParameter(QC))}`})).join(", ")}`);
+            const fC = (zC, ZC) => {
+              const QC = CC.getShaderPrecisionFormat(zC, CC.HIGH_FLOAT),
+                wC = CC.getShaderPrecisionFormat(zC, CC.HIGH_INT);
+              return `${ZC} highp float ${QC?`${QC.rangeMin}/${QC.rangeMax}/${QC.precision}`:"?"} int ${wC?`${wC.rangeMin}/${wC.rangeMax}/${wC.precision}`:"?"}`
             };
-            ik.push(`GL precision ${rk(kk.VERTEX_SHADER,"VS")}, ${rk(kk.FRAGMENT_SHADER,"FS")}`);
-            const Pk = kk.getContextAttributes();
-            return ik.push(`GL context ${JSON.stringify(Pk)} drawingBuffer ${kk.drawingBufferWidth}x${kk.drawingBufferHeight}${"drawingBufferFormat"in kk?` format 0x${Number(kk.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in kk?` ${String(kk.drawingBufferColorSpace)}`:""}`), ik.push(`GL extensions ${(null!==(ek=kk.getSupportedExtensions())&&void 0!==ek?ek:[]).join(" ")}`), ik
-          }(Dk)) tk(kk);
+            ZC.push(`GL precision ${fC(CC.VERTEX_SHADER,"VS")}, ${fC(CC.FRAGMENT_SHADER,"FS")}`);
+            const oC = CC.getContextAttributes();
+            return ZC.push(`GL context ${JSON.stringify(oC)} drawingBuffer ${CC.drawingBufferWidth}x${CC.drawingBufferHeight}${"drawingBufferFormat"in CC?` format 0x${Number(CC.drawingBufferFormat).toString(16)}`:""}${"drawingBufferColorSpace"in CC?` ${String(CC.drawingBufferColorSpace)}`:""}`), ZC.push(`GL extensions ${(null!==(zC=CC.getSupportedExtensions())&&void 0!==zC?zC:[]).join(" ")}`), ZC
+          }(QC)) sC(CC);
         ! function() {
-          if (!zk.context) return;
-          let kk = 0,
-            ek = 0;
-          for (const [ik, Dk] of uk) !Dk.gl.isContextLost() && Dk.gl.isProgram(ik) && (ek++, Fe(Dk.gl, ik, Dk), null !== Dk.terrain && kk++);
-          tk(`programs: ${ek} live of ${uk.length} linked, ${kk} packed terrain; CPU page copies ${Math.round(zk.shadowBytes/1048576)} MiB (${zk.uncopied} over budget)`)
+          if (!HC.context) return;
+          let CC = 0,
+            zC = 0;
+          for (const [ZC, QC] of YC) !QC.gl.isContextLost() && QC.gl.isProgram(ZC) && (zC++, hz(QC.gl, ZC, QC), null !== QC.terrain && CC++);
+          sC(`programs: ${zC} live of ${YC.length} linked, ${CC} packed terrain; CPU page copies ${Math.round(HC.shadowBytes/1048576)} MiB (${HC.uncopied} over budget)`)
         }()
       }
     }
 
-    function yi(kk) {
-      return Pi ??= async function(kk) {
-        li(), "webgpu" === fi ? (Yi(), "1" === bi.slotCheck && tk("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), bi.slotCheck = "1", await
-          function(kk) {
-            if (null !== ce) return Promise.resolve();
-            const ek = [];
-            return ce = ek, new Promise((ik => {
+    function PZ(CC) {
+      return fZ ??= async function(CC) {
+        pZ(), "webgpu" === QZ ? (GZ(), "1" === bZ.slotCheck && sC("slot check: the last request is still unanswered, so the next answer reads the slots as they were then"), bZ.slotCheck = "1", await
+          function(CC) {
+            if (null !== az) return Promise.resolve();
+            const zC = [];
+            return az = zC, new Promise((ZC => {
               setTimeout((() => {
-                ce = null, tk(`WebGPU draw ranges (${kk}): ${ek.length} terrain draws recorded in a second (first ${Me}; bundles replay without new ones)`);
-                for (const kk of ek) tk(kk);
-                ik()
+                az = null, sC(`WebGPU draw ranges (${CC}): ${zC.length} terrain draws recorded in a second (first ${qz}; bundles replay without new ones)`);
+                for (const CC of zC) sC(CC);
+                ZC()
               }), 1e3)
             }))
-          }(kk), await async function() {
-            if (await (0, ze.i)(bi, "slotCheck", ["1"], ii, Di), "1" === bi.slotCheck) return void tk(`slot check: no answer in ${ii} ms (only the storage fetch has one; a later answer logs on its own)`);
-            Yi()
-          }()) : await re(kk);
-        tk(`check (${kk}) done: bloxdDebug.save() downloads it all`)
-      }(kk).catch((ek => {
-        tk(`check (${kk}) failed: ${String(ek)}`)
+          }(CC), await async function() {
+            if (await (0, mz.i)(bZ, "slotCheck", ["1"], zZ, ZZ), "1" === bZ.slotCheck) return void sC(`slot check: no answer in ${zZ} ms (only the storage fetch has one; a later answer logs on its own)`);
+            GZ()
+          }()) : await nz(CC);
+        sC(`check (${CC}) done: bloxdDebug.save() downloads it all`)
+      }(CC).catch((zC => {
+        sC(`check (${CC}) failed: ${String(zC)}`)
       })).finally((() => {
-        Pi = null
-      })), Pi
+        fZ = null
+      })), fZ
     }
 
-    function Yi() {
-      void 0 !== bi.slotCheck && "1" !== bi.slotCheck && (tk(bi.slotCheck), delete bi.slotCheck)
+    function GZ() {
+      void 0 !== bZ.slotCheck && "1" !== bZ.slotCheck && (sC(bZ.slotCheck), delete bZ.slotCheck)
     }
 
-    function Li() {
-      const kk = kk => mi ? (kk / mi).toFixed(1) : "0",
-        ek = function() {
-          const kk = Te;
-          return Te = {
+    function RZ() {
+      const CC = CC => oZ ? (CC / oZ).toFixed(1) : "0",
+        zC = function() {
+          const CC = tz;
+          return tz = {
             draws: 0,
             faces: 0
-          }, kk
+          }, CC
         }(),
-        ik = function() {
-          const kk = pe;
-          return pe = {
+        ZC = function() {
+          const CC = Pz;
+          return Pz = {
             inst: {
               draws: 0,
               faces: 0
@@ -1405,30 +1405,30 @@ export const modules = {
               draws: 0,
               faces: 0
             }
-          }, kk
+          }, CC
         }(),
-        Dk = function() {
-          const kk = ye;
-          return ye = {
+        QC = function() {
+          const CC = Gz;
+          return Gz = {
             buffer: 0,
             texture: 0
-          }, kk
+          }, CC
         }();
-      Yi(), ("webgpu" === fi ? ek.draws : ik.inst.draws + ik.tex.draws) > 0 && Mi();
-      const fk = "webgpu" === fi ? [`terrain ${kk(ek.draws)} draws ${kk(ek.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((kk => ik[kk].draws > 0)).map((ek => `${ek} ${kk(ik[ek].draws)} draws ${kk(ik[ek].faces)} faces a frame`));
-      tk(`${mi} frames: ${fk.join(", ")||"no draws"}; uploaded ${Math.round(Dk.buffer/1024)} KiB to buffers, ${Math.round(Dk.texture/1024)} KiB to data textures`), mi = 0
+      GZ(), ("webgpu" === QZ ? zC.draws : ZC.inst.draws + ZC.tex.draws) > 0 && qZ();
+      const wC = "webgpu" === QZ ? [`terrain ${CC(zC.draws)} draws ${CC(zC.faces)} faces a frame (bundles' replays uncounted)`] : ["inst", "tex", "other"].filter((CC => ZC[CC].draws > 0)).map((zC => `${zC} ${CC(ZC[zC].draws)} draws ${CC(ZC[zC].faces)} faces a frame`));
+      sC(`${oZ} frames: ${wC.join(", ")||"no draws"}; uploaded ${Math.round(QC.buffer/1024)} KiB to buffers, ${Math.round(QC.texture/1024)} KiB to data textures`), oZ = 0
     }
   },
-  4637: (kk, ek, ik) => {
-    function Dk(kk) {
-      if (null === kk) return "backend: none picked (no renderer build)";
-      const ek = kk.adapter ? `${kk.adapter.vendor}/${kk.adapter.architecture}` : "none";
-      return `backend ${kk.backend}: reason ${kk.reason}, source ${kk.source}, adapter ${ek}`
+  4640: (CC, zC, ZC) => {
+    function QC(CC) {
+      if (null === CC) return "backend: none picked (no renderer build)";
+      const zC = CC.adapter ? `${CC.adapter.vendor}/${CC.adapter.architecture}` : "none";
+      return `backend ${CC.backend}: reason ${CC.reason}, source ${CC.source}, adapter ${zC}`
     }
-    ik.d(ek, {
-      d: () => Dk
+    ZC.d(zC, {
+      b: () => QC
     })
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

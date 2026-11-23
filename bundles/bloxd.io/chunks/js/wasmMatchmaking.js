@@ -1,30 +1,30 @@
-/*! For license information please see 3lwmg.wasmMatchmaking.744abf2e.chunk.js.LICENSE.txt */
+/*! For license information please see w4ddu.wasmMatchmaking.92b6c578.chunk.js.LICENSE.txt */
 export const id = 62;
 export const ids = [62];
 export const modules = {
-  36067: (kk, ek) => {
-    function ik(kk) {
-      if (kk && "object" === typeof kk) {
-        var ek = kk.which || kk.keyCode || kk.charCode;
-        ek && (kk = ek)
+  36417: (CC, zC) => {
+    function ZC(CC) {
+      if (CC && "object" === typeof CC) {
+        var zC = CC.which || CC.keyCode || CC.charCode;
+        zC && (CC = zC)
       }
-      if ("number" === typeof kk) return bk[kk];
-      var ik, Sk = String(kk);
-      return (ik = Dk[Sk.toLowerCase()]) ? ik : (ik = fk[Sk.toLowerCase()]) || (1 === Sk.length ? Sk.charCodeAt(0) : void 0)
+      if ("number" === typeof CC) return nC[CC];
+      var ZC, bC = String(CC);
+      return (ZC = QC[bC.toLowerCase()]) ? ZC : (ZC = wC[bC.toLowerCase()]) || (1 === bC.length ? bC.charCodeAt(0) : void 0)
     }
-    ik.isEventKey = function(kk, ek) {
-      if (kk && "object" === typeof kk) {
-        var ik = kk.which || kk.keyCode || kk.charCode;
-        if (null === ik || void 0 === ik) return !1;
-        if ("string" === typeof ek) {
-          var Sk;
-          if (Sk = Dk[ek.toLowerCase()]) return Sk === ik;
-          if (Sk = fk[ek.toLowerCase()]) return Sk === ik
-        } else if ("number" === typeof ek) return ek === ik;
+    ZC.isEventKey = function(CC, zC) {
+      if (CC && "object" === typeof CC) {
+        var ZC = CC.which || CC.keyCode || CC.charCode;
+        if (null === ZC || void 0 === ZC) return !1;
+        if ("string" === typeof zC) {
+          var bC;
+          if (bC = QC[zC.toLowerCase()]) return bC === ZC;
+          if (bC = wC[zC.toLowerCase()]) return bC === ZC
+        } else if ("number" === typeof zC) return zC === ZC;
         return !1
       }
     };
-    var Dk = (ek = kk.exports = ik).code = ek.codes = {
+    var QC = (zC = CC.exports = ZC).code = zC.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      fk = ek.aliases = {
+      wC = zC.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Sk = 97; Sk < 123; Sk++) Dk[String.fromCharCode(Sk)] = Sk - 32;
-    for (var Sk = 48; Sk < 58; Sk++) Dk[Sk - 48] = Sk;
-    for (Sk = 1; Sk < 13; Sk++) Dk["f" + Sk] = Sk + 111;
-    for (Sk = 0; Sk < 10; Sk++) Dk["numpad " + Sk] = Sk + 96;
-    var bk = ek.names = ek.title = {};
-    for (Sk in Dk) bk[Dk[Sk]] = Sk;
-    for (var rk in fk) Dk[rk] = fk[rk]
+    for (bC = 97; bC < 123; bC++) QC[String.fromCharCode(bC)] = bC - 32;
+    for (var bC = 48; bC < 58; bC++) QC[bC - 48] = bC;
+    for (bC = 1; bC < 13; bC++) QC["f" + bC] = bC + 111;
+    for (bC = 0; bC < 10; bC++) QC["numpad " + bC] = bC + 96;
+    var nC = zC.names = zC.title = {};
+    for (bC in QC) nC[QC[bC]] = bC;
+    for (var fC in wC) QC[fC] = wC[fC]
   },
-  36263: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => bk
+  36581: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC
     });
-    var Dk = ik(60);
-    const fk = Dk.useLayoutEffect;
-    const Sk = function(kk) {
-      var ek = (0, Dk.useRef)(kk);
-      return fk((function() {
-        ek.current = kk
-      })), ek
+    var QC = ZC(48);
+    const wC = QC.useLayoutEffect;
+    const bC = function(CC) {
+      var zC = (0, QC.useRef)(CC);
+      return wC((function() {
+        zC.current = CC
+      })), zC
     };
-    var bk = function(kk) {
-      var ek = Sk(kk);
-      (0, Dk.useEffect)((function() {
-        var kk = function(kk) {
-          var ik;
-          if (null != ek.current && (ik = ek.current(kk)), kk.defaultPrevented && (kk.returnValue = ""), "string" === typeof ik) return kk.returnValue = ik, ik
+    var nC = function(CC) {
+      var zC = bC(CC);
+      (0, QC.useEffect)((function() {
+        var CC = function(CC) {
+          var ZC;
+          if (null != zC.current && (ZC = zC.current(CC)), CC.defaultPrevented && (CC.returnValue = ""), "string" === typeof ZC) return CC.returnValue = ZC, ZC
         };
-        return window.addEventListener("beforeunload", kk),
+        return window.addEventListener("beforeunload", CC),
           function() {
-            window.removeEventListener("beforeunload", kk)
+            window.removeEventListener("beforeunload", CC)
           }
       }), [])
     }
   },
-  36127: kk => {
-    var ek, ik = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Dk = /OS X/.test(ik),
-      fk = /Opera/.test(ik),
-      Sk = !/like Gecko/.test(ik) && !fk,
-      bk = kk.exports = {
-        0: Dk ? "<menu>" : "<UNK>",
+  36466: CC => {
+    var zC, ZC = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      QC = /OS X/.test(ZC),
+      wC = /Opera/.test(ZC),
+      bC = !/like Gecko/.test(ZC) && !wC,
+      nC = CC.exports = {
+        0: QC ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Dk ? "<meta>" : "<menu>",
+        93: QC ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Dk && Sk ? "-" : "<volume-mute>",
+        173: QC && bC ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: fk ? "`" : "<unicode>",
+        231: wC ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,548 +234,261 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (ek = 58; ek < 65; ++ek) bk[ek] = String.fromCharCode(ek);
-    for (ek = 48; ek < 58; ++ek) bk[ek] = ek - 48 + "";
-    for (ek = 65; ek < 91; ++ek) bk[ek] = String.fromCharCode(ek);
-    for (ek = 96; ek < 106; ++ek) bk[ek] = "<num-" + (ek - 96) + ">";
-    for (ek = 112; ek < 136; ++ek) bk[ek] = "F" + (ek - 111)
+    for (zC = 58; zC < 65; ++zC) nC[zC] = String.fromCharCode(zC);
+    for (zC = 48; zC < 58; ++zC) nC[zC] = zC - 48 + "";
+    for (zC = 65; zC < 91; ++zC) nC[zC] = String.fromCharCode(zC);
+    for (zC = 96; zC < 106; ++zC) nC[zC] = "<num-" + (zC - 96) + ">";
+    for (zC = 112; zC < 136; ++zC) nC[zC] = "F" + (zC - 111)
   },
-  8725: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Sk,
-      d: () => fk
+  8907: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => bC,
+      g: () => wC
     });
-    let Dk = !1;
+    let QC = !1;
 
-    function fk() {
-      Dk = !0
+    function wC() {
+      QC = !0
     }
 
-    function Sk() {
-      return Dk
+    function bC() {
+      return QC
     }
   },
-  35971: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      InGameUi: () => Lk.b,
-      LobbyLeaderboard: () => Ck.d,
-      loadCharacterCustomisationUI: () => Ak,
-      loadCharacterPreview: () => jk,
-      matchmakeAndPlay: () => Fk,
-      setUpGame: () => sk
+  36322: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      InGameUi: () => xC.c,
+      LobbyLeaderboard: () => JC.d,
+      loadCharacterCustomisationUI: () => IC,
+      loadCharacterPreview: () => iC,
+      matchmakeAndPlay: () => KC,
+      setUpGame: () => vC
     });
-    var Dk = ik(1220),
-      fk = ik(165),
-      Sk = ik(22),
-      bk = ik(35977),
-      rk = ik(35983),
-      Pk = ik(1911),
-      mk = ik(36015);
+    var QC = ZC(1187),
+      wC = ZC(134),
+      bC = ZC(20),
+      nC = ZC(36329),
+      fC = ZC(36335),
+      oC = ZC(1865),
+      qC = ZC(36373);
 
-    function Mk() {
-      return !1 !== Pk.c.get("canCustomiseChar")
+    function FC() {
+      return !1 !== oC.e.get("canCustomiseChar")
     }
-    let Kk = !1;
-    var xk = ik(1302),
-      nk = ik(1223),
-      Uk = ik(247),
-      Hk = ik(672),
-      wk = ik(8725),
-      lk = ik(8723);
+    let WC = !1;
+    var NC = ZC(1275),
+      MC = ZC(1192),
+      gC = ZC(239),
+      SC = ZC(666),
+      pC = ZC(8907),
+      PC = ZC(8904);
 
-    function pk() {
-      (0, wk.c)() || (0, lk.b)().catch((kk => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", kk)
+    function GC() {
+      (0, pC.d)() || (0, PC.d)().catch((CC => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", CC)
       }))
     }
-    var yk = ik(3521),
-      Yk = ik(1710);
-    var Lk = ik(36023),
-      Ck = ik(36601);
+    var RC = ZC(3419),
+      AC = ZC(1669);
+    var xC = ZC(36378),
+      JC = ZC(36880);
 
-    function Ak() {
-      return Promise.all([ik.e(289), ik.e(394)]).then((() => ik(40850)))
+    function IC() {
+      return ZC.e(216).then((() => ZC(41095)))
     }
 
-    function jk() {
-      return ik.e(290).then((() => ik(40857)))
+    function iC() {
+      return ZC.e(291).then((() => ZC(41104)))
     }
 
-    function sk() {
-      return (0, lk.h)()
+    function vC() {
+      return (0, PC.j)()
     }
-    Kk || (Kk = !0, document.addEventListener("keydown", (kk => {
-        (0, mk.e)(kk, Mk)
+    WC || (WC = !0, document.addEventListener("keydown", (CC => {
+        (0, qC.b)(CC, FC)
       }))),
-      function(kk) {
-        var ek;
-        return !0 !== (null === kk || void 0 === kk ? void 0 : kk.saveData) && !/2g$/.test(null !== (ek = null === kk || void 0 === kk ? void 0 : kk.effectiveType) && void 0 !== ek ? ek : "")
-      }(navigator.connection) && (0, Hk.d)((() => {
-        (0, wk.c)() || Promise.all([ik.e(77), ik.e(89), ik.e(134), ik.e(267), ik.e(137), ik.e(58)]).then((() => ik(40634))).then((async kk => {
-          (0, wk.c)() || (await kk.startLoadAheadOfJoin({
-            joinStarted: wk.c,
-            language: nk.f.get().getCurrentLanguageCode()
-          }), (0, Uk.c)(pk))
-        }), (kk => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", kk)
+      function(CC) {
+        var zC;
+        return !0 !== (null === CC || void 0 === CC ? void 0 : CC.saveData) && !/2g$/.test(null !== (zC = null === CC || void 0 === CC ? void 0 : CC.effectiveType) && void 0 !== zC ? zC : "")
+      }(navigator.connection) && (0, SC.d)((() => {
+        (0, pC.d)() || Promise.all([ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(210), ZC.e(134), ZC.e(139), ZC.e(58)]).then((() => ZC(40885))).then((async CC => {
+          (0, pC.d)() || (await CC.startLoadAheadOfJoin({
+            joinStarted: pC.d,
+            language: MC.h.get().getCurrentLanguageCode()
+          }), (0, gC.e)(GC))
+        }), (CC => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", CC)
         }))
       }));
-    const dk = Sk.b.get("router");
-    null === dk ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function kk(ek) {
-      if ((0, Yk.b)(ek.state.location.pathname)) return void(0, lk.f)().catch((() => {}));
-      const ik = ek.subscribe((Dk => {
-        (0, Yk.b)(Dk.location.pathname) && (ik(), (0, yk.f)().then((() => {
-          kk(ek)
+    const eC = bC.b.get("router");
+    null === eC ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function CC(zC) {
+      if ((0, AC.b)(zC.state.location.pathname)) return void(0, PC.h)().catch((() => {}));
+      const ZC = zC.subscribe((QC => {
+        (0, AC.b)(QC.location.pathname) && (ZC(), (0, RC.e)().then((() => {
+          CC(zC)
         })))
       }))
-    }(dk), (0, bk.d)();
-    const Vk = (0, rk.b)((async function(kk, ek) {
+    }(eC), (0, nC.c)();
+    const hC = (0, fC.d)((async function(CC, zC) {
       let {
-        place: ik,
-        userContext: Sk,
-        direct: bk,
-        rematch: rk
-      } = kk;
-      const Pk = bk ? 1 / 0 : performance.now();
-      let mk;
+        place: ZC,
+        userContext: bC,
+        direct: nC,
+        rematch: fC
+      } = CC;
+      const oC = nC ? 1 / 0 : performance.now();
+      let qC;
       try {
-        mk = await (0, lk.f)()
-      } catch (Mk) {
-        return console.error("The wasm client did not load:", Mk), (0, xk.n)({
+        qC = await (0, PC.h)()
+      } catch (FC) {
+        return console.error("The wasm client did not load:", FC), (0, NC.r)({
           websocketUrl: null
-        }), Dk.d.errorWithCode(String(Mk), fk.n.CONNECT_TO_GAME_SERVER, {
-          error: Mk,
-          severity: ek.aborted ? "low" : "medium",
-          Ji: ek.aborted
+        }), QC.e.errorWithCode(String(FC), wC.l.CONNECT_TO_GAME_SERVER, {
+          error: FC,
+          severity: zC.aborted ? "low" : "medium",
+          wZ: zC.aborted
         })
       }
-      return mk.playWasmGame({
-        userContext: Sk,
-        place: ik,
-        matchedAt: Pk,
-        rematch: rk
-      }, ek)
+      return qC.playWasmGame({
+        userContext: bC,
+        place: ZC,
+        matchedAt: oC,
+        rematch: fC
+      }, zC)
     }));
 
-    function Fk() {
-      return (0, lk.f)().catch((() => {})), Vk(...arguments)
+    function KC() {
+      return (0, PC.h)().catch((() => {})), hC(...arguments)
     }
   },
-  8723: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => nk,
-      f: () => xk,
-      h: () => Uk
+  8904: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => MC,
+      h: () => NC,
+      j: () => gC
     });
-    var Dk = ik(3121),
-      fk = ik(2259),
-      Sk = ik(2095),
-      bk = ik(4575),
-      rk = ik(3456),
-      Pk = ik(8725);
-    let mk = null;
+    var QC = ZC(3137),
+      wC = ZC(2224),
+      bC = ZC(2050),
+      nC = ZC(4582),
+      fC = ZC(3464),
+      oC = ZC(8907);
+    let qC = null;
 
-    function Mk() {
-      return Promise.all([ik.e(74), ik.e(77), ik.e(89), ik.e(76), ik.e(134), ik.e(267), ik.e(160), ik.e(197), ik.e(137), ik.e(87), ik.e(268), ik.e(63)]).then((() => ik(40256)))
+    function FC() {
+      return Promise.all([ZC.e(74), ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(76), ZC.e(210), ZC.e(134), ZC.e(196), ZC.e(139), ZC.e(87), ZC.e(218), ZC.e(63)]).then((() => ZC(40510)))
     }
 
-    function Kk() {
-      Promise.all([ik.e(72), ik.e(75), ik.e(74), ik.e(73), ik.e(89), ik.e(86), ik.e(265), ik.e(191), ik.e(221), ik.e(243), ik.e(268), ik.e(46)]).then((() => ik(40591))).catch((() => {}))
+    function WC() {
+      Promise.all([ZC.e(72), ZC.e(75), ZC.e(74), ZC.e(73), ZC.e(89), ZC.e(86), ZC.e(269), ZC.e(189), ZC.e(223), ZC.e(247), ZC.e(218), ZC.e(46)]).then((() => ZC(40832))).catch((() => {}))
     }
 
-    function xk() {
-      return bk.c.cancelDownloadForJoin(), (0, rk.b)(), (0, fk.g)(), (0, Pk.d)(), (0, Sk.i)(), Kk(), Promise.all([ik.e(77), ik.e(89), ik.e(134), ik.e(267), ik.e(137), ik.e(58)]).then((() => ik(40634))).then((kk => {
+    function NC() {
+      return nC.e.cancelDownloadForJoin(), (0, fC.b)(), (0, wC.f)(), (0, oC.g)(), (0, bC.k)(), WC(), Promise.all([ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(210), ZC.e(134), ZC.e(139), ZC.e(58)]).then((() => ZC(40885))).then((CC => {
         let {
-          startJoinLoad: ek
-        } = kk;
-        ek()
-      }), (() => {})), mk ??= Mk().then((kk => (kk.startWasmPlay(), kk.followPageUiPack((kk => {
-        Dk.e.showGamePack(kk)
-      })), kk)), (kk => {
-        throw mk = null, kk
-      })), mk
+          startJoinLoad: zC
+        } = CC;
+        zC()
+      }), (() => {})), qC ??= FC().then((CC => (CC.startWasmPlay(), CC.followPageUiPack((CC => {
+        QC.c.showGamePack(CC)
+      })), CC)), (CC => {
+        throw qC = null, CC
+      })), qC
     }
 
-    function nk() {
-      return Kk(), ik.e(269).then((() => ik(40641))).catch((() => {})), Mk().then((() => {}))
+    function MC() {
+      return WC(), ZC.e(271).then((() => ZC(40888))).catch((() => {})), FC().then((() => {}))
     }
 
-    function Uk() {
-      return Mk().then((kk => {
-        kk.startWasmPreviews(), kk.prefetchWasmPreviews()
+    function gC() {
+      return FC().then((CC => {
+        CC.startWasmPreviews(), CC.prefetchWasmPreviews()
       }))
     }
   },
-  35995: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => xk,
-      d: () => Mk,
-      g: () => nk,
-      k: () => Kk
+  36712: (CC, zC, ZC) => {
+    function QC(CC) {
+      return "fetch" === CC || "timeout" === CC || "integrity" === CC ? "download" : "browser"
+    }
+    ZC.d(zC, {
+      b: () => wC,
+      c: () => nC,
+      g: () => oC,
+      j: () => fC,
+      m: () => QC,
+      p: () => bC
     });
-    var Dk = ik(314),
-      fk = ik(623),
-      Sk = ik(634),
-      bk = ik(38);
-    const rk = {
-        idStorageKey: "playSessionId",
-        lastActivityStorageKey: "playSessionLastActivityMs",
-        expiryMs: 3e5
-      },
-      Pk = "playSessionGameNameWithVariation",
-      mk = "wasMatchmakePlayer";
+    const wC = "https://discord.gg/playbloxd";
 
-    function Mk() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bk.g;
-      (0, Sk.h)(kk, rk)
-    }
-
-    function Kk() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bk.g).setItem(mk, !0)
-    }
-
-    function xk() {
-      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bk.g;
-      return (0, Sk.c)(kk, rk)
+    function bC(CC) {
+      return "download" === CC ? {
+        icon: "wifi",
+        title: "wasmScreens:downloadFailedTitle",
+        help: "wasmScreens:downloadFailedHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:tryAgain",
+        cancel: "general:back"
+      } : {
+        icon: "face-dizzy",
+        title: "wasmScreens:unsupportedTitle",
+        help: "wasmScreens:unsupportedHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:ok",
+        cancel: null
+      }
     }
 
-    function nk(kk) {
-      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bk.g;
-      const ik = (0, Sk.c)(ek, rk),
-        Mk = function(kk) {
-          const ek = kk.getItem(Pk);
-          return "string" !== typeof ek ? null : ek
-        }(ek),
-        Kk = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bk.g).getItem(mk)
-        }(ek);
-      let xk;
-      return xk = null !== ik && null !== Mk && (0, Sk.e)(ek, rk) && function(kk, ek, ik) {
-          const fk = (0, Dk.Db)(kk),
-            Sk = (0, Dk.Db)(ek),
-            bk = (0, Dk.yb)(kk),
-            rk = (0, Dk.yb)(ek);
-          return !(fk !== Sk || !ik) || fk === Sk && bk === rk
-        }(Mk, kk, Kk) ? ik : (0, fk.d)(), (0, Sk.i)(ek, rk, xk), ek.setItem(Pk, kk),
-        function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bk.g).removeItem(mk)
-        }(ek), xk
-    }
-  },
-  35986: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => pk,
-      g: () => yk
-    });
-    var Dk = ik(996),
-      fk = ik(600),
-      Sk = ik(314),
-      bk = ik(1e3),
-      rk = ik(610),
-      Pk = ik(646),
-      mk = ik(4458),
-      Mk = ik(99),
-      Kk = ik(131),
-      xk = ik(1688),
-      nk = ik(111),
-      Uk = ik(35995),
-      Hk = ik(38),
-      wk = ik(630),
-      lk = ik(36001);
-
-    function pk() {
-      var kk, ek;
-      return [...null !== (kk = navigator.languages) && void 0 !== kk ? kk : [null !== (ek = navigator.language) && void 0 !== ek ? ek : "none"], "en-gb"]
-    }
-
-    function yk(kk, ek, ik, yk, Yk) {
-      const Lk = (0, Dk.j)(ek) ? (0, Dk.p)(ek) : null,
-        Ck = {
-          cookies: (0, xk.getAllCookiesForGameNameWithVariation)(ek),
-          isMobile: (0, Mk.isMobile)(),
-          isUsingCustomGameTexturePack: null !== Lk && Yk(Lk),
-          generalCookies: {
-            joinDiscord: !!Hk.f.getItem("DiscordPressed"),
-            newGo: mk.b,
-            ...kk.getMetricsCookies(),
-            trafficCode: yk,
-            compliance: Mk.compliance
-          },
-          browserInfo: {
-            ua: window.navigator.userAgent,
-            name: (0, Mk.getBrowserName)(),
-            version: (0, Mk.getBrowserVersion)(),
-            platform: navigator.platform,
-            platformType: (0, Mk.getPlatformType)(),
-            deviceType: (0, nk.d)()
-          },
-          isLoggedIn: kk.isLoggedIn(),
-          lobbyName: ik,
-          languages: pk(),
-          version: fk.c,
-          siteUsed: Kk.t,
-          subsiteUsed: Kk.E,
-          playSessionId: (0, Uk.g)(ek),
-          visitSessionId: (0, wk.d)(),
-          clientReason: rk.l.reason,
-          budgetBasis: (0, lk.c)(),
-          ...null !== Pk.q && {
-            diagClaim: Pk.q.claimId
-          }
-        };
-      return null !== Lk && (0, Sk.tc)(Lk) ? (Ck.lobbyName = (0, Dk.g)(Lk, (0, Dk.m)(ek), ik), {
-        roomName: `classic_${bk.f}`,
-        joinOptions: Ck
-      }) : {
-        roomName: ek,
-        joinOptions: Ck
-      }
-    }
-  },
-  36011: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => bk,
-      e: () => fk,
-      g: () => Sk
-    });
-    var Dk = ik(1756);
-    class fk extends Error {
-      constructor(kk) {
-        super("The game server didn't answer in time"), this.leg = kk, this.name = "SeatRequestTimedOut"
-      }
-    }
-    const Sk = new class {
-      constructor() {
-        this.count = 0, this.answers = 0, this.waiting = new Set
-      }
-      get answered() {
-        return this.answers
-      }
-      answer() {
-        this.answers++
-      }
-      add() {
-        this.count++;
-        for (const kk of this.waiting) kk()
-      }
-      remove() {
-        this.count--
-      }
-      whenSlow(kk) {
-        return this.count > 0 || kk.aborted ? Promise.resolve(!kk.aborted) : new Promise((ek => {
-          const ik = () => {
-            this.waiting.delete(ik), ek(!kk.aborted)
-          };
-          this.waiting.add(ik), kk.addEventListener("abort", ik, {
-            once: !0
-          })
-        }))
-      }
-    };
-    class bk {
-      constructor(kk) {
-        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new Dk.b(45e3, kk), this.slow = new Dk.b(8e3, (() => {
-          this.countedSlow = !0, Sk.add()
-        }))
-      }
-      restart() {
-        Sk.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
-      }
-      stop() {
-        this.timeout.stop(), this.slow.stop(), this.uncountSlow()
-      }
-      answered() {
-        this.stop(), Sk.answer()
-      }
-      socketOpened() {
-        this.slow.stop(), this.uncountSlow(), Sk.answer()
-      }
-      uncountSlow() {
-        this.countedSlow && (this.countedSlow = !1, Sk.remove())
-      }
-    }
-  },
-  35841: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => Dk,
-      h: () => fk,
-      k: () => Sk,
-      l: () => bk
-    });
-    const Dk = 1024,
-      fk = 1024 * Dk;
-
-    function Sk(kk) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, kk / fk)))
-    }
-
-    function bk(kk) {
-      return (kk / fk).toFixed(1)
-    }
-  },
-  36004: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => Sk,
-      h: () => rk,
-      k: () => bk,
-      o: () => Pk,
-      r: () => mk,
-      v: () => Mk
-    });
-    var Dk = ik(189);
-    const fk = 32 * ik(35841).h,
-      Sk = 6144,
-      bk = 4608,
-      rk = 512;
-
-    function Pk(kk) {
-      return Math.floor(fk * kk / Sk)
-    }
-
-    function mk(kk) {
-      const ek = kk - Math.floor(kk / 6);
-      let ik = Dk.g.maxChunkHorizAddDistance,
-        fk = Dk.g.maxChunkVertAddDistance;
-      if (Mk(ik + 1, fk + 1) <= ek) return null;
-      for (; Mk(ik + 1, fk + 1) > ek && (ik > 0 || fk > 0);) ik > fk ? ik-- : fk--;
+    function nC(CC, zC) {
       return {
-        horizontal: ik,
-        vertical: fk
+        icon: "face-dizzy",
+        title: "wasmScreens:crashTitle",
+        help: zC ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        helpValues: {
+          code: CC.code
+        },
+        discordLink: zC,
+        confirm: "general:reload",
+        cancel: "general:back"
       }
     }
 
-    function Mk(kk, ek) {
-      const ik = Math.max(kk, ek);
-      let Dk = 0;
-      for (let fk = -ik; fk <= ik; fk++)
-        for (let Sk = -ik; Sk <= ik; Sk++)
-          for (let bk = -ik; bk <= ik; bk++) Kk(kk, ek, fk, Sk, bk) && Dk++;
-      return Dk
-    }
-
-    function Kk(kk, ek, ik, Dk, fk) {
-      const Sk = ik * ik + fk * fk;
-      return kk === ek ? Sk + Dk * Dk <= kk * kk : kk > ek ? Math.abs(Dk) <= ek && Sk + Dk * Dk <= kk * kk : Sk <= kk * kk && Sk + Dk * Dk <= ek * ek
-    }
-  },
-  36001: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => Ck,
-      c: () => Lk,
-      e: () => Yk
-    });
-    var Dk = ik(189),
-      fk = ik(99),
-      Sk = ik(686),
-      bk = ik(4352),
-      rk = ik(618),
-      Pk = ik(36004);
-    const mk = 1048576,
-      Mk = 1024 * mk,
-      Kk = 400 * mk,
-      xk = 147456,
-      nk = .5,
-      Uk = 1.5 * Mk,
-      Hk = 768 * mk;
-
-    function wk(kk) {
-      return Kk + kk * xk
-    }
-
-    function lk(kk, ek, ik) {
-      var fk, bk;
-      let {
-        footprintBytes: rk,
-        basis: mk,
-        namesLimit: lk
-      } = function(kk) {
-        const {
-          os: ek,
-          deviceMemory: ik
-        } = kk;
-        if ("ios" === ek) switch ((0, Sk.e)(kk)) {
-          case "ipad_m":
-            return {
-              footprintBytes: wk(Pk.d), basis: "ipad-m", namesLimit: !1
-            };
-          case "ipad":
-            return {
-              footprintBytes: Hk, basis: "ipad", namesLimit: !0
-            };
-          case "iphone_6gb":
-            return {
-              footprintBytes: Uk, basis: "iphone-6gb", namesLimit: !0
-            };
-          case "iphone":
-            return {
-              footprintBytes: Hk, basis: "iphone", namesLimit: !0
-            }
-        }
-        return "number" === typeof ik && Number.isFinite(ik) && ik > 0 ? {
-          footprintBytes: ik * Mk * nk,
-          basis: `memory-${ik}`,
-          namesLimit: !0
-        } : "android" === ek ? {
-          footprintBytes: Hk,
-          basis: "android",
-          namesLimit: !0
-        } : {
-          footprintBytes: wk(Pk.k),
-          basis: "unreported",
-          namesLimit: !1
-        }
-      }(kk);
-      if (ik) {
-        const kk = Math.min(rk, wk(Pk.d));
-        rk = Kk + Math.max(0, kk - Kk) / 2, mk += "+killed", lk = !0
-      }
-      null !== ek && wk(ek) < rk && (rk = wk(ek), mk += "+learned", lk = !0);
-      const pk = function(kk) {
-          const ek = Math.floor((kk - Kk) / xk);
-          return Math.min(Pk.d, Math.max(Pk.h, ek))
-        }(rk),
-        yk = (0, Pk.r)(pk);
+    function fC() {
       return {
-        footprintBytes: rk,
-        shedFootprintBytes: lk ? Math.max(rk, wk(pk)) : null,
-        chunkCap: pk,
-        maxHorizDistance: null !== (fk = null === yk || void 0 === yk ? void 0 : yk.horizontal) && void 0 !== fk ? fk : Dk.g.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (bk = null === yk || void 0 === yk ? void 0 : yk.vertical) && void 0 !== bk ? bk : Dk.g.maxChunkVertAddDistance,
-        basis: mk
+        icon: "face-dizzy",
+        title: "wasmScreens:turnstilePageTitle",
+        help: "wasmScreens:turnstilePageHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:ok",
+        cancel: null
       }
     }
-    let pk = null;
 
-    function yk() {
-      return lk({
-        os: (0, fk.getOperatingSystem)(),
-        deviceMemory: navigator.deviceMemory,
-        ...(0, Sk.i)()
-      }, (0, bk.c)(), (0, rk.D)("wasm").length > 0)
-    }
-
-    function Yk() {
-      return pk ??= yk(), pk
-    }
-
-    function Lk() {
-      var kk;
-      return (null !== (kk = pk) && void 0 !== kk ? kk : yk()).basis
-    }
-
-    function Ck(kk, ek) {
-      return kk.setChunkCap(ek.chunkCap)
+    function oC(CC, zC, ZC) {
+      return {
+        icon: "wifi",
+        title: "wasmScreens:disconnectedTitle",
+        help: ZC ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        helpValues: {
+          reason: CC.reason
+        },
+        discordLink: null === CC.name,
+        confirm: zC ? "general:reconnect" : CC.requiresRefresh ? "general:reload" : "general:ok",
+        cancel: null
+      }
     }
   },
-  9105: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => fk,
-      e: () => Sk
+  9299: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => wC,
+      d: () => bC
     });
-    var Dk = ik(9063);
-    const fk = "Air",
-      Sk = Object.freeze(new Dk.d(fk, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var QC = ZC(9239);
+    const wC = "Air",
+      bC = Object.freeze(new QC.e(wC, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

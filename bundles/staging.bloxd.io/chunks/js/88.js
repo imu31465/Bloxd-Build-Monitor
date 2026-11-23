@@ -1,373 +1,373 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  40118: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      startWasmPadGameplay: () => ak
+  40372: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      startWasmPadGameplay: () => uC
     });
-    ik(40123);
-    var Dk = ik(40130),
-      fk = ik(40145),
-      Sk = ik(1911),
-      bk = ik(40157),
-      rk = ik(4741),
-      Pk = ik(4721),
-      mk = ik(40161),
-      Mk = ik(40165),
-      Kk = ik(4750),
-      xk = ik(40247),
-      nk = ik(2395),
-      Uk = ik(8683),
-      Hk = ik(40133),
-      wk = ik(8665),
-      lk = ik(38676);
-    const pk = kk => {
-        const ek = Kk.e.indexOf(kk);
-        if (ek < 0) throw new Error(`No core action "${kk}"`);
-        return ek
+    ZC(40381);
+    var QC = ZC(40389),
+      wC = ZC(40405),
+      bC = ZC(1865),
+      nC = ZC(40412),
+      fC = ZC(4733),
+      oC = ZC(4711),
+      qC = ZC(40417),
+      FC = ZC(40423),
+      WC = ZC(4745),
+      NC = ZC(40500),
+      MC = ZC(2351),
+      gC = ZC(8850),
+      SC = ZC(40392),
+      pC = ZC(8831),
+      PC = ZC(38944);
+    const GC = CC => {
+        const zC = WC.c.indexOf(CC);
+        if (zC < 0) throw new Error(`No core action "${CC}"`);
+        return zC
       },
-      yk = pk("primary-fire"),
-      Yk = pk("alt-fire"),
-      Lk = pk("mid-fire"),
-      Ck = pk("jump"),
-      Ak = pk("ReloadGun"),
-      jk = pk("SwapCameraZoom"),
-      sk = pk("TouchAction1"),
-      dk = {
-        SpecialAction1: pk("SpecialAction1"),
-        SpecialAction2: pk("SpecialAction2")
+      RC = GC("primary-fire"),
+      AC = GC("alt-fire"),
+      xC = GC("mid-fire"),
+      JC = GC("jump"),
+      IC = GC("ReloadGun"),
+      iC = GC("SwapCameraZoom"),
+      vC = GC("TouchAction1"),
+      eC = {
+        SpecialAction1: GC("SpecialAction1"),
+        SpecialAction2: GC("SpecialAction2")
       },
-      Vk = (kk, ek) => {
-        (0, nk.r)(rk.O.PadAction, kk, 0, 0, (0, nk.o)(ek, performance.now()))
+      hC = (CC, zC) => {
+        (0, MC.r)(fC.Q.PadAction, CC, 0, 0, (0, MC.q)(zC, performance.now()))
       },
-      Fk = kk => {
-        Vk(kk, bk.ld.Down)
+      KC = CC => {
+        hC(CC, nC.Rd.Down)
       },
-      uk = kk => {
-        Vk(kk, 0)
+      YC = CC => {
+        hC(CC, 0)
       },
-      qk = kk => {
-        Fk(kk), uk(kk)
+      dC = CC => {
+        KC(CC), YC(CC)
       },
-      Ik = () => {
-        const kk = (0, Mk.g)();
-        return null !== kk && void 0 !== kk && kk.isCoreRunning ? kk : null
+      mC = () => {
+        const CC = (0, FC.k)();
+        return null !== CC && void 0 !== CC && CC.isCoreRunning ? CC : null
       },
-      zk = kk => bk.t.playerFlags(kk.api.apiView, 0),
-      Qk = kk => null !== kk && bk.t.targetBlockId(kk.api.apiView, 0) !== bk.Vc,
-      vk = () => {
-        const kk = (0, Uk.c)(),
-          ek = new Hk.b;
-        let ik = !1;
-        const Dk = (kk, ek) => {
-            (0, nk.r)(rk.O.PadLook, bk.rd.Rate, kk, ek, 0)
+      HC = CC => nC.w.playerFlags(CC.api.apiView, 0),
+      EC = CC => null !== CC && nC.w.targetBlockId(CC.api.apiView, 0) !== nC.rd,
+      lC = () => {
+        const CC = (0, gC.b)(),
+          zC = new SC.c;
+        let ZC = !1;
+        const QC = (CC, zC) => {
+            (0, MC.r)(fC.Q.PadLook, nC._d.Rate, CC, zC, 0)
           },
-          fk = () => {
-            ik = !1, ek.reset(), Dk(0, 0)
+          wC = () => {
+            ZC = !1, zC.reset(), QC(0, 0)
           };
         return {
-          update: (fk, Sk, Pk) => {
-            ik || (kk.discardPending(), ik = !0);
-            const mk = (0, Hk.r)(ek, fk, Sk, Pk, performance.now());
-            Dk(mk.yawRadPerSec, mk.pitchRadPerSec);
-            const Mk = kk.drainLookDelta();
-            0 === Mk.SF && 0 === Mk.mF || (0, nk.r)(rk.O.PadLook, bk.rd.Gyro, Mk.SF, Mk.mF, 0)
+          update: (wC, bC, oC) => {
+            ZC || (CC.discardPending(), ZC = !0);
+            const qC = (0, SC.p)(zC, wC, bC, oC, performance.now());
+            QC(qC.yawRadPerSec, qC.pitchRadPerSec);
+            const FC = CC.drainLookDelta();
+            0 === FC.VY && 0 === FC.Zm || (0, MC.r)(fC.Q.PadLook, nC._d.Gyro, FC.VY, FC.Zm, 0)
           },
-          release: fk,
-          uninstall: fk
+          release: wC,
+          uninstall: wC
         }
       },
-      Ek = () => {
-        const kk = Ik();
-        return null !== kk && 0 !== (zk(kk) & bk.yd.PadSneakToggled)
+      XC = () => {
+        const CC = mC();
+        return null !== CC && 0 !== (HC(CC) & nC.ce.PadSneakToggled)
       },
-      hk = () => {
-        const kk = (kk => {
-          const ek = kk => function() {
-            return (0, xk.c)(), kk(...arguments)
+      cC = () => {
+        const CC = (CC => {
+          const zC = CC => function() {
+            return (0, NC.d)(), CC(...arguments)
           };
           return {
-            primaryFireDown: ek((() => (Fk(yk), 0))),
-            primaryFireUp: ek((() => {
-              uk(yk)
+            primaryFireDown: zC((() => (KC(RC), 0))),
+            primaryFireUp: zC((() => {
+              YC(RC)
             })),
-            altFireDown: ek((() => (Fk(Yk), 0))),
-            altFireUp: ek((() => {
-              uk(Yk)
+            altFireDown: zC((() => (KC(AC), 0))),
+            altFireUp: zC((() => {
+              YC(AC)
             })),
-            jumpDown: ek((() => {
-              qk(Ck)
+            jumpDown: zC((() => {
+              dC(JC)
             })),
-            specialActionDown: ek((kk => {
-              Fk(dk[kk])
+            specialActionDown: zC((CC => {
+              KC(eC[CC])
             })),
-            specialActionUp: ek((kk => {
-              uk(dk[kk])
+            specialActionUp: zC((CC => {
+              YC(eC[CC])
             })),
-            reloadGun: ek((() => {
-              qk(Ak)
+            reloadGun: zC((() => {
+              dC(IC)
             })),
-            dropItem: ek((kk => {
-              Vk(bk.od.Drop, bk.ld.Down | (kk ? bk.ld.Stack : 0))
+            dropItem: zC((CC => {
+              hC(nC.Vd.Drop, nC.Rd.Down | (CC ? nC.Rd.Stack : 0))
             })),
-            swapCameraZoom: ek((() => {
-              qk(jk)
+            swapCameraZoom: zC((() => {
+              dC(iC)
             })),
-            pickBlock: ek((() => (qk(Lk), Qk(kk()))))
+            pickBlock: zC((() => (dC(xC), EC(CC()))))
           }
-        })(Ik);
-        let ek = !1,
-          ik = null;
-        const Dk = () => {
-          var kk;
-          null === (kk = ik) || void 0 === kk || kk(), ik = null
+        })(mC);
+        let zC = !1,
+          ZC = null;
+        const QC = () => {
+          var CC;
+          null === (CC = ZC) || void 0 === CC || CC(), ZC = null
         };
         return {
-          bodies: () => kk,
-          look: vk(),
-          move: (kk, ik) => {
-            var fk;
-            Dk();
+          bodies: () => CC,
+          look: lC(),
+          move: (CC, ZC) => {
+            var wC;
+            QC();
             const {
-              bits: Sk,
-              flips: rk
-            } = (kk => {
-              if (null === kk) return {
-                bits: bk.qd.Peek,
+              bits: bC,
+              flips: fC
+            } = (CC => {
+              if (null === CC) return {
+                bits: nC.Yd.Peek,
                 flips: 0
               };
-              const ek = kk.sneakHeld ? bk.qd.SneakHeld : 0;
-              return "hold" === kk.mode ? {
-                bits: ek | bk.qd.SneakHoldMode,
-                flips: kk.sneakTogglePressed ? 1 : 0
+              const zC = CC.sneakHeld ? nC.Yd.SneakHeld : 0;
+              return "hold" === CC.mode ? {
+                bits: zC | nC.Yd.SneakHoldMode,
+                flips: CC.sneakTogglePressed ? 1 : 0
               } : {
-                bits: ek,
-                flips: kk.sneakPressed || kk.sneakTogglePressed ? 1 : 0
+                bits: zC,
+                flips: CC.sneakPressed || CC.sneakTogglePressed ? 1 : 0
               }
-            })(ik);
-            null !== (fk = Ik()) && void 0 !== fk && fk.padMove(kk.x, kk.y, kk.magnitude, kk.headingOffset, (kk => bk.qd.Active | (kk.jumpHeld ? bk.qd.JumpHeld : 0) | (kk.jumpPressed ? bk.qd.JumpPressed : 0) | (kk.running ? bk.qd.Running : 0) | (kk.sprintHeld ? bk.qd.SprintHeld : 0))(kk) | Sk, rk) && (ek = !0), (0, wk.c)(Ek())
+            })(ZC);
+            null !== (wC = mC()) && void 0 !== wC && wC.padMove(CC.x, CC.y, CC.magnitude, CC.headingOffset, (CC => nC.Yd.Active | (CC.jumpHeld ? nC.Yd.JumpHeld : 0) | (CC.jumpPressed ? nC.Yd.JumpPressed : 0) | (CC.running ? nC.Yd.Running : 0) | (CC.sprintHeld ? nC.Yd.SprintHeld : 0))(CC) | bC, fC) && (zC = !0), (0, pC.e)(XC())
           },
           stopMoving: () => {
-            var kk;
-            ek && (ek = !(null !== (kk = Ik()) && void 0 !== kk && kk.padMove(0, 0, 0, 0, 0, 0)), Dk(), ik = (0, Pk.x)((() => {
-              Dk(), (0, wk.c)(Ek())
+            var CC;
+            zC && (zC = !(null !== (CC = mC()) && void 0 !== CC && CC.padMove(0, 0, 0, 0, 0, 0)), QC(), ZC = (0, oC.r)((() => {
+              QC(), (0, pC.e)(XC())
             })))
           },
-          uninstall: Dk,
-          deviceChanged: kk => {
-            var ik;
-            "touch" === kk ? ((0, wk.c)(!1), null !== (ik = Ik()) && void 0 !== ik && ik.padMove(0, 0, 0, 0, bk.qd.EndToggle, 0) && (ek = !1)) : "gamepad" === kk && (0, wk.c)(Ek())
+          uninstall: QC,
+          deviceChanged: CC => {
+            var ZC;
+            "touch" === CC ? ((0, pC.e)(!1), null !== (ZC = mC()) && void 0 !== ZC && ZC.padMove(0, 0, 0, 0, nC.Yd.EndToggle, 0) && (zC = !1)) : "gamepad" === CC && (0, pC.e)(XC())
           },
-          hasPlayer: () => null !== Ik(),
+          hasPlayer: () => null !== mC(),
           isPlayerDead: () => {
-            var kk;
-            return !1 === (null === (kk = Ik()) || void 0 === kk ? void 0 : kk.localPlayerAlive())
+            var CC;
+            return !1 === (null === (CC = mC()) || void 0 === CC ? void 0 : CC.localPlayerAlive())
           },
           isReplayMode: () => {
-            const kk = Ik();
-            return null !== kk && 0 !== (zk(kk) & bk.yd.Replay)
+            const CC = mC();
+            return null !== CC && 0 !== (HC(CC) & nC.ce.Replay)
           },
           isFreeCameraOn: () => {
-            const kk = Ik();
-            return null !== kk && 0 !== (zk(kk) & bk.yd.FreeCam)
+            const CC = mC();
+            return null !== CC && 0 !== (HC(CC) & nC.ce.FreeCam)
           },
-          targetsBlock: () => Qk(Ik()),
+          targetsBlock: () => EC(mC()),
           selectedSlotEmpty: () => {
-            var kk;
-            return !(null !== (kk = Ik()) && void 0 !== kk && kk.items.XM())
+            var CC;
+            return !(null !== (CC = mC()) && void 0 !== CC && CC.items.vq())
           },
-          pickBlockAllowed: () => !!Sk.c.get("creative") && !!Sk.c.get("canPickBlocks"),
-          scrollHotbar: kk => {
-            Vk(bk.od.Hotbar, bk.ld.Down | (kk > 0 ? bk.ld.Next : 0))
+          pickBlockAllowed: () => !!bC.e.get("creative") && !!bC.e.get("canPickBlocks"),
+          scrollHotbar: CC => {
+            hC(nC.Vd.Hotbar, nC.Rd.Down | (CC > 0 ? nC.Rd.Next : 0))
           },
-          hasFullInventory: mk.k,
-          hasLobbyTab: () => (0, lk.c)({
-            lobbyLeaderboardInfo: Sk.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: Sk.c.get("lobbyManage")
+          hasFullInventory: qC.q,
+          hasLobbyTab: () => (0, PC.d)({
+            lobbyLeaderboardInfo: bC.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: bC.e.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var kk, ek, ik, Dk;
-            const fk = Ik();
+            var CC, zC, ZC, QC;
+            const wC = mC();
             return {
-              holdingGun: !1 !== (null === fk || void 0 === fk ? void 0 : fk.localPlayerAlive()) && "Gun" === (null === fk || void 0 === fk || null === (kk = fk.items.XM()) || void 0 === kk || null === (ek = kk.typeObj) || void 0 === ek ? void 0 : ek.type),
-              customButtons: null !== (ik = Sk.c.get("customButtons")) && void 0 !== ik ? ik : null,
-              touchscreenActionButton: null !== (Dk = Sk.c.get("touchscreenActionButton")) && void 0 !== Dk ? Dk : null
+              holdingGun: !1 !== (null === wC || void 0 === wC ? void 0 : wC.localPlayerAlive()) && "Gun" === (null === wC || void 0 === wC || null === (CC = wC.items.vq()) || void 0 === CC || null === (zC = CC.typeObj) || void 0 === zC ? void 0 : zC.type),
+              customButtons: null !== (ZC = bC.e.get("customButtons")) && void 0 !== ZC ? ZC : null,
+              touchscreenActionButton: null !== (QC = bC.e.get("touchscreenActionButton")) && void 0 !== QC ? QC : null
             }
           },
-          pressTouchButton: kk => {
-            kk ? Fk(sk) : uk(sk)
+          pressTouchButton: CC => {
+            CC ? KC(vC) : YC(vC)
           }
         }
       },
-      ak = () => {
-        const kk = (0, fk.d)(hk()),
-          ek = (0, Dk.b)(),
-          ik = null;
+      uC = () => {
+        const CC = (0, wC.b)(cC()),
+          zC = (0, QC.e)(),
+          ZC = null;
         return () => {
-          kk(), ek(), null === ik || void 0 === ik || ik()
+          CC(), zC(), null === ZC || void 0 === ZC || ZC()
         }
       }
   },
-  4721: (kk, ek, ik) => {
-    ik.d(ek, {
-      A: () => Fk,
-      D: () => pk,
-      F: () => bk,
-      J: () => rk,
-      K: () => sk,
-      c: () => jk,
-      g: () => Yk,
-      j: () => qk,
-      l: () => uk,
-      n: () => lk,
-      q: () => Ck,
-      r: () => yk,
-      v: () => Lk,
-      x: () => dk,
-      y: () => Vk
+  4711: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      A: () => GC,
+      B: () => nC,
+      E: () => fC,
+      G: () => vC,
+      b: () => iC,
+      e: () => AC,
+      h: () => dC,
+      j: () => YC,
+      k: () => PC,
+      m: () => JC,
+      n: () => RC,
+      p: () => xC,
+      r: () => eC,
+      u: () => hC,
+      w: () => KC
     });
-    var Dk = ik(4728);
-    const fk = {
+    var QC = ZC(4719);
+    const wC = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Sk = fk;
+    let bC = wC;
 
-    function bk(kk) {
-      Sk = null !== kk && void 0 !== kk ? kk : fk
+    function nC(CC) {
+      bC = null !== CC && void 0 !== CC ? CC : wC
     }
 
-    function rk() {
-      return Sk
+    function fC() {
+      return bC
     }
-    const Pk = new Set,
-      mk = new Set;
-    let Mk = -1;
-    const Kk = new Set,
-      xk = new Set;
-    let nk = 0,
-      Uk = 0;
-    const Hk = new Set,
-      wk = new Set;
+    const oC = new Set,
+      qC = new Set;
+    let FC = -1;
+    const WC = new Set,
+      NC = new Set;
+    let MC = 0,
+      gC = 0;
+    const SC = new Set,
+      pC = new Set;
 
-    function lk(kk) {
-      return Pk.add(kk), () => {
-        Pk.delete(kk)
+    function PC(CC) {
+      return oC.add(CC), () => {
+        oC.delete(CC)
       }
     }
 
-    function pk(kk, ek) {
-      for (const Dk of Pk) try {
-        Dk(kk)
-      } catch (ik) {
-        ek(ik)
+    function GC(CC, zC) {
+      for (const QC of oC) try {
+        QC(CC)
+      } catch (ZC) {
+        zC(ZC)
       }
     }
 
-    function yk(kk) {
-      return mk.add(kk), () => {
-        mk.delete(kk)
+    function RC(CC) {
+      return qC.add(CC), () => {
+        qC.delete(CC)
       }
     }
 
-    function Yk(kk, ek) {
-      const ik = Mk < 0 ? 0 : kk - Mk;
-      Mk = kk;
-      for (const fk of mk) try {
-        fk(ik)
-      } catch (Dk) {
-        ek(Dk)
+    function AC(CC, zC) {
+      const ZC = FC < 0 ? 0 : CC - FC;
+      FC = CC;
+      for (const wC of qC) try {
+        wC(ZC)
+      } catch (QC) {
+        zC(QC)
       }
     }
 
-    function Lk(kk) {
-      return Kk.add(kk), () => {
-        Kk.delete(kk)
+    function xC(CC) {
+      return WC.add(CC), () => {
+        WC.delete(CC)
       }
     }
 
-    function Ck(kk) {
-      return xk.add(kk), () => {
-        xk.delete(kk)
+    function JC(CC) {
+      return NC.add(CC), () => {
+        NC.delete(CC)
       }
     }
-    let Ak = 0;
+    let IC = 0;
 
-    function jk(kk) {
-      Ak += kk
+    function iC(CC) {
+      IC += CC
     }
 
-    function sk() {
-      const kk = Ak;
-      return Ak = 0, kk
+    function vC() {
+      const CC = IC;
+      return IC = 0, CC
     }
 
-    function dk(kk) {
-      return Hk.add(kk), () => {
-        Hk.delete(kk)
-      }
-    }
-
-    function Vk(kk) {
-      return wk.add(kk), () => {
-        wk.delete(kk)
+    function eC(CC) {
+      return SC.add(CC), () => {
+        SC.delete(CC)
       }
     }
 
-    function Fk() {
-      nk = 0, Uk = 0, Mk = -1
+    function hC(CC) {
+      return pC.add(CC), () => {
+        pC.delete(CC)
+      }
     }
 
-    function uk(kk, ek) {
-      if ("paced" === kk) return Uk += ek, null;
-      if ("drawn" !== kk && "skipped" !== kk) return null;
-      const ik = ek + Uk;
-      return Uk = 0, ik
+    function KC() {
+      MC = 0, gC = 0, FC = -1
     }
 
-    function qk(kk, ek, ik, fk) {
-      const Sk = (0, Dk.j)(ek),
-        bk = kk > 0 ? performance.now() : 0;
-      for (let Dk = 0; Dk < kk; Dk++)
-        for (const kk of Hk) try {
-          kk()
-        } catch (rk) {
-          fk(rk)
+    function YC(CC, zC) {
+      if ("paced" === CC) return gC += zC, null;
+      if ("drawn" !== CC && "skipped" !== CC) return null;
+      const ZC = zC + gC;
+      return gC = 0, ZC
+    }
+
+    function dC(CC, zC, ZC, wC) {
+      const bC = (0, QC.i)(zC),
+        nC = CC > 0 ? performance.now() : 0;
+      for (let QC = 0; QC < CC; QC++)
+        for (const CC of SC) try {
+          CC()
+        } catch (fC) {
+          wC(fC)
         }
-      if (kk > 0 && jk(performance.now() - bk), null !== ik) {
-        for (const kk of Kk) try {
-          kk(ik)
-        } catch (rk) {
-          fk(rk)
+      if (CC > 0 && iC(performance.now() - nC), null !== ZC) {
+        for (const CC of WC) try {
+          CC(ZC)
+        } catch (fC) {
+          wC(fC)
         }
-        nk += ik
+        MC += ZC
       }
-      if ("drawn" === ek) {
-        const kk = nk;
-        nk = 0;
-        for (const ek of xk) try {
-          ek(kk)
-        } catch (rk) {
-          fk(rk)
+      if ("drawn" === zC) {
+        const CC = MC;
+        MC = 0;
+        for (const zC of NC) try {
+          zC(CC)
+        } catch (fC) {
+          wC(fC)
         }
       }
-      for (const Dk of wk) try {
-        Dk(kk, Sk)
-      } catch (rk) {
-        fk(rk)
+      for (const QC of pC) try {
+        QC(CC, bC)
+      } catch (fC) {
+        wC(fC)
       }
     }
   },
-  4750: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => fk,
-      g: () => Sk,
-      k: () => bk,
-      n: () => Dk,
-      q: () => rk
+  4745: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => wC,
+      d: () => bC,
+      f: () => nC,
+      g: () => QC,
+      h: () => fC
     });
-    const Dk = {
+    const QC = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      fk = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Sk = {
+      wC = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      bC = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      bk = {
+      nC = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      rk = [16]
+      fC = [16]
   },
-  40247: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => bk,
-      g: () => Sk,
-      h: () => fk
+  40500: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => nC,
+      f: () => bC,
+      i: () => wC
     });
-    let Dk = null;
+    let QC = null;
 
-    function fk(kk) {
-      Dk = kk
+    function wC(CC) {
+      QC = CC
     }
 
-    function Sk(kk) {
-      Dk === kk && (Dk = null)
+    function bC(CC) {
+      QC === CC && (QC = null)
     }
 
-    function bk() {
-      var kk;
-      null === (kk = Dk) || void 0 === kk || kk()
+    function nC() {
+      var CC;
+      null === (CC = QC) || void 0 === CC || CC()
     }
   },
-  4752: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => rk,
-      i: () => bk,
-      j: () => mk
+  4752: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => fC,
+      d: () => nC,
+      e: () => qC
     });
-    var Dk = ik(2388),
-      fk = ik(2395);
-    const Sk = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var QC = ZC(2348),
+      wC = ZC(2351);
+    const bC = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function bk(kk) {
-      return kk instanceof HTMLElement && (!!(kk.isContentEditable || kk instanceof HTMLTextAreaElement || kk instanceof HTMLSelectElement) || kk instanceof HTMLInputElement && !Sk.has(kk.type))
+    function nC(CC) {
+      return CC instanceof HTMLElement && (!!(CC.isContentEditable || CC instanceof HTMLTextAreaElement || CC instanceof HTMLSelectElement) || CC instanceof HTMLInputElement && !bC.has(CC.type))
     }
 
-    function rk(kk) {
-      let ek = null;
-      const ik = ik => {
-          const fk = bk(ik);
-          fk !== ek && (ek = fk, kk(Dk.k.UiCapture, Dk.t.Keyboard, 0, 0, fk ? Dk.t.Keyboard : 0))
+    function fC(CC) {
+      let zC = null;
+      const ZC = ZC => {
+          const wC = nC(ZC);
+          wC !== zC && (zC = wC, CC(QC.j.UiCapture, QC.v.Keyboard, 0, 0, wC ? QC.v.Keyboard : 0))
         },
-        fk = kk => {
-          ik(kk.target)
+        wC = CC => {
+          ZC(CC.target)
         },
-        Sk = kk => {
-          ik(kk.relatedTarget)
+        bC = CC => {
+          ZC(CC.relatedTarget)
         },
-        rk = () => {
-          ik(document.activeElement)
+        fC = () => {
+          ZC(document.activeElement)
         },
-        Pk = {
+        oC = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", fk, Pk), document.addEventListener("focusout", Sk, Pk), document.addEventListener("keydown", rk, Pk), ik(document.activeElement), () => {
-        document.removeEventListener("focusin", fk, Pk), document.removeEventListener("focusout", Sk, Pk), document.removeEventListener("keydown", rk, Pk)
+      return document.addEventListener("focusin", wC, oC), document.addEventListener("focusout", bC, oC), document.addEventListener("keydown", fC, oC), ZC(document.activeElement), () => {
+        document.removeEventListener("focusin", wC, oC), document.removeEventListener("focusout", bC, oC), document.removeEventListener("keydown", fC, oC)
       }
     }
-    const Pk = new Map;
+    const oC = new Map;
 
-    function mk(kk, ek) {
-      var ik;
-      let Dk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Pk.set(Dk, (null !== (ik = Pk.get(Dk)) && void 0 !== ik ? ik : 0) & ~kk | ek & kk);
-      let Sk = 0;
-      for (const fk of Pk.values()) Sk |= fk;
-      return (0, fk.x)(kk, Sk & kk)
+    function qC(CC, zC) {
+      var ZC;
+      let QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      oC.set(QC, (null !== (ZC = oC.get(QC)) && void 0 !== ZC ? ZC : 0) & ~CC | zC & CC);
+      let bC = 0;
+      for (const wC of oC.values()) bC |= wC;
+      return (0, wC.v)(CC, bC & CC)
     }
   },
-  36530: (kk, ek, ik) => {
-    function Dk(kk) {
-      return kk.includes("Leaf Bed")
+  36796: (CC, zC, ZC) => {
+    function QC(CC) {
+      return CC.includes("Leaf Bed")
     }
 
-    function fk(kk) {
-      return / Bed(?: Head)?(?:\||$)/.test(kk) && !Dk(kk)
+    function wC(CC) {
+      return / Bed(?: Head)?(?:\||$)/.test(CC) && !QC(CC)
     }
 
-    function Sk(kk) {
-      return kk.includes(" Strongbed")
+    function bC(CC) {
+      return CC.includes(" Strongbed")
     }
 
-    function bk(kk) {
-      return Dk(kk) || fk(kk) || Sk(kk)
+    function nC(CC) {
+      return QC(CC) || wC(CC) || bC(CC)
     }
-    ik.d(ek, {
-      d: () => bk,
-      h: () => Dk,
-      i: () => Sk,
-      l: () => fk
+    ZC.d(zC, {
+      d: () => nC,
+      g: () => QC,
+      i: () => bC,
+      l: () => wC
     })
   },
-  36528: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => mk
+  36794: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => qC
     });
-    var Dk = ik(36530),
-      fk = ik(9020);
-    const Sk = [],
-      bk = [],
-      rk = [],
-      Pk = [];
-    for (const Mk of Object.keys(fk.j))(0, Dk.h)(Mk) ? Sk.push(Mk) : (0, Dk.l)(Mk) && bk.push(Mk), (0, Dk.i)(Mk) && rk.push(Mk), (Mk.includes(" Bed Head") || Mk.includes(" Strongbed Head")) && Pk.push(Mk);
-    const mk = {
-      leafBeds: Sk,
-      woolBeds: bk,
-      strongBeds: rk,
-      beds: [...Sk, ...bk, ...rk],
-      bedHeads: Pk,
+    var QC = ZC(36796),
+      wC = ZC(9194);
+    const bC = [],
+      nC = [],
+      fC = [],
+      oC = [];
+    for (const FC of Object.keys(wC.n))(0, QC.g)(FC) ? bC.push(FC) : (0, QC.l)(FC) && nC.push(FC), (0, QC.i)(FC) && fC.push(FC), (FC.includes(" Bed Head") || FC.includes(" Strongbed Head")) && oC.push(FC);
+    const qC = {
+      leafBeds: bC,
+      woolBeds: nC,
+      strongBeds: fC,
+      beds: [...bC, ...nC, ...fC],
+      bedHeads: oC,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6328: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => bk,
-      f: () => fk,
-      g: () => Pk,
-      h: () => Sk,
-      l: () => mk,
-      o: () => Dk,
-      r: () => rk
+  6484: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => nC,
+      e: () => wC,
+      g: () => oC,
+      k: () => bC,
+      o: () => qC,
+      r: () => QC,
+      t: () => fC
     });
-    let Dk = function(kk) {
-        return kk[kk.DEFAULT = 0] = "DEFAULT", kk[kk.BOAT = 1] = "BOAT", kk[kk.GLIDER = 2] = "GLIDER", kk[kk.BALLOON = 3] = "BALLOON", kk[kk.SLEEPING = 4] = "SLEEPING", kk[kk.RIDING_MOB = 5] = "RIDING_MOB", kk[kk.CAR = 6] = "CAR", kk[kk.HOVERCRAFT = 7] = "HOVERCRAFT", kk
+    let QC = function(CC) {
+        return CC[CC.DEFAULT = 0] = "DEFAULT", CC[CC.BOAT = 1] = "BOAT", CC[CC.GLIDER = 2] = "GLIDER", CC[CC.BALLOON = 3] = "BALLOON", CC[CC.SLEEPING = 4] = "SLEEPING", CC[CC.RIDING_MOB = 5] = "RIDING_MOB", CC[CC.CAR = 6] = "CAR", CC[CC.HOVERCRAFT = 7] = "HOVERCRAFT", CC
       }({}),
-      fk = function(kk) {
-        return kk[kk.WOOD = 0] = "WOOD", kk[kk.OBSIDIAN = 1] = "OBSIDIAN", kk[kk.SPEED = 2] = "SPEED", kk
+      wC = function(CC) {
+        return CC[CC.WOOD = 0] = "WOOD", CC[CC.OBSIDIAN = 1] = "OBSIDIAN", CC[CC.SPEED = 2] = "SPEED", CC
       }({}),
-      Sk = function(kk) {
-        return kk[kk.WOOD = 0] = "WOOD", kk[kk.IRON = 1] = "IRON", kk[kk.GOLD = 2] = "GOLD", kk[kk.DIAMOND = 3] = "DIAMOND", kk
+      bC = function(CC) {
+        return CC[CC.WOOD = 0] = "WOOD", CC[CC.IRON = 1] = "IRON", CC[CC.GOLD = 2] = "GOLD", CC[CC.DIAMOND = 3] = "DIAMOND", CC
       }({}),
-      bk = function(kk) {
-        return kk[kk.YELLOW = 0] = "YELLOW", kk[kk.WHITE = 1] = "WHITE", kk[kk.RED = 2] = "RED", kk[kk.PURPLE = 3] = "PURPLE", kk[kk.PINK = 4] = "PINK", kk[kk.ORANGE = 5] = "ORANGE", kk[kk.MAGENTA = 6] = "MAGENTA", kk[kk.LIME = 7] = "LIME", kk[kk.LIGHT_GRAY = 8] = "LIGHT_GRAY", kk[kk.LIGHT_BLUE = 9] = "LIGHT_BLUE", kk[kk.GREEN = 10] = "GREEN", kk[kk.GRAY = 11] = "GRAY", kk[kk.CYAN = 12] = "CYAN", kk[kk.BROWN = 13] = "BROWN", kk[kk.BLUE = 14] = "BLUE", kk[kk.BLACK = 15] = "BLACK", kk
+      nC = function(CC) {
+        return CC[CC.YELLOW = 0] = "YELLOW", CC[CC.WHITE = 1] = "WHITE", CC[CC.RED = 2] = "RED", CC[CC.PURPLE = 3] = "PURPLE", CC[CC.PINK = 4] = "PINK", CC[CC.ORANGE = 5] = "ORANGE", CC[CC.MAGENTA = 6] = "MAGENTA", CC[CC.LIME = 7] = "LIME", CC[CC.LIGHT_GRAY = 8] = "LIGHT_GRAY", CC[CC.LIGHT_BLUE = 9] = "LIGHT_BLUE", CC[CC.GREEN = 10] = "GREEN", CC[CC.GRAY = 11] = "GRAY", CC[CC.CYAN = 12] = "CYAN", CC[CC.BROWN = 13] = "BROWN", CC[CC.BLUE = 14] = "BLUE", CC[CC.BLACK = 15] = "BLACK", CC
       }({}),
-      rk = function(kk) {
-        return kk[kk.ROTATION_1 = 0] = "ROTATION_1", kk[kk.ROTATION_2 = 1] = "ROTATION_2", kk[kk.ROTATION_3 = 2] = "ROTATION_3", kk[kk.ROTATION_4 = 3] = "ROTATION_4", kk
+      fC = function(CC) {
+        return CC[CC.ROTATION_1 = 0] = "ROTATION_1", CC[CC.ROTATION_2 = 1] = "ROTATION_2", CC[CC.ROTATION_3 = 2] = "ROTATION_3", CC[CC.ROTATION_4 = 3] = "ROTATION_4", CC
       }({}),
-      Pk = function(kk) {
-        return kk[kk.KART = 0] = "KART", kk[kk.OFF_ROADER = 1] = "OFF_ROADER", kk[kk.CAR = 2] = "CAR", kk[kk.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", kk[kk.ARMORED_CAR = 4] = "ARMORED_CAR", kk[kk.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", kk[kk.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", kk[kk.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", kk
+      oC = function(CC) {
+        return CC[CC.KART = 0] = "KART", CC[CC.OFF_ROADER = 1] = "OFF_ROADER", CC[CC.CAR = 2] = "CAR", CC[CC.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", CC[CC.ARMORED_CAR = 4] = "ARMORED_CAR", CC[CC.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", CC[CC.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", CC[CC.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", CC
       }({});
-    Dk.DEFAULT, Dk.BOAT, fk.SPEED, Dk.GLIDER, Sk.DIAMOND, Dk.BALLOON, bk.BLACK, Dk.SLEEPING, rk.ROTATION_4, Dk.RIDING_MOB, Dk.CAR, Pk.MOONSTONE_MINING_DRILL, Dk.HOVERCRAFT;
-    let mk = function(kk) {
-      return kk[kk.NORMAL = 0] = "NORMAL", kk[kk.GLIDING = 1] = "GLIDING", kk[kk.FLOATING = 2] = "FLOATING", kk
+    QC.DEFAULT, QC.BOAT, wC.SPEED, QC.GLIDER, bC.DIAMOND, QC.BALLOON, nC.BLACK, QC.SLEEPING, fC.ROTATION_4, QC.RIDING_MOB, QC.CAR, oC.MOONSTONE_MINING_DRILL, QC.HOVERCRAFT;
+    let qC = function(CC) {
+      return CC[CC.NORMAL = 0] = "NORMAL", CC[CC.GLIDING = 1] = "GLIDING", CC[CC.FLOATING = 2] = "FLOATING", CC
     }({})
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

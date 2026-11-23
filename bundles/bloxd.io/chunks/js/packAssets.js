@@ -1,286 +1,286 @@
 export const id = 44;
-export const ids = [44, 204];
+export const ids = [44, 202];
 export const modules = {
-  33831: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      packDisplayName: () => Uk,
-      packModelMessage: () => Hk,
-      packModelSummary: () => lk,
-      refusedPackModels: () => wk
+  34221: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      packDisplayName: () => gC,
+      packModelMessage: () => SC,
+      packModelSummary: () => PC,
+      refusedPackModels: () => pC
     });
-    var Dk = ik(33838),
-      fk = ik(33846);
-    const Sk = "DRACO",
-      bk = 0,
-      rk = 1,
-      Pk = 0,
-      mk = 1,
-      Mk = 32768;
+    var QC = ZC(34223),
+      wC = ZC(34228);
+    const bC = "DRACO",
+      nC = 0,
+      fC = 1,
+      oC = 0,
+      qC = 1,
+      FC = 32768;
 
-    function Kk(kk) {
-      const ek = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
-      let ik = 0;
-      const Dk = () => {
-          if (ik >= kk.byteLength) throw new RangeError("past the stream");
-          return kk[ik++]
+    function WC(CC) {
+      const zC = new DataView(CC.buffer, CC.byteOffset, CC.byteLength);
+      let ZC = 0;
+      const QC = () => {
+          if (ZC >= CC.byteLength) throw new RangeError("past the stream");
+          return CC[ZC++]
         },
-        fk = () => {
-          if (ik + 4 > kk.byteLength) throw new RangeError("past the stream");
-          const Dk = ek.getUint32(ik, !0);
-          return ik += 4, Dk
+        wC = () => {
+          if (ZC + 4 > CC.byteLength) throw new RangeError("past the stream");
+          const QC = zC.getUint32(ZC, !0);
+          return ZC += 4, QC
         },
-        Kk = () => {
-          let kk = 0;
-          for (let ek = 0; ek < 35; ek += 7) {
-            const ik = Dk();
-            if (kk += (127 & ik) * 2 ** ek, 0 === (128 & ik)) return kk
+        WC = () => {
+          let CC = 0;
+          for (let zC = 0; zC < 35; zC += 7) {
+            const ZC = QC();
+            if (CC += (127 & ZC) * 2 ** zC, 0 === (128 & ZC)) return CC
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let kk = 0; kk < Sk.length; kk++)
-          if (Dk() !== Sk.charCodeAt(kk)) return null;
-        const ek = Dk(),
-          xk = Dk(),
-          nk = Dk(),
-          Uk = Dk(),
-          Hk = Dk() | Dk() << 8;
-        if (2 !== ek) return null;
-        0 !== (Hk & Mk) && function(kk, ek, ik) {
-          const Dk = () => {
-              ek(ik())
+        for (let CC = 0; CC < bC.length; CC++)
+          if (QC() !== bC.charCodeAt(CC)) return null;
+        const zC = QC(),
+          NC = QC(),
+          MC = QC(),
+          gC = QC(),
+          SC = QC() | QC() << 8;
+        if (2 !== zC) return null;
+        0 !== (SC & FC) && function(CC, zC, ZC) {
+          const QC = () => {
+              zC(ZC())
             },
-            fk = () => {
-              let ik = 1,
-                fk = !0;
-              for (; ik > 0;) {
-                ik--, fk || Dk(), fk = !1;
-                const Sk = kk();
-                for (let ik = 0; ik < Sk; ik++) Dk(), ek(kk());
-                ik += kk()
+            wC = () => {
+              let ZC = 1,
+                wC = !0;
+              for (; ZC > 0;) {
+                ZC--, wC || QC(), wC = !1;
+                const bC = CC();
+                for (let ZC = 0; ZC < bC; ZC++) QC(), zC(CC());
+                ZC += CC()
               }
             },
-            Sk = kk();
-          for (let bk = 0; bk < Sk; bk++) kk(), fk();
-          fk()
-        }(Kk, (ek => {
-          if (ik + ek > kk.byteLength) throw new RangeError("past the stream");
-          ik += ek
-        }), Dk);
-        const wk = xk < 2 ? fk : Kk;
-        if (nk === bk) return {
+            bC = CC();
+          for (let nC = 0; nC < bC; nC++) CC(), wC();
+          wC()
+        }(WC, (zC => {
+          if (ZC + zC > CC.byteLength) throw new RangeError("past the stream");
+          ZC += zC
+        }), QC);
+        const pC = NC < 2 ? wC : WC;
+        if (MC === nC) return {
           faces: 0,
-          vertices: fk()
+          vertices: wC()
         };
-        if (nk !== rk) return null;
-        if (Uk === Pk) {
+        if (MC !== fC) return null;
+        if (gC === oC) {
           return {
-            faces: wk(),
-            vertices: wk()
+            faces: pC(),
+            vertices: pC()
           }
         }
-        if (Uk !== mk) return null;
-        Dk(), xk < 2 && Kk();
-        const lk = Kk();
+        if (gC !== qC) return null;
+        QC(), NC < 2 && WC();
+        const PC = WC();
         return {
-          faces: Kk(),
-          vertices: lk
+          faces: WC(),
+          vertices: PC
         }
       } catch {
         return null
       }
     }
 
-    function xk(kk, ek, ik) {
-      var Dk, fk;
-      if (null === (Dk = null === (fk = kk.extensionsUsed) || void 0 === fk ? void 0 : fk.includes("KHR_draco_mesh_compression")) || void 0 === Dk || !Dk) return null;
-      for (const Uk of null !== (Sk = kk.meshes) && void 0 !== Sk ? Sk : []) {
-        var Sk;
-        for (const Dk of Uk.primitives) {
-          var bk, rk, Pk, mk, Mk, xk;
-          const fk = null === (bk = Dk.extensions) || void 0 === bk ? void 0 : bk.KHR_draco_mesh_compression;
-          if ("object" !== typeof fk || null === fk) continue;
-          const Sk = null === (rk = kk.bufferViews) || void 0 === rk ? void 0 : rk[fk.bufferView];
-          if (null === ek || void 0 === Sk) return nk;
-          const Uk = null !== (Pk = Sk.byteOffset) && void 0 !== Pk ? Pk : 0,
-            Hk = Kk(ek.subarray(Uk, Uk + Sk.byteLength));
-          if (null === Hk && !ik) continue;
-          const wk = null !== (mk = kk.accessors) && void 0 !== mk ? mk : [],
-            lk = null === (Mk = wk[Dk.attributes.POSITION]) || void 0 === Mk ? void 0 : Mk.count,
-            pk = void 0 === Dk.indices ? 0 : null === (xk = wk[Dk.indices]) || void 0 === xk ? void 0 : xk.count;
-          if (null === Hk || void 0 === lk || void 0 === pk || 3 * Hk.faces !== pk || Hk.vertices > lk) return nk
+    function NC(CC, zC, ZC) {
+      var QC, wC;
+      if (null === (QC = null === (wC = CC.extensionsUsed) || void 0 === wC ? void 0 : wC.includes("KHR_draco_mesh_compression")) || void 0 === QC || !QC) return null;
+      for (const gC of null !== (bC = CC.meshes) && void 0 !== bC ? bC : []) {
+        var bC;
+        for (const QC of gC.primitives) {
+          var nC, fC, oC, qC, FC, NC;
+          const wC = null === (nC = QC.extensions) || void 0 === nC ? void 0 : nC.KHR_draco_mesh_compression;
+          if ("object" !== typeof wC || null === wC) continue;
+          const bC = null === (fC = CC.bufferViews) || void 0 === fC ? void 0 : fC[wC.bufferView];
+          if (null === zC || void 0 === bC) return MC;
+          const gC = null !== (oC = bC.byteOffset) && void 0 !== oC ? oC : 0,
+            SC = WC(zC.subarray(gC, gC + bC.byteLength));
+          if (null === SC && !ZC) continue;
+          const pC = null !== (qC = CC.accessors) && void 0 !== qC ? qC : [],
+            PC = null === (FC = pC[QC.attributes.POSITION]) || void 0 === FC ? void 0 : FC.count,
+            GC = void 0 === QC.indices ? 0 : null === (NC = pC[QC.indices]) || void 0 === NC ? void 0 : NC.count;
+          if (null === SC || void 0 === PC || void 0 === GC || 3 * SC.faces !== GC || SC.vertices > PC) return MC
         }
       }
       return null
     }
-    const nk = "has a Draco stream whose counts don't match its accessors";
+    const MC = "has a Draco stream whose counts don't match its accessors";
 
-    function Uk(kk) {
-      var ek;
-      return null !== (ek = kk.name) && void 0 !== ek ? ek : kk.fromFolderName || kk.id
+    function gC(CC) {
+      var zC;
+      return null !== (zC = CC.name) && void 0 !== zC ? zC : CC.fromFolderName || CC.id
     }
 
-    function Hk(kk, ek, ik) {
-      return `Texture pack "${kk}": model "${ek}" was not loaded because it ${ik}. The default model is used instead.`
+    function SC(CC, zC, ZC) {
+      return `Texture pack "${CC}": model "${zC}" was not loaded because it ${ZC}. The default model is used instead.`
     }
 
-    function wk(kk, ek, ik) {
+    function pC(CC, zC, ZC) {
       let {
-        strictDraco: Sk = !1
+        strictDraco: bC = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const bk = {};
-      for (const [rk, Pk] of Object.entries(ek)) {
-        let ek;
-        if (Pk.startsWith("data:")) try {
-          const kk = new Uint8Array((0, fk.q)(Pk));
-          if (ek = (0, Dk.d)(kk), null === ek) {
+      const nC = {};
+      for (const [fC, oC] of Object.entries(zC)) {
+        let zC;
+        if (oC.startsWith("data:")) try {
+          const CC = new Uint8Array((0, wC.s)(oC));
+          if (zC = (0, QC.d)(CC), null === zC) {
             const {
-              json: ik,
-              bin: Dk
-            } = (0, fk.z)(kk);
-            ek = xk(ik, Dk, Sk)
+              json: ZC,
+              bin: QC
+            } = (0, wC.x)(CC);
+            zC = NC(ZC, QC, bC)
           }
         } catch {
-          ek = "is not a binary glTF 2.0 file"
-        } else ek = "loads data from outside the file";
-        ek && (bk[rk] = ek, ik && console.warn(Hk(kk, rk, ek)))
+          zC = "is not a binary glTF 2.0 file"
+        } else zC = "loads data from outside the file";
+        zC && (nC[fC] = zC, ZC && console.warn(SC(CC, fC, zC)))
       }
-      return bk
+      return nC
     }
 
-    function lk(kk, ek) {
-      const ik = Object.keys(ek);
-      if (0 === ik.length) return null;
-      if (1 === ik.length) return Hk(kk, ik[0], ek[ik[0]]);
-      const Dk = ik.map((kk => `"${kk}" ${ek[kk]}`)).join("; ");
-      return `Texture pack "${kk}": ${ik.length} models were not loaded (${Dk}). The default models are used instead.`
+    function PC(CC, zC) {
+      const ZC = Object.keys(zC);
+      if (0 === ZC.length) return null;
+      if (1 === ZC.length) return SC(CC, ZC[0], zC[ZC[0]]);
+      const QC = ZC.map((CC => `"${CC}" ${zC[CC]}`)).join("; ");
+      return `Texture pack "${CC}": ${ZC.length} models were not loaded (${QC}). The default models are used instead.`
     }
   },
-  60883: (kk, ek, ik) => {
-    ik.d(ek, {
-      packAssets: () => lk
+  61135: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      packAssets: () => PC
     });
-    var Dk = ik(2107),
-      fk = ik(2095),
-      Sk = ik(33831),
-      bk = ik(3183),
-      rk = ik(3206);
+    var QC = ZC(2063),
+      wC = ZC(2050),
+      bC = ZC(34221),
+      nC = ZC(3192),
+      fC = ZC(3229);
 
-    function Pk(kk, ek, ik, Dk) {
-      const fk = `${(0,bk.b)(kk,ek)}|sheets${ik}`;
-      return Dk === rk.b ? fk : `${fk}|layers${Dk}`
+    function oC(CC, zC, ZC, QC) {
+      const wC = `${(0,nC.b)(CC,zC)}|sheets${ZC}`;
+      return QC === fC.d ? wC : `${wC}|layers${QC}`
     }
-    var mk = ik(3215),
-      Mk = ik(3152),
-      Kk = ik(3139),
-      xk = ik(3185);
-    var nk = ik(50568);
-    const Uk = 256;
-    let Hk = null,
-      wk = null;
+    var qC = ZC(3238),
+      FC = ZC(3158),
+      WC = ZC(3144),
+      NC = ZC(3201);
+    var MC = ZC(50739);
+    const gC = 256;
+    let SC = null,
+      pC = null;
 
-    function lk(kk) {
-      var ek;
-      let ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rk.b;
-      if ((null === (ek = Hk) || void 0 === ek ? void 0 : ek.pack) === kk.pack && Hk.maxLayerWidth === ik) return Hk.assets;
-      const lk = (0, nk.e)(kk.pack, (0, nk.j)(kk));
-      if (null === lk || !(0, fk.h)(lk)) return Promise.resolve(null);
-      const yk = async function(kk, ek, ik) {
-        var nk;
-        const Hk = null !== (nk = kk.textureOverrides) && void 0 !== nk ? nk : {},
+    function PC(CC) {
+      var zC;
+      let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fC.d;
+      if ((null === (zC = SC) || void 0 === zC ? void 0 : zC.pack) === CC.pack && SC.maxLayerWidth === ZC) return SC.assets;
+      const PC = (0, MC.c)(CC.pack, (0, MC.i)(CC));
+      if (null === PC || !(0, wC.i)(PC)) return Promise.resolve(null);
+      const RC = async function(CC, zC, ZC) {
+        var MC;
+        const SC = null !== (MC = CC.textureOverrides) && void 0 !== MC ? MC : {},
           {
-            id: lk,
-            version: yk
-          } = kk.metaData,
-          Yk = ek && lk !== Dk.u.CUSTOM,
-          Lk = {};
-        Yk && (wk = Lk);
-        let Ck, Ak, jk = Yk ? await async function(kk, ek, ik, Dk) {
-          const fk = Pk(kk, ek, ik, rk.b),
-            Sk = Pk(kk, ek, ik, Dk),
-            mk = await (0, bk.f)((kk => kk === fk || kk === Sk));
-          return null !== mk && (Dk === rk.b || mk.blockAtlasWidth <= Dk) ? mk : null
-        }(lk, yk, Uk, ik): null;
-        if (null === jk) {
+            id: PC,
+            version: RC
+          } = CC.metaData,
+          AC = zC && PC !== QC.q.CUSTOM,
+          xC = {};
+        AC && (pC = xC);
+        let JC, IC, iC = AC ? await async function(CC, zC, ZC, QC) {
+          const wC = oC(CC, zC, ZC, fC.d),
+            bC = oC(CC, zC, ZC, QC),
+            qC = await (0, nC.f)((CC => CC === wC || CC === bC));
+          return null !== qC && (QC === fC.d || qC.blockAtlasWidth <= QC) ? qC : null
+        }(PC, RC, gC, ZC): null;
+        if (null === iC) {
           const {
-            blockMetadata: kk,
-            getDefaultTexture: ek,
-            textureNameToIndex: Sk
-          } = await (0, fk.l)(), rk = (0, Mk.e)(kk, ((kk, ik) => ({
-            url: pk(Hk, ek, kk, "block" === ik ? Kk.f.BLOCK : Kk.f.ITEM)
-          }))), mk = await
-          function(kk, ek, ik, Dk, fk, Sk) {
-            return (0, xk.b)((bk => bk.WasmTextureWorker.generateRequired(kk, ek, ik, Dk, fk, Sk)))
-          }(kk, Sk, rk, lk === Dk.d, ik, Uk), nk = mk.assets;
-          jk = {
-            ...nk,
+            blockMetadata: CC,
+            getDefaultTexture: zC,
+            textureNameToIndex: bC
+          } = await (0, wC.l)(), fC = (0, FC.c)(CC, ((CC, ZC) => ({
+            url: GC(SC, zC, CC, "block" === ZC ? WC.f.BLOCK : WC.f.ITEM)
+          }))), qC = await
+          function(CC, zC, ZC, QC, wC, bC) {
+            return (0, NC.c)((nC => nC.WasmTextureWorker.generateRequired(CC, zC, ZC, QC, wC, bC)))
+          }(CC, bC, fC, PC === QC.c, ZC, gC), MC = qC.assets;
+          iC = {
+            ...MC,
             averageColors: {}
-          }, Ck = mk.averageColors(), Yk && (Ak = Ck.then((async kk => {
-            null !== kk && wk === Lk && await
-            function(kk, ek, ik, Dk, fk) {
-              return (0, bk.l)(Pk(kk, ek, Dk, fk), ik)
-            }(lk, yk, {
-              ...nk,
-              averageColors: kk
-            }, Uk, mk.layerCap)
+          }, JC = qC.averageColors(), AC && (IC = JC.then((async CC => {
+            null !== CC && pC === xC && await
+            function(CC, zC, ZC, QC, wC) {
+              return (0, nC.k)(oC(CC, zC, QC, wC), ZC)
+            }(PC, RC, {
+              ...MC,
+              averageColors: CC
+            }, gC, qC.layerCap)
           })))
         }
-        return function(kk, ek) {
-          var ik, Dk;
-          let fk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((rk = kk.averageColors, 0 === Object.keys(null !== rk && void 0 !== rk ? rk : {}).length ? null : kk.averageColors)),
-            bk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var rk;
-          const Pk = null !== (ik = ek.textureOverrides) && void 0 !== ik ? ik : {},
-            Mk = null !== (Dk = ek.modelOverrides) && void 0 !== Dk ? Dk : {},
-            Kk = 0 === Object.keys(Mk).length ? {} : (0, Sk.refusedPackModels)((0, Sk.packDisplayName)(ek.metaData), Mk, !0, {
+        return function(CC, zC) {
+          var ZC, QC;
+          let wC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((fC = CC.averageColors, 0 === Object.keys(null !== fC && void 0 !== fC ? fC : {}).length ? null : CC.averageColors)),
+            nC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var fC;
+          const oC = null !== (ZC = zC.textureOverrides) && void 0 !== ZC ? ZC : {},
+            FC = null !== (QC = zC.modelOverrides) && void 0 !== QC ? QC : {},
+            WC = 0 === Object.keys(FC).length ? {} : (0, bC.refusedPackModels)((0, bC.packDisplayName)(zC.metaData), FC, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: xk,
-              rotatedBlockTextures: nk
-            } = kk,
-            Uk = kk => {
-              var ek, ik;
-              return null !== (ek = null !== (ik = xk[kk]) && void 0 !== ik ? ik : nk[kk]) && void 0 !== ek ? ek : null
+              animatedBlockTextures: NC,
+              rotatedBlockTextures: MC
+            } = CC,
+            gC = CC => {
+              var zC, ZC;
+              return null !== (zC = null !== (ZC = NC[CC]) && void 0 !== ZC ? ZC : MC[CC]) && void 0 !== zC ? zC : null
             };
           return {
             terrain: {
-              atlasSheets: kk.blockAtlasArr,
-              texture: Uk
+              atlasSheets: CC.blockAtlasArr,
+              texture: gC
             },
-            sheetPixels: [...kk.blockAtlasPixels],
-            heldUntil: bk,
-            sheetLayout: kk.imagesPerAtlas,
-            sheetWidth: kk.blockAtlasWidth,
-            armourAtlasUrl: kk.armourAtlas,
-            texture: kk => {
-              var ek, ik;
-              return null !== (ek = null !== (ik = Uk(kk)) && void 0 !== ik ? ik : (0, mk.c)(Pk, kk)) && void 0 !== ek ? ek : null
+            sheetPixels: [...CC.blockAtlasPixels],
+            heldUntil: nC,
+            sheetLayout: CC.imagesPerAtlas,
+            sheetWidth: CC.blockAtlasWidth,
+            armourAtlasUrl: CC.armourAtlas,
+            texture: CC => {
+              var zC, ZC;
+              return null !== (zC = null !== (ZC = gC(CC)) && void 0 !== ZC ? ZC : (0, qC.c)(oC, CC)) && void 0 !== zC ? zC : null
             },
-            model: kk => void 0 === Kk[kk] && Mk[kk] || null,
-            averageColours: fk
+            model: CC => void 0 === WC[CC] && FC[CC] || null,
+            averageColours: wC
           }
-        }(jk, kk, Ck, Ak)
-      }(lk, null === kk.gameSource, ik), Yk = {
-        pack: kk.pack,
-        maxLayerWidth: ik,
-        assets: yk
+        }(iC, CC, JC, IC)
+      }(PC, null === CC.gameSource, ZC), AC = {
+        pack: CC.pack,
+        maxLayerWidth: ZC,
+        assets: RC
       };
-      return Hk = Yk, yk.catch((() => {
-        Hk === Yk && (Hk = null)
-      })), yk
+      return SC = AC, RC.catch((() => {
+        SC === AC && (SC = null)
+      })), RC
     }
 
-    function pk(kk, ek, Dk, fk) {
-      const Sk = (0, mk.c)(kk, Dk);
-      if (Sk) return Sk;
+    function GC(CC, zC, QC, wC) {
+      const bC = (0, qC.c)(CC, QC);
+      if (bC) return bC;
       try {
-        return ek(Dk, fk).url
+        return zC(QC, wC).url
       } catch {
-        return ik(3281)
+        return ZC(3300)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

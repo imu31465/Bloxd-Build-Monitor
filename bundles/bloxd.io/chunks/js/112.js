@@ -1,529 +1,530 @@
 export const id = 112;
 export const ids = [112];
 export const modules = {
-  4970: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => mk,
-      e: () => Pk
+  5008: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => FC,
+      f: () => qC
     });
-    var Dk = ik(60),
-      fk = ik(1410),
-      Sk = ik(1172),
-      bk = ik(99),
-      rk = ik(1066);
+    var QC = ZC(48),
+      wC = ZC(1388),
+      bC = ZC(1143),
+      nC = ZC(77),
+      fC = ZC(3123),
+      oC = ZC(1056);
 
-    function Pk() {
-      return !(0, bk.isMobile)()
+    function qC() {
+      return !(0, nC.isMobile)()
     }
 
-    function mk(kk) {
+    function FC(CC) {
       let {
-        disabled: ek,
-        openFolderPicker: ik,
-        onFiles: bk
-      } = kk;
+        disabled: zC,
+        openFolderPicker: ZC,
+        onFiles: nC
+      } = CC;
       const {
-        t: mk
-      } = (0, Sk.D)(), Mk = (0, Dk.useRef)(null);
-      return (0, rk.jsxs)("div", {
+        t: FC
+      } = (0, bC.y)(), WC = (0, QC.useRef)(null);
+      return (0, oC.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, rk.jsx)("input", {
-          ref: Mk,
+        children: [(0, oC.jsx)("input", {
+          ref: WC,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(kk) {
-            const ek = Array.from(kk.target.files);
-            kk.target.value = "", bk(ek)
+          onChange: function(CC) {
+            const zC = Array.from(CC.target.files);
+            CC.target.value = "", nC(zC)
           }
-        }), Pk() && (0, rk.jsx)(fk.f, {
-          disabled: ek,
-          onClick: ik,
-          children: mk("general:chooseFolder")
-        }), (0, rk.jsx)(fk.f, {
-          disabled: ek,
+        }), qC() && (0, oC.jsx)(wC.g, {
+          disabled: zC,
+          onClick: ZC,
+          children: FC("general:chooseFolder")
+        }), (0, oC.jsx)(wC.g, {
+          disabled: zC,
           onClick: () => {
-            Mk.current.click()
+            (0, fC.c)(WC.current)
           },
-          children: mk("general:chooseZip")
+          children: FC("general:chooseZip")
         })]
       })
     }
   },
-  4959: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => rk,
-      g: () => bk,
-      j: () => Sk
+  4992: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => fC,
+      g: () => nC,
+      h: () => bC
     });
-    var Dk = ik(4961);
-    const fk = [kk => kk.strict ? "strict" : "nonStrict", kk => kk.program];
+    var QC = ZC(4998);
+    const wC = [CC => CC.strict ? "strict" : "nonStrict", CC => CC.program];
 
-    function Sk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Dk = {};
-      for (const fk in ik) Dk[fk] = `\0${fk}\0`;
-      return kk(ek, Dk).replace(/\0(\w+)\0/g, ((kk, ek) => ik[ek]))
+    function bC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const QC = {};
+      for (const wC in ZC) QC[wC] = `\0${wC}\0`;
+      return CC(zC, QC).replace(/\0(\w+)\0/g, ((CC, zC) => ZC[zC]))
     }
 
-    function bk(kk) {
-      return null === kk.file ? null : kk.line > 0 ? `${kk.file}:${kk.line}` : kk.file
+    function nC(CC) {
+      return null === CC.file ? null : CC.line > 0 ? `${CC.file}:${CC.line}` : CC.file
     }
 
-    function rk(kk) {
-      const ek = new Map(kk.map((kk => [Pk(kk).join("."), kk])));
-      if (0 === ek.size) return [];
-      const ik = Mk([...ek.values()]);
-      return 0 === ik[0].length ? [] : ik
+    function fC(CC) {
+      const zC = new Map(CC.map((CC => [oC(CC).join("."), CC])));
+      if (0 === zC.size) return [];
+      const ZC = FC([...zC.values()]);
+      return 0 === ZC[0].length ? [] : ZC
     }
 
-    function Pk(kk) {
-      return fk.map((ek => ek(kk)))
+    function oC(CC) {
+      return wC.map((zC => zC(CC)))
     }
-    const mk = fk.map((kk => new Set(Dk.e.map(kk)).size));
+    const qC = wC.map((CC => new Set(QC.f.map(CC)).size));
 
-    function Mk(kk) {
-      const ek = fk.map((ek => new Set(kk.map(ek)))),
-        ik = ek.reduce(((kk, ek) => kk * ek.size), 1),
-        Dk = ek.every(((kk, ek) => 1 === kk.size || kk.size === mk[ek]));
-      if (ik === kk.length && Dk) return [fk.filter(((kk, ik) => 1 === ek[ik].size)).map((ek => ek(kk[0])))];
-      let Sk = null;
-      for (let bk = 0; bk < fk.length; bk++) {
-        if (1 === ek[bk].size) continue;
-        const ik = Kk(kk, fk[bk]).flatMap(Mk);
-        (null === Sk || ik.length < Sk.length) && (Sk = ik)
+    function FC(CC) {
+      const zC = wC.map((zC => new Set(CC.map(zC)))),
+        ZC = zC.reduce(((CC, zC) => CC * zC.size), 1),
+        QC = zC.every(((CC, zC) => 1 === CC.size || CC.size === qC[zC]));
+      if (ZC === CC.length && QC) return [wC.filter(((CC, ZC) => 1 === zC[ZC].size)).map((zC => zC(CC[0])))];
+      let bC = null;
+      for (let nC = 0; nC < wC.length; nC++) {
+        if (1 === zC[nC].size) continue;
+        const ZC = WC(CC, wC[nC]).flatMap(FC);
+        (null === bC || ZC.length < bC.length) && (bC = ZC)
       }
-      return Sk
+      return bC
     }
 
-    function Kk(kk, ek) {
-      const ik = new Map;
-      for (const fk of kk) {
-        var Dk;
-        const kk = ek(fk);
-        ik.set(kk, [...null !== (Dk = ik.get(kk)) && void 0 !== Dk ? Dk : [], fk])
+    function WC(CC, zC) {
+      const ZC = new Map;
+      for (const wC of CC) {
+        var QC;
+        const CC = zC(wC);
+        ZC.set(CC, [...null !== (QC = ZC.get(CC)) && void 0 !== QC ? QC : [], wC])
       }
-      return [...ik.values()]
+      return [...ZC.values()]
     }
   },
-  6432: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      ShaderPackPublishForm: () => yk
+  6594: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      ShaderPackPublishForm: () => RC
     });
-    var Dk = ik(60),
-      fk = ik(6396),
-      Sk = ik(194),
-      bk = ik(4965),
-      rk = ik(1033),
-      Pk = ik(1410),
-      mk = ik(1648),
-      Mk = ik(1095),
-      Kk = ik(6436),
-      xk = ik(6445),
-      nk = ik(1459),
-      Uk = ik(1172),
-      Hk = ik(6451),
-      wk = ik(6493),
-      lk = ik(6393),
-      pk = ik(1066);
+    var QC = ZC(48),
+      wC = ZC(6560),
+      bC = ZC(189),
+      nC = ZC(5002),
+      fC = ZC(1013),
+      oC = ZC(1388),
+      qC = ZC(1593),
+      FC = ZC(1076),
+      WC = ZC(6596),
+      NC = ZC(6600),
+      MC = ZC(1439),
+      gC = ZC(1143),
+      SC = ZC(6609),
+      pC = ZC(6651),
+      PC = ZC(6556),
+      GC = ZC(1056);
 
-    function yk(kk) {
-      var ek, ik, Kk;
+    function RC(CC) {
+      var zC, ZC, WC;
       let {
-        existing: yk,
-        onPublished: Lk
-      } = kk;
+        existing: RC,
+        onPublished: xC
+      } = CC;
       const {
-        t: Ak
-      } = (0, Uk.D)(), {
-        userContext: jk,
-        isUserContextUpdating: sk
-      } = (0, Mk.d)(), [dk, Vk] = (0, Dk.useState)(null), [Fk, uk] = (0, Dk.useState)(0), [qk, Ik] = (0, Dk.useState)(null !== (ek = null === yk || void 0 === yk ? void 0 : yk.name) && void 0 !== ek ? ek : ""), zk = (0, Dk.useRef)(qk), Qk = (0, Dk.useRef)(""), vk = kk => {
-        zk.current = kk, Ik(kk)
-      }, [Ek, hk] = (0, Dk.useState)(null !== (ik = null === yk || void 0 === yk ? void 0 : yk.description) && void 0 !== ik ? ik : ""), ak = (0, Dk.useRef)(Ek), Wk = (0, Dk.useRef)(""), tk = kk => {
-        ak.current = kk, hk(kk)
-      }, [Xk, Bk] = (0, Dk.useState)(!1), {
-        loading: ck,
-        error: Tk,
-        setError: Zk,
-        onFiles: Ok
-      } = (0, xk.i)((async kk => {
-        const ek = await (0, Hk.loadPageShaderPackCompiler)();
-        if (!ek) return void Zk(Ak("shaderPack:compilerUnavailable"));
-        const ik = await (0, wk.c)(ek, kk.files);
-        if (Vk({
-            pack: kk,
-            validation: ik,
-            sourceBytes: (0, bk.u)(kk.files)
-          }), !yk) {
-          var Dk;
-          if ("" !== zk.current.trim() && zk.current !== Qk.current || (Qk.current = (0, fk.V)(kk.manifest.name.trim(), fk.F), vk(Qk.current)), "" === ak.current.trim() || ak.current === Wk.current) Wk.current = (0, fk.V)((null !== (Dk = kk.manifest.description) && void 0 !== Dk ? Dk : "").trim(), fk.v), tk(Wk.current);
-          uk((kk => kk + 1))
+        t: IC
+      } = (0, gC.y)(), {
+        userContext: iC,
+        isUserContextUpdating: vC
+      } = (0, FC.e)(), [eC, hC] = (0, QC.useState)(null), [KC, YC] = (0, QC.useState)(0), [dC, mC] = (0, QC.useState)(null !== (zC = null === RC || void 0 === RC ? void 0 : RC.name) && void 0 !== zC ? zC : ""), HC = (0, QC.useRef)(dC), EC = (0, QC.useRef)(""), lC = CC => {
+        HC.current = CC, mC(CC)
+      }, [XC, cC] = (0, QC.useState)(null !== (ZC = null === RC || void 0 === RC ? void 0 : RC.description) && void 0 !== ZC ? ZC : ""), uC = (0, QC.useRef)(XC), rC = (0, QC.useRef)(""), sC = CC => {
+        uC.current = CC, cC(CC)
+      }, [TC, aC] = (0, QC.useState)(!1), {
+        loading: tC,
+        error: DC,
+        setError: jC,
+        onFiles: yC
+      } = (0, NC.i)((async CC => {
+        const zC = await (0, SC.loadPageShaderPackCompiler)();
+        if (!zC) return void jC(IC("shaderPack:compilerUnavailable"));
+        const ZC = await (0, pC.c)(zC, CC.files);
+        if (hC({
+            pack: CC,
+            validation: ZC,
+            sourceBytes: (0, nC.y)(CC.files)
+          }), !RC) {
+          var QC;
+          if ("" !== HC.current.trim() && HC.current !== EC.current || (EC.current = (0, wC.P)(CC.manifest.name.trim(), wC.y), lC(EC.current)), "" === uC.current.trim() || uC.current === rC.current) rC.current = (0, wC.P)((null !== (QC = CC.manifest.description) && void 0 !== QC ? QC : "").trim(), wC.o), sC(rC.current);
+          YC((CC => CC + 1))
         }
-      })), gk = !sk && !jk.isLoggedIn() && !Sk.b.offlineMode, Gk = qk.trim(), Nk = Gk.length < fk.G, Rk = null !== dk && !1 !== (null === (Kk = dk.validation) || void 0 === Kk ? void 0 : Kk.ok) && !ck && !Nk && !gk && !sk;
-      return (0, pk.jsxs)("div", {
+      })), LC = !vC && !iC.isLoggedIn() && !bC.e.offlineMode, UC = dC.trim(), BC = UC.length < wC.A, OC = null !== eC && !1 !== (null === (WC = eC.validation) || void 0 === WC ? void 0 : WC.ok) && !tC && !BC && !LC && !vC;
+      return (0, GC.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, pk.jsx)("p", {
+        children: [(0, GC.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: yk ? Ak("shaderPackListing:uploadIntro", {
-            minutes: String(fk.K / 6e4)
-          }) : Ak("shaderPackListing:publishIntro")
-        }), (0, pk.jsx)(Ck, {}), gk && (0, pk.jsx)("div", {
+          children: RC ? IC("shaderPackListing:uploadIntro", {
+            minutes: String(wC.E / 6e4)
+          }) : IC("shaderPackListing:publishIntro")
+        }), (0, GC.jsx)(JC, {}), LC && (0, GC.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: Ak("shaderPackListing:publishNeedsLogin")
-        }), (0, pk.jsx)(xk.e, {
-          busy: ck,
-          disabled: ck || Xk,
-          onFiles: kk => {
-            Vk(null), Ok(kk)
+          children: IC("shaderPackListing:publishNeedsLogin")
+        }), (0, GC.jsx)(NC.e, {
+          busy: tC,
+          disabled: tC || TC,
+          onFiles: CC => {
+            hC(null), yC(CC)
           }
-        }), dk && (0, pk.jsxs)("div", {
+        }), eC && (0, GC.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, pk.jsx)("div", {
+          children: [(0, GC.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: dk.pack.manifest.name
-          }), (0, pk.jsxs)("div", {
+            children: eC.pack.manifest.name
+          }), (0, GC.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [Ak("shaderPackListing:sizeValue", {
-              kilobytes: String((0, lk.O)(dk.sourceBytes))
-            }), " \xb7", " ", Ak("shaderPackListing:filesValue", {
-              files: String(dk.pack.files.length)
+            children: [IC("shaderPackListing:sizeValue", {
+              kilobytes: String((0, PC.S)(eC.sourceBytes))
+            }), " \xb7", " ", IC("shaderPackListing:filesValue", {
+              files: String(eC.pack.files.length)
             })]
-          }), (0, pk.jsx)(Yk, {
-            picked: dk
+          }), (0, GC.jsx)(AC, {
+            picked: eC
           })]
-        }), !yk && (0, pk.jsxs)(pk.Fragment, {
-          children: [(0, pk.jsxs)("label", {
+        }), !RC && (0, GC.jsxs)(GC.Fragment, {
+          children: [(0, GC.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, pk.jsx)("span", {
-              children: Ak("general:name")
-            }), (0, pk.jsx)(mk.b, {
+            children: [(0, GC.jsx)("span", {
+              children: IC("general:name")
+            }), (0, GC.jsx)(qC.c, {
               className: "ShaderPackPublishInput",
-              defaultValue: qk,
-              maxLength: fk.F,
-              onValueChange: vk
-            }, Fk), dk && Nk && (0, pk.jsx)("span", {
+              defaultValue: dC,
+              maxLength: wC.y,
+              onValueChange: lC
+            }, KC), eC && BC && (0, GC.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: Ak("shaderPackListing:nameTooShort", {
-                min: String(fk.G)
+              children: IC("shaderPackListing:nameTooShort", {
+                min: String(wC.A)
               })
             })]
-          }), (0, pk.jsxs)("label", {
+          }), (0, GC.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, pk.jsx)("span", {
-              children: Ak("general:description")
-            }), (0, pk.jsx)(mk.b, {
+            children: [(0, GC.jsx)("span", {
+              children: IC("general:description")
+            }), (0, GC.jsx)(qC.c, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: Ek,
-              maxLength: fk.v,
-              onValueChange: tk,
+              defaultValue: XC,
+              maxLength: wC.o,
+              onValueChange: sC,
               useTextarea: !0
-            }, Fk)]
+            }, KC)]
           })]
-        }), Tk && (0, pk.jsx)("div", {
+        }), DC && (0, GC.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: Tk
-        }), (0, pk.jsxs)(Pk.r, {
+          children: DC
+        }), (0, GC.jsxs)(oC.o, {
           className: "ShaderPackPublishButton",
-          disabled: !Rk,
-          loading: Xk,
+          disabled: !OC,
+          loading: TC,
           onClick: () => {
             !async function() {
-              var kk;
-              if (!dk) return;
+              var CC;
+              if (!eC) return;
               const {
-                name: ek,
-                description: ik
-              } = null !== yk && void 0 !== yk ? yk : {
-                name: Gk,
-                description: Ek.trim()
-              }, Dk = {
-                packId: null !== (kk = null === yk || void 0 === yk ? void 0 : yk.packId) && void 0 !== kk ? kk : null,
-                name: ek,
-                description: ik,
-                apiVersion: dk.pack.manifest.apiVersion,
-                files: (0, bk.t)(dk.pack.files),
-                keepCircleShadows: !0 === dk.pack.manifest.keepCircleShadows
+                name: zC,
+                description: ZC
+              } = null !== RC && void 0 !== RC ? RC : {
+                name: UC,
+                description: XC.trim()
+              }, QC = {
+                packId: null !== (CC = null === RC || void 0 === RC ? void 0 : RC.packId) && void 0 !== CC ? CC : null,
+                name: zC,
+                description: ZC,
+                apiVersion: eC.pack.manifest.apiVersion,
+                files: (0, nC.w)(eC.pack.files),
+                keepCircleShadows: !0 === eC.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(Dk)).byteLength > 1024 * fk.R) Zk(Ak("shaderPackListing:publishTooBig", {
-                kilobytes: String(fk.R)
+              if ((new TextEncoder).encode(JSON.stringify(QC)).byteLength > 1024 * wC.L) jC(IC("shaderPackListing:publishTooBig", {
+                kilobytes: String(wC.L)
               }));
               else {
-                Bk(!0), Zk(null);
+                aC(!0), jC(null);
                 try {
-                  Lk(await nk.b.publishShaderPack(jk, Dk))
-                } catch (Sk) {
-                  console.error("Failed to publish the shader pack", Sk), Zk((0, lk.D)(Sk, Ak, "shaderPackListing:publishFailed"))
+                  xC(await MC.d.publishShaderPack(iC, QC))
+                } catch (bC) {
+                  console.error("Failed to publish the shader pack", bC), jC((0, PC.z)(bC, IC, "shaderPackListing:publishFailed"))
                 } finally {
-                  Bk(!1)
+                  aC(!1)
                 }
               }
             }()
           },
-          children: [(0, pk.jsx)(rk.d, {
+          children: [(0, GC.jsx)(fC.c, {
             name: "upload"
-          }), " ", Ak(yk ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", IC(RC ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function Yk(kk) {
+    function AC(CC) {
       let {
-        picked: ek
-      } = kk;
+        picked: zC
+      } = CC;
       const {
-        t: ik
-      } = (0, Uk.D)(), {
-        validation: Dk
-      } = ek;
-      return null === Dk ? (0, pk.jsx)("div", {
+        t: ZC
+      } = (0, gC.y)(), {
+        validation: QC
+      } = zC;
+      return null === QC ? (0, GC.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: ik("shaderPackListing:publishUnchecked")
-      }) : Dk.ok ? (0, pk.jsxs)(pk.Fragment, {
-        children: [(0, pk.jsxs)("div", {
+        children: ZC("shaderPackListing:publishUnchecked")
+      }) : QC.ok ? (0, GC.jsxs)(GC.Fragment, {
+        children: [(0, GC.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, pk.jsx)(rk.d, {
+          children: [(0, GC.jsx)(fC.c, {
             name: "circle-check"
-          }), " ", ik("shaderPackListing:publishReady")]
-        }), Dk.offInStrict.length > 0 && (0, pk.jsxs)(pk.Fragment, {
-          children: [(0, pk.jsxs)("div", {
+          }), " ", ZC("shaderPackListing:publishReady")]
+        }), QC.offInStrict.length > 0 && (0, GC.jsxs)(GC.Fragment, {
+          children: [(0, GC.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, pk.jsx)(rk.d, {
+            children: [(0, GC.jsx)(fC.c, {
               name: "triangle-exclamation"
-            }), " ", ik("shaderPack:offInStrict")]
-          }), (0, pk.jsx)(Kk.b, {
-            diagnostics: Dk.offInStrict,
-            t: ik
+            }), " ", ZC("shaderPack:offInStrict")]
+          }), (0, GC.jsx)(WC.d, {
+            diagnostics: QC.offInStrict,
+            t: ZC
           })]
         })]
-      }) : (0, pk.jsxs)(pk.Fragment, {
-        children: [(0, pk.jsxs)("div", {
+      }) : (0, GC.jsxs)(GC.Fragment, {
+        children: [(0, GC.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, pk.jsx)(rk.d, {
+          children: [(0, GC.jsx)(fC.c, {
             name: "triangle-exclamation"
-          }), " ", ik("shaderPackListing:publishHasErrors")]
-        }), (0, pk.jsx)(Kk.b, {
-          diagnostics: Dk.errors,
-          more: Dk.moreErrors,
-          t: ik
+          }), " ", ZC("shaderPackListing:publishHasErrors")]
+        }), (0, GC.jsx)(WC.d, {
+          diagnostics: QC.errors,
+          more: QC.moreErrors,
+          t: ZC
         })]
       })
     }
-    const Lk = "\0";
+    const xC = "\0";
 
-    function Ck() {
+    function JC() {
       const {
-        t: kk
-      } = (0, Uk.D)(), [ek, ik] = kk("shaderPackListing:bloxdhubHelp", {
-        site: Lk
-      }).split(Lk);
-      return (0, pk.jsxs)("p", {
+        t: CC
+      } = (0, gC.y)(), [zC, ZC] = CC("shaderPackListing:bloxdhubHelp", {
+        site: xC
+      }).split(xC);
+      return (0, GC.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [ek, (0, pk.jsx)("a", {
+        children: [zC, (0, GC.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: fk.i,
+          href: wC.f,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: fk.e
-        }), ik]
+          children: wC.b
+        }), ZC]
       })
     }
   },
-  4961: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Dk.g,
-      e: () => fk,
-      g: () => Dk.l
+  4998: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => QC.j,
+      f: () => wC,
+      i: () => QC.q
     });
-    var Dk = ik(4965);
-    const fk = [!1, !0].flatMap((kk => ["terrain", "liquid", "model"].map((ek => ({
-      strict: kk,
-      program: ek
+    var QC = ZC(5002);
+    const wC = [!1, !0].flatMap((CC => ["terrain", "liquid", "model"].map((zC => ({
+      strict: CC,
+      program: zC
     })))))
   },
-  4965: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => rk,
-      c: () => bk,
-      g: () => Dk,
-      h: () => Hk,
-      i: () => Kk,
-      l: () => fk,
-      p: () => Sk,
-      r: () => mk,
-      t: () => Mk,
-      u: () => xk
+  5002: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => fC,
+      g: () => nC,
+      j: () => QC,
+      k: () => SC,
+      m: () => WC,
+      q: () => wC,
+      r: () => bC,
+      s: () => qC,
+      w: () => FC,
+      y: () => NC
     });
-    const Dk = 5;
+    const QC = 5;
 
-    function fk(kk) {
-      return kk === Dk
+    function wC(CC) {
+      return CC === QC
     }
 
-    function Sk(kk) {
-      return [...kk.features]
+    function bC(CC) {
+      return [...CC.features]
     }
-    const bk = 262144,
-      rk = 256,
-      Pk = 256;
+    const nC = 262144,
+      fC = 256,
+      oC = 256;
 
-    function mk(kk) {
-      if ("object" !== typeof kk || null === kk || Array.isArray(kk)) return "The pack has no files.";
-      const ek = [];
-      for (const [ik, Dk] of Object.entries(kk)) {
-        if ("string" !== typeof Dk) return `${ik} isn't text.`;
-        ek.push({
-          path: ik,
-          source: Dk
+    function qC(CC) {
+      if ("object" !== typeof CC || null === CC || Array.isArray(CC)) return "The pack has no files.";
+      const zC = [];
+      for (const [ZC, QC] of Object.entries(CC)) {
+        if ("string" !== typeof QC) return `${ZC} isn't text.`;
+        zC.push({
+          path: ZC,
+          source: QC
         })
       }
-      return ek.sort(((kk, ek) => Kk(kk.path, ek.path))),
-        function(kk) {
-          if (0 === kk.length) return "The pack has no .wgsl files.";
-          if (kk.length > rk) return `The pack has more than ${rk} .wgsl files.`;
-          const ek = new Set;
+      return zC.sort(((CC, zC) => WC(CC.path, zC.path))),
+        function(CC) {
+          if (0 === CC.length) return "The pack has no .wgsl files.";
+          if (CC.length > fC) return `The pack has more than ${fC} .wgsl files.`;
+          const zC = new Set;
           for (const {
-              path: ik
+              path: ZC
             }
-            of kk) {
-            const kk = nk(ik);
-            if (null !== kk) return kk;
-            if (ek.has(ik)) return `The pack has two files at ${ik}.`;
-            ek.add(ik)
+            of CC) {
+            const CC = MC(ZC);
+            if (null !== CC) return CC;
+            if (zC.has(ZC)) return `The pack has two files at ${ZC}.`;
+            zC.add(ZC)
           }
-          return xk(kk) > bk ? `The pack's .wgsl files are over ${bk/1024} KB in total.` : null
-        }(ek) ?? ek
+          return NC(CC) > nC ? `The pack's .wgsl files are over ${nC/1024} KB in total.` : null
+        }(zC) ?? zC
     }
 
-    function Mk(kk) {
-      const ek = {};
-      for (const ik of kk) ek[ik.path] = ik.source;
-      return ek
+    function FC(CC) {
+      const zC = {};
+      for (const ZC of CC) zC[ZC.path] = ZC.source;
+      return zC
     }
 
-    function Kk(kk, ek) {
-      return kk < ek ? -1 : kk > ek ? 1 : 0
+    function WC(CC, zC) {
+      return CC < zC ? -1 : CC > zC ? 1 : 0
     }
 
-    function xk(kk) {
-      const ek = new TextEncoder;
-      let ik = 0;
+    function NC(CC) {
+      const zC = new TextEncoder;
+      let ZC = 0;
       for (const {
-          source: Dk
+          source: QC
         }
-        of kk) ik += ek.encode(Dk).byteLength;
-      return ik
+        of CC) ZC += zC.encode(QC).byteLength;
+      return ZC
     }
 
-    function nk(kk) {
-      if (!kk.toLowerCase().endsWith(".wgsl")) return `${kk} isn't a .wgsl file.`;
-      if (kk.length > Pk) return `A file path is over ${Pk} characters.`;
-      if (kk.includes("\\") || /[\u0000-\u001f]/.test(kk)) return `${kk} isn't a valid file path.`;
-      return kk.split("/").some((kk => "" === kk || "." === kk || ".." === kk)) ? `${kk} isn't a valid file path.` : null
+    function MC(CC) {
+      if (!CC.toLowerCase().endsWith(".wgsl")) return `${CC} isn't a .wgsl file.`;
+      if (CC.length > oC) return `A file path is over ${oC} characters.`;
+      if (CC.includes("\\") || /[\u0000-\u001f]/.test(CC)) return `${CC} isn't a valid file path.`;
+      return CC.split("/").some((CC => "" === CC || "." === CC || ".." === CC)) ? `${CC} isn't a valid file path.` : null
     }
-    const Uk = /^(.*)\[rot\[([1-4])$/;
+    const gC = /^(.*)\[rot\[([1-4])$/;
 
-    function Hk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Dk = new Map;
-      ek.forEach(((kk, ek) => {
+    function SC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const QC = new Map;
+      zC.forEach(((CC, zC) => {
         let {
-          numAnimStates: ik,
-          animStartIdx: fk
-        } = kk;
-        for (let Sk = 1; Sk < ik; Sk++) Dk.set(fk + Sk - 1, ek)
+          numAnimStates: ZC,
+          animStartIdx: wC
+        } = CC;
+        for (let bC = 1; bC < ZC; bC++) QC.set(wC + bC - 1, zC)
       }));
-      const fk = Object.entries(kk),
-        Sk = new Map;
-      for (const [Hk, wk] of fk) {
-        const kk = Uk.exec(Hk);
-        "1" === kk?.[2] && Sk.set(kk[1], wk + 1)
+      const wC = Object.entries(CC),
+        bC = new Map;
+      for (const [SC, pC] of wC) {
+        const CC = gC.exec(SC);
+        "1" === CC?.[2] && bC.set(CC[1], pC + 1)
       }
-      const bk = kk => {
-          const ek = Uk.exec(kk);
-          return ek && Sk.has(ek[1]) ? {
-            root: ek[1],
-            rotation: Number(ek[2]) - 1
+      const nC = CC => {
+          const zC = gC.exec(CC);
+          return zC && bC.has(zC[1]) ? {
+            root: zC[1],
+            rotation: Number(zC[2]) - 1
           } : null
         },
-        rk = new Set(fk.map((kk => {
-          let [ek] = kk;
-          return bk(ek)?.root ?? ek
+        fC = new Set(wC.map((CC => {
+          let [zC] = CC;
+          return nC(zC)?.root ?? zC
         }))),
-        Pk = (kk, ik) => {
-          const Dk = kk.replace(/_?0$/, "");
-          return (ek[ik]?.numAnimStates ?? 0) > 1 && !rk.has(Dk) ? Dk : kk
+        oC = (CC, ZC) => {
+          const QC = CC.replace(/_?0$/, "");
+          return (zC[ZC]?.numAnimStates ?? 0) > 1 && !fC.has(QC) ? QC : CC
         },
-        mk = new Map;
-      for (const [Uk, Hk] of fk) mk.set(Hk, Pk(bk(Uk)?.root ?? Uk, Hk));
-      const Mk = fk.reduce(((kk, ek) => {
-          let [, ik] = ek;
-          return Math.max(kk, ik + 1)
+        qC = new Map;
+      for (const [gC, SC] of wC) qC.set(SC, oC(nC(gC)?.root ?? gC, SC));
+      const FC = wC.reduce(((CC, zC) => {
+          let [, ZC] = zC;
+          return Math.max(CC, ZC + 1)
         }), 0),
-        Kk = Array.from({
-          length: Mk
-        }, ((kk, ek) => ({
-          id: ek + 1,
+        WC = Array.from({
+          length: FC
+        }, ((CC, zC) => ({
+          id: zC + 1,
           rotation: 0
         }))),
-        xk = new Map,
-        nk = new Map;
-      for (const [Uk, Hk] of fk) {
-        const kk = bk(Uk),
-          ek = Dk.get(Hk);
-        if (void 0 !== ek) {
-          const ik = mk.get(ek);
-          nk.set(Uk, {
-            name: Uk,
-            texture: ik,
+        NC = new Map,
+        MC = new Map;
+      for (const [gC, SC] of wC) {
+        const CC = nC(gC),
+          zC = QC.get(SC);
+        if (void 0 !== zC) {
+          const ZC = qC.get(zC);
+          MC.set(gC, {
+            name: gC,
+            texture: ZC,
             kind: "frame"
-          }), kk && !nk.has(kk.root) && nk.set(kk.root, {
-            name: kk.root,
-            texture: ik,
+          }), CC && !MC.has(CC.root) && MC.set(CC.root, {
+            name: CC.root,
+            texture: ZC,
             kind: "frame"
           });
           continue
         }
-        const ik = mk.get(Hk),
-          fk = kk?.root ?? Uk;
-        if (ik !== fk && nk.set(fk, {
-            name: fk,
-            texture: ik,
+        const ZC = qC.get(SC),
+          wC = CC?.root ?? gC;
+        if (ZC !== wC && MC.set(wC, {
+            name: wC,
+            texture: ZC,
             kind: "frame"
-          }), kk) {
-          const ek = Sk.get(kk.root);
-          Kk[Hk] = {
-            id: ek,
-            rotation: kk.rotation
-          }, xk.set(ik, ek), nk.set(Uk, {
-            name: Uk,
-            texture: ik,
+          }), CC) {
+          const zC = bC.get(CC.root);
+          WC[SC] = {
+            id: zC,
+            rotation: CC.rotation
+          }, NC.set(ZC, zC), MC.set(gC, {
+            name: gC,
+            texture: ZC,
             kind: "rotation"
           })
-        } else xk.set(ik, Hk + 1)
+        } else NC.set(ZC, SC + 1)
       }
-      for (const Uk of xk.keys()) nk.delete(Uk);
-      for (const [Uk, Hk] of ik) {
-        const kk = xk.get(Hk);
-        void 0 === kk || xk.has(Uk) || (xk.set(Uk, kk), nk.delete(Uk))
+      for (const gC of NC.keys()) MC.delete(gC);
+      for (const [gC, SC] of ZC) {
+        const CC = NC.get(SC);
+        void 0 === CC || NC.has(gC) || (NC.set(gC, CC), MC.delete(gC))
       }
       return {
-        named: [...xk].sort(((kk, ek) => {
-          let [ik] = kk, [Dk] = ek;
-          return ik < Dk ? -1 : ik > Dk ? 1 : 0
-        })).map((kk => {
-          let [ek, ik] = kk;
+        named: [...NC].sort(((CC, zC) => {
+          let [ZC] = CC, [QC] = zC;
+          return ZC < QC ? -1 : ZC > QC ? 1 : 0
+        })).map((CC => {
+          let [zC, ZC] = CC;
           return {
-            name: ek,
-            id: ik
+            name: zC,
+            id: ZC
           }
         })),
-        aliases: [...nk.values()],
-        layers: Kk
+        aliases: [...MC.values()],
+        layers: WC
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

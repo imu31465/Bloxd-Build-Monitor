@@ -7145,6 +7145,7 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   padding: 1rem
 }
 
+.GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnNotificationOptIn,
 .GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnPageOtherGames {
   align-items: center;
   display: flex;
@@ -7152,9 +7153,14 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   gap: 1rem
 }
 
-.GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnPageOtherGames .RespawnPageOtherGamesTitle {
+.GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnNotificationOptIn .RespawnPanelSectionTitle,
+.GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnPageOtherGames .RespawnPanelSectionTitle {
+  align-items: center;
   border-top: 2px solid hsla(0, 0%, 51%, .6);
   color: #cfcfcf;
+  display: flex;
+  gap: .5em;
+  justify-content: center;
   min-width: 80%;
   padding-top: 1rem;
   text-align: center
@@ -7162,6 +7168,23 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 
 .GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnPageOtherGames .RespawnPageOtherGameThumbnails {
   display: flex
+}
+
+.GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnNotificationOptIn .RespawnNotificationOptInButtons {
+  display: flex;
+  gap: 1rem
+}
+
+.GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnNotificationOptIn .RespawnNotificationOptInButtons .NewButton {
+  font-size: 1.6rem
+}
+
+@media(pointer:coarse) {
+  .GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnTop .RespawnMainContent .RespawnMainContentInner .RespawnNotificationOptIn .RespawnNotificationOptInButtons .NewButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
 }
 
 .GameBackgroundScreen.RespawnBackgroundScreen .RespawnContainer .RespawnBottom {
@@ -8389,9 +8412,9 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   width: 85%
 }
 
-.CraftItemFlyAnimation .TwoDImageIcon:not(.BlockModelIcon),
-.DraggedInvenItem .TwoDImageIcon:not(.BlockModelIcon),
-.InvenItem .TwoDImageIcon:not(.BlockModelIcon) {
+.CraftItemFlyAnimation .TwoDImageIcon,
+.DraggedInvenItem .TwoDImageIcon,
+.InvenItem .TwoDImageIcon {
   height: 100%;
   width: 100%
 }
@@ -8837,6 +8860,181 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   background-color: rgba(75, 94, 130, .85);
   box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
   transform: translateY(2px)
+}
+
+html.ScreenshotMode :is(#root, .WasmCameraLayer),
+html.ScreenshotMode :is(#root, .WasmCameraLayer) * {
+  visibility: hidden !important
+}
+
+.ScreenshotModeOverlay {
+  -webkit-touch-callout: none;
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  z-index: 16
+}
+
+.ScreenshotModeOverlay .ScreenshotModeViewfinder {
+  background: linear-gradient(#f2f2f2, #f2f2f2) 0 0/2.5rem 3px, linear-gradient(#f2f2f2, #f2f2f2) 0 0/3px 2.5rem, linear-gradient(#f2f2f2, #f2f2f2) 100% 0/2.5rem 3px, linear-gradient(#f2f2f2, #f2f2f2) 100% 0/3px 2.5rem, linear-gradient(#f2f2f2, #f2f2f2) 0 100%/2.5rem 3px, linear-gradient(#f2f2f2, #f2f2f2) 0 100%/3px 2.5rem, linear-gradient(#f2f2f2, #f2f2f2) 100% 100%/2.5rem 3px, linear-gradient(#f2f2f2, #f2f2f2) 100% 100%/3px 2.5rem;
+  background-repeat: no-repeat;
+  bottom: calc(var(--notchBottom) + 1rem);
+  left: calc(var(--notchLeft) + 1rem);
+  position: absolute;
+  right: calc(var(--notchRight) + 1rem);
+  top: calc(var(--notchTop) + 1rem)
+}
+
+@media(forced-colors:active) {
+  .ScreenshotModeOverlay .ScreenshotModeViewfinder {
+    background: linear-gradient(Highlight, Highlight) 0 0/2.5rem 3px, linear-gradient(Highlight, Highlight) 0 0/3px 2.5rem, linear-gradient(Highlight, Highlight) 100% 0/2.5rem 3px, linear-gradient(Highlight, Highlight) 100% 0/3px 2.5rem, linear-gradient(Highlight, Highlight) 0 100%/2.5rem 3px, linear-gradient(Highlight, Highlight) 0 100%/3px 2.5rem, linear-gradient(Highlight, Highlight) 100% 100%/2.5rem 3px, linear-gradient(Highlight, Highlight) 100% 100%/3px 2.5rem;
+    background-repeat: no-repeat;
+    color: CanvasText;
+    forced-color-adjust: none
+  }
+
+  .ScreenshotModeOverlay .ScreenshotModeViewfinder>* {
+    forced-color-adjust: auto
+  }
+}
+
+.ScreenshotModeOverlay .ScreenshotModeCentre,
+.ScreenshotModeOverlay .ScreenshotModeViewfinder {
+  filter: drop-shadow(0 0 .08rem rgba(0, 0, 0, .7))
+}
+
+.ScreenshotModeOverlay .ScreenshotModeCentre {
+  background: linear-gradient(#f2f2f2, #f2f2f2) 50%/100% 2px no-repeat, linear-gradient(#f2f2f2, #f2f2f2) 50%/2px 100% no-repeat;
+  height: 1.5rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem
+}
+
+.ScreenshotModeOverlay .ScreenshotModeFlash {
+  animation: ScreenshotModeFlash .35s ease-out;
+  background: #f2f2f2;
+  inset: 0;
+  opacity: 0;
+  position: absolute
+}
+
+.ScreenshotModeOverlay .ScreenshotModeButton,
+.ScreenshotModeOverlay .ScreenshotModeSaveNote {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation
+}
+
+.ScreenshotModeOverlay .ScreenshotModeButton {
+  align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  color: #fff;
+  display: flex;
+  font: inherit;
+  justify-content: center;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+.ScreenshotModeOverlay .ScreenshotModeButton:active {
+  transform: scale(.92)
+}
+
+.ScreenshotModeOverlay .ScreenshotModeBack {
+  background: rgba(60, 75, 104, .72);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  font-size: 1.4rem;
+  height: 3rem;
+  left: calc(var(--notchLeft) + 1.75rem);
+  top: calc(var(--notchTop) + 1.75rem);
+  width: 3rem
+}
+
+.ScreenshotModeOverlay .ScreenshotModeShutter {
+  background: #f2f2f2;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(26, 31, 46, .6), 0 0 0 7px #f2f2f2;
+  color: #1a1f2e;
+  font-size: 1.8rem;
+  height: 4.5rem;
+  right: calc(var(--notchRight) + 2rem);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4.5rem
+}
+
+.ScreenshotModeOverlay .ScreenshotModeShutter:active {
+  transform: translateY(-50%) scale(.92)
+}
+
+.ScreenshotModeOverlay .ScreenshotModeShutter[aria-busy=true] {
+  background: #a4a4a4
+}
+
+@media(orientation:portrait) {
+  .ScreenshotModeOverlay .ScreenshotModeShutter {
+    bottom: calc(var(--notchBottom) + 2.5rem);
+    right: 50%;
+    top: auto;
+    transform: translateX(50%)
+  }
+
+  .ScreenshotModeOverlay .ScreenshotModeShutter:active {
+    transform: translateX(50%) scale(.92)
+  }
+}
+
+.ScreenshotModeOverlay .ScreenshotModeNote {
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fff;
+  font-size: 1rem;
+  left: 50%;
+  max-width: 70vw;
+  padding: .5rem 1rem;
+  position: absolute;
+  text-align: center;
+  top: calc(var(--notchTop) + 1.75rem);
+  transform: translateX(-50%)
+}
+
+.ScreenshotModeOverlay .ScreenshotModeSaveNote {
+  align-items: center;
+  display: flex;
+  font-family: inherit;
+  font-weight: inherit;
+  gap: .5rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0
+}
+
+@keyframes ScreenshotModeFlash {
+  0% {
+    opacity: .7
+  }
+
+  to {
+    opacity: 0
+  }
 }
 
 .QTEProgressBarWrapper {

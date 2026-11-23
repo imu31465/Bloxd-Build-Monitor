@@ -1,1512 +1,701 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  39623: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => xk,
-      i: () => Kk,
-      l: () => Pk,
-      m: () => nk,
-      n: () => mk,
-      p: () => rk,
-      q: () => Mk
+  39626: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => LC
     });
-    var Dk = ik(38272),
-      fk = ik(39628);
+    ZC(6473);
+    var QC = ZC(48),
+      wC = ZC(39635),
+      bC = ZC(39902),
+      nC = ZC(40031),
+      fC = ZC(40076),
+      oC = ZC(40092),
+      qC = ZC(37138),
+      FC = ZC(36961),
+      WC = ZC(40219),
+      NC = ZC(40281),
+      MC = (ZC(40308), ZC(1169)),
+      gC = ZC(184),
+      SC = ZC(1143),
+      pC = ZC(20),
+      PC = ZC(2734),
+      GC = ZC(1388),
+      RC = ZC(1013),
+      AC = ZC(6466),
+      xC = ZC(6475),
+      JC = ZC(4369),
+      IC = ZC(1056);
+    const iC = 1.2,
+      vC = .2,
+      eC = .0066 * Math.PI / 180,
+      hC = new Set(["Escape", "KeyG"]),
+      KC = {
+        ArrowLeft: -1,
+        ArrowRight: 1
+      },
+      YC = "ArrowUp",
+      dC = new Set([...Object.keys(KC), YC, "ArrowDown"]),
+      mC = 32,
+      HC = 1,
+      EC = 10,
+      lC = "F4",
+      XC = "Period",
+      cC = Math.PI / 2 - .001,
+      uC = Math.PI / 6,
+      rC = Math.PI / 6,
+      sC = 1.08,
+      TC = [{
+        name: "X",
+        direction: [1, 0, 0],
+        colour: "#e5534b"
+      }, {
+        name: "Y",
+        direction: [0, 1, 0],
+        colour: "#57ab5a"
+      }, {
+        name: "Z",
+        direction: [0, 0, 1],
+        colour: "#539bf5"
+      }],
+      aC = 24,
+      tC = 7,
+      DC = 4,
+      jC = .01,
+      yC = 4;
 
-    function Sk(kk, ek, ik, Dk) {
-      switch (ek) {
-        case 5120: {
-          let ek = kk.getInt8(ik);
-          return Dk && (ek = Math.max(ek / 127, -1)), ek
-        }
-        case 5121: {
-          let ek = kk.getUint8(ik);
-          return Dk && (ek /= 255), ek
-        }
-        case 5122: {
-          let ek = kk.getInt16(ik, !0);
-          return Dk && (ek = Math.max(ek / 32767, -1)), ek
-        }
-        case 5123: {
-          let ek = kk.getUint16(ik, !0);
-          return Dk && (ek /= 65535), ek
-        }
-        case 5131:
-          return (0, fk.e)(kk.getUint16(ik, !0));
-        case 5124:
-          return kk.getInt32(ik, !0);
-        case 5125:
-          return kk.getUint32(ik, !0);
-        case 5126:
-          return kk.getFloat32(ik, !0);
-        default:
-          throw new Error(`Invalid component type ${ek}`)
-      }
-    }
-
-    function bk(kk, ek, ik, Dk, Sk) {
-      switch (ek) {
-        case 5120:
-          Dk && (Sk = Math.round(127 * Sk)), kk.setInt8(ik, Sk);
-          break;
-        case 5121:
-          Dk && (Sk = Math.round(255 * Sk)), kk.setUint8(ik, Sk);
-          break;
-        case 5122:
-          Dk && (Sk = Math.round(32767 * Sk)), kk.setInt16(ik, Sk, !0);
-          break;
-        case 5123:
-          Dk && (Sk = Math.round(65535 * Sk)), kk.setUint16(ik, Sk, !0);
-          break;
-        case 5131:
-          kk.setUint16(ik, (0, fk.i)(Sk), !0);
-          break;
-        case 5124:
-          kk.setInt32(ik, Sk, !0);
-          break;
-        case 5125:
-          kk.setUint32(ik, Sk, !0);
-          break;
-        case 5126:
-          kk.setFloat32(ik, Sk, !0);
-          break;
-        default:
-          throw new Error(`Invalid component type ${ek}`)
-      }
-    }
-
-    function rk(kk) {
-      switch (kk) {
-        case 5120:
-        case 5121:
-          return 1;
-        case 5122:
-        case 5123:
-        case 5131:
-          return 2;
-        case 5124:
-        case 5125:
-        case 5126:
-          return 4;
-        default:
-          throw new Error(`Invalid type '${kk}'`)
-      }
-    }
-
-    function Pk(kk, ek, ik, Dk, fk, Pk, mk, Mk) {
-      const Kk = new Array(Dk),
-        xk = new Array(Dk);
-      if (kk instanceof Array) {
-        let fk = ek / 4;
-        const Sk = ik / 4;
-        for (let ek = 0; ek < Pk; ek += Dk) {
-          for (let ek = 0; ek < Dk; ek++) Kk[ek] = xk[ek] = kk[fk + ek];
-          Mk(xk, ek);
-          for (let ek = 0; ek < Dk; ek++) Kk[ek] !== xk[ek] && (kk[fk + ek] = xk[ek]);
-          fk += Sk
-        }
-      } else {
-        const nk = ArrayBuffer.isView(kk) ? new DataView(kk.buffer, kk.byteOffset, kk.byteLength) : new DataView(kk),
-          Uk = rk(fk);
-        for (let kk = 0; kk < Pk; kk += Dk) {
-          for (let kk = 0, ik = ek; kk < Dk; kk++, ik += Uk) Kk[kk] = xk[kk] = Sk(nk, fk, ik, mk);
-          Mk(xk, kk);
-          for (let kk = 0, ik = ek; kk < Dk; kk++, ik += Uk) Kk[kk] !== xk[kk] && bk(nk, fk, ik, mk, xk[kk]);
-          ek += ik
-        }
-      }
-    }
-
-    function mk(kk, ek, ik, fk, Sk, bk, mk, Mk) {
-      const Kk = ek * rk(ik),
-        xk = mk * ek;
-      if (5126 !== ik || Sk !== Kk) {
-        const Dk = new Float32Array(xk);
-        return Pk(kk, fk, Sk, ek, ik, xk, bk, ((kk, ik) => {
-          for (let fk = 0; fk < ek; fk++) Dk[ik + fk] = kk[fk]
-        })), Dk
-      }
-      if (!(kk instanceof Array || kk instanceof Float32Array) || 0 !== fk || kk.length !== xk) {
-        if (kk instanceof Array) {
-          const ek = fk / 4;
-          return kk.slice(ek, ek + xk)
-        }
-        if (ArrayBuffer.isView(kk)) {
-          const ek = kk.byteOffset + fk;
-          return 0 !== (3 & ek) && (Dk.b.Warn("Float array must be aligned to 4-bytes border"), Mk = !0), Mk ? new Float32Array(kk.buffer.slice(ek, ek + xk * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(kk.buffer, ek, xk)
-        }
-        return new Float32Array(kk, fk, xk)
-      }
-      return Mk ? kk.slice() : kk
-    }
-
-    function Mk(kk, ek, ik, fk, Sk, bk, mk) {
-      const Mk = rk(ik),
-        Kk = function(kk) {
-          switch (kk) {
-            case 5120:
-              return Int8Array;
-            case 5121:
-              return Uint8Array;
-            case 5122:
-              return Int16Array;
-            case 5123:
-            case 5131:
-              return Uint16Array;
-            case 5124:
-              return Int32Array;
-            case 5125:
-              return Uint32Array;
-            case 5126:
-              return Float32Array;
-            default:
-              throw new Error(`Invalid component type '${kk}'`)
-          }
-        }(ik),
-        xk = bk * ek;
-      if (Array.isArray(kk)) {
-        if (0 !== (3 & fk) || 0 !== (3 & Sk)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const Dk = fk / 4,
-          rk = Sk / 4;
-        if (Dk + (bk - 1) * rk + ek > kk.length) throw new Error("Last accessed index is out of bounds.");
-        if (rk < ek) throw new Error("Data stride cannot be smaller than the component size.");
-        if (rk !== ek) {
-          const Dk = new Kk(xk);
-          return Pk(kk, fk, Sk, ek, ik, xk, !1, ((kk, ik) => {
-            for (let fk = 0; fk < ek; fk++) Dk[ik + fk] = kk[fk]
-          })), Dk
-        }
-        return new Kk(kk.slice(Dk, Dk + xk))
-      }
-      let nk, Uk = fk;
-      ArrayBuffer.isView(kk) ? (nk = kk.buffer, Uk += kk.byteOffset) : nk = kk;
-      if (Uk + (bk - 1) * Sk + ek * Mk > nk.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const Hk = ek * Mk;
-      if (Sk < Hk) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (Sk !== Hk) {
-        const kk = new Kk(xk),
-          ik = new Uint8Array(nk, Uk),
-          Dk = new Uint8Array(kk.buffer),
-          fk = ek * Mk;
-        for (let ek = 0, rk = 0, Pk = 0; ek < bk; ek++, rk += Sk, Pk += fk) Dk.set(ik.subarray(rk, rk + fk), Pk);
-        return kk
-      }
-      return 1 !== Mk && 0 !== (Uk & Mk - 1) && (Dk.b.Warn("Array must be aligned to border of element size. Data will be copied."), mk = !0), mk ? new Kk(nk.slice(Uk, Uk + xk * Mk)) : new Kk(nk, Uk, xk)
-    }
-
-    function Kk(kk, ek, ik, fk, Sk, bk, mk, Mk) {
-      const Kk = ek * rk(ik),
-        xk = mk * ek;
-      if (Mk.length !== xk) throw new Error("Output length is not valid");
-      if (5126 === ik && Sk === Kk)
-        if (kk instanceof Array) {
-          const ek = fk / 4;
-          Mk.set(kk, ek)
-        } else if (ArrayBuffer.isView(kk)) {
-        const ek = kk.byteOffset + fk;
-        if (0 !== (3 & ek)) return Dk.b.Warn("Float array must be aligned to 4-bytes border"), void Mk.set(new Float32Array(kk.buffer.slice(ek, ek + xk * Float32Array.BYTES_PER_ELEMENT)));
-        const ik = new Float32Array(kk.buffer, ek, xk);
-        Mk.set(ik)
-      } else {
-        const ek = new Float32Array(kk, fk, xk);
-        Mk.set(ek)
-      } else Pk(kk, fk, Sk, ek, ik, xk, bk, ((kk, ik) => {
-        for (let Dk = 0; Dk < ek; Dk++) Mk[ik + Dk] = kk[Dk]
-      }))
-    }
-
-    function xk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(kk)) {
-        for (let fk = 0; fk < ek; fk++)
-          if (kk[ik + fk] - Dk > 65535) return !0;
-        return !1
-      }
-      return 4 === kk.BYTES_PER_ELEMENT
-    }
-
-    function nk(kk) {
-      const ek = kk.buffer;
-      if (ek instanceof ArrayBuffer) return kk;
-      const ik = new ArrayBuffer(kk.byteLength);
-      return new Uint8Array(ik).set(new Uint8Array(ek, kk.byteOffset, kk.byteLength)), ik
-    }
-  },
-  39455: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => jk,
-      g: () => Ck,
-      k: () => Ak,
-      i: () => Ik,
-      l: () => zk
-    });
-    class Dk {
-      constructor() {
-        this.children = []
-      }
-      isValid(kk) {
-        return !0
-      }
-      process(kk, ek, ik) {
-        let Dk = "";
-        if (this.line) {
-          let ik = this.line;
-          const fk = ek.processor;
-          if (fk) {
-            fk.lineProcessor && (ik = fk.lineProcessor(ik, ek.isFragment, ek.processingContext));
-            const Dk = ek.processor?.attributeKeywordName ?? "attribute",
-              Sk = ek.isFragment && ek.processor?.varyingFragmentKeywordName ? ek.processor?.varyingFragmentKeywordName : !ek.isFragment && ek.processor?.varyingVertexKeywordName ? ek.processor?.varyingVertexKeywordName : "varying";
-            if (!ek.isFragment && fk.attributeProcessor && this.line.startsWith(Dk)) ik = fk.attributeProcessor(this.line, kk, ek.processingContext);
-            else if (fk.varyingProcessor && (fk.varyingCheck?.(this.line, ek.isFragment) || !fk.varyingCheck && this.line.startsWith(Sk))) ik = fk.varyingProcessor(this.line, ek.isFragment, kk, ek.processingContext);
-            else if (fk.uniformProcessor && fk.uniformRegexp && fk.uniformRegexp.test(this.line)) ek.lookForClosingBracketForUniformBuffer || (ik = fk.uniformProcessor(this.line, ek.isFragment, kk, ek.processingContext));
-            else if (fk.uniformBufferProcessor && fk.uniformBufferRegexp && fk.uniformBufferRegexp.test(this.line)) ek.lookForClosingBracketForUniformBuffer || (ik = fk.uniformBufferProcessor(this.line, ek.isFragment, ek.processingContext), ek.lookForClosingBracketForUniformBuffer = !0);
-            else if (fk.textureProcessor && fk.textureRegexp && fk.textureRegexp.test(this.line)) ik = fk.textureProcessor(this.line, ek.isFragment, kk, ek.processingContext);
-            else if ((fk.uniformProcessor || fk.uniformBufferProcessor) && this.line.startsWith("uniform") && !ek.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? fk.uniformProcessor && (ik = fk.uniformProcessor(this.line, ek.isFragment, kk, ek.processingContext)) : fk.uniformBufferProcessor && (ik = fk.uniformBufferProcessor(this.line, ek.isFragment, ek.processingContext), ek.lookForClosingBracketForUniformBuffer = !0)
-            }
-            ek.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (ek.lookForClosingBracketForUniformBuffer = !1, fk.endOfUniformBufferProcessor && (ik = fk.endOfUniformBufferProcessor(this.line, ek.isFragment, ek.processingContext)))
-          }
-          Dk += ik + "\n"
-        }
-        for (const fk of this.children) Dk += fk.process(kk, ek, ik);
-        return this.additionalDefineKey && (kk[this.additionalDefineKey] = this.additionalDefineValue || "true", ik[this.additionalDefineKey] = kk[this.additionalDefineKey]), Dk
-      }
-    }
-    class fk {
-      constructor() {
-        this._lines = []
-      }
-      get currentLine() {
-        return this._lines[this.lineIndex]
-      }
-      get canRead() {
-        return this.lineIndex < this._lines.length - 1
-      }
-      set lines(kk) {
-        this._lines.length = 0;
-        for (const ek of kk) {
-          if (!ek || "\r" === ek) continue;
-          if ("#" === ek[0]) {
-            this._lines.push(ek);
-            continue
-          }
-          const kk = ek.trim();
-          if (!kk) continue;
-          if (kk.startsWith("//")) {
-            this._lines.push(ek);
-            continue
-          }
-          const ik = kk.indexOf(";");
-          if (-1 === ik) this._lines.push(kk);
-          else if (ik === kk.length - 1) kk.length > 1 && this._lines.push(kk);
-          else {
-            const kk = ek.split(";");
-            for (let ek = 0; ek < kk.length; ek++) {
-              let ik = kk[ek];
-              ik && (ik = ik.trim(), ik && this._lines.push(ik + (ek !== kk.length - 1 ? ";" : "")))
+    function LC(CC) {
+      let {
+        heatmap: zC,
+        scale: ZC,
+        fullyOpaqueFrom: HC,
+        bounds: uC,
+        fitBounds: rC,
+        schematic: sC,
+        controls: TC,
+        onStepTime: aC,
+        onShowAllTime: tC,
+        onTogglePlaying: DC,
+        getReadout: yC = null
+      } = CC;
+      const {
+        t: LC
+      } = (0, SC.y)(), {
+        clientEscMenuOptions: bz
+      } = (0, pC.k)(["clientEscMenuOptions"]), oz = (0, QC.useRef)(null), qz = (0, QC.useRef)(null), Fz = (0, QC.useRef)(null), Wz = (0, PC.e)(oz), [Nz, Mz] = (0, QC.useState)(!1), [gz, Sz] = (0, QC.useState)(!1), [pz, Pz] = (0, QC.useState)(!0), Gz = (0, QC.useRef)(!1), [Rz, Az] = (0, QC.useState)(!1), xz = gz || !pz && Rz, [Jz, Iz] = (0, QC.useState)(!1), [iz, vz] = (0, QC.useState)(!0), [ez, hz] = (0, QC.useState)(null), Kz = uC.min, [Yz, dz] = (0, QC.useState)(Kz);
+      Yz[0] === Kz[0] && Yz[1] === Kz[1] && Yz[2] === Kz[2] || (dz(Kz), null !== ez && hz({
+        ...ez,
+        position: nz(ez.position, nz(Yz, fz(Kz, -1)))
+      }));
+      const mz = (0, QC.useMemo)((() => function(CC) {
+          return [CC.max[0] - CC.min[0] + 1, CC.max[1] - CC.min[1] + 1, CC.max[2] - CC.min[2] + 1]
+        }(uC)), [uC]),
+        Hz = (0, QC.useMemo)((() => function(CC, zC) {
+          const ZC = [],
+            QC = [];
+          for (const [wC, bC] of Object.entries(CC.frequencies)) {
+            const CC = Number(wC);
+            for (const [wC, nC] of Object.entries(bC)) {
+              const bC = Number(wC);
+              for (const [wC, fC] of Object.entries(nC)) fC <= 0 || (ZC.push(CC - zC[0], bC - zC[1], Number(wC) - zC[2]), QC.push(fC))
             }
           }
-        }
-      }
-    }
-    class Sk extends Dk {
-      process(kk, ek, ik) {
-        for (let Dk = 0; Dk < this.children.length; Dk++) {
-          const fk = this.children[Dk];
-          if (fk.isValid(kk)) return fk.process(kk, ek, ik)
-        }
-        return ""
-      }
-    }
-    class bk extends Dk {
-      isValid(kk) {
-        return this.testExpression.isTrue(kk)
-      }
-    }
-    class rk {
-      isTrue(kk) {
-        return !0
-      }
-      static postfixToInfix(kk) {
-        const ek = [];
-        for (const ik of kk)
-          if (void 0 === rk._OperatorPriority[ik]) ek.push(ik);
-          else {
-            const kk = ek[ek.length - 1],
-              Dk = ek[ek.length - 2];
-            ek.length -= 2, ek.push(`(${Dk}${ik}${kk})`)
-          } return ek[ek.length - 1]
-      }
-      static infixToPostfix(kk) {
-        const ek = rk._InfixToPostfixCache.get(kk);
-        if (ek) return ek.accessTime = Date.now(), ek.result;
-        if (!kk.includes("&&") && !kk.includes("||") && !kk.includes(")") && !kk.includes("(")) return [kk];
-        const ik = [];
-        let Dk = -1;
-        const fk = () => {
-            Mk = Mk.trim(), "" !== Mk && (ik.push(Mk), Mk = "")
-          },
-          Sk = kk => {
-            Dk < rk._Stack.length - 1 && (rk._Stack[++Dk] = kk)
-          },
-          bk = () => rk._Stack[Dk],
-          Pk = () => -1 === Dk ? "!!INVALID EXPRESSION!!" : rk._Stack[Dk--];
-        let mk = 0,
-          Mk = "";
-        for (; mk < kk.length;) {
-          const ek = kk.charAt(mk),
-            Kk = mk < kk.length - 1 ? kk.substring(mk, 2 + mk) : "";
-          if ("(" === ek) Mk = "", Sk(ek);
-          else if (")" === ek) {
-            for (fk(); - 1 !== Dk && "(" !== bk();) ik.push(Pk());
-            Pk()
-          } else if (rk._OperatorPriority[Kk] > 1) {
-            for (fk(); - 1 !== Dk && rk._OperatorPriority[bk()] >= rk._OperatorPriority[Kk];) ik.push(Pk());
-            Sk(Kk), mk++
-          } else Mk += ek;
-          mk++
-        }
-        for (fk(); - 1 !== Dk;) "(" === bk() ? Pk() : ik.push(Pk());
-        return rk._InfixToPostfixCache.size >= rk.InfixToPostfixCacheLimitSize && rk.ClearCache(), rk._InfixToPostfixCache.set(kk, {
-          result: ik,
-          accessTime: Date.now()
-        }), ik
-      }
-      static ClearCache() {
-        const kk = Array.from(rk._InfixToPostfixCache.entries()).sort(((kk, ek) => kk[1].accessTime - ek[1].accessTime));
-        for (let ek = 0; ek < rk.InfixToPostfixCacheCleanupSize; ek++) rk._InfixToPostfixCache.delete(kk[ek][0])
-      }
-    }
-    rk.InfixToPostfixCacheLimitSize = 5e4, rk.InfixToPostfixCacheCleanupSize = 25e3, rk._InfixToPostfixCache = new Map, rk._OperatorPriority = {
-      ")": 0,
-      "(": 1,
-      "||": 2,
-      "&&": 3
-    }, rk._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class Pk extends rk {
-      constructor(kk) {
-        let ek = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = kk, this.not = ek
-      }
-      isTrue(kk) {
-        let ek = void 0 !== kk[this.define];
-        return this.not && (ek = !ek), ek
-      }
-    }
-    class mk extends rk {
-      isTrue(kk) {
-        return this.leftOperand.isTrue(kk) || this.rightOperand.isTrue(kk)
-      }
-    }
-    class Mk extends rk {
-      isTrue(kk) {
-        return this.leftOperand.isTrue(kk) && this.rightOperand.isTrue(kk)
-      }
-    }
-    class Kk extends rk {
-      constructor(kk, ek, ik) {
-        super(), this.define = kk, this.operand = ek, this.testValue = ik
-      }
-      toString() {
-        return `${this.define} ${this.operand} ${this.testValue}`
-      }
-      isTrue(kk) {
-        let ek = !1;
-        const ik = parseInt(void 0 != kk[this.define] ? kk[this.define] : this.define),
-          Dk = parseInt(void 0 != kk[this.testValue] ? kk[this.testValue] : this.testValue);
-        if (isNaN(ik) || isNaN(Dk)) return !1;
-        switch (this.operand) {
-          case ">":
-            ek = ik > Dk;
-            break;
-          case "<":
-            ek = ik < Dk;
-            break;
-          case "<=":
-            ek = ik <= Dk;
-            break;
-          case ">=":
-            ek = ik >= Dk;
-            break;
-          case "==":
-            ek = ik === Dk;
-            break;
-          case "!=":
-            ek = ik !== Dk
-        }
-        return ek
-      }
-    }
-    var xk = ik(39447),
-      nk = ik(39445);
-    const Uk = /defined\s*?\((.+?)\)/g,
-      Hk = /defined\s*?\[(.+?)\]/g,
-      wk = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      lk = /__decl__/,
-      pk = /light\{X\}.(\w*)/g,
-      yk = /\{X\}/g,
-      Yk = [],
-      Lk = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
-
-    function Ck(kk) {
-      kk.processor && kk.processor.initializeShaders && kk.processor.initializeShaders(kk.processingContext)
-    }
-
-    function Ak(kk, ek, ik, Dk) {
-      ek.processor?.preProcessShaderCode && (kk = ek.processor.preProcessShaderCode(kk, ek.isFragment)), Ik(kk, ek, (kk => {
-        ek.processCodeAfterIncludes && (kk = ek.processCodeAfterIncludes(ek.isFragment ? "fragment" : "vertex", kk, ek.defines));
-        const fk = function(kk, ek, ik) {
-          let Dk = function(kk, ek) {
-            if (ek.processor?.noPrecision) return kk;
-            const ik = ek.shouldUseHighPrecisionShader; - 1 === kk.indexOf("precision highp float") ? kk = ik ? "precision highp float;\n" + kk : "precision mediump float;\n" + kk : ik || (kk = kk.replace("precision highp float", "precision mediump float"));
-            return kk
-          }(kk, ek);
-          if (!ek.processor) return Dk;
-          if (0 === ek.processor.shaderLanguage && -1 !== Dk.indexOf("#version 3") && (Dk = Dk.replace("#version 300 es", ""), !ek.processor.parseGLES3)) return Dk;
-          const fk = ek.defines,
-            Sk = qk(ek, ik);
-          ek.processor.preProcessor && (Dk = ek.processor.preProcessor(Dk, fk, Sk, ek.isFragment, ek.processingContext));
-          const bk = {};
-          Dk = uk(Dk, Sk, ek, bk), ek.processor.postProcessor && (Dk = ek.processor.postProcessor(Dk, fk, ek.isFragment, ek.processingContext, ik ? {
-            drawBuffersExtensionDisabled: !ik.getCaps().drawBuffersExtension
-          } : {}, Sk, bk));
-          ik?._features.needShaderCodeInlining && (Dk = ik.inlineShaderCode(Dk));
-          return Dk
-        }(kk, ek, Dk);
-        ik(fk, kk)
-      }))
-    }
-
-    function jk(kk, ek, ik) {
-      return ik.processor && ik.processor.finalizeShaders ? ik.processor.finalizeShaders(kk, ek, ik.processingContext) : {
-        vertexCode: kk,
-        fragmentCode: ek
-      }
-    }
-
-    function sk(kk) {
-      const ek = /defined\((.+)\)/.exec(kk);
-      if (ek && ek.length) return new Pk(ek[1].trim(), "!" === kk[0]);
-      const ik = ["==", "!=", ">=", "<=", "<", ">"];
-      let Dk = "",
-        fk = 0;
-      for (Dk of ik)
-        if (fk = kk.indexOf(Dk), fk > -1) break;
-      if (-1 === fk) return new Pk(kk);
-      const Sk = kk.substring(0, fk).trim(),
-        bk = kk.substring(fk + Dk.length).trim();
-      return new Kk(Sk, Dk, bk)
-    }
-
-    function dk(kk, ek) {
-      const ik = new bk,
-        Dk = kk.substring(0, ek);
-      let fk = kk.substring(ek);
-      return fk = fk.substring(0, (fk.indexOf("//") + 1 || fk.length + 1) - 1).trim(), ik.testExpression = "#ifdef" === Dk ? new Pk(fk) : "#ifndef" === Dk ? new Pk(fk, !0) : function(kk) {
-        kk = kk.replace(Uk, "defined[$1]");
-        const ek = rk.infixToPostfix(kk),
-          ik = [];
-        for (const fk of ek)
-          if ("||" !== fk && "&&" !== fk) ik.push(fk);
-          else if (ik.length >= 2) {
-          let kk = ik[ik.length - 1],
-            ek = ik[ik.length - 2];
-          ik.length -= 2;
-          const Dk = "&&" == fk ? new Mk : new mk;
-          "string" === typeof kk && (kk = kk.replace(Hk, "defined($1)")), "string" === typeof ek && (ek = ek.replace(Hk, "defined($1)")), Dk.leftOperand = "string" === typeof ek ? sk(ek) : ek, Dk.rightOperand = "string" === typeof kk ? sk(kk) : kk, ik.push(Dk)
-        }
-        let Dk = ik[ik.length - 1];
-        return "string" === typeof Dk && (Dk = Dk.replace(Hk, "defined($1)")), "string" === typeof Dk ? sk(Dk) : Dk
-      }(fk), ik
-    }
-
-    function Vk(kk, ek, ik, fk) {
-      let Sk;
-      for (; Fk(kk, ik, fk);) {
-        Sk = kk.currentLine;
-        const bk = Sk.substring(0, 5).toLowerCase();
-        if ("#else" === bk) {
-          const ik = new Dk;
-          return ek.children.push(ik), void Fk(kk, ik, fk)
-        }
-        if ("#elif" === bk) {
-          const kk = dk(Sk, 5);
-          ek.children.push(kk), ik = kk
-        }
-      }
-    }
-
-    function Fk(kk, ek, ik) {
-      for (; kk.canRead;) {
-        kk.lineIndex++;
-        const fk = kk.currentLine;
-        if (fk.indexOf("#") >= 0) {
-          const Dk = Lk.exec(fk);
-          if (Dk && Dk.length) {
-            switch (Dk[0]) {
-              case "#ifdef": {
-                const Dk = new Sk;
-                ek.children.push(Dk);
-                const bk = dk(fk, 6);
-                Dk.children.push(bk), Vk(kk, Dk, bk, ik);
-                break
-              }
-              case "#else":
-              case "#elif":
-                return !0;
-              case "#endif":
-                return !1;
-              case "#ifndef": {
-                const Dk = new Sk;
-                ek.children.push(Dk);
-                const bk = dk(fk, 7);
-                Dk.children.push(bk), Vk(kk, Dk, bk, ik);
-                break
-              }
-              case "#if": {
-                const Dk = new Sk,
-                  bk = dk(fk, 3);
-                ek.children.push(Dk), Dk.children.push(bk), Vk(kk, Dk, bk, ik);
-                break
-              }
-            }
-            continue
+          return {
+            positions: Int32Array.from(ZC),
+            values: Float64Array.from(QC),
+            count: QC.length
           }
-        }
-        const bk = new Dk;
-        if (bk.line = fk, ek.children.push(bk), "#" === fk[0] && "d" === fk[1]) {
-          const kk = fk.replace(";", "").split(" ");
-          bk.additionalDefineKey = kk[1], 3 === kk.length && (bk.additionalDefineValue = kk[2])
-        }
-      }
-      return !1
-    }
-
-    function uk(kk, ek, ik, Sk) {
-      const bk = new Dk,
-        rk = new fk;
-      return rk.lineIndex = -1, rk.lines = kk.split("\n"), Fk(rk, bk, Sk), bk.process(ek, ik, Sk)
-    }
-
-    function qk(kk, ek) {
-      const ik = kk.defines,
-        Dk = {};
-      for (const fk of ik) {
-        const kk = fk.replace("#define", "").replace(";", "").trim().split(" ");
-        Dk[kk[0]] = kk.length > 1 ? kk[1] : ""
-      }
-      return 0 === kk.processor?.shaderLanguage && (Dk.GL_ES = "true"), Dk.__VERSION__ = kk.version, Dk[kk.platformName] = "true", (0, nk.f)(Dk, ek?.isNDCHalfZRange, ek?.Xik, ek?.useExactSrgbConversions), Dk
-    }
-
-    function Ik(kk, ek, ik) {
-      let Dk;
-      for (Yk.length = 0; null !== (Dk = wk.exec(kk));) Yk.push(Dk);
-      let fk = [kk],
-        Sk = !1;
-      for (const rk of Yk) {
-        let kk = rk[1];
-        if (-1 !== kk.indexOf("__decl__") && (kk = kk.replace(lk, ""), ek.supportsUniformBuffers && (kk = kk.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), kk += "Declaration"), !ek.includesShadersStore[kk]) {
-          const Dk = ek.shadersRepository + "ShadersInclude/" + kk + ".fx";
-          return void zk.loadFile(Dk, (Dk => {
-            ek.includesShadersStore[kk] = Dk, Ik(fk.join(""), ek, ik)
-          }))
-        } {
-          let ik = ek.includesShadersStore[kk];
-          if (rk[2]) {
-            const kk = rk[3].split(",");
-            for (let ek = 0; ek < kk.length; ek += 2) {
-              const Dk = new RegExp(kk[ek], "g"),
-                fk = kk[ek + 1];
-              ik = ik.replace(Dk, fk)
-            }
+        }(zC, Kz)), [zC, Kz]),
+        Ez = iC * bz.cameraFOV / 100,
+        lz = Wz.height > 0 ? Wz.width / Wz.height : 1,
+        Xz = (0, QC.useMemo)((() => function(CC, zC) {
+          return {
+            min: [CC.min[0] - zC[0], CC.min[1] - zC[1], CC.min[2] - zC[2]],
+            max: [CC.max[0] - zC[0] + 1, CC.max[1] - zC[1] + 1, CC.max[2] - zC[2] + 1]
           }
-          if (rk[4]) {
-            const kk = rk[5];
-            if (-1 !== kk.indexOf("..")) {
-              const Dk = kk.split(".."),
-                fk = parseInt(Dk[0]);
-              let Sk = parseInt(Dk[1]),
-                bk = ik.slice(0);
-              ik = "", isNaN(Sk) && (Sk = ek.indexParameters[Dk[1]]);
-              for (let kk = fk; kk < Sk; kk++) ek.supportsUniformBuffers || (bk = bk.replace(pk, ((kk, ek) => ek + "{X}"))), ik += bk.replace(yk, kk.toString()) + "\n"
-            } else ek.supportsUniformBuffers || (ik = ik.replace(pk, ((kk, ek) => ek + "{X}"))), ik = ik.replace(yk, kk)
-          }
-          const Dk = [];
-          for (const kk of fk) {
-            const ek = kk.split(rk[0]);
-            for (let kk = 0; kk < ek.length - 1; kk++) Dk.push(ek[kk]), Dk.push(ik);
-            Dk.push(ek[ek.length - 1])
-          }
-          fk = Dk, Sk = Sk || ik.indexOf("#include<") >= 0 || ik.indexOf("#include <") >= 0
-        }
-      }
-      Yk.length = 0;
-      const bk = fk.join("");
-      Sk ? Ik(bk.toString(), ek, ik) : ik(bk)
-    }
-    const zk = {
-      loadFile: (kk, ek, ik, Dk, fk, Sk) => {
-        throw (0, xk.k)("FileTools")
-      }
-    }
-  },
-  39445: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => fk,
-      c: () => Sk,
-      f: () => rk,
-      h: () => bk,
-      k: () => Pk
-    });
-    var Dk = ik(39447);
-    const fk = {};
-
-    function Sk(kk, ek) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (ek ? ek + "\n" : "") + kk
-    }
-
-    function bk(kk, ek, ik, Sk, bk, rk, Pk) {
-      const mk = Pk || fk.loadFile;
-      if (!mk) throw (0, Dk.k)("FileTools");
-      return mk(kk, ek, ik, Sk, bk, rk)
-    }
-
-    function rk(kk, ek, ik, Dk) {
-      if (kk) return ek ? kk.IS_NDC_HALF_ZRANGE = "" : delete kk.IS_NDC_HALF_ZRANGE, ik ? kk.USE_REVERSE_DEPTHBUFFER = "" : delete kk.USE_REVERSE_DEPTHBUFFER, void(Dk ? kk.USE_EXACT_SRGB_CONVERSIONS = "" : delete kk.USE_EXACT_SRGB_CONVERSIONS);
-      {
-        let kk = "";
-        return ek && (kk += "#define IS_NDC_HALF_ZRANGE"), ik && (kk && (kk += "\n"), kk += "#define USE_REVERSE_DEPTHBUFFER"), Dk && (kk && (kk += "\n"), kk += "#define USE_EXACT_SRGB_CONVERSIONS"), kk
-      }
-    }
-
-    function Pk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Dk = arguments.length > 3 ? arguments[3] : void 0;
-      switch (kk) {
-        case 3: {
-          const kk = new Int8Array(ek);
-          return Dk && kk.set(new Int8Array(Dk)), kk
-        }
-        case 0: {
-          const kk = new Uint8Array(ek);
-          return Dk && kk.set(new Uint8Array(Dk)), kk
-        }
-        case 4: {
-          const kk = "number" !== typeof ek ? new Int16Array(ek) : new Int16Array(ik ? ek / 2 : ek);
-          return Dk && kk.set(new Int16Array(Dk)), kk
-        }
-        case 5:
-        case 8:
-        case 9:
-        case 10:
-        case 2: {
-          const kk = "number" !== typeof ek ? new Uint16Array(ek) : new Uint16Array(ik ? ek / 2 : ek);
-          return Dk && kk.set(new Uint16Array(Dk)), kk
-        }
-        case 6: {
-          const kk = "number" !== typeof ek ? new Int32Array(ek) : new Int32Array(ik ? ek / 4 : ek);
-          return Dk && kk.set(new Int32Array(Dk)), kk
-        }
-        case 7:
-        case 11:
-        case 12:
-        case 13:
-        case 14:
-        case 15: {
-          const kk = "number" !== typeof ek ? new Uint32Array(ek) : new Uint32Array(ik ? ek / 4 : ek);
-          return Dk && kk.set(new Uint32Array(Dk)), kk
-        }
-        case 1: {
-          const kk = "number" !== typeof ek ? new Float32Array(ek) : new Float32Array(ik ? ek / 4 : ek);
-          return Dk && kk.set(new Float32Array(Dk)), kk
-        }
-      }
-      const fk = new Uint8Array(ek);
-      return Dk && fk.set(new Uint8Array(Dk)), fk
-    }
-  },
-  39447: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => mk,
-      h: () => Mk,
-      i: () => Pk,
-      k: () => fk
-    });
-    const Dk = {};
-
-    function fk(kk) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Dk[kk]) return Dk[kk] = !0, `${kk} needs to be imported before as it contains a side-effect required by your code.`
-    }
-    const Sk = {};
-    let bk = !1,
-      rk = 0;
-
-    function Pk(kk, ek) {
-      let ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Dk = function() {
-        if ((ik || bk) && 0 === rk) {
-          const ik = `${kk}.${ek}`;
-          Sk[ik] || (Sk[ik] = !0, console.warn(`[Babylon.js] ${ik}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
-        }
+        }(rC, Kz)), [rC, Kz]),
+        cz = Zz(Xz, lz, Ez),
+        uz = null !== ez && void 0 !== ez ? ez : cz,
+        rz = (0, QC.useRef)({
+          fittedView: cz,
+          fieldOfView: Ez,
+          mouseSensitivity: bz.mouseSensitivity,
+          canLock: pz
+        });
+      rz.current = {
+        fittedView: cz,
+        fieldOfView: Ez,
+        mouseSensitivity: bz.mouseSensitivity,
+        canLock: pz
       };
-      return Dk.__isSideEffectStub = !0, Dk
-    }
-
-    function mk(kk) {
-      return !!kk && !kk.__isSideEffectStub
-    }
-
-    function Mk(kk, ek) {
-      return {
-        get() {},
-        set(kk) {
-          Object.defineProperty(this, ek, {
-            value: kk,
-            writable: !0,
-            configurable: !0,
-            enumerable: !0
-          })
-        },
-        configurable: !0,
-        enumerable: !0
-      }
-    }
-  },
-  39429: (kk, ek, ik) => {
-    function Dk() {
-      return "undefined" !== typeof window
-    }
-
-    function fk() {
-      return "undefined" !== typeof navigator
-    }
-
-    function Sk() {
-      return "undefined" !== typeof document
-    }
-
-    function bk(kk) {
-      let ek = "",
-        ik = kk.firstChild;
-      for (; ik;) 3 === ik.nodeType && (ek += ik.textContent), ik = ik.nextSibling;
-      return ek
-    }
-    ik.d(ek, {
-      c: () => bk,
-      e: () => Sk,
-      f: () => fk,
-      i: () => Dk
-    })
-  },
-  39617: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Dk,
-      g: () => fk,
-      j: () => Sk
-    });
-    class Dk extends Error {}
-    Dk._setPrototypeOf = Object.setPrototypeOf || ((kk, ek) => (kk.__proto__ = ek, kk));
-    const fk = {
-      MeshInvalidPositionsError: 0,
-      UnsupportedTextureError: 1e3,
-      GLTFLoaderUnexpectedMagicError: 2e3,
-      SceneLoaderError: 3e3,
-      LoadFileError: 4e3,
-      RequestFileError: 4001,
-      ReadFileError: 4002
-    };
-    class Sk extends Dk {
-      constructor(kk, ek, ik) {
-        super(kk), this.errorCode = ek, this.innerError = ik, this.name = "RuntimeError", Dk._setPrototypeOf(this, Sk.prototype)
-      }
-    }
-  },
-  39607: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => qk,
-      e: () => yk,
-      f: () => dk,
-      h: () => Fk,
-      k: () => jk,
-      o: () => Ck,
-      q: () => Ak,
-      s: () => Ek,
-      t: () => sk,
-      w: () => Yk
-    });
-    var Dk = ik(39612),
-      fk = ik(39429),
-      Sk = ik(36726);
-    class bk {}
-    bk.FilesToLoad = {};
-    var rk = ik(39617),
-      Pk = ik(39620),
-      mk = ik(36722),
-      Mk = ik(39445),
-      Kk = ik(39455),
-      xk = ik(38272),
-      nk = ik(39458),
-      Uk = ik(39623);
-    const Hk = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class wk extends rk.j {
-      constructor(kk, ek) {
-        super(kk, rk.g.LoadFileError), this.name = "LoadFileError", rk.c._setPrototypeOf(this, wk.prototype), ek instanceof Dk.d ? this.request = ek : this.file = ek
-      }
-    }
-    class lk extends rk.j {
-      constructor(kk, ek) {
-        super(kk, rk.g.RequestFileError), this.request = ek, this.name = "RequestFileError", rk.c._setPrototypeOf(this, lk.prototype)
-      }
-    }
-    class pk extends rk.j {
-      constructor(kk, ek) {
-        super(kk, rk.g.ReadFileError), this.file = ek, this.name = "ReadFileError", rk.c._setPrototypeOf(this, pk.prototype)
-      }
-    }
-    const yk = {
-        DefaultRetryStrategy: class {
-          static ExponentialBackoff() {
-            let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (ik, Dk, fk) => 0 !== Dk.status || fk >= kk || -1 !== ik.indexOf("file:") ? -1 : Math.pow(2, fk) * ek
-          }
-        }.ExponentialBackoff(),
-        BaseUrl: "",
-        CorsBehavior: "anonymous",
-        PreprocessUrl: kk => kk,
-        ScriptBaseUrl: "",
-        ScriptPreprocessUrl: kk => kk,
-        CleanUrl: kk => kk = kk.replace(/#/gm, "%23")
-      },
-      Yk = (kk, ek) => {
-        if ((!kk || 0 !== kk.indexOf("data:")) && yk.CorsBehavior)
-          if ("string" === typeof yk.CorsBehavior || yk.CorsBehavior instanceof String) ek.crossOrigin = yk.CorsBehavior;
-          else {
-            const ik = yk.CorsBehavior(kk);
-            ik && (ek.crossOrigin = ik)
-          }
-      },
-      Lk = {
-        getRequiredSize: null
-      },
-      Ck = function(kk, ek, ik, fk) {
-        let Sk, rk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          Mk = arguments.length > 5 ? arguments[5] : void 0,
-          Kk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : mk.e.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !Kk?._features.forceBitmapOverHTMLImageElement) return ik("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (Kk?._features.forceBitmapOverHTMLImageElement && "string" !== typeof kk && "undefined" !== typeof Blob) {
-          let Dk;
-          if (kk instanceof Blob) Dk = kk;
-          else {
-            const ek = kk instanceof ArrayBuffer ? kk : (0, Uk.m)(kk);
-            Dk = new Blob([ek], {
-              type: rk
-            })
-          }
-          return Kk.createImageBitmap(Dk, {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none",
-            ...Mk
-          }).then(ek).catch((ek => {
-            ik && ik("Error while trying to load image: " + kk, ek)
-          })), null
-        }
-        let xk = !1;
-        if (kk instanceof ArrayBuffer || ArrayBuffer.isView(kk))
-          if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let ek;
-            ek = kk instanceof ArrayBuffer ? kk : (0, Uk.m)(kk), Sk = URL.createObjectURL(new Blob([ek], {
-              type: rk
-            })), xk = !0
-          } else Sk = `data:${rk};base64,` + (0, Pk.i)(kk);
-        else kk instanceof Blob ? (Sk = URL.createObjectURL(kk), xk = !0) : (Sk = yk.CleanUrl(kk), Sk = yk.PreprocessUrl(Sk));
-        const nk = ek => {
-          if (ik) {
-            const Dk = Sk || kk.toString();
-            ik(`Error while trying to load image: ${0===Dk.indexOf("http")||Dk.length<=128?Dk:Dk.slice(0,128)+"..."}`, ek)
-          }
-        };
-        if (Kk?._features.forceBitmapOverHTMLImageElement) return jk(Sk, (Dk => {
-          Kk.createImageBitmap(new Blob([Dk], {
-            type: rk
-          }), {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none",
-            ...Mk
-          }).then((kk => {
-            ek(kk), xk && URL.revokeObjectURL(Sk)
-          })).catch((ek => {
-            ik && ik("Error while trying to load image: " + kk, ek)
-          }))
-        }), void 0, fk || void 0, !0, ((kk, ek) => {
-          nk(ek)
-        })), null;
-        const Hk = new Image;
-        if (Lk.getRequiredSize) {
-          const ek = Lk.getRequiredSize(kk);
-          ek.width && (Hk.width = ek.width), ek.height && (Hk.height = ek.height)
-        }
-        Yk(Sk, Hk);
-        const wk = [],
-          lk = () => {
-            for (const kk of wk) kk.target.removeEventListener(kk.name, kk.handler);
-            wk.length = 0
-          };
-        wk.push({
-          target: Hk,
-          name: "load",
-          handler: () => {
-            lk(), ek(Hk), xk && Hk.src && URL.revokeObjectURL(Hk.src)
-          }
-        }), wk.push({
-          target: Hk,
-          name: "error",
-          handler: kk => {
-            lk(), nk(kk), xk && Hk.src && URL.revokeObjectURL(Hk.src)
-          }
-        }), wk.push({
-          target: document,
-          name: "securitypolicyviolation",
-          handler: kk => {
-            if (kk.blockedURI !== Hk.src || "CU" === kk.disposition) return;
-            lk();
-            const ek = new Error(`CSP violation of policy ${kk.effectiveDirective} ${kk.blockedURI}. Current policy is ${kk.originalPolicy}`);
-            mk.e.UseFallbackTexture = !1, nk(ek), xk && Hk.src && URL.revokeObjectURL(Hk.src), Hk.src = ""
-          }
-        }), (() => {
-          for (const kk of wk) kk.target.addEventListener(kk.name, kk.handler)
-        })();
-        const pk = "blob:" === Sk.substring(0, 5),
-          Ck = "data:" === Sk.substring(0, 5),
-          Ak = () => {
-            pk || Ck || !Dk.d.IsCustomRequestAvailable ? Hk.src = Sk : jk(Sk, ((kk, ek, ik) => {
-              const Dk = new Blob([kk], {
-                  type: !rk && ik ? ik : rk
-                }),
-                fk = URL.createObjectURL(Dk);
-              xk = !0, Hk.src = fk
-            }), void 0, fk || void 0, !0, ((kk, ek) => {
-              nk(ek)
-            }))
-          },
-          sk = () => {
-            fk && fk.loadImage(Sk, Hk)
-          };
-        if (!pk && !Ck && fk && fk.enableTexturesOffline) fk.open(sk, Ak);
-        else {
-          if (-1 !== Sk.indexOf("file:")) {
-            const kk = decodeURIComponent(Sk.substring(5).toLowerCase());
-            if (bk.FilesToLoad[kk] && "undefined" !== typeof URL) {
-              try {
-                let ek;
-                try {
-                  ek = URL.createObjectURL(bk.FilesToLoad[kk])
-                } catch (dk) {
-                  ek = URL.createObjectURL(bk.FilesToLoad[kk])
-                }
-                Hk.src = ek, xk = !0
-              } catch (Vk) {
-                Hk.src = ""
-              }
-              return Hk
-            }
-          }
-          Ak()
-        }
-        return Hk
-      },
-      Ak = (kk, ek, ik, Dk, fk) => {
-        const bk = new FileReader,
-          rk = {
-            onCompleteObservable: new Sk.c,
-            abort: () => bk.abort()
-          };
-        return bk.onloadend = () => rk.onCompleteObservable.notifyObservers(rk), fk && (bk.onerror = () => {
-          fk(new pk(`Unable to read ${kk.name}`, kk))
-        }), bk.onload = kk => {
-          ek(kk.target.result)
-        }, ik && (bk.onprogress = ik), Dk ? bk.readAsArrayBuffer(kk) : bk.readAsText(kk), rk
-      },
-      jk = (kk, ek, ik, Dk, fk, Pk, mk) => {
-        if (kk.name) return Ak(kk, ek, ik, fk, Pk ? kk => {
-          Pk(void 0, kk)
-        } : void 0);
-        const Mk = kk;
-        if (-1 !== Mk.indexOf("file:")) {
-          let kk = decodeURIComponent(Mk.substring(5).toLowerCase());
-          0 === kk.indexOf("./") && (kk = kk.substring(2));
-          const Dk = bk.FilesToLoad[kk];
-          if (Dk) return Ak(Dk, ek, ik, fk, Pk ? kk => Pk(void 0, new wk(kk.message, kk.file)) : void 0)
-        }
-        const {
-          match: Kk,
-          type: Uk
-        } = uk(Mk);
-        if (Kk) {
-          const kk = {
-            onCompleteObservable: new Sk.c,
-            abort: () => () => {}
-          };
-          try {
-            const kk = fk ? qk(Mk) : Ik(Mk);
-            ek(kk, void 0, Uk)
-          } catch (rk) {
-            Pk ? Pk(void 0, rk) : xk.b.Error(rk.message || "Failed to parse the Data URL")
-          }
-          return nk.e.SetImmediate((() => {
-            kk.onCompleteObservable.notifyObservers(kk)
-          })), kk
-        }
-        return sk(Mk, ((kk, ik) => {
-          ek(kk, ik?.responseURL, ik?.getResponseHeader("content-type"))
-        }), ik, Dk, fk, Pk ? kk => {
-          Pk(kk.request, new wk(kk.message, kk.request))
-        } : void 0, mk)
-      },
-      sk = (kk, ek, ik, bk, rk, Pk, Mk) => {
-        null !== bk && (bk ?? (bk = mk.e.LastCreatedScene?.offlineProvider)), kk = yk.CleanUrl(kk), kk = yk.PreprocessUrl(kk);
-        const Kk = yk.BaseUrl + kk;
-        let nk = !1;
-        const Uk = {
-            onCompleteObservable: new Sk.c,
-            abort: () => nk = !0
-          },
-          Hk = () => {
-            let kk, Sk = new Dk.d,
-              bk = null;
-            const mk = () => {
-              Sk && (ik && Sk.removeEventListener("progress", ik), kk && Sk.removeEventListener("readystatechange", kk), Sk.removeEventListener("loadend", Hk))
-            };
-            let Hk = () => {
-              mk(), Uk.onCompleteObservable.notifyObservers(Uk), Uk.onCompleteObservable.clear(), ik = void 0, kk = null, Hk = null, Pk = void 0, Mk = void 0, ek = void 0
-            };
-            Uk.abort = () => {
-              nk = !0, Hk && Hk(), Sk && Sk.readyState !== (XMLHttpRequest.DONE || 4) && Sk.abort(), null !== bk && (clearTimeout(bk), bk = null), Sk = null
-            };
-            const wk = kk => {
-                const ek = kk.message || "Unknown error";
-                Pk && Sk ? Pk(new lk(ek, Sk)) : xk.b.Error(ek)
-              },
-              pk = xk => {
-                if (Sk) {
-                  if (Sk.open("GET", Kk), Mk) try {
-                    Mk(Sk)
-                  } catch (Uk) {
-                    return void wk(Uk)
-                  }
-                  rk && (Sk.responseType = "arraybuffer"), ik && Sk.addEventListener("progress", ik), Hk && Sk.addEventListener("loadend", Hk), kk = () => {
-                    if (!nk && Sk && Sk.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (kk && Sk.removeEventListener("readystatechange", kk), Sk.status >= 200 && Sk.status < 300 || 0 === Sk.status && (!(0, fk.i)() || Vk())) {
-                        const kk = rk ? Sk.response : Sk.responseText;
-                        if (null !== kk) {
-                          try {
-                            ek && ek(kk, Sk)
-                          } catch (Uk) {
-                            wk(Uk)
-                          }
-                          return
-                        }
-                      }
-                      const ik = yk.DefaultRetryStrategy;
-                      if (ik) {
-                        const kk = ik(Kk, Sk, xk);
-                        if (-1 !== kk) return mk(), Sk = new Dk.d, void(bk = setTimeout((() => pk(xk + 1)), kk))
-                      }
-                      const Mk = new lk("Error status: " + Sk.status + " " + Sk.statusText + " - Unable to load " + Kk, Sk);
-                      Pk && Pk(Mk)
-                    }
-                  }, Sk.addEventListener("readystatechange", kk), Sk.send()
-                }
-              };
-            pk(0)
-          };
-        if (bk && bk.enableSceneOffline && !kk.startsWith("blob:")) {
-          const Dk = kk => {
-              kk && kk.status > 400 ? Pk && Pk(kk) : Hk()
+      const sz = (0, QC.useMemo)((() => {
+          if (!xz) return null;
+          const CC = (CC, ZC, QC) => {
+              var wC, bC, nC;
+              return null !== (wC = null === (bC = zC.frequencies[CC + Kz[0]]) || void 0 === bC || null === (nC = bC[ZC + Kz[1]]) || void 0 === nC ? void 0 : nC[QC + Kz[2]]) && void 0 !== wC ? wC : 0
             },
-            fk = () => {
-              bk && bk.loadFile(yk.BaseUrl + kk, (kk => {
-                !nk && ek && ek(kk), Uk.onCompleteObservable.notifyObservers(Uk)
-              }), ik ? kk => {
-                !nk && ik && ik(kk)
-              } : void 0, Dk, rk)
-            };
-          bk.open(fk, Dk)
-        } else Hk();
-        return Uk
-      },
-      dk = kk => {
-        const {
-          match: ek,
-          type: ik
-        } = uk(kk);
-        if (ek) return ik || void 0;
-        const Dk = kk.lastIndexOf(".");
-        switch (kk.substring(Dk + 1).toLowerCase()) {
-          case "glb":
-            return "model/gltf-binary";
-          case "bin":
-            return "application/octet-stream";
-          case "YF":
-            return "model/gltf+json";
-          case "jpg":
-          case "jpeg":
-            return "image/jpeg";
-          case "png":
-            return "image/png";
-          case "webp":
-            return "image/webp";
-          case "ktx":
-            return "image/ktx";
-          case "ktx2":
-            return "image/ktx2";
-          case "avif":
-            return "image/avif";
-          default:
-            return
-        }
-      },
-      Vk = () => "undefined" !== typeof location && "file:" === location.protocol,
-      Fk = kk => Hk.test(kk),
-      uk = kk => {
-        const ek = Hk.exec(kk);
-        if (null === ek || 0 === ek.length) return {
-          match: !1,
-          type: ""
-        };
-        return {
-          match: !0,
-          type: ek[0].replace("data:", "").replace(";base64,", "")
-        }
-      };
-
-    function qk(kk) {
-      return (0, Pk.d)(kk.split(",")[1])
-    }
-    const Ik = kk => (0, Pk.h)(kk.split(",")[1]);
-    let zk;
-    const Qk = (kk, ek, ik, Dk, fk, Sk, bk, rk, Pk, mk) => {
-      zk = {
-        DecodeBase64UrlToBinary: kk,
-        DecodeBase64UrlToString: ek,
-        DefaultRetryStrategy: ik.DefaultRetryStrategy,
-        BaseUrl: ik.BaseUrl,
-        CorsBehavior: ik.CorsBehavior,
-        PreprocessUrl: ik.PreprocessUrl,
-        IsBase64DataUrl: Dk,
-        IsFileURL: fk,
-        LoadFile: Sk,
-        LoadImage: bk,
-        ReadFile: rk,
-        RequestFile: Pk,
-        SetCorsBehavior: mk
-      }, Object.defineProperty(zk, "DefaultRetryStrategy", {
-        get: function() {
-          return ik.DefaultRetryStrategy
-        },
-        set: function(kk) {
-          ik.DefaultRetryStrategy = kk
-        }
-      }), Object.defineProperty(zk, "BaseUrl", {
-        get: function() {
-          return ik.BaseUrl
-        },
-        set: function(kk) {
-          ik.BaseUrl = kk
-        }
-      }), Object.defineProperty(zk, "PreprocessUrl", {
-        get: function() {
-          return ik.PreprocessUrl
-        },
-        set: function(kk) {
-          ik.PreprocessUrl = kk
-        }
-      }), Object.defineProperty(zk, "CorsBehavior", {
-        get: function() {
-          return ik.CorsBehavior
-        },
-        set: function(kk) {
-          ik.CorsBehavior = kk
-        }
-      })
-    };
-    let vk = !1;
-
-    function Ek() {
-      vk || (vk = !0, Qk(qk, Ik, yk, Fk, Vk, jk, Ck, Ak, sk, Yk), Mk.b.loadFile = jk, Mk.b.loadImage = Ck, Kk.l.loadFile = jk)
-    }
-  },
-  39628: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => rk,
-      h: () => Sk,
-      i: () => bk
-    });
-    let Dk = null;
-
-    function fk() {
-      if (Dk) return Dk;
-      const kk = new ArrayBuffer(4),
-        ek = new Float32Array(kk),
-        ik = new Uint32Array(kk),
-        fk = new Uint32Array(512),
-        Sk = new Uint32Array(512);
-      for (let Dk = 0; Dk < 256; ++Dk) {
-        const kk = Dk - 127;
-        kk < -24 ? (fk[Dk] = 0, fk[256 | Dk] = 32768, Sk[Dk] = 24, Sk[256 | Dk] = 24) : kk < -14 ? (fk[Dk] = 1024 >> -kk - 14, fk[256 | Dk] = 1024 >> -kk - 14 | 32768, Sk[Dk] = -kk - 1, Sk[256 | Dk] = -kk - 1) : kk <= 15 ? (fk[Dk] = kk + 15 << 10, fk[256 | Dk] = kk + 15 << 10 | 32768, Sk[Dk] = 13, Sk[256 | Dk] = 13) : kk < 128 ? (fk[Dk] = 31744, fk[256 | Dk] = 64512, Sk[Dk] = 24, Sk[256 | Dk] = 24) : (fk[Dk] = 31744, fk[256 | Dk] = 64512, Sk[Dk] = 13, Sk[256 | Dk] = 13)
-      }
-      const bk = new Uint32Array(2048),
-        rk = new Uint32Array(64),
-        Pk = new Uint32Array(64);
-      for (let Dk = 1; Dk < 1024; ++Dk) {
-        let kk = Dk << 13,
-          ek = 0;
-        for (; 0 === (8388608 & kk);) kk <<= 1, ek -= 8388608;
-        kk &= -8388609, ek += 947912704, bk[Dk] = kk | ek
-      }
-      for (let Dk = 1024; Dk < 2048; ++Dk) bk[Dk] = 939524096 + (Dk - 1024 << 13);
-      for (let Dk = 1; Dk < 31; ++Dk) rk[Dk] = Dk << 23;
-      rk[31] = 1199570944, rk[32] = 2147483648;
-      for (let Dk = 33; Dk < 63; ++Dk) rk[Dk] = 2147483648 + (Dk - 32 << 23);
-      rk[63] = 3347054592;
-      for (let Dk = 1; Dk < 64; ++Dk) 32 !== Dk && (Pk[Dk] = 1024);
-      return Dk = {
-        floatView: ek,
-        uint32View: ik,
-        baseTable: fk,
-        shiftTable: Sk,
-        mantissaTable: bk,
-        exponentTable: rk,
-        offsetTable: Pk
-      }, Dk
-    }
-    const Sk = 65504;
-
-    function bk(kk) {
-      const ek = fk();
-      ek.floatView[0] = kk;
-      const ik = ek.uint32View[0],
-        Dk = ik >> 23 & 511;
-      return ek.baseTable[Dk] + ((8388607 & ik) >> ek.shiftTable[Dk])
-    }
-
-    function rk(kk) {
-      const ek = fk();
-      return ek.uint32View[0] = ek.mantissaTable[ek.offsetTable[kk >> 10] + (1023 & kk)] + ek.exponentTable[kk >> 10], ek.floatView[0]
-    }
-  },
-  39620: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => Sk,
-      h: () => fk,
-      i: () => Dk
-    });
-    const Dk = kk => {
-        const ek = ArrayBuffer.isView(kk) ? new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength) : new Uint8Array(kk);
-        return "function" === typeof ek.toBase64 ? ek.toBase64() : function(kk) {
-          const ek = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let ik, Dk, fk, Sk, bk, rk, Pk, mk = "",
-            Mk = 0;
-          for (; Mk < kk.length;) ik = kk[Mk++], Dk = Mk < kk.length ? kk[Mk++] : Number.NaN, fk = Mk < kk.length ? kk[Mk++] : Number.NaN, Sk = ik >> 2, bk = (3 & ik) << 4 | Dk >> 4, rk = (15 & Dk) << 2 | fk >> 6, Pk = 63 & fk, isNaN(Dk) ? rk = Pk = 64 : isNaN(fk) && (Pk = 64), mk += ek.charAt(Sk) + ek.charAt(bk) + ek.charAt(rk) + ek.charAt(Pk);
-          return mk
-        }(ek)
-      },
-      fk = kk => atob(kk),
-      Sk = kk => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(kk).buffer : function(kk) {
-        const ek = fk(kk),
-          ik = ek.length,
-          Dk = new Uint8Array(new ArrayBuffer(ik));
-        for (let fk = 0; fk < ik; fk++) Dk[fk] = ek.charCodeAt(fk);
-        return Dk.buffer
-      }(kk)
-  },
-  39458: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => fk,
-      h: () => bk
-    });
-    let Dk = [];
-    class fk {
-      static SetImmediate(kk) {
-        0 === Dk.length && setTimeout((() => {
-          const kk = Dk;
-          Dk = [];
-          for (const ek of kk) ek()
-        }), 1), Dk.push(kk)
-      }
-    }
-
-    function Sk(kk, ek, ik) {
-      try {
-        if (kk()) return ek(), !0
-      } catch (Dk) {
-        return ik?.(Dk), !0
-      }
-      return !1
-    }
-    const bk = function(kk, ek, ik) {
-      let Dk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        fk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        bk = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Sk(kk, ek, ik)) return null;
-      const rk = setInterval((() => {
-        Sk(kk, ek, ik) ? clearInterval(rk) : (fk -= Dk, fk < 0 && (clearInterval(rk), ik?.(new Error("Operation timed out after maximum retries. " + (bk || "")), !0)))
-      }), Dk);
-      return () => clearInterval(rk)
-    }
-  },
-  39612: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => Dk
-    });
-    class Dk {
-      constructor() {
-        this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
-      }
-      static get IsCustomRequestAvailable() {
-        return Object.keys(Dk.CustomRequestHeaders).length > 0 || Dk.CustomRequestModifiers.length > 0
-      }
-      static _CleanUrl(kk) {
-        return kk = (kk = kk.replace("file:http:", "http:")).replace("file:https:", "https:")
-      }
-      static _ShouldSkipRequestModifications(kk) {
-        return Dk.SkipRequestModificationForBabylonCDN && (kk.includes("preview.babylonjs.com") || kk.includes("cdn.babylonjs.com"))
-      }
-      static _CollectCustomizations(kk) {
-        const ek = {
-          ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
-        };
-        if (Dk._ShouldSkipRequestModifications(kk)) return {
-          url: kk,
-          headers: ek
-        };
-        for (const fk in Dk.CustomRequestHeaders) {
-          const kk = Dk.CustomRequestHeaders[fk];
-          kk && (ek[fk] = kk)
-        }
-        const ik = {
-          setRequestHeader: (kk, ik) => {
-            ek[kk] = ik
+            QC = function(CC, zC, ZC, QC) {
+              let wC = 0,
+                bC = 1 / 0;
+              for (const WC of [0, 1, 2]) {
+                if (0 === zC[WC]) {
+                  if (CC[WC] < 0 || CC[WC] > ZC[WC]) return null;
+                  continue
+                }
+                const QC = (0 - CC[WC]) / zC[WC],
+                  nC = (ZC[WC] - CC[WC]) / zC[WC];
+                wC = Math.max(wC, Math.min(QC, nC)), bC = Math.min(bC, Math.max(QC, nC))
+              }
+              if (wC > bC) return null;
+              const nC = [0, 1, 2].map((QC => Math.min(ZC[QC] - 1, Math.max(0, Math.floor(CC[QC] + zC[QC] * wC))))),
+                fC = [0, 1, 2].map((CC => Math.sign(zC[CC]))),
+                oC = [0, 1, 2].map((ZC => {
+                  if (0 === fC[ZC]) return 1 / 0;
+                  return ((fC[ZC] > 0 ? nC[ZC] + 1 : nC[ZC]) - CC[ZC]) / zC[ZC]
+                })),
+                qC = [0, 1, 2].map((CC => 0 === fC[CC] ? 1 / 0 : Math.abs(1 / zC[CC])));
+              let FC = null;
+              for (;;) {
+                const CC = QC(nC[0], nC[1], nC[2]);
+                if (CC >= 1) return nC;
+                CC > 0 && (FC = [nC[0], nC[1], nC[2]]);
+                const zC = oC[0] < oC[1] ? oC[0] < oC[2] ? 0 : 2 : oC[1] < oC[2] ? 1 : 2;
+                if (oC[zC] > bC) return FC;
+                if (nC[zC] += fC[zC], oC[zC] += qC[zC], nC[zC] < 0 || nC[zC] >= ZC[zC]) return FC
+              }
+            }(uz.position, Cz(uz), mz, ((zC, QC, wC) => (0, AC.y)(CC(zC, QC, wC), ZC, HC)));
+          return null === QC ? null : {
+            x: QC[0] + Kz[0],
+            y: QC[1] + Kz[1],
+            z: QC[2] + Kz[2],
+            value: CC(QC[0], QC[1], QC[2])
           }
-        };
-        for (const fk of Dk.CustomRequestModifiers) {
-          if (Dk._ShouldSkipRequestModifications(kk)) break;
-          const ek = fk(ik, kk);
-          "string" === typeof ek && (kk = ek)
+        }), [xz, zC, Kz, uz, mz, ZC, HC]),
+        {
+          keyHandlers: Tz
+        } = (0, xC.g)({
+          isEnabled: xz,
+          claimedKeyCodes: dC,
+          AN: CC => {
+            hz((zC => function(CC, zC) {
+              const ZC = [Math.sin(CC.heading), 0, Math.cos(CC.heading)],
+                QC = nz(nz(fz(ZC, zC.forward), fz(zz(CC.heading), zC.right)), [0, zC.up, 0]);
+              return {
+                ...CC,
+                position: nz(CC.position, QC)
+              }
+            }(null !== zC && void 0 !== zC ? zC : rz.current.fittedView, CC)))
+          },
+          onZoomChange: Iz
+        });
+      (0, QC.useEffect)((() => {
+        const CC = qz.current;
+        if (!CC) return;
+        let zC;
+        try {
+          zC = function(CC, zC) {
+            const ZC = new wC.d(CC, !0, {
+                stencil: !1
+              }, !0),
+              QC = new bC.e(ZC),
+              [MC, gC, SC] = AC.L;
+            QC.clearColor = new qC.e(MC / 255, gC / 255, SC / 255, 1);
+            const pC = new nC.d("Heatmap3DCamera", FC.Eg.Zero(), QC);
+            pC.fov = zC, pC.minZ = .05;
+            const PC = new fC.e("Heatmap3DLight", new FC.Eg(.4, 1, -.6), QC);
+            PC.diffuse = qC.Color3.White(), PC.groundColor = qC.Color3.Black(), PC.specular = qC.Color3.Black();
+            const GC = new oC.StandardMaterial("Heatmap3DCellMaterial", QC);
+            GC.diffuseColor = new qC.Color3(.4, .4, .4), GC.emissiveColor = new qC.Color3(.62, .62, .62), GC.specularColor = qC.Color3.Black();
+            const RC = (0, WC.b)("Heatmap3DCells", {
+              size: 1
+            }, QC);
+            RC.material = GC, RC.tS = !1, RC.Hg = !0, RC.isVisible = !1;
+            const xC = (0, WC.b)("Heatmap3DTranslucentCells", {
+              size: 1
+            }, QC);
+            xC.material = GC, xC.hasVertexAlpha = !0, xC.tS = !1, xC.Hg = !0, xC.isVisible = !1;
+            const JC = new oC.StandardMaterial("Heatmap3DSchematicMaterial", QC);
+            JC.diffuseColor = new qC.Color3(.6, .6, .6), JC.emissiveColor = new qC.Color3(.4, .4, .4), JC.specularColor = qC.Color3.Black();
+            const IC = (0, WC.b)("Heatmap3DSchematicBlocks", {
+              size: 1
+            }, QC);
+            IC.material = JC, IC.tS = !1, IC.Hg = !0, IC.isVisible = !1;
+            const iC = (0, NC.b)("Heatmap3DTarget", {
+              lines: VC([-.52, -.52, -.52], [.52, .52, .52])
+            }, QC);
+            return iC.color = new qC.Color3(.06, .14, .23), iC.renderingGroupId = 1, iC.tS = !1, iC.isVisible = !1, {
+              engine: ZC,
+              sS: QC,
+              camera: pC,
+              cells: RC,
+              translucentCells: xC,
+              translucent: {
+                VS: new Float32Array(0),
+                colours: new Float32Array(0),
+                count: 0
+              },
+              translucentSortedFrom: null,
+              schematicBlocks: IC,
+              targetOutline: iC,
+              chunkGrid: null,
+              chunkGridCentre: null,
+              chunkGridOrigin: null,
+              targetFieldOfView: zC,
+              needsRender: !0
+            }
+          }(CC, rz.current.fieldOfView)
+        } catch (ZC) {
+          return console.error("Failed to start the 3D heatmap", ZC), void Mz(!0)
         }
-        return {
-          url: kk,
-          headers: ek
+        return Fz.current = zC, zC.engine.runRenderLoop((() => {
+          const CC = zC.camera;
+          CC.fov !== zC.targetFieldOfView && (CC.fov += (zC.targetFieldOfView - CC.fov) * (CC.fov > zC.targetFieldOfView ? .3 : .2), Math.abs(zC.targetFieldOfView - CC.fov) < 5e-4 && (CC.fov = zC.targetFieldOfView), zC.needsRender = !0), zC.needsRender && (zC.sS.render(), zC.needsRender = !zC.sS.isReady() || !zC.engine.areAllEffectsReady())
+        })), () => {
+          Fz.current = null, zC.engine.dispose()
         }
-      }
-      static async FetchAsync(kk) {
-        let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const ik = ek.method ?? "GET";
-        if ("undefined" !== typeof fetch) {
+      }), []), (0, QC.useEffect)((() => {
+        const CC = qz.current;
+        if (!CC) return;
+        const zC = () => {
+            Gz.current = !1, Sz(document.pointerLockElement === CC)
+          },
+          ZC = () => {
+            Gz.current && (Gz.current = !1, Pz(!1))
+          },
+          QC = zC => {
+            const ZC = !rz.current.canLock && document.activeElement === CC && 0 !== (1 & zC.buttons);
+            if (document.pointerLockElement !== CC && !ZC) return;
+            const QC = rz.current.mouseSensitivity * eC;
+            hz((CC => function(CC, zC, ZC) {
+              const QC = 2 * Math.PI;
+              return {
+                ...CC,
+                heading: ((CC.heading + zC) % QC + QC) % QC,
+                pitch: Math.max(-cC, Math.min(cC, CC.pitch + ZC))
+              }
+            }(null !== CC && void 0 !== CC ? CC : rz.current.fittedView, zC.movementX * QC, zC.movementY * QC)))
+          };
+        return document.addEventListener("pointerlockchange", zC), document.addEventListener("pointerlockerror", ZC), document.addEventListener("pointermove", QC), () => {
+          document.removeEventListener("pointerlockchange", zC), document.removeEventListener("pointerlockerror", ZC), document.removeEventListener("pointermove", QC), document.pointerLockElement === CC && (0, JC.e)()
+        }
+      }), []), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && 0 !== Wz.width && 0 !== Wz.height && (CC.engine.resize(), CC.needsRender = !0)
+      }), [Wz.width, Wz.height]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && (CC.targetFieldOfView = Ez * (Jz ? vC : 1))
+      }), [Ez, Jz]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && function(CC, zC, ZC, QC) {
+          const wC = [],
+            bC = [],
+            nC = [],
+            fC = [];
+          for (let oC = 0; oC < zC.count; oC++) {
+            const CC = zC.values[oC],
+              qC = (0, AC.y)(CC, ZC, QC);
+            if (qC <= 0) continue;
+            const [FC, WC, NC] = (0, AC.q)((0, AC.E)(CC, ZC)), MC = qC >= 1;
+            (MC ? wC : nC).push(zC.positions[3 * oC] + .5, zC.positions[3 * oC + 1] + .5, zC.positions[3 * oC + 2] + .5), (MC ? bC : fC).push(FC / 255, WC / 255, NC / 255, qC)
+          }
+          OC(CC.cells, Float32Array.from(wC), Float32Array.from(bC), bC.length / 4), CC.translucent = {
+            VS: Float32Array.from(nC),
+            colours: Float32Array.from(fC),
+            count: fC.length / 4
+          }, CC.translucentSortedFrom = null, kC(CC), CC.needsRender = !0
+        }(CC, Hz, ZC, HC)
+      }), [Hz, ZC, HC]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && function(CC, zC) {
+          CC.chunkGridOrigin = zC, CC.chunkGridCentre = null, BC(CC)
+        }(CC, uC.min)
+      }), [uC]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && function(CC, zC, ZC) {
+          const QC = [],
+            wC = [];
+          if (null !== zC) {
+            const {
+              positions: CC,
+              colours: bC,
+              count: nC
+            } = zC.surface;
+            for (let zC = 0; zC < nC; zC++) {
+              const nC = [CC[3 * zC], CC[3 * zC + 1], CC[3 * zC + 2]];
+              [0, 1, 2].every((CC => nC[CC] >= ZC.min[CC] - mC && nC[CC] <= ZC.max[CC] + mC)) && (QC.push(nC[0] - ZC.min[0] + .5, nC[1] - ZC.min[1] + .5, nC[2] - ZC.min[2] + .5), wC.push(bC[3 * zC] / 255, bC[3 * zC + 1] / 255, bC[3 * zC + 2] / 255, 1))
+            }
+          }
+          OC(CC.schematicBlocks, Float32Array.from(QC), Float32Array.from(wC), wC.length / 4), CC.needsRender = !0
+        }(CC, sC, uC)
+      }), [sC, uC]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && null !== CC.chunkGrid && (CC.chunkGrid.isVisible = iz, CC.needsRender = !0)
+      }), [iz, uC]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && function(CC, zC, ZC) {
           const {
-            url: fk,
-            headers: Sk
-          } = Dk._CollectCustomizations(Dk._CleanUrl(kk), ek.headers ?? {});
-          return await fetch(fk, {
-            method: ik,
-            headers: Sk,
-            body: ek.body ?? void 0
-          })
+            camera: QC
+          } = CC;
+          QC.position.set(zC.position[0], zC.position[1], zC.position[2]), QC.rotation.set(zC.pitch, zC.heading, 0);
+          const wC = (EC + 1) * gC.f.Ig * Math.sqrt(3);
+          QC.maxZ = Math.max(wC, Math.hypot(...nz(zC.position, fz(wz({
+            min: [0, 0, 0],
+            max: ZC
+          }), -1))) + 2 * Math.hypot(...ZC)), BC(CC), kC(CC), CC.needsRender = !0
+        }(CC, uz, mz)
+      }), [uz, mz]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && (CC.targetOutline.isVisible = null !== sz, null !== sz && CC.targetOutline.position.set(sz.x - Kz[0] + .5, sz.y - Kz[1] + .5, sz.z - Kz[2] + .5), CC.needsRender = !0)
+      }), [sz, Kz]);
+      return (0, IC.jsxs)("div", {
+        className: "StudioHeatmapMap StudioHeatmap3D",
+        ref: oz,
+        children: [(0, IC.jsx)("canvas", {
+          className: "StudioHeatmapMapCanvas",
+          ref: qz,
+          style: {
+            width: `${Wz.width}px`,
+            height: `${Wz.height}px`
+          },
+          tabIndex: 0,
+          "aria-label": LC("3D heatmap"),
+          onClick: () => {
+            const CC = qz.current;
+            if (null === CC) return;
+            if (CC.focus({
+                preventScroll: !0
+              }), gz || !pz) return;
+            const zC = CC.requestPointerLock();
+            zC instanceof Promise ? zC.catch((CC => {
+              CC instanceof DOMException && ("WrongDocumentError" === CC.name || "NotSupportedError" === CC.name) && Pz(!1)
+            })) : Gz.current = !0
+          },
+          ...Tz,
+          onKeyDown: CC => {
+            if (xz && hC.has(CC.code)) return CC.preventDefault(), void(() => {
+              const CC = qz.current;
+              null !== CC && document.pointerLockElement === CC ? (0, JC.e)() : null === CC || void 0 === CC || CC.blur()
+            })();
+            const zC = KC[CC.code];
+            return xz && void 0 !== zC ? (CC.preventDefault(), void aC(zC)) : xz && (0, xC.d)("replayPlayPause", CC.code) && !(0, xC.d)("Zoom", CC.code) ? (CC.preventDefault(), void(CC.repeat || DC())) : xz && CC.code === YC ? (CC.preventDefault(), void tC()) : xz && CC.code === XC ? (CC.preventDefault(), void hz(null)) : xz && CC.code === lC ? (CC.preventDefault(), void vz((CC => !CC))) : void Tz.onKeyDown(CC)
+          },
+          onFocus: () => {
+            Az(!0)
+          },
+          onBlur: () => {
+            Az(!1), Tz.onBlur()
+          }
+        }), Nz && (0, IC.jsx)("div", {
+          className: "StudioHeatmap3DUnavailable SmallTextLight",
+          children: LC("3D view isn't available in this browser.")
+        }), xz && (0, IC.jsx)("div", {
+          className: "StudioHeatmap3DCrosshair"
+        }), (0, IC.jsx)("div", {
+          className: "StudioHeatmap3DCoordinates SmallTextLight",
+          children: uz.position.map(((CC, zC) => (CC + Kz[zC]).toFixed(2))).join(" ")
+        }), iz && (0, IC.jsx)(UC, {
+          heading: uz.heading,
+          pitch: uz.pitch,
+          onViewFrom: CC => {
+            const zC = fz(CC, -1),
+              ZC = 0 === zC[1] ? {
+                heading: Math.atan2(zC[0], zC[2]),
+                pitch: 0
+              } : {
+                heading: uz.heading,
+                pitch: zC[1] < 0 ? cC : -cC
+              };
+            hz(Zz(Xz, lz, Ez, ZC))
+          },
+          onTurn: (CC, zC) => {
+            hz((ZC => function(CC, zC, ZC, QC) {
+              return Qz(CC, zC, {
+                heading: CC.heading + ZC * jC,
+                pitch: Math.max(-cC, Math.min(cC, CC.pitch + QC * jC))
+              })
+            }(null !== ZC && void 0 !== ZC ? ZC : rz.current.fittedView, wz(Xz), CC, zC)))
+          },
+          onFlip: () => {
+            hz((CC => function(CC, zC) {
+              return Qz(CC, zC, {
+                heading: CC.heading + Math.PI,
+                pitch: -CC.pitch
+              })
+            }(null !== CC && void 0 !== CC ? CC : rz.current.fittedView, wz(Xz))))
+          }
+        }), null !== sz && (0, IC.jsx)("div", {
+          className: "StudioHeatmapMapReadout SmallTextLight",
+          children: null === yC ? LC("studio:heatmapBlockReadout", {
+            x: sz.x,
+            y: sz.y,
+            z: sz.z,
+            count: (0, MC.Z)(sz.value)
+          }) : yC(sz.x, sz.y, sz.z, sz.value)
+        }), (0, IC.jsxs)("div", {
+          className: "StudioHeatmapMapControls",
+          children: [TC, (0, IC.jsx)(GC.O, {
+            active: null === ez,
+            onClick: () => {
+              hz(null)
+            },
+            children: (0, IC.jsx)(RC.c, {
+              name: "eye"
+            })
+          })]
+        })]
+      })
+    }
+
+    function UC(CC) {
+      let {
+        heading: zC,
+        pitch: ZC,
+        onViewFrom: wC,
+        onTurn: bC,
+        onFlip: nC
+      } = CC;
+      const {
+        t: fC
+      } = (0, SC.y)(), oC = (0, QC.useRef)(null), qC = Cz({
+        heading: zC,
+        pitch: ZC
+      }), FC = zz(zC), WC = qz(qC, FC), NC = aC + tC + 2, MC = TC.flatMap((CC => [1, -1].map((zC => {
+        const ZC = fz(CC.direction, zC);
+        return {
+          ...CC,
+          sign: zC,
+          direction: ZC,
+          endX: NC + oz(ZC, FC) * aC,
+          endY: NC - oz(ZC, WC) * aC,
+          depth: oz(ZC, qC)
         }
-        return await new Promise(((fk, Sk) => {
-          const bk = new Dk;
-          bk.responseType = "arraybuffer", bk.addEventListener("readystatechange", (() => {
-            if (4 === bk.readyState)
-              if (bk.status >= 200 && bk.status < 300) {
-                const kk = "undefined" !== typeof Headers ? new Headers : void 0,
-                  ek = bk.getResponseHeader("Content-Type");
-                ek && kk && kk.set("Content-Type", ek), "undefined" !== typeof Response ? fk(new Response(bk.response, {
-                  status: bk.status,
-                  statusText: bk.statusText,
-                  headers: kk
-                })) : fk({
-                  ok: !0,
-                  status: bk.status,
-                  statusText: bk.statusText,
-                  headers: {
-                    get: kk => bk.getResponseHeader(kk)
-                  },
-                  arrayBuffer: async () => await Promise.resolve(bk.response)
-                })
-              } else Sk(new Error(`HTTP ${bk.status} loading '${bk.requestURL}': ${bk.statusText}`))
-          })), bk.open(ik, kk, ek.headers), bk.send(ek.body ?? null)
-        }))
+      })))).sort(((CC, zC) => zC.depth - CC.depth));
+      return (0, IC.jsxs)("svg", {
+        className: "StudioHeatmap3DGizmo",
+        width: 2 * NC,
+        height: 2 * NC,
+        "aria-hidden": !0,
+        onPointerDown: CC => {
+          var zC, ZC;
+          CC.currentTarget.setPointerCapture(CC.pointerId);
+          const QC = CC.target,
+            wC = QC.getAttribute("data-end");
+          oC.current = {
+            pointerId: CC.pointerId,
+            x: CC.clientX,
+            y: CC.clientY,
+            travel: 0,
+            side: null === wC ? null : null !== (zC = null === (ZC = MC[Number(wC)]) || void 0 === ZC ? void 0 : ZC.direction) && void 0 !== zC ? zC : null,
+            isOnMiddle: QC.hasAttribute("data-middle")
+          }
+        },
+        onPointerMove: CC => {
+          const zC = oC.current;
+          if (null === zC || zC.pointerId !== CC.pointerId) return;
+          const ZC = CC.clientX - zC.x,
+            QC = CC.clientY - zC.y;
+          zC.x = CC.clientX, zC.y = CC.clientY, zC.travel += Math.abs(ZC) + Math.abs(QC), zC.travel >= yC && bC(ZC, QC)
+        },
+        onPointerUp: CC => {
+          const zC = oC.current;
+          oC.current = null, null === zC || zC.pointerId !== CC.pointerId || zC.travel >= yC || (null !== zC.side ? wC(zC.side) : zC.isOnMiddle && nC())
+        },
+        onPointerCancel: () => {
+          oC.current = null
+        },
+        children: [MC.map(((CC, zC) => {
+          const ZC = CC.sign > 0;
+          return (0, IC.jsxs)("g", {
+            children: [(0, IC.jsx)("line", {
+              x1: NC,
+              y1: NC,
+              x2: CC.endX,
+              y2: CC.endY,
+              stroke: CC.colour,
+              strokeOpacity: ZC ? 1 : .5,
+              strokeWidth: 2,
+              strokeLinecap: "round"
+            }), (0, IC.jsx)("circle", {
+              className: "StudioHeatmap3DGizmoEnd",
+              "data-end": zC,
+              cx: CC.endX,
+              cy: CC.endY,
+              r: ZC ? tC : tC - 1,
+              fill: CC.colour,
+              fillOpacity: ZC ? 1 : .3,
+              stroke: CC.colour,
+              strokeWidth: ZC ? 0 : 1.5,
+              children: (0, IC.jsx)("title", {
+                children: `${fC("View from")} ${ZC?"+":"\u2212"}${CC.name}`
+              })
+            }), ZC && (0, IC.jsx)("text", {
+              pointerEvents: "none",
+              x: CC.endX,
+              y: CC.endY,
+              fill: "#151515",
+              fontSize: 9,
+              fontWeight: "bold",
+              textAnchor: "middle",
+              dominantBaseline: "central",
+              children: CC.name
+            })]
+          }, `${ZC?"+":"-"}${CC.name}`)
+        })), (0, IC.jsx)("circle", {
+          className: "StudioHeatmap3DGizmoEnd",
+          "data-middle": !0,
+          cx: NC,
+          cy: NC,
+          r: DC,
+          fill: "#d0d0d0",
+          fillOpacity: .85,
+          children: (0, IC.jsx)("title", {
+            children: fC("View from the opposite side")
+          })
+        })]
+      })
+    }
+
+    function BC(CC) {
+      var zC, ZC, QC;
+      const {
+        chunkGridOrigin: wC,
+        camera: bC
+      } = CC;
+      if (null === wC) return;
+      const nC = [bC.position.x, bC.position.y, bC.position.z],
+        fC = [0, 2].map((CC => Math.floor((nC[CC] + wC[CC]) / gC.f.Ig))),
+        oC = CC.chunkGridCentre;
+      if (null !== oC && oC.every(((CC, zC) => CC === fC[zC]))) return;
+      const WC = null === (zC = null === (ZC = CC.chunkGrid) || void 0 === ZC ? void 0 : ZC.isVisible) || void 0 === zC || zC;
+      null === (QC = CC.chunkGrid) || void 0 === QC || QC.dispose();
+      const [MC, SC] = [0, 2].map(((CC, zC) => {
+        const ZC = [];
+        for (let QC = fC[zC] - EC; QC <= fC[zC] + EC + 1; QC++) ZC.push(QC * gC.f.Ig - wC[CC]);
+        return ZC
+      })), pC = -wC[1], PC = [];
+      for (const qC of SC) PC.push([new FC.Eg(MC[0], pC, qC), new FC.Eg(MC[MC.length - 1], pC, qC)]);
+      for (const qC of MC) PC.push([new FC.Eg(qC, pC, SC[0]), new FC.Eg(qC, pC, SC[SC.length - 1])]);
+      const GC = (0, NC.b)("Heatmap3DChunkGrid", {
+        lines: PC
+      }, CC.sS);
+      GC.color = new qC.Color3(.45, .6, .78), GC.tS = !1, GC.isVisible = WC, CC.chunkGrid = GC, CC.chunkGridCentre = fC, CC.needsRender = !0
+    }
+
+    function OC(CC, zC, ZC, QC) {
+      CC.E_("matrix", function(CC, zC) {
+        const ZC = new Float32Array(16 * zC);
+        for (let QC = 0; QC < zC; QC++) {
+          const zC = 16 * QC;
+          ZC[zC] = 1, ZC[zC + 5] = 1, ZC[zC + 10] = 1, ZC[zC + 12] = CC[3 * QC], ZC[zC + 13] = CC[3 * QC + 1], ZC[zC + 14] = CC[3 * QC + 2], ZC[zC + 15] = 1
+        }
+        return ZC
+      }(zC, QC), 16, !0), CC.E_("color", ZC, 4, !0), CC.isVisible = QC > 0
+    }
+
+    function kC(CC) {
+      const {
+        camera: zC,
+        translucent: ZC
+      } = CC, QC = [zC.position.x, zC.position.y, zC.position.z], wC = CC.translucentSortedFrom;
+      if (null !== wC && Math.hypot(QC[0] - wC[0], QC[1] - wC[1], QC[2] - wC[2]) < HC) return;
+      CC.translucentSortedFrom = QC;
+      const bC = new Float64Array(ZC.count),
+        nC = new Uint32Array(ZC.count);
+      for (let qC = 0; qC < ZC.count; qC++) {
+        const CC = ZC.VS[3 * qC] - QC[0],
+          zC = ZC.VS[3 * qC + 1] - QC[1],
+          wC = ZC.VS[3 * qC + 2] - QC[2];
+        bC[qC] = CC * CC + zC * zC + wC * wC, nC[qC] = qC
       }
-      get requestURL() {
-        return this._requestURL
-      }
-      get onprogress() {
-        return this._xhr.onprogress
-      }
-      set onprogress(kk) {
-        this._xhr.onprogress = kk
-      }
-      get readyState() {
-        return this._xhr.readyState
-      }
-      get status() {
-        return this._xhr.status
-      }
-      get statusText() {
-        return this._xhr.statusText
-      }
-      get response() {
-        return this._xhr.response
-      }
-      get responseURL() {
-        return this._xhr.responseURL
-      }
-      get responseText() {
-        return this._xhr.responseText
-      }
-      get responseType() {
-        return this._xhr.responseType
-      }
-      set responseType(kk) {
-        this._xhr.responseType = kk
-      }
-      get timeout() {
-        return this._xhr.timeout
-      }
-      set timeout(kk) {
-        this._xhr.timeout = kk
-      }
-      addEventListener(kk, ek, ik) {
-        this._xhr.addEventListener(kk, ek, ik)
-      }
-      removeEventListener(kk, ek, ik) {
-        this._xhr.removeEventListener(kk, ek, ik)
-      }
-      abort() {
-        this._xhr.abort()
-      }
-      send(kk) {
-        this._xhr.send(kk)
-      }
-      open(kk, ek, ik) {
-        const {
-          url: fk,
-          headers: Sk
-        } = Dk._CollectCustomizations(ek, ik);
-        this._requestURL = Dk._CleanUrl(fk), this._xhr.open(kk, this._requestURL, !0);
-        for (const Dk in Sk) this._xhr.setRequestHeader(Dk, Sk[Dk])
-      }
-      setRequestHeader(kk, ek) {
-        this._xhr.setRequestHeader(kk, ek)
-      }
-      getResponseHeader(kk) {
-        return this._xhr.getResponseHeader(kk)
+      nC.sort(((CC, zC) => bC[zC] - bC[CC]));
+      const fC = new Float32Array(3 * ZC.count),
+        oC = new Float32Array(4 * ZC.count);
+      nC.forEach(((CC, zC) => {
+        fC.set(ZC.VS.subarray(3 * CC, 3 * CC + 3), 3 * zC), oC.set(ZC.colours.subarray(4 * CC, 4 * CC + 4), 4 * zC)
+      })), OC(CC.translucentCells, fC, oC, ZC.count), CC.needsRender = !0
+    }
+
+    function VC(CC, zC) {
+      const ZC = (ZC, QC, wC) => new FC.Eg(0 === ZC ? CC[0] : zC[0], 0 === QC ? CC[1] : zC[1], 0 === wC ? CC[2] : zC[2]),
+        QC = [];
+      for (const wC of [0, 1])
+        for (const CC of [0, 1]) QC.push([ZC(0, wC, CC), ZC(1, wC, CC)], [ZC(wC, 0, CC), ZC(wC, 1, CC)], [ZC(wC, CC, 0), ZC(wC, CC, 1)]);
+      return QC
+    }
+
+    function Cz(CC) {
+      return [Math.sin(CC.heading) * Math.cos(CC.pitch), -Math.sin(CC.pitch), Math.cos(CC.heading) * Math.cos(CC.pitch)]
+    }
+
+    function zz(CC) {
+      return [Math.cos(CC), 0, -Math.sin(CC)]
+    }
+
+    function Zz(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: uC,
+        pitch: rC
+      };
+      const wC = [CC.max[0] - CC.min[0], CC.max[1] - CC.min[1], CC.max[2] - CC.min[2]],
+        bC = Cz(QC),
+        nC = zz(QC.heading),
+        fC = qz(bC, nC),
+        oC = Math.tan(ZC / 2),
+        qC = oC * zC;
+      let FC = 1;
+      for (const WC of [-wC[0] / 2, wC[0] / 2])
+        for (const CC of [-wC[1] / 2, wC[1] / 2])
+          for (const zC of [-wC[2] / 2, wC[2] / 2]) {
+            const ZC = [WC, CC, zC],
+              QC = oz(ZC, bC);
+            FC = Math.max(FC, Math.abs(oz(ZC, nC)) / qC - QC, Math.abs(oz(ZC, fC)) / oC - QC)
+          }
+      return {
+        position: nz([CC.min[0] + wC[0] / 2, CC.min[1] + wC[1] / 2, CC.min[2] + wC[2] / 2], fz(bC, -FC * sC)),
+        heading: QC.heading,
+        pitch: QC.pitch
       }
     }
-    Dk.CustomRequestHeaders = {}, Dk.CustomRequestModifiers = new Array, Dk.SkipRequestModificationForBabylonCDN = !0
+
+    function Qz(CC, zC, ZC) {
+      const QC = bz(CC),
+        wC = bz(ZC),
+        bC = nz(CC.position, fz(zC, -1)),
+        nC = [0, 1, 2].reduce(((CC, zC) => nz(CC, fz(wC[zC], oz(bC, QC[zC])))), [0, 0, 0]);
+      return {
+        position: nz(zC, nC),
+        heading: ZC.heading,
+        pitch: ZC.pitch
+      }
+    }
+
+    function wz(CC) {
+      return fz(nz(CC.min, CC.max), .5)
+    }
+
+    function bz(CC) {
+      const zC = Cz(CC),
+        ZC = zz(CC.heading);
+      return [zC, ZC, qz(zC, ZC)]
+    }
+
+    function nz(CC, zC) {
+      return [CC[0] + zC[0], CC[1] + zC[1], CC[2] + zC[2]]
+    }
+
+    function fz(CC, zC) {
+      return [CC[0] * zC, CC[1] * zC, CC[2] * zC]
+    }
+
+    function oz(CC, zC) {
+      return CC[0] * zC[0] + CC[1] * zC[1] + CC[2] * zC[2]
+    }
+
+    function qz(CC, zC) {
+      return [CC[1] * zC[2] - CC[2] * zC[1], CC[2] * zC[0] - CC[0] * zC[2], CC[0] * zC[1] - CC[1] * zC[0]]
+    }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

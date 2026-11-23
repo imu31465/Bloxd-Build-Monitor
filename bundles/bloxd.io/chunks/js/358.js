@@ -1,27 +1,62 @@
 export const id = 358;
 export const ids = [358];
 export const modules = {
-  60760: (kk, ek, ik) => {
-    function Dk(kk, ek, ik, Dk, fk, Sk, bk) {
-      const rk = ek,
-        Pk = Dk,
-        mk = ik;
-      kk[mk + 0] = rk[Pk + 0], kk[mk + 1] = rk[Pk + 1], kk[mk + 2] = rk[Pk + 2], kk[mk + 3] = rk[Pk + 3], kk[mk + 4] = rk[Pk + 4], kk[mk + 5] = rk[Pk + 5], kk[mk + 6] = rk[Pk + 6], kk[mk + 7] = rk[Pk + 7], kk[mk + 8] = rk[Pk + 8], kk[mk + 9] = rk[Pk + 9], kk[mk + 10] = rk[Pk + 10], kk[mk + 11] = rk[Pk + 11], kk[mk + 12] = rk[Pk + 12] - fk, kk[mk + 13] = rk[Pk + 13] - Sk, kk[mk + 14] = rk[Pk + 14] - bk, kk[mk + 15] = rk[Pk + 15]
-    }
+  61016: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      applyLightFoOffset: () => nC,
+      getFloatingOriginOffset: () => wC,
+      lightFoVersion: () => bC,
+      wrapRenderableForFO: () => fC
+    });
+    var QC = ZC(41543);
 
-    function fk(kk) {
-      return (ek, ik, fk, Sk) => {
-        const bk = kk.camera;
-        if (!bk) return void Dk(ek, ik, fk, Sk, 0, 0, 0);
-        const rk = bk.worldMatrix;
-        Dk(ek, ik, fk, Sk, rk[12], rk[13], rk[14])
+    function wC(CC) {
+      const zC = CC.camera;
+      if (!zC) return {
+        x: 0,
+        y: 0,
+        z: 0
+      };
+      const ZC = zC.worldMatrix;
+      return {
+        x: ZC[12],
+        y: ZC[13],
+        z: ZC[14]
       }
     }
-    ik.r(ek), ik.d(ek, {
-      makePackMeshWorld: () => fk,
-      packMat4IntoF32WithOffset: () => Dk
-    })
+
+    function bC(CC) {
+      return CC.camera ? CC.camera.worldMatrixVersion : 0
+    }
+
+    function nC(CC, zC) {
+      const ZC = zC.camera?.worldMatrix;
+      if (!ZC) return;
+      const wC = ZC[12],
+        bC = ZC[13],
+        nC = ZC[14];
+      let fC = 0;
+      for (const oC of zC.lights) {
+        if (fC >= QC.b) break;
+        if (!oC._writeLightUbo) continue;
+        const zC = 4 + 16 * fC,
+          ZC = CC[zC + 3];
+        if (0 === ZC || 2 === ZC) {
+          const ZC = oC.worldMatrix;
+          CC[zC] = ZC[12] - wC, CC[zC + 1] = ZC[13] - bC, CC[zC + 2] = ZC[14] - nC
+        }
+        fC++
+      }
+    }
+
+    function fC(CC, zC, ZC) {
+      let QC = -1;
+      return () => {
+        const wC = zC.camera ? zC.camera.worldMatrixVersion : -1;
+        wC !== QC && (ZC(), QC = wC), CC()
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

@@ -17,24 +17,24 @@ Each report is updated in place on every build and links directly to immutable G
 
 | Environment | Checked at (JST) | Build | Main bundle |
 |---|---|---|---|
-| bloxd.io | 2026-11-24T00:41:40+09:00 | 3lwmg.ecbaa066 | `bundles/bloxd.io/main.js` · 2.91 MB · `e8dc901a2b56…` |
-| preprod.bloxd.io | 2026-11-24T00:41:40+09:00 | w4ddu.56408518 | `bundles/preprod.bloxd.io/main.js` · 2.91 MB · `ba0caba6540c…` |
-| staging.bloxd.io | 2026-11-24T00:42:21+09:00 | 3lwmg.ecbaa066 | `bundles/staging.bloxd.io/main.js` · 2.91 MB · `e8dc901a2b56…` |
+| bloxd.io | 2026-11-24T00:51:34+09:00 | w4ddu.56408518 | `bundles/bloxd.io/main.js` · 2.91 MB · `ba0caba6540c…` |
+| preprod.bloxd.io | 2026-11-24T00:51:34+09:00 | w4ddu.56408518 | `bundles/preprod.bloxd.io/main.js` · 2.91 MB · `ba0caba6540c…` |
+| staging.bloxd.io | 2026-11-24T00:51:35+09:00 | w4ddu.56408518 | `bundles/staging.bloxd.io/main.js` · 2.91 MB · `ba0caba6540c…` |
 
 ## Main bundle details
 
-- **bloxd.io** — source: https://bloxd.io/static/js/3lwmg.main.ecbaa066.js
-  - file: `bundles/bloxd.io/main.js` · 3,055,824 bytes (2.91 MB)
-  - sha256: `e8dc901a2b56f2fba88a08fc5b2d72480724a2accddc9f2df9c1030cb15e46dd`
-  - archived build files: 441 (47.37 MB total, full manifest in `.monitor-state.json`)
-  - wasm modules: 12 (17.05 MB total) — [wasm/bloxd.io/](wasm/bloxd.io/index.md)
+- **bloxd.io** — source: https://bloxd.io/static/js/w4ddu.main.56408518.js
+  - file: `bundles/bloxd.io/main.js` · 3,047,744 bytes (2.91 MB)
+  - sha256: `ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37`
+  - archived build files: 443 (46.14 MB total, full manifest in `.monitor-state.json`)
+  - wasm modules: 12 (17.16 MB total) — [wasm/bloxd.io/](wasm/bloxd.io/index.md)
 - **preprod.bloxd.io** — source: https://preprod.bloxd.io/static/js/w4ddu.main.56408518.js
   - file: `bundles/preprod.bloxd.io/main.js` · 3,047,744 bytes (2.91 MB)
   - sha256: `ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37`
   - archived build files: 443 (46.14 MB total, full manifest in `.monitor-state.json`)
   - wasm modules: 12 (17.16 MB total) — [wasm/preprod.bloxd.io/](wasm/preprod.bloxd.io/index.md)
-- **staging.bloxd.io** — source: https://staging.bloxd.io/static/js/3lwmg.main.ecbaa066.js
-  - file: `bundles/staging.bloxd.io/main.js` · 3,055,824 bytes (2.91 MB)
-  - sha256: `e8dc901a2b56f2fba88a08fc5b2d72480724a2accddc9f2df9c1030cb15e46dd`
-  - archived build files: 441 (47.37 MB total, full manifest in `.monitor-state.json`)
-  - wasm modules: 12 (17.05 MB total) — [wasm/staging.bloxd.io/](wasm/staging.bloxd.io/index.md)
+- **staging.bloxd.io** — source: https://staging.bloxd.io/static/js/w4ddu.main.56408518.js
+  - file: `bundles/staging.bloxd.io/main.js` · 3,047,744 bytes (2.91 MB)
+  - sha256: `ba0caba6540cf495ad199c16dee47c42223305ca6834175e4cea124376753c37`
+  - archived build files: 443 (46.14 MB total, full manifest in `.monitor-state.json`)
+  - wasm modules: 12 (17.16 MB total) — [wasm/staging.bloxd.io/](wasm/staging.bloxd.io/index.md)

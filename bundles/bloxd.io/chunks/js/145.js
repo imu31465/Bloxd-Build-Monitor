@@ -1,254 +1,166 @@
 export const id = 145;
 export const ids = [145];
 export const modules = {
-  7913: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      BloxdDiscordActivitySdk: () => pk
+  8102: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      BloxdFirebaseSdk: () => NC
     });
-    var Dk = ik(7919),
-      fk = ik(1212),
-      Sk = ik(1172),
-      bk = ik(594),
-      rk = ik(1223),
-      Pk = ik(1688),
-      mk = ik(1302),
-      Mk = ik(741),
-      Kk = ik(22),
-      xk = ik(1181),
-      nk = function(kk) {
-        return kk.APPLICATION_COMMANDS = "applications.commands", kk.IDENTIFY = "identify", kk.EMAIL = "email", kk.GUILDS = "guilds", kk.READ_DM_CHANNELS = "dm_channels.read", kk.WRITE_ACTIVITIES = "rpc.activities.write", kk
-      }(nk || {}),
-      Uk = function(kk) {
-        return kk[kk.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", kk[kk.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", kk[kk.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", kk[kk.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", kk[kk.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", kk[kk.RATELIMITED = 4002] = "RATELIMITED", kk[kk.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", kk[kk.INVALID_VERSION = 4004] = "INVALID_VERSION", kk[kk.INVALID_ENCODING = 4005] = "INVALID_ENCODING", kk
-      }(Uk || {}),
-      Hk = function(kk) {
-        return kk[kk.PLAYING = 0] = "PLAYING", kk[kk.STREAMING = 1] = "STREAMING", kk[kk.LISTENING = 2] = "LISTENING", kk[kk.WATCHING = 3] = "WATCHING", kk[kk.CUSTOM = 4] = "CUSTOM", kk[kk.COMPETING = 5] = "COMPETING", kk
-      }(Hk || {});
-    const wk = {
-        Minigames: "Playing",
-        Puzzle: "Solving",
-        Escape: "Escaping",
-        Parkour: "Parkouring",
-        "Cool Parkour": "Parkouring",
-        "Two Player Parkour": "Parkouring",
-        "Clutch Parkour": "Parkouring",
-        "Challenging Parkour": "Parkouring",
-        "Progressive Parkour": "Parkouring",
-        "Themed Parkour": "Parkouring",
-        Obby: "Parkouring",
-        Tower: "Climbing",
-        Roleplay: "Roleplaying",
-        Arena: "Battling",
-        Duels: "Duelling",
-        Shooting: "Shooting",
-        Survival: "Surviving",
-        Simulator: "Grinding",
-        Tycoon: "Building",
-        Clicker: "Clicking",
-        PvE: "Battling",
-        Building: "Building",
-        Horror: "Surviving",
-        "Lucky Block": "Battling",
-        Racing: "Racing",
-        Driving: "Driving",
-        "Cool Build": "Building",
-        Adventure: "Adventuring",
-        Other: "Being mischievous"
-      },
-      lk = {
-        goalRush: "Playing",
-        heroesvbrainrots: "Battling",
-        hideseek: "Playing",
-        bingo: "Playing"
-      };
-    class pk {
-      constructor(kk) {
-        this.discordSdk = kk, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null
-      }
+    var QC = ZC(1762),
+      wC = ZC(2909),
+      bC = ZC(88),
+      nC = ZC(77),
+      fC = ZC(1609),
+      oC = ZC(1944);
+    const qC = {
+      apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
+      authDomain: "bloxd-ee1aa.firebaseapp.com",
+      projectId: "bloxd-ee1aa",
+      storageBucket: "bloxd-ee1aa.appspot.com",
+      messagingSenderId: "758847442742",
+      appId: "1:758847442742:web:7bb74eb261641e30f02d97"
+    };
+    var FC = ZC(2927),
+      WC = ZC(1633);
+    class NC {
+      constructor() {}
       static async setup() {
-        console.log("Setting up Discord SDK with client id", xk.e.discordClientID);
-        const kk = new Dk.b(xk.e.discordClientID);
-        let ek = !1;
-        setTimeout((() => {
-          ek || (console.warn("Discord SDK took too long to initialize"), (0, Pk.reloadBloxd)())
-        }), 15e3), await kk.ready(), ek = !0;
         try {
-          const {
-            enabled: ek
-          } = await kk.commands.encourageHardwareAcceleration();
-          ek || console.warn("Hardware acceleration not enabled in the Discord client")
-        } catch (fk) {
-          console.error("Failed to encourage hardware acceleration in the Discord client", fk)
+          return await NC.setupInternal()
+        } catch (CC) {
+          return console.error("Failed to setup Firebase SDK:", CC), null
         }
-        const ik = new pk(kk);
-        return ik.isMobilePlatform() && (ik.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
-          ik.applyDiscordSafeAreaNotch()
-        }))), ik
       }
-      async updateActivityDescription(kk) {
-        let ek, ik;
-        switch (kk) {
-          case "homePage":
-            ek = "Chilling in the Main Menu";
-            break;
-          case "inGame": {
-            const kk = await this.getInGameDescriptions();
-            ek = kk.primary, ik = kk.secondary;
-            break
+      static async setupInternal() {
+        const CC = await Promise.all([ZC.e(266), ZC.e(265)]).then((() => ZC(40325))),
+          zC = await Promise.all([ZC.e(266), ZC.e(267)]).then((() => ZC(40357))),
+          MC = await Promise.all([ZC.e(266), ZC.e(268)]).then((() => ZC(40364))),
+          gC = CC.initializeApp({
+            ...qC,
+            measurementId: wC.d
+          });
+        (0, wC.F)(), window.gtag("config", wC.d), (0, wC.z)(), window.gtag("config", "AW-16469618203");
+        const SC = zC.getAnalytics(gC),
+          pC = {
+            portal: bC.currentUrl.getSearchParam("portal") || "root",
+            loggedIn: !1
+          };
+        zC.setUserProperties(SC, pC);
+        const PC = MC.initializeAuth(gC, {
+          persistence: [MC.indexedDBLocalPersistence, MC.browserLocalPersistence, MC.browserSessionPersistence],
+          popupRedirectResolver: (0, nC.isMobileApp)() ? void 0 : MC.browserPopupRedirectResolver
+        });
+        MC.useDeviceLanguage(PC);
+        const GC = new MC.GoogleAuthProvider;
+        GC.setCustomParameters({
+          prompt: "select_account"
+        });
+        const RC = new MC.OAuthProvider(QC.k[QC.e.APPLE]),
+          AC = new MC.OAuthProvider(QC.k[QC.e.MICROSOFT]);
+        AC.setCustomParameters({
+          prompt: "select_account",
+          tenant: "consumers"
+        });
+        const xC = {
+          [QC.e.GOOGLE]: GC,
+          [QC.e.APPLE]: RC,
+          [QC.e.MICROSOFT]: AC
+        };
+        window.gtag("set", {
+          cookie_flags: "SameSite=None;Secure"
+        }), await new Promise((CC => {
+          const zC = MC.onIdTokenChanged(PC, (ZC => {
+            zC(), CC()
+          }))
+        }));
+        class JC extends NC {
+          setUserProperties(CC) {
+            zC.setUserProperties(SC, CC)
+          }
+          onIdTokenChanged(CC) {
+            MC.onIdTokenChanged(PC, CC)
+          }
+          canSignIn() {
+            return !0
+          }
+          async signInWithPopup(CC) {
+            var zC;
+            const ZC = await MC.signInWithPopup(PC, xC[CC]);
+            return null !== (zC = null === ZC || void 0 === ZC ? void 0 : ZC.user) && void 0 !== zC ? zC : null
+          }
+          async getCurrentUser(CC) {
+            const zC = PC.currentUser;
+            if (!zC) return null;
+            const {
+              signInProvider: ZC
+            } = await zC.getIdTokenResult(!1);
+            return ZC === QC.k[CC] ? zC : null
+          }
+          async signOut(CC) {
+            null !== await this.getCurrentUser(CC) && await MC.signOut(PC)
           }
         }
-        await this.discordSdk.commands.setActivity({
-          activity: {
-            type: Hk.PLAYING,
-            details: ek,
-            state: ik,
-            assets: {
-              large_image: "icon",
-              large_text: ek
-            },
-            timestamps: {
-              start: this.startTime
+        async function IC(CC, zC) {
+          const ZC = await fC.d.request(`${CC}.${zC}`, {});
+          if (null === ZC) return null;
+          const QC = "google" === CC ? MC.GoogleAuthProvider.credential(ZC.idToken) : RC.credential({
+            idToken: ZC.idToken
+          });
+          return (await MC.signInWithCredential(PC, QC)).user
+        }
+        class iC extends NC {
+          setUserProperties(CC) {
+            zC.setUserProperties(SC, CC)
+          }
+          onIdTokenChanged(CC) {
+            MC.onIdTokenChanged(PC, CC)
+          }
+          canSignIn(CC) {
+            return null !== (0, oC.e)(CC)
+          }
+          async signInWithPopup(CC) {
+            const zC = (0, oC.e)(CC);
+            if (null === zC) return console.warn(`The app can't sign in with ${CC}; check canSignIn first`), null;
+            try {
+              return await IC(zC, "signIn")
+            } catch (ZC) {
+              if (ZC instanceof WC.e && "timeout" === ZC.code) return null;
+              throw (0, FC.reportClientError)("login_failed", ZC, `app_${zC}`), ZC
             }
           }
-        }).catch((kk => {
-          console.error(`Failed to update Discord activity rich presence with description="${ek}":`, kk)
-        }))
-      }
-      async getInGameDescriptions() {
-        var kk;
-        const {
-          requestedGameNameWithVariation: ek
-        } = (0, mk.c)(), ik = (0, Mk.l)(ek), Dk = null !== (kk = lk[ek]) && void 0 !== kk ? kk : wk[ik.type], fk = await (0, Sk.A)(rk.b.ENGLISH, ik.title), Pk = (0, mk.c)();
-        if ((0, mk.i)(Pk)) return {
-          primary: `${Dk} in a Discord World`
-        };
-        const Kk = `${Dk} in ${fk}`;
-        return (0, bk.F)(Pk.lobbyName) ? {
-          primary: Kk
-        } : {
-          primary: Kk,
-          secondary: `Lobby ${Pk.lobbyName}`
-        }
-      }
-      getCurrentChannelType() {
-        const {
-          channelId: kk,
-          guildId: ek
-        } = this.getCurrentChannelAndGuild();
-        return null !== ek ? fk.b.GUILD : null !== kk ? fk.b.DM : null
-      }
-      getRequiredScopeForCurrentChannel() {
-        const kk = this.getCurrentChannelType(),
-          ek = [nk.APPLICATION_COMMANDS, nk.IDENTIFY, nk.EMAIL, nk.GUILDS, nk.WRITE_ACTIVITIES];
-        switch (kk) {
-          case fk.b.DM:
-          case fk.b.GUILD:
-            return [...ek];
-          default:
-            throw new Error(`Unknown Discord channel type: ${kk}`)
-        }
-      }
-      getCurrentChannelAndGuild() {
-        const {
-          channelId: kk,
-          guildId: ek
-        } = this.discordSdk;
-        return {
-          channelId: null !== kk && void 0 !== kk ? kk : null,
-          guildId: null !== ek && void 0 !== ek ? ek : null
-        }
-      }
-      getInstanceId() {
-        return this.discordSdk.instanceId
-      }
-      async askDiscordUserForAuthorization() {
-        const kk = this.getRequiredScopeForCurrentChannel(),
-          {
-            code: ek
-          } = await this.discordSdk.commands.authorize({
-            client_id: xk.e.discordClientID,
-            response_type: "code",
-            state: "",
-            prompt: "none",
-            scope: kk
-          });
-        return ek
-      }
-      getCachedAccessToken() {
-        return this.cachedAccessToken
-      }
-      setCachedAccessToken(kk) {
-        this.cachedAccessToken = kk
-      }
-      registerGuild(kk, ek) {
-        this.guildNameCache[kk] = ek
-      }
-      async authenticate(kk) {
-        return this.discordSdk.commands.authenticate({
-          access_token: kk
-        }).then((kk => null !== kk))
-      }
-      async getUserLocale() {
-        try {
-          const {
-            locale: kk
-          } = await this.discordSdk.commands.userSettingsGetLocale();
-          return kk
-        } catch (kk) {
-          return console.error("Failed to get user locale from Discord:", kk.stack), null
-        }
-      }
-      async getChannelName(kk) {
-        return this.discordSdk.commands.getChannel({
-          channel_id: kk
-        }).then((kk => kk.name)).catch((kk => "Your Current Discord Chat"))
-      }
-      async getDiscordContextFromChannelId(kk) {
-        const ek = await this.getChannelName(kk);
-        return fk.g.from({
-          type: fk.b.DM,
-          channelId: kk,
-          channelName: ek
-        })
-      }
-      getDiscordContextFromGuildId(kk) {
-        const ek = this.guildNameCache[kk];
-        return (0, bk.F)(ek) ? null : fk.c.from({
-          type: fk.b.GUILD,
-          guildId: kk,
-          guildName: ek
-        })
-      }
-      async getCurrentDiscordContext() {
-        const {
-          channelId: kk,
-          guildId: ek
-        } = this.getCurrentChannelAndGuild();
-        return null !== ek ? this.getDiscordContextFromGuildId(ek) : null !== kk ? this.getDiscordContextFromChannelId(kk) : null
-      }
-      exit(kk) {
-        console.log("Exiting Discord Activity:", kk), this.discordSdk.close(Uk.CLOSE_NORMAL, kk)
-      }
-      isMobilePlatform() {
-        return this.discordSdk.platform === Dk.f.MOBILE
-      }
-      applyDiscordSafeAreaNotch() {
-        const kk = getComputedStyle(document.documentElement),
-          ek = (ek, ik) => {
-            const Dk = parseFloat(kk.getPropertyValue(`--discord-safe-area-inset-${ek}`));
-            return isNaN(Dk) || 0 === ik ? 0 : Dk / ik * 100
-          };
-        Kk.b.set({
-          notchSize: {
-            top: ek("top", window.innerHeight),
-            right: Math.max(ek("right", window.innerWidth), 7),
-            bottom: 0,
-            left: ek("left", window.innerWidth)
+          async getCurrentUser(CC) {
+            const zC = PC.currentUser;
+            if (zC) {
+              const {
+                signInProvider: ZC
+              } = await zC.getIdTokenResult(!1);
+              if (ZC === QC.k[CC]) return zC
+            }
+            const ZC = (0, oC.e)(CC);
+            if (null === ZC) return null;
+            try {
+              return await IC(ZC, "getCurrentUser")
+            } catch (wC) {
+              return console.error(`Failed to get the current ${CC} user from the app:`, wC), null
+            }
           }
-        })
+          async signOut(CC) {
+            const zC = (0, oC.e)(CC);
+            null !== zC && fC.d.request(`${zC}.signOut`, {}).catch((zC => {
+              console.error(`Failed to sign out of ${CC} in the app:`, zC)
+            }));
+            const ZC = PC.currentUser;
+            if (ZC) {
+              const {
+                signInProvider: zC
+              } = await ZC.getIdTokenResult(!1);
+              zC === QC.k[CC] && await MC.signOut(PC)
+            }
+          }
+        }
+        return (0, nC.isMobileApp)() ? (await fC.d.ready, new iC) : new JC
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

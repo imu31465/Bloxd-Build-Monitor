@@ -1,169 +1,2347 @@
 export const id = 220;
 export const ids = [220];
 export const modules = {
-  36341: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => be,
-      g: () => me,
-      j: () => xe,
-      n: () => Me,
-      p: () => Ke
+  40915: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      LobbyManageView: () => Jz
     });
-    const Dk = JSON.parse('{"src":["/sounds/generatedSprites/gunSemiAutomatic.aef27960ef.ogg","/sounds/generatedSprites/gunSemiAutomatic.e56594fab5.m4a","/sounds/generatedSprites/gunSemiAutomatic.d3e434f4d0.mp3","/sounds/generatedSprites/gunSemiAutomatic.97d6a47358.ac3"],"sprite":{"semiAuto_cock_01":[0,500],"semiAuto_cock_02":[600,548.5714285714286],"semiAuto_cock_03":[1250,500],"semiAuto_cock_04":[1850,522.4489795918367],"semiAuto_cock_05":[2473.333333333333,500],"semiAuto_first_shot_01":[3073.333333333333,500],"semiAuto_magazine_load_01":[3673.3333333333335,548.5714285714286],"semiAuto_magazine_load_02":[4323.333333333333,500],"semiAuto_magazine_load_03":[4923.333333333333,548.5714285714286],"semiAuto_magazine_load_04":[5573.333333333333,500],"semiAuto_magazine_load_05":[6173.333333333333,500],"semiAuto_magazine_unload_01":[6773.333333333333,500],"semiAuto_magazine_unload_02":[7373.333333333333,500],"semiAuto_magazine_unload_03":[7973.333333333334,500],"semiAuto_magazine_unload_04":[8573.333333333334,500],"semiAuto_shot_01":[9173.333333333334,500],"semiAuto_shot_02":[9773.333333333334,500],"semiAuto_shot_03":[10373.333333333334,500],"semiAuto_shot_04":[10973.333333333332,500],"semiAuto_shot_05":[11573.333333333334,500],"semiAuto_shot_06":[12173.333333333334,500],"semiAuto_shot_07":[12773.333333333334,500],"semiAuto_shot_08":[13373.333333333334,500],"semiAuto_tail_only_shot_01":[13973.333333333332,2455.5102040816328]}}'),
-      fk = JSON.parse('{"src":["/sounds/generatedSprites/gunSubmachineGun.9d869e4ca3.ogg","/sounds/generatedSprites/gunSubmachineGun.8736ce9068.m4a","/sounds/generatedSprites/gunSubmachineGun.0a429c7e98.mp3","/sounds/generatedSprites/gunSubmachineGun.1db2897c09.ac3"],"sprite":{"submachine_cock_01":[0,500],"submachine_cock_02":[600,500],"submachine_cock_03":[1200,500],"submachine_cock_04":[1800,500],"submachine_first_shot_01":[2400,500],"submachine_magazine_load_01":[3000,500],"submachine_magazine_load_02":[3600,500],"submachine_magazine_load_03":[4200,500],"submachine_magazine_load_04":[4800,500],"submachine_magazine_unload_01":[5400,500],"submachine_magazine_unload_02":[6000,500],"submachine_magazine_unload_03":[6600,500],"submachine_shot_01":[7200,500],"submachine_shot_02":[7800,500],"submachine_shot_03":[8400,500],"submachine_shot_04":[9000,500],"submachine_shot_05":[9600,500],"submachine_shot_06":[10200,500],"submachine_shot_07":[10800,500],"submachine_shot_08":[11400,500],"submachine_shot_09":[12000,500],"submachine_tail_only_shot_01":[12600,1858.8208616780046]}}'),
-      Sk = JSON.parse('{"src":["/sounds/generatedSprites/gunPistol.7432a47272.ogg","/sounds/generatedSprites/gunPistol.adec2d9f75.m4a","/sounds/generatedSprites/gunPistol.a9f647182b.mp3","/sounds/generatedSprites/gunPistol.f363b9fa6d.ac3"],"sprite":{"pistol_cock_01":[0,510],"pistol_cock_02":[610,500],"pistol_cock_03":[1210,500],"pistol_cock_06":[1810,500],"pistol_magazine_load_01":[2410,500],"pistol_magazine_load_02":[3010,500],"pistol_magazine_load_03":[3610,500],"pistol_magazine_unload_01":[4210,500],"pistol_magazine_unload_02":[4810,500],"pistol_magazine_unload_03":[5410,500],"pistol_shot_01":[6010,1500],"pistol_shot_02":[7610,1569.591836734694],"pistol_shot_03":[9280,1735.8956916099773],"pistol_shot_04":[11116.666666666668,1526.7120181405896],"pistol_shot_05":[12746.666666666666,1442.2222222222224]}}'),
-      bk = JSON.parse('{"src":["/sounds/generatedSprites/gunRifle.ca54b877ed.ogg","/sounds/generatedSprites/gunRifle.94dfb28886.m4a","/sounds/generatedSprites/gunRifle.f2eb64407a.mp3","/sounds/generatedSprites/gunRifle.d268c1da8d.ac3"],"sprite":{"rifle_cock_01":[0,705.3061224489796],"rifle_cock_02":[806.6666666666666,1149.3877551020407],"rifle_magazine_load_01":[2056.6666666666665,500],"rifle_magazine_load_02":[2656.6666666666665,500],"rifle_magazine_load_03":[3256.666666666667,500],"rifle_magazine_unload_01":[3856.6666666666665,500],"rifle_magazine_unload_02":[4456.666666666667,500],"rifle_magazine_unload_04":[5056.666666666667,500],"rifle_shot_01":[5656.666666666666,2115.918367346939],"rifle_shot_02":[7873.333333333333,2429.3877551020405],"rifle_shot_03":[10403.333333333334,2298.7755102040815],"rifle_shot_04":[12803.333333333332,2481.6326530612246]}}'),
-      rk = JSON.parse('{"src":["/sounds/generatedSprites/gunMisc.35b4609d1c.ogg","/sounds/generatedSprites/gunMisc.acc63e7fe9.m4a","/sounds/generatedSprites/gunMisc.4403caaad2.mp3","/sounds/generatedSprites/gunMisc.97552f11dc.ac3"],"sprite":{"bullet_shell_bounce_general_07":[0,823.0612244897959],"bullet_shell_bounce_general_08":[923.3333333333334,907.0294784580499],"headshot_04":[1933.3333333333333,500],"headshot_06":[2533.333333333333,500],"headshot_08":[3133.3333333333335,500],"headshot_11":[3733.3333333333335,500]}}'),
-      Pk = JSON.parse('{"src":["/sounds/generatedSprites/gunShotgun.4e0220339e.ogg","/sounds/generatedSprites/gunShotgun.137d0e6b6f.m4a","/sounds/generatedSprites/gunShotgun.8b1144b235.mp3","/sounds/generatedSprites/gunShotgun.0b25a6370a.ac3"],"sprite":{"shotgun_cock_01":[0,914.2857142857142],"shotgun_cock_02":[1016.6666666666666,500],"shotgun_cock_03":[1616.6666666666667,679.1836734693878],"shotgun_cock_04":[2396.6666666666665,548.5714285714286],"shotgun_cock_05":[3046.666666666667,548.5714285714286],"shotgun_load_bullet_01":[3696.666666666667,548.5714285714286],"shotgun_load_bullet_02":[4346.666666666667,522.4489795918367],"shotgun_load_bullet_03":[4970,500],"shotgun_load_bullet_04":[5570,500],"shotgun_load_bullet_05":[6170,500],"shotgun_load_bullet_06":[6770,679.1836734693878],"shotgun_load_bullet_07":[7550,548.5714285714286],"shotgun_load_bullet_08":[8200,500],"shotgun_shot_01":[8800,2612.2448979591836],"shotgun_shot_02":[11513.333333333334,2507.7551020408164],"shotgun_shot_03":[14123.333333333334,2638.3673469387754],"shotgun_shot_04":[16863.333333333332,2037.5510204081634]}}'),
-      mk = JSON.parse('{"src":["/sounds/generatedSprites/dig.affb4a6f05.ogg","/sounds/generatedSprites/dig.082c5b232c.m4a","/sounds/generatedSprites/dig.71feb10d5c.mp3","/sounds/generatedSprites/dig.4913c53dc2.ac3"],"sprite":{"cloth1":[0,1671.8367346938776],"cloth2":[1773.3333333333335,1671.8367346938776],"cloth3":[3546.666666666667,1671.8367346938776],"cloth4":[5320,1668.9342403628118],"glass1":[7090,1671.8367346938776],"glass2":[8863.333333333334,1671.8367346938776],"glass3":[10636.666666666666,1671.8367346938776],"grass1":[12410,500],"grass2":[13010,500],"grass3":[13610,835.9183673469388],"grass4":[14546.666666666666,835.9183673469388],"gravel1":[15483.333333333332,500],"gravel2":[16083.333333333332,500],"gravel3":[16683.333333333332,500],"gravel4":[17283.333333333336,500],"pickUp":[17883.333333333332,500],"sand1":[18483.333333333336,500],"sand2":[19083.333333333332,500],"sand3":[19683.333333333332,500],"sand4":[20283.333333333336,500],"snow1":[20883.333333333332,500],"snow2":[21483.333333333336,500],"snow3":[22083.333333333332,650.1587301587301],"snow4":[22836.666666666664,650.1587301587301],"stone1":[23590,500],"stone2":[24190,500],"stone3":[24790,500],"stone4":[25390,500],"wood1":[25990,928.7981859410431],"wood2":[27020,928.7981859410431],"wood3":[28050,928.7981859410431],"wood4":[29080,928.7981859410431]}}'),
-      Mk = JSON.parse('{"src":["/sounds/generatedSprites/step.52076ddc3a.ogg","/sounds/generatedSprites/step.d6260ef2cc.m4a","/sounds/generatedSprites/step.6e5286b3a8.mp3","/sounds/generatedSprites/step.cfb5f3dd8f.ac3"],"sprite":{"hit1":[0,557.2789115646258],"hit2":[660,650.1587301587301],"hit3":[1413.3333333333333,650.1587301587301],"step_cloth1":[2166.6666666666665,1671.8367346938776],"step_cloth2":[3940,1671.8367346938776],"step_cloth3":[5713.333333333333,1671.8367346938776],"step_cloth4":[7486.666666666666,1671.8367346938776],"step_grass1":[9260,500],"step_grass2":[9860,500],"step_grass3":[10460,500],"step_grass4":[11060,500],"step_grass5":[11660,1483.1746031746031],"step_gravel1":[13243.333333333334,1486.077097505669],"step_gravel2":[14830,1483.1746031746031],"step_gravel3":[16413.333333333336,1486.077097505669],"step_gravel4":[18000,1486.077097505669],"step_sand2":[19586.666666666664,1486.077097505669],"step_sand3":[21173.333333333332,1486.077097505669],"step_sand4":[22760,1486.077097505669],"step_sand5":[24346.666666666668,1486.077097505669],"step_snow1":[25933.333333333332,500],"step_snow2":[26533.333333333336,500],"step_snow3":[27133.333333333332,500],"step_snow4":[27733.333333333336,500],"step_stone1":[28333.333333333332,1486.077097505669],"step_stone2":[29920,1486.077097505669],"step_stone3":[31506.666666666668,1486.077097505669],"step_stone4":[33093.333333333336,1486.077097505669],"step_stone5":[34680,1486.077097505669],"step_stone6":[36266.666666666664,1486.077097505669],"step_wood1":[37853.33333333333,743.0385487528345],"step_wood2":[38696.666666666664,743.0385487528345],"step_wood3":[39540,743.0385487528345],"step_wood4":[40383.333333333336,743.0385487528345],"step_wood5":[41226.666666666664,743.0385487528345],"step_wood6":[42070,743.0385487528345],"sweep6":[42913.333333333336,1114.5578231292516]}}'),
-      Kk = JSON.parse('{"src":["/sounds/generatedSprites/randomBeep.7b90315654.ogg","/sounds/generatedSprites/randomBeep.0e88f6aa33.m4a","/sounds/generatedSprites/randomBeep.47ff5e799a.mp3","/sounds/generatedSprites/randomBeep.444034b8b7.ac3"],"sprite":{"beep":[100,2455.5102040816328]}}'),
-      xk = JSON.parse('{"src":["/sounds/generatedSprites/randomCannon.f9d64818ea.ogg","/sounds/generatedSprites/randomCannon.52f7576d74.m4a","/sounds/generatedSprites/randomCannon.bde162aee8.mp3","/sounds/generatedSprites/randomCannon.4877805969.ac3"],"sprite":{"cannonFire1":[100,4880.748299319728],"cannonFire2":[5083.333333333333,4880.748299319728],"cannonFire3":[10066.666666666666,4880.748299319728]}}'),
-      nk = JSON.parse('{"src":["/sounds/generatedSprites/randomCash.8ff82dcd92.ogg","/sounds/generatedSprites/randomCash.a86426509f.m4a","/sounds/generatedSprites/randomCash.48929d75f1.mp3","/sounds/generatedSprites/randomCash.f687b943c4.ac3"],"sprite":{"cashRegister":[100,3819.6825396825398]}}'),
-      Uk = JSON.parse('{"src":["/sounds/generatedSprites/randomExp.fa5a4c9798.ogg","/sounds/generatedSprites/randomExp.a7e2faf290.m4a","/sounds/generatedSprites/randomExp.b4baff1a37.mp3","/sounds/generatedSprites/randomExp.4974715bbd.ac3"],"sprite":{"exp_collect":[100,1009.2063492063493],"exp_levelup":[1210,1469.863945578231]}}'),
-      Hk = JSON.parse('{"src":["/sounds/generatedSprites/randomFallsmall.e0ec9ce0a7.ogg","/sounds/generatedSprites/randomFallsmall.a1f24b70c2.m4a","/sounds/generatedSprites/randomFallsmall.bcbd5fef60.mp3","/sounds/generatedSprites/randomFallsmall.a3b7d06594.ac3"],"sprite":{"fallsmall":[100,1764.716553287982]}}'),
-      wk = JSON.parse('{"src":["/sounds/generatedSprites/randomItems.380c31a312.ogg","/sounds/generatedSprites/randomItems.6ae69434b9.m4a","/sounds/generatedSprites/randomItems.85b5c2f034.mp3","/sounds/generatedSprites/randomItems.cdadb8aa52.ac3"],"sprite":{"bow":[100,500],"bucketEmpty1":[700,1114.5578231292516],"bucketEmpty2":[1916.6666666666667,1114.5578231292516],"bucketEmpty3":[3133.3333333333335,1114.5578231292516],"bucketFill1":[4350,1021.6780045351475],"bucketFill2":[5473.333333333334,1021.6780045351475],"bucketFill3":[6596.666666666667,1021.6780045351475],"burp":[7720,500],"chestClose":[8320,557.2789115646258],"chestOpen":[8980,743.0385487528345],"doorClose":[9823.333333333334,835.9183673469388],"doorClose2":[10760,835.9183673469388],"doorOpen-bloxd1":[11696.666666666668,743.0385487528345],"doorOpen-bloxd2":[12540,835.9183673469388],"drink":[13476.666666666666,500],"eat1":[14076.666666666666,500],"equip_leather1":[14676.666666666666,928.7981859410431],"hoeTill1":[15706.666666666668,1114.5578231292516],"hoeTill2":[16923.333333333332,557.2789115646258],"hoeTill3":[17583.333333333332,928.7981859410431],"hoeTill4":[18613.333333333332,928.7981859410431],"successfulBowHit":[19643.333333333336,500],"trapdoorOpen":[20243.333333333332,835.9183673469388]}}'),
-      lk = JSON.parse('{"src":["/sounds/generatedSprites/randomFire.06f418fc54.ogg","/sounds/generatedSprites/randomFire.7c5564dd14.m4a","/sounds/generatedSprites/randomFire.f61e3ab1f3.mp3","/sounds/generatedSprites/randomFire.5869bbefc8.ac3"],"sprite":{"fireBurn":[100,2827.3922902494332]}}'),
-      pk = JSON.parse('{"src":["/sounds/generatedSprites/randomFirecracker.ddc99cbc73.ogg","/sounds/generatedSprites/randomFirecracker.128308b436.m4a","/sounds/generatedSprites/randomFirecracker.d5635f7e7d.mp3","/sounds/generatedSprites/randomFirecracker.e5afa15901.ac3"],"sprite":{"firecracker1":[100,5302.857142857142],"firecracker2":[5503.333333333333,5250.6122448979595],"firecracker3":[10856.666666666668,5198.367346938776],"firecracker4":[16156.666666666666,5877.551020408164]}}'),
-      yk = JSON.parse('{"src":["/sounds/generatedSprites/randomLaugh.1f5c9d311c.ogg","/sounds/generatedSprites/randomLaugh.02db6f5792.m4a","/sounds/generatedSprites/randomLaugh.c02a9027ee.mp3","/sounds/generatedSprites/randomLaugh.b47461e2ec.ac3"],"sprite":{"laugh1":[100,898.3219954648525],"laugh2":[1100,1919.092970521542],"laugh3":[3120,1668.2766439909299]}}'),
-      Yk = JSON.parse('{"src":["/sounds/generatedSprites/randomMagic.44dbb5b632.ogg","/sounds/generatedSprites/randomMagic.502e091616.m4a","/sounds/generatedSprites/randomMagic.c1cd617a82.mp3","/sounds/generatedSprites/randomMagic.3b7411f618.ac3"],"sprite":{"magicAccent1":[100,5250.6122448979595],"magicAccent2":[5453.333333333333,5041.632653061224],"magicAccent3":[10596.666666666666,4963.265306122449],"magicAccent4":[15660,4728.163265306122]}}'),
-      Lk = JSON.parse('{"src":["/sounds/generatedSprites/randomSplash.9fc2343518.ogg","/sounds/generatedSprites/randomSplash.9dadcfc844.m4a","/sounds/generatedSprites/randomSplash.4a42cdcbe6.mp3","/sounds/generatedSprites/randomSplash.55bd9b28eb.ac3"],"sprite":{"splash1":[100,1114.5578231292516]}}'),
-      Ck = JSON.parse('{"src":["/sounds/generatedSprites/mobBear.4c3d96a174.ogg","/sounds/generatedSprites/mobBear.dd0c9eb6bb.m4a","/sounds/generatedSprites/mobBear.e67756bcc4.mp3","/sounds/generatedSprites/mobBear.e1520ed37f.ac3"],"sprite":{"bearRoar1":[100,1011.1791383219954],"bearRoar2":[1213.3333333333335,793.6507936507936],"bearRoar3":[2110,764.2630385487529],"bearRoar4":[2976.6666666666665,781.9047619047619],"bearRoar5":[3860,646.6666666666666]}}'),
-      Ak = JSON.parse('{"src":["/sounds/generatedSprites/mobCat.b73d092913.ogg","/sounds/generatedSprites/mobCat.5a42170631.m4a","/sounds/generatedSprites/mobCat.d86dae12ac.mp3","/sounds/generatedSprites/mobCat.02f20eae51.ac3"],"sprite":{"catHiss1":[100,1252.0861678004535],"catHiss2":[1453.3333333333333,1064.2403628117913],"catHiss3":[2620,1082.6530612244899],"catHiss4":[3803.333333333333,978.8662131519275],"catHurt1":[4883.333333333334,809.795918367347],"catHurt2":[5793.333333333333,779.4104308390023],"catHurt3":[6673.333333333333,626.9387755102041],"catMeow1":[7403.333333333333,1306.1224489795918],"catMeow2":[8810,1384.4897959183672],"catMeow3":[10296.666666666666,1280],"catMeow4":[11676.666666666666,1567.3469387755101],"catMeow5":[13346.666666666666,1802.4489795918369]}}'),
-      jk = JSON.parse('{"src":["/sounds/generatedSprites/mobCow.9586369f60.ogg","/sounds/generatedSprites/mobCow.e3c14b3926.m4a","/sounds/generatedSprites/mobCow.b6b57a7270.mp3","/sounds/generatedSprites/mobCow.fbb45d50c5.ac3"],"sprite":{"cowHurt1":[100,522.6530612244899],"cowMoo1":[723.3333333333334,1574.331065759637],"cowMoo2":[2400,1947.4149659863947],"cowMoo3":[4450,2099.342403628118]}}'),
-      sk = JSON.parse('{"src":["/sounds/generatedSprites/mobCrone.e0a7897675.ogg","/sounds/generatedSprites/mobCrone.94420ad1d3.m4a","/sounds/generatedSprites/mobCrone.abc38fe647.mp3","/sounds/generatedSprites/mobCrone.f4c461446a.ac3"],"sprite":{"croneAttack1":[100,500],"croneHurt1":[700,751.6780045351475],"croneIdle1":[1553.3333333333333,6756.8707482993195]}}'),
-      dk = JSON.parse('{"src":["/sounds/generatedSprites/mobDeer.84da9a6aa7.ogg","/sounds/generatedSprites/mobDeer.131a11da4b.m4a","/sounds/generatedSprites/mobDeer.453b17e89a.mp3","/sounds/generatedSprites/mobDeer.c03ab74dd5.ac3"],"sprite":{"deerGrunt1":[100,976.7346938775511],"deerHurt1":[1180,500]}}'),
-      Vk = JSON.parse('{"src":["/sounds/generatedSprites/mobDog.3ee507163b.ogg","/sounds/generatedSprites/mobDog.eda29eb0d7.m4a","/sounds/generatedSprites/mobDog.f9095be251.mp3","/sounds/generatedSprites/mobDog.4d3810ad3e.ac3"],"sprite":{"dogBark1":[100,500],"dogBark2":[700,500],"dogBark3":[1300,500],"dogGrowl1":[1900,634.8979591836734],"dogGrowl2":[2636.6666666666665,543.3560090702948],"dogGrowl3":[3283.333333333333,1361.360544217687],"dogHurt1":[4746.666666666667,500],"dogHurt2":[5346.666666666667,500]}}'),
-      Fk = JSON.parse('{"src":["/sounds/generatedSprites/mobFennec.3751df6e2d.ogg","/sounds/generatedSprites/mobFennec.705fd16691.m4a","/sounds/generatedSprites/mobFennec.85f4679beb.mp3","/sounds/generatedSprites/mobFennec.2073e3f92b.ac3"],"sprite":{"fennecYip1":[100,500],"fennecYip2":[700,500],"fennecYip3":[1300,500]}}'),
-      uk = JSON.parse('{"src":["/sounds/generatedSprites/mobGolem.a66f14f106.ogg","/sounds/generatedSprites/mobGolem.ee5d8cc552.m4a","/sounds/generatedSprites/mobGolem.5404357abd.mp3","/sounds/generatedSprites/mobGolem.a3a7a2390c.ac3"],"sprite":{"golemGrunt1":[100,6687.34693877551],"golemGrunt2":[6890,4911.0204081632655]}}'),
-      qk = JSON.parse('{"src":["/sounds/generatedSprites/mobGorilla.f0d8a54d8e.ogg","/sounds/generatedSprites/mobGorilla.449206cde8.m4a","/sounds/generatedSprites/mobGorilla.5f8caeb83c.mp3","/sounds/generatedSprites/mobGorilla.61c76198d2.ac3"],"sprite":{"gorillaIdle1":[100,898.140589569161],"gorillaIdle2":[1100,825.3061224489796],"gorillaIdle3":[2026.6666666666667,1357.233560090703],"gorillaIdle4":[3486.666666666667,1061.2698412698414],"gorillaRoar1":[4650,1002.6757369614512]}}'),
-      Ik = JSON.parse('{"src":["/sounds/generatedSprites/mobHorse.67401e9b3e.ogg","/sounds/generatedSprites/mobHorse.f04d509143.m4a","/sounds/generatedSprites/mobHorse.0e1e0f5cb6.mp3","/sounds/generatedSprites/mobHorse.15d37b29ac.ac3"],"sprite":{"horseHurt1":[100,1044.8979591836735],"horseHurt2":[1246.6666666666665,1332.2448979591836],"horseIdle1":[2680,1410.6122448979593],"horseIdle2":[4193.333333333333,634.3310657596371],"horseIdle3":[4930,853.469387755102]}}'),
-      zk = JSON.parse('{"src":["/sounds/generatedSprites/mobKnight.c561ff13d3.ogg","/sounds/generatedSprites/mobKnight.84a4b8bd84.m4a","/sounds/generatedSprites/mobKnight.1af7235af5.mp3","/sounds/generatedSprites/mobKnight.b98de5a663.ac3"],"sprite":{"knightGrunt1":[100,2026.6666666666667],"knightGrunt2":[2226.6666666666665,2154.671201814059],"knightGrunt3":[4483.333333333333,1674.671201814059]}}'),
-      Qk = JSON.parse('{"src":["/sounds/generatedSprites/mobPig.0db857ea30.ogg","/sounds/generatedSprites/mobPig.bbb66ff288.m4a","/sounds/generatedSprites/mobPig.725bf033a7.mp3","/sounds/generatedSprites/mobPig.60b70ab1da.ac3"],"sprite":{"pigHurt1":[100,705.6009070294784],"pigHurt2":[906.6666666666666,667.4603174603175],"pigHurt3":[1676.6666666666667,500],"pigOink1":[2276.666666666667,976.7573696145124],"pigOink2":[3356.6666666666665,1015.578231292517],"pigOink3":[4473.333333333334,500],"pigOink4":[5073.333333333333,500],"pigOink5":[5673.333333333333,519.4557823129252]}}'),
-      vk = JSON.parse('{"src":["/sounds/generatedSprites/mobReaver.4baae47e8b.ogg","/sounds/generatedSprites/mobReaver.7742c608af.m4a","/sounds/generatedSprites/mobReaver.401630090d.mp3","/sounds/generatedSprites/mobReaver.5adc0b4978.ac3"],"sprite":{"reaverAttack1":[100,4031.1111111111113],"reaverAttack2":[4233.333333333333,1552.0181405895692],"reaverAttack3":[5886.666666666667,1857.5510204081634],"reaverGrunt1":[7846.666666666667,5073.5600907029475],"reaverGrunt2":[13023.333333333334,2950.090702947846],"reaverGrunt3":[16076.666666666668,6640.907029478458]}}'),
-      Ek = JSON.parse('{"src":["/sounds/generatedSprites/mobSheep.b4eadc8b06.ogg","/sounds/generatedSprites/mobSheep.616ff99abb.m4a","/sounds/generatedSprites/mobSheep.3919f569bc.mp3","/sounds/generatedSprites/mobSheep.fb412e7f4a.ac3"],"sprite":{"sheepBaa1":[100,1039.3877551020407],"sheepBaa2":[1240,1243.968253968254],"sheepBaa3":[2586.6666666666665,827.7551020408164],"sheepBaa4":[3516.6666666666665,1048.1179138321997],"sheepHurt1":[4666.666666666667,700.2721088435375]}}'),
-      hk = JSON.parse('{"src":["/sounds/generatedSprites/mobSkeleton.d5417ca887.ogg","/sounds/generatedSprites/mobSkeleton.3d1ccc92a9.m4a","/sounds/generatedSprites/mobSkeleton.74d2ef1a0f.mp3","/sounds/generatedSprites/mobSkeleton.845029b40c.ac3"],"sprite":{"skeletonRattle1":[100,1088.0045351473923],"skeletonRattle2":[1290,1499.9773242630386],"skeletonRattle3":[2890,750],"skeletonRattle4":[3740,650.6575963718822]}}'),
-      ak = JSON.parse('{"src":["/sounds/generatedSprites/mobStag.ebbaf714eb.ogg","/sounds/generatedSprites/mobStag.e96403c272.m4a","/sounds/generatedSprites/mobStag.341736664c.mp3","/sounds/generatedSprites/mobStag.25221ce4c8.ac3"],"sprite":{"stagGrunt1":[100,976.7346938775511],"stagHurt1":[1180,500]}}'),
-      Wk = JSON.parse('{"src":["/sounds/generatedSprites/mobStalker.9d8e1c70b9.ogg","/sounds/generatedSprites/mobStalker.6c26b72bd3.m4a","/sounds/generatedSprites/mobStalker.a74c32a02a.mp3","/sounds/generatedSprites/mobStalker.a4b0299a76.ac3"],"sprite":{"stalkerAttack1":[100,963.6281179138322],"stalkerIdle1":[1166.6666666666667,2051.065759637188]}}'),
-      tk = JSON.parse('{"src":["/sounds/generatedSprites/mobWarper.be1c89ce4a.ogg","/sounds/generatedSprites/mobWarper.cdcbad67c6.m4a","/sounds/generatedSprites/mobWarper.e3baa96ab6.mp3","/sounds/generatedSprites/mobWarper.ef5578e201.ac3"],"sprite":{"warperGrunt1":[100,2883.605442176871],"warperGrunt2":[3086.6666666666665,6405.351473922902],"warperGrunt3":[9593.333333333334,4806.530612244898],"warperGrunt4":[14500,5781.768707482994],"warperGrunt5":[20383.333333333332,4284.081632653061],"warperPhase1":[24770,5867.256235827665],"warperPhase2":[30740,5866.916099773242]}}'),
-      Xk = JSON.parse('{"src":["/sounds/generatedSprites/mobWraith.55365b10d2.ogg","/sounds/generatedSprites/mobWraith.316cca2df1.m4a","/sounds/generatedSprites/mobWraith.152101497f.mp3","/sounds/generatedSprites/mobWraith.c2a05a3e22.ac3"],"sprite":{"wraithGrunt1":[100,4111.995464852607],"wraithGrunt2":[4313.333333333333,5173.333333333333],"wraithHurt":[9586.666666666666,4277.324263038548]}}'),
-      Bk = JSON.parse('{"src":["/sounds/generatedSprites/mobZombie.3ea7f2781d.ogg","/sounds/generatedSprites/mobZombie.1dcf1ecf93.m4a","/sounds/generatedSprites/mobZombie.672ca05e55.mp3","/sounds/generatedSprites/mobZombie.faad107ffe.ac3"],"sprite":{"ZombieGrunt1":[100,2089.795918367347],"ZombieGrunt2":[2290,2351.0204081632655],"ZombieGrunt3":[4743.333333333333,1750.204081632653],"ZombieHurt1":[6596.666666666667,1593.4693877551022],"ZombieHurt2":[8293.333333333332,1906.938775510204],"ZombieHurt3":[10303.333333333332,1018.7755102040817],"ZombieHurt4":[11423.333333333334,1358.3673469387757]}}'),
-      ck = JSON.parse('{"src":["/sounds/generatedSprites/note.55b41d5148.ogg","/sounds/generatedSprites/note.9d434eddc4.m4a","/sounds/generatedSprites/note.96cf50a66e.mp3","/sounds/generatedSprites/note.85cfed63f9.ac3"],"sprite":{"bass":[0,500],"bassattack":[600,500],"bd":[1200,500],"bigDrumSwish1":[1800,3892.2448979591836],"bigDrumSwish2":[5793.333333333333,3056.326530612245],"bigDrumSwish3":[8950,3578.7755102040815],"drumSwish1":[12630,4127.34693877551],"drumSwish2":[16860,4127.34693877551],"harp_pling":[21090,835.9183673469388],"hat":[22026.666666666668,500],"levelup":[22626.666666666664,4458.231292517006],"lowDrum1":[27186.666666666668,3683.265306122449],"lowDrum2":[30970,3840],"lowDrum3":[34910,4205.714285714285],"snare":[39216.66666666667,500],"sonarBeep":[39816.66666666667,4127.34693877551],"trumpetFlare":[44046.666666666664,1683.4467120181407],"trumpetNote1":[45833.333333333336,779.8412698412699],"trumpetNote2":[46713.33333333333,845.6916099773243],"trumpetNote3":[47660,1090.7256235827665]}}'),
-      Tk = JSON.parse('{"src":["/sounds/generatedSprites/fishing.ff9694e93b.ogg","/sounds/generatedSprites/fishing.20b18e3c80.m4a","/sounds/generatedSprites/fishing.4388bd71de.mp3","/sounds/generatedSprites/fishing.09b8e92f3c.ac3"],"sprite":{"caughtFish":[0,1976.7573696145125],"reel":[2080,531.9501133786848]}}'),
-      Zk = JSON.parse('{"src":["/sounds/generatedSprites/gameStart.dcb4ad7e5f.ogg","/sounds/generatedSprites/gameStart.04192cc8d1.m4a","/sounds/generatedSprites/gameStart.203520cd23.mp3","/sounds/generatedSprites/gameStart.95d1462a45.ac3"],"sprite":{"game_start_countdown_01":[0,1000.7709750566893],"game_start_countdown_02":[1103.3333333333333,994.9206349206348],"game_start_countdown_03":[2200,1000.7709750566893],"game_start_countdown_final":[3303.333333333333,1583.1065759637188]}}'),
-      Ok = JSON.parse('{"src":["/sounds/generatedSprites/customGame_horror.89bd01b3f6.ogg","/sounds/generatedSprites/customGame_horror.58571ce79e.m4a","/sounds/generatedSprites/customGame_horror.809f261ceb.mp3","/sounds/generatedSprites/customGame_horror.0a4350133e.ac3"],"sprite":{"cryptWhoosh":[0,1700],"doorKnock":[1800,1173.3333333333333],"futureStrangePulse":[3073.333333333333,2874.6938775510203],"hauntedHorrorImpact":[6050,1072.857142857143],"horrorAccent1":[7223.333333333334,1919.5238095238096],"horrorFright":[9243.333333333334,1630.952380952381],"horrorMaleDrone":[10976.666666666666,7933.492063492064],"intensiveRainLoop":[19013.333333333332,13037.687074829933],"metalDoorKnock":[32153.333333333336,4219.410430839002],"ominousBellHit":[36473.333333333336,8756.621315192744],"pulseFromTheDark":[45330,7653.582766439909],"suspenseRiser":[53086.666666666664,6825.396825396825],"thunderRain":[60013.333333333336,12085.986394557824],"zapAccent1":[72200,500],"zapAccent2":[72800,500]}}'),
-      gk = JSON.parse('{"src":["/sounds/generatedSprites/crowd.842a12bd70.ogg","/sounds/generatedSprites/crowd.eb817b0986.m4a","/sounds/generatedSprites/crowd.718908450e.mp3","/sounds/generatedSprites/crowd.b61523a08f.ac3"],"sprite":{"crowdAmbience":[0,54935.51020408163],"crowdCheer":[55036.66666666667,6269.3877551020405],"refereeWhistle":[61406.666666666664,2089.795918367347]}}'),
-      Gk = JSON.parse('{"src":["/sounds/generatedSprites/survivalFactory.83edaf137d.ogg","/sounds/generatedSprites/survivalFactory.39e38bf296.m4a","/sounds/generatedSprites/survivalFactory.e3538de2e7.mp3","/sounds/generatedSprites/survivalFactory.a8fc293f73.ac3"],"sprite":{"rocketEngineLoop":[0,13167.369614512472]}}'),
-      Nk = JSON.parse('{"src":["/sounds/generatedSprites/rpg.a91934b789.ogg","/sounds/generatedSprites/rpg.48d078dd6a.m4a","/sounds/generatedSprites/rpg.0279bc17b2.mp3","/sounds/generatedSprites/rpg.833aede675.ac3"],"sprite":{"rpgBeltCloth1":[0,722.5396825396826],"rpgBeltCloth2":[823.3333333333334,753.3106575963718],"rpgBeltHandle1":[1676.6666666666667,500],"rpgBeltHandle2":[2276.666666666667,500],"rpgBookClose":[2876.6666666666665,500],"rpgBookFlip1":[3476.6666666666665,768.6621315192745],"rpgBookFlip2":[4346.666666666667,500],"rpgBookFlip3":[4946.666666666666,500],"rpgBookOpen":[5546.666666666667,500],"rpgBookPlace1":[6146.666666666666,500],"rpgBookPlace2":[6746.666666666667,500],"rpgBookPlace3":[7346.666666666667,500],"rpgChop":[7946.666666666666,500],"rpgCloth1":[8546.666666666666,661.0430839002267],"rpgCloth2":[9310,500],"rpgCloth3":[9910,500],"rpgCloth4":[10510,500],"rpgCreak1":[11110,661.0430839002267],"rpgCreak2":[11873.333333333334,830.1587301587302],"rpgCreak3":[12806.666666666666,500],"rpgDoorClose1":[13406.666666666666,675.0566893424036],"rpgDoorClose2":[14183.333333333334,612.4943310657596],"rpgDoorClose3":[14896.666666666666,713.9455782312925],"rpgDoorClose4":[15713.333333333332,603.3786848072561],"rpgDoorOpen1":[16420,918.9795918367347],"rpgDoorOpen2":[17440,1413.3333333333333],"rpgDrawKnife1":[18953.333333333332,500],"rpgDrawKnife2":[19553.333333333336,500],"rpgDrawKnife3":[20153.333333333332,500],"rpgDropLeather":[20753.333333333332,500],"rpgFootstep00":[21353.333333333332,500],"rpgFootstep01":[21953.333333333332,500],"rpgFootstep02":[22553.333333333336,500],"rpgFootstep03":[23153.333333333332,500],"rpgFootstep04":[23753.333333333332,500],"rpgFootstep05":[24353.333333333332,500],"rpgFootstep06":[24953.333333333332,500],"rpgFootstep07":[25553.333333333336,500],"rpgFootstep08":[26153.333333333332,500],"rpgFootstep09":[26753.333333333332,500],"rpgHandleCoins1":[27353.333333333332,845.5328798185941],"rpgHandleCoins2":[28300,500],"rpgHandleSmallLeather1":[28900,500],"rpgHandleSmallLeather2":[29500,500],"rpgKnifeSlice1":[30100,599.546485260771],"rpgKnifeSlice2":[30800,568.798185941043],"rpgMetalClick":[31470,500],"rpgMetalLatch":[32070,500],"rpgMetalPot1":[32670,1460.4761904761906],"rpgMetalPot2":[34233.333333333336,937.7777777777778],"rpgMetalPot3":[35273.333333333336,907.0068027210884]}}'),
-      Rk = JSON.parse('{"src":["/sounds/generatedSprites/ambient.3b059790c7.ogg","/sounds/generatedSprites/ambient.6309e24e3b.m4a","/sounds/generatedSprites/ambient.9483cf5093.mp3","/sounds/generatedSprites/ambient.c053085ec4.ac3"],"sprite":{"lavaFlow":[0,34000]}}'),
-      Jk = JSON.parse('{"src":["/sounds/generatedSprites/police.d9c6fc70bc.ogg","/sounds/generatedSprites/police.4fb44943a7.m4a","/sounds/generatedSprites/police.2a300c9c5e.mp3","/sounds/generatedSprites/police.4140927019.ac3"],"sprite":{"handcuffsLock":[0,626.9387755102041],"radioBeep":[730,650],"radioChatter":[1480,3372.9931972789113],"runningSteps":[4953.333333333333,3305.555555555555],"sirenChirp":[8360,924.1723356009071],"sirenWail":[9386.666666666666,5195.056689342404],"sirenYelp":[14683.333333333334,5239.3650793650795],"stunZap":[20023.333333333332,750],"whistle":[20873.333333333336,535.9183673469388]}}'),
-      ke = JSON.parse('{"src":["/sounds/generatedSprites/cars.0704d524d1.ogg","/sounds/generatedSprites/cars.ff965de8bb.m4a","/sounds/generatedSprites/cars.ce24c14295.mp3","/sounds/generatedSprites/cars.844fc9209b.ac3"],"sprite":{"carCrash":[0,539.7732426303855],"carDoorClose":[640,570.7029478458049],"carDoorOpen":[1313.3333333333333,720.5895691609977],"carDriveLoop":[2136.6666666666665,29642.721088435374],"carEngineStart":[31880,2800],"carHorn":[34780,500],"carIdleLoop":[35380,27663.94557823129],"carLockChirp":[63146.66666666667,600],"indicatorTick":[63846.666666666664,5266.303854875283],"reverseBeep":[69213.33333333334,5254.512471655329],"seatbeltClick":[74570,500],"tyreScreech":[75170,2000],"vanIdleLoop":[77270,17625.011337868484]}}'),
-      ee = JSON.parse('{"src":["/sounds/generatedSprites/fire.e86d968fb5.ogg","/sounds/generatedSprites/fire.79adfd2c5a.m4a","/sounds/generatedSprites/fire.c1e463a3cd.mp3","/sounds/generatedSprites/fire.6d0bbbc2ca.ac3"],"sprite":{"extinguisherSpray":[0,2598.7301587301586],"fireAlarmBell":[2700,7848.730158730158],"fireCrackle":[10650,17343.94557823129],"fireTruckHorn":[28096.666666666668,3546.485260770975]}}'),
-      ie = JSON.parse('{"src":["/sounds/generatedSprites/phoneAndMoney.4739a7944b.ogg","/sounds/generatedSprites/phoneAndMoney.73a9e2118e.m4a","/sounds/generatedSprites/phoneAndMoney.a2500ea194.mp3","/sounds/generatedSprites/phoneAndMoney.841f719ee3.ac3"],"sprite":{"cameraShutter":[0,553.764172335601],"coinsDrop":[656.6666666666666,2106.190476190476],"jobComplete":[2863.3333333333335,2330.090702947846],"messageReceive":[5296.666666666667,600.204081632653],"phoneNotify":[6000,500],"phoneTap":[6600,500],"phoneVibrate":[7200,1062.7437641723357],"tillPurchase":[8363.333333333334,2754.4897959183672]}}'),
-      De = JSON.parse('{"src":["/sounds/generatedSprites/town.422dd11fe2.ogg","/sounds/generatedSprites/town.7ae83b6b59.m4a","/sounds/generatedSprites/town.b6767431c7.mp3","/sounds/generatedSprites/town.a55c8585bb.ac3"],"sprite":{"crowdMurmur":[0,15708.140589569162],"doorbell":[15810,3017.4603174603176],"gateCreak":[18930,3720.9977324263036],"keysJingle":[22753.333333333332,2400],"kidsPlaying":[25253.333333333332,16534.67120181406],"parkBirds":[41890,13663.106575963719],"shopDoorbell":[55653.333333333336,925.0566893424036]}}');
-    var fe = ik(1177);
-    const Se = {
-        gunSemiAutomatic: Dk,
-        gunSubmachineGun: fk,
-        gunShotgun: Pk,
-        gunRifle: bk,
-        gunPistol: Sk,
-        gunMisc: rk,
-        dig: mk,
-        step: Mk,
-        randomBeep: Kk,
-        randomCannon: xk,
-        randomCash: nk,
-        randomExp: Uk,
-        randomFallsmall: Hk,
-        randomItems: wk,
-        randomFire: lk,
-        randomFirecracker: pk,
-        randomLaugh: yk,
-        randomMagic: Yk,
-        randomSplash: Lk,
-        mobBear: Ck,
-        mobCat: Ak,
-        mobCow: jk,
-        mobCrone: sk,
-        mobDeer: dk,
-        mobDog: Vk,
-        mobFennec: Fk,
-        mobGolem: uk,
-        mobGorilla: qk,
-        mobHorse: Ik,
-        mobKnight: zk,
-        mobPig: Qk,
-        mobReaver: vk,
-        mobSheep: Ek,
-        mobSkeleton: hk,
-        mobStag: ak,
-        mobStalker: Wk,
-        mobWarper: tk,
-        mobWraith: Xk,
-        mobZombie: Bk,
-        note: ck,
-        fishing: Tk,
-        gameStart: Zk,
-        customGame_horror: Ok,
-        crowd: gk,
-        survivalFactory: Gk,
-        rpg: Nk,
-        ambient: Rk,
-        police: Jk,
-        cars: ke,
-        fire: ee,
-        phoneAndMoney: ie,
-        town: De
+    var QC = ZC(48),
+      wC = ZC(1418),
+      bC = ZC(36882),
+      nC = ZC(2394),
+      fC = ZC(2402),
+      oC = ZC(2369),
+      qC = ZC(36447);
+
+    function FC() {
+      const [CC, zC] = (0, QC.useState)(new Map);
+      return {
+        get: zC => CC.get(zC),
+        hold: (0, QC.useCallback)(((CC, ZC, QC) => {
+          zC((zC => new Map(zC).set(CC, ZC))), QC.then((() => {
+            zC((zC => {
+              const ZC = new Map(zC);
+              return ZC.delete(CC), ZC
+            }))
+          }))
+        }), [])
+      }
+    }
+    var WC = ZC(1002),
+      NC = ZC.n(WC),
+      MC = ZC(1143),
+      gC = ZC(1013),
+      SC = ZC(1295),
+      pC = ZC(2637),
+      PC = ZC(4971),
+      GC = ZC(3419);
+    var RC = ZC(1877),
+      AC = ZC(1388);
+
+    function xC(CC, zC, ZC) {
+      const QC = CC.filter((CC => CC.name !== zC)),
+        wC = QC.filter((CC => "none" === CC.role)).sort(((CC, zC) => zC.at - CC.at)),
+        bC = QC.filter((CC => "none" !== CC.role)).sort(((CC, zC) => ZC.indexOf(CC.role) - ZC.indexOf(zC.role) || zC.at - CC.at));
+      return [...CC.some((CC => CC.name === zC)) && null !== zC ? [zC] : [], ...[...wC, ...bC].map((CC => CC.name))]
+    }
+
+    function JC(CC, zC) {
+      const ZC = CC.banned.map((CC => CC.name)),
+        QC = new Set(ZC);
+      return {
+        here: xC(CC.here, zC, CC.roles.map((CC => CC.role))),
+        away: CC.away.filter((CC => !QC.has(CC.name))).map((CC => CC.name)),
+        banned: ZC
+      }
+    }
+
+    function IC(CC, zC) {
+      const ZC = CC.here.find((CC => CC.name === zC));
+      if (ZC) return {
+        section: "here",
+        player: ZC
+      };
+      const QC = CC.banned.find((CC => CC.name === zC));
+      if (QC) return {
+        section: "banned",
+        bannedAt: QC.at
+      };
+      const wC = CC.away.find((CC => CC.name === zC));
+      return wC ? {
+        section: "away",
+        player: wC
+      } : {
+        section: "gone"
+      }
+    }
+    const iC = {
+      gamemode: !1,
+      roles: [],
+      fixedRole: null,
+      kick: !1,
+      ban: !1,
+      unban: !1
+    };
+    var vC = ZC(2633),
+      eC = ZC(36436),
+      hC = ZC(36605),
+      KC = ZC(3113),
+      YC = ZC(326);
+
+    function dC(CC, zC, ZC) {
+      return zC.map((zC => {
+        if ("string" === typeof zC) return zC;
+        const QC = "str" in zC ? zC.str : zC;
+        return "string" === typeof QC ? QC : "entityName" in QC ? QC.entityName : "translationKey" in QC ? CC(QC.translationKey, (0, MC.q)(QC.params, ZC)) : ""
+      })).join("")
+    }
+
+    function mC(CC, zC, ZC, QC, wC) {
+      return wC - QC < 6e4 ? CC(`${ZC}JustNow`) : CC(ZC, {
+        time: (0, YC.U)((0, MC.m)(zC, ZC), QC, wC)
+      })
+    }
+    var HC = ZC(1811),
+      EC = ZC(1593),
+      lC = ZC(1056);
+
+    function XC(CC) {
+      let {
+        status: zC
+      } = CC;
+      return (0, lC.jsx)("span", {
+        className: NC()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !zC.ok
+        }),
+        children: (0, lC.jsx)(HC.e, {
+          text: zC.text
+        })
+      })
+    }
+
+    function cC(CC) {
+      let {
+        names: zC,
+        cap: ZC,
+        filterFrom: wC,
+        moreLabel: bC,
+        reveal: nC = null,
+        renderRow: fC
+      } = CC;
+      const {
+        t: oC
+      } = (0, MC.y)(), [qC, FC] = (0, QC.useState)(!1), [WC, NC] = (0, QC.useState)(""), SC = qC || null !== nC && zC.indexOf(nC) >= ZC, PC = (SC || zC.length <= ZC) && null !== wC && zC.length > wC, GC = WC.trim().toLowerCase();
+      let RC = SC ? zC : zC.slice(0, ZC);
+      return PC && "" !== GC && (RC = RC.filter((CC => CC.toLowerCase().includes(GC)))), (0, lC.jsxs)(lC.Fragment, {
+        children: [PC && (0, lC.jsx)(EC.c, {
+          className: "LobbyManageFilter",
+          placeholderText: oC("lobbyManage:findName"),
+          ariaLabel: oC("lobbyManage:findName"),
+          onValueChange: CC => {
+            NC(CC)
+          }
+        }), RC.length > 0 && (0, lC.jsx)("div", {
+          className: "PlayerRows",
+          children: RC.map(((CC, zC) => fC(CC, RC.length - zC)))
+        }), !SC && zC.length > ZC && (0, lC.jsx)("div", {
+          className: "LobbyManageMore",
+          children: (0, lC.jsx)(pC.b, {
+            label: (0, lC.jsxs)(lC.Fragment, {
+              children: [bC, " ", (0, lC.jsx)(gC.c, {
+                name: "angle-down"
+              })]
+            }),
+            onClick: () => {
+              FC(!0)
+            }
+          })
+        })]
+      })
+    }
+
+    function uC(CC) {
+      let {
+        value: zC,
+        placeholder: ZC,
+        ariaLabel: wC,
+        maxLength: bC,
+        wide: nC = !1,
+        onSave: fC
+      } = CC;
+      const oC = (0, QC.useRef)(null),
+        [qC, FC] = (0, QC.useState)(0),
+        WC = (0, QC.useRef)(!0),
+        MC = (0, QC.useRef)(null),
+        gC = (0, QC.useRef)({
+          value: zC,
+          onSave: fC
+        });
+      gC.current = {
+        value: zC,
+        onSave: fC
+      };
+      const SC = () => {
+        const CC = MC.current;
+        MC.current = null, null !== CC && CC !== gC.current.value && gC.current.onSave(CC).then((() => {
+          WC.current && FC((CC => CC + 1))
+        }))
+      };
+      return (0, QC.useEffect)((() => {
+        null === MC.current && oC.current && (oC.current.value = zC)
+      }), [zC, qC]), (0, QC.useEffect)((() => () => {
+        WC.current = !1, SC()
+      }), []), (0, lC.jsx)("div", {
+        className: NC()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: nC
+        }),
+        onBlur: SC,
+        children: (0, lC.jsx)(EC.c, {
+          domRef: oC,
+          defaultValue: zC,
+          placeholderText: ZC,
+          ariaLabel: wC,
+          maxLength: bC,
+          onValueChange: CC => {
+            MC.current = CC
+          },
+          onEnter: SC
+        })
+      })
+    }
+    const rC = ["mod", "coOwner"],
+      sC = {
+        coOwner: "lobbyManage:roleCanCoOwner",
+        mod: "lobbyManage:roleCanMod",
+        coder: "lobbyManage:roleCanCoder",
+        builder: "lobbyManage:roleCanBuilder"
+      };
+
+    function TC(CC) {
+      var zC, ZC, bC;
+      let {
+        name: nC,
+        place: fC,
+        openedIn: oC,
+        isYou: qC,
+        manage: WC,
+        hiddenNames: NC,
+        zIndex: SC
+      } = CC;
+      const {
+        t: pC,
+        selectedLanguage: PC
+      } = (0, MC.y)(), [GC, RC] = (0, QC.useState)(null), {
+        state: xC
+      } = WC, JC = `player:${nC}`, IC = function(CC, zC) {
+        if ("banned" === CC.section) return {
+          ...iC,
+          unban: !0
+        };
+        if ("gone" === CC.section) return iC;
+        const {
+          player: ZC
+        } = CC, QC = "here" === CC.section, wC = QC || "none" !== ZC.role ? ZC.can.roles : [];
+        return {
+          gamemode: QC && zC && null !== ZC.gamemode && ZC.can.gamemode,
+          roles: wC,
+          fixedRole: 0 === wC.length && "none" !== ZC.role ? ZC.role : null,
+          kick: QC && ZC.can.kick,
+          ban: ZC.can.ban,
+          unban: !1
+        }
+      }(fC, null !== xC.gamemodes), YC = WC.statusOf(JC), HC = WC.isPending(JC), EC = FC(), cC = Date.now(), uC = CC => {
+        var zC, ZC;
+        return null !== (zC = null === (ZC = (CC => xC.roles.find((zC => zC.role === CC)))(CC)) || void 0 === ZC ? void 0 : ZC.label) && void 0 !== zC ? zC : CC
+      }, TC = CC => {
+        const zC = sC[CC];
+        return void 0 === zC ? void 0 : pC(zC)
+      }, aC = "here" === fC.section || "away" === fC.section ? fC.player : null, tC = "here" === fC.section ? fC.player.id : null, {
+        playerSocialPreview: DC,
+        isFriend: jC
+      } = null === tC ? {
+        playerSocialPreview: (0, hC.l)(nC, null),
+        isFriend: !1
+      } : (0, eC.d)(tC, nC), yC = function() {
+        WC.send(...arguments)
+      }, LC = (CC, zC) => {
+        EC.hold("role", CC, WC.send({
+          type: "setRole",
+          name: nC,
+          role: CC
+        }, JC, zC))
+      };
+      let UC = null;
+      if ("ban" === (null === GC || void 0 === GC ? void 0 : GC.kind)) UC = pC("lobbyManageEntry:banConfirm", {
+        playerName: nC
+      });
+      else if ("role" === (null === GC || void 0 === GC ? void 0 : GC.kind)) {
+        var BC;
+        UC = `${pC("lobbyManage:roleConfirm",{playerName:nC,role:uC(GC.role)})} ${null!==(BC=TC(GC.role))&&void 0!==BC?BC:""}`
+      } else if (YC) UC = (0, lC.jsx)(XC, {
+        status: YC
+      });
+      else if (qC) UC = pC("lobbyManage:you");
+      else if ("here" === fC.section) "none" === fC.player.role && cC - fC.player.at < 6e5 && (UC = mC(pC, PC.code, "lobbyManage:joinedAgo", fC.player.at, cC));
+      else if ("away" === fC.section) {
+        if (fC.player.at > 0) {
+          const CC = "kicked" === fC.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          UC = mC(pC, PC.code, CC, fC.player.at, cC)
+        }
+      } else "banned" === fC.section ? null !== fC.bannedAt && (UC = mC(pC, PC.code, "lobbyManage:bannedAgo", fC.bannedAt, cC)) : "banned" === oC && (UC = pC("lobbyManageEntry:unbanned"));
+      return (0, lC.jsx)("div", {
+        className: "LobbyManagePlayerRow",
+        "data-lobby-manage-row": nC,
+        children: (0, lC.jsxs)(vC.f, {
+          playerSocialPreview: DC,
+          isFriend: jC,
+          status: UC,
+          opensProfileCard: !qC && (0, eC.f)(!0, nC, NC),
+          zIndex: SC,
+          children: [null !== GC && (0, lC.jsxs)("div", {
+            className: "LobbyManageButtons",
+            children: ["ban" === GC.kind && (0, lC.jsxs)(AC.I, {
+              className: "LobbyManageIconButton SmallTextLight",
+              analyticsClick: {
+                id: "lobby_manage.ban",
+                value: "row"
+              },
+              onClick: () => {
+                RC(null), yC({
+                  type: "ban",
+                  name: nC
+                }, JC)
+              },
+              children: [(0, lC.jsx)(gC.c, {
+                name: "gavel"
+              }), (0, lC.jsx)("span", {
+                className: "LobbyManageButtonLabel",
+                children: pC("lobbyManageEntry:ban")
+              })]
+            }), "role" === GC.kind && (0, lC.jsx)(AC.g, {
+              className: "LobbyManageIconButton SmallTextLight",
+              analyticsClick: {
+                id: "lobby_manage.set_role",
+                value: GC.role
+              },
+              onClick: () => {
+                RC(null), LC(GC.role)
+              },
+              children: pC("lobbyManage:makeRole", {
+                role: uC(GC.role)
+              })
+            }), (0, lC.jsx)(AC.i, {
+              className: "LobbyManageIconButton SmallTextLight",
+              onClick: () => {
+                RC(null)
+              },
+              children: pC("general:cancel")
+            })]
+          }), null === GC && (0, lC.jsxs)(lC.Fragment, {
+            children: [(0, lC.jsxs)("div", {
+              className: "LobbyManageChoices",
+              children: [IC.gamemode && null !== aC && (0, lC.jsx)(KC.b, {
+                options: (null !== (zC = xC.gamemodes) && void 0 !== zC ? zC : []).map((CC => ({
+                  value: CC.value,
+                  label: dC(pC, CC.label, NC)
+                }))),
+                value: null !== (ZC = EC.get("gamemode")) && void 0 !== ZC ? ZC : aC.gamemode,
+                disabled: HC,
+                onChange: CC => {
+                  (0, wC.reportAnalyticsClick)({
+                    id: "lobby_manage.set_gamemode",
+                    value: CC.value
+                  }), EC.hold("gamemode", CC.value, WC.send({
+                    type: "setGamemode",
+                    name: nC,
+                    gamemode: CC.value
+                  }, JC))
+                }
+              }), IC.roles.length > 0 && null !== aC && (0, lC.jsx)(KC.b, {
+                options: [...xC.roles].reverse().filter((CC => IC.roles.includes(CC.role))).map((CC => ({
+                  value: CC.role,
+                  label: CC.label
+                }))),
+                value: null !== (bC = EC.get("role")) && void 0 !== bC ? bC : aC.role,
+                disabled: HC,
+                onChange: CC => {
+                  var zC;
+                  (zC = CC.value) !== (null === aC || void 0 === aC ? void 0 : aC.role) && (rC.includes(zC) ? RC({
+                    kind: "role",
+                    role: zC
+                  }) : ((0, wC.reportAnalyticsClick)({
+                    id: "lobby_manage.set_role",
+                    value: zC
+                  }), LC(zC, TC(zC))))
+                }
+              }), null !== IC.fixedRole && (0, lC.jsx)("div", {
+                className: "LobbyManageChoiceFixed",
+                children: uC(IC.fixedRole)
+              })]
+            }), (0, lC.jsxs)("div", {
+              className: "LobbyManageButtons",
+              children: [IC.kick && (0, lC.jsxs)(AC.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                ariaLabel: `${pC("lobbyManageEntry:kick")} ${nC}`,
+                disabled: HC,
+                analyticsClick: {
+                  id: "lobby_manage.kick",
+                  value: "row"
+                },
+                onClick: () => {
+                  yC({
+                    type: "kick",
+                    name: nC
+                  }, JC)
+                },
+                children: [(0, lC.jsx)(gC.c, {
+                  name: "person-falling-burst"
+                }), (0, lC.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: pC("lobbyManageEntry:kick")
+                })]
+              }), IC.ban && (0, lC.jsxs)(AC.K, {
+                className: "LobbyManageOutlineButton SmallTextLight",
+                ariaLabel: `${pC("lobbyManageEntry:ban")} ${nC}`,
+                disabled: HC,
+                padDestructive: !0,
+                onClick: () => {
+                  RC({
+                    kind: "ban"
+                  })
+                },
+                children: [(0, lC.jsx)(gC.c, {
+                  name: "gavel"
+                }), (0, lC.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: pC("lobbyManageEntry:ban")
+                })]
+              }), IC.unban && (0, lC.jsxs)(AC.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                ariaLabel: `${pC("lobbyManageEntry:unban")} ${nC}`,
+                disabled: HC,
+                analyticsClick: {
+                  id: "lobby_manage.unban"
+                },
+                onClick: () => {
+                  yC({
+                    type: "unban",
+                    name: nC
+                  }, JC)
+                },
+                children: [(0, lC.jsx)(gC.c, {
+                  name: "user-unlock"
+                }), (0, lC.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: pC("lobbyManageEntry:unban")
+                })]
+              })]
+            })]
+          })]
+        })
+      })
+    }
+
+    function aC(CC) {
+      var zC, ZC, wC, bC;
+      let {
+        manage: nC,
+        focusRequest: fC,
+        onFocused: oC
+      } = CC;
+      const {
+        t: qC
+      } = (0, MC.y)(), FC = (0, RC.f)("players"), WC = (0, RC.f)("hiddenPlayerNames"), NC = (0, QC.useRef)(null), {
+        state: SC
+      } = nC, PC = null === FC.localId ? null : null !== (zC = null === (ZC = FC.byId[FC.localId]) || void 0 === ZC ? void 0 : ZC.name) && void 0 !== zC ? zC : null, [GC] = (0, QC.useState)((() => JC(SC, PC))), xC = function(CC, zC, ZC) {
+        const QC = new Set([...CC.here, ...CC.away, ...CC.banned]),
+          wC = JC(zC, ZC),
+          bC = zC => {
+            const ZC = wC[zC].filter((CC => !QC.has(CC)));
+            for (const CC of ZC) QC.add(CC);
+            return [...CC[zC], ...ZC]
+          };
+        return {
+          here: bC("here"),
+          away: bC("away"),
+          banned: bC("banned")
+        }
+      }(GC, SC, PC), [iC, vC] = (0, QC.useState)(!1), eC = function(CC, zC) {
+        return CC.here.filter((CC => CC.name !== zC && "none" === CC.role && CC.can.kick)).length
+      }(SC, PC), hC = nC.statusOf("kickAll");
+      (0, QC.useEffect)((() => {
+        var CC, zC;
+        if (null === fC) return;
+        const ZC = null === (CC = NC.current) || void 0 === CC ? void 0 : CC.querySelector(`[data-lobby-manage-row="${CSS.escape(fC.name)}"]`);
+        null === ZC || void 0 === ZC || ZC.scrollIntoView({
+          block: "center"
+        }), null === ZC || void 0 === ZC || null === (zC = ZC.querySelector(".ProfilePreview")) || void 0 === zC || zC.focus({
+          preventScroll: !0
+        }), oC(fC.seq)
+      }), [null === fC || void 0 === fC ? void 0 : fC.seq]);
+      const KC = CC => (zC, ZC) => (0, lC.jsx)(TC, {
+        name: zC,
+        place: IC(SC, zC),
+        openedIn: CC,
+        isYou: zC === PC,
+        manage: nC,
+        hiddenNames: WC,
+        zIndex: ZC
+      }, zC);
+      return (0, lC.jsxs)("div", {
+        ref: NC,
+        className: "LobbyManagePage",
+        children: [xC.here.length > 0 && (0, lC.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, lC.jsxs)("div", {
+            className: "LobbyManageBoxHeading",
+            children: [(0, lC.jsx)(pC.b, {
+              label: qC("lobbyManage:here"),
+              meta: SC.here.length
+            }), eC >= 2 && !iC && (0, lC.jsxs)(AC.K, {
+              className: "LobbyManageTitleAction SmallTextLight",
+              padDestructive: !0,
+              disabled: nC.isPending("kickAll"),
+              onClick: () => {
+                vC(!0)
+              },
+              children: [(0, lC.jsx)(gC.c, {
+                name: "person-falling-burst"
+              }), " ", qC("lobbyManage:kickAll")]
+            })]
+          }), iC && eC >= 2 && (0, lC.jsxs)("div", {
+            className: "LobbyManageConfirm",
+            children: [(0, lC.jsx)("span", {
+              className: "LobbyManageConfirmText",
+              children: qC("lobbyManage:kickAllConfirm", {
+                count: eC
+              })
+            }), (0, lC.jsxs)("div", {
+              className: "LobbyManageButtons",
+              children: [(0, lC.jsx)(AC.I, {
+                className: "LobbyManageIconButton SmallTextLight",
+                analyticsClick: {
+                  id: "lobby_manage.kick_all"
+                },
+                onClick: () => {
+                  vC(!1), nC.send({
+                    type: "kickAll"
+                  }, "kickAll")
+                },
+                children: qC("lobbyManage:kickAll")
+              }), (0, lC.jsx)(AC.i, {
+                className: "LobbyManageIconButton SmallTextLight",
+                onClick: () => {
+                  vC(!1)
+                },
+                children: qC("general:cancel")
+              })]
+            })]
+          }), hC && (0, lC.jsx)("div", {
+            className: "LobbyManageBoxStatus",
+            children: (0, lC.jsx)(XC, {
+              status: hC
+            })
+          }), (0, lC.jsx)(cC, {
+            names: xC.here,
+            cap: xC.here.length,
+            filterFrom: 20,
+            moreLabel: "",
+            renderRow: KC("here")
+          })]
+        }), xC.away.length > 0 && (0, lC.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, lC.jsx)(pC.b, {
+            label: qC("lobbyManage:notHere"),
+            meta: xC.away.length
+          }), (0, lC.jsx)(cC, {
+            names: xC.away,
+            cap: 5,
+            filterFrom: null,
+            moreLabel: qC("lobbyManage:allCount", {
+              count: xC.away.length
+            }),
+            reveal: null !== (wC = null === fC || void 0 === fC ? void 0 : fC.name) && void 0 !== wC ? wC : null,
+            renderRow: KC("away")
+          })]
+        }), xC.banned.length > 0 && (0, lC.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, lC.jsx)(pC.b, {
+            label: qC("lobbyManage:banned"),
+            meta: xC.banned.length
+          }), (0, lC.jsx)(cC, {
+            names: xC.banned,
+            cap: 5,
+            filterFrom: 20,
+            moreLabel: qC("lobbyManage:allCount", {
+              count: xC.banned.length
+            }),
+            reveal: null !== (bC = null === fC || void 0 === fC ? void 0 : fC.name) && void 0 !== bC ? bC : null,
+            renderRow: KC("banned")
+          })]
+        })]
+      })
+    }
+    var tC = ZC(4562),
+      DC = ZC(1559),
+      jC = ZC(36584),
+      yC = ZC(36598),
+      LC = ZC(36590),
+      UC = ZC(36588),
+      BC = ZC(36627),
+      OC = ZC(36612),
+      kC = ZC(36620);
+
+    function VC(CC) {
+      const zC = new Set;
+      for (const ZC of CC) zC.add(ZC.toLowerCase());
+      return zC
+    }
+
+    function Cz(CC) {
+      var zC, ZC;
+      let {
+        state: wC,
+        lobbyName: bC,
+        listed: nC,
+        isListed: fC,
+        sG: oC,
+        xR: qC,
+        statusOf: FC
+      } = CC;
+      const {
+        t: WC,
+        selectedLanguage: NC
+      } = (0, MC.y)(), gC = (0, DC.k)(), SC = (0, RC.f)("players"), PC = null === SC.localId ? null : null !== (zC = null === (ZC = SC.byId[SC.localId]) || void 0 === ZC ? void 0 : ZC.name) && void 0 !== zC ? zC : null, GC = (0, QC.useMemo)((() => (0, UC.i)(gC.friends, bC, wC.here.map((CC => CC.name)))), [gC.friends, bC, wC.here]), AC = new Map(GC.map((CC => [CC.friend.name.toLowerCase(), CC]))), xC = function(CC) {
+        let {
+          refused: zC,
+          listed: ZC,
+          here: QC,
+          friends: wC,
+          excluded: bC
+        } = CC;
+        const nC = VC(bC),
+          fC = CC => CC.filter((CC => {
+            const zC = CC.toLowerCase();
+            return !nC.has(zC) && (nC.add(zC), !0)
+          }));
+        return {
+          added: [],
+          refused: fC(zC),
+          listed: fC(ZC),
+          suggested: fC([...QC, ...wC])
+        }
+      }({
+        refused: wC.refused.map((CC => CC.name)),
+        listed: nC,
+        here: wC.here.map((CC => CC.name)),
+        friends: GC.flatMap((CC => "here" === CC.place ? [] : [CC.friend.name])),
+        excluded: [...null === PC ? [] : [PC], ...[...wC.here, ...wC.away].flatMap((CC => "none" === CC.role || (0, UC.k)(nC, CC.name) ? [] : [CC.name]))]
+      }), [JC] = (0, QC.useState)(xC), [IC, iC] = (0, QC.useState)([]), vC = function(CC, zC, ZC) {
+        const QC = VC(ZC),
+          wC = VC([...ZC, ...CC.refused, ...CC.listed, ...CC.suggested]),
+          bC = ZC => [...CC[ZC].filter((CC => !QC.has(CC.toLowerCase()))), ...zC[ZC].filter((CC => {
+            const zC = CC.toLowerCase();
+            return !wC.has(zC) && (wC.add(zC), !0)
+          }))];
+        return {
+          added: [...ZC],
+          refused: bC("refused"),
+          listed: bC("listed"),
+          suggested: bC("suggested")
+        }
+      }(JC, xC, IC), KC = (CC, zC) => {
+        var ZC, QC;
+        const bC = CC.toLowerCase(),
+          nC = AC.get(bC),
+          qC = wC.here.find((CC => CC.name.toLowerCase() === bC)),
+          MC = wC.refused.find((CC => CC.name.toLowerCase() === bC)),
+          gC = null !== (ZC = null === FC || void 0 === FC ? void 0 : FC(CC)) && void 0 !== ZC ? ZC : null;
+        let SC = null;
+        gC ? SC = (0, lC.jsx)(XC, {
+          status: gC
+        }) : MC ? SC = mC(WC, NC.code, "lobbyManage:triedToJoinAgo", MC.at, Date.now()) : nC && qC ? SC = WC("lobbyManage:friendHere") : nC ? SC = "online" === nC.place ? WC("lobbyManage:friendOnline") : WC("lobbyManage:friend") : qC && (SC = WC("lobbyManage:hereStatus"));
+        let pC = null !== (QC = null === nC || void 0 === nC ? void 0 : nC.friend) && void 0 !== QC ? QC : (0, hC.l)(CC, null);
+        return !nC && null !== qC && void 0 !== qC && qC.id && (pC = (0, eC.d)(qC.id, qC.name).playerSocialPreview), (0, lC.jsx)(OC.d, {
+          playerSocialPreview: pC,
+          isFriend: void 0 !== nC,
+          hideFriendBadge: !0,
+          status: SC,
+          zIndex: zC,
+          ZN: {
+            on: fC(CC),
+            onChange: zC => {
+              oC(CC, zC)
+            }
+          }
+        }, bC)
+      }, YC = [...vC.added, ...vC.refused];
+      return (0, lC.jsxs)("div", {
+        className: "LobbyManageBox",
+        children: [(0, lC.jsx)(pC.b, {
+          label: WC("worldSocial:whitelist"),
+          meta: nC.length
+        }), (0, lC.jsx)(kC.d, {
+          label: WC("lobbyManage:add"),
+          icon: "user-check",
+          placeholder: WC("socialBar:enterPlayerName"),
+          onSubmit: async CC => {
+            const zC = await qC(CC);
+            return zC.ok && iC((zC => [CC, ...zC])), zC
+          }
+        }), YC.length > 0 && (0, lC.jsx)("div", {
+          className: "PlayerRows",
+          children: YC.map(((CC, zC) => KC(CC, YC.length - zC)))
+        }), (0, lC.jsx)(cC, {
+          names: vC.listed,
+          cap: 8,
+          filterFrom: 8,
+          moreLabel: WC("lobbyManage:allOnWhitelist", {
+            count: vC.listed.length
+          }),
+          renderRow: KC
+        }), (0, lC.jsx)(cC, {
+          names: vC.suggested,
+          cap: 8,
+          filterFrom: null,
+          moreLabel: WC("lobbyManage:allCount", {
+            count: vC.suggested.length
+          }),
+          renderRow: KC
+        })]
+      })
+    }
+
+    function zz(CC) {
+      let {
+        manage: zC,
+        listing: ZC
+      } = CC;
+      const {
+        t: QC
+      } = (0, MC.y)(), bC = (CC, ZC) => ((0, wC.reportAnalyticsClick)({
+        id: "lobby_manage.set_listing",
+        value: CC
+      }), zC.send({
+        type: "setListing",
+        field: CC,
+        value: ZC
+      }, `listing:${CC}`)), nC = CC => {
+        const ZC = zC.statusOf(`listing:${CC}`);
+        return ZC && !ZC.ok && (0, lC.jsx)("div", {
+          className: "LobbyManageFieldError",
+          children: (0, lC.jsx)(XC, {
+            status: ZC
+          })
+        })
+      };
+      return (0, lC.jsxs)("div", {
+        className: "LobbyManageBox LobbyManageListing",
+        children: [(0, lC.jsx)(pC.b, {
+          label: QC("lobbyManage:inWorldsList")
+        }), (0, lC.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, lC.jsx)("div", {
+            className: "SliderText",
+            children: QC("lobbyManage:description")
+          }), (0, lC.jsx)(uC, {
+            value: ZC.description,
+            ariaLabel: QC("lobbyManage:description"),
+            wide: !0,
+            onSave: CC => bC("description", CC)
+          })]
+        }), nC("description"), (0, lC.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, lC.jsx)("div", {
+            className: "SliderText",
+            children: QC("lobbyManage:emojis")
+          }), (0, lC.jsx)(uC, {
+            value: ZC.emojis,
+            ariaLabel: QC("lobbyManage:emojis"),
+            onSave: CC => bC("emojis", CC)
+          })]
+        }), nC("emojis"), (0, lC.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, lC.jsx)("div", {
+            className: "SliderText",
+            children: QC("lobbyManage:colour")
+          }), (0, lC.jsx)(Zz, {
+            value: ZC.colour,
+            ariaLabel: QC("lobbyManage:colour"),
+            onSave: CC => {
+              bC("colour", CC)
+            }
+          })]
+        }), nC("colour")]
+      })
+    }
+
+    function Zz(CC) {
+      let {
+        value: zC,
+        ariaLabel: ZC,
+        onSave: wC
+      } = CC;
+      const bC = (0, QC.useRef)(null),
+        nC = (0, QC.useRef)({
+          value: zC,
+          onSave: wC
+        });
+      nC.current = {
+        value: zC,
+        onSave: wC
+      };
+      const fC = (0, QC.useRef)(null),
+        oC = (0, QC.useRef)(!1),
+        qC = CC => {
+          oC.current && CC.value !== nC.current.value && CC.value !== fC.current && (fC.current = CC.value, nC.current.onSave(CC.value))
+        };
+      return (0, QC.useEffect)((() => {
+        bC.current && document.activeElement !== bC.current && (bC.current.value = zC)
+      }), [zC]), (0, QC.useEffect)((() => {
+        const CC = bC.current,
+          zC = () => {
+            qC(CC)
+          };
+        return CC.addEventListener("change", zC), () => {
+          CC.removeEventListener("change", zC), qC(CC)
+        }
+      }), []), (0, lC.jsx)("input", {
+        ref: bC,
+        type: "color",
+        className: "LobbyManageColour",
+        defaultValue: zC,
+        "aria-label": ZC,
+        onInput: () => {
+          oC.current = !0
+        },
+        onBlur: CC => {
+          qC(CC.currentTarget)
+        }
+      })
+    }
+
+    function Qz(CC) {
+      let {
+        manage: zC
+      } = CC;
+      const {
+        lobbyName: ZC,
+        shownLobbyName: QC
+      } = (0, RC.f)("connectedGame");
+      return zC.state.you.canSetVisibility && null !== ZC ? (0, lC.jsx)(bz, {
+        manage: zC,
+        lobbyName: ZC,
+        worldCode: null !== QC && void 0 !== QC ? QC : ZC
+      }, ZC) : (0, lC.jsx)(nz, {
+        manage: zC,
+        lobbyName: null !== ZC && void 0 !== ZC ? ZC : ""
+      })
+    }
+
+    function wz(CC) {
+      return CC.map((CC => CC.toLowerCase())).sort().join(",")
+    }
+
+    function bz(CC) {
+      var zC;
+      let {
+        manage: ZC,
+        lobbyName: bC,
+        worldCode: nC
+      } = CC;
+      const {
+        t: fC
+      } = (0, MC.y)(), {
+        settings: oC,
+        loading: qC,
+        change: FC,
+        retry: WC,
+        refresh: NC
+      } = (0, jC.j)(bC), gC = (0, DC.k)(), {
+        state: PC
+      } = ZC, GC = (0, QC.useRef)(oC);
+      GC.current = oC;
+      const RC = wz(null !== (zC = PC.whitelist) && void 0 !== zC ? zC : []),
+        xC = null !== PC.whitelist;
+      (0, QC.useEffect)((() => {
+        const CC = GC.current;
+        null !== CC && (CC.visibility !== PC.visibility || xC && wz(CC.whitelist) !== RC) && NC()
+      }), [PC.visibility, RC, xC, NC]);
+      const JC = async (CC, zC) => {
+        let ZC = null;
+        return await FC(CC, zC, {
+          quiet: !0,
+          onAnswer: CC => {
+            ZC = CC
+          }
+        }), ZC
+      }, IC = (CC, zC) => {
+        null !== zC && "error" in zC && ZC.showStatus(CC, {
+          ok: !1,
+          text: [fC(zC.error)]
+        })
+      }, iC = async CC => {
+        if (null === oC || CC === oC.visibility) return;
+        (0, wC.reportAnalyticsClick)({
+          id: "lobby_manage.set_mode",
+          value: CC
+        });
+        const zC = "whitelist" === CC ? (0, UC.f)((0, UC.i)(gC.friends, bC, PC.here.map((CC => CC.name))), (0, BC.c)(bC), oC.whitelist) : [],
+          ZC = await JC({
+            setVisibility: CC
+          }, (zC => ({
+            ...zC,
+            visibility: CC
+          })));
+        IC("mode", ZC), null === ZC || "error" in ZC || await (async CC => {
+          for (const zC of (0, UC.n)(CC, tC.E))
+            if (!await FC({
+                whitelistAdd: zC
+              }, (CC => (0, UC.s)(CC, zC, !0)))) return !1;
+          return !0
+        })(zC)
+      }, vC = (0, QC.useMemo)((() => {
+        var CC;
+        if (null === oC) return [];
+        const zC = null !== (CC = PC.whitelist) && void 0 !== CC ? CC : [];
+        return [...zC.filter((CC => (0, UC.k)(oC.whitelist, CC))), ...oC.whitelist.filter((CC => !(0, UC.k)(zC, CC)))]
+      }), [oC, PC.whitelist]), eC = ZC.statusOf("mode");
+      return (0, lC.jsxs)("div", {
+        className: "LobbyManagePage",
+        children: [(0, lC.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, lC.jsx)(pC.b, {
+            label: fC("worldSocial:whoCanJoin")
+          }), null === oC && qC && (0, lC.jsx)("div", {
+            className: "LobbyManageLoading",
+            children: (0, lC.jsx)(SC.d, {})
+          }), null === oC && !qC && (0, lC.jsx)(AC.i, {
+            className: "SmallTextLight",
+            onClick: WC,
+            children: fC("worldSocial:loadFailed")
+          }), null !== oC && (0, lC.jsx)(yC.b, {
+            visibility: oC.visibility,
+            onPick: CC => {
+              iC(CC)
+            }
+          }), eC && (0, lC.jsx)("div", {
+            className: "LobbyManageFieldError",
+            children: (0, lC.jsx)(XC, {
+              status: eC
+            })
+          }), null !== oC && "private" !== oC.visibility && (0, lC.jsx)(LC.d, {
+            worldCode: nC,
+            message: null
+          })]
+        }), "whitelist" === (null === oC || void 0 === oC ? void 0 : oC.visibility) && (0, lC.jsx)(Cz, {
+          state: PC,
+          lobbyName: bC,
+          listed: vC,
+          isListed: CC => (0, UC.k)(oC.whitelist, CC),
+          sG: (CC, zC) => {
+            (0, wC.reportAnalyticsClick)(zC ? {
+              id: "lobby_manage.whitelist_add",
+              value: "ZN"
+            } : {
+              id: "lobby_manage.whitelist_remove"
+            }), JC(zC ? {
+              whitelistAdd: [CC]
+            } : {
+              whitelistRemove: CC
+            }, (ZC => (0, UC.s)(ZC, [CC], zC))).then((zC => {
+              IC(`whitelist:${CC.toLowerCase()}`, zC)
+            }))
+          },
+          xR: async CC => {
+            (0, wC.reportAnalyticsClick)({
+              id: "lobby_manage.whitelist_add",
+              value: "field"
+            });
+            const zC = await JC({
+              whitelistAdd: [CC]
+            }, (zC => (0, UC.s)(zC, [CC], !0)));
+            return null === zC ? {
+              ok: !1,
+              error: fC("worldSocial:changeFailed")
+            } : "error" in zC ? {
+              ok: !1,
+              error: fC(zC.error)
+            } : (0, UC.k)(zC.notFound, CC) ? {
+              ok: !1,
+              error: fC("lobbyManage:noPlayerCalled", {
+                playerName: CC
+              })
+            } : {
+              ok: !0
+            }
+          },
+          statusOf: CC => ZC.statusOf(`whitelist:${CC.toLowerCase()}`)
+        }), "public" === (null === oC || void 0 === oC ? void 0 : oC.visibility) && null !== PC.listing && (0, lC.jsx)(zz, {
+          manage: ZC,
+          listing: PC.listing
+        })]
+      })
+    }
+
+    function nz(CC) {
+      var zC;
+      let {
+        manage: ZC,
+        lobbyName: QC
+      } = CC;
+      const {
+        t: bC
+      } = (0, MC.y)(), {
+        state: nC
+      } = ZC, fC = FC(), oC = null !== (zC = nC.whitelist) && void 0 !== zC ? zC : [];
+      return (0, lC.jsxs)("div", {
+        className: "LobbyManagePage",
+        children: [(0, lC.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, lC.jsx)(pC.b, {
+            label: bC("worldSocial:whoCanJoin")
+          }), (0, lC.jsx)("div", {
+            className: "LobbyManageModeText",
+            children: bC(`worldSocial:${nC.visibility}`)
+          })]
+        }), "whitelist" === nC.visibility && nC.you.canEditWhitelist && (0, lC.jsx)(Cz, {
+          state: nC,
+          lobbyName: QC,
+          listed: oC,
+          isListed: CC => {
+            var zC;
+            return null !== (zC = fC.get(CC.toLowerCase())) && void 0 !== zC ? zC : (0, UC.k)(oC, CC)
+          },
+          sG: (CC, zC) => {
+            (0, wC.reportAnalyticsClick)(zC ? {
+              id: "lobby_manage.whitelist_add",
+              value: "ZN"
+            } : {
+              id: "lobby_manage.whitelist_remove"
+            });
+            const QC = CC.toLowerCase();
+            fC.hold(QC, zC, ZC.send(zC ? {
+              type: "whitelistAdd",
+              names: [CC]
+            } : {
+              type: "whitelistRemove",
+              name: CC
+            }, `whitelist:${QC}`))
+          },
+          xR: async CC => {
+            (0, wC.reportAnalyticsClick)({
+              id: "lobby_manage.whitelist_add",
+              value: "field"
+            });
+            const zC = await ZC.send({
+              type: "whitelistAdd",
+              names: [CC]
+            }, "whitelist-field");
+            return zC.ok ? {
+              ok: !0
+            } : {
+              ok: !1,
+              error: (0, lC.jsx)(HC.e, {
+                text: zC.message
+              })
+            }
+          },
+          statusOf: CC => ZC.statusOf(`whitelist:${CC.toLowerCase()}`)
+        }), "public" === nC.visibility && null !== nC.listing && (0, lC.jsx)(zz, {
+          manage: ZC,
+          listing: nC.listing
+        })]
+      })
+    }
+    var fz = ZC(4942),
+      oz = ZC(1321);
+    const qz = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const Fz = (0, QC.memo)((function(CC) {
+      var zC;
+      let {
+        rule: ZC,
+        value: QC,
+        status: wC,
+        pending: bC,
+        hiddenNames: nC,
+        OJ: fC,
+        onAction: oC
+      } = CC;
+      const {
+        t: qC
+      } = (0, MC.y)(), FC = CC => fC(ZC, CC), WC = (CC, zC) => {
+        oC(ZC, CC, zC)
+      }, NC = dC(qC, ZC.label, nC), gC = ZC.info ? dC(qC, ZC.info, nC) : void 0, SC = ZC.placeholder ? dC(qC, ZC.placeholder, nC) : void 0, pC = (null !== (zC = ZC.options) && void 0 !== zC ? zC : []).map((CC => ({
+        value: CC.value,
+        label: dC(qC, CC.label, nC)
+      }))), PC = Math.max(0, ...pC.map((CC => function(CC) {
+        let zC = 0;
+        for (const ZC of CC) zC += qz.test(ZC) ? 2 : 1;
+        return zC
+      }(CC.label)))), GC = wC && (0, lC.jsx)("div", {
+        className: "LobbyManageRuleStatus",
+        children: (0, lC.jsx)(XC, {
+          status: wC
+        })
+      }), RC = (0, lC.jsxs)("div", {
+        className: "SliderText",
+        children: [NC, void 0 !== gC && (0, lC.jsx)(oz.b, {
+          className: "SettingsTextInputCircleInfo",
+          hoverInfo: gC
+        })]
+      });
+      return "toggle" === ZC.kind ? (0, lC.jsxs)(lC.Fragment, {
+        children: [(0, lC.jsx)(fz.b, {
+          label: NC,
+          checked: !0 === QC,
+          circleInfoText: gC,
+          disabled: bC,
+          onClick: FC
+        }), GC]
+      }) : "choice" === ZC.kind && pC.length <= 3 ? (0, lC.jsxs)(lC.Fragment, {
+        children: [(0, lC.jsx)(fz.e, {
+          label: NC,
+          options: pC,
+          value: String(QC),
+          circleInfoText: gC,
+          onChange: FC
+        }), GC]
+      }) : (0, lC.jsxs)("div", {
+        className: "SettingBox LobbyManageRuleRow",
+        children: [RC, "choice" === ZC.kind && (0, lC.jsx)("span", {
+          className: "LobbyManageRuleChoice",
+          style: {
+            "--lobby-choice-chars": PC
+          },
+          children: (0, lC.jsx)(KC.b, {
+            options: pC,
+            value: String(QC),
+            disabled: bC,
+            onChange: CC => {
+              FC(CC.value)
+            }
+          })
+        }), ("number" === ZC.kind || "text" === ZC.kind) && (0, lC.jsx)(uC, {
+          value: null === QC ? "" : String(QC),
+          placeholder: SC,
+          ariaLabel: NC,
+          onSave: CC => {
+            const zC = CC.trim(),
+              QC = Number(zC);
+            return FC("number" === ZC.kind && "" !== zC && Number.isFinite(QC) ? QC : zC)
+          }
+        }), "action" === ZC.kind && (0, lC.jsxs)("div", {
+          className: "LobbyManageRuleInput",
+          children: [pC.length > 3 && (0, lC.jsx)(KC.b, {
+            options: pC,
+            value: {
+              value: "",
+              label: null !== SC && void 0 !== SC ? SC : NC
+            },
+            disabled: bC,
+            onChange: CC => {
+              WC(CC.value)
+            }
+          }), pC.length > 0 && pC.length <= 3 && pC.map((CC => (0, lC.jsx)(AC.i, {
+            className: "SmallTextLight",
+            disabled: bC,
+            onClick: () => {
+              WC(CC.value)
+            },
+            children: CC.label
+          }, CC.value))), 0 === pC.length && (0, lC.jsx)(AC.i, {
+            className: "SmallTextLight",
+            disabled: bC,
+            onClick: () => {
+              WC()
+            },
+            children: null !== SC && void 0 !== SC ? SC : NC
+          })]
+        }), "names" === ZC.kind && (0, lC.jsx)(Wz, {
+          names: Array.isArray(QC) ? QC : [],
+          pending: bC,
+          onAction: WC
+        }), GC]
+      })
+    }));
+
+    function Wz(CC) {
+      let {
+        names: zC,
+        pending: ZC,
+        onAction: wC
+      } = CC;
+      const {
+        t: bC
+      } = (0, MC.y)(), nC = (0, QC.useRef)(null), [fC, oC] = (0, QC.useState)(""), qC = () => {
+        const CC = fC.trim();
+        "" !== CC && (wC(CC, "add"), nC.current && (nC.current.value = ""), oC(""))
+      };
+      return (0, lC.jsxs)("div", {
+        className: "LobbyManageNames",
+        children: [zC.map((CC => (0, lC.jsxs)("div", {
+          className: "LobbyManageName",
+          children: [(0, lC.jsx)("span", {
+            className: "LobbyManageNameText",
+            children: CC
+          }), (0, lC.jsx)(AC.i, {
+            className: "LobbyManageIconButton SmallTextLight",
+            ariaLabel: bC("lobbyManage:removeName", {
+              name: CC
+            }),
+            disabled: ZC,
+            onClick: () => {
+              wC(CC, "remove")
+            },
+            children: (0, lC.jsx)(gC.c, {
+              name: "xmark"
+            })
+          })]
+        }, CC))), (0, lC.jsxs)("div", {
+          className: "LobbyManageRuleInput",
+          children: [(0, lC.jsx)(EC.c, {
+            domRef: nC,
+            placeholderText: bC("lobbyManage:namePlaceholder"),
+            ariaLabel: bC("lobbyManage:namePlaceholder"),
+            maxLength: 32,
+            onValueChange: CC => {
+              oC(CC)
+            },
+            onEnter: qC
+          }), (0, lC.jsx)(AC.i, {
+            className: "SmallTextLight",
+            disabled: ZC || "" === fC.trim(),
+            onClick: qC,
+            children: bC("lobbyManage:addHere")
+          })]
+        })]
+      })
+    }
+    const Nz = [{
+      group: "gameplay",
+      title: "lobbyManage:gameplay"
+    }, {
+      group: "world",
+      title: "lobbyManage:world"
+    }];
+
+    function Mz(CC, zC) {
+      return Nz.map((ZC => {
+        let {
+          group: QC,
+          title: wC
+        } = ZC;
+        const bC = CC.filter((CC => CC.group === QC && void 0 === CC.parent)).map((ZC => {
+          const QC = !0 === zC(ZC) ? CC.filter((CC => CC.parent === ZC.key)) : [];
+          return {
+            rule: ZC,
+            children: QC
+          }
+        }));
+        return {
+          group: QC,
+          title: wC,
+          items: bC
+        }
+      }))
+    }
+
+    function gz(CC) {
+      return CC.flatMap((CC => {
+        let {
+          items: zC
+        } = CC;
+        return zC.flatMap((CC => {
+          let {
+            rule: zC,
+            children: ZC
+          } = CC;
+          return [zC, ...ZC]
+        }))
+      }))
+    }
+
+    function Sz(CC) {
+      let {
+        manage: zC,
+        rowsShown: ZC
+      } = CC;
+      const {
+        t: bC
+      } = (0, MC.y)(), nC = (0, RC.f)("hiddenPlayerNames"), {
+        rules: fC
+      } = zC.state, oC = FC(), qC = CC => {
+        const zC = oC.get(CC.key);
+        return void 0 === zC ? CC.value : zC
+      }, WC = Mz(fC, qC), [NC] = (0, QC.useState)((() => gz(WC).map((CC => CC.key)))), gC = ZC === 1 / 0 ? null : new Set(NC.slice(0, ZC)), SC = CC => null === gC || gC.has(CC.key), {
+        hold: PC
+      } = oC, GC = (0, QC.useCallback)(((CC, ZC) => {
+        (0, wC.reportAnalyticsClick)({
+          id: "lobby_manage.set_rule",
+          value: CC.key
+        });
+        const QC = zC.send({
+          type: "setRule",
+          key: CC.key,
+          value: ZC
+        }, `rule:${CC.key}`);
+        return PC(CC.key, ZC, QC), QC
+      }), [zC, PC]), AC = (0, QC.useCallback)(((CC, ZC, QC) => {
+        (0, wC.reportAnalyticsClick)({
+          id: "lobby_manage.set_rule",
+          value: CC.key
+        }), zC.send({
+          type: "ruleAction",
+          key: CC.key,
+          ...void 0 === ZC ? {} : {
+            arg: ZC
+          },
+          ...void 0 === QC ? {} : {
+            op: QC
+          }
+        }, `rule:${CC.key}`, void 0 === QC ? bC("lobbyManage:setJustNow") : void 0)
+      }), [zC, bC]), xC = CC => {
+        const ZC = `rule:${CC.key}`;
+        return (0, lC.jsx)(Fz, {
+          rule: CC,
+          value: qC(CC),
+          status: zC.statusOf(ZC),
+          pending: zC.isPending(ZC),
+          hiddenNames: nC,
+          OJ: GC,
+          onAction: AC
+        }, CC.key)
+      };
+      return (0, lC.jsx)("div", {
+        className: "LobbyManagePage LobbyManageRules",
+        children: WC.map((CC => {
+          let {
+            group: zC,
+            title: ZC,
+            items: wC
+          } = CC;
+          const nC = wC.filter((CC => {
+            let {
+              rule: zC
+            } = CC;
+            return SC(zC)
+          }));
+          return 0 === nC.length ? null : (0, lC.jsxs)(QC.Fragment, {
+            children: [(0, lC.jsx)(pC.b, {
+              label: bC(ZC)
+            }), nC.map((CC => {
+              let {
+                rule: zC,
+                children: ZC
+              } = CC;
+              return 0 === ZC.length ? xC(zC) : (0, lC.jsxs)("div", {
+                className: "SettingBoxGroup",
+                children: [xC(zC), ZC.filter(SC).map(xC)]
+              }, zC.key)
+            }))]
+          }, zC)
+        }))
+      })
+    }
+    const pz = {
+        players: {
+          icon: "user-group",
+          title: "lobbyManage:players"
+        },
+        joining: {
+          icon: "door-open",
+          title: "lobbyManage:joining"
+        },
+        rules: {
+          icon: "list",
+          title: "lobbyManage:rules"
+        },
+        leaderboard: {
+          icon: "trophy",
+          title: "lobbyManage:leaderboard"
+        }
       },
-      be = new Map(["mob", "random"].map((kk => {
-        const ek = Object.keys(Se).filter((ek => ek.startsWith(kk) && /^[A-Z]/.test(ek.slice(kk.length))));
-        return [kk, ek]
-      }))),
-      re = {};
-    for (const Ue in Se) {
-      const kk = Se[Ue];
-      for (const ek in kk.sprite) {
-        if (re[ek]) throw new Error(`duplicate sound name ${ek} in ${re[ek]} and ${Ue}`);
-        re[ek] = Ue
+      Pz = 5,
+      Gz = (0, QC.memo)((function(CC) {
+        let {
+          page: zC,
+          manage: ZC,
+          leaderboard: wC,
+          focusRequest: bC,
+          onFocused: nC,
+          ruleRowsShown: fC
+        } = CC;
+        return "leaderboard" === zC ? (0, lC.jsx)(QC.Suspense, {
+          fallback: (0, lC.jsx)("div", {
+            className: "LobbyManageLoading",
+            children: (0, lC.jsx)(SC.d, {})
+          }),
+          children: wC
+        }) : "joining" === zC ? (0, lC.jsx)(Qz, {
+          manage: ZC
+        }) : "rules" === zC ? (0, lC.jsx)(Sz, {
+          manage: ZC,
+          rowsShown: fC
+        }) : (0, lC.jsx)(aC, {
+          manage: ZC,
+          focusRequest: bC,
+          onFocused: nC
+        })
+      }));
+
+    function Rz(CC) {
+      let {
+        page: zC
+      } = CC;
+      const {
+        t: ZC
+      } = (0, MC.y)(), QC = pz[zC];
+      return (0, lC.jsxs)(lC.Fragment, {
+        children: [(0, lC.jsx)(gC.c, {
+          name: QC.icon
+        }), " ", (0, lC.jsx)("span", {
+          className: "LobbyManagePageTitle",
+          children: ZC(QC.title)
+        })]
+      })
+    }
+
+    function Az(CC) {
+      var zC;
+      const {
+        t: ZC
+      } = (0, MC.y)(), {
+        pages: bC,
+        landing: nC
+      } = CC, oC = (0, QC.useRef)(null), qC = (0, QC.useRef)(null), FC = (0, QC.useRef)(null), WC = (0, QC.useRef)(new Map), [gC, SC] = (0, QC.useState)(null), RC = (0, QC.useRef)(gC), AC = (0, QC.useRef)(0), [xC, JC] = (0, QC.useState)(bC[0]), IC = null !== gC && void 0 !== gC ? gC : bC.includes(xC) ? xC : bC[0], [iC] = (0, QC.useState)(null !== (zC = null === nC || void 0 === nC ? void 0 : nC.page) && void 0 !== zC ? zC : null), vC = null !== iC && bC.includes(iC) ? [iC, ...bC.filter((CC => CC !== iC))] : bC, [eC] = (0, QC.useState)((() => {
+        const zC = gz(Mz(CC.manage.state.rules, (CC => CC.value)));
+        return Math.max(1, Math.ceil(zC.length / Pz))
+      })), hC = vC.flatMap((CC => "rules" === CC ? Array(eC).fill(CC) : [CC])), KC = function(CC, zC) {
+        const [ZC, wC] = (0, QC.useState)(CC), bC = ZC >= zC;
+        return bC && ZC !== 1 / 0 && wC(1 / 0), (0, QC.useLayoutEffect)((() => {
+          if (bC) return;
+          let CC = !0;
+          return (0, GC.e)().then((() => {
+            CC && wC((CC => CC + 1))
+          })), () => {
+            CC = !1
+          }
+        }), [ZC, bC]), bC ? 1 / 0 : ZC
+      }(1, hC.length), YC = hC.slice(0, KC), dC = new Set(YC), mC = KC < hC.length, HC = mC ? YC.filter((CC => "rules" === CC)).length * Pz : 1 / 0, EC = (0, QC.useRef)(CC.focusRequest);
+      EC.current = CC.focusRequest;
+      const XC = CC => {
+          RC.current = CC, SC(CC)
+        },
+        cC = () => {
+          var CC, zC;
+          oC.current.style.scrollPaddingTop = `${null!==(CC=null===(zC=FC.current)||void 0===zC?void 0:zC.offsetHeight)&&void 0!==CC?CC:0}px`
+        },
+        uC = CC => {
+          const zC = oC.current,
+            ZC = WC.current.get(CC);
+          if (void 0 === ZC) return;
+          const QC = document.activeElement,
+            wC = EC.current,
+            bC = null === wC ? null : ZC.querySelector(`[data-lobby-manage-row="${CSS.escape(wC.name)}"]`);
+          cC(), QC instanceof HTMLElement && null !== bC && void 0 !== bC && bC.contains(QC) ? QC.scrollIntoView({
+            block: "center"
+          }) : null === ZC.previousElementSibling ? zC.scrollTop = 0 : ZC.scrollIntoView({
+            block: "start"
+          }), AC.current = zC.scrollTop
+        },
+        rC = CC => {
+          (0, wC.reportAnalyticsClick)({
+            id: "lobby_manage.page",
+            value: CC
+          }), XC(CC), uC(CC)
+        },
+        sC = () => {
+          var CC, zC;
+          const ZC = oC.current,
+            QC = ZC.getBoundingClientRect().top + (null !== (CC = null === (zC = FC.current) || void 0 === zC ? void 0 : zC.offsetHeight) && void 0 !== CC ? CC : 0),
+            wC = bC.map((CC => {
+              var zC, ZC;
+              return (null !== (zC = null === (ZC = WC.current.get(CC)) || void 0 === ZC ? void 0 : ZC.getBoundingClientRect().top) && void 0 !== zC ? zC : 1 / 0) - QC
+            })),
+            nC = !mC && ZC.scrollTop + ZC.clientHeight >= ZC.scrollHeight - 1;
+          JC(bC[(0, fC.h)(wC, nC)])
+        },
+        TC = () => {
+          null !== RC.current && (XC(null), sC())
+        };
+      (0, QC.useLayoutEffect)((() => {
+        null !== nC && bC.includes(nC.page) && rC(nC.page)
+      }), [null === nC || void 0 === nC ? void 0 : nC.seq]), (0, QC.useLayoutEffect)((() => {
+        null === RC.current || bC.includes(RC.current) || TC()
+      }));
+      const {
+        onFocused: aC
+      } = CC, tC = (0, QC.useCallback)((CC => {
+        null !== RC.current && uC(RC.current), aC(CC)
+      }), [aC]);
+      (0, QC.useLayoutEffect)((() => {
+        const CC = RC.current;
+        null !== CC && (!mC || bC.indexOf(hC[KC - 1]) < bC.indexOf(CC)) && uC(CC)
+      }), [KC]), (0, QC.useEffect)((() => {
+        const CC = new ResizeObserver((() => {
+          null !== RC.current ? uC(RC.current) : cC()
+        }));
+        return CC.observe(oC.current), CC.observe(qC.current), () => {
+          CC.disconnect()
+        }
+      }), []), (0, QC.useLayoutEffect)((() => {
+        const CC = FC.current,
+          zC = null === CC || void 0 === CC ? void 0 : CC.querySelector(".SegmentedToggleOptionSelected");
+        zC && (CC.scrollLeft = Math.min(zC.offsetLeft, Math.max(CC.scrollLeft, zC.offsetLeft + zC.offsetWidth - CC.clientWidth)))
+      }), [IC]);
+      return (0, lC.jsxs)("div", {
+        ref: oC,
+        className: "MenuBody LobbyManageBody",
+        onScroll: () => {
+          null === RC.current ? sC() : Math.abs(oC.current.scrollTop - AC.current) > 1 && TC()
+        },
+        onClick: CC => {
+          var zC;
+          null !== (zC = FC.current) && void 0 !== zC && zC.contains(CC.target) || TC()
+        },
+        onFocus: CC => {
+          var zC;
+          const ZC = null === RC.current ? null : WC.current.get(RC.current);
+          !ZC || ZC.contains(CC.target) || null !== (zC = FC.current) && void 0 !== zC && zC.contains(CC.target) || TC()
+        },
+        children: [bC.length > 1 && (0, lC.jsx)("div", {
+          ref: FC,
+          className: "LobbyManageChips",
+          children: (0, lC.jsx)(PC.b, {
+            options: bC.map((CC => ({
+              value: CC,
+              label: (0, lC.jsx)(Rz, {
+                page: CC
+              }),
+              ariaLabel: ZC(pz[CC].title)
+            }))),
+            value: IC,
+            padTabs: "2",
+            ariaLabel: ZC("lobbyManageEntry:manageLobby"),
+            reselectable: !0,
+            onChange: rC
+          })
+        }), (0, lC.jsx)("div", {
+          ref: qC,
+          className: NC()("LobbyManageInner", {
+            Staging: mC
+          }),
+          children: bC.filter((CC => dC.has(CC))).map((zC => {
+            const ZC = zC === gC;
+            return (0, lC.jsxs)("section", {
+              ref: CC => {
+                CC ? WC.current.set(zC, CC) : WC.current.delete(zC)
+              },
+              className: "LobbyManageSection",
+              "data-pad-initial-area": ZC || void 0,
+              children: [bC.length > 1 && (0, lC.jsx)("div", {
+                className: "LobbyManageSectionHeading",
+                "data-pad-focusable": ZC || void 0,
+                "data-pad-unavailable": ZC || void 0,
+                children: (0, lC.jsx)(pC.b, {
+                  label: (0, lC.jsx)(Rz, {
+                    page: zC
+                  })
+                })
+              }), (0, lC.jsx)(Gz, {
+                page: zC,
+                manage: CC.manage,
+                leaderboard: CC.leaderboard,
+                focusRequest: CC.focusRequest,
+                onFocused: tC,
+                ruleRowsShown: "rules" === zC ? HC : 1 / 0
+              })]
+            }, zC)
+          }))
+        })]
+      })
+    }
+
+    function xz(CC) {
+      return void 0 === (null === CC || void 0 === CC ? void 0 : CC.page) ? null : {
+        page: CC.page,
+        seq: CC.seq
       }
     }
-    for (const Ue in Se) {
-      const kk = Se[Ue];
-      for (let ek = 0; ek < kk.src.length; ek++) kk.src[ek] = fe.clientSideServerUrls.staticUrl + kk.src[ek]
-    }
-    const Pe = {};
 
-    function me(kk) {
-      if (Pe[kk]) return ne(Pe[kk]);
-      {
-        const ek = [];
-        for (const ik in Se)
-          for (const Dk in Se[ik].sprite) Dk.startsWith(kk) && ek.push(Dk);
-        return Pe[kk] = ek, ne(ek)
+    function Jz(CC) {
+      let {
+        leaderboard: zC
+      } = CC;
+      const ZC = function() {
+          const CC = (0, oC.h)("lobbyManage"),
+            [zC, ZC] = (0, QC.useReducer)((CC => CC + 1), 0),
+            [wC] = (0, QC.useState)((() => new qC.b(ZC)));
+          return (0, QC.useEffect)((() => {
+            const CC = wC.nextDeadline();
+            if (null === CC) return;
+            const zC = setTimeout((() => {
+              wC.expire(Date.now()), ZC()
+            }), Math.max(0, CC - Date.now()));
+            return () => {
+              clearTimeout(zC)
+            }
+          })), (0, QC.useMemo)((() => null === CC ? null : {
+            state: CC,
+            send: (CC, zC, QC) => {
+              const bC = wC.send(CC, zC, null !== QC && void 0 !== QC ? QC : null);
+              return ZC(), bC
+            },
+            statusOf: CC => wC.statusOf(CC, Date.now()),
+            showStatus: (CC, zC) => {
+              wC.show(CC, zC)
+            },
+            isPending: CC => wC.isPending(CC)
+          }), [CC, zC, wC])
+        }(),
+        FC = (0, fC.i)((0, bC.e)()),
+        WC = (0, nC.k)(),
+        [NC, MC] = (0, QC.useState)((() => xz(WC))),
+        [gC, SC] = (0, QC.useState)(null);
+      return (0, QC.useEffect)((() => {
+        null === WC && (0, wC.reportAnalyticsClick)({
+          id: "lobby_manage.open",
+          value: "menu_tab"
+        })
+      }), []), (0, QC.useEffect)((() => {
+        null !== WC && (MC((CC => (null === CC || void 0 === CC ? void 0 : CC.seq) === WC.seq ? CC : xz(WC))), void 0 !== WC.focusName && "players" === WC.page ? SC({
+          name: WC.focusName,
+          seq: WC.seq
+        }) : (0, nC.i)(WC.seq))
+      }), [null === WC || void 0 === WC ? void 0 : WC.seq]), null === ZC ? null : (0, lC.jsx)("div", {
+        className: "LobbyManage Menu",
+        children: (0, lC.jsx)(Az, {
+          pages: (0, fC.f)(ZC.state, FC),
+          manage: ZC,
+          leaderboard: zC,
+          focusRequest: gC,
+          onFocused: nC.i,
+          landing: NC
+        })
+      })
+    }
+  },
+  36447: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => FC,
+      d: () => oC
+    });
+    var QC = ZC(1418),
+      wC = ZC(1865),
+      bC = ZC(1840);
+    const nC = 1e4;
+    let fC = 0;
+
+    function oC(CC) {
+      const zC = ++fC;
+      return new Promise((ZC => {
+        const fC = zC => {
+            oC(), clearTimeout(qC), !1 === (null === zC || void 0 === zC ? void 0 : zC.ok) && (0, QC.reportAnalyticsClick)({
+              id: "lobby_manage.refused",
+              value: CC.type
+            }), ZC(zC)
+          },
+          oC = wC.e.subscribe("lobbyManage", (CC => {
+            const ZC = function(CC, zC) {
+              var ZC;
+              return null !== (ZC = null === CC || void 0 === CC ? void 0 : CC.results.find((CC => CC.requestId === zC))) && void 0 !== ZC ? ZC : null
+            }(CC, zC);
+            null !== ZC && fC(ZC)
+          })),
+          qC = setTimeout((() => {
+            fC(null)
+          }), nC);
+        bC.gameBridge.send("lobbyManage", {
+          ...CC,
+          requestId: zC
+        })
+      }))
+    }
+    const qC = [{
+      translationKey: "lobbyManageEntry:noAnswer"
+    }];
+    class FC {
+      constructor(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : oC;
+        this.onChange = CC, this.sendAction = zC, this.pending = new Map, this.statuses = new Map
+      }
+      send(CC, zC, ZC) {
+        var QC;
+        return this.statuses.delete(zC), this.pending.set(zC, (null !== (QC = this.pending.get(zC)) && void 0 !== QC ? QC : 0) + 1), this.sendAction(CC).then((CC => {
+          var QC;
+          const wC = null !== CC && void 0 !== CC ? CC : {
+              requestId: -1,
+              ok: !1,
+              message: qC
+            },
+            bC = (null !== (QC = this.pending.get(zC)) && void 0 !== QC ? QC : 1) - 1;
+          bC > 0 ? this.pending.set(zC, bC) : this.pending.delete(zC);
+          const nC = !wC.ok || wC.message.length > 0 ? wC.message : null === ZC ? null : [ZC];
+          return null !== nC && this.statuses.set(zC, {
+            ok: wC.ok,
+            text: nC,
+            until: Date.now() + 4e3
+          }), this.onChange(), wC
+        }))
+      }
+      show(CC, zC) {
+        this.statuses.set(CC, {
+          ...zC,
+          until: Date.now() + 4e3
+        }), this.onChange()
+      }
+      expire(CC) {
+        for (const [zC, ZC] of this.statuses) ZC.until <= CC && this.statuses.delete(zC)
+      }
+      nextDeadline() {
+        let CC = null;
+        for (const ZC of this.statuses.values()) {
+          var zC;
+          CC = Math.min(null !== (zC = CC) && void 0 !== zC ? zC : 1 / 0, ZC.until)
+        }
+        return CC
+      }
+      statusOf(CC, zC) {
+        const ZC = this.statuses.get(CC);
+        return !ZC || ZC.until <= zC ? null : {
+          ok: ZC.ok,
+          text: ZC.text
+        }
+      }
+      isPending(CC) {
+        return this.pending.has(CC)
+      }
+    }
+  },
+  36436: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => qC,
+      f: () => oC
+    });
+    var QC = ZC(583),
+      wC = ZC(1840),
+      bC = ZC(1559),
+      nC = ZC(77),
+      fC = ZC(1209);
+
+    function oC(CC, zC, ZC) {
+      return nC.featureFlags.useSocialFeatures && CC && null === (0, fC.e)(zC, ZC)
+    }
+
+    function qC(CC, zC) {
+      var ZC, nC;
+      const fC = bC.d.getSocialState().friends.find((CC => CC.name.toLowerCase() === zC.toLowerCase())),
+        oC = wC.gameBridge.latest("players").byId[CC],
+        qC = void 0 !== oC && oC.name === zC,
+        FC = qC && null !== (ZC = oC.cosmetics) && void 0 !== ZC ? ZC : void 0,
+        WC = fC && FC ? {
+          ...fC,
+          cosmetics: FC
+        } : fC;
+      return {
+        playerSocialPreview: null !== WC && void 0 !== WC ? WC : {
+          isError: !1,
+          name: zC,
+          ranks: qC ? [...oC.ranks] : [],
+          cosmetics: null !== FC && void 0 !== FC ? FC : {},
+          nameColour: null !== (nC = null === FC || void 0 === FC ? void 0 : FC.nameColour) && void 0 !== nC ? nC : QC.d,
+          location: {
+            status: "inGame"
+          }
+        },
+        isFriend: void 0 !== fC
+      }
+    }
+  },
+  36620: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => WC
+    });
+    var QC = ZC(48),
+      wC = ZC(1002),
+      bC = ZC.n(wC),
+      nC = ZC(1593),
+      fC = ZC(1388),
+      oC = ZC(1295),
+      qC = ZC(1013),
+      FC = ZC(1056);
+
+    function WC(CC) {
+      let {
+        label: zC,
+        icon: ZC,
+        placeholder: wC,
+        onSubmit: WC
+      } = CC;
+      const NC = (0, QC.useRef)(null),
+        [MC, gC] = (0, QC.useState)(""),
+        [SC, pC] = (0, QC.useState)("Enter"),
+        [PC, GC] = (0, QC.useState)(null);
+      (0, QC.useEffect)((() => {
+        if ("Success" !== SC && "Error" !== SC) return;
+        const CC = setTimeout((() => {
+          "Success" === SC && NC.current && (NC.current.value = "", gC("")), pC("Enter")
+        }), "Success" === SC ? 1e3 : 4e3);
+        return () => {
+          clearTimeout(CC)
+        }
+      }), [SC]);
+      const RC = () => {
+        const CC = MC.trim();
+        "" !== CC && "Enter" === SC && (pC("Loading"), WC(CC).then((CC => {
+          NC.current && ("error" in CC ? null === CC.error ? pC("Enter") : (GC(CC.error), pC("Error")) : pC("Success"))
+        })))
+      };
+      return (0, FC.jsxs)("div", {
+        className: "PlayerNameField",
+        onKeyDown: CC => {
+          CC.target === NC.current && "Escape" !== CC.key && CC.stopPropagation()
+        },
+        children: [(0, FC.jsxs)("div", {
+          className: bC()("AddFriendBodyOverlay", `AddFriendBodyOverlay${SC}`),
+          children: ["Loading" === SC && (0, FC.jsx)(oC.d, {}), "Success" === SC && (0, FC.jsx)(qC.c, {
+            name: "check"
+          }), "Error" === SC && PC]
+        }), (0, FC.jsxs)("div", {
+          className: "PlayerSearch",
+          children: [(0, FC.jsx)(nC.c, {
+            className: "PlayerSearchInput",
+            domRef: NC,
+            maxLength: 32,
+            placeholderText: wC,
+            ariaLabel: wC,
+            stopPropagation: !1,
+            onValueChange: CC => {
+              gC(CC)
+            },
+            onEnter: RC
+          }), (0, FC.jsxs)(fC.g, {
+            className: "PlayerSearchInputButton SmallTextLight",
+            disabled: "Enter" !== SC || "" === MC.trim(),
+            onClick: RC,
+            children: [(0, FC.jsx)(qC.c, {
+              name: ZC
+            }), " ", zC]
+          })]
+        })]
+      })
+    }
+  },
+  36598: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => WC
+    });
+    var QC = ZC(48),
+      wC = ZC(1002),
+      bC = ZC.n(wC),
+      nC = ZC(1143),
+      fC = ZC(1013),
+      oC = ZC(1056);
+    const qC = {
+        unlisted: "link",
+        public: "globe",
+        whitelist: "user-check",
+        private: "lock"
+      },
+      FC = ["unlisted", "public", "whitelist", "private"];
+
+    function WC(CC) {
+      let {
+        visibility: zC,
+        onPick: ZC
+      } = CC;
+      const {
+        t: wC
+      } = (0, nC.y)(), WC = (0, QC.useRef)([]);
+      return (0, oC.jsx)("div", {
+        className: "WorldSocialTiles",
+        role: "group",
+        "aria-label": wC("worldSocial:whoCanJoin"),
+        children: FC.map(((CC, QC) => {
+          const nC = CC === zC;
+          return (0, oC.jsxs)("button", {
+            ref: CC => {
+              WC.current[QC] = CC
+            },
+            type: "button",
+            className: bC()("WorldSocialTile", {
+              WorldSocialTileSelected: nC
+            }),
+            "aria-pressed": nC,
+            tabIndex: nC ? 0 : -1,
+            onKeyDown: CC => {
+              ((CC, zC) => {
+                const ZC = "ArrowRight" === CC.key || "ArrowDown" === CC.key ? 1 : "ArrowLeft" === CC.key || "ArrowUp" === CC.key ? -1 : 0;
+                var QC;
+                0 !== ZC && (CC.preventDefault(), null === (QC = WC.current[(zC + ZC + FC.length) % FC.length]) || void 0 === QC || QC.focus())
+              })(CC, QC)
+            },
+            onClick: () => {
+              ZC(CC)
+            },
+            children: [(0, oC.jsx)("span", {
+              className: "WorldSocialTileIcon",
+              children: (0, oC.jsx)(fC.c, {
+                name: qC[CC]
+              })
+            }), (0, oC.jsxs)("span", {
+              className: "WorldSocialTileText",
+              children: [(0, oC.jsx)("span", {
+                className: "WorldSocialTileTitle",
+                children: wC(`worldSocial:${CC}`)
+              }), (0, oC.jsx)("span", {
+                className: "WorldSocialTileDescription",
+                children: wC(`worldSocial:${CC}Description`)
+              })]
+            })]
+          }, CC)
+        }))
+      })
+    }
+  },
+  36612: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => fC
+    });
+    var QC = ZC(1143),
+      wC = ZC(2633),
+      bC = ZC(4300),
+      nC = ZC(1056);
+
+    function fC(CC) {
+      let {
+        ZN: zC,
+        children: ZC,
+        ...fC
+      } = CC;
+      const {
+        t: oC
+      } = (0, QC.y)();
+      return (0, nC.jsx)("div", {
+        className: "WhitelistTickRow",
+        onClick: () => {
+          zC.onChange(!zC.on)
+        },
+        children: (0, nC.jsx)(wC.f, {
+          ...fC,
+          opensProfileCard: !1,
+          children: (0, nC.jsxs)("div", {
+            className: "WhitelistTickRowActions",
+            onClick: CC => {
+              CC.stopPropagation()
+            },
+            children: [ZC, (0, nC.jsx)("label", {
+              className: "WhitelistTickRowTick",
+              children: (0, nC.jsx)(bC.e, {
+                checked: zC.on,
+                disabled: !1,
+                ariaLabel: oC("worldSocial:letJoin", {
+                  playerName: fC.playerSocialPreview.name
+                }),
+                onChange: CC => {
+                  zC.onChange(CC.target.checked)
+                }
+              })
+            })]
+          })
+        })
+      })
+    }
+  },
+  36590: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => gC
+    });
+    var QC = ZC(48),
+      wC = ZC(1143),
+      bC = ZC(1774),
+      nC = ZC(77),
+      fC = ZC(20),
+      oC = ZC(1418),
+      qC = ZC(2659),
+      FC = ZC(34056),
+      WC = ZC(1388),
+      NC = ZC(1013),
+      MC = ZC(1056);
+
+    function gC(CC) {
+      let {
+        worldCode: zC,
+        message: ZC
+      } = CC;
+      const {
+        t: gC
+      } = (0, wC.y)(), {
+        isTouchScreen: SC
+      } = (0, fC.k)(["isTouchScreen"]), pC = nC.featureFlags.canUseInviteLinks, PC = (0, FC.e)(pC && null === ZC), [GC, RC] = (0, qC.i)(), AC = (0, QC.useRef)(null);
+      if (null !== ZC) return (0, MC.jsxs)("div", {
+        className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
+        children: [(0, MC.jsx)(NC.c, {
+          name: "lock"
+        }), (0, MC.jsx)("span", {
+          children: ZC
+        })]
+      });
+      const xC = pC ? PC : zC,
+        JC = SC && pC && (0, qC.c)();
+      return (0, MC.jsxs)("div", {
+        className: "WorldSocialLinkRow",
+        children: [!pC && (0, MC.jsx)("span", {
+          className: "WorldSocialCodeLabel",
+          children: gC("worldSocial:worldCode")
+        }), (0, MC.jsx)("input", {
+          ref: AC,
+          className: "WorldSocialLink",
+          readOnly: !0,
+          value: null !== xC && void 0 !== xC ? xC : "",
+          "aria-label": gC(pC ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: CC => {
+            CC.currentTarget.select()
+          }
+        }), (0, MC.jsxs)(WC.g, {
+          className: "WorldSocialCopy",
+          disabled: null === xC,
+          onClick: () => {
+            null !== xC && (0, qC.f)(xC, {
+              useShareSheet: JC,
+              onOutcome: CC => {
+                if ((0, oC.reportAnalyticsClick)({
+                    id: "world_social.copy_link",
+                    value: "copied" !== CC || pC ? CC : "code"
+                  }), "copied" === CC) RC();
+                else if ("failed" === CC) {
+                  var zC;
+                  null === (zC = AC.current) || void 0 === zC || zC.focus(), bC.d.showMessage({
+                    translationKey: "partyBar:copyFailed"
+                  })
+                }
+              }
+            })
+          },
+          children: [(0, MC.jsx)(NC.c, {
+            name: GC ? "check" : JC ? "up-from-bracket" : "copy"
+          }), " ", gC(GC ? "general:copied" : JC ? "worldSocial:share" : "general:copy")]
+        })]
+      })
+    }
+  },
+  36605: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => MC,
+      i: () => NC,
+      l: () => WC
+    });
+    var QC = ZC(583),
+      wC = ZC(1143),
+      bC = ZC(1559),
+      nC = ZC(2633),
+      fC = ZC(2575),
+      oC = ZC(1388),
+      qC = ZC(36612),
+      FC = ZC(1056);
+
+    function WC(CC, zC) {
+      var ZC;
+      return {
+        isError: !1,
+        name: CC,
+        ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
+        cosmetics: null !== zC && void 0 !== zC ? zC : {},
+        nameColour: null !== (ZC = null === zC || void 0 === zC ? void 0 : zC.nameColour) && void 0 !== ZC ? ZC : QC.d,
+        location: {
+          status: "offline"
+        }
       }
     }
 
-    function Me(kk) {
-      const ek = re[kk];
-      if (void 0 === ek) throw new Error(`Invalid sound name ${kk} (not in any sprite sheet)`);
-      return ek
+    function NC(CC) {
+      let {
+        player: zC,
+        isFriend: ZC = !1,
+        status: QC,
+        showLocation: oC = void 0 === QC,
+        ZN: WC,
+        onSendFriendRequest: NC,
+        actions: MC,
+        zIndex: gC
+      } = CC;
+      const {
+        t: SC
+      } = (0, wC.y)();
+      let pC = QC;
+      null !== WC && void 0 !== WC && WC.on && (pC = (0, FC.jsxs)(FC.Fragment, {
+        children: [null !== QC && void 0 !== QC ? QC : (0, FC.jsx)(fC.b, {
+          socialPreview: zC
+        }), (0, FC.jsxs)("span", {
+          className: "WorldSocialCanJoin",
+          children: [" \xb7 ", SC("worldSocial:canJoin")]
+        })]
+      }));
+      const PC = {
+        playerSocialPreview: zC,
+        isFriend: ZC,
+        hideFriendBadge: !0,
+        onFriendRemoved: ZC ? CC => {
+          bC.d.removeFriendFromState(CC)
+        } : void 0,
+        status: pC,
+        showLocation: oC,
+        onSendFriendRequest: NC,
+        zIndex: gC
+      };
+      return WC ? (0, FC.jsx)(qC.d, {
+        ...PC,
+        ZN: WC,
+        children: MC
+      }) : (0, FC.jsx)(nC.f, {
+        ...PC,
+        opensProfileCard: !1,
+        children: MC || void 0
+      })
     }
 
-    function Ke(kk, ek) {
-      if (!(kk in Se)) throw new Error("Invalid spriteTrack name");
-      return ek in Se[kk].sprite
+    function MC(CC) {
+      let {
+        row: zC,
+        ZN: ZC,
+        canInvite: QC,
+        invited: bC,
+        onInvite: nC,
+        zIndex: fC
+      } = CC;
+      const {
+        t: qC
+      } = (0, wC.y)(), WC = "online" === zC.place ? oC.g : oC.i;
+      return (0, FC.jsx)(NC, {
+        player: zC.friend,
+        isFriend: !0,
+        status: "here" === zC.place ? qC("worldSocial:inThisWorld") : void 0,
+        showLocation: !0,
+        ZN: ZC,
+        zIndex: fC,
+        actions: QC && (0, FC.jsx)(WC, {
+          className: "WorldSocialInvite SmallTextLight",
+          disabled: bC,
+          onClick: nC,
+          ariaLabel: `${qC("worldSocial:invite")} ${zC.friend.name}`,
+          children: qC(bC ? "worldSocial:invited" : "worldSocial:invite")
+        })
+      })
+    }
+  },
+  36584: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => oC,
+      i: () => nC,
+      j: () => qC
+    });
+    var QC = ZC(48),
+      wC = ZC(4525),
+      bC = ZC(1774);
+
+    function nC(CC) {
+      const zC = {
+        lobbyName: CC,
+        answer: null,
+        response: wC.d.getSocialSettings(CC)
+      };
+      return zC.response.then((CC => {
+        zC.answer = CC
+      })), zC
+    }
+    const fC = new Map;
+
+    function oC(CC) {
+      fC.set(CC.lobbyName, CC)
     }
 
-    function xe(kk) {
-      if (!(kk in Se)) throw new Error("Invalid spritesheet name");
-      return Se[kk]
+    function qC(CC) {
+      const [zC] = (0, QC.useState)((() => function(CC) {
+        var zC;
+        const ZC = null !== (zC = fC.get(CC)) && void 0 !== zC ? zC : null;
+        return null !== ZC && void 0 !== ZC && ZC.answer && "error" in ZC.answer ? null : ZC
+      }(CC))), [ZC, nC] = (0, QC.useState)((() => null !== zC && void 0 !== zC && zC.answer && "settings" in zC.answer ? zC.answer.settings : null)), [oC, qC] = (0, QC.useState)(!0), [FC, WC] = (0, QC.useState)(null !== ZC), NC = (0, QC.useRef)(ZC);
+      NC.current = ZC;
+      const MC = (0, QC.useRef)(0),
+        gC = (0, QC.useRef)(0),
+        SC = (0, QC.useRef)(!1),
+        pC = (0, QC.useRef)(!0),
+        PC = (0, QC.useCallback)((async zC => {
+          const ZC = ++MC.current,
+            QC = await (null !== zC && void 0 !== zC ? zC : wC.d.getSocialSettings(CC));
+          pC.current && ZC === MC.current && (WC(!0), qC(!1), "error" in QC || nC(QC.settings))
+        }), [CC]),
+        GC = (0, QC.useCallback)((() => {
+          qC(!0), PC()
+        }), [PC]),
+        RC = (0, QC.useCallback)((() => {
+          gC.current > 0 ? SC.current = !0 : PC()
+        }), [PC]);
+      (0, QC.useEffect)((() => (pC.current = !0, fC.delete(CC), qC(!0), PC(null === zC || void 0 === zC ? void 0 : zC.response), () => {
+        pC.current = !1
+      })), [PC, CC, zC]);
+      const AC = CC => {
+        MC.current++, qC(!1), NC.current = CC, nC(CC)
+      };
+      return {
+        settings: ZC,
+        loading: oC,
+        answered: FC,
+        retry: GC,
+        refresh: RC,
+        change: async function(zC, ZC) {
+          let {
+            quiet: QC = !1,
+            onAnswer: nC
+          } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+          const fC = NC.current;
+          if (null === fC) return !1;
+          AC(ZC(fC)), gC.current > 0 && (SC.current = !0), gC.current++;
+          const oC = await wC.d.setSocialSettings(CC, zC);
+          gC.current--;
+          const qC = !("error" in oC);
+          if (!pC.current) return qC;
+          if (null === nC || void 0 === nC || nC(oC), QC);
+          else if ("error" in oC) bC.d.showMessage({
+            translationKey: oC.error
+          });
+          else
+            for (const CC of oC.notFound) bC.d.showMessage({
+              translationKey: "worldSocial:notFound",
+              params: {
+                playerName: CC
+              }
+            });
+          if (gC.current > 0) return qC;
+          const FC = SC.current;
+          return SC.current = !1, !FC && "settings" in oC ? AC(oC.settings) : (FC || AC(fC), PC()), qC
+        }
+      }
+    }
+  },
+  36627: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => nC,
+      d: () => bC
+    });
+    var QC = ZC(134);
+    const wC = new Map;
+
+    function bC(CC, zC) {
+      var ZC;
+      const QC = null !== (ZC = wC.get(CC)) && void 0 !== ZC ? ZC : new Map;
+      QC.set(zC, Date.now()), wC.set(CC, QC)
     }
 
-    function ne(kk) {
-      return kk[Math.floor(Math.random() * kk.length)]
+    function nC(CC) {
+      const zC = wC.get(CC);
+      if (!zC) return [];
+      const ZC = Date.now();
+      for (const [wC, bC] of zC) ZC - bC >= QC.m && zC.delete(wC);
+      return [...zC.keys()]
+    }
+  },
+  36588: (CC, zC, ZC) => {
+    function QC(CC, zC) {
+      const ZC = zC.toLowerCase();
+      for (const QC of CC)
+        if (QC.toLowerCase() === ZC) return !0;
+      return !1
+    }
+
+    function wC(CC, zC, ZC) {
+      const wC = [],
+        bC = [],
+        nC = [];
+      for (const fC of CC) !fC.isError && fC.name && ("inGame" === fC.location.status && fC.location.inLobbyName === zC || QC(ZC, fC.name) ? bC.push({
+        friend: fC,
+        place: "here"
+      }) : "offline" === fC.location.status ? nC.push({
+        friend: fC,
+        place: "offline"
+      }) : wC.push({
+        friend: fC,
+        place: "online"
+      }));
+      return [...wC, ...bC, ...nC]
+    }
+
+    function bC(CC, zC, ZC) {
+      const wC = [],
+        bC = CC.flatMap((CC => "here" === CC.place ? [CC.friend.name] : []));
+      for (const nC of [...bC, ...zC]) QC(wC, nC) || QC(ZC, nC) || wC.push(nC);
+      return wC
+    }
+
+    function nC(CC, zC) {
+      return null === CC || void 0 === CC || !CC.canManage || QC(CC.whitelist, zC) ? "none" : "whitelist" === CC.visibility ? "required" : "quiet"
+    }
+
+    function fC(CC) {
+      if (null === CC) return !0;
+      const {
+        visibility: zC
+      } = CC;
+      return "public" === zC || "unlisted" === zC || "whitelist" === zC && CC.canManage
+    }
+
+    function oC(CC, zC, ZC) {
+      if (ZC) {
+        const ZC = zC.filter((zC => !QC(CC.whitelist, zC)));
+        return {
+          ...CC,
+          whitelist: [...CC.whitelist, ...ZC]
+        }
+      }
+      return {
+        ...CC,
+        whitelist: CC.whitelist.filter((CC => !QC(zC, CC)))
+      }
+    }
+
+    function qC(CC, zC) {
+      const ZC = [];
+      for (let QC = 0; QC < CC.length; QC += zC) ZC.push(CC.slice(QC, QC + zC));
+      return ZC
+    }
+    ZC.d(zC, {
+      d: () => fC,
+      f: () => bC,
+      i: () => wC,
+      k: () => QC,
+      n: () => qC,
+      q: () => nC,
+      s: () => oC
+    })
+  },
+  36882: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => bC
+    });
+    var QC = ZC(48),
+      wC = ZC(2369);
+
+    function bC() {
+      const CC = (0, wC.h)("lobbyLeaderboardInfo");
+      return (0, QC.useMemo)((() => function(CC) {
+        if (null === CC) return null;
+        const zC = Object.entries(CC),
+          ZC = zC.filter((CC => {
+            let [, zC] = CC;
+            return void 0 !== zC
+          }));
+        if (ZC.length === zC.length) return CC;
+        const QC = Object.fromEntries(ZC),
+          wC = Object.keys(CC).filter((CC => !Object.hasOwn(QC, CC)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${wC.join(", ")}`), QC
+      }(CC)), [CC])
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

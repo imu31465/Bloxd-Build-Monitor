@@ -1,293 +1,161 @@
 export const id = 202;
 export const ids = [202];
 export const modules = {
-  41082: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      MobPreview: () => Kk
+  34221: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      packDisplayName: () => gC,
+      packModelMessage: () => SC,
+      packModelSummary: () => PC,
+      refusedPackModels: () => pC
     });
-    var Dk = ik(60),
-      fk = ik(1021),
-      Sk = ik.n(fk),
-      bk = ik(41088),
-      rk = ik(33799),
-      Pk = ik(41093),
-      mk = ik(1066);
+    var QC = ZC(34223),
+      wC = ZC(34228);
+    const bC = "DRACO",
+      nC = 0,
+      fC = 1,
+      oC = 0,
+      qC = 1,
+      FC = 32768;
 
-    function Mk(kk) {
-      return rk.h.openMob(kk)
-    }
-    const Kk = (0, Dk.memo)((function(kk) {
-      let {
-        mobType: ek,
-        variation: ik = null,
-        animation: fk = Pk.g,
-        className: rk
-      } = kk;
-      const Kk = (0, Dk.useRef)(null),
-        xk = (0, Dk.useMemo)((() => ({
-          mobType: ek,
-          variation: ik,
-          animation: fk
-        })), [ek, ik, fk]);
-      return (0, bk.b)(Kk, Mk, xk), (0, mk.jsx)("div", {
-        className: Sk()("MobPreview", rk),
-        ref: Kk
-      })
-    }))
-  },
-  41088: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => Sk
-    });
-    var Dk = ik(60),
-      fk = ik(2683);
-
-    function Sk(kk, ek, ik) {
-      const Sk = (0, Dk.useRef)(null),
-        {
-          width: bk,
-          height: rk
-        } = (0, fk.c)(kk);
-      (0, Dk.useEffect)((() => {
-        const ik = ek(kk.current);
-        return Sk.current = ik, () => {
-          ik.close(), Sk.current = null
-        }
-      }), [kk, ek]), (0, Dk.useEffect)((() => {
-        bk <= 0 || rk <= 0 || Sk.current.resize(bk, rk)
-      }), [bk, rk]), (0, Dk.useEffect)((() => {
-        Sk.current.show(ik)
-      }), [ik])
-    }
-  },
-  41093: (kk, ek, ik) => {
-    ik.d(ek, {
-      b: () => xk,
-      c: () => Kk,
-      g: () => Pk
-    });
-    var Dk = ik(36754),
-      fk = ik(38226);
-
-    function Sk(kk, ek) {
-      let [ik, Dk, fk] = kk;
-      return [0, .5, 1].map((kk => ({
-        timeFraction: kk,
-        rotation: {
-          Wi: "catmull-rom-spline",
-          point: [ik, Dk, fk + (.5 === kk ? ek : 0)]
-        }
-      })))
-    }
-
-    function bk(kk, ek, ik) {
-      return {
-        Ii: 3200,
-        loop: !0,
-        Qi: {
-          Root: {
-            timeline: [0, .5, 1].map((kk => ({
-              timeFraction: kk,
-              position: {
-                Wi: "catmull-rom-spline",
-                point: [0, .5 === kk ? .18 : 0, 0]
+    function WC(CC) {
+      const zC = new DataView(CC.buffer, CC.byteOffset, CC.byteLength);
+      let ZC = 0;
+      const QC = () => {
+          if (ZC >= CC.byteLength) throw new RangeError("past the stream");
+          return CC[ZC++]
+        },
+        wC = () => {
+          if (ZC + 4 > CC.byteLength) throw new RangeError("past the stream");
+          const QC = zC.getUint32(ZC, !0);
+          return ZC += 4, QC
+        },
+        WC = () => {
+          let CC = 0;
+          for (let zC = 0; zC < 35; zC += 7) {
+            const ZC = QC();
+            if (CC += (127 & ZC) * 2 ** zC, 0 === (128 & ZC)) return CC
+          }
+          throw new RangeError("varint too long")
+        };
+      try {
+        for (let CC = 0; CC < bC.length; CC++)
+          if (QC() !== bC.charCodeAt(CC)) return null;
+        const zC = QC(),
+          NC = QC(),
+          MC = QC(),
+          gC = QC(),
+          SC = QC() | QC() << 8;
+        if (2 !== zC) return null;
+        0 !== (SC & FC) && function(CC, zC, ZC) {
+          const QC = () => {
+              zC(ZC())
+            },
+            wC = () => {
+              let ZC = 1,
+                wC = !0;
+              for (; ZC > 0;) {
+                ZC--, wC || QC(), wC = !1;
+                const bC = CC();
+                for (let ZC = 0; ZC < bC; ZC++) QC(), zC(CC());
+                ZC += CC()
               }
-            })))
-          },
-          HeadMesh: {
-            timeline: [0, .25, .75, 1].map((kk => ({
-              timeFraction: kk,
-              rotation: {
-                Wi: "catmull-rom-spline",
-                point: [0, .25 === kk ? .12 : .75 === kk ? -.12 : 0, 0]
-              }
-            })))
-          },
-          ArmLeftMesh: {
-            timeline: Sk(kk, ik)
-          },
-          ArmRightMesh: {
-            timeline: Sk(ek, -ik)
+            },
+            bC = CC();
+          for (let nC = 0; nC < bC; nC++) CC(), wC();
+          wC()
+        }(WC, (zC => {
+          if (ZC + zC > CC.byteLength) throw new RangeError("past the stream");
+          ZC += zC
+        }), QC);
+        const pC = NC < 2 ? wC : WC;
+        if (MC === nC) return {
+          faces: 0,
+          vertices: wC()
+        };
+        if (MC !== fC) return null;
+        if (gC === oC) {
+          return {
+            faces: pC(),
+            vertices: pC()
           }
         }
-      }
-    }
-    const rk = bk([0, 0, 0], [0, 0, 0], .07),
-      Pk = (0, fk.e)((0, Dk.g)(rk), "mobIdle"),
-      mk = bk([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      Mk = bk([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      Kk = (0, fk.e)((0, Dk.g)(mk), "gunReady"),
-      xk = (0, fk.e)((0, Dk.g)(Mk), "gunAimed")
-  },
-  33801: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => bk,
-      e: () => fk,
-      f: () => Mk
-    });
-    var Dk = ik(1537);
-
-    function fk(kk) {
-      var ek;
-      return {
-        ...bk.store,
-        yaw: bk.store.yaw + (null !== (ek = Dk.c[kk].previewYaw) && void 0 !== ek ? ek : 0)
-      }
-    }
-    const Sk = {
-        yaw: .61 * Math.PI,
-        pitch: Math.PI / 2.05,
-        radius: 30,
-        target: [0, 0, 0]
-      },
-      bk = {
-        player: Sk,
-        store: {
-          ...Sk,
-          radius: 33,
-          target: [0, 3.9, 0]
+        if (gC !== qC) return null;
+        QC(), NC < 2 && WC();
+        const PC = WC();
+        return {
+          faces: WC(),
+          vertices: PC
         }
-      };
+      } catch {
+        return null
+      }
+    }
 
-    function rk(kk, ek) {
-      kk instanceof Promise ? kk.then(ek).catch((kk => {
-        console.error("Couldn't open the preview", kk)
-      })) : ek(kk)
-    }
-    class Pk {
-      constructor(kk) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, rk(kk, (kk => {
-          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
-        }))
-      }
-      show(kk) {
-        var ek;
-        this.view = kk, null === (ek = this.opened) || void 0 === ek || ek.show(kk)
-      }
-      resize(kk, ek) {
-        var ik;
-        this.size = {
-          width: kk,
-          height: ek
-        }, null === (ik = this.opened) || void 0 === ik || ik.resize(kk, ek)
-      }
-      close() {
-        var kk;
-        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
-      }
-    }
-    class mk {
-      constructor(kk) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), rk(kk, (kk => {
-          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
-        }))
-      }
-      get dev() {
-        return this.opened.dev
-      }
-      isReady() {
-        var kk, ek;
-        return null !== (kk = null === (ek = this.opened) || void 0 === ek ? void 0 : ek.isReady()) && void 0 !== kk && kk
-      }
-      setCosmetic(kk, ek) {
-        var ik;
-        null === (ik = this.opened) || void 0 === ik || ik.setCosmetic(kk, ek)
-      }
-      playEmote(kk) {
-        var ek;
-        null === (ek = this.opened) || void 0 === ek || ek.playEmote(kk)
-      }
-      setOrbit(kk) {
-        var ek;
-        null === (ek = this.opened) || void 0 === ek || ek.setOrbit(kk)
-      }
-      resetCamera() {
-        var kk;
-        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
-      }
-      async untilDrawn(kk) {
-        var ek;
-        await this.ready, await (null === (ek = this.opened) || void 0 === ek ? void 0 : ek.untilDrawn(kk))
-      }
-      resize(kk, ek) {
-        var ik;
-        this.size = {
-          width: kk,
-          height: ek
-        }, null === (ik = this.opened) || void 0 === ik || ik.resize(kk, ek)
-      }
-      close() {
-        var kk;
-        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
-      }
-    }
-    const Mk = new class {
-      constructor() {
-        this.host = null, this.makeDefault = null
-      }
-      setHost(kk) {
-        this.host = kk
-      }
-      setDefaultHost(kk) {
-        this.makeDefault = kk
-      }
-      current() {
-        if (null === this.host) {
-          if (null === this.makeDefault) throw new Error("no preview host");
-          this.host = this.makeDefault()
+    function NC(CC, zC, ZC) {
+      var QC, wC;
+      if (null === (QC = null === (wC = CC.extensionsUsed) || void 0 === wC ? void 0 : wC.includes("KHR_draco_mesh_compression")) || void 0 === QC || !QC) return null;
+      for (const gC of null !== (bC = CC.meshes) && void 0 !== bC ? bC : []) {
+        var bC;
+        for (const QC of gC.primitives) {
+          var nC, fC, oC, qC, FC, NC;
+          const wC = null === (nC = QC.extensions) || void 0 === nC ? void 0 : nC.KHR_draco_mesh_compression;
+          if ("object" !== typeof wC || null === wC) continue;
+          const bC = null === (fC = CC.bufferViews) || void 0 === fC ? void 0 : fC[wC.bufferView];
+          if (null === zC || void 0 === bC) return MC;
+          const gC = null !== (oC = bC.byteOffset) && void 0 !== oC ? oC : 0,
+            SC = WC(zC.subarray(gC, gC + bC.byteLength));
+          if (null === SC && !ZC) continue;
+          const pC = null !== (qC = CC.accessors) && void 0 !== qC ? qC : [],
+            PC = null === (FC = pC[QC.attributes.POSITION]) || void 0 === FC ? void 0 : FC.count,
+            GC = void 0 === QC.indices ? 0 : null === (NC = pC[QC.indices]) || void 0 === NC ? void 0 : NC.count;
+          if (null === SC || void 0 === PC || void 0 === GC || 3 * SC.faces !== GC || SC.vertices > PC) return MC
         }
-        return this.host
       }
-      openMob(kk) {
-        return new Pk(this.current().openMob(kk))
-      }
-      openPet(kk) {
-        return new Pk(this.current().openPet(kk))
-      }
-      openMobLineup(kk) {
-        return new Pk(this.current().openMobLineup(kk))
-      }
-      openCharacter(kk, ek) {
-        return new mk(this.current().openCharacter(kk, ek))
-      }
+      return null
     }
-  },
-  33799: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => Dk.d,
-      g: () => Dk.e,
-      h: () => Dk.f
-    });
-    var Dk = ik(33801);
-    class fk {
-      constructor(kk) {
-        this.load = kk, this.loaded = null, this.loading = null
-      }
-      run(kk) {
-        return null !== this.loaded ? kk(this.loaded) : (this.loading ??= this.load().then((kk => (this.loaded = kk, kk)), (kk => {
-          throw this.loading = null, kk
-        })), this.loading.then(kk))
-      }
+    const MC = "has a Draco stream whose counts don't match its accessors";
+
+    function gC(CC) {
+      var zC;
+      return null !== (zC = CC.name) && void 0 !== zC ? zC : CC.fromFolderName || CC.id
     }
-    class Sk {
-      constructor() {
-        this.mobScene = new fk((() => Promise.all([ik.e(72), ik.e(230), ik.e(229), ik.e(250), ik.e(96), ik.e(251), ik.e(75), ik.e(74), ik.e(248), ik.e(73), ik.e(258), ik.e(252), ik.e(257), ik.e(255), ik.e(247), ik.e(272), ik.e(226), ik.e(242), ik.e(253), ik.e(256), ik.e(77), ik.e(188), ik.e(220), ik.e(95), ik.e(223), ik.e(238), ik.e(120), ik.e(239), ik.e(76), ik.e(119), ik.e(159)]).then((() => ik(40671))))), this.characterScene = new fk((() => Promise.all([ik.e(72), ik.e(230), ik.e(229), ik.e(250), ik.e(96), ik.e(251), ik.e(75), ik.e(74), ik.e(248), ik.e(73), ik.e(258), ik.e(252), ik.e(257), ik.e(255), ik.e(247), ik.e(272), ik.e(226), ik.e(242), ik.e(253), ik.e(256), ik.e(77), ik.e(188), ik.e(220), ik.e(95), ik.e(223), ik.e(238), ik.e(120), ik.e(239), ik.e(76), ik.e(119), ik.e(158)]).then((() => ik(40742)))))
-      }
-      openMob(kk) {
-        return this.mobScene.run((ek => ek.openMobPreview(kk)))
-      }
-      openPet(kk) {
-        return this.mobScene.run((ek => ek.openPetPreview(kk)))
-      }
-      openMobLineup(kk) {
-        return this.mobScene.run((ek => ek.openMobLineupPreview(kk)))
-      }
-      openCharacter(kk, ek) {
-        return this.characterScene.run((ik => ik.openCharacterPreview(kk, ek)))
-      }
+
+    function SC(CC, zC, ZC) {
+      return `Texture pack "${CC}": model "${zC}" was not loaded because it ${ZC}. The default model is used instead.`
     }
-    Dk.f.setDefaultHost((() => new Sk))
+
+    function pC(CC, zC, ZC) {
+      let {
+        strictDraco: bC = !1
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const nC = {};
+      for (const [fC, oC] of Object.entries(zC)) {
+        let zC;
+        if (oC.startsWith("data:")) try {
+          const CC = new Uint8Array((0, wC.s)(oC));
+          if (zC = (0, QC.d)(CC), null === zC) {
+            const {
+              json: ZC,
+              bin: QC
+            } = (0, wC.x)(CC);
+            zC = NC(ZC, QC, bC)
+          }
+        } catch {
+          zC = "is not a binary glTF 2.0 file"
+        } else zC = "loads data from outside the file";
+        zC && (nC[fC] = zC, ZC && console.warn(SC(CC, fC, zC)))
+      }
+      return nC
+    }
+
+    function PC(CC, zC) {
+      const ZC = Object.keys(zC);
+      if (0 === ZC.length) return null;
+      if (1 === ZC.length) return SC(CC, ZC[0], zC[ZC[0]]);
+      const QC = ZC.map((CC => `"${CC}" ${zC[CC]}`)).join("; ");
+      return `Texture pack "${CC}": ${ZC.length} models were not loaded (${QC}). The default models are used instead.`
+    }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

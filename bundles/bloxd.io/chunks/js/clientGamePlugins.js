@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4778: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => Qk,
-      f: () => zk
+  4775: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => EC,
+      f: () => HC
     });
-    var Dk = ik(4786),
-      fk = ik(302);
-    const Sk = 120,
-      bk = 260,
-      rk = 1.15,
-      Pk = 1.2,
-      mk = 2,
-      Mk = 1.08,
-      Kk = .8,
-      xk = .95,
-      nk = 8,
-      Uk = "[\"')\\]\u300d\u300f\uff09]*",
-      Hk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Uk}$`),
-      wk = new RegExp(`[?\uff1f]${Uk}$`),
-      lk = new RegExp(`[!\uff01]${Uk}$`),
-      pk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      yk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Yk = new RegExp(`[${yk}]`),
-      Lk = new RegExp(`[${yk}]|[^${yk}]+`, "g"),
-      Ck = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var QC = ZC(4783),
+      wC = ZC(310);
+    const bC = 120,
+      nC = 260,
+      fC = 1.15,
+      oC = 1.2,
+      qC = 2,
+      FC = 1.08,
+      WC = .8,
+      NC = .95,
+      MC = 8,
+      gC = "[\"')\\]\u300d\u300f\uff09]*",
+      SC = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${gC}$`),
+      pC = new RegExp(`[?\uff1f]${gC}$`),
+      PC = new RegExp(`[!\uff01]${gC}$`),
+      GC = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      RC = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      AC = new RegExp(`[${RC}]`),
+      xC = new RegExp(`[${RC}]|[^${RC}]+`, "g"),
+      JC = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Ak(kk) {
-      let ek = 2166136261;
-      for (let ik = 0; ik < kk.length; ik++) ek ^= kk.charCodeAt(ik), ek = Math.imul(ek, 16777619);
-      return (ek >>> 0) / 4294967295 * 2 - 1
+    function IC(CC) {
+      let zC = 2166136261;
+      for (let ZC = 0; ZC < CC.length; ZC++) zC ^= CC.charCodeAt(ZC), zC = Math.imul(zC, 16777619);
+      return (zC >>> 0) / 4294967295 * 2 - 1
     }
 
-    function jk(kk) {
-      var ek;
-      if (Yk.test(kk)) return 1;
-      const ik = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Dk = ik.replace(/[^0-9]/g, "");
-      if (Dk.length > 0 && !/\p{L}/u.test(ik)) return Math.min(Dk.length, 4);
-      const fk = null !== (ek = ik.match(Ck)) && void 0 !== ek ? ek : [];
-      if (0 === fk.length) {
-        var Sk, bk;
-        const kk = null !== (Sk = null === (bk = ik.match(/\p{L}/gu)) || void 0 === bk ? void 0 : bk.length) && void 0 !== Sk ? Sk : 0;
-        return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), nk)
+    function iC(CC) {
+      var zC;
+      if (AC.test(CC)) return 1;
+      const ZC = CC.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        QC = ZC.replace(/[^0-9]/g, "");
+      if (QC.length > 0 && !/\p{L}/u.test(ZC)) return Math.min(QC.length, 4);
+      const wC = null !== (zC = ZC.match(JC)) && void 0 !== zC ? zC : [];
+      if (0 === wC.length) {
+        var bC, nC;
+        const CC = null !== (bC = null === (nC = ZC.match(/\p{L}/gu)) || void 0 === nC ? void 0 : nC.length) && void 0 !== bC ? bC : 0;
+        return 0 === CC ? 0 : Math.min(Math.max(1, Math.round(CC / 2.5)), MC)
       }
-      const rk = ik.replace(/[^\p{L}]/gu, ""),
-        Pk = fk.length > 1 && "e" === fk.at(-1) && rk.endsWith("e") && !rk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
-      return Math.min(fk.length - (Pk ? 1 : 0), nk)
+      const fC = ZC.replace(/[^\p{L}]/gu, ""),
+        oC = wC.length > 1 && "e" === wC.at(-1) && fC.endsWith("e") && !fC.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(CC.replace(/[^\p{L}]/gu, ""));
+      return Math.min(wC.length - (oC ? 1 : 0), MC)
     }
 
-    function sk(kk) {
-      return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function vC(CC) {
+      return CC.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function dk(kk) {
-      const ek = kk.replace(/[^\p{L}]/gu, "");
-      return ek.length >= 2 && ek === ek.toUpperCase() && ek !== ek.toLowerCase()
+    function eC(CC) {
+      const zC = CC.replace(/[^\p{L}]/gu, "");
+      return zC.length >= 2 && zC === zC.toUpperCase() && zC !== zC.toLowerCase()
     }
 
-    function Vk(kk, ek) {
-      var ik;
-      const nk = ek && (0, Dk.i)(ek),
-        Uk = null !== (ik = null === nk || void 0 === nk ? void 0 : nk.syllableMs) && void 0 !== ik ? ik : Dk.c,
-        yk = function(kk) {
-          const ek = [];
-          for (const Dk of (0, fk.hc)(kk))
-            if ("string" === typeof Dk)
-              for (const kk of Dk.split(/(\s+)/)) {
-                if ("" === kk) continue;
-                if (/^\s+$/.test(kk)) {
-                  ek.push({
+    function hC(CC, zC) {
+      var ZC;
+      const MC = zC && (0, QC.m)(zC),
+        gC = null !== (ZC = null === MC || void 0 === MC ? void 0 : MC.syllableMs) && void 0 !== ZC ? ZC : QC.b,
+        RC = function(CC) {
+          const zC = [];
+          for (const QC of (0, wC.dc)(CC))
+            if ("string" === typeof QC)
+              for (const CC of QC.split(/(\s+)/)) {
+                if ("" === CC) continue;
+                if (/^\s+$/.test(CC)) {
+                  zC.push({
                     kind: "space",
-                    text: kk
+                    text: CC
                   });
                   continue
                 }
-                if (!Yk.test(kk)) {
-                  ek.push({
+                if (!AC.test(CC)) {
+                  zC.push({
                     kind: "word",
-                    text: kk,
+                    text: CC,
                     delayMs: 0
                   });
                   continue
                 }
-                let Dk = !0;
-                for (const fk of null !== (ik = kk.match(Lk)) && void 0 !== ik ? ik : []) {
-                  var ik;
-                  const kk = ek.at(-1);
-                  Dk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || Yk.test(fk) || /[\p{L}\p{N}]/u.test(fk) ? (Dk || ek.push({
+                let QC = !0;
+                for (const wC of null !== (ZC = CC.match(xC)) && void 0 !== ZC ? ZC : []) {
+                  var ZC;
+                  const CC = zC.at(-1);
+                  QC || "word" !== (null === CC || void 0 === CC ? void 0 : CC.kind) || AC.test(wC) || /[\p{L}\p{N}]/u.test(wC) ? (QC || zC.push({
                     kind: "space",
                     text: "\u200b"
-                  }), ek.push({
+                  }), zC.push({
                     kind: "word",
-                    text: fk,
+                    text: wC,
                     delayMs: 0
-                  }), Dk = !1) : kk.text += fk
+                  }), QC = !1) : CC.text += wC
                 }
-              } else ek.push({
+              } else zC.push({
                 kind: "icon",
-                text: Dk.icon,
+                text: QC.icon,
                 delayMs: 0
               });
-          return ek
-        }(kk),
-        Ck = [];
-      let Vk = [];
-      for (const Dk of yk) "space" !== Dk.kind && (Vk.push(Dk), Hk.test(Dk.text) && (Ck.push(Vk), Vk = []));
-      Ck.push(Vk);
-      const Fk = [];
-      let uk = 0;
-      for (const Dk of Ck) {
-        var qk, Ik;
-        const kk = null !== (qk = null === (Ik = Dk.at(-1)) || void 0 === Ik ? void 0 : Ik.text) && void 0 !== qk ? qk : "",
-          ek = wk.test(kk),
-          ik = lk.test(kk),
-          fk = Dk.map((kk => "word" === kk.kind ? jk(kk.text) : 1)),
-          yk = fk.findLastIndex((kk => kk > 0));
-        for (const [wk, lk] of Dk.entries()) {
-          const kk = "word" === lk.kind,
-            Dk = fk[wk];
-          lk.delayMs = uk;
-          for (let fk = 0; nk && fk < Dk; fk++) {
+          return zC
+        }(CC),
+        JC = [];
+      let hC = [];
+      for (const QC of RC) "space" !== QC.kind && (hC.push(QC), SC.test(QC.text) && (JC.push(hC), hC = []));
+      JC.push(hC);
+      const KC = [];
+      let YC = 0;
+      for (const QC of JC) {
+        var dC, mC;
+        const CC = null !== (dC = null === (mC = QC.at(-1)) || void 0 === mC ? void 0 : mC.text) && void 0 !== dC ? dC : "",
+          zC = pC.test(CC),
+          ZC = PC.test(CC),
+          wC = QC.map((CC => "word" === CC.kind ? iC(CC.text) : 1)),
+          RC = wC.findLastIndex((CC => CC > 0));
+        for (const [pC, PC] of QC.entries()) {
+          const CC = "word" === PC.kind,
+            QC = wC[pC];
+          PC.delayMs = YC;
+          for (let wC = 0; MC && wC < QC; wC++) {
             const {
-              intonation: Sk
-            } = nk;
-            let bk = yk > 0 ? -Sk.declineSemitones * (wk / yk) : 0;
-            bk += Ak(`${sk(lk.text)}|${fk}`) * Sk.variationSemitones;
-            const Hk = Math.min(1, Sk.variationSemitones);
-            let pk = nk.glideSemitones,
-              Yk = 1;
-            ik && (bk += Sk.exclaimLiftSemitones, Yk *= rk), ek && wk === yk && (bk += Sk.questionRiseSemitones * (Dk > 1 ? .5 + .5 * fk / (Dk - 1) : 1), fk === Dk - 1 && (pk = Math.abs(pk) + Sk.questionRiseSemitones / 2)), kk && dk(lk.text) && (bk += mk * Hk, Yk *= Pk), Dk > 1 && 0 === fk && (bk += Kk * Hk, Yk *= Mk), Fk.push({
-              atMs: uk + fk * Uk,
-              semitones: bk,
-              glideSemitones: pk,
-              durationMs: fk < Dk - 1 ? Math.min(nk.durationMs, Uk * xk) : nk.durationMs,
-              level: Yk
+              intonation: bC
+            } = MC;
+            let nC = RC > 0 ? -bC.declineSemitones * (pC / RC) : 0;
+            nC += IC(`${vC(PC.text)}|${wC}`) * bC.variationSemitones;
+            const SC = Math.min(1, bC.variationSemitones);
+            let GC = MC.glideSemitones,
+              AC = 1;
+            ZC && (nC += bC.exclaimLiftSemitones, AC *= fC), zC && pC === RC && (nC += bC.questionRiseSemitones * (QC > 1 ? .5 + .5 * wC / (QC - 1) : 1), wC === QC - 1 && (GC = Math.abs(GC) + bC.questionRiseSemitones / 2)), CC && eC(PC.text) && (nC += qC * SC, AC *= oC), QC > 1 && 0 === wC && (nC += WC * SC, AC *= FC), KC.push({
+              atMs: YC + wC * gC,
+              semitones: nC,
+              glideSemitones: GC,
+              durationMs: wC < QC - 1 ? Math.min(MC.durationMs, gC * NC) : MC.durationMs,
+              level: AC
             })
           }
-          uk += Dk * Uk + (Hk.test(lk.text) ? bk : pk.test(lk.text) ? Sk : 0)
+          YC += QC * gC + (SC.test(PC.text) ? nC : GC.test(PC.text) ? bC : 0)
         }
       }
       return {
-        pieces: yk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
+        pieces: RC.map((CC => "space" === CC.kind ? CC : "icon" === CC.kind ? {
           kind: "icon",
-          icon: kk.text,
-          delayMs: kk.delayMs
+          icon: CC.text,
+          delayMs: CC.delayMs
         } : {
           kind: "word",
-          text: kk.text,
-          delayMs: kk.delayMs
+          text: CC.text,
+          delayMs: CC.delayMs
         })),
-        blips: Fk
+        blips: KC
       }
     }
-    var Fk = ik(1172),
-      uk = ik(1223),
-      qk = ik(1895);
+    var KC = ZC(1143),
+      YC = ZC(1192),
+      dC = ZC(1843);
 
-    function Ik(kk) {
-      if ("string" === typeof kk) return kk;
-      const ek = uk.f.get().getCurrentLanguageCode();
-      return (0, Fk.u)(ek, kk.translationKey, (0, Fk.r)(kk.params, qk.c.shown))
+    function mC(CC) {
+      if ("string" === typeof CC) return CC;
+      const zC = YC.h.get().getCurrentLanguageCode();
+      return (0, KC.r)(zC, CC.translationKey, (0, KC.q)(CC.params, dC.d.shown))
     }
 
-    function zk(kk) {
-      const ek = void 0 === kk.voice ? null : (0, Dk.m)(kk.voice),
-        ik = ek && (0, Dk.i)(ek);
+    function HC(CC) {
+      const zC = void 0 === CC.voice ? null : (0, QC.q)(CC.voice),
+        ZC = zC && (0, QC.m)(zC);
       return {
-        plan: Vk(Ik(kk.line), ik),
-        synth: ik
+        plan: hC(mC(CC.line), ZC),
+        synth: ZC
       }
     }
 
-    function Qk(kk) {
-      const ek = [];
-      let ik = [];
-      for (const [fk, Sk] of kk.entries()) {
-        var Dk;
-        "space" === Sk.kind && (" " !== Sk.text || "icon" !== (null === (Dk = kk[fk + 1]) || void 0 === Dk ? void 0 : Dk.kind)) ? (ik.length > 0 && ek.push(ik), ek.push([Sk]), ik = []) : ik.push(Sk)
+    function EC(CC) {
+      const zC = [];
+      let ZC = [];
+      for (const [wC, bC] of CC.entries()) {
+        var QC;
+        "space" === bC.kind && (" " !== bC.text || "icon" !== (null === (QC = CC[wC + 1]) || void 0 === QC ? void 0 : QC.kind)) ? (ZC.length > 0 && zC.push(ZC), zC.push([bC]), ZC = []) : ZC.push(bC)
       }
-      return ik.length > 0 && ek.push(ik), ek
+      return ZC.length > 0 && zC.push(ZC), zC
     }
   },
-  4791: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => Mk,
-      f: () => Kk
+  4788: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => FC,
+      f: () => WC
     });
-    var Dk = ik(4799),
-      fk = ik(22);
-    const Sk = .25,
-      bk = .85,
-      rk = .02,
-      Pk = .01;
+    var QC = ZC(4797),
+      wC = ZC(20);
+    const bC = .25,
+      nC = .85,
+      fC = .02,
+      oC = .01;
 
-    function mk(kk, ek, ik, Dk, fk, Sk, rk) {
+    function qC(CC, zC, ZC, QC, wC, bC, fC) {
       const {
-        waveform: Pk,
-        pitchHz: mk,
-        attackMs: Mk,
-        releaseMs: Kk,
-        lowpassHz: xk
-      } = ik, nk = fk + Dk.durationMs / 1e3, Uk = mk * 2 ** (Dk.semitones / 12), Hk = kk.createOscillator();
-      Hk.type = Pk, Hk.frequency.setValueAtTime(Uk, fk), Hk.frequency.exponentialRampToValueAtTime(Uk * 2 ** (Dk.glideSemitones / 12), nk);
-      const wk = fk + Math.min(Mk, Dk.durationMs) / 1e3,
-        lk = kk.createGain();
-      lk.gain.setValueAtTime(0, fk), lk.gain.linearRampToValueAtTime(Sk, wk), lk.gain.linearRampToValueAtTime(Sk * bk, Math.max(wk, nk - Kk / 1e3)), lk.gain.linearRampToValueAtTime(0, nk);
-      const pk = [Hk];
-      if (null !== xk) {
-        const ek = kk.createBiquadFilter();
-        ek.type = "lowpass", ek.frequency.value = xk, pk.push(ek)
+        waveform: oC,
+        pitchHz: qC,
+        attackMs: FC,
+        releaseMs: WC,
+        lowpassHz: NC
+      } = ZC, MC = wC + QC.durationMs / 1e3, gC = qC * 2 ** (QC.semitones / 12), SC = CC.createOscillator();
+      SC.type = oC, SC.frequency.setValueAtTime(gC, wC), SC.frequency.exponentialRampToValueAtTime(gC * 2 ** (QC.glideSemitones / 12), MC);
+      const pC = wC + Math.min(FC, QC.durationMs) / 1e3,
+        PC = CC.createGain();
+      PC.gain.setValueAtTime(0, wC), PC.gain.linearRampToValueAtTime(bC, pC), PC.gain.linearRampToValueAtTime(bC * nC, Math.max(pC, MC - WC / 1e3)), PC.gain.linearRampToValueAtTime(0, MC);
+      const GC = [SC];
+      if (null !== NC) {
+        const zC = CC.createBiquadFilter();
+        zC.type = "lowpass", zC.frequency.value = NC, GC.push(zC)
       }
-      pk.push(lk, ek);
-      for (let bk = 1; bk < pk.length; bk++) pk[bk - 1].connect(pk[bk]);
-      return Hk.onended = () => {
-        for (const kk of pk.slice(0, -1)) kk.disconnect();
-        rk()
-      }, Hk.start(fk), Hk.stop(nk), Hk
+      GC.push(PC, zC);
+      for (let nC = 1; nC < GC.length; nC++) GC[nC - 1].connect(GC[nC]);
+      return SC.onended = () => {
+        for (const CC of GC.slice(0, -1)) CC.disconnect();
+        fC()
+      }, SC.start(wC), SC.stop(MC), SC
     }
 
-    function Mk(kk, ek, ik, Dk, fk, bk) {
-      if (0 === Dk.length) return bk(), () => {};
-      const Mk = Sk * ik.volume * fk,
-        Kk = kk.createGain();
-      Kk.connect(ek);
-      const xk = kk.currentTime + rk,
-        nk = new Set;
-      for (const Sk of Dk) {
-        const ek = mk(kk, Kk, ik, Sk, xk + Sk.atMs / 1e3, Mk * Sk.level, (() => {
-          nk.delete(ek), 0 === nk.size && (Kk.disconnect(), bk())
+    function FC(CC, zC, ZC, QC, wC, nC) {
+      if (0 === QC.length) return nC(), () => {};
+      const FC = bC * ZC.volume * wC,
+        WC = CC.createGain();
+      WC.connect(zC);
+      const NC = CC.currentTime + fC,
+        MC = new Set;
+      for (const bC of QC) {
+        const zC = qC(CC, WC, ZC, bC, NC + bC.atMs / 1e3, FC * bC.level, (() => {
+          MC.delete(zC), 0 === MC.size && (WC.disconnect(), nC())
         }));
-        nk.add(ek)
+        MC.add(zC)
       }
       return () => {
-        const ek = kk.currentTime;
-        Kk.gain.setTargetAtTime(0, ek, Pk);
-        for (const kk of nk) try {
-          kk.stop(ek + 5 * Pk)
+        const zC = CC.currentTime;
+        WC.gain.setTargetAtTime(0, zC, oC);
+        for (const CC of MC) try {
+          CC.stop(zC + 5 * oC)
         } catch {}
       }
     }
 
-    function Kk(kk, ek) {
-      var ik;
-      const Sk = Dk.Howler.ctx,
-        bk = Dk.Howler.masterGain;
-      if (!Sk || !bk || !fk.b.get("soundOnFromAd")) return () => {};
-      const rk = Dk.Howler;
-      return null === (ik = rk._autoResume) || void 0 === ik || ik.call(rk), Mk(Sk, bk, kk, ek, fk.b.get("soundVolume"), (() => {
-        var kk;
-        null === (kk = rk._autoSuspend) || void 0 === kk || kk.call(rk)
+    function WC(CC, zC) {
+      var ZC;
+      const bC = QC.Howler.ctx,
+        nC = QC.Howler.masterGain;
+      if (!bC || !nC || !wC.b.get("soundOnFromAd")) return () => {};
+      const fC = QC.Howler;
+      return null === (ZC = fC._autoResume) || void 0 === ZC || ZC.call(fC), FC(bC, nC, CC, zC, wC.b.get("soundVolume"), (() => {
+        var CC;
+        null === (CC = fC._autoSuspend) || void 0 === CC || CC.call(fC)
       }))
     }
   },
-  38719: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      closeClientGame: () => vk,
-      createDefaultClientPlugins: () => Qk
+  38976: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      closeClientGame: () => lC,
+      createDefaultClientPlugins: () => EC
     });
-    var Dk = ik(314);
+    var QC = ZC(326);
 
-    function fk() {
-      let kk;
+    function wC() {
+      let CC;
       return {
-        onCreate(ek) {
-          kk = ek
+        onCreate(zC) {
+          CC = zC
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(ek, ik, fk, Sk, bk, rk) {
-          var Pk, mk;
-          if ("Iron Chest" !== kk.getMetaInfo(bk).rootName) return;
-          if (!kk.hasEffect(ek, "Thief")) return;
-          const Mk = kk.getBlockData(ik, fk, Sk);
-          return kk.getPlayerDbId(ek) !== (null === Mk || void 0 === Mk || null === (Pk = Mk.persisted) || void 0 === Pk || null === (mk = Pk.shared) || void 0 === mk ? void 0 : mk.ownerDbId) ? (kk.sendMessage(ek, [{
+        onPlayerAttemptAltAction(zC, ZC, wC, bC, nC, fC) {
+          var oC, qC;
+          if ("Iron Chest" !== CC.getMetaInfo(nC).rootName) return;
+          if (!CC.hasEffect(zC, "Thief")) return;
+          const FC = CC.getBlockData(ZC, wC, bC);
+          return CC.getPlayerDbId(zC) !== (null === FC || void 0 === FC || null === (oC = FC.persisted) || void 0 === oC || null === (qC = oC.shared) || void 0 === qC ? void 0 : qC.ownerDbId) ? (CC.sendMessage(zC, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Dk.D.redUiText
+              color: QC.H.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Sk = ik(4189),
-      bk = ik(1218);
-    const rk = 8.4,
-      Pk = 1e-4,
-      mk = .15,
-      Mk = .04,
-      Kk = [.12, .04, .12],
-      xk = 26,
-      nk = {
+    var bC = ZC(4179),
+      nC = ZC(1183);
+    const fC = 8.4,
+      oC = 1e-4,
+      qC = .15,
+      FC = .04,
+      WC = [.12, .04, .12],
+      NC = 26,
+      MC = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        vK: 1,
-        minLifeTime: Pk,
-        maxLifeTime: Pk,
+        HW: 1,
+        minLifeTime: oC,
+        maxLifeTime: oC,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Sk.h.Standard
+        blendMode: bC.d.Standard
       },
-      Uk = {
+      gC = {
         texture: "bubble",
         mipmaps: !1,
-        vK: 96,
+        HW: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: xk,
+        emitRate: NC,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Sk.h.Standard
+        blendMode: bC.d.Standard
       },
-      Hk = [0, 0, 0],
-      wk = [0, 0, 0];
+      SC = [0, 0, 0],
+      pC = [0, 0, 0];
 
-    function lk(kk) {
-      const ek = new Map;
-      let ik = null;
+    function PC(CC) {
+      const zC = new Map;
+      let ZC = null;
 
-      function Dk(kk) {
-        var ek, ik;
-        null === (ek = kk.bubbles) || void 0 === ek || ek.stop(), null === (ik = kk.fish) || void 0 === ik || ik.stop()
+      function QC(CC) {
+        var zC, ZC;
+        null === (zC = CC.bubbles) || void 0 === zC || zC.stop(), null === (ZC = CC.fish) || void 0 === ZC || ZC.stop()
       }
 
-      function fk(ik) {
-        if (!ik.readDrawnPosition(kk, wk)) {
-          for (const kk of ek.values()) {
-            var Dk;
-            null === (Dk = kk.bubbles) || void 0 === Dk || Dk.setEmitRate(0)
+      function wC(ZC) {
+        if (!ZC.readDrawnPosition(CC, pC)) {
+          for (const CC of zC.values()) {
+            var QC;
+            null === (QC = CC.bubbles) || void 0 === QC || QC.setEmitRate(0)
           }
           return
         }
-        const fk = performance.now();
-        for (const [kk, bk] of ek) {
-          var Sk;
-          if (null === (Sk = bk.bubbles) || void 0 === Sk || Sk.setEmitRate(0), !ik.readDrawnPosition(kk, Hk)) continue;
-          if (!((Hk[0] - wk[0]) ** 2 + (Hk[1] - wk[1]) ** 2 + (Hk[2] - wk[2]) ** 2 < 900)) continue;
-          const ek = Math.max(0, bk.biteAt - fk),
-            Dk = bk.approachDurationMs > 0 ? Math.min(1, 1 - ek / bk.approachDurationMs) : 1,
-            Pk = (bk.approachDurationMs - ek) / 1e3,
-            lk = bk.phase + .25 * Math.sin(1.7 * Pk + bk.phase),
-            pk = Math.min(bk.approachDurationMs / 3e3 * 2.8, rk) * (1 - Dk) * (1 + .15 * Math.sin(2.1 * Pk + bk.phase)),
-            yk = Math.min(1, 4 * (1 - Dk)),
-            Yk = (.45 * Math.sin(4.1 * Pk + bk.phase) + .18 * Math.sin(9.7 * Pk + 2 * bk.phase)) * yk,
-            Lk = Hk[0] + Math.cos(lk) * pk - Math.sin(lk) * Yk,
-            Ck = Math.ceil(bk.surfaceY),
-            Ak = Hk[2] + Math.sin(lk) * pk + Math.cos(lk) * Yk,
+        const wC = performance.now();
+        for (const [CC, nC] of zC) {
+          var bC;
+          if (null === (bC = nC.bubbles) || void 0 === bC || bC.setEmitRate(0), !ZC.readDrawnPosition(CC, SC)) continue;
+          if (!((SC[0] - pC[0]) ** 2 + (SC[1] - pC[1]) ** 2 + (SC[2] - pC[2]) ** 2 < 900)) continue;
+          const zC = Math.max(0, nC.biteAt - wC),
+            QC = nC.approachDurationMs > 0 ? Math.min(1, 1 - zC / nC.approachDurationMs) : 1,
+            oC = (nC.approachDurationMs - zC) / 1e3,
+            PC = nC.phase + .25 * Math.sin(1.7 * oC + nC.phase),
+            GC = Math.min(nC.approachDurationMs / 3e3 * 2.8, fC) * (1 - QC) * (1 + .15 * Math.sin(2.1 * oC + nC.phase)),
+            RC = Math.min(1, 4 * (1 - QC)),
+            AC = (.45 * Math.sin(4.1 * oC + nC.phase) + .18 * Math.sin(9.7 * oC + 2 * nC.phase)) * RC,
+            xC = SC[0] + Math.cos(PC) * GC - Math.sin(PC) * AC,
+            JC = Math.ceil(nC.surfaceY),
+            IC = SC[2] + Math.sin(PC) * GC + Math.cos(PC) * AC,
             {
-              fishAt: jk,
-              bubblesAt: sk
-            } = bk;
-          jk[0] = sk[0] = Lk, jk[1] = Ck + mk, sk[1] = Ck + Mk, jk[2] = sk[2] = Ak, bk.fish ??= ik.createParticles(nk, {
-            pos: jk
-          }), bk.fish.moveTo(jk), bk.fish.emit(1), bk.bubbles ??= ik.createParticles(Uk, {
-            pos: sk,
-            half: Kk
-          }), bk.bubbles.moveTo(sk), bk.bubbles.setEmitRate(xk + 32 * (.5 + .5 * Math.sin(9 * Pk + bk.phase)) ** 4 + 13 * Dk)
+              fishAt: iC,
+              bubblesAt: vC
+            } = nC;
+          iC[0] = vC[0] = xC, iC[1] = JC + qC, vC[1] = JC + FC, iC[2] = vC[2] = IC, nC.fish ??= ZC.createParticles(MC, {
+            pos: iC
+          }), nC.fish.moveTo(iC), nC.fish.emit(1), nC.bubbles ??= ZC.createParticles(gC, {
+            pos: vC,
+            half: WC
+          }), nC.bubbles.moveTo(vC), nC.bubbles.setEmitRate(NC + 32 * (.5 + .5 * Math.sin(9 * oC + nC.phase)) ** 4 + 13 * QC)
         }
       }
       return {
-        onCreate(kk) {
-          ik = kk
+        onCreate(CC) {
+          ZC = CC
         },
         onAfterRender() {
-          ik && fk(ik)
+          ZC && wC(ZC)
         },
         onClose() {
-          for (const kk of ek.values()) Dk(kk);
-          ek.clear(), ik = null
+          for (const CC of zC.values()) QC(CC);
+          zC.clear(), ZC = null
         },
-        onReceivedMessageFromServer(kk, ik) {
-          if (kk !== bk.D) return;
+        onReceivedMessageFromServer(CC, ZC) {
+          if (CC !== nC.B) return;
           const {
-            hookId: fk,
-            waiting: Sk
-          } = ik;
-          if (Sk) ek.has(fk) || ek.set(fk, {
+            hookId: wC,
+            waiting: bC
+          } = ZC;
+          if (bC) zC.has(wC) || zC.set(wC, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Sk.remainingMs,
-            approachDurationMs: Sk.durationMs,
-            surfaceY: Sk.surfaceY,
+            biteAt: performance.now() + bC.remainingMs,
+            approachDurationMs: bC.durationMs,
+            surfaceY: bC.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const kk = ek.get(fk);
-            kk && Dk(kk), ek.delete(fk)
+            const CC = zC.get(wC);
+            CC && QC(CC), zC.delete(wC)
           }
         }
       }
     }
-    var pk = ik(4791),
-      yk = ik(4778);
+    var GC = ZC(4788),
+      RC = ZC(4775);
 
-    function Yk(kk) {
-      let ek, ik = null,
-        Dk = null;
-      const fk = () => {
-        var kk;
-        null === (kk = Dk) || void 0 === kk || kk(), Dk = null
+    function AC(CC) {
+      let zC, ZC = null,
+        QC = null;
+      const wC = () => {
+        var CC;
+        null === (CC = QC) || void 0 === CC || CC(), QC = null
       };
       return {
-        onCreate(Dk) {
-          ek = Dk, ik = ek.getClientOption(kk, "dialogue")
+        onCreate(QC) {
+          zC = QC, ZC = zC.getClientOption(CC, "dialogue")
         },
         onAfterRender() {
-          if (!ek) return;
-          const Sk = ek.getClientOption(kk, "dialogue");
-          if (Sk === ik) return;
-          if (ik = Sk, fk(), !Sk || !1 === Sk.animateIn) return;
+          if (!zC) return;
+          const bC = zC.getClientOption(CC, "dialogue");
+          if (bC === ZC) return;
+          if (ZC = bC, wC(), !bC || !1 === bC.animateIn) return;
           const {
-            plan: bk,
-            synth: rk
-          } = (0, yk.f)(Sk);
-          rk && (Dk = (0, pk.f)(rk, bk.blips))
+            plan: nC,
+            synth: fC
+          } = (0, RC.f)(bC);
+          fC && (QC = (0, GC.f)(fC, nC.blips))
         },
-        onClose: fk
+        onClose: wC
       }
     }
-    var Lk = ik(38725);
-    const Ck = [
+    var xC = ZC(38979);
+    const JC = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      Ak = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      jk = [0, 1, 2, 0, 2, 3];
+      IC = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      iC = [0, 1, 2, 0, 2, 3];
 
-    function sk(kk, ek, ik) {
-      var Dk;
-      let [fk, Sk, bk] = ek;
-      if (kk.hasPackModel("Furnace")) return null;
-      const rk = ((null !== (Dk = kk.getMetaInfo(ik).rot) && void 0 !== Dk ? Dk : 1) - 1) * Math.PI / 2,
-        Pk = Math.PI + rk,
-        mk = Math.cos(Pk),
-        Mk = Math.sin(Pk),
-        Kk = [];
-      for (const [Uk, Hk] of Ck) Kk.push(Uk * mk, Hk, -Uk * Mk);
-      const xk = {
-          positions: Kk,
-          indices: jk,
-          uvs: Ak
+    function vC(CC, zC, ZC) {
+      var QC;
+      let [wC, bC, nC] = zC;
+      if (CC.hasPackModel("Furnace")) return null;
+      const fC = ((null !== (QC = CC.getMetaInfo(ZC).rot) && void 0 !== QC ? QC : 1) - 1) * Math.PI / 2,
+        oC = Math.PI + fC,
+        qC = Math.cos(oC),
+        FC = Math.sin(oC),
+        WC = [];
+      for (const [gC, SC] of JC) WC.push(gC * qC, SC, -gC * FC);
+      const NC = {
+          positions: WC,
+          indices: iC,
+          uvs: IC
         },
-        nk = [fk + .5 + .51 * Math.sin(rk), Sk + .375, bk + .5 + .51 * Math.cos(rk)];
-      return kk.createGameMesh(xk, {
+        MC = [wC + .5 + .51 * Math.sin(fC), bC + .375, nC + .5 + .51 * Math.cos(fC)];
+      return CC.createGameMesh(NC, {
         kind: "furnaceFire"
-      }, nk)
+      }, MC)
     }
 
-    function dk(kk) {
-      return Math.floor(kk / 200) % 3
+    function eC(CC) {
+      return Math.floor(CC / 200) % 3
     }
 
-    function Vk(kk, ek, ik) {
-      kk.setGameMesh(ek, {
-        uvOffset: [0, ik / 3]
+    function hC(CC, zC, ZC) {
+      CC.setGameMesh(zC, {
+        uvOffset: [0, ZC / 3]
       })
     }
-    const Fk = [.12, .025, .12],
-      uk = [{
+    const KC = [.12, .025, .12],
+      YC = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Sk.h.Standard,
+          blendMode: bC.d.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Sk.h.Add,
+          blendMode: bC.d.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class qk {
+    class dC {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(kk, ek) {
-        const ik = kk.getBlockId(ek[0], ek[1], ek[2]);
-        if ("Furnace" !== kk.getMetaInfo(ik).rootName) return;
-        const Dk = performance.now();
-        let fk = this.smokes.find((kk => kk.pos[0] === ek[0] && kk.pos[1] === ek[1] && kk.pos[2] === ek[2] && kk.wP === ik));
-        if (fk || (fk = {
-            pos: [ek[0], ek[1], ek[2]],
-            wP: ik,
-            endMs: Dk,
+      start(CC, zC) {
+        const ZC = CC.getBlockId(zC[0], zC[1], zC[2]);
+        if ("Furnace" !== CC.getMetaInfo(ZC).rootName) return;
+        const QC = performance.now();
+        let wC = this.smokes.find((CC => CC.pos[0] === zC[0] && CC.pos[1] === zC[1] && CC.pos[2] === zC[2] && CC.SF === ZC));
+        if (wC || (wC = {
+            pos: [zC[0], zC[1], zC[2]],
+            SF: ZC,
+            endMs: QC,
             lastBurstMs: -1 / 0,
-            pending: new Array(uk.length).fill(0),
-            fire: sk(kk, ek, ik)
-          }, this.smokes.push(fk), null !== fk.fire && (Vk(kk, fk.fire, dk(Dk)), this.shownFireFrame = -1)), fk.endMs = Dk + 6e3, this.smokes.length > 4) {
-          const ek = this.smokes.reduce(((kk, ek) => ek.endMs < kk.endMs ? ek : kk));
-          Ik(kk, ek), this.smokes.splice(this.smokes.indexOf(ek), 1)
+            pending: new Array(YC.length).fill(0),
+            fire: vC(CC, zC, ZC)
+          }, this.smokes.push(wC), null !== wC.fire && (hC(CC, wC.fire, eC(QC)), this.shownFireFrame = -1)), wC.endMs = QC + 6e3, this.smokes.length > 4) {
+          const zC = this.smokes.reduce(((CC, zC) => zC.endMs < CC.endMs ? zC : CC));
+          mC(CC, zC), this.smokes.splice(this.smokes.indexOf(zC), 1)
         }
-        Dk - fk.lastBurstMs >= 300 && (fk.lastBurstMs = Dk, uk.forEach(((kk, ek) => {
-          fk.pending[ek] += kk.style.count
+        QC - wC.lastBurstMs >= 300 && (wC.lastBurstMs = QC, YC.forEach(((CC, zC) => {
+          wC.pending[zC] += CC.style.count
         })))
       }
-      onAfterRender(kk, ek) {
+      onAfterRender(CC, zC) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const ik = performance.now();
-        this.smokes = this.smokes.filter((ek => {
-          const [Dk, fk, Sk] = ek.pos, bk = ik < ek.endMs && kk.getBlockId(Dk, fk, Sk) === ek.wP;
-          return bk || Ik(kk, ek), bk
+        const ZC = performance.now();
+        this.smokes = this.smokes.filter((zC => {
+          const [QC, wC, bC] = zC.pos, nC = ZC < zC.endMs && CC.getBlockId(QC, wC, bC) === zC.SF;
+          return nC || mC(CC, zC), nC
         }));
-        const Dk = dk(ik);
-        if (Dk !== this.shownFireFrame) {
-          this.shownFireFrame = Dk;
-          for (const ek of this.smokes) null !== ek.fire && Vk(kk, ek.fire, Dk)
+        const QC = eC(ZC);
+        if (QC !== this.shownFireFrame) {
+          this.shownFireFrame = QC;
+          for (const zC of this.smokes) null !== zC.fire && hC(CC, zC.fire, QC)
         }
-        if (!kk.particlesEnabled()) {
-          for (const kk of this.smokes) kk.pending.fill(0);
+        if (!CC.particlesEnabled()) {
+          for (const CC of this.smokes) CC.pending.fill(0);
           return
         }
-        const fk = Math.min(ek, 250) / 1e3;
-        for (const Sk of this.smokes) {
-          const [ek, Dk, bk] = Sk.pos;
-          if (0 !== kk.getBlockId(ek, Dk + 1, bk)) {
-            Sk.pending.fill(0);
+        const wC = Math.min(zC, 250) / 1e3;
+        for (const bC of this.smokes) {
+          const [zC, QC, nC] = bC.pos;
+          if (0 !== CC.getBlockId(zC, QC + 1, nC)) {
+            bC.pending.fill(0);
             continue
           }
-          const rk = (Sk.endMs - ik) / 6e3,
-            Pk = this.centre;
-          Pk[0] = ek + .5, Pk[1] = Dk + 1.275, Pk[2] = bk + .5, uk.forEach(((ek, ik) => {
-            Sk.pending[ik] += ek.perSecond * rk * fk;
-            const Dk = Math.floor(Sk.pending[ik]);
-            Dk > 0 && this.emit(kk, ik, Pk, Dk) && (Sk.pending[ik] -= Dk)
+          const fC = (bC.endMs - ZC) / 6e3,
+            oC = this.centre;
+          oC[0] = zC + .5, oC[1] = QC + 1.275, oC[2] = nC + .5, YC.forEach(((zC, ZC) => {
+            bC.pending[ZC] += zC.perSecond * fC * wC;
+            const QC = Math.floor(bC.pending[ZC]);
+            QC > 0 && this.emit(CC, ZC, oC, QC) && (bC.pending[ZC] -= QC)
           }))
         }
       }
-      dispose(kk) {
-        for (const ik of this.smokes) Ik(kk, ik);
+      dispose(CC) {
+        for (const ZC of this.smokes) mC(CC, ZC);
         this.smokes = [];
-        for (const ik of null !== (ek = this.puffers) && void 0 !== ek ? ek : []) {
-          var ek;
-          ik.dispose()
+        for (const ZC of null !== (zC = this.puffers) && void 0 !== zC ? zC : []) {
+          var zC;
+          ZC.dispose()
         }
         this.puffers = null
       }
-      emit(kk, ek, ik, Dk) {
-        return this.puffers ??= uk.map((kk => {
+      emit(CC, zC, ZC, QC) {
+        return this.puffers ??= YC.map((CC => {
           let {
-            style: ek,
-            perSecond: ik
-          } = kk;
-          const Dk = (ek.count / .3 + ik) * ek.life[1];
-          return new Lk.e(ek, Math.ceil(4 * Dk), Fk)
-        })), this.puffers[ek].emit(kk, ik, this.renderFrame, Dk)
+            style: zC,
+            perSecond: ZC
+          } = CC;
+          const QC = (zC.count / .3 + ZC) * zC.life[1];
+          return new xC.g(zC, Math.ceil(4 * QC), KC)
+        })), this.puffers[zC].emit(CC, ZC, this.renderFrame, QC)
       }
     }
 
-    function Ik(kk, ek) {
-      null !== ek.fire && (kk.disposeGameMesh(ek.fire), ek.fire = null)
+    function mC(CC, zC) {
+      null !== zC.fire && (CC.disposeGameMesh(zC.fire), zC.fire = null)
     }
 
-    function zk() {
-      let kk;
-      const ek = new qk;
+    function HC() {
+      let CC;
+      const zC = new dC;
       return {
-        onCreate(ek) {
-          kk = ek
+        onCreate(zC) {
+          CC = zC
         },
-        onReceivedMessageFromServer(ik, Dk) {
-          ik === bk.E && ek.start(kk, Dk)
+        onReceivedMessageFromServer(ZC, QC) {
+          ZC === nC.F && zC.start(CC, QC)
         },
-        onAfterRender(ik) {
-          ek.onAfterRender(kk, ik)
+        onAfterRender(ZC) {
+          zC.onAfterRender(CC, ZC)
         },
         onClose() {
-          ek.dispose(kk)
+          zC.dispose(CC)
         }
       }
     }
 
-    function Qk(kk, ek, ik, Dk) {
+    function EC(CC, zC, ZC, QC) {
       return {
-        dialogue: Yk(Dk.localPlayerId),
-        fishing: lk(Dk.localPlayerId),
-        furnaceSmoke: zk(),
-        ironChest: fk()
+        dialogue: AC(QC.localPlayerId),
+        fishing: PC(QC.localPlayerId),
+        furnaceSmoke: HC(),
+        ironChest: wC()
       }
     }
 
-    function vk(kk, ek) {
-      for (const fk of [kk, ...null !== ek && void 0 !== ek ? ek : []]) try {
-        var ik;
-        null === fk || void 0 === fk || null === (ik = fk.onClose) || void 0 === ik || ik.call(fk)
-      } catch (Dk) {
-        console.error("Error in client onClose callback", Dk)
+    function lC(CC, zC) {
+      for (const wC of [CC, ...null !== zC && void 0 !== zC ? zC : []]) try {
+        var ZC;
+        null === wC || void 0 === wC || null === (ZC = wC.onClose) || void 0 === ZC || ZC.call(wC)
+      } catch (QC) {
+        console.error("Error in client onClose callback", QC)
       }
     }
   },
-  38725: (kk, ek, ik) => {
-    ik.d(ek, {
-      d: () => Dk,
-      e: () => Sk
+  38979: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC,
+      g: () => bC
     });
-    const Dk = 1 / .6,
-      fk = {
+    const QC = 1 / .6,
+      wC = {
         kind: "smokePuff"
       };
-    class Sk {
-      constructor(kk, ek, ik) {
-        this.style = kk, this.vK = ek, this.half = ik, this.particles = null, this.lastFrame = -1
+    class bC {
+      constructor(CC, zC, ZC) {
+        this.style = CC, this.HW = zC, this.half = ZC, this.particles = null, this.lastFrame = -1
       }
-      emit(kk, ek, ik) {
-        let Sk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return ik !== this.lastFrame && (this.lastFrame = ik, this.particles || (this.particles = kk.createParticles(function(kk, ek) {
+      emit(CC, zC, ZC) {
+        let bC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return ZC !== this.lastFrame && (this.lastFrame = ZC, this.particles || (this.particles = CC.createParticles(function(CC, zC) {
           const [
-            [ik, Sk, bk],
-            [rk, Pk, mk]
-          ] = kk.colours;
+            [ZC, bC, nC],
+            [fC, oC, qC]
+          ] = CC.colours;
           return {
-            texture: kk.soft ? fk : "square_particle",
-            vK: ek,
-            minLifeTime: kk.life[0] / Dk,
-            maxLifeTime: kk.life[1] / Dk,
-            minEmitPower: kk.power[0] * Dk,
-            maxEmitPower: kk.power[1] * Dk,
-            minSize: kk.size[0],
-            maxSize: kk.size[1],
+            texture: CC.soft ? wC : "square_particle",
+            HW: zC,
+            minLifeTime: CC.life[0] / QC,
+            maxLifeTime: CC.life[1] / QC,
+            minEmitPower: CC.power[0] * QC,
+            maxEmitPower: CC.power[1] * QC,
+            minSize: CC.size[0],
+            maxSize: CC.size[1],
             emitRate: 0,
-            gravity: [0, kk.lift * Dk * Dk, 0],
-            dir1: [-kk.spread, 1, -kk.spread],
-            dir2: [kk.spread, 1, kk.spread],
+            gravity: [0, CC.lift * QC * QC, 0],
+            dir1: [-CC.spread, 1, -CC.spread],
+            dir2: [CC.spread, 1, CC.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [ik, Sk, bk, kk.alpha],
-              maxColor: [rk, Pk, mk, kk.alpha]
+              minColor: [ZC, bC, nC, CC.alpha],
+              maxColor: [fC, oC, qC, CC.alpha]
             }, {
               timeFraction: 1,
-              minColor: [ik, Sk, bk, 0],
-              maxColor: [rk, Pk, mk, 0]
+              minColor: [ZC, bC, nC, 0],
+              maxColor: [fC, oC, qC, 0]
             }],
-            blendMode: kk.blendMode
+            blendMode: CC.blendMode
           }
-        }(this.style, this.vK), {
-          pos: ek,
+        }(this.style, this.HW), {
+          pos: zC,
           half: this.half
-        })), this.particles.moveTo(ek, this.half), this.particles.emit(Sk), !0)
+        })), this.particles.moveTo(zC, this.half), this.particles.emit(bC), !0)
       }
       dispose() {
-        var kk;
-        null === (kk = this.particles) || void 0 === kk || kk.stop(), this.particles = null
+        var CC;
+        null === (CC = this.particles) || void 0 === CC || CC.stop(), this.particles = null
       }
     }
   },
-  4786: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => fk,
-      d: () => Dk,
-      g: () => Sk,
-      i: () => Pk,
-      m: () => bk
+  4783: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => wC,
+      f: () => QC,
+      i: () => bC,
+      m: () => oC,
+      q: () => nC
     });
-    const Dk = ["sine", "triangle", "square", "sawtooth"],
-      fk = 55,
-      Sk = {
+    const QC = ["sine", "triangle", "square", "sawtooth"],
+      wC = 55,
+      bC = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function bk(kk) {
-      return "string" !== typeof kk ? kk : Object.hasOwn(Sk, kk) ? Sk[kk] : null
+    function nC(CC) {
+      return "string" !== typeof CC ? CC : Object.hasOwn(bC, CC) ? bC[CC] : null
     }
 
-    function rk(kk, ek, ik) {
-      return Math.min(ik, Math.max(ek, kk))
+    function fC(CC, zC, ZC) {
+      return Math.min(ZC, Math.max(zC, CC))
     }
 
-    function Pk(kk) {
-      const ek = rk(kk.durationMs, 10, 500),
-        ik = rk(kk.attackMs, 0, ek),
+    function oC(CC) {
+      const zC = fC(CC.durationMs, 10, 500),
+        ZC = fC(CC.attackMs, 0, zC),
         {
-          intonation: fk
-        } = kk;
+          intonation: wC
+        } = CC;
       return {
-        waveform: Dk.includes(kk.waveform) ? kk.waveform : "sine",
-        pitchHz: rk(kk.pitchHz, 20, 4e3),
-        glideSemitones: rk(kk.glideSemitones, -24, 24),
-        durationMs: ek,
-        attackMs: ik,
-        releaseMs: rk(kk.releaseMs, 0, ek - ik),
-        lowpassHz: null === kk.lowpassHz ? null : rk(kk.lowpassHz, 20, 2e4),
-        volume: rk(kk.volume, 0, 2),
+        waveform: QC.includes(CC.waveform) ? CC.waveform : "sine",
+        pitchHz: fC(CC.pitchHz, 20, 4e3),
+        glideSemitones: fC(CC.glideSemitones, -24, 24),
+        durationMs: zC,
+        attackMs: ZC,
+        releaseMs: fC(CC.releaseMs, 0, zC - ZC),
+        lowpassHz: null === CC.lowpassHz ? null : fC(CC.lowpassHz, 20, 2e4),
+        volume: fC(CC.volume, 0, 2),
         intonation: {
-          variationSemitones: rk(fk.variationSemitones, 0, 6),
-          declineSemitones: rk(fk.declineSemitones, 0, 12),
-          questionRiseSemitones: rk(fk.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: rk(fk.exclaimLiftSemitones, 0, 12)
+          variationSemitones: fC(wC.variationSemitones, 0, 6),
+          declineSemitones: fC(wC.declineSemitones, 0, 12),
+          questionRiseSemitones: fC(wC.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: fC(wC.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: rk(kk.syllableMs, 25, 200)
+        syllableMs: fC(CC.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

@@ -1,41 +1,945 @@
 export const id = 210;
 export const ids = [210];
 export const modules = {
-  41098: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      default: () => Sk
-    });
-    var Dk = ik(35819),
-      fk = ik.n(Dk);
+  40652: (CC, zC, ZC) => {
+    function QC(CC, zC, ZC) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(CC, zC).getContext("2d", ZC);
+      const QC = document.createElement("canvas");
+      return QC.width = CC, QC.height = zC, QC.getContext("2d", ZC)
+    }
 
-    function Sk() {
-      return fk()('(()=>{var kk={23:(kk,ek,ik)=>{kk.exports=ik.p+"static/media/bloxd_wasm_bg.48b33a82574c7dba5df8.wasm"},31:(kk,ek,ik)=>{kk.exports=ik.p+"static/media/bloxd_wasm_textures_bg.f53ae115f07fdd6feab3.wasm"},14:(kk,ek,ik)=>{kk.exports=ik.p+"static/media/zstdDecodeWorker.0b715bf19f9efcd69ef8.js"}},ek={};function ik(Dk){var fk=ek[Dk];if(void 0!==fk)return fk.exports;var Sk=ek[Dk]={exports:{}};return kk[Dk](Sk,Sk.exports,ik),Sk.exports}ik.d=(kk,ek)=>{for(var Dk in ek)ik.o(ek,Dk)&&!ik.o(kk,Dk)&&Object.defineProperty(kk,Dk,{enumerable:!0,get:ek[Dk]})},ik.o=(kk,ek)=>Object.prototype.hasOwnProperty.call(kk,ek),ik.r=kk=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(kk,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(kk,"__esModule",{value:!0})},ik.U=function(kk){var ek=new URL(kk,"x:/"),ik={};for(var Dk in ek)ik[Dk]=ek[Dk];for(var Dk in ik.href=kk,ik.pathname=kk.replace(/[?#].*/,""),ik.origin=ik.protocol="",ik.toString=ik.toJSON=()=>kk,ik)Object.defineProperty(this,Dk,{enumerable:!0,configurable:!0,value:ik[Dk]})},ik.U.prototype=URL.prototype,ik.p="/";var Dk={};ik.r(Dk),ik.d(Dk,{bK:()=>Sk,EnvelopeKind:()=>bk,rK:()=>rk,PhysicsEngine:()=>Pk,PK:()=>mk,mK:()=>Mk,MK:()=>Kk,KK:()=>xk,xK:()=>nk,nK:()=>Uk,UK:()=>Hk,HK:()=>wk,wK:()=>lk,lK:()=>pk,default:()=>de,initSync:()=>se,pK:()=>yk,yK:()=>Yk,YK:()=>Lk,LK:()=>Ck,CK:()=>Ak,AK:()=>jk,jK:()=>sk,sK:()=>dk,dK:()=>Vk,VK:()=>Fk,FK:()=>uk,uK:()=>qk,qK:()=>Ik,IK:()=>zk,zK:()=>Qk});var fk={};ik.r(fk),ik.d(fk,{BloxdWasmFetchError:()=>Ze,BloxdWasmHttpError:()=>Oe,BloxdWasmIntegrityError:()=>Re,BloxdWasmTimeoutError:()=>Ge,MAX_RETRY_AFTER_MS:()=>ii,PROMISE_HOOK_CODES:()=>ce,RETRY_DELAYS_MS:()=>ei,STALL_TIMEOUT_MS:()=>ki,WASM_HOOKS_ENFORCED:()=>rS,WasmBufferView:()=>Eb,bloxdTextureWasmUrl:()=>Ib,bloxdWasmCore:()=>sb,compileBloxdTextureWasm:()=>Qb,compileBloxdWasmAhead:()=>yb,compileBloxdWasmBrowser:()=>Ab,describeBloxdWasmFailure:()=>SD,fetchBytes:()=>Fi,getBloxdWasm:()=>bD,getBloxdWasmBuild:()=>rD,getBloxdWasmFailureReason:()=>fD,getBloxdWasmFailureStage:()=>eD,getBloxdWasmFailureStatus:()=>DD,getBloxdWasmLoadCompile:()=>Lb,getBloxdWasmMemory:()=>KD,getBloxdWasmModule:()=>PD,getBloxdWasmStatus:()=>kD,getBloxdWasmTamper:()=>IS,getLastBloxdWasmPanic:()=>mD,initBloxdWasmBrowser:()=>db,initBloxdWasmFromModule:()=>Vb,isBloxdWasmDownloadFailureRetryable:()=>nD,isBloxdWasmLoadUnstreamed:()=>ji,isBloxdWasmReady:()=>Ji,isEnforceableWasmReport:()=>wS,isPromiseHookReport:()=>nS,isPunishedWasmReport:()=>lS,isRendererWasmReport:()=>DS,isRetryableDownloadFailure:()=>Ne,isWeightedWasmReport:()=>MS,loadBloxdWasmBrowser:()=>pb,markBloxdWasmFailed:()=>xD,noteBloxdRenderDebugHook:()=>gf,onBloxdWasmFailed:()=>pD,onBloxdWasmMemoryGrown:()=>yD,takeBloxdWasmRefusedAllocation:()=>MD,textureLoadFailure:()=>qb,unprintedWasmReport:()=>KS,wasmMemoryControl:()=>ub,wasmView:()=>vb,watchBloxdRenderer:()=>iS});class Sk{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,Ek.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Ce.AfaT(kk,0)}QK(){const kk=Ce.iXV6(this.__wbg_ptr);if(kk[2])throw He(kk[1]);return kk[0]>>>0}vK(){return Ce.tNHU(this.__wbg_ptr)>>>0}constructor(){const kk=Ce.VyPS();return this.__wbg_ptr=kk,Ek.register(this,this.__wbg_ptr,this),this}EK(){return Ce.MWXS(this.__wbg_ptr)>>>0}hK(kk){const ek=Ce.zPQe(this.__wbg_ptr,kk);if(ek[2])throw He(ek[1]);return ek[0]>>>0}aK(kk){const ek=Ce.Jn8C(this.__wbg_ptr,kk);if(ek[2])throw He(ek[1]);return ek[0]>>>0}}Symbol.dispose&&(Sk.prototype[Symbol.dispose]=Sk.prototype.free);const bk=Object.freeze({Js:0,0:"Js",Error:1,1:"Error",LeaveRoom:2,2:"LeaveRoom",RoomState:3,3:"RoomState",RoomStatePatch:4,4:"RoomStatePatch",RoomDataNone:5,5:"RoomDataNone",RoomDataBin:6,6:"RoomDataBin",RoomDataBytes:7,7:"RoomDataBytes",Ignored:8,8:"Ignored",StringType:16,16:"StringType"});class rk{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,hk.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Ce.tumD(kk,0)}XK(kk,ek){const ik=Ce.ds8B(this.__wbg_ptr,kk,ek);if(ik[2])throw He(ik[1]);return ik[0]>>>0}BK(kk){const ek=Ce.mtr2(this.__wbg_ptr,kk);if(ek[2])throw He(ek[1]);return ek[0]>>>0}cK(){Ce.rzPW(this.__wbg_ptr)}static TK(){return Ce.TKRp()>>>0}oK(){return Ce.JVZ6(this.__wbg_ptr)>>>0}ZK(){const kk=Ce.LPjm(this.__wbg_ptr);return 0===kk[0]?void 0:kk[1]}gK(){return Ce.Q5fH(this.__wbg_ptr)>>>0}GK(){return Ce.D0eo(this.__wbg_ptr)>>>0}static tK(){return Ce.siKk()>>>0}constructor(){const kk=Ce.tSHD();return this.__wbg_ptr=kk,hk.register(this,this.__wbg_ptr,this),this}NK(){return Ce.XlHm(this.__wbg_ptr)>>>0}RK(){return Ce.SgbT(this.__wbg_ptr)>>>0}JK(){return Ce.e2XZ(this.__wbg_ptr)>>>0}WK(kk){return Ce.wYYa(this.__wbg_ptr,kk)>>>0}reserve(kk,ek){const ik=Ce.RMAs(this.__wbg_ptr,kk,ek);if(ik[1])throw He(ik[0])}Dx(kk,ek){const ik=Ke(kk,Ce.VZBX),Dk=Ae;Ce.GTub(this.__wbg_ptr,ik,Dk,ek)}text(){let kk,ek;try{const ik=Ce.aX7z(this.__wbg_ptr);return kk=ik[0],ek=ik[1],ke(ik[0],ik[1])}finally{Ce.YmUR(kk,ek,1)}}}Symbol.dispose&&(rk.prototype[Symbol.dispose]=rk.prototype.free);class Pk{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,ak.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Ce.JrZq(kk,0)}bx(kk,ek){Zk(ek,Sk);const ik=Ce.aReC(this.__wbg_ptr,kk,ek.__wbg_ptr);if(ik[2])throw He(ik[1]);return ik[0]>>>0}mx(){const kk=Ce.rlhL(this.__wbg_ptr);if(kk[1])throw He(kk[0])}Hx(kk,ek,ik,Dk,fk,Sk,bk,rk,Pk,Mk,Kk){Zk(kk,mk);const xk=Ce.XVa3(this.__wbg_ptr,kk.__wbg_ptr,ek,ik,Dk,fk,Sk,bk,rk,Pk,Mk,Kk);if(xk[2])throw He(xk[1]);return xk[0]}wx(){const kk=Ce.jL9v(this.__wbg_ptr);var ek=Ok(kk[0],kk[1]).slice();return Ce.YmUR(kk[0],8*kk[1],8),ek}lx(){return Ce.CT3j(this.__wbg_ptr)>>>0}yx(){return Ce.twW6(this.__wbg_ptr)>>>0}Yx(){return Ce.U1iq(this.__wbg_ptr)>>>0}constructor(kk,ek,ik,Dk,fk,Sk,bk,rk){const Pk=Ce.NZ5K(kk,ek,ik,Dk,fk,Sk,bk,rk);if(Pk[2])throw He(Pk[1]);return this.__wbg_ptr=Pk[0],ak.register(this,this.__wbg_ptr,this),this}Ax(kk){Zk(kk,Sk);const ek=Ce.Ortg(this.__wbg_ptr,kk.__wbg_ptr);if(ek[2])throw He(ek[1]);return ek[0]>>>0}jx(kk){const ek=Ce.S6zT(this.__wbg_ptr,kk);if(ek[1])throw He(ek[0])}sx(){return Ce.SEny(this.__wbg_ptr)>>>0}resume(kk,ek){Zk(kk,mk),Zk(ek,Sk);const ik=Ce.NpeD(this.__wbg_ptr,kk.__wbg_ptr,ek.__wbg_ptr);if(ik[2])throw He(ik[1]);return ik[0]>>>0}zx(kk){const ek=Ce.FRM4(this.__wbg_ptr,kk);if(ek[1])throw He(ek[0])}Ex(kk,ek){Zk(ek,Sk);const ik=Ce.Xu8s(this.__wbg_ptr,kk,ek.__wbg_ptr);if(ik[1])throw He(ik[0])}tx(kk){const ek=ne(kk,Ce.VZBX),ik=Ae,Dk=Ce.MCF8(this.__wbg_ptr,ek,ik);if(Dk[1])throw He(Dk[0])}Kx(kk,ek,ik,Dk,fk,Sk){const bk=Ce.vsN4(this.__wbg_ptr,kk,ek,ik,Dk,fk,Sk);if(bk[1])throw He(bk[0])}nx(kk,ek,ik,Dk){const fk=Ke(kk,Ce.VZBX),Sk=Ae,bk=ne(ek,Ce.VZBX),rk=Ae,Pk=ne(ik,Ce.VZBX),mk=Ae,Mk=ne(Dk,Ce.VZBX),Kk=Ae,xk=Ce.lVIT(this.__wbg_ptr,fk,Sk,bk,rk,Pk,mk,Mk,Kk);if(xk[1])throw He(xk[0])}Bx(kk,ek){Zk(ek,Sk);const ik=Ce.MzR8(this.__wbg_ptr,kk,ek.__wbg_ptr);if(ik[1])throw He(ik[0])}Cx(kk,ek,ik){const Dk=Ce.z2x0(this.__wbg_ptr,kk,ek,ik);if(Dk[1])throw He(Dk[0])}Zx(kk,ek,ik,Dk,fk,Sk,bk,rk,Pk,Mk){Zk(kk,mk);return Ce.FVxW(this.__wbg_ptr,kk.__wbg_ptr,ek,ik,Dk,fk,Sk,bk,rk,Pk,Mk)}}Symbol.dispose&&(Pk.prototype[Symbol.dispose]=Pk.prototype.free);class mk{static __wrap(kk){const ek=Object.create(mk.prototype);return ek.__wbg_ptr=kk,Wk.register(ek,ek.__wbg_ptr,ek),ek}__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,Wk.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Ce.n7gr(kk,0)}Gx(kk){const ek=Ce.g5rb(this.__wbg_ptr,kk);if(ek[2])throw He(ek[1]);return ek[0]>>>0}Nx(kk,ek,ik){return Ce.j0CZ(this.__wbg_ptr,kk,ek,ik)}Rx(kk,ek,ik){return Ce.H45n(this.__wbg_ptr,kk,ek,ik)>>>0}Jx(kk,ek,ik,Dk){return 0!==Ce.D861(this.__wbg_ptr,kk,ek,ik,Dk)}kn(){Ce.N3s1(this.__wbg_ptr)}Dn(kk){const ek=Ce.ebfl(this.__wbg_ptr,kk);if(ek[3])throw He(ek[2]);var ik=Gk(ek[0],ek[1]).slice();return Ce.YmUR(ek[0],1*ek[1],1),ik}evict(kk,ek){return Ce.y2R4(this.__wbg_ptr,kk,ek)>>>0}fn(){Ce.r60o(this.__wbg_ptr)}Sn(kk,ek,ik){Ce.IhPN(this.__wbg_ptr,kk,ek,ik)}bn(kk){const ek=Ce.Tib9(this.__wbg_ptr,kk);if(ek[1])throw He(ek[0])}rn(){return Ce.DfuR(this.__wbg_ptr)>>>0}Pn(){return Ce.mtsM(this.__wbg_ptr)>>>0}mn(kk,ek,ik){Ce.hPhG(this.__wbg_ptr,kk,ek,ik)}Mn(kk,ek,ik){Ce.RKMs(this.__wbg_ptr,kk,ek,ik)}Kn(){return Ce.hRtd(this.__wbg_ptr)>>>0}xn(){return Ce.hcBl(this.__wbg_ptr)>>>0}constructor(){const kk=Ce.RQyd();return this.__wbg_ptr=kk,Wk.register(this,this.__wbg_ptr,this),this}static nn(){const kk=Ce.niVi();return mk.__wrap(kk)}Un(){return Ce.hJtP(this.__wbg_ptr)>>>0}Hn(){return Ce.K5HR(this.__wbg_ptr)>>>0}pn(kk,ek,ik,Dk){const fk=Ce.wVVU(this.__wbg_ptr,kk,ek,ik,Dk);if(fk[1])throw He(fk[0])}yn(){return Ce.Z4sM(this.__wbg_ptr)>>>0}Yn(){return Ce.JuaE(this.__wbg_ptr)>>>0}Ln(kk,ek,ik,Dk){Ce.TZTT(this.__wbg_ptr,kk,ek,ik,Dk)}Cn(kk){Ce.S0Ad(this.__wbg_ptr,kk)}sn(kk,ek,ik,Dk,fk){const Sk=xe(ek,Ce.VZBX),bk=Ae,rk=Ke(ik,Ce.VZBX),Pk=Ae,mk=ne(Dk,Ce.VZBX),Mk=Ae,Kk=Ce.LtqR(this.__wbg_ptr,kk,Sk,bk,rk,Pk,mk,Mk,fk);if(Kk[1])throw He(Kk[0])}jn(kk,ek,ik,Dk){const fk=xe(kk,Ce.VZBX),Sk=Ae,bk=Ke(ek,Ce.VZBX),rk=Ae,Pk=ne(ik,Ce.VZBX),mk=Ae,Mk=xe(Dk,Ce.VZBX),Kk=Ae,xk=Ce.OzRj(this.__wbg_ptr,fk,Sk,bk,rk,Pk,mk,Mk,Kk);if(xk[1])throw He(xk[0])}Qn(kk){const ek=xe(kk,Ce.VZBX),ik=Ae,Dk=Ce.dntW(this.__wbg_ptr,ek,ik);if(Dk[1])throw He(Dk[0])}vn(){return Ce.bktd(this.__wbg_ptr)>>>0}En(kk){const ek=Ce.l6LP(this.__wbg_ptr,kk);if(ek[2])throw He(ek[1]);return ek[0]>>>0}steer(){return Ce.eagS(this.__wbg_ptr)>>>0}hn(){const kk=Ce.rKNN(this.__wbg_ptr);var ek=Ok(kk[0],kk[1]).slice();return Ce.YmUR(kk[0],8*kk[1],8),ek}Wn(){return Ce.AVCL(this.__wbg_ptr)>>>0}Fx(){const kk=Ce.wg9N(this.__wbg_ptr);var ek,ik,Dk=(ek=kk[0],ik=kk[1],ek>>>=0,(null!==Jk&&0!==Jk.byteLength||(Jk=new Int32Array(Ce.memory.buffer)),Jk).subarray(ek/4,ek/4+ik)).slice();return Ce.YmUR(kk[0],4*kk[1],4),Dk}}Symbol.dispose&&(mk.prototype[Symbol.dispose]=mk.prototype.free);class Mk{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,tk.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Ce.ew3r(kk,0)}tn(kk){const ek=Ke(kk,Ce.VZBX),ik=Ae,Dk=Ce.jeGR(this.__wbg_ptr,ek,ik);if(Dk[1])throw He(Dk[0])}Xn(){return Ce.FxGP(this.__wbg_ptr)>>>0}Bn(){return Ce.jC7d(this.__wbg_ptr)>>>0}constructor(){const kk=Ce.rFZj();return this.__wbg_ptr=kk,tk.register(this,this.__wbg_ptr,this),this}run(kk,ek){Zk(kk,mk);const ik=Ce.bXMR(this.__wbg_ptr,kk.__wbg_ptr,ek);if(ik[2])throw He(ik[1]);return ik[0]>>>0}cn(kk){const ek=Ke(kk,Ce.VZBX),ik=Ae;Ce.LlcN(this.__wbg_ptr,ek,ik)}Tn(kk){const ek=Ke(kk,Ce.VZBX),ik=Ae;Ce.yPs7(this.__wbg_ptr,ek,ik)}}Symbol.dispose&&(Mk.prototype[Symbol.dispose]=Mk.prototype.free);class Kk{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,Xk.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Ce.DUce(kk,0)}gn(kk,ek){const ik=xe(kk,Ce.VZBX),Dk=Ae;return Ce.c5sK(this.__wbg_ptr,ik,Dk,ek)>>>0}Gn(kk,ek,ik){Zk(kk,mk);const Dk=xe(ik,Ce.VZBX),fk=Ae,Sk=Ce.XsVM(this.__wbg_ptr,kk.__wbg_ptr,ek,Dk,fk);if(Sk[2])throw He(Sk[1]);return Sk[0]>>>0}Zn(kk){return Ce.PI0I(this.__wbg_ptr,kk)>>>0}constructor(){const kk=Ce.O8PJ();return this.__wbg_ptr=kk,Xk.register(this,this.__wbg_ptr,this),this}scan(kk,ek){Zk(kk,mk);const ik=Ce.NgEc(this.__wbg_ptr,kk.__wbg_ptr,ek);if(ik[2])throw He(ik[1]);return ik[0]>>>0}Jn(kk){const ek=xe(kk,Ce.VZBX),ik=Ae;Ce.dRIB(this.__wbg_ptr,ek,ik)}Rn(){return Ce.b9fV(this.__wbg_ptr)>>>0}Nn(){return Ce.vTzy(this.__wbg_ptr)>>>0}}Symbol.dispose&&(Kk.prototype[Symbol.dispose]=Kk.prototype.free);class xk{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,Bk.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Ce.Grnd(kk,0)}eU(kk){const ek=Ce.ToZL(this.__wbg_ptr,kk);if(ek[2])throw He(ek[1]);return ek[0]>>>0}compute(kk,ek,ik,Dk){var fk=me(Dk)?0:Ue(Dk,Ce.VZBX,Ce.GGs5),Sk=Ae;const bk=Ce.zqMq(this.__wbg_ptr,kk,me(ek)?Number.MAX_SAFE_INTEGER:ek|0,ik,fk,Sk);if(bk[2])throw He(bk[1]);return bk[0]>>>0}DU(kk){const ek=Ue(kk,Ce.VZBX,Ce.GGs5),ik=Ae;Ce.C86o(this.__wbg_ptr,ek,ik)}SU(){return Ce.a9wf(this.__wbg_ptr)}bU(kk){return Ce.Urs3(this.__wbg_ptr,kk)>>>0}rU(){return Ce.kP6K(this.__wbg_ptr)>>>0}PU(){return Ce.gCZb(this.__wbg_ptr)>>>0}mU(kk,ek){const ik=Ce.KPgQ(this.__wbg_ptr,kk,ek);if(ik[1])throw He(ik[0])}MU(){return Ce.OZfT(this.__wbg_ptr)>>>0}KU(){return Ce.OXer(this.__wbg_ptr)>>>0}xU(){return Ce.kIdy(this.__wbg_ptr)>>>0}iU(kk,ek,ik){const Dk=Ke(kk,Ce.VZBX),fk=Ae,Sk=Ke(ek,Ce.VZBX),bk=Ae,rk=Ce.s0SS(this.__wbg_ptr,Dk,fk,Sk,bk,ik);if(rk[1])throw He(rk[0])}UU(){return Ce.byg9(this.__wbg_ptr)>>>0}mesh(kk,ek,ik,Dk,fk){const Sk=Ce.XS0Z(this.__wbg_ptr,kk,ek,ik,Dk,fk);if(Sk[2])throw He(Sk[1]);return Sk[0]>>>0}constructor(kk,ek,ik,Dk,fk,Sk,bk,rk,Pk,mk,Mk,Kk,xk,nk,Uk,Hk,wk,lk,pk,yk){const Yk=Me(kk,Ce.VZBX),Lk=Ae,Ck=ne(ek,Ce.VZBX),Ak=Ae,jk=Ke(ik,Ce.VZBX),sk=Ae,dk=xe(Dk,Ce.VZBX),Vk=Ae,Fk=xe(fk,Ce.VZBX),uk=Ae,qk=Ke(Sk,Ce.VZBX),Ik=Ae,zk=Ke(bk,Ce.VZBX),Qk=Ae,vk=ne(rk,Ce.VZBX),Ek=Ae,hk=ne(Pk,Ce.VZBX),ak=Ae,Wk=xe(mk,Ce.VZBX),tk=Ae;var Xk=me(Mk)?0:Me(Mk,Ce.VZBX),ck=Ae;const Tk=Ke(Kk,Ce.VZBX),Zk=Ae,Ok=xe(xk,Ce.VZBX),gk=Ae;var Gk=me(nk)?0:xe(nk,Ce.VZBX),Nk=Ae;const Rk=ne(Uk,Ce.VZBX),Jk=Ae,ke=Ce.IyyQ(Yk,Lk,Ck,Ak,jk,sk,dk,Vk,Fk,uk,qk,Ik,zk,Qk,vk,Ek,hk,ak,Wk,tk,Xk,ck,Tk,Zk,Ok,gk,Gk,Nk,Rk,Jk,Hk,wk,lk,pk,yk);if(ke[2])throw He(ke[1]);return this.__wbg_ptr=ke[0],Bk.register(this,this.__wbg_ptr,this),this}nU(kk,ek){const ik=Ke(kk,Ce.VZBX),Dk=Ae,fk=Ce.gbFv(this.__wbg_ptr,ik,Dk,ek);if(fk[3])throw He(fk[2]);var Sk=Gk(fk[0],fk[1]).slice();return Ce.YmUR(fk[0],1*fk[1],1),Sk}HU(kk){Ce.qbgP(this.__wbg_ptr,me(kk)?16777215:kk)}wU(kk){return Ce.q7GY(this.__wbg_ptr,kk)>>>0}pU(){return Ce.Cymp(this.__wbg_ptr)>>>0}lU(){const kk=Ce.GLvy(this.__wbg_ptr);if(kk[2])throw He(kk[1]);return 0!==kk[0]}yU(){return Ce.OwqV(this.__wbg_ptr)>>>0}YU(){return Ce.rYTU(this.__wbg_ptr)>>>0}}Symbol.dispose&&(xk.prototype[Symbol.dispose]=xk.prototype.free);class nk{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,ck.unregister(this),kk}free(){const kk=this.__destroy_into_raw();Ce.VQNk(kk,0)}compute(kk,ek,ik,Dk){var fk=me(Dk)?0:Ue(Dk,Ce.VZBX,Ce.GGs5),Sk=Ae;const bk=Ce.GXVm(this.__wbg_ptr,kk,me(ek)?Number.MAX_SAFE_INTEGER:ek|0,ik,fk,Sk);if(bk[2])throw He(bk[1]);return bk[0]>>>0}DU(kk){const ek=Ue(kk,Ce.VZBX,Ce.GGs5),ik=Ae;Ce.A2tv(this.__wbg_ptr,ek,ik)}KU(){return Ce.BoMw(this.__wbg_ptr)>>>0}xU(){return Ce.laj4(this.__wbg_ptr)>>>0}LU(kk){const ek=Ce.n5Ez(this.__wbg_ptr,kk);if(ek[2])throw He(ek[1]);return ek[0]>>>0}constructor(kk,ek,ik,Dk,fk,Sk){const bk=Me(kk,Ce.VZBX),rk=Ae,Pk=ne(ek,Ce.VZBX),mk=Ae,Mk=Ke(ik,Ce.VZBX),Kk=Ae,xk=xe(Dk,Ce.VZBX),nk=Ae,Uk=Ce.x2OI(bk,rk,Pk,mk,Mk,Kk,xk,nk,fk,Sk);if(Uk[2])throw He(Uk[1]);return this.__wbg_ptr=Uk[0],ck.register(this,this.__wbg_ptr,this),this}pU(){return Ce.vp1W(this.__wbg_ptr)>>>0}lU(){const kk=Ce.aTxj(this.__wbg_ptr);if(kk[2])throw He(kk[1]);return 0!==kk[0]}yU(){return Ce.uB5f(this.__wbg_ptr)>>>0}}function Uk(){const kk=Ce.FKJS();var ek=gk(kk[0],kk[1]).slice();return Ce.YmUR(kk[0],4*kk[1],4),ek}function Hk(kk,ek){let ik,Dk;try{const fk=Me(kk,Ce.VZBX),Sk=Ae,bk=Ue(ek,Ce.VZBX,Ce.GGs5),rk=Ae,Pk=Ce.jeIJ(fk,Sk,bk,rk);return ik=Pk[0],Dk=Pk[1],ke(Pk[0],Pk[1])}finally{Ce.YmUR(ik,Dk,1)}}function wk(){const kk=Ce.LM59();var ek=gk(kk[0],kk[1]).slice();return Ce.YmUR(kk[0],4*kk[1],4),ek}function lk(kk){return 0!==Ce.GvQl(kk)}function pk(kk,ek){const ik=Ue(kk,Ce.VZBX,Ce.GGs5),Dk=Ae,fk=Ce.XYsO(ik,Dk,ek);if(fk[1])throw He(fk[0])}function yk(){Ce.JCge()}function Yk(){return Ce.pK1w()>>>0}function Lk(kk){return 0!==Ce.byuw(kk)}function Ck(kk){return 0!==Ce.TYtG(kk)}function Ak(kk){Ce.yqNK(kk)}function jk(){return Ce.Zvst()>>>0}function sk(){return Ce.yS1r()>>>0}function dk(){return 0!==Ce.AK9i()}function Vk(){const kk=Ce.McrE();var ek=gk(kk[0],kk[1]).slice();return Ce.YmUR(kk[0],4*kk[1],4),ek}function Fk(){const kk=Ce.GC1R();var ek=gk(kk[0],kk[1]).slice();return Ce.YmUR(kk[0],4*kk[1],4),ek}function uk(){const kk=Ce.T7V6();var ek=gk(kk[0],kk[1]).slice();return Ce.YmUR(kk[0],4*kk[1],4),ek}function qk(){return Ce.jVji()>>>0}function Ik(){Ce.BF8F()}function zk(){let kk,ek;try{const ik=Ce.d9tS();return kk=ik[0],ek=ik[1],ke(ik[0],ik[1])}finally{Ce.YmUR(kk,ek,1)}}function Qk(kk){Ce.OGuX(Tk(kk))}function vk(){return{__proto__:null,wBUE:{__proto__:null,lQ7u:function(kk,ek){return Tk(Error(ke(kk,ek)))},QyEz:function(kk,ek){throw new Error(ke(kk,ek))},rwQM:function(kk){be(kk).call()},HiLW:function(kk,ek){console.error(ke(kk,ek))},zgE6:function(){return performance.now()},eRmQ:function(kk){He(kk)}}}}Symbol.dispose&&(nk.prototype[Symbol.dispose]=nk.prototype.free);const Ek="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Ce.AfaT(kk,1))),hk="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Ce.tumD(kk,1))),ak="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Ce.JrZq(kk,1))),Wk="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Ce.n7gr(kk,1))),tk="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Ce.ew3r(kk,1))),Xk="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Ce.DUce(kk,1))),Bk="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Ce.Grnd(kk,1))),ck="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>Ce.VQNk(kk,1)));function Tk(kk){Pe===re.length&&re.push(re.length+1);const ek=Pe;return Pe=re[ek],re[ek]=kk,ek}function Zk(kk,ek){if(!(kk instanceof ek))throw new Error(`expected instance of ${ek.name}`)}function Ok(kk,ek){return kk>>>=0,Rk().subarray(kk/8,kk/8+ek)}function gk(kk,ek){return kk>>>=0,De().subarray(kk/4,kk/4+ek)}function Gk(kk,ek){return kk>>>=0,Se().subarray(kk/1,kk/1+ek)}let Nk=null;function Rk(){return null!==Nk&&0!==Nk.byteLength||(Nk=new Float64Array(Ce.memory.buffer)),Nk}let Jk=null;function ke(kk,ek){return function(kk,ek){pe+=ek,pe>=le&&(we=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),we.decode(),pe=ek);return we.decode(Se().subarray(kk,kk+ek))}(kk>>>0,ek)}let ee=null;let ie=null;function De(){return null!==ie&&0!==ie.byteLength||(ie=new Uint32Array(Ce.memory.buffer)),ie}let fe=null;function Se(){return null!==fe&&0!==fe.byteLength||(fe=new Uint8Array(Ce.memory.buffer)),fe}function be(kk){return re[kk]}let re=new Array(1024).fill(void 0);re.push(void 0,null,!0,!1);let Pe=re.length;function me(kk){return void 0===kk||null===kk}function Me(kk,ek){const ik=ek(2*kk.length,2)>>>0;return(null!==ee&&0!==ee.byteLength||(ee=new Uint16Array(Ce.memory.buffer)),ee).set(kk,ik/2),Ae=kk.length,ik}function Ke(kk,ek){const ik=ek(4*kk.length,4)>>>0;return De().set(kk,ik/4),Ae=kk.length,ik}function xe(kk,ek){const ik=ek(1*kk.length,1)>>>0;return Se().set(kk,ik/1),Ae=kk.length,ik}function ne(kk,ek){const ik=ek(8*kk.length,8)>>>0;return Rk().set(kk,ik/8),Ae=kk.length,ik}function Ue(kk,ek,ik){if(void 0===ik){const ik=ye.encode(kk),Dk=ek(ik.length,1)>>>0;return Se().subarray(Dk,Dk+ik.length).set(ik),Ae=ik.length,Dk}let Dk=kk.length,fk=ek(Dk,1)>>>0;const Sk=Se();let bk=0;for(;bk<Dk;bk++){const ek=kk.charCodeAt(bk);if(ek>127)break;Sk[fk+bk]=ek}if(bk!==Dk){0!==bk&&(kk=kk.slice(bk)),fk=ik(fk,Dk,Dk=bk+3*kk.length,1)>>>0;const ek=Se().subarray(fk+bk,fk+Dk);bk+=ye.encodeInto(kk,ek).written,fk=ik(fk,Dk,bk,1)>>>0}return Ae=bk,fk}function He(kk){const ek=be(kk);return function(kk){kk<1028||(re[kk]=Pe,Pe=kk)}(kk),ek}let we=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});we.decode();const le=2146435072;let pe=0;const ye=new TextEncoder;"encodeInto"in ye||(ye.encodeInto=function(kk,ek){const ik=ye.encode(kk);return ek.set(ik),{read:kk.length,written:ik.length}});let Ye,Le,Ce,Ae=0;function je(kk,ek){return Le=kk,Ce=kk.exports,Ye=ek,Nk=null,Jk=null,ee=null,ie=null,fe=null,Ce.Kum7(),Ce}function se(kk){if(void 0!==Ce)return Ce;void 0!==kk&&(Object.getPrototypeOf(kk)===Object.prototype?({module:kk}=kk):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const ek=vk();kk instanceof WebAssembly.Module||(kk=new WebAssembly.Module(kk));return je(new WebAssembly.Instance(kk,ek),kk)}async function de(kk){if(void 0!==Ce)return Ce;void 0!==kk&&(Object.getPrototypeOf(kk)===Object.prototype?({module_or_path:kk}=kk):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const ek=vk();("string"===typeof kk||"function"===typeof Request&&kk instanceof Request||"function"===typeof URL&&kk instanceof URL)&&(kk=fetch(kk));const{instance:ik,module:Dk}=await async function(kk,ek){if("function"===typeof Response&&kk instanceof Response){if(!kk.ok)throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching \'${kk.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(kk,ek)}catch(ik){if(!function(kk){switch(kk){case"basic":case"cors":case"default":return!0}return!1}(kk.type)||"application/wasm"===kk.headers.get("Content-Type"))throw ik;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",ik)}const Dk=await kk.arrayBuffer();return await WebAssembly.instantiate(Dk,ek)}{const ik=await WebAssembly.instantiate(kk,ek);return ik instanceof WebAssembly.Instance?{instance:ik,module:kk}:ik}}(await kk,ek);return je(ik,Dk)}function Ve(kk){return kk instanceof Error?kk.message:String(kk)}const Fe=Reflect.apply,ue=Object.getOwnPropertyDescriptor,qe=Object.getPrototypeOf,Ie=Promise,ze=Object.getPrototypeOf((async()=>{})()).then;function Qe(kk){return new Ie(kk)}function ve(kk,ek,ik){let Dk;try{Fe(ze,kk,[ek,ik]),Dk=!0}catch{Dk=!1}Dk||kk.then(ek,ik)}function Ee(kk){return Qe(((ek,ik)=>{for(let Dk=0;Dk<kk.length;Dk++)ve(kk[Dk],ek,ik)}))}function he(kk){return Qe(((ek,ik)=>{let Dk=kk.length;if(0===Dk)return void ek();const fk=()=>{Dk--,0===Dk&&ek()};for(let Sk=0;Sk<kk.length;Sk++)ve(kk[Sk],fk,ik)}))}function ae(kk,ek){const ik=ue(kk,ek);return ik?.get?Fe(ik.get,kk,[]):ik?.value}const We="undefined"===typeof WebAssembly?void 0:WebAssembly.Module.prototype,te="undefined"===typeof WebAssembly?void 0:WebAssembly.Instance.prototype,Xe=[["to",Object.prototype,"then",!0],["ta",ArrayBuffer.prototype,"then",!0],["tm",We,"then",!0],["ti",te,"then",!0],["pt",Promise.prototype,"then",!1],["pk",Promise.prototype,"constructor",!1],["pg",globalThis,"Promise",!1],["pr",Promise,"race",!1],["pa",Promise,"all",!1]],Be=Xe.map((kk=>{let[,ek,ik,Dk]=kk;if(void 0!==ek)return Dk?qe(ek):ae(ek,ik)})),ce=Xe.map((kk=>{let[ek]=kk;return`wh:${ek}`}));function Te(){for(let kk=0;kk<Xe.length;kk++){const[ek,ik,Dk,fk]=Xe[kk];let Sk;try{Sk=void 0===ik||(fk?void 0===ue(ik,Dk)&&qe(ik)===Be[kk]:ae(ik,Dk)===Be[kk])}catch{Sk=!1}if(!Sk)return`wh:${ek}`}return null}let oe=null;class Ze extends Error{retryable;constructor(kk,ek,ik){super(kk,ik),this.retryable=ek}}class Oe extends Ze{status;retryAfterMs;constructor(kk,ek,ik){super(kk,ek>=500||408===ek||429===ek),this.status=ek,this.retryAfterMs=ik}}function ge(kk,ek,ik){return new Oe(`Fetching ${kk} failed: HTTP ${ek}`,ek,function(kk){if(null===kk)return;const ek=kk.trim();if(/^\\d+$/.test(ek))return 1e3*Number(ek);const ik=Date.parse(ek);return Number.isNaN(ik)?void 0:Math.max(0,ik-Date.now())}(ik))}class Ge extends Ze{}function Ne(kk){return kk instanceof Ze&&kk.retryable}class Re extends Error{}function Je(kk){return kk instanceof Re?"integrity":kk instanceof Ge?"timeout":kk instanceof Ze?"fetch":"compile"}const ki=15e3,ei=[1e3,3e3],ii=1e4,Di=globalThis.crypto?.subtle,fi=Di?.digest,Si=!0===globalThis.isSecureContext,bi=Reflect.apply,ri=Object.defineProperty,Pi="undefined"===typeof Response?void 0:Response.prototype.arrayBuffer,mi=Object.getOwnPropertyDescriptor(ArrayBuffer.prototype,"byteLength").get,Mi="undefined"===typeof Response?void 0:Response.prototype.clone,Ki="undefined"===typeof Response?void 0:Object.getOwnPropertyDescriptor(Response.prototype,"body")?.get,xi="undefined"===typeof Response?void 0:Object.getOwnPropertyDescriptor(Response.prototype,"type")?.get,ni="undefined"===typeof ReadableStream?void 0:ReadableStream.prototype.getReader,Ui="undefined"===typeof ReadableStreamDefaultReader?void 0:ReadableStreamDefaultReader.prototype.read,Hi=Uint8Array.prototype.set,wi=Uint8Array,li="undefined"===typeof fetch?void 0:fetch,yi="undefined"===typeof WebAssembly?void 0:WebAssembly,Yi=yi?.compile,Li=yi?.compileStreaming,Ci=Array.from({length:256},((kk,ek)=>ek.toString(16).padStart(2,"0"))),Ai=new Set;function ji(kk){return Ai.has(kk.href)}async function si(kk,ek,ik){if(oe??=Te(),!Di&&!Si)return;let Dk="";try{const kk=await bi(fi,Di,["SHA-256",ek]),ik=bi(mi,kk,[]),fk=new wi(kk);for(let ek=0;ek<ik;ek++)Dk+=Ci[fk[ek]]}catch{}if(Dk!==ik.sha256)throw Dk&&ik.onMismatch(),new Re(Dk?`${kk} is not the module this build ships`:`${kk} could not be hashed`)}function di(kk,ek){let{hideThen:ik=!1,priority:Dk,Ji:fk,retries:Sk,onDownloaded:bk}=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const rk={useLoadedFetch:!1};return ui((()=>qi(kk.href,((fk,Sk,Pk)=>async function(kk,ek,ik,Dk,fk,Sk,bk,rk){let Pk,mk,Mk,Kk;try{const ik=void 0===rk?{signal:ek}:{signal:ek,priority:rk};Pk=await(Sk.useLoadedFetch&&li?bi(li,globalThis,[kk,ik]):fetch(kk,ik))}catch(Ck){throw Ei(`Fetching ${kk} failed`,Ck,ek)}let xk=null;try{mk=Pk.ok,Mk=Pk.status,Kk=Pk.headers.get("Content-Type"),mk||(xk=Pk.headers.get("Retry-After"))}catch(Ck){throw Sk.useLoadedFetch=!0,Ei(`Reading ${kk}\'s response failed`,Ck,ek)}if(!mk)throw ge(kk,Mk,xk);ik();const nk=vi(Pk),Uk=null!==nk,Hk=Uk&&void 0!==fk&&function(kk){return void 0!==xi&&"default"===bi(xi,kk,[])}(Pk),wk="application/wasm"===Kk?.trim().toLowerCase(),lk=Uk&&!Hk&&wk,pk=lk&&(!bk||function(kk){try{return Vi(kk),!0}catch{return!1}}(Pk)),yk=nk??function(kk){try{const ek=kk.clone();return bi(Ki,ek,[]),ek}catch{return null}}(Pk),Yk=pk&&void 0!==fk?zi(Ii(vi(Pk),!0)):null;yk?function(kk,ek,ik){const Dk=Ki?bi(Ki,kk,[]):kk.body;if(!Dk)return void ik(!0);const fk=ni?bi(ni,Dk,[]):Dk.getReader(),Sk=()=>{ve(Ui?bi(Ui,fk,[]):fk.read(),(kk=>{kk.done?ik(!0):(ek(),Sk())}),(()=>{ik(!1)}))};Sk()}(yk,ik,Dk):Dk(!1);if(!pk){const ik=Hk&&wk;let bk;ik?console.warn(`${kk} came in a constructed Response, not a fetched one, so it compiles without streaming`):lk?console.warn(`${kk} came in a Response that takes no own properties, so it compiles without streaming`):Uk&&console.warn(`${kk} was served as ${Kk}, not application/wasm, so it compiles without streaming`);try{bk=function(kk){const ek=new wi(bi(mi,kk,[]));return bi(Hi,ek,[new wi(kk)]),ek}(await Ii(Pk,Uk)),yk||Dk(!0)}catch(Ck){throw Uk||(Sk.useLoadedFetch=!0),Ei(`Downloading ${kk} failed`,Ck,ek)}const rk=await function(kk){return bi(Yi,yi,[kk])}(bk);return void 0!==fk&&await si(kk,bk,fk),ik&&Ai.add(kk),rk}let Lk;try{Lk=await Qi(Pk)}catch(Ck){if(ek.aborted||Ck instanceof TypeError)throw Ei(`Downloading ${kk} failed`,Ck,ek);throw Ck}if(Yk&&void 0!==fk){let ik;try{ik=new wi(await Yk)}catch(Ck){throw Ei(`Downloading ${kk} failed: its copy for checking broke off`,Ck,ek)}await si(kk,ik,fk)}return Lk}(kk.href,fk,Sk,(kk=>{Pk(),kk&&bk?.()}),ek,rk,ik,Dk)),fk)),Sk)}function Vi(kk){return ri(kk,"then",{__proto__:null,value:void 0}),kk}function Fi(kk){let{spare:ek=0,priority:ik="auto"}=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};const Dk="string"===typeof kk?kk:kk.href;return ui((()=>qi(Dk,((kk,fk,Sk)=>async function(kk,ek,ik,Dk,fk,Sk){let bk;try{bk=await fetch(kk,{signal:ek,priority:Sk})}catch(mk){throw Ei(`Fetching ${kk} failed`,mk,ek)}if(!bk.ok)throw ge(kk,bk.status,bk.headers.get("Retry-After"));if(ik(),null===bk.body){let ik;Dk();try{ik=await bk.arrayBuffer()}catch(mk){throw Ei(`Downloading ${kk} failed`,mk,ek)}const Sk=new Uint8Array(fk+ik.byteLength);return Sk.set(new Uint8Array(ik),fk),Sk}const rk=bk.body.getReader(),Pk=[];for(;;){let Sk;try{Sk=await rk.read()}catch(mk){throw Ei(`Downloading ${kk} failed`,mk,ek)}if(Sk.done)return Dk(),ai(Pk,fk);Pk.push(Sk.value),ik()}}(Dk,kk,fk,Sk,ek,ik)))))}async function ui(kk){let{delays:ek=ei,onRetry:ik}=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};for(let fk=0;;fk++)try{return await kk()}catch(Dk){const kk=ek[fk];if(!Ne(Dk)||void 0===kk)throw Dk;const Sk=Dk instanceof Oe?Dk.retryAfterMs:void 0,bk=void 0===Sk?kk:Math.max(kk,Math.min(Sk,ii));console.warn(`${Dk.message}, retrying in ${bk/1e3} s`),ik?.(Dk,bk),await Qe((kk=>{setTimeout(kk,bk)}))}}async function qi(kk,ek,ik){const Dk=new AbortController;let fk,Sk=()=>{};const bk=Qe(((kk,ek)=>{Sk=ek})),rk=kk=>{Sk(kk),Dk.abort()},Pk=()=>{clearTimeout(fk),fk=setTimeout((()=>{rk(new Ge(`Downloading ${kk} stalled: nothing arrived for ${ki/1e3} s`,!0))}),ki)},mk=()=>{rk(new Ze(`Downloading ${kk} was cancelled`,!1))};ik?.aborted&&mk(),ik?.addEventListener("abort",mk,{once:!0});const Mk=()=>{clearTimeout(fk)};Pk();try{return await Ee([ek(Dk.signal,Pk,Mk),bk])}finally{clearTimeout(fk),ik?.removeEventListener("abort",mk)}}function Ii(kk,ek){return ek&&Pi?bi(Pi,kk,[]):kk.arrayBuffer()}function zi(kk){return ve(kk,(()=>{}),(()=>{})),kk}function Qi(kk){return bi(Li,yi,[kk])}function vi(kk){if(!Mi)return kk.clone();try{return bi(Mi,kk,[])}catch{return null}}function Ei(kk,ek,ik){return ik.aborted?ek:new Ze(`${kk}: ${Ve(ek)}`,!0,{cause:ek})}function ai(kk){let ek=arguments.length>1&&void 0!==arguments[1]?arguments[1]:0,ik=ek;for(const Sk of kk)ik+=Sk.length;const Dk=new Uint8Array(ik);let fk=ek;for(const Sk of kk)Dk.set(Sk,fk),fk+=Sk.length;return Dk}let Wi="unloaded",ti=null,Xi=null,Bi=null,ci=null;const Ti=new Set,oi=new Set;let Zi=!1,Oi=null,gi=null,Gi=null,Ni=!1,Ri=0;function Ji(){return"ready"===Wi}function kD(){return Wi}function eD(){return ti}const iD={fetch:"fetch_failed",timeout:"fetch_failed",integrity:"fetch_failed",compile:"compile_failed",instantiate:"instantiate_failed",call:"call_failed"};function DD(){return null===ti?null:iD[ti]}function fD(){return Xi}function SD(){return null===ti?"not failed":`${ti}: ${(kk=Xi)instanceof Error?`${kk.name}: ${kk.message}`:String(kk)}`;var kk}function bD(){if(!Ji())throw new Error(`Bloxd wasm is not ready (${kD()}): check isBloxdWasmReady() first`);return Oi}function rD(){return Ji()?gi:null}function PD(){return Ji()?Bi:null}function mD(){return Gi}function MD(){if(!ci||0===Ri)return 0;const kk=new Uint32Array(ci.buffer,Ri,1),ek=kk[0]??0;return kk[0]=0,ek}function KD(){if(!ci)throw new Error("Bloxd wasm has not been instantiated");return ci}function xD(kk){"failed"!==Wi&&wD(kk,"call")}function nD(){return Ne(Xi)}function UD(){return"unloaded"===Wi&&(Wi="loading",!0)}function HD(kk,ek,ik,Dk){gi=kk,Oi=ek,Bi=ik,ci=Dk.memory;const{uK:fk}=ek;Ri="function"===typeof fk?fk():0,Wi="ready",function(){if(Ni)return;Ni=!0;const kk=console.error;console.error=function(){for(var ek=arguments.length,ik=new Array(ek),Dk=0;Dk<ek;Dk++)ik[Dk]=arguments[Dk];const[fk]=ik;"string"===typeof fk&&fk.startsWith("panicked at")&&(Gi=fk,MD()),kk.apply(console,ik)}}()}function wD(kk,ek){Wi="failed",ti=ek,Xi=kk,console.error(`Bloxd wasm failed (${ek}):`,kk);const ik=[...Ti];Ti.clear();for(const Dk of ik)lD(Dk)}function lD(kk){try{kk()}catch(ek){console.error("A Bloxd wasm failure listener threw:",ek)}}function pD(kk){return"failed"===Wi?(lD(kk),()=>{}):(Ti.add(kk),()=>{Ti.delete(kk)})}function yD(kk){return Zi||(bD(),Oi.zK(YD),Zi=!0),oi.add(kk),()=>{oi.delete(kk)}}function YD(){const kk=KD().buffer;for(const ik of oi)try{ik(kk)}catch(ek){console.error("A Bloxd wasm memory growth listener threw:",ek)}}const LD={bloxd_wasm:()=>"295c5cd2cc27f19595e8622c000a7c41e60e485a07dbba504442890cbd24a8aa",bloxd_wasm_client:()=>"416b91d2a16ae728bbeca95bbffddabc8a3a7b4a34aa66d1fe6f3b3eaf78245d",bloxd_wasm_workers:()=>"1d7067ca0a5537d6f71a4946b88fe0f1c972f70665e18d64e4adb5d5285f18e2",bloxd_wasm_models:()=>"867866320707b9f1ca78d6925955f07814ec1ca44420a0c7cde5311c04365e33",bloxd_wasm_webgpu:()=>"9867480be13b90b64fe4abafb562dec31eaac1bd6f0fcc19b9bb76500d4fdc10",bloxd_wasm_webgl:()=>"9f4c0bbaef65b13dad73d1ed314d3c8b192b18cfc30179c3542f3ca03efb48fd",bloxd_wasm_webgl1:()=>"014507591fe08d6df7d489a19d8df0b9f54e5fadda2418f355e9f2ae9280bb00",bloxd_wasm_replay:()=>"03359aae307812a1ddfe49365a61deb594b3a7b4fb670fa4cb1f3ee68976c741",bloxd_wasm_recorder:()=>"0b07d8728842a235c0e7a2c268ef34837026080bff9775bbc59cb6b2df75da11",bloxd_wasm_anim:()=>"39f782ac95bb53f159aa901360aa630676baa5e6c493e3edb2871e65cc6a978c",bloxd_wasm_textures:()=>"ef551c40e5bb3fca12998cd42e0e4317f1aad8584357c16a578ec219fc254bcb",bloxd_wasm_shader_pack:()=>"9f488776af56b7975c23b43dfcad2bdc3764d5025ab085512a39009b8882a5ef"},CD=Function.prototype.toString,AD=RegExp.prototype.exec,jD=Reflect.apply,sD=Function.prototype.call,dD=Function.prototype.apply,VD=Function.prototype.bind,FD=Object.defineProperty,uD=Uint8Array;let qD,ID;try{qD=globalThis.crypto,ID=void 0===qD||null===qD?void 0:qD.getRandomValues}catch{}const zD="bloxdBindApply";let QD;try{const kk=sD;FD(kk,zD,{__proto__:null,value:VD,configurable:!0});try{QD=kk[zD](dD)}finally{delete kk[zD]}}catch{}const vD=16,ED=256,hD=0,aD=1,WD=2,tD=3;let XD,BD=hD,cD=jD,TD=0;function oD(kk,ek){return kk===`function ${ek}() { [native code] }`||kk===`function ${ek}() {\\n    [native code]\\n}`}const ZD=0,OD=1,gD=2;let GD=ZD;function ND(kk,ek,ik){if(GD===gD&&BD===aD&&!function(){const kk=XD;return TD>=ED&&(cD(ID,qD,[kk]),TD=0),kk[TD++]<256/vD}())return function(kk,ek,ik){return cD(kk,ek,ik??0)}(...arguments);if(GD===ZD||BD===WD)return jD(kk,ek,ik);let Dk;GD=ZD;try{BD===hD&&(BD=tD,BD=function(){const kk=jD(CD,jD,[]);if(oD(kk,"apply"))return WD;if(null===jD(AD,/\\(\\.\\.\\.arguments\\)/,[kk])&&null===jD(AD,/^function\\s*\\(\\.\\.\\.[\\w$]+\\)/,[kk]))return WD;if("function"!==typeof QD||"function"!==typeof sD||"function"!==typeof dD||"function"!==typeof VD||"function"!==typeof FD||"function"!==typeof ID||"function"!==typeof uD||!oD(jD(CD,sD,[]),"call")||!oD(jD(CD,dD,[]),"apply")||!oD(jD(CD,VD,[]),"bind")||!oD(jD(CD,FD,[]),"defineProperty")||!oD(jD(CD,ID,[]),"getRandomValues")||!oD(jD(CD,uD,[]),"Uint8Array"))return WD;const ek=QD,ik={},Dk=function(kk){return this===ik&&kk===ik};try{if(!0!==ek(Dk,ik,[ik]))return WD;const kk=new uD(ED);ek(ID,qD,[kk]),XD=kk}catch{return WD}return cD=ek,aD}()),Dk=jD(kk,ek,ik)}catch(fk){throw BD=WD,fk}return GD=gD,Dk}let RD=jD;function JD(){return(RD===jD?0:3)+GD}function kf(){const kk=JD();return RD=jD,kk}function ef(kk){RD=kk>=3?ND:jD,GD=kk%3}const Df=Function.prototype.toString,ff=Object.getOwnPropertyDescriptor,Sf=Object.prototype.hasOwnProperty,bf=RegExp.prototype.exec,rf=TextEncoder.prototype.encodeInto,Pf=String.prototype.startsWith,mf=Number.prototype.toString,Mf=WeakMap.prototype.get,Kf=WeakMap.prototype.set,xf=/^function ([\\w$ ]*)\\(\\) \\{\\s*\\[native code\\]\\s*\\}$/,nf=new TextEncoder,Uf=new Uint8Array(1024),Hf=9999999,wf=/^(wh:[^#]+)#[abnps]\\d{1,7}\\.[0-9a-z]{1,7}$/,lf=new WeakMap;function pf(kk){if("function"!==typeof kk)return"#a0.0";const ek=RD(Mf,lf,[kk]);if(void 0!==ek)return ek;const ik=RD(Df,kk,[]),Dk=ik.length>Hf?Hf:ik.length,fk=`#${function(kk,ek){const ik=RD(bf,xf,[ek]);if(null===ik)return"s";const Dk=ik[1];if("ProxyObject"===Dk)return"p";if(""!==Dk)return RD(Pf,Dk,["bound "])?"b":"n";try{const ek=ff(kk,"name"),ik=void 0!==ek&&RD(Sf,ek,["value"])?ek.value:void 0;return"string"===typeof ik&&RD(Pf,ik,["bound "])?"b":"p"}catch{return"p"}}(kk,ik)}${Dk}.${function(kk){const{written:ek}=RD(rf,nf,[kk,Uf]);let ik=2166136261;for(let Dk=0;Dk<ek;Dk++)ik=(ik^Uf[Dk])>>>0,ik=ik+(ik<<1)+(ik<<4)+(ik<<7)+(ik<<8)+(ik<<24)>>>0;return RD(mf,ik,[36])}(ik)}`;return RD(Kf,lf,[kk,fk]),fk}function yf(kk){const ek=RD(bf,wf,[kk]);return null===ek?kk:ek[1]}const Yf=Function.prototype.toString,Lf=Object.getOwnPropertyDescriptor,Cf=RegExp.prototype.exec,Af=Object.prototype.hasOwnProperty,jf=Set.prototype.has,sf=WeakMap.prototype.get,df=WeakMap.prototype.set,Vf=Reflect.get,Ff=Object.getPrototypeOf,uf="undefined"===typeof WebAssembly?void 0:WebAssembly;function qf(kk,ek,ik){return{code:kk,holder:ek,key:ik,...arguments.length>3&&void 0!==arguments[3]?arguments[3]:{},native:new RegExp(`^function (get )?${ik}\\\\(\\\\) \\\\{\\\\s*\\\\[native code\\\\]\\\\s*\\\\}$`)}}function If(){return uf}const zf=uf?.Instance.prototype,Qf=uf?.Memory.prototype;function vf(){return Qf}let Ef,hf;try{const kk=globalThis.crypto,ek=kk?.subtle;Ef=kk?Ff(kk):void 0,hf=ek?Ff(ek):void 0}catch{}function af(kk,ek){for(let ik=kk;void 0!==ik&&null!==ik;ik=Ff(ik)){const kk=Lf(ik,ek);if(kk)return kk}}const Wf=[qf("in",If,"instantiate",{tier:"weighted",onNamespace:!0}),qf("is",If,"instantiateStreaming",{tier:"weighted",onNamespace:!0}),qf("co",If,"compile",{tier:"weighted",onNamespace:!0}),qf("cs",If,"compileStreaming",{tier:"weighted",onNamespace:!0}),qf("mo",If,"Module",{isConstructor:!0,tier:"punished",onNamespace:!0}),qf("it",If,"Instance",{isConstructor:!0,tier:"punished",onNamespace:!0}),qf("me",If,"Memory",{isConstructor:!0,tier:"punished",onNamespace:!0}),qf("ex",(function(){return zf}),"exports",{isGetter:!0,tier:"punished"}),qf("bu",vf,"buffer",{isGetter:!0,tier:"punished"}),qf("gr",vf,"grow",{tier:"punished"}),qf("rc",(function(){return"undefined"===typeof Response?void 0:Response.prototype}),"clone"),qf("cr",(function(){return globalThis}),"crypto",{isGetter:!0,tier:"punished",inSecureContext:!0}),qf("su",(function(){return Ef}),"subtle",{isGetter:!0,tier:"punished",inSecureContext:!0}),qf("dg",(function(){return hf}),"digest",{tier:"punished",inSecureContext:!0})];function tf(kk){let ek;try{const ik=Vf(globalThis,kk);ek="function"===typeof ik?ik.prototype:void 0}catch{}return()=>ek}function Xf(kk,ek,ik){return ik.map((ik=>qf(kk,ek,ik)))}const Bf=qf("rx",tf("HTMLCanvasElement"),"getContext"),Tf=["createShader","shaderSource","compileShader","createProgram","linkProgram","useProgram","drawArrays","drawElements","depthFunc","depthMask","enable","disable","blendFuncSeparate","colorMask"],of={webgpu:[...Xf("gd",tf("GPUDevice"),["createShaderModule","createRenderPipeline","createCommandEncoder"]),...Xf("gq",tf("GPUQueue"),["submit","writeBuffer"]),...Xf("ge",tf("GPUCommandEncoder"),["beginRenderPass","finish"]),...Xf("gp",tf("GPURenderPassEncoder"),["setPipeline","setBindGroup","draw","drawIndexed","drawIndirect","drawIndexedIndirect","executeBundles"]),Bf],webgl:[...Xf("g2",tf("WebGL2RenderingContext"),[...Tf,"drawArraysInstanced","drawElementsInstanced"]),Bf],webgl1:[...Xf("g1",tf("WebGLRenderingContext"),Tf),Bf]};let Zf=[];const Of=new WeakMap;function gf(kk,ek){const ik=kf();try{RD(df,Of,[kk,ek])}finally{ef(ik)}}function Gf(kk){try{const ek=dS(kk),ik=RD(sf,Of,[ek]);return yS(ik,kk)?Nf(kk,!0):`${Nf(kk,!1)}${pf(ik??ek)}`}catch{return`${Nf(kk,!1)}${pf(void 0)}`}}function Nf(kk,ek){let{code:ik,key:Dk}=kk;return`wh:${ik}${ek?"-dbg":""}:${Dk}`}function Rf(kk){return Object.values(of).flatMap((ek=>ek.map((ek=>Nf(ek,kk)))))}const Jf=new Set(Rf(!0)),kS=new Set([...Rf(!1),...Jf]),eS=Nf(Bf,!1);function iS(kk){Zf=of[kk]}function DS(kk){const ek=kf();try{return fS(kk)||fS(yf(kk))}finally{ef(ek)}}function fS(kk){return RD(jf,kS,[kk])}function SS(kk){return new Set(Wf.filter((ek=>ek.tier===kk)).map((kk=>`wh:${kk.code}`)))}const bS=SS("punished"),rS=!1,PS=new Set(ce),mS=SS("weighted");function MS(kk){const ek=kf();try{return xS(yf(kk))}finally{ef(ek)}}function KS(kk){const ek=kf();try{return yf(kk)}finally{ef(ek)}}function xS(kk){return RD(jf,mS,[kk])}function nS(kk){const ek=kf();try{return US(kk)}finally{ef(ek)}}function US(kk){return RD(jf,PS,[kk])}function HS(kk){return"wb"===kk||RD(jf,bS,[kk])}function wS(kk){const ek=kf();try{return HS(kk)||US(kk)}finally{ef(ek)}}function lS(kk){const ek=kf();try{return"wb"===kk||rS&&HS(kk)}finally{ef(ek)}}function pS(kk,ek){let{isGetter:ik}=ek;const Dk=Lf(kk,ik?"get":"value");return void 0===Dk?void 0:Dk.value}function yS(kk,ek){let{isConstructor:ik,native:Dk}=ek;return"function"===typeof kk&&(!(!ik&&RD(Af,kk,["prototype"]))&&null!==RD(Cf,Dk,[RD(Yf,kk,[])]))}function YS(kk,ek){return yS(kk,qf("",(()=>{}),ek,arguments.length>2&&void 0!==arguments[2]&&arguments[2]?{isConstructor:!0}:{}))}let LS=null,CS=!1;function AS(){try{return globalThis.WebAssembly===uf}catch{return!1}}function jS(kk){try{return function(kk){const{holder:ek,key:ik,onNamespace:Dk,inSecureContext:fk}=kk,Sk=ek(),bk=af(Sk,ik);if(!bk)return!(fk&&!0===globalThis.isSecureContext);const rk=pS(bk,kk);if(!yS(rk,kk))return!1;if(Dk){const ek=globalThis.WebAssembly;if(ek!==Sk&&null!==ek&&("object"===typeof ek||"function"===typeof ek)){const Dk=Vf(ek,ik);return Dk===rk||void 0===Dk||yS(Dk,kk)}}return!0}(kk)}catch{return!1}}function sS(kk){const ek=`wh:${kk.code}`;if("punished"===kk.tier)return ek;try{return`${ek}${pf(dS(kk))}`}catch{return`${ek}${pf(void 0)}`}}function dS(kk){const ek=af(kk.holder(),kk.key),ik=void 0===ek?void 0:pS(ek,kk);return kk.onNamespace&&!AS()&&yS(ik,kk)?Vf(globalThis.WebAssembly,kk.key):ik}function VS(){if(void 0===uf)return null;let kk=AS()?null:"wh:wa";const ek=ek=>{null!==ek&&(null===kk||FS(ek)>FS(kk))&&(kk=ek)};for(let ik=0;ik<Wf.length;ik++){const kk=Wf[ik];void 0===kk||jS(kk)||ek(sS(kk))}ek(oe??Te());for(let ik=0;ik<Zf.length;ik++){const kk=Zf[ik];void 0===kk||jS(kk)||ek(Gf(kk))}return kk}function FS(kk){if(HS(kk))return 5;const ek=yf(kk);return xS(ek)?4:US(kk)?3:fS(ek)?function(kk){return RD(jf,Jf,[kk])}(ek)?-1:ek===eS?0:1:2}function uS(){const kk=function(){const kk=JD();return BD===hD||BD===aD?(RD=ND,GD=OD):RD=jD,kk}();try{if(null===LS||!HS(LS)){const kk=VS();(null===LS||null!==kk&&FS(kk)>FS(LS))&&(LS=kk)}}finally{ef(kk)}}function qS(){CS=!0}function IS(){if(CS)return"wb";if((!(arguments.length>0&&void 0!==arguments[0])||arguments[0])&&uS(),null!==LS)return LS;if(void 0===uf)return"wn:unsupported";const kk=eD();return null===kk?null:`wn:${kk}`}function zS(kk){const ek=Object.prototype.hasOwnProperty.call(LD,kk)?LD[kk]():void 0;if(void 0!==ek)return{sha256:ek,onMismatch:qS};throw new Re(`${kk} has no release digest, so this build refuses it`)}const QS="bloxd-wasmDownloaded",vS=12;function ES(kk){return kk.pathname.slice(kk.pathname.lastIndexOf("/")+1)}function hS(){try{if("undefined"===typeof localStorage)return null;const kk=JSON.parse(localStorage.getItem(QS)??"[]");return Array.isArray(kk)?kk.filter((kk=>"string"===typeof kk)):[]}catch(kk){return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none",kk),null}}const aS=Reflect.apply,WS="undefined"===typeof Worker?void 0:Worker,tS=WS?.prototype.postMessage,XS=WS?.prototype.terminate,BS="undefined"===typeof EventTarget?void 0:EventTarget.prototype.addEventListener,cS="undefined"===typeof MessageEvent?void 0:Object.getOwnPropertyDescriptor(MessageEvent.prototype,"data")?.get,TS=Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype),"buffer").get,oS=function(){try{return YS(WS,"Worker",!0)&&YS(tS,"postMessage")&&YS(XS,"terminate")&&YS(TS,"buffer")&&void 0!==BS&&void 0!==cS}catch{return!1}}();let ZS=!1;function OS(){return oS&&!ZS}class gS{worker=null;failed=!1;constructor(){if(OS())try{this.worker=NS(),aS(BS,this.worker,["error",()=>{this.failed=!0}])}catch{this.stop()}}take(){const kk=this.worker;if(this.worker=null,null!==kk&&this.failed)throw aS(XS,kk,[]),new Error("it did not run");return kk}stop(){const kk=this.worker;this.worker=null,null!==kk&&aS(XS,kk,[])}}class GS{decoded;worker;reject;constructor(kk,ek,ik,Dk,fk){try{this.worker=fk?.take()??NS()}catch(bk){throw ZS=!0,new Error(`The zstd decoder\'s worker did not start: ${Ve(bk)}`)}const Sk=this.worker;this.decoded=Qe(((ek,fk)=>{this.reject=fk;const rk=(kk,ek)=>{aS(BS,Sk,[kk,ek])};rk("message",(kk=>{Dk();try{const Dk=aS(cS,kk,[]);if(!0===Dk)ek();else{if("string"===typeof Dk)throw Dk.startsWith("out of memory decoding ")&&(ZS=!0),new Error(Dk);ik(Dk,aS(mi,Dk,[]))}}catch(bk){fk(bk)}})),rk("error",(()=>{ZS=!0,fk(new Error("The zstd decoder\'s worker did not run"))})),rk("messageerror",(()=>{fk(new Error(`${kk}\'s decoder sent a piece that could not be read`))}))})),zi(this.decoded),aS(tS,Sk,[[kk,ek]])}push(kk){aS(tS,this.worker,[kk,[aS(TS,kk,[])]])}end(){aS(tS,this.worker,[null])}markWorkerFailed(){ZS=!0}fail(kk){this.reject(kk),this.terminate()}terminate(){aS(XS,this.worker,[])}}function NS(){if(globalThis.Worker!==WS)throw new Error("Worker is not the one the page loaded with");return new Worker(new ik.U(ik(14)),{name:"wasmZstdDecoder"})}const RS=Reflect.apply,JS=ArrayBuffer,kb="undefined"===typeof Response?void 0:Response,eb="undefined"===typeof ReadableStream?void 0:ReadableStream,ib=function(){let kk;void 0!==eb&&new eb({__proto__:null,start(ek){const{enqueue:ik,close:Dk,error:fk}=Object.getPrototypeOf(ek);kk={enqueue:ik,close:Dk,error:fk}}},{__proto__:null});return kk}(),Db=function(){try{return"undefined"!==typeof WebAssembly&&"function"===typeof WebAssembly.compileStreaming&&void 0!==ib&&YS(kb,"Response",!0)&&YS(eb,"ReadableStream",!0)&&YS(ib.enqueue,"enqueue")&&YS(ib.close,"close")&&YS(ib.error,"error")&&YS(Ki,"body")&&YS(ni,"getReader")&&YS(Ui,"read")}catch{return!1}}();async function fb(kk,ek,ik,Dk,fk,Sk,bk){const rk=new JS(ek),{controller:Pk,compiled:mk}=function(kk){try{let kk;const ek=new eb({__proto__:null,start(ek){kk=ek}},{__proto__:null}),ik=new kb(ek,{__proto__:null,headers:{__proto__:null,"Content-Type":"application/wasm"}});return{controller:kk,compiled:zi(Qi(Vi(ik)))}}catch(ek){throw new Error(`${kk} could not be streamed into a compile: ${Ve(ek)}`)}}(kk),{enqueue:Mk,close:Kk,error:xk}=ib,nk=kk=>{try{RS(xk,Pk,[kk])}catch{}};let Uk=0;const Hk=(ik,Dk)=>{if(Uk+Dk>ek)throw new Error(`${kk} decoded past its module\'s ${ek} bytes`);RS(Hi,new wi(rk),[new wi(ik),Uk]);try{RS(Mk,Pk,[new wi(rk,Uk,Dk)])}catch{}Uk+=Dk};let wk,lk;try{wk=new GS(kk,ek,Hk,Dk,bk)}catch(Lk){throw nk(Lk),Lk}const pk=kk=>{wk.fail(kk),void 0!==lk&&Sb(lk)};let yk=!1;ik.addEventListener("abort",(()=>{yk&&wk.markWorkerFailed(),pk(new Error(`${kk} stalled`))}),{once:!0}),ve(mk,(()=>{}),pk);try{let Sk;try{Sk=await fetch(kk,{signal:ik})}catch(Lk){throw new Error(`Fetching ${kk} failed: ${Ve(Lk)}`)}const{ok:bk,status:rk,body:Pk}=function(kk,ek){try{const{ok:kk,status:ik}=ek;return{ok:kk,status:ik,body:RS(Ki,ek,[])}}catch{throw new Error(`${kk} came in a response a page script made`)}}(kk,Sk);if(!bk)throw new Error(`Fetching ${kk} failed: HTTP ${rk}`);Dk();const mk=RS(ni,Pk,[]);lk=mk;const Mk=()=>{Sb(mk)};for(ve(wk.decoded,Mk,Mk);;){let ek;try{ek=await RS(Ui,mk,[])}catch(Lk){throw new Error(`Downloading ${kk} failed: ${Ve(Lk)}`)}if(ek.done)break;Dk(),wk.push(ek.value)}if(yk=!0,wk.end(),await wk.decoded,fk(),Uk!==ek)throw new Error(`${kk} ended before its module did`)}catch(Lk){throw nk(Lk),pk(Lk),Lk}wk.terminate();try{RS(Kk,Pk,[])}catch{}const Yk=await mk;return void 0!==Sk&&await si(kk,new wi(rk),{sha256:Sk.sha256,onMismatch:()=>{}}),Yk}function Sb(kk){try{zi(kk.cancel())}catch{}}const bb=".zst.bin",rb=1e3;let Pb=null;function mb(kk){return Pb??=function(){const kk=new Map,ek="bloxd_wasm_webgpu:5070732,bloxd_wasm_webgl:5451804,bloxd_wasm_webgl1:4821797,bloxd_wasm_workers:198965,bloxd_wasm_models:311680,bloxd_wasm_client:3699634";for(const ik of ek?.split(",")??[]){const[ek="",Dk]=ik.split(":"),fk=Number(Dk);Number.isInteger(fk)&&fk>0&&kk.set(ek,fk)}return kk}(),Pb.get(kk)}async function Mb(kk,ek){let ik=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const Dk=mb(kk.name);if(void 0===Dk)return Kb(await xb(kk,ek,ik),"cold-wasm");const fk=Db?new gS:null;let Sk;try{if(bk=kk.url(),hS()?.includes(ES(bk))&&await async function(kk){const ek=new AbortController;let ik;const Dk=Qe((kk=>{ik=setTimeout((()=>{ek.abort(),kk(null)}),rb)}));try{const ik=fetch(kk.href,{cache:"only-if-cached",mode:"same-origin",signal:ek.signal}),fk=await Ee([ik,Dk]);return!!fk?.ok&&(zi(fk.body.cancel()),!0)}catch{return!1}finally{clearTimeout(ik)}}(kk.url()))return fk?.stop(),await async function(kk,ek,ik,Dk){let fk=!1;const Sk=ik&&{sha256:ik.sha256,onMismatch:()=>{fk=!0}};try{return Kb(await xb(kk,Sk,Dk),"warm")}catch(bk){const Dk=await nb(kk,ek,ik,null);if(null===Dk)throw fk&&ik.onMismatch(),bk;return console.warn(`${kk.url().href} from the HTTP cache failed: ${Ve(bk)}: loaded its copy instead`),Kb(Dk,fk?"warm-refused":"warm-broken")}}(kk,Dk,ek,ik);Sk=await nb(kk,Dk,ek,fk)}finally{fk?.stop()}var bk;return null!==Sk?Kb(Sk,"cold-worker"):Kb(await xb(kk,ek,ik),"cold-wasm")}function Kb(kk,ek){return{__proto__:null,module:kk,path:ek}}function xb(kk,ek,ik){return void 0===mb(kk.name)?di(kk.url(),ek,ik):di(kk.url(),ek,{...ik,hideThen:!0,onDownloaded:()=>{!function(kk){const ek=hS();if(null===ek)return;const ik=ES(kk),Dk=ek.filter((kk=>kk!==ik));Dk.push(ik);try{localStorage.setItem(QS,JSON.stringify(Dk.slice(-vS)))}catch(fk){console.warn(`Bloxd wasm: ${ik} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`,fk)}}(kk.url()),ik.onDownloaded?.()}})}async function nb(kk,ek,ik,Dk){if(!Db||!OS())return null;const fk=kk.url(),Sk=`${fk.href}${bb}`;try{return await qi(Sk,((kk,fk,bk)=>fb(Sk,ek,kk,fk,bk,ik,Dk)))}catch(bk){return console.warn(`${Ve(bk)}: loading ${fk.href} instead`),null}}let Ub=null,Hb=!1;const wb=new Map,lb=new Map;function pb(kk,ek,ik){return null===Ub?Ub=Yb(kk,ek):kk!==Ub.build?console.warn(`Bloxd wasm: ${kk.name} was asked for after ${Ub.build.name} started loading, which this thread keeps`):ek.name!==Ub.workers.name&&console.warn(`Bloxd wasm: ${ek.name} was asked for workers after ${Ub.workers.name}, which this thread keeps`),ik?.reloadFailedDownload&&!Hb&&nD()&&(Wi="unloaded",ti=null,Xi=null,1)&&(Hb=!0,Ub=Yb(Ub.build,Ub.workers)),Ub.loaded}function yb(kk,ek){if(null!==Ub)return he([]);const ik=kk.filter((kk=>!wb.has(kk.name))).map((kk=>{const ik=new AbortController,Dk={compiled:xb(kk,zS(kk.name),{priority:ek,Ji:ik.signal,onDownloaded:()=>{Dk.downloaded=!0},retries:{onRetry:()=>{Dk.downloaded=!1,null!==Ub&&ik.abort()}}}),cancel:ik,downloaded:!1};return wb.set(kk.name,Dk),Qe((ek=>{ve(Dk.compiled,(()=>{Dk.downloaded=!0,ek()}),(Dk=>{ik.signal.aborted||console.warn(`Bloxd wasm: ${kk.name}\'s compile ahead of the load failed: the load compiles it afresh`,Dk),ek()}))}))}));return he(ik)}function Yb(kk,ek){const ik=async function(kk,ek){if(UD()){let Dk;try{Dk=await kk()}catch(ik){return wD(ik,Je(ik)),!1}try{HD(ek,ek.bindings,Dk.workerModule,await ek.init({module_or_path:Dk.module}))}catch(ik){wD(ik,"instantiate")}}return Ji()}((async()=>{uS(),lb.clear();const ik=Cb(kk),Dk=ek.name===kk.name?ik:Cb(ek);for(const{cancel:kk}of wb.values())kk.abort();wb.clear(),await he([ik,Dk]);const fk=await ik,Sk=await Dk;return uS(),{module:fk,workerModule:Sk}}),kk);return{build:kk,workers:ek,loaded:ik}}function Lb(kk){return lb.get(kk)}function Cb(kk){const ek=performance.now(),ik=wb.get(kk.name);wb.delete(kk.name);const Dk=!0===ik?.downloaded?ik:void 0;return void 0!==ik&&void 0===Dk&&ik.cancel.abort(),Qe(((ik,fk)=>{const Sk=(Dk,fk)=>{lb.set(kk.name,{path:fk,ms:performance.now()-ek}),ik(Dk)},bk=()=>{ve(jb(kk),(kk=>{let{module:ek,path:ik}=kk;Sk(ek,ik)}),fk)};void 0===Dk?bk():ve(Dk.compiled,(kk=>{Sk(kk,"ahead")}),bk)}))}async function Ab(kk,ek){const{module:ik}=await jb(kk,{retries:ek});return ik}async function jb(kk){let ek=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return await Mb(kk,zS(kk.name),ek)}const sb={name:"bloxd_wasm",url:()=>new ik.U(ik(23)),init:de,bindings:Dk};function db(){return pb(arguments.length>0&&void 0!==arguments[0]?arguments[0]:sb,arguments.length>1&&void 0!==arguments[1]?arguments[1]:sb,arguments.length>2?arguments[2]:void 0)}function Vb(kk){return function(kk,ek){let ik=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;if(UD()){let fk;try{fk=kk()}catch(Dk){return wD(Dk,Je(Dk)),!1}try{HD(ik,ek,fk,ek.initSync({module:fk}))}catch(Dk){wD(Dk,"instantiate")}}return Ji()}((()=>kk),Dk,sb)}const Fb=["none","idle","now"];function ub(){const kk=()=>bD();return{memoryBytes:()=>KD().buffer.byteLength,reserveUpFront:ek=>kk().LK(ek),reserveAhead:ek=>kk().YK(ek),setCeiling:ek=>{kk().CK(ek)},lowWater:()=>Fb[kk().yK()]??"none",stats:()=>function(kk){const ek=new Uint32Array(KD().buffer,kk,17),ik=kk=>ek[kk]??0,Dk=kk=>({upFront:ik(kk),ahead:ik(kk+1),onDemandInFrame:ik(kk+2),onDemand:ik(kk+3)});return{memoryBytes:ik(0),initialBytes:ik(1),liveBytes:ik(2),peakLiveBytes:ik(3),headroomBytes:ik(4),unusedBytes:ik(5),ceilingBytes:ik(6),reservesRefused:ik(7),grows:Dk(8),grownBytes:Dk(12),allocationsRefused:ik(16)}}(kk().AK()),takeBallast:()=>kk().jK(),takePressure:()=>kk().sK()}}function qb(kk,ek){return new Error(`${kk}: ${ek instanceof Error?`${ek.name}: ${ek.message}`:String(ek)}`,{cause:ek})}function Ib(){return new URL(new ik.U(ik(31)).href,globalThis.location?.href).href}let zb=null;function Qb(){return zb??=(async()=>di(new URL(Ib()),zS("bloxd_wasm_textures")))().catch((kk=>{throw qb(Je(kk),kk)})),zb}function vb(kk,ek,ik){return new kk(KD().buffer,ek,ik)}class Eb{type;ptr;length;currentView;constructor(kk,ek,ik){this.type=kk,this.ptr=ek,this.length=ik,this.currentView=vb(kk,ek,ik)}view(){return this.currentView.length!==this.length&&(this.currentView=vb(this.type,this.ptr,this.length)),this.currentView}}const hb=15;function ab(kk,ek,ik){return!!(kk&&null!==ik&&ek>=ik)}const Wb=27;let tb=0;class Xb{constructor(kk){this.runs=kk,this.layers=null,this.serial=tb,tb=(tb+1)%4294967295}from(kk,ek){return 0===kk?[0,0]:(this.layers??=function(kk,ek){const ik=ek*ek,Dk=new Uint32Array(2*ek);let fk=1,Sk=0,bk=0;for(;bk<kk.length&&fk<ek;){const rk=bk;let Pk=0,mk=0;for(;bk<kk.length&&kk[bk]>=128;)Pk+=(127&kk[bk++])<<mk,mk+=7;for(Pk+=kk[bk++]<<mk;kk[bk]>=128;)bk++;if(bk++,!(Pk<=0))for(Sk+=Pk;fk<ek&&fk*ik<Sk;)Dk[2*fk]=rk,Dk[2*fk+1]=Sk-Pk,fk++}for(;fk<ek;fk++)Dk[2*fk]=kk.length,Dk[2*fk+1]=Sk;return Dk}(this.runs,ek),[this.layers[2*kk],this.layers[2*kk+1]])}to(kk,ek){const{runs:ik}=this;if(kk>=ek)return ik.length;const[Dk,fk]=this.from(kk,ek);if(fk===kk*ek*ek)return Dk;let Sk=Dk;for(let bk=0;bk<2&&Sk<ik.length;Sk++)ik[Sk]<128&&bk++;return Sk}}function Bb(kk,ek,ik,Dk){const fk=Dk*Dk,Sk=Dk-1;let bk;bk=ek?new Uint16Array(fk):new Uint8Array(fk);const rk=bk,Pk=kk;if(0===ik)rk.set(Pk.subarray(0,fk));else if(1===ik)rk.set(Pk.subarray(Sk*fk,Dk*fk));else if(2===ik||3===ik){const kk=2===ik?0:Sk;for(let ek=0;ek<Dk;ek++){const ik=ek*fk+kk*Dk;rk.set(Pk.subarray(ik,ik+Dk),ek*Dk)}}else{const ek=4===ik?0:Sk;for(let ik=0;ik<Dk;ik++){const Sk=ik*fk+ek,rk=ik*Dk;for(let ek=0;ek<Dk;ek++)bk[rk+ek]=kk[Sk+ek*Dk]}}return bk}let cb=function(kk){return kk[kk.Corner=0]="Corner",kk[kk.EdgeX=1]="EdgeX",kk[kk.EdgeY=2]="EdgeY",kk[kk.EdgeZ=3]="EdgeZ",kk[kk.FaceX=4]="FaceX",kk[kk.FaceY=5]="FaceY",kk[kk.FaceZ=6]="FaceZ",kk[kk.Center=7]="Center",kk}({});cb.Corner,cb.EdgeZ,cb.Corner,cb.EdgeY,cb.FaceX,cb.EdgeY,cb.Corner,cb.EdgeZ,cb.Corner,cb.EdgeX,cb.FaceY,cb.EdgeX,cb.FaceZ,cb.Center,cb.FaceZ,cb.EdgeX,cb.FaceY,cb.EdgeX,cb.Corner,cb.EdgeZ,cb.Corner,cb.EdgeY,cb.FaceX,cb.EdgeY,cb.Corner,cb.EdgeZ,cb.Corner;const Tb=[22,4,16,10,14,12],ob=Array.from({length:27},((kk,ek)=>[Math.floor(ek/9)-1,Math.floor(ek/3)%3-1,ek%3-1]));function Zb(kk){return ob[kk]}function Ob(kk,ek,ik){return kk<0?[ik-ek,ik]:kk>0?[0,ek]:[0,ik]}const gb=/^alloc_failed (\\d+) bytes$/;class Gb{constructor(kk){this.chunkSizeCubed=kk,this.uint8=[],this.uint16=[]}put(kk){const ek=this.chunkSizeCubed,ik=2*this.chunkSizeCubed;for(const Dk of kk)Dk.byteLength===ek&&this.uint8.length<Gb.MAX_SIZE?this.uint8.push(new Uint8Array(Dk)):Dk.byteLength===ik&&this.uint16.length<Gb.MAX_SIZE&&this.uint16.push(new Uint16Array(Dk))}drain(){const kk=[...this.uint8,...this.uint16].map((kk=>kk.buffer));return this.uint8.length=0,this.uint16.length=0,kk}takeUint8(){var kk;return null!==(kk=this.uint8.pop())&&void 0!==kk?kk:new Uint8Array(this.chunkSizeCubed)}takeUint16(){var kk;return null!==(kk=this.uint16.pop())&&void 0!==kk?kk:new Uint16Array(this.chunkSizeCubed)}takeZeroedUint8(){const kk=this.takeUint8();return kk.fill(0),kk}}Gb.MAX_SIZE=16;function Nb(kk,ek,ik,Dk){return{emission:kk,skyEmission:Float64Array.from({length:ek.length},((kk,ik)=>{var Dk;return null!==(Dk=ek[ik])&&void 0!==Dk?Dk:0})),filters:Int32Array.from({length:ik.length},((kk,ek)=>{var Dk;const fk=null!==(Dk=ik[ek])&&void 0!==Dk?Dk:1;return fk<0?-1:Math.min(fk,15)})),opacity:Uint8Array.from({length:Dk.length},((kk,ek)=>Dk[ek]?1:0))}}new Map;function Rb(kk){return kk instanceof Error&&Object.getPrototypeOf(kk)===Error.prototype}class Jb extends RangeError{}class kr extends Jb{constructor(kk){super(`alloc_failed ${kk} bytes`),this.bytes=kk}}function er(kk){const ek=gb.exec(kk);return ek?new kr(Number(ek[1])):new Jb(kk)}function ir(kk){return Rb(kk)&&gb.test(kk.message)?er(kk.message):kk}class Dr extends Error{constructor(kk){super(kk instanceof Error?kk.message:String(kk)),this.trap=kk}}const fr=["full","relit","relit-sky","unchanged"];function Sr(kk){return Number.isInteger(kk)&&kk>=-2147483648&&kk<=2147483647}class br extends Jb{constructor(kk,ek){super(ek),this.reason=kk}}class rr{constructor(kk,ek,ik){this.engine=ek,this.lastLightPass="full",this.view=void 0,this.chunkSizeCubed=void 0,this.seedSize=void 0,this.lightU8=void 0,this.lightU16=void 0,this.seedRead=void 0,this.pool=void 0,this.view=kk.view,this.chunkSizeCubed=ik*ik*ik;const Dk=ik+30;this.seedSize=Dk*Dk,this.pool=new Gb(this.chunkSizeCubed),this.lightU8=new kk.BufferView(Uint8Array,ek.xU(),this.chunkSizeCubed),this.lightU16=new kk.BufferView(Uint16Array,ek.KU(),this.chunkSizeCubed),this.seedRead=new kk.BufferView(Uint8Array,ek.pU(),this.seedSize)}returnBuffers(kk){this.pool.put(kk)}takeBuffers(){return this.pool.drain()}getZeroedFullChunkLightData(){return this.pool.takeZeroedUint8()}checkComputeInput(kk,ek,ik){if(kk.length<this.seedSize)throw new br("seed_size",`WasmLightEngine sky seed grid holds ${kk.length} columns, not ${this.seedSize}`);if(!Sr(ik)||null!==ek&&!Sr(ek))throw new br("chunk_j",`WasmLightEngine chunkJ ${ik} or highestChunkJ ${ek} is not a 32-bit integer`)}computeWritten(kk,ek,ik,Dk,fk){this.checkComputeInput(ek,ik,Dk);const{engine:Sk,view:bk}=this;let rk;bk(Uint8Array,Sk.yU(),this.seedSize).set(ek.subarray(0,this.seedSize));try{rk=Sk.compute(kk,ik,Dk,fk)}catch(mk){throw ir(mk)}if(this.lastLightPass=fr[rk>>1],1&rk){const kk=this.pool.takeUint16();return kk.set(this.lightU16.view()),{IU:kk,isUint16:!0}}const Pk=this.pool.takeUint8();return Pk.set(this.lightU8.view()),{IU:Pk,isUint16:!1}}skySeedColumnsRead(kk){return!!this.engine.lU()&&(kk.set(this.seedRead.view()),!0)}forgetKeptStates(kk){this.engine.DU(kk)}free(){this.engine.free()}}const Pr=/^(0|[1-9]\\d*)$/;function mr(kk){return"number"===typeof kk&&Number.isInteger(kk)&&kk>=0&&kk<=2147483647}new WeakMap,new WeakMap;const Mr=new Uint32Array(0);const Kr=new ArrayBuffer(0);const xr=[0,1,2,0,2,3];let nr=new Uint32Array(0);function Ur(kk){if(nr.length<6*kk){const ek=Math.max(kk,2*nr.length/6);nr=function(kk,ek){for(let ik=0;ik<ek;ik++){const ek=4*ik,Dk=6*ik;for(let ik=0;ik<6;ik++)kk[Dk+ik]=ek+xr[ik]}return kk}(new Uint32Array(6*ek),ek)}return nr.slice(0,6*kk)}function Hr(kk,ek,ik,Dk){const fk=kk(Uint16Array,ek,4*ik);return Dk?fk.slice():new Float32Array(fk)}const wr={computed:1,provided:2,zeroedFull:3},lr=4294967295,pr=[1,2,4,3,0,wr.computed,wr.provided,wr.zeroedFull,4,8,16,32,64,128,256,8,0,1,2,3,4,1,2,0,1,2,3,2,0,1,16,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,1,2,4,8,16,15,8,lr,1,2],yr=[],Yr=[];function Lr(kk){return Number.isInteger(kk)&&kk>=0&&kk<2**32}function Cr(kk){try{return kk()}catch(ek){throw Rb(ek)?er(ek.message):new Dr(ek)}}class Ar extends rr{static create(kk,ek){!function(kk){const ek="function"===typeof kk.dK?Cr((()=>kk.dK())):[];if(ek.length!==pr.length||!pr.every(((kk,ik)=>ek[ik]===kk)))throw new Jb(`@bloxd/wasm\'s mesher constants [${Array.from(ek).join()}] are not wasmChunkMesher.ts\'s [${pr.join()}]`)}(kk.bindings);const ik=function(kk){var ek,ik,Dk;const fk=Nb(kk.lightEmissionLookup,kk.skyLightEmissionLookup,kk.lightFilterLookup,kk.opacityLookup),Sk=Int32Array.from({length:kk.blockFaceToMatId.length},((ek,ik)=>{const Dk=kk.blockFaceToMatId[ik];if(void 0===Dk)return-1;if(!mr(Dk))throw new Jb(`blockFaceToMatId[${ik}] is ${String(Dk)}`);return Dk}));let bk=0;const rk=[];for(const[Uk,Hk]of Object.entries(kk.matIdToTerrainId)){const kk=Number(Uk);if(Pr.test(Uk)&&!(kk>32768)){if(void 0!==Hk&&!mr(Hk))throw new Jb(`matIdToTerrainId[${Uk}] is ${String(Hk)}`);rk.push([kk,null!==Hk&&void 0!==Hk?Hk:-1]),bk=Math.max(bk,kk+1)}}const Pk=new Int32Array(bk).fill(-1);for(const[Uk,Hk]of rk)Pk[Uk]=Hk;const mk=kk.matColorLookup,Mk=new Float64Array(3*mk.length),Kk=new Uint8Array(mk.length);for(let Uk=0;Uk<mk.length;Uk++){const kk=mk[Uk];if(kk){if(!Array.isArray(kk))throw new Jb(`matColorLookup[${Uk}] is not an array`);Kk[Uk]=1;for(let ek=0;ek<3;ek++)Mk[3*Uk+ek]=Number(kk[ek])}}const xk=Int32Array.from(kk.faceGroupTerrainIds,(kk=>{if(!mr(kk))throw new Jb(`faceGroupTerrainIds holds ${kk}`);return kk})),nk=Uint8Array.from(kk.faceGroupLayout,(kk=>{if(!Number.isInteger(kk)||kk<0||kk>5)throw new Jb(`faceGroupLayout holds ${kk}`);return kk}));return{ZU:fk.emission,skyEmission:fk.skyEmission,OU:fk.filters,opacity:fk.opacity,solid:Uint8Array.from({length:kk.solidLookupArr.length},((ek,ik)=>kk.solidLookupArr[ik]?1:0)),blockFaceMat:Sk,matTerrain:Pk,matAtlasIndex:Float64Array.from({length:kk.atlasIndexLookup.length},((ek,ik)=>Number(kk.atlasIndexLookup[ik]))),matColour:Mk,matColourSet:Kk,materialBlockFlags:kk.materialBlockFlags,faceGroupTerrainIds:xk,faceGroupLayout:nk,visOccluders:null!==(ek=kk.visOccluders)&&void 0!==ek?ek:null,gU:Float64Array.from(kk.gU,Number),GU:Number(kk.GU),flags:(kk.doAO?1:0)|(kk.skipRevAo?2:0)|(kk.compactParts?4:0),oU:kk.oU,keptLightStates:null!==(ik=kk.keptLightStates)&&void 0!==ik?ik:4,decodedChunks:null!==(Dk=kk.decodedChunks)&&void 0!==Dk?Dk:64}}(ek),Dk=Cr((()=>new kk.bindings.KK(ik.ZU,ik.skyEmission,ik.OU,ik.opacity,ik.solid,ik.blockFaceMat,ik.matTerrain,ik.matAtlasIndex,ik.matColour,ik.matColourSet,ik.materialBlockFlags,ik.faceGroupTerrainIds,ik.faceGroupLayout,ik.visOccluders,ik.gU,ik.GU,ik.flags,ik.oU,ik.keptLightStates,ik.decodedChunks)));try{return new Ar(kk,function(kk){return new Proxy(kk,{get(kk,ek){const ik=Reflect.get(kk,ek);return"function"!==typeof ik?ik:function(){for(var ek=arguments.length,Dk=new Array(ek),fk=0;fk<ek;fk++)Dk[fk]=arguments[fk];return Cr((()=>ik.apply(kk,Dk)))}}})}(Dk),ek.oU,ek.compactParts)}catch(fk){throw fk instanceof Dr?Yr.push(Dk):Dk.free(),fk}}constructor(kk,ek,ik,Dk){super(kk,ek,ik),this.mesher=ek,this.compactParts=Dk,this.lastComputeKind="wasm",this.lastComputeMs=0,this.oU=void 0,this.hoodStarts=new Uint32Array(Wb),this.hoodSerials=new Uint32Array(Wb),this.hoodEnds=new Uint32Array(Wb),this.hoodFrom=new Uint32Array(Wb),this.oU=ik}loadHood(kk,ek){const{mesher:ik,view:Dk,oU:fk,hoodSerials:Sk,hoodStarts:bk,hoodEnds:rk,hoodFrom:Pk}=this;for(let Hk=0;Hk<Wb;Hk++){var mk,Mk;Sk[Hk]=null!==(mk=null===(Mk=kk[Hk])||void 0===Mk?void 0:Mk.serial)&&void 0!==mk?mk:lr}const Kk=ik.nU(Sk,ek);Pk.fill(lr);let xk=0;for(let Hk=0;Hk<Wb;Hk++){const ik=kk[Hk];if(ik&&(1===Kk[Hk]||2===Kk[Hk])){const[kk,Dk]=1===Kk[Hk]?Ob(Zb(Hk)[0],ek,fk):[0,fk],[Sk,rk]=ik.from(kk,fk);bk[Hk]=Sk,Pk[Hk]=rk,xk+=ik.to(Dk,fk)-Sk}rk[Hk]=xk}const nk=Dk(Uint8Array,ik.bU(xk),xk);let Uk=0;for(let Hk=0;Hk<Wb;Hk++)Pk[Hk]!==lr&&nk.set(kk[Hk].runs.subarray(bk[Hk],bk[Hk]+rk[Hk]-Uk),Uk),Uk=rk[Hk];ik.iU(rk,Pk,ek)}computeFromNeighbours(kk,ek,ik,Dk,fk,Sk){if(kk!==yr)throw new Error("WasmChunkMesher lights the chunks loadHood loaded: pass LOADED_HOOD");const bk=performance.now(),rk=this.computeWritten(ek,ik,Dk,fk,Sk);return this.lastComputeMs=performance.now()-bk,rk}mesh(kk){const ek=this.checkJob(kk),{mesher:ik,view:Dk}=this,fk=this.writeAndMesh(kk,ek),Sk=ik.SU();return function(kk,ek,ik,Dk,fk){const Sk=ek[1];if(1&ek[0]){const ik=[];for(let fk=0;fk<Sk;fk++){const Sk=ek.subarray(8+2*fk);ik.push(Hr(kk,Sk[0],Sk[1],Dk))}return{lightOnly:!0,lightDataArrays:ik}}const bk=[],rk=0!==(2&ek[0])?[]:null;for(let Mk=0;Mk<Sk;Mk++){const fk=ek.subarray(8+16*Mk),Sk=-1===(0|fk[0])?void 0:0|fk[0],Pk=fk[1],mk=fk[2],Kk=0!==(8&Pk),xk={vertices:Kk?Kr:kk(Uint8Array,fk[3],fk[4]).slice().buffer,usesAtlas:0!==(1&Pk),indices:Dk?Mr:Ur(mk),IU:2&Pk?Hr(kk,fk[5],mk,Dk):null,iH:ik,terrainID:Sk,faceGroups:16&Pk?kk(Int32Array,fk[7],15).slice():null};4&Pk&&(xk.packedVertices=Kk?kk(Uint32Array,fk[6],3*mk).slice():void 0),Kk&&(xk.vertexCount=4*mk),bk.push(xk),rk&&rk.push({terrainID:Sk,numFaces:mk,is:kk(Int16Array,fk[8],mk).slice(),js:kk(Int16Array,fk[9],mk).slice(),ks:kk(Int16Array,fk[10],mk).slice(),wids:kk(Int16Array,fk[11],mk).slice(),hts:kk(Int16Array,fk[12],mk).slice(),Qf:kk(Uint8Array,fk[13],mk).slice(),diagonals:kk(Uint8Array,fk[14],mk).slice()})}const Pk={lightOnly:!1,vertexDataInfo:bk,faceLayout:rk,buildMs:performance.now()-fk},mk=ek[2];return 0!==mk&&(Pk.visNegNeighbours=ek[3]),mk>1&&(Pk.visGraphs=3===mk?kk(Uint16Array,ek[4],8).slice():null),Pk}(Dk,Dk(Uint32Array,ik.UU(),fk),kk.chunk.iH,this.compactParts,Sk)}writeAndMesh(kk,ek){const{mesher:ik,view:Dk,oU:fk}=this;Dk(Uint16Array,ik.YU(),fk).set(kk.chunk.kU);const{light:Sk}=kk;if(Sk&&"provided"===Sk.kind){const kk=ik.wU(Sk.isUint16);Sk.isUint16?Dk(Uint16Array,kk,this.chunkSizeCubed).set(Sk.data):Dk(Uint8Array,kk,this.chunkSizeCubed).set(Sk.data)}let bk=0,rk=0;for(let Mk=0;Mk<6;Mk++){var Pk,mk;const ek=null===(Pk=kk.neighbourLightBorders)||void 0===Pk?void 0:Pk[Mk];ek&&(Dk(Uint16Array,ik.eU(Mk),fk*fk).set(ek),bk|=1<<Mk),null!==(mk=kk.neighbourLightIsUint16)&&void 0!==mk&&mk[Mk]&&(rk|=1<<Mk)}return 32&ek&&this.writeLayout(kk.lightOnlyLayout),ik.mesh(ek,kk.neighboursBitmask,kk.neighbourOpenSkyFaces,bk,rk)}checkJob(kk){const{chunk:ek,light:ik}=kk,Dk=this.oU;if(ek.kU.length!==Dk)throw new Jb(`WasmChunkMesher needs a _wholeLayerVoxel of ${Dk}`);if(!Lr(kk.neighboursBitmask)||!Lr(kk.neighbourOpenSkyFaces))throw new Jb(`WasmChunkMesher neighbours bitmask ${kk.neighboursBitmask} or open sky faces ${kk.neighbourOpenSkyFaces}`);let fk=0;if(ik){const kk="provided"===ik.kind;if(kk&&(ik.data.length!==this.chunkSizeCubed||ik.data instanceof Uint16Array!==ik.isUint16))throw new Jb(`WasmChunkMesher light is not ${this.chunkSizeCubed} ${ik.isUint16?"u16":"u8"} values`);fk|=wr[ik.kind]|(kk&&ik.isUint16?4:0)}const Sk=kk.neighbourLightBorders;if(Sk){fk|=8;for(let kk=0;kk<6;kk++){const ek=Sk[kk];if(ek&&ek.length!==Dk*Dk)throw new Jb(`WasmChunkMesher light border ${kk} is not ${Dk*Dk} light values`)}}kk.neighbourLightIsUint16&&(fk|=16);const bk=ik?kk.lightOnlyLayout:null;if(bk){for(const kk of bk){const ek=kk.numFaces,ik=[kk.is,kk.js,kk.ks,kk.wids,kk.hts,kk.Qf,kk.diagonals];if(!Lr(ek)||ik.some((kk=>kk.length!==ek)))throw new Jb("WasmChunkMesher face layout arrays disagree with numFaces")}fk|=32}return fk|(kk.visGraphs?64:0)|(ek.QU?128:0)|(ek.FU?256:0)}writeLayout(kk){const{mesher:ek,view:ik}=this;let Dk=0;for(const Kk of kk)Dk+=Kk.numFaces;ek.mU(kk.length,Dk);const fk=ek.PU(),Sk=ek.rU(),bk=ek.MU(),rk=ik(Uint32Array,fk,kk.length),Pk=ik(Int16Array,Sk,5*Dk),mk=ik(Uint8Array,bk,2*Dk);let Mk=0;kk.forEach(((kk,ek)=>{rk[ek]=kk.numFaces,Pk.set(kk.is,Mk),Pk.set(kk.js,Dk+Mk),Pk.set(kk.ks,2*Dk+Mk),Pk.set(kk.wids,3*Dk+Mk),Pk.set(kk.hts,4*Dk+Mk),mk.set(kk.Qf,Mk),mk.set(kk.diagonals,Dk+Mk),Mk+=kk.numFaces}))}}function jr(kk){return/out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(kk))}new Set(["start_refused","light_state_refused","abort_refused","trap_out_of_memory"]),new Set;function sr(kk,ek){for(const ik of ek)kk.push(ik.is.buffer),kk.push(ik.js.buffer),kk.push(ik.ks.buffer),kk.push(ik.wids.buffer),kk.push(ik.hts.buffer),kk.push(ik.Qf.buffer),kk.push(ik.diagonals.buffer)}class dr extends Error{}let Vr,Fr=null,ur=null;const qr=[];let Ir=0,zr=!1,Qr=0;let vr=0,Er=null,hr=!1;const ar=new class{constructor(){this.runs=new Map}take(kk){kk.forgetAll&&this.runs.clear();for(const ek of kk.forgotten)this.runs.delete(ek);return kk.sentIds.forEach(((ek,ik)=>{this.runs.set(ek,new Xb(kk.sentRuns[ik]))})),Array.from(kk.ids,(kk=>{if(kk<0)return null;const ek=this.runs.get(kk);if(!ek)throw new Error(`The meshing worker holds no chunk ${kk}`);return ek}))}clear(){this.runs.clear()}get size(){return this.runs.size}get bytes(){let kk=0;for(const{runs:ek}of this.runs.values())kk+=ek.byteLength;return kk}},Wr=new class{constructor(){this.entries=new Map}take(kk){var ek;const{lightHood:ik,hood:Dk}=kk;ik.forgetAll&&this.entries.clear();for(const fk of ik.forgotten)this.entries.delete(fk);ik.providedTag&&(kk.providedLightData=this.XM(Dk.ids[13],ik.providedTag).slice()),null===(ek=ik.borderTags)||void 0===ek||ek.forEach(((ek,ik)=>{if(ek){const fk=this.XM(Dk.ids[Tb[ik]],ek);kk.neighbourLightBorders[ik]=Bb(fk,kk.neighbourLightIsUint16[ik],ik,kk.chunk.size)}}))}keep(kk,ek){if(!kk.lightHood.keep)return;const ik=kk.hood.ids[13];ek?this.entries.set(ik,{tag:kk.meshJobId,data:ek.slice()}):this.entries.delete(ik)}XM(kk,ek){const ik=this.entries.get(kk);if((null===ik||void 0===ik?void 0:ik.tag)!==ek)throw new Error(`The meshing worker holds no light ${ek} for chunk ${kk}${ik?`, but light ${ik.tag}`:""}`);return ik.data}clear(){this.entries.clear()}get size(){return this.entries.size}};function tr(kk,ek){const ik={type:"lightEngineReport",message:kk,failureKind:ek};self.postMessage(ik)}function Xr(){if(zr)return;zr=!0;const kk={type:"lightEngineReport",message:`No wasm mesher on this worker (${Zr()})`,lost:!0};self.postMessage(kk)}function Br(kk){return kk instanceof Error?kk.message:String(kk)}function cr(kk){try{return ur=Ar.create(kk,Vr),!1}catch(ek){const ik=kk.takeRefusedAllocation();ek instanceof Dr&&kk.markFailed(ek.trap);const Dk=ik>0&&!(ek instanceof kr)?` (alloc_failed ${ik} bytes)`:"",fk=or(ek),Sk=ik>0||ek instanceof kr;return tr(`Wasm mesher failed${Dk} to start: ${Br(ek)}`,fk?void 0:Sk?"start_refused":"start_failed"),Sk||fk}}function Tr(){var kk;null!==(kk=Fr)&&void 0!==kk&&kk.isReady()?ur.free():qr.push(ur),ur=null}function or(kk){return!(kk instanceof Dr)&&!(kk instanceof dr)&&jr(kk)}function Zr(){if(null!==Er)return Er;const kk=kD();return"ready"===kk?"its start failed":"failed"===kk?SD():`wasm ${kk}`}self.onmessage=kk=>{let{data:{type:ek,data:ik}}=kk;switch(ek){case"wasmInit":Vb(ik)||tr(`Wasm did not start (${SD()}), so this worker meshes nothing`);break;case"meshingInit":!function(kk){Vr=kk,ar.clear(),Wr.clear(),Ir=0,zr=!1,vr=0,Er=null,ur&&Tr();Fr=function(kk){const ek=function(kk){var ek;return kk.isBloxdWasmReady()?{bindings:kk.getBloxdWasm(),view:kk.wasmView,BufferView:kk.WasmBufferView,isReady:kk.isBloxdWasmReady,markFailed:kk.markBloxdWasmFailed,takeRefusedAllocation:null!==(ek=kk.takeBloxdWasmRefusedAllocation)&&void 0!==ek?ek:()=>0}:null}(kk);return ek?{...ek,trapContext:()=>{const ek=Math.round(kk.getBloxdWasmMemory().buffer.byteLength/2**20),ik=kk.getLastBloxdWasmPanic();return`wasm memory ${ek} MB, ${null===ik?"no panic message":`panic: ${function(kk){return kk.replace(/\\s*\\n\\s*/g," / ").slice(0,300)}(ik)}`}`},takeRefusedAllocation:kk.takeBloxdWasmRefusedAllocation}:null}(fk),Fr&&cr(Fr);ur||Xr()}(ik);break;case"MH":!function(kk){const ek=performance.now(),{i:ik,j:Dk,k:fk}=kk.chunk,Sk={data:null,isUint16:!1,kind:"computed",source:"none",seedColumnsRead:null,ms:0,engine:null};let bk=!1;const rk=null!==ur;hr=!1;try{const ik=ar.take(kk.hood);Wr.take(kk),bk=!0;const Dk=function(kk,ek,ik){ur&&!Fr.isReady()&&Tr();const Dk=ur;if(!Dk)throw new dr(`No wasm mesher on this worker (${Zr()})`);let fk=!1;try{Dk.loadHood(ek,function(kk){const{chunk:ek}=kk;return!kk.computeLighting||kk.providedLightData||ek.FU||ab(ek.QU,kk.chunkJ,kk.highestChunkJ)?1:hb}(kk)),fk=!0;const Sk=function(kk,ek,ik){!function(kk,ek,ik,Dk){const{chunk:fk,skySeedGrid:Sk,highestChunkJ:bk,chunkJ:rk}=ek;if(!ek.computeLighting)return;if(kk.returnBuffers(ek.reusableLightBuffers),ek.providedLightData)return Dk.data=ek.providedLightData,Dk.isUint16=ek.providedLightIsUint16,Dk.kind="provided",void(Dk.source=ek.providedLightReused?"reused":"server");if(ab(fk.QU,rk,bk))return;if(fk.FU)return Dk.data=kk.getZeroedFullChunkLightData(),Dk.isUint16=!1,void(Dk.kind="zeroedFull");const{i:Pk,j:mk,k:Mk}=fk,Kk=kk.computeFromNeighbours(ik,ek.neighboursBitmask,Sk,bk,rk,`${Pk},${mk},${Mk}`);if(Dk.ms=kk.lastComputeMs,Dk.engine=kk.lastComputeKind,Dk.data=Kk.IU,Dk.isUint16=Kk.isUint16,Dk.kind="computed",Dk.source="clientBfs",function(kk,ek){return null!==ek&&kk<ek}(rk,bk)){const ek=new Uint8Array(Sk.length);kk.skySeedColumnsRead(ek)&&(Dk.seedColumnsRead=ek)}}(kk,ek,yr,ik);const Dk=performance.now(),fk=kk.mesh({chunk:ek.chunk,neighboursBitmask:ek.neighboursBitmask,light:ik.data&&{data:ik.data,isUint16:ik.isUint16,kind:ik.kind},neighbourLightBorders:ek.neighbourLightBorders,neighbourLightIsUint16:ek.neighbourLightIsUint16,neighbourOpenSkyFaces:ek.neighbourOpenSkyFaces,lightOnlyLayout:ek.lightOnly?ek.cachedFaceLayout:null,visGraphs:!1!==ek.visGraphs});return{...fk,meshMs:performance.now()-Dk}}(Dk,kk,ik);return vr=0,Sk}catch(Sk){const{i:ek,j:bk,k:rk}=kk.chunk;if(Sk instanceof Jb){const Pk=ik.data;Object.assign(ik,{data:null,isUint16:!1,kind:"computed",source:"none",seedColumnsRead:null,ms:0,engine:null});let mk=kk.reusableLightBuffers;if(fk&&(mk=Pk&&Pk!==kk.providedLightData?[Pk.buffer]:[]),Dk.returnBuffers(mk),Sk instanceof kr){const kk=++Qr;tr(0===(kk&kk-1)?`Wasm mesher could not keep a light state: ${Sk.message} (${kk} on this thread), failing chunk ${ek},${bk},${rk}`:null,"light_state_refused"),++vr>=3&&(Er=`its memory can\'t grow: ${vr} light states refused in a row`,Tr())}else{const kk=Ir<3;kk&&Ir++,tr(kk?`Wasm mesher could not take chunk ${ek},${bk},${rk}: ${Br(Sk)}`:null,"refused_input")}throw Sk}if(or(Sk))throw Sk;const Pk=Fr.takeRefusedAllocation();Sk instanceof Dr&&Fr.markFailed(Sk.trap),Tr();throw tr(`Wasm mesher failed${Pk>0?` (alloc_failed ${Pk} bytes)`:""} on chunk ${ek},${bk},${rk}: ${Br(Sk)}`,function(kk,ek){if(!(kk instanceof Dr))return"threw";if(ek>0)return"abort_refused";return jr(kk.trap)?"trap_out_of_memory":"trap"}(Sk,Pk)),hr=Pk>0,Fr.isReady()&&cr(Fr)&&(hr=!0),Sk}}(kk,ik,Sk);Wr.keep(kk,"clientBfs"===Sk.source?Sk.data:null),"lightDataArrays"in Dk?function(kk,ek,ik,Dk,fk){const{i:Sk,j:bk,k:rk}=kk.chunk,{skySeedGrid:Pk}=kk,mk=kk.cachedFaceLayout,Mk=ik.data,Kk=[];ik.seedColumnsRead&&Kk.push(ik.seedColumnsRead.buffer);for(const nk of ek)Kk.push(nk.buffer);Kk.push(Mk.buffer),Pk&&Kk.push(Pk.buffer),sr(Kk,mk);const xk={type:"meshed",i:Sk,j:bk,k:rk,meshJobId:kk.meshJobId,lightOnlyUpdate:!0,lightDataArrays:ek,faceLayout:mk,computedLightData:Mk,WS:ik.isUint16,lightSource:ik.source,serverLightCovered:kk.serverLightCovered,reusableSkySeedGrid:Pk,lightSeedColumnsRead:ik.seedColumnsRead,lightMs:ik.ms,meshMs:Dk,jobMs:performance.now()-fk,lightEngineKind:ik.engine};self.postMessage(xk,Kk)}(kk,Dk.lightDataArrays,Sk,Dk.meshMs,ek):function(kk,ek,ik,Dk){const{i:fk,j:Sk,k:bk}=kk.chunk,{skySeedGrid:rk}=kk,{vertexDataInfo:Pk,faceLayout:mk,visGraphs:Mk,visNegNeighbours:Kk}=ek,xk=[];ik.seedColumnsRead&&xk.push(ik.seedColumnsRead.buffer);for(const Uk of Pk)Uk.vertices.byteLength>0&&xk.push(Uk.vertices),Uk.indices.buffer.byteLength>0&&xk.push(Uk.indices.buffer),Uk.IU&&xk.push(Uk.IU.buffer),Uk.packedVertices&&xk.push(Uk.packedVertices.buffer),Uk.faceGroups&&xk.push(Uk.faceGroups.buffer);ik.data&&xk.push(ik.data.buffer),rk&&xk.push(rk.buffer),mk&&sr(xk,mk),Mk&&xk.push(Mk.buffer);const nk={type:"meshed",i:fk,j:Sk,k:bk,meshJobId:kk.meshJobId,lightOnlyUpdate:!1,vertexDataInfo:Pk,faceLayout:mk,computedLightData:ik.data,WS:ik.isUint16,lightSource:ik.source,serverLightCovered:kk.serverLightCovered,reusableSkySeedGrid:rk,lightSeedColumnsRead:ik.seedColumnsRead,lightMs:ik.ms,meshMs:ek.meshMs,jobMs:performance.now()-Dk,buildMs:ek.buildMs,mesherEngineKind:"wasm",lightEngineKind:ik.engine,...void 0===Kk?{}:{visNegNeighbours:Kk},...void 0===Mk?{}:{visGraphs:Mk}};self.postMessage(nk,xk)}(kk,Dk,Sk,ek)}catch(Pk){console.error(`Worker meshChunk failed for chunk (${ik}, ${Dk}, ${fk})`,Pk),Wr.keep(kk,null);const ek=Pk instanceof kr||hr||or(Pk),mk=rk&&!ur&&!(Pk instanceof Jb)&&!(Pk instanceof dr);!function(kk,ek,ik,Dk,fk,Sk,bk,rk,Pk,mk){const Mk=[];bk&&Mk.push(bk.buffer),rk&&Mk.push(rk.buffer);const Kk={type:"meshError",i:kk,j:ek,k:ik,meshJobId:Dk,errorMessage:fk instanceof Error?fk.message:String(fk),cachesTaken:Sk,reusableLightBuffer:bk,reusableSkySeedGrid:rk,lostMesher:Pk,refusedState:mk};self.postMessage(Kk,Mk)}(ik,Dk,fk,kk.meshJobId,Pk,bk,Sk.data,kk.skySeedGrid,mk,ek),ur||Xr()}}(ik);break;default:console.error("Unrecognised meshing worker message type:",ek)}}})();', "Worker", void 0, ik.p + "meshing.worker.ef434da4.worker.js")
+    function wC(CC, zC) {
+      return CC.getContext("2d", zC)
+    }
+    ZC.d(zC, {
+      b: () => wC,
+      f: () => QC
+    })
+  },
+  40606: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => fC
+    });
+    const QC = 1 << 20,
+      wC = 1 << 21,
+      bC = 1024,
+      nC = 2048;
+
+    function fC(CC, zC, ZC) {
+      const fC = CC + QC,
+        oC = zC + bC,
+        qC = ZC + QC;
+      return fC < 0 || fC >= wC || qC < 0 || qC >= wC || oC < 0 || oC >= nC ? -1 : (fC * wC + qC) * nC + oC
     }
   },
-  35819: kk => {
-    kk.exports = function(kk, ek, ik, Dk) {
-      var fk = self || window;
-      try {
-        try {
-          var Sk;
-          try {
-            Sk = new fk.Blob([kk])
-          } catch (mk) {
-            (Sk = new(fk.BlobBuilder || fk.WebKitBlobBuilder || fk.MozBlobBuilder || fk.MSBlobBuilder)).append(kk), Sk = Sk.getBlob()
-          }
-          var bk = fk.URL || fk.webkitURL,
-            rk = bk.createObjectURL(Sk),
-            Pk = new fk[ek](rk, ik);
-          return bk.revokeObjectURL(rk), Pk
-        } catch (mk) {
-          return new fk[ek]("data:application/javascript,".concat(encodeURIComponent(kk)), ik)
-        }
-      } catch (mk) {
-        if (!Dk) throw Error("Inline worker is not supported");
-        return new fk[ek](Dk, ik)
+  40598: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC,
+      i: () => nC,
+      l: () => wC,
+      n: () => bC,
+      o: () => FC,
+      q: () => qC,
+      u: () => oC,
+      y: () => fC
+    });
+    ZC(3436);
+    ZC(40606);
+
+    function QC(CC) {}
+
+    function wC(CC) {}
+
+    function bC(CC) {}
+
+    function nC(CC) {}
+
+    function fC(CC) {}
+
+    function oC(CC, zC, ZC) {}
+
+    function qC(CC) {}
+
+    function FC(CC) {}
+  },
+  40590: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => RC,
+      e: () => gC,
+      f: () => jC,
+      h: () => hC,
+      i: () => dC,
+      m: () => mC,
+      q: () => GC,
+      u: () => pC,
+      w: () => PC,
+      x: () => eC,
+      A: () => TC,
+      B: () => JC,
+      E: () => cC,
+      I: () => DC,
+      K: () => HC,
+      L: () => lC
+    });
+    var QC = ZC(4727),
+      wC = ZC(40476),
+      bC = (ZC(40598), ZC(10));
+    class nC {
+      constructor(CC, zC) {
+        this.memory = CC, this.access = zC, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.HW = 0, this.u32 = new bC.l(0), this.f32 = new bC.f(0), this.u8 = new bC.b(0), this.dataView = new bC.h(new ArrayBuffer(0)), this.refresh()
       }
+      refresh() {
+        this.ptr = this.access.ptr(), this.HW = this.access.HW(), this.buffer = (0, bC.F)(this.memory()), this.u32 = new bC.l(this.buffer, this.ptr, this.HW >>> 2), this.f32 = new bC.f(this.buffer, this.ptr, this.HW >>> 2), this.u8 = new bC.b(this.buffer, this.ptr, this.HW), this.dataView = new bC.h(this.buffer, this.ptr, this.HW)
+      }
+      ensureViews() {
+        (0, bC.F)(this.memory()) !== this.buffer && this.refresh()
+      }
+      get view() {
+        return this.ensureViews(), this.dataView
+      }
+      room(CC) {
+        return !!this.fits(CC) || (this.dropped++, !1)
+      }
+      fits(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
+        this.ensureViews();
+        const ZC = zC + CC;
+        return ZC <= this.HW || ZC <= QC.Hc && 0 !== this.access.reserve(ZC) && (this.refresh(), ZC <= this.HW)
+      }
+      consume(CC) {
+        const zC = this.cursor - CC;
+        zC > 0 && CC > 0 && (this.ensureViews(), this.u8.copyWithin(0, CC, this.cursor)), this.cursor = zC > 0 ? zC : 0
+      }
+      writeRecord(CC, zC, ZC, wC, bC) {
+        if (!this.room(QC.sb)) return !1;
+        const nC = this.cursor >>> 2;
+        return this.u32[nC] = 65535 & CC | (65535 & zC) << 16, this.f32[nC + 1] = ZC, this.f32[nC + 2] = wC, this.u32[nC + 3] = bC >>> 0, this.cursor += QC.sb, !0
+      }
+      writeOptions(CC, zC) {
+        const ZC = zC.byteLength,
+          wC = QC.sb + (0, QC.pe)(ZC);
+        if (!this.fits(wC)) return !1;
+        const bC = this.cursor,
+          nC = bC >>> 2;
+        this.u32[nC] = QC.wb.Options, this.u32[nC + 1] = ZC, this.u32[nC + 2] = 0, this.u32[nC + 3] = CC >>> 0;
+        const fC = bC + QC.sb;
+        return this.u8.set(zC, fC), this.u8.fill(0, fC + ZC, bC + wC), this.cursor += wC, !0
+      }
+      writeWorkerRecord(CC, zC, ZC, wC, bC, nC) {
+        const fC = nC.byteLength,
+          oC = QC.Jd + (0, QC.pe)(fC);
+        if (fC > QC.Hd) return this.dropped++, !1;
+        if (!this.room(oC)) return !1;
+        const qC = this.cursor,
+          FC = qC >>> 2;
+        this.u32[FC] = CC >>> 0, this.u32[FC + 1] = 65535 & zC | (65535 & ZC) << 16, this.u32[FC + 2] = wC >>> 0, this.u32[FC + 3] = bC >>> 0, this.u32[FC + 4] = fC;
+        const WC = qC + QC.Jd;
+        return this.u8.set(nC, WC), this.u8.fill(0, WC + fC, qC + oC), this.cursor += oC, !0
+      }
+      written() {
+        return this.ensureViews(), this.u8.subarray(0, this.cursor)
+      }
+      writeFrame(CC, zC) {
+        return this.writeNet(QC.Yb.Frame, CC, zC)
+      }
+      writeOpen(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(QC.Yb.Open, CC, oC(zC))
+      }
+      writeClose(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(QC.Yb.Close, CC, oC(zC))
+      }
+      writeNet(CC, zC, ZC) {
+        const wC = ZC.byteLength,
+          bC = QC.Wb + (0, QC.pe)(wC);
+        if (wC > QC.Qb) return this.dropped++, !1;
+        if (!this.room(bC)) return !1;
+        const nC = this.cursor;
+        this.u32[nC >>> 2] = wC, this.u32[1 + (nC >>> 2)] = (0, QC.me)(CC, zC);
+        const fC = nC + QC.Wb;
+        return this.u8.set(ZC, fC), this.u8.fill(0, fC + wC, nC + bC), this.cursor += bC, !0
+      }
+      RM(CC, zC, ZC) {
+        const wC = QC.v + (0, QC.pe)(ZC);
+        if (!this.room(wC)) return -1;
+        const bC = this.cursor;
+        this.u32[bC >>> 2] = 65535 & CC | (65535 & zC) << 16, this.u32[1 + (bC >>> 2)] = ZC;
+        const nC = bC + QC.v;
+        return this.u8.fill(0, nC, bC + wC), this.cursor += wC, nC
+      }
+      growForCmd(CC) {
+        return this.fits(QC.v + (0, QC.pe)(CC), 0)
+      }
+      writeCmd(CC, zC, ZC) {
+        const QC = this.RM(CC, zC, ZC.byteLength);
+        return !(QC < 0) && (this.u8.set(ZC, QC), !0)
+      }
+      copyWritten(CC, zC) {
+        return this.ensureViews(), this.u8.slice(CC, CC + zC)
+      }
+    }
+    const fC = new bC.b(0);
+
+    function oC(CC) {
+      if (0 === CC) return fC;
+      const zC = new bC.b(QC.Tb);
+      for (let ZC = 0; ZC < QC.Tb; ZC++) zC[ZC] = CC >>> 8 * ZC & 255;
+      return zC
+    }
+    class qC {
+      constructor(CC, zC) {
+        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new nC(zC, {
+          ptr: () => CC.yW(),
+          HW: () => CC.YbC(),
+          reserve: zC => CC.TbC(zC)
+        }), this.net = new nC(zC, {
+          ptr: () => CC.ubC(),
+          HW: () => CC.cbC(),
+          reserve: zC => CC.abC(zC)
+        }), this.worker = new nC(zC, {
+          ptr: () => CC.FnC(),
+          HW: () => CC.qnC(),
+          reserve: zC => CC.tbC(zC)
+        }), this.cmd = new nC(zC, {
+          ptr: () => CC.AbC(),
+          HW: () => CC.GbC(),
+          reserve: zC => CC.RbC(zC)
+        })
+      }
+      reset(CC, zC, ZC) {
+        this.input.consume(CC), this.worker.consume(zC), this.cmd.consume(ZC)
+      }
+    }
+    var FC = ZC(36180),
+      WC = ZC(2351),
+      NC = ZC(4719),
+      MC = ZC(40611);
+    const gC = "coreFrame",
+      SC = "fatalStatus",
+      pC = "otherCall",
+      PC = "coreRings",
+      GC = "netIn",
+      RC = "abi",
+      AC = "netOut",
+      xC = "workerOut",
+      JC = "worldgenHost",
+      IC = "eventWalker",
+      iC = "netEvent",
+      vC = "envEvent",
+      eC = "sharedTables",
+      hC = "inputAction",
+      KC = "frameSends",
+      YC = new Set([IC, iC, vC, KC, hC, eC]),
+      dC = "wasmMemory",
+      mC = "meshHost";
+
+    function HC(CC, zC) {
+      CC.forEachWorkerOut(((ZC, wC, bC) => {
+        if ((0, QC.fe)(ZC)) try {
+          var nC;
+          null === (nC = zC.worldgen) || void 0 === nC || nC.take(ZC, bC)
+        } catch (oC) {
+          CC.crash(JC, oC)
+        } else try {
+          var fC;
+          null === (fC = zC.mesh) || void 0 === fC || fC.take(ZC, wC, bC)
+        } catch (oC) {
+          CC.crash(mC, oC)
+        }
+      }))
+    }
+    const EC = 1048576;
+
+    function lC(CC, zC) {
+      let ZC = !1;
+      const QC = () => {
+        ZC = !1, zC()
+      };
+      return () => {
+        !ZC && CC.cursor >= EC && (ZC = !0, queueMicrotask(QC))
+      }
+    }
+    const XC = new Set([SC, pC, JC, mC]);
+
+    function cC(CC) {
+      return YC.has(CC.site) ? CC.error instanceof WebAssembly.RuntimeError || (0, wC.h)(CC.error) : !XC.has(CC.site) && CC.error instanceof Error
+    }
+    const uC = "events",
+      rC = [],
+      sC = "debugLog",
+      TC = "terrainTextures",
+      aC = "sunShadowTextures",
+      tC = new TextDecoder;
+
+    function DC(CC, zC) {
+      const {
+        site: ZC,
+        error: wC,
+        header: bC
+      } = CC, nC = bC ? (0, QC.$d)(bC.lastError) : "noFrame", fC = `CORE-${ZC===SC?nC:ZC}`, oC = null === wC || void 0 === wC ? "" : ` ${(0,FC.m)(wC)}`, qC = {
+        site: ZC,
+        wasmBuild: zC.wasm,
+        clientVersion: zC.client
+      };
+      return bC && (qC.status = String(bC.status), qC.lastError = nC, qC.lastErrorCode = String(bC.lastError), qC.lastErrorDetail = String(bC.lastErrorDetail), qC.errorCount = String(bC.errorCount), qC.frameIndex = String(bC.frameIndex), qC.tickIndex = String(bC.tickIndex)), {
+        code: fC,
+        message: `core ${ZC}, last error ${nC};${oC}`,
+        details: qC
+      }
+    }
+    class jC {
+      constructor(CC, zC, ZC) {
+        this.core = CC, this.memory = zC, this.handlers = ZC, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
+          ptr: 0,
+          len: 0,
+          net: rC,
+          netOffsets: this.netOffsets,
+          kind: "none"
+        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new qC(CC, zC)
+      }
+      get netKeptFrames() {
+        return this.keptFrames
+      }
+      get netWrittenSinceFrame() {
+        return this.rings.net.cursor - this.netKept
+      }
+      hasPendingCommands() {
+        return this.rings.cmd.cursor > 0
+      }
+      framePaces(CC) {
+        if (this.stopped || this.drawsHeld) return !1;
+        try {
+          return this.core.ebC(CC)
+        } catch (zC) {
+          return this.crash(gC, zC), !1
+        }
+      }
+      get isStopped() {
+        return this.stopped
+      }
+      frame(CC, zC) {
+        var ZC;
+        let bC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this.stopped) return !1;
+        if (!this.writePendingInput()) return !1;
+        const {
+          input: nC,
+          net: fC,
+          worker: oC,
+          cmd: qC
+        } = this.rings, FC = fC.cursor, WC = zC && !this.drawsHeld;
+        let pC = QC.R.Fatal;
+        const PC = nC.cursor,
+          RC = oC.cursor,
+          AC = qC.cursor;
+        let xC, JC = null;
+        const vC = this.handlers.onSends;
+        try {
+          const zC = (WC ? QC.ib.Draws : 0) | (bC ? QC.ib.NetAll : 0) | (vC ? QC.ib.StopForSends : 0);
+          pC = (0, MC.g)((() => {
+            let ZC = this.core.frame(CC, PC, fC.cursor, RC, zC, AC);
+            for (; ZC === QC.kd && vC;) {
+              var wC;
+              if (xC ??= null === (wC = this.gameHost) || void 0 === wC ? void 0 : wC.takeFault(), void 0 === xC && !this.takeSends(vC)) return QC.R.Fatal;
+              ZC = this.core.sp()
+            }
+            return ZC
+          }))
+        } catch (tC) {
+          JC = {
+            error: tC
+          }
+        }
+        xC ??= null === (ZC = this.gameHost) || void 0 === ZC ? void 0 : ZC.takeFault();
+        const eC = this.stopped || null !== JC || void 0 !== xC;
+        this.rings.reset(eC ? nC.cursor : PC, eC ? oC.cursor : RC, eC ? qC.cursor : AC);
+        const hC = null === JC && void 0 === xC,
+          KC = hC && !this.stopped && pC === QC.R.Fatal && 0 === this.core.AM(),
+          YC = hC && !KC ? this.headerView() : null,
+          dC = KC ? {
+            ...null !== (mC = this.lastHeader) && void 0 !== mC ? mC : (0, QC.re)(new Uint32Array(QC.lb)),
+            status: QC.R.Fatal,
+            lastError: QC.N.CoreBusy,
+            lastErrorDetail: 0
+          } : null === YC ? null : (0, QC.re)(YC);
+        var mC;
+        null !== dC && (this.lastHeader = dC);
+        const HC = null !== dC && pC !== QC.R.Fatal,
+          EC = HC && null !== YC ? YC[QC.pb.NetInKept] : 0,
+          lC = HC && EC <= FC && EC % 4 === 0 ? EC : null;
+        var XC, cC;
+        null !== dC && null !== lC && pC === QC.R.Errors && (null === (XC = (cC = this.handlers).onErrors) || void 0 === XC || XC.call(cC, dC));
+        const uC = null === lC ? rC : this.readEvents(FC);
+        if (fC.consume(FC - (null !== lC && void 0 !== lC ? lC : 0)), this.netKept = null !== lC && void 0 !== lC ? lC : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== JC) return this.crash(gC, void 0 === xC || xC instanceof wC.b ? JC.error : xC), !1;
+        if (void 0 !== xC || null === dC) return this.crashOn(gC, xC), !1;
+        if (KC) return this.crash(SC, null), !1;
+        const sC = this.headerView()[QC.pb.FrameDraw];
+        if (this.lastFrameKind = (0, NC.f)(WC, sC), pC === QC.R.Fatal) return this.crash(SC, null), !1;
+        if (null === lC) return this.crash(GC, `the core kept ${EC} of ${FC} net-in bytes`), !1;
+        if (this.eventWalker) {
+          if (this.stopped) return !1;
+          const CC = this.frameEvents,
+            zC = this.headerView();
+          CC.ptr = zC[QC.pb.EventsPtr], CC.len = zC[QC.pb.EventsLen], CC.net = uC, CC.kind = this.lastFrameKind;
+          try {
+            this.eventWalker(CC)
+          } catch (tC) {
+            return this.crashOn(IC, tC), !1
+          }
+          return this.handEnvEvents()
+        }
+        for (const QC of uC) {
+          if (this.stopped) return !1;
+          try {
+            var TC, aC;
+            null === (TC = (aC = this.handlers).onNetEvent) || void 0 === TC || TC.call(aC, QC)
+          } catch (tC) {
+            return this.crashOn(iC, tC), !1
+          }
+        }
+        return this.handEnvEvents()
+      }
+      handEnvEvents() {
+        for (const bC of this.graceEvents) {
+          if (this.stopped) return !1;
+          try {
+            var CC, zC;
+            null === (CC = (zC = this.handlers).onReconnectGrace) || void 0 === CC || CC.call(zC, bC)
+          } catch (wC) {
+            return this.crashOn(iC, wC), !1
+          }
+        }
+        for (const bC of this.envEvents) {
+          if (this.stopped) return !1;
+          try {
+            var ZC, QC;
+            null === (ZC = (QC = this.handlers).onEnvEvent) || void 0 === ZC || ZC.call(QC, bC)
+          } catch (wC) {
+            return this.crashOn(vC, wC), !1
+          }
+        }
+        return !this.stopped
+      }
+      setEventWalker(CC) {
+        this.eventWalker = CC
+      }
+      writePendingInput() {
+        if (this.stopped) return !1;
+        const {
+          input: CC
+        } = this.rings;
+        try {
+          const zC = this.unsentUiPrefs;
+          zC && CC.writeRecord(QC.wb.UiPrefs, 0, zC.nametagCutDistance, 0, (0, QC.ve)(zC)) && (this.unsentUiPrefs = null);
+          const ZC = this.unsentEnvPrefs;
+          ZC && CC.writeRecord(QC.wb.EnvPrefs, (0, QC.be)(ZC), ZC.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
+          const wC = this.unsentLookPrefs;
+          wC && CC.writeRecord(QC.wb.Sensitivity, 0, wC.mouse, wC.touch, (0, WC.j)(wC.fovPercent)) && (this.unsentLookPrefs = null);
+          let bC = 0;
+          for (const {
+              aux: QC,
+              payload: nC
+            }
+            of this.unsentOptions) {
+            if (!CC.writeOptions(QC, nC)) {
+              if (CC.cursor > 0) break;
+              this.optionsDropped++
+            }
+            bC++
+          }
+          bC > 0 && this.unsentOptions.splice(0, bC)
+        } catch (zC) {
+          return this.crash(PC, zC), !1
+        }
+        return !0
+      }
+      setHoldDraws(CC) {
+        this.drawsHeld = CC
+      }
+      setUiPrefs(CC) {
+        this.unsentUiPrefs = {
+          ...CC
+        }
+      }
+      setEnvPrefs(CC) {
+        this.unsentEnvPrefs = {
+          ...CC
+        }
+      }
+      setLookPrefs(CC) {
+        this.unsentLookPrefs = {
+          ...CC
+        }
+      }
+      queueOptions(CC, zC) {
+        return !this.isStopped && (zC.byteLength > QC.dc.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
+          aux: CC,
+          payload: zC
+        }), !0))
+      }
+      setChunkCap(CC) {
+        return this.callCore("setChunkCap", null, (zC => zC.BbC(CC)))
+      }
+      shedMemory(CC) {
+        const zC = this.callCore("shedMemory", null, (zC => zC.QnC(CC)));
+        return 0 === zC ? null : zC
+      }
+      addDistanceInUse() {
+        const CC = this.callCore("addDistanceInUse", null, (CC => CC.MbC()));
+        return 0 === CC ? null : CC
+      }
+      setChunkAddDistance(CC, zC) {
+        return this.callCore("setChunkAddDistance", !1, (ZC => ZC.UbC(CC, zC)))
+      }
+      setGameHost(CC) {
+        return this.callCore("setGameHost", !1, (zC => (zC.vbC(CC), this.gameHost = CC, !0)))
+      }
+      setAntiCheatProbes(CC) {
+        return this.callCore("setAntiCheatProbes", !1, (zC => zC.ybC(CC)))
+      }
+      setAmbientOcclusion(CC) {
+        this.callCore("setAmbientOcclusion", void 0, (zC => {
+          zC.jbC(CC)
+        }))
+      }
+      setPoseLod(CC) {
+        this.callCore("setPoseLod", void 0, (zC => {
+          zC.kbC(CC)
+        }))
+      }
+      setDebugLog(CC, zC) {
+        this.callCore(sC, void 0, (ZC => {
+          ZC.Ep(CC, zC)
+        }))
+      }
+      takeDebugLog(CC) {
+        return this.callCore(sC, [], (zC => zC.lp(CC)))
+      }
+      setTextureLayers(CC) {
+        return this.callCore("setTextureLayers", !1, (zC => zC.ZnC(CC)))
+      }
+      setBlockColours(CC) {
+        let {
+          blocks: zC,
+          counts: ZC,
+          values: QC
+        } = CC;
+        return this.callCore("setBlockColours", !1, (CC => CC.tZC(zC, ZC, QC)))
+      }
+      terrainTextureNames() {
+        return this.callCore(TC, [], (CC => CC.onC()))
+      }
+      setTerrainTextures(CC, zC, ZC, QC) {
+        return this.callCore(TC, !1, (wC => wC.znC(CC, ZC, zC, QC)))
+      }
+      setShaderPack(CC, zC, ZC, QC, wC, bC) {
+        return this.callCore("setShaderPack", !1, (nC => {
+          var fC, oC;
+          return null !== (fC = null === (oC = nC.ZQC) || void 0 === oC ? void 0 : oC.call(nC, CC, zC, ZC, QC, wC, bC)) && void 0 !== fC && fC
+        }))
+      }
+      sunShadowWantedTextures() {
+        return this.callCore(aC, null, (CC => {
+          var zC, ZC;
+          return null !== (zC = null === (ZC = CC.wnC) || void 0 === ZC ? void 0 : ZC.call(CC)) && void 0 !== zC ? zC : null
+        }))
+      }
+      setSunShadowTexture(CC, zC, ZC, QC, wC) {
+        this.callCore(aC, void 0, (bC => {
+          var nC;
+          null === (nC = bC.CnC) || void 0 === nC || nC.call(bC, CC, zC, ZC, QC, wC)
+        }))
+      }
+      takeSunShadowWarnings() {
+        return this.callCore(aC, [], (CC => {
+          var zC, ZC;
+          return null !== (zC = null === (ZC = CC.nnC) || void 0 === ZC ? void 0 : ZC.call(CC)) && void 0 !== zC ? zC : []
+        }))
+      }
+      sunShadowsHeld() {
+        return this.callCore(aC, null, (CC => {
+          var zC, ZC;
+          return null !== (zC = null === (ZC = CC.bnC) || void 0 === ZC ? void 0 : ZC.call(CC)) && void 0 !== zC ? zC : null
+        }))
+      }
+      callCore(CC, zC, ZC) {
+        if (this.stopped) return zC;
+        try {
+          return ZC(this.core)
+        } catch (QC) {
+          return this.crash(CC, QC), zC
+        }
+      }
+      readEvents(CC) {
+        this.netOffsets.length = 0;
+        const zC = this.headerView(),
+          ZC = zC[QC.pb.EventsPtr],
+          wC = zC[QC.pb.EventsLen];
+        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === wC) return rC;
+        const bC = [],
+          nC = this.memory().buffer;
+        if (ZC % 4 !== 0 || ZC + wC > nC.byteLength) return this.crash(uC, `events of ${wC} bytes at ${ZC} outside ${nC.byteLength} bytes of memory`), rC;
+        const fC = new DataView(nC, ZC, wC),
+          oC = this.rings.net,
+          qC = (zC, ZC) => zC + ZC <= CC ? oC.copyWritten(zC, ZC) : null;
+        let FC = 0;
+        for (; FC < wC;) {
+          const CC = FC + QC.$,
+            zC = CC <= wC ? fC.getUint32(FC, !0) : -1,
+            oC = zC >>> 16;
+          if (zC < 0 || oC > wC - CC) return this.crash(uC, `event record at ${FC} overruns its ${wC} bytes`), rC;
+          const hC = 65535 & zC,
+            KC = zC => fC.getUint32(CC + 4 * zC, !0);
+          if (hC === QC.ab.RawMessage) {
+            const CC = oC >= QC.Kc.BYTES ? 65535 & KC(1) : -1,
+              zC = CC === QC.Kc.STRING_TYPE,
+              ZC = oC === (zC ? QC.Kc.STRING_TYPE_BYTES : QC.Kc.BYTES) ? qC(KC(2), KC(3)) : null,
+              wC = zC && ZC ? qC(KC(4), KC(5)) : null;
+            if (!ZC || zC && !wC) return this.crash(uC, `RawMessage at ${FC} of ${oC} bytes names bytes outside net-in`), rC;
+            this.netOffsets.push(FC), bC.push({
+              type: "message",
+              conn: KC(0),
+              cq: CC,
+              payloadKind: KC(1) >>> 16,
+              payload: ZC,
+              stringType: wC ? tC.decode(wC) : null
+            })
+          } else if (hC === QC.ab.CoreErrors) {
+            var WC, NC;
+            const CC = oC >= 4 ? KC(0) : -1;
+            if (CC < 0 || CC > QC.M.PAIRS_MAX || oC !== 4 * (QC.M.FIXED_WORDS + QC.M.PAIR_WORDS * CC)) return this.crash(uC, `CoreErrors at ${FC} of ${oC} bytes`), rC;
+            const zC = [];
+            for (let ZC = 0; ZC < CC; ZC++) zC.push({
+              code: KC(1 + 2 * ZC),
+              detail: KC(2 + 2 * ZC)
+            });
+            null === (WC = (NC = this.handlers).onCoreErrors) || void 0 === WC || WC.call(NC, zC, KC(1 + 2 * CC))
+          } else if (hC === QC.ab.RenderReload) {
+            var MC, gC;
+            if (oC !== QC.Vc.BYTES) return this.crash(uC, `RenderReload at ${FC} of ${oC} bytes`), rC;
+            null === (MC = (gC = this.handlers).onRenderReload) || void 0 === MC || MC.call(gC, KC(0), KC(1), KC(2))
+          } else if (hC === QC.ab.JoinPreloadEnded) {
+            var SC, pC;
+            if (oC !== QC.Bb.BYTES) return this.crash(uC, `JoinPreloadEnded at ${FC} of ${oC} bytes`), rC;
+            null === (SC = (pC = this.handlers).onJoinPreloadEnded) || void 0 === SC || SC.call(pC, {
+              chunks: KC(QC.Bb.CHUNKS),
+              bytes: KC(QC.Bb.BYTES_HELD),
+              asked: KC(QC.Bb.ASKED),
+              replaced: KC(QC.Bb.REPLACED),
+              dropped: KC(QC.Bb.DROPPED)
+            })
+          } else if (hC === QC.ab.Images) {
+            var PC, GC;
+            null === (PC = (GC = this.handlers).onImages) || void 0 === PC || PC.call(GC, new Uint8Array(nC.slice(ZC + CC, ZC + CC + oC)))
+          } else if (hC === QC.ab.ModelRequests)
+            for (let ZC = 0; ZC < oC >>> 2; ZC++) {
+              var RC, AC;
+              null === (RC = (AC = this.handlers).onModelRequest) || void 0 === RC || RC.call(AC, KC(ZC))
+            } else if (hC === QC.ab.ModelTaken) {
+              var xC, JC;
+              if (oC < 4) return this.crash(uC, `ModelTaken at ${FC} of ${oC} bytes`), rC;
+              const CC = new Uint32Array((oC >>> 2) - 1);
+              for (let zC = 0; zC < CC.length; zC++) CC[zC] = KC(1 + zC);
+              null === (xC = (JC = this.handlers).onModelTaken) || void 0 === xC || xC.call(JC, KC(0), CC)
+            } else if (hC === QC.ab.TerrainTexturesWanted) {
+            var IC, iC;
+            if (0 !== oC) return this.crash(uC, `TerrainTexturesWanted at ${FC} of ${oC} bytes`), rC;
+            null === (IC = (iC = this.handlers).onTerrainTexturesWanted) || void 0 === IC || IC.call(iC)
+          } else if (hC === QC.ab.KeepAliveDue) {
+            var vC, eC;
+            if (oC > QC.Cb) return this.crash(uC, `KeepAliveDue at ${FC} of ${oC} bytes`), rC;
+            null === (vC = (eC = this.handlers).onKeepAlive) || void 0 === vC || vC.call(eC, new Uint8Array(nC, ZC + CC, oC).slice())
+          } else if (hC === QC.ab.ConnectionState) {
+            if (oC !== QC.x) return this.crash(uC, `ConnectionState at ${FC} of ${oC} bytes`), rC;
+            this.netOffsets.push(FC), bC.push({
+              type: "connection",
+              conn: KC(0),
+              phase: KC(1),
+              code: 0 | KC(2)
+            })
+          } else if (hC === QC.ab.EnvLighting || hC === QC.ab.SkyImages) {
+            if (oC !== (hC === QC.ab.EnvLighting ? QC._ : QC.od)) return this.crash(uC, `event ${hC} at ${FC} of ${oC} bytes`), rC;
+            this.envEvents.push({
+              kind: hC,
+              payload: new Uint8Array(nC.slice(ZC + CC, ZC + CC + oC))
+            })
+          } else if (hC === QC.ab.ReconnectGrace) {
+            if (oC !== QC.oc) return this.crash(uC, `ReconnectGrace at ${FC} of ${oC} bytes`), rC;
+            const CC = KC(2);
+            this.graceEvents.push({
+              conn: KC(0),
+              graceMs: KC(1),
+              sessionBased: 0 !== (CC & QC.Lc.SessionBased),
+              replayOffer: 0 !== (CC & QC.Lc.ReplayOffer)
+            })
+          }
+          FC = CC + (0, QC.pe)(oC)
+        }
+        return bC
+      }
+      takeSends(CC) {
+        this.atSendsStop = !0;
+        try {
+          CC()
+        } catch (zC) {
+          this.crashOn(KC, zC)
+        } finally {
+          this.atSendsStop = !1
+        }
+        return !this.stopped
+      }
+      forEachNetOut(CC) {
+        this.forEachOut(AC, "net-out", QC.pb.NetOutPtr, QC.pb.NetOutLen, QC.Wb, 0, ((zC, ZC, wC, bC) => {
+          const nC = (0, QC.je)(ZC);
+          nC === QC.Yb.Frame ? CC((0, QC.ge)(ZC), wC) : this.crash(AC, `net-out record at ${bC} is kind ${nC}, not a frame`)
+        }))
+      }
+      forEachWorkerOut(CC) {
+        this.forEachOut(xC, "worker-out", QC.pb.WorkerOutPtr, QC.pb.WorkerOutLen, QC.Dd, 4, ((zC, ZC, wC, bC) => {
+          const nC = 255 & zC,
+            fC = nC === QC.Rd.Init ? this.initOf(wC, bC) : wC;
+          null !== fC && CC(nC, zC >>> 8 & 16777215, fC)
+        }))
+      }
+      initOf(CC, zC) {
+        const ZC = this.memory().buffer;
+        if (CC.byteLength !== QC.qb) return this.crash(xC, `worker-out Init record at ${zC} is ${CC.byteLength} bytes, not a view`), null;
+        const wC = new DataView(CC.buffer, CC.byteOffset, QC.qb),
+          bC = wC.getUint32(0, !0),
+          nC = wC.getUint32(4, !0);
+        return bC + nC > ZC.byteLength ? (this.crash(xC, `worker-out Init record at ${zC} names ${nC} bytes at ${bC} outside ${ZC.byteLength} bytes of memory`), null) : new Uint8Array(ZC, bC, nC)
+      }
+      forEachOut(CC, zC, ZC, wC, bC, nC, fC) {
+        if (!this.headerReadable()) return;
+        const oC = this.headerView(),
+          qC = oC[ZC],
+          FC = oC[wC];
+        if (0 === FC) return;
+        const WC = this.memory().buffer;
+        if (qC % 4 !== 0 || qC + FC > WC.byteLength) return void this.crash(CC, `${zC} of ${FC} bytes at ${qC} outside ${WC.byteLength} bytes of memory`);
+        const NC = new DataView(WC, qC, FC);
+        let MC = 0;
+        for (; MC < FC;) {
+          const ZC = MC + bC,
+            wC = ZC <= FC ? NC.getUint32(MC + nC, !0) : -1;
+          if (wC < 0 || wC > FC - ZC) return void this.crash(CC, `${zC} record at ${MC} overruns its ${FC} bytes`);
+          if (fC(NC.getUint32(MC, !0), NC.getUint32(MC + 4, !0), new Uint8Array(WC, qC + ZC, wC), MC), this.stopped) return;
+          MC = ZC + (0, QC.pe)(wC)
+        }
+      }
+      forEachEvent(CC) {
+        if (this.stopped || null === this.lastHeader) return;
+        const zC = this.headerView(),
+          ZC = zC[QC.pb.EventsPtr],
+          wC = zC[QC.pb.EventsLen];
+        if (0 === wC) return;
+        const bC = this.memory().buffer;
+        if (ZC % 4 !== 0 || ZC + wC > bC.byteLength) return void this.crash(uC, `events of ${wC} bytes at ${ZC} outside ${bC.byteLength} bytes of memory`);
+        const nC = new DataView(bC, ZC, wC);
+        let fC = 0;
+        for (; fC < wC;) {
+          const zC = fC + QC.$,
+            ZC = zC <= wC ? nC.getUint32(fC, !0) : -1,
+            bC = ZC >>> 16;
+          if (ZC < 0 || bC > wC - zC) return void this.crash(uC, `event record at ${fC} overruns its ${wC} bytes`);
+          CC(65535 & ZC, nC, zC, bC), fC = zC + (0, QC.pe)(bC)
+        }
+      }
+      crashOn(CC, zC) {
+        zC instanceof wC.b ? this.crash(uC, zC.message) : this.crash(CC, zC)
+      }
+      crash(CC, zC) {
+        this.stopped || (this.stopped = !0, this.handlers.onCrash({
+          site: CC,
+          error: zC,
+          header: this.lastHeader
+        }))
+      }
+      headerWord(CC) {
+        return this.headerReadable() ? this.headerView()[CC] : 0
+      }
+      headerReadable() {
+        return !this.stopped && (null !== this.lastHeader || this.atSendsStop)
+      }
+      readLoadCounts(CC) {
+        const zC = this.loadCountWords();
+        return null !== zC && (CC.chunksReceived = zC[QC.Jb.ChunksReceived], CC.chunksCancelled = this.headerView()[QC.pb.ChunksCancelled], CC.chunksStored = zC[QC.Jb.ChunksStored], CC.jobsSent = zC[QC.Jb.JobsSent], CC.jobsDone = zC[QC.Jb.JobsDone], CC.jobsInFlight = zC[QC.Jb.JobsInFlight], CC.workersLive = zC[QC.Jb.WorkersLive], CC.workersRetired = zC[QC.Jb.WorkersRetired], !0)
+      }
+      readViewQueuedPrograms() {
+        var CC, zC;
+        const ZC = null !== (CC = null === (zC = this.loadCountWords()) || void 0 === zC ? void 0 : zC[QC.Jb.ViewQueuedPrograms]) && void 0 !== CC ? CC : 0;
+        return 0 === ZC ? null : ZC - 1
+      }
+      loadCountWords() {
+        if (this.stopped || null === this.lastHeader) return null;
+        const CC = this.core.Hp();
+        if (0 === CC) return null;
+        const zC = this.memory().buffer;
+        return zC !== this.loadCountsBuffer && (this.loadCountsBuffer = zC, this.loadCounts = new Uint32Array(zC, CC, QC.Eb)), this.loadCounts
+      }
+      headerView() {
+        const CC = this.memory().buffer;
+        return CC !== this.headerBuffer && (this.headerBuffer = CC, this.header = new Uint32Array(CC, this.core.AM(), QC.lb)), this.header
+      }
+    }
+  },
+  40611: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC,
+      g: () => bC
+    });
+    var QC = ZC(4635);
+    let wC = null;
+
+    function bC(CC) {
+      wC = {
+        scanned: !1
+      };
+      try {
+        return CC()
+      } finally {
+        wC = null
+      }
+    }
+
+    function nC() {
+      const CC = wC;
+      if (null === CC) return (0, QC.h)();
+      const zC = (0, QC.h)(!CC.scanned);
+      return CC.scanned = !0, zC
+    }
+  },
+  40662: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => QC
+    });
+    const QC = {
+      webgpu: "rust_webgpu",
+      webgl: "rust_webgl2",
+      webgl1: "rust_webgl1"
+    }
+  },
+  40677: (CC, zC, ZC) => {
+    function QC() {
+      return ZC(40683)
+    }
+
+    function wC() {
+      return ZC(40688)
+    }
+
+    function bC(CC) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(CC)
+    }
+    ZC.d(zC, {
+      e: () => bC,
+      f: () => QC,
+      j: () => wC
+    })
+  },
+  36180: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => fC,
+      f: () => qC,
+      j: () => nC,
+      m: () => WC
+    });
+    var QC = ZC(36172),
+      wC = ZC(10);
+    const bC = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+
+    function nC(CC) {
+      if (CC instanceof WebAssembly.RuntimeError) return !0;
+      const zC = CC instanceof Error ? CC.stack : void 0;
+      return "string" === typeof zC && bC.test(zC)
+    }
+
+    function fC(CC, zC, ZC) {
+      var wC;
+      const nC = CC instanceof Error ? CC.name : "thrown",
+        fC = (CC instanceof Error && null !== (wC = CC.stack) && void 0 !== wC ? wC : "").split("\n").filter((CC => bC.test(CC))).slice(0, 8).map((CC => CC.trim())),
+        oC = null === zC ? "wasm memory unknown" : `wasm memory ${Math.round(zC/2**20)} MB`,
+        qC = null === ZC.panic ? "" : `, panic: ${(0,QC.m)(ZC.panic)}`,
+        FC = `${nC}: ${CC instanceof Error?CC.message:String(CC)}`;
+      return `${(0,QC.p)(ZC.kind,ZC.refusedBytes)} ${FC} (${oC})${qC}${fC.length>0?` | ${fC.join(" < ")}`:""}`
+    }
+    const oC = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
+
+    function qC(CC) {
+      var zC;
+      let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(CC instanceof Error) || !oC.test(CC.message)) return {};
+      if (!("detached" in ZC)) return {
+        arrayBufferDetached: "absent"
+      };
+      return {
+        arrayBufferDetached: (0, wC.O)(null === (zC = (0, wC.K)(ZC, "detached")) || void 0 === zC ? void 0 : zC.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
+      }
+    }
+    const FC = 500;
+
+    function WC(CC) {
+      let zC = "[object Object]";
+      try {
+        zC = String(CC)
+      } catch {}
+      if ("[object Object]" !== zC) return zC;
+      try {
+        var ZC, QC;
+        return null !== (ZC = null === (QC = JSON.stringify(CC)) || void 0 === QC ? void 0 : QC.slice(0, FC)) && void 0 !== ZC ? ZC : zC
+      } catch {
+        return zC
+      }
+    }
+  },
+  40683: (CC, zC, ZC) => {
+    CC.exports = ZC.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  },
+  40688: (CC, zC, ZC) => {
+    CC.exports = ZC.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  },
+  36172: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC,
+      i: () => bC,
+      m: () => oC,
+      n: () => nC,
+      p: () => wC
+    });
+    const QC = /^alloc_failed (\d+) bytes$/;
+
+    function wC(CC, zC) {
+      return bC(CC, zC) ? `trap=alloc_failed ${zC} bytes` : `trap=${CC}`
+    }
+
+    function bC(CC, zC) {
+      return "unreachable" === CC && zC > 0
+    }
+
+    function nC(CC, zC, ZC) {
+      const QC = function(CC) {
+        return CC instanceof WebAssembly.RuntimeError ? /unreachable/i.test(CC.message) ? "unreachable" : /out of bounds/i.test(CC.message) ? "out_of_bounds" : "runtime_error" : (CC instanceof RangeError || CC instanceof Error && "InternalError" === CC.name) && /call stack|recursion/i.test(CC.message) ? "stack_overflow" : "js_error"
+      }(CC);
+      if ("unreachable" !== QC) return {
+        kind: QC,
+        panic: null,
+        refusedBytes: 0
+      };
+      const wC = zC(),
+        bC = ZC();
+      return {
+        kind: QC,
+        panic: bC > 0 ? null : wC,
+        refusedBytes: bC
+      }
+    }
+    const fC = 300;
+
+    function oC(CC) {
+      return CC.replace(/\s*\n\s*/g, " / ").slice(0, fC)
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

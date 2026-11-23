@@ -1,30 +1,30 @@
 export const id = 76;
 export const ids = [76];
 export const modules = {
-  4624: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Mk
+  4630: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => FC
     });
-    var Dk = ik(22),
-      fk = ik(26),
-      Sk = ik(1273),
-      bk = ik(2752);
-    const rk = 3e4,
-      Pk = 1e3;
+    var QC = ZC(20),
+      wC = ZC(28),
+      bC = ZC(1240),
+      nC = ZC(2800);
+    const fC = 3e4,
+      oC = 1e3;
 
-    function mk() {
-      return "visible" === document.visibilityState && "inGame" === Dk.b.get("gameState") && (0, Sk.w)()
+    function qC() {
+      return "visible" === document.visibilityState && "inGame" === QC.b.get("gameState") && (0, bC.x)()
     }
 
-    function Mk(kk, ek) {
-      (0, bk.t)() || function(kk, ek, ik) {
-        let Dk = 0;
-        const fk = setInterval((() => {
-          ek() && (Dk += Pk, Dk >= kk && (clearInterval(fk), ik()))
-        }), Pk)
-      }(rk, mk, (() => {
-        ek().then((() => {
-          kk(`saved for the player after ${rk/1e3} s of play`), (0, bk.z)(), fk.j.tm("chat", {
+    function FC(CC, zC) {
+      (0, nC.l)() || function(CC, zC, ZC) {
+        let QC = 0;
+        const wC = setInterval((() => {
+          zC() && (QC += oC, QC >= CC && (clearInterval(wC), ZC()))
+        }), oC)
+      }(fC, qC, (() => {
+        zC().then((() => {
+          CC(`saved for the player after ${fC/1e3} s of play`), (0, nC.t)(), wC.o.bp("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,347 +36,347 @@ export const modules = {
       }))
     }
   },
-  33640: (kk, ek, ik) => {
-    function Dk(kk, ek) {
-      return 0 === kk.length ? 0 : kk[Math.min(kk.length - 1, Math.floor(ek * kk.length))]
+  34014: (CC, zC, ZC) => {
+    function QC(CC, zC) {
+      return 0 === CC.length ? 0 : CC[Math.min(CC.length - 1, Math.floor(zC * CC.length))]
     }
 
-    function fk(kk) {
-      return kk.toFixed(1)
+    function wC(CC) {
+      return CC.toFixed(1)
     }
-    ik.d(ek, {
-      c: () => fk,
-      d: () => Dk
+    ZC.d(zC, {
+      b: () => wC,
+      e: () => QC
     })
   },
-  37532: (kk, ek, ik) => {
-    ik.d(ek, {
-      e: () => mk,
-      g: () => Mk,
-      h: () => Yk,
-      i: () => yk,
-      m: () => pk
+  37778: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => qC,
+      d: () => FC,
+      f: () => AC,
+      i: () => RC,
+      l: () => GC
     });
-    var Dk = ik(4624),
-      fk = ik(33640),
-      Sk = ik(2752);
-    const bk = 20,
-      rk = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "vK", "jobMs"];
+    var QC = ZC(4630),
+      wC = ZC(34014),
+      bC = ZC(2800);
+    const nC = 20,
+      fC = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "HW", "jobMs"];
 
-    function Pk(kk) {
-      return [...kk].sort(((kk, ek) => kk - ek))
+    function oC(CC) {
+      return [...CC].sort(((CC, zC) => CC - zC))
     }
-    const mk = [];
+    const qC = [];
 
-    function Mk(kk, ek, ik) {
-      return `${kk},${ek},${ik}`
+    function FC(CC, zC, ZC) {
+      return `${CC},${zC},${ZC}`
     }
-    class Kk {
+    class WC {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(kk, ek) {
-        var ik;
-        const Dk = null !== (ik = this.pending.get(kk)) && void 0 !== ik ? ik : [];
-        Dk.push({
-          editAt: ek,
+      edit(CC, zC) {
+        var ZC;
+        const QC = null !== (ZC = this.pending.get(CC)) && void 0 !== ZC ? ZC : [];
+        QC.push({
+          editAt: zC,
           meshJobId: 0
-        }), this.pending.set(kk, Dk)
+        }), this.pending.set(CC, QC)
       }
-      frame(kk) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, kk - this.lastFrameAt)), this.lastFrameAt = kk, this.frames++, kk - this.windowStart >= 1e3 && this.summarise(kk)
+      frame(CC) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, CC - this.lastFrameAt)), this.lastFrameAt = CC, this.frames++, CC - this.windowStart >= 1e3 && this.summarise(CC)
       }
-      sent(kk, ek, ik, Dk, fk, Sk, bk) {
-        this.jobs.set(ek, {
-          sentAt: bk,
+      sent(CC, zC, ZC, QC, wC, bC, nC) {
+        this.jobs.set(zC, {
+          sentAt: nC,
           receivedAt: 0,
-          ahead: ik,
-          inFlight: Dk,
-          vK: fk,
+          ahead: ZC,
+          inFlight: QC,
+          HW: wC,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, ik), this.maxCapacity = Math.max(this.maxCapacity, fk);
-        for (const Pk of null !== (rk = this.pending.get(kk)) && void 0 !== rk ? rk : []) {
-          var rk;
-          Sk.includes(Pk.meshJobId) || (Pk.meshJobId = ek)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, ZC), this.maxCapacity = Math.max(this.maxCapacity, wC);
+        for (const oC of null !== (fC = this.pending.get(CC)) && void 0 !== fC ? fC : []) {
+          var fC;
+          bC.includes(oC.meshJobId) || (oC.meshJobId = zC)
         }
       }
-      received(kk, ek, ik) {
-        const Dk = this.jobs.get(kk);
-        void 0 !== Dk && (this.roundTrips.push(ik - Dk.sentAt), Dk.receivedAt = ik, Dk.jobMs = ek)
+      received(CC, zC, ZC) {
+        const QC = this.jobs.get(CC);
+        void 0 !== QC && (this.roundTrips.push(ZC - QC.sentAt), QC.receivedAt = ZC, QC.jobMs = zC)
       }
-      failed(kk) {
-        this.jobs.delete(kk)
+      failed(CC) {
+        this.jobs.delete(CC)
       }
-      reassign(kk, ek, ik) {
-        this.jobs.delete(ek);
-        for (const fk of null !== (Dk = this.pending.get(kk)) && void 0 !== Dk ? Dk : []) {
-          var Dk;
-          fk.meshJobId === ek && (fk.meshJobId = ik)
+      reassign(CC, zC, ZC) {
+        this.jobs.delete(zC);
+        for (const wC of null !== (QC = this.pending.get(CC)) && void 0 !== QC ? QC : []) {
+          var QC;
+          wC.meshJobId === zC && (wC.meshJobId = ZC)
         }
       }
-      applied(kk, ek, ik) {
-        const Dk = this.jobs.get(ek);
-        this.jobs.delete(ek), void 0 !== Dk && this.show(kk, Dk, ik, (kk => kk.meshJobId === ek))
+      applied(CC, zC, ZC) {
+        const QC = this.jobs.get(zC);
+        this.jobs.delete(zC), void 0 !== QC && this.show(CC, QC, ZC, (CC => CC.meshJobId === zC))
       }
-      emptied(kk, ek) {
-        const ik = {
-          sentAt: ek,
-          receivedAt: ek,
+      emptied(CC, zC) {
+        const ZC = {
+          sentAt: zC,
+          receivedAt: zC,
           ahead: 0,
           inFlight: 0,
-          vK: 0,
+          HW: 0,
           jobMs: 0
         };
-        this.show(kk, ik, ek, (() => !0))
+        this.show(CC, ZC, zC, (() => !0))
       }
-      show(kk, ek, ik, Dk) {
-        const fk = this.pending.get(kk);
-        if (!fk) return;
-        const Sk = fk.filter((fk => !Dk(fk) || (this.record(kk, fk.editAt, ek, ik), !1)));
-        Sk.length > 0 ? this.pending.set(kk, Sk) : this.pending.delete(kk)
+      show(CC, zC, ZC, QC) {
+        const wC = this.pending.get(CC);
+        if (!wC) return;
+        const bC = wC.filter((wC => !QC(wC) || (this.record(CC, wC.editAt, zC, ZC), !1)));
+        bC.length > 0 ? this.pending.set(CC, bC) : this.pending.delete(CC)
       }
-      CU(kk) {
-        this.reported += kk, this === nk && this.reported >= bk && null !== Uk && (Uk(), Uk = null)
+      Cg(CC) {
+        this.reported += CC, this === MC && this.reported >= nC && null !== gC && (gC(), gC = null)
       }
-      record(kk, ek, ik, Dk) {
-        const fk = {
-          totalMs: Dk - ek,
-          slotMs: ik.sentAt - ek,
-          workerMs: ik.receivedAt - ik.sentAt,
-          applyMs: Dk - ik.receivedAt,
-          ahead: ik.ahead,
-          inFlight: ik.inFlight,
-          vK: ik.vK,
-          jobMs: ik.jobMs
+      record(CC, zC, ZC, QC) {
+        const wC = {
+          totalMs: QC - zC,
+          slotMs: ZC.sentAt - zC,
+          workerMs: ZC.receivedAt - ZC.sentAt,
+          applyMs: QC - ZC.receivedAt,
+          ahead: ZC.ahead,
+          inFlight: ZC.inFlight,
+          HW: ZC.HW,
+          jobMs: ZC.jobMs
         };
-        if (this.edits[this.nextEdit] = fk, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(fk.totalMs), this.CU(1), fk.totalMs < 100 || ++this.outliers > 5) return;
-        const bk = kk => Math.round(kk);
-        (0, Sk.l)("remesh", `slow edit (${kk}) shown in ${bk(fk.totalMs)} ms: slot ${bk(fk.slotMs)}, worker ${bk(fk.workerMs)} (${fk.ahead} ahead, ${fk.inFlight}/${fk.vK} in flight; job ${bk(fk.jobMs)}), apply ${bk(fk.applyMs)}`)
+        if (this.edits[this.nextEdit] = wC, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(wC.totalMs), this.Cg(1), wC.totalMs < 100 || ++this.outliers > 5) return;
+        const nC = CC => Math.round(CC);
+        (0, bC.i)("remesh", `slow edit (${CC}) shown in ${nC(wC.totalMs)} ms: slot ${nC(wC.slotMs)}, worker ${nC(wC.workerMs)} (${wC.ahead} ahead, ${wC.inFlight}/${wC.HW} in flight; job ${nC(wC.jobMs)}), apply ${nC(wC.applyMs)}`)
       }
-      summarise(kk) {
-        const ek = (kk - this.windowStart) / 1e3;
-        for (const [ik, Dk] of this.pending) {
-          const ek = Dk.filter((ek => kk - ek.editAt <= 1e4));
-          this.gaveUp += Dk.length - ek.length, this.CU(Dk.length - ek.length), ek.length > 0 ? this.pending.set(ik, ek) : this.pending.delete(ik)
+      summarise(CC) {
+        const zC = (CC - this.windowStart) / 1e3;
+        for (const [ZC, QC] of this.pending) {
+          const zC = QC.filter((zC => CC - zC.editAt <= 1e4));
+          this.gaveUp += QC.length - zC.length, this.Cg(QC.length - zC.length), zC.length > 0 ? this.pending.set(ZC, zC) : this.pending.delete(ZC)
         }
-        for (const [ik, Dk] of this.jobs) kk - Dk.sentAt > (Dk.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(ik);
+        for (const [ZC, QC] of this.jobs) CC - QC.sentAt > (QC.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(ZC);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const kk = Pk(this.roundTrips),
-            ik = Pk(this.windowEdits),
-            Dk = Math.max(0, this.outliers - 5);
-          (0, Sk.l)("remesh", `${Math.round(this.frames/ek)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,fk.d)(kk,.5))} max ${Math.round((0,fk.d)(kk,1))} ms | ${ik.length} edits shown, p50 ${Math.round((0,fk.d)(ik,.5))} max ${Math.round((0,fk.d)(ik,1))} ms${Dk>0?`, ${Dk} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const CC = oC(this.roundTrips),
+            ZC = oC(this.windowEdits),
+            QC = Math.max(0, this.outliers - 5);
+          (0, bC.i)("remesh", `${Math.round(this.frames/zC)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,wC.e)(CC,.5))} max ${Math.round((0,wC.e)(CC,1))} ms | ${ZC.length} edits shown, p50 ${Math.round((0,wC.e)(ZC,.5))} max ${Math.round((0,wC.e)(ZC,1))} ms${QC>0?`, ${QC} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = kk, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = CC, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const kk = rk.map((kk => {
-          const ek = Pk(this.edits.map((ek => ek[kk])));
-          return `${kk}: p50 ${Math.round((0,fk.d)(ek,.5))} p90 ${Math.round((0,fk.d)(ek,.9))} max ${Math.round((0,fk.d)(ek,1))}`
+        const CC = fC.map((CC => {
+          const zC = oC(this.edits.map((zC => zC[CC])));
+          return `${CC}: p50 ${Math.round((0,wC.e)(zC,.5))} p90 ${Math.round((0,wC.e)(zC,.9))} max ${Math.round((0,wC.e)(zC,1))}`
         }));
-        return [`${this.edits.length} edits`, ...kk].join("\n")
+        return [`${this.edits.length} edits`, ...CC].join("\n")
       }
       dump() {
-        const kk = this.edits.map((kk => rk.map((ek => Math.round(10 * kk[ek]) / 10)).join(",")));
-        return [this.stats(), rk.join(","), ...kk].join("\n")
+        const CC = this.edits.map((CC => fC.map((zC => Math.round(10 * CC[zC]) / 10)).join(",")));
+        return [this.stats(), fC.join(","), ...CC].join("\n")
       }
     }
-    class xk {
-      constructor(kk, ek) {
-        this.log = kk, this.Lx = ek
+    class NC {
+      constructor(CC, zC) {
+        this.log = CC, this.MN = zC
       }
-      edit(kk, ek, ik) {
-        const [Dk, fk, Sk] = this.Lx.Ux.tDk(kk, ek, ik), bk = this.Lx.Ux.aH.WH(Dk, fk, Sk);
-        bk && bk.EH && this.log.edit(Mk(Dk, fk, Sk), performance.now())
+      edit(CC, zC, ZC) {
+        const [QC, wC, bC] = this.MN.fN.kQC(CC, zC, ZC), nC = this.MN.fN.PS.GS(QC, wC, bC);
+        nC && nC.SS && this.log.edit(FC(QC, wC, bC), performance.now())
       }
-      sent(kk, ek, ik, Dk, fk) {
-        this.log.sent(Mk(kk.i, kk.j, kk.k), ek, ik, Dk, fk, mk, performance.now())
+      sent(CC, zC, ZC, QC, wC) {
+        this.log.sent(FC(CC.i, CC.j, CC.k), zC, ZC, QC, wC, qC, performance.now())
       }
-      received(kk) {
-        this.log.received(kk.meshJobId, kk.jobMs, performance.now())
+      received(CC) {
+        this.log.received(CC.meshJobId, CC.jobMs, performance.now())
       }
-      failed(kk) {
-        this.log.failed(kk)
+      failed(CC) {
+        this.log.failed(CC)
       }
-      applied(kk, ek) {
-        this.log.applied(Mk(kk.i, kk.j, kk.k), ek, performance.now())
+      applied(CC, zC) {
+        this.log.applied(FC(CC.i, CC.j, CC.k), zC, performance.now())
       }
     }
-    let nk = null,
-      Uk = null,
-      Hk = !1,
-      wk = null;
+    let MC = null,
+      gC = null,
+      SC = !1,
+      pC = null;
 
-    function lk() {
-      return new Promise((kk => {
-        null !== nk && nk.reported >= bk ? kk() : Uk = kk
+    function PC() {
+      return new Promise((CC => {
+        null !== MC && MC.reported >= nC ? CC() : gC = CC
       }))
     }
 
-    function pk() {
-      const kk = new Kk;
-      return nk = kk, (0, Sk.k)("remesh", (() => kk.dump())), (0, Sk.e)("remeshStats", (() => {
-        console.log(kk.stats())
-      })), Hk || (Hk = !0, (0, Dk.c)((kk => {
-        (0, Sk.l)("remesh", kk)
-      }), lk)), kk
+    function GC() {
+      const CC = new WC;
+      return MC = CC, (0, bC.e)("remesh", (() => CC.dump())), (0, bC.b)("remeshStats", (() => {
+        console.log(CC.stats())
+      })), SC || (SC = !0, (0, QC.d)((CC => {
+        (0, bC.i)("remesh", CC)
+      }), PC)), CC
     }
 
-    function yk(kk) {
-      const ek = pk();
-      wk = new xk(ek, kk), kk.qY.meshProbe = wk, kk.on("beforeRender", (() => {
-        ek.frame(performance.now())
+    function RC(CC) {
+      const zC = GC();
+      pC = new NC(zC, CC), CC.JA.meshProbe = pC, CC.on("beforeRender", (() => {
+        zC.frame(performance.now())
       }))
     }
 
-    function Yk(kk, ek, ik) {
-      var Dk;
-      null === (Dk = wk) || void 0 === Dk || Dk.edit(kk, ek, ik)
+    function AC(CC, zC, ZC) {
+      var QC;
+      null === (QC = pC) || void 0 === QC || QC.edit(CC, zC, ZC)
     }
   },
-  37292: (kk, ek, ik) => {
-    ik.d(ek, {
-      c: () => Dk
+  37525: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC
     });
-    const Dk = {
+    const QC = {
       noaReady: null,
       chunkRequested: null,
       beforeServerListeners: null,
       wasmNetReady: null
     }
   },
-  37339: (kk, ek, ik) => {
-    function Dk(kk) {
-      return "string" !== typeof kk || 2 !== kk.length && ":" !== kk[2] ? null : kk[0] + kk[1]
+  37568: (CC, zC, ZC) => {
+    function QC(CC) {
+      return "string" !== typeof CC || 2 !== CC.length && ":" !== CC[2] ? null : CC[0] + CC[1]
     }
-    ik.d(ek, {
-      C: () => Hk,
-      e: () => wk,
-      h: () => Ck,
-      i: () => Lk,
-      k: () => Ak,
-      l: () => rk,
-      p: () => bk,
-      t: () => Sk,
-      w: () => Pk,
-      z: () => lk
+    ZC.d(zC, {
+      A: () => oC,
+      C: () => PC,
+      F: () => SC,
+      d: () => pC,
+      f: () => JC,
+      j: () => xC,
+      n: () => IC,
+      r: () => fC,
+      u: () => nC,
+      y: () => bC
     });
-    const fk = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const wC = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function Sk(kk) {
-      if (function(kk) {
-          for (let ek = 0; ek < fk.length; ek++)
-            if (kk === fk[ek]) return !0;
+    function bC(CC) {
+      if (function(CC) {
+          for (let zC = 0; zC < wC.length; zC++)
+            if (CC === wC[zC]) return !0;
           return !1
-        }(kk)) return !1;
-      const ek = Dk(kk);
-      return "op" === ek || "ep" === ek || "wi" === ek || "pp" === ek || "fp:call" === kk || "fp:t" === kk
+        }(CC)) return !1;
+      const zC = QC(CC);
+      return "op" === zC || "ep" === zC || "wi" === zC || "pp" === zC || "fp:call" === CC || "fp:t" === CC
     }
 
-    function bk(kk) {
-      return "fp" === Dk(kk) && !Sk(kk)
+    function nC(CC) {
+      return "fp" === QC(CC) && !bC(CC)
     }
 
-    function rk(kk) {
-      if ("string" !== typeof kk) return !1;
-      return "o" === kk[0] && "p" === kk[1] && (2 === kk.length || ":" === kk[2]) || "fp:call" === kk || "2" === kk || "t" === kk || "a" === kk
+    function fC(CC) {
+      if ("string" !== typeof CC) return !1;
+      return "o" === CC[0] && "p" === CC[1] && (2 === CC.length || ":" === CC[2]) || "fp:call" === CC || "2" === CC || "t" === CC || "a" === CC
     }
 
-    function Pk(kk, ek) {
-      return `~${function(kk){return kk.length<2?kk:":"===kk[1]?kk[0]:kk[0]+kk[1]}(ek)}~${kk}`
+    function oC(CC, zC) {
+      return `~${function(CC){return CC.length<2?CC:":"===CC[1]?CC[0]:CC[0]+CC[1]}(zC)}~${CC}`
     }
-    const mk = 200;
+    const qC = 200;
 
-    function Mk(kk) {
-      let ek = kk.length - 1;
-      for (let ik = 0; ik < 2; ik++) {
-        const ik = ek;
-        for (; ek >= 0 && kk[ek] >= "0" && kk[ek] <= "9";) ek--;
-        if (ek < 0 || ek === ik || ":" !== kk[ek]) return -1;
-        ek--
+    function FC(CC) {
+      let zC = CC.length - 1;
+      for (let ZC = 0; ZC < 2; ZC++) {
+        const ZC = zC;
+        for (; zC >= 0 && CC[zC] >= "0" && CC[zC] <= "9";) zC--;
+        if (zC < 0 || zC === ZC || ":" !== CC[zC]) return -1;
+        zC--
       }
-      return ek + 1
+      return zC + 1
     }
 
-    function Kk(kk) {
-      return "unknown" === kk || Mk(kk) >= 0
+    function WC(CC) {
+      return "unknown" === CC || FC(CC) >= 0
     }
 
-    function xk(kk, ek) {
-      return kk[ek] >= "\ud800" && kk[ek] <= "\udbff" && ek + 1 < kk.length && kk[ek + 1] >= "\udc00" && kk[ek + 1] <= "\udfff" ? 2 : 1
+    function NC(CC, zC) {
+      return CC[zC] >= "\ud800" && CC[zC] <= "\udbff" && zC + 1 < CC.length && CC[zC + 1] >= "\udc00" && CC[zC + 1] <= "\udfff" ? 2 : 1
     }
 
-    function nk(kk, ek, ik) {
-      return 2 === ik ? 4 : kk[ek] <= "\x7f" ? 1 : kk[ek] <= "\u07ff" ? 2 : 3
+    function MC(CC, zC, ZC) {
+      return 2 === ZC ? 4 : CC[zC] <= "\x7f" ? 1 : CC[zC] <= "\u07ff" ? 2 : 3
     }
 
-    function Uk(kk, ek, ik) {
-      let Dk = 0;
-      for (; Dk < ek;) {
-        const ek = xk(kk, Dk),
-          fk = nk(kk, Dk, ek);
-        if (fk > ik) break;
-        ik -= fk, Dk += ek
+    function gC(CC, zC, ZC) {
+      let QC = 0;
+      for (; QC < zC;) {
+        const zC = NC(CC, QC),
+          wC = MC(CC, QC, zC);
+        if (wC > ZC) break;
+        ZC -= wC, QC += zC
       }
-      return Dk
+      return QC
     }
 
-    function Hk(kk) {
-      let ek = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof kk || kk.length > mk || !Kk(kk)) return "t";
-      let ik = 2;
-      for (let rk = 0; rk < kk.length;) {
-        const ek = xk(kk, rk);
-        ik += nk(kk, rk, ek), rk += ek
+    function SC(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof CC || CC.length > qC || !WC(CC)) return "t";
+      let ZC = 2;
+      for (let fC = 0; fC < CC.length;) {
+        const zC = NC(CC, fC);
+        ZC += MC(CC, fC, zC), fC += zC
       }
-      if (ik <= ek) return `t ${kk}`;
-      const Dk = Mk(kk),
-        fk = ek - 2 - (kk.length - Dk);
-      if (fk < 0) return "t";
-      const Sk = Uk(kk, Dk, fk);
-      let bk = "t ";
-      for (let rk = 0; rk < Sk; rk++) bk += kk[rk];
-      for (let rk = Dk; rk < kk.length; rk++) bk += kk[rk];
-      return bk
+      if (ZC <= zC) return `t ${CC}`;
+      const QC = FC(CC),
+        wC = zC - 2 - (CC.length - QC);
+      if (wC < 0) return "t";
+      const bC = gC(CC, QC, wC);
+      let nC = "t ";
+      for (let fC = 0; fC < bC; fC++) nC += CC[fC];
+      for (let fC = QC; fC < CC.length; fC++) nC += CC[fC];
+      return nC
     }
-    const wk = 62;
+    const pC = 62;
 
-    function lk(kk) {
-      let ek = "so:";
-      const ik = Uk(kk, kk.length, wk - ek.length);
-      for (let Dk = 0; Dk < ik; Dk++) ek += kk[Dk];
-      return ek
+    function PC(CC) {
+      let zC = "so:";
+      const ZC = gC(CC, CC.length, pC - zC.length);
+      for (let QC = 0; QC < ZC; QC++) zC += CC[QC];
+      return zC
     }
-    const pk = "BABYLON ",
-      yk = "DECODE ",
-      Yk = "BABYLON@ ";
+    const GC = "BABYLON ",
+      RC = "DECODE ",
+      AC = "BABYLON@ ";
 
-    function Lk(kk) {
-      return lk(pk + kk)
-    }
-
-    function Ck(kk, ek) {
-      return lk(Yk + kk + " " + ek)
+    function xC(CC) {
+      return PC(GC + CC)
     }
 
-    function Ak(kk) {
-      return lk(yk + kk)
+    function JC(CC, zC) {
+      return PC(AC + CC + " " + zC)
+    }
+
+    function IC(CC) {
+      return PC(RC + CC)
     }
   },
-  37566: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  37814: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  37554: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  37802: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  37571: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37816: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  37550: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  37793: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  37559: kk => {
-    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37808: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);

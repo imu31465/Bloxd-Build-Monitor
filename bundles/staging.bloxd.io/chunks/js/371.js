@@ -1,19 +1,19 @@
 export const id = 371;
 export const ids = [371];
 export const modules = {
-  60851: (kk, ek, ik) => {
-    ik.r(ek), ik.d(ek, {
-      passPixelShader: () => bk
+  61101: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      passPixelShaderWGSL: () => nC
     });
-    var Dk = ik(39412);
-    const fk = "passPixelShader",
-      Sk = "varying vec2 vUV;uniform sampler2D textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{gl_FragColor=texture2D(textureSampler,vUV);}";
-    Dk.d.ShadersStore[fk] || (Dk.d.ShadersStore[fk] = Sk);
-    const bk = {
-      name: fk,
-      shader: Sk
+    var QC = ZC(39674);
+    const wC = "passPixelShader",
+      bC = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);}";
+    QC.b.ShadersStoreWGSL[wC] || (QC.b.ShadersStoreWGSL[wC] = bC);
+    const nC = {
+      name: wC,
+      shader: bC
     }
   }
 };
 Object.freeze(modules);
-for (const kk in modules) Object.freeze(modules[kk]);
+for (const CC in modules) Object.freeze(modules[CC]);
