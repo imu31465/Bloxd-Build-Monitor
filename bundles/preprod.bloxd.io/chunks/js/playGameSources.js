@@ -1,183 +1,183 @@
 export const id = 46;
 export const ids = [46];
 export const modules = {
-  39532: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Aq,
-      h: () => Oq,
-      k: () => lq
+  39450: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => oC,
+      e: () => bC,
+      h: () => wC
     });
-    const Yq = 6e3;
+    const QC = 6e3;
 
-    function lq(qq, Eq) {
-      return [Math.floor(qq[0] / Eq) * Eq, Math.floor(qq[1] / Eq) * Eq, Math.floor(qq[2] / Eq) * Eq]
+    function wC(CC, zC) {
+      return [Math.floor(CC[0] / zC) * zC, Math.floor(CC[1] / zC) * zC, Math.floor(CC[2] / zC) * zC]
     }
 
-    function Oq(qq) {
-      const Eq = (null !== qq && void 0 !== qq ? qq : "").match(/-?\d+(?:\.\d+)?/g);
-      return Eq && Eq.length >= 3 ? [Number(Eq[0]), Number(Eq[1]), Number(Eq[2])] : null
+    function bC(CC) {
+      const zC = (null !== CC && void 0 !== CC ? CC : "").match(/-?\d+(?:\.\d+)?/g);
+      return zC && zC.length >= 3 ? [Number(zC[0]), Number(zC[1]), Number(zC[2])] : null
     }
 
-    function mq(qq, Eq) {
-      return qq === Eq ? String(qq) : `${qq}-${Eq}`
+    function nC(CC, zC) {
+      return CC === zC ? String(CC) : `${CC}-${zC}`
     }
 
-    function xq(qq, Eq, gq, Yq) {
-      const lq = [];
-      let Oq = new Map;
-      for (let mq = qq[2]; mq < qq[2] + Eq; mq++) {
-        const xq = new Map;
-        let Aq = qq[0];
-        for (; Aq < qq[0] + Eq;) {
-          const lq = Yq(Aq, gq, mq);
-          let cq = Aq;
-          for (; cq + 1 < qq[0] + Eq && Yq(cq + 1, gq, mq) === lq;) cq++;
-          if (null !== lq) {
-            const qq = `${Aq} ${cq} ${lq}`,
-              Eq = Oq.get(qq);
-            Eq ? (Eq.z1 = mq, Oq.delete(qq), xq.set(qq, Eq)) : xq.set(qq, {
-              x0: Aq,
-              x1: cq,
-              z0: mq,
-              z1: mq,
-              name: lq
+    function fC(CC, zC, ZC, QC) {
+      const wC = [];
+      let bC = new Map;
+      for (let nC = CC[2]; nC < CC[2] + zC; nC++) {
+        const fC = new Map;
+        let oC = CC[0];
+        for (; oC < CC[0] + zC;) {
+          const wC = QC(oC, ZC, nC);
+          let qC = oC;
+          for (; qC + 1 < CC[0] + zC && QC(qC + 1, ZC, nC) === wC;) qC++;
+          if (null !== wC) {
+            const CC = `${oC} ${qC} ${wC}`,
+              zC = bC.get(CC);
+            zC ? (zC.z1 = nC, bC.delete(CC), fC.set(CC, zC)) : fC.set(CC, {
+              x0: oC,
+              x1: qC,
+              z0: nC,
+              z1: nC,
+              name: wC
             })
           }
-          Aq = cq + 1
+          oC = qC + 1
         }
-        lq.push(...Oq.values()), Oq = xq
+        wC.push(...bC.values()), bC = fC
       }
-      return lq.push(...Oq.values()), lq.sort(((qq, Eq) => qq.z0 - Eq.z0 || qq.x0 - Eq.x0)).map((qq => `x${mq(qq.x0,qq.x1)} z${mq(qq.z0,qq.z1)} ${qq.name}`))
+      return wC.push(...bC.values()), wC.sort(((CC, zC) => CC.z0 - zC.z0 || CC.x0 - zC.x0)).map((CC => `x${nC(CC.x0,CC.x1)} z${nC(CC.z0,CC.z1)} ${CC.name}`))
     }
 
-    function Aq(qq, Eq, gq, lq) {
-      let Oq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Yq;
-      const Aq = [qq[0] + Eq - 1, qq[1] + Eq - 1, qq[2] + Eq - 1],
-        cq = null !== lq && lq.every(((Eq, gq) => Math.floor(Eq) >= qq[gq] && Math.floor(Eq) <= Aq[gq])),
-        uq = [`The chunk from ${qq.join(" ")} to ${Aq.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
-      null !== lq && uq.push(`The player's feet are at ${lq.map(Math.floor).join(" ")}, ${cq?"in this chunk":"outside this chunk"}.`);
-      const Bq = [];
-      for (let Yq = qq[1]; Yq <= Aq[1]; Yq++) {
-        const lq = xq(qq, Eq, Yq, gq).join("; "),
-          Oq = Bq[Bq.length - 1];
-        (null === Oq || void 0 === Oq ? void 0 : Oq.boxes) === lq ? Oq.to = Yq : Bq.push({
-          from: Yq,
-          to: Yq,
-          boxes: lq
+    function oC(CC, zC, ZC, wC) {
+      let bC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : QC;
+      const oC = [CC[0] + zC - 1, CC[1] + zC - 1, CC[2] + zC - 1],
+        qC = null !== wC && wC.every(((zC, ZC) => Math.floor(zC) >= CC[ZC] && Math.floor(zC) <= oC[ZC])),
+        FC = [`The chunk from ${CC.join(" ")} to ${oC.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+      null !== wC && FC.push(`The player's feet are at ${wC.map(Math.floor).join(" ")}, ${qC?"in this chunk":"outside this chunk"}.`);
+      const WC = [];
+      for (let QC = CC[1]; QC <= oC[1]; QC++) {
+        const wC = fC(CC, zC, QC, ZC).join("; "),
+          bC = WC[WC.length - 1];
+        (null === bC || void 0 === bC ? void 0 : bC.boxes) === wC ? bC.to = QC : WC.push({
+          from: QC,
+          to: QC,
+          boxes: wC
         })
       }
-      const Wq = Bq.filter((qq => "" !== qq.boxes));
-      0 === Wq.length && uq.push("It is all air.");
-      let Nq = uq.join("\n").length;
-      for (const Yq of Wq) {
-        const qq = `y${mq(Yq.from,Yq.to)}: ${Yq.boxes}`;
-        if (Nq += qq.length + 1, Nq > Oq) {
-          uq.push(`Cut short: the layers from y${Yq.from} up aren't shown, as there are too many blocks.`);
+      const NC = WC.filter((CC => "" !== CC.boxes));
+      0 === NC.length && FC.push("It is all air.");
+      let MC = FC.join("\n").length;
+      for (const QC of NC) {
+        const CC = `y${nC(QC.from,QC.to)}: ${QC.boxes}`;
+        if (MC += CC.length + 1, MC > bC) {
+          FC.push(`Cut short: the layers from y${QC.from} up aren't shown, as there are too many blocks.`);
           break
         }
-        uq.push(qq)
+        FC.push(CC)
       }
-      return uq.join("\n")
+      return FC.join("\n")
     }
   },
-  8755: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => lq
+  8801: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => wC
     });
-    var Yq = gq(24);
+    var QC = ZC(20);
 
-    function lq() {
-      return !Yq.b.get("isTouchScreen") && null !== document.pointerLockElement
+    function wC() {
+      return !QC.b.get("isTouchScreen") && null !== document.pointerLockElement
     }
   },
-  36995: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq,
-      h: () => Oq,
-      l: () => lq
+  36815: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => nC,
+      g: () => bC,
+      i: () => wC
     });
-    const Yq = [.25, .5, 1, 2, 4, 8, 16];
+    const QC = [.25, .5, 1, 2, 4, 8, 16];
 
-    function lq(qq, Eq) {
-      const gq = Yq;
-      let lq = gq.indexOf(qq);
-      return -1 === lq && (lq = gq.findIndex((Eq => Eq >= qq)), -1 === lq && (lq = gq.length - 1)), "up" === Eq ? gq[Math.min(lq + 1, gq.length - 1)] : gq[Math.max(lq - 1, 0)]
+    function wC(CC, zC) {
+      const ZC = QC;
+      let wC = ZC.indexOf(CC);
+      return -1 === wC && (wC = ZC.findIndex((zC => zC >= CC)), -1 === wC && (wC = ZC.length - 1)), "up" === zC ? ZC[Math.min(wC + 1, ZC.length - 1)] : ZC[Math.max(wC - 1, 0)]
     }
 
-    function Oq(qq) {
-      return qq <= Yq[0]
+    function bC(CC) {
+      return CC <= QC[0]
     }
 
-    function mq(qq) {
-      return qq >= Yq[Yq.length - 1]
+    function nC(CC) {
+      return CC >= QC[QC.length - 1]
     }
   },
-  36543: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => lq,
-      h: () => Oq
+  36375: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => wC,
+      f: () => bC
     });
-    let Yq = !1;
+    let QC = !1;
 
-    function lq() {
-      return Yq
+    function wC() {
+      return QC
     }
 
-    function Oq(qq) {
-      return Yq !== qq && (Yq = qq, !0)
+    function bC(CC) {
+      return QC !== CC && (QC = CC, !0)
     }
   },
-  38910: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Oq
+  38859: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => bC
     });
-    var Yq = gq(31),
-      lq = gq(1926);
+    var QC = ZC(28),
+      wC = ZC(1865);
 
-    function Oq(qq) {
+    function bC(CC) {
       let {
-        taskId: Eq,
-        progress: gq
-      } = qq;
-      const Yq = lq.c.get("_tasks");
-      null !== Yq && void 0 !== Yq && Yq[Eq] && lq.c.apply({
+        taskId: zC,
+        progress: ZC
+      } = CC;
+      const QC = wC.e.get("_tasks");
+      null !== QC && void 0 !== QC && QC[zC] && wC.e.apply({
         _tasks: {
-          ...Yq,
-          [Eq]: {
-            ...Yq[Eq],
-            progress: gq
+          ...QC,
+          [zC]: {
+            ...QC[zC],
+            progress: ZC
           }
         }
       })
     }
-    Yq.i.subscribe("clientTaskProgress", (qq => {
-      Oq(qq)
+    QC.o.subscribe("clientTaskProgress", (CC => {
+      bC(CC)
     }))
   },
-  39511: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Wq,
-      i: () => aq,
-      k: () => cq,
-      m: () => Bq,
-      n: () => Aq,
-      p: () => mq,
-      s: () => uq,
-      w: () => Vq
+  39421: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => NC,
+      h: () => gC,
+      j: () => qC,
+      k: () => WC,
+      m: () => oC,
+      n: () => nC,
+      r: () => FC,
+      s: () => SC
     });
-    var Yq = gq(1926),
-      lq = gq(31),
-      Oq = gq(1933);
-    const mq = (0, Oq.j)((function() {
-        var qq, Eq, gq, lq;
+    var QC = ZC(1865),
+      wC = ZC(28),
+      bC = ZC(1872);
+    const nC = (0, bC.l)((function() {
+        var CC, zC, ZC, wC;
         return {
-          health: null !== (qq = Yq.c.get("_health")) && void 0 !== qq ? qq : null,
-          maxHealth: null !== (Eq = Yq.c.get("_totalMaxHealth")) && void 0 !== Eq ? Eq : null,
-          shield: null !== (gq = Yq.c.get("_shield")) && void 0 !== gq ? gq : null,
-          maxShield: null !== (lq = Yq.c.get("maxShield")) && void 0 !== lq ? lq : null
+          health: null !== (CC = QC.e.get("_health")) && void 0 !== CC ? CC : null,
+          maxHealth: null !== (zC = QC.e.get("_totalMaxHealth")) && void 0 !== zC ? zC : null,
+          shield: null !== (ZC = QC.e.get("_shield")) && void 0 !== ZC ? ZC : null,
+          maxShield: null !== (wC = QC.e.get("maxShield")) && void 0 !== wC ? wC : null
         }
-      }), [], (0, Oq.h)("_health", "_totalMaxHealth", "_shield", "maxShield")),
-      xq = [{
+      }), [], (0, bC.j)("_health", "_totalMaxHealth", "_shield", "maxShield")),
+      fC = [{
         canFly: !1,
         flying: !1
       }, {
@@ -191,784 +191,787 @@ export const modules = {
         flying: !0
       }];
 
-    function Aq(qq, Eq) {
-      return xq[(qq ? 2 : 0) + (Eq ? 1 : 0)]
+    function oC(CC, zC) {
+      return fC[(CC ? 2 : 0) + (zC ? 1 : 0)]
     }
-    const cq = (0, Oq.j)((function() {
-      var qq;
-      return null !== (qq = Yq.c.get("_aura")) && void 0 !== qq ? qq : null
-    }), [], (0, Oq.h)("_aura"));
+    const qC = (0, bC.l)((function() {
+      var CC;
+      return null !== (CC = QC.e.get("_aura")) && void 0 !== CC ? CC : null
+    }), [], (0, bC.j)("_aura"));
 
-    function uq(qq) {
+    function FC(CC) {
       return {
-        watch: Eq => (0, lq.k)("shotPlayer", (gq => {
+        watch: zC => (0, wC.q)("shotPlayer", (ZC => {
           let {
-            playerId: Yq,
-            damage: lq,
-            wasCrit: Oq,
-            distance: mq
-          } = gq;
-          qq(Yq) && Eq({
-            damage: lq,
-            wasCrit: Oq,
-            distance: mq
+            playerId: QC,
+            damage: wC,
+            wasCrit: bC,
+            distance: nC
+          } = ZC;
+          CC(QC) && zC({
+            damage: wC,
+            wasCrit: bC,
+            distance: nC
           })
         }))
       }
     }
 
-    function Bq(qq) {
-      return (0, Oq.c)("chat", (Eq => {
+    function WC(CC) {
+      return (0, bC.c)("chat", (zC => {
         let {
-          serverChatMsgId: gq,
-          content: Yq,
-          chatterEId: lq
-        } = Eq;
+          serverChatMsgId: ZC,
+          content: QC,
+          chatterEId: wC
+        } = zC;
         return {
-          serverChatMsgId: null !== gq && void 0 !== gq ? gq : null,
-          content: Yq,
-          author: lq ? qq(lq) : null
+          serverChatMsgId: null !== ZC && void 0 !== ZC ? ZC : null,
+          content: QC,
+          author: wC ? CC(wC) : null
         }
       }))
     }
-    class Wq {
+    class NC {
       constructor() {
         this.shown = null, this.needed = null, this.neededSince = 0
       }
-      update(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-        const gq = this.shown;
-        return qq !== this.needed && (this.needed = qq, this.neededSince = Eq, null === qq && (this.shown = null)), this.shown !== this.needed && Eq - this.neededSince > 200 && (this.shown = this.needed), this.shown !== gq
+      update(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
+        const ZC = this.shown;
+        return CC !== this.needed && (this.needed = CC, this.neededSince = zC, null === CC && (this.shown = null)), this.shown !== this.needed && zC - this.neededSince > 200 && (this.shown = this.needed), this.shown !== ZC
       }
     }
 
-    function Nq(qq) {
+    function MC(CC) {
       return [{
-        translationKey: `touchKeys:${qq}`
+        translationKey: `touchKeys:${CC}`
       }]
     }
-    const aq = {
-      open: Nq("open"),
-      close: Nq("close"),
-      milk: Nq("milk"),
-      shear: Nq("shear"),
-      tame: Nq("tame"),
-      feed: Nq("feed"),
-      ride: Nq("ride")
+    const gC = {
+      open: MC("open"),
+      close: MC("close"),
+      milk: MC("milk"),
+      shear: MC("shear"),
+      tame: MC("tame"),
+      feed: MC("feed"),
+      ride: MC("ride")
     };
 
-    function Vq(qq) {
+    function SC(CC) {
       return [{
         translationKey: "touchKeys:tameWith"
       }, " ", {
-        icon: qq
+        icon: CC
       }]
     }
   },
-  40479: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => xq,
-      c: () => mq
+  40878: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => fC,
+      i: () => nC
     });
-    var Yq = gq(3170);
-    let lq = null,
-      Oq = null;
+    var QC = ZC(3282);
+    let wC = null,
+      bC = null;
 
-    function mq() {
-      return Oq ??= gq.e(209).then((() => gq(36389))).then((qq => {
+    function nC() {
+      return bC ??= ZC.e(212).then((() => ZC(36219))).then((CC => {
         let {
-          ITEM_SPRITES: Eq,
-          ITEM_SPRITES_WITHOUT_FILE: gq,
-          ITEM_FILES_WITHOUT_SPRITE: Oq
-        } = qq;
-        lq = function(qq, Eq, gq) {
-          const lq = new Set,
-            Oq = (0, Yq.y)(Eq);
-          let mq = 0;
-          for (const [Yq, xq] of qq.entries()) Yq === Oq[mq] ? mq++ : lq.add(xq);
-          if ("" !== gq)
-            for (const xq of gq.split(Yq.v)) lq.add(xq);
-          return lq
-        }(Eq.split(Yq.v), gq, Oq)
-      }), (qq => {
-        throw Oq = null, qq
-      })), Oq
+          ITEM_SPRITES: zC,
+          ITEM_SPRITES_WITHOUT_FILE: ZC,
+          ITEM_FILES_WITHOUT_SPRITE: bC
+        } = CC;
+        wC = function(CC, zC, ZC) {
+          const wC = new Set,
+            bC = (0, QC.B)(zC);
+          let nC = 0;
+          for (const [QC, fC] of CC.entries()) QC === bC[nC] ? nC++ : wC.add(fC);
+          if ("" !== ZC)
+            for (const fC of ZC.split(QC.u)) wC.add(fC);
+          return wC
+        }(zC.split(QC.u), ZC, bC)
+      }), (CC => {
+        throw bC = null, CC
+      })), bC
     }
 
-    function xq(qq) {
-      var Eq, gq;
-      return null !== (Eq = null === (gq = lq) || void 0 === gq ? void 0 : gq.has(qq)) && void 0 !== Eq && Eq
+    function fC(CC) {
+      var zC, ZC;
+      return null !== (zC = null === (ZC = wC) || void 0 === ZC ? void 0 : ZC.has(CC)) && void 0 !== zC && zC
     }
   },
-  39525: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq,
-      g: () => Oq,
-      i: () => lq
+  39439: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => QC,
+      f: () => bC,
+      j: () => wC
     });
-    const Yq = 128;
+    const QC = 128;
 
-    function lq(qq, Eq, gq, Yq) {
-      const lq = 2 * Eq - 1,
-        Oq = 1 - 2 * gq,
-        mq = qq(0) - lq * qq(3),
-        xq = qq(4) - lq * qq(7),
-        Aq = qq(8) - lq * qq(11),
-        cq = qq(1) - Oq * qq(3),
-        uq = qq(5) - Oq * qq(7),
-        Bq = qq(9) - Oq * qq(11);
-      Yq[0] = xq * Bq - Aq * uq, Yq[1] = Aq * cq - mq * Bq, Yq[2] = mq * uq - xq * cq;
-      const Wq = Yq[0] * qq(3) + Yq[1] * qq(7) + Yq[2] * qq(11) < 0 ? -1 : 1,
-        Nq = Math.hypot(Yq[0], Yq[1], Yq[2]) * Wq;
-      return Yq[0] /= Nq, Yq[1] /= Nq, Yq[2] /= Nq, Yq
+    function wC(CC, zC, ZC, QC) {
+      const wC = 2 * zC - 1,
+        bC = 1 - 2 * ZC,
+        nC = CC(0) - wC * CC(3),
+        fC = CC(4) - wC * CC(7),
+        oC = CC(8) - wC * CC(11),
+        qC = CC(1) - bC * CC(3),
+        FC = CC(5) - bC * CC(7),
+        WC = CC(9) - bC * CC(11);
+      QC[0] = fC * WC - oC * FC, QC[1] = oC * qC - nC * WC, QC[2] = nC * FC - fC * qC;
+      const NC = QC[0] * CC(3) + QC[1] * CC(7) + QC[2] * CC(11) < 0 ? -1 : 1,
+        MC = Math.hypot(QC[0], QC[1], QC[2]) * NC;
+      return QC[0] /= MC, QC[1] /= MC, QC[2] /= MC, QC
     }
 
-    function Oq(qq, Eq, gq, Yq, lq, Oq) {
-      const mq = [Math.floor(Eq[0]), Math.floor(Eq[1]), Math.floor(Eq[2])],
-        xq = [0, 0, 0],
-        Aq = [1 / 0, 1 / 0, 1 / 0],
-        cq = [1 / 0, 1 / 0, 1 / 0];
-      for (let Wq = 0; Wq < 3; Wq++) xq[Wq] = Math.sign(gq[Wq]), 0 !== xq[Wq] && (cq[Wq] = Math.abs(1 / gq[Wq]), Aq[Wq] = (mq[Wq] + (xq[Wq] > 0 ? 1 : 0) - Eq[Wq]) / gq[Wq]);
-      let uq = 0,
-        Bq = Math.abs(gq[0]) > Math.abs(gq[1]) ? 0 : 1;
-      for (Math.abs(gq[2]) > Math.abs(gq[Bq]) && (Bq = 2); uq <= Yq;) {
-        if (qq(mq[0], mq[1], mq[2])) return lq[0] = mq[0], lq[1] = mq[1], lq[2] = mq[2], Oq[0] = 0, Oq[1] = 0, Oq[2] = 0, Oq[Bq] = -xq[Bq], !0;
-        Bq = Aq[0] < Aq[1] ? 0 : 1, Aq[2] < Aq[Bq] && (Bq = 2), uq = Aq[Bq], mq[Bq] += xq[Bq], Aq[Bq] += cq[Bq]
+    function bC(CC, zC, ZC, QC, wC, bC) {
+      const nC = [Math.floor(zC[0]), Math.floor(zC[1]), Math.floor(zC[2])],
+        fC = [0, 0, 0],
+        oC = [1 / 0, 1 / 0, 1 / 0],
+        qC = [1 / 0, 1 / 0, 1 / 0];
+      for (let NC = 0; NC < 3; NC++) fC[NC] = Math.sign(ZC[NC]), 0 !== fC[NC] && (qC[NC] = Math.abs(1 / ZC[NC]), oC[NC] = (nC[NC] + (fC[NC] > 0 ? 1 : 0) - zC[NC]) / ZC[NC]);
+      let FC = 0,
+        WC = Math.abs(ZC[0]) > Math.abs(ZC[1]) ? 0 : 1;
+      for (Math.abs(ZC[2]) > Math.abs(ZC[WC]) && (WC = 2); FC <= QC;) {
+        if (CC(nC[0], nC[1], nC[2])) return wC[0] = nC[0], wC[1] = nC[1], wC[2] = nC[2], bC[0] = 0, bC[1] = 0, bC[2] = 0, bC[WC] = -fC[WC], !0;
+        WC = oC[0] < oC[1] ? 0 : 1, oC[2] < oC[WC] && (WC = 2), FC = oC[WC], nC[WC] += fC[WC], oC[WC] += qC[WC]
       }
       return !1
     }
   },
-  39507: (qq, Eq, gq) => {
-    function Yq(qq, Eq, gq) {
-      return Math.hypot(qq[0] - Eq[0], qq[1] - Eq[1], qq[2] - Eq[2]) < gq + .5
-    }
-    gq.d(Eq, {
-      e: () => Yq
-    })
-  },
-  38927: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq
+  39413: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => wC
     });
-    var Yq = gq(1214),
-      lq = gq(1313),
-      Oq = gq(24),
-      mq = gq(1298),
-      xq = gq(1308),
-      Aq = gq(1498),
-      cq = gq(36519);
+    var QC = ZC(1806);
 
-    function uq(qq) {
+    function wC(CC, zC, ZC) {
+      return (0, QC.m)(CC, zC) < ZC
+    }
+  },
+  38848: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => FC
+    });
+    var QC = ZC(1169),
+      wC = ZC(1284),
+      bC = ZC(20),
+      nC = ZC(1263),
+      fC = ZC(1275),
+      oC = ZC(1453),
+      qC = ZC(36346);
+
+    function FC(CC) {
       let {
-        Oq: Eq,
-        mq: gq
-      } = qq;
-      const uq = null !== Eq && void 0 !== Eq ? Eq : (0, xq.e)().gameNameWithVariation;
-      (0, Yq.K)(uq) && ((0, cq.i)(), (0, mq.ob)((() => {
-        console.log("Received matchmaking order from game server to game", Eq), (0, Oq.f)("inGameReplay"), (0, Aq.navigatePreserveSearch)((0, lq.e)(uq, null !== gq && void 0 !== gq ? gq : void 0))
+        Kw: zC,
+        Yw: ZC
+      } = CC;
+      const FC = null !== zC && void 0 !== zC ? zC : (0, fC.d)().gameNameWithVariation;
+      (0, QC.R)(FC) && ((0, qC.k)(), (0, nC.X)((() => {
+        console.log("Received matchmaking order from game server to game", zC), (0, bC.g)("inGameReplay"), (0, oC.navigatePreserveSearch)((0, wC.b)(FC, null !== ZC && void 0 !== ZC ? ZC : void 0))
       }), "video_start"))
     }
   },
-  39121: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq
+  39008: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => bC
     });
-    var Yq = gq(31),
-      lq = gq(1952);
+    var QC = ZC(28),
+      wC = ZC(1887);
 
-    function Oq(qq) {
-      var Eq, gq;
-      const Oq = (0, lq.l)(null !== (Eq = null === (gq = lq.u.toggleFreeCam) || void 0 === gq ? void 0 : gq[0]) && void 0 !== Eq ? Eq : null);
-      Yq.i.TV("showBottomMessage", {
-        message: `Free Camera ${qq?"Enabled":"Disabled"}${Oq?` - Press ${Oq} to toggle`:""}`,
+    function bC(CC) {
+      var zC, ZC;
+      const bC = (0, wC.h)(null !== (zC = null === (ZC = wC.o.toggleFreeCam) || void 0 === ZC ? void 0 : ZC[0]) && void 0 !== zC ? zC : null);
+      QC.o.bp("showBottomMessage", {
+        message: `Free Camera ${CC?"Enabled":"Disabled"}${bC?` - Press ${bC} to toggle`:""}`,
         timeoutLength: 2e3,
         type: "Warning"
       })
     }
   },
-  38915: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Aq,
-      f: () => mq,
-      i: () => xq,
-      l: () => cq
+  38841: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => oC,
+      i: () => nC,
+      m: () => fC,
+      o: () => qC
     });
-    var Yq = gq(31),
-      lq = gq(1336);
-    const Oq = new Map;
+    var QC = ZC(28),
+      wC = ZC(1307);
+    const bC = new Map;
 
-    function mq(qq, Eq) {
-      Yq.i.TV("newUiRequest", {
-        id: qq,
-        clientParameters: Eq
+    function nC(CC, zC) {
+      QC.o.bp("newUiRequest", {
+        id: CC,
+        clientParameters: zC
       }, !0)
     }
 
-    function xq(qq) {
-      Yq.i.TV("removeUiRequest", qq, !0);
-      const Eq = Oq.get(qq);
-      Eq && (Eq.tearDownNotification(), Oq.delete(qq))
+    function fC(CC) {
+      QC.o.bp("removeUiRequest", CC, !0);
+      const zC = bC.get(CC);
+      zC && (zC.tearDownNotification(), bC.delete(CC))
     }
 
-    function Aq() {
-      Yq.i.TV("clearUiRequests");
-      for (const qq of Oq.values()) qq.tearDownNotification();
-      Oq.clear()
+    function oC() {
+      QC.o.bp("clearUiRequests");
+      for (const CC of bC.values()) CC.tearDownNotification();
+      bC.clear()
     }
 
-    function cq(qq, Eq, gq) {
-      const Yq = lq.NotificationProvider.showPromptPopup({
-        title: Eq,
+    function qC(CC, zC, ZC, QC) {
+      const nC = wC.NotificationProvider.showPromptPopup({
+        title: zC,
         confirmText: "general:yes",
         cancelText: "general:no",
+        destructive: ZC,
         unlockPointerKey: "uiRequestPopup"
       });
-      Oq.set(qq, Yq), Yq.getResult().then((Eq => {
-        Oq.delete(qq), "notificationTornDown" !== Eq && gq(Eq)
+      bC.set(CC, nC), nC.getResult().then((zC => {
+        bC.delete(CC), "notificationTornDown" !== zC && QC(zC)
       }))
     }
   },
-  39529: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Bq,
-      h: () => Wq
+  39446: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => WC,
+      h: () => NC
     });
-    var Yq = gq(190),
-      lq = gq(39532);
-    const Oq = 20;
+    var QC = ZC(184),
+      wC = ZC(39450);
+    const bC = 20;
 
-    function mq(qq) {
-      return qq.map(Math.floor).join(" ")
+    function nC(CC) {
+      return CC.map(Math.floor).join(" ")
     }
 
-    function xq(qq) {
-      return null === qq.amount || 1 === qq.amount ? qq.name : `${qq.amount} ${qq.name}`
+    function fC(CC) {
+      return null === CC.amount || 1 === CC.amount ? CC.name : `${CC.amount} ${CC.name}`
     }
-    var Aq = gq(39535),
-      cq = gq(1926),
-      uq = gq(1308);
+    var oC = ZC(39457),
+      qC = ZC(1865),
+      FC = ZC(1275);
 
-    function Bq(qq, Eq) {
-      if (!qq) return Aq.b;
-      const gq = qq.playerFeet();
-      if (!gq) return "The player isn't in the world yet, so no blocks can be seen.";
-      const Oq = Yq.c.Oa,
-        mq = (0, lq.k)(null !== Eq && void 0 !== Eq ? Eq : gq, Oq),
-        xq = qq.chunkBlocks(mq);
-      return xq ? (0, lq.d)(mq, Oq, ((Eq, gq, Yq) => {
-        const lq = xq(Eq, gq, Yq);
-        return 0 === lq ? null : qq.blockName(lq).split("|")[0]
-      }), gq) : `The chunk from ${mq.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${gq.map(Math.floor).join(" ")}.`
+    function WC(CC, zC) {
+      if (!CC) return oC.c;
+      const ZC = CC.playerFeet();
+      if (!ZC) return "The player isn't in the world yet, so no blocks can be seen.";
+      const bC = QC.f.Ig,
+        nC = (0, wC.h)(null !== zC && void 0 !== zC ? zC : ZC, bC),
+        fC = CC.chunkBlocks(nC);
+      return fC ? (0, wC.d)(nC, bC, ((zC, ZC, QC) => {
+        const wC = fC(zC, ZC, QC);
+        return 0 === wC ? null : CC.blockName(wC).split("|")[0]
+      }), ZC) : `The chunk from ${nC.join(" ")} isn't loaded: only chunks near the player are. The player's feet are at ${ZC.map(Math.floor).join(" ")}.`
     }
 
-    function Wq(qq) {
-      var Eq, gq, Yq;
-      if (!qq) return Aq.d;
-      const lq = qq.playerFeet();
-      if (!lq) return "The player isn't in the world yet, so nothing in it can be seen.";
+    function NC(CC) {
+      var zC, ZC, QC;
+      if (!CC) return oC.f;
+      const wC = CC.playerFeet();
+      if (!wC) return "The player isn't in the world yet, so nothing in it can be seen.";
       const {
-        slots: Bq,
-        heldSlot: Wq
-      } = qq.inventory();
-      return function(qq) {
-        const Eq = [];
-        null !== qq.game && Eq.push(`Game: ${qq.game}.`);
-        const gq = null === qq.health ? "" : `, health ${Math.round(qq.health)}${null===qq.maxHealth?"":` of ${Math.round(qq.maxHealth)}`}`;
-        Eq.push(`The player (the creator) stands at ${mq(qq.position)}${gq}, ${qq.creative?"in":"not in"} creative mode.`);
-        const Yq = qq.slots[qq.heldSlot];
-        Eq.push(Yq ? `Holding (slot ${qq.heldSlot}): ${xq(Yq)}.` : `Holding nothing (slot ${qq.heldSlot} is empty).`);
-        const lq = qq.slots.flatMap(((qq, Eq) => qq ? [`slot ${Eq}: ${xq(qq)}`] : []));
-        Eq.push(lq.length > 0 ? `Inventory: ${lq.join(", ")}.` : "Inventory: empty.");
-        const Aq = Eq => Math.hypot(Eq.position[0] - qq.position[0], Eq.position[1] - qq.position[1], Eq.position[2] - qq.position[2]),
-          cq = [...qq.nearby].sort(((qq, Eq) => Aq(qq) - Aq(Eq)));
-        if (0 === cq.length) Eq.push("No other players or mobs are near enough to see.");
+        slots: WC,
+        heldSlot: NC
+      } = CC.inventory();
+      return function(CC) {
+        const zC = [];
+        null !== CC.game && zC.push(`Game: ${CC.game}.`);
+        const ZC = null === CC.health ? "" : `, health ${Math.round(CC.health)}${null===CC.maxHealth?"":` of ${Math.round(CC.maxHealth)}`}`;
+        zC.push(`The player (the creator) stands at ${nC(CC.position)}${ZC}, ${CC.creative?"in":"not in"} creative mode.`);
+        const QC = CC.slots[CC.heldSlot];
+        zC.push(QC ? `Holding (slot ${CC.heldSlot}): ${fC(QC)}.` : `Holding nothing (slot ${CC.heldSlot} is empty).`);
+        const wC = CC.slots.flatMap(((CC, zC) => CC ? [`slot ${zC}: ${fC(CC)}`] : []));
+        zC.push(wC.length > 0 ? `Inventory: ${wC.join(", ")}.` : "Inventory: empty.");
+        const oC = zC => Math.hypot(zC.position[0] - CC.position[0], zC.position[1] - CC.position[1], zC.position[2] - CC.position[2]),
+          qC = [...CC.nearby].sort(((CC, zC) => oC(CC) - oC(zC)));
+        if (0 === qC.length) zC.push("No other players or mobs are near enough to see.");
         else {
-          Eq.push("Near them, nearest first:");
-          for (const qq of cq.slice(0, Oq)) {
-            const gq = "player" === qq.kind ? `player "${qq.name||"?"}"` : qq.name && qq.name !== qq.kind ? `${qq.kind} "${qq.name}"` : qq.kind,
-              Yq = Math.round(Aq(qq));
-            Eq.push(`- ${gq} at ${mq(qq.position)}, ${Yq} block${1===Yq?"":"s"} away`)
+          zC.push("Near them, nearest first:");
+          for (const CC of qC.slice(0, bC)) {
+            const ZC = "player" === CC.kind ? `player "${CC.name||"?"}"` : CC.name && CC.name !== CC.kind ? `${CC.kind} "${CC.name}"` : CC.kind,
+              QC = Math.round(oC(CC));
+            zC.push(`- ${ZC} at ${nC(CC.position)}, ${QC} block${1===QC?"":"s"} away`)
           }
-          cq.length > Oq && Eq.push(`- and ${cq.length-Oq} more further away`)
+          qC.length > bC && zC.push(`- and ${qC.length-bC} more further away`)
         }
-        return qq.droppedItems > 0 && Eq.push(`${qq.droppedItems} dropped item${1===qq.droppedItems?" is":"s are"} on the ground nearby.`), Eq.join("\n")
+        return CC.droppedItems > 0 && zC.push(`${CC.droppedItems} dropped item${1===CC.droppedItems?" is":"s are"} on the ground nearby.`), zC.join("\n")
       }({
-        game: null !== (Eq = (0, uq.e)().gameNameWithVariation) && void 0 !== Eq ? Eq : null,
-        position: lq,
-        health: null !== (gq = cq.c.get("_health")) && void 0 !== gq ? gq : null,
-        maxHealth: null !== (Yq = cq.c.get("_totalMaxHealth")) && void 0 !== Yq ? Yq : null,
-        creative: !0 === cq.c.get("creative"),
-        heldSlot: Wq,
-        slots: Bq,
-        nearby: qq.nearby(),
-        droppedItems: qq.droppedItems()
+        game: null !== (zC = (0, FC.d)().gameNameWithVariation) && void 0 !== zC ? zC : null,
+        position: wC,
+        health: null !== (ZC = qC.e.get("_health")) && void 0 !== ZC ? ZC : null,
+        maxHealth: null !== (QC = qC.e.get("_totalMaxHealth")) && void 0 !== QC ? QC : null,
+        creative: !0 === qC.e.get("creative"),
+        heldSlot: NC,
+        slots: WC,
+        nearby: CC.nearby(),
+        droppedItems: CC.droppedItems()
       })
     }
   },
-  38939: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => xq,
-      g: () => Aq,
-      i: () => cq
+  38868: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => fC,
+      d: () => oC,
+      h: () => qC
     });
-    var Yq = gq(1214),
-      lq = gq(987),
-      Oq = gq(36912),
-      mq = gq(31);
+    var QC = ZC(1169),
+      wC = ZC(970),
+      bC = ZC(36725),
+      nC = ZC(28);
 
-    function xq(qq) {
+    function fC(CC) {
       let {
-        lobbyName: Eq,
-        gameNameWithVariation: gq
-      } = qq;
-      return !(0, Yq.N)(Eq) || null !== gq && (gq.startsWith("testGym") || (0, lq.j)(gq))
+        lobbyName: zC,
+        gameNameWithVariation: ZC
+      } = CC;
+      return !(0, QC.U)(zC) || null !== ZC && (ZC.startsWith("testGym") || (0, wC.i)(ZC))
     }
 
-    function Aq(qq) {
-      return qq.nE === Oq.c.Leave || qq.nE === Oq.c.Cursor
+    function oC(CC) {
+      return CC.rb === bC.d.Leave || CC.rb === bC.d.Cursor
     }
 
-    function cq(qq) {
-      mq.i.TV("codeCollab", {
-        type: qq.nE,
-        docKey: qq.bE,
-        version: qq.iE,
-        editorCount: qq.ZE,
-        peers: qq.fE,
-        updates: qq.ME,
-        playerId: qq.TE,
-        playerName: qq.zE,
-        colour: qq.SE,
-        anchor: qq.pE,
-        head: qq.GE,
-        existingCursors: qq.LE,
-        files: qq.JE,
-        engineSettings: qq.kE
+    function qC(CC) {
+      nC.o.bp("codeCollab", {
+        type: CC.rb,
+        docKey: CC.sb,
+        version: CC.Tb,
+        editorCount: CC.ab,
+        peers: CC.tb,
+        updates: CC.Db,
+        playerId: CC.jb,
+        playerName: CC.yb,
+        colour: CC.Lb,
+        anchor: CC.Ub,
+        head: CC.Bb,
+        existingCursors: CC.Ob,
+        files: CC.kb,
+        engineSettings: CC.Vb
       })
     }
   },
-  40434: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      A: () => Cq,
-      E: () => Sq,
-      F: () => iq,
-      I: () => zq,
-      K: () => bq,
-      M: () => Fq,
-      N: () => Uq,
-      P: () => fq,
-      b: () => sq,
-      d: () => Gq,
-      e: () => hq,
-      i: () => Xq,
-      k: () => nq,
-      m: () => vq,
-      q: () => pq,
-      u: () => Zq,
-      w: () => Tq,
-      x: () => Mq
+  40717: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      A: () => EC,
+      D: () => HC,
+      G: () => BC,
+      H: () => XC,
+      J: () => YC,
+      N: () => lC,
+      O: () => KC,
+      R: () => DC,
+      T: () => tC,
+      W: () => mC,
+      c: () => jC,
+      d: () => uC,
+      g: () => eC,
+      k: () => yC,
+      o: () => hC,
+      s: () => vC,
+      u: () => cC,
+      x: () => dC
     });
-    var Yq = gq(1367),
-      lq = gq(31),
-      Oq = gq(1274),
-      mq = gq(2357),
-      xq = gq(4637),
-      Aq = gq(4608);
-    let cq, uq = !1,
-      Bq = !1,
-      Wq = !1,
-      Nq = !1;
-    const aq = 1300,
-      Vq = 3e3;
-    let dq = 0,
-      jq = !1,
-      Hq = !1,
-      oq = 0;
-    const Pq = 2;
-    let Qq = !1,
-      yq = !1;
-    const tq = new Set,
-      rq = new Set;
+    var QC = ZC(1347),
+      wC = ZC(28),
+      bC = ZC(1240),
+      nC = ZC(2348),
+      fC = ZC(4752),
+      oC = ZC(4711);
+    let qC, FC = !1,
+      WC = !1,
+      NC = !1,
+      MC = !1;
+    const gC = 1300,
+      SC = 3e3;
+    let pC = 0,
+      PC = !1,
+      GC = !1,
+      RC = 0;
+    const AC = 2;
+    let xC = !1,
+      JC = !1;
+    const IC = new Set,
+      iC = new Set;
 
-    function vq() {
-      return uq
+    function vC() {
+      return FC
     }
 
-    function hq() {
-      return Hq
+    function eC() {
+      return GC
     }
 
-    function nq() {
-      return yq
+    function hC() {
+      return JC
     }
 
-    function bq() {
-      return (0, Oq.p)() && !yq
+    function KC() {
+      return (0, bC.x)() && !JC
     }
 
-    function iq(qq) {
-      let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (qq !== yq) {
-        yq = qq;
-        for (const qq of [...rq]) qq(yq);
-        Eq && Uq()
+    function YC(CC) {
+      let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (CC !== JC) {
+        JC = CC;
+        for (const CC of [...iC]) CC(JC);
+        zC && tC()
       }
     }
 
-    function Zq(qq) {
-      return rq.add(qq), () => {
-        rq.delete(qq)
+    function dC(CC) {
+      return iC.add(CC), () => {
+        iC.delete(CC)
       }
     }
 
-    function fq() {
-      (0, xq.k)(mq.C.Menu, (0, Oq.p)() ? 0 : mq.C.Menu)
+    function mC() {
+      (0, fC.e)(nC.v.Menu, (0, bC.x)() ? 0 : nC.v.Menu)
     }
 
-    function Mq() {
-      Hq = !1, oq = 0, fq(), Uq()
+    function HC() {
+      GC = !1, RC = 0, mC(), tC()
     }
 
-    function Tq(qq) {
-      return tq.add(qq), () => {
-        tq.delete(qq)
+    function EC(CC) {
+      return IC.add(CC), () => {
+        IC.delete(CC)
       }
     }
 
-    function zq(qq) {
-      Bq = !1, qq !== uq && (uq = qq, Nq = !1, clearTimeout(cq), Wq = !uq && Qq, uq ? (jq = !1, Hq = !1, oq = 0) : bq() && !Qq && (Hq = !0), Qq = !1, uq && !bq() && Kq(), Iq(), Wq && Uq())
+    function lC(CC) {
+      WC = !1, CC !== FC && (FC = CC, MC = !1, clearTimeout(qC), NC = !FC && xC, FC ? (PC = !1, GC = !1, RC = 0) : KC() && !xC && (GC = !0), xC = !1, FC && !KC() && UC(), OC(), NC && tC())
     }
 
-    function Sq(qq) {
-      qq !== jq && (jq = qq, qq || Uq())
+    function XC(CC) {
+      CC !== PC && (PC = CC, CC || tC())
     }
 
-    function pq() {
-      Bq = !1, Nq || !0 !== kq() || (Nq = !0, clearTimeout(cq), cq = setTimeout(Lq, aq))
+    function cC() {
+      WC = !1, MC || !0 !== TC() || (MC = !0, clearTimeout(qC), qC = setTimeout(rC, gC))
     }
 
-    function Gq() {
-      return (!Bq || performance.now() - dq > Vq) && (Bq = (0, Aq.M)().lockPointer(), dq = performance.now()), Bq
+    function uC() {
+      return (!WC || performance.now() - pC > SC) && (WC = (0, oC.E)().lockPointer(), pC = performance.now()), WC
     }
 
-    function Lq() {
-      Jq() && Rq() && Gq()
+    function rC() {
+      sC() && aC() && uC()
     }
 
-    function Jq() {
-      return bq() && !uq && !jq && !(0, Yq.c)()
+    function sC() {
+      return KC() && !FC && !PC && !(0, QC.h)()
     }
 
-    function kq() {
-      var qq;
-      return "undefined" === typeof navigator || null === (qq = navigator.userActivation) || void 0 === qq ? void 0 : qq.isActive
+    function TC() {
+      var CC;
+      return "undefined" === typeof navigator || null === (CC = navigator.userActivation) || void 0 === CC ? void 0 : CC.isActive
     }
 
-    function Rq() {
-      return Wq && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== kq()
+    function aC() {
+      return NC && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== TC()
     }
 
-    function Uq() {
-      bq() ? Jq() && !Hq && Rq() && Gq() : uq && !Qq && Kq()
+    function tC() {
+      KC() ? sC() && !GC && aC() && uC() : FC && !xC && UC()
     }
 
-    function Fq() {
-      Hq ? navigator.vendor.startsWith("Apple") ? wq() : oq = Pq : Uq()
+    function DC() {
+      GC ? navigator.vendor.startsWith("Apple") ? LC() : RC = AC : tC()
     }
 
-    function sq() {
-      oq > 0 && 0 === --oq && wq()
+    function jC() {
+      RC > 0 && 0 === --RC && LC()
     }
 
-    function Xq() {
-      oq = 0
+    function yC() {
+      RC = 0
     }
 
-    function wq() {
-      Jq() && !0 === kq() && Gq()
+    function LC() {
+      sC() && !0 === TC() && uC()
     }
 
-    function Kq() {
-      Qq = !0, (0, Aq.M)().unlockPointer()
+    function UC() {
+      xC = !0, (0, oC.E)().unlockPointer()
     }
 
-    function Cq() {
-      Bq = !1, Wq = !1, Nq = !1, clearTimeout(cq), jq = !1, Hq = !1, oq = 0, Qq = !1;
-      const qq = uq;
-      uq = !1, qq && Iq()
+    function BC() {
+      WC = !1, NC = !1, MC = !1, clearTimeout(qC), PC = !1, GC = !1, RC = 0, xC = !1;
+      const CC = FC;
+      FC = !1, CC && OC()
     }
 
-    function Iq() {
-      for (const qq of [...tq]) qq(uq);
-      lq.i.TV("pointerLockUpdate", uq)
+    function OC() {
+      for (const CC of [...IC]) CC(FC);
+      wC.o.bp("pointerLockUpdate", FC)
     }
   },
-  40409: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Wq,
-      f: () => xq,
-      i: () => Bq,
-      l: () => cq,
-      m: () => mq,
-      o: () => uq,
-      s: () => Aq
+  40518: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => NC,
+      g: () => fC,
+      j: () => WC,
+      k: () => qC,
+      m: () => nC,
+      q: () => FC,
+      s: () => oC
     });
-    let Yq = null,
-      lq = null,
-      Oq = null;
+    let QC = null,
+      wC = null,
+      bC = null;
 
-    function mq(qq) {
-      Yq = qq
+    function nC(CC) {
+      QC = CC
     }
 
-    function xq() {
-      return Yq
+    function fC() {
+      return QC
     }
 
-    function Aq(qq) {
-      lq = qq
+    function oC(CC) {
+      wC = CC
     }
 
-    function cq() {
-      return lq
+    function qC() {
+      return wC
     }
 
-    function uq(qq) {
-      Oq = qq
+    function FC(CC) {
+      bC = CC
     }
 
-    function Bq() {
-      return Oq
+    function WC() {
+      return bC
     }
 
-    function Wq() {
-      var qq, Eq;
-      return !0 === (null === (qq = lq) || void 0 === qq || null === (Eq = qq.currentViewer) || void 0 === Eq ? void 0 : Eq.inPlayback)
+    function NC() {
+      var CC, zC;
+      return !0 === (null === (CC = wC) || void 0 === CC || null === (zC = CC.currentViewer) || void 0 === zC ? void 0 : zC.inPlayback)
     }
   },
-  40404: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      attachPlayGameSources: () => yY,
-      playGameSources: () => QY
+  40832: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      attachPlayGameSources: () => JQ,
+      playGameSources: () => xQ
     });
-    var Yq = gq(1904),
-      lq = gq(40409),
-      Oq = gq(4608),
-      mq = gq(40325),
-      xq = gq(40415),
-      Aq = gq(39511),
-      cq = gq(31),
-      uq = gq(4625),
-      Bq = gq(4622),
-      Wq = gq(40353),
-      Nq = gq(40377),
-      aq = gq(40421),
-      Vq = gq(40366);
-    (0, Vq.l)(uq.ec.Chat, (qq => {
-      if (qq.payloadKind !== Bq.hc.Msgpack) return;
-      const Eq = function(qq) {
-        if (null === qq || "object" !== typeof qq || !("content" in qq)) return null;
+    var QC = ZC(1840),
+      wC = ZC(40518),
+      bC = ZC(4711),
+      nC = ZC(40423),
+      fC = ZC(40817),
+      oC = ZC(39421),
+      qC = ZC(28),
+      FC = ZC(4733),
+      WC = ZC(4727),
+      NC = ZC(40457),
+      MC = ZC(40485),
+      gC = ZC(40838),
+      SC = ZC(40470);
+    (0, SC.l)(FC.Bc.Chat, (CC => {
+      if (CC.payloadKind !== WC.hc.Msgpack) return;
+      const zC = function(CC) {
+        if (null === CC || "object" !== typeof CC || !("content" in CC)) return null;
         const {
-          chatMsgId: Eq,
-          content: gq,
-          chatterEId: Yq
-        } = qq;
+          chatMsgId: zC,
+          content: ZC,
+          chatterEId: QC
+        } = CC;
         return {
-          serverChatMsgId: null !== Eq && void 0 !== Eq ? Eq : void 0,
-          content: gq,
-          chatterEId: void 0 === Yq || null === Yq ? void 0 : String(Yq)
+          serverChatMsgId: null !== zC && void 0 !== zC ? zC : void 0,
+          content: ZC,
+          chatterEId: void 0 === QC || null === QC ? void 0 : String(QC)
         }
-      }((0, Wq.e)(qq.payload));
-      null !== Eq && cq.i.TV("chat", Eq, !0)
+      }((0, NC.c)(CC.payload));
+      null !== zC && qC.o.bp("chat", zC, !0)
     }));
-    const dq = {
-        chatReceived: (0, Aq.m)((function(qq) {
-          var Eq, gq, Yq;
+    const pC = {
+        chatReceived: (0, oC.k)((function(CC) {
+          var zC, ZC, QC;
           return {
-            id: qq,
-            name: null !== (Eq = aq.e.getName(qq)) && void 0 !== Eq ? Eq : null,
-            local: (0, Nq.f)() === qq,
-            profileEffect: null !== (gq = null === (Yq = (0, aq.h)(qq)) || void 0 === Yq ? void 0 : Yq.profileEffect) && void 0 !== gq ? gq : null
+            id: CC,
+            name: null !== (zC = gC.f.getName(CC)) && void 0 !== zC ? zC : null,
+            local: (0, MC.g)() === CC,
+            profileEffect: null !== (ZC = null === (QC = (0, gC.j)(CC)) || void 0 === QC ? void 0 : QC.profileEffect) && void 0 !== ZC ? ZC : null
           }
         }))
       },
-      jq = {
-        sendChatMessage(qq) {
-          var Eq;
+      PC = {
+        sendChatMessage(CC) {
+          var zC;
           let {
-            Hc: gq,
-            channelName: Yq
-          } = qq;
-          null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.clientApi.sendChat(gq, Yq)
+            cq: ZC,
+            channelName: QC
+          } = CC;
+          null === (zC = (0, nC.k)()) || void 0 === zC || zC.clientApi.sendChat(ZC, QC)
         }
       };
-    var Hq = gq(190),
-      oq = gq(1926),
-      Pq = gq(40318),
-      Qq = gq(39507);
-    const yq = [0, 0, 0],
-      tq = {
-        codeBlockClickable(qq) {
-          var Eq;
-          const gq = (0, mq.e)();
-          if (null === gq || void 0 === gq || !gq.isSessionLive) return !1;
-          const Yq = gq.api;
-          if (0 !== (Pq.t.playerFlags(Yq.apiView, 0) & Pq.Pd.Crouching)) return !1;
-          const lq = Yq.queries.directorEntity(Yq.localId) >= Pq.sb.BYTES ? Yq.memoryData(Yq.scratch(), Pq.sb.BYTES, 8, "the local player's DirectorEntity") : null;
-          if (null === lq) return !1;
-          for (let Oq = 0; Oq < 3; Oq++) yq[Oq] = Pq.sb.feet(lq, 0, Oq);
-          return yq[1] += Pq.sb.eyeHeight(lq, 0), (0, Qq.e)(yq, qq, null !== (Eq = oq.c.get("blockReach")) && void 0 !== Eq ? Eq : Hq.c.IH)
+    var GC = ZC(184),
+      RC = ZC(1865),
+      AC = ZC(40412),
+      xC = ZC(39413);
+    const JC = [0, 0, 0],
+      IC = {
+        codeBlockClickable(CC) {
+          var zC;
+          const ZC = (0, nC.k)();
+          if (null === ZC || void 0 === ZC || !ZC.isSessionLive) return !1;
+          const QC = ZC.api;
+          if (0 !== (AC.w.playerFlags(QC.apiView, 0) & AC.ce.Crouching)) return !1;
+          const wC = QC.queries.directorEntity(QC.localId) >= AC.xb.BYTES ? QC.memoryData(QC.scratch(), AC.xb.BYTES, 8, "the local player's DirectorEntity") : null;
+          if (null === wC) return !1;
+          for (let bC = 0; bC < 3; bC++) JC[bC] = AC.xb.feet(wC, 0, bC);
+          return JC[1] += AC.xb.eyeHeight(wC, 0), (0, xC.e)(JC, CC, null !== (zC = RC.e.get("blockReach")) && void 0 !== zC ? zC : GC.f.yp)
         }
       },
-      rq = {
-        clickCodeBlock(qq) {
-          var Eq;
-          null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.clickCodeBlock(qq)
+      iC = {
+        clickCodeBlock(CC) {
+          var zC;
+          null === (zC = (0, nC.k)()) || void 0 === zC || zC.clickCodeBlock(CC)
         }
       };
-    var vq = gq(40331),
-      hq = gq(40428),
-      nq = gq(987),
-      bq = gq(38976),
-      iq = gq(4606),
-      Zq = gq(40343),
-      fq = gq(40329),
-      Mq = gq(40350);
+    var vC = ZC(40431),
+      eC = ZC(40842),
+      hC = ZC(970),
+      KC = ZC(38874),
+      YC = ZC(4706),
+      dC = ZC(40446),
+      mC = ZC(40427),
+      HC = ZC(40449);
 
-    function Tq(qq) {
-      if (null === qq) return null;
-      const Eq = [];
-      for (const gq of qq) {
-        const qq = Object.keys(gq)[0];
-        if ("rg" === qq) {
+    function EC(CC) {
+      if (null === CC) return null;
+      const zC = [];
+      for (const ZC of CC) {
+        const CC = Object.keys(ZC)[0];
+        if ("KZ" === CC) {
           const {
-            str: qq,
-            style: Yq,
-            clickableUrl: lq
-          } = gq.rg, Oq = Object.keys(qq)[0], mq = qq[Oq];
-          "string" !== Oq && "styledEntityName" !== Oq && "styledTranslatedText" !== Oq || Eq.push({
-            str: mq,
-            style: Yq,
-            clickableUrl: lq
+            str: CC,
+            style: QC,
+            clickableUrl: wC
+          } = ZC.KZ, bC = Object.keys(CC)[0], nC = CC[bC];
+          "string" !== bC && "styledEntityName" !== bC && "styledTranslatedText" !== bC || zC.push({
+            str: nC,
+            style: QC,
+            clickableUrl: wC
           })
-        } else Eq.push(gq[qq])
+        } else zC.push(ZC[CC])
       }
-      return Eq
+      return zC
     }
-    const zq = {
-      screenPos(qq) {
-        var Eq, gq;
-        return null !== (Eq = null === (gq = (0, mq.e)()) || void 0 === gq ? void 0 : gq.renderFrame.projectWorldPosToScreenPos(qq)) && void 0 !== Eq ? Eq : {
+    const lC = {
+      screenPos(CC) {
+        var zC, ZC;
+        return null !== (zC = null === (ZC = (0, nC.k)()) || void 0 === ZC ? void 0 : ZC.renderFrame.projectWorldPosToScreenPos(CC)) && void 0 !== zC ? zC : {
           x: 0,
           y: 0
         }
       }
     };
-    let Sq = !1;
+    let XC = !1;
 
-    function pq() {
-      Sq || (Sq = !0, (0, Vq.l)(uq.ec.ProgressBarUpdate, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        (0, Mq.b)(Eq) && cq.i.TV("progressBarUpdate", Eq, !0)
-      })), (0, Vq.l)(Zq.u, (qq => {
-        const Eq = (0, Mq.d)(Zq.u, qq);
-        Eq && cq.i.TV("middleScreenBarInitiate", {
-          duration: Eq.cE,
-          uE: Eq.uE,
-          horizBarRemOffset: Eq.BE
+    function cC() {
+      XC || (XC = !0, (0, SC.l)(FC.Bc.ProgressBarUpdate, (CC => {
+        const zC = (0, HC.j)(CC);
+        (0, HC.e)(zC) && qC.o.bp("progressBarUpdate", zC, !0)
+      })), (0, SC.l)(dC.y, (CC => {
+        const zC = (0, HC.h)(dC.y, CC);
+        zC && qC.o.bp("middleScreenBarInitiate", {
+          duration: zC.rQ,
+          sQ: zC.sQ,
+          horizBarRemOffset: zC.TQ
         }, !0)
-      })), (0, Vq.l)(uq.ec.RemoveMiddleScreenBar, (() => {
-        cq.i.TV("middleScreenBarRemove")
-      })), (0, Vq.l)(Zq.V, (qq => {
-        const Eq = (0, Mq.d)(Zq.V, qq);
-        if (Eq) {
-          var gq;
-          const qq = Eq.hq ? null === (gq = (0, mq.e)()) || void 0 === gq ? void 0 : gq.renderFrame.projectDirectionToScreenPos(Eq.hq) : void 0;
-          cq.i.TV("sendHitmarker", {
-            vq: Eq.vq,
-            screenPos: qq
+      })), (0, SC.l)(FC.Bc.RemoveMiddleScreenBar, (() => {
+        qC.o.bp("middleScreenBarRemove")
+      })), (0, SC.l)(dC.db, (CC => {
+        const zC = (0, HC.h)(dC.db, CC);
+        if (zC) {
+          var ZC;
+          const CC = zC.AQ ? null === (ZC = (0, nC.k)()) || void 0 === ZC ? void 0 : ZC.renderFrame.projectDirectionToScreenPos(zC.AQ) : void 0;
+          qC.o.bp("sendHitmarker", {
+            RQ: zC.RQ,
+            screenPos: CC
           }, !0)
         }
-      })), (0, Vq.l)(Zq._, (qq => {
-        const Eq = (0, Mq.d)(Zq._, qq);
-        if (Eq) {
+      })), (0, SC.l)(dC.hb, (CC => {
+        const zC = (0, HC.h)(dC.hb, CC);
+        if (zC) {
           const {
-            id: qq,
-            position: gq,
-            style: Yq,
-            mY: lq,
-            AY: Oq
-          } = Eq;
-          cq.i.TV("setDirectionArrow", {
-            id: qq,
-            position: gq,
-            style: Yq,
-            text: Tq(lq),
-            AY: Oq
+            id: CC,
+            position: ZC,
+            style: QC,
+            WQ: wC,
+            MQ: bC
+          } = zC;
+          qC.o.bp("setDirectionArrow", {
+            id: CC,
+            position: ZC,
+            style: QC,
+            text: EC(wC),
+            MQ: bC
           }, !0)
         }
-      })), (0, Vq.l)(Zq.e, (qq => {
-        const Eq = (0, Mq.d)(Zq.e, qq);
-        Eq && cq.i.TV("clearDirectionArrow", {
-          id: Eq.id
+      })), (0, SC.l)(dC.h, (CC => {
+        const zC = (0, HC.h)(dC.h, CC);
+        zC && qC.o.bp("clearDirectionArrow", {
+          id: zC.id
         }, !0)
-      })), (0, Vq.l)(Zq.p, (qq => {
-        const Eq = (0, Mq.d)(Zq.p, qq);
-        Eq && cq.i.TV("flyingMiddleMessage", {
-          content: Tq(Eq.tg),
-          hg: Eq.hg,
-          ng: Eq.ng
+      })), (0, SC.l)(dC.o, (CC => {
+        const zC = (0, HC.h)(dC.o, CC);
+        zC && qC.o.bp("flyingMiddleMessage", {
+          content: EC(zC.xb),
+          Jb: zC.Jb,
+          Ib: zC.Ib
         }, !0)
-      })), (0, Vq.l)(uq.ec.WorldVariation, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        if ("string" === typeof Eq) {
-          const qq = Eq === nq.e ? null : {
-            message: `Currently loaded as variation: ${Eq}`,
+      })), (0, SC.l)(FC.Bc.WorldVariation, (CC => {
+        const zC = (0, HC.j)(CC);
+        if ("string" === typeof zC) {
+          const CC = zC === hC.e ? null : {
+            message: `Currently loaded as variation: ${zC}`,
             type: "Warning"
           };
-          cq.i.TV("showPermanentBottomMessage", qq, !0)
+          qC.o.bp("showPermanentBottomMessage", CC, !0)
         }
-      })), (0, Vq.l)(Zq.A, (qq => {
-        const Eq = (0, Mq.d)(Zq.A, qq);
-        Eq && function(qq, Eq) {
+      })), (0, SC.l)(dC.N, (CC => {
+        const zC = (0, HC.h)(dC.N, CC);
+        zC && function(CC, zC) {
           const {
-            type: gq,
-            params: Yq
-          } = (0, bq.c)(Eq), lq = {
-            ...Yq
+            type: ZC,
+            params: QC
+          } = (0, KC.h)(zC), wC = {
+            ...QC
           };
-          for (const Oq of bq.b) lq[Oq] && (lq[Oq] = Tq(lq[Oq]));
-          iq.b.queueQTE(qq, gq, lq).getResult().then((Eq => {
-            var gq;
-            "boolean" === typeof Eq && (null === (gq = (0, mq.e)()) || void 0 === gq || gq.send(fq.b.QteResponse, {
-              qteId: qq,
-              qteResponse: Eq
+          for (const bC of KC.e) wC[bC] && (wC[bC] = EC(wC[bC]));
+          YC.c.queueQTE(CC, ZC, wC).getResult().then((zC => {
+            var ZC;
+            "boolean" === typeof zC && (null === (ZC = (0, nC.k)()) || void 0 === ZC || ZC.send(mC.b.QteResponse, {
+              qteId: CC,
+              qteResponse: zC
             }))
           }))
-        }(Eq.id, Eq.vY)
-      })), (0, Vq.l)(Zq.O, (qq => {
-        const Eq = (0, Mq.d)(Zq.O, qq);
-        "number" === typeof Eq && iq.b.cancelQTE(Eq)
-      })), (0, Vq.d)((() => {
-        iq.b.reset(), cq.i.TV("showPermanentBottomMessage", null, !0)
-      })), (0, Vq.h)((() => {
-        iq.b.reset()
-      })), (0, Vq.l)(uq.ec.EditItemCraftingRecipes, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        (0, Mq.b)(Eq) && cq.i.TV("craftingRecipesEdited", {
-          itemName: Eq.craftingRecipeItemName,
-          recipesForItem: Eq.recipesForItem
+        }(zC.id, zC.AZ)
+      })), (0, SC.l)(dC.X, (CC => {
+        const zC = (0, HC.h)(dC.X, CC);
+        "number" === typeof zC && YC.c.cancelQTE(zC)
+      })), (0, SC.i)((() => {
+        YC.c.reset()
+      })), (0, SC.j)((() => {
+        YC.c.reset()
+      })), (0, SC.l)(FC.Bc.EditItemCraftingRecipes, (CC => {
+        const zC = (0, HC.j)(CC);
+        (0, HC.e)(zC) && qC.o.bp("craftingRecipesEdited", {
+          itemName: zC.craftingRecipeItemName,
+          recipesForItem: zC.recipesForItem
         })
-      })), (0, Vq.l)(Zq.K, (qq => {
-        const Eq = (0, Mq.d)(Zq.K, qq);
-        Eq && cq.i.TV("craftingRecipesEdited", {
-          itemName: Eq.bg,
+      })), (0, SC.l)(dC.V, (CC => {
+        const zC = (0, HC.h)(dC.V, CC);
+        zC && qC.o.bp("craftingRecipesEdited", {
+          itemName: zC.Gb,
           recipesForItem: []
         })
       })))
     }
-    var Gq = gq(24);
-    const Lq = [{
+    var uC = ZC(20);
+    const rC = [{
       allowed: !1,
       movesFly: !1
     }, {
@@ -982,1532 +985,1532 @@ export const modules = {
       movesFly: !0
     }];
 
-    function Jq(qq) {
-      return Pq.t.playerFlags(qq.api.apiView, 0)
+    function sC(CC) {
+      return AC.w.playerFlags(CC.api.apiView, 0)
     }
-    const kq = {
-        freeCamera: (0, Nq.b)((qq => () => {
-          const Eq = qq.isSessionLive && 0 !== (Jq(qq) & Pq.Pd.FreeCamMoves),
-            gq = qq.freeCameraAllowed() && null === Gq.b.get("scriptedCameraFacing");
-          return Lq[(gq ? 2 : 0) + (Eq ? 1 : 0)]
-        }), Lq[0], (qq => (0, Oq.w)(qq)))
+    const TC = {
+        freeCamera: (0, MC.e)((CC => () => {
+          const zC = CC.isSessionLive && 0 !== (sC(CC) & AC.ce.FreeCamMoves),
+            ZC = CC.freeCameraAllowed() && null === uC.b.get("scriptedCameraFacing");
+          return rC[(ZC ? 2 : 0) + (zC ? 1 : 0)]
+        }), rC[0], (CC => (0, bC.p)(CC)))
       },
-      Rq = {
-        setFreeCameraMovesFly: qq => {
-          var Eq;
-          null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.setFreeCameraMovesFly(qq)
+      aC = {
+        setFreeCameraMovesFly: CC => {
+          var zC;
+          null === (zC = (0, nC.k)()) || void 0 === zC || zC.setFreeCameraMovesFly(CC)
         }
       },
-      Uq = {
+      tC = {
         freeCameraPos: () => {
-          const qq = (0, mq.e)();
-          return null !== qq && void 0 !== qq && qq.isSessionLive && qq.renderFrame.hasView && 0 !== (Jq(qq) & Pq.Pd.FreeCam) ? qq.renderFrame.cameraPosition : null
+          const CC = (0, nC.k)();
+          return null !== CC && void 0 !== CC && CC.isSessionLive && CC.renderFrame.hasView && 0 !== (sC(CC) & AC.ce.FreeCam) ? CC.renderFrame.cameraPosition : null
         }
       };
-    var Fq = gq(39121);
-    let sq = !1,
-      Xq = !1;
+    var DC = ZC(39008);
+    let jC = !1,
+      yC = !1;
 
-    function wq() {
-      const qq = (0, mq.e)();
-      if (null === qq || void 0 === qq || !qq.isSessionLive) return void(sq = !1);
-      const Eq = 0 !== (Pq.t.playerFlags(qq.api.apiView, 0) & Pq.Pd.FreeCam);
-      Eq !== sq && (sq = Eq, (0, Fq.e)(Eq))
+    function LC() {
+      const CC = (0, nC.k)();
+      if (null === CC || void 0 === CC || !CC.isSessionLive) return void(jC = !1);
+      const zC = 0 !== (AC.w.playerFlags(CC.api.apiView, 0) & AC.ce.FreeCam);
+      zC !== jC && (jC = zC, (0, DC.e)(zC))
     }
-    var Kq = gq(307),
-      Cq = gq(37086),
-      Iq = gq(1933);
-    var eq = gq(40432),
-      Dq = gq(40371);
-    const qE = {
+    var UC = ZC(326),
+      BC = ZC(36897),
+      OC = ZC(1872);
+    var kC = ZC(40845),
+      VC = ZC(40479);
+    const Cz = {
       interactPrompt: null,
       blockText: null,
       neededTool: null
     };
-    let EE = "off";
+    let zz = "off";
 
-    function gE(qq) {
-      var Eq;
-      return null === qq ? null : {
-        label: null !== (Eq = (0, eq.d)(qq, "interactionPrompt")) && void 0 !== Eq ? Eq : null
+    function Zz(CC) {
+      var zC;
+      return null === CC ? null : {
+        label: null !== (zC = (0, kC.c)(CC, "interactionPrompt")) && void 0 !== zC ? zC : null
       }
     }
-    const YE = new Map([
-      [Pq.xc.Open, {
-        label: Aq.i.open
+    const Qz = new Map([
+      [AC.Gc.Open, {
+        label: oC.h.open
       }],
-      [Pq.xc.Close, {
-        label: Aq.i.close
+      [AC.Gc.Close, {
+        label: oC.h.close
       }],
-      [Pq.xc.Milk, {
-        label: Aq.i.milk
+      [AC.Gc.Milk, {
+        label: oC.h.milk
       }],
-      [Pq.xc.Shear, {
-        label: Aq.i.shear
+      [AC.Gc.Shear, {
+        label: oC.h.shear
       }],
-      [Pq.xc.Tame, {
-        label: Aq.i.tame
+      [AC.Gc.Tame, {
+        label: oC.h.tame
       }],
-      [Pq.xc.Feed, {
-        label: Aq.i.feed
+      [AC.Gc.Feed, {
+        label: oC.h.feed
       }],
-      [Pq.xc.Ride, {
-        label: Aq.i.ride
+      [AC.Gc.Ride, {
+        label: oC.h.ride
       }]
     ]);
-    class lE {
+    class wz {
       constructor() {
-        this.target = qE, this.lc = Pq.id, this.optionName = null, this.pickaxe = new Aq.e
+        this.target = Cz, this.SF = AC.rd, this.optionName = null, this.pickaxe = new oC.d
       }
-      read(qq) {
-        var Eq;
-        const gq = Pq.t.targetBlockId(qq.api.apiView, 0);
-        gq !== this.lc && (this.lc = gq, this.optionName = gq === Pq.id ? null : `${qq.tables.getMetaInfo(gq).rootName}CrosshairText`);
-        const Yq = null === this.optionName ? null : null !== (Eq = qq.tables.getClientOption(this.optionName)) && void 0 !== Eq ? Eq : null;
-        this.pickaxe.update(function(qq, Eq) {
-          var gq, Yq, lq;
-          if (0 === (Pq.t.playerFlags(qq.api.apiView, 0) & Pq.Pd.Breaking) || Eq === Pq.id || 0 === Eq) return null;
+      read(CC) {
+        var zC;
+        const ZC = AC.w.targetBlockId(CC.api.apiView, 0);
+        ZC !== this.SF && (this.SF = ZC, this.optionName = ZC === AC.rd ? null : `${CC.tables.getMetaInfo(ZC).rootName}CrosshairText`);
+        const QC = null === this.optionName ? null : null !== (zC = CC.tables.getClientOption(this.optionName)) && void 0 !== zC ? zC : null;
+        this.pickaxe.update(function(CC, zC) {
+          var ZC, QC, wC;
+          if (0 === (AC.w.playerFlags(CC.api.apiView, 0) & AC.ce.Breaking) || zC === AC.rd || 0 === zC) return null;
           const {
-            tables: Oq
-          } = qq;
-          if (!0 === Oq.getClientOption("creative")) return null;
-          const mq = Oq.nameOfId(Eq),
-            xq = null === (gq = qq.items.Fc()) || void 0 === gq ? void 0 : gq.name,
-            Aq = null !== (Yq = Oq.getItemStat(mq, "harvestLevel")) && void 0 !== Yq ? Yq : 0;
-          return (0, Kq.Mc)({
-            blockHarvestType: Oq.getDefaultItemStat(mq, "harvestType"),
-            blockHarvestLevel: Oq.getDefaultItemStat(mq, "harvestLevel"),
-            harvestLevel: Aq,
-            heldToolType: void 0 === xq ? void 0 : Oq.getDefaultItemStat(xq, "harvests"),
-            heldToolLevel: void 0 === xq ? void 0 : Oq.getDefaultItemStat(xq, "level")
-          }) && null !== (lq = Cq.q[Aq]) && void 0 !== lq ? lq : null
-        }(qq, gq)), qq.watchPromptPick(EE);
-        const lq = "touch" === EE ? function(qq) {
-          var Eq;
-          const gq = qq.interactLabel;
-          return gq === Pq.xc.Entity ? gE(qq.promptEntity) : gq === Pq.xc.TameWith ? {
-            label: (0, Aq.w)(qq.tables.nameOfId(qq.interactIcon))
-          } : null !== (Eq = YE.get(gq)) && void 0 !== Eq ? Eq : null
-        }(qq) : gE(qq.promptEntity);
-        return this.target = (0, Iq.m)(this.target, {
-          interactPrompt: lq,
-          blockText: Yq,
+            tables: bC
+          } = CC;
+          if (!0 === bC.getClientOption("creative")) return null;
+          const nC = bC.nameOfId(zC),
+            fC = null === (ZC = CC.items.vq()) || void 0 === ZC ? void 0 : ZC.name,
+            oC = null !== (QC = bC.getItemStat(nC, "harvestLevel")) && void 0 !== QC ? QC : 0;
+          return (0, UC.pc)({
+            blockHarvestType: bC.getDefaultItemStat(nC, "harvestType"),
+            blockHarvestLevel: bC.getDefaultItemStat(nC, "harvestLevel"),
+            harvestLevel: oC,
+            heldToolType: void 0 === fC ? void 0 : bC.getDefaultItemStat(fC, "harvests"),
+            heldToolLevel: void 0 === fC ? void 0 : bC.getDefaultItemStat(fC, "level")
+          }) && null !== (wC = BC.n[oC]) && void 0 !== wC ? wC : null
+        }(CC, ZC)), CC.watchPromptPick(zz);
+        const wC = "touch" === zz ? function(CC) {
+          var zC;
+          const ZC = CC.interactLabel;
+          return ZC === AC.Gc.Entity ? Zz(CC.promptEntity) : ZC === AC.Gc.TameWith ? {
+            label: (0, oC.s)(CC.tables.nameOfId(CC.interactIcon))
+          } : null !== (zC = Qz.get(ZC)) && void 0 !== zC ? zC : null
+        }(CC) : Zz(CC.promptEntity);
+        return this.target = (0, OC.n)(this.target, {
+          interactPrompt: wC,
+          blockText: QC,
           neededTool: this.pickaxe.shown
         }), this.target
       }
     }
-    let OE = null;
-    const mE = {
+    let bz = null;
+    const nz = {
       current: () => {
-        var qq, Eq;
-        return null !== (qq = null === (Eq = OE) || void 0 === Eq ? void 0 : Eq.target) && void 0 !== qq ? qq : qE
+        var CC, zC;
+        return null !== (CC = null === (zC = bz) || void 0 === zC ? void 0 : zC.target) && void 0 !== CC ? CC : Cz
       },
-      watch: qq => {
-        const Eq = new lE;
-        OE = Eq;
-        const gq = (0, Nq.h)((gq => {
-          let Yq = Eq.read(gq);
-          qq(Yq);
-          const lq = (0, Oq.x)((() => {
-            const lq = Eq.read(gq);
-            lq !== Yq && (Yq = lq, qq(lq))
+      watch: CC => {
+        const zC = new wz;
+        bz = zC;
+        const ZC = (0, MC.k)((ZC => {
+          let QC = zC.read(ZC);
+          CC(QC);
+          const wC = (0, bC.r)((() => {
+            const wC = zC.read(ZC);
+            wC !== QC && (QC = wC, CC(wC))
           }));
           return () => {
-            lq(), gq.watchPromptPick("off")
+            wC(), ZC.watchPromptPick("off")
           }
         }));
         return () => {
-          gq(), OE === Eq && (OE = null)
+          ZC(), bz === zC && (bz = null)
         }
       }
     };
-    let xE = 0,
-      AE = 0;
-    const cE = {
-        health: Aq.p,
-        aura: Aq.k,
-        hotbar: Dq.c.states.hotbar,
-        heldItemAim: Dq.c.states.heldItemAim,
-        crouching: (0, Nq.b)((qq => function(qq) {
-          const Eq = () => 0 !== (Pq.t.playerFlags(qq.apiView, 0) & Pq.Pd.Crouching);
+    let fz = 0,
+      oz = 0;
+    const qz = {
+        health: oC.n,
+        aura: oC.j,
+        hotbar: VC.e.states.hotbar,
+        heldItemAim: VC.e.states.heldItemAim,
+        crouching: (0, MC.e)((CC => function(CC) {
+          const zC = () => 0 !== (AC.w.playerFlags(CC.apiView, 0) & AC.ce.Crouching);
           return {
-            current: Eq,
-            watch(qq) {
-              let gq = Eq();
-              return (0, Oq.w)((() => {
-                const Yq = Eq();
-                Yq !== gq && (gq = Yq, qq(Yq))
+            current: zC,
+            watch(CC) {
+              let ZC = zC();
+              return (0, bC.p)((() => {
+                const QC = zC();
+                QC !== ZC && (ZC = QC, CC(QC))
               }))
             }
           }
-        }(qq.api).current), !1, (qq => (0, Oq.w)(qq))),
-        flight: (0, Nq.b)((qq => () => function(qq) {
-          const Eq = Pq.t.playerFlags(qq.apiView, 0);
-          return (0, Aq.n)(0 !== (Eq & Pq.Pd.CanFly), 0 !== (Eq & Pq.Pd.Flying))
-        }(qq.api)), (0, Aq.n)(!1, !1), (qq => (0, Oq.w)(qq))),
-        gliderBoostFuel: (0, Nq.b)((qq => () => Pq.t.gliderBoostFuel(qq.api.apiView, 0)), 0, (qq => (0, Oq.w)(qq))),
-        crosshairTarget: mE
+        }(CC.api).current), !1, (CC => (0, bC.p)(CC))),
+        flight: (0, MC.e)((CC => () => function(CC) {
+          const zC = AC.w.playerFlags(CC.apiView, 0);
+          return (0, oC.m)(0 !== (zC & AC.ce.CanFly), 0 !== (zC & AC.ce.Flying))
+        }(CC.api)), (0, oC.m)(!1, !1), (CC => (0, bC.p)(CC))),
+        gliderBoostFuel: (0, MC.e)((CC => () => AC.w.gliderBoostFuel(CC.api.apiView, 0)), 0, (CC => (0, bC.p)(CC))),
+        crosshairTarget: nz
       },
-      uE = {
-        hotbarSlotRequested: Dq.c.events.hotbarSlotRequested,
-        hotbarScrolled: Dq.c.events.hotbarScrolled,
-        numberKeyPressed: Dq.c.events.numberKeyPressed,
-        shotDamageToShow: (0, Aq.s)((qq => !0 === (0, eq.d)(qq, "showDamageAmounts")))
+      Fz = {
+        hotbarSlotRequested: VC.e.events.hotbarSlotRequested,
+        hotbarScrolled: VC.e.events.hotbarScrolled,
+        numberKeyPressed: VC.e.events.numberKeyPressed,
+        shotDamageToShow: (0, oC.r)((CC => !0 === (0, kC.c)(CC, "showDamageAmounts")))
       },
-      BE = {
-        selectHotbarSlot: Dq.c.commands.selectHotbarSlot,
-        setCrosshairInteractPrompt: qq => {
-          EE = qq
+      Wz = {
+        selectHotbarSlot: VC.e.commands.selectHotbarSlot,
+        setCrosshairInteractPrompt: CC => {
+          zz = CC
         }
       },
-      WE = {
+      Nz = {
         momentumFrac: function() {
-          var qq, Eq, gq;
-          const Yq = (0, mq.e)(),
-            lq = performance.now(),
-            Oq = null === Yq || void 0 === Yq || null === (qq = Yq.items.Fc()) || void 0 === qq || null === (Eq = qq.attributes) || void 0 === Eq || null === (gq = Eq.customAttributes) || void 0 === gq ? void 0 : gq.enchantments;
-          return xE = null !== Yq && null !== Oq && void 0 !== Oq && Oq.Momentum ? 0 !== (Pq.t.playerFlags(Yq.api.apiView, 0) & Pq.Pd.Breaking) ? Math.max(0, Pq.t.momentumFrac(Yq.api.apiView, 0)) : Math.max(0, xE - (lq - AE) / 1500) : 0, AE = lq, xE
+          var CC, zC, ZC;
+          const QC = (0, nC.k)(),
+            wC = performance.now(),
+            bC = null === QC || void 0 === QC || null === (CC = QC.items.vq()) || void 0 === CC || null === (zC = CC.attributes) || void 0 === zC || null === (ZC = zC.customAttributes) || void 0 === ZC ? void 0 : ZC.enchantments;
+          return fz = null !== QC && null !== bC && void 0 !== bC && bC.Momentum ? 0 !== (AC.w.playerFlags(QC.api.apiView, 0) & AC.ce.Breaking) ? Math.max(0, AC.w.momentumFrac(QC.api.apiView, 0)) : Math.max(0, fz - (wC - oz) / 1500) : 0, oz = wC, fz
         }
       };
-    var NE = gq(40320);
-    const aE = {
-      lobbyManage(qq) {
-        var Eq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.LobbyManage, qq)
+    var Mz = ZC(40417);
+    const gz = {
+      lobbyManage(CC) {
+        var zC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.LobbyManage, CC)
       }
     };
-    var VE = gq(1226),
-      dE = gq(36543),
-      jE = gq(8755),
-      HE = gq(1622),
-      oE = gq(2357),
-      PE = gq(4627);
-    let QE = !1;
+    var Sz = ZC(1183),
+      pz = ZC(36375),
+      Pz = ZC(8801),
+      Gz = ZC(1557),
+      Rz = ZC(2348),
+      Az = ZC(4739);
+    let xz = !1;
 
-    function yE(qq) {
-      QE = qq
+    function Jz(CC) {
+      xz = CC
     }
 
-    function tE() {
-      "inGame" !== Gq.b.get("gameState") || (0, HE.r)() || cq.i.TV("ctrlCrouchWithoutFullscreen")
+    function Iz() {
+      "inGame" !== uC.b.get("gameState") || (0, Gz.w)() || qC.o.bp("ctrlCrouchWithoutFullscreen")
     }
-    let rE = !1;
-    const vE = {
+    let iz = !1;
+    const vz = {
         OpenEmoteWheel: () => {
-          yE(!0), rE = !0, queueMicrotask((() => {
-            rE && (rE = !1, cq.i.TV("requestEmoteWheelHoldOpen"))
+          Jz(!0), iz = !0, queueMicrotask((() => {
+            iz && (iz = !1, qC.o.bp("requestEmoteWheelHoldOpen"))
           }))
         },
         ToggleFullCoordinateOverlay: () => {
-          cq.i.TV("toggleFullCoordinateOverlay")
+          qC.o.bp("toggleFullCoordinateOverlay")
         },
         KeyYPressed: () => {
-          (0, dE.e)() || cq.i.TV("YKeyPressed")
+          (0, pz.c)() || qC.o.bp("YKeyPressed")
         },
         KeyXPressed: () => {
-          (0, dE.e)() || cq.i.TV("XKeyPressed")
+          (0, pz.c)() || qC.o.bp("XKeyPressed")
         },
-        CtrlCrouch: tE,
+        CtrlCrouch: Iz,
         "primary-fire": () => {
-          cq.i.TV("mouseState", {
-            nu: VE.d.DownFirePrimary,
+          qC.o.bp("mouseState", {
+            pF: Sz.e.DownFirePrimary,
             isDown: !0
           })
         },
         "alt-fire": () => {
-          cq.i.TV("mouseState", {
-            nu: VE.d.DownFireSecondary,
+          qC.o.bp("mouseState", {
+            pF: Sz.e.DownFireSecondary,
             isDown: !0
           })
         },
         TouchHold: () => {
-          cq.i.TV("mouseState", {
-            nu: VE.d.TouchDownLong,
+          qC.o.bp("mouseState", {
+            pF: Sz.e.TouchDownLong,
             isDown: !0
           })
         }
       },
-      hE = {
+      ez = {
         OpenEmoteWheel: () => {
-          yE(!1), rE ? (rE = !1, (0, jE.e)() || cq.i.TV("requestEmoteWheelHoldOpen")) : cq.i.TV("requestEmoteWheelHoldRelease")
+          Jz(!1), iz ? (iz = !1, (0, Pz.d)() || qC.o.bp("requestEmoteWheelHoldOpen")) : qC.o.bp("requestEmoteWheelHoldRelease")
         },
-        CtrlCrouch: tE,
+        CtrlCrouch: Iz,
         "primary-fire": () => {
-          cq.i.TV("mouseState", {
-            nu: VE.d.UpFirePrimary,
+          qC.o.bp("mouseState", {
+            pF: Sz.e.UpFirePrimary,
             isDown: !1
           })
         },
         "alt-fire": () => {
-          cq.i.TV("mouseState", {
-            nu: VE.d.UpFireSecondary,
+          qC.o.bp("mouseState", {
+            pF: Sz.e.UpFireSecondary,
             isDown: !1
           })
         },
         TouchDig: () => {
-          cq.i.TV("mouseState", {
-            nu: VE.d.UpFirePrimary,
+          qC.o.bp("mouseState", {
+            pF: Sz.e.UpFirePrimary,
             isDown: !1
           })
         }
       };
-    let nE = !1;
+    let hz = !1;
 
-    function bE() {
-      nE || (nE = !0, (0, PE.h)((qq => {
-        if ((0, lq.b)()) return;
-        const Eq = (0, PE.d)(qq) ? "primary-fire" : qq.action;
-        var gq;
-        if (qq.down) {
-          if (0 === (qq.flags & oE.e.Synthetic)) {
-            var Yq;
-            null === (Yq = vE[Eq]) || void 0 === Yq || Yq.call(vE)
+    function Kz() {
+      hz || (hz = !0, (0, Az.k)((CC => {
+        if ((0, wC.c)()) return;
+        const zC = (0, Az.g)(CC) ? "primary-fire" : CC.action;
+        var ZC;
+        if (CC.down) {
+          if (0 === (CC.flags & Rz.c.Synthetic)) {
+            var QC;
+            null === (QC = vz[zC]) || void 0 === QC || QC.call(vz)
           }
-        } else null === (gq = hE[Eq]) || void 0 === gq || gq.call(hE)
+        } else null === (ZC = ez[zC]) || void 0 === ZC || ZC.call(ez)
       })))
     }
-    var iE = gq(296),
-      ZE = gq(96),
-      fE = gq(38),
-      ME = gq(40434),
-      TE = gq(1308),
-      zE = gq(38939);
-    let SE = !1;
-    const pE = {
-      sendCodeCollab(qq) {
-        var Eq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.CodeCollab, (0, fq.o)(qq), (0, zE.g)(qq))
+    var Yz = ZC(310),
+      dz = ZC(77),
+      mz = ZC(38),
+      Hz = ZC(40717),
+      Ez = ZC(1275),
+      lz = ZC(38868);
+    let Xz = !1;
+    const cz = {
+      sendCodeCollab(CC) {
+        var zC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.CodeCollab, (0, mC.m)(CC), (0, lz.d)(CC))
       }
     };
-    var GE = gq(39056);
-    let LE = null,
-      JE = !1,
-      kE = null;
+    var uz = ZC(38944);
+    let rz = null,
+      sz = !1,
+      Tz = null;
 
-    function RE() {
-      return "inGame" === Gq.b.get("gameState") && !(0, dE.e)()
+    function az() {
+      return "inGame" === uC.b.get("gameState") && !(0, pz.c)()
     }
-    const UE = {
-        OpenInventory: qq => {
-          (0, HE.v)(qq, "inventory", (0, NE.j)())
+    const tz = {
+        OpenInventory: CC => {
+          (0, Gz.D)(CC, "inventory", (0, Mz.q)())
         },
-        OpenShop: qq => {
-          LE && RE() && (0, HE.u)(qq, iE.p.SHOP, !LE.shopIsEmpty(oq.c.get("shopInfo")))
+        OpenShop: CC => {
+          rz && az() && (0, Gz.A)(CC, Yz.o.SHOP, !rz.shopIsEmpty(RC.e.get("shopInfo")))
         },
-        OpenLobbyLeaderboard: qq => {
-          RE() && (0, HE.u)(qq, iE.p.LOBBY_LEADERBOARD, (0, GE.d)({
-            lobbyLeaderboardInfo: oq.c.get("lobbyLeaderboardInfo"),
-            lobbyManage: oq.c.get("lobbyManage")
+        OpenLobbyLeaderboard: CC => {
+          az() && (0, Gz.A)(CC, Yz.o.LOBBY_LEADERBOARD, (0, uz.d)({
+            lobbyLeaderboardInfo: RC.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: RC.e.get("lobbyManage")
           }))
         },
-        OpenTasksAndLeaderboard: qq => {
-          var Eq;
-          const gq = null === (Eq = LE) || void 0 === Eq ? void 0 : Eq.getClientGameMapKey();
-          gq ? (0, HE.y)(qq, !0, gq) : (0, HE.v)(qq, "retentionFeatures", !(!oq.c.get("_tasks") && !oq.c.get("_availableLeaderboards")))
+        OpenTasksAndLeaderboard: CC => {
+          var zC;
+          const ZC = null === (zC = rz) || void 0 === zC ? void 0 : zC.getClientGameMapKey();
+          ZC ? (0, Gz.E)(CC, !0, ZC) : (0, Gz.D)(CC, "retentionFeatures", !(!RC.e.get("_tasks") && !RC.e.get("_availableLeaderboards")))
         },
-        OpenInviteLink: qq => {
-          (0, HE.v)(qq, "inviteLink", ZE.featureFlags.canUseInviteLinks)
+        OpenInviteLink: CC => {
+          (0, Gz.D)(CC, "inviteLink", dz.featureFlags.canUseInviteLinks)
         },
-        OpenCodeEditor: qq => {
-          RE() && function(qq) {
-            var Eq;
-            const gq = (0, mq.e)(),
-              Yq = null !== gq && void 0 !== gq && gq.isSessionLive ? gq.api : null,
-              lq = Yq ? Yq.Py(Yq.localId) : null,
-              Oq = null !== (Eq = null === lq || void 0 === lq ? void 0 : lq.map((qq => Math.floor(qq)))) && void 0 !== Eq ? Eq : null;
-            (0, HE.y)(qq, null !== Oq && (0, zE.c)((0, TE.e)()), (() => {
-              cq.i.TV("EditLobbyCode", Oq)
+        OpenCodeEditor: CC => {
+          az() && function(CC) {
+            var zC;
+            const ZC = (0, nC.k)(),
+              QC = null !== ZC && void 0 !== ZC && ZC.isSessionLive ? ZC.api : null,
+              wC = QC ? QC.yG(QC.localId) : null,
+              bC = null !== (zC = null === wC || void 0 === wC ? void 0 : wC.map((CC => Math.floor(CC)))) && void 0 !== zC ? zC : null;
+            (0, Gz.E)(CC, null !== bC && (0, lz.b)((0, Ez.d)()), (() => {
+              qC.o.bp("EditLobbyCode", bC)
             }))
-          }(qq)
+          }(CC)
         },
         HideUi: () => {
-          cq.i.TV("showUi", !1)
+          qC.o.bp("showUi", !1)
         }
       },
-      FE = {
+      Dz = {
         HideUi: () => {
-          cq.i.TV("showUi", !0)
+          qC.o.bp("showUi", !0)
         }
       };
 
-    function sE() {
-      JE || (JE = !0, gq.e(153).then((() => gq(42369))).then((qq => {
-        LE = qq
-      }), (qq => {
-        console.error("[bloxd-wasm-client] the menu keys' checks did not load", qq)
-      })), (0, ME.w)((qq => {
-        qq || !(0, ME.e)() || (0, ZE.isMobile)() || !fE.i.getItem("disableFullscreen") || (0, HE.p)() || Gq.b.set({
-          openEverythingMenuName: iE.p.SETTINGS
+    function jz() {
+      sz || (sz = !0, ZC.e(157).then((() => ZC(60264))).then((CC => {
+        rz = CC
+      }), (CC => {
+        console.error("[bloxd-wasm-client] the menu keys' checks did not load", CC)
+      })), (0, Hz.A)((CC => {
+        CC || !(0, Hz.g)() || (0, dz.isMobile)() || !mz.i.getItem("disableFullscreen") || (0, Gz.s)() || uC.b.set({
+          openEverythingMenuName: Yz.o.SETTINGS
         })
-      })), (0, PE.h)((qq => {
+      })), (0, Az.k)((CC => {
         let {
-          action: Eq,
-          down: gq,
-          press: Yq
-        } = qq;
-        var Oq, mq;
-        (0, lq.b)() || (gq ? null === (Oq = UE[Eq]) || void 0 === Oq || Oq.call(UE, function(qq) {
-          var Eq;
-          if (0 === qq || (null === (Eq = kE) || void 0 === Eq ? void 0 : Eq.press) !== qq) {
-            const Eq = {
-              press: qq,
+          action: zC,
+          down: ZC,
+          press: QC
+        } = CC;
+        var bC, nC;
+        (0, wC.c)() || (ZC ? null === (bC = tz[zC]) || void 0 === bC || bC.call(tz, function(CC) {
+          var zC;
+          if (0 === CC || (null === (zC = Tz) || void 0 === zC ? void 0 : zC.press) !== CC) {
+            const zC = {
+              press: CC,
               event: new Event("inputAction")
             };
-            kE = Eq, queueMicrotask((() => {
-              kE === Eq && (kE = null)
+            Tz = zC, queueMicrotask((() => {
+              Tz === zC && (Tz = null)
             }))
           }
-          return kE.event
-        }(Yq)) : null === (mq = FE[Eq]) || void 0 === mq || mq.call(FE))
+          return Tz.event
+        }(QC)) : null === (nC = Dz[zC]) || void 0 === nC || nC.call(Dz))
       })))
     }
-    var XE = gq(38910),
-      wE = gq(38927),
-      KE = gq(38915);
-    const CE = {
-      completeTask(qq) {
-        var Eq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.CompleteTask, (0, fq.q)(qq))
+    var yz = ZC(38859),
+      Lz = ZC(38848),
+      Uz = ZC(38841);
+    const Bz = {
+      completeTask(CC) {
+        var zC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.CompleteTask, (0, mC.o)(CC))
       },
-      setServerCookie(qq) {
-        var Eq;
+      setServerCookie(CC) {
+        var zC;
         let {
-          key: gq,
-          value: Yq
-        } = qq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.GeneralCookieSet, (0, fq.w)({
-          KA: gq,
-          CA: Yq
+          key: ZC,
+          value: QC
+        } = CC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.GeneralCookieSet, (0, mC.r)({
+          vn: ZC,
+          en: QC
         }))
       },
-      answerUiRequest(qq) {
-        var Eq;
+      answerUiRequest(CC) {
+        var zC;
         let {
-          id: gq,
-          xu: Yq
-        } = qq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.UiRequestResp, (0, fq.V)({
-          ou: gq,
-          Pu: Yq,
-          Qu: 5
+          id: ZC,
+          hF: QC
+        } = CC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.UiRequestResp, (0, mC.S)({
+          Lq: ZC,
+          Uq: QC,
+          Bq: 5
         }))
       },
-      chooseRewardedAd(qq) {
-        var Eq;
+      chooseRewardedAd(CC) {
+        var zC;
         let {
-          id: gq,
-          xu: Yq
-        } = qq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.UiRequestResponded, (0, fq.S)({
-          id: gq,
-          xu: Yq
+          id: ZC,
+          hF: QC
+        } = CC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.UiRequestResponded, (0, mC.Q)({
+          id: ZC,
+          hF: QC
         }))
       },
-      requestLeaderboard(qq) {
-        var Eq;
+      requestLeaderboard(CC) {
+        var zC;
         let {
-          category: gq,
-          timeframe: Yq,
-          seeTop: lq
-        } = qq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.LeaderboardRequest, {
-          category: gq,
-          timeframe: Yq,
-          seeTop: lq
+          category: ZC,
+          timeframe: QC,
+          seeTop: wC
+        } = CC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.LeaderboardRequest, {
+          category: ZC,
+          timeframe: QC,
+          seeTop: wC
         })
       }
     };
-    let IE = !1;
-    const eE = Hq.c.ZH / 2,
-      DE = [eE, -eE, -eE, -eE, eE, eE, -eE, eE],
-      qg = [0, 0, 0];
+    let Oz = !1;
+    const kz = GC.f.tp / 2,
+      Vz = [kz, -kz, -kz, -kz, kz, kz, -kz, kz],
+      CZ = [0, 0, 0];
 
-    function Eg(qq, Eq, gq) {
-      for (let Yq = 0; Yq < qq.length; Yq += 2)
-        if (qq[Yq] === Eq && qq[Yq + 1] === gq) return !0;
+    function zZ(CC, zC, ZC) {
+      for (let QC = 0; QC < CC.length; QC += 2)
+        if (CC[QC] === zC && CC[QC + 1] === ZC) return !0;
       return !1
     }
-    const gg = {
+    const ZZ = {
       blocksStandingOn: function() {
-        const qq = (0, mq.e)();
-        if (null === qq) return [];
+        const CC = (0, nC.k)();
+        if (null === CC) return [];
         const {
-          api: Eq,
-          chunks: gq,
-          tables: Yq
-        } = qq;
-        if (!Eq.readPosition(Eq.localId, qg)) return [];
-        const [lq, Oq, xq] = qg, Aq = Math.ceil(Oq) - 1, cq = [], uq = [];
-        for (let mq = 0; mq < DE.length; mq += 2) {
-          const qq = lq + DE[mq],
-            Eq = xq + DE[mq + 1];
-          if (Number.isInteger(qq) || Number.isInteger(Eq)) continue;
-          const Oq = Math.floor(qq),
-            Bq = Math.floor(Eq);
-          if (Eg(uq, Oq, Bq)) continue;
-          const Wq = gq.lc(Oq, Aq, Bq);
-          Yq.isSolidBlockId(Wq) && (uq.push(Oq, Bq), cq.push(Yq.nameOfId(Wq)))
+          api: zC,
+          chunks: ZC,
+          tables: QC
+        } = CC;
+        if (!zC.readPosition(zC.localId, CZ)) return [];
+        const [wC, bC, fC] = CZ, oC = Math.ceil(bC) - 1, qC = [], FC = [];
+        for (let nC = 0; nC < Vz.length; nC += 2) {
+          const CC = wC + Vz[nC],
+            zC = fC + Vz[nC + 1];
+          if (Number.isInteger(CC) || Number.isInteger(zC)) continue;
+          const bC = Math.floor(CC),
+            WC = Math.floor(zC);
+          if (zZ(FC, bC, WC)) continue;
+          const NC = ZC.SF(bC, oC, WC);
+          QC.isSolidBlockId(NC) && (FC.push(bC, WC), qC.push(QC.nameOfId(NC)))
         }
-        return cq
+        return qC
       },
       dropAhead: function() {
-        const qq = (0, mq.e)();
-        return null !== qq && 0 !== (Pq.t.playerFlags(qq.api.apiView, 0) & Pq.Pd.DropAhead)
+        const CC = (0, nC.k)();
+        return null !== CC && 0 !== (AC.w.playerFlags(CC.api.apiView, 0) & AC.ce.DropAhead)
       }
     };
-    var Yg = gq(36995),
-      lg = gq(39024),
-      Og = gq(1336),
-      mg = gq(40385);
-    const xg = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
-      Ag = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
+    var QZ = ZC(36815),
+      wZ = ZC(38923),
+      bZ = ZC(1307),
+      nZ = ZC(40493);
+    const fZ = new Set(["replayLoad", "replaySave", "replaySaveAs", "replayTimelineZoomIn", "replayTimelineZoomOut"]),
+      oZ = new Set(["replaySkipBack", "replaySkipForward", "replaySpeedUp", "replaySpeedDown", "replayRecordKeyframe"]);
 
-    function cg() {
-      const qq = new Set;
+    function qZ() {
+      const CC = new Set;
       return {
-        add: Eq => (qq.add(Eq), () => {
-          qq.delete(Eq)
+        add: zC => (CC.add(zC), () => {
+          CC.delete(zC)
         }),
         fire() {
-          for (const Eq of qq) Eq()
+          for (const zC of CC) zC()
         }
       }
     }
-    const ug = Object.freeze([]);
+    const FZ = Object.freeze([]);
 
-    function Bg(qq, Eq) {
-      let gq, {
-        rereads: Yq,
-        followLocalId: lq
-      } = Eq;
-      const mq = () => (gq = (0, Iq.m)(gq, qq()), gq);
+    function WZ(CC, zC) {
+      let ZC, {
+        rereads: QC,
+        followLocalId: wC
+      } = zC;
+      const nC = () => (ZC = (0, OC.n)(ZC, CC()), ZC);
       return {
-        current: mq,
-        watch(qq) {
-          const Eq = (0, aq.b)((Eq => {
-            Yq(Eq) && qq(mq())
+        current: nC,
+        watch(CC) {
+          const zC = (0, gC.c)((zC => {
+            QC(zC) && CC(nC())
           }));
-          if (!lq) return Eq;
-          let gq = (0, Nq.f)();
-          const xq = (0, Oq.x)((() => {
-            const Eq = (0, Nq.f)();
-            Eq !== gq && (gq = Eq, qq(mq()))
+          if (!wC) return zC;
+          let ZC = (0, MC.g)();
+          const fC = (0, bC.r)((() => {
+            const zC = (0, MC.g)();
+            zC !== ZC && (ZC = zC, CC(nC()))
           }));
           return () => {
-            Eq(), xq()
+            zC(), fC()
           }
         }
       }
     }
-    const Wg = {
-        players: Bg((function() {
-          const qq = aq.e.ids(),
-            Eq = {};
-          for (const Oq of qq) {
-            var gq, Yq, lq;
-            Eq[Oq] = {
-              name: null !== (gq = aq.e.getName(Oq)) && void 0 !== gq ? gq : null,
-              ranks: null !== (Yq = aq.e.getSetting(Oq, "ranks")) && void 0 !== Yq ? Yq : ug,
-              cosmetics: null !== (lq = (0, aq.h)(Oq)) && void 0 !== lq ? lq : null
+    const NZ = {
+        players: WZ((function() {
+          const CC = gC.f.ids(),
+            zC = {};
+          for (const bC of CC) {
+            var ZC, QC, wC;
+            zC[bC] = {
+              name: null !== (ZC = gC.f.getName(bC)) && void 0 !== ZC ? ZC : null,
+              ranks: null !== (QC = gC.f.getSetting(bC, "ranks")) && void 0 !== QC ? QC : FZ,
+              cosmetics: null !== (wC = (0, gC.j)(bC)) && void 0 !== wC ? wC : null
             }
           }
           return {
-            ids: qq,
-            byId: Eq,
-            localId: (0, Nq.f)()
+            ids: CC,
+            byId: zC,
+            localId: (0, MC.g)()
           }
         }), {
-          rereads: qq => "roster" !== qq.kind || qq.members || qq.settings.has("ranks"),
+          rereads: CC => "roster" !== CC.kind || CC.members || CC.settings.has("ranks"),
           followLocalId: !0
         }),
-        lobbyLeaderboardRows: Bg((function() {
-          const qq = {};
-          for (const lq of aq.e.ids()) {
-            var Eq, gq, Yq;
-            qq[lq] = {
-              colour: null !== (Eq = aq.e.getSetting(lq, "colorInLobbyLeaderboard")) && void 0 !== Eq ? Eq : null,
-              values: null !== (gq = aq.e.getSetting(lq, "lobbyLeaderboardValues")) && void 0 !== gq ? gq : null,
-              tags: null !== (Yq = aq.e.getSetting(lq, "lobbyLeaderboardTags")) && void 0 !== Yq ? Yq : null
+        lobbyLeaderboardRows: WZ((function() {
+          const CC = {};
+          for (const wC of gC.f.ids()) {
+            var zC, ZC, QC;
+            CC[wC] = {
+              colour: null !== (zC = gC.f.getSetting(wC, "colorInLobbyLeaderboard")) && void 0 !== zC ? zC : null,
+              values: null !== (ZC = gC.f.getSetting(wC, "lobbyLeaderboardValues")) && void 0 !== ZC ? ZC : null,
+              tags: null !== (QC = gC.f.getSetting(wC, "lobbyLeaderboardTags")) && void 0 !== QC ? QC : null
             }
           }
-          return qq
+          return CC
         }), {
-          rereads: function(qq) {
-            if ("roster" !== qq.kind) return "reset" === qq.kind;
+          rereads: function(CC) {
+            if ("roster" !== CC.kind) return "reset" === CC.kind;
             const {
-              members: Eq,
-              settings: gq
-            } = qq;
-            return Eq || gq.has("colorInLobbyLeaderboard") || gq.has("lobbyLeaderboardValues") || gq.has("lobbyLeaderboardTags")
+              members: zC,
+              settings: ZC
+            } = CC;
+            return zC || ZC.has("colorInLobbyLeaderboard") || ZC.has("lobbyLeaderboardValues") || ZC.has("lobbyLeaderboardTags")
           },
           followLocalId: !1
         })
       },
-      Ng = {
+      MZ = {
         cosmeticsUpdated: {
-          watch: qq => (0, aq.b)((Eq => {
-            if ("cosmetics" !== Eq.kind) return;
-            const gq = (0, Nq.f)();
-            qq(Eq.updates.map((qq => {
+          watch: CC => (0, gC.c)((zC => {
+            if ("cosmetics" !== zC.kind) return;
+            const ZC = (0, MC.g)();
+            CC(zC.updates.map((CC => {
               let {
-                yY: Eq,
-                tY: Yq,
-                rY: lq
-              } = qq;
+                xQ: zC,
+                JQ: QC,
+                IQ: wC
+              } = CC;
               return {
-                local: Eq === gq,
-                tY: Yq,
-                rY: lq
+                local: zC === ZC,
+                JQ: QC,
+                IQ: wC
               }
             })))
           }))
         }
       };
-    var ag = gq(2834),
-      Vg = gq(1710),
-      dg = gq(623),
-      jg = gq(40440);
-    let Hg = !1,
-      og = null;
-    const Pg = {
-      setShopOpen(qq) {
-        var Eq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.ShopMenuChanged, (0, fq.M)(qq))
+    var gZ = ZC(2909),
+      SZ = ZC(1645),
+      pZ = ZC(625),
+      PZ = ZC(40756);
+    let GZ = !1,
+      RZ = null;
+    const AZ = {
+      setShopOpen(CC) {
+        var zC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.ShopMenuChanged, (0, mC.J)(CC))
       },
-      buyShopItem(qq) {
-        var Eq;
+      buyShopItem(CC) {
+        var zC;
         let {
-          categoryKey: gq,
-          itemKey: Yq,
-          userInput: lq
-        } = qq;
-        null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.send(fq.b.ItemBought, {
-          categoryKey: gq,
-          itemKey: Yq,
-          shopVersion: oq.c.get("_shopVersion"),
-          userInput: lq
+          categoryKey: ZC,
+          itemKey: QC,
+          userInput: wC
+        } = CC;
+        null === (zC = (0, nC.k)()) || void 0 === zC || zC.send(mC.b.ItemBought, {
+          categoryKey: ZC,
+          itemKey: QC,
+          shopVersion: RC.e.get("_shopVersion"),
+          userInput: wC
         })
       }
     };
-    let Qg = !1;
-    var yg = gq(4637);
-    const tg = oE.C.LookFrozen | oE.C.ClicksSuppressed;
+    let xZ = !1;
+    var JZ = ZC(4752);
+    const IZ = Rz.v.LookFrozen | Rz.v.ClicksSuppressed;
 
-    function rg(qq, Eq) {
-      var gq;
-      null !== (gq = (0, mq.e)()) && void 0 !== gq && gq.send(qq, Eq) || console.warn(`[bloxd-wasm-client] message ${qq} not sent: no live game or the core's command ring is full`)
-    }(0, Vq.l)(Zq.bb, (qq => {
-      const Eq = (0, Mq.d)(Zq.bb, qq);
-      void 0 !== Eq && cq.i.TV("setDiscordReportKey", Eq)
+    function iZ(CC, zC) {
+      var ZC;
+      null !== (ZC = (0, nC.k)()) && void 0 !== ZC && ZC.send(CC, zC) || console.warn(`[bloxd-wasm-client] message ${CC} not sent: no live game or the core's command ring is full`)
+    }(0, SC.l)(dC.jb, (CC => {
+      const zC = (0, HC.h)(dC.jb, CC);
+      void 0 !== zC && qC.o.bp("setDiscordReportKey", zC)
     }));
-    const vg = {
-      ignorePlayer(qq) {
-        rg(fq.b.IgnoreUser, (0, fq.x)({
-          um: qq
+    const vZ = {
+      ignorePlayer(CC) {
+        iZ(mC.b.IgnoreUser, (0, mC.s)({
+          Cn: CC
         }))
       },
-      reportPlayer(qq) {
+      reportPlayer(CC) {
         let {
-          playerId: Eq,
-          chatMsgId: gq,
-          Oc: Yq,
-          details: lq
-        } = qq;
-        rg(fq.b.UserReport, (0, fq.gb)({
-          Sc: Eq,
-          Gc: gq,
-          Oc: Yq,
-          mc: lq
+          playerId: zC,
+          chatMsgId: ZC,
+          Zq: QC,
+          details: wC
+        } = CC;
+        iZ(mC.b.UserReport, (0, mC.cb)({
+          ZF: zC,
+          QF: ZC,
+          Zq: QC,
+          Qq: wC
         }))
       },
-      reportWorldCodeChat(qq) {
+      reportWorldCodeChat(CC) {
         let {
-          chatMsgId: Eq,
-          Oc: gq,
-          details: Yq
-        } = qq;
-        rg(fq.b.UserReport, (0, fq.gb)({
-          Sc: "",
-          Gc: Eq,
-          Oc: gq,
-          mc: Yq
+          chatMsgId: zC,
+          Zq: ZC,
+          details: QC
+        } = CC;
+        iZ(mC.b.UserReport, (0, mC.cb)({
+          ZF: "",
+          QF: zC,
+          Zq: ZC,
+          Qq: QC
         }))
       },
-      requestDiscordReportKey(qq) {
-        rg(fq.b.ReqDiscordReportKey, (0, fq.H)(qq))
+      requestDiscordReportKey(CC) {
+        iZ(mC.b.ReqDiscordReportKey, (0, mC.E)(CC))
       },
-      reportLobbyOrGame(qq) {
+      reportLobbyOrGame(CC) {
         let {
-          target: Eq,
-          Oc: gq,
-          details: Yq
-        } = qq;
-        "customGame" === Eq ? rg(fq.b.CustomGameReport, (0, fq.t)({
-          Oc: gq,
-          mc: Yq
-        })) : rg(fq.b.LobbyReport, (0, fq.y)({
-          Oc: gq,
-          mc: Yq
+          target: zC,
+          Zq: ZC,
+          details: QC
+        } = CC;
+        "customGame" === zC ? iZ(mC.b.CustomGameReport, (0, mC.q)({
+          Zq: ZC,
+          Qq: QC
+        })) : iZ(mC.b.LobbyReport, (0, mC.w)({
+          Zq: ZC,
+          Qq: QC
         }))
       },
-      updateMyCosmetic(qq) {
-        rg(fq.b.UpdateMyCosmetic, (0, fq.eb)(qq))
+      updateMyCosmetic(CC) {
+        iZ(mC.b.UpdateMyCosmetic, (0, mC.$)(CC))
       },
-      holdEmoteWheel(qq) {
-        !qq || QE ? (0, yg.k)(tg, qq ? tg : 0) : cq.i.TV("requestEmoteWheelHoldRelease")
+      holdEmoteWheel(CC) {
+        !CC || xz ? (0, JZ.e)(IZ, CC ? IZ : 0) : qC.o.bp("requestEmoteWheelHoldRelease")
       }
     };
-    var hg = gq(40448),
-      ng = gq(9379),
-      bg = gq(39525);
-    const ig = [0, 0, 0],
-      Zg = [0, 0, 0],
-      fg = [0, 0, 0],
-      Mg = {
-        blockAtViewPoint(qq) {
+    var eZ = ZC(40854),
+      hZ = ZC(9194),
+      KZ = ZC(39439);
+    const YZ = [0, 0, 0],
+      dZ = [0, 0, 0],
+      mZ = [0, 0, 0],
+      HZ = {
+        blockAtViewPoint(CC) {
           let {
-            x: Eq,
-            y: gq
-          } = qq;
-          const Yq = (0, mq.e)();
-          if (null === Yq || void 0 === Yq || !Yq.renderFrame.hasView) return null;
+            x: zC,
+            y: ZC
+          } = CC;
+          const QC = (0, nC.k)();
+          if (null === QC || void 0 === QC || !QC.renderFrame.hasView) return null;
           const {
-            renderFrame: lq,
-            clientApi: Oq,
-            api: xq
-          } = Yq;
-          let Aq = 0;
-          return (0, bg.g)(((qq, Eq, gq) => (Aq = Oq.getBlockId(qq, Eq, gq), 0 !== Aq)), lq.cameraPosition, (0, bg.i)((qq => Pq.t.viewProj(xq.apiView, 0, qq)), Eq, gq, ig), bg.d, Zg, fg) ? {
-            pos: [Zg[0], Zg[1], Zg[2]],
-            normal: [fg[0], fg[1], fg[2]],
-            name: (0, ng.h)(Aq)
+            renderFrame: wC,
+            clientApi: bC,
+            api: fC
+          } = QC;
+          let oC = 0;
+          return (0, KZ.f)(((CC, zC, ZC) => (oC = bC.getBlockId(CC, zC, ZC), 0 !== oC)), wC.cameraPosition, (0, KZ.j)((CC => AC.w.viewProj(fC.apiView, 0, CC)), zC, ZC, YZ), KZ.b, dZ, mZ) ? {
+            pos: [dZ[0], dZ[1], dZ[2]],
+            normal: [mZ[0], mZ[1], mZ[2]],
+            name: (0, hZ.e)(oC)
           } : null
         }
       },
-      Tg = {
-        setBlockHighlight(qq) {
-          var Eq;
-          null === (Eq = (0, mq.e)()) || void 0 === Eq || Eq.setBlockHighlight(qq)
+      EZ = {
+        setBlockHighlight(CC) {
+          var zC;
+          null === (zC = (0, nC.k)()) || void 0 === zC || zC.setBlockHighlight(CC)
         }
       };
-    var zg = gq(1914),
-      Sg = gq(40454),
-      pg = gq(40462),
-      Gg = gq(4319),
-      Lg = gq(4289),
-      Jg = gq(40466),
-      kg = gq(3166),
-      Rg = gq(3170);
-    let Ug = null,
-      Fg = null;
+    var lZ = ZC(1851),
+      XZ = ZC(40748),
+      cZ = ZC(40858),
+      uZ = ZC(4423),
+      rZ = ZC(4393),
+      sZ = ZC(40866),
+      TZ = ZC(3276),
+      aZ = ZC(3282);
+    let tZ = null,
+      DZ = null;
 
-    function sg(qq) {
-      const Eq = qq.startsWith(Rg.l),
-        [gq, Yq = gq, lq = gq] = (Eq ? qq.slice(Rg.l.length) : qq).split(Rg.h);
+    function jZ(CC) {
+      const zC = CC.startsWith(aZ.m),
+        [ZC, QC = ZC, wC = ZC] = (zC ? CC.slice(aZ.m.length) : CC).split(aZ.i);
       return {
-        top: gq,
-        left: Yq,
-        right: lq,
-        half: Eq
+        top: ZC,
+        left: QC,
+        right: wC,
+        half: zC
       }
     }
 
-    function Xg(qq) {
-      const Eq = null === Ug ? void 0 : (0, kg.e)(qq),
-        gq = void 0 === Eq ? 0 : Ug.codes[Eq];
-      return 0 === gq ? void 0 : Ug.pool[gq - 1]
+    function yZ(CC) {
+      const zC = null === tZ ? void 0 : (0, TZ.b)(CC),
+        ZC = void 0 === zC ? 0 : tZ.codes[zC];
+      return 0 === ZC ? void 0 : tZ.pool[ZC - 1]
     }
-    var wg = gq(3157),
-      Kg = gq(4280),
-      Cg = gq(4310),
-      Ig = gq(40470),
-      eg = gq(40476);
-    const Dg = "item:";
-    let qY = null,
-      EY = null,
-      gY = null,
-      YY = null,
-      lY = !1,
-      OY = !1;
+    var LZ = ZC(3273),
+      UZ = ZC(4382),
+      BZ = ZC(4414),
+      OZ = ZC(40779),
+      kZ = ZC(40875);
+    const VZ = "item:";
+    let CQ = null,
+      zQ = null,
+      ZQ = null,
+      QQ = null,
+      wQ = !1,
+      bQ = !1;
 
-    function mY() {
-      return OY || (OY = !0, (0, Cg.g)().then((qq => {
-        qq && (0, zg.d)()
-      }))), gY ??= Promise.all([(0, wg.g)(), (Fg ??= gq.e(1).then((() => gq(42383))).then((qq => {
+    function nQ() {
+      return bQ || (bQ = !0, (0, BZ.j)().then((CC => {
+        CC && (0, lZ.c)()
+      }))), ZQ ??= Promise.all([(0, LZ.i)(), (DZ ??= ZC.e(1).then((() => ZC(60281))).then((CC => {
         let {
-          BLOCK_FACE_RUNS: Eq,
-          BLOCK_FACES: gq,
-          MAX_FACE_ITEM_ID: Yq
-        } = qq;
-        Ug = {
-          codes: (0, Rg.A)(Eq, Yq + 1),
-          pool: gq.split(Rg.v).map(sg)
+          BLOCK_FACE_RUNS: zC,
+          BLOCK_FACES: ZC,
+          MAX_FACE_ITEM_ID: QC
+        } = CC;
+        tZ = {
+          codes: (0, aZ.F)(zC, QC + 1),
+          pool: ZC.split(aZ.u).map(jZ)
         }
-      }), (qq => {
-        throw Fg = null, qq
-      })), Fg), (0, eg.f)(), gq.e(190).then((() => gq(9301)))]).then((qq => {
-        let [, , Eq, gq] = qq;
-        Eq.followBundledTextures(), qY = Eq, EY = gq, (0, zg.d)()
-      }), (qq => {
-        gY = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", qq)
-      })), gY
+      }), (CC => {
+        throw DZ = null, CC
+      })), DZ), (0, kZ.e)(), ZC.e(198).then((() => ZC(34171)))]).then((CC => {
+        let [, , zC, ZC] = CC;
+        zC.followBundledTextures(), CQ = zC, zQ = ZC, (0, lZ.c)()
+      }), (CC => {
+        ZQ = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", CC)
+      })), ZQ
     }
 
-    function xY(qq) {
-      var Eq, gq;
-      return null !== (Eq = null === (gq = (0, Ig.j)()) || void 0 === gq ? void 0 : gq.textureUrl(qq)) && void 0 !== Eq ? Eq : qY.itemSpriteUrl(qq)
+    function fQ(CC) {
+      var zC, ZC;
+      return null !== (zC = null === (ZC = (0, OZ.j)()) || void 0 === ZC ? void 0 : ZC.textureUrl(CC)) && void 0 !== zC ? zC : CQ.itemSpriteUrl(CC)
     }
 
-    function AY(qq) {
-      var Eq, gq;
-      return null !== (Eq = null === (gq = (0, Ig.j)()) || void 0 === gq ? void 0 : gq.textureUrl(qq)) && void 0 !== Eq ? Eq : qY.blockTextureUrl(qq)
+    function oQ(CC) {
+      var zC, ZC;
+      return null !== (zC = null === (ZC = (0, OZ.j)()) || void 0 === ZC ? void 0 : ZC.textureUrl(CC)) && void 0 !== zC ? zC : CQ.blockTextureUrl(CC)
     }
 
-    function cY(qq) {
-      var Eq;
-      return null !== (Eq = (0, wg.d)(qq)) && void 0 !== Eq ? Eq : qq
+    function qQ(CC) {
+      var zC;
+      return null !== (zC = (0, LZ.e)(CC)) && void 0 !== zC ? zC : CC
     }
 
-    function uY(qq, Eq) {
-      var gq, Yq, lq;
-      return null !== (gq = null !== (Yq = null !== (lq = AY(qq)) && void 0 !== lq ? lq : null === Eq || void 0 === Eq ? void 0 : Eq.rotated[qq]) && void 0 !== Yq ? Yq : null === Eq || void 0 === Eq ? void 0 : Eq.animated[qq]) && void 0 !== gq ? gq : qY.notFoundUrl()
+    function FQ(CC, zC) {
+      var ZC, QC, wC;
+      return null !== (ZC = null !== (QC = null !== (wC = oQ(CC)) && void 0 !== wC ? wC : null === zC || void 0 === zC ? void 0 : zC.rotated[CC]) && void 0 !== QC ? QC : null === zC || void 0 === zC ? void 0 : zC.animated[CC]) && void 0 !== ZC ? ZC : CQ.notFoundUrl()
     }
 
-    function BY(qq) {
-      return void 0 !== (0, kg.e)(qq) ? qq : /^[1-9][0-9]*$/.test(qq) ? (0, kg.h)(Number(qq)) : void 0
+    function WQ(CC) {
+      return void 0 !== (0, TZ.b)(CC) ? CC : /^[1-9][0-9]*$/.test(CC) ? (0, TZ.c)(Number(CC)) : void 0
     }
 
-    function WY(qq) {
-      var Eq;
-      if (qq.startsWith(Dg)) {
-        var gq;
-        const Eq = (0, wg.d)(qq.slice(5));
-        return null !== (gq = void 0 === Eq ? null : xY(Eq)) && void 0 !== gq ? gq : qY.notFoundUrl()
+    function NQ(CC) {
+      var zC;
+      if (CC.startsWith(VZ)) {
+        var ZC;
+        const zC = (0, LZ.e)(CC.slice(5));
+        return null !== (ZC = void 0 === zC ? null : fQ(zC)) && void 0 !== ZC ? ZC : CQ.notFoundUrl()
       }
-      return null !== (Eq = qY.particleUrl(qq)) && void 0 !== Eq ? Eq : qY.notFoundUrl()
+      return null !== (zC = CQ.particleUrl(CC)) && void 0 !== zC ? zC : CQ.notFoundUrl()
     }
 
-    function NY(qq, Eq) {
-      return "StairsBlock" === qq ? qq : Eq ? "SlabBlock" : "CubeBlock"
+    function MQ(CC, zC) {
+      return "StairsBlock" === CC ? CC : zC ? "SlabBlock" : "CubeBlock"
     }
-    const aY = {
-        async blockIcon(qq) {
-          var Eq;
+    const gQ = {
+        async blockIcon(CC) {
+          var zC;
           let {
-            name: Yq,
-            size: lq,
-            lineWidth: Oq
-          } = qq;
-          await mY();
-          const mq = null !== (Eq = BY(Yq)) && void 0 !== Eq ? Eq : Yq,
-            xq = (0, Cg.c)(mq, lq, Oq);
-          if (null !== xq) return xq;
-          const Aq = Xg(mq),
-            cq = (0, kg.e)(mq),
-            uq = void 0 === cq || null === EY ? void 0 : EY.itemTypeNameOf(cq);
-          if (null === qY || void 0 === Aq) return "";
-          const Bq = [Aq.top, Aq.left, Aq.right].some((qq => null === AY(qq))),
-            Wq = Bq ? await (YY ??= gq.e(202).then((() => gq(34302))).then((qq => (lY && (lY = !1, (0, zg.d)()), {
-              rotated: qq.rotatedBlockTextures,
-              animated: qq.animatedBlockTextures
-            })), (qq => (YY = null, lY = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", qq), null))), YY) : null;
-          if (Bq && null === Wq) return "";
-          const Nq = {
-              top: uY(Aq.top, Wq),
-              left: uY(Aq.left, Wq),
-              right: uY(Aq.right, Wq),
-              itemType: NY(uq, Aq.half)
+            name: QC,
+            size: wC,
+            lineWidth: bC
+          } = CC;
+          await nQ();
+          const nC = null !== (zC = WQ(QC)) && void 0 !== zC ? zC : QC,
+            fC = (0, BZ.e)(nC, wC, bC);
+          if (null !== fC) return fC;
+          const oC = yZ(nC),
+            qC = (0, TZ.b)(nC),
+            FC = void 0 === qC || null === zQ ? void 0 : zQ.itemTypeNameOf(qC);
+          if (null === CQ || void 0 === oC) return "";
+          const WC = [oC.top, oC.left, oC.right].some((CC => null === oQ(CC))),
+            NC = WC ? await (QQ ??= ZC.e(204).then((() => ZC(34243))).then((CC => (wQ && (wQ = !1, (0, lZ.c)()), {
+              rotated: CC.rotatedBlockTextures,
+              animated: CC.animatedBlockTextures
+            })), (CC => (QQ = null, wQ = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", CC), null))), QQ) : null;
+          if (WC && null === NC) return "";
+          const MC = {
+              top: FQ(oC.top, NC),
+              left: FQ(oC.left, NC),
+              right: FQ(oC.right, NC),
+              itemType: MQ(FC, oC.half)
             },
-            aq = (0, Ig.f)(),
-            Vq = 0 === aq ? mq : `${mq}#${aq}`;
-          return (await (0, Kg.d)()).drawBlockIconUrl(Vq, lq, Oq, (() => Nq))
+            gC = (0, OZ.h)(),
+            SC = 0 === gC ? nC : `${nC}#${gC}`;
+          return (await (0, UZ.b)()).drawBlockIconUrl(SC, wC, bC, (() => MC))
         }
       },
-      VY = {
-        itemIcon: function(qq) {
-          var Eq, gq, lq, Oq;
-          if (null === qY) return mY(), Yq.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(qq);
-          if ((0, Lg.d)(qq)) return {
+      SQ = {
+        itemIcon: function(CC) {
+          var zC, ZC, wC, bC;
+          if (null === CQ) return nQ(), QC.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(CC);
+          if ((0, rZ.e)(CC)) return {
             kind: "icon",
-            url: null !== (gq = null !== (lq = null === (Oq = (0, Ig.j)()) || void 0 === Oq ? void 0 : Oq.textureUrl(qq)) && void 0 !== lq ? lq : qY.ingameIconUrl(qq)) && void 0 !== gq ? gq : qY.notFoundUrl()
+            url: null !== (ZC = null !== (wC = null === (bC = (0, OZ.j)()) || void 0 === bC ? void 0 : bC.textureUrl(CC)) && void 0 !== wC ? wC : CQ.ingameIconUrl(CC)) && void 0 !== ZC ? ZC : CQ.notFoundUrl()
           };
-          if (qq.startsWith(Lg.b)) return {
+          if (CC.startsWith(rZ.b)) return {
             kind: "icon",
-            url: WY(qq.slice(Lg.b.length))
+            url: NQ(CC.slice(rZ.b.length))
           };
-          if (0 === (0, kg.k)()) return (0, Jg.d)(), Yq.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(qq);
-          const mq = null !== (Eq = BY(qq)) && void 0 !== Eq ? Eq : qq,
-            xq = (0, kg.e)(mq),
-            Aq = void 0 === xq ? void 0 : EY.itemTypeNameOf(xq);
-          if (void 0 !== Xg(mq)) return {
+          if (0 === (0, TZ.d)()) return (0, sZ.d)(), QC.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(CC);
+          const nC = null !== (zC = WQ(CC)) && void 0 !== zC ? zC : CC,
+            fC = (0, TZ.b)(nC),
+            oC = void 0 === fC ? void 0 : zQ.itemTypeNameOf(fC);
+          if (void 0 !== yZ(nC)) return {
             kind: "drawnBlock"
           };
-          const cq = function(qq) {
-            var Eq;
-            return null !== (Eq = xY(cY(qq))) && void 0 !== Eq ? Eq : qY.notFoundUrl()
-          }(mq);
-          if ((0, Cg.f)(mq) && ! function(qq) {
-              const Eq = (0, Ig.j)();
-              return null !== Eq && (null !== Eq.textureUrl(cY(qq)) || null !== Eq.modelUrl(qq))
-            }(mq)) return {
+          const qC = function(CC) {
+            var zC;
+            return null !== (zC = fQ(qQ(CC))) && void 0 !== zC ? zC : CQ.notFoundUrl()
+          }(nC);
+          if ((0, BZ.i)(nC) && ! function(CC) {
+              const zC = (0, OZ.j)();
+              return null !== zC && (null !== zC.textureUrl(qQ(CC)) || null !== zC.modelUrl(CC))
+            }(nC)) return {
             kind: "model",
-            url: cq
+            url: qC
           };
-          if ("Gun" === Aq) return {
+          if ("Gun" === oC) return {
             kind: "gun",
-            url: cq
+            url: qC
           };
-          if (void 0 !== xq && "GrayscaleArmour" === EY.itemTypeOf(xq) || Object.hasOwn(Gg.e, mq)) {
-            var uq;
-            const Eq = null !== (uq = (0, Gg.f)(qq)) && void 0 !== uq ? uq : (0, Gg.f)(mq);
-            if (Eq) return {
+          if (void 0 !== fC && "GrayscaleArmour" === zQ.itemTypeOf(fC) || Object.hasOwn(uZ.b, nC)) {
+            var FC;
+            const zC = null !== (FC = (0, uZ.e)(CC)) && void 0 !== FC ? FC : (0, uZ.e)(nC);
+            if (zC) return {
               kind: "item",
-              url: cq,
-              tint: Eq
+              url: qC,
+              tint: zC
             }
           }
           return {
             kind: "item",
-            url: cq
+            url: qC
           }
         },
-        hasIcon: function(qq) {
-          return void 0 !== BY(qq) || (0, Lg.d)(qq) || qq.startsWith(Lg.b)
+        hasIcon: function(CC) {
+          return void 0 !== WQ(CC) || (0, rZ.e)(CC) || CC.startsWith(rZ.b)
         },
-        isItemName: function(qq) {
-          return void 0 !== BY(qq)
+        isItemName: function(CC) {
+          return void 0 !== WQ(CC)
         }
       };
-    var dY = gq(583),
-      jY = gq(39529);
+    var pQ = ZC(590),
+      PQ = ZC(39446);
 
-    function HY(qq) {
-      if (null === qq || void 0 === qq || !qq.isCoreRunning) return null;
+    function GQ(CC) {
+      if (null === CC || void 0 === CC || !CC.isCoreRunning) return null;
       const {
-        api: Eq,
-        chunks: gq,
-        items: Yq,
-        tables: lq
-      } = qq;
+        api: zC,
+        chunks: ZC,
+        items: QC,
+        tables: wC
+      } = CC;
       return {
         playerFeet() {
-          const qq = Eq.Py(Eq.localId);
-          return null !== qq && void 0 !== qq && qq.every(Number.isFinite) ? qq : null
+          const CC = zC.yG(zC.localId);
+          return null !== CC && void 0 !== CC && CC.every(Number.isFinite) ? CC : null
         },
-        chunkBlocks: qq => gq.isLoaded(qq[0], qq[1], qq[2]) ? (qq, Eq, Yq) => gq.lc(qq, Eq, Yq) : null,
-        blockName: qq => lq.nameOfId(qq),
+        chunkBlocks: CC => ZC.isLoaded(CC[0], CC[1], CC[2]) ? (CC, zC, QC) => ZC.SF(CC, zC, QC) : null,
+        blockName: CC => wC.nameOfId(CC),
         inventory: () => ({
-          slots: Yq.playerItems().map((qq => qq ? {
-            name: qq.name,
-            amount: qq.amount
+          slots: QC.playerItems().map((CC => CC ? {
+            name: CC.name,
+            amount: CC.amount
           } : null)),
-          heldSlot: Yq.selectedSlot
+          heldSlot: QC.selectedSlot
         }),
         nearby() {
-          const gq = [];
-          for (let lq = 0; lq < Eq.idStr.length; lq++) {
-            var Yq;
-            const Oq = Eq.idStr[lq],
-              mq = Eq.serverIds[lq],
-              xq = Eq.kinds[lq];
-            if (null === Oq || Eq.isLocal(mq) || xq >>> Pq.b !== Pq.q.Lifeform) continue;
-            const Aq = Eq.Py(mq),
-              cq = dY.m[xq & Pq.c];
-            Aq && void 0 !== cq && gq.push({
-              kind: "Player" === cq ? "player" : cq,
-              name: null !== (Yq = qq.clientApi.getEntityName(Oq)) && void 0 !== Yq ? Yq : null,
-              position: Aq
+          const ZC = [];
+          for (let wC = 0; wC < zC.idStr.length; wC++) {
+            var QC;
+            const bC = zC.idStr[wC],
+              nC = zC.serverIds[wC],
+              fC = zC.kinds[wC];
+            if (null === bC || zC.isLocal(nC) || fC >>> AC.b !== AC.s.Lifeform) continue;
+            const oC = zC.yG(nC),
+              qC = pQ.i[fC & AC.f];
+            oC && void 0 !== qC && ZC.push({
+              kind: "Player" === qC ? "player" : qC,
+              name: null !== (QC = CC.clientApi.getEntityName(bC)) && void 0 !== QC ? QC : null,
+              position: oC
             })
           }
-          return gq
+          return ZC
         },
         droppedItems() {
-          let qq = 0;
-          for (let gq = 0; gq < Eq.idStr.length; gq++) null !== Eq.idStr[gq] && Eq.kinds[gq] >>> Pq.b === Pq.q.Item && qq++;
-          return qq
+          let CC = 0;
+          for (let ZC = 0; ZC < zC.idStr.length; ZC++) null !== zC.idStr[ZC] && zC.kinds[ZC] >>> AC.b === AC.s.Item && CC++;
+          return CC
         }
       }
     }
-    const oY = {
-        worldCodeAiChunk: qq => Promise.resolve((0, jY.e)(HY((0, mq.e)()), qq)),
-        worldCodeAiGameState: () => Promise.resolve((0, jY.h)(HY((0, mq.e)())))
+    const RQ = {
+        worldCodeAiChunk: CC => Promise.resolve((0, PQ.e)(GQ((0, nC.k)()), CC)),
+        worldCodeAiGameState: () => Promise.resolve((0, PQ.h)(GQ((0, nC.k)())))
       },
-      PY = function(qq) {
-        const Eq = cg(),
-          Yq = cg(),
-          lq = new Set,
-          Oq = new Set,
-          mq = () => {
-            var Eq, gq;
-            return null !== (Eq = null === (gq = qq.runtime()) || void 0 === gq ? void 0 : gq.currentViewer) && void 0 !== Eq ? Eq : null
+      AQ = function(CC) {
+        const zC = qZ(),
+          QC = qZ(),
+          wC = new Set,
+          bC = new Set,
+          nC = () => {
+            var zC, ZC;
+            return null !== (zC = null === (ZC = CC.runtime()) || void 0 === ZC ? void 0 : ZC.currentViewer) && void 0 !== zC ? zC : null
           };
-        let xq = null,
-          Aq = null;
-        const uq = (qq, Eq) => ({
-            current: qq,
-            watch(gq) {
-              let Yq = qq();
-              return Eq.add((() => {
-                const Eq = qq();
-                Eq !== Yq && (Yq = Eq, gq(Eq))
+        let fC = null,
+          oC = null;
+        const FC = (CC, zC) => ({
+            current: CC,
+            watch(ZC) {
+              let QC = CC();
+              return zC.add((() => {
+                const zC = CC();
+                zC !== QC && (QC = zC, ZC(zC))
               }))
             }
           }),
-          Wq = qq => ({
-            watch: Eq => (qq.add(Eq), () => {
-              qq.delete(Eq)
+          NC = CC => ({
+            watch: zC => (CC.add(zC), () => {
+              CC.delete(zC)
             })
           }),
-          Nq = qq => {
-            const Eq = mq(),
-              gq = null === Eq || void 0 === Eq ? void 0 : Eq.view;
-            Eq && gq && Eq.seek(Math.max(0, Math.min(gq.totalTicks - 1, gq.SB + qq * Bq.Fd)))
+          MC = CC => {
+            const zC = nC(),
+              ZC = null === zC || void 0 === zC ? void 0 : zC.view;
+            zC && ZC && zC.seek(Math.max(0, Math.min(ZC.totalTicks - 1, ZC.ZN + CC * WC.xd)))
           },
-          aq = {
-            replay: uq((() => {
-              var qq;
-              const Eq = mq(),
-                gq = null !== (qq = null === Eq || void 0 === Eq ? void 0 : Eq.view) && void 0 !== qq ? qq : null;
-              return null === Eq || null === gq || gq.state === Bq.rd.None ? (xq = null, null) : (xq = (0, Iq.m)(xq, {
-                id: Eq.id,
-                SB: gq.SB,
-                totalTicks: gq.totalTicks,
-                bJ: Bq.Fd,
-                playing: gq.state === Bq.rd.Playing,
-                speed: gq.speed,
-                cameraMode: gq.cameraMode,
-                freecam: "freecam" === gq.cameraMode
-              }), xq)
-            }), Eq),
-            replayEdits: uq((() => {
-              var qq;
-              const Eq = mq(),
-                gq = null !== (qq = null === Eq || void 0 === Eq ? void 0 : Eq.view) && void 0 !== qq ? qq : null;
-              return null === Eq || null === gq || gq.state === Bq.rd.None ? (Aq = null, null) : (Aq = (0, Iq.m)(Aq, {
-                cameraKeyframes: [...Eq.keyframes],
-                playbackMark: gq.mark,
-                fileName: Eq.fileName,
-                unsavedChanges: Eq.unsavedChanges,
-                suggestSaveAs: Eq.suggestSaveAs
-              }), Aq)
-            }), Eq),
-            replayRecorder: uq((() => {
-              var Eq, gq;
-              return null !== (Eq = null === (gq = qq.runtime()) || void 0 === gq ? void 0 : gq.recorder.current) && void 0 !== Eq ? Eq : mg.b.states.replayRecorder.current()
-            }), Yq),
+          gC = {
+            replay: FC((() => {
+              var CC;
+              const zC = nC(),
+                ZC = null !== (CC = null === zC || void 0 === zC ? void 0 : zC.view) && void 0 !== CC ? CC : null;
+              return null === zC || null === ZC || ZC.state === WC.id.None ? (fC = null, null) : (fC = (0, OC.n)(fC, {
+                id: zC.id,
+                ZN: ZC.ZN,
+                totalTicks: ZC.totalTicks,
+                Jm: WC.xd,
+                playing: ZC.state === WC.id.Playing,
+                speed: ZC.speed,
+                cameraMode: ZC.cameraMode,
+                freecam: "freecam" === ZC.cameraMode
+              }), fC)
+            }), zC),
+            replayEdits: FC((() => {
+              var CC;
+              const zC = nC(),
+                ZC = null !== (CC = null === zC || void 0 === zC ? void 0 : zC.view) && void 0 !== CC ? CC : null;
+              return null === zC || null === ZC || ZC.state === WC.id.None ? (oC = null, null) : (oC = (0, OC.n)(oC, {
+                cameraKeyframes: [...zC.keyframes],
+                playbackMark: ZC.mark,
+                fileName: zC.fileName,
+                unsavedChanges: zC.unsavedChanges,
+                suggestSaveAs: zC.suggestSaveAs
+              }), oC)
+            }), zC),
+            replayRecorder: FC((() => {
+              var zC, ZC;
+              return null !== (zC = null === (ZC = CC.runtime()) || void 0 === ZC ? void 0 : ZC.recorder.current) && void 0 !== zC ? zC : nZ.b.states.replayRecorder.current()
+            }), QC),
             replayVideoExporting: {
-              current: lg.b,
-              watch: qq => (0, cq.k)("replayViewer|videoExportChanged", (() => {
-                qq((0, lg.b)())
+              current: wZ.e,
+              watch: CC => (0, qC.q)("replayViewer|videoExportChanged", (() => {
+                CC((0, wZ.e)())
               }))
             }
           },
-          Vq = {
-            replayUiActionRequested: Wq(Oq),
-            replayViewerRequested: Wq(lq)
+          SC = {
+            replayUiActionRequested: NC(bC),
+            replayViewerRequested: NC(wC)
           },
-          dq = qq => {
-            for (const Eq of lq) Eq(qq)
+          pC = CC => {
+            for (const zC of wC) zC(CC)
           },
-          jq = () => {
-            var Yq;
-            !0 === (null === (Yq = mq()) || void 0 === Yq ? void 0 : Yq.isOpen) && Promise.all([gq.e(95), gq.e(64)]).then((() => gq(42373))).then((gq => {
+          PC = () => {
+            var QC;
+            !0 === (null === (QC = nC()) || void 0 === QC ? void 0 : QC.isOpen) && Promise.all([ZC.e(96), ZC.e(66)]).then((() => ZC(60271))).then((ZC => {
               let {
-                startWasmReplayVideoExport: Yq
-              } = gq;
-              return Yq({
-                viewer: mq,
+                startWasmReplayVideoExport: QC
+              } = ZC;
+              return QC({
+                viewer: nC,
                 canvas: () => {
-                  var Eq, gq;
-                  return null !== (Eq = null === (gq = qq.canvas) || void 0 === gq ? void 0 : gq.call(qq)) && void 0 !== Eq ? Eq : null
+                  var zC, ZC;
+                  return null !== (zC = null === (ZC = CC.canvas) || void 0 === ZC ? void 0 : ZC.call(CC)) && void 0 !== zC ? zC : null
                 },
-                watchViewer: Eq.add,
-                requestViewer: dq
+                watchViewer: zC.add,
+                requestViewer: pC
               })
-            }), (qq => {
-              console.error("Couldn't load the video export", qq), Og.NotificationProvider.showAlertPopup({
+            }), (CC => {
+              console.error("Couldn't load the video export", CC), bZ.NotificationProvider.showAlertPopup({
                 title: "Video export failed",
                 subtitle: "Check your connection, then try again."
               })
-            })).catch((qq => {
-              console.error("The video export failed", qq)
+            })).catch((CC => {
+              console.error("The video export failed", CC)
             }))
           },
-          Hq = {
-            replayAction(qq) {
-              if ((0, lg.b)()) return;
-              const Eq = mq();
-              switch (qq) {
+          GC = {
+            replayAction(CC) {
+              if ((0, wZ.e)()) return;
+              const zC = nC();
+              switch (CC) {
                 case "replaySkipBack":
-                  Nq(-1);
+                  MC(-1);
                   break;
                 case "replaySkipForward":
-                  Nq(1);
+                  MC(1);
                   break;
                 case "replaySpeedUp":
                 case "replaySpeedDown":
-                  null !== Eq && void 0 !== Eq && Eq.view && Eq.setSpeed((0, Yg.l)(Eq.view.speed, "replaySpeedUp" === qq ? "up" : "down"));
+                  null !== zC && void 0 !== zC && zC.view && zC.setSpeed((0, QZ.i)(zC.view.speed, "replaySpeedUp" === CC ? "up" : "down"));
                   break;
                 case "replayRecordKeyframe":
-                  null === Eq || void 0 === Eq || Eq.addKeyframe()
+                  null === zC || void 0 === zC || zC.addKeyframe()
               }
             },
-            setReplayPlaying(qq) {
-              var Eq, gq;
-              (0, lg.b)() || (qq ? null === (Eq = mq()) || void 0 === Eq || Eq.play() : null === (gq = mq()) || void 0 === gq || gq.pause())
+            setReplayPlaying(CC) {
+              var zC, ZC;
+              (0, wZ.e)() || (CC ? null === (zC = nC()) || void 0 === zC || zC.play() : null === (ZC = nC()) || void 0 === ZC || ZC.pause())
             },
-            seekReplay(qq) {
-              var Eq;
+            seekReplay(CC) {
+              var zC;
               let {
-                SB: gq,
-                ignorePlaybackMark: Yq
-              } = qq;
-              null === (Eq = mq()) || void 0 === Eq || Eq.seek(gq, null !== Yq && void 0 !== Yq && Yq)
+                ZN: ZC,
+                ignorePlaybackMark: QC
+              } = CC;
+              null === (zC = nC()) || void 0 === zC || zC.seek(ZC, null !== QC && void 0 !== QC && QC)
             },
-            setReplayCameraMode(qq) {
-              var Eq;
-              null === (Eq = mq()) || void 0 === Eq || Eq.setCameraMode(qq)
+            setReplayCameraMode(CC) {
+              var zC;
+              null === (zC = nC()) || void 0 === zC || zC.setCameraMode(CC)
             },
             syncReplayCameraMode() {},
-            setReplayCameraKeyframe(qq) {
-              var Eq;
-              null === (Eq = mq()) || void 0 === Eq || Eq.setKeyframe(qq)
+            setReplayCameraKeyframe(CC) {
+              var zC;
+              null === (zC = nC()) || void 0 === zC || zC.setKeyframe(CC)
             },
-            moveReplayCameraKeyframe(qq) {
-              var Eq;
+            moveReplayCameraKeyframe(CC) {
+              var zC;
               let {
-                from: gq,
-                to: Yq
-              } = qq;
-              null === (Eq = mq()) || void 0 === Eq || Eq.moveKeyframe(gq, Yq)
+                from: ZC,
+                to: QC
+              } = CC;
+              null === (zC = nC()) || void 0 === zC || zC.moveKeyframe(ZC, QC)
             },
-            deleteReplayCameraKeyframes(qq) {
-              var Eq;
+            deleteReplayCameraKeyframes(CC) {
+              var zC;
               let {
-                start: gq,
-                end: Yq
-              } = qq;
-              null === (Eq = mq()) || void 0 === Eq || Eq.deleteKeyframes(gq, Yq)
+                start: ZC,
+                end: QC
+              } = CC;
+              null === (zC = nC()) || void 0 === zC || zC.deleteKeyframes(ZC, QC)
             },
-            setReplayPlaybackMark(qq) {
-              var Eq;
-              null === (Eq = mq()) || void 0 === Eq || Eq.setMark(qq)
+            setReplayPlaybackMark(CC) {
+              var zC;
+              null === (zC = nC()) || void 0 === zC || zC.setMark(CC)
             },
-            cropReplay(qq) {
-              var Eq, gq;
+            cropReplay(CC) {
+              var zC, ZC;
               let {
-                start: Yq,
-                end: lq
-              } = qq;
-              return !(0, lg.b)() && (null !== (Eq = null === (gq = mq()) || void 0 === gq ? void 0 : gq.crop(Yq, lq)) && void 0 !== Eq && Eq)
+                start: QC,
+                end: wC
+              } = CC;
+              return !(0, wZ.e)() && (null !== (zC = null === (ZC = nC()) || void 0 === ZC ? void 0 : ZC.crop(QC, wC)) && void 0 !== zC && zC)
             },
-            holdReplayForShaderPackFailure(qq) {
-              const Eq = mq();
-              Eq && (Eq.holdForShaderPackFailure(), function(qq) {
-                gq.e(130).then((() => gq(39158))).then((Eq => {
+            holdReplayForShaderPackFailure(CC) {
+              const zC = nC();
+              zC && (zC.holdForShaderPackFailure(), function(CC) {
+                ZC.e(115).then((() => ZC(39051))).then((zC => {
                   let {
-                    shaderPackPage: gq
-                  } = Eq;
-                  gq.block(qq)
-                })).catch((qq => {
-                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", qq)
+                    shaderPackPage: ZC
+                  } = zC;
+                  ZC.block(CC)
+                })).catch((CC => {
+                  console.warn("[bloxd-wasm-client] the shader pack could not be blocked", CC)
                 }))
-              }(qq))
+              }(CC))
             },
             exportReplayVideo() {
-              jq()
+              PC()
             },
             toggleRecording() {
-              var Eq;
-              null === (Eq = qq.runtime()) || void 0 === Eq || Eq.recorder.toggleRecording()
+              var zC;
+              null === (zC = CC.runtime()) || void 0 === zC || zC.recorder.toggleRecording()
             },
             saveClip() {
-              var Eq;
-              null === (Eq = qq.runtime()) || void 0 === Eq || Eq.recorder.saveClip()
+              var zC;
+              null === (zC = CC.runtime()) || void 0 === zC || zC.recorder.saveClip()
             },
-            setRecorderPrefs(Eq) {
-              var gq;
+            setRecorderPrefs(zC) {
+              var ZC;
               let {
-                clipping: Yq,
-                clipSeconds: lq
-              } = Eq;
-              null === (gq = qq.runtime()) || void 0 === gq || gq.recorder.setPrefs(Yq, lq)
+                clipping: QC,
+                clipSeconds: wC
+              } = zC;
+              null === (ZC = CC.runtime()) || void 0 === ZC || ZC.recorder.setPrefs(QC, wC)
             },
-            setReplayViewerOpen(Eq) {
-              var gq;
-              (0, dE.h)(Eq) && (null === (gq = qq.runtime()) || void 0 === gq || gq.recorder.viewerShown(Eq))
+            setReplayViewerOpen(zC) {
+              var ZC;
+              (0, pz.f)(zC) && (null === (ZC = CC.runtime()) || void 0 === ZC || ZC.recorder.viewerShown(zC))
             },
-            recordFlyingMiddleText(Eq) {
-              var gq;
+            recordFlyingMiddleText(zC) {
+              var ZC;
               let {
-                content: Yq,
-                hg: lq,
-                angle: Oq,
-                ng: mq
-              } = Eq;
-              null === (gq = qq.runtime()) || void 0 === gq || gq.recorder.recordFlyingText(JSON.stringify(Yq), lq, Oq, mq)
+                content: QC,
+                Jb: wC,
+                angle: bC,
+                Ib: nC
+              } = zC;
+              null === (ZC = CC.runtime()) || void 0 === ZC || ZC.recorder.recordFlyingText(JSON.stringify(QC), wC, bC, nC)
             },
-            dragReplayCamera(Eq) {
-              var gq;
+            dragReplayCamera(zC) {
+              var ZC;
               let {
-                dx: Yq,
-                dy: lq
-              } = Eq;
-              null === (gq = qq.freecam()) || void 0 === gq || gq.drag(Yq, lq)
+                dx: QC,
+                dy: wC
+              } = zC;
+              null === (ZC = CC.freecam()) || void 0 === ZC || ZC.drag(QC, wC)
             },
-            moveReplayFreecam(Eq) {
-              var gq;
-              null === (gq = qq.freecam()) || void 0 === gq || gq.move(Eq)
+            moveReplayFreecam(zC) {
+              var ZC;
+              null === (ZC = CC.freecam()) || void 0 === ZC || ZC.move(zC)
             },
-            holdReplayFreecamVertical(Eq) {
-              var gq;
+            holdReplayFreecamVertical(zC) {
+              var ZC;
               let {
-                action: Yq,
-                Fc: lq
-              } = Eq;
-              null === (gq = qq.freecam()) || void 0 === gq || gq.holdVertical(Yq, lq)
+                action: QC,
+                vq: wC
+              } = zC;
+              null === (ZC = CC.freecam()) || void 0 === ZC || ZC.holdVertical(QC, wC)
             }
           },
-          oq = qq => {
-            var Eq;
-            const gq = mq(),
-              Yq = null !== (Eq = null === gq || void 0 === gq ? void 0 : gq.view) && void 0 !== Eq ? Eq : null;
-            xg.has(qq) ? (qq => {
-              for (const Eq of Oq) Eq(qq)
-            })(qq) : Ag.has(qq) ? Hq.replayAction(qq) : "replayPlayPause" === qq ? gq && Yq && Yq.state !== Bq.rd.None && Hq.setReplayPlaying(Yq.state !== Bq.rd.Playing) : "replayChangeCameraMode" === qq ? null === gq || void 0 === gq || gq.cycleCameraMode() : "replayExit" === qq ? !0 === (null === gq || void 0 === gq ? void 0 : gq.inPlayback) && (0, TE.o)("/") : "replayExportVideo" === qq && jq()
+          RC = CC => {
+            var zC;
+            const ZC = nC(),
+              QC = null !== (zC = null === ZC || void 0 === ZC ? void 0 : ZC.view) && void 0 !== zC ? zC : null;
+            fZ.has(CC) ? (CC => {
+              for (const zC of bC) zC(CC)
+            })(CC) : oZ.has(CC) ? GC.replayAction(CC) : "replayPlayPause" === CC ? ZC && QC && QC.state !== WC.id.None && GC.setReplayPlaying(QC.state !== WC.id.Playing) : "replayChangeCameraMode" === CC ? null === ZC || void 0 === ZC || ZC.cycleCameraMode() : "replayExit" === CC ? !0 === (null === ZC || void 0 === ZC ? void 0 : ZC.inPlayback) && (0, Ez.k)("/") : "replayExportVideo" === CC && PC()
           };
-        let Pq = !1;
+        let AC = !1;
         return {
-          states: aq,
-          events: Vq,
-          commands: Hq,
+          states: gC,
+          events: SC,
+          commands: GC,
           lookups: {
             replayCamera() {
-              var Eq, gq, Yq;
-              return !0 !== (null === (Eq = mq()) || void 0 === Eq ? void 0 : Eq.isOpen) ? null : null !== (gq = null === (Yq = qq.cameraView) || void 0 === Yq ? void 0 : Yq.call(qq)) && void 0 !== gq ? gq : null
+              var zC, ZC, QC;
+              return !0 !== (null === (zC = nC()) || void 0 === zC ? void 0 : zC.isOpen) ? null : null !== (ZC = null === (QC = CC.cameraView) || void 0 === QC ? void 0 : QC.call(CC)) && void 0 !== ZC ? ZC : null
             },
             leaveGameReloadsPage() {
-              var qq;
-              return !0 === (null === (qq = mq()) || void 0 === qq ? void 0 : qq.inPlayback)
+              var CC;
+              return !0 === (null === (CC = nC()) || void 0 === CC ? void 0 : CC.inPlayback)
             }
           },
           feed: {
             viewerChanged: () => {
-              var qq;
-              const gq = !0 === (null === (qq = mq()) || void 0 === qq ? void 0 : qq.inPlayback);
-              gq !== Pq && (Pq = gq, cq.i.TV("connectedGameChanged")), Eq.fire()
+              var CC;
+              const ZC = !0 === (null === (CC = nC()) || void 0 === CC ? void 0 : CC.inPlayback);
+              ZC !== AC && (AC = ZC, qC.o.bp("connectedGameChanged")), zC.fire()
             },
-            recorderChanged: Yq.fire,
-            keyDown: qq => {
-              var Eq;
-              switch (qq) {
+            recorderChanged: QC.fire,
+            keyDown: CC => {
+              var zC;
+              switch (CC) {
                 case "recordGame":
-                  return void Hq.toggleRecording();
+                  return void GC.toggleRecording();
                 case "recordClip":
-                  return void((0, dE.e)() || Hq.saveClip())
-              }(0, lg.b)() || ("replayViewerOpen" !== qq ? qq.startsWith("replay") && ((0, dE.e)() || !0 === (null === (Eq = mq()) || void 0 === Eq ? void 0 : Eq.inPlayback)) && oq(qq) : dq("toggle"))
+                  return void((0, pz.c)() || GC.saveClip())
+              }(0, wZ.e)() || ("replayViewerOpen" !== CC ? CC.startsWith("replay") && ((0, pz.c)() || !0 === (null === (zC = nC()) || void 0 === zC ? void 0 : zC.inPlayback)) && RC(CC) : pC("toggle"))
             }
           }
         }
       }({
-        runtime: lq.l,
+        runtime: wC.k,
         cameraView: () => {
-          var qq;
-          const Eq = null === (qq = (0, mq.e)()) || void 0 === qq ? void 0 : qq.renderFrame;
-          if (!Eq) return null;
-          const [gq, Yq, lq] = Eq.cameraPosition, [Oq, xq, Aq] = Eq.cameraDirection;
+          var CC;
+          const zC = null === (CC = (0, nC.k)()) || void 0 === CC ? void 0 : CC.renderFrame;
+          if (!zC) return null;
+          const [ZC, QC, wC] = zC.cameraPosition, [bC, fC, oC] = zC.cameraDirection;
           return {
-            position: [gq, Yq, lq],
-            direction: [Oq, xq, Aq]
+            position: [ZC, QC, wC],
+            direction: [bC, fC, oC]
           }
         },
         canvas: () => {
-          var qq, Eq, gq;
-          return null !== (qq = null === (Eq = (gq = (0, Oq.M)()).canvas) || void 0 === Eq ? void 0 : Eq.call(gq)) && void 0 !== qq ? qq : null
+          var CC, zC, ZC;
+          return null !== (CC = null === (zC = (ZC = (0, bC.E)()).canvas) || void 0 === zC ? void 0 : zC.call(ZC)) && void 0 !== CC ? CC : null
         },
-        freecam: lq.i
+        freecam: wC.j
       }),
-      QY = {
+      xQ = {
         states: {
-          ...cE,
-          ...NE.i,
-          ...PY.states,
-          ...Wg,
-          ...kq
+          ...qz,
+          ...Mz.m,
+          ...AQ.states,
+          ...NZ,
+          ...TC
         },
         events: {
-          ...uE,
-          ...dq,
-          ...NE.e,
-          ...hq.c,
-          ...hg.i,
-          ...PY.events,
-          ...Ng,
-          ...vq.i
+          ...Fz,
+          ...pC,
+          ...Mz.h,
+          ...eC.c,
+          ...eZ.k,
+          ...AQ.events,
+          ...MZ,
+          ...vC.j
         },
         commands: {
-          ...rq,
-          ...BE,
-          ...jq,
-          ...NE.d,
-          ...CE,
-          ...vg,
-          ...vq.e,
-          ...pE,
-          ...PY.commands,
-          ...Pg,
-          ...Rq,
-          ...Tg,
-          ...aE
+          ...iC,
+          ...Wz,
+          ...PC,
+          ...Mz.e,
+          ...Bz,
+          ...vZ,
+          ...vC.g,
+          ...cz,
+          ...AQ.commands,
+          ...AZ,
+          ...aC,
+          ...EZ,
+          ...gz
         },
         queries: {
-          ...NE.g,
-          ...oY
+          ...Mz.j,
+          ...RQ
         },
         lookups: {
-          ...WE,
-          ...zq,
-          ...hg.m,
-          ...PY.lookups,
-          ...tq,
-          ...gg,
-          ...Mg,
-          ...Uq
+          ...Nz,
+          ...lC,
+          ...eZ.m,
+          ...AQ.lookups,
+          ...IC,
+          ...ZZ,
+          ...HZ,
+          ...tC
         }
       };
 
-    function yY() {
-      (0, xq.h)(Vq.o), (0, lq.m)(PY.feed), (0, hq.e)(), IE || (IE = !0, (0, Vq.l)(Zq.i, (qq => {
-        const Eq = (0, Mq.d)(Zq.i, qq);
-        "string" === typeof Eq && Promise.resolve().then((() => gq(3514))).then((qq => {
+    function JQ() {
+      (0, fC.g)(SC.o), (0, wC.m)(AQ.feed), (0, eC.g)(), Oz || (Oz = !0, (0, SC.l)(dC.k, (CC => {
+        const zC = (0, HC.h)(dC.k, CC);
+        "string" === typeof zC && Promise.resolve().then((() => ZC(3586))).then((CC => {
           let {
-            onCosmeticPackGranted: gq
-          } = qq;
-          gq(Eq)
+            onCosmeticPackGranted: ZC
+          } = CC;
+          ZC(zC)
         }))
-      })), (0, Vq.l)(Zq.W, (qq => {
-        const Eq = (0, Mq.d)(Zq.W, qq);
-        "number" === typeof Eq && cq.i.TV("serverUpdating", Date.now() + Eq, !0)
-      })), (0, Vq.l)(Zq.z, (qq => {
-        const Eq = (0, Mq.d)(Zq.z, qq);
-        if ((0, Mq.b)(Eq)) {
+      })), (0, SC.l)(dC.fb, (CC => {
+        const zC = (0, HC.h)(dC.fb, CC);
+        "number" === typeof zC && qC.o.bp("serverUpdating", Date.now() + zC, !0)
+      })), (0, SC.l)(dC.K, (CC => {
+        const zC = (0, HC.h)(dC.K, CC);
+        if ((0, HC.e)(zC)) {
           const {
-            Oq: qq,
-            mq: gq
-          } = Eq;
-          (0, wE.d)({
-            Oq: "string" === typeof qq ? qq : null,
-            mq: "string" === typeof gq ? gq : null
+            Kw: CC,
+            Yw: ZC
+          } = zC;
+          (0, Lz.c)({
+            Kw: "string" === typeof CC ? CC : null,
+            Yw: "string" === typeof ZC ? ZC : null
           })
         }
-      })), (0, Vq.l)(uq.ec.NewUiRequest, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        (0, Mq.b)(Eq) && "number" === typeof Eq.id && (0, Mq.b)(Eq.clientParameters) && (0, KE.f)(Eq.id, Eq.clientParameters)
-      })), (0, Vq.l)(Zq.Q, (qq => {
-        const Eq = (0, Mq.d)(Zq.Q, qq);
-        "number" === typeof Eq && (0, KE.i)(Eq)
-      })), (0, Vq.h)(KE.e), (0, Vq.l)(uq.ec.UiRequestPopup, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        if ((0, Mq.b)(Eq) && "number" === typeof Eq.id && "string" === typeof Eq.text) {
-          const qq = Eq.id;
-          (0, KE.l)(qq, Eq.text, (Eq => {
-            CE.answerUiRequest({
-              id: qq,
-              xu: Eq
+      })), (0, SC.l)(FC.Bc.NewUiRequest, (CC => {
+        const zC = (0, HC.j)(CC);
+        (0, HC.e)(zC) && "number" === typeof zC.id && (0, HC.e)(zC.clientParameters) && (0, Uz.i)(zC.id, zC.clientParameters)
+      })), (0, SC.l)(dC._, (CC => {
+        const zC = (0, HC.h)(dC._, CC);
+        "number" === typeof zC && (0, Uz.m)(zC)
+      })), (0, SC.j)(Uz.e), (0, SC.l)(FC.Bc.UiRequestPopup, (CC => {
+        const zC = (0, HC.j)(CC);
+        if ((0, HC.e)(zC) && "number" === typeof zC.id && "string" === typeof zC.text) {
+          const CC = zC.id;
+          (0, Uz.o)(CC, zC.text, !0 === zC.destructive, (zC => {
+            Bz.answerUiRequest({
+              id: CC,
+              hF: zC
             })
           }))
         }
-      })), (0, Vq.l)(uq.ec.TopRightHelper, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        void 0 !== Eq && cq.i.TV("TopRightHelper", Eq, !0)
-      })), (0, Vq.l)(uq.ec.TaskProgress, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        (0, Mq.b)(Eq) && "string" === typeof Eq.taskId && "number" === typeof Eq.progress && (0, XE.c)({
-          taskId: Eq.taskId,
-          progress: Eq.progress
+      })), (0, SC.l)(FC.Bc.TopRightHelper, (CC => {
+        const zC = (0, HC.j)(CC);
+        void 0 !== zC && qC.o.bp("TopRightHelper", zC, !0)
+      })), (0, SC.l)(FC.Bc.TaskProgress, (CC => {
+        const zC = (0, HC.j)(CC);
+        (0, HC.e)(zC) && "string" === typeof zC.taskId && "number" === typeof zC.progress && (0, yz.e)({
+          taskId: zC.taskId,
+          progress: zC.progress
         })
-      }))), Qg || (Qg = !0, (0, Vq.l)(Zq.s, (qq => {
-        const Eq = (0, Mq.d)(Zq.s, qq);
-        (0, Mq.b)(Eq) && cq.i.TV("showShopFromServer", {
-          toggle: Eq.Jg,
-          kg: Eq.kg
+      }))), xZ || (xZ = !0, (0, SC.l)(dC.r, (CC => {
+        const zC = (0, HC.h)(dC.r, CC);
+        (0, HC.e)(zC) && qC.o.bp("showShopFromServer", {
+          toggle: zC.ew,
+          hw: zC.hw
         }, !0)
-      })), (0, Vq.l)(uq.ec.OverShopInfo, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        (0, Mq.b)(Eq) && cq.i.TV("overShopInfo", Eq.info, !0)
-      })), (0, Vq.l)(uq.ec.ShowShopTutorial, (() => {
-        cq.i.TV("showShopTutorial", null, !0)
-      }))), Hg || (Hg = !0, (0, Vq.d)((() => {
-        var qq;
-        (0, ag.H)(), null === (qq = og) || void 0 === qq || qq(), og = (0, Vq.b)() ? (0, dg.h)(Vq.b) : null
-      })), (0, Vq.l)(uq.ec.SetCookie, (qq => {
-        const Eq = (0, Mq.e)(qq),
-          gq = (0, TE.e)().gameNameWithVariation;
-        (0, Mq.b)(Eq) && "string" === typeof Eq.key && null !== gq && (0, Vg.setCookie)(gq, Eq.key, Eq.value)
-      })), (0, Vq.l)(uq.ec.LeaveValues, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        if ((0, Mq.b)(Eq) && "string" === typeof Eq.leaveEventType) {
+      })), (0, SC.l)(FC.Bc.OverShopInfo, (CC => {
+        const zC = (0, HC.j)(CC);
+        (0, HC.e)(zC) && qC.o.bp("overShopInfo", zC.info, !0)
+      })), (0, SC.l)(FC.Bc.ShowShopTutorial, (() => {
+        qC.o.bp("showShopTutorial", null, !0)
+      }))), GZ || (GZ = !0, (0, SC.i)((() => {
+        var CC;
+        (0, gZ.D)(), null === (CC = RZ) || void 0 === CC || CC(), RZ = (0, SC.e)() ? (0, pZ.g)(SC.e) : null, (0, SC.e)() || qC.o.pG()
+      })), (0, SC.l)(FC.Bc.SetCookie, (CC => {
+        const zC = (0, HC.j)(CC),
+          ZC = (0, Ez.d)().gameNameWithVariation;
+        (0, HC.e)(zC) && "string" === typeof zC.key && null !== ZC && (0, SZ.setCookie)(ZC, zC.key, zC.value)
+      })), (0, SC.l)(FC.Bc.LeaveValues, (CC => {
+        const zC = (0, HC.j)(CC);
+        if ((0, HC.e)(zC) && "string" === typeof zC.leaveEventType) {
           const {
-            leaveEventType: qq,
-            category: gq,
-            subCategory: Yq,
-            value: lq
-          } = Eq;
-          (0, ag.L)({
-            leaveEventType: qq,
-            category: gq,
-            subCategory: Yq,
-            value: lq
+            leaveEventType: CC,
+            category: ZC,
+            subCategory: QC,
+            value: wC
+          } = zC;
+          (0, gZ.K)({
+            leaveEventType: CC,
+            category: ZC,
+            subCategory: QC,
+            value: wC
           })
         }
-      })), (0, Vq.l)(uq.ec.CustomAnalyticsEvent, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        if ((0, Mq.b)(Eq) && "string" === typeof Eq.cat1) {
+      })), (0, SC.l)(FC.Bc.CustomAnalyticsEvent, (CC => {
+        const zC = (0, HC.j)(CC);
+        if ((0, HC.e)(zC) && "string" === typeof zC.cat1) {
           const {
-            cat1: qq,
-            cat2: gq,
-            cat3: Yq,
-            value: lq
-          } = Eq;
-          (0, ag.s)({
-            cat1: qq,
-            cat2: gq,
-            cat3: Yq,
-            value: lq
+            cat1: CC,
+            cat2: ZC,
+            cat3: QC,
+            value: wC
+          } = zC;
+          (0, gZ.o)({
+            cat1: CC,
+            cat2: ZC,
+            cat3: QC,
+            value: wC
           })
         }
-      })), (0, Vq.l)(uq.ec.ProgressionEvent, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        if ((0, Mq.b)(Eq)) {
+      })), (0, SC.l)(FC.Bc.ProgressionEvent, (CC => {
+        const zC = (0, HC.j)(CC);
+        if ((0, HC.e)(zC)) {
           const {
-            type: qq,
-            location1: gq,
-            location2: Yq,
-            location3: lq,
-            score: Oq
-          } = Eq;
-          (0, ag.y)({
-            type: qq,
-            location1: gq,
-            location2: Yq,
-            location3: lq,
-            score: Oq
+            type: CC,
+            location1: ZC,
+            location2: QC,
+            location3: wC,
+            score: bC
+          } = zC;
+          (0, gZ.t)({
+            type: CC,
+            location1: ZC,
+            location2: QC,
+            location3: wC,
+            score: bC
           })
         }
-      })), (0, Vq.l)(uq.ec.ResourceEvent, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        if ((0, Mq.b)(Eq)) {
+      })), (0, SC.l)(FC.Bc.ResourceEvent, (CC => {
+        const zC = (0, HC.j)(CC);
+        if ((0, HC.e)(zC)) {
           const {
-            type: qq,
-            resourceType: gq,
-            amount: Yq,
-            category: lq,
-            itemName: Oq
-          } = Eq;
-          (0, ag.C)({
-            type: qq,
-            resourceType: gq,
-            amount: Yq,
-            category: lq,
-            itemName: Oq
+            type: CC,
+            resourceType: ZC,
+            amount: QC,
+            category: wC,
+            itemName: bC
+          } = zC;
+          (0, gZ.w)({
+            type: CC,
+            resourceType: ZC,
+            amount: QC,
+            category: wC,
+            itemName: bC
           })
         }
-      })), (0, Vq.l)(uq.ec.LeaderboardResponse, (qq => {
-        const Eq = (0, Mq.e)(qq);
-        if ((0, Mq.b)(Eq)) {
+      })), (0, SC.l)(FC.Bc.LeaderboardResponse, (CC => {
+        const zC = (0, HC.j)(CC);
+        if ((0, HC.e)(zC)) {
           const {
-            category: qq,
-            timeframe: gq,
-            data: Yq
-          } = Eq;
-          cq.i.TV("leaderboardResponse", {
-            category: qq,
-            timeframe: gq,
-            data: Yq
+            category: CC,
+            timeframe: ZC,
+            data: QC
+          } = zC;
+          qC.o.bp("leaderboardResponse", {
+            category: CC,
+            timeframe: ZC,
+            data: QC
           })
         }
-      })), (0, Vq.l)(Zq.v, (qq => {
-        const Eq = (0, Mq.d)(Zq.v, qq);
-        "string" === typeof Eq && (0, jg.c)(qq.conn, Eq)
-      })), (0, Vq.l)(Zq.w, (qq => {
-        const Eq = (0, Mq.d)(Zq.w, qq);
-        "string" === typeof Eq && console.error(`[logErrorToConsole]: ${Eq}`)
-      }))), pq(), (0, hg.e)(), SE || (SE = !0, (0, Vq.l)(Zq.h, (qq => {
-        const Eq = (0, Mq.d)(Zq.h, qq);
-        void 0 !== Eq && (0, zE.i)(Eq)
-      }))), sE(), bE(), Xq || (Xq = !0, (0, Oq.w)(wq)), Yq.gameBridge.attach(QY), (0, Yq.installPageSources)({
+      })), (0, SC.l)(dC.C, (CC => {
+        const zC = (0, HC.h)(dC.C, CC);
+        "string" === typeof zC && (0, PZ.d)(CC.conn, zC)
+      })), (0, SC.l)(dC.G, (CC => {
+        const zC = (0, HC.h)(dC.G, CC);
+        "string" === typeof zC && console.error(`[logErrorToConsole]: ${zC}`)
+      }))), cC(), (0, eZ.d)(), Xz || (Xz = !0, (0, SC.l)(dC.j, (CC => {
+        const zC = (0, HC.h)(dC.j, CC);
+        void 0 !== zC && (0, lz.h)(zC)
+      }))), jz(), Kz(), yC || (yC = !0, (0, bC.p)(LC)), QC.gameBridge.attach(xQ), (0, QC.installPageSources)({
         commands: {
-          ...Yq.DEFAULT_CLIENT_PAGE_SOURCES.commands,
-          setChunkAddDistance: Sg.k
+          ...QC.DEFAULT_CLIENT_PAGE_SOURCES.commands,
+          setChunkAddDistance: XZ.h
         },
-        queries: aY,
+        queries: gQ,
         lookups: {
-          ...Yq.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
-          ...VY,
-          Gy: Sg.e,
-          drawCallStats: pg.h
+          ...QC.DEFAULT_CLIENT_PAGE_SOURCES.lookups,
+          ...SQ,
+          gR: XZ.e,
+          drawCallStats: cZ.e
         }
-      }), (0, zg.d)(), mY()
+      }), (0, lZ.c)(), nQ()
     }
   },
-  40470: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq,
-      f: () => Aq,
-      j: () => xq,
-      k: () => cq
+  40779: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => FC,
+      h: () => oC,
+      j: () => fC,
+      m: () => qC
     });
-    var Yq = gq(1914);
-    let lq = null,
-      Oq = 0;
-    const mq = new Set;
+    var QC = ZC(1851);
+    let wC = null,
+      bC = 0;
+    const nC = new Set;
 
-    function xq() {
-      return lq
+    function fC() {
+      return wC
     }
 
-    function Aq() {
-      return Oq
+    function oC() {
+      return bC
     }
 
-    function cq(qq) {
-      lq = qq, Oq++, (0, Yq.d)();
-      for (const Eq of mq) Eq()
+    function qC(CC) {
+      wC = CC, bC++, (0, QC.c)();
+      for (const zC of nC) zC()
     }
 
-    function uq(qq) {
-      mq.add(qq)
+    function FC(CC) {
+      nC.add(CC)
     }
   },
-  40476: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq,
-      f: () => xq
+  40875: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => nC,
+      e: () => fC
     });
-    var Yq = gq(40479);
-    let lq = null,
-      Oq = null;
+    var QC = ZC(40878);
+    let wC = null,
+      bC = null;
 
-    function mq() {
-      return lq ??= gq.e(59).then((() => gq(42392))).catch((qq => {
-        throw lq = null, qq
-      })), lq
+    function nC() {
+      return wC ??= ZC.e(61).then((() => ZC(60285))).catch((CC => {
+        throw wC = null, CC
+      })), wC
     }
 
-    function xq() {
-      return Oq ??= Promise.all([mq(), (0, Yq.c)()]).then((qq => {
-        let [Eq] = qq;
-        return Eq
-      }), (qq => {
-        throw Oq = null, qq
-      })), Oq
+    function fC() {
+      return bC ??= Promise.all([nC(), (0, QC.i)()]).then((CC => {
+        let [zC] = CC;
+        return zC
+      }), (CC => {
+        throw bC = null, CC
+      })), bC
     }
   },
-  37111: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq
+  36938: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC
     });
-    const Yq = {
+    const QC = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -2667,87 +2670,87 @@ export const modules = {
       }
     }
   },
-  36912: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq,
-      f: () => Oq,
-      h: () => Wq,
-      j: () => xq,
-      l: () => Aq,
-      n: () => cq,
-      o: () => Bq,
-      q: () => uq,
-      t: () => mq
+  36725: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => wC,
+      g: () => bC,
+      j: () => NC,
+      m: () => fC,
+      q: () => oC,
+      u: () => qC,
+      v: () => WC,
+      y: () => FC,
+      z: () => nC
     });
-    var Yq = gq(1226);
-    let lq = function(qq) {
-        return qq[qq.Join = 0] = "Join", qq[qq.Leave = 1] = "Leave", qq[qq.Push = 2] = "Push", qq[qq.Cursor = 3] = "Cursor", qq[qq.Submit = 4] = "Submit", qq[qq.ReloadAsVariation = 5] = "ReloadAsVariation", qq[qq.CreateFile = 6] = "CreateFile", qq[qq.RenameFile = 7] = "RenameFile", qq[qq.DeleteFile = 8] = "DeleteFile", qq[qq.SetEngine = 9] = "SetEngine", qq[qq.RenameFolder = 10] = "RenameFolder", qq
+    var QC = ZC(1183);
+    let wC = function(CC) {
+        return CC[CC.Join = 0] = "Join", CC[CC.Leave = 1] = "Leave", CC[CC.Push = 2] = "Push", CC[CC.Cursor = 3] = "Cursor", CC[CC.Submit = 4] = "Submit", CC[CC.ReloadAsVariation = 5] = "ReloadAsVariation", CC[CC.CreateFile = 6] = "CreateFile", CC[CC.RenameFile = 7] = "RenameFile", CC[CC.DeleteFile = 8] = "DeleteFile", CC[CC.SetEngine = 9] = "SetEngine", CC[CC.RenameFolder = 10] = "RenameFolder", CC
       }({}),
-      Oq = function(qq) {
-        return qq[qq.Joined = 0] = "Joined", qq[qq.Updates = 1] = "Updates", qq[qq.Presence = 2] = "Presence", qq[qq.RemoteCursor = 3] = "RemoteCursor", qq[qq.ForceClose = 4] = "ForceClose", qq[qq.LobbyFilesChanged = 5] = "LobbyFilesChanged", qq[qq.EngineSettings = 6] = "EngineSettings", qq
+      bC = function(CC) {
+        return CC[CC.Joined = 0] = "Joined", CC[CC.Updates = 1] = "Updates", CC[CC.Presence = 2] = "Presence", CC[CC.RemoteCursor = 3] = "RemoteCursor", CC[CC.ForceClose = 4] = "ForceClose", CC[CC.LobbyFilesChanged = 5] = "LobbyFilesChanged", CC[CC.EngineSettings = 6] = "EngineSettings", CC
       }({});
 
-    function mq(qq) {
-      return "lobby" === qq.kind ? `lobby:${qq.path}` : `codeBlock:${qq.pos[0]},${qq.pos[1]},${qq.pos[2]}`
+    function nC(CC) {
+      return "lobby" === CC.kind ? `lobby:${CC.path}` : `codeBlock:${CC.pos[0]},${CC.pos[1]},${CC.pos[2]}`
     }
 
-    function xq(qq) {
-      if ("lobby" === qq) return {
+    function fC(CC) {
+      if ("lobby" === CC) return {
         kind: "lobby",
-        path: Yq.j
+        path: QC.k
       };
-      if (qq.startsWith("lobby:")) {
-        const Eq = qq.slice(6);
-        return Bq(Eq) ? {
+      if (CC.startsWith("lobby:")) {
+        const zC = CC.slice(6);
+        return WC(zC) ? {
           kind: "lobby",
-          path: Eq
+          path: zC
         } : null
       }
-      const Eq = qq.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return Eq ? {
+      const zC = CC.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return zC ? {
         kind: "codeBlock",
-        pos: [parseInt(Eq[1]), parseInt(Eq[2]), parseInt(Eq[3])]
+        pos: [parseInt(zC[1]), parseInt(zC[2]), parseInt(zC[3])]
       } : null
     }
 
-    function Aq(qq) {
-      return qq.endsWith(".d.ts")
+    function oC(CC) {
+      return CC.endsWith(".d.ts")
     }
 
-    function cq(qq) {
-      return qq.endsWith(".ts") && !Aq(qq)
+    function qC(CC) {
+      return CC.endsWith(".ts") && !oC(CC)
     }
-    const uq = 64;
+    const FC = 64;
 
-    function Bq(qq) {
-      if (!qq || qq !== qq.trim()) return !1;
-      if (qq.length > uq) return !1;
-      if (qq.startsWith("/") || qq.includes("\\") || qq.includes("\0")) return !1;
-      if (!Aq(qq) && !cq(qq) && ! function(qq) {
-          return qq.endsWith(".js") && !qq.endsWith(".min.js") && !qq.endsWith(".bundle.js")
-        }(qq)) return !1;
-      const Eq = qq.split("/");
-      for (const gq of Eq)
-        if ("" === gq || "." === gq || ".." === gq) return !1;
+    function WC(CC) {
+      if (!CC || CC !== CC.trim()) return !1;
+      if (CC.length > FC) return !1;
+      if (CC.startsWith("/") || CC.includes("\\") || CC.includes("\0")) return !1;
+      if (!oC(CC) && !qC(CC) && ! function(CC) {
+          return CC.endsWith(".js") && !CC.endsWith(".min.js") && !CC.endsWith(".bundle.js")
+        }(CC)) return !1;
+      const zC = CC.split("/");
+      for (const ZC of zC)
+        if ("" === ZC || "." === ZC || ".." === ZC) return !1;
       return !0
     }
-    const Wq = 14e3
+    const NC = 14e3
   },
-  38976: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Yq,
-      c: () => lq
+  38874: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC,
+      h: () => wC
     });
-    const Yq = ["description", "label"];
+    const QC = ["description", "label"];
 
-    function lq(qq) {
-      const Eq = qq.type;
+    function wC(CC) {
+      const zC = CC.type;
       return {
-        type: Eq,
-        params: qq[Eq]
+        type: zC,
+        params: CC[zC]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

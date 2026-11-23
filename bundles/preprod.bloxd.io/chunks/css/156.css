@@ -333,95 +333,7 @@
   margin-top: 1rem
 }
 
-.HudLayoutSection {
-  display: flex;
-  flex-direction: column;
-  gap: .5rem
-}
-
-.HudLayoutSection .HudLayoutEntry.SettingBox {
-  align-items: center;
-  background: none;
-  border: none;
-  box-sizing: content-box;
-  box-sizing: border-box;
-  color: inherit;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  font: inherit;
-  gap: 1rem;
-  letter-spacing: inherit;
-  line-height: inherit;
-  margin: 0;
-  min-height: max(3.5rem, 48px);
-  padding: 0;
-  text-align: inherit;
-  text-align: left;
-  text-shadow: inherit;
-  text-transform: inherit
-}
-
-@media(hover:hover) {
-
-  .HudLayoutSection .HudLayoutEntry.SettingBox:hover .HudLayoutEntryChevron,
-  .HudLayoutSection .HudLayoutEntry.SettingBox:hover .HudLayoutEntryIcon,
-  .HudLayoutSection .HudLayoutEntry.SettingBox:hover .HudLayoutEntryText .HudLayoutEntryTitle {
-    color: #ffb914
-  }
-}
-
-.HudLayoutSection .HudLayoutEntry.SettingBox.pad-focused .HudLayoutEntryChevron,
-.HudLayoutSection .HudLayoutEntry.SettingBox.pad-focused .HudLayoutEntryIcon,
-.HudLayoutSection .HudLayoutEntry.SettingBox.pad-focused .HudLayoutEntryText .HudLayoutEntryTitle {
-  color: #ffb914
-}
-
-@media(hover:none) {
-
-  .HudLayoutSection .HudLayoutEntry.SettingBox:active .HudLayoutEntryChevron,
-  .HudLayoutSection .HudLayoutEntry.SettingBox:active .HudLayoutEntryIcon,
-  .HudLayoutSection .HudLayoutEntry.SettingBox:active .HudLayoutEntryText .HudLayoutEntryTitle {
-    color: #ffb914
-  }
-}
-
-.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryIcon {
-  color: #fcd373;
-  flex-shrink: 0;
-  font-size: 1.5rem
-}
-
-.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryText {
-  display: flex;
-  flex: 1 1;
-  flex-direction: column;
-  gap: .2rem
-}
-
-.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryText .HudLayoutEntryTitle {
-  color: #fcd373;
-  font-size: 1.2rem;
-  font-weight: 700;
-  transition: color .15s
-}
-
-.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryText .HudLayoutEntrySub {
-  color: #cfcfcf;
-  font-size: .85em
-}
-
-.HudLayoutSection .HudLayoutEntry.SettingBox .HudLayoutEntryChevron {
-  color: #fcd373;
-  font-size: 1.5rem;
-  transform: rotate(-90deg);
-  transition: transform .2s
-}
-
-.HudLayoutSection .HudLayoutEntry.SettingBox[aria-expanded=true] .HudLayoutEntryChevron {
-  transform: none
-}
-
+.HudLayoutSection,
 .HudLayoutSettings,
 .SettingsMenuRightInner .HudLayoutSettings {
   display: flex;
@@ -639,6 +551,105 @@
 .SettingsMenuRightInner .HudLayoutSettings .HudLayoutResetAll {
   align-self: flex-start;
   min-height: 44px
+}
+
+.FeaturedSettingsEntry.SettingBox,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox {
+  align-items: center;
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  box-sizing: border-box;
+  color: inherit;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  gap: 1rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-height: max(3.5rem, 48px);
+  padding: 0;
+  text-align: inherit;
+  text-align: left;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(hover:hover) {
+
+  .FeaturedSettingsEntry.SettingBox:hover .FeaturedSettingsEntryChevron,
+  .FeaturedSettingsEntry.SettingBox:hover .FeaturedSettingsEntryIcon,
+  .FeaturedSettingsEntry.SettingBox:hover .FeaturedSettingsEntryText .FeaturedSettingsEntryTitle,
+  .SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox:hover .FeaturedSettingsEntryChevron,
+  .SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox:hover .FeaturedSettingsEntryIcon,
+  .SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox:hover .FeaturedSettingsEntryText .FeaturedSettingsEntryTitle {
+    color: #ffb914
+  }
+}
+
+.FeaturedSettingsEntry.SettingBox.pad-focused .FeaturedSettingsEntryChevron,
+.FeaturedSettingsEntry.SettingBox.pad-focused .FeaturedSettingsEntryIcon,
+.FeaturedSettingsEntry.SettingBox.pad-focused .FeaturedSettingsEntryText .FeaturedSettingsEntryTitle,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox.pad-focused .FeaturedSettingsEntryChevron,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox.pad-focused .FeaturedSettingsEntryIcon,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox.pad-focused .FeaturedSettingsEntryText .FeaturedSettingsEntryTitle {
+  color: #ffb914
+}
+
+@media(hover:none) {
+
+  .FeaturedSettingsEntry.SettingBox:active .FeaturedSettingsEntryChevron,
+  .FeaturedSettingsEntry.SettingBox:active .FeaturedSettingsEntryIcon,
+  .FeaturedSettingsEntry.SettingBox:active .FeaturedSettingsEntryText .FeaturedSettingsEntryTitle,
+  .SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox:active .FeaturedSettingsEntryChevron,
+  .SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox:active .FeaturedSettingsEntryIcon,
+  .SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox:active .FeaturedSettingsEntryText .FeaturedSettingsEntryTitle {
+    color: #ffb914
+  }
+}
+
+.FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryIcon,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryIcon {
+  color: #fcd373;
+  flex-shrink: 0;
+  font-size: 1.5rem
+}
+
+.FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryText,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryText {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .2rem
+}
+
+.FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryText .FeaturedSettingsEntryTitle,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryText .FeaturedSettingsEntryTitle {
+  color: #fcd373;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: color .15s
+}
+
+.FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryText .FeaturedSettingsEntrySub,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryText .FeaturedSettingsEntrySub {
+  color: #cfcfcf;
+  font-size: .85em
+}
+
+.FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryChevron,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox .FeaturedSettingsEntryChevron {
+  color: #fcd373;
+  font-size: 1.5rem;
+  transform: rotate(-90deg);
+  transition: transform .2s
+}
+
+.FeaturedSettingsEntry.SettingBox[aria-expanded=true] .FeaturedSettingsEntryChevron,
+.SettingsMenuRightInner .FeaturedSettingsEntry.SettingBox[aria-expanded=true] .FeaturedSettingsEntryChevron {
+  transform: none
 }
 
 @keyframes rainbowShimmer {

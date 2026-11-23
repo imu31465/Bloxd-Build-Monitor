@@ -1,473 +1,473 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var qq = __webpack_require__.u,
-        Eq = __webpack_require__.e,
-        gq = {},
-        Yq = {};
-      __webpack_require__.u = function(Eq) {
-        return qq(Eq) + (gq.hasOwnProperty(Eq) ? "?" + gq[Eq] : "")
-      }, __webpack_require__.e = function(lq) {
-        return Eq(lq).catch((function(Eq) {
-          var Oq = Yq.hasOwnProperty(lq) ? Yq[lq] : 4;
-          if (Oq < 1) {
-            var mq = qq(lq);
-            throw Eq.message = "Loading chunk " + lq + " failed after 4 retries.\n(" + mq + ")", Eq.request = mq, gq[lq] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete Yq[lq]
-            }), 0), Eq
+      var CC = __webpack_require__.u,
+        zC = __webpack_require__.e,
+        ZC = {},
+        QC = {};
+      __webpack_require__.u = function(zC) {
+        return CC(zC) + (ZC.hasOwnProperty(zC) ? "?" + ZC[zC] : "")
+      }, __webpack_require__.e = function(wC) {
+        return zC(wC).catch((function(zC) {
+          var bC = QC.hasOwnProperty(wC) ? QC[wC] : 4;
+          if (bC < 1) {
+            var nC = CC(wC);
+            throw zC.message = "Loading chunk " + wC + " failed after 4 retries.\n(" + nC + ")", zC.request = nC, ZC[wC] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete QC[wC]
+            }), 0), zC
           }
-          return new Promise((function(qq) {
-            var Eq = 4 - Oq + 1;
+          return new Promise((function(CC) {
+            var zC = 4 - bC + 1;
             setTimeout((function() {
-              var Eq = "cache-bust=" + Date.now();
-              gq[lq] = Eq, Yq[lq] = Oq - 1, qq(__webpack_require__.e(lq))
-            }), function(qq) {
-              return 500 * Math.pow(2, qq)
-            }(Eq))
+              var zC = "cache-bust=" + Date.now();
+              ZC[wC] = zC, QC[wC] = bC - 1, CC(__webpack_require__.e(wC))
+            }), function(CC) {
+              return 500 * Math.pow(2, CC)
+            }(zC))
           }))
         }))
       }
     }
   })();
 
-  function qq(qq) {
-    return qq instanceof Error ? qq.message : String(qq)
+  function CC(CC) {
+    return CC instanceof Error ? CC.message : String(CC)
   }
-  const Eq = ArrayBuffer,
-    gq = Uint8Array,
-    Yq = Uint16Array,
-    lq = Int16Array,
-    Oq = Int32Array,
-    mq = (qq, Eq, Yq) => {
-      if (gq.prototype.slice) return gq.prototype.slice.call(qq, Eq, Yq);
-      (null == Eq || Eq < 0) && (Eq = 0), (null == Yq || Yq > qq.length) && (Yq = qq.length);
-      const lq = new gq(Yq - Eq);
-      return lq.set(qq.subarray(Eq, Yq)), lq
+  const zC = ArrayBuffer,
+    ZC = Uint8Array,
+    QC = Uint16Array,
+    wC = Int16Array,
+    bC = Int32Array,
+    nC = (CC, zC, QC) => {
+      if (ZC.prototype.slice) return ZC.prototype.slice.call(CC, zC, QC);
+      (null == zC || zC < 0) && (zC = 0), (null == QC || QC > CC.length) && (QC = CC.length);
+      const wC = new ZC(QC - zC);
+      return wC.set(CC.subarray(zC, QC)), wC
     },
-    xq = (qq, Eq, Yq, lq) => {
-      if (gq.prototype.fill) return gq.prototype.fill.call(qq, Eq, Yq, lq);
-      for ((null == Yq || Yq < 0) && (Yq = 0), (null == lq || lq > qq.length) && (lq = qq.length); Yq < lq; ++Yq) qq[Yq] = Eq;
-      return qq
+    fC = (CC, zC, QC, wC) => {
+      if (ZC.prototype.fill) return ZC.prototype.fill.call(CC, zC, QC, wC);
+      for ((null == QC || QC < 0) && (QC = 0), (null == wC || wC > CC.length) && (wC = CC.length); QC < wC; ++QC) CC[QC] = zC;
+      return CC
     },
-    Aq = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    cq = (qq, Eq, gq) => {
-      const Yq = new Error(Eq || Aq[qq]);
-      if (Yq.code = qq, Error.captureStackTrace && Error.captureStackTrace(Yq, cq), !gq) throw Yq;
-      return Yq
+    oC = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    qC = (CC, zC, ZC) => {
+      const QC = new Error(zC || oC[CC]);
+      if (QC.code = CC, Error.captureStackTrace && Error.captureStackTrace(QC, qC), !ZC) throw QC;
+      return QC
     },
-    uq = (qq, Eq, gq) => {
-      let Yq = 0,
-        lq = 0;
-      for (; Yq < gq; ++Yq) lq |= qq[Eq++] << (Yq << 3);
-      return lq
+    FC = (CC, zC, ZC) => {
+      let QC = 0,
+        wC = 0;
+      for (; QC < ZC; ++QC) wC |= CC[zC++] << (QC << 3);
+      return wC
     },
-    Bq = (qq, Eq) => {
-      const Yq = qq[0] | qq[1] << 8 | qq[2] << 16;
-      if (3126568 == Yq && 253 == qq[3]) {
-        const Yq = qq[4],
-          lq = Yq >> 5 & 1,
-          mq = Yq >> 2 & 1,
-          xq = 3 & Yq,
-          Aq = Yq >> 6;
-        8 & Yq && cq(0);
-        let Bq = 6 - lq;
-        const Wq = 3 == xq ? 4 : xq,
-          Nq = uq(qq, Bq, Wq);
-        Bq += Wq;
-        const aq = Aq ? 1 << Aq : lq,
-          Vq = uq(qq, Bq, aq) + (1 == Aq && 256);
-        let dq = Vq;
-        if (!lq) {
-          const Eq = 1 << 10 + (qq[5] >> 3);
-          dq = Eq + (Eq >> 3) * (7 & qq[5])
+    WC = (CC, zC) => {
+      const QC = CC[0] | CC[1] << 8 | CC[2] << 16;
+      if (3126568 == QC && 253 == CC[3]) {
+        const QC = CC[4],
+          wC = QC >> 5 & 1,
+          nC = QC >> 2 & 1,
+          fC = 3 & QC,
+          oC = QC >> 6;
+        8 & QC && qC(0);
+        let WC = 6 - wC;
+        const NC = 3 == fC ? 4 : fC,
+          MC = FC(CC, WC, NC);
+        WC += NC;
+        const gC = oC ? 1 << oC : wC,
+          SC = FC(CC, WC, gC) + (1 == oC && 256);
+        let pC = SC;
+        if (!wC) {
+          const zC = 1 << 10 + (CC[5] >> 3);
+          pC = zC + (zC >> 3) * (7 & CC[5])
         }
-        dq > 2145386496 && cq(1);
-        const jq = new gq((1 == Eq ? Vq || dq : Eq ? 0 : dq) + 12);
-        return jq[0] = 1, jq[4] = 4, jq[8] = 8, {
-          b: Bq + aq,
+        pC > 2145386496 && qC(1);
+        const PC = new ZC((1 == zC ? SC || pC : zC ? 0 : pC) + 12);
+        return PC[0] = 1, PC[4] = 4, PC[8] = 8, {
+          b: WC + gC,
           y: 0,
           l: 0,
-          d: Nq,
-          w: Eq && 1 != Eq ? Eq : jq.subarray(12),
-          e: dq,
-          o: new Oq(jq.buffer, 0, 3),
-          u: Vq,
-          c: mq,
-          m: Math.min(131072, dq)
+          d: MC,
+          w: zC && 1 != zC ? zC : PC.subarray(12),
+          e: pC,
+          o: new bC(PC.buffer, 0, 3),
+          u: SC,
+          c: nC,
+          m: Math.min(131072, pC)
         }
       }
-      if (25481893 == (Yq >> 4 | qq[3] << 20)) return 8 + (((lq = qq)[mq = 4] | lq[mq + 1] << 8 | lq[mq + 2] << 16 | lq[mq + 3] << 24) >>> 0);
-      var lq, mq;
-      cq(0)
+      if (25481893 == (QC >> 4 | CC[3] << 20)) return 8 + (((wC = CC)[nC = 4] | wC[nC + 1] << 8 | wC[nC + 2] << 16 | wC[nC + 3] << 24) >>> 0);
+      var wC, nC;
+      qC(0)
     },
-    Wq = qq => {
-      let Eq = 0;
-      for (; 1 << Eq <= qq; ++Eq);
-      return Eq - 1
+    NC = CC => {
+      let zC = 0;
+      for (; 1 << zC <= CC; ++zC);
+      return zC - 1
     },
-    Nq = (qq, Oq, mq) => {
-      let xq = 4 + (Oq << 3);
-      const Aq = 5 + (15 & qq[Oq]);
-      Aq > mq && cq(3);
-      const uq = 1 << Aq;
-      let Bq = uq,
-        Nq = -1,
-        aq = -1,
-        Vq = -1,
-        dq = uq;
-      const jq = new Eq(512 + (uq << 2)),
-        Hq = new lq(jq, 0, 256),
-        oq = new Yq(jq, 0, 256),
-        Pq = new Yq(jq, 512, uq),
-        Qq = 512 + (uq << 1),
-        yq = new gq(jq, Qq, uq),
-        tq = new gq(jq, Qq + uq);
-      for (; Nq < 255 && Bq > 0;) {
-        const Eq = Wq(Bq + 1),
-          gq = xq >> 3,
-          Yq = (1 << Eq + 1) - 1;
-        let lq = (qq[gq] | qq[gq + 1] << 8 | qq[gq + 2] << 16) >> (7 & xq) & Yq;
-        const Oq = (1 << Eq) - 1,
-          mq = Yq - Bq - 1,
-          Aq = lq & Oq;
-        if (Aq < mq ? (xq += Eq, lq = Aq) : (xq += Eq + 1, lq > Oq && (lq -= mq)), Hq[++Nq] = --lq, -1 == lq ? (Bq += lq, yq[--dq] = Nq) : Bq -= lq, !lq)
+    MC = (CC, bC, nC) => {
+      let fC = 4 + (bC << 3);
+      const oC = 5 + (15 & CC[bC]);
+      oC > nC && qC(3);
+      const FC = 1 << oC;
+      let WC = FC,
+        MC = -1,
+        gC = -1,
+        SC = -1,
+        pC = FC;
+      const PC = new zC(512 + (FC << 2)),
+        GC = new wC(PC, 0, 256),
+        RC = new QC(PC, 0, 256),
+        AC = new QC(PC, 512, FC),
+        xC = 512 + (FC << 1),
+        JC = new ZC(PC, xC, FC),
+        IC = new ZC(PC, xC + FC);
+      for (; MC < 255 && WC > 0;) {
+        const zC = NC(WC + 1),
+          ZC = fC >> 3,
+          QC = (1 << zC + 1) - 1;
+        let wC = (CC[ZC] | CC[ZC + 1] << 8 | CC[ZC + 2] << 16) >> (7 & fC) & QC;
+        const bC = (1 << zC) - 1,
+          nC = QC - WC - 1,
+          oC = wC & bC;
+        if (oC < nC ? (fC += zC, wC = oC) : (fC += zC + 1, wC > bC && (wC -= nC)), GC[++MC] = --wC, -1 == wC ? (WC += wC, JC[--pC] = MC) : WC -= wC, !wC)
           do {
-            const Eq = xq >> 3;
-            aq = (qq[Eq] | qq[Eq + 1] << 8) >> (7 & xq) & 3, xq += 2, Nq += aq
-          } while (3 == aq)
-      }(Nq > 255 || Bq) && cq(0);
-      let rq = 0;
-      const vq = (uq >> 1) + (uq >> 3) + 3,
-        hq = uq - 1;
-      for (let Eq = 0; Eq <= Nq; ++Eq) {
-        const qq = Hq[Eq];
-        if (qq < 1) oq[Eq] = -qq;
+            const zC = fC >> 3;
+            gC = (CC[zC] | CC[zC + 1] << 8) >> (7 & fC) & 3, fC += 2, MC += gC
+          } while (3 == gC)
+      }(MC > 255 || WC) && qC(0);
+      let iC = 0;
+      const vC = (FC >> 1) + (FC >> 3) + 3,
+        eC = FC - 1;
+      for (let zC = 0; zC <= MC; ++zC) {
+        const CC = GC[zC];
+        if (CC < 1) RC[zC] = -CC;
         else
-          for (Vq = 0; Vq < qq; ++Vq) {
-            yq[rq] = Eq;
+          for (SC = 0; SC < CC; ++SC) {
+            JC[iC] = zC;
             do {
-              rq = rq + vq & hq
-            } while (rq >= dq)
+              iC = iC + vC & eC
+            } while (iC >= pC)
           }
       }
-      for (rq && cq(0), Vq = 0; Vq < uq; ++Vq) {
-        const qq = oq[yq[Vq]]++,
-          Eq = tq[Vq] = Aq - Wq(qq);
-        Pq[Vq] = (qq << Eq) - uq
+      for (iC && qC(0), SC = 0; SC < FC; ++SC) {
+        const CC = RC[JC[SC]]++,
+          zC = IC[SC] = oC - NC(CC);
+        AC[SC] = (CC << zC) - FC
       }
-      return [xq + 7 >> 3, {
-        b: Aq,
-        s: yq,
-        n: tq,
-        t: Pq
+      return [fC + 7 >> 3, {
+        b: oC,
+        s: JC,
+        n: IC,
+        t: AC
       }]
     },
-    aq = Nq(new gq([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    Vq = Nq(new gq([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    dq = Nq(new gq([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    jq = (qq, Eq) => {
-      const gq = qq.length,
-        Yq = new Oq(gq);
-      for (let lq = 0; lq < gq; ++lq) Yq[lq] = Eq, Eq += 1 << qq[lq];
-      return Yq
+    gC = MC(new ZC([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    SC = MC(new ZC([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    pC = MC(new ZC([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    PC = (CC, zC) => {
+      const ZC = CC.length,
+        QC = new bC(ZC);
+      for (let wC = 0; wC < ZC; ++wC) QC[wC] = zC, zC += 1 << CC[wC];
+      return QC
     },
-    Hq = new gq(new Oq([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    oq = jq(Hq, 0),
-    Pq = new gq(new Oq([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    Qq = jq(Pq, 3),
-    yq = (qq, Eq, gq) => {
-      const Yq = qq.length,
-        lq = Eq.length,
-        Oq = qq[Yq - 1],
-        mq = (1 << gq.b) - 1,
-        xq = -gq.b;
-      Oq || cq(0);
-      let Aq = 0,
-        uq = gq.b,
-        Bq = (Yq << 3) - 8 + Wq(Oq) - uq,
-        Nq = -1;
-      for (; Bq > xq && Nq < lq;) {
-        const Yq = Bq >> 3;
-        Aq = (Aq << uq | (qq[Yq] | qq[Yq + 1] << 8 | qq[Yq + 2] << 16) >> (7 & Bq)) & mq, Eq[++Nq] = gq.s[Aq], Bq -= uq = gq.n[Aq]
+    GC = new ZC(new bC([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    RC = PC(GC, 0),
+    AC = new ZC(new bC([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    xC = PC(AC, 3),
+    JC = (CC, zC, ZC) => {
+      const QC = CC.length,
+        wC = zC.length,
+        bC = CC[QC - 1],
+        nC = (1 << ZC.b) - 1,
+        fC = -ZC.b;
+      bC || qC(0);
+      let oC = 0,
+        FC = ZC.b,
+        WC = (QC << 3) - 8 + NC(bC) - FC,
+        MC = -1;
+      for (; WC > fC && MC < wC;) {
+        const QC = WC >> 3;
+        oC = (oC << FC | (CC[QC] | CC[QC + 1] << 8 | CC[QC + 2] << 16) >> (7 & WC)) & nC, zC[++MC] = ZC.s[oC], WC -= FC = ZC.n[oC]
       }
-      Bq == xq && Nq + 1 == lq || cq(0)
+      WC == fC && MC + 1 == wC || qC(0)
     },
-    tq = (qq, Eq, gq) => {
-      let Yq = 6;
-      const lq = Eq.length + 3 >> 2,
-        Oq = lq << 1,
-        mq = lq + Oq;
-      yq(qq.subarray(Yq, Yq += qq[0] | qq[1] << 8), Eq.subarray(0, lq), gq), yq(qq.subarray(Yq, Yq += qq[2] | qq[3] << 8), Eq.subarray(lq, Oq), gq), yq(qq.subarray(Yq, Yq += qq[4] | qq[5] << 8), Eq.subarray(Oq, mq), gq), yq(qq.subarray(Yq), Eq.subarray(mq), gq)
+    IC = (CC, zC, ZC) => {
+      let QC = 6;
+      const wC = zC.length + 3 >> 2,
+        bC = wC << 1,
+        nC = wC + bC;
+      JC(CC.subarray(QC, QC += CC[0] | CC[1] << 8), zC.subarray(0, wC), ZC), JC(CC.subarray(QC, QC += CC[2] | CC[3] << 8), zC.subarray(wC, bC), ZC), JC(CC.subarray(QC, QC += CC[4] | CC[5] << 8), zC.subarray(bC, nC), ZC), JC(CC.subarray(QC), zC.subarray(nC), ZC)
     },
-    rq = (qq, Eq, lq) => {
-      let Oq = Eq.b;
-      const Aq = qq[Oq],
-        uq = Aq >> 1 & 3;
-      Eq.l = 1 & Aq;
-      const Bq = Aq >> 3 | qq[Oq + 1] << 5 | qq[Oq + 2] << 13,
-        jq = (Oq += 3) + Bq;
-      if (1 == uq) {
-        if (Oq >= qq.length) return;
-        return Eq.b = Oq + 1, lq ? (xq(lq, qq[Oq], Eq.y, Eq.y += Bq), lq) : xq(new gq(Bq), qq[Oq])
+    iC = (CC, zC, wC) => {
+      let bC = zC.b;
+      const oC = CC[bC],
+        FC = oC >> 1 & 3;
+      zC.l = 1 & oC;
+      const WC = oC >> 3 | CC[bC + 1] << 5 | CC[bC + 2] << 13,
+        PC = (bC += 3) + WC;
+      if (1 == FC) {
+        if (bC >= CC.length) return;
+        return zC.b = bC + 1, wC ? (fC(wC, CC[bC], zC.y, zC.y += WC), wC) : fC(new ZC(WC), CC[bC])
       }
-      if (!(jq > qq.length)) {
-        if (0 == uq) return Eq.b = jq, lq ? (lq.set(qq.subarray(Oq, jq), Eq.y), Eq.y += Bq, lq) : mq(qq, Oq, jq);
-        if (2 == uq) {
-          const Aq = qq[Oq],
-            uq = 3 & Aq,
-            Bq = Aq >> 2 & 3;
-          let rq = Aq >> 4,
-            vq = 0,
-            hq = 0;
-          uq < 2 ? 1 & Bq ? rq |= qq[++Oq] << 4 | (2 & Bq && qq[++Oq] << 12) : rq = Aq >> 3 : (hq = Bq, Bq < 2 ? (rq |= (63 & qq[++Oq]) << 4, vq = qq[Oq] >> 6 | qq[++Oq] << 2) : 2 == Bq ? (rq |= qq[++Oq] << 4 | (3 & qq[++Oq]) << 12, vq = qq[Oq] >> 2 | qq[++Oq] << 6) : (rq |= qq[++Oq] << 4 | (63 & qq[++Oq]) << 12, vq = qq[Oq] >> 6 | qq[++Oq] << 2 | qq[++Oq] << 10)), ++Oq;
-          let nq = lq ? lq.subarray(Eq.y, Eq.y + Eq.m) : new gq(Eq.m),
-            bq = nq.length - rq;
-          if (bq < 0 && cq(0), 0 == uq) nq.set(qq.subarray(Oq, Oq += rq), bq);
-          else if (1 == uq) xq(nq, qq[Oq++], bq);
+      if (!(PC > CC.length)) {
+        if (0 == FC) return zC.b = PC, wC ? (wC.set(CC.subarray(bC, PC), zC.y), zC.y += WC, wC) : nC(CC, bC, PC);
+        if (2 == FC) {
+          const oC = CC[bC],
+            FC = 3 & oC,
+            WC = oC >> 2 & 3;
+          let iC = oC >> 4,
+            vC = 0,
+            eC = 0;
+          FC < 2 ? 1 & WC ? iC |= CC[++bC] << 4 | (2 & WC && CC[++bC] << 12) : iC = oC >> 3 : (eC = WC, WC < 2 ? (iC |= (63 & CC[++bC]) << 4, vC = CC[bC] >> 6 | CC[++bC] << 2) : 2 == WC ? (iC |= CC[++bC] << 4 | (3 & CC[++bC]) << 12, vC = CC[bC] >> 2 | CC[++bC] << 6) : (iC |= CC[++bC] << 4 | (63 & CC[++bC]) << 12, vC = CC[bC] >> 6 | CC[++bC] << 2 | CC[++bC] << 10)), ++bC;
+          let hC = wC ? wC.subarray(zC.y, zC.y + zC.m) : new ZC(zC.m),
+            KC = hC.length - iC;
+          if (KC < 0 && qC(0), 0 == FC) hC.set(CC.subarray(bC, bC += iC), KC);
+          else if (1 == FC) fC(hC, CC[bC++], KC);
           else {
-            let lq = Eq.h;
-            if (2 == uq) {
-              const mq = ((qq, Eq) => {
-                let lq = 0,
-                  Oq = -1;
-                const mq = new gq(292),
-                  Aq = qq[Eq],
-                  uq = mq.subarray(0, 256),
-                  Bq = mq.subarray(256, 268),
-                  aq = new Yq(mq.buffer, 268);
-                if (Aq < 128) {
-                  const [gq, Yq] = Nq(qq, Eq + 1, 6), lq = gq << 3, mq = qq[Eq += Aq];
-                  mq || cq(0);
-                  let xq = 0,
-                    Bq = 0,
-                    aq = Yq.b,
-                    Vq = aq,
-                    dq = (++Eq << 3) - 8 + Wq(mq);
-                  for (; Oq > 254 && cq(0), dq -= aq, !(dq < lq);) {
-                    let Eq = dq >> 3;
-                    if (xq += (qq[Eq] | qq[Eq + 1] << 8) >> (7 & dq) & (1 << aq) - 1, uq[++Oq] = Yq.s[xq], dq -= Vq, dq < lq) break;
-                    Eq = dq >> 3, Bq += (qq[Eq] | qq[Eq + 1] << 8) >> (7 & dq) & (1 << Vq) - 1, uq[++Oq] = Yq.s[Bq], aq = Yq.n[xq], xq = Yq.t[xq], Vq = Yq.n[Bq], Bq = Yq.t[Bq]
-                  }++Oq > 255 && cq(0)
+            let wC = zC.h;
+            if (2 == FC) {
+              const nC = ((CC, zC) => {
+                let wC = 0,
+                  bC = -1;
+                const nC = new ZC(292),
+                  oC = CC[zC],
+                  FC = nC.subarray(0, 256),
+                  WC = nC.subarray(256, 268),
+                  gC = new QC(nC.buffer, 268);
+                if (oC < 128) {
+                  const [ZC, QC] = MC(CC, zC + 1, 6), wC = ZC << 3, nC = CC[zC += oC];
+                  nC || qC(0);
+                  let fC = 0,
+                    WC = 0,
+                    gC = QC.b,
+                    SC = gC,
+                    pC = (++zC << 3) - 8 + NC(nC);
+                  for (; bC > 254 && qC(0), pC -= gC, !(pC < wC);) {
+                    let zC = pC >> 3;
+                    if (fC += (CC[zC] | CC[zC + 1] << 8) >> (7 & pC) & (1 << gC) - 1, FC[++bC] = QC.s[fC], pC -= SC, pC < wC) break;
+                    zC = pC >> 3, WC += (CC[zC] | CC[zC + 1] << 8) >> (7 & pC) & (1 << SC) - 1, FC[++bC] = QC.s[WC], gC = QC.n[fC], fC = QC.t[fC], SC = QC.n[WC], WC = QC.t[WC]
+                  }++bC > 255 && qC(0)
                 } else {
-                  for (Oq = Aq - 127; lq < Oq; lq += 2) {
-                    const gq = qq[++Eq];
-                    uq[lq] = gq >> 4, uq[lq + 1] = 15 & gq
-                  }++Eq
+                  for (bC = oC - 127; wC < bC; wC += 2) {
+                    const ZC = CC[++zC];
+                    FC[wC] = ZC >> 4, FC[wC + 1] = 15 & ZC
+                  }++zC
                 }
-                let Vq = 0;
-                for (lq = 0; lq < Oq; ++lq) {
-                  const qq = uq[lq];
-                  qq > 11 && cq(0), Vq += qq && 1 << qq - 1
+                let SC = 0;
+                for (wC = 0; wC < bC; ++wC) {
+                  const CC = FC[wC];
+                  CC > 11 && qC(0), SC += CC && 1 << CC - 1
                 }
-                const dq = Wq(Vq) + 1,
-                  jq = 1 << dq,
-                  Hq = jq - Vq;
-                for (Hq & Hq - 1 && cq(0), uq[Oq++] = Wq(Hq) + 1, lq = 0; lq < Oq; ++lq) {
-                  const qq = uq[lq];
-                  ++Bq[uq[lq] = qq && dq + 1 - qq]
+                const pC = NC(SC) + 1,
+                  PC = 1 << pC,
+                  GC = PC - SC;
+                for (GC & GC - 1 && qC(0), FC[bC++] = NC(GC) + 1, wC = 0; wC < bC; ++wC) {
+                  const CC = FC[wC];
+                  ++WC[FC[wC] = CC && pC + 1 - CC]
                 }
-                const oq = new gq(jq << 1),
-                  Pq = oq.subarray(0, jq),
-                  Qq = oq.subarray(jq);
-                for (aq[dq] = 0, lq = dq; lq > 0; --lq) {
-                  const qq = aq[lq];
-                  xq(Qq, lq, qq, aq[lq - 1] = qq + Bq[lq] * (1 << dq - lq))
+                const RC = new ZC(PC << 1),
+                  AC = RC.subarray(0, PC),
+                  xC = RC.subarray(PC);
+                for (gC[pC] = 0, wC = pC; wC > 0; --wC) {
+                  const CC = gC[wC];
+                  fC(xC, wC, CC, gC[wC - 1] = CC + WC[wC] * (1 << pC - wC))
                 }
-                for (aq[0] != jq && cq(0), lq = 0; lq < Oq; ++lq) {
-                  const qq = uq[lq];
-                  if (qq) {
-                    const Eq = aq[qq];
-                    xq(Pq, lq, Eq, aq[qq] = Eq + (1 << dq - qq))
+                for (gC[0] != PC && qC(0), wC = 0; wC < bC; ++wC) {
+                  const CC = FC[wC];
+                  if (CC) {
+                    const zC = gC[CC];
+                    fC(AC, wC, zC, gC[CC] = zC + (1 << pC - CC))
                   }
                 }
-                return [Eq, {
-                  n: Qq,
-                  b: dq,
-                  s: Pq
+                return [zC, {
+                  n: xC,
+                  b: pC,
+                  s: AC
                 }]
-              })(qq, Oq);
-              vq += Oq - (Oq = mq[0]), Eq.h = lq = mq[1]
-            } else lq || cq(0);
-            (hq ? tq : yq)(qq.subarray(Oq, Oq += vq), nq.subarray(bq), lq)
+              })(CC, bC);
+              vC += bC - (bC = nC[0]), zC.h = wC = nC[1]
+            } else wC || qC(0);
+            (eC ? IC : JC)(CC.subarray(bC, bC += vC), hC.subarray(KC), wC)
           }
-          let iq = qq[Oq++];
-          if (iq) {
-            255 == iq ? iq = 32512 + (qq[Oq++] | qq[Oq++] << 8) : iq > 127 && (iq = iq - 128 << 8 | qq[Oq++]);
-            const xq = qq[Oq++];
-            3 & xq && cq(0);
-            const Aq = [Vq, dq, aq];
-            for (let lq = 2; lq > -1; --lq) {
-              const mq = xq >> 2 + (lq << 1) & 3;
-              if (1 == mq) {
-                const Eq = new gq([0, 0, qq[Oq++]]);
-                Aq[lq] = {
-                  s: Eq.subarray(2, 3),
-                  n: Eq.subarray(0, 1),
-                  t: new Yq(Eq.buffer, 0, 1),
+          let YC = CC[bC++];
+          if (YC) {
+            255 == YC ? YC = 32512 + (CC[bC++] | CC[bC++] << 8) : YC > 127 && (YC = YC - 128 << 8 | CC[bC++]);
+            const fC = CC[bC++];
+            3 & fC && qC(0);
+            const oC = [SC, pC, gC];
+            for (let wC = 2; wC > -1; --wC) {
+              const nC = fC >> 2 + (wC << 1) & 3;
+              if (1 == nC) {
+                const zC = new ZC([0, 0, CC[bC++]]);
+                oC[wC] = {
+                  s: zC.subarray(2, 3),
+                  n: zC.subarray(0, 1),
+                  t: new QC(zC.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == mq ? [Oq, Aq[lq]] = Nq(qq, Oq, 9 - (1 & lq)) : 3 == mq && (Eq.t || cq(0), Aq[lq] = Eq.t[lq])
+              } else 2 == nC ? [bC, oC[wC]] = MC(CC, bC, 9 - (1 & wC)) : 3 == nC && (zC.t || qC(0), oC[wC] = zC.t[wC])
             }
-            const [uq, Bq, yq] = Eq.t = Aq, tq = qq[jq - 1];
-            tq || cq(0);
-            let rq = (jq << 3) - 8 + Wq(tq) - yq.b,
-              vq = rq >> 3,
-              hq = 0,
-              Zq = (qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << yq.b) - 1;
-            vq = (rq -= Bq.b) >> 3;
-            let fq = (qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << Bq.b) - 1;
-            vq = (rq -= uq.b) >> 3;
-            let Mq = (qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << uq.b) - 1;
-            for (++iq; --iq;) {
-              const gq = yq.s[Zq],
-                Yq = yq.n[Zq],
-                lq = uq.s[Mq],
-                Oq = uq.n[Mq],
-                mq = Bq.s[fq],
-                xq = Bq.n[fq];
-              vq = (rq -= mq) >> 3;
-              const Aq = 1 << mq;
-              let Wq = Aq + ((qq[vq] | qq[vq + 1] << 8 | qq[vq + 2] << 16 | qq[vq + 3] << 24) >>> (7 & rq) & Aq - 1);
-              vq = (rq -= Pq[lq]) >> 3;
-              let Nq = Qq[lq] + ((qq[vq] | qq[vq + 1] << 8 | qq[vq + 2] << 16) >> (7 & rq) & (1 << Pq[lq]) - 1);
-              vq = (rq -= Hq[gq]) >> 3;
-              const aq = oq[gq] + ((qq[vq] | qq[vq + 1] << 8 | qq[vq + 2] << 16) >> (7 & rq) & (1 << Hq[gq]) - 1);
-              if ((rq < 0 || bq + aq > nq.length || hq + aq + Nq > nq.length) && cq(0), vq = (rq -= Yq) >> 3, Zq = yq.t[Zq] + ((qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << Yq) - 1), vq = (rq -= Oq) >> 3, Mq = uq.t[Mq] + ((qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << Oq) - 1), vq = (rq -= xq) >> 3, fq = Bq.t[fq] + ((qq[vq] | qq[vq + 1] << 8) >> (7 & rq) & (1 << xq) - 1), Wq > 3) Eq.o[2] = Eq.o[1], Eq.o[1] = Eq.o[0], Eq.o[0] = Wq -= 3;
+            const [FC, WC, JC] = zC.t = oC, IC = CC[PC - 1];
+            IC || qC(0);
+            let iC = (PC << 3) - 8 + NC(IC) - JC.b,
+              vC = iC >> 3,
+              eC = 0,
+              dC = (CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << JC.b) - 1;
+            vC = (iC -= WC.b) >> 3;
+            let mC = (CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << WC.b) - 1;
+            vC = (iC -= FC.b) >> 3;
+            let HC = (CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << FC.b) - 1;
+            for (++YC; --YC;) {
+              const ZC = JC.s[dC],
+                QC = JC.n[dC],
+                wC = FC.s[HC],
+                bC = FC.n[HC],
+                nC = WC.s[mC],
+                fC = WC.n[mC];
+              vC = (iC -= nC) >> 3;
+              const oC = 1 << nC;
+              let NC = oC + ((CC[vC] | CC[vC + 1] << 8 | CC[vC + 2] << 16 | CC[vC + 3] << 24) >>> (7 & iC) & oC - 1);
+              vC = (iC -= AC[wC]) >> 3;
+              let MC = xC[wC] + ((CC[vC] | CC[vC + 1] << 8 | CC[vC + 2] << 16) >> (7 & iC) & (1 << AC[wC]) - 1);
+              vC = (iC -= GC[ZC]) >> 3;
+              const gC = RC[ZC] + ((CC[vC] | CC[vC + 1] << 8 | CC[vC + 2] << 16) >> (7 & iC) & (1 << GC[ZC]) - 1);
+              if ((iC < 0 || KC + gC > hC.length || eC + gC + MC > hC.length) && qC(0), vC = (iC -= QC) >> 3, dC = JC.t[dC] + ((CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << QC) - 1), vC = (iC -= bC) >> 3, HC = FC.t[HC] + ((CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << bC) - 1), vC = (iC -= fC) >> 3, mC = WC.t[mC] + ((CC[vC] | CC[vC + 1] << 8) >> (7 & iC) & (1 << fC) - 1), NC > 3) zC.o[2] = zC.o[1], zC.o[1] = zC.o[0], zC.o[0] = NC -= 3;
               else {
-                const qq = Wq - (0 != aq);
-                qq ? (Wq = 3 == qq ? Eq.o[0] - 1 : Eq.o[qq], qq > 1 && (Eq.o[2] = Eq.o[1]), Eq.o[1] = Eq.o[0], Eq.o[0] = Wq) : Wq = Eq.o[0]
+                const CC = NC - (0 != gC);
+                CC ? (NC = 3 == CC ? zC.o[0] - 1 : zC.o[CC], CC > 1 && (zC.o[2] = zC.o[1]), zC.o[1] = zC.o[0], zC.o[0] = NC) : NC = zC.o[0]
               }
-              for (let qq = 0; qq < aq; ++qq) nq[hq + qq] = nq[bq + qq];
-              hq += aq, bq += aq;
-              let Vq = hq - Wq;
-              if (Vq < 0) {
-                let qq = -Vq;
-                const gq = Eq.e + Vq;
-                gq < 0 && cq(4), qq > Nq && (qq = Nq);
-                for (let Yq = 0; Yq < qq; ++Yq) nq[hq + Yq] = Eq.w[gq + Yq];
-                hq += qq, Nq -= qq, Vq = 0
+              for (let CC = 0; CC < gC; ++CC) hC[eC + CC] = hC[KC + CC];
+              eC += gC, KC += gC;
+              let SC = eC - NC;
+              if (SC < 0) {
+                let CC = -SC;
+                const ZC = zC.e + SC;
+                ZC < 0 && qC(4), CC > MC && (CC = MC);
+                for (let QC = 0; QC < CC; ++QC) hC[eC + QC] = zC.w[ZC + QC];
+                eC += CC, MC -= CC, SC = 0
               }
-              for (let qq = 0; qq < Nq; ++qq) nq[hq + qq] = nq[Vq + qq];
-              hq += Nq
+              for (let CC = 0; CC < MC; ++CC) hC[eC + CC] = hC[SC + CC];
+              eC += MC
             }
-            if (hq != bq)
-              for (; bq < nq.length;) nq[hq++] = nq[bq++];
-            else hq = nq.length;
-            lq ? Eq.y += hq : nq = mq(nq, 0, hq)
-          } else if (lq) {
-            if (Eq.y += rq, bq)
-              for (let qq = 0; qq < rq; ++qq) nq[qq] = nq[bq + qq]
-          } else bq && (nq = mq(nq, bq));
-          return Eq.b = jq, nq
+            if (eC != KC)
+              for (; KC < hC.length;) hC[eC++] = hC[KC++];
+            else eC = hC.length;
+            wC ? zC.y += eC : hC = nC(hC, 0, eC)
+          } else if (wC) {
+            if (zC.y += iC, KC)
+              for (let CC = 0; CC < iC; ++CC) hC[CC] = hC[KC + CC]
+          } else KC && (hC = nC(hC, KC));
+          return zC.b = PC, hC
         }
-        cq(2)
+        qC(2)
       }
     };
-  class vq {
+  class vC {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    Fc = 0;
+    vq = 0;
     needed = 18;
     size;
-    constructor(qq) {
-      this.size = qq
+    constructor(CC) {
+      this.size = CC
     }
-    push(qq) {
+    push(CC) {
       if (this.done) return;
-      if (this.parts.push(qq), this.Fc += qq.length, this.Fc < this.needed) return;
-      const Eq = ((qq, Eq) => {
-        if (1 == qq.length) return qq[0];
-        const Yq = new gq(Eq);
-        for (let gq = 0, lq = 0; gq < qq.length; ++gq) {
-          const Eq = qq[gq];
-          Yq.set(Eq, lq), lq += Eq.length
+      if (this.parts.push(CC), this.vq += CC.length, this.vq < this.needed) return;
+      const zC = ((CC, zC) => {
+        if (1 == CC.length) return CC[0];
+        const QC = new ZC(zC);
+        for (let ZC = 0, wC = 0; ZC < CC.length; ++ZC) {
+          const zC = CC[ZC];
+          QC.set(zC, wC), wC += zC.length
         }
-        return Yq
-      })(this.parts, this.Fc);
-      let Yq = this.st;
-      if (!Yq) {
-        const qq = Bq(Eq, new gq(0));
-        "number" != typeof qq && qq.u === this.size || cq(0, `not a zstd frame of ${this.size} bytes`), Yq = this.st = Bq(Eq, 1), Yq.e = 0, this.output = Yq.w
+        return QC
+      })(this.parts, this.vq);
+      let QC = this.st;
+      if (!QC) {
+        const CC = WC(zC, new ZC(0));
+        "number" != typeof CC && CC.u === this.size || qC(0, `not a zstd frame of ${this.size} bytes`), QC = this.st = WC(zC, 1), QC.e = 0, this.output = QC.w
       }
       for (;;) {
-        const qq = Eq.length - Yq.b;
-        if (qq < 3) {
+        const CC = zC.length - QC.b;
+        if (CC < 3) {
           this.needed = 3;
           break
         }
-        const gq = Eq[Yq.b],
-          lq = gq >> 1 & 3;
-        3 == lq && cq(2);
-        const Oq = gq >> 3 | Eq[Yq.b + 1] << 5 | Eq[Yq.b + 2] << 13;
-        Oq > Yq.m && cq(0), 0 == lq && Yq.y + Oq > Yq.u && cq(0);
-        const mq = 1 == lq ? 4 : 3 + Oq;
-        if (qq < mq) {
-          this.needed = mq;
+        const ZC = zC[QC.b],
+          wC = ZC >> 1 & 3;
+        3 == wC && qC(2);
+        const bC = ZC >> 3 | zC[QC.b + 1] << 5 | zC[QC.b + 2] << 13;
+        bC > QC.m && qC(0), 0 == wC && QC.y + bC > QC.u && qC(0);
+        const nC = 1 == wC ? 4 : 3 + bC;
+        if (CC < nC) {
+          this.needed = nC;
           break
         }
-        if (rq(Eq, Yq, Yq.w) || cq(5), Yq.e = Yq.y, (Yq.y > Yq.u || Yq.l && Yq.y != Yq.u) && cq(0), Yq.l) {
+        if (iC(zC, QC, QC.w) || qC(5), QC.e = QC.y, (QC.y > QC.u || QC.l && QC.y != QC.u) && qC(0), QC.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = Yq.y;
-      const lq = Eq.subarray(Yq.b);
-      this.parts = lq.length ? [lq] : [], this.Fc = lq.length, Yq.b = 0
+      this.decoded = QC.y;
+      const wC = zC.subarray(QC.b);
+      this.parts = wC.length ? [wC] : [], this.vq = wC.length, QC.b = 0
     }
   }
-  class hq {
+  class eC {
     post;
     href = "";
-    JN = null;
+    wg = null;
     given = 0;
     stopped = !1;
-    constructor(qq) {
-      this.post = qq
+    constructor(CC) {
+      this.post = CC
     }
-    take(Eq) {
+    take(zC) {
       if (!this.stopped) try {
-        this.answer(Eq)
-      } catch (gq) {
-        this.stop(gq instanceof RangeError ? `out of memory decoding ${this.href}: ${qq(gq)}` : `${this.href} did not decode: ${qq(gq)}`)
+        this.answer(zC)
+      } catch (ZC) {
+        this.stop(ZC instanceof RangeError ? `out of memory decoding ${this.href}: ${CC(ZC)}` : `${this.href} did not decode: ${CC(ZC)}`)
       }
     }
-    answer(qq) {
-      if (null === this.JN) {
-        const [Eq, gq] = qq;
-        return this.href = Eq, void(this.JN = new vq(gq))
+    answer(CC) {
+      if (null === this.wg) {
+        const [zC, ZC] = CC;
+        return this.href = zC, void(this.wg = new vC(ZC))
       }
-      if (null === qq) return void this.stop(`${this.href} ended before its module did`);
-      const Eq = this.JN;
-      Eq.push(qq);
+      if (null === CC) return void this.stop(`${this.href} ended before its module did`);
+      const zC = this.wg;
+      zC.push(CC);
       const {
-        output: gq,
-        decoded: Yq
-      } = Eq;
-      if (null !== gq && Yq > this.given) {
-        const qq = gq.slice(this.given, Yq).buffer;
-        this.given = Yq, this.post(qq, [qq])
+        output: ZC,
+        decoded: QC
+      } = zC;
+      if (null !== ZC && QC > this.given) {
+        const CC = ZC.slice(this.given, QC).buffer;
+        this.given = QC, this.post(CC, [CC])
       }
-      Eq.done && this.stop(!0)
+      zC.done && this.stop(!0)
     }
-    stop(qq) {
-      this.stopped = !0, this.post(qq)
+    stop(CC) {
+      this.stopped = !0, this.post(CC)
     }
   }
-  const nq = globalThis.WorkerGlobalScope;
-  if (void 0 !== nq && globalThis instanceof nq) {
-    const qq = globalThis,
-      Eq = new hq((function(Eq) {
-        let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        qq.postMessage(Eq, gq)
+  const hC = globalThis.WorkerGlobalScope;
+  if (void 0 !== hC && globalThis instanceof hC) {
+    const CC = globalThis,
+      zC = new eC((function(zC) {
+        let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        CC.postMessage(zC, ZC)
       }));
-    qq.addEventListener("message", (qq => {
+    CC.addEventListener("message", (CC => {
       let {
-        data: gq
-      } = qq;
-      Eq.take(gq)
+        data: ZC
+      } = CC;
+      zC.take(ZC)
     }))
   }
 })();

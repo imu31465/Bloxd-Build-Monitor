@@ -1,43 +1,40 @@
 export const id = 162;
 export const ids = [162];
 export const modules = {
-  8908: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      pageBody: () => Yq
+  8929: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      pageBody: () => QC
     });
-    const Yq = {
-      whatIs: ["Mine, craft and survive in a huge block world that keeps running even when you log off. Bloxd Survival is an online multiplayer SMP. You explore, dig for ores, craft tools and armour, and build a base alongside everyone else on the server. It's free and runs straight in your browser. Fight monsters, loot other players and protect your land, or set up your own private server. This is the full-danger version. If you'd rather build in peace, Peaceful is the calmer option."],
-      howToPlay: ["Gather some resources and craft your first tools. Then dig deeper for iron, gold, diamonds and moonstone to make better gear. Keep an eye out for mobs. Draugr Zombies, Skeletons and Knights, Frost Zombies and Skeletons, Cave Golems and Frost Golems all roam the world. You'll also run into wolves, bears, deer, gorillas, horses and camels.", "Other players can fight you, raid your chests and break your builds, so you'll want to protect your base. Craft a Protector from diamonds and other players can't change blocks or open chests in that chunk. In a tribe? A Tribe Protector shares that protection with your friends. And build well away from spawn, because the blocks near it reset every few hours."],
-      features: ["Persistent SMP Worlds That Save Your Progress", "Mining, Crafting and Base Building", "PvP, Looting and Raiding", "Land Protection with Protectors and Tribe Protectors", "Draugr, Golems, Frost Mobs and Wild Animals to Battle", "Free Private Servers with Owner Commands"],
-      tips: ["Build away from spawn, or your base will get reset", "Get a Protector crafted from diamonds as soon as you can, to keep griefers out", "Don't log out mid-fight. If you're under 80 health and a player hit you in the last 8 seconds, you'll lose your items", "Log in to an account so your progress is saved for good", "Check in on your base at least once a month, because Protectors vanish after 30 days away", "Only let players you trust into your base", "Type /help in chat to see a list of useful commands"],
-      similarGames: ["classic_smp2", "classic_survivalDayNight", "classic_survivalGuns", "survivalFactory", "skyblock", "classic"],
+    const QC = {
+      whatIs: ["Your gear is completely random, and only one player makes it out of the madness. Bloxd Lucky Towers is a last-player-standing PvP mode where everyone spawns on their own pillar. Rounds are quick, chaotic and pretty unpredictable. There are no Lucky Blocks to open here, which is the big difference from Lucky Blocks Battlegrounds. Your items just turn up every 3 seconds."],
+      howToPlay: ["Up to 15 players spawn on pillars spaced out across the map. You start in a glass cage for 3 seconds. After that, everyone gets a random item every 3 seconds. It could be blocks, food, a weapon, armour, a potion or something that explodes. Build bridges over to your rivals, knock them off their pillars and be the last one alive.", "Keep an eye on the announcements, because random events can flip a whole fight. A chest might drop with a guaranteed weapon and armour inside. Jump Boost lets everyone jump higher for a bit, and Double Speed makes items spawn twice as fast. During Lava Rise the ground starts creeping up beneath you. If a Bombardment is announced, get under cover fast. Holding a Respawn Totem saves you from a fall into the void. Knocked out? You can still spectate the rest of the match."],
+      features: ["Up to 15 Players per Match", "A Random Item Every 3 Seconds", "Weapons, Armour, Potions, Arrows and Explosives", "Special Items Like Updraft, SnowDash, Steal Ball, Bouncy Bomb and Chaos Potion", "Respawn Totems for an Extra Life", "Five Random Events, From Chest Drops to Bombardment", "Craft Sticks, Reinforced Pebbles, Floor Creators and More", "Maps: The OG, Desert, Icy, Space and Forest, Plus Seasonal Spooky and Holiday Maps"],
+      tips: ["Use your first few blocks to wall up your pillar", "Hang on to explosives for breaking your rivals' bridges", "If a chest drops, race for it. There's a guaranteed weapon and two pieces of armour inside", "When the ground starts rising, build upwards", "Get under cover the moment a Bombardment is announced", "Hold a Respawn Totem whenever you might fall, because it puts you back on your pillar", "The pillars on the Icy map are further apart, since jumps on ice go further"],
+      similarGames: ["skywars", "luckyBedwars", "luckyBattlegrounds", "bedwars"],
       faq: [{
-        question: "What is Bloxd Survival?",
-        answer: "A multiplayer survival game on Bloxd.io. You mine, craft, build and fight to survive in a shared block world that carries on while you're away."
+        question: "What is Lucky Towers?",
+        answer: "A fast PvP mode for up to 15 players. Everyone starts on their own pillar, gets a random item every 3 seconds and fights to be the last one standing."
       }, {
-        question: "How do I protect my base in Bloxd Survival?",
-        answer: "Craft a Protector from diamonds and place it in your base. Other players then can't change blocks or open chests in that chunk. Tribes can use Tribe Protectors instead. Protectors disappear if you're away for more than 30 days."
+        question: "How do you win in Bloxd Lucky Towers?",
+        answer: "Be the last player alive. Use whatever random items you get to knock rivals off their pillars or take them out. If you're eliminated, you can spectate untill the match ends."
       }, {
-        question: "Why did my build disappear?",
-        answer: "Blocks near spawn reset every few hours, so build outside that area. Private lobbies reset only if their owner turns on Enable Spawn Reset."
+        question: "How often do you get items in Lucky Towers?",
+        answer: "Every 3 seconds. During the Double Speed event they spawn twice as fast for a short while."
       }, {
-        question: "Is stealing and griefing allowed in Bloxd Survival?",
-        answer: "It is. Raiding, stealing and griefing are all part of the game, so protect your chests and only share your base with people you trust."
+        question: "What items can you get in Lucky Towers?",
+        answer: "Blocks, seedlings, beds, food, potions, weapons, arrows, armour and explosives. There are special items too, like the Bouncy Bomb, Respawn Totem, Floor Creator, SnowDash, Updraft, Steal Ball, Chaos Potion and Moonstone Remote Explosive."
       }, {
-        question: "Can I make a private server in Bloxd Survival?",
-        answer: "Yes. You can make a private server for free, invite your friends and use owner commands to run it however you like."
+        question: "Which random events can happen in Lucky Towers?",
+        answer: "Chest Drop, Jump Boost, Double Speed, Lava Rise and Bombardment. You'll get an announcement when each one starts."
       }, {
-        question: "What happens if I log out during a fight?",
-        answer: "Log out with less than 80 health within 8 seconds of being hit by a player and you'll lose your items. Get somewhere safe and heal up before you leave."
+        question: "Which maps are in Lucky Towers?",
+        answer: "The OG, Desert, Icy, Space and Forest. There's also a Spooky map in October and a Holiday map in December and January."
       }, {
-        question: "Will my world still be there tomorrow?",
-        answer: "Yes. Survival worlds are persistent and keep running while you're gone. Signing in to an account keeps your progress safe even if your browser data gets cleared."
-      }, {
-        question: "Which Bloxd survival mode should I play?",
-        answer: "Survival is the classic one, with mobs, PvP and raiding. Peaceful is much calmer: no hostile mobs, no PvP and no health bar. Day & Night Survival is all about the day-night cycle and a Days Survived leaderboard. Survival with Guns adds craftable guns and armed mobs."
+        question: "How is Lucky Towers different from Lucky Blocks Battlegrounds?",
+        answer: "Lucky Towers is last player standing. Items arrive on their own, and once you're knocked out you spectate. Lucky Blocks Battlegrounds is a kills race in a shared arena where you open Lucky Blocks, and the top player wins when it resets."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

@@ -1,17 +1,17 @@
-export const id = 49;
-export const ids = [49];
+export const id = 50;
+export const ids = [50];
 export const modules = {
-  43076: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      startRenderProbe: () => Bq
+  50730: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      startRenderProbe: () => WC
     });
-    var Yq = gq(600),
-      lq = gq(4227),
-      Oq = gq(2733),
-      mq = gq(4340);
-    const xq = 1e3,
-      Aq = 36e5,
-      cq = [{
+    var QC = ZC(603),
+      wC = ZC(4321),
+      bC = ZC(2800),
+      nC = ZC(4445);
+    const fC = 1e3,
+      oC = 36e5,
+      qC = [{
         field: "decodeProbe",
         name: "decode probe"
       }, {
@@ -19,32 +19,32 @@ export const modules = {
         name: "particle probe"
       }];
 
-    function uq(qq, Eq, gq) {
-      var lq, Oq;
-      return `${qq}; ${gq?`os ${gq.os}, gpu ${null!==(lq=gq.gpuFamily)&&void 0!==lq?lq:"unknown"} ${null!==(Oq=gq.gpuModel)&&void 0!==Oq?Oq:"unknown"}`:"device unknown"}, version ${Yq.e}; ${Eq}`
+    function FC(CC, zC, ZC) {
+      var wC, bC;
+      return `${CC}; ${ZC?`os ${ZC.os}, gpu ${null!==(wC=ZC.gpuFamily)&&void 0!==wC?wC:"unknown"} ${null!==(bC=ZC.gpuModel)&&void 0!==bC?bC:"unknown"}`:"device unknown"}, version ${QC.e}; ${zC}`
     }
 
-    function Bq(qq) {
-      var Eq;
-      const gq = null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.backend) && void 0 !== Eq ? Eq : "none";
-      if ("webgl" !== gq) {
-        const qq = (0, mq.c)();
+    function WC(CC) {
+      var zC;
+      const ZC = null !== (zC = null === CC || void 0 === CC ? void 0 : CC.backend) && void 0 !== zC ? zC : "none";
+      if ("webgl" !== ZC) {
+        const CC = (0, nC.f)();
         for (const {
-            field: Eq
+            field: zC
           }
-          of cq) delete qq[Eq];
-        return void(0, Oq.m)("renderprobe", `decode and particle probes not run: the renderer is ${gq}, and they read WebGL2's draws`)
+          of qC) delete CC[zC];
+        return void(0, bC.i)("renderprobe", `decode and particle probes not run: the renderer is ${ZC}, and they read WebGL2's draws`)
       }
-      const Yq = (0, mq.c)();
+      const QC = (0, nC.f)();
       for (const {
-          field: Bq,
-          name: Wq
+          field: WC,
+          name: NC
         }
-        of cq)(0, mq.g)(Yq, Bq, ["1", "pending"], Aq, xq).then((qq => {
-        void 0 !== qq && (0, Oq.m)("renderprobe", uq(Wq, qq, (0, lq.d)(!1)))
+        of qC)(0, nC.i)(QC, WC, ["1", "pending"], oC, fC).then((CC => {
+        void 0 !== CC && (0, bC.i)("renderprobe", FC(NC, CC, (0, wC.e)(!1)))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

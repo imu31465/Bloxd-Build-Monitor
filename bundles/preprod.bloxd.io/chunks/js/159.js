@@ -1,43 +1,46 @@
 export const id = 159;
 export const ids = [159];
 export const modules = {
-  8888: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      pageBody: () => Yq
+  8918: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      pageBody: () => QC
     });
-    const Yq = {
-      whatIs: ["In Bloxd Skywars, everyone starts on their own island in the sky. Only one player is still there at the end. Loot your chests for weapons, armour and blocks, bridge over to your rivals and knock them into the void. It's free-for-all PvP for up to 12 players, and the last one standing takes the win."],
-      howToPlay: ["Each match starts with you in a glass cage on your own island. The cage opens after about 3 seconds, and you can't use items while you're stuck inside. Once you're out, loot your island's chests quickly, because your gear is split between them. Then build a bridge and go after everyone else.", "Chests refill every 2.5 minutes. When \"Chests replenished.\" pops up in chat, it's worth heading back for more loot. After 7 minutes, or as soon as only two players are left, everyone still alive gets a compass pointing at the nearest player. There's nowhere left to hide at that point. Fall into the void and you're out.", "You get Gold for every kill and 20 Gold for a win. Spend Gold and Gems in the shop on new Skywars kits and perks."],
-      features: ["Free-for-All Matches for Up to 12 Players", "Around 30 Kits, from Archer and Builder to Ghost, Sniper, Catapult and Salmon", "Killstreak Perks You Can Buy and Upgrade, like Bridger, Leech and Inferno", "Chests That Refill Every 2.5 Minutes", "A Compass That Tracks the Nearest Player After 7 Minutes or When Two Remain", "Match Modifiers like Lucky Mode, Lifesteal, Explosives Frenzy and Knockback Knockout", "10 Maps: Jungle, Castle, Ice, Bricks, Street, Chess, Food, Aqueduct, Mushroom Land and Warehouse", "Leaderboards"],
-      tips: ["Open every chest on your island before you leave, since your gear is spread across them", "Take your time bridging. One wrong step and you're in the void", "When the chests refill, try to get back to them before your rivals do", "Fight near the edges and use knockback to push enemies off the map", "More kills means more Gold, so you'll unlock new kits faster", "Try kits that suit how you play: Builder for bridging, Archer for range or Tank for armour", "Choose perks to match your style too, like Rusher for speed at the start or Leech for health after kills"],
-      similarGames: ["bedwars", "luckyTowers", "skyIslands"],
+    const QC = {
+      whatIs: ["Protect your bed, destroy theirs. That's the whole idea of Bedwars, the team PvP strategy mode that's free to play online. Every team starts on its own floating island with a bed to protect. Collect resources, buy gear and team upgrades, then bridge across to the other islands and destroy their beds. Once a team's bed is gone they can't respawn. The last team standing wins. Want every item to come from a Lucky Block instead of the shop? Try Lucky Bedwars."],
+      howToPlay: ["Play Bedwars Solos, Duos, Trios, 4v4, 4v4v4v4 or 1v1. Generators on your island drop Coal, Iron Bars and Diamond. Spend them at the Item Shop on blocks, weapons, armour and tools, or at the Upgrades shopkeeper on team upgrades like Protection, Damage, Feather Falling, Health Regeneration and an Alarm. The generators in the centre of the map drop Diamond and Moonstone for the most powerful items.", "As the match goes on, bed defences are unfortified, the Diamond and Moonstone generators level up, and eventually every bed is destroyed. Then the arena shrinks until only one team is left."],
+      features: ["Solos, Duos, Trios, 4v4v4v4 and 4v4", "Ranked Bedwars Lobby", "Team Upgrades: Protection, Damage, Feather Falling, Health Regeneration and Alarm", "Match Modifiers like Lucky Chaos, Weapon Roulette, Treasure Guardians and Specialists", "Dozens of Maps", "Leaderboards"],
+      tips: ["Rush other teams' beds before they can upgrade their defences", "Split up attack and defence with your team", "Upgrade your gear in the shop before leaving your island", "Bridging backwards is faster than ez bridging", "Fight for the centre generators, because Diamond and Moonstone buy the best gear", "Buy an Alarm so you know when enemies reach your base"],
+      similarGames: ["luckyBedwars", "skywars", "luckyTowers"],
       faq: [{
-        question: "What is Bloxd Skywars?",
-        answer: "It's a PvP mode on Bloxd.io where every player starts on a floating island. You loot chests, bridge across to your rivals and try to be the last one standing."
+        question: "What is Bedwars?",
+        answer: "Bedwars is a team PvP strategy game where you protect your bed and destroy everyone else's. Bloxd's version adds team upgrades, match modifiers and a Ranked lobby."
       }, {
-        question: "How do you win in Skywars?",
-        answer: "Be the last player alive. Knock everyone else out, or push them off their islands into the void. Winning gets you 20 Gold."
+        question: "How do you win Bedwars?",
+        answer: "Be the last team standing. Destroy the other teams' beds so they can't respawn, then eliminate them before the arena shrinks."
       }, {
-        question: "Can I play Skywars in my browser?",
-        answer: "Yep. Bloxd.io Skywars runs right in your browser, so you can jump into a match without installing anything."
+        question: "What happens after your bed is destroyed?",
+        answer: "You can't respawn. If you die after your bed is gone, you become a spectator."
       }, {
-        question: "What are the best Skywars kits?",
-        answer: "Honestly, it depends how you like to play. Sniper has a one-shot crossbow and Catapult can knock enemies off the map. Ghost can turn invisible, and Builder starts with extra blocks for bridging. You unlock more kits with Gold and Gems."
+        question: "What do the Bedwars generators do?",
+        answer: "Your island's generators drop Coal, Iron Bars and Diamond for items and upgrades. The generators in the centre drop Diamond and Moonstone for the most powerful items."
       }, {
-        question: "What do perks do in Bloxd Skywars?",
-        answer: "Perks give you bonuses while you play. Maniac gives you more damage after kills, Bridger gives you a chance to get placed blocks back and Leech heals you after kills. You can upgrade them to make them stronger."
+        question: "What modes can I play in Bloxd Bedwars?",
+        answer: "Solos, Duos, Trios, 4v4, 4v4v4v4 and 1v1. There's also a Ranked Bedwars lobby if you want to climb the leaderboards."
       }, {
-        question: "How do I get Gold in Skywars?",
-        answer: "Every kill earns Gold, and you get an extra 20 Gold for winning a match."
+        question: "What are match modifiers?",
+        answer: "Some matches add a twist. In Supercharged, every generator starts at Level 2. In Boom, explosives are half price. Weapon Roulette gives you a new random weapon every respawn, and in Specialists you pick a role with special perks."
       }, {
-        question: "How many players fit in one Skywars match?",
-        answer: "Up to 12 players fight it out in each free-for-all match."
+        question: "Can I attack my teammates?",
+        answer: "No, you can't attack players on your own team."
       }, {
-        question: "What does the compass do in Skywars?",
-        answer: "After 7 minutes, or once only two players are left, everyone still alive gets a compass that points to the nearest player."
+        question: "How many Bedwars maps are there?",
+        answer: "Dozens, including Scary Hollow, Wood Factory, Ahoy!, Colosseum and Rooftops."
+      }, {
+        question: "What's the difference between Bedwars and Lucky Bedwars?",
+        answer: "In Bedwars you collect Coal, Iron Bars, Diamond and Moonstone from generators and choose what to buy. Lucky Bedwars hands out gear through Lucky Blocks instead, so no two matches play out the same."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

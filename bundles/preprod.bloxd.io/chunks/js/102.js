@@ -1,675 +1,489 @@
 export const id = 102;
 export const ids = [102];
 export const modules = {
-  4739: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Wq
+  4847: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => NC
     });
-    var Yq = gq(1018),
-      lq = gq.n(Yq),
-      Oq = gq(1025),
-      mq = gq(1326),
-      xq = gq(3383),
-      Aq = gq(136),
-      cq = gq(3428),
-      uq = gq(3416),
-      Bq = gq(1070);
+    var QC = ZC(1002),
+      wC = ZC.n(QC),
+      bC = ZC(1013),
+      nC = ZC(1295),
+      fC = ZC(3464),
+      oC = ZC(113),
+      qC = ZC(3498),
+      FC = ZC(3487),
+      WC = ZC(1056);
 
-    function Wq(qq) {
+    function NC(CC) {
       let {
-        game: Eq
-      } = qq;
-      const gq = (0, Aq.i)() ? "large" : "small",
-        Yq = (0, cq.e)(Eq, gq),
-        Wq = (0, xq.e)(Yq),
-        Nq = void 0 !== Wq.blurhash;
-      return (0, Bq.jsxs)("div", {
+        game: zC
+      } = CC;
+      const ZC = (0, oC.o)() ? "large" : "small",
+        QC = (0, qC.g)(zC, ZC),
+        NC = (0, fC.e)(QC),
+        MC = void 0 !== NC.blurhash;
+      return (0, WC.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Wq.isLoading && !Nq && (0, Bq.jsx)(mq.e, {
+        children: [NC.isLoading && !MC && (0, WC.jsx)(nC.d, {
           loaderType: "Secondary"
-        }), !Wq.failed && (null !== Wq.src || Nq) && (0, Bq.jsx)("div", {
-          className: lq()("SchematicImage", uq.i, {
-            SchematicImageFadeIn: Wq.fadeIn && !Nq
+        }), !NC.failed && (null !== NC.src || MC) && (0, WC.jsx)("div", {
+          className: wC()("SchematicImage", FC.k, {
+            SchematicImageFadeIn: NC.fadeIn && !MC
           }),
-          style: (0, uq.e)(Wq),
-          children: (0, Bq.jsx)(uq.d, {
-            image: Wq
+          style: (0, FC.g)(NC),
+          children: (0, WC.jsx)(FC.d, {
+            image: NC
           })
-        }), Wq.failed && (0, Bq.jsx)("div", {
+        }), NC.failed && (0, WC.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Bq.jsx)(Oq.d, {
+          children: (0, WC.jsx)(bC.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4875: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Nq
+  6520: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => uC
     });
-    var Yq = gq(57),
-      lq = gq(1018),
-      Oq = gq.n(lq),
-      mq = gq(4792),
-      xq = gq(1326),
-      Aq = gq(1183),
-      cq = gq(3059),
-      uq = gq(3174),
-      Bq = gq(1025),
-      Wq = gq(1070);
+    ZC(4838);
+    var QC = ZC(48),
+      wC = ZC(1002),
+      bC = ZC.n(wC),
+      nC = ZC(310),
+      fC = ZC(979),
+      oC = ZC(1169),
+      qC = ZC(964),
+      FC = ZC(1143),
+      WC = ZC(1439),
+      NC = ZC(3507),
+      MC = ZC(1076),
+      gC = ZC(4847),
+      SC = ZC(2575),
+      pC = ZC(1388),
+      PC = ZC(4503),
+      GC = ZC(4854),
+      RC = ZC(1295),
+      AC = ZC(1453),
+      xC = ZC(4496),
+      JC = ZC(2465),
+      IC = ZC(4863),
+      iC = ZC(6419),
+      vC = ZC(1477),
+      eC = ZC(1056);
+    const hC = [{
+        scope: "customGames",
+        title: "studio:leaderboardCustomGames"
+      }, {
+        scope: "allGames",
+        title: "studio:leaderboardAllGames"
+      }, {
+        scope: "dormantGames",
+        title: "studio:leaderboardDormantGames"
+      }],
+      KC = 25,
+      YC = "scope",
+      dC = "category",
+      mC = "customGames";
+    const HC = 7,
+      EC = {
+        playsPerDay: null,
+        avgPlaytimeMinutes: null,
+        retention: null
+      };
 
-    function Nq(qq) {
+    function lC(CC) {
       let {
-        folderName: Eq,
-        onTexturePackUpdated: lq,
-        disabled: Nq = !1,
-        maxFileSizeMb: aq,
-        packOwner: Vq
-      } = qq;
+        position: zC
+      } = CC;
+      const ZC = iC.e[zC];
+      return (0, eC.jsxs)("td", {
+        className: bC()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== ZC,
+          [`StudioLeaderboardTopPosition${zC}`]: void 0 !== ZC
+        }),
+        children: [void 0 !== ZC && (0, eC.jsx)("img", {
+          className: "StudioLeaderboardPositionItem",
+          src: ZC,
+          alt: ""
+        }), zC]
+      })
+    }
+
+    function XC(CC) {
+      let {
+        discoverability: zC
+      } = CC;
       const {
-        t: dq
-      } = (0, Aq.v)(), [jq, Hq] = (0, Yq.useState)(!1), [oq, Pq] = (0, Yq.useState)(null), [Qq, yq] = (0, Yq.useState)(null), tq = (0, Yq.useRef)(null);
+        playsPerDay: ZC,
+        avgPlaytimeMinutes: wC,
+        retention: bC
+      } = null === zC ? EC : (0, NC.j)(zC);
+      return (0, eC.jsxs)(QC.Fragment, {
+        children: [(0, eC.jsx)("td", {
+          children: null !== ZC ? (0, NC.e)(ZC) : "-"
+        }), (0, eC.jsx)("td", {
+          children: null !== wC ? (0, NC.g)(wC) : "-"
+        }), (0, eC.jsx)("td", {
+          children: null !== bC ? (0, NC.i)(bC) : "-"
+        })]
+      })
+    }
+
+    function cC(CC) {
+      let {
+        discoverability: zC
+      } = CC;
+      return (0, eC.jsx)("td", {
+        className: "StudioLeaderboardEngagementScore",
+        children: void 0 !== (null === zC || void 0 === zC ? void 0 : zC.engagementScore) ? (0, oC.Z)(Math.round(zC.engagementScore)) : "-"
+      })
+    }
+
+    function uC() {
+      var CC, zC;
       const {
-        getRootProps: rq,
-        getInputProps: vq,
-        isDragActive: hq
-      } = (0, mq.e)({
-        onDrop: async function(qq) {
-          Hq(!0);
-          try {
-            const Eq = await (0, cq.o)(qq);
-            if ("customGame" === Vq && (0, uq.k)(Eq)) return void Pq(dq(uq.b));
-            if (void 0 !== aq) {
-              const qq = JSON.stringify(Eq).length / 1048576;
-              if (qq > aq) return void Pq(`File size is too large. Max size is ${aq}MB. Current size is ${qq}MB.`)
+        t: ZC
+      } = (0, FC.y)(), wC = (0, AC.useNavigatePreserveSearch)(), {
+        userContext: bC,
+        isUserContextUpdating: iC
+      } = (0, MC.e)(), EC = (0, JC.r)(), [uC, rC] = (0, xC.n)(), sC = (TC = uC.get(YC), hC.some((CC => CC.scope === TC)) ? TC : mC);
+      var TC;
+      const aC = function(CC) {
+          return nC.U.includes(CC) ? CC : null
+        }(uC.get(dC)),
+        tC = (0, xC.f)(uC.get(xC.b)),
+        [DC, jC] = (0, QC.useState)(null),
+        [yC, LC] = (0, QC.useState)(!1);
+
+      function UC(CC) {
+        rC((zC => {
+          (0, xC.i)(zC, YC, CC.scope === mC ? null : CC.scope), (0, xC.i)(zC, dC, CC.category), (0, xC.l)(zC, CC.page)
+        }))
+      }
+      const BC = !iC && bC.playerHasRank("developer"),
+        OC = BC && "allGames" === sC,
+        kC = BC && "dormantGames" === sC;
+      (0, QC.useEffect)((() => {
+        if (iC) return;
+        let CC = !1;
+        return jC(null), LC(!1), WC.d.getPublishedGamePreviews(bC, {
+          searchQuery: null,
+          pageNumber: tC,
+          pageSize: KC,
+          onlyFavouriteGames: !1,
+          onlyOwnedGames: !1,
+          onlyApprovedGames: !1,
+          schematicIdsToExclude: [],
+          gameCategories: null !== aC ? [aC] : [],
+          upAndComing: !1,
+          dormantGames: kC,
+          sortByEngagementScore: !0,
+          firstPartyGameNames: OC ? qC.e : void 0,
+          includeOwners: !0
+        }).then((zC => {
+          CC || jC(zC)
+        })).catch((zC => {
+          console.error("Failed to load the studio leaderboard", zC), CC || LC(!0)
+        })), () => {
+          CC = !0
+        }
+      }), [iC, OC, kC, aC, tC, bC]);
+      const VC = null !== (CC = null === DC || void 0 === DC ? void 0 : DC.results) && void 0 !== CC ? CC : null,
+        Cz = function(CC, zC, ZC) {
+          const [wC, bC] = (0, QC.useState)({}), nC = ZC ? (null !== CC && void 0 !== CC ? CC : []).flatMap((CC => "firstPartyGame" === CC.type ? [(0, fC.f)(CC.gameNameWithVariation, !0)] : [])).join(",") : "", oC = (0, QC.useMemo)((() => "" === nC ? [] : nC.split(",")), [nC]);
+          return (0, QC.useEffect)((() => {
+            if (0 === oC.length) return void bC({});
+            let CC = !1;
+            return WC.d.getGamesByAnalyticsIds(zC, oC).then((zC => {
+              CC || bC(zC)
+            })).catch((CC => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", CC)
+            })), () => {
+              CC = !0
             }
-            Pq(null), yq(null), lq(Eq), tq.current = Eq,
-              function(qq, Eq) {
-                const Yq = qq.modelOverrides;
-                Yq && Promise.all([gq.e(196), gq.e(195)]).then((() => gq(9348))).then((gq => {
-                  let {
-                    packDisplayName: lq,
-                    refusedPackModels: Oq,
-                    packModelSummary: mq
-                  } = gq;
-                  const xq = lq(qq.metaData);
-                  Eq(mq(xq, Oq(xq, Yq, !1)))
-                })).catch((qq => {
-                  console.error("Checking the texture pack's models failed:", qq)
-                }))
-              }(Eq, (qq => {
-                tq.current === Eq && yq(qq)
-              }))
-          } catch {
-            Pq("Invalid Texture Pack Folder")
-          } finally {
-            Hq(!1)
-          }
-        },
-        useFsAccessApi: !1,
-        disabled: Nq
-      });
-      return (0, Wq.jsxs)("div", {
-        className: "CustomTexturePackContainer",
-        children: [(0, Wq.jsxs)("div", {
-          className: "CustomTextureWarning",
-          children: [dq("settingsMenu:customTextureWarning"), ".", (0, Wq.jsx)("br", {}), dq("settingsMenu:viewDocumentation"), ":", " ", (0, Wq.jsx)("a", {
-            href: "https://github.com/Bloxdy/texturePacks",
-            target: "_blank",
-            rel: "noreferrer",
-            children: "github.com/Bloxdy/texturePacks"
-          })]
-        }), oq && (0, Wq.jsxs)("div", {
-          className: "CustomTextureError",
-          children: [dq("general:error"), ": ", oq]
-        }), Qq && (0, Wq.jsx)("div", {
-          className: "CustomTextureError",
-          children: Qq
-        }), (0, Wq.jsxs)("div", {
-          ...rq({
-            className: Oq()("CustomTextureFolderUpload", {
-              ActiveDrag: hq,
-              Disabled: Nq
-            })
-          }),
-          children: [(0, Wq.jsx)("input", {
-            ...vq({
-              webkitdirectory: "true"
-            })
-          }), jq && (0, Wq.jsx)("div", {
-            className: "CustomTextureFolderUploadLoading",
-            children: (0, Wq.jsx)(xq.e, {})
-          }), !jq && !hq && Eq && (0, Wq.jsxs)(Wq.Fragment, {
-            children: [(0, Wq.jsx)("div", {
-              className: "CustomTextureFolderUploadIcon Active",
-              children: (0, Wq.jsx)(Bq.d, {
-                name: "folder-image"
-              })
-            }), (0, Wq.jsx)("div", {
-              className: "CustomTextureFolderUploadInstructions Active",
-              children: Eq
-            })]
-          }), !jq && (hq || !Eq) && (0, Wq.jsxs)(Wq.Fragment, {
-            children: [(0, Wq.jsx)("div", {
-              className: "CustomTextureFolderUploadIcon",
-              children: (0, Wq.jsx)(Bq.d, {
-                name: "up-from-bracket"
-              })
-            }), (0, Wq.jsx)("div", {
-              className: "CustomTextureFolderUploadInstructions",
-              children: "Drag and drop a Texture Pack folder here"
-            })]
-          })]
-        })]
-      })
-    }
-  },
-  4828: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => aq,
-      f: () => oq,
-      h: () => Vq,
-      l: () => Hq
-    });
-    var Yq = gq(57),
-      lq = gq(4837),
-      Oq = gq(4195),
-      mq = gq(1341),
-      xq = gq(4858),
-      Aq = gq(1018),
-      cq = gq.n(Aq),
-      uq = gq(1336),
-      Bq = gq(1710),
-      Wq = gq(4866),
-      Nq = gq(1070);
-
-    function aq(qq) {
-      let {
-        label: Eq,
-        onClick: gq,
-        checked: Yq,
-        circleInfoText: lq,
-        className: xq,
-        disabled: Aq,
-        note: uq
-      } = qq;
-      return (0, Nq.jsxs)("div", {
-        "aria-disabled": Aq || void 0,
-        "data-pad-focusable": !0,
-        className: cq()("SettingBox CheckboxContainer", {
-          [xq]: xq,
-          SettingBoxDisabled: Aq
-        }),
-        onClick: () => {
-          Aq || gq(!Yq)
-        },
-        children: [(0, Nq.jsxs)("div", {
-          className: "CheckboxInputAndText",
-          children: [(0, Nq.jsx)("label", {
-            className: "CheckboxClickableLabel",
-            children: (0, Nq.jsx)(Oq.b, {
-              className: "SettingsCheckbox",
-              checked: Yq,
-              disabled: Aq,
-              onChange: () => {}
-            })
-          }), (0, Nq.jsxs)("div", {
-            className: "CheckboxText",
-            children: [Eq, lq && (0, Nq.jsx)("span", {
-              onClick: qq => qq.stopPropagation(),
-              children: (0, Nq.jsx)(mq.c, {
-                className: "SettingsTextInputCircleInfo",
-                hoverInfo: lq
-              })
-            })]
-          })]
-        }), uq && (0, Nq.jsx)("div", {
-          className: "SettingNote",
-          children: uq
-        })]
-      })
-    }
-
-    function Vq(qq) {
-      let {
-        name: Eq,
-        onChange: gq,
-        min: lq,
-        max: Oq,
-        step: xq,
-        initValue: Aq,
-        circleInfoText: uq,
-        format: Bq,
-        className: Wq,
-        padStep: aq,
-        disabled: Vq = !1,
-        selectableMax: dq,
-        cappedNote: Hq,
-        onChangeComplete: oq
-      } = qq;
-      const [Pq, Qq] = (0, Yq.useState)(Aq), yq = (0, Yq.useRef)(Aq);
-      (0, Yq.useEffect)((() => {
-        yq.current = Aq, Qq(Aq)
-      }), [Aq]);
-      const tq = void 0 !== dq && dq < Oq,
-        rq = tq ? {
-          "--slider-selectable": (dq - lq) / (Oq - lq)
-        } : void 0;
-      return (0, Nq.jsxs)("div", {
-        className: cq()("SettingBox SettingsSliderDiv", {
-          [Wq]: Wq,
-          SettingBoxDisabled: Vq,
-          SliderCapped: tq
-        }),
-        style: rq,
-        children: [(0, Nq.jsxs)("div", {
-          className: "SliderText",
-          children: [`${Eq}: ${Bq?Bq(Pq):Pq}`, uq && (0, Nq.jsx)(mq.c, {
-            className: "SettingsTextInputCircleInfo",
-            hoverInfo: uq
-          })]
-        }), (0, Nq.jsx)("div", {
-          className: "SliderDiv",
-          children: (0, Nq.jsx)(jq, {
-            value: Pq,
-            min: lq,
-            max: Oq,
-            step: xq,
-            onChange: qq => {
-              if (tq && qq >= dq && Pq === dq) return;
-              const Eq = tq ? Math.min(qq, dq) : qq;
-              yq.current = Eq, Qq(Eq), gq(Eq)
-            },
-            onChangeComplete: oq && (() => {
-              oq(yq.current)
-            }),
-            format: Bq,
-            padStep: aq,
-            disabled: Vq
-          })
-        }), tq && Hq && (0, Nq.jsx)("div", {
-          className: "SettingNote",
-          children: Hq
-        })]
-      })
-    }
-    const dq = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
-
-    function jq(qq) {
-      var Eq;
-      let {
-        value: gq,
-        min: Oq,
-        max: mq,
-        step: xq,
-        onChange: Aq,
-        orientation: cq,
-        reverse: uq,
-        setIsChanging: Bq,
-        tooltip: aq,
-        labels: Vq,
-        handleLabel: jq,
-        format: Hq,
-        onChangeStart: oq,
-        onChangeComplete: Pq,
-        padStep: Qq,
-        disabled: yq = !1
-      } = qq;
-      const tq = (0, Yq.useRef)(null),
-        rq = (0, Yq.useRef)(null);
-      (0, Yq.useLayoutEffect)((() => {
-        var qq, Eq, gq;
-        const Yq = null !== (qq = null === (Eq = tq.current) || void 0 === Eq ? void 0 : Eq.querySelector(".rangeslider")) && void 0 !== qq ? qq : null;
-        null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-slider", ""), null === Yq || void 0 === Yq || Yq.setAttribute("data-pad-focusable", ""), null === Yq || void 0 === Yq || null === (gq = Yq.querySelector(".rangeslider__handle")) || void 0 === gq || gq.setAttribute("data-pad-slider-handle", ""), rq.current = Yq
-      }), []), (0, Yq.useLayoutEffect)((() => {
-        var qq, Eq;
-        yq ? null === (qq = rq.current) || void 0 === qq || qq.setAttribute("aria-disabled", "true") : null === (Eq = rq.current) || void 0 === Eq || Eq.removeAttribute("aria-disabled")
-      }), [yq]);
-      const vq = (null !== (Eq = String(xq).split(".")[1]) && void 0 !== Eq ? Eq : "").length,
-        hq = qq => {
-          const Eq = Number((Math.round((qq - Oq) / xq) * xq + Oq).toFixed(vq));
-          return Math.min(mq, Math.max(Oq, Eq))
-        },
-        nq = (0, Yq.useRef)(Pq);
-      nq.current = Pq, (0, Yq.useEffect)((() => {
-        const qq = tq.current;
-        if (!qq) return;
-        const Eq = qq => {
-          var Eq;
-          dq.has(qq.key) && (null === (Eq = nq.current) || void 0 === Eq || Eq.call(nq))
-        };
-        return qq.addEventListener("keyup", Eq), () => {
-          qq.removeEventListener("keyup", Eq)
-        }
-      }), []);
-      const bq = (0, Yq.useRef)(!1);
-      return (0, Wq.i)(rq, {
-        adjust: qq => {
-          if (yq) return;
-          const Eq = null !== Qq && void 0 !== Qq ? Qq : Math.max(xq, Math.round((mq - Oq) / 20 / xq) * xq),
-            Yq = hq(gq + qq * Eq * (uq ? -1 : 1));
-          Yq !== gq && (null === oq || void 0 === oq || oq(), Aq(Yq), null === Pq || void 0 === Pq || Pq())
-        },
-        setFraction: qq => {
-          if (yq) return;
-          const Eq = hq(Oq + (uq ? 1 - qq : qq) * (mq - Oq));
-          Eq !== gq && (bq.current || (bq.current = !0, null === oq || void 0 === oq || oq()), Aq(Eq))
-        },
-        endDrag: () => {
-          bq.current && (bq.current = !1, null === Pq || void 0 === Pq || Pq())
-        }
-      }), (0, Nq.jsx)("div", {
-        ref: tq,
-        style: {
-          display: "contents"
-        },
-        children: (0, Nq.jsx)(lq.d, {
-          value: gq,
-          min: Oq,
-          max: mq,
-          step: xq,
-          onChange: Aq,
-          orientation: cq,
-          reverse: uq,
-          tooltip: aq,
-          labels: Vq,
-          handleLabel: jq,
-          format: Hq,
-          onChangeStart: () => {
-            null === oq || void 0 === oq || oq(), null === Bq || void 0 === Bq || Bq(!0)
-          },
-          onChangeComplete: () => {
-            null === Bq || void 0 === Bq || Bq(!1), null === Pq || void 0 === Pq || Pq()
-          }
-        })
-      })
-    }
-    async function Hq() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const Eq = uq.NotificationProvider.showPromptPopup({
-        title: "settingsMenu:reloadPagePopupTitle",
-        subtitle: "settingsMenu:reloadPagePopupSubtitle",
-        confirmText: "settingsMenu:reloadPagePopupConfirm",
-        confirmTooltip: "",
-        cancelText: "general:cancel",
-        cancelTooltip: "",
-        unlockPointerKey: qq
-      });
-      !0 === await Eq.getResult() && (0, Bq.reloadBloxd)()
-    }
-
-    function oq(qq) {
-      let {
-        label: Eq,
-        options: gq,
-        value: Yq,
-        onChange: lq,
-        circleInfoText: Oq
-      } = qq;
-      return (0, Nq.jsxs)("div", {
-        className: "SettingBox SegmentedSettingRow",
-        children: [(0, Nq.jsxs)("div", {
-          className: "SliderText",
-          children: [Eq, Oq && (0, Nq.jsx)(mq.c, {
-            className: "SettingsTextInputCircleInfo",
-            hoverInfo: Oq
-          })]
-        }), (0, Nq.jsx)(xq.c, {
-          ariaLabel: Eq,
-          options: gq,
-          value: Yq,
-          onChange: lq
-        })]
-      })
-    }
-  },
-  4826: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => jq,
-      d: () => Hq
-    });
-    var Yq = gq(3059),
-      lq = gq(3067),
-      Oq = gq(57),
-      mq = gq(1018),
-      xq = gq.n(mq),
-      Aq = gq(1326),
-      cq = gq(3056),
-      uq = gq(1336),
-      Bq = gq(4828),
-      Wq = gq(4875),
-      Nq = gq(611),
-      aq = gq(4883),
-      Vq = gq(1070);
-
-    function dq() {
-      (0, Bq.l)("texturePackPickReload")
-    }
-
-    function jq(qq) {
-      var Eq;
-      let {
-        setApplySettingsCallback: gq
-      } = qq;
-      const [, mq] = (0, Oq.useReducer)((qq => qq + 1), 0), xq = (0, Oq.useRef)(!1), Aq = (0, Oq.useRef)(null);
-
-      function jq(qq, Eq) {
-        cq.c.setFromJson(qq, "player");
-        const Yq = cq.c.saveTexturePack();
-        if (Nq.v) {
-          const qq = cq.c.toJson();
-          Yq.then((Eq => {
-            Eq && (0, aq.f)(qq, dq)
+          }), [oC, zC]), wC
+        }(VC, bC, BC),
+        zz = null !== VC ? function(CC, zC, ZC, QC, wC) {
+          return CC.map(((CC, bC) => {
+            var nC;
+            const oC = QC + bC + 1;
+            if ("customGame" === CC.type) {
+              const zC = CC.preview;
+              return {
+                key: zC.schematicId,
+                position: oC,
+                thumbnail: (0, eC.jsx)(gC.d, {
+                  game: zC
+                }),
+                name: zC.name,
+                owner: CC.owner,
+                category: zC.gameCategory,
+                ccu: zC.ccu,
+                favourites: zC.favourites,
+                discoverability: (0, NC.m)(zC) ? zC : null,
+                url: (0, vC.o)((0, fC.d)(zC.schematicId))
+              }
+            }
+            const qC = CC.gameNameWithVariation,
+              FC = (0, fC.f)(qC, !0);
+            return {
+              key: qC,
+              position: oC,
+              thumbnail: (0, eC.jsx)(IC.e, {
+                game: qC
+              }),
+              name: (0, vC.n)(qC, wC),
+              owner: null,
+              category: (0, vC.e)(qC),
+              ccu: (0, JC.b)(qC, zC),
+              favourites: null,
+              discoverability: null !== (nC = ZC[FC]) && void 0 !== nC ? nC : null,
+              url: (0, vC.o)(FC)
+            }
           }))
-        } else xq.current ||= Eq, Aq.current !== cq.c.getId() || cq.c.getId() === lq.n.CUSTOM && xq.current ? gq((() => Bq.l)) : gq(null);
-        mq()
-      }
-      async function oq(qq) {
-        if (cq.c.getId() !== qq.metaData.id) {
-          if (cq.c.getId() === lq.n.CUSTOM && cq.c.getFromFolderName()) {
-            const qq = uq.NotificationProvider.showPromptPopup({
-              title: "settingsMenu:loseChangesTitle",
-              subtitle: "settingsMenu:loseChangesSubtitle",
-              confirmText: "general:continue",
-              destructive: !0,
-              confirmTooltip: "",
-              cancelText: "general:cancel",
-              cancelTooltip: ""
-            });
-            if (!0 !== await qq.getResult()) return
-          }
-          jq(qq, !1)
-        }
-      }(0, Oq.useEffect)((() => {
-        Aq.current = cq.c.getId()
-      }), []);
-      const Pq = Yq.c,
-        Qq = [Pq, ...Object.values(lq.n).filter((qq => qq !== Pq))];
-      return (0, Vq.jsx)(Vq.Fragment, {
-        children: (0, Vq.jsxs)("div", {
-          className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Vq.jsx)("div", {
-            className: "TexturePackList",
-            children: Qq.map((qq => (0, Vq.jsx)(Hq, {
-              id: qq,
-              isSelected: qq === cq.c.getId(),
-              setSelected: oq
-            }, qq)))
-          }), cq.c.getId() === lq.n.CUSTOM && (0, Vq.jsx)(Wq.e, {
-            folderName: null !== (Eq = cq.c.getFromFolderName()) && void 0 !== Eq ? Eq : null,
-            onTexturePackUpdated: function(qq) {
-              jq(qq, !0)
-            },
-            packOwner: "player"
+        }(VC, EC, Cz, (tC - 1) * KC, ZC) : [],
+        Zz = !yC && null === DC,
+        Qz = !Zz && !yC && 0 === zz.length,
+        wz = null !== (zC = null === DC || void 0 === DC ? void 0 : DC.totalPages) && void 0 !== zC ? zC : 1;
+      return (0, eC.jsxs)("div", {
+        className: "StudioPage StudioLeaderboard",
+        children: [(0, eC.jsx)("div", {
+          className: "StudioPageHeader",
+          children: (0, eC.jsx)("h1", {
+            className: "StudioPageTitle",
+            children: ZC("studio:leaderboard")
+          })
+        }), (0, eC.jsxs)("div", {
+          className: "StudioLeaderboardBanner",
+          children: [!kC && (0, eC.jsx)("div", {
+            children: ZC("studio:leaderboardBanner")
+          }), kC && (0, eC.jsx)("div", {
+            children: ZC("studio:leaderboardDormantBanner")
+          }), (0, eC.jsx)("div", {
+            children: ZC("studio:leaderboardMetricsBanner", {
+              days: HC
+            })
           })]
-        })
-      })
-    }
-
-    function Hq(qq) {
-      let {
-        id: Eq,
-        isSelected: gq,
-        setSelected: mq,
-        disabled: cq = !1
-      } = qq;
-      const [uq, Bq] = (0, Oq.useState)(!0), [Wq, Nq] = (0, Oq.useState)(""), [aq, dq] = (0, Oq.useState)(""), [jq, Hq] = (0, Oq.useState)(""), oq = (0, Oq.useRef)({});
-      return (0, Oq.useEffect)((() => {
-        (0, Yq.m)(Eq).then((qq => {
-          var Eq;
-          qq && (oq.current = qq, Bq(!1), Nq(oq.current.metaData.name), dq(oq.current.metaData.author), Hq(null !== (Eq = oq.current.metaData.previewImage) && void 0 !== Eq ? Eq : ""))
-        })).catch((qq => {
-          console.warn(`Failed to fetch texture pack ${Eq}`, qq)
-        }))
-      }), [Eq]), (0, Vq.jsxs)("div", {
-        "data-pad-focusable": !0,
-        "aria-disabled": cq || void 0,
-        className: xq()("TexturePack", {
-          Selected: gq,
-          Custom: Eq === lq.n.CUSTOM,
-          Disabled: cq
-        }),
-        onClick: () => {
-          uq || cq || mq(oq.current)
-        },
-        children: [(0, Vq.jsx)("div", {
-          className: "TexturePackBg",
-          style: {
-            backgroundImage: jq ? `url(${jq})` : void 0
+        }), BC && (0, eC.jsx)("div", {
+          className: "StudioLeaderboardScopes",
+          children: hC.map((CC => (0, eC.jsx)(pC.O, {
+            active: sC === CC.scope,
+            onClick: () => {
+              UC({
+                scope: CC.scope,
+                category: aC,
+                page: 1
+              })
+            },
+            children: ZC(CC.title)
+          }, CC.scope)))
+        }), (0, eC.jsxs)("div", {
+          className: "StudioLeaderboardCategories",
+          children: [(0, eC.jsx)(pC.O, {
+            active: null === aC,
+            onClick: () => {
+              UC({
+                scope: sC,
+                category: null,
+                page: 1
+              })
+            },
+            children: ZC("studio:leaderboardAllCategories")
+          }), nC.U.map((CC => (0, eC.jsx)(pC.O, {
+            active: aC === CC,
+            onClick: () => {
+              UC({
+                scope: sC,
+                category: CC,
+                page: 1
+              })
+            },
+            children: (0, nC.eb)(CC)
+          }, CC)))]
+        }), Zz && (0, eC.jsx)("div", {
+          className: "StudioPageLoader AnimFadeIn",
+          children: (0, eC.jsx)(RC.d, {})
+        }), yC && (0, eC.jsx)("div", {
+          className: "StudioPageMessage AnimFadeIn",
+          children: ZC("studio:failedToLoadLeaderboard")
+        }), Qz && (0, eC.jsx)("div", {
+          className: "StudioPageMessage AnimFadeIn",
+          children: ZC("studio:leaderboardEmpty")
+        }), !Zz && !yC && !Qz && (0, eC.jsx)("div", {
+          className: "StudioLeaderboardTableScroll AnimFadeIn",
+          children: (0, eC.jsx)(GC.b, {
+            className: "StudioTable",
+            columns: [{
+              key: "position",
+              header: "#"
+            }, {
+              key: "game",
+              header: ZC("general:game")
+            }, {
+              key: "owner",
+              header: ZC("general:owner")
+            }, ...null === aC ? [{
+              key: "category",
+              header: ZC("general:category")
+            }] : [], ...BC ? [{
+              key: "engagementScore",
+              header: "engagementScore"
+            }] : [], {
+              key: "playsPerDay",
+              header: ZC("studio:leaderboardPlaysPerDay")
+            }, {
+              key: "sessionLength",
+              header: ZC("studio:leaderboardSessionLength")
+            }, {
+              key: "retention",
+              header: ZC("studio:leaderboardSessionsPerPlayer")
+            }, ...kC ? [] : [{
+              key: "ccu",
+              header: ZC("studio:metricCcu")
+            }], {
+              key: "favourites",
+              header: ZC("general:favourites")
+            }],
+            rows: zz,
+            getRowKey: CC => CC.key,
+            renderRow: CC => (0, eC.jsxs)("tr", {
+              onClick: () => {
+                wC(CC.url)
+              },
+              children: [(0, eC.jsx)(lC, {
+                position: CC.position
+              }), (0, eC.jsx)("td", {
+                children: (0, eC.jsx)(IC.g, {
+                  thumbnail: CC.thumbnail,
+                  name: CC.name
+                })
+              }), (0, eC.jsxs)("td", {
+                className: "StudioLeaderboardOwner",
+                children: [null === CC.owner && "-", null !== CC.owner && (0, eC.jsx)(SC.f, {
+                  playerSocialPreview: CC.owner,
+                  showLocation: !1,
+                  opensProfileCard: !1
+                })]
+              }), null === aC && (0, eC.jsx)("td", {
+                children: (0, nC.eb)(CC.category)
+              }), BC && (0, eC.jsx)(cC, {
+                discoverability: CC.discoverability
+              }), (0, eC.jsx)(XC, {
+                discoverability: CC.discoverability
+              }), !kC && (0, eC.jsx)("td", {
+                children: null !== CC.ccu ? (0, oC.Z)(CC.ccu) : "-"
+              }), (0, eC.jsx)("td", {
+                children: null !== CC.favourites ? (0, oC.Z)(CC.favourites) : "-"
+              })]
+            })
+          })
+        }), !yC && (0, eC.jsx)(PC.c, {
+          className: "AnimFadeIn",
+          page: tC,
+          totalPages: wz,
+          onSetPage: CC => {
+            UC({
+              scope: sC,
+              category: aC,
+              page: CC
+            })
           }
-        }), uq && (0, Vq.jsx)("div", {
-          className: "TexturePackName",
-          children: (0, Vq.jsx)(Aq.e, {})
-        }), !uq && Wq && (0, Vq.jsx)("div", {
-          className: "TexturePackName",
-          children: Wq
-        }), !uq && aq && (0, Vq.jsx)("div", {
-          className: "TexturePackAuthor",
-          children: aq
         })]
       })
     }
   },
-  4858: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => mq
+  4863: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC,
+      g: () => bC
     });
-    var Yq = gq(1018),
-      lq = gq.n(Yq),
-      Oq = gq(1070);
+    var QC = ZC(1477),
+      wC = ZC(1056);
 
-    function mq(qq) {
+    function bC(CC) {
       let {
-        options: Eq,
-        value: gq,
-        onChange: Yq,
-        ariaLabel: mq,
-        className: xq,
-        reselectable: Aq = !1,
-        keepsFocus: cq = !1,
-        padTabs: uq
-      } = qq;
-      const Bq = void 0 !== uq;
-      return (0, Oq.jsx)("div", {
-        className: lq()("SegmentedToggle", xq),
-        role: "group",
-        "aria-label": mq,
-        "data-pad-tabs": uq,
-        children: Eq.map((qq => {
-          const Eq = qq.value === gq;
-          return (0, Oq.jsx)("button", {
-            type: "button",
-            "aria-pressed": Eq,
-            "data-pad-tab": Bq || void 0,
-            "data-pad-selected": Bq && Eq ? "true" : void 0,
-            "data-pad-default-focus": Bq && Eq || void 0,
-            "aria-label": qq.ariaLabel,
-            title: qq.ariaLabel,
-            className: lq()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: Eq
-            }),
-            onMouseDown: cq ? qq => {
-              qq.preventDefault()
-            } : void 0,
-            onClick: () => {
-              Eq && !Aq || Yq(qq.value)
-            },
-            children: qq.label
-          }, qq.value)
-        }))
+        thumbnail: zC,
+        name: ZC
+      } = CC;
+      return (0, wC.jsxs)("div", {
+        className: "StudioTableGameCell",
+        children: [(0, wC.jsx)("div", {
+          className: "StudioTableThumbnail",
+          children: zC
+        }), (0, wC.jsx)("span", {
+          className: "StudioTableGameName",
+          children: ZC
+        })]
+      })
+    }
+
+    function nC(CC) {
+      let {
+        game: zC
+      } = CC;
+      return (0, wC.jsx)("img", {
+        className: "StudioTableThumbnailImage",
+        src: (0, QC.j)(zC),
+        alt: ""
       })
     }
   },
-  4866: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      i: () => mq
+  6419: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC
     });
-    var Yq = gq(57);
-    const lq = new WeakMap,
-      Oq = qq => {
-        var Eq;
-        const gq = qq.closest("[data-pad-slider]");
-        return gq && null !== (Eq = lq.get(gq)) && void 0 !== Eq ? Eq : null
-      },
-      mq = (qq, Eq) => {
-        const gq = (0, Yq.useRef)(Eq);
-        gq.current = Eq, (0, Yq.useEffect)((() => {
-          if (qq.current) return ((qq, Eq) => (lq.set(qq, Eq), () => {
-            lq.get(qq) === Eq && lq.delete(qq)
-          }))(qq.current, {
-            adjust: qq => {
-              gq.current.adjust(qq)
-            },
-            setFraction: qq => {
-              gq.current.setFraction(qq)
-            },
-            endDrag: () => {
-              gq.current.endDrag()
-            }
+    const QC = {
+      1: ZC(6422),
+      2: ZC(6430),
+      3: ZC(6437)
+    }
+  },
+  4854: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => fC
+    });
+    var QC = ZC(48),
+      wC = ZC(1002),
+      bC = ZC.n(wC),
+      nC = ZC(1056);
+
+    function fC(CC) {
+      let {
+        columns: zC,
+        rows: ZC,
+        getRowKey: wC,
+        renderRow: fC,
+        className: oC
+      } = CC;
+      return (0, nC.jsxs)("table", {
+        className: bC()("Table", oC),
+        children: [(0, nC.jsx)("thead", {
+          children: (0, nC.jsx)("tr", {
+            children: zC.map((CC => (0, nC.jsx)("th", {
+              children: CC.header
+            }, CC.key)))
           })
-        }), [qq])
-      }
-  },
-  4883: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => xq,
-      f: () => mq
-    });
-    var Yq = gq(3067),
-      lq = gq(4890);
-    let Oq = null;
-
-    function mq(qq, Eq) {
-      Oq = {
-        pack: qq.metaData.id === Yq.c ? null : qq,
-        prompt: Eq
-      }
-    }
-
-    function xq(qq, Eq) {
-      const gq = Oq;
-      null !== gq && (0, lq.c)(gq.pack, qq) && (Oq = null, Eq && gq.prompt())
+        }), (0, nC.jsx)("tbody", {
+          children: ZC.map((CC => (0, nC.jsx)(QC.Fragment, {
+            children: fC(CC)
+          }, wC(CC))))
+        })]
+      })
     }
   },
-  4890: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      return lq(qq, Eq)
-    }
-
-    function lq(qq, Eq) {
-      if (qq === Eq) return !0;
-      if ("object" !== typeof qq || "object" !== typeof Eq || null === qq || null === Eq || Array.isArray(qq) !== Array.isArray(Eq)) return !1;
-      const gq = qq,
-        Yq = Eq,
-        Oq = Object.keys(gq);
-      return Oq.length === Object.keys(Yq).length && Oq.every((qq => Object.prototype.hasOwnProperty.call(Yq, qq) && lq(gq[qq], Yq[qq])))
-    }
-    gq.d(Eq, {
-      c: () => Yq
-    })
+  4838: () => {},
+  6422: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  },
+  6430: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  },
+  6437: CC => {
+    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

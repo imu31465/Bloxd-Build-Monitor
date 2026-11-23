@@ -1,1037 +1,701 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  39941: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => hq
+  39626: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => LC
     });
-    var Yq = gq(39757),
-      lq = gq(39759),
-      Oq = gq(37139),
-      mq = gq(39943),
-      xq = gq(39980),
-      Aq = gq(39921),
-      cq = gq(39845);
-    let uq = (() => {
-      var qq;
-      let Eq, gq, mq, xq, uq, Bq, Wq, Nq, aq, Vq, dq, jq = [],
-        Hq = [],
-        oq = [],
-        Pq = [],
-        Qq = [],
-        yq = [],
-        tq = [],
-        rq = [],
-        vq = [],
-        hq = [],
-        nq = [],
-        bq = [],
-        iq = [],
-        Zq = [],
-        fq = [],
-        Mq = [],
-        Tq = [],
-        zq = [],
-        Sq = [],
-        pq = [],
-        Gq = [],
-        Lq = [];
-      return qq = class {
-        constructor() {
-          this.keysUp = (0, Yq.i)(this, jq, [38]), this.keysUpward = ((0, Yq.i)(this, Hq), (0, Yq.i)(this, oq, [33])), this.keysDown = ((0, Yq.i)(this, Pq), (0, Yq.i)(this, Qq, [40])), this.keysDownward = ((0, Yq.i)(this, yq), (0, Yq.i)(this, tq, [34])), this.keysLeft = ((0, Yq.i)(this, rq), (0, Yq.i)(this, vq, [37])), this.keysRight = ((0, Yq.i)(this, hq), (0, Yq.i)(this, nq, [39])), this.rotationSpeed = ((0, Yq.i)(this, bq), (0, Yq.i)(this, iq, .5)), this.keysRotateLeft = ((0, Yq.i)(this, Zq), (0, Yq.i)(this, fq, [])), this.keysRotateRight = ((0, Yq.i)(this, Mq), (0, Yq.i)(this, Tq, [])), this.keysRotateUp = ((0, Yq.i)(this, zq), (0, Yq.i)(this, Sq, [])), this.keysRotateDown = ((0, Yq.i)(this, pq), (0, Yq.i)(this, Gq, [])), this._keys = ((0, Yq.i)(this, Lq), new Array)
-        }
-        attachControl(qq) {
-          qq = cq.f.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.ZJ(), this._engine = this._scene.Ba(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
-            this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((Eq => {
-            const gq = Eq.event;
-            if (!gq.metaKey)
-              if (Eq.type === Aq.c.KEYDOWN) {
-                if (-1 !== this.keysUp.indexOf(gq.keyCode) || -1 !== this.keysDown.indexOf(gq.keyCode) || -1 !== this.keysLeft.indexOf(gq.keyCode) || -1 !== this.keysRight.indexOf(gq.keyCode) || -1 !== this.keysUpward.indexOf(gq.keyCode) || -1 !== this.keysDownward.indexOf(gq.keyCode) || -1 !== this.keysRotateLeft.indexOf(gq.keyCode) || -1 !== this.keysRotateRight.indexOf(gq.keyCode) || -1 !== this.keysRotateUp.indexOf(gq.keyCode) || -1 !== this.keysRotateDown.indexOf(gq.keyCode)) {
-                  -1 === this._keys.indexOf(gq.keyCode) && this._keys.push(gq.keyCode), qq || gq.preventDefault()
+    ZC(6473);
+    var QC = ZC(48),
+      wC = ZC(39635),
+      bC = ZC(39902),
+      nC = ZC(40031),
+      fC = ZC(40076),
+      oC = ZC(40092),
+      qC = ZC(37138),
+      FC = ZC(36961),
+      WC = ZC(40219),
+      NC = ZC(40281),
+      MC = (ZC(40308), ZC(1169)),
+      gC = ZC(184),
+      SC = ZC(1143),
+      pC = ZC(20),
+      PC = ZC(2734),
+      GC = ZC(1388),
+      RC = ZC(1013),
+      AC = ZC(6466),
+      xC = ZC(6475),
+      JC = ZC(4369),
+      IC = ZC(1056);
+    const iC = 1.2,
+      vC = .2,
+      eC = .0066 * Math.PI / 180,
+      hC = new Set(["Escape", "KeyG"]),
+      KC = {
+        ArrowLeft: -1,
+        ArrowRight: 1
+      },
+      YC = "ArrowUp",
+      dC = new Set([...Object.keys(KC), YC, "ArrowDown"]),
+      mC = 32,
+      HC = 1,
+      EC = 10,
+      lC = "F4",
+      XC = "Period",
+      cC = Math.PI / 2 - .001,
+      uC = Math.PI / 6,
+      rC = Math.PI / 6,
+      sC = 1.08,
+      TC = [{
+        name: "X",
+        direction: [1, 0, 0],
+        colour: "#e5534b"
+      }, {
+        name: "Y",
+        direction: [0, 1, 0],
+        colour: "#57ab5a"
+      }, {
+        name: "Z",
+        direction: [0, 0, 1],
+        colour: "#539bf5"
+      }],
+      aC = 24,
+      tC = 7,
+      DC = 4,
+      jC = .01,
+      yC = 4;
+
+    function LC(CC) {
+      let {
+        heatmap: zC,
+        scale: ZC,
+        fullyOpaqueFrom: HC,
+        bounds: uC,
+        fitBounds: rC,
+        schematic: sC,
+        controls: TC,
+        onStepTime: aC,
+        onShowAllTime: tC,
+        onTogglePlaying: DC,
+        getReadout: yC = null
+      } = CC;
+      const {
+        t: LC
+      } = (0, SC.y)(), {
+        clientEscMenuOptions: bz
+      } = (0, pC.k)(["clientEscMenuOptions"]), oz = (0, QC.useRef)(null), qz = (0, QC.useRef)(null), Fz = (0, QC.useRef)(null), Wz = (0, PC.e)(oz), [Nz, Mz] = (0, QC.useState)(!1), [gz, Sz] = (0, QC.useState)(!1), [pz, Pz] = (0, QC.useState)(!0), Gz = (0, QC.useRef)(!1), [Rz, Az] = (0, QC.useState)(!1), xz = gz || !pz && Rz, [Jz, Iz] = (0, QC.useState)(!1), [iz, vz] = (0, QC.useState)(!0), [ez, hz] = (0, QC.useState)(null), Kz = uC.min, [Yz, dz] = (0, QC.useState)(Kz);
+      Yz[0] === Kz[0] && Yz[1] === Kz[1] && Yz[2] === Kz[2] || (dz(Kz), null !== ez && hz({
+        ...ez,
+        position: nz(ez.position, nz(Yz, fz(Kz, -1)))
+      }));
+      const mz = (0, QC.useMemo)((() => function(CC) {
+          return [CC.max[0] - CC.min[0] + 1, CC.max[1] - CC.min[1] + 1, CC.max[2] - CC.min[2] + 1]
+        }(uC)), [uC]),
+        Hz = (0, QC.useMemo)((() => function(CC, zC) {
+          const ZC = [],
+            QC = [];
+          for (const [wC, bC] of Object.entries(CC.frequencies)) {
+            const CC = Number(wC);
+            for (const [wC, nC] of Object.entries(bC)) {
+              const bC = Number(wC);
+              for (const [wC, fC] of Object.entries(nC)) fC <= 0 || (ZC.push(CC - zC[0], bC - zC[1], Number(wC) - zC[2]), QC.push(fC))
+            }
+          }
+          return {
+            positions: Int32Array.from(ZC),
+            values: Float64Array.from(QC),
+            count: QC.length
+          }
+        }(zC, Kz)), [zC, Kz]),
+        Ez = iC * bz.cameraFOV / 100,
+        lz = Wz.height > 0 ? Wz.width / Wz.height : 1,
+        Xz = (0, QC.useMemo)((() => function(CC, zC) {
+          return {
+            min: [CC.min[0] - zC[0], CC.min[1] - zC[1], CC.min[2] - zC[2]],
+            max: [CC.max[0] - zC[0] + 1, CC.max[1] - zC[1] + 1, CC.max[2] - zC[2] + 1]
+          }
+        }(rC, Kz)), [rC, Kz]),
+        cz = Zz(Xz, lz, Ez),
+        uz = null !== ez && void 0 !== ez ? ez : cz,
+        rz = (0, QC.useRef)({
+          fittedView: cz,
+          fieldOfView: Ez,
+          mouseSensitivity: bz.mouseSensitivity,
+          canLock: pz
+        });
+      rz.current = {
+        fittedView: cz,
+        fieldOfView: Ez,
+        mouseSensitivity: bz.mouseSensitivity,
+        canLock: pz
+      };
+      const sz = (0, QC.useMemo)((() => {
+          if (!xz) return null;
+          const CC = (CC, ZC, QC) => {
+              var wC, bC, nC;
+              return null !== (wC = null === (bC = zC.frequencies[CC + Kz[0]]) || void 0 === bC || null === (nC = bC[ZC + Kz[1]]) || void 0 === nC ? void 0 : nC[QC + Kz[2]]) && void 0 !== wC ? wC : 0
+            },
+            QC = function(CC, zC, ZC, QC) {
+              let wC = 0,
+                bC = 1 / 0;
+              for (const WC of [0, 1, 2]) {
+                if (0 === zC[WC]) {
+                  if (CC[WC] < 0 || CC[WC] > ZC[WC]) return null;
+                  continue
                 }
-              } else if (-1 !== this.keysUp.indexOf(gq.keyCode) || -1 !== this.keysDown.indexOf(gq.keyCode) || -1 !== this.keysLeft.indexOf(gq.keyCode) || -1 !== this.keysRight.indexOf(gq.keyCode) || -1 !== this.keysUpward.indexOf(gq.keyCode) || -1 !== this.keysDownward.indexOf(gq.keyCode) || -1 !== this.keysRotateLeft.indexOf(gq.keyCode) || -1 !== this.keysRotateRight.indexOf(gq.keyCode) || -1 !== this.keysRotateUp.indexOf(gq.keyCode) || -1 !== this.keysRotateDown.indexOf(gq.keyCode)) {
-              const Eq = this._keys.indexOf(gq.keyCode);
-              Eq >= 0 && this._keys.splice(Eq, 1), qq || gq.preventDefault()
-            }
-          })))
-        }
-        detachControl() {
-          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
-        }
-        checkInputs() {
-          if (this._onKeyboardObserver) {
-            const qq = this.camera,
-              Eq = qq.movement.input,
-              gq = Eq.getEntry("keyboard", "translate"),
-              Yq = Eq.getEntry("keyboard", "rotate"),
-              lq = Yq?.sensitivity ?? 1,
-              mq = qq._localDirection.Vqq(0, 0, 0);
-            for (let Oq = 0; Oq < this._keys.length; Oq++) {
-              const Eq = this._keys[Oq]; - 1 !== this.keysLeft.indexOf(Eq) ? mq.x -= 1 : -1 !== this.keysUp.indexOf(Eq) ? mq.z += 1 : -1 !== this.keysRight.indexOf(Eq) ? mq.x += 1 : -1 !== this.keysDown.indexOf(Eq) ? mq.z -= 1 : -1 !== this.keysUpward.indexOf(Eq) ? mq.y += 1 : -1 !== this.keysDownward.indexOf(Eq) ? mq.y -= 1 : -1 !== this.keysRotateLeft.indexOf(Eq) ? Yq && (qq.cameraRotation.y -= this._getLocalRotation() * lq) : -1 !== this.keysRotateRight.indexOf(Eq) ? Yq && (qq.cameraRotation.y += this._getLocalRotation() * lq) : -1 !== this.keysRotateUp.indexOf(Eq) ? Yq && (qq.cameraRotation.x -= this._getLocalRotation() * lq) : -1 !== this.keysRotateDown.indexOf(Eq) && Yq && (qq.cameraRotation.x += this._getLocalRotation() * lq)
-            }
-            if (gq && (0 !== mq.x || 0 !== mq.y || 0 !== mq.z)) {
-              const Eq = qq._computeLocalCameraSpeed() * (gq.sensitivity ?? 1);
-              mq.normalize().scaleInPlace(Eq), qq.ZJ().useRightHandedSystem && (mq.z *= -1), qq.getViewMatrix().invertToRef(qq._cameraTransformMatrix), Oq.q.TransformNormalToRef(mq, qq._cameraTransformMatrix, qq._transformedDirection), qq.cameraDirection.addInPlace(qq._transformedDirection)
-            }
-          }
-        }
-        getClassName() {
-          return "FreeCameraKeyboardMoveInput"
-        }
-        _onLostFocus() {
-          this._keys.length = 0
-        }
-        getSimpleName() {
-          return "keyboard"
-        }
-        _getLocalRotation() {
-          const qq = this.camera._calculateHandednessMultiplier();
-          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * qq
-        }
-      }, (() => {
-        const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eq = [(0, lq.M)()], gq = [(0, lq.M)()], mq = [(0, lq.M)()], xq = [(0, lq.M)()], uq = [(0, lq.M)()], Bq = [(0, lq.M)()], Wq = [(0, lq.M)()], Nq = [(0, lq.M)()], aq = [(0, lq.M)()], Vq = [(0, lq.M)()], dq = [(0, lq.M)()], (0, Yq.f)(null, null, Eq, {
-          kind: "field",
-          name: "keysUp",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysUp" in qq,
-            get: qq => qq.keysUp,
-            set: (qq, Eq) => {
-              qq.keysUp = Eq
-            }
-          },
-          metadata: Oq
-        }, jq, Hq), (0, Yq.f)(null, null, gq, {
-          kind: "field",
-          name: "keysUpward",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysUpward" in qq,
-            get: qq => qq.keysUpward,
-            set: (qq, Eq) => {
-              qq.keysUpward = Eq
-            }
-          },
-          metadata: Oq
-        }, oq, Pq), (0, Yq.f)(null, null, mq, {
-          kind: "field",
-          name: "keysDown",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysDown" in qq,
-            get: qq => qq.keysDown,
-            set: (qq, Eq) => {
-              qq.keysDown = Eq
-            }
-          },
-          metadata: Oq
-        }, Qq, yq), (0, Yq.f)(null, null, xq, {
-          kind: "field",
-          name: "keysDownward",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysDownward" in qq,
-            get: qq => qq.keysDownward,
-            set: (qq, Eq) => {
-              qq.keysDownward = Eq
-            }
-          },
-          metadata: Oq
-        }, tq, rq), (0, Yq.f)(null, null, uq, {
-          kind: "field",
-          name: "keysLeft",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysLeft" in qq,
-            get: qq => qq.keysLeft,
-            set: (qq, Eq) => {
-              qq.keysLeft = Eq
-            }
-          },
-          metadata: Oq
-        }, vq, hq), (0, Yq.f)(null, null, Bq, {
-          kind: "field",
-          name: "keysRight",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysRight" in qq,
-            get: qq => qq.keysRight,
-            set: (qq, Eq) => {
-              qq.keysRight = Eq
-            }
-          },
-          metadata: Oq
-        }, nq, bq), (0, Yq.f)(null, null, Wq, {
-          kind: "field",
-          name: "rotationSpeed",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "rotationSpeed" in qq,
-            get: qq => qq.rotationSpeed,
-            set: (qq, Eq) => {
-              qq.rotationSpeed = Eq
-            }
-          },
-          metadata: Oq
-        }, iq, Zq), (0, Yq.f)(null, null, Nq, {
-          kind: "field",
-          name: "keysRotateLeft",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysRotateLeft" in qq,
-            get: qq => qq.keysRotateLeft,
-            set: (qq, Eq) => {
-              qq.keysRotateLeft = Eq
-            }
-          },
-          metadata: Oq
-        }, fq, Mq), (0, Yq.f)(null, null, aq, {
-          kind: "field",
-          name: "keysRotateRight",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysRotateRight" in qq,
-            get: qq => qq.keysRotateRight,
-            set: (qq, Eq) => {
-              qq.keysRotateRight = Eq
-            }
-          },
-          metadata: Oq
-        }, Tq, zq), (0, Yq.f)(null, null, Vq, {
-          kind: "field",
-          name: "keysRotateUp",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysRotateUp" in qq,
-            get: qq => qq.keysRotateUp,
-            set: (qq, Eq) => {
-              qq.keysRotateUp = Eq
-            }
-          },
-          metadata: Oq
-        }, Sq, pq), (0, Yq.f)(null, null, dq, {
-          kind: "field",
-          name: "keysRotateDown",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "keysRotateDown" in qq,
-            get: qq => qq.keysRotateDown,
-            set: (qq, Eq) => {
-              qq.keysRotateDown = Eq
-            }
-          },
-          metadata: Oq
-        }, Gq, Lq), Oq && Object.defineProperty(qq, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: Oq
-        })
-      })(), qq
-    })();
-    xq.d.FreeCameraKeyboardMoveInput = uq;
-    var Bq = gq(37156),
-      Wq = gq(39919);
-    let Nq = (() => {
-      var qq;
-      let Eq, gq, Oq = [],
-        mq = [],
-        xq = [],
-        Aq = [];
-      return qq = class {
-        _applyPointerRotation(qq, Eq) {
-          this._pointerConditions.button = this._currentActiveButton;
-          const gq = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
-          if (!gq || "rotate" !== gq.interaction) return;
-          const Yq = gq.zC ?? gq.sensitivity ?? 1 / this.angularSensibility,
-            lq = gq.pC ?? gq.sensitivity ?? 1 / this.angularSensibility;
-          this.camera.cameraRotation.y += qq * Yq, this.camera.cameraRotation.x += Eq * lq
-        }
-        constructor() {
-          let qq = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-          this.touchEnabled = qq, this.buttons = (0, Yq.i)(this, Oq, [0, 1, 2]), this.angularSensibility = ((0, Yq.i)(this, mq), (0, Yq.i)(this, xq, 2e3)), this._pointerInput = (0, Yq.i)(this, Aq), this._previousPosition = null, this.onPointerMovedObservable = new Bq.d, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
-        }
-        attachControl(qq) {
-          qq = cq.f.BackCompatCameraNoPreventDefault(arguments);
-          const Eq = this.camera.Ba(),
-            gq = Eq.getInputElement();
-          this._pointerInput || (this._pointerInput = Yq => {
-            const lq = Yq.event,
-              Oq = "touch" === lq.pointerType;
-            if (!this.touchEnabled && Oq) return;
-            if (Yq.type !== Wq.b.POINTERMOVE && -1 === this.buttons.indexOf(lq.button)) return;
-            const mq = lq.target;
-            if (Yq.type === Wq.b.POINTERDOWN) {
-              if (Oq && -1 !== this._activePointerId || !Oq && -1 !== this._currentActiveButton) return;
-              this._activePointerId = lq.pointerId;
-              try {
-                mq?.setPointerCapture(lq.pointerId)
-              } catch (xq) {} - 1 === this._currentActiveButton && (this._currentActiveButton = lq.button), this._previousPosition = {
-                x: lq.clientX,
-                y: lq.clientY
-              }, qq || (lq.preventDefault(), gq && gq.focus()), Eq.isPointerLock && this._onMouseMove && this._onMouseMove(Yq.event)
-            } else if (Yq.type === Wq.b.POINTERUP) {
-              if (Oq && this._activePointerId !== lq.pointerId || !Oq && this._currentActiveButton !== lq.button) return;
-              try {
-                mq?.releasePointerCapture(lq.pointerId)
-              } catch (xq) {}
-              this._currentActiveButton = -1, this._previousPosition = null, qq || lq.preventDefault(), this._activePointerId = -1
-            } else if (Yq.type === Wq.b.POINTERMOVE && (this._activePointerId === lq.pointerId || !Oq))
-              if (Eq.isPointerLock && this._onMouseMove) this._onMouseMove(Yq.event);
-              else if (this._previousPosition) {
-              const Eq = this.camera._calculateHandednessMultiplier(),
-                gq = (lq.clientX - this._previousPosition.x) * Eq,
-                Yq = (lq.clientY - this._previousPosition.y) * Eq;
-              this._allowCameraRotation && this._applyPointerRotation(gq, Yq), this.onPointerMovedObservable.notifyObservers({
-                offsetX: gq,
-                offsetY: Yq
-              }), this._previousPosition = {
-                x: lq.clientX,
-                y: lq.clientY
-              }, qq || lq.preventDefault()
-            }
-          }), this._onMouseMove = gq => {
-            if (!Eq.isPointerLock) return;
-            const Yq = this.camera._calculateHandednessMultiplier();
-            this._applyPointerRotation(gq.movementX * Yq, gq.movementY * Yq), this._previousPosition = null, qq || gq.preventDefault()
-          }, this._observer = this.camera.ZJ()._inputManager._addCameraPointerObserver(this._pointerInput, Wq.b.POINTERDOWN | Wq.b.POINTERUP | Wq.b.POINTERMOVE), gq && (this._contextMenuBind = qq => this.onContextMenu(qq), gq.addEventListener("contextmenu", this._contextMenuBind, !1))
-        }
-        onContextMenu(qq) {
-          qq.preventDefault()
-        }
-        detachControl() {
-          if (this._observer) {
-            if (this.camera.ZJ()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
-              const qq = this.camera.Ba().getInputElement();
-              qq && qq.removeEventListener("contextmenu", this._contextMenuBind)
-            }
-            this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
-          }
-          this._activePointerId = -1, this._currentActiveButton = -1
-        }
-        getClassName() {
-          return "FreeCameraMouseInput"
-        }
-        getSimpleName() {
-          return "mouse"
-        }
-      }, (() => {
-        const cq = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eq = [(0, lq.M)()], gq = [(0, lq.M)()], (0, Yq.f)(null, null, Eq, {
-          kind: "field",
-          name: "buttons",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "buttons" in qq,
-            get: qq => qq.buttons,
-            set: (qq, Eq) => {
-              qq.buttons = Eq
-            }
-          },
-          metadata: cq
-        }, Oq, mq), (0, Yq.f)(null, null, gq, {
-          kind: "field",
-          name: "angularSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "angularSensibility" in qq,
-            get: qq => qq.angularSensibility,
-            set: (qq, Eq) => {
-              qq.angularSensibility = Eq
-            }
-          },
-          metadata: cq
-        }, xq, Aq), cq && Object.defineProperty(qq, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: cq
-        })
-      })(), qq
-    })();
-    xq.d.FreeCameraMouseInput = Nq;
-    var aq = gq(39926);
-    let Vq = (() => {
-      var qq;
-      let Eq, gq, Oq, mq = [],
-        xq = [],
-        Aq = [],
-        uq = [],
-        Nq = [],
-        Vq = [];
-      return qq = class {
-        constructor() {
-          this.wheelPrecisionX = (0, Yq.i)(this, mq, 3), this.wheelPrecisionY = ((0, Yq.i)(this, xq), (0, Yq.i)(this, Aq, 3)), this.wheelPrecisionZ = ((0, Yq.i)(this, uq), (0, Yq.i)(this, Nq, 3)), this.onChangedObservable = ((0, Yq.i)(this, Vq), new Bq.d), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
-        }
-        attachControl(qq) {
-          qq = cq.f.BackCompatCameraNoPreventDefault(arguments), this._wheel = Eq => {
-            if (Eq.type !== Wq.b.POINTERWHEEL) return;
-            const gq = Eq.event,
-              Yq = gq.deltaMode === aq.b.DOM_DELTA_LINE ? this._ffMultiplier : 1;
-            this._wheelDeltaX += this.wheelPrecisionX * Yq * gq.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * Yq * gq.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * Yq * gq.deltaZ / this._normalize, gq.preventDefault && (qq || gq.preventDefault())
-          }, this._observer = this.camera.ZJ()._inputManager._addCameraPointerObserver(this._wheel, Wq.b.POINTERWHEEL)
-        }
-        detachControl() {
-          this._observer && (this.camera.ZJ()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
-        }
-        checkInputs() {
-          this.onChangedObservable.notifyObservers({
-            wheelDeltaX: this._wheelDeltaX,
-            wheelDeltaY: this._wheelDeltaY,
-            wheelDeltaZ: this._wheelDeltaZ
-          }), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0
-        }
-        getClassName() {
-          return "BaseCameraMouseWheelInput"
-        }
-        getSimpleName() {
-          return "mousewheel"
-        }
-      }, (() => {
-        const cq = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eq = [(0, lq.M)()], gq = [(0, lq.M)()], Oq = [(0, lq.M)()], (0, Yq.f)(null, null, Eq, {
-          kind: "field",
-          name: "wheelPrecisionX",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelPrecisionX" in qq,
-            get: qq => qq.wheelPrecisionX,
-            set: (qq, Eq) => {
-              qq.wheelPrecisionX = Eq
-            }
-          },
-          metadata: cq
-        }, mq, xq), (0, Yq.f)(null, null, gq, {
-          kind: "field",
-          name: "wheelPrecisionY",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelPrecisionY" in qq,
-            get: qq => qq.wheelPrecisionY,
-            set: (qq, Eq) => {
-              qq.wheelPrecisionY = Eq
-            }
-          },
-          metadata: cq
-        }, Aq, uq), (0, Yq.f)(null, null, Oq, {
-          kind: "field",
-          name: "wheelPrecisionZ",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelPrecisionZ" in qq,
-            get: qq => qq.wheelPrecisionZ,
-            set: (qq, Eq) => {
-              qq.wheelPrecisionZ = Eq
-            }
-          },
-          metadata: cq
-        }, Nq, Vq), cq && Object.defineProperty(qq, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: cq
-        })
-      })(), qq
-    })();
-    var dq;
-    ! function(qq) {
-      qq[qq.MoveRelative = 0] = "MoveRelative", qq[qq.RotateRelative = 1] = "RotateRelative", qq[qq.MoveScene = 2] = "MoveScene"
-    }(dq || (dq = {}));
-    let jq = (() => {
-      var qq;
-      let Eq, gq, mq, xq, Aq, cq, uq, Bq, Wq, Nq = Vq,
-        aq = [];
-      return qq = class extends Nq {
-        constructor() {
-          super(...arguments), this.camera = (0, Yq.i)(this, aq), this._moveRelative = Oq.q.Zero(), this._rotateRelative = Oq.q.Zero(), this._moveScene = Oq.q.Zero(), this._wheelXAction = dq.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = dq.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
-        }
-        getClassName() {
-          return "FreeCameraMouseWheelInput"
-        }
-        set wheelXMoveRelative(qq) {
-          null === qq && this._wheelXAction !== dq.MoveRelative || (this._wheelXAction = dq.MoveRelative, this._wheelXActionCoordinate = qq)
-        }
-        get wheelXMoveRelative() {
-          return this._wheelXAction !== dq.MoveRelative ? null : this._wheelXActionCoordinate
-        }
-        set wheelYMoveRelative(qq) {
-          null === qq && this._wheelYAction !== dq.MoveRelative || (this._wheelYAction = dq.MoveRelative, this._wheelYActionCoordinate = qq)
-        }
-        get wheelYMoveRelative() {
-          return this._wheelYAction !== dq.MoveRelative ? null : this._wheelYActionCoordinate
-        }
-        set wheelZMoveRelative(qq) {
-          null === qq && this._wheelZAction !== dq.MoveRelative || (this._wheelZAction = dq.MoveRelative, this._wheelZActionCoordinate = qq)
-        }
-        get wheelZMoveRelative() {
-          return this._wheelZAction !== dq.MoveRelative ? null : this._wheelZActionCoordinate
-        }
-        set wheelXRotateRelative(qq) {
-          null === qq && this._wheelXAction !== dq.RotateRelative || (this._wheelXAction = dq.RotateRelative, this._wheelXActionCoordinate = qq)
-        }
-        get wheelXRotateRelative() {
-          return this._wheelXAction !== dq.RotateRelative ? null : this._wheelXActionCoordinate
-        }
-        set wheelYRotateRelative(qq) {
-          null === qq && this._wheelYAction !== dq.RotateRelative || (this._wheelYAction = dq.RotateRelative, this._wheelYActionCoordinate = qq)
-        }
-        get wheelYRotateRelative() {
-          return this._wheelYAction !== dq.RotateRelative ? null : this._wheelYActionCoordinate
-        }
-        set wheelZRotateRelative(qq) {
-          null === qq && this._wheelZAction !== dq.RotateRelative || (this._wheelZAction = dq.RotateRelative, this._wheelZActionCoordinate = qq)
-        }
-        get wheelZRotateRelative() {
-          return this._wheelZAction !== dq.RotateRelative ? null : this._wheelZActionCoordinate
-        }
-        set wheelXMoveScene(qq) {
-          null === qq && this._wheelXAction !== dq.MoveScene || (this._wheelXAction = dq.MoveScene, this._wheelXActionCoordinate = qq)
-        }
-        get wheelXMoveScene() {
-          return this._wheelXAction !== dq.MoveScene ? null : this._wheelXActionCoordinate
-        }
-        set wheelYMoveScene(qq) {
-          null === qq && this._wheelYAction !== dq.MoveScene || (this._wheelYAction = dq.MoveScene, this._wheelYActionCoordinate = qq)
-        }
-        get wheelYMoveScene() {
-          return this._wheelYAction !== dq.MoveScene ? null : this._wheelYActionCoordinate
-        }
-        set wheelZMoveScene(qq) {
-          null === qq && this._wheelZAction !== dq.MoveScene || (this._wheelZAction = dq.MoveScene, this._wheelZActionCoordinate = qq)
-        }
-        get wheelZMoveScene() {
-          return this._wheelZAction !== dq.MoveScene ? null : this._wheelZActionCoordinate
-        }
-        checkInputs() {
-          if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
-          this._moveRelative.A4(0), this._rotateRelative.A4(0), this._moveScene.A4(0), this._updateCamera(), this.camera.ZJ().useRightHandedSystem && (this._moveRelative.z *= -1);
-          const qq = Oq.e.Zero();
-          this.camera.getViewMatrix().invertToRef(qq);
-          const Eq = Oq.q.Zero();
-          Oq.q.TransformNormalToRef(this._moveRelative, qq, Eq), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(Eq), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
-        }
-        _updateCamera() {
-          this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
-        }
-        _updateCameraProperty(qq, Eq, gq) {
-          if (0 === qq) return;
-          if (null === Eq || null === gq) return;
-          let Yq = null;
-          switch (Eq) {
-            case dq.MoveRelative:
-              Yq = this._moveRelative;
-              break;
-            case dq.RotateRelative:
-              Yq = this._rotateRelative;
-              break;
-            case dq.MoveScene:
-              Yq = this._moveScene
-          }
-          switch (gq) {
-            case 0:
-              Yq.set(qq, 0, 0);
-              break;
-            case 1:
-              Yq.set(0, qq, 0);
-              break;
-            case 2:
-              Yq.set(0, 0, qq)
-          }
-        }
-      }, (() => {
-        const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(Nq[Symbol.metadata] ?? null) : void 0;
-        Eq = [(0, lq.M)()], gq = [(0, lq.M)()], mq = [(0, lq.M)()], xq = [(0, lq.M)()], Aq = [(0, lq.M)()], cq = [(0, lq.M)()], uq = [(0, lq.M)()], Bq = [(0, lq.M)()], Wq = [(0, lq.M)()], (0, Yq.f)(qq, null, Eq, {
-          kind: "setter",
-          name: "wheelXMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelXMoveRelative" in qq,
-            set: (qq, Eq) => {
-              qq.wheelXMoveRelative = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), (0, Yq.f)(qq, null, gq, {
-          kind: "setter",
-          name: "wheelYMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelYMoveRelative" in qq,
-            set: (qq, Eq) => {
-              qq.wheelYMoveRelative = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), (0, Yq.f)(qq, null, mq, {
-          kind: "setter",
-          name: "wheelZMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelZMoveRelative" in qq,
-            set: (qq, Eq) => {
-              qq.wheelZMoveRelative = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), (0, Yq.f)(qq, null, xq, {
-          kind: "setter",
-          name: "wheelXRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelXRotateRelative" in qq,
-            set: (qq, Eq) => {
-              qq.wheelXRotateRelative = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), (0, Yq.f)(qq, null, Aq, {
-          kind: "setter",
-          name: "wheelYRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelYRotateRelative" in qq,
-            set: (qq, Eq) => {
-              qq.wheelYRotateRelative = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), (0, Yq.f)(qq, null, cq, {
-          kind: "setter",
-          name: "wheelZRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelZRotateRelative" in qq,
-            set: (qq, Eq) => {
-              qq.wheelZRotateRelative = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), (0, Yq.f)(qq, null, uq, {
-          kind: "setter",
-          name: "wheelXMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelXMoveScene" in qq,
-            set: (qq, Eq) => {
-              qq.wheelXMoveScene = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), (0, Yq.f)(qq, null, Bq, {
-          kind: "setter",
-          name: "wheelYMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelYMoveScene" in qq,
-            set: (qq, Eq) => {
-              qq.wheelYMoveScene = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), (0, Yq.f)(qq, null, Wq, {
-          kind: "setter",
-          name: "wheelZMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "wheelZMoveScene" in qq,
-            set: (qq, Eq) => {
-              qq.wheelZMoveScene = Eq
-            }
-          },
-          metadata: Oq
-        }, null, aq), Oq && Object.defineProperty(qq, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: Oq
-        })
-      })(), qq
-    })();
-    xq.d.FreeCameraMouseWheelInput = jq;
-    let Hq = (() => {
-      var qq;
-      let Eq, gq, mq = [],
-        xq = [],
-        Aq = [],
-        uq = [];
-      return qq = class {
-        constructor() {
-          let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          this.allowMouse = qq, this.touchAngularSensibility = (0, Yq.i)(this, mq, 2e5), this.touchMoveSensibility = ((0, Yq.i)(this, xq), (0, Yq.i)(this, Aq, 250)), this.singleFingerRotate = ((0, Yq.i)(this, uq), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = cq.f.IsSafari()
-        }
-        attachControl(qq) {
-          qq = cq.f.BackCompatCameraNoPreventDefault(arguments);
-          let Eq = null;
-          if (void 0 === this._pointerInput && (this._onLostFocus = () => {
-              this._offsetX = null, this._offsetY = null
-            }, this._pointerInput = gq => {
-              const Yq = gq.event,
-                lq = "mouse" === Yq.pointerType || this._isSafari && "undefined" === typeof Yq.pointerType;
-              if (this.allowMouse || !lq)
-                if (gq.type === Wq.b.POINTERDOWN) {
-                  if (qq || Yq.preventDefault(), this._pointerPressed.push(Yq.pointerId), 1 !== this._pointerPressed.length) return;
-                  Eq = {
-                    x: Yq.clientX,
-                    y: Yq.clientY
-                  }
-                } else if (gq.type === Wq.b.POINTERUP) {
-                qq || Yq.preventDefault();
-                const gq = this._pointerPressed.indexOf(Yq.pointerId);
-                if (-1 === gq) return;
-                if (this._pointerPressed.splice(gq, 1), 0 != gq) return;
-                Eq = null, this._offsetX = null, this._offsetY = null
-              } else if (gq.type === Wq.b.POINTERMOVE) {
-                if (qq || Yq.preventDefault(), !Eq) return;
-                if (0 != this._pointerPressed.indexOf(Yq.pointerId)) return;
-                this._offsetX = Yq.clientX - Eq.x, this._offsetY = -(Yq.clientY - Eq.y)
+                const QC = (0 - CC[WC]) / zC[WC],
+                  nC = (ZC[WC] - CC[WC]) / zC[WC];
+                wC = Math.max(wC, Math.min(QC, nC)), bC = Math.min(bC, Math.max(QC, nC))
               }
-            }), this._observer = this.camera.ZJ()._inputManager._addCameraPointerObserver(this._pointerInput, Wq.b.POINTERDOWN | Wq.b.POINTERUP | Wq.b.POINTERMOVE), this._onLostFocus) {
-            const qq = this.camera.Ba().getInputElement();
-            qq && qq.addEventListener("blur", this._onLostFocus)
-          }
-        }
-        detachControl() {
-          if (this._pointerInput) {
-            if (this._observer && (this.camera.ZJ()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
-              const qq = this.camera.Ba().getInputElement();
-              qq && qq.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
-            }
-            this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
-          }
-        }
-        checkInputs() {
-          if (null === this._offsetX || null === this._offsetY) return;
-          if (0 === this._offsetX && 0 === this._offsetY) return;
-          const qq = this.camera,
-            Eq = qq.movement.input,
-            gq = Eq.getEntry("touch", "rotate"),
-            Yq = Eq.getEntry("touch", "translate"),
-            lq = qq._calculateHandednessMultiplier(),
-            mq = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
-          if (gq) {
-            const Eq = gq.sensitivity ?? 1 / this.touchAngularSensibility;
-            qq.cameraRotation.y = this._offsetX * lq * Eq, mq && (qq.cameraRotation.x = -this._offsetY * lq * Eq)
-          }
-          if (!mq && Yq) {
-            const Eq = qq._computeLocalCameraSpeed(),
-              gq = Yq.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
-              lq = Oq.o.Na[0];
-            lq.Vqq(0, 0, Eq * this._offsetY * gq), Oq.e.RotationYawPitchRollToRef(qq.rotation.y, qq.rotation.x, 0, qq._cameraRotationMatrix), Oq.q.TransformCoordinatesToRef(lq, qq._cameraRotationMatrix, lq), qq.cameraDirection.addInPlace(lq)
-          }
-        }
-        getClassName() {
-          return "FreeCameraTouchInput"
-        }
-        getSimpleName() {
-          return "touch"
-        }
-      }, (() => {
-        const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        Eq = [(0, lq.M)()], gq = [(0, lq.M)()], (0, Yq.f)(null, null, Eq, {
-          kind: "field",
-          name: "touchAngularSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "touchAngularSensibility" in qq,
-            get: qq => qq.touchAngularSensibility,
-            set: (qq, Eq) => {
-              qq.touchAngularSensibility = Eq
-            }
-          },
-          metadata: Oq
-        }, mq, xq), (0, Yq.f)(null, null, gq, {
-          kind: "field",
-          name: "touchMoveSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: qq => "touchMoveSensibility" in qq,
-            get: qq => qq.touchMoveSensibility,
-            set: (qq, Eq) => {
-              qq.touchMoveSensibility = Eq
-            }
-          },
-          metadata: Oq
-        }, Aq, uq), Oq && Object.defineProperty(qq, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: Oq
-        })
-      })(), qq
-    })();
-    xq.d.FreeCameraTouchInput = Hq;
-    var oq, Pq, Qq, yq = gq(39636);
-    class tq extends xq.f {
-      constructor(qq) {
-        super(qq), this._mouseInput = null, this._mouseWheelInput = null
-      }
-      addKeyboard() {
-        return this.add(new uq), this
-      }
-      addMouse() {
-        let qq = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._mouseInput || (this._mouseInput = new Nq(qq), this.add(this._mouseInput)), this
-      }
-      removeMouse() {
-        return this._mouseInput && this.remove(this._mouseInput), this
-      }
-      addMouseWheel() {
-        return this._mouseWheelInput || (this._mouseWheelInput = new jq, this.add(this._mouseWheelInput)), this
-      }
-      removeMouseWheel() {
-        return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
-      }
-      addTouch() {
-        return this.add(new Hq), this
-      }
-      clear() {
-        super.clear(), this._mouseInput = null
-      }
-    }(oq = tq.prototype).addDeviceOrientation ?? (oq.addDeviceOrientation = (0, yq.i)("FreeCameraInputsManager", "addDeviceOrientation")), (Pq = tq.prototype).addVirtualJoystick ?? (Pq.addVirtualJoystick = (0, yq.i)("FreeCameraInputsManager", "addVirtualJoystick")), (Qq = tq.prototype).addGamepad ?? (Qq.addGamepad = (0, yq.i)("FreeCameraInputsManager", "addGamepad"));
-    var rq = gq(39653),
-      vq = gq(37171);
-    let hq = (() => {
-        var qq;
-        let Eq, gq, xq, Aq, uq = mq.h,
-          Bq = [],
-          Wq = [],
-          Nq = [],
-          aq = [],
-          Vq = [],
-          dq = [],
-          jq = [],
-          Hq = [];
-        return qq = class extends uq {
-          get angularSensibility() {
-            const qq = this.inputs.attached.mouse;
-            return qq ? qq.angularSensibility : 0
-          }
-          set angularSensibility(qq) {
-            const Eq = this.inputs.attached.mouse;
-            Eq && (Eq.angularSensibility = qq)
-          }
-          get keysUp() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysUp : []
-          }
-          set keysUp(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysUp = qq)
-          }
-          get keysUpward() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysUpward : []
-          }
-          set keysUpward(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysUpward = qq)
-          }
-          get keysDown() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysDown : []
-          }
-          set keysDown(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysDown = qq)
-          }
-          get keysDownward() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysDownward : []
-          }
-          set keysDownward(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysDownward = qq)
-          }
-          get keysLeft() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysLeft : []
-          }
-          set keysLeft(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysLeft = qq)
-          }
-          get keysRight() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysRight : []
-          }
-          set keysRight(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysRight = qq)
-          }
-          get keysRotateLeft() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysRotateLeft : []
-          }
-          set keysRotateLeft(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysRotateLeft = qq)
-          }
-          get keysRotateRight() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysRotateRight : []
-          }
-          set keysRotateRight(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysRotateRight = qq)
-          }
-          get keysRotateUp() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysRotateUp : []
-          }
-          set keysRotateUp(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysRotateUp = qq)
-          }
-          get keysRotateDown() {
-            const qq = this.inputs.attached.keyboard;
-            return qq ? qq.keysRotateDown : []
-          }
-          set keysRotateDown(qq) {
-            const Eq = this.inputs.attached.keyboard;
-            Eq && (Eq.keysRotateDown = qq)
-          }
-          constructor(qq, Eq, gq) {
-            var lq;
-            super(qq, Eq, gq, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), lq = this, this.ellipsoid = (0, Yq.i)(this, Bq, new Oq.q(.5, 1, .5)), this.ellipsoidOffset = ((0, Yq.i)(this, Wq), (0, Yq.i)(this, Nq, new Oq.q(0, 0, 0))), this.checkCollisions = ((0, Yq.i)(this, aq), (0, Yq.i)(this, Vq, !1)), this.applyGravity = ((0, Yq.i)(this, dq), (0, Yq.i)(this, jq, !1)), this.inputs = (0, Yq.i)(this, Hq), this._needMoveForGravity = !1, this._oldPosition = Oq.q.Zero(), this._diffPosition = Oq.q.Zero(), this._newPosition = Oq.q.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(qq, Eq) {
-              let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              lq._newPosition.WG(Eq), lq._newPosition.subtractToRef(lq._oldPosition, lq._diffPosition), lq._diffPosition.length() > rq.b.CollisionsEpsilon && (lq.position.addToRef(lq._diffPosition, lq._deferredPositionUpdate), lq._deferOnly ? lq._deferredUpdated = !0 : lq.position.WG(lq._deferredPositionUpdate), lq.qW && gq && lq.qW(gq))
-            }, this.inputs = new tq(this), this.inputs.addKeyboard().addMouse()
-          }
-          attachControl(qq, Eq) {
-            Eq = cq.f.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(Eq)
-          }
-          detachControl() {
-            this.inputs.detachElement(), this.cameraDirection = new Oq.q(0, 0, 0), this.cameraRotation = new Oq.p(0, 0)
-          }
-          get collisionMask() {
-            return this._collisionMask
-          }
-          set collisionMask(qq) {
-            this._collisionMask = isNaN(qq) ? -1 : qq
-          }
-          _collideWithWorld(qq) {
-            let Eq;
-            Eq = this.parent ? Oq.q.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, Eq.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
-            const gq = this.ZJ().collisionCoordinator;
-            this._collider || (this._collider = gq.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
-            let Yq = qq;
-            this.applyGravity && (Yq = qq.add(this.ZJ().gravity)), gq.getNewPosition(this._oldPosition, Yq, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
-          }
-          _checkInputs() {
-            this._localDirection || (this._localDirection = Oq.q.Zero(), this._transformedDirection = Oq.q.Zero()), this.inputs.checkInputs(), super._checkInputs()
-          }
-          set needMoveForGravity(qq) {
-            this._needMoveForGravity = qq
-          }
-          get needMoveForGravity() {
-            return this._needMoveForGravity
-          }
-          _decideIfNeedsToMove() {
-            return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
-          }
-          _updatePosition() {
-            this.checkCollisions && this.ZJ().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
-          }
-          dispose() {
-            this.inputs.clear(), super.dispose()
-          }
-          getClassName() {
-            return "FreeCamera"
-          }
-        }, (() => {
-          const Oq = "function" === typeof Symbol && Symbol.metadata ? Object.create(uq[Symbol.metadata] ?? null) : void 0;
-          Eq = [(0, lq.I)()], gq = [(0, lq.I)()], xq = [(0, lq.M)()], Aq = [(0, lq.M)()], (0, Yq.f)(null, null, Eq, {
-            kind: "field",
-            name: "ellipsoid",
-            static: !1,
-            private: !1,
-            access: {
-              has: qq => "ellipsoid" in qq,
-              get: qq => qq.ellipsoid,
-              set: (qq, Eq) => {
-                qq.ellipsoid = Eq
+              if (wC > bC) return null;
+              const nC = [0, 1, 2].map((QC => Math.min(ZC[QC] - 1, Math.max(0, Math.floor(CC[QC] + zC[QC] * wC))))),
+                fC = [0, 1, 2].map((CC => Math.sign(zC[CC]))),
+                oC = [0, 1, 2].map((ZC => {
+                  if (0 === fC[ZC]) return 1 / 0;
+                  return ((fC[ZC] > 0 ? nC[ZC] + 1 : nC[ZC]) - CC[ZC]) / zC[ZC]
+                })),
+                qC = [0, 1, 2].map((CC => 0 === fC[CC] ? 1 / 0 : Math.abs(1 / zC[CC])));
+              let FC = null;
+              for (;;) {
+                const CC = QC(nC[0], nC[1], nC[2]);
+                if (CC >= 1) return nC;
+                CC > 0 && (FC = [nC[0], nC[1], nC[2]]);
+                const zC = oC[0] < oC[1] ? oC[0] < oC[2] ? 0 : 2 : oC[1] < oC[2] ? 1 : 2;
+                if (oC[zC] > bC) return FC;
+                if (nC[zC] += fC[zC], oC[zC] += qC[zC], nC[zC] < 0 || nC[zC] >= ZC[zC]) return FC
               }
+            }(uz.position, Cz(uz), mz, ((zC, QC, wC) => (0, AC.y)(CC(zC, QC, wC), ZC, HC)));
+          return null === QC ? null : {
+            x: QC[0] + Kz[0],
+            y: QC[1] + Kz[1],
+            z: QC[2] + Kz[2],
+            value: CC(QC[0], QC[1], QC[2])
+          }
+        }), [xz, zC, Kz, uz, mz, ZC, HC]),
+        {
+          keyHandlers: Tz
+        } = (0, xC.g)({
+          isEnabled: xz,
+          claimedKeyCodes: dC,
+          AN: CC => {
+            hz((zC => function(CC, zC) {
+              const ZC = [Math.sin(CC.heading), 0, Math.cos(CC.heading)],
+                QC = nz(nz(fz(ZC, zC.forward), fz(zz(CC.heading), zC.right)), [0, zC.up, 0]);
+              return {
+                ...CC,
+                position: nz(CC.position, QC)
+              }
+            }(null !== zC && void 0 !== zC ? zC : rz.current.fittedView, CC)))
+          },
+          onZoomChange: Iz
+        });
+      (0, QC.useEffect)((() => {
+        const CC = qz.current;
+        if (!CC) return;
+        let zC;
+        try {
+          zC = function(CC, zC) {
+            const ZC = new wC.d(CC, !0, {
+                stencil: !1
+              }, !0),
+              QC = new bC.e(ZC),
+              [MC, gC, SC] = AC.L;
+            QC.clearColor = new qC.e(MC / 255, gC / 255, SC / 255, 1);
+            const pC = new nC.d("Heatmap3DCamera", FC.Eg.Zero(), QC);
+            pC.fov = zC, pC.minZ = .05;
+            const PC = new fC.e("Heatmap3DLight", new FC.Eg(.4, 1, -.6), QC);
+            PC.diffuse = qC.Color3.White(), PC.groundColor = qC.Color3.Black(), PC.specular = qC.Color3.Black();
+            const GC = new oC.StandardMaterial("Heatmap3DCellMaterial", QC);
+            GC.diffuseColor = new qC.Color3(.4, .4, .4), GC.emissiveColor = new qC.Color3(.62, .62, .62), GC.specularColor = qC.Color3.Black();
+            const RC = (0, WC.b)("Heatmap3DCells", {
+              size: 1
+            }, QC);
+            RC.material = GC, RC.tS = !1, RC.Hg = !0, RC.isVisible = !1;
+            const xC = (0, WC.b)("Heatmap3DTranslucentCells", {
+              size: 1
+            }, QC);
+            xC.material = GC, xC.hasVertexAlpha = !0, xC.tS = !1, xC.Hg = !0, xC.isVisible = !1;
+            const JC = new oC.StandardMaterial("Heatmap3DSchematicMaterial", QC);
+            JC.diffuseColor = new qC.Color3(.6, .6, .6), JC.emissiveColor = new qC.Color3(.4, .4, .4), JC.specularColor = qC.Color3.Black();
+            const IC = (0, WC.b)("Heatmap3DSchematicBlocks", {
+              size: 1
+            }, QC);
+            IC.material = JC, IC.tS = !1, IC.Hg = !0, IC.isVisible = !1;
+            const iC = (0, NC.b)("Heatmap3DTarget", {
+              lines: VC([-.52, -.52, -.52], [.52, .52, .52])
+            }, QC);
+            return iC.color = new qC.Color3(.06, .14, .23), iC.renderingGroupId = 1, iC.tS = !1, iC.isVisible = !1, {
+              engine: ZC,
+              sS: QC,
+              camera: pC,
+              cells: RC,
+              translucentCells: xC,
+              translucent: {
+                VS: new Float32Array(0),
+                colours: new Float32Array(0),
+                count: 0
+              },
+              translucentSortedFrom: null,
+              schematicBlocks: IC,
+              targetOutline: iC,
+              chunkGrid: null,
+              chunkGridCentre: null,
+              chunkGridOrigin: null,
+              targetFieldOfView: zC,
+              needsRender: !0
+            }
+          }(CC, rz.current.fieldOfView)
+        } catch (ZC) {
+          return console.error("Failed to start the 3D heatmap", ZC), void Mz(!0)
+        }
+        return Fz.current = zC, zC.engine.runRenderLoop((() => {
+          const CC = zC.camera;
+          CC.fov !== zC.targetFieldOfView && (CC.fov += (zC.targetFieldOfView - CC.fov) * (CC.fov > zC.targetFieldOfView ? .3 : .2), Math.abs(zC.targetFieldOfView - CC.fov) < 5e-4 && (CC.fov = zC.targetFieldOfView), zC.needsRender = !0), zC.needsRender && (zC.sS.render(), zC.needsRender = !zC.sS.isReady() || !zC.engine.areAllEffectsReady())
+        })), () => {
+          Fz.current = null, zC.engine.dispose()
+        }
+      }), []), (0, QC.useEffect)((() => {
+        const CC = qz.current;
+        if (!CC) return;
+        const zC = () => {
+            Gz.current = !1, Sz(document.pointerLockElement === CC)
+          },
+          ZC = () => {
+            Gz.current && (Gz.current = !1, Pz(!1))
+          },
+          QC = zC => {
+            const ZC = !rz.current.canLock && document.activeElement === CC && 0 !== (1 & zC.buttons);
+            if (document.pointerLockElement !== CC && !ZC) return;
+            const QC = rz.current.mouseSensitivity * eC;
+            hz((CC => function(CC, zC, ZC) {
+              const QC = 2 * Math.PI;
+              return {
+                ...CC,
+                heading: ((CC.heading + zC) % QC + QC) % QC,
+                pitch: Math.max(-cC, Math.min(cC, CC.pitch + ZC))
+              }
+            }(null !== CC && void 0 !== CC ? CC : rz.current.fittedView, zC.movementX * QC, zC.movementY * QC)))
+          };
+        return document.addEventListener("pointerlockchange", zC), document.addEventListener("pointerlockerror", ZC), document.addEventListener("pointermove", QC), () => {
+          document.removeEventListener("pointerlockchange", zC), document.removeEventListener("pointerlockerror", ZC), document.removeEventListener("pointermove", QC), document.pointerLockElement === CC && (0, JC.e)()
+        }
+      }), []), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && 0 !== Wz.width && 0 !== Wz.height && (CC.engine.resize(), CC.needsRender = !0)
+      }), [Wz.width, Wz.height]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && (CC.targetFieldOfView = Ez * (Jz ? vC : 1))
+      }), [Ez, Jz]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && function(CC, zC, ZC, QC) {
+          const wC = [],
+            bC = [],
+            nC = [],
+            fC = [];
+          for (let oC = 0; oC < zC.count; oC++) {
+            const CC = zC.values[oC],
+              qC = (0, AC.y)(CC, ZC, QC);
+            if (qC <= 0) continue;
+            const [FC, WC, NC] = (0, AC.q)((0, AC.E)(CC, ZC)), MC = qC >= 1;
+            (MC ? wC : nC).push(zC.positions[3 * oC] + .5, zC.positions[3 * oC + 1] + .5, zC.positions[3 * oC + 2] + .5), (MC ? bC : fC).push(FC / 255, WC / 255, NC / 255, qC)
+          }
+          OC(CC.cells, Float32Array.from(wC), Float32Array.from(bC), bC.length / 4), CC.translucent = {
+            VS: Float32Array.from(nC),
+            colours: Float32Array.from(fC),
+            count: fC.length / 4
+          }, CC.translucentSortedFrom = null, kC(CC), CC.needsRender = !0
+        }(CC, Hz, ZC, HC)
+      }), [Hz, ZC, HC]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && function(CC, zC) {
+          CC.chunkGridOrigin = zC, CC.chunkGridCentre = null, BC(CC)
+        }(CC, uC.min)
+      }), [uC]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && function(CC, zC, ZC) {
+          const QC = [],
+            wC = [];
+          if (null !== zC) {
+            const {
+              positions: CC,
+              colours: bC,
+              count: nC
+            } = zC.surface;
+            for (let zC = 0; zC < nC; zC++) {
+              const nC = [CC[3 * zC], CC[3 * zC + 1], CC[3 * zC + 2]];
+              [0, 1, 2].every((CC => nC[CC] >= ZC.min[CC] - mC && nC[CC] <= ZC.max[CC] + mC)) && (QC.push(nC[0] - ZC.min[0] + .5, nC[1] - ZC.min[1] + .5, nC[2] - ZC.min[2] + .5), wC.push(bC[3 * zC] / 255, bC[3 * zC + 1] / 255, bC[3 * zC + 2] / 255, 1))
+            }
+          }
+          OC(CC.schematicBlocks, Float32Array.from(QC), Float32Array.from(wC), wC.length / 4), CC.needsRender = !0
+        }(CC, sC, uC)
+      }), [sC, uC]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && null !== CC.chunkGrid && (CC.chunkGrid.isVisible = iz, CC.needsRender = !0)
+      }), [iz, uC]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && function(CC, zC, ZC) {
+          const {
+            camera: QC
+          } = CC;
+          QC.position.set(zC.position[0], zC.position[1], zC.position[2]), QC.rotation.set(zC.pitch, zC.heading, 0);
+          const wC = (EC + 1) * gC.f.Ig * Math.sqrt(3);
+          QC.maxZ = Math.max(wC, Math.hypot(...nz(zC.position, fz(wz({
+            min: [0, 0, 0],
+            max: ZC
+          }), -1))) + 2 * Math.hypot(...ZC)), BC(CC), kC(CC), CC.needsRender = !0
+        }(CC, uz, mz)
+      }), [uz, mz]), (0, QC.useEffect)((() => {
+        const CC = Fz.current;
+        null !== CC && (CC.targetOutline.isVisible = null !== sz, null !== sz && CC.targetOutline.position.set(sz.x - Kz[0] + .5, sz.y - Kz[1] + .5, sz.z - Kz[2] + .5), CC.needsRender = !0)
+      }), [sz, Kz]);
+      return (0, IC.jsxs)("div", {
+        className: "StudioHeatmapMap StudioHeatmap3D",
+        ref: oz,
+        children: [(0, IC.jsx)("canvas", {
+          className: "StudioHeatmapMapCanvas",
+          ref: qz,
+          style: {
+            width: `${Wz.width}px`,
+            height: `${Wz.height}px`
+          },
+          tabIndex: 0,
+          "aria-label": LC("3D heatmap"),
+          onClick: () => {
+            const CC = qz.current;
+            if (null === CC) return;
+            if (CC.focus({
+                preventScroll: !0
+              }), gz || !pz) return;
+            const zC = CC.requestPointerLock();
+            zC instanceof Promise ? zC.catch((CC => {
+              CC instanceof DOMException && ("WrongDocumentError" === CC.name || "NotSupportedError" === CC.name) && Pz(!1)
+            })) : Gz.current = !0
+          },
+          ...Tz,
+          onKeyDown: CC => {
+            if (xz && hC.has(CC.code)) return CC.preventDefault(), void(() => {
+              const CC = qz.current;
+              null !== CC && document.pointerLockElement === CC ? (0, JC.e)() : null === CC || void 0 === CC || CC.blur()
+            })();
+            const zC = KC[CC.code];
+            return xz && void 0 !== zC ? (CC.preventDefault(), void aC(zC)) : xz && (0, xC.d)("replayPlayPause", CC.code) && !(0, xC.d)("Zoom", CC.code) ? (CC.preventDefault(), void(CC.repeat || DC())) : xz && CC.code === YC ? (CC.preventDefault(), void tC()) : xz && CC.code === XC ? (CC.preventDefault(), void hz(null)) : xz && CC.code === lC ? (CC.preventDefault(), void vz((CC => !CC))) : void Tz.onKeyDown(CC)
+          },
+          onFocus: () => {
+            Az(!0)
+          },
+          onBlur: () => {
+            Az(!1), Tz.onBlur()
+          }
+        }), Nz && (0, IC.jsx)("div", {
+          className: "StudioHeatmap3DUnavailable SmallTextLight",
+          children: LC("3D view isn't available in this browser.")
+        }), xz && (0, IC.jsx)("div", {
+          className: "StudioHeatmap3DCrosshair"
+        }), (0, IC.jsx)("div", {
+          className: "StudioHeatmap3DCoordinates SmallTextLight",
+          children: uz.position.map(((CC, zC) => (CC + Kz[zC]).toFixed(2))).join(" ")
+        }), iz && (0, IC.jsx)(UC, {
+          heading: uz.heading,
+          pitch: uz.pitch,
+          onViewFrom: CC => {
+            const zC = fz(CC, -1),
+              ZC = 0 === zC[1] ? {
+                heading: Math.atan2(zC[0], zC[2]),
+                pitch: 0
+              } : {
+                heading: uz.heading,
+                pitch: zC[1] < 0 ? cC : -cC
+              };
+            hz(Zz(Xz, lz, Ez, ZC))
+          },
+          onTurn: (CC, zC) => {
+            hz((ZC => function(CC, zC, ZC, QC) {
+              return Qz(CC, zC, {
+                heading: CC.heading + ZC * jC,
+                pitch: Math.max(-cC, Math.min(cC, CC.pitch + QC * jC))
+              })
+            }(null !== ZC && void 0 !== ZC ? ZC : rz.current.fittedView, wz(Xz), CC, zC)))
+          },
+          onFlip: () => {
+            hz((CC => function(CC, zC) {
+              return Qz(CC, zC, {
+                heading: CC.heading + Math.PI,
+                pitch: -CC.pitch
+              })
+            }(null !== CC && void 0 !== CC ? CC : rz.current.fittedView, wz(Xz))))
+          }
+        }), null !== sz && (0, IC.jsx)("div", {
+          className: "StudioHeatmapMapReadout SmallTextLight",
+          children: null === yC ? LC("studio:heatmapBlockReadout", {
+            x: sz.x,
+            y: sz.y,
+            z: sz.z,
+            count: (0, MC.Z)(sz.value)
+          }) : yC(sz.x, sz.y, sz.z, sz.value)
+        }), (0, IC.jsxs)("div", {
+          className: "StudioHeatmapMapControls",
+          children: [TC, (0, IC.jsx)(GC.O, {
+            active: null === ez,
+            onClick: () => {
+              hz(null)
             },
-            metadata: Oq
-          }, Bq, Wq), (0, Yq.f)(null, null, gq, {
-            kind: "field",
-            name: "ellipsoidOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: qq => "ellipsoidOffset" in qq,
-              get: qq => qq.ellipsoidOffset,
-              set: (qq, Eq) => {
-                qq.ellipsoidOffset = Eq
-              }
-            },
-            metadata: Oq
-          }, Nq, aq), (0, Yq.f)(null, null, xq, {
-            kind: "field",
-            name: "checkCollisions",
-            static: !1,
-            private: !1,
-            access: {
-              has: qq => "checkCollisions" in qq,
-              get: qq => qq.checkCollisions,
-              set: (qq, Eq) => {
-                qq.checkCollisions = Eq
-              }
-            },
-            metadata: Oq
-          }, Vq, dq), (0, Yq.f)(null, null, Aq, {
-            kind: "field",
-            name: "applyGravity",
-            static: !1,
-            private: !1,
-            access: {
-              has: qq => "applyGravity" in qq,
-              get: qq => qq.applyGravity,
-              set: (qq, Eq) => {
-                qq.applyGravity = Eq
-              }
-            },
-            metadata: Oq
-          }, jq, Hq), Oq && Object.defineProperty(qq, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: Oq
+            children: (0, IC.jsx)(RC.c, {
+              name: "eye"
+            })
+          })]
+        })]
+      })
+    }
+
+    function UC(CC) {
+      let {
+        heading: zC,
+        pitch: ZC,
+        onViewFrom: wC,
+        onTurn: bC,
+        onFlip: nC
+      } = CC;
+      const {
+        t: fC
+      } = (0, SC.y)(), oC = (0, QC.useRef)(null), qC = Cz({
+        heading: zC,
+        pitch: ZC
+      }), FC = zz(zC), WC = qz(qC, FC), NC = aC + tC + 2, MC = TC.flatMap((CC => [1, -1].map((zC => {
+        const ZC = fz(CC.direction, zC);
+        return {
+          ...CC,
+          sign: zC,
+          direction: ZC,
+          endX: NC + oz(ZC, FC) * aC,
+          endY: NC - oz(ZC, WC) * aC,
+          depth: oz(ZC, qC)
+        }
+      })))).sort(((CC, zC) => zC.depth - CC.depth));
+      return (0, IC.jsxs)("svg", {
+        className: "StudioHeatmap3DGizmo",
+        width: 2 * NC,
+        height: 2 * NC,
+        "aria-hidden": !0,
+        onPointerDown: CC => {
+          var zC, ZC;
+          CC.currentTarget.setPointerCapture(CC.pointerId);
+          const QC = CC.target,
+            wC = QC.getAttribute("data-end");
+          oC.current = {
+            pointerId: CC.pointerId,
+            x: CC.clientX,
+            y: CC.clientY,
+            travel: 0,
+            side: null === wC ? null : null !== (zC = null === (ZC = MC[Number(wC)]) || void 0 === ZC ? void 0 : ZC.direction) && void 0 !== zC ? zC : null,
+            isOnMiddle: QC.hasAttribute("data-middle")
+          }
+        },
+        onPointerMove: CC => {
+          const zC = oC.current;
+          if (null === zC || zC.pointerId !== CC.pointerId) return;
+          const ZC = CC.clientX - zC.x,
+            QC = CC.clientY - zC.y;
+          zC.x = CC.clientX, zC.y = CC.clientY, zC.travel += Math.abs(ZC) + Math.abs(QC), zC.travel >= yC && bC(ZC, QC)
+        },
+        onPointerUp: CC => {
+          const zC = oC.current;
+          oC.current = null, null === zC || zC.pointerId !== CC.pointerId || zC.travel >= yC || (null !== zC.side ? wC(zC.side) : zC.isOnMiddle && nC())
+        },
+        onPointerCancel: () => {
+          oC.current = null
+        },
+        children: [MC.map(((CC, zC) => {
+          const ZC = CC.sign > 0;
+          return (0, IC.jsxs)("g", {
+            children: [(0, IC.jsx)("line", {
+              x1: NC,
+              y1: NC,
+              x2: CC.endX,
+              y2: CC.endY,
+              stroke: CC.colour,
+              strokeOpacity: ZC ? 1 : .5,
+              strokeWidth: 2,
+              strokeLinecap: "round"
+            }), (0, IC.jsx)("circle", {
+              className: "StudioHeatmap3DGizmoEnd",
+              "data-end": zC,
+              cx: CC.endX,
+              cy: CC.endY,
+              r: ZC ? tC : tC - 1,
+              fill: CC.colour,
+              fillOpacity: ZC ? 1 : .3,
+              stroke: CC.colour,
+              strokeWidth: ZC ? 0 : 1.5,
+              children: (0, IC.jsx)("title", {
+                children: `${fC("View from")} ${ZC?"+":"\u2212"}${CC.name}`
+              })
+            }), ZC && (0, IC.jsx)("text", {
+              pointerEvents: "none",
+              x: CC.endX,
+              y: CC.endY,
+              fill: "#151515",
+              fontSize: 9,
+              fontWeight: "bold",
+              textAnchor: "middle",
+              dominantBaseline: "central",
+              children: CC.name
+            })]
+          }, `${ZC?"+":"-"}${CC.name}`)
+        })), (0, IC.jsx)("circle", {
+          className: "StudioHeatmap3DGizmoEnd",
+          "data-middle": !0,
+          cx: NC,
+          cy: NC,
+          r: DC,
+          fill: "#d0d0d0",
+          fillOpacity: .85,
+          children: (0, IC.jsx)("title", {
+            children: fC("View from the opposite side")
           })
-        })(), qq
-      })(),
-      nq = !1;
-    nq || (nq = !0, (0, vq.g)("BABYLON.FreeCamera", hq))
+        })]
+      })
+    }
+
+    function BC(CC) {
+      var zC, ZC, QC;
+      const {
+        chunkGridOrigin: wC,
+        camera: bC
+      } = CC;
+      if (null === wC) return;
+      const nC = [bC.position.x, bC.position.y, bC.position.z],
+        fC = [0, 2].map((CC => Math.floor((nC[CC] + wC[CC]) / gC.f.Ig))),
+        oC = CC.chunkGridCentre;
+      if (null !== oC && oC.every(((CC, zC) => CC === fC[zC]))) return;
+      const WC = null === (zC = null === (ZC = CC.chunkGrid) || void 0 === ZC ? void 0 : ZC.isVisible) || void 0 === zC || zC;
+      null === (QC = CC.chunkGrid) || void 0 === QC || QC.dispose();
+      const [MC, SC] = [0, 2].map(((CC, zC) => {
+        const ZC = [];
+        for (let QC = fC[zC] - EC; QC <= fC[zC] + EC + 1; QC++) ZC.push(QC * gC.f.Ig - wC[CC]);
+        return ZC
+      })), pC = -wC[1], PC = [];
+      for (const qC of SC) PC.push([new FC.Eg(MC[0], pC, qC), new FC.Eg(MC[MC.length - 1], pC, qC)]);
+      for (const qC of MC) PC.push([new FC.Eg(qC, pC, SC[0]), new FC.Eg(qC, pC, SC[SC.length - 1])]);
+      const GC = (0, NC.b)("Heatmap3DChunkGrid", {
+        lines: PC
+      }, CC.sS);
+      GC.color = new qC.Color3(.45, .6, .78), GC.tS = !1, GC.isVisible = WC, CC.chunkGrid = GC, CC.chunkGridCentre = fC, CC.needsRender = !0
+    }
+
+    function OC(CC, zC, ZC, QC) {
+      CC.E_("matrix", function(CC, zC) {
+        const ZC = new Float32Array(16 * zC);
+        for (let QC = 0; QC < zC; QC++) {
+          const zC = 16 * QC;
+          ZC[zC] = 1, ZC[zC + 5] = 1, ZC[zC + 10] = 1, ZC[zC + 12] = CC[3 * QC], ZC[zC + 13] = CC[3 * QC + 1], ZC[zC + 14] = CC[3 * QC + 2], ZC[zC + 15] = 1
+        }
+        return ZC
+      }(zC, QC), 16, !0), CC.E_("color", ZC, 4, !0), CC.isVisible = QC > 0
+    }
+
+    function kC(CC) {
+      const {
+        camera: zC,
+        translucent: ZC
+      } = CC, QC = [zC.position.x, zC.position.y, zC.position.z], wC = CC.translucentSortedFrom;
+      if (null !== wC && Math.hypot(QC[0] - wC[0], QC[1] - wC[1], QC[2] - wC[2]) < HC) return;
+      CC.translucentSortedFrom = QC;
+      const bC = new Float64Array(ZC.count),
+        nC = new Uint32Array(ZC.count);
+      for (let qC = 0; qC < ZC.count; qC++) {
+        const CC = ZC.VS[3 * qC] - QC[0],
+          zC = ZC.VS[3 * qC + 1] - QC[1],
+          wC = ZC.VS[3 * qC + 2] - QC[2];
+        bC[qC] = CC * CC + zC * zC + wC * wC, nC[qC] = qC
+      }
+      nC.sort(((CC, zC) => bC[zC] - bC[CC]));
+      const fC = new Float32Array(3 * ZC.count),
+        oC = new Float32Array(4 * ZC.count);
+      nC.forEach(((CC, zC) => {
+        fC.set(ZC.VS.subarray(3 * CC, 3 * CC + 3), 3 * zC), oC.set(ZC.colours.subarray(4 * CC, 4 * CC + 4), 4 * zC)
+      })), OC(CC.translucentCells, fC, oC, ZC.count), CC.needsRender = !0
+    }
+
+    function VC(CC, zC) {
+      const ZC = (ZC, QC, wC) => new FC.Eg(0 === ZC ? CC[0] : zC[0], 0 === QC ? CC[1] : zC[1], 0 === wC ? CC[2] : zC[2]),
+        QC = [];
+      for (const wC of [0, 1])
+        for (const CC of [0, 1]) QC.push([ZC(0, wC, CC), ZC(1, wC, CC)], [ZC(wC, 0, CC), ZC(wC, 1, CC)], [ZC(wC, CC, 0), ZC(wC, CC, 1)]);
+      return QC
+    }
+
+    function Cz(CC) {
+      return [Math.sin(CC.heading) * Math.cos(CC.pitch), -Math.sin(CC.pitch), Math.cos(CC.heading) * Math.cos(CC.pitch)]
+    }
+
+    function zz(CC) {
+      return [Math.cos(CC), 0, -Math.sin(CC)]
+    }
+
+    function Zz(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: uC,
+        pitch: rC
+      };
+      const wC = [CC.max[0] - CC.min[0], CC.max[1] - CC.min[1], CC.max[2] - CC.min[2]],
+        bC = Cz(QC),
+        nC = zz(QC.heading),
+        fC = qz(bC, nC),
+        oC = Math.tan(ZC / 2),
+        qC = oC * zC;
+      let FC = 1;
+      for (const WC of [-wC[0] / 2, wC[0] / 2])
+        for (const CC of [-wC[1] / 2, wC[1] / 2])
+          for (const zC of [-wC[2] / 2, wC[2] / 2]) {
+            const ZC = [WC, CC, zC],
+              QC = oz(ZC, bC);
+            FC = Math.max(FC, Math.abs(oz(ZC, nC)) / qC - QC, Math.abs(oz(ZC, fC)) / oC - QC)
+          }
+      return {
+        position: nz([CC.min[0] + wC[0] / 2, CC.min[1] + wC[1] / 2, CC.min[2] + wC[2] / 2], fz(bC, -FC * sC)),
+        heading: QC.heading,
+        pitch: QC.pitch
+      }
+    }
+
+    function Qz(CC, zC, ZC) {
+      const QC = bz(CC),
+        wC = bz(ZC),
+        bC = nz(CC.position, fz(zC, -1)),
+        nC = [0, 1, 2].reduce(((CC, zC) => nz(CC, fz(wC[zC], oz(bC, QC[zC])))), [0, 0, 0]);
+      return {
+        position: nz(zC, nC),
+        heading: ZC.heading,
+        pitch: ZC.pitch
+      }
+    }
+
+    function wz(CC) {
+      return fz(nz(CC.min, CC.max), .5)
+    }
+
+    function bz(CC) {
+      const zC = Cz(CC),
+        ZC = zz(CC.heading);
+      return [zC, ZC, qz(zC, ZC)]
+    }
+
+    function nz(CC, zC) {
+      return [CC[0] + zC[0], CC[1] + zC[1], CC[2] + zC[2]]
+    }
+
+    function fz(CC, zC) {
+      return [CC[0] * zC, CC[1] * zC, CC[2] * zC]
+    }
+
+    function oz(CC, zC) {
+      return CC[0] * zC[0] + CC[1] * zC[1] + CC[2] * zC[2]
+    }
+
+    function qz(CC, zC) {
+      return [CC[1] * zC[2] - CC[2] * zC[1], CC[2] * zC[0] - CC[0] * zC[2], CC[0] * zC[1] - CC[1] * zC[0]]
+    }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

@@ -269,13 +269,6 @@
   text-align: center
 }
 
-.ShaderPackDropZone .ShaderPackDropZoneButtons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .75rem;
-  justify-content: center
-}
-
 .ShaderPackDropZone.ActiveDrag .ShaderPackDropZoneIcon {
   opacity: 1
 }
@@ -283,4 +276,11 @@
 .ShaderPackDropZone.Disabled {
   opacity: .5;
   pointer-events: none
+}
+
+.PackPickButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  justify-content: center
 }

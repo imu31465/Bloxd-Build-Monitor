@@ -1,156 +1,573 @@
 export const id = 264;
 export const ids = [264];
 export const modules = {
-  40797: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      BloxdInformation: () => Nq
+  40297: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => IC,
+      f: () => xC,
+      i: () => RC,
+      k: () => AC,
+      o: () => GC,
+      r: () => PC
     });
-    var Yq = gq(1183),
-      lq = gq(57),
-      Oq = gq(96),
-      mq = gq(1422),
-      xq = gq(136),
-      Aq = gq(1025),
-      cq = gq(1070);
-    const uq = (0, lq.lazy)((() => gq.e(117).then((() => gq(6390))))),
-      Bq = (0, lq.lazy)((() => gq.e(118).then((() => gq(6398)))));
-
-    function Wq() {
-      return (0, cq.jsxs)("div", {
-        className: "LegalText",
-        children: [(0, cq.jsx)("div", {
-          className: "BloxdInformationHeader FullyFancyText",
-          children: "Security Exploit Bounty Program"
-        }), (0, cq.jsx)("p", {
-          children: "We have a program for reporting security exploits. Find an important security flaw in Bloxd? Report it through the process below. Please include steps to reproduce the exploit, including any relevant code if the exploit requires it. You will receive the reward if we verify and fix the exploit."
-        }), (0, cq.jsx)("h3", {
-          children: "1. How to Report"
-        }), (0, cq.jsxs)("p", {
-          children: ["Please follow the instructions on", " ", (0, cq.jsx)("a", {
-            href: "https://forms.gle/wUL8WiH3LbGiJBzF7",
-            target: "_blank",
-            rel: "noreferrer",
-            children: "this form"
-          }), " ", "to report the exploit."]
-        }), (0, cq.jsx)("h3", {
-          children: "2. Frequently Asked Questions"
-        }), (0, cq.jsx)("p", {
-          children: (0, cq.jsx)("b", {
-            children: "Q: When can I expect a response?"
-          })
-        }), (0, cq.jsx)("p", {
-          children: "A: If you've left any contact details, you will typically receive a response within two to four weeks, but we will try to respond as soon as possible."
-        }), (0, cq.jsx)("p", {
-          children: (0, cq.jsx)("b", {
-            children: "Q: Can I remain anonymous?"
-          })
-        }), (0, cq.jsx)("p", {
-          children: "A: Yes, but we will be unable to contact you for rewards if you do not leave any contact details."
-        }), (0, cq.jsx)("p", {
-          children: (0, cq.jsx)("b", {
-            children: "Q: What if multiple people report the same exploit, complete with repro steps?"
-          })
-        }), (0, cq.jsx)("p", {
-          children: "A: Typically, only the first reporter will receive the reward."
-        }), (0, cq.jsx)("p", {
-          children: (0, cq.jsx)("b", {
-            children: "Q: What is out of scope?"
-          })
-        }), (0, cq.jsxs)("p", {
-          children: ["A:", (0, cq.jsxs)("ul", {
-            children: [(0, cq.jsx)("li", {
-              children: "Social engineering / phishing"
-            }), (0, cq.jsx)("li", {
-              children: "DDoS attacks. If an attack requires a large number of computers to hit our servers with packets, it is out of scope. However, if a single computer/script can execute the attack, it is in scope of this programme."
-            }), (0, cq.jsx)("li", {
-              children: "Use of stolen credentials"
-            }), (0, cq.jsx)("li", {
-              children: "Data that is already public or user-supplied (e.g. usernames, chat, etc)"
-            }), (0, cq.jsx)("li", {
-              children: "Non-security related bugs - please report in #report-a-bug in our discord"
-            })]
-          })]
-        }), (0, cq.jsx)("p", {
-          children: (0, cq.jsx)("b", {
-            children: "Q: I'm banned in Bloxd, am I still eligible to submit exploits through this program?"
-          })
-        }), (0, cq.jsx)("p", {
-          children: "A: Yes, as long as you follow the rules laid out with respect to the exploit you are reporting. I.e. don't abuse or share the exploit, etc."
-        })]
-      })
+    var QC = ZC(39842),
+      wC = ZC(39910),
+      bC = ZC(36963),
+      nC = ZC(39959),
+      fC = ZC(40303),
+      oC = ZC(40175),
+      qC = ZC(39867),
+      FC = ZC(40167),
+      WC = ZC(36985),
+      NC = ZC(40157),
+      MC = ZC(40151),
+      gC = ZC(40196),
+      SC = ZC(37002);
+    const pC = {
+      effect: null,
+      subMesh: null
+    };
+    class PC extends FC.e {
+      constructor(CC, zC, ZC) {
+        let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        super(CC, zC, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4]), this._textures = {}, this._internalTextures = {}, this._textureArrays = {}, this._externalTextures = {}, this._floats = {}, this._ints = {}, this._uints = {}, this._floatsArrays = {}, this._colors3 = {}, this._colors3Arrays = {}, this._colors4 = {}, this._colors4Arrays = {}, this._vectors2 = {}, this._vectors3 = {}, this._vectors4 = {}, this._quaternions = {}, this._quaternionsArrays = {}, this._matrices = {}, this._matrixArrays = {}, this._matrices3x3 = {}, this._matrices2x2 = {}, this._vectors2Arrays = {}, this._vectors3Arrays = {}, this._vectors4Arrays = {}, this._uniformBuffers = {}, this._textureSamplers = {}, this._storageBuffers = {}, this._cachedWorldViewMatrix = new bC.b, this._cachedWorldViewProjectionMatrix = new bC.b, this._multiview = !1, this._vertexPullingMetadata = null, this._materialHelperNeedsPreviousMatrices = !1, this._shaderPath = ZC, this._options = {
+          needAlphaBlending: !1,
+          needAlphaTesting: !1,
+          attributes: ["position", "normal", "uv"],
+          uniforms: ["worldViewProjection"],
+          uniformBuffers: [],
+          samplers: [],
+          externalTextures: [],
+          samplerObjects: [],
+          storageBuffers: [],
+          defines: [],
+          useClipPlane: !1,
+          ...QC
+        }
+      }
+      get shaderPath() {
+        return this._shaderPath
+      }
+      set shaderPath(CC) {
+        this._shaderPath = CC
+      }
+      get options() {
+        return this._options
+      }
+      get isMultiview() {
+        return this._multiview
+      }
+      getClassName() {
+        return "ShaderMaterial"
+      }
+      needAlphaBlending() {
+        return this.alpha < 1 || this._options.needAlphaBlending
+      }
+      needAlphaTesting() {
+        return this._options.needAlphaTesting
+      }
+      _checkUniform(CC) {
+        -1 === this._options.uniforms.indexOf(CC) && this._options.uniforms.push(CC)
+      }
+      setTexture(CC, zC) {
+        return -1 === this._options.samplers.indexOf(CC) && this._options.samplers.push(CC), this._textures[CC] = zC, this
+      }
+      setInternalTexture(CC, zC) {
+        return -1 === this._options.samplers.indexOf(CC) && this._options.samplers.push(CC), this._internalTextures[CC] = zC, this
+      }
+      removeTexture(CC) {
+        delete this._textures[CC]
+      }
+      setTextureArray(CC, zC) {
+        return -1 === this._options.samplers.indexOf(CC) && this._options.samplers.push(CC), this._checkUniform(CC), this._textureArrays[CC] = zC, this
+      }
+      setExternalTexture(CC, zC) {
+        return -1 === this._options.externalTextures.indexOf(CC) && this._options.externalTextures.push(CC), this._externalTextures[CC] = zC, this
+      }
+      setFloat(CC, zC) {
+        return this._checkUniform(CC), this._floats[CC] = zC, this
+      }
+      setInt(CC, zC) {
+        return this._checkUniform(CC), this._ints[CC] = zC, this
+      }
+      setUInt(CC, zC) {
+        return this._checkUniform(CC), this._uints[CC] = zC, this
+      }
+      setFloats(CC, zC) {
+        return this._checkUniform(CC), this._floatsArrays[CC] = zC, this
+      }
+      setColor3(CC, zC) {
+        return this._checkUniform(CC), this._colors3[CC] = zC, this
+      }
+      setColor3Array(CC, zC) {
+        return this._checkUniform(CC), this._colors3Arrays[CC] = zC.reduce(((CC, zC) => (CC.push(zC.r, zC.g, zC.b), CC)), []), this
+      }
+      setColor4(CC, zC) {
+        return this._checkUniform(CC), this._colors4[CC] = zC, this
+      }
+      setColor4Array(CC, zC) {
+        return this._checkUniform(CC), this._colors4Arrays[CC] = zC.reduce(((CC, zC) => (CC.push(zC.r, zC.g, zC.b, zC.a), CC)), []), this
+      }
+      setVector2(CC, zC) {
+        return this._checkUniform(CC), this._vectors2[CC] = zC, this
+      }
+      setVector3(CC, zC) {
+        return this._checkUniform(CC), this._vectors3[CC] = zC, this
+      }
+      setVector4(CC, zC) {
+        return this._checkUniform(CC), this._vectors4[CC] = zC, this
+      }
+      setQuaternion(CC, zC) {
+        return this._checkUniform(CC), this._quaternions[CC] = zC, this
+      }
+      setQuaternionArray(CC, zC) {
+        return this._checkUniform(CC), this._quaternionsArrays[CC] = zC.reduce(((CC, zC) => (zC.toArray(CC, CC.length), CC)), []), this
+      }
+      setMatrix(CC, zC) {
+        return this._checkUniform(CC), this._matrices[CC] = zC, this
+      }
+      setMatrices(CC, zC) {
+        this._checkUniform(CC);
+        const ZC = new Float32Array(16 * zC.length);
+        for (let QC = 0; QC < zC.length; QC++) {
+          zC[QC].copyToArray(ZC, 16 * QC)
+        }
+        return this._matrixArrays[CC] = ZC, this
+      }
+      setMatrix3x3(CC, zC) {
+        return this._checkUniform(CC), this._matrices3x3[CC] = zC, this
+      }
+      setMatrix2x2(CC, zC) {
+        return this._checkUniform(CC), this._matrices2x2[CC] = zC, this
+      }
+      setArray2(CC, zC) {
+        return this._checkUniform(CC), this._vectors2Arrays[CC] = zC, this
+      }
+      setArray3(CC, zC) {
+        return this._checkUniform(CC), this._vectors3Arrays[CC] = zC, this
+      }
+      setArray4(CC, zC) {
+        return this._checkUniform(CC), this._vectors4Arrays[CC] = zC, this
+      }
+      setUniformBuffer(CC, zC) {
+        return -1 === this._options.uniformBuffers.indexOf(CC) && this._options.uniformBuffers.push(CC), this._uniformBuffers[CC] = zC, this
+      }
+      setTextureSampler(CC, zC) {
+        return -1 === this._options.samplerObjects.indexOf(CC) && this._options.samplerObjects.push(CC), this._textureSamplers[CC] = zC, this
+      }
+      setStorageBuffer(CC, zC) {
+        return -1 === this._options.storageBuffers.indexOf(CC) && this._options.storageBuffers.push(CC), this._storageBuffers[CC] = zC, this
+      }
+      setDefine(CC, zC) {
+        const ZC = CC.trimEnd() + " ",
+          QC = this.options.defines.findIndex((zC => zC === CC || zC.startsWith(ZC)));
+        return QC >= 0 && this.options.defines.splice(QC, 1), ("boolean" !== typeof zC || zC) && this.options.defines.push(ZC + zC), this
+      }
+      isReadyForSubMesh(CC, zC, ZC) {
+        return this.isReady(CC, ZC, zC)
+      }
+      isReady(CC, zC, ZC) {
+        const QC = ZC && this._storeEffectOnSubMeshes;
+        if (this.isFrozen) {
+          const CC = QC ? ZC._drawWrapper : this._drawWrapper;
+          if (CC.effect && CC._wasPreviouslyReady && CC._wasPreviouslyUsingInstances === zC) return !0
+        }
+        const bC = this.Km(),
+          fC = bC.mg(),
+          qC = [],
+          FC = [];
+        let WC = null,
+          SC = this._shaderPath,
+          PC = this._options.uniforms,
+          GC = this._options.uniformBuffers,
+          RC = this._options.samplers;
+        fC.getCaps().multiview && bC.activeCamera && bC.activeCamera.outputRenderTarget && bC.activeCamera.outputRenderTarget.getViewCount() > 1 && (this._multiview = !0, qC.push("#define MULTIVIEW"), -1 !== PC.indexOf("viewProjection") && -1 === PC.indexOf("viewProjectionR") && PC.push("viewProjectionR"));
+        for (let wC = 0; wC < this._options.defines.length; wC++) {
+          const CC = 0 === this._options.defines[wC].indexOf("#define") ? this._options.defines[wC] : `#define ${this._options.defines[wC]}`;
+          qC.push(CC)
+        }
+        for (let wC = 0; wC < this._options.attributes.length; wC++) FC.push(this._options.attributes[wC]);
+        if (CC && CC.isVerticesDataPresent(nC.k.ColorKind) && (-1 === FC.indexOf(nC.k.ColorKind) && FC.push(nC.k.ColorKind), qC.push("#define VERTEXCOLOR")), zC && (qC.push("#define INSTANCES"), (0, MC.Ab)(FC, this._materialHelperNeedsPreviousMatrices), CC?.hasThinInstances && (qC.push("#define THIN_INSTANCES"), CC && CC.isVerticesDataPresent(nC.k.ColorInstanceKind) && (FC.push(nC.k.ColorInstanceKind), qC.push("#define INSTANCESCOLOR")))), CC && CC.useBones && CC.computeBonesUsingShaders && CC.skeleton) {
+          FC.push(nC.k.MatricesIndicesKind), FC.push(nC.k.MatricesWeightsKind), CC.numBoneInfluencers > 4 && (FC.push(nC.k.MatricesIndicesExtraKind), FC.push(nC.k.MatricesWeightsExtraKind));
+          const zC = CC.skeleton;
+          qC.push("#define NUM_BONE_INFLUENCERS " + CC.numBoneInfluencers), WC = new oC.c, WC.addCPUSkinningFallback(0, CC), zC.isUsingTextureForMatrices ? (qC.push("#define BONETEXTURE"), -1 === PC.indexOf("boneTextureInfo") && PC.push("boneTextureInfo"), -1 === this._options.samplers.indexOf("boneSampler") && this._options.samplers.push("boneSampler")) : (qC.push("#define BonesPerMesh " + (zC.bones.length + 1)), -1 === PC.indexOf("mBones") && PC.push("mBones"))
+        } else qC.push("#define NUM_BONE_INFLUENCERS 0");
+        let AC = 0;
+        const xC = CC ? CC.morphTargetManager : null;
+        if (xC) {
+          const zC = -1 !== qC.indexOf("#define UV1"),
+            ZC = -1 !== qC.indexOf("#define UV2"),
+            QC = -1 !== qC.indexOf("#define TANGENT"),
+            wC = -1 !== qC.indexOf("#define NORMAL"),
+            bC = -1 !== qC.indexOf("#define VERTEXCOLOR");
+          AC = (0, MC.T)(xC, qC, FC, CC, !0, wC, QC, zC, ZC, bC), xC.isUsingTextureForTargets && (-1 === PC.indexOf("morphTargetTextureIndices") && PC.push("morphTargetTextureIndices"), -1 === this._options.samplers.indexOf("morphTargets") && this._options.samplers.push("morphTargets")), AC > 0 && (PC = PC.slice(), PC.push("morphTargetInfluences"), PC.push("morphTargetCount"), PC.push("morphTargetTextureInfo"), PC.push("morphTargetTextureIndices"))
+        } else qC.push("#define NUM_MORPH_INFLUENCERS 0");
+        if (CC) {
+          const ZC = CC.bakedVertexAnimationManager;
+          ZC && ZC.isEnabled && (qC.push("#define BAKED_VERTEX_ANIMATION_TEXTURE"), -1 === PC.indexOf("bakedVertexAnimationSettings") && PC.push("bakedVertexAnimationSettings"), -1 === PC.indexOf("bakedVertexAnimationTextureSizeInverted") && PC.push("bakedVertexAnimationTextureSizeInverted"), -1 === PC.indexOf("bakedVertexAnimationTime") && PC.push("bakedVertexAnimationTime"), -1 === this._options.samplers.indexOf("bakedVertexAnimationTexture") && this._options.samplers.push("bakedVertexAnimationTexture"), zC && FC.push("bakedVertexAnimationSettingsInstanced"))
+        }
+        for (const wC in this._textures)
+          if (!this._textures[wC].isReady()) return !1;
+        for (const wC in this._internalTextures)
+          if (!this._internalTextures[wC].isReady) return !1;
+        CC && this.needAlphaTestingForMesh(CC) && qC.push("#define ALPHATEST"), !1 !== this._options.useClipPlane && ((0, NC.d)(PC), (0, NC.l)(this, bC, qC)), bC.fogEnabled && CC?.applyFog && bC.fogMode !== wC.g.FOGMODE_NONE && (qC.push("#define FOG"), -1 === PC.indexOf("view") && PC.push("view"), -1 === PC.indexOf("vFogInfos") && PC.push("vFogInfos"), -1 === PC.indexOf("vFogColor") && PC.push("vFogColor")), this._useLogarithmicDepth && (qC.push("#define LOGARITHMICDEPTH"), -1 === PC.indexOf("logarithmicDepthConstant") && PC.push("logarithmicDepthConstant"));
+        const JC = ZC ? ZC.getRenderingMesh() : CC;
+        if (JC && this.useVertexPulling) {
+          const CC = JC.geometry;
+          CC && (this._vertexPullingMetadata = (0, gC.d)(CC), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((CC, zC) => {
+            PC.push(`vp_${zC}_info`)
+          }))), qC.push("#define USE_VERTEX_PULLING");
+          const zC = JC.geometry?.getIndexBuffer();
+          zC && !JC.isUnIndexed && (qC.push("#define VERTEX_PULLING_USE_INDEX_BUFFER"), zC.is32Bits && qC.push("#define VERTEX_PULLING_INDEX_BUFFER_32BITS"))
+        }
+        this.customShaderNameResolve && (PC = PC.slice(), GC = GC.slice(), RC = RC.slice(), SC = this.customShaderNameResolve(this.name, PC, GC, RC, qC, FC));
+        const IC = QC ? ZC._getDrawWrapper(void 0, !0) : this._drawWrapper,
+          iC = IC?.effect ?? null,
+          vC = IC?.defines ?? null,
+          eC = qC.join("\n");
+        let hC = iC;
+        return vC !== eC && (hC = fC.createEffect(SC, {
+          attributes: FC,
+          uniformsNames: PC,
+          uniformBuffersNames: GC,
+          samplers: RC,
+          defines: eC,
+          fallbacks: WC,
+          onCompiled: this.onCompiled,
+          onError: this.onError,
+          indexParameters: {
+            maxSimultaneousMorphTargets: AC
+          },
+          shaderLanguage: this._options.shaderLanguage,
+          extraInitializationsAsync: this._options.extraInitializationsAsync
+        }, fC), QC ? ZC.setEffect(hC, eC, this._materialContext) : IC && IC.setEffect(hC, eC), this._onEffectCreatedObservable && (pC.effect = hC, pC.subMesh = ZC ?? CC?.Zx[0] ?? null, this._onEffectCreatedObservable.notifyObservers(pC))), IC._wasPreviouslyUsingInstances = !!zC, !!hC?.isReady() && (iC !== hC && bC.resetCachedMaterial(), IC._wasPreviouslyReady = !0, !0)
+      }
+      bindOnlyWorldMatrix(CC, zC) {
+        const ZC = zC ?? this.getEffect();
+        if (!ZC) return;
+        const QC = this._options.uniforms; - 1 !== QC.indexOf("world") && ZC.setMatrix("world", CC);
+        const wC = this.Km(); - 1 !== QC.indexOf("worldView") && (CC.multiplyToRef(wC.getViewMatrix(), this._cachedWorldViewMatrix), ZC.setMatrix("worldView", this._cachedWorldViewMatrix)), -1 !== QC.indexOf("worldViewProjection") && (CC.multiplyToRef(wC.getTransformMatrix(), this._cachedWorldViewProjectionMatrix), ZC.setMatrix("worldViewProjection", this._cachedWorldViewProjectionMatrix)), -1 !== QC.indexOf("view") && ZC.setMatrix("view", wC.getViewMatrix())
+      }
+      bindForSubMesh(CC, zC, ZC) {
+        this.bind(CC, zC, ZC._drawWrapperOverride?.effect, ZC)
+      }
+      bind(CC, zC, ZC, QC) {
+        const wC = QC && this._storeEffectOnSubMeshes,
+          bC = ZC ?? (wC ? QC.effect : this.getEffect());
+        if (!bC) return;
+        const nC = this.Km();
+        this._activeEffect = bC, this.bindOnlyWorldMatrix(CC, ZC);
+        const fC = this._options.uniformBuffers;
+        let oC = !1;
+        if (bC && fC && fC.length > 0 && nC.mg().supportsUniformBuffers)
+          for (let FC = 0; FC < fC.length; ++FC) {
+            switch (fC[FC]) {
+              case "Mesh":
+                zC && (zC.getMeshUniformBuffer().bindToEffect(bC, "Mesh"), zC.transferToEffect(CC));
+                break;
+              case "Scene":
+                (0, MC.x)(bC, nC.getSceneUniformBuffer()), nC.finalizeSceneUbo(), oC = !0
+            }
+          }
+        const qC = zC && wC ? this._mustRebind(nC, bC, QC, zC.visibility) : nC.getCachedMaterial() !== this;
+        if (bC && qC) {
+          let CC;
+          for (CC in oC || -1 === this._options.uniforms.indexOf("view") || bC.setMatrix("view", nC.getViewMatrix()), oC || -1 === this._options.uniforms.indexOf("projection") || bC.setMatrix("projection", nC.getProjectionMatrix()), oC || -1 === this._options.uniforms.indexOf("viewProjection") || (bC.setMatrix("viewProjection", nC.getTransformMatrix()), this._multiview && bC.setMatrix("viewProjectionR", nC._transformMatrixR)), nC.activeCamera && -1 !== this._options.uniforms.indexOf("cameraPosition") && bC.setVector3("cameraPosition", nC.activeCamera.globalPosition), (0, MC.f)(zC, bC), (0, NC.g)(bC, this, nC), this._vertexPullingMetadata && (0, gC.c)(bC, this._vertexPullingMetadata), this._useLogarithmicDepth && (0, MC.t)(wC ? QC.materialDefines : bC.defines, bC, nC), zC && (0, MC.h)(nC, zC, bC), this._textures) bC.setTexture(CC, this._textures[CC]);
+          for (CC in this._internalTextures) bC._bindTexture(CC, this._internalTextures[CC]);
+          for (CC in this._textureArrays) bC.setTextureArray(CC, this._textureArrays[CC]);
+          for (CC in this._ints) bC.setInt(CC, this._ints[CC]);
+          for (CC in this._uints) bC.setUInt(CC, this._uints[CC]);
+          for (CC in this._floats) bC.setFloat(CC, this._floats[CC]);
+          for (CC in this._floatsArrays) bC.setArray(CC, this._floatsArrays[CC]);
+          for (CC in this._colors3) bC.setColor3(CC, this._colors3[CC]);
+          for (CC in this._colors3Arrays) bC.setArray3(CC, this._colors3Arrays[CC]);
+          for (CC in this._colors4) {
+            const zC = this._colors4[CC];
+            bC.setFloat4(CC, zC.r, zC.g, zC.b, zC.a)
+          }
+          for (CC in this._colors4Arrays) bC.setArray4(CC, this._colors4Arrays[CC]);
+          for (CC in this._vectors2) bC.setVector2(CC, this._vectors2[CC]);
+          for (CC in this._vectors3) bC.setVector3(CC, this._vectors3[CC]);
+          for (CC in this._vectors4) bC.setVector4(CC, this._vectors4[CC]);
+          for (CC in this._quaternions) bC.setQuaternion(CC, this._quaternions[CC]);
+          for (CC in this._matrices) bC.setMatrix(CC, this._matrices[CC]);
+          for (CC in this._matrixArrays) bC.setMatrices(CC, this._matrixArrays[CC]);
+          for (CC in this._matrices3x3) bC.setMatrix3x3(CC, this._matrices3x3[CC]);
+          for (CC in this._matrices2x2) bC.setMatrix2x2(CC, this._matrices2x2[CC]);
+          for (CC in this._vectors2Arrays) bC.setArray2(CC, this._vectors2Arrays[CC]);
+          for (CC in this._vectors3Arrays) bC.setArray3(CC, this._vectors3Arrays[CC]);
+          for (CC in this._vectors4Arrays) bC.setArray4(CC, this._vectors4Arrays[CC]);
+          for (CC in this._quaternionsArrays) bC.setArray4(CC, this._quaternionsArrays[CC]);
+          for (CC in this._uniformBuffers) {
+            const zC = this._uniformBuffers[CC].getBuffer();
+            zC && bC.bindUniformBuffer(zC, CC)
+          }
+          const ZC = nC.mg(),
+            fC = ZC.setExternalTexture;
+          if (fC)
+            for (CC in this._externalTextures) fC.call(ZC, CC, this._externalTextures[CC]);
+          const qC = ZC.setTextureSampler;
+          if (qC)
+            for (CC in this._textureSamplers) qC.call(ZC, CC, this._textureSamplers[CC]);
+          const FC = ZC.setStorageBuffer;
+          if (FC)
+            for (CC in this._storageBuffers) FC.call(ZC, CC, this._storageBuffers[CC])
+        }
+        if (bC && zC && (qC || !this.isFrozen)) {
+          (0, MC.u)(zC, bC), zC.morphTargetManager && zC.morphTargetManager.isUsingTextureForTargets && zC.morphTargetManager._bind(bC);
+          const CC = zC.bakedVertexAnimationManager;
+          if (CC && CC.isEnabled) {
+            const CC = wC ? QC._drawWrapper : this._drawWrapper;
+            zC.bakedVertexAnimationManager?.bind(bC, !!CC._wasPreviouslyUsingInstances)
+          }
+        }
+        this._afterBind(zC, bC, QC)
+      }
+      getActiveTextures() {
+        const CC = super.getActiveTextures();
+        for (const zC in this._textures) CC.push(this._textures[zC]);
+        for (const zC in this._textureArrays) {
+          const ZC = this._textureArrays[zC];
+          for (let zC = 0; zC < ZC.length; zC++) CC.push(ZC[zC])
+        }
+        return CC
+      }
+      hasTexture(CC) {
+        if (super.hasTexture(CC)) return !0;
+        for (const ZC in this._textures)
+          if (this._textures[ZC] === CC) return !0;
+        const zC = CC.getInternalTexture();
+        for (const ZC in this._internalTextures)
+          if (this._internalTextures[ZC] === zC) return !0;
+        for (const ZC in this._textureArrays) {
+          const zC = this._textureArrays[ZC];
+          for (let ZC = 0; ZC < zC.length; ZC++)
+            if (zC[ZC] === CC) return !0
+        }
+        return !1
+      }
+      clone(CC) {
+        const zC = QC.d.Clone((() => new PC(CC, this.Km(), this._shaderPath, this._options, this._storeEffectOnSubMeshes)), this);
+        zC.name = CC, zC.id = CC, "object" === typeof zC._shaderPath && (zC._shaderPath = {
+          ...zC._shaderPath
+        }), this._options = {
+          ...this._options
+        };
+        const ZC = Object.keys(this._options);
+        for (const QC of ZC) {
+          const CC = this._options[QC];
+          Array.isArray(CC) && (this._options[QC] = CC.slice(0))
+        }
+        this.stencil.copyTo(zC.stencil);
+        for (const QC in this._textures) zC.setTexture(QC, this._textures[QC]);
+        for (const QC in this._internalTextures) zC.setInternalTexture(QC, this._internalTextures[QC]);
+        for (const QC in this._textureArrays) zC.setTextureArray(QC, this._textureArrays[QC]);
+        for (const QC in this._externalTextures) zC.setExternalTexture(QC, this._externalTextures[QC]);
+        for (const QC in this._ints) zC.setInt(QC, this._ints[QC]);
+        for (const QC in this._uints) zC.setUInt(QC, this._uints[QC]);
+        for (const QC in this._floats) zC.setFloat(QC, this._floats[QC]);
+        for (const QC in this._floatsArrays) zC.setFloats(QC, this._floatsArrays[QC]);
+        for (const QC in this._colors3) zC.setColor3(QC, this._colors3[QC]);
+        for (const QC in this._colors3Arrays) zC._colors3Arrays[QC] = this._colors3Arrays[QC];
+        for (const QC in this._colors4) zC.setColor4(QC, this._colors4[QC]);
+        for (const QC in this._colors4Arrays) zC._colors4Arrays[QC] = this._colors4Arrays[QC];
+        for (const QC in this._vectors2) zC.setVector2(QC, this._vectors2[QC]);
+        for (const QC in this._vectors3) zC.setVector3(QC, this._vectors3[QC]);
+        for (const QC in this._vectors4) zC.setVector4(QC, this._vectors4[QC]);
+        for (const QC in this._quaternions) zC.setQuaternion(QC, this._quaternions[QC]);
+        for (const QC in this._quaternionsArrays) zC._quaternionsArrays[QC] = this._quaternionsArrays[QC];
+        for (const QC in this._matrices) zC.setMatrix(QC, this._matrices[QC]);
+        for (const QC in this._matrixArrays) zC._matrixArrays[QC] = this._matrixArrays[QC].slice();
+        for (const QC in this._matrices3x3) zC.setMatrix3x3(QC, this._matrices3x3[QC]);
+        for (const QC in this._matrices2x2) zC.setMatrix2x2(QC, this._matrices2x2[QC]);
+        for (const QC in this._vectors2Arrays) zC.setArray2(QC, this._vectors2Arrays[QC]);
+        for (const QC in this._vectors3Arrays) zC.setArray3(QC, this._vectors3Arrays[QC]);
+        for (const QC in this._vectors4Arrays) zC.setArray4(QC, this._vectors4Arrays[QC]);
+        for (const QC in this._uniformBuffers) zC.setUniformBuffer(QC, this._uniformBuffers[QC]);
+        for (const QC in this._textureSamplers) zC.setTextureSampler(QC, this._textureSamplers[QC]);
+        for (const QC in this._storageBuffers) zC.setStorageBuffer(QC, this._storageBuffers[QC]);
+        return zC
+      }
+      dispose(CC, zC, ZC) {
+        if (zC) {
+          let CC;
+          for (CC in this._textures) this._textures[CC].dispose();
+          for (CC in this._internalTextures) this._internalTextures[CC].dispose();
+          for (CC in this._textureArrays) {
+            const zC = this._textureArrays[CC];
+            for (let CC = 0; CC < zC.length; CC++) zC[CC].dispose()
+          }
+        }
+        this._textures = {}, this._internalTextures = {}, super.dispose(CC, zC, ZC)
+      }
+      serialize() {
+        const CC = QC.d.Serialize(this);
+        let zC;
+        for (zC in CC.customType = "BABYLON.ShaderMaterial", CC.uniqueId = this.uniqueId, CC.options = this._options, CC.shaderPath = this._shaderPath, CC.storeEffectOnSubMeshes = this._storeEffectOnSubMeshes, CC.stencil = this.stencil.serialize(), CC.textures = {}, this._textures) CC.textures[zC] = this._textures[zC].serialize();
+        for (zC in CC.textureArrays = {}, this._textureArrays) {
+          CC.textureArrays[zC] = [];
+          const ZC = this._textureArrays[zC];
+          for (let QC = 0; QC < ZC.length; QC++) CC.textureArrays[zC].push(ZC[QC].serialize())
+        }
+        for (zC in CC.ints = {}, this._ints) CC.ints[zC] = this._ints[zC];
+        for (zC in CC.uints = {}, this._uints) CC.uints[zC] = this._uints[zC];
+        for (zC in CC.floats = {}, this._floats) CC.floats[zC] = this._floats[zC];
+        for (zC in CC.floatsArrays = {}, this._floatsArrays) CC.floatsArrays[zC] = this._floatsArrays[zC];
+        for (zC in CC.colors3 = {}, this._colors3) {
+          const ZC = this._colors3[zC];
+          CC.colors3[zC] = [ZC.r, ZC.g, ZC.b]
+        }
+        for (zC in CC.colors3Arrays = {}, this._colors3Arrays) CC.colors3Arrays[zC] = this._colors3Arrays[zC];
+        for (zC in CC.colors4 = {}, this._colors4) {
+          const ZC = this._colors4[zC];
+          CC.colors4[zC] = [ZC.r, ZC.g, ZC.b, ZC.a]
+        }
+        for (zC in CC.colors4Arrays = {}, this._colors4Arrays) CC.colors4Arrays[zC] = this._colors4Arrays[zC];
+        for (zC in CC.vectors2 = {}, this._vectors2) {
+          const ZC = this._vectors2[zC];
+          CC.vectors2[zC] = [ZC.x, ZC.y]
+        }
+        for (zC in CC.vectors3 = {}, this._vectors3) {
+          const ZC = this._vectors3[zC];
+          CC.vectors3[zC] = [ZC.x, ZC.y, ZC.z]
+        }
+        for (zC in CC.vectors4 = {}, this._vectors4) {
+          const ZC = this._vectors4[zC];
+          CC.vectors4[zC] = [ZC.x, ZC.y, ZC.z, ZC.w]
+        }
+        for (zC in CC.quaternions = {}, this._quaternions) CC.quaternions[zC] = this._quaternions[zC].VZC();
+        for (zC in CC.matrices = {}, this._matrices) CC.matrices[zC] = this._matrices[zC].VZC();
+        for (zC in CC.matrixArray = {}, this._matrixArrays) CC.matrixArray[zC] = this._matrixArrays[zC];
+        for (zC in CC.matrices3x3 = {}, this._matrices3x3) CC.matrices3x3[zC] = this._matrices3x3[zC];
+        for (zC in CC.matrices2x2 = {}, this._matrices2x2) CC.matrices2x2[zC] = this._matrices2x2[zC];
+        for (zC in CC.vectors2Arrays = {}, this._vectors2Arrays) CC.vectors2Arrays[zC] = this._vectors2Arrays[zC];
+        for (zC in CC.vectors3Arrays = {}, this._vectors3Arrays) CC.vectors3Arrays[zC] = this._vectors3Arrays[zC];
+        for (zC in CC.vectors4Arrays = {}, this._vectors4Arrays) CC.vectors4Arrays[zC] = this._vectors4Arrays[zC];
+        for (zC in CC.quaternionsArrays = {}, this._quaternionsArrays) CC.quaternionsArrays[zC] = this._quaternionsArrays[zC];
+        return CC
+      }
     }
 
-    function Nq() {
-      const {
-        t: qq
-      } = (0, Yq.v)(), [Eq, gq] = (0, lq.useState)("partnersAndCredits"), Nq = {
-        partnersAndCredits: {
-          title: Oq.featureFlags.usePartnerLinks ? qq("homePage:partnersAndCredits") : qq("homePage:credits"),
-          content: (0, cq.jsxs)(cq.Fragment, {
-            children: [(0, cq.jsx)("div", {
-              className: "BloxdInformationHeader FullyFancyText",
-              children: Oq.featureFlags.usePartnerLinks ? qq("homePage:partnersAndCredits") : qq("homePage:credits")
-            }), Oq.featureFlags.usePartnerLinks && "\n\t\t\t\t\tPartners:\n\n\t\t\t\t\tcrazygames.com - https://www.crazygames.com/c/io\n\t\t\t\t\tnow.gg - https://now.gg/\n\t\t\t\t\tminijuegos.com - https://www.minijuegos.com/\n\t\t\t\t\tkevin.games - https://kevin.games/\n\t\t\t\t\tsilvergames.com - https://www.silvergames.com/\n\t\t\t\t\tplay123.com - https://play123.com/\n\n\t\t\t\t\t", "\n\t\t\t\t\t\tCool sites:\n\n\t\t\t\t\t\tBloxd Youtube Videos - https://www.youtube.com/ (duh)\n\n\t\t\t\t\t", '\n\t\t\t\t\tCredits:\n\n\t\t\t\t\tMusic:\n\t\t\t\t\tSignificant amount of music by Adigold on envato elements. Titles by Adigold:\n\t\t\t\t\tA Place to be Free\n\t\t\t\t\tButterfly Effect\n\t\t\t\t\tDreamless Sleep\n\t\t\t\t\tFrozen Pulse\n\t\t\t\t\tFrozen Skies\n\t\t\t\t\tHealing Thoughts\n\t\t\t\t\tHere Forever\n\t\t\t\t\tJust a Little Hope\n\t\t\t\t\tJust Like Heaven\n\t\t\t\t\tMemories Remain\n\t\t\t\t\tPlace to be\n\t\t\t\t\tThe Riverside\n\t\t\t\t\tThe Wonder\n\t\t\t\t\tVetrar\n\t\t\t\t\tFurther titles:\n\t\t\t\t\thighway-1-retro-gaming-version: Accessible on lonepeakmusic\'s bandcamp\n\t\t\t\t\theroic-demise-updated-version: Accessible on opengameart\n\t\t\t\t\thappy-arcade-tune: Accessible on opengameart\n\t\t\t\t\ttown-theme-rpg: Accessible on opengameart\n\t\t\t\t\t5-chiptunes-action: Accessible on opengameart\n\t\t\t\t\tslow-motion: Accessible on bensound - royalty free music section\n\t\t\t\t\tI Have Often Told You Stories (guitar instrumental) by Ivan Chew (c) copyright 2013 Licensed under a Creative Commons Attribution (3.0) license. Accessible on ccmixter under "ramblinglibrarian"\n\t\t\t\t\tReverie (small theme) by _ghost (c) copyright 2010 Licensed under a Creative Commons Attribution (3.0) license. Ft: Pitx. Accessible on ccmixter under "_ghost"\n\t\t\t\t\tSilence Await by Analog By Nature (c) copyright 2008 Licensed under a Creative Commons Attribution (3.0) license. Ft: oldDog. Accessible on ccmixter under "cdk"\n\t\t\t\t\tEthereal Space by Snowflake (c) copyright 2011 Licensed under a Creative Commons Attribution (3.0) license. Ft: Zep Hurme. Accessible on ccmixter under "snowflake"\n\t\t\t\t\tbuild-up-scenes-battle-ship: By Hot_Dope. Accessible on pixabay\n\t\t\t\t\tRaise The Sails: By SergePavkinMusic. Accessible on pixabay\n\t\t\t\t\tThe Epic Adventure: By The_Mountain. Accessible on pixabay\n\t\t\t\t\tCorsairs: By StudioKolomna. Accessible on uppbeat\n\t\t\t\t\tI am the Sea - Epic Pirate Battle Music. Supported by #TheROOMnoCopyRMusic\n\t\t\t\t\tPirates by Mojo Productions\n\t\t\t\t\tSneaky Jazz by Mojo Productions\n\t\t\t\t\tThe Sneaky by Mojo Productions\n\t\t\t\t\tThe Sneaky Jazz by Mojo Productions\n\t\t\t\t\tSpooky Scary Skeletons - 3mp1r3 Orchestral Cover (Instrumental): By 3MP-The-Rook (c) copyright 2021 Licensed under a Creative Commons Attribution (3.0) license. Accessible on newgrounds\n\n\n\t\t\t\t\tSkybox:\n\t\t\t\t\tspace-skyboxes-0. By StumpyStrust. Accessible on opengameart\n\t\t\t\t\tinterstellar-skybox. By Jockum Skoglund (hipshot). Accessible on opengameart\n\t\t\t\t\tgloomy-skybox. By Spiney. Accessible on opengameart\n\n\n\t\t\t\t\tMap builds:\n\t\t\t\t\tjar9 - Medieval Castle\n\t\t\t\t\tjar9 - Iron Man\'s Mansion\n\t\t\t\t\tjar9 - Hawaiian pineapple resort\n\t\t\t\t\tNot_Tred - Pyrage and The Century\n\t\t\t\t\tBubblesAndSuch - Hide and Seek Office map\n\t\t\t\t\tWeark - Dinosaur Murder Mystery map\n\t\t\t\t\tMavers - Jungle Theme Skywars map\n\t\t\t\t\tPigiama-Party-Crew - Skywars Castle map\n\t\t\t\t\tPigiama-Party-Crew - Skywars frozen map\n\t\t\t\t\tPartyFinger - Skywars Mushroom map\n\t\t\t\t\tSadClown - Skywars Simple Lego map\n\t\t\t\t\tP2H - Hide and Seek Western map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Double Trouble pirates map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Stowaway Seas pirates map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Woesome Waters pirates map (made for bloxd)\n\t\t\t\t\tLadyHaley - Capture the Flag\n\n\n\t\t\t\t\tHome Screen Builds:\n\t\t\t\t\taxchitectmc (arch): valley town\n\t\t\t\t\tbush_man_ (B0ZO): Reactor Island / Elver\n\t\t\t\t\titz_parkour_queen (!Kat)\n\t\t\t\t\tthe_ccccc_83959 (the_ccccc)\n\t\t\t\t\tsnapshot0378 (AspectOfEntity)\n\t\t\t\t\tbanshee_61108 (Banshee)\n\t\t\t\t\tcreativeartisan856888 (L16_F51620)\n\t\t\t\t\tblazingcharlie (BlazingCharlie)\n\t\t\t\t\tkentaki65501 (\ud835\ude10\ud835\ude15\ud835\ude10\ud835\ude1b\ud835\ude10\ud835\ude08\ud835\ude13"\ud835\ude12")\n\n\n\t\t\t\t\tCharacter model:\n\t\t\t\t\tkenney bundle accessible on itch\n\n\n\t\t\t\t\tTextures:\n\t\t\t\t\tDronyazka\n\t\t\t\t\t1qayesy\n\t\t\t\t\tBlocd\n\t\t\t\t\tJanuaryBoy\n\t\t\t\t\tvinivieira\n\t\t\t\t\thttps://doughnutdev.itch.io/\n\t\t\t\t\tDigs - digs-simple-pack\n\t\t\t\t\thttps://dafluffypotato.itch.io/pixel-country-flags\n\n\n\t\t\t\t\tPet Paintings:\n\t\t\t\t\tJanuaryBoy\n\n\n\t\t\t\t\tSounds:\n\t\t\t\t\tgamemasteraudio\n\t\t\t\t\tSn0wShepherd - snowsong-total-sound-and-music-resource-pack\n\t\t\t\t\tFrawzy - enhanced-audio pack - accessible on curseforge\n\t\t\t\t\tOreCruncher (and sub contributors) - accessible on github via the OreCruncher/DynamicSurroundings repo\n\t\t\t\t\tWistanSound - pig, cow & sheep sounds pack\n\t\t\t\t\tKenney - rpg-audio pack - accessible on kenney.nl\n\n\n\t\t\t\t\tTranslations:\n\t\t\t\t\tArabic: GoldWaterMelon, MemeYou, faresaliahmed1234, Bloxd Builder, Toast123, Exinvity, Bruhbro, Coffee\n\t\t\t\t\tGerman: random, 1qayesy, LordDarknessYT, BRELJIS, Black_White, FJGaming, Tabby bee, Cougaran, SUPERJERRY, DigitalDragon\n\t\t\t\t\tSpanish: locomoco330, perky.11, mash_the_idiot, kilmepls, cisaa, Patata, MrT3, Sameiflovi, Monty Mole, MisterCasino\n\t\t\t\t\tFrench: .frenchgamer., ImBoop, Bloxd Builder, Elforeve, JaClol, lews123, LeVraiZouzou, Kontroleuh, kilmepls, _LightningStrike_, the_ccccc, ga\xeb, M.K, BearsBoi\n\t\t\t\t\tHindi: F22 Raptor, ObiloxYT, MucknDuck, SHUSH XD, __DUCK__\n\t\t\t\t\tIndonesian: zash, bool bola, kevin143, fedortam, Image\'s_MxD, THESECONDONE, Mozzy\n\t\t\t\t\tItalian: Star_mario, NAME VIOLTION4, Trespasser, Gabriel, Cougaran\n\t\t\t\t\tJapanese: tomoru1741, httpsnet, namu_namu, aaa_second, another_sky, pockymouse, Interactive\n\t\t\t\t\tDutch: brickswizard, Ryobagyatt-bloxd, MONKE, Thijssiee, Zethal_\n\t\t\t\t\tPortuguese: Da59Gigas, kilmepls, coding.cannoli\n\t\t\t\t\tPortuguese (Brazil): vinivieira, Muffinscott, pompom, kilmepls, noselastic, icyrlq, tokachiri\n\t\t\t\t\tRussian: Ryno2024, FOG_Batman17_WM, Bush, imlaggingbad, NahBro, Riddle, timofeycacti\n\t\t\t\t\tTamil: heheboi420, Tridentify\n\t\t\t\t\tTurkish: 1qayesy, iharqv, FOG_Batman17_WM, aryosta\n\t\t\t\t\tVietnamese: andye_da_Grass, that_asian_guy, ckn, Bready, Appa\n\t\t\t\t\tChinese (Simplified): AQLI, KHROTU, G2Lighter, Always yxZ, Baklava, Ender_, \u03c4Sean\ud83c\udde8\ud83c\uddf3\u03c4, ACreativeGoddess\n\t\t\t\t\tChinese (Traditional): AQLI, hkxd123, Jas_Mine_, Axolotl_Fox, happygamer, immortal, Idolized, Huh?\n\t\t\t\t\tUkrainian: xnutella, Ryno2024, shadow cat, Riddle\n\t\t\t\t\tPolish: PKcomander, ashxlek, tokachiri, LSVJ, 3ndii1337\n\t\t\t\t\tKorean: bobuk, Interactive\n\n\n\t\t\t\t\tMisc:\n\t\t\t\t\tMonogram font - https://datagoblin.itch.io/monogram\n\t\t\t\t\tTreasure Chests - DanSevenStar.xyz - treasure-chest-pixel-art-animation - accessible on opengameart\n\t\t\t\t\tTouch scroll icon created by Those Icons - accessible on Flaticon in the free-icons category under the "scroll" name\n\t\t\t\t\tThis product makes use of GeoLite2 data created by MaxMind, available from https://www.maxmind.com\n\t\t\t\t\t']
-          })
-        },
-        bloxdIngameRules: {
-          title: qq("homePage:bloxdIngameRules"),
-          content: (0, cq.jsxs)(cq.Fragment, {
-            children: [(0, cq.jsx)("div", {
-              className: "BloxdInformationHeader FullyFancyText",
-              children: qq("homePage:bloxdIngameRules")
-            }), "\n\t\t\t\t\t1. Be respectful of others.\n\n\t\t\t\t\t2. Don't harass or bully other players.\n\n\t\t\t\t\t3. Discriminatory jokes and hate speech (attacks on an individual or group based on their race, ethnicity, national origin, sex, gender, sexual orientation, religious affiliation, or disabilities) is not allowed.\n\n\t\t\t\t\t4. Cursing is not allowed, avoiding the swear filter is not allowed.\n\n\t\t\t\t\t5. Spamming is not allowed in any form.\n\n\t\t\t\t\t6. Don't post links.\n\n\t\t\t\t\t7. Don't do anything NSFW related or sexually suggestive.\n\n\t\t\t\t\t8. Online dating is not allowed.\n\n\t\t\t\t\t9. Don't use any offensive/inappropriate names.\n\n\t\t\t\t\t10. Don't impersonate staff or developers. This can include players if the player is clearly trying to impersonate you.\n\n\t\t\t\t\t11. No Hacking/Cheating/Autoclicking. Some clicking techniques such as drag clicking can be detected as autoclicking. Be careful using these techniques, if you are banned for autoclicking, you will not be unbanned.\n\n\t\t\t\t\t12. Creating, sharing, or using bloxd userscripts, extensions or other modifications is not allowed.\n\n\t\t\t\t\t13. Don't create boards/signs with inappropriate text.\n\n\t\t\t\t\t14. Don't create worlds lobbies for inappropriate purposes.\n\n\t\t\t\t\t15. Don't evade mutes or bans using alt accounts. Doing so will result in more action against your main account.\n\n\t\t\t\t\t16. Don't exploit duplication bugs. If you discover a serverside way to duplicate items, e.g.: the duped items stay when you leave and rejoin, then please carefully follow all the instructions in our Security Exploit Bounty Program.\n\n\t\t\t\t\t17. Don't trade ingame items for gift purchases (e.g. superrank).\n\t\t\t\t\t\n\t\t\t\t\t18. Advocating for or encouraging any of the above rule breaking is not allowed.\n\t\t\t\t"]
-          })
-        },
-        privacyPolicy: {
-          title: qq("homePage:privacyPolicy"),
-          content: (0, cq.jsx)(lq.Suspense, {
-            fallback: null,
-            children: (0, cq.jsx)(uq, {})
-          })
-        },
-        termsOfService: {
-          title: qq("homePage:termsOfService"),
-          content: (0, cq.jsx)(lq.Suspense, {
-            fallback: null,
-            children: (0, cq.jsx)(Bq, {})
-          })
-        },
-        securityExploitBounties: {
-          title: qq("homePage:securityExploitBounties"),
-          content: (0, cq.jsx)(Wq, {})
-        }
-      };
-      return (0, cq.jsxs)("div", {
-        className: "BloxdInformation",
-        children: [(0, cq.jsxs)("div", {
-          className: "BloxdInformationSectionList",
-          children: [Object.keys(Nq).map((Yq => (0, cq.jsx)(mq.Q, {
-            active: Eq === Yq,
-            onClick: () => {
-              gq(Yq)
-            },
-            children: qq(Nq[Yq].title)
-          }, Yq))), Oq.featureFlags.usePartnerLinks && (0, cq.jsx)(cq.Fragment, {
-            children: (0, cq.jsxs)(mq.Q, {
-              onClick: () => {
-                window.open("https://www.crazygames.com/c/io")
-              },
-              children: [(0, cq.jsx)(Aq.d, {
-                name: "arrow-up-right-from-square"
-              }), " Crazy Games"]
-            })
-          })]
-        }), (0, cq.jsx)("div", {
-          className: "BloxdInformationContentWrapper",
-          children: Nq[Eq].content
-        }), (0, cq.jsxs)("div", {
-          className: "BloxdInformationText",
-          children: ["SiteUsed: ", xq.n, " | SubSiteUsed: ", xq.q]
-        })]
-      })
+    function GC(CC, zC, ZC) {
+      const wC = QC.d.Parse((() => new PC(CC.name, zC, CC.shaderPath, CC.options, CC.storeEffectOnSubMeshes)), CC, zC, ZC);
+      let nC;
+      for (nC in CC.stencil && wC.stencil.parse(CC.stencil, zC, ZC), CC.textures) wC.setTexture(nC, fC.h.Parse(CC.textures[nC], zC, ZC));
+      for (nC in CC.textureArrays) {
+        const QC = CC.textureArrays[nC],
+          bC = [];
+        for (let CC = 0; CC < QC.length; CC++) bC.push(fC.h.Parse(QC[CC], zC, ZC));
+        wC.setTextureArray(nC, bC)
+      }
+      for (nC in CC.ints) wC.setInt(nC, CC.ints[nC]);
+      for (nC in CC.uints) wC.setUInt(nC, CC.uints[nC]);
+      for (nC in CC.floats) wC.setFloat(nC, CC.floats[nC]);
+      for (nC in CC.floatsArrays) wC.setFloats(nC, CC.floatsArrays[nC]);
+      for (nC in CC.colors3) {
+        const zC = CC.colors3[nC];
+        wC.setColor3(nC, {
+          r: zC[0],
+          g: zC[1],
+          b: zC[2]
+        })
+      }
+      for (nC in CC.colors3Arrays) {
+        const zC = CC.colors3Arrays[nC].reduce(((CC, zC, ZC) => (ZC % 3 === 0 ? CC.push([zC]) : CC[CC.length - 1].push(zC), CC)), []).map((CC => ({
+          r: CC[0],
+          g: CC[1],
+          b: CC[2]
+        })));
+        wC.setColor3Array(nC, zC)
+      }
+      for (nC in CC.colors4) {
+        const zC = CC.colors4[nC];
+        wC.setColor4(nC, {
+          r: zC[0],
+          g: zC[1],
+          b: zC[2],
+          a: zC[3]
+        })
+      }
+      for (nC in CC.colors4Arrays) {
+        const zC = CC.colors4Arrays[nC].reduce(((CC, zC, ZC) => (ZC % 4 === 0 ? CC.push([zC]) : CC[CC.length - 1].push(zC), CC)), []).map((CC => ({
+          r: CC[0],
+          g: CC[1],
+          b: CC[2],
+          a: CC[3]
+        })));
+        wC.setColor4Array(nC, zC)
+      }
+      for (nC in CC.vectors2) {
+        const zC = CC.vectors2[nC];
+        wC.setVector2(nC, {
+          x: zC[0],
+          y: zC[1]
+        })
+      }
+      for (nC in CC.vectors3) {
+        const zC = CC.vectors3[nC];
+        wC.setVector3(nC, {
+          x: zC[0],
+          y: zC[1],
+          z: zC[2]
+        })
+      }
+      for (nC in CC.vectors4) {
+        const zC = CC.vectors4[nC];
+        wC.setVector4(nC, {
+          x: zC[0],
+          y: zC[1],
+          z: zC[2],
+          w: zC[3]
+        })
+      }
+      for (nC in CC.quaternions) wC.setQuaternion(nC, bC.f.FromArray(CC.quaternions[nC]));
+      for (nC in CC.matrices) wC.setMatrix(nC, bC.b.FromArray(CC.matrices[nC]));
+      const oC = wC;
+      for (nC in CC.matrixArray) oC._matrixArrays[nC] = new Float32Array(CC.matrixArray[nC]);
+      for (nC in CC.matrices3x3) wC.setMatrix3x3(nC, CC.matrices3x3[nC]);
+      for (nC in CC.matrices2x2) wC.setMatrix2x2(nC, CC.matrices2x2[nC]);
+      for (nC in CC.vectors2Arrays) wC.setArray2(nC, CC.vectors2Arrays[nC]);
+      for (nC in CC.vectors3Arrays) wC.setArray3(nC, CC.vectors3Arrays[nC]);
+      for (nC in CC.vectors4Arrays) wC.setArray4(nC, CC.vectors4Arrays[nC]);
+      for (nC in CC.quaternionsArrays) wC.setArray4(nC, CC.quaternionsArrays[nC]);
+      return wC
+    }
+    async function RC(CC, zC, ZC) {
+      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
+      return await new Promise(((wC, bC) => {
+        const nC = new qC.d;
+        nC.addEventListener("readystatechange", (() => {
+          if (4 == nC.readyState)
+            if (200 == nC.status) {
+              const zC = GC(JSON.parse(nC.responseText), ZC || WC.c.LastCreatedScene, QC);
+              CC && (zC.name = CC), wC(zC)
+            } else bC("Unable to load the ShaderMaterial")
+        })), nC.open("GET", zC), nC.send()
+      }))
+    }
+    async function AC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const QC = this?.SnippetUrl ?? PC.SnippetUrl;
+      return await new Promise(((wC, bC) => {
+        const nC = new qC.d;
+        nC.addEventListener("readystatechange", (() => {
+          if (4 == nC.readyState)
+            if (200 == nC.status) {
+              const QC = JSON.parse(JSON.parse(nC.responseText).jsonPayload),
+                bC = GC(JSON.parse(QC.shaderMaterial), zC || WC.c.LastCreatedScene, ZC);
+              bC.snippetId = CC, wC(bC)
+            } else bC("Unable to load the snippet " + CC)
+        })), nC.open("GET", QC + "/" + CC.replace(/#/g, "/")), nC.send()
+      }))
+    }
+    PC.SnippetUrl = "https://snippet.babylonjs.com";
+    const xC = AC;
+    let JC = !1;
+
+    function IC() {
+      JC || (JC = !0, PC.Parse = GC, PC.ParseFromFileAsync = RC, PC.ParseFromSnippetAsync = AC, PC.CreateFromSnippetAsync = xC, (0, SC.d)("BABYLON.ShaderMaterial", PC))
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

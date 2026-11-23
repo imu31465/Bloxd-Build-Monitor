@@ -1,779 +1,1196 @@
+/*! For license information please see w4ddu.219.9f0b8b79.chunk.js.LICENSE.txt */
 export const id = 219;
 export const ids = [219];
 export const modules = {
-  36974: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Qq,
-      g: () => Pq
+  39388: (CC, zC, ZC) => {
+    CC.exports = wC;
+    var QC = ZC(338);
+
+    function wC(CC, zC) {
+      if (!(this instanceof wC)) return new wC(CC, zC);
+      var ZC = QC.create();
+      QC.add(ZC, CC, zC), this.base = QC.min(QC.create(), CC, ZC), this.vec = QC.clone(zC), this.max = QC.max(QC.create(), CC, ZC), this.mag = QC.length(this.vec)
+    }
+    var bC = wC.prototype;
+    bC.width = function() {
+      return this.vec[0]
+    }, bC.height = function() {
+      return this.vec[1]
+    }, bC.depth = function() {
+      return this.vec[2]
+    }, bC.x0 = function() {
+      return this.base[0]
+    }, bC.y0 = function() {
+      return this.base[1]
+    }, bC.z0 = function() {
+      return this.base[2]
+    }, bC.x1 = function() {
+      return this.max[0]
+    }, bC.y1 = function() {
+      return this.max[1]
+    }, bC.z1 = function() {
+      return this.max[2]
+    }, bC.translate = function(CC) {
+      return QC.add(this.max, this.max, CC), QC.add(this.base, this.base, CC), this
+    }, bC.setPosition = function(CC) {
+      return QC.add(this.max, CC, this.vec), QC.copy(this.base, CC), this
+    }, bC.expand = function(CC) {
+      var zC = QC.create(),
+        ZC = QC.create();
+      return QC.max(zC, CC.max, this.max), QC.min(ZC, CC.base, this.base), QC.subtract(zC, zC, ZC), new wC(ZC, zC)
+    }, bC.intersects = function(CC) {
+      return !(CC.base[0] > this.max[0]) && (!(CC.base[1] > this.max[1]) && (!(CC.base[2] > this.max[2]) && (!(CC.max[0] < this.base[0]) && (!(CC.max[1] < this.base[1]) && !(CC.max[2] < this.base[2])))))
+    }, bC.touches = function(CC) {
+      var zC = this.union(CC);
+      return null !== zC && (0 == zC.width() || 0 == zC.height() || 0 == zC.depth())
+    }, bC.union = function(CC) {
+      if (!this.intersects(CC)) return null;
+      var zC = Math.max(CC.base[0], this.base[0]),
+        ZC = Math.max(CC.base[1], this.base[1]),
+        QC = Math.max(CC.base[2], this.base[2]);
+      return new wC([zC, ZC, QC], [Math.min(CC.max[0], this.max[0]) - zC, Math.min(CC.max[1], this.max[1]) - ZC, Math.min(CC.max[2], this.max[2]) - QC])
+    }
+  },
+  39384: CC => {
+    CC.exports = function(CC, zC, ZC, QC, wC, bC) {
+      var nC = +zC[0],
+        fC = +zC[1],
+        oC = +zC[2],
+        qC = +ZC[0],
+        FC = +ZC[1],
+        WC = +ZC[2],
+        NC = Math.sqrt(qC * qC + FC * FC + WC * WC);
+      if (0 === NC) throw new Error("Can't raycast along a zero vector");
+      return function(CC, zC, ZC, QC, wC, bC, nC, fC, oC, qC) {
+        for (var FC = 0, WC = Math.floor, NC = 0 | WC(zC), MC = 0 | WC(ZC), gC = 0 | WC(QC), SC = wC > 0 ? 1 : -1, pC = bC > 0 ? 1 : -1, PC = nC > 0 ? 1 : -1, GC = Math.abs(1 / wC), RC = Math.abs(1 / bC), AC = Math.abs(1 / nC), xC = GC < 1 / 0 ? GC * (SC > 0 ? NC + 1 - zC : zC - NC) : 1 / 0, JC = RC < 1 / 0 ? RC * (pC > 0 ? MC + 1 - ZC : ZC - MC) : 1 / 0, IC = AC < 1 / 0 ? AC * (PC > 0 ? gC + 1 - QC : QC - gC) : 1 / 0, iC = -1; FC <= fC;) {
+          var vC = CC(NC, MC, gC);
+          if (vC) return oC && (oC[0] = zC + FC * wC, oC[1] = ZC + FC * bC, oC[2] = QC + FC * nC), qC && (qC[0] = qC[1] = qC[2] = 0, 0 === iC && (qC[0] = -SC), 1 === iC && (qC[1] = -pC), 2 === iC && (qC[2] = -PC)), vC;
+          xC < JC ? xC < IC ? (NC += SC, FC = xC, xC += GC, iC = 0) : (gC += PC, FC = IC, IC += AC, iC = 2) : JC < IC ? (MC += pC, FC = JC, JC += RC, iC = 1) : (gC += PC, FC = IC, IC += AC, iC = 2)
+        }
+        return oC && (oC[0] = zC + FC * wC, oC[1] = ZC + FC * bC, oC[2] = QC + FC * nC), qC && (qC[0] = qC[1] = qC[2] = 0), 0
+      }(CC, nC, fC, oC, qC /= NC, FC /= NC, WC /= NC, QC = "undefined" === typeof QC ? 64 : +QC, wC, bC)
+    }
+  },
+  38946: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => fC,
+      d: () => bC
     });
-    var Yq = gq(4111),
-      lq = gq(1416),
-      Oq = gq(57),
-      mq = gq(6348),
-      xq = gq(4098),
-      Aq = gq(1274),
-      cq = gq(1904),
-      uq = gq(1876),
-      Bq = gq(1422),
-      Wq = gq(1183),
-      Nq = gq(36979),
-      aq = gq(1018),
-      Vq = gq.n(aq),
-      dq = gq(1298),
-      jq = gq(1025),
-      Hq = gq(1267),
-      oq = gq(1070);
-    const Pq = "SleepingOverlay";
+    var QC = ZC(4036);
+    let wC = null;
 
-    function Qq() {
-      const {
-        t: qq
-      } = (0, Wq.v)(), [Eq, gq] = (0, Oq.useState)(!1), [aq, Qq] = (0, Oq.useState)(null), [tq, rq] = (0, Oq.useState)(1), [vq, hq] = (0, Oq.useState)(!1), [nq, bq] = (0, Oq.useState)(!1), iq = (0, Oq.useRef)(0), Zq = (0, Oq.useRef)(!1), fq = (0, Oq.useRef)(!1), Mq = (0, Oq.useRef)(), Tq = (0, Oq.useRef)(null);
+    function bC(CC) {
+      return null !== wC && CC === wC
+    }
 
-      function zq() {
-        const qq = null !== aq && void 0 !== aq ? aq : "Rested Speed";
-        cq.gameBridge.send("wakeUp", nq ? qq : null), Tq.current = null, gq(!1), Qq(null), rq(1), hq(!1), bq(!1)
-      }
-
-      function Sq() {
-        return !vq && (zq(), !0)
-      }
-      return (0, lq.f)("PlayerPhysicsTypeUpdate", (qq => {
-        qq !== Tq.current && (Tq.current = qq, qq === mq.t.SLEEPING ? (fq.current || (iq.current = cq.gameBridge.lookup("cameraZoom", null), fq.current = !0), Zq.current = !0, cq.gameBridge.send("setCameraZoom", 3), gq(!0), rq(function() {
-          for (const qq of cq.gameBridge.lookup("blocksStandingOn", null)) {
-            if (Nq.e.leafBeds.includes(qq)) return console.log(`Found leaf bed: ${qq}`), 1;
-            if (Nq.e.woolBeds.includes(qq)) return console.log(`Found woold bed: ${qq}`), 2;
-            if (Nq.e.strongBeds.includes(qq)) return console.log(`Found strong bed ${qq}`), 3
-          }
-          return 1
-        }())) : (fq.current = !1, gq(!1), Qq(null), rq(1)))
-      })), (0, Oq.useEffect)((() => () => {
-        (0, Aq.j)(Pq)
-      }), []), (0, Oq.useEffect)((() => {
-        Eq ? (0, Aq.m)(Pq) : ((0, Aq.j)(Pq), Zq.current && (cq.gameBridge.send("setCameraZoom", iq.current), Zq.current = !1))
-      }), [Eq]), (0, Hq.w)("overlay", Mq, Sq, Eq), (0, oq.jsx)(Yq.c, {
-        className: "SleepingOverlay",
-        "data-camera-keeper": "",
-        in: Eq,
-        timeout: 300,
-        nodeRef: Mq,
-        unmountOnExit: !0,
-        children: (0, oq.jsx)("div", {
-          ref: Mq,
-          onClick: qq => {
-            Sq() && qq.stopPropagation()
-          },
-          children: (0, oq.jsxs)("div", {
-            className: "SleepingOverlayBody",
-            children: [(0, oq.jsx)("div", {
-              className: "SleepingOverlayPerkList",
-              children: xq.f.map((Eq => (0, oq.jsxs)(yq, {
-                restedEffect: Eq,
-                Bm: aq,
-                setChosenRestedEffect: Qq,
-                children: [(0, oq.jsxs)("div", {
-                  className: "SleepingOverlayPerkTitle",
-                  children: [(0, oq.jsx)(uq.c, {
-                    text: [{
-                      icon: Eq
-                    }]
-                  }), xq.c[Eq].shortName]
-                }), (0, oq.jsx)("div", {
-                  className: "SleepingOverlayPerkDescription",
-                  children: qq(xq.c[Eq].description, {
-                    time: xq.c[Eq].effectLevelDurations[tq] / 6e4
-                  })
-                })]
-              }, Eq)))
-            }), (0, oq.jsxs)("div", {
-              className: "SleepingOverlayPerkBottom",
-              children: [(0, oq.jsx)("div", {
-                className: "SleepingOverlayPerkBottomSide"
-              }), (0, oq.jsxs)(Bq.g, {
-                className: "SleepingOverlayWakeUpButton",
-                onClick: qq => {
-                  nq ? zq() : (hq(!0), (0, dq.kb)((() => {
-                    hq(!1), bq(!0)
-                  }), !0)), qq.stopPropagation()
-                },
-                loading: vq,
-                children: [!nq && (0, oq.jsxs)(oq.Fragment, {
-                  children: [(0, oq.jsx)(jq.d, {
-                    name: "film"
-                  }), " ", qq("classicGame:watchAdToGetRestedPerk")]
-                }), nq && qq("classicGame:wakeUp")]
-              }), (0, oq.jsxs)("div", {
-                className: "SleepingOverlayPerkBottomSide",
-                children: [(0, oq.jsx)("div", {
-                  className: Vq()("SleepingOverlayBedIcon", {
-                    SleepingOverlayBedIconActive: 1 === tq
-                  }),
-                  children: (0, oq.jsx)(uq.c, {
-                    text: [{
-                      icon: "Leaf Bed"
-                    }]
-                  })
-                }), (0, oq.jsx)("div", {
-                  className: Vq()("SleepingOverlayBedIcon", {
-                    SleepingOverlayBedIconActive: 2 === tq
-                  }),
-                  children: (0, oq.jsx)(uq.c, {
-                    text: [{
-                      icon: "Red Bed"
-                    }]
-                  })
-                }), (0, oq.jsx)("div", {
-                  className: Vq()("SleepingOverlayBedIcon", {
-                    SleepingOverlayBedIconActive: 3 === tq
-                  }),
-                  children: (0, oq.jsx)(uq.c, {
-                    text: [{
-                      icon: "Red Strongbed"
-                    }]
-                  })
-                })]
-              })]
-            })]
-          })
+    function nC() {
+      this.rD = !1, this.stopPropagation = !1, this.jD = !1, this.disabled = !1
+    }
+    class fC {
+      constructor(CC, zC) {
+        this.version = "0.7.0";
+        var ZC = Object.assign({}, new nC, zC || {});
+        this.element = CC || document, this.rD = !!ZC.rD, this.stopPropagation = !!ZC.stopPropagation, this.jD = !!ZC.jD, this.disabled = !!ZC.disabled, this.filterEvents = (CC, zC) => !0, this.ignoreEvent = CC => !1, this.down = new QC.EventEmitter, this.up = new QC.EventEmitter, this.state = {}, this.Fy = {
+          dx: 0,
+          dy: 0,
+          OCC: 0,
+          kCC: 0,
+          VCC: 0
+        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
+          lastX: 0,
+          lastY: 0,
+          currID: null
+        }, "loading" !== document.readyState ? qC(this) : document.addEventListener("DOMContentLoaded", (CC => {
+          qC(this)
+        }), {
+          once: !0
         })
-      })
-    }
-    const yq = (0, Oq.memo)((function(qq) {
-      let {
-        children: Eq,
-        restedEffect: gq,
-        Bm: Yq,
-        setChosenRestedEffect: lq
-      } = qq;
-      return gq === Yq ? (0, oq.jsx)(Bq.p, {
-        onClick: qq => {
-          qq.stopPropagation()
-        },
-        children: Eq
-      }) : (0, oq.jsx)(Bq.i, {
-        onClick: qq => {
-          lq(gq), qq.stopPropagation()
-        },
-        children: Eq
-      })
-    }))
-  },
-  40309: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => wq
-    });
-    var Yq = gq(24),
-      lq = gq(31),
-      Oq = gq(4135),
-      mq = gq(296),
-      xq = gq(1622),
-      Aq = gq(8073),
-      cq = gq(4144),
-      uq = gq(8646),
-      Bq = gq(8118),
-      Wq = gq(8090),
-      Nq = gq(8120),
-      aq = gq(1668),
-      Vq = gq(8123),
-      dq = gq(8594),
-      jq = gq(8773),
-      Hq = gq(8662),
-      oq = gq(8780),
-      Pq = gq(1904),
-      Qq = gq(8061),
-      yq = gq(8695),
-      tq = gq(8686),
-      rq = gq(8655);
-    class vq {
-      constructor() {
-        this.lostAtMs = null
       }
-      update(qq, Eq) {
-        return qq ? (this.lostAtMs = null, !1) : (this.lostAtMs ??= Eq, Eq - this.lostAtMs >= 250)
+      bind(CC) {
+        for (var zC = arguments.length, ZC = new Array(zC > 1 ? zC - 1 : 0), QC = 1; QC < zC; QC++) ZC[QC - 1] = arguments[QC];
+        ZC.forEach((zC => {
+          var ZC = this._keyBindmap[zC] || [];
+          ZC.includes(CC) || (ZC.push(CC), this._keyBindmap[zC] = ZC)
+        })), this.state[CC] = !!this.state[CC], this.pressCount[CC] = this.pressCount[CC] || 0, this.releaseCount[CC] = this.releaseCount[CC] || 0
       }
-      reset() {
-        this.lostAtMs = null
-      }
-    }
-    class hq {
-      constructor(qq, Eq) {
-        this.press = qq, this.release = Eq, this.downAtMs = null, this.token = null, this.latched = !1
-      }
-      update(qq, Eq, gq, Yq) {
-        if (qq && null === this.downAtMs) return this.downAtMs = gq, this.latched = Yq, void(this.token = this.press());
-        null !== this.downAtMs && (this.latched ? qq && this.end() : !Eq && gq - this.downAtMs >= 40 && this.end())
-      }
-      isLatched() {
-        return null !== this.downAtMs && this.latched
-      }
-      unlatch() {
-        this.latched = !1
-      }
-      cancel() {
-        null !== this.downAtMs && this.end()
-      }
-      end() {
-        const qq = this.token;
-        this.downAtMs = null, this.token = null, this.latched = !1, this.release(qq)
-      }
-    }
-    const nq = {
-        kind: "specialAction",
-        action: "SpecialAction2"
-      },
-      bq = qq => {
-        let Eq = null;
-        const gq = new rq.d,
-          Yq = () => {
-            Eq && (((qq, Eq, gq) => {
-              switch (gq.kind) {
-                case "reload":
-                  return void Eq.specialActionUp("SpecialAction1");
-                case "specialAction":
-                  return void Eq.specialActionUp(gq.action);
-                case "customButton":
-                  return void Pq.gameBridge.send("pressCustomButton", {
-                    id: gq.id,
-                    down: !1
-                  });
-                case "touchButton":
-                  qq.pressTouchButton(!1)
-              }
-            })(qq, Eq.bodies, Eq.action), Eq = null)
-          },
-          Oq = (gq, lq, Oq, mq) => {
-            Yq(), Eq = {
-              action: lq,
-              bodies: gq,
-              heldBy: Oq,
-              atMs: mq
-            }, ((qq, Eq, gq) => {
-              switch (gq.kind) {
-                case "reload":
-                  return Eq.reloadGun(), void Eq.specialActionDown("SpecialAction1");
-                case "specialAction":
-                  return void Eq.specialActionDown(gq.action);
-                case "customButton":
-                  return void Pq.gameBridge.send("pressCustomButton", {
-                    id: gq.id,
-                    down: !0
-                  });
-                case "touchButton":
-                  qq.pressTouchButton(!0)
-              }
-            })(qq, gq, lq)
-          };
-        return {
-          update: (mq, xq, cq, uq) => {
-            var Wq;
-            const Nq = (0, yq.m)(qq.contextActionInputs()),
-              aq = null !== (Wq = Nq[0]) && void 0 !== Wq ? Wq : nq;
-            (0, tq.b)((0, yq.g)(aq) ? aq : null);
-            const Vq = (0, yq.c)(Nq);
-            (0, tq.e)(Vq);
-            const dq = (0, Aq.i)("actionButton");
-            if (Vq) {
-              const qq = gq.update(xq.wasPressed(dq), xq.isHeld(dq), cq, uq);
-              "tap" === qq ? Oq(mq, aq, [dq], cq) : "hold" === qq && (Bq.c.consumeButton(dq), lq.i.TV(oq.m, Nq))
-            } else gq.release(), xq.wasPressed(dq) && Oq(mq, aq, [dq], cq);
-            Eq && cq - Eq.atMs >= 40 && !Eq.heldBy.some((qq => (0, Qq.J)(xq.frame.values, qq))) && Yq()
-          },
-          pressPicked: (qq, Eq) => {
-            Oq(qq, Eq, [(0, Aq.i)("menuConfirm"), (0, Aq.i)("actionButton")], performance.now())
-          },
-          release: () => {
-            gq.release(), Yq(), (0, tq.b)(null), (0, tq.e)(!1)
-          }
+      unbind(CC) {
+        for (var zC in this._keyBindmap) {
+          var ZC = this._keyBindmap[zC],
+            QC = ZC.indexOf(CC);
+          QC > -1 && ZC.splice(QC, 1)
         }
+      }
+      getBindings() {
+        var CC = {};
+        for (var zC in this._keyBindmap) {
+          this._keyBindmap[zC].forEach((ZC => {
+            CC[ZC] = CC[ZC] || [], CC[ZC].push(zC)
+          }))
+        }
+        return CC
+      }
+      ZN() {
+        oC(this.Fy), oC(this.pressCount), oC(this.releaseCount)
+      }
+    }
+
+    function oC(CC) {
+      for (var zC in CC) CC[zC] = 0
+    }
+
+    function qC(CC) {
+      window.addEventListener("keydown", pC.bind(null, CC, !0), !1), window.addEventListener("keyup", pC.bind(null, CC, !1), !1);
+      var zC = {
+        passive: !0
       };
-    var iq = gq(8057);
-    var Zq = gq(40304),
-      fq = gq(8704),
-      Mq = gq(8110),
-      Tq = gq(8823);
-    var zq = gq(40301),
-      Sq = gq(8826),
-      pq = gq(40314),
-      Gq = gq(8803),
-      Lq = gq(8709),
-      Jq = gq(8712),
-      kq = gq(8718),
-      Rq = gq(8599);
-    const Uq = () => Rq.d[(0, Wq.i)().tapHoldTime].wheelMs,
-      Fq = () => ((0, uq.c)(), new Event("controllerMenuKey")),
-      sq = (qq, Eq, gq) => new hq((() => {
-        const gq = qq.bodies();
-        return {
-          bodies: gq,
-          press: Eq(gq)
-        }
-      }), (qq => {
-        let {
-          bodies: Eq,
-          press: Yq
-        } = qq;
-        gq(Eq, Yq)
-      })),
-      Xq = {
-        running: !1,
-        latchedAtMs: -1 / 0
-      },
-      wq = qq => {
-        const Eq = {
-          x: 0,
-          y: 0,
-          magnitude: 0,
-          headingOffset: 0,
-          jumpHeld: !1,
-          jumpPressed: !1,
-          running: !1,
-          sprintHeld: !1
-        };
-        let gq = Xq;
-        const uq = new pq.b,
-          Pq = lq.i.subscribe("appManagerUpdated|activeInputDevice", (Eq => {
-            qq.deviceChanged(Eq)
-          }));
-        let yq = null,
-          tq = 0;
-        const hq = () => {
-          yq = null, (0, Lq.h)(null)
-        };
-        let nq = !1;
-        const wq = new vq,
-          Kq = qq.look,
-          Cq = new rq.d,
-          Iq = new rq.d,
-          eq = bq(qq),
-          Dq = lq.i.subscribe(oq.p, (Eq => {
-            eq.pressPicked(qq.bodies(), Eq)
-          })),
-          qE = sq(qq, (qq => qq.primaryFireDown()), ((qq, Eq) => {
-            qq.primaryFireUp(Eq)
-          })),
-          EE = sq(qq, (qq => qq.altFireDown()), ((qq, Eq) => {
-            qq.altFireUp(Eq)
-          }));
-        let gE = !1,
-          YE = !1,
-          lE = !1;
-        const OE = (0, dq.b)(Qq.ab),
-          mE = (0, dq.b)(Qq.ab),
-          xE = new rq.d;
-        let AE = !1;
-        const cE = () => {
-            OE.reset(), mE.reset(), xE.release(), (0, kq.g)(!1), Kq.release(), qE.cancel(), (0, Jq.d)(!1), EE.cancel(), eq.release(), Cq.release(), Iq.release(), hq()
-          },
-          uE = function() {
-            let Yq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            cE(), YE = !1, Yq || (gE = !1, gq = Xq, Object.assign(Eq, {
-              x: 0,
-              y: 0,
-              magnitude: 0,
-              headingOffset: 0,
-              jumpHeld: !1,
-              jumpPressed: !1,
-              running: !1,
-              sprintHeld: !1
-            }), qq.stopMoving())
-          },
-          BE = function(Yq, lq, Oq) {
-            let mq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const xq = (0, Wq.i)(),
-              cq = (0, zq.h)(lq, xq.moveDeadzone),
-              Bq = (0, Aq.i)("sprint");
-            gq = (0, zq.s)(gq, {
-              sprintPressed: Yq.wasPressed(Bq),
-              magnitude: cq.magnitude,
-              autoSprint: xq.autoSprint,
-              nowMs: Oq
-            }), Eq.running = gq.running, Eq.sprintHeld = Yq.isHeld(Bq), Eq.x = cq.x, Eq.y = cq.y, Eq.magnitude = cq.speed, Eq.headingOffset = cq.headingOffset, gE = cq.magnitude > 0;
-            const Nq = (0, Aq.i)("jump");
-            if (Eq.jumpHeld = Yq.isHeld(Nq), Eq.jumpPressed = Yq.wasPressed(Nq), Eq.jumpPressed && qq.bodies().jumpDown(), mq) return void qq.move(Eq, null);
-            const aq = (0, Aq.i)("sneak"),
-              Vq = uq.filter({
-                sneakHeld: Yq.isHeld(aq),
-                sneakPressed: Yq.wasPressed(aq),
-                sneakTogglePressed: Yq.wasPressed((0, Aq.i)("sneakToggle"))
-              }, Oq);
-            qq.move(Eq, {
-              ...Vq,
-              mode: xq.sneakMode
-            })
-          },
-          WE = (qq, Eq) => {
-            const gq = (0, Aq.i)("chat");
-            if ("off" === (0, Wq.i)().quickChat) return void(qq.wasPressed(gq) && (Bq.c.consumeButton(gq), lq.i.TV(fq.b)));
-            const Yq = Cq.update(qq.wasPressed(gq), qq.isHeld(gq), Eq, Uq());
-            "tap" === Yq || "hold" === Yq && null === (0, aq.b)() ? lq.i.TV(fq.b) : "hold" === Yq && (Bq.c.consumeButton(gq), lq.i.TV(Hq.k))
-          },
-          NE = (Eq, gq) => {
-            ((qq, Eq) => {
-              const gq = (0, jq.e)(),
-                Yq = (0, Aq.i)("emoteWheel");
-              if ("wheel" === (0, Wq.i)().emoteButton) return qq.wasPressed(Yq) && (Bq.c.consumeButton(Yq), lq.i.TV("requestEmoteWheelPadOpen", !0)), (0, jq.e)() !== gq;
-              const Oq = Iq.update(qq.wasPressed(Yq), qq.isHeld(Yq), Eq, Uq());
-              return "tap" === Oq ? lq.i.TV("requestEmoteRepeatLast") : "hold" === Oq && (Bq.c.consumeButton(Yq), lq.i.TV("requestEmoteWheelPadOpen", !1)), (0, jq.e)() !== gq
-            })(Eq, gq) || WE(Eq, gq), Eq.wasPressed((0, Aq.i)("inventory")) && (Bq.c.consumeButton((0, Aq.i)("inventory")), (0, xq.v)(Fq(), "inventory", qq.hasFullInventory())), Eq.wasPressed((0, Aq.i)("pause")) && (Bq.c.consumeButton((0, Aq.i)("pause")), (0, cq.b)() === mq.p.SOCIAL ? (0, xq.u)(Fq(), mq.p.SOCIAL) : (0, xq.h)(Fq())), Eq.wasPressed((0, Aq.i)("leaderboard")) && !(0, Oq.i)() && (Bq.c.consumeButton((0, Aq.i)("leaderboard")), ((qq, Eq) => {
-              if ("shop" === (0, Mq.c)()) return lq.i.TV(Tq.m), void(0, xq.u)(qq, mq.p.SHOP, !0);
-              (0, xq.u)(qq, mq.p.LOBBY_LEADERBOARD, Eq)
-            })(Fq(), qq.hasLobbyTab()))
-          },
-          aE = (Eq, gq) => {
-            const Yq = qq.bodies();
-            ((Eq, gq) => {
-              const Yq = (0, Aq.i)("attack"),
-                lq = Eq.wasPressed(Yq);
-              lq && !qE.isLatched() && (nq = qq.targetsBlock()), qE.update(lq, Eq.isHeld(Yq), gq, "toggle" === (0, Wq.i)().attackMode), qE.isLatched() && nq ? wq.update(qq.targetsBlock(), gq) && qE.unlatch() : wq.reset(), (0, Jq.d)(qE.isLatched())
-            })(Eq, gq), EE.update(Eq.wasPressed((0, Aq.i)("use")), Eq.isHeld((0, Aq.i)("use")), gq, !1), OE.update(Eq.isHeld((0, Aq.i)("hotbarPrevious")), gq) && qq.scrollHotbar(-1), mE.update(Eq.isHeld((0, Aq.i)("hotbarNext")), gq) && qq.scrollHotbar(1), ((Eq, gq, Yq) => {
-              const lq = (0, Aq.i)("perspective"),
-                Oq = (0, Aq.i)("pickBlock"),
-                mq = qq.pickBlockAllowed();
-              (0, kq.g)(mq && !AE && qq.targetsBlock());
-              const xq = () => {
-                gq.pickBlock() && (AE = !0, (0, kq.g)(!1))
-              };
-              if (!mq || Oq !== lq) return xE.release(), Eq.wasPressed(lq) && gq.swapCameraZoom(), void(mq && Eq.wasPressed(Oq) && xq());
-              const cq = xE.update(Eq.wasPressed(Oq), Eq.isHeld(Oq), Yq, Uq());
-              "tap" === cq ? xq() : "hold" === cq && gq.swapCameraZoom()
-            })(Eq, Yq, gq), ((Eq, gq, Yq) => {
-              const lq = (0, Aq.i)("drop");
-              if (Eq.wasPressed(lq)) {
-                gq.dropItem(!1);
-                const qq = (0, Wq.i)();
-                "off" !== qq.buttonRepeat && (yq = Yq, tq = Rq.d[qq.tapHoldTime].dropStackMs, (0, Lq.h)(tq))
-              }
-              null !== yq && (!Eq.isHeld(lq) || qq.selectedSlotEmpty() ? hq() : Yq - yq >= tq && (hq(), gq.dropItem(!0)))
-            })(Eq, Yq, gq), eq.update(Yq, Eq, gq, Uq()), NE(Eq, gq)
-          },
-          VE = Bq.c.register({
-            name: "gameplay",
-            isActive: () => {
-              const Eq = gE && "keyboardMouse" === Yq.b.get("activeInputDevice") && !(0, Nq.E)(),
-                gq = (0, Nq.k)() ? [Zq.b] : [];
-              return ((0, Nq.k)() || Eq) && (0, Vq.d)(gq) && qq.hasPlayer()
-            },
-            onFrame: qq => {
-              const Eq = performance.now(),
-                gq = (0, Wq.i)(),
-                Yq = (0, zq.u)(qq, (0, zq.l)(gq, (0, Aq.i)("pause"), (0, Sq.b)().isSupported())),
-                lq = (0, zq.i)(Yq, gq.swapSticks);
-              return (0, Nq.k)() ? (YE = !1, (0, Vq.d)() ? (lE = !1, Kq.update(lq.look, gq, Yq.isHeld((0, Aq.i)("use"))), BE(Yq, lq.move, Eq), void aE(Yq, Eq)) : (lE || (lE = !0, uq.lostToPadScreen(), uE()), void WE(Yq, Eq))) : (YE || (cE(), YE = !0), void BE(Yq, lq.move, Eq))
-            },
-            onDeactivate: qq => {
-              (0, Nq.k)() && uq.lostToPadScreen(), uE(qq)
-            },
-            onPeekFrame: Eq => {
-              (0, Nq.k)() && (0, Vq.d)(Zq.d) && qq.hasPlayer() ? BE(Eq, (0, zq.i)(Eq, (0, Wq.i)().swapSticks).move, performance.now(), !0) : uE()
-            }
-          }),
-          dE = (0, Zq.c)(qq),
-          jE = (() => {
-            const qq = lq.i.subscribe(iq.d, (qq => {
-              !qq && (0, Nq.k)() && "inGame" === Yq.b.get("gameState") && lq.i.TV("showBottomMessage", {
-                message: [{
-                  translationKey: "controller:disconnected"
-                }],
-                timeoutLength: 3e3,
-                type: "Warning"
-              })
-            }));
-            return () => {
-              lq.i.unsubscribe(qq)
-            }
-          })();
-        return () => {
-          uE(), qq.uninstall(), (0, Gq.f)(!1), (0, kq.g)(!1), lq.i.unsubscribe(Pq), lq.i.unsubscribe(Dq), VE(), dE(), jE(), Kq.uninstall()
-        }
-      }
-  },
-  40304: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => aq,
-      c: () => dq,
-      d: () => Nq
-    });
-    var Yq = gq(1274),
-      lq = gq(4135),
-      Oq = gq(8750),
-      mq = gq(36974),
-      xq = gq(1702),
-      Aq = gq(1174),
-      cq = gq(8123),
-      uq = gq(8662),
-      Bq = gq(8780);
-    const Wq = {
-        emoteWheel: Oq.e,
-        quickChatWheel: uq.d,
-        actionWheel: Bq.r
-      },
-      Nq = Object.keys(Wq),
-      aq = "dead",
-      Vq = qq => (0, Yq.i)().includes(qq),
-      dq = qq => {
-        const Eq = [(0, cq.i)(aq, (() => qq.hasPlayer() && qq.isPlayerDead())), (0, cq.i)("sleeping", (() => Vq(mq.g))), (0, cq.i)("turnstile", (() => Vq(Aq.e))), (0, cq.i)("videoAd", xq.d), (0, cq.i)("replay", (() => (0, lq.i)() || qq.isReplayMode())), (0, cq.i)("freeCamera", (() => qq.isFreeCameraOn())), ...Object.entries(Wq).map((qq => {
-          let [Eq, gq] = qq;
-          return (0, cq.i)(Eq, gq)
-        }))];
-        return () => {
-          for (const qq of Eq) qq()
-        }
-      }
-  },
-  40301: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => lq,
-      h: () => Aq,
-      i: () => xq,
-      l: () => uq,
-      m: () => mq,
-      o: () => Oq,
-      s: () => cq,
-      u: () => Bq
-    });
-    var Yq = gq(8061);
-    class lq {
-      constructor() {
-        this.fullTiltSinceMs = null
-      }
-      update(qq, Eq, gq) {
-        const lq = (0, Yq.j)(qq, Eq.lookDeadzone);
-        if (Math.hypot(lq.x, lq.y) < .9 || Math.abs(lq.x) < Math.abs(lq.y)) return this.fullTiltSinceMs = null, 1;
-        null === this.fullTiltSinceMs && (this.fullTiltSinceMs = gq);
-        const Oq = (mq = Eq.lookSensitivityX, Math.min(1, 100 / mq));
-        var mq;
-        return 1 + (1.6 - 1) * Math.max(0, Math.min(1, (gq - this.fullTiltSinceMs - 250 * Oq) / (200 * Oq)))
-      }
-      reset() {
-        this.fullTiltSinceMs = null
+      CC.element.addEventListener("touchstart", MC.bind(void 0, CC), {
+        passive: !1
+      }), CC.element.addEventListener("touchend", SC.bind(void 0, CC), zC), CC.element.addEventListener("mousedown", PC.bind(null, CC, !0), zC), window.document.addEventListener("mouseup", PC.bind(null, CC, !1), zC), CC.element.addEventListener("touchmove", GC.bind(null, CC), zC), CC.element.addEventListener("mousemove", GC.bind(null, CC), zC), window.PointerEvent, CC.element.addEventListener("wheel", RC.bind(null, CC), zC), CC.element.addEventListener("contextmenu", AC.bind(null, CC), !1), window.addEventListener("blur", IC.bind(null, CC), !1)
+    }
+    var FC = 0,
+      WC = 0,
+      NC = null;
+
+    function MC(CC, zC) {
+      zC.preventDefault(), gC(zC)
+    }
+
+    function gC(CC) {
+      let zC = !1;
+      for (let ZC = 0; ZC < CC.touches.length; ++ZC)
+        if (CC.touches[ZC].identifier === NC) {
+          zC = !0;
+          break
+        } if (!zC) {
+        const zC = CC.changedTouches[0];
+        FC = zC.clientX, WC = zC.clientY, NC = zC.identifier
       }
     }
-    const Oq = (qq, Eq, gq, lq, Oq) => {
-        let mq = 1;
-        return "boost" === gq.lookCurve ? mq = qq.update(Eq, gq, Oq) : qq.reset(),
-          function(qq, Eq) {
-            let {
-              yawBoost: gq = 1,
-              aiming: lq = !1
-            } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            const Oq = (0, Yq.f)((0, Yq.j)(qq, Eq.lookDeadzone), Eq.lookCurve),
-              mq = 220 * Math.PI / 180,
-              xq = lq ? Eq.aimLookSensitivity / 100 : 1,
-              Aq = Eq.lookSensitivityX / 100 * xq,
-              cq = Eq.lookSensitivityY / 100 * xq;
-            return {
-              yawRadPerSec: Oq.x * mq * Aq * gq * (Eq.invertLookX ? -1 : 1),
-              pitchRadPerSec: Oq.y * mq * .7 * cq * (Eq.invertLookY ? -1 : 1)
-            }
-          }(Eq, gq, {
-            yawBoost: mq,
-            aiming: lq
-          })
-      },
-      mq = (qq, Eq) => {
-        const gq = Math.max(0, Math.min(250, Eq)) / 1e3;
-        return {
-          VJ: qq.yawRadPerSec * gq,
-          dJ: qq.pitchRadPerSec * gq
+
+    function SC(CC, zC) {
+      for (var ZC = zC.changedTouches, QC = 0; QC < ZC.length; ++QC) ZC[QC].identifier === NC && (NC = null)
+    }
+
+    function pC(CC, zC, ZC) {
+      if (!CC.ignoreEvent(ZC)) try {
+        iC(CC, ZC), zC && ZC.isTrusted && !ZC.repeat && CC._keyStates[ZC.code] && vC(CC, ZC.code)
+      } finally {
+        eC(ZC.code, zC, CC, ZC)
+      }
+    }
+
+    function PC(CC, zC, ZC) {
+      if (!CC.ignoreEvent(ZC)) try {
+        iC(CC, ZC)
+      } finally {
+        ! function(CC, zC, ZC) {
+          if ("pointerId" in ZC)
+            if (zC) {
+              if (null !== CC._touches.currID) return;
+              CC._touches.currID = ZC.pointerId
+            } else {
+              if (CC._touches.currID !== ZC.pointerId) return;
+              CC._touches.currID = null
+            } var QC = "button" in ZC ? ZC.button + 1 : 1;
+          eC("Mouse" + QC, zC, CC, ZC)
+        }(CC, zC, ZC)
+      }
+    }
+
+    function GC(CC, zC) {
+      var ZC = zC.movementX || zC.mozMovementX || 0,
+        QC = zC.movementY || zC.mozMovementY || 0;
+      if (zC.touches && 0 === (ZC | QC)) {
+        var wC = function(CC) {
+          gC(CC);
+          for (let zC = 0; zC < CC.changedTouches.length; ++zC)
+            if (CC.changedTouches[zC].identifier == NC) {
+              const ZC = CC.changedTouches[zC],
+                QC = [ZC.clientX - FC, ZC.clientY - WC];
+              return FC = ZC.clientX, WC = ZC.clientY, QC
+            } return console.error(`Did not find touch id ${NC}`), [0, 0]
+        }(zC);
+        ZC = wC[0], QC = wC[1]
+      }
+      CC.Fy.dx += ZC, CC.Fy.dy += QC
+    }
+
+    function RC(CC, zC) {
+      iC(CC, zC);
+      var ZC = 1;
+      switch (zC.deltaMode) {
+        case 0:
+          ZC = 1;
+          break;
+        case 1:
+          ZC = 12;
+          break;
+        case 2:
+          ZC = CC.element.clientHeight || window.innerHeight
+      }
+      CC.Fy.OCC += (zC.deltaX || 0) * ZC, CC.Fy.kCC += (zC.deltaY || 0) * ZC, CC.Fy.VCC += (zC.deltaZ || 0) * ZC
+    }
+
+    function AC(CC, zC) {
+      if (!CC.jD) return zC.preventDefault(), !1
+    }
+    var xC = {
+      AltLeft: "altKey",
+      AltRight: "altKey",
+      ControlLeft: "ctrlKey",
+      ControlRight: "ctrlKey",
+      ShiftLeft: "shiftKey",
+      ShiftRight: "shiftKey",
+      MetaLeft: "metaKey",
+      MetaRight: "metaKey"
+    };
+
+    function JC(CC, zC) {
+      return !!CC[xC[zC]] || ("AltRight" === zC || "ControlLeft" === zC) && "function" === typeof CC.getModifierState && !0 === CC.getModifierState("AltGraph")
+    }
+
+    function IC(CC, zC) {
+      for (var ZC in CC._modifiersHeldThroughBlur = {}, xC) CC._keyStates[ZC] && (CC._modifiersHeldThroughBlur[ZC] = !0);
+      zC && zC.isTrusted && function() {
+        try {
+          return window.self !== window.top
+        } catch (CC) {
+          return !0
         }
-      },
-      xq = (qq, Eq) => Eq ? {
-        move: qq.rightStick,
-        look: qq.leftStick
-      } : {
-        move: qq.leftStick,
-        look: qq.rightStick
-      },
-      Aq = (qq, Eq) => {
-        const gq = (0, Yq.j)(qq, Eq),
-          lq = Math.min(1, Math.hypot(gq.x, gq.y));
-        return {
-          magnitude: lq,
-          speed: Math.min(1, lq / .8),
-          headingOffset: 0 === lq ? 0 : Math.atan2(gq.x, -gq.y),
-          x: gq.x,
-          y: gq.y
-        }
-      },
-      cq = (qq, Eq) => {
-        let {
-          sprintPressed: gq,
-          magnitude: Yq,
-          autoSprint: lq,
-          nowMs: Oq
-        } = Eq;
-        const mq = gq ? Oq : qq.latchedAtMs,
-          xq = (qq => {
-            let {
-              running: Eq,
-              magnitude: gq,
-              sprintPressed: Yq,
-              autoSprint: lq
-            } = qq;
-            return !(gq < .5) && (!!Yq || !!(lq && gq >= .9) || Eq)
-          })({
-            running: qq.running,
-            magnitude: Yq,
-            sprintPressed: Oq - mq <= 1e3,
-            autoSprint: lq
-          });
-        return {
-          running: xq,
-          latchedAtMs: xq ? -1 / 0 : mq
-        }
-      },
-      uq = (qq, Eq, gq) => gq && qq.gyroAiming && "button" === qq.gyroActivation && qq.gyroButton !== Eq ? qq.gyroButton : null,
-      Bq = (qq, Eq) => Eq ? {
-        ...qq,
-        isHeld: gq => gq !== Eq && qq.isHeld(gq),
-        wasPressed: gq => gq !== Eq && qq.wasPressed(gq),
-        wasReleased: gq => gq !== Eq && qq.wasReleased(gq),
-        value: gq => gq === Eq ? 0 : qq.value(gq)
-      } : qq
+      }() && (clearTimeout(CC._blurRelease), CC._blurRelease = setTimeout((function() {
+        if (!document.hasFocus())
+          for (var zC in CC._modifiersHeldThroughBlur = {}, CC._keyStates) CC._keyStates[zC] && !/^Mouse\d/.test(zC) && vC(CC, zC)
+      }), 0))
+    }
+
+    function iC(CC, zC) {
+      var ZC = CC._modifiersHeldThroughBlur;
+      if (ZC && zC.isTrusted && document.hasFocus())
+        for (var QC in ZC) delete ZC[QC], CC._keyStates[QC] && QC !== zC.code && (JC(zC, QC) || vC(CC, QC))
+    }
+
+    function vC(CC, zC) {
+      const ZC = {
+          code: zC,
+          preventDefault: () => {},
+          stopPropagation: () => {}
+        },
+        QC = wC;
+      wC = ZC;
+      try {
+        eC(zC, !1, CC, ZC)
+      } finally {
+        wC = QC
+      }
+    }
+
+    function eC(CC, zC, ZC, QC) {
+      var wC = ZC._keyBindmap[CC];
+      wC && (hC(ZC._keyStates[CC], zC) && (ZC._keyStates[CC] = zC, wC.forEach((CC => {
+        (!ZC.filterEvents || ZC.filterEvents(QC, CC)) && function(CC, zC, ZC, QC) {
+          var wC = zC ? ZC.pressCount : ZC.releaseCount;
+          wC[CC] = (wC[CC] || 0) + 1;
+          var bC = ZC._bindPressCount[CC] || 0;
+          (bC += zC ? 1 : -1) < 0 && (bC = 0);
+          ZC._bindPressCount[CC] = bC;
+          var nC = ZC.state[CC];
+          if (hC(nC, bC)) {
+            ZC.state[CC] = bC > 0;
+            var fC = zC ? ZC.down : ZC.up;
+            ZC.disabled || fC.emit(CC, QC)
+          }
+        }(CC, zC, ZC, QC)
+      }))), "button" in QC || (ZC.rD && !QC.defaultPrevented && QC.preventDefault(), ZC.stopPropagation && QC.stopPropagation()))
+    }
+
+    function hC(CC, zC) {
+      return CC ? !zC : zC
+    }
   },
-  40314: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      c: () => Yq
-    });
-    const Yq = qq => {
-      let {
-        mode: Eq,
-        sneakHeld: gq,
-        sneakPressed: Yq,
-        sneakTogglePressed: lq,
-        descending: Oq,
-        canCrouch: mq,
-        toggled: xq
-      } = qq;
-      return mq ? Oq ? {
-        crouchHeld: gq,
-        toggled: !1
-      } : "hold" === Eq ? {
-        crouchHeld: gq,
-        toggled: lq ? !xq : xq
-      } : {
-        crouchHeld: !1,
-        toggled: Yq || lq ? !xq : xq
-      } : {
-        crouchHeld: !1,
-        toggled: !1
+  36417: (CC, zC) => {
+    function ZC(CC) {
+      if (CC && "object" === typeof CC) {
+        var zC = CC.which || CC.keyCode || CC.charCode;
+        zC && (CC = zC)
+      }
+      if ("number" === typeof CC) return nC[CC];
+      var ZC, bC = String(CC);
+      return (ZC = QC[bC.toLowerCase()]) ? ZC : (ZC = wC[bC.toLowerCase()]) || (1 === bC.length ? bC.charCodeAt(0) : void 0)
+    }
+    ZC.isEventKey = function(CC, zC) {
+      if (CC && "object" === typeof CC) {
+        var ZC = CC.which || CC.keyCode || CC.charCode;
+        if (null === ZC || void 0 === ZC) return !1;
+        if ("string" === typeof zC) {
+          var bC;
+          if (bC = QC[zC.toLowerCase()]) return bC === ZC;
+          if (bC = wC[zC.toLowerCase()]) return bC === ZC
+        } else if ("number" === typeof zC) return zC === ZC;
+        return !1
       }
     };
-    class lq {
+    var QC = (zC = CC.exports = ZC).code = zC.codes = {
+        backspace: 8,
+        tab: 9,
+        enter: 13,
+        shift: 16,
+        ctrl: 17,
+        alt: 18,
+        "pause/break": 19,
+        "caps lock": 20,
+        esc: 27,
+        space: 32,
+        "page up": 33,
+        "page down": 34,
+        end: 35,
+        home: 36,
+        left: 37,
+        up: 38,
+        right: 39,
+        down: 40,
+        insert: 45,
+        delete: 46,
+        command: 91,
+        "left command": 91,
+        "right command": 93,
+        "numpad *": 106,
+        "numpad +": 107,
+        "numpad -": 109,
+        "numpad .": 110,
+        "numpad /": 111,
+        "num lock": 144,
+        "scroll lock": 145,
+        "my computer": 182,
+        "my calculator": 183,
+        ";": 186,
+        "=": 187,
+        ",": 188,
+        "-": 189,
+        ".": 190,
+        "/": 191,
+        "`": 192,
+        "[": 219,
+        "\\": 220,
+        "]": 221,
+        "'": 222
+      },
+      wC = zC.aliases = {
+        windows: 91,
+        "\u21e7": 16,
+        "\u2325": 18,
+        "\u2303": 17,
+        "\u2318": 91,
+        ctl: 17,
+        control: 17,
+        option: 18,
+        pause: 19,
+        break: 19,
+        caps: 20,
+        return: 13,
+        escape: 27,
+        spc: 32,
+        spacebar: 32,
+        pgup: 33,
+        pgdn: 34,
+        ins: 45,
+        del: 46,
+        cmd: 91
+      };
+    for (bC = 97; bC < 123; bC++) QC[String.fromCharCode(bC)] = bC - 32;
+    for (var bC = 48; bC < 58; bC++) QC[bC - 48] = bC;
+    for (bC = 1; bC < 13; bC++) QC["f" + bC] = bC + 111;
+    for (bC = 0; bC < 10; bC++) QC["numpad " + bC] = bC + 96;
+    var nC = zC.names = zC.title = {};
+    for (bC in QC) nC[QC[bC]] = bC;
+    for (var fC in wC) QC[fC] = wC[fC]
+  },
+  39376: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => QC
+    });
+    class QC {
       constructor() {
-        this.regainPending = !1, this.regainedAtMs = -1 / 0, this.graceEndsMs = -1 / 0, this.ignoringHeld = !1
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.Gl = !1, this.Rl = !1, this.Jm = 30, this.yE = 0, this.Al = 100, this.rp = !1, this.fullscreen = !1, this.sG = function(CC) {}, this.Kl = function(CC, zC, ZC) {}, this.Bl = function() {}, this.mG = function() {}, this.Tl = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(CC) {}, this._data = new wC(zC),
+          function(CC) {
+            if ("loading" === document.readyState) {
+              var zC = () => {
+                document.removeEventListener("readystatechange", zC), CC()
+              };
+              document.addEventListener("readystatechange", zC)
+            } else setTimeout(CC, 0)
+          }((() => {
+            ! function(CC) {
+              var zC = CC._data,
+                ZC = zC.nowObject.now();
+              zC.lastTickStarted = ZC, zC.lastFrameStarted = ZC, zC.lastRenderStarted = ZC, zC.frameCB = () => function(CC) {
+                var zC = CC._data;
+                requestAnimationFrame(zC.frameCB), fC(CC);
+                var ZC = zC.nowObject.now(),
+                  QC = ZC - zC.lastFrameStarted;
+                if (zC.lastFrameStarted = ZC, CC.yE > 0) {
+                  zC.renderAccum += QC;
+                  var wC = 1e3 / CC.yE;
+                  if (zC.renderAccum < wC) return;
+                  zC.renderAccum -= wC, zC.renderAccum > wC && (zC.renderAccum = wC)
+                }
+                var bC = ZC - zC.lastRenderStarted;
+                zC.lastRenderStarted = ZC;
+                var nC = 1e3 / CC.Jm,
+                  oC = (ZC - zC.lastTickStarted) / nC;
+                oC < 0 && (oC = 0);
+                CC.Kl(bC, oC, nC), setTimeout(fC, 0, CC, !0)
+              }(CC), zC.intervalCB = () => fC(CC), requestAnimationFrame(zC.frameCB), zC.pollTime > 0 && (zC.intervalID = setInterval(zC.intervalCB, Math.max(zC.pollTime, 1e3 / CC.Jm / 2)))
+            }(this),
+            function(CC, zC) {
+              if (!zC) return;
+              var ZC = !1,
+                QC = !1,
+                wC = CC => {
+                  if (!!CC !== (ZC = zC === document.pointerLockElement))
+                    if (CC) {
+                      var QC = zC.requestPointerLock();
+                      QC && QC.catch && QC.catch((CC => {}))
+                    } else document.exitPointerLock()
+                },
+                bC = CC => {
+                  !!CC !== (QC = zC === document.fullscreenElement) && (CC ? zC.requestFullscreen ? zC.requestFullscreen() : zC.webkitRequestFullscreen && zC.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                };
+              document.addEventListener("pointerlockchange", (QC => {
+                ZC = zC === document.pointerLockElement, CC.Tl(ZC)
+              })), document.addEventListener("fullscreenchange", (ZC => {
+                QC = zC === document.fullscreenElement, CC.onFullscreenChanged(QC)
+              })), document.addEventListener("pointerlockerror", (QC => {
+                ZC = zC === document.pointerLockElement, CC.onPointerLockError(QC)
+              })), Object.defineProperty(CC, "rp", {
+                get: () => ZC,
+                set: wC
+              }), Object.defineProperty(CC, "fullscreen", {
+                get: () => QC,
+                set: bC
+              }), zC.addEventListener("click", (zC => {
+                CC.Gl && wC(!0), CC.Rl && bC(!0)
+              }));
+              var nC = () => CC.mG();
+              if (window.ResizeObserver) {
+                new ResizeObserver(nC).observe(zC)
+              } else window.addEventListener("resize", nC)
+            }(this, CC), this.Bl()
+          }))
       }
-      lostToPadScreen() {
-        this.regainPending = !0
-      }
-      filter(qq, Eq) {
-        this.regainPending && (this.regainPending = !1, this.regainedAtMs = Eq, this.graceEndsMs = Eq + 500);
-        const gq = Eq < this.graceEndsMs;
-        return gq && (qq.sneakPressed || qq.sneakTogglePressed) && (this.graceEndsMs = Math.min(this.regainedAtMs + 1e3, Math.max(this.graceEndsMs, Eq + 300))), qq.sneakHeld ? gq && qq.sneakPressed && (this.ignoringHeld = !0) : this.ignoringHeld = !1, {
-          sneakHeld: qq.sneakHeld && !this.ignoringHeld,
-          sneakPressed: qq.sneakPressed && !this.ignoringHeld,
-          sneakTogglePressed: qq.sneakTogglePressed && !gq
+    }
+
+    function wC() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = CC, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    }
+    var bC = 3,
+      nC = 20;
+
+    function fC(CC) {
+      for (var zC = CC._data, ZC = 1e3 / CC.Jm, QC = zC.nowObject.now() + nC, wC = 0; zC.nowObject.now() >= zC.lastTickStarted + ZC && zC.nowObject.now() < QC && ++wC <= bC;) CC.sG(ZC), zC.lastTickStarted += ZC;
+      var fC = 5 * (ZC + 5),
+        oC = zC.nowObject.now();
+      if (oC - zC.lastTickStarted > fC)
+        for (; oC >= zC.lastTickStarted + ZC;) zC.lastTickStarted += ZC
+    }
+  },
+  36581: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC
+    });
+    var QC = ZC(48);
+    const wC = QC.useLayoutEffect;
+    const bC = function(CC) {
+      var zC = (0, QC.useRef)(CC);
+      return wC((function() {
+        zC.current = CC
+      })), zC
+    };
+    var nC = function(CC) {
+      var zC = bC(CC);
+      (0, QC.useEffect)((function() {
+        var CC = function(CC) {
+          var ZC;
+          if (null != zC.current && (ZC = zC.current(CC)), CC.defaultPrevented && (CC.returnValue = ""), "string" === typeof ZC) return CC.returnValue = ZC, ZC
+        };
+        return window.addEventListener("beforeunload", CC),
+          function() {
+            window.removeEventListener("beforeunload", CC)
+          }
+      }), [])
+    }
+  },
+  36466: CC => {
+    var zC, ZC = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      QC = /OS X/.test(ZC),
+      wC = /Opera/.test(ZC),
+      bC = !/like Gecko/.test(ZC) && !wC,
+      nC = CC.exports = {
+        0: QC ? "<menu>" : "<UNK>",
+        1: "<mouse 1>",
+        2: "<mouse 2>",
+        3: "<break>",
+        4: "<mouse 3>",
+        5: "<mouse 4>",
+        6: "<mouse 5>",
+        8: "<backspace>",
+        9: "<tab>",
+        12: "<clear>",
+        13: "<enter>",
+        16: "<shift>",
+        17: "<control>",
+        18: "<alt>",
+        19: "<pause>",
+        20: "<caps-lock>",
+        21: "<ime-hangul>",
+        23: "<ime-junja>",
+        24: "<ime-final>",
+        25: "<ime-kanji>",
+        27: "<escape>",
+        28: "<ime-convert>",
+        29: "<ime-nonconvert>",
+        30: "<ime-accept>",
+        31: "<ime-mode-change>",
+        32: "<space>",
+        33: "<page-up>",
+        34: "<page-down>",
+        35: "<end>",
+        36: "<home>",
+        37: "<left>",
+        38: "<up>",
+        39: "<right>",
+        40: "<down>",
+        41: "<select>",
+        42: "<print>",
+        43: "<execute>",
+        44: "<snapshot>",
+        45: "<insert>",
+        46: "<delete>",
+        47: "<help>",
+        91: "<meta>",
+        92: "<meta>",
+        93: QC ? "<meta>" : "<menu>",
+        95: "<sleep>",
+        106: "<num-*>",
+        107: "<num-+>",
+        108: "<num-enter>",
+        109: "<num--\x3e",
+        110: "<num-.>",
+        111: "<num-/>",
+        144: "<num-lock>",
+        145: "<scroll-lock>",
+        160: "<shift-left>",
+        161: "<shift-right>",
+        162: "<control-left>",
+        163: "<control-right>",
+        164: "<alt-left>",
+        165: "<alt-right>",
+        166: "<browser-back>",
+        167: "<browser-forward>",
+        168: "<browser-refresh>",
+        169: "<browser-stop>",
+        170: "<browser-search>",
+        171: "<browser-favorites>",
+        172: "<browser-home>",
+        173: QC && bC ? "-" : "<volume-mute>",
+        174: "<volume-down>",
+        175: "<volume-up>",
+        176: "<next-track>",
+        177: "<prev-track>",
+        178: "<stop>",
+        179: "<play-pause>",
+        180: "<launch-mail>",
+        181: "<launch-media-select>",
+        182: "<launch-app 1>",
+        183: "<launch-app 2>",
+        186: ";",
+        187: "=",
+        188: ",",
+        189: "-",
+        190: ".",
+        191: "/",
+        192: "`",
+        219: "[",
+        220: "\\",
+        221: "]",
+        222: "'",
+        223: "<meta>",
+        224: "<meta>",
+        226: "<alt-gr>",
+        229: "<ime-process>",
+        231: wC ? "`" : "<unicode>",
+        246: "<attention>",
+        247: "<crsel>",
+        248: "<exsel>",
+        249: "<erase-eof>",
+        250: "<play>",
+        251: "<zoom>",
+        252: "<no-name>",
+        253: "<pa-1>",
+        254: "<clear>"
+      };
+    for (zC = 58; zC < 65; ++zC) nC[zC] = String.fromCharCode(zC);
+    for (zC = 48; zC < 58; ++zC) nC[zC] = zC - 48 + "";
+    for (zC = 65; zC < 91; ++zC) nC[zC] = String.fromCharCode(zC);
+    for (zC = 96; zC < 106; ++zC) nC[zC] = "<num-" + (zC - 96) + ">";
+    for (zC = 112; zC < 136; ++zC) nC[zC] = "F" + (zC - 111)
+  },
+  38815: (CC, zC, ZC) => {
+    function QC(CC, zC, ZC, QC, wC) {
+      var bC = {};
+      return Object.keys(QC).forEach((function(CC) {
+        bC[CC] = QC[CC]
+      })), bC.enumerable = !!bC.enumerable, bC.configurable = !!bC.configurable, ("value" in bC || bC.initializer) && (bC.writable = !0), bC = ZC.slice().reverse().reduce((function(ZC, QC) {
+        return QC(CC, zC, ZC) || ZC
+      }), bC), wC && void 0 !== bC.initializer && (bC.value = bC.initializer ? bC.initializer.call(wC) : void 0, bC.initializer = void 0), void 0 === bC.initializer && (Object.defineProperty(CC, zC, bC), bC = null), bC
+    }
+    ZC.d(zC, {
+      d: () => QC
+    })
+  },
+  38813: (CC, zC, ZC) => {
+    function QC(CC, zC, ZC, QC) {
+      ZC && Object.defineProperty(CC, zC, {
+        enumerable: ZC.enumerable,
+        configurable: ZC.configurable,
+        writable: ZC.writable,
+        value: ZC.initializer ? ZC.initializer.call(QC) : void 0
+      })
+    }
+    ZC.d(zC, {
+      b: () => QC
+    })
+  },
+  38501: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => bC
+    });
+    var QC = ZC(38507);
+    const wC = (CC, zC, ZC) => CC ? CC.getClassName && "Mesh" === CC.getClassName() ? null : !CC.getClassName || "SubMesh" !== CC.getClassName() && "PhysicsBody" !== CC.getClassName() ? CC.clone ? CC.clone() : Array.isArray(CC) ? CC.slice() : ZC && "object" === typeof CC ? {
+      ...CC
+    } : null : CC.clone(zC) : null;
+    class bC {
+      static DeepCopy(CC, zC, ZC, bC) {
+        let nC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const fC = function(CC) {
+          const zC = [];
+          do {
+            const ZC = Object.getOwnPropertyNames(CC);
+            for (const CC of ZC) - 1 === zC.indexOf(CC) && zC.push(CC)
+          } while (CC = Object.getPrototypeOf(CC));
+          return zC
+        }(CC);
+        for (const qC of fC) {
+          if ("_" === qC[0] && (!bC || -1 === bC.indexOf(qC))) continue;
+          if (qC.endsWith("Observable")) continue;
+          if (ZC && -1 !== ZC.indexOf(qC)) continue;
+          const fC = CC[qC],
+            FC = typeof fC;
+          if ("function" !== FC) try {
+            if ("object" === FC)
+              if (fC instanceof Uint8Array) zC[qC] = Uint8Array.from(fC);
+              else if (fC instanceof Array) {
+              if (zC[qC] = [], fC.length > 0)
+                if ("object" == typeof fC[0])
+                  for (let CC = 0; CC < fC.length; CC++) {
+                    const ZC = wC(fC[CC], zC, nC); - 1 === zC[qC].indexOf(ZC) && zC[qC].push(ZC)
+                  } else zC[qC] = fC.slice(0)
+            } else zC[qC] = wC(fC, zC, nC);
+            else zC[qC] = fC
+          } catch (oC) {
+            QC.c.Warn(oC.message)
+          }
         }
       }
     }
   },
-  40293: (qq, Eq, gq) => {
-    gq(8826)
-  },
-  40295: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => oq
+  38538: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => wC,
+      f: () => bC,
+      g: () => nC,
+      k: () => fC
     });
-    var Yq = gq(31),
-      lq = gq(8750),
-      Oq = gq(8764),
-      mq = gq(8073),
-      xq = gq(8118),
-      Aq = gq(8090),
-      cq = gq(40301),
-      uq = gq(40304),
-      Bq = gq(8123),
-      Wq = gq(8061),
-      Nq = gq(8662),
-      aq = gq(8780);
-    const Vq = [{
-        isOpen: lq.i,
-        openButton: () => (0, mq.i)("emoteWheel"),
-        aim: qq => {
-          Yq.i.TV("emoteWheelPadAim", qq)
-        },
-        commit: qq => {
-          Yq.i.TV("requestEmoteWheelPadCommit", qq)
-        },
-        close: () => {
-          Yq.i.TV("requestEmoteWheelClose")
-        }
-      }, {
-        isOpen: Nq.d,
-        openButton: () => (0, mq.i)("chat"),
-        aim: qq => {
-          Yq.i.TV(Nq.g, qq)
-        },
-        commit: qq => {
-          Yq.i.TV(Nq.i, qq)
-        },
-        close: () => {
-          Yq.i.TV(Nq.h)
-        },
-        keptOpenBy: [uq.b]
-      }, {
-        isOpen: aq.r,
-        openButton: () => (0, mq.i)("actionButton"),
-        aim: qq => {
-          Yq.i.TV(aq.c, qq)
-        },
-        commit: qq => {
-          Yq.i.TV(aq.i, qq)
-        },
-        close: () => {
-          Yq.i.TV(aq.g)
-        }
-      }],
-      dq = () => {
-        var qq;
-        return null !== (qq = Vq.find((qq => qq.isOpen()))) && void 0 !== qq ? qq : null
-      },
-      jq = qq => (0, mq.G)(qq.openButton()),
-      Hq = (qq, Eq) => !(0, Wq.J)(qq.frame.values, Eq),
-      oq = () => {
-        let qq = null,
-          Eq = !1,
-          gq = !1;
-        return xq.c.register({
-          name: "wheel",
-          isActive: () => null !== dq(),
-          peek: () => {
-            const qq = dq();
-            return qq && jq(qq) ? null : {
-              over: "gameplay",
-              stick: (0, Aq.i)().swapSticks ? "right" : "left"
-            }
-          },
-          onFrame: Yq => {
-            var lq;
-            const Wq = dq();
-            if (!Wq) return;
-            if (null !== (0, Bq.c)([...uq.d, ...null !== (lq = Wq.keptOpenBy) && void 0 !== lq ? lq : []])) return void Wq.close();
-            const Nq = Wq.openButton(),
-              aq = (0, cq.i)(Yq.frame, (0, Aq.i)().swapSticks),
-              Vq = jq(Wq) ? aq.move : aq.look;
-            qq !== Wq ? (qq = Wq, Eq = !Hq(Yq, Nq) || Math.hypot(Vq.x, Vq.y) >= Oq.y, gq = !1) : gq && (gq = !1, Hq(Yq, Nq) && (Eq = !1)), Wq.aim(Vq);
-            const oq = (0, mq.i)("menuConfirm"),
-              Pq = (0, mq.i)("menuBack");
-            return Yq.wasPressed(Pq) ? (xq.c.consumeButton(Pq), void Wq.close()) : Yq.wasPressed(oq) || Yq.wasPressed(Nq) ? (xq.c.consumeButton(oq), xq.c.consumeButton(Nq), void Wq.commit(!1)) : void(Eq && Hq(Yq, Nq) && (Eq = !1, Wq.commit(!0)))
-          },
-          onDeactivate: () => {
-            gq = null !== qq && dq() === qq, gq || (qq = null, Eq = !1)
-          }
-        })
+    var QC = ZC(37142);
+    class wC {
+      constructor(CC, zC, ZC) {
+        this.gradient = CC, this.color1 = zC, this.color2 = ZC
       }
+      getColorToRef(CC) {
+        this.color2 ? QC.g.LerpToRef(this.color1, this.color2, Math.random(), CC) : CC.Av(this.color1)
+      }
+    }
+    class bC {
+      constructor(CC, zC) {
+        this.gradient = CC, this.color = zC
+      }
+    }
+    class nC {
+      constructor(CC, zC, ZC) {
+        this.gradient = CC, this.factor1 = zC, this.factor2 = ZC
+      }
+      getFactor() {
+        return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
+      }
+    }
+    class fC {
+      static GetCurrentGradient(CC, zC, ZC) {
+        if (zC[0].gradient > CC) return void ZC(zC[0], zC[0], 1);
+        for (let wC = 0; wC < zC.length - 1; wC++) {
+          const QC = zC[wC],
+            bC = zC[wC + 1];
+          if (CC >= QC.gradient && CC <= bC.gradient) {
+            return void ZC(QC, bC, (CC - QC.gradient) / (bC.gradient - QC.gradient))
+          }
+        }
+        const QC = zC.length - 1;
+        ZC(zC[QC], zC[QC], 1)
+      }
+    }
+  },
+  38507: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => QC
+    });
+    class QC {
+      static _CheckLimit(CC, zC) {
+        let ZC = QC._LogLimitOutputs[CC];
+        return ZC ? ZC.current++ : (ZC = {
+          limit: zC,
+          current: 1
+        }, QC._LogLimitOutputs[CC] = ZC), ZC.current <= ZC.limit
+      }
+      static _GenerateLimitMessage(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ZC = QC._LogLimitOutputs[CC];
+        if (!ZC || !QC.MessageLimitReached) return;
+        const wC = this._Levels[zC];
+        ZC.current === ZC.limit && QC[wC.name](QC.MessageLimitReached.replace(/%LIMIT%/g, "" + ZC.limit).replace(/%TYPE%/g, wC.name ?? ""))
+      }
+      static _AddLogEntry(CC) {
+        QC._LogCache = CC + QC._LogCache, QC.OnNewCacheEntry && QC.OnNewCacheEntry(CC)
+      }
+      static _FormatMessage(CC) {
+        const zC = CC => CC < 10 ? "0" + CC : "" + CC,
+          ZC = new Date;
+        return "[" + zC(ZC.getHours()) + ":" + zC(ZC.getMinutes()) + ":" + zC(ZC.getSeconds()) + "]: " + CC
+      }
+      static _LogDisabled(CC, zC) {}
+      static _LogEnabled() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zC = arguments.length > 1 ? arguments[1] : void 0,
+          ZC = arguments.length > 2 ? arguments[2] : void 0;
+        const wC = Array.isArray(zC) ? zC[0] : zC;
+        if (void 0 !== ZC && !QC._CheckLimit(wC, ZC)) return;
+        const bC = QC._FormatMessage(wC),
+          nC = this._Levels[CC],
+          fC = Array.isArray(zC) ? zC.slice(1) : [];
+        nC.logFunc && nC.logFunc("BJS - " + bC, ...fC);
+        const oC = `<div style='color:${nC.color}'>${bC}</div><br>`;
+        QC._AddLogEntry(oC), QC._GenerateLimitMessage(wC, CC)
+      }
+      static get LogCache() {
+        return QC._LogCache
+      }
+      static ClearLogCache() {
+        QC._LogCache = "", QC._LogLimitOutputs = {}, QC.errorsCount = 0
+      }
+      static set LogLevels(CC) {
+        QC.Log = QC._LogDisabled, QC.Warn = QC._LogDisabled, QC.Error = QC._LogDisabled;
+        const zC = [QC.MessageLogLevel, QC.WarningLogLevel, QC.ErrorLogLevel];
+        for (const ZC of zC)
+          if ((CC & ZC) === ZC) {
+            const CC = this._Levels[ZC];
+            QC[CC.name] = QC._LogEnabled.bind(QC, ZC)
+          }
+      }
+    }
+    QC.NoneLogLevel = 0, QC.MessageLogLevel = 1, QC.WarningLogLevel = 2, QC.ErrorLogLevel = 4, QC.AllLogLevel = 7, QC.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QC._LogCache = "", QC._LogLimitOutputs = {}, QC._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], QC.errorsCount = 0, QC.Log = QC._LogEnabled.bind(QC, QC.MessageLogLevel), QC.Warn = QC._LogEnabled.bind(QC, QC.WarningLogLevel), QC.Error = QC._LogEnabled.bind(QC, QC.ErrorLogLevel)
+  },
+  38544: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => nC
+    });
+    var QC = ZC(36963),
+      wC = ZC(36991),
+      bC = ZC(38501);
+    class nC {
+      constructor() {
+        this.direction1 = new QC.r(0, 1, 0), this.direction2 = new QC.r(0, 1, 0), this.minEmitBox = new QC.r(-.5, -.5, -.5), this.maxEmitBox = new QC.r(.5, .5, .5)
+      }
+      startDirectionFunction(CC, zC, ZC, bC) {
+        const nC = (0, wC.RandomRange)(this.direction1.x, this.direction2.x),
+          fC = (0, wC.RandomRange)(this.direction1.y, this.direction2.y),
+          oC = (0, wC.RandomRange)(this.direction1.z, this.direction2.z);
+        if (bC) return zC.x = nC, zC.y = fC, void(zC.z = oC);
+        QC.r.TransformNormalFromFloatsToRef(nC, fC, oC, CC, zC)
+      }
+      startPositionFunction(CC, zC, ZC, bC) {
+        const nC = (0, wC.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          fC = (0, wC.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          oC = (0, wC.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (bC) return zC.x = nC, zC.y = fC, void(zC.z = oC);
+        QC.r.TransformCoordinatesFromFloatsToRef(nC, fC, oC, CC, zC)
+      }
+      clone() {
+        const CC = new nC;
+        return bC.e.DeepCopy(this, CC), CC
+      }
+      applyToShader(CC) {
+        CC.setVector3("direction1", this.direction1), CC.setVector3("direction2", this.direction2), CC.setVector3("minEmitBox", this.minEmitBox), CC.setVector3("maxEmitBox", this.maxEmitBox)
+      }
+      buildUniformLayout(CC) {
+        CC.addUniform("direction1", 3), CC.addUniform("direction2", 3), CC.addUniform("minEmitBox", 3), CC.addUniform("maxEmitBox", 3)
+      }
+      getEffectDefines() {
+        return "#define BOXEMITTER"
+      }
+      getClassName() {
+        return "BoxParticleEmitter"
+      }
+      serialize() {
+        const CC = {};
+        return CC.type = this.getClassName(), CC.direction1 = this.direction1.VZC(), CC.direction2 = this.direction2.VZC(), CC.minEmitBox = this.minEmitBox.VZC(), CC.maxEmitBox = this.maxEmitBox.VZC(), CC
+      }
+      parse(CC) {
+        QC.r.FromArrayToRef(CC.direction1, 0, this.direction1), QC.r.FromArrayToRef(CC.direction2, 0, this.direction2), QC.r.FromArrayToRef(CC.minEmitBox, 0, this.minEmitBox), QC.r.FromArrayToRef(CC.maxEmitBox, 0, this.maxEmitBox)
+      }
+    }
+  },
+  38497: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => fC,
+      i: () => nC
+    });
+    var QC = ZC(36963),
+      wC = ZC(36991),
+      bC = ZC(38501);
+    class nC {
+      constructor() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          wC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = CC, this.height = zC, this.radiusRange = ZC, this.directionRandomizer = wC, this._tempVector = QC.r.Zero()
+      }
+      startDirectionFunction(CC, zC, ZC, bC, nC) {
+        ZC.position.subtractToRef(CC.getTranslation(), this._tempVector), this._tempVector.normalize(), QC.r.TransformNormalToRef(this._tempVector, nC, this._tempVector);
+        const fC = (0, wC.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let oC = Math.atan2(this._tempVector.x, this._tempVector.z);
+        oC += (0, wC.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = fC, this._tempVector.x = Math.sin(oC), this._tempVector.z = Math.cos(oC), this._tempVector.normalize(), bC ? zC.Av(this._tempVector) : QC.r.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, CC, zC)
+      }
+      startPositionFunction(CC, zC, ZC, bC) {
+        const nC = (0, wC.RandomRange)(-this.height / 2, this.height / 2),
+          fC = (0, wC.RandomRange)(0, 2 * Math.PI),
+          oC = (0, wC.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          qC = Math.sqrt(oC) * this.radius,
+          FC = qC * Math.cos(fC),
+          WC = qC * Math.sin(fC);
+        bC ? zC.L_(FC, nC, WC) : QC.r.TransformCoordinatesFromFloatsToRef(FC, nC, WC, CC, zC)
+      }
+      clone() {
+        const CC = new nC(this.radius, this.directionRandomizer);
+        return bC.e.DeepCopy(this, CC), CC
+      }
+      applyToShader(CC) {
+        CC.setFloat("radius", this.radius), CC.setFloat("height", this.height), CC.setFloat("radiusRange", this.radiusRange), CC.setFloat("directionRandomizer", this.directionRandomizer)
+      }
+      buildUniformLayout(CC) {
+        CC.addUniform("radius", 1), CC.addUniform("height", 1), CC.addUniform("radiusRange", 1), CC.addUniform("directionRandomizer", 1)
+      }
+      getEffectDefines() {
+        return "#define CYLINDEREMITTER"
+      }
+      getClassName() {
+        return "CylinderParticleEmitter"
+      }
+      serialize() {
+        const CC = {};
+        return CC.type = this.getClassName(), CC.radius = this.radius, CC.height = this.height, CC.radiusRange = this.radiusRange, CC.directionRandomizer = this.directionRandomizer, CC
+      }
+      parse(CC) {
+        this.radius = CC.radius, this.height = CC.height, this.radiusRange = CC.radiusRange, this.directionRandomizer = CC.directionRandomizer
+      }
+    }
+    class fC extends nC {
+      constructor() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          wC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new QC.r(0, 1, 0),
+          bC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new QC.r(0, 1, 0);
+        super(CC, zC, ZC), this.direction1 = wC, this.direction2 = bC
+      }
+      startDirectionFunction(CC, zC, ZC, bC) {
+        const nC = (0, wC.RandomRange)(this.direction1.x, this.direction2.x),
+          fC = (0, wC.RandomRange)(this.direction1.y, this.direction2.y),
+          oC = (0, wC.RandomRange)(this.direction1.z, this.direction2.z);
+        bC ? zC.L_(nC, fC, oC) : QC.r.TransformNormalFromFloatsToRef(nC, fC, oC, CC, zC)
+      }
+      clone() {
+        const CC = new fC(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return bC.e.DeepCopy(this, CC), CC
+      }
+      applyToShader(CC) {
+        CC.setFloat("radius", this.radius), CC.setFloat("height", this.height), CC.setFloat("radiusRange", this.radiusRange), CC.setVector3("direction1", this.direction1), CC.setVector3("direction2", this.direction2)
+      }
+      buildUniformLayout(CC) {
+        CC.addUniform("radius", 1), CC.addUniform("height", 1), CC.addUniform("radiusRange", 1), CC.addUniform("direction1", 3), CC.addUniform("direction2", 3)
+      }
+      getEffectDefines() {
+        return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
+      }
+      getClassName() {
+        return "CylinderDirectedParticleEmitter"
+      }
+      serialize() {
+        const CC = super.serialize();
+        return CC.direction1 = this.direction1.VZC(), CC.direction2 = this.direction2.VZC(), CC
+      }
+      parse(CC) {
+        super.parse(CC), QC.r.FromArrayToRef(CC.direction1, 0, this.direction1), QC.r.FromArrayToRef(CC.direction2, 0, this.direction2)
+      }
+    }
+  },
+  38617: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => WC
+    });
+    const QC = .5 * (Math.sqrt(3) - 1),
+      wC = (3 - Math.sqrt(3)) / 6,
+      bC = 1 / 3,
+      nC = 1 / 6,
+      fC = (Math.sqrt(5) - 1) / 4,
+      oC = (5 - Math.sqrt(5)) / 20,
+      qC = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      FC = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const WC = class {
+      constructor() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const zC = "function" == typeof CC ? CC : function(CC) {
+          let zC = 0,
+            ZC = 0,
+            QC = 0,
+            wC = 1;
+          const bC = function() {
+            let CC = 4022871197;
+            return function(zC) {
+              zC = zC.toString();
+              for (let ZC = 0; ZC < zC.length; ZC++) {
+                CC += zC.charCodeAt(ZC);
+                let QC = .02519603282416938 * CC;
+                CC = QC >>> 0, QC -= CC, QC *= CC, CC = QC >>> 0, QC -= CC, CC += 4294967296 * QC
+              }
+              return 2.3283064365386963e-10 * (CC >>> 0)
+            }
+          }();
+          zC = bC(" "), ZC = bC(" "), QC = bC(" "), zC -= bC(CC), zC < 0 && (zC += 1);
+          ZC -= bC(CC), ZC < 0 && (ZC += 1);
+          QC -= bC(CC), QC < 0 && (QC += 1);
+          return function() {
+            const CC = 2091639 * zC + 2.3283064365386963e-10 * wC;
+            return zC = ZC, ZC = QC, QC = CC - (wC = 0 | CC)
+          }
+        }(CC);
+        this.p = function(CC) {
+          const zC = new Uint8Array(256);
+          for (let ZC = 0; ZC < 256; ZC++) zC[ZC] = ZC;
+          for (let ZC = 0; ZC < 255; ZC++) {
+            const QC = ZC + ~~(CC() * (256 - ZC)),
+              wC = zC[ZC];
+            zC[ZC] = zC[QC], zC[QC] = wC
+          }
+          return zC
+        }(zC), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let ZC = 0; ZC < 512; ZC++) this.perm[ZC] = this.p[255 & ZC], this.permMod12[ZC] = this.perm[ZC] % 12
+      }
+      noise2D(CC, zC) {
+        const ZC = this.permMod12,
+          bC = this.perm;
+        let nC = 0,
+          fC = 0,
+          oC = 0;
+        const FC = (CC + zC) * QC,
+          WC = Math.floor(CC + FC),
+          NC = Math.floor(zC + FC),
+          MC = (WC + NC) * wC,
+          gC = CC - (WC - MC),
+          SC = zC - (NC - MC);
+        let pC, PC;
+        gC > SC ? (pC = 1, PC = 0) : (pC = 0, PC = 1);
+        const GC = gC - pC + wC,
+          RC = SC - PC + wC,
+          AC = gC - 1 + 2 * wC,
+          xC = SC - 1 + 2 * wC,
+          JC = 255 & WC,
+          IC = 255 & NC;
+        let iC = .5 - gC * gC - SC * SC;
+        if (iC >= 0) {
+          const CC = 3 * ZC[JC + bC[IC]];
+          iC *= iC, nC = iC * iC * (qC[CC] * gC + qC[CC + 1] * SC)
+        }
+        let vC = .5 - GC * GC - RC * RC;
+        if (vC >= 0) {
+          const CC = 3 * ZC[JC + pC + bC[IC + PC]];
+          vC *= vC, fC = vC * vC * (qC[CC] * GC + qC[CC + 1] * RC)
+        }
+        let eC = .5 - AC * AC - xC * xC;
+        if (eC >= 0) {
+          const CC = 3 * ZC[JC + 1 + bC[IC + 1]];
+          eC *= eC, oC = eC * eC * (qC[CC] * AC + qC[CC + 1] * xC)
+        }
+        return 70 * (nC + fC + oC)
+      }
+      noise3D(CC, zC, ZC) {
+        const QC = this.permMod12,
+          wC = this.perm;
+        let fC, oC, FC, WC;
+        const NC = (CC + zC + ZC) * bC,
+          MC = Math.floor(CC + NC),
+          gC = Math.floor(zC + NC),
+          SC = Math.floor(ZC + NC),
+          pC = (MC + gC + SC) * nC,
+          PC = CC - (MC - pC),
+          GC = zC - (gC - pC),
+          RC = ZC - (SC - pC);
+        let AC, xC, JC, IC, iC, vC;
+        PC >= GC ? GC >= RC ? (AC = 1, xC = 0, JC = 0, IC = 1, iC = 1, vC = 0) : PC >= RC ? (AC = 1, xC = 0, JC = 0, IC = 1, iC = 0, vC = 1) : (AC = 0, xC = 0, JC = 1, IC = 1, iC = 0, vC = 1) : GC < RC ? (AC = 0, xC = 0, JC = 1, IC = 0, iC = 1, vC = 1) : PC < RC ? (AC = 0, xC = 1, JC = 0, IC = 0, iC = 1, vC = 1) : (AC = 0, xC = 1, JC = 0, IC = 1, iC = 1, vC = 0);
+        const eC = PC - AC + nC,
+          hC = GC - xC + nC,
+          KC = RC - JC + nC,
+          YC = PC - IC + 2 * nC,
+          dC = GC - iC + 2 * nC,
+          mC = RC - vC + 2 * nC,
+          HC = PC - 1 + .5,
+          EC = GC - 1 + .5,
+          lC = RC - 1 + .5,
+          XC = 255 & MC,
+          cC = 255 & gC,
+          uC = 255 & SC;
+        let rC = .6 - PC * PC - GC * GC - RC * RC;
+        if (rC < 0) fC = 0;
+        else {
+          const CC = 3 * QC[XC + wC[cC + wC[uC]]];
+          rC *= rC, fC = rC * rC * (qC[CC] * PC + qC[CC + 1] * GC + qC[CC + 2] * RC)
+        }
+        let sC = .6 - eC * eC - hC * hC - KC * KC;
+        if (sC < 0) oC = 0;
+        else {
+          const CC = 3 * QC[XC + AC + wC[cC + xC + wC[uC + JC]]];
+          sC *= sC, oC = sC * sC * (qC[CC] * eC + qC[CC + 1] * hC + qC[CC + 2] * KC)
+        }
+        let TC = .6 - YC * YC - dC * dC - mC * mC;
+        if (TC < 0) FC = 0;
+        else {
+          const CC = 3 * QC[XC + IC + wC[cC + iC + wC[uC + vC]]];
+          TC *= TC, FC = TC * TC * (qC[CC] * YC + qC[CC + 1] * dC + qC[CC + 2] * mC)
+        }
+        let aC = .6 - HC * HC - EC * EC - lC * lC;
+        if (aC < 0) WC = 0;
+        else {
+          const CC = 3 * QC[XC + 1 + wC[cC + 1 + wC[uC + 1]]];
+          aC *= aC, WC = aC * aC * (qC[CC] * HC + qC[CC + 1] * EC + qC[CC + 2] * lC)
+        }
+        return 32 * (fC + oC + FC + WC)
+      }
+      noise4D(CC, zC, ZC, QC) {
+        const wC = this.perm;
+        let bC, nC, qC, WC, NC;
+        const MC = (CC + zC + ZC + QC) * fC,
+          gC = Math.floor(CC + MC),
+          SC = Math.floor(zC + MC),
+          pC = Math.floor(ZC + MC),
+          PC = Math.floor(QC + MC),
+          GC = (gC + SC + pC + PC) * oC,
+          RC = CC - (gC - GC),
+          AC = zC - (SC - GC),
+          xC = ZC - (pC - GC),
+          JC = QC - (PC - GC);
+        let IC = 0,
+          iC = 0,
+          vC = 0,
+          eC = 0;
+        RC > AC ? IC++ : iC++, RC > xC ? IC++ : vC++, RC > JC ? IC++ : eC++, AC > xC ? iC++ : vC++, AC > JC ? iC++ : eC++, xC > JC ? vC++ : eC++;
+        const hC = IC >= 3 ? 1 : 0,
+          KC = iC >= 3 ? 1 : 0,
+          YC = vC >= 3 ? 1 : 0,
+          dC = eC >= 3 ? 1 : 0,
+          mC = IC >= 2 ? 1 : 0,
+          HC = iC >= 2 ? 1 : 0,
+          EC = vC >= 2 ? 1 : 0,
+          lC = eC >= 2 ? 1 : 0,
+          XC = IC >= 1 ? 1 : 0,
+          cC = iC >= 1 ? 1 : 0,
+          uC = vC >= 1 ? 1 : 0,
+          rC = eC >= 1 ? 1 : 0,
+          sC = RC - hC + oC,
+          TC = AC - KC + oC,
+          aC = xC - YC + oC,
+          tC = JC - dC + oC,
+          DC = RC - mC + 2 * oC,
+          jC = AC - HC + 2 * oC,
+          yC = xC - EC + 2 * oC,
+          LC = JC - lC + 2 * oC,
+          UC = RC - XC + 3 * oC,
+          BC = AC - cC + 3 * oC,
+          OC = xC - uC + 3 * oC,
+          kC = JC - rC + 3 * oC,
+          VC = RC - 1 + 4 * oC,
+          Cz = AC - 1 + 4 * oC,
+          zz = xC - 1 + 4 * oC,
+          Zz = JC - 1 + 4 * oC,
+          Qz = 255 & gC,
+          wz = 255 & SC,
+          bz = 255 & pC,
+          nz = 255 & PC;
+        let fz = .6 - RC * RC - AC * AC - xC * xC - JC * JC;
+        if (fz < 0) bC = 0;
+        else {
+          const CC = wC[Qz + wC[wz + wC[bz + wC[nz]]]] % 32 * 4;
+          fz *= fz, bC = fz * fz * (FC[CC] * RC + FC[CC + 1] * AC + FC[CC + 2] * xC + FC[CC + 3] * JC)
+        }
+        let oz = .6 - sC * sC - TC * TC - aC * aC - tC * tC;
+        if (oz < 0) nC = 0;
+        else {
+          const CC = wC[Qz + hC + wC[wz + KC + wC[bz + YC + wC[nz + dC]]]] % 32 * 4;
+          oz *= oz, nC = oz * oz * (FC[CC] * sC + FC[CC + 1] * TC + FC[CC + 2] * aC + FC[CC + 3] * tC)
+        }
+        let qz = .6 - DC * DC - jC * jC - yC * yC - LC * LC;
+        if (qz < 0) qC = 0;
+        else {
+          const CC = wC[Qz + mC + wC[wz + HC + wC[bz + EC + wC[nz + lC]]]] % 32 * 4;
+          qz *= qz, qC = qz * qz * (FC[CC] * DC + FC[CC + 1] * jC + FC[CC + 2] * yC + FC[CC + 3] * LC)
+        }
+        let Fz = .6 - UC * UC - BC * BC - OC * OC - kC * kC;
+        if (Fz < 0) WC = 0;
+        else {
+          const CC = wC[Qz + XC + wC[wz + cC + wC[bz + uC + wC[nz + rC]]]] % 32 * 4;
+          Fz *= Fz, WC = Fz * Fz * (FC[CC] * UC + FC[CC + 1] * BC + FC[CC + 2] * OC + FC[CC + 3] * kC)
+        }
+        let Wz = .6 - VC * VC - Cz * Cz - zz * zz - Zz * Zz;
+        if (Wz < 0) NC = 0;
+        else {
+          const CC = wC[Qz + 1 + wC[wz + 1 + wC[bz + 1 + wC[nz + 1]]]] % 32 * 4;
+          Wz *= Wz, NC = Wz * Wz * (FC[CC] * VC + FC[CC + 1] * Cz + FC[CC + 2] * zz + FC[CC + 3] * Zz)
+        }
+        return 27 * (bC + nC + qC + WC + NC)
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

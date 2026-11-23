@@ -1,19 +1,79 @@
 export const id = 362;
 export const ids = [362];
 export const modules = {
-  61415: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      lodCubePixelShaderWGSL: () => mq
+  61031: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      createShadowTask: () => bC
     });
-    var Yq = gq(39617);
-    const lq = "lodCubePixelShader",
-      Oq = "const GammaEncodePowerApprox=1.0/2.2;varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_cube<f32>;uniform lod: f32;uniform gamma: i32;@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let uv=fragmentInputs.vUV*2.0-1.0;\n#ifdef POSITIVEX\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(1.001,uv.y,uv.x),uniforms.lod);\n#endif\n#ifdef NEGATIVEX\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(-1.001,uv.y,uv.x),uniforms.lod);\n#endif\n#ifdef POSITIVEY\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(uv.y,1.001,uv.x),uniforms.lod);\n#endif\n#ifdef NEGATIVEY\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(uv.y,-1.001,uv.x),uniforms.lod);\n#endif\n#ifdef POSITIVEZ\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(uv,1.001),uniforms.lod);\n#endif\n#ifdef NEGATIVEZ\nfragmentOutputs.color=textureSampleLevel(textureSampler,textureSamplerSampler,vec3f(uv,-1.001),uniforms.lod);\n#endif\nif (uniforms.gamma==0) {fragmentOutputs.color=vec4f(pow(fragmentOutputs.color.rgb,vec3f(GammaEncodePowerApprox)),fragmentOutputs.color.a);}}\n";
-    Yq.d.ShadersStoreWGSL[lq] || (Yq.d.ShadersStoreWGSL[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
+    var QC = null;
+
+    function wC(CC) {
+      return QC?.get(CC)
+    }
+
+    function bC(CC, zC) {
+      const ZC = new Set;
+      0;
+      const QC = {
+        name: "Zg",
+        engine: CC,
+        sS: zC,
+        _passes: [],
+        async _preload() {
+          const CC = [];
+          for (const ZC of zC.lights) {
+            const zC = ZC.shadowGenerator,
+              QC = zC ? wC(zC) : null;
+            zC?._preloadShadowTask && QC && CC.push(nC(zC, QC))
+          }
+          await Promise.all(CC)
+        },
+        record() {
+          QC._passes.length = 0;
+          for (const QC of zC.lights) {
+            const bC = QC.shadowGenerator,
+              nC = bC ? wC(bC) : null;
+            if (bC?._ensureShadowTaskState && nC && !bC._preloadPending) {
+              ZC.add(bC);
+              const QC = bC._ensureShadowTaskState(CC, zC, nC),
+                wC = zC._renderableVersion;
+              QC._task.record(), QC._recordedVersion = wC
+            }
+          }
+        },
+        execute() {
+          let QC = 0;
+          for (const bC of zC.lights) {
+            const nC = bC.shadowGenerator,
+              fC = nC ? wC(nC) : null;
+            if (nC?._ensureShadowTaskState && nC._renderShadowMap && fC && !nC._preloadPending) {
+              ZC.add(nC);
+              const wC = nC._shadowTaskState ?? null,
+                bC = nC._ensureShadowTaskState(CC, zC, fC);
+              if (bC !== wC || bC._recordedVersion !== zC._renderableVersion) {
+                const CC = zC._renderableVersion;
+                bC._task.record(), bC._recordedVersion = CC
+              }
+              QC += nC._renderShadowMap(CC, bC)
+            }
+          }
+          return QC
+        },
+        dispose() {
+          QC._passes.length = 0;
+          for (const CC of ZC) {
+            const zC = CC._shadowTaskState;
+            zC && (zC._task.dispose(), CC._shadowTaskState = void 0)
+          }
+          ZC.clear()
+        }
+      };
+      return QC
+    }
+    async function nC(CC, zC) {
+      CC._preloadPending = zC, await (CC._preloadShadowTask?.(zC)), CC._preloadPending === zC && (CC._preloadPending = void 0)
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

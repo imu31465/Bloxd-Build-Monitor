@@ -1,8 +1,17 @@
 # WASM module: `bloxd_wasm_recorder_bg`
 
-> environment **preprod.bloxd.io** · build `bbb6l5.0244a119` · analyzed 2026-11-21T12:37:15+09:00
-> source: https://preprod.bloxd.io/static/media/bloxd_wasm_recorder_bg.3117481d82752fd072e8.wasm
-> 193,925 bytes (189.4 KB) · sha256 `166b4da1bfa19d1d…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **preprod.bloxd.io** · build `w4ddu.56408518` · analyzed 2026-11-24T00:42:21+09:00
+> source: https://preprod.bloxd.io/static/media/bloxd_wasm_recorder_bg.9a5523a4c775af0b5e64.wasm
+> 193,653 bytes (189.1 KB) · sha256 `2775bc33cdba5c03…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+
+## Changes since the previous archived build
+
+- size 193,925 → 193,653 bytes (-272)
+- data bytes 8,385 → 8,113
+- name-section module id `73ccd62ace38f2ff.1078` → `b7d686203df3c9d8.1078` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- export identifiers rotated by the obfuscator: 1/26 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `AccessError`; `assertion failed: bits <= ((1u32 << len) - 1u32)v`; `d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/def`; `d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/def`; `d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/def`; `fff?fff?fff?`
+- removed embedded strings: `/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5`; `/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5`; `/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5`; `assertion failed: bits <= ((1u32 << len) - 1u32)#`; `crates/client-replay/src/rec/rows.rs`; `crates/client-replay/src/rec/seal.rs`
 
 ## Overview
 
@@ -13,10 +22,10 @@
 | Code bytes (function bodies) | 183,469 (179.2 KB) |
 | Total local variables | 1,978 |
 | Instructions (scanable bodies) | 89,508 |
-| Data segments / bytes | 39 / 8,385 |
+| Data segments / bytes | 39 / 8,113 |
 | Element segments / entries | 1 / 54 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `73ccd62ace38f2ff.1078` |
+| name-section module id | `b7d686203df3c9d8.1078` |
 | Sections | 12 |
 
 ## Sections
@@ -33,7 +42,7 @@
 | 9 | element | 109 | 1 |
 | 12 | datacount | 1 | — |
 | 10 | code | 184,107 | 424 |
-| 11 | data | 8,706 | 39 |
+| 11 | data | 8,434 | 39 |
 | 0 | custom:name | 29 | — |
 
 ## Types
@@ -46,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `djMj.ddYf` | func | `() -> (f64)` |
-| 1 | `djMj.T69r` | func | `(i32 i32) -> ()` |
-| 2 | `djMj.M6Sf` | func | `(i32 i32) -> ()` |
-| 3 | `djMj.sU3c` | func | `(i32 i32) -> (i32)` |
-| 4 | `djMj.OYKd` | func | `() -> (i32)` |
+| 0 | `muIT.LES8` | func | `() -> (f64)` |
+| 1 | `muIT.cpmA` | func | `(i32 i32) -> ()` |
+| 2 | `muIT.KlUi` | func | `(i32 i32) -> ()` |
+| 3 | `muIT.lwCA` | func | `(i32 i32) -> (i32)` |
+| 4 | `muIT.FBVr` | func | `() -> (i32)` |
 
 ## Exports
 
@@ -58,32 +67,32 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `ErG5` | func | 425 | `() -> (i32)` |
-| `tLzM` | func | 415 | `(i32) -> (i32)` |
-| `zcHe` | func | 419 | `(i32) -> (i32)` |
-| `EbJF` | func | 424 | `() -> (i32)` |
-| `IMz5` | func | 417 | `(i32) -> (i32)` |
-| `g8AJ` | func | 189 | `(i32 i32 i32) -> (i32)` |
-| `KRup` | func | 328 | `(i32) -> (i32)` |
-| `gLzk` | func | 422 | `(i32) -> (i32)` |
-| `ukv0` | func | 329 | `(i32 i32 i32 i32) -> (i32)` |
-| `ZzKb` | global | 1 | `` |
-| `OJBy` | func | 259 | `(i32 i32) -> (i32)` |
+| `vNtT` | func | 423 | `() -> ()` |
+| `BQju` | func | 420 | `(i32) -> (i32)` |
+| `AM3a` | func | 416 | `(i32) -> ()` |
+| `lhE9` | global | 1 | `` |
+| `GTAZ` | func | 417 | `(i32) -> (i32)` |
+| `vHQA` | func | 345 | `(i32 i32 i32) -> (i32 i32)` |
+| `ffpy` | func | 329 | `(i32 i32 i32 i32) -> (i32)` |
+| `ylko` | func | 422 | `(i32) -> (i32)` |
+| `XsMT` | func | 424 | `() -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `RZkX` | func | 345 | `(i32 i32 i32) -> (i32 i32)` |
-| `hq5I` | func | 421 | `(i32) -> (i32)` |
-| `epqW` | func | 423 | `() -> ()` |
-| `hrUH` | func | 251 | `(i32 i32) -> ()` |
-| `vntq` | func | 416 | `(i32) -> ()` |
-| `Qs5O` | func | 420 | `(i32) -> (i32)` |
-| `e7O6` | func | 146 | `(i32 i32 i32 i32) -> (i32)` |
-| `fAte` | global | 2 | `` |
-| `LLwF` | func | 423 | `() -> ()` |
-| `v3Eb` | func | 317 | `(i32 i32) -> (i32)` |
-| `xfFa` | func | 258 | `() -> (i32)` |
-| `Rq4R` | func | 256 | `(i32 i32) -> (i32)` |
-| `G7rY` | func | 418 | `(i32) -> (i32)` |
-| `RFGK` | func | 257 | `(i32 i32) -> (i32)` |
+| `Wfa7` | func | 189 | `(i32 i32 i32) -> (i32)` |
+| `EZtl` | func | 419 | `(i32) -> (i32)` |
+| `jQyZ` | func | 425 | `() -> (i32)` |
+| `Exwq` | global | 2 | `` |
+| `Okmm` | func | 418 | `(i32) -> (i32)` |
+| `hUYg` | func | 423 | `() -> ()` |
+| `wQMc` | func | 317 | `(i32 i32) -> (i32)` |
+| `UP47` | func | 415 | `(i32) -> (i32)` |
+| `OFzR` | func | 146 | `(i32 i32 i32 i32) -> (i32)` |
+| `oipZ` | func | 256 | `(i32 i32) -> (i32)` |
+| `pJpd` | func | 258 | `() -> (i32)` |
+| `U3lX` | func | 259 | `(i32 i32) -> (i32)` |
+| `rpg8` | func | 328 | `(i32) -> (i32)` |
+| `Vk4U` | func | 257 | `(i32 i32) -> (i32)` |
+| `nx5I` | func | 251 | `(i32 i32) -> ()` |
+| `tEZp` | func | 421 | `(i32) -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -91,7 +100,7 @@
 
 - memory 0: min 18 pages · max ∞ · shared=False
 - table 0: funcref · min 55 · max 55
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1122964, `i32` = i32.const 1123456
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1122692, `i32` = i32.const 1123184
 
 ## Functions
 
@@ -154,9 +163,6 @@ Largest functions:
 ```
 called `Option::unwrap()` on a `None` value0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777
 Errornull pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rust
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/buffer.rs
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/stored.rs
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/core.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/collections/vec_deque/mod.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs
 a formatting trait implementation returned an error when the underlying stream did not
@@ -167,8 +173,11 @@ a formatting trait implementation returned an error when the underlying stream d
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/panicking.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/vec/mod.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/string.rs
+d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/buffer.rs
+d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/stored.rs
 Hcannot access a Thread Local Storage value during or after destruction: 
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/fmt.rs
+d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/core.rs
 attempted to take ownership of Rust value while it was borrowed
 a Display implementation returned an error unexpectedly
 cannot modify the panic hook from a panicking thread

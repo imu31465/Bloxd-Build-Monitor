@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12];
 export const modules = {
-  38473: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => mq
+  38326: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => nC
     });
-    var Yq = gq(38477);
-    const lq = [0, 0, 0];
-    class Oq {
-      constructor(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lq;
-        this.pool = qq, this.origin = Eq, this.count = 0, this.free = []
+    var QC = ZC(38334);
+    const wC = [0, 0, 0];
+    class bC {
+      constructor(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wC;
+        this.pool = CC, this.origin = zC, this.count = 0, this.free = []
       }
       take() {
-        var qq;
-        const Eq = null !== (qq = this.free.pop()) && void 0 !== qq ? qq : this.count++;
-        return Eq >= this.pool.WB && this.pool.grow(Math.max(2 * this.pool.WB, Eq + 1)), this.hide(Eq), Eq
+        var CC;
+        const zC = null !== (CC = this.free.pop()) && void 0 !== CC ? CC : this.count++;
+        return zC >= this.pool.HW && this.pool.grow(Math.max(2 * this.pool.HW, zC + 1)), this.hide(zC), zC
       }
-      release(qq) {
-        this.hide(qq), this.free.push(qq)
+      release(CC) {
+        this.hide(CC), this.free.push(CC)
       }
-      write(qq, Eq, gq, lq) {
+      write(CC, zC, ZC, wC) {
         const {
-          records: Oq
+          records: bC
         } = this.pool, {
-          origin: mq
-        } = this, xq = qq * Yq.e;
-        Oq[xq] = Eq - mq[0], Oq[xq + 1] = gq - mq[1], Oq[xq + 2] = lq - mq[2], Oq[xq + Yq.g] = 0, this.pool.markDirty(qq)
+          origin: nC
+        } = this, fC = CC * QC.d;
+        bC[fC] = zC - nC[0], bC[fC + 1] = ZC - nC[1], bC[fC + 2] = wC - nC[2], bC[fC + QC.g] = 0, this.pool.markDirty(CC)
       }
-      hide(qq) {
-        this.pool.records[qq * Yq.e + Yq.g] = 1, this.pool.markDirty(qq)
+      hide(CC) {
+        this.pool.records[CC * QC.d + QC.g] = 1, this.pool.markDirty(CC)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,159 +38,159 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class mq {
-      constructor(qq, Eq, gq) {
-        this.api = qq, this.model = Eq, this.initialCapacity = gq, this.kinds = new Map, this.origin = [0, 0, 0]
+    class nC {
+      constructor(CC, zC, ZC) {
+        this.api = CC, this.model = zC, this.initialCapacity = ZC, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(qq) {
-        let Eq = this.kinds.get(qq);
-        if (void 0 === Eq) {
-          const gq = this.api.createInstancePool({
+      kindOf(CC) {
+        let zC = this.kinds.get(CC);
+        if (void 0 === zC) {
+          const ZC = this.api.createInstancePool({
             ...this.model,
-            item: qq
+            item: CC
           }, this.initialCapacity);
-          null === gq || void 0 === gq || gq.setOrigin(this.origin[0], this.origin[1], this.origin[2]), Eq = gq && new Oq(gq, this.origin), this.kinds.set(qq, Eq)
+          null === ZC || void 0 === ZC || ZC.setOrigin(this.origin[0], this.origin[1], this.origin[2]), zC = ZC && new bC(ZC, this.origin), this.kinds.set(CC, zC)
         }
-        return Eq
+        return zC
       }
-      follow(qq) {
+      follow(CC) {
         const {
-          origin: Eq
+          origin: zC
         } = this;
-        if (Math.abs(qq[0] - Eq[0]) <= 512 && Math.abs(qq[1] - Eq[1]) <= 512 && Math.abs(qq[2] - Eq[2]) <= 512) return !1;
-        Eq[0] = Math.floor(qq[0]), Eq[1] = Math.floor(qq[1]), Eq[2] = Math.floor(qq[2]);
-        for (const gq of this.kinds.values()) null === gq || void 0 === gq || gq.pool.setOrigin(Eq[0], Eq[1], Eq[2]);
+        if (Math.abs(CC[0] - zC[0]) <= 512 && Math.abs(CC[1] - zC[1]) <= 512 && Math.abs(CC[2] - zC[2]) <= 512) return !1;
+        zC[0] = Math.floor(CC[0]), zC[1] = Math.floor(CC[1]), zC[2] = Math.floor(CC[2]);
+        for (const ZC of this.kinds.values()) null === ZC || void 0 === ZC || ZC.pool.setOrigin(zC[0], zC[1], zC[2]);
         return !0
       }
       commit() {
-        for (const qq of this.kinds.values()) null === qq || void 0 === qq || qq.commit()
+        for (const CC of this.kinds.values()) null === CC || void 0 === CC || CC.commit()
       }
       dispose() {
-        for (const qq of this.kinds.values()) null === qq || void 0 === qq || qq.dispose();
+        for (const CC of this.kinds.values()) null === CC || void 0 === CC || CC.dispose();
         this.kinds.clear()
       }
     }
   },
-  39221: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      default: () => Bq
+  39120: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => WC
     });
-    const Yq = "Pipe",
-      lq = "Extractor Pipe",
-      Oq = (new Set([Yq, lq]), new Set([Yq, lq, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var mq = gq(38473);
-    class xq {
-      constructor(qq) {
-        this.api = qq, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new mq.b(qq, {
+    const QC = "Pipe",
+      wC = "Extractor Pipe",
+      bC = (new Set([QC, wC]), new Set([QC, wC, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var nC = ZC(38326);
+    class fC {
+      constructor(CC) {
+        this.api = CC, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new nC.c(CC, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(qq) {
-        if (qq.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${qq.id} with < 2 waypoints`);
-        const Eq = this.kinds.kindOf(qq.itemName);
-        if (!Eq) return void(this.unshown.has(qq.itemName) || (this.unshown.add(qq.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${qq.itemName}"`)));
-        this.remove(qq.id);
-        const gq = function(qq) {
-          return (qq.waypoints.length - 1) / 2 * 1e3
-        }(qq);
-        if (Date.now() - qq.startTimeMs > gq + 2e3) return;
-        const Yq = Eq.take();
-        this.items.set(qq.id, {
-          kind: Eq,
-          slot: Yq,
-          waypoints: qq.waypoints,
-          startTimeMs: qq.startTimeMs,
-          durationMs: gq
+      onSpawn(CC) {
+        if (CC.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${CC.id} with < 2 waypoints`);
+        const zC = this.kinds.kindOf(CC.itemName);
+        if (!zC) return void(this.unshown.has(CC.itemName) || (this.unshown.add(CC.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${CC.itemName}"`)));
+        this.remove(CC.id);
+        const ZC = function(CC) {
+          return (CC.waypoints.length - 1) / 2 * 1e3
+        }(CC);
+        if (Date.now() - CC.startTimeMs > ZC + 2e3) return;
+        const QC = zC.take();
+        this.items.set(CC.id, {
+          kind: zC,
+          slot: QC,
+          waypoints: CC.waypoints,
+          startTimeMs: CC.startTimeMs,
+          durationMs: ZC
         })
       }
-      onEnd(qq) {
-        this.remove(qq.id)
+      onEnd(CC) {
+        this.remove(CC.id)
       }
-      Wy() {
+      sG() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const qq = Date.now();
+        const CC = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [Eq, gq] of this.items) qq - gq.startTimeMs > gq.durationMs + 2e3 ? this.remove(Eq) : this.write(gq, qq);
+        for (const [zC, ZC] of this.items) CC - ZC.startTimeMs > ZC.durationMs + 2e3 ? this.remove(zC) : this.write(ZC, CC);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(qq) {
-        const Eq = this.items.get(qq);
-        Eq && (Eq.kind.release(Eq.slot), this.items.delete(qq))
+      remove(CC) {
+        const zC = this.items.get(CC);
+        zC && (zC.kind.release(zC.slot), this.items.delete(CC))
       }
-      write(qq, Eq) {
-        const gq = qq.waypoints.length - 1;
-        let Yq = (Eq - qq.startTimeMs) / qq.durationMs;
-        Yq < 0 ? Yq = 0 : Yq > 1 && (Yq = 1);
-        const lq = Yq * gq;
-        let Oq = Math.floor(lq);
-        Oq >= gq && (Oq = gq - 1);
-        const mq = lq - Oq,
-          [xq, Aq, cq] = qq.waypoints[Oq],
-          [uq, Bq, Wq] = qq.waypoints[Oq + 1];
-        qq.kind.write(qq.slot, xq + (uq - xq) * mq + .5, Aq + (Bq - Aq) * mq + .5, cq + (Wq - cq) * mq + .5)
+      write(CC, zC) {
+        const ZC = CC.waypoints.length - 1;
+        let QC = (zC - CC.startTimeMs) / CC.durationMs;
+        QC < 0 ? QC = 0 : QC > 1 && (QC = 1);
+        const wC = QC * ZC;
+        let bC = Math.floor(wC);
+        bC >= ZC && (bC = ZC - 1);
+        const nC = wC - bC,
+          [fC, oC, qC] = CC.waypoints[bC],
+          [FC, WC, NC] = CC.waypoints[bC + 1];
+        CC.kind.write(CC.slot, fC + (FC - fC) * nC + .5, oC + (WC - oC) * nC + .5, qC + (NC - qC) * nC + .5)
       }
     }
-    const Aq = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      cq = new Set(Aq);
-    class uq {
+    const oC = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      qC = new Set(oC);
+    class FC {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(qq) {
-        this.api = qq, this.pipeVisualizer = new xq(qq)
+      onCreate(CC) {
+        this.api = CC, this.pipeVisualizer = new fC(CC)
       }
       onClose() {
-        var qq;
-        null === (qq = this.pipeVisualizer) || void 0 === qq || qq.dispose(), this.pipeVisualizer = null
+        var CC;
+        null === (CC = this.pipeVisualizer) || void 0 === CC || CC.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(qq, Eq) {
+      onReceivedMessageFromServer(CC, zC) {
         const {
-          pipeVisualizer: gq
+          pipeVisualizer: ZC
         } = this;
-        if (gq)
-          if ("pipeItemSpawnBatch" === qq)
-            for (const Yq of Eq.items) gq.onSpawn(Yq);
-          else if ("pipeItemEndBatch" === qq)
-          for (const Yq of Eq.items) gq.onEnd(Yq)
+        if (ZC)
+          if ("pipeItemSpawnBatch" === CC)
+            for (const QC of zC.items) ZC.onSpawn(QC);
+          else if ("pipeItemEndBatch" === CC)
+          for (const QC of zC.items) ZC.onEnd(QC)
       }
-      Wy() {
-        var qq;
-        null === (qq = this.pipeVisualizer) || void 0 === qq || qq.Wy()
+      sG() {
+        var CC;
+        null === (CC = this.pipeVisualizer) || void 0 === CC || CC.sG()
       }
-      onPlayerAttemptAltAction(qq, Eq, gq, Yq, lq, mq) {
-        var xq;
-        if (!cq.has(this.api.getMetaInfo(lq).rootName)) return;
-        const Aq = null === (xq = this.api.Ngq(qq)) || void 0 === xq ? void 0 : xq.name;
-        return void 0 !== Aq && Oq.has(Aq) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(CC, zC, ZC, QC, wC, nC) {
+        var fC;
+        if (!qC.has(this.api.getMetaInfo(wC).rootName)) return;
+        const oC = null === (fC = this.api.XzC(CC)) || void 0 === fC ? void 0 : fC.name;
+        return void 0 !== oC && bC.has(oC) ? "preventAction" : void 0
       }
     }
-    const Bq = function(qq, Eq, gq) {
-      if ("survivalFactory" !== gq && "survivalFactoryPersistent" !== gq) {
+    const WC = function(CC, zC, ZC) {
+      if ("survivalFactory" !== ZC && "survivalFactoryPersistent" !== ZC) {
         return {}
       }
-      const Yq = new uq;
+      const QC = new FC;
       return {
-        onCreate: qq => {
-          Yq.onCreate(qq)
+        onCreate: CC => {
+          QC.onCreate(CC)
         },
         onClose: () => {
-          Yq.onClose()
+          QC.onClose()
         },
-        onReceivedMessageFromServer: (qq, Eq) => {
-          Yq.onReceivedMessageFromServer(qq, Eq)
+        onReceivedMessageFromServer: (CC, zC) => {
+          QC.onReceivedMessageFromServer(CC, zC)
         },
-        SB: () => {
-          Yq.Wy()
+        ZN: () => {
+          QC.sG()
         },
-        altVetoBlocks: Aq,
-        onPlayerAttemptAltAction: (qq, Eq, gq, lq, Oq, mq) => Yq.onPlayerAttemptAltAction(qq, Eq, gq, lq, Oq, mq)
+        altVetoBlocks: oC,
+        onPlayerAttemptAltAction: (CC, zC, ZC, wC, bC, nC) => QC.onPlayerAttemptAltAction(CC, zC, ZC, wC, bC, nC)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

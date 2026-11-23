@@ -2782,6 +2782,27 @@ html.Baf2IslandsOverlayShown .RightElements:has(.UiRequestContainer) {
   width: min(36rem, 94vw)
 }
 
+.Baf2PanelHeader .Baf2BookTutorialButton {
+  display: none
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  html:not(.TouchHotbarKeysAbove) .Baf2PanelHeader .Baf2BookTutorialButton {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    font-size: 18px;
+    height: 40px;
+    margin-block: -6px;
+    margin-left: auto;
+    width: 40px
+  }
+
+  html:not(.TouchHotbarKeysAbove) .Baf2PanelHeader .Baf2BookTutorialButton .ButtonBody {
+    padding: 2px
+  }
+}
+
 .Baf2BookChapters {
   display: flex;
   flex-wrap: wrap;
@@ -6151,105 +6172,6 @@ html.Baf2IslandsOverlayShown .RightElements:has(.UiRequestContainer) {
   }
 }
 
-@keyframes rainbowShimmer {
-  0% {
-    transform: translateX(0)
-  }
-
-  to {
-    transform: translateX(88.88889%)
-  }
-}
-
-@keyframes rainbowShimmerPosition {
-  to {
-    background-position: -200% 0
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fadeInScaleUp {
-  0% {
-    opacity: 0;
-    transform: scale(.6)
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.1)
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1)
-  }
-}
-
-@keyframes fadeInScaleUpNoOversize {
-  0% {
-    opacity: 0;
-    transform: scale(.8)
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1)
-  }
-}
-
-@keyframes shake {
-  0% {
-    rotate: 3deg
-  }
-
-  5% {
-    rotate: -2deg
-  }
-
-  10% {
-    rotate: 2deg
-  }
-
-  15% {
-    rotate: -3deg
-  }
-
-  20% {
-    rotate: 0deg
-  }
-}
-
-@keyframes loadingShimmer {
-  0% {
-    transform: translateX(-66.6666666667%)
-  }
-
-  to {
-    transform: none
-  }
-}
-
-@keyframes topRightStackIn {
-  0% {
-    opacity: 0;
-    transform: translateX(1.5rem)
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0)
-  }
-}
-
 .Baf2AreaBanner {
   --baf2-area-accent: 224, 180, 106;
   align-items: center;
@@ -6822,6 +6744,105 @@ html.Baf2IslandsOverlayShown .RightElements:has(.UiRequestContainer) {
   top: 2.35em
 }
 
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
 .InventoryWrapper .Inventory .InvenBody .InvenLeftSide.InvenLeftSideMachineBench {
   --InventoryItemColor: #8ea2b4;
   background-color: #56687a;
@@ -6890,12 +6911,61 @@ html.Baf2IslandsOverlayShown .RightElements:has(.UiRequestContainer) {
 .EntireInventoryWrapper:has(.Baf2QuestsButton) {
   align-items: safe center;
   padding-left: calc(var(--notchLeft) + .5rem);
-  padding-right: calc(var(--notchRight) + min(21rem, 34vw) + 1rem + 8px)
+  padding-right: calc(var(--hud-safe-right, var(--notchRight)) + min(21rem, 34vw) + 1rem + 8px)
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory.WideChestOpen {
+    --inven-buttons-reach: 0px
+  }
+
+  .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory.WideChestOpen>.ClientGameInventoryButtons {
+    display: none
+  }
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  html:not(.TouchHotbarKeysAbove) .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory:has(>.InvenBody>.InvenLeftSideHandCrafting)>.ClientGameInventoryButtons {
+    align-items: flex-start;
+    height: var(--inven-buttons-reach);
+    margin-bottom: calc(var(--inven-buttons-reach)*-1);
+    margin-right: calc(var(--baf2-backpack-width, 29rem) + 2rem);
+    position: relative;
+    z-index: 1
+  }
+
+  html:not(.TouchHotbarKeysAbove) .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory:has(>.InvenBody>.InvenLeftSideHandCrafting)>.ClientGameInventoryButtons>.Baf2TutorialButton {
+    display: none
+  }
+
+  html:not(.TouchHotbarKeysAbove) .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory:has(>.InvenBody>.InvenLeftSideHandCrafting)>.ClientGameInventoryButtons>.Baf2QuestsButton {
+    flex: 0 0 auto;
+    margin-left: auto
+  }
+
+  html:not(.TouchHotbarKeysAbove) .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory:has(>.InvenBody>.InvenLeftSideHandCrafting)>.InvenBody {
+    align-items: flex-end
+  }
+
+  html:not(.TouchHotbarKeysAbove) .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory:has(>.InvenBody>.InvenLeftSideHandCrafting)>.InvenBody>.InvenLeftSide {
+    margin-top: var(--inven-buttons-reach)
+  }
+
+  html:not(.TouchHotbarKeysAbove) .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory:has(>.InvenBody>.InvenLeftSideHandCrafting)>.InvenBody>.InvenBodyRight {
+    --inven-slot-width-cap: max((100vw - var(--notchLeft) - 0.5rem - var(--hud-safe-right, var(--notchRight)) - calc(158px + max(1rem, 8px)) - 48rem - 4px)/6, (var(--inven-landscape-room) - var(--inven-buttons-reach, 0px) - 10rem)/6)
+  }
+
+  @supports(height:1dvh) {
+    html:not(.TouchHotbarKeysAbove) .EntireInventoryWrapper:has(.Baf2QuestsButton) .Inventory:has(>.InvenBody>.InvenLeftSideHandCrafting)>.InvenBody>.InvenBodyRight {
+      --inven-landscape-room: calc(100dvh - var(--notchTop) - max(6rem + min(3rem, var(--notchBottom)), var(--touch-hotbar-open-keys-reach, 0px) + 0.5rem) - 0px);
+      --inven-item-dim: clamp(1.5rem, min((var(--inven-landscape-room) - 10rem)/6, (var(--inven-landscape-room) - 4.5rem)/7, var(--inven-slot-width-cap, 4.4rem)) - 0.4rem, 4rem)
+    }
+  }
 }
 
 @media(max-height:420px), (max-width:650px) {
   .EntireInventoryWrapper:has(.Baf2QuestsButton) {
-    padding-right: calc(var(--notchRight) + min(200px, 36vw) + 16px)
+    padding-right: calc(var(--hud-safe-right, var(--notchRight)) + min(200px, 36vw) + 16px)
   }
 
   .ClientGameInventoryButtons .GoldButton.Baf2TutorialButton {

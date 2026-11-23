@@ -1,1164 +1,1025 @@
 export const id = 216;
-export const ids = [216];
+export const ids = [216, 291];
 export const modules = {
-  36701: qq => {
-    qq.exports = {
-      aliceblue: [240, 248, 255],
-      antiquewhite: [250, 235, 215],
-      aqua: [0, 255, 255],
-      aquamarine: [127, 255, 212],
-      azure: [240, 255, 255],
-      beige: [245, 245, 220],
-      bisque: [255, 228, 196],
-      black: [0, 0, 0],
-      blanchedalmond: [255, 235, 205],
-      blue: [0, 0, 255],
-      blueviolet: [138, 43, 226],
-      brown: [165, 42, 42],
-      burlywood: [222, 184, 135],
-      cadetblue: [95, 158, 160],
-      chartreuse: [127, 255, 0],
-      chocolate: [210, 105, 30],
-      coral: [255, 127, 80],
-      cornflowerblue: [100, 149, 237],
-      cornsilk: [255, 248, 220],
-      crimson: [220, 20, 60],
-      cyan: [0, 255, 255],
-      darkblue: [0, 0, 139],
-      darkcyan: [0, 139, 139],
-      darkgoldenrod: [184, 134, 11],
-      darkgray: [169, 169, 169],
-      darkgreen: [0, 100, 0],
-      darkgrey: [169, 169, 169],
-      darkkhaki: [189, 183, 107],
-      darkmagenta: [139, 0, 139],
-      darkolivegreen: [85, 107, 47],
-      darkorange: [255, 140, 0],
-      darkorchid: [153, 50, 204],
-      darkred: [139, 0, 0],
-      darksalmon: [233, 150, 122],
-      darkseagreen: [143, 188, 143],
-      darkslateblue: [72, 61, 139],
-      darkslategray: [47, 79, 79],
-      darkslategrey: [47, 79, 79],
-      darkturquoise: [0, 206, 209],
-      darkviolet: [148, 0, 211],
-      deeppink: [255, 20, 147],
-      deepskyblue: [0, 191, 255],
-      dimgray: [105, 105, 105],
-      dimgrey: [105, 105, 105],
-      dodgerblue: [30, 144, 255],
-      firebrick: [178, 34, 34],
-      floralwhite: [255, 250, 240],
-      forestgreen: [34, 139, 34],
-      fuchsia: [255, 0, 255],
-      gainsboro: [220, 220, 220],
-      ghostwhite: [248, 248, 255],
-      gold: [255, 215, 0],
-      goldenrod: [218, 165, 32],
-      gray: [128, 128, 128],
-      green: [0, 128, 0],
-      greenyellow: [173, 255, 47],
-      grey: [128, 128, 128],
-      honeydew: [240, 255, 240],
-      hotpink: [255, 105, 180],
-      indianred: [205, 92, 92],
-      indigo: [75, 0, 130],
-      ivory: [255, 255, 240],
-      khaki: [240, 230, 140],
-      lavender: [230, 230, 250],
-      lavenderblush: [255, 240, 245],
-      lawngreen: [124, 252, 0],
-      lemonchiffon: [255, 250, 205],
-      lightblue: [173, 216, 230],
-      lightcoral: [240, 128, 128],
-      lightcyan: [224, 255, 255],
-      lightgoldenrodyellow: [250, 250, 210],
-      lightgray: [211, 211, 211],
-      lightgreen: [144, 238, 144],
-      lightgrey: [211, 211, 211],
-      lightpink: [255, 182, 193],
-      lightsalmon: [255, 160, 122],
-      lightseagreen: [32, 178, 170],
-      lightskyblue: [135, 206, 250],
-      lightslategray: [119, 136, 153],
-      lightslategrey: [119, 136, 153],
-      lightsteelblue: [176, 196, 222],
-      lightyellow: [255, 255, 224],
-      lime: [0, 255, 0],
-      limegreen: [50, 205, 50],
-      linen: [250, 240, 230],
-      magenta: [255, 0, 255],
-      maroon: [128, 0, 0],
-      mediumaquamarine: [102, 205, 170],
-      mediumblue: [0, 0, 205],
-      mediumorchid: [186, 85, 211],
-      mediumpurple: [147, 112, 219],
-      mediumseagreen: [60, 179, 113],
-      mediumslateblue: [123, 104, 238],
-      mediumspringgreen: [0, 250, 154],
-      mediumturquoise: [72, 209, 204],
-      mediumvioletred: [199, 21, 133],
-      midnightblue: [25, 25, 112],
-      mintcream: [245, 255, 250],
-      mistyrose: [255, 228, 225],
-      moccasin: [255, 228, 181],
-      navajowhite: [255, 222, 173],
-      navy: [0, 0, 128],
-      oldlace: [253, 245, 230],
-      olive: [128, 128, 0],
-      olivedrab: [107, 142, 35],
-      orange: [255, 165, 0],
-      orangered: [255, 69, 0],
-      orchid: [218, 112, 214],
-      palegoldenrod: [238, 232, 170],
-      palegreen: [152, 251, 152],
-      paleturquoise: [175, 238, 238],
-      palevioletred: [219, 112, 147],
-      papayawhip: [255, 239, 213],
-      peachpuff: [255, 218, 185],
-      peru: [205, 133, 63],
-      pink: [255, 192, 203],
-      plum: [221, 160, 221],
-      powderblue: [176, 224, 230],
-      purple: [128, 0, 128],
-      rebeccapurple: [102, 51, 153],
-      red: [255, 0, 0],
-      rosybrown: [188, 143, 143],
-      royalblue: [65, 105, 225],
-      saddlebrown: [139, 69, 19],
-      salmon: [250, 128, 114],
-      sandybrown: [244, 164, 96],
-      seagreen: [46, 139, 87],
-      seashell: [255, 245, 238],
-      sienna: [160, 82, 45],
-      silver: [192, 192, 192],
-      skyblue: [135, 206, 235],
-      slateblue: [106, 90, 205],
-      slategray: [112, 128, 144],
-      slategrey: [112, 128, 144],
-      snow: [255, 250, 250],
-      springgreen: [0, 255, 127],
-      steelblue: [70, 130, 180],
-      tan: [210, 180, 140],
-      teal: [0, 128, 128],
-      thistle: [216, 191, 216],
-      tomato: [255, 99, 71],
-      turquoise: [64, 224, 208],
-      violet: [238, 130, 238],
-      wheat: [245, 222, 179],
-      white: [255, 255, 255],
-      whitesmoke: [245, 245, 245],
-      yellow: [255, 255, 0],
-      yellowgreen: [154, 205, 50]
-    }
-  },
-  36692: (qq, Eq, gq) => {
-    var Yq = gq(36701),
-      lq = gq(36704),
-      Oq = Object.hasOwnProperty,
-      mq = Object.create(null);
-    for (var xq in Yq) Oq.call(Yq, xq) && (mq[Yq[xq]] = xq);
-    var Aq = qq.exports = {
-      to: {},
-      get: {}
-    };
+  41095: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      CharacterCustomisationUI: () => Zz
+    });
+    var QC = ZC(48),
+      wC = ZC(2997),
+      bC = ZC(1076),
+      nC = ZC(1002),
+      fC = ZC.n(nC),
+      oC = ZC(1183),
+      qC = ZC(583),
+      FC = ZC(1143),
+      WC = ZC(2166),
+      NC = ZC(1501),
+      MC = ZC(2534);
+    const gC = oC.y.filter((CC => !NC.d.includes(CC)));
 
-    function cq(qq, Eq, gq) {
-      return Math.min(Math.max(Eq, qq), gq)
+    function SC(CC, zC) {
+      return gC.includes(CC) && "string" === typeof zC && (0, MC.g)(CC, zC)
     }
 
-    function uq(qq) {
-      var Eq = Math.round(qq).toString(16).toUpperCase();
-      return Eq.length < 2 ? "0" + Eq : Eq
+    function pC(CC) {
+      const zC = {};
+      for (const ZC of gC) {
+        const QC = CC[ZC];
+        void 0 !== QC && SC(ZC, QC) && (zC[ZC] = QC)
+      }
+      return zC
     }
-    Aq.get = function(qq) {
-      var Eq, gq;
-      switch (qq.substring(0, 3).toLowerCase()) {
-        case "hsl":
-          Eq = Aq.get.hsl(qq), gq = "hsl";
-          break;
-        case "hwb":
-          Eq = Aq.get.hwb(qq), gq = "hwb";
-          break;
-        default:
-          Eq = Aq.get.rgb(qq), gq = "rgb"
-      }
-      return Eq ? {
-        model: gq,
-        value: Eq
-      } : null
-    }, Aq.get.rgb = function(qq) {
-      if (!qq) return null;
-      var Eq, gq, lq, mq = [0, 0, 0, 1];
-      if (Eq = qq.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (lq = Eq[2], Eq = Eq[1], gq = 0; gq < 3; gq++) {
-          var xq = 2 * gq;
-          mq[gq] = parseInt(Eq.slice(xq, xq + 2), 16)
-        }
-        lq && (mq[3] = parseInt(lq, 16) / 255)
-      } else if (Eq = qq.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (lq = (Eq = Eq[1])[3], gq = 0; gq < 3; gq++) mq[gq] = parseInt(Eq[gq] + Eq[gq], 16);
-        lq && (mq[3] = parseInt(lq + lq, 16) / 255)
-      } else if (Eq = qq.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (gq = 0; gq < 3; gq++) mq[gq] = parseInt(Eq[gq + 1], 0);
-        Eq[4] && (Eq[5] ? mq[3] = .01 * parseFloat(Eq[4]) : mq[3] = parseFloat(Eq[4]))
-      } else {
-        if (!(Eq = qq.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (Eq = qq.match(/^(\w+)$/)) ? "transparent" === Eq[1] ? [0, 0, 0, 0] : Oq.call(Yq, Eq[1]) ? ((mq = Yq[Eq[1]])[3] = 1, mq) : null : null;
-        for (gq = 0; gq < 3; gq++) mq[gq] = Math.round(2.55 * parseFloat(Eq[gq + 1]));
-        Eq[4] && (Eq[5] ? mq[3] = .01 * parseFloat(Eq[4]) : mq[3] = parseFloat(Eq[4]))
-      }
-      for (gq = 0; gq < 3; gq++) mq[gq] = cq(mq[gq], 0, 255);
-      return mq[3] = cq(mq[3], 0, 1), mq
-    }, Aq.get.hsl = function(qq) {
-      if (!qq) return null;
-      var Eq = qq.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (Eq) {
-        var gq = parseFloat(Eq[4]);
-        return [(parseFloat(Eq[1]) % 360 + 360) % 360, cq(parseFloat(Eq[2]), 0, 100), cq(parseFloat(Eq[3]), 0, 100), cq(isNaN(gq) ? 1 : gq, 0, 1)]
-      }
-      return null
-    }, Aq.get.hwb = function(qq) {
-      if (!qq) return null;
-      var Eq = qq.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (Eq) {
-        var gq = parseFloat(Eq[4]);
-        return [(parseFloat(Eq[1]) % 360 + 360) % 360, cq(parseFloat(Eq[2]), 0, 100), cq(parseFloat(Eq[3]), 0, 100), cq(isNaN(gq) ? 1 : gq, 0, 1)]
-      }
-      return null
-    }, Aq.to.hex = function() {
-      var qq = lq(arguments);
-      return "#" + uq(qq[0]) + uq(qq[1]) + uq(qq[2]) + (qq[3] < 1 ? uq(Math.round(255 * qq[3])) : "")
-    }, Aq.to.rgb = function() {
-      var qq = lq(arguments);
-      return qq.length < 4 || 1 === qq[3] ? "rgb(" + Math.round(qq[0]) + ", " + Math.round(qq[1]) + ", " + Math.round(qq[2]) + ")" : "rgba(" + Math.round(qq[0]) + ", " + Math.round(qq[1]) + ", " + Math.round(qq[2]) + ", " + qq[3] + ")"
-    }, Aq.to.rgb.percent = function() {
-      var qq = lq(arguments),
-        Eq = Math.round(qq[0] / 255 * 100),
-        gq = Math.round(qq[1] / 255 * 100),
-        Yq = Math.round(qq[2] / 255 * 100);
-      return qq.length < 4 || 1 === qq[3] ? "rgb(" + Eq + "%, " + gq + "%, " + Yq + "%)" : "rgba(" + Eq + "%, " + gq + "%, " + Yq + "%, " + qq[3] + ")"
-    }, Aq.to.hsl = function() {
-      var qq = lq(arguments);
-      return qq.length < 4 || 1 === qq[3] ? "hsl(" + qq[0] + ", " + qq[1] + "%, " + qq[2] + "%)" : "hsla(" + qq[0] + ", " + qq[1] + "%, " + qq[2] + "%, " + qq[3] + ")"
-    }, Aq.to.hwb = function() {
-      var qq = lq(arguments),
-        Eq = "";
-      return qq.length >= 4 && 1 !== qq[3] && (Eq = ", " + qq[3]), "hwb(" + qq[0] + ", " + qq[1] + "%, " + qq[2] + "%" + Eq + ")"
-    }, Aq.to.keyword = function(qq) {
-      return mq[qq.slice(0, 3)]
-    }
-  },
-  36687: (qq, Eq, gq) => {
-    const Yq = gq(36692),
-      lq = gq(36713),
-      Oq = ["keyword", "gray", "hex"],
-      mq = {};
-    for (const Nq of Object.keys(lq)) mq[[...lq[Nq].labels].sort().join("")] = Nq;
-    const xq = {};
 
-    function Aq(qq, Eq) {
-      if (!(this instanceof Aq)) return new Aq(qq, Eq);
-      if (Eq && Eq in Oq && (Eq = null), Eq && !(Eq in lq)) throw new Error("Unknown model: " + Eq);
-      let gq, cq;
-      if (null == qq) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (qq instanceof Aq) this.model = qq.model, this.color = [...qq.color], this.valpha = qq.valpha;
-      else if ("string" === typeof qq) {
-        const Eq = Yq.get(qq);
-        if (null === Eq) throw new Error("Unable to parse color from string: " + qq);
-        this.model = Eq.model, cq = lq[this.model].channels, this.color = Eq.value.slice(0, cq), this.valpha = "number" === typeof Eq.value[cq] ? Eq.value[cq] : 1
-      } else if (qq.length > 0) {
-        this.model = Eq || "rgb", cq = lq[this.model].channels;
-        const gq = Array.prototype.slice.call(qq, 0, cq);
-        this.color = Wq(gq, cq), this.valpha = "number" === typeof qq[cq] ? qq[cq] : 1
-      } else if ("number" === typeof qq) this.model = "rgb", this.color = [qq >> 16 & 255, qq >> 8 & 255, 255 & qq], this.valpha = 1;
-      else {
-        this.valpha = 1;
-        const Eq = Object.keys(qq);
-        "alpha" in qq && (Eq.splice(Eq.indexOf("alpha"), 1), this.valpha = "number" === typeof qq.alpha ? qq.alpha : 0);
-        const Yq = Eq.sort().join("");
-        if (!(Yq in mq)) throw new Error("Unable to parse color from object: " + JSON.stringify(qq));
-        this.model = mq[Yq];
-        const {
-          labels: Oq
-        } = lq[this.model], xq = [];
-        for (gq = 0; gq < Oq.length; gq++) xq.push(qq[Oq[gq]]);
-        this.color = Wq(xq)
-      }
-      if (xq[this.model])
-        for (cq = lq[this.model].channels, gq = 0; gq < cq; gq++) {
-          const qq = xq[this.model][gq];
-          qq && (this.color[gq] = qq(this.color[gq]))
-        }
-      this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
+    function PC(CC, zC) {
+      return Object.entries(CC).every((CC => {
+        let [ZC, QC] = CC;
+        return zC[ZC] === QC
+      }))
     }
-    Aq.prototype = {
-      toString() {
-        return this.string()
-      },
-      toJSON() {
-        return this[this.model]()
-      },
-      string(qq) {
-        let Eq = this.model in Yq.to ? this : this.rgb();
-        Eq = Eq.round("number" === typeof qq ? qq : 1);
-        const gq = 1 === Eq.valpha ? Eq.color : [...Eq.color, this.valpha];
-        return Yq.to[Eq.model](gq)
-      },
-      percentString(qq) {
-        const Eq = this.rgb().round("number" === typeof qq ? qq : 1),
-          gq = 1 === Eq.valpha ? Eq.color : [...Eq.color, this.valpha];
-        return Yq.to.rgb.percent(gq)
-      },
-      array() {
-        return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
-      },
-      object() {
-        const qq = {},
-          {
-            channels: Eq
-          } = lq[this.model],
-          {
-            labels: gq
-          } = lq[this.model];
-        for (let Yq = 0; Yq < Eq; Yq++) qq[gq[Yq]] = this.color[Yq];
-        return 1 !== this.valpha && (qq.alpha = this.valpha), qq
-      },
-      unitArray() {
-        const qq = this.rgb().color;
-        return qq[0] /= 255, qq[1] /= 255, qq[2] /= 255, 1 !== this.valpha && qq.push(this.valpha), qq
-      },
-      unitObject() {
-        const qq = this.rgb().object();
-        return qq.r /= 255, qq.g /= 255, qq.b /= 255, 1 !== this.valpha && (qq.alpha = this.valpha), qq
-      },
-      round(qq) {
-        return qq = Math.max(qq || 0, 0), new Aq([...this.color.map(cq(qq)), this.valpha], this.model)
-      },
-      alpha(qq) {
-        return void 0 !== qq ? new Aq([...this.color, Math.max(0, Math.min(1, qq))], this.model) : this.valpha
-      },
-      red: uq("rgb", 0, Bq(255)),
-      green: uq("rgb", 1, Bq(255)),
-      blue: uq("rgb", 2, Bq(255)),
-      hue: uq(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (qq => (qq % 360 + 360) % 360)),
-      saturationl: uq("hsl", 1, Bq(100)),
-      lightness: uq("hsl", 2, Bq(100)),
-      saturationv: uq("hsv", 1, Bq(100)),
-      value: uq("hsv", 2, Bq(100)),
-      chroma: uq("hcg", 1, Bq(100)),
-      gray: uq("hcg", 2, Bq(100)),
-      white: uq("hwb", 1, Bq(100)),
-      wblack: uq("hwb", 2, Bq(100)),
-      cyan: uq("cmyk", 0, Bq(100)),
-      magenta: uq("cmyk", 1, Bq(100)),
-      yellow: uq("cmyk", 2, Bq(100)),
-      black: uq("cmyk", 3, Bq(100)),
-      x: uq("xyz", 0, Bq(95.047)),
-      y: uq("xyz", 1, Bq(100)),
-      z: uq("xyz", 2, Bq(108.833)),
-      l: uq("lab", 0, Bq(100)),
-      a: uq("lab", 1),
-      b: uq("lab", 2),
-      keyword(qq) {
-        return void 0 !== qq ? new Aq(qq) : lq[this.model].keyword(this.color)
-      },
-      hex(qq) {
-        return void 0 !== qq ? new Aq(qq) : Yq.to.hex(this.rgb().round().color)
-      },
-      hexa(qq) {
-        if (void 0 !== qq) return new Aq(qq);
-        const Eq = this.rgb().round().color;
-        let gq = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === gq.length && (gq = "0" + gq), Yq.to.hex(Eq) + gq
-      },
-      rgbNumber() {
-        const qq = this.rgb().color;
-        return (255 & qq[0]) << 16 | (255 & qq[1]) << 8 | 255 & qq[2]
-      },
-      luminosity() {
-        const qq = this.rgb().color,
-          Eq = [];
-        for (const [gq, Yq] of qq.entries()) {
-          const qq = Yq / 255;
-          Eq[gq] = qq <= .04045 ? qq / 12.92 : ((qq + .055) / 1.055) ** 2.4
-        }
-        return .2126 * Eq[0] + .7152 * Eq[1] + .0722 * Eq[2]
-      },
-      contrast(qq) {
-        const Eq = this.luminosity(),
-          gq = qq.luminosity();
-        return Eq > gq ? (Eq + .05) / (gq + .05) : (gq + .05) / (Eq + .05)
-      },
-      level(qq) {
-        const Eq = this.contrast(qq);
-        return Eq >= 7 ? "AAA" : Eq >= 4.5 ? "AA" : ""
-      },
-      isDark() {
-        const qq = this.rgb().color;
-        return (2126 * qq[0] + 7152 * qq[1] + 722 * qq[2]) / 1e4 < 128
-      },
-      isLight() {
-        return !this.isDark()
-      },
-      nY() {
-        const qq = this.rgb();
-        for (let Eq = 0; Eq < 3; Eq++) qq.color[Eq] = 255 - qq.color[Eq];
-        return qq
-      },
-      lighten(qq) {
-        const Eq = this.hsl();
-        return Eq.color[2] += Eq.color[2] * qq, Eq
-      },
-      darken(qq) {
-        const Eq = this.hsl();
-        return Eq.color[2] -= Eq.color[2] * qq, Eq
-      },
-      saturate(qq) {
-        const Eq = this.hsl();
-        return Eq.color[1] += Eq.color[1] * qq, Eq
-      },
-      desaturate(qq) {
-        const Eq = this.hsl();
-        return Eq.color[1] -= Eq.color[1] * qq, Eq
-      },
-      whiten(qq) {
-        const Eq = this.hwb();
-        return Eq.color[1] += Eq.color[1] * qq, Eq
-      },
-      blacken(qq) {
-        const Eq = this.hwb();
-        return Eq.color[2] += Eq.color[2] * qq, Eq
-      },
-      grayscale() {
-        const qq = this.rgb().color,
-          Eq = .3 * qq[0] + .59 * qq[1] + .11 * qq[2];
-        return Aq.rgb(Eq, Eq, Eq)
-      },
-      fade(qq) {
-        return this.alpha(this.valpha - this.valpha * qq)
-      },
-      opaquer(qq) {
-        return this.alpha(this.valpha + this.valpha * qq)
-      },
-      rotate(qq) {
-        const Eq = this.hsl();
-        let gq = Eq.color[0];
-        return gq = (gq + qq) % 360, gq = gq < 0 ? 360 + gq : gq, Eq.color[0] = gq, Eq
-      },
-      mix(qq, Eq) {
-        if (!qq || !qq.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof qq);
-        const gq = qq.rgb(),
-          Yq = this.rgb(),
-          lq = void 0 === Eq ? .5 : Eq,
-          Oq = 2 * lq - 1,
-          mq = gq.alpha() - Yq.alpha(),
-          xq = ((Oq * mq === -1 ? Oq : (Oq + mq) / (1 + Oq * mq)) + 1) / 2,
-          cq = 1 - xq;
-        return Aq.rgb(xq * gq.red() + cq * Yq.red(), xq * gq.green() + cq * Yq.green(), xq * gq.blue() + cq * Yq.blue(), gq.alpha() * lq + Yq.alpha() * (1 - lq))
+    var GC = ZC(2173),
+      RC = ZC(3088),
+      AC = ZC(1877),
+      xC = ZC(1388),
+      JC = ZC(2206),
+      IC = ZC(20),
+      iC = ZC(2685),
+      vC = ZC(1439),
+      eC = ZC(1078),
+      hC = ZC(1774);
+    class KC {
+      constructor() {
+        this.slots = new Map, this.accountId = null
       }
-    };
-    for (const Nq of Object.keys(lq)) {
-      if (Oq.includes(Nq)) continue;
+      moveTo(CC) {
+        null !== CC && CC !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), this.accountId = CC)
+      }
+      isFor(CC) {
+        return null === this.accountId || this.accountId === CC
+      }
+      overlay(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return CC.map(((CC, ZC) => {
+          var QC, wC;
+          return null !== (QC = null !== (wC = this.slots.get(ZC)) && void 0 !== wC ? wC : zC.get(ZC)) && void 0 !== QC ? QC : CC
+        }))
+      }
+    }
+    class YC extends iC.c {
+      constructor() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new KC;
+        super("saved outfits", (async zC => {
+          const ZC = CC.isFor(zC.whamm),
+            QC = new Map(CC.slots),
+            wC = await vC.d.getSavedOutfits(zC);
+          return ZC ? CC.overlay(wC, QC) : wC
+        })), this.unsaved = CC, this.started = !1, this.sending = !1
+      }
+      ensureLoaded() {
+        if (this.started) {
+          if (!this.getState().failed) return
+        } else this.started = !0, this.watchAccount();
+        this.refresh()
+      }
+      save(CC, zC) {
+        this.unsaved.moveTo(this.getState().accountId), this.unsaved.slots.set(CC, zC), this.update((ZC => ZC.map(((ZC, QC) => QC === CC ? zC : ZC)))), this.sending || this.sendUnsaved()
+      }
+      async sendUnsaved() {
+        for (this.sending = !0; this.unsaved.slots.size > 0;) {
+          const zC = new Map(this.unsaved.slots);
+          try {
+            const CC = await eC.userContextManager.getCurrentUserContext();
+            if (this.unsaved.moveTo(CC.whamm), 0 === this.unsaved.slots.size) {
+              this.refresh();
+              break
+            }
+            const {
+              accountId: zC,
+              data: ZC
+            } = this.getState();
+            let QC = ZC;
+            zC === CC.whamm && null !== QC || (QC = this.unsaved.overlay(await vC.d.getSavedOutfits(CC)), this.refresh()), await vC.d.setSavedOutfits(CC, QC)
+          } catch (CC) {
+            console.error("Failed to save outfits", CC), [...this.unsaved.slots].every((CC => {
+              let [ZC, QC] = CC;
+              return zC.get(ZC) === QC
+            })) && hC.d.showMessage({
+              translationKey: "homePage:saveOutfitFailed"
+            })
+          }
+          for (const [CC, ZC] of zC) this.unsaved.slots.get(CC) === ZC && this.unsaved.slots.delete(CC)
+        }
+        this.sending = !1
+      }
+    }
+    const dC = new YC;
+    var mC = ZC(326),
+      HC = ZC(41104),
+      EC = ZC(1493),
+      lC = ZC(2268),
+      XC = ZC(2991),
+      cC = ZC(2086),
+      uC = ZC(2575),
+      rC = ZC(1013);
+    ZC(34185), ZC(3090);
+    Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
+    var sC = ZC(2218),
+      TC = ZC(1321),
+      aC = ZC(2318),
+      tC = ZC(1056);
+
+    function DC(CC) {
+      let {
+        wornOutfit: zC,
+        onApply: ZC,
+        onOverwrite: wC
+      } = CC;
       const {
-        channels: qq
-      } = lq[Nq];
-      Aq.prototype[Nq] = function() {
-        if (this.model === Nq) return new Aq(this);
-        for (var qq = arguments.length, Eq = new Array(qq), gq = 0; gq < qq; gq++) Eq[gq] = arguments[gq];
-        return Eq.length > 0 ? new Aq(Eq, Nq) : new Aq([...(Yq = lq[this.model][Nq].raw(this.color), Array.isArray(Yq) ? Yq : [Yq]), this.valpha], Nq);
-        var Yq
-      }, Aq[Nq] = function() {
-        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
-        let lq = gq[0];
-        return "number" === typeof lq && (lq = Wq(gq, qq)), new Aq(lq, Nq)
-      }
-    }
-
-    function cq(qq) {
-      return function(Eq) {
-        return function(qq, Eq) {
-          return Number(qq.toFixed(Eq))
-        }(Eq, qq)
-      }
-    }
-
-    function uq(qq, Eq, gq) {
-      qq = Array.isArray(qq) ? qq : [qq];
-      for (const Yq of qq)(xq[Yq] || (xq[Yq] = []))[Eq] = gq;
-      return qq = qq[0],
-        function(Yq) {
-          let lq;
-          return void 0 !== Yq ? (gq && (Yq = gq(Yq)), lq = this[qq](), lq.color[Eq] = Yq, lq) : (lq = this[qq]().color[Eq], gq && (lq = gq(lq)), lq)
-        }
-    }
-
-    function Bq(qq) {
-      return function(Eq) {
-        return Math.max(0, Math.min(qq, Eq))
-      }
-    }
-
-    function Wq(qq, Eq) {
-      for (let gq = 0; gq < Eq; gq++) "number" !== typeof qq[gq] && (qq[gq] = 0);
-      return qq
-    }
-    qq.exports = Aq
-  },
-  36716: (qq, Eq, gq) => {
-    const Yq = gq(36723),
-      lq = {};
-    for (const mq of Object.keys(Yq)) lq[Yq[mq]] = mq;
-    const Oq = {
-      rgb: {
-        channels: 3,
-        labels: "rgb"
-      },
-      hsl: {
-        channels: 3,
-        labels: "hsl"
-      },
-      hsv: {
-        channels: 3,
-        labels: "hsv"
-      },
-      hwb: {
-        channels: 3,
-        labels: "hwb"
-      },
-      cmyk: {
-        channels: 4,
-        labels: "cmyk"
-      },
-      xyz: {
-        channels: 3,
-        labels: "xyz"
-      },
-      lab: {
-        channels: 3,
-        labels: "lab"
-      },
-      lch: {
-        channels: 3,
-        labels: "lch"
-      },
-      hex: {
-        channels: 1,
-        labels: ["hex"]
-      },
-      keyword: {
-        channels: 1,
-        labels: ["keyword"]
-      },
-      ansi16: {
-        channels: 1,
-        labels: ["ansi16"]
-      },
-      ansi256: {
-        channels: 1,
-        labels: ["ansi256"]
-      },
-      hcg: {
-        channels: 3,
-        labels: ["h", "c", "g"]
-      },
-      apple: {
-        channels: 3,
-        labels: ["r16", "g16", "b16"]
-      },
-      gray: {
-        channels: 1,
-        labels: ["gray"]
-      }
-    };
-    qq.exports = Oq;
-    for (const mq of Object.keys(Oq)) {
-      if (!("channels" in Oq[mq])) throw new Error("missing channels property: " + mq);
-      if (!("labels" in Oq[mq])) throw new Error("missing channel labels property: " + mq);
-      if (Oq[mq].labels.length !== Oq[mq].channels) throw new Error("channel and label counts mismatch: " + mq);
-      const {
-        channels: qq,
-        labels: Eq
-      } = Oq[mq];
-      delete Oq[mq].channels, delete Oq[mq].labels, Object.defineProperty(Oq[mq], "channels", {
-        value: qq
-      }), Object.defineProperty(Oq[mq], "labels", {
-        value: Eq
+        t: nC
+      } = (0, FC.y)(), {
+        accountId: oC,
+        data: qC
+      } = (0, iC.j)(dC, !1), {
+        userContext: WC
+      } = (0, bC.e)();
+      return (0, QC.useEffect)((() => {
+        dC.ensureLoaded()
+      }), []), null === qC || oC !== WC.whamm ? null : (0, tC.jsxs)("div", {
+        className: "CosmeticPackGroup SavedOutfits",
+        children: [(0, tC.jsx)("div", {
+          className: "CosmeticPackGroupLabel",
+          children: (0, tC.jsx)("span", {
+            className: "CosmeticPackGroupLabelName",
+            children: nC("homePage:myOutfits")
+          })
+        }), (0, tC.jsx)("div", {
+          className: "CharacterPresetsGrid",
+          children: qC.map(((CC, QC) => {
+            const bC = function(CC) {
+              return 0 === Object.keys(CC).length
+            }(CC);
+            return (0, tC.jsxs)("div", {
+              ...(0, xC.U)(),
+              role: bC ? "button" : "link",
+              "data-pad-focusable": !0,
+              className: fC()("CharacterPresetCard SavedOutfitCard", {
+                SavedOutfitCardEmpty: bC,
+                CharacterPresetCardActive: !bC && PC(CC, zC)
+              }),
+              onClick: () => {
+                bC ? dC.save(QC, zC) : ZC(CC)
+              },
+              children: [bC && (0, tC.jsxs)(tC.Fragment, {
+                children: [(0, tC.jsx)(rC.c, {
+                  name: "plus"
+                }), nC("homePage:saveOutfit")]
+              }), !bC && (0, tC.jsxs)(tC.Fragment, {
+                children: [(0, tC.jsx)("div", {
+                  className: "SavedOutfitCardPicture",
+                  children: (0, tC.jsx)(aC.c, {
+                    cosmetics: CC
+                  })
+                }), (0, tC.jsx)(xC.O, {
+                  padSecondaryLabelKey: "homePage:saveOutfit",
+                  stopPropagation: !0,
+                  onClick: () => {
+                    PC(zC, CC) || (dC.save(QC, zC), wC(QC, CC))
+                  },
+                  children: nC("general:save")
+                })]
+              })]
+            }, QC)
+          }))
+        })]
       })
     }
-    Oq.rgb.hsl = function(qq) {
-      const Eq = qq[0] / 255,
-        gq = qq[1] / 255,
-        Yq = qq[2] / 255,
-        lq = Math.min(Eq, gq, Yq),
-        Oq = Math.max(Eq, gq, Yq),
-        mq = Oq - lq;
-      let xq, Aq;
-      Oq === lq ? xq = 0 : Eq === Oq ? xq = (gq - Yq) / mq : gq === Oq ? xq = 2 + (Yq - Eq) / mq : Yq === Oq && (xq = 4 + (Eq - gq) / mq), xq = Math.min(60 * xq, 360), xq < 0 && (xq += 360);
-      const cq = (lq + Oq) / 2;
-      return Aq = Oq === lq ? 0 : cq <= .5 ? mq / (Oq + lq) : mq / (2 - Oq - lq), [xq, 100 * Aq, 100 * cq]
-    }, Oq.rgb.hsv = function(qq) {
-      let Eq, gq, Yq, lq, Oq;
-      const mq = qq[0] / 255,
-        xq = qq[1] / 255,
-        Aq = qq[2] / 255,
-        cq = Math.max(mq, xq, Aq),
-        uq = cq - Math.min(mq, xq, Aq),
-        Bq = function(qq) {
-          return (cq - qq) / 6 / uq + .5
-        };
-      return 0 === uq ? (lq = 0, Oq = 0) : (Oq = uq / cq, Eq = Bq(mq), gq = Bq(xq), Yq = Bq(Aq), mq === cq ? lq = Yq - gq : xq === cq ? lq = 1 / 3 + Eq - Yq : Aq === cq && (lq = 2 / 3 + gq - Eq), lq < 0 ? lq += 1 : lq > 1 && (lq -= 1)), [360 * lq, 100 * Oq, 100 * cq]
-    }, Oq.rgb.hwb = function(qq) {
-      const Eq = qq[0],
-        gq = qq[1];
-      let Yq = qq[2];
-      const lq = Oq.rgb.hsl(qq)[0],
-        mq = 1 / 255 * Math.min(Eq, Math.min(gq, Yq));
-      return Yq = 1 - 1 / 255 * Math.max(Eq, Math.max(gq, Yq)), [lq, 100 * mq, 100 * Yq]
-    }, Oq.rgb.cmyk = function(qq) {
-      const Eq = qq[0] / 255,
-        gq = qq[1] / 255,
-        Yq = qq[2] / 255,
-        lq = Math.min(1 - Eq, 1 - gq, 1 - Yq);
-      return [100 * ((1 - Eq - lq) / (1 - lq) || 0), 100 * ((1 - gq - lq) / (1 - lq) || 0), 100 * ((1 - Yq - lq) / (1 - lq) || 0), 100 * lq]
-    }, Oq.rgb.keyword = function(qq) {
-      const Eq = lq[qq];
-      if (Eq) return Eq;
-      let gq, Oq = 1 / 0;
-      for (const lq of Object.keys(Yq)) {
-        const Eq = Yq[lq],
-          Aq = (xq = Eq, ((mq = qq)[0] - xq[0]) ** 2 + (mq[1] - xq[1]) ** 2 + (mq[2] - xq[2]) ** 2);
-        Aq < Oq && (Oq = Aq, gq = lq)
-      }
-      var mq, xq;
-      return gq
-    }, Oq.keyword.rgb = function(qq) {
-      return Yq[qq]
-    }, Oq.rgb.xyz = function(qq) {
-      let Eq = qq[0] / 255,
-        gq = qq[1] / 255,
-        Yq = qq[2] / 255;
-      Eq = Eq > .04045 ? ((Eq + .055) / 1.055) ** 2.4 : Eq / 12.92, gq = gq > .04045 ? ((gq + .055) / 1.055) ** 2.4 : gq / 12.92, Yq = Yq > .04045 ? ((Yq + .055) / 1.055) ** 2.4 : Yq / 12.92;
-      return [100 * (.4124 * Eq + .3576 * gq + .1805 * Yq), 100 * (.2126 * Eq + .7152 * gq + .0722 * Yq), 100 * (.0193 * Eq + .1192 * gq + .9505 * Yq)]
-    }, Oq.rgb.lab = function(qq) {
-      const Eq = Oq.rgb.xyz(qq);
-      let gq = Eq[0],
-        Yq = Eq[1],
-        lq = Eq[2];
-      gq /= 95.047, Yq /= 100, lq /= 108.883, gq = gq > .008856 ? gq ** (1 / 3) : 7.787 * gq + 16 / 116, Yq = Yq > .008856 ? Yq ** (1 / 3) : 7.787 * Yq + 16 / 116, lq = lq > .008856 ? lq ** (1 / 3) : 7.787 * lq + 16 / 116;
-      return [116 * Yq - 16, 500 * (gq - Yq), 200 * (Yq - lq)]
-    }, Oq.hsl.rgb = function(qq) {
-      const Eq = qq[0] / 360,
-        gq = qq[1] / 100,
-        Yq = qq[2] / 100;
-      let lq, Oq, mq;
-      if (0 === gq) return mq = 255 * Yq, [mq, mq, mq];
-      lq = Yq < .5 ? Yq * (1 + gq) : Yq + gq - Yq * gq;
-      const xq = 2 * Yq - lq,
-        Aq = [0, 0, 0];
-      for (let cq = 0; cq < 3; cq++) Oq = Eq + 1 / 3 * -(cq - 1), Oq < 0 && Oq++, Oq > 1 && Oq--, mq = 6 * Oq < 1 ? xq + 6 * (lq - xq) * Oq : 2 * Oq < 1 ? lq : 3 * Oq < 2 ? xq + (lq - xq) * (2 / 3 - Oq) * 6 : xq, Aq[cq] = 255 * mq;
-      return Aq
-    }, Oq.hsl.hsv = function(qq) {
-      const Eq = qq[0];
-      let gq = qq[1] / 100,
-        Yq = qq[2] / 100,
-        lq = gq;
-      const Oq = Math.max(Yq, .01);
-      Yq *= 2, gq *= Yq <= 1 ? Yq : 2 - Yq, lq *= Oq <= 1 ? Oq : 2 - Oq;
-      return [Eq, 100 * (0 === Yq ? 2 * lq / (Oq + lq) : 2 * gq / (Yq + gq)), 100 * ((Yq + gq) / 2)]
-    }, Oq.hsv.rgb = function(qq) {
-      const Eq = qq[0] / 60,
-        gq = qq[1] / 100;
-      let Yq = qq[2] / 100;
-      const lq = Math.floor(Eq) % 6,
-        Oq = Eq - Math.floor(Eq),
-        mq = 255 * Yq * (1 - gq),
-        xq = 255 * Yq * (1 - gq * Oq),
-        Aq = 255 * Yq * (1 - gq * (1 - Oq));
-      switch (Yq *= 255, lq) {
-        case 0:
-          return [Yq, Aq, mq];
-        case 1:
-          return [xq, Yq, mq];
-        case 2:
-          return [mq, Yq, Aq];
-        case 3:
-          return [mq, xq, Yq];
-        case 4:
-          return [Aq, mq, Yq];
-        case 5:
-          return [Yq, mq, xq]
-      }
-    }, Oq.hsv.hsl = function(qq) {
-      const Eq = qq[0],
-        gq = qq[1] / 100,
-        Yq = qq[2] / 100,
-        lq = Math.max(Yq, .01);
-      let Oq, mq;
-      mq = (2 - gq) * Yq;
-      const xq = (2 - gq) * lq;
-      return Oq = gq * lq, Oq /= xq <= 1 ? xq : 2 - xq, Oq = Oq || 0, mq /= 2, [Eq, 100 * Oq, 100 * mq]
-    }, Oq.hwb.rgb = function(qq) {
-      const Eq = qq[0] / 360;
-      let gq = qq[1] / 100,
-        Yq = qq[2] / 100;
-      const lq = gq + Yq;
-      let Oq;
-      lq > 1 && (gq /= lq, Yq /= lq);
-      const mq = Math.floor(6 * Eq),
-        xq = 1 - Yq;
-      Oq = 6 * Eq - mq, 0 !== (1 & mq) && (Oq = 1 - Oq);
-      const Aq = gq + Oq * (xq - gq);
-      let cq, uq, Bq;
-      switch (mq) {
-        default:
-        case 6:
-        case 0:
-          cq = xq, uq = Aq, Bq = gq;
-          break;
-        case 1:
-          cq = Aq, uq = xq, Bq = gq;
-          break;
-        case 2:
-          cq = gq, uq = xq, Bq = Aq;
-          break;
-        case 3:
-          cq = gq, uq = Aq, Bq = xq;
-          break;
-        case 4:
-          cq = Aq, uq = gq, Bq = xq;
-          break;
-        case 5:
-          cq = xq, uq = gq, Bq = Aq
-      }
-      return [255 * cq, 255 * uq, 255 * Bq]
-    }, Oq.cmyk.rgb = function(qq) {
-      const Eq = qq[0] / 100,
-        gq = qq[1] / 100,
-        Yq = qq[2] / 100,
-        lq = qq[3] / 100;
-      return [255 * (1 - Math.min(1, Eq * (1 - lq) + lq)), 255 * (1 - Math.min(1, gq * (1 - lq) + lq)), 255 * (1 - Math.min(1, Yq * (1 - lq) + lq))]
-    }, Oq.xyz.rgb = function(qq) {
-      const Eq = qq[0] / 100,
-        gq = qq[1] / 100,
-        Yq = qq[2] / 100;
-      let lq, Oq, mq;
-      return lq = 3.2406 * Eq + -1.5372 * gq + -.4986 * Yq, Oq = -.9689 * Eq + 1.8758 * gq + .0415 * Yq, mq = .0557 * Eq + -.204 * gq + 1.057 * Yq, lq = lq > .0031308 ? 1.055 * lq ** (1 / 2.4) - .055 : 12.92 * lq, Oq = Oq > .0031308 ? 1.055 * Oq ** (1 / 2.4) - .055 : 12.92 * Oq, mq = mq > .0031308 ? 1.055 * mq ** (1 / 2.4) - .055 : 12.92 * mq, lq = Math.min(Math.max(0, lq), 1), Oq = Math.min(Math.max(0, Oq), 1), mq = Math.min(Math.max(0, mq), 1), [255 * lq, 255 * Oq, 255 * mq]
-    }, Oq.xyz.lab = function(qq) {
-      let Eq = qq[0],
-        gq = qq[1],
-        Yq = qq[2];
-      Eq /= 95.047, gq /= 100, Yq /= 108.883, Eq = Eq > .008856 ? Eq ** (1 / 3) : 7.787 * Eq + 16 / 116, gq = gq > .008856 ? gq ** (1 / 3) : 7.787 * gq + 16 / 116, Yq = Yq > .008856 ? Yq ** (1 / 3) : 7.787 * Yq + 16 / 116;
-      return [116 * gq - 16, 500 * (Eq - gq), 200 * (gq - Yq)]
-    }, Oq.lab.xyz = function(qq) {
-      let Eq, gq, Yq;
-      gq = (qq[0] + 16) / 116, Eq = qq[1] / 500 + gq, Yq = gq - qq[2] / 200;
-      const lq = gq ** 3,
-        Oq = Eq ** 3,
-        mq = Yq ** 3;
-      return gq = lq > .008856 ? lq : (gq - 16 / 116) / 7.787, Eq = Oq > .008856 ? Oq : (Eq - 16 / 116) / 7.787, Yq = mq > .008856 ? mq : (Yq - 16 / 116) / 7.787, Eq *= 95.047, gq *= 100, Yq *= 108.883, [Eq, gq, Yq]
-    }, Oq.lab.lch = function(qq) {
-      const Eq = qq[0],
-        gq = qq[1],
-        Yq = qq[2];
-      let lq;
-      lq = 360 * Math.atan2(Yq, gq) / 2 / Math.PI, lq < 0 && (lq += 360);
-      return [Eq, Math.sqrt(gq * gq + Yq * Yq), lq]
-    }, Oq.lch.lab = function(qq) {
-      const Eq = qq[0],
-        gq = qq[1],
-        Yq = qq[2] / 360 * 2 * Math.PI;
-      return [Eq, gq * Math.cos(Yq), gq * Math.sin(Yq)]
-    }, Oq.rgb.ansi16 = function(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [gq, Yq, lq] = qq;
-      let mq = null === Eq ? Oq.rgb.hsv(qq)[2] : Eq;
-      if (mq = Math.round(mq / 50), 0 === mq) return 30;
-      let xq = 30 + (Math.round(lq / 255) << 2 | Math.round(Yq / 255) << 1 | Math.round(gq / 255));
-      return 2 === mq && (xq += 60), xq
-    }, Oq.hsv.ansi16 = function(qq) {
-      return Oq.rgb.ansi16(Oq.hsv.rgb(qq), qq[2])
-    }, Oq.rgb.ansi256 = function(qq) {
-      const Eq = qq[0],
-        gq = qq[1],
-        Yq = qq[2];
-      if (Eq === gq && gq === Yq) return Eq < 8 ? 16 : Eq > 248 ? 231 : Math.round((Eq - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(Eq / 255 * 5) + 6 * Math.round(gq / 255 * 5) + Math.round(Yq / 255 * 5)
-    }, Oq.ansi16.rgb = function(qq) {
-      let Eq = qq % 10;
-      if (0 === Eq || 7 === Eq) return qq > 50 && (Eq += 3.5), Eq = Eq / 10.5 * 255, [Eq, Eq, Eq];
-      const gq = .5 * (1 + ~~(qq > 50));
-      return [(1 & Eq) * gq * 255, (Eq >> 1 & 1) * gq * 255, (Eq >> 2 & 1) * gq * 255]
-    }, Oq.ansi256.rgb = function(qq) {
-      if (qq >= 232) {
-        const Eq = 10 * (qq - 232) + 8;
-        return [Eq, Eq, Eq]
-      }
-      let Eq;
-      qq -= 16;
-      return [Math.floor(qq / 36) / 5 * 255, Math.floor((Eq = qq % 36) / 6) / 5 * 255, Eq % 6 / 5 * 255]
-    }, Oq.rgb.hex = function(qq) {
-      const Eq = (((255 & Math.round(qq[0])) << 16) + ((255 & Math.round(qq[1])) << 8) + (255 & Math.round(qq[2]))).toString(16).toUpperCase();
-      return "000000".substring(Eq.length) + Eq
-    }, Oq.hex.rgb = function(qq) {
-      const Eq = qq.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!Eq) return [0, 0, 0];
-      let gq = Eq[0];
-      3 === Eq[0].length && (gq = gq.split("").map((qq => qq + qq)).join(""));
-      const Yq = parseInt(gq, 16);
-      return [Yq >> 16 & 255, Yq >> 8 & 255, 255 & Yq]
-    }, Oq.rgb.hcg = function(qq) {
-      const Eq = qq[0] / 255,
-        gq = qq[1] / 255,
-        Yq = qq[2] / 255,
-        lq = Math.max(Math.max(Eq, gq), Yq),
-        Oq = Math.min(Math.min(Eq, gq), Yq),
-        mq = lq - Oq;
-      let xq, Aq;
-      return xq = mq < 1 ? Oq / (1 - mq) : 0, Aq = mq <= 0 ? 0 : lq === Eq ? (gq - Yq) / mq % 6 : lq === gq ? 2 + (Yq - Eq) / mq : 4 + (Eq - gq) / mq, Aq /= 6, Aq %= 1, [360 * Aq, 100 * mq, 100 * xq]
-    }, Oq.hsl.hcg = function(qq) {
-      const Eq = qq[1] / 100,
-        gq = qq[2] / 100,
-        Yq = gq < .5 ? 2 * Eq * gq : 2 * Eq * (1 - gq);
-      let lq = 0;
-      return Yq < 1 && (lq = (gq - .5 * Yq) / (1 - Yq)), [qq[0], 100 * Yq, 100 * lq]
-    }, Oq.hsv.hcg = function(qq) {
-      const Eq = qq[1] / 100,
-        gq = qq[2] / 100,
-        Yq = Eq * gq;
-      let lq = 0;
-      return Yq < 1 && (lq = (gq - Yq) / (1 - Yq)), [qq[0], 100 * Yq, 100 * lq]
-    }, Oq.hcg.rgb = function(qq) {
-      const Eq = qq[0] / 360,
-        gq = qq[1] / 100,
-        Yq = qq[2] / 100;
-      if (0 === gq) return [255 * Yq, 255 * Yq, 255 * Yq];
-      const lq = [0, 0, 0],
-        Oq = Eq % 1 * 6,
-        mq = Oq % 1,
-        xq = 1 - mq;
-      let Aq = 0;
-      switch (Math.floor(Oq)) {
-        case 0:
-          lq[0] = 1, lq[1] = mq, lq[2] = 0;
-          break;
-        case 1:
-          lq[0] = xq, lq[1] = 1, lq[2] = 0;
-          break;
-        case 2:
-          lq[0] = 0, lq[1] = 1, lq[2] = mq;
-          break;
-        case 3:
-          lq[0] = 0, lq[1] = xq, lq[2] = 1;
-          break;
-        case 4:
-          lq[0] = mq, lq[1] = 0, lq[2] = 1;
-          break;
-        default:
-          lq[0] = 1, lq[1] = 0, lq[2] = xq
-      }
-      return Aq = (1 - gq) * Yq, [255 * (gq * lq[0] + Aq), 255 * (gq * lq[1] + Aq), 255 * (gq * lq[2] + Aq)]
-    }, Oq.hcg.hsv = function(qq) {
-      const Eq = qq[1] / 100,
-        gq = Eq + qq[2] / 100 * (1 - Eq);
-      let Yq = 0;
-      return gq > 0 && (Yq = Eq / gq), [qq[0], 100 * Yq, 100 * gq]
-    }, Oq.hcg.hsl = function(qq) {
-      const Eq = qq[1] / 100,
-        gq = qq[2] / 100 * (1 - Eq) + .5 * Eq;
-      let Yq = 0;
-      return gq > 0 && gq < .5 ? Yq = Eq / (2 * gq) : gq >= .5 && gq < 1 && (Yq = Eq / (2 * (1 - gq))), [qq[0], 100 * Yq, 100 * gq]
-    }, Oq.hcg.hwb = function(qq) {
-      const Eq = qq[1] / 100,
-        gq = Eq + qq[2] / 100 * (1 - Eq);
-      return [qq[0], 100 * (gq - Eq), 100 * (1 - gq)]
-    }, Oq.hwb.hcg = function(qq) {
-      const Eq = qq[1] / 100,
-        gq = 1 - qq[2] / 100,
-        Yq = gq - Eq;
-      let lq = 0;
-      return Yq < 1 && (lq = (gq - Yq) / (1 - Yq)), [qq[0], 100 * Yq, 100 * lq]
-    }, Oq.apple.rgb = function(qq) {
-      return [qq[0] / 65535 * 255, qq[1] / 65535 * 255, qq[2] / 65535 * 255]
-    }, Oq.rgb.apple = function(qq) {
-      return [qq[0] / 255 * 65535, qq[1] / 255 * 65535, qq[2] / 255 * 65535]
-    }, Oq.gray.rgb = function(qq) {
-      return [qq[0] / 100 * 255, qq[0] / 100 * 255, qq[0] / 100 * 255]
-    }, Oq.gray.hsl = function(qq) {
-      return [0, 0, qq[0]]
-    }, Oq.gray.hsv = Oq.gray.hsl, Oq.gray.hwb = function(qq) {
-      return [0, 100, qq[0]]
-    }, Oq.gray.cmyk = function(qq) {
-      return [0, 0, 0, qq[0]]
-    }, Oq.gray.lab = function(qq) {
-      return [qq[0], 0, 0]
-    }, Oq.gray.hex = function(qq) {
-      const Eq = 255 & Math.round(qq[0] / 100 * 255),
-        gq = ((Eq << 16) + (Eq << 8) + Eq).toString(16).toUpperCase();
-      return "000000".substring(gq.length) + gq
-    }, Oq.rgb.gray = function(qq) {
-      return [(qq[0] + qq[1] + qq[2]) / 3 / 255 * 100]
+    var jC = ZC(36271),
+      yC = ZC(2523),
+      LC = ZC(2529);
+
+    function UC(CC, zC, ZC) {
+      return null !== CC && !(0, yC.g)(LC.b, zC, ZC, CC.collected, CC.ownedPacks)
     }
-  },
-  36713: (qq, Eq, gq) => {
-    const Yq = gq(36716),
-      lq = gq(36731),
-      Oq = {};
-    Object.keys(Yq).forEach((qq => {
-      Oq[qq] = {}, Object.defineProperty(Oq[qq], "channels", {
-        value: Yq[qq].channels
-      }), Object.defineProperty(Oq[qq], "labels", {
-        value: Yq[qq].labels
-      });
-      const Eq = lq(qq);
-      Object.keys(Eq).forEach((gq => {
-        const Yq = Eq[gq];
-        Oq[qq][gq] = function(qq) {
-          const Eq = function() {
-            for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
-            const lq = gq[0];
-            if (void 0 === lq || null === lq) return lq;
-            lq.length > 1 && (gq = lq);
-            const Oq = qq(gq);
-            if ("object" === typeof Oq)
-              for (let qq = Oq.length, mq = 0; mq < qq; mq++) Oq[mq] = Math.round(Oq[mq]);
-            return Oq
-          };
-          return "conversion" in qq && (Eq.conversion = qq.conversion), Eq
-        }(Yq), Oq[qq][gq].raw = function(qq) {
-          const Eq = function() {
-            for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
-            const lq = gq[0];
-            return void 0 === lq || null === lq ? lq : (lq.length > 1 && (gq = lq), qq(gq))
-          };
-          return "conversion" in qq && (Eq.conversion = qq.conversion), Eq
-        }(Yq)
+
+    function BC(CC) {
+      let {
+        locked: zC,
+        children: ZC
+      } = CC;
+      return zC ? (0, tC.jsx)(OC, {
+        children: ZC
+      }) : ZC
+    }
+
+    function OC(CC) {
+      var zC;
+      let {
+        children: ZC
+      } = CC;
+      const {
+        t: QC
+      } = (0, FC.y)(), {
+        userContext: wC
+      } = (0, bC.e)(), nC = null !== (zC = wC.dailyDrop) && void 0 !== zC && zC.hidden ? QC("dailyDrop:lockedFromHidden") : QC("dailyDrop:lockedFrom");
+      return (0, tC.jsx)(TC.d, {
+        tooltipInner: (0, tC.jsx)(tC.Fragment, {
+          children: nC
+        }),
+        children: ZC
+      })
+    }
+
+    function kC(CC, zC, ZC) {
+      return (0, WC.l)(CC, zC).purchasable && !(0, lC.r)(CC, zC, ZC)
+    }
+
+    function VC(CC, zC) {
+      return Object.entries(CC).some((CC => {
+        let [ZC, QC] = CC;
+        return kC(ZC, QC, zC)
       }))
-    })), qq.exports = Oq
-  },
-  36731: (qq, Eq, gq) => {
-    const Yq = gq(36716);
+    }
 
-    function lq(qq) {
-      const Eq = function() {
-          const qq = {},
-            Eq = Object.keys(Yq);
-          for (let gq = Eq.length, Yq = 0; Yq < gq; Yq++) qq[Eq[Yq]] = {
-            distance: -1,
-            parent: null
+    function Cz(CC) {
+      var zC;
+      let {
+        pack: ZC,
+        ownedPacks: QC,
+        showStoreLink: wC = !1,
+        children: bC
+      } = CC;
+      const {
+        t: nC
+      } = (0, FC.y)(), oC = EC.d[ZC], qC = oC.purchasable && !QC.includes(ZC) && EC.q.includes(ZC), WC = XC.g[ZC];
+      return (0, tC.jsxs)("div", {
+        className: fC()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: qC
+        }),
+        children: [WC && (0, tC.jsx)(WC, {}), (0, tC.jsxs)("div", {
+          className: "CosmeticPackGroupLabel",
+          children: [(0, tC.jsx)("span", {
+            className: "CosmeticPackGroupLabelName",
+            children: null !== (zC = oC.displayName) && void 0 !== zC ? zC : ZC
+          }), (qC || wC) && (0, tC.jsxs)(xC.C, {
+            onClick: () => {
+              qC ? (0, XC.e)(ZC) : (0, JC.n)({
+                mode: "self",
+                source: "characterCustomisation"
+              })
+            },
+            children: [(0, tC.jsx)(rC.c, {
+              name: "store"
+            }), " ", nC("general:viewInShop")]
+          })]
+        }), qC && "bee" === ZC && (0, tC.jsx)(XC.c, {}), bC]
+      })
+    }
+
+    function zz(CC) {
+      let {
+        equippedEmoteIds: zC,
+        ownedPacks: ZC,
+        canBuy: QC,
+        onUpdateLoadout: wC,
+        onEmoteSelected: bC,
+        onEquipPreviewSkin: nC
+      } = CC;
+      const {
+        t: qC
+      } = (0, FC.y)(), NC = new Set(zC), MC = new Map, gC = Object.keys(WC.f.emote).sort(((CC, zC) => {
+        var ZC, QC, wC, bC;
+        return (null !== (ZC = null === (QC = (0, WC.j)("emote", CC)) || void 0 === QC ? void 0 : QC.clientIdx) && void 0 !== ZC ? ZC : 0) - (null !== (wC = null === (bC = (0, WC.j)("emote", zC)) || void 0 === bC ? void 0 : bC.clientIdx) && void 0 !== wC ? wC : 0)
+      })).filter((CC => {
+        const zC = (0, WC.l)("emote", CC),
+          wC = (0, lC.r)("emote", CC, ZC);
+        return !(zC.purchasable && !wC && !QC) && (zC.clientSelectable || wC)
+      }));
+      for (const fC of gC) {
+        const CC = (0, WC.j)("emote", fC).cosmeticPack;
+        MC.has(CC) || MC.set(CC, []), MC.get(CC).push(fC)
+      }
+      const SC = Array.from(MC.keys());
+      return (0, tC.jsxs)("div", {
+        className: "CharCustomisPartSelectorWrapper",
+        children: [!1, (0, tC.jsxs)("div", {
+          className: "EmoteLoadoutSummary",
+          children: [(0, tC.jsx)("span", {
+            className: "EmoteLoadoutSummaryText SmallTextBold",
+            children: qC("emotes:equippedCount", {
+              count: zC.length,
+              max: oC.r
+            })
+          }), (0, tC.jsx)("span", {
+            className: "EmoteLoadoutSummaryHint SmallTextLight",
+            children: qC("emotes:loadoutHint")
+          })]
+        }), SC.map((CC => {
+          const QC = MC.get(CC);
+          return (0, tC.jsx)(Cz, {
+            pack: CC,
+            ownedPacks: ZC,
+            children: (0, tC.jsx)("div", {
+              className: "CosmeticPackGroupItems",
+              children: QC.map((CC => {
+                var QC;
+                const nC = zC.indexOf(CC),
+                  FC = -1 !== nC,
+                  WC = zC.length >= oC.r,
+                  MC = kC("emote", CC, ZC),
+                  gC = MC || !FC && WC,
+                  SC = (0, GC.h)(CC);
+                return (0, tC.jsxs)("div", {
+                  className: fC()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: FC
+                  }),
+                  onClick: () => {
+                    bC(CC)
+                  },
+                  children: [(0, tC.jsxs)("div", {
+                    className: "CharCustomPart EmoteCustomPart",
+                    children: [(0, tC.jsx)("div", {
+                      className: "EmoteCustomPartIcon",
+                      style: {
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${CC}_preview.png)`
+                      },
+                      "aria-hidden": !0
+                    }), (0, tC.jsx)("span", {
+                      className: "EmoteCustomPartLabel SmallTextBold",
+                      children: null !== (QC = null === SC || void 0 === SC ? void 0 : SC.displayName) && void 0 !== QC ? QC : CC
+                    })]
+                  }), (0, tC.jsxs)("div", {
+                    className: "EmoteCustomPartToggleContainer",
+                    children: [FC && (0, tC.jsx)("span", {
+                      className: "EmoteCustomPartSlotBadge",
+                      children: nC + 1
+                    }), MC && (0, tC.jsx)(rC.c, {
+                      name: "lock",
+                      className: "LockedCosmeticIcon"
+                    }), (0, tC.jsx)(TC.d, {
+                      tooltipInner: (0, tC.jsx)(tC.Fragment, {
+                        children: qC(FC ? "general:remove" : "general:add")
+                      }),
+                      delayShow: 0,
+                      delayHide: 0,
+                      children: (0, tC.jsx)("div", {
+                        className: fC()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: gC,
+                          EmoteCustomPartToggleEquipped: FC
+                        }),
+                        onClick: ZC => {
+                          ZC.stopPropagation(), gC || function(CC) {
+                            NC.has(CC) ? wC(zC.filter((zC => zC !== CC))) : zC.length >= oC.r || wC([...zC, CC])
+                          }(CC)
+                        },
+                        children: (0, tC.jsx)(rC.c, {
+                          name: FC ? "minus" : "plus",
+                          "aria-hidden": !0
+                        })
+                      })
+                    })]
+                  })]
+                }, CC)
+              }))
+            })
+          }, CC)
+        }))]
+      })
+    }
+    const Zz = (0, QC.memo)((function(CC) {
+      let {
+        selectedTab: zC
+      } = CC;
+      const ZC = "characters" === zC ? "skin" : zC,
+        {
+          t: nC
+        } = (0, FC.y)(),
+        {
+          userContext: gC,
+          isUserContextUpdating: SC
+        } = (0, bC.e)(),
+        GC = (0, wC.b)(),
+        {
+          gameState: iC,
+          initSdkSelectorFinished: vC
+        } = (0, IC.k)(["gameState", "initSdkSelectorFinished"]),
+        [eC, hC] = (0, QC.useState)({}),
+        [KC, YC] = (0, QC.useState)({}),
+        [XC, TC] = (0, QC.useState)(null),
+        {
+          previewEmote: aC,
+          triggerEmote: yC
+        } = (0, RC.c)(),
+        LC = (0, QC.useRef)(oC.y.reduce(((CC, zC) => (CC[zC] = (0, MC.e)(zC), CC)), {})),
+        OC = (0, QC.useRef)(!1),
+        Zz = (0, QC.useRef)(null),
+        Qz = (0, QC.useRef)(null),
+        wz = (0, QC.useRef)(null);
+
+      function bz() {
+        null !== Qz.current && (clearTimeout(Qz.current), Qz.current = null);
+        const CC = wz.current;
+        null !== CC && (wz.current = null, (0, jC.e)(gC, [
+          ["emote", CC]
+        ]))
+      }
+
+      function nz(CC, zC, ZC) {
+        var QC, wC, bC;
+        LC.current = {
+          ...LC.current,
+          [CC]: zC
+        }, GC(), ZC && ((0, jC.e)(gC, [
+          [CC, zC]
+        ]), TC(null));
+        const nC = (0, WC.j)(CC, zC);
+        if (null !== nC && void 0 !== nC && nC.colourGroup && null !== (QC = EC.d[nC.cosmeticPack].colourGroups) && void 0 !== QC && null !== (wC = QC[nC.colourGroup]) && void 0 !== wC && wC.showSwatchSelector) {
+          const ZC = (0, WC.h)(zC);
+          ZC && YC((zC => ({
+            ...zC,
+            [`${nC.cosmeticPack}_${CC}_${nC.colourGroup}`]: parseInt(ZC[1])
+          })))
+        }
+        null !== (bC = Zz.current) && void 0 !== bC && bC.isReady() && Zz.current.updateCosmetic(CC, zC)
+      }
+
+      function fz(CC) {
+        hC((zC => {
+          const ZC = {
+            ...zC
           };
-          return qq
-        }(),
-        gq = [qq];
-      for (Eq[qq].distance = 0; gq.length;) {
-        const qq = gq.pop(),
-          lq = Object.keys(Yq[qq]);
-        for (let Yq = lq.length, Oq = 0; Oq < Yq; Oq++) {
-          const Yq = lq[Oq],
-            mq = Eq[Yq]; - 1 === mq.distance && (mq.distance = Eq[qq].distance + 1, mq.parent = qq, gq.unshift(Yq))
-        }
+          return delete ZC[CC], ZC
+        }))
       }
-      return Eq
-    }
 
-    function Oq(qq, Eq) {
-      return function(gq) {
-        return Eq(qq(gq))
-      }
-    }
-
-    function mq(qq, Eq) {
-      const gq = [Eq[qq].parent, qq];
-      let lq = Yq[Eq[qq].parent][qq],
-        mq = Eq[qq].parent;
-      for (; Eq[mq].parent;) gq.unshift(Eq[mq].parent), lq = Oq(Yq[Eq[mq].parent][mq], lq), mq = Eq[mq].parent;
-      return lq.conversion = gq, lq
-    }
-    qq.exports = function(qq) {
-      const Eq = lq(qq),
-        gq = {},
-        Yq = Object.keys(Eq);
-      for (let lq = Yq.length, Oq = 0; Oq < lq; Oq++) {
-        const qq = Yq[Oq];
-        null !== Eq[qq].parent && (gq[qq] = mq(qq, Eq))
-      }
-      return gq
-    }
-  },
-  36723: qq => {
-    qq.exports = {
-      aliceblue: [240, 248, 255],
-      antiquewhite: [250, 235, 215],
-      aqua: [0, 255, 255],
-      aquamarine: [127, 255, 212],
-      azure: [240, 255, 255],
-      beige: [245, 245, 220],
-      bisque: [255, 228, 196],
-      black: [0, 0, 0],
-      blanchedalmond: [255, 235, 205],
-      blue: [0, 0, 255],
-      blueviolet: [138, 43, 226],
-      brown: [165, 42, 42],
-      burlywood: [222, 184, 135],
-      cadetblue: [95, 158, 160],
-      chartreuse: [127, 255, 0],
-      chocolate: [210, 105, 30],
-      coral: [255, 127, 80],
-      cornflowerblue: [100, 149, 237],
-      cornsilk: [255, 248, 220],
-      crimson: [220, 20, 60],
-      cyan: [0, 255, 255],
-      darkblue: [0, 0, 139],
-      darkcyan: [0, 139, 139],
-      darkgoldenrod: [184, 134, 11],
-      darkgray: [169, 169, 169],
-      darkgreen: [0, 100, 0],
-      darkgrey: [169, 169, 169],
-      darkkhaki: [189, 183, 107],
-      darkmagenta: [139, 0, 139],
-      darkolivegreen: [85, 107, 47],
-      darkorange: [255, 140, 0],
-      darkorchid: [153, 50, 204],
-      darkred: [139, 0, 0],
-      darksalmon: [233, 150, 122],
-      darkseagreen: [143, 188, 143],
-      darkslateblue: [72, 61, 139],
-      darkslategray: [47, 79, 79],
-      darkslategrey: [47, 79, 79],
-      darkturquoise: [0, 206, 209],
-      darkviolet: [148, 0, 211],
-      deeppink: [255, 20, 147],
-      deepskyblue: [0, 191, 255],
-      dimgray: [105, 105, 105],
-      dimgrey: [105, 105, 105],
-      dodgerblue: [30, 144, 255],
-      firebrick: [178, 34, 34],
-      floralwhite: [255, 250, 240],
-      forestgreen: [34, 139, 34],
-      fuchsia: [255, 0, 255],
-      gainsboro: [220, 220, 220],
-      ghostwhite: [248, 248, 255],
-      gold: [255, 215, 0],
-      goldenrod: [218, 165, 32],
-      gray: [128, 128, 128],
-      green: [0, 128, 0],
-      greenyellow: [173, 255, 47],
-      grey: [128, 128, 128],
-      honeydew: [240, 255, 240],
-      hotpink: [255, 105, 180],
-      indianred: [205, 92, 92],
-      indigo: [75, 0, 130],
-      ivory: [255, 255, 240],
-      khaki: [240, 230, 140],
-      lavender: [230, 230, 250],
-      lavenderblush: [255, 240, 245],
-      lawngreen: [124, 252, 0],
-      lemonchiffon: [255, 250, 205],
-      lightblue: [173, 216, 230],
-      lightcoral: [240, 128, 128],
-      lightcyan: [224, 255, 255],
-      lightgoldenrodyellow: [250, 250, 210],
-      lightgray: [211, 211, 211],
-      lightgreen: [144, 238, 144],
-      lightgrey: [211, 211, 211],
-      lightpink: [255, 182, 193],
-      lightsalmon: [255, 160, 122],
-      lightseagreen: [32, 178, 170],
-      lightskyblue: [135, 206, 250],
-      lightslategray: [119, 136, 153],
-      lightslategrey: [119, 136, 153],
-      lightsteelblue: [176, 196, 222],
-      lightyellow: [255, 255, 224],
-      lime: [0, 255, 0],
-      limegreen: [50, 205, 50],
-      linen: [250, 240, 230],
-      magenta: [255, 0, 255],
-      maroon: [128, 0, 0],
-      mediumaquamarine: [102, 205, 170],
-      mediumblue: [0, 0, 205],
-      mediumorchid: [186, 85, 211],
-      mediumpurple: [147, 112, 219],
-      mediumseagreen: [60, 179, 113],
-      mediumslateblue: [123, 104, 238],
-      mediumspringgreen: [0, 250, 154],
-      mediumturquoise: [72, 209, 204],
-      mediumvioletred: [199, 21, 133],
-      midnightblue: [25, 25, 112],
-      mintcream: [245, 255, 250],
-      mistyrose: [255, 228, 225],
-      moccasin: [255, 228, 181],
-      navajowhite: [255, 222, 173],
-      navy: [0, 0, 128],
-      oldlace: [253, 245, 230],
-      olive: [128, 128, 0],
-      olivedrab: [107, 142, 35],
-      orange: [255, 165, 0],
-      orangered: [255, 69, 0],
-      orchid: [218, 112, 214],
-      palegoldenrod: [238, 232, 170],
-      palegreen: [152, 251, 152],
-      paleturquoise: [175, 238, 238],
-      palevioletred: [219, 112, 147],
-      papayawhip: [255, 239, 213],
-      peachpuff: [255, 218, 185],
-      peru: [205, 133, 63],
-      pink: [255, 192, 203],
-      plum: [221, 160, 221],
-      powderblue: [176, 224, 230],
-      purple: [128, 0, 128],
-      rebeccapurple: [102, 51, 153],
-      red: [255, 0, 0],
-      rosybrown: [188, 143, 143],
-      royalblue: [65, 105, 225],
-      saddlebrown: [139, 69, 19],
-      salmon: [250, 128, 114],
-      sandybrown: [244, 164, 96],
-      seagreen: [46, 139, 87],
-      seashell: [255, 245, 238],
-      sienna: [160, 82, 45],
-      silver: [192, 192, 192],
-      skyblue: [135, 206, 235],
-      slateblue: [106, 90, 205],
-      slategray: [112, 128, 144],
-      slategrey: [112, 128, 144],
-      snow: [255, 250, 250],
-      springgreen: [0, 255, 127],
-      steelblue: [70, 130, 180],
-      tan: [210, 180, 140],
-      teal: [0, 128, 128],
-      thistle: [216, 191, 216],
-      tomato: [255, 99, 71],
-      turquoise: [64, 224, 208],
-      violet: [238, 130, 238],
-      wheat: [245, 222, 179],
-      white: [255, 255, 255],
-      whitesmoke: [245, 245, 245],
-      yellow: [255, 255, 0],
-      yellowgreen: [154, 205, 50]
-    }
-  },
-  36704: (qq, Eq, gq) => {
-    var Yq = gq(36706),
-      lq = Array.prototype.concat,
-      Oq = Array.prototype.slice,
-      mq = qq.exports = function(qq) {
-        for (var Eq = [], gq = 0, mq = qq.length; gq < mq; gq++) {
-          var xq = qq[gq];
-          Yq(xq) ? Eq = lq.call(Eq, Oq.call(xq)) : Eq.push(xq)
+      function oz(CC, zC) {
+        let {
+          undoable: ZC
+        } = zC;
+        Object.keys(eC).length > 0 && hC({});
+        const QC = Object.entries(CC).filter((CC => {
+          let [zC, ZC] = CC;
+          return LC.current[zC] !== ZC && !kC(zC, ZC, qz) && !UC(Fz, zC, ZC)
+        }));
+        ZC ? QC.length > 0 && TC({
+          kind: "worn",
+          outfit: pC(LC.current)
+        }) : TC(null);
+        for (const [wC, bC] of QC) nz(wC, bC, !1);
+        QC.length > 0 && (0, jC.e)(gC, QC)
+      }(0, AC.b)("cosmeticsUpdated", (CC => {
+        let zC = !1;
+        for (const {
+            local: ZC,
+            JQ: QC,
+            IQ: wC
+          }
+          of CC) {
+          if (!ZC) return;
+          zC = !0, OC.current || nz(QC, wC, !1), GC()
         }
-        return Eq
-      };
-    mq.wrap = function(qq) {
-      return function() {
-        return qq(mq(arguments))
+        zC && (OC.current = !0)
+      })), (0, QC.useEffect)((() => {
+        if (!SC) {
+          for (const [CC, zC] of Object.entries(gC.getPlayerCosmetics())) nz(CC, zC, !1);
+          GC()
+        }
+      }), [SC]), (0, QC.useEffect)((() => () => {
+        bz()
+      }), []);
+      const qz = gC.getOwnedCosmeticPacks(),
+        Fz = function(CC, zC) {
+          return null === CC ? null : {
+            collected: new Set(CC.collected),
+            ownedPacks: zC
+          }
+        }(gC.dailyDrop, qz),
+        Wz = (0, sC.purchasesAllowed)(),
+        Nz = Object.keys(WC.f[ZC]).filter((CC => {
+          const zC = (0, WC.l)(ZC, CC),
+            QC = (0, lC.r)(ZC, CC, qz);
+          return !(zC.purchasable && !QC && !Wz) && (zC.clientSelectable || QC)
+        })).sort(((CC, zC) => {
+          var QC, wC, bC, nC;
+          return (null !== (QC = null === (wC = (0, WC.j)(ZC, CC)) || void 0 === wC ? void 0 : wC.clientIdx) && void 0 !== QC ? QC : 0) - (null !== (bC = null === (nC = (0, WC.j)(ZC, zC)) || void 0 === nC ? void 0 : nC.clientIdx) && void 0 !== bC ? bC : 0)
+        })),
+        Mz = new Map;
+      for (const QC of Nz) {
+        var gz;
+        const CC = null === (gz = (0, WC.j)(ZC, QC)) || void 0 === gz ? void 0 : gz.cosmeticPack;
+        Mz.has(CC) || Mz.set(CC, []), Mz.get(CC).push(QC)
       }
-    }
+      const Sz = function(CC, zC) {
+          const ZC = new Set,
+            QC = new Set;
+          for (const [wC, bC] of Object.entries(WC.f[CC])) {
+            if (void 0 === bC.colourGroup) continue;
+            const nC = `${bC.cosmeticPack}_${bC.colourGroup}`;
+            (kC(CC, wC, zC) ? QC : ZC).add(nC)
+          }
+          return new Set([...ZC].filter((CC => QC.has(CC))))
+        }(ZC, qz),
+        pz = new Map;
+      for (const [QC, wC] of Mz) {
+        const CC = [],
+          zC = new Map;
+        for (const QC of wC) {
+          var Pz, Gz;
+          const wC = null !== (Pz = null === (Gz = (0, WC.j)(ZC, QC)) || void 0 === Gz ? void 0 : Gz.colourGroup) && void 0 !== Pz ? Pz : null;
+          zC.has(wC) || (zC.set(wC, []), CC.push(wC)), zC.get(wC).push(QC)
+        }
+        const bC = CC.map((CC => {
+          var wC;
+          const bC = zC.get(CC),
+            nC = CC ? null === (wC = EC.d[QC].colourGroups) || void 0 === wC ? void 0 : wC[CC] : void 0,
+            fC = !0 === (null === nC || void 0 === nC ? void 0 : nC.showSwatchSelector) && !Sz.has(`${QC}_${CC}`);
+          if (fC && nC) {
+            var oC;
+            const zC = null !== (oC = KC[`${QC}_${ZC}_${CC}`]) && void 0 !== oC ? oC : (0, EC.f)(nC.colours);
+            return {
+              groupName: CC,
+              showSwatch: fC,
+              cosmetics: bC.filter((CC => {
+                const ZC = (0, WC.h)(CC);
+                return !ZC || zC.toString() === ZC[1].toString()
+              }))
+            }
+          }
+          return {
+            groupName: CC,
+            cosmetics: bC,
+            showSwatch: fC
+          }
+        }));
+        pz.set(QC, bC)
+      }
+      const Rz = Array.from(Mz.keys()),
+        Az = new Map;
+      for (const [QC, wC] of Object.entries(NC.b)) {
+        const CC = EC.d[wC.cosmeticPack],
+          zC = !VC(wC.cosmetics, qz),
+          ZC = EC.j.some((CC => (0, EC.e)(CC) === QC));
+        (CC.clientSelectable || ZC || zC) && ((!CC.purchasable || zC || Wz) && (Az.has(wC.cosmeticPack) || Az.set(wC.cosmeticPack, []), Az.get(wC.cosmeticPack).push([QC, wC])))
+      }
+      const xz = Array.from(Az.keys());
+      return (0, tC.jsxs)("div", {
+        className: "CharCustomisationBody",
+        children: [("cape" === ZC || "nameColour" === ZC) && !gC.playerHasRank("super") && (0, tC.jsxs)("div", {
+          className: "CharCustomisationBodyHeader",
+          children: [(0, tC.jsx)(rC.c, {
+            name: "bolt"
+          }), nC("homePage:unlockWithSuperRank"), Wz && (0, tC.jsx)(xC.o, {
+            onClick: () => {
+              (0, JC.n)({
+                mode: "self",
+                source: "characterCustomisation",
+                openItem: "superRank"
+              })
+            },
+            children: nC("general:getItNow")
+          })]
+        }), (0, tC.jsxs)("div", {
+          className: "CharCustomisationBodyInner",
+          children: ["characters" === zC && (0, tC.jsxs)("div", {
+            className: "CharCustomisPartSelectorWrapper",
+            children: [!1, (0, tC.jsx)(DC, {
+              wornOutfit: pC(LC.current),
+              onApply: CC => {
+                oz(CC, {
+                  undoable: !0
+                })
+              },
+              onOverwrite: (CC, zC) => {
+                TC({
+                  kind: "slot",
+                  slot: CC,
+                  outfit: zC
+                })
+              }
+            }), xz.map((CC => {
+              const zC = Az.get(CC);
+              return (0, tC.jsx)(Cz, {
+                pack: CC,
+                ownedPacks: qz,
+                showStoreLink: !EC.m.includes(CC) && zC.some((CC => {
+                  let [, {
+                    cosmetics: zC
+                  }] = CC;
+                  return VC(zC, qz)
+                })),
+                children: (0, tC.jsx)("div", {
+                  className: "CharacterPresetsGrid",
+                  children: zC.map((CC => {
+                    let [zC, {
+                      cosmetics: ZC
+                    }] = CC;
+                    const QC = VC(ZC, qz),
+                      wC = !QC && function(CC, zC) {
+                        return Object.entries(zC).some((zC => {
+                          let [ZC, QC] = zC;
+                          return UC(CC, ZC, QC)
+                        }))
+                      }(Fz, ZC),
+                      bC = QC || wC,
+                      nC = PC(ZC, eC),
+                      oC = !nC && PC(ZC, LC.current);
+                    return (0, tC.jsx)(BC, {
+                      locked: wC,
+                      children: (0, tC.jsxs)("div", {
+                        "data-pad-focusable": !0,
+                        className: fC()("CharacterPresetCard", {
+                          CharacterPresetCardActive: oC,
+                          CharacterPresetCardTryingOn: nC
+                        }),
+                        onClick: () => {
+                          bC ? function(CC) {
+                            PC(CC, eC) ? hC({}) : hC({
+                              ...CC
+                            })
+                          }(ZC) : oz(ZC, {
+                            undoable: !0
+                          })
+                        },
+                        children: [(0, tC.jsx)("div", {
+                          className: "CharacterPresetCardPreview",
+                          style: {
+                            backgroundImage: `url(/textures/charSkins/previews/character_${zC}_preview.png)`
+                          }
+                        }), bC && (0, tC.jsx)(rC.c, {
+                          name: "lock",
+                          className: "LockedCosmeticIcon"
+                        })]
+                      })
+                    }, zC)
+                  }))
+                })
+              }, CC)
+            }))]
+          }), "emote" === zC && (0, tC.jsx)(zz, {
+            equippedEmoteIds: (0, MC.h)(LC.current.emote),
+            ownedPacks: qz,
+            canBuy: Wz,
+            onUpdateLoadout: CC => {
+              const zC = (0, MC.l)(CC);
+              var ZC;
+              LC.current = {
+                ...LC.current,
+                emote: zC
+              }, gC.setPlayerCosmetics("emote", zC), GC(), ZC = zC, wz.current = ZC, null !== Qz.current && clearTimeout(Qz.current), Qz.current = setTimeout(bz, 350)
+            },
+            onEmoteSelected: yC,
+            onEquipPreviewSkin: () => {
+              ! function(CC, zC) {
+                for (const ZC of oC.y) "cape" !== ZC && "nameColour" !== ZC && "emote" !== ZC && CC(ZC, "skin" === ZC ? "skin_preview" : `${ZC}_none`, !1);
+                zC()
+              }(nz, GC)
+            }
+          }), "characters" !== zC && "emote" !== zC && (0, tC.jsxs)("div", {
+            className: "CharCustomisPartSelectorWrapper",
+            children: [!1, Rz.map((CC => {
+              const zC = pz.get(CC);
+              return (0, tC.jsx)(Cz, {
+                pack: CC,
+                ownedPacks: qz,
+                children: zC.map((zC => {
+                  var QC;
+                  let {
+                    groupName: wC,
+                    cosmetics: bC,
+                    showSwatch: nC
+                  } = zC;
+                  const oC = wC ? null === (QC = EC.d[CC].colourGroups) || void 0 === QC ? void 0 : QC[wC] : void 0,
+                    FC = `${CC}_${ZC}_${wC}`;
+                  return (0, tC.jsxs)("div", {
+                    className: "CosmeticPackGroupItems",
+                    children: [nC && oC && (0, tC.jsx)("div", {
+                      className: "CosmeticColorSwatchCell",
+                      children: [...oC.colours.map(((CC, zC) => ({
+                        color: CC,
+                        index: zC
+                      })))].sort(((CC, zC) => CC.color.order - zC.color.order)).map((zC => {
+                        var QC;
+                        let {
+                          color: bC,
+                          index: nC
+                        } = zC;
+                        return (0, tC.jsx)("div", {
+                          className: fC()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (QC = KC[FC]) && void 0 !== QC ? QC : (0, EC.f)(oC.colours)) === nC
+                          }),
+                          style: {
+                            backgroundColor: `rgb(${bC.rbg.join(",")})`
+                          },
+                          onClick: () => {
+                            var zC;
+                            YC((CC => ({
+                              ...CC,
+                              [FC]: nC
+                            })));
+                            const QC = eC[ZC],
+                              bC = QC ? (0, WC.j)(ZC, QC) : null,
+                              fC = (null === bC || void 0 === bC ? void 0 : bC.cosmeticPack) === CC,
+                              oC = fC ? QC : LC.current[ZC],
+                              qC = fC ? bC : (0, WC.j)(ZC, oC);
+                            if ((null === qC || void 0 === qC ? void 0 : qC.cosmeticPack) !== CC) return;
+                            if ((null !== (zC = null === qC || void 0 === qC ? void 0 : qC.colourGroup) && void 0 !== zC ? zC : null) !== wC) return;
+                            const NC = (0, WC.h)(oC);
+                            if (NC) {
+                              const CC = `${ZC}_${NC[0]}_${nC}`;
+                              kC(ZC, CC, qz) || UC(Fz, ZC, CC) ? hC((zC => ({
+                                ...zC,
+                                [ZC]: CC
+                              }))) : (fC && fz(ZC), nz(ZC, CC, !0))
+                            }
+                          }
+                        }, bC.rbg.join())
+                      }))
+                    }), bC.map((CC => {
+                      const zC = CC === LC.current[ZC],
+                        QC = eC[ZC] === CC,
+                        wC = kC(ZC, CC, qz),
+                        bC = !wC && UC(Fz, ZC, CC),
+                        nC = wC || bC;
+                      let oC = !0;
+                      return nC || zC || ("cape" !== ZC || (0, mC.xd)(gC.getPlayerRanks(), CC)) && ("nameColour" !== ZC || gC.playerHasRank("super")) || (oC = !1), (0, tC.jsx)(BC, {
+                        locked: bC,
+                        children: (0, tC.jsxs)("div", {
+                          className: fC()("CharCustomPartWrapper", {
+                            SelectedCharCustomPartWrapper: zC && !QC,
+                            TryingOnCharCustomPartWrapper: QC,
+                            DisabledCharCustomPartWrapper: !oC,
+                            CharCustomPartWrapperProfileEffect: "profileEffect" === ZC
+                          }),
+                          onClick: () => {
+                            if (oC)
+                              if (nC) hC((zC => {
+                                if (zC[ZC] === CC) {
+                                  const CC = {
+                                    ...zC
+                                  };
+                                  return delete CC[ZC], CC
+                                }
+                                return {
+                                  ...zC,
+                                  [ZC]: CC
+                                }
+                              }));
+                              else {
+                                var zC;
+                                if (eC[ZC] && fz(ZC), CC === LC.current[ZC]) return;
+                                null !== (zC = Zz.current) && void 0 !== zC && zC.isReady() && nz(ZC, CC, !0)
+                              }
+                          },
+                          children: ["profileEffect" === ZC ? (0, tC.jsx)("div", {
+                            className: "CharCustomPart CharCustomProfileEffect",
+                            children: (0, tC.jsx)(uC.f, {
+                              playerSocialPreview: (0, cC.c)(CC, {
+                                name: gC.getPlayerName(),
+                                cosmetics: gC.getPlayerCosmetics()
+                              }),
+                              showLocation: !1,
+                              opensProfileCard: !1
+                            })
+                          }) : (0, tC.jsx)("div", {
+                            className: fC()("CharCustomPart", {
+                              PixelatedImage: "cape" === ZC
+                            }),
+                            style: (0, WC.j)(ZC, CC).previewTex ? {
+                              backgroundImage: `url(/textures/charSkins/previews/${(0,WC.j)(ZC,CC).previewTex}.png)`
+                            } : {
+                              backgroundColor: qC.x[CC]
+                            }
+                          }), nC && (0, tC.jsx)(rC.c, {
+                            name: "lock",
+                            className: "LockedCosmeticIcon"
+                          })]
+                        })
+                      }, CC)
+                    }))]
+                  }, null !== wC && void 0 !== wC ? wC : "ungrouped")
+                }))
+              }, CC)
+            }))]
+          }), XC && (0, tC.jsxs)(xC.g, {
+            className: "CharCustomisationUndo",
+            onClick: () => {
+              "worn" === XC.kind ? oz(XC.outfit, {
+                undoable: !1
+              }) : (dC.save(XC.slot, XC.outfit), TC(null))
+            },
+            children: [(0, tC.jsx)(rC.c, {
+              name: "rotate-left"
+            }), nC("general:undo")]
+          }), (0, tC.jsx)(HC.CharacterPreview, {
+            ref: Zz,
+            forcedCosmetics: eC,
+            Bn: aC.id,
+            emotePlaySeq: aC.seq,
+            onReady: () => {
+              for (const CC of oC.y) nz(CC, LC.current[CC], !1)
+            }
+          })]
+        })]
+      })
+    }))
   },
-  36706: qq => {
-    qq.exports = function(qq) {
-      return !(!qq || "string" === typeof qq) && (qq instanceof Array || Array.isArray(qq) || qq.length >= 0 && (qq.splice instanceof Function || Object.getOwnPropertyDescriptor(qq, qq.length - 1) && "String" !== qq.constructor.name))
+  41104: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      CharacterPreview: () => WC
+    });
+    var QC = ZC(48),
+      wC = ZC(2734),
+      bC = ZC(1183),
+      nC = ZC(2534),
+      fC = ZC(34185),
+      oC = ZC(3569),
+      qC = ZC(1056);
+    const FC = .6 * Math.PI,
+      WC = (0, QC.memo)((0, QC.forwardRef)((function(CC, zC) {
+        let {
+          onReady: ZC,
+          onDrawn: WC,
+          owner: NC = "other",
+          framing: MC = "player",
+          forcedCosmetics: gC,
+          Bn: SC,
+          emotePlaySeq: pC,
+          turntableFromYaw: PC = null
+        } = CC;
+        const GC = (0, QC.useRef)(null),
+          {
+            width: RC,
+            height: AC
+          } = (0, wC.e)(GC),
+          xC = (0, QC.useRef)(null),
+          JC = (0, QC.useRef)({}),
+          IC = (0, QC.useRef)({}),
+          [iC, vC] = (0, QC.useState)(!1),
+          eC = (0, QC.useRef)(ZC);
+        eC.current = ZC;
+        const hC = (0, QC.useRef)(WC);
+        hC.current = WC;
+        const KC = (0, QC.useRef)(null),
+          YC = (0, QC.useRef)(!1),
+          dC = (0, QC.useRef)(!1),
+          mC = (0, QC.useCallback)((() => {
+            const CC = xC.current;
+            if (!CC || !hC.current || YC.current || !dC.current) return;
+            const zC = {};
+            KC.current = zC, queueMicrotask((() => {
+              if (KC.current !== zC) return;
+              const ZC = Promise.all(bC.y.map((zC => CC.untilDrawn(zC)))).catch((CC => {
+                  console.error("Failed to draw the character preview", CC)
+                })),
+                QC = new Promise((CC => {
+                  setTimeout(CC, 1e4)
+                }));
+              Promise.race([ZC, QC]).then((() => {
+                var ZC;
+                xC.current !== CC || KC.current !== zC || YC.current || (YC.current = !0, null === (ZC = hC.current) || void 0 === ZC || ZC.call(hC))
+              }))
+            }))
+          }), []);
+        return (0, QC.useImperativeHandle)(zC, (() => {
+          const CC = (CC, zC) => {
+            var ZC;
+            (JC.current[CC] = zC, null !== gC && void 0 !== gC && gC[CC]) || (null === (ZC = xC.current) || void 0 === ZC || ZC.setCosmetic(CC, zC), mC())
+          };
+          return {
+            updateCosmetic: CC,
+            setAllCosmetics(zC) {
+              for (const QC of bC.y) {
+                var ZC;
+                CC(QC, null !== (ZC = zC[QC]) && void 0 !== ZC ? ZC : (0, nC.e)(QC))
+              }
+            },
+            isReady() {
+              var CC, zC;
+              return null !== (CC = null === (zC = xC.current) || void 0 === zC ? void 0 : zC.isReady()) && void 0 !== CC && CC
+            },
+            resetCamera() {
+              var CC;
+              null === (CC = xC.current) || void 0 === CC || CC.resetCamera()
+            },
+            setOrbit(CC) {
+              var zC;
+              null === (zC = xC.current) || void 0 === zC || zC.setOrbit(CC)
+            },
+            async ensureReadyForCapture(CC) {
+              var zC;
+              await (null === (zC = xC.current) || void 0 === zC ? void 0 : zC.untilDrawn(CC))
+            },
+            getDevTools() {
+              var CC;
+              return null !== (CC = xC.current) && void 0 !== CC && CC.isReady() ? xC.current.dev : null
+            }
+          }
+        }), [gC, mC]), (0, QC.useEffect)((() => {
+          const CC = oC.c.register(NC),
+            zC = fC.k.openCharacter(GC.current, MC);
+          xC.current = zC;
+          let ZC = !0;
+          return zC.ready.then((() => {
+            ZC && (vC(!0), eC.current())
+          })).catch((CC => {
+            console.error("Failed to set up the character preview", CC)
+          })), () => {
+            ZC = !1, CC(), zC.resetCamera(), zC.close(), xC.current = null
+          }
+        }), []), (0, QC.useEffect)((() => {
+          RC <= 0 || AC <= 0 || xC.current.resize(RC, AC)
+        }), [RC, AC]), (0, QC.useEffect)((() => {
+          if (!iC) return;
+          const CC = IC.current;
+          for (const zC of bC.y) {
+            const ZC = null === gC || void 0 === gC ? void 0 : gC[zC],
+              QC = CC[zC];
+            ZC && ZC !== QC ? xC.current.setCosmetic(zC, ZC) : !ZC && QC && JC.current[zC] && xC.current.setCosmetic(zC, JC.current[zC])
+          }
+          IC.current = {
+            ...gC
+          }, dC.current = !0, mC()
+        }), [gC, iC, mC]), (0, QC.useEffect)((() => {
+          iC && xC.current.playEmote(null !== SC && void 0 !== SC ? SC : null)
+        }), [SC, pC, iC]), (0, QC.useEffect)((() => {
+          if (!iC || null === PC) return;
+          const CC = xC.current,
+            {
+              pitch: zC,
+              radius: ZC
+            } = fC.c[MC];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return CC.setOrbit({
+            yaw: PC + FC,
+            pitch: zC,
+            radius: ZC
+          }), () => {
+            CC.resetCamera()
+          };
+          const QC = performance.now();
+          let wC = 0;
+          const bC = nC => {
+            CC.setOrbit({
+              yaw: PC + (nC - QC) / 6e3 * 2 * Math.PI,
+              pitch: zC,
+              radius: ZC
+            }), wC = requestAnimationFrame(bC)
+          };
+          return wC = requestAnimationFrame(bC), () => {
+            cancelAnimationFrame(wC), CC.resetCamera()
+          }
+        }), [iC, PC]), (0, qC.jsx)("div", {
+          className: "CharCustomisationPreview",
+          ref: GC
+        })
+      })))
+  },
+  36271: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC
+    });
+    var QC = ZC(1840),
+      wC = ZC(1439);
+    const bC = new class {
+      constructor() {
+        this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
+      }
+      save(CC, zC) {
+        CC !== this.userContext && this.sendHeld(), this.userContext = CC;
+        for (const [QC, wC] of zC) this.pending.set(QC, wC);
+        if (null !== this.timer) return;
+        const ZC = this.lastSentAt + 1100 - Date.now();
+        ZC <= 0 ? this.send(CC) : (this.timer = setTimeout((() => {
+          this.sendHeld()
+        }), ZC), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+          "hidden" === document.visibilityState && this.sendHeld()
+        }))))
+      }
+      sendHeld() {
+        null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
+      }
+      send(CC) {
+        const zC = Array.from(this.pending, (CC => {
+          let [zC, ZC] = CC;
+          return {
+            JQ: zC,
+            IQ: ZC
+          }
+        }));
+        this.pending.clear(), this.lastSentAt = Date.now(), wC.d.updateCosmetics(CC, zC).catch((CC => {
+          console.error("Failed to update cosmetics", CC)
+        }))
+      }
+    };
+
+    function nC(CC, zC) {
+      for (const [ZC, QC] of zC) CC.setPlayerCosmetics(ZC, QC);
+      if (null === QC.gameBridge.latest("connectedGame").websocketUrl) bC.save(CC, zC);
+      else
+        for (const [ZC, wC] of zC) QC.gameBridge.send("updateMyCosmetic", {
+          JQ: ZC,
+          IQ: wC
+        })
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

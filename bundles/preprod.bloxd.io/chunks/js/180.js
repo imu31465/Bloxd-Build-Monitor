@@ -1,40 +1,40 @@
 export const id = 180;
 export const ids = [180];
 export const modules = {
-  9001: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      pageBody: () => Yq
+  9031: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      pageBody: () => QC
     });
-    const Yq = {
-      whatIs: ["Can your team last 99 nights of darkness? Bloxd Escape the Forest is a co-op horror survival game for teams of up to 6, and you can jump in for free straight from your browser. Make camp, keep the fire going, search for the missing children and watch out for whatever comes out after sunset. Get through all 99 nights, then find your way out."],
-      howToPlay: ["Your team starts around the campfire. During the day you'll gather wood, hunt Pigs and Cows for meat and explore the landmarks dotted around the forest. Throw fuel into the fire to level it up. Each new level unlocks crafting recipes and helps you find the lost kids. Bring back Monster Hearts to push the fire even higher.", 'When "Night Approaches" pops up, head back to camp. Monsters are scared of fire, but some nights the Horde attacks, the Monster wakes up or the Warper rises. If you go down, a teammate can revive you with a Revive Splash Potion.', "Every lost kid you find adds days to your count, which gets you closer to 99. Do quests for the Travelling Trader, then follow Maverick the wizard's guidance to the frozen forest. Collect the portal keystones, open the portal and send the kids home."],
-      features: ["Co-op with Up to 6 Players", "Survive 99 Nights, Then See How Much Longer You Can Last", "Level Up the Campfire to Unlock New Recipes", "Rescue the Lost Kids and Send Them Home", "Quests from the Travelling Trader and Maverick the Wizard", "Explore Landmarks like the Graveyard, Frozen Lagoon, Molten Gorge and Mount Doomrock", "Night Attacks from the Horde, the Monster and the Warper", "Revive Teammates and Repair the Respawn Pod", "Show Your Best Score on Your Nametag and Earn Aura XP", "Inferno Mode with a Day Multiplier"],
-      tips: ["Keep the fire fuelled. It's your best protection at night", "Cook Raw Morsels and Steak on the fire before you eat them", 'Get back to camp as soon as you see "Night Approaches"', "Bring Monster Hearts to the fire to reach the higher levels", "Place your Radar near the fire", "Throw a Decoy to distract monsters, or throw an Invisibility Potion to hide", "Fire a Call for Help flare if you go down", "Bring armour, ideally enchanted, before you go hunting for portal keystones"],
-      similarGames: ["horrorHotel", "containmentBreach", "classic_survivalDayNight", "backrooms"],
+    const QC = {
+      whatIs: ["Don't get infected... or do. Bloxd Infection is a humans vs zombies game where the virus spreads fast and anyone could end up against you. As a human you're racing through obstacles to escape. As a zombie you're part of the horde trying to stop them getting away."],
+      howToPlay: ["Everyone starts out human. After 15 seconds, 3 players turn into the first zombies. Humans follow the arrows and get through the obstacles before the zombies catch up. If a zombie takes you down, that's it, you're infected and on the zombie team now.", "Humans earn points by taking down zombies and shooting the diamonds hidden around the map. Spend those points to unlock the next section and buy guns at gun stations. Be the very last human alive and you'll get a Minigun. Zombies just need to hunt down every human before they escape."],
+      features: ["Up to 18 Players per Match", "Play as Humans or Zombies", "9 Human Kits, Including Veteran, Medic, Scout and Bombardier", "5 Zombie Kits, Including Sprinter, Tank, Puker and Bomber", "Unlock New Sections and Buy Guns with Points", "5 Maps: Hospital, Bunker, Subway, Airport and Farm", "Awards for First Kill, Final Kill and Last Human Alive"],
+      tips: ["Stick together as humans. Zombies find it much harder to pick you off", "Shoot the diamonds for extra points. They'll come back after a while", "Grab a gun at a gun station as soon as you can afford one", "The Medic kit lets you heal yourself and your teammates", "Playing zombie? Try the Sprinter to catch humans fast", "Last human alive? Make that Minigun count"],
+      similarGames: ["murderMystery", "containmentBreach", "shooting", "hideseek"],
       faq: [{
-        question: "What is Bloxd Escape the Forest?",
-        answer: "A co-op horror survival mode for up to 6 players. You team up, survive 99 nights, rescue the lost kids and send them home through the portal."
+        question: "What is Bloxd Infection?",
+        answer: "A humans vs zombies mode for up to 18 players. Humans try to escape through maps full of obstacles, and zombies try to infect everyone before they do."
       }, {
-        question: "In Escape the Forest, how do you survive 99 nights?",
-        answer: "Keep the campfire fuelled and stay close to it at night, because monsters are scared of fire. Level the fire up, cook your food and stick with your team."
+        question: "How does the infection spread in Bloxd Infection?",
+        answer: "Humans follow the arrows and get past the obstacles while zombies chase them. Anyone a zombie takes down becomes a zombie too."
       }, {
-        question: "How many players can team up in Escape the Forest?",
-        answer: "Up to 6 in each game, and others can join to spectate."
+        question: "How do humans win?",
+        answer: "Get through all the obstacles and escape before you're infected."
       }, {
-        question: "Where are the lost kids?",
-        answer: "Out in the forest. Level up your fire to find more of them, then go searching. Every kid you find adds to your day count."
+        question: "How do zombies win?",
+        answer: "By infecting every human before they escape."
       }, {
-        question: "What happens if you go down?",
-        answer: "A teammate can revive you with a Revive Splash Potion. You can fire a Call for Help flare too, and the Respawn Pod can bring back players who die."
+        question: "How are points earned?",
+        answer: "Humans get 100 points for taking down a zombie and 25 for an assist, plus extra for shooting diamonds."
       }, {
-        question: "How do you escape the forest?",
-        answer: "Follow Maverick the wizard's guidance to the frozen forest, collect the portal keystones, open the portal and send the kids home."
+        question: "What kits are in Bloxd Infection?",
+        answer: "Humans can pick kits like Veteran, who starts with an AK-47, or Scout, who has a sniper rifle. On the zombie side there's Puker, who can puke acid, and Tank, who has more health. Win awards to earn gold for the kit shop."
       }, {
-        question: "Is there anything after night 99?",
-        answer: "You've beaten the challenge by then, but how much longer can you survive? Your best number of nights survived shows on your nametag."
+        question: "What's the player limit in Infection?",
+        answer: "18 players per match."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

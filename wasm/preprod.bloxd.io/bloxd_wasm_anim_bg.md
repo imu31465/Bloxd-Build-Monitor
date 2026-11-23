@@ -1,8 +1,17 @@
 # WASM module: `bloxd_wasm_anim_bg`
 
-> environment **preprod.bloxd.io** · build `bbb6l5.0244a119` · analyzed 2026-11-21T12:37:15+09:00
-> source: https://preprod.bloxd.io/static/media/bloxd_wasm_anim_bg.e877f14ffbaecd066601.wasm
-> 415,766 bytes (406.0 KB) · sha256 `11dd5bcc2c7323ae…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **preprod.bloxd.io** · build `w4ddu.56408518` · analyzed 2026-11-24T00:42:21+09:00
+> source: https://preprod.bloxd.io/static/media/bloxd_wasm_anim_bg.72dea6b87a87456a5828.wasm
+> 415,630 bytes (405.9 KB) · sha256 `70063f4837211665…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+
+## Changes since the previous archived build
+
+- size 415,766 → 415,630 bytes (-136)
+- data bytes 157,622 → 157,486
+- name-section module id `f4f099776fbc89e4.821` → `dc158b5881af9ce6.821` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- export identifiers rotated by the obfuscator: 1/10 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `not an animation file: name it <name>.animation.json or <nam`
+- removed embedded strings: `not an animation file: name it <name>.animation.json or <nam`
 
 ## Overview
 
@@ -13,10 +22,10 @@
 | Code bytes (function bodies) | 256,664 (250.6 KB) |
 | Total local variables | 1,816 |
 | Instructions (scanable bodies) | 122,044 |
-| Data segments / bytes | 23 / 157,622 |
+| Data segments / bytes | 23 / 157,486 |
 | Element segments / entries | 1 / 60 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `f4f099776fbc89e4.821` |
+| name-section module id | `dc158b5881af9ce6.821` |
 | Sections | 12 |
 
 ## Sections
@@ -33,7 +42,7 @@
 | 9 | element | 119 | 1 |
 | 12 | datacount | 1 | — |
 | 10 | code | 257,092 | 258 |
-| 11 | data | 157,819 | 23 |
+| 11 | data | 157,683 | 23 |
 | 0 | custom:name | 28 | — |
 
 ## Types
@@ -46,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `cVIT.puT8` | func | `(i32 i32) -> ()` |
-| 1 | `cVIT.F1HB` | func | `(i32) -> ()` |
-| 2 | `cVIT.PBxs` | func | `(i32 i32) -> ()` |
-| 3 | `cVIT.EvN0` | func | `(i32 i32) -> (i32)` |
-| 4 | `cVIT.GJzs` | func | `(i32 i32) -> ()` |
+| 0 | `OrUC.SICw` | func | `(i32 i32) -> ()` |
+| 1 | `OrUC.Rv0u` | func | `(i32) -> ()` |
+| 2 | `OrUC.B5M0` | func | `(i32 i32) -> ()` |
+| 3 | `OrUC.xH1Z` | func | `(i32 i32) -> (i32)` |
+| 4 | `OrUC.I3eF` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -58,16 +67,16 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
+| `XsNz` | func | 222 | `(i32 i32) -> (i32)` |
+| `LnDQ` | func | 237 | `(i32 i32 i32) -> ()` |
 | `memory` | memory | 0 | `` |
-| `fbAU` | func | 213 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
-| `fBeU` | global | 1 | `` |
-| `vZUi` | func | 261 | `() -> ()` |
-| `tSYw` | func | 222 | `(i32 i32) -> (i32)` |
-| `j6Cc` | func | 223 | `(i32 i32 i32 i32) -> (i32)` |
-| `fQSZ` | global | 2 | `` |
-| `NJFj` | func | 237 | `(i32 i32 i32) -> ()` |
-| `d7Th` | func | 261 | `() -> ()` |
-| `zrWh` | func | 228 | `(i32 i32 i32) -> (i32 i32)` |
+| `B1Kp` | func | 261 | `() -> ()` |
+| `S3an` | func | 261 | `() -> ()` |
+| `CHOi` | global | 1 | `` |
+| `wywx` | global | 2 | `` |
+| `l7s8` | func | 223 | `(i32 i32 i32 i32) -> (i32)` |
+| `JmIP` | func | 213 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
+| `UdTS` | func | 228 | `(i32 i32 i32) -> (i32 i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -75,7 +84,7 @@
 
 - memory 0: min 19 pages · max ∞ · shared=False
 - table 0: funcref · min 61 · max 61
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1206664, `i32` = i32.const 1207148
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1206528, `i32` = i32.const 1207012
 
 ## Functions
 
@@ -141,7 +150,7 @@ Largest functions:
 multiple statements are not supportedput a ?: inside the true branch of another ?: in parenthesesarrays are not supportedmaterial references are not supportedtexture references are not supportedgeomet
 target must be the name of a mob or vehicleBad Unicode escapeJSON nested too deeplyExpected ',' or ']' after array elementUnexpected end of JSON inputtruefalsenullUnexpected tokenNo number after minus
 called `Option::unwrap()` on a `None` value0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777
-not an animation file: name it <name>.animation.json or <name>.binding.jsonhas no target: set "target" to the mob or vehicle it animates
+not an animation file: name it <name>.animation.json or <name>.binding.jsonhas no target: set "target" to the mob or vehicle it animatesE!
 "spin": { "from": "groundSpeed", "gate": "occupied", "scale": 0.2, "min": 0, "max": 2, "rise": 2.5, "fall": 1.2 },
 { "name": "bit", "clip": "drill_spin", "rate": "spin", "bones": ["Drill", "Drill2", "Drill3", "Drill4"] },
 groundSpeedforwardSpeedintentSpeedverticalSpeedturnRateoccupiedonGroundinFluidcrouchingaiminghitAngle

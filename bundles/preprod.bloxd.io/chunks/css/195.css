@@ -1,0 +1,452 @@
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+  max-height: 90dvh;
+  overflow: hidden;
+  position: relative
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup {
+    box-sizing: border-box;
+    max-width: none;
+    width: calc(100vw - 2rem)
+  }
+}
+
+@media(pointer:coarse) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .GenericPopupExitButton .NewButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding {
+  display: flex;
+  flex-direction: column;
+  max-width: 75vw;
+  min-height: 0;
+  width: 60rem
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding {
+    max-width: none;
+    width: 100%
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingTitle {
+  flex: none;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-right: 5rem;
+  padding-bottom: 1.5rem;
+  text-align: left
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingTitle {
+    font-size: 2.5rem
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingBody {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-color: #3c4b68 #22283b;
+  scrollbar-width: thin
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingBody::-webkit-scrollbar {
+  width: 6px
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingBody::-webkit-scrollbar-track {
+  background-color: #22283b
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingBody::-webkit-scrollbar-thumb {
+  background-color: #3c4b68;
+  border-radius: 0
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingNameField {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 1rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingNameField .OnboardingSubtitle {
+  color: #cfcfcf;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: left
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingNameField .OnboardingNameRow {
+  display: flex;
+  gap: .5rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingNameField .OnboardingNameRow .OnboardingNameInput {
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  font-size: 2.2rem;
+  min-height: 44px;
+  min-width: 0;
+  padding: .75rem 1rem
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingNameField .OnboardingNameRow .OnboardingNameInput {
+    font-size: 1.5rem;
+    padding: .75rem .6rem
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingNameField .OnboardingNameRow .OnboardingRandomName {
+  flex: none;
+  font-size: 2rem;
+  min-width: 44px
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingNameField .OnboardingNameNote {
+  color: #1dd06d;
+  font-size: 1.5rem;
+  text-align: left
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingNameField .OnboardingNameNote.OnboardingNameError {
+  color: #ff8a80
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingPresets {
+  grid-gap: .75rem;
+  display: grid;
+  gap: .75rem;
+  grid-template-columns: repeat(8, 1fr)
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingPresets {
+    grid-template-columns: repeat(4, 1fr)
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingPresets .OnboardingPreset {
+  align-items: center;
+  background: none;
+  background-color: #3c4b68;
+  border: .2rem solid transparent;
+  border-radius: 0;
+  box-sizing: content-box;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  justify-content: center;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-height: 44px;
+  padding: .5rem;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  transition: transform .15s, border-color .15s, background-color .15s
+}
+
+@media(hover:hover) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingPresets .OnboardingPreset:hover {
+    transform: scale(1.05)
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingPresets .OnboardingPreset.pad-focused {
+  transform: scale(1.05)
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingPresets .OnboardingPreset.OnboardingPresetSelected {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingPresets .OnboardingPreset .OnboardingPresetImage {
+  aspect-ratio: 4/5;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMoreOptions {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(pointer:coarse) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMoreOptions {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMoreOptions {
+  align-items: center;
+  align-self: flex-start;
+  color: #cfcfcf;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+  gap: .4rem
+}
+
+@media(hover:hover) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMoreOptions:hover {
+    color: #fff
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMoreOptions.pad-focused {
+  color: #fff
+}
+
+@media(hover:none) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMoreOptions:active {
+    color: #fff
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMoreOptions:focus-visible {
+  outline: 2px solid #ffb914;
+  outline-offset: 2px
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore {
+  align-items: flex-start;
+  display: flex;
+  flex: none;
+  gap: 1.5rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMorePreview {
+  flex: none;
+  font-size: 6rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingColoursLabel {
+  color: #cfcfcf;
+  font-size: 1.4rem;
+  text-align: left
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingSwatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingSwatches .OnboardingSwatch {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  font: inherit;
+  height: 3.2rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  width: 3.2rem
+}
+
+@media(pointer:coarse) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingSwatches .OnboardingSwatch {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingSwatches .OnboardingSwatch {
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform .15s
+}
+
+@media(hover:hover) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingSwatches .OnboardingSwatch:hover {
+    transform: scale(1.1)
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingSwatches .OnboardingSwatch.pad-focused {
+  transform: scale(1.1)
+}
+
+@media(hover:none) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingSwatches .OnboardingSwatch:active {
+    transform: scale(1.1)
+  }
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingMore .OnboardingMoreColours .OnboardingColours .OnboardingSwatches .OnboardingSwatch.OnboardingSwatchSelected {
+  border: .25rem solid #ffb914
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingFooter {
+  border-top: 2px solid hsla(0, 0%, 95%, .1);
+  display: flex;
+  flex: none;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  padding-top: 1rem
+}
+
+.MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingFooter .OnboardingPrimaryButton {
+  font-size: 1.8rem;
+  min-width: 12rem
+}
+
+@media(pointer:coarse) {
+  .MiddleScreenPopupBackground .MiddleScreenPopup.OnboardingPopup .Onboarding .OnboardingFooter .OnboardingPrimaryButton {
+    min-height: 44px
+  }
+}

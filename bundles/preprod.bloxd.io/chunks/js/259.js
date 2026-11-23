@@ -1,1043 +1,884 @@
-/*! For license information please see bbb6l5.259.a60d05a1.chunk.js.LICENSE.txt */
 export const id = 259;
 export const ids = [259];
 export const modules = {
-  40278: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      getAnalytics: () => XE,
-      getGoogleAnalyticsClientId: () => IE,
-      initializeAnalytics: () => wE,
-      isSupported: () => KE,
-      logEvent: () => gg,
-      setAnalyticsCollectionEnabled: () => qg,
-      setConsent: () => Yg,
-      setCurrentScreen: () => CE,
-      setDefaultEventParameters: () => Eg,
-      setUserId: () => eE,
-      setUserProperties: () => DE,
-      settings: () => FE
+  40084: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => NC
     });
-    var Yq = gq(40254),
-      lq = gq(40273),
-      Oq = gq(40265),
-      mq = gq(40258);
-    let xq, Aq;
-    const cq = new WeakMap,
-      uq = new WeakMap,
-      Bq = new WeakMap,
-      Wq = new WeakMap,
-      Nq = new WeakMap;
-    let aq = {
-      get(qq, Eq, gq) {
-        if (qq instanceof IDBTransaction) {
-          if ("done" === Eq) return uq.get(qq);
-          if ("objectStoreNames" === Eq) return qq.objectStoreNames || Bq.get(qq);
-          if ("store" === Eq) return gq.objectStoreNames[1] ? void 0 : gq.objectStore(gq.objectStoreNames[0])
+    var QC = ZC(39811),
+      wC = ZC(39818),
+      bC = ZC(36963),
+      nC = ZC(37142),
+      fC = ZC(40046),
+      oC = ZC(39950),
+      qC = ZC(37002),
+      FC = ZC(40022),
+      WC = ZC(39842);
+    let NC = (() => {
+      var CC, zC;
+      let ZC, NC, MC, gC, SC, pC, PC, GC, RC, AC, xC, JC, IC, iC = fC.d,
+        vC = [],
+        eC = [],
+        hC = [],
+        KC = [],
+        YC = [],
+        dC = [],
+        mC = [],
+        HC = [],
+        EC = [],
+        lC = [],
+        XC = [],
+        cC = [],
+        uC = [],
+        rC = [],
+        sC = [],
+        TC = [],
+        aC = [],
+        tC = [],
+        DC = [],
+        jC = [],
+        yC = [];
+      return CC = class extends iC {
+        get range() {
+          return this._range
         }
-        return jq(qq[Eq])
-      },
-      set: (qq, Eq, gq) => (qq[Eq] = gq, !0),
-      has: (qq, Eq) => qq instanceof IDBTransaction && ("done" === Eq || "store" === Eq) || Eq in qq
-    };
-
-    function Vq(qq) {
-      return qq !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (Aq || (Aq = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(qq) ? function() {
-        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
-        return qq.apply(Hq(this), gq), jq(cq.get(this))
-      } : function() {
-        for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
-        return jq(qq.apply(Hq(this), gq))
-      } : function(Eq) {
-        for (var gq = arguments.length, Yq = new Array(gq > 1 ? gq - 1 : 0), lq = 1; lq < gq; lq++) Yq[lq - 1] = arguments[lq];
-        const Oq = qq.call(Hq(this), Eq, ...Yq);
-        return Bq.set(Oq, Eq.sort ? Eq.sort() : [Eq]), jq(Oq)
-      }
-    }
-
-    function dq(qq) {
-      return "function" === typeof qq ? Vq(qq) : (qq instanceof IDBTransaction && function(qq) {
-        if (uq.has(qq)) return;
-        const Eq = new Promise(((Eq, gq) => {
-          const Yq = () => {
-              qq.removeEventListener("complete", lq), qq.removeEventListener("error", Oq), qq.removeEventListener("abort", Oq)
-            },
-            lq = () => {
-              Eq(), Yq()
-            },
-            Oq = () => {
-              gq(qq.error || new DOMException("AbortError", "AbortError")), Yq()
-            };
-          qq.addEventListener("complete", lq), qq.addEventListener("error", Oq), qq.addEventListener("abort", Oq)
-        }));
-        uq.set(qq, Eq)
-      }(qq), Eq = qq, (xq || (xq = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((qq => Eq instanceof qq)) ? new Proxy(qq, aq) : qq);
-      var Eq
-    }
-
-    function jq(qq) {
-      if (qq instanceof IDBRequest) return function(qq) {
-        const Eq = new Promise(((Eq, gq) => {
-          const Yq = () => {
-              qq.removeEventListener("success", lq), qq.removeEventListener("error", Oq)
-            },
-            lq = () => {
-              Eq(jq(qq.result)), Yq()
-            },
-            Oq = () => {
-              gq(qq.error), Yq()
-            };
-          qq.addEventListener("success", lq), qq.addEventListener("error", Oq)
-        }));
-        return Eq.then((Eq => {
-          Eq instanceof IDBCursor && cq.set(Eq, qq)
-        })).catch((() => {})), Nq.set(Eq, qq), Eq
-      }(qq);
-      if (Wq.has(qq)) return Wq.get(qq);
-      const Eq = dq(qq);
-      return Eq !== qq && (Wq.set(qq, Eq), Nq.set(Eq, qq)), Eq
-    }
-    const Hq = qq => Nq.get(qq);
-    const oq = ["get", "getKey", "getAll", "getAllKeys", "count"],
-      Pq = ["put", "add", "delete", "clear"],
-      Qq = new Map;
-
-    function yq(qq, Eq) {
-      if (!(qq instanceof IDBDatabase) || Eq in qq || "string" !== typeof Eq) return;
-      if (Qq.get(Eq)) return Qq.get(Eq);
-      const gq = Eq.replace(/FromIndex$/, ""),
-        Yq = Eq !== gq,
-        lq = Pq.includes(gq);
-      if (!(gq in (Yq ? IDBIndex : IDBObjectStore).prototype) || !lq && !oq.includes(gq)) return;
-      const Oq = async function(qq) {
-        const Eq = this.transaction(qq, lq ? "readwrite" : "readonly");
-        let Oq = Eq.store;
-        for (var mq = arguments.length, xq = new Array(mq > 1 ? mq - 1 : 0), Aq = 1; Aq < mq; Aq++) xq[Aq - 1] = arguments[Aq];
-        return Yq && (Oq = Oq.index(xq.shift())), (await Promise.all([Oq[gq](...xq), lq && Eq.done]))[0]
-      };
-      return Qq.set(Eq, Oq), Oq
-    }
-    aq = (qq => ({
-      ...qq,
-      get: (Eq, gq, Yq) => yq(Eq, gq) || qq.get(Eq, gq, Yq),
-      has: (Eq, gq) => !!yq(Eq, gq) || qq.has(Eq, gq)
-    }))(aq);
-    const tq = "@firebase/installations",
-      rq = "0.6.4",
-      vq = 1e4,
-      hq = `w:${rq}`,
-      nq = "FIS_v2",
-      bq = 36e5,
-      iq = {
-        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
-        "not-registered": "Firebase Installation is not registered.",
-        "installation-not-found": "Firebase Installation not found.",
-        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
-        "app-offline": "Could not process request. Application offline.",
-        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
-      },
-      Zq = new Oq.d("installations", "Installations", iq);
-
-    function fq(qq) {
-      return qq instanceof Oq.h && qq.code.includes("request-failed")
-    }
-
-    function Mq(qq) {
-      let {
-        projectId: Eq
-      } = qq;
-      return `https://firebaseinstallations.googleapis.com/v1/projects/${Eq}/installations`
-    }
-
-    function Tq(qq) {
-      return {
-        token: qq.token,
-        requestStatus: 2,
-        expiresIn: (Eq = qq.expiresIn, Number(Eq.replace("s", "000"))),
-        creationTime: Date.now()
-      };
-      var Eq
-    }
-    async function zq(qq, Eq) {
-      const gq = (await Eq.json()).error;
-      return Zq.create("request-failed", {
-        requestName: qq,
-        serverCode: gq.code,
-        serverMessage: gq.message,
-        serverStatus: gq.status
-      })
-    }
-
-    function Sq(qq) {
-      let {
-        apiKey: Eq
-      } = qq;
-      return new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "x-goog-api-key": Eq
-      })
-    }
-
-    function pq(qq, Eq) {
-      let {
-        refreshToken: gq
-      } = Eq;
-      const Yq = Sq(qq);
-      return Yq.append("Authorization", function(qq) {
-        return `${nq} ${qq}`
-      }(gq)), Yq
-    }
-    async function Gq(qq) {
-      const Eq = await qq();
-      return Eq.status >= 500 && Eq.status < 600 ? qq() : Eq
-    }
-
-    function Lq(qq) {
-      return new Promise((Eq => {
-        setTimeout(Eq, qq)
-      }))
-    }
-    const Jq = /^[cdef][\w-]{21}$/;
-
-    function kq() {
-      try {
-        const qq = new Uint8Array(17);
-        (self.crypto || self.msCrypto).getRandomValues(qq), qq[0] = 112 + qq[0] % 16;
-        const Eq = function(qq) {
-          const Eq = (gq = qq, btoa(String.fromCharCode(...gq)).replace(/\+/g, "-").replace(/\//g, "_"));
-          var gq;
-          return Eq.substr(0, 22)
-        }(qq);
-        return Jq.test(Eq) ? Eq : ""
-      } catch (qq) {
-        return ""
-      }
-    }
-
-    function Rq(qq) {
-      return `${qq.appName}!${qq.appId}`
-    }
-    const Uq = new Map;
-
-    function Fq(qq, Eq) {
-      const gq = Rq(qq);
-      sq(gq, Eq),
-        function(qq, Eq) {
-          const gq = wq();
-          gq && gq.postMessage({
-            key: qq,
-            fid: Eq
-          });
-          Kq()
-        }(gq, Eq)
-    }
-
-    function sq(qq, Eq) {
-      const gq = Uq.get(qq);
-      if (gq)
-        for (const Yq of gq) Yq(Eq)
-    }
-    let Xq = null;
-
-    function wq() {
-      return !Xq && "BroadcastChannel" in self && (Xq = new BroadcastChannel("[Firebase] FID Change"), Xq.onmessage = qq => {
-        sq(qq.data.key, qq.data.fid)
-      }), Xq
-    }
-
-    function Kq() {
-      0 === Uq.size && Xq && (Xq.close(), Xq = null)
-    }
-    const Cq = "firebase-installations-store";
-    let Iq = null;
-
-    function eq() {
-      return Iq || (Iq = function(qq, Eq) {
-        let {
-          blocked: gq,
-          upgrade: Yq,
-          blocking: lq,
-          terminated: Oq
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const mq = indexedDB.open(qq, Eq),
-          xq = jq(mq);
-        return Yq && mq.addEventListener("upgradeneeded", (qq => {
-          Yq(jq(mq.result), qq.oldVersion, qq.newVersion, jq(mq.transaction))
-        })), gq && mq.addEventListener("blocked", (() => gq())), xq.then((qq => {
-          Oq && qq.addEventListener("close", (() => Oq())), lq && qq.addEventListener("versionchange", (() => lq()))
-        })).catch((() => {})), xq
-      }("firebase-installations-database", 1, {
-        upgrade: (qq, Eq) => {
-          if (0 === Eq) qq.createObjectStore(Cq)
+        set range(CC) {
+          this._range = CC, this._inverseSquaredRange = 1 / (this.range * this.range)
         }
-      })), Iq
-    }
-    async function Dq(qq, Eq) {
-      const gq = Rq(qq),
-        Yq = (await eq()).transaction(Cq, "readwrite"),
-        lq = Yq.objectStore(Cq),
-        Oq = await lq.get(gq);
-      return await lq.put(Eq, gq), await Yq.done, Oq && Oq.fid === Eq.fid || Fq(qq, Eq.fid), Eq
-    }
-    async function qE(qq) {
-      const Eq = Rq(qq),
-        gq = (await eq()).transaction(Cq, "readwrite");
-      await gq.objectStore(Cq).delete(Eq), await gq.done
-    }
-    async function EE(qq, Eq) {
-      const gq = Rq(qq),
-        Yq = (await eq()).transaction(Cq, "readwrite"),
-        lq = Yq.objectStore(Cq),
-        Oq = await lq.get(gq),
-        mq = Eq(Oq);
-      return void 0 === mq ? await lq.delete(gq) : await lq.put(mq, gq), await Yq.done, !mq || Oq && Oq.fid === mq.fid || Fq(qq, mq.fid), mq
-    }
-    async function gE(qq) {
-      let Eq;
-      const gq = await EE(qq.appConfig, (gq => {
-        const Yq = function(qq) {
-            const Eq = qq || {
-              fid: kq(),
-              registrationStatus: 0
-            };
-            return OE(Eq)
-          }(gq),
-          lq = function(qq, Eq) {
-            if (0 === Eq.registrationStatus) {
-              if (!navigator.onLine) {
-                return {
-                  installationEntry: Eq,
-                  registrationPromise: Promise.reject(Zq.create("app-offline"))
-                }
-              }
-              const gq = {
-                  fid: Eq.fid,
-                  registrationStatus: 1,
-                  registrationTime: Date.now()
-                },
-                Yq = async function(qq, Eq) {
-                  try {
-                    const gq = await async function(qq, Eq) {
-                      let {
-                        appConfig: gq,
-                        heartbeatServiceProvider: Yq
-                      } = qq, {
-                        fid: lq
-                      } = Eq;
-                      const Oq = Mq(gq),
-                        mq = Sq(gq),
-                        xq = Yq.getImmediate({
-                          optional: !0
-                        });
-                      if (xq) {
-                        const qq = await xq.getHeartbeatsHeader();
-                        qq && mq.append("x-firebase-client", qq)
-                      }
-                      const Aq = {
-                          fid: lq,
-                          authVersion: nq,
-                          appId: gq.appId,
-                          sdkVersion: hq
-                        },
-                        cq = {
-                          method: "POST",
-                          headers: mq,
-                          body: JSON.stringify(Aq)
-                        },
-                        uq = await Gq((() => fetch(Oq, cq)));
-                      if (uq.ok) {
-                        const qq = await uq.json();
-                        return {
-                          fid: qq.fid || lq,
-                          registrationStatus: 2,
-                          refreshToken: qq.refreshToken,
-                          authToken: Tq(qq.authToken)
-                        }
-                      }
-                      throw await zq("Create Installation", uq)
-                    }(qq, Eq);
-                    return Dq(qq.appConfig, gq)
-                  } catch (gq) {
-                    throw fq(gq) && 409 === gq.customData.serverCode ? await qE(qq.appConfig) : await Dq(qq.appConfig, {
-                      fid: Eq.fid,
-                      registrationStatus: 0
-                    }), gq
-                  }
-                }(qq, gq);
-              return {
-                installationEntry: gq,
-                registrationPromise: Yq
-              }
-            }
-            return 1 === Eq.registrationStatus ? {
-              installationEntry: Eq,
-              registrationPromise: YE(qq)
-            } : {
-              installationEntry: Eq
-            }
-          }(qq, Yq);
-        return Eq = lq.registrationPromise, lq.installationEntry
-      }));
-      return "" === gq.fid ? {
-        installationEntry: await Eq
-      } : {
-        installationEntry: gq,
-        registrationPromise: Eq
-      }
-    }
-    async function YE(qq) {
-      let Eq = await lE(qq.appConfig);
-      for (; 1 === Eq.registrationStatus;) await Lq(100), Eq = await lE(qq.appConfig);
-      if (0 === Eq.registrationStatus) {
-        const {
-          installationEntry: Eq,
-          registrationPromise: gq
-        } = await gE(qq);
-        return gq || Eq
-      }
-      return Eq
-    }
-
-    function lE(qq) {
-      return EE(qq, (qq => {
-        if (!qq) throw Zq.create("installation-not-found");
-        return OE(qq)
-      }))
-    }
-
-    function OE(qq) {
-      return 1 === (Eq = qq).registrationStatus && Eq.registrationTime + vq < Date.now() ? {
-        fid: qq.fid,
-        registrationStatus: 0
-      } : qq;
-      var Eq
-    }
-    async function mE(qq, Eq) {
-      let {
-        appConfig: gq,
-        heartbeatServiceProvider: Yq
-      } = qq;
-      const lq = function(qq, Eq) {
-          let {
-            fid: gq
-          } = Eq;
-          return `${Mq(qq)}/${gq}/authTokens:generate`
-        }(gq, Eq),
-        Oq = pq(gq, Eq),
-        mq = Yq.getImmediate({
-          optional: !0
-        });
-      if (mq) {
-        const qq = await mq.getHeartbeatsHeader();
-        qq && Oq.append("x-firebase-client", qq)
-      }
-      const xq = {
-          installation: {
-            sdkVersion: hq,
-            appId: gq.appId
+        get intensityMode() {
+          return this._intensityMode
+        }
+        set intensityMode(CC) {
+          this._intensityMode = CC, this._computePhotometricScale()
+        }
+        get radius() {
+          return this._radius
+        }
+        set radius(CC) {
+          this._radius = CC, this._computePhotometricScale()
+        }
+        get renderPriority() {
+          return (0, QC.e)(this, zC, "f")
+        }
+        set renderPriority(CC) {
+          (0, QC.f)(this, zC, CC, "f")
+        }
+        get shadowEnabled() {
+          return this._shadowEnabled
+        }
+        set shadowEnabled(CC) {
+          this._shadowEnabled !== CC && (this._shadowEnabled = CC, this._markMeshesAsLightDirty())
+        }
+        get includedOnlyMeshes() {
+          return this._includedOnlyMeshes
+        }
+        set includedOnlyMeshes(CC) {
+          this._includedOnlyMeshes = CC, this._hookArrayForIncludedOnly(CC)
+        }
+        get excludedMeshes() {
+          return this._excludedMeshes
+        }
+        set excludedMeshes(CC) {
+          this._excludedMeshes = CC, this._hookArrayForExcluded(CC)
+        }
+        get excludeWithLayerMask() {
+          return this._excludeWithLayerMask
+        }
+        set excludeWithLayerMask(CC) {
+          this._excludeWithLayerMask = CC, this._resyncMeshes()
+        }
+        get includeOnlyWithLayerMask() {
+          return this._includeOnlyWithLayerMask
+        }
+        set includeOnlyWithLayerMask(CC) {
+          this._includeOnlyWithLayerMask = CC, this._resyncMeshes()
+        }
+        get lightmapMode() {
+          return this._lightmapMode
+        }
+        set lightmapMode(CC) {
+          this._lightmapMode !== CC && (this._lightmapMode = CC, this._markMeshesAsLightDirty())
+        }
+        getViewMatrix(CC) {
+          return null
+        }
+        getProjectionMatrix(CC, zC) {
+          return null
+        }
+        constructor(ZC, wC, bC) {
+          super(ZC, wC, !1), this.diffuse = ((0, QC.n)(this, vC), (0, QC.n)(this, eC, new nC.e(1, 1, 1))), this.specular = ((0, QC.n)(this, hC), (0, QC.n)(this, KC, new nC.e(1, 1, 1))), this.falloffType = ((0, QC.n)(this, YC), (0, QC.n)(this, dC, CC.FALLOFF_DEFAULT)), this.intensity = ((0, QC.n)(this, mC), (0, QC.n)(this, HC, 1)), this._range = ((0, QC.n)(this, EC), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = CC.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, QC.n)(this, lC, void 0), zC.set(this, ((0, QC.n)(this, XC), (0, QC.n)(this, cC, 0))), this._shadowEnabled = ((0, QC.n)(this, uC), (0, QC.n)(this, rC, !0)), this._includedOnlyMeshes = (0, QC.n)(this, sC), this._excludeWithLayerMask = (0, QC.n)(this, TC, 0), this._includeOnlyWithLayerMask = ((0, QC.n)(this, aC), (0, QC.n)(this, tC, 0)), this._lightmapMode = ((0, QC.n)(this, DC), (0, QC.n)(this, jC, 0)), this._shadowGenerators = ((0, QC.n)(this, yC), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, bC || this.Km().addLight(this), this._uniformBuffer = new oC.c(this.Km().mg(), void 0, void 0, ZC), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], bC || this._resyncMeshes()
+        }
+        transferTexturesToEffect(CC, zC) {
+          return this
+        }
+        _bindLight(CC, zC, ZC, QC) {
+          let wC = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const bC = CC.toString();
+          let fC = !1;
+          if (this._uniformBuffer.bindToEffect(ZC, "Light" + bC), this._renderId !== zC.getRenderId() || this._lastUseSpecular !== QC || !this._uniformBuffer.useUbo) {
+            this._renderId = zC.getRenderId(), this._lastUseSpecular = QC;
+            const CC = this.getScaledIntensity();
+            this.transferToEffect(ZC, bC), this.diffuse.scaleToRef(CC, nC.j.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", nC.j.Color3[0], this.range, bC), QC && (this.specular.scaleToRef(CC, nC.j.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", nC.j.Color3[1], this.radius, bC)), fC = !0
           }
-        },
-        Aq = {
-          method: "POST",
-          headers: Oq,
-          body: JSON.stringify(xq)
-        },
-        cq = await Gq((() => fetch(lq, Aq)));
-      if (cq.ok) {
-        return Tq(await cq.json())
-      }
-      throw await zq("Generate Auth Token", cq)
-    }
-    async function xE(qq) {
-      let Eq, gq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const Yq = await EE(qq.appConfig, (Yq => {
-        if (!cE(Yq)) throw Zq.create("not-registered");
-        const lq = Yq.authToken;
-        if (!gq && function(qq) {
-            return 2 === qq.requestStatus && ! function(qq) {
-              const Eq = Date.now();
-              return Eq < qq.creationTime || qq.creationTime + qq.expiresIn < Eq + bq
-            }(qq)
-          }(lq)) return Yq;
-        if (1 === lq.requestStatus) return Eq = async function(qq, Eq) {
-          let gq = await AE(qq.appConfig);
-          for (; 1 === gq.authToken.requestStatus;) await Lq(100), gq = await AE(qq.appConfig);
-          const Yq = gq.authToken;
-          return 0 === Yq.requestStatus ? xE(qq, Eq) : Yq
-        }(qq, gq), Yq;
-        {
-          if (!navigator.onLine) throw Zq.create("app-offline");
-          const gq = function(qq) {
-            const Eq = {
-              requestStatus: 1,
-              requestTime: Date.now()
-            };
-            return Object.assign(Object.assign({}, qq), {
-              authToken: Eq
-            })
-          }(Yq);
-          return Eq = async function(qq, Eq) {
-            try {
-              const gq = await mE(qq, Eq),
-                Yq = Object.assign(Object.assign({}, Eq), {
-                  authToken: gq
-                });
-              return await Dq(qq.appConfig, Yq), gq
-            } catch (gq) {
-              if (!fq(gq) || 401 !== gq.customData.serverCode && 404 !== gq.customData.serverCode) {
-                const gq = Object.assign(Object.assign({}, Eq), {
-                  authToken: {
-                    requestStatus: 0
-                  }
-                });
-                await Dq(qq.appConfig, gq)
-              } else await qE(qq.appConfig);
-              throw gq
-            }
-          }(qq, gq), gq
-        }
-      }));
-      return Eq ? await Eq : Yq.authToken
-    }
-
-    function AE(qq) {
-      return EE(qq, (qq => {
-        if (!cE(qq)) throw Zq.create("not-registered");
-        const Eq = qq.authToken;
-        return 1 === (gq = Eq).requestStatus && gq.requestTime + vq < Date.now() ? Object.assign(Object.assign({}, qq), {
-          authToken: {
-            requestStatus: 0
+          if (this.transferTexturesToEffect(ZC, bC), zC.shadowsEnabled && this.shadowEnabled && wC) {
+            const CC = this.getShadowGenerator(zC.activeCamera) ?? this.getShadowGenerator();
+            CC && (CC.bindShadowLight(bC, ZC), fC = !0)
           }
-        }) : qq;
-        var gq
-      }))
-    }
-
-    function cE(qq) {
-      return void 0 !== qq && 2 === qq.registrationStatus
-    }
-    async function uE(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const gq = qq;
-      await async function(qq) {
-        const {
-          registrationPromise: Eq
-        } = await gE(qq);
-        Eq && await Eq
-      }(gq);
-      return (await xE(gq, Eq)).token
-    }
-
-    function BE(qq) {
-      return Zq.create("missing-app-config-values", {
-        valueName: qq
-      })
-    }
-    const WE = "installations",
-      NE = qq => {
-        const Eq = qq.getProvider("app").getImmediate(),
-          gq = function(qq) {
-            if (!qq || !qq.options) throw BE("App Configuration");
-            if (!qq.name) throw BE("App Name");
-            const Eq = ["projectId", "apiKey", "appId"];
-            for (const gq of Eq)
-              if (!qq.options[gq]) throw BE(gq);
-            return {
-              appName: qq.name,
-              projectId: qq.options.projectId,
-              apiKey: qq.options.apiKey,
-              appId: qq.options.appId
+          fC ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
+        }
+        getClassName() {
+          return "Light"
+        }
+        toString(CC) {
+          let zC = "Name: " + this.name;
+          if (zC += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
+            for (let ZC = 0; ZC < this.animations.length; ZC++) zC += ", animation[0]: " + this.animations[ZC].toString(CC);
+          return zC
+        }
+        _syncParentEnabledState() {
+          super._syncParentEnabledState(), this.GJ() || this._resyncMeshes()
+        }
+        IK(CC) {
+          super.IK(CC), this._resyncMeshes()
+        }
+        getShadowGenerator() {
+          let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return null === this._shadowGenerators ? null : this._shadowGenerators.get(CC) ?? null
+        }
+        getShadowGenerators() {
+          return this._shadowGenerators
+        }
+        getAbsolutePosition() {
+          return bC.r.Zero()
+        }
+        canAffectMesh(CC) {
+          return !CC || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(CC)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(CC)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & CC.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & CC.layerMask)))
+        }
+        dispose(CC) {
+          let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._shadowGenerators) {
+            const CC = this._shadowGenerators.values();
+            for (let zC = CC.next(); !0 !== zC.done; zC = CC.next()) {
+              zC.value.dispose()
             }
-          }(Eq);
-        return {
-          app: Eq,
-          appConfig: gq,
-          heartbeatServiceProvider: (0, Yq.s)(Eq, "heartbeat"),
-          _delete: () => Promise.resolve()
+            this._shadowGenerators = null
+          }
+          if (this.Km().stopAnimation(this), this._parentContainer) {
+            const CC = this._parentContainer.lights.indexOf(this);
+            CC > -1 && this._parentContainer.lights.splice(CC, 1), this._parentContainer = null
+          }
+          for (const ZC of this.Km().meshes) ZC._removeLightSource(this, !0);
+          this._uniformBuffer.dispose(), this.Km().removeLight(this), super.dispose(CC, zC)
         }
-      },
-      aE = qq => {
-        const Eq = qq.getProvider("app").getImmediate(),
-          gq = (0, Yq.s)(Eq, WE).getImmediate();
-        return {
-          getId: () => async function(qq) {
-            const Eq = qq,
-              {
-                installationEntry: gq,
-                registrationPromise: Yq
-              } = await gE(Eq);
-            return Yq ? Yq.catch(console.error) : xE(Eq).catch(console.error), gq.fid
-          }(gq),
-          getToken: qq => uE(gq, qq)
+        getTypeID() {
+          return 0
         }
-      };
-    (0, Yq.v)(new mq.f(WE, NE, "PUBLIC")), (0, Yq.v)(new mq.f("installations-internal", aE, "PRIVATE")), (0, Yq.L)(tq, rq), (0, Yq.L)(tq, rq, "esm2017");
-    const VE = "analytics",
-      dE = "https://www.googletagmanager.com/gtag/js",
-      jE = new lq.g("@firebase/analytics"),
-      HE = {
-        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
-        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
-        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
-        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
-        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
-        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
-        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
-        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
-        "no-client-id": 'The "client_id" field is empty.',
-        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
-      },
-      oE = new Oq.d("analytics", "Analytics", HE);
-
-    function PE(qq) {
-      if (!qq.startsWith(dE)) {
-        const Eq = oE.create("invalid-gtag-resource", {
-          gtagURL: qq
-        });
-        return jE.warn(Eq.message), ""
-      }
-      return qq
-    }
-
-    function QE(qq) {
-      return Promise.all(qq.map((qq => qq.catch((qq => qq)))))
-    }
-
-    function yE(qq, Eq) {
-      const gq = function(qq, Eq) {
-          let gq;
-          return window.trustedTypes && (gq = window.trustedTypes.createPolicy(qq, Eq)), gq
-        }("firebase-js-sdk-policy", {
-          createScriptURL: PE
-        }),
-        Yq = document.createElement("script"),
-        lq = `${dE}?l=${qq}&id=${Eq}`;
-      Yq.src = gq ? null === gq || void 0 === gq ? void 0 : gq.createScriptURL(lq) : lq, Yq.async = !0, document.head.appendChild(Yq)
-    }
-
-    function tE(qq, Eq, gq, Yq) {
-      return async function(lq) {
-        try {
-          for (var Oq = arguments.length, mq = new Array(Oq > 1 ? Oq - 1 : 0), xq = 1; xq < Oq; xq++) mq[xq - 1] = arguments[xq];
-          if ("event" === lq) {
-            const [Yq, lq] = mq;
-            await async function(qq, Eq, gq, Yq, lq) {
-              try {
-                let Oq = [];
-                if (lq && lq.send_to) {
-                  let qq = lq.send_to;
-                  Array.isArray(qq) || (qq = [qq]);
-                  const Yq = await QE(gq);
-                  for (const gq of qq) {
-                    const qq = Yq.find((qq => qq.measurementId === gq)),
-                      lq = qq && Eq[qq.appId];
-                    if (!lq) {
-                      Oq = [];
-                      break
-                    }
-                    Oq.push(lq)
-                  }
-                }
-                0 === Oq.length && (Oq = Object.values(Eq)), await Promise.all(Oq), qq("event", Yq, lq || {})
-              } catch (Oq) {
-                jE.error(Oq)
+        getScaledIntensity() {
+          return this._photometricScale * this.intensity
+        }
+        clone(zC) {
+          let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const QC = CC.GetConstructorFromName(this.getTypeID(), zC, this.Km());
+          if (!QC) return null;
+          const wC = WC.d.Clone(QC, this);
+          return zC && (wC.name = zC), ZC && (wC.parent = ZC), wC.IK(this.isEnabled()), this.onClonedObservable.notifyObservers(wC), wC
+        }
+        serialize() {
+          const CC = WC.d.Serialize(this);
+          if (CC.uniqueId = this.uniqueId, CC.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(CC), this.excludedMeshes.length > 0) {
+            CC.excludedMeshesIds = [];
+            for (const zC of this.excludedMeshes) CC.excludedMeshesIds.push(zC.id)
+          }
+          if (this.includedOnlyMeshes.length > 0) {
+            CC.includedOnlyMeshesIds = [];
+            for (const zC of this.includedOnlyMeshes) CC.includedOnlyMeshesIds.push(zC.id)
+          }
+          return WC.d.AppendSerializedAnimations(this, CC), CC.np = this.serializeAnimationRanges(), CC.isEnabled = this.isEnabled(), CC
+        }
+        static GetConstructorFromName(CC, zC, ZC) {
+          const QC = fC.d.Construct("Light_Type_" + CC, zC, ZC);
+          return QC || null
+        }
+        static Parse(zC, ZC) {
+          let QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const wC = CC.GetConstructorFromName(zC.type, zC.name, ZC);
+          if (!wC) return null;
+          const bC = WC.d.Parse(wC, zC, ZC, QC);
+          if (zC.excludedMeshesIds && (bC._excludedMeshesIds = zC.excludedMeshesIds), zC.includedOnlyMeshesIds && (bC._includedOnlyMeshesIds = zC.includedOnlyMeshesIds), void 0 !== zC.parentId && (bC._waitingParentId = zC.parentId), void 0 !== zC.parentInstanceIndex && (bC._waitingParentInstanceIndex = zC.parentInstanceIndex), void 0 !== zC.falloffType && (bC.falloffType = zC.falloffType), void 0 !== zC.lightmapMode && (bC.lightmapMode = zC.lightmapMode), zC.animations) {
+            for (let CC = 0; CC < zC.animations.length; CC++) {
+              const ZC = zC.animations[CC],
+                QC = (0, qC.c)("BABYLON.Animation");
+              QC && bC.animations.push(QC.Parse(ZC))
+            }
+            fC.d.ParseAnimationRanges(bC, zC, ZC)
+          }
+          return zC.autoAnimate && ZC.beginAnimation(bC, zC.autoAnimateFrom, zC.autoAnimateTo, zC.autoAnimateLoop, zC.autoAnimateSpeed || 1), void 0 !== zC.isEnabled && bC.IK(zC.isEnabled), bC._onParsed(zC, ZC, QC), bC
+        }
+        _onParsed(CC, zC) {}
+        _hookArrayForExcluded(CC) {
+          var zC = this;
+          const ZC = CC.push;
+          CC.push = function() {
+            for (var QC = arguments.length, wC = new Array(QC), bC = 0; bC < QC; bC++) wC[bC] = arguments[bC];
+            const nC = ZC.apply(CC, wC);
+            if (zC._clusteredContainer) return nC;
+            for (const CC of wC) CC._resyncLightSource(zC);
+            return nC
+          };
+          const QC = CC.splice;
+          CC.splice = (zC, ZC) => {
+            const wC = QC.call(CC, zC, ZC ?? CC.length);
+            if (this._clusteredContainer) return wC;
+            for (const CC of wC) CC._resyncLightSource(this);
+            return wC
+          }, this._resyncMeshes()
+        }
+        _hookArrayForIncludedOnly(CC) {
+          var zC = this;
+          const ZC = CC.push;
+          CC.push = function() {
+            for (var QC = arguments.length, wC = new Array(QC), bC = 0; bC < QC; bC++) wC[bC] = arguments[bC];
+            const nC = ZC.apply(CC, wC);
+            return zC._resyncMeshes(), nC
+          };
+          const QC = CC.splice;
+          CC.splice = (zC, ZC) => {
+            const wC = QC.call(CC, zC, ZC ?? CC.length);
+            return this._resyncMeshes(), wC
+          }, this._resyncMeshes()
+        }
+        _resyncMeshes() {
+          if (!this._clusteredContainer)
+            for (const CC of this.Km().meshes) CC._resyncLightSource(this)
+        }
+        _markMeshesAsLightDirty() {
+          for (const CC of this.Km().meshes) - 1 !== CC.lightSources.indexOf(this) && CC._markSubMeshesAsLightDirty()
+        }
+        _computePhotometricScale() {
+          this._photometricScale = this._getPhotometricScale(), this.Km().resetCachedMaterial()
+        }
+        _getPhotometricScale() {
+          let zC = 0;
+          const ZC = this.getTypeID();
+          let QC = this.intensityMode;
+          switch (QC === CC.INTENSITYMODE_AUTOMATIC && (QC = ZC === CC.LIGHTTYPEID_DIRECTIONALLIGHT ? CC.INTENSITYMODE_ILLUMINANCE : CC.INTENSITYMODE_LUMINOUSINTENSITY), ZC) {
+            case CC.LIGHTTYPEID_POINTLIGHT:
+            case CC.LIGHTTYPEID_SPOTLIGHT:
+              switch (QC) {
+                case CC.INTENSITYMODE_LUMINOUSPOWER:
+                  zC = 1 / (4 * Math.PI);
+                  break;
+                case CC.INTENSITYMODE_LUMINOUSINTENSITY:
+                  zC = 1;
+                  break;
+                case CC.INTENSITYMODE_LUMINANCE:
+                  zC = this.radius * this.radius
               }
-            }(qq, Eq, gq, Yq, lq)
-          } else if ("config" === lq) {
-            const [lq, Oq] = mq;
-            await async function(qq, Eq, gq, Yq, lq, Oq) {
-              const mq = Yq[lq];
-              try {
-                if (mq) await Eq[mq];
-                else {
-                  const qq = (await QE(gq)).find((qq => qq.measurementId === lq));
-                  qq && await Eq[qq.appId]
+              break;
+            case CC.LIGHTTYPEID_DIRECTIONALLIGHT:
+              switch (QC) {
+                case CC.INTENSITYMODE_ILLUMINANCE:
+                  zC = 1;
+                  break;
+                case CC.INTENSITYMODE_LUMINANCE: {
+                  let CC = this.radius;
+                  CC = Math.max(CC, .001);
+                  zC = 2 * Math.PI * (1 - Math.cos(CC));
+                  break
                 }
-              } catch (xq) {
-                jE.error(xq)
               }
-              qq("config", lq, Oq)
-            }(qq, Eq, gq, Yq, lq, Oq)
-          } else if ("consent" === lq) {
-            const [Eq] = mq;
-            qq("consent", "update", Eq)
-          } else if ("get" === lq) {
-            const [Eq, gq, Yq] = mq;
-            qq("get", Eq, gq, Yq)
-          } else if ("set" === lq) {
-            const [Eq] = mq;
-            qq("set", Eq)
-          } else qq(lq, ...mq)
-        } catch (Aq) {
-          jE.error(Aq)
+              break;
+            case CC.LIGHTTYPEID_HEMISPHERICLIGHT:
+            case CC.LIGHTTYPEID_RECT_AREALIGHT:
+              zC = 1
+          }
+          return zC
         }
-      }
-    }
-    const rE = new class {
+        _reorderLightsInScene() {
+          const CC = this.Km();
+          0 != this._renderPriority && (CC.requireLightSorting = !0), this.Km().sortLightsByPriority()
+        }
+        areLightTexturesReady() {
+          return !0
+        }
+        _isReady() {
+          return !0
+        }
+      }, zC = new WeakMap, (() => {
+        const zC = "function" === typeof Symbol && Symbol.metadata ? Object.create(iC[Symbol.metadata] ?? null) : void 0;
+        ZC = [(0, wC.n)()], NC = [(0, wC.n)()], MC = [(0, wC.M)()], gC = [(0, wC.M)()], SC = [(0, wC.M)()], pC = [(0, wC.M)()], PC = [(0, wC.M)()], GC = [(0, wC.M)()], RC = [(0, wC.d)("_reorderLightsInScene")], AC = [(0, wC.M)("shadowEnabled")], xC = [(0, wC.M)("excludeWithLayerMask")], JC = [(0, wC.M)("includeOnlyWithLayerMask")], IC = [(0, wC.M)("lightmapMode")], (0, QC.j)(CC, null, SC, {
+          kind: "getter",
+          name: "range",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "range" in CC,
+            get: CC => CC.range
+          },
+          metadata: zC
+        }, null, vC), (0, QC.j)(CC, null, pC, {
+          kind: "getter",
+          name: "intensityMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "intensityMode" in CC,
+            get: CC => CC.intensityMode
+          },
+          metadata: zC
+        }, null, vC), (0, QC.j)(CC, null, PC, {
+          kind: "getter",
+          name: "radius",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "radius" in CC,
+            get: CC => CC.radius
+          },
+          metadata: zC
+        }, null, vC), (0, QC.j)(CC, null, RC, {
+          kind: "accessor",
+          name: "renderPriority",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "renderPriority" in CC,
+            get: CC => CC.renderPriority,
+            set: (CC, zC) => {
+              CC.renderPriority = zC
+            }
+          },
+          metadata: zC
+        }, cC, uC), (0, QC.j)(null, null, ZC, {
+          kind: "field",
+          name: "diffuse",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "diffuse" in CC,
+            get: CC => CC.diffuse,
+            set: (CC, zC) => {
+              CC.diffuse = zC
+            }
+          },
+          metadata: zC
+        }, eC, hC), (0, QC.j)(null, null, NC, {
+          kind: "field",
+          name: "specular",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "specular" in CC,
+            get: CC => CC.specular,
+            set: (CC, zC) => {
+              CC.specular = zC
+            }
+          },
+          metadata: zC
+        }, KC, YC), (0, QC.j)(null, null, MC, {
+          kind: "field",
+          name: "falloffType",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "falloffType" in CC,
+            get: CC => CC.falloffType,
+            set: (CC, zC) => {
+              CC.falloffType = zC
+            }
+          },
+          metadata: zC
+        }, dC, mC), (0, QC.j)(null, null, gC, {
+          kind: "field",
+          name: "intensity",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "intensity" in CC,
+            get: CC => CC.intensity,
+            set: (CC, zC) => {
+              CC.intensity = zC
+            }
+          },
+          metadata: zC
+        }, HC, EC), (0, QC.j)(null, null, GC, {
+          kind: "field",
+          name: "_renderPriority",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_renderPriority" in CC,
+            get: CC => CC._renderPriority,
+            set: (CC, zC) => {
+              CC._renderPriority = zC
+            }
+          },
+          metadata: zC
+        }, lC, XC), (0, QC.j)(null, null, AC, {
+          kind: "field",
+          name: "_shadowEnabled",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_shadowEnabled" in CC,
+            get: CC => CC._shadowEnabled,
+            set: (CC, zC) => {
+              CC._shadowEnabled = zC
+            }
+          },
+          metadata: zC
+        }, rC, sC), (0, QC.j)(null, null, xC, {
+          kind: "field",
+          name: "_excludeWithLayerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_excludeWithLayerMask" in CC,
+            get: CC => CC._excludeWithLayerMask,
+            set: (CC, zC) => {
+              CC._excludeWithLayerMask = zC
+            }
+          },
+          metadata: zC
+        }, TC, aC), (0, QC.j)(null, null, JC, {
+          kind: "field",
+          name: "_includeOnlyWithLayerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_includeOnlyWithLayerMask" in CC,
+            get: CC => CC._includeOnlyWithLayerMask,
+            set: (CC, zC) => {
+              CC._includeOnlyWithLayerMask = zC
+            }
+          },
+          metadata: zC
+        }, tC, DC), (0, QC.j)(null, null, IC, {
+          kind: "field",
+          name: "_lightmapMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_lightmapMode" in CC,
+            get: CC => CC._lightmapMode,
+            set: (CC, zC) => {
+              CC._lightmapMode = zC
+            }
+          },
+          metadata: zC
+        }, jC, yC), zC && Object.defineProperty(CC, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: zC
+        })
+      })(), CC.FALLOFF_DEFAULT = FC.c.FALLOFF_DEFAULT, CC.FALLOFF_PHYSICAL = FC.c.FALLOFF_PHYSICAL, CC.FALLOFF_GLTF = FC.c.FALLOFF_GLTF, CC.FALLOFF_STANDARD = FC.c.FALLOFF_STANDARD, CC.LIGHTMAP_DEFAULT = FC.c.LIGHTMAP_DEFAULT, CC.LIGHTMAP_SPECULAR = FC.c.LIGHTMAP_SPECULAR, CC.LIGHTMAP_SHADOWSONLY = FC.c.LIGHTMAP_SHADOWSONLY, CC.INTENSITYMODE_AUTOMATIC = FC.c.INTENSITYMODE_AUTOMATIC, CC.INTENSITYMODE_LUMINOUSPOWER = FC.c.INTENSITYMODE_LUMINOUSPOWER, CC.INTENSITYMODE_LUMINOUSINTENSITY = FC.c.INTENSITYMODE_LUMINOUSINTENSITY, CC.INTENSITYMODE_ILLUMINANCE = FC.c.INTENSITYMODE_ILLUMINANCE, CC.INTENSITYMODE_LUMINANCE = FC.c.INTENSITYMODE_LUMINANCE, CC.LIGHTTYPEID_POINTLIGHT = FC.c.LIGHTTYPEID_POINTLIGHT, CC.LIGHTTYPEID_DIRECTIONALLIGHT = FC.c.LIGHTTYPEID_DIRECTIONALLIGHT, CC.LIGHTTYPEID_SPOTLIGHT = FC.c.LIGHTTYPEID_SPOTLIGHT, CC.LIGHTTYPEID_HEMISPHERICLIGHT = FC.c.LIGHTTYPEID_HEMISPHERICLIGHT, CC.LIGHTTYPEID_RECT_AREALIGHT = FC.c.LIGHTTYPEID_RECT_AREALIGHT, CC
+    })()
+  },
+  40046: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => WC
+    });
+    var QC = ZC(39811),
+      wC = ZC(36963),
+      bC = ZC(39818),
+      nC = ZC(36987),
+      fC = ZC(36985),
+      oC = ZC(39694),
+      qC = ZC(39842);
+    class FC {
       constructor() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
-        this.throttleMetadata = qq, this.intervalMillis = Eq
+        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new nC.d, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new nC.d, this._inheritVisibility = !1, this._isVisible = !0
       }
-      getThrottleMetadata(qq) {
-        return this.throttleMetadata[qq]
-      }
-      setThrottleMetadata(qq, Eq) {
-        this.throttleMetadata[qq] = Eq
-      }
-      deleteThrottleMetadata(qq) {
-        delete this.throttleMetadata[qq]
-      }
-    };
-
-    function vE(qq) {
-      return new Headers({
-        Accept: "application/json",
-        "x-goog-api-key": qq
-      })
     }
-    async function hE(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rE,
-        gq = arguments.length > 2 ? arguments[2] : void 0;
-      const {
-        appId: Yq,
-        apiKey: lq,
-        measurementId: Oq
-      } = qq.options;
-      if (!Yq) throw oE.create("no-app-id");
-      if (!lq) {
-        if (Oq) return {
-          measurementId: Oq,
-          appId: Yq
-        };
-        throw oE.create("no-api-key")
-      }
-      const mq = Eq.getThrottleMetadata(Yq) || {
-          backoffCount: 0,
-          throttleEndTimeMillis: Date.now()
-        },
-        xq = new bE;
-      return setTimeout((async () => {
-        xq.abort()
-      }), void 0 !== gq ? gq : 6e4), nE({
-        appId: Yq,
-        apiKey: lq,
-        measurementId: Oq
-      }, mq, xq, Eq)
-    }
-    async function nE(qq, Eq, gq) {
-      let {
-        throttleEndTimeMillis: Yq,
-        backoffCount: lq
-      } = Eq, mq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : rE;
-      var xq;
-      const {
-        appId: Aq,
-        measurementId: cq
-      } = qq;
-      try {
-        await
-        function(qq, Eq) {
-          return new Promise(((gq, Yq) => {
-            const lq = Math.max(Eq - Date.now(), 0),
-              Oq = setTimeout(gq, lq);
-            qq.addEventListener((() => {
-              clearTimeout(Oq), Yq(oE.create("fetch-throttle", {
-                throttleEndTimeMillis: Eq
-              }))
-            }))
-          }))
-        }(gq, Yq)
-      } catch (uq) {
-        if (cq) return jE.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${cq} provided in the "measurementId" field in the local Firebase config. [${null===uq||void 0===uq?void 0:uq.message}]`), {
-          appId: Aq,
-          measurementId: cq
-        };
-        throw uq
-      }
-      try {
-        const Eq = await async function(qq) {
-          var Eq;
-          const {
-            appId: gq,
-            apiKey: Yq
-          } = qq, lq = {
-            method: "GET",
-            headers: vE(Yq)
-          }, Oq = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", gq), mq = await fetch(Oq, lq);
-          if (200 !== mq.status && 304 !== mq.status) {
-            let qq = "";
-            try {
-              const gq = await mq.json();
-              (null === (Eq = gq.error) || void 0 === Eq ? void 0 : Eq.message) && (qq = gq.error.message)
-            } catch (xq) {}
-            throw oE.create("config-fetch-failed", {
-              httpStatus: mq.status,
-              responseMessage: qq
-            })
+    let WC = (() => {
+      var CC;
+      let zC, ZC, WC, NC, MC, gC = [],
+        SC = [],
+        pC = [],
+        PC = [],
+        GC = [],
+        RC = [],
+        AC = [],
+        xC = [],
+        JC = [],
+        IC = [];
+      return CC = class {
+        static AddNodeConstructor(CC, zC) {
+          this._NodeConstructors[CC] = zC
+        }
+        static Construct(CC, zC, ZC, QC) {
+          const wC = this._NodeConstructors[CC];
+          return wC ? wC(zC, ZC, QC) : null
+        }
+        set accessibilityTag(CC) {
+          this._accessibilityTag = CC, this.onAccessibilityTagChangedObservable.notifyObservers(CC)
+        }
+        get accessibilityTag() {
+          return this._accessibilityTag
+        }
+        get doNotSerialize() {
+          return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
+        }
+        set doNotSerialize(CC) {
+          this._nodeDataStorage._doNotSerialize = CC
+        }
+        GJ() {
+          return this._nodeDataStorage._isDisposed
+        }
+        set parent(CC) {
+          if (this._parentNode === CC) return;
+          const zC = this._parentNode;
+          if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
+            const zC = this._parentNode._children.indexOf(this); - 1 !== zC && this._parentNode._children.splice(zC, 1), CC || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
           }
-          return mq.json()
-        }(qq);
-        return mq.deleteThrottleMetadata(Aq), Eq
-      } catch (uq) {
-        const Eq = uq;
-        if (! function(qq) {
-            if (!(qq instanceof Oq.h) || !qq.customData) return !1;
-            const Eq = Number(qq.customData.httpStatus);
-            return 429 === Eq || 500 === Eq || 503 === Eq || 504 === Eq
-          }(Eq)) {
-          if (mq.deleteThrottleMetadata(Aq), cq) return jE.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${cq} provided in the "measurementId" field in the local Firebase config. [${null===Eq||void 0===Eq?void 0:Eq.message}]`), {
-            appId: Aq,
-            measurementId: cq
-          };
-          throw uq
+          this._parentNode = CC, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), zC || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
         }
-        const Yq = 503 === Number(null === (xq = null === Eq || void 0 === Eq ? void 0 : Eq.customData) || void 0 === xq ? void 0 : xq.httpStatus) ? (0, Oq.s)(lq, mq.intervalMillis, 30) : (0, Oq.s)(lq, mq.intervalMillis),
-          Bq = {
-            throttleEndTimeMillis: Date.now() + Yq,
-            backoffCount: lq + 1
-          };
-        return mq.setThrottleMetadata(Aq, Bq), jE.debug(`Calling attemptFetch again in ${Yq} millis`), nE(qq, Bq, gq, mq)
-      }
-    }
-    class bE {
-      constructor() {
-        this.listeners = []
-      }
-      addEventListener(qq) {
-        this.listeners.push(qq)
-      }
-      abort() {
-        this.listeners.forEach((qq => qq()))
-      }
-    }
-    let iE, ZE;
-
-    function fE(qq) {
-      ZE = qq
-    }
-
-    function ME(qq) {
-      iE = qq
-    }
-    async function TE(qq, Eq, gq, Yq, lq, mq, xq) {
-      var Aq;
-      const cq = hE(qq);
-      cq.then((Eq => {
-        gq[Eq.measurementId] = Eq.appId, qq.options.measurementId && Eq.measurementId !== qq.options.measurementId && jE.warn(`The measurement ID in the local Firebase config (${qq.options.measurementId}) does not match the measurement ID fetched from the server (${Eq.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
-      })).catch((qq => jE.error(qq))), Eq.push(cq);
-      const uq = async function() {
-        if (!(0, Oq.T)()) return jE.warn(oE.create("indexeddb-unavailable", {
-          errorInfo: "IndexedDB is not available in this environment."
-        }).message), !1;
-        try {
-          await (0, Oq.bb)()
-        } catch (qq) {
-          return jE.warn(oE.create("indexeddb-unavailable", {
-            errorInfo: null === qq || void 0 === qq ? void 0 : qq.toString()
-          }).message), !1
+        get parent() {
+          return this._parentNode
         }
-        return !0
-      }().then((qq => qq ? Yq.getId() : void 0)), [Bq, Wq] = await Promise.all([cq, uq]);
-      (function(qq) {
-        const Eq = window.document.getElementsByTagName("script");
-        for (const gq of Object.values(Eq))
-          if (gq.src && gq.src.includes(dE) && gq.src.includes(qq)) return gq;
-        return null
-      })(mq) || yE(mq, Bq.measurementId), ZE && (lq("consent", "default", ZE), fE(void 0)), lq("js", new Date);
-      const Nq = null !== (Aq = null === xq || void 0 === xq ? void 0 : xq.config) && void 0 !== Aq ? Aq : {};
-      return Nq.origin = "firebase", Nq.update = !0, null != Wq && (Nq.firebase_id = Wq), lq("config", Bq.measurementId, Nq), iE && (lq("set", iE), ME(void 0)), Bq.measurementId
-    }
-    class zE {
-      constructor(qq) {
-        this.app = qq
-      }
-      _delete() {
-        return delete SE[this.app.options.appId], Promise.resolve()
-      }
-    }
-    let SE = {},
-      pE = [];
-    const GE = {};
-    let LE, JE, kE = "dataLayer",
-      RE = "gtag",
-      UE = !1;
-
-    function FE(qq) {
-      if (UE) throw oE.create("already-initialized");
-      qq.dataLayerName && (kE = qq.dataLayerName), qq.gtagName && (RE = qq.gtagName)
-    }
-
-    function sE(qq, Eq, gq) {
-      ! function() {
-        const qq = [];
-        if ((0, Oq.M)() && qq.push("This is a browser extension environment."), (0, Oq.l)() || qq.push("Cookies are not available."), qq.length > 0) {
-          const Eq = qq.map(((qq, Eq) => `(${Eq+1}) ${qq}`)).join(" "),
-            gq = oE.create("invalid-analytics-context", {
-              errorInfo: Eq
-            });
-          jE.warn(gq.message)
+        get inheritVisibility() {
+          return this._nodeDataStorage._inheritVisibility
         }
-      }();
-      const Yq = qq.options.appId;
-      if (!Yq) throw oE.create("no-app-id");
-      if (!qq.options.apiKey) {
-        if (!qq.options.measurementId) throw oE.create("no-api-key");
-        jE.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${qq.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
-      }
-      if (null != SE[Yq]) throw oE.create("already-exists", {
-        id: Yq
-      });
-      if (!UE) {
-        ! function(qq) {
-          let Eq = [];
-          Array.isArray(window[qq]) ? Eq = window[qq] : window[qq] = Eq
-        }(kE);
-        const {
-          wrappedGtag: qq,
-          gtagCore: Eq
-        } = function(qq, Eq, gq, Yq, lq) {
-          let Oq = function() {
-            for (var qq = arguments.length, Eq = new Array(qq), gq = 0; gq < qq; gq++) Eq[gq] = arguments[gq];
-            window[Yq].push(arguments)
-          };
-          return window[lq] && "function" === typeof window[lq] && (Oq = window[lq]), window[lq] = tE(Oq, qq, Eq, gq), {
-            gtagCore: Oq,
-            wrappedGtag: window[lq]
+        set inheritVisibility(CC) {
+          this._nodeDataStorage._inheritVisibility = CC
+        }
+        get isVisible() {
+          return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
+        }
+        set isVisible(CC) {
+          this._nodeDataStorage._isVisible = CC
+        }
+        _serializeAsParent(CC) {
+          CC.parentId = this.uniqueId
+        }
+        _addToSceneRootNodes() {
+          -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
+        }
+        _removeFromSceneRootNodes() {
+          if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
+            const CC = this._scene.rootNodes,
+              zC = CC.length - 1;
+            CC[this._nodeDataStorage._sceneRootNodesIndex] = CC[zC], CC[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
           }
-        }(SE, pE, GE, kE, RE);
-        JE = qq, LE = Eq, UE = !0
-      }
-      SE[Yq] = TE(qq, pE, GE, Eq, LE, kE, gq);
-      return new zE(qq)
-    }
-
-    function XE() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Yq.F)();
-      qq = (0, Oq.K)(qq);
-      const Eq = (0, Yq.s)(qq, VE);
-      return Eq.isInitialized() ? Eq.getImmediate() : wE(qq)
-    }
-
-    function wE(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const gq = (0, Yq.s)(qq, VE);
-      if (gq.isInitialized()) {
-        const qq = gq.getImmediate();
-        if ((0, Oq.x)(Eq, gq.getOptions())) return qq;
-        throw oE.create("already-initialized")
-      }
-      return gq.initialize({
-        options: Eq
-      })
-    }
-    async function KE() {
-      if ((0, Oq.M)()) return !1;
-      if (!(0, Oq.l)()) return !1;
-      if (!(0, Oq.T)()) return !1;
-      try {
-        return await (0, Oq.bb)()
-      } catch (qq) {
-        return !1
-      }
-    }
-
-    function CE(qq, Eq, gq) {
-      qq = (0, Oq.K)(qq), async function(qq, Eq, gq, Yq) {
-        if (Yq && Yq.global) return qq("set", {
-          screen_name: gq
-        }), Promise.resolve();
-        qq("config", await Eq, {
-          update: !0,
-          screen_name: gq
-        })
-      }(JE, SE[qq.app.options.appId], Eq, gq).catch((qq => jE.error(qq)))
-    }
-    async function IE(qq) {
-      return qq = (0, Oq.K)(qq), async function(qq, Eq) {
-        const gq = await Eq;
-        return new Promise(((Eq, Yq) => {
-          qq("get", gq, "client_id", (qq => {
-            qq || Yq(oE.create("no-client-id")), Eq(qq)
-          }))
-        }))
-      }(JE, SE[qq.app.options.appId])
-    }
-
-    function eE(qq, Eq, gq) {
-      qq = (0, Oq.K)(qq), async function(qq, Eq, gq, Yq) {
-        if (Yq && Yq.global) return qq("set", {
-          user_id: gq
-        }), Promise.resolve();
-        qq("config", await Eq, {
-          update: !0,
-          user_id: gq
-        })
-      }(JE, SE[qq.app.options.appId], Eq, gq).catch((qq => jE.error(qq)))
-    }
-
-    function DE(qq, Eq, gq) {
-      qq = (0, Oq.K)(qq), async function(qq, Eq, gq, Yq) {
-        if (Yq && Yq.global) {
-          const Eq = {};
-          for (const qq of Object.keys(gq)) Eq[`user_properties.${qq}`] = gq[qq];
-          return qq("set", Eq), Promise.resolve()
         }
-        qq("config", await Eq, {
-          update: !0,
-          user_properties: gq
-        })
-      }(JE, SE[qq.app.options.appId], Eq, gq).catch((qq => jE.error(qq)))
-    }
-
-    function qg(qq, Eq) {
-      qq = (0, Oq.K)(qq), async function(qq, Eq) {
-        const gq = await qq;
-        window[`ga-disable-${gq}`] = !Eq
-      }(SE[qq.app.options.appId], Eq).catch((qq => jE.error(qq)))
-    }
-
-    function Eg(qq) {
-      JE ? JE("set", qq) : ME(qq)
-    }
-
-    function gg(qq, Eq, gq, Yq) {
-      qq = (0, Oq.K)(qq), async function(qq, Eq, gq, Yq, lq) {
-        if (lq && lq.global) qq("event", gq, Yq);
-        else {
-          const lq = await Eq;
-          qq("event", gq, Object.assign(Object.assign({}, Yq), {
-            send_to: lq
-          }))
+        get animationPropertiesOverride() {
+          return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
         }
-      }(JE, SE[qq.app.options.appId], Eq, gq, Yq).catch((qq => jE.error(qq)))
-    }
-
-    function Yg(qq) {
-      JE ? JE("consent", "update", qq) : fE(qq)
-    }
-    const lg = "@firebase/analytics",
-      Og = "0.10.0";
-    (0, Yq.v)(new mq.f(VE, ((qq, Eq) => {
-      let {
-        options: gq
-      } = Eq;
-      return sE(qq.getProvider("app").getImmediate(), qq.getProvider("installations-internal").getImmediate(), gq)
-    }), "PUBLIC")), (0, Yq.v)(new mq.f("analytics-internal", (function(qq) {
-      try {
-        const Eq = qq.getProvider(VE).getImmediate();
-        return {
-          logEvent: (qq, gq, Yq) => gg(Eq, qq, gq, Yq)
+        set animationPropertiesOverride(CC) {
+          this._animationPropertiesOverride = CC
         }
-      } catch (Eq) {
-        throw oE.create("interop-component-reg-failed", {
-          reason: Eq
+        getClassName() {
+          return "Node"
+        }
+        set onDispose(CC) {
+          this._onDisposeObserver && this.Tm.remove(this._onDisposeObserver), this._onDisposeObserver = this.Tm.add(CC)
+        }
+        get onEnabledStateChangedObservable() {
+          return this._nodeDataStorage._onEnabledStateChangedObservable
+        }
+        get onEffectiveEnabledStateChangedObservable() {
+          var CC;
+          return (CC = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (CC._onEffectiveEnabledStateChangedObservable = new nC.d)
+        }
+        get onClonedObservable() {
+          return this._nodeDataStorage._onClonedObservable
+        }
+        constructor(CC) {
+          let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            ZC = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          this._isDirty = !1, this._nodeDataStorage = new FC, this.name = (0, QC.n)(this, gC, void 0), this.id = ((0, QC.n)(this, SC), (0, QC.n)(this, pC, void 0)), this.uniqueId = ((0, QC.n)(this, PC), (0, QC.n)(this, GC, void 0)), this.state = ((0, QC.n)(this, RC), (0, QC.n)(this, AC, "")), this.metadata = ((0, QC.n)(this, xC), (0, QC.n)(this, JC, null)), this._internalMetadata = (0, QC.n)(this, IC), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new nC.d, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = wC.b.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.Tm = new nC.d, this._onDisposeObserver = null, this._behaviors = new Array, this.name = CC, this.id = CC, this._scene = zC || fC.c.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), ZC && this._addToSceneRootNodes()
+        }
+        Km() {
+          return this._scene
+        }
+        mg() {
+          return this._scene.mg()
+        }
+        addBehavior(CC) {
+          let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return -1 !== this._behaviors.indexOf(CC) || (CC.init(), this._scene.isLoading && !zC ? this._scene.onDataLoadedObservable.addOnce((() => {
+            this._behaviors.includes(CC) && CC.attach(this)
+          })) : CC.attach(this), this._behaviors.push(CC)), this
+        }
+        removeBehavior(CC) {
+          const zC = this._behaviors.indexOf(CC);
+          return -1 === zC || (this._behaviors.splice(zC, 1), CC.detach()), this
+        }
+        get behaviors() {
+          return this._behaviors
+        }
+        getBehaviorByName(CC) {
+          for (const zC of this._behaviors)
+            if (zC.name === CC) return zC;
+          return null
+        }
+        getWorldMatrix() {
+          return this._currentRenderId !== this._scene.getRenderId() && this.computeWorldMatrix(), this._worldMatrix
+        }
+        _getWorldMatrixDeterminant() {
+          return this._worldMatrixDeterminantIsDirty && (this._worldMatrixDeterminantIsDirty = !1, this._worldMatrixDeterminant = this._worldMatrix.determinant()), this._worldMatrixDeterminant
+        }
+        get worldMatrixFromCache() {
+          return this._worldMatrix
+        }
+        _initCache() {
+          this._cache = {}
+        }
+        updateCache(CC) {
+          !CC && this.isSynchronized() || this._updateCache()
+        }
+        _getActionManagerForTrigger(CC) {
+          return this.parent ? this.parent._getActionManagerForTrigger(CC, !1) : null
+        }
+        _updateCache(CC) {}
+        _isSynchronized() {
+          return !0
+        }
+        _markSyncedWithParent() {
+          this._parentNode && (this._parentUpdateId = this._parentNode._childUpdateId)
+        }
+        isSynchronizedWithParent() {
+          return !this._parentNode || !this._parentNode._isDirty && this._parentUpdateId === this._parentNode._childUpdateId && this._parentNode.isSynchronized()
+        }
+        isSynchronized() {
+          return !(this._parentNode && !this.isSynchronizedWithParent()) && this._isSynchronized()
+        }
+        isReady() {
+          return this._nodeDataStorage._isReady
+        }
+        YzC(CC) {
+          return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
+        }
+        isEnabled() {
+          return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
+        }
+        _hasEffectiveEnabledStateObservers() {
+          const CC = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
+          return !!CC && CC.hasObservers()
+        }
+        _syncParentEnabledState() {
+          const CC = this._hasEffectiveEnabledStateObservers(),
+            zC = CC ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
+            for (const ZC of this._children) ZC._syncParentEnabledState();
+          if (CC) {
+            const CC = this.isEnabled();
+            CC !== zC && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(CC)
+          }
+        }
+        IK(CC) {
+          if (this._nodeDataStorage._isEnabled === CC) return;
+          const zC = this._hasEffectiveEnabledStateObservers(),
+            ZC = zC ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isEnabled = CC, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(CC), zC) {
+            const CC = this.isEnabled();
+            CC !== ZC && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(CC)
+          }
+        }
+        isDescendantOf(CC) {
+          return !!this.parent && (this.parent === CC || this.parent.isDescendantOf(CC))
+        }
+        _getDescendants(CC) {
+          let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            ZC = arguments.length > 2 ? arguments[2] : void 0;
+          if (this._children)
+            for (let QC = 0; QC < this._children.length; QC++) {
+              const wC = this._children[QC];
+              ZC && !ZC(wC) || CC.push(wC), zC || wC._getDescendants(CC, !1, ZC)
+            }
+        }
+        getDescendants(CC, zC) {
+          const ZC = [];
+          return this._getDescendants(ZC, CC, zC), ZC
+        }
+        getChildMeshes(CC, zC) {
+          const ZC = [];
+          return this._getDescendants(ZC, CC, (CC => (!zC || zC(CC)) && void 0 !== CC.cullingStrategy)), ZC
+        }
+        getChildren(CC) {
+          let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this.getDescendants(zC, CC)
+        }
+        _setReady(CC) {
+          CC !== this._nodeDataStorage._isReady && (CC ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
+        }
+        getAnimationByName(CC) {
+          for (let zC = 0; zC < this.animations.length; zC++) {
+            const ZC = this.animations[zC];
+            if (ZC.name === CC) return ZC
+          }
+          return null
+        }
+        createAnimationRange(zC, ZC, QC) {
+          if (!this._ranges[zC]) {
+            this._ranges[zC] = CC._AnimationRangeFactory(zC, ZC, QC);
+            for (let CC = 0, wC = this.animations.length; CC < wC; CC++) this.animations[CC] && this.animations[CC].createRange(zC, ZC, QC)
+          }
+        }
+        deleteAnimationRange(CC) {
+          let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          for (let ZC = 0, QC = this.animations.length; ZC < QC; ZC++) this.animations[ZC] && this.animations[ZC].deleteRange(CC, zC);
+          this._ranges[CC] = null
+        }
+        getAnimationRange(CC) {
+          return this._ranges[CC] || null
+        }
+        clone(zC, ZC, QC) {
+          const wC = qC.d.Clone((() => new CC(zC, this.Km())), this);
+          if (ZC && (wC.parent = ZC), !QC) {
+            const CC = this.getDescendants(!0);
+            for (let ZC = 0; ZC < CC.length; ZC++) {
+              const QC = CC[ZC];
+              QC.clone(zC + "." + QC.name, wC)
+            }
+          }
+          return wC
+        }
+        getAnimationRanges() {
+          const CC = [];
+          let zC;
+          for (zC in this._ranges) CC.push(this._ranges[zC]);
+          return CC
+        }
+        beginAnimation(CC, zC, ZC, QC) {
+          const wC = this.getAnimationRange(CC);
+          return wC ? this._scene.beginAnimation(this, wC.from, wC.to, zC, ZC, QC) : null
+        }
+        serializeAnimationRanges() {
+          const CC = [];
+          for (const zC in this._ranges) {
+            const ZC = this._ranges[zC];
+            if (!ZC) continue;
+            const QC = {};
+            QC.name = zC, QC.from = ZC.from, QC.to = ZC.to, CC.push(QC)
+          }
+          return CC
+        }
+        computeWorldMatrix(CC) {
+          return this._worldMatrix || (this._worldMatrix = wC.b.Identity()), this._worldMatrix
+        }
+        dispose(CC) {
+          let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._nodeDataStorage._isDisposed = !0, !CC) {
+            const ZC = this.getDescendants(!0);
+            for (const QC of ZC) QC.dispose(CC, zC)
+          }
+          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.Tm.notifyObservers(this), this.Tm.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
+          for (const ZC of this._behaviors) ZC.detach();
+          this._behaviors.length = 0, this.metadata = null
+        }
+        static ParseAnimationRanges(CC, zC, ZC) {
+          if (zC.np)
+            for (let QC = 0; QC < zC.np.length; QC++) {
+              const ZC = zC.np[QC];
+              CC.createAnimationRange(ZC.name, ZC.from, ZC.to)
+            }
+        }
+        getHierarchyBoundingVectors() {
+          let CC, zC, ZC = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            QC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          this.Km().incrementRenderId(), this.computeWorldMatrix(!0);
+          const bC = this;
+          if (bC.WE && bC.Zx) {
+            const ZC = bC.WE();
+            CC = ZC.boundingBox.minimumWorld.clone(), zC = ZC.boundingBox.maximumWorld.clone()
+          } else CC = new wC.r(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), zC = new wC.r(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+          if (ZC) {
+            const ZC = this.getDescendants(!1);
+            for (const bC of ZC) {
+              const ZC = bC;
+              if (ZC.computeWorldMatrix(!0), QC && !QC(ZC)) continue;
+              if (!ZC.WE || 0 === ZC.getTotalVertices()) continue;
+              const nC = ZC.WE().boundingBox,
+                fC = nC.minimumWorld,
+                oC = nC.maximumWorld;
+              wC.r.CheckExtends(fC, CC, zC), wC.r.CheckExtends(oC, CC, zC)
+            }
+          }
+          return {
+            min: CC,
+            max: zC
+          }
+        }
+      }, (() => {
+        const wC = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        zC = [(0, bC.M)()], ZC = [(0, bC.M)()], WC = [(0, bC.M)()], NC = [(0, bC.M)()], MC = [(0, bC.M)()], (0, QC.j)(null, null, zC, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "name" in CC,
+            get: CC => CC.name,
+            set: (CC, zC) => {
+              CC.name = zC
+            }
+          },
+          metadata: wC
+        }, gC, SC), (0, QC.j)(null, null, ZC, {
+          kind: "field",
+          name: "id",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "id" in CC,
+            get: CC => CC.id,
+            set: (CC, zC) => {
+              CC.id = zC
+            }
+          },
+          metadata: wC
+        }, pC, PC), (0, QC.j)(null, null, WC, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "uniqueId" in CC,
+            get: CC => CC.uniqueId,
+            set: (CC, zC) => {
+              CC.uniqueId = zC
+            }
+          },
+          metadata: wC
+        }, GC, RC), (0, QC.j)(null, null, NC, {
+          kind: "field",
+          name: "state",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "state" in CC,
+            get: CC => CC.state,
+            set: (CC, zC) => {
+              CC.state = zC
+            }
+          },
+          metadata: wC
+        }, AC, xC), (0, QC.j)(null, null, MC, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "metadata" in CC,
+            get: CC => CC.metadata,
+            set: (CC, zC) => {
+              CC.metadata = zC
+            }
+          },
+          metadata: wC
+        }, JC, IC), wC && Object.defineProperty(CC, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: wC
         })
-      }
-    }), "PRIVATE")), (0, Yq.L)(lg, Og), (0, Yq.L)(lg, Og, "esm2017")
+      })(), CC._AnimationRangeFactory = (CC, zC, ZC) => {
+        throw (0, oC.i)("AnimationRange")
+      }, CC._NodeConstructors = {}, CC
+    })()
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

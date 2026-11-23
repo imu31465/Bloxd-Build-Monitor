@@ -1,30 +1,30 @@
-/*! For license information please see bbb6l5.wasmMatchmaking.848266e5.chunk.js.LICENSE.txt */
-export const id = 60;
-export const ids = [60];
+/*! For license information please see w4ddu.wasmMatchmaking.92b6c578.chunk.js.LICENSE.txt */
+export const id = 62;
+export const ids = [62];
 export const modules = {
-  36586: (qq, Eq) => {
-    function gq(qq) {
-      if (qq && "object" === typeof qq) {
-        var Eq = qq.which || qq.keyCode || qq.charCode;
-        Eq && (qq = Eq)
+  36417: (CC, zC) => {
+    function ZC(CC) {
+      if (CC && "object" === typeof CC) {
+        var zC = CC.which || CC.keyCode || CC.charCode;
+        zC && (CC = zC)
       }
-      if ("number" === typeof qq) return mq[qq];
-      var gq, Oq = String(qq);
-      return (gq = Yq[Oq.toLowerCase()]) ? gq : (gq = lq[Oq.toLowerCase()]) || (1 === Oq.length ? Oq.charCodeAt(0) : void 0)
+      if ("number" === typeof CC) return nC[CC];
+      var ZC, bC = String(CC);
+      return (ZC = QC[bC.toLowerCase()]) ? ZC : (ZC = wC[bC.toLowerCase()]) || (1 === bC.length ? bC.charCodeAt(0) : void 0)
     }
-    gq.isEventKey = function(qq, Eq) {
-      if (qq && "object" === typeof qq) {
-        var gq = qq.which || qq.keyCode || qq.charCode;
-        if (null === gq || void 0 === gq) return !1;
-        if ("string" === typeof Eq) {
-          var Oq;
-          if (Oq = Yq[Eq.toLowerCase()]) return Oq === gq;
-          if (Oq = lq[Eq.toLowerCase()]) return Oq === gq
-        } else if ("number" === typeof Eq) return Eq === gq;
+    ZC.isEventKey = function(CC, zC) {
+      if (CC && "object" === typeof CC) {
+        var ZC = CC.which || CC.keyCode || CC.charCode;
+        if (null === ZC || void 0 === ZC) return !1;
+        if ("string" === typeof zC) {
+          var bC;
+          if (bC = QC[zC.toLowerCase()]) return bC === ZC;
+          if (bC = wC[zC.toLowerCase()]) return bC === ZC
+        } else if ("number" === typeof zC) return zC === ZC;
         return !1
       }
     };
-    var Yq = (Eq = qq.exports = gq).code = Eq.codes = {
+    var QC = (zC = CC.exports = ZC).code = zC.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      lq = Eq.aliases = {
+      wC = zC.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Oq = 97; Oq < 123; Oq++) Yq[String.fromCharCode(Oq)] = Oq - 32;
-    for (var Oq = 48; Oq < 58; Oq++) Yq[Oq - 48] = Oq;
-    for (Oq = 1; Oq < 13; Oq++) Yq["f" + Oq] = Oq + 111;
-    for (Oq = 0; Oq < 10; Oq++) Yq["numpad " + Oq] = Oq + 96;
-    var mq = Eq.names = Eq.title = {};
-    for (Oq in Yq) mq[Yq[Oq]] = Oq;
-    for (var xq in lq) Yq[xq] = lq[xq]
+    for (bC = 97; bC < 123; bC++) QC[String.fromCharCode(bC)] = bC - 32;
+    for (var bC = 48; bC < 58; bC++) QC[bC - 48] = bC;
+    for (bC = 1; bC < 13; bC++) QC["f" + bC] = bC + 111;
+    for (bC = 0; bC < 10; bC++) QC["numpad " + bC] = bC + 96;
+    var nC = zC.names = zC.title = {};
+    for (bC in QC) nC[QC[bC]] = bC;
+    for (var fC in wC) QC[fC] = wC[fC]
   },
-  36744: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => mq
+  36581: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC
     });
-    var Yq = gq(57);
-    const lq = Yq.useLayoutEffect;
-    const Oq = function(qq) {
-      var Eq = (0, Yq.useRef)(qq);
-      return lq((function() {
-        Eq.current = qq
-      })), Eq
+    var QC = ZC(48);
+    const wC = QC.useLayoutEffect;
+    const bC = function(CC) {
+      var zC = (0, QC.useRef)(CC);
+      return wC((function() {
+        zC.current = CC
+      })), zC
     };
-    var mq = function(qq) {
-      var Eq = Oq(qq);
-      (0, Yq.useEffect)((function() {
-        var qq = function(qq) {
-          var gq;
-          if (null != Eq.current && (gq = Eq.current(qq)), qq.defaultPrevented && (qq.returnValue = ""), "string" === typeof gq) return qq.returnValue = gq, gq
+    var nC = function(CC) {
+      var zC = bC(CC);
+      (0, QC.useEffect)((function() {
+        var CC = function(CC) {
+          var ZC;
+          if (null != zC.current && (ZC = zC.current(CC)), CC.defaultPrevented && (CC.returnValue = ""), "string" === typeof ZC) return CC.returnValue = ZC, ZC
         };
-        return window.addEventListener("beforeunload", qq),
+        return window.addEventListener("beforeunload", CC),
           function() {
-            window.removeEventListener("beforeunload", qq)
+            window.removeEventListener("beforeunload", CC)
           }
       }), [])
     }
   },
-  36640: qq => {
-    var Eq, gq = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Yq = /OS X/.test(gq),
-      lq = /Opera/.test(gq),
-      Oq = !/like Gecko/.test(gq) && !lq,
-      mq = qq.exports = {
-        0: Yq ? "<menu>" : "<UNK>",
+  36466: CC => {
+    var zC, ZC = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      QC = /OS X/.test(ZC),
+      wC = /Opera/.test(ZC),
+      bC = !/like Gecko/.test(ZC) && !wC,
+      nC = CC.exports = {
+        0: QC ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Yq ? "<meta>" : "<menu>",
+        93: QC ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Yq && Oq ? "-" : "<volume-mute>",
+        173: QC && bC ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: lq ? "`" : "<unicode>",
+        231: wC ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,180 +234,261 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (Eq = 58; Eq < 65; ++Eq) mq[Eq] = String.fromCharCode(Eq);
-    for (Eq = 48; Eq < 58; ++Eq) mq[Eq] = Eq - 48 + "";
-    for (Eq = 65; Eq < 91; ++Eq) mq[Eq] = String.fromCharCode(Eq);
-    for (Eq = 96; Eq < 106; ++Eq) mq[Eq] = "<num-" + (Eq - 96) + ">";
-    for (Eq = 112; Eq < 136; ++Eq) mq[Eq] = "F" + (Eq - 111)
+    for (zC = 58; zC < 65; ++zC) nC[zC] = String.fromCharCode(zC);
+    for (zC = 48; zC < 58; ++zC) nC[zC] = zC - 48 + "";
+    for (zC = 65; zC < 91; ++zC) nC[zC] = String.fromCharCode(zC);
+    for (zC = 96; zC < 106; ++zC) nC[zC] = "<num-" + (zC - 96) + ">";
+    for (zC = 112; zC < 136; ++zC) nC[zC] = "F" + (zC - 111)
   },
-  6535: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      d: () => Oq
+  8907: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => bC,
+      g: () => wC
     });
-    var Yq = gq(38);
-    const lq = "shaderPack";
-    async function Oq() {
-      var qq;
-      let Eq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (qq = await Yq.f.getItem(lq, Eq)) && void 0 !== qq ? qq : null
-    }
-  },
-  8867: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      h: () => lq
-    });
-    let Yq = !1;
+    let QC = !1;
 
-    function lq() {
-      Yq = !0
+    function wC() {
+      QC = !0
     }
 
-    function Oq() {
-      return Yq
+    function bC() {
+      return QC
     }
   },
-  36502: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      InGameUi: () => oq.b,
-      LobbyLeaderboard: () => Pq.c,
-      loadCharacterCustomisationUI: () => Qq,
-      loadCharacterPreview: () => yq,
-      matchmakeAndPlay: () => hq,
-      setUpGame: () => tq
+  36322: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      InGameUi: () => xC.c,
+      LobbyLeaderboard: () => JC.d,
+      loadCharacterCustomisationUI: () => IC,
+      loadCharacterPreview: () => iC,
+      matchmakeAndPlay: () => KC,
+      setUpGame: () => vC
     });
-    var Yq = gq(1234),
-      lq = gq(163),
-      Oq = gq(24),
-      mq = gq(36504),
-      xq = gq(36508),
-      Aq = gq(1926),
-      cq = gq(36534);
+    var QC = ZC(1187),
+      wC = ZC(134),
+      bC = ZC(20),
+      nC = ZC(36329),
+      fC = ZC(36335),
+      oC = ZC(1865),
+      qC = ZC(36373);
 
-    function uq() {
-      return !1 !== Aq.c.get("canCustomiseChar")
+    function FC() {
+      return !1 !== oC.e.get("canCustomiseChar")
     }
-    let Bq = !1;
-    var Wq = gq(1308),
-      Nq = gq(1241),
-      aq = gq(663),
-      Vq = gq(8867);
-    var dq = gq(8860),
-      jq = gq(3455),
-      Hq = gq(1774);
-    var oq = gq(36545),
-      Pq = gq(37060);
+    let WC = !1;
+    var NC = ZC(1275),
+      MC = ZC(1192),
+      gC = ZC(239),
+      SC = ZC(666),
+      pC = ZC(8907),
+      PC = ZC(8904);
 
-    function Qq() {
-      return Promise.all([gq.e(282), gq.e(388)]).then((() => gq(41007)))
+    function GC() {
+      (0, pC.d)() || (0, PC.d)().catch((CC => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", CC)
+      }))
+    }
+    var RC = ZC(3419),
+      AC = ZC(1669);
+    var xC = ZC(36378),
+      JC = ZC(36880);
+
+    function IC() {
+      return ZC.e(216).then((() => ZC(41095)))
     }
 
-    function yq() {
-      return gq.e(283).then((() => gq(41011)))
+    function iC() {
+      return ZC.e(291).then((() => ZC(41104)))
     }
 
-    function tq() {
-      return (0, dq.g)()
+    function vC() {
+      return (0, PC.j)()
     }
-    Bq || (Bq = !0, document.addEventListener("keydown", (qq => {
-        (0, cq.c)(qq, uq)
+    WC || (WC = !0, document.addEventListener("keydown", (CC => {
+        (0, qC.b)(CC, FC)
       }))),
-      function(qq) {
-        var Eq;
-        return !0 !== (null === qq || void 0 === qq ? void 0 : qq.saveData) && !/2g$/.test(null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.effectiveType) && void 0 !== Eq ? Eq : "")
-      }(navigator.connection) && (0, aq.c)((() => {
-        (0, Vq.e)() || Promise.all([gq.e(75), gq.e(133), gq.e(88), gq.e(56)]).then((() => gq(40483))).then((qq => {
-          (0, Vq.e)() || qq.startLoadAheadOfJoin({
-            joinStarted: Vq.e,
-            language: Nq.h.get().getCurrentLanguageCode()
-          })
-        }), (qq => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", qq)
+      function(CC) {
+        var zC;
+        return !0 !== (null === CC || void 0 === CC ? void 0 : CC.saveData) && !/2g$/.test(null !== (zC = null === CC || void 0 === CC ? void 0 : CC.effectiveType) && void 0 !== zC ? zC : "")
+      }(navigator.connection) && (0, SC.d)((() => {
+        (0, pC.d)() || Promise.all([ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(210), ZC.e(134), ZC.e(139), ZC.e(58)]).then((() => ZC(40885))).then((async CC => {
+          (0, pC.d)() || (await CC.startLoadAheadOfJoin({
+            joinStarted: pC.d,
+            language: MC.h.get().getCurrentLanguageCode()
+          }), (0, gC.e)(GC))
+        }), (CC => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", CC)
         }))
       }));
-    const rq = Oq.b.get("router");
-    null === rq ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function qq(Eq) {
-      if ((0, Hq.b)(Eq.state.location.pathname)) return void(0, dq.d)().catch((() => {}));
-      const gq = Eq.subscribe((Yq => {
-        (0, Hq.b)(Yq.location.pathname) && (gq(), (0, jq.b)().then((() => {
-          qq(Eq)
+    const eC = bC.b.get("router");
+    null === eC ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function CC(zC) {
+      if ((0, AC.b)(zC.state.location.pathname)) return void(0, PC.h)().catch((() => {}));
+      const ZC = zC.subscribe((QC => {
+        (0, AC.b)(QC.location.pathname) && (ZC(), (0, RC.e)().then((() => {
+          CC(zC)
         })))
       }))
-    }(rq), (0, mq.b)();
-    const vq = (0, xq.c)((async function(qq, Eq) {
+    }(eC), (0, nC.c)();
+    const hC = (0, fC.d)((async function(CC, zC) {
       let {
-        place: gq,
-        userContext: Oq,
-        direct: mq,
-        rematch: xq
-      } = qq;
-      const Aq = mq ? 1 / 0 : performance.now();
-      let cq;
+        place: ZC,
+        userContext: bC,
+        direct: nC,
+        rematch: fC
+      } = CC;
+      const oC = nC ? 1 / 0 : performance.now();
+      let qC;
       try {
-        cq = await (0, dq.d)()
-      } catch (uq) {
-        return console.error("The wasm client did not load:", uq), (0, Wq.w)({
+        qC = await (0, PC.h)()
+      } catch (FC) {
+        return console.error("The wasm client did not load:", FC), (0, NC.r)({
           websocketUrl: null
-        }), Yq.b.errorWithCode(String(uq), lq.h.CONNECT_TO_GAME_SERVER, {
-          error: uq,
-          severity: Eq.aborted ? "low" : "medium",
-          lE: Eq.aborted
+        }), QC.e.errorWithCode(String(FC), wC.l.CONNECT_TO_GAME_SERVER, {
+          error: FC,
+          severity: zC.aborted ? "low" : "medium",
+          wZ: zC.aborted
         })
       }
-      return cq.playWasmGame({
-        userContext: Oq,
-        place: gq,
-        matchedAt: Aq,
-        rematch: xq
-      }, Eq)
+      return qC.playWasmGame({
+        userContext: bC,
+        place: ZC,
+        matchedAt: oC,
+        rematch: fC
+      }, zC)
     }));
 
-    function hq() {
-      return (0, dq.d)().catch((() => {})), vq(...arguments)
+    function KC() {
+      return (0, PC.h)().catch((() => {})), hC(...arguments)
     }
   },
-  8860: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq,
-      g: () => Bq
+  8904: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => MC,
+      h: () => NC,
+      j: () => gC
     });
-    var Yq = gq(3056),
-      lq = gq(2254),
-      Oq = gq(3090),
-      mq = gq(4472),
-      xq = gq(3383),
-      Aq = gq(8867);
-    let cq = null;
+    var QC = ZC(3137),
+      wC = ZC(2224),
+      bC = ZC(2050),
+      nC = ZC(4582),
+      fC = ZC(3464),
+      oC = ZC(8907);
+    let qC = null;
 
-    function uq() {
-      return mq.b.cancelDownloadForJoin(), (0, xq.b)(), (0, lq.g)(), (0, Aq.h)(), (0, Oq.d)(), Promise.all([gq.e(70), gq.e(73), gq.e(72), gq.e(71), gq.e(84), gq.e(261), gq.e(200), gq.e(218), gq.e(239), gq.e(213), gq.e(46)]).then((() => gq(40404))).catch((() => {})), Promise.all([gq.e(75), gq.e(133), gq.e(88), gq.e(56)]).then((() => gq(40483))).then((qq => {
-        let {
-          startJoinLoad: Eq
-        } = qq;
-        Eq()
-      }), (() => {})), cq ??= Promise.all([gq.e(72), gq.e(75), gq.e(130), gq.e(74), gq.e(133), gq.e(263), gq.e(187), gq.e(88), gq.e(87), gq.e(86), gq.e(213), gq.e(61)]).then((() => gq(40581))).then((qq => (qq.startWasmPlay(), qq.followPageUiPack((qq => {
-        Yq.c.showGamePack(qq)
-      })), qq)), (qq => {
-        throw cq = null, qq
-      })), cq
+    function FC() {
+      return Promise.all([ZC.e(74), ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(76), ZC.e(210), ZC.e(134), ZC.e(196), ZC.e(139), ZC.e(87), ZC.e(218), ZC.e(63)]).then((() => ZC(40510)))
     }
 
-    function Bq() {
-      return Promise.all([gq.e(72), gq.e(75), gq.e(130), gq.e(74), gq.e(133), gq.e(263), gq.e(187), gq.e(88), gq.e(87), gq.e(86), gq.e(213), gq.e(61)]).then((() => gq(40581))).then((qq => {
-        qq.startWasmPreviews(), qq.prefetchWasmPreviews()
+    function WC() {
+      Promise.all([ZC.e(72), ZC.e(75), ZC.e(74), ZC.e(73), ZC.e(89), ZC.e(86), ZC.e(269), ZC.e(189), ZC.e(223), ZC.e(247), ZC.e(218), ZC.e(46)]).then((() => ZC(40832))).catch((() => {}))
+    }
+
+    function NC() {
+      return nC.e.cancelDownloadForJoin(), (0, fC.b)(), (0, wC.f)(), (0, oC.g)(), (0, bC.k)(), WC(), Promise.all([ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(210), ZC.e(134), ZC.e(139), ZC.e(58)]).then((() => ZC(40885))).then((CC => {
+        let {
+          startJoinLoad: zC
+        } = CC;
+        zC()
+      }), (() => {})), qC ??= FC().then((CC => (CC.startWasmPlay(), CC.followPageUiPack((CC => {
+        QC.c.showGamePack(CC)
+      })), CC)), (CC => {
+        throw qC = null, CC
+      })), qC
+    }
+
+    function MC() {
+      return WC(), ZC.e(271).then((() => ZC(40888))).catch((() => {})), FC().then((() => {}))
+    }
+
+    function gC() {
+      return FC().then((CC => {
+        CC.startWasmPreviews(), CC.prefetchWasmPreviews()
       }))
     }
   },
-  9464: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      d: () => Oq
+  36712: (CC, zC, ZC) => {
+    function QC(CC) {
+      return "fetch" === CC || "timeout" === CC || "integrity" === CC ? "download" : "browser"
+    }
+    ZC.d(zC, {
+      b: () => wC,
+      c: () => nC,
+      g: () => oC,
+      j: () => fC,
+      m: () => QC,
+      p: () => bC
     });
-    var Yq = gq(9433);
-    const lq = "Air",
-      Oq = Object.freeze(new Yq.e(lq, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    const wC = "https://discord.gg/playbloxd";
+
+    function bC(CC) {
+      return "download" === CC ? {
+        icon: "wifi",
+        title: "wasmScreens:downloadFailedTitle",
+        help: "wasmScreens:downloadFailedHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:tryAgain",
+        cancel: "general:back"
+      } : {
+        icon: "face-dizzy",
+        title: "wasmScreens:unsupportedTitle",
+        help: "wasmScreens:unsupportedHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:ok",
+        cancel: null
+      }
+    }
+
+    function nC(CC, zC) {
+      return {
+        icon: "face-dizzy",
+        title: "wasmScreens:crashTitle",
+        help: zC ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        helpValues: {
+          code: CC.code
+        },
+        discordLink: zC,
+        confirm: "general:reload",
+        cancel: "general:back"
+      }
+    }
+
+    function fC() {
+      return {
+        icon: "face-dizzy",
+        title: "wasmScreens:turnstilePageTitle",
+        help: "wasmScreens:turnstilePageHelp",
+        helpValues: {},
+        discordLink: !1,
+        confirm: "general:ok",
+        cancel: null
+      }
+    }
+
+    function oC(CC, zC, ZC) {
+      return {
+        icon: "wifi",
+        title: "wasmScreens:disconnectedTitle",
+        help: ZC ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        helpValues: {
+          reason: CC.reason
+        },
+        discordLink: null === CC.name,
+        confirm: zC ? "general:reconnect" : CC.requiresRefresh ? "general:reload" : "general:ok",
+        cancel: null
+      }
+    }
+  },
+  9299: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => wC,
+      d: () => bC
+    });
+    var QC = ZC(9239);
+    const wC = "Air",
+      bC = Object.freeze(new QC.e(wC, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

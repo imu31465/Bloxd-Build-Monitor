@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36648: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Nq,
-      g: () => aq,
-      h: () => Wq,
-      j: () => Bq
+  36483: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => MC,
+      c: () => gC,
+      d: () => NC,
+      f: () => WC
     });
-    var Yq = gq(9277),
-      lq = gq(36657),
-      Oq = gq(36662),
-      mq = gq(8669),
-      xq = gq(1416),
-      Aq = gq(57),
-      cq = gq(71),
-      uq = gq(1070);
+    var QC = ZC(34153),
+      wC = ZC(36488),
+      bC = ZC(36490),
+      nC = ZC(8735),
+      fC = ZC(1383),
+      oC = ZC(48),
+      qC = ZC(60),
+      FC = ZC(1056);
 
-    function Bq() {
-      var qq;
-      return (0, xq.h)(lq.c, (0, lq.l)()), (0, uq.jsx)(uq.Fragment, {
-        children: null === (qq = (0, lq.l)()) || void 0 === qq ? void 0 : qq.content
+    function WC() {
+      var CC;
+      return (0, fC.f)(wC.d, (0, wC.q)()), (0, FC.jsx)(FC.Fragment, {
+        children: null === (CC = (0, wC.q)()) || void 0 === CC ? void 0 : CC.content
       })
     }
 
-    function Wq(qq) {
-      var Eq;
+    function NC(CC) {
+      var zC;
       let {
-        show: gq
-      } = qq;
-      (0, xq.h)(lq.c, (0, lq.l)());
-      const cq = null === (Eq = (0, lq.l)()) || void 0 === Eq ? void 0 : Eq.menu;
-      return (0, Aq.useEffect)((() => {
-        var qq;
-        gq || (null === cq || void 0 === cq || null === (qq = cq.onClose) || void 0 === qq || qq.call(cq), (0, Oq.m)())
-      }), [gq, cq]), (0, Aq.useEffect)((() => gq ? (0, mq.i)(Oq.r, Oq.d) : void 0), [gq]), (0, uq.jsx)(Yq.b, {
-        showing: gq,
+        show: ZC
+      } = CC;
+      (0, fC.f)(wC.d, (0, wC.q)());
+      const qC = null === (zC = (0, wC.q)()) || void 0 === zC ? void 0 : zC.menu;
+      return (0, oC.useEffect)((() => {
+        var CC;
+        ZC || (null === qC || void 0 === qC || null === (CC = qC.onClose) || void 0 === CC || CC.call(qC), (0, bC.p)())
+      }), [ZC, qC]), (0, oC.useEffect)((() => ZC ? (0, nC.f)(bC.z, bC.g) : void 0), [ZC]), (0, FC.jsx)(QC.d, {
+        showing: ZC,
         globallyUniqueKey: "clientGameMenu",
-        children: null === cq || void 0 === cq ? void 0 : cq.content
+        children: null === qC || void 0 === qC ? void 0 : qC.content
       })
     }
 
-    function Nq(qq) {
+    function MC(CC) {
       let {
-        placement: Eq = "bottom"
-      } = qq;
-      return (0, uq.jsx)("div", {
-        id: `clientGameHud-${Eq}`,
+        placement: zC = "bottom"
+      } = CC;
+      return (0, FC.jsx)("div", {
+        id: `clientGameHud-${zC}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function aq(qq) {
+    function gC(CC) {
       let {
-        children: Eq,
-        placement: gq = "bottom"
-      } = qq;
-      const [Yq, lq] = (0, Aq.useState)(null);
-      return (0, Aq.useEffect)((() => {
-        lq(document.getElementById(`clientGameHud-${gq}`))
-      }), [gq]), Yq ? (0, cq.createPortal)(Eq, Yq) : null
+        children: zC,
+        placement: ZC = "bottom"
+      } = CC;
+      const [QC, wC] = (0, oC.useState)(null);
+      return (0, oC.useEffect)((() => {
+        wC(document.getElementById(`clientGameHud-${ZC}`))
+      }), [ZC]), QC ? (0, qC.createPortal)(zC, QC) : null
     }
   },
-  9277: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
+  34153: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => bC
     });
-    var Yq = gq(4364),
-      lq = gq(4367);
+    var QC = ZC(4473),
+      wC = ZC(4479);
 
-    function Oq(qq) {
+    function bC(CC) {
       let {
-        children: Eq,
-        showing: gq,
-        globallyUniqueKey: Oq,
-        alwaysMountChildren: mq = !1,
-        doGameplayStartStopOnShow: xq = !0,
-        keepsMovement: Aq = !1
-      } = qq;
-      return (0, lq.e)(!0, gq, Oq, Aq), (0, Yq.d)(xq, gq), gq || mq ? Eq : null
+        children: zC,
+        showing: ZC,
+        globallyUniqueKey: bC,
+        alwaysMountChildren: nC = !1,
+        doGameplayStartStopOnShow: fC = !0,
+        keepsMovement: oC = !1
+      } = CC;
+      return (0, wC.b)(!0, ZC, bC, oC), (0, QC.d)(fC, ZC), ZC || nC ? zC : null
     }
   },
-  36740: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Oq,
-      e: () => mq,
-      i: () => xq,
-      j: () => Aq
+  36564: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => bC,
+      e: () => nC,
+      h: () => fC,
+      k: () => oC
     });
-    var Yq = gq(57),
-      lq = gq(3018);
-    const Oq = 8,
-      mq = "InGameHeaderContainer",
-      xq = "TopRightElements";
+    var QC = ZC(48),
+      wC = ZC(3099);
+    const bC = 8,
+      nC = "InGameHeaderContainer",
+      fC = "TopRightElements";
 
-    function Aq(qq) {
-      const [Eq] = (0, lq.b)(), [gq, Aq] = (0, Yq.useState)(!1);
-      return (0, Yq.useLayoutEffect)((() => {
-        if (!qq) return;
-        const Eq = document.querySelector(`.${mq}`),
-          gq = document.querySelector(`.${xq}`),
-          Yq = () => {
-            const Yq = qq.getBoundingClientRect(),
-              lq = Eq ? Eq.getBoundingClientRect().right : 0,
-              mq = gq ? gq.getBoundingClientRect().left : window.innerWidth,
-              xq = Yq.left < lq + Oq,
-              cq = Yq.right > mq - Oq;
-            Aq(xq || cq)
+    function oC(CC) {
+      const [zC] = (0, wC.c)(), [ZC, oC] = (0, QC.useState)(!1);
+      return (0, QC.useLayoutEffect)((() => {
+        if (!CC) return;
+        const zC = document.querySelector(`.${nC}`),
+          ZC = document.querySelector(`.${fC}`),
+          QC = () => {
+            const QC = CC.getBoundingClientRect(),
+              wC = zC ? zC.getBoundingClientRect().right : 0,
+              nC = ZC ? ZC.getBoundingClientRect().left : window.innerWidth,
+              fC = QC.left < wC + bC,
+              qC = QC.right > nC - bC;
+            oC(fC || qC)
           };
-        Yq();
-        const lq = new ResizeObserver(Yq);
-        return lq.observe(qq), Eq && lq.observe(Eq), gq && lq.observe(gq), () => {
-          lq.disconnect()
+        QC();
+        const wC = new ResizeObserver(QC);
+        return wC.observe(CC), zC && wC.observe(zC), ZC && wC.observe(ZC), () => {
+          wC.disconnect()
         }
-      }), [qq, Eq]), gq
+      }), [CC, zC]), ZC
     }
   },
-  36736: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq
+  36558: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => wC
     });
-    const Yq = [{
+    const QC = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function lq(qq, Eq, gq) {
-      const lq = Math.abs(qq - Eq),
-        Oq = Date.now() - gq;
-      for (const mq of Yq)
-        if (qq < mq.maxDist) return lq >= mq.hardUpdateDist || Oq > mq.timeBetweenSoftChecks && lq >= mq.softUpdateDist;
+    function wC(CC, zC, ZC) {
+      const wC = Math.abs(CC - zC),
+        bC = Date.now() - ZC;
+      for (const nC of QC)
+        if (CC < nC.maxDist) return wC >= nC.hardUpdateDist || bC > nC.timeBetweenSoftChecks && wC >= nC.softUpdateDist;
       return !1
     }
   },
-  8669: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      i: () => lq
+  8735: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => bC,
+      f: () => wC
     });
-    let Yq = null;
-    const lq = function(qq) {
-        const Eq = {
-          cycle: qq,
+    let QC = null;
+    const wC = function(CC) {
+        const zC = {
+          cycle: CC,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Yq = Eq, () => {
-          Yq === Eq && (Yq = null)
+        return QC = zC, () => {
+          QC === zC && (QC = null)
         }
       },
-      Oq = () => {
-        var qq;
-        return null !== (qq = Yq) && void 0 !== qq && qq.canCycle() ? Yq.cycle : null
+      bC = () => {
+        var CC;
+        return null !== (CC = QC) && void 0 !== CC && CC.canCycle() ? QC.cycle : null
       }
   },
-  38505: (qq, Eq, gq) => {
-    function Yq(qq, Eq, gq) {
-      var Yq;
+  38369: (CC, zC, ZC) => {
+    function QC(CC, zC, ZC) {
+      var QC;
       const {
-        width: lq,
-        height: Oq
-      } = gq, mq = null !== (Yq = qq.text) && void 0 !== Yq ? Yq : qq, xq = (mq.x / 100 - .5) * lq, Aq = (mq.y / 100 - .5) * Oq, cq = lq / 2 - Eq.x;
-      if (null !== qq.text && Math.abs(xq) <= cq && Aq >= Eq.top - Oq / 2 && Aq <= Oq / 2 - Eq.bottom) return {
-        x: mq.x,
-        y: mq.y
+        width: wC,
+        height: bC
+      } = ZC, nC = null !== (QC = CC.text) && void 0 !== QC ? QC : CC, fC = (nC.x / 100 - .5) * wC, oC = (nC.y / 100 - .5) * bC, qC = wC / 2 - zC.x;
+      if (null !== CC.text && Math.abs(fC) <= qC && oC >= zC.top - bC / 2 && oC <= bC / 2 - zC.bottom) return {
+        x: nC.x,
+        y: nC.y
       };
-      const uq = Math.min(0 === xq ? 1 / 0 : cq / Math.abs(xq), Aq > 0 ? (Oq / 2 - Eq.bottom) / Aq : Aq < 0 ? (Eq.top - Oq / 2) / Aq : 1 / 0);
-      return !Number.isFinite(uq) || uq < 0 ? {
+      const FC = Math.min(0 === fC ? 1 / 0 : qC / Math.abs(fC), oC > 0 ? (bC / 2 - zC.bottom) / oC : oC < 0 ? (zC.top - bC / 2) / oC : 1 / 0);
+      return !Number.isFinite(FC) || FC < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + xq * uq / lq * 100,
-        y: 50 + Aq * uq / Oq * 100
+        x: 50 + fC * FC / wC * 100,
+        y: 50 + oC * FC / bC * 100
       }
     }
-    gq.d(Eq, {
-      c: () => Yq
+    ZC.d(zC, {
+      b: () => QC
     })
   },
-  36662: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Oq,
-      d: () => Vq,
-      g: () => dq,
-      h: () => xq,
-      l: () => Wq,
-      m: () => jq,
-      o: () => Bq,
-      p: () => oq,
-      r: () => aq,
-      v: () => Hq
+  36490: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      B: () => GC,
+      c: () => bC,
+      g: () => SC,
+      j: () => pC,
+      m: () => fC,
+      o: () => NC,
+      p: () => PC,
+      r: () => WC,
+      v: () => RC,
+      z: () => gC
     });
-    var Yq = gq(24),
-      lq = gq(31);
-    const Oq = "clientGameInventoryButtonsChanged",
-      mq = new Map;
+    var QC = ZC(20),
+      wC = ZC(28);
+    const bC = "clientGameInventoryButtonsChanged",
+      nC = new Map;
 
-    function xq() {
-      return [...mq.values()].sort(((qq, Eq) => {
-        var gq, Yq;
-        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
+    function fC() {
+      return [...nC.values()].sort(((CC, zC) => {
+        var ZC, QC;
+        return (null !== (ZC = CC.order) && void 0 !== ZC ? ZC : 0) - (null !== (QC = zC.order) && void 0 !== QC ? QC : 0)
       }))
     }
-    let Aq = null;
+    let oC = null;
 
-    function cq(qq) {
-      Aq = qq
+    function qC(CC) {
+      oC = CC
     }
-    let uq = !1;
+    let FC = !1;
 
-    function Bq(qq) {
-      uq = !0;
+    function WC(CC) {
+      FC = !0;
       try {
-        qq.onClick()
+        CC.onClick()
       } finally {
-        uq = !1
+        FC = !1
       }
-      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
+      CC.panel && "clientGame" === QC.b.get("openInGameMenuName") && qC(CC.id)
     }
 
-    function Wq() {
-      return uq
+    function NC() {
+      return FC
     }
 
-    function Nq() {
-      return xq().filter((qq => qq.panel && !qq.disabled))
+    function MC() {
+      return fC().filter((CC => CC.panel && !CC.disabled))
     }
 
-    function aq(qq) {
-      const Eq = Nq(),
-        gq = Eq.findIndex((qq => qq.id === Aq));
-      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
+    function gC(CC) {
+      const zC = MC(),
+        ZC = zC.findIndex((CC => CC.id === oC));
+      return !(ZC < 0 || zC.length < 2) && (WC(zC[(ZC + CC + zC.length) % zC.length]), !0)
     }
 
-    function Vq() {
-      return null !== Aq && Nq().length > 1
+    function SC() {
+      return null !== oC && MC().length > 1
     }
 
-    function dq() {
-      cq(null)
+    function pC() {
+      qC(null)
     }
 
-    function jq() {
-      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
+    function PC() {
+      "inventory" !== QC.b.get("openInGameMenuName") && qC(null)
     }
 
-    function Hq() {
-      const qq = Aq;
-      return cq(null), qq
+    function GC() {
+      const CC = oC;
+      return qC(null), CC
     }
 
-    function oq(qq) {
-      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
-        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
+    function RC(CC) {
+      return nC.set(CC.id, CC), wC.o.bp(bC, fC(), !0), () => {
+        nC.get(CC.id) === CC && (nC.delete(CC.id), wC.o.bp(bC, fC()))
       }
     }
   },
-  36657: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => xq,
-      e: () => dq,
-      h: () => jq,
-      j: () => Wq,
-      l: () => cq,
-      m: () => Vq,
-      n: () => Nq,
-      r: () => uq
+  36488: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      C: () => FC,
+      d: () => fC,
+      h: () => pC,
+      k: () => PC,
+      o: () => NC,
+      q: () => qC,
+      u: () => SC,
+      y: () => MC
     });
-    var Yq = gq(24),
-      lq = gq(31),
-      Oq = gq(1274),
-      mq = gq(36662);
-    const xq = "clientGameUiChanged";
-    let Aq = null;
+    var QC = ZC(20),
+      wC = ZC(28),
+      bC = ZC(1240),
+      nC = ZC(36490);
+    const fC = "clientGameUiChanged";
+    let oC = null;
 
-    function cq() {
-      return Aq
+    function qC() {
+      return oC
     }
 
-    function uq(qq, Eq) {
-      const gq = {
-        content: qq,
-        menu: Eq
+    function FC(CC, zC) {
+      const ZC = {
+        content: CC,
+        menu: zC
       };
-      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
-        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
+      return oC = ZC, wC.o.bp(fC, oC, !0), () => {
+        oC === ZC && (oC = null, gC = !1, pC(), wC.o.bp(fC, null))
       }
     }
-    let Bq = null;
+    let WC = null;
 
-    function Wq() {
-      return Bq
+    function NC() {
+      return WC
     }
 
-    function Nq(qq) {
-      return Bq = qq, () => {
-        Bq === qq && (Bq = null)
+    function MC(CC) {
+      return WC = CC, () => {
+        WC === CC && (WC = null)
       }
     }
-    let aq = !1;
+    let gC = !1;
 
-    function Vq() {
-      const qq = Yq.b.get("openInGameMenuName");
-      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
+    function SC() {
+      const CC = QC.b.get("openInGameMenuName");
+      "clientGame" !== CC && (gC = "inventory" === CC), (0, nC.o)() || (0, nC.j)(), (0, bC.u)(bC.e), QC.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function dq() {
-      Hq(!1)
+    function pC() {
+      GC(!1)
     }
 
-    function jq() {
-      Hq(aq)
+    function PC() {
+      GC(gC)
     }
 
-    function Hq(qq) {
-      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
-        openInGameMenuName: qq ? "inventory" : null
-      }), qq || (0, mq.g)(), aq = !1
+    function GC(CC) {
+      "clientGame" === QC.b.get("openInGameMenuName") && QC.b.set({
+        openInGameMenuName: CC ? "inventory" : null
+      }), CC || (0, nC.j)(), gC = !1
     }
   },
-  39349: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      default: () => dE
+  39259: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => pz
     });
-    const Yq = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var lq = gq(57),
-      Oq = gq(36657),
-      mq = gq(37086),
-      xq = gq(36674),
-      Aq = gq(1710),
-      cq = gq(31);
-    const uq = {
+    const QC = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var wC = ZC(48),
+      bC = ZC(36488),
+      nC = ZC(36897),
+      fC = ZC(36502),
+      oC = ZC(1645),
+      qC = ZC(28);
+    const FC = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const Bq = 32;
+    const WC = 32;
 
-    function Wq(qq, Eq, gq, Yq) {
+    function NC(CC, zC, ZC, QC) {
       return {
         tag: "line",
         attrs: {
-          x1: qq,
-          y1: Eq,
-          x2: gq,
-          y2: Yq,
+          x1: CC,
+          y1: zC,
+          x2: ZC,
+          y2: QC,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function Nq(qq) {
+    function MC(CC) {
       return {
         tag: "circle",
         attrs: {
-          cx: Bq,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Bq,
-          r: qq,
+          cx: WC,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : WC,
+          r: CC,
           class: "Fill"
         }
       }
     }
 
-    function aq(qq, Eq) {
+    function gC(CC, zC) {
       return {
         tag: "path",
         attrs: {
-          d: qq,
-          "stroke-width": Eq
+          d: CC,
+          "stroke-width": zC
         }
       }
     }
 
-    function Vq(qq, Eq, gq) {
+    function SC(CC, zC, ZC) {
       return {
         tag: "circle",
         attrs: {
-          cx: Bq,
-          cy: Bq,
-          r: qq,
-          "stroke-width": Eq,
-          class: gq
+          cx: WC,
+          cy: WC,
+          r: CC,
+          "stroke-width": zC,
+          class: ZC
         }
       }
     }
 
-    function dq(qq, Eq, gq) {
+    function pC(CC, zC, ZC) {
       return {
         tag: "text",
         attrs: {
-          x: qq,
-          y: Eq,
+          x: CC,
+          y: zC,
           class: "Fill Label"
         },
-        text: gq
+        text: ZC
       }
     }
-    const jq = {
-      pistol: qq => [Wq(Bq, Bq - qq - 5, Bq, Bq - qq), Wq(Bq - qq - 5, Bq, Bq - qq, Bq), Wq(Bq + qq, Bq, Bq + qq + 5, Bq), Nq(1.4)],
-      rifle: qq => [Wq(Bq, Bq - qq - 8, Bq, Bq - qq), Wq(Bq, Bq + qq, Bq, Bq + qq + 8), Wq(Bq - qq - 8, Bq, Bq - qq, Bq), Wq(Bq + qq, Bq, Bq + qq + 8, Bq), Nq(1)],
-      smg: qq => {
-        const Eq = Math.PI / 2,
-          gq = [];
-        for (let mq = 0; mq < 4; mq++) gq.push((lq = mq * Eq + .35, Oq = (mq + 1) * Eq - .35, aq(`M${Bq+(Yq=6+qq)*Math.cos(lq)} ${Bq+Yq*Math.sin(lq)} A${Yq} ${Yq} 0 0 1 ${Bq+Yq*Math.cos(Oq)} ${Bq+Yq*Math.sin(Oq)}`, 2)));
-        var Yq, lq, Oq;
-        return [...gq, Nq(1.4)]
+    const PC = {
+      pistol: CC => [NC(WC, WC - CC - 5, WC, WC - CC), NC(WC - CC - 5, WC, WC - CC, WC), NC(WC + CC, WC, WC + CC + 5, WC), MC(1.4)],
+      rifle: CC => [NC(WC, WC - CC - 8, WC, WC - CC), NC(WC, WC + CC, WC, WC + CC + 8), NC(WC - CC - 8, WC, WC - CC, WC), NC(WC + CC, WC, WC + CC + 8, WC), MC(1)],
+      smg: CC => {
+        const zC = Math.PI / 2,
+          ZC = [];
+        for (let nC = 0; nC < 4; nC++) ZC.push((wC = nC * zC + .35, bC = (nC + 1) * zC - .35, gC(`M${WC+(QC=6+CC)*Math.cos(wC)} ${WC+QC*Math.sin(wC)} A${QC} ${QC} 0 0 1 ${WC+QC*Math.cos(bC)} ${WC+QC*Math.sin(bC)}`, 2)));
+        var QC, wC, bC;
+        return [...ZC, MC(1.4)]
       },
-      shotgun: qq => [Vq(qq, 3, "Ring Outline"), Vq(qq, 1.5, "Ring")],
-      marksman: qq => [aq(`M${26-qq/2} ${39+qq/2} L32 33 L${38+qq/2} ${39+qq/2}`, 2), Wq(14 - qq, Bq, 24 - qq, Bq, 1.5), Wq(40 + qq, Bq, 50 + qq, Bq, 1.5), Wq(14 - qq, 30, 14 - qq, 34, 1.5), Wq(50 + qq, 30, 50 + qq, 34, 1.5)],
-      machineGun: qq => {
-        const Eq = 10 + qq,
-          gq = [];
-        for (const [Yq, lq] of [
+      shotgun: CC => [SC(CC, 3, "Ring Outline"), SC(CC, 1.5, "Ring")],
+      marksman: CC => [gC(`M${26-CC/2} ${39+CC/2} L32 33 L${38+CC/2} ${39+CC/2}`, 2), NC(14 - CC, WC, 24 - CC, WC, 1.5), NC(40 + CC, WC, 50 + CC, WC, 1.5), NC(14 - CC, 30, 14 - CC, 34, 1.5), NC(50 + CC, 30, 50 + CC, 34, 1.5)],
+      machineGun: CC => {
+        const zC = 10 + CC,
+          ZC = [];
+        for (const [QC, wC] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) gq.push(aq(`M${Bq+Yq*Eq} ${Bq+lq*(Eq-5)} L${Bq+Yq*Eq} ${Bq+lq*Eq} L${Bq+Yq*(Eq-5)} ${Bq+lq*Eq}`, 2));
-        return [...gq, Wq(Bq, 28, Bq, 36, 1.5), Wq(28, Bq, 36, Bq, 1.5)]
+          ]) ZC.push(gC(`M${WC+QC*zC} ${WC+wC*(zC-5)} L${WC+QC*zC} ${WC+wC*zC} L${WC+QC*(zC-5)} ${WC+wC*zC}`, 2));
+        return [...ZC, NC(WC, 28, WC, 36, 1.5), NC(28, WC, 36, WC, 1.5)]
       },
-      launcher: () => [Wq(14, 30, 50, 30, 1.5), Wq(Bq, 24, Bq, 52, 1.5), Wq(28, 38, 36, 38, 1.5), Wq(29, 44, 35, 44, 1.5), Wq(30, 50, 34, 50, 1.5), dq(38, 40, "100"), dq(37, 46, "200"), Nq(1.4, 30)],
-      melee: () => [aq("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Nq(1.2)],
-      throwable: () => [Nq(1.6)]
+      launcher: () => [NC(14, 30, 50, 30, 1.5), NC(WC, 24, WC, 52, 1.5), NC(28, 38, 36, 38, 1.5), NC(29, 44, 35, 44, 1.5), NC(30, 50, 34, 50, 1.5), pC(38, 40, "100"), pC(37, 46, "200"), MC(1.4, 30)],
+      melee: () => [gC("M32 26 L38 32 L32 38 L26 32 Z", 1.5), MC(1.2)],
+      throwable: () => [MC(1.6)]
     };
 
-    function Hq(qq) {
+    function GC(CC) {
       let {
-        tag: Eq,
-        attrs: gq,
-        text: Yq
-      } = qq, lq = `<${Eq}`;
-      for (const [Oq, mq] of Object.entries(gq)) lq += ` ${Oq}="${mq}"`;
-      return void 0 === Yq ? `${lq}/>` : `${lq}>${Yq}</${Eq}>`
+        tag: zC,
+        attrs: ZC,
+        text: QC
+      } = CC, wC = `<${zC}`;
+      for (const [bC, nC] of Object.entries(ZC)) wC += ` ${bC}="${nC}"`;
+      return void 0 === QC ? `${wC}/>` : `${wC}>${QC}</${zC}>`
     }
-    class oq {
-      constructor(qq, Eq) {
-        this.api = qq, this.localPlayerId = Eq, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = qq => {
-          this.element = qq, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, qq && !this.enabled && (qq.style.display = "none")
+    class RC {
+      constructor(CC, zC) {
+        this.api = CC, this.localPlayerId = zC, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = CC => {
+          this.element = CC, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, CC && !this.enabled && (CC.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Aq.getRemInPx)()))
-        }, this.tokens = [cq.i.subscribe("aimingOverlay", (qq => {
-          this.sniperOverlay = "sniper" === qq
-        })), cq.i.subscribe("mouseState", (qq => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, oC.getRemInPx)()))
+        }, this.tokens = [qC.o.subscribe("aimingOverlay", (CC => {
+          this.sniperOverlay = "sniper" === CC
+        })), qC.o.subscribe("mouseState", (CC => {
           let {
-            isDown: Eq
-          } = qq;
-          this.mouseDown = Eq
+            isDown: zC
+          } = CC;
+          this.mouseDown = zC
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      hG(qq) {
-        qq !== this.enabled && (this.enabled = qq, this.drawnVisible = null, qq || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      IK(CC) {
+        CC !== this.enabled && (this.enabled = CC, this.drawnVisible = null, CC || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(qq, Eq) {
-        var gq, Yq;
+      frame(CC, zC) {
+        var ZC, QC;
         if (!this.enabled) return;
         const {
-          api: lq
-        } = this, Oq = lq.isAlive(this.localPlayerId) && null !== (gq = null === (Yq = lq.Ngq(this.localPlayerId)) || void 0 === Yq ? void 0 : Yq.name) && void 0 !== gq ? gq : null, mq = (xq = Oq) && uq[xq] || null;
-        var xq;
-        if (this.setOwnsCrosshair(null !== mq), !this.element) return;
-        const Aq = lq.getHeldGunInaccuracy(),
-          cq = null !== Aq,
-          Bq = null !== mq && !this.sniperOverlay && lq.isCrosshairShown();
-        if (Bq !== this.drawnVisible && (this.drawnVisible = Bq, this.element.style.display = Bq ? "block" : "none"), !Bq) return;
-        const Wq = cq ? function(qq) {
-            return "launcher" === qq || "melee" === qq || "throwable" === qq ? "none" : "shotgun" === qq ? "cone" : "offset"
-          }(mq) : "none",
-          Nq = null !== Aq && void 0 !== Aq ? Aq : 0;
-        "cone" === Wq ? this.drawCone(mq, this.coneRadiusVh(Nq, Eq) * this.gapPerVh, qq) : (this.coneDrawn = !1, this.draw(mq, "none" === Wq ? 2 : this.offsetGap(Nq)));
-        const aq = !cq && this.mouseDown;
-        aq !== this.drawnPressed && (this.drawnPressed = aq, this.element.classList.toggle("Pressed", aq))
+          api: wC
+        } = this, bC = wC.isAlive(this.localPlayerId) && null !== (ZC = null === (QC = wC.XzC(this.localPlayerId)) || void 0 === QC ? void 0 : QC.name) && void 0 !== ZC ? ZC : null, nC = (fC = bC) && FC[fC] || null;
+        var fC;
+        if (this.setOwnsCrosshair(null !== nC), !this.element) return;
+        const oC = wC.getHeldGunInaccuracy(),
+          qC = null !== oC,
+          WC = null !== nC && !this.sniperOverlay && wC.isCrosshairShown();
+        if (WC !== this.drawnVisible && (this.drawnVisible = WC, this.element.style.display = WC ? "block" : "none"), !WC) return;
+        const NC = qC ? function(CC) {
+            return "launcher" === CC || "melee" === CC || "throwable" === CC ? "none" : "shotgun" === CC ? "cone" : "offset"
+          }(nC) : "none",
+          MC = null !== oC && void 0 !== oC ? oC : 0;
+        "cone" === NC ? this.drawCone(nC, this.coneRadiusVh(MC, zC) * this.gapPerVh, CC) : (this.coneDrawn = !1, this.draw(nC, "none" === NC ? 2 : this.offsetGap(MC)));
+        const gC = !qC && this.mouseDown;
+        gC !== this.drawnPressed && (this.drawnPressed = gC, this.element.classList.toggle("Pressed", gC))
       }
       dispose() {
-        for (const qq of this.tokens) cq.i.unsubscribe(qq);
+        for (const CC of this.tokens) qC.o.unsubscribe(CC);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(qq, Eq) {
-        var gq, Yq;
-        qq !== this.drawnFamily ? (this.drawnFamily = qq, this.drawnGap = Eq, this.element.innerHTML = function(qq, Eq) {
-          return `<svg viewBox="0 0 64 64">${jq[qq](Eq).map(Hq).join("")}</svg>`
-        }(qq, Eq), this.shapes = Array.from(null !== (gq = null === (Yq = this.element.firstElementChild) || void 0 === Yq ? void 0 : Yq.children) && void 0 !== gq ? gq : [])) : Eq !== this.drawnGap && (this.drawnGap = Eq, function(qq, Eq, gq) {
-          const Yq = jq[Eq](gq);
-          for (let lq = 0; lq < Yq.length; lq++)
-            for (const [Eq, gq] of Object.entries(Yq[lq].attrs)) {
-              const Yq = String(gq);
-              qq[lq].getAttribute(Eq) !== Yq && qq[lq].setAttribute(Eq, Yq)
+      draw(CC, zC) {
+        var ZC, QC;
+        CC !== this.drawnFamily ? (this.drawnFamily = CC, this.drawnGap = zC, this.element.innerHTML = function(CC, zC) {
+          return `<svg viewBox="0 0 64 64">${PC[CC](zC).map(GC).join("")}</svg>`
+        }(CC, zC), this.shapes = Array.from(null !== (ZC = null === (QC = this.element.firstElementChild) || void 0 === QC ? void 0 : QC.children) && void 0 !== ZC ? ZC : [])) : zC !== this.drawnGap && (this.drawnGap = zC, function(CC, zC, ZC) {
+          const QC = PC[zC](ZC);
+          for (let wC = 0; wC < QC.length; wC++)
+            for (const [zC, ZC] of Object.entries(QC[wC].attrs)) {
+              const QC = String(ZC);
+              CC[wC].getAttribute(zC) !== QC && CC[wC].setAttribute(zC, QC)
             }
-        }(this.shapes, qq, Eq))
+        }(this.shapes, CC, zC))
       }
-      drawCone(qq, Eq, gq) {
-        qq === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Eq - this.shownRadius) * (1 - Math.exp(-gq / 80)) : this.shownRadius = Eq, this.coneDrawn = !0, this.draw(qq, Math.round(4 * this.shownRadius) / 4)
+      drawCone(CC, zC, ZC) {
+        CC === this.drawnFamily && this.coneDrawn ? this.shownRadius += (zC - this.shownRadius) * (1 - Math.exp(-ZC / 80)) : this.shownRadius = zC, this.coneDrawn = !0, this.draw(CC, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(qq, Eq) {
-        if (!(Eq > 0)) return 1;
-        const gq = qq * mq.i / 2;
-        return Math.max(50 * Math.tan(gq) / Eq, 1)
+      coneRadiusVh(CC, zC) {
+        if (!(zC > 0)) return 1;
+        const ZC = CC * nC.i / 2;
+        return Math.max(50 * Math.tan(ZC) / zC, 1)
       }
-      offsetGap(qq) {
-        const Eq = 2 + ((0, xq.f)(qq) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * Eq) / 2)
+      offsetGap(CC) {
+        const zC = 2 + ((0, fC.e)(CC) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * zC) / 2)
       }
-      setOwnsCrosshair(qq) {
-        qq !== this.ownsCrosshair && (this.ownsCrosshair = qq, document.body.classList.toggle("FrontlineCustomCrosshair", qq))
+      setOwnsCrosshair(CC) {
+        CC !== this.ownsCrosshair && (this.ownsCrosshair = CC, document.body.classList.toggle("FrontlineCustomCrosshair", CC))
       }
     }
-    const Pq = "FrontlineCustomDamage",
-      Qq = .45,
-      yq = .2;
-    class tq {
-      constructor(qq, Eq) {
-        this.api = qq, this.localPlayerId = Eq, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const AC = "FrontlineCustomDamage",
+      xC = .45,
+      JC = .2;
+    class IC {
+      constructor(CC, zC) {
+        this.api = CC, this.localPlayerId = zC, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.zq = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = qq => {
-          var Eq, gq;
-          this.clearHits(), this.root = qq, this.lowLayer = null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.querySelector(".FrontlineDamageLow")) && void 0 !== Eq ? Eq : null, this.arcLayer = null !== (gq = null === qq || void 0 === qq ? void 0 : qq.querySelector(".FrontlineDamageArcs")) && void 0 !== gq ? gq : null, this.showRoot(), this.drawLow()
-        }, this.token = cq.i.subscribe("damagedByOtherPlayer", (qq => {
+        }, this.maxHealth = null, this.lb = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = CC => {
+          var zC, ZC;
+          this.clearHits(), this.root = CC, this.lowLayer = null !== (zC = null === CC || void 0 === CC ? void 0 : CC.querySelector(".FrontlineDamageLow")) && void 0 !== zC ? zC : null, this.arcLayer = null !== (ZC = null === CC || void 0 === CC ? void 0 : CC.querySelector(".FrontlineDamageArcs")) && void 0 !== ZC ? ZC : null, this.showRoot(), this.drawLow()
+        }, this.token = qC.o.subscribe("damagedByOtherPlayer", (CC => {
           let {
-            direction: Eq,
-            Mq: gq
-          } = qq;
-          this.onHurt(Eq, gq)
-        })), this.syncHealth(), document.body.classList.add(Pq)
+            direction: zC,
+            Hb: ZC
+          } = CC;
+          this.onHurt(zC, ZC)
+        })), this.syncHealth(), document.body.classList.add(AC)
       }
-      hG(qq) {
-        qq !== this.enabled && (this.enabled = qq, document.body.classList.toggle(Pq, qq), qq || this.clearHits(), this.showRoot())
+      IK(CC) {
+        CC !== this.enabled && (this.enabled = CC, document.body.classList.toggle(AC, CC), CC || this.clearHits(), this.showRoot())
       }
-      frame(qq) {
-        this.syncHealth(), this.cameraHeading = qq;
-        for (const Eq of this.arcs) this.drawArcAngle(Eq)
+      frame(CC) {
+        this.syncHealth(), this.cameraHeading = CC;
+        for (const zC of this.arcs) this.drawArcAngle(zC)
       }
       dispose() {
-        cq.i.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Pq)
+        qC.o.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(AC)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const qq = this.api.getClientOption(this.localPlayerId, "_health"),
-          Eq = this.api.getClientOption(this.localPlayerId, "_shield"),
-          gq = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(qq, this.readHealth) && Object.is(Eq, this.readShield) && Object.is(gq, this.readMaxHealth)) return;
-        if (this.readHealth = qq, this.readShield = Eq, this.readMaxHealth = gq, null === qq || void 0 === qq || !gq) return this.lastHealthPool = null, this.maxHealth = null, this.zq = 1, this.dead = !1, void this.drawLow();
-        const Yq = qq + (null !== Eq && void 0 !== Eq ? Eq : 0);
-        if (null !== this.lastHealthPool && Yq < this.lastHealthPool) {
-          const qq = performance.now(),
-            Eq = (this.lastHealthPool - Yq) / gq;
-          this.lastDrop = qq - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + Eq,
+        const CC = this.api.getClientOption(this.localPlayerId, "_health"),
+          zC = this.api.getClientOption(this.localPlayerId, "_shield"),
+          ZC = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(CC, this.readHealth) && Object.is(zC, this.readShield) && Object.is(ZC, this.readMaxHealth)) return;
+        if (this.readHealth = CC, this.readShield = zC, this.readMaxHealth = ZC, null === CC || void 0 === CC || !ZC) return this.lastHealthPool = null, this.maxHealth = null, this.lb = 1, this.dead = !1, void this.drawLow();
+        const QC = CC + (null !== zC && void 0 !== zC ? zC : 0);
+        if (null !== this.lastHealthPool && QC < this.lastHealthPool) {
+          const CC = performance.now(),
+            zC = (this.lastHealthPool - QC) / ZC;
+          this.lastDrop = CC - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + zC,
             at: this.lastDrop.at
           } : {
-            frac: Eq,
-            at: qq
+            frac: zC,
+            at: CC
           }
         }
-        this.dead = qq <= 0, this.dead && this.clearHits(), this.lastHealthPool = Yq, this.maxHealth = gq, this.zq = qq > 0 ? qq / gq : 1, this.drawLow()
+        this.dead = CC <= 0, this.dead && this.clearHits(), this.lastHealthPool = QC, this.maxHealth = ZC, this.lb = CC > 0 ? CC / ZC : 1, this.drawLow()
       }
-      onHurt(qq, Eq) {
+      onHurt(CC, zC) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const gq = Math.min(1, this.takeDamageFrac(Eq) / .3);
-        null !== qq && this.showArc(qq, gq), this.flashEdge(null === qq ? null : qq - this.cameraHeading, .4 + .6 * gq)
+        const ZC = Math.min(1, this.takeDamageFrac(zC) / .3);
+        null !== CC && this.showArc(CC, ZC), this.flashEdge(null === CC ? null : CC - this.cameraHeading, .4 + .6 * ZC)
       }
-      takeDamageFrac(qq) {
-        if (void 0 !== qq && this.maxHealth) return qq / this.maxHealth;
+      takeDamageFrac(CC) {
+        if (void 0 !== CC && this.maxHealth) return CC / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: Eq
+          frac: zC
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, Eq
+        }, zC
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const qq = vq((Qq - this.zq) / .25),
-          Eq = vq((yq - this.zq) / .15000000000000002),
-          gq = this.zq < Qq;
-        this.lowLayer.classList.toggle("Active", gq), this.lowLayer.classList.toggle("Critical", this.zq < yq), this.lowLayer.style.opacity = String(gq ? .55 + .3 * qq + .15 * Eq : 0)
+        const CC = vC((xC - this.lb) / .25),
+          zC = vC((JC - this.lb) / .15000000000000002),
+          ZC = this.lb < xC;
+        this.lowLayer.classList.toggle("Active", ZC), this.lowLayer.classList.toggle("Critical", this.lb < JC), this.lowLayer.style.opacity = String(ZC ? .55 + .3 * CC + .15 * zC : 0)
       }
-      showArc(qq, Eq) {
-        var gq, Yq;
+      showArc(CC, zC) {
+        var ZC, QC;
         if (!this.arcLayer) return;
-        let lq = this.arcs.find((Eq => rq(Eq.direction, qq) < .6));
-        if (!lq) {
-          const Eq = document.createElement("div");
-          Eq.className = "FrontlineDamageArc", Eq.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Eq), lq = {
-            element: Eq,
-            direction: qq,
+        let wC = this.arcs.find((zC => iC(zC.direction, CC) < .6));
+        if (!wC) {
+          const zC = document.createElement("div");
+          zC.className = "FrontlineDamageArc", zC.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(zC), wC = {
+            element: zC,
+            direction: CC,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(lq)
+          }, this.arcs.push(wC)
         }
-        lq.direction = qq, this.drawArcAngle(lq);
-        const Oq = lq.fade ? Number(getComputedStyle(lq.element).opacity) : 0;
-        null === (gq = lq.fade) || void 0 === gq || gq.cancel(), null === (Yq = lq.pop) || void 0 === Yq || Yq.cancel(), lq.element.style.opacity = "1";
-        const mq = lq.element.animate([{
-          opacity: Oq
+        wC.direction = CC, this.drawArcAngle(wC);
+        const bC = wC.fade ? Number(getComputedStyle(wC.element).opacity) : 0;
+        null === (ZC = wC.fade) || void 0 === ZC || ZC.cancel(), null === (QC = wC.pop) || void 0 === QC || QC.cancel(), wC.element.style.opacity = "1";
+        const nC = wC.element.animate([{
+          opacity: bC
         }, {
           opacity: 1
         }], 144);
-        lq.fade = mq, lq.pop = lq.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * Eq
+        wC.fade = nC, wC.pop = wC.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * zC
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const xq = lq;
-        mq.onfinish = () => {
-          if (xq.fade !== mq) return;
-          const qq = xq.element.animate([{
+        const fC = wC;
+        nC.onfinish = () => {
+          if (fC.fade !== nC) return;
+          const CC = fC.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          qq.startTime = mq.startTime, xq.fade = qq, qq.onfinish = () => {
-            xq.fade === qq && (xq.element.remove(), hq(this.arcs, xq))
+          CC.startTime = nC.startTime, fC.fade = CC, CC.onfinish = () => {
+            fC.fade === CC && (fC.element.remove(), eC(this.arcs, fC))
           }
         }
       }
-      drawArcAngle(qq) {
-        const Eq = qq.direction - this.cameraHeading;
-        (null === qq.drawnAngle || Math.abs(Eq - qq.drawnAngle) > .005) && (qq.drawnAngle = Eq, qq.element.style.rotate = `${Eq}rad`)
+      drawArcAngle(CC) {
+        const zC = CC.direction - this.cameraHeading;
+        (null === CC.drawnAngle || Math.abs(zC - CC.drawnAngle) > .005) && (CC.drawnAngle = zC, CC.element.style.rotate = `${zC}rad`)
       }
-      flashEdge(qq, Eq) {
-        var gq, Yq, lq;
+      flashEdge(CC, zC) {
+        var ZC, QC, wC;
         if (!this.root) return;
-        let Oq = this.flashes.find((Eq => null === Eq.angle || null === qq ? Eq.angle === qq : rq(Eq.angle, qq) < .5));
-        if (!Oq) {
-          const Eq = document.createElement("div");
-          Eq.className = "FrontlineDamageFlash";
-          const gq = Eq.appendChild(document.createElement("div"));
-          gq.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Eq, this.arcLayer), Oq = {
-            element: Eq,
-            glow: gq,
-            angle: qq,
+        let bC = this.flashes.find((zC => null === zC.angle || null === CC ? zC.angle === CC : iC(zC.angle, CC) < .5));
+        if (!bC) {
+          const zC = document.createElement("div");
+          zC.className = "FrontlineDamageFlash";
+          const ZC = zC.appendChild(document.createElement("div"));
+          ZC.className = "FrontlineDamageFlashGlow", this.root.insertBefore(zC, this.arcLayer), bC = {
+            element: zC,
+            glow: ZC,
+            angle: CC,
             level: 0,
             animation: null
-          }, this.flashes.push(Oq)
+          }, this.flashes.push(bC)
         }
-        const mq = null === (gq = Oq.animation) || void 0 === gq || null === (Yq = gq.effect) || void 0 === Yq ? void 0 : Yq.getComputedTiming().progress,
-          xq = null === mq || void 0 === mq ? 0 : Oq.level * (1 - mq);
-        Oq.level = Math.min(1, Math.max(Eq, xq + .6 * Eq)), Oq.angle = qq;
+        const nC = null === (ZC = bC.animation) || void 0 === ZC || null === (QC = ZC.effect) || void 0 === QC ? void 0 : QC.getComputedTiming().progress,
+          fC = null === nC || void 0 === nC ? 0 : bC.level * (1 - nC);
+        bC.level = Math.min(1, Math.max(zC, fC + .6 * zC)), bC.angle = CC;
         const {
-          x: Aq,
-          y: cq,
-          rx: uq,
-          ry: Bq
-        } = function(qq, Eq) {
-          const gq = window.innerWidth,
-            Yq = window.innerHeight;
-          if (null === qq) return {
-            x: gq / 2,
-            y: Yq / 2,
+          x: oC,
+          y: qC,
+          rx: FC,
+          ry: WC
+        } = function(CC, zC) {
+          const ZC = window.innerWidth,
+            QC = window.innerHeight;
+          if (null === CC) return {
+            x: ZC / 2,
+            y: QC / 2,
             rx: 0,
             ry: 0
           };
-          const lq = Math.sin(qq),
-            Oq = -Math.cos(qq),
-            mq = gq / 2 / Math.max(1e-6, Math.abs(lq)),
-            xq = Yq / 2 / Math.max(1e-6, Math.abs(Oq)),
-            Aq = Math.min(mq, xq),
-            cq = Math.round(gq / 2 + lq * Aq),
-            uq = Math.round(Yq / 2 + Oq * Aq),
-            Bq = Yq / 100 * (.85 + .25 * Eq),
-            Wq = mq <= xq,
-            Nq = Math.round((Wq ? 30 : 74) * Bq),
-            aq = Math.round((Wq ? 58 : 26) * Bq);
+          const wC = Math.sin(CC),
+            bC = -Math.cos(CC),
+            nC = ZC / 2 / Math.max(1e-6, Math.abs(wC)),
+            fC = QC / 2 / Math.max(1e-6, Math.abs(bC)),
+            oC = Math.min(nC, fC),
+            qC = Math.round(ZC / 2 + wC * oC),
+            FC = Math.round(QC / 2 + bC * oC),
+            WC = QC / 100 * (.85 + .25 * zC),
+            NC = nC <= fC,
+            MC = Math.round((NC ? 30 : 74) * WC),
+            gC = Math.round((NC ? 58 : 26) * WC);
           return {
-            x: cq,
-            y: uq,
-            rx: Nq,
-            ry: aq
+            x: qC,
+            y: FC,
+            rx: MC,
+            ry: gC
           }
-        }(qq, Oq.level), {
-          style: Wq
-        } = Oq.glow;
-        Oq.glow.classList.toggle("Everywhere", null === qq), Wq.setProperty("--glowX", `${Aq}px`), Wq.setProperty("--glowY", `${cq}px`), Wq.setProperty("--glowRx", `${uq}px`), Wq.setProperty("--glowRy", `${Bq}px`), Oq.element.style.transformOrigin = `${Aq}px ${cq}px`, null === (lq = Oq.animation) || void 0 === lq || lq.cancel();
-        const Nq = Oq.element.animate([{
+        }(CC, bC.level), {
+          style: NC
+        } = bC.glow;
+        bC.glow.classList.toggle("Everywhere", null === CC), NC.setProperty("--glowX", `${oC}px`), NC.setProperty("--glowY", `${qC}px`), NC.setProperty("--glowRx", `${FC}px`), NC.setProperty("--glowRy", `${WC}px`), bC.element.style.transformOrigin = `${oC}px ${qC}px`, null === (wC = bC.animation) || void 0 === wC || wC.cancel();
+        const MC = bC.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: Oq.level,
+          opacity: bC.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * Oq.level,
+          opacity: .8 * bC.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * Oq.level
+          duration: 520 + 180 * bC.level
         });
-        Oq.animation = Nq;
-        const aq = Oq;
-        Nq.onfinish = () => {
-          aq.animation === Nq && (aq.element.remove(), hq(this.flashes, aq))
+        bC.animation = MC;
+        const gC = bC;
+        MC.onfinish = () => {
+          gC.animation === MC && (gC.element.remove(), eC(this.flashes, gC))
         }
       }
       clearHits() {
-        for (const Yq of this.arcs) {
-          var qq, Eq;
-          null === (qq = Yq.fade) || void 0 === qq || qq.cancel(), Yq.fade = null, null === (Eq = Yq.pop) || void 0 === Eq || Eq.cancel(), Yq.element.remove()
+        for (const QC of this.arcs) {
+          var CC, zC;
+          null === (CC = QC.fade) || void 0 === CC || CC.cancel(), QC.fade = null, null === (zC = QC.pop) || void 0 === zC || zC.cancel(), QC.element.remove()
         }
         this.arcs.length = 0;
-        for (const Yq of this.flashes) {
-          var gq;
-          null === (gq = Yq.animation) || void 0 === gq || gq.cancel(), Yq.element.remove()
+        for (const QC of this.flashes) {
+          var ZC;
+          null === (ZC = QC.animation) || void 0 === ZC || ZC.cancel(), QC.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function rq(qq, Eq) {
-      return Math.abs(Math.atan2(Math.sin(qq - Eq), Math.cos(qq - Eq)))
+    function iC(CC, zC) {
+      return Math.abs(Math.atan2(Math.sin(CC - zC), Math.cos(CC - zC)))
     }
 
-    function vq(qq) {
-      return Math.max(0, Math.min(1, qq))
+    function vC(CC) {
+      return Math.max(0, Math.min(1, CC))
     }
 
-    function hq(qq, Eq) {
-      const gq = qq.indexOf(Eq); - 1 !== gq && qq.splice(gq, 1)
+    function eC(CC, zC) {
+      const ZC = CC.indexOf(zC); - 1 !== ZC && CC.splice(ZC, 1)
     }
-    var nq = gq(1018),
-      bq = gq.n(nq),
-      iq = gq(36648),
-      Zq = gq(36740),
-      fq = gq(1183),
-      Mq = gq(1416);
-    const Tq = "frontlineHudChanged",
-      zq = "frontlineScoreboardChanged";
-    class Sq {
+    var hC = ZC(1002),
+      KC = ZC.n(hC),
+      YC = ZC(36483),
+      dC = ZC(36564),
+      mC = ZC(1143),
+      HC = ZC(1383);
+    const EC = "frontlineHudChanged",
+      lC = "frontlineScoreboardChanged";
+    class XC {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      ga(qq) {
-        this.wire = qq, cq.i.TV(Tq, qq, !0)
+      Ag(CC) {
+        this.wire = CC, qC.o.bp(EC, CC, !0)
       }
-      receiveScoreboard(qq) {
-        let Eq = "scoreboard" === qq[0] ? performance.now() + qq[5] : 0;
-        const gq = this.scoreboard.endsAt;
-        0 !== Eq && 0 !== gq && Math.abs(Eq - gq) < 1e3 && (Eq = gq), this.scoreboard = {
-          wire: qq,
-          endsAt: Eq
-        }, cq.i.TV(zq, this.scoreboard, !0)
+      receiveScoreboard(CC) {
+        let zC = "scoreboard" === CC[0] ? performance.now() + CC[5] : 0;
+        const ZC = this.scoreboard.endsAt;
+        0 !== zC && 0 !== ZC && Math.abs(zC - ZC) < 1e3 && (zC = ZC), this.scoreboard = {
+          wire: CC,
+          endsAt: zC
+        }, qC.o.bp(lC, this.scoreboard, !0)
       }
     }
-    var pq = gq(1070);
-    const Gq = {
+    var cC = ZC(1056);
+    const uC = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function Lq(qq) {
-      const [Eq, gq] = (0, lq.useState)((() => (qq - performance.now()) / 1e3));
-      return (0, lq.useEffect)((() => {
-        if (0 === qq) return;
-        const Eq = () => {
-          gq((qq - performance.now()) / 1e3)
+    function rC(CC) {
+      const [zC, ZC] = (0, wC.useState)((() => (CC - performance.now()) / 1e3));
+      return (0, wC.useEffect)((() => {
+        if (0 === CC) return;
+        const zC = () => {
+          ZC((CC - performance.now()) / 1e3)
         };
-        Eq();
-        const Yq = window.setInterval(Eq, 250);
+        zC();
+        const QC = window.setInterval(zC, 250);
         return () => {
-          window.clearInterval(Yq)
+          window.clearInterval(QC)
         }
-      }), [qq]), Eq
+      }), [CC]), zC
     }
 
-    function Jq(qq) {
+    function sC(CC) {
       let {
-        className: Eq,
-        point: gq
-      } = qq;
-      const [Yq, lq, Oq, mq, xq, Aq] = gq;
-      return (0, pq.jsxs)("div", {
-        className: bq()(Eq, `Owner-${lq||"None"}`, `Leader-${mq||"None"}`, {
-          Contested: xq,
-          Here: Aq
+        className: zC,
+        point: ZC
+      } = CC;
+      const [QC, wC, bC, nC, fC, oC] = ZC;
+      return (0, cC.jsxs)("div", {
+        className: KC()(zC, `Owner-${wC||"None"}`, `Leader-${nC||"None"}`, {
+          Contested: fC,
+          Here: oC
         }),
-        children: [(0, pq.jsx)("span", {
+        children: [(0, cC.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: Yq
-        }), (0, pq.jsx)("i", {
+          children: QC
+        }), (0, cC.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${Oq}%`
+            width: `${bC}%`
           }
         })]
       })
     }
-    const kq = (0, lq.memo)((function(qq) {
+    const TC = (0, wC.memo)((function(CC) {
         let {
-          points: Eq,
-          markers: gq
-        } = qq;
+          points: zC,
+          markers: ZC
+        } = CC;
         const {
-          t: Yq
-        } = (0, fq.v)();
-        return Eq ? (0, pq.jsx)("div", {
+          t: QC
+        } = (0, mC.y)();
+        return zC ? (0, cC.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: Eq.map((qq => {
-            const [Eq, , , , , , , lq] = qq;
-            return (0, pq.jsxs)("div", {
-              ref: gq.bindMarker(Eq),
+          children: zC.map((CC => {
+            const [zC, , , , , , , wC] = CC;
+            return (0, cC.jsxs)("div", {
+              ref: ZC.bindMarker(zC),
               className: "FrontlinePointMarker",
-              children: [(0, pq.jsx)(Jq, {
+              children: [(0, cC.jsx)(sC, {
                 className: "FrontlinePointMarkerTile",
-                point: qq
-              }), (0, pq.jsxs)("div", {
+                point: CC
+              }), (0, cC.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [lq && (0, pq.jsx)("span", {
-                  className: bq()("FrontlinePointMarkerHomeTurf", `Team-${lq}`),
-                  children: Yq("frontlineHud:homeTurf", {
-                    team: Yq(Gq[lq])
+                children: [wC && (0, cC.jsx)("span", {
+                  className: KC()("FrontlinePointMarkerHomeTurf", `Team-${wC}`),
+                  children: QC("frontlineHud:homeTurf", {
+                    team: QC(uC[wC])
                   })
-                }), (0, pq.jsx)("span", {
+                }), (0, cC.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, Eq)
+            }, zC)
           }))
         }) : null
       })),
-      Rq = {
+      aC = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      Uq = {
+      tC = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function Fq(qq) {
+    function DC(CC) {
       let {
-        hud: Eq,
-        crosshair: gq,
-        damage: Yq,
-        markers: lq
-      } = qq;
-      const Oq = (0, Mq.h)(Tq, Eq.getWire()),
-        mq = (0, Mq.h)(zq, Eq.getScoreboard());
-      return (0, pq.jsxs)(pq.Fragment, {
-        children: [(0, pq.jsx)(sq, {
-          damage: Yq
-        }), (0, pq.jsx)(kq, {
-          points: "scoreboard" === mq.wire[0] ? mq.wire[6] : null,
-          markers: lq
-        }), (0, pq.jsx)(wq, {
-          view: mq
-        }), (0, pq.jsx)("div", {
+        hud: zC,
+        crosshair: ZC,
+        damage: QC,
+        markers: wC
+      } = CC;
+      const bC = (0, HC.f)(EC, zC.getWire()),
+        nC = (0, HC.f)(lC, zC.getScoreboard());
+      return (0, cC.jsxs)(cC.Fragment, {
+        children: [(0, cC.jsx)(jC, {
+          damage: QC
+        }), (0, cC.jsx)(TC, {
+          points: "scoreboard" === nC.wire[0] ? nC.wire[6] : null,
+          markers: wC
+        }), (0, cC.jsx)(LC, {
+          view: nC
+        }), (0, cC.jsx)("div", {
           className: "FrontlineReticle",
-          ref: gq.bindElement
-        }), (0, pq.jsx)(iq.g, {
-          children: (0, pq.jsx)(Xq, {
-            wire: Oq
+          ref: ZC.bindElement
+        }), (0, cC.jsx)(YC.c, {
+          children: (0, cC.jsx)(yC, {
+            wire: bC
           })
         })]
       })
     }
-    const sq = (0, lq.memo)((function(qq) {
+    const jC = (0, wC.memo)((function(CC) {
         let {
-          damage: Eq
-        } = qq;
-        return (0, pq.jsxs)("div", {
+          damage: zC
+        } = CC;
+        return (0, cC.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: Eq.bindElement,
-          children: [(0, pq.jsx)("div", {
+          ref: zC.bindElement,
+          children: [(0, cC.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, pq.jsx)("div", {
+            children: (0, cC.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, pq.jsx)("div", {
+          }), (0, cC.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      Xq = (0, lq.memo)((function(qq) {
+      yC = (0, wC.memo)((function(CC) {
         let {
-          wire: Eq
-        } = qq;
+          wire: zC
+        } = CC;
         const {
-          t: gq
-        } = (0, fq.v)();
-        if ("capture" === Eq[0]) {
-          const [, qq, Yq, lq, Oq, mq, xq] = Eq, Aq = Math.round(lq / 100 * 24);
-          return (0, pq.jsxs)("div", {
-            className: bq()("FrontlinePlate", `Status-${Yq}`, `Leader-${Oq||"None"}`),
-            children: [(0, pq.jsx)(eq, {}), (0, pq.jsxs)("div", {
+          t: ZC
+        } = (0, mC.y)();
+        if ("capture" === zC[0]) {
+          const [, CC, QC, wC, bC, nC, fC] = zC, oC = Math.round(wC / 100 * 24);
+          return (0, cC.jsxs)("div", {
+            className: KC()("FrontlinePlate", `Status-${QC}`, `Leader-${bC||"None"}`),
+            children: [(0, cC.jsx)(kC, {}), (0, cC.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, pq.jsx)("span", {
+              children: [(0, cC.jsx)("span", {
                 className: "FrontlineObjective",
-                children: qq
-              }), (0, pq.jsxs)("div", {
+                children: CC
+              }), (0, cC.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, pq.jsx)("div", {
+                children: [(0, cC.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: gq("frontlineHud:objective", {
-                    point: qq,
-                    friendly: mq,
-                    enemy: xq
+                  children: ZC("frontlineHud:objective", {
+                    point: CC,
+                    friendly: nC,
+                    enemy: fC
                   })
-                }), (0, pq.jsx)("div", {
+                }), (0, cC.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: gq(Rq[Yq])
+                  children: ZC(aC[QC])
                 })]
-              }), (0, pq.jsxs)("span", {
+              }), (0, cC.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(lq).padStart(3, "0"), (0, pq.jsx)("small", {
+                children: [String(wC).padStart(3, "0"), (0, cC.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, pq.jsx)(Cq, {
+            }), (0, cC.jsx)(BC, {
               segments: 24,
-              lit: Aq
+              lit: oC
             })]
           })
         }
-        if ("alert" === Eq[0]) {
-          const [, qq, Yq, lq] = Eq;
-          return (0, pq.jsxs)("div", {
-            className: bq()("FrontlinePlate", "FrontlineAlert", `Tone-${lq}`),
-            children: [(0, pq.jsx)(eq, {}), (0, pq.jsx)("div", {
+        if ("alert" === zC[0]) {
+          const [, CC, QC, wC] = zC;
+          return (0, cC.jsxs)("div", {
+            className: KC()("FrontlinePlate", "FrontlineAlert", `Tone-${wC}`),
+            children: [(0, cC.jsx)(kC, {}), (0, cC.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: gq(Uq[qq])
-            }), (0, pq.jsx)("div", {
+              children: ZC(tC[CC])
+            }), (0, cC.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: Yq
+              children: QC
             })]
           })
         }
         return null
       })),
-      wq = (0, lq.memo)((function(qq) {
+      LC = (0, wC.memo)((function(CC) {
         let {
-          view: Eq
-        } = qq;
+          view: zC
+        } = CC;
         const {
-          t: gq
-        } = (0, fq.v)(), Yq = (0, lq.useRef)(null), Oq = function(qq, Eq) {
-          const [gq, Yq] = (0, lq.useState)(!1);
-          return (0, lq.useLayoutEffect)((() => {
-            const Eq = qq.current;
-            if (!Eq) return;
-            const gq = document.querySelector(`.${Zq.e}`),
-              lq = document.querySelector(`.${Zq.i}`),
-              Oq = () => {
-                var qq;
-                const Oq = Eq.querySelector(".FrontlineTeamTrack"),
-                  mq = (0, Aq.getRemInPx)(),
-                  xq = Eq.getBoundingClientRect().width - 2 * (null !== (qq = null === Oq || void 0 === Oq ? void 0 : Oq.getBoundingClientRect().width) && void 0 !== qq ? qq : 0),
-                  cq = window.innerWidth / 2,
-                  uq = gq ? gq.getBoundingClientRect().right : 0,
-                  Bq = lq ? lq.getBoundingClientRect().left : window.innerWidth,
-                  Wq = Math.min(cq - uq, Bq - cq) - Zq.d - xq / 2,
-                  Nq = Wq < 6 * mq,
-                  aq = Nq ? (window.innerWidth - xq) / 2 - Zq.d : Wq;
-                Eq.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(aq,14*mq)))}px`), Yq(Nq)
+          t: ZC
+        } = (0, mC.y)(), QC = (0, wC.useRef)(null), bC = function(CC, zC) {
+          const [ZC, QC] = (0, wC.useState)(!1);
+          return (0, wC.useLayoutEffect)((() => {
+            const zC = CC.current;
+            if (!zC) return;
+            const ZC = document.querySelector(`.${dC.e}`),
+              wC = document.querySelector(`.${dC.h}`),
+              bC = () => {
+                var CC;
+                const bC = zC.querySelector(".FrontlineTeamTrack"),
+                  nC = (0, oC.getRemInPx)(),
+                  fC = zC.getBoundingClientRect().width - 2 * (null !== (CC = null === bC || void 0 === bC ? void 0 : bC.getBoundingClientRect().width) && void 0 !== CC ? CC : 0),
+                  qC = window.innerWidth / 2,
+                  FC = ZC ? ZC.getBoundingClientRect().right : 0,
+                  WC = wC ? wC.getBoundingClientRect().left : window.innerWidth,
+                  NC = Math.min(qC - FC, WC - qC) - dC.c - fC / 2,
+                  MC = NC < 6 * nC,
+                  gC = MC ? (window.innerWidth - fC) / 2 - dC.c : NC;
+                zC.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(gC,14*nC)))}px`), QC(MC)
               };
-            Oq();
-            const mq = new ResizeObserver(Oq);
-            for (const qq of [Eq, gq, lq]) qq && mq.observe(qq);
-            return window.addEventListener("resize", Oq), () => {
-              mq.disconnect(), window.removeEventListener("resize", Oq)
+            bC();
+            const nC = new ResizeObserver(bC);
+            for (const CC of [zC, ZC, wC]) CC && nC.observe(CC);
+            return window.addEventListener("resize", bC), () => {
+              nC.disconnect(), window.removeEventListener("resize", bC)
             }
-          }), [qq, Eq]), gq
-        }(Yq, "scoreboard" === Eq.wire[0]);
-        if ("scoreboard" !== Eq.wire[0]) return null;
-        const [, mq, xq, cq, uq, , Bq] = Eq.wire, Wq = "Red" === mq ? "Blue" : "Red";
-        return (0, pq.jsxs)("div", {
-          className: bq()("FrontlineScoreboardContainer", {
-            Below: Oq
+          }), [CC, zC]), ZC
+        }(QC, "scoreboard" === zC.wire[0]);
+        if ("scoreboard" !== zC.wire[0]) return null;
+        const [, nC, fC, qC, FC, , WC] = zC.wire, NC = "Red" === nC ? "Blue" : "Red";
+        return (0, cC.jsxs)("div", {
+          className: KC()("FrontlineScoreboardContainer", {
+            Below: bC
           }),
-          children: [(0, pq.jsxs)("div", {
-            ref: Yq,
+          children: [(0, cC.jsxs)("div", {
+            ref: QC,
             className: "FrontlineScoreboard",
-            children: [(0, pq.jsx)(eq, {}), (0, pq.jsx)(Kq, {
-              team: mq,
-              tickets: xq,
-              goal: uq,
+            children: [(0, cC.jsx)(kC, {}), (0, cC.jsx)(UC, {
+              team: nC,
+              tickets: fC,
+              goal: FC,
               side: "Friendly"
-            }), (0, pq.jsx)("div", {
+            }), (0, cC.jsx)("div", {
               className: "FrontlinePoints",
-              children: Bq.map((qq => (0, pq.jsx)(Jq, {
+              children: WC.map((CC => (0, cC.jsx)(sC, {
                 className: "FrontlinePoint",
-                point: qq
-              }, qq[0])))
-            }), (0, pq.jsx)(Kq, {
-              team: Wq,
-              tickets: cq,
-              goal: uq,
+                point: CC
+              }, CC[0])))
+            }), (0, cC.jsx)(UC, {
+              team: NC,
+              tickets: qC,
+              goal: FC,
               side: "Enemy"
             })]
-          }), (0, pq.jsxs)("div", {
+          }), (0, cC.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, pq.jsx)(Iq, {
-              endsAt: Eq.endsAt
-            }), (0, pq.jsx)("div", {
+            children: [(0, cC.jsx)(OC, {
+              endsAt: zC.endsAt
+            }), (0, cC.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: gq("frontlineHud:ticketGoal", {
-                goal: uq
+              children: ZC("frontlineHud:ticketGoal", {
+                goal: FC
               })
             })]
           })]
         })
       }));
 
-    function Kq(qq) {
+    function UC(CC) {
       let {
-        team: Eq,
-        tickets: gq,
-        goal: Yq,
-        side: lq
-      } = qq;
+        team: zC,
+        tickets: ZC,
+        goal: QC,
+        side: wC
+      } = CC;
       const {
-        t: Oq
-      } = (0, fq.v)(), mq = String(gq).padStart(3, "0"), xq = mq.search(/[1-9]/), Aq = -1 === xq ? mq : mq.slice(0, xq), cq = Math.min(20, Math.floor(gq / Yq * 20));
-      return (0, pq.jsxs)("div", {
-        className: bq()("FrontlineTeamScore", lq, `Team-${Eq}`),
-        children: [(0, pq.jsxs)("div", {
+        t: bC
+      } = (0, mC.y)(), nC = String(ZC).padStart(3, "0"), fC = nC.search(/[1-9]/), oC = -1 === fC ? nC : nC.slice(0, fC), qC = Math.min(20, Math.floor(ZC / QC * 20));
+      return (0, cC.jsxs)("div", {
+        className: KC()("FrontlineTeamScore", wC, `Team-${zC}`),
+        children: [(0, cC.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, pq.jsx)("span", {
+          children: [(0, cC.jsx)("span", {
             className: "Lead",
-            children: Aq
-          }), -1 !== xq && mq.slice(xq)]
-        }), (0, pq.jsxs)("div", {
+            children: oC
+          }), -1 !== fC && nC.slice(fC)]
+        }), (0, cC.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, pq.jsx)("div", {
+          children: [(0, cC.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: Oq(Gq[Eq])
-          }), (0, pq.jsx)(Cq, {
+            children: bC(uC[zC])
+          }), (0, cC.jsx)(BC, {
             segments: 20,
-            lit: cq
+            lit: qC
           })]
         })]
       })
     }
 
-    function Cq(qq) {
+    function BC(CC) {
       let {
-        segments: Eq,
-        lit: gq
-      } = qq;
-      return (0, pq.jsx)("div", {
+        segments: zC,
+        lit: ZC
+      } = CC;
+      return (0, cC.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: Eq
-        }, ((qq, Eq) => (0, pq.jsx)("i", {
-          className: bq()({
-            Lit: Eq < gq
+          length: zC
+        }, ((CC, zC) => (0, cC.jsx)("i", {
+          className: KC()({
+            Lit: zC < ZC
           })
-        }, Eq)))
+        }, zC)))
       })
     }
 
-    function Iq(qq) {
+    function OC(CC) {
       let {
-        endsAt: Eq
-      } = qq;
-      const gq = Math.max(0, Math.ceil(Lq(Eq)));
-      return (0, pq.jsxs)("div", {
-        className: bq()("FrontlineClock", {
-          Urgent: gq <= 60
+        endsAt: zC
+      } = CC;
+      const ZC = Math.max(0, Math.ceil(rC(zC)));
+      return (0, cC.jsxs)("div", {
+        className: KC()("FrontlineClock", {
+          Urgent: ZC <= 60
         }),
-        children: [Math.floor(gq / 60), ":", String(gq % 60).padStart(2, "0")]
+        children: [Math.floor(ZC / 60), ":", String(ZC % 60).padStart(2, "0")]
       })
     }
 
-    function eq() {
-      return (0, pq.jsxs)(pq.Fragment, {
-        children: [(0, pq.jsx)("i", {
+    function kC() {
+      return (0, cC.jsxs)(cC.Fragment, {
+        children: [(0, cC.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, pq.jsx)("i", {
+        }), (0, cC.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var Dq = gq(36736),
-      qE = gq(1241),
-      EE = gq(38471),
-      gE = gq(38505);
-    class YE {
-      constructor(qq) {
-        var Eq;
-        this.hud = qq, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var VC = ZC(36558),
+      Cz = ZC(1192),
+      zz = ZC(38319),
+      Zz = ZC(38369);
+    class Qz {
+      constructor(CC) {
+        var zC;
+        this.hud = CC, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.eN = !1, this.EQ = () => {
+        }, this.render = null, this.Sg = !1, this.mG = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.EQ), null === (Eq = window.visualViewport) || void 0 === Eq || Eq.addEventListener("resize", this.EQ)
+        }, window.addEventListener("resize", this.mG), null === (zC = window.visualViewport) || void 0 === zC || zC.addEventListener("resize", this.mG)
       }
-      bindMarker(qq) {
-        let Eq = this.refs.get(qq);
-        return Eq || (Eq = Eq => {
-          var gq;
-          null === (gq = this.markers.get(qq)) || void 0 === gq || gq.stopObserving(), this.markers.delete(qq), Eq && !this.eN && this.markers.set(qq, this.mount(Eq))
-        }, this.refs.set(qq, Eq)), Eq
+      bindMarker(CC) {
+        let zC = this.refs.get(CC);
+        return zC || (zC = zC => {
+          var ZC;
+          null === (ZC = this.markers.get(CC)) || void 0 === ZC || ZC.stopObserving(), this.markers.delete(CC), zC && !this.Sg && this.markers.set(CC, this.mount(zC))
+        }, this.refs.set(CC, zC)), zC
       }
-      frame(qq, Eq) {
-        this.render = qq;
-        const gq = this.hud.getScoreboard().wire;
-        if ("scoreboard" === gq[0] && 0 !== this.markers.size)
-          for (const [Yq, , , , , , lq] of gq[6]) {
-            const qq = this.markers.get(Yq);
-            qq && lq && (qq.target ??= [0, 0, 0], qq.target[0] = lq[0], qq.target[1] = lq[1] + 2.5, qq.target[2] = lq[2], this.place(qq), this.AY(qq, Eq && Math.hypot(lq[0] - Eq[0], lq[1] - Eq[1], lq[2] - Eq[2])))
+      frame(CC, zC) {
+        this.render = CC;
+        const ZC = this.hud.getScoreboard().wire;
+        if ("scoreboard" === ZC[0] && 0 !== this.markers.size)
+          for (const [QC, , , , , , wC] of ZC[6]) {
+            const CC = this.markers.get(QC);
+            CC && wC && (CC.target ??= [0, 0, 0], CC.target[0] = wC[0], CC.target[1] = wC[1] + 2.5, CC.target[2] = wC[2], this.place(CC), this.MQ(CC, zC && Math.hypot(wC[0] - zC[0], wC[1] - zC[1], wC[2] - zC[2])))
           }
       }
       dispose() {
-        var qq;
-        this.eN = !0, window.removeEventListener("resize", this.EQ), null === (qq = window.visualViewport) || void 0 === qq || qq.removeEventListener("resize", this.EQ);
-        for (const Eq of this.markers.values()) Eq.stopObserving();
+        var CC;
+        this.Sg = !0, window.removeEventListener("resize", this.mG), null === (CC = window.visualViewport) || void 0 === CC || CC.removeEventListener("resize", this.mG);
+        for (const zC of this.markers.values()) zC.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(qq) {
+      place(CC) {
         const {
-          render: Eq,
-          viewport: gq
+          render: zC,
+          viewport: ZC
         } = this;
-        if (!Eq || !qq.target) return;
-        const Yq = (50 - Eq.screenBandPct.y) / 100 * gq.height,
-          lq = {
-            x: qq.halfSize.width + 8,
-            top: qq.halfSize.height + 8,
-            bottom: qq.halfSize.height + qq.labelsBelow + Yq
+        if (!zC || !CC.target) return;
+        const QC = (50 - zC.screenBandPct.y) / 100 * ZC.height,
+          wC = {
+            x: CC.halfSize.width + 8,
+            top: CC.halfSize.height + 8,
+            bottom: CC.halfSize.height + CC.labelsBelow + QC
           },
-          Oq = Eq.projectWorldPosToViewport(qq.target),
-          mq = null !== Oq && void 0 !== Oq ? Oq : Eq.projectWorldPosToScreenPos(qq.target),
-          xq = (0, gE.c)({
-            x: mq.x,
-            y: mq.y,
-            text: Oq
-          }, lq, gq);
-        (0, EE.d)(qq.root, Math.round(100 * xq.x) / 100, Math.round(100 * xq.y) / 100)
+          bC = zC.projectWorldPosToViewport(CC.target),
+          nC = null !== bC && void 0 !== bC ? bC : zC.projectWorldPosToScreenPos(CC.target),
+          fC = (0, Zz.b)({
+            x: nC.x,
+            y: nC.y,
+            text: bC
+          }, wC, ZC);
+        (0, zz.e)(CC.root, Math.round(100 * fC.x) / 100, Math.round(100 * fC.y) / 100)
       }
-      AY(qq, Eq) {
-        if (null === Eq) return void(null !== qq.metres && (qq.metres = null, qq.distance.textContent = ""));
-        const gq = Date.now();
-        (null === qq.metres || (0, Dq.b)(Eq, qq.metres, qq.metresShownAt)) && (qq.metres = Math.round(Eq), qq.metresShownAt = gq, qq.distance.textContent = (0, fq.s)(qE.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(qq.metres)
+      MQ(CC, zC) {
+        if (null === zC) return void(null !== CC.metres && (CC.metres = null, CC.distance.textContent = ""));
+        const ZC = Date.now();
+        (null === CC.metres || (0, VC.d)(zC, CC.metres, CC.metresShownAt)) && (CC.metres = Math.round(zC), CC.metresShownAt = ZC, CC.distance.textContent = (0, mC.u)(Cz.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(CC.metres)
         }))
       }
-      mount(qq) {
-        const Eq = {
-            root: qq,
-            distance: qq.querySelector(".FrontlinePointMarkerDistance"),
+      mount(CC) {
+        const zC = {
+            root: CC,
+            distance: CC.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          gq = qq.querySelector(".FrontlinePointMarkerLabels"),
-          Yq = new ResizeObserver((() => {
-            Eq.halfSize = {
-              width: Math.max(qq.offsetWidth, gq.offsetWidth) / 2,
-              height: qq.offsetHeight / 2
-            }, Eq.labelsBelow = gq.offsetTop + gq.offsetHeight - qq.offsetHeight, this.place(Eq)
+          ZC = CC.querySelector(".FrontlinePointMarkerLabels"),
+          QC = new ResizeObserver((() => {
+            zC.halfSize = {
+              width: Math.max(CC.offsetWidth, ZC.offsetWidth) / 2,
+              height: CC.offsetHeight / 2
+            }, zC.labelsBelow = ZC.offsetTop + ZC.offsetHeight - CC.offsetHeight, this.place(zC)
           }));
-        return Yq.observe(qq, {
+        return QC.observe(CC, {
           box: "border-box"
-        }), Yq.observe(gq, {
+        }), QC.observe(ZC, {
           box: "border-box"
-        }), Eq.stopObserving = () => {
-          Yq.disconnect()
-        }, Eq
+        }), zC.stopObserving = () => {
+          QC.disconnect()
+        }, zC
       }
     }
-    var lE = gq(6310),
-      OE = gq(2538);
-    const mE = "frontlineRoundEndChanged";
-    class xE {
+    var wz = ZC(6453),
+      bz = ZC(2604);
+    const nz = "frontlineRoundEndChanged";
+    class fz {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      ga(qq) {
-        const Eq = "roundEnd" === qq[0] ? performance.now() + qq[5] : 0;
+      Ag(CC) {
+        const zC = "roundEnd" === CC[0] ? performance.now() + CC[5] : 0;
         this.view = {
-          wire: qq,
+          wire: CC,
           key: this.view.key + 1,
-          endsAt: Eq
-        }, cq.i.TV(mE, this.view, !0)
+          endsAt: zC
+        }, qC.o.bp(nz, this.view, !0)
       }
     }
-    const AE = (0, lq.lazy)((() => (0, OE.b)(gq.e(192).then((() => gq(41509))), (qq => qq.FrontlineMvpLineup)))),
-      cE = [4800, 4e3, 3200],
-      uE = [1, 0, 2],
-      BE = {
+    const oz = (0, wC.lazy)((() => (0, bz.e)(ZC.e(199).then((() => ZC(41576))), (CC => CC.FrontlineMvpLineup)))),
+      qz = [4800, 4e3, 3200],
+      Fz = [1, 0, 2],
+      Wz = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      WE = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      Nz = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function NE(qq) {
+    function Mz(CC) {
       let {
-        controller: Eq
-      } = qq;
-      const gq = (0, Mq.h)(mE, Eq.getView()),
-        Yq = Lq(gq.endsAt);
-      return "roundEnd" !== gq.wire[0] || 1e3 * Yq < -2e3 ? null : (0, pq.jsx)(aE, {
-        wire: gq.wire,
-        secondsLeft: Math.max(0, Math.ceil(Yq))
-      }, gq.key)
+        controller: zC
+      } = CC;
+      const ZC = (0, HC.f)(nz, zC.getView()),
+        QC = rC(ZC.endsAt);
+      return "roundEnd" !== ZC.wire[0] || 1e3 * QC < -2e3 ? null : (0, cC.jsx)(gz, {
+        wire: ZC.wire,
+        secondsLeft: Math.max(0, Math.ceil(QC))
+      }, ZC.key)
     }
-    const aE = (0, lq.memo)((function(qq) {
+    const gz = (0, wC.memo)((function(CC) {
       let {
-        wire: Eq,
-        secondsLeft: gq
-      } = qq;
+        wire: zC,
+        secondsLeft: ZC
+      } = CC;
       const {
-        t: Oq
-      } = (0, fq.v)(), [, mq, xq, Aq, cq, , uq, Bq] = Eq, Wq = (0, lq.useMemo)((() => uE.filter((qq => qq < Bq.length))), [Bq]), Nq = (0, lq.useMemo)((() => Wq.map((qq => {
-        const [, , , , , Eq, gq] = Bq[qq];
+        t: bC
+      } = (0, mC.y)(), [, nC, fC, oC, qC, , FC, WC] = zC, NC = (0, wC.useMemo)((() => Fz.filter((CC => CC < WC.length))), [WC]), MC = (0, wC.useMemo)((() => NC.map((CC => {
+        const [, , , , , zC, ZC] = WC[CC];
         return {
-          cosmetics: Yq.map(((qq, gq) => [qq, Eq[gq]])),
-          size: 0 === qq ? 1.15 : .85,
+          cosmetics: QC.map(((CC, ZC) => [CC, zC[ZC]])),
+          size: 0 === CC ? 1.15 : .85,
           heldGun: {
-            name: gq,
-            aimed: 0 === qq
+            name: ZC,
+            aimed: 0 === CC
           },
-          showAfterMs: cE[qq]
+          showAfterMs: qz[CC]
         }
-      }))), [Bq, Wq]);
-      return (0, pq.jsxs)("div", {
-        className: bq()("FrontlineRoundEnd", `Result-${mq}`),
+      }))), [WC, NC]);
+      return (0, cC.jsxs)("div", {
+        className: KC()("FrontlineRoundEnd", `Result-${nC}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, pq.jsx)("div", {
+        children: [(0, cC.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, pq.jsxs)("div", {
+        }), (0, cC.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, pq.jsxs)("div", {
+          children: [(0, cC.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, pq.jsx)("i", {
+            children: [(0, cC.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, pq.jsx)("i", {
+            }), (0, cC.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (aq = Oq(BE[mq]), /\p{Script=Arabic}/u.test(aq) ? [aq] : (0, lE.b)(aq)).map(((qq, Eq) => (0, pq.jsx)("span", {
+            }), (gC = bC(Wz[nC]), /\p{Script=Arabic}/u.test(gC) ? [gC] : (0, wz.b)(gC)).map(((CC, zC) => (0, cC.jsx)("span", {
               style: {
-                "--letter": Eq
+                "--letter": zC
               },
-              children: qq
-            }, Eq)))]
-          }), (0, pq.jsxs)("div", {
+              children: CC
+            }, zC)))]
+          }), (0, cC.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [xq && "victory" === mq && (0, pq.jsx)("span", {
+            children: [fC && "victory" === nC && (0, cC.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: Oq("frontlineRoundEnd:comeback")
-            }), (0, pq.jsxs)("span", {
+              children: bC("frontlineRoundEnd:comeback")
+            }), (0, cC.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, pq.jsx)("b", {
+              children: [(0, cC.jsx)("b", {
                 className: "Friendly",
-                children: Aq
-              }), " \u2013 ", (0, pq.jsx)("b", {
+                children: oC
+              }), " \u2013 ", (0, cC.jsx)("b", {
                 className: "Enemy",
-                children: cq
+                children: qC
               })]
             })]
           })]
-        }), Wq.length > 0 && (0, pq.jsxs)("div", {
+        }), NC.length > 0 && (0, cC.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": Wq.length
+            "--columns": NC.length
           },
-          children: [(0, pq.jsx)(lq.Suspense, {
+          children: [(0, cC.jsx)(wC.Suspense, {
             fallback: null,
-            children: (0, pq.jsx)(AE, {
+            children: (0, cC.jsx)(oz, {
               className: "FrontlineRoundEndLineup",
-              players: Nq
+              players: MC
             })
-          }), Wq.map((qq => (0, pq.jsx)(VE, {
-            mvp: Bq[qq],
-            place: qq
-          }, qq)))]
-        }), (0, pq.jsx)("div", {
+          }), NC.map((CC => (0, cC.jsx)(Sz, {
+            mvp: WC[CC],
+            place: CC
+          }, CC)))]
+        }), (0, cC.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: Oq("frontlineRoundEnd:nextFront", {
-            map: uq,
-            seconds: String(gq)
+          children: bC("frontlineRoundEnd:nextFront", {
+            map: FC,
+            seconds: String(ZC)
           })
         })]
       });
-      var aq
+      var gC
     }));
 
-    function VE(qq) {
+    function Sz(CC) {
       let {
-        mvp: Eq,
-        place: gq
-      } = qq;
+        mvp: zC,
+        place: ZC
+      } = CC;
       const {
-        t: Yq
-      } = (0, fq.v)(), [lq, Oq, mq, xq, Aq] = Eq, [cq, uq] = Yq(function(qq, Eq) {
-        return 1 === Eq && "damage" !== qq ? `frontlineRoundEnd:${qq}One` : `frontlineRoundEnd:${qq}`
-      }(mq, xq), {
+        t: QC
+      } = (0, mC.y)(), [wC, bC, nC, fC, oC] = zC, [qC, FC] = QC(function(CC, zC) {
+        return 1 === zC && "damage" !== CC ? `frontlineRoundEnd:${CC}One` : `frontlineRoundEnd:${CC}`
+      }(nC, fC), {
         name: "\0",
-        count: xq.toLocaleString()
+        count: fC.toLocaleString()
       }).split("\0");
-      return (0, pq.jsxs)("div", {
-        className: bq()("FrontlineMvpCard", `Place-${gq+1}`, `Team-${Oq}`),
+      return (0, cC.jsxs)("div", {
+        className: KC()("FrontlineMvpCard", `Place-${ZC+1}`, `Team-${bC}`),
         style: {
-          "--revealMs": `${cE[gq]}ms`
+          "--revealMs": `${qz[ZC]}ms`
         },
-        children: [(0, pq.jsx)("i", {
+        children: [(0, cC.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, pq.jsx)("i", {
+        }), (0, cC.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, pq.jsx)("div", {
+        }), (0, cC.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: Yq(WE[gq])
-        }), (0, pq.jsxs)("div", {
+          children: QC(Nz[ZC])
+        }), (0, cC.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [cq, (0, pq.jsx)("span", {
+          children: [qC, (0, cC.jsx)("span", {
             className: "FrontlineMvpName",
-            children: lq
-          }), uq]
-        }), (0, pq.jsx)("div", {
+            children: wC
+          }), FC]
+        }), (0, cC.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: Aq
+          children: oC
         })]
       })
     }
-    const dE = function(qq, Eq, gq, Yq) {
+    const pz = function(CC, zC, ZC, QC) {
       let {
-        localPlayerId: mq
-      } = Yq;
-      const xq = new Sq,
-        Aq = new xE;
-      let cq = null,
-        uq = null,
-        Bq = null,
-        Wq = null,
-        Nq = null,
-        aq = [!1, !1];
-      const Vq = () => {
-        var qq, Eq;
-        const [gq, Yq] = aq;
-        null === (qq = uq) || void 0 === qq || qq.hG(!gq), null === (Eq = Bq) || void 0 === Eq || Eq.hG(!Yq)
+        localPlayerId: nC
+      } = QC;
+      const fC = new XC,
+        oC = new fz;
+      let qC = null,
+        FC = null,
+        WC = null,
+        NC = null,
+        MC = null,
+        gC = [!1, !1];
+      const SC = () => {
+        var CC, zC;
+        const [ZC, QC] = gC;
+        null === (CC = FC) || void 0 === CC || CC.IK(!ZC), null === (zC = WC) || void 0 === zC || zC.IK(!QC)
       };
       return {
-        onCreate: qq => {
-          cq = qq, uq = new oq(qq, mq), Bq = new tq(qq, mq), Wq = new YE(xq), Vq(), Nq = (0, Oq.r)((0, lq.createElement)(lq.Fragment, null, (0, lq.createElement)(Fq, {
-            hud: xq,
-            crosshair: uq,
-            damage: Bq,
-            markers: Wq
-          }), (0, lq.createElement)(NE, {
-            controller: Aq
+        onCreate: CC => {
+          qC = CC, FC = new RC(CC, nC), WC = new IC(CC, nC), NC = new Qz(fC), SC(), MC = (0, bC.C)((0, wC.createElement)(wC.Fragment, null, (0, wC.createElement)(DC, {
+            hud: fC,
+            crosshair: FC,
+            damage: WC,
+            markers: NC
+          }), (0, wC.createElement)(Mz, {
+            controller: oC
           })))
         },
         onClose: () => {
-          var qq, Eq, gq, Yq;
-          null === (qq = Nq) || void 0 === qq || qq(), null === (Eq = uq) || void 0 === Eq || Eq.dispose(), uq = null, null === (gq = Bq) || void 0 === gq || gq.dispose(), Bq = null, null === (Yq = Wq) || void 0 === Yq || Yq.dispose(), Wq = null, cq = null
+          var CC, zC, ZC, QC;
+          null === (CC = MC) || void 0 === CC || CC(), null === (zC = FC) || void 0 === zC || zC.dispose(), FC = null, null === (ZC = WC) || void 0 === ZC || ZC.dispose(), WC = null, null === (QC = NC) || void 0 === QC || QC.dispose(), NC = null, qC = null
         },
-        onAfterRender: (qq, Eq) => {
-          var gq, Yq, lq, Oq;
-          null === (gq = uq) || void 0 === gq || gq.frame(qq, Eq.tanHalfFovY), null === (Yq = Bq) || void 0 === Yq || Yq.frame(Eq.cameraHeading), null === (lq = Wq) || void 0 === lq || lq.frame(Eq, null !== (Oq = cq) && void 0 !== Oq && Oq.checkValid(mq) ? cq.Py(mq) : null)
+        onAfterRender: (CC, zC) => {
+          var ZC, QC, wC, bC;
+          null === (ZC = FC) || void 0 === ZC || ZC.frame(CC, zC.tanHalfFovY), null === (QC = WC) || void 0 === QC || QC.frame(zC.cameraHeading), null === (wC = NC) || void 0 === wC || wC.frame(zC, null !== (bC = qC) && void 0 !== bC && bC.checkValid(nC) ? qC.yG(nC) : null)
         },
-        onReceivedMessageFromServer: (qq, Eq) => {
-          "frontlineHud" === qq ? xq.ga(Eq) : "frontlineScoreboard" === qq ? xq.receiveScoreboard(Eq) : "frontlineRoundEnd" === qq ? Aq.ga(Eq) : "frontlinePrefs" === qq && (aq = Eq, Vq())
+        onReceivedMessageFromServer: (CC, zC) => {
+          "frontlineHud" === CC ? fC.Ag(zC) : "frontlineScoreboard" === CC ? fC.receiveScoreboard(zC) : "frontlineRoundEnd" === CC ? oC.Ag(zC) : "frontlinePrefs" === CC && (gC = zC, SC())
         }
       }
     }
   },
-  6310: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq
+  6453: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => wC
     });
-    const Yq = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const QC = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function lq(qq) {
-      return null === Yq ? Array.from(qq) : Array.from(Yq.segment(qq), (qq => {
+    function wC(CC) {
+      return null === QC ? Array.from(CC) : Array.from(QC.segment(CC), (CC => {
         let {
-          segment: Eq
-        } = qq;
-        return Eq
+          segment: zC
+        } = CC;
+        return zC
       }))
     }
   },
-  38471: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq,
-      e: () => Oq
+  38319: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC,
+      i: () => bC
     });
-    const Yq = new WeakMap;
+    const QC = new WeakMap;
 
-    function lq(qq) {
-      let Eq = Yq.get(qq);
-      return Eq || (Eq = {
-        hidden: qq.hidden,
+    function wC(CC) {
+      let zC = QC.get(CC);
+      return zC || (zC = {
+        hidden: CC.hidden,
         x: NaN,
         y: NaN
-      }, Yq.set(qq, Eq)), Eq
+      }, QC.set(CC, zC)), zC
     }
 
-    function Oq(qq, Eq) {
-      const gq = lq(qq);
-      gq.hidden !== Eq && (gq.hidden = Eq, qq.hidden = Eq)
+    function bC(CC, zC) {
+      const ZC = wC(CC);
+      ZC.hidden !== zC && (ZC.hidden = zC, CC.hidden = zC)
     }
 
-    function mq(qq, Eq, gq) {
-      const Yq = lq(qq);
-      Yq.x === Eq && Yq.y === gq || (Yq.x = Eq, Yq.y = gq, qq.style.translate = `${Eq}vw ${gq}vh`)
+    function nC(CC, zC, ZC) {
+      const QC = wC(CC);
+      QC.x === zC && QC.y === ZC || (QC.x = zC, QC.y = ZC, CC.style.translate = `${zC}vw ${ZC}vh`)
     }
   },
-  37111: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq
+  36938: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC
     });
-    const Yq = {
+    const QC = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

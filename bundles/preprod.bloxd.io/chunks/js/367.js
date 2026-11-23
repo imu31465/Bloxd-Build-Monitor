@@ -1,19 +1,19 @@
 export const id = 367;
 export const ids = [367];
 export const modules = {
-  61432: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      passCubePixelShader: () => mq
+  61081: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      lodPixelShader: () => nC
     });
-    var Yq = gq(39617);
-    const lq = "passCubePixelShader",
-      Oq = "varying vec2 vUV;uniform samplerCube textureSampler;\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) \n{vec2 uv=vUV*2.0-1.0;\n#ifdef POSITIVEX\ngl_FragColor=textureCube(textureSampler,vec3(1.001,uv.y,uv.x));\n#endif\n#ifdef NEGATIVEX\ngl_FragColor=textureCube(textureSampler,vec3(-1.001,uv.y,uv.x));\n#endif\n#ifdef POSITIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,1.001,uv.x));\n#endif\n#ifdef NEGATIVEY\ngl_FragColor=textureCube(textureSampler,vec3(uv.y,-1.001,uv.x));\n#endif\n#ifdef POSITIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,1.001));\n#endif\n#ifdef NEGATIVEZ\ngl_FragColor=textureCube(textureSampler,vec3(uv,-1.001));\n#endif\n}";
-    Yq.d.ShadersStore[lq] || (Yq.d.ShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
+    var QC = ZC(39674);
+    const wC = "lodPixelShader",
+      bC = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler2D textureSampler;uniform float lod;uniform vec2 texSize;uniform int gamma;void main(void)\n{ivec2 textureDimensions=textureSize(textureSampler,0);gl_FragColor=texelFetch(textureSampler,ivec2(vUV*vec2(textureDimensions)),int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
+    QC.b.ShadersStore[wC] || (QC.b.ShadersStore[wC] = bC);
+    const nC = {
+      name: wC,
+      shader: bC
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

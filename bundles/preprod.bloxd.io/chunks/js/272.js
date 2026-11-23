@@ -1,9 +1,97 @@
 export const id = 272;
-export const ids = [272];
+export const ids = [271, 272];
 export const modules = {
-  40952: qq => {
-    qq.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAEWSURBVHic7dohEoJAFMZxcCgSLHIOq8Vs8QSewOxJzJ7AO5gtVs+hxYBREwzjMDDLW/zA/f/iusCbz6fCG+PI6HrevS3H3x9P0/U321NsOX5iuvofSHydaJqmTvtfee7r0iZ0gO8Ttr2zrp3St+A7gADUBagRgLoANQJQF6Dm/T5gaL/zbegAXycayr29q+A7ILY+z49d8B2QWCcyYxd8BzjP026Xfa/fGYvVwTTjcxV8BxCAugA1AlAXoEYA6gLUCEBdgBoBqAtQK+cB1VleMd2pWysMZf9yfeT/ARblPCCrLDatFYa2vys6IJvPoujr81UkXbcWNbym3N9V8B1AAOoC1AhAXYAaAagLAAAAAAAAAIBf+gCCOVGXxesVtAAAAABJRU5ErkJggg==","alphaCutoff":0.05,"vertices":[0.83524,0.32258,0.4691,0.5,0.51613,0.9021,0.83524,0.70968,0.0361,0.5,0.90323,0.4691,0.16476,0.32258,0.4691,0.5,0.12903,0.0361,0.16476,0.70968,0.0361,0.5,0.51613,-0.3969,0.16476,0.32258,0.4691,0.5,0.51613,0.9021,0.5,0.12903,0.0361,0.83524,0.32258,0.4691,0.5,0.51613,-0.3969,0.83524,0.70968,0.0361,0.16476,0.70968,0.0361,0.5,0.90323,0.4691,0.5,0.12903,0.0361,0.83524,0.32258,0.4691,0.5,0.51613,-0.3969,0.83524,0.70968,0.0361,0.5,0.51613,0.9021,0.16476,0.32258,0.4691,0.5,0.90323,0.4691,0.16476,0.70968,0.0361,0.94698,0.25806,0.5413,0.5,0.51613,1.1186,0.94698,0.3871,0.3969,0.5,0.64516,0.9743,0.05302,0.25806,0.5413,0.5,0,-0.0361,0.05302,0.3871,0.3969,0.5,0.12903,-0.1804,0.05302,0.25806,0.5413,0.5,0.51613,1.1186,0.5,0,-0.0361,0.94698,0.25806,0.5413,0.5,0.12903,-0.1804,0.94698,0.3871,0.3969,0.05302,0.3871,0.3969,0.5,0.64516,0.9743,0.5,0,-0.0361,0.94698,0.25806,0.5413,0.5,0.12903,-0.1804,0.94698,0.3871,0.3969,0.5,0.51613,1.1186,0.05302,0.25806,0.5413,0.5,0.64516,0.9743,0.05302,0.3871,0.3969,0.94698,0.6129,0.1443,0.5,0.87097,0.7217,0.94698,0.74194,0,0.5,1,0.5774,0.05302,0.6129,0.1443,0.5,0.35484,-0.433,0.05302,0.74194,0,0.5,0.48387,-0.5774,0.05302,0.6129,0.1443,0.5,0.87097,0.7217,0.5,0.35484,-0.433,0.94698,0.6129,0.1443,0.5,0.48387,-0.5774,0.94698,0.74194,0,0.05302,0.74194,0,0.5,1,0.5774,0.5,0.35484,-0.433,0.94698,0.6129,0.1443,0.5,0.48387,-0.5774,0.94698,0.74194,0,0.5,0.87097,0.7217,0.05302,0.6129,0.1443,0.5,1,0.5774,0.05302,0.74194,0],"uvs":[0.000244,0.500244,0.187256,0.500244,0.000244,0.687256,0.187256,0.687256,0.375244,0.500244,0.562256,0.500244,0.375244,0.687256,0.562256,0.687256,0.374756,0.499756,0.187744,0.499756,0.374756,0.312744,0.187744,0.312744,0.562256,0.312744,0.375244,0.312744,0.562256,0.499756,0.375244,0.499756,0.562744,0.500244,0.749756,0.500244,0.562744,0.687256,0.749756,0.687256,0.187744,0.500244,0.374756,0.500244,0.187744,0.687256,0.374756,0.687256,0.000244,0.250244,0.249756,0.250244,0.000244,0.312256,0.249756,0.312256,0.500244,0.250244,0.749756,0.250244,0.500244,0.312256,0.749756,0.312256,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.312256,0.999756,0.312256,0.250244,0.250244,0.499756,0.250244,0.250244,0.312256,0.499756,0.312256,0.000244,0.250244,0.249756,0.250244,0.000244,0.312256,0.249756,0.312256,0.500244,0.250244,0.749756,0.250244,0.500244,0.312256,0.749756,0.312256,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.312256,0.999756,0.312256,0.250244,0.250244,0.499756,0.250244,0.250244,0.312256,0.499756,0.312256],"indices":[0,2,1,2,3,1,4,6,5,6,7,5,8,10,9,10,11,9,12,14,13,14,15,13,16,18,17,18,19,17,20,22,21,22,23,21,24,26,25,26,27,25,28,30,29,30,31,29,32,34,33,34,35,33,36,38,37,38,39,37,40,42,41,42,43,41,44,46,45,46,47,45,48,50,49,50,51,49,52,54,53,54,55,53,56,58,57,58,59,57,60,62,61,62,63,61,64,66,65,66,67,65,68,70,69,70,71,69],"shades":[0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85]}')
+  40888: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      gamePackSource: () => bC
+    });
+    var QC = ZC(4925),
+      wC = ZC(1439);
+
+    function bC(CC) {
+      return {
+        packKey: async zC => (await wC.d.getGame(CC, zC, !0)).customTexturePackKey,
+        fetchPack: QC.d
+      }
+    }
+  },
+  50720: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      fetchGuestContext: () => NC,
+      guestJoinTarget: () => RC,
+      guestJoinWithPack: () => gC,
+      guestPackForGame: () => MC,
+      invalidateGuestTrafficCode: () => GC
+    });
+    var QC = ZC(1149),
+      wC = ZC(1439),
+      bC = ZC(77),
+      nC = ZC(36342),
+      fC = ZC(1078),
+      oC = ZC(40574),
+      qC = ZC(40888),
+      FC = ZC(40538);
+
+    function WC() {
+      if (bC.featureFlags.useTurnstile) throw new oC.TurnstilePageError
+    }
+
+    function NC() {
+      return (0, fC.fetchAnonymousUserContext)().catch((CC => (console.warn("the guest context didn't load", CC), null)))
+    }
+    async function MC(CC, zC, ZC, QC) {
+      try {
+        const wC = await ZC;
+        if (null === wC) return void console.warn(`the texture pack step for ${CC} has no guest context: the pack in play stays`);
+        await zC.packForGame(CC, (0, qC.gamePackSource)(wC), QC)
+      } catch (wC) {
+        console.warn(`the texture pack step for ${CC} failed: the pack in play stays`, wC)
+      }
+    }
+    async function gC(CC, zC, ZC, QC) {
+      WC();
+      const wC = NC();
+      return await ZC(((zC, ZC) => MC(CC, zC, wC, ZC))), RC(CC, zC, QC(), await wC)
+    }
+    let SC = null,
+      pC = null;
+    async function PC() {
+      if ((null === SC || SC.hasExpired()) && (pC ??= (0, fC.fetchAnonymousUserContext)().then((CC => {
+          SC = CC
+        })).finally((() => {
+          pC = null
+        })), await pC), null === SC) throw new Error("no guest context to post as");
+      return SC.getMetricsCookies()
+    }
+    async function GC() {
+      var CC;
+      await (null === (CC = SC) || void 0 === CC ? void 0 : CC.invalidateTrafficCode())
+    }
+    async function RC(CC, zC, ZC) {
+      let bC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      WC();
+      const oC = null !== bC && void 0 !== bC ? bC : await (0, fC.fetchAnonymousUserContext)();
+      if (SC = oC, oC.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const qC = await wC.d.matchmakePlayer(oC, zC, CC, (0, nC.b)()),
+        NC = performance.now();
+      if (!("gameServerHost" in qC)) throw new Error(`matchmaking refused: ${qC.failReason}`);
+      const MC = QC.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(qC.gameServerHost);
+      if (MC.isError()) throw new Error(`no socket URL for ${qC.gameServerHost}: ${MC.asError().message}`);
+      const gC = {
+        endpoint: MC.getValue(),
+        gameNameWithVariation: qC.gameNameWithVariation,
+        lobbyName: qC.lobbyName
+      };
+      return {
+        target: {
+          ...await (0, FC.c)(oC, gC, ZC, !1),
+          postCookies: PC
+        },
+        matchedAt: NC,
+        freshMs: FC.b
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

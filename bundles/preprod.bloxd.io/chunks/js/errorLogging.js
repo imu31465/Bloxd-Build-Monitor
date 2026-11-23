@@ -1,139 +1,139 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  6573: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      BaseExtension: () => qg,
-      BaseInstrumentation: () => Eg,
-      BaseTransport: () => Il,
-      CSPInstrumentation: () => rl,
-      ConsoleInstrumentation: () => fg,
-      ConsoleTransport: () => gO,
-      EVENT_CLICK: () => oE,
-      EVENT_NAVIGATION: () => PE,
-      EVENT_ROUTE_CHANGE: () => hE,
-      EVENT_SESSION_EXTEND: () => rE,
-      EVENT_SESSION_RESUME: () => tE,
-      EVENT_SESSION_START: () => yE,
-      EVENT_VIEW_CHANGED: () => QE,
-      ErrorsInstrumentation: () => Tg,
-      FetchTransport: () => PO,
-      InternalLoggerLevel: () => FE,
-      LogLevel: () => og,
-      MAX_SESSION_PERSISTENCE_TIME: () => Aq,
-      NavigationInstrumentation: () => Jl,
-      Observable: () => Hg,
-      PerformanceInstrumentation: () => XY,
-      PersistentSessionsManager: () => pE,
-      SESSION_EXPIRATION_TIME: () => Oq,
-      SESSION_INACTIVITY_TIME: () => mq,
-      STORAGE_KEY: () => lq,
-      SessionInstrumentation: () => Yg,
-      TransportItemType: () => el,
-      UserActionInstrumentation: () => tl,
-      UserActionState: () => al,
-      VERSION: () => gg,
-      ViewInstrumentation: () => Sg,
-      VolatileSessionsManager: () => GE,
-      WebVitalsInstrumentation: () => MY,
-      allLogLevels: () => Qg,
-      browserMeta: () => Xl,
-      buildStackFrame: () => lg,
-      captureMetas: () => SO,
-      createInternalLogger: () => vO,
-      createPromiseBuffer: () => WO,
-      createSession: () => Kl,
-      deepEqual: () => HE,
-      defaultEventDomain: () => Yq,
-      defaultExceptionType: () => vg,
-      defaultGlobalObjectKey: () => hO,
-      defaultInternalLoggerLevel: () => XE,
-      defaultLogLevel: () => Pg,
-      faro: () => Vq,
-      genShortID: () => jE,
-      getCurrentTimestamp: () => aE,
-      getDataFromSafariExtensions: () => Wg,
-      getIgnoreUrls: () => wq,
-      getInternalFaroFromGlobalObject: () => Wq,
-      getStackFramesFromError: () => ag,
-      getTransportBody: () => EO,
-      getUrlFromResource: () => Cq,
-      getWebInstrumentations: () => kl,
-      globalObject: () => uq,
-      initializeFaro: () => IO,
-      internalGlobalObjectKey: () => Bq,
-      isArray: () => iq,
-      isBoolean: () => vq,
-      isDomError: () => Lq,
-      isDomException: () => Jq,
-      isElement: () => Rq,
-      isElementDefined: () => kq,
-      UN: () => Xq,
-      isError: () => pq,
-      isErrorDefined: () => Sq,
-      isErrorEvent: () => Gq,
-      isEvent: () => zq,
-      isEventDefined: () => Tq,
-      isFunction: () => bq,
-      isInstanceOf: () => oq,
-      isInt: () => rq,
-      isInternalFaroOnGlobalObject: () => aq,
-      isMap: () => Fq,
-      isMapDefined: () => Uq,
-      isNull: () => Qq,
-      isNumber: () => tq,
-      isObject: () => nq,
-      isPrimitive: () => Mq,
-      isRegExp: () => Zq,
-      isString: () => yq,
-      isSymbol: () => hq,
-      isSyntheticEvent: () => sq,
-      isThenable: () => fq,
-      isToString: () => Hq,
-      isTypeof: () => jq,
-      isUndefined: () => Pq,
-      makeCoreConfig: () => iO,
-      noop: () => UE,
-      osMeta: () => wl,
-      parseStacktrace: () => Vg,
-      sdkMeta: () => Cl,
-      setInternalFaroOnGlobalObject: () => Nq,
-      transportItemTypeToBodyKey: () => Dl,
-      unknownString: () => zg,
-      userActionDataAttribute: () => wY,
-      userActionTimeoutDataAttribute: () => KY
+  6691: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      BaseExtension: () => CZ,
+      BaseInstrumentation: () => zZ,
+      BaseTransport: () => kw,
+      CSPInstrumentation: () => iw,
+      ConsoleInstrumentation: () => mZ,
+      ConsoleTransport: () => Qb,
+      EVENT_CLICK: () => Rz,
+      EVENT_NAVIGATION: () => Az,
+      EVENT_ROUTE_CHANGE: () => ez,
+      EVENT_SESSION_EXTEND: () => iz,
+      EVENT_SESSION_RESUME: () => Iz,
+      EVENT_SESSION_START: () => Jz,
+      EVENT_VIEW_CHANGED: () => xz,
+      ErrorsInstrumentation: () => EZ,
+      FetchTransport: () => xb,
+      InternalLoggerLevel: () => Dz,
+      LogLevel: () => RZ,
+      MAX_SESSION_PERSISTENCE_TIME: () => oC,
+      NavigationInstrumentation: () => Tw,
+      Observable: () => GZ,
+      PerformanceInstrumentation: () => yQ,
+      PersistentSessionsManager: () => cz,
+      SESSION_EXPIRATION_TIME: () => bC,
+      SESSION_INACTIVITY_TIME: () => nC,
+      STORAGE_KEY: () => wC,
+      SessionInstrumentation: () => QZ,
+      TransportItemType: () => Vw,
+      UserActionInstrumentation: () => Iw,
+      UserActionState: () => gw,
+      VERSION: () => ZZ,
+      ViewInstrumentation: () => XZ,
+      VolatileSessionsManager: () => uz,
+      WebVitalsInstrumentation: () => HQ,
+      allLogLevels: () => xZ,
+      browserMeta: () => Lw,
+      buildStackFrame: () => wZ,
+      captureMetas: () => cb,
+      createInternalLogger: () => eb,
+      createPromiseBuffer: () => Mb,
+      createSession: () => Bw,
+      deepEqual: () => Gz,
+      defaultEventDomain: () => QC,
+      defaultExceptionType: () => vZ,
+      defaultGlobalObjectKey: () => hb,
+      defaultInternalLoggerLevel: () => yz,
+      defaultLogLevel: () => AZ,
+      faro: () => SC,
+      genShortID: () => Pz,
+      getCurrentTimestamp: () => gz,
+      getDataFromSafariExtensions: () => NZ,
+      getIgnoreUrls: () => LC,
+      getInternalFaroFromGlobalObject: () => NC,
+      getStackFramesFromError: () => gZ,
+      getTransportBody: () => Zb,
+      getUrlFromResource: () => BC,
+      getWebInstrumentations: () => aw,
+      globalObject: () => FC,
+      initializeFaro: () => kb,
+      internalGlobalObjectKey: () => WC,
+      isArray: () => YC,
+      isBoolean: () => vC,
+      isDomError: () => rC,
+      isDomException: () => sC,
+      isElement: () => aC,
+      isElementDefined: () => TC,
+      fg: () => yC,
+      isError: () => cC,
+      isErrorDefined: () => XC,
+      isErrorEvent: () => uC,
+      isEvent: () => lC,
+      isEventDefined: () => EC,
+      isFunction: () => KC,
+      isInstanceOf: () => RC,
+      isInt: () => iC,
+      isInternalFaroOnGlobalObject: () => gC,
+      isMap: () => DC,
+      isMapDefined: () => tC,
+      isNull: () => xC,
+      isNumber: () => IC,
+      isObject: () => hC,
+      isPrimitive: () => HC,
+      isRegExp: () => dC,
+      isString: () => JC,
+      isSymbol: () => eC,
+      isSyntheticEvent: () => jC,
+      isThenable: () => mC,
+      isToString: () => GC,
+      isTypeof: () => PC,
+      isUndefined: () => AC,
+      makeCoreConfig: () => db,
+      noop: () => tz,
+      osMeta: () => Uw,
+      parseStacktrace: () => SZ,
+      sdkMeta: () => Ow,
+      setInternalFaroOnGlobalObject: () => MC,
+      transportItemTypeToBodyKey: () => Cb,
+      unknownString: () => lZ,
+      userActionDataAttribute: () => LQ,
+      userActionTimeoutDataAttribute: () => UQ
     });
-    const Yq = "browser",
-      lq = "com.grafana.faro.session",
-      Oq = 144e5,
-      mq = 9e5,
-      xq = 1e3,
-      Aq = mq,
-      cq = {
+    const QC = "browser",
+      wC = "com.grafana.faro.session",
+      bC = 144e5,
+      nC = 9e5,
+      fC = 1e3,
+      oC = nC,
+      qC = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: Aq
+        maxSessionPersistenceTime: oC
       };
-    const uq = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof gq.g ? gq.g : "undefined" !== typeof self ? self : void 0;
-    const Bq = "_faroInternal";
+    const FC = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof ZC.g ? ZC.g : "undefined" !== typeof self ? self : void 0;
+    const WC = "_faroInternal";
 
-    function Wq() {
-      return uq[Bq]
+    function NC() {
+      return FC[WC]
     }
 
-    function Nq(qq) {
-      qq.config.isolate ? qq.internalLogger.debug("Skipping registering internal Faro instance on global object") : (qq.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(uq, Bq, {
+    function MC(CC) {
+      CC.config.isolate ? CC.internalLogger.debug("Skipping registering internal Faro instance on global object") : (CC.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(FC, WC, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: qq
+        value: CC
       }))
     }
 
-    function aq() {
-      return Bq in uq
+    function gC() {
+      return WC in FC
     }
-    let Vq = {
+    let SC = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function dq(qq, Eq, gq, Yq, lq, Oq, mq) {
-      return Eq.debug("Initializing Faro"), Vq = {
-          api: Oq,
-          config: gq,
-          instrumentations: mq,
-          internalLogger: Eq,
-          metas: Yq,
-          pause: lq.pause,
-          transports: lq,
-          unpatchedConsole: qq,
-          unpause: lq.unpause
-        }, Nq(Vq),
-        function(qq) {
-          if (qq.config.preventGlobalExposure) qq.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function pC(CC, zC, ZC, QC, wC, bC, nC) {
+      return zC.debug("Initializing Faro"), SC = {
+          api: bC,
+          config: ZC,
+          instrumentations: nC,
+          internalLogger: zC,
+          metas: QC,
+          pause: wC.pause,
+          transports: wC,
+          unpatchedConsole: CC,
+          unpause: wC.unpause
+        }, MC(SC),
+        function(CC) {
+          if (CC.config.preventGlobalExposure) CC.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (qq.internalLogger.debug(`Registering public faro reference in the global scope using "${qq.config.globalObjectKey}" key`), qq.config.globalObjectKey in uq) return void qq.internalLogger.warn(`Skipping global registration due to key "${qq.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(uq, qq.config.globalObjectKey, {
+            if (CC.internalLogger.debug(`Registering public faro reference in the global scope using "${CC.config.globalObjectKey}" key`), CC.config.globalObjectKey in FC) return void CC.internalLogger.warn(`Skipping global registration due to key "${CC.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(FC, CC.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: qq
+              value: CC
             })
           }
-        }(Vq), Vq
+        }(SC), SC
     }
 
-    function jq(qq, Eq) {
-      return typeof qq === Eq
+    function PC(CC, zC) {
+      return typeof CC === zC
     }
 
-    function Hq(qq, Eq) {
-      return Object.prototype.toString.call(qq) === `[object ${Eq}]`
+    function GC(CC, zC) {
+      return Object.prototype.toString.call(CC) === `[object ${zC}]`
     }
 
-    function oq(qq, Eq) {
+    function RC(CC, zC) {
       try {
-        return qq instanceof Eq
-      } catch (gq) {
+        return CC instanceof zC
+      } catch (ZC) {
         return !1
       }
     }
-    const Pq = qq => jq(qq, "undefined"),
-      Qq = qq => jq(qq, "null"),
-      yq = qq => jq(qq, "string"),
-      tq = qq => jq(qq, "number") && !isNaN(qq) || jq(qq, "bigint"),
-      rq = qq => tq(qq) && Number.isInteger(qq),
-      vq = qq => jq(qq, "boolean"),
-      hq = qq => jq(qq, "symbol"),
-      nq = qq => !Qq(qq) && jq(qq, "object"),
-      bq = qq => jq(qq, "function"),
-      iq = qq => Hq(qq, "Array"),
-      Zq = qq => Hq(qq, "RegExp"),
-      fq = qq => bq(null === qq || void 0 === qq ? void 0 : qq.then),
-      Mq = qq => !nq(qq) && !bq(qq),
-      Tq = "undefined" !== typeof Event,
-      zq = qq => Tq && oq(qq, Event),
-      Sq = "undefined" !== typeof Error,
-      pq = qq => Sq && oq(qq, Error),
-      Gq = qq => Hq(qq, "ErrorEvent"),
-      Lq = qq => Hq(qq, "DOMError"),
-      Jq = qq => Hq(qq, "DOMException"),
-      kq = "undefined" !== typeof Element,
-      Rq = qq => kq && oq(qq, Element),
-      Uq = "undefined" !== typeof Map,
-      Fq = qq => Uq && oq(qq, Map),
-      sq = qq => nq(qq) && "nativeEvent" in qq && "preventDefault" in qq && "stopPropagation" in qq;
+    const AC = CC => PC(CC, "undefined"),
+      xC = CC => PC(CC, "null"),
+      JC = CC => PC(CC, "string"),
+      IC = CC => PC(CC, "number") && !isNaN(CC) || PC(CC, "bigint"),
+      iC = CC => IC(CC) && Number.isInteger(CC),
+      vC = CC => PC(CC, "boolean"),
+      eC = CC => PC(CC, "symbol"),
+      hC = CC => !xC(CC) && PC(CC, "object"),
+      KC = CC => PC(CC, "function"),
+      YC = CC => GC(CC, "Array"),
+      dC = CC => GC(CC, "RegExp"),
+      mC = CC => KC(null === CC || void 0 === CC ? void 0 : CC.then),
+      HC = CC => !hC(CC) && !KC(CC),
+      EC = "undefined" !== typeof Event,
+      lC = CC => EC && RC(CC, Event),
+      XC = "undefined" !== typeof Error,
+      cC = CC => XC && RC(CC, Error),
+      uC = CC => GC(CC, "ErrorEvent"),
+      rC = CC => GC(CC, "DOMError"),
+      sC = CC => GC(CC, "DOMException"),
+      TC = "undefined" !== typeof Element,
+      aC = CC => TC && RC(CC, Element),
+      tC = "undefined" !== typeof Map,
+      DC = CC => tC && RC(CC, Map),
+      jC = CC => hC(CC) && "nativeEvent" in CC && "preventDefault" in CC && "stopPropagation" in CC;
 
-    function Xq(qq) {
-      return null == qq || (iq(qq) || yq(qq) ? 0 === qq.length : !!nq(qq) && 0 === Object.keys(qq).length)
+    function yC(CC) {
+      return null == CC || (YC(CC) || JC(CC) ? 0 === CC.length : !!hC(CC) && 0 === Object.keys(CC).length)
     }
 
-    function wq() {
-      return Vq.transports.transports.flatMap((qq => qq.getIgnoreUrls()))
+    function LC() {
+      return SC.transports.transports.flatMap((CC => CC.getIgnoreUrls()))
     }
 
-    function Kq() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return wq().some((Eq => qq && null != qq.match(Eq)))
+    function UC() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return LC().some((zC => CC && null != CC.match(zC)))
     }
 
-    function Cq(qq) {
-      return yq(qq) ? qq : qq instanceof URL ? qq.href : !Xq(qq) && bq(null === qq || void 0 === qq ? void 0 : qq.toString) ? qq.toString() : void 0
+    function BC(CC) {
+      return JC(CC) ? CC : CC instanceof URL ? CC.href : !yC(CC) && KC(null === CC || void 0 === CC ? void 0 : CC.toString) ? CC.toString() : void 0
     }
-    const Iq = "sessionStorage",
-      eq = "localStorage";
+    const OC = "sessionStorage",
+      kC = "localStorage";
 
-    function Dq(qq) {
+    function VC(CC) {
       try {
-        let Eq;
-        Eq = window[qq];
-        const gq = "__faro_storage_test__";
-        return Eq.setItem(gq, gq), Eq.removeItem(gq), !0
-      } catch (gq) {
-        var Eq;
-        return null === (Eq = Vq.internalLogger) || void 0 === Eq || Eq.info(`Web storage of type ${qq} is not available. Reason: ${gq}`), !1
+        let zC;
+        zC = window[CC];
+        const ZC = "__faro_storage_test__";
+        return zC.setItem(ZC, ZC), zC.removeItem(ZC), !0
+      } catch (ZC) {
+        var zC;
+        return null === (zC = SC.internalLogger) || void 0 === zC || zC.info(`Web storage of type ${CC} is not available. Reason: ${ZC}`), !1
       }
     }
 
-    function qE(qq, Eq) {
-      return OE(Eq) ? window[Eq].getItem(qq) : null
+    function Cz(CC, zC) {
+      return bz(zC) ? window[zC].getItem(CC) : null
     }
 
-    function EE(qq, Eq, gq) {
-      if (OE(gq)) try {
-        window[gq].setItem(qq, Eq)
-      } catch (Yq) {}
+    function zz(CC, zC, ZC) {
+      if (bz(ZC)) try {
+        window[ZC].setItem(CC, zC)
+      } catch (QC) {}
     }
 
-    function gE(qq, Eq) {
-      OE(Eq) && window[Eq].removeItem(qq)
+    function Zz(CC, zC) {
+      bz(zC) && window[zC].removeItem(CC)
     }
-    const YE = Dq(eq),
-      lE = Dq(Iq);
+    const Qz = VC(kC),
+      wz = VC(OC);
 
-    function OE(qq) {
-      return qq === eq ? YE : qq === Iq && lE
-    }
-
-    function mE(qq) {
-      return mE = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(qq) {
-        return typeof qq
-      } : function(qq) {
-        return qq && "function" == typeof Symbol && qq.constructor === Symbol && qq !== Symbol.prototype ? "symbol" : typeof qq
-      }, mE(qq)
+    function bz(CC) {
+      return CC === kC ? Qz : CC === OC && wz
     }
 
-    function xE(qq) {
-      var Eq = function(qq, Eq) {
-        if ("object" != mE(qq) || !qq) return qq;
-        var gq = qq[Symbol.toPrimitive];
-        if (void 0 !== gq) {
-          var Yq = gq.call(qq, Eq || "default");
-          if ("object" != mE(Yq)) return Yq;
+    function nz(CC) {
+      return nz = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(CC) {
+        return typeof CC
+      } : function(CC) {
+        return CC && "function" == typeof Symbol && CC.constructor === Symbol && CC !== Symbol.prototype ? "symbol" : typeof CC
+      }, nz(CC)
+    }
+
+    function fz(CC) {
+      var zC = function(CC, zC) {
+        if ("object" != nz(CC) || !CC) return CC;
+        var ZC = CC[Symbol.toPrimitive];
+        if (void 0 !== ZC) {
+          var QC = ZC.call(CC, zC || "default");
+          if ("object" != nz(QC)) return QC;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === Eq ? String : Number)(qq)
-      }(qq, "string");
-      return "symbol" == mE(Eq) ? Eq : Eq + ""
+        return ("string" === zC ? String : Number)(CC)
+      }(CC, "string");
+      return "symbol" == nz(zC) ? zC : zC + ""
     }
 
-    function AE(qq, Eq, gq) {
-      return (Eq = xE(Eq)) in qq ? Object.defineProperty(qq, Eq, {
-        value: gq,
+    function oz(CC, zC, ZC) {
+      return (zC = fz(zC)) in CC ? Object.defineProperty(CC, zC, {
+        value: ZC,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : qq[Eq] = gq, qq
+      }) : CC[zC] = ZC, CC
     }
 
-    function cE(qq, Eq) {
-      var gq = Object.keys(qq);
+    function qz(CC, zC) {
+      var ZC = Object.keys(CC);
       if (Object.getOwnPropertySymbols) {
-        var Yq = Object.getOwnPropertySymbols(qq);
-        Eq && (Yq = Yq.filter((function(Eq) {
-          return Object.getOwnPropertyDescriptor(qq, Eq).enumerable
-        }))), gq.push.apply(gq, Yq)
+        var QC = Object.getOwnPropertySymbols(CC);
+        zC && (QC = QC.filter((function(zC) {
+          return Object.getOwnPropertyDescriptor(CC, zC).enumerable
+        }))), ZC.push.apply(ZC, QC)
       }
-      return gq
+      return ZC
     }
 
-    function uE(qq) {
-      for (var Eq = 1; Eq < arguments.length; Eq++) {
-        var gq = null != arguments[Eq] ? arguments[Eq] : {};
-        Eq % 2 ? cE(Object(gq), !0).forEach((function(Eq) {
-          AE(qq, Eq, gq[Eq])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(qq, Object.getOwnPropertyDescriptors(gq)) : cE(Object(gq)).forEach((function(Eq) {
-          Object.defineProperty(qq, Eq, Object.getOwnPropertyDescriptor(gq, Eq))
+    function Fz(CC) {
+      for (var zC = 1; zC < arguments.length; zC++) {
+        var ZC = null != arguments[zC] ? arguments[zC] : {};
+        zC % 2 ? qz(Object(ZC), !0).forEach((function(zC) {
+          oz(CC, zC, ZC[zC])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(CC, Object.getOwnPropertyDescriptors(ZC)) : qz(Object(ZC)).forEach((function(zC) {
+          Object.defineProperty(CC, zC, Object.getOwnPropertyDescriptor(ZC, zC))
         }))
       }
-      return qq
+      return CC
     }
 
-    function BE() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Vq;
-      var Eq, gq, Yq;
-      const lq = qq.config.sessionTracking,
-        Oq = null !== (Eq = null !== (gq = null === lq || void 0 === lq || null === (Yq = lq.sampler) || void 0 === Yq ? void 0 : Yq.call(lq, {
-          metas: qq.metas.value
-        })) && void 0 !== gq ? gq : null === lq || void 0 === lq ? void 0 : lq.samplingRate) && void 0 !== Eq ? Eq : 1,
-        mq = "number" === typeof Oq ? function(qq) {
-          return Math.min(1, Math.max(0, qq))
-        }(Oq) : 0;
-      if (!(mq > 0)) return !1;
-      if (1 === mq) return !0;
+    function Wz() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : SC;
+      var zC, ZC, QC;
+      const wC = CC.config.sessionTracking,
+        bC = null !== (zC = null !== (ZC = null === wC || void 0 === wC || null === (QC = wC.sampler) || void 0 === QC ? void 0 : QC.call(wC, {
+          metas: CC.metas.value
+        })) && void 0 !== ZC ? ZC : null === wC || void 0 === wC ? void 0 : wC.samplingRate) && void 0 !== zC ? zC : 1,
+        nC = "number" === typeof bC ? function(CC) {
+          return Math.min(1, Math.max(0, CC))
+        }(bC) : 0;
+      if (!(nC > 0)) return !1;
+      if (1 === nC) return !0;
       try {
-        const qq = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === qq || void 0 === qq ? void 0 : qq.getRandomValues)) {
-          const Eq = new Uint32Array(1);
-          return qq.getRandomValues(Eq), Eq[0] / Math.pow(2, 32) < mq
+        const CC = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === CC || void 0 === CC ? void 0 : CC.getRandomValues)) {
+          const zC = new Uint32Array(1);
+          return CC.getRandomValues(zC), zC[0] / Math.pow(2, 32) < nC
         }
-      } catch (xq) {}
-      return Math.random() < mq
+      } catch (fC) {}
+      return Math.random() < nC
     }
 
-    function WE() {
+    function Nz() {
       return Date.now()
     }
 
-    function NE() {
+    function Mz() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function aE() {
+    function gz() {
       return (new Date).toISOString()
     }
 
-    function VE(qq) {
-      return new Date(qq).toISOString()
+    function Sz(CC) {
+      return new Date(CC).toISOString()
     }
-    const dE = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const pz = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function jE() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const Eq = new Uint32Array(qq),
-        gq = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === gq || void 0 === gq ? void 0 : gq.getRandomValues) gq.getRandomValues(Eq);
+    function Pz() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const zC = new Uint32Array(CC),
+        ZC = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === ZC || void 0 === ZC ? void 0 : ZC.getRandomValues) ZC.getRandomValues(zC);
       else
-        for (let lq = 0; lq < qq; lq++) Eq[lq] = Math.floor(4294967296 * Math.random());
-      let Yq = "";
-      for (let lq = 0; lq < qq; lq++) Yq += dE[Eq[lq] % 59];
-      return Yq
+        for (let wC = 0; wC < CC; wC++) zC[wC] = Math.floor(4294967296 * Math.random());
+      let QC = "";
+      for (let wC = 0; wC < CC; wC++) QC += pz[zC[wC] % 59];
+      return QC
     }
 
-    function HE(qq, Eq) {
-      if (qq === Eq) return !0;
-      if (jq(qq, "number") && isNaN(qq)) return jq(Eq, "number") && isNaN(Eq);
-      const gq = iq(qq),
-        Yq = iq(Eq);
-      if (gq !== Yq) return !1;
-      if (gq && Yq) {
-        const gq = qq.length;
-        if (gq !== Eq.length) return !1;
-        for (let Yq = gq; 0 !== Yq--;)
-          if (!HE(qq[Yq], Eq[Yq])) return !1;
+    function Gz(CC, zC) {
+      if (CC === zC) return !0;
+      if (PC(CC, "number") && isNaN(CC)) return PC(zC, "number") && isNaN(zC);
+      const ZC = YC(CC),
+        QC = YC(zC);
+      if (ZC !== QC) return !1;
+      if (ZC && QC) {
+        const ZC = CC.length;
+        if (ZC !== zC.length) return !1;
+        for (let QC = ZC; 0 !== QC--;)
+          if (!Gz(CC[QC], zC[QC])) return !1;
         return !0
       }
-      const lq = nq(qq),
-        Oq = nq(Eq);
-      if (lq !== Oq) return !1;
-      if (qq && Eq && lq && Oq) {
-        const gq = Object.keys(qq),
-          Yq = Object.keys(Eq);
-        if (gq.length !== Yq.length) return !1;
-        for (let qq of gq)
-          if (!Yq.includes(qq)) return !1;
-        for (let lq of gq)
-          if (!HE(qq[lq], Eq[lq])) return !1;
+      const wC = hC(CC),
+        bC = hC(zC);
+      if (wC !== bC) return !1;
+      if (CC && zC && wC && bC) {
+        const ZC = Object.keys(CC),
+          QC = Object.keys(zC);
+        if (ZC.length !== QC.length) return !1;
+        for (let CC of ZC)
+          if (!QC.includes(CC)) return !1;
+        for (let wC of ZC)
+          if (!Gz(CC[wC], zC[wC])) return !1;
         return !0
       }
       return !1
     }
-    const oE = "click",
-      PE = "navigation",
-      QE = "view_changed",
-      yE = "session_start",
-      tE = "session_resume",
-      rE = "session_extend",
-      vE = "service_name_override",
-      hE = "route_change";
+    const Rz = "click",
+      Az = "navigation",
+      xz = "view_changed",
+      Jz = "session_start",
+      Iz = "session_resume",
+      iz = "session_extend",
+      vz = "service_name_override",
+      ez = "route_change";
 
-    function nE() {
+    function hz() {
       let {
-        sessionId: qq,
-        started: Eq,
-        lastActivity: gq,
-        isSampled: Yq = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, lq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vq;
-      var Oq;
-      const mq = WE(),
-        xq = null === (Oq = lq.config) || void 0 === Oq || null === (Oq = Oq.sessionTracking) || void 0 === Oq ? void 0 : Oq.generateSessionId;
-      return null == qq && (qq = "function" === typeof xq ? xq() : jE()), {
-        sessionId: qq,
-        lastActivity: null !== gq && void 0 !== gq ? gq : mq,
-        started: null !== Eq && void 0 !== Eq ? Eq : mq,
-        isSampled: Yq
+        sessionId: CC,
+        started: zC,
+        lastActivity: ZC,
+        isSampled: QC = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, wC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SC;
+      var bC;
+      const nC = Nz(),
+        fC = null === (bC = wC.config) || void 0 === bC || null === (bC = bC.sessionTracking) || void 0 === bC ? void 0 : bC.generateSessionId;
+      return null == CC && (CC = "function" === typeof fC ? fC() : Pz()), {
+        sessionId: CC,
+        lastActivity: null !== ZC && void 0 !== ZC ? ZC : nC,
+        started: null !== zC && void 0 !== zC ? zC : nC,
+        isSampled: QC
       }
     }
 
-    function bE(qq) {
-      if (null == qq) return !1;
-      const Eq = WE();
-      return Eq - qq.started < 144e5 && Eq - qq.lastActivity < mq
+    function Kz(CC) {
+      if (null == CC) return !1;
+      const zC = Nz();
+      return zC - CC.started < 144e5 && zC - CC.lastActivity < nC
     }
 
-    function iE(qq) {
+    function Yz(CC) {
       let {
-        fetchUserSession: Eq,
-        storeUserSession: gq,
-        adoptSession: Yq,
-        updateInterval: lq = 0
-      } = qq, xq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vq, Aq = 0;
+        fetchUserSession: zC,
+        storeUserSession: ZC,
+        adoptSession: QC,
+        updateInterval: wC = 0
+      } = CC, fC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SC, oC = 0;
       return function() {
         let {
-          forceSessionExtend: qq = !1,
-          refreshActivity: cq = !0
+          forceSessionExtend: CC = !1,
+          refreshActivity: qC = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var uq, Bq;
-        if (!Eq || !gq) return;
-        const Wq = WE();
-        if (!qq && Wq < Aq && Aq - Wq <= lq) return;
-        const Nq = xq.config.sessionTracking,
-          aq = null === Nq || void 0 === Nq ? void 0 : Nq.persistent;
-        if (aq && !YE || !aq && !lE) return;
-        const Vq = Eq();
-        if (Aq = Math.min(Wq + lq, (null !== (uq = null === Vq || void 0 === Vq ? void 0 : Vq.started) && void 0 !== uq ? uq : Wq) + Oq, (null !== (Bq = null === Vq || void 0 === Vq ? void 0 : Vq.lastActivity) && void 0 !== Bq ? Bq : Wq) + mq), !1 === qq && bE(Vq)) {
-          var dq;
-          cq && gq(uE(uE({}, Vq), {}, {
-            lastActivity: Wq
+        var FC, WC;
+        if (!zC || !ZC) return;
+        const NC = Nz();
+        if (!CC && NC < oC && oC - NC <= wC) return;
+        const MC = fC.config.sessionTracking,
+          gC = null === MC || void 0 === MC ? void 0 : MC.persistent;
+        if (gC && !Qz || !gC && !wz) return;
+        const SC = zC();
+        if (oC = Math.min(NC + wC, (null !== (FC = null === SC || void 0 === SC ? void 0 : SC.started) && void 0 !== FC ? FC : NC) + bC, (null !== (WC = null === SC || void 0 === SC ? void 0 : SC.lastActivity) && void 0 !== WC ? WC : NC) + nC), !1 === CC && Kz(SC)) {
+          var pC;
+          qC && ZC(Fz(Fz({}, SC), {}, {
+            lastActivity: NC
           }));
-          const qq = null === (dq = xq.metas.value.session) || void 0 === dq ? void 0 : dq.id;
-          null != Yq && null != Vq.sessionMeta && Vq.sessionId !== qq && Yq(Vq.sessionMeta)
+          const CC = null === (pC = fC.metas.value.session) || void 0 === pC ? void 0 : pC.id;
+          null != QC && null != SC.sessionMeta && SC.sessionId !== CC && QC(SC.sessionMeta)
         } else {
-          var jq, Hq, oq;
-          let qq = fE(nE({
-            isSampled: BE(xq)
-          }, xq), Vq, xq);
-          Aq = Wq + lq, gq(qq), null === (jq = xq.api) || void 0 === jq || jq.setSession(qq.sessionMeta), null === Nq || void 0 === Nq || null === (Hq = Nq.onSessionChange) || void 0 === Hq || Hq.call(Nq, null !== (oq = null === Vq || void 0 === Vq ? void 0 : Vq.sessionMeta) && void 0 !== oq ? oq : null, qq.sessionMeta)
+          var PC, GC, RC;
+          let CC = mz(hz({
+            isSampled: Wz(fC)
+          }, fC), SC, fC);
+          oC = NC + wC, ZC(CC), null === (PC = fC.api) || void 0 === PC || PC.setSession(CC.sessionMeta), null === MC || void 0 === MC || null === (GC = MC.onSessionChange) || void 0 === GC || GC.call(MC, null !== (RC = null === SC || void 0 === SC ? void 0 : SC.sessionMeta) && void 0 !== RC ? RC : null, CC.sessionMeta)
         }
       }
     }
 
-    function ZE(qq) {
-      let Eq, {
-          fetchUserSession: gq,
-          storeUserSession: Yq,
-          updateInterval: lq = 0
-        } = qq,
-        Oq = 0;
-      return qq => {
-        const mq = WE();
-        if (qq === Eq && mq < Oq && Oq - mq <= lq) return;
-        Eq = qq, Oq = mq + lq;
-        const xq = gq();
-        (null === xq || void 0 === xq ? void 0 : xq.sessionId) === qq && bE(xq) && Yq(uE(uE({}, xq), {}, {
-          lastActivity: mq
+    function dz(CC) {
+      let zC, {
+          fetchUserSession: ZC,
+          storeUserSession: QC,
+          updateInterval: wC = 0
+        } = CC,
+        bC = 0;
+      return CC => {
+        const nC = Nz();
+        if (CC === zC && nC < bC && bC - nC <= wC) return;
+        zC = CC, bC = nC + wC;
+        const fC = ZC();
+        (null === fC || void 0 === fC ? void 0 : fC.sessionId) === CC && Kz(fC) && QC(Fz(Fz({}, fC), {}, {
+          lastActivity: nC
         }))
       }
     }
 
-    function fE(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Vq;
-      var Yq, lq, Oq, mq, xq, Aq;
-      const cq = uE(uE({}, qq), {}, {
+    function mz(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : SC;
+      var QC, wC, bC, nC, fC, oC;
+      const qC = Fz(Fz({}, CC), {}, {
           sessionMeta: {
-            id: qq.sessionId,
-            attributes: TE(uE(uE(uE({}, null === (Yq = gq.config.sessionTracking) || void 0 === Yq || null === (Yq = Yq.session) || void 0 === Yq ? void 0 : Yq.attributes), null !== (lq = null === (Oq = gq.metas.value.session) || void 0 === Oq ? void 0 : Oq.attributes) && void 0 !== lq ? lq : {}), {}, {
-              isSampled: qq.isSampled.toString()
+            id: CC.sessionId,
+            attributes: Ez(Fz(Fz(Fz({}, null === (QC = ZC.config.sessionTracking) || void 0 === QC || null === (QC = QC.session) || void 0 === QC ? void 0 : QC.attributes), null !== (wC = null === (bC = ZC.metas.value.session) || void 0 === bC ? void 0 : bC.attributes) && void 0 !== wC ? wC : {}), {}, {
+              isSampled: CC.isSampled.toString()
             }))
           }
         }),
-        uq = null !== (mq = null === (xq = gq.metas.value.session) || void 0 === xq ? void 0 : xq.overrides) && void 0 !== mq ? mq : null === Eq || void 0 === Eq || null === (Aq = Eq.sessionMeta) || void 0 === Aq ? void 0 : Aq.overrides;
-      Xq(uq) || (cq.sessionMeta.overrides = uq);
-      const Bq = null === Eq || void 0 === Eq ? void 0 : Eq.sessionId;
-      return null != Bq && (cq.sessionMeta.attributes.previousSession = Bq), cq
+        FC = null !== (nC = null === (fC = ZC.metas.value.session) || void 0 === fC ? void 0 : fC.overrides) && void 0 !== nC ? nC : null === zC || void 0 === zC || null === (oC = zC.sessionMeta) || void 0 === oC ? void 0 : oC.overrides;
+      yC(FC) || (qC.sessionMeta.overrides = FC);
+      const WC = null === zC || void 0 === zC ? void 0 : zC.sessionId;
+      return null != WC && (qC.sessionMeta.attributes.previousSession = WC), qC
     }
 
-    function ME(qq) {
+    function Hz(CC) {
       let {
-        fetchUserSession: Eq,
-        storeUserSession: gq
-      } = qq, Yq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vq, lq = !1;
-      return function(qq) {
-        if (lq) return;
-        const Oq = qq.session,
-          mq = Eq();
-        let xq = null === Oq || void 0 === Oq ? void 0 : Oq.id;
-        const Aq = null === Oq || void 0 === Oq ? void 0 : Oq.attributes,
-          cq = null === Oq || void 0 === Oq ? void 0 : Oq.overrides,
-          uq = null === mq || void 0 === mq ? void 0 : mq.sessionMeta,
-          Bq = null === uq || void 0 === uq ? void 0 : uq.overrides,
-          Wq = !!cq && !HE(cq, Bq),
-          Nq = !!Aq && !HE(Aq, null === uq || void 0 === uq ? void 0 : uq.attributes);
-        if (Oq && xq !== (null === mq || void 0 === mq ? void 0 : mq.sessionId) || Nq || Wq) {
-          var aq, Vq;
-          const qq = null != mq && xq === mq.sessionId,
-            Eq = fE(qq ? mq : nE({
-              sessionId: xq,
-              isSampled: BE(Yq)
-            }, Yq), mq, Yq),
-            Oq = null === mq || void 0 === mq || null === (aq = mq.sessionMeta) || void 0 === aq || null === (aq = aq.attributes) || void 0 === aq ? void 0 : aq.previousSession;
-          qq && null != Oq && Oq !== Eq.sessionId && (Eq.sessionMeta.attributes.previousSession = Oq), (null === (Vq = Eq.sessionMeta.attributes) || void 0 === Vq ? void 0 : Vq.previousSession) === Eq.sessionId && delete Eq.sessionMeta.attributes.previousSession, gq(Eq),
-            function(qq, Eq) {
-              let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var lq, Oq, mq;
-              if (!Eq) return;
-              const xq = gq.serviceName,
-                Aq = null !== (lq = null !== (Oq = Yq.serviceName) && void 0 !== Oq ? Oq : null === (mq = qq.metas.value.app) || void 0 === mq ? void 0 : mq.name) && void 0 !== lq ? lq : "";
-              xq && xq !== Aq && qq.api.pushEvent(vE, {
-                serviceName: xq,
-                previousServiceName: Aq
+        fetchUserSession: zC,
+        storeUserSession: ZC
+      } = CC, QC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SC, wC = !1;
+      return function(CC) {
+        if (wC) return;
+        const bC = CC.session,
+          nC = zC();
+        let fC = null === bC || void 0 === bC ? void 0 : bC.id;
+        const oC = null === bC || void 0 === bC ? void 0 : bC.attributes,
+          qC = null === bC || void 0 === bC ? void 0 : bC.overrides,
+          FC = null === nC || void 0 === nC ? void 0 : nC.sessionMeta,
+          WC = null === FC || void 0 === FC ? void 0 : FC.overrides,
+          NC = !!qC && !Gz(qC, WC),
+          MC = !!oC && !Gz(oC, null === FC || void 0 === FC ? void 0 : FC.attributes);
+        if (bC && fC !== (null === nC || void 0 === nC ? void 0 : nC.sessionId) || MC || NC) {
+          var gC, SC;
+          const CC = null != nC && fC === nC.sessionId,
+            zC = mz(CC ? nC : hz({
+              sessionId: fC,
+              isSampled: Wz(QC)
+            }, QC), nC, QC),
+            bC = null === nC || void 0 === nC || null === (gC = nC.sessionMeta) || void 0 === gC || null === (gC = gC.attributes) || void 0 === gC ? void 0 : gC.previousSession;
+          CC && null != bC && bC !== zC.sessionId && (zC.sessionMeta.attributes.previousSession = bC), (null === (SC = zC.sessionMeta.attributes) || void 0 === SC ? void 0 : SC.previousSession) === zC.sessionId && delete zC.sessionMeta.attributes.previousSession, ZC(zC),
+            function(CC, zC) {
+              let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var wC, bC, nC;
+              if (!zC) return;
+              const fC = ZC.serviceName,
+                oC = null !== (wC = null !== (bC = QC.serviceName) && void 0 !== bC ? bC : null === (nC = CC.metas.value.app) || void 0 === nC ? void 0 : nC.name) && void 0 !== wC ? wC : "";
+              fC && fC !== oC && CC.api.pushEvent(vz, {
+                serviceName: fC,
+                previousServiceName: oC
               })
-            }(Yq, Wq, cq, Bq), lq = !0;
+            }(QC, NC, qC, WC), wC = !0;
           try {
-            Yq.api.setSession(Eq.sessionMeta)
+            QC.api.setSession(zC.sessionMeta)
           } finally {
-            lq = !1
+            wC = !1
           }
         }
       }
     }
 
-    function TE(qq) {
-      const Eq = {};
-      for (const gq of Object.keys(qq)) {
-        const Yq = qq[gq];
-        void 0 !== Yq && (Eq[gq] = Yq)
+    function Ez(CC) {
+      const zC = {};
+      for (const ZC of Object.keys(CC)) {
+        const QC = CC[ZC];
+        void 0 !== QC && (zC[ZC] = QC)
       }
-      return Eq
+      return zC
     }
 
-    function zE() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== qq && void 0 !== qq ? qq : {}, function() {
-        const qq = new WeakSet;
-        return function(Eq, gq) {
-          if (nq(gq) && null !== gq) {
-            if (qq.has(gq)) return null;
-            qq.add(gq)
+    function lz() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== CC && void 0 !== CC ? CC : {}, function() {
+        const CC = new WeakSet;
+        return function(zC, ZC) {
+          if (hC(ZC) && null !== ZC) {
+            if (CC.has(ZC)) return null;
+            CC.add(ZC)
           }
-          return gq
+          return ZC
         }
       }())
     }
 
-    function SE() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const Eq = {};
-      for (const [gq, Yq] of Object.entries(qq)) Eq[gq] = nq(Yq) && null !== Yq ? zE(Yq) : String(Yq);
-      return Eq
+    function Xz() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const zC = {};
+      for (const [ZC, QC] of Object.entries(CC)) zC[ZC] = hC(QC) && null !== QC ? lz(QC) : String(QC);
+      return zC
     }
-    var pE = class qq {
+    var cz = class CC {
       constructor() {
-        var Eq = this;
-        let gq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Vq;
-        this.context = gq, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = qq => {
+        var zC = this;
+        let ZC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : SC;
+        this.context = ZC, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = CC => {
           this.adopting = !0;
           try {
-            var Eq;
-            null === (Eq = this.context.api) || void 0 === Eq || Eq.setSession(qq)
+            var zC;
+            null === (zC = this.context.api) || void 0 === zC || zC.setSession(CC)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: qq = !0
+            refreshActivity: CC = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return Eq.updateUserSession({
-            refreshActivity: qq
+          return zC.updateUserSession({
+            refreshActivity: CC
           })
-        }, this.recordActivity = ZE({
-          fetchUserSession: qq.fetchUserSession,
-          storeUserSession: qq.storeUserSession,
-          updateInterval: xq
-        }), this.updateUserSession = iE({
-          fetchUserSession: qq.fetchUserSession,
-          storeUserSession: qq.storeUserSession,
+        }, this.recordActivity = dz({
+          fetchUserSession: CC.fetchUserSession,
+          storeUserSession: CC.storeUserSession,
+          updateInterval: fC
+        }), this.updateUserSession = Yz({
+          fetchUserSession: CC.fetchUserSession,
+          storeUserSession: CC.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: xq
-        }, gq), this.init()
+          updateInterval: fC
+        }, ZC), this.init()
       }
       static removeUserSession() {
-        gE(lq, qq.storageTypeLocal)
+        Zz(wC, CC.storageTypeLocal)
       }
-      static storeUserSession(Eq) {
-        EE(lq, zE(Eq), qq.storageTypeLocal)
+      static storeUserSession(zC) {
+        zz(wC, lz(zC), CC.storageTypeLocal)
       }
       static fetchUserSession() {
-        const Eq = qE(lq, qq.storageTypeLocal);
-        return Eq ? JSON.parse(Eq) : null
+        const zC = Cz(wC, CC.storageTypeLocal);
+        return zC ? JSON.parse(zC) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var qq;
+            var CC;
             this.updateSession({
               refreshActivity: !1
             });
-            const Eq = null === (qq = this.context.api) || void 0 === qq || null === (qq = qq.getSession()) || void 0 === qq ? void 0 : qq.id;
-            Eq && this.recordActivity(Eq)
+            const zC = null === (CC = this.context.api) || void 0 === CC || null === (CC = CC.getSession()) || void 0 === CC ? void 0 : CC.id;
+            zC && this.recordActivity(zC)
           }
-        })), this.context.metas.addListener(ME({
-          fetchUserSession: qq.fetchUserSession,
-          storeUserSession: qq.storeUserSession
+        })), this.context.metas.addListener(Hz({
+          fetchUserSession: CC.fetchUserSession,
+          storeUserSession: CC.storeUserSession
         }, this.context))
       }
     };
-    pE.storageTypeLocal = eq;
-    var GE = class qq {
+    cz.storageTypeLocal = kC;
+    var uz = class CC {
       constructor() {
-        var Eq = this;
-        let gq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Vq;
-        this.context = gq, this.isAdopting = () => !1, this.updateSession = function() {
+        var zC = this;
+        let ZC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : SC;
+        this.context = ZC, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: qq = !0
+            refreshActivity: CC = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return Eq.updateUserSession({
-            refreshActivity: qq
+          return zC.updateUserSession({
+            refreshActivity: CC
           })
-        }, this.recordActivity = ZE({
-          fetchUserSession: qq.fetchUserSession,
-          storeUserSession: qq.storeUserSession,
-          updateInterval: xq
-        }), this.updateUserSession = iE({
-          fetchUserSession: qq.fetchUserSession,
-          storeUserSession: qq.storeUserSession,
-          updateInterval: xq
-        }, gq), this.init()
+        }, this.recordActivity = dz({
+          fetchUserSession: CC.fetchUserSession,
+          storeUserSession: CC.storeUserSession,
+          updateInterval: fC
+        }), this.updateUserSession = Yz({
+          fetchUserSession: CC.fetchUserSession,
+          storeUserSession: CC.storeUserSession,
+          updateInterval: fC
+        }, ZC), this.init()
       }
       static removeUserSession() {
-        gE(lq, qq.storageTypeSession)
+        Zz(wC, CC.storageTypeSession)
       }
-      static storeUserSession(Eq) {
-        EE(lq, zE(Eq), qq.storageTypeSession)
+      static storeUserSession(zC) {
+        zz(wC, lz(zC), CC.storageTypeSession)
       }
       static fetchUserSession() {
-        const Eq = qE(lq, qq.storageTypeSession);
-        return Eq ? JSON.parse(Eq) : null
+        const zC = Cz(wC, CC.storageTypeSession);
+        return zC ? JSON.parse(zC) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var qq;
+            var CC;
             this.updateSession({
               refreshActivity: !1
             });
-            const Eq = null === (qq = this.context.api) || void 0 === qq || null === (qq = qq.getSession()) || void 0 === qq ? void 0 : qq.id;
-            Eq && this.recordActivity(Eq)
+            const zC = null === (CC = this.context.api) || void 0 === CC || null === (CC = CC.getSession()) || void 0 === CC ? void 0 : CC.id;
+            zC && this.recordActivity(zC)
           }
-        })), this.context.metas.addListener(ME({
-          fetchUserSession: qq.fetchUserSession,
-          storeUserSession: qq.storeUserSession
+        })), this.context.metas.addListener(Hz({
+          fetchUserSession: CC.fetchUserSession,
+          storeUserSession: CC.storeUserSession
         }, this.context))
       }
     };
-    GE.storageTypeSession = Iq;
-    const LE = new WeakMap;
+    uz.storageTypeSession = OC;
+    const rz = new WeakMap;
 
-    function JE(qq) {
-      let Eq = LE.get(qq);
-      if (!Eq) {
-        let gq = [],
-          Yq = [];
-        Eq = {
-          addSessionUpdateListener: qq => {
-            gq.push(qq)
+    function sz(CC) {
+      let zC = rz.get(CC);
+      if (!zC) {
+        let ZC = [],
+          QC = [];
+        zC = {
+          addSessionUpdateListener: CC => {
+            ZC.push(CC)
           },
-          removeSessionUpdateListener: qq => {
-            gq = gq.filter((Eq => Eq !== qq))
+          removeSessionUpdateListener: CC => {
+            ZC = ZC.filter((zC => zC !== CC))
           },
-          notifySessionUpdate: qq => {
-            gq.forEach((Eq => Eq(qq)))
+          notifySessionUpdate: CC => {
+            ZC.forEach((zC => zC(CC)))
           },
-          shouldCapture: () => Yq.every((qq => qq())),
-          addCaptureFilter: qq => {
-            Yq.push(qq)
+          shouldCapture: () => QC.every((CC => CC())),
+          addCaptureFilter: CC => {
+            QC.push(CC)
           },
-          removeCaptureFilter: qq => {
-            Yq = Yq.filter((Eq => Eq !== qq))
+          removeCaptureFilter: CC => {
+            QC = QC.filter((zC => zC !== CC))
           }
-        }, LE.set(qq, Eq)
+        }, rz.set(CC, zC)
       }
-      return Eq
+      return zC
     }
-    var kE = class {
-      constructor(qq, Eq, gq) {
-        this.metas = qq, this.transports = Eq, this.onActivate = gq, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = qq => {
-          var Eq, gq, Yq;
-          const lq = this.pending;
-          var Oq, mq;
-          if ("overrides" === qq.type) return void(this.pending = {
-            reset: null !== (Oq = null === lq || void 0 === lq ? void 0 : lq.reset) && void 0 !== Oq && Oq,
-            inheritOverrides: null === (mq = null === lq || void 0 === lq ? void 0 : lq.inheritOverrides) || void 0 === mq || mq,
-            session: uE(uE({}, null === lq || void 0 === lq ? void 0 : lq.session), {}, {
-              overrides: uE(uE({}, null === lq || void 0 === lq ? void 0 : lq.session.overrides), qq.overrides)
+    var Tz = class {
+      constructor(CC, zC, ZC) {
+        this.metas = CC, this.transports = zC, this.onActivate = ZC, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = CC => {
+          var zC, ZC, QC;
+          const wC = this.pending;
+          var bC, nC;
+          if ("overrides" === CC.type) return void(this.pending = {
+            reset: null !== (bC = null === wC || void 0 === wC ? void 0 : wC.reset) && void 0 !== bC && bC,
+            inheritOverrides: null === (nC = null === wC || void 0 === wC ? void 0 : wC.inheritOverrides) || void 0 === nC || nC,
+            session: Fz(Fz({}, null === wC || void 0 === wC ? void 0 : wC.session), {}, {
+              overrides: Fz(Fz({}, null === wC || void 0 === wC ? void 0 : wC.session.overrides), CC.overrides)
             })
           });
-          const xq = qq.session,
-            Aq = Xq(xq) || null != xq && "id" in xq && !xq.id,
-            cq = null !== (Eq = null === xq || void 0 === xq ? void 0 : xq.overrides) && void 0 !== Eq ? Eq : null === lq || void 0 === lq ? void 0 : lq.session.overrides;
+          const fC = CC.session,
+            oC = yC(fC) || null != fC && "id" in fC && !fC.id,
+            qC = null !== (zC = null === fC || void 0 === fC ? void 0 : fC.overrides) && void 0 !== zC ? zC : null === wC || void 0 === wC ? void 0 : wC.session.overrides;
           this.pending = {
-            reset: Aq || !(null === xq || void 0 === xq ? void 0 : xq.id) && null !== (gq = null === lq || void 0 === lq ? void 0 : lq.reset) && void 0 !== gq && gq,
-            inheritOverrides: !(!qq.overrides && void 0 !== (null === xq || void 0 === xq ? void 0 : xq.overrides)) && (null === (Yq = null === lq || void 0 === lq ? void 0 : lq.inheritOverrides) || void 0 === Yq || Yq),
+            reset: oC || !(null === fC || void 0 === fC ? void 0 : fC.id) && null !== (ZC = null === wC || void 0 === wC ? void 0 : wC.reset) && void 0 !== ZC && ZC,
+            inheritOverrides: !(!CC.overrides && void 0 !== (null === fC || void 0 === fC ? void 0 : fC.overrides)) && (null === (QC = null === wC || void 0 === wC ? void 0 : wC.inheritOverrides) || void 0 === QC || QC),
             session: {
-              id: null === xq || void 0 === xq ? void 0 : xq.id,
-              attributes: (null === xq || void 0 === xq ? void 0 : xq.attributes) && uE({}, xq.attributes),
-              overrides: qq.overrides ? uE(uE({}, null === lq || void 0 === lq ? void 0 : lq.session.overrides), qq.overrides) : cq && uE({}, cq)
+              id: null === fC || void 0 === fC ? void 0 : fC.id,
+              attributes: (null === fC || void 0 === fC ? void 0 : fC.attributes) && Fz({}, fC.attributes),
+              overrides: CC.overrides ? Fz(Fz({}, null === wC || void 0 === wC ? void 0 : wC.session.overrides), CC.overrides) : qC && Fz({}, qC)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var qq, Eq;
-        this.waiting = !0, JE(this.metas).addSessionUpdateListener(this.recordUpdate), JE(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (qq = (Eq = this.metas).addCaptureListener) || void 0 === qq || qq.call(Eq, this.activate), this.activate()
+        var CC, zC;
+        this.waiting = !0, sz(this.metas).addSessionUpdateListener(this.recordUpdate), sz(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (CC = (zC = this.metas).addCaptureListener) || void 0 === CC || CC.call(zC, this.activate), this.activate()
       }
       destroy() {
-        var qq, Eq;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), JE(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (qq = (Eq = this.metas).removeCaptureListener) || void 0 === qq || qq.call(Eq, this.activate), JE(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var CC, zC;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), sz(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (CC = (zC = this.metas).removeCaptureListener) || void 0 === CC || CC.call(zC, this.activate), sz(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function RE(qq) {
-      return (null === qq || void 0 === qq ? void 0 : qq.persistent) ? pE : GE
+    function az(CC) {
+      return (null === CC || void 0 === CC ? void 0 : CC.persistent) ? cz : uz
     }
 
-    function UE() {}
-    let FE = function(qq) {
-      return qq[qq.OFF = 0] = "OFF", qq[qq.ERROR = 1] = "ERROR", qq[qq.WARN = 2] = "WARN", qq[qq.INFO = 3] = "INFO", qq[qq.VERBOSE = 4] = "VERBOSE", qq
+    function tz() {}
+    let Dz = function(CC) {
+      return CC[CC.OFF = 0] = "OFF", CC[CC.ERROR = 1] = "ERROR", CC[CC.WARN = 2] = "WARN", CC[CC.INFO = 3] = "INFO", CC[CC.VERBOSE = 4] = "VERBOSE", CC
     }({});
-    const sE = {
-        debug: UE,
-        error: UE,
-        info: UE,
+    const jz = {
+        debug: tz,
+        error: tz,
+        info: tz,
         prefix: "Faro",
-        warn: UE
+        warn: tz
       },
-      XE = 1;
+      yz = 1;
 
-    function wE(qq) {
-      return wE = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(qq) {
-        return typeof qq
-      } : function(qq) {
-        return qq && "function" == typeof Symbol && qq.constructor === Symbol && qq !== Symbol.prototype ? "symbol" : typeof qq
-      }, wE(qq)
+    function Lz(CC) {
+      return Lz = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(CC) {
+        return typeof CC
+      } : function(CC) {
+        return CC && "function" == typeof Symbol && CC.constructor === Symbol && CC !== Symbol.prototype ? "symbol" : typeof CC
+      }, Lz(CC)
     }
 
-    function KE(qq) {
-      var Eq = function(qq, Eq) {
-        if ("object" != wE(qq) || !qq) return qq;
-        var gq = qq[Symbol.toPrimitive];
-        if (void 0 !== gq) {
-          var Yq = gq.call(qq, Eq || "default");
-          if ("object" != wE(Yq)) return Yq;
+    function Uz(CC) {
+      var zC = function(CC, zC) {
+        if ("object" != Lz(CC) || !CC) return CC;
+        var ZC = CC[Symbol.toPrimitive];
+        if (void 0 !== ZC) {
+          var QC = ZC.call(CC, zC || "default");
+          if ("object" != Lz(QC)) return QC;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === Eq ? String : Number)(qq)
-      }(qq, "string");
-      return "symbol" == wE(Eq) ? Eq : Eq + ""
+        return ("string" === zC ? String : Number)(CC)
+      }(CC, "string");
+      return "symbol" == Lz(zC) ? zC : zC + ""
     }
 
-    function CE(qq, Eq, gq) {
-      return (Eq = KE(Eq)) in qq ? Object.defineProperty(qq, Eq, {
-        value: gq,
+    function Bz(CC, zC, ZC) {
+      return (zC = Uz(zC)) in CC ? Object.defineProperty(CC, zC, {
+        value: ZC,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : qq[Eq] = gq, qq
+      }) : CC[zC] = ZC, CC
     }
 
-    function IE(qq, Eq) {
-      var gq = Object.keys(qq);
+    function Oz(CC, zC) {
+      var ZC = Object.keys(CC);
       if (Object.getOwnPropertySymbols) {
-        var Yq = Object.getOwnPropertySymbols(qq);
-        Eq && (Yq = Yq.filter((function(Eq) {
-          return Object.getOwnPropertyDescriptor(qq, Eq).enumerable
-        }))), gq.push.apply(gq, Yq)
+        var QC = Object.getOwnPropertySymbols(CC);
+        zC && (QC = QC.filter((function(zC) {
+          return Object.getOwnPropertyDescriptor(CC, zC).enumerable
+        }))), ZC.push.apply(ZC, QC)
       }
-      return gq
+      return ZC
     }
 
-    function eE(qq) {
-      for (var Eq = 1; Eq < arguments.length; Eq++) {
-        var gq = null != arguments[Eq] ? arguments[Eq] : {};
-        Eq % 2 ? IE(Object(gq), !0).forEach((function(Eq) {
-          CE(qq, Eq, gq[Eq])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(qq, Object.getOwnPropertyDescriptors(gq)) : IE(Object(gq)).forEach((function(Eq) {
-          Object.defineProperty(qq, Eq, Object.getOwnPropertyDescriptor(gq, Eq))
+    function kz(CC) {
+      for (var zC = 1; zC < arguments.length; zC++) {
+        var ZC = null != arguments[zC] ? arguments[zC] : {};
+        zC % 2 ? Oz(Object(ZC), !0).forEach((function(zC) {
+          Bz(CC, zC, ZC[zC])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(CC, Object.getOwnPropertyDescriptors(ZC)) : Oz(Object(ZC)).forEach((function(zC) {
+          Object.defineProperty(CC, zC, Object.getOwnPropertyDescriptor(ZC, zC))
         }))
       }
-      return qq
+      return CC
     }
-    const DE = eE({}, console);
-    var qg = class {
+    const Vz = kz({}, console);
+    var CZ = class {
         constructor() {
-          this.unpatchedConsole = DE, this.internalLogger = sE, this.config = {}, this.metas = {}
+          this.unpatchedConsole = Vz, this.internalLogger = jz, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var qq = arguments.length, Eq = new Array(qq), gq = 0; gq < qq; gq++) Eq[gq] = arguments[gq];
-          this.internalLogger.debug(`${this.name}\n`, ...Eq)
+          for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
+          this.internalLogger.debug(`${this.name}\n`, ...zC)
         }
         logInfo() {
-          for (var qq = arguments.length, Eq = new Array(qq), gq = 0; gq < qq; gq++) Eq[gq] = arguments[gq];
-          this.internalLogger.info(`${this.name}\n`, ...Eq)
+          for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
+          this.internalLogger.info(`${this.name}\n`, ...zC)
         }
         logWarn() {
-          for (var qq = arguments.length, Eq = new Array(qq), gq = 0; gq < qq; gq++) Eq[gq] = arguments[gq];
-          this.internalLogger.warn(`${this.name}\n`, ...Eq)
+          for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
+          this.internalLogger.warn(`${this.name}\n`, ...zC)
         }
         logError() {
-          for (var qq = arguments.length, Eq = new Array(qq), gq = 0; gq < qq; gq++) Eq[gq] = arguments[gq];
-          this.internalLogger.error(`${this.name}\n`, ...Eq)
+          for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
+          this.internalLogger.error(`${this.name}\n`, ...zC)
         }
       },
-      Eg = class extends qg {
+      zZ = class extends CZ {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const gg = "2.12.1";
-    var Yg = class extends Eg {
+    const ZZ = "2.12.1";
+    var QZ = class extends zZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = gg, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = ZZ, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(qq) {
-        var Eq;
-        const gq = qq.session;
-        if (gq && gq.id !== (null === (Eq = this.notifiedSession) || void 0 === Eq ? void 0 : Eq.id)) {
-          var Yq;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = gq);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (Yq = gq.attributes) || void 0 === Yq ? void 0 : Yq.previousSession)) return this.api.pushEvent(rE, {}, void 0, {
+      sendSessionStartEvent(CC) {
+        var zC;
+        const ZC = CC.session;
+        if (ZC && ZC.id !== (null === (zC = this.notifiedSession) || void 0 === zC ? void 0 : zC.id)) {
+          var QC;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = ZC);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (QC = ZC.attributes) || void 0 === QC ? void 0 : QC.previousSession)) return this.api.pushEvent(iz, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = gq);
-          this.notifiedSession = gq, this.api.pushEvent(yE, {}, void 0, {
+          }), void(this.notifiedSession = ZC);
+          this.notifiedSession = ZC, this.api.pushEvent(Jz, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(qq, Eq, gq) {
-        const Yq = null === gq || void 0 === gq ? void 0 : gq.session;
-        let lq, Oq, mq = qq.fetchUserSession();
-        if (Eq.persistent && Eq.maxSessionPersistenceTime && mq) {
-          const qq = WE();
-          mq.lastActivity < qq - Eq.maxSessionPersistenceTime && (pE.removeUserSession(), mq = null)
+      createInitialSession(CC, zC, ZC) {
+        const QC = null === ZC || void 0 === ZC ? void 0 : ZC.session;
+        let wC, bC, nC = CC.fetchUserSession();
+        if (zC.persistent && zC.maxSessionPersistenceTime && nC) {
+          const CC = Nz();
+          nC.lastActivity < CC - zC.maxSessionPersistenceTime && (cz.removeUserSession(), nC = null)
         }
-        const xq = bE(mq);
-        if ((null === gq || void 0 === gq ? void 0 : gq.reset) || !xq || (null === Yq || void 0 === Yq ? void 0 : Yq.id) && Yq.id !== (null === mq || void 0 === mq ? void 0 : mq.sessionId)) {
-          var Aq, cq, uq, Bq, Wq, Nq;
-          Oq = nE({
-            sessionId: (null === gq || void 0 === gq ? void 0 : gq.reset) ? void 0 : null !== (Aq = null === Yq || void 0 === Yq ? void 0 : Yq.id) && void 0 !== Aq ? Aq : null === (cq = Eq.session) || void 0 === cq ? void 0 : cq.id,
-            isSampled: BE(this)
+        const fC = Kz(nC);
+        if ((null === ZC || void 0 === ZC ? void 0 : ZC.reset) || !fC || (null === QC || void 0 === QC ? void 0 : QC.id) && QC.id !== (null === nC || void 0 === nC ? void 0 : nC.sessionId)) {
+          var oC, qC, FC, WC, NC, MC;
+          bC = hz({
+            sessionId: (null === ZC || void 0 === ZC ? void 0 : ZC.reset) ? void 0 : null !== (oC = null === QC || void 0 === QC ? void 0 : QC.id) && void 0 !== oC ? oC : null === (qC = zC.session) || void 0 === qC ? void 0 : qC.id,
+            isSampled: Wz(this)
           }, this);
-          const qq = Oq.sessionId,
-            aq = gq && xq ? null === mq || void 0 === mq || null === (uq = mq.sessionMeta) || void 0 === uq ? void 0 : uq.overrides : void 0,
-            Vq = aq ? uE(uE({}, null === (Bq = Eq.session) || void 0 === Bq ? void 0 : Bq.overrides), aq) : null === (Wq = Eq.session) || void 0 === Wq ? void 0 : Wq.overrides;
-          Oq.sessionMeta = uE({
-            id: qq,
-            attributes: uE({
-              isSampled: Oq.isSampled.toString()
-            }, null === (Nq = Eq.session) || void 0 === Nq ? void 0 : Nq.attributes)
-          }, Vq ? {
-            overrides: Vq
-          } : {}), lq = yE
+          const CC = bC.sessionId,
+            gC = ZC && fC ? null === nC || void 0 === nC || null === (FC = nC.sessionMeta) || void 0 === FC ? void 0 : FC.overrides : void 0,
+            SC = gC ? Fz(Fz({}, null === (WC = zC.session) || void 0 === WC ? void 0 : WC.overrides), gC) : null === (NC = zC.session) || void 0 === NC ? void 0 : NC.overrides;
+          bC.sessionMeta = Fz({
+            id: CC,
+            attributes: Fz({
+              isSampled: bC.isSampled.toString()
+            }, null === (MC = zC.session) || void 0 === MC ? void 0 : MC.attributes)
+          }, SC ? {
+            overrides: SC
+          } : {}), wC = Jz
         } else {
-          var aq, Vq;
-          const qq = null === mq || void 0 === mq ? void 0 : mq.sessionId;
-          Oq = nE({
-            sessionId: qq,
-            isSampled: mq.isSampled || !1,
-            started: null === mq || void 0 === mq ? void 0 : mq.started
+          var gC, SC;
+          const CC = null === nC || void 0 === nC ? void 0 : nC.sessionId;
+          bC = hz({
+            sessionId: CC,
+            isSampled: nC.isSampled || !1,
+            started: null === nC || void 0 === nC ? void 0 : nC.started
           }, this);
-          const gq = null === mq || void 0 === mq ? void 0 : mq.sessionMeta,
-            Yq = uE(uE({}, null === (aq = Eq.session) || void 0 === aq ? void 0 : aq.overrides), null === gq || void 0 === gq ? void 0 : gq.overrides);
-          Oq.sessionMeta = uE(uE({}, Eq.session), {}, {
-            id: qq,
-            attributes: uE(uE(uE({}, null === (Vq = Eq.session) || void 0 === Vq ? void 0 : Vq.attributes), null === gq || void 0 === gq ? void 0 : gq.attributes), {}, {
-              isSampled: Oq.isSampled.toString()
+          const ZC = null === nC || void 0 === nC ? void 0 : nC.sessionMeta,
+            QC = Fz(Fz({}, null === (gC = zC.session) || void 0 === gC ? void 0 : gC.overrides), null === ZC || void 0 === ZC ? void 0 : ZC.overrides);
+          bC.sessionMeta = Fz(Fz({}, zC.session), {}, {
+            id: CC,
+            attributes: Fz(Fz(Fz({}, null === (SC = zC.session) || void 0 === SC ? void 0 : SC.attributes), null === ZC || void 0 === ZC ? void 0 : ZC.attributes), {}, {
+              isSampled: bC.isSampled.toString()
             }),
-            overrides: Yq
-          }), lq = tE
+            overrides: QC
+          }), wC = Iz
         }
-        var dq;
-        if (Yq && (Oq.sessionMeta = uE(uE({}, Oq.sessionMeta), {}, {
-            attributes: uE(uE(uE({}, null === (dq = Oq.sessionMeta) || void 0 === dq ? void 0 : dq.attributes), Yq.attributes), {}, {
-              isSampled: Oq.isSampled.toString()
+        var pC;
+        if (QC && (bC.sessionMeta = Fz(Fz({}, bC.sessionMeta), {}, {
+            attributes: Fz(Fz(Fz({}, null === (pC = bC.sessionMeta) || void 0 === pC ? void 0 : pC.attributes), QC.attributes), {}, {
+              isSampled: bC.isSampled.toString()
             })
-          }), Yq.overrides)) {
-          const qq = (null === gq || void 0 === gq ? void 0 : gq.inheritOverrides) ? uE(uE({}, Oq.sessionMeta.overrides), Yq.overrides) : Yq.overrides;
-          Object.keys(qq).length > 0 ? Oq.sessionMeta.overrides = qq : delete Oq.sessionMeta.overrides
+          }), QC.overrides)) {
+          const CC = (null === ZC || void 0 === ZC ? void 0 : ZC.inheritOverrides) ? Fz(Fz({}, bC.sessionMeta.overrides), QC.overrides) : QC.overrides;
+          Object.keys(CC).length > 0 ? bC.sessionMeta.overrides = CC : delete bC.sessionMeta.overrides
         }
         return {
-          initialSession: Oq,
-          lifecycleType: lq
+          initialSession: bC,
+          lifecycleType: wC
         }
       }
-      registerBeforeSendHook(qq) {
-        var Eq;
-        this.beforeSendHook = Eq => {
-          var gq, Yq;
-          const lq = null === (gq = Eq.meta.session) || void 0 === gq ? void 0 : gq.id;
-          lq && !this.transports.isPaused() && qq(lq);
-          const Oq = null === (Yq = Eq.meta.session) || void 0 === Yq ? void 0 : Yq.attributes;
-          if (Oq && "true" === (null === Oq || void 0 === Oq ? void 0 : Oq.isSampled)) {
-            var mq;
-            let qq = JSON.parse(JSON.stringify(Eq));
-            const gq = null === (mq = qq.meta.session) || void 0 === mq ? void 0 : mq.attributes;
-            var xq;
-            if (null === gq || void 0 === gq || delete gq.isSampled, 0 === Object.keys(null !== gq && void 0 !== gq ? gq : {}).length) null === (xq = qq.meta.session) || void 0 === xq || delete xq.attributes;
-            return qq
+      registerBeforeSendHook(CC) {
+        var zC;
+        this.beforeSendHook = zC => {
+          var ZC, QC;
+          const wC = null === (ZC = zC.meta.session) || void 0 === ZC ? void 0 : ZC.id;
+          wC && !this.transports.isPaused() && CC(wC);
+          const bC = null === (QC = zC.meta.session) || void 0 === QC ? void 0 : QC.attributes;
+          if (bC && "true" === (null === bC || void 0 === bC ? void 0 : bC.isSampled)) {
+            var nC;
+            let CC = JSON.parse(JSON.stringify(zC));
+            const ZC = null === (nC = CC.meta.session) || void 0 === nC ? void 0 : nC.attributes;
+            var fC;
+            if (null === ZC || void 0 === ZC || delete ZC.isSampled, 0 === Object.keys(null !== ZC && void 0 !== ZC ? ZC : {}).length) null === (fC = CC.meta.session) || void 0 === fC || delete fC.attributes;
+            return CC
           }
           return null
-        }, null === (Eq = this.transports) || void 0 === Eq || Eq.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (zC = this.transports) || void 0 === zC || zC.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var qq;
+        var CC;
         this.logDebug("init session instrumentation");
-        const Eq = document.prerendering;
-        var gq;
-        if ((null === (qq = this.config.sessionTracking) || void 0 === qq ? void 0 : qq.enabled) && (Eq || this.prerenderSession)) return null !== (gq = this.prerenderSession) && void 0 !== gq || (this.prerenderSession = new kE(this.metas, this.transports, (qq => {
-          this.prerenderSession = void 0, this.initializeSession(qq)
+        const zC = document.prerendering;
+        var ZC;
+        if ((null === (CC = this.config.sessionTracking) || void 0 === CC ? void 0 : CC.enabled) && (zC || this.prerenderSession)) return null !== (ZC = this.prerenderSession) && void 0 !== ZC || (this.prerenderSession = new Tz(this.metas, this.transports, (CC => {
+          this.prerenderSession = void 0, this.initializeSession(CC)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(qq) {
-        const Eq = this.config.sessionTracking;
-        if (null === Eq || void 0 === Eq ? void 0 : Eq.enabled) {
-          var gq, Yq;
-          const lq = RE(Eq),
-            Oq = new lq(this);
-          this.isAdoptingSession = Oq.isAdopting, this.registerBeforeSendHook(Oq.recordActivity);
+      initializeSession(CC) {
+        const zC = this.config.sessionTracking;
+        if (null === zC || void 0 === zC ? void 0 : zC.enabled) {
+          var ZC, QC;
+          const wC = az(zC),
+            bC = new wC(this);
+          this.isAdoptingSession = bC.isAdopting, this.registerBeforeSendHook(bC.recordActivity);
           const {
-            initialSession: mq,
-            lifecycleType: xq
-          } = this.createInitialSession(lq, Eq, qq);
-          lq.storeUserSession(mq);
-          const Aq = mq.sessionMeta;
-          this.notifiedSession = Aq, this.api.setSession(Aq), this.captureListener = () => {
-            this.transports.isPaused() || Oq.updateSession({
+            initialSession: nC,
+            lifecycleType: fC
+          } = this.createInitialSession(wC, zC, CC);
+          wC.storeUserSession(nC);
+          const oC = nC.sessionMeta;
+          this.notifiedSession = oC, this.api.setSession(oC), this.captureListener = () => {
+            this.transports.isPaused() || bC.updateSession({
               refreshActivity: !1
             })
-          }, null === (gq = (Yq = this.metas).addCaptureListener) || void 0 === gq || gq.call(Yq, this.captureListener), xq === yE && this.api.pushEvent(yE, {}, void 0, {
+          }, null === (ZC = (QC = this.metas).addCaptureListener) || void 0 === ZC || ZC.call(QC, this.captureListener), fC === Jz && this.api.pushEvent(Jz, {}, void 0, {
             skipDedupe: !0
-          }), xq === tE && this.api.pushEvent(tE, {}, void 0, {
+          }), fC === Iz && this.api.pushEvent(Iz, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var qq, Eq, gq;
-        (null === (qq = this.prerenderSession) || void 0 === qq || qq.destroy(), this.captureListener) && (null === (Eq = (gq = this.metas).removeCaptureListener) || void 0 === Eq || Eq.call(gq, this.captureListener), this.captureListener = void 0);
+        var CC, zC, ZC;
+        (null === (CC = this.prerenderSession) || void 0 === CC || CC.destroy(), this.captureListener) && (null === (zC = (ZC = this.metas).removeCaptureListener) || void 0 === zC || zC.call(ZC, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function lg(qq, Eq, gq, Yq) {
-      const lq = {
-        filename: qq || document.location.href,
-        function: Eq || "?"
+    function wZ(CC, zC, ZC, QC) {
+      const wC = {
+        filename: CC || document.location.href,
+        function: zC || "?"
       };
-      return void 0 !== gq && (lq.lineno = gq), void 0 !== Yq && (lq.colno = Yq), lq
+      return void 0 !== ZC && (wC.lineno = ZC), void 0 !== QC && (wC.colno = QC), wC
     }
-    const Og = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      mg = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      xg = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      Ag = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      cg = "safari-extension",
-      ug = "safari-web-extension",
-      Bg = /Minified React error #\d+;/i;
+    const bZ = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      nZ = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      fZ = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      oZ = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      qZ = "safari-extension",
+      FZ = "safari-web-extension",
+      WZ = /Minified React error #\d+;/i;
 
-    function Wg(qq, Eq) {
-      const gq = null === qq || void 0 === qq ? void 0 : qq.includes(cg),
-        Yq = !gq && (null === qq || void 0 === qq ? void 0 : qq.includes("safari-web-extension"));
-      return gq || Yq ? [(null === qq || void 0 === qq ? void 0 : qq.includes("@")) ? qq.split("@")[0] : qq, gq ? `${cg}:${Eq}` : `${ug}:${Eq}`] : [qq, Eq]
+    function NZ(CC, zC) {
+      const ZC = null === CC || void 0 === CC ? void 0 : CC.includes(qZ),
+        QC = !ZC && (null === CC || void 0 === CC ? void 0 : CC.includes("safari-web-extension"));
+      return ZC || QC ? [(null === CC || void 0 === CC ? void 0 : CC.includes("@")) ? CC.split("@")[0] : CC, ZC ? `${qZ}:${zC}` : `${FZ}:${zC}`] : [CC, zC]
     }
-    const Ng = 1024;
+    const MZ = 1024;
 
-    function ag(qq) {
-      let Eq = [];
-      qq.stacktrace ? Eq = qq.stacktrace.split("\n").filter(((qq, Eq) => Eq % 2 === 0)) : qq.stack && (Eq = qq.stack.split("\n"));
-      const gq = Eq.reduce(((Eq, gq, Yq) => {
-        if (gq.length > Ng) return Eq;
-        let lq, Oq, mq, xq, Aq;
-        if (lq = Og.exec(gq)) {
-          if (Oq = lq[1], mq = lq[2], xq = lq[3], Aq = lq[4], null === mq || void 0 === mq ? void 0 : mq.startsWith("eval")) {
-            const qq = mg.exec(mq);
-            qq && (mq = qq[1], xq = qq[2], Aq = qq[3])
+    function gZ(CC) {
+      let zC = [];
+      CC.stacktrace ? zC = CC.stacktrace.split("\n").filter(((CC, zC) => zC % 2 === 0)) : CC.stack && (zC = CC.stack.split("\n"));
+      const ZC = zC.reduce(((zC, ZC, QC) => {
+        if (ZC.length > MZ) return zC;
+        let wC, bC, nC, fC, oC;
+        if (wC = bZ.exec(ZC)) {
+          if (bC = wC[1], nC = wC[2], fC = wC[3], oC = wC[4], null === nC || void 0 === nC ? void 0 : nC.startsWith("eval")) {
+            const CC = nZ.exec(nC);
+            CC && (nC = CC[1], fC = CC[2], oC = CC[3])
           }
-          mq = (null === mq || void 0 === mq ? void 0 : mq.startsWith("address at ")) ? mq.substring(11) : mq, [Oq, mq] = Wg(Oq, mq)
-        } else if (lq = xg.exec(gq)) {
-          if (Oq = lq[1], mq = lq[3], xq = lq[4], Aq = lq[5], mq && mq.includes(" > eval")) {
-            const qq = Ag.exec(mq);
-            qq && (Oq = Oq || "eval", mq = qq[1], xq = qq[2])
-          } else 0 === Yq && !Aq && tq(qq.columnNumber) && (Aq = String(qq.columnNumber + 1));
-          [Oq, mq] = Wg(Oq, mq)
+          nC = (null === nC || void 0 === nC ? void 0 : nC.startsWith("address at ")) ? nC.substring(11) : nC, [bC, nC] = NZ(bC, nC)
+        } else if (wC = fZ.exec(ZC)) {
+          if (bC = wC[1], nC = wC[3], fC = wC[4], oC = wC[5], nC && nC.includes(" > eval")) {
+            const CC = oZ.exec(nC);
+            CC && (bC = bC || "eval", nC = CC[1], fC = CC[2])
+          } else 0 === QC && !oC && IC(CC.columnNumber) && (oC = String(CC.columnNumber + 1));
+          [bC, nC] = NZ(bC, nC)
         }
-        return (mq || Oq) && Eq.push(lg(mq, Oq, xq ? Number(xq) : void 0, Aq ? Number(Aq) : void 0)), Eq
+        return (nC || bC) && zC.push(wZ(nC, bC, fC ? Number(fC) : void 0, oC ? Number(oC) : void 0)), zC
       }), []);
-      return Bg.test(qq.message) ? gq.slice(1) : gq
+      return WZ.test(CC.message) ? ZC.slice(1) : ZC
     }
 
-    function Vg(qq) {
+    function SZ(CC) {
       return {
-        frames: ag(qq)
+        frames: gZ(CC)
       }
     }
-    const dg = "http-request-start",
-      jg = "http-request-end";
-    var Hg = class qq {
+    const pZ = "http-request-start",
+      PZ = "http-request-end";
+    var GZ = class CC {
       constructor() {
         this.subscribers = []
       }
-      subscribe(qq) {
-        return this.subscribers.push(qq), {
-          unsubscribe: () => this.unsubscribe(qq)
+      subscribe(CC) {
+        return this.subscribers.push(CC), {
+          unsubscribe: () => this.unsubscribe(CC)
         }
       }
-      unsubscribe(qq) {
-        this.subscribers = this.subscribers.filter((Eq => Eq !== qq))
+      unsubscribe(CC) {
+        this.subscribers = this.subscribers.filter((zC => zC !== CC))
       }
-      notify(qq) {
-        this.subscribers.forEach((Eq => Eq(qq)))
+      notify(CC) {
+        this.subscribers.forEach((zC => zC(CC)))
       }
       first() {
-        const Eq = new qq,
-          gq = qq => {
-            Eq.notify(qq), Yq.unsubscribe()
+        const zC = new CC,
+          ZC = CC => {
+            zC.notify(CC), QC.unsubscribe()
           },
-          Yq = this.subscribe(gq),
-          lq = Eq.unsubscribe.bind(Eq);
-        return this.withUnsubscribeOverride(Eq, lq, gq)
+          QC = this.subscribe(ZC),
+          wC = zC.unsubscribe.bind(zC);
+        return this.withUnsubscribeOverride(zC, wC, ZC)
       }
-      takeWhile(Eq) {
-        const gq = new qq,
-          Yq = qq => {
-            Eq(qq) ? gq.notify(qq) : gq.unsubscribe(Yq)
+      takeWhile(zC) {
+        const ZC = new CC,
+          QC = CC => {
+            zC(CC) ? ZC.notify(CC) : ZC.unsubscribe(QC)
           };
-        this.subscribe(Yq);
-        const lq = gq.unsubscribe.bind(gq);
-        return this.withUnsubscribeOverride(gq, lq, Yq)
+        this.subscribe(QC);
+        const wC = ZC.unsubscribe.bind(ZC);
+        return this.withUnsubscribeOverride(ZC, wC, QC)
       }
-      filter(Eq) {
-        const gq = new qq,
-          Yq = qq => {
-            Eq(qq) && gq.notify(qq)
+      filter(zC) {
+        const ZC = new CC,
+          QC = CC => {
+            zC(CC) && ZC.notify(CC)
           };
-        this.subscribe(Yq);
-        const lq = gq.unsubscribe.bind(gq);
-        return this.withUnsubscribeOverride(gq, lq, Yq)
+        this.subscribe(QC);
+        const wC = ZC.unsubscribe.bind(ZC);
+        return this.withUnsubscribeOverride(ZC, wC, QC)
       }
       merge() {
-        const Eq = new qq,
-          gq = [];
-        for (var Yq = arguments.length, lq = new Array(Yq), Oq = 0; Oq < Yq; Oq++) lq[Oq] = arguments[Oq];
-        lq.forEach((qq => {
-          const Yq = qq.subscribe((qq => {
-            Eq.notify(qq)
+        const zC = new CC,
+          ZC = [];
+        for (var QC = arguments.length, wC = new Array(QC), bC = 0; bC < QC; bC++) wC[bC] = arguments[bC];
+        wC.forEach((CC => {
+          const QC = CC.subscribe((CC => {
+            zC.notify(CC)
           }));
-          gq.push(Yq)
+          ZC.push(QC)
         }));
-        const mq = Eq.unsubscribeAll.bind(Eq);
-        return Eq.unsubscribe = () => {
-          gq.forEach((qq => qq.unsubscribe())), mq()
-        }, Eq
+        const nC = zC.unsubscribeAll.bind(zC);
+        return zC.unsubscribe = () => {
+          ZC.forEach((CC => CC.unsubscribe())), nC()
+        }, zC
       }
-      withUnsubscribeOverride(qq, Eq, gq) {
-        return qq.unsubscribe = qq => {
-          Eq(qq), this.unsubscribe(gq)
-        }, qq
+      withUnsubscribeOverride(CC, zC, ZC) {
+        return CC.unsubscribe = CC => {
+          zC(CC), this.unsubscribe(ZC)
+        }, CC
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let og = function(qq) {
-      return qq.TRACE = "trace", qq.DEBUG = "debug", qq.INFO = "info", qq.LOG = "log", qq.WARN = "warn", qq.ERROR = "error", qq
+    let RZ = function(CC) {
+      return CC.TRACE = "trace", CC.DEBUG = "debug", CC.INFO = "info", CC.LOG = "log", CC.WARN = "warn", CC.ERROR = "error", CC
     }({});
-    const Pg = "log",
-      Qg = ["trace", "debug", "info", "log", "warn", "error"];
-    let yg, tg = !1;
-    const rg = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      vg = "Error",
-      hg = qq => qq.map((qq => nq(qq) ? zE(qq) : String(qq))).join(" ");
+    const AZ = "log",
+      xZ = ["trace", "debug", "info", "log", "warn", "error"];
+    let JZ, IZ = !1;
+    const iZ = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      vZ = "Error",
+      eZ = CC => CC.map((CC => hC(CC) ? lz(CC) : String(CC))).join(" ");
 
-    function ng(qq) {
-      let Eq, gq, Yq, lq, Oq = [];
-      if (Gq(qq) && qq.error) Eq = qq.error.message, gq = qq.error.name, Oq = ag(qq.error);
-      else if ((Yq = Lq(qq)) || Jq(qq)) {
+    function hZ(CC) {
+      let zC, ZC, QC, wC, bC = [];
+      if (uC(CC) && CC.error) zC = CC.error.message, ZC = CC.error.name, bC = gZ(CC.error);
+      else if ((QC = rC(CC)) || sC(CC)) {
         const {
-          name: lq,
-          message: Oq
-        } = qq;
-        gq = null !== lq && void 0 !== lq ? lq : Yq ? "DOMError" : "DOMException", Eq = Oq ? `${gq}: ${Oq}` : gq
-      } else pq(qq) ? (gq = qq.name, Eq = qq.message, Oq = ag(qq)) : (nq(qq) || (lq = zq(qq))) && (gq = lq ? qq.constructor.name : void 0, Eq = `Non-Error exception captured with keys: ${Object.keys(qq)}`);
-      return [Eq, gq, Oq]
+          name: wC,
+          message: bC
+        } = CC;
+        ZC = null !== wC && void 0 !== wC ? wC : QC ? "DOMError" : "DOMException", zC = bC ? `${ZC}: ${bC}` : ZC
+      } else cC(CC) ? (ZC = CC.name, zC = CC.message, bC = gZ(CC)) : (hC(CC) || (wC = lC(CC))) && (ZC = wC ? CC.constructor.name : void 0, zC = `Non-Error exception captured with keys: ${Object.keys(CC)}`);
+      return [zC, ZC, bC]
     }
 
-    function bg(qq) {
-      const [Eq, gq, Yq, lq, Oq] = qq;
-      let mq, xq, Aq = [];
-      const cq = yq(Eq),
-        uq = lg(gq, "?", Yq, lq);
-      return Oq || !cq ? ([mq, xq, Aq] = ng(null !== Oq && void 0 !== Oq ? Oq : Eq), 0 === Aq.length && (Aq = [uq])) : cq && ([mq, xq] = function(qq) {
-        var Eq, gq;
-        const Yq = qq.match(rg),
-          lq = null !== (Eq = null === Yq || void 0 === Yq ? void 0 : Yq[1]) && void 0 !== Eq ? Eq : vg;
-        return [null !== (gq = null === Yq || void 0 === Yq ? void 0 : Yq[2]) && void 0 !== gq ? gq : qq, lq]
-      }(Eq), Aq = [uq]), {
-        value: mq,
-        type: xq,
-        stackFrames: Aq
+    function KZ(CC) {
+      const [zC, ZC, QC, wC, bC] = CC;
+      let nC, fC, oC = [];
+      const qC = JC(zC),
+        FC = wZ(ZC, "?", QC, wC);
+      return bC || !qC ? ([nC, fC, oC] = hZ(null !== bC && void 0 !== bC ? bC : zC), 0 === oC.length && (oC = [FC])) : qC && ([nC, fC] = function(CC) {
+        var zC, ZC;
+        const QC = CC.match(iZ),
+          wC = null !== (zC = null === QC || void 0 === QC ? void 0 : QC[1]) && void 0 !== zC ? zC : vZ;
+        return [null !== (ZC = null === QC || void 0 === QC ? void 0 : QC[2]) && void 0 !== ZC ? ZC : CC, wC]
+      }(zC), oC = [FC]), {
+        value: nC,
+        type: fC,
+        stackFrames: oC
       }
     }
 
-    function ig(qq, Eq) {
-      return pq(qq[0]) ? bg(qq) : {
-        value: Eq(qq)
+    function YZ(CC, zC) {
+      return cC(CC[0]) ? KZ(CC) : {
+        value: zC(CC)
       }
     }
-    const Zg = qq => qq.map((qq => {
+    const dZ = CC => CC.map((CC => {
       try {
-        return String(qq)
-      } catch (Eq) {
+        return String(CC)
+      } catch (zC) {
         return ""
       }
     })).join(" ");
-    var fg = class qq extends Eg {
+    var mZ = class CC extends zZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = gg, this.errorSerializer = Zg
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = ZZ, this.errorSerializer = dZ
       }
       initialize() {
-        var Eq, gq;
-        const Yq = this.config.consoleInstrumentation,
-          lq = (null === Yq || void 0 === Yq ? void 0 : Yq.serializeErrors) || !!(null === Yq || void 0 === Yq ? void 0 : Yq.errorSerializer);
-        this.errorSerializer = lq ? null !== (Eq = null === Yq || void 0 === Yq ? void 0 : Yq.errorSerializer) && void 0 !== Eq ? Eq : hg : Zg;
-        const Oq = null !== (gq = null === Yq || void 0 === Yq ? void 0 : Yq.disabledLevels) && void 0 !== gq ? gq : qq.defaultDisabledLevels,
-          mq = function(qq) {
-            if (yg || (yg = new Hg), !tg) {
-              const Eq = null !== qq && void 0 !== qq ? qq : DE;
-              Qg.forEach((qq => {
-                console[qq] = function() {
-                  for (var gq, Yq = arguments.length, lq = new Array(Yq), Oq = 0; Oq < Yq; Oq++) lq[Oq] = arguments[Oq];
-                  yg.notify({
+        var zC, ZC;
+        const QC = this.config.consoleInstrumentation,
+          wC = (null === QC || void 0 === QC ? void 0 : QC.serializeErrors) || !!(null === QC || void 0 === QC ? void 0 : QC.errorSerializer);
+        this.errorSerializer = wC ? null !== (zC = null === QC || void 0 === QC ? void 0 : QC.errorSerializer) && void 0 !== zC ? zC : eZ : dZ;
+        const bC = null !== (ZC = null === QC || void 0 === QC ? void 0 : QC.disabledLevels) && void 0 !== ZC ? ZC : CC.defaultDisabledLevels,
+          nC = function(CC) {
+            if (JZ || (JZ = new GZ), !IZ) {
+              const zC = null !== CC && void 0 !== CC ? CC : Vz;
+              xZ.forEach((CC => {
+                console[CC] = function() {
+                  for (var ZC, QC = arguments.length, wC = new Array(QC), bC = 0; bC < QC; bC++) wC[bC] = arguments[bC];
+                  JZ.notify({
                     type: "console",
-                    level: qq,
-                    args: lq
-                  }), null === (gq = Eq[qq]) || void 0 === gq || gq.apply(console, lq)
+                    level: CC,
+                    args: wC
+                  }), null === (ZC = zC[CC]) || void 0 === ZC || ZC.apply(console, wC)
                 }
-              })), tg = !0
+              })), IZ = !0
             }
-            return yg
+            return JZ
           }(this.unpatchedConsole);
-        this.subscription = mq.subscribe((Eq => {
+        this.subscription = nC.subscribe((zC => {
           let {
-            level: gq,
-            args: lq
-          } = Eq;
-          if (!Oq.includes(gq)) try {
-            if (gq !== og.ERROR || (null === Yq || void 0 === Yq ? void 0 : Yq.consoleErrorAsLog))
-              if (gq === og.ERROR && (null === Yq || void 0 === Yq ? void 0 : Yq.consoleErrorAsLog)) {
+            level: ZC,
+            args: wC
+          } = zC;
+          if (!bC.includes(ZC)) try {
+            if (ZC !== RZ.ERROR || (null === QC || void 0 === QC ? void 0 : QC.consoleErrorAsLog))
+              if (ZC === RZ.ERROR && (null === QC || void 0 === QC ? void 0 : QC.consoleErrorAsLog)) {
                 const {
-                  value: Eq,
-                  type: Yq,
-                  stackFrames: Oq
-                } = ig(lq, this.errorSerializer);
-                this.api.pushLog(Eq ? [qq.consoleErrorPrefix + Eq] : lq, {
-                  level: gq,
+                  value: zC,
+                  type: QC,
+                  stackFrames: bC
+                } = YZ(wC, this.errorSerializer);
+                this.api.pushLog(zC ? [CC.consoleErrorPrefix + zC] : wC, {
+                  level: ZC,
                   context: {
-                    value: null !== Eq && void 0 !== Eq ? Eq : "",
-                    type: null !== Yq && void 0 !== Yq ? Yq : "",
-                    stackFrames: (null === Oq || void 0 === Oq ? void 0 : Oq.length) ? hg(Oq) : ""
+                    value: null !== zC && void 0 !== zC ? zC : "",
+                    type: null !== QC && void 0 !== QC ? QC : "",
+                    stackFrames: (null === bC || void 0 === bC ? void 0 : bC.length) ? eZ(bC) : ""
                   }
                 })
-              } else this.api.pushLog(lq, {
-                level: gq
+              } else this.api.pushLog(wC, {
+                level: ZC
               });
             else {
               const {
-                value: Eq,
-                type: gq,
-                stackFrames: Yq
-              } = ig(lq, this.errorSerializer);
-              if (Eq && !gq && !Yq) return void this.api.pushError(new Error(qq.consoleErrorPrefix + Eq));
-              this.api.pushError(new Error(qq.consoleErrorPrefix + Eq), {
-                type: gq,
-                stackFrames: Yq
+                value: zC,
+                type: ZC,
+                stackFrames: QC
+              } = YZ(wC, this.errorSerializer);
+              if (zC && !ZC && !QC) return void this.api.pushError(new Error(CC.consoleErrorPrefix + zC));
+              this.api.pushError(new Error(CC.consoleErrorPrefix + zC), {
+                type: ZC,
+                stackFrames: QC
               })
             }
-          } catch (mq) {
-            this.logError(mq)
+          } catch (nC) {
+            this.logError(nC)
           }
         }))
       }
       destroy() {
-        var qq;
-        null === (qq = this.subscription) || void 0 === qq || qq.unsubscribe(), this.subscription = void 0
+        var CC;
+        null === (CC = this.subscription) || void 0 === CC || CC.unsubscribe(), this.subscription = void 0
       }
     };
-    fg.defaultDisabledLevels = [og.DEBUG, og.TRACE, og.LOG], fg.consoleErrorPrefix = "console.error: ";
-    const Mg = [];
-    var Tg = class extends Eg {
+    mZ.defaultDisabledLevels = [RZ.DEBUG, RZ.TRACE, RZ.LOG], mZ.consoleErrorPrefix = "console.error: ";
+    const HZ = [];
+    var EZ = class extends zZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = gg
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = ZZ
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(qq) {
-            const Eq = window.onerror;
+          function(CC) {
+            const zC = window.onerror;
             window.onerror = function() {
-              for (var gq = arguments.length, Yq = new Array(gq), lq = 0; lq < gq; lq++) Yq[lq] = arguments[lq];
+              for (var ZC = arguments.length, QC = new Array(ZC), wC = 0; wC < ZC; wC++) QC[wC] = arguments[wC];
               try {
                 const {
-                  value: Eq,
-                  type: gq,
-                  stackFrames: lq
-                } = bg(Yq), Oq = Yq[4];
-                if (Eq) {
-                  const Yq = {
-                    type: gq,
-                    stackFrames: lq
+                  value: zC,
+                  type: ZC,
+                  stackFrames: wC
+                } = KZ(QC), bC = QC[4];
+                if (zC) {
+                  const QC = {
+                    type: ZC,
+                    stackFrames: wC
                   };
-                  null != Oq && (Yq.originalError = Oq), qq.pushError(new Error(Eq), Yq)
+                  null != bC && (QC.originalError = bC), CC.pushError(new Error(zC), QC)
                 }
               } finally {
-                null === Eq || void 0 === Eq || Eq.apply(window, Yq)
+                null === zC || void 0 === zC || zC.apply(window, QC)
               }
             }
           }(this.api),
-          function(qq) {
-            const Eq = Eq => {
-              var gq;
-              let Yq, lq, Oq = Eq;
-              if (Oq.reason) Oq = Eq.reason;
-              else if (null === (gq = Eq.detail) || void 0 === gq ? void 0 : gq.reason) {
-                var mq;
-                Oq = null === (mq = Eq.detail) || void 0 === mq ? void 0 : mq.reason
+          function(CC) {
+            const zC = zC => {
+              var ZC;
+              let QC, wC, bC = zC;
+              if (bC.reason) bC = zC.reason;
+              else if (null === (ZC = zC.detail) || void 0 === ZC ? void 0 : ZC.reason) {
+                var nC;
+                bC = null === (nC = zC.detail) || void 0 === nC ? void 0 : nC.reason
               }
-              let xq = [];
-              Mq(Oq) ? (Yq = `Non-Error promise rejection captured with value: ${String(Oq)}`, lq = "UnhandledRejection") : [Yq, lq, xq] = ng(Oq), Yq && qq.pushError(new Error(Yq), {
-                type: lq,
-                stackFrames: xq
+              let fC = [];
+              HC(bC) ? (QC = `Non-Error promise rejection captured with value: ${String(bC)}`, wC = "UnhandledRejection") : [QC, wC, fC] = hZ(bC), QC && CC.pushError(new Error(QC), {
+                type: wC,
+                stackFrames: fC
               })
             };
-            window.addEventListener("unhandledrejection", Eq), Mg.push(Eq)
+            window.addEventListener("unhandledrejection", zC), HZ.push(zC)
           }(this.api)
       }
     };
-    const zg = "unknown";
-    var Sg = class extends Eg {
+    const lZ = "unknown";
+    var XZ = class extends zZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = gg, this.waitingForActivation = !1, this.sendViewChangedEvent = qq => {
-          var Eq;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = ZZ, this.waitingForActivation = !1, this.sendViewChangedEvent = CC => {
+          var zC;
           if (this.waitingForActivation || document.prerendering) return;
-          const gq = qq.view;
-          if (gq && gq.name !== (null === (Eq = this.notifiedView) || void 0 === Eq ? void 0 : Eq.name)) {
-            var Yq, lq, Oq;
-            const qq = null !== (Yq = null === (lq = this.notifiedView) || void 0 === lq ? void 0 : lq.name) && void 0 !== Yq ? Yq : zg;
-            this.notifiedView = gq, this.api.pushEvent(QE, {
-              fromView: qq,
-              toView: null !== (Oq = gq.name) && void 0 !== Oq ? Oq : zg
+          const ZC = CC.view;
+          if (ZC && ZC.name !== (null === (zC = this.notifiedView) || void 0 === zC ? void 0 : zC.name)) {
+            var QC, wC, bC;
+            const CC = null !== (QC = null === (wC = this.notifiedView) || void 0 === wC ? void 0 : wC.name) && void 0 !== QC ? QC : lZ;
+            this.notifiedView = ZC, this.api.pushEvent(xz, {
+              fromView: CC,
+              toView: null !== (bC = ZC.name) && void 0 !== bC ? bC : lZ
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class pg {
+    class cZ {
       t;
       o = 0;
       i = [];
-      l(qq) {
-        if (qq.hadRecentInput) return;
-        const Eq = this.i[0],
-          gq = this.i.at(-1);
-        this.o && Eq && gq && qq.startTime - gq.startTime < 1e3 && qq.startTime - Eq.startTime < 5e3 ? (this.o += qq.value, this.i.push(qq)) : (this.o = qq.value, this.i = [qq]), this.t?.(qq)
+      l(CC) {
+        if (CC.hadRecentInput) return;
+        const zC = this.i[0],
+          ZC = this.i.at(-1);
+        this.o && zC && ZC && CC.startTime - ZC.startTime < 1e3 && CC.startTime - zC.startTime < 5e3 ? (this.o += CC.value, this.i.push(CC)) : (this.o = CC.value, this.i = [CC]), this.t?.(CC)
       }
     }
-    const Gg = () => {
-        const qq = performance.getEntriesByType("navigation")[0];
-        if (qq && qq.responseStart > 0 && qq.responseStart < performance.now()) return qq
+    const uZ = () => {
+        const CC = performance.getEntriesByType("navigation")[0];
+        if (CC && CC.responseStart > 0 && CC.responseStart < performance.now()) return CC
       },
-      Lg = qq => {
+      rZ = CC => {
         if ("loading" === document.readyState) return "loading";
-        const Eq = Gg();
-        if (Eq) {
-          if (qq < Eq.domInteractive) return "loading";
-          if (0 === Eq.domContentLoadedEventStart || qq < Eq.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === Eq.domComplete || qq < Eq.domComplete) return "dom-content-loaded"
+        const zC = uZ();
+        if (zC) {
+          if (CC < zC.domInteractive) return "loading";
+          if (0 === zC.domContentLoadedEventStart || CC < zC.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === zC.domComplete || CC < zC.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      Jg = qq => {
-        const Eq = qq.nodeName;
-        return 1 === qq.nodeType ? Eq.toLowerCase() : Eq.toUpperCase().replace(/^#/, "")
+      sZ = CC => {
+        const zC = CC.nodeName;
+        return 1 === CC.nodeType ? zC.toLowerCase() : zC.toUpperCase().replace(/^#/, "")
       },
-      kg = qq => {
-        let Eq = "";
+      TZ = CC => {
+        let zC = "";
         try {
-          for (; 9 !== qq?.nodeType;) {
-            const gq = qq,
-              Yq = gq.id ? "#" + gq.id : [Jg(gq), ...Array.from(gq.classList ?? []).sort()].join(".");
-            if (Eq.length + Yq.length > 99) return Eq || Yq;
-            if (Eq = Eq ? Yq + ">" + Eq : Yq, gq.id) break;
-            qq = gq.parentNode
+          for (; 9 !== CC?.nodeType;) {
+            const ZC = CC,
+              QC = ZC.id ? "#" + ZC.id : [sZ(ZC), ...Array.from(ZC.classList ?? []).sort()].join(".");
+            if (zC.length + QC.length > 99) return zC || QC;
+            if (zC = zC ? QC + ">" + zC : QC, ZC.id) break;
+            CC = ZC.parentNode
           }
         } catch {}
-        return Eq
+        return zC
       },
-      Rg = new WeakMap;
+      aZ = new WeakMap;
 
-    function Ug(qq, Eq) {
-      let gq = Rg.get(Eq);
-      return gq || (gq = new WeakMap, Rg.set(Eq, gq)), gq.get(qq) || gq.set(qq, new Eq), gq.get(qq)
+    function tZ(CC, zC) {
+      let ZC = aZ.get(zC);
+      return ZC || (ZC = new WeakMap, aZ.set(zC, ZC)), ZC.get(CC) || ZC.set(CC, new zC), ZC.get(CC)
     }
-    let Fg = -1;
-    const sg = () => Fg,
-      Xg = qq => {
-        addEventListener("pageshow", (Eq => {
-          Eq.persisted && (Fg = Eq.timeStamp, qq(Eq))
+    let DZ = -1;
+    const jZ = () => DZ,
+      yZ = CC => {
+        addEventListener("pageshow", (zC => {
+          zC.persisted && (DZ = zC.timeStamp, CC(zC))
         }), !0)
       },
-      wg = (qq, Eq, gq, Yq) => {
-        let lq, Oq;
-        return mq => {
-          Eq.value >= 0 && (mq || Yq) && (Oq = Eq.value - (lq ?? 0), (Oq || void 0 === lq) && (lq = Eq.value, Eq.delta = Oq, Eq.rating = ((qq, Eq) => qq > Eq[1] ? "poor" : qq > Eq[0] ? "needs-improvement" : "good")(Eq.value, gq), qq(Eq)))
+      LZ = (CC, zC, ZC, QC) => {
+        let wC, bC;
+        return nC => {
+          zC.value >= 0 && (nC || QC) && (bC = zC.value - (wC ?? 0), (bC || void 0 === wC) && (wC = zC.value, zC.delta = bC, zC.rating = ((CC, zC) => CC > zC[1] ? "poor" : CC > zC[0] ? "needs-improvement" : "good")(zC.value, ZC), CC(zC)))
         }
       },
-      Kg = qq => {
-        requestAnimationFrame((() => requestAnimationFrame((() => qq()))))
+      UZ = CC => {
+        requestAnimationFrame((() => requestAnimationFrame((() => CC()))))
       },
-      Cg = () => Gg()?.activationStart ?? 0;
-    let Ig = -1;
-    const eg = new Set,
-      Dg = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      qY = qq => {
+      BZ = () => uZ()?.activationStart ?? 0;
+    let OZ = -1;
+    const kZ = new Set,
+      VZ = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      CQ = CC => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === qq.type)
-            for (const qq of eg) qq();
-          isFinite(Ig) || (Ig = "visibilitychange" === qq.type ? qq.timeStamp : 0, removeEventListener("prerenderingchange", qY, !0))
+          if ("visibilitychange" === CC.type)
+            for (const CC of kZ) CC();
+          isFinite(OZ) || (OZ = "visibilitychange" === CC.type ? CC.timeStamp : 0, removeEventListener("prerenderingchange", CQ, !0))
         }
       },
-      EY = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Ig = 1 / 0), Ig < 0) {
-          const qq = Cg(),
-            Eq = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((Eq => "hidden" === Eq.name && Eq.startTime >= qq))?.startTime;
-          Ig = Eq ?? Dg(), addEventListener("visibilitychange", qY, !0), addEventListener("prerenderingchange", qY, !0), Xg((() => {
+      zQ = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (OZ = 1 / 0), OZ < 0) {
+          const CC = BZ(),
+            zC = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((zC => "hidden" === zC.name && zC.startTime >= CC))?.startTime;
+          OZ = zC ?? VZ(), addEventListener("visibilitychange", CQ, !0), addEventListener("prerenderingchange", CQ, !0), yZ((() => {
             setTimeout((() => {
-              Ig = Dg()
+              OZ = VZ()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return Ig
+            return OZ
           },
-          onHidden(qq) {
-            eg.add(qq)
+          onHidden(CC) {
+            kZ.add(CC)
           }
         }
       },
-      gY = function(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          gq = arguments.length > 2 ? arguments[2] : void 0,
-          Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          lq = arguments.length > 4 ? arguments[4] : void 0,
-          Oq = arguments.length > 5 ? arguments[5] : void 0,
-          mq = arguments.length > 6 ? arguments[6] : void 0;
-        const xq = Gg(),
-          Aq = xq?.navigationId || 0;
-        let cq = "navigate";
-        return gq ? cq = gq : sg() >= 0 ? cq = "back-forward-cache" : xq && (document.prerendering || Cg() > 0 ? cq = "prerender" : document.wasDiscarded ? cq = "restore" : xq.type && (cq = xq.type.replace(/_/g, "-"))), {
-          name: qq,
-          value: Eq,
+      ZQ = function(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ZC = arguments.length > 2 ? arguments[2] : void 0,
+          QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          wC = arguments.length > 4 ? arguments[4] : void 0,
+          bC = arguments.length > 5 ? arguments[5] : void 0,
+          nC = arguments.length > 6 ? arguments[6] : void 0;
+        const fC = uZ(),
+          oC = fC?.navigationId || 0;
+        let qC = "navigate";
+        return ZC ? qC = ZC : jZ() >= 0 ? qC = "back-forward-cache" : fC && (document.prerendering || BZ() > 0 ? qC = "prerender" : document.wasDiscarded ? qC = "restore" : fC.type && (qC = fC.type.replace(/_/g, "-"))), {
+          name: CC,
+          value: zC,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: cq,
-          navigationId: Yq || Aq,
-          navigationInteractionId: lq,
-          navigationURL: Oq || xq?.name,
-          navigationStartTime: mq || 0
+          navigationType: qC,
+          navigationId: QC || oC,
+          navigationInteractionId: wC,
+          navigationURL: bC || fC?.name,
+          navigationStartTime: nC || 0
         }
       },
-      YY = function(qq, Eq) {
-        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      QQ = function(CC, zC) {
+        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const Yq = qq.filter((qq => PerformanceObserver.supportedEntryTypes.includes(qq)));
-          if (Yq.length > 0) {
-            const qq = new PerformanceObserver((qq => {
+          const QC = CC.filter((CC => PerformanceObserver.supportedEntryTypes.includes(CC)));
+          if (QC.length > 0) {
+            const CC = new PerformanceObserver((CC => {
               queueMicrotask((() => {
-                const gq = qq.getEntries();
-                Yq.length > 1 && gq.sort(((qq, Eq) => qq.startTime + qq.duration - (Eq.startTime + Eq.duration))), Eq(gq)
+                const ZC = CC.getEntries();
+                QC.length > 1 && ZC.sort(((CC, zC) => CC.startTime + CC.duration - (zC.startTime + zC.duration))), zC(ZC)
               }))
             }));
-            for (const Eq of Yq) qq.observe({
-              type: Eq,
+            for (const zC of QC) CC.observe({
+              type: zC,
               buffered: !0,
-              ...gq
+              ...ZC
             });
-            return qq
+            return CC
           }
         } catch {}
       },
-      lY = qq => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && qq && qq.reportSoftNavs,
-      OY = (qq, Eq) => {
-        if (qq.set(Eq.navigationId, Eq), qq.size > 2) {
-          const Eq = qq.keys().next().value;
-          void 0 !== Eq && qq.delete(Eq)
+      wQ = CC => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && CC && CC.reportSoftNavs,
+      bQ = (CC, zC) => {
+        if (CC.set(zC.navigationId, zC), CC.size > 2) {
+          const zC = CC.keys().next().value;
+          void 0 !== zC && CC.delete(zC)
         }
       },
-      mY = qq => {
-        let Eq = !1;
+      nQ = CC => {
+        let zC = !1;
         return () => {
-          Eq || (qq(), Eq = !0)
+          zC || (CC(), zC = !0)
         }
       };
-    class xY {
+    class fQ {
       u
     }
-    const AY = qq => {
-        document.prerendering ? addEventListener("prerenderingchange", qq, !0) : qq()
+    const oQ = CC => {
+        document.prerendering ? addEventListener("prerenderingchange", CC, !0) : CC()
       },
-      cY = [1800, 3e3],
-      uY = function(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const gq = lY(Eq);
-        AY((() => {
-          const Yq = Ug(Eq, xY),
-            lq = EY();
-          let Oq, mq = gY("FCP");
-          const xq = YY(["paint"], (qq => {
-            for (const Eq of qq) "first-contentful-paint" === Eq.name && (xq.disconnect(), Eq.startTime < lq.firstHiddenTime && (mq.value = Math.max(Eq.startTime - Cg(), 0), mq.entries.push(Eq), mq.navigationId = Eq.navigationId || mq.navigationId, Oq(!0)))
+      qQ = [1800, 3e3],
+      FQ = function(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ZC = wQ(zC);
+        oQ((() => {
+          const QC = tZ(zC, fQ),
+            wC = zQ();
+          let bC, nC = ZQ("FCP");
+          const fC = QQ(["paint"], (CC => {
+            for (const zC of CC) "first-contentful-paint" === zC.name && (fC.disconnect(), zC.startTime < wC.firstHiddenTime && (nC.value = Math.max(zC.startTime - BZ(), 0), nC.entries.push(zC), nC.navigationId = zC.navigationId || nC.navigationId, bC(!0)))
           }));
-          xq && (Oq = wg(qq, mq, cY, Eq.reportAllChanges), Xg((gq => {
-            mq = gY("FCP", -1, "back-forward-cache", mq.navigationId, mq.navigationInteractionId, mq.navigationURL, sg()), Oq = wg(qq, mq, cY, Eq.reportAllChanges), Kg((() => {
-              mq.value = performance.now() - gq.timeStamp, Oq(!0)
+          fC && (bC = LZ(CC, nC, qQ, zC.reportAllChanges), yZ((ZC => {
+            nC = ZQ("FCP", -1, "back-forward-cache", nC.navigationId, nC.navigationInteractionId, nC.navigationURL, jZ()), bC = LZ(CC, nC, qQ, zC.reportAllChanges), UZ((() => {
+              nC.value = performance.now() - ZC.timeStamp, bC(!0)
             }))
-          }))), gq && YY(["soft-navigation"], (gq => {
-            gq.forEach((gq => {
-              Yq.u && gq.navigationId && OY(Yq.u, gq);
-              const lq = Math.max((gq.presentationTime || gq.paintTime || 0) - gq.startTime, 0);
-              mq = gY("FCP", lq, "soft-navigation", gq.navigationId, gq.interactionId, gq.name, gq.startTime), Oq = wg(qq, mq, cY, Eq.reportAllChanges), Oq(!0)
+          }))), ZC && QQ(["soft-navigation"], (ZC => {
+            ZC.forEach((ZC => {
+              QC.u && ZC.navigationId && bQ(QC.u, ZC);
+              const wC = Math.max((ZC.presentationTime || ZC.paintTime || 0) - ZC.startTime, 0);
+              nC = ZQ("FCP", wC, "soft-navigation", ZC.navigationId, ZC.interactionId, ZC.name, ZC.startTime), bC = LZ(CC, nC, qQ, zC.reportAllChanges), bC(!0)
             }))
-          }), Eq)
+          }), zC)
         }))
       },
-      BY = [.1, .25],
-      WY = qq => qq.find((qq => 1 === qq.node?.nodeType)) || qq[0];
-    let NY = 0,
-      aY = 1 / 0,
-      VY = 0;
-    const dY = qq => {
-      for (const Eq of qq) Eq.interactionId && (aY = Math.min(aY, Eq.interactionId), VY = Math.max(VY, Eq.interactionId), NY = VY ? (VY - aY) / 7 + 1 : 0)
+      WQ = [.1, .25],
+      NQ = CC => CC.find((CC => 1 === CC.node?.nodeType)) || CC[0];
+    let MQ = 0,
+      gQ = 1 / 0,
+      SQ = 0;
+    const pQ = CC => {
+      for (const zC of CC) zC.interactionId && (gQ = Math.min(gQ, zC.interactionId), SQ = Math.max(SQ, zC.interactionId), MQ = SQ ? (SQ - gQ) / 7 + 1 : 0)
     };
-    let jY;
-    const HY = () => jY ? NY : performance.interactionCount ?? 0;
-    class oY {
+    let PQ;
+    const GQ = () => PQ ? MQ : performance.interactionCount ?? 0;
+    class RQ {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return HY() - this.h
+        return GQ() - this.h
       }
       D() {
-        this.h = HY(), this.v.length = 0, this.p.clear()
+        this.h = GQ(), this.v.length = 0, this.p.clear()
       }
-      S(qq) {
-        const Eq = this.T(),
-          gq = Math.min(this.v.length - 1, Math.floor(Eq / 50));
-        return !Eq || -1 !== gq || "soft-navigation" !== qq && "back-forward-cache" !== qq ? this.v[gq] : {
+      S(CC) {
+        const zC = this.T(),
+          ZC = Math.min(this.v.length - 1, Math.floor(zC / 50));
+        return !zC || -1 !== ZC || "soft-navigation" !== CC && "back-forward-cache" !== CC ? this.v[ZC] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(qq) {
-        if (this.m?.(qq), !qq.interactionId) return;
-        const Eq = this.v.at(-1);
-        let gq = this.p.get(qq.interactionId);
-        if (gq || this.v.length < 10 || qq.duration > Eq.k) {
-          if (gq ? qq.duration > gq.k ? (gq.entries = [qq], gq.k = qq.duration) : qq.duration === gq.k && qq.startTime === gq.entries[0].startTime && gq.entries.push(qq) : (gq = {
-              id: qq.interactionId,
-              entries: [qq],
-              k: qq.duration
-            }, this.p.set(gq.id, gq), this.v.push(gq)), this.v.sort(((qq, Eq) => Eq.k - qq.k)), this.v.length > 10) {
-            const qq = this.v.splice(10);
-            for (const Eq of qq) this.p.delete(Eq.id)
+      l(CC) {
+        if (this.m?.(CC), !CC.interactionId) return;
+        const zC = this.v.at(-1);
+        let ZC = this.p.get(CC.interactionId);
+        if (ZC || this.v.length < 10 || CC.duration > zC.k) {
+          if (ZC ? CC.duration > ZC.k ? (ZC.entries = [CC], ZC.k = CC.duration) : CC.duration === ZC.k && CC.startTime === ZC.entries[0].startTime && ZC.entries.push(CC) : (ZC = {
+              id: CC.interactionId,
+              entries: [CC],
+              k: CC.duration
+            }, this.p.set(ZC.id, ZC), this.v.push(ZC)), this.v.sort(((CC, zC) => zC.k - CC.k)), this.v.length > 10) {
+            const CC = this.v.splice(10);
+            for (const zC of CC) this.p.delete(zC.id)
           }
-          this.M?.(gq)
+          this.M?.(ZC)
         }
       }
     }
-    const PY = qq => {
-        const Eq = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          gq = globalThis.requestIdleCallback || setTimeout,
-          Yq = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) qq();
+    const AQ = CC => {
+        const zC = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          ZC = globalThis.requestIdleCallback || setTimeout,
+          QC = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) CC();
         else {
-          const lq = mY(qq);
-          let Oq = -1;
-          const mq = () => {
-            Yq(Oq), lq()
+          const wC = nQ(CC);
+          let bC = -1;
+          const nC = () => {
+            QC(bC), wC()
           };
-          addEventListener("visibilitychange", mq, {
+          addEventListener("visibilitychange", nC, {
             once: !0,
             capture: !0
-          }), Oq = gq((() => {
-            removeEventListener("visibilitychange", mq, {
+          }), bC = ZC((() => {
+            removeEventListener("visibilitychange", nC, {
               capture: !0
-            }), lq()
+            }), wC()
           }), {
-            timeout: Eq
+            timeout: zC
           })
         }
       },
-      QY = [200, 500],
-      yY = function(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const gq = Ug(Eq = Object.assign({}, Eq), oY);
-        let Yq = [],
-          lq = [],
-          Oq = 0;
-        const mq = new WeakMap,
-          xq = new WeakMap;
-        let Aq = !1;
-        const cq = () => {
-            Aq || (Aq = !0, PY(uq))
+      xQ = [200, 500],
+      JQ = function(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ZC = tZ(zC = Object.assign({}, zC), RQ);
+        let QC = [],
+          wC = [],
+          bC = 0;
+        const nC = new WeakMap,
+          fC = new WeakMap;
+        let oC = !1;
+        const qC = () => {
+            oC || (oC = !0, AQ(FC))
           },
-          uq = () => {
-            const qq = new Set(gq.v.map((qq => mq.get(qq.entries[0])))),
-              Eq = lq.length - 10;
-            lq = lq.filter(((gq, Yq) => Yq >= Eq || qq.has(gq)));
-            const xq = new Set;
-            for (const gq of lq) {
-              const qq = Bq(gq.startTime, gq.processingEnd);
-              for (const Eq of qq) xq.add(Eq)
+          FC = () => {
+            const CC = new Set(ZC.v.map((CC => nC.get(CC.entries[0])))),
+              zC = wC.length - 10;
+            wC = wC.filter(((ZC, QC) => QC >= zC || CC.has(ZC)));
+            const fC = new Set;
+            for (const ZC of wC) {
+              const CC = WC(ZC.startTime, ZC.processingEnd);
+              for (const zC of CC) fC.add(zC)
             }
-            const cq = Yq.length - 10;
-            Yq = Yq.filter(((qq, Eq) => xq.has(qq) || Eq >= cq && qq.startTime > Oq)), Aq = !1
+            const qC = QC.length - 10;
+            QC = QC.filter(((CC, zC) => fC.has(CC) || zC >= qC && CC.startTime > bC)), oC = !1
           };
-        gq.m = qq => {
-          const gq = qq.startTime + qq.duration;
-          let Yq;
-          Oq = Math.max(Oq, qq.processingEnd);
-          for (let Oq = lq.length - 1; Oq >= 0; Oq--) {
-            const mq = lq[Oq];
-            if (Math.abs(gq - mq.renderTime) <= 8) {
-              Yq = mq, Yq.startTime = Math.min(qq.startTime, Yq.startTime), Yq.processingStart = Math.min(qq.processingStart, Yq.processingStart), Yq.processingEnd = Math.max(qq.processingEnd, Yq.processingEnd), Eq.includeProcessedEventEntries && Yq.entries.push(qq);
+        ZC.m = CC => {
+          const ZC = CC.startTime + CC.duration;
+          let QC;
+          bC = Math.max(bC, CC.processingEnd);
+          for (let bC = wC.length - 1; bC >= 0; bC--) {
+            const nC = wC[bC];
+            if (Math.abs(ZC - nC.renderTime) <= 8) {
+              QC = nC, QC.startTime = Math.min(CC.startTime, QC.startTime), QC.processingStart = Math.min(CC.processingStart, QC.processingStart), QC.processingEnd = Math.max(CC.processingEnd, QC.processingEnd), zC.includeProcessedEventEntries && QC.entries.push(CC);
               break
             }
           }
-          Yq || (Yq = {
-            startTime: qq.startTime,
-            processingStart: qq.processingStart,
-            processingEnd: qq.processingEnd,
-            renderTime: gq,
-            entries: Eq.includeProcessedEventEntries ? [qq] : []
-          }, lq.push(Yq)), qq.interactionId && mq.set(qq, Yq), cq()
-        }, gq.M = qq => {
-          if (!xq.get(qq)) {
-            const gq = qq.entries.find((qq => qq.target))?.target;
-            if (gq) {
-              const Yq = Eq.generateTarget?.(gq) ?? kg(gq);
-              xq.set(qq, Yq)
+          QC || (QC = {
+            startTime: CC.startTime,
+            processingStart: CC.processingStart,
+            processingEnd: CC.processingEnd,
+            renderTime: ZC,
+            entries: zC.includeProcessedEventEntries ? [CC] : []
+          }, wC.push(QC)), CC.interactionId && nC.set(CC, QC), qC()
+        }, ZC.M = CC => {
+          if (!fC.get(CC)) {
+            const ZC = CC.entries.find((CC => CC.target))?.target;
+            if (ZC) {
+              const QC = zC.generateTarget?.(ZC) ?? TZ(ZC);
+              fC.set(CC, QC)
             } else {
-              const Eq = qq.entries.find((qq => qq.targetSelector))?.targetSelector;
-              Eq && xq.set(qq, Eq)
+              const zC = CC.entries.find((CC => CC.targetSelector))?.targetSelector;
+              zC && fC.set(CC, zC)
             }
           }
         };
-        const Bq = (qq, Eq) => {
-          const gq = [];
-          for (const lq of Yq)
-            if (!(lq.startTime + lq.duration < qq)) {
-              if (lq.startTime > Eq) break;
-              gq.push(lq)
-            } return gq
+        const WC = (CC, zC) => {
+          const ZC = [];
+          for (const wC of QC)
+            if (!(wC.startTime + wC.duration < CC)) {
+              if (wC.startTime > zC) break;
+              ZC.push(wC)
+            } return ZC
         };
-        YY(["long-animation-frame"], (qq => {
-            Yq = Yq.concat(qq), cq()
-          }), Eq),
-          function(qq) {
-            let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        QQ(["long-animation-frame"], (CC => {
+            QC = QC.concat(CC), qC()
+          }), zC),
+          function(CC) {
+            let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const gq = EY();
-            AY((() => {
-              "interactionCount" in performance || jY || (jY = YY(["event"], dY, {
+            const ZC = zQ();
+            oQ((() => {
+              "interactionCount" in performance || PQ || (PQ = QQ(["event"], pQ, {
                 durationThreshold: 0
               }));
-              let Yq, lq = gY("INP");
-              const Oq = Ug(Eq, oY),
-                mq = (gq, mq, xq, Aq, cq) => {
-                  Oq.D(), lq = gY("INP", -1, gq, mq, xq, Aq, cq), Yq = wg(qq, lq, QY, Eq.reportAllChanges)
+              let QC, wC = ZQ("INP");
+              const bC = tZ(zC, RQ),
+                nC = (ZC, nC, fC, oC, qC) => {
+                  bC.D(), wC = ZQ("INP", -1, ZC, nC, fC, oC, qC), QC = LZ(CC, wC, xQ, zC.reportAllChanges)
                 },
-                xq = () => {
-                  const qq = Oq.S(lq.navigationType);
-                  qq && qq.k !== lq.value && (lq.value = qq.k, lq.entries = qq.entries, Yq())
+                fC = () => {
+                  const CC = bC.S(wC.navigationType);
+                  CC && CC.k !== wC.value && (wC.value = CC.k, wC.entries = CC.entries, QC())
                 },
-                Aq = qq => {
-                  xq(), Yq(!0), mq("soft-navigation", qq.navigationId, qq.interactionId, qq.name, qq.startTime)
+                oC = CC => {
+                  fC(), QC(!0), nC("soft-navigation", CC.navigationId, CC.interactionId, CC.name, CC.startTime)
                 },
-                cq = function(qq) {
-                  let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  PY((() => {
-                    for (const Eq of qq) "soft-navigation" !== Eq.entryType ? Oq.l(Eq) : Aq(Eq);
-                    xq(), Eq && Yq(!0)
+                qC = function(CC) {
+                  let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  AQ((() => {
+                    for (const zC of CC) "soft-navigation" !== zC.entryType ? bC.l(zC) : oC(zC);
+                    fC(), zC && QC(!0)
                   }))
                 },
-                uq = ["event", "first-input"];
-              lY(Eq) && uq.push("soft-navigation");
-              const Bq = YY(uq, cq, {
-                ...Eq,
-                durationThreshold: Eq.durationThreshold ?? 40
+                FC = ["event", "first-input"];
+              wQ(zC) && FC.push("soft-navigation");
+              const WC = QQ(FC, qC, {
+                ...zC,
+                durationThreshold: zC.durationThreshold ?? 40
               });
-              Yq = wg(qq, lq, QY, Eq.reportAllChanges), Bq && (gq.onHidden((() => {
-                cq(Bq.takeRecords(), !0)
-              })), Xg((() => {
-                mq("back-forward-cache", lq.navigationId, lq.navigationInteractionId, lq.navigationURL, sg())
+              QC = LZ(CC, wC, xQ, zC.reportAllChanges), WC && (ZC.onHidden((() => {
+                qC(WC.takeRecords(), !0)
+              })), yZ((() => {
+                nC("back-forward-cache", wC.navigationId, wC.navigationInteractionId, wC.navigationURL, jZ())
               })))
             }))
-          }((Eq => {
-            qq((qq => {
-              if (0 === qq.entries.length) {
-                const Eq = qq.navigationStartTime || 0,
-                  gq = {
+          }((zC => {
+            CC((CC => {
+              if (0 === CC.entries.length) {
+                const zC = CC.navigationStartTime || 0,
+                  ZC = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: qq.value,
-                    loadState: Lg(Eq)
+                    presentationDelay: CC.value,
+                    loadState: rZ(zC)
                   };
-                return Object.assign(qq, {
-                  attribution: gq
+                return Object.assign(CC, {
+                  attribution: ZC
                 })
               }
-              const Eq = qq.entries[0],
-                Yq = mq.get(Eq),
-                lq = Math.max(Yq.processingStart, Eq.startTime),
-                Oq = Math.max(Eq.startTime + Eq.duration, lq),
-                Aq = Math.min(Yq.processingEnd, Oq),
-                cq = Yq.entries.sort(((qq, Eq) => qq.processingStart - Eq.processingStart)),
-                uq = Bq(Eq.startTime, Aq),
-                Wq = gq.p.get(Eq.interactionId),
-                Nq = {
-                  interactionTarget: xq.get(Wq),
-                  interactionType: Eq.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: Eq.startTime,
-                  nextPaintTime: Oq,
-                  processedEventEntries: cq,
-                  longAnimationFrameEntries: uq,
-                  inputDelay: lq - Eq.startTime,
-                  processingDuration: Aq - lq,
-                  presentationDelay: Oq - Aq,
-                  loadState: Lg(Eq.startTime),
+              const zC = CC.entries[0],
+                QC = nC.get(zC),
+                wC = Math.max(QC.processingStart, zC.startTime),
+                bC = Math.max(zC.startTime + zC.duration, wC),
+                oC = Math.min(QC.processingEnd, bC),
+                qC = QC.entries.sort(((CC, zC) => CC.processingStart - zC.processingStart)),
+                FC = WC(zC.startTime, oC),
+                NC = ZC.p.get(zC.interactionId),
+                MC = {
+                  interactionTarget: fC.get(NC),
+                  interactionType: zC.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: zC.startTime,
+                  nextPaintTime: bC,
+                  processedEventEntries: qC,
+                  longAnimationFrameEntries: FC,
+                  inputDelay: wC - zC.startTime,
+                  processingDuration: oC - wC,
+                  presentationDelay: bC - oC,
+                  loadState: rZ(zC.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (qq => {
-                const Eq = qq.interactionTime,
-                  gq = qq.nextPaintTime;
-                if (!qq.longAnimationFrameEntries?.length || !Eq || !gq) return;
-                const Yq = qq.inputDelay,
-                  lq = qq.processingDuration;
-                let Oq, mq, xq = 0,
-                  Aq = 0,
-                  cq = 0,
-                  uq = 0;
-                for (const Nq of qq.longAnimationFrameEntries) {
-                  Aq = Aq + Nq.startTime + Nq.duration - Nq.styleAndLayoutStart;
-                  for (const qq of Nq.scripts) {
-                    const gq = qq.startTime + qq.duration;
-                    if (gq < Eq) continue;
-                    const cq = gq - Math.max(Eq, qq.startTime),
-                      Bq = qq.duration ? cq / qq.duration * qq.forcedStyleAndLayoutDuration : 0;
-                    xq += cq - Bq, Aq += Bq, cq > uq && (mq = qq.startTime < Eq + Yq ? "input-delay" : qq.startTime >= Eq + Yq + lq ? "presentation-delay" : "processing-duration", Oq = qq, uq = cq)
+              return (CC => {
+                const zC = CC.interactionTime,
+                  ZC = CC.nextPaintTime;
+                if (!CC.longAnimationFrameEntries?.length || !zC || !ZC) return;
+                const QC = CC.inputDelay,
+                  wC = CC.processingDuration;
+                let bC, nC, fC = 0,
+                  oC = 0,
+                  qC = 0,
+                  FC = 0;
+                for (const MC of CC.longAnimationFrameEntries) {
+                  oC = oC + MC.startTime + MC.duration - MC.styleAndLayoutStart;
+                  for (const CC of MC.scripts) {
+                    const ZC = CC.startTime + CC.duration;
+                    if (ZC < zC) continue;
+                    const qC = ZC - Math.max(zC, CC.startTime),
+                      WC = CC.duration ? qC / CC.duration * CC.forcedStyleAndLayoutDuration : 0;
+                    fC += qC - WC, oC += WC, qC > FC && (nC = CC.startTime < zC + QC ? "input-delay" : CC.startTime >= zC + QC + wC ? "presentation-delay" : "processing-duration", bC = CC, FC = qC)
                   }
                 }
-                const Bq = qq.longAnimationFrameEntries.at(-1),
-                  Wq = Bq ? Bq.startTime + Bq.duration : 0;
-                Wq >= Eq + Yq + lq && (cq = gq - Wq), Oq && mq && (qq.longestScript = {
-                  entry: Oq,
-                  subpart: mq,
-                  intersectingDuration: uq
-                }), qq.totalScriptDuration = xq, qq.totalStyleAndLayoutDuration = Aq, qq.totalPaintDuration = cq, qq.totalUnattributedDuration = gq - Eq - xq - Aq - cq
-              })(Nq), Object.assign(qq, {
-                attribution: Nq
+                const WC = CC.longAnimationFrameEntries.at(-1),
+                  NC = WC ? WC.startTime + WC.duration : 0;
+                NC >= zC + QC + wC && (qC = ZC - NC), bC && nC && (CC.longestScript = {
+                  entry: bC,
+                  subpart: nC,
+                  intersectingDuration: FC
+                }), CC.totalScriptDuration = fC, CC.totalStyleAndLayoutDuration = oC, CC.totalPaintDuration = qC, CC.totalUnattributedDuration = ZC - zC - fC - oC - qC
+              })(MC), Object.assign(CC, {
+                attribution: MC
               })
-            })(Eq))
-          }), Eq)
+            })(zC))
+          }), zC)
       };
-    class tY {
+    class IQ {
       m;
       u;
-      l(qq) {
-        this.m?.(qq)
+      l(CC) {
+        this.m?.(CC)
       }
     }
-    const rY = [2500, 4e3];
-    let vY = 50;
-    const hY = [];
-    YY(["resource"], (qq => {
-      for (const Eq of qq) hY.push(Eq), hY.length > vY && hY.shift()
+    const iQ = [2500, 4e3];
+    let vQ = 50;
+    const eQ = [];
+    QQ(["resource"], (CC => {
+      for (const zC of CC) eQ.push(zC), eQ.length > vQ && eQ.shift()
     }));
-    const nY = [800, 1800],
-      bY = qq => {
-        document.prerendering ? AY((() => bY(qq))) : "complete" !== document.readyState ? addEventListener("load", (() => bY(qq)), !0) : setTimeout(qq)
+    const hQ = [800, 1800],
+      KQ = CC => {
+        document.prerendering ? oQ((() => KQ(CC))) : "complete" !== document.readyState ? addEventListener("load", (() => KQ(CC)), !0) : setTimeout(CC)
       },
-      iY = "load_state",
-      ZY = "time_to_first_byte";
-    var fY = class {
-        constructor(qq, Eq) {
-          this.corePushMeasurement = qq, this.webVitalConfig = Eq
+      YQ = "load_state",
+      dQ = "time_to_first_byte";
+    var mQ = class {
+        constructor(CC, zC) {
+          this.corePushMeasurement = CC, this.webVitalConfig = zC
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var qq;
-          ! function(qq) {
-            let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const gq = Ug(Eq = Object.assign({}, Eq), pg),
-              Yq = new WeakMap;
-            gq.t = qq => {
-                if (qq?.sources?.length) {
-                  const gq = WY(qq.sources),
-                    lq = gq?.node;
-                  if (lq) {
-                    const qq = Eq.generateTarget?.(lq) ?? kg(lq);
-                    Yq.set(gq, qq)
+          var CC;
+          ! function(CC) {
+            let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const ZC = tZ(zC = Object.assign({}, zC), cZ),
+              QC = new WeakMap;
+            ZC.t = CC => {
+                if (CC?.sources?.length) {
+                  const ZC = NQ(CC.sources),
+                    wC = ZC?.node;
+                  if (wC) {
+                    const CC = zC.generateTarget?.(wC) ?? TZ(wC);
+                    QC.set(ZC, CC)
                   }
                 }
               },
-              function(qq) {
-                let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const gq = EY();
-                uY(mY((() => {
-                  let Yq, lq = gY("CLS", 0);
-                  const Oq = Ug(Eq, pg),
-                    mq = (gq, mq, xq, Aq, cq) => {
-                      lq = gY("CLS", 0, gq, mq, xq, Aq, cq), Oq.o = 0, Yq = wg(qq, lq, BY, Eq.reportAllChanges)
+              function(CC) {
+                let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const ZC = zQ();
+                FQ(nQ((() => {
+                  let QC, wC = ZQ("CLS", 0);
+                  const bC = tZ(zC, cZ),
+                    nC = (ZC, nC, fC, oC, qC) => {
+                      wC = ZQ("CLS", 0, ZC, nC, fC, oC, qC), bC.o = 0, QC = LZ(CC, wC, WQ, zC.reportAllChanges)
                     },
-                    xq = function() {
-                      let qq = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      Oq.o > lq.value && (lq.value = Oq.o, lq.entries = Oq.i), Yq(qq)
+                    fC = function() {
+                      let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      bC.o > wC.value && (wC.value = bC.o, wC.entries = bC.i), QC(CC)
                     },
-                    Aq = qq => {
-                      xq(!0), mq("soft-navigation", qq.navigationId, qq.interactionId, qq.name, qq.startTime)
+                    oC = CC => {
+                      fC(!0), nC("soft-navigation", CC.navigationId, CC.interactionId, CC.name, CC.startTime)
                     },
-                    cq = qq => {
-                      for (const Eq of qq) "soft-navigation" !== Eq.entryType ? Oq.l(Eq) : Aq(Eq);
-                      xq()
+                    qC = CC => {
+                      for (const zC of CC) "soft-navigation" !== zC.entryType ? bC.l(zC) : oC(zC);
+                      fC()
                     },
-                    uq = ["layout-shift"];
-                  lY(Eq) && uq.push("soft-navigation");
-                  const Bq = YY(uq, cq);
-                  Bq && (Yq = wg(qq, lq, BY, Eq.reportAllChanges), gq.onHidden((() => {
-                    cq(Bq.takeRecords()), Yq(!0)
-                  })), Xg((() => {
-                    mq("back-forward-cache", lq.navigationId, lq.navigationInteractionId, lq.navigationURL, sg()), Kg(Yq)
-                  })), setTimeout(Yq))
+                    FC = ["layout-shift"];
+                  wQ(zC) && FC.push("soft-navigation");
+                  const WC = QQ(FC, qC);
+                  WC && (QC = LZ(CC, wC, WQ, zC.reportAllChanges), ZC.onHidden((() => {
+                    qC(WC.takeRecords()), QC(!0)
+                  })), yZ((() => {
+                    nC("back-forward-cache", wC.navigationId, wC.navigationInteractionId, wC.navigationURL, jZ()), UZ(QC)
+                  })), setTimeout(QC))
                 })))
-              }((Eq => {
-                qq((qq => {
-                  let Eq = {};
-                  if (qq.entries.length) {
-                    const gq = qq.entries.reduce(((qq, Eq) => qq.value > Eq.value ? qq : Eq));
-                    if (gq?.sources?.length) {
-                      const qq = WY(gq.sources);
-                      qq && (Eq = {
-                        largestShiftTarget: Yq.get(qq),
-                        largestShiftTime: gq.startTime,
-                        largestShiftValue: gq.value,
-                        largestShiftSource: qq,
-                        largestShiftEntry: gq,
-                        loadState: Lg(gq.startTime)
+              }((zC => {
+                CC((CC => {
+                  let zC = {};
+                  if (CC.entries.length) {
+                    const ZC = CC.entries.reduce(((CC, zC) => CC.value > zC.value ? CC : zC));
+                    if (ZC?.sources?.length) {
+                      const CC = NQ(ZC.sources);
+                      CC && (zC = {
+                        largestShiftTarget: QC.get(CC),
+                        largestShiftTime: ZC.startTime,
+                        largestShiftValue: ZC.value,
+                        largestShiftSource: CC,
+                        largestShiftEntry: ZC,
+                        loadState: rZ(ZC.startTime)
                       })
                     }
                   }
-                  return Object.assign(qq, {
-                    attribution: Eq
+                  return Object.assign(CC, {
+                    attribution: zC
                   })
-                })(Eq))
-              }), Eq)
-          }((qq => {
+                })(zC))
+              }), zC)
+          }((CC => {
             const {
-              loadState: Eq,
-              largestShiftValue: gq,
-              largestShiftTime: Yq,
-              largestShiftTarget: lq
-            } = qq.attribution, Oq = this.buildInitialValues(qq);
-            this.addIfPresent(Oq, "largest_shift_value", gq), this.addIfPresent(Oq, "largest_shift_time", Yq);
-            const mq = this.buildInitialContext(qq);
-            this.addIfPresent(mq, iY, Eq), this.addIfPresent(mq, "largest_shift_target", lq), this.pushMeasurement(Oq, mq)
+              loadState: zC,
+              largestShiftValue: ZC,
+              largestShiftTime: QC,
+              largestShiftTarget: wC
+            } = CC.attribution, bC = this.buildInitialValues(CC);
+            this.addIfPresent(bC, "largest_shift_value", ZC), this.addIfPresent(bC, "largest_shift_time", QC);
+            const nC = this.buildInitialContext(CC);
+            this.addIfPresent(nC, YQ, zC), this.addIfPresent(nC, "largest_shift_target", wC), this.pushMeasurement(bC, nC)
           }), {
-            reportAllChanges: null === (qq = this.webVitalConfig) || void 0 === qq ? void 0 : qq.reportAllChanges
+            reportAllChanges: null === (CC = this.webVitalConfig) || void 0 === CC ? void 0 : CC.reportAllChanges
           })
         }
         measureFCP() {
-          var qq;
-          ! function(qq) {
-            let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const gq = Ug(Eq = Object.assign({}, Eq), xY);
-            lY(Eq) && (gq.u = new Map), uY((Eq => {
-              qq((qq => {
-                let Eq = {
+          var CC;
+          ! function(CC) {
+            let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const ZC = tZ(zC = Object.assign({}, zC), fQ);
+            wQ(zC) && (ZC.u = new Map), FQ((zC => {
+              CC((CC => {
+                let zC = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: qq.value,
-                  loadState: Lg(sg())
+                  firstByteToFCP: CC.value,
+                  loadState: rZ(jZ())
                 };
-                if ("soft-navigation" !== qq.navigationType) {
-                  if (qq.entries.length) {
-                    const gq = Gg(),
-                      Yq = qq.entries.at(-1);
-                    if (gq) {
-                      const lq = gq.responseStart,
-                        Oq = gq.activationStart || 0,
-                        mq = Math.max(0, lq - Oq);
-                      Eq = {
-                        timeToFirstByte: mq,
-                        firstByteToFCP: qq.value - mq,
-                        loadState: Lg(qq.entries[0].startTime),
-                        navigationEntry: gq,
-                        fcpEntry: Yq
+                if ("soft-navigation" !== CC.navigationType) {
+                  if (CC.entries.length) {
+                    const ZC = uZ(),
+                      QC = CC.entries.at(-1);
+                    if (ZC) {
+                      const wC = ZC.responseStart,
+                        bC = ZC.activationStart || 0,
+                        nC = Math.max(0, wC - bC);
+                      zC = {
+                        timeToFirstByte: nC,
+                        firstByteToFCP: CC.value - nC,
+                        loadState: rZ(CC.entries[0].startTime),
+                        navigationEntry: ZC,
+                        fcpEntry: QC
                       }
                     }
                   }
                 } else {
-                  const Yq = gq.u?.get(qq.navigationId);
-                  Yq && (Eq = {
+                  const QC = ZC.u?.get(CC.navigationId);
+                  QC && (zC = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: qq.value,
+                    firstByteToFCP: CC.value,
                     loadState: "complete",
-                    navigationEntry: Yq
+                    navigationEntry: QC
                   })
                 }
-                return Object.assign(qq, {
-                  attribution: Eq
+                return Object.assign(CC, {
+                  attribution: zC
                 })
-              })(Eq))
-            }), Eq)
-          }((qq => {
+              })(zC))
+            }), zC)
+          }((CC => {
             const {
-              firstByteToFCP: Eq,
-              timeToFirstByte: gq,
-              loadState: Yq
-            } = qq.attribution, lq = this.buildInitialValues(qq);
-            this.addIfPresent(lq, "first_byte_to_fcp", Eq), this.addIfPresent(lq, ZY, gq);
-            const Oq = this.buildInitialContext(qq);
-            this.addIfPresent(Oq, iY, Yq), this.pushMeasurement(lq, Oq)
+              firstByteToFCP: zC,
+              timeToFirstByte: ZC,
+              loadState: QC
+            } = CC.attribution, wC = this.buildInitialValues(CC);
+            this.addIfPresent(wC, "first_byte_to_fcp", zC), this.addIfPresent(wC, dQ, ZC);
+            const bC = this.buildInitialContext(CC);
+            this.addIfPresent(bC, YQ, QC), this.pushMeasurement(wC, bC)
           }), {
-            reportAllChanges: null === (qq = this.webVitalConfig) || void 0 === qq ? void 0 : qq.reportAllChanges
+            reportAllChanges: null === (CC = this.webVitalConfig) || void 0 === CC ? void 0 : CC.reportAllChanges
           })
         }
         measureINP() {
-          var qq;
-          yY((qq => {
-            var Eq;
+          var CC;
+          JQ((CC => {
+            var zC;
             const {
-              interactionTime: gq,
-              presentationDelay: Yq,
-              inputDelay: lq,
-              processingDuration: Oq,
-              nextPaintTime: mq,
-              loadState: xq,
-              interactionTarget: Aq,
-              interactionType: cq,
-              totalScriptDuration: uq,
-              totalStyleAndLayoutDuration: Bq,
-              totalPaintDuration: Wq,
-              totalUnattributedDuration: Nq,
-              longestScript: aq
-            } = qq.attribution, Vq = this.buildInitialValues(qq);
-            this.addIfPresent(Vq, "interaction_time", gq), this.addIfPresent(Vq, "presentation_delay", Yq), this.addIfPresent(Vq, "input_delay", lq), this.addIfPresent(Vq, "processing_duration", Oq), this.addIfPresent(Vq, "next_paint_time", mq), this.addNumberIfDefined(Vq, "total_script_duration", uq), this.addNumberIfDefined(Vq, "total_style_and_layout_duration", Bq), this.addNumberIfDefined(Vq, "total_paint_duration", Wq), this.addNumberIfDefined(Vq, "total_unattributed_duration", Nq), this.addNumberIfDefined(Vq, "longest_script_intersecting_duration", null === aq || void 0 === aq ? void 0 : aq.intersectingDuration);
-            const dq = this.buildInitialContext(qq);
-            this.addIfPresent(dq, iY, xq), this.addIfPresent(dq, "interaction_target", Aq), this.addIfPresent(dq, "interaction_type", cq), this.addIfPresent(dq, "longest_script_subpart", null === aq || void 0 === aq ? void 0 : aq.subpart), this.addIfPresent(dq, "longest_script_invoker_type", null === aq || void 0 === aq ? void 0 : aq.entry.invokerType), (null === (Eq = this.webVitalConfig) || void 0 === Eq ? void 0 : Eq.trackAttributionSources) && (this.addIfPresent(dq, "longest_script_invoker", null === aq || void 0 === aq ? void 0 : aq.entry.invoker), this.addIfPresent(dq, "longest_script_source_url", null === aq || void 0 === aq ? void 0 : aq.entry.sourceURL), this.addIfPresent(dq, "longest_script_source_function_name", null === aq || void 0 === aq ? void 0 : aq.entry.sourceFunctionName), this.addIfPresent(dq, "longest_script_source_char_position", void 0 !== (null === aq || void 0 === aq ? void 0 : aq.entry.sourceCharPosition) ? String(aq.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Vq, dq)
+              interactionTime: ZC,
+              presentationDelay: QC,
+              inputDelay: wC,
+              processingDuration: bC,
+              nextPaintTime: nC,
+              loadState: fC,
+              interactionTarget: oC,
+              interactionType: qC,
+              totalScriptDuration: FC,
+              totalStyleAndLayoutDuration: WC,
+              totalPaintDuration: NC,
+              totalUnattributedDuration: MC,
+              longestScript: gC
+            } = CC.attribution, SC = this.buildInitialValues(CC);
+            this.addIfPresent(SC, "interaction_time", ZC), this.addIfPresent(SC, "presentation_delay", QC), this.addIfPresent(SC, "input_delay", wC), this.addIfPresent(SC, "processing_duration", bC), this.addIfPresent(SC, "next_paint_time", nC), this.addNumberIfDefined(SC, "total_script_duration", FC), this.addNumberIfDefined(SC, "total_style_and_layout_duration", WC), this.addNumberIfDefined(SC, "total_paint_duration", NC), this.addNumberIfDefined(SC, "total_unattributed_duration", MC), this.addNumberIfDefined(SC, "longest_script_intersecting_duration", null === gC || void 0 === gC ? void 0 : gC.intersectingDuration);
+            const pC = this.buildInitialContext(CC);
+            this.addIfPresent(pC, YQ, fC), this.addIfPresent(pC, "interaction_target", oC), this.addIfPresent(pC, "interaction_type", qC), this.addIfPresent(pC, "longest_script_subpart", null === gC || void 0 === gC ? void 0 : gC.subpart), this.addIfPresent(pC, "longest_script_invoker_type", null === gC || void 0 === gC ? void 0 : gC.entry.invokerType), (null === (zC = this.webVitalConfig) || void 0 === zC ? void 0 : zC.trackAttributionSources) && (this.addIfPresent(pC, "longest_script_invoker", null === gC || void 0 === gC ? void 0 : gC.entry.invoker), this.addIfPresent(pC, "longest_script_source_url", null === gC || void 0 === gC ? void 0 : gC.entry.sourceURL), this.addIfPresent(pC, "longest_script_source_function_name", null === gC || void 0 === gC ? void 0 : gC.entry.sourceFunctionName), this.addIfPresent(pC, "longest_script_source_char_position", void 0 !== (null === gC || void 0 === gC ? void 0 : gC.entry.sourceCharPosition) ? String(gC.entry.sourceCharPosition) : void 0)), this.pushMeasurement(SC, pC)
           }), {
-            reportAllChanges: null === (qq = this.webVitalConfig) || void 0 === qq ? void 0 : qq.reportAllChanges
+            reportAllChanges: null === (CC = this.webVitalConfig) || void 0 === CC ? void 0 : CC.reportAllChanges
           })
         }
         measureLCP() {
-          var qq;
-          ! function(qq) {
-            let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (Eq = Object.assign({}, Eq)).resourceBufferSize && (vY = Eq.resourceBufferSize);
-            const gq = Ug(Eq, tY),
-              Yq = new WeakMap;
-            lY(Eq) && (gq.u = new Map), gq.m = qq => {
-                const gq = qq.element;
-                if (gq) {
-                  const lq = Eq.generateTarget?.(gq) ?? kg(gq);
-                  Yq.set(qq, lq)
-                } else qq.id && Yq.set(qq, `#${qq.id}`)
+          var CC;
+          ! function(CC) {
+            let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (zC = Object.assign({}, zC)).resourceBufferSize && (vQ = zC.resourceBufferSize);
+            const ZC = tZ(zC, IQ),
+              QC = new WeakMap;
+            wQ(zC) && (ZC.u = new Map), ZC.m = CC => {
+                const ZC = CC.element;
+                if (ZC) {
+                  const wC = zC.generateTarget?.(ZC) ?? TZ(ZC);
+                  QC.set(CC, wC)
+                } else CC.id && QC.set(CC, `#${CC.id}`)
               },
-              function(qq) {
-                let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  gq = !1;
-                const Yq = lY(Eq);
-                AY((() => {
-                  let lq, Oq = EY(),
-                    mq = gY("LCP");
-                  const xq = Ug(Eq, tY),
-                    Aq = (Yq, xq, Aq, cq, uq) => {
-                      mq = gY("LCP", -1, Yq, xq, Aq, cq, uq), lq = wg(qq, mq, rY, Eq.reportAllChanges), gq = !1, "soft-navigation" === Yq && (Oq = EY(!0))
+              function(CC) {
+                let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  ZC = !1;
+                const QC = wQ(zC);
+                oQ((() => {
+                  let wC, bC = zQ(),
+                    nC = ZQ("LCP");
+                  const fC = tZ(zC, IQ),
+                    oC = (QC, fC, oC, qC, FC) => {
+                      nC = ZQ("LCP", -1, QC, fC, oC, qC, FC), wC = LZ(CC, nC, iQ, zC.reportAllChanges), ZC = !1, "soft-navigation" === QC && (bC = zQ(!0))
                     },
-                    cq = qq => {
-                      xq.u && qq.navigationId && OY(xq.u, qq), gq || lq(!0), Aq("soft-navigation", qq.navigationId, qq.interactionId, qq.name, qq.startTime);
-                      const Eq = qq.getLargestInteractionContentfulPaint?.();
-                      Eq && uq([Eq])
+                    qC = CC => {
+                      fC.u && CC.navigationId && bQ(fC.u, CC), ZC || wC(!0), oC("soft-navigation", CC.navigationId, CC.interactionId, CC.name, CC.startTime);
+                      const zC = CC.getLargestInteractionContentfulPaint?.();
+                      zC && FC([zC])
                     },
-                    uq = qq => {
-                      Eq.reportAllChanges || Yq || (qq = qq.slice(-1));
-                      for (const Eq of qq) {
-                        if (!Eq) continue;
-                        if ("soft-navigation" === Eq.entryType) {
-                          cq(Eq);
+                    FC = CC => {
+                      zC.reportAllChanges || QC || (CC = CC.slice(-1));
+                      for (const zC of CC) {
+                        if (!zC) continue;
+                        if ("soft-navigation" === zC.entryType) {
+                          qC(zC);
                           continue
                         }
-                        let qq = 0,
-                          gq = [],
-                          Yq = Eq.startTime;
-                        if ("largest-contentful-paint" === Eq.entryType) qq = Math.max(Eq.startTime - Cg(), 0), xq.l(Eq), gq = [Eq];
-                        else if ("interaction-contentful-paint" === Eq.entryType) {
-                          const lq = Eq;
-                          if (!mq.navigationId) continue;
-                          if ("interactionId" in lq && lq.interactionId != mq.navigationInteractionId) continue;
-                          Yq = lq.largestContentfulPaint?.renderTime || 0, qq = Math.max(Yq - Eq.startTime, 0), lq.largestContentfulPaint && (xq.l(lq.largestContentfulPaint), gq = [lq.largestContentfulPaint])
+                        let CC = 0,
+                          ZC = [],
+                          QC = zC.startTime;
+                        if ("largest-contentful-paint" === zC.entryType) CC = Math.max(zC.startTime - BZ(), 0), fC.l(zC), ZC = [zC];
+                        else if ("interaction-contentful-paint" === zC.entryType) {
+                          const wC = zC;
+                          if (!nC.navigationId) continue;
+                          if ("interactionId" in wC && wC.interactionId != nC.navigationInteractionId) continue;
+                          QC = wC.largestContentfulPaint?.renderTime || 0, CC = Math.max(QC - zC.startTime, 0), wC.largestContentfulPaint && (fC.l(wC.largestContentfulPaint), ZC = [wC.largestContentfulPaint])
                         }
-                        Yq < Oq.firstHiddenTime && (mq.value = qq, mq.entries = gq, lq())
+                        QC < bC.firstHiddenTime && (nC.value = CC, nC.entries = ZC, wC())
                       }
                     },
-                    Bq = ["largest-contentful-paint"];
-                  Yq && Bq.push("interaction-contentful-paint", "soft-navigation");
-                  const Wq = YY(Bq, uq);
-                  if (Wq) {
-                    lq = wg(qq, mq, rY, Eq.reportAllChanges);
-                    const Oq = ["keydown", "click", "visibilitychange"],
-                      xq = qq => {
-                        if (qq.isTrusted && !gq) {
-                          const qq = mq.id;
-                          PY((() => {
-                            if (!gq) {
-                              if (!Yq) {
-                                Wq.disconnect();
-                                for (const qq of Oq) removeEventListener(qq, xq, {
+                    WC = ["largest-contentful-paint"];
+                  QC && WC.push("interaction-contentful-paint", "soft-navigation");
+                  const NC = QQ(WC, FC);
+                  if (NC) {
+                    wC = LZ(CC, nC, iQ, zC.reportAllChanges);
+                    const bC = ["keydown", "click", "visibilitychange"],
+                      fC = CC => {
+                        if (CC.isTrusted && !ZC) {
+                          const CC = nC.id;
+                          AQ((() => {
+                            if (!ZC) {
+                              if (!QC) {
+                                NC.disconnect();
+                                for (const CC of bC) removeEventListener(CC, fC, {
                                   capture: !0
                                 })
                               }
-                              qq === mq.id && (gq = !0, lq(!0))
+                              CC === nC.id && (ZC = !0, wC(!0))
                             }
                           }))
                         }
                       };
-                    for (const qq of Oq) addEventListener(qq, xq, {
+                    for (const CC of bC) addEventListener(CC, fC, {
                       capture: !0
                     });
-                    Xg((Yq => {
-                      Aq("back-forward-cache", mq.navigationId, mq.navigationInteractionId, mq.navigationURL, sg()), lq = wg(qq, mq, rY, Eq.reportAllChanges), Kg((() => {
-                        mq.value = performance.now() - Yq.timeStamp, gq = !0, lq(!0)
+                    yZ((QC => {
+                      oC("back-forward-cache", nC.navigationId, nC.navigationInteractionId, nC.navigationURL, jZ()), wC = LZ(CC, nC, iQ, zC.reportAllChanges), UZ((() => {
+                        nC.value = performance.now() - QC.timeStamp, ZC = !0, wC(!0)
                       }))
                     }))
                   }
                 }))
-              }((Eq => {
-                qq((qq => {
-                  let Eq = {
+              }((zC => {
+                CC((CC => {
+                  let zC = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: qq.value
+                    elementRenderDelay: CC.value
                   };
-                  if (qq.entries.length) {
-                    const lq = qq.entries.at(-1),
-                      Oq = qq => qq.name === lq.url && (qq.requestStart || qq.startTime) <= lq.startTime,
-                      mq = lq.url && (hY.findLast(Oq) || performance.getEntriesByType("resource").findLast(Oq));
-                    let xq;
-                    Eq.target = Yq.get(lq), Eq.lcpEntry = lq, lq.url && (Eq.url = lq.url), mq && (Eq.lcpResourceEntry = mq);
-                    let Aq = 0,
-                      cq = 0;
-                    if ("soft-navigation" !== qq.navigationType ? (xq = Gg(), Aq = xq?.activationStart ?? 0, cq = xq?.responseStart ?? 0) : (Aq = qq.navigationStartTime || 0, xq = gq.u?.get(qq.navigationId)), xq) {
-                      const gq = Math.max(0, cq - Aq),
-                        Yq = Math.max(gq, mq ? (mq.requestStart || mq.startTime) - Aq : 0),
-                        lq = Math.min(qq.value, Math.max(Yq, mq ? mq.responseEnd - Aq : 0));
-                      Eq = {
-                        ...Eq,
-                        timeToFirstByte: gq,
-                        resourceLoadDelay: Yq - gq,
-                        resourceLoadDuration: lq - Yq,
-                        elementRenderDelay: qq.value - lq,
-                        navigationEntry: xq
+                  if (CC.entries.length) {
+                    const wC = CC.entries.at(-1),
+                      bC = CC => CC.name === wC.url && (CC.requestStart || CC.startTime) <= wC.startTime,
+                      nC = wC.url && (eQ.findLast(bC) || performance.getEntriesByType("resource").findLast(bC));
+                    let fC;
+                    zC.target = QC.get(wC), zC.lcpEntry = wC, wC.url && (zC.url = wC.url), nC && (zC.lcpResourceEntry = nC);
+                    let oC = 0,
+                      qC = 0;
+                    if ("soft-navigation" !== CC.navigationType ? (fC = uZ(), oC = fC?.activationStart ?? 0, qC = fC?.responseStart ?? 0) : (oC = CC.navigationStartTime || 0, fC = ZC.u?.get(CC.navigationId)), fC) {
+                      const ZC = Math.max(0, qC - oC),
+                        QC = Math.max(ZC, nC ? (nC.requestStart || nC.startTime) - oC : 0),
+                        wC = Math.min(CC.value, Math.max(QC, nC ? nC.responseEnd - oC : 0));
+                      zC = {
+                        ...zC,
+                        timeToFirstByte: ZC,
+                        resourceLoadDelay: QC - ZC,
+                        resourceLoadDuration: wC - QC,
+                        elementRenderDelay: CC.value - wC,
+                        navigationEntry: fC
                       }
                     }
                   }
-                  return Object.assign(qq, {
-                    attribution: Eq
+                  return Object.assign(CC, {
+                    attribution: zC
                   })
-                })(Eq))
-              }), Eq)
-          }((qq => {
-            var Eq;
+                })(zC))
+              }), zC)
+          }((CC => {
+            var zC;
             const {
-              elementRenderDelay: gq,
-              resourceLoadDelay: Yq,
-              resourceLoadDuration: lq,
-              timeToFirstByte: Oq,
-              target: mq,
-              url: xq,
-              lcpResourceEntry: Aq
-            } = qq.attribution, cq = this.buildInitialValues(qq);
-            this.addIfPresent(cq, "element_render_delay", gq), this.addIfPresent(cq, "resource_load_delay", Yq), this.addIfPresent(cq, "resource_load_duration", lq), this.addIfPresent(cq, ZY, Oq);
-            const uq = this.buildInitialContext(qq);
-            this.addIfPresent(uq, "element", mq), (null === (Eq = this.webVitalConfig) || void 0 === Eq ? void 0 : Eq.trackAttributionSources) && (this.addIfPresent(uq, "resource_url", xq), this.addIfPresent(uq, "resource_delivery_type", null === Aq || void 0 === Aq ? void 0 : Aq.deliveryType), this.addIfPresent(uq, "resource_initiator_type", null === Aq || void 0 === Aq ? void 0 : Aq.initiatorType)), this.pushMeasurement(cq, uq)
+              elementRenderDelay: ZC,
+              resourceLoadDelay: QC,
+              resourceLoadDuration: wC,
+              timeToFirstByte: bC,
+              target: nC,
+              url: fC,
+              lcpResourceEntry: oC
+            } = CC.attribution, qC = this.buildInitialValues(CC);
+            this.addIfPresent(qC, "element_render_delay", ZC), this.addIfPresent(qC, "resource_load_delay", QC), this.addIfPresent(qC, "resource_load_duration", wC), this.addIfPresent(qC, dQ, bC);
+            const FC = this.buildInitialContext(CC);
+            this.addIfPresent(FC, "element", nC), (null === (zC = this.webVitalConfig) || void 0 === zC ? void 0 : zC.trackAttributionSources) && (this.addIfPresent(FC, "resource_url", fC), this.addIfPresent(FC, "resource_delivery_type", null === oC || void 0 === oC ? void 0 : oC.deliveryType), this.addIfPresent(FC, "resource_initiator_type", null === oC || void 0 === oC ? void 0 : oC.initiatorType)), this.pushMeasurement(qC, FC)
           }), {
-            reportAllChanges: null === (qq = this.webVitalConfig) || void 0 === qq ? void 0 : qq.reportAllChanges
+            reportAllChanges: null === (CC = this.webVitalConfig) || void 0 === CC ? void 0 : CC.reportAllChanges
           })
         }
         measureTTFB() {
-          var qq;
-          ! function(qq) {
-            ! function(qq) {
-              let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const gq = lY(Eq);
-              let Yq = gY("TTFB"),
-                lq = wg(qq, Yq, nY, Eq.reportAllChanges);
-              bY((() => {
-                const Oq = Gg();
-                if (Oq) {
-                  const mq = Oq.responseStart;
-                  Yq.value = Math.max(mq - Cg(), 0), Yq.entries = [Oq], lq(!0), Xg((() => {
-                    Yq = gY("TTFB", 0, "back-forward-cache", Yq.navigationId, Yq.navigationInteractionId, Yq.navigationURL, sg()), lq = wg(qq, Yq, nY, Eq.reportAllChanges), lq(!0)
-                  })), gq && YY(["soft-navigation"], (gq => {
-                    gq.forEach((gq => {
-                      gq.navigationId && (Yq = gY("TTFB", 0, "soft-navigation", gq.navigationId, gq.interactionId, gq.name, gq.startTime), Yq.entries = [gq], lq = wg(qq, Yq, nY, Eq.reportAllChanges), lq(!0))
+          var CC;
+          ! function(CC) {
+            ! function(CC) {
+              let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const ZC = wQ(zC);
+              let QC = ZQ("TTFB"),
+                wC = LZ(CC, QC, hQ, zC.reportAllChanges);
+              KQ((() => {
+                const bC = uZ();
+                if (bC) {
+                  const nC = bC.responseStart;
+                  QC.value = Math.max(nC - BZ(), 0), QC.entries = [bC], wC(!0), yZ((() => {
+                    QC = ZQ("TTFB", 0, "back-forward-cache", QC.navigationId, QC.navigationInteractionId, QC.navigationURL, jZ()), wC = LZ(CC, QC, hQ, zC.reportAllChanges), wC(!0)
+                  })), ZC && QQ(["soft-navigation"], (ZC => {
+                    ZC.forEach((ZC => {
+                      ZC.navigationId && (QC = ZQ("TTFB", 0, "soft-navigation", ZC.navigationId, ZC.interactionId, ZC.name, ZC.startTime), QC.entries = [ZC], wC = LZ(CC, QC, hQ, zC.reportAllChanges), wC(!0))
                     }))
-                  }), Eq)
+                  }), zC)
                 }
               }))
-            }((Eq => {
-              qq((qq => {
-                const Eq = qq.entries[0];
-                let gq = {
+            }((zC => {
+              CC((CC => {
+                const zC = CC.entries[0];
+                let ZC = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: Eq
+                  navigationEntry: zC
                 };
-                if (qq.entries.length && Eq instanceof PerformanceNavigationTiming) {
-                  const Yq = Eq.activationStart || 0,
-                    lq = Math.max((Eq.workerStart || Eq.fetchStart || 0) - Yq, 0),
-                    Oq = Math.max(Eq.domainLookupStart - Yq, 0),
-                    mq = Math.max(Eq.connectStart - Yq, 0),
-                    xq = Math.max(Eq.connectEnd - Yq, 0);
-                  gq = {
-                    waitingDuration: lq,
-                    cacheDuration: Oq - lq,
-                    dnsDuration: mq - Oq,
-                    connectionDuration: xq - mq,
-                    requestDuration: qq.value - xq,
-                    navigationEntry: Eq
+                if (CC.entries.length && zC instanceof PerformanceNavigationTiming) {
+                  const QC = zC.activationStart || 0,
+                    wC = Math.max((zC.workerStart || zC.fetchStart || 0) - QC, 0),
+                    bC = Math.max(zC.domainLookupStart - QC, 0),
+                    nC = Math.max(zC.connectStart - QC, 0),
+                    fC = Math.max(zC.connectEnd - QC, 0);
+                  ZC = {
+                    waitingDuration: wC,
+                    cacheDuration: bC - wC,
+                    dnsDuration: nC - bC,
+                    connectionDuration: fC - nC,
+                    requestDuration: CC.value - fC,
+                    navigationEntry: zC
                   }
                 }
-                return Object.assign(qq, {
-                  attribution: gq
+                return Object.assign(CC, {
+                  attribution: ZC
                 })
-              })(Eq))
+              })(zC))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((qq => {
+          }((CC => {
             const {
-              dnsDuration: Eq,
-              connectionDuration: gq,
-              requestDuration: Yq,
-              waitingDuration: lq,
-              cacheDuration: Oq
-            } = qq.attribution, mq = this.buildInitialValues(qq);
-            this.addIfPresent(mq, "dns_duration", Eq), this.addIfPresent(mq, "connection_duration", gq), this.addIfPresent(mq, "request_duration", Yq), this.addIfPresent(mq, "waiting_duration", lq), this.addIfPresent(mq, "cache_duration", Oq);
-            const xq = this.buildInitialContext(qq);
-            this.pushMeasurement(mq, xq)
+              dnsDuration: zC,
+              connectionDuration: ZC,
+              requestDuration: QC,
+              waitingDuration: wC,
+              cacheDuration: bC
+            } = CC.attribution, nC = this.buildInitialValues(CC);
+            this.addIfPresent(nC, "dns_duration", zC), this.addIfPresent(nC, "connection_duration", ZC), this.addIfPresent(nC, "request_duration", QC), this.addIfPresent(nC, "waiting_duration", wC), this.addIfPresent(nC, "cache_duration", bC);
+            const fC = this.buildInitialContext(CC);
+            this.pushMeasurement(nC, fC)
           }), {
-            reportAllChanges: null === (qq = this.webVitalConfig) || void 0 === qq ? void 0 : qq.reportAllChanges
+            reportAllChanges: null === (CC = this.webVitalConfig) || void 0 === CC ? void 0 : CC.reportAllChanges
           })
         }
-        buildInitialValues(qq) {
+        buildInitialValues(CC) {
           return {
-            [qq.name.toLowerCase()]: qq.value,
-            delta: qq.delta
+            [CC.name.toLowerCase()]: CC.value,
+            delta: CC.delta
           }
         }
-        buildInitialContext(qq) {
-          var Eq;
-          const gq = null !== (Eq = qE("com.grafana.faro.lastNavigationId", Iq)) && void 0 !== Eq ? Eq : zg;
+        buildInitialContext(CC) {
+          var zC;
+          const ZC = null !== (zC = Cz("com.grafana.faro.lastNavigationId", OC)) && void 0 !== zC ? zC : lZ;
           return {
-            id: qq.id,
-            rating: qq.rating,
-            navigation_type: qq.navigationType,
-            navigation_entry_id: gq
+            id: CC.id,
+            rating: CC.rating,
+            navigation_type: CC.navigationType,
+            navigation_entry_id: ZC
           }
         }
-        pushMeasurement(qq, Eq) {
+        pushMeasurement(CC, zC) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: qq
+            values: CC
           }, {
-            context: Eq
+            context: zC
           })
         }
-        addIfPresent(qq, Eq, gq) {
-          gq && (qq[Eq] = gq)
+        addIfPresent(CC, zC, ZC) {
+          ZC && (CC[zC] = ZC)
         }
-        addNumberIfDefined(qq, Eq, gq) {
-          void 0 !== gq && (qq[Eq] = gq)
+        addNumberIfDefined(CC, zC, ZC) {
+          void 0 !== ZC && (CC[zC] = ZC)
         }
       },
-      MY = class extends Eg {
+      HQ = class extends zZ {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = gg
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = ZZ
         }
         initialize() {
-          this.logDebug("Initializing"), new fY(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new mQ(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const TY = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const EQ = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function zY() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const Eq of qq)
-        if ("traceparent" === Eq.name) {
-          if (!TY.test(Eq.description)) continue;
-          const [, qq, gq] = Eq.description.split("-");
-          if (null != qq && null != gq) return {
-            traceId: qq,
-            spanId: gq
+    function lQ() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const zC of CC)
+        if ("traceparent" === zC.name) {
+          if (!EQ.test(zC.description)) continue;
+          const [, CC, ZC] = zC.description.split("-");
+          if (null != CC && null != ZC) return {
+            traceId: CC,
+            spanId: ZC
           };
           break
         }
     }
 
-    function SY(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function XQ(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: gq,
-        monoNow: Yq
-      } = Eq;
-      return Math.min(gq, gq - (Yq - qq))
+        wallNow: ZC,
+        monoNow: QC
+      } = zC;
+      return Math.min(ZC, ZC - (QC - CC))
     }
 
-    function pY(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [gq, Yq] of Object.entries(Eq)) {
-        const Eq = qq[gq];
-        return null != Eq && (iq(Yq) ? Yq.includes(Eq) : Eq === Yq)
+    function cQ(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [ZC, QC] of Object.entries(zC)) {
+        const zC = CC[ZC];
+        return null != zC && (YC(QC) ? QC.includes(zC) : zC === QC)
       }
       return !0
     }
 
-    function GY(qq) {
+    function uQ(CC) {
       const {
-        connectEnd: Eq,
-        connectStart: gq,
-        decodedBodySize: Yq,
-        domainLookupEnd: lq,
-        domainLookupStart: Oq,
-        duration: mq,
-        encodedBodySize: xq,
-        fetchStart: Aq,
-        initiatorType: cq,
-        name: uq,
-        nextHopProtocol: Bq,
-        redirectEnd: Wq,
-        redirectStart: Nq,
-        renderBlockingStatus: aq,
-        requestStart: Vq,
-        responseEnd: dq,
-        responseStart: jq,
-        responseStatus: Hq,
-        secureConnectionStart: oq,
-        transferSize: Pq,
-        workerStart: Qq
-      } = qq;
+        connectEnd: zC,
+        connectStart: ZC,
+        decodedBodySize: QC,
+        domainLookupEnd: wC,
+        domainLookupStart: bC,
+        duration: nC,
+        encodedBodySize: fC,
+        fetchStart: oC,
+        initiatorType: qC,
+        name: FC,
+        nextHopProtocol: WC,
+        redirectEnd: NC,
+        redirectStart: MC,
+        renderBlockingStatus: gC,
+        requestStart: SC,
+        responseEnd: pC,
+        responseStart: PC,
+        responseStatus: GC,
+        secureConnectionStart: RC,
+        transferSize: AC,
+        workerStart: xC
+      } = CC;
       return {
-        name: uq,
-        httpHost: JY(uq),
-        duration: kY(mq),
-        tcpHandshakeTime: kY(Eq - gq),
-        dnsLookupTime: kY(lq - Oq),
-        tlsNegotiationTime: kY(Eq - oq),
-        responseStatus: kY(Hq),
-        redirectTime: kY(Wq - Nq),
-        requestTime: kY(jq - Vq),
-        responseTime: kY(dq - jq),
-        fetchTime: kY(dq - Aq),
-        serviceWorkerTime: kY(Qq > 0 ? Aq - Qq : 0),
-        decodedBodySize: kY(Yq),
-        encodedBodySize: kY(xq),
+        name: FC,
+        httpHost: sQ(FC),
+        duration: TQ(nC),
+        tcpHandshakeTime: TQ(zC - ZC),
+        dnsLookupTime: TQ(wC - bC),
+        tlsNegotiationTime: TQ(zC - RC),
+        responseStatus: TQ(GC),
+        redirectTime: TQ(NC - MC),
+        requestTime: TQ(PC - SC),
+        responseTime: TQ(pC - PC),
+        fetchTime: TQ(pC - oC),
+        serviceWorkerTime: TQ(xC > 0 ? oC - xC : 0),
+        decodedBodySize: TQ(QC),
+        encodedBodySize: TQ(fC),
         cacheHitStatus: function() {
-          let qq = "fullLoad";
-          0 === Pq ? Yq > 0 && (qq = "cache") : null != Hq ? 304 === Hq && (qq = "conditionalFetch") : xq > 0 && Pq < xq && (qq = "conditionalFetch");
-          return qq
+          let CC = "fullLoad";
+          0 === AC ? QC > 0 && (CC = "cache") : null != GC ? 304 === GC && (CC = "conditionalFetch") : fC > 0 && AC < fC && (CC = "conditionalFetch");
+          return CC
         }(),
-        renderBlockingStatus: kY(aq),
-        protocol: Bq,
-        initiatorType: cq,
+        renderBlockingStatus: TQ(gC),
+        protocol: WC,
+        initiatorType: qC,
         visibilityState: document.visibilityState,
-        ttfb: kY(jq - Vq),
-        transferSize: kY(Pq)
+        ttfb: TQ(PC - SC),
+        transferSize: TQ(AC)
       }
     }
 
-    function LY(qq) {
+    function rQ(CC) {
       const {
-        activationStart: Eq,
-        domComplete: gq,
-        domContentLoadedEventEnd: Yq,
-        domContentLoadedEventStart: lq,
-        domInteractive: Oq,
-        fetchStart: mq,
-        loadEventEnd: xq,
-        loadEventStart: Aq,
-        responseStart: cq,
-        type: uq
-      } = qq, Bq = function() {
-        var qq;
-        return null != (null === (qq = performance.timing) || void 0 === qq ? void 0 : qq.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: zC,
+        domComplete: ZC,
+        domContentLoadedEventEnd: QC,
+        domContentLoadedEventStart: wC,
+        domInteractive: bC,
+        fetchStart: nC,
+        loadEventEnd: fC,
+        loadEventStart: oC,
+        responseStart: qC,
+        type: FC
+      } = CC, WC = function() {
+        var CC;
+        return null != (null === (CC = performance.timing) || void 0 === CC ? void 0 : CC.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return uE(uE({}, GY(qq)), {}, {
-        pageLoadTime: kY(gq - mq),
-        documentParsingTime: kY(Bq ? Oq - Bq : null),
-        domProcessingTime: kY(gq - Oq),
-        domContentLoadHandlerTime: kY(Yq - lq),
-        onLoadTime: kY(xq - Aq),
-        ttfb: kY(Math.max(cq - (null !== Eq && void 0 !== Eq ? Eq : 0), 0)),
-        type: uq
+      return Fz(Fz({}, uQ(CC)), {}, {
+        pageLoadTime: TQ(ZC - nC),
+        documentParsingTime: TQ(WC ? bC - WC : null),
+        domProcessingTime: TQ(ZC - bC),
+        domContentLoadHandlerTime: TQ(QC - wC),
+        onLoadTime: TQ(fC - oC),
+        ttfb: TQ(Math.max(qC - (null !== zC && void 0 !== zC ? zC : 0), 0)),
+        type: FC
       })
     }
 
-    function JY(qq) {
+    function sQ(CC) {
       try {
-        return new URL(qq).host || zg
-      } catch (Eq) {
-        return zg
+        return new URL(CC).host || lZ
+      } catch (zC) {
+        return lZ
       }
     }
 
-    function kY(qq) {
-      return null == qq ? zg : "number" === typeof qq ? Math.round(qq > 0 ? qq : 0).toString() : qq.toString()
+    function TQ(CC) {
+      return null == CC ? lZ : "number" === typeof CC ? Math.round(CC > 0 ? CC : 0).toString() : CC.toString()
     }
-    const RY = {
+    const aQ = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function UY(qq, Eq, gq, Yq, lq, Oq, mq) {
+    function tQ(CC, zC, ZC, QC, wC, bC, nC) {
       try {
-        var xq = qq[Oq](mq),
-          Aq = xq.value
-      } catch (qq) {
-        return void gq(qq)
+        var fC = CC[bC](nC),
+          oC = fC.value
+      } catch (CC) {
+        return void ZC(CC)
       }
-      xq.done ? Eq(Aq) : Promise.resolve(Aq).then(Yq, lq)
+      fC.done ? zC(oC) : Promise.resolve(oC).then(QC, wC)
     }
 
-    function FY(qq) {
+    function DQ(CC) {
       return function() {
-        var Eq = this,
-          gq = arguments;
-        return new Promise((function(Yq, lq) {
-          var Oq = qq.apply(Eq, gq);
+        var zC = this,
+          ZC = arguments;
+        return new Promise((function(QC, wC) {
+          var bC = CC.apply(zC, ZC);
 
-          function mq(qq) {
-            UY(Oq, Yq, lq, mq, xq, "next", qq)
+          function nC(CC) {
+            tQ(bC, QC, wC, nC, fC, "next", CC)
           }
 
-          function xq(qq) {
-            UY(Oq, Yq, lq, mq, xq, "throw", qq)
+          function fC(CC) {
+            tQ(bC, QC, wC, nC, fC, "throw", CC)
           }
-          mq(void 0)
+          nC(void 0)
         }))
       }
     }
-    const sY = new Hg;
-    var XY = class extends Eg {
+    const jQ = new GZ;
+    var yQ = class extends zZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = gg
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = ZZ
       }
       initialize() {
-        var qq = this;
+        var CC = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let Eq = !1;
-        const gq = () => {
-          ! function(qq) {
-            if ("complete" === document.readyState) qq();
+        let zC = !1;
+        const ZC = () => {
+          ! function(CC) {
+            if ("complete" === document.readyState) CC();
             else {
-              const Eq = () => {
-                "complete" === document.readyState && (qq(), document.removeEventListener("readystatechange", Eq))
+              const zC = () => {
+                "complete" === document.readyState && (CC(), document.removeEventListener("readystatechange", zC))
               };
-              document.addEventListener("readystatechange", Eq)
+              document.addEventListener("readystatechange", zC)
             }
-          }(FY((function*() {
-            if (Eq) return;
-            const gq = qq.api.pushEvent,
+          }(DQ((function*() {
+            if (zC) return;
+            const ZC = CC.api.pushEvent,
               {
-                faroNavigationId: Yq
-              } = yield function(qq) {
-                let Eq;
-                const gq = new Promise((qq => {
-                  Eq = qq
+                faroNavigationId: QC
+              } = yield function(CC) {
+                let zC;
+                const ZC = new Promise((CC => {
+                  zC = CC
                 }));
-                return new PerformanceObserver((gq => {
-                  var Yq;
-                  const [lq] = gq.getEntries();
-                  if (null == lq || Kq(lq.name)) return;
-                  const Oq = lq.toJSON();
-                  let mq = zY(null === Oq || void 0 === Oq ? void 0 : Oq.serverTiming);
-                  const xq = null !== (Yq = qE("com.grafana.faro.lastNavigationId", Iq)) && void 0 !== Yq ? Yq : zg,
-                    Aq = uE(uE({}, LY(Oq)), {}, {
-                      faroNavigationId: jE(),
-                      faroPreviousNavigationId: xq
+                return new PerformanceObserver((ZC => {
+                  var QC;
+                  const [wC] = ZC.getEntries();
+                  if (null == wC || UC(wC.name)) return;
+                  const bC = wC.toJSON();
+                  let nC = lQ(null === bC || void 0 === bC ? void 0 : bC.serverTiming);
+                  const fC = null !== (QC = Cz("com.grafana.faro.lastNavigationId", OC)) && void 0 !== QC ? QC : lZ,
+                    oC = Fz(Fz({}, rQ(bC)), {}, {
+                      faroNavigationId: Pz(),
+                      faroPreviousNavigationId: fC
                     });
-                  EE("com.grafana.faro.lastNavigationId", Aq.faroNavigationId, Iq), qq("faro.performance.navigation", Aq, void 0, {
-                    spanContext: mq,
-                    timestampOverwriteMs: SY(Oq.startTime)
-                  }), Eq(Aq)
+                  zz("com.grafana.faro.lastNavigationId", oC.faroNavigationId, OC), CC("faro.performance.navigation", oC, void 0, {
+                    spanContext: nC,
+                    timestampOverwriteMs: XQ(bC.startTime)
+                  }), zC(oC)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), gq
-              }(gq);
-            Eq || null == Yq || function(qq, Eq, gq, Yq) {
-              const lq = Yq.trackResources;
-              new PerformanceObserver((Yq => {
-                const Oq = Yq.getEntries(),
-                  mq = {
+                }), ZC
+              }(ZC);
+            zC || null == QC || function(CC, zC, ZC, QC) {
+              const wC = QC.trackResources;
+              new PerformanceObserver((QC => {
+                const bC = QC.getEntries(),
+                  nC = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const xq of Oq) {
-                  if (Kq(xq.name)) continue;
-                  null === gq || void 0 === gq || gq.notify({
+                for (const fC of bC) {
+                  if (UC(fC.name)) continue;
+                  null === ZC || void 0 === ZC || ZC.notify({
                     type: "resource"
                   });
-                  const Yq = xq.toJSON();
-                  let Oq = zY(null === Yq || void 0 === Yq ? void 0 : Yq.serverTiming);
-                  (null == lq && pY(Yq, RY) || lq) && Eq("faro.performance.resource", uE(uE({}, GY(Yq)), {}, {
-                    faroNavigationId: qq,
-                    faroResourceId: jE()
+                  const QC = fC.toJSON();
+                  let bC = lQ(null === QC || void 0 === QC ? void 0 : QC.serverTiming);
+                  (null == wC && cQ(QC, aQ) || wC) && zC("faro.performance.resource", Fz(Fz({}, uQ(QC)), {}, {
+                    faroNavigationId: CC,
+                    faroResourceId: Pz()
                   }), void 0, {
-                    spanContext: Oq,
-                    timestampOverwriteMs: SY(Yq.startTime, mq)
+                    spanContext: bC,
+                    timestampOverwriteMs: XQ(QC.startTime, nC)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(Yq, gq, sY, qq.config)
+            }(QC, ZC, jQ, CC.config)
           })))
         };
         this.cancelInitialization = () => {
-          Eq = !0, document.removeEventListener("prerenderingchange", gq)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", gq, {
+          zC = !0, document.removeEventListener("prerenderingchange", ZC)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", ZC, {
           once: !0
-        }) : gq()
+        }) : ZC()
       }
       destroy() {
-        var qq;
-        null === (qq = this.cancelInitialization) || void 0 === qq || qq.call(this), this.cancelInitialization = void 0
+        var CC;
+        null === (CC = this.cancelInitialization) || void 0 === CC || CC.call(this), this.cancelInitialization = void 0
       }
     };
-    const wY = "data-faro-user-action-name",
-      KY = wY.replace(/-name$/, "-timeout"),
-      CY = 1e3;
+    const LQ = "data-faro-user-action-name",
+      UQ = LQ.replace(/-name$/, "-timeout"),
+      BQ = 1e3;
 
-    function IY(qq) {
-      return `data-${(qq.startsWith("data-")?qq.slice(5):qq).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function OQ(CC) {
+      return `data-${(CC.startsWith("data-")?CC.slice(5):CC).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function eY(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UE;
-      if (void 0 === qq) return Eq;
-      let Yq = NaN;
+    function kQ(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tz;
+      if (void 0 === CC) return zC;
+      let QC = NaN;
       try {
-        Yq = "string" === typeof qq && "" === qq.trim() ? NaN : Number(qq)
-      } catch (lq) {}
-      return !Number.isFinite(Yq) || Yq <= 0 ? (gq(`initialActivityTimeout must be a finite number greater than zero; using ${Eq} ms`), Eq) : Yq > 1e3 ? (gq(`initialActivityTimeout cannot exceed ${CY} ms; clamping to the maximum`), CY) : Yq
+        QC = "string" === typeof CC && "" === CC.trim() ? NaN : Number(CC)
+      } catch (wC) {}
+      return !Number.isFinite(QC) || QC <= 0 ? (ZC(`initialActivityTimeout must be a finite number greater than zero; using ${zC} ms`), zC) : QC > 1e3 ? (ZC(`initialActivityTimeout cannot exceed ${BQ} ms; clamping to the maximum`), BQ) : QC
     }
 
-    function DY(qq, Eq, gq) {
-      return void 0 !== qq && window.clearTimeout(qq), window.setTimeout((() => {
-        Eq()
-      }), gq)
+    function VQ(CC, zC, ZC) {
+      return void 0 !== CC && window.clearTimeout(CC), window.setTimeout((() => {
+        zC()
+      }), ZC)
     }
 
-    function ql(qq) {
-      return qq.type === jg
+    function Cw(CC) {
+      return CC.type === PZ
     }
-    let El, gl;
+    let zw, Zw;
 
-    function Yl() {
-      return El || (El = new Hg), gl || (gl = new MutationObserver(((qq, Eq) => {
-        El.notify({
+    function Qw() {
+      return zw || (zw = new GZ), Zw || (Zw = new MutationObserver(((CC, zC) => {
+        zw.notify({
           type: "dom-mutation"
         })
-      })), gl.observe(document, {
+      })), Zw.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), El
+      })), zw
     }
-    const ll = "fetch",
-      Ol = "xhr";
-    let ml, xl, Al, cl, ul = !1;
+    const ww = "fetch",
+      bw = "xhr";
+    let nw, fw, ow, qw, Fw = !1;
 
-    function Bl() {
-      if (ml) return ml;
+    function Ww() {
+      if (nw) return nw;
 
-      function qq(qq) {
-        ml.notify({
-          type: dg,
-          request: qq
+      function CC(CC) {
+        nw.notify({
+          type: pZ,
+          request: CC
         })
       }
 
-      function Eq(qq) {
-        ml.notify({
-          type: jg,
-          request: qq
+      function zC(CC) {
+        nw.notify({
+          type: PZ,
+          request: CC
         })
       }
-      return ml = new Hg, ul || (! function(qq) {
+      return nw = new GZ, Fw || (! function(CC) {
         let {
-          onRequestEnd: Eq,
-          onRequestStart: gq
-        } = qq;
-        Al || (Al = window.fetch);
+          onRequestEnd: zC,
+          onRequestStart: ZC
+        } = CC;
+        ow || (ow = window.fetch);
         window.fetch = function() {
-          var qq, Yq;
-          const lq = null !== (qq = Cq(arguments[0])) && void 0 !== qq ? qq : "",
-            Oq = Kq(lq),
-            mq = (null !== (Yq = arguments[1]) && void 0 !== Yq ? Yq : {}).method,
-            xq = jE();
-          return Oq || gq({
-            url: lq,
-            method: mq,
-            requestId: xq,
-            apiType: ll
-          }), Al.apply(this, arguments).then((qq => (Oq || Eq({
-            url: lq,
-            method: mq,
-            requestId: xq,
-            apiType: ll
-          }), qq))).catch((qq => {
-            throw Oq || Eq({
-              url: lq,
-              method: mq,
-              requestId: xq,
-              apiType: ll
-            }), qq
+          var CC, QC;
+          const wC = null !== (CC = BC(arguments[0])) && void 0 !== CC ? CC : "",
+            bC = UC(wC),
+            nC = (null !== (QC = arguments[1]) && void 0 !== QC ? QC : {}).method,
+            fC = Pz();
+          return bC || ZC({
+            url: wC,
+            method: nC,
+            requestId: fC,
+            apiType: ww
+          }), ow.apply(this, arguments).then((CC => (bC || zC({
+            url: wC,
+            method: nC,
+            requestId: fC,
+            apiType: ww
+          }), CC))).catch((CC => {
+            throw bC || zC({
+              url: wC,
+              method: nC,
+              requestId: fC,
+              apiType: ww
+            }), CC
           }))
         }
       }({
-        onRequestStart: qq,
-        onRequestEnd: Eq
-      }), function(qq) {
+        onRequestStart: CC,
+        onRequestEnd: zC
+      }), function(CC) {
         let {
-          onRequestStart: Eq,
-          onRequestEnd: gq
-        } = qq;
-        xl || (xl = XMLHttpRequest.prototype.open);
+          onRequestStart: zC,
+          onRequestEnd: ZC
+        } = CC;
+        fw || (fw = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const qq = arguments[1],
-            Yq = Kq(qq),
-            lq = arguments[0],
-            Oq = jE();
+          const CC = arguments[1],
+            QC = UC(CC),
+            wC = arguments[0],
+            bC = Pz();
           this.addEventListener("loadstart", (function() {
-            Yq || Eq({
-              url: qq,
-              method: lq,
-              requestId: Oq,
-              apiType: Ol
+            QC || zC({
+              url: CC,
+              method: wC,
+              requestId: bC,
+              apiType: bw
             })
           })), this.addEventListener("load", (function() {
-            Yq || gq({
-              url: qq,
-              method: lq,
-              requestId: Oq,
-              apiType: Ol
+            QC || ZC({
+              url: CC,
+              method: wC,
+              requestId: bC,
+              apiType: bw
             })
           })), this.addEventListener("error", (function() {
-            Yq || gq({
-              url: qq,
-              method: lq,
-              requestId: Oq,
-              apiType: Ol
+            QC || ZC({
+              url: CC,
+              method: wC,
+              requestId: bC,
+              apiType: bw
             })
           })), this.addEventListener("abort", (function() {
-            Yq || gq({
-              url: qq,
-              method: lq,
-              requestId: Oq,
-              apiType: Ol
+            QC || ZC({
+              url: CC,
+              method: wC,
+              requestId: bC,
+              apiType: bw
             })
-          })), xl.apply(this, arguments)
+          })), fw.apply(this, arguments)
         }
       }({
-        onRequestStart: qq,
-        onRequestEnd: Eq
-      }), ul = !0), ml
+        onRequestStart: CC,
+        onRequestEnd: zC
+      }), Fw = !0), nw
     }
-    let Wl, Nl = !1;
-    let al = function(qq) {
-      return qq[qq.Started = 0] = "Started", qq[qq.Halted = 1] = "Halted", qq[qq.Cancelled = 2] = "Cancelled", qq[qq.Ended = 3] = "Ended", qq
+    let Nw, Mw = !1;
+    let gw = function(CC) {
+      return CC[CC.Started = 0] = "Started", CC[CC.Halted = 1] = "Halted", CC[CC.Cancelled = 2] = "Cancelled", CC[CC.Ended = 3] = "Ended", CC
     }({});
-    var Vl = class {
-      constructor(qq, Eq) {
-        let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = qq, this.logDebug = Eq, this.initialActivityTimeout = gq, this.http = Bl(), this.dom = Yl(), this.perf = (cl || (cl = new Hg), Nl || (Wl = sY.subscribe((qq => {
-          "resource" === qq.type && cl.notify({
+    var Sw = class {
+      constructor(CC, zC) {
+        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = CC, this.logDebug = zC, this.initialActivityTimeout = ZC, this.http = Ww(), this.dom = Qw(), this.perf = (qw || (qw = new GZ), Mw || (Nw = jQ.subscribe((CC => {
+          "resource" === CC.type && qw.notify({
             type: "resource-entry"
           })
-        })), Nl = !0), cl), this.isValid = !1, this.runningRequests = new Map
+        })), Mw = !0), qw), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new Hg).merge(this.http, this.dom, this.perf).takeWhile((() => [al.Started, al.Halted].includes(this.userAction.getState()))).filter((qq => !!(this.userAction.getState() !== al.Halted || ql(qq) && this.runningRequests.has(qq.request.requestId)))).subscribe((qq => {
-          (function(qq) {
-            return qq.type === dg
-          })(qq) && this.runningRequests.set(qq.request.requestId, qq.request), ql(qq) && this.runningRequests.delete(qq.request.requestId), ql(qq) ? this.userAction.getState() === al.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((qq => [al.Ended, al.Cancelled].includes(qq))).first().subscribe((() => this.cleanup())), this.startupTid = DY(this.startupTid, (() => {
+        this.allMonitorsSub = (new GZ).merge(this.http, this.dom, this.perf).takeWhile((() => [gw.Started, gw.Halted].includes(this.userAction.getState()))).filter((CC => !!(this.userAction.getState() !== gw.Halted || Cw(CC) && this.runningRequests.has(CC.request.requestId)))).subscribe((CC => {
+          (function(CC) {
+            return CC.type === pZ
+          })(CC) && this.runningRequests.set(CC.request.requestId, CC.request), Cw(CC) && this.runningRequests.delete(CC.request.requestId), Cw(CC) ? this.userAction.getState() === gw.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((CC => [gw.Ended, gw.Cancelled].includes(CC))).first().subscribe((() => this.cleanup())), this.startupTid = VQ(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === al.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === gw.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === al.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === gw.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = DY(this.haltTid, (() => {
-          this.userAction.getState() === al.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = VQ(this.haltTid, (() => {
+          this.userAction.getState() === gw.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var qq, Eq;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (qq = this.allMonitorsSub) || void 0 === qq || qq.unsubscribe(), null === (Eq = this.stateSub) || void 0 === Eq || Eq.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var CC, zC;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (CC = this.allMonitorsSub) || void 0 === CC || CC.unsubscribe(), null === (zC = this.stateSub) || void 0 === zC || zC.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(qq) {
-        void 0 !== qq && window.clearTimeout(qq)
+      clearTimer(CC) {
+        void 0 !== CC && window.clearTimeout(CC)
       }
     };
 
-    function dl(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UE;
-      var gq;
+    function pw(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tz;
+      var ZC;
       const {
-        api: Yq,
-        config: lq,
-        internalLogger: Oq
-      } = qq, mq = eY(null === (gq = lq.userActionsInstrumentation) || void 0 === gq ? void 0 : gq.initialActivityTimeout, 100, Eq);
+        api: QC,
+        config: wC,
+        internalLogger: bC
+      } = CC, nC = kQ(null === (ZC = wC.userActionsInstrumentation) || void 0 === ZC ? void 0 : ZC.initialActivityTimeout, 100, zC);
       return {
-        processUserEvent: function(qq) {
-          var Eq, gq;
-          const Oq = null !== (Eq = null === (gq = lq.userActionsInstrumentation) || void 0 === gq ? void 0 : gq.dataAttributeName) && void 0 !== Eq ? Eq : wY,
-            mq = qq.target;
-          if (!(mq instanceof Element)) return;
-          const xq = function(qq, Eq) {
-              let gq = qq;
-              for (; gq;) {
-                if (gq.hasAttribute(Eq)) return gq;
-                gq = gq.parentElement
+        processUserEvent: function(CC) {
+          var zC, ZC;
+          const bC = null !== (zC = null === (ZC = wC.userActionsInstrumentation) || void 0 === ZC ? void 0 : ZC.dataAttributeName) && void 0 !== zC ? zC : LQ,
+            nC = CC.target;
+          if (!(nC instanceof Element)) return;
+          const fC = function(CC, zC) {
+              let ZC = CC;
+              for (; ZC;) {
+                if (ZC.hasAttribute(zC)) return ZC;
+                ZC = ZC.parentElement
               }
               return null
-            }(mq, IY(Oq)),
-            Aq = function(qq, Eq) {
-              if (!qq) return;
-              const gq = function(qq) {
-                  return IY(qq).slice(5).replace(/-(.)/g, ((qq, Eq) => Eq.toUpperCase()))
-                }(Eq),
-                Yq = qq.dataset;
-              for (const lq in Yq)
-                if (lq === gq) return Yq[lq]
-            }(xq, Oq);
-          if (!xq || !Aq) return;
-          const cq = function(qq, Eq) {
-            const gq = qq.getAttribute(function(qq) {
-              const Eq = IY(qq);
-              return Eq.endsWith("-name") ? `${Eq.slice(0,-5)}-timeout` : `${Eq}-timeout`
-            }(Eq));
-            return null === gq ? void 0 : Number(gq)
-          }(xq, Oq);
-          Yq.startUserAction(Aq, {}, {
-            triggerName: qq.type,
-            initialActivityTimeout: cq
+            }(nC, OQ(bC)),
+            oC = function(CC, zC) {
+              if (!CC) return;
+              const ZC = function(CC) {
+                  return OQ(CC).slice(5).replace(/-(.)/g, ((CC, zC) => zC.toUpperCase()))
+                }(zC),
+                QC = CC.dataset;
+              for (const wC in QC)
+                if (wC === ZC) return QC[wC]
+            }(fC, bC);
+          if (!fC || !oC) return;
+          const qC = function(CC, zC) {
+            const ZC = CC.getAttribute(function(CC) {
+              const zC = OQ(CC);
+              return zC.endsWith("-name") ? `${zC.slice(0,-5)}-timeout` : `${zC}-timeout`
+            }(zC));
+            return null === ZC ? void 0 : Number(ZC)
+          }(fC, bC);
+          QC.startUserAction(oC, {}, {
+            triggerName: CC.type,
+            initialActivityTimeout: qC
           })
         },
-        processUserActionStarted: function(qq, gq) {
-          const Yq = qq,
-            lq = eY(gq, mq, Eq);
-          new Vl(Yq, Oq.debug, lq).attach()
+        processUserActionStarted: function(CC, ZC) {
+          const QC = CC,
+            wC = kQ(ZC, nC, zC);
+          new Sw(QC, bC.debug, wC).attach()
         }
       }
     }
-    const jl = "user_action_start",
-      Hl = {
+    const Pw = "user_action_start",
+      Gw = {
         Normal: "normal",
         Critical: "critical"
       };
-    var ol = class {
+    var Rw = class {
         constructor() {
           this.buffer = []
         }
-        addItem(qq) {
-          this.buffer.push(qq)
+        addItem(CC) {
+          this.buffer.push(CC)
         }
-        flushBuffer(qq) {
-          if (bq(qq))
-            for (const Eq of this.buffer) qq(Eq);
+        flushBuffer(CC) {
+          if (KC(CC))
+            for (const zC of this.buffer) CC(zC);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      Pl = class extends Hg {
-        constructor(qq) {
+      Aw = class extends GZ {
+        constructor(CC) {
           let {
-            name: Eq,
-            parentId: gq,
-            trigger: Yq,
-            transports: lq,
-            attributes: Oq,
-            trackUserActionsExcludeItem: mq,
-            importance: xq = Hl.Normal,
-            pushEvent: Aq
-          } = qq;
-          super(), this.name = Eq, this.attributes = Oq, this.id = jE(), this.trigger = Yq, this.parentId = null !== gq && void 0 !== gq ? gq : this.id, this.trackUserActionsExcludeItem = mq, this.importance = xq, this._pushEvent = Aq, this._itemBuffer = new ol, this._transports = lq, this._state = 0, this._start()
+            name: zC,
+            parentId: ZC,
+            trigger: QC,
+            transports: wC,
+            attributes: bC,
+            trackUserActionsExcludeItem: nC,
+            importance: fC = Gw.Normal,
+            pushEvent: oC
+          } = CC;
+          super(), this.name = zC, this.attributes = bC, this.id = Pz(), this.trigger = QC, this.parentId = null !== ZC && void 0 !== ZC ? ZC : this.id, this.trackUserActionsExcludeItem = nC, this.importance = fC, this._pushEvent = oC, this._itemBuffer = new Rw, this._transports = wC, this._state = 0, this._start()
         }
-        addItem(qq) {
-          return 0 === this._state && (this._itemBuffer.addItem(qq), !0)
+        addItem(CC) {
+          return 0 === this._state && (this._itemBuffer.addItem(CC), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = WE(), this._startTimeMono = NE())
+          this._state = 0, 0 === this._state && (this.startTime = Nz(), this._startTimeMono = Mz())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((qq => {
-            this._transports.execute(qq)
+          0 === this._state && this._itemBuffer.flushBuffer((CC => {
+            this._transports.execute(CC)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const qq = WE(),
-            Eq = NE() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((qq => {
-            if (function(qq, Eq) {
-                return (null === Eq || void 0 === Eq ? void 0 : Eq(qq)) || "measurement" === qq.type && "web-vitals" === qq.payload.type
-              }(qq, this.trackUserActionsExcludeItem)) return void this._transports.execute(qq);
-            const Eq = eE(eE({}, qq), {}, {
-              payload: eE(eE({}, qq.payload), {}, {
+          const CC = Nz(),
+            zC = Mz() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((CC => {
+            if (function(CC, zC) {
+                return (null === zC || void 0 === zC ? void 0 : zC(CC)) || "measurement" === CC.type && "web-vitals" === CC.payload.type
+              }(CC, this.trackUserActionsExcludeItem)) return void this._transports.execute(CC);
+            const zC = kz(kz({}, CC), {}, {
+              payload: kz(kz({}, CC.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(Eq)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", eE({
+            this._transports.execute(zC)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", kz({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: qq.toString(),
-            userActionDuration: Eq.toString(),
+            userActionEndTime: CC.toString(),
+            userActionDuration: zC.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, SE(this.attributes)), void 0, {
+          }, Xz(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: qq => (qq.action = {
+            customPayloadTransformer: CC => (CC.action = {
               id: this.id,
               name: this.name
-            }, qq)
+            }, CC)
           })
         }
         getState() {
           return this._state
         }
       };
-    const Ql = new Hg;
+    const xw = new GZ;
 
-    function yl(qq, Eq) {
-      return !!qq && (0 === (null === qq || void 0 === qq ? void 0 : qq.getState()) && (qq.addItem(Eq), !0))
+    function Jw(CC, zC) {
+      return !!CC && (0 === (null === CC || void 0 === CC ? void 0 : CC.getState()) && (CC.addItem(zC), !0))
     }
-    var tl = class extends Eg {
+    var Iw = class extends zZ {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = gg
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = ZZ
         }
         initialize() {
           const {
-            processUserEvent: qq,
-            processUserActionStarted: Eq
-          } = dl(Vq, (qq => this.logWarn(qq)));
-          this._processUserEvent = qq, this._processKeydown = Eq => {
-            [" ", "Enter"].includes(Eq.key) && qq(Eq)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = Ql.subscribe((qq => {
+            processUserEvent: CC,
+            processUserActionStarted: zC
+          } = pw(SC, (CC => this.logWarn(CC)));
+          this._processUserEvent = CC, this._processKeydown = zC => {
+            [" ", "Enter"].includes(zC.key) && CC(zC)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = xw.subscribe((CC => {
             let {
-              type: gq,
-              userAction: Yq,
-              initialActivityTimeout: lq
-            } = qq;
-            "user_action_start" === gq && Eq(Yq, lq)
+              type: ZC,
+              userAction: QC,
+              initialActivityTimeout: wC
+            } = CC;
+            "user_action_start" === ZC && zC(QC, wC)
           }))
         }
         destroy() {
-          var qq;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (qq = this._userActionSub) || void 0 === qq || qq.unsubscribe()
+          var CC;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (CC = this._userActionSub) || void 0 === CC || CC.unsubscribe()
         }
       },
-      rl = class extends Eg {
+      iw = class extends zZ {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = gg, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = ZZ, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(qq) {
-          const Eq = {
-            blockedURI: qq.blockedURI,
-            columnNumber: qq.columnNumber,
-            disposition: qq.disposition,
-            documentURI: qq.documentURI,
-            effectiveDirective: qq.effectiveDirective,
-            lineNumber: qq.lineNumber,
-            originalPolicy: qq.originalPolicy,
-            referrer: qq.referrer,
-            sample: qq.sample,
-            sourceFile: qq.sourceFile,
-            statusCode: qq.statusCode,
-            violatedDirective: qq.violatedDirective
+        securitypolicyviolationHandler(CC) {
+          const zC = {
+            blockedURI: CC.blockedURI,
+            columnNumber: CC.columnNumber,
+            disposition: CC.disposition,
+            documentURI: CC.documentURI,
+            effectiveDirective: CC.effectiveDirective,
+            lineNumber: CC.lineNumber,
+            originalPolicy: CC.originalPolicy,
+            referrer: CC.referrer,
+            sample: CC.sample,
+            sourceFile: CC.sourceFile,
+            statusCode: CC.statusCode,
+            violatedDirective: CC.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", SE(Eq))
+          this.api.pushEvent("securitypolicyviolation", Xz(zC))
         }
       };
-    var vl = class extends Hg {
-      constructor(qq, Eq) {
-        var gq, Yq, lq, Oq;
-        super(), this._tracking = !1, this.eventsObservable = qq, this._options = {
-          inactivityMs: null !== (gq = null === Eq || void 0 === Eq ? void 0 : Eq.inactivityMs) && void 0 !== gq ? gq : 100,
-          drainTimeoutMs: null !== (Yq = null === Eq || void 0 === Eq ? void 0 : Eq.drainTimeoutMs) && void 0 !== Yq ? Yq : 1e4,
-          isOperationStart: null !== (lq = null === Eq || void 0 === Eq ? void 0 : Eq.isOperationStart) && void 0 !== lq ? lq : () => {},
-          isOperationEnd: null !== (Oq = null === Eq || void 0 === Eq ? void 0 : Eq.isOperationEnd) && void 0 !== Oq ? Oq : () => {}
+    var vw = class extends GZ {
+      constructor(CC, zC) {
+        var ZC, QC, wC, bC;
+        super(), this._tracking = !1, this.eventsObservable = CC, this._options = {
+          inactivityMs: null !== (ZC = null === zC || void 0 === zC ? void 0 : zC.inactivityMs) && void 0 !== ZC ? ZC : 100,
+          drainTimeoutMs: null !== (QC = null === zC || void 0 === zC ? void 0 : zC.drainTimeoutMs) && void 0 !== QC ? QC : 1e4,
+          isOperationStart: null !== (wC = null === zC || void 0 === zC ? void 0 : zC.isOperationStart) && void 0 !== wC ? wC : () => {},
+          isOperationEnd: null !== (bC = null === zC || void 0 === zC ? void 0 : zC.isOperationEnd) && void 0 !== bC ? bC : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((qq => {
-          var Eq;
-          this._lastEventTime = NE(), null === (Eq = this._currentEvents) || void 0 === Eq || Eq.push(qq);
-          const gq = this._options.isOperationStart(qq);
-          var Yq;
-          gq && (null === (Yq = this._activeOperations) || void 0 === Yq || Yq.set(gq, !0));
-          const lq = this._options.isOperationEnd(qq);
-          var Oq;
-          lq && (null === (Oq = this._activeOperations) || void 0 === Oq || Oq.delete(lq));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((CC => {
+          var zC;
+          this._lastEventTime = Mz(), null === (zC = this._currentEvents) || void 0 === zC || zC.push(CC);
+          const ZC = this._options.isOperationStart(CC);
+          var QC;
+          ZC && (null === (QC = this._activeOperations) || void 0 === QC || QC.set(ZC, !0));
+          const wC = this._options.isOperationEnd(CC);
+          var bC;
+          wC && (null === (bC = this._activeOperations) || void 0 === bC || bC.delete(wC));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = NE(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = Mz(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let qq;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), qq = this.hasActiveOperations() ? NE() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let CC;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), CC = this.hasActiveOperations() ? Mz() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: qq
+          duration: CC
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = hl(this._inactivityTid, (() => {
+        this._inactivityTid = ew(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = hl(this._drainTid, (() => {
+        this._drainTid = ew(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(qq) {
-        qq && clearTimeout(qq)
+      _clearTimer(CC) {
+        CC && clearTimeout(CC)
       }
     };
 
-    function hl(qq, Eq, gq) {
-      return qq && clearTimeout(qq), qq = setTimeout((() => {
-        Eq()
-      }), gq)
+    function ew(CC, zC, ZC) {
+      return CC && clearTimeout(CC), CC = setTimeout((() => {
+        zC()
+      }), ZC)
     }
-    let nl;
-    const bl = new Set,
-      il = new Map;
-    let Zl, fl, Ml, Tl, zl, Sl, pl, Gl, Ll = !1;
-    var Jl = class extends Eg {
+    let hw;
+    const Kw = new Set,
+      Yw = new Map;
+    let dw, mw, Hw, Ew, lw, Xw, uw, rw, sw = !1;
+    var Tw = class extends zZ {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = gg
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = ZZ
       }
       initialize() {
-        const qq = Bl(),
-          Eq = Yl(),
-          gq = function() {
-            function qq(qq, Eq) {
-              const gq = null !== Eq && void 0 !== Eq ? Eq : location.href;
-              gq !== fl && (Zl.notify({
+        const CC = Ww(),
+          zC = Qw(),
+          ZC = function() {
+            function CC(CC, zC) {
+              const ZC = null !== zC && void 0 !== zC ? zC : location.href;
+              ZC !== mw && (dw.notify({
                 type: "url-change",
-                from: fl,
-                to: gq,
-                trigger: qq
-              }), fl = gq)
+                from: mw,
+                to: ZC,
+                trigger: CC
+              }), mw = ZC)
             }
-            if (Zl || (Zl = new Hg, fl = location.href), !Ll)
+            if (dw || (dw = new GZ, mw = location.href), !sw)
               if ("navigation" in window && "NavigateEvent" in window) {
-                pl = Eq => {
+                uw = zC => {
                   try {
-                    const gq = null === Eq || void 0 === Eq ? void 0 : Eq.destination;
-                    (null === gq || void 0 === gq ? void 0 : gq.sameDocument) && "string" === typeof gq.url && qq("navigate", gq.url)
-                  } catch (gq) {}
-                }, window.navigation.addEventListener("navigate", pl);
-                const Eq = window.NavigateEvent;
-                Eq && Eq.prototype && "function" === typeof Eq.prototype.intercept && (Gl || (Gl = Eq.prototype.intercept), Eq.prototype.intercept = function(Eq) {
+                    const ZC = null === zC || void 0 === zC ? void 0 : zC.destination;
+                    (null === ZC || void 0 === ZC ? void 0 : ZC.sameDocument) && "string" === typeof ZC.url && CC("navigate", ZC.url)
+                  } catch (ZC) {}
+                }, window.navigation.addEventListener("navigate", uw);
+                const zC = window.NavigateEvent;
+                zC && zC.prototype && "function" === typeof zC.prototype.intercept && (rw || (rw = zC.prototype.intercept), zC.prototype.intercept = function(zC) {
                   try {
-                    const Eq = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      gq = null === this || void 0 === this ? void 0 : this.destination;
-                    Eq && gq && !1 === gq.sameDocument && "string" === typeof gq.url && qq("navigate-intercept", gq.url)
-                  } catch (gq) {}
-                  return Gl.call(this, Eq)
-                }), Ll = !0
-              } else Ml || (Ml = window.history.pushState), window.history.pushState = function() {
-                for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
-                const lq = Ml.apply(window.history, gq);
-                return qq("pushState"), lq
-              }, Tl || (Tl = window.history.replaceState), window.history.replaceState = function() {
-                for (var Eq = arguments.length, gq = new Array(Eq), Yq = 0; Yq < Eq; Yq++) gq[Yq] = arguments[Yq];
-                const lq = Tl.apply(window.history, gq);
-                return qq("replaceState"), lq
-              }, zl = () => qq("popstate"), Sl = () => qq("hashchange"), window.addEventListener("popstate", zl), window.addEventListener("hashchange", Sl), Ll = !0;
-            return Zl
+                    const zC = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      ZC = null === this || void 0 === this ? void 0 : this.destination;
+                    zC && ZC && !1 === ZC.sameDocument && "string" === typeof ZC.url && CC("navigate-intercept", ZC.url)
+                  } catch (ZC) {}
+                  return rw.call(this, zC)
+                }), sw = !0
+              } else Hw || (Hw = window.history.pushState), window.history.pushState = function() {
+                for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+                const wC = Hw.apply(window.history, ZC);
+                return CC("pushState"), wC
+              }, Ew || (Ew = window.history.replaceState), window.history.replaceState = function() {
+                for (var zC = arguments.length, ZC = new Array(zC), QC = 0; QC < zC; QC++) ZC[QC] = arguments[QC];
+                const wC = Ew.apply(window.history, ZC);
+                return CC("replaceState"), wC
+              }, lw = () => CC("popstate"), Xw = () => CC("hashchange"), window.addEventListener("popstate", lw), window.addEventListener("hashchange", Xw), sw = !0;
+            return dw
           }(),
-          Yq = (lq = ["pointerdown", "keydown"], nl || (nl = new Hg), lq.forEach((qq => {
-            if (!bl.has(qq)) {
-              const Eq = () => {
-                nl.notify({
+          QC = (wC = ["pointerdown", "keydown"], hw || (hw = new GZ), wC.forEach((CC => {
+            if (!Kw.has(CC)) {
+              const zC = () => {
+                hw.notify({
                   type: "interaction",
-                  name: qq
+                  name: CC
                 })
               };
-              window.addEventListener(qq, Eq), bl.add(qq), il.set(qq, Eq)
+              window.addEventListener(CC, zC), Kw.add(CC), Yw.set(CC, zC)
             }
-          })), nl);
-        var lq;
-        const Oq = new vl((new Hg).merge(qq, Eq, gq), {
+          })), hw);
+        var wC;
+        const bC = new vw((new GZ).merge(CC, zC, ZC), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: qq => function(qq) {
-            return qq.type === dg
-          }(qq) ? qq.request.requestId : void 0,
-          isOperationEnd: qq => function(qq) {
-            return qq.type === jg
-          }(qq) ? qq.request.requestId : void 0
+          isOperationStart: CC => function(CC) {
+            return CC.type === pZ
+          }(CC) ? CC.request.requestId : void 0,
+          isOperationEnd: CC => function(CC) {
+            return CC.type === PZ
+          }(CC) ? CC.request.requestId : void 0
         });
-        Oq.filter((qq => "tracking-ended" === qq.message)).subscribe((qq => {
-          var Eq, gq;
-          if ((null === (Eq = qq.events) || void 0 === Eq ? void 0 : Eq.some((qq => "url-change" === qq.type))) && (null === (gq = qq.events) || void 0 === gq ? void 0 : gq.some((qq => "dom-mutation" === qq.type)))) {
-            var Yq;
-            const Eq = null === (Yq = qq.events) || void 0 === Yq ? void 0 : Yq.find((qq => "url-change" === qq.type));
-            Vq.api.pushEvent("faro.navigation", {
-              fromUrl: null === Eq || void 0 === Eq ? void 0 : Eq.from,
-              toUrl: null === Eq || void 0 === Eq ? void 0 : Eq.to,
+        bC.filter((CC => "tracking-ended" === CC.message)).subscribe((CC => {
+          var zC, ZC;
+          if ((null === (zC = CC.events) || void 0 === zC ? void 0 : zC.some((CC => "url-change" === CC.type))) && (null === (ZC = CC.events) || void 0 === ZC ? void 0 : ZC.some((CC => "dom-mutation" === CC.type)))) {
+            var QC;
+            const zC = null === (QC = CC.events) || void 0 === QC ? void 0 : QC.find((CC => "url-change" === CC.type));
+            SC.api.pushEvent("faro.navigation", {
+              fromUrl: null === zC || void 0 === zC ? void 0 : zC.from,
+              toUrl: null === zC || void 0 === zC ? void 0 : zC.to,
               sameDocument: String(!0),
-              duration: qq.duration
+              duration: CC.duration
             })
           }
-        })), Yq.subscribe((() => {
-          Oq.startTracking()
+        })), QC.subscribe((() => {
+          bC.startTracking()
         }))
       }
     };
 
-    function kl() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const Eq = [new tl, new Tg, new MY, new Yg, new Sg, new Jl];
-      return !1 !== qq.enablePerformanceInstrumentation && Eq.unshift(new XY), !1 !== qq.enableContentSecurityPolicyInstrumentation && Eq.push(new rl), !1 !== qq.captureConsole && Eq.push(new fg), Eq
+    function aw() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const zC = [new Iw, new EZ, new HQ, new QZ, new XZ, new Tw];
+      return !1 !== CC.enablePerformanceInstrumentation && zC.unshift(new yQ), !1 !== CC.enableContentSecurityPolicyInstrumentation && zC.push(new iw), !1 !== CC.captureConsole && zC.push(new mZ), zC
     }
-    var Rl = gq(6578);
-    let Ul, Fl;
+    var tw = ZC(6694);
+    let Dw, jw;
 
-    function sl() {
-      const qq = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return Ul === qq && Fl || (Fl = new Rl.UAParser(qq).getResult(), Ul = qq), Fl
+    function yw() {
+      const CC = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return Dw === CC && jw || (jw = new tw.UAParser(CC).getResult(), Dw = CC), jw
     }
-    const Xl = () => {
+    const Lw = () => {
         const {
-          browser: qq,
-          os: Eq,
-          ua: gq
-        } = sl(), {
-          name: Yq,
-          version: lq
-        } = qq, {
-          name: Oq,
-          version: mq
-        } = Eq, xq = navigator.language, Aq = gq.includes("Mobi"), cq = function() {
-          if (!Yq || !lq) return;
+          browser: CC,
+          os: zC,
+          ua: ZC
+        } = yw(), {
+          name: QC,
+          version: wC
+        } = CC, {
+          name: bC,
+          version: nC
+        } = zC, fC = navigator.language, oC = ZC.includes("Mobi"), qC = function() {
+          if (!QC || !wC) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== Yq && void 0 !== Yq ? Yq : zg,
-            version: null !== lq && void 0 !== lq ? lq : zg,
-            os: `${null!==Oq&&void 0!==Oq?Oq:zg} ${null!==mq&&void 0!==mq?mq:zg}`,
-            userAgent: null !== gq && void 0 !== gq ? gq : zg,
-            language: null !== xq && void 0 !== xq ? xq : zg,
-            mobile: Aq,
-            brands: null !== cq && void 0 !== cq ? cq : zg,
+            name: null !== QC && void 0 !== QC ? QC : lZ,
+            version: null !== wC && void 0 !== wC ? wC : lZ,
+            os: `${null!==bC&&void 0!==bC?bC:lZ} ${null!==nC&&void 0!==nC?nC:lZ}`,
+            userAgent: null !== ZC && void 0 !== ZC ? ZC : lZ,
+            language: null !== fC && void 0 !== fC ? fC : lZ,
+            mobile: oC,
+            brands: null !== qC && void 0 !== qC ? qC : lZ,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      wl = () => {
+      Uw = () => {
         const {
-          name: qq,
-          version: Eq
-        } = sl().os;
-        if (!qq && !Eq) return {};
-        const gq = {};
-        return qq && (gq.name = qq), Eq && (gq.version = Eq), {
-          os: gq
+          name: CC,
+          version: zC
+        } = yw().os;
+        if (!CC && !zC) return {};
+        const ZC = {};
+        return CC && (ZC.name = CC), zC && (ZC.version = zC), {
+          os: ZC
         }
       };
 
-    function Kl(qq) {
-      var Eq, gq, Yq;
+    function Bw(CC) {
+      var zC, ZC, QC;
       return {
-        id: null !== (Eq = null === (gq = Vq.config) || void 0 === gq || null === (gq = gq.sessionTracking) || void 0 === gq || null === (Yq = gq.generateSessionId) || void 0 === Yq ? void 0 : Yq.call(gq)) && void 0 !== Eq ? Eq : jE(),
-        attributes: qq
+        id: null !== (zC = null === (ZC = SC.config) || void 0 === ZC || null === (ZC = ZC.sessionTracking) || void 0 === ZC || null === (QC = ZC.generateSessionId) || void 0 === QC ? void 0 : QC.call(ZC)) && void 0 !== zC ? zC : Pz(),
+        attributes: CC
       }
     }
-    const Cl = () => ({
+    const Ow = () => ({
       sdk: {
         name: "faro-web",
-        version: gg
+        version: ZZ
       }
     });
-    var Il = class extends qg {
+    var kw = class extends CZ {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let el = function(qq) {
-      return qq.EXCEPTION = "exception", qq.LOG = "log", qq.MEASUREMENT = "measurement", qq.TRACE = "trace", qq.EVENT = "event", qq
+    let Vw = function(CC) {
+      return CC.EXCEPTION = "exception", CC.LOG = "log", CC.MEASUREMENT = "measurement", CC.TRACE = "trace", CC.EVENT = "event", CC
     }({});
-    const Dl = {
+    const Cb = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function qO(qq, Eq) {
-      var gq, Yq;
-      if (void 0 === Eq) return qq;
-      if (void 0 === qq) return {
-        resourceSpans: Eq
+    function zb(CC, zC) {
+      var ZC, QC;
+      if (void 0 === zC) return CC;
+      if (void 0 === CC) return {
+        resourceSpans: zC
       };
-      const lq = null === (gq = qq.resourceSpans) || void 0 === gq ? void 0 : gq[0];
-      if (void 0 === lq) return qq;
-      const Oq = (null === lq || void 0 === lq ? void 0 : lq.scopeSpans) || [],
-        mq = (null === Eq || void 0 === Eq || null === (Yq = Eq[0]) || void 0 === Yq ? void 0 : Yq.scopeSpans) || [];
-      return eE(eE({}, qq), {}, {
-        resourceSpans: [eE(eE({}, lq), {}, {
-          scopeSpans: [...Oq, ...mq]
+      const wC = null === (ZC = CC.resourceSpans) || void 0 === ZC ? void 0 : ZC[0];
+      if (void 0 === wC) return CC;
+      const bC = (null === wC || void 0 === wC ? void 0 : wC.scopeSpans) || [],
+        nC = (null === zC || void 0 === zC || null === (QC = zC[0]) || void 0 === QC ? void 0 : QC.scopeSpans) || [];
+      return kz(kz({}, CC), {}, {
+        resourceSpans: [kz(kz({}, wC), {}, {
+          scopeSpans: [...bC, ...nC]
         })]
       })
     }
 
-    function EO(qq) {
-      let Eq = {
+    function Zb(CC) {
+      let zC = {
         meta: {}
       };
-      return void 0 !== qq[0] && (Eq.meta = qq[0].meta), qq.forEach((qq => {
-        switch (qq.type) {
+      return void 0 !== CC[0] && (zC.meta = CC[0].meta), CC.forEach((CC => {
+        switch (CC.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const gq = Dl[qq.type],
-              Yq = Eq[gq];
-            Eq = eE(eE({}, Eq), {}, {
-              [gq]: void 0 === Yq ? [qq.payload] : [...Yq, qq.payload]
+            const ZC = Cb[CC.type],
+              QC = zC[ZC];
+            zC = kz(kz({}, zC), {}, {
+              [ZC]: void 0 === QC ? [CC.payload] : [...QC, CC.payload]
             });
             break
           }
           case "trace":
-            Eq = eE(eE({}, Eq), {}, {
-              traces: qO(Eq.traces, qq.payload.resourceSpans)
+            zC = kz(kz({}, zC), {}, {
+              traces: zb(zC.traces, CC.payload.resourceSpans)
             })
         }
-      })), Eq
+      })), zC
     }
-    var gO = class extends Il {
+    var Qb = class extends kw {
       constructor() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = qq, this.name = "@grafana/faro-web-sdk:transport-console", this.version = gg
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = CC, this.name = "@grafana/faro-web-sdk:transport-console", this.version = ZZ
       }
-      send(qq) {
-        var Eq;
-        return this.unpatchedConsole[null !== (Eq = this.options.level) && void 0 !== Eq ? Eq : og.DEBUG]("New event", EO([qq]))
+      send(CC) {
+        var zC;
+        return this.unpatchedConsole[null !== (zC = this.options.level) && void 0 !== zC ? zC : RZ.DEBUG]("New event", Zb([CC]))
       }
     };
-    const YO = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      lO = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      OO = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      mO = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      xO = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      AO = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const wb = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      bb = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      nb = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      fb = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      ob = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      qb = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function cO(qq) {
+    function Fb(CC) {
       let {
-        weekday: Eq,
-        day: gq,
-        month: Yq,
-        year: lq,
-        hour: Oq,
-        minute: mq,
-        second: xq
-      } = qq;
-      if (lq < 1900 || gq < 1 || Oq > 23 || mq > 59 || xq > 60) return;
-      const Aq = 60 === xq,
-        cq = new Date(0);
-      return cq.setUTCFullYear(lq, Yq, gq), cq.setUTCHours(Oq, mq, Aq ? 59 : xq, 0), cq.getUTCDay() === Eq && cq.getUTCDate() === gq && cq.getUTCMonth() === Yq && cq.getUTCFullYear() === lq && cq.getUTCHours() === Oq && cq.getUTCMinutes() === mq && cq.getUTCSeconds() === (Aq ? 59 : xq) ? cq.getTime() + (Aq ? 1e3 : 0) : void 0
+        weekday: zC,
+        day: ZC,
+        month: QC,
+        year: wC,
+        hour: bC,
+        minute: nC,
+        second: fC
+      } = CC;
+      if (wC < 1900 || ZC < 1 || bC > 23 || nC > 59 || fC > 60) return;
+      const oC = 60 === fC,
+        qC = new Date(0);
+      return qC.setUTCFullYear(wC, QC, ZC), qC.setUTCHours(bC, nC, oC ? 59 : fC, 0), qC.getUTCDay() === zC && qC.getUTCDate() === ZC && qC.getUTCMonth() === QC && qC.getUTCFullYear() === wC && qC.getUTCHours() === bC && qC.getUTCMinutes() === nC && qC.getUTCSeconds() === (oC ? 59 : fC) ? qC.getTime() + (oC ? 1e3 : 0) : void 0
     }
-    var uO = class {
-      constructor(qq) {
-        this.options = qq, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var Wb = class {
+      constructor(CC) {
+        this.options = CC, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var qq = this;
+        var CC = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const Eq = this.sequence++;
-        let gq = !1;
+        const zC = this.sequence++;
+        let ZC = !1;
         return {
           deliver: function() {
-            var gq = FY((function*(gq) {
-              const Yq = qq.options.getNow();
-              let lq, Oq = 0;
+            var ZC = DQ((function*(ZC) {
+              const QC = CC.options.getNow();
+              let wC, bC = 0;
               for (;;) {
-                var mq, xq, Aq;
-                const cq = qq.options.retry.maxAttempts - Oq,
-                  uq = yield qq.runAttempt((() => gq(cq, qq.unloading)), Oq > 0);
-                if (Oq += uq.attemptsMade, "success" === uq.kind) return {
+                var nC, fC, oC;
+                const qC = CC.options.retry.maxAttempts - bC,
+                  FC = yield CC.runAttempt((() => ZC(qC, CC.unloading)), bC > 0);
+                if (bC += FC.attemptsMade, "success" === FC.kind) return {
                   kind: "success",
-                  attempts: Oq,
-                  elapsedTimeMs: qq.options.getNow() - Yq
+                  attempts: bC,
+                  elapsedTimeMs: CC.options.getNow() - QC
                 };
-                if (lq = uq.failure, "terminal" === uq.kind || qq.unloading) return {
+                if (wC = FC.failure, "terminal" === FC.kind || CC.unloading) return {
                   kind: "terminal",
-                  attempts: Oq,
-                  elapsedTimeMs: qq.options.getNow() - Yq,
-                  failure: lq
+                  attempts: bC,
+                  elapsedTimeMs: CC.options.getNow() - QC,
+                  failure: wC
                 };
-                if (Oq >= qq.options.retry.maxAttempts) return {
+                if (bC >= CC.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: Oq,
-                  elapsedTimeMs: qq.options.getNow() - Yq,
-                  failure: lq,
+                  attempts: bC,
+                  elapsedTimeMs: CC.options.getNow() - QC,
+                  failure: wC,
                   reason: "retries-exhausted"
                 };
-                if (null != uq.retryAfterMs && uq.retryAfterMs > qq.options.retry.maxBackoffMs) return {
+                if (null != FC.retryAfterMs && FC.retryAfterMs > CC.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: Oq,
-                  elapsedTimeMs: qq.options.getNow() - Yq,
-                  failure: lq,
+                  attempts: bC,
+                  elapsedTimeMs: CC.options.getNow() - QC,
+                  failure: wC,
                   reason: "retry-after-too-long"
                 };
-                const Bq = Math.min(null !== (mq = uq.retryAfterMs) && void 0 !== mq ? mq : qq.options.retry.initialBackoffMs * Math.pow(qq.options.retry.backoffMultiplier, Oq - 1), qq.options.retry.maxBackoffMs);
-                if (null === (xq = (Aq = qq.options).onRetry) || void 0 === xq || xq.call(Aq, Bq, Oq + 1), yield qq.waitForTurn(Eq, Bq)) {
-                  const Eq = qq.options.retry.maxAttempts - Oq,
-                    lq = yield qq.runAttempt((() => gq(Eq, !0)));
-                  return Oq += lq.attemptsMade, {
-                    kind: "success" === lq.kind ? "success" : "terminal",
-                    attempts: Oq,
-                    elapsedTimeMs: qq.options.getNow() - Yq,
-                    failure: "success" === lq.kind ? void 0 : lq.failure
+                const WC = Math.min(null !== (nC = FC.retryAfterMs) && void 0 !== nC ? nC : CC.options.retry.initialBackoffMs * Math.pow(CC.options.retry.backoffMultiplier, bC - 1), CC.options.retry.maxBackoffMs);
+                if (null === (fC = (oC = CC.options).onRetry) || void 0 === fC || fC.call(oC, WC, bC + 1), yield CC.waitForTurn(zC, WC)) {
+                  const zC = CC.options.retry.maxAttempts - bC,
+                    wC = yield CC.runAttempt((() => ZC(zC, !0)));
+                  return bC += wC.attemptsMade, {
+                    kind: "success" === wC.kind ? "success" : "terminal",
+                    attempts: bC,
+                    elapsedTimeMs: CC.options.getNow() - QC,
+                    failure: "success" === wC.kind ? void 0 : wC.failure
                   }
                 }
               }
             }));
-            return function(qq) {
-              return gq.apply(this, arguments)
+            return function(CC) {
+              return ZC.apply(this, arguments)
             }
           }(),
           release: () => {
-            gq || (gq = !0, this.admitted--)
+            ZC || (ZC = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const qq = this.waiting.splice(0);
+        const CC = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const Eq of qq) Eq.resolve(!0);
+        for (const zC of CC) zC.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((gq, Yq) => {
+      runAttempt(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((ZC, QC) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const Eq = () => {
+              const zC = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              qq().then((qq => {
-                Eq(), gq(qq)
-              }), (qq => {
-                Eq(), Yq(qq)
+              CC().then((CC => {
+                zC(), ZC(CC)
+              }), (CC => {
+                zC(), QC(CC)
               }))
             },
-            isRedelivery: Eq
+            isRedelivery: zC
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const qq = this.options.getNow(),
-            Eq = this.attemptQueue.findIndex((Eq => {
+          const CC = this.options.getNow(),
+            zC = this.attemptQueue.findIndex((zC => {
               let {
-                isRedelivery: gq
-              } = Eq;
-              return this.unloading || !gq || qq >= this.nextSendAt
+                isRedelivery: ZC
+              } = zC;
+              return this.unloading || !ZC || CC >= this.nextSendAt
             }));
-          if (Eq < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (zC < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - qq)));
-          const [gq] = this.attemptQueue.splice(Eq, 1);
-          gq.isRedelivery && !this.unloading && (this.nextSendAt = qq + 1), gq.run()
+          }), Math.max(0, this.nextSendAt - CC)));
+          const [ZC] = this.attemptQueue.splice(zC, 1);
+          ZC.isRedelivery && !this.unloading && (this.nextSendAt = CC + 1), ZC.run()
         }
       }
-      waitForTurn(qq, Eq) {
-        const gq = Math.min(Eq * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((Eq => {
+      waitForTurn(CC, zC) {
+        const ZC = Math.min(zC * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((zC => {
           this.waiting.push({
-            sequence: qq,
-            readyAt: this.options.getNow() + gq,
-            resolve: Eq
-          }), this.waiting.sort(((qq, Eq) => qq.readyAt === Eq.readyAt ? qq.sequence - Eq.sequence : qq.readyAt - Eq.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: CC,
+            readyAt: this.options.getNow() + ZC,
+            resolve: zC
+          }), this.waiting.sort(((CC, zC) => CC.readyAt === zC.readyAt ? CC.sequence - zC.sequence : CC.readyAt - zC.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const qq = this.waiting[0],
-          Eq = qq.readyAt;
+        const CC = this.waiting[0],
+          zC = CC.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const Eq = this.waiting.indexOf(qq);
-          Eq >= 0 && this.waiting.splice(Eq, 1), qq.resolve(!1), this.scheduleNext()
-        }), Math.max(0, Eq - this.options.getNow()))
+          const zC = this.waiting.indexOf(CC);
+          zC >= 0 && this.waiting.splice(zC, 1), CC.resolve(!1), this.scheduleNext()
+        }), Math.max(0, zC - this.options.getNow()))
       }
     };
 
-    function BO(qq, Eq) {
-      if (null == qq) return {};
-      var gq, Yq, lq = function(qq, Eq) {
-        if (null == qq) return {};
-        var gq = {};
-        for (var Yq in qq)
-          if ({}.hasOwnProperty.call(qq, Yq)) {
-            if (Eq.includes(Yq)) continue;
-            gq[Yq] = qq[Yq]
-          } return gq
-      }(qq, Eq);
+    function Nb(CC, zC) {
+      if (null == CC) return {};
+      var ZC, QC, wC = function(CC, zC) {
+        if (null == CC) return {};
+        var ZC = {};
+        for (var QC in CC)
+          if ({}.hasOwnProperty.call(CC, QC)) {
+            if (zC.includes(QC)) continue;
+            ZC[QC] = CC[QC]
+          } return ZC
+      }(CC, zC);
       if (Object.getOwnPropertySymbols) {
-        var Oq = Object.getOwnPropertySymbols(qq);
-        for (Yq = 0; Yq < Oq.length; Yq++) gq = Oq[Yq], Eq.includes(gq) || {}.propertyIsEnumerable.call(qq, gq) && (lq[gq] = qq[gq])
+        var bC = Object.getOwnPropertySymbols(CC);
+        for (QC = 0; QC < bC.length; QC++) ZC = bC[QC], zC.includes(ZC) || {}.propertyIsEnumerable.call(CC, ZC) && (wC[ZC] = CC[ZC])
       }
-      return lq
+      return wC
     }
 
-    function WO(qq) {
+    function Mb(CC) {
       const {
-        size: Eq,
-        concurrency: gq
-      } = qq, Yq = [];
-      let lq = 0;
-      const Oq = () => {
-        if (lq < gq && Yq.length) {
+        size: zC,
+        concurrency: ZC
+      } = CC, QC = [];
+      let wC = 0;
+      const bC = () => {
+        if (wC < ZC && QC.length) {
           const {
-            producer: qq,
-            resolve: Eq,
-            reject: gq
-          } = Yq.shift();
-          lq++, qq().then((qq => {
-            lq--, Oq(), Eq(qq)
-          }), (qq => {
-            lq--, Oq(), gq(qq)
+            producer: CC,
+            resolve: zC,
+            reject: ZC
+          } = QC.shift();
+          wC++, CC().then((CC => {
+            wC--, bC(), zC(CC)
+          }), (CC => {
+            wC--, bC(), ZC(CC)
           }))
         }
       };
       return {
-        add: qq => {
-          if (Yq.length + lq >= Eq) throw new Error("Task buffer full");
-          return new Promise(((Eq, gq) => {
-            Yq.push({
-              producer: qq,
-              resolve: Eq,
-              reject: gq
-            }), Oq()
+        add: CC => {
+          if (QC.length + wC >= zC) throw new Error("Task buffer full");
+          return new Promise(((zC, ZC) => {
+            QC.push({
+              producer: CC,
+              resolve: zC,
+              reject: ZC
+            }), bC()
           }))
         }
       }
     }
-    const NO = ["headers"],
-      aO = ["keepalive", "signal"],
-      VO = new Set([408, 425, 429, 500, 502, 503, 504]),
-      dO = new Set([429, 503]);
-    let jO = 0,
-      HO = 0;
-    var oO = class extends Error {};
-    var PO = class extends Il {
-      constructor(qq) {
-        var Eq, gq, Yq, lq, Oq, mq, xq, Aq, cq, uq, Bq, Wq, Nq, aq, Vq, dq, jq;
-        super(), this.options = qq, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = gg, this.pendingCustomSends = 0, this.getNow = null !== (Eq = qq.getNow) && void 0 !== Eq ? Eq : Date.now, this.requestTimeoutMs = null !== (gq = qq.requestTimeoutMs) && void 0 !== gq ? gq : 1e4, this.compressionEnabled = null !== (Yq = qq.requestCompression) && void 0 !== Yq && Yq && "undefined" !== typeof CompressionStream, qq.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new uO({
-          bufferSize: null !== (lq = qq.bufferSize) && void 0 !== lq ? lq : 30,
-          concurrency: null !== (Oq = qq.concurrency) && void 0 !== Oq ? Oq : 5,
+    const gb = ["headers"],
+      Sb = ["keepalive", "signal"],
+      pb = new Set([408, 425, 429, 500, 502, 503, 504]),
+      Pb = new Set([429, 503]);
+    let Gb = 0,
+      Rb = 0;
+    var Ab = class extends Error {};
+    var xb = class extends kw {
+      constructor(CC) {
+        var zC, ZC, QC, wC, bC, nC, fC, oC, qC, FC, WC, NC, MC, gC, SC, pC, PC;
+        super(), this.options = CC, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = ZZ, this.pendingCustomSends = 0, this.getNow = null !== (zC = CC.getNow) && void 0 !== zC ? zC : Date.now, this.requestTimeoutMs = null !== (ZC = CC.requestTimeoutMs) && void 0 !== ZC ? ZC : 1e4, this.compressionEnabled = null !== (QC = CC.requestCompression) && void 0 !== QC && QC && "undefined" !== typeof CompressionStream, CC.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new Wb({
+          bufferSize: null !== (wC = CC.bufferSize) && void 0 !== wC ? wC : 30,
+          concurrency: null !== (bC = CC.concurrency) && void 0 !== bC ? bC : 5,
           retry: {
-            maxAttempts: null !== (mq = null === (xq = qq.retry) || void 0 === xq ? void 0 : xq.maxAttempts) && void 0 !== mq ? mq : 3,
-            initialBackoffMs: null !== (Aq = null !== (cq = null === (uq = qq.retry) || void 0 === uq ? void 0 : uq.initialBackoffMs) && void 0 !== cq ? cq : qq.defaultRateLimitBackoffMs) && void 0 !== Aq ? Aq : 1e3,
-            maxBackoffMs: null !== (Bq = null === (Wq = qq.retry) || void 0 === Wq ? void 0 : Wq.maxBackoffMs) && void 0 !== Bq ? Bq : 3e4,
-            backoffMultiplier: null !== (Nq = null === (aq = qq.retry) || void 0 === aq ? void 0 : aq.backoffMultiplier) && void 0 !== Nq ? Nq : 2
+            maxAttempts: null !== (nC = null === (fC = CC.retry) || void 0 === fC ? void 0 : fC.maxAttempts) && void 0 !== nC ? nC : 3,
+            initialBackoffMs: null !== (oC = null !== (qC = null === (FC = CC.retry) || void 0 === FC ? void 0 : FC.initialBackoffMs) && void 0 !== qC ? qC : CC.defaultRateLimitBackoffMs) && void 0 !== oC ? oC : 1e3,
+            maxBackoffMs: null !== (WC = null === (NC = CC.retry) || void 0 === NC ? void 0 : NC.maxBackoffMs) && void 0 !== WC ? WC : 3e4,
+            backoffMultiplier: null !== (MC = null === (gC = CC.retry) || void 0 === gC ? void 0 : gC.backoffMultiplier) && void 0 !== MC ? MC : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (Vq = qq.getRandom) && void 0 !== Vq ? Vq : Math.random,
-          onRetry: (qq, Eq) => {
-            this.logDebug(`Retrying failed request after ${qq}ms. Attempt ${Eq}.`)
+          getRandom: null !== (SC = CC.getRandom) && void 0 !== SC ? SC : Math.random,
+          onRetry: (CC, zC) => {
+            this.logDebug(`Retrying failed request after ${CC}ms. Attempt ${zC}.`)
           }
-        }), this.customPromiseBuffer = WO({
-          size: null !== (dq = qq.bufferSize) && void 0 !== dq ? dq : 30,
-          concurrency: null !== (jq = qq.concurrency) && void 0 !== jq ? jq : 5
+        }), this.customPromiseBuffer = Mb({
+          size: null !== (pC = CC.bufferSize) && void 0 !== pC ? pC : 30,
+          concurrency: null !== (PC = CC.concurrency) && void 0 !== PC ? PC : 5
         }), this.defaultPromiseBuffer = {
-          add: qq => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(qq);
-            const Eq = this.deliveryQueue.reserve();
-            if (!Eq) throw new Error("Task buffer full");
-            return this.runBufferedTask(Eq, qq)
+          add: CC => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(CC);
+            const zC = this.deliveryQueue.reserve();
+            if (!zC) throw new Error("Task buffer full");
+            return this.runBufferedTask(zC, CC)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (qq => {
-          qq.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (CC => {
+          CC.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(qq) {
-        var Eq = this;
-        return FY((function*() {
-          const gq = Eq.promiseBuffer;
-          if (gq !== Eq.defaultPromiseBuffer || gq.add !== Eq.defaultBufferAdd) {
-            Eq.pendingCustomSends++;
+      send(CC) {
+        var zC = this;
+        return DQ((function*() {
+          const ZC = zC.promiseBuffer;
+          if (ZC !== zC.defaultPromiseBuffer || ZC.add !== zC.defaultBufferAdd) {
+            zC.pendingCustomSends++;
             try {
-              yield gq.add((() => Eq.deliver(qq)))
-            } catch (Yq) {
-              Eq.logError("Permanent delivery failure", {
-                error: Yq,
+              yield ZC.add((() => zC.deliver(CC)))
+            } catch (QC) {
+              zC.logError("Permanent delivery failure", {
+                error: QC,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              Eq.pendingCustomSends--
+              zC.pendingCustomSends--
             }
-          } else yield Eq.deliver(qq)
+          } else yield zC.deliver(CC)
         }))()
       }
-      runBufferedTask(qq, Eq) {
-        return FY((function*() {
-          let gq;
+      runBufferedTask(CC, zC) {
+        return DQ((function*() {
+          let ZC;
           try {
-            return yield qq.deliver(FY((function*() {
-              return gq = yield Eq(), {
+            return yield CC.deliver(DQ((function*() {
+              return ZC = yield zC(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), gq
+            }))), ZC
           } finally {
-            qq.release()
+            CC.release()
           }
         }))()
       }
-      deliver(qq) {
-        var Eq = this;
-        return FY((function*() {
-          const gq = Eq.deliveryQueue.reserve();
-          if (gq) try {
-            const Yq = yield Eq.prepareRequest(qq), lq = yield gq.deliver(((qq, gq) => Eq.performAttempt(Yq, qq, gq)));
-            "terminal" === lq.kind && Eq.logError("retries-exhausted" === lq.reason ? "Delivery retries exhausted" : "Permanent delivery failure", uE(uE({}, lq.failure), {}, {
-              reason: lq.reason,
-              attempts: lq.attempts,
-              elapsedTimeMs: lq.elapsedTimeMs
+      deliver(CC) {
+        var zC = this;
+        return DQ((function*() {
+          const ZC = zC.deliveryQueue.reserve();
+          if (ZC) try {
+            const QC = yield zC.prepareRequest(CC), wC = yield ZC.deliver(((CC, ZC) => zC.performAttempt(QC, CC, ZC)));
+            "terminal" === wC.kind && zC.logError("retries-exhausted" === wC.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Fz(Fz({}, wC.failure), {}, {
+              reason: wC.reason,
+              attempts: wC.attempts,
+              elapsedTimeMs: wC.elapsedTimeMs
             }))
-          } catch (Yq) {
-            Eq.logError("Permanent delivery failure", {
-              error: Yq,
+          } catch (QC) {
+            zC.logError("Permanent delivery failure", {
+              error: QC,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            gq.release()
-          } else Eq.logError("Permanent delivery failure", {
+            ZC.release()
+          } else zC.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var qq;
-        return [this.options.url].concat(null !== (qq = this.config.ignoreUrls) && void 0 !== qq ? qq : [])
+        var CC;
+        return [this.options.url].concat(null !== (CC = this.config.ignoreUrls) && void 0 !== CC ? CC : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(qq) {
-        var Eq = this;
-        return FY((function*() {
-          var gq, Yq;
-          const lq = EO(qq),
-            Oq = null === (gq = lq.meta.session) || void 0 === gq ? void 0 : gq.id,
-            mq = JSON.stringify(lq),
-            xq = null !== (Yq = Eq.options.requestOptions) && void 0 !== Yq ? Yq : {},
+      prepareRequest(CC) {
+        var zC = this;
+        return DQ((function*() {
+          var ZC, QC;
+          const wC = Zb(CC),
+            bC = null === (ZC = wC.meta.session) || void 0 === ZC ? void 0 : ZC.id,
+            nC = JSON.stringify(wC),
+            fC = null !== (QC = zC.options.requestOptions) && void 0 !== QC ? QC : {},
             {
-              headers: Aq = {}
-            } = xq,
-            cq = BO(xq, NO),
+              headers: oC = {}
+            } = fC,
+            qC = Nb(fC, gb),
             {
-              keepalive: uq,
-              signal: Bq
-            } = cq,
-            Wq = BO(cq, aO),
-            Nq = {};
-          for (const [qq, Eq] of Object.entries(Aq)) Nq[qq] = "function" === typeof Eq ? yield Eq(): Eq;
-          let aq = mq,
-            Vq = function(qq) {
-              return "undefined" === typeof TextEncoder ? qq.length : (new TextEncoder).encode(qq).byteLength
-            }(mq);
-          const dq = {};
-          return Eq.compressionEnabled && (aq = yield Eq.compress(mq), Vq = aq.size, dq["Content-Encoding"] = "gzip"), {
-            bodySize: Vq,
-            sessionId: Oq,
-            requestInit: uE({
+              keepalive: FC,
+              signal: WC
+            } = qC,
+            NC = Nb(qC, Sb),
+            MC = {};
+          for (const [CC, zC] of Object.entries(oC)) MC[CC] = "function" === typeof zC ? yield zC(): zC;
+          let gC = nC,
+            SC = function(CC) {
+              return "undefined" === typeof TextEncoder ? CC.length : (new TextEncoder).encode(CC).byteLength
+            }(nC);
+          const pC = {};
+          return zC.compressionEnabled && (gC = yield zC.compress(nC), SC = gC.size, pC["Content-Encoding"] = "gzip"), {
+            bodySize: SC,
+            sessionId: bC,
+            requestInit: Fz({
               method: "POST",
-              headers: uE(uE(uE(uE(uE({
+              headers: Fz(Fz(Fz(Fz(Fz({
                 "Content-Type": "application/json"
-              }, dq), Nq), Eq.options.apiKey ? {
-                "x-api-key": Eq.options.apiKey
-              } : {}), Oq ? {
-                "x-faro-session-id": Oq
+              }, pC), MC), zC.options.apiKey ? {
+                "x-api-key": zC.options.apiKey
+              } : {}), bC ? {
+                "x-faro-session-id": bC
               } : {}), {}, {
-                "Idempotency-Key": jE(20)
+                "Idempotency-Key": Pz(20)
               }),
-              body: aq
-            }, Wq)
+              body: gC
+            }, NC)
           }
         }))()
       }
-      performAttempt(qq, Eq, gq) {
-        var Yq = this;
-        return FY((function*() {
-          var lq;
-          const Oq = null === (lq = Yq.options.requestOptions) || void 0 === lq ? void 0 : lq.signal;
-          if (null === Oq || void 0 === Oq ? void 0 : Oq.aborted) return {
+      performAttempt(CC, zC, ZC) {
+        var QC = this;
+        return DQ((function*() {
+          var wC;
+          const bC = null === (wC = QC.options.requestOptions) || void 0 === wC ? void 0 : wC.signal;
+          if (null === bC || void 0 === bC ? void 0 : bC.aborted) return {
             kind: "terminal",
             failure: {
-              error: Oq.reason
+              error: bC.reason
             },
             attemptsMade: 0
           };
-          let mq = 0;
+          let nC = 0;
           try {
-            var xq;
-            const lq = yield Yq.fetchWithKeepaliveFallback(qq.requestInit, qq.bodySize, !!gq || (null === (xq = Yq.options.requestOptions) || void 0 === xq ? void 0 : xq.keepalive), Eq, (() => mq++));
-            if (Yq.handleResponse(lq, qq.sessionId), lq.status >= 200 && lq.status < 300) return {
+            var fC;
+            const wC = yield QC.fetchWithKeepaliveFallback(CC.requestInit, CC.bodySize, !!ZC || (null === (fC = QC.options.requestOptions) || void 0 === fC ? void 0 : fC.keepalive), zC, (() => nC++));
+            if (QC.handleResponse(wC, CC.sessionId), wC.status >= 200 && wC.status < 300) return {
               kind: "success",
-              attemptsMade: mq
+              attemptsMade: nC
             };
-            const Oq = {
-              status: lq.status
+            const bC = {
+              status: wC.status
             };
-            return !VO.has(lq.status) || gq ? {
+            return !pb.has(wC.status) || ZC ? {
               kind: "terminal",
-              failure: Oq,
-              attemptsMade: mq
+              failure: bC,
+              attemptsMade: nC
             } : {
               kind: "retry",
-              failure: Oq,
-              attemptsMade: mq,
-              retryAfterMs: dO.has(lq.status) ? Yq.getRetryAfterDelayMs(lq) : void 0
+              failure: bC,
+              attemptsMade: nC,
+              retryAfterMs: Pb.has(wC.status) ? QC.getRetryAfterDelayMs(wC) : void 0
             }
-          } catch (Aq) {
-            const qq = {
-              error: Aq
+          } catch (oC) {
+            const CC = {
+              error: oC
             };
-            return (null === Oq || void 0 === Oq ? void 0 : Oq.aborted) || !Yq.isFetchNetworkError(Aq) || gq ? {
+            return (null === bC || void 0 === bC ? void 0 : bC.aborted) || !QC.isFetchNetworkError(oC) || ZC ? {
               kind: "terminal",
-              failure: qq,
-              attemptsMade: mq
+              failure: CC,
+              attemptsMade: nC
             } : {
               kind: "retry",
-              failure: qq,
-              attemptsMade: mq
+              failure: CC,
+              attemptsMade: nC
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(qq, Eq, gq, Yq, lq) {
-        var Oq = this;
-        return FY((function*() {
-          const mq = Oq.getNow(),
-            xq = Oq.reserveKeepalive(Eq, gq);
+      fetchWithKeepaliveFallback(CC, zC, ZC, QC, wC) {
+        var bC = this;
+        return DQ((function*() {
+          const nC = bC.getNow(),
+            fC = bC.reserveKeepalive(zC, ZC);
           try {
-            return yield Oq.fetchWithTimeout(uE(uE({}, qq), {}, {
-              keepalive: xq.keepalive
-            }), Oq.requestTimeoutMs, lq)
-          } catch (cq) {
-            var Aq;
-            if (xq.keepalive && Yq > 1 && Oq.isFetchNetworkError(cq) && !(cq instanceof oO) && !(null === (Aq = Oq.options.requestOptions) || void 0 === Aq || null === (Aq = Aq.signal) || void 0 === Aq ? void 0 : Aq.aborted)) {
-              Oq.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const Eq = Oq.requestTimeoutMs - (Oq.getNow() - mq);
-              return Oq.fetchWithTimeout(uE(uE({}, qq), {}, {
+            return yield bC.fetchWithTimeout(Fz(Fz({}, CC), {}, {
+              keepalive: fC.keepalive
+            }), bC.requestTimeoutMs, wC)
+          } catch (qC) {
+            var oC;
+            if (fC.keepalive && QC > 1 && bC.isFetchNetworkError(qC) && !(qC instanceof Ab) && !(null === (oC = bC.options.requestOptions) || void 0 === oC || null === (oC = oC.signal) || void 0 === oC ? void 0 : oC.aborted)) {
+              bC.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const zC = bC.requestTimeoutMs - (bC.getNow() - nC);
+              return bC.fetchWithTimeout(Fz(Fz({}, CC), {}, {
                 keepalive: !1
-              }), Eq, lq)
+              }), zC, wC)
             }
-            throw cq
+            throw qC
           } finally {
-            xq.release()
+            fC.release()
           }
         }))()
       }
-      fetchWithTimeout(qq, Eq, gq) {
-        var Yq = this;
-        return FY((function*() {
-          var lq;
-          const Oq = null === (lq = Yq.options.requestOptions) || void 0 === lq ? void 0 : lq.signal;
-          if (Yq.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return gq(), fetch(Yq.options.url, uE(uE({}, qq), {}, {
-            signal: Oq
+      fetchWithTimeout(CC, zC, ZC) {
+        var QC = this;
+        return DQ((function*() {
+          var wC;
+          const bC = null === (wC = QC.options.requestOptions) || void 0 === wC ? void 0 : wC.signal;
+          if (QC.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return ZC(), fetch(QC.options.url, Fz(Fz({}, CC), {}, {
+            signal: bC
           }));
-          if (Eq <= 0) throw new oO("Request timed out");
-          const mq = new AbortController,
-            xq = () => mq.abort(null === Oq || void 0 === Oq ? void 0 : Oq.reason);
-          null === Oq || void 0 === Oq || Oq.addEventListener("abort", xq, {
+          if (zC <= 0) throw new Ab("Request timed out");
+          const nC = new AbortController,
+            fC = () => nC.abort(null === bC || void 0 === bC ? void 0 : bC.reason);
+          null === bC || void 0 === bC || bC.addEventListener("abort", fC, {
             once: !0
           });
-          let Aq = !1;
-          const cq = setTimeout((() => {
-            Aq = !0, mq.abort()
-          }), Eq);
+          let oC = !1;
+          const qC = setTimeout((() => {
+            oC = !0, nC.abort()
+          }), zC);
           try {
-            return gq(), yield fetch(Yq.options.url, uE(uE({}, qq), {}, {
-              signal: mq.signal
+            return ZC(), yield fetch(QC.options.url, Fz(Fz({}, CC), {}, {
+              signal: nC.signal
             }))
-          } catch (uq) {
-            if (Aq && !(null === Oq || void 0 === Oq ? void 0 : Oq.aborted)) throw new oO("Request timed out");
-            throw uq
+          } catch (FC) {
+            if (oC && !(null === bC || void 0 === bC ? void 0 : bC.aborted)) throw new Ab("Request timed out");
+            throw FC
           } finally {
-            clearTimeout(cq), null === Oq || void 0 === Oq || Oq.removeEventListener("abort", xq)
+            clearTimeout(qC), null === bC || void 0 === bC || bC.removeEventListener("abort", fC)
           }
         }))()
       }
-      getRetryAfterDelayMs(qq) {
-        const Eq = qq.headers.get("Retry-After");
-        if (!Eq) return;
-        if (/^\d+$/.test(Eq)) {
-          const qq = 1e3 * Number(Eq);
-          return Number.isFinite(qq) ? qq : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(CC) {
+        const zC = CC.headers.get("Retry-After");
+        if (!zC) return;
+        if (/^\d+$/.test(zC)) {
+          const CC = 1e3 * Number(zC);
+          return Number.isFinite(CC) ? CC : Number.POSITIVE_INFINITY
         }
-        const gq = this.getNow(),
-          Yq = function(qq, Eq) {
-            const gq = YO.exec(qq);
-            if (gq) {
-              const [, qq, Eq, Yq, lq, Oq, mq, xq] = gq;
-              return cO({
-                weekday: mO.indexOf(qq),
-                day: Number(Eq),
-                month: AO.indexOf(Yq),
-                year: Number(lq),
-                hour: Number(Oq),
-                minute: Number(mq),
-                second: Number(xq)
+        const ZC = this.getNow(),
+          QC = function(CC, zC) {
+            const ZC = wb.exec(CC);
+            if (ZC) {
+              const [, CC, zC, QC, wC, bC, nC, fC] = ZC;
+              return Fb({
+                weekday: fb.indexOf(CC),
+                day: Number(zC),
+                month: qb.indexOf(QC),
+                year: Number(wC),
+                hour: Number(bC),
+                minute: Number(nC),
+                second: Number(fC)
               })
             }
-            const Yq = lO.exec(qq);
-            if (Yq) {
-              const [, qq, gq, mq, xq, Aq, cq, uq] = Yq, Bq = new Date(Eq);
-              if (Number.isNaN(Bq.getTime())) return;
-              const Wq = Bq.getUTCFullYear();
-              let Nq = 100 * Math.floor(Wq / 100) + Number(xq);
-              Nq < Wq && (Nq += 100);
-              const aq = AO.indexOf(mq),
-                Vq = {
-                  month: aq,
-                  day: Number(gq),
-                  hour: Number(Aq),
-                  minute: Number(cq),
-                  second: Number(uq),
+            const QC = bb.exec(CC);
+            if (QC) {
+              const [, CC, ZC, nC, fC, oC, qC, FC] = QC, WC = new Date(zC);
+              if (Number.isNaN(WC.getTime())) return;
+              const NC = WC.getUTCFullYear();
+              let MC = 100 * Math.floor(NC / 100) + Number(fC);
+              MC < NC && (MC += 100);
+              const gC = qb.indexOf(nC),
+                SC = {
+                  month: gC,
+                  day: Number(ZC),
+                  hour: Number(oC),
+                  minute: Number(qC),
+                  second: Number(FC),
                   millisecond: 0
                 },
-                dq = {
-                  month: Bq.getUTCMonth(),
-                  day: Bq.getUTCDate(),
-                  hour: Bq.getUTCHours(),
-                  minute: Bq.getUTCMinutes(),
-                  second: Bq.getUTCSeconds(),
-                  millisecond: Bq.getUTCMilliseconds()
+                pC = {
+                  month: WC.getUTCMonth(),
+                  day: WC.getUTCDate(),
+                  hour: WC.getUTCHours(),
+                  minute: WC.getUTCMinutes(),
+                  second: WC.getUTCSeconds(),
+                  millisecond: WC.getUTCMilliseconds()
                 };
-              return (Nq > Wq + 50 || Nq === Wq + 50 && (Oq = dq, ((lq = Vq).month - Oq.month || lq.day - Oq.day || lq.hour - Oq.hour || lq.minute - Oq.minute || lq.second - Oq.second || lq.millisecond - Oq.millisecond) > 0)) && (Nq -= 100), cO({
-                weekday: xO.indexOf(qq),
-                day: Number(gq),
-                month: aq,
-                year: Nq,
-                hour: Number(Aq),
-                minute: Number(cq),
-                second: Number(uq)
+              return (MC > NC + 50 || MC === NC + 50 && (bC = pC, ((wC = SC).month - bC.month || wC.day - bC.day || wC.hour - bC.hour || wC.minute - bC.minute || wC.second - bC.second || wC.millisecond - bC.millisecond) > 0)) && (MC -= 100), Fb({
+                weekday: ob.indexOf(CC),
+                day: Number(ZC),
+                month: gC,
+                year: MC,
+                hour: Number(oC),
+                minute: Number(qC),
+                second: Number(FC)
               })
             }
-            var lq, Oq;
-            const mq = OO.exec(qq);
-            if (!mq) return;
-            const [, xq, Aq, cq, uq, Bq, Wq, Nq, aq] = mq;
-            return cO({
-              weekday: mO.indexOf(xq),
-              day: Number(null !== cq && void 0 !== cq ? cq : uq),
-              month: AO.indexOf(Aq),
-              year: Number(aq),
-              hour: Number(Bq),
-              minute: Number(Wq),
-              second: Number(Nq)
+            var wC, bC;
+            const nC = nb.exec(CC);
+            if (!nC) return;
+            const [, fC, oC, qC, FC, WC, NC, MC, gC] = nC;
+            return Fb({
+              weekday: fb.indexOf(fC),
+              day: Number(null !== qC && void 0 !== qC ? qC : FC),
+              month: qb.indexOf(oC),
+              year: Number(gC),
+              hour: Number(WC),
+              minute: Number(NC),
+              second: Number(MC)
             })
-          }(Eq, gq);
-        return null == Yq ? void 0 : Math.max(0, Yq - gq)
+          }(zC, ZC);
+        return null == QC ? void 0 : Math.max(0, QC - ZC)
       }
-      reserveKeepalive(qq, Eq) {
-        if (!1 === Eq || qq > 6e4 || jO + qq > 6e4 || HO >= 9) return {
+      reserveKeepalive(CC, zC) {
+        if (!1 === zC || CC > 6e4 || Gb + CC > 6e4 || Rb >= 9) return {
           keepalive: !1,
-          release: UE
+          release: tz
         };
-        jO += qq, HO++;
-        let gq = !1;
+        Gb += CC, Rb++;
+        let ZC = !1;
         return {
           keepalive: !0,
           release: () => {
-            gq || (gq = !0, jO -= qq, HO--)
+            ZC || (ZC = !0, Gb -= CC, Rb--)
           }
         }
       }
-      handleResponse(qq, Eq) {
-        202 === qq.status && "invalid" === qq.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), Eq), qq.text().catch(UE)
+      handleResponse(CC, zC) {
+        202 === CC.status && "invalid" === CC.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), zC), CC.text().catch(tz)
       }
-      isFetchNetworkError(qq) {
-        return qq instanceof TypeError || qq instanceof oO || qq instanceof DOMException && "AbortError" === qq.name
+      isFetchNetworkError(CC) {
+        return CC instanceof TypeError || CC instanceof Ab || CC instanceof DOMException && "AbortError" === CC.name
       }
-      compress(qq) {
-        return FY((function*() {
-          const Eq = [],
-            gq = new ReadableStream({
-              start(Eq) {
-                Eq.enqueue((new TextEncoder).encode(qq)), Eq.close()
+      compress(CC) {
+        return DQ((function*() {
+          const zC = [],
+            ZC = new ReadableStream({
+              start(zC) {
+                zC.enqueue((new TextEncoder).encode(CC)), zC.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: qq,
-              value: Yq
-            } = yield gq.read();
-            if (qq) return new Blob(Eq);
-            Eq.push(Yq)
+              done: CC,
+              value: QC
+            } = yield ZC.read();
+            if (CC) return new Blob(zC);
+            zC.push(QC)
           }
         }))()
       }
-      extendFaroSession(qq, Eq, gq) {
-        var Yq, lq;
-        const Oq = qq.sessionTracking;
-        if (!(null === Oq || void 0 === Oq ? void 0 : Oq.enabled)) return void Eq("Session expired.");
+      extendFaroSession(CC, zC, ZC) {
+        var QC, wC;
+        const bC = CC.sessionTracking;
+        if (!(null === bC || void 0 === bC ? void 0 : bC.enabled)) return void zC("Session expired.");
         const {
-          fetchUserSession: mq,
-          storeUserSession: xq
-        } = RE(Oq), Aq = null === (Yq = this.metas.value.session) || void 0 === Yq ? void 0 : Yq.id, cq = null === (lq = mq()) || void 0 === lq ? void 0 : lq.sessionId;
-        gq && gq === Aq && gq === cq ? (iE({
-          fetchUserSession: mq,
-          storeUserSession: xq
+          fetchUserSession: nC,
+          storeUserSession: fC
+        } = az(bC), oC = null === (QC = this.metas.value.session) || void 0 === QC ? void 0 : QC.id, qC = null === (wC = nC()) || void 0 === wC ? void 0 : wC.sessionId;
+        ZC && ZC === oC && ZC === qC ? (Yz({
+          fetchUserSession: nC,
+          storeUserSession: fC
         })({
           forceSessionExtend: !0
-        }), Eq("Session expired; created new session.")) : Eq("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), zC("Session expired; created new session.")) : zC("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const QO = () => {
-      const qq = window.k6;
+    const Jb = () => {
+      const CC = window.k6;
       return {
-        k6: uE({
+        k6: Fz({
           isK6Browser: !0
-        }, (null === qq || void 0 === qq ? void 0 : qq.testRunId) && {
-          testRunId: null === qq || void 0 === qq ? void 0 : qq.testRunId
+        }, (null === CC || void 0 === CC ? void 0 : CC.testRunId) && {
+          testRunId: null === CC || void 0 === CC ? void 0 : CC.testRunId
         })
       }
     };
-    let yO, tO;
+    let Ib, ib;
 
-    function rO() {
+    function vb() {
       let {
-        generatePageId: qq,
-        initialPageMeta: Eq
+        generatePageId: CC,
+        initialPageMeta: zC
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const gq = location.href;
-        return bq(qq) && yO !== gq && (yO = gq, tO = qq(location)), {
-          page: uE(uE({
-            url: gq
-          }, tO ? {
-            id: tO
-          } : {}), Eq)
+        const ZC = location.href;
+        return KC(CC) && Ib !== ZC && (Ib = ZC, ib = CC(location)), {
+          page: Fz(Fz({
+            url: ZC
+          }, ib ? {
+            id: ib
+          } : {}), zC)
         }
       }
     }
 
-    function vO() {
-      let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : DE,
-        Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const gq = sE;
-      return Eq > 0 && (gq.error = Eq >= 1 ? function() {
-        for (var Eq = arguments.length, Yq = new Array(Eq), lq = 0; lq < Eq; lq++) Yq[lq] = arguments[lq];
-        qq.error(`${gq.prefix}\n`, ...Yq)
-      } : UE, gq.warn = Eq >= 2 ? function() {
-        for (var Eq = arguments.length, Yq = new Array(Eq), lq = 0; lq < Eq; lq++) Yq[lq] = arguments[lq];
-        qq.warn(`${gq.prefix}\n`, ...Yq)
-      } : UE, gq.info = Eq >= 3 ? function() {
-        for (var Eq = arguments.length, Yq = new Array(Eq), lq = 0; lq < Eq; lq++) Yq[lq] = arguments[lq];
-        qq.info(`${gq.prefix}\n`, ...Yq)
-      } : UE, gq.debug = Eq >= 4 ? function() {
-        for (var Eq = arguments.length, Yq = new Array(Eq), lq = 0; lq < Eq; lq++) Yq[lq] = arguments[lq];
-        qq.debug(`${gq.prefix}\n`, ...Yq)
-      } : UE), gq
+    function eb() {
+      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Vz,
+        zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const ZC = jz;
+      return zC > 0 && (ZC.error = zC >= 1 ? function() {
+        for (var zC = arguments.length, QC = new Array(zC), wC = 0; wC < zC; wC++) QC[wC] = arguments[wC];
+        CC.error(`${ZC.prefix}\n`, ...QC)
+      } : tz, ZC.warn = zC >= 2 ? function() {
+        for (var zC = arguments.length, QC = new Array(zC), wC = 0; wC < zC; wC++) QC[wC] = arguments[wC];
+        CC.warn(`${ZC.prefix}\n`, ...QC)
+      } : tz, ZC.info = zC >= 3 ? function() {
+        for (var zC = arguments.length, QC = new Array(zC), wC = 0; wC < zC; wC++) QC[wC] = arguments[wC];
+        CC.info(`${ZC.prefix}\n`, ...QC)
+      } : tz, ZC.debug = zC >= 4 ? function() {
+        for (var zC = arguments.length, QC = new Array(zC), wC = 0; wC < zC; wC++) QC[wC] = arguments[wC];
+        CC.debug(`${ZC.prefix}\n`, ...QC)
+      } : tz), ZC
     }
-    const hO = "faro",
-      nO = {
+    const hb = "faro",
+      Kb = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      bO = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      Yb = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function iO(qq) {
-      var Eq, gq, lq, Oq, mq, xq;
-      const Aq = [],
-        uq = vO(qq.unpatchedConsole, qq.internalLoggerLevel);
-      qq.transports ? ((qq.url || qq.apiKey) && uq.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Aq.push(...qq.transports)) : qq.url ? Aq.push(new PO({
-        url: qq.url,
-        apiKey: qq.apiKey,
-        requestCompression: qq.requestCompression
-      })) : uq.error('either "url" or "transports" must be defined');
+    function db(CC) {
+      var zC, ZC, wC, bC, nC, fC;
+      const oC = [],
+        FC = eb(CC.unpatchedConsole, CC.internalLoggerLevel);
+      CC.transports ? ((CC.url || CC.apiKey) && FC.error('if "transports" is defined, "url" and "apiKey" should not be defined'), oC.push(...CC.transports)) : CC.url ? oC.push(new xb({
+        url: CC.url,
+        apiKey: CC.apiKey,
+        requestCompression: CC.requestCompression
+      })) : FC.error('either "url" or "transports" must be defined');
       const {
-        dedupe: Bq = !0,
-        eventDomain: Wq = Yq,
-        globalObjectKey: Nq = hO,
-        instrumentations: aq = kl(),
-        internalLoggerLevel: Vq = XE,
-        isolate: dq = !1,
-        logArgsSerializer: jq = Zg,
-        metas: Hq = fO(qq),
-        paused: oq = !1,
-        preventGlobalExposure: Pq = !1,
-        unpatchedConsole: Qq = DE,
-        url: yq,
-        experimental: tq
-      } = qq, rq = BO(qq, bO), vq = null !== (Eq = null === tq || void 0 === tq ? void 0 : tq.trackNavigation) && void 0 !== Eq && Eq, hq = {
-        dataAttributeName: IY(null !== (gq = null === (lq = qq.userActionsInstrumentation) || void 0 === lq ? void 0 : lq.dataAttributeName) && void 0 !== gq ? gq : wY),
-        excludeItem: null === (Oq = qq.userActionsInstrumentation) || void 0 === Oq ? void 0 : Oq.excludeItem,
-        initialActivityTimeout: eY(null === (mq = qq.userActionsInstrumentation) || void 0 === mq ? void 0 : mq.initialActivityTimeout, 100, (qq => uq.warn(qq)))
+        dedupe: WC = !0,
+        eventDomain: NC = QC,
+        globalObjectKey: MC = hb,
+        instrumentations: gC = aw(),
+        internalLoggerLevel: SC = yz,
+        isolate: pC = !1,
+        logArgsSerializer: PC = dZ,
+        metas: GC = Hb(CC),
+        paused: RC = !1,
+        preventGlobalExposure: AC = !1,
+        unpatchedConsole: xC = Vz,
+        url: JC,
+        experimental: IC
+      } = CC, iC = Nb(CC, Yb), vC = null !== (zC = null === IC || void 0 === IC ? void 0 : IC.trackNavigation) && void 0 !== zC && zC, eC = {
+        dataAttributeName: OQ(null !== (ZC = null === (wC = CC.userActionsInstrumentation) || void 0 === wC ? void 0 : wC.dataAttributeName) && void 0 !== ZC ? ZC : LQ),
+        excludeItem: null === (bC = CC.userActionsInstrumentation) || void 0 === bC ? void 0 : bC.excludeItem,
+        initialActivityTimeout: kQ(null === (nC = CC.userActionsInstrumentation) || void 0 === nC ? void 0 : nC.initialActivityTimeout, 100, (CC => FC.warn(CC)))
       };
-      return uE(uE({}, rq), {}, {
-        batching: uE(uE({}, nO), qq.batching),
-        dedupe: Bq,
-        globalObjectKey: Nq,
-        instrumentations: ZO(aq, qq),
-        internalLoggerLevel: Vq,
-        isolate: dq,
-        logArgsSerializer: jq,
-        metas: Hq,
-        parseStacktrace: Vg,
-        paused: oq,
-        preventGlobalExposure: Pq,
-        transports: Aq,
-        unpatchedConsole: Qq,
-        eventDomain: Wq,
-        ignoreUrls: [...null !== (xq = qq.ignoreUrls) && void 0 !== xq ? xq : [], ...yq ? [yq] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: uE(uE(uE({}, cq), qq.sessionTracking), MO({
-          trackGeolocation: qq.trackGeolocation,
-          sessionTracking: qq.sessionTracking
+      return Fz(Fz({}, iC), {}, {
+        batching: Fz(Fz({}, Kb), CC.batching),
+        dedupe: WC,
+        globalObjectKey: MC,
+        instrumentations: mb(gC, CC),
+        internalLoggerLevel: SC,
+        isolate: pC,
+        logArgsSerializer: PC,
+        metas: GC,
+        parseStacktrace: SZ,
+        paused: RC,
+        preventGlobalExposure: AC,
+        transports: oC,
+        unpatchedConsole: xC,
+        eventDomain: NC,
+        ignoreUrls: [...null !== (fC = CC.ignoreUrls) && void 0 !== fC ? fC : [], ...JC ? [JC] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: Fz(Fz(Fz({}, qC), CC.sessionTracking), Eb({
+          trackGeolocation: CC.trackGeolocation,
+          sessionTracking: CC.sessionTracking
         })),
-        userActionsInstrumentation: hq,
+        userActionsInstrumentation: eC,
         experimental: {
-          trackNavigation: vq
+          trackNavigation: vC
         }
       })
     }
 
-    function ZO(qq, Eq) {
+    function mb(CC, zC) {
       let {
-        experimental: gq
-      } = Eq;
-      var Yq;
-      const lq = null !== (Yq = null === gq || void 0 === gq ? void 0 : gq.trackNavigation) && void 0 !== Yq && Yq;
-      return qq.filter((qq => !("@grafana/faro-web-sdk:instrumentation-navigation" === qq.name && !lq)))
+        experimental: ZC
+      } = zC;
+      var QC;
+      const wC = null !== (QC = null === ZC || void 0 === ZC ? void 0 : ZC.trackNavigation) && void 0 !== QC && QC;
+      return CC.filter((CC => !("@grafana/faro-web-sdk:instrumentation-navigation" === CC.name && !wC)))
     }
 
-    function fO(qq) {
-      var Eq, gq, Yq;
+    function Hb(CC) {
+      var zC, ZC, QC;
       const {
-        page: lq,
-        generatePageId: Oq
-      } = null !== (Eq = null === qq || void 0 === qq ? void 0 : qq.pageTracking) && void 0 !== Eq ? Eq : {}, mq = [Xl, wl, rO({
-        generatePageId: Oq,
-        initialPageMeta: lq
-      }), ...null !== (gq = qq.metas) && void 0 !== gq ? gq : [], Cl];
-      return nq(null === (Yq = window) || void 0 === Yq ? void 0 : Yq.k6) ? [...mq, QO] : mq
+        page: wC,
+        generatePageId: bC
+      } = null !== (zC = null === CC || void 0 === CC ? void 0 : CC.pageTracking) && void 0 !== zC ? zC : {}, nC = [Lw, Uw, vb({
+        generatePageId: bC,
+        initialPageMeta: wC
+      }), ...null !== (ZC = CC.metas) && void 0 !== ZC ? ZC : [], Ow];
+      return hC(null === (QC = window) || void 0 === QC ? void 0 : QC.k6) ? [...nC, Jb] : nC
     }
 
-    function MO(qq) {
+    function Eb(CC) {
       let {
-        trackGeolocation: Eq,
-        sessionTracking: gq
-      } = qq;
-      var Yq;
-      const lq = {};
-      return vq(Eq) && (lq.geoLocationTrackingEnabled = Eq), Xq(lq) ? {} : {
-        session: uE(uE({}, null !== (Yq = null === gq || void 0 === gq ? void 0 : gq.session) && void 0 !== Yq ? Yq : {}), {}, {
-          overrides: lq
+        trackGeolocation: zC,
+        sessionTracking: ZC
+      } = CC;
+      var QC;
+      const wC = {};
+      return vC(zC) && (wC.geoLocationTrackingEnabled = zC), yC(wC) ? {} : {
+        session: Fz(Fz({}, null !== (QC = null === ZC || void 0 === ZC ? void 0 : ZC.session) && void 0 !== QC ? QC : {}), {}, {
+          overrides: wC
         })
       }
     }
-    const TO = new WeakSet;
+    const lb = new WeakSet;
 
-    function zO(qq) {
-      return TO.add(qq), qq
+    function Xb(CC) {
+      return lb.add(CC), CC
     }
 
-    function SO(qq, Eq) {
-      if (qq.capture) return zO(qq.capture(Eq));
-      const gq = zO(qq.value);
-      return null === Eq || void 0 === Eq || Eq(), gq
+    function cb(CC, zC) {
+      if (CC.capture) return Xb(CC.capture(zC));
+      const ZC = Xb(CC.value);
+      return null === zC || void 0 === zC || zC(), ZC
     }
 
-    function pO(qq) {
-      const Eq = `__faroBundleId_${qq}`,
-        gq = null === uq || void 0 === uq ? void 0 : uq[Eq];
-      if ("string" === typeof gq && "" !== gq) return gq;
-      const Yq = "undefined" !== typeof window ? window[Eq] : void 0;
-      return "string" === typeof Yq && "" !== Yq ? Yq : void 0
+    function ub(CC) {
+      const zC = `__faroBundleId_${CC}`,
+        ZC = null === FC || void 0 === FC ? void 0 : FC[zC];
+      if ("string" === typeof ZC && "" !== ZC) return ZC;
+      const QC = "undefined" !== typeof window ? window[zC] : void 0;
+      return "string" === typeof QC && "" !== QC ? QC : void 0
     }
 
-    function GO(qq) {
-      var Eq, gq;
-      const Yq = qq.config.app.name,
-        lq = Yq ? function(qq) {
-          return null === uq || void 0 === uq ? void 0 : uq[`__faroGitHash_${qq}`]
-        }(Yq) : void 0,
-        Oq = {
+    function rb(CC) {
+      var zC, ZC;
+      const QC = CC.config.app.name,
+        wC = QC ? function(CC) {
+          return null === FC || void 0 === FC ? void 0 : FC[`__faroGitHash_${CC}`]
+        }(QC) : void 0,
+        bC = {
           sdk: {
-            version: gg,
+            version: ZZ,
             name: "faro"
           },
-          app: eE({
-            bundleId: Yq && pO(Yq)
-          }, void 0 !== lq ? {
-            gitHash: lq
+          app: kz({
+            bundleId: QC && ub(QC)
+          }, void 0 !== wC ? {
+            gitHash: wC
           } : {})
         },
-        mq = null === (Eq = qq.config.sessionTracking) || void 0 === Eq ? void 0 : Eq.session;
-      mq && qq.api.setSession(mq), qq.config.app && (Oq.app = eE(eE({}, qq.config.app), Oq.app)), qq.config.user && (Oq.user = qq.config.user), qq.config.view && (Oq.view = qq.config.view), qq.metas.add(Oq, ...null !== (gq = qq.config.metas) && void 0 !== gq ? gq : [])
+        nC = null === (zC = CC.config.sessionTracking) || void 0 === zC ? void 0 : zC.session;
+      nC && CC.api.setSession(nC), CC.config.app && (bC.app = kz(kz({}, CC.config.app), bC.app)), CC.config.user && (bC.user = CC.config.user), CC.config.view && (bC.view = CC.config.view), CC.metas.add(bC, ...null !== (ZC = CC.config.metas) && void 0 !== ZC ? ZC : [])
     }
-    var LO = class {
-      constructor(qq, Eq) {
-        var gq, Yq;
-        this.signalBuffer = [], this.itemLimit = null !== (gq = null === Eq || void 0 === Eq ? void 0 : Eq.itemLimit) && void 0 !== gq ? gq : 50, this.sendTimeout = null !== (Yq = null === Eq || void 0 === Eq ? void 0 : Eq.sendTimeout) && void 0 !== Yq ? Yq : 250, this.paused = (null === Eq || void 0 === Eq ? void 0 : Eq.paused) || !1, this.sendFn = qq, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var sb = class {
+      constructor(CC, zC) {
+        var ZC, QC;
+        this.signalBuffer = [], this.itemLimit = null !== (ZC = null === zC || void 0 === zC ? void 0 : zC.itemLimit) && void 0 !== ZC ? ZC : 50, this.sendTimeout = null !== (QC = null === zC || void 0 === zC ? void 0 : zC.sendTimeout) && void 0 !== QC ? QC : 250, this.paused = (null === zC || void 0 === zC ? void 0 : zC.paused) || !1, this.sendFn = CC, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(qq) {
-        this.paused || (this.signalBuffer.push(qq), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(CC) {
+        this.paused || (this.signalBuffer.push(CC), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(qq) {
-        const Eq = new Map;
-        return qq.forEach((qq => {
-          const gq = JSON.stringify(qq.meta);
-          let Yq = Eq.get(gq);
-          Yq = void 0 === Yq ? [qq] : [...Yq, qq], Eq.set(gq, Yq)
-        })), Array.from(Eq.values())
+      groupItems(CC) {
+        const zC = new Map;
+        return CC.forEach((CC => {
+          const ZC = JSON.stringify(CC.meta);
+          let QC = zC.get(ZC);
+          QC = void 0 === QC ? [CC] : [...QC, CC], zC.set(ZC, QC)
+        })), Array.from(zC.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const qq = this.signalBuffer;
+        const CC = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(qq).forEach(this.sendFn)
-        } catch (Eq) {
-          throw this.signalBuffer = [...qq, ...this.signalBuffer], this.trimBufferToLimit(), Eq
+          this.groupItems(CC).forEach(this.sendFn)
+        } catch (zC) {
+          throw this.signalBuffer = [...CC, ...this.signalBuffer], this.trimBufferToLimit(), zC
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function JO(qq, Eq, gq, Yq) {
-      var lq;
-      Eq.debug("Initializing transports");
-      const Oq = [];
-      let mq = [];
-      const xq = qq => {
-        let Eq = qq;
-        for (const Yq of mq) {
-          const qq = Eq.map(Yq).filter(Boolean);
-          if (0 === qq.length) return [];
-          Eq = kO(qq, gq)
+    function Tb(CC, zC, ZC, QC) {
+      var wC;
+      zC.debug("Initializing transports");
+      const bC = [];
+      let nC = [];
+      const fC = CC => {
+        let zC = CC;
+        for (const QC of nC) {
+          const CC = zC.map(QC).filter(Boolean);
+          if (0 === CC.length) return [];
+          zC = ab(CC, ZC)
         }
-        return Eq
+        return zC
       };
-      let Aq;
-      (null === (lq = gq.batching) || void 0 === lq ? void 0 : lq.enabled) && (Aq = new LO((qq => {
-        const gq = xq(qq);
-        if (0 !== gq.length)
-          for (const Yq of Oq) Eq.debug(`Transporting item using ${Yq.name}\n`, gq), Yq.isBatched() && Yq.send(gq)
+      let oC;
+      (null === (wC = ZC.batching) || void 0 === wC ? void 0 : wC.enabled) && (oC = new sb((CC => {
+        const ZC = fC(CC);
+        if (0 !== ZC.length)
+          for (const QC of bC) zC.debug(`Transporting item using ${QC.name}\n`, ZC), QC.isBatched() && QC.send(ZC)
       }), {
-        sendTimeout: gq.batching.sendTimeout,
-        itemLimit: gq.batching.itemLimit,
-        paused: gq.paused
+        sendTimeout: ZC.batching.sendTimeout,
+        itemLimit: ZC.batching.itemLimit,
+        paused: ZC.paused
       }));
       return {
         add: function() {
-          Eq.debug("Adding transports");
-          for (var lq = arguments.length, mq = new Array(lq), xq = 0; xq < lq; xq++) mq[xq] = arguments[xq];
-          mq.forEach((lq => {
-            Eq.debug(`Adding "${lq.name}" transport`), Oq.some((qq => qq === lq)) ? Eq.warn(`Transport ${lq.name} is already added`) : (lq.unpatchedConsole = qq, lq.internalLogger = Eq, lq.config = gq, lq.metas = Yq, Oq.push(lq))
+          zC.debug("Adding transports");
+          for (var wC = arguments.length, nC = new Array(wC), fC = 0; fC < wC; fC++) nC[fC] = arguments[fC];
+          nC.forEach((wC => {
+            zC.debug(`Adding "${wC.name}" transport`), bC.some((CC => CC === wC)) ? zC.warn(`Transport ${wC.name} is already added`) : (wC.unpatchedConsole = CC, wC.internalLogger = zC, wC.config = ZC, wC.metas = QC, bC.push(wC))
           }))
         },
         addBeforeSendHooks: function() {
-          Eq.debug("Adding beforeSendHooks\n", mq);
-          for (var qq = arguments.length, gq = new Array(qq), Yq = 0; Yq < qq; Yq++) gq[Yq] = arguments[Yq];
-          gq.forEach((qq => {
-            qq && mq.push(qq)
+          zC.debug("Adding beforeSendHooks\n", nC);
+          for (var CC = arguments.length, ZC = new Array(CC), QC = 0; QC < CC; QC++) ZC[QC] = arguments[QC];
+          ZC.forEach((CC => {
+            CC && nC.push(CC)
           }))
         },
-        getBeforeSendHooks: () => [...mq],
-        execute: qq => {
-          var lq;
-          if (!gq.paused && JE(Yq).shouldCapture()) {
-            if (Bq = qq.meta, !TO.has(Bq)) {
-              var mq, cq, uq;
-              const Eq = null === (mq = Yq.value.session) || void 0 === mq ? void 0 : mq.id,
-                lq = SO(Yq);
-              if (gq.paused) return;
-              const Oq = eE({}, qq.meta);
-              (null === (cq = Oq.session) || void 0 === cq ? void 0 : cq.id) === Eq && (null === (uq = lq.session) || void 0 === uq ? void 0 : uq.id) !== Eq && (void 0 === lq.session ? delete Oq.session : Oq.session = lq.session), qq = eE(eE({}, qq), {}, {
-                meta: zO(Oq)
+        getBeforeSendHooks: () => [...nC],
+        execute: CC => {
+          var wC;
+          if (!ZC.paused && sz(QC).shouldCapture()) {
+            if (WC = CC.meta, !lb.has(WC)) {
+              var nC, qC, FC;
+              const zC = null === (nC = QC.value.session) || void 0 === nC ? void 0 : nC.id,
+                wC = cb(QC);
+              if (ZC.paused) return;
+              const bC = kz({}, CC.meta);
+              (null === (qC = bC.session) || void 0 === qC ? void 0 : qC.id) === zC && (null === (FC = wC.session) || void 0 === FC ? void 0 : FC.id) !== zC && (void 0 === wC.session ? delete bC.session : bC.session = wC.session), CC = kz(kz({}, CC), {}, {
+                meta: Xb(bC)
               })
             }
-            var Bq;
-            (null === (lq = gq.batching) || void 0 === lq ? void 0 : lq.enabled) && (null === Aq || void 0 === Aq || Aq.addItem(qq)), (qq => {
-              var Yq;
-              if ((null === (Yq = gq.batching) || void 0 === Yq ? void 0 : Yq.enabled) && Oq.every((qq => qq.isBatched()))) return;
-              const [lq] = xq([qq]);
-              if (void 0 !== lq)
-                for (const xq of Oq) {
-                  var mq;
-                  Eq.debug(`Transporting item using ${xq.name}\n`, lq), xq.isBatched() ? (null === (mq = gq.batching) || void 0 === mq ? void 0 : mq.enabled) || xq.send([lq]) : xq.send(lq)
+            var WC;
+            (null === (wC = ZC.batching) || void 0 === wC ? void 0 : wC.enabled) && (null === oC || void 0 === oC || oC.addItem(CC)), (CC => {
+              var QC;
+              if ((null === (QC = ZC.batching) || void 0 === QC ? void 0 : QC.enabled) && bC.every((CC => CC.isBatched()))) return;
+              const [wC] = fC([CC]);
+              if (void 0 !== wC)
+                for (const fC of bC) {
+                  var nC;
+                  zC.debug(`Transporting item using ${fC.name}\n`, wC), fC.isBatched() ? (null === (nC = ZC.batching) || void 0 === nC ? void 0 : nC.enabled) || fC.send([wC]) : fC.send(wC)
                 }
-            })(qq)
+            })(CC)
           }
         },
-        isPaused: () => gq.paused,
+        isPaused: () => ZC.paused,
         pause: () => {
-          Eq.debug("Pausing transports"), null === Aq || void 0 === Aq || Aq.pause(), gq.paused = !0
+          zC.debug("Pausing transports"), null === oC || void 0 === oC || oC.pause(), ZC.paused = !0
         },
         remove: function() {
-          Eq.debug("Removing transports");
-          for (var qq = arguments.length, gq = new Array(qq), Yq = 0; Yq < qq; Yq++) gq[Yq] = arguments[Yq];
-          gq.forEach((qq => {
-            Eq.debug(`Removing "${qq.name}" transport`);
-            const gq = Oq.indexOf(qq); - 1 !== gq ? Oq.splice(gq, 1) : Eq.warn(`Transport "${qq.name}" is not added`)
+          zC.debug("Removing transports");
+          for (var CC = arguments.length, ZC = new Array(CC), QC = 0; QC < CC; QC++) ZC[QC] = arguments[QC];
+          ZC.forEach((CC => {
+            zC.debug(`Removing "${CC.name}" transport`);
+            const ZC = bC.indexOf(CC); - 1 !== ZC ? bC.splice(ZC, 1) : zC.warn(`Transport "${CC.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var qq = arguments.length, gq = new Array(qq), Yq = 0; Yq < qq; Yq++) gq[Yq] = arguments[Yq];
-          Eq.debug("Removing beforeSendHooks"), mq = mq.filter((qq => !gq.includes(qq)))
+          for (var CC = arguments.length, ZC = new Array(CC), QC = 0; QC < CC; QC++) ZC[QC] = arguments[QC];
+          zC.debug("Removing beforeSendHooks"), nC = nC.filter((CC => !ZC.includes(CC)))
         },
         get transports() {
-          return [...Oq]
+          return [...bC]
         },
         unpause: () => {
-          Eq.debug("Unpausing transports"), null === Aq || void 0 === Aq || Aq.start(), gq.paused = !1
+          zC.debug("Unpausing transports"), null === oC || void 0 === oC || oC.start(), ZC.paused = !1
         }
       }
     }
 
-    function kO(qq, Eq) {
-      if (Eq.preserveOriginalError)
-        for (const gq of qq) "exception" === gq.type && delete gq.payload.originalError;
-      return qq
+    function ab(CC, zC) {
+      if (zC.preserveOriginalError)
+        for (const ZC of CC) "exception" === ZC.type && delete ZC.payload.originalError;
+      return CC
     }
-    let RO = DE;
+    let tb = Vz;
 
-    function UO(qq) {
-      var Eq;
-      return RO = null !== (Eq = qq.unpatchedConsole) && void 0 !== Eq ? Eq : RO, RO
+    function Db(CC) {
+      var zC;
+      return tb = null !== (zC = CC.unpatchedConsole) && void 0 !== zC ? zC : tb, tb
     }
-    let FO, sO = sE;
+    let jb, yb = jz;
 
-    function XO(qq, Eq) {
-      return sO = vO(qq, Eq.internalLoggerLevel), sO
+    function Lb(CC, zC) {
+      return yb = eb(CC, zC.internalLoggerLevel), yb
     }
 
-    function wO(qq) {
+    function Ub(CC) {
       let {
-        internalLogger: Eq,
-        config: gq,
-        metas: Yq,
-        transports: lq,
-        tracesApi: Oq,
-        userActionsApi: mq
-      } = qq;
-      var xq;
-      Eq.debug("Initializing exceptions API");
-      let Aq = null;
-      FO = null !== (xq = gq.parseStacktrace) && void 0 !== xq ? xq : FO;
-      const cq = qq => {
-          Eq.debug("Changing stacktrace parser"), FO = null !== qq && void 0 !== qq ? qq : FO
+        internalLogger: zC,
+        config: ZC,
+        metas: QC,
+        transports: wC,
+        tracesApi: bC,
+        userActionsApi: nC
+      } = CC;
+      var fC;
+      zC.debug("Initializing exceptions API");
+      let oC = null;
+      jb = null !== (fC = ZC.parseStacktrace) && void 0 !== fC ? fC : jb;
+      const qC = CC => {
+          zC.debug("Changing stacktrace parser"), jb = null !== CC && void 0 !== CC ? CC : jb
         },
         {
-          ignoreErrors: uq = [],
-          preserveOriginalError: Bq
-        } = gq;
-      return cq(gq.parseStacktrace), {
-        changeStacktraceParser: cq,
-        getStacktraceParser: () => FO,
-        pushError: function(qq) {
+          ignoreErrors: FC = [],
+          preserveOriginalError: WC
+        } = ZC;
+      return qC(ZC.parseStacktrace), {
+        changeStacktraceParser: qC,
+        getStacktraceParser: () => jb,
+        pushError: function(CC) {
           let {
-            skipDedupe: xq,
-            stackFrames: cq,
-            type: Wq,
-            context: Nq,
-            spanContext: aq,
-            timestampOverwriteMs: Vq,
-            originalError: dq,
-            fingerprint: jq,
-            fatal: Hq
+            skipDedupe: fC,
+            stackFrames: qC,
+            type: NC,
+            context: MC,
+            spanContext: gC,
+            timestampOverwriteMs: SC,
+            originalError: pC,
+            fingerprint: PC,
+            fatal: GC
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(qq, Eq) {
+          if (! function(CC, zC) {
               const {
-                message: gq,
-                name: Yq,
-                stack: lq
-              } = Eq;
-              return Oq = qq, mq = gq + " " + Yq + " " + lq, Oq.some((qq => yq(qq) ? mq.includes(qq) : !!mq.match(qq)));
-              var Oq, mq
-            }(uq, null !== dq && void 0 !== dq ? dq : qq)) try {
-            var oq, Pq;
-            if (!JE(Yq).shouldCapture()) return;
-            const uq = SE(eE(eE({}, function(qq) {
-                let Eq = qq.cause;
-                pq(Eq) ? Eq = qq.cause.toString() : null !== Eq && (nq(qq.cause) || iq(qq.cause)) ? Eq = zE(qq.cause) : null != Eq && (Eq = qq.cause.toString());
-                return null == Eq ? {} : {
-                  cause: Eq
+                message: ZC,
+                name: QC,
+                stack: wC
+              } = zC;
+              return bC = CC, nC = ZC + " " + QC + " " + wC, bC.some((CC => JC(CC) ? nC.includes(CC) : !!nC.match(CC)));
+              var bC, nC
+            }(FC, null !== pC && void 0 !== pC ? pC : CC)) try {
+            var RC, AC;
+            if (!sz(QC).shouldCapture()) return;
+            const FC = Xz(kz(kz({}, function(CC) {
+                let zC = CC.cause;
+                cC(zC) ? zC = CC.cause.toString() : null !== zC && (hC(CC.cause) || YC(CC.cause)) ? zC = lz(CC.cause) : null != zC && (zC = CC.cause.toString());
+                return null == zC ? {} : {
+                  cause: zC
                 }
-              }(null !== dq && void 0 !== dq ? dq : qq)), null !== Nq && void 0 !== Nq ? Nq : {})),
-              yq = eE(eE(eE(eE({
-                type: Wq || qq.name || "Error",
-                value: qq.message,
-                timestamp: Vq ? VE(Vq) : aE(),
-                trace: aq ? {
-                  trace_id: aq.traceId,
-                  span_id: aq.spanId
-                } : Oq.getTraceContext()
-              }, Xq(uq) ? {} : {
-                context: uq
-              }), Bq ? {
-                originalError: dq
-              } : {}), jq ? {
-                fingerprint: jq
-              } : {}), void 0 !== Hq ? {
-                fatal: Hq
+              }(null !== pC && void 0 !== pC ? pC : CC)), null !== MC && void 0 !== MC ? MC : {})),
+              JC = kz(kz(kz(kz({
+                type: NC || CC.name || "Error",
+                value: CC.message,
+                timestamp: SC ? Sz(SC) : gz(),
+                trace: gC ? {
+                  trace_id: gC.traceId,
+                  span_id: gC.spanId
+                } : bC.getTraceContext()
+              }, yC(FC) ? {} : {
+                context: FC
+              }), WC ? {
+                originalError: pC
+              } : {}), PC ? {
+                fingerprint: PC
+              } : {}), void 0 !== GC ? {
+                fatal: GC
               } : {});
-            cq = null !== (oq = cq) && void 0 !== oq ? oq : qq.stack ? null === FO || void 0 === FO ? void 0 : FO(qq).frames : void 0, (null === cq || void 0 === cq ? void 0 : cq.length) && (yq.stacktrace = {
-              frames: cq
+            qC = null !== (RC = qC) && void 0 !== RC ? RC : CC.stack ? null === jb || void 0 === jb ? void 0 : jb(CC).frames : void 0, (null === qC || void 0 === qC ? void 0 : qC.length) && (JC.stacktrace = {
+              frames: qC
             });
-            const tq = {
-              type: yq.type,
-              value: yq.value,
-              stacktrace: yq.stacktrace,
-              context: yq.context,
-              fingerprint: yq.fingerprint,
-              fatal: null !== (Pq = yq.fatal) && void 0 !== Pq && Pq
+            const IC = {
+              type: JC.type,
+              value: JC.value,
+              stacktrace: JC.stacktrace,
+              context: JC.context,
+              fingerprint: JC.fingerprint,
+              fatal: null !== (AC = JC.fatal) && void 0 !== AC && AC
             };
-            if (!xq && gq.dedupe && !Qq(Aq) && HE(tq, Aq)) return void Eq.debug("Skipping error push because it is the same as the last one\n", yq);
-            const rq = Aq,
-              vq = SO(Yq);
-            if (Aq !== rq && !xq && gq.dedupe && HE(tq, Aq)) return;
-            Aq = tq;
-            const hq = {
-              meta: vq,
-              payload: yq,
+            if (!fC && ZC.dedupe && !xC(oC) && Gz(IC, oC)) return void zC.debug("Skipping error push because it is the same as the last one\n", JC);
+            const iC = oC,
+              vC = cb(QC);
+            if (oC !== iC && !fC && ZC.dedupe && Gz(IC, oC)) return;
+            oC = IC;
+            const eC = {
+              meta: vC,
+              payload: JC,
               type: "exception"
             };
-            Eq.debug("Pushing exception\n", hq), yl(mq.getActiveUserAction(), hq) || lq.execute(hq)
-          } catch (tq) {
-            Eq.error("Error pushing event", tq)
+            zC.debug("Pushing exception\n", eC), Jw(nC.getActiveUserAction(), eC) || wC.execute(eC)
+          } catch (IC) {
+            zC.error("Error pushing event", IC)
           }
         }
       }
     }
 
-    function KO(qq, Eq, gq, Yq, lq) {
-      Eq.debug("Initializing API");
-      let Oq = null;
-      const mq = function(qq) {
+    function Bb(CC, zC, ZC, QC, wC) {
+      zC.debug("Initializing API");
+      let bC = null;
+      const nC = function(CC) {
           let {
-            transports: Eq,
-            internalLogger: gq,
-            config: Yq,
-            pushEvent: lq
-          } = qq;
-          var Oq;
-          const mq = null === (Oq = Yq.userActionsInstrumentation) || void 0 === Oq ? void 0 : Oq.excludeItem;
-          let xq;
-          const Aq = () => xq;
+            transports: zC,
+            internalLogger: ZC,
+            config: QC,
+            pushEvent: wC
+          } = CC;
+          var bC;
+          const nC = null === (bC = QC.userActionsInstrumentation) || void 0 === bC ? void 0 : bC.excludeItem;
+          let fC;
+          const oC = () => fC;
           return {
-            startUserAction: (qq, Yq, Oq) => {
-              if (void 0 === Aq()) {
-                const gq = new Pl({
-                  name: qq,
-                  transports: Eq,
-                  attributes: Yq,
-                  trigger: (null === Oq || void 0 === Oq ? void 0 : Oq.triggerName) || "faroApiCall",
-                  importance: (null === Oq || void 0 === Oq ? void 0 : Oq.importance) || Hl.Normal,
-                  trackUserActionsExcludeItem: mq,
-                  pushEvent: lq
+            startUserAction: (CC, QC, bC) => {
+              if (void 0 === oC()) {
+                const ZC = new Aw({
+                  name: CC,
+                  transports: zC,
+                  attributes: QC,
+                  trigger: (null === bC || void 0 === bC ? void 0 : bC.triggerName) || "faroApiCall",
+                  importance: (null === bC || void 0 === bC ? void 0 : bC.importance) || Gw.Normal,
+                  trackUserActionsExcludeItem: nC,
+                  pushEvent: wC
                 });
-                return gq.filter((qq => [3, 2].includes(qq))).first().subscribe((() => {
-                  xq = void 0
-                })), Ql.notify({
-                  type: jl,
-                  userAction: gq,
-                  initialActivityTimeout: null === Oq || void 0 === Oq ? void 0 : Oq.initialActivityTimeout
-                }), xq = gq, xq
+                return ZC.filter((CC => [3, 2].includes(CC))).first().subscribe((() => {
+                  fC = void 0
+                })), xw.notify({
+                  type: Pw,
+                  userAction: ZC,
+                  initialActivityTimeout: null === bC || void 0 === bC ? void 0 : bC.initialActivityTimeout
+                }), fC = ZC, fC
               }
-              gq.error("Attempted to create a new user action while one is already running. This is not possible.")
+              ZC.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: Aq
+            getActiveUserAction: oC
           }
         }({
-          transports: lq,
-          config: gq,
-          internalLogger: Eq,
-          pushEvent: (qq, gq, Yq, lq) => {
-            Oq ? Oq(qq, gq, Yq, lq) : Eq.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: qq,
-              attributes: gq,
-              domain: Yq,
-              options: lq
+          transports: wC,
+          config: ZC,
+          internalLogger: zC,
+          pushEvent: (CC, ZC, QC, wC) => {
+            bC ? bC(CC, ZC, QC, wC) : zC.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: CC,
+              attributes: ZC,
+              domain: QC,
+              options: wC
             })
           }
         }),
-        xq = function(qq, Eq, gq, Yq, lq) {
-          let Oq;
-          return Eq.debug("Initializing traces API"), {
-            getOTEL: () => Oq,
+        fC = function(CC, zC, ZC, QC, wC) {
+          let bC;
+          return zC.debug("Initializing traces API"), {
+            getOTEL: () => bC,
             getTraceContext: () => {
-              const qq = null === Oq || void 0 === Oq ? void 0 : Oq.trace.getSpanContext(Oq.context.active());
-              return qq ? {
-                trace_id: qq.traceId,
-                span_id: qq.spanId
+              const CC = null === bC || void 0 === bC ? void 0 : bC.trace.getSpanContext(bC.context.active());
+              return CC ? {
+                trace_id: CC.traceId,
+                span_id: CC.spanId
               } : void 0
             },
-            initOTEL: (qq, gq) => {
-              Eq.debug("Initializing OpenTelemetry"), Oq = {
-                trace: qq,
-                context: gq
+            initOTEL: (CC, ZC) => {
+              zC.debug("Initializing OpenTelemetry"), bC = {
+                trace: CC,
+                context: ZC
               }
             },
-            isOTELInitialized: () => !!Oq,
-            pushTraces: qq => {
+            isOTELInitialized: () => !!bC,
+            pushTraces: CC => {
               try {
-                if (!JE(Yq).shouldCapture()) return;
-                const gq = {
+                if (!sz(QC).shouldCapture()) return;
+                const ZC = {
                   type: "trace",
-                  payload: qq,
-                  meta: SO(Yq)
+                  payload: CC,
+                  meta: cb(QC)
                 };
-                Eq.debug("Pushing trace\n", gq), lq.execute(gq)
-              } catch (gq) {
-                Eq.error("Error pushing trace\n", gq)
+                zC.debug("Pushing trace\n", ZC), wC.execute(ZC)
+              } catch (ZC) {
+                zC.error("Error pushing trace\n", ZC)
               }
             }
           }
-        }(0, Eq, 0, Yq, lq),
-        Aq = {
-          unpatchedConsole: qq,
-          internalLogger: Eq,
-          userActionsApi: mq,
-          config: gq,
-          metas: Yq,
-          transports: lq,
-          tracesApi: xq
+        }(0, zC, 0, QC, wC),
+        oC = {
+          unpatchedConsole: CC,
+          internalLogger: zC,
+          userActionsApi: nC,
+          config: ZC,
+          metas: QC,
+          transports: wC,
+          tracesApi: fC
         },
-        cq = function(qq) {
+        qC = function(CC) {
           let {
-            internalLogger: Eq,
-            config: gq,
-            metas: Yq,
-            transports: lq,
-            tracesApi: Oq,
-            userActionsApi: mq
-          } = qq, xq = null;
+            internalLogger: zC,
+            config: ZC,
+            metas: QC,
+            transports: wC,
+            tracesApi: bC,
+            userActionsApi: nC
+          } = CC, fC = null;
           return {
-            pushEvent: function(qq, Aq, cq) {
+            pushEvent: function(CC, oC, qC) {
               let {
-                skipDedupe: uq,
-                spanContext: Bq,
-                timestampOverwriteMs: Wq,
-                customPayloadTransformer: Nq = qq => qq
+                skipDedupe: FC,
+                spanContext: WC,
+                timestampOverwriteMs: NC,
+                customPayloadTransformer: MC = CC => CC
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!JE(Yq).shouldCapture()) return;
-                const aq = SE(Aq),
-                  Vq = Nq({
-                    name: qq,
-                    domain: null !== cq && void 0 !== cq ? cq : gq.eventDomain,
-                    attributes: Xq(aq) ? void 0 : aq,
-                    timestamp: Wq ? VE(Wq) : aE(),
-                    trace: Bq ? {
-                      trace_id: Bq.traceId,
-                      span_id: Bq.spanId
-                    } : Oq.getTraceContext()
+                if (!sz(QC).shouldCapture()) return;
+                const gC = Xz(oC),
+                  SC = MC({
+                    name: CC,
+                    domain: null !== qC && void 0 !== qC ? qC : ZC.eventDomain,
+                    attributes: yC(gC) ? void 0 : gC,
+                    timestamp: NC ? Sz(NC) : gz(),
+                    trace: WC ? {
+                      trace_id: WC.traceId,
+                      span_id: WC.spanId
+                    } : bC.getTraceContext()
                   }),
-                  dq = {
-                    name: Vq.name,
-                    attributes: Vq.attributes,
-                    domain: Vq.domain
+                  pC = {
+                    name: SC.name,
+                    attributes: SC.attributes,
+                    domain: SC.domain
                   };
-                if (!uq && gq.dedupe && !Qq(xq) && HE(dq, xq)) return void Eq.debug("Skipping event push because it is the same as the last one\n", Vq);
-                const jq = xq,
-                  Hq = SO(Yq);
-                if (xq !== jq && !uq && gq.dedupe && HE(dq, xq)) return;
-                xq = dq;
-                const oq = {
-                  meta: Hq,
-                  payload: Vq,
+                if (!FC && ZC.dedupe && !xC(fC) && Gz(pC, fC)) return void zC.debug("Skipping event push because it is the same as the last one\n", SC);
+                const PC = fC,
+                  GC = cb(QC);
+                if (fC !== PC && !FC && ZC.dedupe && Gz(pC, fC)) return;
+                fC = pC;
+                const RC = {
+                  meta: GC,
+                  payload: SC,
                   type: "event"
                 };
-                Eq.debug("Pushing event\n", oq), yl(mq.getActiveUserAction(), oq) || lq.execute(oq)
-              } catch (aq) {
-                Eq.error("Error pushing event", aq)
+                zC.debug("Pushing event\n", RC), Jw(nC.getActiveUserAction(), RC) || wC.execute(RC)
+              } catch (gC) {
+                zC.error("Error pushing event", gC)
               }
             }
           }
-        }(Aq);
-      return Oq = cq.pushEvent, eE(eE(eE(eE(eE(eE(eE({}, xq), wO(Aq)), function(qq) {
-        let Eq, gq, Yq, lq, {
-          internalLogger: Oq,
-          metas: mq
-        } = qq;
-        Oq.debug("Initializing meta API");
-        const xq = qq => {
-            gq && mq.remove(gq), gq = {
-              user: qq
-            }, mq.add(gq)
+        }(oC);
+      return bC = qC.pushEvent, kz(kz(kz(kz(kz(kz(kz({}, fC), Ub(oC)), function(CC) {
+        let zC, ZC, QC, wC, {
+          internalLogger: bC,
+          metas: nC
+        } = CC;
+        bC.debug("Initializing meta API");
+        const fC = CC => {
+            ZC && nC.remove(ZC), ZC = {
+              user: CC
+            }, nC.add(ZC)
           },
-          Aq = (qq, gq) => {
-            var Yq;
-            const lq = null === gq || void 0 === gq ? void 0 : gq.overrides,
-              Oq = lq ? {
-                overrides: eE(eE({}, null === Eq || void 0 === Eq || null === (Yq = Eq.session) || void 0 === Yq ? void 0 : Yq.overrides), lq)
+          oC = (CC, ZC) => {
+            var QC;
+            const wC = null === ZC || void 0 === ZC ? void 0 : ZC.overrides,
+              bC = wC ? {
+                overrides: kz(kz({}, null === zC || void 0 === zC || null === (QC = zC.session) || void 0 === QC ? void 0 : QC.overrides), wC)
               } : {};
-            Eq && mq.remove(Eq), Eq = {
-              session: eE(eE({}, Xq(qq) ? void 0 : qq), Oq)
-            }, mq.add(Eq)
+            zC && nC.remove(zC), zC = {
+              session: kz(kz({}, yC(CC) ? void 0 : CC), bC)
+            }, nC.add(zC)
           },
-          cq = (qq, Eq) => {
-            JE(mq).notifySessionUpdate({
+          qC = (CC, zC) => {
+            sz(nC).notifySessionUpdate({
               type: "replace",
-              session: qq,
-              overrides: null === Eq || void 0 === Eq ? void 0 : Eq.overrides
-            }), Aq(qq, Eq)
+              session: CC,
+              overrides: null === zC || void 0 === zC ? void 0 : zC.overrides
+            }), oC(CC, zC)
           },
-          uq = () => mq.value.session,
-          Bq = () => mq.value.page;
+          FC = () => nC.value.session,
+          WC = () => nC.value.page;
         return {
-          setUser: xq,
-          resetUser: xq,
-          setSession: cq,
-          resetSession: cq,
-          getSession: uq,
-          setView: (qq, Eq) => {
-            var gq;
-            if ((null === Eq || void 0 === Eq ? void 0 : Eq.overrides) && (JE(mq).notifySessionUpdate({
+          setUser: fC,
+          resetUser: fC,
+          setSession: qC,
+          resetSession: qC,
+          getSession: FC,
+          setView: (CC, zC) => {
+            var ZC;
+            if ((null === zC || void 0 === zC ? void 0 : zC.overrides) && (sz(nC).notifySessionUpdate({
                 type: "overrides",
-                overrides: Eq.overrides
-              }), Aq(uq(), {
-                overrides: Eq.overrides
-              })), (null === Yq || void 0 === Yq || null === (gq = Yq.view) || void 0 === gq ? void 0 : gq.name) === (null === qq || void 0 === qq ? void 0 : qq.name)) return;
-            const lq = Yq;
-            Yq = {
-              view: qq
-            }, mq.add(Yq), lq && mq.remove(lq)
+                overrides: zC.overrides
+              }), oC(FC(), {
+                overrides: zC.overrides
+              })), (null === QC || void 0 === QC || null === (ZC = QC.view) || void 0 === ZC ? void 0 : ZC.name) === (null === CC || void 0 === CC ? void 0 : CC.name)) return;
+            const wC = QC;
+            QC = {
+              view: CC
+            }, nC.add(QC), wC && nC.remove(wC)
           },
-          getView: () => mq.value.view,
-          setPage: qq => {
-            var Eq;
-            const gq = yq(qq) ? eE(eE({}, null !== (Eq = null === lq || void 0 === lq ? void 0 : lq.page) && void 0 !== Eq ? Eq : Bq()), {}, {
-              id: qq
-            }) : qq;
-            lq && mq.remove(lq), lq = {
-              page: gq
-            }, mq.add(lq)
+          getView: () => nC.value.view,
+          setPage: CC => {
+            var zC;
+            const ZC = JC(CC) ? kz(kz({}, null !== (zC = null === wC || void 0 === wC ? void 0 : wC.page) && void 0 !== zC ? zC : WC()), {}, {
+              id: CC
+            }) : CC;
+            wC && nC.remove(wC), wC = {
+              page: ZC
+            }, nC.add(wC)
           },
-          getPage: Bq
+          getPage: WC
         }
-      }(Aq)), function(qq) {
+      }(oC)), function(CC) {
         let {
-          internalLogger: Eq,
-          config: gq,
-          metas: Yq,
-          transports: lq,
-          tracesApi: Oq,
-          userActionsApi: mq
-        } = qq;
-        var xq;
-        Eq.debug("Initializing logs API");
-        let Aq = null;
-        const cq = null !== (xq = gq.logArgsSerializer) && void 0 !== xq ? xq : Zg;
+          internalLogger: zC,
+          config: ZC,
+          metas: QC,
+          transports: wC,
+          tracesApi: bC,
+          userActionsApi: nC
+        } = CC;
+        var fC;
+        zC.debug("Initializing logs API");
+        let oC = null;
+        const qC = null !== (fC = ZC.logArgsSerializer) && void 0 !== fC ? fC : dZ;
         return {
-          pushLog: function(qq) {
+          pushLog: function(CC) {
             let {
-              context: xq,
-              level: uq,
-              skipDedupe: Bq,
-              spanContext: Wq,
-              timestampOverwriteMs: Nq
+              context: fC,
+              level: FC,
+              skipDedupe: WC,
+              spanContext: NC,
+              timestampOverwriteMs: MC
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!JE(Yq).shouldCapture()) return;
-              const aq = SE(xq),
-                Vq = {
-                  message: cq(qq),
-                  level: null !== uq && void 0 !== uq ? uq : "log",
-                  context: Xq(aq) ? void 0 : aq,
-                  timestamp: Nq ? VE(Nq) : aE(),
-                  trace: Wq ? {
-                    trace_id: Wq.traceId,
-                    span_id: Wq.spanId
-                  } : Oq.getTraceContext()
+              if (!sz(QC).shouldCapture()) return;
+              const gC = Xz(fC),
+                SC = {
+                  message: qC(CC),
+                  level: null !== FC && void 0 !== FC ? FC : "log",
+                  context: yC(gC) ? void 0 : gC,
+                  timestamp: MC ? Sz(MC) : gz(),
+                  trace: NC ? {
+                    trace_id: NC.traceId,
+                    span_id: NC.spanId
+                  } : bC.getTraceContext()
                 },
-                dq = {
-                  message: Vq.message,
-                  level: Vq.level,
-                  context: Vq.context
+                pC = {
+                  message: SC.message,
+                  level: SC.level,
+                  context: SC.context
                 };
-              if (!Bq && gq.dedupe && !Qq(Aq) && HE(dq, Aq)) return void Eq.debug("Skipping log push because it is the same as the last one\n", Vq);
-              const jq = Aq,
-                Hq = SO(Yq);
-              if (Aq !== jq && !Bq && gq.dedupe && HE(dq, Aq)) return;
-              Aq = dq;
-              const oq = {
+              if (!WC && ZC.dedupe && !xC(oC) && Gz(pC, oC)) return void zC.debug("Skipping log push because it is the same as the last one\n", SC);
+              const PC = oC,
+                GC = cb(QC);
+              if (oC !== PC && !WC && ZC.dedupe && Gz(pC, oC)) return;
+              oC = pC;
+              const RC = {
                 type: "log",
-                payload: Vq,
-                meta: Hq
+                payload: SC,
+                meta: GC
               };
-              Eq.debug("Pushing log\n", oq), yl(mq.getActiveUserAction(), oq) || lq.execute(oq)
-            } catch (aq) {
-              Eq.error("Error pushing log\n", aq)
+              zC.debug("Pushing log\n", RC), Jw(nC.getActiveUserAction(), RC) || wC.execute(RC)
+            } catch (gC) {
+              zC.error("Error pushing log\n", gC)
             }
           }
         }
-      }(Aq)), function(qq) {
+      }(oC)), function(CC) {
         let {
-          internalLogger: Eq,
-          config: gq,
-          metas: Yq,
-          transports: lq,
-          tracesApi: Oq,
-          userActionsApi: mq
-        } = qq;
-        Eq.debug("Initializing measurements API");
-        let xq = null;
+          internalLogger: zC,
+          config: ZC,
+          metas: QC,
+          transports: wC,
+          tracesApi: bC,
+          userActionsApi: nC
+        } = CC;
+        zC.debug("Initializing measurements API");
+        let fC = null;
         return {
-          pushMeasurement: function(qq) {
+          pushMeasurement: function(CC) {
             let {
-              skipDedupe: Aq,
-              context: cq,
-              spanContext: uq,
-              timestampOverwriteMs: Bq
+              skipDedupe: oC,
+              context: qC,
+              spanContext: FC,
+              timestampOverwriteMs: WC
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!JE(Yq).shouldCapture()) return;
-              const Wq = SE(cq),
-                Nq = eE(eE({}, qq), {}, {
-                  trace: uq ? {
-                    trace_id: uq.traceId,
-                    span_id: uq.spanId
-                  } : Oq.getTraceContext(),
-                  timestamp: Bq ? VE(Bq) : aE(),
-                  context: Xq(Wq) ? void 0 : Wq
+              if (!sz(QC).shouldCapture()) return;
+              const NC = Xz(qC),
+                MC = kz(kz({}, CC), {}, {
+                  trace: FC ? {
+                    trace_id: FC.traceId,
+                    span_id: FC.spanId
+                  } : bC.getTraceContext(),
+                  timestamp: WC ? Sz(WC) : gz(),
+                  context: yC(NC) ? void 0 : NC
                 }),
-                aq = {
-                  type: Nq.type,
-                  values: Nq.values,
-                  context: Nq.context
+                gC = {
+                  type: MC.type,
+                  values: MC.values,
+                  context: MC.context
                 };
-              if (!Aq && gq.dedupe && !Qq(xq) && HE(aq, xq)) return void Eq.debug("Skipping measurement push because it is the same as the last one\n", Nq);
-              const Vq = xq,
-                dq = SO(Yq);
-              if (xq !== Vq && !Aq && gq.dedupe && HE(aq, xq)) return;
-              xq = aq;
-              const jq = {
+              if (!oC && ZC.dedupe && !xC(fC) && Gz(gC, fC)) return void zC.debug("Skipping measurement push because it is the same as the last one\n", MC);
+              const SC = fC,
+                pC = cb(QC);
+              if (fC !== SC && !oC && ZC.dedupe && Gz(gC, fC)) return;
+              fC = gC;
+              const PC = {
                 type: "measurement",
-                payload: Nq,
-                meta: dq
+                payload: MC,
+                meta: pC
               };
-              Eq.debug("Pushing measurement\n", jq), yl(mq.getActiveUserAction(), jq) || lq.execute(jq)
-            } catch (Wq) {
-              Eq.error("Error pushing measurement\n", Wq)
+              zC.debug("Pushing measurement\n", PC), Jw(nC.getActiveUserAction(), PC) || wC.execute(PC)
+            } catch (NC) {
+              zC.error("Error pushing measurement\n", NC)
             }
           }
         }
-      }(Aq)), cq), mq)
+      }(oC)), qC), nC)
     }
 
-    function CO(qq) {
-      const Eq = UO(qq),
-        gq = XO(Eq, qq);
-      if (aq() && !qq.isolate) return void gq.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      gq.debug("Initializing");
-      const Yq = function(qq, Eq) {
-          let gq, Yq = [],
-            lq = [],
-            Oq = [],
-            mq = 0,
-            xq = 0;
-          const Aq = () => Yq.reduce(((qq, Eq) => Object.assign(qq, bq(Eq) ? Eq() : Eq)), {}),
-            cq = () => {
-              if (lq.length) {
-                const qq = Aq();
-                lq.forEach((Eq => Eq(qq)))
+    function Ob(CC) {
+      const zC = Db(CC),
+        ZC = Lb(zC, CC);
+      if (gC() && !CC.isolate) return void ZC.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      ZC.debug("Initializing");
+      const QC = function(CC, zC) {
+          let ZC, QC = [],
+            wC = [],
+            bC = [],
+            nC = 0,
+            fC = 0;
+          const oC = () => QC.reduce(((CC, zC) => Object.assign(CC, KC(zC) ? zC() : zC)), {}),
+            qC = () => {
+              if (wC.length) {
+                const CC = oC();
+                wC.forEach((zC => zC(CC)))
               }
             };
           return {
             add: function() {
-              for (var qq = arguments.length, gq = new Array(qq), lq = 0; lq < qq; lq++) gq[lq] = arguments[lq];
-              Eq.debug("Adding metas\n", gq), Yq.push(...gq), cq()
+              for (var CC = arguments.length, ZC = new Array(CC), wC = 0; wC < CC; wC++) ZC[wC] = arguments[wC];
+              zC.debug("Adding metas\n", ZC), QC.push(...ZC), qC()
             },
             remove: function() {
-              for (var qq = arguments.length, gq = new Array(qq), lq = 0; lq < qq; lq++) gq[lq] = arguments[lq];
-              Eq.debug("Removing metas\n", gq), Yq = Yq.filter((qq => !gq.includes(qq))), cq()
+              for (var CC = arguments.length, ZC = new Array(CC), wC = 0; wC < CC; wC++) ZC[wC] = arguments[wC];
+              zC.debug("Removing metas\n", ZC), QC = QC.filter((CC => !ZC.includes(CC))), qC()
             },
-            addListener: qq => {
-              Eq.debug("Adding metas listener\n", qq), lq.push(qq)
+            addListener: CC => {
+              zC.debug("Adding metas listener\n", CC), wC.push(CC)
             },
-            removeListener: qq => {
-              Eq.debug("Removing metas listener\n", qq), lq = lq.filter((Eq => Eq !== qq))
+            removeListener: CC => {
+              zC.debug("Removing metas listener\n", CC), wC = wC.filter((zC => zC !== CC))
             },
-            capture: qq => {
-              var Eq;
-              const Yq = void 0 !== gq,
-                lq = null !== (Eq = gq) && void 0 !== Eq ? Eq : Oq;
-              Yq || (gq = lq, mq = 0, xq = lq.length);
+            capture: CC => {
+              var zC;
+              const QC = void 0 !== ZC,
+                wC = null !== (zC = ZC) && void 0 !== zC ? zC : bC;
+              QC || (ZC = wC, nC = 0, fC = wC.length);
               try {
-                for (; mq < xq;) {
-                  const qq = lq[mq++];
-                  null === qq || void 0 === qq || qq()
+                for (; nC < fC;) {
+                  const CC = wC[nC++];
+                  null === CC || void 0 === CC || CC()
                 }
-                const Eq = zO(Aq());
-                return null === qq || void 0 === qq || qq(), Eq
+                const zC = Xb(oC());
+                return null === CC || void 0 === CC || CC(), zC
               } finally {
-                Yq || (gq = void 0)
+                QC || (ZC = void 0)
               }
             },
-            addCaptureListener: qq => {
-              Oq.push(qq)
+            addCaptureListener: CC => {
+              bC.push(CC)
             },
-            removeCaptureListener: qq => {
-              Oq = Oq.filter((Eq => Eq !== qq))
+            removeCaptureListener: CC => {
+              bC = bC.filter((zC => zC !== CC))
             },
             get value() {
-              return Aq()
+              return oC()
             }
           }
-        }(0, gq),
-        lq = JO(Eq, gq, qq, Yq),
-        Oq = KO(Eq, gq, qq, Yq, lq),
-        mq = function(qq, Eq, gq, Yq, lq, Oq) {
-          Eq.debug("Initializing instrumentations");
-          const mq = [];
+        }(0, ZC),
+        wC = Tb(zC, ZC, CC, QC),
+        bC = Bb(zC, ZC, CC, QC, wC),
+        nC = function(CC, zC, ZC, QC, wC, bC) {
+          zC.debug("Initializing instrumentations");
+          const nC = [];
           return {
             add: function() {
-              Eq.debug("Adding instrumentations");
-              for (var xq = arguments.length, Aq = new Array(xq), cq = 0; cq < xq; cq++) Aq[cq] = arguments[cq];
-              Aq.forEach((xq => {
-                Eq.debug(`Adding "${xq.name}" instrumentation`), mq.some((qq => qq.name === xq.name)) ? Eq.warn(`Instrumentation ${xq.name} is already added`) : (xq.unpatchedConsole = qq, xq.internalLogger = Eq, xq.config = gq, xq.metas = Yq, xq.transports = lq, xq.api = Oq, mq.push(xq), xq.initialize())
+              zC.debug("Adding instrumentations");
+              for (var fC = arguments.length, oC = new Array(fC), qC = 0; qC < fC; qC++) oC[qC] = arguments[qC];
+              oC.forEach((fC => {
+                zC.debug(`Adding "${fC.name}" instrumentation`), nC.some((CC => CC.name === fC.name)) ? zC.warn(`Instrumentation ${fC.name} is already added`) : (fC.unpatchedConsole = CC, fC.internalLogger = zC, fC.config = ZC, fC.metas = QC, fC.transports = wC, fC.api = bC, nC.push(fC), fC.initialize())
               }))
             },
             get instrumentations() {
-              return [...mq]
+              return [...nC]
             },
             remove: function() {
-              Eq.debug("Removing instrumentations");
-              for (var qq = arguments.length, gq = new Array(qq), Yq = 0; Yq < qq; Yq++) gq[Yq] = arguments[Yq];
-              gq.forEach((qq => {
-                var gq, Yq;
-                Eq.debug(`Removing "${qq.name}" instrumentation`);
-                const lq = mq.reduce(((Eq, gq, Yq) => null === Eq && gq.name === qq.name ? Yq : null), null);
-                null !== lq ? (null === (gq = (Yq = mq[lq]).destroy) || void 0 === gq || gq.call(Yq), mq.splice(lq, 1)) : Eq.warn(`Instrumentation "${qq.name}" is not added`)
+              zC.debug("Removing instrumentations");
+              for (var CC = arguments.length, ZC = new Array(CC), QC = 0; QC < CC; QC++) ZC[QC] = arguments[QC];
+              ZC.forEach((CC => {
+                var ZC, QC;
+                zC.debug(`Removing "${CC.name}" instrumentation`);
+                const wC = nC.reduce(((zC, ZC, QC) => null === zC && ZC.name === CC.name ? QC : null), null);
+                null !== wC ? (null === (ZC = (QC = nC[wC]).destroy) || void 0 === ZC || ZC.call(QC), nC.splice(wC, 1)) : zC.warn(`Instrumentation "${CC.name}" is not added`)
               }))
             }
           }
-        }(Eq, gq, qq, Yq, lq, Oq),
-        xq = dq(Eq, gq, qq, Yq, lq, Oq, mq);
-      return GO(xq),
-        function(qq) {
-          qq.transports.add(...qq.config.transports), qq.transports.addBeforeSendHooks(qq.config.beforeSend)
-        }(xq),
-        function(qq) {
-          qq.instrumentations.add(...qq.config.instrumentations)
-        }(xq), xq
+        }(zC, ZC, CC, QC, wC, bC),
+        fC = pC(zC, ZC, CC, QC, wC, bC, nC);
+      return rb(fC),
+        function(CC) {
+          CC.transports.add(...CC.config.transports), CC.transports.addBeforeSendHooks(CC.config.beforeSend)
+        }(fC),
+        function(CC) {
+          CC.instrumentations.add(...CC.config.instrumentations)
+        }(fC), fC
     }
 
-    function IO(qq) {
-      const Eq = iO(qq);
-      if (Eq) return CO(Eq)
+    function kb(CC) {
+      const zC = db(CC);
+      if (zC) return Ob(zC)
     }
   },
-  6578: function(qq, Eq, gq) {
-    var Yq;
-    ! function(lq, Oq) {
-      var mq = "function",
-        xq = "undefined",
-        Aq = "object",
-        cq = "string",
-        uq = "major",
-        Bq = "model",
-        Wq = "name",
-        Nq = "type",
-        aq = "vendor",
-        Vq = "version",
-        dq = "architecture",
-        jq = "console",
-        Hq = "mobile",
-        oq = "tablet",
-        Pq = "smarttv",
-        Qq = "wearable",
-        yq = "embedded",
-        tq = "Amazon",
-        rq = "Apple",
-        vq = "ASUS",
-        hq = "BlackBerry",
-        nq = "Browser",
-        bq = "Chrome",
-        iq = "Firefox",
-        Zq = "Google",
-        fq = "Honor",
-        Mq = "Huawei",
-        Tq = "LG",
-        zq = "Microsoft",
-        Sq = "Motorola",
-        pq = "Nvidia",
-        Gq = "OnePlus",
-        Lq = "Opera",
-        Jq = "OPPO",
-        kq = "Samsung",
-        Rq = "Sharp",
-        Uq = "Sony",
-        Fq = "Xiaomi",
-        sq = "Zebra",
-        Xq = "Facebook",
-        wq = "Chromium OS",
-        Kq = "Mac OS",
-        Cq = " Browser",
-        Iq = function(qq) {
-          for (var Eq = {}, gq = 0; gq < qq.length; gq++) Eq[qq[gq].toUpperCase()] = qq[gq];
-          return Eq
+  6694: function(CC, zC, ZC) {
+    var QC;
+    ! function(wC, bC) {
+      var nC = "function",
+        fC = "undefined",
+        oC = "object",
+        qC = "string",
+        FC = "major",
+        WC = "model",
+        NC = "name",
+        MC = "type",
+        gC = "vendor",
+        SC = "version",
+        pC = "architecture",
+        PC = "console",
+        GC = "mobile",
+        RC = "tablet",
+        AC = "smarttv",
+        xC = "wearable",
+        JC = "embedded",
+        IC = "Amazon",
+        iC = "Apple",
+        vC = "ASUS",
+        eC = "BlackBerry",
+        hC = "Browser",
+        KC = "Chrome",
+        YC = "Firefox",
+        dC = "Google",
+        mC = "Honor",
+        HC = "Huawei",
+        EC = "LG",
+        lC = "Microsoft",
+        XC = "Motorola",
+        cC = "Nvidia",
+        uC = "OnePlus",
+        rC = "Opera",
+        sC = "OPPO",
+        TC = "Samsung",
+        aC = "Sharp",
+        tC = "Sony",
+        DC = "Xiaomi",
+        jC = "Zebra",
+        yC = "Facebook",
+        LC = "Chromium OS",
+        UC = "Mac OS",
+        BC = " Browser",
+        OC = function(CC) {
+          for (var zC = {}, ZC = 0; ZC < CC.length; ZC++) zC[CC[ZC].toUpperCase()] = CC[ZC];
+          return zC
         },
-        eq = function(qq, Eq) {
-          return typeof qq === cq && -1 !== Dq(Eq).indexOf(Dq(qq))
+        kC = function(CC, zC) {
+          return typeof CC === qC && -1 !== VC(zC).indexOf(VC(CC))
         },
-        Dq = function(qq) {
-          return qq.toLowerCase()
+        VC = function(CC) {
+          return CC.toLowerCase()
         },
-        qE = function(qq, Eq) {
-          if (typeof qq === cq) return qq = qq.replace(/^\s\s*/, ""), typeof Eq === xq ? qq : qq.substring(0, 500)
+        Cz = function(CC, zC) {
+          if (typeof CC === qC) return CC = CC.replace(/^\s\s*/, ""), typeof zC === fC ? CC : CC.substring(0, 500)
         },
-        EE = function(qq, Eq) {
-          for (var gq, Yq, lq, xq, cq, uq, Bq = 0; Bq < Eq.length && !cq;) {
-            var Wq = Eq[Bq],
-              Nq = Eq[Bq + 1];
-            for (gq = Yq = 0; gq < Wq.length && !cq && Wq[gq];)
-              if (cq = Wq[gq++].exec(qq))
-                for (lq = 0; lq < Nq.length; lq++) uq = cq[++Yq], typeof(xq = Nq[lq]) === Aq && xq.length > 0 ? 2 === xq.length ? typeof xq[1] == mq ? this[xq[0]] = xq[1].call(this, uq) : this[xq[0]] = xq[1] : 3 === xq.length ? typeof xq[1] !== mq || xq[1].exec && xq[1].test ? this[xq[0]] = uq ? uq.replace(xq[1], xq[2]) : Oq : this[xq[0]] = uq ? xq[1].call(this, uq, xq[2]) : Oq : 4 === xq.length && (this[xq[0]] = uq ? xq[3].call(this, uq.replace(xq[1], xq[2])) : Oq) : this[xq] = uq || Oq;
-            Bq += 2
+        zz = function(CC, zC) {
+          for (var ZC, QC, wC, fC, qC, FC, WC = 0; WC < zC.length && !qC;) {
+            var NC = zC[WC],
+              MC = zC[WC + 1];
+            for (ZC = QC = 0; ZC < NC.length && !qC && NC[ZC];)
+              if (qC = NC[ZC++].exec(CC))
+                for (wC = 0; wC < MC.length; wC++) FC = qC[++QC], typeof(fC = MC[wC]) === oC && fC.length > 0 ? 2 === fC.length ? typeof fC[1] == nC ? this[fC[0]] = fC[1].call(this, FC) : this[fC[0]] = fC[1] : 3 === fC.length ? typeof fC[1] !== nC || fC[1].exec && fC[1].test ? this[fC[0]] = FC ? FC.replace(fC[1], fC[2]) : bC : this[fC[0]] = FC ? fC[1].call(this, FC, fC[2]) : bC : 4 === fC.length && (this[fC[0]] = FC ? fC[3].call(this, FC.replace(fC[1], fC[2])) : bC) : this[fC] = FC || bC;
+            WC += 2
           }
         },
-        gE = function(qq, Eq) {
-          for (var gq in Eq)
-            if (typeof Eq[gq] === Aq && Eq[gq].length > 0) {
-              for (var Yq = 0; Yq < Eq[gq].length; Yq++)
-                if (eq(Eq[gq][Yq], qq)) return "?" === gq ? Oq : gq
-            } else if (eq(Eq[gq], qq)) return "?" === gq ? Oq : gq;
-          return Eq.hasOwnProperty("*") ? Eq["*"] : qq
+        Zz = function(CC, zC) {
+          for (var ZC in zC)
+            if (typeof zC[ZC] === oC && zC[ZC].length > 0) {
+              for (var QC = 0; QC < zC[ZC].length; QC++)
+                if (kC(zC[ZC][QC], CC)) return "?" === ZC ? bC : ZC
+            } else if (kC(zC[ZC], CC)) return "?" === ZC ? bC : ZC;
+          return zC.hasOwnProperty("*") ? zC["*"] : CC
         },
-        YE = {
+        Qz = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        lE = {
+        wz = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [Vq, [Wq, "Chrome"]],
+            [SC, [NC, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [Vq, [Wq, "Edge"]],
+            [SC, [NC, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/opios[\/ ]+([\w\.]+)/i],
-            [Vq, [Wq, Lq + " Mini"]],
+            [SC, [NC, rC + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [Vq, [Wq, Lq + " GX"]],
+            [SC, [NC, rC + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [Vq, [Wq, Lq]],
+            [SC, [NC, rC]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [Vq, [Wq, "Baidu"]],
+            [SC, [NC, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [Vq, [Wq, "Maxthon"]],
+            [SC, [NC, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [Vq, [Wq, "Quark"]],
+            [SC, [NC, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [Vq, [Wq, "DuckDuckGo"]],
+            [SC, [NC, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [Vq, [Wq, "UC" + nq]],
+            [SC, [NC, "UC" + hC]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [Vq, [Wq, "WeChat"]],
+            [SC, [NC, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [Vq, [Wq, "Konqueror"]],
+            [SC, [NC, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [Vq, [Wq, "IE"]],
+            [SC, [NC, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [Vq, [Wq, "Yandex"]],
+            [SC, [NC, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [Vq, [Wq, "Smart Lenovo " + nq]],
+            [SC, [NC, "Smart Lenovo " + hC]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [Wq, /(.+)/, "$1 Secure " + nq], Vq
+              [NC, /(.+)/, "$1 Secure " + hC], SC
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [Vq, [Wq, iq + " Focus"]],
+            [SC, [NC, YC + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [Vq, [Wq, Lq + " Touch"]],
+            [SC, [NC, rC + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [Vq, [Wq, "Coc Coc"]],
+            [SC, [NC, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [Vq, [Wq, "Dolphin"]],
+            [SC, [NC, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [Vq, [Wq, Lq + " Coast"]],
+            [SC, [NC, rC + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [Vq, [Wq, "MIUI" + Cq]],
+            [SC, [NC, "MIUI" + BC]],
             [/fxios\/([\w\.-]+)/i],
-            [Vq, [Wq, iq]],
+            [SC, [NC, YC]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [Vq, [Wq, "360"]],
+            [SC, [NC, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [Wq, /(.+)/, "$1Browser"], Vq
+              [NC, /(.+)/, "$1Browser"], SC
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [Wq, /(.+)/, "$1" + Cq], Vq
+              [NC, /(.+)/, "$1" + BC], SC
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [Vq, [Wq, kq + " Internet"]],
+            [SC, [NC, TC + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [Vq, [Wq, "Sogou Explorer"]],
+            [SC, [NC, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [Wq, "Sogou Mobile"], Vq
+              [NC, "Sogou Mobile"], SC
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [Wq],
+            [NC],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [Vq, Wq],
+            [SC, NC],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [Wq, Xq], Vq
+              [NC, yC], SC
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [Vq, [Wq, "GSA"]],
+            [SC, [NC, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [Vq, [Wq, "TikTok"]],
+            [SC, [NC, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [Vq, [Wq, bq + " Headless"]],
+            [SC, [NC, KC + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [Wq, bq + " WebView"], Vq
+              [NC, KC + " WebView"], SC
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [Vq, [Wq, "Android " + nq]],
+            [SC, [NC, "Android " + hC]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [Vq, [Wq, "Mobile Safari"]],
+            [SC, [NC, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [Vq, Wq],
+            [SC, NC],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [Wq, [Vq, gE, {
+            [NC, [SC, Zz, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [Wq, "Netscape"], Vq
+              [NC, "Netscape"], SC
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [Vq, [Wq, iq + " Reality"]],
+            [SC, [NC, YC + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [Wq, [Vq, /_/g, "."]],
+            [NC, [SC, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [Wq, [Vq, /master.|lts./, ""]]
+            [NC, [SC, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [dq, "amd64"]
+              [pC, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [dq, "ia32"]
+              [pC, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [dq, "arm64"]
+              [pC, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [dq, "armhf"]
+              [pC, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [dq, "arm"]
+              [pC, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [dq, /ower/, "", Dq]
+              [pC, /ower/, "", VC]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [dq, "sparc"]
+              [pC, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [dq, Dq]
+              [pC, VC]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [Bq, [aq, kq],
-              [Nq, oq]
+            [WC, [gC, TC],
+              [MC, RC]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [Bq, [aq, kq],
-              [Nq, Hq]
+            [WC, [gC, TC],
+              [MC, GC]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [Bq, [aq, rq],
-              [Nq, Hq]
+            [WC, [gC, iC],
+              [MC, GC]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [Bq, [aq, rq],
-              [Nq, oq]
+            [WC, [gC, iC],
+              [MC, RC]
             ],
             [/(macintosh);/i],
-            [Bq, [aq, rq]],
+            [WC, [gC, iC]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [Bq, [aq, Rq],
-              [Nq, Hq]
+            [WC, [gC, aC],
+              [MC, GC]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [Bq, [aq, fq],
-              [Nq, oq]
+            [WC, [gC, mC],
+              [MC, RC]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [Bq, [aq, fq],
-              [Nq, Hq]
+            [WC, [gC, mC],
+              [MC, GC]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [Bq, [aq, Mq],
-              [Nq, oq]
+            [WC, [gC, HC],
+              [MC, RC]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [Bq, [aq, Mq],
-              [Nq, Hq]
+            [WC, [gC, HC],
+              [MC, GC]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [Bq, /_/g, " "],
-              [aq, Fq],
-              [Nq, oq]
+              [WC, /_/g, " "],
+              [gC, DC],
+              [MC, RC]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [Bq, /_/g, " "],
-              [aq, Fq],
-              [Nq, Hq]
+              [WC, /_/g, " "],
+              [gC, DC],
+              [MC, GC]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [Bq, [aq, Jq],
-              [Nq, Hq]
+            [WC, [gC, sC],
+              [MC, GC]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [Bq, [aq, gE, {
+            [WC, [gC, Zz, {
                 OnePlus: ["304", "403", "203"],
-                "*": Jq
+                "*": sC
               }],
-              [Nq, oq]
+              [MC, RC]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [Bq, [aq, "Vivo"],
-              [Nq, Hq]
+            [WC, [gC, "Vivo"],
+              [MC, GC]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [Bq, [aq, "Realme"],
-              [Nq, Hq]
+            [WC, [gC, "Realme"],
+              [MC, GC]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [Bq, [aq, Sq],
-              [Nq, Hq]
+            [WC, [gC, XC],
+              [MC, GC]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [Bq, [aq, Sq],
-              [Nq, oq]
+            [WC, [gC, XC],
+              [MC, RC]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [Bq, [aq, Tq],
-              [Nq, oq]
+            [WC, [gC, EC],
+              [MC, RC]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [Bq, [aq, Tq],
-              [Nq, Hq]
+            [WC, [gC, EC],
+              [MC, GC]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [Bq, [aq, "Lenovo"],
-              [Nq, oq]
+            [WC, [gC, "Lenovo"],
+              [MC, RC]
             ],
             [/(nokia) (t[12][01])/i],
-            [aq, Bq, [Nq, oq]],
+            [gC, WC, [MC, RC]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [Bq, /_/g, " "],
-              [Nq, Hq],
-              [aq, "Nokia"]
+              [WC, /_/g, " "],
+              [MC, GC],
+              [gC, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [Bq, [aq, Zq],
-              [Nq, oq]
+            [WC, [gC, dC],
+              [MC, RC]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [Bq, [aq, Zq],
-              [Nq, Hq]
+            [WC, [gC, dC],
+              [MC, GC]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [Bq, [aq, Uq],
-              [Nq, Hq]
+            [WC, [gC, tC],
+              [MC, GC]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [Bq, "Xperia Tablet"],
-              [aq, Uq],
-              [Nq, oq]
+              [WC, "Xperia Tablet"],
+              [gC, tC],
+              [MC, RC]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [Bq, [aq, Gq],
-              [Nq, Hq]
+            [WC, [gC, uC],
+              [MC, GC]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [Bq, [aq, tq],
-              [Nq, oq]
+            [WC, [gC, IC],
+              [MC, RC]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [Bq, /(.+)/g, "Fire Phone $1"],
-              [aq, tq],
-              [Nq, Hq]
+              [WC, /(.+)/g, "Fire Phone $1"],
+              [gC, IC],
+              [MC, GC]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [Bq, aq, [Nq, oq]],
+            [WC, gC, [MC, RC]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [Bq, [aq, hq],
-              [Nq, Hq]
+            [WC, [gC, eC],
+              [MC, GC]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [Bq, [aq, vq],
-              [Nq, oq]
+            [WC, [gC, vC],
+              [MC, RC]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [Bq, [aq, vq],
-              [Nq, Hq]
+            [WC, [gC, vC],
+              [MC, GC]
             ],
             [/(nexus 9)/i],
-            [Bq, [aq, "HTC"],
-              [Nq, oq]
+            [WC, [gC, "HTC"],
+              [MC, RC]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [aq, [Bq, /_/g, " "],
-              [Nq, Hq]
+            [gC, [WC, /_/g, " "],
+              [MC, GC]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [Bq, [aq, "TCL"],
-              [Nq, oq]
+            [WC, [gC, "TCL"],
+              [MC, RC]
             ],
             [/(itel) ((\w+))/i],
             [
-              [aq, Dq], Bq, [Nq, gE, {
+              [gC, VC], WC, [MC, Zz, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [Bq, [aq, "Acer"],
-              [Nq, oq]
+            [WC, [gC, "Acer"],
+              [MC, RC]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [Bq, [aq, "Meizu"],
-              [Nq, Hq]
+            [WC, [gC, "Meizu"],
+              [MC, GC]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [Bq, [aq, "Ulefone"],
-              [Nq, Hq]
+            [WC, [gC, "Ulefone"],
+              [MC, GC]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [Bq, [aq, "Energizer"],
-              [Nq, Hq]
+            [WC, [gC, "Energizer"],
+              [MC, GC]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [Bq, [aq, "Cat"],
-              [Nq, Hq]
+            [WC, [gC, "Cat"],
+              [MC, GC]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [Bq, [aq, "Smartfren"],
-              [Nq, Hq]
+            [WC, [gC, "Smartfren"],
+              [MC, GC]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [Bq, [aq, "Nothing"],
-              [Nq, Hq]
+            [WC, [gC, "Nothing"],
+              [MC, GC]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [Bq, [aq, "Archos"],
-              [Nq, oq]
+            [WC, [gC, "Archos"],
+              [MC, RC]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [Bq, [aq, "Archos"],
-              [Nq, Hq]
+            [WC, [gC, "Archos"],
+              [MC, GC]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [aq, Bq, [Nq, oq]],
+            [gC, WC, [MC, RC]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [aq, Bq, [Nq, Hq]],
+            [gC, WC, [MC, GC]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [aq, Bq, [Nq, oq]],
+            [gC, WC, [MC, RC]],
             [/(surface duo)/i],
-            [Bq, [aq, zq],
-              [Nq, oq]
+            [WC, [gC, lC],
+              [MC, RC]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [Bq, [aq, "Fairphone"],
-              [Nq, Hq]
+            [WC, [gC, "Fairphone"],
+              [MC, GC]
             ],
             [/(u304aa)/i],
-            [Bq, [aq, "AT&T"],
-              [Nq, Hq]
+            [WC, [gC, "AT&T"],
+              [MC, GC]
             ],
             [/\bsie-(\w*)/i],
-            [Bq, [aq, "Siemens"],
-              [Nq, Hq]
+            [WC, [gC, "Siemens"],
+              [MC, GC]
             ],
             [/\b(rct\w+) b/i],
-            [Bq, [aq, "RCA"],
-              [Nq, oq]
+            [WC, [gC, "RCA"],
+              [MC, RC]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [Bq, [aq, "Dell"],
-              [Nq, oq]
+            [WC, [gC, "Dell"],
+              [MC, RC]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [Bq, [aq, "Verizon"],
-              [Nq, oq]
+            [WC, [gC, "Verizon"],
+              [MC, RC]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [Bq, [aq, "Barnes & Noble"],
-              [Nq, oq]
+            [WC, [gC, "Barnes & Noble"],
+              [MC, RC]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [Bq, [aq, "NuVision"],
-              [Nq, oq]
+            [WC, [gC, "NuVision"],
+              [MC, RC]
             ],
             [/\b(k88) b/i],
-            [Bq, [aq, "ZTE"],
-              [Nq, oq]
+            [WC, [gC, "ZTE"],
+              [MC, RC]
             ],
             [/\b(nx\d{3}j) b/i],
-            [Bq, [aq, "ZTE"],
-              [Nq, Hq]
+            [WC, [gC, "ZTE"],
+              [MC, GC]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [Bq, [aq, "Swiss"],
-              [Nq, Hq]
+            [WC, [gC, "Swiss"],
+              [MC, GC]
             ],
             [/\b(zur\d{3}) b/i],
-            [Bq, [aq, "Swiss"],
-              [Nq, oq]
+            [WC, [gC, "Swiss"],
+              [MC, RC]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [Bq, [aq, "Zeki"],
-              [Nq, oq]
+            [WC, [gC, "Zeki"],
+              [MC, RC]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [aq, "Dragon Touch"], Bq, [Nq, oq]
+              [gC, "Dragon Touch"], WC, [MC, RC]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [Bq, [aq, "Insignia"],
-              [Nq, oq]
+            [WC, [gC, "Insignia"],
+              [MC, RC]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [Bq, [aq, "NextBook"],
-              [Nq, oq]
+            [WC, [gC, "NextBook"],
+              [MC, RC]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [aq, "Voice"], Bq, [Nq, Hq]
+              [gC, "Voice"], WC, [MC, GC]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [aq, "LvTel"], Bq, [Nq, Hq]
+              [gC, "LvTel"], WC, [MC, GC]
             ],
             [/\b(ph-1) /i],
-            [Bq, [aq, "Essential"],
-              [Nq, Hq]
+            [WC, [gC, "Essential"],
+              [MC, GC]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [Bq, [aq, "Envizen"],
-              [Nq, oq]
+            [WC, [gC, "Envizen"],
+              [MC, RC]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [Bq, [aq, "MachSpeed"],
-              [Nq, oq]
+            [WC, [gC, "MachSpeed"],
+              [MC, RC]
             ],
             [/\btu_(1491) b/i],
-            [Bq, [aq, "Rotor"],
-              [Nq, oq]
+            [WC, [gC, "Rotor"],
+              [MC, RC]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [Bq, [aq, pq],
-              [Nq, oq]
+            [WC, [gC, cC],
+              [MC, RC]
             ],
             [/(sprint) (\w+)/i],
-            [aq, Bq, [Nq, Hq]],
+            [gC, WC, [MC, GC]],
             [/(kin\.[onetw]{3})/i],
             [
-              [Bq, /\./g, " "],
-              [aq, zq],
-              [Nq, Hq]
+              [WC, /\./g, " "],
+              [gC, lC],
+              [MC, GC]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [Bq, [aq, sq],
-              [Nq, oq]
+            [WC, [gC, jC],
+              [MC, RC]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [Bq, [aq, sq],
-              [Nq, Hq]
+            [WC, [gC, jC],
+              [MC, GC]
             ],
             [/smart-tv.+(samsung)/i],
-            [aq, [Nq, Pq]],
+            [gC, [MC, AC]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [Bq, /^/, "SmartTV"],
-              [aq, kq],
-              [Nq, Pq]
+              [WC, /^/, "SmartTV"],
+              [gC, TC],
+              [MC, AC]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [aq, Tq],
-              [Nq, Pq]
+              [gC, EC],
+              [MC, AC]
             ],
             [/(apple) ?tv/i],
-            [aq, [Bq, rq + " TV"],
-              [Nq, Pq]
+            [gC, [WC, iC + " TV"],
+              [MC, AC]
             ],
             [/crkey/i],
             [
-              [Bq, bq + "cast"],
-              [aq, Zq],
-              [Nq, Pq]
+              [WC, KC + "cast"],
+              [gC, dC],
+              [MC, AC]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [Bq, [aq, tq],
-              [Nq, Pq]
+            [WC, [gC, IC],
+              [MC, AC]
             ],
             [/(shield \w+ tv)/i],
-            [Bq, [aq, pq],
-              [Nq, Pq]
+            [WC, [gC, cC],
+              [MC, AC]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [Bq, [aq, Rq],
-              [Nq, Pq]
+            [WC, [gC, aC],
+              [MC, AC]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [Bq, [aq, Uq],
-              [Nq, Pq]
+            [WC, [gC, tC],
+              [MC, AC]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [Bq, [aq, Fq],
-              [Nq, Pq]
+            [WC, [gC, DC],
+              [MC, AC]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [aq, Bq, [Nq, Pq]],
+            [gC, WC, [MC, AC]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [aq, qE],
-              [Bq, qE],
-              [Nq, Pq]
+              [gC, Cz],
+              [WC, Cz],
+              [MC, AC]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [Bq, [Nq, Pq]],
+            [WC, [MC, AC]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [Nq, Pq]
+              [MC, AC]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [aq, Bq, [Nq, jq]],
+            [gC, WC, [MC, PC]],
             [/droid.+; (shield)( bui|\))/i],
-            [Bq, [aq, pq],
-              [Nq, jq]
+            [WC, [gC, cC],
+              [MC, PC]
             ],
             [/(playstation \w+)/i],
-            [Bq, [aq, Uq],
-              [Nq, jq]
+            [WC, [gC, tC],
+              [MC, PC]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [Bq, [aq, zq],
-              [Nq, jq]
+            [WC, [gC, lC],
+              [MC, PC]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [Bq, [aq, kq],
-              [Nq, Qq]
+            [WC, [gC, TC],
+              [MC, xC]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [aq, Bq, [Nq, Qq]],
+            [gC, WC, [MC, xC]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [Bq, [aq, Jq],
-              [Nq, Qq]
+            [WC, [gC, sC],
+              [MC, xC]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [Bq, [aq, rq],
-              [Nq, Qq]
+            [WC, [gC, iC],
+              [MC, xC]
             ],
             [/(opwwe\d{3})/i],
-            [Bq, [aq, Gq],
-              [Nq, Qq]
+            [WC, [gC, uC],
+              [MC, xC]
             ],
             [/(moto 360)/i],
-            [Bq, [aq, Sq],
-              [Nq, Qq]
+            [WC, [gC, XC],
+              [MC, xC]
             ],
             [/(smartwatch 3)/i],
-            [Bq, [aq, Uq],
-              [Nq, Qq]
+            [WC, [gC, tC],
+              [MC, xC]
             ],
             [/(g watch r)/i],
-            [Bq, [aq, Tq],
-              [Nq, Qq]
+            [WC, [gC, EC],
+              [MC, xC]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [Bq, [aq, sq],
-              [Nq, Qq]
+            [WC, [gC, jC],
+              [MC, xC]
             ],
             [/droid.+; (glass) \d/i],
-            [Bq, [aq, Zq],
-              [Nq, Qq]
+            [WC, [gC, dC],
+              [MC, xC]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [aq, Bq, [Nq, Qq]],
+            [gC, WC, [MC, xC]],
             [/; (quest( \d| pro)?)/i],
-            [Bq, [aq, Xq],
-              [Nq, Qq]
+            [WC, [gC, yC],
+              [MC, xC]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [aq, [Nq, yq]],
+            [gC, [MC, JC]],
             [/(aeobc)\b/i],
-            [Bq, [aq, tq],
-              [Nq, yq]
+            [WC, [gC, IC],
+              [MC, JC]
             ],
             [/(homepod).+mac os/i],
-            [Bq, [aq, rq],
-              [Nq, yq]
+            [WC, [gC, iC],
+              [MC, JC]
             ],
             [/windows iot/i],
             [
-              [Nq, yq]
+              [MC, JC]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [Bq, [Nq, Hq]],
+            [WC, [MC, GC]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [Bq, [Nq, oq]],
+            [WC, [MC, RC]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [Nq, oq]
+              [MC, RC]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [Nq, Hq]
+              [MC, GC]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [Bq, [aq, "Generic"]]
+            [WC, [gC, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [Vq, [Wq, "EdgeHTML"]],
+            [SC, [NC, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [Vq, [Wq, "Blink"]],
+            [SC, [NC, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/ladybird\//i],
             [
-              [Wq, "LibWeb"]
+              [NC, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [Vq, Wq]
+            [SC, NC]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [Wq, [Vq, gE, YE]],
+            [NC, [SC, Zz, Qz]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [Vq, gE, YE],
-              [Wq, "Windows"]
+              [SC, Zz, Qz],
+              [NC, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [Vq, /_/g, "."],
-              [Wq, "iOS"]
+              [SC, /_/g, "."],
+              [NC, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [Wq, Kq],
-              [Vq, /_/g, "."]
+              [NC, UC],
+              [SC, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [Vq, Wq],
+            [SC, NC],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [Wq, /(.+)/, "$1 Touch"], Vq
+              [NC, /(.+)/, "$1 Touch"], SC
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/\(bb(10);/i],
-            [Vq, [Wq, hq]],
+            [SC, [NC, eC]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [Vq, [Wq, "Symbian"]],
+            [SC, [NC, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [Vq, [Wq, iq + " OS"]],
+            [SC, [NC, YC + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [Vq, [Wq, "webOS"]],
+            [SC, [NC, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [Vq, [Wq, "watchOS"]],
+            [SC, [NC, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [Vq, [Wq, bq + "cast"]],
+            [SC, [NC, KC + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [Wq, wq], Vq
+              [NC, LC], SC
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [Wq, Vq],
+            [NC, SC],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [Wq, "Solaris"], Vq
+              [NC, "Solaris"], SC
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [Wq, Vq]
+            [NC, SC]
           ]
         },
-        OE = function(qq, Eq) {
-          if (typeof qq === Aq && (Eq = qq, qq = Oq), !(this instanceof OE)) return new OE(qq, Eq).getResult();
-          var gq = typeof lq !== xq && lq.navigator ? lq.navigator : Oq,
-            Yq = qq || (gq && gq.userAgent ? gq.userAgent : ""),
-            jq = gq && gq.userAgentData ? gq.userAgentData : Oq,
-            Pq = Eq ? function(qq, Eq) {
-              var gq = {};
-              for (var Yq in qq) Eq[Yq] && Eq[Yq].length % 2 === 0 ? gq[Yq] = Eq[Yq].concat(qq[Yq]) : gq[Yq] = qq[Yq];
-              return gq
-            }(lE, Eq) : lE,
-            Qq = gq && gq.userAgent == Yq;
+        bz = function(CC, zC) {
+          if (typeof CC === oC && (zC = CC, CC = bC), !(this instanceof bz)) return new bz(CC, zC).getResult();
+          var ZC = typeof wC !== fC && wC.navigator ? wC.navigator : bC,
+            QC = CC || (ZC && ZC.userAgent ? ZC.userAgent : ""),
+            PC = ZC && ZC.userAgentData ? ZC.userAgentData : bC,
+            AC = zC ? function(CC, zC) {
+              var ZC = {};
+              for (var QC in CC) zC[QC] && zC[QC].length % 2 === 0 ? ZC[QC] = zC[QC].concat(CC[QC]) : ZC[QC] = CC[QC];
+              return ZC
+            }(wz, zC) : wz,
+            xC = ZC && ZC.userAgent == QC;
           return this.getBrowser = function() {
-            var qq, Eq = {};
-            return Eq[Wq] = Oq, Eq[Vq] = Oq, EE.call(Eq, Yq, Pq.browser), Eq[uq] = typeof(qq = Eq[Vq]) === cq ? qq.replace(/[^\d\.]/g, "").split(".")[0] : Oq, Qq && gq && gq.brave && typeof gq.brave.isBrave == mq && (Eq[Wq] = "Brave"), Eq
+            var CC, zC = {};
+            return zC[NC] = bC, zC[SC] = bC, zz.call(zC, QC, AC.browser), zC[FC] = typeof(CC = zC[SC]) === qC ? CC.replace(/[^\d\.]/g, "").split(".")[0] : bC, xC && ZC && ZC.brave && typeof ZC.brave.isBrave == nC && (zC[NC] = "Brave"), zC
           }, this.getCPU = function() {
-            var qq = {};
-            return qq[dq] = Oq, EE.call(qq, Yq, Pq.cpu), qq
+            var CC = {};
+            return CC[pC] = bC, zz.call(CC, QC, AC.cpu), CC
           }, this.getDevice = function() {
-            var qq = {};
-            return qq[aq] = Oq, qq[Bq] = Oq, qq[Nq] = Oq, EE.call(qq, Yq, Pq.device), Qq && !qq[Nq] && jq && jq.mobile && (qq[Nq] = Hq), Qq && "Macintosh" == qq[Bq] && gq && typeof gq.standalone !== xq && gq.maxTouchPoints && gq.maxTouchPoints > 2 && (qq[Bq] = "iPad", qq[Nq] = oq), qq
-          }, this.Ba = function() {
-            var qq = {};
-            return qq[Wq] = Oq, qq[Vq] = Oq, EE.call(qq, Yq, Pq.engine), qq
+            var CC = {};
+            return CC[gC] = bC, CC[WC] = bC, CC[MC] = bC, zz.call(CC, QC, AC.device), xC && !CC[MC] && PC && PC.mobile && (CC[MC] = GC), xC && "Macintosh" == CC[WC] && ZC && typeof ZC.standalone !== fC && ZC.maxTouchPoints && ZC.maxTouchPoints > 2 && (CC[WC] = "iPad", CC[MC] = RC), CC
+          }, this.mg = function() {
+            var CC = {};
+            return CC[NC] = bC, CC[SC] = bC, zz.call(CC, QC, AC.engine), CC
           }, this.getOS = function() {
-            var qq = {};
-            return qq[Wq] = Oq, qq[Vq] = Oq, EE.call(qq, Yq, Pq.os), Qq && !qq[Wq] && jq && jq.platform && "Unknown" != jq.platform && (qq[Wq] = jq.platform.replace(/chrome os/i, wq).replace(/macos/i, Kq)), qq
+            var CC = {};
+            return CC[NC] = bC, CC[SC] = bC, zz.call(CC, QC, AC.os), xC && !CC[NC] && PC && PC.platform && "Unknown" != PC.platform && (CC[NC] = PC.platform.replace(/chrome os/i, LC).replace(/macos/i, UC)), CC
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.Ba(),
+              engine: this.mg(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return Yq
-          }, this.setUA = function(qq) {
-            return Yq = typeof qq === cq && qq.length > 500 ? qE(qq, 500) : qq, this
-          }, this.setUA(Yq), this
+            return QC
+          }, this.setUA = function(CC) {
+            return QC = typeof CC === qC && CC.length > 500 ? Cz(CC, 500) : CC, this
+          }, this.setUA(QC), this
         };
-      OE.VERSION = "1.0.41", OE.BROWSER = Iq([Wq, Vq, uq]), OE.CPU = Iq([dq]), OE.DEVICE = Iq([Bq, aq, Nq, jq, Hq, Pq, oq, Qq, yq]), OE.ENGINE = OE.OS = Iq([Wq, Vq]), typeof Eq !== xq ? (qq.exports && (Eq = qq.exports = OE), Eq.UAParser = OE) : gq.amdO ? (Yq = function() {
-        return OE
-      }.call(Eq, gq, Eq, qq)) === Oq || (qq.exports = Yq) : typeof lq !== xq && (lq.UAParser = OE);
-      var mE = typeof lq !== xq && (lq.jQuery || lq.Zepto);
-      if (mE && !mE.ua) {
-        var xE = new OE;
-        mE.ua = xE.getResult(), mE.ua.get = function() {
-          return xE.getUA()
-        }, mE.ua.set = function(qq) {
-          xE.setUA(qq);
-          var Eq = xE.getResult();
-          for (var gq in Eq) mE.ua[gq] = Eq[gq]
+      bz.VERSION = "1.0.41", bz.BROWSER = OC([NC, SC, FC]), bz.CPU = OC([pC]), bz.DEVICE = OC([WC, gC, MC, PC, GC, AC, RC, xC, JC]), bz.ENGINE = bz.OS = OC([NC, SC]), typeof zC !== fC ? (CC.exports && (zC = CC.exports = bz), zC.UAParser = bz) : ZC.amdO ? (QC = function() {
+        return bz
+      }.call(zC, ZC, zC, CC)) === bC || (CC.exports = QC) : typeof wC !== fC && (wC.UAParser = bz);
+      var nz = typeof wC !== fC && (wC.jQuery || wC.Zepto);
+      if (nz && !nz.ua) {
+        var fz = new bz;
+        nz.ua = fz.getResult(), nz.ua.get = function() {
+          return fz.getUA()
+        }, nz.ua.set = function(CC) {
+          fz.setUA(CC);
+          var zC = fz.getResult();
+          for (var ZC in zC) nz.ua[ZC] = zC[ZC]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

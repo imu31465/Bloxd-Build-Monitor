@@ -1,506 +1,273 @@
 export const id = 239;
-export const ids = [239];
+export const ids = [238, 239];
 export const modules = {
-  40466: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Oq,
-      f: () => mq
+  60929: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      RegisterShaderMaterial: () => QC.e,
+      ShaderMaterial: () => QC.r,
+      ShaderMaterialCreateFromSnippetAsync: () => QC.f,
+      ShaderMaterialParse: () => QC.o,
+      ShaderMaterialParseFromFileAsync: () => QC.i,
+      ShaderMaterialParseFromSnippetAsync: () => QC.k
     });
-    var Yq = gq(1914);
-    let lq = !1;
-
-    function Oq() {
-      lq = !0
-    }
-
-    function mq() {
-      lq && (lq = !1, (0, Yq.d)())
-    }
+    var QC = ZC(40297);
+    (0, QC.e)()
   },
-  40462: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq,
-      f: () => Oq,
-      h: () => xq
+  37590: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => wC
     });
-    var Yq = gq(40318),
-      lq = gq(40325);
-
-    function Oq(qq) {
-      if (qq.queries.drawCensus() < Yq.zb.BYTES) return null;
-      const Eq = qq.memoryData(qq.scratch(), Yq.zb.BYTES, 4, "the draw census");
-      return null === Eq ? null : {
-        terrainOpaque: Yq.zb.terrainOpaque(Eq, 0),
-        terrainTransparent: Yq.zb.terrainTransparent(Eq, 0),
-        terrainPack: Yq.zb.terrainPack(Eq, 0),
-        earthSky: Yq.zb.earthSky(Eq, 0),
-        skyMeshes: Yq.zb.skyMeshes(Eq, 0),
-        regular: Yq.zb.regular(Eq, 0),
-        thin: Yq.zb.thin(Eq, 0),
-        line: Yq.zb.line(Eq, 0),
-        text: Yq.zb.text(Eq, 0),
-        particles: Yq.zb.particles(Eq, 0),
-        terrainParts: Yq.zb.terrainParts(Eq, 0),
-        terrainCompiling: Yq.zb.terrainCompiling(Eq, 0)
+    var QC = ZC(37596);
+    class wC {
+      static GetPlanes(CC) {
+        const zC = [];
+        for (let ZC = 0; ZC < 6; ZC++) zC.push(new QC.d(0, 0, 0, 0));
+        return wC.GetPlanesToRef(CC, zC), zC
+      }
+      static GetNearPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] + ZC[2], zC.normal.y = ZC[7] + ZC[6], zC.normal.z = ZC[11] + ZC[10], zC.d = ZC[15] + ZC[14], zC.normalize()
+      }
+      static GetFarPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] - ZC[2], zC.normal.y = ZC[7] - ZC[6], zC.normal.z = ZC[11] - ZC[10], zC.d = ZC[15] - ZC[14], zC.normalize()
+      }
+      static GetLeftPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] + ZC[0], zC.normal.y = ZC[7] + ZC[4], zC.normal.z = ZC[11] + ZC[8], zC.d = ZC[15] + ZC[12], zC.normalize()
+      }
+      static GetRightPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] - ZC[0], zC.normal.y = ZC[7] - ZC[4], zC.normal.z = ZC[11] - ZC[8], zC.d = ZC[15] - ZC[12], zC.normalize()
+      }
+      static GetTopPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] - ZC[1], zC.normal.y = ZC[7] - ZC[5], zC.normal.z = ZC[11] - ZC[9], zC.d = ZC[15] - ZC[13], zC.normalize()
+      }
+      static GetBottomPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] + ZC[1], zC.normal.y = ZC[7] + ZC[5], zC.normal.z = ZC[11] + ZC[9], zC.d = ZC[15] + ZC[13], zC.normalize()
+      }
+      static GetPlanesToRef(CC, zC) {
+        wC.GetNearPlaneToRef(CC, zC[0]), wC.GetFarPlaneToRef(CC, zC[1]), wC.GetLeftPlaneToRef(CC, zC[2]), wC.GetRightPlaneToRef(CC, zC[3]), wC.GetTopPlaneToRef(CC, zC[4]), wC.GetBottomPlaneToRef(CC, zC[5])
+      }
+      static IsPointInFrustum(CC, zC) {
+        for (let ZC = 0; ZC < 6; ZC++)
+          if (zC[ZC].dotCoordinate(CC) < 0) return !1;
+        return !0
       }
     }
-
-    function mq(qq) {
-      const {
-        terrainOpaque: Eq,
-        terrainTransparent: gq,
-        earthSky: Yq,
-        skyMeshes: lq,
-        regular: Oq,
-        thin: mq,
-        line: xq,
-        text: Aq,
-        particles: cq
-      } = qq;
-      return Eq + gq + Yq + lq + Oq + mq + xq + Aq + cq
+  },
+  37596: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => wC
+    });
+    var QC = ZC(36963);
+    class wC {
+      constructor(CC, zC, ZC, wC) {
+        this.normal = new QC.r(CC, zC, ZC), this.d = wC
+      }
+      VZC() {
+        return [this.normal.x, this.normal.y, this.normal.z, this.d]
+      }
+      clone() {
+        return new wC(this.normal.x, this.normal.y, this.normal.z, this.d)
+      }
+      getClassName() {
+        return "Plane"
+      }
+      getHashCode() {
+        let CC = this.normal.getHashCode();
+        return CC = 397 * CC ^ this.d, CC
+      }
+      normalize() {
+        const CC = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let zC = 0;
+        return 0 !== CC && (zC = 1 / CC), this.normal.x *= zC, this.normal.y *= zC, this.normal.z *= zC, this.d *= zC, this
+      }
+      transform(CC) {
+        const zC = wC._TmpMatrix;
+        CC.invertToRef(zC);
+        const ZC = zC.m,
+          QC = this.normal.x,
+          bC = this.normal.y,
+          nC = this.normal.z,
+          fC = this.d,
+          oC = QC * ZC[0] + bC * ZC[1] + nC * ZC[2] + fC * ZC[3],
+          qC = QC * ZC[4] + bC * ZC[5] + nC * ZC[6] + fC * ZC[7],
+          FC = QC * ZC[8] + bC * ZC[9] + nC * ZC[10] + fC * ZC[11],
+          WC = QC * ZC[12] + bC * ZC[13] + nC * ZC[14] + fC * ZC[15];
+        return new wC(oC, qC, FC, WC)
+      }
+      dotCoordinate(CC) {
+        return this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z + this.d
+      }
+      copyFromPoints(CC, zC, ZC) {
+        const QC = zC.x - CC.x,
+          wC = zC.y - CC.y,
+          bC = zC.z - CC.z,
+          nC = ZC.x - CC.x,
+          fC = ZC.y - CC.y,
+          oC = ZC.z - CC.z,
+          qC = wC * oC - bC * fC,
+          FC = bC * nC - QC * oC,
+          WC = QC * fC - wC * nC,
+          NC = Math.sqrt(qC * qC + FC * FC + WC * WC);
+        let MC;
+        return MC = 0 !== NC ? 1 / NC : 0, this.normal.x = qC * MC, this.normal.y = FC * MC, this.normal.z = WC * MC, this.d = -(this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z), this
+      }
+      isFrontFacingTo(CC, zC) {
+        return QC.r.Dot(this.normal, CC) <= zC
+      }
+      signedDistanceTo(CC) {
+        return QC.r.Dot(CC, this.normal) + this.d
+      }
+      static FromArray(CC) {
+        return new wC(CC[0], CC[1], CC[2], CC[3])
+      }
+      static FromPoints(CC, zC, ZC) {
+        const QC = new wC(0, 0, 0, 0);
+        return QC.copyFromPoints(CC, zC, ZC), QC
+      }
+      static FromPositionAndNormal(CC, zC) {
+        const ZC = new wC(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(CC, zC, ZC)
+      }
+      static FromPositionAndNormalToRef(CC, zC, ZC) {
+        return ZC.normal.Av(zC), ZC.normal.normalize(), ZC.d = -CC.dot(ZC.normal), ZC
+      }
+      static SignedDistanceToPlaneFromPositionAndNormal(CC, zC, ZC) {
+        const wC = -(zC.x * CC.x + zC.y * CC.y + zC.z * CC.z);
+        return QC.r.Dot(ZC, zC) + wC
+      }
     }
-
-    function xq() {
-      const qq = (0, lq.e)();
-      return !0 === (null === qq || void 0 === qq ? void 0 : qq.isCoreRunning) ? function(qq) {
-        const Eq = Oq(qq);
-        if (null === Eq) return [];
-        const {
-          terrainOpaque: gq,
-          terrainTransparent: Yq,
-          terrainPack: lq,
-          earthSky: xq,
-          skyMeshes: Aq,
-          regular: cq,
-          thin: uq,
-          line: Bq,
-          text: Wq,
-          particles: Nq
-        } = Eq;
-        return [{
-          label: "Drawn",
-          value: `${mq(Eq)}`
-        }, {
-          label: "Terrain",
-          value: `${gq} opaque / ${Yq} transparent (${lq} shader pack)`
-        }, {
-          label: "Meshes / Thin bases",
-          value: `${cq} / ${uq}`
-        }, {
-          label: "Text / Lines",
-          value: `${Wq} / ${Bq}`
-        }, {
-          label: "Sky / Particles",
-          value: `${xq+Aq} / ${Nq}`
-        }]
-      }(qq.api) : []
+    wC._TmpMatrix = QC.b.Identity()
+  },
+  38501: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => bC
+    });
+    var QC = ZC(38507);
+    const wC = (CC, zC, ZC) => CC ? CC.getClassName && "Mesh" === CC.getClassName() ? null : !CC.getClassName || "SubMesh" !== CC.getClassName() && "PhysicsBody" !== CC.getClassName() ? CC.clone ? CC.clone() : Array.isArray(CC) ? CC.slice() : ZC && "object" === typeof CC ? {
+      ...CC
+    } : null : CC.clone(zC) : null;
+    class bC {
+      static DeepCopy(CC, zC, ZC, bC) {
+        let nC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const fC = function(CC) {
+          const zC = [];
+          do {
+            const ZC = Object.getOwnPropertyNames(CC);
+            for (const CC of ZC) - 1 === zC.indexOf(CC) && zC.push(CC)
+          } while (CC = Object.getPrototypeOf(CC));
+          return zC
+        }(CC);
+        for (const qC of fC) {
+          if ("_" === qC[0] && (!bC || -1 === bC.indexOf(qC))) continue;
+          if (qC.endsWith("Observable")) continue;
+          if (ZC && -1 !== ZC.indexOf(qC)) continue;
+          const fC = CC[qC],
+            FC = typeof fC;
+          if ("function" !== FC) try {
+            if ("object" === FC)
+              if (fC instanceof Uint8Array) zC[qC] = Uint8Array.from(fC);
+              else if (fC instanceof Array) {
+              if (zC[qC] = [], fC.length > 0)
+                if ("object" == typeof fC[0])
+                  for (let CC = 0; CC < fC.length; CC++) {
+                    const ZC = wC(fC[CC], zC, nC); - 1 === zC[qC].indexOf(ZC) && zC[qC].push(ZC)
+                  } else zC[qC] = fC.slice(0)
+            } else zC[qC] = wC(fC, zC, nC);
+            else zC[qC] = fC
+          } catch (oC) {
+            QC.c.Warn(oC.message)
+          }
+        }
+      }
     }
   },
-  40428: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => aq,
-      e: () => Wq,
-      h: () => Nq
-    });
-    var Yq = gq(1921),
-      lq = gq(1276),
-      Oq = gq(40325),
-      mq = gq(40343),
-      xq = gq(40350),
-      Aq = gq(40366);
-    const cq = new lq.b;
-    let uq = !1;
-
-    function Bq(qq) {
-      const Eq = (0, Oq.e)();
-      return null !== Eq && +qq === Eq.api.localId
-    }
-
-    function Wq() {
-      uq || (uq = !0, (0, Aq.l)(mq.m, (qq => {
-        var Eq, gq;
-        const Yq = (0, xq.d)(mq.m, qq);
-        if (!(0, xq.b)(Yq)) return;
-        const lq = Yq;
-        Bq(lq.RE) && Nq(lq.UE, {
-          icon: lq.sE,
-          level: lq.wE,
-          displayName: null !== (Eq = lq.FE) && void 0 !== Eq ? Eq : null,
-          durationMs: null !== (gq = lq.XE) && void 0 !== gq ? gq : null
-        })
-      })), (0, Aq.l)(mq.H, (qq => {
-        const Eq = (0, xq.d)(mq.H, qq);
-        if (!(0, xq.b)(Eq)) return;
-        const gq = Eq;
-        Bq(gq.RE) && Yq.b.remove(gq.UE)
-      })), (0, Aq.d)((() => {
-        Yq.b.clear()
-      })))
-    }
-
-    function Nq(qq, Eq) {
-      Yq.b.update(qq, Eq), cq.forEach((Eq => {
-        Eq(qq)
+  37731: (CC, zC, ZC) => {
+    function QC() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (CC => {
+        const zC = 16 * Math.random() | 0;
+        return ("x" === CC ? zC : 3 & zC | 8).toString(16)
       }))
     }
-    const aq = {
-      localEffectUpdated: {
-        watch: qq => cq.add(qq)
+    ZC.d(zC, {
+      b: () => QC
+    })
+  },
+  38507: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => QC
+    });
+    class QC {
+      static _CheckLimit(CC, zC) {
+        let ZC = QC._LogLimitOutputs[CC];
+        return ZC ? ZC.current++ : (ZC = {
+          limit: zC,
+          current: 1
+        }, QC._LogLimitOutputs[CC] = ZC), ZC.current <= ZC.limit
       }
-    }
-  },
-  40432: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq
-    });
-    var Yq = gq(4625),
-      lq = gq(4622),
-      Oq = gq(40353),
-      mq = gq(40366);
-    const xq = new Set(Yq.G),
-      Aq = Yq.G.map((qq => (new TextEncoder).encode(qq))),
-      cq = new Map;
-
-    function uq(qq, Eq) {
-      var gq;
-      return null === (gq = cq.get(qq)) || void 0 === gq ? void 0 : gq[Eq]
-    }(0, mq.l)(Yq.ec.NewOtherEntitySettings, (qq => {
-      qq.payloadKind === lq.hc.Msgpack && Aq.some((Eq => function(qq, Eq) {
-        const gq = Eq[0];
-        for (let Yq = qq.indexOf(gq); - 1 !== Yq && Yq + Eq.length <= qq.length; Yq = qq.indexOf(gq, Yq + 1)) {
-          let gq = 1;
-          for (; gq < Eq.length && qq[Yq + gq] === Eq[gq];) gq++;
-          if (gq === Eq.length) return !0
-        }
-        return !1
-      }(qq.payload, Eq))) && function(qq) {
-        if (null === qq || "object" !== typeof qq || null === qq.settings || "object" !== typeof qq.settings) return;
-        const Eq = String(qq.eId),
-          gq = qq.settings;
-        let Yq = cq.get(Eq);
-        for (const lq in gq) {
-          if (!xq.has(lq)) continue;
-          const qq = gq[lq];
-          null === qq || void 0 === qq ? Yq && delete Yq[lq] : (Yq ??= {}, Yq[lq] = qq)
-        }
-        Yq && cq.set(Eq, Yq)
-      }((0, Oq.e)(qq.payload))
-    })), (0, mq.d)((() => {
-      cq.clear()
-    }))
-  },
-  40421: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Nq,
-      e: () => cq,
-      h: () => Bq
-    });
-    var Yq = gq(38954),
-      lq = gq(1906),
-      Oq = gq(1276),
-      mq = gq(40343),
-      xq = gq(40350),
-      Aq = gq(40366);
-    const cq = new Yq.d;
-    let uq = {};
-
-    function Bq(qq) {
-      return uq[qq]
-    }
-    const Wq = new Oq.b;
-
-    function Nq(qq) {
-      return Wq.add(qq)
-    }
-
-    function aq(qq) {
-      Wq.callEach(qq, "a roster listener")
-    }(0, Aq.l)(mq.T, (qq => {
-      const Eq = (0, xq.d)(mq.T, qq);
-      if (void 0 === Eq) return;
-      const gq = Eq.xg.some((qq => {
-          let {
-            Ag: Eq,
-            cg: gq
-          } = qq;
-          return null !== gq && cq.has(Eq) && cq.getName(Eq) !== gq
-        })),
-        {
-          added: Yq,
-          removed: Oq,
-          settingChanges: Aq
-        } = cq.apply(Eq),
-        uq = new Set;
-      for (const lq of Aq)
-        for (const qq in lq.settings) uq.add(qq);
-      const Bq = gq || Yq.length > 0 || Oq.length > 0;
-      (Bq || uq.has("hideNameSeed")) && function() {
-        const qq = new Map;
-        for (const Eq of cq.ids()) {
-          const gq = cq.getName(Eq),
-            Yq = cq.getSetting(Eq, "hideNameSeed");
-          void 0 !== gq && void 0 !== Yq && null !== Yq && qq.set(gq, Yq)
-        }
-        lq.d.replaceAll(qq)
-      }(), aq({
-        kind: "roster",
-        members: Bq,
-        settings: uq
-      })
-    })), (0, Aq.l)(mq.F, (qq => {
-      const Eq = (0, xq.d)(mq.F, qq);
-      if (void 0 !== Eq) {
-        for (const {
-            yY: qq,
-            tY: gq,
-            rY: Yq
+      static _GenerateLimitMessage(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ZC = QC._LogLimitOutputs[CC];
+        if (!ZC || !QC.MessageLimitReached) return;
+        const wC = this._Levels[zC];
+        ZC.current === ZC.limit && QC[wC.name](QC.MessageLimitReached.replace(/%LIMIT%/g, "" + ZC.limit).replace(/%TYPE%/g, wC.name ?? ""))
+      }
+      static _AddLogEntry(CC) {
+        QC._LogCache = CC + QC._LogCache, QC.OnNewCacheEntry && QC.OnNewCacheEntry(CC)
+      }
+      static _FormatMessage(CC) {
+        const zC = CC => CC < 10 ? "0" + CC : "" + CC,
+          ZC = new Date;
+        return "[" + zC(ZC.getHours()) + ":" + zC(ZC.getMinutes()) + ":" + zC(ZC.getSeconds()) + "]: " + CC
+      }
+      static _LogDisabled(CC, zC) {}
+      static _LogEnabled() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zC = arguments.length > 1 ? arguments[1] : void 0,
+          ZC = arguments.length > 2 ? arguments[2] : void 0;
+        const wC = Array.isArray(zC) ? zC[0] : zC;
+        if (void 0 !== ZC && !QC._CheckLimit(wC, ZC)) return;
+        const bC = QC._FormatMessage(wC),
+          nC = this._Levels[CC],
+          fC = Array.isArray(zC) ? zC.slice(1) : [];
+        nC.logFunc && nC.logFunc("BJS - " + bC, ...fC);
+        const oC = `<div style='color:${nC.color}'>${bC}</div><br>`;
+        QC._AddLogEntry(oC), QC._GenerateLimitMessage(wC, CC)
+      }
+      static get LogCache() {
+        return QC._LogCache
+      }
+      static ClearLogCache() {
+        QC._LogCache = "", QC._LogLimitOutputs = {}, QC.errorsCount = 0
+      }
+      static set LogLevels(CC) {
+        QC.Log = QC._LogDisabled, QC.Warn = QC._LogDisabled, QC.Error = QC._LogDisabled;
+        const zC = [QC.MessageLogLevel, QC.WarningLogLevel, QC.ErrorLogLevel];
+        for (const ZC of zC)
+          if ((CC & ZC) === ZC) {
+            const CC = this._Levels[ZC];
+            QC[CC.name] = QC._LogEnabled.bind(QC, ZC)
           }
-          of Eq) uq[qq] = {
-          ...uq[qq],
-          [gq]: Yq
-        };
-        aq({
-          kind: "cosmetics",
-          updates: Eq
-        })
-      }
-    })), (0, Aq.d)((() => {
-      cq.clear(), uq = {}, lq.d.clear(), aq({
-        kind: "reset"
-      })
-    })), (0, Aq.h)((() => {
-      cq.clear(), aq({
-        kind: "reset"
-      })
-    }))
-  },
-  40448: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => nq,
-      g: () => dq,
-      i: () => fq,
-      m: () => Mq
-    });
-    var Yq = gq(1261),
-      lq = gq(583),
-      Oq = gq(96),
-      mq = gq(4625),
-      xq = gq(40318),
-      Aq = gq(40334),
-      cq = gq(40325),
-      uq = gq(40432),
-      Bq = gq(40421),
-      Wq = gq(40350),
-      Nq = gq(40366);
-
-    function aq(qq) {
-      let {
-        deadEId: Eq,
-        killerEId: gq,
-        killerLifeformType: Yq,
-        withItem: lq,
-        killstreak: Oq
-      } = qq;
-      return {
-        killer: Pq({
-          eId: gq,
-          lifeformType: Yq
-        }),
-        victim: Pq({
-          eId: Eq
-        }),
-        withItem: lq,
-        killstreak: Oq
       }
     }
-
-    function Vq(qq) {
-      let {
-        killer: Eq,
-        victim: gq,
-        withItem: Yq
-      } = qq;
-      return {
-        killer: Pq(Eq),
-        victim: Pq(gq),
-        withItem: Yq,
-        killstreak: 0
-      }
-    }
-
-    function dq(qq) {
-      rq && hq((() => "killed" === qq.kind ? aq(qq.body) : Vq(qq.body)))
-    }
-    const jq = "#2727f1",
-      Hq = "#912c2c";
-
-    function oq(qq, Eq) {
-      var gq;
-      return Bq.e.has(qq) ? null === (gq = Bq.e.getSettings(qq)) || void 0 === gq ? void 0 : gq[Eq] : (0, uq.d)(qq, Eq)
-    }
-
-    function Pq(qq) {
-      var Eq, gq, mq, xq, uq;
-      let {
-        eId: Wq,
-        name: Nq,
-        colour: aq,
-        lifeformType: Vq
-      } = qq;
-      if (void 0 === Wq || null === Wq || "" === Wq) {
-        const qq = Nq || null;
-        return {
-          id: null,
-          shownName: qq,
-          lifeformType: null === qq && null !== Vq && void 0 !== Vq ? Vq : null,
-          colour: aq || null,
-          local: !1,
-          realName: null
-        }
-      }
-      const dq = String(Wq),
-        Pq = null === (Eq = (0, cq.e)()) || void 0 === Eq ? void 0 : Eq.api,
-        Qq = void 0 !== Pq && String(Pq.localId) === dq,
-        yq = null !== (gq = Bq.e.getName(dq)) && void 0 !== gq ? gq : null,
-        tq = null !== (mq = oq(dq, "hideNameSeed")) && void 0 !== mq ? mq : null;
-      let rq = null === yq ? null : (0, Yq.e)(yq, !Oq.featureFlags.canSeeRealPlayerNames, tq) || null,
-        vq = null;
-      if (null === rq && void 0 !== Pq) {
-        const qq = Pq.getEntityType(dq);
-        "Player" !== qq && (rq = (0, Aq.f)(Pq, +dq) || null), vq = lq.m.includes(qq) ? qq : null
-      }
-      return {
-        id: dq,
-        shownName: rq,
-        lifeformType: null === rq && null !== (xq = null !== (uq = vq) && void 0 !== uq ? uq : Vq) && void 0 !== xq ? xq : null,
-        colour: aq || oq(dq, "killfeedColour") || (Qq ? jq : Hq),
-        local: Qq,
-        realName: yq
-      }
-    }
-    const Qq = 32;
-    let yq = [],
-      tq = null,
-      rq = !1,
-      vq = !1;
-
-    function hq(qq) {
-      null === tq ? (yq.length === Qq && yq.shift(), yq.push(qq)) : tq(qq())
-    }
-
-    function nq() {
-      vq || (vq = !0, (0, Nq.l)(mq.ec.PlayerKilled, (qq => {
-        const Eq = (0, Wq.e)(qq);
-        (0, Wq.b)(Eq) && hq((() => aq(Eq)))
-      })), (0, Nq.l)(mq.ec.CustomKillfeed, (qq => {
-        const Eq = (0, Wq.e)(qq);
-        (0, Wq.b)(Eq) && (0, Wq.b)(Eq.killer) && (0, Wq.b)(Eq.victim) && hq((() => Vq(Eq)))
-      })), (0, Nq.d)((() => {
-        yq = []
-      })))
-    }
-    const bq = Object.freeze([0, 0, 0]),
-      iq = [0, 0, 0],
-      Zq = [0, 0, 0],
-      fq = {
-        kill: {
-          watch(qq) {
-            if (rq = !0, 0 === yq.length) return tq = qq, () => {
-              rq = !1, tq = null
-            };
-            const Eq = setTimeout((() => {
-              const Eq = yq;
-              yq = [], tq = qq;
-              for (const Yq of Eq) try {
-                qq(Yq())
-              } catch (gq) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", gq)
-              }
-            }), 0);
-            return () => {
-              clearTimeout(Eq), rq = !1, tq = null
-            }
-          }
-        }
-      },
-      Mq = {
-        localPos() {
-          const qq = (0, cq.e)();
-          if (null === qq) return bq;
-          const Eq = qq.api.apiView;
-          for (let gq = 0; gq < 3; gq++) iq[gq] = xq.t.localPos(Eq, 0, gq);
-          return iq
-        },
-        targetedBlockPos() {
-          const qq = (0, cq.e)();
-          if (null === qq || xq.t.targetBlockId(qq.api.apiView, 0) === xq.id) return null;
-          for (let Eq = 0; Eq < 3; Eq++) Zq[Eq] = xq.t.targetBlock(qq.api.apiView, 0, Eq);
-          return Zq
-        }
-      }
-  },
-  38954: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq
-    });
-    class Yq {
-      constructor() {
-        this.members = new Map
-      }
-      apply(qq) {
-        const Eq = {
-          added: [],
-          removed: [],
-          settingChanges: []
-        };
-        for (const Yq of qq.xg) {
-          let qq = this.members.get(Yq.Ag);
-          if (qq || (qq = {
-              name: null,
-              settings: {}
-            }, this.members.set(Yq.Ag, qq), Eq.added.push(Yq.Ag)), null !== Yq.cg && (qq.name = Yq.cg), null !== Yq.ug || Yq.Bg.length > 0) {
-            const gq = null === Yq.ug ? {} : JSON.parse(Yq.ug);
-            Object.assign(qq.settings, gq);
-            for (const Eq of Yq.Bg) delete qq.settings[Eq], gq[Eq] = void 0;
-            Eq.settingChanges.push({
-              playerId: Yq.Ag,
-              settings: gq
-            })
-          }
-        }
-        for (const Yq of qq.Wg) {
-          const qq = this.members.get(Yq);
-          var gq;
-          if (qq) this.members.delete(Yq), Eq.removed.push({
-            playerId: Yq,
-            name: null !== (gq = qq.name) && void 0 !== gq ? gq : void 0
-          })
-        }
-        return Eq
-      }
-      has(qq) {
-        return this.members.has(qq)
-      }
-      ids() {
-        return [...this.members.keys()]
-      }
-      getName(qq) {
-        var Eq, gq;
-        return null !== (Eq = null === (gq = this.members.get(qq)) || void 0 === gq ? void 0 : gq.name) && void 0 !== Eq ? Eq : void 0
-      }
-      getSettings(qq) {
-        var Eq;
-        return null === (Eq = this.members.get(qq)) || void 0 === Eq ? void 0 : Eq.settings
-      }
-      getSetting(qq, Eq) {
-        var gq;
-        return null === (gq = this.members.get(qq)) || void 0 === gq ? void 0 : gq.settings[Eq]
-      }
-      clear() {
-        this.members.clear()
-      }
-    }
+    QC.NoneLogLevel = 0, QC.MessageLogLevel = 1, QC.WarningLogLevel = 2, QC.ErrorLogLevel = 4, QC.AllLogLevel = 7, QC.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QC._LogCache = "", QC._LogLimitOutputs = {}, QC._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], QC.errorsCount = 0, QC.Log = QC._LogEnabled.bind(QC, QC.MessageLogLevel), QC.Warn = QC._LogEnabled.bind(QC, QC.WarningLogLevel), QC.Error = QC._LogEnabled.bind(QC, QC.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

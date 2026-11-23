@@ -1,248 +1,133 @@
 export const id = 233;
 export const ids = [233];
 export const modules = {
-  37758: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => lq
+  36985: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => wC
     });
-    var Yq = gq(37767);
-    class lq {
-      static GetPlanes(qq) {
-        const Eq = [];
-        for (let gq = 0; gq < 6; gq++) Eq.push(new Yq.d(0, 0, 0, 0));
-        return lq.GetPlanesToRef(qq, Eq), Eq
+    var QC = ZC(36987);
+    class wC {
+      static get LastCreatedEngine() {
+        return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
-      static GetNearPlaneToRef(qq, Eq) {
-        const gq = qq.m;
-        Eq.normal.x = gq[3] + gq[2], Eq.normal.y = gq[7] + gq[6], Eq.normal.z = gq[11] + gq[10], Eq.d = gq[15] + gq[14], Eq.normalize()
-      }
-      static GetFarPlaneToRef(qq, Eq) {
-        const gq = qq.m;
-        Eq.normal.x = gq[3] - gq[2], Eq.normal.y = gq[7] - gq[6], Eq.normal.z = gq[11] - gq[10], Eq.d = gq[15] - gq[14], Eq.normalize()
-      }
-      static GetLeftPlaneToRef(qq, Eq) {
-        const gq = qq.m;
-        Eq.normal.x = gq[3] + gq[0], Eq.normal.y = gq[7] + gq[4], Eq.normal.z = gq[11] + gq[8], Eq.d = gq[15] + gq[12], Eq.normalize()
-      }
-      static GetRightPlaneToRef(qq, Eq) {
-        const gq = qq.m;
-        Eq.normal.x = gq[3] - gq[0], Eq.normal.y = gq[7] - gq[4], Eq.normal.z = gq[11] - gq[8], Eq.d = gq[15] - gq[12], Eq.normalize()
-      }
-      static GetTopPlaneToRef(qq, Eq) {
-        const gq = qq.m;
-        Eq.normal.x = gq[3] - gq[1], Eq.normal.y = gq[7] - gq[5], Eq.normal.z = gq[11] - gq[9], Eq.d = gq[15] - gq[13], Eq.normalize()
-      }
-      static GetBottomPlaneToRef(qq, Eq) {
-        const gq = qq.m;
-        Eq.normal.x = gq[3] + gq[1], Eq.normal.y = gq[7] + gq[5], Eq.normal.z = gq[11] + gq[9], Eq.d = gq[15] + gq[13], Eq.normalize()
-      }
-      static GetPlanesToRef(qq, Eq) {
-        lq.GetNearPlaneToRef(qq, Eq[0]), lq.GetFarPlaneToRef(qq, Eq[1]), lq.GetLeftPlaneToRef(qq, Eq[2]), lq.GetRightPlaneToRef(qq, Eq[3]), lq.GetTopPlaneToRef(qq, Eq[4]), lq.GetBottomPlaneToRef(qq, Eq[5])
-      }
-      static IsPointInFrustum(qq, Eq) {
-        for (let gq = 0; gq < 6; gq++)
-          if (Eq[gq].dotCoordinate(qq) < 0) return !1;
-        return !0
+      static get LastCreatedScene() {
+        return this._LastCreatedScene
       }
     }
+    wC.Instances = [], wC.OnEnginesDisposedObservable = new QC.d, wC._LastCreatedScene = null, wC.UseFallbackTexture = !0, wC.FallbackTexture = ""
   },
-  37767: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => lq
+  38501: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => bC
     });
-    var Yq = gq(37139);
-    class lq {
-      constructor(qq, Eq, gq, lq) {
-        this.normal = new Yq.q(qq, Eq, gq), this.d = lq
-      }
-      bYq() {
-        return [this.normal.x, this.normal.y, this.normal.z, this.d]
-      }
-      clone() {
-        return new lq(this.normal.x, this.normal.y, this.normal.z, this.d)
-      }
-      getClassName() {
-        return "Plane"
-      }
-      getHashCode() {
-        let qq = this.normal.getHashCode();
-        return qq = 397 * qq ^ this.d, qq
-      }
-      normalize() {
-        const qq = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let Eq = 0;
-        return 0 !== qq && (Eq = 1 / qq), this.normal.x *= Eq, this.normal.y *= Eq, this.normal.z *= Eq, this.d *= Eq, this
-      }
-      transform(qq) {
-        const Eq = lq._TmpMatrix;
-        qq.invertToRef(Eq);
-        const gq = Eq.m,
-          Yq = this.normal.x,
-          Oq = this.normal.y,
-          mq = this.normal.z,
-          xq = this.d,
-          Aq = Yq * gq[0] + Oq * gq[1] + mq * gq[2] + xq * gq[3],
-          cq = Yq * gq[4] + Oq * gq[5] + mq * gq[6] + xq * gq[7],
-          uq = Yq * gq[8] + Oq * gq[9] + mq * gq[10] + xq * gq[11],
-          Bq = Yq * gq[12] + Oq * gq[13] + mq * gq[14] + xq * gq[15];
-        return new lq(Aq, cq, uq, Bq)
-      }
-      dotCoordinate(qq) {
-        return this.normal.x * qq.x + this.normal.y * qq.y + this.normal.z * qq.z + this.d
-      }
-      copyFromPoints(qq, Eq, gq) {
-        const Yq = Eq.x - qq.x,
-          lq = Eq.y - qq.y,
-          Oq = Eq.z - qq.z,
-          mq = gq.x - qq.x,
-          xq = gq.y - qq.y,
-          Aq = gq.z - qq.z,
-          cq = lq * Aq - Oq * xq,
-          uq = Oq * mq - Yq * Aq,
-          Bq = Yq * xq - lq * mq,
-          Wq = Math.sqrt(cq * cq + uq * uq + Bq * Bq);
-        let Nq;
-        return Nq = 0 !== Wq ? 1 / Wq : 0, this.normal.x = cq * Nq, this.normal.y = uq * Nq, this.normal.z = Bq * Nq, this.d = -(this.normal.x * qq.x + this.normal.y * qq.y + this.normal.z * qq.z), this
-      }
-      isFrontFacingTo(qq, Eq) {
-        return Yq.q.Dot(this.normal, qq) <= Eq
-      }
-      signedDistanceTo(qq) {
-        return Yq.q.Dot(qq, this.normal) + this.d
-      }
-      static FromArray(qq) {
-        return new lq(qq[0], qq[1], qq[2], qq[3])
-      }
-      static FromPoints(qq, Eq, gq) {
-        const Yq = new lq(0, 0, 0, 0);
-        return Yq.copyFromPoints(qq, Eq, gq), Yq
-      }
-      static FromPositionAndNormal(qq, Eq) {
-        const gq = new lq(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(qq, Eq, gq)
-      }
-      static FromPositionAndNormalToRef(qq, Eq, gq) {
-        return gq.normal.WG(Eq), gq.normal.normalize(), gq.d = -qq.dot(gq.normal), gq
-      }
-      static SignedDistanceToPlaneFromPositionAndNormal(qq, Eq, gq) {
-        const lq = -(Eq.x * qq.x + Eq.y * qq.y + Eq.z * qq.z);
-        return Yq.q.Dot(gq, Eq) + lq
-      }
-    }
-    lq._TmpMatrix = Yq.e.Identity()
-  },
-  38649: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
-    });
-    var Yq = gq(38653);
-    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
-      ...qq
-    } : null : qq.clone(Eq) : null;
-    class Oq {
-      static DeepCopy(qq, Eq, gq, Oq) {
-        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const xq = function(qq) {
-          const Eq = [];
+    var QC = ZC(38507);
+    const wC = (CC, zC, ZC) => CC ? CC.getClassName && "Mesh" === CC.getClassName() ? null : !CC.getClassName || "SubMesh" !== CC.getClassName() && "PhysicsBody" !== CC.getClassName() ? CC.clone ? CC.clone() : Array.isArray(CC) ? CC.slice() : ZC && "object" === typeof CC ? {
+      ...CC
+    } : null : CC.clone(zC) : null;
+    class bC {
+      static DeepCopy(CC, zC, ZC, bC) {
+        let nC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const fC = function(CC) {
+          const zC = [];
           do {
-            const gq = Object.getOwnPropertyNames(qq);
-            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
-          } while (qq = Object.getPrototypeOf(qq));
-          return Eq
-        }(qq);
-        for (const cq of xq) {
-          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
-          if (cq.endsWith("Observable")) continue;
-          if (gq && -1 !== gq.indexOf(cq)) continue;
-          const xq = qq[cq],
-            uq = typeof xq;
-          if ("function" !== uq) try {
-            if ("object" === uq)
-              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
-              else if (xq instanceof Array) {
-              if (Eq[cq] = [], xq.length > 0)
-                if ("object" == typeof xq[0])
-                  for (let qq = 0; qq < xq.length; qq++) {
-                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
-                  } else Eq[cq] = xq.slice(0)
-            } else Eq[cq] = lq(xq, Eq, mq);
-            else Eq[cq] = xq
-          } catch (Aq) {
-            Yq.b.Warn(Aq.message)
+            const ZC = Object.getOwnPropertyNames(CC);
+            for (const CC of ZC) - 1 === zC.indexOf(CC) && zC.push(CC)
+          } while (CC = Object.getPrototypeOf(CC));
+          return zC
+        }(CC);
+        for (const qC of fC) {
+          if ("_" === qC[0] && (!bC || -1 === bC.indexOf(qC))) continue;
+          if (qC.endsWith("Observable")) continue;
+          if (ZC && -1 !== ZC.indexOf(qC)) continue;
+          const fC = CC[qC],
+            FC = typeof fC;
+          if ("function" !== FC) try {
+            if ("object" === FC)
+              if (fC instanceof Uint8Array) zC[qC] = Uint8Array.from(fC);
+              else if (fC instanceof Array) {
+              if (zC[qC] = [], fC.length > 0)
+                if ("object" == typeof fC[0])
+                  for (let CC = 0; CC < fC.length; CC++) {
+                    const ZC = wC(fC[CC], zC, nC); - 1 === zC[qC].indexOf(ZC) && zC[qC].push(ZC)
+                  } else zC[qC] = fC.slice(0)
+            } else zC[qC] = wC(fC, zC, nC);
+            else zC[qC] = fC
+          } catch (oC) {
+            QC.c.Warn(oC.message)
           }
         }
       }
     }
   },
-  37872: (qq, Eq, gq) => {
-    function Yq() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (qq => {
-        const Eq = 16 * Math.random() | 0;
-        return ("x" === qq ? Eq : 3 & Eq | 8).toString(16)
+  37731: (CC, zC, ZC) => {
+    function QC() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (CC => {
+        const zC = 16 * Math.random() | 0;
+        return ("x" === CC ? zC : 3 & zC | 8).toString(16)
       }))
     }
-    gq.d(Eq, {
-      d: () => Yq
+    ZC.d(zC, {
+      b: () => QC
     })
   },
-  38653: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Yq
+  38507: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => QC
     });
-    class Yq {
-      static _CheckLimit(qq, Eq) {
-        let gq = Yq._LogLimitOutputs[qq];
-        return gq ? gq.current++ : (gq = {
-          limit: Eq,
+    class QC {
+      static _CheckLimit(CC, zC) {
+        let ZC = QC._LogLimitOutputs[CC];
+        return ZC ? ZC.current++ : (ZC = {
+          limit: zC,
           current: 1
-        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
+        }, QC._LogLimitOutputs[CC] = ZC), ZC.current <= ZC.limit
       }
-      static _GenerateLimitMessage(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const gq = Yq._LogLimitOutputs[qq];
-        if (!gq || !Yq.MessageLimitReached) return;
-        const lq = this._Levels[Eq];
-        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
+      static _GenerateLimitMessage(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ZC = QC._LogLimitOutputs[CC];
+        if (!ZC || !QC.MessageLimitReached) return;
+        const wC = this._Levels[zC];
+        ZC.current === ZC.limit && QC[wC.name](QC.MessageLimitReached.replace(/%LIMIT%/g, "" + ZC.limit).replace(/%TYPE%/g, wC.name ?? ""))
       }
-      static _AddLogEntry(qq) {
-        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
+      static _AddLogEntry(CC) {
+        QC._LogCache = CC + QC._LogCache, QC.OnNewCacheEntry && QC.OnNewCacheEntry(CC)
       }
-      static _FormatMessage(qq) {
-        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
-          gq = new Date;
-        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
+      static _FormatMessage(CC) {
+        const zC = CC => CC < 10 ? "0" + CC : "" + CC,
+          ZC = new Date;
+        return "[" + zC(ZC.getHours()) + ":" + zC(ZC.getMinutes()) + ":" + zC(ZC.getSeconds()) + "]: " + CC
       }
-      static _LogDisabled(qq, Eq) {}
+      static _LogDisabled(CC, zC) {}
       static _LogEnabled() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Eq = arguments.length > 1 ? arguments[1] : void 0,
-          gq = arguments.length > 2 ? arguments[2] : void 0;
-        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
-        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
-        const Oq = Yq._FormatMessage(lq),
-          mq = this._Levels[qq],
-          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
-        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
-        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
-        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zC = arguments.length > 1 ? arguments[1] : void 0,
+          ZC = arguments.length > 2 ? arguments[2] : void 0;
+        const wC = Array.isArray(zC) ? zC[0] : zC;
+        if (void 0 !== ZC && !QC._CheckLimit(wC, ZC)) return;
+        const bC = QC._FormatMessage(wC),
+          nC = this._Levels[CC],
+          fC = Array.isArray(zC) ? zC.slice(1) : [];
+        nC.logFunc && nC.logFunc("BJS - " + bC, ...fC);
+        const oC = `<div style='color:${nC.color}'>${bC}</div><br>`;
+        QC._AddLogEntry(oC), QC._GenerateLimitMessage(wC, CC)
       }
       static get LogCache() {
-        return Yq._LogCache
+        return QC._LogCache
       }
       static ClearLogCache() {
-        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
+        QC._LogCache = "", QC._LogLimitOutputs = {}, QC.errorsCount = 0
       }
-      static set LogLevels(qq) {
-        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
-        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
-        for (const gq of Eq)
-          if ((qq & gq) === gq) {
-            const qq = this._Levels[gq];
-            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
+      static set LogLevels(CC) {
+        QC.Log = QC._LogDisabled, QC.Warn = QC._LogDisabled, QC.Error = QC._LogDisabled;
+        const zC = [QC.MessageLogLevel, QC.WarningLogLevel, QC.ErrorLogLevel];
+        for (const ZC of zC)
+          if ((CC & ZC) === ZC) {
+            const CC = this._Levels[ZC];
+            QC[CC.name] = QC._LogEnabled.bind(QC, ZC)
           }
       }
     }
-    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
+    QC.NoneLogLevel = 0, QC.MessageLogLevel = 1, QC.WarningLogLevel = 2, QC.ErrorLogLevel = 4, QC.AllLogLevel = 7, QC.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QC._LogCache = "", QC._LogLimitOutputs = {}, QC._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -254,8 +139,169 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
+    }], QC.errorsCount = 0, QC.Log = QC._LogEnabled.bind(QC, QC.MessageLogLevel), QC.Warn = QC._LogEnabled.bind(QC, QC.WarningLogLevel), QC.Error = QC._LogEnabled.bind(QC, QC.ErrorLogLevel)
+  },
+  36987: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => nC
+    });
+    const QC = "undefined" !== typeof WeakRef;
+    class wC {
+      constructor(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZC = arguments.length > 2 ? arguments[2] : void 0,
+          QC = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(CC, zC, ZC, QC)
+      }
+      initialize(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ZC = arguments.length > 2 ? arguments[2] : void 0,
+          QC = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = CC, this.skipNextObservers = zC, this.target = ZC, this.currentTarget = QC, this
+      }
+    }
+    class bC {
+      constructor(CC, zC) {
+        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = CC, this.mask = zC, this.scope = ZC, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+      }
+      remove() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(CC)
+      }
+    }
+    class nC {
+      static FromPromise(CC, zC) {
+        const ZC = new nC;
+        return CC.then((CC => {
+          ZC.notifyObservers(CC)
+        })).catch((CC => {
+          if (!zC) throw CC;
+          zC.notifyObservers(CC)
+        })), ZC
+      }
+      get observers() {
+        return this._observers
+      }
+      constructor(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = zC, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new wC(0), CC && (this._onObserverAdded = CC)
+      }
+      add(CC) {
+        let zC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          ZC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!CC) return null;
+        const wC = new bC(CC, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        wC.unregisterOnNextCall = ZC, zC ? this._observers.unshift(wC) : this._observers.push(wC), this._onObserverAdded && this._onObserverAdded(wC), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(wC, this._lastNotifiedValue);
+        const nC = QC ? new WeakRef(this) : {
+          deref: () => this
+        };
+        return wC._remove = function() {
+          let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const zC = nC.deref();
+          zC && (CC ? zC.remove(wC) : zC._remove(wC))
+        }, wC
+      }
+      addOnce(CC) {
+        return this.add(CC, void 0, void 0, void 0, !0)
+      }
+      remove(CC) {
+        if (!CC) return !1;
+        CC._remove = null;
+        return -1 !== this._observers.indexOf(CC) && (this._deferUnregister(CC), !0)
+      }
+      removeCallback(CC, zC) {
+        for (let ZC = 0; ZC < this._observers.length; ZC++) {
+          const QC = this._observers[ZC];
+          if (!QC._willBeUnregistered && (QC.callback === CC && (!zC || zC === QC.scope))) return this._deferUnregister(QC), !0
+        }
+        return !1
+      }
+      _deferUnregister(CC) {
+        CC._willBeUnregistered || (this._numObserversMarkedAsDeleted++, CC.unregisterOnNextCall = !1, CC._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(CC)
+        }), 0))
+      }
+      _remove(CC) {
+        let zC = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!CC) return !1;
+        const ZC = this._observers.indexOf(CC);
+        return -1 !== ZC && (zC && this._numObserversMarkedAsDeleted--, this._observers.splice(ZC, 1), !0)
+      }
+      makeObserverTopPriority(CC) {
+        this._remove(CC, !1), this._observers.unshift(CC)
+      }
+      makeObserverBottomPriority(CC) {
+        this._remove(CC, !1), this._observers.push(CC)
+      }
+      notifyObservers(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ZC = arguments.length > 2 ? arguments[2] : void 0,
+          QC = arguments.length > 3 ? arguments[3] : void 0,
+          wC = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = CC), !this._observers.length) return !0;
+        const bC = this._eventState;
+        bC.mask = zC, bC.target = ZC, bC.currentTarget = QC, bC.skipNextObservers = !1, bC.lastReturnValue = CC, bC.userInfo = wC;
+        for (const nC of this._observers)
+          if (!nC._willBeUnregistered && (nC.mask & zC && (nC.unregisterOnNextCall && this._deferUnregister(nC), nC.scope ? bC.lastReturnValue = nC.callback.apply(nC.scope, [CC, bC]) : bC.lastReturnValue = nC.callback(CC, bC)), bC.skipNextObservers)) return !1;
+        return !0
+      }
+      notifyObserver(CC, zC) {
+        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = zC), CC._willBeUnregistered) return;
+        const QC = this._eventState;
+        QC.mask = ZC, QC.skipNextObservers = !1, CC.unregisterOnNextCall && this._deferUnregister(CC), CC.callback(zC, QC)
+      }
+      hasObservers() {
+        return this._observers.length - this._numObserversMarkedAsDeleted > 0
+      }
+      clear() {
+        for (; this._observers.length;) {
+          const CC = this._observers.pop();
+          CC && (CC._remove = null)
+        }
+        this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
+      }
+      cleanLastNotifiedState() {
+        this._hasNotified = !1, this._lastNotifiedValue = void 0
+      }
+      clone() {
+        const CC = new nC;
+        return CC._observers = this._observers.slice(0), CC
+      }
+      hasSpecificMask() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const zC of this._observers)
+          if (zC.mask & CC || zC.mask === CC) return !0;
+        return !1
+      }
+    }
+  },
+  60923: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      AsyncLoop: () => QC.d,
+      RegisterTools: () => QC.e,
+      Tools: () => QC.g,
+      className: () => QC.i
+    });
+    var QC = ZC(39913);
+    (0, QC.e)()
+  },
+  37002: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => bC,
+      d: () => wC
+    });
+    const QC = {};
+
+    function wC(CC, zC) {
+      QC[CC] = zC
+    }
+
+    function bC(CC) {
+      return QC[CC]
+    }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

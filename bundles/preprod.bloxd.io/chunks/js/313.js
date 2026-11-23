@@ -1,150 +1,462 @@
 export const id = 313;
 export const ids = [313];
 export const modules = {
-  41921: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => mq
+  41665: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      _KTXTextureLoader: () => gC
     });
-    var Yq = gq(39617);
-    const lq = "clipPlaneFragment",
-      Oq = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
+    var QC = ZC(38507);
+    class wC {
+      constructor(CC, zC) {
+        if (this.data = CC, this.isInvalid = !1, !wC.IsValid(CC)) return this.isInvalid = !0, void QC.c.Error("texture missing KTX identifier");
+        const ZC = Uint32Array.BYTES_PER_ELEMENT,
+          bC = new DataView(this.data.buffer, this.data.byteOffset + 12, 13 * ZC),
+          nC = 67305985 === bC.getUint32(0, !0);
+        return this.glType = bC.getUint32(1 * ZC, nC), this.glTypeSize = bC.getUint32(2 * ZC, nC), this.glFormat = bC.getUint32(3 * ZC, nC), this.glInternalFormat = bC.getUint32(4 * ZC, nC), this.glBaseInternalFormat = bC.getUint32(5 * ZC, nC), this.pixelWidth = bC.getUint32(6 * ZC, nC), this.pixelHeight = bC.getUint32(7 * ZC, nC), this.pixelDepth = bC.getUint32(8 * ZC, nC), this.numberOfArrayElements = bC.getUint32(9 * ZC, nC), this.numberOfFaces = bC.getUint32(10 * ZC, nC), this.numberOfMipmapLevels = bC.getUint32(11 * ZC, nC), this.bytesOfKeyValueData = bC.getUint32(12 * ZC, nC), 0 !== this.glType ? (QC.c.Error("only compressed formats currently supported"), void(this.isInvalid = !0)) : (this.numberOfMipmapLevels = Math.max(1, this.numberOfMipmapLevels), 0 === this.pixelHeight || 0 !== this.pixelDepth ? (QC.c.Error("only 2D textures currently supported"), void(this.isInvalid = !0)) : 0 !== this.numberOfArrayElements ? (QC.c.Error("texture arrays not currently supported"), void(this.isInvalid = !0)) : this.numberOfFaces !== zC ? (QC.c.Error("number of faces expected" + zC + ", but found " + this.numberOfFaces), void(this.isInvalid = !0)) : void(this.loadType = wC.COMPRESSED_2D))
+      }
+      uploadLevels(CC, zC) {
+        switch (this.loadType) {
+          case wC.COMPRESSED_2D:
+            this._upload2DCompressedLevels(CC, zC);
+          case wC.TEX_2D:
+          case wC.COMPRESSED_3D:
+          case wC.TEX_3D:
+        }
+      }
+      _upload2DCompressedLevels(CC, zC) {
+        let ZC = wC.HEADER_LEN + this.bytesOfKeyValueData,
+          QC = this.pixelWidth,
+          bC = this.pixelHeight;
+        const nC = zC ? this.numberOfMipmapLevels : 1;
+        for (let wC = 0; wC < nC; wC++) {
+          const zC = new Int32Array(this.data.buffer, this.data.byteOffset + ZC, 1)[0];
+          ZC += 4;
+          for (let nC = 0; nC < this.numberOfFaces; nC++) {
+            const fC = new Uint8Array(this.data.buffer, this.data.byteOffset + ZC, zC);
+            CC.mg()._uploadCompressedDataToTextureDirectly(CC, CC.format, QC, bC, fC, nC, wC), ZC += zC, ZC += 3 - (zC + 3) % 4
+          }
+          QC = Math.max(1, .5 * QC), bC = Math.max(1, .5 * bC)
+        }
+      }
+      static IsValid(CC) {
+        if (CC.byteLength >= 12) {
+          const zC = new Uint8Array(CC.buffer, CC.byteOffset, 12);
+          if (171 === zC[0] && 75 === zC[1] && 84 === zC[2] && 88 === zC[3] && 32 === zC[4] && 49 === zC[5] && 49 === zC[6] && 187 === zC[7] && 13 === zC[8] && 10 === zC[9] && 26 === zC[10] && 10 === zC[11]) return !0
+        }
+        return !1
+      }
+    }
+    wC.HEADER_LEN = 64, wC.COMPRESSED_2D = 0, wC.COMPRESSED_3D = 1, wC.TEX_2D = 2, wC.TEX_3D = 3;
+    var bC, nC, fC, oC = ZC(41672),
+      qC = ZC(39913);
+
+    function FC(CC, zC) {
+      const ZC = zC?.jsDecoderModule || KTX2DECODER;
+      CC && (CC.wasmBaseUrl && (ZC.Transcoder.WasmBaseUrl = CC.wasmBaseUrl), CC.wasmUASTCToASTC && (ZC.LiteTranscoder_UASTC_ASTC.WasmModuleURL = CC.wasmUASTCToASTC), CC.wasmUASTCToBC7 && (ZC.LiteTranscoder_UASTC_BC7.WasmModuleURL = CC.wasmUASTCToBC7), CC.wasmUASTCToRGBA_UNORM && (ZC.LiteTranscoder_UASTC_RGBA_UNORM.WasmModuleURL = CC.wasmUASTCToRGBA_UNORM), CC.wasmUASTCToRGBA_SRGB && (ZC.LiteTranscoder_UASTC_RGBA_SRGB.WasmModuleURL = CC.wasmUASTCToRGBA_SRGB), CC.wasmUASTCToR8_UNORM && (ZC.LiteTranscoder_UASTC_R8_UNORM.WasmModuleURL = CC.wasmUASTCToR8_UNORM), CC.wasmUASTCToRG8_UNORM && (ZC.LiteTranscoder_UASTC_RG8_UNORM.WasmModuleURL = CC.wasmUASTCToRG8_UNORM), CC.jsMSCTranscoder && (ZC.MSCTranscoder.JSModuleURL = CC.jsMSCTranscoder), CC.wasmMSCTranscoder && (ZC.MSCTranscoder.WasmModuleURL = CC.wasmMSCTranscoder), CC.wasmZSTDDecoder && (ZC.ZSTDDecoder.WasmModuleURL = CC.wasmZSTDDecoder)), zC && (zC.wasmUASTCToASTC && (ZC.LiteTranscoder_UASTC_ASTC.WasmBinary = zC.wasmUASTCToASTC), zC.wasmUASTCToBC7 && (ZC.LiteTranscoder_UASTC_BC7.WasmBinary = zC.wasmUASTCToBC7), zC.wasmUASTCToRGBA_UNORM && (ZC.LiteTranscoder_UASTC_RGBA_UNORM.WasmBinary = zC.wasmUASTCToRGBA_UNORM), zC.wasmUASTCToRGBA_SRGB && (ZC.LiteTranscoder_UASTC_RGBA_SRGB.WasmBinary = zC.wasmUASTCToRGBA_SRGB), zC.wasmUASTCToR8_UNORM && (ZC.LiteTranscoder_UASTC_R8_UNORM.WasmBinary = zC.wasmUASTCToR8_UNORM), zC.wasmUASTCToRG8_UNORM && (ZC.LiteTranscoder_UASTC_RG8_UNORM.WasmBinary = zC.wasmUASTCToRG8_UNORM), zC.jsMSCTranscoder && (ZC.MSCTranscoder.JSModule = zC.jsMSCTranscoder), zC.wasmMSCTranscoder && (ZC.MSCTranscoder.WasmBinary = zC.wasmMSCTranscoder), zC.wasmZSTDDecoder && (ZC.ZSTDDecoder.WasmBinary = zC.wasmZSTDDecoder))
+    }
+
+    function WC(CC) {
+      let zC;
+      "undefined" === typeof CC && "undefined" !== typeof KTX2DECODER && (CC = KTX2DECODER), onmessage = ZC => {
+        if (ZC.data) switch (ZC.data.action) {
+          case "init": {
+            const QC = ZC.data.urls;
+            QC && (QC.jsDecoderModule && "undefined" === typeof CC && (importScripts(QC.jsDecoderModule), CC = KTX2DECODER), FC(QC)), ZC.data.wasmBinaries && FC(void 0, {
+              ...ZC.data.wasmBinaries,
+              jsDecoderModule: CC
+            }), zC = new CC.KTX2Decoder, postMessage({
+              action: "init"
+            });
+            break
+          }
+          case "setDefaultDecoderOptions":
+            CC.KTX2Decoder.DefaultDecoderOptions = ZC.data.options;
+            break;
+          case "decode":
+            zC.decode(ZC.data.data, ZC.data.caps, ZC.data.options).then((CC => {
+              const zC = [];
+              for (let ZC = 0; ZC < CC.mipmaps.length; ++ZC) {
+                const QC = CC.mipmaps[ZC];
+                QC && QC.data && zC.push(QC.data.buffer)
+              }
+              postMessage({
+                action: "decoded",
+                success: !0,
+                decodedData: CC
+              }, zC)
+            })).catch((CC => {
+              postMessage({
+                action: "decoded",
+                success: !1,
+                cq: CC
+              })
+            }))
+        }
+      }
+    }! function(CC) {
+      CC[CC.ETC1S = 0] = "ETC1S", CC[CC.UASTC4x4 = 1] = "UASTC4x4", CC[CC.RGBA32 = 2] = "RGBA32"
+    }(bC || (bC = {})),
+    function(CC) {
+      CC[CC.ASTC_4X4_RGBA = 0] = "ASTC_4X4_RGBA", CC[CC.ASTC_4x4_RGBA = 0] = "ASTC_4x4_RGBA", CC[CC.BC7_RGBA = 1] = "BC7_RGBA", CC[CC.BC3_RGBA = 2] = "BC3_RGBA", CC[CC.BC1_RGB = 3] = "BC1_RGB", CC[CC.PVRTC1_4_RGBA = 4] = "PVRTC1_4_RGBA", CC[CC.PVRTC1_4_RGB = 5] = "PVRTC1_4_RGB", CC[CC.ETC2_RGBA = 6] = "ETC2_RGBA", CC[CC.ETC1_RGB = 7] = "ETC1_RGB", CC[CC.RGBA32 = 8] = "RGBA32", CC[CC.R8 = 9] = "R8", CC[CC.RG8 = 10] = "RG8"
+    }(nC || (nC = {})),
+    function(CC) {
+      CC[CC.COMPRESSED_RGBA_BPTC_UNORM_EXT = 36492] = "COMPRESSED_RGBA_BPTC_UNORM_EXT", CC[CC.COMPRESSED_RGBA_ASTC_4X4_KHR = 37808] = "COMPRESSED_RGBA_ASTC_4X4_KHR", CC[CC.COMPRESSED_RGB_S3TC_DXT1_EXT = 33776] = "COMPRESSED_RGB_S3TC_DXT1_EXT", CC[CC.COMPRESSED_RGBA_S3TC_DXT5_EXT = 33779] = "COMPRESSED_RGBA_S3TC_DXT5_EXT", CC[CC.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 35842] = "COMPRESSED_RGBA_PVRTC_4BPPV1_IMG", CC[CC.COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 35840] = "COMPRESSED_RGB_PVRTC_4BPPV1_IMG", CC[CC.COMPRESSED_RGBA8_ETC2_EAC = 37496] = "COMPRESSED_RGBA8_ETC2_EAC", CC[CC.COMPRESSED_RGB8_ETC2 = 37492] = "COMPRESSED_RGB8_ETC2", CC[CC.COMPRESSED_RGB_ETC1_WEBGL = 36196] = "COMPRESSED_RGB_ETC1_WEBGL", CC[CC.RGBA8Format = 32856] = "RGBA8Format", CC[CC.R8Format = 33321] = "R8Format", CC[CC.RG8Format = 33323] = "RG8Format"
+    }(fC || (fC = {}));
+    class NC {
+      static GetDefaultNumWorkers() {
+        return "object" === typeof navigator && navigator.hardwareConcurrency ? Math.min(Math.floor(.5 * navigator.hardwareConcurrency), 4) : 1
+      }
+      static _Initialize(CC) {
+        if (NC._WorkerPoolPromise || NC._DecoderModulePromise) return;
+        const zC = {
+          wasmBaseUrl: qC.g.ScriptBaseUrl,
+          jsDecoderModule: qC.g.GetBabylonScriptURL(this.URLConfig.jsDecoderModule, !0),
+          wasmUASTCToASTC: qC.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToASTC, !0),
+          wasmUASTCToBC7: qC.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToBC7, !0),
+          wasmUASTCToRGBA_UNORM: qC.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_UNORM, !0),
+          wasmUASTCToRGBA_SRGB: qC.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_SRGB, !0),
+          wasmUASTCToR8_UNORM: qC.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToR8_UNORM, !0),
+          wasmUASTCToRG8_UNORM: qC.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRG8_UNORM, !0),
+          jsMSCTranscoder: qC.g.GetBabylonScriptURL(this.URLConfig.jsMSCTranscoder, !0),
+          wasmMSCTranscoder: qC.g.GetBabylonScriptURL(this.URLConfig.wasmMSCTranscoder, !0),
+          wasmZSTDDecoder: qC.g.GetBabylonScriptURL(this.URLConfig.wasmZSTDDecoder, !0)
+        };
+        CC && "function" === typeof Worker && "undefined" !== typeof URL ? NC._WorkerPoolPromise = new Promise((ZC => {
+          const QC = `${FC}(${WC})()`,
+            wC = URL.createObjectURL(new Blob([QC], {
+              type: "application/javascript"
+            }));
+          ZC(new oC.e(CC, (async () => await async function(CC, zC, ZC) {
+            return await new Promise(((QC, wC) => {
+              const bC = zC => {
+                  CC.removeEventListener("error", bC), CC.removeEventListener("message", nC), wC(zC)
+                },
+                nC = zC => {
+                  "init" === zC.data.action && (CC.removeEventListener("error", bC), CC.removeEventListener("message", nC), QC(CC))
+                };
+              CC.addEventListener("error", bC), CC.addEventListener("message", nC), CC.postMessage({
+                action: "init",
+                urls: ZC,
+                wasmBinaries: zC
+              })
+            }))
+          }(new Worker(wC), void 0, zC))))
+        })) : "undefined" === typeof NC._KTX2DecoderModule ? NC._DecoderModulePromise = qC.g.LoadBabylonScriptAsync(zC.jsDecoderModule).then((() => (NC._KTX2DecoderModule = KTX2DECODER, NC._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, NC._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, FC(zC, NC._KTX2DecoderModule), new NC._KTX2DecoderModule.KTX2Decoder))) : (NC._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, NC._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, NC._DecoderModulePromise = Promise.resolve(new NC._KTX2DecoderModule.KTX2Decoder))
+      }
+      constructor(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NC.DefaultNumWorkers;
+        this._engine = CC;
+        const ZC = "object" === typeof zC && zC.workerPool || NC.WorkerPool;
+        if (ZC) NC._WorkerPoolPromise = Promise.resolve(ZC);
+        else {
+          "object" === typeof zC ? NC._KTX2DecoderModule = zC?.binariesAndModulesContainer?.jsDecoderModule : "undefined" !== typeof KTX2DECODER && (NC._KTX2DecoderModule = KTX2DECODER);
+          const CC = "number" === typeof zC ? zC : zC.numWorkers ?? NC.DefaultNumWorkers;
+          NC._Initialize(CC)
+        }
+      }
+      async _uploadAsync(CC, zC, ZC) {
+        const QC = await this._decodeAsync(CC, ZC);
+        this._createTexture(QC, zC, ZC)
+      }
+      async _decodeAsync(CC, zC) {
+        const ZC = this._engine.getCaps(),
+          QC = {
+            astc: !!ZC.astc,
+            bptc: !!ZC.bptc,
+            s3tc: !!ZC.s3tc,
+            pvrtc: !!ZC.pvrtc,
+            etc2: !!ZC.etc2,
+            etc1: !!ZC.etc1
+          };
+        if (NC._WorkerPoolPromise) {
+          const ZC = await NC._WorkerPoolPromise;
+          return await new Promise(((wC, bC) => {
+            ZC.push(((ZC, nC) => {
+              const fC = CC => {
+                  ZC.removeEventListener("error", fC), ZC.removeEventListener("message", oC), bC(CC), nC()
+                },
+                oC = CC => {
+                  "decoded" === CC.data.action && (ZC.removeEventListener("error", fC), ZC.removeEventListener("message", oC), CC.data.success ? wC(CC.data.decodedData) : bC({
+                    message: CC.data.cq
+                  }), nC())
+                };
+              ZC.addEventListener("error", fC), ZC.addEventListener("message", oC), ZC.postMessage({
+                action: "setDefaultDecoderOptions",
+                options: NC.DefaultDecoderOptions._getKTX2DecoderOptions()
+              });
+              const qC = new Uint8Array(CC.byteLength);
+              qC.set(new Uint8Array(CC.buffer, CC.byteOffset, CC.byteLength)), ZC.postMessage({
+                action: "decode",
+                data: qC,
+                caps: QC,
+                options: zC
+              }, [qC.buffer])
+            }))
+          }))
+        }
+        if (NC._DecoderModulePromise) {
+          const QC = await NC._DecoderModulePromise;
+          return NC.DefaultDecoderOptions.isDirty && (NC._KTX2DecoderModule.KTX2Decoder.DefaultDecoderOptions = NC.DefaultDecoderOptions._getKTX2DecoderOptions()), await new Promise(((wC, bC) => {
+            QC.decode(CC, ZC, zC).then((CC => {
+              wC(CC)
+            })).catch((CC => {
+              bC({
+                message: CC
+              })
+            }))
+          }))
+        }
+        throw new Error("KTX2 decoder module is not available")
+      }
+      _createTexture(CC, zC, ZC) {
+        if ((CC.layerCount ?? 1) > 1) throw new Error("KTX2 container - array textures are not supported by this texture loader.");
+        this._engine._bindTextureDirectly(3553, zC), ZC && (ZC.transcodedFormat = CC.transcodedFormat, ZC.isInGammaSpace = CC.isInGammaSpace, ZC.hasAlpha = CC.hasAlpha, ZC.transcoderName = CC.transcoderName);
+        let QC = !0;
+        switch (CC.transcodedFormat) {
+          case 32856:
+            zC.type = 0, zC.format = 5;
+            break;
+          case 33321:
+            zC.type = 0, zC.format = 6;
+            break;
+          case 33323:
+            zC.type = 0, zC.format = 7;
+            break;
+          default:
+            zC.format = CC.transcodedFormat, QC = !1
+        }
+        if (zC._gammaSpace = CC.isInGammaSpace, zC.generateMipMaps = CC.mipmaps.length > 1, zC.width = CC.mipmaps[0].width, zC.height = CC.mipmaps[0].height, CC.errors) throw new Error("KTX2 container - could not transcode the data. " + CC.errors);
+        for (let wC = 0; wC < CC.mipmaps.length; ++wC) {
+          const ZC = CC.mipmaps[wC];
+          if (!ZC || !ZC.data) throw new Error("KTX2 container - could not transcode one of the image");
+          QC ? (zC.width = ZC.width, zC.height = ZC.height, this._engine._uploadDataToTextureDirectly(zC, ZC.data, 0, wC, void 0, !0)) : this._engine._uploadCompressedDataToTextureDirectly(zC, CC.transcodedFormat, ZC.width, ZC.height, ZC.data, 0, wC)
+        }
+        zC._extension = ".ktx2", zC.isReady = !0, this._engine._bindTextureDirectly(3553, null)
+      }
+      static IsValid(CC) {
+        if (CC.byteLength >= 12) {
+          const zC = new Uint8Array(CC.buffer, CC.byteOffset, 12);
+          if (171 === zC[0] && 75 === zC[1] && 84 === zC[2] && 88 === zC[3] && 32 === zC[4] && 50 === zC[5] && 48 === zC[6] && 187 === zC[7] && 13 === zC[8] && 10 === zC[9] && 26 === zC[10] && 10 === zC[11]) return !0
+        }
+        return !1
+      }
+    }
+
+    function MC(CC) {
+      switch (CC) {
+        case 35916:
+          return 33776;
+        case 35918:
+          return 33778;
+        case 35919:
+          return 33779;
+        case 37493:
+          return 37492;
+        case 37497:
+          return 37496;
+        case 37495:
+          return 37494;
+        case 37840:
+          return 37808;
+        case 37841:
+          return 37809;
+        case 37842:
+          return 37810;
+        case 37843:
+          return 37811;
+        case 37844:
+          return 37812;
+        case 37845:
+          return 37813;
+        case 37846:
+          return 37814;
+        case 37847:
+          return 37815;
+        case 37848:
+          return 37816;
+        case 37849:
+          return 37817;
+        case 37850:
+          return 37818;
+        case 37851:
+          return 37819;
+        case 37852:
+          return 37820;
+        case 37853:
+          return 37821;
+        case 36493:
+          return 36492
+      }
+      return null
+    }
+    NC.URLConfig = {
+      jsDecoderModule: "https://cdn.babylonjs.com/babylon.ktx2Decoder.js",
+      wasmUASTCToASTC: null,
+      wasmUASTCToBC7: null,
+      wasmUASTCToRGBA_UNORM: null,
+      wasmUASTCToRGBA_SRGB: null,
+      wasmUASTCToR8_UNORM: null,
+      wasmUASTCToRG8_UNORM: null,
+      jsMSCTranscoder: null,
+      wasmMSCTranscoder: null,
+      wasmZSTDDecoder: null
+    }, NC.DefaultNumWorkers = NC.GetDefaultNumWorkers(), NC.DefaultDecoderOptions = new class {
+      constructor() {
+        this._isDirty = !0, this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = !0, this._ktx2DecoderOptions = {}
+      }
+      get isDirty() {
+        return this._isDirty
+      }
+      get useRGBAIfASTCBC7NotAvailableWhenUASTC() {
+        return this._useRGBAIfASTCBC7NotAvailableWhenUASTC
+      }
+      set useRGBAIfASTCBC7NotAvailableWhenUASTC(CC) {
+        this._useRGBAIfASTCBC7NotAvailableWhenUASTC !== CC && (this._useRGBAIfASTCBC7NotAvailableWhenUASTC = CC, this._isDirty = !0)
+      }
+      get useRGBAIfOnlyBC1BC3AvailableWhenUASTC() {
+        return this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC
+      }
+      set useRGBAIfOnlyBC1BC3AvailableWhenUASTC(CC) {
+        this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC !== CC && (this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = CC, this._isDirty = !0)
+      }
+      get forceRGBA() {
+        return this._forceRGBA
+      }
+      set forceRGBA(CC) {
+        this._forceRGBA !== CC && (this._forceRGBA = CC, this._isDirty = !0)
+      }
+      get forceR8() {
+        return this._forceR8
+      }
+      set forceR8(CC) {
+        this._forceR8 !== CC && (this._forceR8 = CC, this._isDirty = !0)
+      }
+      get forceRG8() {
+        return this._forceRG8
+      }
+      set forceRG8(CC) {
+        this._forceRG8 !== CC && (this._forceRG8 = CC, this._isDirty = !0)
+      }
+      get bypassTranscoders() {
+        return this._bypassTranscoders
+      }
+      set bypassTranscoders(CC) {
+        this._bypassTranscoders !== CC && (this._bypassTranscoders = CC, this._isDirty = !0)
+      }
+      _getKTX2DecoderOptions() {
+        if (!this._isDirty) return this._ktx2DecoderOptions;
+        this._isDirty = !1;
+        const CC = {};
+        return void 0 !== this._useRGBAIfASTCBC7NotAvailableWhenUASTC && (CC.useRGBAIfASTCBC7NotAvailableWhenUASTC = this._useRGBAIfASTCBC7NotAvailableWhenUASTC), void 0 !== this._forceRGBA && (CC.forceRGBA = this._forceRGBA), void 0 !== this._forceR8 && (CC.forceR8 = this._forceR8), void 0 !== this._forceRG8 && (CC.forceRG8 = this._forceRG8), void 0 !== this._bypassTranscoders && (CC.bypassTranscoders = this._bypassTranscoders), this.useRGBAIfOnlyBC1BC3AvailableWhenUASTC && (CC.transcodeFormatDecisionTree = {
+          UASTC: {
+            transcodeFormat: [nC.BC1_RGB, nC.BC3_RGBA],
+            yes: {
+              transcodeFormat: nC.RGBA32,
+              engineFormat: 32856,
+              roundToMultiple4: !1
+            }
+          }
+        }), this._ktx2DecoderOptions = CC, CC
+      }
+    };
+    class gC {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(CC, zC, ZC, QC) {
+        if (Array.isArray(CC)) return;
+        zC._invertVScale = !zC.invertY;
+        const bC = zC.mg(),
+          nC = new wC(CC, 6),
+          fC = MC(nC.glInternalFormat);
+        null !== fC ? (zC.format = fC, zC._useSRGBBuffer = bC._getUseSRGBBuffer(!0, !zC.generateMipMaps), zC._gammaSpace = !0) : zC.format = nC.glInternalFormat;
+        const oC = nC.numberOfMipmapLevels > 1 && zC.generateMipMaps;
+        bC._unpackFlipY(!0), nC.uploadLevels(zC, zC.generateMipMaps), zC.width = nC.pixelWidth, zC.height = nC.pixelHeight, bC._setCubeMapTextureParams(zC, oC, nC.numberOfMipmapLevels - 1), zC.isReady = !0, zC.onLoadedObservable.notifyObservers(zC), zC.onLoadedObservable.clear(), QC && QC()
+      }
+      loadData(CC, zC, ZC, bC) {
+        if (wC.IsValid(CC)) {
+          zC._invertVScale = !zC.invertY;
+          const QC = new wC(CC, 1),
+            bC = MC(QC.glInternalFormat);
+          null !== bC ? (zC.format = bC, zC._useSRGBBuffer = zC.mg()._getUseSRGBBuffer(!0, !zC.generateMipMaps), zC._gammaSpace = !0) : zC.format = QC.glInternalFormat, ZC(QC.pixelWidth, QC.pixelHeight, zC.generateMipMaps, !0, (() => {
+            QC.uploadLevels(zC, zC.generateMipMaps)
+          }), QC.isInvalid)
+        } else if (NC.IsValid(CC)) {
+          new NC(zC.mg())._uploadAsync(CC, zC, bC).then((() => {
+            ZC(zC.width, zC.height, zC.generateMipMaps, !0, (() => {}), !1)
+          }), (CC => {
+            QC.c.Warn(`Failed to load KTX2 texture data: ${CC.message}`), ZC(0, 0, !1, !1, (() => {}), !0)
+          }))
+        } else QC.c.Error("texture missing KTX identifier"), ZC(0, 0, !1, !1, (() => {}), !0)
+      }
     }
   },
-  41905: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
+  41672: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => wC
     });
-    var Yq = gq(39617);
-    const lq = "clipPlaneFragmentDeclaration",
-      Oq = "#ifdef CLIPPLANE\nvarying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nvarying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nvarying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nvarying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nvarying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nvarying float fClipDistance6;\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
+    class QC {
+      constructor(CC) {
+        this._pendingActions = new Array, this._workerInfos = CC.map((CC => ({
+          workerPromise: Promise.resolve(CC),
+          idle: !0
+        })))
+      }
+      dispose() {
+        for (const CC of this._workerInfos) CC.workerPromise.then((CC => {
+          CC.terminate()
+        }));
+        this._workerInfos.length = 0, this._pendingActions.length = 0
+      }
+      push(CC) {
+        this._executeOnIdleWorker(CC) || this._pendingActions.push(CC)
+      }
+      _executeOnIdleWorker(CC) {
+        for (const zC of this._workerInfos)
+          if (zC.idle) return this._execute(zC, CC), !0;
+        return !1
+      }
+      _execute(CC, zC) {
+        CC.idle = !1, CC.workerPromise.then((ZC => {
+          zC(ZC, (() => {
+            const zC = this._pendingActions.shift();
+            zC ? this._execute(CC, zC) : CC.idle = !0
+          }))
+        }))
+      }
     }
-  },
-  41956: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq
-    });
-    var Yq = gq(39617);
-    const lq = "fogFragment",
-      Oq = "#ifdef FOG\nfloat fog=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor.rgb=mix(vFogColor,color.rgb,fog);\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
+    class wC extends QC {
+      constructor(CC, zC) {
+        let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wC.DefaultOptions;
+        super([]), this._maxWorkers = CC, this._createWorkerAsync = zC, this._options = ZC
+      }
+      push(CC) {
+        if (!this._executeOnIdleWorker(CC))
+          if (this._workerInfos.length < this._maxWorkers) {
+            const zC = {
+              workerPromise: this._createWorkerAsync(),
+              idle: !1
+            };
+            this._workerInfos.push(zC), this._execute(zC, CC)
+          } else this._pendingActions.push(CC)
+      }
+      _execute(CC, zC) {
+        CC.timeoutId && (clearTimeout(CC.timeoutId), delete CC.timeoutId), super._execute(CC, ((ZC, QC) => {
+          zC(ZC, (() => {
+            QC(), CC.idle && (CC.timeoutId = setTimeout((() => {
+              CC.workerPromise.then((CC => {
+                CC.terminate()
+              }));
+              const zC = this._workerInfos.indexOf(CC); - 1 !== zC && this._workerInfos.splice(zC, 1)
+            }), this._options.idleTimeElapsedBeforeRelease))
+          }))
+        }))
+      }
     }
-  },
-  41912: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq
-    });
-    var Yq = gq(39617);
-    const lq = "fogFragmentDeclaration",
-      Oq = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\n#define E 2.71828\nuniform vec4 vFogInfos;uniform vec3 vFogColor;varying vec3 vFogDistance;float CalcFogFactor()\n{float fogCoeff=1.0;float fogStart=vFogInfos.y;float fogEnd=vFogInfos.z;float fogDensity=vFogInfos.w;float fogDistance=length(vFogDistance);if (FOGMODE_LINEAR==vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
-    }
-  },
-  41670: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => mq
-    });
-    var Yq = gq(39617);
-    const lq = "helperFunctions",
-      Oq = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
-    }
-  },
-  41880: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
-    });
-    var Yq = gq(39617);
-    const lq = "imageProcessingDeclaration",
-      Oq = "#ifdef EXPOSURE\nuniform float exposureLinear;\n#endif\n#ifdef CONTRAST\nuniform float contrast;\n#endif\n#ifdef WHITEBALANCE\nuniform mat3 whiteBalanceMatrix;\n#endif\n#if defined(VIGNETTE) || defined(DITHER)\nuniform vec2 vInverseScreenSize;\n#endif\n#ifdef VIGNETTE\nuniform vec4 vignetteSettings1;uniform vec4 vignetteSettings2;\n#endif\n#ifdef COLORCURVES\nuniform vec4 vCameraColorCurveNegative;uniform vec4 vCameraColorCurveNeutral;uniform vec4 vCameraColorCurvePositive;\n#endif\n#ifdef COLORGRADING\n#ifdef COLORGRADING3D\nuniform highp sampler3D txColorTransform;\n#else\nuniform sampler2D txColorTransform;\n#endif\nuniform vec4 colorTransformSettings;\n#endif\n#ifdef DITHER\nuniform float ditherIntensity;\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
-    }
-  },
-  41888: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
-    });
-    var Yq = gq(39617);
-    const lq = "imageProcessingFunctions",
-      Oq = "#if defined(COLORGRADING) && !defined(COLORGRADING3D)\n/** \n* Polyfill for SAMPLE_TEXTURE_3D,which is unsupported in WebGL.\n* sampler3dSetting.x=textureOffset (0.5/textureSize).\n* sampler3dSetting.y=textureSize.\n*/\n#define inline\nvec3 sampleTexture3D(sampler2D colorTransform,vec3 color,vec2 sampler3dSetting)\n{float sliceSize=2.0*sampler3dSetting.x; \n#ifdef SAMPLER3DGREENDEPTH\nfloat sliceContinuous=(color.g-sampler3dSetting.x)*sampler3dSetting.y;\n#else\nfloat sliceContinuous=(color.b-sampler3dSetting.x)*sampler3dSetting.y;\n#endif\nfloat sliceInteger=floor(sliceContinuous);float sliceFraction=sliceContinuous-sliceInteger;\n#ifdef SAMPLER3DGREENDEPTH\nvec2 sliceUV=color.rb;\n#else\nvec2 sliceUV=color.rg;\n#endif\nsliceUV.x*=sliceSize;sliceUV.x+=sliceInteger*sliceSize;sliceUV=saturate(sliceUV);vec4 slice0Color=texture2D(colorTransform,sliceUV);sliceUV.x+=sliceSize;sliceUV=saturate(sliceUV);vec4 slice1Color=texture2D(colorTransform,sliceUV);vec3 result=mix(slice0Color.rgb,slice1Color.rgb,sliceFraction);\n#ifdef SAMPLER3DBGRMAP\ncolor.rgb=result.rgb;\n#else\ncolor.rgb=result.bgr;\n#endif\nreturn color;}\n#endif\n#if TONEMAPPING==3\nconst float PBRNeutralStartCompression=0.8-0.04;const float PBRNeutralDesaturation=0.15;vec3 PBRNeutralToneMapping( vec3 color ) {float x=min(color.r,min(color.g,color.b));float offset=x<0.08 ? x-6.25*x*x : 0.04;color-=offset;float peak=max(color.r,max(color.g,color.b));if (peak<PBRNeutralStartCompression) return color;float d=1.-PBRNeutralStartCompression;float newPeak=1.-d*d/(peak+d-PBRNeutralStartCompression);color*=newPeak/peak;float g=1.-1./(PBRNeutralDesaturation*(peak-newPeak)+1.);return mix(color,newPeak*vec3(1,1,1),g);}\n#endif\n#if TONEMAPPING==2\nconst mat3 ACESInputMat=mat3(\nvec3(0.59719,0.07600,0.02840),\nvec3(0.35458,0.90834,0.13383),\nvec3(0.04823,0.01566,0.83777)\n);const mat3 ACESOutputMat=mat3(\nvec3( 1.60475,-0.10208,-0.00327),\nvec3(-0.53108, 1.10813,-0.07276),\nvec3(-0.07367,-0.00605, 1.07602)\n);vec3 RRTAndODTFit(vec3 v)\n{vec3 a=v*(v+0.0245786)-0.000090537;vec3 b=v*(0.983729*v+0.4329510)+0.238081;return a/b;}\nvec3 ACESFitted(vec3 color)\n{color=ACESInputMat*color;color=RRTAndODTFit(color);color=ACESOutputMat*color;color=saturate(color);return color;}\n#endif\n#define CUSTOM_IMAGEPROCESSINGFUNCTIONS_DEFINITIONS\nvec4 applyImageProcessing(vec4 result) {\n#define CUSTOM_IMAGEPROCESSINGFUNCTIONS_UPDATERESULT_ATSTART\n#ifdef WHITEBALANCE\nresult.rgb=whiteBalanceMatrix*result.rgb;result.rgb=max(result.rgb,0.0);\n#endif\n#ifdef EXPOSURE\nresult.rgb*=exposureLinear;\n#endif\n#ifdef VIGNETTE\nvec2 viewportXY=gl_FragCoord.xy*vInverseScreenSize;viewportXY=viewportXY*2.0-1.0;vec3 vignetteXY1=vec3(viewportXY*vignetteSettings1.xy+vignetteSettings1.zw,1.0);float vignetteTerm=dot(vignetteXY1,vignetteXY1);float vignette=pow(vignetteTerm,vignetteSettings2.w);vec3 vignetteColor=vignetteSettings2.rgb;\n#ifdef VIGNETTEBLENDMODEMULTIPLY\nvec3 vignetteColorMultiplier=mix(vignetteColor,vec3(1,1,1),vignette);result.rgb*=vignetteColorMultiplier;\n#endif\n#ifdef VIGNETTEBLENDMODEOPAQUE\nresult.rgb=mix(vignetteColor,result.rgb,vignette);\n#endif\n#endif\n#if TONEMAPPING==3\nresult.rgb=PBRNeutralToneMapping(result.rgb);\n#elif TONEMAPPING==2\nresult.rgb=ACESFitted(result.rgb);\n#elif TONEMAPPING==1\nconst float tonemappingCalibration=1.590579;result.rgb=1.0-exp2(-tonemappingCalibration*result.rgb);\n#endif\nresult.rgb=toGammaSpace(result.rgb);result.rgb=saturate(result.rgb);\n#ifdef CONTRAST\nvec3 resultHighContrast=result.rgb*result.rgb*(3.0-2.0*result.rgb);if (contrast<1.0) {result.rgb=mix(vec3(0.5,0.5,0.5),result.rgb,contrast);} else {result.rgb=mix(result.rgb,resultHighContrast,contrast-1.0);}\nresult.rgb=max(result.rgb,0.);\n#endif\n#ifdef COLORGRADING\nvec3 colorTransformInput=result.rgb*colorTransformSettings.xxx+colorTransformSettings.yyy;\n#ifdef COLORGRADING3D\nvec3 colorTransformOutput=texture(txColorTransform,colorTransformInput).rgb;\n#else\nvec3 colorTransformOutput=sampleTexture3D(txColorTransform,colorTransformInput,colorTransformSettings.yz).rgb;\n#endif\nresult.rgb=mix(result.rgb,colorTransformOutput,colorTransformSettings.www);\n#endif\n#ifdef COLORCURVES\nfloat luma=getLuminance(result.rgb);vec2 curveMix=clamp(vec2(luma*3.0-1.5,luma*-3.0+1.5),vec2(0.0),vec2(1.0));vec4 colorCurve=vCameraColorCurveNeutral+curveMix.x*vCameraColorCurvePositive-curveMix.y*vCameraColorCurveNegative;result.rgb*=colorCurve.rgb;result.rgb=mix(vec3(luma),result.rgb,colorCurve.a);\n#endif\n#ifdef DITHER\nfloat rand=getRand(gl_FragCoord.xy*vInverseScreenSize);float dither=mix(-ditherIntensity,ditherIntensity,rand);result.rgb=saturate(result.rgb+vec3(dither));\n#endif\n#define CUSTOM_IMAGEPROCESSINGFUNCTIONS_UPDATERESULT_ATEND\nreturn result;}";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
-    }
-  },
-  41747: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
-    });
-    var Yq = gq(39617);
-    const lq = "logDepthDeclaration",
-      Oq = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
-    }
-  },
-  41948: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
-    });
-    var Yq = gq(39617);
-    const lq = "logDepthFragment",
-      Oq = "#ifdef LOGARITHMICDEPTH\ngl_FragDepthEXT=log2(vFragmentDepth)*logarithmicDepthConstant*0.5;\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
-    }
-  },
-  41823: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => mq
-    });
-    var Yq = gq(39617);
-    const lq = "objectIdFunctions",
-      Oq = "highp vec4 encodeObjectId(highp float objectId) {\n#ifdef PREPASS_OBJECT_ID_R8\nreturn vec4(objectId/255.0,0.0,0.0,1.0);\n#else\nhighp float id=floor(objectId);highp vec3 encodedId=vec3(\nfloor(mod(id,16777216.0)/65536.0),\nfloor(mod(id,65536.0)/256.0),\nmod(id,256.0)\n)/255.0;return vec4(encodedId,step(0.5,id));\n#endif\n}\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
-    }
-  },
-  41831: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => mq
-    });
-    var Yq = gq(39617);
-    gq(41823);
-    const lq = "prePassDeclaration",
-      Oq = "#ifdef PREPASS\n#extension GL_EXT_draw_buffers : require\n#ifdef PREPASS_MESH_BLEND_TAG\n#if {X}>0\n#if PREPASS_MESH_BLEND_TAG_INDEX==0\nlayout(location=0) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=0) out highp vec4 glFragData0;\n#endif\n#endif\n#if {X}>1\n#if PREPASS_MESH_BLEND_TAG_INDEX==1\nlayout(location=1) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=1) out highp vec4 glFragData1;\n#endif\n#endif\n#if {X}>2\n#if PREPASS_MESH_BLEND_TAG_INDEX==2\nlayout(location=2) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=2) out highp vec4 glFragData2;\n#endif\n#endif\n#if {X}>3\n#if PREPASS_MESH_BLEND_TAG_INDEX==3\nlayout(location=3) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=3) out highp vec4 glFragData3;\n#endif\n#endif\n#if {X}>4\n#if PREPASS_MESH_BLEND_TAG_INDEX==4\nlayout(location=4) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=4) out highp vec4 glFragData4;\n#endif\n#endif\n#if {X}>5\n#if PREPASS_MESH_BLEND_TAG_INDEX==5\nlayout(location=5) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=5) out highp vec4 glFragData5;\n#endif\n#endif\n#if {X}>6\n#if PREPASS_MESH_BLEND_TAG_INDEX==6\nlayout(location=6) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=6) out highp vec4 glFragData6;\n#endif\n#endif\n#if {X}>7\n#if PREPASS_MESH_BLEND_TAG_INDEX==7\nlayout(location=7) out highp uvec4 meshBlendTagOutput;\n#else\nlayout(location=7) out highp vec4 glFragData7;\n#endif\n#endif\nvoid writeGeometryFragmentOutput(highp int index,highp vec4 value) {\n#if {X}>0 && PREPASS_MESH_BLEND_TAG_INDEX != 0\nif (index==0) { glFragData0=value; }\n#endif\n#if {X}>1 && PREPASS_MESH_BLEND_TAG_INDEX != 1\nif (index==1) { glFragData1=value; }\n#endif\n#if {X}>2 && PREPASS_MESH_BLEND_TAG_INDEX != 2\nif (index==2) { glFragData2=value; }\n#endif\n#if {X}>3 && PREPASS_MESH_BLEND_TAG_INDEX != 3\nif (index==3) { glFragData3=value; }\n#endif\n#if {X}>4 && PREPASS_MESH_BLEND_TAG_INDEX != 4\nif (index==4) { glFragData4=value; }\n#endif\n#if {X}>5 && PREPASS_MESH_BLEND_TAG_INDEX != 5\nif (index==5) { glFragData5=value; }\n#endif\n#if {X}>6 && PREPASS_MESH_BLEND_TAG_INDEX != 6\nif (index==6) { glFragData6=value; }\n#endif\n#if {X}>7 && PREPASS_MESH_BLEND_TAG_INDEX != 7\nif (index==7) { glFragData7=value; }\n#endif\n}\n#define WRITE_GEOMETRY_FRAGMENT_OUTPUT(INDEX,VALUE) writeGeometryFragmentOutput(INDEX,VALUE)\n#else\nlayout(location=0) out highp vec4 glFragData[{X}];\n#define WRITE_GEOMETRY_FRAGMENT_OUTPUT(INDEX,VALUE) gl_FragData[INDEX]=VALUE\n#endif\nhighp vec4 gl_FragColor;\n#ifndef PREPASS_CUSTOM_VARYINGS\n#ifdef PREPASS_LOCAL_POSITION\nvarying highp vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying highp vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying highp float vNormViewDepth;\n#endif\n#if (defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)) && !defined(PREPASS_VELOCITY_ZERO)\nvarying highp vec4 vCurrentPosition;varying highp vec4 vPreviousPosition;\n#endif\n#endif\n#ifdef PREPASS_OBJECT_ID\nuniform highp float objectId;\n#include<objectIdFunctions>\n#endif\n#ifdef PREPASS_MESH_BLEND_TAG\nuniform highp int meshBlendTag;\n#endif\n#endif\n";
-    Yq.d.IncludesShadersStore[lq] || (Yq.d.IncludesShadersStore[lq] = Oq);
-    const mq = {
-      name: lq,
-      shader: Oq
+    wC.DefaultOptions = {
+      idleTimeElapsedBeforeRelease: 1e3
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

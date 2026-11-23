@@ -1,22 +1,22 @@
 export const id = 23;
 export const ids = [23];
 export const modules = {
-  39445: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      default: () => Yq
+  39356: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => QC
     });
-    const Yq = function(qq, Eq, gq) {
-      let Yq;
+    const QC = function(CC, zC, ZC) {
+      let QC;
       return {
-        onCreate: qq => {
-          Yq = qq
+        onCreate: CC => {
+          QC = CC
         },
-        onPlayerAltAction: (qq, Eq, gq, lq, Oq, mq) => {
-          null !== mq && "Mesh" === Yq.getEntityType(mq) && "Weaponmaster" === Yq.getEntityName(mq) && Yq.openShop(qq, !1, "PvpCivWeapon")
+        onPlayerAltAction: (CC, zC, ZC, wC, bC, nC) => {
+          null !== nC && "Mesh" === QC.getEntityType(nC) && "Weaponmaster" === QC.getEntityName(nC) && QC.openShop(CC, !1, "PvpCivWeapon")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

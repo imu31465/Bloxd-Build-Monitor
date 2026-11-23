@@ -1,417 +1,556 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  40434: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      A: () => Cq,
-      E: () => Sq,
-      F: () => iq,
-      I: () => zq,
-      K: () => bq,
-      M: () => Fq,
-      N: () => Uq,
-      P: () => fq,
-      b: () => sq,
-      d: () => Gq,
-      e: () => hq,
-      i: () => Xq,
-      k: () => nq,
-      m: () => vq,
-      q: () => pq,
-      u: () => Zq,
-      w: () => Tq,
-      x: () => Mq
+  4706: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => AC,
+      f: () => PC
     });
-    var Yq = gq(1367),
-      lq = gq(31),
-      Oq = gq(1274),
-      mq = gq(2357),
-      xq = gq(4637),
-      Aq = gq(4608);
-    let cq, uq = !1,
-      Bq = !1,
-      Wq = !1,
-      Nq = !1;
-    const aq = 1300,
-      Vq = 3e3;
-    let dq = 0,
-      jq = !1,
-      Hq = !1,
-      oq = 0;
-    const Pq = 2;
-    let Qq = !1,
-      yq = !1;
-    const tq = new Set,
-      rq = new Set;
-
-    function vq() {
-      return uq
-    }
-
-    function hq() {
-      return Hq
-    }
-
-    function nq() {
-      return yq
-    }
-
-    function bq() {
-      return (0, Oq.p)() && !yq
-    }
-
-    function iq(qq) {
-      let Eq = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (qq !== yq) {
-        yq = qq;
-        for (const qq of [...rq]) qq(yq);
-        Eq && Uq()
+    var QC = ZC(1260),
+      wC = ZC(28);
+    var bC = ZC(326);
+    var nC = ZC(600);
+    var fC = ZC(2348),
+      oC = ZC(4711),
+      qC = ZC(4739),
+      FC = ZC(4752);
+    class WC {
+      constructor(CC, zC, ZC, QC, wC, bC) {
+        this.id = CC, this.type = zC, this.parameters = ZC, this.tearDownNotification = QC, this.onDonePromise = wC, this.resolveRequest = bC
       }
     }
-
-    function Zq(qq) {
-      return rq.add(qq), () => {
-        rq.delete(qq)
+    const NC = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class MC {
+      constructor(CC, zC, ZC, QC, wC, bC) {
+        this.id = CC, this.type = zC, this.parameters = ZC, this.resolveRequest = QC, this.onDonePromise = wC, this.tearDownNotification = bC, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const nC = PC[zC];
+        if (!nC) throw console.error(`No QTE implementation registered for type: ${zC}`), new Error(`No QTE implementation registered for type: ${zC}`);
+        this.implementation = new nC(ZC, (CC => {
+          this.isCompleted = !0, this.resolveRequest(CC)
+        }), this.tearDownNotification), this.setupInputHandlers()
+      }
+      setupInputHandlers() {
+        this.mouseSub = wC.o.subscribe("QTEMouseState", (CC => {
+          let {
+            isDown: zC
+          } = CC;
+          this.isCompleted || this.implementation.handleMouseInput(zC)
+        })), this.stopInputActions = (0, qC.k)((CC => {
+          this.isCompleted || !NC.has(CC.action) && !(0, qC.g)(CC) || this.implementation.handleMouseInput(CC.down)
+        })), this.tickSub = wC.o.subscribe("noaTick", (CC => {
+          if (this.isCompleted) return;
+          const zC = CC / 1e3;
+          this.implementation.handleTick(zC)
+        })), this.stopShellTicks = (0, oC.r)((() => {
+          this.isCompleted || this.implementation.handleTick(fC.p / 1e3)
+        }))
+      }
+      cleanup() {
+        var CC, zC;
+        this.mouseSub && (wC.o.unsubscribe(this.mouseSub), this.mouseSub = null), null === (CC = this.stopInputActions) || void 0 === CC || CC.call(this), this.stopInputActions = null, null === (zC = this.stopShellTicks) || void 0 === zC || zC.call(this), this.stopShellTicks = null, this.tickSub && (wC.o.unsubscribe(this.tickSub), this.tickSub = null)
+      }
+      async waitUntilDone() {
+        await this.onDonePromise
+      }
+      getState() {
+        return this.implementation.getState()
+      }
+      tearDown() {
+        this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
+    const gC = new QC.b,
+      SC = new Map;
+    let pC = null;
+    const PC = {
+      progressBar: class {
+        constructor(CC, zC, ZC) {
+          var QC, wC, bC, nC;
+          this.resolveRequest = zC, this.tearDownNotification = ZC, this.progress = 0, this.vZ = void 0, this.eZ = void 0, this.hZ = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const fC = CC;
+          this.vZ = null !== (QC = fC.vZ) && void 0 !== QC ? QC : .075, this.eZ = null !== (wC = fC.eZ) && void 0 !== wC ? wC : 1, this.progress = null !== (bC = fC.iZ) && void 0 !== bC ? bC : 30, this.hZ = null !== (nC = fC.hZ) && void 0 !== nC && nC, this.parameters = fC
+        }
+        handleMouseInput(CC) {
+          CC && !this.isCompleted && (this.clickCount++, this.progress += this.eZ, this.progress >= 100 && this.complete(!0))
+        }
+        handleTick() {
+          if (!this.isCompleted)
+            if (this.progress -= this.vZ, this.hZ && this.progress <= 0) this.complete(!1);
+            else if (this.progress <= 0) this.progress = 0;
+          else if (this.progress >= 100) return void this.complete(!0)
+        }
+        complete(CC) {
+          this.isCompleted = !0, this.resolveRequest(CC)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              progress: this.progress,
+              clickCount: this.clickCount
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      timedClick: class {
+        constructor(CC, zC, ZC) {
+          var QC;
+          this.resolveRequest = zC, this.tearDownNotification = ZC, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = CC, this.timeWindowMs = null !== (QC = this.parameters.HZ) && void 0 !== QC ? QC : 3e3, this.startTime = Date.now()
+        }
+        handleMouseInput(CC) {
+          if (!CC || this.isCompleted) return;
+          Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
+        }
+        handleTick() {
+          if (this.isCompleted) return;
+          Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
+        }
+        complete(CC) {
+          this.isCompleted = !0, this.resolveRequest(CC)
+        }
+        getState() {
+          const CC = Date.now() - this.startTime,
+            zC = Math.max(0, this.timeWindowMs - CC);
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              timeRemaining: zC,
+              HZ: this.timeWindowMs
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      gravityBar: class {
+        constructor(CC, zC, ZC) {
+          var QC;
+          this.resolveRequest = zC, this.tearDownNotification = ZC, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const wC = CC;
+          this.parameters = {
+            ...wC,
+            cZ: bC.c.clamp(wC.cZ, .05, 1)
+          }, this.progress = null !== (QC = wC.iZ) && void 0 !== QC ? QC : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+        }
+        handleMouseInput(CC) {
+          this.isMouseDown = CC
+        }
+        handleTick(CC) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(CC))
+        }
+        updateMover() {
+          this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
+          const CC = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += CC * this.parameters.uZ * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+        }
+        pickNewMoverTarget() {
+          this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+        }
+        randomNumTicksUntilDirectionChange() {
+          const CC = bC.c.clamp(1 - .7 * this.parameters.rZ, 0, 1.4);
+          return Math.floor(60 * CC + 40 * Math.random())
+        }
+        updateCatchZone() {
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.sZ : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = bC.c.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const CC = this.parameters.cZ / 2,
+            zC = CC,
+            ZC = 1 - CC;
+          this.catchZonePosition <= zC ? (this.catchZonePosition = zC, this.catchZoneVelocity = 0) : this.catchZonePosition >= ZC && (this.catchZonePosition = ZC, this.catchZoneVelocity = 0)
+        }
+        isMoverInCatchZone() {
+          const CC = this.parameters.cZ / 2;
+          return this.moverPosition >= this.catchZonePosition - CC && this.moverPosition <= this.catchZonePosition + CC
+        }
+        updateProgress(CC) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.TZ * CC : this.progress -= this.parameters.aZ * CC, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.hZ && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        }
+        complete(CC) {
+          this.isCompleted = !0, this.resolveRequest(CC)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              catchZonePosition: this.catchZonePosition,
+              cZ: this.parameters.cZ,
+              moverPosition: this.moverPosition,
+              progress: this.progress,
+              isCatching: this.isMoverInCatchZone()
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      precisionBar: class {
+        constructor(CC, zC, ZC) {
+          var QC, wC, nC, fC, oC;
+          this.resolveRequest = zC, this.tearDownNotification = ZC, this.startTime = void 0, this.speed = void 0, this.DZ = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const qC = CC;
+          this.parameters = {
+            ...qC,
+            speed: null !== (QC = qC.speed) && void 0 !== QC ? QC : .5,
+            DZ: bC.c.clamp(qC.DZ, .05, 1),
+            label: null !== (wC = qC.label) && void 0 !== wC ? wC : [{
+              str: "Click when the marker is within the green zone."
+            }],
+            icon: null !== (nC = qC.icon) && void 0 !== nC ? nC : null,
+            scale: null !== (fC = qC.scale) && void 0 !== fC ? fC : 1,
+            rotation: null !== (oC = qC.rotation) && void 0 !== oC ? oC : 0
+          }, this.speed = this.parameters.speed, this.DZ = this.parameters.DZ, this.startTime = Date.now()
+        }
+        handleMouseInput(CC) {
+          if (CC) {
+            this.updateMarkerPosition();
+            const CC = Math.abs(this.markerPosition - .5) <= this.DZ / 2;
+            this.complete(CC)
+          }
+        }
+        handleTick() {
+          this.isCompleted || this.updateMarkerPosition()
+        }
+        updateMarkerPosition() {
+          const CC = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = CC <= .5 ? 2 * CC : 2 - 2 * CC
+        }
+        complete(CC) {
+          this.isCompleted = !0, this.resolveRequest(CC)
+        }
+        getState() {
+          return this.updateMarkerPosition(), {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              markerPosition: this.markerPosition
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      },
+      rhythmClick: class {
+        constructor(CC, zC, ZC) {
+          this.resolveRequest = zC, this.tearDownNotification = ZC, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = CC, this.shrinkStartTime = Date.now()
+        }
+        handleMouseInput(CC) {
+          if (!CC || this.isCompleted) return;
+          const zC = this.getOuterCircleProgress();
+          if (zC <= this.parameters.UZ && zC >= -this.parameters.UZ) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.yZ) return void this.complete(!0)
+          } else this.handleMiss();
+          this.shrinkStartTime = Date.now()
+        }
+        handleMiss() {
+          this.misses++, this.lastClickResult = !1, !(0, nC.H)(this.parameters.BZ) && this.misses > this.parameters.BZ ? this.complete(!1) : this.shrinkStartTime = Date.now()
+        }
+        handleTick() {
+          if (this.isCompleted) return;
+          this.getOuterCircleProgress() < -this.parameters.UZ && this.handleMiss()
+        }
+        getOuterCircleProgress() {
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.LZ
+        }
+        complete(CC) {
+          this.isCompleted = !0, this.resolveRequest(CC)
+        }
+        getState() {
+          return {
+            type: this.type,
+            parameters: this.parameters,
+            state: {
+              outerCircleProgress: this.getOuterCircleProgress(),
+              successes: this.successes,
+              yZ: this.parameters.yZ,
+              misses: this.misses,
+              lastClickResult: this.lastClickResult
+            },
+            isActive: !0
+          }
+        }
+        tearDown() {
+          this.tearDownNotification()
+        }
+      }
+    };
 
-    function fq() {
-      (0, xq.k)(mq.C.Menu, (0, Oq.p)() ? 0 : mq.C.Menu)
+    function GC() {
+      (0, FC.e)(fC.v.Qte, pC ? fC.v.Qte : 0), pC ? wC.o.bp("qteStateUpdated", pC.getState()) : wC.o.bp("qteStateUpdated", {
+        type: null,
+        typeSpecificParameters: null,
+        isActive: !1
+      })
     }
-
-    function Mq() {
-      Hq = !1, oq = 0, fq(), Uq()
-    }
-
-    function Tq(qq) {
-      return tq.add(qq), () => {
-        tq.delete(qq)
+    class RC {
+      constructor(CC, zC) {
+        this.resultPromise = CC, this.tearDownQTE = zC
+      }
+      static create(CC, zC, ZC) {
+        const QC = Promise.race([CC, zC]);
+        return new RC(QC, ZC)
+      }
+      async getResult() {
+        return await this.resultPromise
       }
     }
-
-    function zq(qq) {
-      Bq = !1, qq !== uq && (uq = qq, Nq = !1, clearTimeout(cq), Wq = !uq && Qq, uq ? (jq = !1, Hq = !1, oq = 0) : bq() && !Qq && (Hq = !0), Qq = !1, uq && !bq() && Kq(), Iq(), Wq && Uq())
-    }
-
-    function Sq(qq) {
-      qq !== jq && (jq = qq, qq || Uq())
-    }
-
-    function pq() {
-      Bq = !1, Nq || !0 !== kq() || (Nq = !0, clearTimeout(cq), cq = setTimeout(Lq, aq))
-    }
-
-    function Gq() {
-      return (!Bq || performance.now() - dq > Vq) && (Bq = (0, Aq.M)().lockPointer(), dq = performance.now()), Bq
-    }
-
-    function Lq() {
-      Jq() && Rq() && Gq()
-    }
-
-    function Jq() {
-      return bq() && !uq && !jq && !(0, Yq.c)()
-    }
-
-    function kq() {
-      var qq;
-      return "undefined" === typeof navigator || null === (qq = navigator.userActivation) || void 0 === qq ? void 0 : qq.isActive
-    }
-
-    function Rq() {
-      return Wq && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== kq()
-    }
-
-    function Uq() {
-      bq() ? Jq() && !Hq && Rq() && Gq() : uq && !Qq && Kq()
-    }
-
-    function Fq() {
-      Hq ? navigator.vendor.startsWith("Apple") ? wq() : oq = Pq : Uq()
-    }
-
-    function sq() {
-      oq > 0 && 0 === --oq && wq()
-    }
-
-    function Xq() {
-      oq = 0
-    }
-
-    function wq() {
-      Jq() && !0 === kq() && Gq()
-    }
-
-    function Kq() {
-      Qq = !0, (0, Aq.M)().unlockPointer()
-    }
-
-    function Cq() {
-      Bq = !1, Wq = !1, Nq = !1, clearTimeout(cq), jq = !1, Hq = !1, oq = 0, Qq = !1;
-      const qq = uq;
-      uq = !1, qq && Iq()
-    }
-
-    function Iq() {
-      for (const qq of [...tq]) qq(uq);
-      lq.i.TV("pointerLockUpdate", uq)
+    class AC {
+      static queueQTE(CC, zC, ZC) {
+        let QC, wC;
+        const bC = new Promise((CC => {
+            QC = CC
+          })),
+          nC = new Promise((CC => {
+            wC = () => {
+              CC("qteTornDown")
+            }
+          })),
+          fC = Promise.race([bC, nC]).then((() => {})),
+          oC = new WC(CC, zC, ZC, wC, fC, QC);
+        return SC.set(CC, oC), gC.enqueue(oC), pC || this.processNextQTE(), RC.create(bC, nC, wC)
+      }
+      static async processNextQTE() {
+        if (pC || gC.fg()) return void(gC.fg() && pC && (pC = null, GC()));
+        const CC = await gC.dequeue();
+        if (!SC.has(CC.id)) return void await this.processNextQTE();
+        SC.delete(CC.id);
+        const zC = new MC(CC.id, CC.type, CC.parameters, CC.resolveRequest, CC.onDonePromise, CC.tearDownNotification);
+        pC = zC, GC();
+        try {
+          await zC.waitUntilDone()
+        } catch (ZC) {
+          console.error("Error while waiting for QTE to resolve:", ZC.stack)
+        }
+        pC === zC && (pC.cleanup(), pC = null, GC()), await this.processNextQTE()
+      }
+      static cancelQTE(CC) {
+        if (pC && pC.id === CC) return pC.tearDown(), pC = null, GC(), void this.processNextQTE();
+        const zC = SC.get(CC);
+        zC && (SC.delete(CC), zC.tearDownNotification())
+      }
+      static getCurrentState() {
+        return pC ? pC.getState() : {
+          type: null,
+          parameters: null,
+          state: null,
+          isActive: !1
+        }
+      }
+      static reset() {
+        pC && (pC.tearDown(), pC = null), SC.forEach(((CC, zC) => {
+          this.cancelQTE(zC)
+        })), gC.emptyQueue(), SC.clear(), GC()
+      }
     }
   },
-  40409: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Wq,
-      f: () => xq,
-      i: () => Bq,
-      l: () => cq,
-      m: () => mq,
-      o: () => uq,
-      s: () => Aq
+  4711: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      A: () => GC,
+      B: () => nC,
+      E: () => fC,
+      G: () => vC,
+      b: () => iC,
+      e: () => AC,
+      h: () => dC,
+      j: () => YC,
+      k: () => PC,
+      m: () => JC,
+      n: () => RC,
+      p: () => xC,
+      r: () => eC,
+      u: () => hC,
+      w: () => KC
     });
-    let Yq = null,
-      lq = null,
-      Oq = null;
-
-    function mq(qq) {
-      Yq = qq
-    }
-
-    function xq() {
-      return Yq
-    }
-
-    function Aq(qq) {
-      lq = qq
-    }
-
-    function cq() {
-      return lq
-    }
-
-    function uq(qq) {
-      Oq = qq
-    }
-
-    function Bq() {
-      return Oq
-    }
-
-    function Wq() {
-      var qq, Eq;
-      return !0 === (null === (qq = lq) || void 0 === qq || null === (Eq = qq.currentViewer) || void 0 === Eq ? void 0 : Eq.inPlayback)
-    }
-  },
-  4608: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      B: () => bq,
-      F: () => Hq,
-      J: () => mq,
-      M: () => xq,
-      N: () => vq,
-      e: () => rq,
-      f: () => Pq,
-      h: () => Zq,
-      l: () => iq,
-      m: () => jq,
-      p: () => yq,
-      s: () => oq,
-      w: () => Qq,
-      x: () => hq,
-      y: () => nq
-    });
-    var Yq = gq(4616);
-    const lq = {
+    var QC = ZC(4719);
+    const wC = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let Oq = lq;
+    let bC = wC;
 
-    function mq(qq) {
-      Oq = null !== qq && void 0 !== qq ? qq : lq
+    function nC(CC) {
+      bC = null !== CC && void 0 !== CC ? CC : wC
     }
 
-    function xq() {
-      return Oq
+    function fC() {
+      return bC
     }
-    const Aq = new Set,
-      cq = new Set;
-    let uq = -1;
-    const Bq = new Set,
-      Wq = new Set;
-    let Nq = 0,
-      aq = 0;
-    const Vq = new Set,
-      dq = new Set;
+    const oC = new Set,
+      qC = new Set;
+    let FC = -1;
+    const WC = new Set,
+      NC = new Set;
+    let MC = 0,
+      gC = 0;
+    const SC = new Set,
+      pC = new Set;
 
-    function jq(qq) {
-      return Aq.add(qq), () => {
-        Aq.delete(qq)
+    function PC(CC) {
+      return oC.add(CC), () => {
+        oC.delete(CC)
       }
     }
 
-    function Hq(qq, Eq) {
-      for (const Yq of Aq) try {
-        Yq(qq)
-      } catch (gq) {
-        Eq(gq)
+    function GC(CC, zC) {
+      for (const QC of oC) try {
+        QC(CC)
+      } catch (ZC) {
+        zC(ZC)
       }
     }
 
-    function oq(qq) {
-      return cq.add(qq), () => {
-        cq.delete(qq)
+    function RC(CC) {
+      return qC.add(CC), () => {
+        qC.delete(CC)
       }
     }
 
-    function Pq(qq, Eq) {
-      const gq = uq < 0 ? 0 : qq - uq;
-      uq = qq;
-      for (const lq of cq) try {
-        lq(gq)
-      } catch (Yq) {
-        Eq(Yq)
+    function AC(CC, zC) {
+      const ZC = FC < 0 ? 0 : CC - FC;
+      FC = CC;
+      for (const wC of qC) try {
+        wC(ZC)
+      } catch (QC) {
+        zC(QC)
       }
     }
 
-    function Qq(qq) {
-      return Bq.add(qq), () => {
-        Bq.delete(qq)
+    function xC(CC) {
+      return WC.add(CC), () => {
+        WC.delete(CC)
       }
     }
 
-    function yq(qq) {
-      return Wq.add(qq), () => {
-        Wq.delete(qq)
+    function JC(CC) {
+      return NC.add(CC), () => {
+        NC.delete(CC)
       }
     }
-    let tq = 0;
+    let IC = 0;
 
-    function rq(qq) {
-      tq += qq
+    function iC(CC) {
+      IC += CC
     }
 
-    function vq() {
-      const qq = tq;
-      return tq = 0, qq
+    function vC() {
+      const CC = IC;
+      return IC = 0, CC
     }
 
-    function hq(qq) {
-      return Vq.add(qq), () => {
-        Vq.delete(qq)
-      }
-    }
-
-    function nq(qq) {
-      return dq.add(qq), () => {
-        dq.delete(qq)
+    function eC(CC) {
+      return SC.add(CC), () => {
+        SC.delete(CC)
       }
     }
 
-    function bq() {
-      Nq = 0, aq = 0, uq = -1
+    function hC(CC) {
+      return pC.add(CC), () => {
+        pC.delete(CC)
+      }
     }
 
-    function iq(qq, Eq) {
-      if ("paced" === qq) return aq += Eq, null;
-      if ("drawn" !== qq && "skipped" !== qq) return null;
-      const gq = Eq + aq;
-      return aq = 0, gq
+    function KC() {
+      MC = 0, gC = 0, FC = -1
     }
 
-    function Zq(qq, Eq, gq, lq) {
-      const Oq = (0, Yq.g)(Eq),
-        mq = qq > 0 ? performance.now() : 0;
-      for (let Yq = 0; Yq < qq; Yq++)
-        for (const qq of Vq) try {
-          qq()
-        } catch (xq) {
-          lq(xq)
+    function YC(CC, zC) {
+      if ("paced" === CC) return gC += zC, null;
+      if ("drawn" !== CC && "skipped" !== CC) return null;
+      const ZC = zC + gC;
+      return gC = 0, ZC
+    }
+
+    function dC(CC, zC, ZC, wC) {
+      const bC = (0, QC.i)(zC),
+        nC = CC > 0 ? performance.now() : 0;
+      for (let QC = 0; QC < CC; QC++)
+        for (const CC of SC) try {
+          CC()
+        } catch (fC) {
+          wC(fC)
         }
-      if (qq > 0 && rq(performance.now() - mq), null !== gq) {
-        for (const qq of Bq) try {
-          qq(gq)
-        } catch (xq) {
-          lq(xq)
+      if (CC > 0 && iC(performance.now() - nC), null !== ZC) {
+        for (const CC of WC) try {
+          CC(ZC)
+        } catch (fC) {
+          wC(fC)
         }
-        Nq += gq
+        MC += ZC
       }
-      if ("drawn" === Eq) {
-        const qq = Nq;
-        Nq = 0;
-        for (const Eq of Wq) try {
-          Eq(qq)
-        } catch (xq) {
-          lq(xq)
+      if ("drawn" === zC) {
+        const CC = MC;
+        MC = 0;
+        for (const zC of NC) try {
+          zC(CC)
+        } catch (fC) {
+          wC(fC)
         }
       }
-      for (const Yq of dq) try {
-        Yq(qq, Oq)
-      } catch (xq) {
-        lq(xq)
+      for (const QC of pC) try {
+        QC(CC, bC)
+      } catch (fC) {
+        wC(fC)
       }
     }
   },
-  40650: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Yq
+  4739: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => oC,
+      g: () => bC,
+      k: () => fC
     });
-    const Yq = {
-      stop: () => Yq,
-      fade: () => Yq,
-      rate: () => Yq,
-      getVolume: () => 0,
-      getRelativeVolume: () => 0,
-      setRelativeVolume: () => Yq,
-      setPannerAttr: () => Yq,
-      setPosition: () => Yq
-    }
-  },
-  4627: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Aq,
-      d: () => Oq,
-      h: () => xq
-    });
-    var Yq = gq(2357),
-      lq = gq(4629);
+    var QC = ZC(2348),
+      wC = ZC(4745);
 
-    function Oq(qq) {
+    function bC(CC) {
       let {
-        action: Eq,
-        flags: gq
-      } = qq;
-      return "mid-fire" === Eq && 0 !== (gq & Yq.e.AltLeftClick)
+        action: zC,
+        flags: ZC
+      } = CC;
+      return "mid-fire" === zC && 0 !== (ZC & QC.c.AltLeftClick)
     }
-    const mq = new Set;
+    const nC = new Set;
 
-    function xq(qq) {
-      return mq.add(qq), () => {
-        mq.delete(qq)
+    function fC(CC) {
+      return nC.add(CC), () => {
+        nC.delete(CC)
       }
     }
 
-    function Aq(qq) {
-      const Eq = lq.b[255 & qq];
-      if (void 0 === Eq) return;
-      const gq = qq >>> 8 & 255,
-        Oq = {
-          action: Eq,
-          down: 0 !== (gq & Yq.e.Down),
-          flags: gq,
-          press: qq >>> 16
+    function oC(CC) {
+      const zC = wC.c[255 & CC];
+      if (void 0 === zC) return;
+      const ZC = CC >>> 8 & 255,
+        bC = {
+          action: zC,
+          down: 0 !== (ZC & QC.c.Down),
+          flags: ZC,
+          press: CC >>> 16
         };
-      for (const Yq of mq) Yq(Oq)
+      for (const QC of nC) QC(bC)
     }
   },
-  4629: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      f: () => Oq,
-      i: () => mq,
-      l: () => Yq,
-      m: () => xq
+  4745: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => wC,
+      d: () => bC,
+      f: () => nC,
+      g: () => QC,
+      h: () => fC
     });
-    const Yq = {
+    const QC = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -608,8 +747,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      lq = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      Oq = {
+      wC = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      bC = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -672,331 +811,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      mq = {
+      nC = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      xq = [16]
+      fC = [16]
   },
-  40739: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => uq,
-      c: () => cq,
-      g: () => Aq
+  4752: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => fC,
+      d: () => nC,
+      e: () => qC
     });
-    var Yq = gq(4625),
-      lq = gq(2357),
-      Oq = gq(4637);
-    let mq = !1,
-      xq = !1;
+    var QC = ZC(2348),
+      wC = ZC(2351);
+    const bC = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function Aq(qq) {
-      mq = !0;
-      try {
-        qq()
-      } finally {
-        mq = !1
-      }
+    function nC(CC) {
+      return CC instanceof HTMLElement && (!!(CC.isContentEditable || CC instanceof HTMLTextAreaElement || CC instanceof HTMLSelectElement) || CC instanceof HTMLInputElement && !bC.has(CC.type))
     }
 
-    function cq(qq, Eq) {
-      if (mq) return !1;
-      switch (qq) {
-        case Yq.E.MouseDown:
-        case Yq.E.MouseUp:
-        case Yq.E.TouchStart:
-        case Yq.E.TouchEnd:
-        case Yq.E.TouchCancel:
-        case Yq.E.TouchButton:
-          return !0;
-        case Yq.E.KeyDown:
-        case Yq.E.KeyUp:
-          return 0 === (Eq & lq.h.Repeat) && !(0, Oq.h)(document.activeElement);
-        default:
-          return !1
-      }
-    }
-
-    function uq(qq) {
-      xq || (xq = !0, queueMicrotask((() => {
-        xq = !1, qq()
-      })))
-    }
-  },
-  4637: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => xq,
-      h: () => mq,
-      k: () => cq
-    });
-    var Yq = gq(2357),
-      lq = gq(2364);
-    const Oq = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
-
-    function mq(qq) {
-      return qq instanceof HTMLElement && (!!(qq.isContentEditable || qq instanceof HTMLTextAreaElement || qq instanceof HTMLSelectElement) || qq instanceof HTMLInputElement && !Oq.has(qq.type))
-    }
-
-    function xq(qq) {
-      let Eq = null;
-      const gq = gq => {
-          const lq = mq(gq);
-          lq !== Eq && (Eq = lq, qq(Yq.i.UiCapture, Yq.C.Keyboard, 0, 0, lq ? Yq.C.Keyboard : 0))
+    function fC(CC) {
+      let zC = null;
+      const ZC = ZC => {
+          const wC = nC(ZC);
+          wC !== zC && (zC = wC, CC(QC.j.UiCapture, QC.v.Keyboard, 0, 0, wC ? QC.v.Keyboard : 0))
         },
-        lq = qq => {
-          gq(qq.target)
+        wC = CC => {
+          ZC(CC.target)
         },
-        Oq = qq => {
-          gq(qq.relatedTarget)
+        bC = CC => {
+          ZC(CC.relatedTarget)
         },
-        xq = () => {
-          gq(document.activeElement)
+        fC = () => {
+          ZC(document.activeElement)
         },
-        Aq = {
+        oC = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", lq, Aq), document.addEventListener("focusout", Oq, Aq), document.addEventListener("keydown", xq, Aq), gq(document.activeElement), () => {
-        document.removeEventListener("focusin", lq, Aq), document.removeEventListener("focusout", Oq, Aq), document.removeEventListener("keydown", xq, Aq)
+      return document.addEventListener("focusin", wC, oC), document.addEventListener("focusout", bC, oC), document.addEventListener("keydown", fC, oC), ZC(document.activeElement), () => {
+        document.removeEventListener("focusin", wC, oC), document.removeEventListener("focusout", bC, oC), document.removeEventListener("keydown", fC, oC)
       }
     }
-    const Aq = new Map;
+    const oC = new Map;
 
-    function cq(qq, Eq) {
-      var gq;
-      let Yq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      Aq.set(Yq, (null !== (gq = Aq.get(Yq)) && void 0 !== gq ? gq : 0) & ~qq | Eq & qq);
-      let Oq = 0;
-      for (const lq of Aq.values()) Oq |= lq;
-      return (0, lq.B)(qq, Oq & qq)
-    }
-  },
-  40470: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => uq,
-      f: () => Aq,
-      j: () => xq,
-      k: () => cq
-    });
-    var Yq = gq(1914);
-    let lq = null,
-      Oq = 0;
-    const mq = new Set;
-
-    function xq() {
-      return lq
-    }
-
-    function Aq() {
-      return Oq
-    }
-
-    function cq(qq) {
-      lq = qq, Oq++, (0, Yq.d)();
-      for (const Eq of mq) Eq()
-    }
-
-    function uq(qq) {
-      mq.add(qq)
-    }
-  },
-  40786: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => Yq
-    });
-    const Yq = 2e3
-  },
-  40645: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => oq,
-      h: () => cq,
-      l: () => dq,
-      m: () => Hq,
-      p: () => jq,
-      s: () => Pq
-    });
-    var Yq = gq(24),
-      lq = gq(31),
-      Oq = gq(2700),
-      mq = gq(1283),
-      xq = gq(9191),
-      Aq = gq(2704);
-
-    function cq() {
-      var qq;
-      const Eq = (gq = Yq.b.get("clientEscMenuOptions"), lq = (0, Oq.B)(), {
-        sampleCount: gq.antiAliasing ? 4 : 1,
-        n: (0, Oq.t)(gq.pixelScale, lq),
-        pixelated: (0, Oq.s)(gq.pixelSmoothing)
-      });
-      var gq, lq;
-      return Eq.sampleCount > 1 && (0, xq.e)() && (Eq.sampleCount = 1), Eq.n = null !== (qq = (0, xq.n)()) && void 0 !== qq ? qq : Eq.n, Eq
-    }
-    let uq = null,
-      Bq = null;
-    const Wq = new Set;
-    let Nq = null;
-
-    function aq() {
-      for (const qq of Wq) qq()
-    }
-
-    function Vq() {
-      if (null === uq) {
-        const qq = document.createElement("div");
-        qq.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none", qq.setAttribute("aria-hidden", "true"), document.body.append(qq), Bq = qq, uq = new Oq.e(qq, aq)
-      }
-      return uq
-    }
-
-    function dq(qq) {
-      const Eq = (0, Oq.k)(),
-        [gq, Yq] = Vq().size(Eq);
-      return (0, Oq.i)(gq, Yq, Eq, qq.n)
-    }
-
-    function jq(qq) {
-      var Eq, gq, Yq, lq;
-      const xq = (0, Oq.k)(),
-        [Aq, uq] = Vq().size(xq);
-      if (Aq <= 0 || uq <= 0) return null;
-      const Bq = (0, Oq.i)(Aq, uq, xq, cq().n);
-      return (0, Oq.h)(qq, Bq), qq.style.left = `${null!==(Eq=null===(gq=Nq)||void 0===gq?void 0:gq.rect.left)&&void 0!==Eq?Eq:0}px`, qq.style.top = `${null!==(Yq=null===(lq=Nq)||void 0===lq?void 0:lq.rect.top)&&void 0!==Yq?Yq:0}px`, (0, mq.L)(qq.style, Nq), Bq
-    }
-
-    function Hq(qq) {
-      Nq = qq, Vq(), (0, mq.G)(Bq.style, qq, ""), aq()
-    }
-
-    function oq(qq, Eq) {
-      qq.style.imageRendering = (0, Oq.D)(Eq.pixelated)
-    }
-
-    function Pq(qq, Eq) {
-      const gq = (0, lq.k)("appManagerUpdated|clientEscMenuOptions", (() => {
-          oq(qq, cq()), Eq()
-        })),
-        Yq = (0, xq.x)(Eq),
-        Oq = (0, Aq.q)(Eq);
-      return Vq(), Wq.add(Eq), () => {
-        gq(), Yq(), Oq(), Wq.delete(Eq)
-      }
-    }
-  },
-  40788: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => mq,
-      c: () => Oq,
-      d: () => lq
-    });
-    let Yq = null;
-
-    function lq(qq) {
-      Yq = qq
-    }
-
-    function Oq(qq) {
-      Yq === qq && (Yq = null)
-    }
-
-    function mq() {
-      var qq;
-      null === (qq = Yq) || void 0 === qq || qq()
-    }
-  },
-  40760: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      e: () => cq,
-      h: () => Oq,
-      k: () => Bq,
-      n: () => uq,
-      r: () => Wq
-    });
-    var Yq = gq(2805);
-    class lq extends Error {
-      constructor(qq, Eq, gq) {
-        super(`${"fetch"===qq?"fetching":"decoding"} ${Eq} failed`, gq), this.stage = qq, this.source = Eq, this.name = "ShellImageError"
-      }
-    }
-    async function Oq(qq) {
-      let Eq, gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Yq.P,
-        Oq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      if ("string" === typeof qq) try {
-        Eq = await gq(qq)
-      } catch (mq) {
-        throw new lq("fetch", qq, {
-          cause: mq
-        })
-      } else Eq = qq;
-      try {
-        const qq = new Blob([Eq.slice()], {
-          type: "image/png"
-        });
-        return await createImageBitmap(qq, {
-          premultiplyAlpha: "none",
-          colorSpaceConversion: "none",
-          imageOrientation: Oq
-        })
-      } catch (mq) {
-        throw new lq("decode", "string" === typeof qq ? qq : `${Eq.byteLength} bytes`, {
-          cause: mq
-        })
-      }
-    }
-    let mq = null;
-    const xq = new Map;
-    let Aq = 1;
-
-    function cq(qq) {
-      if (mq = qq, null !== qq) {
-        for (const [Eq, gq] of xq) qq.dYq(Eq, gq);
-        xq.clear()
-      }
-    }
-
-    function uq(qq) {
-      const Eq = Aq++;
-      return mq ? mq.dYq(Eq, qq) : xq.set(Eq, qq), Eq
-    }
-    async function Bq(qq, Eq, gq) {
-      const Yq = await Oq(qq, Eq, gq);
-      return {
-        id: uq(Yq),
-        width: Yq.width,
-        height: Yq.height
-      }
-    }
-
-    function Wq(qq) {
-      var Eq;
-      const gq = xq.get(qq);
-      if (gq) return gq.close(), void xq.delete(qq);
-      null === (Eq = mq) || void 0 === Eq || Eq.jYq(qq)
-    }
-  },
-  40671: (qq, Eq, gq) => {
-    function Yq(qq, Eq) {
-      if (!Object.prototype.hasOwnProperty.call(qq, Eq)) throw new TypeError("attempted to use private field on non-instance");
-      return qq
-    }
-    gq.d(Eq, {
-      d: () => Yq
-    })
-  },
-  40676: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => lq
-    });
-    var Yq = 0;
-
-    function lq(qq) {
-      return "__private_" + Yq++ + "_" + qq
+    function qC(CC, zC) {
+      var ZC;
+      let QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      oC.set(QC, (null !== (ZC = oC.get(QC)) && void 0 !== ZC ? ZC : 0) & ~CC | zC & CC);
+      let bC = 0;
+      for (const wC of oC.values()) bC |= wC;
+      return (0, wC.v)(CC, bC & CC)
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

@@ -1,573 +1,1294 @@
 export const id = 256;
 export const ids = [256];
 export const modules = {
-  40225: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => tq,
-      i: () => Qq,
-      k: () => oq,
-      m: () => Pq,
-      p: () => Hq,
-      s: () => jq
+  40256: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => QC
     });
-    var Yq = gq(39779),
-      lq = gq(39838),
-      Oq = gq(37139),
-      mq = gq(39879),
-      xq = gq(40233),
-      Aq = gq(40104),
-      cq = gq(39801),
-      uq = gq(40096),
-      Bq = gq(37153),
-      Wq = gq(40083),
-      Nq = gq(40079),
-      aq = gq(40115),
-      Vq = gq(37171);
-    const dq = {
-      effect: null,
-      subMesh: null
-    };
-    class jq extends uq.b {
-      constructor(qq, Eq, gq) {
-        let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        super(qq, Eq, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4]), this._textures = {}, this._internalTextures = {}, this._textureArrays = {}, this._externalTextures = {}, this._floats = {}, this._ints = {}, this._uints = {}, this._floatsArrays = {}, this._colors3 = {}, this._colors3Arrays = {}, this._colors4 = {}, this._colors4Arrays = {}, this._vectors2 = {}, this._vectors3 = {}, this._vectors4 = {}, this._quaternions = {}, this._quaternionsArrays = {}, this._matrices = {}, this._matrixArrays = {}, this._matrices3x3 = {}, this._matrices2x2 = {}, this._vectors2Arrays = {}, this._vectors3Arrays = {}, this._vectors4Arrays = {}, this._uniformBuffers = {}, this._textureSamplers = {}, this._storageBuffers = {}, this._cachedWorldViewMatrix = new Oq.e, this._cachedWorldViewProjectionMatrix = new Oq.e, this._multiview = !1, this._vertexPullingMetadata = null, this._materialHelperNeedsPreviousMatrices = !1, this._shaderPath = gq, this._options = {
-          needAlphaBlending: !1,
-          needAlphaTesting: !1,
-          attributes: ["position", "normal", "uv"],
-          uniforms: ["worldViewProjection"],
-          uniformBuffers: [],
-          samplers: [],
-          externalTextures: [],
-          samplerObjects: [],
-          storageBuffers: [],
-          defines: [],
-          useClipPlane: !1,
-          ...Yq
-        }
+    let QC = !1
+  },
+  39803: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => gC
+    });
+    var QC = ZC(39811),
+      wC = ZC(39818),
+      bC = ZC(36987),
+      nC = ZC(36963),
+      fC = ZC(36985),
+      oC = ZC(37731),
+      qC = ZC(39833);
+    class FC {
+      get wrapU() {
+        return this._wrapU
       }
-      get shaderPath() {
-        return this._shaderPath
+      set wrapU(CC) {
+        this._wrapU = CC
       }
-      set shaderPath(qq) {
-        this._shaderPath = qq
+      get wrapV() {
+        return this._wrapV
       }
-      get options() {
-        return this._options
+      set wrapV(CC) {
+        this._wrapV = CC
       }
-      get isMultiview() {
-        return this._multiview
+      get coordinatesMode() {
+        return 0
+      }
+      get isCube() {
+        return !!this._texture && this._texture.isCube
+      }
+      set isCube(CC) {
+        this._texture && (this._texture.isCube = CC)
+      }
+      get is3D() {
+        return !!this._texture && this._texture.is3D
+      }
+      set is3D(CC) {
+        this._texture && (this._texture.is3D = CC)
+      }
+      get is2DArray() {
+        return !!this._texture && this._texture.is2DArray
+      }
+      set is2DArray(CC) {
+        this._texture && (this._texture.is2DArray = CC)
       }
       getClassName() {
-        return "ShaderMaterial"
+        return "ThinTexture"
       }
-      needAlphaBlending() {
-        return this.alpha < 1 || this._options.needAlphaBlending
+      static _IsRenderTargetWrapper(CC) {
+        return void 0 !== CC?.shareDepth
       }
-      needAlphaTesting() {
-        return this._options.needAlphaTesting
+      constructor(CC) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = qC.d.Zero(), this._cachedBaseSize = qC.d.Zero(), this._initialSamplingMode = 2, this._texture = FC._IsRenderTargetWrapper(CC) ? CC.texture : CC, this._texture && (this._engine = this._texture.mg(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
       }
-      _checkUniform(qq) {
-        -1 === this._options.uniforms.indexOf(qq) && this._options.uniforms.push(qq)
+      isReady() {
+        return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
       }
-      setTexture(qq, Eq) {
-        return -1 === this._options.samplers.indexOf(qq) && this._options.samplers.push(qq), this._textures[qq] = Eq, this
+      delayLoad() {}
+      getInternalTexture() {
+        return this._texture
       }
-      setInternalTexture(qq, Eq) {
-        return -1 === this._options.samplers.indexOf(qq) && this._options.samplers.push(qq), this._internalTextures[qq] = Eq, this
-      }
-      removeTexture(qq) {
-        delete this._textures[qq]
-      }
-      setTextureArray(qq, Eq) {
-        return -1 === this._options.samplers.indexOf(qq) && this._options.samplers.push(qq), this._checkUniform(qq), this._textureArrays[qq] = Eq, this
-      }
-      setExternalTexture(qq, Eq) {
-        return -1 === this._options.externalTextures.indexOf(qq) && this._options.externalTextures.push(qq), this._externalTextures[qq] = Eq, this
-      }
-      setFloat(qq, Eq) {
-        return this._checkUniform(qq), this._floats[qq] = Eq, this
-      }
-      setInt(qq, Eq) {
-        return this._checkUniform(qq), this._ints[qq] = Eq, this
-      }
-      setUInt(qq, Eq) {
-        return this._checkUniform(qq), this._uints[qq] = Eq, this
-      }
-      setFloats(qq, Eq) {
-        return this._checkUniform(qq), this._floatsArrays[qq] = Eq, this
-      }
-      setColor3(qq, Eq) {
-        return this._checkUniform(qq), this._colors3[qq] = Eq, this
-      }
-      setColor3Array(qq, Eq) {
-        return this._checkUniform(qq), this._colors3Arrays[qq] = Eq.reduce(((qq, Eq) => (qq.push(Eq.r, Eq.g, Eq.b), qq)), []), this
-      }
-      setColor4(qq, Eq) {
-        return this._checkUniform(qq), this._colors4[qq] = Eq, this
-      }
-      setColor4Array(qq, Eq) {
-        return this._checkUniform(qq), this._colors4Arrays[qq] = Eq.reduce(((qq, Eq) => (qq.push(Eq.r, Eq.g, Eq.b, Eq.a), qq)), []), this
-      }
-      setVector2(qq, Eq) {
-        return this._checkUniform(qq), this._vectors2[qq] = Eq, this
-      }
-      setVector3(qq, Eq) {
-        return this._checkUniform(qq), this._vectors3[qq] = Eq, this
-      }
-      setVector4(qq, Eq) {
-        return this._checkUniform(qq), this._vectors4[qq] = Eq, this
-      }
-      setQuaternion(qq, Eq) {
-        return this._checkUniform(qq), this._quaternions[qq] = Eq, this
-      }
-      setQuaternionArray(qq, Eq) {
-        return this._checkUniform(qq), this._quaternionsArrays[qq] = Eq.reduce(((qq, Eq) => (Eq.toArray(qq, qq.length), qq)), []), this
-      }
-      setMatrix(qq, Eq) {
-        return this._checkUniform(qq), this._matrices[qq] = Eq, this
-      }
-      setMatrices(qq, Eq) {
-        this._checkUniform(qq);
-        const gq = new Float32Array(16 * Eq.length);
-        for (let Yq = 0; Yq < Eq.length; Yq++) {
-          Eq[Yq].copyToArray(gq, 16 * Yq)
+      getSize() {
+        if (this._texture) {
+          if (this._texture.width) return this._cachedSize.width = this._texture.width, this._cachedSize.height = this._texture.height, this._cachedSize;
+          if (this._texture._size) return this._cachedSize.width = this._texture._size, this._cachedSize.height = this._texture._size, this._cachedSize
         }
-        return this._matrixArrays[qq] = gq, this
+        return this._cachedSize
       }
-      setMatrix3x3(qq, Eq) {
-        return this._checkUniform(qq), this._matrices3x3[qq] = Eq, this
+      getBaseSize() {
+        return this.isReady() && this._texture ? this._texture._size ? (this._cachedBaseSize.width = this._texture._size, this._cachedBaseSize.height = this._texture._size, this._cachedBaseSize) : (this._cachedBaseSize.width = this._texture.baseWidth, this._cachedBaseSize.height = this._texture.baseHeight, this._cachedBaseSize) : (this._cachedBaseSize.width = 0, this._cachedBaseSize.height = 0, this._cachedBaseSize)
       }
-      setMatrix2x2(qq, Eq) {
-        return this._checkUniform(qq), this._matrices2x2[qq] = Eq, this
+      get samplingMode() {
+        return this._texture ? this._texture.samplingMode : this._initialSamplingMode
       }
-      setArray2(qq, Eq) {
-        return this._checkUniform(qq), this._vectors2Arrays[qq] = Eq, this
+      updateSamplingMode(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(CC, this._texture, this._texture.generateMipMaps && zC)
       }
-      setArray3(qq, Eq) {
-        return this._checkUniform(qq), this._vectors3Arrays[qq] = Eq, this
+      releaseInternalTexture() {
+        this._texture && (this._texture.dispose(), this._texture = null)
       }
-      setArray4(qq, Eq) {
-        return this._checkUniform(qq), this._vectors4Arrays[qq] = Eq, this
+      dispose() {
+        this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
-      setUniformBuffer(qq, Eq) {
-        return -1 === this._options.uniformBuffers.indexOf(qq) && this._options.uniformBuffers.push(qq), this._uniformBuffers[qq] = Eq, this
-      }
-      setTextureSampler(qq, Eq) {
-        return -1 === this._options.samplerObjects.indexOf(qq) && this._options.samplerObjects.push(qq), this._textureSamplers[qq] = Eq, this
-      }
-      setStorageBuffer(qq, Eq) {
-        return -1 === this._options.storageBuffers.indexOf(qq) && this._options.storageBuffers.push(qq), this._storageBuffers[qq] = Eq, this
-      }
-      setDefine(qq, Eq) {
-        const gq = qq.trimEnd() + " ",
-          Yq = this.options.defines.findIndex((Eq => Eq === qq || Eq.startsWith(gq)));
-        return Yq >= 0 && this.options.defines.splice(Yq, 1), ("boolean" !== typeof Eq || Eq) && this.options.defines.push(gq + Eq), this
-      }
-      isReadyForSubMesh(qq, Eq, gq) {
-        return this.isReady(qq, gq, Eq)
-      }
-      isReady(qq, Eq, gq) {
-        const Yq = gq && this._storeEffectOnSubMeshes;
-        if (this.isFrozen) {
-          const qq = Yq ? gq._drawWrapper : this._drawWrapper;
-          if (qq.effect && qq._wasPreviouslyReady && qq._wasPreviouslyUsingInstances === Eq) return !0
+    }
+    var WC, NC = ZC(39842),
+      MC = ZC(39694);
+    let gC = (() => {
+      var CC;
+      let zC, ZC, qC, WC, MC, gC, SC, pC, PC, GC, RC, AC, xC, JC, IC, iC, vC, eC, hC, KC, YC, dC, mC, HC, EC, lC = FC,
+        XC = [],
+        cC = [],
+        uC = [],
+        rC = [],
+        sC = [],
+        TC = [],
+        aC = [],
+        tC = [],
+        DC = [],
+        jC = [],
+        yC = [],
+        LC = [],
+        UC = [],
+        BC = [],
+        OC = [],
+        kC = [],
+        VC = [],
+        Cz = [],
+        zz = [],
+        Zz = [],
+        Qz = [],
+        wz = [],
+        bz = [],
+        nz = [],
+        fz = [],
+        oz = [],
+        qz = [],
+        Fz = [],
+        Wz = [],
+        Nz = [],
+        Mz = [];
+      return CC = class extends lC {
+        set hasAlpha(CC) {
+          this._hasAlpha = CC
         }
-        const Oq = this.ZJ(),
-          xq = Oq.Ba(),
-          cq = [],
-          uq = [];
-        let Bq = null,
-          Vq = this._shaderPath,
-          jq = this._options.uniforms,
-          Hq = this._options.uniformBuffers,
-          oq = this._options.samplers;
-        xq.getCaps().multiview && Oq.activeCamera && Oq.activeCamera.outputRenderTarget && Oq.activeCamera.outputRenderTarget.getViewCount() > 1 && (this._multiview = !0, cq.push("#define MULTIVIEW"), -1 !== jq.indexOf("viewProjection") && -1 === jq.indexOf("viewProjectionR") && jq.push("viewProjectionR"));
-        for (let lq = 0; lq < this._options.defines.length; lq++) {
-          const qq = 0 === this._options.defines[lq].indexOf("#define") ? this._options.defines[lq] : `#define ${this._options.defines[lq]}`;
-          cq.push(qq)
+        get hasAlpha() {
+          return this._hasAlpha
         }
-        for (let lq = 0; lq < this._options.attributes.length; lq++) uq.push(this._options.attributes[lq]);
-        if (qq && qq.isVerticesDataPresent(mq.g.ColorKind) && (-1 === uq.indexOf(mq.g.ColorKind) && uq.push(mq.g.ColorKind), cq.push("#define VERTEXCOLOR")), Eq && (cq.push("#define INSTANCES"), (0, Nq.xb)(uq, this._materialHelperNeedsPreviousMatrices), qq?.hasThinInstances && (cq.push("#define THIN_INSTANCES"), qq && qq.isVerticesDataPresent(mq.g.ColorInstanceKind) && (uq.push(mq.g.ColorInstanceKind), cq.push("#define INSTANCESCOLOR")))), qq && qq.useBones && qq.computeBonesUsingShaders && qq.skeleton) {
-          uq.push(mq.g.MatricesIndicesKind), uq.push(mq.g.MatricesWeightsKind), qq.numBoneInfluencers > 4 && (uq.push(mq.g.MatricesIndicesExtraKind), uq.push(mq.g.MatricesWeightsExtraKind));
-          const Eq = qq.skeleton;
-          cq.push("#define NUM_BONE_INFLUENCERS " + qq.numBoneInfluencers), Bq = new Aq.c, Bq.addCPUSkinningFallback(0, qq), Eq.isUsingTextureForMatrices ? (cq.push("#define BONETEXTURE"), -1 === jq.indexOf("boneTextureInfo") && jq.push("boneTextureInfo"), -1 === this._options.samplers.indexOf("boneSampler") && this._options.samplers.push("boneSampler")) : (cq.push("#define BonesPerMesh " + (Eq.bones.length + 1)), -1 === jq.indexOf("mBones") && jq.push("mBones"))
-        } else cq.push("#define NUM_BONE_INFLUENCERS 0");
-        let Pq = 0;
-        const Qq = qq ? qq.morphTargetManager : null;
-        if (Qq) {
-          const Eq = -1 !== cq.indexOf("#define UV1"),
-            gq = -1 !== cq.indexOf("#define UV2"),
-            Yq = -1 !== cq.indexOf("#define TANGENT"),
-            lq = -1 !== cq.indexOf("#define NORMAL"),
-            Oq = -1 !== cq.indexOf("#define VERTEXCOLOR");
-          Pq = (0, Nq.Q)(Qq, cq, uq, qq, !0, lq, Yq, Eq, gq, Oq), Qq.isUsingTextureForTargets && (-1 === jq.indexOf("morphTargetTextureIndices") && jq.push("morphTargetTextureIndices"), -1 === this._options.samplers.indexOf("morphTargets") && this._options.samplers.push("morphTargets")), Pq > 0 && (jq = jq.slice(), jq.push("morphTargetInfluences"), jq.push("morphTargetCount"), jq.push("morphTargetTextureInfo"), jq.push("morphTargetTextureIndices"))
-        } else cq.push("#define NUM_MORPH_INFLUENCERS 0");
-        if (qq) {
-          const gq = qq.bakedVertexAnimationManager;
-          gq && gq.isEnabled && (cq.push("#define BAKED_VERTEX_ANIMATION_TEXTURE"), -1 === jq.indexOf("bakedVertexAnimationSettings") && jq.push("bakedVertexAnimationSettings"), -1 === jq.indexOf("bakedVertexAnimationTextureSizeInverted") && jq.push("bakedVertexAnimationTextureSizeInverted"), -1 === jq.indexOf("bakedVertexAnimationTime") && jq.push("bakedVertexAnimationTime"), -1 === this._options.samplers.indexOf("bakedVertexAnimationTexture") && this._options.samplers.push("bakedVertexAnimationTexture"), Eq && uq.push("bakedVertexAnimationSettingsInstanced"))
+        set getAlphaFromRGB(CC) {
+          this._getAlphaFromRGB !== CC && (this._getAlphaFromRGB = CC, this._scene && this._scene.markAllMaterialsAsDirty(1, (CC => CC.hasTexture(this))))
         }
-        for (const lq in this._textures)
-          if (!this._textures[lq].isReady()) return !1;
-        for (const lq in this._internalTextures)
-          if (!this._internalTextures[lq].isReady) return !1;
-        qq && this.needAlphaTestingForMesh(qq) && cq.push("#define ALPHATEST"), !1 !== this._options.useClipPlane && ((0, Wq.e)(jq), (0, Wq.m)(this, Oq, cq)), Oq.fogEnabled && qq?.applyFog && Oq.fogMode !== lq.i.FOGMODE_NONE && (cq.push("#define FOG"), -1 === jq.indexOf("view") && jq.push("view"), -1 === jq.indexOf("vFogInfos") && jq.push("vFogInfos"), -1 === jq.indexOf("vFogColor") && jq.push("vFogColor")), this._useLogarithmicDepth && (cq.push("#define LOGARITHMICDEPTH"), -1 === jq.indexOf("logarithmicDepthConstant") && jq.push("logarithmicDepthConstant"));
-        const yq = gq ? gq.getRenderingMesh() : qq;
-        if (yq && this.useVertexPulling) {
-          const qq = yq.geometry;
-          qq && (this._vertexPullingMetadata = (0, aq.f)(qq), this._vertexPullingMetadata && this._vertexPullingMetadata.forEach(((qq, Eq) => {
-            jq.push(`vp_${Eq}_info`)
-          }))), cq.push("#define USE_VERTEX_PULLING");
-          const Eq = yq.geometry?.getIndexBuffer();
-          Eq && !yq.isUnIndexed && (cq.push("#define VERTEX_PULLING_USE_INDEX_BUFFER"), Eq.is32Bits && cq.push("#define VERTEX_PULLING_INDEX_BUFFER_32BITS"))
+        get getAlphaFromRGB() {
+          return this._getAlphaFromRGB
         }
-        this.customShaderNameResolve && (jq = jq.slice(), Hq = Hq.slice(), oq = oq.slice(), Vq = this.customShaderNameResolve(this.name, jq, Hq, oq, cq, uq));
-        const tq = Yq ? gq._getDrawWrapper(void 0, !0) : this._drawWrapper,
-          rq = tq?.effect ?? null,
-          vq = tq?.defines ?? null,
-          hq = cq.join("\n");
-        let nq = rq;
-        return vq !== hq && (nq = xq.createEffect(Vq, {
-          attributes: uq,
-          uniformsNames: jq,
-          uniformBuffersNames: Hq,
-          samplers: oq,
-          defines: hq,
-          fallbacks: Bq,
-          onCompiled: this.onCompiled,
-          onError: this.onError,
-          indexParameters: {
-            maxSimultaneousMorphTargets: Pq
-          },
-          shaderLanguage: this._options.shaderLanguage,
-          extraInitializationsAsync: this._options.extraInitializationsAsync
-        }, xq), Yq ? gq.setEffect(nq, hq, this._materialContext) : tq && tq.setEffect(nq, hq), this._onEffectCreatedObservable && (dq.effect = nq, dq.subMesh = gq ?? qq?.fn[0] ?? null, this._onEffectCreatedObservable.notifyObservers(dq))), tq._wasPreviouslyUsingInstances = !!Eq, !!nq?.isReady() && (rq !== nq && Oq.resetCachedMaterial(), tq._wasPreviouslyReady = !0, !0)
-      }
-      bindOnlyWorldMatrix(qq, Eq) {
-        const gq = Eq ?? this.getEffect();
-        if (!gq) return;
-        const Yq = this._options.uniforms; - 1 !== Yq.indexOf("world") && gq.setMatrix("world", qq);
-        const lq = this.ZJ(); - 1 !== Yq.indexOf("worldView") && (qq.multiplyToRef(lq.getViewMatrix(), this._cachedWorldViewMatrix), gq.setMatrix("worldView", this._cachedWorldViewMatrix)), -1 !== Yq.indexOf("worldViewProjection") && (qq.multiplyToRef(lq.getTransformMatrix(), this._cachedWorldViewProjectionMatrix), gq.setMatrix("worldViewProjection", this._cachedWorldViewProjectionMatrix)), -1 !== Yq.indexOf("view") && gq.setMatrix("view", lq.getViewMatrix())
-      }
-      bindForSubMesh(qq, Eq, gq) {
-        this.bind(qq, Eq, gq._drawWrapperOverride?.effect, gq)
-      }
-      bind(qq, Eq, gq, Yq) {
-        const lq = Yq && this._storeEffectOnSubMeshes,
-          Oq = gq ?? (lq ? Yq.effect : this.getEffect());
-        if (!Oq) return;
-        const mq = this.ZJ();
-        this._activeEffect = Oq, this.bindOnlyWorldMatrix(qq, gq);
-        const xq = this._options.uniformBuffers;
-        let Aq = !1;
-        if (Oq && xq && xq.length > 0 && mq.Ba().supportsUniformBuffers)
-          for (let uq = 0; uq < xq.length; ++uq) {
-            switch (xq[uq]) {
-              case "Mesh":
-                Eq && (Eq.getMeshUniformBuffer().bindToEffect(Oq, "Mesh"), Eq.transferToEffect(qq));
-                break;
-              case "Scene":
-                (0, Nq.s)(Oq, mq.getSceneUniformBuffer()), mq.finalizeSceneUbo(), Aq = !0
+        set coordinatesIndex(CC) {
+          this._coordinatesIndex !== CC && (this._coordinatesIndex = CC, this._scene && this._scene.markAllMaterialsAsDirty(1, (CC => CC.hasTexture(this))))
+        }
+        get coordinatesIndex() {
+          return this._coordinatesIndex
+        }
+        set coordinatesMode(CC) {
+          this._coordinatesMode !== CC && (this._coordinatesMode = CC, this._scene && this._scene.markAllMaterialsAsDirty(1, (CC => CC.hasTexture(this))))
+        }
+        get coordinatesMode() {
+          return this._coordinatesMode
+        }
+        get wrapU() {
+          return this._wrapU
+        }
+        set wrapU(CC) {
+          this._wrapU = CC
+        }
+        get wrapV() {
+          return this._wrapV
+        }
+        set wrapV(CC) {
+          this._wrapV = CC
+        }
+        get isCube() {
+          return this._texture ? this._texture.isCube : this._isCube
+        }
+        set isCube(CC) {
+          this._texture ? this._texture.isCube = CC : this._isCube = CC
+        }
+        get is3D() {
+          return !!this._texture && this._texture.is3D
+        }
+        set is3D(CC) {
+          this._texture && (this._texture.is3D = CC)
+        }
+        get is2DArray() {
+          return !!this._texture && this._texture.is2DArray
+        }
+        set is2DArray(CC) {
+          this._texture && (this._texture.is2DArray = CC)
+        }
+        get gammaSpace() {
+          return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
+        }
+        set gammaSpace(CC) {
+          if (this._texture) {
+            if (this._texture._gammaSpace === CC) return;
+            this._texture._gammaSpace = CC
+          } else {
+            if (this._gammaSpace === CC) return;
+            this._gammaSpace = CC
+          }
+          this.Km()?.markAllMaterialsAsDirty(1, (CC => CC.hasTexture(this)))
+        }
+        get isRGBD() {
+          return null != this._texture && this._texture._isRGBD
+        }
+        set isRGBD(CC) {
+          CC !== this.isRGBD && (this._texture && (this._texture._isRGBD = CC), this.Km()?.markAllMaterialsAsDirty(1, (CC => CC.hasTexture(this))))
+        }
+        get noMipmap() {
+          return !1
+        }
+        get lodGenerationOffset() {
+          return this._texture ? this._texture._lodGenerationOffset : 0
+        }
+        set lodGenerationOffset(CC) {
+          this._texture && (this._texture._lodGenerationOffset = CC)
+        }
+        get lodGenerationScale() {
+          return this._texture ? this._texture._lodGenerationScale : 0
+        }
+        set lodGenerationScale(CC) {
+          this._texture && (this._texture._lodGenerationScale = CC)
+        }
+        get linearSpecularLOD() {
+          return !!this._texture && this._texture._linearSpecularLOD
+        }
+        set linearSpecularLOD(CC) {
+          this._texture && (this._texture._linearSpecularLOD = CC)
+        }
+        get irradianceTexture() {
+          return this._texture ? this._texture._irradianceTexture : null
+        }
+        set irradianceTexture(CC) {
+          this._texture && (this._texture._irradianceTexture = CC)
+        }
+        get uid() {
+          return this._uid || (this._uid = (0, oC.b)()), this._uid
+        }
+        toString() {
+          return this.name
+        }
+        getClassName() {
+          return "BaseTexture"
+        }
+        set onDispose(CC) {
+          this._onDisposeObserver && this.Tm.remove(this._onDisposeObserver), this._onDisposeObserver = this.Tm.add(CC)
+        }
+        get isBlocking() {
+          return !0
+        }
+        get loadingError() {
+          return this._loadingError
+        }
+        get errorObject() {
+          return this._errorObject
+        }
+        constructor(zC) {
+          let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, QC.n)(this, XC), (0, QC.n)(this, cC, void 0)), this.name = ((0, QC.n)(this, uC), (0, QC.n)(this, rC, void 0)), this.displayName = ((0, QC.n)(this, sC), (0, QC.n)(this, TC, void 0)), this.metadata = ((0, QC.n)(this, aC), (0, QC.n)(this, tC, null)), this._internalMetadata = (0, QC.n)(this, DC), this.reservedDataStore = null, this._hasAlpha = (0, QC.n)(this, jC, !1), this._getAlphaFromRGB = ((0, QC.n)(this, yC), (0, QC.n)(this, LC, !1)), this.level = ((0, QC.n)(this, UC), (0, QC.n)(this, BC, 1)), this._coordinatesIndex = ((0, QC.n)(this, OC), (0, QC.n)(this, kC, 0)), this.optimizeUVAllocation = ((0, QC.n)(this, VC), (0, QC.n)(this, Cz, !0)), this._coordinatesMode = ((0, QC.n)(this, zz), (0, QC.n)(this, Zz, 0)), this.wrapR = ((0, QC.n)(this, Qz), (0, QC.n)(this, wz, 1)), this.anisotropicFilteringLevel = ((0, QC.n)(this, bz), (0, QC.n)(this, nz, CC.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, QC.n)(this, fz), !1), this._gammaSpace = !0, this.invertZ = (0, QC.n)(this, oz, !1), this.lodLevelInAlpha = ((0, QC.n)(this, qz), (0, QC.n)(this, Fz, !1)), this._dominantDirection = ((0, QC.n)(this, Wz), null), this.isRenderTarget = (0, QC.n)(this, Nz, !1), this._prefiltered = ((0, QC.n)(this, Mz), !1), this._forceSerialize = !1, this.animations = [], this.Tm = new bC.d, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, zC ? CC._IsScene(zC) ? this._scene = zC : this._engine = zC : this._scene = fC.c.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.mg()), this._texture = ZC, this._uid = null
+        }
+        Km() {
+          return this._scene
+        }
+        _getEngine() {
+          return this._engine
+        }
+        getTextureMatrix() {
+          return nC.b.IdentityReadOnly
+        }
+        getReflectionTextureMatrix() {
+          return nC.b.IdentityReadOnly
+        }
+        getRefractionTextureMatrix() {
+          return this.getReflectionTextureMatrix()
+        }
+        isReadyOrNotBlocking() {
+          return !this.isBlocking || this.isReady() || this.loadingError
+        }
+        scale(CC) {}
+        get canRescale() {
+          return !1
+        }
+        _getFromCache(CC, zC, ZC, QC, wC, bC) {
+          const nC = this._getEngine();
+          if (!nC) return null;
+          const fC = nC._getUseSRGBBuffer(!!wC, zC),
+            oC = nC.getLoadedTexturesCache();
+          for (let qC = 0; qC < oC.length; qC++) {
+            const nC = oC[qC];
+            if ((void 0 === wC || fC === nC._useSRGBBuffer) && (void 0 === QC || QC === nC.invertY) && nC.url === CC && nC.generateMipMaps === !zC && (!ZC || ZC === nC.samplingMode) && (void 0 === bC || bC === nC.isCube)) return nC.incrementReferences(), nC
+          }
+          return null
+        }
+        _rebuild() {}
+        clone() {
+          return null
+        }
+        get textureType() {
+          return this._texture && void 0 !== this._texture.type ? this._texture.type : 0
+        }
+        get textureFormat() {
+          return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
+        }
+        _markAllSubMeshesAsTexturesDirty() {
+          const CC = this.Km();
+          CC && CC.markAllMaterialsAsDirty(1)
+        }
+        readPixels() {
+          let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            QC = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            wC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            bC = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            nC = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            fC = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            oC = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          if (!this._texture) return null;
+          const qC = this._getEngine();
+          if (!qC) return null;
+          const FC = this.getSize();
+          let WC = FC.width,
+            NC = FC.height;
+          0 !== zC && (WC /= Math.pow(2, zC), NC /= Math.pow(2, zC), WC = Math.round(WC), NC = Math.round(NC)), fC = Math.min(WC, fC), oC = Math.min(NC, oC);
+          try {
+            return this._texture.isCube || this._texture.is2DArray ? qC._readTexturePixels(this._texture, fC, oC, CC, zC, ZC, QC, wC, bC, nC) : qC._readTexturePixels(this._texture, fC, oC, -1, zC, ZC, QC, wC, bC, nC)
+          } catch (MC) {
+            return null
+          }
+        }
+        _readPixelsSync() {
+          let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            QC = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            wC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          if (!this._texture) return null;
+          const bC = this.getSize();
+          let nC = bC.width,
+            fC = bC.height;
+          const oC = this._getEngine();
+          if (!oC) return null;
+          0 != zC && (nC /= Math.pow(2, zC), fC /= Math.pow(2, zC), nC = Math.round(nC), fC = Math.round(fC));
+          try {
+            return this._texture.isCube ? oC._readTexturePixelsSync(this._texture, nC, fC, CC, zC, ZC, QC, wC) : oC._readTexturePixelsSync(this._texture, nC, fC, -1, zC, ZC, QC, wC)
+          } catch (qC) {
+            return null
+          }
+        }
+        get _lodTextureHigh() {
+          return this._texture ? this._texture._lodTextureHigh : null
+        }
+        get _lodTextureMid() {
+          return this._texture ? this._texture._lodTextureMid : null
+        }
+        get _lodTextureLow() {
+          return this._texture ? this._texture._lodTextureLow : null
+        }
+        dispose() {
+          if (this._scene) {
+            this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
+            const CC = this._scene.textures.indexOf(this);
+            if (CC >= 0 && this._scene.textures.splice(CC, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const CC = this._parentContainer.textures.indexOf(this);
+              CC > -1 && this._parentContainer.textures.splice(CC, 1), this._parentContainer = null
             }
           }
-        const cq = Eq && lq ? this._mustRebind(mq, Oq, Yq, Eq.visibility) : mq.getCachedMaterial() !== this;
-        if (Oq && cq) {
-          let qq;
-          for (qq in Aq || -1 === this._options.uniforms.indexOf("view") || Oq.setMatrix("view", mq.getViewMatrix()), Aq || -1 === this._options.uniforms.indexOf("projection") || Oq.setMatrix("projection", mq.getProjectionMatrix()), Aq || -1 === this._options.uniforms.indexOf("viewProjection") || (Oq.setMatrix("viewProjection", mq.getTransformMatrix()), this._multiview && Oq.setMatrix("viewProjectionR", mq._transformMatrixR)), mq.activeCamera && -1 !== this._options.uniforms.indexOf("cameraPosition") && Oq.setVector3("cameraPosition", mq.activeCamera.globalPosition), (0, Nq.c)(Eq, Oq), (0, Wq.i)(Oq, this, mq), this._vertexPullingMetadata && (0, aq.e)(Oq, this._vertexPullingMetadata), this._useLogarithmicDepth && (0, Nq.o)(lq ? Yq.materialDefines : Oq.defines, Oq, mq), Eq && (0, Nq.f)(mq, Eq, Oq), this._textures) Oq.setTexture(qq, this._textures[qq]);
-          for (qq in this._internalTextures) Oq._bindTexture(qq, this._internalTextures[qq]);
-          for (qq in this._textureArrays) Oq.setTextureArray(qq, this._textureArrays[qq]);
-          for (qq in this._ints) Oq.setInt(qq, this._ints[qq]);
-          for (qq in this._uints) Oq.setUInt(qq, this._uints[qq]);
-          for (qq in this._floats) Oq.setFloat(qq, this._floats[qq]);
-          for (qq in this._floatsArrays) Oq.setArray(qq, this._floatsArrays[qq]);
-          for (qq in this._colors3) Oq.setColor3(qq, this._colors3[qq]);
-          for (qq in this._colors3Arrays) Oq.setArray3(qq, this._colors3Arrays[qq]);
-          for (qq in this._colors4) {
-            const Eq = this._colors4[qq];
-            Oq.setFloat4(qq, Eq.r, Eq.g, Eq.b, Eq.a)
-          }
-          for (qq in this._colors4Arrays) Oq.setArray4(qq, this._colors4Arrays[qq]);
-          for (qq in this._vectors2) Oq.setVector2(qq, this._vectors2[qq]);
-          for (qq in this._vectors3) Oq.setVector3(qq, this._vectors3[qq]);
-          for (qq in this._vectors4) Oq.setVector4(qq, this._vectors4[qq]);
-          for (qq in this._quaternions) Oq.setQuaternion(qq, this._quaternions[qq]);
-          for (qq in this._matrices) Oq.setMatrix(qq, this._matrices[qq]);
-          for (qq in this._matrixArrays) Oq.setMatrices(qq, this._matrixArrays[qq]);
-          for (qq in this._matrices3x3) Oq.setMatrix3x3(qq, this._matrices3x3[qq]);
-          for (qq in this._matrices2x2) Oq.setMatrix2x2(qq, this._matrices2x2[qq]);
-          for (qq in this._vectors2Arrays) Oq.setArray2(qq, this._vectors2Arrays[qq]);
-          for (qq in this._vectors3Arrays) Oq.setArray3(qq, this._vectors3Arrays[qq]);
-          for (qq in this._vectors4Arrays) Oq.setArray4(qq, this._vectors4Arrays[qq]);
-          for (qq in this._quaternionsArrays) Oq.setArray4(qq, this._quaternionsArrays[qq]);
-          for (qq in this._uniformBuffers) {
-            const Eq = this._uniformBuffers[qq].getBuffer();
-            Eq && Oq.bindUniformBuffer(Eq, qq)
-          }
-          const gq = mq.Ba(),
-            xq = gq.setExternalTexture;
-          if (xq)
-            for (qq in this._externalTextures) xq.call(gq, qq, this._externalTextures[qq]);
-          const cq = gq.setTextureSampler;
-          if (cq)
-            for (qq in this._textureSamplers) cq.call(gq, qq, this._textureSamplers[qq]);
-          const uq = gq.setStorageBuffer;
-          if (uq)
-            for (qq in this._storageBuffers) uq.call(gq, qq, this._storageBuffers[qq])
+          this.Tm.notifyObservers(this), this.Tm.clear(), this.metadata = null, super.dispose()
         }
-        if (Oq && Eq && (cq || !this.isFrozen)) {
-          (0, Nq.p)(Eq, Oq), Eq.morphTargetManager && Eq.morphTargetManager.isUsingTextureForTargets && Eq.morphTargetManager._bind(Oq);
-          const qq = Eq.bakedVertexAnimationManager;
-          if (qq && qq.isEnabled) {
-            const qq = lq ? Yq._drawWrapper : this._drawWrapper;
-            Eq.bakedVertexAnimationManager?.bind(Oq, !!qq._wasPreviouslyUsingInstances)
-          }
+        serialize() {
+          let CC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !CC) return null;
+          const zC = NC.d.Serialize(this);
+          return NC.d.AppendSerializedAnimations(this, zC), zC
         }
-        this._afterBind(Eq, Oq, Yq)
+        static WhenAllReady(CC, zC) {
+          let ZC = CC.length;
+          if (0 !== ZC)
+            for (let QC = 0; QC < CC.length; QC++) {
+              const wC = CC[QC];
+              if (wC.isReady()) 0 === --ZC && zC();
+              else {
+                const CC = wC.onLoadObservable;
+                CC ? CC.addOnce((() => {
+                  0 === --ZC && zC()
+                })) : 0 === --ZC && zC()
+              }
+            } else zC()
+        }
+        static _IsScene(CC) {
+          return "Scene" === CC.getClassName()
+        }
+      }, (() => {
+        const bC = "function" === typeof Symbol && Symbol.metadata ? Object.create(lC[Symbol.metadata] ?? null) : void 0;
+        zC = [(0, wC.M)()], ZC = [(0, wC.M)()], qC = [(0, wC.M)()], WC = [(0, wC.M)()], MC = [(0, wC.M)("hasAlpha")], gC = [(0, wC.M)("getAlphaFromRGB")], SC = [(0, wC.M)()], pC = [(0, wC.M)("coordinatesIndex")], PC = [(0, wC.M)()], GC = [(0, wC.M)("coordinatesMode")], RC = [(0, wC.M)()], AC = [(0, wC.M)()], xC = [(0, wC.M)()], JC = [(0, wC.M)()], IC = [(0, wC.M)()], iC = [(0, wC.M)()], vC = [(0, wC.M)()], eC = [(0, wC.M)()], hC = [(0, wC.M)()], KC = [(0, wC.M)()], YC = [(0, wC.M)()], dC = [(0, wC.M)()], mC = [(0, wC.M)()], HC = [(0, wC.B)()], EC = [(0, wC.M)()], (0, QC.j)(CC, null, RC, {
+          kind: "getter",
+          name: "wrapU",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "wrapU" in CC,
+            get: CC => CC.wrapU
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, AC, {
+          kind: "getter",
+          name: "wrapV",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "wrapV" in CC,
+            get: CC => CC.wrapV
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, IC, {
+          kind: "getter",
+          name: "isCube",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "isCube" in CC,
+            get: CC => CC.isCube
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, iC, {
+          kind: "getter",
+          name: "is3D",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "is3D" in CC,
+            get: CC => CC.is3D
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, vC, {
+          kind: "getter",
+          name: "is2DArray",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "is2DArray" in CC,
+            get: CC => CC.is2DArray
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, eC, {
+          kind: "getter",
+          name: "gammaSpace",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "gammaSpace" in CC,
+            get: CC => CC.gammaSpace
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, YC, {
+          kind: "getter",
+          name: "lodGenerationOffset",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "lodGenerationOffset" in CC,
+            get: CC => CC.lodGenerationOffset
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, dC, {
+          kind: "getter",
+          name: "lodGenerationScale",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "lodGenerationScale" in CC,
+            get: CC => CC.lodGenerationScale
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, mC, {
+          kind: "getter",
+          name: "linearSpecularLOD",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "linearSpecularLOD" in CC,
+            get: CC => CC.linearSpecularLOD
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(CC, null, HC, {
+          kind: "getter",
+          name: "irradianceTexture",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "irradianceTexture" in CC,
+            get: CC => CC.irradianceTexture
+          },
+          metadata: bC
+        }, null, XC), (0, QC.j)(null, null, zC, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "uniqueId" in CC,
+            get: CC => CC.uniqueId,
+            set: (CC, zC) => {
+              CC.uniqueId = zC
+            }
+          },
+          metadata: bC
+        }, cC, uC), (0, QC.j)(null, null, ZC, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "name" in CC,
+            get: CC => CC.name,
+            set: (CC, zC) => {
+              CC.name = zC
+            }
+          },
+          metadata: bC
+        }, rC, sC), (0, QC.j)(null, null, qC, {
+          kind: "field",
+          name: "displayName",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "displayName" in CC,
+            get: CC => CC.displayName,
+            set: (CC, zC) => {
+              CC.displayName = zC
+            }
+          },
+          metadata: bC
+        }, TC, aC), (0, QC.j)(null, null, WC, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "metadata" in CC,
+            get: CC => CC.metadata,
+            set: (CC, zC) => {
+              CC.metadata = zC
+            }
+          },
+          metadata: bC
+        }, tC, DC), (0, QC.j)(null, null, MC, {
+          kind: "field",
+          name: "_hasAlpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_hasAlpha" in CC,
+            get: CC => CC._hasAlpha,
+            set: (CC, zC) => {
+              CC._hasAlpha = zC
+            }
+          },
+          metadata: bC
+        }, jC, yC), (0, QC.j)(null, null, gC, {
+          kind: "field",
+          name: "_getAlphaFromRGB",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_getAlphaFromRGB" in CC,
+            get: CC => CC._getAlphaFromRGB,
+            set: (CC, zC) => {
+              CC._getAlphaFromRGB = zC
+            }
+          },
+          metadata: bC
+        }, LC, UC), (0, QC.j)(null, null, SC, {
+          kind: "field",
+          name: "level",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "level" in CC,
+            get: CC => CC.level,
+            set: (CC, zC) => {
+              CC.level = zC
+            }
+          },
+          metadata: bC
+        }, BC, OC), (0, QC.j)(null, null, pC, {
+          kind: "field",
+          name: "_coordinatesIndex",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_coordinatesIndex" in CC,
+            get: CC => CC._coordinatesIndex,
+            set: (CC, zC) => {
+              CC._coordinatesIndex = zC
+            }
+          },
+          metadata: bC
+        }, kC, VC), (0, QC.j)(null, null, PC, {
+          kind: "field",
+          name: "optimizeUVAllocation",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "optimizeUVAllocation" in CC,
+            get: CC => CC.optimizeUVAllocation,
+            set: (CC, zC) => {
+              CC.optimizeUVAllocation = zC
+            }
+          },
+          metadata: bC
+        }, Cz, zz), (0, QC.j)(null, null, GC, {
+          kind: "field",
+          name: "_coordinatesMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "_coordinatesMode" in CC,
+            get: CC => CC._coordinatesMode,
+            set: (CC, zC) => {
+              CC._coordinatesMode = zC
+            }
+          },
+          metadata: bC
+        }, Zz, Qz), (0, QC.j)(null, null, xC, {
+          kind: "field",
+          name: "wrapR",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "wrapR" in CC,
+            get: CC => CC.wrapR,
+            set: (CC, zC) => {
+              CC.wrapR = zC
+            }
+          },
+          metadata: bC
+        }, wz, bz), (0, QC.j)(null, null, JC, {
+          kind: "field",
+          name: "anisotropicFilteringLevel",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "anisotropicFilteringLevel" in CC,
+            get: CC => CC.anisotropicFilteringLevel,
+            set: (CC, zC) => {
+              CC.anisotropicFilteringLevel = zC
+            }
+          },
+          metadata: bC
+        }, nz, fz), (0, QC.j)(null, null, hC, {
+          kind: "field",
+          name: "invertZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "invertZ" in CC,
+            get: CC => CC.invertZ,
+            set: (CC, zC) => {
+              CC.invertZ = zC
+            }
+          },
+          metadata: bC
+        }, oz, qz), (0, QC.j)(null, null, KC, {
+          kind: "field",
+          name: "lodLevelInAlpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "lodLevelInAlpha" in CC,
+            get: CC => CC.lodLevelInAlpha,
+            set: (CC, zC) => {
+              CC.lodLevelInAlpha = zC
+            }
+          },
+          metadata: bC
+        }, Fz, Wz), (0, QC.j)(null, null, EC, {
+          kind: "field",
+          name: "isRenderTarget",
+          static: !1,
+          private: !1,
+          access: {
+            has: CC => "isRenderTarget" in CC,
+            get: CC => CC.isRenderTarget,
+            set: (CC, zC) => {
+              CC.isRenderTarget = zC
+            }
+          },
+          metadata: bC
+        }, Nz, Mz), bC && Object.defineProperty(CC, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: bC
+        })
+      })(), CC.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, CC
+    })();
+    (WC = gC.prototype).forceSphericalPolynomialsRecompute ?? (WC.forceSphericalPolynomialsRecompute = (0, MC.f)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(gC.prototype, "sphericalPolynomial") || Object.defineProperty(gC.prototype, "sphericalPolynomial", (0, MC.d)("BaseTexture", "sphericalPolynomial"))
+  },
+  40303: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => xC,
+      h: () => RC
+    });
+    var QC = ZC(39811),
+      wC = ZC(39818),
+      bC = ZC(36987),
+      nC = ZC(36963),
+      fC = ZC(39803),
+      oC = ZC(37002),
+      qC = ZC(39694),
+      FC = ZC(39712),
+      WC = ZC(39921),
+      NC = ZC(37596),
+      MC = ZC(39878);
+
+    function gC(CC, zC) {
+      let ZC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const QC = zC.width,
+        wC = zC.height;
+      if (CC instanceof Float32Array) {
+        let zC = CC.byteLength / CC.BYTES_PER_ELEMENT;
+        const ZC = new Uint8Array(zC);
+        for (; --zC >= 0;) {
+          let QC = CC[zC];
+          QC < 0 ? QC = 0 : QC > 1 && (QC = 1), ZC[zC] = 255 * QC
+        }
+        CC = ZC
       }
-      getActiveTextures() {
-        const qq = super.getActiveTextures();
-        for (const Eq in this._textures) qq.push(this._textures[Eq]);
-        for (const Eq in this._textureArrays) {
-          const gq = this._textureArrays[Eq];
-          for (let Eq = 0; Eq < gq.length; Eq++) qq.push(gq[Eq])
-        }
-        return qq
+      const bC = document.createElement("canvas");
+      bC.width = QC, bC.height = wC;
+      const nC = bC.getContext("2d");
+      if (!nC) return null;
+      const fC = nC.createImageData(QC, wC);
+      if (fC.data.set(CC), nC.putImageData(fC, 0, 0), ZC) {
+        const CC = document.createElement("canvas");
+        CC.width = QC, CC.height = wC;
+        const zC = CC.getContext("2d");
+        return zC ? (zC.translate(0, wC), zC.scale(1, -1), zC.drawImage(bC, 0, 0), CC.toDataURL("image/png")) : null
       }
-      hasTexture(qq) {
-        if (super.hasTexture(qq)) return !0;
-        for (const gq in this._textures)
-          if (this._textures[gq] === qq) return !0;
-        const Eq = qq.getInternalTexture();
-        for (const gq in this._internalTextures)
-          if (this._internalTextures[gq] === Eq) return !0;
-        for (const gq in this._textureArrays) {
-          const Eq = this._textureArrays[gq];
-          for (let gq = 0; gq < Eq.length; gq++)
-            if (Eq[gq] === qq) return !0
-        }
-        return !1
-      }
-      clone(qq) {
-        const Eq = Yq.d.Clone((() => new jq(qq, this.ZJ(), this._shaderPath, this._options, this._storeEffectOnSubMeshes)), this);
-        Eq.name = qq, Eq.id = qq, "object" === typeof Eq._shaderPath && (Eq._shaderPath = {
-          ...Eq._shaderPath
-        }), this._options = {
-          ...this._options
-        };
-        const gq = Object.keys(this._options);
-        for (const Yq of gq) {
-          const qq = this._options[Yq];
-          Array.isArray(qq) && (this._options[Yq] = qq.slice(0))
-        }
-        this.stencil.copyTo(Eq.stencil);
-        for (const Yq in this._textures) Eq.setTexture(Yq, this._textures[Yq]);
-        for (const Yq in this._internalTextures) Eq.setInternalTexture(Yq, this._internalTextures[Yq]);
-        for (const Yq in this._textureArrays) Eq.setTextureArray(Yq, this._textureArrays[Yq]);
-        for (const Yq in this._externalTextures) Eq.setExternalTexture(Yq, this._externalTextures[Yq]);
-        for (const Yq in this._ints) Eq.setInt(Yq, this._ints[Yq]);
-        for (const Yq in this._uints) Eq.setUInt(Yq, this._uints[Yq]);
-        for (const Yq in this._floats) Eq.setFloat(Yq, this._floats[Yq]);
-        for (const Yq in this._floatsArrays) Eq.setFloats(Yq, this._floatsArrays[Yq]);
-        for (const Yq in this._colors3) Eq.setColor3(Yq, this._colors3[Yq]);
-        for (const Yq in this._colors3Arrays) Eq._colors3Arrays[Yq] = this._colors3Arrays[Yq];
-        for (const Yq in this._colors4) Eq.setColor4(Yq, this._colors4[Yq]);
-        for (const Yq in this._colors4Arrays) Eq._colors4Arrays[Yq] = this._colors4Arrays[Yq];
-        for (const Yq in this._vectors2) Eq.setVector2(Yq, this._vectors2[Yq]);
-        for (const Yq in this._vectors3) Eq.setVector3(Yq, this._vectors3[Yq]);
-        for (const Yq in this._vectors4) Eq.setVector4(Yq, this._vectors4[Yq]);
-        for (const Yq in this._quaternions) Eq.setQuaternion(Yq, this._quaternions[Yq]);
-        for (const Yq in this._quaternionsArrays) Eq._quaternionsArrays[Yq] = this._quaternionsArrays[Yq];
-        for (const Yq in this._matrices) Eq.setMatrix(Yq, this._matrices[Yq]);
-        for (const Yq in this._matrixArrays) Eq._matrixArrays[Yq] = this._matrixArrays[Yq].slice();
-        for (const Yq in this._matrices3x3) Eq.setMatrix3x3(Yq, this._matrices3x3[Yq]);
-        for (const Yq in this._matrices2x2) Eq.setMatrix2x2(Yq, this._matrices2x2[Yq]);
-        for (const Yq in this._vectors2Arrays) Eq.setArray2(Yq, this._vectors2Arrays[Yq]);
-        for (const Yq in this._vectors3Arrays) Eq.setArray3(Yq, this._vectors3Arrays[Yq]);
-        for (const Yq in this._vectors4Arrays) Eq.setArray4(Yq, this._vectors4Arrays[Yq]);
-        for (const Yq in this._uniformBuffers) Eq.setUniformBuffer(Yq, this._uniformBuffers[Yq]);
-        for (const Yq in this._textureSamplers) Eq.setTextureSampler(Yq, this._textureSamplers[Yq]);
-        for (const Yq in this._storageBuffers) Eq.setStorageBuffer(Yq, this._storageBuffers[Yq]);
-        return Eq
-      }
-      dispose(qq, Eq, gq) {
-        if (Eq) {
-          let qq;
-          for (qq in this._textures) this._textures[qq].dispose();
-          for (qq in this._internalTextures) this._internalTextures[qq].dispose();
-          for (qq in this._textureArrays) {
-            const Eq = this._textureArrays[qq];
-            for (let qq = 0; qq < Eq.length; qq++) Eq[qq].dispose()
-          }
-        }
-        this._textures = {}, this._internalTextures = {}, super.dispose(qq, Eq, gq)
-      }
-      serialize() {
-        const qq = Yq.d.Serialize(this);
-        let Eq;
-        for (Eq in qq.customType = "BABYLON.ShaderMaterial", qq.uniqueId = this.uniqueId, qq.options = this._options, qq.shaderPath = this._shaderPath, qq.storeEffectOnSubMeshes = this._storeEffectOnSubMeshes, qq.stencil = this.stencil.serialize(), qq.textures = {}, this._textures) qq.textures[Eq] = this._textures[Eq].serialize();
-        for (Eq in qq.textureArrays = {}, this._textureArrays) {
-          qq.textureArrays[Eq] = [];
-          const gq = this._textureArrays[Eq];
-          for (let Yq = 0; Yq < gq.length; Yq++) qq.textureArrays[Eq].push(gq[Yq].serialize())
-        }
-        for (Eq in qq.ints = {}, this._ints) qq.ints[Eq] = this._ints[Eq];
-        for (Eq in qq.uints = {}, this._uints) qq.uints[Eq] = this._uints[Eq];
-        for (Eq in qq.floats = {}, this._floats) qq.floats[Eq] = this._floats[Eq];
-        for (Eq in qq.floatsArrays = {}, this._floatsArrays) qq.floatsArrays[Eq] = this._floatsArrays[Eq];
-        for (Eq in qq.colors3 = {}, this._colors3) {
-          const gq = this._colors3[Eq];
-          qq.colors3[Eq] = [gq.r, gq.g, gq.b]
-        }
-        for (Eq in qq.colors3Arrays = {}, this._colors3Arrays) qq.colors3Arrays[Eq] = this._colors3Arrays[Eq];
-        for (Eq in qq.colors4 = {}, this._colors4) {
-          const gq = this._colors4[Eq];
-          qq.colors4[Eq] = [gq.r, gq.g, gq.b, gq.a]
-        }
-        for (Eq in qq.colors4Arrays = {}, this._colors4Arrays) qq.colors4Arrays[Eq] = this._colors4Arrays[Eq];
-        for (Eq in qq.vectors2 = {}, this._vectors2) {
-          const gq = this._vectors2[Eq];
-          qq.vectors2[Eq] = [gq.x, gq.y]
-        }
-        for (Eq in qq.vectors3 = {}, this._vectors3) {
-          const gq = this._vectors3[Eq];
-          qq.vectors3[Eq] = [gq.x, gq.y, gq.z]
-        }
-        for (Eq in qq.vectors4 = {}, this._vectors4) {
-          const gq = this._vectors4[Eq];
-          qq.vectors4[Eq] = [gq.x, gq.y, gq.z, gq.w]
-        }
-        for (Eq in qq.quaternions = {}, this._quaternions) qq.quaternions[Eq] = this._quaternions[Eq].bYq();
-        for (Eq in qq.matrices = {}, this._matrices) qq.matrices[Eq] = this._matrices[Eq].bYq();
-        for (Eq in qq.matrixArray = {}, this._matrixArrays) qq.matrixArray[Eq] = this._matrixArrays[Eq];
-        for (Eq in qq.matrices3x3 = {}, this._matrices3x3) qq.matrices3x3[Eq] = this._matrices3x3[Eq];
-        for (Eq in qq.matrices2x2 = {}, this._matrices2x2) qq.matrices2x2[Eq] = this._matrices2x2[Eq];
-        for (Eq in qq.vectors2Arrays = {}, this._vectors2Arrays) qq.vectors2Arrays[Eq] = this._vectors2Arrays[Eq];
-        for (Eq in qq.vectors3Arrays = {}, this._vectors3Arrays) qq.vectors3Arrays[Eq] = this._vectors3Arrays[Eq];
-        for (Eq in qq.vectors4Arrays = {}, this._vectors4Arrays) qq.vectors4Arrays[Eq] = this._vectors4Arrays[Eq];
-        for (Eq in qq.quaternionsArrays = {}, this._quaternionsArrays) qq.quaternionsArrays[Eq] = this._quaternionsArrays[Eq];
-        return qq
-      }
+      return bC.toDataURL("image/png")
     }
 
-    function Hq(qq, Eq, gq) {
-      const lq = Yq.d.Parse((() => new jq(qq.name, Eq, qq.shaderPath, qq.options, qq.storeEffectOnSubMeshes)), qq, Eq, gq);
-      let mq;
-      for (mq in qq.stencil && lq.stencil.parse(qq.stencil, Eq, gq), qq.textures) lq.setTexture(mq, xq.d.Parse(qq.textures[mq], Eq, gq));
-      for (mq in qq.textureArrays) {
-        const Yq = qq.textureArrays[mq],
-          Oq = [];
-        for (let qq = 0; qq < Yq.length; qq++) Oq.push(xq.d.Parse(Yq[qq], Eq, gq));
-        lq.setTextureArray(mq, Oq)
-      }
-      for (mq in qq.ints) lq.setInt(mq, qq.ints[mq]);
-      for (mq in qq.uints) lq.setUInt(mq, qq.uints[mq]);
-      for (mq in qq.floats) lq.setFloat(mq, qq.floats[mq]);
-      for (mq in qq.floatsArrays) lq.setFloats(mq, qq.floatsArrays[mq]);
-      for (mq in qq.colors3) {
-        const Eq = qq.colors3[mq];
-        lq.setColor3(mq, {
-          r: Eq[0],
-          g: Eq[1],
-          b: Eq[2]
-        })
-      }
-      for (mq in qq.colors3Arrays) {
-        const Eq = qq.colors3Arrays[mq].reduce(((qq, Eq, gq) => (gq % 3 === 0 ? qq.push([Eq]) : qq[qq.length - 1].push(Eq), qq)), []).map((qq => ({
-          r: qq[0],
-          g: qq[1],
-          b: qq[2]
-        })));
-        lq.setColor3Array(mq, Eq)
-      }
-      for (mq in qq.colors4) {
-        const Eq = qq.colors4[mq];
-        lq.setColor4(mq, {
-          r: Eq[0],
-          g: Eq[1],
-          b: Eq[2],
-          a: Eq[3]
-        })
-      }
-      for (mq in qq.colors4Arrays) {
-        const Eq = qq.colors4Arrays[mq].reduce(((qq, Eq, gq) => (gq % 4 === 0 ? qq.push([Eq]) : qq[qq.length - 1].push(Eq), qq)), []).map((qq => ({
-          r: qq[0],
-          g: qq[1],
-          b: qq[2],
-          a: qq[3]
-        })));
-        lq.setColor4Array(mq, Eq)
-      }
-      for (mq in qq.vectors2) {
-        const Eq = qq.vectors2[mq];
-        lq.setVector2(mq, {
-          x: Eq[0],
-          y: Eq[1]
-        })
-      }
-      for (mq in qq.vectors3) {
-        const Eq = qq.vectors3[mq];
-        lq.setVector3(mq, {
-          x: Eq[0],
-          y: Eq[1],
-          z: Eq[2]
-        })
-      }
-      for (mq in qq.vectors4) {
-        const Eq = qq.vectors4[mq];
-        lq.setVector4(mq, {
-          x: Eq[0],
-          y: Eq[1],
-          z: Eq[2],
-          w: Eq[3]
-        })
-      }
-      for (mq in qq.quaternions) lq.setQuaternion(mq, Oq.h.FromArray(qq.quaternions[mq]));
-      for (mq in qq.matrices) lq.setMatrix(mq, Oq.e.FromArray(qq.matrices[mq]));
-      const Aq = lq;
-      for (mq in qq.matrixArray) Aq._matrixArrays[mq] = new Float32Array(qq.matrixArray[mq]);
-      for (mq in qq.matrices3x3) lq.setMatrix3x3(mq, qq.matrices3x3[mq]);
-      for (mq in qq.matrices2x2) lq.setMatrix2x2(mq, qq.matrices2x2[mq]);
-      for (mq in qq.vectors2Arrays) lq.setArray2(mq, qq.vectors2Arrays[mq]);
-      for (mq in qq.vectors3Arrays) lq.setArray3(mq, qq.vectors3Arrays[mq]);
-      for (mq in qq.vectors4Arrays) lq.setArray4(mq, qq.vectors4Arrays[mq]);
-      for (mq in qq.quaternionsArrays) lq.setArray4(mq, qq.quaternionsArrays[mq]);
-      return lq
+    function SC(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const QC = CC.getInternalTexture();
+      if (!QC) return null;
+      const wC = CC._readPixelsSync(zC, ZC);
+      return wC ? gC(wC, CC.getSize(), QC.invertY) : null
     }
-    async function oq(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "";
-      return await new Promise(((lq, Oq) => {
-        const mq = new cq.e;
-        mq.addEventListener("readystatechange", (() => {
-          if (4 == mq.readyState)
-            if (200 == mq.status) {
-              const Eq = Hq(JSON.parse(mq.responseText), gq || Bq.b.LastCreatedScene, Yq);
-              qq && (Eq.name = qq), lq(Eq)
-            } else Oq("Unable to load the ShaderMaterial")
-        })), mq.open("GET", Eq), mq.send()
-      }))
+    async function pC(CC) {
+      let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const QC = CC.getInternalTexture();
+      if (!QC) return null;
+      const wC = await CC.readPixels(zC, ZC);
+      return wC ? gC(wC, CC.getSize(), QC.invertY) : null
     }
-    async function Pq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Yq = this?.SnippetUrl ?? jq.SnippetUrl;
-      return await new Promise(((lq, Oq) => {
-        const mq = new cq.e;
-        mq.addEventListener("readystatechange", (() => {
-          if (4 == mq.readyState)
-            if (200 == mq.status) {
-              const Yq = JSON.parse(JSON.parse(mq.responseText).jsonPayload),
-                Oq = Hq(JSON.parse(Yq.shaderMaterial), Eq || Bq.b.LastCreatedScene, gq);
-              Oq.snippetId = qq, lq(Oq)
-            } else Oq("Unable to load the snippet " + qq)
-        })), mq.open("GET", Yq + "/" + qq.replace(/#/g, "/")), mq.send()
-      }))
-    }
-    jq.SnippetUrl = "https://snippet.babylonjs.com";
-    const Qq = Pq;
-    let yq = !1;
+    var PC = ZC(40256),
+      GC = ZC(39842);
+    let RC = (() => {
+        var CC;
+        let zC, ZC, gC, RC, AC, xC, JC, IC, iC, vC, eC, hC, KC, YC = fC.b,
+          dC = [],
+          mC = [],
+          HC = [],
+          EC = [],
+          lC = [],
+          XC = [],
+          cC = [],
+          uC = [],
+          rC = [],
+          sC = [],
+          TC = [],
+          aC = [],
+          tC = [],
+          DC = [],
+          jC = [],
+          yC = [],
+          LC = [],
+          UC = [],
+          BC = [],
+          OC = [],
+          kC = [],
+          VC = [],
+          Cz = [],
+          zz = [],
+          Zz = [];
+        return CC = class extends YC {
+          static _CreateVideoTexture(zC, ZC, QC) {
+            arguments.length > 5 && void 0 !== arguments[5] || CC.TRILINEAR_SAMPLINGMODE;
+            throw (0, qC.i)("VideoTexture")
+          }
+          get noMipmap() {
+            return this._noMipmap
+          }
+          get mimeType() {
+            return this._mimeType
+          }
+          set isBlocking(CC) {
+            this._isBlocking = CC
+          }
+          get isBlocking() {
+            return this._isBlocking
+          }
+          get invertY() {
+            return this._invertY
+          }
+          constructor(zC, ZC, wC, nC) {
+            let fC, oC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : CC.TRILINEAR_SAMPLINGMODE,
+              qC = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              WC = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              NC = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              MC = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              gC = arguments.length > 9 ? arguments[9] : void 0,
+              SC = arguments.length > 10 ? arguments[10] : void 0,
+              pC = arguments.length > 11 ? arguments[11] : void 0,
+              GC = arguments.length > 12 ? arguments[12] : void 0,
+              RC = arguments.length > 13 ? arguments[13] : void 0;
+            super(ZC), this.url = ((0, QC.n)(this, dC), (0, QC.n)(this, mC, null)), this.uOffset = ((0, QC.n)(this, HC), (0, QC.n)(this, EC, 0)), this.vOffset = ((0, QC.n)(this, lC), (0, QC.n)(this, XC, 0)), this.uScale = ((0, QC.n)(this, cC), (0, QC.n)(this, uC, 1)), this.vScale = ((0, QC.n)(this, rC), (0, QC.n)(this, sC, 1)), this.uAng = ((0, QC.n)(this, TC), (0, QC.n)(this, aC, 0)), this.vAng = ((0, QC.n)(this, tC), (0, QC.n)(this, DC, 0)), this.wAng = ((0, QC.n)(this, jC), (0, QC.n)(this, yC, 0)), this.uRotationCenter = ((0, QC.n)(this, LC), (0, QC.n)(this, UC, .5)), this.vRotationCenter = ((0, QC.n)(this, BC), (0, QC.n)(this, OC, .5)), this.wRotationCenter = ((0, QC.n)(this, kC), (0, QC.n)(this, VC, .5)), this.homogeneousRotationInUVTransform = ((0, QC.n)(this, Cz), (0, QC.n)(this, zz, !1)), this.inspectableCustomProperties = ((0, QC.n)(this, Zz), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new bC.d, this._isBlocking = !0, this.name = zC || "", this.url = zC;
+            let AC = !1,
+              xC = null,
+              JC = !0;
+            "object" === typeof wC && null !== wC ? (fC = wC.noMipmap ?? !1, nC = wC.invertY ?? !PC.d, oC = wC.samplingMode ?? CC.TRILINEAR_SAMPLINGMODE, qC = wC.onLoad ?? null, WC = wC.onError ?? null, NC = wC.buffer ?? null, MC = wC.deleteBuffer ?? !1, gC = wC.format, SC = wC.mimeType, pC = wC.loaderOptions, GC = wC.creationFlags, AC = wC.useSRGBBuffer ?? !1, xC = wC.internalTexture ?? null, JC = wC.gammaSpace ?? JC, RC = wC.forcedExtension ?? RC) : fC = !!wC, this._gammaSpace = JC, this._noMipmap = fC, this._invertY = void 0 === nC ? !PC.d : nC, this._initialSamplingMode = oC, this._buffer = NC, this._deleteBuffer = MC, this._mimeType = SC, this._loaderOptions = pC, this._creationFlags = GC, this._useSRGBBuffer = AC, this._forcedExtension = RC, void 0 !== gC && (this._format = gC);
+            const IC = this.Km(),
+              iC = this._getEngine();
+            if (!iC) return;
+            iC.onBeforeTextureInitObservable.notifyObservers(this);
+            const vC = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), qC && qC(), !this.isBlocking && IC && IC.resetCachedMaterial()
+              },
+              eC = (zC, ZC) => {
+                this._loadingError = !0, this._errorObject = {
+                  message: zC,
+                  exception: ZC
+                }, WC && WC(zC, ZC), CC.OnTextureLoadErrorObservable.notifyObservers(this)
+              };
+            if (!this.url && !xC) return this._delayedOnLoad = vC, void(this._delayedOnError = eC);
+            if (this._texture = xC ?? this._getFromCache(this.url, fC, oC, this._invertY, AC, this.isCube), this._texture)
+              if (this._texture.isReady) FC.d.SetImmediate((() => vC()));
+              else {
+                const CC = this._texture.onLoadedObservable.add(vC);
+                this._texture.onErrorObservable.add((zC => {
+                  eC(zC.message, zC.exception), this._texture?.onLoadedObservable.remove(CC)
+                }))
+              }
+            else if (IC && IC.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = vC, this._delayedOnError = eC;
+            else {
+              try {
+                this._texture = iC.createTexture(this.url, fC, this._invertY, IC, oC, vC, eC, this._buffer, void 0, this._format, this._forcedExtension, SC, pC, GC, AC)
+              } catch (hC) {
+                throw eC("error loading", hC), hC
+              }
+              MC && (this._buffer = null)
+            }
+          }
+          updateURL(CC) {
+            let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              ZC = arguments.length > 2 ? arguments[2] : void 0,
+              QC = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.Km().markAllMaterialsAsDirty(1, (CC => CC.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = CC), this.url = CC, this._buffer = zC, this._forcedExtension = QC, this.delayLoadState = 4;
+            const wC = this._delayedOnLoad;
+            this._delayedOnLoad = () => {
+              wC ? wC() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), ZC && ZC()
+            }, this.delayLoad()
+          }
+          delayLoad() {
+            if (4 !== this.delayLoadState) return;
+            const CC = this.Km();
+            if (!CC) return;
+            let zC = this.url;
+            !zC && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (zC = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(zC, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? FC.d.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = CC.mg().createTexture(zC, this._noMipmap, this._invertY, CC, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+          }
+          _prepareRowForTextureGeneration(CC, zC, ZC, QC) {
+            CC *= this._cachedUScale, zC *= this._cachedVScale, CC -= this.uRotationCenter * this._cachedUScale, zC -= this.vRotationCenter * this._cachedVScale, ZC -= this.wRotationCenter, nC.r.TransformCoordinatesFromFloatsToRef(CC, zC, ZC, this._rowGenerationMatrix, QC), QC.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, QC.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, QC.z += this.wRotationCenter
+          }
+          getTextureMatrix() {
+            let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * CC === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * CC, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = nC.b.Zero(), this._rowGenerationMatrix = new nC.b, this._t0 = nC.r.Zero(), this._t1 = nC.r.Zero(), this._t2 = nC.r.Zero()), nC.b.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (nC.b.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, nC.j.Matrix[0]), nC.b.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, nC.j.Matrix[1]), nC.b.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, nC.j.Matrix[2]), nC.b.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, nC.j.Matrix[3]), nC.j.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(nC.j.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(nC.j.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(nC.j.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.RQC(this._t0), this._t2.RQC(this._t0), nC.b.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const zC = this.Km();
+            if (!zC) return this._cachedTextureMatrix;
+            const ZC = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && ZC !== this._cachedIdentity3x2 && zC.markAllMaterialsAsDirty(1, (CC => CC.hasTexture(this))), this._cachedTextureMatrix
+          }
+          getReflectionTextureMatrix() {
+            const zC = this.Km();
+            if (!zC) return this._cachedReflectionTextureMatrix;
+            if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
+              if (this.coordinatesMode !== CC.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === zC.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+            }
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = nC.b.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = nC.b.Zero());
+            const ZC = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
+              case CC.PLANAR_MODE:
+                nC.b.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+                break;
+              case CC.PROJECTION_MODE: {
+                nC.b.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const CC = zC.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = CC.updateFlag, CC.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+                break
+              }
+              default:
+                nC.b.IdentityToRef(this._cachedReflectionTextureMatrix)
+            }
+            return ZC && zC.markAllMaterialsAsDirty(1, (CC => CC.hasTexture(this))), this._cachedReflectionTextureMatrix
+          }
+          clone() {
+            const zC = {
+              noMipmap: this._noMipmap,
+              invertY: this._invertY,
+              samplingMode: this.samplingMode,
+              onLoad: void 0,
+              onError: void 0,
+              buffer: this._texture ? this._texture._buffer : void 0,
+              deleteBuffer: this._deleteBuffer,
+              format: this.textureFormat,
+              mimeType: this.mimeType,
+              loaderOptions: this._loaderOptions,
+              creationFlags: this._creationFlags,
+              useSRGBBuffer: this._useSRGBBuffer
+            };
+            return GC.d.Clone((() => new CC(this._texture ? this._texture.url : null, this.Km(), zC)), this)
+          }
+          serialize() {
+            const zC = this.name;
+            CC.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const ZC = super.serialize(CC._SerializeInternalTextureUniqueId);
+            if (!ZC) return null;
+            if (CC.SerializeBuffers || CC.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) ZC.base64String = this._buffer, ZC.name = ZC.name.replace("data:", "");
+              else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
+              const CC = this.mimeType || "image/png";
+              ZC.base64String = `data:${CC};base64,${(0,MC.i)(this._buffer)}`
+            } else(CC.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (ZC.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? SC(this) : pC(this));
+            return ZC.invertY = this._invertY, ZC.samplingMode = this.samplingMode, ZC._creationFlags = this._creationFlags, ZC._useSRGBBuffer = this._useSRGBBuffer, CC._SerializeInternalTextureUniqueId && (ZC.internalTextureUniqueId = this._texture?.uniqueId), ZC.internalTextureLabel = this._texture?.label, ZC.noMipmap = this._noMipmap, this.name = zC, ZC
+          }
+          getClassName() {
+            return "Texture"
+          }
+          dispose() {
+            super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
+          }
+          static Parse(zC, ZC, QC) {
+            if (zC.customType) {
+              const CC = WC.d.Instantiate(zC.customType).Parse(zC, ZC, QC);
+              return zC.samplingMode && CC.updateSamplingMode && CC._samplingMode && CC._samplingMode !== zC.samplingMode && CC.updateSamplingMode(zC.samplingMode), CC
+            }
+            if (zC.isCube && !zC.isRenderTarget) return CC._CubeTextureParser(zC, ZC, QC);
+            const wC = void 0 !== zC.internalTextureUniqueId;
+            if (!zC.name && !zC.isRenderTarget && !wC) return null;
+            let bC;
+            if (wC) {
+              const CC = ZC.mg().getLoadedTexturesCache();
+              for (const ZC of CC)
+                if (ZC.uniqueId === zC.internalTextureUniqueId) {
+                  bC = ZC;
+                  break
+                }
+            }
+            const nC = CC => {
+              if (CC && CC._texture && (CC._texture._cachedWrapU = null, CC._texture._cachedWrapV = null, CC._texture._cachedWrapR = null), zC.samplingMode) {
+                const ZC = zC.samplingMode;
+                CC && CC.samplingMode !== ZC && CC.updateSamplingMode(ZC)
+              }
+              if (CC && zC.animations)
+                for (let ZC = 0; ZC < zC.animations.length; ZC++) {
+                  const QC = zC.animations[ZC],
+                    wC = (0, oC.c)("BABYLON.Animation");
+                  wC && CC.animations.push(wC.Parse(QC))
+                }
+              CC && CC._texture && (wC && !bC && CC._texture._setUniqueId(zC.internalTextureUniqueId), CC._texture.label = zC.internalTextureLabel)
+            };
+            return GC.d.Parse((() => {
+              let wC = !0;
+              if (zC.noMipmap && (wC = !1), zC.mirrorPlane) {
+                const QC = CC._CreateMirror(zC.name, zC.renderTargetSize, ZC, wC);
+                return QC._waitingRenderList = zC.renderList, QC.mirrorPlane = NC.d.FromArray(zC.mirrorPlane), nC(QC), QC
+              }
+              if (zC.isRenderTarget && !zC.base64String) {
+                let QC = null;
+                if (zC.isCube) {
+                  if (ZC.reflectionProbes)
+                    for (let CC = 0; CC < ZC.reflectionProbes.length; CC++) {
+                      const QC = ZC.reflectionProbes[CC];
+                      if (QC.name === zC.name) return QC.cubeTexture
+                    }
+                } else QC = CC._CreateRenderTargetTexture(zC.name, zC.renderTargetSize, ZC, wC, zC._creationFlags ?? 0), QC._waitingRenderList = zC.renderList;
+                return nC(QC), QC
+              }
+              if (zC.isVideo) {
+                const bC = CC._CreateVideoTexture(QC + (zC.url || zC.name), QC + (zC.src || zC.url), ZC, wC, zC.invertY, zC.samplingMode, zC.settings || {});
+                return nC(bC), bC
+              } {
+                let fC;
+                if ("string" === typeof zC.base64String && zC.base64String && !bC) {
+                  const QC = {
+                      buffer: zC.base64String,
+                      noMipmap: !wC,
+                      invertY: zC.invertY,
+                      samplingMode: zC.samplingMode,
+                      useSRGBBuffer: zC._useSRGBBuffer ?? !1,
+                      creationFlags: zC._creationFlags ?? 0,
+                      onLoad: () => {
+                        nC(fC)
+                      }
+                    },
+                    bC = zC.base64String,
+                    oC = bC.startsWith("data:") ? bC.substring(5) : bC;
+                  fC = CC.CreateFromBase64String("", oC, ZC, QC), fC.name = zC.name
+                } else {
+                  let oC;
+                  oC = zC.name && (zC.name.indexOf("://") > 0 || zC.name.startsWith("data:")) ? zC.name : QC + zC.name, zC.url && (zC.url.startsWith("data:") || CC.UseSerializedUrlIfAny) && (oC = zC.url);
+                  const qC = {
+                    noMipmap: !wC,
+                    invertY: zC.invertY,
+                    samplingMode: zC.samplingMode,
+                    useSRGBBuffer: zC._useSRGBBuffer ?? !1,
+                    creationFlags: zC._creationFlags ?? 0,
+                    onLoad: () => {
+                      nC(fC)
+                    },
+                    internalTexture: bC
+                  };
+                  fC = new CC(oC, ZC, qC)
+                }
+                return fC
+              }
+            }), zC, ZC)
+          }
+          static CreateFromBase64String(zC, ZC, QC, wC, bC) {
+            let nC = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : CC.TRILINEAR_SAMPLINGMODE;
+            return new CC("data:" + ZC, QC, wC, bC, nC, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, zC, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
+          }
+          static LoadFromDataString(zC, ZC, QC) {
+            let wC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              bC = arguments.length > 4 ? arguments[4] : void 0,
+              nC = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              fC = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : CC.TRILINEAR_SAMPLINGMODE,
+              oC = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              qC = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              FC = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              WC = arguments.length > 10 ? arguments[10] : void 0,
+              NC = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== zC.substring(0, 5) && (zC = "data:" + zC), new CC(zC, QC, bC, nC, fC, oC, qC, ZC, wC, FC, void 0, void 0, WC, NC)
+          }
+        }, (() => {
+          const bC = "function" === typeof Symbol && Symbol.metadata ? Object.create(YC[Symbol.metadata] ?? null) : void 0;
+          zC = [(0, wC.M)()], ZC = [(0, wC.M)()], gC = [(0, wC.M)()], RC = [(0, wC.M)()], AC = [(0, wC.M)()], xC = [(0, wC.M)()], JC = [(0, wC.M)()], IC = [(0, wC.M)()], iC = [(0, wC.M)()], vC = [(0, wC.M)()], eC = [(0, wC.M)()], hC = [(0, wC.M)()], KC = [(0, wC.M)()], (0, QC.j)(CC, null, KC, {
+            kind: "getter",
+            name: "isBlocking",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "isBlocking" in CC,
+              get: CC => CC.isBlocking
+            },
+            metadata: bC
+          }, null, dC), (0, QC.j)(null, null, zC, {
+            kind: "field",
+            name: "url",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "url" in CC,
+              get: CC => CC.url,
+              set: (CC, zC) => {
+                CC.url = zC
+              }
+            },
+            metadata: bC
+          }, mC, HC), (0, QC.j)(null, null, ZC, {
+            kind: "field",
+            name: "uOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "uOffset" in CC,
+              get: CC => CC.uOffset,
+              set: (CC, zC) => {
+                CC.uOffset = zC
+              }
+            },
+            metadata: bC
+          }, EC, lC), (0, QC.j)(null, null, gC, {
+            kind: "field",
+            name: "vOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "vOffset" in CC,
+              get: CC => CC.vOffset,
+              set: (CC, zC) => {
+                CC.vOffset = zC
+              }
+            },
+            metadata: bC
+          }, XC, cC), (0, QC.j)(null, null, RC, {
+            kind: "field",
+            name: "uScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "uScale" in CC,
+              get: CC => CC.uScale,
+              set: (CC, zC) => {
+                CC.uScale = zC
+              }
+            },
+            metadata: bC
+          }, uC, rC), (0, QC.j)(null, null, AC, {
+            kind: "field",
+            name: "vScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "vScale" in CC,
+              get: CC => CC.vScale,
+              set: (CC, zC) => {
+                CC.vScale = zC
+              }
+            },
+            metadata: bC
+          }, sC, TC), (0, QC.j)(null, null, xC, {
+            kind: "field",
+            name: "uAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "uAng" in CC,
+              get: CC => CC.uAng,
+              set: (CC, zC) => {
+                CC.uAng = zC
+              }
+            },
+            metadata: bC
+          }, aC, tC), (0, QC.j)(null, null, JC, {
+            kind: "field",
+            name: "vAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "vAng" in CC,
+              get: CC => CC.vAng,
+              set: (CC, zC) => {
+                CC.vAng = zC
+              }
+            },
+            metadata: bC
+          }, DC, jC), (0, QC.j)(null, null, IC, {
+            kind: "field",
+            name: "wAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "wAng" in CC,
+              get: CC => CC.wAng,
+              set: (CC, zC) => {
+                CC.wAng = zC
+              }
+            },
+            metadata: bC
+          }, yC, LC), (0, QC.j)(null, null, iC, {
+            kind: "field",
+            name: "uRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "uRotationCenter" in CC,
+              get: CC => CC.uRotationCenter,
+              set: (CC, zC) => {
+                CC.uRotationCenter = zC
+              }
+            },
+            metadata: bC
+          }, UC, BC), (0, QC.j)(null, null, vC, {
+            kind: "field",
+            name: "vRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "vRotationCenter" in CC,
+              get: CC => CC.vRotationCenter,
+              set: (CC, zC) => {
+                CC.vRotationCenter = zC
+              }
+            },
+            metadata: bC
+          }, OC, kC), (0, QC.j)(null, null, eC, {
+            kind: "field",
+            name: "wRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "wRotationCenter" in CC,
+              get: CC => CC.wRotationCenter,
+              set: (CC, zC) => {
+                CC.wRotationCenter = zC
+              }
+            },
+            metadata: bC
+          }, VC, Cz), (0, QC.j)(null, null, hC, {
+            kind: "field",
+            name: "homogeneousRotationInUVTransform",
+            static: !1,
+            private: !1,
+            access: {
+              has: CC => "homogeneousRotationInUVTransform" in CC,
+              get: CC => CC.homogeneousRotationInUVTransform,
+              set: (CC, zC) => {
+                CC.homogeneousRotationInUVTransform = zC
+              }
+            },
+            metadata: bC
+          }, zz, Zz), bC && Object.defineProperty(CC, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: bC
+          })
+        })(), CC.SerializeBuffers = !0, CC.ForceSerializeBuffers = !1, CC.OnTextureLoadErrorObservable = new bC.d, CC._SerializeInternalTextureUniqueId = !1, CC._CubeTextureParser = (CC, zC, ZC) => {
+          throw (0, qC.i)("CubeTexture")
+        }, CC._CreateMirror = (CC, zC, ZC, QC) => {
+          throw (0, qC.i)("MirrorTexture")
+        }, CC._CreateRenderTargetTexture = (CC, zC, ZC, QC, wC) => {
+          throw (0, qC.i)("RenderTargetTexture")
+        }, CC.NEAREST_SAMPLINGMODE = 1, CC.NEAREST_NEAREST_MIPLINEAR = 8, CC.BILINEAR_SAMPLINGMODE = 2, CC.LINEAR_LINEAR_MIPNEAREST = 11, CC.TRILINEAR_SAMPLINGMODE = 3, CC.LINEAR_LINEAR_MIPLINEAR = 3, CC.NEAREST_NEAREST_MIPNEAREST = 4, CC.NEAREST_LINEAR_MIPNEAREST = 5, CC.NEAREST_LINEAR_MIPLINEAR = 6, CC.NEAREST_LINEAR = 7, CC.NEAREST_NEAREST = 1, CC.LINEAR_NEAREST_MIPNEAREST = 9, CC.LINEAR_NEAREST_MIPLINEAR = 10, CC.LINEAR_LINEAR = 2, CC.LINEAR_NEAREST = 12, CC.EXPLICIT_MODE = 0, CC.SPHERICAL_MODE = 1, CC.PLANAR_MODE = 2, CC.CUBIC_MODE = 3, CC.PROJECTION_MODE = 4, CC.SKYBOX_MODE = 5, CC.INVCUBIC_MODE = 6, CC.EQUIRECTANGULAR_MODE = 7, CC.FIXED_EQUIRECTANGULAR_MODE = 8, CC.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, CC.CLAMP_ADDRESSMODE = 0, CC.WRAP_ADDRESSMODE = 1, CC.MIRROR_ADDRESSMODE = 2, CC.UseSerializedUrlIfAny = !1, CC
+      })(),
+      AC = !1;
 
-    function tq() {
-      yq || (yq = !0, jq.Parse = Hq, jq.ParseFromFileAsync = oq, jq.ParseFromSnippetAsync = Pq, jq.CreateFromSnippetAsync = Qq, (0, Vq.g)("BABYLON.ShaderMaterial", jq))
+    function xC() {
+      AC || (AC = !0, (0, oC.d)("BABYLON.Texture", RC), GC.d._TextureParser = RC.Parse)
+    }
+  },
+  39833: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => QC
+    });
+    class QC {
+      constructor(CC, zC) {
+        this.width = CC, this.height = zC
+      }
+      toString() {
+        return `{W: ${this.width}, H: ${this.height}}`
+      }
+      getClassName() {
+        return "Size"
+      }
+      getHashCode() {
+        let CC = 0 | this.width;
+        return CC = 397 * CC ^ this.height, CC
+      }
+      Av(CC) {
+        this.width = CC.width, this.height = CC.height
+      }
+      L_(CC, zC) {
+        return this.width = CC, this.height = zC, this
+      }
+      set(CC, zC) {
+        return this.L_(CC, zC)
+      }
+      multiplyByFloats(CC, zC) {
+        return new QC(this.width * CC, this.height * zC)
+      }
+      clone() {
+        return new QC(this.width, this.height)
+      }
+      equals(CC) {
+        return !!CC && (this.width === CC.width && this.height === CC.height)
+      }
+      get surface() {
+        return this.width * this.height
+      }
+      static Zero() {
+        return new QC(0, 0)
+      }
+      add(CC) {
+        return new QC(this.width + CC.width, this.height + CC.height)
+      }
+      subtract(CC) {
+        return new QC(this.width - CC.width, this.height - CC.height)
+      }
+      scale(CC) {
+        return new QC(this.width * CC, this.height * CC)
+      }
+      static Lerp(CC, zC, ZC) {
+        const wC = CC.width + (zC.width - CC.width) * ZC,
+          bC = CC.height + (zC.height - CC.height) * ZC;
+        return new QC(wC, bC)
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

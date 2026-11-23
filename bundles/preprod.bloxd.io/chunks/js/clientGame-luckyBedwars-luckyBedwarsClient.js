@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36648: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Nq,
-      g: () => aq,
-      h: () => Wq,
-      j: () => Bq
+  36483: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => MC,
+      c: () => gC,
+      d: () => NC,
+      f: () => WC
     });
-    var Yq = gq(9277),
-      lq = gq(36657),
-      Oq = gq(36662),
-      mq = gq(8669),
-      xq = gq(1416),
-      Aq = gq(57),
-      cq = gq(71),
-      uq = gq(1070);
+    var QC = ZC(34153),
+      wC = ZC(36488),
+      bC = ZC(36490),
+      nC = ZC(8735),
+      fC = ZC(1383),
+      oC = ZC(48),
+      qC = ZC(60),
+      FC = ZC(1056);
 
-    function Bq() {
-      var qq;
-      return (0, xq.h)(lq.c, (0, lq.l)()), (0, uq.jsx)(uq.Fragment, {
-        children: null === (qq = (0, lq.l)()) || void 0 === qq ? void 0 : qq.content
+    function WC() {
+      var CC;
+      return (0, fC.f)(wC.d, (0, wC.q)()), (0, FC.jsx)(FC.Fragment, {
+        children: null === (CC = (0, wC.q)()) || void 0 === CC ? void 0 : CC.content
       })
     }
 
-    function Wq(qq) {
-      var Eq;
+    function NC(CC) {
+      var zC;
       let {
-        show: gq
-      } = qq;
-      (0, xq.h)(lq.c, (0, lq.l)());
-      const cq = null === (Eq = (0, lq.l)()) || void 0 === Eq ? void 0 : Eq.menu;
-      return (0, Aq.useEffect)((() => {
-        var qq;
-        gq || (null === cq || void 0 === cq || null === (qq = cq.onClose) || void 0 === qq || qq.call(cq), (0, Oq.m)())
-      }), [gq, cq]), (0, Aq.useEffect)((() => gq ? (0, mq.i)(Oq.r, Oq.d) : void 0), [gq]), (0, uq.jsx)(Yq.b, {
-        showing: gq,
+        show: ZC
+      } = CC;
+      (0, fC.f)(wC.d, (0, wC.q)());
+      const qC = null === (zC = (0, wC.q)()) || void 0 === zC ? void 0 : zC.menu;
+      return (0, oC.useEffect)((() => {
+        var CC;
+        ZC || (null === qC || void 0 === qC || null === (CC = qC.onClose) || void 0 === CC || CC.call(qC), (0, bC.p)())
+      }), [ZC, qC]), (0, oC.useEffect)((() => ZC ? (0, nC.f)(bC.z, bC.g) : void 0), [ZC]), (0, FC.jsx)(QC.d, {
+        showing: ZC,
         globallyUniqueKey: "clientGameMenu",
-        children: null === cq || void 0 === cq ? void 0 : cq.content
+        children: null === qC || void 0 === qC ? void 0 : qC.content
       })
     }
 
-    function Nq(qq) {
+    function MC(CC) {
       let {
-        placement: Eq = "bottom"
-      } = qq;
-      return (0, uq.jsx)("div", {
-        id: `clientGameHud-${Eq}`,
+        placement: zC = "bottom"
+      } = CC;
+      return (0, FC.jsx)("div", {
+        id: `clientGameHud-${zC}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function aq(qq) {
+    function gC(CC) {
       let {
-        children: Eq,
-        placement: gq = "bottom"
-      } = qq;
-      const [Yq, lq] = (0, Aq.useState)(null);
-      return (0, Aq.useEffect)((() => {
-        lq(document.getElementById(`clientGameHud-${gq}`))
-      }), [gq]), Yq ? (0, cq.createPortal)(Eq, Yq) : null
+        children: zC,
+        placement: ZC = "bottom"
+      } = CC;
+      const [QC, wC] = (0, oC.useState)(null);
+      return (0, oC.useEffect)((() => {
+        wC(document.getElementById(`clientGameHud-${ZC}`))
+      }), [ZC]), QC ? (0, qC.createPortal)(zC, QC) : null
     }
   },
-  9277: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
+  34153: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => bC
     });
-    var Yq = gq(4364),
-      lq = gq(4367);
+    var QC = ZC(4473),
+      wC = ZC(4479);
 
-    function Oq(qq) {
+    function bC(CC) {
       let {
-        children: Eq,
-        showing: gq,
-        globallyUniqueKey: Oq,
-        alwaysMountChildren: mq = !1,
-        doGameplayStartStopOnShow: xq = !0,
-        keepsMovement: Aq = !1
-      } = qq;
-      return (0, lq.e)(!0, gq, Oq, Aq), (0, Yq.d)(xq, gq), gq || mq ? Eq : null
+        children: zC,
+        showing: ZC,
+        globallyUniqueKey: bC,
+        alwaysMountChildren: nC = !1,
+        doGameplayStartStopOnShow: fC = !0,
+        keepsMovement: oC = !1
+      } = CC;
+      return (0, wC.b)(!0, ZC, bC, oC), (0, QC.d)(fC, ZC), ZC || nC ? zC : null
     }
   },
-  8669: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Oq,
-      i: () => lq
+  8735: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => bC,
+      f: () => wC
     });
-    let Yq = null;
-    const lq = function(qq) {
-        const Eq = {
-          cycle: qq,
+    let QC = null;
+    const wC = function(CC) {
+        const zC = {
+          cycle: CC,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Yq = Eq, () => {
-          Yq === Eq && (Yq = null)
+        return QC = zC, () => {
+          QC === zC && (QC = null)
         }
       },
-      Oq = () => {
-        var qq;
-        return null !== (qq = Yq) && void 0 !== qq && qq.canCycle() ? Yq.cycle : null
+      bC = () => {
+        var CC;
+        return null !== (CC = QC) && void 0 !== CC && CC.canCycle() ? QC.cycle : null
       }
   },
-  36662: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Oq,
-      d: () => Vq,
-      g: () => dq,
-      h: () => xq,
-      l: () => Wq,
-      m: () => jq,
-      o: () => Bq,
-      p: () => oq,
-      r: () => aq,
-      v: () => Hq
+  36490: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      B: () => GC,
+      c: () => bC,
+      g: () => SC,
+      j: () => pC,
+      m: () => fC,
+      o: () => NC,
+      p: () => PC,
+      r: () => WC,
+      v: () => RC,
+      z: () => gC
     });
-    var Yq = gq(24),
-      lq = gq(31);
-    const Oq = "clientGameInventoryButtonsChanged",
-      mq = new Map;
+    var QC = ZC(20),
+      wC = ZC(28);
+    const bC = "clientGameInventoryButtonsChanged",
+      nC = new Map;
 
-    function xq() {
-      return [...mq.values()].sort(((qq, Eq) => {
-        var gq, Yq;
-        return (null !== (gq = qq.order) && void 0 !== gq ? gq : 0) - (null !== (Yq = Eq.order) && void 0 !== Yq ? Yq : 0)
+    function fC() {
+      return [...nC.values()].sort(((CC, zC) => {
+        var ZC, QC;
+        return (null !== (ZC = CC.order) && void 0 !== ZC ? ZC : 0) - (null !== (QC = zC.order) && void 0 !== QC ? QC : 0)
       }))
     }
-    let Aq = null;
+    let oC = null;
 
-    function cq(qq) {
-      Aq = qq
+    function qC(CC) {
+      oC = CC
     }
-    let uq = !1;
+    let FC = !1;
 
-    function Bq(qq) {
-      uq = !0;
+    function WC(CC) {
+      FC = !0;
       try {
-        qq.onClick()
+        CC.onClick()
       } finally {
-        uq = !1
+        FC = !1
       }
-      qq.panel && "clientGame" === Yq.b.get("openInGameMenuName") && cq(qq.id)
+      CC.panel && "clientGame" === QC.b.get("openInGameMenuName") && qC(CC.id)
     }
 
-    function Wq() {
-      return uq
+    function NC() {
+      return FC
     }
 
-    function Nq() {
-      return xq().filter((qq => qq.panel && !qq.disabled))
+    function MC() {
+      return fC().filter((CC => CC.panel && !CC.disabled))
     }
 
-    function aq(qq) {
-      const Eq = Nq(),
-        gq = Eq.findIndex((qq => qq.id === Aq));
-      return !(gq < 0 || Eq.length < 2) && (Bq(Eq[(gq + qq + Eq.length) % Eq.length]), !0)
+    function gC(CC) {
+      const zC = MC(),
+        ZC = zC.findIndex((CC => CC.id === oC));
+      return !(ZC < 0 || zC.length < 2) && (WC(zC[(ZC + CC + zC.length) % zC.length]), !0)
     }
 
-    function Vq() {
-      return null !== Aq && Nq().length > 1
+    function SC() {
+      return null !== oC && MC().length > 1
     }
 
-    function dq() {
-      cq(null)
+    function pC() {
+      qC(null)
     }
 
-    function jq() {
-      "inventory" !== Yq.b.get("openInGameMenuName") && cq(null)
+    function PC() {
+      "inventory" !== QC.b.get("openInGameMenuName") && qC(null)
     }
 
-    function Hq() {
-      const qq = Aq;
-      return cq(null), qq
+    function GC() {
+      const CC = oC;
+      return qC(null), CC
     }
 
-    function oq(qq) {
-      return mq.set(qq.id, qq), lq.i.TV(Oq, xq(), !0), () => {
-        mq.get(qq.id) === qq && (mq.delete(qq.id), lq.i.TV(Oq, xq()))
+    function RC(CC) {
+      return nC.set(CC.id, CC), wC.o.bp(bC, fC(), !0), () => {
+        nC.get(CC.id) === CC && (nC.delete(CC.id), wC.o.bp(bC, fC()))
       }
     }
   },
-  36657: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => xq,
-      e: () => dq,
-      h: () => jq,
-      j: () => Wq,
-      l: () => cq,
-      m: () => Vq,
-      n: () => Nq,
-      r: () => uq
+  36488: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      C: () => FC,
+      d: () => fC,
+      h: () => pC,
+      k: () => PC,
+      o: () => NC,
+      q: () => qC,
+      u: () => SC,
+      y: () => MC
     });
-    var Yq = gq(24),
-      lq = gq(31),
-      Oq = gq(1274),
-      mq = gq(36662);
-    const xq = "clientGameUiChanged";
-    let Aq = null;
+    var QC = ZC(20),
+      wC = ZC(28),
+      bC = ZC(1240),
+      nC = ZC(36490);
+    const fC = "clientGameUiChanged";
+    let oC = null;
 
-    function cq() {
-      return Aq
+    function qC() {
+      return oC
     }
 
-    function uq(qq, Eq) {
-      const gq = {
-        content: qq,
-        menu: Eq
+    function FC(CC, zC) {
+      const ZC = {
+        content: CC,
+        menu: zC
       };
-      return Aq = gq, lq.i.TV(xq, Aq, !0), () => {
-        Aq === gq && (Aq = null, aq = !1, dq(), lq.i.TV(xq, null))
+      return oC = ZC, wC.o.bp(fC, oC, !0), () => {
+        oC === ZC && (oC = null, gC = !1, pC(), wC.o.bp(fC, null))
       }
     }
-    let Bq = null;
+    let WC = null;
 
-    function Wq() {
-      return Bq
+    function NC() {
+      return WC
     }
 
-    function Nq(qq) {
-      return Bq = qq, () => {
-        Bq === qq && (Bq = null)
+    function MC(CC) {
+      return WC = CC, () => {
+        WC === CC && (WC = null)
       }
     }
-    let aq = !1;
+    let gC = !1;
 
-    function Vq() {
-      const qq = Yq.b.get("openInGameMenuName");
-      "clientGame" !== qq && (aq = "inventory" === qq), (0, mq.l)() || (0, mq.g)(), (0, Oq.m)(Oq.d), Yq.b.set({
+    function SC() {
+      const CC = QC.b.get("openInGameMenuName");
+      "clientGame" !== CC && (gC = "inventory" === CC), (0, nC.o)() || (0, nC.j)(), (0, bC.u)(bC.e), QC.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function dq() {
-      Hq(!1)
+    function pC() {
+      GC(!1)
     }
 
-    function jq() {
-      Hq(aq)
+    function PC() {
+      GC(gC)
     }
 
-    function Hq(qq) {
-      "clientGame" === Yq.b.get("openInGameMenuName") && Yq.b.set({
-        openInGameMenuName: qq ? "inventory" : null
-      }), qq || (0, mq.g)(), aq = !1
+    function GC(CC) {
+      "clientGame" === QC.b.get("openInGameMenuName") && QC.b.set({
+        openInGameMenuName: CC ? "inventory" : null
+      }), CC || (0, nC.j)(), gC = !1
     }
   },
-  39359: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      default: () => Dq
+  39269: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      default: () => VC
     });
-    const Yq = {
+    const QC = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var lq = gq(57),
-      Oq = gq(38011),
-      mq = gq(307);
-    const xq = ["Basic", "Rare", "Super"];
+    var wC = ZC(48),
+      bC = ZC(37868),
+      nC = ZC(326);
+    const fC = ["Basic", "Rare", "Super"];
 
-    function Aq(qq, Eq) {
-      return `${"Basic"===Eq?"":`${Eq} `}${"Simple"===qq?"":`${qq} `}Lucky Block`
+    function oC(CC, zC) {
+      return `${"Basic"===zC?"":`${zC} `}${"Simple"===CC?"":`${CC} `}Lucky Block`
     }
-    const cq = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((qq => xq.map((Eq => [Aq(qq, Eq), {
-      category: qq,
-      rarity: Eq
+    const qC = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((CC => fC.map((zC => [oC(CC, zC), {
+      category: CC,
+      rarity: zC
     }])))));
-    cq.keys();
+    qC.keys();
 
-    function uq(qq) {
-      return cq.get(qq)
+    function FC(CC) {
+      return qC.get(CC)
     }
-    const Bq = "Obsidian",
-      Wq = ["Cobweb"],
-      Nq = [...["Red", "Blue", "Green", "Yellow"].map((qq => `${(0,mq.eb)(qq)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Bq, ...Wq];
+    const WC = "Obsidian",
+      NC = ["Cobweb"],
+      MC = [...["Red", "Blue", "Green", "Yellow"].map((CC => `${(0,nC.S)(CC)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", WC, ...NC];
 
-    function aq(qq) {
-      return Nq.includes(qq)
+    function gC(CC) {
+      return MC.includes(CC)
     }
-    var Vq = gq(598);
+    var SC = ZC(600);
 
-    function dq(qq, Eq) {
-      const gq = uq(qq);
-      if (gq) {
-        const qq = uq(Eq);
-        if (!qq) return;
-        const Yq = xq.length - 1 - xq.indexOf(qq.rarity);
-        return (qq.category === gq.category ? 0 : 1) * xq.length + Yq
+    function pC(CC, zC) {
+      const ZC = FC(CC);
+      if (ZC) {
+        const CC = FC(zC);
+        if (!CC) return;
+        const QC = fC.length - 1 - fC.indexOf(CC.rarity);
+        return (CC.category === ZC.category ? 0 : 1) * fC.length + QC
       }
-      if (!aq(qq)) return;
-      if (Eq === qq) return 0;
-      const Yq = qq => aq(qq) && !Wq.includes(qq) && qq !== Bq;
-      return Yq(qq) && Yq(Eq) ? 1 : void 0
+      if (!gC(CC)) return;
+      if (zC === CC) return 0;
+      const QC = CC => gC(CC) && !NC.includes(CC) && CC !== WC;
+      return QC(CC) && QC(zC) ? 1 : void 0
     }
-    const jq = [...Array.from({
-      length: Vq.s - Vq.o
-    }, ((qq, Eq) => Vq.o + Eq)), ...Array.from({
-      length: Vq.o
-    }, ((qq, Eq) => Eq))];
-    class Hq {
-      constructor(qq) {
-        this.inventory = qq, this.pending = new Map
+    const PC = [...Array.from({
+      length: SC.r - SC.q
+    }, ((CC, zC) => SC.q + zC)), ...Array.from({
+      length: SC.q
+    }, ((CC, zC) => zC))];
+    class GC {
+      constructor(CC) {
+        this.inventory = CC, this.pending = new Map
       }
-      onPlace(qq) {
-        var Eq;
-        const gq = this.inventory.selectedSlot(),
-          Yq = this.inventory.itemAt(gq);
-        (null === Yq || void 0 === Yq ? void 0 : Yq.name) === qq && (null !== (Eq = Yq.amount) && void 0 !== Eq ? Eq : 1) <= 1 && oq(qq) && this.pending.set(gq, qq)
+      onPlace(CC) {
+        var zC;
+        const ZC = this.inventory.selectedSlot(),
+          QC = this.inventory.itemAt(ZC);
+        (null === QC || void 0 === QC ? void 0 : QC.name) === CC && (null !== (zC = QC.amount) && void 0 !== zC ? zC : 1) <= 1 && RC(CC) && this.pending.set(ZC, CC)
       }
-      onDrop(qq, Eq) {
-        Eq < Vq.o && null === this.inventory.itemAt(Eq) && oq(qq) && this.refill(Eq, qq)
+      onDrop(CC, zC) {
+        zC < SC.q && null === this.inventory.itemAt(zC) && RC(CC) && this.refill(zC, CC)
       }
-      SB() {
-        const qq = [...this.pending];
+      ZN() {
+        const CC = [...this.pending];
         this.pending.clear();
-        for (const [Eq, gq] of qq) null === this.inventory.itemAt(Eq) && this.refill(Eq, gq)
+        for (const [zC, ZC] of CC) null === this.inventory.itemAt(zC) && this.refill(zC, ZC)
       }
-      refill(qq, Eq) {
-        const gq = function(qq, Eq, gq, Yq) {
-          let lq, Oq = 1 / 0;
-          for (const mq of jq) {
-            if (mq === Eq) continue;
-            const xq = Yq(mq);
-            if (!xq || mq < Vq.o && Eq !== gq) continue;
-            const Aq = dq(qq, xq.name);
-            void 0 !== Aq && Aq < Oq && (lq = mq, Oq = Aq)
+      refill(CC, zC) {
+        const ZC = function(CC, zC, ZC, QC) {
+          let wC, bC = 1 / 0;
+          for (const nC of PC) {
+            if (nC === zC) continue;
+            const fC = QC(nC);
+            if (!fC || nC < SC.q && zC !== ZC) continue;
+            const oC = pC(CC, fC.name);
+            void 0 !== oC && oC < bC && (wC = nC, bC = oC)
           }
-          return lq
-        }(Eq, qq, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== gq && this.inventory.swap(qq, gq)
+          return wC
+        }(zC, CC, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== ZC && this.inventory.swap(CC, ZC)
       }
     }
 
-    function oq(qq) {
-      return !!uq(qq) || aq(qq)
+    function RC(CC) {
+      return !!FC(CC) || gC(CC)
     }
-    var Pq = gq(36657),
-      Qq = gq(71),
-      yq = gq(1018),
-      tq = gq.n(yq);
-    const rq = "Lucky Clover",
-      vq = {
+    var AC = ZC(36488),
+      xC = ZC(60),
+      JC = ZC(1002),
+      IC = ZC.n(JC);
+    const iC = "Lucky Clover",
+      vC = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function hq(qq) {
-      return vq[qq][0]
+    function eC(CC) {
+      return vC[CC][0]
     }
 
-    function nq(qq) {
-      return xq.filter((Eq => qq >= hq(Eq)))
+    function hC(CC) {
+      return fC.filter((zC => CC >= eC(zC)))
     }
-    var bq = gq(296),
-      iq = gq(2383),
-      Zq = gq(24),
-      fq = gq(2501),
-      Mq = gq(1895),
-      Tq = gq(36648),
-      zq = gq(1025);
-    var Sq = gq(1070);
-    const pq = {
-      Basic: mq.M.whiteUiText,
-      Rare: mq.M.goldUiText,
-      Super: mq.M.cyanUiText
+    var KC = ZC(310),
+      YC = ZC(2369),
+      dC = ZC(20),
+      mC = ZC(2557),
+      HC = ZC(1822),
+      EC = ZC(36483),
+      lC = ZC(1013);
+    var XC = ZC(1056);
+    const cC = {
+      Basic: nC.H.whiteUiText,
+      Rare: nC.H.goldUiText,
+      Super: nC.H.cyanUiText
     };
-    let Gq = 1;
+    let uC = 1;
 
-    function Lq() {
-      const qq = (0, iq.h)("currencyAmounts"),
-        Eq = null === qq || void 0 === qq ? void 0 : qq.Clovers;
-      return !Eq || Eq.hidden ? null : (0, Sq.jsx)(Tq.g, {
-        children: (0, Sq.jsx)(Jq, {
-          amount: Eq.amount
+    function rC() {
+      const CC = (0, YC.h)("currencyAmounts"),
+        zC = null === CC || void 0 === CC ? void 0 : CC.Clovers;
+      return !zC || zC.hidden ? null : (0, XC.jsx)(EC.c, {
+        children: (0, XC.jsx)(sC, {
+          amount: zC.amount
         })
       })
     }
 
-    function Jq(qq) {
-      var Eq, gq, Yq;
+    function sC(CC) {
+      var zC, ZC, QC;
       let {
-        amount: Oq
-      } = qq;
+        amount: bC
+      } = CC;
       const {
-        openEverythingMenuName: Aq
-      } = (0, Zq.j)(["openEverythingMenuName"]), cq = (0, fq.d)(), [uq, Bq] = (0, lq.useState)(Oq), [Wq, Nq] = (0, lq.useState)(null), [aq, Vq] = (0, lq.useState)(0), [dq, jq] = (0, lq.useState)([]), Hq = (0, lq.useRef)(Oq), oq = (0, lq.useRef)(!1), Pq = (0, lq.useRef)(null), yq = Aq === bq.p.SHOP;
-      (0, lq.useEffect)((() => {
-        const qq = Hq.current;
-        if (Hq.current = Oq, Oq <= qq || yq) return void Bq(Oq);
-        const Eq = cq || dq.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (gq = Oq - qq, Yq = !oq.current, gq <= 0 || !Yq && gq < 40 ? 0 : Math.min(4, Math.ceil(gq / 30)));
-        var gq, Yq;
-        if (oq.current = !0, nq(Oq).length > nq(qq).length && Vq(Gq++), Eq > 0) {
-          const qq = [];
-          for (let gq = 0; gq < Eq; gq++) qq.push({
-            id: Gq++,
+        openEverythingMenuName: oC
+      } = (0, dC.k)(["openEverythingMenuName"]), qC = (0, mC.c)(), [FC, WC] = (0, wC.useState)(bC), [NC, MC] = (0, wC.useState)(null), [gC, SC] = (0, wC.useState)(0), [pC, PC] = (0, wC.useState)([]), GC = (0, wC.useRef)(bC), RC = (0, wC.useRef)(!1), AC = (0, wC.useRef)(null), JC = oC === KC.o.SHOP;
+      (0, wC.useEffect)((() => {
+        const CC = GC.current;
+        if (GC.current = bC, bC <= CC || JC) return void WC(bC);
+        const zC = qC || pC.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (ZC = bC - CC, QC = !RC.current, ZC <= 0 || !QC && ZC < 40 ? 0 : Math.min(4, Math.ceil(ZC / 30)));
+        var ZC, QC;
+        if (RC.current = !0, hC(bC).length > hC(CC).length && SC(uC++), zC > 0) {
+          const CC = [];
+          for (let ZC = 0; ZC < zC; ZC++) CC.push({
+            id: uC++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * gq
+            delayMs: 70 * ZC
           });
-          jq((Eq => [...Eq, ...qq]))
+          PC((zC => [...zC, ...CC]))
         }
-        const lq = Eq > 0 ? 600 : 0;
-        Nq({
-          id: Gq++,
-          delayMs: lq
+        const wC = zC > 0 ? 600 : 0;
+        MC({
+          id: uC++,
+          delayMs: wC
         });
-        const xq = performance.now() + lq;
-        let Aq = 0;
-        const uq = Eq => {
-          const gq = mq.c.clamp((Eq - xq) / 600, 0, 1);
-          Bq(Math.round(qq + (Oq - qq) * gq)), gq < 1 && (Aq = requestAnimationFrame(uq))
+        const fC = performance.now() + wC;
+        let oC = 0;
+        const FC = zC => {
+          const ZC = nC.c.clamp((zC - fC) / 600, 0, 1);
+          WC(Math.round(CC + (bC - CC) * ZC)), ZC < 1 && (oC = requestAnimationFrame(FC))
         };
-        return Aq = requestAnimationFrame(uq), () => {
-          cancelAnimationFrame(Aq)
+        return oC = requestAnimationFrame(FC), () => {
+          cancelAnimationFrame(oC)
         }
-      }), [Oq, yq]);
-      const vq = function(qq) {
-          var Eq;
-          const gq = null !== (Eq = xq.find((Eq => qq < hq(Eq)))) && void 0 !== Eq ? Eq : "Super";
+      }), [bC, JC]);
+      const vC = function(CC) {
+          var zC;
+          const ZC = null !== (zC = fC.find((zC => CC < eC(zC)))) && void 0 !== zC ? zC : "Super";
           return {
-            rarity: gq,
-            progress: mq.c.clamp(qq / hq(gq), 0, 1)
+            rarity: ZC,
+            progress: nC.c.clamp(CC / eC(ZC), 0, 1)
           }
-        }(uq),
-        iq = nq(uq).at(-1);
-      return (0, Sq.jsxs)(Sq.Fragment, {
-        children: [(0, Sq.jsx)("div", {
+        }(FC),
+        YC = hC(FC).at(-1);
+      return (0, XC.jsxs)(XC.Fragment, {
+        children: [(0, XC.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, Sq.jsxs)("div", {
-            className: tq()("LuckyCloverWallet", {
-              Capped: iq && "Basic" !== iq
+          children: (0, XC.jsxs)("div", {
+            className: IC()("LuckyCloverWallet", {
+              Capped: YC && "Basic" !== YC
             }),
-            style: iq && {
-              "--luckyTierColour": pq[iq]
+            style: YC && {
+              "--luckyTierColour": cC[YC]
             },
-            children: [(0, Sq.jsx)("div", {
+            children: [(0, XC.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${vq.progress})`
+                transform: `scaleX(${vC.progress})`
               }
-            }), aq > 0 && (0, Sq.jsx)("div", {
+            }), gC > 0 && (0, XC.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(Eq=null===Wq||void 0===Wq?void 0:Wq.delayMs)&&void 0!==Eq?Eq:0}ms`
+                animationDelay: `${null!==(zC=null===NC||void 0===NC?void 0:NC.delayMs)&&void 0!==zC?zC:0}ms`
               }
-            }, aq), (0, Sq.jsx)("div", {
-              ref: Pq,
-              className: tq()("LuckyCloverWalletIcon", Wq && "Bounce"),
+            }, gC), (0, XC.jsx)("div", {
+              ref: AC,
+              className: IC()("LuckyCloverWalletIcon", NC && "Bounce"),
               style: {
-                animationDelay: `${null!==(Yq=null===Wq||void 0===Wq?void 0:Wq.delayMs)&&void 0!==Yq?Yq:0}ms`
+                animationDelay: `${null!==(QC=null===NC||void 0===NC?void 0:NC.delayMs)&&void 0!==QC?QC:0}ms`
               },
-              children: (0, Sq.jsx)(Mq.e, {
-                itemName: rq,
+              children: (0, XC.jsx)(HC.e, {
+                itemName: iC,
                 amount: 0
               })
-            }, null !== (gq = null === Wq || void 0 === Wq ? void 0 : Wq.id) && void 0 !== gq ? gq : 0), (0, Sq.jsx)("span", {
+            }, null !== (ZC = null === NC || void 0 === NC ? void 0 : NC.id) && void 0 !== ZC ? ZC : 0), (0, XC.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: uq
-            }), iq && (0, Sq.jsx)(zq.d, {
+              children: FC
+            }), YC && (0, XC.jsx)(lC.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, Qq.createPortal)(dq.map((qq => (0, Sq.jsx)(kq, {
-          flyer: qq,
-          target: Pq,
+        }), (0, xC.createPortal)(pC.map((CC => (0, XC.jsx)(TC, {
+          flyer: CC,
+          target: AC,
           onDone: () => {
-            jq((Eq => Eq.filter((Eq => Eq.id !== qq.id))))
+            PC((zC => zC.filter((zC => zC.id !== CC.id))))
           }
-        }, qq.id))), document.body)]
+        }, CC.id))), document.body)]
       })
     }
 
-    function kq(qq) {
+    function TC(CC) {
       let {
-        flyer: Eq,
-        target: gq,
-        onDone: Yq
-      } = qq;
-      const Oq = (0, lq.useRef)(null);
-      return (0, lq.useEffect)((() => {
-        var qq;
-        const lq = null === (qq = gq.current) || void 0 === qq ? void 0 : qq.getBoundingClientRect();
-        if (!Oq.current || !lq) return void Yq();
+        flyer: zC,
+        target: ZC,
+        onDone: QC
+      } = CC;
+      const bC = (0, wC.useRef)(null);
+      return (0, wC.useEffect)((() => {
+        var CC;
+        const wC = null === (CC = ZC.current) || void 0 === CC ? void 0 : CC.getBoundingClientRect();
+        if (!bC.current || !wC) return void QC();
         const {
-          x: mq,
-          y: xq
-        } = Eq, Aq = mq + 140 * (Math.random() - .5), cq = xq - 30 - 40 * Math.random(), uq = Oq.current.animate([{
-          transform: `translate(${mq}px, ${xq}px) scale(0.3)`,
+          x: nC,
+          y: fC
+        } = zC, oC = nC + 140 * (Math.random() - .5), qC = fC - 30 - 40 * Math.random(), FC = bC.current.animate([{
+          transform: `translate(${nC}px, ${fC}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${Aq}px, ${cq}px) scale(1.3)`,
+          transform: `translate(${oC}px, ${qC}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${lq.left}px, ${lq.top}px) scale(0.8)`,
+          transform: `translate(${wC.left}px, ${wC.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: Eq.delayMs,
+          delay: zC.delayMs,
           fill: "backwards"
         });
-        return uq.onfinish = Yq, () => {
-          uq.cancel()
+        return FC.onfinish = QC, () => {
+          FC.cancel()
         }
-      }), []), (0, Sq.jsx)("div", {
-        ref: Oq,
+      }), []), (0, XC.jsx)("div", {
+        ref: bC,
         className: "LuckyCloverFlying",
-        children: (0, Sq.jsx)(Mq.e, {
-          itemName: rq,
+        children: (0, XC.jsx)(HC.e, {
+          itemName: iC,
           amount: 0
         })
       })
     }
-    var Rq = gq(31);
-    const Uq = "luckyGearUpgradeView",
-      Fq = {
+    var aC = ZC(28);
+    const tC = "luckyGearUpgradeView",
+      DC = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function sq(qq) {
-      var Eq;
-      return null !== (Eq = Fq[qq.split(" ")[0]]) && void 0 !== Eq ? Eq : "#e07bff"
+    function jC(CC) {
+      var zC;
+      return null !== (zC = DC[CC.split(" ")[0]]) && void 0 !== zC ? zC : "#e07bff"
     }
-    class Xq {
-      constructor(qq, Eq) {
-        this.selectedSlot = qq, this.itemAt = Eq, this.rings = [], this.unseen = new Map, this.view = {
+    class yC {
+      constructor(CC, zC) {
+        this.selectedSlot = CC, this.itemAt = zC, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      ga(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [gq, Yq, lq] of qq) this.rings.push({
+      Ag(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [ZC, QC, wC] of CC) this.rings.push({
           id: this.nextId++,
-          slot: gq,
-          colour: sq(lq),
-          until: Eq + 1200
-        }), gq !== this.selectedSlot() && this.unseen.set(gq, {
-          from: Yq,
-          to: lq
+          slot: ZC,
+          colour: jC(wC),
+          until: zC + 1200
+        }), ZC !== this.selectedSlot() && this.unseen.set(ZC, {
+          from: QC,
+          to: wC
         });
-        this.TV()
+        this.bp()
       }
-      SB() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      ZN() {
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const Eq = this.rings.filter((Eq => Eq.until > qq));
-        let gq = Eq.length !== this.rings.length;
-        this.rings = Eq;
-        for (const [Yq, {
-            from: lq,
-            to: Oq
+        const zC = this.rings.filter((zC => zC.until > CC));
+        let ZC = zC.length !== this.rings.length;
+        this.rings = zC;
+        for (const [QC, {
+            from: wC,
+            to: bC
           }] of this.unseen) {
-          const qq = this.itemAt(Yq);
-          (Yq === this.selectedSlot() || qq !== Oq && qq !== lq) && (this.unseen.delete(Yq), gq = !0)
+          const CC = this.itemAt(QC);
+          (QC === this.selectedSlot() || CC !== bC && CC !== wC) && (this.unseen.delete(QC), ZC = !0)
         }
-        gq && this.TV()
+        ZC && this.bp()
       }
-      TV() {
+      bp() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, Rq.i.TV(Uq, this.view)
+        }, aC.o.bp(tC, this.view)
       }
     }
-    var wq = gq(1416);
+    var LC = ZC(1383);
 
-    function Kq(qq) {
-      return document.querySelector(`.HotBar [data-inven-idx="${qq}"]`)
+    function UC(CC) {
+      return document.querySelector(`.HotBar [data-inven-idx="${CC}"]`)
     }
 
-    function Cq(qq) {
+    function BC(CC) {
       let {
-        ring: Eq
-      } = qq;
-      const [gq, Yq] = (0, lq.useState)(null);
-      return (0, lq.useLayoutEffect)((() => {
-        var qq, gq;
-        Yq(null !== (qq = null === (gq = Kq(Eq.slot)) || void 0 === gq ? void 0 : gq.getBoundingClientRect()) && void 0 !== qq ? qq : null)
-      }), [Eq]), gq ? (0, Sq.jsx)("div", {
+        ring: zC
+      } = CC;
+      const [ZC, QC] = (0, wC.useState)(null);
+      return (0, wC.useLayoutEffect)((() => {
+        var CC, ZC;
+        QC(null !== (CC = null === (ZC = UC(zC.slot)) || void 0 === ZC ? void 0 : ZC.getBoundingClientRect()) && void 0 !== CC ? CC : null)
+      }), [zC]), ZC ? (0, XC.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: gq.left,
-          top: gq.top,
-          width: gq.width,
-          height: gq.height,
-          "--ringColour": Eq.colour,
+          left: ZC.left,
+          top: ZC.top,
+          width: ZC.width,
+          height: ZC.height,
+          "--ringColour": zC.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function Iq(qq) {
+    function OC(CC) {
       let {
-        slot: Eq
-      } = qq;
-      const [gq, Yq] = (0, lq.useState)(null);
-      return (0, lq.useLayoutEffect)((() => {
-        const qq = () => {
-          Yq(Kq(Eq))
+        slot: zC
+      } = CC;
+      const [ZC, QC] = (0, wC.useState)(null);
+      return (0, wC.useLayoutEffect)((() => {
+        const CC = () => {
+          QC(UC(zC))
         };
-        qq();
-        const gq = new MutationObserver(qq),
-          lq = document.querySelector(".BottomMiddleElements");
-        return lq && gq.observe(lq, {
+        CC();
+        const ZC = new MutationObserver(CC),
+          wC = document.querySelector(".BottomMiddleElements");
+        return wC && ZC.observe(wC, {
           childList: !0,
           subtree: !0
         }), () => {
-          gq.disconnect()
+          ZC.disconnect()
         }
-      }), [Eq]), gq ? (0, Qq.createPortal)((0, Sq.jsx)("div", {
+      }), [zC]), ZC ? (0, xC.createPortal)((0, XC.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), gq) : null
+      }), ZC) : null
     }
 
-    function eq(qq) {
+    function kC(CC) {
       let {
-        controller: Eq
-      } = qq;
-      const gq = (0, wq.h)(Uq, Eq.getView());
-      return (0, Sq.jsxs)(Sq.Fragment, {
-        children: [gq.rings.map((qq => (0, Sq.jsx)(Cq, {
-          ring: qq
-        }, qq.id))), gq.unseenSlots.map((qq => (0, Sq.jsx)(Iq, {
-          slot: qq
-        }, qq)))]
+        controller: zC
+      } = CC;
+      const ZC = (0, LC.f)(tC, zC.getView());
+      return (0, XC.jsxs)(XC.Fragment, {
+        children: [ZC.rings.map((CC => (0, XC.jsx)(BC, {
+          ring: CC
+        }, CC.id))), ZC.unseenSlots.map((CC => (0, XC.jsx)(OC, {
+          slot: CC
+        }, CC)))]
       })
     }
-    const Dq = function(qq, Eq, gq, mq) {
-      let xq, {
-          localPlayerId: Aq
-        } = mq,
-        cq = null;
-      const uq = new Hq({
-          itemAt: qq => xq.getItemSlot(Aq, qq),
-          selectedSlot: () => xq.getSelectedInventorySlotI(Aq),
-          swap: (qq, Eq) => {
-            xq.swapInventorySlots(qq, Eq)
+    const VC = function(CC, zC, ZC, nC) {
+      let fC, {
+          localPlayerId: oC
+        } = nC,
+        qC = null;
+      const FC = new GC({
+          itemAt: CC => fC.getItemSlot(oC, CC),
+          selectedSlot: () => fC.getSelectedInventorySlotI(oC),
+          swap: (CC, zC) => {
+            fC.swapInventorySlots(CC, zC)
           }
         }),
-        Bq = new Xq((() => xq.getSelectedInventorySlotI(Aq)), (qq => {
-          var Eq;
-          return null === (Eq = xq.getItemSlot(Aq, qq)) || void 0 === Eq ? void 0 : Eq.name
+        WC = new yC((() => fC.getSelectedInventorySlotI(oC)), (CC => {
+          var zC;
+          return null === (zC = fC.getItemSlot(oC, CC)) || void 0 === zC ? void 0 : zC.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, Oq.b)()
+          placeAgainstBeds: (0, bC.c)()
         },
-        onCreate: qq => {
-          xq = qq, cq = (0, Pq.r)((0, lq.createElement)(lq.Fragment, null, (0, lq.createElement)(Lq), (0, lq.createElement)(eq, {
-            controller: Bq
+        onCreate: CC => {
+          fC = CC, qC = (0, AC.C)((0, wC.createElement)(wC.Fragment, null, (0, wC.createElement)(rC), (0, wC.createElement)(kC, {
+            controller: WC
           })))
         },
         onClose: () => {
-          var qq;
-          null === (qq = cq) || void 0 === qq || qq()
+          var CC;
+          null === (CC = qC) || void 0 === CC || CC()
         },
-        SB: () => {
-          uq.SB(), Bq.SB()
+        ZN: () => {
+          FC.ZN(), WC.ZN()
         },
-        onReceivedMessageFromServer: (qq, Eq) => {
-          "luckyGearUpgrade" === qq && Bq.ga(Eq)
+        onReceivedMessageFromServer: (CC, zC) => {
+          "luckyGearUpgrade" === CC && WC.Ag(zC)
         },
-        onPlayerChangeBlock: (qq, Eq, gq, Yq, lq, Oq) => {
-          "Air" !== Oq && uq.onPlace(Oq)
+        onPlayerChangeBlock: (CC, zC, ZC, QC, wC, bC) => {
+          "Air" !== bC && FC.onPlace(bC)
         },
-        onPlayerDropItem: (qq, Eq, gq, Yq) => {
-          uq.onDrop(Eq, Yq)
+        onPlayerDropItem: (CC, zC, ZC, QC) => {
+          FC.onDrop(zC, QC)
         },
-        onPlayerAltAction: (qq, Eq, gq, lq, Oq, mq) => {
-          if (!mq || "Mesh" !== xq.getEntityType(mq)) return;
-          const Aq = xq.getEntityName(mq),
-            cq = Object.values(Yq).find((qq => qq.name === Aq));
-          cq && xq.openShop(qq, !1, cq.shopTab)
+        onPlayerAltAction: (CC, zC, ZC, wC, bC, nC) => {
+          if (!nC || "Mesh" !== fC.getEntityType(nC)) return;
+          const oC = fC.getEntityName(nC),
+            qC = Object.values(QC).find((CC => CC.name === oC));
+          qC && fC.openShop(CC, !1, qC.shopTab)
         }
       }
     }
   },
-  38011: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => xq
+  37868: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => fC
     });
-    var Yq = gq(307),
-      lq = gq(36985),
-      Oq = gq(4299);
-    const mq = ["Leaf Bed", "_Leaf Bed Head", ...Yq.Tc.flatMap((qq => [`${qq} Bed`, `_${qq} Bed Head`, `${qq} Strongbed`, `_${qq} Strongbed Head`]))];
+    var QC = ZC(326),
+      wC = ZC(36796),
+      bC = ZC(4402);
+    const nC = ["Leaf Bed", "_Leaf Bed Head", ...QC.sc.flatMap((CC => [`${CC} Bed`, `_${CC} Bed Head`, `${CC} Strongbed`, `_${CC} Strongbed Head`]))];
 
-    function xq() {
-      let qq;
+    function fC() {
+      let CC;
       return {
-        onCreate(Eq) {
-          qq = Eq
+        onCreate(zC) {
+          CC = zC
         },
-        altVetoBlocks: mq,
-        onPlayerAttemptAltAction(Eq, gq, Yq, mq, xq, Aq) {
-          var cq;
-          if ((0, lq.b)(qq.getMetaInfo(xq).rootName) && !qq.isEntityInteractable(Aq) && (0, Oq.g)(null === (cq = qq.Ngq(Eq)) || void 0 === cq ? void 0 : cq.typeObj.type)) return "preventAction"
+        altVetoBlocks: nC,
+        onPlayerAttemptAltAction(zC, ZC, QC, nC, fC, oC) {
+          var qC;
+          if ((0, wC.d)(CC.getMetaInfo(fC).rootName) && !CC.isEntityInteractable(oC) && (0, bC.c)(null === (qC = CC.XzC(zC)) || void 0 === qC ? void 0 : qC.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36985: (qq, Eq, gq) => {
-    function Yq(qq) {
-      return qq.includes("Leaf Bed")
+  36796: (CC, zC, ZC) => {
+    function QC(CC) {
+      return CC.includes("Leaf Bed")
     }
 
-    function lq(qq) {
-      return / Bed(?: Head)?(?:\||$)/.test(qq) && !Yq(qq)
+    function wC(CC) {
+      return / Bed(?: Head)?(?:\||$)/.test(CC) && !QC(CC)
     }
 
-    function Oq(qq) {
-      return qq.includes(" Strongbed")
+    function bC(CC) {
+      return CC.includes(" Strongbed")
     }
 
-    function mq(qq) {
-      return Yq(qq) || lq(qq) || Oq(qq)
+    function nC(CC) {
+      return QC(CC) || wC(CC) || bC(CC)
     }
-    gq.d(Eq, {
-      b: () => mq,
-      c: () => Yq,
-      d: () => Oq,
-      f: () => lq
+    ZC.d(zC, {
+      d: () => nC,
+      g: () => QC,
+      i: () => bC,
+      l: () => wC
     })
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

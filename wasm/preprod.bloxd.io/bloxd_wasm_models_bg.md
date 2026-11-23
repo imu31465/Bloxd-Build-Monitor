@@ -1,8 +1,17 @@
 # WASM module: `bloxd_wasm_models_bg`
 
-> environment **preprod.bloxd.io** · build `bbb6l5.0244a119` · analyzed 2026-11-21T12:37:15+09:00
-> source: https://preprod.bloxd.io/static/media/bloxd_wasm_models_bg.273d3ef33ab63e5ae007.wasm
-> 311,680 bytes (304.4 KB) · sha256 `9dd9f9fb8ff600ad…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **preprod.bloxd.io** · build `w4ddu.56408518` · analyzed 2026-11-24T00:42:21+09:00
+> source: https://preprod.bloxd.io/static/media/bloxd_wasm_models_bg.c50b815f44c89104b7b3.wasm
+> 311,531 bytes (304.2 KB) · sha256 `a9e6377967b2efe0…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+
+## Changes since the previous archived build
+
+- size 311,680 → 311,531 bytes (-149)
+- data bytes 58,888 → 58,739
+- name-section module id `001a780057e9571f.1165` → `85dc3fcc6da7f75b.1165` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- export identifiers rotated by the obfuscator: 1/23 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `STUVWXYZ[\]^_`abcdeffgghhiijjkk`; `d/index.crates.io-1949cf8c6b5b557f/dlmalloc-0.2.14/src/dlmal`; `d/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.106/src/future`; `d/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.106/src/lib.rs`; `}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}`
+- removed embedded strings: `/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5`; `/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5`; `/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5`; `crates/bloxd-wasm/src/ballast.rs`; `crates/bloxd-wasm/src/memory_growth.rs`
 
 ## Overview
 
@@ -13,10 +22,10 @@
 | Code bytes (function bodies) | 249,657 (243.8 KB) |
 | Total local variables | 1,679 |
 | Instructions (scanable bodies) | 117,665 |
-| Data segments / bytes | 195 / 58,888 |
+| Data segments / bytes | 195 / 58,739 |
 | Element segments / entries | 1 / 69 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `001a780057e9571f.1165` |
+| name-section module id | `85dc3fcc6da7f75b.1165` |
 | Sections | 12 |
 
 ## Sections
@@ -33,7 +42,7 @@
 | 9 | element | 136 | 1 |
 | 12 | datacount | 2 | — |
 | 10 | code | 250,005 | 220 |
-| 11 | data | 60,475 | 195 |
+| 11 | data | 60,326 | 195 |
 | 0 | custom:name | 29 | — |
 
 ## Types
@@ -46,33 +55,33 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `f4Pp.uU2A` | func | `(i32) -> ()` |
-| 1 | `f4Pp.QkXF` | func | `(i32) -> ()` |
-| 2 | `f4Pp.rcWD` | func | `(i32 i32) -> ()` |
-| 3 | `f4Pp.rR8H` | func | `(i32 i32) -> (i32)` |
-| 4 | `f4Pp.Pcya` | func | `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
-| 5 | `f4Pp.dvSV` | func | `(i32) -> (i32)` |
-| 6 | `f4Pp.ne8W` | func | `(i32 i32) -> (i32)` |
-| 7 | `f4Pp.SX2e` | func | `(i32 i32) -> ()` |
-| 8 | `f4Pp.RI1k` | func | `(i32) -> (i32)` |
-| 9 | `f4Pp.lvgz` | func | `(i32) -> (i32)` |
-| 10 | `f4Pp.j5QB` | func | `(i32) -> (i32)` |
-| 11 | `f4Pp.IsP2` | func | `(i32) -> (i32)` |
-| 12 | `f4Pp.kIfj` | func | `(i32) -> (i32)` |
-| 13 | `f4Pp.L7PK` | func | `(i32) -> ()` |
-| 14 | `f4Pp.c9xr` | func | `(i32) -> (i32)` |
-| 15 | `f4Pp.doTt` | func | `(i32 i32 i32) -> ()` |
-| 16 | `f4Pp.AnGG` | func | `(i32 i32) -> (i32)` |
-| 17 | `f4Pp.yLsr` | func | `(i32) -> (i32)` |
-| 18 | `f4Pp.wxzK` | func | `(i32) -> (i32)` |
-| 19 | `f4Pp.P9pV` | func | `(i32) -> (i32)` |
-| 20 | `f4Pp.h4lC` | func | `(i32) -> (i32)` |
-| 21 | `f4Pp.S0lW` | func | `(i32) -> (i32)` |
-| 22 | `f4Pp.u8IV` | func | `(i32) -> (i32)` |
-| 23 | `f4Pp.effu` | func | `(i32) -> (i32)` |
-| 24 | `f4Pp.gY0w` | func | `(i32) -> (i32)` |
-| 25 | `f4Pp.nl5H` | func | `(i32 i32) -> ()` |
-| 26 | `f4Pp.HJgW` | func | `(i32 i32) -> (i32)` |
+| 0 | `imHW.lZBq` | func | `(i32) -> ()` |
+| 1 | `imHW.ci0G` | func | `(i32) -> ()` |
+| 2 | `imHW.hEtJ` | func | `(i32 i32) -> ()` |
+| 3 | `imHW.Pfnj` | func | `(i32 i32) -> (i32)` |
+| 4 | `imHW.P0pf` | func | `(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)` |
+| 5 | `imHW.mDjs` | func | `(i32) -> (i32)` |
+| 6 | `imHW.bZGb` | func | `(i32 i32) -> (i32)` |
+| 7 | `imHW.wjPM` | func | `(i32 i32) -> ()` |
+| 8 | `imHW.A9JG` | func | `(i32) -> (i32)` |
+| 9 | `imHW.g4AU` | func | `(i32) -> (i32)` |
+| 10 | `imHW.lBVc` | func | `(i32) -> (i32)` |
+| 11 | `imHW.PQcp` | func | `(i32) -> (i32)` |
+| 12 | `imHW.bV6V` | func | `(i32) -> (i32)` |
+| 13 | `imHW.WDiI` | func | `(i32) -> ()` |
+| 14 | `imHW.WiiR` | func | `(i32) -> (i32)` |
+| 15 | `imHW.HEnV` | func | `(i32 i32 i32) -> ()` |
+| 16 | `imHW.yGNI` | func | `(i32 i32) -> (i32)` |
+| 17 | `imHW.R9qy` | func | `(i32) -> (i32)` |
+| 18 | `imHW.UGEd` | func | `(i32) -> (i32)` |
+| 19 | `imHW.BIln` | func | `(i32) -> (i32)` |
+| 20 | `imHW.kPKH` | func | `(i32) -> (i32)` |
+| 21 | `imHW.dg80` | func | `(i32) -> (i32)` |
+| 22 | `imHW.h8rg` | func | `(i32) -> (i32)` |
+| 23 | `imHW.OE30` | func | `(i32) -> (i32)` |
+| 24 | `imHW.sGKO` | func | `(i32) -> (i32)` |
+| 25 | `imHW.FPWm` | func | `(i32 i32) -> ()` |
+| 26 | `imHW.n6iX` | func | `(i32 i32) -> (i32)` |
 
 ## Exports
 
@@ -80,29 +89,29 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `ruyv` | func | 202 | `(i32 i32 i32 i32) -> (i32)` |
-| `ns6a` | func | 62 | `() -> (i32)` |
-| `wVHi` | func | 208 | `(i32 i32 i32) -> (i32 i32)` |
-| `jnDU` | func | 220 | `() -> (i32)` |
-| `dm4p` | func | 243 | `(i32) -> ()` |
-| `AURn` | func | 230 | `(i32) -> ()` |
-| `Onmc` | func | 242 | `(i32) -> (i32)` |
-| `Smvr` | func | 173 | `(i32) -> (i32)` |
-| `PPou` | func | 200 | `() -> ()` |
+| `byxx` | func | 230 | `(i32) -> ()` |
+| `UoaT` | func | 62 | `() -> (i32)` |
+| `sbuQ` | func | 245 | `() -> (i32)` |
+| `bKm3` | func | 97 | `() -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `iORG` | func | 200 | `() -> ()` |
-| `dFNk` | global | 2 | `` |
-| `k4Tq` | func | 128 | `(i32 i32) -> ()` |
-| `VPXn` | global | 1 | `` |
-| `jU7u` | func | 177 | `(i32) -> ()` |
-| `um9f` | func | 245 | `() -> (i32)` |
-| `XJx9` | func | 206 | `(i32 i32 i32 i32) -> (i32 i32)` |
-| `PtaN` | func | 210 | `() -> (i32 i32)` |
-| `lCR4` | func | 226 | `(i32 i32 i32) -> ()` |
-| `D6Ck` | func | 201 | `(i32 i32) -> (i32)` |
-| `CAkP` | func | 97 | `() -> (i32)` |
-| `e1qD` | func | 83 | `() -> (i32)` |
-| `ubJ5` | func | 138 | `() -> (i32)` |
+| `nzUv` | func | 200 | `() -> ()` |
+| `k2V8` | func | 202 | `(i32 i32 i32 i32) -> (i32)` |
+| `PUUX` | func | 138 | `() -> (i32)` |
+| `iRJN` | global | 1 | `` |
+| `WHNm` | func | 206 | `(i32 i32 i32 i32) -> (i32 i32)` |
+| `kLFp` | func | 201 | `(i32 i32) -> (i32)` |
+| `Y94h` | func | 128 | `(i32 i32) -> ()` |
+| `o0Sa` | global | 2 | `` |
+| `DwWa` | func | 243 | `(i32) -> ()` |
+| `EswD` | func | 173 | `(i32) -> (i32)` |
+| `UUnY` | func | 83 | `() -> (i32)` |
+| `cStW` | func | 200 | `() -> ()` |
+| `Vszs` | func | 220 | `() -> (i32)` |
+| `s7pZ` | func | 226 | `(i32 i32 i32) -> ()` |
+| `PDa0` | func | 177 | `(i32) -> ()` |
+| `NMjT` | func | 208 | `(i32 i32 i32) -> (i32 i32)` |
+| `uQ8r` | func | 210 | `() -> (i32 i32)` |
+| `Smve` | func | 242 | `(i32) -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -110,7 +119,7 @@
 
 - memory 0: min 17 pages · max ∞ · shared=False
 - table 0: funcref · min 70 · max 70
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1113320, `i32` = i32.const 1113536
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1113176, `i32` = i32.const 1113392
 
 ## Functions
 
@@ -186,11 +195,11 @@ HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 null pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rust
 0x0123456789ABCDEFRefCell already mutably borrowedRefCell already borrowedHash table capacity overflow
 attempt to divide by zerouser-provided comparison function does not correctly implement a total order
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/js-sys-0.3.106/src/futures/jspi.rs
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWWXYZ[\]^_`abcdeeffgghhijklmnopqrstuvwxyz{|}~
-/home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/dlmalloc-0.2.14/src/dlmalloc.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/shared/smallsort.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/stable/quicksort.rs
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs
 ```
 
 ## Opcode histogram (aggregated)

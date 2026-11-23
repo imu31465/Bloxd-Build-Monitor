@@ -1,84 +1,84 @@
 export const id = 29;
 export const ids = [29];
 export const modules = {
-  9150: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      debugDeviceLines: () => aq
+  34024: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      debugDeviceLines: () => gC
     });
-    var Yq = gq(611),
-      lq = gq(96),
-      Oq = gq(136),
-      mq = gq(128),
-      xq = gq(4212);
-    const Aq = new Set(["NT 10.0", "10", "10.15.7", "10.15"]);
+    var QC = ZC(615),
+      wC = ZC(77),
+      bC = ZC(113),
+      nC = ZC(107),
+      fC = ZC(3258);
+    const oC = new Set(["NT 10.0", "10", "10.15.7", "10.15"]);
 
-    function cq(qq) {
-      if ("ios" === qq.os) return function(qq) {
-        if (null !== qq.appIosVersion) return `${qq.appIosVersion} (the iOS app's)`;
-        const Eq = /\b(?:iOS |FBSV\/)(\d+(?:[_.]\d+)*)/.exec(qq.userAgent);
-        if (Eq) return `${Eq[1].replaceAll("_",".")} (the in-app browser's iOS token)`;
+    function qC(CC) {
+      if ("ios" === CC.os) return function(CC) {
+        if (null !== CC.appIosVersion) return `${CC.appIosVersion} (the iOS app's)`;
+        const zC = /\b(?:iOS |FBSV\/)(\d+(?:[_.]\d+)*)/.exec(CC.userAgent);
+        if (zC) return `${zC[1].replaceAll("_",".")} (the in-app browser's iOS token)`;
         const {
-          browser: gq,
-          os: Yq
-        } = qq.agent;
-        if ("Safari" === gq.name && gq.version) return `${gq.version} (Safari's version, which follows iOS)`;
-        const lq = Yq.version;
-        if ("iOS" !== Yq.name || !lq) return "? (a desktop user agent)";
-        const [Oq, mq = 0] = lq.split(".").map(Number);
-        return Oq < 18 || 18 === Oq && mq < 6 ? `${lq} (user agent)` : `? (the user agent says ${lq}, frozen from iOS 26)`
-      }(qq);
-      const Eq = qq.hintsPlatformVersion;
-      if (Eq) return "windows" === qq.os ? `${Eq} (${function(qq){const Eq=parseInt(qq,10);if(Eq>=13)return"Windows 11";return Eq>=1?"Windows 10":"Windows 8.1 or older"}(Eq)}, client hints)` : `${Eq} (client hints)`;
-      const gq = qq.agent.os.version;
-      return gq ? Aq.has(gq) ? `${gq} (user agent, which may be frozen)` : `${gq} (user agent)` : "?"
+          browser: ZC,
+          os: QC
+        } = CC.agent;
+        if ("Safari" === ZC.name && ZC.version) return `${ZC.version} (Safari's version, which follows iOS)`;
+        const wC = QC.version;
+        if ("iOS" !== QC.name || !wC) return "? (a desktop user agent)";
+        const [bC, nC = 0] = wC.split(".").map(Number);
+        return bC < 18 || 18 === bC && nC < 6 ? `${wC} (user agent)` : `? (the user agent says ${wC}, frozen from iOS 26)`
+      }(CC);
+      const zC = CC.hintsPlatformVersion;
+      if (zC) return "windows" === CC.os ? `${zC} (${function(CC){const zC=parseInt(CC,10);if(zC>=13)return"Windows 11";return zC>=1?"Windows 10":"Windows 8.1 or older"}(zC)}, client hints)` : `${zC} (client hints)`;
+      const ZC = CC.agent.os.version;
+      return ZC ? oC.has(ZC) ? `${ZC} (user agent, which may be frozen)` : `${ZC} (user agent)` : "?"
     }
 
-    function uq(qq) {
-      var Eq;
-      const gq = (null !== (Eq = qq.fullVersionList) && void 0 !== Eq ? Eq : []).filter((qq => {
+    function FC(CC) {
+      var zC;
+      const ZC = (null !== (zC = CC.fullVersionList) && void 0 !== zC ? zC : []).filter((CC => {
         let {
-          brand: Eq
-        } = qq;
-        return !/not.a.brand/i.test(Eq)
-      })).map((qq => {
+          brand: zC
+        } = CC;
+        return !/not.a.brand/i.test(zC)
+      })).map((CC => {
         let {
-          brand: Eq,
-          version: gq
-        } = qq;
-        return `${Eq} ${gq}`
+          brand: zC,
+          version: ZC
+        } = CC;
+        return `${zC} ${ZC}`
       }));
-      return `${qq.platform} ${qq.platformVersion||"?"}, ${gq.join(", ")||"?"}, ${qq.architecture||"?"} ${qq.bitness||"?"}-bit, model ${qq.model||"?"}, mobile ${qq.mobile}`
+      return `${CC.platform} ${CC.platformVersion||"?"}, ${ZC.join(", ")||"?"}, ${CC.architecture||"?"} ${CC.bitness||"?"}-bit, model ${CC.model||"?"}, mobile ${CC.mobile}`
     }
-    let Bq = "pending";
-    const Wq = navigator.userAgentData;
+    let WC = "pending";
+    const NC = navigator.userAgentData;
 
-    function Nq() {
-      const qq = (0, mq.t)(),
-        Eq = null !== qq && void 0 !== qq ? qq : (0, mq.n)(),
-        gq = (0, mq.j)();
-      return [Eq ? `webgl ${Eq.vendor} / ${Eq.renderer} (${qq?"the renderer's context":"a probe"})` : "webgl ?", gq ? `webgpu adapter ${gq.vendor||"?"}/${gq.architecture||"?"}` : "webgpu adapter ?"].join("; ")
+    function MC() {
+      const CC = (0, nC.n)(),
+        zC = null !== CC && void 0 !== CC ? CC : (0, nC.i)(),
+        ZC = (0, nC.h)();
+      return [zC ? `webgl ${zC.vendor} / ${zC.renderer} (${CC?"the renderer's context":"a probe"})` : "webgl ?", ZC ? `webgpu adapter ${ZC.vendor||"?"}/${ZC.architecture||"?"}` : "webgpu adapter ?"].join("; ")
     }
 
-    function aq() {
-      var qq, Eq, gq, mq, Aq, Wq;
-      const aq = (0, lq.getUserAgentDetails)(),
-        Vq = (0, lq.getOperatingSystem)(),
-        dq = cq({
-          os: Vq,
+    function gC() {
+      var CC, zC, ZC, nC, oC, NC;
+      const gC = (0, wC.getUserAgentDetails)(),
+        SC = (0, wC.getOperatingSystem)(),
+        pC = qC({
+          os: SC,
           userAgent: navigator.userAgent,
-          agent: aq,
-          appIosVersion: xq.c,
-          hintsPlatformVersion: "string" === typeof Bq ? void 0 : Bq.platformVersion
+          agent: gC,
+          appIosVersion: fC.d,
+          hintsPlatformVersion: "string" === typeof WC ? void 0 : WC.platformVersion
         }),
-        jq = (0, Yq.h)(navigator.platform, navigator.maxTouchPoints, Oq.n);
-      return [`os ${Vq} ${dq}; user agent's ${null!==(qq=aq.os.name)&&void 0!==qq?qq:"?"} ${null!==(Eq=aq.os.version)&&void 0!==Eq?Eq:"?"}, platform ${navigator.platform}, touch points ${navigator.maxTouchPoints}, ${(0,lq.getPlatformType)()}`, `browser ${null!==(gq=aq.browser.name)&&void 0!==gq?gq:"?"} ${null!==(mq=aq.browser.version)&&void 0!==mq?mq:"?"}, engine ${null!==(Aq=aq.engine.name)&&void 0!==Aq?Aq:"?"} ${null!==(Wq=aq.engine.version)&&void 0!==Wq?Wq:"?"}`, `client hints ${"string"===typeof Bq?Bq:uq(Bq)}`, `gpu ${Nq()}`, `client ${Yq.k.client} (${Yq.k.reason})`, `surface site ${Oq.n}, subsite ${Oq.q}${Oq.g?", iframed":""}, capped surface ${null!==jq&&void 0!==jq?jq:"none"}`]
+        PC = (0, QC.k)(navigator.platform, navigator.maxTouchPoints, bC.y);
+      return [`os ${SC} ${pC}; user agent's ${null!==(CC=gC.os.name)&&void 0!==CC?CC:"?"} ${null!==(zC=gC.os.version)&&void 0!==zC?zC:"?"}, platform ${navigator.platform}, touch points ${navigator.maxTouchPoints}, ${(0,wC.getPlatformType)()}`, `browser ${null!==(ZC=gC.browser.name)&&void 0!==ZC?ZC:"?"} ${null!==(nC=gC.browser.version)&&void 0!==nC?nC:"?"}, engine ${null!==(oC=gC.engine.name)&&void 0!==oC?oC:"?"} ${null!==(NC=gC.engine.version)&&void 0!==NC?NC:"?"}`, `client hints ${"string"===typeof WC?WC:FC(WC)}`, `gpu ${MC()}`, `client ${QC.r.client} (${QC.r.reason})`, `surface site ${bC.y}, subsite ${bC.H}${bC.m?", iframed":""}, capped surface ${null!==PC&&void 0!==PC?PC:"none"}`]
     }
-    void 0 === Wq ? Bq = "none (the browser has none)" : Wq.getHighEntropyValues(["platformVersion", "fullVersionList", "architecture", "bitness", "model"]).then((qq => {
-      Bq = qq
-    }), (qq => {
-      Bq = `failed (${String(qq)})`
+    void 0 === NC ? WC = "none (the browser has none)" : NC.getHighEntropyValues(["platformVersion", "fullVersionList", "architecture", "bitness", "model"]).then((CC => {
+      WC = CC
+    }), (CC => {
+      WC = `failed (${String(CC)})`
     }))
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

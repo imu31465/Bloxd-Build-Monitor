@@ -1,494 +1,346 @@
 export const id = 187;
 export const ids = [187];
 export const modules = {
-  9191: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => Rq,
-      g: () => HE,
-      j: () => jE,
-      k: () => PE,
-      n: () => lE,
-      p: () => mE,
-      s: () => AE,
-      t: () => oE,
-      x: () => xE
-    });
-    var Yq = gq(24),
-      lq = gq(96),
-      Oq = gq(1622),
-      mq = gq(4248),
-      xq = gq(2700),
-      Aq = gq(2714),
-      cq = gq(38);
-    const {
-      windows: uq,
-      target: Bq,
-      stepDown: Wq,
-      stepUp: Nq,
-      noGain: aq
-    } = Aq.d, Vq = 1e3 / 60 * 1.08, dq = 1e3 / 55, jq = 1e3 / 45, Hq = 1e3 / 30 * .92, oq = 1e3 / 30 * 1.08;
-    class Pq {
-      constructor() {
-        this.lastMs = -1, this.runBand = -1, this.runLength = 0, this.votes60 = 0, this.votesMid = 0, this.sumMidMs = 0, this.votes30 = 0
-      }
-      frame(qq) {
-        const Eq = qq - this.lastMs;
-        this.lastMs = qq;
-        const gq = function(qq) {
-          if (qq <= 0 || qq > 100) return -1;
-          if (qq <= Vq) return 0;
-          if (qq >= dq && qq <= jq) return 1;
-          return qq >= Hq && qq <= oq ? 2 : -1
-        }(Eq);
-        gq !== this.runBand && (this.runBand = gq, this.runLength = 0), gq < 0 || ++this.runLength < 3 || (0 === gq ? this.votes60++ : 1 === gq ? (this.votesMid++, this.sumMidMs += Eq) : this.votes30++)
-      }
-      hz() {
-        return this.votes60 >= 60 ? 60 : this.votesMid >= 60 ? 1e3 * this.votesMid / this.sumMidMs : this.votes30 >= 60 ? 30 : 60
-      }
-    }
-    const Qq = uq.windowMs,
-      yq = uq.settleMs,
-      tq = uq.graceMs,
-      rq = uq.minIntervals,
-      vq = 1e3 * rq / Qq,
-      hq = aq.backoffMs,
-      nq = aq.maxMs;
-    class bq {
-      constructor(qq, Eq) {
-        let {
-          lowest: gq,
-          startStep: Yq = 0,
-          noGain: lq = null,
-          upWait: Oq = null
-        } = Eq;
-        this.hooks = qq, this.step = void 0, this.lowest = void 0, this.phase = {
-          kind: "watch"
-        }, this.noGain = void 0, this.downUntilMs = void 0, this.downBackoffMs = void 0, this.upFailures = void 0, this.upUntilMs = void 0, this.climbing = void 0, this.climbed = null, this.cleanRun = 0, this.dropRun = 0, this.dropRunMasked = !1, this.dropRunFpsSum = 0, this.refresh = new Pq, this.wasMeasuring = !1, this.lastFrameMs = -1, this.resizedMs = Number.NEGATIVE_INFINITY, this.quietUntilMs = 0, this.graceUntilMs = 0, this.windowStartMs = -1, this.lastDrawnMs = 0, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = !1, this.slowStartMs = -1, this.slowIntervals = 0, this.log = [], this.lastTargetFps = Bq.maxFps, this.lowest = gq, this.step = Math.min(Yq, gq), this.noGain = lq, this.climbing = this.step > 0;
-        const mq = gq + 1;
-        this.downUntilMs = new Array(mq).fill(0), this.downBackoffMs = new Array(mq).fill(0), this.upFailures = new Array(mq).fill(0), this.upUntilMs = new Array(mq).fill(0), null !== Oq && Oq.step >= 0 && Oq.step < mq && (this.upUntilMs[Oq.step] = Oq.untilMs)
-      }
-      currentStep() {
-        return this.step
-      }
-      frame(qq, Eq, gq) {
-        let Yq = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (this.refresh.frame(qq), !gq) return void this.leave(qq);
-        const lq = qq - this.lastFrameMs,
-          Oq = this.resizeStall(qq);
-        if (lq > 2e3 && !Oq && this.leave(this.lastFrameMs), !this.wasMeasuring) return this.wasMeasuring = !0, this.lastFrameMs = qq, this.quietUntilMs = Math.max(this.quietUntilMs, qq + tq), this.graceUntilMs = qq + tq, this.windowStartMs = -1, void(this.slowStartMs = -1);
-        lq > 500 && (this.hitch(qq), Oq && (this.slowStartMs = -1)), this.lastFrameMs = qq, qq >= this.quietUntilMs && this.countWindow(qq, Eq, Yq) || Eq && qq >= this.graceUntilMs && this.countSlow(qq)
-      }
-      countWindow(qq, Eq, gq) {
-        if (this.windowStartMs < 0) return !!Eq && (this.windowStartMs = qq, this.lastDrawnMs = qq, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = gq, !1);
-        if (this.windowMasked ||= gq, !Eq) return this.windowHeld++, !1;
-        this.windowIntervals++, this.windowMaxIntervalMs = Math.max(this.windowMaxIntervalMs, qq - this.lastDrawnMs), this.lastDrawnMs = qq;
-        const Yq = qq - this.windowStartMs;
-        if (Yq < Qq) return !1;
-        const lq = this.windowIntervals,
-          Oq = 1e3 * lq / Yq,
-          mq = this.windowHeld,
-          xq = this.windowMaxIntervalMs,
-          Aq = this.windowMasked;
-        if (this.windowStartMs = -1, lq < rq) return !1;
-        this.slowStartMs = -1;
-        const cq = this.targetFps(),
-          uq = Oq >= cq * Bq.cleanShare && xq <= Bq.cleanMaxIntervalMs && (0 === mq || Oq >= cq);
-        return this.decide(Oq, uq, Oq < cq * Bq.dropShare, Aq, qq), !0
-      }
-      targetFps() {
-        return this.lastTargetFps = Math.min(Bq.maxFps, this.refresh.hz()), this.lastTargetFps
-      }
-      countSlow(qq) {
-        if (this.slowStartMs < 0) return this.slowStartMs = qq, void(this.slowIntervals = 0);
-        this.slowIntervals++;
-        const Eq = qq - this.slowStartMs;
-        if (Eq < 1e4) return;
-        const gq = 1e3 * this.slowIntervals / Eq;
-        this.slowStartMs = -1, this.countSlow(qq), gq < vq && (this.windowStartMs = -1, this.decide(gq, !1, !0, !1, qq))
-      }
-      resizeStall(qq) {
-        return this.lastFrameMs - this.resizedMs <= yq && qq - this.lastFrameMs <= 15e3
-      }
-      paused(qq) {
-        this.refresh.frame(qq), qq - this.lastFrameMs > 2e3 && (this.quietUntilMs = Math.max(this.quietUntilMs, qq + tq), this.graceUntilMs = qq + tq), this.lastFrameMs = qq, this.slowStartMs = -1, this.hitch(qq)
-      }
-      resized(qq) {
-        this.resizedMs = qq, this.hitch(qq)
-      }
-      hidden() {
-        this.leave(this.lastFrameMs)
-      }
-      leave(qq) {
-        this.wasMeasuring && (this.wasMeasuring = !1, this.left(qq))
-      }
-      hitch(qq) {
-        this.windowStartMs = -1, this.quietUntilMs = Math.max(this.quietUntilMs, qq + yq)
-      }
-      left(qq) {
-        this.windowStartMs = -1, this.slowStartMs = -1, this.cleanRun = 0, this.resetDropRun();
-        const Eq = this.phase;
-        "watch" !== Eq.kind && (this.phase = {
-          kind: "watch"
-        }, "down" === Eq.kind && (this.downUntilMs[Eq.from] = Math.max(this.downUntilMs[Eq.from], qq + hq)), this.setStep(Eq.from, 0, qq, "left"), "up" === Eq.kind && (this.climbed = Eq.fromClimbed))
-      }
-      decide(qq, Eq, gq, Yq, lq) {
-        const Oq = this.phase;
-        switch (Oq.kind) {
-          case "watch":
-            return void this.watch(qq, Eq, gq, Yq, lq);
-          case "down":
-            if (Oq.judged++, Oq.fpsSum += qq, Oq.dropped ||= gq, Oq.judged < Wq.judgeWindows) return;
-            return void(!Oq.dropped || Oq.fpsSum / Oq.judged >= Oq.fromFps * Wq.keepGain ? this.keepDown(Oq.from, Oq.fpsSum / Oq.judged, lq) : this.noGainFrom(Oq.from, Oq.fromFps, lq));
-          case "up":
-            return Eq ? void(++Oq.judged >= Nq.trialWindows && (this.watchAt(this.step), this.climbed = {
-              from: Oq.from,
-              heldWindows: 0,
-              below: Oq.fromClimbed
-            }, this.record(lq, qq, "up_kept"))) : (Yq ? (this.watchAt(Oq.from), this.setStep(Oq.from, qq, lq, "spoiled")) : this.failUp(this.step, Oq.from, qq, lq), void(this.climbed = Oq.fromClimbed))
-        }
-      }
-      watch(qq, Eq, gq, Yq, lq) {
-        const Oq = this.climbed;
-        if (null !== Oq && !gq && !Yq && ++Oq.heldWindows >= Nq.heldWindows && (this.climbed = null, this.record(lq, qq, "Fc"), this.hooks.Fc(this.step)), gq ? (this.dropRun++, this.dropRunFpsSum += qq, this.dropRunMasked ||= Yq) : this.resetDropRun(), Yq && Eq || (this.cleanRun = Eq ? this.cleanRun + 1 : 0), this.dropRun >= (this.dropRunMasked ? Wq.maskedWindows : Wq.dropWindows)) {
-          const Eq = this.dropRunFpsSum / this.dropRun;
-          this.resetDropRun();
-          const gq = this.climbed;
-          return void(null !== gq ? (this.failUp(this.step, gq.from, qq, lq), this.climbed = gq.below) : this.step < this.lowest && this.downAllowed(lq) && (this.climbing = !1, this.phase = {
-            kind: "down",
-            from: this.step,
-            fromFps: Eq,
-            judged: 0,
-            fpsSum: 0,
-            dropped: !1
-          }, this.setStep(this.step + 1, qq, lq, "down")))
-        }
-        const mq = this.step - 1;
-        mq >= 0 && this.cleanRun >= (this.climbing ? Nq.climbWindows : Nq.cleanWindows) && this.upAllowed(mq, lq) && (this.phase = {
-          kind: "up",
-          from: this.step,
-          judged: 0,
-          fromClimbed: this.climbed
-        }, this.setStep(mq, qq, lq, "up"))
-      }
-      downAllowed(qq) {
-        return !(0 === this.step && null !== this.noGain && qq < this.noGain.untilMs) && qq >= this.downUntilMs[this.step]
-      }
-      upAllowed(qq, Eq) {
-        return this.upFailures[qq] <= Nq.failWaitsMs.length && Eq >= this.upUntilMs[qq]
-      }
-      keepDown(qq, Eq, gq) {
-        this.watchAt(this.step), this.downBackoffMs[qq] = 0, this.record(gq, Eq, "down_kept"), 0 === qq && null !== this.noGain && (this.noGain = null, this.hooks.noGain(null)), this.hooks.jN(this.step)
-      }
-      noGainFrom(qq, Eq, gq) {
-        var Yq, lq;
-        const Oq = 0 === qq ? null !== (Yq = null === (lq = this.noGain) || void 0 === lq ? void 0 : lq.backoffMs) && void 0 !== Yq ? Yq : 0 : this.downBackoffMs[qq],
-          mq = 0 === Oq ? hq : Math.min(2 * Oq, nq);
-        this.downBackoffMs[qq] = mq, this.downUntilMs[qq] = gq + mq, 0 === qq && (this.noGain = {
-          untilMs: gq + mq,
-          backoffMs: mq
-        }, this.hooks.noGain(this.noGain)), this.watchAt(qq), this.setStep(qq, Eq, gq, "no_gain")
-      }
-      failUp(qq, Eq, gq, Yq) {
-        this.climbing = !1;
-        const lq = ++this.upFailures[qq];
-        this.upUntilMs[qq] = lq <= Nq.failWaitsMs.length ? Yq + Nq.failWaitsMs[lq - 1] : Number.POSITIVE_INFINITY, this.watchAt(Eq), this.setStep(Eq, gq, Yq, "up_failed"), this.hooks.upFailed(qq)
-      }
-      watchAt(qq) {
-        this.phase = {
-          kind: "watch"
-        }, this.climbed = qq === this.step ? this.climbed : null, this.cleanRun = 0, this.resetDropRun()
-      }
-      resetDropRun() {
-        this.dropRun = 0, this.dropRunFpsSum = 0, this.dropRunMasked = !1
-      }
-      setStep(qq, Eq, gq, Yq) {
-        const lq = qq !== this.step;
-        lq && (this.climbed = null), this.step = qq, this.record(gq, Eq, Yq), lq && (this.slowStartMs = -1, this.resized(gq), this.hooks.changed(qq))
-      }
-      record(qq, Eq, gq) {
-        64 === this.log.length && this.log.shift(), this.log.push({
-          atMs: qq,
-          step: this.step,
-          fps: Math.round(10 * Eq) / 10,
-          targetFps: Math.round(10 * this.lastTargetFps) / 10,
-          why: gq
-        })
-      }
-    }
-    var iq = gq(9197),
-      Zq = gq(3027),
-      fq = gq(9200);
-    const Mq = "autoGraphics",
-      Tq = 6048e5,
-      zq = "startScale";
+  37555: (CC, zC, ZC) => {
+    var QC = ZC(37560);
 
-    function Sq() {
-      return (0, xq.F)(Yq.b.get("clientEscMenuOptions").pixelScale) * (0, xq.B)()
-    }
-
-    function pq() {
-      return (0, xq.r)(Sq())
-    }
-
-    function Gq() {
-      const qq = cq.i.getItem(Mq);
-      return "object" !== typeof qq || null === qq || "string" !== typeof qq.gpu ? null : qq
-    }
-
-    function Lq(qq) {
-      return {
-        untilEpochMs: Date.now() + (qq.untilMs - performance.now()),
-        backoffMs: qq.backoffMs
+    function wC(CC) {
+      for (var zC, ZC, wC = 0, bC = CC.length, nC = 0; nC < CC.length;) {
+        for (zC = CC[nC], ZC = 0; nC < bC && CC[nC] === zC;) ++nC, ++ZC;
+        wC += QC.log2(ZC) / 7 | 0, wC += QC.log2(zC >>> 0) / 7 | 0, wC += 2
       }
+      return wC
     }
-
-    function Jq(qq) {
-      return qq ? {
-        untilMs: performance.now() + (qq.untilEpochMs - Date.now()),
-        backoffMs: qq.backoffMs
-      } : null
-    }
-    let kq = null;
-
-    function Rq() {
-      if (null === kq) {
-        const qq = new URLSearchParams(window.location.search).get("msaa");
-        kq = Yq.b.get("clientEscMenuOptions").antiAliasing && ("0" === qq || "1" !== qq && !(0, mq.d)("antiAliasing") && (0, Zq.f)())
+    zC.size = wC, zC.encode = function(CC, zC) {
+      zC || (zC = new Uint8Array(wC(CC)));
+      for (var ZC, QC, bC = 0, nC = zC.length, fC = 0; fC < CC.length;) {
+        for (ZC = CC[fC], QC = 0; fC < CC.length && CC[fC] === ZC;) ++fC, ++QC;
+        for (; bC < nC && QC >= 128;) zC[bC++] = 128 + (127 & QC), QC >>>= 7;
+        if (bC >= nC) throw new Error("RLE buffer overflow");
+        for (zC[bC++] = QC, ZC >>>= 0; bC < nC && ZC >= 128;) zC[bC++] = 128 + (127 & ZC), ZC >>>= 7;
+        if (bC >= nC) throw new Error("RLE buffer overflow");
+        zC[bC++] = ZC
       }
-      return kq
-    }
-
-    function Uq(qq) {
-      const Eq = "number" === typeof qq ? Date.now() - qq : -1;
-      return Eq >= 0 && Eq < Tq
-    }
-    let Fq = null;
-
-    function sq() {
-      return Fq ??= (0, lq.getDeviceDefaultPixelScale)(), Xq(Fq)
-    }
-
-    function Xq(qq) {
-      const Eq = Yq.b.get("clientEscMenuOptions");
-      return Eq.pixelSmoothing && !(0, mq.d)("pixelScale") && Eq.pixelScale === qq
-    }
-    let wq = null,
-      Kq = 0;
-
-    function Cq() {
-      if (null === wq || Kq !== Sq()) {
-        var qq;
-        Kq = Sq();
-        const Eq = Number(null !== (qq = new URLSearchParams(window.location.search).get(zq)) && void 0 !== qq ? qq : ""),
-          gq = pq();
-        if (Eq > 0 && Eq <= 1) wq = (0, xq.y)(gq, gq[0] / Eq);
-        else {
-          const qq = Gq(),
-            Eq = (0, xq.y)(gq, (0, xq.z)(Sq())),
-            Yq = !(0, Zq.l)() && Uq(null === qq || void 0 === qq ? void 0 : qq.heldAt) && (null === qq || void 0 === qq ? void 0 : qq.heldTarget) === Sq() ? null === qq || void 0 === qq ? void 0 : qq.heldN : void 0;
-          wq = "number" === typeof Yq ? Math.min(Eq, (0, xq.y)(gq, Yq)) : Eq
-        }
+      return zC
+    }, zC.decode = function(CC, zC) {
+      for (var ZC, QC, wC, bC, nC = zC.length, fC = CC.length, oC = 0, qC = 0; qC < fC;) {
+        for (ZC = 0, QC = 0; qC < fC && CC[qC] >= 128;) ZC += (127 & CC[qC++]) << QC, QC += 7;
+        if (ZC += CC[qC++] << QC, qC >= fC) throw new Error("RLE buffer underrun");
+        if (oC + ZC > nC) throw new Error("Chunk buffer overflow");
+        for (wC = 0, QC = 0; qC < fC && CC[qC] >= 128;) wC += (127 & CC[qC++]) << QC, QC += 7;
+        if (qC >= fC) throw new Error("RLE buffer underrun");
+        for (wC += CC[qC++] << QC, bC = 0; bC < ZC; ++bC) zC[oC++] = wC
       }
-      return wq
-    }
-
-    function Iq(qq, Eq) {
-      var gq;
-      const Yq = Eq.indexOf(null !== (gq = qq.failedUpN) && void 0 !== gq ? gq : -1);
-      return Yq >= 0 && Uq(qq.failedUpAt) ? {
-        step: Yq,
-        untilMs: performance.now() + Aq.d.stepUp.failWaitsMs[0]
-      } : null
-    }
-    let eq = null,
-      Dq = !1,
-      qE = "";
-    const EE = new Set;
-
-    function gE() {
-      for (const qq of EE) qq()
-    }
-
-    function YE() {
-      return Dq ? null : (BE(), null === eq ? (null !== Fq || null !== (0, lq.peekGpuVendor)() ? sq() : Xq(1)) ? Cq() : null : sq() ? eq.currentStep() : null)
-    }
-
-    function lE() {
-      const qq = YE();
-      if (null === qq) return null;
-      const Eq = pq(),
-        gq = Eq[Math.min(qq, Eq.length - 1)];
-      return gq === OE() ? null : gq
-    }
-
-    function OE() {
-      return (0, xq.t)(Yq.b.get("clientEscMenuOptions").pixelScale, (0, xq.B)())
-    }
-
-    function mE() {
-      return null !== eq && null !== lE()
-    }
-
-    function xE(qq) {
-      return EE.add(qq), () => {
-        EE.delete(qq)
-      }
-    }
-
-    function AE(qq, Eq, gq) {
-      var Yq;
-      if (null !== eq || Dq || (0, Zq.l)()) return;
-      const lq = (0, iq.c)(qq, Eq, gq);
-      null !== lq && (0, Zq.o)(lq.vendor), qE = `${qq}:${(null===lq||void 0===lq?void 0:lq.renderer)||(null===lq||void 0===lq?void 0:lq.vendor)||""}`, (null === (Yq = Gq()) || void 0 === Yq ? void 0 : Yq.gpu) !== qE && (cq.i.setItem(Mq, {
-        gpu: qE
-      }), wq = null), uE(), document.addEventListener("visibilitychange", (() => {
-        if (document.hidden) try {
-          var qq;
-          null === (qq = eq) || void 0 === qq || qq.hidden()
-        } catch (Eq) {
-          oE(), console.error("The quality steps stopped", Eq)
-        }
-      }))
-    }
-    let cE = 0;
-
-    function uE() {
-      var qq;
-      const Eq = null !== (qq = Gq()) && void 0 !== qq ? qq : {
-          gpu: qE
-        },
-        gq = pq();
-      cE = Sq(), eq = new bq({
-          changed: gE,
-          jN: () => {
-            WE({
-              heldN: void 0
-            })
-          },
-          Fc: qq => {
-            var Eq;
-            const gq = pq()[qq],
-              Yq = {
-                heldN: gq,
-                heldAt: Date.now(),
-                heldTarget: Sq()
-              };
-            (null === (Eq = Gq()) || void 0 === Eq ? void 0 : Eq.failedUpN) === gq && (Yq.failedUpN = void 0), WE(Yq)
-          },
-          upFailed: qq => {
-            WE({
-              failedUpN: pq()[qq],
-              failedUpAt: Date.now()
-            })
-          },
-          noGain: qq => {
-            WE({
-              noGain: null === qq ? void 0 : Lq(qq)
-            })
-          }
-        }, {
-          lowest: gq.length - 1,
-          startStep: Cq(),
-          noGain: Jq(Eq.noGain),
-          upWait: Iq(Eq, gq)
-        }),
-        function(qq) {
-          const Eq = {
-            get step() {
-              return qq.currentStep()
-            },
-            get n() {
-              var qq;
-              return null !== (qq = lE()) && void 0 !== qq ? qq : OE()
-            },
-            get scale() {
-              var qq;
-              return pq()[0] / (null !== (qq = lE()) && void 0 !== qq ? qq : OE())
-            },
-            get msaaOff() {
-              return Rq()
-            },
-            log: qq.log
-          };
-          Object.defineProperty(window, "__qualitySteps", {
-            value: Eq,
-            configurable: !0
-          })
-        }(eq), gE()
-    }
-
-    function BE() {
-      null !== eq && Sq() !== cE && (wq = null, uE())
-    }
-
-    function WE(qq) {
-      cq.i.setItem(Mq, {
-        ...Gq(),
-        ...qq,
-        gpu: qE
-      })
-    }
-    let NE = 0,
-      aE = 0,
-      VE = 0,
-      dE = !1;
-
-    function jE() {
-      NE++
-    }
-
-    function HE(qq, Eq, gq) {
-      let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      BE(), null !== eq && (qq - VE >= 1e3 && (dE = NE - aE > Aq.d.sceneChange.meshesPerSecond, aE = NE, VE = qq), fq.d.isHeld() ? eq.paused(qq) : eq.frame(qq, Eq, gq && !document.hidden && sq(), dE || Yq > 0 || (0, Oq.p)()))
-    }
-
-    function oE() {
-      if (!Dq) {
-        Dq = !0, null !== eq && (eq = null, WE({
-          noGain: void 0
-        }));
-        try {
-          gE()
-        } catch (qq) {
-          console.error("The quality steps' resize to the player's n failed", qq)
-        }
-      }
-    }
-
-    function PE() {
-      var qq;
-      null === (qq = eq) || void 0 === qq || qq.resized(performance.now())
+      return zC
     }
   },
-  9197: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Oq
+  37560: (CC, zC) => {
+    function ZC(CC) {
+      var zC = 32;
+      return (CC &= -CC) && zC--, 65535 & CC && (zC -= 16), 16711935 & CC && (zC -= 8), 252645135 & CC && (zC -= 4), 858993459 & CC && (zC -= 2), 1431655765 & CC && (zC -= 1), zC
+    }
+    zC.INT_BITS = 32, zC.INT_MAX = 2147483647, zC.INT_MIN = -1 << 31, zC.sign = function(CC) {
+      return (CC > 0) - (CC < 0)
+    }, zC.abs = function(CC) {
+      var zC = CC >> 31;
+      return (CC ^ zC) - zC
+    }, zC.min = function(CC, zC) {
+      return zC ^ (CC ^ zC) & -(CC < zC)
+    }, zC.max = function(CC, zC) {
+      return CC ^ (CC ^ zC) & -(CC < zC)
+    }, zC.isPow2 = function(CC) {
+      return !(CC & CC - 1) && !!CC
+    }, zC.log2 = function(CC) {
+      var zC, ZC;
+      return zC = (CC > 65535) << 4, zC |= ZC = ((CC >>>= zC) > 255) << 3, zC |= ZC = ((CC >>>= ZC) > 15) << 2, (zC |= ZC = ((CC >>>= ZC) > 3) << 1) | (CC >>>= ZC) >> 1
+    }, zC.log10 = function(CC) {
+      return CC >= 1e9 ? 9 : CC >= 1e8 ? 8 : CC >= 1e7 ? 7 : CC >= 1e6 ? 6 : CC >= 1e5 ? 5 : CC >= 1e4 ? 4 : CC >= 1e3 ? 3 : CC >= 100 ? 2 : CC >= 10 ? 1 : 0
+    }, zC.popCount = function(CC) {
+      return 16843009 * ((CC = (858993459 & (CC -= CC >>> 1 & 1431655765)) + (CC >>> 2 & 858993459)) + (CC >>> 4) & 252645135) >>> 24
+    }, zC.countTrailingZeros = ZC, zC.nextPow2 = function(CC) {
+      return CC += 0 === CC, --CC, CC |= CC >>> 1, CC |= CC >>> 2, CC |= CC >>> 4, CC |= CC >>> 8, (CC |= CC >>> 16) + 1
+    }, zC.prevPow2 = function(CC) {
+      return CC |= CC >>> 1, CC |= CC >>> 2, CC |= CC >>> 4, CC |= CC >>> 8, (CC |= CC >>> 16) - (CC >>> 1)
+    }, zC.parity = function(CC) {
+      return CC ^= CC >>> 16, CC ^= CC >>> 8, CC ^= CC >>> 4, 27030 >>> (CC &= 15) & 1
+    };
+    var QC = new Array(256);
+    ! function(CC) {
+      for (var zC = 0; zC < 256; ++zC) {
+        var ZC = zC,
+          QC = zC,
+          wC = 7;
+        for (ZC >>>= 1; ZC; ZC >>>= 1) QC <<= 1, QC |= 1 & ZC, --wC;
+        CC[zC] = QC << wC & 255
+      }
+    }(QC), zC.reverse = function(CC) {
+      return QC[255 & CC] << 24 | QC[CC >>> 8 & 255] << 16 | QC[CC >>> 16 & 255] << 8 | QC[CC >>> 24 & 255]
+    }, zC.interleave2 = function(CC, zC) {
+      return (CC = 1431655765 & ((CC = 858993459 & ((CC = 252645135 & ((CC = 16711935 & ((CC &= 65535) | CC << 8)) | CC << 4)) | CC << 2)) | CC << 1)) | (zC = 1431655765 & ((zC = 858993459 & ((zC = 252645135 & ((zC = 16711935 & ((zC &= 65535) | zC << 8)) | zC << 4)) | zC << 2)) | zC << 1)) << 1
+    }, zC.deinterleave2 = function(CC, zC) {
+      return (CC = 65535 & ((CC = 16711935 & ((CC = 252645135 & ((CC = 858993459 & ((CC = CC >>> zC & 1431655765) | CC >>> 1)) | CC >>> 2)) | CC >>> 4)) | CC >>> 16)) << 16 >> 16
+    }, zC.interleave3 = function(CC, zC, ZC) {
+      return CC = 1227133513 & ((CC = 3272356035 & ((CC = 251719695 & ((CC = 4278190335 & ((CC &= 1023) | CC << 16)) | CC << 8)) | CC << 4)) | CC << 2), (CC |= (zC = 1227133513 & ((zC = 3272356035 & ((zC = 251719695 & ((zC = 4278190335 & ((zC &= 1023) | zC << 16)) | zC << 8)) | zC << 4)) | zC << 2)) << 1) | (ZC = 1227133513 & ((ZC = 3272356035 & ((ZC = 251719695 & ((ZC = 4278190335 & ((ZC &= 1023) | ZC << 16)) | ZC << 8)) | ZC << 4)) | ZC << 2)) << 2
+    }, zC.deinterleave3 = function(CC, zC) {
+      return (CC = 1023 & ((CC = 4278190335 & ((CC = 251719695 & ((CC = 3272356035 & ((CC = CC >>> zC & 1227133513) | CC >>> 2)) | CC >>> 4)) | CC >>> 8)) | CC >>> 16)) << 22 >> 22
+    }, zC.nextCombination = function(CC) {
+      var zC = CC | CC - 1;
+      return zC + 1 | (~zC & -~zC) - 1 >>> ZC(CC) + 1
+    }
+  },
+  39623: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      emptyColumnHeight: () => AC,
+      loadHeatmapSchematic: () => xC,
+      readSchematicBlocks: () => JC
     });
-    var Yq = gq(96),
-      lq = gq(128);
-
-    function Oq(qq, Eq, gq) {
-      if ("webgpu" === qq) return gq ? ((0, Yq.seedGpuVendor)(gq), {
-        vendor: gq,
-        renderer: ""
-      }) : null;
-      try {
-        const gq = "webgl" === qq ? Eq.getContext("webgl2") : Eq.getContext("webgl");
-        "webgl" === qq && gq && (0, lq.x)(gq);
-        const Oq = null === gq || void 0 === gq ? void 0 : gq.getExtension("WEBGL_debug_renderer_info");
-        if (gq && Oq) {
-          const qq = String(gq.getParameter(Oq.UNMASKED_VENDOR_WEBGL)),
-            Eq = String(gq.getParameter(Oq.UNMASKED_RENDERER_WEBGL));
-          return (0, Yq.seedGpuVendor)(qq), (0, lq.B)(qq, Eq), {
-            vendor: qq,
-            renderer: Eq
+    var QC = ZC(3681),
+      wC = ZC.n(QC),
+      bC = ZC(3661),
+      nC = ZC(37555),
+      fC = ZC(184),
+      oC = ZC(9194);
+    const qC = [{
+        name: "x",
+        type: "int"
+      }, {
+        name: "y",
+        type: "int"
+      }, {
+        name: "z",
+        type: "int"
+      }],
+      FC = [{
+        name: "name",
+        type: "string"
+      }, {
+        name: "startOffset",
+        type: {
+          type: "record",
+          fields: qC
+        }
+      }, {
+        name: "dimensions",
+        type: {
+          type: "record",
+          fields: qC
+        }
+      }, {
+        name: "chunkData",
+        type: {
+          type: "array",
+          items: {
+            type: "record",
+            fields: [...qC, {
+              name: "rle",
+              type: "bytes"
+            }]
           }
         }
-        gq && (0, lq.B)(String(gq.getParameter(gq.VENDOR)), String(gq.getParameter(gq.RENDERER)))
-      } catch {}
-      return null
+      }],
+      WC = wC().Type.forSchema({
+        type: "record",
+        fields: FC
+      }),
+      NC = wC().Type.forSchema({
+        type: "record",
+        fields: [...FC, {
+          name: "blockData",
+          type: {
+            type: "array",
+            items: {
+              type: "record",
+              fields: [...qC, {
+                name: "data",
+                type: "bytes"
+              }]
+            }
+          }
+        }, {
+          name: "pasteOffset",
+          type: {
+            type: "record",
+            fields: qC
+          }
+        }]
+      }),
+      MC = 2,
+      gC = 6,
+      SC = {
+        Water: [63, 118, 228],
+        Lava: [232, 110, 30]
+      },
+      pC = [150, 150, 150],
+      PC = 16,
+      GC = 4096,
+      RC = fC.f.Ig,
+      AC = -2147483648;
+    async function xC(CC) {
+      const zC = await JC(new Uint8Array(await CC.arrayBuffer()), await async function() {
+        const {
+          averageColors: CC
+        } = await ZC.e(204).then((() => ZC(34243))), zC = new Map;
+        return ZC => {
+          var QC, wC, bC, nC, fC;
+          const qC = zC.get(ZC);
+          if (void 0 !== qC) return qC;
+          const FC = null !== (QC = null === (wC = oC.g[ZC]) || void 0 === wC ? void 0 : wC.name) && void 0 !== QC ? QC : "",
+            WC = null !== (bC = CC[FC]) && void 0 !== bC ? bC : CC[FC.split("|")[0]],
+            NC = SC[FC.split("|")[0]],
+            MC = null !== (nC = null !== (fC = null === WC || void 0 === WC ? void 0 : WC[0]) && void 0 !== fC ? fC : NC) && void 0 !== nC ? nC : 0 === (null === WC || void 0 === WC ? void 0 : WC.length) ? null : pC;
+          return zC.set(ZC, MC), MC
+        }
+      }());
+      return {
+        surface: zC.surface,
+        topDown: iC(zC.columnTops)
+      }
     }
+    async function JC(CC, zC) {
+      var ZC;
+      if (CC.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const QC = new DataView(CC.buffer, CC.byteOffset, CC.byteLength).getUint32(0, !0);
+      if (QC > gC) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const wC = (QC >= MC ? NC : WC).decode(bC.gg.from(CC.subarray(4)), 0).value;
+      if (!wC) throw new Error("The file isn't a schematic.");
+      if (0 === wC.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const fC = null !== (ZC = wC.pasteOffset) && void 0 !== ZC ? ZC : {
+          x: 0,
+          y: 0,
+          z: 0
+        },
+        oC = [fC.x, fC.y, fC.z].map((CC => Math.floor(CC / RC))),
+        qC = wC.chunkData.map((CC => ({
+          x: CC.x + oC[0],
+          y: CC.y + oC[1],
+          z: CC.z + oC[2],
+          rle: CC.rle
+        }))),
+        FC = new Map;
+      for (const [bC, WC] of qC.entries()) {
+        const CC = new Uint16Array(RC ** 3);
+        nC.decode(WC.rle, CC), FC.set(`${WC.x},${WC.y},${WC.z}`, CC), bC % PC === PC - 1 && await vC()
+      }
+      const SC = (CC, zC, ZC) => CC * RC * RC + zC * RC + ZC,
+        pC = (CC, zC, ZC) => {
+          var QC, wC;
+          const bC = Math.floor(CC / RC),
+            nC = Math.floor(zC / RC),
+            fC = Math.floor(ZC / RC);
+          return null !== (QC = null === (wC = FC.get(`${bC},${nC},${fC}`)) || void 0 === wC ? void 0 : wC[SC(CC - bC * RC, zC - nC * RC, ZC - fC * RC)]) && void 0 !== QC ? QC : 0
+        },
+        GC = new Map,
+        xC = [],
+        JC = [];
+      for (const [bC, nC] of qC.entries()) {
+        const CC = FC.get(`${nC.x},${nC.y},${nC.z}`),
+          ZC = [nC.x * RC, nC.y * RC, nC.z * RC],
+          QC = (zC, QC, wC) => zC < 0 || QC < 0 || wC < 0 || zC >= RC || QC >= RC || wC >= RC ? pC(ZC[0] + zC, ZC[1] + QC, ZC[2] + wC) : CC[SC(zC, QC, wC)],
+          wC = `${nC.x},${nC.z}`;
+        let fC = GC.get(wC);
+        void 0 === fC && (fC = {
+          chunkX: nC.x,
+          chunkZ: nC.z,
+          heights: new Int32Array(RC * RC).fill(AC),
+          colours: new Uint8Array(RC * RC * 3)
+        }, GC.set(wC, fC));
+        for (let bC = 0; bC < RC; bC++)
+          for (let wC = 0; wC < RC; wC++)
+            for (let nC = 0; nC < RC; nC++) {
+              const oC = CC[SC(bC, wC, nC)];
+              if (0 === oC) continue;
+              const qC = ZC[0] + bC,
+                FC = ZC[1] + wC,
+                WC = ZC[2] + nC,
+                NC = zC(oC);
+              if (null === NC) continue;
+              const MC = nC * RC + bC;
+              FC > fC.heights[MC] && (fC.heights[MC] = FC, fC.colours.set(NC, 3 * MC));
+              !IC(oC) && (IC(QC(bC + 1, wC, nC)) || IC(QC(bC - 1, wC, nC)) || IC(QC(bC, wC + 1, nC)) || IC(QC(bC, wC - 1, nC)) || IC(QC(bC, wC, nC + 1)) || IC(QC(bC, wC, nC - 1))) && (xC.push(qC, FC, WC), JC.push(NC[0], NC[1], NC[2]))
+            }
+        bC % PC === PC - 1 && await vC()
+      }
+      if (0 === xC.length) throw new Error("The schematic has no blocks in it.");
+      return {
+        name: wC.name,
+        surface: {
+          positions: Int32Array.from(xC),
+          colours: Uint8Array.from(JC),
+          count: xC.length / 3
+        },
+        columnTops: [...GC.values()]
+      }
+    }
+
+    function IC(CC) {
+      if (0 === CC) return !0;
+      const zC = oC.g[CC];
+      return void 0 === zC || zC.NM || zC.transTex || !1 === zC.solid
+    }
+
+    function iC(CC) {
+      let zC = 1 / 0,
+        ZC = -1 / 0,
+        QC = 1 / 0,
+        wC = -1 / 0;
+      for (const {
+          chunkX: gC,
+          chunkZ: SC,
+          heights: pC
+        }
+        of CC) pC.forEach(((CC, bC) => {
+        if (CC === AC) return;
+        const nC = gC * RC + bC % RC,
+          fC = SC * RC + Math.floor(bC / RC);
+        zC = Math.min(zC, nC), ZC = Math.max(ZC, nC), QC = Math.min(QC, fC), wC = Math.max(wC, fC)
+      }));
+      const bC = ZC - zC + 1,
+        nC = wC - QC + 1,
+        fC = Math.max(1, Math.ceil(bC / GC), Math.ceil(nC / GC)),
+        oC = Math.ceil(bC / fC),
+        qC = Math.ceil(nC / fC),
+        FC = document.createElement("canvas");
+      FC.width = oC, FC.height = qC;
+      const WC = FC.getContext("2d");
+      if (!WC) throw new Error("Couldn't draw the schematic from above.");
+      const NC = WC.createImageData(oC, qC),
+        MC = new Int32Array(oC * qC).fill(AC);
+      for (const {
+          chunkX: gC,
+          chunkZ: SC,
+          heights: pC,
+          colours: PC
+        }
+        of CC) pC.forEach(((CC, zC) => {
+        const wC = gC * RC + zC % RC,
+          bC = SC * RC + Math.floor(zC / RC),
+          nC = Math.floor((bC - QC) / fC) * oC + Math.floor((ZC - wC) / fC);
+        CC === AC || CC <= MC[nC] || (MC[nC] = CC, NC.data.set(PC.subarray(3 * zC, 3 * zC + 3), 4 * nC), NC.data[4 * nC + 3] = 255)
+      }));
+      return WC.putImageData(NC, 0, 0), {
+        maxX: ZC,
+        minZ: QC,
+        width: oC * fC,
+        depth: qC * fC,
+        canvas: FC
+      }
+    }
+
+    function vC() {
+      return new Promise((CC => {
+        setTimeout(CC, 0)
+      }))
+    }
+  },
+  9299: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => wC,
+      d: () => bC
+    });
+    var QC = ZC(9239);
+    const wC = "Air",
+      bC = Object.freeze(new QC.e(wC, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

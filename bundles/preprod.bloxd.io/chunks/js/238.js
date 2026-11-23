@@ -1,399 +1,248 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  40835: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq,
-      e: () => uq,
-      h: () => cq
+  37590: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => wC
     });
-    var Yq, lq = gq(37158),
-      Oq = gq(37139);
-    ! function(qq) {
-      qq[qq.CW = 0] = "CW", qq[qq.CCW = 1] = "CCW"
-    }(Yq || (Yq = {}));
-    class mq {
-      static Interpolate(qq, Eq, gq, Yq, lq) {
-        if (0 === qq) return 0;
-        const Oq = 1 - 3 * Yq + 3 * Eq,
-          mq = 3 * Yq - 6 * Eq,
-          xq = 3 * Eq;
-        let Aq = qq;
-        for (let cq = 0; cq < 5; cq++) {
-          const Eq = Aq * Aq;
-          Aq -= (Oq * (Eq * Aq) + mq * Eq + xq * Aq - qq) * (1 / (3 * Oq * Eq + 2 * mq * Aq + xq)), Aq = Math.min(1, Math.max(0, Aq))
-        }
-        return 3 * Math.pow(1 - Aq, 2) * Aq * gq + 3 * (1 - Aq) * Math.pow(Aq, 2) * lq + Math.pow(Aq, 3)
+    var QC = ZC(37596);
+    class wC {
+      static GetPlanes(CC) {
+        const zC = [];
+        for (let ZC = 0; ZC < 6; ZC++) zC.push(new QC.d(0, 0, 0, 0));
+        return wC.GetPlanesToRef(CC, zC), zC
       }
-    }
-    class xq {
-      constructor(qq) {
-        this._radians = qq, this._radians < 0 && (this._radians += 2 * Math.PI)
+      static GetNearPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] + ZC[2], zC.normal.y = ZC[7] + ZC[6], zC.normal.z = ZC[11] + ZC[10], zC.d = ZC[15] + ZC[14], zC.normalize()
       }
-      degrees() {
-        return 180 * this._radians / Math.PI
+      static GetFarPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] - ZC[2], zC.normal.y = ZC[7] - ZC[6], zC.normal.z = ZC[11] - ZC[10], zC.d = ZC[15] - ZC[14], zC.normalize()
       }
-      radians() {
-        return this._radians
+      static GetLeftPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] + ZC[0], zC.normal.y = ZC[7] + ZC[4], zC.normal.z = ZC[11] + ZC[8], zC.d = ZC[15] + ZC[12], zC.normalize()
       }
-      static BetweenTwoPoints(qq, Eq) {
-        const gq = Eq.subtract(qq),
-          Yq = Math.atan2(gq.y, gq.x);
-        return new xq(Yq)
+      static GetRightPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] - ZC[0], zC.normal.y = ZC[7] - ZC[4], zC.normal.z = ZC[11] - ZC[8], zC.d = ZC[15] - ZC[12], zC.normalize()
       }
-      static BetweenTwoVectors(qq, Eq) {
-        let gq = qq.lengthSquared() * Eq.lengthSquared();
-        if (0 === gq) return new xq(Math.PI / 2);
-        gq = Math.sqrt(gq);
-        let Yq = qq.dot(Eq) / gq;
-        Yq = (0, lq.Clamp)(Yq, -1, 1);
-        const Oq = Math.acos(Yq);
-        return new xq(Oq)
+      static GetTopPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] - ZC[1], zC.normal.y = ZC[7] - ZC[5], zC.normal.z = ZC[11] - ZC[9], zC.d = ZC[15] - ZC[13], zC.normalize()
       }
-      static FromRadians(qq) {
-        return new xq(qq)
+      static GetBottomPlaneToRef(CC, zC) {
+        const ZC = CC.m;
+        zC.normal.x = ZC[3] + ZC[1], zC.normal.y = ZC[7] + ZC[5], zC.normal.z = ZC[11] + ZC[9], zC.d = ZC[15] + ZC[13], zC.normalize()
       }
-      static FromDegrees(qq) {
-        return new xq(qq * Math.PI / 180)
+      static GetPlanesToRef(CC, zC) {
+        wC.GetNearPlaneToRef(CC, zC[0]), wC.GetFarPlaneToRef(CC, zC[1]), wC.GetLeftPlaneToRef(CC, zC[2]), wC.GetRightPlaneToRef(CC, zC[3]), wC.GetTopPlaneToRef(CC, zC[4]), wC.GetBottomPlaneToRef(CC, zC[5])
       }
-    }
-    class Aq {
-      constructor(qq, Eq, gq) {
-        this.startPoint = qq, this.midPoint = Eq, this.endPoint = gq;
-        const Yq = Math.pow(Eq.x, 2) + Math.pow(Eq.y, 2),
-          lq = (Math.pow(qq.x, 2) + Math.pow(qq.y, 2) - Yq) / 2,
-          mq = (Yq - Math.pow(gq.x, 2) - Math.pow(gq.y, 2)) / 2,
-          Aq = (qq.x - Eq.x) * (Eq.y - gq.y) - (Eq.x - gq.x) * (qq.y - Eq.y);
-        this.centerPoint = new Oq.p((lq * (Eq.y - gq.y) - mq * (qq.y - Eq.y)) / Aq, ((qq.x - Eq.x) * mq - (Eq.x - gq.x) * lq) / Aq), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = xq.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const cq = this.startAngle.degrees();
-        let uq = xq.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          Bq = xq.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        uq - cq > 180 && (uq -= 360), uq - cq < -180 && (uq += 360), Bq - uq > 180 && (Bq -= 360), Bq - uq < -180 && (Bq += 360), this.orientation = uq - cq < 0 ? 0 : 1, this.angle = xq.FromDegrees(0 === this.orientation ? cq - Bq : Bq - cq)
-      }
-    }
-    class cq {
-      constructor(qq, Eq) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new Oq.p(qq, Eq))
-      }
-      addLineTo(qq, Eq) {
-        if (this.closed) return this;
-        const gq = new Oq.p(qq, Eq),
-          Yq = this._points[this._points.length - 1];
-        return this._points.push(gq), this._length += gq.subtract(Yq).length(), this
-      }
-      addArcTo(qq, Eq, gq, Yq) {
-        let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
-        if (this.closed) return this;
-        const mq = this._points[this._points.length - 1],
-          xq = new Oq.p(qq, Eq),
-          cq = new Oq.p(gq, Yq),
-          uq = new Aq(mq, xq, cq);
-        let Bq = uq.angle.radians() / lq;
-        0 === uq.orientation && (Bq *= -1);
-        let Wq = uq.startAngle.radians() + Bq;
-        for (let Oq = 0; Oq < lq; Oq++) {
-          const qq = Math.cos(Wq) * uq.radius + uq.centerPoint.x,
-            Eq = Math.sin(Wq) * uq.radius + uq.centerPoint.y;
-          this.addLineTo(qq, Eq), Wq += Bq
-        }
-        return this
-      }
-      addQuadraticCurveTo(qq, Eq, gq, Yq) {
-        let lq = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
-        if (this.closed) return this;
-        const Oq = (qq, Eq, gq, Yq) => (1 - qq) * (1 - qq) * Eq + 2 * qq * (1 - qq) * gq + qq * qq * Yq,
-          mq = this._points[this._points.length - 1];
-        for (let xq = 0; xq <= lq; xq++) {
-          const Aq = xq / lq,
-            cq = Oq(Aq, mq.x, qq, gq),
-            uq = Oq(Aq, mq.y, Eq, Yq);
-          this.addLineTo(cq, uq)
-        }
-        return this
-      }
-      addBezierCurveTo(qq, Eq, gq, Yq, lq, Oq) {
-        let mq = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
-        if (this.closed) return this;
-        const xq = (qq, Eq, gq, Yq, lq) => (1 - qq) * (1 - qq) * (1 - qq) * Eq + 3 * qq * (1 - qq) * (1 - qq) * gq + 3 * qq * qq * (1 - qq) * Yq + qq * qq * qq * lq,
-          Aq = this._points[this._points.length - 1];
-        for (let cq = 0; cq <= mq; cq++) {
-          const uq = cq / mq,
-            Bq = xq(uq, Aq.x, qq, gq, lq),
-            Wq = xq(uq, Aq.y, Eq, Yq, Oq);
-          this.addLineTo(Bq, Wq)
-        }
-        return this
-      }
-      isPointInside(qq) {
-        let Eq = !1;
-        const gq = this._points.length;
-        for (let Yq = gq - 1, lq = 0; lq < gq; Yq = lq++) {
-          let gq = this._points[Yq],
-            Oq = this._points[lq],
-            mq = Oq.x - gq.x,
-            xq = Oq.y - gq.y;
-          if (Math.abs(xq) > Number.EPSILON) {
-            if (xq < 0 && (gq = this._points[lq], mq = -mq, Oq = this._points[Yq], xq = -xq), qq.y < gq.y || qq.y > Oq.y) continue;
-            if (qq.y === gq.y && qq.x === gq.x) return !0;
-            {
-              const Yq = xq * (qq.x - gq.x) - mq * (qq.y - gq.y);
-              if (0 === Yq) return !0;
-              if (Yq < 0) continue;
-              Eq = !Eq
-            }
-          } else {
-            if (qq.y !== gq.y) continue;
-            if (Oq.x <= qq.x && qq.x <= gq.x || gq.x <= qq.x && qq.x <= Oq.x) return !0
-          }
-        }
-        return Eq
-      }
-      close() {
-        return this.closed = !0, this
-      }
-      length() {
-        let qq = this._length;
-        if (this.closed) {
-          const Eq = this._points[this._points.length - 1];
-          qq += this._points[0].subtract(Eq).length()
-        }
-        return qq
-      }
-      area() {
-        const qq = this._points.length;
-        let Eq = 0;
-        for (let gq = qq - 1, Yq = 0; Yq < qq; gq = Yq++) Eq += this._points[gq].x * this._points[Yq].y - this._points[Yq].x * this._points[gq].y;
-        return .5 * Eq
-      }
-      getPoints() {
-        return this._points
-      }
-      getPointAtLengthPosition(qq) {
-        if (qq < 0 || qq > 1) return Oq.p.Zero();
-        const Eq = qq * this.length();
-        let gq = 0;
-        for (let Yq = 0; Yq < this._points.length; Yq++) {
-          const qq = (Yq + 1) % this._points.length,
-            lq = this._points[Yq],
-            mq = this._points[qq].subtract(lq),
-            xq = mq.length() + gq;
-          if (Eq >= gq && Eq <= xq) {
-            const qq = mq.normalize(),
-              Yq = Eq - gq;
-            return new Oq.p(lq.x + qq.x * Yq, lq.y + qq.y * Yq)
-          }
-          gq = xq
-        }
-        return Oq.p.Zero()
-      }
-      static StartingAt(qq, Eq) {
-        return new cq(qq, Eq)
-      }
-    }
-    class uq {
-      static CreateQuadraticBezier(qq, Eq, gq, Yq) {
-        Yq = Yq > 2 ? Yq : 3;
-        const lq = [],
-          mq = (qq, Eq, gq, Yq) => (1 - qq) * (1 - qq) * Eq + 2 * qq * (1 - qq) * gq + qq * qq * Yq;
-        for (let xq = 0; xq <= Yq; xq++) lq.push(new Oq.q(mq(xq / Yq, qq.x, Eq.x, gq.x), mq(xq / Yq, qq.y, Eq.y, gq.y), mq(xq / Yq, qq.z, Eq.z, gq.z)));
-        return new uq(lq)
-      }
-      static CreateCubicBezier(qq, Eq, gq, Yq, lq) {
-        lq = lq > 3 ? lq : 4;
-        const mq = [],
-          xq = (qq, Eq, gq, Yq, lq) => (1 - qq) * (1 - qq) * (1 - qq) * Eq + 3 * qq * (1 - qq) * (1 - qq) * gq + 3 * qq * qq * (1 - qq) * Yq + qq * qq * qq * lq;
-        for (let Aq = 0; Aq <= lq; Aq++) mq.push(new Oq.q(xq(Aq / lq, qq.x, Eq.x, gq.x, Yq.x), xq(Aq / lq, qq.y, Eq.y, gq.y, Yq.y), xq(Aq / lq, qq.z, Eq.z, gq.z, Yq.z)));
-        return new uq(mq)
-      }
-      static CreateHermiteSpline(qq, Eq, gq, Yq, lq) {
-        const mq = [],
-          xq = 1 / lq;
-        for (let Aq = 0; Aq <= lq; Aq++) mq.push(Oq.q.Hermite(qq, Eq, gq, Yq, Aq * xq));
-        return new uq(mq)
-      }
-      static CreateCatmullRomSpline(qq, Eq, gq) {
-        const Yq = [],
-          lq = 1 / Eq;
-        let mq = 0;
-        if (gq) {
-          const gq = qq.length;
-          for (let xq = 0; xq < gq; xq++) {
-            mq = 0;
-            for (let Aq = 0; Aq < Eq; Aq++) Yq.push(Oq.q.CatmullRom(qq[xq % gq], qq[(xq + 1) % gq], qq[(xq + 2) % gq], qq[(xq + 3) % gq], mq)), mq += lq
-          }
-          Yq.push(Yq[0])
-        } else {
-          const gq = [];
-          gq.push(qq[0].clone()), gq.push(...qq), gq.push(qq[qq.length - 1].clone());
-          let xq = 0;
-          for (; xq < gq.length - 3; xq++) {
-            mq = 0;
-            for (let qq = 0; qq < Eq; qq++) Yq.push(Oq.q.CatmullRom(gq[xq], gq[xq + 1], gq[xq + 2], gq[xq + 3], mq)), mq += lq
-          }
-          xq--, Yq.push(Oq.q.CatmullRom(gq[xq], gq[xq + 1], gq[xq + 2], gq[xq + 3], mq))
-        }
-        return new uq(Yq)
-      }
-      static ArcThru3Points(qq, Eq, gq) {
-        let Yq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          lq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          mq = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const xq = [],
-          Aq = Eq.subtract(qq),
-          cq = gq.subtract(Eq),
-          Bq = qq.subtract(gq),
-          Wq = Oq.q.Cross(Aq, cq),
-          Nq = Wq.length();
-        if (Nq < Math.pow(10, -8)) return new uq(xq);
-        const aq = Aq.lengthSquared(),
-          Vq = cq.lengthSquared(),
-          dq = Bq.lengthSquared(),
-          jq = Wq.lengthSquared(),
-          Hq = .5 * Aq.length() * cq.length() * Bq.length() / Nq,
-          oq = -.5 * Vq * Oq.q.Dot(Aq, Bq) / jq,
-          Pq = -.5 * dq * Oq.q.Dot(Aq, cq) / jq,
-          Qq = -.5 * aq * Oq.q.Dot(cq, Bq) / jq,
-          yq = qq.scale(oq).add(Eq.scale(Pq)).add(gq.scale(Qq)),
-          tq = qq.subtract(yq).normalize(),
-          rq = Oq.q.Cross(Wq, tq).normalize();
-        if (mq) {
-          const Eq = 2 * Math.PI / Yq;
-          for (let qq = 0; qq <= 2 * Math.PI; qq += Eq) xq.push(yq.add(tq.scale(Hq * Math.cos(qq)).add(rq.scale(Hq * Math.sin(qq)))));
-          xq.push(qq)
-        } else {
-          const Eq = 1 / Yq;
-          let Oq, mq = 0;
-          do {
-            Oq = yq.add(tq.scale(Hq * Math.cos(mq)).add(rq.scale(Hq * Math.sin(mq)))), xq.push(Oq), mq += Eq
-          } while (!Oq.equalsWithEpsilon(gq, Hq * Eq * 1.1));
-          xq.push(gq), lq && xq.push(qq)
-        }
-        return new uq(xq)
-      }
-      constructor(qq) {
-        this._length = 0, this._points = qq, this._length = this._computeLength(qq)
-      }
-      getPoints() {
-        return this._points
-      }
-      length() {
-        return this._length
-      }
-      continue (qq) {
-        const Eq = this._points[this._points.length - 1],
-          gq = this._points.slice(),
-          Yq = qq.getPoints();
-        for (let lq = 1; lq < Yq.length; lq++) gq.push(Yq[lq].subtract(Yq[0]).add(Eq));
-        return new uq(gq)
-      }
-      _computeLength(qq) {
-        let Eq = 0;
-        for (let gq = 1; gq < qq.length; gq++) Eq += qq[gq].subtract(qq[gq - 1]).length();
-        return Eq
+      static IsPointInFrustum(CC, zC) {
+        for (let ZC = 0; ZC < 6; ZC++)
+          if (zC[ZC].dotCoordinate(CC) < 0) return !1;
+        return !0
       }
     }
   },
-  38649: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Oq
+  37596: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      d: () => wC
     });
-    var Yq = gq(38653);
-    const lq = (qq, Eq, gq) => qq ? qq.getClassName && "Mesh" === qq.getClassName() ? null : !qq.getClassName || "SubMesh" !== qq.getClassName() && "PhysicsBody" !== qq.getClassName() ? qq.clone ? qq.clone() : Array.isArray(qq) ? qq.slice() : gq && "object" === typeof qq ? {
-      ...qq
-    } : null : qq.clone(Eq) : null;
-    class Oq {
-      static DeepCopy(qq, Eq, gq, Oq) {
-        let mq = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const xq = function(qq) {
-          const Eq = [];
+    var QC = ZC(36963);
+    class wC {
+      constructor(CC, zC, ZC, wC) {
+        this.normal = new QC.r(CC, zC, ZC), this.d = wC
+      }
+      VZC() {
+        return [this.normal.x, this.normal.y, this.normal.z, this.d]
+      }
+      clone() {
+        return new wC(this.normal.x, this.normal.y, this.normal.z, this.d)
+      }
+      getClassName() {
+        return "Plane"
+      }
+      getHashCode() {
+        let CC = this.normal.getHashCode();
+        return CC = 397 * CC ^ this.d, CC
+      }
+      normalize() {
+        const CC = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let zC = 0;
+        return 0 !== CC && (zC = 1 / CC), this.normal.x *= zC, this.normal.y *= zC, this.normal.z *= zC, this.d *= zC, this
+      }
+      transform(CC) {
+        const zC = wC._TmpMatrix;
+        CC.invertToRef(zC);
+        const ZC = zC.m,
+          QC = this.normal.x,
+          bC = this.normal.y,
+          nC = this.normal.z,
+          fC = this.d,
+          oC = QC * ZC[0] + bC * ZC[1] + nC * ZC[2] + fC * ZC[3],
+          qC = QC * ZC[4] + bC * ZC[5] + nC * ZC[6] + fC * ZC[7],
+          FC = QC * ZC[8] + bC * ZC[9] + nC * ZC[10] + fC * ZC[11],
+          WC = QC * ZC[12] + bC * ZC[13] + nC * ZC[14] + fC * ZC[15];
+        return new wC(oC, qC, FC, WC)
+      }
+      dotCoordinate(CC) {
+        return this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z + this.d
+      }
+      copyFromPoints(CC, zC, ZC) {
+        const QC = zC.x - CC.x,
+          wC = zC.y - CC.y,
+          bC = zC.z - CC.z,
+          nC = ZC.x - CC.x,
+          fC = ZC.y - CC.y,
+          oC = ZC.z - CC.z,
+          qC = wC * oC - bC * fC,
+          FC = bC * nC - QC * oC,
+          WC = QC * fC - wC * nC,
+          NC = Math.sqrt(qC * qC + FC * FC + WC * WC);
+        let MC;
+        return MC = 0 !== NC ? 1 / NC : 0, this.normal.x = qC * MC, this.normal.y = FC * MC, this.normal.z = WC * MC, this.d = -(this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z), this
+      }
+      isFrontFacingTo(CC, zC) {
+        return QC.r.Dot(this.normal, CC) <= zC
+      }
+      signedDistanceTo(CC) {
+        return QC.r.Dot(CC, this.normal) + this.d
+      }
+      static FromArray(CC) {
+        return new wC(CC[0], CC[1], CC[2], CC[3])
+      }
+      static FromPoints(CC, zC, ZC) {
+        const QC = new wC(0, 0, 0, 0);
+        return QC.copyFromPoints(CC, zC, ZC), QC
+      }
+      static FromPositionAndNormal(CC, zC) {
+        const ZC = new wC(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(CC, zC, ZC)
+      }
+      static FromPositionAndNormalToRef(CC, zC, ZC) {
+        return ZC.normal.Av(zC), ZC.normal.normalize(), ZC.d = -CC.dot(ZC.normal), ZC
+      }
+      static SignedDistanceToPlaneFromPositionAndNormal(CC, zC, ZC) {
+        const wC = -(zC.x * CC.x + zC.y * CC.y + zC.z * CC.z);
+        return QC.r.Dot(ZC, zC) + wC
+      }
+    }
+    wC._TmpMatrix = QC.b.Identity()
+  },
+  38501: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => bC
+    });
+    var QC = ZC(38507);
+    const wC = (CC, zC, ZC) => CC ? CC.getClassName && "Mesh" === CC.getClassName() ? null : !CC.getClassName || "SubMesh" !== CC.getClassName() && "PhysicsBody" !== CC.getClassName() ? CC.clone ? CC.clone() : Array.isArray(CC) ? CC.slice() : ZC && "object" === typeof CC ? {
+      ...CC
+    } : null : CC.clone(zC) : null;
+    class bC {
+      static DeepCopy(CC, zC, ZC, bC) {
+        let nC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const fC = function(CC) {
+          const zC = [];
           do {
-            const gq = Object.getOwnPropertyNames(qq);
-            for (const qq of gq) - 1 === Eq.indexOf(qq) && Eq.push(qq)
-          } while (qq = Object.getPrototypeOf(qq));
-          return Eq
-        }(qq);
-        for (const cq of xq) {
-          if ("_" === cq[0] && (!Oq || -1 === Oq.indexOf(cq))) continue;
-          if (cq.endsWith("Observable")) continue;
-          if (gq && -1 !== gq.indexOf(cq)) continue;
-          const xq = qq[cq],
-            uq = typeof xq;
-          if ("function" !== uq) try {
-            if ("object" === uq)
-              if (xq instanceof Uint8Array) Eq[cq] = Uint8Array.from(xq);
-              else if (xq instanceof Array) {
-              if (Eq[cq] = [], xq.length > 0)
-                if ("object" == typeof xq[0])
-                  for (let qq = 0; qq < xq.length; qq++) {
-                    const gq = lq(xq[qq], Eq, mq); - 1 === Eq[cq].indexOf(gq) && Eq[cq].push(gq)
-                  } else Eq[cq] = xq.slice(0)
-            } else Eq[cq] = lq(xq, Eq, mq);
-            else Eq[cq] = xq
-          } catch (Aq) {
-            Yq.b.Warn(Aq.message)
+            const ZC = Object.getOwnPropertyNames(CC);
+            for (const CC of ZC) - 1 === zC.indexOf(CC) && zC.push(CC)
+          } while (CC = Object.getPrototypeOf(CC));
+          return zC
+        }(CC);
+        for (const qC of fC) {
+          if ("_" === qC[0] && (!bC || -1 === bC.indexOf(qC))) continue;
+          if (qC.endsWith("Observable")) continue;
+          if (ZC && -1 !== ZC.indexOf(qC)) continue;
+          const fC = CC[qC],
+            FC = typeof fC;
+          if ("function" !== FC) try {
+            if ("object" === FC)
+              if (fC instanceof Uint8Array) zC[qC] = Uint8Array.from(fC);
+              else if (fC instanceof Array) {
+              if (zC[qC] = [], fC.length > 0)
+                if ("object" == typeof fC[0])
+                  for (let CC = 0; CC < fC.length; CC++) {
+                    const ZC = wC(fC[CC], zC, nC); - 1 === zC[qC].indexOf(ZC) && zC[qC].push(ZC)
+                  } else zC[qC] = fC.slice(0)
+            } else zC[qC] = wC(fC, zC, nC);
+            else zC[qC] = fC
+          } catch (oC) {
+            QC.c.Warn(oC.message)
           }
         }
       }
     }
   },
-  38653: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Yq
+  37731: (CC, zC, ZC) => {
+    function QC() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (CC => {
+        const zC = 16 * Math.random() | 0;
+        return ("x" === CC ? zC : 3 & zC | 8).toString(16)
+      }))
+    }
+    ZC.d(zC, {
+      b: () => QC
+    })
+  },
+  38507: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => QC
     });
-    class Yq {
-      static _CheckLimit(qq, Eq) {
-        let gq = Yq._LogLimitOutputs[qq];
-        return gq ? gq.current++ : (gq = {
-          limit: Eq,
+    class QC {
+      static _CheckLimit(CC, zC) {
+        let ZC = QC._LogLimitOutputs[CC];
+        return ZC ? ZC.current++ : (ZC = {
+          limit: zC,
           current: 1
-        }, Yq._LogLimitOutputs[qq] = gq), gq.current <= gq.limit
+        }, QC._LogLimitOutputs[CC] = ZC), ZC.current <= ZC.limit
       }
-      static _GenerateLimitMessage(qq) {
-        let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const gq = Yq._LogLimitOutputs[qq];
-        if (!gq || !Yq.MessageLimitReached) return;
-        const lq = this._Levels[Eq];
-        gq.current === gq.limit && Yq[lq.name](Yq.MessageLimitReached.replace(/%LIMIT%/g, "" + gq.limit).replace(/%TYPE%/g, lq.name ?? ""))
+      static _GenerateLimitMessage(CC) {
+        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ZC = QC._LogLimitOutputs[CC];
+        if (!ZC || !QC.MessageLimitReached) return;
+        const wC = this._Levels[zC];
+        ZC.current === ZC.limit && QC[wC.name](QC.MessageLimitReached.replace(/%LIMIT%/g, "" + ZC.limit).replace(/%TYPE%/g, wC.name ?? ""))
       }
-      static _AddLogEntry(qq) {
-        Yq._LogCache = qq + Yq._LogCache, Yq.OnNewCacheEntry && Yq.OnNewCacheEntry(qq)
+      static _AddLogEntry(CC) {
+        QC._LogCache = CC + QC._LogCache, QC.OnNewCacheEntry && QC.OnNewCacheEntry(CC)
       }
-      static _FormatMessage(qq) {
-        const Eq = qq => qq < 10 ? "0" + qq : "" + qq,
-          gq = new Date;
-        return "[" + Eq(gq.getHours()) + ":" + Eq(gq.getMinutes()) + ":" + Eq(gq.getSeconds()) + "]: " + qq
+      static _FormatMessage(CC) {
+        const zC = CC => CC < 10 ? "0" + CC : "" + CC,
+          ZC = new Date;
+        return "[" + zC(ZC.getHours()) + ":" + zC(ZC.getMinutes()) + ":" + zC(ZC.getSeconds()) + "]: " + CC
       }
-      static _LogDisabled(qq, Eq) {}
+      static _LogDisabled(CC, zC) {}
       static _LogEnabled() {
-        let qq = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Eq = arguments.length > 1 ? arguments[1] : void 0,
-          gq = arguments.length > 2 ? arguments[2] : void 0;
-        const lq = Array.isArray(Eq) ? Eq[0] : Eq;
-        if (void 0 !== gq && !Yq._CheckLimit(lq, gq)) return;
-        const Oq = Yq._FormatMessage(lq),
-          mq = this._Levels[qq],
-          xq = Array.isArray(Eq) ? Eq.slice(1) : [];
-        mq.logFunc && mq.logFunc("BJS - " + Oq, ...xq);
-        const Aq = `<div style='color:${mq.color}'>${Oq}</div><br>`;
-        Yq._AddLogEntry(Aq), Yq._GenerateLimitMessage(lq, qq)
+        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zC = arguments.length > 1 ? arguments[1] : void 0,
+          ZC = arguments.length > 2 ? arguments[2] : void 0;
+        const wC = Array.isArray(zC) ? zC[0] : zC;
+        if (void 0 !== ZC && !QC._CheckLimit(wC, ZC)) return;
+        const bC = QC._FormatMessage(wC),
+          nC = this._Levels[CC],
+          fC = Array.isArray(zC) ? zC.slice(1) : [];
+        nC.logFunc && nC.logFunc("BJS - " + bC, ...fC);
+        const oC = `<div style='color:${nC.color}'>${bC}</div><br>`;
+        QC._AddLogEntry(oC), QC._GenerateLimitMessage(wC, CC)
       }
       static get LogCache() {
-        return Yq._LogCache
+        return QC._LogCache
       }
       static ClearLogCache() {
-        Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq.errorsCount = 0
+        QC._LogCache = "", QC._LogLimitOutputs = {}, QC.errorsCount = 0
       }
-      static set LogLevels(qq) {
-        Yq.Log = Yq._LogDisabled, Yq.Warn = Yq._LogDisabled, Yq.Error = Yq._LogDisabled;
-        const Eq = [Yq.MessageLogLevel, Yq.WarningLogLevel, Yq.ErrorLogLevel];
-        for (const gq of Eq)
-          if ((qq & gq) === gq) {
-            const qq = this._Levels[gq];
-            Yq[qq.name] = Yq._LogEnabled.bind(Yq, gq)
+      static set LogLevels(CC) {
+        QC.Log = QC._LogDisabled, QC.Warn = QC._LogDisabled, QC.Error = QC._LogDisabled;
+        const zC = [QC.MessageLogLevel, QC.WarningLogLevel, QC.ErrorLogLevel];
+        for (const ZC of zC)
+          if ((CC & ZC) === ZC) {
+            const CC = this._Levels[ZC];
+            QC[CC.name] = QC._LogEnabled.bind(QC, ZC)
           }
       }
     }
-    Yq.NoneLogLevel = 0, Yq.MessageLogLevel = 1, Yq.WarningLogLevel = 2, Yq.ErrorLogLevel = 4, Yq.AllLogLevel = 7, Yq.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Yq._LogCache = "", Yq._LogLimitOutputs = {}, Yq._Levels = [{}, {
+    QC.NoneLogLevel = 0, QC.MessageLogLevel = 1, QC.WarningLogLevel = 2, QC.ErrorLogLevel = 4, QC.AllLogLevel = 7, QC.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QC._LogCache = "", QC._LogLimitOutputs = {}, QC._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Yq.errorsCount = 0, Yq.Log = Yq._LogEnabled.bind(Yq, Yq.MessageLogLevel), Yq.Warn = Yq._LogEnabled.bind(Yq, Yq.WarningLogLevel), Yq.Error = Yq._LogEnabled.bind(Yq, Yq.ErrorLogLevel)
+    }], QC.errorsCount = 0, QC.Log = QC._LogEnabled.bind(QC, QC.MessageLogLevel), QC.Warn = QC._LogEnabled.bind(QC, QC.WarningLogLevel), QC.Error = QC._LogEnabled.bind(QC, QC.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

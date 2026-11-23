@@ -1,637 +1,757 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  36356: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => xq,
-      e: () => cq,
-      i: () => mq,
-      j: () => Bq
+  6609: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      loadPageShaderPackCompiler: () => Nz
     });
-    var Yq = gq(36345),
-      lq = gq(15);
-    const Oq = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
-
-    function mq(qq) {
-      if (qq instanceof WebAssembly.RuntimeError) return !0;
-      const Eq = qq instanceof Error ? qq.stack : void 0;
-      return "string" === typeof Eq && Oq.test(Eq)
-    }
-
-    function xq(qq, Eq, gq) {
-      var lq;
-      const mq = qq instanceof Error ? qq.name : "thrown",
-        xq = (qq instanceof Error && null !== (lq = qq.stack) && void 0 !== lq ? lq : "").split("\n").filter((qq => Oq.test(qq))).slice(0, 8).map((qq => qq.trim())),
-        Aq = null === Eq ? "wasm memory unknown" : `wasm memory ${Math.round(Eq/2**20)} MB`,
-        cq = null === gq.panic ? "" : `, panic: ${(0,Yq.j)(gq.panic)}`,
-        uq = `${mq}: ${qq instanceof Error?qq.message:String(qq)}`;
-      return `${(0,Yq.l)(gq.kind,gq.refusedBytes)} ${uq} (${Aq})${cq}${xq.length>0?` | ${xq.join(" < ")}`:""}`
-    }
-    const Aq = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
-
-    function cq(qq) {
-      var Eq;
-      let gq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(qq instanceof Error) || !Aq.test(qq.message)) return {};
-      if (!("detached" in gq)) return {
-        arrayBufferDetached: "absent"
-      };
-      return {
-        arrayBufferDetached: (0, lq.V)(null === (Eq = (0, lq.P)(gq, "detached")) || void 0 === Eq ? void 0 : Eq.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
-      }
-    }
-    const uq = 500;
-
-    function Bq(qq) {
-      let Eq = "[object Object]";
-      try {
-        Eq = String(qq)
-      } catch {}
-      if ("[object Object]" !== Eq) return Eq;
-      try {
-        var gq, Yq;
-        return null !== (gq = null === (Yq = JSON.stringify(qq)) || void 0 === Yq ? void 0 : Yq.slice(0, uq)) && void 0 !== gq ? gq : Eq
-      } catch {
-        return Eq
-      }
-    }
-  },
-  36380: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Kq,
-      f: () => Dq,
-      j: () => Iq,
-      n: () => wq
+    var QC = {};
+    ZC.r(QC), ZC.d(QC, {
+      zwC: () => wC,
+      K3: () => bC,
+      default: () => DC,
+      ZwC: () => nC,
+      QwC: () => fC,
+      initSync: () => tC,
+      pW: () => oC,
+      rZC: () => qC,
+      wwC: () => FC,
+      bwC: () => WC,
+      Am: () => NC,
+      nwC: () => MC,
+      Rm: () => gC,
+      fwC: () => SC
     });
-    var Yq = gq(2797),
-      lq = gq(2815),
-      Oq = gq(6500),
-      mq = gq(4524),
-      xq = gq(2812),
-      Aq = gq(2805);
-    const cq = "bloxd-wasmDownloaded",
-      uq = 12;
-
-    function Bq(qq) {
-      return qq.pathname.slice(qq.pathname.lastIndexOf("/") + 1)
-    }
-
-    function Wq() {
-      try {
-        if ("undefined" === typeof localStorage) return null;
-        const qq = JSON.parse(localStorage.getItem(cq) ?? "[]");
-        return Array.isArray(qq) ? qq.filter((qq => "string" === typeof qq)) : []
-      } catch (qq) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", qq), null
+    class wC {
+      static __wrap(CC) {
+        const zC = Object.create(wC.prototype);
+        return zC.__wbg_ptr = CC, PC.register(zC, zC.__wbg_ptr, zC), zC
       }
-    }
-    const Nq = Reflect.apply,
-      aq = "undefined" === typeof Worker ? void 0 : Worker,
-      Vq = aq?.prototype.postMessage,
-      dq = aq?.prototype.terminate,
-      jq = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      Hq = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      oq = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      Pq = function() {
+      __destroy_into_raw() {
+        const CC = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, PC.unregister(this), CC
+      }
+      free() {
+        const CC = this.__destroy_into_raw();
+        sC.IZbw(CC, 0)
+      }
+      get owC() {
+        let CC, zC;
         try {
-          return (0, mq.n)(aq, "Worker", !0) && (0, mq.n)(Vq, "postMessage") && (0, mq.n)(dq, "terminate") && (0, mq.n)(oq, "buffer") && void 0 !== jq && void 0 !== Hq
-        } catch {
-          return !1
-        }
-      }();
-    let Qq = !1;
-
-    function yq() {
-      return Pq && !Qq
-    }
-    class tq {
-      worker = null;
-      failed = !1;
-      constructor() {
-        if (yq()) try {
-          this.worker = vq(), Nq(jq, this.worker, ["error", () => {
-            this.failed = !0
-          }])
-        } catch {
-          this.stop()
+          const ZC = sC.s1XG(this.__wbg_ptr);
+          return CC = ZC[0], zC = ZC[1], IC(ZC[0], ZC[1])
+        } finally {
+          sC.Ct4l(CC, zC, 1)
         }
       }
-      take() {
-        const qq = this.worker;
-        if (this.worker = null, null !== qq && this.failed) throw Nq(dq, qq, []), new Error("it did not run");
-        return qq
+      get features() {
+        const CC = sC.OI1q(this.__wbg_ptr);
+        var zC = RC(CC[0], CC[1]);
+        return sC.Ct4l(CC[0], 4 * CC[1], 4), zC
       }
-      stop() {
-        const qq = this.worker;
-        this.worker = null, null !== qq && Nq(dq, qq, [])
+      get hooks() {
+        const CC = sC.OtRn(this.__wbg_ptr);
+        var zC = AC(CC[0], CC[1]).slice();
+        return sC.Ct4l(CC[0], 1 * CC[1], 1), zC
       }
-    }
-    class rq {
-      decoded;
-      worker;
-      reject;
-      constructor(qq, Eq, gq, Yq, Oq) {
+      mapValidationMessage(CC, zC, ZC, QC, wC) {
+        let bC, nC;
         try {
-          this.worker = Oq?.take() ?? vq()
-        } catch (cq) {
-          throw Qq = !0, new Error(`The zstd decoder's worker did not start: ${(0,xq.i)(cq)}`)
+          const qC = sC.Lj6h(this.__wbg_ptr, CC, zC, ZC, GC(QC), GC(wC));
+          var fC = qC[0],
+            oC = qC[1];
+          if (qC[3]) throw fC = 0, oC = 0, HC(qC[2]);
+          return bC = fC, nC = oC, IC(fC, oC)
+        } finally {
+          sC.Ct4l(bC, nC, 1)
         }
-        const mq = this.worker;
-        this.decoded = (0, lq.f)(((Eq, lq) => {
-          this.reject = lq;
-          const Oq = (qq, Eq) => {
-            Nq(jq, mq, [qq, Eq])
-          };
-          Oq("message", (qq => {
-            Yq();
-            try {
-              const Yq = Nq(Hq, qq, []);
-              if (!0 === Yq) Eq();
-              else {
-                if ("string" === typeof Yq) throw Yq.startsWith(xq.e) && (Qq = !0), new Error(Yq);
-                gq(Yq, Nq(Aq.G, Yq, []))
-              }
-            } catch (cq) {
-              lq(cq)
-            }
-          })), Oq("error", (() => {
-            Qq = !0, lq(new Error("The zstd decoder's worker did not run"))
-          })), Oq("messageerror", (() => {
-            lq(new Error(`${qq}'s decoder sent a piece that could not be read`))
-          }))
-        })), (0, Aq._)(this.decoded), Nq(Vq, mq, [
-          [qq, Eq]
-        ])
       }
-      push(qq) {
-        Nq(Vq, this.worker, [qq, [Nq(oq, qq, [])]])
+      get moduleCodes() {
+        const CC = sC.g59L(this.__wbg_ptr);
+        var zC = RC(CC[0], CC[1]);
+        return sC.Ct4l(CC[0], 4 * CC[1], 4), zC
       }
-      end() {
-        Nq(Vq, this.worker, [null])
+      get qwC() {
+        let CC, zC;
+        try {
+          const ZC = sC.tzlZ(this.__wbg_ptr);
+          return CC = ZC[0], zC = ZC[1], IC(ZC[0], ZC[1])
+        } finally {
+          sC.Ct4l(CC, zC, 1)
+        }
       }
-      markWorkerFailed() {
-        Qq = !0
+      get reads() {
+        const CC = sC.aWuX(this.__wbg_ptr);
+        var zC = RC(CC[0], CC[1]);
+        return sC.Ct4l(CC[0], 4 * CC[1], 4), zC
       }
-      fail(qq) {
-        this.reject(qq), this.terminate()
+      get validationModuleCodes() {
+        const CC = sC.Hf8g(this.__wbg_ptr);
+        var zC = RC(CC[0], CC[1]);
+        return sC.Ct4l(CC[0], 4 * CC[1], 4), zC
       }
-      terminate() {
-        Nq(dq, this.worker, [])
+      get validationModuleKeys() {
+        const CC = sC.F8M3(this.__wbg_ptr);
+        var zC = AC(CC[0], CC[1]).slice();
+        return sC.Ct4l(CC[0], 1 * CC[1], 1), zC
+      }
+      get variantFlags() {
+        const CC = sC.Tijv(this.__wbg_ptr);
+        var zC = AC(CC[0], CC[1]).slice();
+        return sC.Ct4l(CC[0], 1 * CC[1], 1), zC
       }
     }
 
-    function vq() {
-      if (globalThis.Worker !== aq) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(gq.p + gq.u(65), gq.b), {
-        name: "wasmZstdDecoder",
-        type: "module"
-      })
-    }
-    const hq = Reflect.apply,
-      nq = ArrayBuffer,
-      bq = "undefined" === typeof Response ? void 0 : Response,
-      iq = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      Zq = function() {
-        let qq;
-        void 0 !== iq && new iq({
-          __proto__: null,
-          start(Eq) {
-            const {
-              enqueue: gq,
-              close: Yq,
-              error: lq
-            } = Object.getPrototypeOf(Eq);
-            qq = {
-              enqueue: gq,
-              close: Yq,
-              error: lq
-            }
-          }
-        }, {
-          __proto__: null
-        });
-        return qq
-      }(),
-      fq = function() {
-        try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Zq && (0, mq.n)(bq, "Response", !0) && (0, mq.n)(iq, "ReadableStream", !0) && (0, mq.n)(Zq.enqueue, "enqueue") && (0, mq.n)(Zq.close, "close") && (0, mq.n)(Zq.error, "error") && (0, mq.n)(Aq.eb, "body") && (0, mq.n)(Aq.U, "getReader") && (0, mq.n)(Aq.ab, "read")
-        } catch {
-          return !1
-        }
-      }();
-    async function Mq(qq, Eq, gq, Yq, Oq, mq, cq) {
-      const uq = new nq(Eq),
-        {
-          controller: Bq,
-          compiled: Wq
-        } = function(qq) {
-          try {
-            let qq;
-            const Eq = new iq({
-                __proto__: null,
-                start(Eq) {
-                  qq = Eq
-                }
-              }, {
-                __proto__: null
-              }),
-              gq = new bq(Eq, {
-                __proto__: null,
-                headers: {
-                  __proto__: null,
-                  "Content-Type": "application/wasm"
-                }
-              });
-            return {
-              controller: qq,
-              compiled: (0, Aq._)((0, Aq.I)((0, Aq.jb)(gq)))
-            }
-          } catch (Eq) {
-            throw new Error(`${qq} could not be streamed into a compile: ${(0,xq.i)(Eq)}`)
-          }
-        }(qq),
-        {
-          enqueue: Nq,
-          close: aq,
-          error: Vq
-        } = Zq,
-        dq = qq => {
-          try {
-            hq(Vq, Bq, [qq])
-          } catch {}
-        };
-      let jq = 0;
-      const Hq = (gq, Yq) => {
-        if (jq + Yq > Eq) throw new Error(`${qq} decoded past its module's ${Eq} bytes`);
-        hq(Aq.fb, new Aq.r(uq), [new Aq.r(gq), jq]);
-        try {
-          hq(Nq, Bq, [new Aq.r(uq, jq, Yq)])
-        } catch {}
-        jq += Yq
-      };
-      let oq, Pq;
-      try {
-        oq = new rq(qq, Eq, Hq, Yq, cq)
-      } catch (vq) {
-        throw dq(vq), vq
-      }
-      const Qq = qq => {
-        oq.fail(qq), void 0 !== Pq && Tq(Pq)
-      };
-      let yq = !1;
-      gq.addEventListener("abort", (() => {
-        yq && oq.markWorkerFailed(), Qq(new Error(`${qq} stalled`))
-      }), {
-        once: !0
-      }), (0, lq.u)(Wq, (() => {}), Qq);
-      try {
-        let mq;
-        try {
-          mq = await fetch(qq, {
-            signal: gq
-          })
-        } catch (vq) {
-          throw new Error(`Fetching ${qq} failed: ${(0,xq.i)(vq)}`)
-        }
-        const {
-          ok: cq,
-          status: uq,
-          body: Bq
-        } = function(qq, Eq) {
-          try {
-            const {
-              ok: qq,
-              status: gq
-            } = Eq;
-            return {
-              ok: qq,
-              status: gq,
-              body: hq(Aq.eb, Eq, [])
-            }
-          } catch {
-            throw new Error(`${qq} came in a response a page script made`)
-          }
-        }(qq, mq);
-        if (!cq) throw new Error(`Fetching ${qq} failed: HTTP ${uq}`);
-        Yq();
-        const Wq = hq(Aq.U, Bq, []);
-        Pq = Wq;
-        const Nq = () => {
-          Tq(Wq)
-        };
-        for ((0, lq.u)(oq.decoded, Nq, Nq);;) {
-          let Eq;
-          try {
-            Eq = await hq(Aq.ab, Wq, [])
-          } catch (vq) {
-            throw new Error(`Downloading ${qq} failed: ${(0,xq.i)(vq)}`)
-          }
-          if (Eq.done) break;
-          Yq(), oq.push(Eq.value)
-        }
-        if (yq = !0, oq.end(), await oq.decoded, Oq(), jq !== Eq) throw new Error(`${qq} ended before its module did`)
-      } catch (vq) {
-        throw dq(vq), Qq(vq), vq
-      }
-      oq.terminate();
-      try {
-        hq(aq, Bq, [])
-      } catch {}
-      const tq = await Wq;
-      return void 0 !== mq && await (0, Aq.H)(qq, new Aq.r(uq), {
-        sha256: mq.sha256,
-        onMismatch: () => {}
-      }), tq
+    function bC(CC, zC, ZC, QC, bC, nC, fC) {
+      const oC = mC(CC, sC.uiUI),
+        qC = TC,
+        FC = mC(zC, sC.uiUI),
+        WC = TC,
+        NC = mC(ZC, sC.uiUI),
+        MC = TC,
+        gC = dC(QC, sC.uiUI),
+        SC = TC,
+        pC = mC(bC, sC.uiUI),
+        PC = TC,
+        GC = mC(nC, sC.uiUI),
+        RC = TC,
+        AC = mC(fC, sC.uiUI),
+        xC = TC,
+        JC = sC.aozm(oC, qC, FC, WC, NC, MC, gC, SC, pC, PC, GC, RC, AC, xC);
+      if (JC[2]) throw HC(JC[1]);
+      return wC.__wrap(JC[0])
     }
 
-    function Tq(qq) {
-      try {
-        (0, Aq._)(qq.cancel())
-      } catch {}
+    function nC() {
+      const CC = sC.RxYz();
+      var zC = RC(CC[0], CC[1]);
+      return sC.Ct4l(CC[0], 4 * CC[1], 4), zC
     }
-    const zq = ".zst.bin",
-      Sq = 1e3;
-    let pq = null;
 
-    function Gq(qq) {
-      return pq ??= function() {
-        const qq = new Map,
-          Eq = "bloxd_wasm_webgpu:5005524,bloxd_wasm_webgl:5368803,bloxd_wasm_webgl1:4769492,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3671383";
-        for (const gq of Eq?.split(",") ?? []) {
-          const [Eq = "", Yq] = gq.split(":"), lq = Number(Yq);
-          Number.isInteger(lq) && lq > 0 && qq.set(Eq, lq)
-        }
-        return qq
-      }(), pq.get(qq)
+    function fC() {
+      const CC = sC.sKJ2();
+      var zC = RC(CC[0], CC[1]);
+      return sC.Ct4l(CC[0], 4 * CC[1], 4), zC
     }
-    async function Lq(qq, Eq) {
-      let gq = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Yq = Gq(qq.name);
-      if (void 0 === Yq) return Jq(await kq(qq, Eq, gq), "cold-wasm");
-      const Oq = fq ? new tq : null;
-      let mq;
+
+    function oC() {
+      sC.IQDe()
+    }
+
+    function qC(CC, zC, ZC, QC, wC) {
+      let bC, nC;
       try {
-        if (cq = qq.url(), Wq()?.includes(Bq(cq)) && await async function(qq) {
-            const Eq = new AbortController;
-            let gq;
-            const Yq = (0, lq.f)((qq => {
-              gq = setTimeout((() => {
-                Eq.abort(), qq(null)
-              }), Sq)
-            }));
-            try {
-              const gq = fetch(qq.href, {
-                  cache: "only-if-cached",
-                  mode: "same-origin",
-                  signal: Eq.signal
-                }),
-                Oq = await (0, lq.q)([gq, Yq]);
-              return !!Oq?.ok && ((0, Aq._)(Oq.body.cancel()), !0)
-            } catch {
-              return !1
-            } finally {
-              clearTimeout(gq)
-            }
-          }(qq.url())) return Oq?.stop(), await async function(qq, Eq, gq, Yq) {
-          let lq = !1;
-          const Oq = gq && {
-            sha256: gq.sha256,
-            onMismatch: () => {
-              lq = !0
-            }
-          };
-          try {
-            return Jq(await kq(qq, Oq, Yq), "warm")
-          } catch (mq) {
-            const Yq = await Rq(qq, Eq, gq, null);
-            if (null === Yq) throw lq && gq.onMismatch(), mq;
-            return console.warn(`${qq.url().href} from the HTTP cache failed: ${(0,xq.i)(mq)}: loaded its copy instead`), Jq(Yq, lq ? "warm-refused" : "warm-broken")
-          }
-        }(qq, Yq, Eq, gq);
-        mq = await Rq(qq, Yq, Eq, Oq)
+        const qC = mC(CC, sC.uiUI),
+          FC = TC,
+          WC = dC(zC, sC.uiUI),
+          NC = TC,
+          MC = mC(ZC, sC.uiUI),
+          gC = TC,
+          SC = dC(QC, sC.uiUI),
+          pC = TC,
+          PC = function(CC, zC) {
+            const ZC = zC(1 * CC.length, 1) >>> 0;
+            return eC().set(CC, ZC / 1), TC = CC.length, ZC
+          }(wC, sC.uiUI),
+          GC = TC,
+          RC = sC.ghdI(qC, FC, WC, NC, MC, gC, SC, pC, PC, GC);
+        var fC = RC[0],
+          oC = RC[1];
+        if (RC[3]) throw fC = 0, oC = 0, HC(RC[2]);
+        return bC = fC, nC = oC, IC(fC, oC)
       } finally {
-        Oq?.stop()
+        sC.Ct4l(bC, nC, 1)
       }
-      var cq;
-      return null !== mq ? Jq(mq, "cold-worker") : Jq(await kq(qq, Eq, gq), "cold-wasm")
     }
 
-    function Jq(qq, Eq) {
+    function FC() {
+      let CC, zC;
+      try {
+        const ZC = sC.On8j();
+        return CC = ZC[0], zC = ZC[1], IC(ZC[0], ZC[1])
+      } finally {
+        sC.Ct4l(CC, zC, 1)
+      }
+    }
+
+    function WC(CC) {
+      let zC, ZC;
+      try {
+        const bC = sC.pWnx(CC);
+        var QC = bC[0],
+          wC = bC[1];
+        if (bC[3]) throw QC = 0, wC = 0, HC(bC[2]);
+        return zC = QC, ZC = wC, IC(QC, wC)
+      } finally {
+        sC.Ct4l(zC, ZC, 1)
+      }
+    }
+
+    function NC() {
+      return sC.cx7F() >>> 0
+    }
+
+    function MC() {
+      let CC, zC;
+      try {
+        const ZC = sC.tQJ3();
+        return CC = ZC[0], zC = ZC[1], IC(ZC[0], ZC[1])
+      } finally {
+        sC.Ct4l(CC, zC, 1)
+      }
+    }
+
+    function gC(CC, zC) {
+      let ZC, QC;
+      try {
+        const nC = mC(CC, sC.uiUI),
+          fC = TC,
+          oC = dC(zC, sC.uiUI),
+          qC = TC,
+          FC = sC.ZoZD(nC, fC, oC, qC);
+        var wC = FC[0],
+          bC = FC[1];
+        if (FC[3]) throw wC = 0, bC = 0, HC(FC[2]);
+        return ZC = wC, QC = bC, IC(wC, bC)
+      } finally {
+        sC.Ct4l(ZC, QC, 1)
+      }
+    }
+
+    function SC(CC) {
+      let zC, ZC;
+      try {
+        const bC = sC.afbp(GC(CC));
+        var QC = bC[0],
+          wC = bC[1];
+        if (bC[3]) throw QC = 0, wC = 0, HC(bC[2]);
+        return zC = QC, ZC = wC, IC(QC, wC)
+      } finally {
+        sC.Ct4l(zC, ZC, 1)
+      }
+    }
+
+    function pC() {
       return {
         __proto__: null,
-        module: qq,
-        path: Eq
-      }
-    }
-
-    function kq(qq, Eq, gq) {
-      return void 0 === Gq(qq.name) ? (0, Aq.N)(qq.url(), Eq, gq) : (0, Aq.N)(qq.url(), Eq, {
-        ...gq,
-        hideThen: !0,
-        onDownloaded: () => {
-          ! function(qq) {
-            const Eq = Wq();
-            if (null === Eq) return;
-            const gq = Bq(qq),
-              Yq = Eq.filter((qq => qq !== gq));
-            Yq.push(gq);
-            try {
-              localStorage.setItem(cq, JSON.stringify(Yq.slice(-uq)))
-            } catch (lq) {
-              console.warn(`Bloxd wasm: ${gq} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, lq)
-            }
-          }(qq.url()), gq.onDownloaded?.()
-        }
-      })
-    }
-    async function Rq(qq, Eq, gq, Yq) {
-      if (!fq || !yq()) return null;
-      const lq = qq.url(),
-        Oq = `${lq.href}${zq}`;
-      try {
-        return await (0, Aq.gb)(Oq, ((qq, lq, mq) => Mq(Oq, Eq, qq, lq, mq, gq, Yq)))
-      } catch (mq) {
-        return console.warn(`${(0,xq.i)(mq)}: loading ${lq.href} instead`), null
-      }
-    }
-    let Uq = null,
-      Fq = !1;
-    const sq = new Map,
-      Xq = new Map;
-
-    function wq(qq, Eq, gq) {
-      return null === Uq ? Uq = Cq(qq, Eq) : qq !== Uq.build ? console.warn(`Bloxd wasm: ${qq.name} was asked for after ${Uq.build.name} started loading, which this thread keeps`) : Eq.name !== Uq.workers.name && console.warn(`Bloxd wasm: ${Eq.name} was asked for workers after ${Uq.workers.name}, which this thread keeps`), gq?.reloadFailedDownload && !Fq && (0, Yq.W)() && (Fq = !0, Uq = Cq(Uq.build, Uq.workers)), Uq.loaded
-    }
-
-    function Kq(qq, Eq) {
-      if (null !== Uq) return (0, lq.e)([]);
-      const gq = qq.filter((qq => !sq.has(qq.name))).map((qq => {
-        const gq = new AbortController,
-          Yq = {
-            compiled: kq(qq, (0, Oq.d)(qq.name), {
-              priority: Eq,
-              lE: gq.signal,
-              onDownloaded: () => {
-                Yq.downloaded = !0
-              },
-              retries: {
-                onRetry: () => {
-                  Yq.downloaded = !1, null !== Uq && gq.abort()
-                }
-              }
-            }),
-            cancel: gq,
-            downloaded: !1
-          };
-        return sq.set(qq.name, Yq), (0, lq.f)((Eq => {
-          (0, lq.u)(Yq.compiled, (() => {
-            Yq.downloaded = !0, Eq()
-          }), (Yq => {
-            gq.signal.aborted || console.warn(`Bloxd wasm: ${qq.name}'s compile ahead of the load failed: the load compiles it afresh`, Yq), Eq()
-          }))
-        }))
-      }));
-      return (0, lq.e)(gq)
-    }
-
-    function Cq(qq, Eq) {
-      const gq = (0, Yq.H)((async () => {
-        (0, mq.E)(), Xq.clear();
-        const gq = eq(qq),
-          Yq = Eq.name === qq.name ? gq : eq(Eq);
-        for (const {
-            cancel: qq
-          }
-          of sq.values()) qq.abort();
-        sq.clear(), await (0, lq.e)([gq, Yq]);
-        const Oq = await gq,
-          xq = await Yq;
-        return (0, mq.E)(), {
-          module: Oq,
-          workerModule: xq
-        }
-      }), qq);
-      return {
-        build: qq,
-        workers: Eq,
-        loaded: gq
-      }
-    }
-
-    function Iq(qq) {
-      return Xq.get(qq)
-    }
-
-    function eq(qq) {
-      const Eq = performance.now(),
-        gq = sq.get(qq.name);
-      sq.delete(qq.name);
-      const Yq = !0 === gq?.downloaded ? gq : void 0;
-      return void 0 !== gq && void 0 === Yq && gq.cancel.abort(), (0, lq.f)(((gq, Oq) => {
-        const mq = (Yq, lq) => {
-            Xq.set(qq.name, {
-              path: lq,
-              ms: performance.now() - Eq
-            }), gq(Yq)
+        Oz5A: {
+          __proto__: null,
+          yG9O: function(CC, zC) {
+            return GC(Error(IC(CC, zC)))
           },
-          xq = () => {
-            (0, lq.u)(qE(qq), (qq => {
-              let {
-                module: Eq,
-                path: gq
-              } = qq;
-              mq(Eq, gq)
-            }), Oq)
-          };
-        void 0 === Yq ? xq() : (0, lq.u)(Yq.compiled, (qq => {
-          mq(qq, "ahead")
-        }), xq)
+          RURy: function(CC) {
+            return null === hC(CC)
+          },
+          FK4D: function(CC) {
+            return "string" === typeof hC(CC)
+          },
+          QR66: function(CC, zC) {
+            const ZC = hC(zC),
+              QC = "string" === typeof ZC ? ZC : void 0;
+            var wC, bC = void 0 === (wC = QC) || null === wC ? 0 : function(CC, zC, ZC) {
+                if (void 0 === ZC) {
+                  const ZC = cC.encode(CC),
+                    QC = zC(ZC.length, 1) >>> 0;
+                  return eC().subarray(QC, QC + ZC.length).set(ZC), TC = ZC.length, QC
+                }
+                let QC = CC.length,
+                  wC = zC(QC, 1) >>> 0;
+                const bC = eC();
+                let nC = 0;
+                for (; nC < QC; nC++) {
+                  const zC = CC.charCodeAt(nC);
+                  if (zC > 127) break;
+                  bC[wC + nC] = zC
+                }
+                if (nC !== QC) {
+                  0 !== nC && (CC = CC.slice(nC)), wC = ZC(wC, QC, QC = nC + 3 * CC.length, 1) >>> 0;
+                  const zC = eC().subarray(wC + nC, wC + QC);
+                  nC += cC.encodeInto(CC, zC).written, wC = ZC(wC, QC, nC, 1) >>> 0
+                }
+                return TC = nC, wC
+              }(QC, sC.uiUI, sC.t5OK),
+              nC = TC;
+            JC().setInt32(CC + 4, nC, !0), JC().setInt32(CC + 0, bC, !0)
+          },
+          mkwm: function(CC, zC) {
+            throw new Error(IC(CC, zC))
+          },
+          gEty: function(CC, zC) {
+            return hC(CC).charCodeAt(zC >>> 0)
+          },
+          jPPu: function(CC, zC) {
+            console.error(IC(CC, zC))
+          },
+          fSvU: function(CC) {
+            return hC(CC).length
+          },
+          mfLY: function(CC, zC) {
+            return GC(IC(CC, zC))
+          },
+          qbxc: function(CC) {
+            HC(CC)
+          }
+        }
+      }
+    }
+    Symbol.dispose && (wC.prototype[Symbol.dispose] = wC.prototype.free);
+    const PC = "undefined" === typeof FinalizationRegistry ? {
+      register: () => {},
+      unregister: () => {}
+    } : new FinalizationRegistry((CC => sC.IZbw(CC, 1)));
+
+    function GC(CC) {
+      YC === KC.length && KC.push(KC.length + 1);
+      const zC = YC;
+      return YC = KC[zC], KC[zC] = CC, zC
+    }
+
+    function RC(CC, zC) {
+      CC >>>= 0;
+      const ZC = JC(),
+        QC = [];
+      for (let wC = CC; wC < CC + 4 * zC; wC += 4) QC.push(HC(ZC.getUint32(wC, !0)));
+      return QC
+    }
+
+    function AC(CC, zC) {
+      return CC >>>= 0, eC().subarray(CC / 1, CC / 1 + zC)
+    }
+    let xC = null;
+
+    function JC() {
+      return null !== xC && xC.buffer === sC.memory.buffer || (xC = new DataView(sC.memory.buffer)), xC
+    }
+
+    function IC(CC, zC) {
+      return function(CC, zC) {
+        XC += zC, XC >= lC && (EC = new TextDecoder("utf-8", {
+          ignoreBOM: !0,
+          fatal: !0
+        }), EC.decode(), XC = zC);
+        return EC.decode(eC().subarray(CC, CC + zC))
+      }(CC >>> 0, zC)
+    }
+    let iC = null;
+    let vC = null;
+
+    function eC() {
+      return null !== vC && 0 !== vC.byteLength || (vC = new Uint8Array(sC.memory.buffer)), vC
+    }
+
+    function hC(CC) {
+      return KC[CC]
+    }
+    let KC = new Array(1024).fill(void 0);
+    KC.push(void 0, null, !0, !1);
+    let YC = KC.length;
+
+    function dC(CC, zC) {
+      const ZC = zC(4 * CC.length, 4) >>> 0;
+      return (null !== iC && 0 !== iC.byteLength || (iC = new Uint32Array(sC.memory.buffer)), iC).set(CC, ZC / 4), TC = CC.length, ZC
+    }
+
+    function mC(CC, zC) {
+      const ZC = zC(4 * CC.length, 4) >>> 0,
+        QC = JC();
+      for (let wC = 0; wC < CC.length; wC++) QC.setUint32(ZC + 4 * wC, GC(CC[wC]), !0);
+      return TC = CC.length, ZC
+    }
+
+    function HC(CC) {
+      const zC = hC(CC);
+      return function(CC) {
+        CC < 1028 || (KC[CC] = YC, YC = CC)
+      }(CC), zC
+    }
+    let EC = new TextDecoder("utf-8", {
+      ignoreBOM: !0,
+      fatal: !0
+    });
+    EC.decode();
+    const lC = 2146435072;
+    let XC = 0;
+    const cC = new TextEncoder;
+    "encodeInto" in cC || (cC.encodeInto = function(CC, zC) {
+      const ZC = cC.encode(CC);
+      return zC.set(ZC), {
+        read: CC.length,
+        written: ZC.length
+      }
+    });
+    let uC, rC, sC, TC = 0;
+
+    function aC(CC, zC) {
+      return rC = CC, sC = CC.exports, uC = zC, xC = null, iC = null, vC = null, sC.IgCc(), sC
+    }
+
+    function tC(CC) {
+      if (void 0 !== sC) return sC;
+      void 0 !== CC && (Object.getPrototypeOf(CC) === Object.prototype ? ({
+        module: CC
+      } = CC) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const zC = pC();
+      CC instanceof WebAssembly.Module || (CC = new WebAssembly.Module(CC));
+      return aC(new WebAssembly.Instance(CC, zC), CC)
+    }
+    async function DC(CC) {
+      if (void 0 !== sC) return sC;
+      void 0 !== CC && (Object.getPrototypeOf(CC) === Object.prototype ? ({
+        module_or_path: CC
+      } = CC) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const zC = pC();
+      ("string" === typeof CC || "function" === typeof Request && CC instanceof Request || "function" === typeof URL && CC instanceof URL) && (CC = fetch(CC));
+      const {
+        instance: ZC,
+        module: QC
+      } = await async function(CC, zC) {
+        if ("function" === typeof Response && CC instanceof Response) {
+          if (!CC.ok) throw new Error(`failed to fetch Wasm: ${CC.status} ${CC.statusText} fetching '${CC.url}'`);
+          if ("function" === typeof WebAssembly.instantiateStreaming) try {
+            return await WebAssembly.instantiateStreaming(CC, zC)
+          } catch (ZC) {
+            if (! function(CC) {
+                switch (CC) {
+                  case "basic":
+                  case "cors":
+                  case "default":
+                    return !0
+                }
+                return !1
+              }(CC.type) || "application/wasm" === CC.headers.get("Content-Type")) throw ZC;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", ZC)
+          }
+          const QC = await CC.arrayBuffer();
+          return await WebAssembly.instantiate(QC, zC)
+        } {
+          const ZC = await WebAssembly.instantiate(CC, zC);
+          return ZC instanceof WebAssembly.Instance ? {
+            instance: ZC,
+            module: CC
+          } : ZC
+        }
+      }(await CC, zC);
+      return aC(ZC, QC)
+    }
+    var jC = ZC(2856),
+      yC = ZC(6616);
+    class LC extends Error {
+      stage;
+      constructor(CC, zC) {
+        super((0, jC.F)(CC, zC), {
+          cause: zC
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = CC
+      }
+    }
+    let UC = null,
+      BC = null;
+
+    function OC() {
+      return UC ? Promise.resolve(UC) : (BC || (BC = async function() {
+        let CC;
+        try {
+          CC = await (0, jC.I)(new ZC.U(ZC(6621)), (0, yC.e)("bloxd_wasm_shader_pack"))
+        } catch (zC) {
+          throw new LC((0, jC.P)(zC), zC)
+        }
+        try {
+          await DC({
+            module_or_path: CC
+          })
+        } catch (zC) {
+          throw new LC("instantiate", zC)
+        }
+        return UC = QC, UC
+      }(), BC.then(void 0, (() => {
+        BC = null
+      }))), BC)
+    }
+    var kC = ZC(6639);
+
+    function VC(CC) {
+      let [zC, ZC, QC, wC] = CC;
+      const bC = {
+        file: zC,
+        line: ZC,
+        message: QC
+      };
+      return wC && (bC.variants = wC.map(kC.h)), bC
+    }
+
+    function Cz(CC) {
+      return JSON.parse(CC).map(VC)
+    }
+
+    function zz(CC, zC) {
+      if (!Number.isInteger(CC) || CC < 0 || CC > 4294967295) throw new Error(`${zC} ${CC} is not a whole number from 0 to 4294967295`);
+      return CC
+    }
+
+    function Zz(CC) {
+      return [CC.named.map((CC => CC.name)), Uint32Array.from(CC.named, (CC => zz(CC.id, "Texture ID")))]
+    }
+    const Qz = new WeakMap;
+    const wz = new WeakMap,
+      bz = new WeakSet;
+
+    function nz(CC, zC) {
+      if (bz.has(CC)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+      try {
+        return zC()
+      } catch (ZC) {
+        throw ZC instanceof WebAssembly.RuntimeError && bz.add(CC), ZC
+      }
+    }
+
+    function fz(CC) {
+      let zC = wz.get(CC);
+      if (!zC) {
+        let ZC, QC;
+        zC = {
+          K3: (zC, ZC) => nz(CC, (() => function(CC, zC, ZC) {
+            const QC = CC.K3(zC.map((CC => CC.path)), zC.map((CC => CC.source)), ...Zz(ZC), ZC.aliases.map((CC => CC.name)), ZC.aliases.map((CC => CC.texture)), ZC.aliases.map((CC => CC.kind)));
+            let wC = !1;
+            try {
+              const CC = QC.validationModuleCodes,
+                zC = Array.from(QC.validationModuleKeys, ((zC, ZC) => ({
+                  key: (0, kC.h)(zC),
+                  code: CC[ZC]
+                }))),
+                ZC = {
+                  errors: Cz(QC.owC),
+                  offInStrict: Cz(QC.qwC),
+                  variants: (0, kC.f)(QC),
+                  validationModules: zC,
+                  features: QC.features
+                };
+              return zC.forEach(((CC, zC) => {
+                Qz.set(CC, {
+                  pack: QC,
+                  index: zC
+                })
+              })), wC = zC.length > 0, ZC
+            } finally {
+              wC || QC.free()
+            }
+          }(CC, zC, ZC))),
+          mapValidationMessage: (zC, ZC) => {
+            const QC = Qz.get(zC);
+            if (!QC) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return VC(JSON.parse(nz(CC, (() => QC.pack.mapValidationMessage(QC.index, ZC.lineNum, ZC.linePos, ZC.message, ZC.type)))))
+          },
+          rZC: zC => nz(CC, (() => function(CC, zC) {
+            const ZC = new Int32Array(zC.length),
+              QC = [];
+            return zC.forEach(((CC, zC) => {
+              ZC[zC] = CC.variants ? CC.variants.length : -1;
+              for (const ZC of CC.variants ?? []) QC.push((0, kC.g)(ZC))
+            })), Cz(CC.rZC(zC.map((CC => CC.file)), Uint32Array.from(zC, (CC => zz(CC.line, "Diagnostic line"))), zC.map((CC => CC.message)), ZC, Uint8Array.from(QC)))
+          }(CC, zC))),
+          Rm: zC => nz(CC, (() => CC.Rm(...Zz(zC)))),
+          get SHADER_PACK_HEADER_VERSION() {
+            return ZC ??= nz(CC, (() => CC.nwC())), ZC
+          },
+          get DEFAULT_SHADER_PACK_FILES() {
+            return QC ??= nz(CC, (() => {
+              const zC = CC.QwC();
+              return CC.ZwC().map(((CC, ZC) => ({
+                path: CC,
+                source: zC[ZC]
+              })))
+            })), QC
+          },
+          fwC: zC => nz(CC, (() => CC.fwC(zC))),
+          resolveHeader: zC => nz(CC, (() => CC.bwC((0, kC.g)(zC)))),
+          wwC: () => nz(CC, (() => CC.wwC()))
+        }, wz.set(CC, zC)
+      }
+      return zC
+    }
+    var oz = ZC(3208),
+      qz = ZC(6630);
+    const Fz = "bloxdShaderPackWasmFailureReported";
+    let Wz = null;
+
+    function Nz() {
+      return Wz ??= async function() {
+        if ("undefined" === typeof WebAssembly) return Mz("unsupported", "This browser has no WebAssembly"), null;
+        const CC = (0, qz.loadShaderPackTextures)().then((() => !0), (CC => (console.error("Could not load the shader pack textures, so shader packs can't run", CC), !1)));
+        try {
+          const zC = await async function() {
+            let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : OC;
+            return fz(await CC())
+          }();
+          return await CC ? zC : null
+        } catch (zC) {
+          const CC = zC instanceof Error ? zC.message : String(zC);
+          return Mz(oz.b[zC instanceof LC ? zC.stage : "instantiate"], CC), null
+        }
+      }(), Wz
+    }
+
+    function Mz(CC, zC) {
+      (0, oz.g)(Fz, `Shader pack wasm ${CC}, so shader packs can't run: ${zC}`, zC, `shader_pack_${CC}`)
+    }
+  },
+  6621: (CC, zC, ZC) => {
+    CC.exports = ZC.p + "static/media/bloxd_wasm_shader_pack_bg.e140c3822ca3dad999c3.wasm"
+  },
+  6616: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => nC
+    });
+    var QC = ZC(2856);
+    const wC = {
+      bloxd_wasm: () => "64213eca4658377ef00b2e8eca80917f662fb244ea5072aa932d693e87ee34a4",
+      bloxd_wasm_client: () => "fc3cf04d5b7854fba80fd4d4a48c70cd5cfa75bed057ae2631f2eac809bb72d6",
+      bloxd_wasm_workers: () => "6e4d4a97778a79d3d1539bba135e452823879ae247a4075c185762ab01e74bb8",
+      bloxd_wasm_models: () => "a9e6377967b2efe08bc1c2c1ba7803c68faf84b1979c48237b60c2a5371ef6f0",
+      bloxd_wasm_webgpu: () => "0c329bbf92b5e8dc40c9c50de71fa16d3214efd01ed90e0c806f70cc5dc4a678",
+      bloxd_wasm_webgl: () => "1a61f36acda217637aa35c038c864802f4a597fe34b899397ecb8b3f7a6010d4",
+      bloxd_wasm_webgl1: () => "fa07e900fdcc5ea52a844349243c3504ebaca1ebb1ff15c9d66db4fcc37f2404",
+      bloxd_wasm_replay: () => "37f9a110c636f28820cc4bb4d1a11de7ceaafb9c9325a7fee4fe688876d19d67",
+      bloxd_wasm_recorder: () => "2775bc33cdba5c03f27ade88929e4fdaf4b4c582cc3952198fb551b59541422e",
+      bloxd_wasm_anim: () => "70063f4837211665774447f408deefe4678a8f5e792ddcf5187eb1ba64be142f",
+      bloxd_wasm_textures: () => "6b2065e443e650047a940883eaf075d2749daed9964ef622b7e96432f1c0c8b1",
+      bloxd_wasm_shader_pack: () => "90a9cbfbe256edc10cec287ff1dfdba1125031ab0d4dcf3f4270800ba2f9cb4a"
+    };
+    var bC = ZC(4635);
+
+    function nC(CC) {
+      const zC = Object.prototype.hasOwnProperty.call(wC, CC) ? wC[CC]() : void 0;
+      if (void 0 !== zC) return {
+        sha256: zC,
+        onMismatch: bC.w
+      };
+      throw new QC.h(`${CC} has no release digest, so this build refuses it`)
+    }
+  },
+  6639: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => AC,
+      f: () => xC,
+      g: () => GC,
+      h: () => PC
+    });
+    var QC = ZC(6646);
+    const wC = 6,
+      bC = 3,
+      nC = 1,
+      fC = 2,
+      oC = 4,
+      qC = 8,
+      FC = 16,
+      WC = 32,
+      NC = 64,
+      MC = 128,
+      gC = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+
+    function SC(CC) {
+      if (!CC) return 0;
+      const zC = gC.indexOf(CC);
+      if (zC <= 0) throw new Error(`"${CC}" is not a shader pack hook function`);
+      return zC
+    }
+
+    function pC(CC) {
+      if (0 === CC) return null;
+      const zC = gC[CC];
+      if (void 0 === zC) throw new Error(`${CC} is not a shader pack hook function id`);
+      return zC
+    }
+
+    function PC(CC) {
+      const zC = QC.e.length;
+      return {
+        strict: CC >= zC,
+        program: QC.e[CC % zC]
+      }
+    }
+
+    function GC(CC) {
+      return Number(CC.strict) * QC.e.length + QC.e.indexOf(CC.program)
+    }
+
+    function RC(CC) {
+      return "" === CC ? [] : CC.split(" ")
+    }
+
+    function AC(CC) {
+      const zC = {
+        variantFlags: new Uint8Array(wC),
+        hooks: new Uint8Array(wC * bC),
+        moduleCodes: Array(wC).fill(""),
+        reads: Array(2 * wC).fill("")
+      };
+      for (const ZC of CC) {
+        const CC = GC(ZC.key),
+          QC = (CC, zC) => null === ZC.hooks.surface || ZC.reads.fragment.includes(CC) ? 0 : zC;
+        zC.variantFlags[CC] = (ZC.sceneDepth ? nC : 0) | (ZC.movesVertices ? fC : 0) | (ZC.sunShadow ? oC : 0) | (ZC.airShadow ? qC : 0) | (ZC.discards ? FC : 0) | QC("localPosition", WC) | QC("enchantSpeed", NC) | QC("enchantTier", MC), zC.hooks[CC * bC] = SC(ZC.hooks.vertex), zC.hooks[CC * bC + 1] = SC(ZC.hooks.surface), zC.hooks[CC * bC + 2] = SC(ZC.hooks.light), zC.moduleCodes[CC] = ZC.moduleCode, zC.reads[2 * CC] = ZC.reads.vertex.join(" "), zC.reads[2 * CC + 1] = ZC.reads.fragment.join(" ")
+      }
+      return zC
+    }
+
+    function xC(CC) {
+      const {
+        hooks: zC,
+        moduleCodes: ZC,
+        reads: QC
+      } = CC;
+      return Array.from(CC.variantFlags, ((CC, wC) => {
+        const WC = wC * bC;
+        return {
+          key: PC(wC),
+          hooks: {
+            vertex: pC(zC[WC]),
+            surface: pC(zC[WC + 1]),
+            light: pC(zC[WC + 2])
+          },
+          moduleCode: ZC[wC],
+          sceneDepth: 0 !== (CC & nC),
+          sunShadow: 0 !== (CC & oC),
+          airShadow: 0 !== (CC & qC),
+          movesVertices: 0 !== (CC & fC),
+          discards: 0 !== (CC & FC),
+          reads: {
+            vertex: RC(QC[2 * wC]),
+            fragment: RC(QC[2 * wC + 1])
+          }
+        }
       }))
     }
-    async function Dq(qq, Eq) {
-      const {
-        module: gq
-      } = await qE(qq, {
-        retries: Eq
-      });
-      return gq
-    }
-    async function qE(qq) {
-      let Eq = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await Lq(qq, (0, Oq.d)(qq.name), Eq)
-    }
   },
-  6500: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      d: () => mq
+  6646: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC,
+      i: () => nC,
+      m: () => fC,
+      n: () => wC,
+      r: () => bC
     });
-    var Yq = gq(2805);
-    const lq = {
-      bloxd_wasm: () => "6d78896f037d6c3dd2ec91f53e012efc14d4c7478e36fc57749ae14be1df3096",
-      bloxd_wasm_client: () => "132c78fe4d5d985a39aef9cb5338e6d40926f1581f341ef925ca4f1b873982cf",
-      bloxd_wasm_workers: () => "9fa00e1e679c4b317e391d15a0e20bcce764b10ac53881c003b3245b86db6cf5",
-      bloxd_wasm_models: () => "9dd9f9fb8ff600ad7045604d8a17da38690a8b012f1e8b7f578a1a671baf7185",
-      bloxd_wasm_webgpu: () => "72b5e9034b38cfcfd84eb4e4b1607ea3fedbb7078518766dd27ac431c9922848",
-      bloxd_wasm_webgl: () => "a5cefc5390d0e4cf10eab192e6d4403fc337fb14cfe0e3164c3430a7c721595d",
-      bloxd_wasm_webgl1: () => "3cb76bb92c5501eb795864d943ed2c567c8b5ff7777cd5f2c08b0940197979c9",
-      bloxd_wasm_replay: () => "f8132694ecb3c07d332a67ad7dab19d035d58dc2cea1ddbf2ca6dc7ec556cd0c",
-      bloxd_wasm_recorder: () => "166b4da1bfa19d1d90b1f2d66b23de17c858096a88eb92fe87a8c9e58f77c3bb",
-      bloxd_wasm_anim: () => "11dd5bcc2c7323ae0a5b9e4cd8b8c81d457a9ea85d6e339c6454ed1bb80a27c4",
-      bloxd_wasm_textures: () => "2ba4917ae218104948db870865715dacd8571878aedd4fece740312291892fac",
-      bloxd_wasm_shader_pack: () => "dfb97693642c8a1ee7219f62c2557fcfb1c20ef622361f5b18389c544478cae6"
-    };
-    var Oq = gq(4524);
+    const QC = ["terrain", "liquid", "model"];
 
-    function mq(qq) {
-      const Eq = Object.prototype.hasOwnProperty.call(lq, qq) ? lq[qq]() : void 0;
-      if (void 0 !== Eq) return {
-        sha256: Eq,
-        onMismatch: Oq.C
-      };
-      throw new Yq.j(`${qq} has no release digest, so this build refuses it`)
-    }
-  },
-  36345: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      c: () => Yq,
-      g: () => Oq,
-      j: () => Aq,
-      k: () => mq,
-      l: () => lq
-    });
-    const Yq = /^alloc_failed (\d+) bytes$/;
-
-    function lq(qq, Eq) {
-      return Oq(qq, Eq) ? `trap=alloc_failed ${Eq} bytes` : `trap=${qq}`
+    function wC() {
+      const CC = [];
+      for (const zC of [!1, !0])
+        for (const ZC of QC) CC.push({
+          strict: zC,
+          program: ZC
+        });
+      return CC
     }
 
-    function Oq(qq, Eq) {
-      return "unreachable" === qq && Eq > 0
+    function bC(CC) {
+      return `${CC.strict?"strict":"allow"}.${CC.program}`
     }
 
-    function mq(qq, Eq, gq) {
-      const Yq = function(qq) {
-        return qq instanceof WebAssembly.RuntimeError ? /unreachable/i.test(qq.message) ? "unreachable" : /out of bounds/i.test(qq.message) ? "out_of_bounds" : "runtime_error" : (qq instanceof RangeError || qq instanceof Error && "InternalError" === qq.name) && /call stack|recursion/i.test(qq.message) ? "stack_overflow" : "js_error"
-      }(qq);
-      if ("unreachable" !== Yq) return {
-        kind: Yq,
-        panic: null,
-        refusedBytes: 0
-      };
-      const lq = Eq(),
-        Oq = gq();
-      return {
-        kind: Yq,
-        panic: Oq > 0 ? null : lq,
-        refusedBytes: Oq
-      }
+    function nC(CC) {
+      return !CC.hooks.vertex && !CC.hooks.surface && !CC.hooks.light
     }
-    const xq = 300;
 
-    function Aq(qq) {
-      return qq.replace(/\s*\n\s*/g, " / ").slice(0, xq)
+    function fC(CC, zC) {
+      return "off" !== zC && (null === CC || CC.some((CC => CC.key.strict === ("strict" === zC) && !nC(CC))))
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);

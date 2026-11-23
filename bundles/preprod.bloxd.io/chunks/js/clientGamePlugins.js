@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4662: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Tq,
-      f: () => Mq
+  4775: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      c: () => EC,
+      f: () => HC
     });
-    var Yq = gq(4671),
-      lq = gq(296);
-    const Oq = 120,
-      mq = 260,
-      xq = 1.15,
-      Aq = 1.2,
-      cq = 2,
-      uq = 1.08,
-      Bq = .8,
-      Wq = .95,
-      Nq = 8,
-      aq = "[\"')\\]\u300d\u300f\uff09]*",
-      Vq = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${aq}$`),
-      dq = new RegExp(`[?\uff1f]${aq}$`),
-      jq = new RegExp(`[!\uff01]${aq}$`),
-      Hq = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      oq = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Pq = new RegExp(`[${oq}]`),
-      Qq = new RegExp(`[${oq}]|[^${oq}]+`, "g"),
-      yq = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var QC = ZC(4783),
+      wC = ZC(310);
+    const bC = 120,
+      nC = 260,
+      fC = 1.15,
+      oC = 1.2,
+      qC = 2,
+      FC = 1.08,
+      WC = .8,
+      NC = .95,
+      MC = 8,
+      gC = "[\"')\\]\u300d\u300f\uff09]*",
+      SC = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${gC}$`),
+      pC = new RegExp(`[?\uff1f]${gC}$`),
+      PC = new RegExp(`[!\uff01]${gC}$`),
+      GC = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      RC = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      AC = new RegExp(`[${RC}]`),
+      xC = new RegExp(`[${RC}]|[^${RC}]+`, "g"),
+      JC = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function tq(qq) {
-      let Eq = 2166136261;
-      for (let gq = 0; gq < qq.length; gq++) Eq ^= qq.charCodeAt(gq), Eq = Math.imul(Eq, 16777619);
-      return (Eq >>> 0) / 4294967295 * 2 - 1
+    function IC(CC) {
+      let zC = 2166136261;
+      for (let ZC = 0; ZC < CC.length; ZC++) zC ^= CC.charCodeAt(ZC), zC = Math.imul(zC, 16777619);
+      return (zC >>> 0) / 4294967295 * 2 - 1
     }
 
-    function rq(qq) {
-      var Eq;
-      if (Pq.test(qq)) return 1;
-      const gq = qq.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Yq = gq.replace(/[^0-9]/g, "");
-      if (Yq.length > 0 && !/\p{L}/u.test(gq)) return Math.min(Yq.length, 4);
-      const lq = null !== (Eq = gq.match(yq)) && void 0 !== Eq ? Eq : [];
-      if (0 === lq.length) {
-        var Oq, mq;
-        const qq = null !== (Oq = null === (mq = gq.match(/\p{L}/gu)) || void 0 === mq ? void 0 : mq.length) && void 0 !== Oq ? Oq : 0;
-        return 0 === qq ? 0 : Math.min(Math.max(1, Math.round(qq / 2.5)), Nq)
+    function iC(CC) {
+      var zC;
+      if (AC.test(CC)) return 1;
+      const ZC = CC.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        QC = ZC.replace(/[^0-9]/g, "");
+      if (QC.length > 0 && !/\p{L}/u.test(ZC)) return Math.min(QC.length, 4);
+      const wC = null !== (zC = ZC.match(JC)) && void 0 !== zC ? zC : [];
+      if (0 === wC.length) {
+        var bC, nC;
+        const CC = null !== (bC = null === (nC = ZC.match(/\p{L}/gu)) || void 0 === nC ? void 0 : nC.length) && void 0 !== bC ? bC : 0;
+        return 0 === CC ? 0 : Math.min(Math.max(1, Math.round(CC / 2.5)), MC)
       }
-      const xq = gq.replace(/[^\p{L}]/gu, ""),
-        Aq = lq.length > 1 && "e" === lq.at(-1) && xq.endsWith("e") && !xq.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(qq.replace(/[^\p{L}]/gu, ""));
-      return Math.min(lq.length - (Aq ? 1 : 0), Nq)
+      const fC = ZC.replace(/[^\p{L}]/gu, ""),
+        oC = wC.length > 1 && "e" === wC.at(-1) && fC.endsWith("e") && !fC.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(CC.replace(/[^\p{L}]/gu, ""));
+      return Math.min(wC.length - (oC ? 1 : 0), MC)
     }
 
-    function vq(qq) {
-      return qq.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function vC(CC) {
+      return CC.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function hq(qq) {
-      const Eq = qq.replace(/[^\p{L}]/gu, "");
-      return Eq.length >= 2 && Eq === Eq.toUpperCase() && Eq !== Eq.toLowerCase()
+    function eC(CC) {
+      const zC = CC.replace(/[^\p{L}]/gu, "");
+      return zC.length >= 2 && zC === zC.toUpperCase() && zC !== zC.toLowerCase()
     }
 
-    function nq(qq, Eq) {
-      var gq;
-      const Nq = Eq && (0, Yq.i)(Eq),
-        aq = null !== (gq = null === Nq || void 0 === Nq ? void 0 : Nq.syllableMs) && void 0 !== gq ? gq : Yq.b,
-        oq = function(qq) {
-          const Eq = [];
-          for (const Yq of (0, lq.Zb)(qq))
-            if ("string" === typeof Yq)
-              for (const qq of Yq.split(/(\s+)/)) {
-                if ("" === qq) continue;
-                if (/^\s+$/.test(qq)) {
-                  Eq.push({
+    function hC(CC, zC) {
+      var ZC;
+      const MC = zC && (0, QC.m)(zC),
+        gC = null !== (ZC = null === MC || void 0 === MC ? void 0 : MC.syllableMs) && void 0 !== ZC ? ZC : QC.b,
+        RC = function(CC) {
+          const zC = [];
+          for (const QC of (0, wC.dc)(CC))
+            if ("string" === typeof QC)
+              for (const CC of QC.split(/(\s+)/)) {
+                if ("" === CC) continue;
+                if (/^\s+$/.test(CC)) {
+                  zC.push({
                     kind: "space",
-                    text: qq
+                    text: CC
                   });
                   continue
                 }
-                if (!Pq.test(qq)) {
-                  Eq.push({
+                if (!AC.test(CC)) {
+                  zC.push({
                     kind: "word",
-                    text: qq,
+                    text: CC,
                     delayMs: 0
                   });
                   continue
                 }
-                let Yq = !0;
-                for (const lq of null !== (gq = qq.match(Qq)) && void 0 !== gq ? gq : []) {
-                  var gq;
-                  const qq = Eq.at(-1);
-                  Yq || "word" !== (null === qq || void 0 === qq ? void 0 : qq.kind) || Pq.test(lq) || /[\p{L}\p{N}]/u.test(lq) ? (Yq || Eq.push({
+                let QC = !0;
+                for (const wC of null !== (ZC = CC.match(xC)) && void 0 !== ZC ? ZC : []) {
+                  var ZC;
+                  const CC = zC.at(-1);
+                  QC || "word" !== (null === CC || void 0 === CC ? void 0 : CC.kind) || AC.test(wC) || /[\p{L}\p{N}]/u.test(wC) ? (QC || zC.push({
                     kind: "space",
                     text: "\u200b"
-                  }), Eq.push({
+                  }), zC.push({
                     kind: "word",
-                    text: lq,
+                    text: wC,
                     delayMs: 0
-                  }), Yq = !1) : qq.text += lq
+                  }), QC = !1) : CC.text += wC
                 }
-              } else Eq.push({
+              } else zC.push({
                 kind: "icon",
-                text: Yq.icon,
+                text: QC.icon,
                 delayMs: 0
               });
-          return Eq
-        }(qq),
-        yq = [];
-      let nq = [];
-      for (const Yq of oq) "space" !== Yq.kind && (nq.push(Yq), Vq.test(Yq.text) && (yq.push(nq), nq = []));
-      yq.push(nq);
-      const bq = [];
-      let iq = 0;
-      for (const Yq of yq) {
-        var Zq, fq;
-        const qq = null !== (Zq = null === (fq = Yq.at(-1)) || void 0 === fq ? void 0 : fq.text) && void 0 !== Zq ? Zq : "",
-          Eq = dq.test(qq),
-          gq = jq.test(qq),
-          lq = Yq.map((qq => "word" === qq.kind ? rq(qq.text) : 1)),
-          oq = lq.findLastIndex((qq => qq > 0));
-        for (const [dq, jq] of Yq.entries()) {
-          const qq = "word" === jq.kind,
-            Yq = lq[dq];
-          jq.delayMs = iq;
-          for (let lq = 0; Nq && lq < Yq; lq++) {
+          return zC
+        }(CC),
+        JC = [];
+      let hC = [];
+      for (const QC of RC) "space" !== QC.kind && (hC.push(QC), SC.test(QC.text) && (JC.push(hC), hC = []));
+      JC.push(hC);
+      const KC = [];
+      let YC = 0;
+      for (const QC of JC) {
+        var dC, mC;
+        const CC = null !== (dC = null === (mC = QC.at(-1)) || void 0 === mC ? void 0 : mC.text) && void 0 !== dC ? dC : "",
+          zC = pC.test(CC),
+          ZC = PC.test(CC),
+          wC = QC.map((CC => "word" === CC.kind ? iC(CC.text) : 1)),
+          RC = wC.findLastIndex((CC => CC > 0));
+        for (const [pC, PC] of QC.entries()) {
+          const CC = "word" === PC.kind,
+            QC = wC[pC];
+          PC.delayMs = YC;
+          for (let wC = 0; MC && wC < QC; wC++) {
             const {
-              intonation: Oq
-            } = Nq;
-            let mq = oq > 0 ? -Oq.declineSemitones * (dq / oq) : 0;
-            mq += tq(`${vq(jq.text)}|${lq}`) * Oq.variationSemitones;
-            const Vq = Math.min(1, Oq.variationSemitones);
-            let Hq = Nq.glideSemitones,
-              Pq = 1;
-            gq && (mq += Oq.exclaimLiftSemitones, Pq *= xq), Eq && dq === oq && (mq += Oq.questionRiseSemitones * (Yq > 1 ? .5 + .5 * lq / (Yq - 1) : 1), lq === Yq - 1 && (Hq = Math.abs(Hq) + Oq.questionRiseSemitones / 2)), qq && hq(jq.text) && (mq += cq * Vq, Pq *= Aq), Yq > 1 && 0 === lq && (mq += Bq * Vq, Pq *= uq), bq.push({
-              atMs: iq + lq * aq,
-              semitones: mq,
-              glideSemitones: Hq,
-              durationMs: lq < Yq - 1 ? Math.min(Nq.durationMs, aq * Wq) : Nq.durationMs,
-              level: Pq
+              intonation: bC
+            } = MC;
+            let nC = RC > 0 ? -bC.declineSemitones * (pC / RC) : 0;
+            nC += IC(`${vC(PC.text)}|${wC}`) * bC.variationSemitones;
+            const SC = Math.min(1, bC.variationSemitones);
+            let GC = MC.glideSemitones,
+              AC = 1;
+            ZC && (nC += bC.exclaimLiftSemitones, AC *= fC), zC && pC === RC && (nC += bC.questionRiseSemitones * (QC > 1 ? .5 + .5 * wC / (QC - 1) : 1), wC === QC - 1 && (GC = Math.abs(GC) + bC.questionRiseSemitones / 2)), CC && eC(PC.text) && (nC += qC * SC, AC *= oC), QC > 1 && 0 === wC && (nC += WC * SC, AC *= FC), KC.push({
+              atMs: YC + wC * gC,
+              semitones: nC,
+              glideSemitones: GC,
+              durationMs: wC < QC - 1 ? Math.min(MC.durationMs, gC * NC) : MC.durationMs,
+              level: AC
             })
           }
-          iq += Yq * aq + (Vq.test(jq.text) ? mq : Hq.test(jq.text) ? Oq : 0)
+          YC += QC * gC + (SC.test(PC.text) ? nC : GC.test(PC.text) ? bC : 0)
         }
       }
       return {
-        pieces: oq.map((qq => "space" === qq.kind ? qq : "icon" === qq.kind ? {
+        pieces: RC.map((CC => "space" === CC.kind ? CC : "icon" === CC.kind ? {
           kind: "icon",
-          icon: qq.text,
-          delayMs: qq.delayMs
+          icon: CC.text,
+          delayMs: CC.delayMs
         } : {
           kind: "word",
-          text: qq.text,
-          delayMs: qq.delayMs
+          text: CC.text,
+          delayMs: CC.delayMs
         })),
-        blips: bq
+        blips: KC
       }
     }
-    var bq = gq(1183),
-      iq = gq(1241),
-      Zq = gq(1906);
+    var KC = ZC(1143),
+      YC = ZC(1192),
+      dC = ZC(1843);
 
-    function fq(qq) {
-      if ("string" === typeof qq) return qq;
-      const Eq = iq.h.get().getCurrentLanguageCode();
-      return (0, bq.n)(Eq, qq.translationKey, (0, bq.j)(qq.params, Zq.d.shown))
+    function mC(CC) {
+      if ("string" === typeof CC) return CC;
+      const zC = YC.h.get().getCurrentLanguageCode();
+      return (0, KC.r)(zC, CC.translationKey, (0, KC.q)(CC.params, dC.d.shown))
     }
 
-    function Mq(qq) {
-      const Eq = void 0 === qq.voice ? null : (0, Yq.m)(qq.voice),
-        gq = Eq && (0, Yq.i)(Eq);
+    function HC(CC) {
+      const zC = void 0 === CC.voice ? null : (0, QC.q)(CC.voice),
+        ZC = zC && (0, QC.m)(zC);
       return {
-        plan: nq(fq(qq.line), gq),
-        synth: gq
+        plan: hC(mC(CC.line), ZC),
+        synth: ZC
       }
     }
 
-    function Tq(qq) {
-      const Eq = [];
-      let gq = [];
-      for (const [lq, Oq] of qq.entries()) {
-        var Yq;
-        "space" === Oq.kind && (" " !== Oq.text || "icon" !== (null === (Yq = qq[lq + 1]) || void 0 === Yq ? void 0 : Yq.kind)) ? (gq.length > 0 && Eq.push(gq), Eq.push([Oq]), gq = []) : gq.push(Oq)
+    function EC(CC) {
+      const zC = [];
+      let ZC = [];
+      for (const [wC, bC] of CC.entries()) {
+        var QC;
+        "space" === bC.kind && (" " !== bC.text || "icon" !== (null === (QC = CC[wC + 1]) || void 0 === QC ? void 0 : QC.kind)) ? (ZC.length > 0 && zC.push(ZC), zC.push([bC]), ZC = []) : ZC.push(bC)
       }
-      return gq.length > 0 && Eq.push(gq), Eq
+      return ZC.length > 0 && zC.push(ZC), zC
     }
   },
-  4679: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      e: () => uq,
-      g: () => Bq
+  4788: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => FC,
+      f: () => WC
     });
-    var Yq = gq(4684),
-      lq = gq(24);
-    const Oq = .25,
-      mq = .85,
-      xq = .02,
-      Aq = .01;
+    var QC = ZC(4797),
+      wC = ZC(20);
+    const bC = .25,
+      nC = .85,
+      fC = .02,
+      oC = .01;
 
-    function cq(qq, Eq, gq, Yq, lq, Oq, xq) {
+    function qC(CC, zC, ZC, QC, wC, bC, fC) {
       const {
-        waveform: Aq,
-        pitchHz: cq,
-        attackMs: uq,
-        releaseMs: Bq,
-        lowpassHz: Wq
-      } = gq, Nq = lq + Yq.durationMs / 1e3, aq = cq * 2 ** (Yq.semitones / 12), Vq = qq.createOscillator();
-      Vq.type = Aq, Vq.frequency.setValueAtTime(aq, lq), Vq.frequency.exponentialRampToValueAtTime(aq * 2 ** (Yq.glideSemitones / 12), Nq);
-      const dq = lq + Math.min(uq, Yq.durationMs) / 1e3,
-        jq = qq.createGain();
-      jq.gain.setValueAtTime(0, lq), jq.gain.linearRampToValueAtTime(Oq, dq), jq.gain.linearRampToValueAtTime(Oq * mq, Math.max(dq, Nq - Bq / 1e3)), jq.gain.linearRampToValueAtTime(0, Nq);
-      const Hq = [Vq];
-      if (null !== Wq) {
-        const Eq = qq.createBiquadFilter();
-        Eq.type = "lowpass", Eq.frequency.value = Wq, Hq.push(Eq)
+        waveform: oC,
+        pitchHz: qC,
+        attackMs: FC,
+        releaseMs: WC,
+        lowpassHz: NC
+      } = ZC, MC = wC + QC.durationMs / 1e3, gC = qC * 2 ** (QC.semitones / 12), SC = CC.createOscillator();
+      SC.type = oC, SC.frequency.setValueAtTime(gC, wC), SC.frequency.exponentialRampToValueAtTime(gC * 2 ** (QC.glideSemitones / 12), MC);
+      const pC = wC + Math.min(FC, QC.durationMs) / 1e3,
+        PC = CC.createGain();
+      PC.gain.setValueAtTime(0, wC), PC.gain.linearRampToValueAtTime(bC, pC), PC.gain.linearRampToValueAtTime(bC * nC, Math.max(pC, MC - WC / 1e3)), PC.gain.linearRampToValueAtTime(0, MC);
+      const GC = [SC];
+      if (null !== NC) {
+        const zC = CC.createBiquadFilter();
+        zC.type = "lowpass", zC.frequency.value = NC, GC.push(zC)
       }
-      Hq.push(jq, Eq);
-      for (let mq = 1; mq < Hq.length; mq++) Hq[mq - 1].connect(Hq[mq]);
-      return Vq.onended = () => {
-        for (const qq of Hq.slice(0, -1)) qq.disconnect();
-        xq()
-      }, Vq.start(lq), Vq.stop(Nq), Vq
+      GC.push(PC, zC);
+      for (let nC = 1; nC < GC.length; nC++) GC[nC - 1].connect(GC[nC]);
+      return SC.onended = () => {
+        for (const CC of GC.slice(0, -1)) CC.disconnect();
+        fC()
+      }, SC.start(wC), SC.stop(MC), SC
     }
 
-    function uq(qq, Eq, gq, Yq, lq, mq) {
-      if (0 === Yq.length) return mq(), () => {};
-      const uq = Oq * gq.volume * lq,
-        Bq = qq.createGain();
-      Bq.connect(Eq);
-      const Wq = qq.currentTime + xq,
-        Nq = new Set;
-      for (const Oq of Yq) {
-        const Eq = cq(qq, Bq, gq, Oq, Wq + Oq.atMs / 1e3, uq * Oq.level, (() => {
-          Nq.delete(Eq), 0 === Nq.size && (Bq.disconnect(), mq())
+    function FC(CC, zC, ZC, QC, wC, nC) {
+      if (0 === QC.length) return nC(), () => {};
+      const FC = bC * ZC.volume * wC,
+        WC = CC.createGain();
+      WC.connect(zC);
+      const NC = CC.currentTime + fC,
+        MC = new Set;
+      for (const bC of QC) {
+        const zC = qC(CC, WC, ZC, bC, NC + bC.atMs / 1e3, FC * bC.level, (() => {
+          MC.delete(zC), 0 === MC.size && (WC.disconnect(), nC())
         }));
-        Nq.add(Eq)
+        MC.add(zC)
       }
       return () => {
-        const Eq = qq.currentTime;
-        Bq.gain.setTargetAtTime(0, Eq, Aq);
-        for (const qq of Nq) try {
-          qq.stop(Eq + 5 * Aq)
+        const zC = CC.currentTime;
+        WC.gain.setTargetAtTime(0, zC, oC);
+        for (const CC of MC) try {
+          CC.stop(zC + 5 * oC)
         } catch {}
       }
     }
 
-    function Bq(qq, Eq) {
-      var gq;
-      const Oq = Yq.Howler.ctx,
-        mq = Yq.Howler.masterGain;
-      if (!Oq || !mq || !lq.b.get("soundOnFromAd")) return () => {};
-      const xq = Yq.Howler;
-      return null === (gq = xq._autoResume) || void 0 === gq || gq.call(xq), uq(Oq, mq, qq, Eq, lq.b.get("soundVolume"), (() => {
-        var qq;
-        null === (qq = xq._autoSuspend) || void 0 === qq || qq.call(xq)
+    function WC(CC, zC) {
+      var ZC;
+      const bC = QC.Howler.ctx,
+        nC = QC.Howler.masterGain;
+      if (!bC || !nC || !wC.b.get("soundOnFromAd")) return () => {};
+      const fC = QC.Howler;
+      return null === (ZC = fC._autoResume) || void 0 === ZC || ZC.call(fC), FC(bC, nC, CC, zC, wC.b.get("soundVolume"), (() => {
+        var CC;
+        null === (CC = fC._autoSuspend) || void 0 === CC || CC.call(fC)
       }))
     }
   },
-  39093: (qq, Eq, gq) => {
-    gq.r(Eq), gq.d(Eq, {
-      closeClientGame: () => zq,
-      createDefaultClientPlugins: () => Tq
+  38976: (CC, zC, ZC) => {
+    ZC.r(zC), ZC.d(zC, {
+      closeClientGame: () => lC,
+      createDefaultClientPlugins: () => EC
     });
-    var Yq = gq(307);
+    var QC = ZC(326);
 
-    function lq() {
-      let qq;
+    function wC() {
+      let CC;
       return {
-        onCreate(Eq) {
-          qq = Eq
+        onCreate(zC) {
+          CC = zC
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(Eq, gq, lq, Oq, mq, xq) {
-          var Aq, cq;
-          if ("Iron Chest" !== qq.getMetaInfo(mq).rootName) return;
-          if (!qq.hasEffect(Eq, "Thief")) return;
-          const uq = qq.getBlockData(gq, lq, Oq);
-          return qq.getPlayerDbId(Eq) !== (null === uq || void 0 === uq || null === (Aq = uq.persisted) || void 0 === Aq || null === (cq = Aq.shared) || void 0 === cq ? void 0 : cq.ownerDbId) ? (qq.sendMessage(Eq, [{
+        onPlayerAttemptAltAction(zC, ZC, wC, bC, nC, fC) {
+          var oC, qC;
+          if ("Iron Chest" !== CC.getMetaInfo(nC).rootName) return;
+          if (!CC.hasEffect(zC, "Thief")) return;
+          const FC = CC.getBlockData(ZC, wC, bC);
+          return CC.getPlayerDbId(zC) !== (null === FC || void 0 === FC || null === (oC = FC.persisted) || void 0 === oC || null === (qC = oC.shared) || void 0 === qC ? void 0 : qC.ownerDbId) ? (CC.sendMessage(zC, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Yq.M.redUiText
+              color: QC.H.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Oq = gq(4096),
-      mq = gq(1226);
-    const xq = 8.4,
-      Aq = 1e-4,
-      cq = .15,
-      uq = .04,
-      Bq = [.12, .04, .12],
-      Wq = 26,
-      Nq = {
+    var bC = ZC(4179),
+      nC = ZC(1183);
+    const fC = 8.4,
+      oC = 1e-4,
+      qC = .15,
+      FC = .04,
+      WC = [.12, .04, .12],
+      NC = 26,
+      MC = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        WB: 1,
-        minLifeTime: Aq,
-        maxLifeTime: Aq,
+        HW: 1,
+        minLifeTime: oC,
+        maxLifeTime: oC,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Oq.h.Standard
+        blendMode: bC.d.Standard
       },
-      aq = {
+      gC = {
         texture: "bubble",
         mipmaps: !1,
-        WB: 96,
+        HW: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: Wq,
+        emitRate: NC,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Oq.h.Standard
+        blendMode: bC.d.Standard
       },
-      Vq = [0, 0, 0],
-      dq = [0, 0, 0];
+      SC = [0, 0, 0],
+      pC = [0, 0, 0];
 
-    function jq(qq) {
-      const Eq = new Map;
-      let gq = null;
+    function PC(CC) {
+      const zC = new Map;
+      let ZC = null;
 
-      function Yq(qq) {
-        var Eq, gq;
-        null === (Eq = qq.bubbles) || void 0 === Eq || Eq.stop(), null === (gq = qq.fish) || void 0 === gq || gq.stop()
+      function QC(CC) {
+        var zC, ZC;
+        null === (zC = CC.bubbles) || void 0 === zC || zC.stop(), null === (ZC = CC.fish) || void 0 === ZC || ZC.stop()
       }
 
-      function lq(gq) {
-        if (!gq.readDrawnPosition(qq, dq)) {
-          for (const qq of Eq.values()) {
-            var Yq;
-            null === (Yq = qq.bubbles) || void 0 === Yq || Yq.setEmitRate(0)
+      function wC(ZC) {
+        if (!ZC.readDrawnPosition(CC, pC)) {
+          for (const CC of zC.values()) {
+            var QC;
+            null === (QC = CC.bubbles) || void 0 === QC || QC.setEmitRate(0)
           }
           return
         }
-        const lq = performance.now();
-        for (const [qq, mq] of Eq) {
-          var Oq;
-          if (null === (Oq = mq.bubbles) || void 0 === Oq || Oq.setEmitRate(0), !gq.readDrawnPosition(qq, Vq)) continue;
-          if (!((Vq[0] - dq[0]) ** 2 + (Vq[1] - dq[1]) ** 2 + (Vq[2] - dq[2]) ** 2 < 900)) continue;
-          const Eq = Math.max(0, mq.biteAt - lq),
-            Yq = mq.approachDurationMs > 0 ? Math.min(1, 1 - Eq / mq.approachDurationMs) : 1,
-            Aq = (mq.approachDurationMs - Eq) / 1e3,
-            jq = mq.phase + .25 * Math.sin(1.7 * Aq + mq.phase),
-            Hq = Math.min(mq.approachDurationMs / 3e3 * 2.8, xq) * (1 - Yq) * (1 + .15 * Math.sin(2.1 * Aq + mq.phase)),
-            oq = Math.min(1, 4 * (1 - Yq)),
-            Pq = (.45 * Math.sin(4.1 * Aq + mq.phase) + .18 * Math.sin(9.7 * Aq + 2 * mq.phase)) * oq,
-            Qq = Vq[0] + Math.cos(jq) * Hq - Math.sin(jq) * Pq,
-            yq = Math.ceil(mq.surfaceY),
-            tq = Vq[2] + Math.sin(jq) * Hq + Math.cos(jq) * Pq,
+        const wC = performance.now();
+        for (const [CC, nC] of zC) {
+          var bC;
+          if (null === (bC = nC.bubbles) || void 0 === bC || bC.setEmitRate(0), !ZC.readDrawnPosition(CC, SC)) continue;
+          if (!((SC[0] - pC[0]) ** 2 + (SC[1] - pC[1]) ** 2 + (SC[2] - pC[2]) ** 2 < 900)) continue;
+          const zC = Math.max(0, nC.biteAt - wC),
+            QC = nC.approachDurationMs > 0 ? Math.min(1, 1 - zC / nC.approachDurationMs) : 1,
+            oC = (nC.approachDurationMs - zC) / 1e3,
+            PC = nC.phase + .25 * Math.sin(1.7 * oC + nC.phase),
+            GC = Math.min(nC.approachDurationMs / 3e3 * 2.8, fC) * (1 - QC) * (1 + .15 * Math.sin(2.1 * oC + nC.phase)),
+            RC = Math.min(1, 4 * (1 - QC)),
+            AC = (.45 * Math.sin(4.1 * oC + nC.phase) + .18 * Math.sin(9.7 * oC + 2 * nC.phase)) * RC,
+            xC = SC[0] + Math.cos(PC) * GC - Math.sin(PC) * AC,
+            JC = Math.ceil(nC.surfaceY),
+            IC = SC[2] + Math.sin(PC) * GC + Math.cos(PC) * AC,
             {
-              fishAt: rq,
-              bubblesAt: vq
-            } = mq;
-          rq[0] = vq[0] = Qq, rq[1] = yq + cq, vq[1] = yq + uq, rq[2] = vq[2] = tq, mq.fish ??= gq.createParticles(Nq, {
-            pos: rq
-          }), mq.fish.moveTo(rq), mq.fish.emit(1), mq.bubbles ??= gq.createParticles(aq, {
-            pos: vq,
-            half: Bq
-          }), mq.bubbles.moveTo(vq), mq.bubbles.setEmitRate(Wq + 32 * (.5 + .5 * Math.sin(9 * Aq + mq.phase)) ** 4 + 13 * Yq)
+              fishAt: iC,
+              bubblesAt: vC
+            } = nC;
+          iC[0] = vC[0] = xC, iC[1] = JC + qC, vC[1] = JC + FC, iC[2] = vC[2] = IC, nC.fish ??= ZC.createParticles(MC, {
+            pos: iC
+          }), nC.fish.moveTo(iC), nC.fish.emit(1), nC.bubbles ??= ZC.createParticles(gC, {
+            pos: vC,
+            half: WC
+          }), nC.bubbles.moveTo(vC), nC.bubbles.setEmitRate(NC + 32 * (.5 + .5 * Math.sin(9 * oC + nC.phase)) ** 4 + 13 * QC)
         }
       }
       return {
-        onCreate(qq) {
-          gq = qq
+        onCreate(CC) {
+          ZC = CC
         },
         onAfterRender() {
-          gq && lq(gq)
+          ZC && wC(ZC)
         },
         onClose() {
-          for (const qq of Eq.values()) Yq(qq);
-          Eq.clear(), gq = null
+          for (const CC of zC.values()) QC(CC);
+          zC.clear(), ZC = null
         },
-        onReceivedMessageFromServer(qq, gq) {
-          if (qq !== mq.D) return;
+        onReceivedMessageFromServer(CC, ZC) {
+          if (CC !== nC.B) return;
           const {
-            hookId: lq,
-            waiting: Oq
-          } = gq;
-          if (Oq) Eq.has(lq) || Eq.set(lq, {
+            hookId: wC,
+            waiting: bC
+          } = ZC;
+          if (bC) zC.has(wC) || zC.set(wC, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Oq.remainingMs,
-            approachDurationMs: Oq.durationMs,
-            surfaceY: Oq.surfaceY,
+            biteAt: performance.now() + bC.remainingMs,
+            approachDurationMs: bC.durationMs,
+            surfaceY: bC.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const qq = Eq.get(lq);
-            qq && Yq(qq), Eq.delete(lq)
+            const CC = zC.get(wC);
+            CC && QC(CC), zC.delete(wC)
           }
         }
       }
     }
-    var Hq = gq(4679),
-      oq = gq(4662);
+    var GC = ZC(4788),
+      RC = ZC(4775);
 
-    function Pq(qq) {
-      let Eq, gq = null,
-        Yq = null;
-      const lq = () => {
-        var qq;
-        null === (qq = Yq) || void 0 === qq || qq(), Yq = null
+    function AC(CC) {
+      let zC, ZC = null,
+        QC = null;
+      const wC = () => {
+        var CC;
+        null === (CC = QC) || void 0 === CC || CC(), QC = null
       };
       return {
-        onCreate(Yq) {
-          Eq = Yq, gq = Eq.getClientOption(qq, "dialogue")
+        onCreate(QC) {
+          zC = QC, ZC = zC.getClientOption(CC, "dialogue")
         },
         onAfterRender() {
-          if (!Eq) return;
-          const Oq = Eq.getClientOption(qq, "dialogue");
-          if (Oq === gq) return;
-          if (gq = Oq, lq(), !Oq || !1 === Oq.animateIn) return;
+          if (!zC) return;
+          const bC = zC.getClientOption(CC, "dialogue");
+          if (bC === ZC) return;
+          if (ZC = bC, wC(), !bC || !1 === bC.animateIn) return;
           const {
-            plan: mq,
-            synth: xq
-          } = (0, oq.f)(Oq);
-          xq && (Yq = (0, Hq.g)(xq, mq.blips))
+            plan: nC,
+            synth: fC
+          } = (0, RC.f)(bC);
+          fC && (QC = (0, GC.f)(fC, nC.blips))
         },
-        onClose: lq
+        onClose: wC
       }
     }
-    var Qq = gq(39098);
-    const yq = [
+    var xC = ZC(38979);
+    const JC = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      tq = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      rq = [0, 1, 2, 0, 2, 3];
+      IC = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      iC = [0, 1, 2, 0, 2, 3];
 
-    function vq(qq, Eq, gq) {
-      var Yq;
-      let [lq, Oq, mq] = Eq;
-      if (qq.hasPackModel("Furnace")) return null;
-      const xq = ((null !== (Yq = qq.getMetaInfo(gq).rot) && void 0 !== Yq ? Yq : 1) - 1) * Math.PI / 2,
-        Aq = Math.PI + xq,
-        cq = Math.cos(Aq),
-        uq = Math.sin(Aq),
-        Bq = [];
-      for (const [aq, Vq] of yq) Bq.push(aq * cq, Vq, -aq * uq);
-      const Wq = {
-          positions: Bq,
-          indices: rq,
-          uvs: tq
+    function vC(CC, zC, ZC) {
+      var QC;
+      let [wC, bC, nC] = zC;
+      if (CC.hasPackModel("Furnace")) return null;
+      const fC = ((null !== (QC = CC.getMetaInfo(ZC).rot) && void 0 !== QC ? QC : 1) - 1) * Math.PI / 2,
+        oC = Math.PI + fC,
+        qC = Math.cos(oC),
+        FC = Math.sin(oC),
+        WC = [];
+      for (const [gC, SC] of JC) WC.push(gC * qC, SC, -gC * FC);
+      const NC = {
+          positions: WC,
+          indices: iC,
+          uvs: IC
         },
-        Nq = [lq + .5 + .51 * Math.sin(xq), Oq + .375, mq + .5 + .51 * Math.cos(xq)];
-      return qq.createGameMesh(Wq, {
+        MC = [wC + .5 + .51 * Math.sin(fC), bC + .375, nC + .5 + .51 * Math.cos(fC)];
+      return CC.createGameMesh(NC, {
         kind: "furnaceFire"
-      }, Nq)
+      }, MC)
     }
 
-    function hq(qq) {
-      return Math.floor(qq / 200) % 3
+    function eC(CC) {
+      return Math.floor(CC / 200) % 3
     }
 
-    function nq(qq, Eq, gq) {
-      qq.setGameMesh(Eq, {
-        uvOffset: [0, gq / 3]
+    function hC(CC, zC, ZC) {
+      CC.setGameMesh(zC, {
+        uvOffset: [0, ZC / 3]
       })
     }
-    const bq = [.12, .025, .12],
-      iq = [{
+    const KC = [.12, .025, .12],
+      YC = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Oq.h.Standard,
+          blendMode: bC.d.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Oq.h.Add,
+          blendMode: bC.d.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class Zq {
+    class dC {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(qq, Eq) {
-        const gq = qq.getBlockId(Eq[0], Eq[1], Eq[2]);
-        if ("Furnace" !== qq.getMetaInfo(gq).rootName) return;
-        const Yq = performance.now();
-        let lq = this.smokes.find((qq => qq.pos[0] === Eq[0] && qq.pos[1] === Eq[1] && qq.pos[2] === Eq[2] && qq.lc === gq));
-        if (lq || (lq = {
-            pos: [Eq[0], Eq[1], Eq[2]],
-            lc: gq,
-            endMs: Yq,
+      start(CC, zC) {
+        const ZC = CC.getBlockId(zC[0], zC[1], zC[2]);
+        if ("Furnace" !== CC.getMetaInfo(ZC).rootName) return;
+        const QC = performance.now();
+        let wC = this.smokes.find((CC => CC.pos[0] === zC[0] && CC.pos[1] === zC[1] && CC.pos[2] === zC[2] && CC.SF === ZC));
+        if (wC || (wC = {
+            pos: [zC[0], zC[1], zC[2]],
+            SF: ZC,
+            endMs: QC,
             lastBurstMs: -1 / 0,
-            pending: new Array(iq.length).fill(0),
-            fire: vq(qq, Eq, gq)
-          }, this.smokes.push(lq), null !== lq.fire && (nq(qq, lq.fire, hq(Yq)), this.shownFireFrame = -1)), lq.endMs = Yq + 6e3, this.smokes.length > 4) {
-          const Eq = this.smokes.reduce(((qq, Eq) => Eq.endMs < qq.endMs ? Eq : qq));
-          fq(qq, Eq), this.smokes.splice(this.smokes.indexOf(Eq), 1)
+            pending: new Array(YC.length).fill(0),
+            fire: vC(CC, zC, ZC)
+          }, this.smokes.push(wC), null !== wC.fire && (hC(CC, wC.fire, eC(QC)), this.shownFireFrame = -1)), wC.endMs = QC + 6e3, this.smokes.length > 4) {
+          const zC = this.smokes.reduce(((CC, zC) => zC.endMs < CC.endMs ? zC : CC));
+          mC(CC, zC), this.smokes.splice(this.smokes.indexOf(zC), 1)
         }
-        Yq - lq.lastBurstMs >= 300 && (lq.lastBurstMs = Yq, iq.forEach(((qq, Eq) => {
-          lq.pending[Eq] += qq.style.count
+        QC - wC.lastBurstMs >= 300 && (wC.lastBurstMs = QC, YC.forEach(((CC, zC) => {
+          wC.pending[zC] += CC.style.count
         })))
       }
-      onAfterRender(qq, Eq) {
+      onAfterRender(CC, zC) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const gq = performance.now();
-        this.smokes = this.smokes.filter((Eq => {
-          const [Yq, lq, Oq] = Eq.pos, mq = gq < Eq.endMs && qq.getBlockId(Yq, lq, Oq) === Eq.lc;
-          return mq || fq(qq, Eq), mq
+        const ZC = performance.now();
+        this.smokes = this.smokes.filter((zC => {
+          const [QC, wC, bC] = zC.pos, nC = ZC < zC.endMs && CC.getBlockId(QC, wC, bC) === zC.SF;
+          return nC || mC(CC, zC), nC
         }));
-        const Yq = hq(gq);
-        if (Yq !== this.shownFireFrame) {
-          this.shownFireFrame = Yq;
-          for (const Eq of this.smokes) null !== Eq.fire && nq(qq, Eq.fire, Yq)
+        const QC = eC(ZC);
+        if (QC !== this.shownFireFrame) {
+          this.shownFireFrame = QC;
+          for (const zC of this.smokes) null !== zC.fire && hC(CC, zC.fire, QC)
         }
-        if (!qq.particlesEnabled()) {
-          for (const qq of this.smokes) qq.pending.fill(0);
+        if (!CC.particlesEnabled()) {
+          for (const CC of this.smokes) CC.pending.fill(0);
           return
         }
-        const lq = Math.min(Eq, 250) / 1e3;
-        for (const Oq of this.smokes) {
-          const [Eq, Yq, mq] = Oq.pos;
-          if (0 !== qq.getBlockId(Eq, Yq + 1, mq)) {
-            Oq.pending.fill(0);
+        const wC = Math.min(zC, 250) / 1e3;
+        for (const bC of this.smokes) {
+          const [zC, QC, nC] = bC.pos;
+          if (0 !== CC.getBlockId(zC, QC + 1, nC)) {
+            bC.pending.fill(0);
             continue
           }
-          const xq = (Oq.endMs - gq) / 6e3,
-            Aq = this.centre;
-          Aq[0] = Eq + .5, Aq[1] = Yq + 1.275, Aq[2] = mq + .5, iq.forEach(((Eq, gq) => {
-            Oq.pending[gq] += Eq.perSecond * xq * lq;
-            const Yq = Math.floor(Oq.pending[gq]);
-            Yq > 0 && this.emit(qq, gq, Aq, Yq) && (Oq.pending[gq] -= Yq)
+          const fC = (bC.endMs - ZC) / 6e3,
+            oC = this.centre;
+          oC[0] = zC + .5, oC[1] = QC + 1.275, oC[2] = nC + .5, YC.forEach(((zC, ZC) => {
+            bC.pending[ZC] += zC.perSecond * fC * wC;
+            const QC = Math.floor(bC.pending[ZC]);
+            QC > 0 && this.emit(CC, ZC, oC, QC) && (bC.pending[ZC] -= QC)
           }))
         }
       }
-      dispose(qq) {
-        for (const gq of this.smokes) fq(qq, gq);
+      dispose(CC) {
+        for (const ZC of this.smokes) mC(CC, ZC);
         this.smokes = [];
-        for (const gq of null !== (Eq = this.puffers) && void 0 !== Eq ? Eq : []) {
-          var Eq;
-          gq.dispose()
+        for (const ZC of null !== (zC = this.puffers) && void 0 !== zC ? zC : []) {
+          var zC;
+          ZC.dispose()
         }
         this.puffers = null
       }
-      emit(qq, Eq, gq, Yq) {
-        return this.puffers ??= iq.map((qq => {
+      emit(CC, zC, ZC, QC) {
+        return this.puffers ??= YC.map((CC => {
           let {
-            style: Eq,
-            perSecond: gq
-          } = qq;
-          const Yq = (Eq.count / .3 + gq) * Eq.life[1];
-          return new Qq.f(Eq, Math.ceil(4 * Yq), bq)
-        })), this.puffers[Eq].emit(qq, gq, this.renderFrame, Yq)
+            style: zC,
+            perSecond: ZC
+          } = CC;
+          const QC = (zC.count / .3 + ZC) * zC.life[1];
+          return new xC.g(zC, Math.ceil(4 * QC), KC)
+        })), this.puffers[zC].emit(CC, ZC, this.renderFrame, QC)
       }
     }
 
-    function fq(qq, Eq) {
-      null !== Eq.fire && (qq.disposeGameMesh(Eq.fire), Eq.fire = null)
+    function mC(CC, zC) {
+      null !== zC.fire && (CC.disposeGameMesh(zC.fire), zC.fire = null)
     }
 
-    function Mq() {
-      let qq;
-      const Eq = new Zq;
+    function HC() {
+      let CC;
+      const zC = new dC;
       return {
-        onCreate(Eq) {
-          qq = Eq
+        onCreate(zC) {
+          CC = zC
         },
-        onReceivedMessageFromServer(gq, Yq) {
-          gq === mq.F && Eq.start(qq, Yq)
+        onReceivedMessageFromServer(ZC, QC) {
+          ZC === nC.F && zC.start(CC, QC)
         },
-        onAfterRender(gq) {
-          Eq.onAfterRender(qq, gq)
+        onAfterRender(ZC) {
+          zC.onAfterRender(CC, ZC)
         },
         onClose() {
-          Eq.dispose(qq)
+          zC.dispose(CC)
         }
       }
     }
 
-    function Tq(qq, Eq, gq, Yq) {
+    function EC(CC, zC, ZC, QC) {
       return {
-        dialogue: Pq(Yq.localPlayerId),
-        fishing: jq(Yq.localPlayerId),
-        furnaceSmoke: Mq(),
-        ironChest: lq()
+        dialogue: AC(QC.localPlayerId),
+        fishing: PC(QC.localPlayerId),
+        furnaceSmoke: HC(),
+        ironChest: wC()
       }
     }
 
-    function zq(qq, Eq) {
-      for (const lq of [qq, ...null !== Eq && void 0 !== Eq ? Eq : []]) try {
-        var gq;
-        null === lq || void 0 === lq || null === (gq = lq.onClose) || void 0 === gq || gq.call(lq)
-      } catch (Yq) {
-        console.error("Error in client onClose callback", Yq)
+    function lC(CC, zC) {
+      for (const wC of [CC, ...null !== zC && void 0 !== zC ? zC : []]) try {
+        var ZC;
+        null === wC || void 0 === wC || null === (ZC = wC.onClose) || void 0 === ZC || ZC.call(wC)
+      } catch (QC) {
+        console.error("Error in client onClose callback", QC)
       }
     }
   },
-  39098: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => Yq,
-      f: () => Oq
+  38979: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      e: () => QC,
+      g: () => bC
     });
-    const Yq = 1 / .6,
-      lq = {
+    const QC = 1 / .6,
+      wC = {
         kind: "smokePuff"
       };
-    class Oq {
-      constructor(qq, Eq, gq) {
-        this.style = qq, this.WB = Eq, this.half = gq, this.particles = null, this.lastFrame = -1
+    class bC {
+      constructor(CC, zC, ZC) {
+        this.style = CC, this.HW = zC, this.half = ZC, this.particles = null, this.lastFrame = -1
       }
-      emit(qq, Eq, gq) {
-        let Oq = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return gq !== this.lastFrame && (this.lastFrame = gq, this.particles || (this.particles = qq.createParticles(function(qq, Eq) {
+      emit(CC, zC, ZC) {
+        let bC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return ZC !== this.lastFrame && (this.lastFrame = ZC, this.particles || (this.particles = CC.createParticles(function(CC, zC) {
           const [
-            [gq, Oq, mq],
-            [xq, Aq, cq]
-          ] = qq.colours;
+            [ZC, bC, nC],
+            [fC, oC, qC]
+          ] = CC.colours;
           return {
-            texture: qq.soft ? lq : "square_particle",
-            WB: Eq,
-            minLifeTime: qq.life[0] / Yq,
-            maxLifeTime: qq.life[1] / Yq,
-            minEmitPower: qq.power[0] * Yq,
-            maxEmitPower: qq.power[1] * Yq,
-            minSize: qq.size[0],
-            maxSize: qq.size[1],
+            texture: CC.soft ? wC : "square_particle",
+            HW: zC,
+            minLifeTime: CC.life[0] / QC,
+            maxLifeTime: CC.life[1] / QC,
+            minEmitPower: CC.power[0] * QC,
+            maxEmitPower: CC.power[1] * QC,
+            minSize: CC.size[0],
+            maxSize: CC.size[1],
             emitRate: 0,
-            gravity: [0, qq.lift * Yq * Yq, 0],
-            dir1: [-qq.spread, 1, -qq.spread],
-            dir2: [qq.spread, 1, qq.spread],
+            gravity: [0, CC.lift * QC * QC, 0],
+            dir1: [-CC.spread, 1, -CC.spread],
+            dir2: [CC.spread, 1, CC.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [gq, Oq, mq, qq.alpha],
-              maxColor: [xq, Aq, cq, qq.alpha]
+              minColor: [ZC, bC, nC, CC.alpha],
+              maxColor: [fC, oC, qC, CC.alpha]
             }, {
               timeFraction: 1,
-              minColor: [gq, Oq, mq, 0],
-              maxColor: [xq, Aq, cq, 0]
+              minColor: [ZC, bC, nC, 0],
+              maxColor: [fC, oC, qC, 0]
             }],
-            blendMode: qq.blendMode
+            blendMode: CC.blendMode
           }
-        }(this.style, this.WB), {
-          pos: Eq,
+        }(this.style, this.HW), {
+          pos: zC,
           half: this.half
-        })), this.particles.moveTo(Eq, this.half), this.particles.emit(Oq), !0)
+        })), this.particles.moveTo(zC, this.half), this.particles.emit(bC), !0)
       }
       dispose() {
-        var qq;
-        null === (qq = this.particles) || void 0 === qq || qq.stop(), this.particles = null
+        var CC;
+        null === (CC = this.particles) || void 0 === CC || CC.stop(), this.particles = null
       }
     }
   },
-  4671: (qq, Eq, gq) => {
-    gq.d(Eq, {
-      b: () => lq,
-      d: () => Yq,
-      f: () => Oq,
-      i: () => Aq,
-      m: () => mq
+  4783: (CC, zC, ZC) => {
+    ZC.d(zC, {
+      b: () => wC,
+      f: () => QC,
+      i: () => bC,
+      m: () => oC,
+      q: () => nC
     });
-    const Yq = ["sine", "triangle", "square", "sawtooth"],
-      lq = 55,
-      Oq = {
+    const QC = ["sine", "triangle", "square", "sawtooth"],
+      wC = 55,
+      bC = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function mq(qq) {
-      return "string" !== typeof qq ? qq : Object.hasOwn(Oq, qq) ? Oq[qq] : null
+    function nC(CC) {
+      return "string" !== typeof CC ? CC : Object.hasOwn(bC, CC) ? bC[CC] : null
     }
 
-    function xq(qq, Eq, gq) {
-      return Math.min(gq, Math.max(Eq, qq))
+    function fC(CC, zC, ZC) {
+      return Math.min(ZC, Math.max(zC, CC))
     }
 
-    function Aq(qq) {
-      const Eq = xq(qq.durationMs, 10, 500),
-        gq = xq(qq.attackMs, 0, Eq),
+    function oC(CC) {
+      const zC = fC(CC.durationMs, 10, 500),
+        ZC = fC(CC.attackMs, 0, zC),
         {
-          intonation: lq
-        } = qq;
+          intonation: wC
+        } = CC;
       return {
-        waveform: Yq.includes(qq.waveform) ? qq.waveform : "sine",
-        pitchHz: xq(qq.pitchHz, 20, 4e3),
-        glideSemitones: xq(qq.glideSemitones, -24, 24),
-        durationMs: Eq,
-        attackMs: gq,
-        releaseMs: xq(qq.releaseMs, 0, Eq - gq),
-        lowpassHz: null === qq.lowpassHz ? null : xq(qq.lowpassHz, 20, 2e4),
-        volume: xq(qq.volume, 0, 2),
+        waveform: QC.includes(CC.waveform) ? CC.waveform : "sine",
+        pitchHz: fC(CC.pitchHz, 20, 4e3),
+        glideSemitones: fC(CC.glideSemitones, -24, 24),
+        durationMs: zC,
+        attackMs: ZC,
+        releaseMs: fC(CC.releaseMs, 0, zC - ZC),
+        lowpassHz: null === CC.lowpassHz ? null : fC(CC.lowpassHz, 20, 2e4),
+        volume: fC(CC.volume, 0, 2),
         intonation: {
-          variationSemitones: xq(lq.variationSemitones, 0, 6),
-          declineSemitones: xq(lq.declineSemitones, 0, 12),
-          questionRiseSemitones: xq(lq.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: xq(lq.exclaimLiftSemitones, 0, 12)
+          variationSemitones: fC(wC.variationSemitones, 0, 6),
+          declineSemitones: fC(wC.declineSemitones, 0, 12),
+          questionRiseSemitones: fC(wC.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: fC(wC.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: xq(qq.syllableMs, 25, 200)
+        syllableMs: fC(CC.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const qq in modules) Object.freeze(modules[qq]);
+for (const CC in modules) Object.freeze(modules[CC]);
